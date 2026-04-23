@@ -4,7 +4,7 @@
       <header class="account-cleanup__header">
         <button @click="router.push('/cabinet')" class="btn-icon-back">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-               stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+               stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"></line>
             <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
@@ -45,7 +45,7 @@
               </div>
             </div>
             <div class="account-cleanup__footer-scroll">
-              <button class="account-cleanup__btn-main" @click="isCleanupModalVisible = true" type="button">УДАЛИТЬ ПРОФИЛЬ</button>
+              <button class="account-cleanup__btn-main" @click="isCleanupModalVisible = true" type="button">Удалить аккаунт</button>
             </div>
           </section>
         </div>
@@ -135,8 +135,8 @@ const platformsInformation = [
 
 
 const modalActions = computed(() => [
-  {label: 'Подтверждаю удаление', type: 'danger', needsAuth: true, handler: processAccountCleanup},
-  {label: 'Я передумал', type: 'stay', needsAuth: false, handler: hideConfirmation}
+  {label: 'Я передумал', type: 'stay', needsAuth: false, handler: hideConfirmation},
+  {label: 'Подтверждаю удаление', type: 'danger', needsAuth: true, handler: processAccountCleanup}
 ])
 
 function hideConfirmation() {
@@ -191,7 +191,8 @@ async function processAccountCleanup() {
 
 .btn-icon-back {
   background: #fff;
-  border: 3px solid #2b2b2b;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 12px;
   width: 40px;
   height: 40px;
@@ -199,7 +200,6 @@ async function processAccountCleanup() {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 2px 2px 0px #2b2b2b;
   transition: transform 0.1s, box-shadow 0.1s;
 }
 
@@ -217,38 +217,37 @@ async function processAccountCleanup() {
 .account-cleanup__scroll-area {
   flex: 1;
   overflow-y: auto;
-  padding: 0 10px;
+  padding: 0 12px;
 }
 
 .mascot-bubble {
   background: #FFF;
-  border: 2px solid #000;
   border-radius: 24px;
   padding: 20px;
   margin-bottom: 15px;
   font-weight: 800;
   text-align: center;
-  box-shadow: 0 3px 0 #000;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
 }
 
 .account-cleanup__section {
   background: #FFFFFF;
-  border: 2px solid #000;
   border-radius: 28px;
   padding: 24px;
   margin-bottom: 10px;
-  box-shadow: 0 3px 0 #000;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
 }
 
 .account-cleanup__section--danger {
-  background: #FFF5F5;
+  background: #ffffff;
 }
 
 .account-cleanup__icon-box {
   width: 40px;
   height: 40px;
   background: #FF4B4B;
-  border: 2px solid #000;
   border-radius: 12px;
   color: #FFF;
   display: flex;
@@ -323,7 +322,7 @@ async function processAccountCleanup() {
 
 .account-cleanup__card-hint {
   background: #FFF;
-  border: 2px solid #000;
+  border: 2px solid #e1dfdf;
   border-radius: 12px;
   padding: 12px;
   font-size: 13px;
@@ -337,20 +336,17 @@ async function processAccountCleanup() {
 .account-cleanup__btn-main {
   width: 100%;
   background: #FFF;
-  color: #FF5C5C;
-  border: 2px solid #FF5C5C;
+  color: #9f9696;
   border-radius: 24px;
   padding: 10px;
   font-size: 18px;
   font-weight: 900;
   cursor: pointer;
-  box-shadow: 0 3px 0 #FF5C5C;
   transition: all 0.1s;
+  border: none;
 }
-
 .account-cleanup__btn-main:active {
   transform: translateY(4px);
-  box-shadow: 0 4px 0 #FF5C5C;
 }
 
 .account-cleanup__overlay {
@@ -387,6 +383,7 @@ async function processAccountCleanup() {
 
 .cleanup__icon-modal {
   width: 180px;
+  height: 180px;
 }
 
 .account-cleanup__modal-title {
@@ -412,12 +409,10 @@ async function processAccountCleanup() {
 .modal-btn {
   width: 100%;
   padding: 15px;
-  border: 2px solid #000;
   border-radius: 20px;
   font-size: 18px;
   font-weight: 900;
   cursor: pointer;
-  box-shadow: 0 3px 0 #000;
   margin-bottom: 10px;
 }
 
@@ -427,12 +422,16 @@ async function processAccountCleanup() {
 }
 
 .modal-btn--danger {
-  background: #FF4B4B;
-  color: #FFF;
+  background: none;
+  border: none;
+  color: #818181;
 }
 
 .modal-btn--stay {
-  background: #F0F0F0;
+  background: #3b82f6;
+  color: white;
+  border: #2964c4;
+  border-bottom: 5px solid #2964c4;
 }
 
 .account-cleanup__field-error {
@@ -443,7 +442,7 @@ async function processAccountCleanup() {
 }
 
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.3s;
+  transition: opacity 0.4s;
 }
 
 .fade-enter-from, .fade-leave-to {

@@ -536,15 +536,15 @@ onMounted(async () => {
   border-radius: 16px;
   padding: 12px 14px;
   cursor: pointer;
-  border: 2px solid #000;
-  box-shadow: 2px 2px 0 #000;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   transition: .15s;
   z-index: 5;
 }
 
 .back__btn-icon {
-  width: 35px;
-  height: 35px;
+  width: 38px;
+  height: 38px;
 }
 
 .sidebar-title {
@@ -572,9 +572,9 @@ onMounted(async () => {
   left: 8px;
   height: 48px;
   width: calc(100% - 16px);
-  background: #6358ac;
+  background: var(--tabsSlideBg);
   border-radius: 14px;
-  transition: transform 0.4s cubic-bezier(0.34, 1.35, 0.64, 1), opacity 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.34, 1.20, 0.64, 1), opacity 0.3s ease;
   z-index: 1;
   box-shadow: 0 4px 12px rgba(99, 88, 172, 0.5);
 }
@@ -701,7 +701,7 @@ onMounted(async () => {
   height: 26px;
   background: #e5e7eb;
   border-radius: 14px;
-  border: 3px solid #000;
+  border: 2px solid var(--tabsSlideBorderColor);
   position: relative;
   overflow: hidden;
 }
@@ -744,11 +744,11 @@ onMounted(async () => {
 .account-tabs {
   display: flex;
   position: relative;
-  background: #1e1e1e;
+  background: var(--tabBg);
   border-radius: 40px;
   padding: 6px;
-  border: 3px solid #2a2a2a;
-  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   margin-bottom: 5px;
   max-width: 768px;
 }
@@ -757,11 +757,11 @@ onMounted(async () => {
   position: absolute;
   top: 8px;
   left: 8px;
-  height: calc(100% - 16px);
+  height: calc(100% - 14px);
   width: calc((100% - 16px) / 4);
-  background: #6358ac;
+  background: var(--tabsSlideBg);
   border-radius: 40px;
-  transition: transform 0.4s cubic-bezier(0.34, 1.35, 0.64, 1), opacity 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.34, 1.20, 0.64, 1), opacity 0.3s ease;
   z-index: 1;
   box-shadow: 0 4px 12px rgba(99, 88, 172, 0.5);
 }
@@ -776,7 +776,7 @@ onMounted(async () => {
   border: none;
   background: none;
   padding: 12px 4px;
-  color: #fff;
+  color: var(--tabTextColor);
   font-weight: 900;
   cursor: pointer;
   font-size: 13px;
@@ -788,7 +788,7 @@ onMounted(async () => {
   background: none;
   border: none;
   box-shadow: none;
-  color: #fff;
+  color: var(--tabTextColor);
 }
 
 .account-tab-body {
@@ -935,9 +935,9 @@ onMounted(async () => {
     align-items: center;
     gap: 10px;
     border-radius: 40px;
-    border: 3px solid #2a2a2a;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(255,255,255,0.1);
-    background: #1e1e1e;
+    border: 3px solid var(--tabsSlideBorderColor);
+    box-shadow: var(--boxShadowMobile);
+    background: var(--tabBg);
     overflow: visible;
   }
 
@@ -979,14 +979,14 @@ onMounted(async () => {
   }
 
   .back-btn {
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     padding: 0;
     display: grid;
     place-items: center;
     border-radius: 50%;
     flex: 0 0 auto;
-    background: #ffd54f;
+    background: var(--homeBg);
   }
 
   .back-label {

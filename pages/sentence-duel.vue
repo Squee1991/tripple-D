@@ -264,12 +264,12 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 
 .mode-toggle-wrapper {
   display: flex;
-  background: #fff;
+  background: var(--tabBg);
   border-radius: 36px;
   position: relative;
   margin: 2rem auto;
-  box-shadow: 2px 2px 0px #1e1e1e;
-  border: 3px solid #1e1e1e;
+  border: 3px solid var(--menuBorder);
+  box-shadow: 2px 2px 0 var(--menuBorder);
   overflow: hidden;
   padding: 4px;
   margin: 10px;
@@ -290,11 +290,11 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   font-size: 23px;
   font-weight: 600;
   color: white;
-  background: rebeccapurple;
+  background: #674bff;
   padding: 10px 25px;
   margin-bottom: 25px;
   border-radius: 10px;
-  box-shadow: 0 5px 0 #49167a;
+  box-shadow: 0 5px 0 #583ee1;
 }
 
 
@@ -329,7 +329,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   text-align: center;
   padding: 12px 5px;
   cursor: pointer;
-  color: #fff;
+  color: #363535;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
   font-size: 17px;
@@ -416,34 +416,36 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 }
 
 .level-card {
-  background-color: #2c323d;
-  border: 2px solid #1e1e1e;
+  background-color: var(--tabBg);
   border-radius: 20px;
   padding: 15px;
   text-align: left;
-
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  box-shadow: 2px 2px 0px #1e1e1e;
+  border: 2px solid var(--menuBorder);
+  box-shadow: 2px 2px 0 var(--menuBorder);
+  color: black;
 }
 
 .level-card {
-  border-color: #1e1e1e;
+
   width: 100%;
 }
 
 .level-card.level-card--selected {
-  background-color: #FFD24B;
+  background-color: #674bff;
+  color: white;
 }
 
 .card-level-title {
-  font-size: 2rem;
+  font-size: 24px;
   font-weight: 800;
   margin: 0;
-  color: white;
+
+  text-align: center;
 }
 
 .status-overlay {
@@ -498,15 +500,15 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 10px;
+  padding: 15px;
 }
 
 .stats-block {
-  background-color: #2c323d;
-  border: 3px solid #1e1e1e;
+  background-color: var(--menuItemsBg);
+  border: 3px solid var(--menuBorder);
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  box-shadow: 4px 4px 0 var(--menuBorder);
   top: 20px;
   width: 100%;
 }
@@ -517,7 +519,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   font-weight: 800;
   margin-top: 0;
   margin-bottom: 25px;
-  color: white;
+  color: var(--titleColor);
   line-height: 1.3;
 }
 
@@ -577,9 +579,6 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   transition: transform 0.1s;
 }
 
-.start-game-button:hover:not(:disabled) {
-  box-shadow: 2px 2px 0px #1e1e1e;
-}
 
 .start-game-button:disabled {
   background-color: #ccc;
@@ -589,11 +588,6 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 }
 
 @media (max-width: 767px) {
-  .card-level-title {
-    text-align: center;
-    font-size: 1.4rem;
-  }
-
   .level-grid {
     display: flex;
   }

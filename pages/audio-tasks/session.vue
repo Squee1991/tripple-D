@@ -394,9 +394,9 @@ watch(currentIndex, stopAllAudio)
   display: flex;
   flex-direction: column;
   background: #ffffff;
-  border: 3px solid #1e272e;
+  border: 2px solid #1e272e;
   border-radius: 24px;
-  box-shadow: 4px 6px 0px #1e272e;
+  box-shadow: 2px 3px 0px #1e272e;
   padding: 10px;
   flex: 1;
   margin-bottom: 8px;
@@ -405,7 +405,7 @@ watch(currentIndex, stopAllAudio)
 
 .quest-card-audio {
   flex: 1;
-  background: #e5dbdf;
+  background: #f1f1f1;
   border: 3px solid #1e272e;
   border-radius: 16px;
   padding: 10px;

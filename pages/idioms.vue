@@ -211,7 +211,6 @@ const idiomGroups = ref([
     ]
   }
 ])
-
 const idiomQuizQuestions = ref([
   {
     question: t('idiomQuizFirstQuest.questionFirst'),
@@ -319,7 +318,7 @@ const getIdiomOptionClass = (option) => {
   font-size: 23px;
   font-weight: 800;
   margin-left: 15px;
-  color: white;
+  color: var(--titleColor);
 }
 
 .scroll-area {
@@ -334,20 +333,21 @@ const getIdiomOptionClass = (option) => {
 
 .card {
   background: #fff;
-  border: 3px solid #1e1e1e;
   border-radius: 16px;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   padding: 1.2rem;
   margin-bottom: 1.5rem;
 }
 
 .card-title {
-  font-size: 1.4rem;
+  font-size: 20px;
   font-weight: 900;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 3px solid #f2c94c;
   color: #1e1e1e;
+  text-align: center;
 }
 
 .text-p {
@@ -428,7 +428,7 @@ const getIdiomOptionClass = (option) => {
 }
 
 .quiz-question {
-  font-size: 1.2rem;
+  font-size: 16px;
   font-weight: 800;
   margin-bottom: 1.5rem;
   line-height: 1.4;
@@ -445,10 +445,10 @@ const getIdiomOptionClass = (option) => {
   padding: 1rem;
   font-size: 1rem;
   font-weight: 700;
-  border: 2px solid #1e1e1e;
   border-radius: 12px;
   background: #fff;
-  box-shadow: 3px 3px 0 #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   transition: 0.1s;
 }
 

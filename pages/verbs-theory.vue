@@ -7,9 +7,10 @@
           <h1 class="verbs__title">{{ t('verbsTheory.title')}}</h1>
         </div>
       </header>
+<!--        <p class="verbs__subtitle">{{ t('verbsTheory.subTitle')}}</p>-->
       <div class="verb__theory-section">
         <section v-for="section in contentSections" :key="section.id" class="verbs__card" :class="section.customClass">
-          <!--        <p class="verbs__subtitle">{{ t('verbsTheory.subTitle')}}</p>-->
+
           <h2 class="verbs__card-title">{{ section.title }}</h2>
           <template v-for="(item, index) in section.content" :key="index">
             <p v-if="item.type === 'paragraph'" class="verbs__paragraph" v-html="item.text"></p>
@@ -339,9 +340,9 @@ const getOptionClass = (opt) => {
 }
 
 .verbs__title {
-  font-size: 1.4rem;
+  font-size: 24px;
   font-weight: 800;
-  color: #fff;
+  color: var(--titleColor);
   margin-left: 15px;
 }
 
@@ -360,11 +361,11 @@ const getOptionClass = (opt) => {
 
 .verbs__card {
   background: #fff;
-  border: 3px solid #1f2937;
   border-radius: 16px;
-  box-shadow: 6px 6px 0 #0f172a;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   padding: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .verbs__card-title {
@@ -537,14 +538,10 @@ const getOptionClass = (opt) => {
 }
 
 @media (max-width: 767px) {
-  .verbs__card {
-    box-shadow: 2px 2px 5px #1f2937;
-  }
 
   .verbs__card-title {
     font-size: 1.45rem;
   }
-
   .verbs__icon {
     width: 34px;
     margin-right: 8px;

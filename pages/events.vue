@@ -183,6 +183,14 @@ const processedEvents = computed(() => {
   margin: 0 0 0 10px;
 }
 
+.event-card {
+  background: var(--menuItemsBg);
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+}
+
 .events-grid {
   display: flex;
   flex-direction: column;
@@ -191,13 +199,6 @@ const processedEvents = computed(() => {
   flex: 1;
   overflow-y: auto;
   padding-bottom: 110px;
-}
-
-.event-card {
-  background: #2c323d;
-  border: 2px solid #363d4a;
-  border-radius: 12px;
-  box-shadow: 0 4px 0 #1e1e1e;
 }
 
 .card-content {
@@ -220,7 +221,7 @@ const processedEvents = computed(() => {
   font-size: 18px;
   font-weight: 700;
   margin: 0;
-  color: #ffffff;
+  color: var(--titleColor);
 }
 
 .event-dates {

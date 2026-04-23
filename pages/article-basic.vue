@@ -169,11 +169,10 @@ const data = {
   font-size: 3.8rem;
   font-weight: 600;
   color: white;
-  flex: 1;
   display: flex;
   justify-content: center;
   gap: 3px;
-  margin-top: 1px;
+  margin-left: 15px;
 }
 
 .theory-title-accent {
@@ -203,6 +202,7 @@ const data = {
   max-width: 600px;
   font-weight: 600;
   text-align: center;
+  padding: 0 10px;
 }
 
 .theory-sections {
@@ -217,9 +217,9 @@ const data = {
 .theory-card {
   background: #fff;
   border-radius: 24px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  padding: 2rem;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  padding: 15px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -290,10 +290,10 @@ const data = {
 }
 
 .table-wrapper {
-  border: 2px solid #1e1e1e;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 3px 3px 0px #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
 }
 
 .theory-table {
@@ -302,7 +302,7 @@ const data = {
 }
 
 .theory-table-cell {
-  border: 2px solid #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
   padding: 0.75rem 1rem;
   font-size: 1.05rem;
   text-align: center;
@@ -311,14 +311,15 @@ const data = {
 
 .theory-table-cell.article-cell {
   font-family: "Nunito", sans-serif;
-  font-size: 1.2rem;
+  font-size: 18px;
 }
 
 .theory-table-head .theory-table-cell {
   background: #60a5fa;
   color: #ffffff;
   font-family: "Nunito", sans-serif;
-  font-size: 1.2rem;
+  font-size: 14px;
+  border-radius: 10px;
 }
 
 .theory__header-wrapper {
@@ -328,11 +329,6 @@ const data = {
 }
 
 @media (max-width: 767px) {
-
-  .theory-card {
-    box-shadow: 3px 3px 0 #1e1e1e;
-    padding: 15px;
-  }
 
   .theory-card-title {
     font-size: 1.5rem;

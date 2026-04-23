@@ -14,7 +14,7 @@
 
     <main class="quiz-main-content">
       <div v-if="loading" class="loading">
-        <VPreloader/>
+        <VLoginPreloader/>
       </div>
       <div v-else-if="store.quizCompleted" class="finish-screen">
         <template v-if="isVictory">
@@ -100,6 +100,7 @@ import SoundBtn from '../../src/components/soundBtn.vue'
 import {useSeoMeta} from '#imports'
 import {useI18n} from 'vue-i18n'
 import VPreloader from "../../src/components/V-preloader.vue";
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
 
 useSeoMeta({robots: 'noindex, nofollow'})
 

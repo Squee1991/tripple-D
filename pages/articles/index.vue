@@ -1,7 +1,7 @@
 <template>
   <div class="theme-page">
     <Transition name="fade">
-      <VPreloader v-if="isLoading"/>
+      <VLoginPreloader v-if="isLoading"/>
     </Transition>
     <div class="theme-page-container">
       <div class="theme__title-wrapper">
@@ -88,16 +88,15 @@
 </template>
 
 <script setup>
-import VPreloader from "../../src/components/V-preloader.vue";
 import { ref, computed, onMounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import { userlangStore } from '../../store/learningStore.js'
 import Lottie from 'lottie-web'
 import { nameMap } from '../../utils/nameMap.js'
-import { useHead, useSeoMeta } from '#imports'
+import { useSeoMeta } from '#imports'
 import NotFound from '../../assets/animation/notFound.json'
-import { useCanonical } from '../../composables/useCanonical.js'
 import VBackBtn from "~/src/components/V-back-btn.vue";
+import VLoginPreloader from "../../src/components/V-loginPreloader.vue";
 
 const iconMap = {
   Furniture: 'chair.svg',
@@ -343,8 +342,8 @@ onMounted(() => {
 .theme-card {
   background: #fff;
   border-radius: 16px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   text-align: center;
   cursor: pointer;
   transition: transform 0.1s ease, box-shadow 0.1s ease;
@@ -364,7 +363,6 @@ onMounted(() => {
   background-color: #e74c3c;
   color: white;
   border-radius: 25%;
-  border: 3px solid #1e1e1e;
   display: flex;
   align-items: center;
   justify-content: center;

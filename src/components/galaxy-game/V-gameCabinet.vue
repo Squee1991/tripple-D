@@ -3,12 +3,16 @@
     <div class="cabinet-bg">
       <div class="dot-pattern"></div>
     </div>
-
     <div class="cabinet-header">
-      <button class="toon-btn back-btn" @click="handleBack">◀ {{t('galaxyCabinet.back')}}</button>
-      <div class="sync-pill"></div>
+      <button @click="handleBack" class="btn-icon-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <div class="cabinet-header-title">Бортовой журнал</div>
     </div>
-
     <div class="main-layout">
       <div class="side-panel">
         <h3 class="side-label">{{t('galaxyCabinet.id')}}</h3>
@@ -33,7 +37,6 @@
             </h1>
           </div>
         </div>
-
         <div class="toon-card ship-card desktop-only">
           <div class="ship-name-tag">{{ store.activeShip.name }}</div>
           <div class="ship-frame">
@@ -43,7 +46,6 @@
           </div>
         </div>
       </div>
-
       <div class="side-panel">
         <h3 class="side-label">{{t('galaxyCabinet.journey')}}</h3>
         <div class="main-stats">
@@ -56,7 +58,6 @@
             <span class="stat-val">{{ totalPoints.toLocaleString() }}</span>
           </div>
         </div>
-
         <div class="galaxy-grid">
           <div
               v-for="g in galaxyList"
@@ -164,7 +165,6 @@ onUnmounted(() => {
   flex-direction: column;
   background: var(--bg);
   color: #1a1a1a;
-  padding: 0 10px;
   box-sizing: border-box;
   font-family: Nunito, sans-serif;
   overflow: hidden;
@@ -188,10 +188,15 @@ onUnmounted(() => {
 
 .cabinet-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
-  flex-shrink: 0;
+  padding: 5px 10px 15px 10px;
+}
+
+.cabinet-header-title {
+  color: var(--titleColor);
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 15px;
 }
 
 .main-layout {
@@ -202,7 +207,7 @@ onUnmounted(() => {
   min-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-right: 5px;
+  padding: 0 15px;
   padding-bottom: 20px;
   -webkit-overflow-scrolling: touch;
 }
@@ -493,6 +498,20 @@ onUnmounted(() => {
   padding: 2px 8px;
   border-radius: 5px;
   border: 2px solid #1a1a1a;
+}
+
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid #2b2b2b;
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #2b2b2b;
+  transition: transform 0.1s, box-shadow 0.1s;
 }
 
 @keyframes toonFloat {

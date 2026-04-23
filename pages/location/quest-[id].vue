@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="quest">
+      <VLoginPreloader v-if="questStore.loading"/>
       <div v-if="questStore.finished && questStore.success && !questStore.hasMistakes" class="quest__stamp quest__stamp--ok">{{ t('locationQuests.done')}}</div>
       <div v-if="questStore.loading" class="quest__panel quest__panel--loading"></div>
       <div v-else-if="questStore.error" class="quest__panel quest__panel--error">
@@ -227,6 +228,7 @@ import VHearts from '../../src/components/V-hearts.vue'
 import VLeaveModal from "~/src/components/V-leaveModal.vue";
 import VRulesModal from "~/src/components/V-rulesModal.vue";
 import VReviveModal from "~/src/components/V-reviveModal.vue";
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
 useSeoMeta({robots: 'noindex, nofollow'})
 
 const { getDotClass,  optionClass } = useClasses()

@@ -140,8 +140,7 @@ onUnmounted(() => {
   padding: 3px 8px;
   border-radius: 8px;
   background: var(--timerbg);
-  border: 3px solid #2b3240;
-  box-shadow: 2px 2px 0 #000;
+  border: 2px solid #2b3240;
   color: #fff;
   font-size: 15px;
   font-weight: 600;
@@ -158,11 +157,11 @@ onUnmounted(() => {
   justify-content: space-between;
   gap: 12px;
   align-items: center;
-  background: #1e222a;
-  border: 1px solid #363d4a;
+  background: var(--menuItemsBg);
+  border: 1px solid var(--tabsSlideBorderColor);
   border-radius: 14px;
   padding: 0 10px;
-  box-shadow: 2px 2px 0 var(--boxShadowMobile);
+  box-shadow: 2px 2px 0 var(--tabsSlideBorderColor);
   position: relative;
   z-index: 1;
 }

@@ -194,14 +194,16 @@ definePageMeta({
 }
 
 .learn-card {
-  background: #2c323d;
-  border-radius: 18px;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
   display: block;
   flex-shrink: 0;
-  border: 2px solid #363d4a;
+  background: var(--menuItemsBg);
+  border-radius: 20px;
+  padding: 5px 15px;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
 }
 
 .card-content {
@@ -219,7 +221,7 @@ definePageMeta({
   font-size: 18px;
   font-weight: 700;
   margin: 0;
-  color: #FFFFFF;
+  color: var(--titleColor);
 }
 
 .sub-card .card-title {

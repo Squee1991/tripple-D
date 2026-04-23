@@ -37,7 +37,6 @@ import Study from '../../assets/images/app-nav-icons/study.svg'
 
 const authStore = userAuthStore()
 const route = useRoute()
-
 const footerNav = [
   { id: 'study', path: '/study', icon: Study, alt: 'Study' },
   { id: 'game', path: '/play', icon: Game, alt: 'Game' },
@@ -45,13 +44,13 @@ const footerNav = [
   { id: 'events', path: '/events', icon: Events, alt: 'Events' },
   { id: 'exams', path: '/cabinet', icon: Cabinet, alt: 'Exams' },
 ]
-
 const activeIndex = computed(() => {
   return footerNav.findIndex(item => {
     if (item.path === '/') return route.path === '/'
     return route.path.startsWith(item.path)
   })
 })
+
 </script>
 
 <style scoped>
@@ -67,11 +66,22 @@ const activeIndex = computed(() => {
 }
 
 .footer__container {
-  background: #1e1e1e;
+  background: var(--tabBg);
   border-radius: 40px;
   padding: 6px;
   box-shadow: var(--boxShadowMobile);
-  border: 3px solid #2a2a2a;
+  border: 3px solid var(--tabsSlideBorderColor);
+}
+
+.footer:after {
+  content: "";
+  position:fixed;
+  bottom: -18px;
+  left: 0;
+  height: 45px;
+  width: 100%;
+  z-index: 0;
+  background: var(--overlayAfter);
 }
 
 .nav {
@@ -92,6 +102,7 @@ const activeIndex = computed(() => {
   transition: transform 0.4s cubic-bezier(0.34, 1.35, 0.64, 1), opacity 0.3s ease;
   z-index: 1;
   box-shadow: var(--tabSlideBoxShadow);
+  will-change: transform;
 }
 
 .nav__item {
@@ -111,6 +122,7 @@ const activeIndex = computed(() => {
   height: 35px;
   object-fit: contain;
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform;
 }
 
 .nav__item.is-active .nav__icon {

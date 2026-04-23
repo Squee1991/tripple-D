@@ -230,6 +230,7 @@ onUnmounted(() => {
   height: 100%;
   max-width: 360px;
   margin: auto;
+  padding: 10px;
 }
 
 .sub-screen-container {

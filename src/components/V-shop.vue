@@ -374,8 +374,8 @@ const confirmPurchase = async () => {
   left: 0;
   right: 0;
   width: 100%;
-  height: 90px;
-  background: linear-gradient(to bottom, rgba(57, 65, 201, 0) 0%, rgba(23, 24, 34, 1) 100%);
+  height: 50px;
+  background: var(--overlayAfter);
 }
 
 .shop__title-container {

@@ -145,7 +145,7 @@ onBeforeUnmount(() => {
     margin-bottom: 0;
     height: 100%;
     flex: 1;
-    max-height: calc(100dvh - 105px);
+    max-height: calc(100dvh - 70px);
     overflow: hidden;
   }
 
@@ -156,7 +156,7 @@ onBeforeUnmount(() => {
     background: var(--tabBg);
     border-radius: 40px;
     padding: 6px;
-    border: 3px solid #2a2a2a;
+    border: 3px solid var(--tabsSlideBorderColor);
     box-shadow: var(--boxShadowMobile);
     margin: 0 4px;
     z-index: 1;
@@ -165,7 +165,7 @@ onBeforeUnmount(() => {
 
   .sliding-bg {
     position: absolute;
-    top: 6px;
+    top: 5px;
     bottom: 6px;
     left: 6px;
     width: calc(33.33% - 4px);
@@ -209,7 +209,7 @@ onBeforeUnmount(() => {
     width: 100%;
     overflow-y: auto;
     padding: 8px;
-    padding-bottom: 105px;
+    padding-bottom: 135px;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }

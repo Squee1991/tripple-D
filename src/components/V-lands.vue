@@ -4,46 +4,51 @@
       <h1 class="map__title">{{ t('locationsMenu.title') }}</h1>
     </div>
     <div class="map-layout">
-      <div
-          class="map-left"
-          :class="[ { 'is-open': isPanelOpen || windowWidth > 1024 },  'theme--' + themeOf(active), { rtl: locale === 'ar' } ]"
-          v-if="active"
-      >
-        <div class="mal__left-content">
-          <div>
-            <div class="mal__left-content-wrapper">
-              <button v-if="windowWidth <= 1024" @click="closePanel" class="btn-icon-back">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                     stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="19" y1="12" x2="5" y2="12"></line>
-                  <polyline points="12 19 5 12 12 5"></polyline>
-                </svg>
-              </button>
-              <h2 class="map-left__title">{{ t(active.name) }}</h2>
-            </div>
-            <div class="map__left-content-bottom">
-              <div class="map-left__art">
-                <img :src="active?.icon" alt="Choose avatar location">
+      <transition name="slide">
+        <div
+            class="map-left"
+            v-show="isPanelOpen || windowWidth > 1024"
+            :class="[ 'theme--' + themeOf(active), { rtl: locale === 'ar' } ]"
+            v-if="active"
+        >
+          <div class="mal__left-content">
+            <div>
+              <div class="mal__left-content-wrapper">
+                <button v-if="windowWidth <= 1024" @click="closePanel" class="btn-icon-back">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                       stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                  </svg>
+                </button>
+                <h2 class="map-left__title">{{ t(active.name) }}</h2>
               </div>
-              <p class="map-left__desc">{{ t(active.desc) }}</p>
-              <p class="map-left__level" :class="isUnlocked ? 'ok' : 'locked'">
-                <span v-if="isUnlocked">{{ t('locationsMenu.access') }}</span>
-                <span v-else>{{ t('locationsMenu.accessWithLevel') }} {{ active.level }}</span>
-              </p>
+              <div class="map__left-content-bottom">
+                <div class="map-left__art">
+                  <img :src="active?.icon" alt="Choose avatar location" decoding="async">
+                </div>
+                <p class="map-left__desc">{{ t(active.desc) }}</p>
+                <p class="map-left__level" :class="isUnlocked ? 'ok' : 'locked'">
+                  <span v-if="isUnlocked">{{ t('locationsMenu.access') }}</span>
+                  <span v-else>{{ t('locationsMenu.accessWithLevel') }} {{ active.level }}</span>
+                </p>
+              </div>
             </div>
+            <button class="map-btn" :disabled="!isUnlocked" @click="go(active)">
+              {{ t('locationsMenu.choose') }}
+            </button>
           </div>
-          <button class="map-btn" :disabled="!isUnlocked" @click="go(active)">
-            {{ t('locationsMenu.choose') }}
-          </button>
         </div>
-      </div>
+      </transition>
+
       <div class="map-right-container">
         <div class="map-pagination-arrows">
           <button
               class="arrow-btn"
               :disabled="isFirstCategory"
               @click="prevCategory"
-          >‹</button>
+          >‹
+          </button>
           <div class="current-category-name">
             {{ t(`categories.${activeCategory}`) }}
           </div>
@@ -51,10 +56,12 @@
               class="arrow-btn"
               :disabled="isLastCategory"
               @click="nextCategory"
-          >›</button>
+          >›
+          </button>
         </div>
-        <div class="map-right">
-          <template v-if="filteredRegions.length > 0">
+
+        <transition name="fade" mode="out-in">
+          <div class="map-right" v-if="filteredRegions.length > 0" :key="activeCategory">
             <div
                 v-for="region in filteredRegions"
                 :key="region.id"
@@ -66,7 +73,7 @@
                 @click="select(region)"
             >
               <div class="region-card__art">
-                <img :src="region.icon" :alt="region.id">
+                <img :src="region.icon" :alt="region.id" decoding="async">
               </div>
               <div class="region-card__footer">
                 <span class="region-card__title">{{ t(region.name) }}</span>
@@ -77,15 +84,15 @@
                 </div>
               </div>
             </div>
-          </template>
-          <div v-else class="map-empty-placeholder">
+          </div>
+          <div v-else class="map-empty-placeholder" key="empty">
             <div class="empty-content">
               <div class="empty-icon">✨</div>
-              <h3 class="empty-title">{{ t('regionsModal.title')}}</h3>
-              <p class="empty-text">{{ t('regionsModal.text')}}</p>
+              <h3 class="empty-title">{{ t('regionsModal.title') }}</h3>
+              <p class="empty-text">{{ t('regionsModal.text') }}</p>
             </div>
           </div>
-        </div>
+        </transition>
       </div>
     </div>
   </div>
@@ -96,6 +103,7 @@ import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {regions} from '@/utils/regions.js'
 import {userlangStore} from '../../store/learningStore.js'
+
 const {t, locale} = useI18n()
 const langStore = userlangStore()
 const router = useRouter()
@@ -145,7 +153,7 @@ function themeOf(obj) {
 function select(region) {
   active.value = region
   if (windowWidth.value <= 1024) {
-    window.history.pushState({ isMapPanelOpen: true }, '')
+    window.history.pushState({isMapPanelOpen: true}, '')
     isPanelOpen.value = true
   }
 }
@@ -155,7 +163,6 @@ function closePanel() {
     window.history.back()
   }
 }
-
 
 const handlePopState = () => {
   if (isPanelOpen.value) {
@@ -198,7 +205,6 @@ onBeforeUnmount(() => {
 </script>
 
 <style>
-
 * {
   font-family: "Nunito", sans-serif;
 }
@@ -219,7 +225,7 @@ onBeforeUnmount(() => {
   justify-content: center;
   width: 100%;
   border-radius: 25px;
-  padding: 8px 10px;
+  padding: 10px 10px;
   background: var(--bgTitle);
   box-shadow: 0 5px 0 var(--boxShadowBottom);
   position: relative;
@@ -285,7 +291,6 @@ onBeforeUnmount(() => {
   font-weight: 900;
   color: var(--titleColor);
   margin-left: 15px;
-
 }
 
 .map-left__desc {
@@ -341,7 +346,6 @@ onBeforeUnmount(() => {
   transition: transform 0.1s;
 }
 
-
 .map-b {
   padding: 12px 18px;
   background: var(--regionBtnBg);
@@ -393,7 +397,6 @@ onBeforeUnmount(() => {
   width: 100%;
   height: 100%;
 }
-
 
 @media (min-width: 1024px) {
   .region-card:hover {
@@ -507,7 +510,9 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 1159px) {
-  grid-template-columns: repeat(1, 1fr);
+  .map-right {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media (max-width: 1090px) {
@@ -543,15 +548,16 @@ onBeforeUnmount(() => {
     left: 0;
     box-sizing: border-box;
     width: 60%;
+    height: 100%;
     border: none;
     border-right: 3px solid;
     border-top-right-radius: 12px;
-    transform: translateX(-100%);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform .25s ease, opacity .25s ease;
     z-index: 111000;
     background: var(--bg);
+    padding: calc(env(safe-area-inset-top, 30px) + 5px) 14px 10px 14px;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .map-left__close {
@@ -568,11 +574,6 @@ onBeforeUnmount(() => {
   .map-left.rtl {
     left: auto;
     right: 0;
-    transform: translateX(100%);
-  }
-
-  .map-left.rtl.is-open {
-    transform: translateX(0);
   }
 
   .map-left.rtl .map-left__close {
@@ -580,17 +581,24 @@ onBeforeUnmount(() => {
     right: auto;
   }
 
-  .map-left.is-open {
-    transform: translateX(0);
-    opacity: 1;
-    pointer-events: auto;
-    height: 100%;
-    background: var(--bg);
-    padding: calc(env(safe-area-inset-top, 30px) + 5px) 14px 10px 14px;
-  }
-
   .region-card__title {
     font-size: 0.9rem;
+  }
+
+  .slide-enter-active,
+  .slide-leave-active {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  }
+
+  .slide-enter-from,
+  .slide-leave-to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .map-left.rtl.slide-enter-from,
+  .map-left.rtl.slide-leave-to {
+    transform: translateX(100%);
   }
 }
 
@@ -674,14 +682,14 @@ onBeforeUnmount(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #2c323d;
-  border: 2px solid #363d4a;
   border-radius: 10px;
   font-size: 24px;
   font-weight: 900;
   cursor: pointer;
   color: white;
-  box-shadow: 2px 2px 0 #363d4a;
+  box-shadow: 2px 2px 0 var(--boxShadowMobile);
+  border: 2px solid var(--tabsSlideBorderColor);
+  background: var(--tabBg);
   transition: all 0.1s;
 }
 
@@ -702,11 +710,11 @@ onBeforeUnmount(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 2px 0 #363d4a;
-  border: 2px solid #363d4a;
+  box-shadow: 2px 2px 0 var(--boxShadowMobile);
+  border: 2px solid var(--tabsSlideBorderColor);
+  background: var(--tabBg);
   border-radius: 15px;
   flex: 1;
-  background: #2c323d;
   height: 36px;
 }
 
@@ -743,5 +751,16 @@ onBeforeUnmount(() => {
   font-weight: 600;
   color: #444;
   line-height: 1.4;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: scale(0.98);
 }
 </style>
