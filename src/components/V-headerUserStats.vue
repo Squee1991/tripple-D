@@ -21,7 +21,6 @@
         >
         <span v-if="!userAuth.isPremium || item.id !== 'lives'" class="stat-value">{{ item.value }}</span>
       </button>
-
       <transition name="fade">
         <div v-if="activeTooltip === item.id" class="tooltip-box" @click="activeTooltip === false">
           <div class="tooltip-header">
@@ -34,7 +33,6 @@
         </div>
       </transition>
     </div>
-
     <transition name="slide-down">
       <div v-if="showFreezeModal" class="modal-overlay" @click.self="showFreezeModal = false">
         <div class="modal-content">
@@ -112,10 +110,10 @@ const infoData = computed(() => [
   },
   {
     id: "lives",
-    title: t('Жизни'),
+    title: t('pavelOverlay.livesTitle'),
     tips: [
-      {label: t('Необходимы для прохождения языковых земель')},
-      {label: t('Приобреюатся во внутреннем магазине или во время обучения за Артиклюсы')}
+      {label: t('pavelOverlay.livesLabelOne')},
+      {label: t('pavelOverlay.livesLabelTwo')}
     ],
     icon: userAuth.isPremium ? Forever : Heart,
     alt: "Level/Heart",

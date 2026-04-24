@@ -9,10 +9,14 @@
              <span>{{ timePassed }}</span>
           </div>
           <div class="stat-pill">
-            ❤️ {{ store.attempts }}
+            <img class="guess__icon-header" src="../assets/images/heartInfo.svg" alt="heart">
+            <span>{{ store.attempts }}</span>
           </div>
-          <button class="ios-btn-icon" @click="startGame" title="Начать заново">
-            <img class="guess__icon-header" src="../assets/images/repeat.svg" alt="">
+          <button class="ios-btn-icon" @click="handleRestart" title="Начать заново">
+            <img class="guess__icon-header -repeat"
+                 :class="{ 'spin-anim': isSpinning }"
+                 src="../assets/images/repeat.svg"
+                 alt="repeat">
           </button>
         </div>
       </header>
@@ -20,18 +24,15 @@
         <div class="mascot-emoji">
           <img class="guess__icon" src="../assets/images/guessWord.svg" alt="">
         </div>
-        <p class="subtitle">Отгадай слово и прокачай свой немецкий!</p>
+        <p class="subtitle">{{ t('guessWord.subtitle')}}</p>
         <button class="ios-btn-primary btn-bounce" @click="startGame">
           {{ t('guessWord.startGame') }}
         </button>
       </div>
-
       <div v-else class="screen-game">
-
         <div v-if="themeText" class="theme-chip">
-          💡 Тема: <strong>{{ themeText }}</strong>
+          💡 {{ t('guessWord.theme')}} <strong>{{ themeText }}</strong>
         </div>
-
         <div class="word-board">
           <div
               v-for="(char, i) in store.masked"
@@ -42,11 +43,9 @@
             {{ char || '' }}
           </div>
         </div>
-
         <div v-if="store.win" class="success-message bounce-in">
           🎉 {{ t('guessWord.victory') }} 🎉
         </div>
-
         <div class="game-keyboard">
           <button
               v-for="letter in store.alphabet"
@@ -59,7 +58,6 @@
             {{ letter }}
           </button>
         </div>
-
         <div class="input-section">
           <input
               v-model="guessInput"
@@ -80,7 +78,6 @@
         <div class="ios-modal-card">
           <h3 class="modal-title">{{ t('guessWord.good') }}</h3>
           <p class="modal-text">{{ t('guessWord.article') }} <span class="highlight-word">{{ store.answer }}</span></p>
-
           <form class="modal-form" @submit.prevent="checkArticle">
             <input
                 v-model="articleGuess"
@@ -129,9 +126,8 @@ import { useSeoMeta } from "#imports"
 import VBackBtn from "~/src/components/V-back-btn.vue";
 
 const { t } = useI18n()
-const router = useRouter()
 const store = useGuessWordStore()
-
+const isSpinning = ref(false)
 const guessInput = ref('')
 const articleGuess = ref('')
 const articleResult = ref(null)
@@ -150,9 +146,6 @@ const timePassed = computed(() => {
   return Math.max(0, Math.floor((now.value - store.timeStarted) / 1000))
 })
 
-const backToMainPage = () => {
-  router.push('/')
-}
 
 const themeText = computed(() => {
   const obj = store.currentWordObj
@@ -171,6 +164,14 @@ function startTimer() {
   intervalId = setInterval(() => {
     now.value = Date.now()
   }, 1000)
+}
+
+function handleRestart() {
+  isSpinning.value = true
+  setTimeout(() => {
+    isSpinning.value = false
+  }, 500)
+  startGame()
 }
 
 function checkArticle() {
@@ -210,20 +211,12 @@ function guessWord() {
   guessInput.value = ''
 }
 
-// НОВАЯ ФУНКЦИЯ ДЛЯ ЦВЕТА КНОПОК
 function getKeyClass(letter) {
-  // Если буква еще не использовалась, ничего не вешаем
   if (!store.usedLetters.includes(letter)) return ''
-
-  // Берем загаданное слово, переводим в нижний регистр для проверки
   const answerStr = store.answer || ''
-
-  // Если буква есть в слове -> правильная (зеленая)
   if (answerStr.toLowerCase().includes(letter.toLowerCase())) {
     return 'key-btn--correct'
   }
-
-  // Иначе -> неправильная (серая)
   return 'key-btn--wrong'
 }
 
@@ -256,7 +249,7 @@ watch(() => store.lose, (isLose) => {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: Nunito, sans-serif;
 }
 
 .ios-app-container {
@@ -272,7 +265,7 @@ watch(() => store.lose, (isLose) => {
 }
 
 .guess__icon-header {
-  width: 30px;
+  width: 34px;
 }
 
 .ios-header {
@@ -312,17 +305,15 @@ watch(() => store.lose, (isLose) => {
 .stat-pill {
   display: flex;
   align-items: center;
-  background: #fff;
-  padding: 6px 12px;
+  padding: 4px 8px;
   border-radius: 20px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
-  color: #333;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  color: var(--titleColor);
 }
 
 .ios-btn-icon {
-  background: #fff;
+ background: none;
   border: none;
   width: 36px;
   height: 36px;
@@ -331,8 +322,8 @@ watch(() => store.lose, (isLose) => {
   align-items: center;
   justify-content: center;
   color: #007AFF;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .ios-btn-icon:active {
@@ -386,7 +377,7 @@ watch(() => store.lose, (isLose) => {
   color: #007AFF;
   padding: 8px 16px;
   border-radius: 16px;
-  font-size: 15px;
+  font-size: 18px;
   margin-bottom: 30px;
 }
 
@@ -668,6 +659,19 @@ watch(() => store.lose, (isLose) => {
   100% { transform: scale(1); opacity: 1; }
 }
 
+.spin-anim {
+  animation: spin360 0.5s ease-in-out;
+}
+
+@keyframes spin360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .ios-modal-enter-active,
 .ios-modal-leave-active {
   transition: opacity 0.3s ease;
@@ -682,11 +686,4 @@ watch(() => store.lose, (isLose) => {
   animation: bounceIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-@media (min-width: 431px) {
-  .ios-app-container {
-    border-radius: 40px;
-    height: 90%;
-    min-height: 800px;
-  }
-}
 </style>

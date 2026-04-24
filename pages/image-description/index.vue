@@ -14,7 +14,7 @@
           <span>{{ t('describePicture.title') }}</span>
         </h1>
         <button class="btn-icon-info" @click="openModal">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                stroke="orange" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <line x1="12" y1="16" x2="12" y2="12"></line>
@@ -60,7 +60,6 @@
 import { ref } from 'vue'
 import { useSeoMeta, useState } from "#imports"
 import { useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
 import Modal from '../../src/components/modal.vue'
 import Description from '@/assets/images/reporting.svg'
 import { topics } from '@/utils/descriptionImages.js'
@@ -122,7 +121,6 @@ function goBack() {
   font-family: "Nunito", sans-serif;
   display: flex;
   justify-content: center;
-  padding: 8px;
   box-sizing: border-box;
   color: #1e272e;
   height: 100%;
@@ -150,7 +148,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 12px;
-  padding: 8px 4px;
+  padding: 5px 10px 15px 10px;
   flex-shrink: 0;
 }
 
@@ -166,8 +164,8 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   border: 3px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile);
   border-radius: 14px;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -210,7 +208,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 12px;
-  padding-bottom: 20px;
+  padding: 20px 15px;
 }
 
 .topic-card-item {

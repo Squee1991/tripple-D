@@ -141,14 +141,17 @@
                 />
                 <span v-if="showResults"
                       :class="['quiz-result', isCorrect(index) ? 'correct' : 'incorrect']">
-                           {{ isCorrect(index) ? '✔️' : `'❌ ${word.article}` }}
+                           {{ isCorrect(index) ? '✔️' : `❌ ${word.article}` }}
                         </span>
               </div>
             </div>
             <div class="quiz__button-el">
               <button @click="checkAnswers" class="quiz-button">{{ t('rulesSixthBlock.checkBtn') }}</button>
               <button class="reset" @click="resetResult">
-                <img class="quiz__undo-icon" src="../assets/images/undo.svg" alt="reset">
+                <img class="quiz__undo-icon"
+                     :class="{ 'spin-anim': isSpinning }"
+                     src="../assets/images/repeat.svg"
+                     alt="reset">
               </button>
             </div>
           </div>
@@ -180,7 +183,7 @@ useSeoMeta({
 
 const userAnswers = ref(Array(quizWords.length).fill(''))
 const showResults = ref(false)
-
+const isSpinning = ref(false)
 function checkAnswers() {
   showResults.value = true
 }
@@ -193,6 +196,10 @@ function isCorrect(index) {
 const resetResult = () => {
   showResults.value = false;
   userAnswers.value = Array(quizWords.length).fill('');
+  isSpinning.value = true;
+  setTimeout(() => {
+    isSpinning.value = false;
+  }, 500);
 }
 
 </script>
@@ -209,9 +216,9 @@ const resetResult = () => {
   font-size: 24px;
   font-weight: 900;
   font-family: "Nunito", sans-serif;
-  color: white;
+  color: var(--titleColor);
   margin-left: 15px;
-  text-shadow: 0 1px var(--regionBtnColor);
+  text-shadow: 0 1px var(--titleColor);
 }
 
 .reset {
@@ -373,6 +380,7 @@ const resetResult = () => {
 .quiz-item {
   display: flex;
   flex-direction: column;
+  margin-bottom: 6px;
 }
 
 .rules__header-wrapper {
@@ -387,6 +395,7 @@ const resetResult = () => {
 
 .quiz-item label {
   font-weight: 700;
+  margin-left: 5px;
 }
 
 .quiz__content__inner {
@@ -434,21 +443,16 @@ const resetResult = () => {
 
 .quiz-button {
   font-family: "Nunito", sans-serif;
-  padding: 0.45rem 1.2rem;
+  padding: 14px;
   font-size: 1.2rem;
   border-radius: 12px;
   cursor: pointer;
-  border: 2px solid #1e1e1e;
   transition: all 0.1s ease-in-out;
   background-color: #f97028;
+  box-shadow: 0 6px 0 #b25626;
+  border: none;
   color: #ffffff;
-  box-shadow: 3px 3px 0 #1e1e1e;
   flex: 1;
-}
-
-.quiz-button:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1e1e1e;
 }
 
 .quiz__undo-icon {
@@ -456,12 +460,6 @@ const resetResult = () => {
   height: 40px;
   cursor: pointer;
   transition: transform 0.2s ease;
-}
-
-
-.rules__title {
-  font-size: 2rem;
-  transform: rotate(0);
 }
 
 .rules__card {
@@ -480,6 +478,19 @@ const resetResult = () => {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.spin-anim {
+  animation: spin360 0.5s ease-in-out;
+}
+
+@keyframes spin360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 </style>

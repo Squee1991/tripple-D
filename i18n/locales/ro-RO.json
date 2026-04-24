@@ -8176,7 +8176,10 @@
     "articleLabelTwo": "- Se consumă pe reîncercări în Ținuturile Limbii și în magazinul din profil.",
     "levelTitle": "Nivel",
     "levelLabelOne": "- Nivelul crește pe măsură ce finalizezi sarcini.",
-    "levelLabelTwo": "- Nivelurile mai mari deblochează sarcini în Ținuturile Limbii."
+    "levelLabelTwo": "- Nivelurile mai mari deblochează sarcini în Ținuturile Limbii.",
+    "livesTitle": "Vieți",
+    "livesLabelOne": "Necesare pentru a parcurge ținuturile lingvistice",
+    "livesLabelTwo": "Achiziționate în magazinul intern sau în timpul instruirii pentru Articluși"
   },
   "idioms": {
     "title": "Idiomuri și expresii frazeologice",
@@ -8284,6 +8287,8 @@
     "answer": "Trece cu vederea o greșeală"
   },
   "guessWord": {
+    "subtitle": "Ghicește cuvântul și îmbunătățește-ți germana!",
+    "theme": "Temă:",
     "back": "Înapoi",
     "guessTitle": "Ghicește cuvântul",
     "startGame": "Începe jocul",
@@ -9486,6 +9491,7 @@
     "Informatik": "Informatică"
   },
   "modes": {
+    "themeTitle": "Teme de studiu ale articolelor",
     "article": "Introdu articolul",
     "letters": "Asamblează cuvântul din litere",
     "articleWord": "Introdu cuvântul și articolul",
@@ -9741,5 +9747,35 @@
   "lives": {
     "next": "Următoarea:",
     "full": "Vieți pline"
+  },
+  "deletePage": {
+    "title": "Ștergere profil",
+    "bubbleText": "Ne pare rău că pleci! Te rugăm să verifici informațiile importante înainte de ștergere.",
+    "cleanUpTitle": "Gestionarea abonamentului",
+    "cleanUpInfoText": "Ștergerea contului",
+    "cleanUpInfoTextTwo": "nu anulează",
+    "cleanUpInfoTextThree": "abonamentul! Verifică starea plăților.",
+    "deleteAccount": "Șterge contul",
+    "modalTitle": "Ești sigur că ștergem?",
+    "cleanUpGoogle": "Autentificare prin",
+    "cleanUpGoogleTwo": " Pentru confirmare, se va deschide o fereastră de autorizare.",
+    "cleanUpPassword": "Introdu parola ta:",
+    "placeholder": "introdu parola ta",
+    "modalLabelOne": "M-am răzgândit",
+    "modalLabelTwo": "Confirm ștergerea"
+  },
+  "accountChanges": {
+    "first": "Datele profilului vor dispărea definitiv.",
+    "two": "Progresul și istoricul testelor vor fi resetate.",
+    "three": "Toate premiile, titlurile și realizările vor fi pierdute.",
+    "four": "Valuta, nivelul și pălăriile vor fi retrase."
+  },
+  "platformsInformation": {
+    "titleWeb": "Pe site",
+    "descriptionWeb": "Plata cu cardul pe site.",
+    "instructionWeb": "Dezactivează reînnoirea automată din Contul Personal.",
+    "titleStore": "În aplicație",
+    "descriptionStore": "Google Play sau App Store.",
+    "instructionStore": "Anulează abonamentul din setările telefonului."
   }
 }

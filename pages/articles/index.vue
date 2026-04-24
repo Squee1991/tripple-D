@@ -7,7 +7,7 @@
       <div class="theme__title-wrapper">
         <div class="theme__header">
           <VBackBtn/>
-          <div class="theme__title">Темы изучения артиклей</div>
+          <div class="theme__title">{{ t('modes.themeTitle') }}</div>
         </div>
       </div>
       <div class="theme-content-area">
@@ -273,7 +273,6 @@ onMounted(() => {
   width: 100%;
   padding: 5px 10px 10px 10px;
   margin-bottom: 5px;
-  border-bottom: 2px solid #ffffff;
   border-radius: 10px;
 }
 

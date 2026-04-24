@@ -2,15 +2,13 @@
   <div class="theme-page">
     <div class="page-header">
       <VBackBtnNav />
-      <h1 class="page-title">Тематические уровни</h1>
+      <h1 class="page-title">{{ t('sub.themen')}}</h1>
     </div>
-
     <transition name="toast-fade">
       <div v-if="showChalkMessage" class="toast-message">
         {{ chalkMessage }}
       </div>
     </transition>
-
     <div class="themes-scroll">
       <div class="themes-container">
         <button
@@ -27,7 +25,6 @@
         </button>
       </div>
     </div>
-
     <div class="content-area">
       <div class="level-tabs-wrapper">
         <div class="level-tabs">
@@ -42,7 +39,6 @@
           </button>
         </div>
       </div>
-
       <div class="modules-grid" v-if="selectedLevelObj">
         <button
             v-for="mod in selectedLevelObj.modules"
@@ -56,7 +52,6 @@
         >
           <div class="module-title">{{ t('chooseTheme.module') }}</div>
           <div class="module-number">{{ mod.id }}</div>
-
           <div class="module-status-icon" v-if="!isModuleUnlocked(selectedLevelObj.level, mod.id)">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--titleColor)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.5;">
               <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
@@ -71,7 +66,6 @@
         </button>
       </div>
     </div>
-
     <transition name="slide-up">
       <div class="bottom-action" v-if="moduleToStart">
         <button class="btn-start" @click="startSelectedModule">
@@ -241,7 +235,6 @@ watch(topic, loadThemeData)
   margin: 0 0 0 16px;
 }
 
-/* СКРОЛЛ ТЕМ */
 .themes-scroll {
   width: 100%;
   overflow-x: auto;

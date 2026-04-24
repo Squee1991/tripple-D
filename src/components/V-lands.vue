@@ -689,7 +689,7 @@ onBeforeUnmount(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 14px;
   font-size: 24px;
   font-weight: 900;
   cursor: pointer;

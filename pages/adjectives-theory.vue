@@ -3,7 +3,7 @@
     <div class="adjs__inner">
       <header class="adjs__header">
         <VBackBtnNav/>
-        <div class="adjs__header-title">Прилагательные</div>
+        <div class="adjs__header-title">{{ t('categoryAchievments.adjectives')}}</div>
       </header>
       <div class="adjs__content-inner">
         <div>

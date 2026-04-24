@@ -196,10 +196,10 @@ definePageMeta({
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 15px;
+  padding: 0 15px;
   flex: 1;
   overflow-y: auto;
-  padding-bottom: calc(110px + var(--sab));
+  padding-bottom: calc(105px + var(--sab));
   -webkit-overflow-scrolling: touch;
 }
 

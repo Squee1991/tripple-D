@@ -2,7 +2,7 @@
   <div class="quiz-app">
     <div class="quiz-app-container">
       <div v-if="loading" class="quiz-screen">
-        <p class="loading-text">Загрузка...</p>
+        <p class="loading-text">{{ t('dailyPanel.loading') }}</p>
       </div>
       <div v-else-if="currentTask" class="quiz-screen">
         <header class="study-nav">

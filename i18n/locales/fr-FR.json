@@ -8169,7 +8169,10 @@
     "articleLabelTwo": "- Utilisé pour les essais dans les Terres de Langues et dans la boutique du profil.",
     "levelTitle": "Niveau",
     "levelLabelOne": "- Le niveau augmente en accomplissant des tâches.",
-    "levelLabelTwo": "- Les niveaux supérieurs débloquent des tâches dans les Terres de Langues."
+    "levelLabelTwo": "- Les niveaux supérieurs débloquent des tâches dans les Terres de Langues.",
+    "livesTitle": "Vies",
+    "livesLabelOne": "Nécessaires pour traverser les terres de langues",
+    "livesLabelTwo": "S'achètent dans la boutique interne ou pendant la formation contre des Articluses"
   },
   "idioms": {
     "title": "Idiomes et expressions",
@@ -8277,6 +8280,8 @@
     "answer": "Il ferme les yeux sur une erreur"
   },
   "guessWord": {
+    "subtitle": "Devine le mot et améliore ton allemand !",
+    "theme": "Thème :",
     "back": "Retour",
     "guessTitle": "Devine le mot",
     "startGame": "Commencer",
@@ -9479,6 +9484,7 @@
     "Informatik": "Informatique"
   },
   "modes": {
+    "themeTitle": "Thèmes d'étude des articles",
     "article": "Inscrire l'article",
     "letters": "Assembler le mot",
     "articleWord": "Mot + Article",
@@ -9734,5 +9740,35 @@
   "lives": {
     "next": "Suivante :",
     "full": "Vies au maximum"
+  },
+  "deletePage": {
+    "title": "Suppression du profil",
+    "bubbleText": "Nous sommes désolés de vous voir partir ! Veuillez vérifier les informations importantes avant la suppression.",
+    "cleanUpTitle": "Gestion de l'abonnement",
+    "cleanUpInfoText": "Supprimer le compte",
+    "cleanUpInfoTextTwo": "n'annule pas",
+    "cleanUpInfoTextThree": "l'abonnement ! Vérifiez le statut des paiements.",
+    "deleteAccount": "Supprimer le compte",
+    "modalTitle": "Voulez-vous vraiment supprimer ?",
+    "cleanUpGoogle": "Connexion via",
+    "cleanUpGoogleTwo": " Pour confirmer, une fenêtre d'autorisation s'ouvrira.",
+    "cleanUpPassword": "Entrez votre mot de passe :",
+    "placeholder": "entrez votre mot de passe",
+    "modalLabelOne": "J'ai changé d'avis",
+    "modalLabelTwo": "Confirmer la suppression"
+  },
+  "accountChanges": {
+    "first": "Les données du profil disparaîtront à jamais.",
+    "two": "Le progrès et l'historique des tests seront réinitialisés.",
+    "three": "Tous les prix, titres et succès seront perdus.",
+    "four": "La monnaie, le niveau et les chapeaux seront retirés."
+  },
+  "platformsInformation": {
+    "titleWeb": "Sur le site",
+    "descriptionWeb": "Paiement par carte sur le site.",
+    "instructionWeb": "Désactivez le renouvellement automatique dans votre Espace Client.",
+    "titleStore": "Dans l'application",
+    "descriptionStore": "Google Play ou App Store.",
+    "instructionStore": "Annulez l'abonnement dans les paramètres du téléphone."
   }
 }

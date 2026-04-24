@@ -302,7 +302,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 .tiips__info-wrapper {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 19px;
 }
 
 .btn__tips {
@@ -330,7 +330,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   text-align: center;
   padding: 12px 5px;
   cursor: pointer;
-  color: #363535;
+  color: var(--titleColor);
   font-family: "Nunito", sans-serif;
   font-weight: 700;
   font-size: 17px;
@@ -341,7 +341,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 }
 
 .mode-toggle-option--inactive {
-  color: #1e1e1e;
+  color: var(--titleColor);
 }
 
 .mode-toggle-slider {
@@ -388,7 +388,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 }
 
 .duel__question-img {
-  width: 45px;
+  width: 40px;
   cursor: pointer;
 }
 
@@ -428,7 +428,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   gap: 15px;
   border: 2px solid var(--menuBorder);
   box-shadow: 2px 2px 0 var(--menuBorder);
-  color: black;
+  color: var(--titleColor);
 }
 
 .level-card {
