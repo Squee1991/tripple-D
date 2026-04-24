@@ -7,11 +7,11 @@
         <!--        </h1>-->
         <div class="rules__header-wrapper">
           <VBackBtn/>
-          <div class="rules__header-title">Квиз и советы</div>
+          <div class="rules__header-title">{{ t('rulesFirstBlock.title')}}</div>
         </div>
 
       </header>
-      <section class="rules__list" aria-label="Список правил использования артиклей">
+      <section class="rules__list" :aria-label="t('rulesFirstBlock.title')">
         <p class="rules__subtitle">
           {{ t('rulesFirstBlock.subTitle') }}
         </p>
@@ -35,7 +35,6 @@
             {{ t('rulesFirstBlock.remember') }}
           </p>
         </article>
-
         <article class="rules__card" id="plural" ref="ruleCards">
           <h2 class="rules__card-title">2. {{ t('rulesSecondBlock.firstCardTitle') }} <strong>die</strong></h2>
           <p class="rules__desc">
@@ -124,9 +123,9 @@
         </article>
         <article class="rules__card" id="quiz" ref="ruleCards">
           <h2 class="rules__card-title">6. {{ t('rulesSixthBlock.firstTitle') }}</h2>
-<!--          <p class="rules__desc">-->
-<!--            {{ t('rulesSixthBlock.firstExercises') }} (der, die , das), {{ t('rulesSixthBlock.firstAnswer') }}-->
-<!--          </p>-->
+          <p class="rules__desc">
+            {{ t('rulesSixthBlock.firstExercises') }} (der, die , das), {{ t('rulesSixthBlock.firstAnswer') }}
+          </p>
           <div class="quiz-form">
             <div class="quiz-item" v-for="(word, index) in quizWords" :key="index">
               <label :for="'word-' + index">{{ word.word }} <span class="rules__tip">{{ word.hint }}</span></label>
@@ -245,9 +244,9 @@ const resetResult = () => {
 }
 
 .rules__subtitle {
-  font-size: 18px;
+  font-size: 23px;
   text-align: center;
-  color: white;
+  color: var(--titleColor);
   max-width: 600px;
   line-height: 1.3;
   background: #00c2ff;

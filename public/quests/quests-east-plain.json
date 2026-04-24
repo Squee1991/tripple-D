@@ -375,12 +375,12 @@
     "description": "eastPlainThirdQuests.description",
     "conditions": {
       "goal": "eastPlainThirdQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -781,12 +781,12 @@
     "description": "eastPlainFifthQuests.description",
     "conditions": {
       "goal": "eastPlainFifthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1155,12 +1155,12 @@
     "description": "eastPlainSeventhQuests.description",
     "conditions": {
       "goal": "eastPlainSeventhQuests.goal",
-      "minCorrect": 11,
+      "minCorrect": 14,
       "requiredTasks": 14
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1509,12 +1509,12 @@
     "description": "eastPlainNinthQuests.description",
     "conditions": {
       "goal": "eastPlainNinthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {

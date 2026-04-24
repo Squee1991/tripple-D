@@ -7,12 +7,12 @@
     "description": "orderValleyQuestOne.description",
     "conditions": {
       "goal": "orderValleyQuestOne.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -164,12 +164,12 @@
     "description": "orderValleyQuestTwo.description",
     "conditions": {
       "goal": "orderValleyQuestTwo.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -322,12 +322,12 @@
     "description": "orderValleyQuestThree.description",
     "conditions": {
       "goal": "orderValleyQuestThree.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -480,12 +480,12 @@
     "description": "orderValleyQuestFour.description",
     "conditions": {
       "goal": "orderValleyQuestFour.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -638,12 +638,12 @@
     "description": "orderValleyQuestFive.description",
     "conditions": {
       "goal": "orderValleyQuestFive.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -796,12 +796,12 @@
     "description": "orderValleyQuestSix.description",
     "conditions": {
       "goal": "orderValleyQuestSix.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -958,12 +958,12 @@
     "description": "orderValleyQuestSeven.description",
     "conditions": {
       "goal": "orderValleyQuestSeven.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1116,12 +1116,12 @@
     "description": "orderValleyQuestEight.description",
     "conditions": {
       "goal": "orderValleyQuestEight.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1274,12 +1274,12 @@
     "description": "orderValleyQuestNine.description",
     "conditions": {
       "goal": "orderValleyQuestNine.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1432,12 +1432,12 @@
     "description": "orderValleyQuestTen.description",
     "conditions": {
       "goal": "orderValleyQuestTen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1590,12 +1590,12 @@
     "description": "orderValleyQuestEleven.description",
     "conditions": {
       "goal": "orderValleyQuestEleven.goal",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1748,12 +1748,12 @@
     "description": "orderValleyQuestTwelve.description",
     "conditions": {
       "goal": "orderValleyQuestTwelve.goal",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {

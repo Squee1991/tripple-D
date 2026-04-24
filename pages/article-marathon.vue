@@ -3,7 +3,7 @@
     <div class="header__title-wrapper">
       <VBackBtn/>
 <!--      <h1 class="header__title">{{ t('marathonPrepare.title') }}</h1>-->
-      <h1 class="header__title">Марафон артиклей</h1>
+      <h1 class="header__title">{{ t('ranked.marathonTab')}}</h1>
     </div>
     <div class="prepare-container">
       <div class="header">
