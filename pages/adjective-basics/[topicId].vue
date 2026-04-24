@@ -1,15 +1,27 @@
 <template>
-  <div class="page">
-    <header v-if="!loading && store.activeQuestion && !store.quizCompleted" class="quiz-header">
-      <button class="btn-back" @click="backTo">{{ t('prasens.back') }}</button>
-      <div class="header-right">
-        <div class="header-item">
-          {{ t('prasens.questionNumber') }} {{ store.currentQuestionIndex + 1 }} / {{ store.currentQuestions.length }}
+  <div class="quiz-page">
+    <header v-if="!loading && store.activeQuestion" class="quiz-header">
+      <button @click="backTo" class="btn-icon-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="#374151" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <div class="progress-container">
+        <div class="progress-wrapper">
+          <div class="progress-bar">
+            <div class="progress-fill" :style="{ width: progressPercent + '%'}">
+              <div class="progress-glare"></div>
+            </div>
+          </div>
         </div>
-        <div class="header-item">{{ t('prasens.score') }} {{ store.score }}</div>
+        <div class="question-counter">
+          {{ store.currentQuestionIndex + 1 }} / {{ store.currentQuestions.length }}
+        </div>
       </div>
     </header>
-    <main class="main">
+    <main class="quiz-main-content">
       <div v-if="loading" class="loading">
         <VLoginPreloader/>
       </div>
@@ -28,52 +40,58 @@
         <template v-else>
           <div class="fail-card">
             <p class="fail-emoji">🌱✨</p>
-            <p class="fail-text">{{ t('sessionNotSuccessModal.failText')}} {{ store.score }} / {{ store.currentQuestions.length }}.</p>
+            <p class="fail-text">{{ t('sessionNotSuccessModal.failText') }} {{ store.score }} / {{ store.currentQuestions.length }}.</p>
             <p class="fail-sub">
-              {{ t('sessionNotSuccessModal.failSub')}}
+              {{ t('sessionNotSuccessModal.failSub') }}
             </p>
             <div class="fail-actions">
-              <button class="btn try-again" @click="retryQuiz">{{ t('sessionNotSuccessModal.again')}}</button>
-              <button class="btn back" @click="backTo">{{ t('sessionNotSuccessModal.back')}}</button>
+              <button class="btn back" @click="backTo">{{ t('sessionNotSuccessModal.back') }}</button>
+              <button class="btn try-again" @click="retryQuiz">{{ t('sessionNotSuccessModal.again') }}</button>
             </div>
           </div>
         </template>
       </div>
-      <div v-else-if="store.activeQuestion" class="quiz">
-        <div class="question">
-          <SoundBtn :text="fullSentence" />
+      <div v-else-if="store.activeQuestion" class="quiz-content">
+        <div class="question-card">
+          <SoundBtn :text="fullSentence"/>
           <p class="question-text">
             <span>{{ store.activeQuestion.question.split('___')[0] }}</span>
-            <span class="blank">{{ store.selectedOption || '( ... )' }}</span>
+            <span class="blank-space" :class="{ 'has-selection': store.selectedOption }">
+              {{ store.selectedOption || '( ... )' }}
+            </span>
             <span>{{ store.activeQuestion.question.split('___')[1] }}</span>
           </p>
         </div>
-        <div class="options">
+        <div class="options-grid">
           <button
               v-for="option in store.activeQuestion.options"
               :key="option"
               @click="store.chooseOption(option)"
-              class="opt"
+              class="option-button"
               :class="{ selected: store.selectedOption === option }"
               :disabled="store.feedback !== null"
           >
             {{ option }}
           </button>
         </div>
-        <div class="controls">
-          <div v-if="store.feedback" class="fb" :class="store.feedback">
-            <span v-if="store.feedback === 'correct'">{{ t('prasens.correct') }}</span>
-            <span v-else>{{ t('prasens.wrong') }} {{ store.activeQuestion.answer }}</span>
+        <div class="footer-controls">
+          <div v-if="store.feedback" class="feedback-message" :class="store.feedback">
+            <span v-if="store.feedback === 'correct'">✨ {{ t('prasens.correct') }}</span>
+            <span v-else>❌ {{ t('prasens.wrong') }} <b>{{ store.activeQuestion.answer }}</b></span>
           </div>
           <button
               v-if="store.feedback === null"
-              class="btn check"
               @click="store.checkAnswer()"
               :disabled="!store.selectedOption"
+              class="action-button check"
           >
             {{ t('prasens.check') }}
           </button>
-          <button v-else class="btn next" @click="store.nextQuestion()">
+          <button
+              v-else
+              @click="store.nextQuestion()"
+              class="action-button next"
+          >
             {{ t('prasens.further') }}
           </button>
         </div>
@@ -84,7 +102,6 @@
 
 <script setup>
 import { ref, onMounted, watch, computed } from 'vue'
-import VPreloader from "../../src/components/V-preloader.vue";
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useSeoMeta } from '#imports'
@@ -92,8 +109,10 @@ import { useQuizStore } from '../../store/adjectiveStore.js'
 import { userlangStore } from '../../store/learningStore.js'
 import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
-import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue"
+
 useSeoMeta({ robots: 'noindex, nofollow' })
+
 const AWARD_EXP = 5
 const AWARD_POINTS = 5
 const DELAY_MS = 4000
@@ -108,6 +127,13 @@ const { t } = useI18n()
 const loading = ref(true)
 const category = 'adjective-basics'
 const { topicId } = route.params
+
+const progressPercent = computed(() => {
+  const total = store.currentQuestions.length
+  if (total === 0 ) return 0
+  if (store.quizCompleted) return 100
+  return ((store.currentQuestionIndex) / total) * 100
+})
 
 const isVictory = computed(() => {
   return store.currentQuestions.length === 10 && store.score >= 8
@@ -125,6 +151,7 @@ const fullSentence = computed(() => {
   const word = store.selectedOption || ''
   return `${pre}${word}${post}`
 })
+
 const startExpLocal = ref(0)
 const targetExpLocal = ref(0)
 const startPointsLocal = ref(0)
@@ -150,16 +177,19 @@ watch(() => store.quizCompleted, async (done) => {
   const curExp    = Number(learning.exp || 0)
   const curPoints = Number(learning.points || 0)
   const curLevel  = Number(learning.isLeveling || 0)
+
   const rawTargetExp = curExp + AWARD_EXP
   const levelUps     = Math.floor(rawTargetExp / LEVEL_UP_XP)
   const endLevel     = curLevel + levelUps
   const endExpMod    = rawTargetExp % LEVEL_UP_XP
+
   startExpLocal.value     = curExp
   targetExpLocal.value    = endExpMod
   startPointsLocal.value  = curPoints
   targetPointsLocal.value = curPoints + AWARD_POINTS
   startLevelLocal.value   = curLevel
   endLevelLocal.value     = endLevel
+
   setTimeout(async () => {
     learning.exp    = rawTargetExp
     learning.points = targetPointsLocal.value
@@ -170,142 +200,259 @@ watch(() => store.quizCompleted, async (done) => {
 </script>
 
 <style scoped>
-.page {
-  min-height: 100vh;
+.quiz-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: var(--bg, #f7f9fc);
+  font-family: "Nunito", sans-serif;
+  overflow: hidden;
 }
 
 .quiz-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 16px 20px;
-  background: #ffd166;
-  border-bottom: 3px solid #000;
-  box-shadow: 0 4px 0 #000;
-  font-family: 'Bangers', cursive;
-  letter-spacing: 1.5px;
+  padding: 5px 10px 15px 10px;
+  gap: 20px;
+  background-color: var(--bg, #ffffff);
+  border-bottom: 2px solid #e5e7eb;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  flex-shrink: 0;
+  z-index: 10;
 }
 
-.btn-back {
-  border: 3px solid #1e1e1e;
-  padding: 12px 16px;
-  background: #f1c40f;
-  border-radius: 16px;
-  cursor: pointer;
-  font-weight: 700;
-}
-
-.main {
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid #2b2b2b;
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #2b2b2b;
+  transition: transform 0.1s, box-shadow 0.1s;
 }
 
-.quiz {
+.btn-icon-back:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
+}
+
+.progress-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 10px;
+}
+
+.question-counter {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--titleColor, #374151);
+}
+
+.progress-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 24px;
+  background-color: #e5e7eb;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.progress-fill {
+  height: 100%;
+  background: #4ade80;
+  border-radius: 8px;
+  transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  border: none;
+}
+
+.progress-glare {
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+}
+
+.quiz-main-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.quiz-main-content::-webkit-scrollbar {
+  display: none;
+}
+
+.quiz-content {
   width: 100%;
-  max-width: 900px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 15px;
-  font-family: "Nunito", sans-serif;
 }
 
-.question {
+.question-card {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: #fff;
-  border: 3px solid #000;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 6px 6px 0 #000;
-  transform: rotate(.7deg);
+  gap: 16px;
+  margin-bottom: 30px;
 }
 
 .question-text {
-  font-size: 1.6rem;
-  color: #000;
+  font-size: 1.4rem;
+  color: #374151;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.blank-space {
+  color: #9ca3af;
+  border-bottom: 2px dashed #d1d5db;
   text-align: center;
-  margin-left: 8px;
+  transition: all 0.3s ease;
+  padding: 0 5px;
 }
 
-.blank {
-  color: #0077b6;
-  text-decoration: underline;
+.blank-space.has-selection {
+  color: #3b82f6;
+  border-bottom: 2px solid #3b82f6;
 }
 
-.options {
+.options-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
   justify-content: center;
+  gap: 16px;
 }
 
-.opt {
-  background: #fff;
-  color: #000;
-  padding: 12px 16px;
-  border: 3px solid #000;
-  border-radius: 12px;
-  box-shadow: 6px 6px 0 #000;
-  font-size: 1.4rem;
+.option-button {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-bottom: 6px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 16px 24px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #4b5563;
   cursor: pointer;
-  transform: rotate(-1.2deg);
+  transition: all 0.1s ease-out;
+  min-width: 120px;
+  text-align: center;
 }
 
-.opt:nth-child(2n) {
-  transform: rotate(1.2deg);
+.option-button:active:not(:disabled) {
+  transform: translateY(4px);
+  border-bottom-width: 2px;
+  margin-bottom: 4px;
 }
 
-.opt.selected {
-  background: #06d6a0;
+.option-button.selected {
+  background: #eff6ff;
+  border-color: #60a5fa;
+  border-bottom-color: #3b82f6;
+  color: #1d4ed8;
 }
 
-.controls {
-  min-height: 160px;
+.option-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.footer-controls {
+  margin-top: auto;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 12px;
+  gap: 16px;
 }
 
-.fb {
-  font-size: 1.6rem;
-  padding: 8px 12px;
-  border: 3px solid #000;
-  border-radius: 10px;
-}
-
-.fb.correct {
-  background: #06d6a0;
-  transform: rotate(2deg);
-}
-
-.fb.incorrect {
-  background: #ef476f;
-  transform: rotate(-2deg);
-}
-
-.btn {
-  padding: 14px 16px;
-  border-radius: 12px;
-  border: 3px solid #000;
-  box-shadow: 6px 6px 0 #000;
-  cursor: pointer;
+.feedback-message {
+  padding: 16px;
+  border-radius: 20px;
+  font-size: 1.2rem;
   font-weight: 800;
+  text-align: center;
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.btn.check {
-  background: #0077b6;
-  color: #fff;
+.feedback-message.correct {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 2px solid #bbf7d0;
 }
 
-.btn.next {
-  background: #60a5fa;
-  color: #000;
+.feedback-message.incorrect {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 2px solid #fecaca;
+}
+
+.action-button {
+  width: 100%;
+  padding: 18px;
+  border-radius: 24px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.action-button.check {
+  background: #3b82f6;
+  color: #ffffff;
+  border: 2px solid #2563eb;
+  border-bottom: 6px solid #1d4ed8;
+}
+
+.action-button.check:disabled {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+  border-bottom-width: 6px;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.action-button.next {
+  background: #4ade80;
+  color: #ffffff;
+  border: 2px solid #22c55e;
+  border-bottom: 6px solid #16a34a;
+}
+
+.action-button:active:not(:disabled) {
+  transform: translateY(4px);
+  border-bottom-width: 2px;
+  margin-bottom: 4px;
 }
 
 .finish-screen {
@@ -313,97 +460,87 @@ watch(() => store.quizCompleted, async (done) => {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100dvh;
+  height: 100%;
   width: 100%;
 }
 
 .fail-card {
-  max-width: 600px;
+  max-width: 400px;
   width: 90%;
-  background: #e0f7fa;
-  border: 4px solid #000;
-  border-radius: 20px;
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 28px;
   padding: 32px 24px;
   text-align: center;
-  box-shadow: 5px 5px 0 #000;
-  transform: rotate(-1deg);
-  font-family: "Nunito", sans-serif;
-  animation: popIn 0.5s ease-out;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  animation: popIn 0.4s ease-out;
 }
 
 .fail-emoji {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 3.5rem;
+  margin: 0 0 16px 0;
 }
 
 .fail-text {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #0077b6;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #374151;
 }
 
 .fail-sub {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 24px;
-  color: #333;
-  line-height: 1.5;
+  color: #6b7280;
 }
 
 .fail-actions {
   display: flex;
-  justify-content: center;
-  gap: 16px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn.try-again, .btn.back {
+  padding: 16px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.1s;
 }
 
 .btn.try-again {
-  background: #06d6a0;
-  color: #fff;
-  border: 3px solid #000;
-  border-radius: 12px;
-  padding: 12px 18px;
-  box-shadow: 6px 6px 0 #000;
-  font-weight: 800;
-  transform: rotate(-1deg);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.btn.try-again:hover {
-  background: #1de9b6;
+  background: #3b82f6;
+  color: #ffffff;
+  border: 2px solid #2563eb;
+  border-bottom: 6px solid #1d4ed8;
 }
 
 .btn.back {
-  background: #ffd166;
-  color: #000;
-  border: 3px solid #000;
-  border-radius: 12px;
-  padding: 12px 18px;
-  box-shadow: 6px 6px 0 #000;
-  font-weight: 800;
-  transform: rotate(1deg);
-  cursor: pointer;
-  transition: background 0.2s;
+  background: #ffffff;
+  color: #4b5563;
+  border: 2px solid #e5e7eb;
+  border-bottom: 6px solid #d1d5db;
 }
 
-.btn.back:hover {
-  background: #ffe29a;
+.btn.try-again:active, .btn.back:active {
+  transform: translateY(4px);
+  border-bottom-width: 2px;
+  margin-bottom: 4px;
 }
 
 @keyframes popIn {
-  from { transform: scale(0.8) rotate(-4deg); opacity: 0; }
-  to   { transform: scale(1) rotate(-1deg); opacity: 1; }
+  from { transform: scale(0.9); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
 }
 
 @media (max-width: 767px) {
-  .quiz-header {
-    padding: 10px
-  }
   .question-text {
-    font-size: 1.3rem
+    font-size: 1.2rem;
   }
-  .opt {
-    font-size: 1.2rem
+  .option-button {
+    font-size: 1.1rem;
+    padding: 12px 18px;
   }
 }
 </style>

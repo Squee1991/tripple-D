@@ -60,7 +60,7 @@
                 <span>
                   <template v-if="typeof lvl.bonus === 'number'">+</template>{{ t(lvl.bonus) }}
                 </span>
-                <img v-if="typeof lvl.bonus === 'number'" class="card__articlus" src="../../assets/images/articlus.png" alt="articlus">
+                <img v-if="typeof lvl.bonus === 'number'" class="card__articlus" src="../../assets/images/article.svg" alt="articlus">
                 <div v-if="typeof lvl.bonus === 'number' && authStore.claimedBonuses?.includes(lvl.hats)" class="claimed-check-circle">✔</div>
               </div>
             </div>

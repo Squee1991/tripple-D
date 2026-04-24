@@ -26,7 +26,7 @@
       <header class="content__header">
         <button @click="closeContent" class="btn-icon-back">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-               stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+               stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"></line>
             <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
@@ -349,14 +349,14 @@ watch(currentTopicData, () => {
   width: 100%;
   text-align: center;
   padding: 15px 20px;
-  background: #ffffff;
-  border: 2px solid #e5e7eb;
-  border-bottom: 6px solid #e5e7eb;
+  background: var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border-radius: 20px;
   cursor: pointer;
   font-weight: 800;
-  font-size: 1.2rem;
-  color: #4b5563;
+  font-size: 16px;
+  color: var(--titleColor);
   transition: all 0.1s ease-out;
 }
 

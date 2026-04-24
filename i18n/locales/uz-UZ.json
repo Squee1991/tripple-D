@@ -3527,7 +3527,9 @@
   },
   "settingsGroup": {
     "notifications": "Bildirishnomalar",
-    "appearance": "Ko'rinish"
+    "appearance": "Ko'rinish",
+    "language": "Til",
+    "account": "Hisobni boshqarish"
   },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Birinchi uchrashuv",
@@ -8102,10 +8104,10 @@
   },
   "cabinetToggle": {
     "sound": "Ovozli bildirishnomalar",
-    "theme": "Tungi rejim",
-    "ach": "Yutuqlar bildirishnomasi",
+    "ach": "Yutuqlar haqida bildirishnoma",
+    "themeBtn": "Mavzu",
     "snowFall": "Qor yog'ishi",
-    "themeBtn": "Mavzu"
+    "language": "Interfeys tili"
   },
   "cabinet": {
     "important": "MUHIM!!!",

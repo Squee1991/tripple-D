@@ -210,14 +210,16 @@ function goBack() {
             <div class="progress-container">
               <button @click="goBack" class="btn-icon-back">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
-                     stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                     stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="19" y1="12" x2="5" y2="12"></line>
                   <polyline points="12 19 5 12 12 5"></polyline>
                 </svg>
               </button>
               <div class="progress-bar">
                 <span class="progress-text">{{ currentTaskIndex + 1 }} / {{ activeTasks.length }}</span>
-                <div class="progress-fill" :style="{ width: progressPercentage + '%' }"></div>
+                <div class="progress-fill" :style="{ width: progressPercentage + '%' }">
+                  <div class="glare"></div>
+                </div>
               </div>
             </div>
             <div class="image-card card-style-box"><img :src="currentImage" alt="Task"/></div>
@@ -332,9 +334,9 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 }
 
 .btn-icon-back, .btn-icon-info {
-  border: none;
   background: #fff;
-  border: 2px solid #2b2b2b;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 12px;
   width: 48px;
   height: 40px;
@@ -342,7 +344,7 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 2px 2px 0px #2b2b2b;
+
   transition: transform 0.1s, box-shadow 0.1s;
 }
 
@@ -437,9 +439,21 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 
 .progress-fill {
   height: 100%;
-  background: #98b460;
-  border-right: 4px solid #2b2b2b;
-  transition: width 0.3s ease;
+  background: #4ade80;
+  transition: width .4s;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.glare{
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  border-radius: 4px
 }
 
 .progress-text {

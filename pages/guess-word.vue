@@ -5,22 +5,20 @@
         <VBackBtn/>
         <div v-if="isStarted && !store.win && !store.lose" class="ios-stats">
           <div class="stat-pill">
-            ⏱ {{ timePassed }}
+             <img class="guess__icon-header" src="../assets/images/dailyIcons/timer.svg" alt="">
+             <span>{{ timePassed }}</span>
           </div>
           <div class="stat-pill">
             ❤️ {{ store.attempts }}
           </div>
           <button class="ios-btn-icon" @click="startGame" title="Начать заново">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
-              <path d="M3 3v5h5"/>
-            </svg>
+            <img class="guess__icon-header" src="../assets/images/repeat.svg" alt="">
           </button>
         </div>
       </header>
       <div v-if="!isStarted" class="screen-start">
         <div class="mascot-emoji">
-          <img class="gues__icon" src="../assets/images/guessWord.svg" alt="">
+          <img class="guess__icon" src="../assets/images/guessWord.svg" alt="">
         </div>
         <p class="subtitle">Отгадай слово и прокачай свой немецкий!</p>
         <button class="ios-btn-primary btn-bounce" @click="startGame">
@@ -255,7 +253,6 @@ watch(() => store.lose, (isLose) => {
 .ios-trainer-page {
   min-height: 100%;
   height: 100%;
-  background: #f4f4f9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -264,15 +261,18 @@ watch(() => store.lose, (isLose) => {
 
 .ios-app-container {
   width: 100%;
-  max-width: 430px;
+  max-width: 768px;
   min-height: 100%;
   height: 100%;
   background: var(--bg);
   position: relative;
-  box-shadow: 0 0 30px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+.guess__icon-header {
+  width: 30px;
 }
 
 .ios-header {
@@ -310,10 +310,12 @@ watch(() => store.lose, (isLose) => {
 }
 
 .stat-pill {
+  display: flex;
+  align-items: center;
   background: #fff;
   padding: 6px 12px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   color: #333;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -337,7 +339,7 @@ watch(() => store.lose, (isLose) => {
   transform: scale(0.95);
 }
 
-.gues__icon{
+.guess__icon{
   width: 150px;
 }
 
@@ -683,7 +685,6 @@ watch(() => store.lose, (isLose) => {
 @media (min-width: 431px) {
   .ios-app-container {
     border-radius: 40px;
-    border: 8px solid #1c1c1e;
     height: 90%;
     min-height: 800px;
   }

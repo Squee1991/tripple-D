@@ -206,11 +206,12 @@ const resetResult = () => {
 }
 
 .rules__header-title {
-  flex: 1;
   font-size: 24px;
   font-weight: 900;
   font-family: "Nunito", sans-serif;
   color: white;
+  margin-left: 15px;
+  text-shadow: 0 1px var(--regionBtnColor);
 }
 
 .reset {

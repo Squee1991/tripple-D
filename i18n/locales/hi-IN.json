@@ -3515,7 +3515,9 @@
   },
   "settingsGroup": {
     "notifications": "सूचनाएं",
-    "appearance": "रूप-रंग"
+    "appearance": "दिखावट",
+    "language": "भाषा",
+    "account": "खाता प्रबंधन"
   },
   "valentineAchievements": {
     "firstValentineQuestLabel": "पहली डेट",
@@ -8090,10 +8092,10 @@
   },
   "cabinetToggle": {
     "sound": "ध्वनि सूचनाएं",
-    "theme": "डार्क मोड",
-    "ach": "उपलब्धि सूचना",
-    "snowFall": "हिमपात",
-    "themeBtn": "थीम"
+    "ach": "उपलब्धियों की सूचना",
+    "themeBtn": "थीम",
+    "snowFall": "बर्फबारी",
+    "language": "इंटरफ़ेस भाषा"
   },
   "cabinet": {
     "important": "महत्वपूर्ण!!!",

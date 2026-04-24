@@ -2,15 +2,24 @@
   <transition name="fade">
     <div v-if="visible" class="modal-overlay" @click.self="closeModal">
       <transition name="pop">
-        <div v-if="visible" class="modal-container">
-          <button class="modal-close" @click="closeModal">×</button>
+        <div v-if="visible" class="modal-card">
+          <button class="close-btn" @click="closeModal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+
           <div class="modal-content">
-            <h3 class="modal-title">{{ title }}</h3>
-            <img class="modal__icon" :src="img" :alt="alt">
-            <p class="modal-text"> {{ text }}</p>
-            <p class="modal-text"> {{ description }}</p>
-            <button class="modal__btn" v-if="button" @click="$emit('button')">
-              {{ button.label }}
+            <h3 class="modal-title" v-if="title">{{ title }}</h3>
+
+            <img v-if="img" class="modal-icon" :src="img" :alt="alt">
+
+            <p class="modal-text" v-if="text">{{ text }}</p>
+            <p class="modal-text" v-if="description">{{ description }}</p>
+
+            <button class="btn-game btn-yellow" v-if="button" @click="$emit('button')">
+              {{ button.label || button }}
             </button>
           </div>
         </div>
@@ -22,7 +31,7 @@
 <script setup>
 import {defineProps, defineEmits} from 'vue'
 
-const emit = defineEmits(['close'])
+const emit = defineEmits(['close', 'button'])
 
 const closeModal = () => {
   emit('close')
@@ -52,119 +61,130 @@ const props = defineProps({
     type: [Array, Object, String]
   }
 });
-
 </script>
 
 <style scoped>
-.modal__icon {
-  width: 150px;
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.modal-card {
+  position: relative;
+  background: var(--tabBg);
+  border-radius: 28px;
+  padding: 24px;
+  width: 100%;
+  max-width: 340px;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--settingsSectionBg);
+  border: 3px solid var(--tabsSlideBorderColor);
+  color: var(--titleColor);
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease;
+  z-index: 10;
+}
+
+.close-btn:active {
+  transform: scale(0.9);
 }
 
 .modal-content {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-}
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
   align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.modal__btn {
-  margin-top: .5rem;
-  padding: .75rem;
-  font-weight: 800;
-  border-radius: 14px;
-  font-size: 19px;
-  border: 2px solid #1e1e1e;
-  background: #f1c40f;
-  box-shadow: 2px 2px 0 #1e1e1e;
-  cursor: pointer;
-  width: 90%;
-}
-
-.modal-container {
-  font-family: "Nunito", sans-serif;
-  position: relative;
-  background: white;
-  padding: 1.8rem;
-  border-radius: 25px;
-  border: 2px solid #1e1e1e;
-  box-shadow: 3px 3px 0 #1e1e1e;
-  max-width: 420px;
-  width: 90%;
-  text-align: center;
-}
-
-.modal-close {
-  position: absolute;
-  top: 1px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1e1e1e;
-  cursor: pointer;
-  line-height: 1;
-  padding: 0;
-  transition: transform 0.2s ease;
+  margin-top: 30px;
 }
 
 .modal-title {
   font-size: 22px;
-  color: #1e1e1e;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-weight: 900;
+  color: var(--titleColor);
+  margin: 0 0 16px 0;
+  letter-spacing: 0.5px;
 }
 
-.modal__icon {
+.modal-icon {
   width: 130px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
 }
 
 .modal-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--titleColor);
+  line-height: 1.4;
+  margin: 0 0 12px 0;
+}
+
+.btn-game {
+  width: 100%;
   font-family: "Nunito", sans-serif;
-  font-size: 16px;
-  color: #555;
-  line-height: 1.3;
-  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  margin-top: 12px;
+}
+
+.btn-yellow {
+  background: #facc15;
+  border: 3px solid #ca8a04;
+  box-shadow: 0 6px 0 #a16207;
+  color: #451a03;
+}
+
+.btn-yellow:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #a16207;
 }
 
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s ease;
 }
 
 .fade-enter-from, .fade-leave-to {
   opacity: 0;
 }
 
-.pop-enter-active, .pop-leave-active {
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.pop-enter-active {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pop-leave-active {
+  transition: transform 0.2s ease-in;
 }
 
 .pop-enter-from, .pop-leave-to {
-  transform: scale(0.9);
+  transform: scale(0.8);
 }
-
-@media (min-width: 1024px) {
-  .modal-close:hover {
-    transform: scale(1.1) rotate(90deg);
-  }
-  .modal__btn:hover {
-    transform: translate(2px , 2px);
-    box-shadow: 2px 2px 0 black;
-  }
-}
-
 </style>

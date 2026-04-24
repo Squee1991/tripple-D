@@ -49,12 +49,7 @@
               <span class="level-name">{{ level }}</span>
             </button>
           </div>
-          <button @click="startGame" class="btn-primary-action">{{ t('nominativ.start')}}
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h13M12 5l7 7-7 7"/>
-            </svg>
-          </button>
+          <button @click="startGame" class="btn-primary-action">{{ t('nominativ.start')}}</button>
         </div>
       </transition>
     </div>
@@ -299,20 +294,19 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
 
 .level-card {
   padding: 16px 20px;
-  border: 3px solid #1e272e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   background: #ffffff;
   border-radius: 20px;
   display: flex;
   align-items: center;
   gap: 16px;
   cursor: pointer;
-  box-shadow: 3px 4px 0px #1e272e;
   transition: transform 0.1s, box-shadow 0.1s, background-color 0.2s;
 }
 
 .level-card:active {
   transform: translate(2px, 3px);
-  box-shadow: 1px 1px 0px #1e272e;
 }
 
 .level-card.active {
@@ -347,26 +341,24 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
 }
 
 .btn-primary-action {
-  background: #b8e994;
-  color: #1e272e;
-  padding: 14px 20px;
-  border-radius: 20px;
-  font-size: 20px;
-  font-weight: 900;
-  border: 3px solid #1e272e;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  box-shadow: 3px 4px 0px #1e272e;
-  transition: transform 0.1s, box-shadow 0.1s;
+  display: block;
   width: 100%;
+  text-decoration: none;
+  background: #3b82f6;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 24px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  border: 2px solid #2563eb;
+  border-bottom: 6px solid #1d4ed8;
+  transition: transform 0.1s;
 }
 
 .btn-primary-action:active {
-  transform: translate(3px, 4px);
-  box-shadow: 0px 0px 0px #1e272e;
+  transform: translate(2px, 3px);
 }
 
 .fade-enter-active,

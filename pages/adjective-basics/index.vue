@@ -1,9 +1,10 @@
 <template>
   <div class="adjective-page" :class="{ 'content-is-active': isContentVisible }">
     <div class="sidebar">
-      <VBackBtn/>
-      <h2 class="sidebar__title">{{ t('adjectiveBasicPageSideBar.title') }}</h2>
-      <div class="sidebar__heading">{{ t('adjectiveBasicPageSideBar.theme') }}</div>
+      <div class="sidebar__header">
+        <VBackBtn/>
+        <h2 class="sidebar__title">{{ t('Основы') }}</h2>
+      </div>
       <ul class="sidebar__list">
         <li
             v-for="item in topics"
@@ -12,13 +13,20 @@
         >
           <button class="sidebar__button" @click="selectTopic(item.id)">
             <span>{{ item.title }}</span>
+            <img class="sidebar__next-icon" src="../../assets/images/next.svg" alt="arrow">
           </button>
         </li>
       </ul>
     </div>
     <div class="content" v-if="currentTopicData">
-      <button v-if="isMobileLayout" class="btn__close" @click="closeContent">×</button>
       <header class="content__header">
+        <button v-if="isMobileLayout" @click="closeContent" class="btn-icon-back">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+               stroke="#374151" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </button>
         <h1 class="content__title">{{ t('adjectiveBasicPageSideBar.adjective') }} {{ currentTopicData.title }}</h1>
       </header>
       <div class="content__body">
@@ -26,18 +34,20 @@
           <section class="info-section">
             <h3 class="info-section__title">{{ t('adjectiveBasicPageSideBar.example') }}</h3>
             <div v-for="(example, index) in currentTopicData.examples" :key="index" class="example">
-              <div class="example__sentence">
-                <div>{{ example.sentence_part1 }}
+              <div class="example__de-text">
+                <p class="example__sentence">
+                  {{ example.sentence_part1 }}
                   <span class="example__highlight">{{ example.highlight }}</span>
-                </div>
-                <SoundBtn :text="example.sentence_part1 + example.highlight "/>
+                  <template v-if="example.sentence_part2">{{ example.sentence_part2 }}</template>
+                </p>
+                <SoundBtn :text="example.sentence_part1 + example.highlight"/>
               </div>
               <span class="example__translation">{{ example.translation }}</span>
             </div>
+
           </section>
         </div>
         <div class="practice-area">
-          <h3 class="practice-area__title">{{ currentTopicData.practice.title }}</h3>
           <p class="practice-area__description">{{ currentTopicData.practice.description }}</p>
           <NuxtLink :to="`/${categoryId}/${currentTopicData.id}`" class="practice-area__button">
             {{ currentTopicData.practice.buttonText }}
@@ -51,36 +61,15 @@
 <script setup>
 import {ref, computed, onMounted, onUnmounted} from 'vue'
 import {useRouter} from 'vue-router'
-import Lottie from 'lottie-web';
 import SoundBtn from '../../src/components/soundBtn.vue'
 import { useHead, useSeoMeta } from '#imports'
 import VBackBtn from "../../src/components/V-back-btn.vue";
+
 const { t } = useI18n();
-const canonical = useCanonical()
 
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
-// const pageTitle = t('metaAdjectiveBasic.title')
-// const pageDesc  = t('metaAdjectiveBasic.description')
-//
-// useHead({
-//   title: pageTitle,
-//   link: [
-//     { rel: 'canonical', href: canonical }
-//   ]
-// })
-//
-// useSeoMeta({
-//   title: pageTitle,
-//   description: pageDesc,
-//   ogTitle: pageTitle,
-//   ogDescription: pageDesc,
-//   ogType: 'website',
-//   ogUrl: canonical,
-//   ogImage: '/images/seo-adjective-basics.png',
-//   robots: 'index, follow'
-// })
 
 const topics = [
   {
@@ -247,9 +236,6 @@ const isMobileLayout = ref(false)
 const router = useRouter()
 const categoryId = 'adjective-basics';
 const topic = ref('colors')
-const backToMenu = () => {
-  router.push('/')
-}
 let speakTimeout = null;
 
 const currentTopicData = computed(() => topics.find(t => t.id === topic.value))
@@ -284,335 +270,298 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-
 .adjective-page {
+  position: relative;
   display: flex;
   width: 100%;
   height: 100vh;
-  padding: 20px;
-  gap: 20px;
+  overflow: hidden;
   font-family: "Nunito", sans-serif;
+  background: #f7f9fc;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .sidebar {
-  min-width: 350px;
-  background: #ffffff;
-  border: 3px solid black;
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 6px 6px 0px #1e1e1e;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg, #ffffff);
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px 15px 10px;
+  background: var(--bg, #ffffff);
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
   flex-shrink: 0;
+  margin-bottom: 15px;
 }
 
 .sidebar__title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0 0 10px 0;
-  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--titleColor, #374151);
+  margin-left: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-shadow: 0 1px var(--titleColor);
 }
 
 .sidebar__heading {
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: 600;
+  margin-bottom: 12px;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .sidebar__list {
-  list-style: none;
-  padding: 0;
+  padding: 0 15px;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .sidebar__item {
-  margin-bottom: 12px;
+  width: 100%;
 }
 
 .sidebar__button {
   width: 100%;
-  text-align: center;
-  padding: 12px;
-  background: #f0f0f0;
-  border: 2px solid #000;
-  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+  border-radius: 20px;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 3px 3px 0px #000;
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--titleColor);
+  transition: all 0.1s ease-out;
 }
 
-.sidebar__button:active {
-  transform: translate(3px, 3px);
-  box-shadow: none;
-}
-
-.sidebar__item--active .sidebar__button {
-  color: #fff;
-  background: #8bc34a;
+.sidebar__next-icon {
+  width: 18px;
 }
 
 .content {
-  border-radius: 15px;
-  border: 2px solid black;
-  flex-grow: 1;
-  background: #fdfdfd;
-  padding: 30px;
-  overflow-y: auto;
-  box-shadow: 6px 6px 0px #1e1e1e;
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  z-index: 50;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  position: relative;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.adjective-page.content-is-active .content {
+  transform: translateX(0);
 }
 
 .content__header {
-  background: #ffcc00;
-  border: 3px solid #000;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 5px 5px 0px #000;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px 15px 10px;
+  background: var(--bg, #ffffff);
+  border-bottom: 2px solid #e5e7eb;
+  flex-shrink: 0;
 }
 
 .content__title {
-  color: white;
-  font-size: 2.1rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 0px #000;
+  color: var(--titleColor, #374151);
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 0 16px;
+}
+
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid #2b2b2b;
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #2b2b2b;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-icon-back:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
 }
 
 .content__body {
-  display: flex;
   flex-grow: 1;
-  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
   padding: 20px;
-  border-radius: 20px;
-  box-shadow: 6px 6px 0px #1e1e1e;
-  background: #fff;
+  background: var(--bg, #f7f9fc);
 }
 
 .content__main-column {
-  width: 50%;
-  padding-right: 20px;
-  border-right: 3px dashed #cccccc;
+  flex-grow: 1;
+  padding-bottom: 20px;
 }
 
 .info-section {
-  margin-bottom: 25px;
-}
-
-.info-section:last-child {
-  margin-bottom: 0;
+  margin-bottom: 24px;
 }
 
 .info-section__title {
   font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #333;
-  padding: 0 0 20px 0;
+  font-weight: 800;
+  color: var(--titleColor, #374151);
+  margin: 0 0 16px 0;
 }
 
 .example {
-  background: #fff;
-  border: 2px solid #ddd;
-  border-left: 6px solid #ffcc00;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  font-size: 1.2rem;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
 }
 
-.example__sentence {
+/* Цветные полоски слева для примеров */
+.example::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+}
+.example:nth-child(4n+1)::before { background: #ffcc33; }
+.example:nth-child(4n+2)::before { background: #4ade80; }
+.example:nth-child(4n+3)::before { background: #60a5fa; }
+.example:nth-child(4n+4)::before { background: #f472b6; }
+
+.example__de-text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: bold;
+  margin-bottom: 8px;
+  padding-left: 8px;
+}
+
+.example__sentence {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #374151;
+  font-weight: 700;
 }
 
 .example__highlight {
-  color: #d9534f;
+  color: #ef4444;
+  font-weight: 800;
 }
 
 .example__translation {
   display: block;
-  color: #777;
+  color: #9ca3af;
   font-size: 1rem;
-  font-style: italic;
+  padding-left: 8px;
 }
 
 .practice-area {
-  width: 50%;
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 16px 0 0 0;
+  margin-top: auto;
+  flex-shrink: 0;
   text-align: center;
-  justify-content: center;
 }
 
 .practice-area__title {
-  font-size: 1.6rem;
-  font-weight: bold;
-  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--titleColor, #374151);
+  margin: 0 0 8px 0;
 }
 
 .practice-area__description {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 20px;
-  max-width: 400px;
-  padding: 10px 0;
+  font-size: 1rem;
+  color: #9ca3af;
+  margin: 0 0 16px 0;
 }
 
 .practice-area__button {
   display: block;
+  width: 100%;
   text-decoration: none;
-  background: #f1c40f;
-  color: #484343;
-  min-width: 230px;
-  font-weight: 600;
-  border: 2px solid #000;
-  border-radius: 12px;
-  padding: 12px 25px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 3px 3px 0px #000;
-}
-
-@media (min-width: 1024px) {
-  .sidebar__button:hover {
-    background: #a9a4a4;
-  }
-  .practice-area__button:hover {
-    background: #e8c629;
-    box-shadow: 1px 1px 0px #000;
-    transform: translate(2px , 2px);
-
-  }
+  background: #3b82f6;
+  color: #ffffff;
+  padding: 18px;
+  border-radius: 24px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-align: center;
+  border: 2px solid #2563eb;
+  border-bottom: 6px solid #1d4ed8;
+  transition: transform 0.1s;
 }
 
 .practice-area__button:active {
-  transform: translate(4px, 4px);
-  box-shadow: none;
+  transform: translateY(4px);
+  border-bottom-width: 2px;
+  margin-bottom: 4px;
 }
 
-.btn__back {
-  display: block;
-  text-align: center;
-  width: 100%;
-  font-family: "Nunito", sans-serif;
-  padding: 0.8rem;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  border-radius: 12px;
-  cursor: pointer;
-  background-color: #f1c40f;
-  color: #1e1e1e;
-  text-decoration: none;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  transition: background-color 0.2s;
-}
-
-.btn__close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 40px;
-  height: 40px;
-  background-color: #f1c40f;
-  border: 3px solid #1e1e1e;
-  border-radius: 50%;
-  font-size: 24px;
-  font-weight: bold;
-  color: #1e1e1e;
-  cursor: pointer;
-  z-index: 100;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
-  padding: 0;
-}
-
-@media (max-width: 1023px) {
-  .content__body {
-    flex-direction: column;
-  }
-
-  .content__main-column,
-  .practice-area {
-    width: 100%;
-    border-right: none;
-    padding: 0;
-  }
-
-  .content__title {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .adjective-page {
-    position: relative;
-    overflow-x: hidden;
-    display: block;
-    padding: 0;
-    gap: 0;
+    flex-direction: row;
   }
-
   .sidebar {
-    width: 100%;
-    height: 100%;
-    min-width: unset;
-    border-radius: 0;
-    box-shadow: none;
-    border: none;
+    width: 350px;
+    border-right: 2px solid #e5e7eb;
   }
-
   .content {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 100%;
-    height: 100%;
-    z-index: 50;
-    transition: transform 0.4s ease-in-out;
-    border-radius: 0;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transform: none !important;
   }
-
-  .adjective-page.content-is-active .content {
-    transform: translateX(-100%);
+  .btn-icon-back {
+    display: none;
   }
-
-  .btn__close {
-    display: flex;
+  .content__body {
+    flex-direction: row;
+    padding: 30px;
+  }
+  .content__main-column {
+    width: 60%;
+    padding-right: 30px;
+    border-right: 2px dashed #e5e7eb;
+  }
+  .practice-area {
+    width: 40%;
+    padding-left: 30px;
+    margin-top: 0;
+    justify-content: center;
   }
 }
-
-.speak-btn {
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.speak-btn__icon {
-  width: 25px;
-  height: 50px;
-  transition: transform 0.2s;
-}
-
-.speak-btn:hover .speak-btn__icon {
-  transform: scale(1.1);
-}
-
-.speak-btn:disabled .speak-btn__icon {
-  filter: grayscale(1);
-  cursor: not-allowed;
-}
-
 </style>

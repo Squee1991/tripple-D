@@ -56,7 +56,7 @@
             <div class="account-cleanup__modal">
               <div class="modal-drag-pill"></div>
               <h3 class="account-cleanup__modal-title">Точно удаляем?</h3>
-              <img class="cleanup__icon-modal" src="../assets/images/hedgehog-sadly.svg" alt="Грустный ежик">
+              <img class="cleanup__icon-modal" src="../assets/images/Sadlyhedgehog.png" alt="Грустный ежик">
               <div class="account-cleanup__auth-zone">
                 <div v-if="isGoogleUser" class="account-cleanup__google-status">
                   Вход через <strong>Google</strong>. <br>

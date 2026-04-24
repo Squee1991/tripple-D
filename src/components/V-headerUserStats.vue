@@ -252,15 +252,16 @@ onBeforeUnmount(() => {
 
 .tooltip-title {
   color: #5482d9;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 900;
   margin: 0;
   text-align: left;
+  text-shadow: 1px 1px #5482d9;
 }
 
 .tooltip-list {
   color: var(--titleColor);
-  font-weight: 400;
+  font-weight: 600;
   list-style: none;
   padding: 0;
   margin: 0;

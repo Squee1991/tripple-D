@@ -4,7 +4,7 @@
       <div v-if="showExitModal" class="modal-overlay">
         <div class="modal-content">
           <div class="modal-icon">
-            <img class="modal-icon-item" :src="Hedgehog" alt="">
+            <img class="modal-icon-item" src="../../assets/images/Sadlyhedgehog.png" alt="">
           </div>
           <h3 class="modal-title">{{ t('trainerPage.sure') }}</h3>
           <p class="modal-text">{{ t('trainerPage.warning') }}</p>
@@ -15,7 +15,6 @@
         </div>
       </div>
     </transition>
-
     <div class="session-container">
       <section v-if="loading" class="view-state view-state--loading">
         <div class="bouncy-loader">
@@ -23,7 +22,6 @@
         </div>
         <p class="loading-text">{{ t('trainerPage.loading') }}</p>
       </section>
-
       <section v-else-if="thematic.selectedModule" class="view-state view-state--content">
         <div v-if="!finished" class="top-nav">
           <div class="nav-actions">
@@ -39,7 +37,6 @@
           </div>
         </div>
         <div v-if="!finished" class="quiz-content">
-
           <div class="question-card">
             <div class="question-inner">
               <SoundBtn :text="cleanText(visibleSentence)"/>
@@ -69,11 +66,9 @@
           <div v-if="isChecked && !finished" class="bottom-sheet" :class="feedback.isCorrect ? 'sheet--success' : 'sheet--error'">
             <div class="feedback-message">
               <div v-if="feedback.isCorrect" class="feedback-content">
-                <div class="feedback-emoji">🎉</div>
                 <span class="feedback-text">{{ t('trainerPage.right') }}</span>
               </div>
               <div v-else class="feedback-content">
-                <div class="feedback-emoji">🙈</div>
                 <span class="feedback-text">{{ t('trainerPage.false') }} <br/><b>{{ tasks[current].answer }}</b></span>
               </div>
             </div>

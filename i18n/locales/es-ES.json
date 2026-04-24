@@ -3545,7 +3545,9 @@
   },
   "settingsGroup": {
     "notifications": "Notificaciones",
-    "appearance": "Apariencia"
+    "appearance": "Apariencia",
+    "language": "Idioma",
+    "account": "Gestión de cuenta"
   },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Primera cita",
@@ -8120,10 +8122,10 @@
   },
   "cabinetToggle": {
     "sound": "Notificaciones de sonido",
-    "theme": "Modo oscuro",
-    "ach": "Notificación de logros",
+    "ach": "Notificaciones de logros",
+    "themeBtn": "Tema",
     "snowFall": "Nevada",
-    "themeBtn": "Tema"
+    "language": "Idioma de la interfaz"
   },
   "cabinet": {
     "important": "¡IMPORTANTE!",

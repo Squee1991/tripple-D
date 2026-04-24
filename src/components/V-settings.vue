@@ -12,14 +12,25 @@
               @click.prevent="handleThemeSelection(key)"
           >
             <input type="radio" name="theme" :value="key" :checked="colorMode.preference === key">
-            <div class="theme-preview" :class="key">
-              <span v-if="key === 'pink' && !isValentineThemeUnlocked">🔒</span>
+            <div class="theme-option-content">
+              <div class="theme-preview" :class="key">
+                <span v-if="key === 'pink' && !isValentineThemeUnlocked" class="lock-icon">🔒</span>
+              </div>
+              <span class="theme-label">{{ label }}</span>
             </div>
-            <span>{{ label }}</span>
+
+            <div class="theme-check" v-if="colorMode.preference === key">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
           </label>
         </div>
+
         <div class="modal-actions">
-          <button class="btn btn-success" @click="isThemeModalOpen = false">{{ t('themeModal.close') }}</button>
+          <button class="btn btn-game btn-success" @click="isThemeModalOpen = false">
+            {{ t('themeModal.close') }}
+          </button>
         </div>
       </div>
     </div>
@@ -76,7 +87,7 @@
       </div>
     </div>
     <div class="settings-section account-actions">
-      <div class="section-title">Управление аккаунтом</div>
+      <div class="section-title"> {{ t('settingsGroup.account')}}</div>
       <div class="account-buttons">
         <button class="btn btn-logout w-full btn-m" @click="authStore.logOut()">
           {{ t('auth.logOut') }}
@@ -88,10 +99,10 @@
     </div>
     <div v-if="isLockedModalOpen" class="modal-overlay locked-priority" @click.self="isLockedModalOpen = false">
       <div class="modal-card">
-        <div class="modal-title">{{ lockedModalContent.title }}</div>
+        <div class="modal-title locked-title">{{ lockedModalContent.title }}</div>
         <p class="modal-text" v-html="lockedModalContent.text"></p>
         <div class="modal-actions">
-          <button class="btn" @click="isLockedModalOpen = false" type="button">
+          <button class="btn btn-game btn-primary" @click="isLockedModalOpen = false" type="button">
             {{ t('cabinet.modalNotAllowEffectClose') }}
           </button>
         </div>
@@ -171,7 +182,7 @@ const SETTINGS_GROUPS = computed(() => [
   },
   {
     id: 'appearance',
-    title: 'Оформление',
+    title: t('settingsGroup.appearance'),
     items: [
       {key: 'theme', label: t('cabinetToggle.themeBtn'), type: 'button'},
       {key: 'snowFall', label: t('cabinetToggle.snowFall'), type: 'toggle'}
@@ -179,10 +190,9 @@ const SETTINGS_GROUPS = computed(() => [
   },
   {
     id: 'language',
-
-    title: 'Язык',
+    title: t('settingsGroup.language'),
     items: [
-      {key: 'lang', label: 'Язык интерфейса', type: 'button'}
+      {key: 'lang', label: t('cabinetToggle.language'), type: 'button'}
     ]
   }
 ])
@@ -252,6 +262,7 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+
 .tab-content {
   height: 100%;
   overflow-y: auto;
@@ -273,7 +284,7 @@ onMounted(async () => {
 }
 
 .section-title {
-  font-size: 1.1rem;
+  font-size: 19px;
   font-weight: 800;
   color: var(--titleColor);
   margin-bottom: 10px;
@@ -303,6 +314,7 @@ onMounted(async () => {
   color: var(--titleColor);
   font-weight: 700;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .link-arrow {
@@ -313,6 +325,7 @@ onMounted(async () => {
 
 .toggle__wrapper {
   font-weight: 900;
+  font-size: 14px;
   color: var(--titleColor);
   display: flex;
   align-items: center;
@@ -321,13 +334,13 @@ onMounted(async () => {
 
 .theme-select-btn {
   background: #f3f4f6;
-  border: 2px solid #000;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 9px;
   padding: 8px 12px;
   font-family: "Nunito", sans-serif;
   font-weight: 800;
   cursor: pointer;
-  box-shadow: 0 2px 0 #000;
   transition: 0.1s;
   color: #000;
 }
@@ -342,6 +355,9 @@ onMounted(async () => {
   flex-direction: column;
   gap: 16px;
   align-items: center;
+  background: var(--settingsSectionBg);
+  padding: 20px;
+  border-radius: 16px;
 }
 
 .btn-m {
@@ -352,13 +368,28 @@ onMounted(async () => {
 .btn-logout {
   background: #f3f4f6;
   color: #000;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 14px 24px;
+  font-weight: 800;
 }
 
 .btn-danger {
   background: none;
-  color: #fff;
+  color: var(--titleColor);
   border: none;
-  box-shadow: none;
+  border-radius: 10px;
+  padding: 14px 24px;
+  font-weight: 800;
+}
+
+.locked-setting {
+  opacity: 0.5;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 .modal-overlay {
@@ -367,111 +398,171 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   z-index: 2000;
+  padding: 20px;
 }
 
 .locked-priority {
   z-index: 3000 !important;
-  background: rgba(0, 0, 0, .7);
 }
 
 .modal-card {
-  background: #fef8e4;
-  border: 3px solid #000;
-  border-radius: 20px;
-  padding: 2rem;
-  width: 90%;
-  max-width: 400px;
-  box-shadow: 3px 3px 0 #000;
+  background: var(--tabBg);
+  border-radius: 28px;
+  padding: 24px;
+  width: 100%;
+  max-width: 340px;
+  border: 3px solid var(--tabsSlideBorderColor);
   text-align: center;
+  animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  position: relative;
 }
 
 .modal-title {
-  font-size: 1.4rem;
+  font-size: 22px;
   font-weight: 900;
-  font-style: italic;
-  margin-bottom: 1rem;
-  color: #000;
+  color: var(--titleColor);
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.locked-title {
+  font-size: 21px;
 }
 
 .modal-text {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
-  color: #000;
-}
-
-.modal-actions {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-}
-
-.btn {
-  border: 2px solid rgba(238, 234, 234, 0.08);
-  border-radius: 10px;
-  padding: 14px 24px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: 0.1s;
-  font-family: "Nunito", sans-serif;
-}
-
-.btn-success {
-  background: #4ade80;
-  width: 100%;
-  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--titleColor);
+  margin-bottom: 24px;
+  line-height: 1.5;
 }
 
 .theme-grid {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .theme-option {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 12px;
-  border: 2px solid #000;
-  border-radius: 16px;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #f8fafc;
+  border: 3px solid #e2e8f0;
+  border-radius: 20px;
   cursor: pointer;
-  font-weight: 800;
-  background: #fff;
-  color: #000;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.theme-option:active:not(.locked) {
+  transform: scale(0.97);
 }
 
 .theme-option.active {
-  background: #ffd54f;
-  box-shadow: 2px 2px 0 #000;
+  background: #eff6ff;
+  border-color: #3b82f6;
+  box-shadow: inset 0 3px 0 rgba(59, 130, 246, 0.1);
+}
+
+.theme-option.locked {
+  opacity: 0.5;
+  filter: grayscale(100%);
+  background: #f1f5f9;
+  cursor: not-allowed;
+}
+
+.theme-option-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .theme-preview {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: 2px solid #000;
-}
-
-.theme-preview.light {
-  background: #fff;
-}
-
-.theme-preview.dark {
-  background: #222;
-}
-
-.theme-preview.pink {
-  background: #ff85a1;
+  width: 25px;
+  height:  25px;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-.locked-setting, .theme-option.locked {
-  opacity: 0.5;
+.theme-preview.light { background: #ffffff; }
+.theme-preview.dark { background: #1e293b; }
+.theme-preview.pink { background: #fbcfe8; }
+
+.lock-icon {
+  font-size: 16px;
+}
+
+.theme-label {
+  font-size: 17px;
+  font-weight: 800;
+  color: #334155;
+}
+
+.theme-option.active .theme-label {
+  color: #1d4ed8;
+}
+
+.theme-check {
+  width: 24px;
+  height: 24px;
+  color: #3b82f6;
+}
+
+.theme-option input {
+  display: none;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.btn-game {
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  color: #ffffff;
+}
+
+.btn-success {
+  background: #22c55e;
+  border: 3px solid #16a34a;
+  box-shadow: 0 6px 0 #15803d;
+}
+
+.btn-success:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #15803d;
+}
+
+.btn-primary {
+  background: #3b82f6;
+  border: 3px solid #2563eb;
+  box-shadow: 0 6px 0 #1d4ed8;
+}
+
+.btn-primary:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #1d4ed8;
 }
 </style>

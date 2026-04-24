@@ -3551,7 +3551,9 @@
   },
   "settingsGroup": {
     "notifications": "Notifications",
-    "appearance": "Appearance"
+    "appearance": "Appearance",
+    "language": "Language",
+    "account": "Account management"
   },
   "valentineAchievements": {
     "firstValentineQuestLabel": "First Date",
@@ -8125,11 +8127,11 @@
     "registerDate": "Registration Date"
   },
   "cabinetToggle": {
-    "sound": "Sound Notifications",
-    "theme": "Dark Mode",
-    "ach": "Achievement Notifications",
+    "sound": "Sound notifications",
+    "ach": "Achievement notifications",
+    "themeBtn": "Theme",
     "snowFall": "Snowfall",
-    "themeBtn": "Theme"
+    "language": "Interface language"
   },
   "cabinet": {
     "important": "IMPORTANT!!!",
@@ -8177,15 +8179,15 @@
   "pavelOverlay": {
     "newbie": "Newbie",
     "rankTitle": "Mortarboards",
-    "rankLabelOne": "- Mortarboards are awarded for completing daily tasks.",
-    "rankLabelTwo": "- You can get 3 per day by completing all daily tasks. Rewards can be viewed in the 'Rank' section of your profile.",
-    "rankLabelThree": "- 3 Mortarboards are deducted for missing daily tasks. Complete at least one to avoid the penalty.",
+    "rankLabelOne": "Mortarboards are awarded for completing daily tasks.",
+    "rankLabelTwo": "You can get 3 per day by completing all daily tasks. Rewards can be viewed in the 'Rank' section of your profile.",
+    "rankLabelThree": "3 Mortarboards are deducted for missing daily tasks. Complete at least one to avoid the penalty.",
     "articleTitle": "Articlus",
-    "articleLabelOne": "- Earned for tasks: Article Practice, Language Lands, and tasks in the 'Learning' section.",
-    "articleLabelTwo": "- Spent on retries in Language Lands and in the shop in your profile.",
+    "articleLabelOne": "Earned for tasks: Article Practice, Language Lands, and tasks in the 'Learning' section.",
+    "articleLabelTwo": "Spent on retries in Language Lands and in the shop in your profile.",
     "levelTitle": "Level",
-    "levelLabelOne": "- Your level increases as you complete tasks.",
-    "levelLabelTwo": "- Higher levels unlock more tasks in Language Lands."
+    "levelLabelOne": "Your level increases as you complete tasks.",
+    "levelLabelTwo": "Higher levels unlock more tasks in Language Lands."
   },
   "idioms": {
     "title": "Idioms and Phrases",

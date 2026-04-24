@@ -16,7 +16,7 @@
               <div class="mal__left-content-wrapper">
                 <button v-if="windowWidth <= 1024" @click="closePanel" class="btn-icon-back">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                       stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                       stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="19" y1="12" x2="5" y2="12"></line>
                     <polyline points="12 19 5 12 12 5"></polyline>
                   </svg>
@@ -47,7 +47,8 @@
               class="arrow-btn"
               :disabled="isFirstCategory"
               @click="prevCategory"
-          >‹
+          >
+            <img class="arrow__btn-icon arrow-back" src="../../assets/images/next.svg" alt="">
           </button>
           <div class="current-category-name">
             {{ t(`categories.${activeCategory}`) }}
@@ -56,7 +57,8 @@
               class="arrow-btn"
               :disabled="isLastCategory"
               @click="nextCategory"
-          >›
+          >
+            <img class="arrow__btn-icon" src="../../assets/images/next.svg" alt="">
           </button>
         </div>
 
@@ -232,12 +234,21 @@ onBeforeUnmount(() => {
   overflow: hidden;
 }
 
+.arrow__btn-icon {
+  width: 20px;
+}
+
+.arrow__btn-icon.arrow-back {
+  transform: rotate(-180deg);
+}
+
 .map__title {
   font-size: 20px;
   color: var(--regionBtnColor);
   font-weight: 600;
   letter-spacing: .2px;
   font-family: "Nunito", sans-serif;
+  text-shadow: 0px 1px var(--regionBtnColor);
 }
 
 .map-layout {
@@ -266,7 +277,8 @@ onBeforeUnmount(() => {
 .map-left__art {
   width: 100%;
   height: 190px;
-  border: 3px solid var(--border);
+  border: 4px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border-radius: 10px;
   margin-bottom: 14px;
   overflow: hidden;
@@ -291,13 +303,15 @@ onBeforeUnmount(() => {
   font-weight: 900;
   color: var(--titleColor);
   margin-left: 15px;
+  text-shadow: 0px 1px var(--titleColor);
 }
 
 .map-left__desc {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 12px;
   color: var(--titleColor);
+  padding: 4px;
 }
 
 .map-left__level {
@@ -382,7 +396,7 @@ onBeforeUnmount(() => {
 
 .region-card {
   position: relative;
-  border: 3px solid var(--borderRegion);
+  border: 3px solid var(--tabsSlideBorderColor);
   border-radius: 20px;
   cursor: pointer;
   overflow: hidden;
@@ -396,13 +410,6 @@ onBeforeUnmount(() => {
   object-fit: cover;
   width: 100%;
   height: 100%;
-}
-
-@media (min-width: 1024px) {
-  .region-card:hover {
-    transform: translate(1px, 1px);
-    box-shadow: 0px 0px 0 var(--border);
-  }
 }
 
 .region-card__art {
@@ -428,7 +435,8 @@ onBeforeUnmount(() => {
 
 .btn-icon-back {
   background: #fff;
-  border: 3px solid #2b2b2b;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 12px;
   width: 40px;
   height: 40px;
@@ -436,7 +444,6 @@ onBeforeUnmount(() => {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 2px 2px 0px #2b2b2b;
   transition: transform 0.1s, box-shadow 0.1s;
 }
 
@@ -554,7 +561,7 @@ onBeforeUnmount(() => {
     border-top-right-radius: 12px;
     z-index: 111000;
     background: var(--bg);
-    padding: calc(env(safe-area-inset-top, 30px) + 5px) 14px 10px 14px;
+    padding: calc(env(safe-area-inset-top, 30px) + 0px) 10px 10px 10px;
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
@@ -688,18 +695,17 @@ onBeforeUnmount(() => {
   cursor: pointer;
   color: white;
   box-shadow: 2px 2px 0 var(--boxShadowMobile);
-  border: 2px solid var(--tabsSlideBorderColor);
+  border: none;
   background: var(--tabBg);
-  transition: all 0.1s;
 }
 
 .arrow-btn:active:not(:disabled) {
   transform: translate(1px, 1px);
-  box-shadow: 0px 0px 0 var(--border);
+  border: none;
 }
 
 .arrow-btn:disabled {
-  opacity: 0.3;
+  opacity: 0.6;
   cursor: not-allowed;
 }
 
