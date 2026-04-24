@@ -21,6 +21,7 @@
             :class="{'sidebar__item--active': selectedGroup && selectedGroup.level === group.level}">
           <button class="sidebar__button" @click="selectGroup(group)">
             <span>{{ group.level }}</span>
+            <img class="sidebar__next-icon" src="../../assets/images/next.svg" alt="arrow">
           </button>
         </li>
       </ul>
@@ -253,21 +254,18 @@ watch(selectedGroup, initLottieIcon);
 </script>
 
 <style scoped>
-/* =========================================
-   ОСНОВНОЙ КОНТЕЙНЕР (Без 100vh)
-   ========================================= */
+
 .modal-verbs-page {
   position: relative;
   display: flex;
   width: 100%;
-  height: 100%; /* Строго 100% от родителя */
+  height: 100%;
   overflow: hidden;
   font-family: "Nunito", sans-serif;
-  background: #f7f9fc; /* Мягкий фон, приятный для глаз */
+  background: #f7f9fc;
   box-sizing: border-box;
 }
 
-/* Скрываем скроллбары для красоты в iOS */
 ::-webkit-scrollbar {
   display: none;
 }
@@ -275,7 +273,7 @@ watch(selectedGroup, initLottieIcon);
   -ms-overflow-style: none;
   scrollbar-width: none;
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent; /* Убираем синее мерцание при тапе в iOS */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .sidebar {
@@ -293,7 +291,6 @@ watch(selectedGroup, initLottieIcon);
   align-items: center;
   padding: 5px 10px 15px 10px;
   background: var(--bg);
-  border-bottom: 2px solid #e5e7eb;
   border-radius: 0 0 24px 24px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.03);
   margin-bottom: 16px;
@@ -307,11 +304,12 @@ watch(selectedGroup, initLottieIcon);
   margin-left: 16px;
   margin-top: 0;
   margin-bottom: 0;
+  text-shadow: 0 1px var(--titleColor);
 }
 
 .sidebar__list {
   list-style: none;
-  padding: 0 20px;
+  padding: 0 15px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -320,30 +318,29 @@ watch(selectedGroup, initLottieIcon);
 
 .sidebar__button {
   width: 100%;
-  text-align: center;
-  padding: 15px 20px;
-  background: #ffffff;
-  border: 2px solid #e5e7eb;
-  border-bottom: 6px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 15px;
+  background: var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border-radius: 20px;
   cursor: pointer;
   font-weight: 800;
-  font-size: 1.2rem;
-  color: #4b5563;
+  font-size: 16px;
+  color: var(--titleColor);
   transition: all 0.1s ease-out;
+}
+
+.sidebar__next-icon {
+  width: 18px;
 }
 
 .sidebar__button:active {
   transform: translateY(4px);
   border-bottom-width: 2px;
   margin-bottom: 4px;
-}
-
-.sidebar__item--active .sidebar__button {
-  background: #4ade80;
-  border-color: #22c55e;
-  border-bottom-color: #16a34a;
-  color: #ffffff;
 }
 
 .content {
@@ -386,7 +383,6 @@ watch(selectedGroup, initLottieIcon);
 
 .btn-icon-back {
   background: #fff;
-  border: 3px solid #2b2b2b;
   border-radius: 12px;
   width: 40px;
   height: 40px;
@@ -394,7 +390,8 @@ watch(selectedGroup, initLottieIcon);
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 2px 2px 0px #2b2b2b;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   transition: transform 0.1s, box-shadow 0.1s;
 }
 

@@ -40,10 +40,11 @@
                 class="card-content"
             >
               <div class="event-info">
-                <h2 class="card-title">{{ event.title }}</h2>
                 <div class="card__icon-wrapper">
                   <img class="card__icon-item" :src="event.icon" :alt="event.alt">
                 </div>
+                <div class="card-title">{{ event.title }}</div>
+                <img class="card__icon-next" src="../assets/images/next.svg" alt="">
               </div>
             </div>
           </div>
@@ -145,6 +146,15 @@ const processedEvents = computed(() => {
 </script>
 
 <style scoped>
+
+.card__icon-next {
+  width: 18px;
+}
+
+.card__icon-wrapper {
+  margin-right: 15px;
+}
+
 .events-page {
   font-family: "Nunito", sans-serif;
   height: 100%;
@@ -163,7 +173,7 @@ const processedEvents = computed(() => {
 .page-header {
   display: flex;
   align-items: center;
-  padding: 5px 10px 10px 10px;
+  padding: 5px 10px 15px 10px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   flex-shrink: 0;
@@ -171,9 +181,10 @@ const processedEvents = computed(() => {
 }
 
 .card__icon-item {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
 }
+
 
 .page-title {
   font-size: 24px;
@@ -181,11 +192,12 @@ const processedEvents = computed(() => {
   color: var(--titleColor);
   letter-spacing: 1px;
   margin: 0 0 0 10px;
+  text-shadow: 0 1px var(--titleColor);
 }
 
 .event-card {
   background: var(--menuItemsBg);
-  border-radius: 12px;
+  border-radius: 20px;
   cursor: pointer;
   border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
@@ -194,7 +206,7 @@ const processedEvents = computed(() => {
 .events-grid {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   padding: 15px;
   flex: 1;
   overflow-y: auto;
@@ -205,7 +217,7 @@ const processedEvents = computed(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 20px;
+  padding: 7px 15px;
   height: 100%;
 }
 
@@ -218,10 +230,11 @@ const processedEvents = computed(() => {
 }
 
 .card-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   margin: 0;
   color: var(--titleColor);
+  flex: 1;
 }
 
 .event-dates {

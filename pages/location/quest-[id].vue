@@ -1037,8 +1037,8 @@ watchEffect(() => {
   .quest__option-btn {
     height: 40px;
     font-size: 14px;
-    box-shadow: 3px 3px 0 black;
-    border: 2px solid black;
+    border: 3px solid var(--tabsSlideBorderColor);
+    box-shadow: var(--boxShadowMobile);
     padding: 3px;
   }
   .btn {
@@ -1076,7 +1076,7 @@ watchEffect(() => {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: white;
+  background: #cec7c7;
   transition: all 0.3s ease;
 }
 

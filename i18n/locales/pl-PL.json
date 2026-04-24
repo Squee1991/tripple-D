@@ -3554,7 +3554,9 @@
   },
   "settingsGroup": {
     "notifications": "Powiadomienia",
-    "appearance": "Wygląd"
+    "appearance": "Wygląd",
+    "language": "Język",
+    "account": "Zarządzanie kontem"
   },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Pierwsza randka",
@@ -8129,10 +8131,10 @@
   },
   "cabinetToggle": {
     "sound": "Powiadomienia dźwiękowe",
-    "theme": "Tryb ciemny",
     "ach": "Powiadomienia o osiągnięciach",
+    "themeBtn": "Motyw",
     "snowFall": "Opady śniegu",
-    "themeBtn": "Motyw"
+    "language": "Język interfejsu"
   },
   "cabinet": {
     "important": "WAŻNE!!!",

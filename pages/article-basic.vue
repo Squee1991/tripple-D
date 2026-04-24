@@ -146,7 +146,7 @@ const data = {
 }
 
 .theory-hero {
-  padding: 15px;
+  padding: 5px 10px 15px 10px;
   text-align: center;
   position: sticky;
   top: 0;
@@ -176,7 +176,7 @@ const data = {
 }
 
 .theory-title-accent {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 900;
 }
 

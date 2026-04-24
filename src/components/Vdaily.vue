@@ -125,6 +125,7 @@ onUnmounted(() => {
   font-size: 22px;
   font-weight: 800;
   color: var(--panelTextColor);
+  text-shadow: 0px 1px var(--titleColor);
 }
 
 .qd__right {
@@ -137,10 +138,9 @@ onUnmounted(() => {
 
 .qd__timer {
   font-variant-numeric: tabular-nums;
-  padding: 3px 8px;
+  padding: 4px 8px;
   border-radius: 8px;
   background: var(--timerbg);
-  border: 2px solid #2b3240;
   color: #fff;
   font-size: 15px;
   font-weight: 600;

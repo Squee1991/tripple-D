@@ -3525,7 +3525,9 @@
   },
   "settingsGroup": {
     "notifications": "Bildirimler",
-    "appearance": "Görünüm"
+    "appearance": "Görünüm",
+    "language": "Dil",
+    "account": "Hesap yönetimi"
   },
   "valentineAchievements": {
     "firstValentineQuestLabel": "İlk Randevu",
@@ -8099,11 +8101,11 @@
     "registerDate": "Kayıt Tarihi"
   },
   "cabinetToggle": {
-    "sound": "Sesli Bildirimler",
-    "theme": "Karanlık Mod",
-    "ach": "Başarım Bildirimleri",
-    "snowFall": "Kar Yağışı",
-    "themeBtn": "Tema"
+    "sound": "Sesli bildirimler",
+    "ach": "Başarı bildirimleri",
+    "themeBtn": "Tema",
+    "snowFall": "Kar yağışı",
+    "language": "Arayüz dili"
   },
   "cabinet": {
     "important": "ÖNEMLİ!!!",

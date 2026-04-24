@@ -11,7 +11,6 @@
         </ul>
       </div>
     </div>
-
     <div class="sidebar">
       <div class="sidebar__header">
         <VBackBtn/>
@@ -25,11 +24,11 @@
         >
           <button class="sidebar__button" @click="selectTopic(item.id)">
             <span>{{ item.title }}</span>
+            <img class="sidebar__next-icon" src="../../assets/images/next.svg" alt="arrow">
           </button>
         </li>
       </ul>
     </div>
-
     <div class="content" v-if="currentTopicData">
       <header class="content__header">
         <button v-if="isMobileLayout" @click="closeContent" class="btn-icon-back">
@@ -41,7 +40,6 @@
         </button>
         <h1 class="content__title"> {{ currentTopicData.title }}</h1>
       </header>
-
       <div class="content__body">
         <div class="content__main-column">
           <section
@@ -60,7 +58,6 @@
             </div>
             <p class="info-section__description">{{ currentTopicData.contentBlocks[0].content }}</p>
           </section>
-
           <div v-for="(block, index) in currentTopicData.contentBlocks.slice(1)" :key="index">
             <section v-if="block.type === 'table'" class="info-section">
               <h3 class="info-section__title">{{ block.title }}</h3>
@@ -100,9 +97,7 @@
             </section>
           </div>
         </div>
-
         <div class="practice-area">
-          <h3 class="practice-area__title">{{ currentTopicData.practice.title }}</h3>
           <p class="practice-area__description">{{ currentTopicData.practice.description }}</p>
           <NuxtLink :to="`/tenses/${currentTopicData.id}`" class="practice-area__button">
             {{ currentTopicData.practice.buttonText }}
@@ -114,7 +109,6 @@
 </template>
 
 <script setup>
-// Твой оригинальный скрипт (ничего не менял, только свернул для удобства чтения)
 import {useHead, useSeoMeta} from '#imports'
 import {useRoute} from 'vue-router'
 import {ref, computed, onMounted, onUnmounted, watch, nextTick} from 'vue'
@@ -258,6 +252,7 @@ onUnmounted(() => {
   if (lottieInstance) lottieInstance.destroy()
 })
 watch(currentTopicData, initLottieIcon)
+
 </script>
 
 <style scoped>
@@ -298,10 +293,8 @@ watch(currentTopicData, initLottieIcon)
   align-items: center;
   padding: 5px 10px 15px 10px;
   background: var(--bg);
-  border-bottom: 2px solid #e5e7eb;
   border-radius: 0 0 24px 24px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-  margin-bottom: 16px;
   flex-shrink: 0;
 }
 
@@ -312,30 +305,37 @@ watch(currentTopicData, initLottieIcon)
   margin-left: 16px;
   margin-top: 0;
   margin-bottom: 0;
+  text-shadow: 0 1px var(--titleColor);
 }
 
 .sidebar__list {
   list-style: none;
-  padding: 0 20px;
+  padding: 15px;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .sidebar__button {
   width: 100%;
-  text-align: center;
-  padding: 15px 20px;
-  background: #ffffff;
-  border: 2px solid #e5e7eb;
-  border-bottom: 6px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 15px;
+  background: var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border-radius: 20px;
   cursor: pointer;
   font-weight: 800;
-  font-size: 1.2rem;
-  color: #4b5563;
+  font-size: 16px;
+  color: var(--titleColor);
   transition: all 0.1s ease-out;
+}
+
+.sidebar__next-icon {
+  width: 18px;
 }
 
 .content {
@@ -371,7 +371,8 @@ watch(currentTopicData, initLottieIcon)
 
 .btn-icon-back {
   background: #fff;
-  border: 3px solid #2b2b2b;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 12px;
   width: 40px;
   height: 40px;
@@ -379,7 +380,6 @@ watch(currentTopicData, initLottieIcon)
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 2px 2px 0px #2b2b2b;
   transition: transform 0.1s, box-shadow 0.1s;
 }
 

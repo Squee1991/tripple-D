@@ -1,5 +1,4 @@
 {
-
   "definiteIndefiniteQuestOne": {
     "title": "معركة النهايات",
     "description": "تدريب مختلط: أدوات النكرة والتعريف في الجمل.",
@@ -3534,8 +3533,10 @@
     "partThree": "اشترِه من متجر الأحداث!"
   },
   "settingsGroup": {
-    "notifications": "التنبيهات",
-    "appearance": "المظهر"
+    "notifications": "إشعارات",
+    "appearance": "المظهر",
+    "language": "اللغة",
+    "account": "إدارة الحساب"
   },
   "valentineAchievements": {
     "firstValentineQuestLabel": "الموعد الأول",
@@ -8109,11 +8110,11 @@
     "registerDate": "تاريخ التسجيل"
   },
   "cabinetToggle": {
-    "sound": "تنبيهات صوتية",
-    "theme": "الوضع الداكن",
-    "ach": "تنبيهات الإنجازات",
+    "sound": "إشعارات الصوت",
+    "ach": "إشعارات الإنجازات",
+    "themeBtn": "المظهر",
     "snowFall": "تساقط الثلوج",
-    "themeBtn": "المظهر"
+    "language": "لغة الواجهة"
   },
   "cabinet": {
     "important": "مهم!!!",

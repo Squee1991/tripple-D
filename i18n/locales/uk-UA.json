@@ -3535,7 +3535,9 @@
   },
   "settingsGroup": {
     "notifications": "Сповіщення",
-    "appearance": "Оформлення"
+    "appearance": "Оформлення",
+    "language": "Мова",
+    "account": "Керування акаунтом"
   },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Перше побачення",
@@ -8110,10 +8112,10 @@
   },
   "cabinetToggle": {
     "sound": "Звукові сповіщення",
-    "theme": "Темний режим",
     "ach": "Сповіщення про досягнення",
+    "themeBtn": "Тема",
     "snowFall": "Снігопад",
-    "themeBtn": "Тема"
+    "language": "Мова інтерфейсу"
   },
   "cabinet": {
     "important": "ВАЖЛИВО!!!",

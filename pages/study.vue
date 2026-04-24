@@ -15,16 +15,20 @@
               class="learn-card"
           >
             <NuxtLink v-if="category.url" :to="category.url" class="card-content">
-              <h2 class="card-title">{{ category.title }}</h2>
               <div class="card__icon-wrapper">
                 <img class="card__icon" :src="category.icon" alt="">
               </div>
+              <h2 class="card-title">{{ category.title }}</h2>
+              <img class="card__icon-next" src="../assets/images/next.svg" alt="">
             </NuxtLink>
             <button v-else @click="openCategory(category)" class="card-content">
-              <h2 class="card-title">{{ category.title }}</h2>
               <span class="card__icon-wrapper">
                 <img class="card__icon" :src="Folder" alt="">
               </span>
+              <div class="card-title">{{ category.title }}</div>
+              <div class="icon__next">
+                <img class="card__icon-next" src="../assets/images/next.svg" alt="">
+              </div>
             </button>
           </div>
         </div>
@@ -37,10 +41,8 @@
           >
             <div class="card-content">
               <h3 class="card-title">{{ link.label }}</h3>
-              <div class="icon chevron">
-                <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.5 1.5L7.5 7L1.5 12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+              <div class="icon__next">
+                <img class="card__icon-next" src="../assets/images/next.svg" alt="">
               </div>
             </div>
           </NuxtLink>
@@ -162,14 +164,22 @@ definePageMeta({
 }
 
 .card__icon {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
+}
+
+.card__icon-wrapper {
+  margin-right: 15px;
+}
+
+.card__icon-next {
+  width: 18px;
 }
 
 .page-header {
   display: flex;
   align-items: center;
-  padding: 5px 10px 10px 10px;
+  padding: 5px 10px 15px 10px;
   flex-shrink: 0;
   z-index: 10;
 }
@@ -177,15 +187,15 @@ definePageMeta({
 .page-title {
   font-size: 24px;
   font-weight: 700;
-  letter-spacing: -0.02em;
   color: var(--titleColor);
   margin: 0 0 0 10px;
+  text-shadow: 0 1px var(--titleColor);
 }
 
 .learn-grid {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   padding: 15px;
   flex: 1;
   overflow-y: auto;
@@ -199,9 +209,8 @@ definePageMeta({
   color: inherit;
   display: block;
   flex-shrink: 0;
-  background: var(--menuItemsBg);
   border-radius: 20px;
-  padding: 5px 15px;
+  background: var(--menuItemsBg);
   border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
 }
@@ -210,7 +219,7 @@ definePageMeta({
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 15px;
+  padding: 7px 15px;
   height: 100%;
   width: 100%;
   background: none;
@@ -218,19 +227,21 @@ definePageMeta({
 }
 
 .card-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
+  flex: 1;
   margin: 0;
   color: var(--titleColor);
+  text-align: start;
 }
 
 .sub-card .card-title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
 }
 
 .sub-card {
-  padding: 10px 0 ;
+  padding: 8px 0;
 }
 
 .chevron {

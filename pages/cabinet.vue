@@ -29,7 +29,6 @@
                 opacity: activeIndex === -1 ? 0 : 1
               }"
           ></div>
-
           <button
               v-for="tabItem in TAB_ITEMS"
               :key="tabItem.key"
@@ -43,7 +42,6 @@
           </button>
         </nav>
       </aside>
-
       <section class="content-panel">
         <ClientOnly>
           <div class="content-body">
@@ -92,12 +90,7 @@
                 <div class="account-tabs">
                   <div
                       class="sliding-bg-account"
-                      :style="{
-        transform: `translateX(${activeAccountIndex * 100}%)`,
-        opacity: activeAccountIndex === -1 ? 0 : 1
-      }"
-                  ></div>
-
+                      :style="{ transform: `translateX(${activeAccountIndex * 100}%)`,  opacity: activeAccountIndex === -1 ? 0 : 1  }"></div>
                   <button
                       v-for="tab in ACCOUNT_TABS"
                       :key="tab.key"
@@ -115,9 +108,9 @@
                     <PersonalInfoRows/>
                     <AccountManagement @open="handleSettingsAction"/>
                   </div>
-                  <div v-if="accountTab === 'friends'" class="tab-surface">
-                    <VFindFriends/>
-                  </div>
+<!--                  <div v-if="accountTab === 'friends'" class="tab-surface">-->
+<!--                    <VFindFriends/>-->
+<!--                  </div>-->
                   <div v-else-if="accountTab === 'awards'" class="tab-surface">
                     <AwardsList :awards="awardList"/>
                   </div>
@@ -287,7 +280,7 @@ const ACCOUNT_TABS = computed(() => [
   {key: 'common', label: t('cabinetNav.common'), icon: IdCard, alt: 'IdCard'},
   {key: 'awards', label: t('cabinetNav.awards'), icon: Rewards, alt: 'award'},
   {key: 'rank', label: t('cabinetNav.rank'), icon: RankAward, alt: 'rank'},
-  {key: 'friends', label: t('cabinetNav.exam'), icon: Friends, alt: 'friends'}
+  // {key: 'friends', label: t('cabinetNav.exam'), icon: Friends, alt: 'friends'}
 ])
 
 const isSnowWarningModalOpen = ref(false)
@@ -524,6 +517,10 @@ onMounted(async () => {
   flex: 0 0 auto;
 }
 
+.tab-icon {
+  width: 28px;
+}
+
 .back-btn {
   width: 100%;
   display: flex;
@@ -641,6 +638,7 @@ onMounted(async () => {
   position: relative;
   border-radius: 20px;
   background: transparent;
+  padding: 2px;
 }
 
 .user-block {
@@ -681,7 +679,6 @@ onMounted(async () => {
   place-items: center;
   cursor: pointer;
   background: #fff;
-  box-shadow: 2px 2px 0 #000;
 }
 
 .user-info {
@@ -758,7 +755,7 @@ onMounted(async () => {
   top: 8px;
   left: 8px;
   height: calc(100% - 14px);
-  width: calc((100% - 16px) / 4);
+  width: calc((100% - 16px) / 3);
   background: var(--tabsSlideBg);
   border-radius: 40px;
   transition: transform 0.4s cubic-bezier(0.34, 1.20, 0.64, 1), opacity 0.3s ease;
@@ -779,9 +776,9 @@ onMounted(async () => {
   color: var(--tabTextColor);
   font-weight: 900;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 12px;
   transition: transform 0.2s ease;
-  gap: 8px;
+  gap: 3px;
 }
 
 .account-tab.active {
@@ -997,12 +994,6 @@ onMounted(async () => {
     border: none;
     box-shadow: none;
     border-radius: 0;
-  }
-}
-
-@media (max-width: 767px) {
-  .tab-icon.iconHide {
-    display: none;
   }
 }
 

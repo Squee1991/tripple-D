@@ -316,6 +316,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   font-weight: 600;
   font-size: 24px;
   margin-left: 15px;
+  text-shadow: 0px 1px var(--titleColor);
 }
 
 .duel__header--left {
@@ -521,6 +522,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   margin-bottom: 25px;
   color: var(--titleColor);
   line-height: 1.3;
+  text-shadow: 0px 1px var(--titleColor);
 }
 
 .stats-block h3 span {

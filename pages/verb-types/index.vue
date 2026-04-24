@@ -21,6 +21,7 @@
             :class="{ 'sidebar__item--active': topic === item.id }">
           <button class="sidebar__button" @click="selectTopic(item.id)">
             <span>{{ item.title }}</span>
+            <img class="sidebar__next-icon" src="../../assets/images/next.svg" alt="arrow">
           </button>
         </li>
       </ul>
@@ -330,10 +331,8 @@ watch(currentTopicData, initLottieIcon);
   align-items: center;
   padding: 5px 10px 15px 10px;
   background: var(--bg);
-  border-bottom: 2px solid #e5e7eb;
   border-radius: 0 0 24px 24px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-  margin-bottom: 16px;
   flex-shrink: 0;
 }
 
@@ -344,15 +343,7 @@ watch(currentTopicData, initLottieIcon);
   margin-left: 16px;
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.sidebar__heading {
-  margin-bottom: 16px;
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: #60a5fa;
-  text-transform: uppercase;
+  text-shadow: 0 1px var(--titleColor);
 }
 
 .sidebar__list {
@@ -366,17 +357,23 @@ watch(currentTopicData, initLottieIcon);
 
 .sidebar__button {
   width: 100%;
-  text-align: center;
-  padding: 15px 20px;
-  background: #ffffff;
-  border: 2px solid #e5e7eb;
-  border-bottom: 6px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 15px;
+  background: var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border-radius: 20px;
   cursor: pointer;
   font-weight: 800;
-  font-size: 1.2rem;
-  color: #4b5563;
+  font-size: 16px;
+  color: var(--titleColor);
   transition: all 0.1s ease-out;
+}
+
+.sidebar__next-icon {
+  width: 18px;
 }
 
 .content {
@@ -419,7 +416,6 @@ watch(currentTopicData, initLottieIcon);
 
 .btn-icon-back {
   background: #fff;
-  border: 3px solid #2b2b2b;
   border-radius: 12px;
   width: 40px;
   height: 40px;
@@ -427,7 +423,8 @@ watch(currentTopicData, initLottieIcon);
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 2px 2px 0px #2b2b2b;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   transition: transform 0.1s, box-shadow 0.1s;
 }
 

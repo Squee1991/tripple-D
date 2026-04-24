@@ -3540,7 +3540,9 @@
   },
   "settingsGroup": {
     "notifications": "Notificări",
-    "appearance": "Aspect"
+    "appearance": "Aspect",
+    "language": "Limbă",
+    "account": "Gestionarea contului"
   },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Prima întâlnire",
@@ -8115,10 +8117,10 @@
   },
   "cabinetToggle": {
     "sound": "Notificări sonore",
-    "theme": "Mod întunecat",
     "ach": "Notificări realizări",
+    "themeBtn": "Temă",
     "snowFall": "Ninsoare",
-    "themeBtn": "Temă"
+    "language": "Limba interfeței"
   },
   "cabinet": {
     "important": "IMPORTANT!!!",

@@ -17,10 +17,11 @@
                 :to="game.url"
                 class="card-content"
             >
-              <h2 class="card-title">{{ game.title }}</h2>
               <div class="card__icon-wrapper">
                 <img class="card__icon-item" :src="game.icon" :alt="game.alt">
               </div>
+              <div class="card-title">{{ game.title }}</div>
+              <img class="card__icon-next" src="../assets/images/next.svg" alt="">
             </NuxtLink>
           </div>
         </div>
@@ -62,6 +63,10 @@ onMounted(() => {
 </script>
 
 <style scoped>
+
+.card__icon-next {
+  width: 18px;
+}
 .game-page {
   font-family: "Nunito", sans-serif;
   background: var(--bg);
@@ -81,8 +86,8 @@ onMounted(() => {
 }
 
 .card__icon-item {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
 }
 
 .page-header {
@@ -102,12 +107,13 @@ onMounted(() => {
   color: var(--titleColor);
   letter-spacing: 1px;
   margin: 0 0 0 15px;
+  text-shadow: 0 1px var(--titleColor);
 }
 
 .game-grid {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   padding: 15px;
   flex: 1;
   overflow-y: auto;
@@ -123,7 +129,7 @@ onMounted(() => {
 .game-card {
   background: var(--menuItemsBg);
   border-radius: 20px;
-  padding: 5px 15px;
+  padding: 7px 15px;
   border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
 }
@@ -139,12 +145,17 @@ onMounted(() => {
   color: #888;
 }
 
+.card__icon-wrapper {
+  margin-right: 15px;
+}
 
 .card-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   margin: 0;
   color: var(--titleColor);
+  flex: 1;
+  text-align: start;
 }
 
 .menu-appear-enter-active {

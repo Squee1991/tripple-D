@@ -78,7 +78,6 @@
           >
             {{ t('prasens.check') }}
           </button>
-
           <button v-else @click="store.nextQuestion()" class="action-button next">
             {{ t('prasens.further') }}
           </button>

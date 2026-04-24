@@ -108,7 +108,6 @@
 import {ref} from 'vue'
 import Pin from '../assets/images/pin.svg'
 import Chat from '../assets/images/chat.svg'
-import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
 import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
 const { t } = useI18n()
 const contentSections = ref([

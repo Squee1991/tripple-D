@@ -132,7 +132,7 @@ onMounted(() => {
           </div>
         </li>
       </ul>
-      <NuxtLink class="friend__exam" to="/friend-exam">{{ t('friendExamBtn.btn')}}</NuxtLink>
+<!--      <NuxtLink class="friend__exam" to="/friend-exam">{{ t('friendExamBtn.btn')}}</NuxtLink>-->
     </div>
   </div>
 </template>
@@ -195,10 +195,10 @@ onMounted(() => {
 
 .ec__title {
   font-weight: 900;
-  font-size: 1.6rem;
+  font-size: 23px;
   margin-bottom: 12px;
-  color: var(--titleColor, #111);
-  padding: 25px;
+  color: var(--titleColor);
+  text-shadow: 0px 1px var(--titleColor);
 }
 
 .ec__btn {

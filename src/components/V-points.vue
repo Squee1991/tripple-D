@@ -71,7 +71,7 @@
               <div class="action-menu__title">{{ section.title }}</div>
             </div>
             <div class="action-menu__arrow">
-              <img class="action-menu__arrow-icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="Arrow Icon"/>
+              <img class="action-menu__arrow-icon" src="../../assets/images/next.svg" alt="Arrow Icon"/>
             </div>
           </NuxtLink>
         </li>
@@ -211,20 +211,14 @@ onMounted(() => {
 
 .action-menu__title {
   color: var(--titleColor);
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   font-family: "Nunito", sans-serif;
 }
 
 .action-menu__arrow-icon {
-  width: 22px;
-  height: 22px;
-  transform: rotate(90deg);
-  transition: opacity 0.2s;
-}
-
-.action-menu__link:hover .action-menu__arrow-icon {
-  filter: brightness(0) invert(1) opacity(0.8);
+  width: 20px;
+  height: 20px;
 }
 
 .custom-progress .progress_exp-bar {
@@ -270,11 +264,11 @@ onMounted(() => {
 
 .premium-button {
   width: 100%;
-  background: #1e222a;
+  background: #5093fb;
   border: 1px solid #363d4a;
   border-radius: 14px;
   padding: 14px;
-  color: #5a6270;
+  color: whitesmoke;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
@@ -284,11 +278,6 @@ onMounted(() => {
   gap: 8px;
   margin-bottom: 8px;
   transition: all 0.2s;
-}
-
-.premium-button:hover {
-  background: #252a34;
-  color: #fff;
 }
 
 .premium-link-wrapper {
@@ -304,18 +293,10 @@ onMounted(() => {
   transition: color 0.2s;
 }
 
-.premium-link:hover {
-  color: #fff;
-}
-
 .tooltip-container {
   position: relative;
   display: flex;
   align-items: center;
-}
-
-.tooltip-container:hover {
-  z-index: 100;
 }
 
 .tooltip-box {
@@ -339,11 +320,6 @@ onMounted(() => {
   pointer-events: none;
 }
 
-.tooltip-container:hover .tooltip-box {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-}
 
 .tooltip-list li {
   font-size: 13px;
@@ -388,7 +364,9 @@ onMounted(() => {
 
 .points__title {
   color: var(--panelTextColor);
+  text-shadow: 0px 1px var(--titleColor);
   text-align: center;
+  font-weight: 600;
 }
 
 .points-card__header {
@@ -438,8 +416,6 @@ onMounted(() => {
   height: 4px;
   border-radius: 4px
 }
-
-
 
 .points-card__item + .points-card__item {
   border-top: 2px dashed rgba(0, 0, 0, .15);

@@ -3537,7 +3537,9 @@
   },
   "settingsGroup": {
     "notifications": "Notifications",
-    "appearance": "Apparence"
+    "appearance": "Apparence",
+    "language": "Langue",
+    "account": "Gestion du compte"
   },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Premier rendez-vous",
@@ -8108,10 +8110,10 @@
   },
   "cabinetToggle": {
     "sound": "Notifications sonores",
-    "theme": "Mode sombre",
     "ach": "Notifications de succès",
+    "themeBtn": "Thème",
     "snowFall": "Chute de neige",
-    "themeBtn": "Thème"
+    "language": "Langue de l'interface"
   },
   "cabinet": {
     "important": "IMPORTANT !!!",
