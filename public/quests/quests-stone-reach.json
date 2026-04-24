@@ -6,12 +6,12 @@
     "description": "questsStoneReachFirstQuests.description",
     "conditions": {
       "goal": "questsStoneReachFirstQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -202,12 +202,12 @@
     "description": "questsStoneReachSecondQuests.description",
     "conditions": {
       "goal": "questsStoneReachSecondQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -372,12 +372,12 @@
     "description": "questsStoneReachThirdQuests.description",
     "conditions": {
       "goal": "questsStoneReachThirdQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -554,12 +554,12 @@
     "description": "questsStoneReachFourthQuests.description",
     "conditions": {
       "goal": "questsStoneReachFourthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -732,12 +732,12 @@
     "description": "questsStoneReachFifthQuests.description",
     "conditions": {
       "goal": "questsStoneReachFifthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -914,12 +914,12 @@
     "description": "questsStoneReachSixthQuests.description",
     "conditions": {
       "goal": "questsStoneReachSixthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1098,12 +1098,12 @@
     "description": "questsStoneReachSeventhQuests.description",
     "conditions": {
       "goal": "questsStoneReachSeventhQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1282,12 +1282,12 @@
     "description": "questsStoneReachEighthQuests.description",
     "conditions": {
       "goal": "questsStoneReachEighthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1466,12 +1466,12 @@
     "description": "questsStoneReachNinthQuests.description",
     "conditions": {
       "goal": "questsStoneReachNinthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1648,12 +1648,12 @@
     "description": "questsStoneReachTenthQuests.description",
     "conditions": {
       "goal": "questsStoneReachTenthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
