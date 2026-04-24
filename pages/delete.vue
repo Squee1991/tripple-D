@@ -9,14 +9,14 @@
             <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
         </button>
-        <h1 class="account-cleanup__title">Удаление профиля</h1>
+        <h1 class="account-cleanup__title">{{t('deletePage.title')}}</h1>
         <div class="header-spacer"></div>
       </header>
       <div class="account-cleanup__scroll-area">
         <div class="account-cleanup__body">
           <div class="account-cleanup__mascot">
             <div class="mascot-bubble">
-              <p>Нам жаль, что ты уходишь! Пожалуйста, проверь важную информацию перед удалением.</p>
+              <p>{{t('deletePage.bubbleText')}}</p>
             </div>
           </div>
           <section class="account-cleanup__section account-cleanup__section--danger">
@@ -28,9 +28,9 @@
             </div>
           </section>
           <section class="account-cleanup__section">
-            <h2 class="account-cleanup__heading">Управление подпиской</h2>
+            <h2 class="account-cleanup__heading">{{t('deletePage.cleanUpTitle')}}</h2>
             <p class="account-cleanup__info-text">
-              Удаление аккаунта <b>не отменяет</b> подписку! Проверь статус платежей.
+              {{t('deletePage.cleanUpInfoText')}} <b>{{t('deletePage.cleanUpInfoTextTwo')}}</b> {{t('deletePage.cleanUpInfoTextThree')}}
             </p>
             <div class="account-cleanup__grid">
               <div v-for="platform in platformsInformation" :key="platform.id" class="account-cleanup__card">
@@ -45,7 +45,7 @@
               </div>
             </div>
             <div class="account-cleanup__footer-scroll">
-              <button class="account-cleanup__btn-main" @click="isCleanupModalVisible = true" type="button">Удалить аккаунт</button>
+              <button class="account-cleanup__btn-main" @click="isCleanupModalVisible = true" type="button">{{t('deletePage.deleteAccount')}}</button>
             </div>
           </section>
         </div>
@@ -55,20 +55,20 @@
           <transition name="slide-up" appear>
             <div class="account-cleanup__modal">
               <div class="modal-drag-pill"></div>
-              <h3 class="account-cleanup__modal-title">Точно удаляем?</h3>
+              <h3 class="account-cleanup__modal-title">{{t('deletePage.modalTitle')}}</h3>
               <img class="cleanup__icon-modal" src="../assets/images/Sadlyhedgehog.png" alt="Грустный ежик">
               <div class="account-cleanup__auth-zone">
                 <div v-if="isGoogleUser" class="account-cleanup__google-status">
-                  Вход через <strong>Google</strong>. <br>
-                  Для подтверждения откроется окно авторизации.
+                  {{t('deletePage.cleanUpGoogle')}} <strong>Google</strong>. <br>
+                  {{t('deletePage.cleanUpGoogleTwo')}}
                 </div>
                 <div v-else class="account-cleanup__password-zone">
-                  <label class="account-cleanup__field-label">Введи пароль для подтверждения:</label>
+                  <label class="account-cleanup__field-label">{{t('deletePage.cleanUpPassword')}}</label>
                   <input
                       v-model="passwordField.value"
                       type="password"
                       :class="['account-cleanup__field-input', { 'account-cleanup__field-input--error': passwordField.error }]"
-                      placeholder="Твой пароль..."
+                      :placeholder="t('deletePage.placeholder')"
                   />
                   <transition name="fade">
                     <p v-if="passwordField.error" class="account-cleanup__field-error">{{ t(passwordField.error) }}</p>
@@ -97,7 +97,6 @@
 <script setup>
 import {ref, computed} from 'vue'
 import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
 import {userAuthStore} from '../store/authStore.js'
 import {mapErrors} from '../utils/errorsHandler.js'
 
@@ -110,33 +109,33 @@ const passwordField = ref({name: 'password', value: '', error: ''})
 const isGoogleUser = computed(() => authStore.isGoogleUser)
 
 const accountChanges = [
-  {id: 1, text: 'Данные профиля исчезнут навсегда.'},
-  {id: 2, text: 'Прогресс и история тестов обнулятся.'},
-  {id: 3, text: 'Все награды, звания и достижения пропадут.'},
-  {id: 4, text: 'Валюта, уровень и шляпы будут списаны.'}
+  {id: 1, text: t('accountChanges.first')},
+  {id: 2, text: t('accountChanges.two')},
+  {id: 3, text: t('accountChanges.three')},
+  {id: 4, text: t('accountChanges.four')}
 ]
 
 const platformsInformation = [
   {
     id: 'web',
-    name: 'На сайте',
+    name: t('platformsInformation.titleWeb'),
     icon: '🌐',
-    description: 'Оплата картой на сайте.',
-    instruction: 'Отключи автопродление в Личном кабинете.'
+    description: t('platformsInformation.descriptionWeb'),
+    instruction: t('platformsInformation.instructionWeb')
   },
   {
     id: 'store',
-    name: 'В приложении',
+    name: t('platformsInformation.titleStore'),
     icon: '📱',
-    description: 'Google Play или App Store.',
-    instruction: 'Отмени подписку в настройках телефона.'
+    description: t('platformsInformation.descriptionStore'),
+    instruction: t('platformsInformation.instructionStore')
   }
 ]
 
 
 const modalActions = computed(() => [
-  {label: 'Я передумал', type: 'stay', needsAuth: false, handler: hideConfirmation},
-  {label: 'Подтверждаю удаление', type: 'danger', needsAuth: true, handler: processAccountCleanup}
+  {label: t('deletePage.modalLabelOne'), type: 'stay', needsAuth: false, handler: hideConfirmation},
+  {label: t('deletePage.modalLabelTwo'), type: 'danger', needsAuth: true, handler: processAccountCleanup}
 ])
 
 function hideConfirmation() {
@@ -208,6 +207,7 @@ async function processAccountCleanup() {
   font-weight: 900;
   margin-left: 15px;
   color: var(--titleColor);
+  text-shadow: 0 1px var(--titleColor);
 }
 
 .header-spacer {
@@ -235,7 +235,7 @@ async function processAccountCleanup() {
   background: #FFFFFF;
   border-radius: 28px;
   padding: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile);
 }
@@ -389,6 +389,7 @@ async function processAccountCleanup() {
 .account-cleanup__modal-title {
   font-size: 24px;
   font-weight: 900;
+  margin: 15px 0;
 }
 
 .account-cleanup__auth-zone {

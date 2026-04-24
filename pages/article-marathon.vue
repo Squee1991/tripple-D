@@ -151,6 +151,7 @@ const difficultyBase = ref([
   color: var(--titleColor);
   letter-spacing: 0.5px;
   margin-left: 15px;
+  text-shadow: 0 1px var(--titleColor);
 }
 
 .prepare-container {

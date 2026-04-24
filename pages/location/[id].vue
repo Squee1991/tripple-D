@@ -207,6 +207,7 @@ onMounted(async () => {
   font-size: 24px;
   color: var(--titleColor);
   margin-left: 15px;
+  text-shadow: 0px 1px var(--titleColor);
 }
 
 .location-header {

@@ -8161,7 +8161,10 @@
     "articleLabelTwo": "- Dil Diyarlarındaki tekrar denemeleri ve profildeki mağazada harcanır.",
     "levelTitle": "Seviye",
     "levelLabelOne": "- Görevleri tamamladıkça seviyen artar.",
-    "levelLabelTwo": "- Seviyen arttıkça Dil Diyarlarındaki yeni görevler açılır."
+    "levelLabelTwo": "- Seviyen arttıkça Dil Diyarlarındaki yeni görevler açılır.",
+    "livesTitle": "Canlar",
+    "livesLabelOne": "Dil diyarlarını tamamlamak için gereklidir",
+    "livesLabelTwo": "Dahili mağazadan veya eğitim sırasında Articlus'lar karşılığında satın alınır"
   },
   "idioms": {
     "title": "Deyimler ve Kalıplaşmış İfadeler",
@@ -8269,6 +8272,8 @@
     "answer": "Hataları görmezden gelir"
   },
   "guessWord": {
+    "subtitle": "Kelimeyi tahmin et ve Almancanı geliştir!",
+    "theme": "Tema:",
     "back": "Geri",
     "guessTitle": "Kelimeyi Tahmin Et",
     "startGame": "Oyuna Başla",
@@ -9471,6 +9476,7 @@
     "Informatik": "Bilgisayar Bilimi"
   },
   "modes": {
+    "themeTitle": "Tanımlık (artel) çalışma konuları",
     "article": "Artikeli Girin",
     "letters": "Kelimeyi Heceleyin",
     "articleWord": "Kelimeyi ve Artikeli Girin",
@@ -9726,5 +9732,35 @@
   "lives": {
     "next": "Sonraki:",
     "full": "Canlar dolu"
+  },
+  "deletePage": {
+    "title": "Profili sil",
+    "bubbleText": "Ayrıldığın için üzgünüz! Lütfen silmeden önce önemli bilgileri kontrol et.",
+    "cleanUpTitle": "Abonelik yönetimi",
+    "cleanUpInfoText": "Hesabı silmek",
+    "cleanUpInfoTextTwo": "aboneliği iptal etmez!",
+    "cleanUpInfoTextThree": "Ödeme durumunu kontrol et.",
+    "deleteAccount": "Hesabı sil",
+    "modalTitle": "Silmek istediğine emin misin?",
+    "cleanUpGoogle": "İle giriş yap",
+    "cleanUpGoogleTwo": " Onaylamak için bir yetkilendirme penceresi açılacaktır.",
+    "cleanUpPassword": "Şifrenizi girin:",
+    "placeholder": "şifrenizi girin",
+    "modalLabelOne": "Vazgeçtim",
+    "modalLabelTwo": "Silme işlemini onayla"
+  },
+  "accountChanges": {
+    "first": "Profil verileri sonsuza dek kaybolacak.",
+    "two": "İlerleme ve test geçmişi sıfırlanacak.",
+    "three": "Tüm ödüller, unvanlar ve başarılar silinecek.",
+    "four": "Para birimi, seviye ve şapkalar geri alınacak."
+  },
+  "platformsInformation": {
+    "titleWeb": "Web sitesinde",
+    "descriptionWeb": "Web sitesinde kartla ödeme.",
+    "instructionWeb": "Kişisel Hesabınızdan otomatik yenilemeyi kapatın.",
+    "titleStore": "Uygulamada",
+    "descriptionStore": "Google Play veya App Store.",
+    "instructionStore": "Telefon ayarlarından aboneliği iptal edin."
   }
 }

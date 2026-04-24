@@ -8190,7 +8190,10 @@
     "articleLabelTwo": "- Wydawane na powtórne próby w Krainach Językowych oraz w sklepie w profilu.",
     "levelTitle": "Poziom",
     "levelLabelOne": "- Poziom wzrasta wraz z wykonywaniem zadań.",
-    "levelLabelTwo": "- Wyższy poziom odblokowuje zadania w Krainach Językowych."
+    "levelLabelTwo": "- Wyższy poziom odblokowuje zadania w Krainach Językowych.",
+    "livesTitle": "Życia",
+    "livesLabelOne": "Niezbędne do ukończenia krain językowych",
+    "livesLabelTwo": "Kupowane w wewnętrznym sklepie lub podczas nauki za Artiklusy"
   },
   "idioms": {
     "title": "Idiomy i frazeologizmy",
@@ -8298,6 +8301,8 @@
     "answer": "Przymknie oko na błąd"
   },
   "guessWord": {
+    "subtitle": "Odgadnij słowo i podszkol swój niemiecki!",
+    "theme": "Temat:",
     "back": "Wstecz",
     "guessTitle": "Zgadnij słowo",
     "startGame": "Rozpocznij grę",
@@ -9500,6 +9505,7 @@
     "Informatik": "Informatyka"
   },
   "modes": {
+    "themeTitle": "Tematy nauki rodzajników",
     "article": "Wstaw rodzajnik",
     "letters": "Ułóż słowo z liter",
     "articleWord": "Wstaw słowo i rodzajnik",
@@ -9755,5 +9761,35 @@
   "lives": {
     "next": "Następne:",
     "full": "Życia są pełne"
+  },
+  "deletePage": {
+    "title": "Usuwanie profilu",
+    "bubbleText": "Przykro nam, że odchodzisz! Prosimy o zapoznanie się z ważnymi informacjami przed usunięciem.",
+    "cleanUpTitle": "Zarządzanie subskrypcją",
+    "cleanUpInfoText": "Usunięcie konta",
+    "cleanUpInfoTextTwo": "nie anuluje",
+    "cleanUpInfoTextThree": "subskrypcji! Sprawdź status płatności.",
+    "deleteAccount": "Usuń konto",
+    "modalTitle": "Na pewno usunąć?",
+    "cleanUpGoogle": "Zaloguj przez",
+    "cleanUpGoogleTwo": " Aby potwierdzić, otworzy się okno autoryzacji.",
+    "cleanUpPassword": "Wprowadź hasło:",
+    "placeholder": "wprowadź hasło",
+    "modalLabelOne": "Zmieniłem zdanie",
+    "modalLabelTwo": "Potwierdzam usunięcie"
+  },
+  "accountChanges": {
+    "first": "Dane profilu znikną na zawsze.",
+    "two": "Postęp i historia testów zostaną zresetowane.",
+    "three": "Wszystkie nagrody, tytuły i osiągnięcia przepadną.",
+    "four": "Waluta, poziom i czapki zostaną odpisane."
+  },
+  "platformsInformation": {
+    "titleWeb": "Na stronie",
+    "descriptionWeb": "Płatność kartą na stronie.",
+    "instructionWeb": "Wyłącz automatyczne odnawianie w Panelu Użytkownika.",
+    "titleStore": "W aplikacji",
+    "descriptionStore": "Google Play lub App Store.",
+    "instructionStore": "Anuluj subskrypcję w ustawieniach telefonu."
   }
 }

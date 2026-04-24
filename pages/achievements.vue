@@ -10,7 +10,7 @@
     <div class="sidebar">
       <div class="header__title">
         <VBackBtn/>
-        <h3 class="sidebar-title">{{ t('Достижения') }}</h3>
+        <h3 class="sidebar-title">{{ t('accountPanel.achievement') }}</h3>
       </div>
       <nav class="nav__sidebar" >
         <ul class="achievement-categories">

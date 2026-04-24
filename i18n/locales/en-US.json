@@ -8187,7 +8187,10 @@
     "articleLabelTwo": "Spent on retries in Language Lands and in the shop in your profile.",
     "levelTitle": "Level",
     "levelLabelOne": "Your level increases as you complete tasks.",
-    "levelLabelTwo": "Higher levels unlock more tasks in Language Lands."
+    "levelLabelTwo": "Higher levels unlock more tasks in Language Lands.",
+    "livesTitle": "Lives",
+    "livesLabelOne": "Required to complete language lands",
+    "livesLabelTwo": "Purchased in the in-app store or during training for Articluses"
   },
   "idioms": {
     "title": "Idioms and Phrases",
@@ -8295,6 +8298,8 @@
     "answer": "Ignores a mistake"
   },
   "guessWord": {
+    "subtitle": "Guess the word and level up your German!",
+    "theme": "Theme:",
     "back": "Back",
     "guessTitle": "Guess the Word",
     "startGame": "Start Game",
@@ -9497,6 +9502,7 @@
     "Informatik": "Computer Science"
   },
   "modes": {
+    "themeTitle": "Article study topics",
     "article": "Insert the Article",
     "letters": "Spell the Word",
     "articleWord": "Insert the Word and Article",
@@ -9752,5 +9758,35 @@
   "lives": {
     "next": "Next:",
     "full": "Lives are full"
+  },
+  "deletePage": {
+    "title": "Profile deletion",
+    "bubbleText": "We're sorry to see you go! Please review the important information before deleting.",
+    "cleanUpTitle": "Subscription management",
+    "cleanUpInfoText": "Deleting your account",
+    "cleanUpInfoTextTwo": "does not cancel",
+    "cleanUpInfoTextThree": "your subscription! Check your payment status.",
+    "deleteAccount": "Delete account",
+    "modalTitle": "Are you sure you want to delete?",
+    "cleanUpGoogle": "Sign in with",
+    "cleanUpGoogleTwo": " To confirm, an authorization window will open.",
+    "cleanUpPassword": "Enter your password:",
+    "placeholder": "enter your password",
+    "modalLabelOne": "I changed my mind",
+    "modalLabelTwo": "Confirm deletion"
+  },
+  "accountChanges": {
+    "first": "Profile data will disappear forever.",
+    "two": "Progress and test history will be reset.",
+    "three": "All rewards, titles, and achievements will be lost.",
+    "four": "Currency, level, and hats will be removed."
+  },
+  "platformsInformation": {
+    "titleWeb": "On the website",
+    "descriptionWeb": "Card payment on the website.",
+    "instructionWeb": "Disable auto-renewal in your Personal Account.",
+    "titleStore": "In the app",
+    "descriptionStore": "Google Play or App Store.",
+    "instructionStore": "Cancel your subscription in your phone settings."
   }
 }

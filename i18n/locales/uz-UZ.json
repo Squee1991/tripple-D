@@ -8163,7 +8163,10 @@
     "articleLabelTwo": "- Til o'lkalarida qayta urinishlar va do'kon uchun sarflanadi.",
     "levelTitle": "Daraja",
     "levelLabelOne": "- Vazifalarni bajargan sari daraja ko'tariladi.",
-    "levelLabelTwo": "- Daraja ko'tarilishi bilan Til o'lkalaridagi yangi vazifalar ochiladi."
+    "levelLabelTwo": "- Daraja ko'tarilishi bilan Til o'lkalaridagi yangi vazifalar ochiladi.",
+    "livesTitle": "Hayotlar",
+    "livesLabelOne": "Til o'lkalaridan o'tish uchun zarur",
+    "livesLabelTwo": "Ichki do'kondan yoki o'qish davomida Artiklyuslar evaziga sotib olinadi"
   },
   "idioms": {
     "title": "Frazeologizmlar va idiomalar",
@@ -8271,6 +8274,8 @@
     "answer": "Xatoga ko‘z yumadi"
   },
   "guessWord": {
+    "subtitle": "So'zni toping va nemis tilingizni rivojlantiring!",
+    "theme": "Mavzu:",
     "back": "Orqaga",
     "guessTitle": "So‘zni top",
     "startGame": "O‘yinni boshlash",
@@ -9474,6 +9479,7 @@
     "Informatik": "Informatika"
   },
   "modes": {
+    "themeTitle": "Artikllarni o'rganish mavzulari",
     "article": "Artiklni yozing",
     "letters": "So‘zni harflardan yig‘ing",
     "articleWord": "So‘z va artiklni yozing",
@@ -9729,5 +9735,35 @@
   "lives": {
     "next": "Keyingisi:",
     "full": "Hayotlar to'la"
+  },
+  "deletePage": {
+    "title": "Profilni o'chirish",
+    "bubbleText": "Ketayotganingizdan afsusdamiz! Iltimos, o'chirishdan oldin muhim ma'lumotlarni tekshiring.",
+    "cleanUpTitle": "Obunani boshqarish",
+    "cleanUpInfoText": "Akkountni o'chirish",
+    "cleanUpInfoTextTwo": "obunani bekor qilmaydi!",
+    "cleanUpInfoTextThree": "To'lovlar holatini tekshiring.",
+    "deleteAccount": "Akkountni o'chirish",
+    "modalTitle": "Haqiqatan ham o'chirilsinmi?",
+    "cleanUpGoogle": "Orqali kirish",
+    "cleanUpGoogleTwo": " Tasdiqlash uchun avtorizatsiya oynasi ochiladi.",
+    "cleanUpPassword": "Parolingizni kiriting:",
+    "placeholder": "parolingizni kiriting",
+    "modalLabelOne": "Fikrimdan qaytdim",
+    "modalLabelTwo": "O'chirishni tasdiqlayman"
+  },
+  "accountChanges": {
+    "first": "Profil ma'lumotlari butunlay yo'qoladi.",
+    "two": "Progress va testlar tarixi nollashtiriladi.",
+    "three": "Barcha mukofotlar, unvonlar va yutuqlar yo'qoladi.",
+    "four": "Valyuta, daraja va shlyapalar olib qo'yiladi."
+  },
+  "platformsInformation": {
+    "titleWeb": "Saytda",
+    "descriptionWeb": "Saytda karta orqali to'lov.",
+    "instructionWeb": "Shaxsiy kabinetda avtomatik uzaytirishni o'chiring.",
+    "titleStore": "Ilovada",
+    "descriptionStore": "Google Play yoki App Store.",
+    "instructionStore": "Telefon sozlamalarida obunani bekor qiling."
   }
 }

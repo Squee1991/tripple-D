@@ -129,7 +129,7 @@ onUnmounted(() => {
                     <span class="game-card__badge">{{ level }}</span>
                   </div>
                   <div class="game-card__arrow">
-                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="4">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="4">
                       <path d="M5 12h14m-7-7l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </div>
@@ -186,7 +186,7 @@ onUnmounted(() => {
 }
 
 .quiz__header-wrapper {
-  padding: 10px 16px 15px;
+  padding: 5px 10px 15px 10px;
   flex-shrink: 0;
 }
 
@@ -338,8 +338,8 @@ onUnmounted(() => {
 }
 
 .progress-ring__center {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   background: #FFF;
   border: 3px solid #2b2b2b;
   border-radius: 50%;

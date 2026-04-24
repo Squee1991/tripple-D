@@ -8181,7 +8181,10 @@
     "articleLabelTwo": "- Se gastan en reintentos en Tierras de Lenguas y en la tienda de tu perfil.",
     "levelTitle": "Nivel",
     "levelLabelOne": "- El nivel aumenta al completar tareas.",
-    "levelLabelTwo": "- Al subir de nivel se desbloquean tareas en Tierras de Lenguas."
+    "levelLabelTwo": "- Al subir de nivel se desbloquean tareas en Tierras de Lenguas.",
+    "livesTitle": "Vidas",
+    "livesLabelOne": "Necesarias para completar las tierras de idiomas",
+    "livesLabelTwo": "Se adquieren en la tienda interna o durante el aprendizaje por Articluses"
   },
   "idioms": {
     "title": "Modismos y expresiones idiomáticas",
@@ -8289,6 +8292,8 @@
     "answer": "Hace la vista gorda ante un error"
   },
   "guessWord": {
+    "subtitle": "¡Adivina la palabra y mejora tu alemán!",
+    "theme": "Tema:",
     "back": "Atrás",
     "guessTitle": "Adivina la palabra",
     "startGame": "Empezar el juego",
@@ -9491,6 +9496,7 @@
     "Informatik": "Informática"
   },
   "modes": {
+    "themeTitle": "Temas de estudio de artículos",
     "article": "Escribir el artículo",
     "letters": "Formar la palabra letra por letra",
     "articleWord": "Escribir palabra y artículo",
@@ -9746,5 +9752,35 @@
   "lives": {
     "next": "Siguiente:",
     "full": "Vidas llenas"
+  },
+  "deletePage": {
+    "title": "Eliminar perfil",
+    "bubbleText": "¡Lamentamos que te vayas! Por favor, revisa la información importante antes de eliminar.",
+    "cleanUpTitle": "Gestión de suscripción",
+    "cleanUpInfoText": "¡Eliminar la cuenta",
+    "cleanUpInfoTextTwo": "no cancela",
+    "cleanUpInfoTextThree": "la suscripción! Comprueba el estado de tus pagos.",
+    "deleteAccount": "Eliminar cuenta",
+    "modalTitle": "¿Estás seguro de eliminar?",
+    "cleanUpGoogle": "Entrar con",
+    "cleanUpGoogleTwo": " Para confirmar, se abrirá una ventana de autorización.",
+    "cleanUpPassword": "Introduce tu contraseña:",
+    "placeholder": "introduce tu contraseña",
+    "modalLabelOne": "He cambiado de opinión",
+    "modalLabelTwo": "Confirmar eliminación"
+  },
+  "accountChanges": {
+    "first": "Los datos del perfil desaparecerán para siempre.",
+    "two": "El progreso y el historial de pruebas se restablecerán.",
+    "three": "Todos los premios, títulos y logros se perderán.",
+    "four": "La moneda, el nivel и los sombreros serán retirados."
+  },
+  "platformsInformation": {
+    "titleWeb": "En el sitio web",
+    "descriptionWeb": "Pago con tarjeta en el sitio.",
+    "instructionWeb": "Desactiva la renovación automática en tu Área Personal.",
+    "titleStore": "En la aplicación",
+    "descriptionStore": "Google Play o App Store.",
+    "instructionStore": "Cancela la suscripción en los ajustes del teléfono."
   }
 }
