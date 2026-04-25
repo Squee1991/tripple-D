@@ -11,7 +11,7 @@
           <polyline points="12 19 5 12 12 5"></polyline>
         </svg>
       </button>
-      <div class="cabinet-header-title">Бортовой журнал</div>
+      <div class="cabinet-header-title">{{ t('galaxyCabinet.cabinet')}}</div>
     </div>
     <div class="main-layout">
       <div class="side-panel">
@@ -163,7 +163,6 @@ onUnmounted(() => {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background: var(--bg);
   color: #1a1a1a;
   box-sizing: border-box;
   font-family: Nunito, sans-serif;
@@ -175,15 +174,6 @@ onUnmounted(() => {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: var(--bg);
-}
-
-.dot-pattern {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(#ffffff 4px, transparent 4px);
-  background-size: 50px 50px;
-  opacity: 0.15;
 }
 
 .cabinet-header {

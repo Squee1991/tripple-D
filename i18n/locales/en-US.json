@@ -9649,7 +9649,8 @@
     "money": "ARTICS",
     "commonPoints": "TOTAL POINTS",
     "rank": "Rank:",
-    "streak": "RECORD:"
+    "streak": "RECORD:",
+    "cabinet": "Logbook"
   },
   "galaxyRank": {
     "none": "EARTHLING",

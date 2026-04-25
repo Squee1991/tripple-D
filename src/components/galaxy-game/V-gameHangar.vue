@@ -259,10 +259,9 @@ onMounted(async () => {
   padding: 10px;
   font-size: 1.3rem;
   font-weight: 900;
-  border: 2px solid #000;
   cursor: pointer;
-  box-shadow: 3px 3px 0px #000;
   transition: 0.1s;
+  border-radius: 20px;
 }
 
 .btn-action.buy {
@@ -284,6 +283,7 @@ onMounted(async () => {
   background: #2ecc71;
   color: #fff;
   pointer-events: none;
+  border: none;
   box-shadow: none;
   transform: translate(6px, 6px);
 }
@@ -316,7 +316,7 @@ onMounted(async () => {
 
 @media (max-width: 600px) {
   .ship-main-render {
-    width: 170px;
+    width: 150px;
   }
 
   .info-module {
