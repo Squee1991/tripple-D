@@ -1,67 +1,3 @@
-<template>
-  <div class="menu__wrapper">
-    <div class="menu-bg-layer">
-      <div class="nebula-cloud blue"></div>
-      <div class="nebula-cloud purple"></div>
-      <div v-for="n in 12" :key="n" class="floating-toon-star" :style="getRandomPos(n)">
-        {{ n % 2 === 0 ? '⭐' : '✨' }}
-      </div>
-      <img
-          v-for="astro in astronauts"
-          :key="'astro' + astro.id"
-          :src="Astronaut"
-          class="floating-astronaut"
-          :style="{
-        top: astro.top + '%',
-        left: astro.left + '%',
-        width: astro.size + 'px',
-        animationDuration: astro.duration + 's',
-        animationDelay: astro.delay + 's'
-      }"
-          alt="astronaut"
-      />
-    </div>
-    <div class="menu-content-layer">
-      <div class="open-menu-layout" v-if="currentScreen === 'menu' && !isTransitioning">
-        <div class="title-section">
-          <h1 class="main-title-toon">
-            <span class="word-1">{{ t('galaxyMenu.titleWordOne')}}</span>
-            <span class="word-2">{{ t('galaxyMenu.titleWordTwo')}}</span>
-          </h1>
-        </div>
-        <div class="controls-section">
-          <button class="menu-btn-toon play" @click="toggleScreen('galaxies')">
-            <span class="icon">🚀 {{ t('galaxyMenu.begin')}}</span>
-          </button>
-          <div class="secondary-btns">
-            <button
-                v-for="btn in menuButtons"
-                :key="btn.id"
-                class="menu-btn-toon"
-                :class="btn.class"
-                @click="btn.action ? btn.action() : toggleScreen(btn.target)"
-            >
-              {{ t(btn.label) }}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="sub-screen-container" v-if="currentScreen !== 'menu'">
-        <component
-            :is="componentViews[currentScreen]"
-            @close="toggleScreen('menu')"
-            @back="toggleScreen('menu')"
-            @select-galaxy="startMission"
-        />
-      </div>
-    </div>
-    <Transition name="warp-flash">
-      <div class="warp-overlay" v-if="isTransitioning"></div>
-    </Transition>
-  </div>
-</template>
-
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from "vue-router"
@@ -102,7 +38,7 @@ const getRandomPos = (n) => ({
   fontSize: (Math.random() * 1 + 1) + 'rem'
 })
 
-const generateAstronauts = (count = 3) => {
+const generateAstronauts = (count = 2) => {
   const newAstronauts = []
   const minDistance = 15
   for (let i = 0; i < count; i++) {
@@ -181,41 +117,103 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('popstate', handlePopState)
 })
-
-onMounted(() => {
-  generateAstronauts()
-  window.addEventListener('popstate', handlePopState)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('popstate', handlePopState)
-})
 </script>
 
+<template>
+  <div class="menu__wrapper">
+    <div class="menu-bg-layer">
+      <div class="nebula-cloud blue"></div>
+      <div class="nebula-cloud purple"></div>
+      <div v-for="n in 12" :key="n" class="floating-toon-star" :style="getRandomPos(n)">
+        {{ n % 2 === 0 ? '⭐' : '✨' }}
+      </div>
+      <img
+          v-for="astro in astronauts"
+          :key="'astro' + astro.id"
+          :src="Astronaut"
+          class="floating-astronaut"
+          :style="{
+        top: astro.top + '%',
+        left: astro.left + '%',
+        width: astro.size + 'px',
+        animationDuration: astro.duration + 's',
+        animationDelay: astro.delay + 's'
+      }"
+          alt="astronaut"
+      />
+    </div>
+
+    <div class="menu-content-layer">
+      <div class="open-menu-layout" v-if="currentScreen === 'menu' && !isTransitioning">
+        <div class="title-section">
+          <h1 class="main-title-toon">
+            <span class="word-1">{{ t('galaxyMenu.titleWordOne')}}111</span>
+            <span class="word-2">{{ t('galaxyMenu.titleWordTwo')}}</span>
+          </h1>
+        </div>
+        <div class="controls-section">
+          <button class="menu-btn-toon play" @click="toggleScreen('galaxies')">
+            <span class="icon">🚀 {{ t('galaxyMenu.begin')}}</span>
+          </button>
+          <div class="secondary-btns">
+            <button
+                v-for="btn in menuButtons"
+                :key="btn.id"
+                class="menu-btn-toon"
+                :class="btn.class"
+                @click="btn.action ? btn.action() : toggleScreen(btn.target)"
+            >
+              {{ t(btn.label) }}
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="sub-screen-container" v-if="currentScreen !== 'menu'">
+        <component
+            :is="componentViews[currentScreen]"
+            @close="toggleScreen('menu')"
+            @back="toggleScreen('menu')"
+            @select-galaxy="startMission"
+        />
+      </div>
+    </div>
+    <Transition name="warp-flash">
+      <div class="warp-overlay" v-if="isTransitioning"></div>
+    </Transition>
+  </div>
+</template>
+
 <style scoped>
+.menu__wrapper {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  padding-top: env(safe-area-inset-top, 20px);
+  padding-bottom: env(safe-area-inset-bottom, 20px);
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #0b0e14;
+}
 
 .menu-bg-layer {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: -1;
   pointer-events: none;
 }
 
-.menu__wrapper {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
 .menu-content-layer {
-  position: absolute;
-  inset: 0;
-  z-index: 10;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-  font-family: 'Arial Rounded MT Bold', sans-serif;
+  position: relative;
+  z-index: 10;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -230,7 +228,6 @@ onUnmounted(() => {
   height: 100%;
   max-width: 360px;
   margin: auto;
-  padding: 10px;
 }
 
 .sub-screen-container {
@@ -255,6 +252,18 @@ onUnmounted(() => {
   border-radius: 50%;
   filter: blur(100px);
   opacity: 0.3;
+}
+
+.nebula-cloud.blue {
+  top: -100px;
+  left: -100px;
+  background: #3a7bd5;
+}
+
+.nebula-cloud.purple {
+  bottom: -100px;
+  right: -100px;
+  background: #9c27b0;
 }
 
 .floating-toon-star {
@@ -365,7 +374,6 @@ onUnmounted(() => {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.02); }
 }
-
 
 .warp-flash-enter-active, .warp-flash-leave-active {
   transition: opacity 0.3s;

@@ -93,7 +93,7 @@ onMounted(() => {
 .page-header {
   display: flex;
   align-items: center;
-  padding: 5px 10px 10px 10px;
+  padding: 5px 10px 15px 10px;
   background: var(--bg);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;

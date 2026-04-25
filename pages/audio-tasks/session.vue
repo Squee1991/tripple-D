@@ -8,7 +8,7 @@
         <header class="study-nav">
           <button @click="handleExitTrigger" class="btn-icon-back">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                 stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                 stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
               <line x1="19" y1="12" x2="5" y2="12"></line>
               <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
@@ -394,9 +394,9 @@ watch(currentIndex, stopAllAudio)
   display: flex;
   flex-direction: column;
   background: #ffffff;
-  border: 2px solid #1e272e;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border-radius: 24px;
-  box-shadow: 2px 3px 0px #1e272e;
   padding: 10px;
   flex: 1;
   margin-bottom: 8px;
@@ -406,21 +406,23 @@ watch(currentIndex, stopAllAudio)
 .quest-card-audio {
   flex: 1;
   background: #f1f1f1;
-  border: 3px solid #1e272e;
+
   border-radius: 16px;
   padding: 10px;
   margin-bottom: 8px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  box-shadow: inset 0px -4px 0px rgba(0,0,0,0.1);
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 2px 0 var(--tabsSlideBorderColor);
   overflow: hidden;
   min-height: 0;
 }
 
 .btn-icon-back {
   background: #fff;
-  border: 3px solid #2b2b2b;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border-radius: 12px;
   width: 40px;
   height: 38px;
@@ -429,7 +431,6 @@ watch(currentIndex, stopAllAudio)
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 2px 2px 0px #2b2b2b;
   transition: transform 0.1s, box-shadow 0.1s;
 }
 
@@ -455,17 +456,17 @@ watch(currentIndex, stopAllAudio)
   background: #ffffff;
   padding: 6px 12px;
   border-radius: 12px;
-  border: 2px solid #1e272e;
-  box-shadow: 2px 2px 0px #1e272e;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
 }
 
 .quest-card-mega-play {
   background: #48dbfb !important;
-  width: 50px !important;
-  height: 50px !important;
-  border-radius: 50% !important;
-  border: 3px solid #1e272e !important;
-  box-shadow: 2px 3px 0px #1e272e !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 34% !important;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
 }
 
 
@@ -492,9 +493,9 @@ watch(currentIndex, stopAllAudio)
   flex-shrink: 0;
   width: 44px !important;
   height: 44px !important;
-  background: #feca57 !important;
-  border: 3px solid #1e272e !important;
-  box-shadow: 2px 3px 0px #1e272e !important;
+  padding: 0 4px;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border-radius: 14px !important;
 }
 
@@ -506,10 +507,10 @@ watch(currentIndex, stopAllAudio)
   text-align: left;
   padding: 4px 7px;
   background: #ffffff;
-  border: 3px solid #1e272e;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border-radius: 16px;
   cursor: pointer;
-  box-shadow: 2px 3px 0px #1e272e;
   transition: transform 0.1s, box-shadow 0.1s, background-color 0.2s;
 }
 
@@ -538,7 +539,7 @@ watch(currentIndex, stopAllAudio)
   width: 24px;
   height: 24px;
   min-width: 24px;
-  border: 3px solid #1e272e;
+  border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 8px;
   margin-right: 5px;
   display: flex;
@@ -558,7 +559,7 @@ watch(currentIndex, stopAllAudio)
 
 .quest-option-text {
   font-weight: 800;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.2;
 }
 
@@ -618,11 +619,9 @@ watch(currentIndex, stopAllAudio)
   width: 100%;
   padding: 6px;
   border-radius: 18px;
-  border: 3px solid #1e272e;
   font-weight: 900;
   font-size: 16px;
   text-transform: uppercase;
-  box-shadow: 3px 4px 0px #1e272e;
   cursor: pointer;
   transition: transform 0.1s, box-shadow 0.1s;
 }
@@ -630,10 +629,6 @@ watch(currentIndex, stopAllAudio)
 .quiz-btn:active:not(:disabled) {
   transform: translate(3px, 4px);
   box-shadow: 0px 0px 0px #1e272e;
-}
-
-.quiz-btn-primary {
-  background: #b8e994;
 }
 
 .quiz-btn-primary:disabled {
@@ -644,20 +639,32 @@ watch(currentIndex, stopAllAudio)
   cursor: not-allowed;
 }
 
+.quiz-btn-primary {
+  background-color: #58cc02 !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 0 #46a302 !important;
+}
+
 .quiz-btn-next {
-  background: #48dbfb;
-  color: #1e272e;
+  background-color: #1cb0f6 !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 0 #1899d6 !important;
 }
 
 .quiz-btn-finish {
-  background: #feca57;
+  background-color: #ffc800 !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 0 #e5a400 !important;
 }
 
 .quiz-btn-skip {
-  background: #ffffff;
-  height: 44px;
-  padding: 6px;
-  font-size: 13px;
+  background-color: #ffffff !important;
+  color: #afafaf !important;
+  border: 2px solid #e5e5e5 !important;
+  box-shadow: 0 2px 0 #e5e5e5 !important;
 }
 
 .quest-card-footer {
@@ -688,8 +695,8 @@ watch(currentIndex, stopAllAudio)
   width: 100%;
   max-width: 340px;
   text-align: center;
-  border: 2px solid #1e272e;
-  box-shadow: 3px 3px 0px #1e272e;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
 }
 
 .modal-title {
@@ -752,11 +759,11 @@ watch(currentIndex, stopAllAudio)
   flex: 1;
   padding: 12px;
   border-radius: 26px;
-  border: 2px solid #1e272e;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   font-weight: 900;
   font-size: 15px;
   cursor: pointer;
-  box-shadow: 3px 3px 0px #1e272e;
   transition: transform 0.1s, box-shadow 0.1s;
 }
 

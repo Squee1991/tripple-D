@@ -9636,7 +9636,11 @@
     "profile": "Profile",
     "shop": "HANGAR",
     "rank": "Ranking",
-    "exit": "EXIT"
+    "exit": "EXIT",
+    "start": "START MISSION",
+    "findGalaxyTitle": "SECTOR DISCOVERED",
+    "errorTitle": "SYSTEM FAILURE",
+    "errorBtn": "RETURN TO HEADQUARTERS"
   },
   "galaxyCabinet": {
     "back": "BACK",
@@ -9788,5 +9792,13 @@
     "titleStore": "In the app",
     "descriptionStore": "Google Play or App Store.",
     "instructionStore": "Cancel your subscription in your phone settings."
+  },
+  "galaxyDescriptions": {
+    "alpha": "A sector ruled by three great powers: Der, Die, and Das. Your task is to calibrate your linguistic sensors and bring order to the grammatical system by flawlessly determining the gender of every word.",
+    "beta": "An anomaly zone where everything multiplies and transforms. Study the laws of noun transformation to understand what form an object takes when there is more than one.",
+    "gamma": "The galaxy of twin words. Expand your vocabulary by finding new ways to express the same thought. The more synonyms in your arsenal, the brighter your speech shines in deep space.",
+    "delta": "A world of eternal contrast and opposition. Here, everything is known through comparison: from 'fast' to 'slow'. Learn to masterfully find opposites to maintain balance in the system.",
+    "epsilon": "A time loop of the past. Master the complex form of verbs to write reports on completed missions and tell of your past victories in other star systems.",
+    "zeta": "The navigation grid of space and time. Find out 'where', 'where to', and 'how' the linguistic paths lead. Correct prepositions are your precise coordinates in the infinity of language."
   }
 }

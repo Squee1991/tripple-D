@@ -145,11 +145,11 @@ const props = defineProps({
 .btn-game {
   width: 100%;
   font-family: "Nunito", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 14px;
+  padding: 12px;
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.1s ease;

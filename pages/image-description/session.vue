@@ -195,112 +195,114 @@ function goBack() {
 
 <template>
   <div class="page-container">
-    <TipsModal v-model="showTips" :title="t('adjectiveComparisonPage.tipTitle')" :tips="tipsData.tips"/>
-    <div class="content-shell" v-if="selectedTopic">
-      <div class="game-view">
-        <div v-if="isFinished" class="finish-state">
-          <div class="finish-content card-style-box">
-            <div class="medal-icon">🎉</div>
-            <h2>{{ t('descriptionSession.done')}}</h2>
-            <button @click="goBack" class="btn-primary-action full-width">{{ t('descriptionSession.newTheme')}}</button>
-          </div>
-        </div>
-        <div v-else class="active-game-layout">
-          <div class="game-sidebar">
-            <div class="progress-container">
-              <button @click="goBack" class="btn-icon-back">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
-                     stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="19" y1="12" x2="5" y2="12"></line>
-                  <polyline points="12 19 5 12 12 5"></polyline>
-                </svg>
-              </button>
-              <div class="progress-bar">
-                <span class="progress-text">{{ currentTaskIndex + 1 }} / {{ activeTasks.length }}</span>
-                <div class="progress-fill" :style="{ width: progressPercentage + '%' }">
-                  <div class="glare"></div>
-                </div>
-              </div>
+    <div class="page__inner">
+      <TipsModal v-model="showTips" :title="t('adjectiveComparisonPage.tipTitle')" :tips="tipsData.tips"/>
+      <div class="content-shell" v-if="selectedTopic">
+        <div class="game-view">
+          <div v-if="isFinished" class="finish-state">
+            <div class="finish-content card-style-box">
+              <div class="medal-icon">🎉</div>
+              <h2>{{ t('descriptionSession.done')}}</h2>
+              <button @click="goBack" class="btn-primary-action full-width">{{ t('descriptionSession.newTheme')}}</button>
             </div>
-            <div class="image-card card-style-box"><img :src="currentImage" alt="Task"/></div>
           </div>
-          <div class="game-main card-style-box chat-panel">
-            <div class="chat-container">
-              <div v-if="messages.length === 0" class="empty-state"><p>{{ t('describePicture.placeholder') }}</p></div>
-              <div class="messages-scroll">
-                <transition-group name="list">
-                  <div v-for="(m, i) in messages" :key="i" :class="['msg-row', m.role]">
-                    <div v-if="m.isStructured" class="feedback-card">
-                      <div class="feedback-score-badge" :class="getScoreClass(m.score)">{{ m.score }}/10</div>
-                      <div class="feedback-body">
-                        <p class="main-feedback">{{ m.feedback }}</p>
-                        <div class="suggestion-box">
-                          <div class="suggestion-header"><span class="icon">✨</span><span>{{ t('descriptionSession.answer')}}:</span></div>
-                          <div class="suggestion-content">
-                            <SoundBtn :text="m.suggestedAnswer" class="mini-sound"/>
-                            <p class="suggestion-text">{{ m.suggestedAnswer }}</p>
+          <div v-else class="active-game-layout">
+            <div class="game-sidebar">
+              <div class="progress-container">
+                <button @click="goBack" class="btn-icon-back">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                       stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                  </svg>
+                </button>
+                <div class="progress-bar">
+                  <div class="progress-fill" :style="{ width: progressPercentage + '%' }">
+                    <div class="glare"></div>
+                  </div>
+                </div>
+                <div class="progress-text">{{ currentTaskIndex + 1 }} / {{ activeTasks.length }}</div>
+              </div>
+              <div class="image-card card-style-box"><img :src="currentImage" alt="Task"/></div>
+            </div>
+            <div class="game-main card-style-box chat-panel">
+              <div class="chat-container">
+                <div v-if="messages.length === 0" class="empty-state"><p>{{ t('describePicture.placeholder') }}</p></div>
+                <div class="messages-scroll">
+                  <transition-group name="list">
+                    <div v-for="(m, i) in messages" :key="i" :class="['msg-row', m.role]">
+                      <div v-if="m.isStructured" class="feedback-card">
+                        <div class="feedback-score-badge" :class="getScoreClass(m.score)">{{ m.score }}/10</div>
+                        <div class="feedback-body">
+                          <p class="main-feedback">{{ m.feedback }}</p>
+                          <div class="suggestion-box">
+                            <div class="suggestion-header"><span class="icon">✨</span><span>{{ t('descriptionSession.answer')}}:</span></div>
+                            <div class="suggestion-content">
+                              <SoundBtn :text="m.suggestedAnswer" class="mini-sound"/>
+                              <p class="suggestion-text">{{ m.suggestedAnswer }}</p>
+                            </div>
+                          </div>
+                          <div v-if="m.keyCorrections?.length" class="corrections-box">
+                            <span class="correction-title">💡 {{ t('descriptionSession.better')}}</span>
+                            <ul class="correction-list">
+                              <li v-for="(c, idx) in m.keyCorrections" :key="idx" class="correction-item">{{ c }}</li>
+                            </ul>
                           </div>
                         </div>
-                        <div v-if="m.keyCorrections?.length" class="corrections-box">
-                          <span class="correction-title">💡 {{ t('descriptionSession.better')}}</span>
-                          <ul class="correction-list">
-                            <li v-for="(c, idx) in m.keyCorrections" :key="idx" class="correction-item">{{ c }}</li>
-                          </ul>
+                      </div>
+                      <div v-else class="bubble-wrapper">
+                        <div v-if="m.role === 'assistant'" class="sound-wrap">
+                          <SoundBtn :text="m.content || ''"/>
                         </div>
+                        <div class="bubble">{{ m.content }}</div>
                       </div>
                     </div>
-                    <div v-else class="bubble-wrapper">
-                      <div v-if="m.role === 'assistant'" class="sound-wrap">
-                        <SoundBtn :text="m.content || ''"/>
-                      </div>
-                      <div class="bubble">{{ m.content }}</div>
-                    </div>
+                  </transition-group>
+                  <div v-if="isLoading || isProcessing" class="msg-row assistant">
+                    <div class="bubble typing-indicator"><span>•</span><span>•</span><span>•</span></div>
                   </div>
-                </transition-group>
-                <div v-if="isLoading || isProcessing" class="msg-row assistant">
-                  <div class="bubble typing-indicator"><span>•</span><span>•</span><span>•</span></div>
                 </div>
               </div>
-            </div>
-            <div v-if="err" class="error-toast">{{ err }}</div>
-            <div class="input-dock">
-              <template v-if="!isAnswered">
+              <div v-if="err" class="error-toast">{{ err }}</div>
+              <div class="input-dock">
+                <template v-if="!isAnswered">
                 <textarea v-model="input" @keydown.enter.prevent="() => sendMessage()"
                           :placeholder="isRecording ? 'ИДЕТ ЗАПИСЬ...' : t('describePicture.inputPlaceholder')"
                           :disabled="isLoading || isRecording || isProcessing" class="modern-input card-style-box" rows="2"
                 ></textarea>
-                <div class="btn__wrapper">
-                  <button @click="() => sendMessage()" :disabled="isLoading || !input.trim()" class="btn-send-round">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                      <line x1="22" y1="2" x2="11" y2="13"></line>
-                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                    </svg>
+                  <div class="btn__wrapper">
+                    <button @click="() => sendMessage()" :disabled="isLoading || !input.trim()" class="btn-send-round">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                      </svg>
+                    </button>
+                    <button @click="toggleRecording" class="btn-mic"
+                            :class="{ 'recording': isRecording, 'processing': isProcessing }"
+                            :disabled="isLoading || isProcessing">
+                      <svg v-if="!isRecording && !isProcessing" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                           viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                           stroke-linejoin="round">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                      </svg>
+                      <svg v-else-if="isRecording" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                           viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                           stroke-linejoin="round">
+                        <rect x="6" y="6" width="12" height="12"></rect>
+                      </svg>
+                      <span v-else>⏳</span>
+                    </button>
+                  </div>
+                </template>
+                <template v-else>
+                  <button class="btn-primary-action full-width" @click="nextTask">{{t('describePicture.nextBtn')}}
                   </button>
-                  <button @click="toggleRecording" class="btn-mic"
-                          :class="{ 'recording': isRecording, 'processing': isProcessing }"
-                          :disabled="isLoading || isProcessing">
-                    <svg v-if="!isRecording && !isProcessing" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
-                         stroke-linejoin="round">
-                      <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
-                      <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-                      <line x1="12" y1="19" x2="12" y2="23"></line>
-                      <line x1="8" y1="23" x2="16" y2="23"></line>
-                    </svg>
-                    <svg v-else-if="isRecording" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
-                         stroke-linejoin="round">
-                      <rect x="6" y="6" width="12" height="12"></rect>
-                    </svg>
-                    <span v-else>⏳</span>
-                  </button>
-                </div>
-              </template>
-              <template v-else>
-                <button class="btn-primary-action full-width" @click="nextTask">{{t('describePicture.nextBtn')}}
-                </button>
-              </template>
+                </template>
+              </div>
             </div>
           </div>
         </div>
@@ -314,10 +316,14 @@ function goBack() {
   font-family: "Nunito", sans-serif;
   display: flex;
   justify-content: center;
-  padding: 12px;
+
   background-color: var(--bg);
   color: #2b2b2b;
   min-height: 100vh;
+}
+
+.page__inner {
+  padding: 5px 10px;
 }
 
 h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
@@ -338,8 +344,8 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   border: 3px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile);
   border-radius: 12px;
-  width: 48px;
-  height: 40px;
+  width: 40px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -417,21 +423,22 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border: 3px solid black ;
+  border: 3px solid var(--tabsSlideBorderColor);
 }
 
 .progress-container {
   display: flex;
   align-items: center;
+
   margin-bottom: 5px;
   gap: 5px;
 }
 
 .progress-bar {
   flex: 1;
-  height: 35px;
+  height: 27px;
   background: #fff;
-  border: 4px solid #2b2b2b;
+  border: 3px solid var(--tabsSlideBorderColor);
   border-radius: 15px;
   overflow: hidden;
   position: relative;
@@ -457,14 +464,9 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 }
 
 .progress-text {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1rem;
-  color: #2b2b2b;
+  font-size: 18px;
   font-weight: 900;
-  z-index: 2;
+  color: var(--titleColor);
   font-family: "Nunito", sans-serif;
 }
 
@@ -528,7 +530,7 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 
 .feedback-card {
   background: #fdfaf6;
-  border: 4px solid #2b2b2b;
+  border: 3px solid var(--tabsSlideBorderColor);
   border-radius: 16px;
   padding: 25px 8px 8px 8px;
   width: 100%;
@@ -541,7 +543,7 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   top: -4px;
   right: -4px;
   padding: 2px 11px;
-  border: 4px solid #2b2b2b;
+  border: 3px solid var(--tabsSlideBorderColor);
   border-bottom-left-radius: 16px;
   border-top-right-radius: 12px;
   font-weight: 900;
@@ -590,10 +592,10 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   padding: 4px 5px;
   font-size: 1.1rem;
   font-weight: 700;
-  border: 3px solid #2b2b2b;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   font-family: 'Nunito', sans-serif;
   outline: none;
-  box-shadow: 3px 3px 0px #2b2b2b !important;
   resize: none;
   min-height: 120px;
   scrollbar-width: thin;
@@ -615,16 +617,15 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 }
 
 .btn-send-round, .btn-mic {
-  width: 55px;
-  height: 55px;
-  border: 2px solid #2b2b2b;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 16px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 2px 2px 0px #2b2b2b;
   transition: transform 0.1s;
+  padding: 10px;
 }
 
 .btn-send-round {
@@ -656,7 +657,6 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 }
 
 .finish-content {
-  padding: 50px;
   text-align: center;
 }
 
@@ -673,7 +673,6 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   }
   .btn-send-round, .btn-mic {
     width: 100%;
-    height: 42px;
   }
   .input-dock {
     flex-direction: column;

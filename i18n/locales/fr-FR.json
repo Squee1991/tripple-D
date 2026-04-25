@@ -9618,7 +9618,11 @@
     "profile": "Profil",
     "shop": "HANGAR",
     "rank": "Classement",
-    "exit": "QUITTER"
+    "exit": "QUITTER",
+    "start": "COMMENCER LA MISSION",
+    "findGalaxyTitle": "SECTEUR DÉCOUVERT",
+    "errorTitle": "DÉFAILLANCE DU SYSTÈME",
+    "errorBtn": "RETOURNER AU QUARTIER GÉNÉRAL"
   },
   "galaxyCabinet": {
     "back": "RETOUR",
@@ -9770,5 +9774,13 @@
     "titleStore": "Dans l'application",
     "descriptionStore": "Google Play ou App Store.",
     "instructionStore": "Annulez l'abonnement dans les paramètres du téléphone."
+  },
+  "galaxyDescriptions": {
+    "alpha": "Un secteur gouverné par trois grandes puissances : Der, Die et Das. Votre mission est de calibrer vos capteurs linguistiques et de mettre de l'ordre dans le système grammatical en déterminant sans erreur le genre de chaque mot.",
+    "beta": "Zone anormale où tout se multiplie et se transforme. Étudiez les lois de transformation des noms pour comprendre quelle forme prendra un objet lorsqu'il y en aura plus d'un.",
+    "gamma": "La galaxie des mots-doubles. Enrichissez votre vocabulaire en trouvant de nouvelles manières d'exprimer la même pensée. Plus votre arsenal de synonymes est vaste, plus votre discours brille dans l'espace lointain.",
+    "delta": "Un monde de contraste éternel et d'opposition. Ici, tout se comprend par comparaison : de « rapide » à « lent ». Apprenez à trouver les opposés avec brio pour maintenir l'équilibre du système.",
+    "epsilon": "Boucle temporelle du passé. Maîtrisez la forme complexe des verbes pour rédiger des rapports sur les missions accomplies et raconter vos victoires passées dans d'autres systèmes stellaires.",
+    "zeta": "Grille de navigation de l'espace et du temps. Découvrez « où », « vers où » et « comment » mènent les sentiers linguistiques. Les bonnes prépositions sont vos coordonnées exactes dans l'infinité de la langue."
   }
 }

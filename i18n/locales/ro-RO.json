@@ -9625,7 +9625,11 @@
     "profile": "Profil",
     "shop": "HANGAR",
     "rank": "Clasament",
-    "exit": "IEȘIRE"
+    "exit": "IEȘIRE",
+    "start": "MISSIYANI BOSHLASH",
+    "findGalaxyTitle": "SEKTOR ANIQLANDI",
+    "errorTitle": "EROARE DE SISTEM",
+    "errorBtn": "REVENIRE LA SEDIU"
   },
   "galaxyCabinet": {
     "back": "ÎNAPOI",
@@ -9777,5 +9781,13 @@
     "titleStore": "În aplicație",
     "descriptionStore": "Google Play sau App Store.",
     "instructionStore": "Anulează abonamentul din setările telefonului."
+  },
+  "galaxyDescriptions": {
+    "alpha": "Un sector guvernat de trei mari forțe: Der, Die și Das. Sarcina ta este să-ți calibrezi senzorii lingvistici și să faci ordine în sistemul gramatical, determinând fără greșeală genul fiecărui cuvânt.",
+    "beta": "O zonă anomală în care totul se multiplică și se transformă. Studiază legile transformării substantivelor pentru a înțelege ce formă va lua obiectul atunci când vor fi mai multe.",
+    "gamma": "Galaxia cuvintelor gemene. Extinde-ți vocabularul găsind noi modalități de a exprima aceeași idee. Cu cât ai mai multe sinonime în arsenal, cu atât vorbirea ta va străluci mai tare în spațiul cosmic.",
+    "delta": "O lume a contrastului etern și a opoziției. Aici totul se cunoaște prin comparație: de la „rapid” la „lent”. Învață să găsești cu măiestrie opușii pentru a menține echilibrul în sistem.",
+    "epsilon": "O buclă temporală a trecutului. Stăpânește forma complexă a verbelor pentru a scrie rapoarte despre misiunile îndeplinite și pentru a povesti despre victoriile tale trecute în alte sisteme stelare.",
+    "zeta": "Grila de navigație a spațiului și timpului. Află „unde”, „încotro” și „cum” duc cărările lingvistice. Prepozițiile corecte sunt coordonatele tale precise în infinitul limbii."
   }
 }

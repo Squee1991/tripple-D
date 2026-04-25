@@ -51,9 +51,9 @@ defineEmits(['leave', 'continue'])
   position: relative;
   width: min(440px, 92%);
   background: #fff;
-  border: 3px solid #111;
   border-radius: 18px;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   padding: 20px 35px;
   text-align: center;
   z-index: 1;
@@ -61,13 +61,15 @@ defineEmits(['leave', 'continue'])
 
 .modal__title {
   font-weight: 900;
-  font-size: 28px;
+  font-size: 24px;
   margin-bottom: 8px;
-  color: #111;
+  color: #736f6f;
+  text-shadow: 0 1px var(--titleColor);
 }
 
 .modal__text {
   padding: 10px;
+  font-size: 15px;
   font-family: "Nunito", sans-serif;
 }
 
@@ -80,7 +82,6 @@ defineEmits(['leave', 'continue'])
   padding: 20px;
 }
 
-/* Кнопки внутри модалки */
 .btn {
   height: 56px;
   padding: 0 26px;
@@ -88,16 +89,18 @@ defineEmits(['leave', 'continue'])
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-size: 22px;
-  border: 2px solid #1e1e1e;
-  color: #1e1e1e;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+  color: #ffffff;
   background: #9dceff;
   cursor: pointer;
-  box-shadow: 2px 2px 0 #1e1e1e;
+
   transition: all .1s ease-in-out;
 }
 
-.btn--primary { background: #a7ecb8; }
-.btn--danger { background: #ffd0cc; }
+.btn--primary { background: #6de088; }
+.btn--danger { background:none; color: #7a7878
+}
 
 @media (max-width: 767px) {
   .btn {
