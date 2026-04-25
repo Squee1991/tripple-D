@@ -200,7 +200,7 @@ const startLevel = () => {
   justify-content: center;
   align-content: flex-start;
   gap: 25px;
-  padding: 20px;
+  padding: 50px 20px 20px 20px;
   overflow-y: auto;
   z-index: 10;
   -webkit-overflow-scrolling: touch;

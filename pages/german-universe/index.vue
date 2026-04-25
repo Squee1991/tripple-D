@@ -124,7 +124,7 @@ onUnmounted(() => {
     <div class="menu-bg-layer">
       <div class="nebula-cloud blue"></div>
       <div class="nebula-cloud purple"></div>
-      <div v-for="n in 12" :key="n" class="floating-toon-star" :style="getRandomPos(n)">
+      <div v-for="n in 8" :key="n" class="floating-toon-star" :style="getRandomPos(n)">
         {{ n % 2 === 0 ? '⭐' : '✨' }}
       </div>
       <img
@@ -147,7 +147,7 @@ onUnmounted(() => {
       <div class="open-menu-layout" v-if="currentScreen === 'menu' && !isTransitioning">
         <div class="title-section">
           <h1 class="main-title-toon">
-            <span class="word-1">{{ t('galaxyMenu.titleWordOne')}}111</span>
+            <span class="word-1">{{ t('galaxyMenu.titleWordOne')}}</span>
             <span class="word-2">{{ t('galaxyMenu.titleWordTwo')}}</span>
           </h1>
         </div>
@@ -192,8 +192,8 @@ onUnmounted(() => {
   z-index: 1000;
   padding-top: env(safe-area-inset-top, 20px);
   padding-bottom: env(safe-area-inset-bottom, 20px);
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -315,6 +315,7 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px;
   gap: 20px;
   width: 100%;
 }

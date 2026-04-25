@@ -184,7 +184,6 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  background:var(--bg);
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -307,20 +306,17 @@ onMounted(() => {
 
 .gold {
   background: #ffd700;
-  border: 2px solid #000;
-  box-shadow: 0 6px 0 #d4af37;
+  box-shadow: 0 4px 0 #d4af37;
 }
 
 .silver {
   background: #e0e0e0;
-  border: 2px solid #000;
-  box-shadow: 0 6px 0 #a0a0a0;
+  box-shadow: 0 4px 0 #a0a0a0;
 }
 
 .bronze {
   background: #cd7f32;
-  border: 2px solid #000;
-  box-shadow: 0 6px 0 #8c5922;
+  box-shadow: 0 4px 0 #8c5922;
 }
 
 .rank-badge {
@@ -467,7 +463,7 @@ onMounted(() => {
     height: 36px;
   }
   .name-tag {
-    font-size: 1rem;
+    font-size: 13px;
   }
   .page-btn {
     padding: 6px 14px;

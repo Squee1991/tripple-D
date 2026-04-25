@@ -9631,7 +9631,8 @@
     "money": "ARTICS",
     "commonPoints": "TOTAL POINTS",
     "rank": "Rang:",
-    "streak": "RECORD:"
+    "streak": "RECORD:",
+    "cabinet": "Journal de bord"
   },
   "galaxyRank": {
     "none": "TERRIEN",
