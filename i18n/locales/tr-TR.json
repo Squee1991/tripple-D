@@ -9610,7 +9610,11 @@
     "profile": "Profil",
     "shop": "HANGAR",
     "rank": "Sıralama",
-    "exit": "ÇIKIŞ"
+    "exit": "ÇIKIŞ",
+    "start": "GÖREVE BAŞLA",
+    "findGalaxyTitle": "SEKTÖR TESPİT EDİLDİ",
+    "errorTitle": "SİSTEM ARIZASI",
+    "errorBtn": "KARARGAHA DÖN"
   },
   "galaxyCabinet": {
     "back": "GERİ",
@@ -9762,5 +9766,13 @@
     "titleStore": "Uygulamada",
     "descriptionStore": "Google Play veya App Store.",
     "instructionStore": "Telefon ayarlarından aboneliği iptal edin."
+  },
+  "galaxyDescriptions": {
+    "alpha": "Üç büyük gücün hüküm sürdüğü sektör: Der, Die ve Das. Görevin, dilsel sensörlerini kalibre etmek ve her kelimenin cinsiyetini hatasız belirleyerek dilbilgisi sistemine düzen getirmektir.",
+    "beta": "Her şeyin çoğaldığı ve dönüştüğü anomalili bir bölge. Nesnelerin birden fazla olduğunda hangi formu alacağını anlamak için isimlerin dönüşüm yasalarını incele.",
+    "gamma": "İkiz kelimeler galaksisi. Aynı düşünceyi ifade etmenin yeni yollarını bularak kelime dağarcığını genişlet. Cephaneliğinde ne kadar çok eş anlamlı kelime varsa, derin uzayda konuşman o kadar parlar.",
+    "delta": "Sonsuz kontrast ve karşıtlık dünyası. Burada her şey karşılaştırmayla öğrenilir: 'hızlı'dan 'yavaş'a. Sistemde dengeyi korumak için zıtlıkları ustalıkla bulmayı öğren.",
+    "epsilon": "Geçmişin zaman döngüsü. Tamamlanan görevler hakkında raporlar yazmak ve diğer yıldız sistemlerindeki eski zaferlerini anlatmak için fiillerin karmaşık formunda ustalaş.",
+    "zeta": "Uzay ve zamanın navigasyon ağı. Dil yollarının 'nereye', 'nerede' ve 'nasıl' gittiğini keşfet. Doğru edatlar, dilin sonsuzluğundaki kesin koordinatlarındır."
   }
 }

@@ -185,8 +185,8 @@ html, body, #__nuxt {
   margin: 0 !important;
   padding: 0 !important;
   overflow: hidden !important;
+  background-color: var(--bg);
 }
-
 .layout {
   display: flex;
   flex-direction: column;

@@ -6,7 +6,7 @@ import Meteor from '../../assets/images/meteor.svg'
 import MeteorInFire from '../../assets/images/meteorinFire.svg'
 
 import { useCombatEngine } from '../../composables/useCombatEngine.js'
-
+const { t } = useI18n()
 const route = useRoute()
 const router = useRouter()
 const store = useGalaxyStore()
@@ -88,14 +88,14 @@ onMounted(() => {
 <template>
   <div class="game-universe">
     <div v-if="errorMessage" class="error-screen">
-      <h1>⚠️ СИСТЕМНЫЙ СБОЙ</h1>
+      <h1>⚠️ {{ t('galaxyMenu.errorTitle')}}</h1>
       <p>{{ errorMessage }}</p>
-      <button class="btn-go" @click="goHome">ВЕРНУТЬСЯ В ШТАБ</button>
+      <button class="btn-go" @click="goHome">{{ t('galaxyMenu.errorBtn')}}</button>
     </div>
     <div v-else class="sky" ref="skyRef">
       <div class="star-layer"></div>
       <div class="score-board">
-        <span class="score-label">ОЧКИ</span>
+        <span class="score-label">{{ t('galaxyMenu.points')}}</span>
         <span class="score-value">{{ score }}</span>
       </div>
       <div v-if="!isGameOver" class="game-area">
@@ -121,27 +121,29 @@ onMounted(() => {
       <div v-if="showGroundExplosion" class="ground-impact-explosion">
         <div class="big-boom-emoji">💥</div>
       </div>
-      <div v-if="isGameOver" class="game-over-overlay">
-        <div class="game-over-card toon-main-card">
-          <h2 class="death-title" v-if="isNewRecord">НОВЫЙ РЕКОРД!</h2>
-          <h2 class="death-title" v-else>СЕКТОР НЕ ЗАЧИЩЕН!</h2>
-          <div class="score-display">
-            <span class="score-text">ВАШ СЧЕТ:</span>
-            <span class="fs-val">{{ score }}</span>
-          </div>
-          <div class="earned-info" v-if="earnedArtiks > 0">
-            <span class="plus-anim">+{{ earnedArtiks }}</span>
-          </div>
-          <div class="modal-actions">
-            <button class="action-btn restart-btn toon-btn-blue" @click="initGame">
-              ЕЩЕ РАЗ
-            </button>
-            <button class="action-btn home-btn toon-btn-red" @click="goHome">
-              ВЕРНУТЬСЯ
-            </button>
+      <Transition name="modal-slide">
+        <div v-if="isGameOver" class="game-over-overlay">
+          <div class="game-over-card toon-main-card">
+            <h2 class="death-title" v-if="isNewRecord">НОВЫЙ РЕКОРД!</h2>
+
+            <div class="score-display">
+              <img class="astronaut" src="../../assets/images/galaxy-images/astronautFail.svg" alt="astronautFail">
+              <div class="score__wrapper">
+                <span class="score-text">СЧЕТ:</span>
+                <span class="fs-val">{{ score }}</span>
+              </div>
+            </div>
+            <div class="modal-actions">
+              <button class="action-btn restart-btn toon-btn-blue" @click="initGame">
+                Повторный вылет
+              </button>
+              <button class="action-btn home-btn toon-btn-red" @click="goHome">
+                покинуть галактику
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </Transition>
       <div class="cannon-station" v-if="currentQuestion">
         <div class="main-cannon" :class="{ 'recoiling': isMissileFlying }">
           <img v-if="!showGroundExplosion" class="tank" :src="store.activeShip.img" alt="Ship">
@@ -211,7 +213,14 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   width: 100%;
+  gap: 5px;
+}
 
+.score__wrapper{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0;
 }
 
 .sector-info {
@@ -320,17 +329,15 @@ onMounted(() => {
 }
 
 .ammo-btn.toon-btn {
-  background: #fff;
-  border: 4px solid #000;
-  color: #000;
   border-radius: 15px;
   font-weight: 900;
-  box-shadow: 0 6px 0 #000;
   transition: 0.1s;
   min-width: 100px;
-  height: 60px;
-  font-size: .9rem;
-  padding: 2px 4px;
+  font-size: 13px;
+  padding: 10px 5px;
+  background: #5f8dc0;
+  color: white;
+  border: none;
 }
 
 .ammo-btn.toon-btn:active:not(:disabled) {
@@ -338,32 +345,9 @@ onMounted(() => {
   box-shadow: 0 2px 0 #000;
 }
 
-.game-over-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 5, 15, 0.85);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 5000;
-  backdrop-filter: blur(8px);
-}
-
-.toon-main-card {
-  background: #fff;
-  border: 6px solid #000;
-  border-radius: 25px;
-  padding: 40px;
-  width: 90%;
-  max-width: 420px;
-  text-align: center;
-  box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.4);
-  clip-path: polygon(0 15px, 15px 0, calc(100% - 15px) 0, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 calc(100% - 15px));
-}
-
 .death-title {
   color: #ff5252;
-  font-size: 1.8rem;
+  font-size:23px;
   font-weight: 900;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -371,24 +355,20 @@ onMounted(() => {
 }
 
 .score-display {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 5px;
 }
 
-.score-text {
-  color: #555;
-  font-size: 1rem;
-  font-weight: 900;
-}
-
 .fs-val {
-  font-size: 4rem;
+  font-size: 24px;
   color: #3498db;
   font-weight: 900;
   line-height: 1;
-  text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+  text-shadow: 1px 1px 0px #3498db;
 }
 
 .modal-actions {
@@ -411,18 +391,24 @@ onMounted(() => {
 .toon-btn-blue {
   background: #3498db;
   color: #fff;
-  box-shadow: 0 6px 0 #000;
+  box-shadow: 0 5px 0 #31719d;
+  border: none;
 }
 
 .toon-btn-red {
   background: #ff5252;
   color: #fff;
-  box-shadow: 0 6px 0 #000;
+  box-shadow: 0 5px 0 #c93c3c;
+  border: none;
 }
 
 .action-btn:active {
   transform: translateY(4px);
   box-shadow: 0 2px 0 #000;
+}
+
+.astronaut {
+  width: 160px;
 }
 
 .ground-impact-explosion {
@@ -462,5 +448,52 @@ onMounted(() => {
   padding: 15px 30px;
   box-shadow: 2px 2px 0 #000;
   cursor: pointer;
+}
+
+.game-over-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 5, 15, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 5000;
+  backdrop-filter: blur(8px);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+
+.toon-main-card {
+  background: #1a1c24;
+  border-top: 3px solid #303443;
+  border-radius: 40px 40px 0 0;
+  padding: 30px 30px 40px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+  clip-path: none;
+}
+
+.score-text {
+  color: #a0aec0;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.modal-slide-enter-active, .modal-slide-leave-active {
+  transition: opacity 0.2s ease-out;
+}
+
+.modal-slide-enter-active .toon-main-card, .modal-slide-leave-active .toon-main-card {
+  transition: transform 0.2s ease-out;
+}
+
+.modal-slide-enter-from, .modal-slide-leave-to {
+  opacity: 0;
+}
+
+.modal-slide-enter-from .toon-main-card, .modal-slide-leave-to .toon-main-card {
+  transform: translateY(100%);
 }
 </style>

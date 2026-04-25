@@ -129,9 +129,7 @@ onUnmounted(() => {
                     <span class="game-card__badge">{{ level }}</span>
                   </div>
                   <div class="game-card__arrow">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="4">
-                      <path d="M5 12h14m-7-7l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <img class="icon next" src="../../assets/images/next.svg" alt="next__icon">
                   </div>
                 </div>
               </button>
@@ -301,6 +299,7 @@ onUnmounted(() => {
 .game-card__arrow {
   margin-left: auto;
   color: #2b2b2b;
+  width: 18px;
 }
 
 .game-card__emoji {

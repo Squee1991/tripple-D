@@ -58,7 +58,7 @@ import { useRouter } from 'vue-router'
 import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
 import Folder from "../assets/images/fileFolder.svg";
 import Photo from "../assets/images/photo-frame.svg";
-import Sound from "../assets/images/SoundIcon.svg";
+import Sound from "../assets/images/headphones.svg";
 import Thematic from "../assets/images/thematicSticker.svg";
 import Cards from "../assets/images/cards.svg";
 import Puzzle from "../assets/images/puzzle-piece.svg";
@@ -69,6 +69,11 @@ const selectedCategory = ref(null)
 const isMounted = ref(false)
 
 const learnCategories = computed(() => [
+  { id: 'audio', icon: Sound, url: '/audio-tasks', title: t('sub.audio') },
+  { id: 'description', icon: Photo, url: '/image-description', title: t('sub.describePicture') },
+  { id: 'themen', icon: Thematic, url: '/thematic-learning', title: t('sub.themen') },
+  { id: 'cards', icon: Cards, url: '/create-cards', title: t('sub.card') },
+  { id: 'idioms', icon: Puzzle, url: '/idioms', title: t('sub.idioms') },
   {
     id: 'articles',
     title: t('sub.articles'),
@@ -107,11 +112,6 @@ const learnCategories = computed(() => [
       { id: 'comparison', url: '/adjective-comparison', label: t('underSub.comparison') }
     ]
   },
-  { id: 'audio', icon: Sound, url: '/audio-tasks', title: t('sub.audio') },
-  { id: 'description', icon: Photo, url: '/image-description', title: t('sub.describePicture') },
-  { id: 'themen', icon: Thematic, url: '/thematic-learning', title: t('sub.themen') },
-  { id: 'cards', icon: Cards, url: '/create-cards', title: t('sub.card') },
-  { id: 'idioms', icon: Puzzle, url: '/idioms', title: t('sub.idioms') }
 ])
 
 const openCategory = (category) => {
@@ -196,10 +196,10 @@ definePageMeta({
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 0 15px;
+  padding: 15px;
   flex: 1;
   overflow-y: auto;
-  padding-bottom: calc(105px + var(--sab));
+  padding-bottom: calc(90px + var(--sab));
   -webkit-overflow-scrolling: touch;
 }
 

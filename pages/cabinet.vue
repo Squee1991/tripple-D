@@ -77,14 +77,15 @@
                     </button>
                   </div>
                   <div class="user-info">
-                    <div class="user-name">{{ userNameSafe }}</div>
+<!--                    <div class="user-name">{{ userNameSafe }}</div>-->
+                    <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
                     <div class="exp-bar">
                       <div class="exp-fill" :style="{ width: `${expFillWidth}%` }">
                         <div class="glare"></div>
                       </div>
                       <span class="exp-text">{{ learningStore.exp }}%</span>
                     </div>
-                    <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
+
                   </div>
                 </div>
                 <div class="account-tabs">
@@ -406,7 +407,6 @@ function closeCancelModal() {
 
 async function cancelSubscription() {
   if (!authStore.uid || !authStore.email) {
-    alert('Ошибка: Нет email или uid')
     return
   }
   try {
@@ -417,11 +417,10 @@ async function cancelSubscription() {
     if (res.success) {
       authStore.subscriptionCancelled = true
       isCancelModalOpen.value = false
-      alert('Успешно! Автопродление отключено.')
+
     }
   } catch (e) {
     console.error(e)
-    alert('Ошибка сети')
   }
 }
 

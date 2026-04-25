@@ -248,7 +248,7 @@ onBeforeUnmount(() => {
   font-weight: 600;
   letter-spacing: .2px;
   font-family: "Nunito", sans-serif;
-  text-shadow: 0px 1px var(--regionBtnColor);
+  text-shadow: 1px 1px var(--regionBtnColor);
 }
 
 .map-layout {

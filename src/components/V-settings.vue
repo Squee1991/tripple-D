@@ -82,7 +82,9 @@
             :to="item.path"
         >
           {{ item.label }}
-          <span class="link-arrow">›</span>
+          <span class="link-arrow">
+            <img src="../../assets/images/next.svg" alt="">
+          </span>
         </NuxtLink>
       </div>
     </div>
@@ -321,6 +323,7 @@ onMounted(async () => {
   color: #64748b;
   font-size: 20px;
   font-weight: 400;
+  width: 12px;
 }
 
 .toggle__wrapper {

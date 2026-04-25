@@ -13,7 +13,7 @@
   position: fixed;
   top: 0; left: 0;
   width: 100vw; height: 100vh;
-  background: #11111b;
+  background: var(--bg);
   z-index: 9999999;
   display: flex;
   justify-content: center;

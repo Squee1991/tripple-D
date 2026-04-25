@@ -9613,7 +9613,11 @@
     "profile": "Profil",
     "shop": "ANGAR",
     "rank": "Reyting",
-    "exit": "CHIQISH"
+    "exit": "CHIQISH",
+    "start": "MISSIYANI BOSHLASH",
+    "findGalaxyTitle": "SEKTOR ANIQLANDI",
+    "errorTitle": "TIZIMDA XATOLIK",
+    "errorBtn": "SHTABGA QAYTISH"
   },
   "galaxyCabinet": {
     "back": "ORQAGA",
@@ -9765,5 +9769,13 @@
     "titleStore": "Ilovada",
     "descriptionStore": "Google Play yoki App Store.",
     "instructionStore": "Telefon sozlamalarida obunani bekor qiling."
+  },
+  "galaxyDescriptions": {
+    "alpha": "Uchta buyuk kuch hukmronlik qiladigan sektor: Der, Die va Das. Sening vazifang — lingvistik sensorlarni kalibrlash va har bir so'zning rodini xatosiz aniqlab, grammatik tizimda tartib o'rnatish.",
+    "beta": "Hamma narsa ko'payadigan va transformatsiya bo'ladigan anomal zona. Otlarning o'zgarish qonunlarini o'rganib, ob'ektlar birdan ortiq bo'lganda qanday shaklga kirishini tushunib ol.",
+    "gamma": "Egizak so'zlar galaktikasi. Bir xil fikrni ifodalashning yangi usullarini topib, so'z boyligingni oshir. Arsenalingda sinonimlar qancha ko'p bo'lsa, koinot qa'rida nutqing shunchalik yorqin porlaydi.",
+    "delta": "Abadiy kontrast va qarama-qarshilik dunyosi. Bu yerda hamma narsa taqqoslash orqali bilib olinadi: «tez»dan «sekin»gacha. Tizimda muvozanatni saqlash uchun zid ma'nolarni mahorat bilan topishni o'rgan.",
+    "epsilon": "O'tmishning vaqt sirtmog'i. Bajargan missiyalaring haqida hisobotlar yozish va boshqa yulduz tizimlaridagi g'alabalaring haqida so'zlab berish uchun fe'llarning murakkab shakllarini o'zlashtir.",
+    "zeta": "Fazo va vaqtning navigatsiya tarmog'i. Lingvistik so'qmoqlar «qayerga», «qayerda» va «qanday» olib borishini aniqla. To'g'ri ko'makchilar — bu til cheksizligidagi sening aniq koordinatalaringdir."
   }
 }

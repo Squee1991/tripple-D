@@ -9639,7 +9639,11 @@
     "profile": "Profil",
     "shop": "HANGAR",
     "rank": "Ranking",
-    "exit": "WYJŚCIE"
+    "exit": "WYJŚCIE",
+    "start": "ROZPOCZNIJ MISJĘ",
+    "findGalaxyTitle": "SEKTOR WYKRYTY",
+    "errorTitle": "AWARIA SYSTEMU",
+    "errorBtn": "POWRÓT DO SZTABU"
   },
   "galaxyCabinet": {
     "back": "POWRÓT",
@@ -9791,5 +9795,13 @@
     "titleStore": "W aplikacji",
     "descriptionStore": "Google Play lub App Store.",
     "instructionStore": "Anuluj subskrypcję w ustawieniach telefonu."
+  },
+  "galaxyDescriptions": {
+    "alpha": "Sektor, w którym rządzą trzy wielkie siły: Der, Die i Das. Twoim zadaniem jest skalibrowanie czujników lingwistycznych i zaprowadzenie porządku w systemie gramatycznym poprzez bezbłędne określanie rodzaju każdego słowa.",
+    "beta": "Strefa anomalii, w której wszystko się mnoży i przekształca. Poznaj zasady transformacji rzeczowników, aby zrozumieć, jaką formę przyjmie obiekt, gdy będzie ich więcej niż jeden.",
+    "gamma": "Galaktyka słów-bliźniaków. Poszerzaj swoje słownictwo, znajdując nowe sposoby na wyrażenie tej samej myśli. Im więcej synonimów w twoim arsenale, tym jaśniej lśni Twoja mowa w głębokim kosmosie.",
+    "delta": "Świat wiecznego kontrastu i sprzeczności. Tutaj wszystko poznaje się przez porównanie: od „szybkiego” do „wolnego”. Naucz się po mistrzowsku odnajdywać przeciwieństwa, aby zachować równowagę w systemie.",
+    "epsilon": "Pętla czasu przeszłości. Opanuj złożone formy czasowników, aby sporządzać raporty z wykonanych misji i opowiadać o swoich dawnych zwycięstwach w innych układach gwiezdnych.",
+    "zeta": "Siatka nawigacyjna przestrzeni i czasu. Dowiedz się, „gdzie”, „dokąd” i „jak” prowadzą ścieżki lingwistyczne. Właściwe przyimki to Twoje dokładne współrzędne w nieskończoności języka."
   }
 }

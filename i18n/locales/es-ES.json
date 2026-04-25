@@ -9630,7 +9630,11 @@
     "profile": "Perfil",
     "shop": "HANGAR",
     "rank": "Ranking",
-    "exit": "SALIR"
+    "exit": "SALIR",
+    "start": "INICIAR MISIÓN",
+    "findGalaxyTitle": "SECTOR DESCUBIERTO",
+    "errorTitle": "FALLO DEL SISTEMA",
+    "errorBtn": "VOLVER AL CUARTEL GENERAL"
   },
   "galaxyCabinet": {
     "back": "ATRÁS",
@@ -9782,5 +9786,13 @@
     "titleStore": "En la aplicación",
     "descriptionStore": "Google Play o App Store.",
     "instructionStore": "Cancela la suscripción en los ajustes del teléfono."
+  },
+  "galaxyDescriptions": {
+    "alpha": "Un sector gobernado por tres grandes fuerzas: Der, Die y Das. Tu tarea es calibrar tus sensores lingüísticos y poner orden en el sistema gramatical determinando sin errores el género de cada palabra.",
+    "beta": "Zona anómala donde todo se multiplica y se transforma. Estudia las leyes de transformación de los sustantivos para comprender qué forma tomará un objeto cuando haya más de uno.",
+    "gamma": "La galaxia de las palabras gemelas. Amplía tu vocabulario encontrando nuevas formas de expresar la misma idea. Cuantos más sinónimos tengas en tu arsenal, más brillará tu discurso en el espacio profundo.",
+    "delta": "Mundo de eterno contraste y oposición. Aquí todo se conoce por comparación: de 'rápido' a 'lento'. Aprende a encontrar opuestos con maestría para mantener el equilibrio en el sistema.",
+    "epsilon": "Bucle temporal del pasado. Domina la forma compleja de los verbos para redactar informes sobre misiones cumplidas y contar tus victorias pasadas en otros sistemas estelares.",
+    "zeta": "Red de navegación del espacio y el tiempo. Averigua 'dónde', 'adónde' y 'cómo' conducen las sendas lingüísticas. Las preposiciones correctas son tus coordenadas exactas en la infinitud del lenguaje."
   }
 }
