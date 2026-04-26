@@ -27,6 +27,21 @@ import {userlangStore} from "./learningStore.js";
 
 let authStateUnsubscribe = null;
 
+const isUserCancelledAuth = (error) => {
+    if (!error) return false
+    const code = String(error.code || '').toLowerCase()
+    const msg = String(error.message || error.errorMessage || '').toLowerCase()
+    if (
+        code === 'sign_in_canceled' ||
+        code === 'sign_in_cancelled' ||
+        code === 'auth/popup-closed-by-user' ||
+        code === 'auth/cancelled-popup-request' ||
+        code === 'auth/user-cancelled' ||
+        code === '12501'
+    ) return true
+    return msg.includes('cancel')
+}
+
 export const userAuthStore = defineStore('auth', () => {
     const auth = getAuth()
     const langStore = userlangStore();
@@ -385,9 +400,7 @@ export const userAuthStore = defineStore('auth', () => {
             });
             await checkFeedbackSurveyEligibility();
         } catch (error) {
-            if (error.code === 'SIGN_IN_CANCELED' || error.code === 'auth/popup-closed-by-user' || error.message?.includes('canceled')) {
-                return;
-            }
+            if (isUserCancelledAuth(error)) return;
             const errorDetail = JSON.stringify(error, Object.getOwnPropertyNames(error), 2);
             alert(`❌ ОШИБКА ВХОДА APPLE:\n\n${errorDetail}`);
         }
@@ -455,7 +468,7 @@ export const userAuthStore = defineStore('auth', () => {
             await checkFeedbackSurveyEligibility();
 
         } catch (error) {
-            if (error.code === 'auth/popup-closed-by-user' || error.message?.includes('canceled')) return;
+            if (isUserCancelledAuth(error)) return;
             console.error('Ошибка входа через Facebook:', error);
             alert(`Ошибка Facebook: ${error.message}`);
         }
@@ -524,9 +537,7 @@ export const userAuthStore = defineStore('auth', () => {
 
             await checkFeedbackSurveyEligibility();
         } catch (error) {
-            if (error.code === 'SIGN_IN_CANCELED' || error.code === 'auth/popup-closed-by-user') {
-                return;
-            }
+            if (isUserCancelledAuth(error)) return;
             const errorDetail = JSON.stringify(error, Object.getOwnPropertyNames(error), 2);
             alert(`❌ ОШИБКА ВХОДА:\n\n${errorDetail}`);
         }
