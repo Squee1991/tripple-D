@@ -8,8 +8,13 @@
               <VBackBtnNav/>
               <div class="progress-wrapper">
                 <div class="progress-bar">
-                  <div class="progress-fill" :style="{ width: progressPercentage + '%' }"></div>
+                  <div class="progress-fill" :style="{ width: progressPercentage + '%' }">
+                    <div class="glare"></div>
+                  </div>
                 </div>
+              </div>
+              <div>
+
               </div>
             </div>
             <header class="session-header">
@@ -22,20 +27,20 @@
               </div>
             </header>
             <div class="word-block">
-<!--              <div v-if="currentMode === 'audio'" class="word-question">-->
-<!--                <span>{{ t('sessionLabels.word') }}: <b>{{ currentWord?.[currentLang] }}</b></span>-->
-<!--              </div>-->
               <div class="mode-exercise">
                 <div v-if="currentMode === 'wordTranslate'" class="word-info-display">
                   <div class="wordTranslate">
                     <SoundBtn :text="`${currentWord.article} ${currentWord.de}`"/>
-                    <div class="german-word">{{ currentWord.article }} {{ currentWord.de }}</div>
+                    <div class="german-word">
+                      <span class="highlight-word">{{ currentWord.article }} {{ currentWord.de }}</span>
+                    </div>
                   </div>
                   <div class="word-divider">—</div>
                   <div class="translation-word">{{ currentWord[currentLangKey] }}</div>
                 </div>
+
                 <div v-if="currentMode === 'article'" class="article-mode-container">
-                  <p class="question-text">{{ t('sessionLabels.articleFor') }} <b>{{ currentWord.de }}</b>:</p>
+                  <p class="question-text">{{ t('sessionLabels.articleFor') }} <span class="highlight-word">{{ currentWord.de }}</span>:</p>
                   <div class="article-options">
                     <button
                         v-for="art in ['der', 'die', 'das']"
@@ -53,8 +58,12 @@
                     </button>
                   </div>
                 </div>
+
                 <div v-if="currentMode === 'letters'">
-                  <p class="question-text">{{ t('sessionLabels.lettersFor') }} <b>{{ currentWord.article }}</b></p>
+                  <div class="question__content">
+                    <p class="question-text">{{ t('sessionLabels.lettersFor') }} :</p>
+                    <span class="highlight-word">{{ currentWord.ru }}</span>
+                  </div>
                   <div class="letters">
                     <button v-for="(letter, i) in shuffledLetters" :key="i" :disabled="usedLetters[i]" @click="addLetter(letter, i)">
                       {{ letter === ' ' ? '␣' : letter }}
@@ -65,14 +74,20 @@
                   </button>
                   <input v-model="userInput" class="trainer-app__input" readonly/>
                 </div>
+
                 <div v-if="currentMode === 'wordArticle'">
-                  <p class="question-text"><b>{{ t('sessionLabels.word')}} : {{ uiWord }}</b></p>
+                  <div class="question__content">
+                    <p class="question-text"><b>{{ t('sessionLabels.word')}} :</b></p>
+                    <span class="highlight-word">{{ uiWord }}</span>
+                  </div>
                   <input v-model="userInput" class="trainer-app__input" autofocus/>
                 </div>
+
                 <div v-if="currentMode === 'plural'">
-                  <p class="question-text">{{ t('sessionLabels.pluralFor') }}: <b>{{ currentWord.de }}</b></p>
+                  <p class="question-text">{{ t('sessionLabels.pluralFor') }}: <span class="highlight-word">{{ currentWord.de }}</span></p>
                   <input v-model="userInput" class="trainer-app__input" autofocus/>
                 </div>
+
                 <div v-if="currentMode === 'audio'">
                   <p class="question-text">{{ t('sessionLabels.audioFor') }}:</p>
                   <button @click="speak(currentWord.de)" class="audio-btn">
@@ -82,6 +97,7 @@
                   <input v-model="userInput" class="trainer-app__input" autofocus/>
                 </div>
               </div>
+
               <div v-if="shouldShowGermanLetters && (currentMode === 'plural' || currentMode === 'wordArticle' || currentMode === 'letters' || currentMode === 'audio')" class="german__letters">
                 <button
                     @click="addGErmanLetters(letter)"
@@ -92,6 +108,7 @@
                   {{ letter }}
                 </button>
               </div>
+
               <div v-if="result" class="answer-result" :class="result">
                 <span class="result-icon" v-if="result === 'correct'">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -99,10 +116,10 @@
                 <span class="result-icon" v-if="result === 'wrong'">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </span>
-                <span class="result-text" v-if="currentMode === 'article'">{{ t('result.correctAnswer') }}: {{ currentWord.article }}</span>
-                <span class="result-text" v-if="currentMode === 'letters' || currentMode === 'audio'">{{ t('result.correctAnswer') }}: {{ currentWord.de }}</span>
-                <span class="result-text" v-if="currentMode === 'wordArticle'">{{ t('result.correct') }}: {{currentWord.article}} {{ currentWord.de }} </span>
-                <span class="result-text" v-if="currentMode === 'plural'">{{ t('result.correct') }}: {{ currentWord.plural }}</span>
+                <span class="result-text" v-if="currentMode === 'article'">{{ t('result.correctAnswer') }}: <span class="highlight-word">{{ currentWord.article }}</span></span>
+                <span class="result-text" v-if="currentMode === 'letters' || currentMode === 'audio'">{{ t('result.correctAnswer') }}: <span class="highlight-word">{{ currentWord.de }}</span></span>
+                <span class="result-text" v-if="currentMode === 'wordArticle'">{{ t('result.correct') }}: <span class="highlight-word">{{currentWord.article}} {{ currentWord.de }}</span> </span>
+                <span class="result-text" v-if="currentMode === 'plural'">{{ t('result.correct') }}: <span class="highlight-word">{{ currentWord.plural }}</span></span>
               </div>
             </div>
             <div class="actions-wrapper">
@@ -148,7 +165,6 @@ useSeoMeta({ robots: 'noindex, nofollow' })
 const { t, locale } = useI18n()
 const store = userlangStore()
 const route = useRoute()
-const router = useRouter()
 
 const wrongWords = ref([])
 const allWords = ref([])
@@ -306,6 +322,9 @@ function nextStep() {
 }
 
 function restartAll() {
+  if (allWords.value && allWords.value.length > 0) {
+    store.selectedWords = [...allWords.value]
+  }
   isReview.value = true
   store.currentIndex = 0
   store.currentModeIndex = 0
@@ -364,8 +383,9 @@ watch(userInput, (newVal, oldVal) => {
 
 .session-page {
   font-family: "Nunito", sans-serif;
-  min-height: 100vh;
-  min-height: 100dvh;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -377,19 +397,29 @@ watch(userInput, (newVal, oldVal) => {
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow: hidden;
 }
 
 .trainer-app__board {
   flex: 1;
-  padding: 20px 15px 25px 15px;
+  padding: 5px 10px 15px 10px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .board-content {
   display: flex;
   flex-direction: column;
   flex: 1;
+  overflow: hidden;
+}
+
+.question__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .top-nav {
@@ -404,11 +434,10 @@ watch(userInput, (newVal, oldVal) => {
 }
 
 .progress-bar {
-  height: 32px;
-  background-color: #ffffff;
-  border: 3px solid #1e1e1e;
-  border-radius: 12px;
-  box-shadow: 0 3px 0 #1e1e1e;
+  width: 100%;
+  height: 25px;
+  background: #e8eae5;
+  border-radius: 10px;
   position: relative;
   overflow: hidden;
 }
@@ -418,6 +447,16 @@ watch(userInput, (newVal, oldVal) => {
   background-color: #10b981;
   border-radius: 8px 0 0 8px;
   transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.glare{
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  border-radius: 4px
 }
 
 .progress-fill[style*="width: 100%"] {
@@ -440,10 +479,9 @@ watch(userInput, (newVal, oldVal) => {
 }
 
 .session__theme-t {
-  font-size: 1rem;
+  font-size:16px;
   color: var(--titleColor);
   font-weight: 700;
-  text-transform: uppercase;
 }
 
 .session__topic {
@@ -466,6 +504,14 @@ watch(userInput, (newVal, oldVal) => {
   flex: 1;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.word-block::-webkit-scrollbar {
+  display: none;
 }
 
 .word-question {
@@ -482,9 +528,8 @@ watch(userInput, (newVal, oldVal) => {
 }
 
 .question-text {
-  font-size: 19pxr;
+  font-size: 16px;
   color: var(--titleColor);
-  margin-bottom: 12px;
   text-align: center;
   font-weight: 700;
   padding: 0 10px;
@@ -510,7 +555,7 @@ watch(userInput, (newVal, oldVal) => {
 }
 
 .german-word {
-  font-size: 2.1rem;
+  font-size: 22px;
   color: var(--titleColor);
   font-weight: 900;
 }
@@ -759,10 +804,6 @@ watch(userInput, (newVal, oldVal) => {
   align-items: center;
 }
 
-.actions-wrapper {
-  margin-top: 2rem;
-}
-
 .btn-primary {
   width: 100%;
   padding: 16px 20px;
@@ -824,13 +865,29 @@ watch(userInput, (newVal, oldVal) => {
   font-weight: 800;
   color: #1e1e1e;
   background-color: #ffffff;
-  border: 3px solid #1e1e1e;
   border-radius: 16px;
   cursor: pointer;
   transition: all 0.1s ease;
   text-align: center;
   text-decoration: none;
-  box-shadow: 0 5px 0 #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+}
+
+.highlight-word {
+  color: #3b82f6;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.answer-result.wrong .highlight-word {
+  color: #ef4444;
+  text-decoration: underline;
+}
+
+
+.answer-result.correct .highlight-word {
+  color: #10b981;
 }
 
 .btn-secondary:active:not(:disabled) {

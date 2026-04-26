@@ -2,14 +2,9 @@
   <footer v-if="authStore.uid" class="footer" role="contentinfo">
     <div class="footer__container">
       <nav class="nav">
-        <div
-            class="sliding-bg"
-            :style="{
-              transform: `translateX(${activeIndex * 100}%)`,
-              opacity: activeIndex === -1 ? 0 : 1
-            }"
-        ></div>
-
+        <div class="sliding-bg"
+             :style="{ transform: `translateX(${activeIndex * 100}%)`,  opacity: activeIndex === -1 ? 0 : 1 }">
+        </div>
         <NuxtLink
             v-for="(item, index) in footerNav"
             :key="item.id"
@@ -57,7 +52,7 @@ const activeIndex = computed(() => {
 
 .footer {
   position: fixed;
-  bottom: 20px;
+  bottom: 22px;
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 20px);
@@ -76,9 +71,9 @@ const activeIndex = computed(() => {
 .footer:after {
   content: "";
   position:fixed;
-  bottom: -18px;
+  bottom: -28px;
   left: 0;
-  height: 45px;
+  height: 55px;
   width: 100%;
   z-index: 0;
   background: var(--overlayAfter);

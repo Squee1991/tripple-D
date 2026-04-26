@@ -207,9 +207,9 @@ watch(topic, loadThemeData)
 </script>
 
 <style scoped>
-/* ОБЩИЙ КОНТЕЙНЕР (Адаптивный фон) */
+
 .theme-page {
-  font-family: "Nunito", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Nunito", sans-serif;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -222,7 +222,7 @@ watch(topic, loadThemeData)
 .page-header {
   display: flex;
   align-items: center;
-  padding: max(5px, env(safe-area-inset-top)) 10px 12px;
+  padding: 5px 10px 15px 10px;
   flex-shrink: 0;
   z-index: 10;
   background: var(--bg);

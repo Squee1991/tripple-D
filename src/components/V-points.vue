@@ -400,11 +400,9 @@ onMounted(() => {
 
 .progress__bar {
   height: 100%;
-  background: #4ade80;
-  transition: width .4s;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
+  background-color: #10b981;
+  border-radius: 8px 0 0 8px;
+  transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .glare{

@@ -39,6 +39,10 @@ export const userlangStore = defineStore('learning', () => {
 
     const markProgress = async (word, modeKey, value = true) => {
         const topic = keyTopic(word.topic)
+        const found = findByKey(words.value, word.de, topic)
+        if (found && found.progress && found.progress[modeKey] === true) {
+            return;
+        }
 
         const selected = findByKey(selectedWords.value, word.de, topic)
         if (selected) {
@@ -46,7 +50,6 @@ export const userlangStore = defineStore('learning', () => {
             selected.progress[modeKey] = value
         }
 
-        const found = findByKey(words.value, word.de, topic)
         if (found) {
             if (!found.progress) found.progress = {}
             found.progress[modeKey] = value
@@ -69,7 +72,7 @@ export const userlangStore = defineStore('learning', () => {
                 if (modeKey === 'audio')       daily.addAudioArticle(1)
             } catch {}
         }
-        
+
         const required = ['article','letters','wordArticle','audio','plural']
         const p = (found?.progress) || {}
         const allPassed = required.every(m => p[m] === true)

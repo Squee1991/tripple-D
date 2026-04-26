@@ -5,8 +5,8 @@
         <VBackBtn/>
         <div v-if="isStarted && !store.win && !store.lose" class="ios-stats">
           <div class="stat-pill">
-             <img class="guess__icon-header" src="../assets/images/dailyIcons/timer.svg" alt="">
-             <span>{{ timePassed }}</span>
+            <img class="guess__icon-header" src="../assets/images/dailyIcons/timer.svg" alt="">
+            <span>{{ timePassed }}</span>
           </div>
           <div class="stat-pill">
             <img class="guess__icon-header" src="../assets/images/heartInfo.svg" alt="heart">
@@ -24,14 +24,14 @@
         <div class="mascot-emoji">
           <img class="guess__icon" src="../assets/images/guessWord.svg" alt="">
         </div>
-        <p class="subtitle">{{ t('guessWord.subtitle')}}</p>
+        <p class="subtitle">{{ t('guessWord.subtitle') }}</p>
         <button class="ios-btn-primary btn-bounce" @click="startGame">
           {{ t('guessWord.startGame') }}
         </button>
       </div>
       <div v-else class="screen-game">
         <div v-if="themeText" class="theme-chip">
-          💡 {{ t('guessWord.theme')}} <strong>{{ themeText }}</strong>
+          💡 {{ t('guessWord.theme') }} <strong>{{ themeText }}</strong>
         </div>
         <div class="word-board">
           <div
@@ -78,21 +78,13 @@
         <div class="ios-modal-card">
           <h3 class="modal-title">{{ t('guessWord.good') }}</h3>
           <p class="modal-text">{{ t('guessWord.article') }} <span class="highlight-word">{{ store.answer }}</span></p>
-          <form class="modal-form" @submit.prevent="checkArticle">
-            <input
-                v-model="articleGuess"
-                class="ios-input modal-input"
-                placeholder="der / die / das"
-                :disabled="!!articleResult"
-                @keyup.enter="checkArticle"
-                maxlength="4"
-                autocomplete="off"
-            />
-            <button class="ios-btn-primary modal-btn" @click="checkArticle" :disabled="!!articleResult || !articleGuess">
-              {{ t('guessWord.check') }}
-            </button>
-          </form>
-          <div v-if="articleResult" class="feedback-badge bounce-in" :class="{'success': articleResult === 'Верно!', 'error': articleResult !== 'Верно!'}">
+          <div v-if="!articleResult" class="article-buttons">
+            <button class="ios-btn-primary article-btn" @click="checkArticle('der')">der</button>
+            <button class="ios-btn-primary article-btn" @click="checkArticle('die')">die</button>
+            <button class="ios-btn-primary article-btn" @click="checkArticle('das')">das</button>
+          </div>
+          <div v-if="articleResult" class="feedback-badge bounce-in"
+               :class="{'success': articleResult === 'Верно!', 'error': articleResult !== 'Верно!'}">
             {{ articleResult }}
           </div>
           <button v-if="articleResult" class="ios-btn-text modal-close" @click="closeArticleModal">
@@ -118,18 +110,17 @@
 </template>
 
 <script setup>
-import { ref, watch, onUnmounted, computed } from 'vue'
-import { useGuessWordStore } from '../store/guesStore.js'
-import { useRouter } from 'vue-router'
-import { nameMap } from '../utils/nameMap.js'
-import { useSeoMeta } from "#imports"
+import {ref, watch, onUnmounted, computed} from 'vue'
+import {useGuessWordStore} from '../store/guesStore.js'
+import {useRouter} from 'vue-router'
+import {nameMap} from '../utils/nameMap.js'
+import {useSeoMeta} from "#imports"
 import VBackBtn from "~/src/components/V-back-btn.vue";
 
-const { t } = useI18n()
+const {t} = useI18n()
 const store = useGuessWordStore()
 const isSpinning = ref(false)
 const guessInput = ref('')
-const articleGuess = ref('')
 const articleResult = ref(null)
 const isStarted = ref(false)
 const showArticleModal = ref(false)
@@ -145,7 +136,6 @@ const timePassed = computed(() => {
   if (!store.timeStarted) return 0
   return Math.max(0, Math.floor((now.value - store.timeStarted) / 1000))
 })
-
 
 const themeText = computed(() => {
   const obj = store.currentWordObj
@@ -174,9 +164,9 @@ function handleRestart() {
   startGame()
 }
 
-function checkArticle() {
+function checkArticle(selectedArticle) {
   if (!store.currentWordObj) return
-  const correct = articleGuess.value.trim().toLowerCase() === store.currentWordObj.article.toLowerCase()
+  const correct = selectedArticle === store.currentWordObj.article.toLowerCase()
   articleResult.value = correct ? 'Верно!' : `Неверно! Правильно: ${store.currentWordObj.article}`
 }
 
@@ -198,7 +188,6 @@ async function startGame() {
   now.value = Date.now()
   isStarted.value = true
   guessInput.value = ''
-  articleGuess.value = ''
   articleResult.value = null
   showArticleModal.value = false
   showLoseModal.value = false
@@ -242,7 +231,6 @@ watch(() => store.lose, (isLose) => {
 </script>
 
 <style scoped>
-
 .ios-trainer-page {
   min-height: 100%;
   height: 100%;
@@ -313,7 +301,7 @@ watch(() => store.lose, (isLose) => {
 }
 
 .ios-btn-icon {
- background: none;
+  background: none;
   border: none;
   width: 36px;
   height: 36px;
@@ -330,7 +318,7 @@ watch(() => store.lose, (isLose) => {
   transform: scale(0.95);
 }
 
-.guess__icon{
+.guess__icon {
   width: 150px;
 }
 
@@ -402,14 +390,14 @@ watch(() => store.lose, (isLose) => {
   font-weight: 700;
   color: #1c1c1e;
   text-transform: uppercase;
-  box-shadow: inset 0 -4px 0 rgba(0,0,0,0.1);
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .letter-box--filled {
   background: #34C759;
   color: #fff;
-  box-shadow: inset 0 -4px 0 rgba(0,0,0,0.2);
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
 }
 
@@ -540,8 +528,11 @@ watch(() => store.lose, (isLose) => {
 
 .ios-modal-overlay {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.4);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
@@ -557,7 +548,7 @@ watch(() => store.lose, (isLose) => {
   width: 100%;
   max-width: 340px;
   text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .modal-emoji {
@@ -590,20 +581,17 @@ watch(() => store.lose, (isLose) => {
   font-size: 18px;
 }
 
-.modal-form {
+.article-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
 }
 
-.modal-input {
-  height: 48px;
-  text-align: center;
-}
-
-.modal-btn {
+.article-btn {
   padding: 12px;
   font-size: 16px;
+  flex: 1;
 }
 
 .modal-actions {
@@ -646,8 +634,12 @@ watch(() => store.lose, (isLose) => {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .bounce-in {
@@ -655,8 +647,14 @@ watch(() => store.lose, (isLose) => {
 }
 
 @keyframes bounceIn {
-  0% { transform: scale(0.5); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .spin-anim {
@@ -685,5 +683,4 @@ watch(() => store.lose, (isLose) => {
 .ios-modal-enter-active .ios-modal-card {
   animation: bounceIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 </style>
