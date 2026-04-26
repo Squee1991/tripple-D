@@ -106,7 +106,7 @@ onMounted(() => {
   font-weight: 800;
   color: var(--titleColor);
   letter-spacing: 1px;
-  margin: 0 0 0 15px;
+  margin: 0 0 0 10px;
   text-shadow: 0 1px var(--titleColor);
 }
 

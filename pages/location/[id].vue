@@ -37,9 +37,9 @@
                   <span>{{ quest.rewards.points }}</span>
                   <img src="assets/images/article.svg" alt="Articlus" class="icon-articlus">
                 </span>
-                <span class="reward-item">{{ quest.rewards.xp }} XP</span>
+                <span class="reward-item">{{ quest.rewards.xp }}<span class="xp-badge-3d">XP</span></span>
               </span>
-              <span  class="rewards-container" v-else>{{ t('locationQuests.gotAward') }}</span>
+              <span class="rewards-container" v-else>{{ t('locationQuests.gotAward') }} <span style="font-size:18px;">✅</span></span>
             </div>
             <button
                 class="btn"
@@ -194,7 +194,7 @@ onMounted(async () => {
 .stamp__icon-wrapper {
   border: 2px solid #747aff;
   border-radius: 50%;
-  margin: 0 auto;
+  margin:5px auto;
   width: 90px;
   height: 90px;
   display: flex;
@@ -321,7 +321,7 @@ onMounted(async () => {
 }
 
 .quest__description {
-  margin: 4px 0 0;
+  margin: 5px 0;
   color: #2b2b2b;
 }
 
@@ -355,6 +355,7 @@ onMounted(async () => {
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  font-size: 16px;
 }
 
 .icon-articlus {
@@ -414,6 +415,32 @@ onMounted(async () => {
   }
 }
 
+.xp-badge-3d {
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 6px;
+  margin-bottom: 2px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3b82f6 0%, #a855f7 50%, #3b82f6 100%);
+  background-size: 200% 200%;
+  box-shadow:
+      inset 0 -2px 0 rgba(0, 0, 0, 0.2),
+      inset 0 1px 1px rgba(255, 255, 255, 0.5),
+      0 2px 4px rgba(0, 0, 0, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  text-shadow:
+      0 0 4px rgba(255, 255, 255, 0.8),
+      0 0 1px rgba(0, 0, 0, 0.3);
+}
+
 .quest-card:nth-child(1) { animation-delay: 0.05s; }
 .quest-card:nth-child(2) { animation-delay: 0.1s; }
 .quest-card:nth-child(3) { animation-delay: 0.15s; }
@@ -448,12 +475,11 @@ onMounted(async () => {
     inset: 6px;
     outline: 8px solid #fff;
   }
-
   .quest__description {
     font-size: 14px;
   }
   .quest-meta .rewards-container {
-    font-size: 13px;
+    font-size: 14px;
     padding: 4px 8px;
   }
 }

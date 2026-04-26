@@ -921,7 +921,7 @@ onMounted(async () => {
   .sidebar-panel {
     position: fixed;
     left: 50%;
-    bottom: 20px;
+    bottom: 22px;
     transform: translateX(-50%);
     width: calc(100% - 20px);
     height: 71px;

@@ -312,18 +312,24 @@ function goBack() {
 </template>
 
 <style scoped>
+
 .page-container {
   font-family: "Nunito", sans-serif;
   display: flex;
   justify-content: center;
-
   background-color: var(--bg);
   color: #2b2b2b;
-  min-height: 100vh;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .page__inner {
   padding: 5px 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
@@ -345,12 +351,11 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   box-shadow: var(--boxShadowMobile);
   border-radius: 12px;
   width: 40px;
-  height: 38px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
   transition: transform 0.1s, box-shadow 0.1s;
 }
 
@@ -359,12 +364,14 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   box-shadow: 0px 0px 0px #2b2b2b;
 }
 
-.content-shell {
+.content-shell,
+.game-view {
   width: 100%;
-  max-width: 1200px;
   display: flex;
   flex-direction: column;
   flex: 1;
+  overflow: hidden;
+  min-height: 0;
 }
 
 .header-title {
@@ -404,6 +411,8 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   gap: 10px;
   flex: 1;
   width: 100%;
+  overflow: hidden;
+  min-height: 0;
 }
 
 .game-sidebar {
@@ -411,6 +420,7 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  flex-shrink: 0;
 }
 
 .card-style-box {
@@ -426,12 +436,18 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   border: 3px solid var(--tabsSlideBorderColor);
 }
 
+.image-card img {
+  max-width: 100%;
+  max-height: 30vh;
+  object-fit: cover;
+}
+
 .progress-container {
   display: flex;
   align-items: center;
-
   margin-bottom: 5px;
   gap: 5px;
+  flex-shrink: 0;
 }
 
 .progress-bar {
@@ -453,14 +469,14 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   position: relative;
 }
 
-.glare{
+.glare {
   background: rgba(255, 255, 255, 0.5);
   position: absolute;
   top: 3px;
   left: 8px;
   right: 8px;
   height: 4px;
-  border-radius: 4px
+  border-radius: 4px;
 }
 
 .progress-text {
@@ -474,13 +490,18 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   width: 100%;
   display: flex;
   flex-direction: column;
+
 }
 
 .chat-container {
-  flex: 1;
   overflow-y: auto;
   margin-bottom: 3px;
-  max-height: 270px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.chat-container::-webkit-scrollbar {
+  display: none;
 }
 
 .empty-state {
@@ -492,7 +513,6 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 .bubble {
   padding: 5px 9px;
   border-radius: 16px;
-  border: 3px solid #2b2b2b;
   font-size: 1rem;
   font-weight: 700;
   max-width: 100%;
@@ -500,7 +520,7 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 }
 
 .user .bubble {
-  background: #9cb9c9;
+  background: #e4e6e8;
   border-bottom-right-radius: 0;
 }
 
@@ -535,7 +555,6 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   padding: 25px 8px 8px 8px;
   width: 100%;
   position: relative;
-  box-shadow: 4px 4px 0px rgba(43, 43, 43, 0.1);
 }
 
 .feedback-score-badge {
@@ -585,19 +604,20 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 .input-dock {
   display: flex;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .modern-input {
   flex: 1;
-  padding: 4px 5px;
-  font-size: 1.1rem;
+  padding: 5px;
+  font-size: 14px;
   font-weight: 700;
   border: 3px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile);
   font-family: 'Nunito', sans-serif;
   outline: none;
   resize: none;
-  min-height: 120px;
+  min-height: 150px;
   scrollbar-width: thin;
   scrollbar-color: #2b2b2b transparent;
 }

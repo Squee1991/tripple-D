@@ -90,7 +90,6 @@ const openCancelModal =() => {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  min-width: 220px;
 }
 
 .status-inline {

@@ -239,24 +239,22 @@
         "type": "reorder",
         "question": "eastPlainSecondQuests.questFive",
         "words": [
-          "bei dir",
-          "gut",
-          "und",
-          "Thomas",
           "Hallo",
           "danke",
+          "und",
+          "Thomas",
           "gut",
-          "sehr gut",
-          "Bis Morgen",
-          "wie gehts's"
+          "wie geht's",
+          "gut",
+          "dir"
         ],
         "correctOrder": [
           "Hallo",
           "Thomas",
-          "wie gehts's",
+          "wie geht's",
           "gut",
           "und",
-          "bei dir",
+          "dir",
           "gut",
           "danke"
         ]
