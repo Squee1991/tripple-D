@@ -41,7 +41,7 @@ const props = defineProps({
   canBuyLife: Boolean
 })
 
-const emit = defineEmits(['purchase', 'back'])
+const emit = defineEmits(['purchase', 'back', 'watchAd'])
 
 const walletDetails = computed(() => [
   {
@@ -55,6 +55,12 @@ const walletDetails = computed(() => [
 ])
 
 const actionButtons = computed(() => [
+  {
+    text: 'Смотреть рекламу',
+    action: () => emit('watchAd'),
+    disabled: false,
+    style: 'btn--ad'
+  },
   {
     text: props.canBuyLife ? t('questCompletedModals.buy') : t('questCompletedModals.notEnough'),
     action: () => emit('purchase'),
@@ -143,6 +149,7 @@ const actionButtons = computed(() => [
   display: flex;
   gap: 12px;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .btn {
@@ -175,6 +182,12 @@ const actionButtons = computed(() => [
   background: #1CB0F6;
   border-color: #1CB0F6;
   border-bottom-color: #1899D6;
+}
+
+.btn--ad {
+  background: #FF9600;
+  border-color: #FF9600;
+  border-bottom-color: #CC7800;
 }
 
 .btn--primary:hover:not(:disabled) {

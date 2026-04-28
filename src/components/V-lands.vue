@@ -348,6 +348,7 @@ onBeforeUnmount(() => {
   width: 100%;
   text-decoration: none;
   background: #3b82f6;
+  border: 2px solid #2563eb;
   color: #ffffff;
   padding: 12px;
   border-radius: 24px;
@@ -355,7 +356,6 @@ onBeforeUnmount(() => {
   font-size: 20px;
   font-weight: 800;
   text-align: center;
-  border: 2px solid #2563eb;
   border-bottom: 6px solid #1d4ed8;
   transition: transform 0.1s;
 }

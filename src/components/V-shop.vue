@@ -2,7 +2,10 @@
   <section class="shop">
     <header class="shop__header">
       <div class="shop__title-container">
-        <h2 class="shop__title">{{ t('shop.title') }}</h2>
+        <VBanner
+           :text="t('shop.title')"
+           :icon="ShopIcon"
+        />
       </div>
 <!--      <p class="shop__subtitle">{{ t('shop.subText') }}</p>-->
     </header>
@@ -125,7 +128,7 @@ import {userlangStore} from '~/store/learningStore.js'
 import {userChainStore} from '~/store/chainStore.js'
 import {userAuthStore} from '~/store/authStore.js'
 import {useRankUserStore} from '~/store/rankStore.js'
-
+import ShopIcon from '../../assets/images/shopping-cart.svg'
 import Heart from '../../assets/images/life.svg'
 import ShieldFreeze from '../../assets/images/FreezeShield.svg'
 import Articlus from '../../assets/images/articlus.png'
@@ -134,6 +137,7 @@ import Sale10 from '../../assets/images/rocket_10.svg'
 import Sale15 from '../../assets/images/hot-air-ballon15.svg'
 import GraduateHat from '../../assets/images/graduate-hat.svg'
 import HotDeal from '../../assets/images/hot-deal.svg'
+import VBanner from "~/src/components/V-banner.vue";
 const {t} = useI18n()
 const questStore = userChainStore()
 const langStore = userlangStore()
@@ -347,8 +351,8 @@ const confirmPurchase = async () => {
 </script>
 
 <style scoped>
+
 .shop {
-  padding: 10px;
   font-family: "Nunito", sans-serif;
 }
 
@@ -378,33 +382,6 @@ const confirmPurchase = async () => {
   background: var(--overlayAfter);
 }
 
-.shop__title-container {
-  background: #50a2d8;
-  border-radius: 12px;
-  padding: 10px 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.shop__title {
-  color: white;
-  margin: 0;
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.shop__subtitle {
-  text-align: center;
-  color: var(--titleColor);
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
 .shop__cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 2fr));
@@ -413,7 +390,8 @@ const confirmPurchase = async () => {
 
 .shop-card {
   background: var(--cardShopBg);
-  border: 2px solid #363d4a;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 2px 0 var(--tabsSlideBorderColor);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
@@ -442,6 +420,10 @@ const confirmPurchase = async () => {
 
 .shop-card--owned {
   border-color: #4caf50;
+}
+
+.shop__title-container {
+  font-size: 40px;
 }
 
 .shop-card__preview {
@@ -558,7 +540,7 @@ const confirmPurchase = async () => {
   padding: 8px 3px;
   min-height: 39px;
   border: none;
-  border-radius: 12px;
+  border-radius: 24px;
   background: #f1c40f;
   color: var(--titleColor);
   font-weight: 800;

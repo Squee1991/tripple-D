@@ -1,72 +1,3 @@
-<template>
-  <div>
-    <div v-if="!authStore.premium" class="exam">
-      <transition name="fade">
-        <div v-if="showHint" class="exam-hint">
-          ℹ️ {{t('examIndexPage.hint')}}
-        </div>
-      </transition>
-      <VConsentModal
-          v-if="showConsentModal"
-          @consent-given="handleConsentGiven"
-          @close="showConsentModal = false"
-      />
-      <div class="exam__header">
-        <VBackBtn/>
-        <div class="exam__title">Тесты</div>
-      </div>
-      <p class="exam__subtitle">
-        {{t('examIndexPage.choice')}}
-        <span class="exam__highlight">Lesen</span>,
-        <span class="exam__highlight">Hören</span>,
-        <span class="exam__highlight">Schreiben</span>,
-        <span class="exam__highlight">Sprechen</span>
-      </p>
-      <div class="exam__levels">
-        <div
-            v-for="level in examLevels"
-            :key="level.id"
-            :class="['exam-card', `exam-card--${level.id}`]"
-        >
-          <h2 class="exam-card__title">{{ level.icon }} {{ level.title }}</h2>
-          <div class="exam__card-inner">
-            <ul class="exam-card__list">
-              <li
-                  v-for="item in level.modules"
-                  :key="item.text"
-                  class="exam-card__item"
-              >
-                {{ item.text }}
-              </li>
-            </ul>
-            <button
-                class="exam-card__button"
-                @click="attemptToStartExam(level.id)"
-            >
-              {{t('examIndexPage.to')}} {{ level.id.toUpperCase() }}
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div v-else class="exam__not-allowed">
-      <div class="exam__not-allowed-wrapper">
-        <h2 class="exam__not-allowed-title"> {{ notAllowed.title }}</h2>
-        <div class="buttons__wrapper">
-          <button
-              type="button"
-              @click="notAllowedPathBtn(btn.path)"
-              v-for="btn in notAllowed.btns"
-              :key="btn.id"
-              class="button__not-allowed">
-            {{ btn.value }}
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import {onMounted, ref} from 'vue'
 import {userExamStore} from '~/store/examStore.js'
@@ -98,10 +29,6 @@ const notAllowed = ref({
 const notAllowedPathBtn = (to) => {
   router.push(to)
 }
-
-definePageMeta({
-  layout: 'footerlayout'
-})
 
 const examLevels = [
   {
@@ -170,224 +97,322 @@ onMounted(async () => {
   showConsentModal.value = !authStore.voiceConsentGiven
 })
 </script>
+<template>
+  <div class="exam-app-theme"> <div v-if="!authStore.premium" class="exam">
+    <transition name="fade">
+      <div v-if="showHint" class="exam-hint">
+        ℹ️ {{t('examIndexPage.hint')}}
+      </div>
+    </transition>
+
+    <VConsentModal
+        v-if="showConsentModal"
+        @consent-given="handleConsentGiven"
+        @close="showConsentModal = false"
+    />
+
+    <div class="exam__header">
+      <VBackBtn class="custom-back-btn"/>
+      <div class="exam__title-badge">Тесты</div>
+    </div>
+    <div class="exam__subtitle">
+      <div class="exam__subtitle__left">
+        <span>{{t('examIndexPage.choice')}}</span>
+        <span class="exam__accent">Lesen</span>
+        <span class="exam__accent">Hören</span>
+        <span class="exam__accent">Schreiben</span>
+        <span class="exam__accent">Sprechen</span>
+      </div>
+      <div class="exam__subtitle__right">
+        <img class="exam__subtitle-icon" src="../../assets/images/exam-results.svg" alt="">
+      </div>
+    </div>
+    <div class="exam__scroll-area">
+      <div class="exam__grid">
+        <div
+            v-for="level in examLevels"
+            :key="level.id"
+            :class="['exam-card', `card--${level.id}`]"
+        >
+          <div class="exam-card__header">
+            <h2 class="exam-card__title">{{ level.title }}</h2>
+          </div>
+          <div class="exam-card__body">
+            <ul class="exam-card__list">
+              <li
+                  v-for="item in level.modules"
+                  :key="item.text"
+                  class="exam-card__item"
+              >
+                {{ item.text }}
+              </li>
+            </ul>
+            <button
+                class="exam-card__button"
+                @click="attemptToStartExam(level.id)"
+            >
+              {{t('examIndexPage.to')}} {{ level.id.toUpperCase() }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div v-else class="exam__locked">
+      <div class="exam__locked-card">
+        <h2 class="exam__locked-title"> {{ notAllowed.title }}</h2>
+        <div class="exam__locked-buttons">
+          <button
+              type="button"
+              @click="notAllowedPathBtn(btn.path)"
+              v-for="btn in notAllowed.btns"
+              :key="btn.id"
+              class="locked-btn">
+            {{ btn.value }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style scoped>
+
+.exam-app-theme {
+  min-height: 100vh;
+  color: #fff;
+}
+
 .exam {
   font-family: "Nunito", sans-serif;
-  height: 100vh;
-  height: 100dvh;
+  max-height: 100dvh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .exam__header {
   display: flex;
   align-items: center;
-  padding: calc(env(safe-area-inset-top) + 20px) 20px 15px;
-  background: transparent;
-  flex-shrink: 0;
-  z-index: 10;
+  padding: 5px 10px 15px 10px
 }
 
-.exam__card-inner{
-  padding: 10px;
-  display: flex;
-  flex:1;
-  justify-content:space-between;
-  flex-direction: column;
-}
-
-.exam__title {
-  flex: 1;
-  font-weight: 900;
-  font-size: 24px;
-  color: var(--titleColor);
-  text-transform: uppercase;
+.exam__title-badge {
   margin-left: 15px;
-  letter-spacing: 0.5px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 23px;
 }
 
 .exam__subtitle {
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--titleColor);
-  padding: 0 20px 15px;
-  margin: 0;
-  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 15px;
+  background: #00c2ff;
+  border-radius: 20px;
+  margin: 10px;
+  border: 3px solid #000;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-.exam__highlight {
-  font-weight: 900;
-  color: #1e1e1e;
-  background: #fef08a;
-  padding: 2px 6px;
-  border-radius: 6px;
-  border: 2px solid #1e1e1e;
+.exam__subtitle__left {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  text-align: left;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+
+.exam__subtitle__right {
+  flex: 0 0 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.exam__subtitle-icon {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+
+.exam__accent {
   display: inline-block;
-  margin: 2px 0;
+  font-weight: 800;
+  background: #fff;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #1561d3;
+  border: 1px solid rgba(0,0,0,0.1);
 }
 
-.exam__levels {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-  padding: 10px;
+
+.exam__scroll-area {
   flex: 1;
   overflow-y: auto;
-  padding-bottom: 100px;
-  scrollbar-width: none;
+  padding: 0 10px 120px;
+  -webkit-overflow-scrolling: touch;
 }
 
-.exam__levels::-webkit-scrollbar {
-  display: none;
+.exam__scroll-area::-webkit-scrollbar {
+  width: 4px;
+}
+.exam__scroll-area::-webkit-scrollbar-thumb {
+  background: #7c4dff;
+  border-radius: 10px;
+}
+
+.exam__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding-top: 10px;
 }
 
 .exam-card {
-  background-color: #ffffff;
-  border: 3px solid #1e1e1e;
-  border-radius: 16px;
+  background-color: var(--menuItemsBg);
+  border: 3px solid #000;
+  border-radius: 18px;
   display: flex;
+  padding: 10px 0;
   flex-direction: column;
-  box-shadow: 0 4px 0 #1e1e1e;
-  transition: transform 0.1s, box-shadow 0.1s;
+  box-shadow: 0 5px 0 #000;
   overflow: hidden;
 }
 
-.exam-card__title {
-  font-size: 17px;
-  font-weight: 900;
-  margin: 0 0 10px 0;
-  color: #1e1e1e;
-  text-align: center;
-  gap: 6px;
-  background: #bfdbfe;
+.exam-card__header {
+  background: rgba(0,0,0,0.2);
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid #000;
 }
 
-.exam-card__list {
-  margin: 0 0 12px 0;
-  flex-grow: 1;
-  text-align: left;
-}
-
-.exam-card__item {
-  font-size: 14px;
-  font-weight: 700;
-  color: #4b5563;
+.level-icon {
+  font-size: 24px;
   margin-bottom: 4px;
 }
 
-.exam-card__button {
-  background-color: #fef08a;
-  border: 3px solid #1e1e1e;
-  border-radius: 12px;
-  padding: 10px 8px;
-  font-family: "Nunito", sans-serif;
-  font-size: 0.9rem;
+.exam-card__title {
+  font-size: 16px;
   font-weight: 900;
-  color: #1e1e1e;
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.exam-card__body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.exam-card__list {
+  margin: 0 0 15px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.exam-card__item {
+  font-size: 12px;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+
+.exam-card__button {
+  border: 2px solid #3b82f6;
+  background-color: #3b82f6;
+  box-shadow: 0 4px 0 #1d4ed8;
+  border-radius: 20px;
+  padding: 8px 4px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 900;
+  color: #fff;
   width: 100%;
   cursor: pointer;
-  box-shadow: 0 3px 0 #1e1e1e;
-  transition: all 0.1s;
   text-transform: uppercase;
 }
 
 .exam-card__button:active {
   transform: translateY(2px);
-  box-shadow: 0 1px 0 #1e1e1e;
 }
 
-.exam-card--a1 .exam-card__button { background-color: #bfdbfe; }
-.exam-card--a2 .exam-card__button { background-color: #a7f3d0; }
-.exam-card--b1 .exam-card__button { background-color: #fde68a; }
-.exam-card--b2 .exam-card__button { background-color: #fecaca; }
+.card--a1 .exam-card__header { border-bottom-color: #4ade80; }
+.card--a2 .exam-card__header { border-bottom-color: #60a5fa; }
+.card--b1 .exam-card__header { border-bottom-color: #fbbf24; }
+.card--b2 .exam-card__header { border-bottom-color: #f87171; }
 
-.exam__not-allowed {
+.exam__locked {
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 20px;
-}
-
-.exam__not-allowed-wrapper {
-  width: 100%;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background: #ffffff;
-  border: 4px solid #1e1e1e;
+}
+
+.exam__locked-card {
+  width: 100%;
+  background: #211d40;
+  border: 4px solid #000;
   border-radius: 20px;
-  box-shadow: 0 6px 0 #1e1e1e;
-}
-
-.exam__not-allowed-title {
+  padding: 30px 20px;
   text-align: center;
-  font-size: 1.5rem;
+  box-shadow: 0 8px 0 #000;
+}
+
+.exam__locked-title {
+  color: #fff;
   font-weight: 900;
-  color: #1e1e1e;
-  margin: 0 0 20px 0;
+  margin-bottom: 20px;
 }
 
-.buttons__wrapper {
+.locked-btn {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.button__not-allowed {
   padding: 14px;
-  border: 3px solid #1e1e1e;
+  margin-bottom: 10px;
+  border: 3px solid #000;
   border-radius: 14px;
-  width: 100%;
-  font-size: 1.1rem;
-  font-family: "Nunito", sans-serif;
   font-weight: 800;
-  background: #ffffff;
-  color: #1e1e1e;
-  box-shadow: 0 4px 0 #1e1e1e;
-  cursor: pointer;
+  background: #120f26;
+  color: #fff;
+  box-shadow: 0 4px 0 #000;
 }
 
-.button__not-allowed:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 0 #1e1e1e;
-}
-
-.button__not-allowed:last-child {
-  background: #fef08a;
+.locked-btn:last-child {
+  background: #fbbf24;
+  color: #000;
 }
 
 .exam-hint {
   position: fixed;
-  bottom: calc(env(safe-area-inset-bottom) + 90px);
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
-  background: #ffffff;
-  color: #1e1e1e;
-  border: 3px solid #1e1e1e;
-  border-radius: 14px;
-  padding: 12px 16px;
-  box-shadow: 0 4px 0 #1e1e1e;
-  font-size: 0.95rem;
+  background: #fff;
+  color: #000;
+  border: 3px solid #000;
+  border-radius: 12px;
+  padding: 10px 15px;
+  z-index: 100;
   font-weight: 800;
-  z-index: 999;
-  width: 90%;
-  text-align: center;
-}
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
-  transform: translate(-50%, 10px);
+  box-shadow: 0 4px 0 #000;
 }
 </style>

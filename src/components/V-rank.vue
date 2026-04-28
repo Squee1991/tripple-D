@@ -2,17 +2,17 @@
   <div class="ranks-wrapper">
     <div class="hats-info">
       <div class="hats-left">
-        <div class="hats-badge" aria-hidden="true">
-          <img :src="currentRankIcon" :alt="currentRankTitle"/>
-        </div>
-        <div class="hats-meta">
-          <div class="hats-rank">{{ currentRankTitle }}</div>
-          <div class="hats-hatsline">
-            <img class="hat-img" :src="EducationHut" alt="EducationHut"/>
-            <span class="hat-value">{{ authStore.totalHats }}</span>
-          </div>
-        </div>
-      </div>
+        <img class="hat-img" :src="EducationHut" alt="EducationHut"/>
+<!--      <div class="hats-badge" aria-hidden="true">-->
+<!--        <img :src="currentRankIcon" :alt="currentRankTitle"/>-->
+<!--      </div>-->
+<!--      <div class="hats-meta">-->
+<!--        <div class="hats-rank">{{ currentRankTitle }}</div>-->
+<!--        <div class="hats-hatsline">-->
+<!--          <span class="hat-value">{{ authStore.totalHats }}</span>-->
+<!--        </div>-->
+<!--      </div>-->
+    </div>
       <div class="hats-right">
         <div class="hats-text"> {{t('v-rank.desc')}} </div>
       </div>
@@ -134,16 +134,10 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   margin: 0 auto;
   overflow-y: auto;
   padding-bottom: 55px;
+  position: relative;
 }
 
 .ranks-wrapper:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
   background: var(--overlayAfter);
 }
 
@@ -325,7 +319,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 .hats-info {
   display: flex;
   align-items: center;
-  padding: 0 10px;
+  padding: 15px 10px 0 10px;
   margin-bottom: 15px;
 }
 
@@ -365,8 +359,8 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .hat-img {
-  width: 38px;
-  height: 38px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   display: block;
 }
@@ -456,7 +450,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   }
 
   .hats-left {
-    min-width: 200px;
+    min-width: 68px;
   }
 }
 
@@ -467,10 +461,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 @media (max-width: 700px) {
-  .hats-info {
-    flex-direction: column;
-  }
-
   .hats-text {
     font-size: 12px;
   }

@@ -20,6 +20,10 @@ const config: CapacitorConfig = {
       launchAutoHide: false,
       launchShowDuration: 3000
     },
+    AdMob: {
+      androidAppId: 'ca-app-pub-3940256099942544~3347511713',
+      iosAppId: 'ca-app-pub-3940256099942544~1458002511',
+    },
   },
 };
 

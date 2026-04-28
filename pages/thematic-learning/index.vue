@@ -4,6 +4,12 @@
       <VBackBtnNav />
       <h1 class="page-title">{{ t('sub.themen')}}</h1>
     </div>
+    <div class="banner">
+      <VBanner
+        text="Изучай немецкий в тематических уровнях на различные темы"
+        :icon="Banner"
+      />
+    </div>
     <transition name="toast-fade">
       <div v-if="showChalkMessage" class="toast-message">
         {{ chalkMessage }}
@@ -93,6 +99,8 @@ import Travel from '../../assets/images/travel.svg'
 import Clock from '../../assets/images/clock.svg'
 import { useHead, useSeoMeta } from '#imports'
 import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
+import VBanner from "~/src/components/V-banner.vue";
+import Banner from '../../assets/images/thematicSticker.svg'
 
 const {t} = useI18n()
 
@@ -218,6 +226,10 @@ watch(topic, loadThemeData)
   background-color: var(--bg);
 }
 
+
+.banner {
+  padding: 0 15px;
+}
 
 .page-header {
   display: flex;
@@ -371,14 +383,14 @@ watch(topic, loadThemeData)
   background: var(--tabBg);
   border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 16px;
-  padding: 16px 12px;
+  padding: 6px 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: all 0.1s ease;
   cursor: pointer;
-  min-height: 90px;
+
 }
 
 .module-card:active:not(.locked) {
@@ -417,7 +429,7 @@ watch(topic, loadThemeData)
 }
 
 .module-number {
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 900;
   color: var(--titleColor);
   line-height: 1;
@@ -465,7 +477,7 @@ watch(topic, loadThemeData)
   background: #22c55e;
   border: 2px solid #16a34a;
   border-bottom-width: 5px;
-  border-radius: 18px;
+  border-radius: 24px;
   color: #ffffff;
   font-family: "Nunito", sans-serif;
   font-size: 18px;

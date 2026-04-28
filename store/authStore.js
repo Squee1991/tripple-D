@@ -16,11 +16,9 @@ import {
     signInWithCredential,
     sendEmailVerification,
     signInWithPopup,
-    FacebookAuthProvider,
     reauthenticateWithPopup, GoogleAuthProvider, fetchSignInMethodsForEmail
 } from 'firebase/auth';
 import { GoogleSignIn } from '@capawesome/capacitor-google-sign-in';
-import { FacebookLogin } from '@capacitor-community/facebook-login';
 import { SignInWithApple } from '@capacitor-community/apple-sign-in';
 import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp, writeBatch} from 'firebase/firestore';
 import {userlangStore} from "./learningStore.js";
@@ -406,73 +404,73 @@ export const userAuthStore = defineStore('auth', () => {
         }
     }
 
-    const loginWithFacebook = async () => {
-        try {
-            const isNative = Capacitor.isNativePlatform();
-            let user;
-            if (isNative) {
-                const FACEBOOK_PERMISSIONS = ['email', 'public_profile'];
-                const result = await FacebookLogin.login({ permissions: FACEBOOK_PERMISSIONS });
-                if (!result.accessToken) {
-                    console.error('не вернул токен');
-                    return;
-                }
-                const credential = FacebookAuthProvider.credential(result.accessToken.token);
-                const authResult = await signInWithCredential(auth, credential);
-                user = authResult.user;
-            } else {
-                const provider = new FacebookAuthProvider();
-                const authResult = await signInWithPopup(auth, provider);
-                user = authResult.user;
-            }
-
-            const userDocRef = doc(db, 'users', user.uid);
-            const userDoc = await getDoc(userDocRef);
-
-            if (!userDoc.exists()) {
-                await setDoc(userDocRef, {
-                    ownedAvatars: ['1.png', '2.png'],
-                    name: user.displayName || 'User Facebook',
-                    email: user.email,
-                    registeredAt: serverTimestamp(),
-                    feedbackSurveyShownAt: null,
-                    avatar: '1.png',
-                    subscriptionEndsAt: null,
-                    subscriptionCancelled: false,
-                    gotPremiumBonus: false,
-                    voiceConsentGiven: false,
-                    hasSeenOnboarding: false,
-                    isPremium: false,
-                    totalHats: 0,
-                    points: 0,
-                    claimedBonuses: [],
-                    sale_5: false,
-                    sale_10: false,
-                    sale_15: false,
-                    ...createInitialAchievementsObject()
-                });
-            }
-
-            const finalDoc = await getDoc(userDocRef);
-            const userDataFromDb = finalDoc.data() || {};
-
-            setUserData({
-                name: user.displayName,
-                email: user.email,
-                registeredAt: user.metadata.creationTime,
-                uid: user.uid,
-                providerId: user.providerData[0]?.providerId || 'facebook.com',
-                ...userDataFromDb
-            });
-
-            await checkFeedbackSurveyEligibility();
-
-        } catch (error) {
-            if (isUserCancelledAuth(error)) return;
-            console.error('Ошибка входа через Facebook:', error);
-            alert(`Ошибка Facebook: ${error.message}`);
-        }
-    }
+    // const loginWithFacebook = async () => {
+    //     try {
+    //         const isNative = Capacitor.isNativePlatform();
+    //         let user;
+    //         if (isNative) {
+    //             const FACEBOOK_PERMISSIONS = ['email', 'public_profile'];
+    //             const result = await FacebookLogin.login({ permissions: FACEBOOK_PERMISSIONS });
+    //             if (!result.accessToken) {
+    //                 console.error('не вернул токен');
+    //                 return;
+    //             }
+    //             const credential = FacebookAuthProvider.credential(result.accessToken.token);
+    //             const authResult = await signInWithCredential(auth, credential);
+    //             user = authResult.user;
+    //         } else {
+    //             const provider = new FacebookAuthProvider();
+    //             const authResult = await signInWithPopup(auth, provider);
+    //             user = authResult.user;
+    //         }
+    //
+    //         const userDocRef = doc(db, 'users', user.uid);
+    //         const userDoc = await getDoc(userDocRef);
+    //
+    //         if (!userDoc.exists()) {
+    //             await setDoc(userDocRef, {
+    //                 ownedAvatars: ['1.png', '2.png'],
+    //                 name: user.displayName || 'User Facebook',
+    //                 email: user.email,
+    //                 registeredAt: serverTimestamp(),
+    //                 feedbackSurveyShownAt: null,
+    //                 avatar: '1.png',
+    //                 subscriptionEndsAt: null,
+    //                 subscriptionCancelled: false,
+    //                 gotPremiumBonus: false,
+    //                 voiceConsentGiven: false,
+    //                 hasSeenOnboarding: false,
+    //                 isPremium: false,
+    //                 totalHats: 0,
+    //                 points: 0,
+    //                 claimedBonuses: [],
+    //                 sale_5: false,
+    //                 sale_10: false,
+    //                 sale_15: false,
+    //                 ...createInitialAchievementsObject()
+    //             });
+    //         }
+    //
+    //         const finalDoc = await getDoc(userDocRef);
+    //         const userDataFromDb = finalDoc.data() || {};
+    //
+    //         setUserData({
+    //             name: user.displayName,
+    //             email: user.email,
+    //             registeredAt: user.metadata.creationTime,
+    //             uid: user.uid,
+    //             providerId: user.providerData[0]?.providerId || 'facebook.com',
+    //             ...userDataFromDb
+    //         });
+    //
+    //         await checkFeedbackSurveyEligibility();
+    //
+    //     } catch (error) {
+    //         if (isUserCancelledAuth(error)) return;
+    //         console.error('Ошибка входа через Facebook:', error);
+    //         alert(`Ошибка Facebook: ${error.message}`);
+    //     }
+    // }
 
     const loginWithGoogle = async () => {
         try {
@@ -863,7 +861,6 @@ export const userAuthStore = defineStore('auth', () => {
         activateFreeze,
         cancelFreeze,
         loginWithApple,
-        loginWithFacebook,
         claimedBonuses,
         addClaimedBonus
     }

@@ -6,23 +6,33 @@
         <h1 class="page-title">{{ t('nav.gameMode') }}</h1>
       </div>
       <transition name="menu-appear">
-        <div class="game-grid" v-if="isMounted">
-          <div
-              v-for="game in gameModes"
-              :key="game.id"
-              class="game-card"
-          >
-            <NuxtLink
-                v-if="game.url"
-                :to="game.url"
-                class="card-content"
-            >
-              <div class="card__icon-wrapper">
-                <img class="card__icon-item" :src="game.icon" :alt="game.alt">
-              </div>
-              <div class="card-title">{{ game.title }}</div>
-              <img class="card__icon-next" src="../assets/images/next.svg" alt="">
-            </NuxtLink>
+        <div class="scrollable-view" v-if="isMounted">
+          <div class="banner-wrapper">
+            <VBanner
+                text="Изучай немецкий язык играя! Выбирай любой режим."
+                :icon="Game"
+            />
+          </div>
+          <div class="topics-list-container">
+            <template v-for="game in gameModes" :key="game.id">
+              <NuxtLink
+                  v-if="game.url"
+                  :to="game.url"
+                  class="topic-list-item"
+              >
+                <div class="topic-item-content">
+                  <div class="topic-icon-box">
+                    <img class="topic-img-icon" :src="game.icon" :alt="game.alt">
+                  </div>
+                  <div class="topic-label">{{ game.title }}</div>
+                </div>
+                <div class="topic-arrow">
+                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </div>
+              </NuxtLink>
+            </template>
           </div>
         </div>
       </transition>
@@ -31,23 +41,23 @@
 </template>
 
 <script setup>
-import {computed, ref} from 'vue'
+import {computed, ref, onMounted} from 'vue'
 import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
+import VBanner from "~/src/components/V-banner.vue";
 import DuelIcon from '../assets/images/chat-balloon.svg'
 import Diary from '../assets/images/Diary.svg'
 import GuessWords from '../assets/images/guessWord.svg'
 import Marathon from '../assets/images/dailyIcons/timer.svg'
 import Galaxy from '../assets/images/Galaxy.svg'
+import Game from '../assets/images/app-nav-icons/game.svg'
 const isMounted = ref(false)
-
 
 definePageMeta({
   layout: 'footerlayout'
 })
 
-
-
 const {t} = useI18n()
+
 const gameModes = computed(() => [
   {id: 'fight', url: '/german-universe', icon: Galaxy, alt: 'Galaxy', title: t('sub.fight')},
   {id: 'wordDuel', url: '/sentence-duel', icon: DuelIcon, alt: 'DuelIcon', title: t('sub.wordDuel')},
@@ -59,14 +69,9 @@ const gameModes = computed(() => [
 onMounted(() => {
   isMounted.value = true
 })
-
 </script>
 
 <style scoped>
-
-.card__icon-next {
-  width: 18px;
-}
 .game-page {
   font-family: "Nunito", sans-serif;
   background: var(--bg);
@@ -83,11 +88,6 @@ onMounted(() => {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.card__icon-item {
-  width: 40px;
-  height: 40px;
 }
 
 .page-header {
@@ -110,53 +110,98 @@ onMounted(() => {
   text-shadow: 0 1px var(--titleColor);
 }
 
-.game-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 15px;
+.scrollable-view {
   flex: 1;
   overflow-y: auto;
-  padding-bottom: 110px;
+  padding: 10px 16px 110px;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
 }
 
-.game-grid::-webkit-scrollbar {
+.scrollable-view::-webkit-scrollbar {
   display: none;
 }
 
-.game-card {
-  background: var(--menuItemsBg);
-  border-radius: 20px;
-  padding: 7px 15px;
-  border: 2px solid var(--tabsSlideBorderColor);
-  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+.banner-wrapper {
+  margin-bottom: 20px;
 }
 
-.card-content {
+/* --- СТИЛИ СПИСКА --- */
+.topics-list-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.topic-list-item {
+  background: var(--menuItemsBg); /* ТВОИ ПЕРЕМЕННЫЕ */
+  border-radius: 20px;
+  padding: 14px 16px;
+  display: flex;
   align-items: center;
-  height: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+  border: 2px solid var(--tabsSlideBorderColor); /* ТВОИ ПЕРЕМЕННЫЕ */
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor); /* ТВОИ ПЕРЕМЕННЫЕ */
+  transition: transform 0.1s, box-shadow 0.1s;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.is-dev .card-title {
-  color: #888;
+.topic-list-item:active {
+  transform: translateY(4px);
+  box-shadow: 0 0px 0 var(--tabsSlideBorderColor);
 }
 
-.card__icon-wrapper {
-  margin-right: 15px;
-}
-
-.card-title {
-  font-size: 16px;
-  font-weight: 700;
-  margin: 0;
-  color: var(--titleColor);
+.topic-item-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   flex: 1;
-  text-align: start;
 }
+
+.topic-icon-box {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.topic-img-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.topic-label {
+  color: var(--titleColor);
+  font-size: 17px;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+
+.topic-arrow {
+  background-color: #3b82f6;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 0px #2563eb;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
 
 .menu-appear-enter-active {
   transition: all 0.4s ease-out;
@@ -167,4 +212,13 @@ onMounted(() => {
   transform: translateY(20px);
 }
 
+@media (max-width: 400px) {
+  .topic-label {
+    font-size: 15px;
+  }
+  .topic-icon-box {
+    width: 32px;
+    height: 32px;
+  }
+}
 </style>

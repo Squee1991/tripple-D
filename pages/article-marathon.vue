@@ -2,12 +2,14 @@
   <div class="page-wrapper">
     <div class="header__title-wrapper">
       <VBackBtn/>
-<!--      <h1 class="header__title">{{ t('marathonPrepare.title') }}</h1>-->
       <h1 class="header__title">{{ t('ranked.marathonTab')}}</h1>
     </div>
     <div class="prepare-container">
-      <div class="header">
-        <p class="subtitle">{{ t('marathonPrepare.subtitle') }}</p>
+      <div class="banner">
+        <VBanner
+            :text="t('marathonPrepare.subtitle')"
+            :icon="DailyIcon"
+        />
       </div>
       <div class="panel__wrapper">
         <div v-if="authStore.uid" class="user-greeting">
@@ -68,6 +70,8 @@ import {useGameStore} from '../store/marafonStore.js'
 import {userAuthStore} from '../store/authStore.js'
 import {useSeoMeta} from "#imports";
 import VBackBtn from "~/src/components/V-back-btn.vue";
+import VBanner from "~/src/components/V-banner.vue";
+import DailyIcon from '../assets/images/dailyIcons/timer.svg'
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -133,15 +137,17 @@ const difficultyBase = ref([
   -webkit-tap-highlight-color: transparent;
 }
 
+.banner {
+  padding: 0 15px;
+}
+
 .header__title-wrapper {
   display: flex;
   align-items: center;
   padding: 5px 10px 10px 10px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
   flex-shrink: 0;
   z-index: 10;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
 }
 
 .header__title {
@@ -191,9 +197,6 @@ const difficultyBase = ref([
 }
 
 .user-greeting, .guest-greeting {
-  border: 3px solid var(--menuBorder);
-  box-shadow: 2px 2px 0 var(--menuBorder);
-  background: var(--tabsSlideBg);
   padding: 16px;
   border-radius: 20px;
   text-align: center;
@@ -218,13 +221,12 @@ const difficultyBase = ref([
 }
 
 .record__value {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 900;
   background: #fca13a;
   color: #1e1e1e;
   padding: 4px 16px;
   border-radius: 12px;
-  border: 3px solid #1e1e1e;
 }
 
 .settings-block h2 {

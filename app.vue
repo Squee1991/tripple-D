@@ -33,6 +33,7 @@ import {onMounted, onUnmounted, ref, watch} from "vue";
 import {dailyStore} from './store/dailyStore'
 import {useHead} from '#imports'
 import { Capacitor } from '@capacitor/core'
+import { AdMob } from '@capacitor-community/admob';
 const { locale, t } = useI18n()
 const billingStore = useBillingStore()
 
@@ -133,6 +134,19 @@ watch(() => authStore.initialized, async (isReady) => {
 onUnmounted(() => {
   daily.stop()
 })
+
+onMounted(async () => {
+  if (Capacitor.isNativePlatform()) {
+    try {
+      await AdMob.initialize({
+        initializeForTesting: true,
+      });
+      console.log('AdMob успешно инициализирован!');
+    } catch (e) {
+      console.error('Ошибка инициализации AdMob:', e);
+    }
+  }
+});
 
 watch(() => authStore.uid, (newUid) => {
       if (newUid) billingStore.initialize()

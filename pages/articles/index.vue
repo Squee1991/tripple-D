@@ -13,90 +13,107 @@
       <div class="theme-content-area">
         <div class="grid-area-wrapper">
           <div class="theme__grid-container">
-            <div class="theme-grid">
+            <div class="banner-wrapper">
+              <VBanner
+                  text="Изучение слов и Артиклей по различным темам и способам"
+                  :icon="BannerIcon"
+              />
+            </div>
+            <div class="topics-list-container">
               <div
-                  v-for="key in topicKeys"
+                  v-for="(key, index) in topicKeys"
                   :key="key"
-                  class="theme-card"
+                  class="topic-list-item"
                   :class="{ active: selectedTopic === key }"
                   @click="selectTopic(key)"
               >
-                <div class="card-counter">
-                  {{ themeProgress[key]?.total || 0 }}
+                <div class="topic-main-row">
+                  <div class="topic-item-content">
+                    <div class="topic-icon-box">
+                      <img class="theme__cards-icon-item"
+                           :src="`/images/article-themes-images/${iconMap[key] || 'default.svg'}`" :alt="key"/>
+                    </div>
+                    <span class="topic-label">{{ t(nameMap[key]) }}</span>
+                  </div>
+                  <div class="topic-arrow">
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none"
+                         stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </div>
                 </div>
 
-                <div class="theme-card-icon">
-                  <img class="theme__cards-icon-item" :src="`/images/article-themes-images/${iconMap[key] || 'default.svg'}`" :alt="key" />
+                <div class="topic-progress-wrapper">
+                  <div class="progress-bar-container">
+                    <div
+                        class="progress-bar-fill"
+                        :style="{
+                        width: `${themeProgress[key]?.total ? (themeProgress[key].learned / themeProgress[key].total) * 100 : 0}%`,
+                        backgroundColor: getTopicColor(index)
+                      }"
+                    ></div>
+                  </div>
+                  <div class="progress-text">
+                    {{ themeProgress[key]?.learned || 0 }}/{{ themeProgress[key]?.total || 0 }}
+                  </div>
                 </div>
-                <div class="theme-card-title">{{ t(nameMap[key]) }}</div>
+
               </div>
             </div>
           </div>
         </div>
-        <Transition name="slide-right" appear>
-          <div v-if="showModesBlock" class="learning-modes-block">
-            <div class="learning__modes-wrapper">
+      </div>
+      <Transition name="slide-right" appear>
+        <div v-if="showModesBlock" class="learning-modes-block">
+          <div class="learning__modes-wrapper">
+            <div class="modes-header-container">
               <button @click="clearSelectedTopic" class="close-modes-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                  <path
-                      fill="currentColor"
-                      d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275L12 10.6l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275-.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275z"
-                  ></path>
+                  <path fill="grey"
+                        d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275L12 10.6l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275-.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275z"></path>
                 </svg>
               </button>
-              <div>
-                <div class="modes-title">
-                  {{ t('selectedpage.choiceTitle') }}
-                </div>
-                <div class="topic-hint">
-                  {{ t('selectedpage.topic') }}: {{ t(nameMap[selectedTopic]) }}
-                </div>
+              <div class="modes-title-box">
+                <div class="modes-title">{{ t('selectedpage.choiceTitle') }}</div>
+                <div class="topic-hint">{{ t('selectedpage.topic') }}: {{ t(nameMap[selectedTopic]) }}</div>
               </div>
-              <div class="modes-list">
-                <label
-                    v-for="mode in availableModes"
-                    :key="mode.key"
-                    class="checkbox-container"
-                    :class="{ 'active-mode': selectedModes.includes(mode.key) }"
-                >
-                  <input
-                      type="checkbox"
-                      v-model="selectedModes"
-                      :value="mode.key"
-                  />
-                  <span class="checkmark">
-                    <svg viewBox="0 0 24 24">
-                      <polyline points="3 12 10 20 21 4"/>
-                    </svg>
-                  </span>
-                  <span class="label-text">{{ t(mode.label) }}</span>
-                </label>
-              </div>
-              <button
-                  class="start-btn"
-                  :disabled="!selectedModes.length || isLoading"
-                  @click="startLearning"
-              >
-                {{ t('selectedpage.startBtn') }}
-              </button>
             </div>
+            <div class="modes-list">
+              <label
+                  v-for="mode in availableModes"
+                  :key="mode.key"
+                  class="checkbox-container"
+                  :class="{ 'active-mode': selectedModes.includes(mode.key) }"
+              >
+                <input type="checkbox" v-model="selectedModes" :value="mode.key"/>
+                <span class="checkmark">
+                  <svg viewBox="0 0 24 24"><polyline points="3 12 10 20 21 4"/></svg>
+                </span>
+                <span class="label-text">{{ t(mode.label) }}</span>
+              </label>
+            </div>
+            <button class="start-btn" :disabled="!selectedModes.length || isLoading" @click="startLearning">
+              {{ t('selectedpage.startBtn') }}
+            </button>
           </div>
-        </Transition>
-      </div>
+        </div>
+      </Transition>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, nextTick } from 'vue'
-import { useRouter } from 'vue-router'
-import { userlangStore } from '../../store/learningStore.js'
+import {ref, computed, onMounted, nextTick} from 'vue'
+import {useRouter} from 'vue-router'
+import {userlangStore} from '../../store/learningStore.js'
 import Lottie from 'lottie-web'
-import { nameMap } from '../../utils/nameMap.js'
-import { useSeoMeta } from '#imports'
+import {nameMap} from '../../utils/nameMap.js'
+import {useSeoMeta} from '#imports'
 import NotFound from '../../assets/animation/notFound.json'
 import VBackBtn from "~/src/components/V-back-btn.vue";
 import VLoginPreloader from "../../src/components/V-loginPreloader.vue";
+import VBanner from "~/src/components/V-banner.vue";
+import BannerIcon from '../../assets/images/articleBannerIcon.svg'
 
 const iconMap = {
   Furniture: 'chair.svg',
@@ -130,7 +147,14 @@ const iconMap = {
   Informatik: 'Informatik.svg'
 }
 
-const { t } = useI18n()
+const topicColors = ['#FFEB7F', '#9DFFBB', '#FFAFF3', '#88B5FF', '#FF9F7F', '#AFAFFF', '#7FFFDF', '#FFD1AF']
+const getTopicColor = (index) => topicColors[index % topicColors.length]
+
+const bannerText = [
+  'Изучение слов и Артиклей'
+]
+
+const {t} = useI18n()
 const showModesBlock = ref(false)
 const showNoTopicMessage = ref(true)
 const router = useRouter()
@@ -158,12 +182,12 @@ const clearSelectedTopic = () => {
 const topicKeys = computed(() => Object.keys(nameMap))
 
 const baseModes = [
-  { key: 'wordTranslate',     label: 'modes.wordTranslate' },
-  { key: 'article',     label: 'modes.article' },
-  { key: 'letters',     label: 'modes.letters' },
-  { key: 'wordArticle', label: 'modes.articleWord' },
-  { key: 'plural',      label: 'modes.plural' },
-  { key: 'audio',       label: 'modes.audio' }
+  {key: 'wordTranslate', label: 'modes.wordTranslate'},
+  {key: 'article', label: 'modes.article'},
+  {key: 'letters', label: 'modes.letters'},
+  {key: 'wordArticle', label: 'modes.articleWord'},
+  {key: 'plural', label: 'modes.plural'},
+  {key: 'audio', label: 'modes.audio'}
 ]
 
 const topicWords = computed(() => {
@@ -189,10 +213,17 @@ const themeProgress = computed(() => {
   return Object.fromEntries(
       Object.entries(themeList.value).map(([key, words]) => {
         const total = words.length
-        const learned = words.filter(word =>
-            store.learnedWords.some(lw => lw.de === word.de && lw.topic === key)
-        ).length
-        return [key, { learned, total }]
+        const hasPlural = hasAnyPlural(words)
+        const modesToCheck = baseModes
+            .filter(m => hasPlural || m.key !== 'plural')
+            .map(m => m.key)
+        const learned = words.filter(word => {
+          const globalWord = store.words.find(w => w.de === word.de && w.topic === key)
+          if (!globalWord || !globalWord.progress) return false
+          return modesToCheck.every(mode => globalWord.progress[mode] === true)
+        }).length
+
+        return [key, {learned, total}]
       })
   )
 })
@@ -207,14 +238,18 @@ const startLearning = async () => {
   if (!selectedModes.value.length || isLoading.value) return
   isLoading.value = true
   try {
+    const sortedSelectedModes = baseModes
+        .filter(m => selectedModes.value.includes(m.key))
+        .map(m => m.key)
+
     const topicWordsLocal = (themeList.value[selectedTopic.value] || [])
         .filter(word => {
           const globalWord = store.words.find(
               w => w.de === word.de && w.topic === selectedTopic.value
           )
-          return selectedModes.value.some(mode => !(globalWord?.progress?.[mode] === true))
+          return sortedSelectedModes.some(mode => !(globalWord?.progress?.[mode] === true))
         })
-        .map(w => ({ ...w, topic: selectedTopic.value }))
+        .map(w => ({...w, topic: selectedTopic.value}))
 
     await store.addWordsToGlobal(topicWordsLocal)
     await store.setSelectedWords(topicWordsLocal)
@@ -224,7 +259,7 @@ const startLearning = async () => {
     await nextTick()
     const path = localePath({
       path: '/articles/articles-session',
-      query: { topic: selectedTopic.value, mode: selectedModes.value }
+      query: {topic: selectedTopic.value, mode: sortedSelectedModes}
     })
     await router.push(path)
   } catch (e) {
@@ -265,6 +300,7 @@ onMounted(() => {
   height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .theme__header {
@@ -281,7 +317,7 @@ onMounted(() => {
   display: flex;
   font-size: 24px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--titleColor);
   margin-left: 15px;
   font-family: "Nunito", sans-serif;
 }
@@ -291,14 +327,6 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
-}
-
-.theme-title {
-  font-family: "Nunito", sans-serif;
-  font-size: 15px;
-  color: var(--titleColor, #1e1e1e);
-  text-align: center;
-  padding: 10px;
 }
 
 .theme-content-area {
@@ -318,84 +346,130 @@ onMounted(() => {
 
 .theme__grid-container {
   flex-grow: 1;
-  padding: 10px 10px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .theme__grid-container::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+  display: none;
 }
 
-.theme-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 15px 10px;
-  justify-content: start;
-  align-content: start;
-  padding-bottom: 1.4rem;
+.banner-wrapper {
+  margin-bottom: 20px;
 }
 
-.theme-card {
-  background: #fff;
-  border-radius: 16px;
-  border: 3px solid var(--tabsSlideBorderColor);
-  box-shadow: var(--boxShadowMobile);
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-  position: relative;
-  overflow: hidden;
+
+.topics-list-container {
   display: flex;
   flex-direction: column;
+  gap: 14px;
+  padding-bottom: 40px;
 }
 
+.topic-list-item {
+  border-radius: 20px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  background: var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+  transition: transform 0.1s, border-bottom-width 0.1s;
+}
 
-.card-counter {
-  position: absolute;
-  top: -5px;
-  right: -8px;
-  width: 45px;
-  height: 35px;
-  background-color: #e74c3c;
-  color: white;
-  border-radius: 25%;
+.topic-list-item:active {
+  transform: translateY(4px);
+  border-bottom-width: 2px;
+}
+
+.topic-main-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  font-weight: 400;
-  z-index: 2;
-}
-
-.theme-card-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 10px;
-  flex-grow: 1;
-}
-
-.theme__cards-icon-item {
-  width: 75px;
-  height: 75px;
-  object-fit: contain;
-}
-
-.theme-card-title {
-  font-family: "Nunito", sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: white;
-  background: rebeccapurple;
-  padding: 10px;
+  justify-content: space-between;
   width: 100%;
 }
 
+.topic-item-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.topic-icon-box {
+  font-size: 32px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme__cards-icon-item {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.15));
+}
+
+.topic-label {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+}
+
+.topic-arrow {
+  background-color: #3b82f6;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 0px #2563eb;
+  flex-shrink: 0;
+}
+
+.topic-progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  width: 100%;
+}
+
+.progress-bar-container {
+  flex: 1;
+  height: 8px;
+  background-color: #1e272e;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease-out;
+}
+
+.progress-text {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 900;
+  min-width: 36px;
+  text-align: right;
+  font-family: "Nunito", sans-serif;
+}
+
 .learning-modes-block {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -404,7 +478,7 @@ onMounted(() => {
   height: 100%;
   background: var(--bg);
   z-index: 2000;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   display: flex;
   flex-direction: column;
 }
@@ -416,12 +490,16 @@ onMounted(() => {
   position: relative;
 }
 
+.modes-header-container {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  margin-bottom: 15px;
+}
+
 .close-modes-btn {
-  position: absolute;
-  top: 0;
-  left: 15px;
   background: #e0e0e0;
-  border: 3px solid #1e1e1e;
+  border: 3px solid #af9e9e;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -429,9 +507,10 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #1e1e1e;
+  color: #737070;
   font-size: 1.5rem;
   transition: background-color 0.1s ease;
+  flex-shrink: 0;
 }
 
 .close-modes-btn:active {
@@ -439,21 +518,28 @@ onMounted(() => {
   color: white;
 }
 
+.modes-title-box {
+  flex-grow: 1;
+  text-align: left;
+  margin-left: 15px;
+  padding-top: 10px;
+}
+
 .modes-title {
+  display: flex;
+  justify-content: center;
   font-size: 24px;
   font-weight: 700;
-  text-align: center;
   color: var(--titleColor);
 }
 
 .topic-hint {
-  text-align: center;
   color: #726b6b;
-  margin-bottom: 1.5rem;
   font-family: Nunito, sans-serif;
   font-style: italic;
   font-weight: 500;
-  margin-top: 5px;
+  margin-top: 2px;
+  text-align: center;
 }
 
 .modes-list {
@@ -472,20 +558,20 @@ onMounted(() => {
   cursor: pointer;
   user-select: none;
   position: relative;
-  padding: 12px;
-  border-radius: 12px;
-  background: #f9f9f9;
-  border: 2px solid transparent;
-  transition: all 0.2s;
+  padding: 14px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  transition: transform 0.1s ease;
 }
 
 .checkbox-container:active {
-  background-color: #fef8e4;
+  transform: scale(0.98);
 }
 
 .checkbox-container.active-mode {
   background-color: #f1c40f;
-  border: 2px solid #1e1e1e;
 }
 
 .checkbox-container input {
@@ -496,7 +582,7 @@ onMounted(() => {
   width: 28px;
   height: 28px;
   border-radius: 8px;
-  border: 3px solid #1e1e1e;
+  border: 3px solid #af9e9e;
   background: #fff;
   position: relative;
   flex-shrink: 0;
@@ -524,10 +610,6 @@ onMounted(() => {
   transition: stroke-dashoffset 0.3s ease;
 }
 
-.checkbox-container input:checked + .checkmark {
-  background-color: #fff;
-}
-
 .checkbox-container input:checked + .checkmark polyline {
   stroke-dashoffset: 0;
 }
@@ -538,7 +620,7 @@ onMounted(() => {
 
 .label-text {
   color: #1e1e1e;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 1.1rem;
 }
 
@@ -548,13 +630,13 @@ onMounted(() => {
   font-family: "Nunito", sans-serif;
   font-size: 19px;
   font-weight: 700;
-  background-color: #4ade80;
-  border: 3px solid #1e1e1e;
+  background-color: #22c55e;
+  border: none;
   color: #1e1e1e;
-  border-radius: 16px;
+  border-radius: 24px;
   cursor: pointer;
   transition: transform 0.1s ease, box-shadow 0.1s ease;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 0 4px 0px #22934c;
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -563,7 +645,7 @@ onMounted(() => {
   background: #e0e0e0;
   color: #a1a1a1;
   border-color: #a1a1a1;
-  box-shadow: 2px 2px 0px #a1a1a1;
+  box-shadow: 0 4px 0 #a1a1a1;
   cursor: not-allowed;
 }
 
@@ -581,5 +663,16 @@ onMounted(() => {
 
 .fade-enter-from, .fade-leave-to {
   opacity: 0;
+}
+
+@media (max-width: 400px) {
+  .topic-label {
+    font-size: 15px;
+  }
+
+  .topic-icon-box {
+    width: 38px;
+    height: 38px;
+  }
 }
 </style>

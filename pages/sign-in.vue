@@ -6,18 +6,12 @@
         <div v-if="submitLoading" class="loading-overlay">
           <div class="loader-box"></div>
         </div>
-
-        <div class="auth__title">
+        <div class="auth__title" :class="{ 'left': mode === 'reset' }">
           <img
               @click="mode = 'login'"
               v-if="mode === 'reset'" class="auth__arrow" src="../assets/images/arrowNav.svg"
               alt="arrow_nav">
-          <h1 class="login__title">
-            {{
-              mode === 'login' ? t('auth.auths') : mode === 'register' ? t('auth.regs') :
-                  t('auth.resetTitle')
-            }}
-          </h1>
+          <h1 class="login__title">{{mode === 'login' ? t('auth.auths') : mode === 'register' ? t('auth.regs') : t('auth.resetTitle')}}</h1>
         </div>
 
         <div v-if="mode === 'login' || mode === 'register'" class="auth__tabs">
@@ -71,7 +65,6 @@
                 }}
               </button>
             </div>
-
             <div v-if="mode === 'login'" class="auth__forgot" @click="mode = 'reset'">{{
                 t('auth.forgot')
               }}
@@ -81,13 +74,15 @@
         <div v-if="mode === 'login'" class="social-auth-container">
           <button class="google__auth-wrapper" @click="handleSocialLogin('google')" :disabled="submitLoading">
             <img class="google__icon" src="../assets/images/google.svg" alt="google_icon">
+            <span class="auth__text-method">GOOGLE</span>
           </button>
           <button class="apple__auth-wrapper" @click="handleSocialLogin('apple')" :disabled="submitLoading">
             <img class="apple__icon" src="../assets/images/apple.svg" alt="apple_icon">
+            <span class="auth__text-method">APPLE</span>
           </button>
-          <button class="facebook__auth-wrapper" @click="handleSocialLogin('facebook')" :disabled="submitLoading">
-            <img class="facebook__icon" src="../assets/images/facebook.svg" alt="facebook_icon">
-          </button>
+<!--          <button class="facebook__auth-wrapper" @click="handleSocialLogin('facebook')" :disabled="submitLoading">-->
+<!--            <img class="facebook__icon" src="../assets/images/facebook.svg" alt="facebook_icon">-->
+<!--          </button>-->
         </div>
       </div>
     </div>
@@ -103,7 +98,7 @@ import {mapErrors} from '../utils/errorsHandler.js'
 import View from '../../assets/images/loginEyes/view.svg'
 import Hide from '../../assets/images/loginEyes/hide.svg'
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
-
+const forgot = ref(false);
 const {t, locale} = useI18n()
 const router = useRouter()
 const emits = defineEmits(['close-auth-form'])
@@ -119,6 +114,10 @@ const toggleTransform = computed(() => {
   } else {
     return mode.value === 'login' ? 'translateX(0%)' : 'translateX(100%)'
   }
+})
+
+const forgotTitleComputed = computed(() => {
+  return forgot.value ? t('auth.resetTitle') : t('auth.loginTitle')
 })
 
 const fields = ref([
@@ -159,8 +158,7 @@ const handleSocialLogin = (provider) => {
     try {
       if (provider === 'google') await authStore.loginWithGoogle()
       if (provider === 'apple') await authStore.loginWithApple()
-      if (provider === 'facebook') await authStore.loginWithFacebook()
-
+      // if (provider === 'facebook') await authStore.loginWithFacebook()
       emits('close-auth-form')
       router.push('/')
     } catch (e) {
@@ -243,6 +241,11 @@ onUnmounted(() => {
 
 <style>
 
+
+.auth__title.left {
+  justify-content: start;
+}
+
 .close__auth-icon {
   width: 22px;
   height: 22px;
@@ -275,7 +278,7 @@ onUnmounted(() => {
 
 .login__title {
   text-align: start;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
   color: var(--titleColor);
@@ -287,7 +290,13 @@ onUnmounted(() => {
   gap: 12px;
   width: 100%;
   margin-top: 1.5rem;
-  padding: 0 25px;
+}
+
+.auth__text-method {
+  color: white;
+  font-weight: 600;
+  margin-left: 10px;
+  letter-spacing: .6px;
 }
 
 .google__auth-wrapper,
@@ -299,7 +308,7 @@ onUnmounted(() => {
   justify-content: center;
   border-radius: 16px;
   cursor: pointer;
-  padding: 10px;
+  padding: 8px;
   border: none;
   transition: all 0.1s ease-in-out;
 }
@@ -307,14 +316,15 @@ onUnmounted(() => {
 .google__auth-wrapper,
 .apple__auth-wrapper,
 .facebook__auth-wrapper {
-  background: none;
+  background: #424141;
+  box-shadow: 0 5px 0 #282727;
 }
 
 .google__icon,
 .apple__icon,
 .facebook__icon {
-  width: 60px;
-  height: 60px;
+  width: 36px;
+  height: 36px;
 }
 
 .auth__label-text {
@@ -338,10 +348,9 @@ onUnmounted(() => {
   text-align: center;
   cursor: pointer;
   padding-top: 1rem;
-  color: var(--titleColor);
+  color: #37a1ff;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
-  text-decoration: underline;
 }
 
 .auth__inner {
@@ -377,6 +386,11 @@ onUnmounted(() => {
   position: relative;
 }
 
+.auth__title.left {
+  justify-content: flex-start;
+  text-align: left;
+}
+
 .auth__tabs {
   width: 100%;
   display: flex;
@@ -384,7 +398,6 @@ onUnmounted(() => {
   border-radius: 45px;
   position: relative;
   margin-bottom: 1.5rem;
-  box-shadow: 4px 4px 0 #1e1e1e;
   border: 3px solid #1e1e1e;
   overflow: hidden;
   padding: 4px;
@@ -415,7 +428,7 @@ onUnmounted(() => {
   left: 4px;
   width: calc(50% - 4px);
   height: calc(100% - 8px);
-  background: #1e1e1e;
+  background: #575555;
   border-radius: 45px;
   transition: transform 0.4s cubic-bezier(.38, 1.32, .39, 1);
   z-index: 0;
@@ -452,14 +465,14 @@ onUnmounted(() => {
 .auth__input {
   width: 100%;
   padding: 16px 20px;
-  border: 3px solid #1e1e1e;
   border-radius: 16px;
   background: #fff;
   font-size: 1rem;
   color: #1e1e1e;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  box-shadow: 2px 2px 0 #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   transition: all 0.2s;
   outline: none;
 }
@@ -476,17 +489,17 @@ onUnmounted(() => {
 
 .auth__submit {
   width: 100%;
-  background: #f1c40f;
-  border: 3px solid #1e1e1e;
-  color: #1e1e1e;
-  font-weight: 800;
+  background: #3b82f6;
+  border: none;
+  color: #ffffff;
   font-size: 1.5rem;
   padding: 12px 0;
+  font-weight: 600;
   border-radius: 18px;
   cursor: pointer;
-  box-shadow: 4px 4px 0 #1e1e1e;
-  text-shadow: none;
-  letter-spacing: 0;
+  box-shadow: 0 5px 0 #1e57d5;
+  text-shadow: 1px 1px #4d4c4c;
+  letter-spacing: 1px;
   font-family: "Nunito", sans-serif;
   transition: all 0.1s ease-in-out;
 }
