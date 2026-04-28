@@ -116,7 +116,7 @@ import {useRouter} from 'vue-router'
 import {nameMap} from '../utils/nameMap.js'
 import {useSeoMeta} from "#imports"
 import VBackBtn from "~/src/components/V-back-btn.vue";
-
+import { showInterstitial } from '../utils/admob.js'
 const {t} = useI18n()
 const store = useGuessWordStore()
 const isSpinning = ref(false)
@@ -183,15 +183,17 @@ function stopTimer() {
   if (intervalId) clearInterval(intervalId)
 }
 
-async function startGame() {
-  await store.startGame()
-  now.value = Date.now()
-  isStarted.value = true
-  guessInput.value = ''
-  articleResult.value = null
-  showArticleModal.value = false
-  showLoseModal.value = false
-  startTimer()
+function startGame() {
+  showInterstitial(async ()=> {
+    await store.startGame()
+    now.value = Date.now()
+    isStarted.value = true
+    guessInput.value = ''
+    articleResult.value = null
+    showArticleModal.value = false
+    showLoseModal.value = false
+    startTimer()
+  })
 }
 
 function guessWord() {

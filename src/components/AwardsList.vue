@@ -108,6 +108,7 @@ function closeAward() {
   text-align: center;
   display: flex;
   width: 120px;
+  height: 145px;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
@@ -144,6 +145,8 @@ function closeAward() {
 .image-wrapper {
   position: relative;
   width: 55px;
+  height: 63px;
+  min-height: 63px;
   margin-bottom: 10px;
 }
 
@@ -274,6 +277,15 @@ button:disabled {
   z-index: 1;
   opacity: 0.65;
   transform: translateY(-1px);
+}
+
+.awards__section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
 .awards__section:after{

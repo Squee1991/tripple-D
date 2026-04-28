@@ -117,7 +117,7 @@ import {storeToRefs} from 'pinia'
 import {useAudioTaskStore} from '../../store/audioTaskStore.js'
 import AudioButton from '../../src/components/AudioBtn.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
-
+const { t } = useI18n()
 const router = useRouter()
 const store = useAudioTaskStore()
 const {allTasks, currentLevel, currentTopicId, loading, userProgress} = storeToRefs(store)

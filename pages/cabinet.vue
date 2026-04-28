@@ -45,90 +45,89 @@
       <section class="content-panel">
         <ClientOnly>
           <div class="content-body">
-            <div v-if="activeTabKey === 'info'" class="header-surface">
-              <div v-if="isSettingsOpen" class="settings-wrapper">
-                <VSettings
-                    :userIcon="UserAccIcon"
-                    :settingsIcon="OptionIcon"
-                    :faqIcon="FaqIcon"
-                    :activeTabKey="activeTabKey"
-                    :awards="awardList"
-                    @back="isSettingsOpen = false"
-                    @open="handleSettingsAction"
-                />
-              </div>
-              <div v-else>
-                <div class="user-block">
-                  <div class="avatar-container">
-                    <img
-                        v-if="authStore.avatarUrl"
-                        :src="authStore.avatarUrl"
-                        alt="Аватар"
-                        class="avatar-current"
-                    />
-                    <div v-else class="avatar-placeholder"></div>
+            <transition name="fade-page" mode="out-in">
+              <div v-if="activeTabKey === 'info'" class="header-surface" key="info">
+                <div v-if="isSettingsOpen" class="settings-wrapper">
+                  <VSettings
+                      :userIcon="UserAccIcon"
+                      :settingsIcon="OptionIcon"
+                      :faqIcon="FaqIcon"
+                      :activeTabKey="activeTabKey"
+                      :awards="awardList"
+                      @back="isSettingsOpen = false"
+                      @open="handleSettingsAction"
+                  />
+                </div>
+                <div v-else>
+                  <div class="user-block">
+                    <div class="avatar-container">
+                      <img
+                          v-if="authStore.avatarUrl"
+                          :src="authStore.avatarUrl"
+                          alt="Аватар"
+                          class="avatar-current"
+                      />
+                      <div v-else class="avatar-placeholder"></div>
+                      <button
+                          @click="isAvatarModalOpen = true"
+                          class="change-avatar-btn"
+                          title="Сменить аватар"
+                          type="button"
+                      >
+                        <img src="../assets/images/add.svg" alt="Сменить"/>
+                      </button>
+                    </div>
+                    <div class="user-info">
+                      <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
+                      <div class="exp-bar">
+                        <div class="exp-fill" :style="{ width: `${expFillWidth}%` }">
+                          <div class="glare"></div>
+                        </div>
+                        <span class="exp-text">{{ learningStore.exp }}%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="account-tabs">
+                    <div
+                        class="sliding-bg-account"
+                        :style="{ transform: `translateX(${activeAccountIndex * 100}%)`,  opacity: activeAccountIndex === -1 ? 0 : 1  }"></div>
                     <button
-                        @click="isAvatarModalOpen = true"
-                        class="change-avatar-btn"
-                        title="Сменить аватар"
+                        v-for="tab in ACCOUNT_TABS"
+                        :key="tab.key"
+                        class="account-tab"
+                        :class="{ active: accountTab === tab.key }"
+                        @click="accountTab = tab.key"
                         type="button"
                     >
-                      <img src="../assets/images/add.svg" alt="Сменить"/>
+                      <img :class="iconDisplayComputed" class="tab-icon --horizontal" :src="tab.icon" :alt="tab.alt">
+                      <span class="tab__text">{{ tab.label }}</span>
                     </button>
                   </div>
-                  <div class="user-info">
-<!--                    <div class="user-name">{{ userNameSafe }}</div>-->
-                    <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
-                    <div class="exp-bar">
-                      <div class="exp-fill" :style="{ width: `${expFillWidth}%` }">
-                        <div class="glare"></div>
+                  <div class="account-tab-body">
+                    <transition name="fade" mode="out-in">
+                      <div v-if="accountTab === 'common'" class="tab-surface" key="common">
+                        <PersonalInfoRows/>
+                        <AccountManagement @open="handleSettingsAction"/>
                       </div>
-                      <span class="exp-text">{{ learningStore.exp }}%</span>
-                    </div>
-
-                  </div>
-                </div>
-                <div class="account-tabs">
-                  <div
-                      class="sliding-bg-account"
-                      :style="{ transform: `translateX(${activeAccountIndex * 100}%)`,  opacity: activeAccountIndex === -1 ? 0 : 1  }"></div>
-                  <button
-                      v-for="tab in ACCOUNT_TABS"
-                      :key="tab.key"
-                      class="account-tab"
-                      :class="{ active: accountTab === tab.key }"
-                      @click="accountTab = tab.key"
-                      type="button"
-                  >
-                    <img :class="iconDisplayComputed" class="tab-icon --horizontal" :src="tab.icon" :alt="tab.alt">
-                    <span class="tab__text">{{ tab.label }}</span>
-                  </button>
-                </div>
-                <div class="account-tab-body">
-                  <div v-if="accountTab === 'common'" class="tab-surface">
-                    <PersonalInfoRows/>
-                    <AccountManagement @open="handleSettingsAction"/>
-                  </div>
-<!--                  <div v-if="accountTab === 'friends'" class="tab-surface">-->
-<!--                    <VFindFriends/>-->
-<!--                  </div>-->
-                  <div v-else-if="accountTab === 'awards'" class="tab-surface">
-                    <AwardsList :awards="awardList"/>
-                  </div>
-                  <div v-else-if="accountTab === 'rank'" class="rank-placeholder">
-                    <VRank/>
+                      <div v-else-if="accountTab === 'awards'" class="tab-surface" key="awards">
+                        <AwardsList :awards="awardList"/>
+                      </div>
+                      <div v-else-if="accountTab === 'rank'" class="rank-placeholder" key="rank">
+                        <VRank/>
+                      </div>
+                    </transition>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="tab__component-wrapper" v-else>
-              <component :is="components" @open="handleSettingsAction"/>
-            </div>
+
+              <div v-else class="tab__component-wrapper" :key="activeTabKey">
+                <component :is="components" @open="handleSettingsAction"/>
+              </div>
+            </transition>
           </div>
         </ClientOnly>
       </section>
     </div>
-
     <div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
       <div class="avatar-modal-content">
         <h3>{{ t('cabinet.newAvatarTitle') }}</h3>
@@ -1000,5 +999,52 @@ onMounted(async () => {
   .exp-bar {
     width: 170px;
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.fade-enter-from {
+  opacity: 0;
+  transform: translateY(5px) scale(0.98);
+}
+.fade-leave-to {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+.fade-page-enter-active,
+.fade-page-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.fade-page-enter-from {
+  opacity: 0;
+  transform: scale(0.98);
+}
+.fade-page-leave-to {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.fade-enter-from {
+  opacity: 0;
+  transform: translateY(5px) scale(0.98);
+}
+
+.fade-leave-to {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+
+.account-tab-body {
+  position: relative;
+  overflow-x: hidden;
 }
 </style>

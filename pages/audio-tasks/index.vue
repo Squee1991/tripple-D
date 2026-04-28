@@ -4,17 +4,19 @@ import {useRouter} from 'vue-router'
 import {storeToRefs} from 'pinia'
 import {useAudioTaskStore} from '../../store/audioTaskStore.js'
 import Modal from "../../src/components/modal.vue"
+import VBanner from "~/src/components/V-banner.vue"
 import HeadPhones from '../../assets/images/headphones.svg'
+import { showInterstitial } from '../../utils/admob.js'
 
 const router = useRouter()
 const store = useAudioTaskStore()
 const {allTasks, currentLevel, userProgress} = storeToRefs(store)
-const {t} = useI18n()
+const {t } = useI18n()
 const screen = ref('levels')
 const showDevModal = ref(false)
 
 const levels = ['A1', 'A2', 'B1']
-const levelColors = ['#9DFFBB', '#88B5FF', '#FF9F7F']
+const levelColors = ['#49b36a', '#88B5FF', '#FF9F7F']
 const topicColors = ['#FFEB7F', '#9DFFBB', '#FFAFF3', '#88B5FF', '#FF9F7F', '#AFAFFF', '#7FFFDF', '#FFD1AF']
 
 const overlayData = {
@@ -40,11 +42,6 @@ const handlePopState = () => {
   }
 }
 
-const getCircularProgressStyle = (topic) => {
-  const percent = getTopicProgressPercent(topic)
-  return {background: `conic-gradient(rgb(74 117 255) ${percent}%, rgb(255, 255, 255) 0deg)`}
-}
-
 const getTopicColor = (index) => topicColors[index % topicColors.length]
 const getTopicCompleted = (topic) => {
   if (!userProgress.value[topic.id]) return 0
@@ -62,8 +59,10 @@ const selectLevel = (level) => {
 }
 
 const selectTopic = (topic) => {
-  store.setCurrentTopicId(topic.id)
-  router.push('/audio-tasks/session')
+  showInterstitial(()=> {
+    store.setCurrentTopicId(topic.id)
+    router.push('/audio-tasks/session')
+  })
 }
 
 onMounted(async () => {
@@ -75,7 +74,6 @@ onMounted(async () => {
 onUnmounted(() => {
   window.removeEventListener('popstate', handlePopState)
 })
-
 </script>
 
 <template>
@@ -114,49 +112,83 @@ onUnmounted(() => {
       </div>
       <div class="quiz__content">
         <transition name="quiz-pop" mode="out-in">
-          <div :key="screen" :class="['quiz__grid', `quiz__grid--${screen}`]">
+          <div :key="screen" class="scrollable-view">
+
             <template v-if="screen === 'levels'">
-              <button
-                  v-for="(level, index) in levels"
-                  :key="level"
-                  @click="selectLevel(level)"
-                  class="game-card card--level"
-                  :style="{ '--card-color': levelColors[index] }"
-              >
-                <div class="game-card__body">
-                  <div class="game-card__content">
-                    <span class="game-card__label">{{ t('audioTasks.level') }}</span>
-                    <span class="game-card__badge">{{ level }}</span>
-                  </div>
-                  <div class="game-card__arrow">
-                    <img class="icon next" src="../../assets/images/next.svg" alt="next__icon">
-                  </div>
-                </div>
-              </button>
-            </template>
-            <template v-else>
-              <button
-                  v-for="(topic, index) in availableTopics"
-                  :key="topic.id"
-                  @click="selectTopic(topic)"
-                  class="game-card card--topic"
-                  :style="{ '--card-color': getTopicColor(index) }"
-              >
-                <div class="game-card__body">
-                  <div class="game-card__emoji">{{ topic.icon }}</div>
-                  <div class="game-card__info">
-                    <h3 class="game-card__title">{{ t(topic.title) }}</h3>
-                  </div>
-                  <div v-if="topic.tasks?.length" class="game-card__progress">
-                    <div class="progress-ring" :style="getCircularProgressStyle(topic)">
-                      <div class="progress-ring__center">
-                        {{ getTopicCompleted(topic) }}/{{ topic.tasks.length }}
-                      </div>
+              <div class="banner-wrapper">
+                <VBanner
+                    text="Тренируй понимание немецкого на слух в аудио заданиях!"
+                    :icon="HeadPhones"
+                />
+              </div>
+
+              <div class="topics-list-container">
+                <div
+                    v-for="(level, index) in levels"
+                    :key="level"
+                    @click="selectLevel(level)"
+                    class="topic-list-item"
+                >
+                  <div class="topic-item-content">
+                    <span class="topic-label">{{ t('audioTasks.level') }}</span>
+                    <div class="topic-icon-box" :style="{ color: levelColors[index] }">
+                      <span style="font-size: 24px; font-weight: 900;">{{ level }}</span>
                     </div>
                   </div>
+                  <div class="topic-arrow">
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </div>
                 </div>
-              </button>
+              </div>
             </template>
+
+            <template v-else>
+              <div class="banner-wrapper">
+                <VBanner
+                    text="Тренируй понимание немецкого на слух в аудио заданиях!"
+                    :icon="HeadPhones"
+                />
+              </div>
+              <div class="topics-list-container">
+                <div
+                    v-for="(topic, index) in availableTopics"
+                    :key="topic.id"
+                    @click="selectTopic(topic)"
+                    class="topic-list-item"
+                >
+                  <div class="topic-main-row">
+                    <div class="topic-item-content">
+                      <div class="topic-icon-box">{{ topic.icon }}</div>
+                      <span class="topic-label">{{ t(topic.title) }}</span>
+                    </div>
+                    <div class="topic-arrow">
+                      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div v-if="topic.tasks?.length" class="topic-progress-wrapper">
+                    <div class="progress-bar-container">
+                      <div
+                          class="progress-bar-fill"
+                          :style="{
+                          width: `${getTopicProgressPercent(topic)}%`,
+                          backgroundColor: getTopicColor(index)
+                        }"
+                      ></div>
+                    </div>
+                    <div class="progress-text">
+                      {{ getTopicCompleted(topic) }}/{{ topic.tasks.length }}
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </template>
+
           </div>
         </transition>
       </div>
@@ -206,154 +238,17 @@ onUnmounted(() => {
 .quiz__subtitle {
   font-size: 1rem;
   font-weight: 800;
-  color: #6B7280;
+  color: var(--titleColor);
   text-align: center;
   text-transform: uppercase;
   margin-top: 8px;
 }
 
-.quiz__content {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.quiz__grid {
-  display: grid;
-  gap: 20px;
-  padding: 10px 16px 50px;
-  overflow-y: auto;
-  align-content: start;
-  grid-auto-rows: max-content;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  -webkit-overflow-scrolling: touch;
-}
-
-.quiz__grid::-webkit-scrollbar {
-  display: none;
-}
-
-.quiz__grid--levels {
-  grid-template-columns: 1fr;
-}
-
-.quiz__grid--topics {
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-}
-
-.game-card {
-  --card-color: #eee;
-  background: var(--card-color);
-  border: 3px solid var(--tabsSlideBorderColor);
-  box-shadow: var(--boxShadowMobile);
-  border-radius: 30px;
-  padding: 0;
-  cursor: pointer;
-  width: 100%;
-  box-sizing: border-box;
-  transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.1s;
-  overflow: hidden;
-  display: block;
-  flex-shrink: 0;
-}
-
-.game-card:active {
-  transform: translateY(6px);
-  box-shadow: 0 2px 0 #2b2b2b;
-}
-
-.game-card__body {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 12px 24px;
-  box-sizing: border-box;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
-}
-
-.game-card__content {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  width: 100%;
-}
-
-.game-card__label {
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: #2b2b2b;
-  text-transform: uppercase;
-}
-
-.game-card__badge {
-  background: rgba(255, 255, 255, 0.51);
-
-  border-radius: 16px;
-  padding: 4px 14px;
-  font-size: 1.8rem;
-  font-weight: 900;
-}
-
-.game-card__arrow {
-  margin-left: auto;
-  color: #2b2b2b;
-  width: 18px;
-}
-
-.game-card__emoji {
-  font-size: 3rem;
-  margin-right: 20px;
-}
-
-.game-card__info {
-  flex: 1;
-  text-align: left;
-}
-
-.game-card__title {
-  font-size: 1.2rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin: 0;
-  line-height: 1.1;
-  color: #2b2b2b;
-}
-
-.game-card__progress {
-  margin-left: 12px;
-}
-
-.progress-ring {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 3px solid #2b2b2b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-}
-
-.progress-ring__center {
-  width: 40px;
-  height: 40px;
-  background: #FFF;
-  border: 3px solid #2b2b2b;
-  border-radius: 50%;
-  font-size: 12px;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .btn-icon-back, .quiz__btn {
   background: #fff;
   border-radius: 12px;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -368,39 +263,153 @@ onUnmounted(() => {
   box-shadow: 0px 0px 0px #2b2b2b;
 }
 
+.quiz__content {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollable-view {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 16px 50px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollable-view::-webkit-scrollbar {
+  display: none;
+}
+
+.banner-wrapper {
+  margin-bottom: 20px;
+}
+
+.topics-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.topic-list-item {
+  border-radius: 20px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  background: var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+  transition: transform 0.1s, border-bottom-width 0.1s;
+}
+
+.topic-list-item:active {
+  transform: translateY(4px);
+  border-bottom-width: 2px;
+}
+
+.topic-main-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.topic-list-item:not(:has(.topic-main-row)) {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topic-item-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.topic-icon-box {
+  font-size: 32px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
+}
+
+.topic-label {
+  color: var(--titleColor);
+  font-size: 17px;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+}
+
+.topic-arrow {
+  background-color: #3b82f6;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 0px #2563eb;
+  flex-shrink: 0;
+}
+
+.topic-progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  width: 100%;
+}
+
+.progress-bar-container {
+  flex: 1;
+  height: 8px;
+  background-color: #1e272e;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease-out;
+}
+
+.progress-text {
+  color: var(--titleColor);
+  font-size: 14px;
+  font-weight: 900;
+  min-width: 36px;
+  text-align: right;
+  font-family: "Nunito", sans-serif;
+}
+
 .quiz-pop-enter-active {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 .quiz-pop-leave-active {
   transition: all 0.2s ease-in;
 }
-
 .quiz-pop-enter-from {
   opacity: 0;
-  transform: scale(0.9);
+  transform: scale(0.95);
 }
-
 .quiz-pop-leave-to {
   opacity: 0;
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 @media (max-width: 400px) {
-  .game-card__label {
-    font-size: 1.2rem;
-  }
-
-  .game-card__badge {
-    font-size: 1.4rem;
-  }
-
-  .game-card__emoji {
-    font-size: 2.2rem;
-  }
-
-  .game-card__title {
-    font-size: 1rem;
+  .topic-icon-box {
+    font-size: 28px;
+    width: 35px;
   }
 }
 </style>

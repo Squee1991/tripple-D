@@ -93,17 +93,20 @@ const goToSignIn = () => {
   font-weight: 800;
   margin-bottom: 15px;
   text-align: center;
+  color: var(--titleColor);
 }
 
 .search-input {
   width: 100%;
   padding: 12px 16px;
-  background: #232d36;
-  border: 2px solid #374151;
+  background: #d6d8d9;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 12px;
-  color: #fff;
+  color: #262525;
   font-size: 16px;
   outline: none;
+  font-weight: 600;
 }
 
 .search-input:focus {
@@ -137,29 +140,31 @@ const goToSignIn = () => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px;
-  background: #232d36;
-  border: 2px solid #374151;
-  border-radius: 16px;
+  padding: 18px 20px;
+  background: var(--bg);
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  border-radius: 22px;
   cursor: pointer;
-  box-shadow: 0 4px 0 #111827;
+  transition: all 0.1s ease;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .lang-item:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 0 #111827;
+  transform: translateY(3px);
+  box-shadow: 0 3px 0 #111827;
+  color: white;
 }
 
 .lang-item.is-active {
-  border-color: #7d58ff;
-  background: #2d264d;
-  box-shadow: 0 4px 0 #4c34a3;
+  border-color: #6366F1;
 }
 
 .lang-item__name {
   font-weight: 700;
   font-size: 16px;
-  color: white;
+  color: var(--titleColor);
 }
 
 .lang-item__code {
@@ -178,8 +183,8 @@ const goToSignIn = () => {
 }
 
 .is-active .lang-item__indicator {
-  background: #fff;
-  border-color: #fff;
+  background: black;
+  border-color: black;
 }
 
 .lang-footer {
@@ -191,7 +196,7 @@ const goToSignIn = () => {
   height: 55px;
   background: #50c18d;
   border: none;
-  border-radius: 16px;
+  border-radius: 24px;
   color: #fff;
   font-size: 18px;
   font-weight: 800;

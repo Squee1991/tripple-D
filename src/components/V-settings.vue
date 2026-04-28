@@ -1,8 +1,11 @@
 <template>
   <div v-if="activeTabKey === 'info'" class="tab-content">
+    <VBanner
+        :text="t('Параметры аккаунта')"
+        :icon="SettingIcon"
+    />
     <div v-if="isThemeModalOpen" class="modal-overlay" @click.self="isThemeModalOpen = false">
       <div class="modal-card">
-        <div class="modal-title">{{ t('themeModal.title') }}</div>
         <div class="theme-grid">
           <label
               v-for="(label, key) in THEMES"
@@ -123,7 +126,8 @@ import {isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture} from '../../u
 import {useAchievementStore} from '../../store/achievementStore.js'
 import {userAuthStore} from "../../store/authStore.js";
 import LangSwitcher from "~/src/components/langSwitcher.vue";
-
+import VBanner from "~/src/components/V-banner.vue";
+import SettingIcon from "../../assets/images/settings.svg";
 const router = useRouter();
 const authStore = userAuthStore()
 const props = defineProps({
@@ -316,7 +320,7 @@ onMounted(async () => {
   color: var(--titleColor);
   font-weight: 700;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .link-arrow {
@@ -328,7 +332,7 @@ onMounted(async () => {
 
 .toggle__wrapper {
   font-weight: 900;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--titleColor);
   display: flex;
   align-items: center;

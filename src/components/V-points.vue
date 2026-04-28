@@ -390,19 +390,19 @@ onMounted(() => {
 }
 
 .progress_exp-bar {
-  width: 100%;
+  flex: 1;
   height: 25px;
   background: #e8eae5;
   border-radius: 10px;
-  position: relative;
   overflow: hidden;
 }
 
 .progress__bar {
   height: 100%;
   background-color: #10b981;
-  border-radius: 8px 0 0 8px;
-  transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border-radius: 8px;
+  transition: width 0.4s ease-out;
+  position: relative;
 }
 
 .glare{

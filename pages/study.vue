@@ -8,44 +8,63 @@
         </h1>
       </div>
       <transition name="fade-slide" mode="out-in">
-        <div v-if="isMounted && !selectedCategory" key="main" class="learn-grid">
-          <div
-              v-for="category in learnCategories"
-              :key="category.id"
-              class="learn-card"
-          >
-            <NuxtLink v-if="category.url" :to="category.url" class="card-content">
-              <div class="card__icon-wrapper">
-                <img class="card__icon" :src="category.icon" alt="">
-              </div>
-              <h2 class="card-title">{{ category.title }}</h2>
-              <img class="card__icon-next" src="../assets/images/next.svg" alt="">
-            </NuxtLink>
-            <button v-else @click="openCategory(category)" class="card-content">
-              <span class="card__icon-wrapper">
-                <img class="card__icon" :src="Folder" alt="">
-              </span>
-              <div class="card-title">{{ category.title }}</div>
-              <div class="icon__next">
-                <img class="card__icon-next" src="../assets/images/next.svg" alt="">
-              </div>
-            </button>
+        <div v-if="isMounted && !selectedCategory" key="main" class="scrollable-view">
+          <div class="banner-wrapper">
+            <VBanner
+                text="Учите немецкий язык любым удобным способом!"
+                :icon="LearnIcon"
+            />
+          </div>
+          <div class="topics-list-container">
+            <template v-for="category in learnCategories" :key="category.id">
+              <NuxtLink v-if="category.url" :to="category.url" class="topic-list-item">
+                <div class="topic-item-content">
+                  <div class="topic-icon-box">
+                    <img class="topic-img-icon" :src="category.icon" alt="">
+                  </div>
+                  <span class="topic-label">{{ category.title }}</span>
+                </div>
+                <div class="topic-arrow">
+                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </div>
+              </NuxtLink>
+
+              <button v-else @click="openCategory(category)" class="topic-list-item">
+                <div class="topic-item-content">
+                  <div class="topic-icon-box">
+                    <img class="topic-img-icon" :src="Folder" alt="">
+                  </div>
+                  <span class="topic-label">{{ category.title }}</span>
+                </div>
+                <div class="topic-arrow">
+                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </div>
+              </button>
+            </template>
           </div>
         </div>
-        <div v-else-if="isMounted && selectedCategory" key="sub" class="learn-grid">
-          <NuxtLink
-              v-for="link in selectedCategory.items"
-              :key="link.id"
-              :to="link.url"
-              class="learn-card sub-card"
-          >
-            <div class="card-content">
-              <h3 class="card-title">{{ link.label }}</h3>
-              <div class="icon__next">
-                <img class="card__icon-next" src="../assets/images/next.svg" alt="">
+        <div v-else-if="isMounted && selectedCategory" key="sub" class="scrollable-view">
+          <div class="topics-list-container">
+            <NuxtLink
+                v-for="link in selectedCategory.items"
+                :key="link.id"
+                :to="link.url"
+                class="topic-list-item sub-card"
+            >
+              <div class="topic-item-content">
+                <span class="topic-label">{{ link.label }}</span>
               </div>
-            </div>
-          </NuxtLink>
+              <div class="topic-arrow">
+                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </NuxtLink>
+          </div>
         </div>
       </transition>
     </div>
@@ -56,13 +75,15 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
+import VBanner from "~/src/components/V-banner.vue";
 import Folder from "../assets/images/fileFolder.svg";
 import Photo from "../assets/images/photo-frame.svg";
 import Sound from "../assets/images/headphones.svg";
 import Thematic from "../assets/images/thematicSticker.svg";
 import Cards from "../assets/images/cards.svg";
 import Puzzle from "../assets/images/puzzle-piece.svg";
-
+import Exam from "../assets/images/exam-results.svg";
+import LearnIcon from "../assets/images/app-nav-icons/study.svg";
 const { t } = useI18n()
 const router = useRouter()
 const selectedCategory = ref(null)
@@ -72,6 +93,7 @@ const learnCategories = computed(() => [
   { id: 'audio', icon: Sound, url: '/audio-tasks', title: t('sub.audio') },
   { id: 'description', icon: Photo, url: '/image-description', title: t('sub.describePicture') },
   { id: 'themen', icon: Thematic, url: '/thematic-learning', title: t('sub.themen') },
+  { id: 'exams', icon: Exam, url: '/exams', title: t('nav.tests') },
   { id: 'cards', icon: Cards, url: '/create-cards', title: t('sub.card') },
   { id: 'idioms', icon: Puzzle, url: '/idioms', title: t('sub.idioms') },
   {
@@ -163,19 +185,6 @@ definePageMeta({
   width: 100%;
 }
 
-.card__icon {
-  width: 40px;
-  height: 40px;
-}
-
-.card__icon-wrapper {
-  margin-right: 15px;
-}
-
-.card__icon-next {
-  width: 18px;
-}
-
 .page-header {
   display: flex;
   align-items: center;
@@ -192,60 +201,103 @@ definePageMeta({
   text-shadow: 0 1px var(--titleColor);
 }
 
-.learn-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 15px;
+.scrollable-view {
   flex: 1;
   overflow-y: auto;
-  padding-bottom: calc(90px + var(--sab));
+  padding: 10px 16px 110px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
 }
 
-.learn-card {
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  flex-shrink: 0;
+.scrollable-view::-webkit-scrollbar {
+  display: none;
+}
+
+.banner-wrapper {
+  margin-bottom: 20px;
+}
+
+.topics-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.topic-list-item {
   border-radius: 20px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
   background: var(--menuItemsBg);
   border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
-}
-
-.card-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 7px 15px;
-  height: 100%;
+  transition: transform 0.1s, box-shadow 0.1s;
+  text-decoration: none;
   width: 100%;
-  background: none;
-  border: none;
+  box-sizing: border-box;
 }
 
-.card-title {
-  font-size: 16px;
-  font-weight: 700;
+button.topic-list-item {
+  text-align: left;
+  font-family: inherit;
+  outline: none;
+}
+
+.topic-list-item:active {
+  transform: translateY(4px);
+  box-shadow: 0 0px 0 var(--tabsSlideBorderColor);
+}
+
+.topic-item-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   flex: 1;
-  margin: 0;
-  color: var(--titleColor);
-  text-align: start;
 }
 
-.sub-card .card-title {
+.topic-icon-box {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.topic-img-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.topic-label {
+  color: var(--titleColor); /* ТВОЯ ПЕРЕМЕННАЯ */
+  font-size: 17px;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.2;
+}
+
+.sub-card .topic-label {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-.sub-card {
-  padding: 8px 0;
-}
-
-.chevron {
-  color: #C7C7CC;
+.topic-arrow {
+  background-color: #3b82f6; /* Стрелочку оставляю синей как акцент */
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 0px #2563eb;
+  flex-shrink: 0;
+  margin-left: 10px;
 }
 
 .fade-slide-enter-active,
@@ -261,5 +313,15 @@ definePageMeta({
 .fade-slide-leave-to {
   opacity: 0;
   transform: translateY(-15px);
+}
+
+@media (max-width: 400px) {
+  .topic-label {
+    font-size: 15px;
+  }
+  .topic-icon-box {
+    width: 32px;
+    height: 32px;
+  }
 }
 </style>

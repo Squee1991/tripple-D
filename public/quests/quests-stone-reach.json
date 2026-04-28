@@ -437,8 +437,8 @@
         "question": "questsStoneReachThirdQuests.questSix",
         "words": [
           "das",
-          "rote",
-          "Buch"
+          "Buch",
+          "rote"
         ],
         "correctOrder": [
           "das",
@@ -470,8 +470,9 @@
         "question": "questsStoneReachThirdQuests.questNine",
         "words": [
           "die",
-          "blaue",
-          "Lampe"
+          "Lampe",
+          "der",
+          "blaue"
         ],
         "correctOrder": [
           "die",
@@ -484,9 +485,9 @@
         "type": "select",
         "question": "questsStoneReachThirdQuests.questTen",
         "options": [
-          "das rote Buch",
           "die blaue Lampe",
-          "der rote Tisch"
+          "der rote Tisch",
+          "das rote Buch"
         ],
         "answer": "das rote Buch"
       },
@@ -502,12 +503,13 @@
         "type": "reorder",
         "question": "questsStoneReachThirdQuests.questTwelve",
         "words": [
-          "der",
           "schwarze",
-          "Stuhl"
+          "Die",
+          "Stuhl",
+          "Der"
         ],
         "correctOrder": [
-          "der",
+          "Der",
           "schwarze",
           "Stuhl"
         ]

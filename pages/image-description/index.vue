@@ -25,17 +25,25 @@
       <transition name="fade" mode="out-in">
         <div v-if="viewState === 'topics'" class="view-topics" key="topics">
           <div class="intro-block">
-            <p> {{ t('descriptionPage.intro')}}</p>
+            <VBanner
+                :text="t('descriptionPage.intro')"
+                :icon="PhotoFrame"
+            />
           </div>
-          <div class="topics-flex-container">
-            <div v-for="topic in topics" :key="topic.id" class="topic-card-item" @click="selectTopic(topic)">
-              <div class="card-top-banner" :style="{ background: topic.gradient || '#ffbe76' }">
-                <h3 :style="{ color: topic.textColor || '#1e272e' }">{{ t(topic.label) }}</h3>
+          <div class="topics-flex-title">Выбери тему для описания</div>
+          <div class="topics-list-container">
+            <div
+                v-for="topic in topics"
+                :key="topic.id"
+                class="topic-list-item"
+                @click="selectTopic(topic)"
+            >
+              <div class="topic-item-content">
+                <div class="topic-icon-box">{{ topic.icon }}</div>
+                <span class="topic-label">{{ t(topic.label) }}</span>
               </div>
-              <div class="card-body-content">
-                <div class="topic-icon">{{ topic.icon }}</div>
-                <div class="card-footer-strip">
-                </div>
+              <div class="topic-arrow">
+                <img src="../../assets/images/next.svg" alt="">
               </div>
             </div>
           </div>
@@ -64,6 +72,9 @@ import Modal from '../../src/components/modal.vue'
 import Description from '@/assets/images/reporting.svg'
 import { topics } from '@/utils/descriptionImages.js'
 import VBackBtn from "~/src/components/V-back-btn.vue";
+import { showInterstitial } from '../../utils/admob.js'
+import VBanner from "~/src/components/V-banner.vue";
+import PhotoFrame from "../../assets/images/photo-frame.svg";
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -98,11 +109,13 @@ function selectLevel(level) {
 }
 
 function startGame() {
-  sessionConfig.value = {
-    topicId: selectedTopic.value.id,
-    level: selectedLevel.value
-  }
-  router.push('/image-description/session')
+  showInterstitial(()=> {
+    sessionConfig.value = {
+      topicId: selectedTopic.value.id,
+      level: selectedLevel.value
+    }
+    router.push('/image-description/session')
+  })
 }
 
 function goBack() {
@@ -116,7 +129,6 @@ function goBack() {
 </script>
 
 <style scoped>
-
 .page-container {
   font-family: "Nunito", sans-serif;
   display: flex;
@@ -131,7 +143,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   font-family: "Nunito", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--titleColor, #1e272e);
+  color: var(--titleColor);
   margin: 0;
 }
 
@@ -155,7 +167,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
 .header-title {
   font-size: 22px;
   font-weight: 900;
-  color: var(--titleColor, #1e272e);
+  color: var(--titleColor);
   text-shadow: 1px 1px 0px #ffffff;
 }
 
@@ -192,72 +204,84 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
 }
 
 .intro-block {
-  margin-bottom: 16px;
-  text-align: center;
+  padding: 0 15px;
 }
 
 .intro-block p {
   font-size: 16px;
   font-weight: 800;
-  color: var(--titleColor, #1e272e);
+  color: var(--titleColor);
   margin: 0;
   padding: 0 10px;
 }
 
-.topics-flex-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 12px;
-  padding: 20px 15px;
-}
-
-.topic-card-item {
-  background-color: #ffffff;
-  border: 3px solid var(--tabsSlideBorderColor);
-  box-shadow: var(--boxShadowMobile);
-  border-radius: 20px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.1s, box-shadow 0.1s;
-  display: flex;
-  flex-direction: column;
-}
-
-.topic-card-item:active {
-  transform: translate(3px, 4px);
-  box-shadow: 1px 1px 0px #1e272e;
-}
-
-.card-top-banner {
-  padding: 12px 8px;
-  text-align: center;
-  border-bottom: 3px solid var(--tabsSlideBorderColor);
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-.card-top-banner h3 {
-  font-size: 14px;
+.topics-flex-title {
+  text-align: start;
+  font-size: 19px;
   font-weight: 900;
-  line-height: 1.2;
+  padding: 10px 22px;
+  color: #85a6e7;
+  text-shadow: 1px 1px #85a6e7;
+  letter-spacing: .3px;
 }
 
-.card-body-content {
-  padding: 20px;
+.topics-list-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  background-color: #ffffff;
+  gap: 14px;
+  padding: 10px 20px 40px;
 }
 
-.topic-icon {
-  font-size: 54px;
-  filter: drop-shadow(3px 3px 0px rgba(30, 39, 46, 0.2));
+.topic-list-item {
+  border-radius: 20px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background: var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+  transition: transform 0.1s, border-bottom-width 0.1s;
+}
+
+.topic-list-item:active {
+  transform: translateY(4px);
+  border-bottom-width: 2px;
+}
+
+.topic-item-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.topic-icon-box {
+  font-size: 28px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
+}
+
+.topic-label {
+  color: var(--titleColor);
+  font-size: 17px;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+}
+
+.topic-arrow {
+  width: 18px;
+  color: #ffffff;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .task-count {
@@ -380,6 +404,13 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   }
   .level-header h2 {
     font-size: 18px;
+  }
+  .topic-label {
+    font-size: 15px;
+  }
+  .topic-icon-box {
+    font-size: 24px;
+    width: 35px;
   }
 }
 </style>

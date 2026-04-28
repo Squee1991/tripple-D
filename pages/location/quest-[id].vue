@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div v-if="isAdLoading" class="ad-overlay">
+      <div class="ad-spinner"></div>
+    </div>
     <div class="quest">
       <VLoginPreloader v-if="questStore.loading"/>
       <div v-if="questStore.finished && questStore.success && !questStore.hasMistakes" class="quest__stamp quest__stamp--ok">{{ t('locationQuests.done')}}</div>
@@ -196,6 +199,7 @@
         :wallet="wallet"
         :can-buy-life="canBuyLife"
         @purchase="purchaseLife"
+        @watchAd="watchAdForLife"
         @back="goThemes"
     />
     <VLeaveModal
@@ -219,7 +223,7 @@ import {userChainStore} from '~/store/chainStore.js'
 import {userlangStore} from '~/store/learningStore.js'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '~/utils/soundManager.js'
-
+import { showRewarded } from '~/utils/admob.js';
 import RightIcon from '~/assets/images/location-icons/accept.svg'
 import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 import {useSeoMeta} from '#imports'
@@ -239,6 +243,7 @@ const questStore = userChainStore()
 const langStore = userlangStore()
 const forceRevive = ref(false)
 const showTipModal = ref(false)
+const isAdLoading = ref(false)
 const PRICE = 10
 const questId = computed(() => {
   const rawId = String(route.params.id || route.params.questId || '')
@@ -492,6 +497,24 @@ async function trySpendLocal(amount) {
     }
   }
   return true
+}
+
+function watchAdForLife() {
+  isAdLoading.value = true;
+  showRewarded(
+      async () => {
+        await questStore.addLife(1);
+        if (questStore.finished && !questStore.success) questStore.finished = false;
+        if (!questStore.sessionStarted) questStore.sessionStarted = true;
+        forceRevive.value = false;
+      },
+      (gotReward) => {
+        isAdLoading.value = false;
+        if (!gotReward) {
+          console.log("Юзер закрыл рекламу раньше времени. Жизнь не даем.");
+        }
+      }
+  );
 }
 
 async function purchaseLife() {
@@ -1140,6 +1163,32 @@ watchEffect(() => {
 @keyframes slideDown {
   from { transform: translateY(0); }
   to { transform: translateY(100%); }
+}
+
+.ad-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 27, 27, 0.6);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.ad-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #00c2ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 
 </style>

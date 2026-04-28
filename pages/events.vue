@@ -16,37 +16,55 @@
       </div>
 
       <transition name="menu-appear">
-        <div v-if="isMounted" class="events-grid">
-          <div
-              v-for="event in processedEvents"
-              :key="event.id"
-              class="event-card"
-              :class="{ 'is-locked': !event.isActive }"
-          >
-            <NuxtLink
-                v-if="event.isActive"
-                :to="event.url"
-                class="card-content"
-            >
-              <div class="event-info">
-                <h2 class="card-title">{{ event.title }}</h2>
-                <span class="event-dates">{{ event.startDate }} - {{ event.endDate }}</span>
-              </div>
-              <div class="icon active-icon">✨</div>
-            </NuxtLink>
-            <div
-                v-else
-                @click="handleLockedEvent(event)"
-                class="card-content"
-            >
-              <div class="event-info">
-                <div class="card__icon-wrapper">
-                  <img class="card__icon-item" :src="event.icon" :alt="event.alt">
+        <div class="scrollable-view" v-if="isMounted">
+
+          <div class="banner-wrapper">
+            <VBanner
+                text="Участвуй в сезонных событиях и получай уникальные награды!"
+                :icon="Events"
+            />
+          </div>
+          <div class="topics-list-container">
+            <template v-for="event in processedEvents" :key="event.id">
+              <NuxtLink
+                  v-if="event.isActive"
+                  :to="event.url"
+                  class="topic-list-item"
+              >
+                <div class="topic-item-content">
+                  <div class="topic-icon-box">
+                    <img class="topic-img-icon" :src="event.icon" :alt="event.alt">
+                  </div>
+                  <div class="topic-text-col">
+                    <div class="topic-label">{{ event.title }}</div>
+                    <span class="event-dates">{{ event.startDate }} - {{ event.endDate }}</span>
+                  </div>
                 </div>
-                <div class="card-title">{{ event.title }}</div>
-                <img class="card__icon-next" src="../assets/images/next.svg" alt="">
+                <div class="topic-arrow">
+                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </div>
+              </NuxtLink>
+              <div
+                  v-else
+                  @click="handleLockedEvent(event)"
+                  class="topic-list-item"
+              >
+                <div class="topic-item-content">
+                  <div class="topic-icon-box">
+                    <img class="topic-img-icon" :src="event.icon" :alt="event.alt">
+                  </div>
+                  <div class="topic-labelt">{{ event.title }}</div>
+                </div>
+                <div class="topic-arrow">
+                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </div>
               </div>
-            </div>
+
+            </template>
           </div>
         </div>
       </transition>
@@ -58,13 +76,14 @@
 import { ref, computed, watch, onBeforeUnmount, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import ModalDev from '../src/components/modal.vue'
+import VBanner from "~/src/components/V-banner.vue"
 import PadLock from '../assets/images/padlock.svg'
 import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
 import HalloweenNav from '../assets/images/halloweenIconNav.svg'
 import ValentineNav from '../assets/images/valentineIcon.svg'
 import FoolDayNav from '../assets/images/fooldayNav.svg'
 import ChristmasDayNav from '../assets/images/christmas-wreathNav.svg'
-
+import Events from '../assets/images/app-nav-icons/events.svg'
 definePageMeta({
   layout: 'footerlayout'
 })
@@ -146,15 +165,6 @@ const processedEvents = computed(() => {
 </script>
 
 <style scoped>
-
-.card__icon-next {
-  width: 18px;
-}
-
-.card__icon-wrapper {
-  margin-right: 15px;
-}
-
 .events-page {
   font-family: "Nunito", sans-serif;
   height: 100%;
@@ -170,6 +180,11 @@ const processedEvents = computed(() => {
   width: 100%;
 }
 
+.topic-labelt {
+  color: var(--titleColor);
+  font-weight: 600;
+}
+
 .page-header {
   display: flex;
   align-items: center;
@@ -180,12 +195,6 @@ const processedEvents = computed(() => {
   z-index: 10;
 }
 
-.card__icon-item {
-  width: 40px;
-  height: 40px;
-}
-
-
 .page-title {
   font-size: 24px;
   font-weight: 800;
@@ -195,60 +204,141 @@ const processedEvents = computed(() => {
   text-shadow: 0 1px var(--titleColor);
 }
 
-.event-card {
-  background: var(--menuItemsBg);
-  border-radius: 20px;
-  cursor: pointer;
-  border: 2px solid var(--tabsSlideBorderColor);
-  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+.scrollable-view {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 16px 110px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
 }
 
-.events-grid {
+.scrollable-view::-webkit-scrollbar {
+  display: none;
+}
+
+.banner-wrapper {
+  margin-bottom: 20px;
+}
+
+.topics-list-container {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 15px;
-  flex: 1;
-  overflow-y: auto;
-  padding-bottom: 110px;
 }
 
-.card-content {
+.topic-list-item {
+  background: var(--menuItemsBg);
+  border-radius: 20px;
+  padding: 14px 16px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 7px 15px;
-  height: 100%;
-}
-
-.event-info {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
+  cursor: pointer;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+  transition: transform 0.1s, box-shadow 0.1s;
+  text-decoration: none;
   width: 100%;
-  gap: 6px;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.card-title {
-  font-size: 16px;
-  font-weight: 700;
-  margin: 0;
-  color: var(--titleColor);
+.topic-list-item:active {
+  transform: translateY(4px);
+  box-shadow: 0 0px 0 var(--tabsSlideBorderColor);
+}
+
+.topic-item-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   flex: 1;
+}
+
+.topic-icon-box {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.topic-img-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.topic-text-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.topic-label {
+  color: var(--titleColor);
+  font-size: 17px;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
 }
 
 .event-dates {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #555;
-  background: #f0f0f0;
-  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  background: #2ecc71;
+  padding: 3px 8px;
   border-radius: 8px;
   display: inline-block;
-  align-self: flex-start;
-  border: 1px solid #ddd;
 }
 
+
+.topic-arrow {
+  background-color: #3b82f6;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 0px #2563eb;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+
+.topic-list-item.is-locked {
+  background: var(--menuItemsBg);
+}
+
+.locked-icon {
+  opacity: 0.4;
+  filter: grayscale(100%);
+}
+
+.locked-text {
+  opacity: 0.5;
+}
+
+.locked-arrow {
+  background-color: #95a5a6;
+  box-shadow: 0 3px 0px #7f8c8d;
+}
+
+.padlock-icon {
+  width: 14px;
+  height: 14px;
+  filter: brightness(0) invert(1);
+}
+
+/* АНИМАЦИИ */
 .menu-appear-enter-active {
   transition: all 0.4s ease-out;
 }
@@ -256,5 +346,15 @@ const processedEvents = computed(() => {
 .menu-appear-enter-from {
   opacity: 0;
   transform: translateY(20px);
+}
+
+@media (max-width: 400px) {
+  .topic-label {
+    font-size: 15px;
+  }
+  .topic-icon-box {
+    width: 36px;
+    height: 36px;
+  }
 }
 </style>

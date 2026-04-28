@@ -72,7 +72,7 @@ import { userChainStore } from "~/store/chainStore.js";
 import { useSeoMeta } from '#imports';
 import VHearts from '../../src/components/V-hearts.vue';
 import VBackBtn from "~/src/components/V-back-btn.vue";
-
+import { showInterstitial } from '~/utils/admob.js';
 const route = useRoute();
 const router = useRouter();
 const { t, locale } = useI18n();
@@ -149,9 +149,11 @@ const processedQuests = computed(() => {
 
 function handleStartQuest(quest) {
   if (!quest?.questId) return;
-  router.push({
-    path: `/location/quest-${quest.questId}`,
-    query: { region: currentRegionKey.value }
+  showInterstitial(() => {
+    router.push({
+      path: `/location/quest-${quest.questId}`,
+      query: { region: currentRegionKey.value }
+    });
   });
 }
 

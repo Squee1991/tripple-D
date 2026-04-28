@@ -6,12 +6,12 @@
         <div v-if="submitLoading" class="loading-overlay">
           <div class="loader-box"></div>
         </div>
-        <div class="auth__title">
+        <div class="auth__title" :class="{ 'left': mode === 'reset' }">
           <img
               @click="mode = 'login'"
               v-if="mode === 'reset'" class="auth__arrow" src="../assets/images/arrowNav.svg"
               alt="arrow_nav">
-          <h1 class="login__title">
+          <h1  class="login__title">
             {{
               mode === 'login' ? t('auth.auths') : mode === 'register' ? t('auth.regs') :
                   t('auth.resetTitle')
@@ -78,13 +78,15 @@
         <div v-if="mode === 'login'" class="social-auth-container">
           <button class="google__auth-wrapper" @click="handleSocialLogin('google')" :disabled="submitLoading">
             <img class="google__icon" src="../assets/images/google.svg" alt="google_icon">
+            <span class="auth__text-method">GOOGLE</span>
           </button>
           <button class="apple__auth-wrapper" @click="handleSocialLogin('apple')" :disabled="submitLoading">
             <img class="apple__icon" src="../assets/images/apple.svg" alt="apple_icon">
+            <span class="auth__text-method">APPLE</span>
           </button>
-          <button class="facebook__auth-wrapper" @click="handleSocialLogin('facebook')" :disabled="submitLoading">
-            <img class="facebook__icon" src="../assets/images/facebook.svg" alt="facebook_icon">
-          </button>
+<!--          <button class="facebook__auth-wrapper" @click="handleSocialLogin('facebook')" :disabled="submitLoading">-->
+<!--            <img class="facebook__icon" src="../assets/images/facebook.svg" alt="facebook_icon">-->
+<!--          </button>-->
         </div>
       </div>
     </div>
@@ -273,10 +275,17 @@ onUnmounted(() => {
 
 .login__title {
   text-align: start;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
   color: var(--titleColor);
+}
+
+.auth__text-method {
+  color: white;
+  font-weight: 600;
+  margin-left: 10px;
+  letter-spacing: .6px;
 }
 
 .social-auth-container {
@@ -285,7 +294,6 @@ onUnmounted(() => {
   gap: 12px;
   width: 100%;
   margin-top: 1.5rem;
-  padding: 0 25px;
 }
 
 .google__auth-wrapper,
@@ -297,23 +305,23 @@ onUnmounted(() => {
   justify-content: center;
   border-radius: 16px;
   cursor: pointer;
-  padding: 10px;
+  padding: 8px;
   border: none;
-
   transition: all 0.1s ease-in-out;
 }
 
 .google__auth-wrapper,
 .apple__auth-wrapper,
 .facebook__auth-wrapper {
-  background: none;
+  background: #424141;
+  box-shadow: 0 5px 0 #282727;
 }
 
 .google__icon,
 .apple__icon,
 .facebook__icon {
-  width: 60px;
-  height: 60px;
+  width: 36px;
+  height: 36px;
 }
 
 .auth__label-text {
@@ -337,10 +345,10 @@ onUnmounted(() => {
   text-align: center;
   cursor: pointer;
   padding-top: 1rem;
-  color: var(--titleColor);
+  color: #37a1ff;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
-  text-decoration: underline;
+  font-size: 17px;
 }
 
 .auth__inner {
@@ -376,6 +384,12 @@ onUnmounted(() => {
   position: relative;
 }
 
+.auth__title.left {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+
 .auth__tabs {
   width: 100%;
   display: flex;
@@ -383,8 +397,7 @@ onUnmounted(() => {
   border-radius: 45px;
   position: relative;
   margin-bottom: 1.5rem;
-  box-shadow: 4px 4px 0 #1e1e1e;
-  border: 3px solid #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
   overflow: hidden;
   padding: 4px;
 }
@@ -394,7 +407,7 @@ onUnmounted(() => {
   text-align: center;
   padding: 14px 5px;
   cursor: pointer;
-  color: #1e1e1e;
+  color: #575555;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
@@ -451,20 +464,20 @@ onUnmounted(() => {
 .auth__input {
   width: 100%;
   padding: 16px 20px;
-  border: 3px solid #1e1e1e;
   border-radius: 16px;
   background: #fff;
   font-size: 1rem;
   color: #1e1e1e;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  box-shadow: 2px 2px 0 #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   transition: all 0.2s;
   outline: none;
 }
 
 .auth__input:focus {
-  border: 3px solid #f1c40f;
+  border: 3px solid #37a1ff;
   box-shadow: none;
 }
 
@@ -475,17 +488,17 @@ onUnmounted(() => {
 
 .auth__submit {
   width: 100%;
-  background: #f1c40f;
-  border: 3px solid #1e1e1e;
-  color: #1e1e1e;
-  font-weight: 800;
   font-size: 1.5rem;
   padding: 12px 0;
+  font-weight: 600;
   border-radius: 18px;
   cursor: pointer;
-  box-shadow: 4px 4px 0 #1e1e1e;
-  text-shadow: none;
-  letter-spacing: 0;
+  background: #3b82f6;
+  border: none;
+  box-shadow: 0 5px 0 #1E57D5FF;
+  color: #ffffff;
+  text-shadow: 1px 1px #2563eb;
+  letter-spacing: 1px;
   font-family: "Nunito", sans-serif;
   transition: all 0.1s ease-in-out;
 }

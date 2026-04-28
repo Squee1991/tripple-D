@@ -1,77 +1,3 @@
-<template>
-  <div class="comic-wrapper">
-    <button @click="backToMain" class="back__btn">
-      <img class="btn__icon" src="../assets/images/close.svg" alt="">
-    </button>
-    <div class="comic__wrapper">
-      <div class="comic__header">
-        <h1 class="comic-description">{{ t('payPage.title') }}</h1>
-        <p class="sub__description">{{ t('payPage.description') }}</p>
-      </div>
-      <div class="subscription-box">
-        <div class="compare-header">
-          <span class="label">{{ t('payPage.compareLabelOne') }}</span>
-          <span class="label">{{ t('payPage.compareLabelTwo') }}</span>
-          <span class="label super-label">{{ t('payPage.compareLabelThree') }}</span>
-        </div>
-        <div class="compare-row" v-for="(feature, index) in features" :key="index">
-          <div class="compare__label">
-            <img class="compare__icon" :src="feature.icon" alt="">
-            <span class="compare__label-text">{{ feature.title }}</span>
-          </div>
-          <span>{{ feature.free ? '✔️' : '—' }}</span>
-          <span>{{ feature.premium ? '✔️' : '—' }}</span>
-        </div>
-        <div v-if="myAvailableCoupons.length > 0" class="discounts-container">
-          <p class="discounts-title">Твои скидочные купоны</p>
-          <div class="coupons-list">
-            <button
-                v-for="coupon in myAvailableCoupons"
-                :key="coupon.id"
-                class="coupon-selector-btn"
-                :class="{ 'is-active': selectedDiscountId === coupon.id }"
-                @click="selectDiscount(coupon.id)"
-            >
-              {{ coupon.label }}
-            </button>
-          </div>
-        </div>
-        <button
-            v-if="!authStore.isPremium"
-            class="pay-btn"
-            ref="payButton"
-            @click="pay"
-        >
-          <span class="btn-title">{{ t('payPage.getPremiumBtn') }}</span>
-          <span class="btn-price-wrapper">
-   <span v-if="selectedDiscountId" class="old-price-inline">
-     {{ BASE_PRICE }}<span v-if="!billingStore.isMobile"> €</span>
-   </span>
-   <span class="new-price">
-     {{ finalPrice }}<span v-if="!billingStore.isMobile"> €</span> {{ t('payPage.month') }}
-   </span>
-</span>
-        </button>
-      </div>
-    </div>
-    <transition name="slide-up">
-      <div v-if="showStickyFooter && !authStore.isPremium" class="sticky-footer">
-        <button v-if="billingStore.offerings.length > 0" class="footer-btn" @click="pay">
-          <span class="btn-title">{{ t('payPage.getPremiumBtn') }}</span>
-          <span class="btn-price-wrapper">
-   <span v-if="selectedDiscountId" class="old-price-inline">
-     {{ BASE_PRICE }}<span v-if="!billingStore.isMobile"> €</span>
-   </span>
-   <span class="new-price">
-     {{ finalPrice }}<span v-if="!billingStore.isMobile"> €</span> {{ t('payPage.month') }}
-   </span>
-</span>
-        </button>
-      </div>
-    </transition>
-  </div>
-</template>
-
 <script setup>
 import {ref, onMounted, onUnmounted} from 'vue'
 import {useRouter} from 'vue-router'
@@ -88,17 +14,31 @@ import Exams from '../assets/images/pay-images/test.svg'
 import Competitions from '../assets/images/pay-images/competition.svg'
 import Future from '../assets/images/pay-images/future.svg'
 import {useSeoMeta} from "#imports";
-import { useBillingStore } from '../store/billingStore'
+import {useBillingStore} from '../store/billingStore'
+
 const authStore = userAuthStore()
 const billingStore = useBillingStore()
 const payButton = ref(null)
 const showStickyFooter = ref(false)
 const router = useRouter()
 const {t} = useI18n()
+const BASE_PRICE = 1
 const backToMain = () => {
   router.push('/')
 }
-const BASE_PRICE = 1
+
+const adsUsual = [
+  'Артикли', 'Угадай слово', 'Игра косм.', 'Аудио задания', 'Описание картинок'
+]
+
+const step = ref(1)
+const selectedDiscountId = ref(null)
+const submitLoading = ref(false)
+
+const handleBack = () => {
+  if (step.value === 2) step.value = 1
+  else router.push('/')
+}
 
 const finalPrice = computed(() => {
   if (billingStore.isMobile && billingStore.offerings.length > 0) {
@@ -111,9 +51,6 @@ const finalPrice = computed(() => {
   return discounted.toFixed(2)
 })
 
-
-
-const selectedDiscountId = ref(null)
 
 const myAvailableCoupons = computed(() => {
   const list = []
@@ -154,7 +91,7 @@ const features = [
   {title: t('payPage.featureNine'), free: false, premium: true, icon: Competitions},
   {title: t('payPage.featureTen'), free: false, premium: true, icon: Future},
 ]
-onMounted(async() => {
+onMounted(async () => {
   if (billingStore.isMobile) {
     await billingStore.initialize()
   }
@@ -211,235 +148,388 @@ async function pay() {
 }
 </script>
 
+<template>
+  <div class="pro-vault">
+    <div class="vault-nav">
+      <button @click="handleBack" class="circle-btn">
+        <span v-if="step === 1">✕</span>
+        <span v-else>←</span>
+      </button>
+      <div class="step-dots">
+        <div class="dot" :class="{ active: step === 1 }"></div>
+        <div class="dot" :class="{ active: step === 2 }"></div>
+      </div>
+    </div>
+    <div class="main-flow">
+      <transition name="view-slide" mode="out-in">
+        <div v-if="step === 1" key="promo" class="flow-step">
+          <div class="hero-zone">
+            <h1 class="hero-title">SKILLUP <span class="neon-text">PLUS</span></h1>
+            <p class="hero-desc">Разблокируй максимум своего обучения</p>
+          </div>
+          <div class="perks-grid">
+            <div v-for="(feat, i) in features.filter(f => !f.free)" :key="i" class="perk-card">
+              <div class="perk-icon">
+                <img :src="feat.icon" class="icon-svg">
+              </div>
+              <div class="perk-meta">
+                <span class="perk-name">{{ feat.title }}</span>
+                <span class="perk-label">Premium Only</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer-action">
+            <button @click="step = 2" class="btn-main-action">
+              ПЕРЕЙТИ К ОПЛАТЕ
+            </button>
+          </div>
+        </div>
+        <div v-else key="checkout" class="flow-step">
+          <div class="hero-zone">
+            <h1 class="hero-title">ТВОИ <span class="neon-text">БОНУСЫ</span></h1>
+            <p class="hero-desc">Примени заработанные за активность скидки</p>
+          </div>
+          <div class="inventory-section">
+            <div class="inventory-header">Доступно в твоем хранилище:</div>
+            <div class="inventory-list">
+              <div
+                  v-for="coupon in myAvailableCoupons"
+                  :key="coupon.id"
+                  class="loot-card"
+                  :class="{ 'loot-card--active': selectedDiscountId === coupon.id }"
+                  @click="selectDiscount(coupon.id)"
+              >
+                <div class="loot-glow"></div>
+                <div class="loot-content">
+                  <div class="loot-info">
+                    <span class="loot-title">{{ coupon.label }}</span>
+                    <span class="loot-sub">За твою активность</span>
+                  </div>
+                  <div class="loot-val" v-if="coupon.percent > 0">
+                    {{ coupon.percent }}%
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="billing-summary">
+            <div class="bill-line">
+              <span class="bill-text">Месяц обучения</span>
+              <span class="bill-price">{{ BASE_PRICE }}€</span>
+            </div>
+            <div class="bill-line discount" v-if="selectedDiscountId">
+              <span class="bill-text">Твоя скидка</span>
+              <span class="bill-price-neg">-{{
+                  myAvailableCoupons.find(c => c.id === selectedDiscountId).percent
+                }}%</span>
+            </div>
+            <div class="bill-total">
+              <span class="total-text">ИТОГО:</span>
+              <span class="total-price">{{ finalPrice }}€</span>
+            </div>
+          </div>
+          <div class="footer-action">
+            <button @click="pay" class="btn-buy-neon" :disabled="submitLoading">
+              {{ submitLoading ? 'СИНХРОНИЗАЦИЯ...' : 'АКТИВИРОВАТЬ PRO' }}
+            </button>
+            <p class="secure-tag">Secure Payment via Stripe</p>
+          </div>
+        </div>
+      </transition>
+    </div>
+  </div>
+</template>
+
 <style scoped>
-.comic-wrapper {
-  background: linear-gradient(to bottom, #261d12, #22193f);
-}
-
-.comic__wrapper {
-  padding: 14px;
-  font-family: 'Nunito', sans-serif;
-  text-align: center;
-  color: #fff;
+.pro-vault {
   min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  padding: 0 10px;
+  flex-direction: column;
 }
 
-.old-price-inline {
-  position: relative;
-  display: inline-block;
-  opacity: 0.7;
-  margin-right: 5px;
-  font-size: 1.1rem;
-  font-weight: bold;
+.vault-nav {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
 }
 
-.old-price-inline::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -5%;
-  width: 110%;
-  height: 3px;
-  background-color: #ff3333;
-  transform: translateY(-50%) rotate(-15deg);
-  border-radius: 2px;
-  box-shadow: 0 0 5px rgba(255, 51, 51, 0.5);
-  pointer-events: none;
-}
-
-.back__btn {
-  border: none;
-  background: none;
-  padding: 20px;
-  cursor: pointer;
-}
-
-.btn__icon {
+.circle-btn {
   width: 40px;
-}
-
-.discounts-container {
-  margin: 20px 0;
-  padding: 10px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-}
-
-.coupon-selector-btn {
-  background: #333;
   color: #fff;
-  border: 2px solid transparent;
-  padding: 8px 15px;
-  margin: 5px;
-  border-radius: 8px;
-  cursor: pointer;
+  font-size: 18px;
+  font-weight: 800;
 }
 
-.coupon-selector-btn.is-active {
-  border-color: #00e676;
-  background: rgba(0, 230, 118, 0.2);
-}
-
-.compare__label {
+.step-dots {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 20px;
-  gap: 20px;
+  gap: 8px;
 }
 
-.compare__label-text {
-  width: 200px;
-  display: flex;
-  justify-content: start;
+.dot {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: 0.3s;
 }
 
-.comic-description {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.dot.active {
+  background: #6366f1;
+  width: 24px;
+  border-radius: 10px;
 }
 
-.compare__icon {
-  width: 40px;
+.hero-zone {
+  margin: 25px 0;
+  text-align: center;
 }
 
-.comic__header {
-  margin-bottom: 10px;
+.hero-title {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -1px;
 }
 
-.subscription-box {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid #fff;
-  border-radius: 20px;
-  padding: 30px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  backdrop-filter: blur(10px);
+.neon-text {
+  color: #6366f1;
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
 }
 
-.compare-header, .compare-row {
+.hero-desc {
+  color: #8e8e93;
+  font-size: 15px;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+
+.perks-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 1.1rem;
+  gap: 12px;
 }
 
-.compare-header {
-  font-weight: bold;
-  border-bottom: 2px solid #fff;
-}
-
-.sub__description {
-  font-size: 0.8rem;
-}
-
-.super-label {
-  color: #fff;
-  background: linear-gradient(to right, #b04727, #ff9900);
-  border-radius: 25px;
-  font-weight: bold;
-}
-
-.label {
-  padding: 10px;
-}
-
-.pay-btn {
-  margin-top: 30px;
-  background: #3889a6;
-  color: white;
-  font-size: 17px;
-  font-weight: bold;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  box-shadow: 4px 4px 0 #000;
-  transition: background 0.2s ease;
+.perk-card {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 14px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  gap: 5px;
+  gap: 16px;
 }
 
-.btn-price-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.pay-btn:hover {
-  background: #00c853;
-}
-
-.sticky-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  background: linear-gradient(90deg, #222 0%, #3b2f63 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-  border-top: 2px solid #fff2;
-}
-
-.footer-btn {
-  background: #ffffff;
-  color: #111;
-  font-size: 17px;
-  font-weight: 700;
-  padding: 18px 36px;
+.perk-icon {
+  width: 46px;
+  height: 46px;
+  background: #2a2a3d;
   border-radius: 14px;
-  box-shadow: 0 4px #000;
-  border: none;
-  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.footer-btn:hover {
-  background: linear-gradient(to right, #b04727, #ff9900);
-  transform: translateY(-2px);
-  color: white;
+.icon-svg {
+  width: 24px;
 }
 
-.slide-up-enter-active,
-.slide-up-leave-active {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.perk-meta {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
-.slide-up-enter-from,
-.slide-up-leave-to {
-  transform: translateY(100%);
+.perk-name {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.perk-label {
+  font-size: 11px;
+  color: #6366f1;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.inventory-header {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 800;
+  color: #6366f1;
+  margin: 10px 0 15px 4px;
+  text-transform: uppercase;
+}
+
+.inventory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loot-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.loot-card--active {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.loot-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.loot-info {
+  text-align: left;
+}
+
+.loot-title {
+  font-size: 17px;
+  font-weight: 900;
+  display: block;
+}
+
+.loot-sub {
+  font-size: 12px;
+  color: #8e8e93;
+  font-weight: 700;
+}
+
+.loot-val {
+  font-size: 22px;
+  font-weight: 900;
+  color: #10b981;
+}
+
+.loot-glow {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #6366f1;
+  filter: blur(50px);
+  top: -50px;
+  right: -50px;
   opacity: 0;
+  transition: 0.3s;
 }
 
-@media (max-width: 539px) {
-  .compare__label-text {
-    width: 130px;
-    text-align: start;
-    font-size: 0.9rem;
-  }
+.loot-card--active .loot-glow {
+  opacity: 0.2;
+}
 
-  .compare__label {
-    margin-left: 1px;
-  }
+.billing-summary {
+  margin-top: 25px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 24px;
+}
 
-  .subscription-box {
-    padding: 15px;
-  }
+.bill-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #8e8e93;
+}
 
-  .compare-header {
-    font-size: 0.9rem;
-  }
+.bill-price-neg {
+  color: #facc15;
+}
+
+.bill-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.total-text {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.total-price {
+  font-weight: 900;
+  font-size: 24px;
+  color: #10b981;
+}
+
+.footer-action {
+  margin-top: auto;
+  padding: 20px 0;
+}
+
+.btn-main-action {
+  width: 100%;
+  padding: 20px;
+  border-radius: 22px;
+  border: none;
+  background: #6366f1;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+}
+
+.btn-buy-neon {
+  width: 100%;
+  padding: 20px;
+  border-radius: 22px;
+  border: none;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+}
+
+.btn-buy-neon:active {
+  transform: scale(0.98);
+}
+
+.secure-tag {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #444;
+  font-weight: 800;
+  text-align: center;
+}
+
+.view-slide-enter-active, .view-slide-leave-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.view-slide-enter-from {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.view-slide-leave-to {
+  opacity: 0;
+  transform: translateX(-20px);
 }
 </style>
