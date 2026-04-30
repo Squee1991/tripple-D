@@ -1,6 +1,6 @@
 [
   {
-    "questId": "one",
+    "questId": "past-one",
     "aliases": [
       "perfekt-simple-start"
     ],
@@ -148,7 +148,7 @@
     ]
   },
   {
-    "questId": "two",
+    "questId": "past-two",
     "aliases": [
       "perfekt-go-run-fly"
     ],
@@ -306,7 +306,7 @@
     ]
   },
   {
-    "questId": "three",
+    "questId": "past-three",
     "aliases": ["perfekt-my-day"],
     "title": "pastValleyQuestThree.title",
     "progress": "0/15",
@@ -460,7 +460,7 @@
     ]
   },
   {
-    "questId": "four",
+    "questId": "past-four",
     "aliases": ["perfekt-no-ge"],
     "title": "pastValleyQuestFour.title",
     "progress": "0/15",
@@ -611,7 +611,7 @@
     ]
   },
   {
-    "questId": "five",
+    "questId": "past-five",
     "aliases": ["perfekt-dinner"],
     "title": "pastValleyQuestFive.title",
     "progress": "0/15",
@@ -769,7 +769,7 @@
     ]
   },
   {
-    "questId": "six",
+    "questId": "past-six",
     "aliases": ["perfekt-travel"],
     "title": "pastValleyQuestSix.title",
     "progress": "0/15",
@@ -919,7 +919,7 @@
     ]
   },
   {
-    "questId": "seven",
+    "questId": "past-seven",
     "aliases": ["perfekt-job"],
     "title": "pastValleyQuestSeven.title",
     "progress": "0/15",
@@ -1070,7 +1070,7 @@
     ]
   },
   {
-    "questId": "eight",
+    "questId": "past-eight",
     "aliases": ["perfekt-student"],
     "title": "pastValleyQuestEight.title",
     "progress": "0/15",
@@ -1223,7 +1223,7 @@
     ]
   },
   {
-    "questId": "nine",
+    "questId": "past-nine",
     "aliases": ["perfekt-social"],
     "title": "pastValleyQuestNine.title",
     "progress": "0/15",
@@ -1378,7 +1378,7 @@
     ]
   },
   {
-    "questId": "ten",
+    "questId": "past-ten",
     "aliases": ["perfekt-city"],
     "title": "pastValleyQuestTen.title",
     "progress": "0/15",
@@ -1530,7 +1530,7 @@
     ]
   },
   {
-    "questId": "eleven",
+    "questId": "past-eleven",
     "aliases": ["perfekt-family"],
     "title": "pastValleyQuestEleven.title",
     "progress": "0/15",
@@ -1685,7 +1685,7 @@
     ]
   },
   {
-    "questId": "twelve",
+    "questId": "past-twelve",
     "aliases": ["perfekt-relax"],
     "title": "pastValleyQuestTwelve.title",
     "progress": "0/15",

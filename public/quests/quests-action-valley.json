@@ -1,6 +1,6 @@
 [
   {
-    "questId": "one",
+    "questId": "action-one",
     "aliases": ["dativ-pronouns"],
     "title": "actionValleyQuestOne.title",
     "progress": "0/15",
@@ -151,7 +151,7 @@
     ]
   },
   {
-    "questId": "two",
+    "questId": "action-two",
     "aliases": ["dativ-prep"],
     "title": "actionValleyQuestTwo.title",
     "progress": "0/15",
@@ -303,7 +303,7 @@
     ]
   },
   {
-    "questId": "three",
+    "questId": "action-three",
     "aliases": ["akk-prep"],
     "title": "actionValleyQuestThree.title",
     "progress": "0/15",
@@ -459,7 +459,7 @@
     ]
   },
   {
-    "questId": "four",
+    "questId": "action-four",
     "aliases": ["wechsel-prep"],
     "title": "actionValleyQuestFour.title",
     "progress": "0/15",
@@ -625,7 +625,7 @@
     ]
   },
   {
-    "questId": "five",
+    "questId": "action-five",
     "aliases": ["dat-akk-order"],
     "title": "actionValleyQuestFive.title",
     "progress": "0/15",
@@ -787,7 +787,7 @@
     ]
   },
   {
-    "questId": "six",
+    "questId": "action-six",
     "aliases": ["verbs-gov-complex"],
     "title": "actionValleyQuestSix.title",
     "progress": "0/15",
@@ -924,7 +924,7 @@
     ]
   },
   {
-    "questId": "seven",
+    "questId": "action-seven",
     "aliases": ["akk-dat-traps"],
     "title": "actionValleyQuestSeven.title",
     "progress": "0/15",
@@ -1062,7 +1062,7 @@
     ]
   },
   {
-    "questId": "eight",
+    "questId": "action-eight",
     "aliases": ["verb-prep-combos"],
     "title": "actionValleyQuestEight.title",
     "progress": "0/15",
@@ -1200,7 +1200,7 @@
     ]
   },
   {
-    "questId": "nine",
+    "questId": "action-nine",
     "aliases": ["da-wo-compounds-2"],
     "title": "actionValleyQuestNine.title",
     "progress": "0/15",
@@ -1347,7 +1347,7 @@
     ]
   },
   {
-    "questId": "ten",
+    "questId": "action-ten",
     "aliases": ["da-wo-compounds-3"],
     "title": "actionValleyQuestTen.title",
     "progress": "0/15",
@@ -1482,7 +1482,7 @@
     ]
   },
   {
-    "questId": "eleven",
+    "questId": "action-eleven",
     "aliases": ["summary-mega-mix"],
     "title": "actionValleyQuestEleven.title",
     "progress": "0/15",

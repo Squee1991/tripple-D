@@ -1,6 +1,6 @@
 [
   {
-    "questId": "one",
+    "questId": "future-one",
     "aliases": [
       "werden-travel-theme"
     ],
@@ -217,7 +217,7 @@
     ]
   },
   {
-    "questId": "two",
+    "questId": "future-two",
     "aliases": [
       "future-step-2"
     ],
@@ -411,7 +411,7 @@
     ]
   },
   {
-    "questId": "three",
+    "questId": "future-three",
     "aliases": [
       "futur-group-plans"
     ],
@@ -556,7 +556,7 @@
     ]
   },
   {
-    "questId": "four",
+    "questId": "future-four",
     "aliases": [
       "futur-party-time"
     ],
@@ -681,7 +681,7 @@
     ]
   },
   {
-    "questId": "five",
+    "questId": "future-five",
     "aliases": [
       "futur-sport-active"
     ],
@@ -807,7 +807,7 @@
     ]
   },
   {
-    "questId": "six",
+    "questId": "future-six",
     "aliases": ["futur-leisure"],
     "title": "pluralLandQuestSix.title",
     "progress": "0/15",
@@ -934,7 +934,7 @@
     ]
   },
   {
-    "questId": "seven",
+    "questId": "future-seven",
     "aliases": [
       "futur-umzug-new-home"
     ],
@@ -1064,7 +1064,7 @@
     ]
   },
   {
-    "questId": "eight",
+    "questId": "future-eight",
     "aliases": [
       "futur-weather-prediction"
     ],
@@ -1209,7 +1209,7 @@
     ]
   },
   {
-    "questId": "nine",
+    "questId": "future-nine",
     "aliases": [
       "futur-health-recovery"
     ],
@@ -1354,7 +1354,7 @@
     ]
   },
   {
-    "questId": "ten",
+    "questId": "future-ten",
     "aliases": [
       "futur-shopping-buy"
     ],
@@ -1499,7 +1499,7 @@
     ]
   },
   {
-    "questId": "eleven",
+    "questId": "future-eleven",
     "aliases": [
       "futur-eating-out"
     ],
@@ -1644,7 +1644,7 @@
     ]
   },
   {
-    "questId": "twelve",
+    "questId": "future-twelve",
     "aliases": [
       "futur-movies-entertainment"
     ],
@@ -1785,7 +1785,7 @@
     ]
   },
   {
-    "questId": "thirteen",
+    "questId": "future-thirteen",
     "aliases": [
       "futur-pets-zoo"
     ],
@@ -1930,7 +1930,7 @@
     ]
   },
   {
-    "questId": "fourteen",
+    "questId": "future-fourteen",
     "aliases": [
       "futur-ecology-protection"
     ],
@@ -2075,7 +2075,7 @@
     ]
   },
   {
-    "questId": "fifteen",
+    "questId": "future-fifteen",
     "aliases": [
       "futur-festivals-celebration"
     ],
