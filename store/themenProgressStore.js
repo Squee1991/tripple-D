@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import {
 	getFirestore,
 	doc,
@@ -9,25 +9,18 @@ import {
 } from 'firebase/firestore'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { dailyStore } from './dailyStore.js'
+
 export const useTrainerStore = defineStore('thematic', () => {
 	const daily = dailyStore()
 	const topic = ref('')
 	const jsonData = ref(null)
 	const selectedLevel = ref(null)
 	const selectedModule = ref(null)
-	const completedModules = ref([])
+	const moduleProgress = ref({})
 
 	const db = getFirestore()
 	const progressDocRef = (uid, topicKey) =>
 		doc(db, 'users', uid, 'thematicProgress', topicKey)
-
-	const addCompletedModule = (level, id) => {
-		if (!completedModules.value.some(m => m.level === level && m.id === id)) {
-			completedModules.value.push({ level, id })
-			daily.addThematicLearning(1)
-			saveProgress()
-		}
-	}
 
 	const ensureUser = async () => {
 		const auth = getAuth()
@@ -40,14 +33,31 @@ export const useTrainerStore = defineStore('thematic', () => {
 		})
 	}
 
-	const saveProgress = async () => {
+	const saveModuleAttempt = async (level, id, mistakes) => {
+		const key = `L${level}_M${id}`
+		const currentProgress = moduleProgress.value[key]
+		if (currentProgress && currentProgress.completed) return
+		const isCompleted = mistakes.length === 0
+		moduleProgress.value[key] = {
+			completed: isCompleted,
+			mistakes: mistakes
+		}
+
+		if (isCompleted) {
+			daily.addThematicLearning(1)
+		}
+
+		await saveProgressToFirebase()
+	}
+
+	const saveProgressToFirebase = async () => {
 		const user = await ensureUser()
 		if (!user || !topic.value) return
 
 		const progress = {
 			level: selectedLevel.value?.level ?? null,
 			module: selectedModule.value?.id ?? null,
-			completedModules: completedModules.value ?? [],
+			moduleProgress: moduleProgress.value,
 			updatedAt: serverTimestamp()
 		}
 
@@ -58,7 +68,7 @@ export const useTrainerStore = defineStore('thematic', () => {
 	const loadProgress = async () => {
 		const user = await ensureUser()
 		if (!user || !topic.value) {
-			completedModules.value = []
+			moduleProgress.value = {}
 			return
 		}
 
@@ -66,21 +76,42 @@ export const useTrainerStore = defineStore('thematic', () => {
 		const snap = await getDoc(docRef)
 
 		if (!snap.exists()) {
-			completedModules.value = []
+			moduleProgress.value = {}
 			return
 		}
+
 		const t = snap.data()
-		if (Array.isArray(t.completedModules) && typeof t.completedModules[0] === 'number') {
-			completedModules.value = t.completedModules.map(id => ({ level: 1, id }))
-		} else if (Array.isArray(t.completedModules)) {
-			completedModules.value = t.completedModules
-		} else {
-			completedModules.value = []
+		const loadedProgress = t.moduleProgress || {}
+
+		if (t.completedModules && !t.moduleProgress) {
+			t.completedModules.forEach(m => {
+				let level, id;
+				if (typeof m === 'number') { level = 1; id = m; }
+				else { level = m.level; id = m.id; }
+				loadedProgress[`L${level}_M${id}`] = { completed: true, mistakes: [] }
+			})
 		}
+		moduleProgress.value = loadedProgress
+
 		if (t.level && t.module) {
 			await setThemeAndModule(topic.value, t.level, t.module)
 		}
 	}
+
+	const getModuleProgress = (level, id) => {
+		return moduleProgress.value[`L${level}_M${id}`] || null
+	}
+
+	const completedModules = computed(() => {
+		const completed = []
+		for (const key in moduleProgress.value) {
+			if (moduleProgress.value[key].completed) {
+				const match = key.match(/L(\d+)_M(\d+)/)
+				if (match) completed.push({ level: Number(match[1]), id: Number(match[2]) })
+			}
+		}
+		return completed
+	})
 
 	const setThemeAndModule = async (topicName, level, moduleId) => {
 		topic.value = topicName
@@ -97,10 +128,11 @@ export const useTrainerStore = defineStore('thematic', () => {
 		jsonData,
 		selectedLevel,
 		selectedModule,
+		moduleProgress,
 		completedModules,
+		getModuleProgress,
 		setThemeAndModule,
-		addCompletedModule,
-		saveProgress,
+		saveModuleAttempt,
 		loadProgress,
 	}
 })
