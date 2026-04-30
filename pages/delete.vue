@@ -221,14 +221,13 @@ async function processAccountCleanup() {
 }
 
 .mascot-bubble {
-  background: #FFF;
+  background: #00c2ff;
   border-radius: 24px;
   padding: 20px;
   margin-bottom: 15px;
+  color: white;
   font-weight: 800;
   text-align: center;
-  border: 3px solid var(--tabsSlideBorderColor);
-  box-shadow: var(--boxShadowMobile);
 }
 
 .account-cleanup__section {
@@ -363,7 +362,7 @@ async function processAccountCleanup() {
   width: 100%;
   max-width: 600px;
   background: #FFF;
-  border-top: 3px solid #000;
+  border-top: 3px solid var(--tabsSlideBorderColor);
   border-bottom: none;
   border-radius: 32px 32px 0 0;
   padding: 15px;
@@ -400,7 +399,7 @@ async function processAccountCleanup() {
 .account-cleanup__field-input {
   width: 100%;
   padding: 16px;
-  border: 2px solid #000;
+  border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 16px;
   font-size: 16px;
   font-weight: 700;
@@ -440,6 +439,7 @@ async function processAccountCleanup() {
   font-weight: 800;
   font-size: 14px;
   margin-top: 5px;
+  text-align: center;
 }
 
 .fade-enter-active, .fade-leave-active {

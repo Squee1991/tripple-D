@@ -13,6 +13,10 @@
         <h3 class="sidebar-title">{{ t('accountPanel.achievement') }}</h3>
       </div>
       <nav class="nav__sidebar" >
+        <VBanner
+            text="Твоя полная коллекция всех полученных достижений и наград"
+            :icon="AchIconReward"
+        />
         <ul class="achievement-categories">
           <template v-for="category in achievementCategories" :key="category.id">
             <li
@@ -52,7 +56,6 @@
         </ul>
       </nav>
     </div>
-
     <main class="content-area" :class="{'open': isContentOpen}">
       <header class="content-header">
         <button class="content-close" @click="closeContent" aria-label="Close achievements panel">✖</button>
@@ -134,7 +137,8 @@ import {useRouter} from 'vue-router'
 import {useAchievementStore} from '../store/achievementStore.js'
 import {useSeoMeta} from "#imports";
 import VBackBtn from "~/src/components/V-back-btn.vue";
-
+import VBanner from "~/src/components/V-banner.vue";
+import AchIconReward from '../assets/images/AchPanelIcon.svg'
 const scrollRef = ref(null)
 const {$SimpleBar} = useNuxtApp()
 const router = useRouter()

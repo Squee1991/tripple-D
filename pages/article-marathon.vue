@@ -259,15 +259,19 @@ const difficultyBase = ref([
 }
 
 .difficulty-btn.easy.active {
-  background-color: #7bcc8e;
+  background-color: #2bd653;
+  color: white;
+
 }
 
 .difficulty-btn.normal.active {
-  background-color: #fde68a;
+  background-color: #edc838;
+  color: white;
 }
 
 .difficulty-btn.hard.active {
-  background-color: #fecaca;
+  background-color: #e68f8f;
+  color: white;
 }
 
 .button-content {

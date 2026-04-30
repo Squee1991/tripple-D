@@ -1,103 +1,103 @@
 <template>
-  <div class="map__wrapper" :dir="locale === 'ar' ? 'rtl' : 'ltr'">
-    <div id="regions" class="map__title-wrapper">
-      <h1 class="map__title">{{ t('locationsMenu.title') }}</h1>
-    </div>
-    <div class="map-layout">
-      <transition name="slide">
-        <div
-            class="map-left"
-            v-show="isPanelOpen || windowWidth > 1024"
-            :class="[ 'theme--' + themeOf(active), { rtl: locale === 'ar' } ]"
-            v-if="active"
-        >
-          <div class="mal__left-content">
-            <div>
-              <div class="mal__left-content-wrapper">
-                <button v-if="windowWidth <= 1024" @click="closePanel" class="btn-icon-back">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                       stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="19" y1="12" x2="5" y2="12"></line>
-                    <polyline points="12 19 5 12 12 5"></polyline>
-                  </svg>
-                </button>
-                <h2 class="map-left__title">{{ t(active.name) }}</h2>
-              </div>
-              <div class="map__left-content-bottom">
-                <div class="map-left__art">
-                  <img :src="active?.icon" alt="Choose avatar location" decoding="async">
+  <Transition name="menu-appear" appear>
+    <div class="map__wrapper" :dir="locale === 'ar' ? 'rtl' : 'ltr'">
+      <div id="regions" class="map__title-wrapper">
+        <h1 class="map__title">{{ t('locationsMenu.title') }}</h1>
+      </div>
+      <div class="map-layout">
+        <transition name="slide">
+          <div
+              class="map-left"
+              v-show="isPanelOpen || windowWidth > 1024"
+              :class="[ 'theme--' + themeOf(active), { rtl: locale === 'ar' } ]"
+              v-if="active"
+          >
+            <div class="mal__left-content">
+              <div>
+                <div class="mal__left-content-wrapper">
+                  <button v-if="windowWidth <= 1024" @click="closePanel" class="btn-icon-back">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                         stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="19" y1="12" x2="5" y2="12"></line>
+                      <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                  </button>
+                  <h2 class="map-left__title">{{ t(active.name) }}</h2>
                 </div>
-                <p class="map-left__desc">{{ t(active.desc) }}</p>
-                <p class="map-left__level" :class="isUnlocked ? 'ok' : 'locked'">
-                  <span v-if="isUnlocked">{{ t('locationsMenu.access') }}</span>
-                  <span v-else>{{ t('locationsMenu.accessWithLevel') }} {{ active.level }}</span>
-                </p>
-              </div>
-            </div>
-            <button class="map-btn" :disabled="!isUnlocked" @click="go(active)">
-              {{ t('locationsMenu.choose') }}
-            </button>
-          </div>
-        </div>
-      </transition>
-
-      <div class="map-right-container">
-        <div class="map-pagination-arrows">
-          <button
-              class="arrow-btn"
-              :disabled="isFirstCategory"
-              @click="prevCategory"
-          >
-            <img class="arrow__btn-icon arrow-back" src="../../assets/images/next.svg" alt="">
-          </button>
-          <div class="current-category-name">
-            {{ t(`categories.${activeCategory}`) }}
-          </div>
-          <button
-              class="arrow-btn"
-              :disabled="isLastCategory"
-              @click="nextCategory"
-          >
-            <img class="arrow__btn-icon" src="../../assets/images/next.svg" alt="">
-          </button>
-        </div>
-
-        <transition name="fade" mode="out-in">
-          <div class="map-right" v-if="filteredRegions.length > 0" :key="activeCategory">
-            <div
-                v-for="region in filteredRegions"
-                :key="region.id"
-                class="region-card"
-                :class="[
-                  'theme--' + themeOf(region),
-                  { active: active?.id === region.id }
-                ]"
-                @click="select(region)"
-            >
-              <div class="region-card__art">
-                <img :src="region.icon" :alt="region.id" decoding="async">
-              </div>
-              <div class="region-card__footer">
-                <span class="region-card__title">{{ t(region.name) }}</span>
-                <div class="region-card-badge-wrapper">
-                  <span v-if="clampedLevel < region.level" class="region-card__badge">
-                    {{ region.level }}
-                  </span>
+                <div class="map__left-content-bottom">
+                  <div class="map-left__art">
+                    <img :src="active?.icon" alt="Choose avatar location" decoding="async">
+                  </div>
+                  <p class="map-left__desc">{{ t(active.desc) }}</p>
+                  <p class="map-left__level" :class="isUnlocked ? 'ok' : 'locked'">
+                    <span v-if="isUnlocked">{{ t('locationsMenu.access') }}</span>
+                    <span v-else>{{ t('locationsMenu.accessWithLevel') }} {{ active.level }}</span>
+                  </p>
                 </div>
               </div>
-            </div>
-          </div>
-          <div v-else class="map-empty-placeholder" key="empty">
-            <div class="empty-content">
-              <div class="empty-icon">✨</div>
-              <h3 class="empty-title">{{ t('regionsModal.title') }}</h3>
-              <p class="empty-text">{{ t('regionsModal.text') }}</p>
+              <button class="map-btn" :disabled="!isUnlocked" @click="go(active)">
+                {{ t('locationsMenu.choose') }}
+              </button>
             </div>
           </div>
         </transition>
+        <div class="map-right-container">
+          <div class="map-pagination-arrows">
+            <button
+                class="arrow-btn"
+                :disabled="isFirstCategory"
+                @click="prevCategory"
+            >
+              <img class="arrow__btn-icon arrow-back" src="../../assets/images/next.svg" alt="">
+            </button>
+            <div class="current-category-name">
+              {{ t(`categories.${activeCategory}`) }}
+            </div>
+            <button
+                class="arrow-btn"
+                :disabled="isLastCategory"
+                @click="nextCategory"
+            >
+              <img class="arrow__btn-icon" src="../../assets/images/next.svg" alt="">
+            </button>
+          </div>
+          <transition name="fade" mode="out-in">
+            <div class="map-right" v-if="filteredRegions.length > 0" :key="activeCategory">
+              <div
+                  v-for="region in filteredRegions"
+                  :key="region.id"
+                  class="region-card"
+                  :class="[
+                  'theme--' + themeOf(region),
+                  { active: active?.id === region.id }
+                ]"
+                  @click="select(region)"
+              >
+                <div class="region-card__art">
+                  <img :src="region.icon" :alt="region.id" decoding="async">
+                </div>
+                <div class="region-card__footer">
+                  <span class="region-card__title">{{ t(region.name) }}</span>
+                  <div class="region-card-badge-wrapper">
+                  <span v-if="clampedLevel < region.level" class="region-card__badge">
+                    {{ region.level }}
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div v-else class="map-empty-placeholder" key="empty">
+              <div class="empty-content">
+                <div class="empty-icon">✨</div>
+                <h3 class="empty-title">{{ t('regionsModal.title') }}</h3>
+                <p class="empty-text">{{ t('regionsModal.text') }}</p>
+              </div>
+            </div>
+          </transition>
+        </div>
       </div>
     </div>
-  </div>
+  </Transition>
 </template>
 
 <script setup>
@@ -769,4 +769,14 @@ onBeforeUnmount(() => {
   opacity: 0;
   transform: scale(0.98);
 }
+
+.menu-appear-enter-active {
+  transition: opacity 0.4s ease, transform 0.4s ease-out;
+}
+
+.menu-appear-enter-from {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
 </style>

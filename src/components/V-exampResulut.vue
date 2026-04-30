@@ -146,7 +146,7 @@ onMounted(() => {
           <div class="ec__left__wrapper">
             <div class="ec__main">
               <div class="ec__line">
-                <span class="ec__lvl">Niveau {{ a.level || '—' }}</span>
+                <span class="ec__lvl">{{ a.level || '—' }}</span>
                 <span class="ec__badge" :class="a.status === 'finished' ? 'is-finished' : 'is-draft'">
                   {{ a.status || 'draft' }}
                 </span>

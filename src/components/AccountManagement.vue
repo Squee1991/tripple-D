@@ -1,245 +1,206 @@
 <template>
   <div class="account-tab-body">
-    <div class="subscription-status-row">
-      <div class="subscription-label">{{ t('cabinet.status') }}</div>
-      <div class="subscription-status">
-        <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
-          <span class="status-pill is-active">✅ {{ t('cabinet.active') }}</span>
-        </template>
-        <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-          <span class="status-pill is-cancelled">⚠️ {{ t('cabinet.canceled') }}</span>
-        </template>
-        <template v-else>
-          <div class="status-inline">
-            <span class="status-pill is-free">❌</span>
-            <button @click="routeToPay" class="premium__btn">
-              {{ t('cabinet.buyPremium') }}
-            </button>
-          </div>
-        </template>
-      </div>
-    </div>
-    <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
-      <div class="premium__status-wrapper">
-        <p class="subtext">
+    <div
+        class="premium-banner"
+        :class="{
+        'is-active': authStore.isPremium && !authStore.subscriptionCancelled,
+        'is-cancelled': authStore.isPremium && authStore.subscriptionCancelled
+      }"
+    >
+      <div class="premium-content">
+        <!-- Заголовки в зависимости от статуса -->
+        <h4 v-if="authStore.isPremium && !authStore.subscriptionCancelled">
+          💎 {{ t('cabinet.active') }} Premium
+        </h4>
+        <h4 v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
+          ⚠️ Подписка отменена
+        </h4>
+        <h4 v-else>
+          👑 Стань Premium
+        </h4>
+
+        <!-- Текст / Даты -->
+        <p v-if="authStore.isPremium && !authStore.subscriptionCancelled">
           📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}
         </p>
-        <button v-if="authStore.paymentSource === 'stripe'" class="btn btn-outline-danger" @click.stop="openCancelModal">
+        <p v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
+          📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}
+        </p>
+        <p v-else>
+          Сними лимиты и ускорь свое обучение.
+        </p>
+      </div>
+
+      <!-- Кнопки -->
+      <div class="premium-actions">
+        <button
+            v-if="!authStore.isPremium"
+            @click="routeToPay"
+            class="premium-action-btn"
+        >
+          {{ t('cabinet.buyPremium') }}
+        </button>
+
+        <button
+            v-if="authStore.isPremium && !authStore.subscriptionCancelled && authStore.paymentSource === 'stripe'"
+            @click.stop="openCancelModal"
+            class="premium-action-btn btn-cancel"
+        >
           {{ t('cabinet.cancelBtn') }}
         </button>
       </div>
-    </template>
-    <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-      <p class="access__text">
-        📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}
-      </p>
-    </template>
+    </div>
   </div>
 </template>
 
 <script setup>
-import {computed} from 'vue'
-import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
-import {userAuthStore} from '../../store/authStore.js'
+import { computed } from 'vue'
+import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+import { userAuthStore } from '../../store/authStore.js'
 
 const emit = defineEmits(['open'])
 
-const {t, locale} = useI18n()
+const { t, locale } = useI18n()
 const router = useRouter()
 const authStore = userAuthStore()
 
 const formattedSubscriptionEndDate = computed(() => {
   if (!authStore.subscriptionEndsAt) return '-'
   const date = new Date(authStore.subscriptionEndsAt)
-  return date.toLocaleDateString(locale.value, {year: 'numeric', month: 'long', day: 'numeric'})
+  return date.toLocaleDateString(locale.value, { year: 'numeric', month: 'long', day: 'numeric' })
 })
 
 const routeToPay = () => {
   router.push('/pay')
 }
 
-const openCancelModal =() => {
+const openCancelModal = () => {
   emit('open', 'cancelPremium')
 }
-
 </script>
 
 <style scoped>
 .account-tab-body {
-  padding: 6px 0;
+  padding: 10px 4px;
 }
 
-.subscription-status-row {
+/* =========================================
+   КРАСИВЫЙ БАННЕР ПРЕМИУМА
+   ========================================= */
+.premium-banner {
+  margin-top: 5px;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899); /* Градиент для FREE */
+  border-radius: 20px;
+  padding: 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 14px 6px;
-  margin-top: 6px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  justify-content: space-between;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.25);
+  position: relative;
+  overflow: hidden;
+  gap: 15px;
 }
 
-.subscription-label {
-  font-weight: 800;
-  opacity: 0.85;
-  color: var(--titleColor);
+/* Блик на фоне для дороговизны */
+.premium-banner::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+/* Состояние: Активная подписка */
+.premium-banner.is-active {
+  background: linear-gradient(135deg, #10b981, #059669);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+}
+
+/* Состояние: Отмененная, но еще действующая подписка */
+.premium-banner.is-cancelled {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25);
+}
+
+.premium-content h4 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 900;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.premium-content p {
+  margin: 6px 0 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.premium-actions {
+  z-index: 1; /* Чтобы кнопка была над бликом */
+  flex-shrink: 0;
+}
+
+.premium-action-btn {
+  background: #ffffff;
+  color: #db2777; /* Цвет текста под FREE фон */
+  border: none;
+  border-radius: 14px;
+  padding: 12px 20px;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease;
   white-space: nowrap;
 }
 
-.subscription-status {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.premium-action-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 transparent;
 }
 
-.status-inline {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+/* Цвет кнопки "Приобрести" в зависимости от фона (на будущее) */
+.premium-banner.is-active .premium-action-btn { color: #059669; }
+.premium-banner.is-cancelled .premium-action-btn { color: #d97706; }
 
-.status-pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 14px;
-  gap: 8px;
-  border-radius: 999px;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(231, 223, 223, 0.92);
-  backdrop-filter: blur(6px);
-}
-
-.status-pill.is-active {
-  border-color: rgba(34, 197, 94, 0.35);
-  background: rgba(34, 197, 94, 0.12);
-}
-
-.status-pill.is-cancelled {
-  border-color: rgba(245, 158, 11, 0.35);
-  background: rgba(245, 158, 11, 0.12);
-}
-
-.status-pill.is-free {
-  border-color: rgba(148, 163, 184, 0.35);
-  background: rgba(148, 163, 184, 0.10);
-  color: var(--titleColor);
-}
-
-.premium__btn {
-  padding: 8px 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(59, 130, 246, 0.18);
-  color: var(--titleColor);
-  font-weight: 800;
-  cursor: pointer;
+/* Кнопка "Отменить" - делаем её прозрачной с белой рамкой, чтобы не бросалась в глаза */
+.premium-action-btn.btn-cancel {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 2px solid #ffffff;
   box-shadow: none;
-  transition: transform 0.15s ease, background 0.15s ease;
 }
 
-@media (min-width: 1024px) {
-  .premium__btn:hover {
-    transform: translateY(-1px);
-    background: rgba(59, 130, 246, 0.24);
-  }
+.premium-action-btn.btn-cancel:hover {
+  background: rgba(255, 255, 255, 0.25);
 }
 
-.premium__status-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 6px 0;
-  gap: 12px;
+.premium-action-btn.btn-cancel:active {
+  transform: translateY(2px);
+  background: rgba(255, 255, 255, 0.3);
 }
 
-.subtext {
-  margin: 0;
-  font-weight: 800;
-  color: var(--titleColor);
-}
-
-.access__text {
-  margin-top: 10px;
-  padding: 0 6px;
-  font-weight: 800;
-  color: var(--titleColor);
-}
-
-.btn {
-  border-radius: 16px;
-  padding: 10px 16px;
-  font-weight: 800;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--titleColor);
-}
-
-.btn-outline-danger {
-  background: transparent;
-  border: 1px solid rgba(239, 68, 68, 0.6);
-  margin-left: auto;
-}
-
-.btn-danger {
-  border: 1px solid rgba(0, 0, 0, 0.35);
-  color: #fff;
-}
-
-.w-full {
-  padding: 8px 14px;
-  color: var(--titleColor);
-}
-
-@media (max-width: 1023px) {
-  .subscription-status-row {
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  .subscription-status {
-    width: 100%;
-  }
-
-
-  .status-inline {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .premium__status-wrapper {
+/* Адаптив для маленьких экранов */
+@media (max-width: 480px) {
+  .premium-banner {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
+    text-align: center;
+    align-items: stretch;
   }
-}
-
-.logout-section {
-  margin-top: 24px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  justify-content: center;
-}
-
-.btn-logout {
-  width: 100%;
-  background: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.4);
-  color: #ef4444;
-  transition: all 0.2s ease;
-}
-
-@media (min-width: 1024px) {
-  .btn-logout:hover {
-    background: #ef4444;
-    color: white;
-    transform: translateY(-2px);
+  .premium-actions {
+    display: flex;
+    justify-content: center;
+  }
+  .premium-action-btn {
+    width: 100%;
   }
 }
 </style>

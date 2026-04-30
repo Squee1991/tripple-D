@@ -79,6 +79,7 @@ onBeforeUnmount(() => {
   if (mql.removeEventListener) mql.removeEventListener('change', updateIsMobile)
   else mql.removeListener(updateIsMobile)
 })
+
 </script>
 
 <style scoped>
@@ -183,7 +184,7 @@ onBeforeUnmount(() => {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 0;
+    padding: 5px 0;
     cursor: pointer;
     position: relative;
     z-index: 2;

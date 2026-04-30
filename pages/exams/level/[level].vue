@@ -183,21 +183,25 @@ onMounted(() => {
       <p>Загрузка испытания...</p>
     </div>
     <div v-else-if="isIntroVisible" class="exam__card exam__card--intro">
-      <div class="card-icon">
-        <img class="card__icon-item" src="../../../assets/images/exam-results.svg" alt="exam-results">
-      </div>exam__subtitle
-      <h2 class="card-title">Готовы к тесту?</h2>
-      <p class="card-text">
-        Вас ждет <strong>{{ moduleCounts.length }}</strong> этапа и
-        <strong>{{ examStore.exercises.length }}</strong> заданий.
-      </p>
-      <div class="intro-stats">
-        <div v-for="mod in moduleCounts" :key="mod.name" class="stat-badge">
-          <span class="stat-icon">🧩</span>
-          <span class="stat-info">{{ mod.name }}: {{ mod.count }}</span>
+      <Transition name="menu-appear" appear>
+        <div>
+          <div class="card-icon">
+            <img class="card__icon-item" src="../../../assets/images/exam-results.svg" alt="exam-results">
+          </div>
+          <h2 class="card-title">Готовы к тесту?</h2>
+          <p class="card-text">
+            Вас ждет <strong>{{ moduleCounts.length }}</strong> этапа и
+            <strong>{{ examStore.exercises.length }}</strong> заданий.
+          </p>
+          <div class="intro-stats">
+            <div v-for="mod in moduleCounts" :key="mod.name" class="stat-badge">
+              <span class="stat-icon">🧩</span>
+              <span class="stat-info">{{ mod.name }}: {{ mod.count }}</span>
+            </div>
+          </div>
+          <button class="action-btn action-btn--primary" @click="startExam">Начать тест</button>
         </div>
-      </div>
-      <button class="action-btn action-btn--primary" @click="startExam">Начать тест</button>
+      </Transition>
     </div>
     <div v-else-if="!isExamFinished && currentExercise" class="exam__workspace">
       <div class="exam__card exam__card--active">
@@ -732,7 +736,15 @@ onMounted(() => {
   }
 }
 
-/* Стилизация скроллбара */
+.menu-appear-enter-active {
+  transition: opacity 0.4s ease, transform 0.4s ease-out;
+}
+
+.menu-appear-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
 .results-scroll-area::-webkit-scrollbar {
   width: 5px;
 }

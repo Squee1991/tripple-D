@@ -86,7 +86,6 @@ onUnmounted(() => {
           :img="HeadPhones"
           :text="overlayData.text"
       />
-
       <div class="quiz__header-wrapper">
         <header class="quiz__header">
           <button @click="handleBackClick" class="btn-icon-back">
@@ -113,7 +112,6 @@ onUnmounted(() => {
       <div class="quiz__content">
         <transition name="quiz-pop" mode="out-in">
           <div :key="screen" class="scrollable-view">
-
             <template v-if="screen === 'levels'">
               <div class="banner-wrapper">
                 <VBanner
@@ -121,7 +119,6 @@ onUnmounted(() => {
                     :icon="HeadPhones"
                 />
               </div>
-
               <div class="topics-list-container">
                 <div
                     v-for="(level, index) in levels"
@@ -143,7 +140,6 @@ onUnmounted(() => {
                 </div>
               </div>
             </template>
-
             <template v-else>
               <div class="banner-wrapper">
                 <VBanner
@@ -169,7 +165,6 @@ onUnmounted(() => {
                       </svg>
                     </div>
                   </div>
-
                   <div v-if="topic.tasks?.length" class="topic-progress-wrapper">
                     <div class="progress-bar-container">
                       <div
@@ -184,11 +179,9 @@ onUnmounted(() => {
                       {{ getTopicCompleted(topic) }}/{{ topic.tasks.length }}
                     </div>
                   </div>
-
                 </div>
               </div>
             </template>
-
           </div>
         </transition>
       </div>

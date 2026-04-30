@@ -7,71 +7,79 @@
         :img="Description"
         :text="t(overlayData.text)"
     />
-    <div class="content-shell">
-      <header class="app-header">
-        <VBackBtn/>
-        <h1 class="header-title">
-          <span>{{ t('describePicture.title') }}</span>
-        </h1>
-        <button class="btn-icon-info" @click="openModal">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-               stroke="orange" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="12" y1="16" x2="12" y2="12"></line>
-            <line x1="12" y1="8" x2="12.01" y2="8"></line>
-          </svg>
-        </button>
-      </header>
-      <transition name="fade" mode="out-in">
-        <div v-if="viewState === 'topics'" class="view-topics" key="topics">
-          <div class="intro-block">
-            <VBanner
-                :text="t('descriptionPage.intro')"
-                :icon="PhotoFrame"
-            />
-          </div>
-          <div class="topics-flex-title">Выбери тему для описания</div>
-          <div class="topics-list-container">
-            <div
-                v-for="topic in topics"
-                :key="topic.id"
-                class="topic-list-item"
-                @click="selectTopic(topic)"
-            >
-              <div class="topic-item-content">
-                <div class="topic-icon-box">{{ topic.icon }}</div>
-                <span class="topic-label">{{ t(topic.label) }}</span>
-              </div>
-              <div class="topic-arrow">
-                <img src="../../assets/images/next.svg" alt="">
+
+    <transition name="page-fade" appear>
+      <div v-if="isPageLoaded" class="content-shell">
+        <header class="app-header">
+          <button @click="goBack" class="btn-icon-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                 stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          <h1 class="header-title">
+            <span>{{ t('describePicture.title') }}</span>
+          </h1>
+          <button class="btn-icon-info" @click="openModal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="orange" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+          </button>
+        </header>
+        <transition name="fade" mode="out-in">
+          <div v-if="viewState === 'topics'" class="view-topics" key="topics">
+            <div class="intro-block">
+              <VBanner
+                  :text="t('descriptionPage.intro')"
+                  :icon="PhotoFrame"
+              />
+            </div>
+            <div class="topics-flex-title">Выбери тему для описания</div>
+            <div class="topics-list-container">
+              <div
+                  v-for="topic in topics"
+                  :key="topic.id"
+                  class="topic-list-item"
+                  @click="selectTopic(topic)"
+              >
+                <div class="topic-item-content">
+                  <div class="topic-icon-box">{{ topic.icon }}</div>
+                  <span class="topic-label">{{ t(topic.label) }}</span>
+                </div>
+                <div class="topic-arrow">
+                  <img src="../../assets/images/next.svg" alt="">
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div v-else-if="viewState === 'level'" class="view-level" key="level">
-          <div class="level-header"><h2>{{ t('descriptionPage.level')}}</h2></div>
-          <div class="level-options">
-            <button v-for="level in levels" :key="level" @click="selectLevel(level)" class="level-card"
-                    :class="{ 'active': selectedLevel === level }">
-              <div class="level-mark"></div>
-              <span class="level-name">{{ level }}</span>
-            </button>
+          <div v-else-if="viewState === 'level'" class="view-level" key="level">
+            <div class="level-header"><h2>{{ t('descriptionPage.level')}}</h2></div>
+            <div class="level-options">
+              <button v-for="level in levels" :key="level" @click="selectLevel(level)" class="level-card"
+                      :class="{ 'active': selectedLevel === level }">
+                <div class="level-mark"></div>
+                <span class="level-name">{{ level }}</span>
+              </button>
+            </div>
+            <button @click="startGame" class="btn-primary-action">{{ t('nominativ.start')}}</button>
           </div>
-          <button @click="startGame" class="btn-primary-action">{{ t('nominativ.start')}}</button>
-        </div>
-      </transition>
-    </div>
+        </transition>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useSeoMeta, useState } from "#imports"
 import { useRouter } from 'vue-router'
 import Modal from '../../src/components/modal.vue'
 import Description from '@/assets/images/reporting.svg'
 import { topics } from '@/utils/descriptionImages.js'
-import VBackBtn from "~/src/components/V-back-btn.vue";
 import { showInterstitial } from '../../utils/admob.js'
 import VBanner from "~/src/components/V-banner.vue";
 import PhotoFrame from "../../assets/images/photo-frame.svg";
@@ -89,12 +97,18 @@ const selectedTopic = ref(null)
 const selectedLevel = ref('A1')
 const showDevModal = ref(false)
 
+const isPageLoaded = ref(false)
+
 const overlayData = ref({ title: "describePicture.rulesTitle", text: "describePicture.rulesText" })
 
 const sessionConfig = useState('sessionConfig', () => ({
   topicId: null,
   level: 'A1'
 }))
+
+onMounted(() => {
+  isPageLoaded.value = true
+})
 
 const openModal = () => { showDevModal.value = true }
 const closeModal = () => { showDevModal.value = false }
@@ -141,7 +155,6 @@ function goBack() {
 
 h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   font-family: "Nunito", sans-serif;
-  text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--titleColor);
   margin: 0;
@@ -165,12 +178,13 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
 }
 
 .header-title {
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 900;
   color: var(--titleColor);
   text-shadow: 1px 1px 0px #ffffff;
 }
 
+.btn-icon-back,
 .btn-icon-info {
   background: #f5f5f6;
   border: 3px solid var(--tabsSlideBorderColor);
@@ -184,8 +198,10 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   cursor: pointer;
   transition: transform 0.1s, box-shadow 0.1s;
   flex-shrink: 0;
+  padding: 0;
 }
 
+.btn-icon-back:active,
 .btn-icon-info:active {
   transform: translate(2px, 3px);
   box-shadow: 0px 0px 0px #1e272e;
@@ -281,7 +297,6 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .task-count {
@@ -383,6 +398,14 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   transform: translate(2px, 3px);
 }
 
+.page-fade-enter-active {
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.page-fade-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s ease, transform 0.2s ease;
@@ -395,10 +418,6 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
 }
 
 @media (max-width: 767px) {
-  .header-title {
-    font-size: 20px;
-    text-align: center;
-  }
   .intro-block p {
     font-size: 15px;
   }

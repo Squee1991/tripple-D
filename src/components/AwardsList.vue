@@ -8,15 +8,18 @@
         @close="closeAward"
     />
     <div class="awards__header">
-      <h1 class="awards__title">{{ t('awardModal.title') }}</h1>
-      <button @click="questionModal" class="awards__info-btn">
-        <!--            <img class="awards__question-icon" :src="Question" alt="quest_icon">-->
-        <div class="awards__counter cartoon-board">
-          <span class="cartoon-board__value">{{ awardsTotalLocked }}</span>
-          <span class="cartoon-board__sep">/</span>
-          <span class="cartoon-board__total">{{ awardsTotal }}</span>
-        </div>
-      </button>
+      <VBanner
+       :text="t('Награды за полученные достижения и выполнение заданий')"
+       :icon="Achicon"
+      />
+<!--      <button @click="questionModal" class="awards__info-btn">-->
+<!--        &lt;!&ndash;            <img class="awards__question-icon" :src="Question" alt="quest_icon">&ndash;&gt;-->
+<!--        <div class="awards__counter cartoon-board">-->
+<!--          <span class="cartoon-board__value">{{ awardsTotalLocked }}</span>-->
+<!--          <span class="cartoon-board__sep">/</span>-->
+<!--          <span class="cartoon-board__total">{{ awardsTotal }}</span>-->
+<!--        </div>-->
+<!--      </button>-->
     </div>
     <div class="awards__list-scroll">
       <div class="items-grid">
@@ -44,7 +47,8 @@ import {ref} from 'vue'
 import VModal from '~/src/components/modal.vue'
 import AwardIconModal from '../../assets/images/AwardForModal.svg'
 import Question from '../../assets/images/question.svg'
-
+import VBanner from "~/src/components/V-banner.vue";
+import Achicon from '../../assets/images/AchPanelIcon.svg'
 const {t} = useI18n()
 const props = defineProps({
   awards: {
@@ -98,13 +102,12 @@ function closeAward() {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border-top: 3px solid var(--tabsSlideBorderColor);
   padding-bottom: 30px;
   border-radius: 15px;
 }
 
 .shop-item {
-  padding: 12px;
+  padding: 8px;
   text-align: center;
   display: flex;
   width: 120px;
@@ -127,7 +130,6 @@ function closeAward() {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
-  padding: 0 20px;
   border-radius: 16px;
 
 }
@@ -286,6 +288,7 @@ button:disabled {
   min-height: 400px;
   display: flex;
   flex-direction: column;
+  padding: 15px 0 0 0 ;
 }
 
 .awards__section:after{
