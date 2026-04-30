@@ -1,6 +1,6 @@
 [
   {
-    "questId": "future_travel_plans",
+    "questId": "one",
     "aliases": [
       "werden-travel-theme"
     ],
@@ -9,12 +9,12 @@
     "description": "pluralLandQuestOne.description",
     "conditions": {
       "goal": "pluralLandQuestOne.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -217,7 +217,7 @@
     ]
   },
   {
-    "questId": "future_goals_predictions",
+    "questId": "two",
     "aliases": [
       "future-step-2"
     ],
@@ -226,12 +226,12 @@
     "description": "pluralLandQuestTwo.description",
     "conditions": {
       "goal": "pluralLandQuestTwo.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -411,7 +411,7 @@
     ]
   },
   {
-    "questId": "future_plans_plural",
+    "questId": "three",
     "aliases": [
       "futur-group-plans"
     ],
@@ -420,12 +420,12 @@
     "description": "pluralLandQuestThree.description",
     "conditions": {
       "goal": "pluralLandQuestThree.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -556,7 +556,7 @@
     ]
   },
   {
-    "questId": "future_party_planning",
+    "questId": "four",
     "aliases": [
       "futur-party-time"
     ],
@@ -565,12 +565,12 @@
     "description": "pluralLandQuestFour.description",
     "conditions": {
       "goal": "pluralLandQuestFour.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -681,7 +681,7 @@
     ]
   },
   {
-    "questId": "future_sports_competition",
+    "questId": "five",
     "aliases": [
       "futur-sport-active"
     ],
@@ -690,12 +690,12 @@
     "description": "pluralLandQuestFive.description",
     "conditions": {
       "goal": "pluralLandQuestFive.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -807,19 +807,19 @@
     ]
   },
   {
-    "questId": "future_weekend_plans",
+    "questId": "six",
     "aliases": ["futur-leisure"],
     "title": "pluralLandQuestSix.title",
     "progress": "0/15",
     "description": "pluralLandQuestSix.description",
     "conditions": {
       "goal": "pluralLandQuestSix.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -934,7 +934,7 @@
     ]
   },
   {
-    "questId": "future_moving_house",
+    "questId": "seven",
     "aliases": [
       "futur-umzug-new-home"
     ],
@@ -943,12 +943,12 @@
     "description": "pluralLandQuestSeven.description",
     "conditions": {
       "goal": "pluralLandQuestSeven.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1064,7 +1064,7 @@
     ]
   },
   {
-    "questId": "future_weather_forecast",
+    "questId": "eight",
     "aliases": [
       "futur-weather-prediction"
     ],
@@ -1073,12 +1073,12 @@
     "description": "pluralLandQuestEight.description",
     "conditions": {
       "goal": "pluralLandQuestEight.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1209,7 +1209,7 @@
     ]
   },
   {
-    "questId": "future_health_doctor",
+    "questId": "nine",
     "aliases": [
       "futur-health-recovery"
     ],
@@ -1218,12 +1218,12 @@
     "description": "pluralLandQuestNine.description",
     "conditions": {
       "goal": "pluralLandQuestNine.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1354,7 +1354,7 @@
     ]
   },
   {
-    "questId": "future_shopping_fashion",
+    "questId": "ten",
     "aliases": [
       "futur-shopping-buy"
     ],
@@ -1363,12 +1363,12 @@
     "description": "pluralLandQuestTen.description",
     "conditions": {
       "goal": "pluralLandQuestTen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1499,7 +1499,7 @@
     ]
   },
   {
-    "questId": "future_restaurant_dining",
+    "questId": "eleven",
     "aliases": [
       "futur-eating-out"
     ],
@@ -1508,12 +1508,12 @@
     "description": "pluralLandQuestEleven.description",
     "conditions": {
       "goal": "pluralLandQuestEleven.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1644,7 +1644,7 @@
     ]
   },
   {
-    "questId": "future_cinema_movies",
+    "questId": "twelve",
     "aliases": [
       "futur-movies-entertainment"
     ],
@@ -1653,12 +1653,12 @@
     "description": "pluralLandQuestTwelve.description",
     "conditions": {
       "goal": "pluralLandQuestTwelve.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1785,7 +1785,7 @@
     ]
   },
   {
-    "questId": "future_animals_pets",
+    "questId": "thirteen",
     "aliases": [
       "futur-pets-zoo"
     ],
@@ -1794,12 +1794,12 @@
     "description": "pluralLandQuestThirteen.description",
     "conditions": {
       "goal": "pluralLandQuestThirteen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1930,7 +1930,7 @@
     ]
   },
   {
-    "questId": "future_environment_nature",
+    "questId": "fourteen",
     "aliases": [
       "futur-ecology-protection"
     ],
@@ -1939,12 +1939,12 @@
     "description": "pluralLandQuestFourteen.description",
     "conditions": {
       "goal": "pluralLandQuestFourteen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -2075,7 +2075,7 @@
     ]
   },
   {
-    "questId": "future_holidays_traditions",
+    "questId": "fifteen",
     "aliases": [
       "futur-festivals-celebration"
     ],
@@ -2084,12 +2084,12 @@
     "description": "pluralLandQuestFifteen.description",
     "conditions": {
       "goal": "pluralLandQuestFifteen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {

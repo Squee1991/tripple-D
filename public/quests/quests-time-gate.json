@@ -1,15 +1,15 @@
 [
   {
-    "questId": "social",
+    "questId": "one",
     "title": "timeGageQuestOne.title",
     "progress": "0/15",
     "description": "timeGageQuestOne.description",
     "conditions": {
       "goal": "timeGageQuestOne.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -134,16 +134,16 @@
     ]
   },
   {
-    "questId": "grammar",
+    "questId": "two",
     "title": "timeGageQuestTwo.title",
     "progress": "0/15",
     "description": "timeGageQuestTwo.description",
     "conditions": {
       "goal": "timeGageQuestTwo.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -268,16 +268,16 @@
     ]
   },
   {
-    "questId": "city",
+    "questId": "three",
     "title": "timeGageQuestThree.title",
     "progress": "0/15",
     "description": "timeGageQuestThree.description",
     "conditions": {
       "goal": "timeGageQuestThree.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -400,16 +400,16 @@
     ]
   },
   {
-    "questId": "office",
+    "questId": "four",
     "title": "timeGageQuestFour.title",
     "progress": "0/15",
     "description": "timeGageQuestFour.description",
     "conditions": {
       "goal": "timeGageQuestFour.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -535,16 +535,16 @@
     ]
   },
   {
-    "questId": "travel",
+    "questId": "five",
     "title": "timeGageQuestFive.title",
     "progress": "0/15",
     "description": "timeGageQuestFive.description",
     "conditions": {
       "goal": "timeGageQuestFive.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -669,16 +669,16 @@
     ]
   },
   {
-    "questId": "restaurant",
+    "questId": "six",
     "title": "timeGageQuestSix.title",
     "progress": "0/15",
     "description": "timeGageQuestSix.description",
     "conditions": {
       "goal": "timeGageQuestSix.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -802,16 +802,16 @@
     ]
   },
   {
-    "questId": "hobbies",
+    "questId": "seven",
     "title": "timeGageQuestSeven.title",
     "progress": "0/15",
     "description": "timeGageQuestSeven.description",
     "conditions": {
       "goal": "timeGageQuestSeven.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -935,16 +935,16 @@
     ]
   },
   {
-    "questId": "shopping",
+    "questId": "eight",
     "title": "timeGageQuestEight.title",
     "progress": "0/15",
     "description": "timeGageQuestEight.description",
     "conditions": {
       "goal": "timeGageQuestEight.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1069,16 +1069,16 @@
     ]
   },
   {
-    "questId": "health",
+    "questId": "nine",
     "title": "timeGageQuestNine.title",
     "progress": "0/15",
     "description": "timeGageQuestNine.description",
     "conditions": {
       "goal": "timeGageQuestNine.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1202,16 +1202,16 @@
     ]
   },
   {
-    "questId": "home",
+    "questId": "ten",
     "title": "timeGageQuestTen.title",
     "progress": "0/15",
     "description": "timeGageQuestTen.description",
     "conditions": {
       "goal": "timeGageQuestTen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1336,16 +1336,16 @@
     ]
   },
   {
-    "questId": "education",
+    "questId": "eleven",
     "title": "timeGageQuestEleven.title",
     "progress": "0/15",
     "description": "timeGageQuestEleven.description",
     "conditions": {
       "goal": "timeGageQuestEleven.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1469,7 +1469,7 @@
     ]
   },
   {
-    "questId": "nature",
+    "questId": "twelve",
     "title": "timeGageQuestTwelve.title",
     "progress": "0/15",
     "description": "timeGageQuestTwelve.description",
@@ -1603,16 +1603,16 @@
     ]
   },
   {
-    "questId": "transport",
+    "questId": "thirteen",
     "title": "timeGageQuestThirteen.title",
     "progress": "0/15",
     "description": "timeGageQuestThirteen.description",
     "conditions": {
       "goal": "timeGageQuestThirteen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1736,16 +1736,16 @@
     ]
   },
   {
-    "questId": "media",
+    "questId": "fourteen",
     "title": "timeGageQuestFourteen.title",
     "progress": "0/15",
     "description": "timeGageQuestFourteen.description",
     "conditions": {
       "goal": "timeGageQuestFourteen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1870,7 +1870,7 @@
     ]
   },
   {
-    "questId": "culture",
+    "questId": "fifteen",
     "title": "timeGageQuestFifteen.title",
     "progress": "0/15",
     "description": "timeGageQuestFifteen.description",

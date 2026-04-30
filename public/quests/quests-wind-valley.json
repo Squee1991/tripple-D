@@ -6,12 +6,12 @@
     "description": "questsWindValleyFirstQuests.description",
     "conditions": {
       "goal": "questsWindValleyFirstQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -208,12 +208,12 @@
     "description": "questsWindValleySecondQuests.description",
     "conditions": {
       "goal": "questsWindValleySecondQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -410,12 +410,12 @@
     "description": "questsWindValleyThirdQuests.description",
     "conditions": {
       "goal": "questsWindValleyThirdQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -612,12 +612,12 @@
     "description": "questsWindValleyFourthQuests.description",
     "conditions": {
       "goal": "questsWindValleyFourthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -814,12 +814,12 @@
     "description": "questsWindValleyFifthQuests.description",
     "conditions": {
       "goal": "questsWindValleyFifthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1008,12 +1008,12 @@
     "description": "questsWindValleySixQuests.description",
     "conditions": {
       "goal": "questsWindValleySixQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1156,12 +1156,12 @@
     "description": "questsWindValleySevenQuests.description",
     "conditions": {
       "goal": "questsWindValleySevenQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1352,12 +1352,12 @@
     "description": "questsWindValleyEighthQuests.description",
     "conditions": {
       "goal": "questsWindValleyEighthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1570,12 +1570,12 @@
     "description": "questsWindValleyNinthQuests.description",
     "conditions": {
       "goal": "questsWindValleyNinthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1774,12 +1774,12 @@
     "description": "questsWindValleyTenthQuests.description",
     "conditions": {
       "goal": "questsWindValleyTenthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1978,12 +1978,12 @@
     "description": "questsStoneReachEleventhQuests.description",
     "conditions": {
       "goal": "questsStoneReachEleventhQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -2180,12 +2180,12 @@
     "description": "questsStoneReachTwelfthQuests.description",
     "conditions": {
       "goal": "questsStoneReachTwelfthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -2382,12 +2382,12 @@
     "description": "questsStoneReachThirteenthQuests.description",
     "conditions": {
       "goal": "questsStoneReachThirteenthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
