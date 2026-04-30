@@ -1,6 +1,6 @@
 [
   {
-    "questId": "one",
+    "questId": "time-one",
     "title": "timeGageQuestOne.title",
     "progress": "0/15",
     "description": "timeGageQuestOne.description",
@@ -134,7 +134,7 @@
     ]
   },
   {
-    "questId": "two",
+    "questId": "time-two",
     "title": "timeGageQuestTwo.title",
     "progress": "0/15",
     "description": "timeGageQuestTwo.description",
@@ -268,7 +268,7 @@
     ]
   },
   {
-    "questId": "three",
+    "questId": "time-three",
     "title": "timeGageQuestThree.title",
     "progress": "0/15",
     "description": "timeGageQuestThree.description",
@@ -400,7 +400,7 @@
     ]
   },
   {
-    "questId": "four",
+    "questId": "time-four",
     "title": "timeGageQuestFour.title",
     "progress": "0/15",
     "description": "timeGageQuestFour.description",
@@ -535,7 +535,7 @@
     ]
   },
   {
-    "questId": "five",
+    "questId": "time-five",
     "title": "timeGageQuestFive.title",
     "progress": "0/15",
     "description": "timeGageQuestFive.description",
@@ -669,7 +669,7 @@
     ]
   },
   {
-    "questId": "six",
+    "questId": "time-six",
     "title": "timeGageQuestSix.title",
     "progress": "0/15",
     "description": "timeGageQuestSix.description",
@@ -802,7 +802,7 @@
     ]
   },
   {
-    "questId": "seven",
+    "questId": "time-seven",
     "title": "timeGageQuestSeven.title",
     "progress": "0/15",
     "description": "timeGageQuestSeven.description",
@@ -935,7 +935,7 @@
     ]
   },
   {
-    "questId": "eight",
+    "questId": "time-eight",
     "title": "timeGageQuestEight.title",
     "progress": "0/15",
     "description": "timeGageQuestEight.description",
@@ -1069,7 +1069,7 @@
     ]
   },
   {
-    "questId": "nine",
+    "questId": "time-nine",
     "title": "timeGageQuestNine.title",
     "progress": "0/15",
     "description": "timeGageQuestNine.description",
@@ -1202,7 +1202,7 @@
     ]
   },
   {
-    "questId": "ten",
+    "questId": "time-ten",
     "title": "timeGageQuestTen.title",
     "progress": "0/15",
     "description": "timeGageQuestTen.description",
@@ -1336,7 +1336,7 @@
     ]
   },
   {
-    "questId": "eleven",
+    "questId": "time-eleven",
     "title": "timeGageQuestEleven.title",
     "progress": "0/15",
     "description": "timeGageQuestEleven.description",
@@ -1469,7 +1469,7 @@
     ]
   },
   {
-    "questId": "twelve",
+    "questId": "time-twelve",
     "title": "timeGageQuestTwelve.title",
     "progress": "0/15",
     "description": "timeGageQuestTwelve.description",
@@ -1603,7 +1603,7 @@
     ]
   },
   {
-    "questId": "thirteen",
+    "questId": "time-thirteen",
     "title": "timeGageQuestThirteen.title",
     "progress": "0/15",
     "description": "timeGageQuestThirteen.description",
@@ -1736,7 +1736,7 @@
     ]
   },
   {
-    "questId": "fourteen",
+    "questId": "time-fourteen",
     "title": "timeGageQuestFourteen.title",
     "progress": "0/15",
     "description": "timeGageQuestFourteen.description",
@@ -1870,7 +1870,7 @@
     ]
   },
   {
-    "questId": "fifteen",
+    "questId": "time-fifteen",
     "title": "timeGageQuestFifteen.title",
     "progress": "0/15",
     "description": "timeGageQuestFifteen.description",
