@@ -6,12 +6,12 @@
     "description": "masterLandsFirstQuest.description",
     "conditions": {
       "goal": "Понимать и использовать базовые рабочие фразы",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -126,12 +126,12 @@
     "description": "masterLandsSecondQuest.description",
     "conditions": {
       "goal": "Выучить слова и фразы про место работы",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -246,12 +246,12 @@
     "description": "masterLandsThirdQuests.description",
     "conditions": {
       "goal": "Выучить слова и фразы про коллег",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -368,12 +368,12 @@
     "description": "masterLandsFourthQuests.description",
     "conditions": {
       "goal": "Выучить фразы про рабочее время и перерывы",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -492,12 +492,12 @@
     "description": "masterLandsFifthQuests.description",
     "conditions": {
       "goal": "Выучить живые фразы для работы с задачами",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -613,12 +613,12 @@
     "description": "masterLandsSixthQuests.description",
     "conditions": {
       "goal": "Выучить базу по инструментам и технике безопасности",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -735,12 +735,12 @@
     "description": "masterLandsSeventhQuests.description",
     "conditions": {
       "goal": "Выучить слова про время, опоздания и ожидание",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -859,12 +859,12 @@
     "description": "masterLandsEightQuests.description",
     "conditions": {
       "goal": "Выучить базу по погрузке и весу",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -978,12 +978,12 @@
     "description": "masterLandsNineQuests.description",
     "conditions": {
       "goal": "Выучить жизненно важные фразы про деньги и быт на работе",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1098,12 +1098,12 @@
     "description": "masterLandsTenQuests.description",
     "conditions": {
       "goal": "Выучить названия инструментов и команды на объекте",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1218,12 +1218,12 @@
     "description": "masterLandsElevenQuests.description",
     "conditions": {
       "goal": "Выучить глаголы действия и команды на объекте",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1338,12 +1338,12 @@
     "description": "masterLandsTwelveQuests.description",
     "conditions": {
       "goal": "Выучить замеры и последовательность действий",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1475,12 +1475,12 @@
     "description": "masterLandsThirteenQuests.description",
     "conditions": {
       "goal": "Выучить простые слова и фразы про зарплату и договор",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1608,12 +1608,12 @@
     "description": "masterLandsFourteenQuests.description",
     "conditions": {
       "goal": "Научиться оформлять больничный на немецком",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp":10
     },
     "tasks": [
       {

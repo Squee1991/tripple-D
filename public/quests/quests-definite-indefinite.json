@@ -6,12 +6,12 @@
     "description": "Смешанная практика: неопределенные и определенные артикли в предложениях.",
     "conditions": {
       "goal": "Закрепи разницу в окончаниях на реальных фразах!",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -157,10 +157,10 @@
     "description": "definiteIndefiniteQuestTwo.description",
     "conditions": {
       "goal": "definiteIndefiniteQuestTwo.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10  },
     "tasks": [
       {
         "id": 1,
@@ -285,10 +285,10 @@
     "description": "definiteIndefiniteQuestThree.description",
     "conditions": {
       "goal": "definiteIndefiniteQuestThree.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -413,10 +413,10 @@
     "description": "definiteIndefiniteQuestFour.description",
     "conditions": {
       "goal": "definiteIndefiniteQuestFour.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -541,10 +541,10 @@
     "description": "definiteIndefiniteQuestFive.description",
     "conditions": {
       "goal": "definiteIndefiniteQuestFive.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -669,10 +669,10 @@
     "description": "definiteIndefiniteQuestSix.description",
     "conditions": {
       "goal": "definiteIndefiniteQuestSix.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -798,10 +798,10 @@
     "description": "definiteIndefiniteQuestSeven.description",
     "conditions": {
       "goal": "definiteIndefiniteQuestSeven.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -926,10 +926,10 @@
     "description": "definiteIndefiniteQuestEight.description",
     "conditions": {
       "goal": "definiteIndefiniteQuestEight.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1054,10 +1054,10 @@
     "description": "definiteIndefiniteQuestNine.description",
     "conditions": {
       "goal": "definiteIndefiniteQuestNine.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1182,10 +1182,10 @@
     "description": "definiteIndefiniteQuestTen.description",
     "conditions": {
       "goal": "definiteIndefiniteQuestTen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1310,10 +1310,10 @@
     "description": "definiteIndefiniteQuestEleven.description",
     "conditions": {
       "goal": "definiteIndefiniteQuestEleven.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1438,10 +1438,10 @@
     "description": "definiteIndefiniteQuestTwelve.description",
     "conditions": {
       "goal": "definiteIndefiniteQuestTwelve.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1566,10 +1566,10 @@
     "description": "definiteIndefiniteQuestThirteen.description",
     "conditions": {
       "goal": "definiteIndefiniteQuestThirteen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1694,10 +1694,10 @@
     "description": "definiteIndefiniteQuestFourteen.description",
     "conditions": {
       "goal": "definiteIndefiniteQuestFourteen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1822,10 +1822,10 @@
     "description": "definiteIndefiniteQuestFifteen.description",
     "conditions": {
       "goal": "definiteIndefiniteQuestFifteen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,

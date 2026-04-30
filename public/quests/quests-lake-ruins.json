@@ -1,17 +1,17 @@
 [
   {
-    "questId": "weather-1",
+    "questId": "one",
     "title": "questLakeRuinsFirstQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsFirstQuests.description",
     "conditions": {
       "goal": "questLakeRuinsFirstQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -198,18 +198,18 @@
     ]
   },
   {
-    "questId": "weather-2",
+    "questId": "two",
     "title": "questLakeRuinsSecondQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsSecondQuests.description",
     "conditions": {
       "goal": "questLakeRuinsSecondQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -395,18 +395,18 @@
     ]
   },
   {
-    "questId": "weather-3",
+    "questId": "three",
     "title": "questLakeRuinsThirdQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsThirdQuests.description",
     "conditions": {
       "goal": "questLakeRuinsThirdQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -593,18 +593,18 @@
     ]
   },
   {
-    "questId": "weather-4",
+    "questId": "four",
     "title": "questLakeRuinsFourthQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsFourthQuests.description",
     "conditions": {
       "goal": "questLakeRuinsFourthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -790,18 +790,18 @@
     ]
   },
   {
-    "questId": "weather-5",
+    "questId": "five",
     "title": "questLakeRuinsFifthQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsFifthQuests.description",
     "conditions": {
       "goal": "questLakeRuinsFifthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -979,18 +979,18 @@
     ]
   },
   {
-    "questId": "weather-6",
+    "questId": "six",
     "title": "questLakeRuinsSixthQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsSixthQuests.description",
     "conditions": {
       "goal": "questLakeRuinsSixthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1171,18 +1171,18 @@
     ]
   },
   {
-    "questId": "weather-7",
+    "questId": "seven",
     "title": "questLakeRuinsSeventhQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsSeventhQuests.description",
     "conditions": {
       "goal": "questLakeRuinsSeventhQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1363,18 +1363,18 @@
     ]
   },
   {
-    "questId": "weather-8",
+    "questId": "eight",
     "title": "questLakeRuinsEighthQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsEighthQuests.description",
     "conditions": {
       "goal": "questLakeRuinsEighthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1579,18 +1579,18 @@
     ]
   },
   {
-    "questId": "weather-9",
+    "questId": "nine",
     "title": "questLakeRuinsNinthQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsNinthQuests.description",
     "conditions": {
       "goal": "questLakeRuinsNinthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1784,18 +1784,18 @@
     ]
   },
   {
-    "questId": "weather-10",
+    "questId": "ten",
     "title": "questLakeRuinsTenthQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsTenthQuests.description",
     "conditions": {
       "goal": "questLakeRuinsTenthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {

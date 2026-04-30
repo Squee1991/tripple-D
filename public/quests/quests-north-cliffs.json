@@ -6,12 +6,12 @@
     "description": "questsNorthCliffsFirstQuests.description",
     "conditions": {
       "goal": "Rezeption, reservieren, Einzel-/Doppelzimmer, für zwei Nächte, Check-in/Check-out, Ausweis, Frühstück, pro Nacht",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -203,12 +203,12 @@
     "description": "questsNorthCliffsSecondQuests.description",
     "conditions": {
       "goal": "Frühstück/WLAN/Aufzug, Preis pro Nacht, Ich bezahle mit Karte/Bar, Rechnung",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -391,12 +391,12 @@
     "description": "questsNorthCliffsThirdQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsThirdQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -581,12 +581,12 @@
     "description": "questsNorthCliffsFourthQuests.description",
     "conditions": {
       "goal": "Wo?/Wann?, Frühstückszeiten, Aufzug/Treppe, Parkplatz, WLAN-Passwort, kostenlos/geöffnet",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -779,12 +779,12 @@
     "description": "questsNorthCliffsFifthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsFifthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -965,12 +965,12 @@
     "description": "questsNorthCliffsSixthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsSixthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1168,12 +1168,12 @@
     "description": "questsNorthCliffsSeventhQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsSeventhQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1565,12 +1565,12 @@
     "description": "questsNorthCliffsNinthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsNinthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1773,12 +1773,12 @@
     "description": "questsNorthCliffsTenthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsTenthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1965,12 +1965,12 @@
     "description": "questsNorthCliffsEleventhQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsEleventhQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -2152,12 +2152,12 @@
     "description": "questsNorthCliffsTwelfthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsTwelfthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {

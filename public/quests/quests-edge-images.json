@@ -6,10 +6,10 @@
     "description": "edgeImagesQuestOne.description",
     "conditions": {
       "goal": "edgeImagesQuestOne.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -137,10 +137,10 @@
     "description": "edgeImagesQuestTwo.description",
     "conditions": {
       "goal": "edgeImagesQuestTwo.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -263,10 +263,10 @@
     "description": "edgeImagesQuestThree.description",
     "conditions": {
       "goal": "edgeImagesQuestThree.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -388,10 +388,10 @@
     "description": "edgeImagesQuestFour.description",
     "conditions": {
       "goal": "edgeImagesQuestFour.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -514,10 +514,10 @@
     "description": "edgeImagesQuestFive.description",
     "conditions": {
       "goal": "edgeImagesQuestFive.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -640,10 +640,10 @@
     "description": "edgeImagesQuestSix.description",
     "conditions": {
       "goal": "edgeImagesQuestSix.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -766,10 +766,10 @@
     "description": "edgeImagesQuestSeven.description",
     "conditions": {
       "goal": "edgeImagesQuestSeven.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -892,10 +892,10 @@
     "description": "edgeImagesQuestEight.description",
     "conditions": {
       "goal": "edgeImagesQuestEight.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1018,10 +1018,10 @@
     "description": "edgeImagesQuestNine.description",
     "conditions": {
       "goal": "edgeImagesQuestNine.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1144,10 +1144,10 @@
     "description": "edgeImagesQuestTen.description",
     "conditions": {
       "goal": "edgeImagesQuestTen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1270,10 +1270,10 @@
     "description": "edgeImagesQuestEleven.description",
     "conditions": {
       "goal": "edgeImagesQuestEleven.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1396,10 +1396,10 @@
     "description": "edgeImagesQuestTwelve.description",
     "conditions": {
       "goal": "edgeImagesQuestTwelve.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 30, "xp": 30 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1516,16 +1516,16 @@
     ]
   },
   {
-    "questId": "adj_decl_mixed_13",
+    "questId": "adjective-thirteen",
     "title": "edgeImagesQuestThirteen.title",
     "progress": "0/15",
     "description": "edgeImagesQuestThirteen.description",
     "conditions": {
       "goal": "edgeImagesQuestThirteen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1642,16 +1642,16 @@
     ]
   },
   {
-    "questId": "adj_decl_mixed_14",
+    "questId": "adjective-fourteen",
     "title": "edgeImagesQuestFourteen.title",
     "progress": "0/15",
     "description": "edgeImagesQuestFourteen.description",
     "conditions": {
       "goal": "edgeImagesQuestFourteen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1768,16 +1768,16 @@
     ]
   },
   {
-    "questId": "adj_decl_mixed_15",
+    "questId": "adjective-fifteen",
     "title": "edgeImagesQuestFifteen.title",
     "progress": "0/15",
     "description": "edgeImagesQuestFifteen.description",
     "conditions": {
       "goal": "edgeImagesQuestFifteen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 30, "xp": 30 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
