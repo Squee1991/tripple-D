@@ -9677,7 +9677,7 @@
     "prepositions": "Predloglar"
   },
   "v-rank": {
-    "desc": "Konfederatkalar — bu sizning cho'qqiga yo'lingiz! Kunlik barcha uchta topshiriqni bajarib, ularni to'plang. Darajangizni oshiring va ochilgan bonuslarni sotib oling!",
+    "desc": "Kunlik topshiriqlarni bajarib, konfederatkalar to'plang. Darajangizni oshiring va bonuslar sotib oling.",
     "rank": "daraja",
     "rank_0": "Rekrut",
     "rank_1": "Yangi",
@@ -9778,5 +9778,9 @@
     "delta": "Abadiy kontrast va qarama-qarshilik dunyosi. Bu yerda hamma narsa taqqoslash orqali bilib olinadi: «tez»dan «sekin»gacha. Tizimda muvozanatni saqlash uchun zid ma'nolarni mahorat bilan topishni o'rgan.",
     "epsilon": "O'tmishning vaqt sirtmog'i. Bajargan missiyalaring haqida hisobotlar yozish va boshqa yulduz tizimlaridagi g'alabalaring haqida so'zlab berish uchun fe'llarning murakkab shakllarini o'zlashtir.",
     "zeta": "Fazo va vaqtning navigatsiya tarmog'i. Lingvistik so'qmoqlar «qayerga», «qayerda» va «qanday» olib borishini aniqla. To'g'ri ko'makchilar — bu til cheksizligidagi sening aniq koordinatalaringdir."
+  },
+  "personalAccount": {
+    "statsAndAchievements": "Statistika va yutuqlar",
+    "streakTitle": "Artikllar marafoni seriyasi"
   }
 }

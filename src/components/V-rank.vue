@@ -1,8 +1,10 @@
 <template>
   <div class="ranks-wrapper">
     <div class="hats-info">
-      <div class="hats-left">
-        <img class="hat-img" :src="EducationHut" alt="EducationHut"/>
+      <VBanner
+          :text="t('v-rank.desc')"
+          :icon="EducationHut"
+      />
 <!--      <div class="hats-badge" aria-hidden="true">-->
 <!--        <img :src="currentRankIcon" :alt="currentRankTitle"/>-->
 <!--      </div>-->
@@ -12,10 +14,6 @@
 <!--          <span class="hat-value">{{ authStore.totalHats }}</span>-->
 <!--        </div>-->
 <!--      </div>-->
-    </div>
-      <div class="hats-right">
-        <div class="hats-text"> {{t('v-rank.desc')}} </div>
-      </div>
     </div>
     <div v-for="rank in store.ranksData" :key="rank.title" class="rank-league">
       <div class="league-line">
@@ -77,6 +75,7 @@ import {useRankUserStore} from '~/store/rankStore.js'
 import {userAuthStore} from '~/store/authStore.js'
 import {useSeoMeta} from "#imports"
 import EducationHut from '../../assets/images/graduate-hat.svg'
+import VBanner from "~/src/components/V-banner.vue";
 
 const { t } = useI18n()
 const store = useRankUserStore()
@@ -319,7 +318,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 .hats-info {
   display: flex;
   align-items: center;
-  padding: 15px 10px 0 10px;
+  padding: 15px 0 5px 0;
   margin-bottom: 15px;
 }
 

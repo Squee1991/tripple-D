@@ -9689,7 +9689,7 @@
     "prepositions": "Prepoziții"
   },
   "v-rank": {
-    "desc": "Toscile de confederație sunt calea ta spre vârf! Acumulează-le îndeplinind toate cele trei sarcini zilnice. Crește-ți rangul și cumpără bonusuri deblocate!",
+    "desc": "Acumulează toci prin îndeplinirea sarcinilor zilei. Crește-ți rangul și cumpără bonusuri.",
     "rank": "Rangul",
     "rank_0": "Recrut",
     "rank_1": "Începător",
@@ -9790,5 +9790,9 @@
     "delta": "O lume a contrastului etern și a opoziției. Aici totul se cunoaște prin comparație: de la „rapid” la „lent”. Învață să găsești cu măiestrie opușii pentru a menține echilibrul în sistem.",
     "epsilon": "O buclă temporală a trecutului. Stăpânește forma complexă a verbelor pentru a scrie rapoarte despre misiunile îndeplinite și pentru a povesti despre victoriile tale trecute în alte sisteme stelare.",
     "zeta": "Grila de navigație a spațiului și timpului. Află „unde”, „încotro” și „cum” duc cărările lingvistice. Prepozițiile corecte sunt coordonatele tale precise în infinitul limbii."
+  },
+  "personalAccount": {
+    "statsAndAchievements": "Statistici și realizări",
+    "streakTitle": "Seria maratonului de articole"
   }
 }

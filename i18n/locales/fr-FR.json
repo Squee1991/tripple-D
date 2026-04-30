@@ -9682,7 +9682,7 @@
     "prepositions": "Prépositions"
   },
   "v-rank": {
-    "desc": "Les toques de confédération sont votre chemin vers le sommet ! Accumulez-les en accomplissant les trois tâches quotidiennes. Augmentez votre rang et achetez des bonus débloqués !",
+    "desc": "Accumulez des toques en accomplissant les quêtes du jour. Augmentez votre rang et achetez des bonus.",
     "rank": "Rang",
     "rank_0": "Recrue",
     "rank_1": "Novice",
@@ -9783,5 +9783,9 @@
     "delta": "Un monde de contraste éternel et d'opposition. Ici, tout se comprend par comparaison : de « rapide » à « lent ». Apprenez à trouver les opposés avec brio pour maintenir l'équilibre du système.",
     "epsilon": "Boucle temporelle du passé. Maîtrisez la forme complexe des verbes pour rédiger des rapports sur les missions accomplies et raconter vos victoires passées dans d'autres systèmes stellaires.",
     "zeta": "Grille de navigation de l'espace et du temps. Découvrez « où », « vers où » et « comment » mènent les sentiers linguistiques. Les bonnes prépositions sont vos coordonnées exactes dans l'infinité de la langue."
+  },
+  "personalAccount": {
+    "statsAndAchievements": "Statistiques et succès",
+    "streakTitle": "Série du marathon des articles"
   }
 }
