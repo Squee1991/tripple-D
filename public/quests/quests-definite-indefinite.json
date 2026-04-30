@@ -1,6 +1,6 @@
 [
   {
-    "questId": "one",
+    "questId": "one-def",
     "title": "Битва за окончания",
     "progress": "0/15",
     "description": "Смешанная практика: неопределенные и определенные артикли в предложениях.",
@@ -151,7 +151,7 @@
     ]
   },
   {
-    "questId": "two",
+    "questId": "two-def",
     "title": "definiteIndefiniteQuestTwo.title",
     "progress": "0/15",
     "description": "definiteIndefiniteQuestTwo.description",
@@ -279,7 +279,7 @@
     ]
   },
   {
-    "questId": "three",
+    "questId": "three-def",
     "title": "definiteIndefiniteQuestThree.title",
     "progress": "0/15",
     "description": "definiteIndefiniteQuestThree.description",
@@ -407,7 +407,7 @@
     ]
   },
   {
-    "questId": "four",
+    "questId": "four-def",
     "title": "definiteIndefiniteQuestFour.title",
     "progress": "0/15",
     "description": "definiteIndefiniteQuestFour.description",
@@ -535,7 +535,7 @@
     ]
   },
   {
-    "questId": "five",
+    "questId": "five-def",
     "title": "definiteIndefiniteQuestFive.title",
     "progress": "0/15",
     "description": "definiteIndefiniteQuestFive.description",
@@ -663,7 +663,7 @@
     ]
   },
   {
-    "questId": "six",
+    "questId": "six-def",
     "title": "definiteIndefiniteQuestSix.title",
     "progress": "0/15",
     "description": "definiteIndefiniteQuestSix.description",
@@ -792,7 +792,7 @@
     ]
   },
   {
-    "questId": "seven",
+    "questId": "seven-def",
     "title": "definiteIndefiniteQuestSeven.title",
     "progress": "0/15",
     "description": "definiteIndefiniteQuestSeven.description",
@@ -920,7 +920,7 @@
     ]
   },
   {
-    "questId": "eight",
+    "questId": "eight-def",
     "title": "definiteIndefiniteQuestEight.title",
     "progress": "0/15",
     "description": "definiteIndefiniteQuestEight.description",
@@ -1048,7 +1048,7 @@
     ]
   },
   {
-    "questId": "nine",
+    "questId": "nine-def",
     "title": "definiteIndefiniteQuestNine.title",
     "progress": "0/15",
     "description": "definiteIndefiniteQuestNine.description",
@@ -1176,7 +1176,7 @@
     ]
   },
   {
-    "questId": "ten",
+    "questId": "ten-def",
     "title": "definiteIndefiniteQuestTen.title",
     "progress": "0/15",
     "description": "definiteIndefiniteQuestTen.description",
@@ -1304,7 +1304,7 @@
     ]
   },
   {
-    "questId": "eleven",
+    "questId": "eleven-def",
     "title": "definiteIndefiniteQuestEleven.title",
     "progress": "0/15",
     "description": "definiteIndefiniteQuestEleven.description",
@@ -1432,7 +1432,7 @@
     ]
   },
   {
-    "questId": "twelve",
+    "questId": "twelve-def",
     "title": "definiteIndefiniteQuestTwelve.title",
     "progress": "0/15",
     "description": "definiteIndefiniteQuestTwelve.description",
@@ -1560,7 +1560,7 @@
     ]
   },
   {
-    "questId": "thirteen",
+    "questId": "thirteen-def",
     "title": "definiteIndefiniteQuestThirteen.title",
     "progress": "0/15",
     "description": "definiteIndefiniteQuestThirteen.description",
@@ -1688,7 +1688,7 @@
     ]
   },
   {
-    "questId": "fourteen",
+    "questId": "fourteen-def",
     "title": "definiteIndefiniteQuestFourteen.title",
     "progress": "0/15",
     "description": "definiteIndefiniteQuestFourteen.description",
@@ -1816,7 +1816,7 @@
     ]
   },
   {
-    "questId": "fifteen",
+    "questId": "fifteen-def",
     "title": "definiteIndefiniteQuestFifteen.title",
     "progress": "0/15",
     "description": "definiteIndefiniteQuestFifteen.description",
