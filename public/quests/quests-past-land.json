@@ -1,6 +1,6 @@
 [
   {
-    "questId": "perfekt_introduction_basics",
+    "questId": "one",
     "aliases": [
       "perfekt-simple-start"
     ],
@@ -8,7 +8,7 @@
     "description": "pastValleyQuestOne.description",
     "conditions": {
       "goal": "pastValleyQuestOne.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -148,7 +148,7 @@
     ]
   },
   {
-    "questId": "perfekt_movement_sein",
+    "questId": "two",
     "aliases": [
       "perfekt-go-run-fly"
     ],
@@ -157,12 +157,12 @@
     "description": "pastValleyQuestTwo.description",
     "conditions": {
       "goal": "pastValleyQuestTwo.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -306,19 +306,19 @@
     ]
   },
   {
-    "questId": "perfekt_daily_routine",
+    "questId": "three",
     "aliases": ["perfekt-my-day"],
     "title": "pastValleyQuestThree.title",
     "progress": "0/15",
     "description": "pastValleyQuestThree.description",
     "conditions": {
       "goal": "pastValleyQuestThree.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -460,19 +460,19 @@
     ]
   },
   {
-    "questId": "perfekt_inseparable_prefixes",
+    "questId": "four",
     "aliases": ["perfekt-no-ge"],
     "title": "pastValleyQuestFour.title",
     "progress": "0/15",
     "description": "pastValleyQuestFour.description",
     "conditions": {
       "goal": "pastValleyQuestFour.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -611,19 +611,19 @@
     ]
   },
   {
-    "questId": "perfekt_food_restaurant",
+    "questId": "five",
     "aliases": ["perfekt-dinner"],
     "title": "pastValleyQuestFive.title",
     "progress": "0/15",
     "description": "pastValleyQuestFive.description",
     "conditions": {
       "goal": "pastValleyQuestFive.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -769,19 +769,19 @@
     ]
   },
   {
-    "questId": "perfekt_travel_vacation",
+    "questId": "six",
     "aliases": ["perfekt-travel"],
     "title": "pastValleyQuestSix.title",
     "progress": "0/15",
     "description": "pastValleyQuestSix.description",
     "conditions": {
       "goal": "pastValleyQuestSix.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -919,19 +919,19 @@
     ]
   },
   {
-    "questId": "perfekt_work_office",
+    "questId": "seven",
     "aliases": ["perfekt-job"],
     "title": "pastValleyQuestSeven.title",
     "progress": "0/15",
     "description": "pastValleyQuestSeven.description",
     "conditions": {
       "goal": "pastValleyQuestSeven.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1070,19 +1070,19 @@
     ]
   },
   {
-    "questId": "perfekt_learning_german",
+    "questId": "eight",
     "aliases": ["perfekt-student"],
     "title": "pastValleyQuestEight.title",
     "progress": "0/15",
     "description": "pastValleyQuestEight.description",
     "conditions": {
       "goal": "pastValleyQuestEight.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1223,19 +1223,19 @@
     ]
   },
   {
-    "questId": "perfekt_party_friends",
+    "questId": "nine",
     "aliases": ["perfekt-social"],
     "title": "pastValleyQuestNine.title",
     "progress": "0/15",
     "description": "pastValleyQuestNine.description",
     "conditions": {
       "goal": "pastValleyQuestNine.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1378,19 +1378,19 @@
     ]
   },
   {
-    "questId": "perfekt_city_transport",
+    "questId": "ten",
     "aliases": ["perfekt-city"],
     "title": "pastValleyQuestTen.title",
     "progress": "0/15",
     "description": "pastValleyQuestTen.description",
     "conditions": {
       "goal": "pastValleyQuestTen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1530,19 +1530,19 @@
     ]
   },
   {
-    "questId": "perfekt_family_visit",
+    "questId": "eleven",
     "aliases": ["perfekt-family"],
     "title": "pastValleyQuestEleven.title",
     "progress": "0/15",
     "description": "pastValleyQuestEleven.description",
     "conditions": {
       "goal": "pastValleyQuestEleven.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1685,19 +1685,19 @@
     ]
   },
   {
-    "questId": "perfekt_weekend_joy",
+    "questId": "twelve",
     "aliases": ["perfekt-relax"],
     "title": "pastValleyQuestTwelve.title",
     "progress": "0/15",
     "description": "pastValleyQuestTwelve.description",
     "conditions": {
       "goal": "pastValleyQuestTwelve.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {

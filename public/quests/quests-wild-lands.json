@@ -7,12 +7,12 @@
     "description": "wildLandsFirstQuest.description",
     "conditions": {
       "goal": "Освой слова: Природа, Лес, Дерево и Река через разные упражнения",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 25,
-      "xp": 25
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -130,12 +130,12 @@
     "description": "wildLandsSecondQuest.description",
     "conditions": {
       "goal": "Освой названия животных и объедини их с локациями (Лес, Река, Дерево)",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 30,
-      "xp": 30
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -257,10 +257,10 @@
     "description": "wildLandsThirdQuest.description",
     "conditions": {
       "goal": "Выучи 'Гора' и 'Солнце' и заставь их работать в нормальных фразах",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -381,10 +381,10 @@
     "description": "wildLandsFourthQuest.description",
     "conditions": {
       "goal": "Выучи 'Озеро' и 'Вода', и впиши их в лесной пейзаж",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -501,12 +501,12 @@
     "description": "wildLandsFifthQuest.description",
     "conditions": {
       "goal": "Освой слова: Ветер, Дождь, Облако и научись понимать тексты о погоде",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 40,
-      "xp": 40
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -643,12 +643,12 @@
     "description": "wildLandsSixthQuest.description",
     "conditions": {
       "goal": "Освой слова: Зима, Снег, Лёд, Белый и конструкцию 'Es schneit'",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -790,12 +790,12 @@
     "description": "wildLandsSeventhQuest.description",
     "conditions": {
       "goal": "Освой слова: Луна, Звезда, Свет, Небо, Темнота",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -918,12 +918,12 @@
     "description": "wildLandsEightQuest.description",
     "conditions": {
       "goal": "Освой слова: Лиса, Дерево, Камень, Река и опиши прогулку по лесу",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1046,12 +1046,12 @@
     "description": "Лес и скалы. Здесь высоко и тихо. Учись описывать горный ландшафт.",
     "conditions": {
       "goal": "Освой слова: Гора, Долина, Скала, Высокий, Глубокий",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1176,12 +1176,12 @@
     "description": "wildLandsTenthQuest.description",
     "conditions": {
       "goal": "Освой слова: Туман, Трава, Воздух, Тихий",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1314,12 +1314,12 @@
     "description": "wildLandsElevenQuest.description",
     "conditions": {
       "goal": "Освой слова: Утро, Птица, Лист, Цветок",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1442,12 +1442,12 @@
     "description": "wildLandsTwelveQuest.description",
     "conditions": {
       "goal": "Освой слова: Море, Пляж, Песок, Волна",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1571,12 +1571,12 @@
     "description": "Небо темнеет. Ветер срывает листья. Начинается буря. Ты слышишь гром и видишь вспышки в небе.",
     "conditions": {
       "goal": "Освой слова: Гроза, Молния, Гром, Черный",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1704,12 +1704,12 @@
     "description": "wildLandsFourteenQuest.description",
     "conditions": {
       "goal": "Освой слова: Луг, Бабочка, Летать, Пестрый",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1837,12 +1837,12 @@
     "description": "wildLandsFifteenQuest.description",
     "conditions": {
       "goal": "Сдай финальный экзамен: объедини животных, локации и погоду",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {

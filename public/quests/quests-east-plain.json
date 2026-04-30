@@ -7,12 +7,12 @@
     "description": "eastPlainFirstQuests.description",
     "conditions": {
       "goal": "eastPlainFirstQuests.goal",
-      "minCorrect": 11,
+      "minCorrect": 14,
       "requiredTasks": 14
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -194,12 +194,12 @@
     "description": "eastPlainSecondQuests.description",
     "conditions": {
       "goal": "Lerne, über Herkunft und Sprache zu sprechen und höflich Fragen zu stellen",
-      "minCorrect": 10,
+      "minCorrect": 13,
       "requiredTasks": 13
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -239,24 +239,22 @@
         "type": "reorder",
         "question": "eastPlainSecondQuests.questFive",
         "words": [
-          "bei dir",
-          "gut",
-          "und",
-          "Thomas",
           "Hallo",
           "danke",
+          "und",
+          "Thomas",
           "gut",
-          "sehr gut",
-          "Bis Morgen",
-          "wie gehts's"
+          "wie geht's",
+          "gut",
+          "dir"
         ],
         "correctOrder": [
           "Hallo",
           "Thomas",
-          "wie gehts's",
+          "wie geht's",
           "gut",
           "und",
-          "bei dir",
+          "dir",
           "gut",
           "danke"
         ]
@@ -375,12 +373,12 @@
     "description": "eastPlainThirdQuests.description",
     "conditions": {
       "goal": "eastPlainThirdQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -600,12 +598,12 @@
     "description": "eastPlainFourthQuests.description",
     "conditions": {
       "goal": "eastPlainFourthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -781,12 +779,12 @@
     "description": "eastPlainFifthQuests.description",
     "conditions": {
       "goal": "eastPlainFifthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -987,12 +985,12 @@
     "description": "eastPlainSixthQuests.description",
     "conditions": {
       "goal": "eastPlainSixthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1155,12 +1153,12 @@
     "description": "eastPlainSeventhQuests.description",
     "conditions": {
       "goal": "eastPlainSeventhQuests.goal",
-      "minCorrect": 11,
+      "minCorrect": 14,
       "requiredTasks": 14
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1343,12 +1341,12 @@
     "description": "eastPlainEighthQuests.description",
     "conditions": {
       "goal": "eastPlainEighthQuests.goal",
-      "minCorrect": 10,
+      "minCorrect": 13,
       "requiredTasks": 13
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1509,12 +1507,12 @@
     "description": "eastPlainNinthQuests.description",
     "conditions": {
       "goal": "eastPlainNinthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1713,12 +1711,12 @@
     "description": "eastPlainTenthQuests.description",
     "conditions": {
       "goal": "eastPlainTenthQuests.goal",
-      "minCorrect": 9,
+      "minCorrect": 12,
       "requiredTasks": 12
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
