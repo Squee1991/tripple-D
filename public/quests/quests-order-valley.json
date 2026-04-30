@@ -1,6 +1,6 @@
 [
   {
-    "questId": "valley_nebensatz_word_order",
+    "questId": "order-one",
     "aliases": ["sub-clauses-order"],
     "title": "orderValleyQuestOne.title",
     "progress": "0/15",
@@ -157,7 +157,7 @@
     ]
   },
   {
-    "questId": "valley_nebensatz_minimal",
+    "questId": "order-two",
     "aliases": ["sub-clauses-short"],
     "title": "orderValleyQuestTwo.title",
     "progress": "0/15",
@@ -315,7 +315,7 @@
     ]
   },
   {
-    "questId": "valley_nebensatz_extended",
+    "questId": "order-three",
     "aliases": ["sub-clauses-extended"],
     "title": "orderValleyQuestThree.title",
     "progress": "0/15",
@@ -473,7 +473,7 @@
     ]
   },
   {
-    "questId": "valley_es_gibt_basics",
+    "questId": "order-four",
     "aliases": ["es-gibt-intro"],
     "title": "orderValleyQuestFour.title",
     "progress": "0/15",
@@ -631,7 +631,7 @@
     ]
   },
   {
-    "questId": "valley_es_gibt_advanced",
+    "questId": "order-five",
     "aliases": ["es-gibt-pro"],
     "title": "orderValleyQuestFive.title",
     "progress": "0/15",
@@ -789,7 +789,7 @@
     ]
   },
   {
-    "questId": "reflexivpronomen_clean",
+    "questId": "order-six",
     "aliases": ["reflexiv-base"],
     "title": "orderValleyQuestSix.title",
     "progress": "0/15",
@@ -951,7 +951,7 @@
     ]
   },
   {
-    "questId": "german_hardcore_mix_v2",
+    "questId": "order-seven",
     "aliases": ["summary-hardcore"],
     "title": "orderValleyQuestSeven.title",
     "progress": "0/15",
@@ -1109,7 +1109,7 @@
     ]
   },
   {
-    "questId": "travel_grammar_hardcore",
+    "questId": "order-eight",
     "aliases": ["travel-mix-pro"],
     "title": "orderValleyQuestEight.title",
     "progress": "0/15",
@@ -1267,7 +1267,7 @@
     ]
   },
   {
-    "questId": "valley_career_hardcore",
+    "questId": "order-nine",
     "aliases": ["work-mix-pro"],
     "title": "orderValleyQuestNine.title",
     "progress": "0/15",
@@ -1425,7 +1425,7 @@
     ]
   },
   {
-    "questId": "work_simple_life",
+    "questId": "order-ten",
     "aliases": ["work-basic-vibe"],
     "title": "orderValleyQuestTen.title",
     "progress": "0/15",
@@ -1583,7 +1583,7 @@
     ]
   },
   {
-    "questId": "grammar_fresh_mix",
+    "questId": "order-eleven",
     "aliases": ["new-real-life-drill"],
     "title": "orderValleyQuestEleven.title",
     "progress": "0/15",
@@ -1741,7 +1741,7 @@
     ]
   },
   {
-    "questId": "home_life_mix",
+    "questId": "order-twelve",
     "aliases": ["daily-grammar-v1"],
     "title": "orderValleyQuestTwelve.title",
     "progress": "0/15",
