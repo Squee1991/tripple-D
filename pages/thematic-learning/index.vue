@@ -162,12 +162,16 @@ watch(topic, loadThemeData)
               {{ t('chooseTheme.module') }} {{ mod.id }}
             </button>
           </div>
+        </div>
+
+        <!-- Кнопка вынесена из blackboard-content, чтобы быть поверх скролла -->
+        <transition name="pop-up">
           <div class="start-button-container" v-if="moduleToStart">
             <button class="start-button" @click="startSelectedModule">
               {{ t('chooseTheme.btnStart') }}
             </button>
           </div>
-        </div>
+        </transition>
       </div>
     </div>
     <div class="corkboard">
@@ -188,11 +192,9 @@ watch(topic, loadThemeData)
       </div>
     </div>
   </div>
-
 </template>
 
 <style>
-
 :root {
   --classroom-bg: #f0ebe5;
   --blackboard-bg: #2c3e50;
@@ -232,12 +234,25 @@ watch(topic, loadThemeData)
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden; /* Чтобы скролл контента не вылезал за края доски */
 }
 
 .blackboard-content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  flex: 1;
+  overflow-y: auto; /* Добавили скролл, если модулей слишком много */
+  padding-bottom: 80px; /* Отступ внизу, чтобы плавающая кнопка не перекрывала модули */
+}
+
+/* Красивый скроллбар для доски */
+.blackboard-content::-webkit-scrollbar {
+  width: 6px;
+}
+.blackboard-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
 }
 
 .back-card-button {
@@ -272,6 +287,7 @@ watch(topic, loadThemeData)
   gap: 1rem;
   padding: 0.5rem;
   border-radius: 16px;
+  flex-shrink: 0;
 }
 
 .level-btn {
@@ -326,10 +342,16 @@ watch(topic, loadThemeData)
   background-color: rgba(241, 196, 15, 0.1);
 }
 
+/* --- ОБНОВЛЕННЫЙ КОНТЕЙНЕР КНОПКИ --- */
 .start-button-container {
-  margin-top: auto;
-  padding-top: 2rem;
-  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 50;
+  pointer-events: none; /* Чтобы контейнер не перекрывал клики по доске */
 }
 
 .start-button {
@@ -343,11 +365,24 @@ watch(topic, loadThemeData)
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   box-shadow: 4px 4px 0px #1e1e1e;
+  pointer-events: auto; /* Включаем клики обратно только для самой кнопки */
 }
 
 .start-button:hover {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px 0px #1e1e1e;
+}
+
+/* Анимация появления кнопки "Начать" */
+.pop-up-enter-active {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.pop-up-leave-active {
+  transition: all 0.2s ease-in;
+}
+.pop-up-enter-from, .pop-up-leave-to {
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
 }
 
 .chalk-message {
@@ -521,7 +556,7 @@ watch(topic, loadThemeData)
   }
 
   .start-button-container {
-    padding: 0;
+    bottom: 10px; /* Кнопка чуть ближе к краю на мобилках */
   }
 
   .level-selector {
@@ -529,7 +564,7 @@ watch(topic, loadThemeData)
   }
 
   .blackboard-content {
-    padding: 40px 10px;
+    padding: 40px 10px 90px 10px; /* Доп отступ внизу, чтобы кнопка 100% ничего не перекрыла */
   }
 
   .modules-grid {
@@ -576,6 +611,4 @@ watch(topic, loadThemeData)
     display: none;
   }
 }
-
-
 </style>

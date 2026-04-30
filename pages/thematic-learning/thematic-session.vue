@@ -6,6 +6,7 @@ import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue";
 import SoundBtn from "../../src/components/soundBtn.vue";
 import { useSeoMeta } from '#imports'
 import task from "~/pages/recipes/[id]/task.vue";
+
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
@@ -13,6 +14,7 @@ useSeoMeta({
 const router = useRouter()
 const {t} = useI18n()
 const thematic = useTrainerStore()
+
 const correctAnswers = ref(0)
 const loading = ref(true)
 const current = ref(0)
@@ -21,15 +23,33 @@ const feedback = ref(null)
 const finished = ref(false)
 const isChecked = ref(false)
 const showExitModal = ref(false)
+const sessionMistakes = ref([])
+
 const hourRotation = ref(0);
 const minuteRotation = ref(0);
 const secondRotation = ref(0);
 let clockInterval = null;
 
-const tasks = computed(() => thematic.selectedModule?.tasks || [])
-const progressPercent = computed(() => ((current.value + (finished.value ? 1 : 0)) / tasks.value.length) * 100)
+const tasks = computed(() => {
+  const allTasks = thematic.selectedModule?.tasks || []
+  const progress = thematic.getModuleProgress(thematic.selectedLevel?.level, thematic.selectedModule?.id)
+
+  if (progress && !progress.completed && progress.mistakes?.length > 0) {
+    return allTasks
+        .map((task, index) => ({ ...task, originalIndex: index }))
+        .filter(task => progress.mistakes.includes(task.originalIndex))
+  }
+
+  return allTasks.map((task, index) => ({ ...task, originalIndex: index }))
+})
+
+const progressPercent = computed(() => {
+  if (!tasks.value.length) return 0;
+  return ((current.value + (finished.value ? 1 : 0)) / tasks.value.length) * 100
+})
 
 const visibleSentence = computed(() => {
+  if (!tasks.value.length) return ''
   const task = tasks.value[current.value]
 
   if (isChecked.value && feedback.value?.isCorrect) {
@@ -57,12 +77,16 @@ const generateAnswerOptions = (correctAnswer) => {
 
   answerOptions.value = options;
 }
+
 const setupCurrentQuestion = () => {
   feedback.value = null;
   isChecked.value = false;
-  const task = tasks.value[current.value];
-  generateAnswerOptions(task.answer);
+  if (tasks.value.length > 0) {
+    const task = tasks.value[current.value];
+    generateAnswerOptions(task.answer);
+  }
 }
+
 const check = (selectedAnswer) => {
   if (isChecked.value) return;
 
@@ -70,19 +94,25 @@ const check = (selectedAnswer) => {
   const isCorrect = selectedAnswer === task.answer
   feedback.value = {isCorrect, selected: selectedAnswer};
   isChecked.value = true
-  if (isCorrect) correctAnswers.value += 1
+
+  if (isCorrect) {
+    correctAnswers.value += 1
+  } else {
+    // Сохраняем оригинальный индекс ошибки
+    sessionMistakes.value.push(task.originalIndex)
+  }
 }
+
 const next = async () => {
   if (current.value < tasks.value.length - 1) {
     current.value++
     setupCurrentQuestion();
   } else {
     finished.value = true
-    if (correctAnswers.value === tasks.value.length) {
-      await thematic.addCompletedModule(thematic.selectedLevel.level, thematic.selectedModule.id)
-    }
+    await thematic.saveModuleAttempt(thematic.selectedLevel.level, thematic.selectedModule.id, sessionMistakes.value)
   }
 }
+
 const exit = () => {
   const hasStarted = current.value > 0 || isChecked.value === true
   if (hasStarted && finished.value === false) {
@@ -105,6 +135,7 @@ const restartModule = () => {
   correctAnswers.value = 0
   current.value = 0
   finished.value = false
+  sessionMistakes.value = []
   setupCurrentQuestion()
 }
 
@@ -117,6 +148,7 @@ const updateClock = () => {
   minuteRotation.value = minutes * 6 + seconds * 0.1;
   hourRotation.value = (hours % 12) * 30 + minutes * 0.5;
 };
+
 const handleBeforeUnload = (event) => {
   event.preventDefault();
 };
@@ -133,11 +165,11 @@ onMounted(async () => {
   clockInterval = setInterval(updateClock, 1000);
   window.addEventListener('beforeunload', handleBeforeUnload);
 })
+
 onUnmounted(() => {
   clearInterval(clockInterval);
   window.removeEventListener('beforeunload', handleBeforeUnload);
 })
-
 </script>
 <template>
   <main class="trainer-page">
@@ -249,7 +281,7 @@ onUnmounted(() => {
               <div class="result__inner" v-else>
                 <div class="result-icon">🤔</div>
                 <h3 class="result-title">{{ t('trainerPage.morePractice') }}</h3>
-                <p class="result-subtitle">{{ t('trainerPage.result') }} {{ correctAnswers }} / {{ tasks.length }}</p>
+<!--                <p class="result-subtitle">{{ t('trainerPage.result') }} {{ correctAnswers }} / {{ tasks.length }}</p>-->
                 <div class="result-actions">
                   <button class="btn btn--restart" @click="restartModule">{{ t('trainerPage.repeat') }}</button>
                   <button class="btn btn--secondary" @click="exit">{{ t('trainerPage.toMain') }}</button>
