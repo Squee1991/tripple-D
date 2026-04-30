@@ -1,5 +1,5 @@
 <template>
-  <div class="v-banner" :style="{ backgroundColor: bgColor }">
+  <div class="v-banner" :style="bannerStyle">
     <div class="v-banner__left">
       <slot>
         <span class="v-banner__default-text">{{ text }}</span>
@@ -12,24 +12,41 @@
 </template>
 
 <script setup>
-defineProps({
-  text: {type: String, default: ''},
-  icon: {type: String, default: ''},
-  bgColor: {type: String, default: '#00c2ff'}
-})
+import { computed } from 'vue';
+
+const props = defineProps({
+  text: { type: String, default: '' },
+  icon: { type: String, default: '' },
+  bgColor: { type: String, default: '#00c2ff' }
+});
+
+const bannerStyle = computed(() => {
+  return {
+    background: `linear-gradient(145deg, ${props.bgColor}, #00a8db)`,
+    backgroundColor: props.bgColor
+  };
+});
 </script>
 
 <style scoped>
-
 .v-banner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
-  padding: 20px 20px;
+  padding: 20px 25px;
   border-radius: 20px;
-  box-shadow: 0 4px 0 rgb(73, 187, 232);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1),
+  0 4px 0 rgb(0, 150, 200);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3),
+  inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+  0 6px 0 rgb(0, 160, 220);
+
   margin-bottom: 20px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  top: 0;
 }
 
 .v-banner__left {
@@ -39,23 +56,24 @@ defineProps({
   gap: 8px;
   color: #fff;
   font-family: "Nunito", sans-serif;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .v-banner__default-text {
   font-size: 18px;
   font-weight: 800;
   line-height: 1.2;
-  margin-left: 10px;
 }
 
 .v-banner__right {
   display: flex;
   justify-content: center;
   align-items: center;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1));
 }
 
 .v-banner__icon {
-  width: 70px;
+  width: 65px;
   height: auto;
   object-fit: contain;
 }
@@ -65,5 +83,4 @@ defineProps({
     flex: 0 0 100px;
   }
 }
-
 </style>

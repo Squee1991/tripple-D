@@ -1,6 +1,6 @@
 <template>
   <div class="profile-wrapper">
-    <h3 class="section-title">{{ t('cabinetInfoRows.statsTitle', 'Статистика и достижения') }}</h3>
+    <h3 class="section-title">{{ t('personalAccount.statsAndAchievements') }}</h3>
     <div class="stats-grid">
       <div class="stat-card">
         <div class="stat-icon xp-icon">
@@ -8,7 +8,7 @@
         </div>
         <div class="stat-info">
           <span class="stat-value">{{ completedDailyQuests }} / 3</span>
-          <span class="stat-label">Задания дня</span>
+          <span class="stat-label">{{t('dailyPanel.title')}}</span>
         </div>
       </div>
       <div class="stat-card">
@@ -17,7 +17,7 @@
         </div>
         <div class="stat-info">
           <span class="stat-value">{{ currentRankTitle }}</span>
-          <span class="stat-label">Текущее звание</span>
+          <span class="stat-label">{{ t('galaxyCabinet.rank')}}</span>
         </div>
       </div>
       <div class="stat-card">
@@ -26,7 +26,7 @@
         </div>
         <div class="stat-info">
           <span class="stat-value">{{ unlockedAchievements }} / {{ totalAchievements }}</span>
-          <span class="stat-label">Награды</span>
+          <span class="stat-label">{{ t('awardModal.title')}}</span>
         </div>
       </div>
       <div class="stat-card">
@@ -35,28 +35,49 @@
         </div>
         <div class="stat-info">
           <span class="stat-value">{{ langStore.isLeveling }} </span>
-          <span class="stat-label">Уровень</span>
+          <span class="stat-label">{{ t('stepHitLabels.levelTitle')}}</span>
         </div>
       </div>
     </div>
-    <h3 class="section-title">Стрик марафона артиклей</h3>
+    <VBanner
+        :text="t('personalAccount.streakTitle')"
+        :icon="Streakicon"
+    />
     <div class="marathon-grid">
       <div class="stat-card marathon-card easy">
-        <div class="stat-icon">🔥</div>
+        <div class="difficulty-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="14" width="5" height="8" rx="2.5" fill="#ffffff"/>
+            <rect x="9.5" y="8" width="5" height="14" rx="2.5" fill="rgba(255,255,255,0.4)"/>
+            <rect x="17" y="2" width="5" height="20" rx="2.5" fill="rgba(255,255,255,0.4)"/>
+          </svg>
+        </div>
         <div class="stat-info">
           <span class="stat-value">{{ gameStore.personalBests?.[1] || 0 }}</span>
           <span class="stat-label">{{ t('marathonPrepare.difficultEasy') }}</span>
         </div>
       </div>
       <div class="stat-card marathon-card normal">
-        <div class="stat-icon">🔥</div>
+        <div class="difficulty-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="14" width="5" height="8" rx="2.5" fill="#ffffff"/>
+            <rect x="9.5" y="8" width="5" height="14" rx="2.5" fill="#ffffff"/>
+            <rect x="17" y="2" width="5" height="20" rx="2.5" fill="rgba(255,255,255,0.4)"/>
+          </svg>
+        </div>
         <div class="stat-info">
           <span class="stat-value">{{ gameStore.personalBests?.[2] || 0 }}</span>
           <span class="stat-label">{{ t('marathonPrepare.difficultNormal') }}</span>
         </div>
       </div>
       <div class="stat-card marathon-card hard">
-        <div class="stat-icon">🔥</div>
+        <div class="difficulty-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="14" width="5" height="8" rx="2.5" fill="#ffffff"/>
+            <rect x="9.5" y="8" width="5" height="14" rx="2.5" fill="#ffffff"/>
+            <rect x="17" y="2" width="5" height="20" rx="2.5" fill="#ffffff"/>
+          </svg>
+        </div>
         <div class="stat-info">
           <span class="stat-value">{{ gameStore.personalBests?.[3] || 0 }}</span>
           <span class="stat-label">{{ t('marathonPrepare.difficultHard') }}</span>
@@ -76,6 +97,8 @@ import { useGameStore } from '../../store/marafonStore.js'
 import { userlangStore } from '../../store/learningStore.js'
 import { AWARDS } from '~/utils/awards'
 import EducationHut from '../../assets/images/graduate-hat.svg'
+import VBanner from "~/src/components/V-banner.vue";
+import Streakicon from '../../assets/images/fire.svg'
 
 const { t } = useI18n()
 const authStore = userAuthStore()
@@ -83,6 +106,7 @@ const rankStore = useRankUserStore()
 const dStore = dailyStore()
 const gameStore = useGameStore()
 const langStore  = userlangStore()
+
 const completedDailyQuests = computed(() => {
   if (!dStore.todayQuests) return 0
   return dStore.todayQuests.filter(quest => quest.isCompleted).length
@@ -158,7 +182,6 @@ const currentRankTitle = computed(() => {
 })
 
 const currentRankIcon = computed(() => currentRankInfo.value.icon)
-
 </script>
 
 <style scoped>
@@ -166,6 +189,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   display: flex;
   flex-direction: column;
   padding: 10px;
+  height: 100%;
 }
 
 .registration-badge {
@@ -200,7 +224,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 23px;
 }
 
 .marathon-grid {
@@ -222,8 +246,8 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 
 .stat-icon {
   font-size: 24px;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -247,7 +271,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .stat-value {
-  font-size: 18px;
+  font-size: 21px;
   font-weight: 800;
   color: var(--titleColor);
 }
@@ -261,7 +285,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 .marathon-card {
   flex-direction: column;
   justify-content: center;
-  padding: 12px 6px;
+  padding: 18px 6px;
   gap: 8px;
   text-align: center;
 }
@@ -271,28 +295,35 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .marathon-card .stat-label {
-  font-size: 11px;
+  font-size: 13px;
 }
 
-.marathon-card.easy .stat-icon {
+.difficulty-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 4px;
+}
+
+.marathon-card.easy .difficulty-icon {
   background: linear-gradient(135deg, #4ade80, #22c55e);
   box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.4), inset 0 -2px 4px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(34, 197, 94, 0.25);
   border: 1px solid #16a34a;
-  text-shadow: 0 2px 2px rgba(0,0,0,0.1);
 }
 
-.marathon-card.normal .stat-icon {
+.marathon-card.normal .difficulty-icon {
   background: linear-gradient(135deg, #fbbf24, #f59e0b);
   box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.4), inset 0 -2px 4px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(245, 158, 11, 0.25);
   border: 1px solid #d97706;
-  text-shadow: 0 2px 2px rgba(0,0,0,0.1);
 }
 
-.marathon-card.hard .stat-icon {
+.marathon-card.hard .difficulty-icon {
   background: linear-gradient(135deg, #f87171, #ef4444);
   box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.4), inset 0 -2px 4px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(239, 68, 68, 0.25);
   border: 1px solid #dc2626;
-  text-shadow: 0 2px 2px rgba(0,0,0,0.1);
 }
 
 .premium-banner {

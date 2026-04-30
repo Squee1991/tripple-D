@@ -710,7 +710,7 @@ onMounted(async () => {
   max-height: calc(100vh - 200px);
   overflow-y: auto;
   padding-right: 3px;
-  padding-bottom: 125px;
+  padding-bottom: 110px;
 }
 
 .account-tab-body::-webkit-scrollbar {

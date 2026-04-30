@@ -9703,7 +9703,7 @@
     "prepositions": "Przyimki"
   },
   "v-rank": {
-    "desc": "Konfederatki to Twoja droga na szczyt! Zbieraj je, wykonując wszystkie trzy zadania dnia. Zwiększaj swoją rangę i kupuj odblokowane bonusy!",
+    "desc": "Gromadź birety, wykonując zadania dnia. Podnoś rangę i kupuj bonusy.",
     "rank": "Ranga",
     "rank_0": "Rekrut",
     "rank_1": "Nowicjusz",
@@ -9804,5 +9804,9 @@
     "delta": "Świat wiecznego kontrastu i sprzeczności. Tutaj wszystko poznaje się przez porównanie: od „szybkiego” do „wolnego”. Naucz się po mistrzowsku odnajdywać przeciwieństwa, aby zachować równowagę w systemie.",
     "epsilon": "Pętla czasu przeszłości. Opanuj złożone formy czasowników, aby sporządzać raporty z wykonanych misji i opowiadać o swoich dawnych zwycięstwach w innych układach gwiezdnych.",
     "zeta": "Siatka nawigacyjna przestrzeni i czasu. Dowiedz się, „gdzie”, „dokąd” i „jak” prowadzą ścieżki lingwistyczne. Właściwe przyimki to Twoje dokładne współrzędne w nieskończoności języka."
+  },
+  "personalAccount": {
+    "statsAndAchievements": "Statystyki i osiągnięcia",
+    "streakTitle": "Seria maratonu rodzajników"
   }
 }

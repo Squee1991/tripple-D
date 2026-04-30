@@ -9694,7 +9694,7 @@
     "prepositions": "Preposiciones"
   },
   "v-rank": {
-    "desc": "¡Las birretas son tu camino a la cima! Acumúlalas completando las tres tareas del día. ¡Sube de rango y compra bonos desbloqueados!",
+    "desc": "Acumula birretes completando las tareas del día. Sube de rango y compra bonificaciones.",
     "rank": "Rango",
     "rank_0": "Recluta",
     "rank_1": "Novato",
@@ -9795,5 +9795,9 @@
     "delta": "Mundo de eterno contraste y oposición. Aquí todo se conoce por comparación: de 'rápido' a 'lento'. Aprende a encontrar opuestos con maestría para mantener el equilibrio en el sistema.",
     "epsilon": "Bucle temporal del pasado. Domina la forma compleja de los verbos para redactar informes sobre misiones cumplidas y contar tus victorias pasadas en otros sistemas estelares.",
     "zeta": "Red de navegación del espacio y el tiempo. Averigua 'dónde', 'adónde' y 'cómo' conducen las sendas lingüísticas. Las preposiciones correctas son tus coordenadas exactas en la infinitud del lenguaje."
+  },
+  "personalAccount": {
+    "statsAndAchievements": "Estadísticas y logros",
+    "streakTitle": "Racha del maratón de artículos"
   }
 }

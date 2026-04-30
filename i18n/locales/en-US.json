@@ -9700,7 +9700,7 @@
     "prepositions": "Prepositions"
   },
   "v-rank": {
-    "desc": "Confederation caps are your path to the top! Accumulate them by completing all three daily tasks. Raise your rank and buy unlocked bonuses!",
+    "desc": "Collect mortarboards by completing daily quests. Increase your rank and buy bonuses.",
     "rank_0": "Recruit",
     "rank": "Rank",
     "rank_1": "Novice",
@@ -9801,5 +9801,9 @@
     "delta": "A world of eternal contrast and opposition. Here, everything is known through comparison: from 'fast' to 'slow'. Learn to masterfully find opposites to maintain balance in the system.",
     "epsilon": "A time loop of the past. Master the complex form of verbs to write reports on completed missions and tell of your past victories in other star systems.",
     "zeta": "The navigation grid of space and time. Find out 'where', 'where to', and 'how' the linguistic paths lead. Correct prepositions are your precise coordinates in the infinity of language."
+  },
+  "personalAccount": {
+    "statsAndAchievements": "Statistics and achievements",
+    "streakTitle": "Article marathon streak"
   }
 }

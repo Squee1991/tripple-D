@@ -9674,7 +9674,7 @@
     "prepositions": "Edatlar"
   },
   "v-rank": {
-    "desc": "Konfederatka şapkaları zirveye giden yolunuzdur! Günlük üç görevi de tamamlayarak onları biriktirin. Rütbenizi yükseltin ve kilidi açılmış bonusları satın alın!",
+    "desc": "Günün görevlerini tamamlayarak kepler biriktirin. Rütbenizi yükseltin ve bonuslar satın alın.",
     "rank": "Rütbe",
     "rank_0": "Acemi",
     "rank_1": "Çaylak",
@@ -9775,5 +9775,9 @@
     "delta": "Sonsuz kontrast ve karşıtlık dünyası. Burada her şey karşılaştırmayla öğrenilir: 'hızlı'dan 'yavaş'a. Sistemde dengeyi korumak için zıtlıkları ustalıkla bulmayı öğren.",
     "epsilon": "Geçmişin zaman döngüsü. Tamamlanan görevler hakkında raporlar yazmak ve diğer yıldız sistemlerindeki eski zaferlerini anlatmak için fiillerin karmaşık formunda ustalaş.",
     "zeta": "Uzay ve zamanın navigasyon ağı. Dil yollarının 'nereye', 'nerede' ve 'nasıl' gittiğini keşfet. Doğru edatlar, dilin sonsuzluğundaki kesin koordinatlarındır."
+  },
+  "personalAccount": {
+    "statsAndAchievements": "İstatistikler ve başarılar",
+    "streakTitle": "Tanımlık maratonu serisi"
   }
 }
