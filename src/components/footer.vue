@@ -105,7 +105,7 @@ const activeIndex = computed(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 9px 0;
+  padding: 5px 0;
   position: relative;
   z-index: 2;
   text-decoration: none;
@@ -121,7 +121,7 @@ const activeIndex = computed(() => {
 }
 
 .nav__item.is-active .nav__icon {
-  transform: translateY(-2px) scale(1.1);
+  transform: translateY(-1px) scale(1.02);
 }
 
 </style>

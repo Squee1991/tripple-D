@@ -59,67 +59,70 @@
                   />
                 </div>
                 <div v-else>
-                  <div class="user-block">
-                    <div class="avatar-container">
-                      <img
-                          v-if="authStore.avatarUrl"
-                          :src="authStore.avatarUrl"
-                          alt="Аватар"
-                          class="avatar-current"
-                      />
-                      <div v-else class="avatar-placeholder"></div>
-                      <button
-                          @click="isAvatarModalOpen = true"
-                          class="change-avatar-btn"
-                          title="Сменить аватар"
-                          type="button"
-                      >
-                        <img src="../assets/images/add.svg" alt="Сменить"/>
-                      </button>
-                    </div>
-                    <div class="user-info">
-                      <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
-                      <div class="exp-bar">
-                        <div class="exp-fill" :style="{ width: `${expFillWidth}%` }">
-                          <div class="glare"></div>
+                  <Transition name="menu-appear" appear>
+                    <div class="user__interface">
+                      <div class="user-block">
+                        <div class="avatar-wrapper">
+                          <div class="avatar-container">
+                            <img
+                                v-if="authStore.avatarUrl"
+                                :src="authStore.avatarUrl"
+                                alt="Аватар"
+                                class="avatar-current"
+                            />
+                            <div v-else class="avatar-placeholder"></div>
+                          </div>
+                          <button
+                              @click="isAvatarModalOpen = true"
+                              class="change-avatar-btn"
+                              title="Сменить аватар"
+                              type="button"
+                          >
+                            <img src="../assets/images/add.svg" alt="Сменить"/>
+                          </button>
                         </div>
-                        <span class="exp-text">{{ learningStore.exp }}%</span>
+                        <div class="user-info-container">
+                          <div class="user-name">{{ userNameSafe }}</div>
+                          <div class="user-reg-date">
+                            <div>{{ t('cabinetInfoRows.registerDate' )}}:  {{ registrationDateText }}</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="account-tabs">
+                        <div
+                            class="sliding-bg-account"
+                            :style="{ transform: `translateX(${activeAccountIndex * 100}%)`,  opacity: activeAccountIndex === -1 ? 0 : 1  }"></div>
+                        <button
+                            v-for="tab in ACCOUNT_TABS"
+                            :key="tab.key"
+                            class="account-tab"
+                            :class="{ active: accountTab === tab.key }"
+                            @click="accountTab = tab.key"
+                            type="button"
+                        >
+                          <img :class="iconDisplayComputed" class="tab-icon --horizontal" :src="tab.icon"
+                               :alt="tab.alt">
+                          <span class="tab__text">{{ tab.label }}</span>
+                        </button>
+                      </div>
+                      <div class="account-tab-body">
+                        <transition name="fade" mode="out-in">
+                          <div v-if="accountTab === 'common'" class="tab-surface" key="common">
+                            <PersonalInfoRows/>
+                            <AccountManagement @open="handleSettingsAction"/>
+                          </div>
+                          <div v-else-if="accountTab === 'awards'" class="tab-surface" key="awards">
+                            <AwardsList :awards="awardList"/>
+                          </div>
+                          <div v-else-if="accountTab === 'rank'" class="rank-placeholder" key="rank">
+                            <VRank/>
+                          </div>
+                        </transition>
                       </div>
                     </div>
-                  </div>
-                  <div class="account-tabs">
-                    <div
-                        class="sliding-bg-account"
-                        :style="{ transform: `translateX(${activeAccountIndex * 100}%)`,  opacity: activeAccountIndex === -1 ? 0 : 1  }"></div>
-                    <button
-                        v-for="tab in ACCOUNT_TABS"
-                        :key="tab.key"
-                        class="account-tab"
-                        :class="{ active: accountTab === tab.key }"
-                        @click="accountTab = tab.key"
-                        type="button"
-                    >
-                      <img :class="iconDisplayComputed" class="tab-icon --horizontal" :src="tab.icon" :alt="tab.alt">
-                      <span class="tab__text">{{ tab.label }}</span>
-                    </button>
-                  </div>
-                  <div class="account-tab-body">
-                    <transition name="fade" mode="out-in">
-                      <div v-if="accountTab === 'common'" class="tab-surface" key="common">
-                        <PersonalInfoRows/>
-                        <AccountManagement @open="handleSettingsAction"/>
-                      </div>
-                      <div v-else-if="accountTab === 'awards'" class="tab-surface" key="awards">
-                        <AwardsList :awards="awardList"/>
-                      </div>
-                      <div v-else-if="accountTab === 'rank'" class="rank-placeholder" key="rank">
-                        <VRank/>
-                      </div>
-                    </transition>
-                  </div>
+                  </Transition>
                 </div>
               </div>
-
               <div v-else class="tab__component-wrapper" :key="activeTabKey">
                 <component :is="components" @open="handleSettingsAction"/>
               </div>
@@ -248,7 +251,7 @@ definePageMeta({
   robots: {index: false, follow: false}
 })
 
-const {t} = useI18n()
+const {t, locale} = useI18n()
 const router = useRouter()
 const authStore = userAuthStore()
 const learningStore = userlangStore()
@@ -279,8 +282,7 @@ const activeAccountIndex = computed(() => {
 const ACCOUNT_TABS = computed(() => [
   {key: 'common', label: t('cabinetNav.common'), icon: IdCard, alt: 'IdCard'},
   {key: 'awards', label: t('cabinetNav.awards'), icon: Rewards, alt: 'award'},
-  {key: 'rank', label: t('cabinetNav.rank'), icon: RankAward, alt: 'rank'},
-  // {key: 'friends', label: t('cabinetNav.exam'), icon: Friends, alt: 'friends'}
+  {key: 'rank', label: t('cabinetNav.rank'), icon: RankAward, alt: 'rank'}
 ])
 
 const isSnowWarningModalOpen = ref(false)
@@ -293,13 +295,28 @@ const purchaseAvatarName = ref(null)
 const iconDisplay = ref(true)
 
 const userNameSafe = computed(() => authStore.initialized && authStore.name ? authStore.name : '—')
-const expFillWidth = computed(() => {
-  const value = Number(learningStore.exp || 0)
-  if (!Number.isFinite(value)) return 0
-  return Math.max(0, Math.min(100, value))
-})
 
 const iconDisplayComputed = computed(() => ({"iconHide": iconDisplay.value}))
+
+const registrationDateText = computed(() => {
+  const registeredAt = authStore.registeredAt
+  if (!registeredAt) return '—'
+
+  let date
+  if (typeof registeredAt.toDate === 'function') date = registeredAt.toDate()
+  else date = new Date(registeredAt)
+
+  if (isNaN(date.getTime())) return '—'
+  const options = { day: 'numeric', month: 'long', year: 'numeric' }
+  let formatted = date.toLocaleDateString(locale.value , options)
+  formatted = formatted.replace(/\s*г\.$/, '')
+  const parts = formatted.split(' ')
+  if (parts.length === 3) {
+    parts[1] = parts[1].charAt(0).toUpperCase() + parts[1].slice(1)
+    return parts.join(' ')
+  }
+  return formatted
+})
 
 const tabs = {
   archive: VExampResulut,
@@ -313,8 +330,7 @@ function setActiveTab(key) {
   const selectedTab = TAB_ITEMS.find(tab => tab.key === key)
   if (selectedTab && selectedTab.url) {
     router.push(selectedTab.url)
-  }
-  else {
+  } else {
     activeTabKey.value = key
   }
 }
@@ -604,7 +620,7 @@ onMounted(async () => {
 }
 
 .nav-item.is-active .nav-icon {
-  transform: scale(1.05);
+  transform: translateY(-1px) scale(1.02);
 }
 
 .nav-item:active .nav-icon {
@@ -639,103 +655,6 @@ onMounted(async () => {
   padding: 2px;
 }
 
-.user-block {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 12px;
-  border-bottom: 4px solid var(--borderMobile);
-  border-radius: 15px;
-  padding-bottom: 12px;
-}
-
-.avatar-container {
-  position: relative;
-  width: 84px;
-}
-
-.avatar-current,
-.avatar-placeholder {
-  width: 84px;
-  height: 84px;
-  border-radius: 50%;
-  border: 4px solid #000;
-  object-fit: cover;
-  background: #f3f4f6;
-}
-
-.change-avatar-btn {
-  position: absolute;
-  bottom: -4px;
-  right: -4px;
-  width: 34px;
-  height: 34px;
-  border: 2px solid #000;
-  border-radius: 50%;
-  padding: 5px;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  background: #fff;
-}
-
-.user-info {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.user-name {
-  font-size: 1.3rem;
-  font-weight: 900;
-  color: var(--titleColor);
-}
-
-.exp-bar {
-  width: 220px;
-  height: 26px;
-  background: #e5e7eb;
-  border-radius: 14px;
-  border: 2px solid var(--tabsSlideBorderColor);
-  position: relative;
-  overflow: hidden;
-}
-
-.exp-fill {
-  height: 100%;
-  background: #4ade80;
-  transition: width .4s;
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-.glare {
-  background: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  top: 3px;
-  left: 8px;
-  right: 8px;
-  height: 4px;
-  border-radius: 4px;
-}
-
-.exp-text {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  color: #2c2b2b;
-  font-size: 13px;
-}
-
-.level-info {
-  font-weight: 700;
-  color: var(--titleColor);
-}
-
 .account-tabs {
   display: flex;
   position: relative;
@@ -744,7 +663,7 @@ onMounted(async () => {
   padding: 6px;
   border: 3px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile);
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   max-width: 768px;
 }
 
@@ -752,7 +671,7 @@ onMounted(async () => {
   position: absolute;
   top: 8px;
   left: 8px;
-  height: calc(100% - 14px);
+  height: calc(100% - 16px);
   width: calc((100% - 16px) / 3);
   background: var(--tabsSlideBg);
   border-radius: 40px;
@@ -770,7 +689,7 @@ onMounted(async () => {
   z-index: 2;
   border: none;
   background: none;
-  padding: 12px 4px;
+  padding: 9px 4px;
   color: var(--tabTextColor);
   font-weight: 900;
   cursor: pointer;
@@ -791,7 +710,7 @@ onMounted(async () => {
   max-height: calc(100vh - 200px);
   overflow-y: auto;
   padding-right: 3px;
-  padding-bottom: 100px;
+  padding-bottom: 125px;
 }
 
 .account-tab-body::-webkit-scrollbar {
@@ -911,7 +830,6 @@ onMounted(async () => {
   font-weight: 900;
 }
 
-
 @media (max-width: 1023px) {
   .cabinet-wrapper {
     overflow: hidden;
@@ -923,7 +841,7 @@ onMounted(async () => {
     bottom: 22px;
     transform: translateX(-50%);
     width: calc(100% - 20px);
-    height: 71px;
+    height: 63px;
     padding: 6px;
     z-index: 1100;
     flex-direction: row;
@@ -995,20 +913,16 @@ onMounted(async () => {
   }
 }
 
-@media (max-width: 420px) {
-  .exp-bar {
-    width: 170px;
-  }
-}
-
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
+
 .fade-enter-from {
   opacity: 0;
   transform: translateY(5px) scale(0.98);
 }
+
 .fade-leave-to {
   opacity: 0;
   transform: scale(0.98);
@@ -1018,33 +932,131 @@ onMounted(async () => {
 .fade-page-leave-active {
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
+
 .fade-page-enter-from {
   opacity: 0;
   transform: scale(0.98);
 }
+
 .fade-page-leave-to {
   opacity: 0;
   transform: scale(0.98);
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-.fade-enter-from {
-  opacity: 0;
-  transform: translateY(5px) scale(0.98);
-}
-
-.fade-leave-to {
-  opacity: 0;
-  transform: scale(0.98);
-}
-
-
 .account-tab-body {
   position: relative;
   overflow-x: hidden;
+}
+
+.menu-appear-enter-active {
+  transition: opacity 0.4s ease, transform 0.4s ease-out;
+}
+
+.menu-appear-enter-from {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.user-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  background: var(--tabBg, #1f222b);
+  border: 3px solid var(--tabsSlideBorderColor);
+  border-radius: 24px;
+  padding: 14px 10px 12px 10px;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.15);
+}
+
+.avatar-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.avatar-container {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  border: 4px solid var(--tabsSlideBorderColor, #2a2d39);
+  background: linear-gradient(135deg, #5b65e9, #8a93ff);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.avatar-current,
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.change-avatar-btn {
+  position: absolute;
+  bottom: -5px;
+  right: -8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 8px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  background: #4ade80;
+  transition: transform 0.2s ease;
+  border: none;
+  z-index: 3;
+}
+
+.change-avatar-btn:active {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.change-avatar-btn img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(200%);
+}
+
+.level-badge {
+  position: absolute;
+  bottom: -20px;
+  background-color: #2a2d39;
+  border: 2px solid #fca13a;
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 900;
+  white-space: nowrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.user-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 18px;
+}
+
+.user-name {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--titleColor);
+  letter-spacing: 0.5px;
+}
+
+.user-reg-date {
+  font-size: 13px;
+  color: var(--text-muted, #8b92a5);
+  font-weight: 800;
+  text-align: start;
 }
 </style>

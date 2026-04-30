@@ -127,7 +127,6 @@ onMounted(() => {
   margin-bottom: 20px;
 }
 
-/* --- СТИЛИ СПИСКА --- */
 .topics-list-container {
   display: flex;
   flex-direction: column;
@@ -135,15 +134,15 @@ onMounted(() => {
 }
 
 .topic-list-item {
-  background: var(--menuItemsBg); /* ТВОИ ПЕРЕМЕННЫЕ */
+  background: var(--menuItemsBg);
   border-radius: 20px;
   padding: 14px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  border: 2px solid var(--tabsSlideBorderColor); /* ТВОИ ПЕРЕМЕННЫЕ */
-  box-shadow: 0 4px 0 var(--tabsSlideBorderColor); /* ТВОИ ПЕРЕМЕННЫЕ */
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   transition: transform 0.1s, box-shadow 0.1s;
   text-decoration: none;
   width: 100%;
@@ -204,7 +203,7 @@ onMounted(() => {
 
 
 .menu-appear-enter-active {
-  transition: all 0.4s ease-out;
+  transition: opacity 0.4s ease, transform 0.4s ease-out;
 }
 
 .menu-appear-enter-from {

@@ -20,12 +20,13 @@ defineProps({
 </script>
 
 <style scoped>
+
 .v-banner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
-  padding: 15px 20px;
+  padding: 20px 20px;
   border-radius: 20px;
   box-shadow: 0 4px 0 rgb(73, 187, 232);
   margin-bottom: 20px;
@@ -64,4 +65,5 @@ defineProps({
     flex: 0 0 100px;
   }
 }
+
 </style>

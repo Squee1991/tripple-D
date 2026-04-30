@@ -341,7 +341,7 @@ onMounted(async () => {
 
 .theme-select-btn {
   background: #f3f4f6;
-  border: 3px solid var(--tabsSlideBorderColor);
+  border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile);
   border-radius: 9px;
   padding: 8px 12px;

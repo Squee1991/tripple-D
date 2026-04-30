@@ -6,63 +6,71 @@
     <div class="theme-page-container">
       <div class="theme__title-wrapper">
         <div class="theme__header">
-          <VBackBtn/>
+          <button @click="goBack" class="btn-icon-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                 stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
           <div class="theme__title">{{ t('modes.themeTitle') }}</div>
         </div>
       </div>
-      <div class="theme-content-area">
-        <div class="grid-area-wrapper">
-          <div class="theme__grid-container">
-            <div class="banner-wrapper">
-              <VBanner
-                  text="Изучение слов и Артиклей по различным темам и способам"
-                  :icon="BannerIcon"
-              />
-            </div>
-            <div class="topics-list-container">
-              <div
-                  v-for="(key, index) in topicKeys"
-                  :key="key"
-                  class="topic-list-item"
-                  :class="{ active: selectedTopic === key }"
-                  @click="selectTopic(key)"
-              >
-                <div class="topic-main-row">
-                  <div class="topic-item-content">
-                    <div class="topic-icon-box">
-                      <img class="theme__cards-icon-item"
-                           :src="`/images/article-themes-images/${iconMap[key] || 'default.svg'}`" :alt="key"/>
+      <transition name="page-fade" appear>
+        <div v-if="isPageLoaded" class="theme-content-area">
+          <div class="grid-area-wrapper">
+            <div class="theme__grid-container">
+              <div class="banner-wrapper">
+                <VBanner
+                    text="Изучение слов и Артиклей по различным темам и способам"
+                    :icon="BannerIcon"
+                />
+              </div>
+              <div class="topics-list-container">
+                <div
+                    v-for="(key, index) in topicKeys"
+                    :key="key"
+                    class="topic-list-item"
+                    :class="{ active: selectedTopic === key }"
+                    @click="selectTopic(key)"
+                >
+                  <div class="topic-main-row">
+                    <div class="topic-item-content">
+                      <div class="topic-icon-box">
+                        <img class="theme__cards-icon-item"
+                             :src="`/images/article-themes-images/${iconMap[key] || 'default.svg'}`" :alt="key"/>
+                      </div>
+                      <span class="topic-label">{{ t(nameMap[key]) }}</span>
                     </div>
-                    <span class="topic-label">{{ t(nameMap[key]) }}</span>
+                    <div class="topic-arrow">
+                      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none"
+                           stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </div>
                   </div>
-                  <div class="topic-arrow">
-                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none"
-                         stroke-linecap="round" stroke-linejoin="round">
-                      <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                  </div>
-                </div>
 
-                <div class="topic-progress-wrapper">
-                  <div class="progress-bar-container">
-                    <div
-                        class="progress-bar-fill"
-                        :style="{
-                        width: `${themeProgress[key]?.total ? (themeProgress[key].learned / themeProgress[key].total) * 100 : 0}%`,
-                        backgroundColor: getTopicColor(index)
-                      }"
-                    ></div>
+                  <div class="topic-progress-wrapper">
+                    <div class="progress-bar-container">
+                      <div
+                          class="progress-bar-fill"
+                          :style="{
+                          width: `${themeProgress[key]?.total ? (themeProgress[key].learned / themeProgress[key].total) * 100 : 0}%`,
+                          backgroundColor: getTopicColor(index)
+                        }"
+                      ></div>
+                    </div>
+                    <div class="progress-text">
+                      {{ themeProgress[key]?.learned || 0 }}/{{ themeProgress[key]?.total || 0 }}
+                    </div>
                   </div>
-                  <div class="progress-text">
-                    {{ themeProgress[key]?.learned || 0 }}/{{ themeProgress[key]?.total || 0 }}
-                  </div>
-                </div>
 
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </transition>
       <Transition name="slide-right" appear>
         <div v-if="showModesBlock" class="learning-modes-block">
           <div class="learning__modes-wrapper">
@@ -110,7 +118,6 @@ import Lottie from 'lottie-web'
 import {nameMap} from '../../utils/nameMap.js'
 import {useSeoMeta} from '#imports'
 import NotFound from '../../assets/animation/notFound.json'
-import VBackBtn from "~/src/components/V-back-btn.vue";
 import VLoginPreloader from "../../src/components/V-loginPreloader.vue";
 import VBanner from "~/src/components/V-banner.vue";
 import BannerIcon from '../../assets/images/articleBannerIcon.svg'
@@ -165,6 +172,7 @@ const selectedModes = ref([])
 const animationContainer = ref(null)
 const localePath = useLocalePath()
 const isLoading = ref(false)
+const isPageLoaded = ref(false)
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -268,9 +276,14 @@ const startLearning = async () => {
   }
 }
 
+function goBack() {
+  router.push('/')
+}
+
 onMounted(async () => {
   const res = await fetch('/words.json')
   themeList.value = await res.json()
+  isPageLoaded.value = true
 })
 
 onMounted(() => {
@@ -310,6 +323,27 @@ onMounted(() => {
   padding: 5px 10px 10px 10px;
   margin-bottom: 5px;
   border-radius: 10px;
+}
+
+.btn-icon-back {
+  background: #f5f5f6;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  border-radius: 14px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.btn-icon-back:active {
+  transform: translate(2px, 3px);
+  box-shadow: 0px 0px 0px #1e272e;
 }
 
 .theme__title {
@@ -417,7 +451,7 @@ onMounted(() => {
 }
 
 .topic-label {
-  color: #ffffff;
+  color: var(--titleColor);
   font-size: 17px;
   font-weight: 800;
   font-family: "Nunito", sans-serif;
@@ -440,7 +474,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 14px;
+  margin-top: 10px;
   width: 100%;
 }
 
@@ -460,7 +494,7 @@ onMounted(() => {
 }
 
 .progress-text {
-  color: #ffffff;
+  color: var(--titleColor);
   font-size: 14px;
   font-weight: 900;
   min-width: 36px;
@@ -649,6 +683,14 @@ onMounted(() => {
   cursor: not-allowed;
 }
 
+.page-fade-enter-active {
+  transition: opacity 0.4s ease, transform 0.4s ease-out;
+}
+.page-fade-enter-from {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
 .slide-right-enter-active, .slide-right-leave-active {
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -671,8 +713,8 @@ onMounted(() => {
   }
 
   .topic-icon-box {
-    width: 38px;
-    height: 38px;
+    width: 45px;
+    height: 45px;
   }
 }
 </style>

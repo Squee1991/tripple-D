@@ -14,10 +14,8 @@
         <VBackBtnNav/>
         <h1 class="page-title">{{ t('nav.events') }}</h1>
       </div>
-
       <transition name="menu-appear">
         <div class="scrollable-view" v-if="isMounted">
-
           <div class="banner-wrapper">
             <VBanner
                 text="Участвуй в сезонных событиях и получай уникальные награды!"
@@ -63,7 +61,6 @@
                   </svg>
                 </div>
               </div>
-
             </template>
           </div>
         </div>
@@ -318,29 +315,8 @@ const processedEvents = computed(() => {
   background: var(--menuItemsBg);
 }
 
-.locked-icon {
-  opacity: 0.4;
-  filter: grayscale(100%);
-}
-
-.locked-text {
-  opacity: 0.5;
-}
-
-.locked-arrow {
-  background-color: #95a5a6;
-  box-shadow: 0 3px 0px #7f8c8d;
-}
-
-.padlock-icon {
-  width: 14px;
-  height: 14px;
-  filter: brightness(0) invert(1);
-}
-
-/* АНИМАЦИИ */
 .menu-appear-enter-active {
-  transition: all 0.4s ease-out;
+  transition: opacity 0.4s ease, transform 0.4s ease-out;
 }
 
 .menu-appear-enter-from {

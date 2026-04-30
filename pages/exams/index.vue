@@ -4,10 +4,10 @@ import {userExamStore} from '~/store/examStore.js'
 import {useRouter} from 'vue-router'
 import VConsentModal from "../../src/components/V-consentModal.vue";
 import {userAuthStore} from "../../store/authStore.js";
-import { useHead, useSeoMeta } from '#imports'
+import {useHead, useSeoMeta} from '#imports'
 import VBackBtn from "~/src/components/V-back-btn.vue";
 
-const { t } = useI18n()
+const {t} = useI18n()
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -16,6 +16,7 @@ useSeoMeta({
 const authStore = userAuthStore()
 const showConsentModal = ref(false)
 const consentGiven = ref(false)
+const isPageLoaded = ref(false)
 const router = useRouter()
 const examStore = userExamStore()
 const showHint = ref(false)
@@ -38,7 +39,7 @@ const examLevels = [
     modules: [
       {text: t('examLevelCardA1.textOne')},
       {text: t('examLevelCardA1.textTwo')},
-      {text:  t('examLevelCardA1.textThree')},
+      {text: t('examLevelCardA1.textThree')},
       {text: t('examLevelCardA1.textFour')}
     ]
   },
@@ -49,7 +50,7 @@ const examLevels = [
     modules: [
       {text: t('examLevelCardA2.textOne')},
       {text: t('examLevelCardA2.textTwo')},
-      {text:  t('examLevelCardA2.textThree')},
+      {text: t('examLevelCardA2.textThree')},
       {text: t('examLevelCardA2.textFour')}
     ]
   },
@@ -60,7 +61,7 @@ const examLevels = [
     modules: [
       {text: t('examLevelCardB1.textOne')},
       {text: t('examLevelCardB1.textTwo')},
-      {text:  t('examLevelCardB1.textThree')},
+      {text: t('examLevelCardB1.textThree')},
       {text: t('examLevelCardB1.textFour')}
     ]
   },
@@ -71,7 +72,7 @@ const examLevels = [
     modules: [
       {text: t('examLevelCardB2.textOne')},
       {text: t('examLevelCardB2.textTwo')},
-      {text:  t('examLevelCardB2.textThree')},
+      {text: t('examLevelCardB2.textThree')},
       {text: t('examLevelCardB2.textFour')}
     ]
   }
@@ -92,95 +93,87 @@ const handleConsentGiven = async () => {
 }
 
 onMounted(async () => {
+  isPageLoaded.value = true
   await authStore.initAuth()
   examStore.loadTopics('/exams/exam-A1.json')
   showConsentModal.value = !authStore.voiceConsentGiven
 })
 </script>
+
 <template>
-  <div class="exam-app-theme"> <div v-if="!authStore.premium" class="exam">
-    <transition name="fade">
-      <div v-if="showHint" class="exam-hint">
-        ℹ️ {{t('examIndexPage.hint')}}
+  <div class="exam-app-theme">
+    <div class="exam">
+      <transition name="fade">
+        <div v-if="showHint" class="exam-hint">
+          ℹ️ {{ t('examIndexPage.hint') }}
+        </div>
+      </transition>
+      <VConsentModal
+          v-if="showConsentModal"
+          @consent-given="handleConsentGiven"
+          @close="showConsentModal = false"
+      />
+      <div class="exam__header">
+        <VBackBtn class="custom-back-btn"/>
+        <div class="exam__title-badge">Тесты</div>
       </div>
-    </transition>
-
-    <VConsentModal
-        v-if="showConsentModal"
-        @consent-given="handleConsentGiven"
-        @close="showConsentModal = false"
-    />
-
-    <div class="exam__header">
-      <VBackBtn class="custom-back-btn"/>
-      <div class="exam__title-badge">Тесты</div>
-    </div>
-    <div class="exam__subtitle">
-      <div class="exam__subtitle__left">
-        <span>{{t('examIndexPage.choice')}}</span>
-        <span class="exam__accent">Lesen</span>
-        <span class="exam__accent">Hören</span>
-        <span class="exam__accent">Schreiben</span>
-        <span class="exam__accent">Sprechen</span>
-      </div>
-      <div class="exam__subtitle__right">
-        <img class="exam__subtitle-icon" src="../../assets/images/exam-results.svg" alt="">
-      </div>
-    </div>
-    <div class="exam__scroll-area">
-      <div class="exam__grid">
-        <div
-            v-for="level in examLevels"
-            :key="level.id"
-            :class="['exam-card', `card--${level.id}`]"
-        >
-          <div class="exam-card__header">
-            <h2 class="exam-card__title">{{ level.title }}</h2>
+      <Transition name="menu-appear" appear>
+        <div v-if="isPageLoaded" class="exam__scroll-area">
+          <div class="exam__subtitle-wrapper">
+            <div class="exam__subtitle">
+              <div class="exam__subtitle__left">
+                <span>{{ t('examIndexPage.choice') }}</span>
+                <span class="exam__accent">Lesen</span>
+                <span class="exam__accent">Hören</span>
+                <span class="exam__accent">Schreiben</span>
+                <span class="exam__accent">Sprechen</span>
+              </div>
+              <div class="exam__subtitle__right">
+                <img class="exam__subtitle-icon" src="../../assets/images/exam-results.svg" alt="">
+              </div>
+            </div>
           </div>
-          <div class="exam-card__body">
-            <ul class="exam-card__list">
-              <li
-                  v-for="item in level.modules"
-                  :key="item.text"
-                  class="exam-card__item"
-              >
-                {{ item.text }}
-              </li>
-            </ul>
-            <button
-                class="exam-card__button"
-                @click="attemptToStartExam(level.id)"
+          <div class="exam__grid">
+            <div
+                v-for="level in examLevels"
+                :key="level.id"
+                :class="['exam-card', `card--${level.id}`]"
             >
-              {{t('examIndexPage.to')}} {{ level.id.toUpperCase() }}
-            </button>
+              <div class="exam-card__header">
+                <h2 class="exam-card__title">{{ level.title }}</h2>
+              </div>
+              <div class="exam-card__body">
+                <ul class="exam-card__list">
+                  <li
+                      v-for="item in level.modules"
+                      :key="item.text"
+                      class="exam-card__item"
+                  >
+                    {{ item.text }}
+                  </li>
+                </ul>
+                <button
+                    class="exam-card__button"
+                    @click="attemptToStartExam(level.id)"
+                >
+                  {{ t('examIndexPage.to') }} {{ level.id.toUpperCase() }}
+                </button>
+              </div>
+            </div>
           </div>
+
         </div>
-      </div>
-    </div>
-  </div>
-    <div v-else class="exam__locked">
-      <div class="exam__locked-card">
-        <h2 class="exam__locked-title"> {{ notAllowed.title }}</h2>
-        <div class="exam__locked-buttons">
-          <button
-              type="button"
-              @click="notAllowedPathBtn(btn.path)"
-              v-for="btn in notAllowed.btns"
-              :key="btn.id"
-              class="locked-btn">
-            {{ btn.value }}
-          </button>
-        </div>
-      </div>
+      </Transition>
     </div>
   </div>
 </template>
 
 <style scoped>
-
 .exam-app-theme {
-  min-height: 100vh;
+  max-height: 100dvh;
+  min-height: 100dvh;
   color: #fff;
+  background-color: var(--bg);
 }
 
 .exam {
@@ -194,15 +187,30 @@ onMounted(async () => {
 .exam__header {
   display: flex;
   align-items: center;
-  padding: 5px 10px 15px 10px
+  padding: 5px 15px 15px 15px;
 }
 
 .exam__title-badge {
   margin-left: 15px;
   border-radius: 20px;
-  color: #fff;
+  color: var(--titleColor);
   font-weight: 900;
-  font-size: 23px;
+  font-size: 24px;
+}
+
+.exam__scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 120px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.exam__scroll-area::-webkit-scrollbar {
+  display: none;
+}
+
+.exam__subtitle-wrapper {
+  padding: 0 15px;
 }
 
 .exam__subtitle {
@@ -213,9 +221,6 @@ onMounted(async () => {
   padding: 15px;
   background: #00c2ff;
   border-radius: 20px;
-  margin: 10px;
-  border: 3px solid #000;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .exam__subtitle__left {
@@ -230,92 +235,79 @@ onMounted(async () => {
   line-height: 1.4;
 }
 
-
 .exam__subtitle__right {
-  flex: 0 0 140px;
+  flex: 0 0 110px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
 .exam__subtitle-icon {
-  width: 100px;
+  width: 90px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
-
 
 .exam__accent {
   display: inline-block;
   font-weight: 800;
   background: #fff;
-  padding: 2px 8px;
-  border-radius: 8px;
+  padding: 4px 10px;
+  border-radius: 10px;
   font-size: 13px;
   color: #1561d3;
-  border: 1px solid rgba(0,0,0,0.1);
-}
-
-
-.exam__scroll-area {
-  flex: 1;
-  overflow-y: auto;
-  padding: 0 10px 120px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.exam__scroll-area::-webkit-scrollbar {
-  width: 4px;
-}
-.exam__scroll-area::-webkit-scrollbar-thumb {
-  background: #7c4dff;
-  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .exam__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 20px 15px 30px 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.exam__grid::-webkit-scrollbar {
+  display: none;
 }
 
 .exam-card {
   background-color: var(--menuItemsBg);
   border: 3px solid #000;
-  border-radius: 18px;
+  border-radius: 24px;
   display: flex;
-  padding: 10px 0;
   flex-direction: column;
-  box-shadow: 0 5px 0 #000;
+  box-shadow: 0 6px 0 #000;
   overflow: hidden;
+  flex: 0 0 80%;
+  max-width: 320px;
+  scroll-snap-align: center;
 }
 
 .exam-card__header {
-  background: rgba(0,0,0,0.2);
-  padding: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 16px 10px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border-bottom: 2px solid #000;
-}
-
-.level-icon {
-  font-size: 24px;
-  margin-bottom: 4px;
+  border-bottom: 3px solid #000;
 }
 
 .exam-card__title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 900;
   margin: 0;
-  color: #fff;
+  color: #1e293b;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .exam-card__body {
-  padding: 12px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -323,82 +315,75 @@ onMounted(async () => {
 }
 
 .exam-card__list {
-  margin: 0 0 15px 0;
+  margin: 0 0 20px 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .exam-card__item {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
-  color: #94a3b8;
-  margin-bottom: 5px;
-  line-height: 1.2;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
 }
 
-
 .exam-card__button {
-  border: 2px solid #3b82f6;
+  border: 3px solid #000;
   background-color: #3b82f6;
-  box-shadow: 0 4px 0 #1d4ed8;
-  border-radius: 20px;
-  padding: 8px 4px;
+  box-shadow: 0 4px 0 #000;
+  border-radius: 16px;
+  padding: 14px;
   font-family: inherit;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 900;
   color: #fff;
   width: 100%;
   cursor: pointer;
   text-transform: uppercase;
+  transition: transform 0.1s, box-shadow 0.1s;
+  margin-top: auto;
 }
 
 .exam-card__button:active {
-  transform: translateY(2px);
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #000;
 }
 
-.card--a1 .exam-card__header { border-bottom-color: #4ade80; }
-.card--a2 .exam-card__header { border-bottom-color: #60a5fa; }
-.card--b1 .exam-card__header { border-bottom-color: #fbbf24; }
-.card--b2 .exam-card__header { border-bottom-color: #f87171; }
-
-.exam__locked {
-  height: 100vh;
-  display: flex;
-  padding: 20px;
-  align-items: center;
+.card--a1 .exam-card__header {
+  border-bottom-color: #4ade80;
 }
 
-.exam__locked-card {
-  width: 100%;
-  background: #211d40;
-  border: 4px solid #000;
-  border-radius: 20px;
-  padding: 30px 20px;
-  text-align: center;
-  box-shadow: 0 8px 0 #000;
+.card--a2 .exam-card__header {
+  border-bottom-color: #60a5fa;
 }
 
-.exam__locked-title {
-  color: #fff;
-  font-weight: 900;
-  margin-bottom: 20px;
+.card--b1 .exam-card__header {
+  border-bottom-color: #fbbf24;
 }
 
-.locked-btn {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 10px;
-  border: 3px solid #000;
-  border-radius: 14px;
-  font-weight: 800;
-  background: #120f26;
-  color: #fff;
-  box-shadow: 0 4px 0 #000;
+.card--b2 .exam-card__header {
+  border-bottom-color: #f87171;
 }
 
-.locked-btn:last-child {
-  background: #fbbf24;
+.card--a1 .exam-card__button {
+  background-color: #4ade80;
+}
+
+.card--a2 .exam-card__button {
+  background-color: #60a5fa;
+}
+
+.card--b1 .exam-card__button {
+  background-color: #fbbf24;
   color: #000;
+}
+
+.card--b2 .exam-card__button {
+  background-color: #f87171;
 }
 
 .exam-hint {
@@ -409,10 +394,22 @@ onMounted(async () => {
   background: #fff;
   color: #000;
   border: 3px solid #000;
-  border-radius: 12px;
-  padding: 10px 15px;
+  border-radius: 16px;
+  padding: 12px 20px;
   z-index: 100;
   font-weight: 800;
   box-shadow: 0 4px 0 #000;
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+}
+
+.menu-appear-enter-active {
+  transition: opacity 0.4s ease, transform 0.4s ease-out;
+}
+
+.menu-appear-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
 }
 </style>

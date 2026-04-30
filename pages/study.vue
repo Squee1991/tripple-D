@@ -274,7 +274,7 @@ button.topic-list-item {
 }
 
 .topic-label {
-  color: var(--titleColor); /* ТВОЯ ПЕРЕМЕННАЯ */
+  color: var(--titleColor);
   font-size: 17px;
   font-weight: 800;
   font-family: "Nunito", sans-serif;
@@ -287,7 +287,7 @@ button.topic-list-item {
 }
 
 .topic-arrow {
-  background-color: #3b82f6; /* Стрелочку оставляю синей как акцент */
+  background-color: #3b82f6;
   color: #ffffff;
   width: 32px;
   height: 32px;
@@ -302,7 +302,7 @@ button.topic-list-item {
 
 .fade-slide-enter-active,
 .fade-slide-leave-active {
-  transition: all 0.3s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease-out;
 }
 
 .fade-slide-enter-from {

@@ -8,7 +8,6 @@
         </div>
       </div>
     </div>
-
     <div v-if="!gameStore.gameReady" class="not-ready-container">
       <div class="bouncy-loader">
         <span></span><span></span><span></span>
@@ -16,7 +15,6 @@
       <h1>{{ t('marathonGame.notReadyTitle') }}</h1>
       <p>{{ t('marathonGame.reboot') }}</p>
     </div>
-
     <template v-else>
       <header class="game-header">
         <div class="stats-bar">
@@ -548,7 +546,6 @@ onMounted(() => {
 .bouncy-loader span:nth-child(2) { animation-delay: 0.1s; }
 .bouncy-loader span:nth-child(3) { animation-delay: 0.2s; }
 
-/* Анимации */
 @keyframes bounce {
   0% { transform: translateY(0); }
   100% { transform: translateY(-15px); }
@@ -579,7 +576,7 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .word-display h1 {
-    font-size: 45px;
+    font-size: 30px;
   }
 
   .game-area {
