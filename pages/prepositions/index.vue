@@ -18,6 +18,7 @@
         >
           <button class="sidebar__button" @click="selectTopic(item.id)">
             <span>{{ item.title }}</span>
+            <VArrowNav/>
           </button>
         </li>
       </ul>
@@ -80,7 +81,6 @@
           </section>
         </div>
         <div class="practice-area">
-<!--          <p class="practice-area__description">{{ currentTopicData.practice.description }}</p>-->
           <NuxtLink :to="`/${categoryId}/${currentTopicData.id}`" class="practice-area__button">
             {{ currentTopicData.practice.buttonText }}
           </NuxtLink>
@@ -99,6 +99,7 @@ import Lottie from 'lottie-web'
 import TipIcon from '../../assets/animation/info.json'
 import VTips from '../../src/components/V-tips.vue'
 import VBackBtn from "../../src/components/V-back-btn.vue";
+import VArrowNav from "~/src/components/V-arrowNav.vue";
 
 const { t} = useI18n()
 const router = useRouter()
@@ -327,11 +328,12 @@ watch(currentTopicData, () => {
 }
 
 .sidebar__title {
-  font-size: 1.5rem;
+  font-size: 23px;
   font-weight: bold;
   margin: 0 0 0 15px;
   text-align: center;
-  color: var(--titleColor);
+  text-shadow: 0 1px var(--title);;
+  color: var(--title);
 }
 
 .sidebar__list {
@@ -349,6 +351,9 @@ watch(currentTopicData, () => {
   width: 100%;
   text-align: center;
   padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: var(--menuItemsBg);
   border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
@@ -391,7 +396,6 @@ watch(currentTopicData, () => {
 
 .btn-icon-back {
   background: #fff;
-  border: 3px solid #2b2b2b;
   border-radius: 12px;
   width: 40px;
   height: 40px;
@@ -399,7 +403,8 @@ watch(currentTopicData, () => {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 2px 2px 0px #2b2b2b;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   transition: transform 0.1s, box-shadow 0.1s;
 }
 
@@ -482,11 +487,23 @@ watch(currentTopicData, () => {
   background-color: white;
   border: 3px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile);
-  border-left: 6px solid #ffab00;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
   margin-bottom: 12px;
   font-size: 1.2rem;
+}
+
+.example:before {
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  position: absolute;
+  background: #ffab00;
+
 }
 
 .example__line {

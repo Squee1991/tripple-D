@@ -142,7 +142,6 @@ onUnmounted(() => {
           alt="astronaut"
       />
     </div>
-
     <div class="menu-content-layer">
       <div class="open-menu-layout" v-if="currentScreen === 'menu' && !isTransitioning">
         <div class="title-section">

@@ -12,6 +12,7 @@
         </div>
       </div>
       <div class="stat-card">
+        <!-- Добавлен класс title-icon для точечного увеличения -->
         <div class="stat-icon title-icon">
           <img :src="currentRankIcon" alt="Rank" class="rank-icon-img" />
         </div>
@@ -192,27 +193,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   height: 100%;
 }
 
-.registration-badge {
-  width: 100%;
-  align-items: center;
-  gap: 6px;
-  background: var(--tabBg);
-  padding: 14px 16px;
-  border-radius: 14px;
-  border: 1px solid var(--tabsSlideBorderColor);
-  font-size: 14px;
-  font-weight: 800;
-  color: var(--titleColor);
-  align-self: flex-start;
-  margin-bottom: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.registration-badge span {
-  color: var(--titleColor);
-  font-weight: 900;
-}
-
 .section-title {
   margin: 5px 0 10px 0;
   font-size: 19px;
@@ -236,10 +216,10 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 .stat-card {
   background-color: var(--tabBg);
   border-radius: 12px;
-  padding: 15px;
+  padding: 15px 11px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   border: 1px solid var(--tabsSlideBorderColor);
   transition: transform 0.2s ease;
 }
@@ -253,15 +233,17 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   align-items: center;
   border-radius: 10px;
   overflow: hidden;
+  flex-shrink: 0;
+}
+
+.stat-icon.title-icon {
+  width: 54px;
+  height: 54px;
 }
 
 .stat-icon img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-}
-
-.rank-icon-img {
   object-fit: contain;
 }
 
@@ -271,7 +253,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .stat-value {
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 800;
   color: var(--titleColor);
 }
@@ -288,14 +270,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   padding: 18px 6px;
   gap: 8px;
   text-align: center;
-}
-
-.marathon-card .stat-info {
-  align-items: center;
-}
-
-.marathon-card .stat-label {
-  font-size: 13px;
 }
 
 .difficulty-icon {
@@ -324,86 +298,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   background: linear-gradient(135deg, #f87171, #ef4444);
   box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.4), inset 0 -2px 4px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(239, 68, 68, 0.25);
   border: 1px solid #dc2626;
-}
-
-.premium-banner {
-  margin-top: 20px;
-  background: linear-gradient(135deg, #8b5cf6, #ec4899);
-  border-radius: 20px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #ffffff;
-  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.25);
-  position: relative;
-  overflow: hidden;
-}
-
-.premium-banner::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
-  transform: rotate(30deg);
-  pointer-events: none;
-}
-
-.premium-banner.is-active {
-  background: linear-gradient(135deg, #10b981, #059669);
-  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
-}
-
-.premium-content h4 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 900;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
-}
-
-.premium-content p {
-  margin: 4px 0 0 0;
-  font-size: 13px;
-  font-weight: 700;
-  opacity: 0.9;
-}
-
-.premium-action-btn {
-  background: #ffffff;
-  color: #db2777;
-  border: none;
-  border-radius: 14px;
-  padding: 12px 20px;
-  font-family: inherit;
-  font-weight: 900;
-  font-size: 15px;
-  cursor: pointer;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
-  transition: all 0.1s ease;
-  z-index: 1;
-}
-
-.premium-banner.is-active .premium-action-btn {
-  color: #059669;
-}
-
-.premium-action-btn:active {
-  transform: translateY(4px);
-  box-shadow: 0 0 0 transparent;
-}
-
-@media (max-width: 480px) {
-  .premium-banner {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-  .premium-action-btn {
-    width: 100%;
-  }
 }
 
 @media (max-width: 400px) {

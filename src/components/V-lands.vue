@@ -299,11 +299,11 @@ onBeforeUnmount(() => {
 }
 
 .map-left__title {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 900;
-  color: var(--titleColor);
+  color: var(--title);
   margin-left: 15px;
-  text-shadow: 0px 1px var(--titleColor);
+  text-shadow: 0px 1px var(--title);
 }
 
 .map-left__desc {

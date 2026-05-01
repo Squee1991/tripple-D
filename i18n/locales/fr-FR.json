@@ -9210,6 +9210,7 @@
     "confirm": "Confirmer"
   },
   "sub": {
+    "words": "Mots et articles",
     "sinonim": "Lexique",
     "articles": "Articles",
     "verbs": "Verbes",
@@ -9787,5 +9788,15 @@
   "personalAccount": {
     "statsAndAchievements": "Statistiques et succès",
     "streakTitle": "Série du marathon des articles"
+  },
+  "studyNavAndBanner": {
+    "practice": "Pratique",
+    "grammar": "Grammaire",
+    "bannerPractice": "Améliore ton niveau d'allemand en accomplissant diverses tâches pratiques",
+    "bannerGrammar": "Étudie les règles et améliore ton niveau d'allemand sur différents thèmes grammaticaux"
+  },
+  "bannerTitles": {
+    "play": "Apprends l'allemand avec plaisir ! Choisis un mode pratique et améliore ta langue en jouant",
+    "events": "Participe aux événements saisonniers et obtiens des récompenses uniques en accomplissant des tâches"
   }
 }

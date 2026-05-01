@@ -24,7 +24,7 @@
         >
           <button class="sidebar__button" @click="selectTopic(item.id)">
             <span>{{ item.title }}</span>
-            <img class="sidebar__next-icon" src="../../assets/images/next.svg" alt="arrow">
+            <VArrowNav/>
           </button>
         </li>
       </ul>
@@ -117,6 +117,7 @@ import Lottie from 'lottie-web'
 import TipIcon from '../../assets/animation/info.json'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import VBackBtn from "~/src/components/V-back-btn.vue";
+import VArrowNav from "~/src/components/V-arrowNav.vue";
 
 const {t} = useI18n()
 const router = useRouter()
@@ -299,13 +300,13 @@ watch(currentTopicData, initLottieIcon)
 }
 
 .sidebar__title {
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 800;
-  color: var(--titleColor);
-  margin-left: 16px;
+  color: var(--title);
+  margin-left: 15px;
   margin-top: 0;
   margin-bottom: 0;
-  text-shadow: 0 1px var(--titleColor);
+  text-shadow: 0 1px var(--title);
 }
 
 .sidebar__list {
@@ -332,10 +333,6 @@ watch(currentTopicData, initLottieIcon)
   font-size: 16px;
   color: var(--titleColor);
   transition: all 0.1s ease-out;
-}
-
-.sidebar__next-icon {
-  width: 18px;
 }
 
 .content {
@@ -387,14 +384,14 @@ watch(currentTopicData, initLottieIcon)
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  padding: 20px;
+  overflow-y: hidden;
   background: var(--bg);
 }
 
 .content__main-column {
   flex-grow: 1;
-  padding-bottom: 20px;
+  padding: 20px;
+  overflow-y: auto;
 }
 
 .info-section {
@@ -562,10 +559,9 @@ watch(currentTopicData, initLottieIcon)
 }
 
 .practice-area {
-  padding: 16px 0 0 0;
-  margin-top: auto;
   flex-shrink: 0;
   text-align: center;
+  padding: 20px;
 }
 
 .practice-area__title {

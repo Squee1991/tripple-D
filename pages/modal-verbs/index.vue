@@ -76,9 +76,6 @@
           </div>
         </div>
       </div>
-      <div v-else class="placeholder">
-        <p>👈 {{ t('modalVerbsPage.chooseLevel') }}</p>
-      </div>
     </section>
   </main>
 </template>
@@ -375,10 +372,11 @@ watch(selectedGroup, initLottieIcon);
 }
 
 .content__title {
-  color: var(--titleColor);
-  font-size: 22px;
+  color: var(--title);
+  text-shadow: 0 1px var(--title);
+  font-size: 23px;
   font-weight: 800;
-  margin: 0 0 0 16px;
+  margin: 0 0 0 15px;
 }
 
 .btn-icon-back {
@@ -399,14 +397,14 @@ watch(selectedGroup, initLottieIcon);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  padding: 20px;
+  overflow: hidden;
   background: var(--bg);
 }
 
 .content__main-column {
   flex-grow: 1;
-  padding-bottom: 20px;
+  overflow-y: auto;
+  padding: 20px;
 }
 
 .info__wrapper {
@@ -513,6 +511,8 @@ watch(selectedGroup, initLottieIcon);
 
 .practice-area {
   flex-shrink: 0;
+  padding: 20px;
+  background: var(--bg);
 }
 
 .practice-area__button {

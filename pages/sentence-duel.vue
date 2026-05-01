@@ -312,11 +312,11 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 }
 
 .duel__header--title {
-  color: var(--titleColor);
+  color: var(--title);
   font-weight: 600;
   font-size: 24px;
   margin-left: 15px;
-  text-shadow: 0px 1px var(--titleColor);
+  text-shadow: 0px 1px var(--title);
 }
 
 .duel__header--left {

@@ -196,6 +196,7 @@ onMounted(async () => {
   color: var(--titleColor);
   font-weight: 900;
   font-size: 24px;
+  text-shadow: 0 1px var(--titleColor);
 }
 
 .exam__scroll-area {
@@ -219,6 +220,11 @@ onMounted(async () => {
   justify-content: space-between;
   gap: 10px;
   padding: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1),
+  0 4px 0 rgb(0, 150, 200);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3),
+  inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+  0 6px 0 rgb(0, 160, 220);
   background: #00c2ff;
   border-radius: 20px;
 }
@@ -263,7 +269,7 @@ onMounted(async () => {
 .exam__grid {
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 20px;
   padding: 20px 15px 30px 15px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -277,11 +283,11 @@ onMounted(async () => {
 
 .exam-card {
   background-color: var(--menuItemsBg);
-  border: 3px solid #000;
   border-radius: 24px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 6px 0 #000;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   overflow: hidden;
   flex: 0 0 80%;
   max-width: 320px;
@@ -301,13 +307,13 @@ onMounted(async () => {
   font-size: 18px;
   font-weight: 900;
   margin: 0;
-  color: #1e293b;
+  color: var(--titleColor);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .exam-card__body {
-  padding: 20px;
+  padding: 30px 25px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -326,13 +332,13 @@ onMounted(async () => {
 .exam-card__item {
   font-size: 15px;
   font-weight: 700;
-  color: #64748b;
+  color: #7c8ba0;
   margin: 0;
   line-height: 1.4;
 }
 
 .exam-card__button {
-  border: 3px solid #000;
+  border: none;
   background-color: #3b82f6;
   box-shadow: 0 4px 0 #000;
   border-radius: 16px;
@@ -371,19 +377,22 @@ onMounted(async () => {
 
 .card--a1 .exam-card__button {
   background-color: #4ade80;
+  box-shadow: 0 5px 0 #31af5f;
 }
 
 .card--a2 .exam-card__button {
   background-color: #60a5fa;
+  box-shadow: 0 5px 0 #447ec5;
 }
 
 .card--b1 .exam-card__button {
-  background-color: #fbbf24;
-  color: #000;
+  background-color: #c0962a;
+  box-shadow: 0 5px 0 #a17d20;
 }
 
 .card--b2 .exam-card__button {
   background-color: #f87171;
+  box-shadow: 0 5px 0 #c54d4d;
 }
 
 .exam-hint {

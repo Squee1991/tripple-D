@@ -21,7 +21,7 @@
             :class="{ 'sidebar__item--active': topic === item.id }">
           <button class="sidebar__button" @click="selectTopic(item.id)">
             <span>{{ item.title }}</span>
-            <img class="sidebar__next-icon" src="../../assets/images/next.svg" alt="arrow">
+            <VArrowNav/>
           </button>
         </li>
       </ul>
@@ -92,7 +92,7 @@
             </div>
           </div>
           <div class="practice-area">
-            <p class="practice-area__description">{{ currentTopicData.practice.description }}</p>
+<!--            <p class="practice-area__description">{{ currentTopicData.practice.description }}</p>-->
             <NuxtLink :to="`/verb-types/${currentTopicData.id}`" class="practice-area__button">
               {{ currentTopicData.practice.buttonText }}
             </NuxtLink>
@@ -111,6 +111,7 @@ import Lottie from 'lottie-web';
 import TipIcon from '../../assets/animation/info.json';
 import SoundBtn from '../../src/components/soundBtn';
 import { useHead, useSeoMeta } from '#imports'
+import VArrowNav from "~/src/components/V-arrowNav.vue";
 
 const {t} = useI18n()
 
@@ -337,13 +338,13 @@ watch(currentTopicData, initLottieIcon);
 }
 
 .sidebar__title {
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 800;
-  color: var(--titleColor);
-  margin-left: 16px;
+  color: var(--title);
+  margin-left: 15px;
   margin-top: 0;
   margin-bottom: 0;
-  text-shadow: 0 1px var(--titleColor);
+  text-shadow: 0 1px var(--title);
 }
 
 .sidebar__list {
@@ -370,10 +371,6 @@ watch(currentTopicData, initLottieIcon);
   font-size: 16px;
   color: var(--titleColor);
   transition: all 0.1s ease-out;
-}
-
-.sidebar__next-icon {
-  width: 18px;
 }
 
 .content {
@@ -432,13 +429,14 @@ watch(currentTopicData, initLottieIcon);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  padding: 20px;
+  overflow-y: hidden;
   background: var(--bg);
 }
 
 .content__main-column {
   flex-grow: 1;
+  overflow-y: auto;
+  padding: 20px;
 }
 
 .info-section {
@@ -591,8 +589,8 @@ watch(currentTopicData, initLottieIcon);
 
 .practice-area {
   flex-shrink: 0;
-  margin-top: auto;
-  text-align: center;
+  padding: 20px;
+  background: var(--bg);
 }
 
 .practice-area__description {

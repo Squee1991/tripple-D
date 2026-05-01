@@ -9217,6 +9217,7 @@
     "confirm": "Repetă parola"
   },
   "sub": {
+    "words": "Cuvinte și articole",
     "sinonim": "Lexic",
     "articles": "Articole",
     "verbs": "Verbe",
@@ -9794,5 +9795,15 @@
   "personalAccount": {
     "statsAndAchievements": "Statistici și realizări",
     "streakTitle": "Seria maratonului de articole"
+  },
+  "studyNavAndBanner": {
+    "practice": "Practică",
+    "grammar": "Gramatică",
+    "bannerPractice": "Îmbunătățește-ți nivelul de germană completând diverse sarcini practice",
+    "bannerGrammar": "Studiază regulile și îmbunătățește-ți nivelul de germană la diverse teme gramaticale"
+  },
+  "bannerTitles": {
+    "play": "Învață germana cu plăcere! Alege un mod convenabil și îmbunătățește-ți limba jucându-te",
+    "events": "Participă la evenimentele sezoniere și obține recompense unice pentru finalizarea sarcinilor"
   }
 }

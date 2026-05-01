@@ -7,89 +7,85 @@
         :img="Description"
         :text="t(overlayData.text)"
     />
-
-    <transition name="page-fade" appear>
-      <div v-if="isPageLoaded" class="content-shell">
-        <header class="app-header">
-          <button @click="goBack" class="btn-icon-back">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                 stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="19" y1="12" x2="5" y2="12"></line>
-              <polyline points="12 19 5 12 12 5"></polyline>
-            </svg>
-          </button>
-          <h1 class="header-title">
-            <span>{{ t('describePicture.title') }}</span>
-          </h1>
-          <button class="btn-icon-info" @click="openModal">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                 stroke="orange" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="16" x2="12" y2="12"></line>
-              <line x1="12" y1="8" x2="12.01" y2="8"></line>
-            </svg>
-          </button>
-        </header>
-        <transition name="fade" mode="out-in">
-          <div v-if="viewState === 'topics'" class="view-topics" key="topics">
-            <div class="intro-block">
-              <VBanner
-                  :text="t('descriptionPage.intro')"
-                  :icon="PhotoFrame"
-              />
-            </div>
-            <div class="topics-flex-title">Выбери тему для описания</div>
-            <div class="topics-list-container">
-              <div
-                  v-for="topic in topics"
-                  :key="topic.id"
-                  class="topic-list-item"
-                  @click="selectTopic(topic)"
-              >
-                <div class="topic-item-content">
-                  <div class="topic-icon-box">{{ topic.icon }}</div>
-                  <span class="topic-label">{{ t(topic.label) }}</span>
-                </div>
-                <div class="topic-arrow">
-                  <img src="../../assets/images/next.svg" alt="">
-                </div>
+    <div v-if="isPageLoaded" class="content-shell">
+      <header class="app-header">
+        <button @click="goBack" class="btn-icon-back">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+               stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </button>
+        <h1 class="header-title">
+          <span>{{ t('describePicture.title') }}</span>
+        </h1>
+        <button class="btn-icon-info" @click="openModal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="orange" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+        </button>
+      </header>
+      <VTransition>
+        <div v-if="viewState === 'topics'" class="view-topics" key="topics">
+          <div class="intro-block">
+            <VBanner
+                :text="t('descriptionPage.intro')"
+                :icon="PhotoFrame"
+            />
+          </div>
+          <div class="topics-list-container">
+            <div
+                v-for="topic in topics"
+                :key="topic.id"
+                class="topic-list-item"
+                @click="selectTopic(topic)"
+            >
+              <div class="topic-item-content">
+                <div class="topic-icon-box">{{ topic.icon }}</div>
+                <span class="topic-label">{{ t(topic.label) }}</span>
               </div>
+              <VArrowNav/>
             </div>
           </div>
-          <div v-else-if="viewState === 'level'" class="view-level" key="level">
-            <div class="level-header"><h2>{{ t('descriptionPage.level')}}</h2></div>
-            <div class="level-options">
-              <button v-for="level in levels" :key="level" @click="selectLevel(level)" class="level-card"
-                      :class="{ 'active': selectedLevel === level }">
-                <div class="level-mark"></div>
-                <span class="level-name">{{ level }}</span>
-              </button>
-            </div>
-            <button @click="startGame" class="btn-primary-action">{{ t('nominativ.start')}}</button>
+        </div>
+        <div v-else-if="viewState === 'level'" class="view-level" key="level">
+          <div class="level-header"><h2>{{ t('descriptionPage.level') }}</h2></div>
+          <div class="level-options">
+            <button v-for="level in levels" :key="level" @click="selectLevel(level)" class="level-card"
+                    :class="{ 'active': selectedLevel === level }">
+              <div class="level-mark"></div>
+              <span class="level-name">{{ level }}</span>
+            </button>
           </div>
-        </transition>
-      </div>
-    </transition>
+          <button @click="startGame" class="btn-primary-action">{{ t('nominativ.start') }}</button>
+        </div>
+      </VTransition>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { useSeoMeta, useState } from "#imports"
-import { useRouter } from 'vue-router'
+import {ref, onMounted} from 'vue'
+import {useSeoMeta, useState} from "#imports"
+import {useRouter} from 'vue-router'
 import Modal from '../../src/components/modal.vue'
 import Description from '@/assets/images/reporting.svg'
-import { topics } from '@/utils/descriptionImages.js'
-import { showInterstitial } from '../../utils/admob.js'
+import {topics} from '@/utils/descriptionImages.js'
+import {showInterstitial} from '../../utils/admob.js'
 import VBanner from "~/src/components/V-banner.vue";
 import PhotoFrame from "../../assets/images/photo-frame.svg";
+import VArrowNav from "~/src/components/V-arrowNav.vue";
+import VTransition from "~/src/components/V-transition.vue";
 
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
 
 const router = useRouter()
-const { t } = useI18n()
+const {t} = useI18n()
 
 const levels = ['A1', 'A2', 'B1']
 const viewState = ref('topics')
@@ -99,7 +95,7 @@ const showDevModal = ref(false)
 
 const isPageLoaded = ref(false)
 
-const overlayData = ref({ title: "describePicture.rulesTitle", text: "describePicture.rulesText" })
+const overlayData = ref({title: "describePicture.rulesTitle", text: "describePicture.rulesText"})
 
 const sessionConfig = useState('sessionConfig', () => ({
   topicId: null,
@@ -110,8 +106,12 @@ onMounted(() => {
   isPageLoaded.value = true
 })
 
-const openModal = () => { showDevModal.value = true }
-const closeModal = () => { showDevModal.value = false }
+const openModal = () => {
+  showDevModal.value = true
+}
+const closeModal = () => {
+  showDevModal.value = false
+}
 
 function selectTopic(topic) {
   selectedTopic.value = topic
@@ -123,7 +123,7 @@ function selectLevel(level) {
 }
 
 function startGame() {
-  showInterstitial(()=> {
+  showInterstitial(() => {
     sessionConfig.value = {
       topicId: selectedTopic.value.id,
       level: selectedLevel.value
@@ -180,8 +180,8 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
 .header-title {
   font-size: 23px;
   font-weight: 900;
-  color: var(--titleColor);
-  text-shadow: 1px 1px 0px #ffffff;
+  color: var(--title);
+  text-shadow: 1px 1px 0px var(--title);
 }
 
 .btn-icon-back,
@@ -215,6 +215,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
 .view-topics::-webkit-scrollbar {
   display: none;
 }
@@ -229,16 +230,6 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   color: var(--titleColor);
   margin: 0;
   padding: 0 10px;
-}
-
-.topics-flex-title {
-  text-align: start;
-  font-size: 19px;
-  font-weight: 900;
-  padding: 10px 22px;
-  color: #85a6e7;
-  text-shadow: 1px 1px #85a6e7;
-  letter-spacing: .3px;
 }
 
 .topics-list-container {
@@ -269,7 +260,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
 .topic-item-content {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .topic-icon-box {
@@ -289,15 +280,6 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   font-family: "Nunito", sans-serif;
 }
 
-.topic-arrow {
-  width: 18px;
-  color: #ffffff;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .task-count {
   font-size: 14px;
@@ -398,37 +380,18 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   transform: translate(2px, 3px);
 }
 
-.page-fade-enter-active {
-  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-.page-fade-enter-from {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(10px);
-}
-
 @media (max-width: 767px) {
   .intro-block p {
     font-size: 15px;
   }
+
   .level-header h2 {
     font-size: 18px;
   }
-  .topic-label {
-    font-size: 15px;
-  }
+
+
   .topic-icon-box {
-    font-size: 24px;
+    font-size: 30px;
     width: 35px;
   }
 }

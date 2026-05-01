@@ -116,22 +116,29 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   position: relative;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1),
+  0 4px 0 rgb(0, 150, 200);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3),
+  inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+  0 6px 0 rgb(0, 160, 220);
+  background: #00c2ff;
+  padding: 25px 20px;
+  border-radius: 20px;
   z-index: 1;
 }
 
 .qd__title {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 800;
-  color: var(--panelTextColor);
-  text-shadow: 0px 1px var(--titleColor);
+  color: white;
+  text-shadow: 0px 1px white;
 }
 
 .qd__right {
   display: flex;
   align-items: center;
-  gap: 8px;
   font-size: 14px;
   color: #9aa6b2;
 }
@@ -140,9 +147,8 @@ onUnmounted(() => {
   font-variant-numeric: tabular-nums;
   padding: 4px 8px;
   border-radius: 8px;
-  background: var(--timerbg);
   color: #fff;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
 }
 

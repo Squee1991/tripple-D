@@ -1,11 +1,15 @@
 <template>
   <div class="points">
-    <section id="points" class="points-card" aria-label="Поинты и уровень">
-      <header class="points-card__header">
-        <h2 class="points__title">{{ t('accountPanel.title') }}</h2>
-      </header>
-
+    <section id="points" class="points-card" aria-label="member_panel">
+      <VBanner
+          :text="t('accountPanel.title')"
+          :icon="CardIcon"
+      />
       <div v-if="langStore" class="top-panel-layout">
+        <div class="level-display">
+          <span class="level-label">{{ t('stepHitLabels.levelTitle')}}:</span>
+          <span class="level-value">{{ langStore.isLeveling || '0' }}</span>
+        </div>
         <div class="custom-progress">
           <div class="progress_exp-bar">
             <div class="progress__bar" :style="{ width: `${(langStore.exp / 100) * 100}%` }">
@@ -13,54 +17,10 @@
             </div>
           </div>
           <div class="progress-circle">
-            {{ langStore.exp }}/100 XP
+            {{ langStore.exp }} / 100
           </div>
         </div>
-        <div class="level-display">
-          <span class="level-label">Уровень:</span>
-          <span class="level-value">{{ langStore.isLeveling || '0' }}</span>
-        </div>
-        <button class="premium-button" @click="toPayment">Premium 🚀</button>
-        <div class="premium-link-wrapper">
-          <span class="premium-link">Не активен</span>
-        </div>
       </div>
-      <!--      <ul v-if="langStore" class="points-card__list">-->
-      <!--        <li v-for="item in infoData.filter(i => i.id !== 'level')" :key="item.id" :id="item.id === 'rank' ? 'conferats' : 'articlus'" class="points-card__item">-->
-      <!--          <div class="points-card__label">-->
-      <!--            {{ itemLabels[item.id] }}-->
-      <!--          </div>-->
-      <!--          <div class="tooltip-container">-->
-      <!--            <div class="tooltip-box">-->
-      <!--              <div class="tooltip-title">{{ item.title }}</div>-->
-      <!--              <ul class="tooltip-list">-->
-      <!--                <li v-for="tip in item.tips" :key="tip.label">{{ tip.label }}</li>-->
-      <!--              </ul>-->
-      <!--            </div>-->
-      <!--            <template v-if="item.id === 'rank'">-->
-      <!--              <div class="points__hats-wrapper">-->
-      <!--                <button-->
-      <!--                    v-if="userAuth.isFreezeActive"-->
-      <!--                    class="hats__shield-btn"-->
-      <!--                    @click="showFreezeModal = true"-->
-      <!--                >-->
-      <!--                  <img class="hats__icon" src="../../assets/images/FreezeShield.svg" alt="Freeze Shield Icon">-->
-      <!--                </button>-->
-      <!--                <div v-if="userAuth.uid" class="articlus__wrapper">-->
-      <!--                  <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Rank Hat Icon">-->
-      <!--                  <span class="points-card__value"> {{ userAuth.totalHats}}</span>-->
-      <!--                </div>-->
-      <!--              </div>-->
-      <!--            </template>-->
-      <!--            <template v-else-if="item.id === 'article'">-->
-      <!--              <div v-if="userAuth.uid" class="articlus__wrapper">-->
-      <!--                <img class="articlus__icon" src="../../assets/images/articlus.png" alt="Articles Icon">-->
-      <!--                <span class="points-card__value">{{ langStore.points }}</span>-->
-      <!--              </div>-->
-      <!--            </template>-->
-      <!--          </div>-->
-      <!--        </li>-->
-      <!--      </ul>-->
       <ul v-if="langStore" class="action-menu__list">
         <li v-for="section in sections" :key="section.id" :id="section.id" class="action-menu__item">
           <NuxtLink :to="section.route" class="action-menu__link">
@@ -70,12 +30,11 @@
               </div>
               <div class="action-menu__title">{{ section.title }}</div>
             </div>
-            <div class="action-menu__arrow">
-              <img class="action-menu__arrow-icon" src="../../assets/images/next.svg" alt="Arrow Icon"/>
-            </div>
+            <VArrowNav/>
           </NuxtLink>
         </li>
       </ul>
+      <AccountManagement/>
     </section>
     <div v-if="showFreezeModal" class="modal-overlay" @click.self="showFreezeModal = false">
       <div class="modal-content">
@@ -110,8 +69,10 @@ import AchPanelIcon from '../../assets/images/AchPanelIcon.svg'
 import RankedIcon from '../../assets/images/RankedIcon.svg'
 import Calendar from '../../assets/images/calendar (2).svg'
 import { useRankUserStore } from '../../store/rankStore.js'
-
-const rankStore = useRankUserStore()
+import VArrowNav from "~/src/components/V-arrowNav.vue";
+import AccountManagement from "~/src/components/AccountManagement.vue";
+import VBanner from "~/src/components/V-banner.vue";
+import CardIcon from "../../assets/images/card.svg";
 const {t} = useI18n()
 const langStore = userlangStore()
 const userAuth = userAuthStore()
@@ -152,17 +113,14 @@ onMounted(() => {
 .custom-progress {
   position: relative;
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
-
 .action-menu__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-bottom: 20px;
 }
 
 .action-menu__item {
@@ -196,16 +154,16 @@ onMounted(() => {
 .action-menu__icon-bg {
   background: var(--tabBg);
   border-radius: 12px;
-  width: 42px;
-  height: 42px;
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .action-menu__icon {
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   object-fit: contain;
 }
 
@@ -216,13 +174,8 @@ onMounted(() => {
   font-family: "Nunito", sans-serif;
 }
 
-.action-menu__arrow-icon {
-  width: 20px;
-  height: 20px;
-}
-
 .custom-progress .progress_exp-bar {
-  height: 23px;
+  height: 27px;
 }
 
 .progress-circle {
@@ -231,9 +184,9 @@ onMounted(() => {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 4px 12px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
-  color: #111;
+  color: #313030;
 
   white-space: nowrap;
   z-index: 2;
@@ -243,18 +196,19 @@ onMounted(() => {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .level-label {
-  color: var(--titleColor);
-  font-size: 20px;
+  color: var(--title);
+  font-size: 21px;
   font-weight: 700;
+  text-shadow: 0 1px 0 var(--title);
 }
 
 .level-value {
   background: #8868db;
-  border: 1px solid #4a5568;
+  border: none;
   border-radius: 6px;
   padding: 2px 8px;
   color: white;
@@ -382,7 +336,7 @@ onMounted(() => {
   border: 4px solid var(--tabBg);
   box-shadow: var(--boxShadowMobile);
   border-radius: 20px;
-  padding: 25px 15px;
+  padding: 18px 15px;
   width: 100%;
   margin-bottom: 15px;
   position: relative;
@@ -517,6 +471,5 @@ onMounted(() => {
   box-shadow: none;
   transform: translateY(4px);
 }
-
 
 </style>

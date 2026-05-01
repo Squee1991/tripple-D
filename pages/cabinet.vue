@@ -45,7 +45,7 @@
       <section class="content-panel">
         <ClientOnly>
           <div class="content-body">
-            <transition name="fade-page" mode="out-in">
+            <VTransition>
               <div v-if="activeTabKey === 'info'" class="header-surface" key="info">
                 <div v-if="isSettingsOpen" class="settings-wrapper">
                   <VSettings
@@ -126,7 +126,7 @@
               <div v-else class="tab__component-wrapper" :key="activeTabKey">
                 <component :is="components" @open="handleSettingsAction"/>
               </div>
-            </transition>
+            </VTransition>
           </div>
         </ClientOnly>
       </section>
@@ -143,7 +143,10 @@
               @click="authStore.ownedAvatars.includes(avatarName) ? selectAvatar(avatarName) : openPurchaseModal(avatarName)"
           >
             <img :src="authStore.getAvatarUrl(avatarName)" :alt="avatarName"/>
-            <div v-if="!authStore.ownedAvatars.includes(avatarName)" class="avatar-price">50 🪙</div>
+            <div v-if="!authStore.ownedAvatars.includes(avatarName)" class="avatar-price">
+              <span>50 </span>
+              <img src="../assets/images/article.svg" alt="">
+            </div>
           </div>
         </div>
         <div class="modal-actions">
@@ -246,6 +249,7 @@ import ShoppingCart from '../assets/images/shopping-cart.svg'
 import VSettings from '../src/components/V-settings.vue'
 import RankAward from '../assets/images/rankaward.svg'
 import AccountIcon from '../assets/images/account.png'
+import VTransition from "~/src/components/V-transition.vue";
 
 definePageMeta({
   robots: {index: false, follow: false}
@@ -566,6 +570,16 @@ onMounted(async () => {
   color: var(--titleColor);
 }
 
+.modal-title {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.modal-text {
+  margin-bottom: 20px;
+}
+
 .nav-container {
   display: flex;
   flex-direction: column;
@@ -733,14 +747,14 @@ onMounted(async () => {
 }
 
 .modal-card {
-  background: #fef8e4;
-  border: 2px solid #000;
+  background: var(--tabBg);
   border-radius: 20px;
   padding: 2rem;
   width: 90%;
-  max-width: 440px;
-  box-shadow: 3px 3px 0 #000;
+  max-width: 340px;
   text-align: center;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
 }
 
 .modal-actions {
@@ -750,17 +764,19 @@ onMounted(async () => {
 }
 
 .btn {
-  border: 3px solid #000;
+  border: none;
+  box-shadow: 0 4px 0 #c0c2c9;
   border-radius: 16px;
   padding: 10px 16px;
   font-weight: 800;
   background: #f3f4f6;
-  box-shadow: 2px 2px 0 #000;
   cursor: pointer;
+  width: 100%;
 }
 
 .btn-success {
   background: #4ade80;
+  box-shadow: 0 5px 0 #34be66;
 }
 
 .btn-danger {
@@ -784,8 +800,6 @@ onMounted(async () => {
   background: #fff;
   padding: 2rem;
   border-radius: 24px;
-  border: 4px solid #000;
-  box-shadow: 6px 6px 0 #000;
   width: 90%;
   max-width: 600px;
 }
@@ -822,9 +836,8 @@ onMounted(async () => {
   bottom: 8px;
   left: 50%;
   transform: translateX(-50%);
-  background: #fca13a;
-  color: #fff;
-  border: 2px solid #000;
+  background: #f3f3f3;
+  color: black;
   border-radius: 10px;
   padding: 4px 8px;
   font-weight: 900;
@@ -911,36 +924,6 @@ onMounted(async () => {
     box-shadow: none;
     border-radius: 0;
   }
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-.fade-enter-from {
-  opacity: 0;
-  transform: translateY(5px) scale(0.98);
-}
-
-.fade-leave-to {
-  opacity: 0;
-  transform: scale(0.98);
-}
-
-.fade-page-enter-active,
-.fade-page-leave-active {
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-.fade-page-enter-from {
-  opacity: 0;
-  transform: scale(0.98);
-}
-
-.fade-page-leave-to {
-  opacity: 0;
-  transform: scale(0.98);
 }
 
 .account-tab-body {

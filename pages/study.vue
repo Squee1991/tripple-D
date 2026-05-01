@@ -7,45 +7,65 @@
           {{ selectedCategory ? selectedCategory.title : t('nav.training') }}
         </h1>
       </div>
-      <transition name="fade-slide" mode="out-in">
+      <VTransition>
         <div v-if="isMounted && !selectedCategory" key="main" class="scrollable-view">
           <div class="banner-wrapper">
             <VBanner
-                text="Учите немецкий язык любым удобным способом!"
+                :text="bannerTitleComputed"
                 :icon="LearnIcon"
             />
           </div>
-          <div class="topics-list-container">
-            <template v-for="category in learnCategories" :key="category.id">
-              <NuxtLink v-if="category.url" :to="category.url" class="topic-list-item">
-                <div class="topic-item-content">
-                  <div class="topic-icon-box">
-                    <img class="topic-img-icon" :src="category.icon" alt="">
+          <nav class="mobile-nav" role="tablist">
+            <div class="sliding-bg" :style="{ transform: `translateX(${activeIndex * 100}%)` }"></div>
+            <button
+                v-for="(tab, index) in learnTabs"
+                :key="tab.id"
+                class="mobile-nav__btn"
+                :class="{ 'mobile-nav__btn--active': activeTabId === tab.id }"
+                role="tab"
+                @click="setTab(tab.id)"
+            >
+              <img :src="tab.icon" alt="" class="tab-icon" />
+              <span class="tab-label">{{ tab.label }}</span>
+            </button>
+          </nav>
+          <Transition name="fade-slide" mode="out-in">
+            <div v-if="activeTabId === 'practice'" key="practice" class="topics-list-container">
+              <template v-for="category in practiceCategories" :key="category.id">
+                <NuxtLink v-if="category.url" :to="category.url" class="topic-list-item">
+                  <div class="topic-item-content">
+                    <div class="topic-icon-box">
+                      <img class="topic-img-icon" :src="category.icon" alt="">
+                    </div>
+                    <span class="topic-label">{{ category.title }}</span>
                   </div>
-                  <span class="topic-label">{{ category.title }}</span>
-                </div>
-                <div class="topic-arrow">
-                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </div>
-              </NuxtLink>
-
-              <button v-else @click="openCategory(category)" class="topic-list-item">
-                <div class="topic-item-content">
-                  <div class="topic-icon-box">
-                    <img class="topic-img-icon" :src="Folder" alt="">
+                  <VArrowNav/>
+                </NuxtLink>
+              </template>
+            </div>
+            <div v-else-if="activeTabId === 'grammar'" key="grammar" class="topics-list-container">
+              <template v-for="category in grammarCategories" :key="category.id">
+                <NuxtLink v-if="category.url" :to="category.url" class="topic-list-item">
+                  <div class="topic-item-content">
+                    <div class="topic-icon-box">
+                      <img class="topic-img-icon" :src="category.icon" alt="">
+                    </div>
+                    <span class="topic-label">{{ category.title }}</span>
                   </div>
-                  <span class="topic-label">{{ category.title }}</span>
-                </div>
-                <div class="topic-arrow">
-                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </div>
-              </button>
-            </template>
-          </div>
+                  <VArrowNav/>
+                </NuxtLink>
+                <button v-else @click="openCategory(category)" class="topic-list-item">
+                  <div class="topic-item-content">
+                    <div class="topic-icon-box">
+                      <img class="topic-img-icon" :src="Folder" alt="">
+                    </div>
+                    <span class="topic-label">{{ category.title }}</span>
+                  </div>
+                  <VArrowNav/>
+                </button>
+              </template>
+            </div>
+          </Transition>
         </div>
         <div v-else-if="isMounted && selectedCategory" key="sub" class="scrollable-view">
           <div class="topics-list-container">
@@ -58,15 +78,11 @@
               <div class="topic-item-content">
                 <span class="topic-label">{{ link.label }}</span>
               </div>
-              <div class="topic-arrow">
-                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </div>
+              <VArrowNav/>
             </NuxtLink>
           </div>
         </div>
-      </transition>
+      </VTransition>
     </div>
   </div>
 </template>
@@ -84,25 +100,50 @@ import Cards from "../assets/images/cards.svg";
 import Puzzle from "../assets/images/puzzle-piece.svg";
 import Exam from "../assets/images/exam-results.svg";
 import LearnIcon from "../assets/images/app-nav-icons/study.svg";
+import VArrowNav from "~/src/components/V-arrowNav.vue";
+import VTransition from "~/src/components/V-transition.vue";
+import BannerIcon from '../assets/images/articleBannerIcon.svg'
+import PracticeIcon from '../assets/images/practiceIcon.svg'
+import GrammarIcon from '../assets/images/GrammarIcon.svg'
+
 const { t } = useI18n()
 const router = useRouter()
 const selectedCategory = ref(null)
 const isMounted = ref(false)
 
-const learnCategories = computed(() => [
+
+const learnTabs = [
+  { id: 'practice', label: t('studyNavAndBanner.practice'), icon: PracticeIcon },
+  { id: 'grammar', label: t('studyNavAndBanner.grammar'), icon: GrammarIcon }
+]
+
+const activeTabId = ref(learnTabs[0].id)
+const activeIndex = computed(() => learnTabs.findIndex(tab => tab.id === activeTabId.value))
+
+
+const bannerTitleComputed = computed(() => {
+  return activeTabId.value === 'grammar' ? t('studyNavAndBanner.bannerGrammar') : t('studyNavAndBanner.bannerPractice')
+})
+
+function setTab(id) {
+  activeTabId.value = id
+}
+
+const practiceCategories = computed(() => [
+  { id: 'words', icon: BannerIcon, url: '/articles', title: t('sub.words') },
   { id: 'audio', icon: Sound, url: '/audio-tasks', title: t('sub.audio') },
   { id: 'description', icon: Photo, url: '/image-description', title: t('sub.describePicture') },
   { id: 'themen', icon: Thematic, url: '/thematic-learning', title: t('sub.themen') },
   { id: 'exams', icon: Exam, url: '/exams', title: t('nav.tests') },
-  { id: 'cards', icon: Cards, url: '/create-cards', title: t('sub.card') },
-  { id: 'idioms', icon: Puzzle, url: '/idioms', title: t('sub.idioms') },
+])
+
+const grammarCategories = computed(() => [
   {
     id: 'articles',
     title: t('sub.articles'),
     items: [
       { id: 'learn-tips', url: '/article-basic', label: t('underSub.prev') },
       { id: 'learn-rules', url: '/article-theory', label: t('underSub.rules') },
-      { id: 'learn-selectedTopics', url: '/articles', label: t('underSub.artRules') }
     ]
   },
   {
@@ -134,6 +175,7 @@ const learnCategories = computed(() => [
       { id: 'comparison', url: '/adjective-comparison', label: t('underSub.comparison') }
     ]
   },
+  { id: 'idioms', icon: Puzzle, url: '/idioms', title: t('sub.idioms') },
 ])
 
 const openCategory = (category) => {
@@ -154,7 +196,9 @@ const handlePopState = () => {
 }
 
 onMounted(() => {
-  isMounted.value = true
+  setTimeout(() => {
+    isMounted.value = true
+  }, 100)
   window.history.pushState({ isLearnRoot: true }, '')
   window.addEventListener('popstate', handlePopState)
 })
@@ -194,11 +238,11 @@ definePageMeta({
 }
 
 .page-title {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 700;
-  color: var(--titleColor);
-  margin: 0 0 0 10px;
-  text-shadow: 0 1px var(--titleColor);
+  color: var(--title);
+  margin: 0 0 0 15px;
+  text-shadow: 0 1px var(--title);
 }
 
 .scrollable-view {
@@ -218,6 +262,63 @@ definePageMeta({
   margin-bottom: 20px;
 }
 
+.mobile-nav {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  background: var(--tabBg, var(--menuItemsBg));
+  border-radius: 40px;
+  padding: 6px;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile, 0 4px 0 var(--tabsSlideBorderColor));
+  margin: 0 0 20px 0;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.sliding-bg {
+  position: absolute;
+  top: 5px;
+  bottom: 6px;
+  left: 6px;
+  width: calc(50% - 6px);
+  background: var(--tabsSlideBg);
+  box-shadow: var(--tabSlideBoxShadow, 0 2px 0 rgba(0,0,0,0.1));
+  border-radius: 30px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.35, 0.64, 1);
+  z-index: 1;
+}
+
+.mobile-nav__btn {
+  border: none;
+  background: none;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tab-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.tab-label {
+  font-size: 16px;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+  color: var(--titleColor);
+  transition: transform 0.2s;
+}
+
 .topics-list-container {
   display: flex;
   flex-direction: column;
@@ -234,7 +335,6 @@ definePageMeta({
   background: var(--menuItemsBg);
   border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
-  transition: transform 0.1s, box-shadow 0.1s;
   text-decoration: none;
   width: 100%;
   box-sizing: border-box;
@@ -247,7 +347,6 @@ button.topic-list-item {
 }
 
 .topic-list-item:active {
-  transform: translateY(4px);
   box-shadow: 0 0px 0 var(--tabsSlideBorderColor);
 }
 
@@ -286,35 +385,6 @@ button.topic-list-item {
   font-weight: 700;
 }
 
-.topic-arrow {
-  background-color: #3b82f6;
-  color: #ffffff;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 0px #2563eb;
-  flex-shrink: 0;
-  margin-left: 10px;
-}
-
-.fade-slide-enter-active,
-.fade-slide-leave-active {
-  transition: opacity 0.4s ease, transform 0.4s ease-out;
-}
-
-.fade-slide-enter-from {
-  opacity: 0;
-  transform: translateY(15px);
-}
-
-.fade-slide-leave-to {
-  opacity: 0;
-  transform: translateY(-15px);
-}
-
 @media (max-width: 400px) {
   .topic-label {
     font-size: 15px;
@@ -322,6 +392,13 @@ button.topic-list-item {
   .topic-icon-box {
     width: 32px;
     height: 32px;
+  }
+  .tab-label {
+    font-size: 14px;
+  }
+  .tab-icon {
+    width: 20px;
+    height: 20px;
   }
 }
 </style>

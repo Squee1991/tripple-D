@@ -4,74 +4,78 @@
       <VBackBtnNav />
       <h1 class="page-title">{{ t('sub.themen')}}</h1>
     </div>
-    <div class="banner">
-      <VBanner
-        text="Изучай немецкий в тематических уровнях на различные темы"
-        :icon="Banner"
-      />
-    </div>
-    <transition name="toast-fade">
-      <div v-if="showChalkMessage" class="toast-message">
-        {{ chalkMessage }}
-      </div>
-    </transition>
-    <div class="themes-scroll">
-      <div class="themes-container">
-        <button
-            v-for="theme in themes"
-            :key="theme.key"
-            class="theme-card"
-            :class="{ 'active': theme.key === selectedTopic }"
-            @click="selectedTopic = theme.key"
-        >
-          <div class="theme-icon-wrapper">
-            <img :src="theme.img" :alt="t(theme.name)" class="theme-icon" />
-          </div>
-          <span class="theme-name">{{ t(theme.name) }}</span>
-        </button>
-      </div>
-    </div>
-    <div class="content-area">
-      <div class="level-tabs-wrapper">
-        <div class="level-tabs">
-          <button
-              v-for="level in jsonData.levels"
-              :key="level.level"
-              class="level-tab"
-              :class="{ 'active': selectedLevel === level.level }"
-              @click="selectLevel(level.level)"
-          >
-            {{ t('chooseTheme.level') }} {{ level.level }}
-          </button>
+    <VTransition>
+      <div v-if="isMouted">
+        <div class="banner">
+          <VBanner
+              text="Изучай немецкий в тематических уровнях на различные темы"
+              :icon="Banner"
+          />
         </div>
-      </div>
-      <div class="modules-grid" v-if="selectedLevelObj">
-        <button
-            v-for="mod in selectedLevelObj.modules"
-            :key="mod.id"
-            class="module-card"
-            :class="{
+        <transition name="toast-fade">
+          <div v-if="showChalkMessage" class="toast-message">
+            {{ chalkMessage }}
+          </div>
+        </transition>
+        <div class="themes-scroll">
+          <div class="themes-container">
+            <button
+                v-for="theme in themes"
+                :key="theme.key"
+                class="theme-card"
+                :class="{ 'active': theme.key === selectedTopic }"
+                @click="selectedTopic = theme.key"
+            >
+              <div class="theme-icon-wrapper">
+                <img :src="theme.img" :alt="t(theme.name)" class="theme-icon" />
+              </div>
+              <span class="theme-name">{{ t(theme.name) }}</span>
+            </button>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="level-tabs-wrapper">
+            <div class="level-tabs">
+              <button
+                  v-for="level in jsonData.levels"
+                  :key="level.level"
+                  class="level-tab"
+                  :class="{ 'active': selectedLevel === level.level }"
+                  @click="selectLevel(level.level)"
+              >
+                {{ t('chooseTheme.level') }} {{ level.level }}
+              </button>
+            </div>
+          </div>
+          <div class="modules-grid" v-if="selectedLevelObj">
+            <button
+                v-for="mod in selectedLevelObj.modules"
+                :key="mod.id"
+                class="module-card"
+                :class="{
               'locked': !isModuleUnlocked(selectedLevelObj.level, mod.id),
               'selected': moduleToStart && mod.id === moduleToStart.id
             }"
-            @click="handleModuleClick(mod)"
-        >
-          <div class="module-title">{{ t('chooseTheme.module') }}</div>
-          <div class="module-number">{{ mod.id }}</div>
-          <div class="module-status-icon" v-if="!isModuleUnlocked(selectedLevelObj.level, mod.id)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--titleColor)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.5;">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-            </svg>
+                @click="handleModuleClick(mod)"
+            >
+              <div class="module-title">{{ t('chooseTheme.module') }}</div>
+              <div class="module-number">{{ mod.id }}</div>
+              <div class="module-status-icon" v-if="!isModuleUnlocked(selectedLevelObj.level, mod.id)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--titleColor)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.5;">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <div class="module-status-icon check-icon" v-else-if="moduleToStart && mod.id === moduleToStart.id">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </button>
           </div>
-          <div class="module-status-icon check-icon" v-else-if="moduleToStart && mod.id === moduleToStart.id">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-          </div>
-        </button>
+        </div>
       </div>
-    </div>
+    </VTransition>
     <transition name="slide-up">
       <div class="bottom-action" v-if="moduleToStart">
         <button class="btn-start" @click="startSelectedModule">
@@ -101,7 +105,8 @@ import { useHead, useSeoMeta } from '#imports'
 import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
 import VBanner from "~/src/components/V-banner.vue";
 import Banner from '../../assets/images/thematicSticker.svg'
-
+import VTransition from "~/src/components/V-transition.vue";
+const isMouted = ref(false)
 const {t} = useI18n()
 
 useSeoMeta({
@@ -209,8 +214,13 @@ const loadThemeData = async () => {
   moduleToStart.value = null
   loading.value = false
 }
+onMounted(() => {
+  setTimeout(() => {
+    isMouted.value = true
+    loadThemeData
+  }, 100)
+})
 
-onMounted(loadThemeData)
 watch(topic, loadThemeData)
 </script>
 
@@ -243,7 +253,8 @@ watch(topic, loadThemeData)
 .page-title {
   font-size: 22px;
   font-weight: 800;
-  color: var(--titleColor);
+  color: var(--title);
+  text-shadow: 0 1px var(--title);;
   margin: 0 0 0 16px;
 }
 
@@ -272,8 +283,8 @@ watch(topic, loadThemeData)
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 86px;
-  height: 90px;
+  width: 110px;
+  height: 110px;
   background: var(--tabBg);
   border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 20px;
@@ -283,13 +294,12 @@ watch(topic, loadThemeData)
 }
 
 .theme-card.active {
-  background: rgba(99, 102, 241, 0.15);
-  border: 2px solid #6366f1;
+  border: 2px solid #5a96b7;
 }
 
 .theme-icon-wrapper {
-  width: 38px;
-  height: 38px;
+  width: 63px;
+  height: 63px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -366,7 +376,7 @@ watch(topic, loadThemeData)
 }
 
 .level-tab.active {
-  background: var(--tabBg);
+  background: var(--tabsSlideBg);
   color: var(--titleColor);
   opacity: 1;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);

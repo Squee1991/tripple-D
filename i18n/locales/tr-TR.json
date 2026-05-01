@@ -9202,6 +9202,7 @@
     "confirm": "Onayla"
   },
   "sub": {
+    "words": "Kelimeler ve tanımlıklar",
     "sinonim": "Kelime Bilgisi",
     "articles": "Artikeller",
     "verbs": "Fiiller",
@@ -9779,5 +9780,15 @@
   "personalAccount": {
     "statsAndAchievements": "İstatistikler ve başarılar",
     "streakTitle": "Tanımlık maratonu serisi"
+  },
+  "studyNavAndBanner": {
+    "practice": "Pratik",
+    "grammar": "Dilbilgisi",
+    "bannerPractice": "Çeşitli pratik görevleri tamamlayarak Almanca seviyeni geliştir",
+    "bannerGrammar": "Kuralları öğren ve çeşitli dilbilgisi konularında Almanca seviyeni ilerlet"
+  },
+  "bannerTitles": {
+    "play": "Almancayı zevkle öğren! Uygun bir mod seç ve oynayarak dilini geliştir",
+    "events": "Sezonluk etkinliklere katıl ve görevleri tamamlayarak benzersiz ödüller kazan"
   }
 }
