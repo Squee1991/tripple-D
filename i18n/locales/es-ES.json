@@ -9809,6 +9809,34 @@
   },
   "bannerTitles": {
     "play": "¡Aprende alemán con gusto! Elige un modo conveniente y mejora tu idioma jugando",
-    "events": "Participa en eventos de temporada y obtén recompensas únicas por completar tareas"
+    "events": "Participa en eventos de temporada y obtén recompensas únicas por completar tareas",
+    "article": "Aprende palabras y artículos por temas en diferentes formatos de entrenamiento",
+    "awards": "Recompensas por los logros obtenidos y las tareas completadas",
+    "thematic": "Mejora tu alemán superando emocionantes niveles temáticos",
+    "audio": "Mejora tu comprensión auditiva del alemán completando tareas de audio",
+    "images": "¡Mejora tu habilidad para describir imágenes! Elige un tema para empezar"
+  },
+  "imageDescription": {
+    "listen": "¡Escucha el diálogo!",
+    "check": "Comprobar",
+    "further": "Siguiente",
+    "finish": "Finalizar",
+    "skip": "Omitir",
+    "total": "Total de tareas:",
+    "perfect": "Perfectamente correcto:",
+    "notPerfect": "Parcialmente correcto:",
+    "mistakes": "Con errores:",
+    "value": "Precisión:",
+    "success": "✅ ¡Tarea completada correctamente!",
+    "isWrong": "❌ ¡Hay respuestas incorrectas!",
+    "isWarning": "⚠️ ¡No se han seleccionado todas las opciones correctas!",
+    "modalTitleWarning": "¡Atención!",
+    "modalTextWarning": "¡El tema no está completamente terminado, el progreso no se guardará!",
+    "leave": "Salir",
+    "continue": "Continuar",
+    "goodWork": "¡Buen trabajo!",
+    "needTraining": "¡Necesitas practicar!",
+    "themeSuccess": "¡Tema completado con éxito!",
+    "themeNotSuccess": "Tema no completado."
   }
 }

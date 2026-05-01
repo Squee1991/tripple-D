@@ -274,10 +274,9 @@ onMounted(async () => {
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 100px;
+  padding-bottom: 90px;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  box-sizing: border-box;
 }
 
 .tab-content::-webkit-scrollbar {

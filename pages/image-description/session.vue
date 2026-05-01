@@ -138,8 +138,6 @@ async function sendMessage(voiceText = null) {
     const task = activeTasks.value[currentTaskIndex.value]
     const reference = task?.descriptions?.[selectedLevel.value] || ''
     let finalImageUrl = task.image
-
-    // Превращаем картинку в Base64 для передачи в облако
     if (finalImageUrl && (!finalImageUrl.startsWith('http') || finalImageUrl.includes('localhost'))) {
       const base64 = await urlToBase64(finalImageUrl)
       if (base64) finalImageUrl = base64

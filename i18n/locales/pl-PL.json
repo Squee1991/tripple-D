@@ -9818,6 +9818,34 @@
   },
   "bannerTitles": {
     "play": "Ucz się niemieckiego z przyjemnością! Wybierz wygodny tryb i podszkol język, grając",
-    "events": "Bierz udział w wydarzeniach sezonowych i zdobywaj unikalne nagrody za wykonywanie zadań"
+    "events": "Bierz udział w wydarzeniach sezonowych i zdobywaj unikalne nagrody za wykonywanie zadań",
+    "article": "Ucz się słówek i rodzajników tematycznie в różnych formatach treningowych",
+    "awards": "Nagrody za zdobyte osiągnięcia i wykonane zadania",
+    "thematic": "Podszkol swój niemiecki, przechodząc przez ciekawe poziomy tematyczne",
+    "audio": "Popraw swoje rozumienie ze słuchu в języku niemieckim, wykonując zadania audio",
+    "images": "Podszkol umiejętność opisywania obrazków! Wybierz temat, aby zacząć"
+  },
+  "imageDescription": {
+    "listen": "Posłuchaj dialogu!",
+    "check": "Sprawdź",
+    "further": "Dalej",
+    "finish": "Zakończ",
+    "skip": "Pomiń",
+    "total": "Wszystkich zadań:",
+    "perfect": "Idealnie poprawnie:",
+    "notPerfect": "Częściowo poprawnie:",
+    "mistakes": "Z błędami:",
+    "value": "Dokładność:",
+    "success": "✅ Zadanie wykonane poprawnie!",
+    "isWrong": "❌ Są błędne odpowiedzi!",
+    "isWarning": "⚠️ Wybrano nie wszystkie poprawne opcje!",
+    "modalTitleWarning": "Uwaga!",
+    "modalTextWarning": "Temat nie został ukończony, postępy nie zostaną zapisane!",
+    "leave": "Wyjdź",
+    "continue": "Kontynuuj",
+    "goodWork": "Dobra robota!",
+    "needTraining": "Musisz poćwiczyć!",
+    "themeSuccess": "Temat pomyślnie ukończony!",
+    "themeNotSuccess": "Temat nieukończony."
   }
 }

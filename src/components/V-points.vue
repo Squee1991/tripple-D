@@ -1,10 +1,7 @@
 <template>
   <div class="points">
     <section id="points" class="points-card" aria-label="member_panel">
-      <VBanner
-          :text="t('accountPanel.title')"
-          :icon="CardIcon"
-      />
+      <div class="points_header-title">{{ t('accountPanel.title') }}</div>
       <div v-if="langStore" class="top-panel-layout">
         <div class="level-display">
           <span class="level-label">{{ t('stepHitLabels.levelTitle')}}:</span>
@@ -104,7 +101,7 @@ onMounted(() => {
 
 <style scoped>
 .top-panel-layout {
-  margin-top: 20px;
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,7 +117,6 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 20px;
 }
 
 .action-menu__item {
@@ -132,12 +128,18 @@ onMounted(() => {
   padding: 6px 14px;
 }
 
+.points_header-title {
+  text-align: center;
+  color: var(--title);
+  font-size: 23px;
+  text-shadow: 0 1px var(--title);
+}
+
 .action-menu__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
-
 }
 
 .action-menu__link:active {
@@ -148,7 +150,7 @@ onMounted(() => {
 .action-menu__left {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 8px;
 }
 
 .action-menu__icon-bg {
@@ -187,7 +189,6 @@ onMounted(() => {
   font-size: 13px;
   font-weight: 800;
   color: #313030;
-
   white-space: nowrap;
   z-index: 2;
 }
@@ -333,12 +334,12 @@ onMounted(() => {
 
 .points-card {
   color: #111;
-  border: 4px solid var(--tabBg);
+  border: 2px solid var(--tabBg);
   box-shadow: var(--boxShadowMobile);
   border-radius: 20px;
-  padding: 18px 15px;
+  padding: 12px 15px;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   position: relative;
   z-index: 1;
 }
@@ -347,7 +348,7 @@ onMounted(() => {
   flex: 1;
   height: 25px;
   background: #e8eae5;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
 }
 
@@ -372,7 +373,6 @@ onMounted(() => {
 .points-card__item + .points-card__item {
   border-top: 2px dashed rgba(0, 0, 0, .15);
 }
-
 
 @media (max-width: 420px) {
   .points-card {

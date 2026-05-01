@@ -1,15 +1,15 @@
 <template>
   <section class="shop">
-    <header class="shop__header">
-      <div class="shop__title-container">
-        <VBanner
-           :text="t('shop.title')"
-           :icon="ShopIcon"
-        />
-      </div>
-<!--      <p class="shop__subtitle">{{ t('shop.subText') }}</p>-->
-    </header>
     <div class="shop__content">
+      <header class="shop__header">
+        <div class="shop__title-container">
+          <VBanner
+              :text="t('shop.title')"
+              :icon="ShopIcon"
+          />
+        </div>
+      </header>
+
       <div class="shop__cards">
         <article
             v-for="card in shopCards"
@@ -66,6 +66,7 @@
         </article>
       </div>
     </div>
+
     <div v-if="showModal" class="modal-overlay" @click.self="closeModal">
       <div class="modal-content" :class="{'modal-content--success': isSuccessState}">
         <div class="modal-header">
@@ -138,6 +139,7 @@ import Sale15 from '../../assets/images/hot-air-ballon15.svg'
 import GraduateHat from '../../assets/images/graduate-hat.svg'
 import HotDeal from '../../assets/images/hot-deal.svg'
 import VBanner from "~/src/components/V-banner.vue";
+
 const {t} = useI18n()
 const questStore = userChainStore()
 const langStore = userlangStore()
@@ -211,7 +213,6 @@ const shopCards = computed(() => {
       price: PRICES.SALE_15,
       requiredHats: DISCOUNT_REQ_HATS[15],
       type: 'permanent'
-
     },
   ]
 
@@ -347,19 +348,22 @@ const confirmPurchase = async () => {
     modalType.value = 'success'
   }
 }
-
 </script>
 
 <style scoped>
-
 .shop {
   font-family: "Nunito", sans-serif;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 100px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .shop__content {
-  overflow-y: auto;
-  max-height: calc(100vh - 70px);
-  padding-bottom: 180px;
+  padding-bottom: 10px;
 }
 
 .shop__content::-webkit-scrollbar {
@@ -380,6 +384,14 @@ const confirmPurchase = async () => {
   width: 100%;
   height: 50px;
   background: var(--overlayAfter);
+}
+
+.shop__header {
+  margin-bottom: 15px;
+}
+
+.shop__title-container {
+  font-size: 40px;
 }
 
 .shop__cards {
@@ -403,7 +415,7 @@ const confirmPurchase = async () => {
 
 .card__deal-icon {
   width: 67px;
- position: absolute;
+  position: absolute;
   z-index: 11;
   right: -15px;
   top: -5px;
@@ -420,10 +432,6 @@ const confirmPurchase = async () => {
 
 .shop-card--owned {
   border-color: #4caf50;
-}
-
-.shop__title-container {
-  font-size: 40px;
 }
 
 .shop-card__preview {
@@ -489,6 +497,7 @@ const confirmPurchase = async () => {
 .shop-card__requirements {
   padding-top: 10px;
 }
+
 .shop-req-label {
   display: block;
   color: var(--cardShopDescColor);

@@ -9789,6 +9789,34 @@
   },
   "bannerTitles": {
     "play": "Almancayı zevkle öğren! Uygun bir mod seç ve oynayarak dilini geliştir",
-    "events": "Sezonluk etkinliklere katıl ve görevleri tamamlayarak benzersiz ödüller kazan"
+    "events": "Sezonluk etkinliklere katıl ve görevleri tamamlayarak benzersiz ödüller kazan",
+    "article": "Farklı antrenman formatlarında konularına göre kelimeleri ve tanımlıkları öğrenin",
+    "awards": "Kazanılan başarılar ve tamamlanan görevler için ödüller",
+    "thematic": "Eğlenceli tematik seviyeleri geçerek Almancanı geliştir",
+    "audio": "Sesli görevleri tamamlayarak Almanca dinleme becerini geliştir",
+    "images": "Resim betimleme becerini geliştir! Başlamak için bir tema seç"
+  },
+  "imageDescription": {
+    "listen": "Diyaloğu dinleyin!",
+    "check": "Kontrol et",
+    "further": "İleri",
+    "finish": "Bitir",
+    "skip": "Geç",
+    "total": "Toplam görev:",
+    "perfect": "Kusursuz doğru:",
+    "notPerfect": "Kısmen doğru:",
+    "mistakes": "Hatalı:",
+    "value": "Doğruluk:",
+    "success": "✅ Görev doğru bir şekilde tamamlandı!",
+    "isWrong": "❌ Yanlış cevaplar var!",
+    "isWarning": "⚠️ Tüm doğru seçenekler seçilmedi!",
+    "modalTitleWarning": "Dikkat!",
+    "modalTextWarning": "Konu tamamen bitirilmedi, ilerleme kaydedilmeyecek!",
+    "leave": "Çık",
+    "continue": "Devam et",
+    "goodWork": "Harika iş!",
+    "needTraining": "Pratik yapman gerek!",
+    "themeSuccess": "Konu başarıyla tamamlandı!",
+    "themeNotSuccess": "Konu tamamlanmadı."
   }
 }

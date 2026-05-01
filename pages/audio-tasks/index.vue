@@ -118,7 +118,7 @@ onUnmounted(() => {
             <template v-if="screen === 'levels'">
               <div class="banner-wrapper">
                 <VBanner
-                    text="Тренируй понимание немецкого на слух в аудио заданиях!"
+                    :text="t('bannerTitles.audio')"
                     :icon="HeadPhones"
                 />
               </div>
@@ -146,7 +146,7 @@ onUnmounted(() => {
             <template v-else>
               <div class="banner-wrapper">
                 <VBanner
-                    text="Тренируй понимание немецкого на слух в аудио заданиях!"
+                    :text="t('bannerTitles.audio')"
                     :icon="HeadPhones"
                 />
               </div>

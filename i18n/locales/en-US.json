@@ -9815,6 +9815,34 @@
   },
   "bannerTitles": {
     "play": "Learn German with pleasure! Choose a convenient mode and level up your language by playing",
-    "events": "Participate in seasonal events and get unique rewards for completing tasks"
+    "events": "Participate in seasonal events and get unique rewards for completing tasks",
+    "article": "Learn words and articles by topics in various training formats",
+    "awards": "Rewards for earned achievements and completed tasks",
+    "thematic": "Level up your German by completing exciting thematic levels",
+    "audio": "Improve your German listening comprehension by completing audio tasks",
+    "images": "Level up your image description skills! Choose a topic to start"
+  },
+  "imageDescription": {
+    "listen": "Listen to the dialogue!",
+    "check": "Check",
+    "further": "Next",
+    "finish": "Finish",
+    "skip": "Skip",
+    "total": "Total tasks:",
+    "perfect": "Perfectly correct:",
+    "notPerfect": "Partially correct:",
+    "mistakes": "With mistakes:",
+    "value": "Accuracy:",
+    "success": "✅ Task completed correctly!",
+    "isWrong": "❌ There are incorrect answers!",
+    "isWarning": "⚠️ Not all correct options are selected!",
+    "modalTitleWarning": "Attention!",
+    "modalTextWarning": "The topic is not fully completed, progress will not be saved!",
+    "leave": "Leave",
+    "continue": "Continue",
+    "goodWork": "Great job!",
+    "needTraining": "Need to practice!",
+    "themeSuccess": "Topic completed successfully!",
+    "themeNotSuccess": "Topic not completed."
   }
 }

@@ -105,7 +105,6 @@ onMounted(() => {
 
 <template>
   <div class="exams-compact">
-
     <ShareExamModal
         v-if="showShareModal"
         :friends="friendsStore.friends"
@@ -119,11 +118,11 @@ onMounted(() => {
         <div class="modal-title">Удалить результат?</div>
         <p class="modal-text">Вы уверены, что хотите удалить этот экзамен? Это действие нельзя отменить.</p>
         <div class="modal-actions">
-          <button class="btn-app btn-danger" @click="confirmDelete" type="button">
-            Удалить
-          </button>
           <button class="btn-app btn-cancel" @click="cancelDelete" type="button">
             Отмена
+          </button>
+          <button class="btn-app btn-danger" @click="confirmDelete" type="button">
+            Удалить
           </button>
         </div>
       </div>
@@ -139,10 +138,8 @@ onMounted(() => {
         <img class="folder__icon" src="../../assets/images/folders.svg" alt="">
         <div class="ec__text-empty">{{ t('examResult.empty') }}</div>
       </div>
-
       <ul class="ec__list">
         <li v-for="a in examStore.archiveAttempts" :key="a.id" class="ec__item">
-
           <div class="ec__left__wrapper">
             <div class="ec__main">
               <div class="ec__line">
@@ -159,7 +156,6 @@ onMounted(() => {
               </div>
             </div>
           </div>
-
           <div class="ec__actions">
             <button class="app-btn-view" @click="openAttempt(a.id)">
               {{ t('examResult.showResultButton') }}
@@ -168,7 +164,6 @@ onMounted(() => {
               <img class="app-icon-trash" :src="Trash" alt="Trash">
             </button>
           </div>
-
         </li>
       </ul>
     </div>
@@ -352,7 +347,6 @@ onMounted(() => {
   filter: brightness(0) invert(1);
 }
 
-/* Модалка */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -365,21 +359,21 @@ onMounted(() => {
 }
 
 .modal-card {
-  background: #252538;
+  background: var(--menuItemsBg);
   border-radius: 24px;
   padding: 24px;
   width: 90%;
   max-width: 360px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 0 rgba(224, 216, 216, 0.5);
   animation: scaleIn 0.2s ease-out;
 }
 
 .modal-title {
-  font-size: 1.3rem;
+  font-size: 23px;
   font-weight: 800;
-  color: #fff;
-  margin-bottom: 12px;
+  color: var(--title);
+  margin: 15px 0;
 }
 
 .modal-text {
@@ -398,7 +392,7 @@ onMounted(() => {
 .btn-app {
   width: 100%;
   padding: 14px;
-  border-radius: 16px;
+  border-radius: 24px;
   font-family: "Nunito", sans-serif;
   font-weight: 800;
   font-size: 1rem;
@@ -411,13 +405,13 @@ onMounted(() => {
 }
 
 .btn-danger {
-  background: #ff4d4f;
-  color: #fff;
+  background: none;
+  color: var(--title);
 }
 
 .btn-cancel {
-  background: transparent;
-  color: #a0a0b0;
+  background: #2b6be2;
+  color: #fff;
 }
 
 @keyframes scaleIn {

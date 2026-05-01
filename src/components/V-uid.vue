@@ -24,11 +24,11 @@
         </button>
       </nav>
       <div class="mobile-panel" role="tabpanel">
-        <Transition name="fade-slide" mode="out-in">
+        <VTransition>
           <div class="mobile-content" :key="currentTab.id">
             <component :is="currentComponent"/>
           </div>
-        </Transition>
+        </VTransition>
       </div>
     </template>
   </div>
@@ -42,6 +42,7 @@ import VLands from "~/src/components/V-lands.vue";
 import Location from '../../assets/images/location.svg'
 import Daily from '../../assets/images/daily.svg'
 import Card from '../../assets/images/card.svg'
+import VTransition from "~/src/components/V-transition.vue";
 
 const {t} = useI18n();
 const tabs = [
@@ -210,7 +211,7 @@ onBeforeUnmount(() => {
     width: 100%;
     overflow-y: auto;
     padding: 8px;
-    padding-bottom: 105px;
+    padding-bottom: 120px;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -224,21 +225,4 @@ onBeforeUnmount(() => {
   }
 }
 
-.fade-slide-enter-from {
-  opacity: 0;
-  transform: translateY(6px);
-}
-
-.fade-slide-enter-active {
-  transition: opacity 180ms ease, transform 180ms ease;
-}
-
-.fade-slide-leave-to {
-  opacity: 0;
-  transform: translateY(-6px);
-}
-
-.fade-slide-leave-active {
-  transition: opacity 140ms ease, transform 140ms ease;
-}
 </style>

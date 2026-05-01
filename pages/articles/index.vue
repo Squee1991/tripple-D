@@ -22,7 +22,7 @@
             <div class="theme__grid-container">
               <div class="banner-wrapper">
                 <VBanner
-                    text="Изучение слов и Артиклей по различным темам и способам"
+                    :text="t('bannerTitles.article')"
                     :icon="BannerIcon"
                 />
               </div>
