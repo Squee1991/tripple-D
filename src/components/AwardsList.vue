@@ -9,7 +9,7 @@
     />
     <div class="awards__header">
       <VBanner
-       :text="t('Награды за полученные достижения и выполнение заданий')"
+       :text="t('bannerTitles.awards')"
        :icon="Achicon"
       />
 <!--      <button @click="questionModal" class="awards__info-btn">-->

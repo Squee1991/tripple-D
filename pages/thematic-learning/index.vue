@@ -8,7 +8,7 @@
       <div v-if="isMouted">
         <div class="banner">
           <VBanner
-              text="Изучай немецкий в тематических уровнях на различные темы"
+              :text="t('bannerTitles.thematic')"
               :icon="Banner"
           />
         </div>

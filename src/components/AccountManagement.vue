@@ -139,7 +139,7 @@ const openCancelModal = () => {
   color: #db2777;
   border: none;
   border-radius: 24px;
-  padding: 15px 20px;
+  padding: 14px 20px;
   font-family: inherit;
   font-weight: 900;
   font-size: 17px;

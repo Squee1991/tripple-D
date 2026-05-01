@@ -9792,6 +9792,34 @@
   },
   "bannerTitles": {
     "play": "Nemis tilini zavq bilan o'rganing! Qulay rejimni tanlang va o'ynab tilingizni rivojlantiring",
-    "events": "Mavsumiy tadbirlarda ishtirok eting va topshiriqlarni bajarganingiz uchun noyob mukofotlarga ega bo'ling"
+    "events": "Mavsumiy tadbirlarda ishtirok eting va topshiriqlarni bajarganingiz uchun noyob mukofotlarga ega bo'ling",
+    "article": "Turli xil mashg'ulot formatlarida mavzular bo'yicha so'zlar va artikllarni o'rganing",
+    "awards": "Eritilgan yutuqlar va bajarilgan topshiriqlar uchun mukofotlar",
+    "thematic": "Qiziqarli mavzu darajalaridan o'tib, nemis tilingizni rivojlantiring",
+    "audio": "Audio topshiriqlarni bajarib, nemis tilini eshitib tushunishni rivojlantiring",
+    "images": "Rasmlarni tasvirlash qobiliyatingizni rivojlantiring! Boshlash uchun mavzu tanlang"
+  },
+  "imageDescription": {
+    "listen": "Dialogni tinglang!",
+    "check": "Tekshirish",
+    "further": "Keyingisi",
+    "finish": "Tugatish",
+    "skip": "O'tkazib yuborish",
+    "total": "Jami topshiriqlar:",
+    "perfect": "Mukammal to'g'ri:",
+    "notPerfect": "Qisman to'g'ri:",
+    "mistakes": "Xatolar bilan:",
+    "value": "Aniqlik:",
+    "success": "✅ Topshiriq to'g'ri bajarildi!",
+    "isWrong": "❌ Noto'g'ri javoblar bor!",
+    "isWarning": "⚠️ Barcha to'g'ri variantlar tanlanmagan!",
+    "modalTitleWarning": "Diqqat!",
+    "modalTextWarning": "Mavzu to'liq tugatilmagan, progress saqlanmaydi!",
+    "leave": "Chiqish",
+    "continue": "Davom etish",
+    "goodWork": "Ajoyib ish!",
+    "needTraining": "Mashq qilish kerak!",
+    "themeSuccess": "Mavzu muvaffaqiyatli yakunlandi!",
+    "themeNotSuccess": "Mavzu yakunlanmadi."
   }
 }

@@ -9804,6 +9804,34 @@
   },
   "bannerTitles": {
     "play": "Învață germana cu plăcere! Alege un mod convenabil și îmbunătățește-ți limba jucându-te",
-    "events": "Participă la evenimentele sezoniere și obține recompense unice pentru finalizarea sarcinilor"
+    "events": "Participă la evenimentele sezoniere și obține recompense unice pentru finalizarea sarcinilor",
+    "article": "Învață cuvinte și articole pe teme în diferite formate de antrenament",
+    "awards": "Recompense pentru realizările obținute și sarcinile îndeplinite",
+    "thematic": "Îmbunătățește-ți germana parcurgând niveluri tematice captivante",
+    "audio": "Îmbunătățește-ți înțelegerea limbii germane vorbite prin exerciții audio",
+    "images": "Îmbunătățește-ți abilitatea de a descrie imagini! Alege o temă pentru a începe"
+  },
+  "imageDescription": {
+    "listen": "Ascultă dialogul!",
+    "check": "Verifică",
+    "further": "Mai departe",
+    "finish": "Finalizare",
+    "skip": "Omite",
+    "total": "Total sarcini:",
+    "perfect": "Perfect corect:",
+    "notPerfect": "Parțial corect:",
+    "mistakes": "Cu greșeli:",
+    "value": "Precizie:",
+    "success": "✅ Sarcina a fost îndeplinită corect!",
+    "isWrong": "❌ Există răspunsuri incorecte!",
+    "isWarning": "⚠️ Nu au fost selectate toate variantele corecte!",
+    "modalTitleWarning": "Atenție!",
+    "modalTextWarning": "Tema nu este parcursă complet, progresul nu va fi salvat!",
+    "leave": "Ieșire",
+    "continue": "Continuă",
+    "goodWork": "Treabă excelentă!",
+    "needTraining": "Trebuie să exersezi!",
+    "themeSuccess": "Temă finalizată cu succes!",
+    "themeNotSuccess": "Tema nu a fost finalizată."
   }
 }

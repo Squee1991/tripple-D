@@ -35,7 +35,7 @@
                     :fileName="currentTask.id + '_main'"
                     class="quest-card-mega-play"
                 />
-                <p class="quest-card-instruction">Прослушайте диалог!</p>
+                <p class="quest-card-instruction">{{ t('imageDescription.listen')}}</p>
               </div>
               <transition name="quiz-expand">
                 <div v-if="isTaskChecked" class="chat-flow">
@@ -70,14 +70,17 @@
               <p class="quest-feedback-text">{{ feedback.text }}</p>
             </div>
             <footer class="quest-card-footer">
-              <button v-if="!isTaskChecked" @click="checkResult" :disabled="!hasUserSelected"
-                      class="quiz-btn quiz-btn-primary">ПРОВЕРИТЬ
+              <button v-if="!isTaskChecked"
+                      @click="checkResult"
+                      :disabled="!hasUserSelected"
+                      class="quiz-btn quiz-btn-primary"
+              >{{ t('imageDescription.check')}}
               </button>
               <div v-else class="quest-card-actions">
-                <button v-if="!isLastTask" @click="goToNextTask" class="quiz-btn quiz-btn-next">ДАЛЬШЕ</button>
-                <button v-else @click="finishAndSave" class="quiz-btn quiz-btn-finish">ФИНИШ 🏆</button>
+                <button v-if="!isLastTask" @click="goToNextTask" class="quiz-btn quiz-btn-next">{{ t('imageDescription.further')}}</button>
+                <button v-else @click="finishAndSave" class="quiz-btn quiz-btn-finish">{{ t('imageDescription.finish')}}</button>
               </div>
-              <button v-if="!isTaskChecked && canSkip" @click="skipTask" class="quiz-btn quiz-btn-skip">ПРОПУСТИТЬ
+              <button v-if="!isTaskChecked && canSkip" @click="skipTask" class="quiz-btn quiz-btn-skip">{{ t('imageDescription.skip')}}
               </button>
             </footer>
           </article>
@@ -89,19 +92,16 @@
           <p :class="['modal-text', modalData.textClass]">{{ modalData.text }}</p>
           <div v-if="activeModal === 'finish'" class="stats-grid">
             <div v-for="(val, key) in statsMap" :key="key" :class="['stat-item', 'stat-' + key]">
-              <span v-if="key === 'total'">Всего заданий:</span>
-              <span v-else-if="key === 'correct'">Идеально верно:</span>
-              <span v-else-if="key === 'partial'">Частично верно:</span>
-              <span v-else-if="key === 'wrong'">С ошибками:</span>
-              <span v-else-if="key === 'accuracy'">Точность:</span>
+              <span v-if="key === 'total'">{{ t('imageDescription.total')}}</span>
+              <span v-else-if="key === 'correct'">{{ t('imageDescription.perfect')}}</span>
+              <span v-else-if="key === 'partial'">{{ t('imageDescription.notPerfect')}}</span>
+              <span v-else-if="key === 'wrong'">{{ t('imageDescription.mistakes')}}</span>
+              <span v-else-if="key === 'accuracy'">{{ t('imageDescription.value')}}</span>
               <b>{{ key === 'accuracy' ? val + '%' : val }}</b>
             </div>
           </div>
           <div class="modal-actions">
-            <button @click="modalData.onConfirm" class="modal-btn modal-btn-confirm">{{
-                modalData.confirmLabel
-              }}
-            </button>
+            <button @click="modalData.onConfirm" class="modal-btn modal-btn-confirm">{{modalData.confirmLabel}}</button>
             <button @click="modalData.onCancel" class="modal-btn modal-btn-cancel">{{ modalData.cancelLabel }}</button>
           </div>
         </div>
@@ -147,9 +147,9 @@ const canSkip = computed(() => userProgress.value[currentTopic.value?.id]?.[curr
 const feedback = computed(() => {
   const res = taskResults.value[currentTask.value?.id]
   if (!res?.checked) return null
-  if (res.status === 'success') return {class: 'is-success', text: '✅ Задание выполнено верно!'}
-  if (res.wrongCount > 0 || res.correctCount === 0) return {class: 'is-wrong', text: '❌ Есть неверные ответы!'}
-  return {class: 'is-warning', text: '⚠️ Выбраны не все верные варианты!'}
+  if (res.status === 'success') return {class: 'is-success', text: t('imageDescription.success')}
+  if (res.wrongCount > 0 || res.correctCount === 0) return {class: 'is-wrong', text: t('imageDescription.isWrong')}
+  return {class: 'is-warning', text: t('imageDescription.isWarning')}
 })
 
 const statsMap = computed(() => {
@@ -166,10 +166,10 @@ const statsMap = computed(() => {
 
 const modalData = computed(() => {
   if (activeModal.value === 'exit') return {
-    title: 'Внимание!',
-    text: 'Тема не пройдена полностью, прогресс не будет сохранен.',
-    confirmLabel: 'Выйти',
-    cancelLabel: 'Продолжить',
+    title: t('imageDescription.modalTitleWarning'),
+    text: t('imageDescription.modalTextWarning'),
+    confirmLabel: t('imageDescription.leave'),
+    cancelLabel: t('imageDescription.continue'),
     onConfirm: () => {
       stopAllAudio();
       router.push('/audio-tasks')
@@ -177,8 +177,8 @@ const modalData = computed(() => {
     onCancel: () => activeModal.value = null
   }
   return {
-    title: sessionStats.value.passed ? 'Отличная работа! 🏆' : 'Нужно потренироваться! 🏋️',
-    text: sessionStats.value.passed ? 'Тема пройдена успешно!' : 'Тема не пройдена.',
+    title: sessionStats.value.passed ? t('imageDescription.goodWork') : t('imageDescription.needTraining'),
+    text: sessionStats.value.passed ? t('imageDescription.themeSuccess') : t('imageDescription.themeNotSuccess'),
     textClass: sessionStats.value.passed ? 'success-text' : 'fail-text',
     confirmLabel: 'Повторить',
     cancelLabel: 'Назад',
@@ -568,7 +568,6 @@ watch(currentIndex, stopAllAudio)
   margin-bottom: 8px;
   padding: 6px;
   border-radius: 16px;
-  border: 3px dashed #1e272e;
   background: #ffffff;
 }
 

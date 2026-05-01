@@ -9797,6 +9797,34 @@
   },
   "bannerTitles": {
     "play": "Apprends l'allemand avec plaisir ! Choisis un mode pratique et améliore ta langue en jouant",
-    "events": "Participe aux événements saisonniers et obtiens des récompenses uniques en accomplissant des tâches"
+    "events": "Participe aux événements saisonniers et obtiens des récompenses uniques en accomplissant des tâches",
+    "article": "Apprenez les mots et les articles par thèmes dans différents formats d'entraînement",
+    "awards": "Récompenses pour les succès obtenus et les tâches accomplies",
+    "thematic": "Améliorez votre allemand en parcourant des niveaux thématiques passionnants",
+    "audio": "Améliorez votre compréhension orale de l'allemand en effectuant des exercices audio",
+    "images": "Améliorez votre capacité à décrire des images ! Choisissez un thème pour commencer"
+  },
+  "imageDescription": {
+    "listen": "Écoutez le dialogue !",
+    "check": "Vérifier",
+    "further": "Suivant",
+    "finish": "Terminer",
+    "skip": "Passer",
+    "total": "Total des tâches :",
+    "perfect": "Parfaitement exact :",
+    "notPerfect": "Partiellement exact :",
+    "mistakes": "Avec des erreurs :",
+    "value": "Précision :",
+    "success": "✅ Tâche accomplie correctement !",
+    "isWrong": "❌ Il y a des réponses fausses !",
+    "isWarning": "⚠️ Toutes les bonnes options ne sont pas sélectionnées !",
+    "modalTitleWarning": "Attention !",
+    "modalTextWarning": "Le thème n'est pas entièrement terminé, la progression ne sera pas sauvegardée !",
+    "leave": "Quitter",
+    "continue": "Continuer",
+    "goodWork": "Excellent travail !",
+    "needTraining": "Il faut s'entraîner !",
+    "themeSuccess": "Thème terminé avec succès !",
+    "themeNotSuccess": "Thème non terminé."
   }
 }
