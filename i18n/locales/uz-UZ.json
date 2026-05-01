@@ -9204,6 +9204,7 @@
     "confirm": "Parolni takrorlang"
   },
   "sub": {
+    "words": "So'zlar va artikllar",
     "sinonim": "Leksika",
     "articles": "Artikllar",
     "verbs": "Fe’llar",
@@ -9782,5 +9783,15 @@
   "personalAccount": {
     "statsAndAchievements": "Statistika va yutuqlar",
     "streakTitle": "Artikllar marafoni seriyasi"
+  },
+  "studyNavAndBanner": {
+    "practice": "Amaliyot",
+    "grammar": "Grammatika",
+    "bannerPractice": "Turli xil amaliy topshiriqlarni bajarib, nemis tili darajangizni oshiring",
+    "bannerGrammar": "Qoidalarni o'rganing va turli grammatik mavzular bo'yicha nemis tili darajangizni oshiring"
+  },
+  "bannerTitles": {
+    "play": "Nemis tilini zavq bilan o'rganing! Qulay rejimni tanlang va o'ynab tilingizni rivojlantiring",
+    "events": "Mavsumiy tadbirlarda ishtirok eting va topshiriqlarni bajarganingiz uchun noyob mukofotlarga ega bo'ling"
   }
 }

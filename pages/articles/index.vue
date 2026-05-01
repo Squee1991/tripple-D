@@ -42,14 +42,8 @@
                       </div>
                       <span class="topic-label">{{ t(nameMap[key]) }}</span>
                     </div>
-                    <div class="topic-arrow">
-                      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none"
-                           stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                      </svg>
-                    </div>
+                    <VArrowNav/>
                   </div>
-
                   <div class="topic-progress-wrapper">
                     <div class="progress-bar-container">
                       <div
@@ -121,6 +115,7 @@ import NotFound from '../../assets/animation/notFound.json'
 import VLoginPreloader from "../../src/components/V-loginPreloader.vue";
 import VBanner from "~/src/components/V-banner.vue";
 import BannerIcon from '../../assets/images/articleBannerIcon.svg'
+import VArrowNav from "~/src/components/V-arrowNav.vue";
 
 const iconMap = {
   Furniture: 'chair.svg',
@@ -455,19 +450,6 @@ onMounted(() => {
   font-size: 17px;
   font-weight: 800;
   font-family: "Nunito", sans-serif;
-}
-
-.topic-arrow {
-  background-color: #3b82f6;
-  color: #ffffff;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 0px #2563eb;
-  flex-shrink: 0;
 }
 
 .topic-progress-wrapper {

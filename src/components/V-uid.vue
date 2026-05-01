@@ -210,7 +210,7 @@ onBeforeUnmount(() => {
     width: 100%;
     overflow-y: auto;
     padding: 8px;
-    padding-bottom: 135px;
+    padding-bottom: 105px;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }

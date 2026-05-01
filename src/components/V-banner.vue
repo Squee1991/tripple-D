@@ -41,7 +41,6 @@ const bannerStyle = computed(() => {
   box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3),
   inset 0 -2px 4px rgba(0, 0, 0, 0.1),
   0 6px 0 rgb(0, 160, 220);
-
   margin-bottom: 20px;
   transition: all 0.2s ease;
   cursor: pointer;
@@ -60,7 +59,7 @@ const bannerStyle = computed(() => {
 }
 
 .v-banner__default-text {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 800;
   line-height: 1.2;
 }

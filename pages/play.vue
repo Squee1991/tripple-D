@@ -5,11 +5,11 @@
         <VBackBtnNav/>
         <h1 class="page-title">{{ t('nav.gameMode') }}</h1>
       </div>
-      <transition name="menu-appear">
+      <VTransition>
         <div class="scrollable-view" v-if="isMounted">
           <div class="banner-wrapper">
             <VBanner
-                text="Изучай немецкий язык играя! Выбирай любой режим."
+                :text="t('bannerTitles.play')"
                 :icon="Game"
             />
           </div>
@@ -26,16 +26,12 @@
                   </div>
                   <div class="topic-label">{{ game.title }}</div>
                 </div>
-                <div class="topic-arrow">
-                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </div>
+                <VArrowNav/>
               </NuxtLink>
             </template>
           </div>
         </div>
-      </transition>
+      </VTransition>
     </div>
   </div>
 </template>
@@ -50,6 +46,8 @@ import GuessWords from '../assets/images/guessWord.svg'
 import Marathon from '../assets/images/dailyIcons/timer.svg'
 import Galaxy from '../assets/images/Galaxy.svg'
 import Game from '../assets/images/app-nav-icons/game.svg'
+import VArrowNav from "~/src/components/V-arrowNav.vue";
+import VTransition from "~/src/components/V-transition.vue";
 const isMounted = ref(false)
 
 definePageMeta({
@@ -67,8 +65,11 @@ const gameModes = computed(() => [
 ])
 
 onMounted(() => {
-  isMounted.value = true
+  setTimeout(() => {
+    isMounted.value = true
+  }, 100)
 })
+
 </script>
 
 <style scoped>
@@ -102,12 +103,12 @@ onMounted(() => {
 }
 
 .page-title {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 800;
-  color: var(--titleColor);
+  color: var(--title);
   letter-spacing: 1px;
-  margin: 0 0 0 10px;
-  text-shadow: 0 1px var(--titleColor);
+  margin: 0 0 0 15px;
+  text-shadow: 0 1px var(--title);
 }
 
 .scrollable-view {
@@ -185,30 +186,6 @@ onMounted(() => {
   line-height: 1.2;
   margin: 0;
   text-align: left;
-}
-
-.topic-arrow {
-  background-color: #3b82f6;
-  color: #ffffff;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 0px #2563eb;
-  flex-shrink: 0;
-  margin-left: 10px;
-}
-
-
-.menu-appear-enter-active {
-  transition: opacity 0.4s ease, transform 0.4s ease-out;
-}
-
-.menu-appear-enter-from {
-  opacity: 0;
-  transform: translateY(20px);
 }
 
 @media (max-width: 400px) {

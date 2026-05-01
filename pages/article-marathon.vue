@@ -4,53 +4,55 @@
       <VBackBtn/>
       <h1 class="header__title">{{ t('ranked.marathonTab')}}</h1>
     </div>
-    <div class="prepare-container">
-      <div class="banner">
-        <VBanner
-            :text="t('marathonPrepare.subtitle')"
-            :icon="DailyIcon"
-        />
-      </div>
-      <div class="panel__wrapper">
-        <div v-if="authStore.uid" class="user-greeting">
-          <p class="record">
-            {{ t('marathonPrepare.streak') }}
-            <span class="record__value">{{ currentRecord }}</span>
-          </p>
+    <Transition>
+      <div v-if="isMounted" class="prepare-container">
+        <div class="banner">
+          <VBanner
+              :text="t('marathonPrepare.subtitle')"
+              :icon="DailyIcon"
+          />
         </div>
-        <div v-else class="guest-greeting">
-          <p>{{ t('marathonPrepare.notAuth') }}</p>
-        </div>
-        <div v-if="gameStore.isLoaded" class="settings-block">
-          <h2>{{ t('marathonPrepare.chooseDifficulty') }}</h2>
-          <div class="difficulty-options">
-            <button
-                v-for="opt in difficultyBase"
-                :key="opt.value"
-                @click="selectedDifficulty = opt.value"
-                class="difficulty-btn"
-                :class="[{'active': selectedDifficulty === opt.value}, opt.base]"
-            >
-              <div class="button-content">
-                <span class="btn-title">{{ t(opt.titleKey) }}</span>
-                <span class="btn-desc">{{ t(opt.descKey) }}</span>
-              </div>
-              <div class="difficulty-bars">
-                <div class="bar bar-1" :class="{ 'bar-active': opt.value >= 1 }"></div>
-                <div class="bar bar-2" :class="{ 'bar-active': opt.value >= 2 }"></div>
-                <div class="bar bar-3" :class="{ 'bar-active': opt.value >= 3 }"></div>
-              </div>
-            </button>
+        <div class="panel__wrapper">
+          <div v-if="authStore.uid" class="user-greeting">
+            <p class="record">
+              {{ t('marathonPrepare.streak') }}
+              <span class="record__value">{{ currentRecord }}</span>
+            </p>
+          </div>
+          <div v-else class="guest-greeting">
+            <p>{{ t('marathonPrepare.notAuth') }}</p>
+          </div>
+          <div v-if="gameStore.isLoaded" class="settings-block">
+            <h2>{{ t('marathonPrepare.chooseDifficulty') }}</h2>
+            <div class="difficulty-options">
+              <button
+                  v-for="opt in difficultyBase"
+                  :key="opt.value"
+                  @click="selectedDifficulty = opt.value"
+                  class="difficulty-btn"
+                  :class="[{'active': selectedDifficulty === opt.value}, opt.base]"
+              >
+                <div class="button-content">
+                  <span class="btn-title">{{ t(opt.titleKey) }}</span>
+                  <span class="btn-desc">{{ t(opt.descKey) }}</span>
+                </div>
+                <div class="difficulty-bars">
+                  <div class="bar bar-1" :class="{ 'bar-active': opt.value >= 1 }"></div>
+                  <div class="bar bar-2" :class="{ 'bar-active': opt.value >= 2 }"></div>
+                  <div class="bar bar-3" :class="{ 'bar-active': opt.value >= 3 }"></div>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div v-else class="loading">
+            <div class="bouncy-loader">
+              <span></span><span></span><span></span>
+            </div>
+            <p>{{ t('marathonPrepare.loading') }}</p>
           </div>
         </div>
-        <div v-else class="loading">
-          <div class="bouncy-loader">
-            <span></span><span></span><span></span>
-          </div>
-          <p>{{ t('marathonPrepare.loading') }}</p>
-        </div>
       </div>
-    </div>
+    </Transition>
     <div class="bottom-action">
       <button
           class="start-button"
@@ -82,7 +84,7 @@ const gameStore = useGameStore()
 const authStore = userAuthStore()
 const router = useRouter()
 const selectedDifficulty = ref(1)
-
+const isMounted = ref(false)
 const currentRecord = computed(() => {
   if (gameStore.personalBests) {
     return gameStore.personalBests[selectedDifficulty.value] || 0
@@ -91,6 +93,9 @@ const currentRecord = computed(() => {
 })
 
 onMounted(() => {
+  setTimeout(()=>{
+    isMounted.value = true
+  }, 100)
   if (!gameStore.loadWords && typeof gameStore.loadWords !== 'function') return
   gameStore.loadWords()
   gameStore.fetchRecord()
@@ -350,7 +355,6 @@ const difficultyBase = ref([
   height: 16px;
   background: #6358ac;
   border-radius: 50%;
-  animation: bounce 0.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95);
 }
 
 .bouncy-loader span:nth-child(2) {
@@ -361,14 +365,7 @@ const difficultyBase = ref([
   animation-delay: 0.2s;
 }
 
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-15px);
-  }
-}
+
 
 
 .bottom-action {

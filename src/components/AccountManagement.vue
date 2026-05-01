@@ -74,14 +74,14 @@ const openCancelModal = () => {
 
 <style scoped>
 .account-tab-body {
-  padding: 10px 4px;
+  padding: 15px 0;
 }
 
 .premium-banner {
   margin-top: 5px;
   background: linear-gradient(135deg, #8b5cf6, #ec4899);
-  border-radius: 20px;
-  padding: 20px;
+  border-radius: 24px;
+  padding: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -9222,6 +9222,7 @@
     "confirm": "Repetir"
   },
   "sub": {
+    "words": "Palabras y artículos",
     "sinonim": "Léxico",
     "articles": "Artículos",
     "verbs": "Verbos",
@@ -9799,5 +9800,15 @@
   "personalAccount": {
     "statsAndAchievements": "Estadísticas y logros",
     "streakTitle": "Racha del maratón de artículos"
+  },
+  "studyNavAndBanner": {
+    "practice": "Práctica",
+    "grammar": "Gramática",
+    "bannerPractice": "Mejora tu nivel de alemán completando diversas tareas prácticas",
+    "bannerGrammar": "Estudia las reglas y mejora tu nivel de alemán en varios temas gramaticales"
+  },
+  "bannerTitles": {
+    "play": "¡Aprende alemán con gusto! Elige un modo conveniente y mejora tu idioma jugando",
+    "events": "Participa en eventos de temporada y obtén recompensas únicas por completar tareas"
   }
 }

@@ -14,23 +14,27 @@
             show-timer
         />
       </div>
-      <div v-if="isLoading" class="loading">{{ t('locationQuests.loading') }}</div>
-      <div v-else class="quests">
-        <div v-if="errorMessage" class="error">{{ t('locationQuests.error') }}</div>
-        <ul v-else-if="processedQuests.length" class="quest-list">
-          <li
-              v-for="quest in processedQuests"
-              :key="quest.questId"
-              class="quest-card"
-              :class="{ completed: quest.isSuccess }"
-          >
-            <div v-if="quest.isPerfect" class="stamp">{{ t('locationQuests.done') }}</div>
-            <div v-else-if="quest.hasMistakes" class="stamp stamp--mistakes">{{ t('locationQuests.mistakes') }}</div>
-            <div class="stamp__icon-wrapper">
-              <img class="stamp__icon" src="../../assets/images/questList.svg" alt="questList">
-            </div>
-            <p class="quest__description">{{ t(quest.description) }}</p>
-            <div class="quest-meta">
+      <VTransition>
+        <div v-if="isLoading || !isMounted"
+             key="loading"
+             class="loading">{{ t('locationQuests.loading') }}
+        </div>
+        <div v-if="isMounted" class="quests">
+          <div v-if="errorMessage" class="error">{{ t('locationQuests.error') }}</div>
+          <ul v-else-if="processedQuests.length" class="quest-list">
+            <li
+                v-for="quest in processedQuests"
+                :key="quest.questId"
+                class="quest-card"
+                :class="{ completed: quest.isSuccess }"
+            >
+              <div v-if="quest.isPerfect" class="stamp">{{ t('locationQuests.done') }}</div>
+              <div v-else-if="quest.hasMistakes" class="stamp stamp--mistakes">{{ t('locationQuests.mistakes') }}</div>
+              <div class="stamp__icon-wrapper">
+                <img class="stamp__icon" src="../../assets/images/questList.svg" alt="questList">
+              </div>
+              <p class="quest__description">{{ t(quest.description) }}</p>
+              <div class="quest-meta">
               <span v-if="!quest.isSuccess" class="rewards-container">
                 <span>{{ t('locationQuests.awards') }}</span>
                 <span class="reward-item">
@@ -39,48 +43,53 @@
                 </span>
                 <span class="reward-item">{{ quest.rewards.xp }}<span class="xp-badge-3d">XP</span></span>
               </span>
-              <span class="rewards-container" v-else>{{ t('locationQuests.gotAward') }} <span style="font-size:18px;">✅</span></span>
-            </div>
-            <button
-                class="btn"
-                :style="quest.btnStyle"
-                @click="handleStartQuest(quest)"
-            >
-              <template v-if="quest.hasMistakes">
-                {{ t('locationQuests.repeatMistakes') }}
-              </template>
-              <template v-else-if="quest.isPerfect">
-                {{ t('locationQuests.repeat') }}
-              </template>
-              <template v-else>
-                {{ t('locationQuests.start') }}
-              </template>
-            </button>
-          </li>
-        </ul>
-        <div v-else class="empty">{{ t('locationQuests.notFound') }}</div>
-      </div>
+                <span class="rewards-container" v-else>{{ t('locationQuests.gotAward') }} <span
+                    style="font-size:18px;">✅</span></span>
+              </div>
+              <button
+                  class="btn"
+                  :style="quest.btnStyle"
+                  @click="handleStartQuest(quest)"
+              >
+                <template v-if="quest.hasMistakes">
+                  {{ t('locationQuests.repeatMistakes') }}
+                </template>
+                <template v-else-if="quest.isPerfect">
+                  {{ t('locationQuests.repeat') }}
+                </template>
+                <template v-else>
+                  {{ t('locationQuests.start') }}
+                </template>
+              </button>
+            </li>
+          </ul>
+          <div v-else class="empty">{{ t('locationQuests.notFound') }}</div>
+        </div>
+      </VTransition>
+
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, watch, onMounted } from "vue";
-import { useRoute, useRouter } from "vue-router";
-import { regions } from "~/utils/regions.js";
-import { userChainStore } from "~/store/chainStore.js";
-import { useSeoMeta } from '#imports';
+import {ref, computed, watch, onMounted} from "vue";
+import {useRoute, useRouter} from "vue-router";
+import {regions} from "~/utils/regions.js";
+import {userChainStore} from "~/store/chainStore.js";
+import {useSeoMeta} from '#imports';
 import VHearts from '../../src/components/V-hearts.vue';
 import VBackBtn from "~/src/components/V-back-btn.vue";
-import { showInterstitial } from '~/utils/admob.js';
+import {showInterstitial} from '~/utils/admob.js';
+import VTransition from "~/src/components/V-transition.vue";
+
 const route = useRoute();
 const router = useRouter();
-const { t, locale } = useI18n();
+const {t, locale} = useI18n();
 const chainStore = userChainStore();
 const questList = ref([]);
 const isLoading = ref(false);
 const errorMessage = ref("");
-
+const isMounted = ref(false);
 useSeoMeta({
   robots: 'noindex, nofollow'
 });
@@ -91,7 +100,9 @@ const currentRegion = computed(() => {
   return allRegionsList.find((r) => r.pathTo === currentRegionKey.value);
 });
 
-const questsUrl = computed(() => {return `/quests/quests-${currentRegionKey.value}.json`;});
+const questsUrl = computed(() => {
+  return `/quests/quests-${currentRegionKey.value}.json`;
+});
 
 async function fetchQuests() {
   isLoading.value = true;
@@ -110,6 +121,7 @@ async function fetchQuests() {
     isLoading.value = false;
   }
 }
+
 const processedQuests = computed(() => {
   return questList.value.map((quest) => {
     let userProgress = chainStore.questProgress?.[quest.questId];
@@ -152,14 +164,21 @@ function handleStartQuest(quest) {
   showInterstitial(() => {
     router.push({
       path: `/location/quest-${quest.questId}`,
-      query: { region: currentRegionKey.value }
+      query: {region: currentRegionKey.value}
     });
   });
 }
 
-watch(currentRegionKey, fetchQuests, { immediate: true });
+watch(currentRegionKey, fetchQuests, {immediate: true});
+
+onMounted(() => {
+  setTimeout(() => {
+    isMounted.value = true
+  }, 200)
+})
 
 onMounted(async () => {
+
   await chainStore.loadProgressFromFirebase();
 });
 
@@ -189,14 +208,14 @@ onMounted(async () => {
   width: 0 !important;
 }
 
-.stamp__icon{
+.stamp__icon {
   width: 60px;
 }
 
 .stamp__icon-wrapper {
   border: 2px solid #747aff;
   border-radius: 50%;
-  margin:5px auto;
+  margin: 5px auto;
   width: 90px;
   height: 90px;
   display: flex;
@@ -206,10 +225,10 @@ onMounted(async () => {
 }
 
 .region__title-name {
-  font-size: 24px;
-  color: var(--titleColor);
+  font-size: 23px;
+  color: var(--title);
   margin-left: 15px;
-  text-shadow: 0px 1px var(--titleColor);
+  text-shadow: 0px 1px var(--title);
 }
 
 .location-header {
@@ -226,7 +245,10 @@ onMounted(async () => {
   margin-top: 16px;
   padding: 12px 14px;
   border-radius: 16px;
-  color: var(--titleColor);
+  color: var(--title);
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
 }
 
 .error {
@@ -258,11 +280,8 @@ onMounted(async () => {
   box-shadow: var(--boxShadowMobile);
   border-radius: 20px;
   padding: 18px 16px 16px;
-  opacity: 0;
-  transform: translateY(20px) scale(0.95);
   will-change: transform, opacity;
   backface-visibility: hidden;
-  animation: popSmooth 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
 }
 
 .quest-card:nth-child(6n+2) {
@@ -311,7 +330,7 @@ onMounted(async () => {
   background: linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100%);
   color: white;
   border-radius: 12px;
-  padding: 8px 14px;
+  padding: 10px 14px;
   font-weight: 900;
   letter-spacing: .04em;
   box-shadow: var(--boxShadowMobile);
@@ -433,26 +452,13 @@ onMounted(async () => {
   border-radius: 8px;
   background: linear-gradient(135deg, #3b82f6 0%, #a855f7 50%, #3b82f6 100%);
   background-size: 200% 200%;
-  box-shadow:
-      inset 0 -2px 0 rgba(0, 0, 0, 0.2),
-      inset 0 1px 1px rgba(255, 255, 255, 0.5),
-      0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2),
+  inset 0 1px 1px rgba(255, 255, 255, 0.5),
+  0 2px 4px rgba(0, 0, 0, 0.15);
   border: 1.5px solid rgba(255, 255, 255, 0.9);
-  text-shadow:
-      0 0 4px rgba(255, 255, 255, 0.8),
-      0 0 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.8),
+  0 0 1px rgba(0, 0, 0, 0.3);
 }
-
-.quest-card:nth-child(1) { animation-delay: 0.05s; }
-.quest-card:nth-child(2) { animation-delay: 0.1s; }
-.quest-card:nth-child(3) { animation-delay: 0.15s; }
-.quest-card:nth-child(4) { animation-delay: 0.2s; }
-.quest-card:nth-child(5) { animation-delay: 0.25s; }
-.quest-card:nth-child(6) { animation-delay: 0.3s; }
-.quest-card:nth-child(7) { animation-delay: 0.35s; }
-.quest-card:nth-child(8) { animation-delay: 0.4s; }
-.quest-card:nth-child(9) { animation-delay: 0.45s; }
-.quest-card:nth-child(10) { animation-delay: 0.5s; }
 
 @media (max-width: 767px) {
   .quest-list {
@@ -467,19 +473,23 @@ onMounted(async () => {
     gap: 16px;
     margin-top: 8px;
   }
+
   .quest-card {
     min-height: auto;
     padding: 14px;
     gap: 8px;
     border-radius: 16px;
   }
+
   .quest-card::before {
     inset: 6px;
     outline: 8px solid #fff;
   }
+
   .quest__description {
     font-size: 14px;
   }
+
   .quest-meta .rewards-container {
     font-size: 14px;
     padding: 4px 8px;

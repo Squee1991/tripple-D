@@ -18,7 +18,7 @@
         >
           <button class="sidebar__button" @click="selectTopic(item.id)">
             <span>{{ item.title }}</span>
-            <img class="sidebar__next-icon" src="../../assets/images/next.svg" alt="arrow">
+            <VArrowNav/>
           </button>
         </li>
       </ul>
@@ -78,7 +78,7 @@
           </section>
         </div>
         <div class="practice-area">
-          <p class="practice-area__description">{{ currentTopicData.practice.description }}</p>
+<!--          <p class="practice-area__description">{{ currentTopicData.practice.description }}</p>-->
           <NuxtLink :to="`/${categoryId}/${currentTopicData.id}`" class="practice-area__button">
             {{ currentTopicData.practice.buttonText }}
           </NuxtLink>
@@ -97,6 +97,7 @@ import TipIcon from '../../assets/animation/info.json';
 import VTips from '../../src/components/V-tips.vue';
 import {useHead, useSeoMeta} from '#imports'
 import VBackBtn from "../../src/components/V-back-btn.vue";
+import VArrowNav from "~/src/components/V-arrowNav.vue";
 
 const canonical = useCanonical()
 const {t} = useI18n()
@@ -475,14 +476,14 @@ watch(currentTopicData, () => {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  padding: 20px;
+  overflow-y: hidden;
   background: var(--bg, #f7f9fc);
 }
 
 .content__main-column {
   flex-grow: 1;
-  padding-bottom: 20px;
+  padding: 20px;
+  overflow-y: auto;
 }
 
 .info-section {
@@ -586,7 +587,6 @@ watch(currentTopicData, () => {
   font-weight: 500;
 }
 
-/* Стилизация выделенного текста (тегов <b> внутри v-html) */
 .example__sentence :deep(b) {
   font-weight: 800;
   color: #111827;
@@ -601,8 +601,7 @@ watch(currentTopicData, () => {
 }
 
 .practice-area {
-  padding: 16px 0 0 0;
-  margin-top: auto;
+  padding: 20px;
   flex-shrink: 0;
   text-align: center;
 }

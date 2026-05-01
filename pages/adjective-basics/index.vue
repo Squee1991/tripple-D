@@ -13,7 +13,7 @@
         >
           <button class="sidebar__button" @click="selectTopic(item.id)">
             <span>{{ item.title }}</span>
-            <img class="sidebar__next-icon" src="../../assets/images/next.svg" alt="arrow">
+            <VArrowNav/>
           </button>
         </li>
       </ul>
@@ -64,6 +64,7 @@ import {useRouter} from 'vue-router'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import { useHead, useSeoMeta } from '#imports'
 import VBackBtn from "../../src/components/V-back-btn.vue";
+import VArrowNav from "~/src/components/V-arrowNav.vue";
 
 const { t } = useI18n();
 

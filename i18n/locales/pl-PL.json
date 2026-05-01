@@ -9230,6 +9230,7 @@
     "confirm": "Potwierdź"
   },
   "sub": {
+    "words": "Słowa i rodzajniki",
     "sinonim": "Leksyka",
     "articles": "Rodzajniki",
     "verbs": "Czasowniki",
@@ -9808,5 +9809,15 @@
   "personalAccount": {
     "statsAndAchievements": "Statystyki i osiągnięcia",
     "streakTitle": "Seria maratonu rodzajników"
+  },
+  "studyNavAndBanner": {
+    "practice": "Praktyka",
+    "grammar": "Gramatyka",
+    "bannerPractice": "Podnieś swój poziom niemieckiego, wykonując różnorodne zadania praktyczne",
+    "bannerGrammar": "Ucz się zasad i poprawiaj swój poziom języka niemieckiego w różnych tematach gramatycznych"
+  },
+  "bannerTitles": {
+    "play": "Ucz się niemieckiego z przyjemnością! Wybierz wygodny tryb i podszkol język, grając",
+    "events": "Bierz udział w wydarzeniach sezonowych i zdobywaj unikalne nagrody za wykonywanie zadań"
   }
 }

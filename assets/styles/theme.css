@@ -51,9 +51,12 @@
     --settingsSectionBg: rgb(0 0 0 / 3%);
     --homeBg: #f3f1f0;
     --landNameBg: linear-gradient(180deg, rgb(170 158 158 / 75%), rgb(31 29 29 / 60%));
+    --title: #636161;
+
 }
 
 .dark {
+    --title: #ebe5e5;
     --landNameBg: linear-gradient(180deg, rgb(41 38 38 / 75%), rgb(31 29 29 / 60%));;
     --homeBg: #ffd54f;
     --settingsSectionBg: rgba(255, 255, 255, 0.05);

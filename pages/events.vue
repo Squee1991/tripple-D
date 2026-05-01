@@ -14,11 +14,11 @@
         <VBackBtnNav/>
         <h1 class="page-title">{{ t('nav.events') }}</h1>
       </div>
-      <transition name="menu-appear">
+      <VTransition>
         <div class="scrollable-view" v-if="isMounted">
           <div class="banner-wrapper">
             <VBanner
-                text="Участвуй в сезонных событиях и получай уникальные награды!"
+                :text="t('bannerTitles.events')"
                 :icon="Events"
             />
           </div>
@@ -38,11 +38,7 @@
                     <span class="event-dates">{{ event.startDate }} - {{ event.endDate }}</span>
                   </div>
                 </div>
-                <div class="topic-arrow">
-                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </div>
+                <VArrowNav/>
               </NuxtLink>
               <div
                   v-else
@@ -55,16 +51,12 @@
                   </div>
                   <div class="topic-labelt">{{ event.title }}</div>
                 </div>
-                <div class="topic-arrow">
-                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </div>
+                <VArrowNav/>
               </div>
             </template>
           </div>
         </div>
-      </transition>
+      </VTransition>
     </div>
   </div>
 </template>
@@ -81,6 +73,8 @@ import ValentineNav from '../assets/images/valentineIcon.svg'
 import FoolDayNav from '../assets/images/fooldayNav.svg'
 import ChristmasDayNav from '../assets/images/christmas-wreathNav.svg'
 import Events from '../assets/images/app-nav-icons/events.svg'
+import VArrowNav from "~/src/components/V-arrowNav.vue";
+import VTransition from "~/src/components/V-transition.vue";
 definePageMeta({
   layout: 'footerlayout'
 })
@@ -193,12 +187,12 @@ const processedEvents = computed(() => {
 }
 
 .page-title {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 800;
-  color: var(--titleColor);
+  color: var(--title);
   letter-spacing: 1px;
-  margin: 0 0 0 10px;
-  text-shadow: 0 1px var(--titleColor);
+  margin: 0 0 0 15px;
+  text-shadow: 0 1px var(--title);
 }
 
 .scrollable-view {
@@ -295,34 +289,10 @@ const processedEvents = computed(() => {
   display: inline-block;
 }
 
-
-.topic-arrow {
-  background-color: #3b82f6;
-  color: #ffffff;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 0px #2563eb;
-  flex-shrink: 0;
-  margin-left: 10px;
-}
-
-
 .topic-list-item.is-locked {
   background: var(--menuItemsBg);
 }
 
-.menu-appear-enter-active {
-  transition: opacity 0.4s ease, transform 0.4s ease-out;
-}
-
-.menu-appear-enter-from {
-  opacity: 0;
-  transform: translateY(20px);
-}
 
 @media (max-width: 400px) {
   .topic-label {

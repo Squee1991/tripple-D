@@ -7,6 +7,7 @@ import Modal from "../../src/components/modal.vue"
 import VBanner from "~/src/components/V-banner.vue"
 import HeadPhones from '../../assets/images/headphones.svg'
 import { showInterstitial } from '../../utils/admob.js'
+import VTransition from "~/src/components/V-transition.vue";
 
 const router = useRouter()
 const store = useAudioTaskStore()
@@ -14,7 +15,7 @@ const {allTasks, currentLevel, userProgress} = storeToRefs(store)
 const {t } = useI18n()
 const screen = ref('levels')
 const showDevModal = ref(false)
-
+const isMounted = ref(false)
 const levels = ['A1', 'A2', 'B1']
 const levelColors = ['#49b36a', '#88B5FF', '#FF9F7F']
 const topicColors = ['#FFEB7F', '#9DFFBB', '#FFAFF3', '#88B5FF', '#FF9F7F', '#AFAFFF', '#7FFFDF', '#FFD1AF']
@@ -66,6 +67,9 @@ const selectTopic = (topic) => {
 }
 
 onMounted(async () => {
+  setTimeout(()=> {
+    isMounted.value = true
+  }, 100)
   await store.fetchTasks()
   await store.loadUserProgress()
   window.addEventListener('popstate', handlePopState)
@@ -107,11 +111,10 @@ onUnmounted(() => {
             </svg>
           </button>
         </header>
-        <p class="quiz__subtitle">{{ headerText }}</p>
       </div>
       <div class="quiz__content">
-        <transition name="quiz-pop" mode="out-in">
-          <div :key="screen" class="scrollable-view">
+        <VTransition>
+          <div v-if="isMounted" :key="screen" class="scrollable-view">
             <template v-if="screen === 'levels'">
               <div class="banner-wrapper">
                 <VBanner
@@ -129,7 +132,7 @@ onUnmounted(() => {
                   <div class="topic-item-content">
                     <span class="topic-label">{{ t('audioTasks.level') }}</span>
                     <div class="topic-icon-box" :style="{ color: levelColors[index] }">
-                      <span style="font-size: 24px; font-weight: 900;">{{ level }}</span>
+                      <span style="font-size: 28px; font-weight: 900;">{{ level }}</span>
                     </div>
                   </div>
                   <div class="topic-arrow">
@@ -183,7 +186,7 @@ onUnmounted(() => {
               </div>
             </template>
           </div>
-        </transition>
+        </VTransition>
       </div>
     </div>
   </div>
@@ -222,10 +225,10 @@ onUnmounted(() => {
 .quiz__title {
   font-size: 24px;
   font-weight: 900;
-  color: var(--titleColor);
+  color: var(--title);
   text-transform: uppercase;
   margin: 0;
-  -webkit-text-stroke: 1px var(--titleColor);
+  -webkit-text-stroke: 1px var(--title);
 }
 
 .quiz__subtitle {
@@ -334,7 +337,7 @@ onUnmounted(() => {
 
 .topic-label {
   color: var(--titleColor);
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 800;
   font-family: "Nunito", sans-serif;
 }

@@ -9228,6 +9228,7 @@
     "confirm": "Confirm"
   },
   "sub": {
+    "words": "Words and articles",
     "sinonim": "Vocabulary",
     "articles": "Articles",
     "verbs": "Verbs",
@@ -9805,5 +9806,15 @@
   "personalAccount": {
     "statsAndAchievements": "Statistics and achievements",
     "streakTitle": "Article marathon streak"
+  },
+  "studyNavAndBanner": {
+    "practice": "Practice",
+    "grammar": "Grammar",
+    "bannerPractice": "Level up your German by completing various practical tasks",
+    "bannerGrammar": "Study the rules and improve your German level across various grammar topics"
+  },
+  "bannerTitles": {
+    "play": "Learn German with pleasure! Choose a convenient mode and level up your language by playing",
+    "events": "Participate in seasonal events and get unique rewards for completing tasks"
   }
 }

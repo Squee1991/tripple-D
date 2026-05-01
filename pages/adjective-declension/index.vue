@@ -18,7 +18,7 @@
         >
           <button class="sidebar__button" @click="selectTopic(item.id)">
             <span>{{ item.title }}</span>
-            <img class="sidebar__next-icon" src="../../assets/images/next.svg" alt="arrow">
+            <VArrowNav/>
           </button>
         </li>
       </ul>
@@ -104,6 +104,7 @@ import {useRouter} from 'vue-router'
 import SoundBtn from '../../src/components/soundBtn'
 import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
 import VBackBtn from "../../src/components/V-back-btn.vue";
+import VArrowNav from "~/src/components/V-arrowNav.vue";
 
 const canonical = useCanonical()
 const {t} = useI18n()
@@ -421,14 +422,14 @@ watch(currentTopicData, initLottieIcon);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  padding: 20px;
+  overflow-y: hidden;
   background: var(--bg, #f7f9fc);
 }
 
 .content__main-column {
   flex-grow: 1;
-  padding-bottom: 20px;
+  padding: 20px;
+  overflow-y: auto;
 }
 
 .info-section {
@@ -573,8 +574,7 @@ watch(currentTopicData, initLottieIcon);
 }
 
 .practice-area {
-  padding: 16px 0 0 0;
-  margin-top: auto;
+  padding: 20px;
   flex-shrink: 0;
   text-align: center;
 }
