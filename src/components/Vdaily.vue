@@ -46,7 +46,7 @@ import Completed from '../../assets/images/dailyIcons/dailyCompleted.svg'
 const { t } = useI18n()
 const store = dailyStore()
 const {todayQuests, msLeft} = storeToRefs(store)
-
+const router = useRouter()
 const ready = ref(false)
 
 onMounted(async () => {
@@ -54,14 +54,14 @@ onMounted(async () => {
   store.startAutoSync()
   ready.value = true
 })
+
 onUnmounted(() => {
   store.stopAutoSync();
   store.stop()
 })
 
-
-function getIconSrc(q) {
-  return q?.isCompleted ? Completed : NotCompleted
+function getIconSrc(quest) {
+  return quest?.isCompleted ? Completed : NotCompleted
 }
 
 function prettyMs(x) {
@@ -73,7 +73,6 @@ function prettyMs(x) {
   const pad = n => String(n).padStart(2, '0')
   return `${pad(h)}:${pad(m)}:${pad(s)}`
 }
-
 
 onMounted(() => {
   store.init()

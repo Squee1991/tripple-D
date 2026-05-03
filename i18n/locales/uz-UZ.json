@@ -9797,7 +9797,8 @@
     "awards": "Eritilgan yutuqlar va bajarilgan topshiriqlar uchun mukofotlar",
     "thematic": "Qiziqarli mavzu darajalaridan o'tib, nemis tilingizni rivojlantiring",
     "audio": "Audio topshiriqlarni bajarib, nemis tilini eshitib tushunishni rivojlantiring",
-    "images": "Rasmlarni tasvirlash qobiliyatingizni rivojlantiring! Boshlash uchun mavzu tanlang"
+    "images": "Rasmlarni tasvirlash qobiliyatingizni rivojlantiring! Boshlash uchun mavzu tanlang",
+    "settings": "Hisob sozlamalari"
   },
   "imageDescription": {
     "listen": "Dialogni tinglang!",

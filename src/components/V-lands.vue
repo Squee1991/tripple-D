@@ -229,7 +229,7 @@ onBeforeUnmount(() => {
   border-radius: 25px;
   padding: 10px 10px;
   background: var(--bgTitle);
-  box-shadow: 0 5px 0 var(--boxShadowBottom);
+  box-shadow: 0 2px 0 var(--boxShadowBottom);
   position: relative;
   overflow: hidden;
 }
@@ -617,7 +617,7 @@ onBeforeUnmount(() => {
 
 @media (max-width: 800px) {
   .region-card {
-    height: 140px;
+    height: 136px;
   }
 }
 

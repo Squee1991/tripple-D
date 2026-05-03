@@ -115,7 +115,7 @@ onMounted(async () => {
       />
       <div class="exam__header">
         <VBackBtn class="custom-back-btn"/>
-        <div class="exam__title-badge">Тесты</div>
+        <div class="exam__title-badge">{{ t('nav.tests')}}</div>
       </div>
       <Transition name="menu-appear" appear>
         <div v-if="isPageLoaded" class="exam__scroll-area">
@@ -187,7 +187,7 @@ onMounted(async () => {
 .exam__header {
   display: flex;
   align-items: center;
-  padding: 5px 15px 15px 15px;
+  padding: 5px 10px 15px 10px;
 }
 
 .exam__title-badge {

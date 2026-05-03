@@ -62,6 +62,17 @@ onMounted(() => {
   flex-direction: column;
 }
 
+.stat::after{
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  background: var(--overlayAfter);
+}
+
 @media (max-width: 767px) {
   .stat {
     flex-direction: column;

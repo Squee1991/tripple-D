@@ -75,6 +75,7 @@ export const dailyStore = defineStore('dailyStore', () => {
         return (cycleKey.value * QUESTS_PER_CYCLE) % len
     })
 
+
     const todayQuests = computed(() => currentCycle.value?.quests || [])
     const toNum = (v, fb = 0) => (Number.isFinite(Number(v)) ? Number(v) : fb)
     const toStr = (v, fb = '—') => (v === undefined || v === null ? fb : String(v))
@@ -91,7 +92,8 @@ export const dailyStore = defineStore('dailyStore', () => {
             targetValue: Math.max(1, toNum(q?.targetValue ?? 1, 1)),
             currentValue: 0,
             isCompleted: false,
-            rewardClaimed: !!q?.rewardClaimed
+            rewardClaimed: !!q?.rewardClaimed,
+            url: q?.url
         }
     }
 

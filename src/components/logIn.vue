@@ -207,13 +207,11 @@ const handleSubmit = async () => {
 
     if (mode.value === 'register') {
       await authStore.registerUser({ name: values.name, email: values.email, password: values.password })
-      emits('close-auth-form')
+      router.push('/')
       fields.value.forEach(f => f.value = '')
       return
     }
-
     await authStore.loginUser({ email: values.email, password: values.password })
-    emits('close-auth-form')
     router.push('/')
     fields.value.forEach(f => f.value = '')
   } catch (e) {
@@ -231,10 +229,14 @@ watch(mode, () => {
   })
 })
 
+// watch(isAuthed, (v) => {
+//   if (v) emits('close-auth-form')
+// })
 watch(isAuthed, (v) => {
-  if (v) emits('close-auth-form')
+  if (v) {
+    router.push('/')
+  }
 })
-
 onUnmounted(() => {
   document.body.style.overflow = ''
 })

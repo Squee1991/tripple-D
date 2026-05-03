@@ -14,14 +14,10 @@
             show-timer
         />
       </div>
-      <VTransition>
-        <div v-if="isLoading || !isMounted"
-             key="loading"
-             class="loading">{{ t('locationQuests.loading') }}
-        </div>
-        <div v-if="isMounted" class="quests">
-          <div v-if="errorMessage" class="error">{{ t('locationQuests.error') }}</div>
-          <ul v-else-if="processedQuests.length" class="quest-list">
+      <div class="quests">
+        <div v-if="errorMessage" class="error">{{ t('locationQuests.error') }}</div>
+        <VTransition v-else-if="processedQuests.length">
+          <ul class="quest-list">
             <li
                 v-for="quest in processedQuests"
                 :key="quest.questId"
@@ -30,22 +26,27 @@
             >
               <div v-if="quest.isPerfect" class="stamp">{{ t('locationQuests.done') }}</div>
               <div v-else-if="quest.hasMistakes" class="stamp stamp--mistakes">{{ t('locationQuests.mistakes') }}</div>
+
               <div class="stamp__icon-wrapper">
                 <img class="stamp__icon" src="../../assets/images/questList.svg" alt="questList">
               </div>
+
               <p class="quest__description">{{ t(quest.description) }}</p>
+
               <div class="quest-meta">
-              <span v-if="!quest.isSuccess" class="rewards-container">
-                <span>{{ t('locationQuests.awards') }}</span>
-                <span class="reward-item">
-                  <span>{{ quest.rewards.points }}</span>
-                  <img src="assets/images/article.svg" alt="Articlus" class="icon-articlus">
+                <span v-if="!quest.isSuccess" class="rewards-container">
+                  <span>{{ t('locationQuests.awards') }}</span>
+                  <span class="reward-item">
+                    <span>{{ quest.rewards.points }}</span>
+                    <img src="assets/images/article.svg" alt="Articlus" class="icon-articlus">
+                  </span>
+                  <span class="reward-item">{{ quest.rewards.xp }}<span class="xp-badge-3d">XP</span></span>
                 </span>
-                <span class="reward-item">{{ quest.rewards.xp }}<span class="xp-badge-3d">XP</span></span>
-              </span>
-                <span class="rewards-container" v-else>{{ t('locationQuests.gotAward') }} <span
-                    style="font-size:18px;">✅</span></span>
+                <span class="rewards-container" v-else>
+                  {{ t('locationQuests.gotAward') }} <span style="font-size:18px;">✅</span>
+                </span>
               </div>
+
               <button
                   class="btn"
                   :style="quest.btnStyle"
@@ -63,10 +64,9 @@
               </button>
             </li>
           </ul>
-          <div v-else class="empty">{{ t('locationQuests.notFound') }}</div>
-        </div>
-      </VTransition>
-
+        </VTransition>
+        <div v-else-if="!isLoading" class="empty">{{ t('locationQuests.notFound') }}</div>
+      </div>
     </div>
   </div>
 </template>
@@ -87,9 +87,9 @@ const router = useRouter();
 const {t, locale} = useI18n();
 const chainStore = userChainStore();
 const questList = ref([]);
-const isLoading = ref(false);
+const isLoading = ref(true);
 const errorMessage = ref("");
-const isMounted = ref(false);
+
 useSeoMeta({
   robots: 'noindex, nofollow'
 });
@@ -105,6 +105,7 @@ const questsUrl = computed(() => {
 });
 
 async function fetchQuests() {
+  if (!currentRegionKey.value) return;
   isLoading.value = true;
   errorMessage.value = "";
   questList.value = [];
@@ -140,14 +141,17 @@ const processedQuests = computed(() => {
     if (hasMistakes) {
       btnStyle = {
         background: 'linear-gradient(180deg, #ff82a9 0%, #e6517d 100%)',
-        color: '#fff'
+        color: '#fff',
+        boxShadow: '0 4px 0 #d64671'
       };
     } else if (isPerfect) {
       btnStyle = {
         background: 'linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100%)',
-        color: '#fff'
+        color: '#fff',
+        boxShadow: '0 4px 0 #4f6ca8'
       };
     }
+
     return {
       ...quest,
       isSuccess,
@@ -171,25 +175,12 @@ function handleStartQuest(quest) {
 
 watch(currentRegionKey, fetchQuests, {immediate: true});
 
-onMounted(() => {
-  setTimeout(() => {
-    isMounted.value = true
-  }, 200)
-})
-
 onMounted(async () => {
-
   await chainStore.loadProgressFromFirebase();
 });
-
 </script>
 
 <style scoped>
-
-.quests {
-  padding: 0 15px;
-}
-
 .location-page {
   height: 100%;
   overflow-y: auto;
@@ -208,27 +199,8 @@ onMounted(async () => {
   width: 0 !important;
 }
 
-.stamp__icon {
-  width: 60px;
-}
-
-.stamp__icon-wrapper {
-  border: 2px solid #747aff;
-  border-radius: 50%;
-  margin: 5px auto;
-  width: 90px;
-  height: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #00c2ff;
-}
-
-.region__title-name {
-  font-size: 23px;
-  color: var(--title);
-  margin-left: 15px;
-  text-shadow: 0px 1px var(--title);
+.quests {
+  padding: 0 15px;
 }
 
 .location-header {
@@ -241,7 +213,26 @@ onMounted(async () => {
   overflow: visible;
 }
 
-.loading, .error, .empty {
+.region__title-name {
+  font-size: 23px;
+  color: var(--title);
+  margin-left: 15px;
+  text-shadow: 0px 1px var(--title);
+}
+
+.lives-bar__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 0 14px 17px 14px;
+  border-radius: 15px;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  background: white;
+}
+
+.error, .empty {
   margin-top: 16px;
   padding: 12px 14px;
   border-radius: 16px;
@@ -317,8 +308,22 @@ onMounted(async () => {
   opacity: .98;
 }
 
-.quest-card.completed .quest__title {
-  text-decoration: none;
+.stamp__icon-wrapper {
+  border: 2px solid #747aff;
+  border-radius: 50%;
+  margin: 5px auto;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00c2ff;
+  position: relative;
+  z-index: 2;
+}
+
+.stamp__icon {
+  width: 60px;
 }
 
 .stamp {
@@ -333,7 +338,7 @@ onMounted(async () => {
   padding: 10px 14px;
   font-weight: 900;
   letter-spacing: .04em;
-  box-shadow: var(--boxShadowMobile);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
   z-index: 3;
 }
 
@@ -344,10 +349,9 @@ onMounted(async () => {
 .quest__description {
   margin: 5px 0;
   color: #2b2b2b;
-}
-
-.quest-details p {
-  margin: 6px 0;
+  position: relative;
+  z-index: 2;
+  font-weight: 600;
 }
 
 .quest-meta {
@@ -355,6 +359,8 @@ onMounted(async () => {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
 }
 
 .quest-meta .rewards-container {
@@ -369,7 +375,7 @@ onMounted(async () => {
   background: white;
   border-radius: 15px;
   border: 3px solid #e0dcdc;
-  box-shadow: var(--boxShadowMobile);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .reward-item {
@@ -383,57 +389,6 @@ onMounted(async () => {
   width: 24px;
   height: 24px;
   vertical-align: middle;
-}
-
-.btn {
-  position: relative;
-  padding: 15px 22px;
-  margin-top: 12px;
-  border-radius: 14px;
-  font-size: 17px;
-  font-weight: 900;
-  letter-spacing: .02em;
-  border: 3px solid #e8e7e7;
-  background: linear-gradient(180deg, #6bba5e 0%, #47a14f 100%);
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 4px 0 #d9d4d4;
-  transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.1s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-}
-
-.btn:active {
-  transform: translateY(4px);
-  box-shadow: 0 0px 0 transparent;
-}
-
-@keyframes bob {
-  0%, 100% {
-    transform: translateY(0) rotate(8deg);
-  }
-  50% {
-    transform: translateY(-8px) rotate(8deg);
-  }
-}
-
-@keyframes wiggleSmooth {
-  0%, 100% {
-    transform: rotate(-6deg) scale(1);
-  }
-  50% {
-    transform: rotate(2deg) scale(1.05);
-  }
-}
-
-@keyframes popSmooth {
-  0% {
-    opacity: 0;
-    transform: translateY(20px) scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
 }
 
 .xp-badge-3d {
@@ -460,6 +415,29 @@ onMounted(async () => {
   0 0 1px rgba(0, 0, 0, 0.3);
 }
 
+.btn {
+  position: relative;
+  z-index: 2;
+  padding: 15px 22px;
+  margin-top: 12px;
+  border-radius: 24px;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: .02em;
+  border: none;
+  background: linear-gradient(180deg, #6bba5e 0%, #47a14f 100%);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #44883a;
+  transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0px 0 transparent;
+}
+
 @media (max-width: 767px) {
   .quest-list {
     grid-template-columns: 1fr;
@@ -481,13 +459,26 @@ onMounted(async () => {
     border-radius: 16px;
   }
 
+  .stamp__icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .stamp__icon {
+    width: 45px;
+  }
+
   .quest-card::before {
     inset: 6px;
     outline: 8px solid #fff;
   }
 
-  .quest__description {
-    font-size: 14px;
+  .quest__description, .error, .empty {
+    font-size: 15px;
+  }
+
+  .region__title-name {
+    font-size: 20px;
   }
 
   .quest-meta .rewards-container {
@@ -502,17 +493,5 @@ onMounted(async () => {
     left: 0;
     transform: rotate(-8deg);
   }
-}
-
-.lives-bar__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin: 0 14px 17px 14px;
-  border-radius: 15px;
-  border: 3px solid var(--tabsSlideBorderColor);
-  box-shadow: var(--boxShadowMobile);
-  background: white;
 }
 </style>

@@ -357,7 +357,7 @@ const confirmPurchase = async () => {
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 100px;
+  padding-bottom: 84px;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -377,7 +377,7 @@ const confirmPurchase = async () => {
 
 .shop__content::after{
   content: "";
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;

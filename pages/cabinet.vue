@@ -109,7 +109,6 @@
                         <transition name="fade" mode="out-in">
                           <div v-if="accountTab === 'common'" class="tab-surface" key="common">
                             <PersonalInfoRows/>
-                            <AccountManagement @open="handleSettingsAction"/>
                           </div>
                           <div v-else-if="accountTab === 'awards'" class="tab-surface" key="awards">
                             <AwardsList :awards="awardList"/>
@@ -226,7 +225,6 @@ import VExampResulut from '../src/components/V-exampResulut.vue'
 import VFindFriends from '../src/components/V-findFriends.vue'
 import VRank from '../src/components/V-rank.vue'
 import PersonalInfoRows from '../src/components/PersonalInfoRows.vue'
-import AccountManagement from "../src/components/AccountManagement.vue";
 import Shop from '../src/components/V-shop.vue'
 
 import {userAuthStore} from '../store/authStore.js'
@@ -263,10 +261,12 @@ const achievementStore = useAchievementStore()
 const friendsStore = useFriendsStore()
 const eventStore = useEventSessionStore()
 
-const activeTabKey = ref('info')
+const MAIN_TAB_KEY = 'cabinet_active_main_tab'
+const ACC_TAB_KEY = 'cabinet_active_acc_tab'
 const isSettingsOpen = ref(false)
-const accountTab = ref('common')
 const isMobile = ref(false)
+const activeTabKey = ref((typeof window !== 'undefined' && sessionStorage.getItem(MAIN_TAB_KEY)) || 'info')
+const accountTab = ref((typeof window !== 'undefined' && sessionStorage.getItem(ACC_TAB_KEY)) || 'common')
 
 const TAB_ITEMS = [
   {key: 'info', label: t('cabinetSidebar.valueOne'), alt: 'infoIcon', icon: AccountIcon},
@@ -336,11 +336,12 @@ function setActiveTab(key) {
     router.push(selectedTab.url)
   } else {
     activeTabKey.value = key
+    sessionStorage.setItem(MAIN_TAB_KEY, key)
   }
 }
 
-watch(activeTabKey, () => {
-  isSettingsOpen.value = false
+watch(accountTab, (newTab) => {
+  sessionStorage.setItem(ACC_TAB_KEY, newTab)
 })
 
 function handleSettingsAction(action) {
@@ -515,6 +516,19 @@ onMounted(async () => {
   width: 100%;
   position: relative;
   gap: 20px;
+}
+
+
+.layout__cabinet:after{
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+  background: var(--overlayAfter);
 }
 
 .tab__component-wrapper {
@@ -724,7 +738,7 @@ onMounted(async () => {
   max-height: calc(100vh - 200px);
   overflow-y: auto;
   padding-right: 3px;
-  padding-bottom: 110px;
+  padding-bottom: 122px;
 }
 
 .account-tab-body::-webkit-scrollbar {

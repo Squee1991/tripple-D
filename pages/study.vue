@@ -29,7 +29,7 @@
               <span class="tab-label">{{ tab.label }}</span>
             </button>
           </nav>
-          <Transition name="fade-slide" mode="out-in">
+          <VTransition>
             <div v-if="activeTabId === 'practice'" key="practice" class="topics-list-container">
               <template v-for="category in practiceCategories" :key="category.id">
                 <NuxtLink v-if="category.url" :to="category.url" class="topic-list-item">
@@ -65,7 +65,7 @@
                 </button>
               </template>
             </div>
-          </Transition>
+          </VTransition>
         </div>
         <div v-else-if="isMounted && selectedCategory" key="sub" class="scrollable-view">
           <div class="topics-list-container">
@@ -116,8 +116,8 @@ const learnTabs = [
   { id: 'practice', label: t('studyNavAndBanner.practice'), icon: PracticeIcon },
   { id: 'grammar', label: t('studyNavAndBanner.grammar'), icon: GrammarIcon }
 ]
-
-const activeTabId = ref(learnTabs[0].id)
+const STUDY_STATE_TOGGLE = 'study_toggle_state'
+const activeTabId = ref((typeof window !== 'undefined' && sessionStorage.getItem(STUDY_STATE_TOGGLE)) || learnTabs[0].id)
 const activeIndex = computed(() => learnTabs.findIndex(tab => tab.id === activeTabId.value))
 
 
@@ -127,6 +127,7 @@ const bannerTitleComputed = computed(() => {
 
 function setTab(id) {
   activeTabId.value = id
+  sessionStorage.setItem(STUDY_STATE_TOGGLE, id)
 }
 
 const practiceCategories = computed(() => [

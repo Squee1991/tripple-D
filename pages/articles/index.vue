@@ -16,7 +16,7 @@
           <div class="theme__title">{{ t('modes.themeTitle') }}</div>
         </div>
       </div>
-      <transition name="page-fade" appear>
+      <VTransition>
         <div v-if="isPageLoaded" class="theme-content-area">
           <div class="grid-area-wrapper">
             <div class="theme__grid-container">
@@ -32,7 +32,7 @@
                     :key="key"
                     class="topic-list-item"
                     :class="{ active: selectedTopic === key }"
-                    @click="selectTopic(key)"
+                    @click="selectTopic(key, index)"
                 >
                   <div class="topic-main-row">
                     <div class="topic-item-content">
@@ -42,7 +42,15 @@
                       </div>
                       <span class="topic-label">{{ t(nameMap[key]) }}</span>
                     </div>
-                    <VArrowNav/>
+
+                    <VArrowNav v-if="index === 0 || authStore.isPremium"/>
+                    <div v-else class="topic-arrow topic-arrow--locked">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                    </div>
+
                   </div>
                   <div class="topic-progress-wrapper">
                     <div class="progress-bar-container">
@@ -64,7 +72,7 @@
             </div>
           </div>
         </div>
-      </transition>
+      </VTransition>
       <Transition name="slide-right" appear>
         <div v-if="showModesBlock" class="learning-modes-block">
           <div class="learning__modes-wrapper">
@@ -100,6 +108,7 @@
           </div>
         </div>
       </Transition>
+      <VPremiumModal v-model:show="showPremiumModal" />
     </div>
   </div>
 </template>
@@ -108,6 +117,7 @@
 import {ref, computed, onMounted, nextTick} from 'vue'
 import {useRouter} from 'vue-router'
 import {userlangStore} from '../../store/learningStore.js'
+import {userAuthStore} from '../../store/authStore.js'
 import Lottie from 'lottie-web'
 import {nameMap} from '../../utils/nameMap.js'
 import {useSeoMeta} from '#imports'
@@ -116,6 +126,8 @@ import VLoginPreloader from "../../src/components/V-loginPreloader.vue";
 import VBanner from "~/src/components/V-banner.vue";
 import BannerIcon from '../../assets/images/articleBannerIcon.svg'
 import VArrowNav from "~/src/components/V-arrowNav.vue";
+import VTransition from "~/src/components/V-transition.vue";
+import VPremiumModal from "~/src/components/V-premiumModal.vue";
 
 const iconMap = {
   Furniture: 'chair.svg',
@@ -161,6 +173,7 @@ const showModesBlock = ref(false)
 const showNoTopicMessage = ref(true)
 const router = useRouter()
 const store = userlangStore()
+const authStore = userAuthStore()
 const themeList = ref({})
 const selectedTopic = ref(null)
 const selectedModes = ref([])
@@ -168,6 +181,7 @@ const animationContainer = ref(null)
 const localePath = useLocalePath()
 const isLoading = ref(false)
 const isPageLoaded = ref(false)
+const showPremiumModal = ref(false)
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -231,10 +245,14 @@ const themeProgress = computed(() => {
   )
 })
 
-const selectTopic = (key) => {
-  selectedTopic.value = key
-  selectedModes.value = []
-  showModesBlock.value = true
+const selectTopic = (key, index) => {
+  if (index === 0 || authStore.isPremium) {
+    selectedTopic.value = key
+    selectedModes.value = []
+    showModesBlock.value = true
+  } else {
+    showPremiumModal.value = true
+  }
 }
 
 const startLearning = async () => {
@@ -344,9 +362,10 @@ onMounted(() => {
 .theme__title {
   flex: 1;
   display: flex;
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 600;
-  color: var(--titleColor);
+  color: var(--title);
+  text-shadow: 1px 1px var(--title);
   margin-left: 15px;
   font-family: "Nunito", sans-serif;
 }
@@ -390,7 +409,6 @@ onMounted(() => {
 .banner-wrapper {
   margin-bottom: 20px;
 }
-
 
 .topics-list-container {
   display: flex;
@@ -450,6 +468,24 @@ onMounted(() => {
   font-size: 17px;
   font-weight: 800;
   font-family: "Nunito", sans-serif;
+}
+
+.topic-arrow {
+  background-color: #3b82f6;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 0px #2563eb;
+  flex-shrink: 0;
+}
+
+.topic-arrow--locked {
+  background-color: #a0aec0;
+  box-shadow: 0 3px 0px #718096;
 }
 
 .topic-progress-wrapper {

@@ -13,7 +13,6 @@
               alt="arrow_nav">
           <h1 class="login__title">{{mode === 'login' ? t('auth.auths') : mode === 'register' ? t('auth.regs') : t('auth.resetTitle')}}</h1>
         </div>
-
         <div v-if="mode === 'login' || mode === 'register'" class="auth__tabs">
           <div
               v-for="tab in tabs"
@@ -26,7 +25,6 @@
           </div>
           <div class="auth__toggle" :style="{ transform: toggleTransform }"></div>
         </div>
-
         <form class="auth-form">
           <div class="auth__fields">
             <div v-for="field in visibleFields" :key="field.id" class="auth__field">
@@ -56,7 +54,6 @@
               <div v-if="field.error" class="auth__error">{{ t(field.error) }}</div>
               <div v-if="resetSent" class="auth__success">{{ t('errors.resetSent') }}</div>
             </div>
-
             <div class="auth__actions">
               <button @click.prevent="handleSubmit" class="auth__submit" :disabled="submitLoading">
                 {{
@@ -231,7 +228,9 @@ watch(mode, () => {
 })
 
 watch(isAuthed, (v) => {
-  if (v) emits('close-auth-form')
+  if (v) {
+    router.push('/')
+  }
 })
 
 onUnmounted(() => {

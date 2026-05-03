@@ -51,7 +51,8 @@ const tabs = [
   {id: 'profile', icon: Card, alt: 'ach icon', label: t('tabsMobile.profile'), component: VPoints},
 ]
 
-const activeTabId = ref(tabs[0].id)
+const savedTab = typeof window !== 'undefined' ? sessionStorage.getItem('activeMobileTab') : null
+const activeTabId = ref(savedTab || tabs[0].id)
 const currentTab = computed(() => tabs.find(tab => tab.id === activeTabId.value) || tabs[0])
 const currentComponent = computed(() => currentTab.value.component)
 
@@ -59,6 +60,7 @@ const activeIndex = computed(() => tabs.findIndex(tab => tab.id === activeTabId.
 
 function setTab(id) {
   activeTabId.value = id
+  sessionStorage.setItem('activeMobileTab', id)
 }
 
 const isMobile = ref(false)
@@ -211,7 +213,7 @@ onBeforeUnmount(() => {
     width: 100%;
     overflow-y: auto;
     padding: 8px;
-    padding-bottom: 120px;
+    padding-bottom: 125px;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }

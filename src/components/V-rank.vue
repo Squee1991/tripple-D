@@ -158,7 +158,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .league-line {
-  border-top: 1px solid #eee;
+  border-top: 1px solid #eeeeee80;
   margin-top: 5px;
   padding-top: 10px;
   text-align: center;

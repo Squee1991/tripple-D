@@ -3,14 +3,17 @@ import {ref, computed, onMounted, onUnmounted} from 'vue'
 import {useRouter} from 'vue-router'
 import {storeToRefs} from 'pinia'
 import {useAudioTaskStore} from '../../store/audioTaskStore.js'
+import {userAuthStore} from '../../store/authStore.js'
 import Modal from "../../src/components/modal.vue"
 import VBanner from "~/src/components/V-banner.vue"
 import HeadPhones from '../../assets/images/headphones.svg'
 import { showInterstitial } from '../../utils/admob.js'
-import VTransition from "~/src/components/V-transition.vue";
+import VTransition from "~/src/components/V-transition.vue"
+import VPremiumModal from "~/src/components/V-premiumModal.vue"
 
 const router = useRouter()
 const store = useAudioTaskStore()
+const authStore = userAuthStore()
 const {allTasks, currentLevel, userProgress} = storeToRefs(store)
 const {t } = useI18n()
 const screen = ref('levels')
@@ -19,6 +22,7 @@ const isMounted = ref(false)
 const levels = ['A1', 'A2', 'B1']
 const levelColors = ['#49b36a', '#88B5FF', '#FF9F7F']
 const topicColors = ['#FFEB7F', '#9DFFBB', '#FFAFF3', '#88B5FF', '#FF9F7F', '#AFAFFF', '#7FFFDF', '#FFD1AF']
+const showPremiumModal = ref(false)
 
 const overlayData = {
   title: t('audioTasks.overlayDataTitle'),
@@ -44,10 +48,12 @@ const handlePopState = () => {
 }
 
 const getTopicColor = (index) => topicColors[index % topicColors.length]
+
 const getTopicCompleted = (topic) => {
   if (!userProgress.value[topic.id]) return 0
   return Object.values(userProgress.value[topic.id]).filter(status => status === 'success').length
 }
+
 const getTopicProgressPercent = (topic) => {
   const total = topic.tasks?.length || 0
   return total === 0 ? 0 : (getTopicCompleted(topic) / total) * 100
@@ -59,11 +65,15 @@ const selectLevel = (level) => {
   screen.value = 'topics'
 }
 
-const selectTopic = (topic) => {
-  showInterstitial(()=> {
-    store.setCurrentTopicId(topic.id)
-    router.push('/audio-tasks/session')
-  })
+const selectTopic = (topic, index) => {
+  if (index === 0 || authStore.isPremium) {
+    showInterstitial(()=> {
+      store.setCurrentTopicId(topic.id)
+      router.push('/audio-tasks/session')
+    })
+  } else {
+    showPremiumModal.value = true
+  }
 }
 
 onMounted(async () => {
@@ -154,7 +164,7 @@ onUnmounted(() => {
                 <div
                     v-for="(topic, index) in availableTopics"
                     :key="topic.id"
-                    @click="selectTopic(topic)"
+                    @click="selectTopic(topic, index)"
                     class="topic-list-item"
                 >
                   <div class="topic-main-row">
@@ -162,9 +172,13 @@ onUnmounted(() => {
                       <div class="topic-icon-box">{{ topic.icon }}</div>
                       <span class="topic-label">{{ t(topic.title) }}</span>
                     </div>
-                    <div class="topic-arrow">
-                      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <div class="topic-arrow" :class="{ 'topic-arrow--locked': index !== 0 && !authStore.isPremium }">
+                      <svg v-if="index === 0 || authStore.isPremium" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                      <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                       </svg>
                     </div>
                   </div>
@@ -188,6 +202,7 @@ onUnmounted(() => {
           </div>
         </VTransition>
       </div>
+      <VPremiumModal v-model:show="showPremiumModal" />
     </div>
   </div>
 </template>
@@ -353,6 +368,11 @@ onUnmounted(() => {
   justify-content: center;
   box-shadow: 0 3px 0px #2563eb;
   flex-shrink: 0;
+}
+
+.topic-arrow--locked {
+  background-color: #a0aec0;
+  box-shadow: 0 3px 0px #718096;
 }
 
 .topic-progress-wrapper {

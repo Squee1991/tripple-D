@@ -80,13 +80,13 @@ const openCancelModal = () => {
 .premium-banner {
   margin-top: 5px;
   background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.25);
   border-radius: 24px;
   padding: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #ffffff;
-  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.25);
   position: relative;
   overflow: hidden;
   gap: 15px;

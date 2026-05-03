@@ -12,8 +12,7 @@
    import { useRouter } from "vue-router";
    const router = useRouter();
    defineEmits(['click'])
-   const path = () => { router.push('/')
-   }
+   const path = () => { router.push('/')}
 
 </script>
 

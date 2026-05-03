@@ -148,6 +148,10 @@ function getWaterGroupStyle(i) {
   animation: wave-action 1.5s linear infinite;
 }
 
+.timer-countdown{
+  font-weight: 600;
+}
+
 @keyframes wave-action {
   0% { transform: translateX(0); }
   100% { transform: translateX(-32px); }

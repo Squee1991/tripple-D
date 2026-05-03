@@ -292,13 +292,13 @@ button:disabled {
 }
 
 .awards__section:after{
-  position: absolute;
+  position: fixed;
   content: "";
   left: 0;
   right: 0;
-  bottom: -2px;
+  bottom: 0;
   width: 100%;
-  height: 41px;
+  height: 35px;
   background: var(--overlayAfter);
 }
 
