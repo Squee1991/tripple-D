@@ -51,17 +51,18 @@
             <p>{{ t('marathonPrepare.loading') }}</p>
           </div>
         </div>
+        <div class="bottom-action">
+          <button
+              class="start-button"
+              @click="startGame"
+              :disabled="!authStore.uid || !gameStore.isLoaded"
+          >
+            {{ authStore.uid ? t('marathonPrepare.start') : t('marathonPrepare.login') }}
+          </button>
+        </div>
       </div>
+
     </Transition>
-    <div class="bottom-action">
-      <button
-          class="start-button"
-          @click="startGame"
-          :disabled="!authStore.uid || !gameStore.isLoaded"
-      >
-        {{ authStore.uid ? t('marathonPrepare.start') : t('marathonPrepare.login') }}
-      </button>
-    </div>
   </div>
 </template>
 
@@ -172,7 +173,6 @@ const difficultyBase = ref([
   flex-direction: column;
   animation: fadeIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   overflow-y: auto;
-  padding-bottom: calc(env(safe-area-inset-bottom) + 120px);
 }
 
 .prepare-container::-webkit-scrollbar {
@@ -365,18 +365,9 @@ const difficultyBase = ref([
   animation-delay: 0.2s;
 }
 
-
-
-
 .bottom-action {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 25px 20px;
-  z-index: 20;
-  display: flex;
-  justify-content: center;
+  padding: 25px 20px 28px 20px;
+  margin-top: auto;
 }
 
 .start-button {

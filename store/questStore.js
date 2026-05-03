@@ -41,7 +41,8 @@ export const useQuestStore = defineStore('quest', () => {
                 ...item,
                 title: themenMap[index]?.title || '',
                 description: themenMap[index]?.description || '',
-                availableIds: item.recipeIds || []
+                // ИСПРАВЛЕНИЕ: Берем availableIds напрямую из вашего JSON
+                availableIds: item.availableIds || []
             }))
         } catch (err) {
             console.error('Ошибка загрузки тем:', err)

@@ -1,7 +1,7 @@
 <template>
   <div v-if="activeTabKey === 'info'" class="tab-content">
     <VBanner
-        :text="t('Параметры аккаунта')"
+        :text="t('bannerTitles.settings')"
         :icon="SettingIcon"
     />
     <div v-if="isThemeModalOpen" class="modal-overlay" @click.self="isThemeModalOpen = false">
@@ -274,9 +274,20 @@ onMounted(async () => {
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 90px;
+  padding-bottom: 84px;
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+
+.tab-content::after{
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  background: var(--overlayAfter);
 }
 
 .tab-content::-webkit-scrollbar {
@@ -285,7 +296,7 @@ onMounted(async () => {
 
 .settings-section {
   margin-bottom: 24px;
-  padding: 0 16px;
+  padding: 0 8px;
 }
 
 .section-title {

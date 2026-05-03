@@ -1,6 +1,6 @@
 <script setup>
 import {ref, computed} from 'vue'
-
+const { t } = useI18n()
 const emit = defineEmits(['close'])
 const {locales, locale, setLocale} = useI18n()
 const pendingLocale = ref(null)
@@ -34,11 +34,11 @@ const selectLanguage = async (code) => {
   <Teleport to="body">
     <div class="modal-overlay" @click.self="closeModal">
       <div class="modal-card">
-
         <div class="modal-header">
-          <h3 class="modal-title">Язык интерфейса</h3>
+          <h3 class="modal-title">{{ t('cabinetToggle.language')}}</h3>
           <button class="close-btn" @click="closeModal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                 stroke-linejoin="round">
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
@@ -68,16 +68,15 @@ const selectLanguage = async (code) => {
               </div>
               <span class="theme-label">{{ loc.name }}</span>
             </div>
-
             <div class="theme-check" v-if="loc.code === localeCode">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                   stroke-linejoin="round">
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
             </div>
           </label>
-
           <div v-if="filteredLocales.length === 0" class="not-found">
-            Ничего не найдено
+            {{ t('friendExam.notFound')}}
           </div>
         </div>
 
@@ -87,9 +86,17 @@ const selectLanguage = async (code) => {
 </template>
 
 <style scoped>
+
+
 @keyframes popIn {
-  0% { transform: scale(0.8); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .modal-overlay {
@@ -115,7 +122,7 @@ const selectLanguage = async (code) => {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .modal-header {
@@ -232,7 +239,7 @@ const selectLanguage = async (code) => {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .theme-option.active .theme-preview {

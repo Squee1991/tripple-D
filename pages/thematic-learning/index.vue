@@ -282,9 +282,8 @@ watch(topic, loadThemeData)
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  width: 110px;
-  height: 110px;
+  width: 125px;
+  height: 135px;
   background: var(--tabBg);
   border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 20px;
@@ -298,11 +297,12 @@ watch(topic, loadThemeData)
 }
 
 .theme-icon-wrapper {
-  width: 63px;
-  height: 63px;
+  width: 75px;
+  height: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 12px;
 }
 
 .theme-icon {
@@ -312,12 +312,11 @@ watch(topic, loadThemeData)
 }
 
 .theme-name {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--titleColor);
-  opacity: 0.8;
-  text-align: center;
   width: 100%;
+  text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -348,9 +347,10 @@ watch(topic, loadThemeData)
 
 .level-tabs {
   display: flex;
-  background: var(--settingsSectionBg);
+  background: var(--tabBg);
   padding: 5px;
-  border-radius: 18px;
+  border-radius: 30px;
+  border: 3px solid var(--tabsSlideBorderColor);
   gap: 4px;
   width: 100%;
 }
@@ -364,7 +364,7 @@ watch(topic, loadThemeData)
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   font-weight: 800;
-  border-radius: 14px;
+  border-radius: 30px;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;

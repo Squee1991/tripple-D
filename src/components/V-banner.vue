@@ -35,13 +35,13 @@ const bannerStyle = computed(() => {
   justify-content: space-between;
   gap: 15px;
   padding: 20px 25px;
-  border-radius: 20px;
+  border-radius: 24px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1),
   0 4px 0 rgb(0, 150, 200);
   box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3),
   inset 0 -2px 4px rgba(0, 0, 0, 0.1),
   0 6px 0 rgb(0, 160, 220);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   transition: all 0.2s ease;
   cursor: pointer;
   position: relative;

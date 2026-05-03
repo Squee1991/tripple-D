@@ -131,6 +131,7 @@ onMounted(() => {
 .points_header-title {
   text-align: center;
   color: var(--title);
+  font-weight: 600;
   font-size: 23px;
   text-shadow: 0 1px var(--title);
 }
@@ -197,7 +198,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .level-label {

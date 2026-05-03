@@ -9820,7 +9820,8 @@
     "awards": "Rewards for earned achievements and completed tasks",
     "thematic": "Level up your German by completing exciting thematic levels",
     "audio": "Improve your German listening comprehension by completing audio tasks",
-    "images": "Level up your image description skills! Choose a topic to start"
+    "images": "Level up your image description skills! Choose a topic to start",
+    "settings": "Account settings"
   },
   "imageDescription": {
     "listen": "Listen to the dialogue!",

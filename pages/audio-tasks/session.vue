@@ -303,7 +303,6 @@ watch(currentIndex, stopAllAudio)
 .quiz-app {
   height: 100%;
   width: 100%;
-  padding: 8px;
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
   color: #1e272e;
@@ -313,6 +312,7 @@ watch(currentIndex, stopAllAudio)
 }
 
 .quiz-app-container {
+  padding: 5px 10px;
   width: 100%;
   max-width: 700px;
   margin: 0 auto;

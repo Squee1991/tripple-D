@@ -250,7 +250,7 @@ onMounted(() => {
 
 .toon-title {
   font-size: 22px;
-  color: var(--titleColor);
+  color: white;
   margin-left: 10px;
 }
 

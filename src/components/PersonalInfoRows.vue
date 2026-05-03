@@ -12,7 +12,6 @@
         </div>
       </div>
       <div class="stat-card">
-        <!-- Добавлен класс title-icon для точечного увеличения -->
         <div class="stat-icon title-icon">
           <img :src="currentRankIcon" alt="Rank" class="rank-icon-img" />
         </div>
@@ -85,6 +84,52 @@
         </div>
       </div>
     </div>
+    <div class="premium__management">
+      <div
+          class="premium-banner"
+          :class="{
+        'is-active': authStore.isPremium && !authStore.subscriptionCancelled,
+        'is-cancelled': authStore.isPremium && authStore.subscriptionCancelled
+      }"
+      >
+        <div class="premium-content">
+          <h4 v-if="authStore.isPremium && !authStore.subscriptionCancelled">
+            💎 {{ t('cabinet.active') }} Plus
+          </h4>
+          <h4 v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
+            ⚠️ Подписка отменена
+          </h4>
+          <h4 v-else>
+            👑 Стань Plus
+          </h4>
+          <p v-if="authStore.isPremium && !authStore.subscriptionCancelled">
+            📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}
+          </p>
+          <p v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
+            📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}
+          </p>
+          <p v-else>
+            Получи максимум от платформы, ускорь свое обучение.
+          </p>
+        </div>
+        <div class="premium-actions">
+          <button
+              v-if="!authStore.isPremium"
+              @click="routeToPay"
+              class="premium-action-btn"
+          >
+            {{ t('cabinet.buyPremium') }}
+          </button>
+          <button
+              v-if="authStore.isPremium && !authStore.subscriptionCancelled && authStore.paymentSource === 'stripe'"
+              @click.stop="openCancelModal"
+              class="premium-action-btn btn-cancel"
+          >
+            {{ t('cabinet.cancelBtn') }}
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -107,10 +152,20 @@ const rankStore = useRankUserStore()
 const dStore = dailyStore()
 const gameStore = useGameStore()
 const langStore  = userlangStore()
-
+const router = useRouter()
 const completedDailyQuests = computed(() => {
   if (!dStore.todayQuests) return 0
   return dStore.todayQuests.filter(quest => quest.isCompleted).length
+})
+
+const routeToPay = () => {
+  router.push('/pay')
+}
+
+const formattedSubscriptionEndDate = computed(() => {
+  if (!authStore.subscriptionEndsAt) return '-'
+  const date = new Date(authStore.subscriptionEndsAt)
+  return date.toLocaleDateString(locale.value, {year: 'numeric', month: 'long', day: 'numeric'})
 })
 
 const totalAchievements = computed(() => AWARDS.length)
@@ -189,7 +244,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 .profile-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 10px 10px 56px 10px;
   height: 100%;
 }
 
@@ -211,6 +266,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  margin-bottom: 10px;
 }
 
 .stat-card {
@@ -303,6 +359,125 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 @media (max-width: 400px) {
   .stats-grid {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+.premium-banner {
+  margin-top: 5px;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  border-radius: 24px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  box-shadow: 0 3px 0 rgba(236, 72, 153, 0.25);
+  position: relative;
+  overflow: hidden;
+  gap: 15px;
+}
+
+.premium-banner::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+.premium-banner.is-active {
+  background: linear-gradient(135deg, #10b981, #059669);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+}
+
+
+.premium-banner.is-cancelled {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25);
+}
+
+.premium-content h4 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 900;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.premium-content p {
+  margin: 6px 0 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.premium-actions {
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.premium-action-btn {
+  background: #ffffff;
+  color: #db2777;
+  border: none;
+  border-radius: 24px;
+  padding: 14px 20px;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease;
+  white-space: nowrap;
+}
+
+.premium-action-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 transparent;
+}
+
+
+.premium-banner.is-active .premium-action-btn {
+  color: #059669;
+}
+
+.premium-banner.is-cancelled .premium-action-btn {
+  color: #d97706;
+}
+
+.premium-action-btn.btn-cancel {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  box-shadow: none;
+}
+
+.premium-action-btn.btn-cancel:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.premium-action-btn.btn-cancel:active {
+  transform: translateY(2px);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 480px) {
+  .premium-banner {
+    flex-direction: column;
+    text-align: center;
+    align-items: stretch;
+  }
+
+  .premium-actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  .premium-action-btn {
+    width: 100%;
   }
 }
 </style>

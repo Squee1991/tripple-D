@@ -1,20 +1,27 @@
 <script setup>
-import {ref, onMounted, onUnmounted} from 'vue'
+import {ref, onMounted, onUnmounted, computed, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {userAuthStore} from '../store/authStore'
-import {getStripe} from '@/utils/stripe'
+import { getStripe } from '@/utils/stripe'
 import Books from '../assets/images/pay-images/books.svg'
-import Save from '../assets/images/pay-images/save.svg'
 import Ach from '../assets/images/pay-images/ach.svg'
 import Translate from '../assets/images/pay-images/translate.svg'
-import Award from '../assets/images/pay-images/award.svg'
 import Quests from '../assets/images/pay-images/Quests.svg'
 import Speaker from '../assets/images/pay-images/speaker.svg'
 import Exams from '../assets/images/pay-images/test.svg'
-import Competitions from '../assets/images/pay-images/competition.svg'
-import Future from '../assets/images/pay-images/future.svg'
+import Galaxy from '../assets/images/Galaxy.svg'
+import AudioTasks from '../assets/images/headphones.svg'
+import SupportCup from '../assets/images/cupheart.svg'
+import Ads from '../assets/images/ADS.svg'
+import Future from '../assets/images/FutureFunctions.svg'
+import StatsPlus from '../assets/images/StatsPlus.svg'
+import Forever from '../assets/images/forever.svg'
+import Description from '../assets/images/photo-frame.svg'
+import PremiumIcon from '../assets/images/premium.svg'
 import {useSeoMeta} from "#imports";
 import {useBillingStore} from '../store/billingStore'
+import VBanner from "~/src/components/V-banner.vue";
+
 
 const authStore = userAuthStore()
 const billingStore = useBillingStore()
@@ -23,22 +30,33 @@ const showStickyFooter = ref(false)
 const router = useRouter()
 const {t} = useI18n()
 const BASE_PRICE = 1
-const backToMain = () => {
-  router.push('/')
-}
-
-const adsUsual = [
-  'Артикли', 'Угадай слово', 'Игра косм.', 'Аудио задания', 'Описание картинок'
-]
 
 const step = ref(1)
 const selectedDiscountId = ref(null)
+
+
 const submitLoading = ref(false)
 
 const handleBack = () => {
-  if (step.value === 2) step.value = 1
-  else router.push('/')
+  if (step.value === 2) {
+    step.value = 1
+    history.replaceState(null, '')
+  } else {
+    router.back()
+  }
 }
+
+const handlePopState = () => {
+  if (step.value === 2) {
+    step.value = 1
+  }
+}
+
+watch(step, (newStep) => {
+  if (newStep === 2) {
+    history.pushState({step: 2}, '')
+  }
+})
 
 const finalPrice = computed(() => {
   if (billingStore.isMobile && billingStore.offerings.length > 0) {
@@ -51,7 +69,6 @@ const finalPrice = computed(() => {
   return discounted.toFixed(2)
 })
 
-
 const myAvailableCoupons = computed(() => {
   const list = []
   const hasAnyDiscount = authStore.premiumDiscount.sale_5 ||
@@ -63,7 +80,6 @@ const myAvailableCoupons = computed(() => {
   if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_5', percent: 5, label: 'Скидка 5%'})
   if (authStore.premiumDiscount.sale_10) list.push({id: 'sale_10', percent: 10, label: 'Скидка 10%'})
   if (authStore.premiumDiscount.sale_15) list.push({id: 'sale_15', percent: 15, label: 'Скидка 15%'})
-
   return list
 })
 
@@ -79,19 +95,17 @@ useSeoMeta({
 })
 
 let observer
+
 const features = [
-  {title: t('payPage.featureOne'), free: true, premium: true, icon: Books},
-  {title: t('payPage.featureTwo'), free: true, premium: true, icon: Save},
-  {title: t('payPage.featureThree'), free: true, premium: true, icon: Ach},
-  {title: t('payPage.featureFour'), free: true, premium: true, icon: Quests},
-  {title: t('payPage.featureFive'), free: false, premium: true, icon: Translate},
-  {title: t('payPage.featureSix'), free: false, premium: true, icon: Award},
-  {title: t('payPage.featureSeven'), free: false, premium: true, icon: Exams},
-  {title: t('payPage.featureEight'), free: false, premium: true, icon: Speaker},
-  {title: t('payPage.featureNine'), free: false, premium: true, icon: Competitions},
-  {title: t('payPage.featureTen'), free: false, premium: true, icon: Future},
+  {title: t('Обучение без границ'), icon: Forever},
+  {title: t('Расширенная статистика'), icon: StatsPlus},
+  {title: t('Будущие функции'), icon: Future},
+  {title: t('Поддержка разработчиков'), icon: SupportCup},
+  {title: t('Отсутствие рекламы'), icon: Ads},
 ]
+
 onMounted(async () => {
+  window.addEventListener('popstate', handlePopState)
   if (billingStore.isMobile) {
     await billingStore.initialize()
   }
@@ -107,6 +121,7 @@ onMounted(async () => {
 })
 
 onUnmounted(() => {
+  window.removeEventListener('popstate', handlePopState)
   if (observer && payButton.value) {
     observer.unobserve(payButton.value)
   }
@@ -151,9 +166,12 @@ async function pay() {
 <template>
   <div class="pro-vault">
     <div class="vault-nav">
-      <button @click="handleBack" class="circle-btn">
-        <span v-if="step === 1">✕</span>
-        <span v-else>←</span>
+      <button @click="handleBack" class="btn-icon-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
       </button>
       <div class="step-dots">
         <div class="dot" :class="{ active: step === 1 }"></div>
@@ -163,25 +181,25 @@ async function pay() {
     <div class="main-flow">
       <transition name="view-slide" mode="out-in">
         <div v-if="step === 1" key="promo" class="flow-step">
+          <VBanner
+              text="Полный доступ ко всем функциям приложения"
+              :icon="PremiumIcon"
+          />
           <div class="hero-zone">
             <h1 class="hero-title">SKILLUP <span class="neon-text">PLUS</span></h1>
-            <p class="hero-desc">Разблокируй максимум своего обучения</p>
-          </div>
+         </div>
           <div class="perks-grid">
-            <div v-for="(feat, i) in features.filter(f => !f.free)" :key="i" class="perk-card">
+            <div v-for="(feat, i) in features" :key="i" class="perk-card">
               <div class="perk-icon">
-                <img :src="feat.icon" class="icon-svg">
+                <img :src="feat.icon" alt="" class="icon-svg">
               </div>
               <div class="perk-meta">
                 <span class="perk-name">{{ feat.title }}</span>
-                <span class="perk-label">Premium Only</span>
               </div>
             </div>
           </div>
           <div class="footer-action">
-            <button @click="step = 2" class="btn-main-action">
-              ПЕРЕЙТИ К ОПЛАТЕ
-            </button>
+            <button @click="step = 2" class="btn-main-action">ПЕРЕЙТИ К ОПЛАТЕ</button>
           </div>
         </div>
         <div v-else key="checkout" class="flow-step">
@@ -190,7 +208,6 @@ async function pay() {
             <p class="hero-desc">Примени заработанные за активность скидки</p>
           </div>
           <div class="inventory-section">
-            <div class="inventory-header">Доступно в твоем хранилище:</div>
             <div class="inventory-list">
               <div
                   v-for="coupon in myAvailableCoupons"
@@ -212,6 +229,11 @@ async function pay() {
               </div>
             </div>
           </div>
+          <div class="marketing-pitch">
+            <div class="pitch-text">
+              Целый месяц безлимитного немецкого. Это в разы дешевле одного часа с репетитором, но доступно тебе 24/7.
+            </div>
+          </div>
           <div class="billing-summary">
             <div class="bill-line">
               <span class="bill-text">Месяц обучения</span>
@@ -230,9 +252,8 @@ async function pay() {
           </div>
           <div class="footer-action">
             <button @click="pay" class="btn-buy-neon" :disabled="submitLoading">
-              {{ submitLoading ? 'СИНХРОНИЗАЦИЯ...' : 'АКТИВИРОВАТЬ PRO' }}
+              {{ submitLoading ? 'СИНХРОНИЗАЦИЯ...' : 'Приобрести PLUS' }}
             </button>
-            <p class="secure-tag">Secure Payment via Stripe</p>
           </div>
         </div>
       </transition>
@@ -241,34 +262,23 @@ async function pay() {
 </template>
 
 <style scoped>
+
 .pro-vault {
-  min-height: 100vh;
-  min-height: 100dvh;
+  height: 100%;
   background: var(--bg);
-  color: #fff;
+  color: var(--title);
   font-family: 'Nunito', sans-serif;
   display: flex;
+  overflow: hidden;
   padding: 0 10px;
   flex-direction: column;
 }
 
 .vault-nav {
-  height: 60px;
+  padding: 5px 0 15px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 4px;
-}
-
-.circle-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
-  color: #fff;
-  font-size: 18px;
-  font-weight: 800;
 }
 
 .step-dots {
@@ -276,10 +286,16 @@ async function pay() {
   gap: 8px;
 }
 
+.main-flow {
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
 .dot {
   width: 8px;
   height: 8px;
-  background: rgba(255, 255, 255, 0.2);
+  background: #ccceee;
   border-radius: 50%;
   transition: 0.3s;
 }
@@ -291,28 +307,31 @@ async function pay() {
 }
 
 .hero-zone {
-  margin: 25px 0;
+  margin-bottom: 15px;
   text-align: center;
 }
 
 .hero-title {
   font-size: 32px;
   font-weight: 900;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
+  color: var(--title);
+  text-shadow: 2px 2px var(--title);
 }
 
 .neon-text {
+  font-size: 34px;
   color: #6366f1;
-  text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+  text-shadow: 2px 2px #6366f1;
 }
 
 .hero-desc {
-  color: #8e8e93;
+  color: var(--title);
   font-size: 15px;
   margin-top: 6px;
   font-weight: 600;
+  padding: 10px;
 }
-
 
 .perks-grid {
   display: grid;
@@ -320,10 +339,9 @@ async function pay() {
 }
 
 .perk-card {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 14px;
+  border-bottom: 1px solid rgba(103, 101, 101, 0.24);
+  border-radius: 5px;
+  padding: 12px 14px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -332,16 +350,6 @@ async function pay() {
 .perk-icon {
   width: 46px;
   height: 46px;
-  background: #2a2a3d;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.icon-svg {
-  width: 24px;
 }
 
 .perk-meta {
@@ -353,14 +361,7 @@ async function pay() {
 .perk-name {
   font-size: 16px;
   font-weight: 800;
-}
-
-.perk-label {
-  font-size: 11px;
-  color: #6366f1;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-top: 2px;
+  color: var(--title);
 }
 
 .inventory-header {
@@ -423,6 +424,13 @@ async function pay() {
   color: #10b981;
 }
 
+.flow-step{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+}
+
 .loot-glow {
   position: absolute;
   width: 100px;
@@ -439,8 +447,31 @@ async function pay() {
   opacity: 0.2;
 }
 
+.marketing-pitch {
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 18px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.pitch-icon {
+  font-size: 24px;
+}
+
+.pitch-text {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #d1d1d6;
+  text-align: left;
+  font-weight: 600;
+}
+
 .billing-summary {
-  margin-top: 25px;
+  margin-top: 15px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 24px;
@@ -492,7 +523,26 @@ async function pay() {
   color: #fff;
   font-size: 18px;
   font-weight: 900;
-  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 0 #494cdf;
+}
+
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-icon-back:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
 }
 
 .btn-buy-neon {
