@@ -9629,6 +9629,7 @@
     "exit": "IEȘIRE",
     "start": "MISSIYANI BOSHLASH",
     "findGalaxyTitle": "SEKTOR ANIQLANDI",
+    "points": "PUNCTE",
     "errorTitle": "EROARE DE SISTEM",
     "errorBtn": "REVENIRE LA SEDIU"
   },
@@ -9810,7 +9811,8 @@
     "thematic": "Îmbunătățește-ți germana parcurgând niveluri tematice captivante",
     "audio": "Îmbunătățește-ți înțelegerea limbii germane vorbite prin exerciții audio",
     "images": "Îmbunătățește-ți abilitatea de a descrie imagini! Alege o temă pentru a începe",
-    "settings": "Setările contului"
+    "settings": "Setările contului",
+    "achievements": "Colecția ta de toate realizările și recompensele obținute pentru progresul tău"
   },
   "imageDescription": {
     "listen": "Ascultă dialogul!",
@@ -9834,5 +9836,25 @@
     "needTraining": "Trebuie să exersezi!",
     "themeSuccess": "Temă finalizată cu succes!",
     "themeNotSuccess": "Tema nu a fost finalizată."
+  },
+  "galaxySelector": {
+    "constellations": "Constelații",
+    "energy": "Energia navei",
+    "sectorBlock": "SECTOR BLOCAT",
+    "admission": "Necesită acces PLUS",
+    "descriptionPlusOne": "Galaxia",
+    "descriptionPlusTwo": "se află în spațiul îndepărtat! Pentru un hipersalt dincolo de sectorul Alpha este necesar un abonament intergalactic",
+    "descriptionPlusThree": "Achiziționează pentru a debloca toate constelațiile!",
+    "getPlusBtn": "Obține PLUS",
+    "errorDescription": "'Pregătiți-vă pentru debarcare! În această zonă se observă o activitate crescută a limbii germane. Curăță sectorul pentru a restabili ordinea în sistem.'"
+  },
+  "galaxySession": {
+    "errorEnergy": "Baterie descărcată. Așteaptă regenerarea sau achiziționează PLUS.",
+    "errorID": "ID-ul sectorului nu a fost transmis",
+    "errorData": "Nu s-au putut încărca datele galaxiei",
+    "newRecord": "RECORD NOU!",
+    "check": "SCOR:",
+    "again": "Zbor nou",
+    "constellations": "Părăsește constelația"
   }
 }

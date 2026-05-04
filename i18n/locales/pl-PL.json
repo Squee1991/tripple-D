@@ -9643,6 +9643,7 @@
     "exit": "WYJŚCIE",
     "start": "ROZPOCZNIJ MISJĘ",
     "findGalaxyTitle": "SEKTOR WYKRYTY",
+    "points": "PUNKTY",
     "errorTitle": "AWARIA SYSTEMU",
     "errorBtn": "POWRÓT DO SZTABU"
   },
@@ -9824,7 +9825,8 @@
     "thematic": "Podszkol swój niemiecki, przechodząc przez ciekawe poziomy tematyczne",
     "audio": "Popraw swoje rozumienie ze słuchu в języku niemieckim, wykonując zadania audio",
     "images": "Podszkol umiejętność opisywania obrazków! Wybierz temat, aby zacząć",
-    "settings": "Ustawienia konta"
+    "settings": "Ustawienia konta",
+    "achievements": "Twoja kolekcja wszystkich zdobytych osiągnięć i nagród za Twoje postępy"
   },
   "imageDescription": {
     "listen": "Posłuchaj dialogu!",
@@ -9848,5 +9850,25 @@
     "needTraining": "Musisz poćwiczyć!",
     "themeSuccess": "Temat pomyślnie ukończony!",
     "themeNotSuccess": "Temat nieukończony."
+  },
+  "galaxySelector": {
+    "constellations": "Gwiazdozbiory",
+    "energy": "Energia statku",
+    "sectorBlock": "SEKTOR ZABLOKOWANY",
+    "admission": "Wymagany dostęp PLUS",
+    "descriptionPlusOne": "Galaktyka",
+    "descriptionPlusTwo": "znajduje się w dalekim kosmosie! Hiperskoku poza sektor Alfa wymaga międzygalaktycznej subskrypcji",
+    "descriptionPlusThree": "Kup teraz, aby odblokować wszystkie gwiazdozbiory!",
+    "getPlusBtn": "Zdobądź PLUS",
+    "errorDescription": "'Przygotuj się do lądowania! W tym obszarze obserwuje się wzmożoną aktywność języka niemieckiego. Oczyść sektor, aby przywrócić porządek w systemie.'"
+  },
+  "galaxySession": {
+    "errorEnergy": "Bateria rozładowana. Poczekaj na odnowienie lub kup PLUS.",
+    "errorID": "ID sektora nie zostało przekazane",
+    "errorData": "Nie udało się załadować danych galaktyki",
+    "newRecord": "NOWY REKORD!",
+    "check": "WYNIK:",
+    "again": "Ponowny wylot",
+    "constellations": "Opuść gwiazdozbiór"
   }
 }

@@ -24,10 +24,8 @@
         <nav class="nav-container">
           <div
               class="sliding-bg"
-              :style="{
-                transform: isMobile ? `translateX(${activeIndex * 100}%)` : `translateY(${activeIndex * 100}%)`,
-                opacity: activeIndex === -1 ? 0 : 1
-              }"
+              :class="{ 'no-transition': !enableTransition }"
+              :style="{ transform: isMobile ? `translateX(${activeIndex * 100}%)` : `translateY(${activeIndex * 100}%)`, opacity: activeIndex === -1 ? 0 : 1}"
           ></div>
           <button
               v-for="tabItem in TAB_ITEMS"
@@ -91,7 +89,9 @@
                       <div class="account-tabs">
                         <div
                             class="sliding-bg-account"
-                            :style="{ transform: `translateX(${activeAccountIndex * 100}%)`,  opacity: activeAccountIndex === -1 ? 0 : 1  }"></div>
+                            :class="{ 'no-transition': !enableTransition }"
+                            :style="{ transform: `translateX(${activeAccountIndex * 100}%)`, opacity: activeAccountIndex === -1 ? 0 : 1 }"
+                        ></div>
                         <button
                             v-for="tab in ACCOUNT_TABS"
                             :key="tab.key"
@@ -297,7 +297,7 @@ const selectedAvatarName = ref(null)
 const isPurchaseModalOpen = ref(false)
 const purchaseAvatarName = ref(null)
 const iconDisplay = ref(true)
-
+const enableTransition = ref(false)
 const userNameSafe = computed(() => authStore.initialized && authStore.name ? authStore.name : '—')
 
 const iconDisplayComputed = computed(() => ({"iconHide": iconDisplay.value}))
@@ -496,6 +496,9 @@ const handleResize = () => {
 onMounted(async () => {
   handleResize()
   window.addEventListener('resize', handleResize)
+  setTimeout(() => {
+    enableTransition.value = true
+  }, 50)
   await learningStore.loadFromFirebase()
   await eventStore.loadGlobalWinterSettings()
   friendsStore.loadFriends()
@@ -865,7 +868,7 @@ onMounted(async () => {
   .sidebar-panel {
     position: fixed;
     left: 50%;
-    bottom: 22px;
+    bottom: 21px;
     transform: translateX(-50%);
     width: calc(100% - 20px);
     height: 63px;
@@ -1056,4 +1059,9 @@ onMounted(async () => {
   font-weight: 800;
   text-align: start;
 }
+
+.no-transition {
+  transition: none !important;
+}
+
 </style>

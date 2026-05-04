@@ -9,13 +9,13 @@
     >
       <div class="premium-content">
         <h4 v-if="authStore.isPremium && !authStore.subscriptionCancelled">
-          💎 {{ t('cabinet.active') }} Premium
+          💎 {{ t('cabinet.active') }} PLUS
         </h4>
         <h4 v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
           ⚠️ Подписка отменена
         </h4>
         <h4 v-else>
-          👑 Стань Premium
+          👑 SKILLUP PLUS
         </h4>
         <p v-if="authStore.isPremium && !authStore.subscriptionCancelled">
           📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}

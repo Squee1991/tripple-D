@@ -9640,6 +9640,7 @@
     "exit": "EXIT",
     "start": "START MISSION",
     "findGalaxyTitle": "SECTOR DISCOVERED",
+    "points": "POINTS",
     "errorTitle": "SYSTEM FAILURE",
     "errorBtn": "RETURN TO HEADQUARTERS"
   },
@@ -9821,7 +9822,8 @@
     "thematic": "Level up your German by completing exciting thematic levels",
     "audio": "Improve your German listening comprehension by completing audio tasks",
     "images": "Level up your image description skills! Choose a topic to start",
-    "settings": "Account settings"
+    "settings": "Account settings",
+    "achievements": "Your collection of all earned achievements and rewards for your progress"
   },
   "imageDescription": {
     "listen": "Listen to the dialogue!",
@@ -9845,5 +9847,25 @@
     "needTraining": "Need to practice!",
     "themeSuccess": "Topic completed successfully!",
     "themeNotSuccess": "Topic not completed."
+  },
+  "galaxySelector": {
+    "constellations": "Constellations",
+    "energy": "Ship energy",
+    "sectorBlock": "SECTOR LOCKED",
+    "admission": "PLUS access required",
+    "descriptionPlusOne": "Galaxy",
+    "descriptionPlusTwo": "is in deep space! A hyperjump beyond the Alpha sector requires an intergalactic subscription",
+    "descriptionPlusThree": "Purchase to unlock all constellations!",
+    "getPlusBtn": "Get PLUS",
+    "errorDescription": "'Prepare for landing! Increased German language activity is observed in this area. Clear the sector to restore order to the system.'"
+  },
+  "galaxySession": {
+    "errorEnergy": "Battery discharged. Wait for restoration or purchase PLUS.",
+    "errorID": "Sector ID not provided",
+    "errorData": "Failed to load galaxy data",
+    "newRecord": "NEW RECORD!",
+    "check": "SCORE:",
+    "again": "Fly again",
+    "constellations": "Leave constellation"
   }
 }

@@ -33,12 +33,22 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
+
 const props = defineProps({
   show: Boolean,
   correctCount: Number,
   requiredTasks: Number,
   wallet: Number,
-  canBuyLife: Boolean
+  canBuyLife: Boolean,
+  remainingAds: {
+    type: Number,
+    default: 0
+  },
+  // ДОБАВЛЯЕМ НОВЫЙ ПРОП
+  cancelText: {
+    type: String,
+    default: ''
+  }
 })
 
 const emit = defineEmits(['purchase', 'back', 'watchAd'])
@@ -54,26 +64,36 @@ const walletDetails = computed(() => [
   }
 ])
 
-const actionButtons = computed(() => [
-  {
-    text: 'Смотреть рекламу',
-    action: () => emit('watchAd'),
-    disabled: false,
-    style: 'btn--ad'
-  },
-  {
+const actionButtons = computed(() => {
+  const buttons = []
+
+  if (props.remainingAds > 0) {
+    buttons.push({
+      text: `Смотреть рекламу (${props.remainingAds})`,
+      action: () => emit('watchAd'),
+      disabled: false,
+      style: 'btn--ad'
+    })
+  }
+
+  buttons.push({
     text: props.canBuyLife ? t('questCompletedModals.buy') : t('questCompletedModals.notEnough'),
     action: () => emit('purchase'),
     disabled: !props.canBuyLife,
     style: ''
-  },
-  {
-    text: t('questCompletedModals.back'),
+  })
+
+  // МЕНЯЕМ ЛОГИКУ ТЕКСТА ТУТ
+  // Если передали cancelText, используем его. Иначе старый дефолтный текст.
+  buttons.push({
+    text: props.cancelText ? props.cancelText : t('questCompletedModals.back'),
     action: () => emit('back'),
     disabled: false,
     style: 'btn--primary'
-  }
-])
+  })
+
+  return buttons
+})
 </script>
 
 <style scoped>
