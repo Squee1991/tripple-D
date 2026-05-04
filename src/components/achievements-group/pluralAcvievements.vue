@@ -73,15 +73,23 @@ const getCompletedCount = group =>
 }
 
 .group-header {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1),
+  0 4px 0 rgb(0, 150, 200);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3),
+  inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+  0 6px 0 rgb(0, 160, 220);
+  background: #00c2ff;
+  justify-content: space-between;
   display: flex;
   align-items: center;
-  padding-bottom: 1rem;
-  border-bottom: 3px dashed rgba(27, 27, 27, 0.5);
+  padding: 25px 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
 }
 
 .group-title {
   font-size: 20px;
-  color: var(--titleColor);
+  color: white;
   margin-right: 10px;
 }
 
@@ -93,8 +101,8 @@ const getCompletedCount = group =>
   background: #ffffff;
   border-radius: 100px;
   font-weight: 600;
-  border: 3px solid #1e1e1e;
-  box-shadow: 2px 2px 0px #1e1e1e;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   white-space: nowrap;
   transition: all 0.2s ease;
 }
@@ -107,21 +115,22 @@ const getCompletedCount = group =>
 .achievements-list {
   display: flex;
   flex-direction: column;
+  padding: 1px;
 }
 
 .achievement__card {
   display: flex;
   align-items: flex-start;
-  border: 2px solid #1e1e1e;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   padding: 1rem;
   gap: 8px;
   border-radius: 20px;
   background-color: #fff;
-  box-shadow: 3px 3px 0px #1e1e1e;
   text-align: left;
   width: 650px;
   transition: all 0.2s ease;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   overflow: hidden;
 }
 
@@ -131,7 +140,7 @@ const getCompletedCount = group =>
   height: 60px;
   background: #60a5fa;
   border-radius: 16px;
-  border: 3px solid #1e1e1e;
+  border: 2px solid var(--tabsSlideBorderColor);
   display: flex;
   justify-content: center;
   align-items: center;

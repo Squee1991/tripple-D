@@ -198,6 +198,7 @@
         :required-tasks="questStore.requiredTasks"
         :wallet="wallet"
         :can-buy-life="canBuyLife"
+        :remaining-ads="remainingAds"
         @purchase="purchaseLife"
         @watchAd="watchAdForLife"
         @back="goThemes"
@@ -244,6 +245,8 @@ const langStore = userlangStore()
 const forceRevive = ref(false)
 const showTipModal = ref(false)
 const isAdLoading = ref(false)
+const MAX_ADS = 5;
+const remainingAds = ref(MAX_ADS);
 const PRICE = 10
 const questId = computed(() => {
   const rawId = String(route.params.id || route.params.questId || '')
@@ -284,9 +287,25 @@ function updateTimer() {
   rafId = requestAnimationFrame(updateTimer)
 }
 
-onMounted(() => {
-  updateTimer()
-})
+function updateRemainingAds() {
+  const today = new Date();
+  const todayKey = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+  const statsStr = localStorage.getItem('adRewardStats');
+  if (!statsStr) {
+    remainingAds.value = MAX_ADS;
+    return;
+  }
+  try {
+    const stats = JSON.parse(statsStr);
+    if (stats.date !== todayKey) {
+      remainingAds.value = MAX_ADS;
+    } else {
+      remainingAds.value = Math.max(0, MAX_ADS - stats.count);
+    }
+  } catch (e) {
+    remainingAds.value = MAX_ADS;
+  }
+}
 
 onBeforeUnmount(() => {
   if (rafId) cancelAnimationFrame(rafId)
@@ -507,6 +526,7 @@ function watchAdForLife() {
         if (questStore.finished && !questStore.success) questStore.finished = false;
         if (!questStore.sessionStarted) questStore.sessionStarted = true;
         forceRevive.value = false;
+        updateRemainingAds();
       },
       (gotReward) => {
         isAdLoading.value = false;
@@ -560,6 +580,11 @@ watch([questId, regionKey], () => {
 onBeforeUnmount(() => {
   window.removeEventListener('beforeunload', beforeUnloadHandler)
   if (rafId) cancelAnimationFrame(rafId)
+})
+
+onMounted(() => {
+  updateTimer()
+  updateRemainingAds()
 })
 
 watchEffect(() => {

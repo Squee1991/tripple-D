@@ -4164,17 +4164,17 @@
     "answerThree": "Şu anda kalan günler için iade mevcut değildir."
   },
   "daily": {
-    "first": "Tüm modlarda 10 kelime öğren: Artikel Pratiği",
-    "second": "Artikel pratiğinde 10 Artikluso kazan",
-    "third": "Artikel maratonunda 10 kelimelik seri yap (kolay mod)",
-    "fourth": "Artikel Pratiğinde 15 deneyim puanı kazan",
-    "fifth": "«Kelimeyi Tahmin Et» modunda 10 kelime tahmin et",
-    "sixth": "Artikel maratonunda 10 kelimelik seri yap (orta mod)",
-    "seventh": "Artikel Pratiği modunda 10 çoğul kelime öğren",
-    "eighth": "Tüm modlarda 10 kelime öğren: Artikel Pratiği",
-    "ninth": "Ses modunda 10 kelime öğren: Artikel Pratiği",
-    "tenth": "Artikel maratonunda 10 kelimelik seri yap (zor mod)",
-    "eleventh": "Artikel Pratiğinde 10 deneyim puanı kazan",
+    "first": "Tüm modlarda 5 kelime öğren: Artikel Pratiği",
+    "second": "Artikel pratiğinde 5 Artikluso kazan",
+    "third": "Artikel maratonunda 5 kelimelik seri yap (kolay mod)",
+    "fourth": "Artikel Pratiğinde 5 deneyim puanı kazan",
+    "fifth": "«Kelimeyi Tahmin Et» modunda 5 kelime tahmin et",
+    "sixth": "Artikel maratonunda 5 kelimelik seri yap (orta mod)",
+    "seventh": "Artikel Pratiği modunda 5 çoğul kelime öğren",
+    "eighth": "Tüm modlarda 5 kelime öğren: Artikel Pratiği",
+    "ninth": "Ses modunda 5 kelime öğren: Artikel Pratiği",
+    "tenth": "Artikel maratonunda 5 kelimelik seri yap (zor mod)",
+    "eleventh": "Artikel Pratiğinde 5 deneyim puanı kazan",
     "twelve": "Tematik seviyelerde bir modülü tamamla",
     "thirteenth": "Dil diyarlarında bir görevi tamamla",
     "fourteenth": "«Kelimeyi Tahmin Et» modunda 5 kelime tahmin et"
@@ -9614,6 +9614,7 @@
     "exit": "ÇIKIŞ",
     "start": "GÖREVE BAŞLA",
     "findGalaxyTitle": "SEKTÖR TESPİT EDİLDİ",
+    "points": "PUAN",
     "errorTitle": "SİSTEM ARIZASI",
     "errorBtn": "KARARGAHA DÖN"
   },
@@ -9795,7 +9796,8 @@
     "thematic": "Eğlenceli tematik seviyeleri geçerek Almancanı geliştir",
     "audio": "Sesli görevleri tamamlayarak Almanca dinleme becerini geliştir",
     "images": "Resim betimleme becerini geliştir! Başlamak için bir tema seç",
-    "settings": "Hesap ayarları"
+    "settings": "Hesap ayarları",
+    "achievements": "İlerlemen için kazandığın tüm başarıların ve ödüllerin koleksiyonu"
   },
   "imageDescription": {
     "listen": "Diyaloğu dinleyin!",
@@ -9819,5 +9821,25 @@
     "needTraining": "Pratik yapman gerek!",
     "themeSuccess": "Konu başarıyla tamamlandı!",
     "themeNotSuccess": "Konu tamamlanmadı."
+  },
+  "galaxySelector": {
+    "constellations": "Takımyıldızlar",
+    "energy": "Gemi enerjisi",
+    "sectorBlock": "SEKTÖR ENGELLENDİ",
+    "admission": "PLUS izni gerekiyor",
+    "descriptionPlusOne": "Galaksi",
+    "descriptionPlusTwo": "derin uzayda bulunuyor! Alfa sektörünün ötesine hiper sıçrama yapmak için galaksiler arası abonelik gereklidir",
+    "descriptionPlusThree": "Tüm takımyıldızları açmak için satın alın!",
+    "getPlusBtn": "PLUS Al",
+    "errorDescription": "'İniş için hazırlanın! Bu bölgede yoğun Almanca aktivitesi gözlemleniyor. Sistemdeki düzeni sağlamak için sektörü temizleyin.'"
+  },
+  "galaxySession": {
+    "errorEnergy": "Batarya boşaldı. Yenilenmesini bekleyin veya PLUS satın alın.",
+    "errorID": "Sektör kimliği (ID) iletilmedi",
+    "errorData": "Galaksi verileri yüklenemedi",
+    "newRecord": "YENİ REKOR!",
+    "check": "PUAN:",
+    "again": "Yeniden havalan",
+    "constellations": "Takımyıldızdan ayrıl"
   }
 }

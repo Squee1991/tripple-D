@@ -2,18 +2,49 @@ import { AdMob, InterstitialAdPluginEvents, RewardAdPluginEvents } from '@capaci
 import { Capacitor } from '@capacitor/core';
 
 let isAdProcessing = false;
+const AD_LIMIT_PER_DAY = 5;
+
+function getTodayKey() {
+	const today = new Date();
+	return `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+}
+
+function canShowRewardedAd() {
+	const todayKey = getTodayKey();
+	const statsStr = localStorage.getItem('adRewardStats');
+	if (!statsStr) return true;
+
+	const stats = JSON.parse(statsStr);
+	// Если наступил новый день, разрешаем
+	if (stats.date !== todayKey) return true;
+	// Проверяем, не превышен ли лимит на сегодня
+	return stats.count < AD_LIMIT_PER_DAY;
+}
+
+function recordSuccessfulView() {
+	const todayKey = getTodayKey();
+	const statsStr = localStorage.getItem('adRewardStats');
+	let stats = { date: todayKey, count: 0 };
+
+	if (statsStr) {
+		const parsedStats = JSON.parse(statsStr);
+		if (parsedStats.date === todayKey) {
+			stats = parsedStats; // Продолжаем счетчик текущего дня
+		}
+	}
+	stats.count++;
+	localStorage.setItem('adRewardStats', JSON.stringify(stats));
+	console.log(`Пользователь берет бонус! Использовано: ${stats.count}/${AD_LIMIT_PER_DAY}`);
+}
 
 export async function showInterstitial(nextStep) {
 	if (!Capacitor.isNativePlatform()) {
 		return nextStep();
 	}
-
-	if (isAdProcessing) return; // Если уже грузится реклама — игнорим клик
+	if (isAdProcessing) return;
 	isAdProcessing = true;
+	let hasTransitioned = false;
 
-	let hasTransitioned = false; // Защита от двойного перехода
-
-	// Умная функция перехода
 	const goNext = () => {
 		if (!hasTransitioned) {
 			hasTransitioned = true;
@@ -21,14 +52,12 @@ export async function showInterstitial(nextStep) {
 			nextStep();
 		}
 	};
-
 	// Слушатель закрытия рекламы
 	const listener = await AdMob.addListener(InterstitialAdPluginEvents.Dismissed, () => {
 		console.log('Реклама закрыта, начинаем задание!');
 		listener.remove();
-		goNext(); // СТРОГО запускаем переход только тут!
+		goNext(); // запускаем переход тут!
 	});
-
 	try {
 		// Подготавливаем (качаем по сети)
 		await AdMob.prepareInterstitial({
@@ -44,19 +73,28 @@ export async function showInterstitial(nextStep) {
 		goNext(); // Если нет инета или AdBlock - пускаем сразу
 	}
 }
-
-export async function showRewarded(onReward, onComplete) {
+// Добавлен третий параметр onLimitReached
+export async function showRewarded(onReward, onComplete, onLimitReached) {
 	if (!Capacitor.isNativePlatform()) {
 		onReward();
 		return onComplete(true);
 	}
+	if (!canShowRewardedAd()) {
+		console.log("Дневной лимит рекламы исчерпан.");
+		if (onLimitReached) onLimitReached();
+		return;
+	}
+
 	if (isAdProcessing) return;
 	isAdProcessing = true;
 	let rewardReceived = false;
+
 	const rewardListener = await AdMob.addListener(RewardAdPluginEvents.Rewarded, () => {
 		rewardReceived = true;
+		recordSuccessfulView(); // Записываем просмотр в localStorage
 		onReward();
 	});
+
 	const dismissListener = await AdMob.addListener(RewardAdPluginEvents.Dismissed, () => {
 		rewardListener.remove();
 		dismissListener.remove();

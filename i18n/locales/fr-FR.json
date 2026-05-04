@@ -9622,6 +9622,7 @@
     "exit": "QUITTER",
     "start": "COMMENCER LA MISSION",
     "findGalaxyTitle": "SECTEUR DÉCOUVERT",
+    "points": "POINTS",
     "errorTitle": "DÉFAILLANCE DU SYSTÈME",
     "errorBtn": "RETOURNER AU QUARTIER GÉNÉRAL"
   },
@@ -9803,7 +9804,8 @@
     "thematic": "Améliorez votre allemand en parcourant des niveaux thématiques passionnants",
     "audio": "Améliorez votre compréhension orale de l'allemand en effectuant des exercices audio",
     "images": "Améliorez votre capacité à décrire des images ! Choisissez un thème pour commencer",
-    "settings": "Paramètres du compte"
+    "settings": "Paramètres du compte",
+    "achievements": "Ta collection de tous les succès et récompenses obtenus pour ta progression"
   },
   "imageDescription": {
     "listen": "Écoutez le dialogue !",
@@ -9827,5 +9829,25 @@
     "needTraining": "Il faut s'entraîner !",
     "themeSuccess": "Thème terminé avec succès !",
     "themeNotSuccess": "Thème non terminé."
+  },
+  "galaxySelector": {
+    "constellations": "Constellations",
+    "energy": "Énergie du vaisseau",
+    "sectorBlock": "SECTEUR VERROUILLÉ",
+    "admission": "Accès PLUS requis",
+    "descriptionPlusOne": "La galaxie",
+    "descriptionPlusTwo": "se trouve dans l'espace lointain ! Un hypersaut au-delà du secteur Alpha nécessite un abonnement intergalactique",
+    "descriptionPlusThree": "Achetez pour débloquer toutes les constellations !",
+    "getPlusBtn": "Obtenir PLUS",
+    "errorDescription": "'Préparez-vous au débarquement ! Une activité accrue de la langue allemande est observée dans cette zone. Nettoyez le secteur pour restaurer l'ordre dans le système.'"
+  },
+  "galaxySession": {
+    "errorEnergy": "Batterie déchargée. Attendez la récupération ou achetez le PLUS.",
+    "errorID": "L'ID du secteur n'a pas été transmis",
+    "errorData": "Impossible de charger les données de la galaxie",
+    "newRecord": "NOUVEAU RECORD !",
+    "check": "SCORE :",
+    "again": "Repartir en mission",
+    "constellations": "Quitter la constellation"
   }
 }

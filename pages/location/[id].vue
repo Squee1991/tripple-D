@@ -1,5 +1,9 @@
 <template>
   <div class="location-page">
+    <div v-if="isAdLoading" class="ad-overlay">
+      <div class="ad-spinner"></div>
+    </div>
+
     <div class="location__wrapper">
       <header class="location-header" :class="{ 'rtl-locale': locale === 'ar' }">
         <VBackBtn/>
@@ -26,13 +30,10 @@
             >
               <div v-if="quest.isPerfect" class="stamp">{{ t('locationQuests.done') }}</div>
               <div v-else-if="quest.hasMistakes" class="stamp stamp--mistakes">{{ t('locationQuests.mistakes') }}</div>
-
               <div class="stamp__icon-wrapper">
                 <img class="stamp__icon" src="../../assets/images/questList.svg" alt="questList">
               </div>
-
               <p class="quest__description">{{ t(quest.description) }}</p>
-
               <div class="quest-meta">
                 <span v-if="!quest.isSuccess" class="rewards-container">
                   <span>{{ t('locationQuests.awards') }}</span>
@@ -46,7 +47,6 @@
                   {{ t('locationQuests.gotAward') }} <span style="font-size:18px;">✅</span>
                 </span>
               </div>
-
               <button
                   class="btn"
                   :style="quest.btnStyle"
@@ -68,27 +68,53 @@
         <div v-else-if="!isLoading" class="empty">{{ t('locationQuests.notFound') }}</div>
       </div>
     </div>
+    <VReviveModal
+        :show="showNoLivesModal"
+        :correct-count="0"
+        :required-tasks="0"
+        :wallet="wallet"
+        :can-buy-life="canBuyLife"
+        :remaining-ads="remainingAds"
+        @purchase="purchaseLife"
+        @watchAd="watchAdForLife"
+        @back="closeModal"
+        cancel-text="Закрыть"
+    />
   </div>
 </template>
 
 <script setup>
-import {ref, computed, watch, onMounted} from "vue";
-import {useRoute, useRouter} from "vue-router";
-import {regions} from "~/utils/regions.js";
-import {userChainStore} from "~/store/chainStore.js";
-import {useSeoMeta} from '#imports';
+import { ref, computed, watch, onMounted } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import { regions } from "~/utils/regions.js";
+import { userChainStore } from "~/store/chainStore.js";
+import { userlangStore } from '~/store/learningStore.js';
+import { useSeoMeta } from '#imports';
 import VHearts from '../../src/components/V-hearts.vue';
 import VBackBtn from "~/src/components/V-back-btn.vue";
-import {showInterstitial} from '~/utils/admob.js';
+import VReviveModal from "~/src/components/V-reviveModal.vue";
+import { showInterstitial, showRewarded } from '~/utils/admob.js';
 import VTransition from "~/src/components/V-transition.vue";
 
 const route = useRoute();
 const router = useRouter();
-const {t, locale} = useI18n();
+const { t, locale } = useI18n();
 const chainStore = userChainStore();
+const langStore = userlangStore();
+
 const questList = ref([]);
 const isLoading = ref(true);
 const errorMessage = ref("");
+
+const showNoLivesModal = ref(false);
+const isAdLoading = ref(false);
+const pendingQuest = ref(null);
+const PRICE = 10;
+const MAX_ADS = 5;
+const remainingAds = ref(MAX_ADS);
+
+const wallet = computed(() => Number(langStore.points || 0));
+const canBuyLife = computed(() => wallet.value >= PRICE);
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -103,6 +129,28 @@ const currentRegion = computed(() => {
 const questsUrl = computed(() => {
   return `/quests/quests-${currentRegionKey.value}.json`;
 });
+
+function updateRemainingAds() {
+  const today = new Date();
+  const todayKey = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+  const statsStr = localStorage.getItem('adRewardStats');
+
+  if (!statsStr) {
+    remainingAds.value = MAX_ADS;
+    return;
+  }
+
+  try {
+    const stats = JSON.parse(statsStr);
+    if (stats.date !== todayKey) {
+      remainingAds.value = MAX_ADS;
+    } else {
+      remainingAds.value = Math.max(0, MAX_ADS - stats.count);
+    }
+  } catch (e) {
+    remainingAds.value = MAX_ADS;
+  }
+}
 
 async function fetchQuests() {
   if (!currentRegionKey.value) return;
@@ -163,20 +211,94 @@ const processedQuests = computed(() => {
   });
 });
 
-function handleStartQuest(quest) {
-  if (!quest?.questId) return;
-  showInterstitial(() => {
+function proceedToQuest(quest, skipAd = false) {
+  const navigateToQuest = () => {
     router.push({
       path: `/location/quest-${quest.questId}`,
-      query: {region: currentRegionKey.value}
+      query: { region: currentRegionKey.value }
     });
-  });
+  };
+  if (skipAd) {
+
+    navigateToQuest();
+  } else {
+    showInterstitial(navigateToQuest);
+  }
 }
 
-watch(currentRegionKey, fetchQuests, {immediate: true});
+function handleStartQuest(quest) {
+  if (!quest?.questId) return;
+
+  if (chainStore.lives <= 0) {
+    pendingQuest.value = quest;
+    showNoLivesModal.value = true;
+    return;
+  }
+
+  proceedToQuest(quest, false);
+}
+
+async function trySpendLocal(amount) {
+  amount = Number(amount) || 0;
+  if (amount <= 0) return true;
+  if ((langStore.points ?? 0) < amount) return false;
+
+  langStore.points -= amount;
+  langStore.articlesSpentForAchievement = Number(langStore.articlesSpentForAchievement || 0) + amount;
+  if (typeof langStore.saveToFirebase === 'function') {
+    try {
+      await langStore.saveToFirebase();
+    } catch {}
+  }
+  return true;
+}
+
+async function purchaseLife() {
+  if (!canBuyLife.value) return;
+  const ok = await trySpendLocal(PRICE);
+  if (!ok) return;
+
+  await chainStore.addLife(1);
+  showNoLivesModal.value = false;
+
+  if (pendingQuest.value) {
+    proceedToQuest(pendingQuest.value, false);
+    pendingQuest.value = null;
+  }
+}
+
+function watchAdForLife() {
+  isAdLoading.value = true;
+  showRewarded(
+      async () => {
+        await chainStore.addLife(1);
+        updateRemainingAds();
+        showNoLivesModal.value = false;
+
+        if (pendingQuest.value) {
+          proceedToQuest(pendingQuest.value, true);
+          pendingQuest.value = null;
+        }
+      },
+      (gotReward) => {
+        isAdLoading.value = false;
+        if (!gotReward) {
+          console.log("Юзер закрыл рекламу раньше времени.");
+        }
+      }
+  );
+}
+
+function closeModal() {
+  showNoLivesModal.value = false;
+  pendingQuest.value = null;
+}
+
+watch(currentRegionKey, fetchQuests, { immediate: true });
 
 onMounted(async () => {
   await chainStore.loadProgressFromFirebase();
+  updateRemainingAds();
 });
 </script>
 

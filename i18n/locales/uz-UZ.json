@@ -4166,17 +4166,17 @@
     "answerThree": "Hozircha qolgan kunlar uchun pul qaytarish nazarda tutilmagan."
   },
   "daily": {
-    "first": "Barcha rejimlarda 10 ta so'z o'rgan: Artikllar amaliyoti",
-    "second": "Artikllar amaliyotida 10 ta artiklyus ol",
-    "third": "Artikllar marafonida 10 ta so'zli strik qil (oson rejim)",
-    "fourth": "Artikllar amaliyotida 15 tajriba ochkosini to'pla",
-    "fifth": "«So'zni top» rejimida 10 ta so'zni top",
-    "sixth": "Artikllar marafonida 10 ta so'zli strik qil (o'rta rejim)",
-    "seventh": "Artikllar amaliyoti rejimida 10 ta ko'plikdagi so'zni o'rgan",
-    "eighth": "Barcha rejimlarda 10 ta so'z o'rgan: Artikllar amaliyoti",
-    "ninth": "Audio rejimida 10 ta so'z o'rgan: Artikllar amaliyoti",
-    "tenth": "Artikllar marafonida 10 ta so'zli strik qil (qiyin rejim)",
-    "eleventh": "Artikllar amaliyotida 10 tajriba ochkosini to'pla",
+    "first": "Barcha rejimlarda 5 ta so'z o'rgan: Artikllar amaliyoti",
+    "second": "Artikllar amaliyotida 5 ta artiklyus ol",
+    "third": "Artikllar marafonida 5 ta so'zli strik qil (oson rejim)",
+    "fourth": "Artikllar amaliyotida 5 tajriba ochkosini to'pla",
+    "fifth": "«So'zni top» rejimida 5 ta so'zni top",
+    "sixth": "Artikllar marafonida 5 ta so'zli strik qil (o'rta rejim)",
+    "seventh": "Artikllar amaliyoti rejimida 5 ta ko'plikdagi so'zni o'rgan",
+    "eighth": "Barcha rejimlarda 5 ta so'z o'rgan: Artikllar amaliyoti",
+    "ninth": "Audio rejimida 5 ta so'z o'rgan: Artikllar amaliyoti",
+    "tenth": "Artikllar marafonida 5 ta so'zli strik qil (qiyin rejim)",
+    "eleventh": "Artikllar amaliyotida 5 tajriba ochkosini to'pla",
     "twelve": "Mavzuli darajalarda bitta modulni yakunla",
     "thirteenth": "Til diyarlarida bitta topshiriqni bajar",
     "fourteenth": "«So'zni top» rejimida 5 ta so'zni top"
@@ -9617,6 +9617,7 @@
     "exit": "CHIQISH",
     "start": "MISSIYANI BOSHLASH",
     "findGalaxyTitle": "SEKTOR ANIQLANDI",
+    "points": "OCHKO",
     "errorTitle": "TIZIMDA XATOLIK",
     "errorBtn": "SHTABGA QAYTISH"
   },
@@ -9798,7 +9799,8 @@
     "thematic": "Qiziqarli mavzu darajalaridan o'tib, nemis tilingizni rivojlantiring",
     "audio": "Audio topshiriqlarni bajarib, nemis tilini eshitib tushunishni rivojlantiring",
     "images": "Rasmlarni tasvirlash qobiliyatingizni rivojlantiring! Boshlash uchun mavzu tanlang",
-    "settings": "Hisob sozlamalari"
+    "settings": "Hisob sozlamalari",
+    "achievements": "Sening progressiyang uchun olingan barcha yutuqlar va mukofotlarning kolleksiyasi"
   },
   "imageDescription": {
     "listen": "Dialogni tinglang!",
@@ -9822,5 +9824,25 @@
     "needTraining": "Mashq qilish kerak!",
     "themeSuccess": "Mavzu muvaffaqiyatli yakunlandi!",
     "themeNotSuccess": "Mavzu yakunlanmadi."
+  },
+  "galaxySelector": {
+    "constellations": "Yulduz turkumlari",
+    "energy": "Kema energiyasi",
+    "sectorBlock": "SEKTOR BLOKLANGAN",
+    "admission": "PLUS ruxsati kerak",
+    "descriptionPlusOne": "Galaktika",
+    "descriptionPlusTwo": "chuqur koinotda joylashgan! Alfa sektoridan tashqariga giper-sakrash uchun galaktikalararo obuna talab qilinadi",
+    "descriptionPlusThree": "Barcha yulduz turkumlarini ochish uchun sotib oling!",
+    "getPlusBtn": "PLUS olish",
+    "errorDescription": "'Qo'nishga tayyorlaning! Ushbu hududda nemis tilining yuqori faolligi kuzatilmoqda. Tizimda tartibni tiklash uchun sektorni tozalang.'"
+  },
+  "galaxySession": {
+    "errorEnergy": "Batareya quvvati tugadi. Tiklanishini kuting yoki PLUS sotib oling.",
+    "errorID": "Sektor ID si yuborilmadi",
+    "errorData": "Galaktika ma'lumotlarini yuklab bo'lmadi",
+    "newRecord": "YANGI REKORD!",
+    "check": "HISOB:",
+    "again": "Qayta parvoz",
+    "constellations": "Yulduz turkumini tark etish"
   }
 }

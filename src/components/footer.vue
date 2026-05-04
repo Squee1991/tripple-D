@@ -52,7 +52,7 @@ const activeIndex = computed(() => {
 
 .footer {
   position: fixed;
-  bottom: 20px;
+  bottom: 21px;
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 20px);

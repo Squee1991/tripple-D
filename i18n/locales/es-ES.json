@@ -9634,6 +9634,7 @@
     "exit": "SALIR",
     "start": "INICIAR MISIÓN",
     "findGalaxyTitle": "SECTOR DESCUBIERTO",
+    "points": "PUNTOS",
     "errorTitle": "FALLO DEL SISTEMA",
     "errorBtn": "VOLVER AL CUARTEL GENERAL"
   },
@@ -9815,7 +9816,8 @@
     "thematic": "Mejora tu alemán superando emocionantes niveles temáticos",
     "audio": "Mejora tu comprensión auditiva del alemán completando tareas de audio",
     "images": "¡Mejora tu habilidad para describir imágenes! Elige un tema para empezar",
-    "settings": "Configuración de la cuenta"
+    "settings": "Configuración de la cuenta",
+    "achievements": "Tu colección de todos los logros y recompensas obtenidos por tu progreso"
   },
   "imageDescription": {
     "listen": "¡Escucha el diálogo!",
@@ -9839,5 +9841,25 @@
     "needTraining": "¡Necesitas practicar!",
     "themeSuccess": "¡Tema completado con éxito!",
     "themeNotSuccess": "Tema no completado."
+  },
+  "galaxySelector": {
+    "constellations": "Constelaciones",
+    "energy": "Energía de la nave",
+    "sectorBlock": "SECTOR BLOQUEADO",
+    "admission": "Se requiere acceso PLUS",
+    "descriptionPlusOne": "La galaxia",
+    "descriptionPlusTwo": "está en el espacio profundo. Para un hipersalto fuera del sector Alfa se requiere una suscripción intergaláctica",
+    "descriptionPlusThree": "¡Adquiérela para desbloquear todas las constelaciones!",
+    "getPlusBtn": "Obtener PLUS",
+    "errorDescription": "'¡Prepárate para el aterrizaje! Se observa una intensa actividad del idioma alemán en esta zona. Despeja el sector para restaurar el orden en el sistema.'"
+  },
+  "galaxySession": {
+    "errorEnergy": "Batería descargada. Espera a que se recupere o adquiere PLUS.",
+    "errorID": "No se ha transmitido el ID del sector",
+    "errorData": "No se han podido cargar los datos de la galaxia",
+    "newRecord": "¡NUEVO RÉCORD!",
+    "check": "PUNTUACIÓN:",
+    "again": "Volar de nuevo",
+    "constellations": "Salir de la constelación"
   }
 }

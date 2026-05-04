@@ -146,7 +146,7 @@ import EducationHut from '../../assets/images/graduate-hat.svg'
 import VBanner from "~/src/components/V-banner.vue";
 import Streakicon from '../../assets/images/fire.svg'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const authStore = userAuthStore()
 const rankStore = useRankUserStore()
 const dStore = dailyStore()

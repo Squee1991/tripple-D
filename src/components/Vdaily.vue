@@ -38,7 +38,7 @@
 
 <script setup>
 import {ref, onMounted, onUnmounted} from 'vue'
-import {storeToRefs} from 'pinia'
+import {storeToRefs } from 'pinia'
 import {dailyStore} from '../../store/dailyStore.js'
 import NotCompleted from '../../assets/images/dailyIcons/dailyNotCompleted.svg'
 import Completed from '../../assets/images/dailyIcons/dailyCompleted.svg'

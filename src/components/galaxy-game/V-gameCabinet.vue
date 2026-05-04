@@ -31,7 +31,6 @@
               />
               <button class="toon-btn save-name-btn" @click="handleSaveName">OK</button>
             </div>
-
             <h1 v-else @click="startEdit" class="display-name">
               {{ store.captainName }} <span class="edit-pen">✎</span>
             </h1>
@@ -183,7 +182,7 @@ onUnmounted(() => {
 }
 
 .cabinet-header-title {
-  color: var(--titleColor);
+  color: whitesmoke;
   font-size: 24px;
   font-weight: 600;
   margin-left: 15px;

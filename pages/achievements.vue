@@ -14,7 +14,7 @@
       </div>
       <nav class="nav__sidebar" >
         <VBanner
-            text="Твоя полная коллекция всех полученных достижений и наград"
+            :text="t('bannerTitles.achievements')"
             :icon="AchIconReward"
         />
         <ul class="achievement-categories">
@@ -605,7 +605,7 @@ const handleCategoryClick = (category) => {
   cursor: pointer;
   background: none;
   border: none;
-  padding: 6px;
+  padding: 4px;
 }
 
 .sidebar {
@@ -641,9 +641,8 @@ const handleCategoryClick = (category) => {
 .header__title {
   display: flex;
   align-items: center;
-  padding: 5px 10px 15px 10px;
+  padding: 5px 0 15px 0;
   width: 100%;
-  border-bottom: 1px solid #1e1e1e;
   margin-bottom: 15px;
   border-radius: 5px;
 }
@@ -651,7 +650,8 @@ const handleCategoryClick = (category) => {
 .sidebar-title {
   margin-left: 15px;
   text-align: center;
-  color: var(--titleColor);
+  color: var(--title);
+  text-shadow: 1px 1px var(--title);
   font-family: "Nunito", sans-serif;
   font-size: 22px;
   flex-shrink: 0;
@@ -676,7 +676,7 @@ const handleCategoryClick = (category) => {
   align-items: center;
   justify-content: space-between;
   gap: 15px;
-  font-size: 1rem;
+  font-size: 17px;
   border-radius: 5px;
   transition: background-color 0.2s ease, transform 0.2s ease;
   border-bottom: 2px solid #716969;
@@ -753,7 +753,7 @@ const handleCategoryClick = (category) => {
 }
 
 .category-icon, .submenu-icon {
-  font-size: 1.5rem;
+  font-size: 30px;
 }
 
 .achievement-categories {
@@ -777,7 +777,6 @@ const handleCategoryClick = (category) => {
 .content-header {
   padding-bottom: 0.5rem;
   margin-bottom: 10px;
-  border-bottom: 4px solid #1e1e1e;
   text-align: center;
   flex-shrink: 0;
   display: flex;
@@ -812,7 +811,6 @@ const handleCategoryClick = (category) => {
 .category-content {
   flex-grow: 1;
   min-height: 0;
-  overflow-y: auto;
 }
 
 .category-content::-webkit-scrollbar {
