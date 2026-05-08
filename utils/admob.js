@@ -13,7 +13,6 @@ function canShowRewardedAd() {
 	const todayKey = getTodayKey();
 	const statsStr = localStorage.getItem('adRewardStats');
 	if (!statsStr) return true;
-
 	const stats = JSON.parse(statsStr);
 	// Если наступил новый день, разрешаем
 	if (stats.date !== todayKey) return true;
@@ -25,7 +24,6 @@ function recordSuccessfulView() {
 	const todayKey = getTodayKey();
 	const statsStr = localStorage.getItem('adRewardStats');
 	let stats = { date: todayKey, count: 0 };
-
 	if (statsStr) {
 		const parsedStats = JSON.parse(statsStr);
 		if (parsedStats.date === todayKey) {

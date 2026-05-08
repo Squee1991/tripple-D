@@ -116,10 +116,10 @@ const getCompletedCount = group =>
   align-items: flex-start;
   border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile);
+  background-color: var(--menuItemsBg);
   padding: 1rem;
   gap: 8px;
   border-radius: 20px;
-  background-color: #fff;
   text-align: left;
   width: 650px;
   transition: all 0.2s ease;

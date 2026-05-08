@@ -105,6 +105,7 @@ import VTransition from "~/src/components/V-transition.vue";
 import BannerIcon from '../assets/images/articleBannerIcon.svg'
 import PracticeIcon from '../assets/images/practiceIcon.svg'
 import GrammarIcon from '../assets/images/GrammarIcon.svg'
+import TextBook from '../assets/images/TextBook.svg'
 
 const { t } = useI18n()
 const router = useRouter()
@@ -114,7 +115,7 @@ const isMounted = ref(false)
 
 const learnTabs = [
   { id: 'practice', label: t('studyNavAndBanner.practice'), icon: PracticeIcon },
-  { id: 'grammar', label: t('studyNavAndBanner.grammar'), icon: GrammarIcon }
+  { id: 'grammar', label: t('studyNavAndBanner.grammar'), icon: GrammarIcon },
 ]
 const STUDY_STATE_TOGGLE = 'study_toggle_state'
 const activeTabId = ref((typeof window !== 'undefined' && sessionStorage.getItem(STUDY_STATE_TOGGLE)) || learnTabs[0].id)
@@ -133,6 +134,7 @@ function setTab(id) {
 const practiceCategories = computed(() => [
   { id: 'words', icon: BannerIcon, url: '/articles', title: t('sub.words') },
   { id: 'audio', icon: Sound, url: '/audio-tasks', title: t('sub.audio') },
+  { id: 'text', icon: TextBook, url: '/text-tasks', title: t('Задания с текстом') },
   { id: 'description', icon: Photo, url: '/image-description', title: t('sub.describePicture') },
   { id: 'themen', icon: Thematic, url: '/thematic-learning', title: t('sub.themen') },
   { id: 'exams', icon: Exam, url: '/exams', title: t('nav.tests') },
@@ -298,7 +300,7 @@ definePageMeta({
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 10px 0;
+  padding: 8px 0;
   cursor: pointer;
   position: relative;
   z-index: 2;
@@ -306,8 +308,8 @@ definePageMeta({
 }
 
 .tab-icon {
-  width: 24px;
-  height: 24px;
+  width: 33px;
+  height: 33px;
   object-fit: contain;
   transition: transform 0.2s;
 }
@@ -396,10 +398,6 @@ button.topic-list-item {
   }
   .tab-label {
     font-size: 14px;
-  }
-  .tab-icon {
-    width: 20px;
-    height: 20px;
   }
 }
 </style>

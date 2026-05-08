@@ -186,7 +186,9 @@ onUnmounted(() => {
 
 .qd__barlabel {
   position: absolute;
-  inset: 0;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -25%);
   display: grid;
   place-items: center;
   font-size: 12px;
@@ -197,7 +199,7 @@ onUnmounted(() => {
 
 .qd__progress {
   width: 100%;
-  height: 18px;
+  height: 20px;
   border: 1px solid #2a3444;
   border-radius: 10px;
   overflow: hidden;

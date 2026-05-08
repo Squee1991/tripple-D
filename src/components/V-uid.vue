@@ -157,9 +157,9 @@ onBeforeUnmount(() => {
     display: flex;
     position: relative;
     justify-content: space-between;
-    background: var(--tabBg);
     border-radius: 40px;
     padding: 6px;
+    background: var(--tabBg);
     border: 3px solid var(--tabsSlideBorderColor);
     box-shadow: var(--boxShadowMobile);
     margin: 0 4px;

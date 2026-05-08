@@ -3550,6 +3550,7 @@
     "account": "Управление аккаунтом"
   },
   "valentineAchievements": {
+    "valentineAchievementsTitle": "Фестиваль сердец",
     "firstValentineQuestLabel": "Первое свидание",
     "firstValentineQuesDescription": "Сделайте первый шаг! Выполните любое задание события «Фестиваль сердец» и получите первую награду.",
     "valentineWordsLabel": "Язык любви",
@@ -3566,6 +3567,7 @@
     "valentineReputationDescription": "Заслужите всеобщее признание! Наберите 300 очков репутации, выполняя задания события.",
     "valentineAllAchievementsLabel": "Легенда фестиваля",
     "valentineAllAchievementsDescription": "Легенда фестиваля"
+
   },
   "categories": {
     "beginner": "Стартовые земли",
@@ -3762,6 +3764,7 @@
     "theme": "Романтичная тема"
   },
   "winterAchievements": {
+    "winterAchievementsTitle": "Шепот зимы",
     "firstQuestName": "Первая ёлочная звезда",
     "firstQuestDescription": "Выполните любой квест зимнего события и зажгите первую звезду",
     "santaLexiconName": "Словарь Санты",

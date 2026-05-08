@@ -1,0 +1,175 @@
+{
+  "themeId": "daily_routine_b1",
+  "themeTitle": "Распорядок дня (B1)",
+  "level": "B1",
+  "tasks": [
+    {
+      "id": "routine_b1_1",
+      "title": "Der frühe Morgen",
+      "translation": "Раннее утро",
+      "wordsPool": ["wachte", "hatte", "deshalb", "sonst", "dann", "nämlich"],
+      "textElements": [
+        { "type": "text", "content": "Heute Morgen " },
+        { "type": "blank", "id": 1, "correct": "wachte" },
+        { "type": "text", "content": " ich schon um fünf Uhr auf. — Ich " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " den Wecker extra so früh gestellt, bevor ich gestern schlafen ging. — Draußen war es noch komplett dunkel, " },
+        { "type": "blank", "id": 3, "correct": "deshalb" },
+        { "type": "text", "content": " machte ich überall in der Wohnung das Licht an. — Man muss sofort aufstehen, " },
+        { "type": "blank", "id": 4, "correct": "sonst" },
+        { "type": "text", "content": " schläft man unweigerlich wieder ein. — Zuerst trinke ich ein Glas Wasser, " },
+        { "type": "blank", "id": 5, "correct": "dann" },
+        { "type": "text", "content": " mache ich zwanzig Minuten Yoga. — Morgendliche Bewegung ist " },
+        { "type": "blank", "id": 6, "correct": "nämlich" },
+        { "type": "text", "content": " der beste Start in einen produktiven Tag." }
+      ]
+    },
+    {
+      "id": "routine_b1_2",
+      "title": "Frühstück und Arbeitsweg",
+      "translation": "Завтрак и путь на работу",
+      "wordsPool": ["frühstückte", "hatte", "trotzdem", "sonst", "dann", "Außerdem"],
+      "textElements": [
+        { "type": "text", "content": "Gestern " },
+        { "type": "blank", "id": 1, "correct": "frühstückte" },
+        { "type": "text", "content": " ich ganz gemütlich auf dem Balkon. — Ich " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " frische Brötchen beim Bäcker gekauft, lange bevor meine Familie überhaupt wach war. — Es regnete später ein bisschen, " },
+        { "type": "blank", "id": 3, "correct": "trotzdem" },
+        { "type": "text", "content": " fuhr ich mit dem Fahrrad ins Büro. — Man muss sich gut anziehen, " },
+        { "type": "blank", "id": 4, "correct": "sonst" },
+        { "type": "text", "content": " erkältet man sich bei diesem nassen Wetter schnell. — Zuerst schließe ich mein Rad ab, " },
+        { "type": "blank", "id": 5, "correct": "dann" },
+        { "type": "text", "content": " gehe ich direkt an meinen Schreibtisch. — " },
+        { "type": "blank", "id": 6, "correct": "Außerdem" },
+        { "type": "text", "content": " höre ich während der Fahrt immer einen interessanten Podcast." }
+      ]
+    },
+    {
+      "id": "routine_b1_3",
+      "title": "Der Vormittag im Büro",
+      "translation": "Первая половина дня в офисе",
+      "wordsPool": ["arbeitete", "hatte", "deshalb", "sonst", "dann", "nämlich"],
+      "textElements": [
+        { "type": "text", "content": "Früher " },
+        { "type": "blank", "id": 1, "correct": "arbeitete" },
+        { "type": "text", "content": " ich jeden Vormittag an meinen wichtigsten Aufgaben. — Ich " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " meine E-Mails schon komplett gelesen, bevor das erste Meeting überhaupt anfing. — Die Konzentration ist morgens am höchsten, " },
+        { "type": "blank", "id": 3, "correct": "deshalb" },
+        { "type": "text", "content": " erledigte ich die schwierigen Projekte immer zuerst. — Man muss klare Prioritäten setzen, " },
+        { "type": "blank", "id": 4, "correct": "sonst" },
+        { "type": "text", "content": " verliert man sich schnell in unwichtigen Details. — Wenn eine große Aufgabe fertig ist, " },
+        { "type": "blank", "id": 5, "correct": "dann" },
+        { "type": "text", "content": " mache ich immer eine kurze Kaffeepause. — Multitasking funktioniert " },
+        { "type": "blank", "id": 6, "correct": "nämlich" },
+        { "type": "text", "content": " in der Realität fast nie gut." }
+      ]
+    },
+    {
+      "id": "routine_b1_4",
+      "title": "Die Mittagspause",
+      "translation": "Обеденный перерыв",
+      "wordsPool": ["machte", "hatte", "trotzdem", "sonst", "dann", "nämlich"],
+      "textElements": [
+        { "type": "text", "content": "Letzte Woche " },
+        { "type": "blank", "id": 1, "correct": "machte" },
+        { "type": "text", "content": " ich jeden Tag pünktlich um zwölf Uhr Mittagspause. — Ich " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " mein Essen schon zu Hause vorgekocht, bevor ich morgens das Haus verließ. — Das Kantinenessen schmeckte eigentlich gut, " },
+        { "type": "blank", "id": 3, "correct": "trotzdem" },
+        { "type": "text", "content": " aß ich lieber mein eigenes gesundes Gericht. — Man muss den Schreibtisch verlassen, " },
+        { "type": "blank", "id": 4, "correct": "sonst" },
+        { "type": "text", "content": " entspannt sich der Kopf in der Pause gar nicht. — Zuerst esse ich in Ruhe, " },
+        { "type": "blank", "id": 5, "correct": "dann" },
+        { "type": "text", "content": " gehe ich eine halbe Stunde im Park spazieren. — Frische Luft gibt mir " },
+        { "type": "blank", "id": 6, "correct": "nämlich" },
+        { "type": "text", "content": " neue Energie für den Nachmittag." }
+      ]
+    },
+    {
+      "id": "routine_b1_5",
+      "title": "Der Feierabend",
+      "translation": "Конец рабочего дня",
+      "wordsPool": ["verließ", "hatte", "deshalb", "sonst", "dann", "außerdem"],
+      "textElements": [
+        { "type": "text", "content": "Gestern " },
+        { "type": "blank", "id": 1, "correct": "verließ" },
+        { "type": "text", "content": " ich das Büro erst gegen achtzehn Uhr. — Ich " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " alle wichtigen Dokumente gespeichert, bevor ich meinen Computer endgültig ausschaltete. — Der Verkehr auf den Straßen war furchtbar, " },
+        { "type": "blank", "id": 3, "correct": "deshalb" },
+        { "type": "text", "content": " nahm ich lieber die U-Bahn nach Hause. — Man muss rechtzeitig losfahren, " },
+        { "type": "blank", "id": 4, "correct": "sonst" },
+        { "type": "text", "content": " steht man stundenlang im Stau. — Zuerst kaufe ich im Supermarkt ein, " },
+        { "type": "blank", "id": 5, "correct": "dann" },
+        { "type": "text", "content": " fahre ich direkt in meine Wohnung. — Ich treffe mich nach der Arbeit " },
+        { "type": "blank", "id": 6, "correct": "außerdem" },
+        { "type": "text", "content": " gerne kurz mit meinen Nachbarn im Treppenhaus." }
+      ]
+    },
+    {
+      "id": "routine_b1_6",
+      "title": "Sport nach der Arbeit",
+      "translation": "Спорт после работы",
+      "wordsPool": ["trainierte", "hatte", "trotzdem", "sonst", "dann", "nämlich"],
+      "textElements": [
+        { "type": "text", "content": "Als Student " },
+        { "type": "blank", "id": 1, "correct": "trainierte" },
+        { "type": "text", "content": " ich fast jeden Abend im Fitnessstudio. — Ich " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " meine Sporttasche schon morgens gepackt, bevor ich zur Universität ging. — Ich war abends oft extrem müde, " },
+        { "type": "blank", "id": 3, "correct": "trotzdem" },
+        { "type": "text", "content": " zwang ich mich zu diesem anstrengenden Workout. — Man muss diszipliniert bleiben, " },
+        { "type": "blank", "id": 4, "correct": "sonst" },
+        { "type": "text", "content": " erreicht man seine sportlichen Ziele niemals. — Zuerst laufe ich zwanzig Minuten auf dem Laufband, " },
+        { "type": "blank", "id": 5, "correct": "dann" },
+        { "type": "text", "content": " hebe ich schwere Gewichte. — Regelmäßiger Sport baut " },
+        { "type": "blank", "id": 6, "correct": "nämlich" },
+        { "type": "text", "content": " den ganzen Stress des Tages perfekt ab." }
+      ]
+    },
+    {
+      "id": "routine_b1_7",
+      "title": "Abendessen und Entspannung",
+      "translation": "Ужин и отдых",
+      "wordsPool": ["kochte", "hatten", "deshalb", "sonst", "dann", "Außerdem"],
+      "textElements": [
+        { "type": "text", "content": "Früher " },
+        { "type": "blank", "id": 1, "correct": "kochte" },
+        { "type": "text", "content": " ich abends immer gemeinsam mit meinem Mitbewohner. — Wir " },
+        { "type": "blank", "id": 2, "correct": "hatten" },
+        { "type": "text", "content": " die Aufgaben fair aufgeteilt, lange bevor wir mit dem Schnippeln begannen. — Ich stehe wirklich sehr gerne in der Küche, " },
+        { "type": "blank", "id": 3, "correct": "deshalb" },
+        { "type": "text", "content": " probierte ich ständig neue exotische Rezepte aus. — Man muss die Küche danach sofort aufräumen, " },
+        { "type": "blank", "id": 4, "correct": "sonst" },
+        { "type": "text", "content": " ärgert man sich am nächsten Morgen darüber. — Zuerst essen wir gemütlich, " },
+        { "type": "blank", "id": 5, "correct": "dann" },
+        { "type": "text", "content": " schauen wir eine Folge unserer Lieblingsserie. — " },
+        { "type": "blank", "id": 6, "correct": "Außerdem" },
+        { "type": "text", "content": " reden wir dabei viel über unsere Erlebnisse des Tages." }
+      ]
+    },
+    {
+      "id": "routine_b1_8",
+      "title": "Die Vorbereitung auf das Bett",
+      "translation": "Подготовка ко сну",
+      "wordsPool": ["las", "hatte", "trotzdem", "sonst", "dann", "nämlich"],
+      "textElements": [
+        { "type": "text", "content": "Gestern Abend " },
+        { "type": "blank", "id": 1, "correct": "las" },
+        { "type": "text", "content": " ich noch ein paar Seiten in meinem neuen Roman. — Ich " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " mein Smartphone schon eine Stunde vorher ausgeschaltet, bevor ich überhaupt ins Bett ging. — Das Buch war unglaublich spannend, " },
+        { "type": "blank", "id": 3, "correct": "trotzdem" },
+        { "type": "text", "content": " machte ich pünktlich um dreiundzwanzig Uhr das Licht aus. — Man muss ausreichend schlafen, " },
+        { "type": "blank", "id": 4, "correct": "sonst" },
+        { "type": "text", "content": " ist man am nächsten Morgen völlig unkonzentriert. — Zuerst putze ich mir gründlich die Zähne, " },
+        { "type": "blank", "id": 5, "correct": "dann" },
+        { "type": "text", "content": " stelle ich den Wecker für den nächsten Tag. — Guter Schlaf ist " },
+        { "type": "blank", "id": 6, "correct": "nämlich" },
+        { "type": "text", "content": " extrem wichtig für die körperliche und geistige Gesundheit." }
+      ]
+    }
+  ]
+}

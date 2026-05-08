@@ -3532,6 +3532,7 @@
     "account": "Hisobni boshqarish"
   },
   "valentineAchievements": {
+    "valentineAchievementsTitle": "Qalblar festivali",
     "firstValentineQuestLabel": "Birinchi uchrashuv",
     "firstValentineQuesDescription": "Birinchi qadamni tashlang! «Qalblar festivali» tadbirining istalgan vazifasini bajaring va birinchi mukofotni oling.",
     "valentineWordsLabel": "Sevgi tili",
@@ -3744,6 +3745,7 @@
     "theme": "Romantik mavzu"
   },
   "winterAchievements": {
+    "winterAchievementsTitle": "Qish shiviri",
     "firstQuestName": "Birinchi archa yulduzi",
     "firstQuestDescription": "Qishki voqea doirasidagi istalgan vazifani bajaring va birinchi yulduzni yoqing.",
     "santaLexiconName": "Santa lug‘ati",

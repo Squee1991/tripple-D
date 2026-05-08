@@ -21,43 +21,42 @@
           alt="astronaut"
       />
     </div>
-    <div class="menu-content-layer">
-      <div class="open-menu-layout" v-if="currentScreen === 'menu' && !isTransitioning">
-        <div class="title-section">
-          <h1 class="main-title-toon">
-            <span class="word-1">{{ t('galaxyMenu.titleWordOne') }}</span>
-            <span class="word-2">{{ t('galaxyMenu.titleWordTwo') }}</span>
-          </h1>
-        </div>
-        <div class="controls-section">
-          <button class="menu-btn-toon play" @click="toggleScreen('galaxies')">
-            <span class="icon">🚀 {{ t('galaxyMenu.begin') }}</span>
-          </button>
-          <div class="secondary-btns">
-            <button
-                v-for="btn in menuButtons"
-                :key="btn.id"
-                class="menu-btn-toon"
-                :class="btn.class"
-                @click="btn.action ? btn.action() : toggleScreen(btn.target)"
-            >
-              {{ t(btn.label) }}
+    <VTransition>
+      <div v-if="isMounted" class="menu-content-layer">
+        <div class="open-menu-layout" v-if="currentScreen === 'menu'">
+          <div class="title-section">
+            <h1 class="main-title-toon">
+              <span class="word-1">{{ t('galaxyMenu.titleWordOne') }}</span>
+              <span class="word-2">{{ t('galaxyMenu.titleWordTwo') }}</span>
+            </h1>
+          </div>
+          <div class="controls-section">
+            <button class="menu-btn-toon play" @click="toggleScreen('galaxies')">
+              <span class="icon">🚀 {{ t('galaxyMenu.begin') }}</span>
             </button>
+            <div class="secondary-btns">
+              <button
+                  v-for="btn in menuButtons"
+                  :key="btn.id"
+                  class="menu-btn-toon"
+                  :class="btn.class"
+                  @click="btn.action ? btn.action() : toggleScreen(btn.target)"
+              >
+                {{ t(btn.label) }}
+              </button>
+            </div>
           </div>
         </div>
+        <div class="sub-screen-container" v-if="currentScreen !== 'menu'">
+          <component
+              :is="componentViews[currentScreen]"
+              @close="toggleScreen('menu')"
+              @back="toggleScreen('menu')"
+              @select-galaxy="startMission"
+          />
+        </div>
       </div>
-      <div class="sub-screen-container" v-if="currentScreen !== 'menu'">
-        <component
-            :is="componentViews[currentScreen]"
-            @close="toggleScreen('menu')"
-            @back="toggleScreen('menu')"
-            @select-galaxy="startMission"
-        />
-      </div>
-    </div>
-    <Transition name="warp-flash">
-      <div class="warp-overlay" v-if="isTransitioning"></div>
-    </Transition>
+    </VTransition>
   </div>
 </template>
 
@@ -71,15 +70,15 @@ import VGameCabinet from '../../src/components/galaxy-game/V-gameCabinet.vue'
 import VGameHangar from '../../src/components/galaxy-game/V-gameHangar.vue'
 import VGalaxySelector from '../../src/components/galaxy-game/V-galaxySelector.vue'
 import VRankGalaxy from "../../src/components/galaxy-game/V-rank-galaxy.vue";
+import VTransition from "~/src/components/V-transition.vue";
 
 const router = useRouter()
 const store = useGalaxyStore()
 const {t} = useI18n()
 
 const currentScreen = ref('menu')
-const isTransitioning = ref(false)
 const astronauts = ref([])
-
+const isMounted = ref(false)
 const componentViews = {
   settings: VGameCabinet,
   shop: VGameHangar,
@@ -137,41 +136,29 @@ const startMission = (sectorId) => {
   })
 }
 
-const triggerWarpTransition = (target) => {
-  const needsWarp = ['shop', 'galaxies', 'rank'].includes(target) ||
-      (target === 'menu' && ['shop', 'galaxies', 'rank'].includes(currentScreen.value))
-
-  if (needsWarp) {
-    isTransitioning.value = true
-    setTimeout(() => {
-      currentScreen.value = target
-      setTimeout(() => isTransitioning.value = false, 300)
-    }, 400)
+const toggleScreen = (target) => {
+  if (target !== 'menu' && currentScreen.value === 'menu') {
+    window.history.pushState({isSubScreen: true}, '')
+    currentScreen.value = target
+  } else if (target === 'menu' && currentScreen.value !== 'menu') {
+    window.history.back()
   } else {
     currentScreen.value = target
   }
 }
 
-const toggleScreen = (target) => {
-  if (target !== 'menu' && currentScreen.value === 'menu') {
-    window.history.pushState({isSubScreen: true}, '')
-    triggerWarpTransition(target)
-  } else if (target === 'menu' && currentScreen.value !== 'menu') {
-    window.history.back()
-  } else {
-    triggerWarpTransition(target)
-  }
-}
-
 const handlePopState = () => {
   if (currentScreen.value !== 'menu') {
-    triggerWarpTransition('menu')
+    currentScreen.value = 'menu'
   } else {
     router.push('/')
   }
 }
 
 onMounted(() => {
+  setTimeout(() => {
+    isMounted.value = true
+  }, 100)
   store.initUser()
   store.fetchGalaxies()
   generateAstronauts()
@@ -237,13 +224,6 @@ onUnmounted(() => {
   flex: 1;
   display: flex;
   flex-direction: column;
-}
-
-.warp-overlay {
-  position: fixed;
-  inset: 0;
-  background: #fff;
-  z-index: 5000;
 }
 
 .nebula-cloud {
@@ -406,13 +386,5 @@ onUnmounted(() => {
   50% {
     transform: scale(1.02);
   }
-}
-
-.warp-flash-enter-active, .warp-flash-leave-active {
-  transition: opacity 0.3s;
-}
-
-.warp-flash-enter-from, .warp-flash-leave-to {
-  opacity: 0;
 }
 </style>

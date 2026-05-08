@@ -3530,6 +3530,7 @@
     "account": "Hesap yönetimi"
   },
   "valentineAchievements": {
+    "valentineAchievementsTitle": "Kalpler Festivali",
     "firstValentineQuestLabel": "İlk Randevu",
     "firstValentineQuesDescription": "İlk adımı atın! 'Kalpler Festivali' etkinliğindeki herhangi bir görevi tamamlayın ve ilk ödülünüzü alın.",
     "valentineWordsLabel": "Aşkın Dili",
@@ -3742,6 +3743,7 @@
     "theme": "Romantik Tema"
   },
   "winterAchievements": {
+    "winterAchievementsTitle": "Kış fısıltısı",
     "firstQuestName": "İlk ağaç yıldızı",
     "firstQuestDescription": "Kış etkinliğindeki herhangi bir görevi tamamla ve ilk yıldızı yak.",
     "santaLexiconName": "Noel Baba Sözlüğü",

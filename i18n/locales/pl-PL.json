@@ -3559,6 +3559,7 @@
     "account": "Zarządzanie kontem"
   },
   "valentineAchievements": {
+    "valentineAchievementsTitle": "Festiwal Serc",
     "firstValentineQuestLabel": "Pierwsza randka",
     "firstValentineQuesDescription": "Zrób pierwszy krok! Wykonaj dowolne zadanie w wydarzeniu „Festiwal Serc” i odbierz pierwszą nagrodę.",
     "valentineWordsLabel": "Język miłości",
@@ -3771,6 +3772,7 @@
     "theme": "Romantyczny motyw"
   },
   "winterAchievements": {
+    "winterAchievementsTitle": "Szept zimy",
     "firstQuestName": "Pierwsza gwiazda choinkowa",
     "firstQuestDescription": "Wykonaj dowolne zadanie zimowego wydarzenia i zapal pierwszą gwiazdę.",
     "santaLexiconName": "Słownik Świętego Mikołaja",

@@ -10,7 +10,6 @@ const props = defineProps({
 
 const emit = defineEmits(['update:show'])
 const router = useRouter()
-
 const close = () => {
   emit('update:show', false)
 }
@@ -23,24 +22,20 @@ const goToPay = () => {
 
 <template>
   <teleport to="body">
-    <transition name="overlay">
+    <transition name="premium-fade">
       <div v-if="show" class="premium-wrapper" @click.self="close">
         <div class="premium-sheet">
           <div class="premium-sheet__drag-pill" @click="close"></div>
-
           <div class="premium-sheet__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                 stroke="#FF9F7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                 stroke="#FF9F7F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polygon
                   points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
             </svg>
           </div>
           <h2 class="premium-sheet__title">Skillup PLUS</h2>
-          <p class="premium-sheet__text">Откройте доступ ко всем темам и другим эксклюзивным материалам!</p>
-
-          <button class="premium-sheet__btn" @click="goToPay">
-            Приобрести Skillup PLUS
-          </button>
+          <p class="premium-sheet__text">Откройте доступ ко всем темам. Получайте максимум от обучения!</p>
+          <button class="premium-sheet__btn" @click="goToPay">Skillup PLUS</button>
         </div>
       </div>
     </transition>
@@ -55,105 +50,99 @@ const goToPay = () => {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  /* Вот он, наш overlay: */
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(2px); /* Добавляет легкий премиальный блюр заднего фона */
+  background-color: rgba(0, 0, 0, 0.5);
+  touch-action: none;
 }
 
 .premium-sheet {
   width: 100%;
-  max-width: 800px;
-  background-color: var(--bg, #ffffff);
-  border-top-left-radius: 28px;
-  border-top-right-radius: 28px;
-  padding: 16px 24px 32px 24px;
+  max-width: 500px;
+  background-color: #ffffff;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  padding: 12px 20px 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top: 3px solid var(--tabsSlideBorderColor, #e5e7eb);
-  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  backface-visibility: hidden;
+  transform: translateZ(0);
   will-change: transform;
 }
 
 .premium-sheet__drag-pill {
-  width: 48px;
-  height: 6px;
-  background-color: #d1d5db;
+  width: 40px;
+  height: 5px;
+  background-color: #e5e7eb;
   border-radius: 10px;
   margin-bottom: 20px;
   cursor: pointer;
 }
 
 .premium-sheet__icon {
-  background: var(--menuItemsBg, #f3f4f6);
-  width: 80px;
-  height: 80px;
+  background: #f9fafb;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
-  border: 3px solid var(--tabsSlideBorderColor, #e5e7eb);
-  box-shadow: 0 4px 0 var(--tabsSlideBorderColor, #e5e7eb);
+  margin-bottom: 12px;
+  border: 2px solid #f3f4f6;
 }
 
 .premium-sheet__title {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 900;
   color: #FF9F7F;
-  text-transform: uppercase;
-  margin: 0 0 12px 0;
-  text-align: center;
+  margin: 0 0 8px 0;
 }
 
 .premium-sheet__text {
-  font-size: 16px;
-  font-weight: 800;
-  color: var(--titleColor, #374151);
+  font-size: 15px;
+  font-weight: 700;
+  color: #4b5563;
   text-align: center;
-  margin: 0 0 24px 0;
-  line-height: 1.4;
+  margin: 0 0 20px 0;
+  line-height: 1.3;
 }
 
 .premium-sheet__btn {
   width: 100%;
   background-color: #FFEB7F;
-  color: #d97706;
-  font-size: 18px;
-  font-weight: 900;
-  text-transform: uppercase;
-  padding: 16px;
-  border-radius: 20px;
-  border: 3px solid #d97706;
-  box-shadow: 0 5px 0 #d97706;
+  color: #92400e;
+  font-size: 17px;
+  font-weight: 800;
+  padding: 14px;
+  border-radius: 18px;
+  border: none;
+  border-bottom: 4px solid #f59e0b;
   cursor: pointer;
-  transition: all 0.1s;
-  font-family: 'Nunito', sans-serif;
+  font-family: inherit;
 }
 
 .premium-sheet__btn:active {
-  transform: translateY(5px);
-  box-shadow: 0 0px 0 #d97706;
+  transform: translateY(2px);
+  border-bottom-width: 2px;
 }
 
-.overlay-enter-active,
-.overlay-leave-active {
-  transition: background-color 0.35s ease, backdrop-filter 0.35s ease;
+.premium-fade-enter-active,
+.premium-fade-leave-active {
+  transition: opacity 0.2s ease;
 }
 
-.overlay-enter-from,
-.overlay-leave-to {
-  background-color: transparent;
-  backdrop-filter: blur(0px);
+.premium-fade-enter-from,
+.premium-fade-leave-to {
+  opacity: 0;
 }
 
-.overlay-enter-active .premium-sheet,
-.overlay-leave-active .premium-sheet {
-  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+.premium-fade-enter-active .premium-sheet,
+.premium-fade-leave-active .premium-sheet {
+  transition: transform 0.2s, transform 0.2s ease-out;
 }
 
-.overlay-enter-from .premium-sheet,
-.overlay-leave-to .premium-sheet {
+.premium-fade-enter-from .premium-sheet,
+.premium-fade-leave-to .premium-sheet {
   transform: translateY(100%);
 }
 </style>

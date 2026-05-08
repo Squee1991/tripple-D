@@ -107,7 +107,6 @@ const getCompletedCount = group =>
 
 .group-stats.all-completed {
   background: #f1c40f;
-  box-shadow: 4px 4px 0px #1e1e1e;
 }
 
 .achievements-list {
@@ -128,7 +127,7 @@ const getCompletedCount = group =>
   text-align: left;
   width: 650px;
   transition: all 0.2s ease;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .achievement-icon-wrapper {

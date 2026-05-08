@@ -120,6 +120,7 @@ const getCompletedCount = group =>
 .achievements-list {
   display: flex;
   flex-direction: column;
+  padding: 1px;
 }
 
 .achievement__card {

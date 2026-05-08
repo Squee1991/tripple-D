@@ -3539,6 +3539,7 @@
     "account": "إدارة الحساب"
   },
   "valentineAchievements": {
+    "valentineAchievementsTitle": "مهرجان القلوب",
     "firstValentineQuestLabel": "الموعد الأول",
     "firstValentineQuesDescription": "اتخذ الخطوة الأولى! أكمل أي مهمة في حدث «مهرجان القلوب» واحصل على مكافأتك الأولى.",
     "valentineWordsLabel": "لغة الحب",
@@ -3751,6 +3752,7 @@
     "theme": "مظهر رومانسي"
   },
   "winterAchievements": {
+    "winterAchievementsTitle": "همس الشتاء",
     "firstQuestName": "أول نجمة على الشجرة",
     "firstQuestDescription": "أكمل أي مهمة من مهام حدث الشتاء وأشعل أول نجمة.",
     "santaLexiconName": "معجم سانتا",

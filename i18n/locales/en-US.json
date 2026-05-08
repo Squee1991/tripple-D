@@ -3556,6 +3556,7 @@
     "account": "Account management"
   },
   "valentineAchievements": {
+    "valentineAchievementsTitle": "Festival of Hearts",
     "firstValentineQuestLabel": "First Date",
     "firstValentineQuesDescription": "Take the first step! Complete any quest in the 'Festival of Hearts' event and get your first reward.",
     "valentineWordsLabel": "Language of Love",
@@ -3768,6 +3769,7 @@
     "theme": "Romantic Theme"
   },
   "winterAchievements": {
+    "winterAchievementsTitle": "Whisper of Winter",
     "firstQuestName": "First Tree Star",
     "firstQuestDescription": "Complete any quest of the winter event and light the first star.",
     "santaLexiconName": "Santa’s Lexicon",

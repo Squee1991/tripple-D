@@ -20,7 +20,7 @@
   justify-content: center;
   flex-shrink: 0;
   margin-left: 10px;
-  padding: 9px;
+  padding: 10px;
 }
 
 </style>

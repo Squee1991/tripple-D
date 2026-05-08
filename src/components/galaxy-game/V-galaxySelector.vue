@@ -18,40 +18,42 @@
           <div class="topbar__title">{{t('galaxySelector.constellations')}}</div>
         </div>
       </div>
-      <div class="battery-banner">
-        <div class="banner-left">
-          <div class="banner-info">
-            <div class="banner-title">{{ store.activeShip.name }}</div>
-            <div class="banner-sub">{{t('galaxySelector.energy')}}</div>
-          </div>
-          <div class="battery-status">
-            <div class="battery-container" :style="{ '--charge-progress': chargeProgressPercent + '%' }">
-              <div class="battery-segment segment-red" :class="{ active: store.currentBattery >= 1, charging: store.currentBattery === 0 && !isPremium }"></div>
-              <div class="battery-segment segment-yellow" :class="{ active: store.currentBattery >= 2, charging: store.currentBattery === 1 && !isPremium }"></div>
-              <div class="battery-segment segment-green" :class="{ active: store.currentBattery >= 3, charging: store.currentBattery === 2 && !isPremium }"></div>
-            </div>
-            <div class="battery-timer cosmic-font">
-              <span v-if="isPremium" class="premium-text">PLUS ∞</span>
-              <span v-else class="charging-text">{{ timeToNext }}</span>
-            </div>
-          </div>
-        </div>
-        <img :src="store.activeShip.img" class="active-ship-icon" alt="ship" />
-      </div>
     </div>
-    <div class="constellations-map">
-      <div
-          v-for="galaxy in galaxiesWithIcons"
-          :key="galaxy.id"
-          class="galaxy-anchor"
-          @click="openGalaxy(galaxy)"
-      >
-        <div class="galaxy-icon-wrapper">
-          <img :src="galaxy.svg" class="galaxy-svg-toon" alt="galaxy"/>
+    <VTransition>
+      <div v-if="isMounted" class="constellations-map">
+        <div class="battery-banner">
+          <div class="banner-left">
+            <div class="banner-info">
+              <div class="banner-title">{{ store.activeShip.name }}</div>
+              <div class="banner-sub">{{t('galaxySelector.energy')}}</div>
+            </div>
+            <div class="battery-status">
+              <div class="battery-container" :style="{ '--charge-progress': chargeProgressPercent + '%' }">
+                <div class="battery-segment segment-red" :class="{ active: store.currentBattery >= 1, charging: store.currentBattery === 0 && !isPremium }"></div>
+                <div class="battery-segment segment-yellow" :class="{ active: store.currentBattery >= 2, charging: store.currentBattery === 1 && !isPremium }"></div>
+                <div class="battery-segment segment-green" :class="{ active: store.currentBattery >= 3, charging: store.currentBattery === 2 && !isPremium }"></div>
+              </div>
+              <div class="battery-timer cosmic-font">
+                <span v-if="isPremium" class="premium-text">PLUS ∞</span>
+                <span v-else class="charging-text">{{ timeToNext }}</span>
+              </div>
+            </div>
+          </div>
+          <img :src="store.activeShip.img" class="active-ship-icon" alt="ship" />
         </div>
-        <h2 class="galaxy-label-toon">{{ t(galaxy.label) }}</h2>
+        <div
+            v-for="galaxy in galaxiesWithIcons"
+            :key="galaxy.id"
+            class="galaxy-anchor"
+            @click="openGalaxy(galaxy)"
+        >
+          <div class="galaxy-icon-wrapper">
+            <img :src="galaxy.svg" class="galaxy-svg-toon" alt="galaxy"/>
+          </div>
+          <h2 class="galaxy-label-toon">{{ t(galaxy.label) }}</h2>
+        </div>
       </div>
-    </div>
+    </VTransition>
     <Transition name="modal">
       <div v-if="activeGalaxy" class="modal-overlay" @click.self="activeGalaxy = null">
         <div class="discovery-card">
@@ -122,6 +124,7 @@ import ConstellationFive from 'assets/images/constellation/constellation-5.svg'
 import ConstellationSix from 'assets/images/constellation/constellation-6.svg'
 import ConstellationSeven from 'assets/images/constellation/constellation-7.svg'
 import ConstellationEight from 'assets/images/constellation/constellation-8.svg'
+import VTransition from "~/src/components/V-transition.vue";
 
 const emit = defineEmits(['back', 'select-galaxy'])
 const store = useGalaxyStore()
@@ -135,7 +138,7 @@ const timeToNext = ref('00:00')
 const chargeProgressPercent = ref(0)
 let timerInterval = null
 const {t} = useI18n()
-
+const isMounted = ref(false);
 const isPremium = computed(() => authStore.isPremium)
 
 const galaxyDescriptions = {
@@ -185,9 +188,16 @@ const updateTimer = () => {
 }
 
 onMounted(async () => {
+
   await store.fetchGalaxies()
   updateTimer()
   timerInterval = setInterval(updateTimer, 1000)
+})
+
+onMounted(()=> {
+  setTimeout(() => {
+    isMounted.value = true
+  }, 130)
 })
 
 onUnmounted(() => {
@@ -323,6 +333,7 @@ const goToPay = () => {
 }
 
 .battery-banner {
+  width: 100%;
   background: rgba(26, 28, 36, 0.85);
   border: 2px solid #303443;
   border-radius: 16px;
@@ -362,8 +373,8 @@ const goToPay = () => {
 }
 
 .active-ship-icon {
-  width: 80px;
-  height: 80px;
+  width: 74px;
+  height: 74px;
   object-fit: contain;
   filter: drop-shadow(0 0 5px rgba(0, 242, 255, 0.5));
 }
@@ -446,7 +457,7 @@ const goToPay = () => {
   justify-content: center;
   align-content: flex-start;
   gap: 25px;
-  padding: 30px 20px 20px 20px;
+  padding: 20px;
   overflow-y: auto;
   z-index: 10;
   -webkit-overflow-scrolling: touch;
@@ -544,7 +555,7 @@ const goToPay = () => {
 }
 
 .astro-unit {
-  width: 120px;
+  width: 134px;
   height: auto;
 }
 
@@ -576,7 +587,7 @@ const goToPay = () => {
 }
 
 .galaxy-projection.plus-floating {
-  filter: grayscale(100%) opacity(0.8);
+  filter: opacity(0.8);
 }
 
 @keyframes floatEffect {

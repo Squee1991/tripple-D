@@ -1,55 +1,58 @@
 <template>
-  <main class="stats-page">
-    <header class="stats-header">
-      <div class="panel__top">
-        <h1 class="panel__title">{{ t('thematicStatistics.title')}}</h1>
+  <main class="ios-page">
+    <header class="topic-switch ios-card">
+      <button class="nav-arrow" @click="prevTopic">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="topic-title">
+        {{ t(themesMap[selectedTopic]?.name) }}
       </div>
-      <div class="topic-switch">
-        <button class="nav" @click="prevTopic">
-          <img src="../../assets/images/arrow-prew.svg" alt="prevArrow"/>
-        </button>
-        <div class="chip__theme">
-          {{ t(themesMap[selectedTopic]?.name) }}
-        </div>
-        <button class="nav" @click="nextTopic">
-          <img src="../../assets/images/arrow-next.svg" alt="nextArrow"/>
-        </button>
-      </div>
+      <button class="nav-arrow" @click="nextTopic">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
     </header>
-    <section class="summary">
-      <div class="card">
-        <div class="label">{{ t('thematicStatistics.modules')}}</div>
+    <section class="summary-grid">
+      <div class="summary-box">
+        <div class="label">{{ t('thematicStatistics.modules') }}</div>
         <div class="value">{{ totalModules }}</div>
       </div>
-      <div class="card">
-        <div class="label">{{ t('thematicStatistics.done')}}</div>
+      <div class="summary-box">
+        <div class="label">{{ t('thematicStatistics.done') }}</div>
         <div class="value">{{ totalCompleted }}</div>
       </div>
-      <div class="card">
-        <div class="label">{{ t('thematicStatistics.progress')}}</div>
-        <div class="value">{{ Math.round(overallPercent) }}%</div>
-        <div class="bar">
-          <div class="fill" :style="{ width: clampPercent(overallPercent) + '%' }"/>
+      <div class="summary-box summary-box--wide">
+        <div class="label-row">
+          <span class="label">{{ t('thematicStatistics.progress') }}</span>
+          <span class="value-small">{{ Math.round(overallPercent) }}%</span>
+        </div>
+        <div class="ios-progress">
+          <div class="ios-progress-fill" :style="{ width: clampPercent(overallPercent) + '%' }"/>
         </div>
       </div>
-      <div class="legend card">
+    </section>
+    <section class="legend ios-card">
+      <div class="legend-item">
         <span class="dot done"></span>
-        <span>{{ t('thematicStatistics.done')}}</span>
+        <span>{{ t('thematicStatistics.done') }}</span>
+      </div>
+      <div class="legend-item">
         <span class="dot current"></span>
-        <span>{{ t('thematicStatistics.available')}}</span>
+        <span>{{ t('thematicStatistics.available') }}</span>
+      </div>
+      <div class="legend-item">
         <span class="dot locked"></span>
-        <span>{{ t('thematicStatistics.closed')}}</span>
+        <span>{{ t('thematicStatistics.closed') }}</span>
       </div>
     </section>
     <section class="levels" v-if="levels.length">
-      <div v-for="lvl in levels" :key="lvl.level" class="level-card">
+      <div v-for="lvl in levels" :key="lvl.level" class="level-card ios-card">
         <header class="level-head">
-          <div class="level-title">{{ t('thematicStatistics.level')}} {{ lvl.level }}</div>
+          <div class="level-title">{{ t('thematicStatistics.level') }} {{ lvl.level }}</div>
           <div class="level-sub">{{ lvl.completed }} / {{ lvl.total }}</div>
         </header>
-        <div class="progress">
-          <div class="bar">
-            <div class="fill" :style="{ width: clampPercent(lvl.percent) + '%' }"/>
+        <div class="progress-wrap">
+          <div class="ios-progress">
+            <div class="ios-progress-fill" :style="{ width: clampPercent(lvl.percent) + '%' }"/>
           </div>
           <div class="percent">{{ Math.round(lvl.percent) }}%</div>
         </div>
@@ -63,14 +66,15 @@
               :title="pillTitle(lvl.level, m)"
           >
             <span class="id">{{ m.id }}</span>
-            <span class="name">{{ m.title || t('thematicStatistics.module') + m.id }}</span>
+            <span class="name">{{ m.title || t('thematicStatistics.module') + ' ' + m.id }}</span>
           </button>
         </div>
       </div>
     </section>
-    <section v-else class="empty">
-      <p>{{t('thematicStatistics.noData')}}</p>
+    <section v-else class="empty-state">
+      <p>{{ t('thematicStatistics.noData') }}</p>
     </section>
+
   </main>
 </template>
 
@@ -103,7 +107,6 @@ onMounted(() => {
   window.addEventListener('resize', handler)
 })
 
-/** Темы */
 const themes = [
   {key: 'house', name: 'chooseThemeList.home', img: HomeImg},
   {key: 'zeit', name: 'chooseThemeList.time', img: Clock},
@@ -224,296 +227,248 @@ function pillTitle(level, m) {
   return `level ${level} — «${m.title || 'Module ' + m.id}»: closed`
 }
 
-async function openModule(level, id) {
-
-}
+async function openModule(level, id) {}
 </script>
 
 <style scoped>
-:root {
-  --bg: #f6f3ee;
-  --ink: #0f172a;
-  --muted: #6b7280;
-  --card: #ffffff;
-  --border: #e5e7eb;
-}
-
-.stats-header {
+/* БАЗОВЫЙ LAYOUT */
+.ios-page {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 12px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 12px;
+  gap: 16px;
+  font-family: "Nunito", sans-serif;
 }
 
-.panel__top {
+/* ОБЩИЕ СТИЛИ КАРТОЧЕК */
+.ios-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+/* ПЕРЕКЛЮЧАТЕЛЬ ТОПИКОВ */
+.topic-switch {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.panel__title {
-  font-size: 24px;
-  margin: 0;
-}
-
-.btn {
-  padding: 8px 12px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  background: #fff;
-  cursor: pointer;
-}
-
-.btn[disabled] {
-  opacity: .6;
-  cursor: default;
-}
-
-.btn--ghost {
-  padding: 6px 12px;
-  border: 1px solid var(--border);
-  background: #f8fafc;
-  border-radius: 10px;
-}
-
-.topic-switch {
+.nav-arrow {
+  background: #F0F2F5;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  cursor: pointer;
 }
-
-.nav {
-  width: 38px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--border);
-  background: #111827;
-  color: #fff;
-  border-radius: 8px;
-}
-
-.chip__theme {
-  padding: 6px 10px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: #4ade80;
-  font-weight: 900;
-  min-width: 220px;
+.topic-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1E1E1E;
   text-align: center;
+  flex: 1;
 }
 
-/* Сводка */
-.summary {
+/* СВОДКА (SUMMARY) */
+.summary-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
-  margin: 12px 0;
 }
-
-.card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 12px;
+.summary-box {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
-
-.card .label {
-  font-size: 12px;
-  color: var(--muted);
+.summary-box--wide {
+  grid-column: 1 / -1;
 }
-
-.card .value {
-  font-size: 26px;
+.label {
+  font-size: 0.85rem;
+  color: #6B7280;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.value {
+  font-size: 1.75rem;
   font-weight: 800;
+  color: #1E1E1E;
+}
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.value-small {
+  font-weight: 800;
+  color: #1E1E1E;
+  font-size: 1rem;
 }
 
-.bar {
-  height: 10px;
-  background: #eef2f7;
-  border-radius: 999px;
+/* ПРОГРЕСС БАРЫ */
+.ios-progress {
+  height: 12px;
+  background: #F3F4F6;
+  border-radius: 10px;
+  position: relative;
   overflow: hidden;
+  flex: 1;
 }
-
-.fill {
+.ios-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #22c55e, #84cc16);
-  width: 0;
-  transition: width .35s ease;
+  background: #4ADE80;
+  border-radius: 10px;
+  transition: width 0.4s ease;
 }
 
+/* ЛЕГЕНДА */
 .legend {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 12px;
-  flex-direction: row;
-  justify-content: center;
-  font-size: 14px;
+  padding: 12px 20px;
 }
-
-.legend .dot {
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4B5563;
+}
+.dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  display: inline-block;
-  margin-right: 4px;
 }
+.dot.done { background: #4ADE80; }
+.dot.current { background: #FBBF24; }
+.dot.locked { background: #E5E7EB; }
 
-.legend .done {
-  background: #22c55e;
-}
-
-.legend .current {
-  background: #f59e0b;
-}
-
-.legend .locked {
-  background: #cbd5e1;
-}
-
+/* УРОВНИ И МОДУЛИ */
 .levels {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-
-.level-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 12px;
-}
-
 .level-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
-
 .level-title {
   font-weight: 800;
+  font-size: 1.15rem;
+  color: #1E1E1E;
 }
-
 .level-sub {
-  font-size: 12px;
-  color: var(--muted);
+  font-size: 0.85rem;
+  color: #6B7280;
+  font-weight: 600;
 }
-
-.progress {
+.progress-wrap {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 12px;
+  margin-bottom: 16px;
 }
-
 .percent {
-  font-size: 12px;
-  color: var(--muted);
-  width: 40px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #6B7280;
+  width: 36px;
   text-align: right;
 }
 
-/* Модули */
+/* КНОПКИ МОДУЛЕЙ */
 .modules {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 10px;
 }
-
 .module-pill {
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 1px dashed var(--border);
-  background: #fff;
-  border-radius: 14px;
-  padding: 10px 12px;
-  cursor: default;
-  transition: all .2s ease;
+  border: none;
+  border-radius: 16px;
+  padding: 8px 12px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
   text-align: left;
 }
-
 .module-pill .id {
   font-weight: 800;
-  width: 36px;
-  height: 36px;
+  font-size: 0.9rem;
+  width: 32px;
+  height: 32px;
   border-radius: 10px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
-
 .module-pill .name {
-  font-size: 14px;
-  color: #334155;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1E1E1E;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+/* Состояния модулей (Мягкие цвета) */
 .module-pill.done {
-  border-style: solid;
-  border-color: #22c55e33;
-  background: #f0fdf4;
+  background: #F0FDF4; /* Светло-зеленый фон */
 }
-
 .module-pill.done .id {
-  background: #22c55e;
-  color: #052e16;
+  background: #4ADE80;
+  color: #FFFFFF;
 }
 
 .module-pill.current {
-  border-style: solid;
-  border-color: #f59e0b33;
-  background: #fffbeb;
+  background: #FFFBEB; /* Светло-желтый фон */
+  cursor: pointer;
 }
-
 .module-pill.current .id {
-  background: #f59e0b;
-  color: #3b1f03;
+  background: #FBBF24;
+  color: #FFFFFF;
 }
 
 .module-pill.locked {
-  opacity: .55;
+  background: #F9FAFB;
+  opacity: 0.7;
 }
-
 .module-pill.locked .id {
-  background: #cbd5e1;
-  color: #334155;
+  background: #E5E7EB;
+  color: #9CA3AF;
+}
+.module-pill.locked .name {
+  color: #9CA3AF;
 }
 
-.module-pill:not(.locked) {
-  cursor: pointer;
+@media (hover: hover) {
+  .module-pill:not(.locked):hover {
+    transform: scale(1.02);
+  }
 }
 
-.module-pill:not(.locked):hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(2, 6, 23, .06);
-}
-
-.empty {
-  color: var(--muted);
+.empty-state {
   text-align: center;
-  padding: 32px 0;
+  padding: 40px 20px;
+  color: #9CA3AF;
+  font-weight: 600;
+  background: #FFFFFF;
+  border-radius: 20px;
 }
-
-@media (max-width: 980px) {
-  .summary {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width:1023px) {
-  .legend {
-    flex-direction: column;
-  }
-}
-
 </style>
