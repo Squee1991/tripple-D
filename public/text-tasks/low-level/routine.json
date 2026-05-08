@@ -1,0 +1,220 @@
+{
+  "themeId": "basics_a1",
+  "themeTitle": "Основы: Приветствия и Числа",
+  "level": "A1",
+  "tasks": [
+    {
+      "id": "task_1",
+      "title": "Formelle Vorstellung",
+      "translation": "Формальное знакомство",
+      "wordsPool": ["Guten Tag", "heißen", "Sie", "bin", "freut", "mich", "wohnen", "sprechen"],
+      "textElements": [
+        { "type": "blank", "id": 1, "correct": "Guten Tag" },
+        { "type": "text", "content": "! Mein Name ist Thomas Wagner. Wie " },
+        { "type": "blank", "id": 2, "correct": "heißen" },
+        { "type": "text", "content": " " },
+        { "type": "blank", "id": 3, "correct": "Sie" },
+        { "type": "text", "content": "? - Ich " },
+        { "type": "blank", "id": 4, "correct": "bin" },
+        { "type": "text", "content": " Maria Schmidt. Es " },
+        { "type": "blank", "id": 5, "correct": "freut" },
+        { "type": "text", "content": " " },
+        { "type": "blank", "id": 6, "correct": "mich" },
+        { "type": "text", "content": ", Sie kennenzulernen. Wo " },
+        { "type": "blank", "id": 7, "correct": "wohnen" },
+        { "type": "text", "content": " Sie? - Ich lebe in Berlin. Welche Sprachen " },
+        { "type": "blank", "id": 8, "correct": "sprechen" },
+        { "type": "text", "content": " Sie? - Ich spreche Deutsch und Englisch." }
+      ]
+    },
+    {
+      "id": "task_2",
+      "title": "Informelles Kennenlernen",
+      "translation": "Неформальное знакомство",
+      "wordsPool": ["bist", "heiße", "Freut", "Woher", "aus", "wohne"],
+      "textElements": [
+        { "type": "text", "content": "Hallo! Ich bin Lukas. Und wer " },
+        { "type": "blank", "id": 2, "correct": "bist" },
+        { "type": "text", "content": " du? - Ich " },
+        { "type": "blank", "id": 3, "correct": "heiße" },
+        { "type": "text", "content": " Sarah. " },
+        { "type": "blank", "id": 4, "correct": "Freut" },
+        { "type": "text", "content": " mich, Sarah! " },
+        { "type": "blank", "id": 5, "correct": "Woher" },
+        { "type": "text", "content": " kommst du? - Ich komme " },
+        { "type": "blank", "id": 6, "correct": "aus" },
+        { "type": "text", "content": " Italien. Aber jetzt " },
+        { "type": "blank", "id": 7, "correct": "wohne" },
+        { "type": "text", "content": " ich in Berlin." }
+      ]
+    },
+    {
+      "id": "task_3",
+      "title": "Ein Treffen planen",
+      "translation": "Планы на день",
+      "wordsPool": ["du", "heute", "ich", "wir", "um", "Uhr"],
+      "textElements": [
+        { "type": "text", "content": "Hallo Anna! — Hallo Max! Hast " },
+        { "type": "blank", "id": 1, "correct": "du" },
+        { "type": "text", "content": " " },
+        { "type": "blank", "id": 2, "correct": "heute" },
+        { "type": "text", "content": " Zeit? — Ja, " },
+        { "type": "blank", "id": 3, "correct": "ich" },
+        { "type": "text", "content": " habe frei. Gehen " },
+        { "type": "blank", "id": 4, "correct": "wir" },
+        { "type": "text", "content": " zusammen spazieren? — Sehr gerne. Wir treffen uns " },
+        { "type": "blank", "id": 5, "correct": "um" },
+        { "type": "text", "content": " sechs " },
+        { "type": "blank", "id": 6, "correct": "Uhr" },
+        { "type": "text", "content": ". Das Wetter ist super. — Alles klar, bis später!" }
+      ]
+    },
+    {
+      "id": "task_4",
+      "title": "Abendpläne",
+      "translation": "Планы на вечер",
+      "wordsPool": ["du", "heute", "ich", "wir", "um", "Uhr"],
+      "textElements": [
+        { "type": "text", "content": "Hallo Lea! — Hallo Tim! Hast " },
+        { "type": "blank", "id": 1, "correct": "du" },
+        { "type": "text", "content": " " },
+        { "type": "blank", "id": 2, "correct": "heute" },
+        { "type": "text", "content": " Zeit? — Ja, " },
+        { "type": "blank", "id": 3, "correct": "ich" },
+        { "type": "text", "content": " habe Zeit. Gehen " },
+        { "type": "blank", "id": 4, "correct": "wir" },
+        { "type": "text", "content": " zusammen ins Kino? — Ja, gerne. Das Treffen ist " },
+        { "type": "blank", "id": 5, "correct": "um" },
+        { "type": "text", "content": " acht " },
+        { "type": "blank", "id": 6, "correct": "Uhr" },
+        { "type": "text", "content": ". — Super, bis dann!" }
+      ]
+    },
+    {
+      "id": "task_5",
+      "title": "Am Wochenende",
+      "translation": "В выходные",
+      "wordsPool": ["du", "Samstag", "ich", "wir", "um", "Uhr"],
+      "textElements": [
+        { "type": "text", "content": "Hallo Nina! — Hallo Paul! Hast " },
+        { "type": "blank", "id": 1, "correct": "du" },
+        { "type": "text", "content": " am " },
+        { "type": "blank", "id": 2, "correct": "Samstag" },
+        { "type": "text", "content": " Zeit? — Ja, " },
+        { "type": "blank", "id": 3, "correct": "ich" },
+        { "type": "text", "content": " habe frei. Gehen " },
+        { "type": "blank", "id": 4, "correct": "wir" },
+        { "type": "text", "content": " zusammen spazieren? — Sehr gerne. Wir treffen uns " },
+        { "type": "blank", "id": 5, "correct": "um" },
+        { "type": "text", "content": " vier " },
+        { "type": "blank", "id": 6, "correct": "Uhr" },
+        { "type": "text", "content": ". — Alles klar, bis dann!" }
+      ]
+    },
+    {
+      "id": "task_6",
+      "title": "Sport machen",
+      "translation": "Занятия спортом",
+      "wordsPool": ["du", "ich", "wir", "Dienstag", "Wann", "Uhr"],
+      "textElements": [
+        { "type": "text", "content": "Hallo Lena! — Hallo Marc! Machst " },
+        { "type": "blank", "id": 1, "correct": "du" },
+        { "type": "text", "content": " gern Sport? — Ja, " },
+        { "type": "blank", "id": 2, "correct": "ich" },
+        { "type": "text", "content": " mache Yoga. — Machen " },
+        { "type": "blank", "id": 3, "correct": "wir" },
+        { "type": "text", "content": " am " },
+        { "type": "blank", "id": 4, "correct": "Dienstag" },
+        { "type": "text", "content": " zusammen Sport? — Ja, das ist prima. " },
+        { "type": "blank", "id": 5, "correct": "Wann" },
+        { "type": "text", "content": "? — Um sieben " },
+        { "type": "blank", "id": 6, "correct": "Uhr" },
+        { "type": "text", "content": ". — Super, bis dann!" }
+      ]
+    },
+    {
+      "id": "task_7",
+      "title": "Zusammen kochen",
+      "translation": "Готовим вместе",
+      "wordsPool": ["du", "ich", "wir", "Abend", "um", "Uhr"],
+      "textElements": [
+        { "type": "text", "content": "Hallo Kevin! — Hallo Lisa! Kochst " },
+        { "type": "blank", "id": 1, "correct": "du" },
+        { "type": "text", "content": " gern? — Ja, " },
+        { "type": "blank", "id": 2, "correct": "ich" },
+        { "type": "text", "content": " koche oft Pizza. — Kochen " },
+        { "type": "blank", "id": 3, "correct": "wir" },
+        { "type": "text", "content": " am " },
+        { "type": "blank", "id": 4, "correct": "Abend" },
+        { "type": "text", "content": " zusammen? — Ja, gute Idee! " },
+        { "type": "blank", "id": 5, "correct": "um" },
+        { "type": "text", "content": " wie viel " },
+        { "type": "blank", "id": 6, "correct": "Uhr" },
+        { "type": "text", "content": "? — Um sieben. — Das passt, bis dann!" }
+      ]
+    },
+    {
+      "id": "task_8",
+      "title": "In die Stadt gehen",
+      "translation": "Поездка в город",
+      "wordsPool": ["heute", "ich", "wir", "Um", "Uhr", "jetzt"],
+      "textElements": [
+        { "type": "text", "content": "Elias, hast du " },
+        { "type": "blank", "id": 1, "correct": "heute" },
+        { "type": "text", "content": " Zeit? — Ja, " },
+        { "type": "blank", "id": 2, "correct": "ich" },
+        { "type": "text", "content": " habe frei. Warum? — " },
+        { "type": "blank", "id": 3, "correct": "wir" },
+        { "type": "text", "content": " gehen in die Stadt. Kommst du mit? — Ja, gerne! " },
+        { "type": "blank", "id": 4, "correct": "um" },
+        { "type": "text", "content": " wie viel " },
+        { "type": "blank", "id": 5, "correct": "Uhr" },
+        { "type": "text", "content": "? — Genau " },
+        { "type": "blank", "id": 6, "correct": "jetzt" },
+        { "type": "text", "content": ", um fünf. — Super, ich komme!" }
+      ]
+    },
+    {
+      "id": "task_9",
+      "title": "Zusammen lernen",
+      "translation": "Учимся вместе",
+      "wordsPool": ["du", "ich", "wir", "Wann", "um", "Uhr"],
+      "textElements": [
+        { "type": "text", "content": "Marie, lernst " },
+        { "type": "blank", "id": 1, "correct": "du" },
+        { "type": "text", "content": " gerade? — Ja, " },
+        { "type": "blank", "id": 2, "correct": "ich" },
+        { "type": "text", "content": " lerne Deutsch. — Cool! Lernen " },
+        { "type": "blank", "id": 3, "correct": "wir" },
+        { "type": "text", "content": " heute zusammen? — Ja, das ist eine super Idee. " },
+        { "type": "blank", "id": 4, "correct": "Wann" },
+        { "type": "text", "content": " haben wir Zeit? — Vielleicht " },
+        { "type": "blank", "id": 5, "correct": "um" },
+        { "type": "text", "content": " acht " },
+        { "type": "blank", "id": 6, "correct": "Uhr" },
+        { "type": "text", "content": "? — Abgemacht, bis später!" }
+      ]
+    },
+    {
+      "id": "task_10",
+      "title": "Musik machen",
+      "translation": "Занимаемся музыкой",
+      "wordsPool": ["du", "ich", "wir", "Wann", "um", "Uhr"],
+      "textElements": [
+        { "type": "text", "content": "Hallo Lukas! — Hallo Ben! Kommst " },
+        { "type": "blank", "id": 1, "correct": "du" },
+        { "type": "text", "content": " heute zu mir? — Ja, " },
+        { "type": "blank", "id": 2, "correct": "ich" },
+        { "type": "text", "content": " komme gern. Machen " },
+        { "type": "blank", "id": 3, "correct": "wir" },
+        { "type": "text", "content": " zusammen Musik? — Ja, klar! " },
+        { "type": "blank", "id": 4, "correct": "Wann" },
+        { "type": "text", "content": " bist du hier? — Vielleicht " },
+        { "type": "blank", "id": 5, "correct": "um" },
+        { "type": "text", "content": " шесть " },
+        { "type": "blank", "id": 6, "correct": "Uhr" },
+        { "type": "text", "content": "? — Perfekt, ich warte на тебя (auf dich)!" }
+      ]
+    }
+  ]
+}

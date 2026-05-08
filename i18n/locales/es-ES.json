@@ -3550,6 +3550,7 @@
     "account": "Gestión de cuenta"
   },
   "valentineAchievements": {
+    "valentineAchievementsTitle": "Festival de Corazones",
     "firstValentineQuestLabel": "Primera cita",
     "firstValentineQuesDescription": "¡Da el primer paso! Completa cualquier tarea del evento «Festival de Corazones» и recibe tu primera recompensa.",
     "valentineWordsLabel": "El lenguaje del amor",
@@ -3762,6 +3763,7 @@
     "theme": "Tema romántico"
   },
   "winterAchievements": {
+    "winterAchievementsTitle": "Susurro del invierno",
     "firstQuestName": "Primera estrella del árbol",
     "firstQuestDescription": "Completa cualquier misión del evento de invierno y enciende la primera estrella.",
     "santaLexiconName": "Léxico de Papá Noel",

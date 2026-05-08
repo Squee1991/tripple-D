@@ -132,7 +132,7 @@ import {useRankUserStore} from '~/store/rankStore.js'
 import ShopIcon from '../../assets/images/shopping-cart.svg'
 import Heart from '../../assets/images/life.svg'
 import ShieldFreeze from '../../assets/images/FreezeShield.svg'
-import Articlus from '../../assets/images/articlus.png'
+import Articlus from '../../assets/images/article.svg'
 import Sale from '../../assets/images/save5.svg'
 import Sale10 from '../../assets/images/rocket_10.svg'
 import Sale15 from '../../assets/images/hot-air-ballon15.svg'
@@ -441,7 +441,6 @@ const confirmPurchase = async () => {
   align-items: center;
   justify-content: center;
   position: relative;
-  border-bottom: 2px solid #363d4a;
 }
 
 .shop-card__img {
@@ -567,7 +566,7 @@ const confirmPurchase = async () => {
 .shop-card__action-btn:disabled {
   background: var(--cardShopBtnDisabledBg);
   color: #7f8fa4;
-  box-shadow: 0 4px 0 #252a33;
+  box-shadow: 0 4px 0 var(--cardShopBtnDisabledBg);
   cursor: not-allowed;
 }
 
@@ -579,6 +578,7 @@ const confirmPurchase = async () => {
 
 .btn-content {
   display: flex;
+  gap: 8px;
   align-items: center;
   justify-content: center;
 }
@@ -598,19 +598,20 @@ const confirmPurchase = async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 9000;
   backdrop-filter: blur(4px);
   padding: 20px;
 }
 
 .modal-content {
-  background: var(--cardShopBg);
-  border: 2px solid #50a2d8;
+  background:var(--menuItemsBg);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+  border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 20px;
   padding: 24px;
   width: 100%;
   max-width: 360px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+
   animation: slideUp 0.3s ease-out;
 }
 
@@ -635,7 +636,7 @@ const confirmPurchase = async () => {
 }
 
 .modal-title {
-  color: white;
+  color: var(--titleColor);
   margin: 0;
   font-size: 20px;
   font-weight: 800;
@@ -655,7 +656,7 @@ const confirmPurchase = async () => {
   justify-content: center;
   gap: 15px;
   margin-bottom: 24px;
-  background: #2a313e;
+  background: var(--tabBg);
   padding: 10px;
   border-radius: 12px;
 }
@@ -687,13 +688,13 @@ const confirmPurchase = async () => {
 }
 
 .day-count {
-  color: white;
+  color: var(--titleColor);
   font-size: 24px;
   font-weight: 800;
 }
 
 .day-label {
-  color: #a0a6b1;
+  color: var(--titleColor);
   font-size: 12px;
 }
 
@@ -701,18 +702,18 @@ const confirmPurchase = async () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #252a33;
+  background: var(--tabBg);
   padding: 12px 16px;
   border-radius: 12px;
   margin-bottom: 16px;
-  color: #a0a6b1;
+  color: var(--titleColor);
 }
 
 .price-value {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: white;
+  color: var(--titleColor);
   font-weight: 800;
   font-size: 18px;
 }
@@ -751,14 +752,15 @@ const confirmPurchase = async () => {
 
 .modal-btn.cancel {
   background: transparent;
-  border: 2px solid #363d4a;
+  border: 1px solid #363d4a;
   color: #a0a6b1;
+  box-shadow: 0 3px 0  #363d4a;
 }
 
 .modal-btn.confirm, .modal-close-btn {
   background: #f1c40f;
   color: #1c222d;
-  box-shadow: 0 4px 0 #c29d0b;
+  box-shadow: 0 3px 0 #c29d0b;
 }
 
 .modal-btn.confirm:disabled {

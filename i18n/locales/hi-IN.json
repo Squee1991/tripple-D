@@ -3520,6 +3520,7 @@
     "account": "खाता प्रबंधन"
   },
   "valentineAchievements": {
+    "valentineAchievementsTitle": "दिलों का उत्सव",
     "firstValentineQuestLabel": "पहली डेट",
     "firstValentineQuesDescription": "पहला कदम उठाएं! 'दिलों का उत्सव' ईवेंट का कोई भी कार्य पूरा करें और अपना पहला इनाम पाएं।",
     "valentineWordsLabel": "प्यार की भाषा",
@@ -3732,6 +3733,7 @@
     "theme": "रोमांटिक थीम"
   },
   "winterAchievements": {
+    "winterAchievementsTitle": "सर्दियों की फुसफुसाहट",
     "firstQuestName": "पहला क्रिसमस स्टार",
     "firstQuestDescription": "कोई भी शीतकालीन क्वेस्ट पूरा करें और पहला तारा जलाएं",
     "santaLexiconName": "सांता की शब्दावली",

@@ -1,18 +1,18 @@
 import FirstStep from "assets/images/locations-images/FirstStep.png"
 import WindValley from "assets/images/locations-images/wind-valley.png"
-import NorthCliffs from 'assets/images/locations-images/north-cliffs.png'
+import NorthCliffs from 'assets/images/locations-images/north-cliffs.webp'
 import LakeRuins from 'assets/images/locations-images/lake-ruins.png'
-import StormCoast from 'assets/images/locations-images/storm-coast.png'
+import StormCoast from 'assets/images/locations-images/storm-coast.webp'
 import StoneReach from 'assets/images/locations-images/stone-reach.png'
-import MasterLands from 'assets/images/locations-images/master-lands.png'
-import WildLand from 'assets/images/locations-images/wild-land.png'
-import Future from 'assets/images/locations-images/Future.png'
+import MasterLands from 'assets/images/locations-images/master-lands.webp'
+import WildLand from 'assets/images/locations-images/wild-land.webp'
+import Future from 'assets/images/locations-images/Future.webp'
 import Past from 'assets/images/locations-images/Past.png'
 import Action from 'assets/images/locations-images/Action.jpg'
 import OrderValley from 'assets/images/locations-images/OrderValley.jpg'
 import TimeGate from 'assets/images/locations-images/time_gate.jpg'
-import EdgeImages from 'assets/images/locations-images/edgeImages.jpg'
-import SecretLands from 'assets/images/locations-images/secret-lands.jpg'
+import EdgeImages from 'assets/images/locations-images/edgeImages.webp'
+import SecretLands from 'assets/images/locations-images/secret-lands.webp'
 import MixedLands from 'assets/images/locations-images/mixedArticle.jpg'
 
 export const regions = {

@@ -93,10 +93,10 @@ const activeIndex = computed(() => {
   height: 100%;
   width: 20%;
   background: var(--tabsSlideBg);
+  box-shadow: var(--tabSlideBoxShadow);
   border-radius: 30px;
   transition: transform 0.4s cubic-bezier(0.34, 1.35, 0.64, 1), opacity 0.3s ease;
   z-index: 1;
-  box-shadow: var(--tabSlideBoxShadow);
   will-change: transform;
 }
 

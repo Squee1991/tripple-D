@@ -76,7 +76,7 @@ const getCompletedCount = group =>
 
 .group-title {
   font-size: 20px;
-  color: var(--titleColor);
+  color: white;
   margin-right: 10px;
 }
 

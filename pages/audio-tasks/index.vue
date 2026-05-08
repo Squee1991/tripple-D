@@ -229,6 +229,7 @@ onUnmounted(() => {
 .quiz__header-wrapper {
   padding: 5px 10px 15px 10px;
   flex-shrink: 0;
+  margin-bottom: 10px;
 }
 
 .quiz__header {

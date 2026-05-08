@@ -58,7 +58,13 @@
     </div>
     <main class="content-area" :class="{'open': isContentOpen}">
       <header class="content-header">
-        <button class="content-close" @click="closeContent" aria-label="Close achievements panel">✖</button>
+        <button class="content-close" @click="closeContent" aria-label="Close achievements panel">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+               stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </button>
         <h1>{{ t('categoryAchievments.achievmentAreaLabel') }}</h1>
         <div class="content-header-actions">
           <button :title="t('hoverTitle.ach')" @click="showInfo" class="header__icon-info">
@@ -601,11 +607,10 @@ const handleCategoryClick = (category) => {
 }
 
 .header__icon-info {
-  width: 55px;
+  width: 50px;
   cursor: pointer;
   background: none;
   border: none;
-  padding: 4px;
 }
 
 .sidebar {
@@ -684,8 +689,6 @@ const handleCategoryClick = (category) => {
 }
 
 .submenu-item.active {
-  background-color: #60a5fa;
-  color: #fff;
   border-color: #1e1e1e;
 }
 
@@ -762,7 +765,7 @@ const handleCategoryClick = (category) => {
 
 .content-area {
   flex-grow: 1;
-  padding: 5px 10px;
+  padding: 0 10px 0 10px;
   background-color: var(--bg);
   border-radius: 24px;
   border: 3px solid #1e1e1e;
@@ -798,14 +801,22 @@ const handleCategoryClick = (category) => {
 }
 
 .content-close {
-  border: 2px solid #1e1e1e;
   background: #fff;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 12px;
-  padding: 8px 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  box-shadow: 3px 3px 0 #1e1e1e;
-  font-weight: 800;
-  display: none;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.content-close:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
 }
 
 .category-content {

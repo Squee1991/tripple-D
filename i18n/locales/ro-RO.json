@@ -3545,6 +3545,7 @@
     "account": "Gestionarea contului"
   },
   "valentineAchievements": {
+    "valentineAchievementsTitle": "Festivalul Inimilor",
     "firstValentineQuestLabel": "Prima întâlnire",
     "firstValentineQuesDescription": "Fă primul pas! Finalizează orice misiune din evenimentul „Festivalul Inimilor” și primește prima recompensă.",
     "valentineWordsLabel": "Limbajul iubirii",
@@ -3757,6 +3758,7 @@
     "theme": "Temă romantică"
   },
   "winterAchievements": {
+    "winterAchievementsTitle": "Șoapta iernii",
     "firstQuestName": "Prima stea din brad",
     "firstQuestDescription": "Finalizează orice misiune din evenimentul de iarnă și aprinde prima stea",
     "santaLexiconName": "Lexicul lui Moș Crăciun",

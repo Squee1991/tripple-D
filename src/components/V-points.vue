@@ -119,15 +119,6 @@ onMounted(() => {
   gap: 12px;
 }
 
-.action-menu__item {
-  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
-  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s;
-  background:var(--menuItemsBg);
-  border: 2px solid var(--tabsSlideBorderColor);
-  border-radius: 16px;
-  padding: 6px 14px;
-}
-
 .points_header-title {
   text-align: center;
   color: var(--title);
@@ -141,6 +132,15 @@ onMounted(() => {
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
+}
+
+.action-menu__item {
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s;
+  background:var(--menuItemsBg);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+  border: 2px solid var(--tabsSlideBorderColor);
+  border-radius: 16px;
+  padding: 6px 14px;
 }
 
 .action-menu__link:active {

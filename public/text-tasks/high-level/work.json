@@ -1,0 +1,175 @@
+{
+  "themeId": "work_study_b1",
+  "themeTitle": "Работа и учеба (B1)",
+  "level": "B1",
+  "tasks": [
+    {
+      "id": "work_b1_1",
+      "title": "Das Jobinterview",
+      "translation": "Собеседование на работу",
+      "wordsPool": ["hatte", "trotzdem", "sonst", "dann", "nämlich", "deshalb"],
+      "textElements": [
+        { "type": "text", "content": "Ich " },
+        { "type": "blank", "id": 1, "correct": "hatte" },
+        { "type": "text", "content": " mich wochenlang auf das Gespräch vorbereitet, bevor ich das Firmengebäude betrat. — Ich war extrem aufgeregt, " },
+        { "type": "blank", "id": 2, "correct": "trotzdem" },
+        { "type": "text", "content": " beantwortete ich alle Fragen sehr souverän. — Man muss selbstbewusst auftreten, " },
+        { "type": "blank", "id": 3, "correct": "sonst" },
+        { "type": "text", "content": " bekommt man die Stelle sicher nicht. — Zuerst stellt man seine Fähigkeiten vor, " },
+        { "type": "blank", "id": 4, "correct": "dann" },
+        { "type": "text", "content": " spricht man über das Gehalt. — Pünktlichkeit ist " },
+        { "type": "blank", "id": 5, "correct": "nämlich" },
+        { "type": "text", "content": " der erste gute Eindruck. — Das Gespräch lief gut, " },
+        { "type": "blank", "id": 6, "correct": "deshalb" },
+        { "type": "text", "content": " hoffe ich auf eine schnelle Zusage." }
+      ]
+    },
+    {
+      "id": "work_b1_2",
+      "title": "Projektmanagement",
+      "translation": "Управление проектом",
+      "wordsPool": ["leitete", "hatte", "deshalb", "trotzdem", "sonst", "nämlich"],
+      "textElements": [
+        { "type": "text", "content": "Letztes Jahr " },
+        { "type": "blank", "id": 1, "correct": "leitete" },
+        { "type": "text", "content": " ich ein sehr wichtiges Projekt in unserer Firma. — Ich " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " einen genauen Zeitplan erstellt, lange bevor das Team mit der Arbeit begann. — Die Deadline war extrem knapp, " },
+        { "type": "blank", "id": 3, "correct": "deshalb" },
+        { "type": "text", "content": " machten wir viele Überstunden. — Ein Kollege wurde plötzlich krank, " },
+        { "type": "blank", "id": 4, "correct": "trotzdem" },
+        { "type": "text", "content": " haben wir alles pünktlich abgegeben. — Man muss im Büro gut kommunizieren, " },
+        { "type": "blank", "id": 5, "correct": "sonst" },
+        { "type": "text", "content": " entstehen sofort Missverständnisse. — Teamarbeit ist " },
+        { "type": "blank", "id": 6, "correct": "nämlich" },
+        { "type": "text", "content": " der wichtigste Faktor für unseren Erfolg." }
+      ]
+    },
+    {
+      "id": "work_b1_3",
+      "title": "Auslandssemester",
+      "translation": "Семестр за границей",
+      "wordsPool": ["studierte", "hatte", "deshalb", "dann", "nämlich", "Außerdem"],
+      "textElements": [
+        { "type": "text", "content": "Während meines Bachelorstudiums " },
+        { "type": "blank", "id": 1, "correct": "studierte" },
+        { "type": "text", "content": " ich für ein ganzes Semester in Spanien. — Ich " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " vorher einen Intensivkurs besucht, damit ich die Vorlesungen besser verstehe. — Die akademische Kultur war ganz anders, " },
+        { "type": "blank", "id": 3, "correct": "deshalb" },
+        { "type": "text", "content": " brauchte ich etwas Zeit zur Eingewöhnung. — Zuerst sucht man eine Wohnung, " },
+        { "type": "blank", "id": 4, "correct": "dann" },
+        { "type": "text", "content": " meldet man sich an der Universität an. — Das Auslandsamt hat mir " },
+        { "type": "blank", "id": 5, "correct": "nämlich" },
+        { "type": "text", "content": " bei allen bürokratischen Dokumenten geholfen. — " },
+        { "type": "blank", "id": 6, "correct": "Außerdem" },
+        { "type": "text", "content": " habe ich dort wunderbare internationale Freunde gefunden." }
+      ]
+    },
+    {
+      "id": "work_b1_4",
+      "title": "Präsentation im Büro",
+      "translation": "Презентация в офисе",
+      "wordsPool": ["hielt", "hatte", "trotzdem", "sonst", "dann", "nämlich"],
+      "textElements": [
+        { "type": "text", "content": "Gestern Vormittag " },
+        { "type": "blank", "id": 1, "correct": "hielt" },
+        { "type": "text", "content": " ich eine wichtige Präsentation vor der gesamten Geschäftsführung. — Ich " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " die Folien mehrfach kontrolliert, bevor ich den Konferenzraum betrat. — Der Beamer funktionierte am Anfang nicht, " },
+        { "type": "blank", "id": 3, "correct": "trotzdem" },
+        { "type": "text", "content": " blieb ich absolut ruhig und professionell. — Man muss die Technik immer vorher testen, " },
+        { "type": "blank", "id": 4, "correct": "sonst" },
+        { "type": "text", "content": " verliert man schnell wertvolle Zeit. — Zuerst erklärt man das Problem, " },
+        { "type": "blank", "id": 5, "correct": "dann" },
+        { "type": "text", "content": " präsentiert man die passenden Lösungen. — Visuelle Hilfsmittel sind " },
+        { "type": "blank", "id": 6, "correct": "nämlich" },
+        { "type": "text", "content": " sehr wichtig für das Verständnis der Zahlen." }
+      ]
+    },
+    {
+      "id": "work_b1_5",
+      "title": "Prüfungsvorbereitung",
+      "translation": "Подготовка к экзаменам",
+      "wordsPool": ["lernte", "hatte", "deshalb", "sonst", "nämlich", "außerdem"],
+      "textElements": [
+        { "type": "text", "content": "Vor den Abschlussprüfungen " },
+        { "type": "blank", "id": 1, "correct": "lernte" },
+        { "type": "text", "content": " ich jeden Tag von morgens bis abends in der Bibliothek. — Ich " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " mir viele dicke Bücher ausgeliehen, bevor die heiße Lernphase begann. — Der Stoff war wirklich extrem umfangreich, " },
+        { "type": "blank", "id": 3, "correct": "deshalb" },
+        { "type": "text", "content": " schrieb ich mir hunderte Karteikarten. — Man muss unbedingt kleine Pausen machen, " },
+        { "type": "blank", "id": 4, "correct": "sonst" },
+        { "type": "text", "content": " kann das Gehirn die Informationen nicht langfristig speichern. — Eine gute Struktur ist " },
+        { "type": "blank", "id": 5, "correct": "nämlich" },
+        { "type": "text", "content": " das Geheimnis einer erfolgreichen Klausur. — Man versteht komplexe Themen " },
+        { "type": "blank", "id": 6, "correct": "außerdem" },
+        { "type": "text", "content": " viel besser, wenn man sie in einer Lerngruppe diskutiert." }
+      ]
+    },
+    {
+      "id": "work_b1_6",
+      "title": "Kundenservice",
+      "translation": "Обслуживание клиентов",
+      "wordsPool": ["arbeitete", "hatte", "trotzdem", "deshalb", "dann", "nämlich"],
+      "textElements": [
+        { "type": "text", "content": "Nach meinem Schulabschluss " },
+        { "type": "blank", "id": 1, "correct": "arbeitete" },
+        { "type": "text", "content": " ich ein Jahr lang im telefonischen Kundenservice. — Ich " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " eine intensive Schulung bekommen, bevor ich meinen ersten echten Anruf annahm. — Manche Kunden waren am Telefon sehr wütend, " },
+        { "type": "blank", "id": 3, "correct": "trotzdem" },
+        { "type": "text", "content": " musste ich immer freundlich bleiben. — Der Job war an manchen Tagen extrem stressig, " },
+        { "type": "blank", "id": 4, "correct": "deshalb" },
+        { "type": "text", "content": " war ich abends meistens ziemlich erschöpft. — Zuerst hört man dem Kunden aktiv zu, " },
+        { "type": "blank", "id": 5, "correct": "dann" },
+        { "type": "text", "content": " bietet man ihm eine schnelle Lösung an. — Kundenzufriedenheit ist " },
+        { "type": "blank", "id": 6, "correct": "nämlich" },
+        { "type": "text", "content": " das höchste Ziel unseres Unternehmens." }
+      ]
+    },
+    {
+      "id": "work_b1_7",
+      "title": "Die Masterarbeit",
+      "translation": "Магистерская диссертация",
+      "wordsPool": ["schrieb", "hatte", "deshalb", "sonst", "Dann", "nämlich"],
+      "textElements": [
+        { "type": "text", "content": "In meinem letzten Semester " },
+        { "type": "blank", "id": 1, "correct": "schrieb" },
+        { "type": "text", "content": " ich eine sehr komplexe Masterarbeit über Wirtschaftsethik. — Ich " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " monatelang empirische Daten gesammelt, bevor ich das erste Kapitel verfasste. — Die Analyse der Ergebnisse war sehr kompliziert, " },
+        { "type": "blank", "id": 3, "correct": "deshalb" },
+        { "type": "text", "content": " traf ich mich regelmäßig mit meinem Professor zur Beratung. — Man muss alle seine Quellen genau zitieren, " },
+        { "type": "blank", "id": 4, "correct": "sonst" },
+        { "type": "text", "content": " bekommt man große Probleme wegen Plagiaten. — " },
+        { "type": "blank", "id": 5, "correct": "Dann" },
+        { "type": "text", "content": " liest man den gesamten Text noch mehrmals auf Fehler durch. — Ein strenges Zeitmanagement ist " },
+        { "type": "blank", "id": 6, "correct": "nämlich" },
+        { "type": "text", "content": " bei so großen wissenschaftlichen Arbeiten absolut unerlässlich." }
+      ]
+    },
+    {
+      "id": "work_b1_8",
+      "title": "Die Geschäftsreise",
+      "translation": "Командировка",
+      "wordsPool": ["flog", "hatte", "trotzdem", "deshalb", "dann", "nämlich"],
+      "textElements": [
+        { "type": "text", "content": "Letzte Woche " },
+        { "type": "blank", "id": 1, "correct": "flog" },
+        { "type": "text", "content": " ich für eine internationale IT-Konferenz nach London. — Meine Assistentin " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " das Hotel und die Tickets gebucht, lange bevor die Reise losging. — Mein Flug hatte leider zwei Stunden Verspätung, " },
+        { "type": "blank", "id": 3, "correct": "trotzdem" },
+        { "type": "text", "content": " kam ich noch rechtzeitig zum ersten Meeting. — Die Gespräche mit den neuen Partnern waren sehr erfolgreich, " },
+        { "type": "blank", "id": 4, "correct": "deshalb" },
+        { "type": "text", "content": " haben wir am Ende einen Vertrag unterschrieben. — Zuerst verhandelt man die genauen Bedingungen, " },
+        { "type": "blank", "id": 5, "correct": "dann" },
+        { "type": "text", "content": " geht man gemeinsam abends in ein gutes Restaurant. — Persönliche Kontakte sind " },
+        { "type": "blank", "id": 6, "correct": "nämlich" },
+        { "type": "text", "content": " in unserer Branche durch nichts zu ersetzen." }
+      ]
+    }
+  ]
+}

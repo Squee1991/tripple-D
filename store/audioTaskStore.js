@@ -9,9 +9,8 @@ export const useAudioTaskStore = defineStore('audioTask', () => {
 	const currentTopicId = ref(null)
 	const loading = ref(false)
 	const userProgress = ref({})
-
+	const db = getFirestore()
 	const currentTasks = computed(() => allTasks.value[currentLevel.value] || [])
-
 	async function fetchTasks() {
 		loading.value = true
 		try {
@@ -34,10 +33,7 @@ export const useAudioTaskStore = defineStore('audioTask', () => {
 
 	async function loadUserProgress() {
 		const auth = getAuth()
-		const db = getFirestore()
-
 		if (!auth.currentUser) return
-
 		try {
 			const docRef = doc(db, 'users', auth.currentUser.uid, 'audio_tasks', 'progress')
 			const snap = await getDoc(docRef)
@@ -65,8 +61,6 @@ export const useAudioTaskStore = defineStore('audioTask', () => {
 		if (!updated) return
 
 		const auth = getAuth()
-		const db = getFirestore()
-
 		if (!auth.currentUser) return
 
 		try {

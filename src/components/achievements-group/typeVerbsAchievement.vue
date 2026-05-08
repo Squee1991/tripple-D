@@ -127,7 +127,7 @@ const getCompletedCount = group =>
   text-align: left;
   width: 650px;
   transition: all 0.2s ease;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .achievement-icon-wrapper {

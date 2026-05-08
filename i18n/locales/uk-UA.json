@@ -3540,6 +3540,7 @@
     "account": "Керування акаунтом"
   },
   "valentineAchievements": {
+    "valentineAchievementsTitle": "Фестиваль сердець",
     "firstValentineQuestLabel": "Перше побачення",
     "firstValentineQuesDescription": "Зробіть перший крок! Виконайте будь-яке завдання події «Фестиваль сердець» і отримайте першу нагороду.",
     "valentineWordsLabel": "Мова кохання",
@@ -3752,6 +3753,7 @@
     "theme": "Романтична тема"
   },
   "winterAchievements": {
+    "winterAchievementsTitle": "Шепіт зими",
     "firstQuestName": "Перша ялинкова зірка",
     "firstQuestDescription": "Виконайте будь-який квест зимової події та запаліть першу зірку.",
     "santaLexiconName": "Словник Санти",

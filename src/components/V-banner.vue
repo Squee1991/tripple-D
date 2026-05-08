@@ -72,7 +72,7 @@ const bannerStyle = computed(() => {
 }
 
 .v-banner__icon {
-  width: 65px;
+  width: 70px;
   height: auto;
   object-fit: contain;
 }

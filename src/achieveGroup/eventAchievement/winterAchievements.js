@@ -1,6 +1,6 @@
 export const eventWinterAchievements = [
 	{
-		title: 'Шепот зимы',
+		title: 'winterAchievements.winterAchievementsTitle',
 		achievements: [
 			{
 				id: 'firstQuest',

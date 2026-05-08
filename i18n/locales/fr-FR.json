@@ -3542,6 +3542,7 @@
     "account": "Gestion du compte"
   },
   "valentineAchievements": {
+    "valentineAchievementsTitle": "Festival des Cœurs",
     "firstValentineQuestLabel": "Premier rendez-vous",
     "firstValentineQuesDescription": "Faites le premier pas ! Terminez n'importe quelle quête de l'événement « Festival des Cœurs » et recevez votre première récompense.",
     "valentineWordsLabel": "Le langage de l'amour",
@@ -3754,6 +3755,7 @@
     "theme": "Thème romantique"
   },
   "winterAchievements": {
+    "winterAchievementsTitle": "Murmure de l'hiver",
     "firstQuestName": "Première étoile du sapin",
     "firstQuestDescription": "Termine n'importe quelle quête de l'événement d'hiver et allume ta première étoile.",
     "santaLexiconName": "Lexique du Père Noël",

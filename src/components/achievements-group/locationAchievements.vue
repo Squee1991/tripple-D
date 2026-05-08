@@ -110,7 +110,6 @@ onMounted(() => {
 
 .group-stats.all-completed {
   background: #f1c40f;
-  box-shadow: 4px 4px 0px #1e1e1e;
 }
 
 .achievements-card-container {
