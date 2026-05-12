@@ -1,7 +1,7 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.skillupgerman.app',
+  appId: 'com.skillupgerman.com',
   appName: 'skillupgerman',
   webDir: '.output/public',
   // server: {
