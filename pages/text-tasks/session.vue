@@ -20,7 +20,6 @@
           {{ currentTaskNumber }} / {{ totalTasks }}
         </div>
       </div>
-
       <div class="content-area">
         <div class="word-pool-card">
           <transition-group name="list" tag="div" class="word-pool">
@@ -38,7 +37,6 @@
             Все слова использованы!
           </div>
         </div>
-
         <div class="text-card">
           <div class="text-content">
             <template v-for="(part, index) in store.currentTask.textElements" :key="index">
@@ -61,7 +59,6 @@
           </div>
         </div>
       </div>
-
       <div class="footer-area">
         <button
             class="btn-check"
@@ -73,13 +70,10 @@
         </button>
       </div>
     </div>
-
     <div v-else class="error-state">
       <p>Задача не выбрана.</p>
       <button @click="$router.push('/text-tasks')">Вернуться к списку</button>
     </div>
-
-    <!-- Модальное окно подтверждения выхода -->
     <div v-if="showExitModal" class="modal-overlay" @click.self="cancelExit">
       <div class="modal-content">
         <h3 class="modal-title">Прервать задание?</h3>
@@ -103,31 +97,29 @@ const store = useTextTasksStore()
 
 const selectedWordForTap = ref(null)
 
-// --- Состояния модального окна выхода ---
 const showExitModal = ref(false)
 const isConfirmedExit = ref(false)
 let pendingRoute = null
 
 onMounted(() => {
   if (!store.currentTask) {
-    isConfirmedExit.value = true // Разрешаем выйти без модалки
+    isConfirmedExit.value = true
     router.push('/text-tasks')
   }
 })
 
-// Перехват ухода со страницы (нажатие "Назад" в браузере или интерфейсе)
 onBeforeRouteLeave((to, from, next) => {
   if (isConfirmedExit.value) {
     next()
   } else {
     showExitModal.value = true
     pendingRoute = to
-    next(false) // Отменяем переход, показываем модалку
+    next(false)
   }
 })
 
 const handleBackClick = () => {
-  router.push('/text-tasks') // Провоцирует onBeforeRouteLeave
+  router.push('/text-tasks')
 }
 
 const confirmExit = () => {
@@ -144,7 +136,6 @@ const cancelExit = () => {
   showExitModal.value = false
   pendingRoute = null
 }
-// ---------------------------------------
 
 const currentTaskNumber = computed(() => {
   return store.currentTaskIndex >= 0 ? store.currentTaskIndex + 1 : 1
@@ -206,7 +197,7 @@ const handleBlankClick = (blankId) => {
 <style scoped>
 .drag-page {
   font-family: "Nunito", sans-serif;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   overflow: hidden;

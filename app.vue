@@ -14,34 +14,36 @@ import FeedBack from './src/components/V-feedback.vue'
 import VStepHint from "./src/components/V-stephint.vue";
 import AchievementToast from './src/components/AchievementToast.vue'
 import VLost from './src/components/V-lost.vue'
-import {useRouter, useRoute} from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { useAchievementStore } from './store/achievementStore.js'
-import {useCurrentUser} from "vuefire";
-import {userlangStore} from './store/learningStore.js'
-import {userAuthStore} from './store/authStore.js'
-import {useSentencesStore} from './store/sentencesStore.js';
-import {useTrainerStore} from './store/themenProgressStore.js'
-import {useQuestStore} from './store/questStore.js'
-import {useCardsStore} from './store/cardsStore.js'
-import {useLocalStatGameStore} from './store/localSentenceStore.js'
+import { useCurrentUser } from "vuefire";
+import { userlangStore } from './store/learningStore.js'
+import { userAuthStore } from './store/authStore.js'
+import { useSentencesStore } from './store/sentencesStore.js';
+import { useTrainerStore } from './store/themenProgressStore.js'
+import { useQuestStore } from './store/questStore.js'
+import { useCardsStore } from './store/cardsStore.js'
+import { useLocalStatGameStore } from './store/localSentenceStore.js'
 import { useBillingStore } from './store/billingStore.js'
 import { userChainStore } from './store/chainStore.js'
-import { SplashScreen } from '@capacitor/splash-screen'
 import { Keyboard } from '@capacitor/keyboard';
 import { App } from '@capacitor/app'
-import {onMounted, onUnmounted, ref, watch} from "vue";
-import {dailyStore} from './store/dailyStore'
-import {useHead} from '#imports'
+import { onMounted, onUnmounted, ref, watch } from "vue";
+import { dailyStore } from './store/dailyStore'
+import { useHead } from '#imports'
 import { Capacitor } from '@capacitor/core'
-import { AdMob } from '@capacitor-community/admob';
+import { SplashScreen } from '@capacitor/splash-screen';
 const { locale, t } = useI18n()
+
+alert("JS FILE LOADED")
+
 const billingStore = useBillingStore()
 
 useHead(() => ({
   htmlAttrs: { lang: locale.value, dir: locale.value === 'ar' ? 'rtl' : "ltr" },
   title: () => t('useHeadApp.title'),
   meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content' },
     { name: 'description', content: t('useHeadApp.content') },
     { property: 'og:title', content: t('useHeadApp.contentThree') },
     { property: 'og:description', content: t('useHeadApp.contentFour') },
@@ -68,6 +70,83 @@ const colorMode = useColorMode();
 
 
 onMounted(async () => {
+  // 1. Прячем заставку сразу, как только Vue «ожил»
+  if (Capacitor.isNativePlatform()) {
+    try {
+      // Можно добавить небольшую задержку в 300мс, чтобы не было резкого мерцания
+      setTimeout(async () => {
+        await SplashScreen.hide();
+        // Этот алерт покажет нам, что занавес поднялся
+        alert("SPLASH HIDE: SUCCESS");
+      }, 300);
+    } catch (e) {
+      console.warn('Ошибка при скрытии Splash Screen:', e);
+    }
+  }
+
+  // 2. Начинаем загрузку данных
+  try {
+    // Ждем, пока база данных отдаст настройки
+    await learningStore.loadFromFirebase();
+    alert("FIREBASE: DATA LOADED");
+  } catch (e) {
+    alert("Критическая ошибка загрузки: " + e.message);
+  }
+
+  // 3. Инициализация остальных сторов, если пользователь залогинен
+  if (authStore.uid) {
+    try {
+      questStore.loadDailyProgress();
+      cardStore.loadCreatedCount();
+      statsStore.loadLocalStats();
+    } catch (e) {
+      console.error("Ошибка инициализации сторов:", e);
+    }
+  }
+
+  // 4. Запуск трекинга достижений
+  achStore.initializeProgressTracking();
+
+  // 5. Обработка системных кнопок и клавиатуры (раскомментировал для iPhone 16)
+  if (Capacitor.isNativePlatform()) {
+    App.addListener('backButton', ({ canGoBack }) => {
+      const state = window.history.state || {};
+      const isModalOpen = !!(state.isMapPanelOpen || state.isSubCategory || state.isSubScreen);
+      const purePath = route.path.replace(/^\/(ru|ar|en)/, '');
+      const isHomePage = purePath === '/' || purePath === '';
+
+      if (isModalOpen || !isHomePage) {
+        window.history.back();
+      } else {
+        App.minimizeApp();
+      }
+    });
+
+    Keyboard.addListener('keyboardWillShow', () => {
+      setTimeout(() => {
+        const activeElement = document.activeElement;
+        if (activeElement && (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA')) {
+          activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 50);
+    });
+  }
+
+  // 6. Таймер для показа подсказок после загрузки
+  setTimeout(() => {
+    if (!achStore.showPopup && !showStepHint.value) {
+      onToastFinished();
+    }
+  }, 2600);
+});
+
+/*
+onMounted(async () => {
+  try {
+    await learningStore.loadFromFirebase()
+  } catch (e) {
+    alert("Firebase Load Error: " + e.message)
+  }
   learningStore.loadFromFirebase()
   if (authStore.uid) {
     questStore.loadDailyProgress()
@@ -75,15 +154,7 @@ onMounted(async () => {
     statsStore.loadLocalStats()
   }
   achStore.initializeProgressTracking()
-
-  watch(user, (currentUser, prevUser) => {
-    if (prevUser && !currentUser) {
-      router.push('/')
-    } else if (currentUser && typeof route.query.redirect === 'string') {
-      router.push(route.query.redirect)
-    }
-  })
-  if (Capacitor.isNativePlatform()) {
+  /!*if (Capacitor.isNativePlatform()) {
     App.addListener('backButton', ({ canGoBack }) => {
       const state = window.history.state || {}
       const isModalOpen = !!(state.isMapPanelOpen || state.isSubCategory || state.isSubScreen)
@@ -96,21 +167,24 @@ onMounted(async () => {
         App.minimizeApp()
       }
     })
+
     Keyboard.addListener('keyboardWillShow', () => {
       setTimeout(() => {
         const activeElement = document.activeElement;
         if (activeElement && (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA')) {
           activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-      }, 150);
+      }, 50);
     });
-  }
+  }*!/
+
   setTimeout(() => {
     if (!achStore.showPopup && !showStepHint.value) {
       onToastFinished()
     }
   }, 2600)
 })
+*/
 
 const onToastFinished = () => {
   if (authStore.uid) {
@@ -122,37 +196,17 @@ const onToastFinished = () => {
   }
 }
 
-watch(() => authStore.initialized, async (isReady) => {
-  if (isReady && Capacitor.isNativePlatform()) {
-    setTimeout(async () => {
-      await SplashScreen.hide({ fadeOutDuration: 250 })
-    }, 100)
-
+watch(user, (currentUser, prevUser) => {
+  if (prevUser && !currentUser) {
+    router.push('/')
+  } else if (currentUser && typeof route.query.redirect === 'string') {
+    router.push(route.query.redirect)
   }
-}, { immediate: true })
-
-onUnmounted(() => {
-  daily.stop()
 })
 
-onMounted(async () => {
-  if (Capacitor.isNativePlatform()) {
-    try {
-      await AdMob.initialize({
-        initializeForTesting: true,
-      });
-      console.log('AdMob успешно инициализирован!');
-    } catch (e) {
-      console.error('Ошибка инициализации AdMob:', e);
-    }
-  }
-});
-
-watch(() => authStore.uid, (newUid) => {
-      if (newUid) billingStore.initialize()
-    },
-    { immediate: true }
-)
+/*watch(() => authStore.uid, (newUid) => {
+  if (newUid) billingStore.initialize()
+}, { immediate: true })
 
 watch(() => colorMode.value, async (newTheme) => {
   if (!Capacitor.isNativePlatform()) return;
@@ -160,13 +214,15 @@ watch(() => colorMode.value, async (newTheme) => {
     await StatusBar.setStyle({
       style: newTheme === 'dark' ? Style.Dark : Style.Light
     });
-
     await StatusBar.setOverlaysWebView({ overlay: true });
   } catch (err) {
     console.error('StatusBar error:', err);
   }
-}, { immediate: true });
+}, { immediate: true });*/
 
+onUnmounted(() => {
+  daily.stop()
+})
 </script>
 
 <style>
@@ -198,7 +254,6 @@ html, body, #__nuxt {
   width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  overflow: hidden !important;
   background-color: var(--bg);
 }
 .layout {

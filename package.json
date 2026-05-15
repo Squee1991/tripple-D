@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@capacitor-community/admob": "8.0.0",
-    "@capacitor-community/apple-sign-in": "7.1.0",
     "@capacitor/android": "8.3.0",
     "@capacitor/app": "8.1.0",
     "@capacitor/cli": "8.3.0",
@@ -35,8 +34,8 @@
     "@nuxtjs/robots": "5.5.5",
     "@nuxtjs/sitemap": "7.4.7",
     "@pinia/nuxt": "0.10.1",
-    "@revenuecat/purchases-capacitor": "12.3.2",
-    "@revenuecat/purchases-capacitor-ui": "12.3.2",
+    "@revenuecat/purchases-capacitor": "^13.1.0",
+    "@revenuecat/purchases-capacitor-ui": "13.1.0",
     "@stripe/stripe-js": "7.7.0",
     "@vueuse/firebase": "13.1.0",
     "capacitor-voice-recorder": "7.0.6",
@@ -57,6 +56,7 @@
     "turn.js": "1.0.5",
     "v-onboarding": "2.9.0",
     "vue": "latest",
+    "vue-router": "^4.6.4",
     "vuedraggable": "4.1.0",
     "vuefire": "3.2.1"
   },

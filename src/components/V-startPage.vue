@@ -24,7 +24,6 @@
           начни говорить уже сегодня.
         </p>
       </div>
-
       <div class="cta-block">
         <button @click="router.push('/language')" class="btn-emerald-3d">
           Начать обучение

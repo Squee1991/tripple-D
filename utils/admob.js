@@ -14,9 +14,7 @@ function canShowRewardedAd() {
 	const statsStr = localStorage.getItem('adRewardStats');
 	if (!statsStr) return true;
 	const stats = JSON.parse(statsStr);
-	// Если наступил новый день, разрешаем
 	if (stats.date !== todayKey) return true;
-	// Проверяем, не превышен ли лимит на сегодня
 	return stats.count < AD_LIMIT_PER_DAY;
 }
 
@@ -27,7 +25,7 @@ function recordSuccessfulView() {
 	if (statsStr) {
 		const parsedStats = JSON.parse(statsStr);
 		if (parsedStats.date === todayKey) {
-			stats = parsedStats; // Продолжаем счетчик текущего дня
+			stats = parsedStats;
 		}
 	}
 	stats.count++;
@@ -68,10 +66,10 @@ export async function showInterstitial(nextStep) {
 	} catch (e) {
 		console.log("Ошибка рекламы, просто идем дальше", e);
 		listener.remove();
-		goNext(); // Если нет инета или AdBlock - пускаем сразу
+		goNext();
 	}
 }
-// Добавлен третий параметр onLimitReached
+
 export async function showRewarded(onReward, onComplete, onLimitReached) {
 	if (!Capacitor.isNativePlatform()) {
 		onReward();
