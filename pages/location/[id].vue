@@ -93,7 +93,7 @@ import { useSeoMeta } from '#imports';
 import VHearts from '../../src/components/V-hearts.vue';
 import VBackBtn from "~/src/components/V-back-btn.vue";
 import VReviveModal from "~/src/components/V-reviveModal.vue";
-import { showInterstitial, showRewarded } from '~/utils/admob.js';
+/*import { showInterstitial, showRewarded } from '~/utils/admob.js';*/
 import VTransition from "~/src/components/V-transition.vue";
 
 const route = useRoute();
@@ -211,7 +211,7 @@ const processedQuests = computed(() => {
   });
 });
 
-function proceedToQuest(quest, skipAd = false) {
+/*function proceedToQuest(quest, skipAd = false) {
   const navigateToQuest = () => {
     router.push({
       path: `/location/quest-${quest.questId}`,
@@ -224,7 +224,7 @@ function proceedToQuest(quest, skipAd = false) {
   } else {
     showInterstitial(navigateToQuest);
   }
-}
+}*/
 
 function handleStartQuest(quest) {
   if (!quest?.questId) return;
@@ -267,7 +267,7 @@ async function purchaseLife() {
   }
 }
 
-function watchAdForLife() {
+/*function watchAdForLife() {
   isAdLoading.value = true;
   showRewarded(
       async () => {
@@ -287,7 +287,7 @@ function watchAdForLife() {
         }
       }
   );
-}
+}*/
 
 function closeModal() {
   showNoLivesModal.value = false;

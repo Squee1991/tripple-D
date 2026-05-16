@@ -27,7 +27,7 @@
         </div>
 
         <div class="revive-actions">
-          <button class="revive-btn revive-btn--ad" @click="watchAdRetry">
+          <button class="revive-btn revive-btn--ad">
             Смотреть рекламу
           </button>
 
@@ -145,7 +145,6 @@ import {useRoute, useRouter} from 'vue-router';
 import {useQuestStore} from '../../../store/questStore.js';
 import {userlangStore} from '../../../store/learningStore.js';
 import {userAuthStore} from '../../../store/authStore.js';
-import {showRewarded} from '~/utils/admob.js';
 
 import ChefHi from '../../../assets/images/chefHi.svg';
 import ChefOk from '../../../assets/images/ok.svg';
@@ -216,7 +215,7 @@ const buyRetry = async () => {
   }
 };
 
-const watchAdRetry = () => {
+/*const watchAdRetry = () => {
   isAdLoading.value = true;
   showRewarded(
       async () => {
@@ -230,7 +229,7 @@ const watchAdRetry = () => {
         }
       }
   );
-};
+};*/
 
 const goBack = () => {
   showReviveModal.value = false;

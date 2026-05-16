@@ -224,7 +224,7 @@ import {userChainStore} from '~/store/chainStore.js'
 import {userlangStore} from '~/store/learningStore.js'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '~/utils/soundManager.js'
-import { showRewarded } from '~/utils/admob.js';
+/*import { showRewarded } from '~/utils/admob.js';*/
 import RightIcon from '~/assets/images/location-icons/accept.svg'
 import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 import {useSeoMeta} from '#imports'
@@ -518,7 +518,7 @@ async function trySpendLocal(amount) {
   return true
 }
 
-function watchAdForLife() {
+/*function watchAdForLife() {
   isAdLoading.value = true;
   showRewarded(
       async () => {
@@ -535,7 +535,7 @@ function watchAdForLife() {
         }
       }
   );
-}
+}*/
 
 async function purchaseLife() {
   if (!canBuyLife.value) return

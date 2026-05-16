@@ -5,22 +5,22 @@ const config: CapacitorConfig = {
   appId: 'com.skillupgerman',
   appName: 'skillupgerman',
   webDir: '.output/public',
-  /*server: {
-    url: 'http://10.183.145.161:3000',
-    cleartext: true
-  },*/
+  server: {
+    iosScheme: "https",
+    androidScheme: "https",
+  },
   plugins: {
-    StatusBar: {
+    /*StatusBar: {
       overlaysWebView: true,
       style: 'DARK',
-    },
+    },*/
     GoogleSignIn: {
       clientId: '516504654997-g3nt0plc6adh4jrvp55rn4p000t3qr09.apps.googleusercontent.com',
     },
-    SplashScreen: {
+    /*SplashScreen: {
       launchAutoHide: true,
       launchShowDuration: 1500
-    },
+    },*/
     /*AdMob: {
       androidAppId: 'ca-app-pub-3940256099942544~3347511713',
       iosAppId: 'ca-app-pub-3940256099942544~1458002511',

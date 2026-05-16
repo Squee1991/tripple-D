@@ -74,7 +74,7 @@ import {useRouter} from 'vue-router'
 import Modal from '../../src/components/modal.vue'
 import Description from '@/assets/images/reporting.svg'
 import {topics} from '@/utils/descriptionImages.js'
-import {showInterstitial} from '../../utils/admob.js'
+/*import {showInterstitial} from '../../utils/admob.js'*/
 import VBanner from "~/src/components/V-banner.vue";
 import PhotoFrame from "../../assets/images/photo-frame.svg";
 import VArrowNav from "~/src/components/V-arrowNav.vue";
@@ -122,7 +122,7 @@ function selectLevel(level) {
   selectedLevel.value = level
 }
 
-function startGame() {
+/*function startGame() {
   showInterstitial(() => {
     sessionConfig.value = {
       topicId: selectedTopic.value.id,
@@ -130,7 +130,7 @@ function startGame() {
     }
     router.push('/image-description/session')
   })
-}
+}*/
 
 function goBack() {
   if (viewState.value === 'level') {

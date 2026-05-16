@@ -14,7 +14,6 @@
                 </div>
               </div>
               <div>
-
               </div>
             </div>
             <header class="session-header">

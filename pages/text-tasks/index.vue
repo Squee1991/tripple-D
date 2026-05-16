@@ -93,7 +93,7 @@
 <script setup>
 import {ref, computed, onMounted} from 'vue'
 import {useRouter} from 'vue-router'
-import {useTextTasksStore} from '/store/textTasksStore.js'
+import {useTextTasksStore} from '../../store/textTasksStore.js'
 import VBanner from "~/src/components/V-banner.vue"
 import TextBooks from "../../assets/images/TextBook.svg"
 import VTransition from "~/src/components/V-transition.vue"

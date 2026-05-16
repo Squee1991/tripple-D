@@ -15,12 +15,12 @@
     "admin:remove": "node admin/setAdmin.js remove"
   },
   "dependencies": {
-    "@capacitor-community/admob": "8.0.0",
     "@capacitor/android": "8.3.0",
     "@capacitor/app": "8.1.0",
     "@capacitor/cli": "8.3.0",
     "@capacitor/core": "8.3.0",
-    "@capacitor/ios": "^8.3.3",
+    "@capacitor/filesystem": "8.1.2",
+    "@capacitor/ios": "8.3.3",
     "@capacitor/keyboard": "8.0.3",
     "@capacitor/splash-screen": "8.0.1",
     "@capacitor/status-bar": "8.0.2",
@@ -34,8 +34,9 @@
     "@nuxtjs/robots": "5.5.5",
     "@nuxtjs/sitemap": "7.4.7",
     "@pinia/nuxt": "0.10.1",
-    "@revenuecat/purchases-capacitor": "^13.1.0",
+    "@revenuecat/purchases-capacitor": "13.1.0",
     "@revenuecat/purchases-capacitor-ui": "13.1.0",
+    "@sentry/nuxt": "10.53.1",
     "@stripe/stripe-js": "7.7.0",
     "@vueuse/firebase": "13.1.0",
     "capacitor-voice-recorder": "7.0.6",
@@ -68,5 +69,10 @@
     "emailjs-com": "3.2.0",
     "nuxt": "3.15.0",
     "pinia": "3.0.4"
+  },
+  "overrides": {
+    "@vercel/nft": "^0.27.4"
   }
 }
+
+

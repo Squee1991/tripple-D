@@ -1,13 +1,12 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { userAuthStore } from "~/store/authStore.js"
-import { useCurrentUser } from "vuefire"
 import Header from '../src/components/header.vue'
-import Banner from '../src/components/banner.vue'
+import Banner from '../src/components/Banner.vue'
 import Description from '../src/components/DescriptionBlock.vue'
-import About from '../src/components/about.vue'
+import About from '../src/components/About.vue'
 import FeedBack from '../src/components/feedBack.vue'
-import Footer from '../src/components/footer.vue'
+import Footer from '../src/components/Footer.vue'
 import VUid from '../src/components/V-uid.vue'
 import VEventAvailableModal from "../src/components/V-eventAvailableModal.vue"
 import VShowFall from "../src/components/V-showFall.vue"
@@ -20,7 +19,6 @@ import LogIn from "~/src/components/logIn.vue"
 const showLogin = ref(false)
 const eventStore = useEventSessionStore()
 const authStore = userAuthStore()
-const user = useCurrentUser()
 const hydrated = ref(false)
 
 definePageMeta({
@@ -33,22 +31,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>ТЕСТОВЫЙ ЗАГОЛОВОК</div>
-  <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
+<!--  <VEventAvailableModal @close="false" v-if="authStore.initialized"/>-->
   <VShowFall v-if="eventStore.isSnowEnabled" :image="Snow"/>
   <div class="container">
-    <template v-if="user === undefined || !authStore.initialized">
-      <div class="loading-screen"></div>
-    </template>
-    <template v-else>
-      <div v-if="authStore.uid" class="stat">
-        <Header/>
-        <VUid/>
-      </div>
-      <div v-else>
-        <VStartPage/>
-      </div>
-    </template>
+    <div v-if="authStore.uid" class="stat">
+      <Header/>
+      <VUid/>
+    </div>
+    <div v-else>
+      <VStartPage/>
+    </div>
   </div>
 </template>
 

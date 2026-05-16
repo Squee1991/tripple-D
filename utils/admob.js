@@ -1,4 +1,5 @@
-import { AdMob, InterstitialAdPluginEvents, RewardAdPluginEvents } from '@capacitor-community/admob';
+/*
+
 import { Capacitor } from '@capacitor/core';
 
 let isAdProcessing = false;
@@ -111,3 +112,4 @@ export async function showRewarded(onReward, onComplete, onLimitReached) {
 		onComplete(false);
 	}
 }
+*/

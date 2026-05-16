@@ -55,12 +55,26 @@ export default defineNuxtConfig({
 		'nuxt-vuefire',
 		'@nuxtjs/google-fonts',
 		'@nuxtjs/i18n',
-		'@nuxtjs/color-mode'
+		'@nuxtjs/color-mode',
+		'@sentry/nuxt/module'
 	],
+	sentry: {
+		sourceMapsUploadOptions: {
+			org: "skillup-cp",
+			project: "javascript-nuxt",
+		},
+	},
+
+	build: {
+		transpile: [
+			'@capacitor/filesystem',
+			'capacitor-blob-writer'
+		]
+	},
 
 	vuefire: {
 		config: firebaseConfig,
-		auth: true,
+		auth: false,
 		firestore: {
 			experimentalForceLongPolling: true,
 		},
@@ -159,29 +173,30 @@ export default defineNuxtConfig({
 			drop: mode === 'production' ? ['console', 'debugger'] : [],
 			legalComments: 'none',
 		},
+		optimizeDeps: {
+			include: [
+				'@capacitor/filesystem',
+				'capacitor-blob-writer'
+			]
+		}
 	},
 
 	nitro: {
-		prerender: {
-			crawlLinks: true,
-			routes: ['/'],
-			failOnError: false,
-		},
-		compressPublicAssets: false
+		preset: 'static'
 	},
 
-	routeRules: {
+	/*routeRules: {
 		'/': {
 			prerender: true,
 		},
-		'/**': {
+		'/!**': {
 			ssr: false,
 			headers: { 'Cache-Control': 'public, max-age=0, must-revalidate' }
 		},
-		'/admin/**': { status: 404 },
+		'/admin/!**': { status: 404 },
 		'/wp-login.php': { status: 404 },
-		'/sounds/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/images/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/*.png': { headers: { 'Cache-Control': 'public, max-age=2592000' } }
-	},
+		'/sounds/!**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
+		'/images/!**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
+		'/!*.png': { headers: { 'Cache-Control': 'public, max-age=2592000' } }
+	},*/
 })

@@ -15,27 +15,25 @@ import VStepHint from "./src/components/V-stephint.vue";
 import AchievementToast from './src/components/AchievementToast.vue'
 import VLost from './src/components/V-lost.vue'
 import { useRouter, useRoute } from 'vue-router'
-import { useAchievementStore } from './store/achievementStore.js'
+import { useAchievementStore } from '/store/achievementStore.js'
 import { useCurrentUser } from "vuefire";
-import { userlangStore } from './store/learningStore.js'
-import { userAuthStore } from './store/authStore.js'
-import { useSentencesStore } from './store/sentencesStore.js';
-import { useTrainerStore } from './store/themenProgressStore.js'
-import { useQuestStore } from './store/questStore.js'
-import { useCardsStore } from './store/cardsStore.js'
-import { useLocalStatGameStore } from './store/localSentenceStore.js'
-import { useBillingStore } from './store/billingStore.js'
-import { userChainStore } from './store/chainStore.js'
+import { userlangStore } from '/store/learningStore.js'
+import { userAuthStore } from '/store/authStore.js'
+import { useSentencesStore } from '/store/sentencesStore.js';
+import { useTrainerStore } from '/store/themenProgressStore.js'
+import { useQuestStore } from '/store/questStore.js'
+import { useCardsStore } from '/store/cardsStore.js'
+import { useLocalStatGameStore } from '/store/localSentenceStore.js'
+import { useBillingStore } from '/store/billingStore.js'
+import { userChainStore } from '/store/chainStore.js'
 import { Keyboard } from '@capacitor/keyboard';
 import { App } from '@capacitor/app'
 import { onMounted, onUnmounted, ref, watch } from "vue";
-import { dailyStore } from './store/dailyStore'
+import { dailyStore } from '/store/dailyStore.js'
 import { useHead } from '#imports'
 import { Capacitor } from '@capacitor/core'
 import { SplashScreen } from '@capacitor/splash-screen';
 const { locale, t } = useI18n()
-
-alert("JS FILE LOADED")
 
 const billingStore = useBillingStore()
 
@@ -68,123 +66,25 @@ const sentencesStore = useSentencesStore();
 const daily = dailyStore()
 const colorMode = useColorMode();
 
-
 onMounted(async () => {
-  // 1. Прячем заставку сразу, как только Vue «ожил»
-  if (Capacitor.isNativePlatform()) {
-    try {
-      // Можно добавить небольшую задержку в 300мс, чтобы не было резкого мерцания
-      setTimeout(async () => {
-        await SplashScreen.hide();
-        // Этот алерт покажет нам, что занавес поднялся
-        alert("SPLASH HIDE: SUCCESS");
-      }, 300);
-    } catch (e) {
-      console.warn('Ошибка при скрытии Splash Screen:', e);
-    }
-  }
-
-  // 2. Начинаем загрузку данных
-  try {
-    // Ждем, пока база данных отдаст настройки
-    await learningStore.loadFromFirebase();
-    alert("FIREBASE: DATA LOADED");
-  } catch (e) {
-    alert("Критическая ошибка загрузки: " + e.message);
-  }
-
-  // 3. Инициализация остальных сторов, если пользователь залогинен
+  await authStore.initAuth();
   if (authStore.uid) {
     try {
+      await learningStore.loadFromFirebase();
       questStore.loadDailyProgress();
       cardStore.loadCreatedCount();
       statsStore.loadLocalStats();
     } catch (e) {
-      console.error("Ошибка инициализации сторов:", e);
+      console.error("Ошибка загрузки данных пользователя:", e);
     }
   }
-
-  // 4. Запуск трекинга достижений
   achStore.initializeProgressTracking();
-
-  // 5. Обработка системных кнопок и клавиатуры (раскомментировал для iPhone 16)
-  if (Capacitor.isNativePlatform()) {
-    App.addListener('backButton', ({ canGoBack }) => {
-      const state = window.history.state || {};
-      const isModalOpen = !!(state.isMapPanelOpen || state.isSubCategory || state.isSubScreen);
-      const purePath = route.path.replace(/^\/(ru|ar|en)/, '');
-      const isHomePage = purePath === '/' || purePath === '';
-
-      if (isModalOpen || !isHomePage) {
-        window.history.back();
-      } else {
-        App.minimizeApp();
-      }
-    });
-
-    Keyboard.addListener('keyboardWillShow', () => {
-      setTimeout(() => {
-        const activeElement = document.activeElement;
-        if (activeElement && (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA')) {
-          activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }, 50);
-    });
-  }
-
-  // 6. Таймер для показа подсказок после загрузки
   setTimeout(() => {
     if (!achStore.showPopup && !showStepHint.value) {
       onToastFinished();
     }
   }, 2600);
 });
-
-/*
-onMounted(async () => {
-  try {
-    await learningStore.loadFromFirebase()
-  } catch (e) {
-    alert("Firebase Load Error: " + e.message)
-  }
-  learningStore.loadFromFirebase()
-  if (authStore.uid) {
-    questStore.loadDailyProgress()
-    cardStore.loadCreatedCount()
-    statsStore.loadLocalStats()
-  }
-  achStore.initializeProgressTracking()
-  /!*if (Capacitor.isNativePlatform()) {
-    App.addListener('backButton', ({ canGoBack }) => {
-      const state = window.history.state || {}
-      const isModalOpen = !!(state.isMapPanelOpen || state.isSubCategory || state.isSubScreen)
-      const purePath = route.path.replace(/^\/(ru|ar|en)/, '')
-      const isHomePage = purePath === '/' || purePath === ''
-
-      if (isModalOpen || !isHomePage) {
-        window.history.back()
-      } else {
-        App.minimizeApp()
-      }
-    })
-
-    Keyboard.addListener('keyboardWillShow', () => {
-      setTimeout(() => {
-        const activeElement = document.activeElement;
-        if (activeElement && (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA')) {
-          activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }, 50);
-    });
-  }*!/
-
-  setTimeout(() => {
-    if (!achStore.showPopup && !showStepHint.value) {
-      onToastFinished()
-    }
-  }, 2600)
-})
-*/
 
 const onToastFinished = () => {
   if (authStore.uid) {
@@ -204,7 +104,8 @@ watch(user, (currentUser, prevUser) => {
   }
 })
 
-/*watch(() => authStore.uid, (newUid) => {
+// Если тебе нужны были нативные плагины, я их аккуратно раскомментировал:
+watch(() => authStore.uid, (newUid) => {
   if (newUid) billingStore.initialize()
 }, { immediate: true })
 
@@ -218,7 +119,7 @@ watch(() => colorMode.value, async (newTheme) => {
   } catch (err) {
     console.error('StatusBar error:', err);
   }
-}, { immediate: true });*/
+}, { immediate: true });
 
 onUnmounted(() => {
   daily.stop()
