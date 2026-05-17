@@ -86,7 +86,7 @@
     "title": "Frischer Gemüsesalat",
     "trophy": "Grüner Blattorden",
     "introDialogue": [
-      "Willkommen in meiner Küche!",
+      "Willkommen in der Küche!",
       "Heute zaubern wir gemeinsam einen frischen, knackigen Gemüsesalat.",
       "Einfach, gesund und richtig lecker – perfekt für warme Tage.",
       "Also, schnapp dir dein Schneidebrett. Hier sind unsere Zutaten:"
@@ -104,11 +104,11 @@
       "prompt": "Na, traust du dir zu, die richtigen Artikel zu kennen?",
       "choices": [
         {
-          "text": "Natürlich, ich bin bereit!",
+          "text": "ich bin bereit",
           "response": "Sehr schön! Dann schauen wir gleich mal, ob du recht hast."
         },
         {
-          "text": "Hmm, nicht ganz sicher...",
+          "text": "Hmm, nicht sicher",
           "response": "Keine Sorge – gemeinsam wird's klappen. Fangen wir an!"
         }
       ]

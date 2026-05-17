@@ -1,0 +1,228 @@
+{
+  "themeId": "hobbies_A2",
+  "themeTitle": "Основы: Приветствия и Числа",
+  "level": "A2",
+  "tasks": [
+    {
+      "id": "hobby_1",
+      "title": "Wandern in den Bergen",
+      "translation": "Поход в горы",
+      "wordsPool": ["bin", "muss", "den", "mag", "will", "meinem"],
+      "textElements": [
+        { "type": "text", "content": "Hallo! Ich " },
+        { "type": "blank", "id": 1, "correct": "bin" },
+        { "type": "text", "content": " am Wochenende oft in der Natur. — Ich " },
+        { "type": "blank", "id": 2, "correct": "muss" },
+        { "type": "text", "content": " immer einen schweren Rucksack tragen. — Ich mag " },
+        { "type": "blank", "id": 3, "correct": "den" },
+        { "type": "text", "content": " Wald, weil es dort sehr ruhig ist. — Eigentlich " },
+        { "type": "blank", "id": 4, "correct": "mag" },
+        { "type": "text", "content": " ich die frische Luft sehr. — Heute " },
+        { "type": "blank", "id": 5, "correct": "will" },
+        { "type": "text", "content": " ich zusammen mit " },
+        { "type": "blank", "id": 6, "correct": "meinem" },
+        { "type": "text", "content": " Freund auf einen hohen Berg steigen." }
+      ]
+    },
+    {
+      "id": "hobby_2",
+      "title": "Mein Hobby: Fotografie",
+      "translation": "Моё хобби: Фотография",
+      "wordsPool": ["bin", "meines", "muss", "der", "mag", "will"],
+      "textElements": [
+        { "type": "text", "content": "Ich " },
+        { "type": "blank", "id": 1, "correct": "bin" },
+        { "type": "text", "content": " Fotograf. — Die Kamera " },
+        { "type": "blank", "id": 2, "correct": "meines" },
+        { "type": "text", "content": " Vaters ist sehr gut. — Ich " },
+        { "type": "blank", "id": 3, "correct": "muss" },
+        { "type": "text", "content": " für mein Hobby viel reisen. — Ich gehe oft mit " },
+        { "type": "blank", "id": 4, "correct": "der" },
+        { "type": "text", "content": " Kamera in den Wald. — Ich " },
+        { "type": "blank", "id": 5, "correct": "mag" },
+        { "type": "text", "content": " die Natur sehr. — Ich " },
+        { "type": "blank", "id": 6, "correct": "will" },
+        { "type": "text", "content": " heute ein Video machen." }
+      ]
+    },
+    {
+      "id": "hobby_3",
+      "title": "Mein Hobby: Malen",
+      "translation": "Моё хобби: Рисование",
+      "wordsPool": ["bin", "des", "muss", "einem", "mag", "will"],
+      "textElements": [
+        { "type": "text", "content": "Ich " },
+        { "type": "blank", "id": 1, "correct": "bin" },
+        { "type": "text", "content": " heute sehr kreativ. — Die Farben " },
+        { "type": "blank", "id": 2, "correct": "des" },
+        { "type": "text", "content": " Bildes sind wirklich schön. — Ich " },
+        { "type": "blank", "id": 3, "correct": "muss" },
+        { "type": "text", "content": " für mein Hobby viel Zeit haben. — Ich male oft mit " },
+        { "type": "blank", "id": 4, "correct": "einem" },
+        { "type": "text", "content": " Bleistift. — Ich " },
+        { "type": "blank", "id": 5, "correct": "mag" },
+        { "type": "text", "content": " moderne Kunst. — Ich " },
+        { "type": "blank", "id": 6, "correct": "will" },
+        { "type": "text", "content": " jetzt ein Porträt malen." }
+      ]
+    },
+    {
+      "id": "hobby_4",
+      "title": "Mein Hobby: Tanzen",
+      "translation": "Моё хобби: Танцы",
+      "wordsPool": ["bin", "des", "muss", "einem", "mag", "will"],
+      "textElements": [
+        { "type": "text", "content": "Hallo! Ich " },
+        { "type": "blank", "id": 1, "correct": "bin" },
+        { "type": "text", "content": " Elena. — Der Rhythmus " },
+        { "type": "blank", "id": 2, "correct": "des" },
+        { "type": "text", "content": " Tanzes ist sehr schnell. — Ich " },
+        { "type": "blank", "id": 3, "correct": "muss" },
+        { "type": "text", "content": " jeden Tag im Studio trainieren. — Ich tanze oft mit " },
+        { "type": "blank", "id": 4, "correct": "einem" },
+        { "type": "text", "content": " Partner. — Ich " },
+        { "type": "blank", "id": 5, "correct": "mag" },
+        { "type": "text", "content": " moderne Musik. — Ich " },
+        { "type": "blank", "id": 6, "correct": "will" },
+        { "type": "text", "content": " jetzt auf der Bühne tanzen." }
+      ]
+    },
+    {
+      "id": "hobby_5",
+      "title": "Leidenschaft Fußball",
+      "translation": "Страсть к футболу",
+      "wordsPool": ["bin", "des", "muss", "meinem", "mag", "will", "nicht"],
+      "textElements": [
+        { "type": "text", "content": "Hallo! Ich " },
+        { "type": "blank", "id": 1, "correct": "bin" },
+        { "type": "text", "content": " Lukas. — Ich spiele leidenschaftlich Fußball. — Der Erfolg " },
+        { "type": "blank", "id": 2, "correct": "des" },
+        { "type": "text", "content": " Spiels ist mir wichtig. — Ich " },
+        { "type": "blank", "id": 3, "correct": "muss" },
+        { "type": "text", "content": " jede Woche hart trainieren. — Ich spiele oft zusammen mit " },
+        { "type": "blank", "id": 4, "correct": "meinem" },
+        { "type": "text", "content": " Freund im Park. — Ich " },
+        { "type": "blank", "id": 5, "correct": "mag" },
+        { "type": "text", "content": " diesen Sport sehr. — Heute " },
+        { "type": "blank", "id": 6, "correct": "will" },
+        { "type": "text", "content": " ich zwei Tore schießen. — Das Training ist " },
+        { "type": "blank", "id": 7, "correct": "nicht" },
+        { "type": "text", "content": " langweilig." }
+      ]
+    },
+    {
+      "id": "hobby_6",
+      "title": "Nach der Arbeit ins Wasser",
+      "translation": "После работы — в воду",
+      "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "will", "den"],
+      "textElements": [
+        { "type": "text", "content": "Nach einem langen Tag gehe ich oft ins Schwimmbad. Dort " },
+        { "type": "blank", "id": 1, "correct": "gibt" },
+        { "type": "text", "content": " es ein großes Becken für alle Schwimmer. — " },
+        { "type": "blank", "id": 2, "correct": "Den" },
+        { "type": "text", "content": " Geruch " },
+        { "type": "blank", "id": 3, "correct": "des" },
+        { "type": "text", "content": " Wassers finde ich sehr frisch. — Ich " },
+        { "type": "blank", "id": 4, "correct": "muss" },
+        { "type": "text", "content": " beim Training meine Brille tragen. — Zusammen mit " },
+        { "type": "blank", "id": 5, "correct": "meinem" },
+        { "type": "text", "content": " Freund trainiere ich für einen Wettbewerb. — Ich " },
+        { "type": "blank", "id": 6, "correct": "mag" },
+        { "type": "text", "content": " diesen Sport, weil er gesund ist. — Deshalb " },
+        { "type": "blank", "id": 7, "correct": "will" },
+        { "type": "text", "content": " ich heute zwei Kilometer schwimmen." }
+      ]
+    },
+    {
+      "id": "hobby_7",
+      "title": "Brettspiele",
+      "translation": "Настольные игры",
+      "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "diesen", "will"],
+      "textElements": [
+        { "type": "text", "content": "Ich spiele oft Brettspiele. — Es " },
+        { "type": "blank", "id": 1, "correct": "gibt" },
+        { "type": "text", "content": " ein kompliziertes Spiel. — Die Regeln " },
+        { "type": "blank", "id": 2, "correct": "des" },
+        { "type": "text", "content": " Spiels sind sehr lang. — Ich " },
+        { "type": "blank", "id": 3, "correct": "muss" },
+        { "type": "text", "content": " die Regeln genau lesen. — Ich spiele am Wochenende mit " },
+        { "type": "blank", "id": 4, "correct": "meinem" },
+        { "type": "text", "content": " Bruder. — Ich " },
+        { "type": "blank", "id": 5, "correct": "mag" },
+        { "type": "blank", "id": 6, "correct": "diesen" },
+        { "type": "text", "content": " Sport. — Heute " },
+        { "type": "blank", "id": 7, "correct": "will" },
+        { "type": "text", "content": " ich gegen ihn gewinnen." }
+      ]
+    },
+    {
+      "id": "hobby_8",
+      "title": "Logik und Brettspiele",
+      "translation": "Настольные игры и логика",
+      "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "den", "will"],
+      "textElements": [
+        { "type": "text", "content": "Ich liebe anspruchsvolle Brettspiele. — Es " },
+        { "type": "blank", "id": 1, "correct": "gibt" },
+        { "type": "text", "content": " oft ein Spiel mit viel Strategie. — Die Logik " },
+        { "type": "blank", "id": 2, "correct": "des" },
+        { "type": "text", "content": " Spiels ist am Anfang wirklich schwer. — Man " },
+        { "type": "blank", "id": 3, "correct": "muss" },
+        { "type": "text", "content": " zuerst die komplizierten Regeln verstehen. — Ich spiele gerne mit " },
+        { "type": "blank", "id": 4, "correct": "meinem" },
+        { "type": "text", "content": " Bruder. — Ich " },
+        { "type": "blank", "id": 5, "correct": "mag" },
+        { "type": "text", "content": " einfach " },
+        { "type": "blank", "id": 6, "correct": "den" },
+        { "type": "text", "content": " schwierigen Wettbewerb beim Denken. — Ich " },
+        { "type": "blank", "id": 7, "correct": "will" },
+        { "type": "text", "content": " jetzt eine schwere Runde spielen." }
+      ]
+    },
+    {
+      "id": "hobby_9",
+      "title": "Schach und Strategie",
+      "translation": "Шахматы и стратегия",
+      "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "den", "will"],
+      "textElements": [
+        { "type": "text", "content": "Ich spiele sehr gerne Schach. — Es " },
+        { "type": "blank", "id": 1, "correct": "gibt" },
+        { "type": "text", "content": " immer eine kluge Strategie. — Der Plan " },
+        { "type": "blank", "id": 2, "correct": "des" },
+        { "type": "text", "content": " Gegners ist oft geheim. — Man " },
+        { "type": "blank", "id": 3, "correct": "muss" },
+        { "type": "text", "content": " jeden Zug genau analysieren. — Ich trainiere oft mit " },
+        { "type": "blank", "id": 4, "correct": "meinem" },
+        { "type": "text", "content": " Lehrer. — Ich " },
+        { "type": "blank", "id": 5, "correct": "mag" },
+        { "type": "text", "content": " eigentlich " },
+        { "type": "blank", "id": 6, "correct": "den" },
+        { "type": "text", "content": " mentalen Kampf beim Spielen. — Heute " },
+        { "type": "blank", "id": 7, "correct": "will" },
+        { "type": "text", "content": " ich die Partie gewinnen." }
+      ]
+    },
+    {
+      "id": "hobby_10",
+      "title": "Hobby: Filme",
+      "translation": "Хобби: Фильмы",
+      "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "den", "will"],
+      "textElements": [
+        { "type": "text", "content": "Ich schaue gerne Filme im Original. Im Kino " },
+        { "type": "blank", "id": 1, "correct": "gibt" },
+        { "type": "text", "content": " es heute eine interessante Premiere. — Das Ende " },
+        { "type": "blank", "id": 2, "correct": "des" },
+        { "type": "text", "content": " Films ist leider traurig. — Ich " },
+        { "type": "blank", "id": 3, "correct": "muss" },
+        { "type": "text", "content": " beim Schauen konzentriert sein. — Meistens gehe ich mit " },
+        { "type": "blank", "id": 4, "correct": "meinem" },
+        { "type": "text", "content": " besten Freund ins Kino. — Ich " },
+        { "type": "blank", "id": 5, "correct": "mag" },
+        { "type": "text", "content": " besonders " },
+        { "type": "blank", "id": 6, "correct": "den" },
+        { "type": "text", "content": " neuen Actionfilm. — Heute " },
+        { "type": "blank", "id": 7, "correct": "will" },
+        { "type": "text", "content": " ich Popcorn kaufen." }
+      ]
+    }
+  ]
+}

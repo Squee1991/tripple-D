@@ -147,7 +147,6 @@ onMounted(() => {
   top: -145%;
   left: 0;
   width: 100%;
-
 }
 
 .banner__orbit-word--der {

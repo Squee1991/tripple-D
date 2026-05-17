@@ -1,317 +1,410 @@
 <template>
   <div class="theme-page">
     <Transition name="fade">
-      <VPreloader v-if="isLoading"/>
+      <VLoginPreloader v-if="isLoading"/>
     </Transition>
     <div class="theme-page-container">
       <div class="theme__title-wrapper">
-        <button class="back-btn" @click="goBack">
-          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8l8 8l1.41-1.41L7.83 13H20z"></path>
-          </svg>
-          {{ t('selectedpage.backBtn') }}
-        </button>
-        <h1 class="theme-title">{{ t('selectedpage.title') }}</h1>
-        <div class="title-spacer"></div>
+        <div class="theme__header">
+          <button @click="goBack" class="btn-icon-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                 stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          <div class="theme__title">{{ t('modes.themeTitle') }}</div>
+        </div>
       </div>
-      <div class="theme-content-area">
-        <div class="grid-area-wrapper">
-          <div class="theme__grid-container">
-            <div class="theme-grid">
-              <div
-                  v-for="key in paginatedTopics"
-                  :key="key"
-                  class="theme-card"
-                  :class="{ active: selectedTopic === key }"
-                  @click="selectTopic(key)"
-              >
-                <div class="card-counter">
-                  {{ themeProgress[key]?.total || 0 }}
-                </div>
-                <div class="theme-card-title">{{ t(nameMap[key]) }}</div>
+      <VTransition>
+        <div v-if="isPageLoaded" class="theme-content-area">
+          <div class="grid-area-wrapper">
+            <div class="theme__grid-container">
+              <div class="banner-wrapper">
+                <VBanner :text="t('bannerTitles.article')" :icon="BannerIcon"/>
               </div>
-            </div>
-            <div class="theme-pagination">
-              <button @click="prevPage" :disabled="page === 0">←</button>
-              <button @click="nextPage" :disabled="page === maxPage">→</button>
+              <div class="topics-list-container">
+                <div v-for="group in categorizedTopics" :key="group.id" class="category-group">
+
+                  <div class="category-header">
+                    <h3 class="category-title">{{ t(group.title) }}</h3>
+                    <div class="category-progress-inline">
+                      <span class="category-counter">
+                        {{ getCategoryStatus(group).completed }}/{{ group.keys.length }}
+                      </span>
+                      <div class="mini-progress-bar">
+                        <div
+                            class="mini-progress-fill"
+                            :style="{ width: getCategoryStatus(group).percent + '%' }"
+                        ></div>
+                      </div>
+                      <div class="completion-check" :class="{ 'is-finished': getCategoryStatus(group).isAllDone }">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                             stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="category-grid">
+                    <div
+                        v-for="(key, index) in group.keys"
+                        :key="key"
+                        class="topic-list-item"
+                        :class="{ active: selectedTopic === key }"
+                        @click="selectTopic(key, index)"
+                    >
+                      <div class="topic-main-row">
+                        <div class="topic-item-content">
+                          <div class="topic-icon-box">
+                            <img class="theme__cards-icon-item"
+                                 :src="`/images/article-themes-images/${iconMap[key] || 'default.svg'}`" :alt="key"/>
+                          </div>
+                          <span class="topic-label">{{ t(nameMap[key]) }}</span>
+                        </div>
+                        <VArrowNav v-if="(group.id === 'nature' && index === 0) || authStore.isPremium"/>
+                        <div v-else class="topic-arrow topic-arrow--locked">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                               stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                          </svg>
+                        </div>
+                      </div>
+
+                      <div class="topic-progress-wrapper">
+                        <div class="progress-bar-container">
+                          <div class="progress-bar-fill"
+                               :style="{ width: `${themeProgress[key]?.total ? (themeProgress[key].learned / themeProgress[key].total) * 100 : 0}%`, backgroundColor: getTopicColor(index) }"></div>
+                        </div>
+                        <div class="progress-text">{{
+                            themeProgress[key]?.learned || 0
+                          }}/{{ themeProgress[key]?.total || 0 }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="learning-modes-container">
-          <Transition name="slide-right" appear>
-            <div v-if="showModesBlock" class="learning-modes-block">
+      </VTransition>
+      <Transition name="slide-right" appear>
+        <div v-if="showModesBlock" class="learning-modes-block">
+          <div class="learning__modes-wrapper">
+            <div class="modes-header-container">
               <button @click="clearSelectedTopic" class="close-modes-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                  <path
-                      fill="currentColor"
-                      d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275L12 10.6l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275-.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275z"
-                  ></path>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                     stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12 19 5 12 12 5"></polyline>
                 </svg>
               </button>
-              <div class="learning__modes-wrapper">
-                <div>
-                  <div class="modes-title">
-                    {{ t('selectedpage.choiceTitle') }}
-                  </div>
-                  <div class="topic-hint">
-                    {{ t('selectedpage.topic') }}: {{ t(nameMap[selectedTopic]) }}
-                  </div>
-                </div>
-                <div class="modes-list">
-                  <label
-                      v-for="mode in availableModes"
-                      :key="mode.key"
-                      class="checkbox-container"
-                      :class="{ 'active-mode': selectedModes.includes(mode.key) }"
-                  >
-                    <input
-                        type="checkbox"
-                        v-model="selectedModes"
-                        :value="mode.key"
-                    />
-                    <span class="checkmark">
-                      <svg viewBox="0 0 24 24">
-                        <polyline points="3 12 10 20 21 4"/>
-                      </svg>
-                    </span>
-                    <span class="label-text">{{ t(mode.label) }}</span>
-                  </label>
-                </div>
-                <button
-                    class="start-btn"
-                    :disabled="!selectedModes.length || isLoading"
-                    @click="startLearning"
-                >
-                  {{ t('selectedpage.startBtn') }}
-                </button>
+              <div class="modes-title-box">
+                <div class="modes-title">{{ t('selectedpage.choiceTitle') }}</div>
+                <div class="topic-hint">{{ t('selectedpage.topic') }}: {{ t(nameMap[selectedTopic]) }}</div>
               </div>
             </div>
-          </Transition>
+            <div class="modes-list">
+              <label
+                  v-for="mode in availableModes"
+                  :key="mode.key"
+                  class="checkbox-container"
+                  :class="{ 'active-mode': selectedModes.includes(mode.key) }"
+              >
+                <input type="checkbox" v-model="selectedModes" :value="mode.key"/>
+                <span class="checkmark">
+                  <svg viewBox="0 0 24 24"><polyline points="3 12 10 20 21 4"/></svg>
+                </span>
+                <span class="label-text">{{ t(mode.label) }}</span>
+              </label>
+            </div>
+            <button class="start-btn" :disabled="!selectedModes.length || isLoading" @click="startLearning">
+              {{ t('selectedpage.startBtn') }}
+            </button>
+          </div>
         </div>
-      </div>
+      </Transition>
+      <VPremiumModal v-model:show="showPremiumModal"/>
     </div>
   </div>
 </template>
 
 <script setup>
-import VPreloader from "../../src/components/V-preloader.vue";
-import { ref, computed, onMounted, nextTick } from 'vue'
-import { useRouter } from 'vue-router'
-import { userlangStore } from '../../store/learningStore.js'
-import Lottie from 'lottie-web'
-import { nameMap } from '../../utils/nameMap.js'
-import { useHead, useSeoMeta } from '#imports'
-import NotFound from '../../assets/animation/notFound.json'
-import { useCanonical } from '../../composables/useCanonical.js'
+import {ref, computed, onMounted, nextTick, onUnmounted} from 'vue'
+import {useRouter} from 'vue-router'
+import {userlangStore} from '../../store/learningStore.js'
+import {userAuthStore} from '../../store/authStore.js'
+import {nameMap} from '../../utils/nameMap.js'
+import VLoginPreloader from "../../src/components/V-loginPreloader.vue"
+import VBanner from "~/src/components/V-banner.vue"
+import BannerIcon from '../../assets/images/articleBannerIcon.svg'
+import VArrowNav from "~/src/components/V-arrowNav.vue"
+import VTransition from "~/src/components/V-transition.vue"
+import VPremiumModal from "~/src/components/V-premiumModal.vue"
 
-const { t } = useI18n()
+const categories = [
+  {id: 'nature', title: 'Природа', topics: ['Nature', 'Weather', 'Landscape']},
+  {id: 'animals', title: 'Животные', topics: ['Animals', 'Birds', 'SeaAnimals', 'Insects', 'Savanna']},
+  {id: 'food', title: 'Еда', topics: ['Food', 'MilkEat', 'SweetEat', 'Vegetables', 'Fruits', 'Drinks']},
+  {id: 'people', title: 'Человек', topics: ['Body',  'Emotions']},
+  {id: 'family', title: 'Семья', topics: ['CoreFamily', 'ExtendedFamily', 'Relationships', 'StepAndInLaws']},
+  {id: 'home', title: 'Быт', topics: [ 'Kitchen', 'BathroomItems', 'Kosmetik', 'CommonItems', 'Toys']},
+  {id: 'home', title: 'Дом', topics: ['DwellingTypes', 'Rooms', 'ConstructionAndDetails']},
+  {id: 'City', title: 'Город', topics: ['CityInfrastructure', 'CityBuildings', 'CityTransport']},
+  {id: 'School', title: 'Школа', topics: ['School', 'Colors']},
+  {id: 'Work', title: 'Профессии', topics: ['JobOffice', 'JobTech', 'JobMed', 'JobEdu', 'JobService' ]},
+  {id: 'Building', title: 'Строительство', topics: ['HandTools', 'PowerTools', 'ConsumablesAndSafety']},
+  {id: 'lifestyle', title: 'Одежда', topics: ['Clothes', 'Shoes']},
+  {id: 'holidays', title: 'Праздники', topics: ['WinterHolidays', 'FamilyAndReligious', 'PersonalCelebrations', 'FestivalsAndDecor']},
+  {id: 'Sport', title: 'Cпорт', topics: ['SportBasic', 'SportCombatWinter', 'SportEvents', 'SportLife', 'SportEquipment']},
+  {id: 'Music', title: 'Музыка', topics: ['Musik', 'MusicInstruments']},
+  {id: 'travel', title: 'Путешествия', topics: ['Travel', 'TravelDocuments', 'Tourism', 'TravelTransport']},
+  {id: 'informatics', title: 'Информатика', topics: ['Hardware', 'Software', 'Internet']},
+  {id: 'informatik', title: 'Абстрактные темы', topics: ['Zeit', 'DaysAndMonths', 'Amount']}
+]
+
+const iconMap = {
+  Furniture: 'chair.svg', Animals: 'animals.svg', Birds: 'Birds.svg', SeaAnimals: 'SeaAnimals.svg',
+  Insects: 'Insects.svg', Savanna: 'Savanna.svg', Clothes: 'hemd.svg', Shoes: 'Shoes.svg',
+  Food: 'meal.svg', MilkEat: 'MilkEat.svg', SweetEat: 'SweetEat.svg', Vegetables: 'vegetables.svg',
+  Fruits: 'Fruits.svg', Drinks: 'Drinks.svg ', Body: 'body.svg', Professions: 'profession.svg',
+  Colors: 'colors.svg', Nature: 'nature.svg', Weather: 'Weather.svg',
+  Landscape: 'Landscape.svg', Home: 'home.svg', Zeit: 'time.svg', CityInfrastructure: 'CityInfrastructure.svg',
+  CityBuildings: 'CityBuildings.svg', School: 'school.svg', DaysAndMonths: 'calendar.svg',
+  Toys: 'toys.svg', CommonItems: 'Informatik.svg', BathroomItems: 'bath-room.svg',
+  Kosmetik: 'makeup.svg', Familie: 'family.svg', Emotions: 'emotions.svg', Werkzeuge: 'instruments.svg',
+  Kitchen: 'kitchen.svg', Health: 'health.svg', SportBasic: 'sport.svg', SportEquipment: 'fitness.svg',
+  SportCombatWinter: 'SportCombatWinter.svg', SportEvents: 'SportEvents.svg', SportLife: 'SportLife.svg',
+  TravelDocuments: 'TravelDocuments.svg', Tourism: 'Tourism.svg', Travel: 'travel.svg',
+  MusicInstruments: 'MusicInstruments.svg', Musik: 'Music.svg', Amount: 'Amount.svg',
+  Hardware: 'Hardwares.svg', Software: 'Software.svg', Internet: 'Internet.svg',
+  WinterHolidays: 'WinterHolidays.svg',
+  FamilyAndReligious: 'FamilyAndReligious.svg',
+  PersonalCelebrations: 'PersonalCelebration.svg',
+  FestivalsAndDecor: 'FestivalsAndDecor.svg',
+  DwellingTypes: 'Home.svg',
+  Rooms: 'Room.svg',
+  ConstructionAndDetails: 'door.svg',
+  CoreFamily: 'CoreFamily.svg',
+  Relationships: 'Relationships.svg',
+  ExtendedFamily: 'ExtendedFamily.svg',
+  HandTools: 'wrench.svg',
+  PowerTools: 'Saw.svg',
+  ConsumablesAndSafety: 'roller-paint.svg',
+  JobOffice: 'office.svg',
+  JobTech: 'buildingsJob.svg',
+  JobMed: 'healthJob.svg',
+  JobEdu: 'educationJob.svg',
+  JobService: 'serviceJob.svg',
+  CityTransport: 'transport.svg',
+  TravelTransport: 'airplane.svg',
+}
+
+const topicColors = ['#FFEB7F', '#9DFFBB', '#FFAFF3', '#88B5FF', '#FF9F7F', '#AFAFFF', '#7FFFDF', '#FFD1AF']
+const getTopicColor = (index) => topicColors[index % topicColors.length]
+
+const {t} = useI18n()
 const showModesBlock = ref(false)
-const showNoTopicMessage = ref(true)
 const router = useRouter()
 const store = userlangStore()
+const authStore = userAuthStore()
 const themeList = ref({})
 const selectedTopic = ref(null)
 const selectedModes = ref([])
-const animationContainer = ref(null)
 const localePath = useLocalePath()
-const canonical = useCanonical()
 const isLoading = ref(false)
-const page = ref(0)
-const itemsPerPage = 9
+const isPageLoaded = ref(false)
+const showPremiumModal = ref(false)
 
-useSeoMeta({
-  robots: 'noindex, nofollow'
+const categorizedTopics = computed(() => {
+  return categories.map(category => {
+    const filteredKeys = category.topics.filter(key => nameMap[key] && themeList.value[key]);
+    return {...category, keys: filteredKeys};
+  }).filter(group => group.keys.length > 0);
 })
-
-const clearSelectedTopic = () => {
-  showModesBlock.value = false
-  setTimeout(() => {
-    selectedTopic.value = null
-    selectedModes.value = []
-    showNoTopicMessage.value = false
-  }, 450)
-}
-
-const goBack = () => {
-  router.push('/')
-}
-
-const topicKeys = computed(() => Object.keys(nameMap))
-
-const maxPage = computed(() =>
-    Math.ceil(topicKeys.value.length / itemsPerPage) - 1
-)
-
-const paginatedTopics = computed(() => {
-  const start = page.value * itemsPerPage
-  return topicKeys.value.slice(start, start + itemsPerPage)
-})
-
-const nextPage = () => {
-  if (page.value < maxPage.value) page.value++
-}
-const prevPage = () => {
-  if (page.value > 0) page.value--
-}
 
 const baseModes = [
-  { key: 'wordTranslate',     label: 'modes.wordTranslate' },
-  { key: 'article',     label: 'modes.article' },
-  { key: 'letters',     label: 'modes.letters' },
-  { key: 'wordArticle', label: 'modes.articleWord' },
-  { key: 'plural',      label: 'modes.plural' },
-  { key: 'audio',       label: 'modes.audio' }
+  {key: 'wordTranslate', label: 'modes.wordTranslate'},
+  {key: 'article', label: 'modes.article'},
+  {key: 'letters', label: 'modes.letters'},
+  {key: 'wordArticle', label: 'modes.articleWord'},
+  {key: 'plural', label: 'modes.plural'},
+  {key: 'audio', label: 'modes.audio'}
 ]
-
-const topicWords = computed(() => {
-  const key = selectedTopic.value
-  if (!key) return []
-  return Array.isArray(themeList.value[key]) ? themeList.value[key] : []
-})
 
 function hasAnyPlural(wordsArray) {
   const list = Array.isArray(wordsArray) ? wordsArray : []
   return list.some(w => w.plural && String(w.plural).trim() !== '')
 }
 
-const hasPluralForCurrentTopic = computed(() => hasAnyPlural(topicWords.value))
-
-
 const availableModes = computed(() => {
-  return hasPluralForCurrentTopic.value
-      ? baseModes
-      : baseModes.filter(m => m.key !== 'plural')
+  const key = selectedTopic.value
+  if (!key) return []
+  const topicWords = Array.isArray(themeList.value[key]) ? themeList.value[key] : []
+  return hasAnyPlural(topicWords) ? baseModes : baseModes.filter(m => m.key !== 'plural')
 })
 
 const themeProgress = computed(() => {
   return Object.fromEntries(
       Object.entries(themeList.value).map(([key, words]) => {
         const total = words.length
-        const learned = words.filter(word =>
-            store.learnedWords.some(lw => lw.de === word.de && lw.topic === key)
-        ).length
-        return [key, { learned, total }]
+        const hasPlural = hasAnyPlural(words)
+        const modesToCheck = baseModes.filter(m => hasPlural || m.key !== 'plural').map(m => m.key)
+        const learned = words.filter(word => {
+          const globalWord = store.words.find(w => w.de === word.de && w.topic === key)
+          if (!globalWord || !globalWord.progress) return false
+          return modesToCheck.every(mode => globalWord.progress[mode] === true)
+        }).length
+        return [key, {learned, total}]
       })
   )
 })
 
+const getCategoryStatus = (group) => {
+  const completed = group.keys.filter(key => {
+    const prog = themeProgress.value[key]
+    return prog && prog.learned > 0 && prog.learned === prog.total
+  }).length
+  const total = group.keys.length
+  return {
+    completed,
+    percent: total > 0 ? (completed / total) * 100 : 0,
+    isAllDone: completed > 0 && completed === total
+  }
+}
+
 const selectTopic = (key) => {
-  selectedTopic.value = key
-  selectedModes.value = []
-  showModesBlock.value = true
+  const isNatureFirst = categories[0].topics[0] === key
+  if (isNatureFirst || authStore.isPremium) {
+    window.history.pushState({isModesOpen: true}, '')
+    selectedTopic.value = key
+    selectedModes.value = []
+    showModesBlock.value = true
+  } else {
+    showPremiumModal.value = true
+  }
 }
 
 const startLearning = async () => {
   if (!selectedModes.value.length || isLoading.value) return
   isLoading.value = true
   try {
+    const sortedSelectedModes = baseModes.filter(m => selectedModes.value.includes(m.key)).map(m => m.key)
     const topicWordsLocal = (themeList.value[selectedTopic.value] || [])
         .filter(word => {
-          const globalWord = store.words.find(
-              w => w.de === word.de && w.topic === selectedTopic.value
-          )
-          return selectedModes.value.some(mode => !(globalWord?.progress?.[mode] === true))
+          const globalWord = store.words.find(w => w.de === word.de && w.topic === selectedTopic.value)
+          return sortedSelectedModes.some(mode => !(globalWord?.progress?.[mode] === true))
         })
-        .map(w => ({ ...w, topic: selectedTopic.value }))
-
+        .map(w => ({...w, topic: selectedTopic.value}))
     await store.addWordsToGlobal(topicWordsLocal)
     await store.setSelectedWords(topicWordsLocal)
     await store.setSelectedTopics([selectedTopic.value])
     await store.saveToFirebase()
-
     await nextTick()
-    const path = localePath({
+    await router.push(localePath({
       path: '/articles/articles-session',
-      query: { topic: selectedTopic.value, mode: selectedModes.value }
-    })
-    await router.push(path)
+      query: {topic: selectedTopic.value, mode: sortedSelectedModes}
+    }))
   } catch (e) {
     console.error(e)
     isLoading.value = false
   }
 }
 
+function goBack() {
+  if (showModesBlock.value) window.history.back()
+  else router.push('/')
+}
+
+const handlePopState = () => {
+  if (showModesBlock.value) {
+    showModesBlock.value = false
+    selectedTopic.value = null
+  }
+}
+
+const clearSelectedTopic = () => {
+  if (showModesBlock.value) window.history.back()
+}
+
 onMounted(async () => {
   const res = await fetch('/words.json')
   themeList.value = await res.json()
+  isPageLoaded.value = true
+  window.addEventListener('popstate', handlePopState)
 })
 
-onMounted(() => {
-  if (animationContainer.value) {
-    Lottie.loadAnimation({
-      container: animationContainer.value,
-      loop: false,
-      animationData: NotFound
-    })
-  }
-})
+onUnmounted(() => window.removeEventListener('popstate', handlePopState))
 </script>
 
 <style scoped>
-
 .theme-page {
   font-family: "Nunito", sans-serif;
-  min-height: 100vh;
-  padding: 2rem;
+  height: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .theme-page-container {
   width: 100%;
-  max-width: 1200px;
-  height: calc(100vh - 4rem);
+  height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.theme__header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 5px 10px 10px 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.btn-icon-back {
+  background: #f5f5f6;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  border-radius: 14px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.btn-icon-back:active {
+  transform: translate(2px, 3px);
+  box-shadow: 0px 0px 0px #1e272e;
+}
+
+.theme__title {
+  flex: 1;
+  display: flex;
+  font-size: 23px;
+  font-weight: 600;
+  color: var(--title);
+  text-shadow: 1px 1px var(--title);
+  margin-left: 15px;
+  font-family: "Nunito", sans-serif;
 }
 
 .theme__title-wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 0 1rem 1rem 1rem;
-  border-bottom: 4px solid #1e1e1e;
   flex-shrink: 0;
-}
-
-.title-spacer {
-  width: 120px;
-}
-
-.theme-title {
-  font-family: "Nunito", sans-serif;
-  font-size: 2.5rem;
-  color: var(--titleColor);
-  text-align: center;
-}
-
-.back-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  font-size: 1.2rem;
-  background: #4ade80;
-  border: 3px solid #1e1e1e;
-  color: #1e1e1e;
-  padding: 0.6rem 1rem;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  width: 150px;
-}
-
-.back-btn:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
-}
-
-.back-btn svg {
-  font-size: 1.5em;
 }
 
 .theme-content-area {
@@ -319,199 +412,216 @@ onMounted(() => {
   flex-grow: 1;
   overflow: hidden;
   position: relative;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 0;
 }
 
 .grid-area-wrapper {
   flex-grow: 1;
-  background: #60a5fa;
-  border: 3px solid #1e1e1e;
-  border-radius: 24px;
-  box-shadow: 8px 8px 0px #1e1e1e;
-  padding: 1rem;
   display: flex;
   overflow: hidden;
+  width: 100%;
 }
 
 .theme__grid-container {
   flex-grow: 1;
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .theme__grid-container::-webkit-scrollbar {
-  width: 12px;
+  display: none;
 }
 
-.theme__grid-container::-webkit-scrollbar-track {
-  background: transparent;
+.banner-wrapper {
+  margin: 0 15px 15px 15px;
 }
 
-.theme__grid-container::-webkit-scrollbar-thumb {
-  background: #1e1e1e;
-  border-radius: 6px;
-  border: 3px solid #60a5fa;
+.topics-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 10px 40px 15px;
 }
 
-.theme-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1.5rem;
-  justify-content: start;
-  align-content: start;
-}
-
-.theme-card {
-  background: #fff;
-  border-radius: 16px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  padding: 25px 10px;
-  text-align: center;
+.topic-list-item {
+  border-radius: 20px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  position: relative;
+  background: var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+  transition: transform 0.1s, border-bottom-width 0.1s;
 }
 
-.theme-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 6px 6px 0px #1e1e1e;
+.topic-main-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.theme-card.active {
-  background-color: #f1c40f;
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
+.topic-item-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.card-counter {
-  position: absolute;
-  top: -12px;
-  right: -12px;
-  width: 32px;
-  height: 32px;
-  background-color: #e74c3c;
-  color: white;
-  border-radius: 50%;
-  border: 3px solid #1e1e1e;
+.topic-icon-box {
+  font-size: 32px;
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9rem;
-  font-weight: 400;
 }
 
-.theme-card-title {
+.theme__cards-icon-item {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.15));
+}
+
+.topic-label {
+  color: var(--titleColor);
+  font-size: 17px;
+  font-weight: 800;
   font-family: "Nunito", sans-serif;
-  font-size: 1.5rem;
-  color: #1e1e1e;
 }
 
-.theme-pagination {
+.topic-arrow {
+  background-color: #3b82f6;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  box-shadow: 0 3px 0px #2563eb;
   flex-shrink: 0;
-  padding-bottom: 0.5rem;
 }
 
-.theme-pagination button {
+.topic-arrow--locked {
+  background-color: #a0aec0;
+  box-shadow: 0 3px 0px #718096;
+}
+
+.topic-progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.progress-bar-container {
+  flex: 1;
+  height: 8px;
+  background-color: #1e272e;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease-out;
+}
+
+.progress-text {
+  color: var(--titleColor);
+  font-size: 14px;
+  font-weight: 900;
+  min-width: 36px;
+  text-align: right;
   font-family: "Nunito", sans-serif;
-  background: #fff;
-  color: #1e1e1e;
-  border: 3px solid #1e1e1e;
-  border-radius: 12px;
-  width: 45px;
-  height: 45px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: all 0.2s;
-  box-shadow: 4px 4px 0px #1e1e1e;
-}
-
-.theme-pagination button:hover:not(:disabled) {
-  background: #f1c40f;
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
-}
-
-.theme-pagination button:disabled {
-  background: #d1d1d1;
-  color: #888;
-  box-shadow: 2px 2px 0px #888;
-  cursor: not-allowed;
-}
-
-.learning-modes-container {
-  position: relative;
-  width: 350px;
-  flex-shrink: 0;
 }
 
 .learning-modes-block {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
-  background: #fff;
-  border: 3px solid #1e1e1e;
-  border-radius: 24px;
-  /*box-shadow: 8px 8px 0px #1e1e1e;*/
-  padding: 20px;
+  background: var(--bg);
+  z-index: 2000;
   display: flex;
   flex-direction: column;
 }
 
+.learning__modes-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.modes-header-container {
+  display: flex;
+  padding: 5px 10px 15px 10px;
+  margin-bottom: 15px;
+}
+
 .close-modes-btn {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: #e0e0e0;
-  border: 3px solid #1e1e1e;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  background: #fff;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #1e1e1e;
-  font-size: 1.5rem;
-  transition: all 0.2s ease;
+  transition: transform 0.1s, box-shadow 0.1s;
 }
 
-.close-modes-btn:hover {
-  background: #e74c3c;
-  color: white;
+.close-modes-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
+}
+
+.modes-title-box {
+  flex-grow: 1;
+  text-align: left;
+  margin-left: 15px;
+  padding-top: 10px;
 }
 
 .modes-title {
-  font-size: 2rem;
-  text-align: center;
-  color: #1e1e1e;
-  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--titleColor);
 }
 
 .topic-hint {
-  text-align: center;
-  color: #555;
-  margin-bottom: 1.5rem;
-  font-family: 'Inter', sans-serif;
+  color: #726b6b;
+  font-family: Nunito, sans-serif;
   font-style: italic;
   font-weight: 500;
+  margin-top: 2px;
+  text-align: center;
 }
 
 .modes-list {
+  padding: 0 15px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 20px;
 }
 
 .checkbox-container {
@@ -521,13 +631,20 @@ onMounted(() => {
   cursor: pointer;
   user-select: none;
   position: relative;
-  padding: 10px;
-  border-radius: 12px;
-  transition: background-color 0.2s;
+  padding: 14px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  transition: transform 0.1s ease;
 }
 
-.checkbox-container:hover {
-  background-color: #fef8e4;
+.checkbox-container:active {
+  transform: scale(0.98);
+}
+
+.checkbox-container.active-mode {
+  background-color: #f1c40f;
 }
 
 .checkbox-container input {
@@ -538,7 +655,7 @@ onMounted(() => {
   width: 28px;
   height: 28px;
   border-radius: 8px;
-  border: 3px solid #1e1e1e;
+  border: 3px solid #af9e9e;
   background: #fff;
   position: relative;
   flex-shrink: 0;
@@ -563,11 +680,7 @@ onMounted(() => {
   fill: none;
   stroke-dasharray: 28;
   stroke-dashoffset: 28;
-  transition: stroke-dashoffset 0.4s ease;
-}
-
-.checkbox-container input:checked + .checkmark {
-  background-color: #f1c40f;
+  transition: stroke-dashoffset 0.3s ease;
 }
 
 .checkbox-container input:checked + .checkmark polyline {
@@ -580,145 +693,49 @@ onMounted(() => {
 
 .label-text {
   color: #1e1e1e;
-  font-weight: 400;
-  font-size: 1.2rem;
+  font-weight: 800;
+  font-size: 1.1rem;
 }
 
 .start-btn {
-  width: 100%;
-  padding: 1rem;
+  padding: 14px;
   font-family: "Nunito", sans-serif;
-  font-size: 1.5rem;
-  background-color: #4ade80;
-  border: 3px solid #1e1e1e;
-  color: #1e1e1e;
-  border-radius: 16px;
+  font-size: 19px;
+  font-weight: 700;
+  background-color: #3b82f6;
+  border: 2px solid #2563eb;
+  color: white;
+  border-radius: 34px;
   cursor: pointer;
-  transition: all 0.1s ease-in-out;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  margin-top: 1rem;
-}
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  border-bottom: 4px solid #1d4ed8;
+  margin: 10px 15px 20px 15px;
 
-.start-btn:hover:not(:disabled) {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
 }
 
 .start-btn:disabled {
   background: #e0e0e0;
   color: #a1a1a1;
-  box-shadow: 2px 2px 0px #a1a1a1;
+  border: 2px solid #a1a1a1;
+  border-bottom: 4px solid #a1a1a1;
   cursor: not-allowed;
 }
 
+.page-fade-enter-active {
+  transition: opacity 0.4s ease, transform 0.4s ease-out;
+}
+
+.page-fade-enter-from {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
 .slide-right-enter-active, .slide-right-leave-active {
-  transition: transform 0.45s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slide-right-enter-from, .slide-right-leave-to {
-  transform: translateX(110%);
-}
-
-@media (max-width: 767px) {
-  .theme-content-area {
-    gap: 0;
-  }
-
-  .theme-page {
-    padding: 10px;
-  }
-
-  .grid-area-wrapper {
-    width: 100%;
-    box-shadow: none;
-  }
-
-  .learning-modes-block {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    max-width: 380px;
-    z-index: 2000;
-    border-radius: 0;
-    box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.1);
-    border: none;
-    border-left: 3px solid #1e1e1e;
-  }
-
-  .slide-right-enter-from,
-  .slide-right-leave-to {
-    transform: translateX(100%);
-  }
-
-  .theme-title {
-    font-size: 1.1rem;
-    margin: 0 0.5rem;
-    line-height: 1.2;
-  }
-
-  .theme__title-wrapper {
-    padding: 0 0.5rem 1rem 0.5rem;
-  }
-
-  .back-btn {
-    padding: 0.5rem 0.8rem;
-    width: auto;
-    flex-shrink: 0;
-  }
-
-  .title-spacer {
-    display: none;
-  }
-
-  .learning-modes-container {
-    width: 0;
-  }
-
-  .learning-modes-block {
-    max-width: 100%;
-  }
-
-  .theme-card {
-    padding: 15px 10px;
-  }
-
-  .theme-card-title {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 540px ) {
-  .theme__title-wrapper {
-    flex-direction: column;
-  }
-
-  .back-btn {
-    box-shadow: 2px 2px 0 black;
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .theme-title {
-    font-size: 1.2rem;
-  }
-}
-
-.checkbox-container.active-mode {
-  background-color: #f1c40f;
-  border-radius: 12px;
-}
-
-.preloader-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(2px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3000;
+  transform: translateX(100%);
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -729,4 +746,106 @@ onMounted(() => {
   opacity: 0;
 }
 
+@media (max-width: 400px) {
+  .topic-label {
+    font-size: 15px;
+  }
+
+  .topic-icon-box {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.category-group {
+  margin-bottom: 15px;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  margin-bottom: 12px;
+}
+
+.category-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--titleColor);
+  font-family: "Nunito", sans-serif;
+}
+
+.category-progress-inline {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.category-counter {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--titleColor);
+  letter-spacing: 1px;
+}
+
+.mini-progress-bar {
+  width: 60px;
+  height: 8px;
+  background-color: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #cbd5e0;
+}
+
+.mini-progress-fill {
+  height: 100%;
+  background-color: #2ecc71;
+  transition: width 0.3s ease;
+}
+
+.completion-check {
+  color: #cbd5e0;
+  display: flex;
+  align-items: center;
+}
+
+.completion-check.is-finished {
+  color: #2ecc71;
+}
+
+.category-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 0 16px 15px 16px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.category-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.topic-list-item {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  border-radius: 20px;
+  padding: 16px;
+  background: var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .topic-list-item {
+    flex: 0 0 300px;
+  }
+}
 </style>

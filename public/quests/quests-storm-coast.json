@@ -6,12 +6,12 @@
     "description": "questsStormCoastsFirstQuests.description",
     "conditions": {
       "goal": "questsStormCoastsFirstQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -218,12 +218,12 @@
     "description": "questsStormCoastsSecondQuests.description",
     "conditions": {
       "goal": "questsStormCoastsSecondQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -421,12 +421,12 @@
     "description": "questsStormCoastsThirdQuests.description",
     "conditions": {
       "goal": "questsStormCoastsThirdQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -625,12 +625,12 @@
     "description": "questsStormCoastsFourQuests.description",
     "conditions": {
       "goal": "questsStormCoastsFourQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -845,12 +845,12 @@
     "description": "questsStormCoastsFifthQuests.description",
     "conditions": {
       "goal": "questsStormCoastsFifthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1034,12 +1034,12 @@
     "description": "questsStormCoastsSixQuests.description",
     "conditions": {
       "goal": "questsStormCoastsSixQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1257,12 +1257,12 @@
     "description": "questsStormCoastsSevenQuests.description",
     "conditions": {
       "goal": "questsStormCoastsSevenQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 16,
       "requiredTasks": 16
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1490,12 +1490,12 @@
     "description": "questsStormCoastsEighthQuests.description",
     "conditions": {
       "goal": "questsStormCoastsEighthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1714,12 +1714,12 @@
     "description": "questsStormCoastsNinthQuests.description",
     "conditions": {
       "goal": "questsStormCoastsNinthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1940,12 +1940,12 @@
     "description": "questsStormCoastsTenthQuests.description",
     "conditions": {
       "goal": "questsStormCoastsTenthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {

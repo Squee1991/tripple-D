@@ -10,35 +10,29 @@ const isVisible = ref(false);
 const currentStep = ref(0);
 const rect = ref({ x: 0, y: 0, width: 0, height: 0 });
 
-// Получаем данные для ТЕКУЩЕГО шага (включая icon)
 const currentStepData = computed(() => {
   return props.steps && props.steps[currentStep.value]
       ? props.steps[currentStep.value]
       : { title: '', icon: '', description: '', target: '' };
 });
 
-// Функция обновления позиции "прожектора" на сайте
 const updateRect = () => {
   if (!isVisible.value) return;
   const el = document.querySelector(currentStepData.value.target);
   if (el) {
     const r = el.getBoundingClientRect();
     rect.value = { x: r.left, y: r.top, width: r.width, height: r.height };
-    // Плавно скроллим к элементу, если он вне зоны видимости
     el.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 };
 
 const cardPosition = computed(() => {
-  const gap = 20; // Отступ от прожектора
+  const gap = 20;
   const isBottom = rect.value.y > window.innerHeight / 2;
-  const cardWidth = 340; // Наша фиксированная ширина карточки
+  const cardWidth = 340;
 
   return {
-    // Если элемент внизу — карточка сверху, если вверху — снизу
-    // Эстимируем среднюю высоту карточки (~180px), чтобы она не прыгала
     top: isBottom ? `${rect.value.y - 180 - gap}px` : `${rect.value.y + rect.value.height + gap}px`,
-    // Умное центрирование, чтобы карточка не вылетала за края экрана
     left: `${Math.max(15, Math.min(window.innerWidth - cardWidth - 15, rect.value.x + (rect.value.width / 2) - (cardWidth / 2)))}px`
   };
 });
@@ -46,7 +40,7 @@ const cardPosition = computed(() => {
 const nextStep = () => {
   if (currentStep.value < props.steps.length - 1) {
     currentStep.value++;
-    // Даем Vue время обновить DOM перед пересчетом
+
     nextTick(() => setTimeout(updateRect, 100));
   } else {
     close();
@@ -58,7 +52,6 @@ const close = () => {
   emit('close');
 };
 
-// Следим за ресайзом окна
 onMounted(() => {
   window.addEventListener('resize', updateRect);
 });
@@ -66,7 +59,6 @@ onBeforeUnmount(() => {
   window.removeEventListener('resize', updateRect);
 });
 
-// Запускаем гайд при активации
 watch(() => props.active, (val) => {
   if (val) {
     isVisible.value = true;

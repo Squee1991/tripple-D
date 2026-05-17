@@ -1,77 +1,79 @@
 <template>
-  <section class="faq">
-    <div class="faq__top-btn">
-      <button class="faq__btn-home" @click="goHome">{{ t('faq.btnBack')}}</button>
-    </div>
-    <div
-        v-for="(section, sectionIndex) in faqSections"
-        :key="sectionIndex"
-        class="faq__section"
-    >
-      <div class="faq__section-header">
-        <h2 class="faq__section-title">{{ section.title }}</h2>
+  <div class="faq">
+    <div class="faq__content">
+      <div class="faq__header">
+        <VBackBtn/>
+        <div class="faq__title">FAQ</div>
       </div>
-      <div class="faq__section-body">
+      <div class="faq__content-inner">
         <div
-            v-for="(item, questionIndex) in section.items"
-            :key="questionIndex"
-            class="faq__item"
-            :class="{ 'faq__item--open': isQuestionOpen(sectionIndex, questionIndex) }"
+            v-for="(section, sectionIndex) in faqSections"
+            :key="sectionIndex"
+            class="faq__section"
         >
-          <h3 class="faq__item-question">
-            <button
-                class="faq__item-toggle"
-                @click="toggleQuestion(sectionIndex, questionIndex)"
-                :aria-expanded="isQuestionOpen(sectionIndex, questionIndex)"
-                :aria-controls="`faq-item-${sectionIndex}-${questionIndex}`"
-            >
-              <span class="faq__item-question-text">{{ item.question }}</span>
-              <img
-                  class="faq__item-arrow"
-                  src="../assets/images/arrowNav.svg"
-                  alt="Show_answer"
-              />
-            </button>
-          </h3>
-          <div class="faq__item-body"
-               :id="`faq-item-${sectionIndex}-${questionIndex}`"
-          >
-            <template v-if="item.steps && item.steps.length">
-              <ol class="faq__steps">
-                <li
-                    v-for="(step, stepIndex) in item.steps"
-                    :key="stepIndex"
-                    class="faq__step"
-                >
-                  {{ step }}
-                </li>
-              </ol>
-              <p v-if="item.note" class="faq__note">{{ item.note }}</p>
-            </template>
-            <template v-else>
-              <p class="faq__answer">{{ item.answer }}</p>
-            </template>
+          <div class="faq__section-header">
+            <h2 class="faq__section-title">{{ section.title }}</h2>
           </div>
+          <div class="faq__section-body">
+            <div
+                v-for="(item, questionIndex) in section.items"
+                :key="questionIndex"
+                class="faq__item"
+                :class="{ 'faq__item--open': isQuestionOpen(sectionIndex, questionIndex) }"
+            >
+              <h3 class="faq__item-question">
+                <button
+                    class="faq__item-toggle"
+                    @click="toggleQuestion(sectionIndex, questionIndex)"
+                    :aria-expanded="isQuestionOpen(sectionIndex, questionIndex)"
+                    :aria-controls="`faq-item-${sectionIndex}-${questionIndex}`"
+                >
+                  <span class="faq__item-question-text">{{ item.question }}</span>
+                  <img
+                      class="faq__item-arrow"
+                      src="../assets/images/arrowNav.svg"
+                      alt="Show_answer"
+                  />
+                </button>
+              </h3>
+              <div class="faq__item-body"
+                   :id="`faq-item-${sectionIndex}-${questionIndex}`"
+              >
+                <template v-if="item.steps && item.steps.length">
+                  <ol class="faq__steps">
+                    <li
+                        v-for="(step, stepIndex) in item.steps"
+                        :key="stepIndex"
+                        class="faq__step"
+                    >
+                      {{ step }}
+                    </li>
+                  </ol>
+                  <p v-if="item.note" class="faq__note">{{ item.note }}</p>
+                </template>
+                <template v-else>
+                  <p class="faq__answer">{{ item.answer }}</p>
+                </template>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="faq__bottom-btn">
+          <p class="faq__contact-text">{{ t('faq.questions')}}</p>
+          <button class="faq__btn-contact" @click="openContactForm">{{ t('faq.send')}}</button>
         </div>
       </div>
     </div>
-    <div class="faq__bottom-btn">
-      <p class="faq__contact-text">{{ t('faq.questions')}}</p>
-      <button class="faq__btn-contact" @click="openContactForm">{{ t('faq.send')}}</button>
-    </div>
-  </section>
+  </div>
 </template>
 
 <script setup>
 import {ref} from 'vue'
 import {useRouter} from 'vue-router'
+import VBackBtn from "~/src/components/V-back-btn.vue";
 
 const { t } = useI18n()
 const router = useRouter()
-
-function goHome() {
-  router.push('/')
-}
 
 function openContactForm() {
   router.push('/support-request')
@@ -136,36 +138,36 @@ const faqSections = ref([
       }
     ]
   },
-  // {
-  //   title: t('subscribe.title'),
-  //   items: [
-  //     {
-  //       question: t('subscribe.questOne'),
-  //       steps: [
-  //         t('subscribe.questOneStepOne'),
-  //         t('subscribe.questOneStepTwo'),
-  //         t('subscribe.questOneStepThree'),
-  //         t('subscribe.questOneStepFour'),
-  //         t('subscribe.questOneStepFive'),
-  //         t('subscribe.questOneStepSix'),
-  //       ]
-  //     },
-  //     {
-  //       question: t('subscribe.questTwo'),
-  //       steps: [
-  //         t('subscribe.questTwoStepOne'),
-  //         t('subscribe.questTwoStepTwo'),
-  //         t('subscribe.questTwoStepThree'),
-  //         t('subscribe.questTwoStepFour'),
-  //       ],
-  //       note: t('subscribe.note'),
-  //     },
-  //     {
-  //       question: t('subscribe.questThree'),
-  //       answer: t('subscribe.answerThree'),
-  //     }
-  //   ]
-  // }
+  {
+    title: t('subscribe.title'),
+    items: [
+      {
+        question: t('subscribe.questOne'),
+        steps: [
+          t('subscribe.questOneStepOne'),
+          t('subscribe.questOneStepTwo'),
+          t('subscribe.questOneStepThree'),
+          t('subscribe.questOneStepFour'),
+          t('subscribe.questOneStepFive'),
+          t('subscribe.questOneStepSix'),
+        ]
+      },
+      {
+        question: t('subscribe.questTwo'),
+        steps: [
+          t('subscribe.questTwoStepOne'),
+          t('subscribe.questTwoStepTwo'),
+          t('subscribe.questTwoStepThree'),
+          t('subscribe.questTwoStepFour'),
+        ],
+        note: t('subscribe.note'),
+      },
+      {
+        question: t('subscribe.questThree'),
+        answer: t('subscribe.answerThree'),
+      }
+    ]
+  }
 ])
 
 useHead({
@@ -209,36 +211,41 @@ function isQuestionOpen(sectionIndex, questionIndex) {
 </script>
 
 <style scoped>
-* {
-  font-family: "Nunito", sans-serif;
-}
+
 
 .faq {
   max-width: 1000px;
   margin: 0 auto;
   border-radius: 24px;
-  padding: 22px;
+  height: 100%;
+  overflow: hidden;
 }
 
-.faq__top-btn {
-  text-align: center;
-  margin-bottom: 16px;
+.faq__content {
+  height: 100%;
 }
 
-.faq__btn-home {
-  background: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 12px;
-  border: none;
-  cursor: pointer;
-  font-weight: 700;
-  min-width: 250px;
-  font-size: 1.3rem;
+.faq__content-inner{
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  overflow-y: auto;
+  padding-bottom: 100px;
 }
 
-.faq__btn-home:hover {
-  background: #0f72dc;
+.faq__header {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px 15px 10px;
+  margin-bottom: 15px;
+}
+
+.faq__title {
+  font-size: 23px;
+  font-weight: 600;
+  text-shadow: 1px 1px var(--title);
+  color: var(--title);
+  margin-left: 15px;
 }
 
 .faq__bottom-btn {
@@ -265,7 +272,7 @@ function isQuestionOpen(sectionIndex, questionIndex) {
   font-size: 1.4rem;
 }
 
-.faq__btn-contact:hover {
+.faq__btn-contact:active {
   background: #0056b3;
 }
 
@@ -277,18 +284,18 @@ function isQuestionOpen(sectionIndex, questionIndex) {
 
 .faq__section-title {
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 24px;
 }
 
 .faq__section-body {
-  padding: 10px 10px 14px;
+  padding: 10px 15px;
 }
 
 .faq__item {
-  background: #fff;
-  border: 3px solid #000;
+  background: var(--menuItemsBg);
   border-radius: 16px;
-  box-shadow: 3px 3px 0 #000;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   margin: 10px 0;
   overflow: hidden;
 }
@@ -303,7 +310,7 @@ function isQuestionOpen(sectionIndex, questionIndex) {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background: #f3f4f6;
+  background: var(--menuItemsBg);
   border: 0;
   cursor: pointer;
   font-weight: 800;
@@ -312,7 +319,8 @@ function isQuestionOpen(sectionIndex, questionIndex) {
 
 .faq__item-question-text {
   font-weight: 900;
-  font-size: 1.4rem;
+  font-size: 16px;
+  color: var(--title)
 }
 
 .faq__item-arrow {
@@ -356,21 +364,9 @@ function isQuestionOpen(sectionIndex, questionIndex) {
 
 .faq__answer {
   margin: 0;
-  font-size: 20px;
+  font-size: 15px;
+  color: var(--title);
   font-weight: 400;
 }
 
-@media (max-width: 767px) {
-  .faq__item-question-text {
-    font-size: 1rem;
-  }
-
-  .faq__answer {
-    font-size: 1rem;
-  }
-
-  .faq__step {
-    font-size: 1rem;
-  }
-}
 </style>

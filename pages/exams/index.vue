@@ -1,76 +1,13 @@
-<template>
-  <div>
-    <div v-if="!authStore.premium" class="exam">
-      <transition name="fade">
-        <div v-if="showHint" class="exam-hint">
-          ℹ️ {{t('examIndexPage.hint')}}
-        </div>
-      </transition>
-      <VConsentModal
-          v-if="showConsentModal"
-          @consent-given="handleConsentGiven"
-          @close="showConsentModal = false"
-      />
-      <button type="button" class="back__btn" @click="routeToMain">{{t('examIndexPage.toMain')}}</button>
-      <p class="exam__subtitle">
-        {{t('examIndexPage.choice')}}
-        <span class="exam__highlight">Lesen</span>,
-        <span class="exam__highlight">Hören</span>,
-        <span class="exam__highlight">Schreiben</span>,
-        <span class="exam__highlight">Sprechen</span>
-      </p>
-      <div class="exam__levels">
-        <div
-            v-for="level in examLevels"
-            :key="level.id"
-            :class="['exam-card', `exam-card--${level.id}`]"
-        >
-          <h2 class="exam-card__title">{{ level.icon }} {{ level.title }}</h2>
-          <ul class="exam-card__list">
-            <li
-                v-for="item in level.modules"
-                :key="item.text"
-                class="exam-card__item"
-            >
-              {{ item.text }}
-            </li>
-          </ul>
-          <button
-              class="exam-card__button"
-              @click="attemptToStartExam(level.id)"
-          >
-            {{t('examIndexPage.to')}} {{ level.id.toUpperCase() }}
-          </button>
-        </div>
-      </div>
-    </div>
-    <div v-else class="exam__not-allowed">
-      <div class="exam__not-allowed-wrapper">
-        <h2 class="exam__not-allowed-title"> {{ notAllowed.title }}</h2>
-        <div class="buttons__wrapper">
-          <button
-              type="button"
-              @click="notAllowedPathBtn(btn.path)"
-              v-for="btn in notAllowed.btns"
-              :key="btn.id"
-              class="button__not-allowed">
-            {{ btn.value }}
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import {onMounted, ref} from 'vue'
 import {userExamStore} from '~/store/examStore.js'
 import {useRouter} from 'vue-router'
 import VConsentModal from "../../src/components/V-consentModal.vue";
 import {userAuthStore} from "../../store/authStore.js";
-import { useHead, useSeoMeta } from '#imports'
-// const canonical = useCanonical()
-const { t } = useI18n()
+import {useHead, useSeoMeta} from '#imports'
+import VBackBtn from "~/src/components/V-back-btn.vue";
+
+const {t} = useI18n()
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -79,6 +16,7 @@ useSeoMeta({
 const authStore = userAuthStore()
 const showConsentModal = ref(false)
 const consentGiven = ref(false)
+const isPageLoaded = ref(false)
 const router = useRouter()
 const examStore = userExamStore()
 const showHint = ref(false)
@@ -101,7 +39,7 @@ const examLevels = [
     modules: [
       {text: t('examLevelCardA1.textOne')},
       {text: t('examLevelCardA1.textTwo')},
-      {text:  t('examLevelCardA1.textThree')},
+      {text: t('examLevelCardA1.textThree')},
       {text: t('examLevelCardA1.textFour')}
     ]
   },
@@ -112,7 +50,7 @@ const examLevels = [
     modules: [
       {text: t('examLevelCardA2.textOne')},
       {text: t('examLevelCardA2.textTwo')},
-      {text:  t('examLevelCardA2.textThree')},
+      {text: t('examLevelCardA2.textThree')},
       {text: t('examLevelCardA2.textFour')}
     ]
   },
@@ -123,7 +61,7 @@ const examLevels = [
     modules: [
       {text: t('examLevelCardB1.textOne')},
       {text: t('examLevelCardB1.textTwo')},
-      {text:  t('examLevelCardB1.textThree')},
+      {text: t('examLevelCardB1.textThree')},
       {text: t('examLevelCardB1.textFour')}
     ]
   },
@@ -134,14 +72,12 @@ const examLevels = [
     modules: [
       {text: t('examLevelCardB2.textOne')},
       {text: t('examLevelCardB2.textTwo')},
-      {text:  t('examLevelCardB2.textThree')},
+      {text: t('examLevelCardB2.textThree')},
       {text: t('examLevelCardB2.textFour')}
     ]
   }
 ]
-const routeToMain = () => {
-  router.push('/')
-}
+
 const attemptToStartExam = (levelId) => {
   if (authStore.voiceConsentGiven) {
     router.push(`/exams/level/${levelId}`)
@@ -157,218 +93,332 @@ const handleConsentGiven = async () => {
 }
 
 onMounted(async () => {
+  isPageLoaded.value = true
   await authStore.initAuth()
   examStore.loadTopics('/exams/exam-A1.json')
   showConsentModal.value = !authStore.voiceConsentGiven
 })
-
 </script>
 
+<template>
+  <div class="exam-app-theme">
+    <div class="exam">
+      <transition name="fade">
+        <div v-if="showHint" class="exam-hint">
+          ℹ️ {{ t('examIndexPage.hint') }}
+        </div>
+      </transition>
+      <VConsentModal
+          v-if="showConsentModal"
+          @consent-given="handleConsentGiven"
+          @close="showConsentModal = false"
+      />
+      <div class="exam__header">
+        <VBackBtn class="custom-back-btn"/>
+        <div class="exam__title-badge">{{ t('nav.tests')}}</div>
+      </div>
+      <Transition name="menu-appear" appear>
+        <div v-if="isPageLoaded" class="exam__scroll-area">
+          <div class="exam__subtitle-wrapper">
+            <div class="exam__subtitle">
+              <div class="exam__subtitle__left">
+                <span>{{ t('examIndexPage.choice') }}</span>
+                <span class="exam__accent">Lesen</span>
+                <span class="exam__accent">Hören</span>
+                <span class="exam__accent">Schreiben</span>
+                <span class="exam__accent">Sprechen</span>
+              </div>
+              <div class="exam__subtitle__right">
+                <img class="exam__subtitle-icon" src="../../assets/images/exam-results.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="exam__grid">
+            <div
+                v-for="level in examLevels"
+                :key="level.id"
+                :class="['exam-card', `card--${level.id}`]"
+            >
+              <div class="exam-card__header">
+                <h2 class="exam-card__title">{{ level.title }}</h2>
+              </div>
+              <div class="exam-card__body">
+                <ul class="exam-card__list">
+                  <li
+                      v-for="item in level.modules"
+                      :key="item.text"
+                      class="exam-card__item"
+                  >
+                    {{ item.text }}
+                  </li>
+                </ul>
+                <button
+                    class="exam-card__button"
+                    @click="attemptToStartExam(level.id)"
+                >
+                  {{ t('examIndexPage.to') }} {{ level.id.toUpperCase() }}
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </Transition>
+    </div>
+  </div>
+</template>
+
 <style scoped>
-.exam {
-  padding: 1rem;
+.exam-app-theme {
+  max-height: 100dvh;
+  min-height: 100dvh;
+  color: #fff;
   background-color: var(--bg);
+}
+
+.exam {
   font-family: "Nunito", sans-serif;
-  min-height: 100vh;
-  text-align: center;
-}
-
-.button__not-allowed {
-  padding: 10px 15px;
-  margin-top: 15px;
-  border-radius: 10px;
-  width: 100%;
-  font-size: 1rem;
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  box-shadow: 3px 3px 0 black;
-}
-
-.buttons__wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.exam__not-allowed-wrapper {
-  max-width: 380px;
-  width: 100%;
-  padding: 20px;
-  position: absolute;
+  max-height: 100dvh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+
+.exam__header {
+  display: flex;
   align-items: center;
-  left: 50%;
-  top: 30%;
-  transform: translate(-50%, -50%);
-  border: 2px solid black;
+  padding: 5px 10px 15px 10px;
+}
+
+.exam__title-badge {
+  margin-left: 15px;
   border-radius: 20px;
-  box-shadow: 4px 4px 0 black;
+  color: var(--titleColor);
+  font-weight: 900;
+  font-size: 24px;
+  text-shadow: 0 1px var(--titleColor);
 }
 
-.exam__not-allowed-title {
-  text-align: center;
+.exam__scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 120px;
+  -webkit-overflow-scrolling: touch;
 }
 
-.exam__title {
-  font-size: 2.4rem;
-  margin-bottom: 0.5rem;
+.exam__scroll-area::-webkit-scrollbar {
+  display: none;
+}
+
+.exam__subtitle-wrapper {
+  padding: 0 15px;
 }
 
 .exam__subtitle {
-  margin-top: 15px;
-  font-size: 1.3rem;
-  color: var(--titleColor);
-  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1),
+  0 4px 0 rgb(0, 150, 200);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3),
+  inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+  0 6px 0 rgb(0, 160, 220);
+  background: #00c2ff;
+  border-radius: 20px;
 }
 
-.exam__highlight {
-  font-weight: bold;
-  color: #5c3a00;
-}
-
-.exam__levels {
+.exam__subtitle__left {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
+  gap: 6px;
+  text-align: left;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.exam__subtitle__right {
+  flex: 0 0 110px;
+  display: flex;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
+}
+
+.exam__subtitle-icon {
+  width: 90px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.exam__accent {
+  display: inline-block;
+  font-weight: 800;
+  background: #fff;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #1561d3;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.exam__grid {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px 15px 30px 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.exam__grid::-webkit-scrollbar {
+  display: none;
 }
 
 .exam-card {
-  background-color: #fffbe6;
-  border: 3px dashed #aaa;
-  border-radius: 15px;
-  width: 280px;
-  padding: 1.5rem;
-  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s;
+  background-color: var(--menuItemsBg);
+  border-radius: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  overflow: hidden;
+  flex: 0 0 80%;
+  max-width: 320px;
+  scroll-snap-align: center;
 }
 
-@media (min-width: 1024px) {
-  .exam-card:hover {
-    transform: scale(1.01);
-  }
+.exam-card__header {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 16px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid #000;
 }
 
 .exam-card__title {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0;
+  color: var(--titleColor);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.exam-card__body {
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
 }
 
 .exam-card__list {
-  padding-left: 1.2rem;
-  margin-bottom: 1rem;
-  flex-grow: 1;
-  text-align: left;
+  margin: 0 0 20px 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .exam-card__item {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.exam-card__footer {
-  display: flex;
-  justify-content: center;
-  margin-top: auto;
-}
-
-.back__btn {
-  color: #1f1f1f;
-  min-width: 300px;
-  background: #4ade80;
-  padding: 10px 20px;
-  font-size: 1.3rem;
-  border-radius: 15px;
-  cursor: pointer;
-  font-weight: 600;
-  box-shadow: 4px 4px 0 black;
-}
-
-@media (min-width: 1024px) {
-  .back__btn:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0px #1e1e1e;
-
-  }
+  font-size: 15px;
+  font-weight: 700;
+  color: #7c8ba0;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .exam-card__button {
-  background-color: #ffe58f;
-  border: 2px solid transparent;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.2s;
+  border: none;
+  background-color: #3b82f6;
+  box-shadow: 0 4px 0 #000;
+  border-radius: 16px;
+  padding: 14px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 900;
+  color: #fff;
   width: 100%;
-  color: #333;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.1s, box-shadow 0.1s;
+  margin-top: auto;
 }
 
-.exam-card__button:hover {
-  background-color: #fcd34d;
+.exam-card__button:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #000;
 }
 
-.exam-card--a1 {
-  border-color: #60a5fa;
+.card--a1 .exam-card__header {
+  border-bottom-color: #4ade80;
 }
 
-.exam-card--a2 {
-  border-color: #34d399;
+.card--a2 .exam-card__header {
+  border-bottom-color: #60a5fa;
 }
 
-.exam-card--b1 {
-  border-color: #f59e0b;
+.card--b1 .exam-card__header {
+  border-bottom-color: #fbbf24;
 }
 
-.exam-card--b2 {
-  border-color: #ef4444;
+.card--b2 .exam-card__header {
+  border-bottom-color: #f87171;
 }
 
-@media (max-width: 767px) {
-  .exam-card {
-    width: 90%
-  }
+.card--a1 .exam-card__button {
+  background-color: #4ade80;
+  box-shadow: 0 5px 0 #31af5f;
 }
 
-@media (max-width: 600px) {
-  .back__btn {
-    width: 100%;
-  }
+.card--a2 .exam-card__button {
+  background-color: #60a5fa;
+  box-shadow: 0 5px 0 #447ec5;
+}
+
+.card--b1 .exam-card__button {
+  background-color: #c0962a;
+  box-shadow: 0 5px 0 #a17d20;
+}
+
+.card--b2 .exam-card__button {
+  background-color: #f87171;
+  box-shadow: 0 5px 0 #c54d4d;
 }
 
 .exam-hint {
   position: fixed;
-  bottom: 20px;
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
-  background: #fffbe6;
-  color: #333;
-  border: 2px solid #fcd34d;
-  border-radius: 8px;
-  padding: 0.8rem 1.2rem;
-  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
-  font-size: 0.95rem;
-  font-weight: 600;
-  z-index: 999;
-  font-family: "Nunito", sans-serif;
+  background: #fff;
+  color: #000;
+  border: 3px solid #000;
+  border-radius: 16px;
+  padding: 12px 20px;
+  z-index: 100;
+  font-weight: 800;
+  box-shadow: 0 4px 0 #000;
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.6s;
+.menu-appear-enter-active {
+  transition: opacity 0.4s ease, transform 0.4s ease-out;
 }
 
-.fade-enter-from, .fade-leave-to {
+.menu-appear-enter-from {
   opacity: 0;
+  transform: translateY(20px);
 }
 </style>

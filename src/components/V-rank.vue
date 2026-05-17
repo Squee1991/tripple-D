@@ -1,21 +1,19 @@
 <template>
   <div class="ranks-wrapper">
     <div class="hats-info">
-      <div class="hats-left">
-        <div class="hats-badge" aria-hidden="true">
-          <img :src="currentRankIcon" :alt="currentRankTitle"/>
-        </div>
-        <div class="hats-meta">
-          <div class="hats-rank">{{ currentRankTitle }}</div>
-          <div class="hats-hatsline">
-            <img class="hat-img" :src="EducationHut" alt="EducationHut"/>
-            <span class="hat-value">{{ authStore.totalHats }}</span>
-          </div>
-        </div>
-      </div>
-      <div class="hats-right">
-        <div class="hats-text"> {{t('v-rank.desc')}} </div>
-      </div>
+      <VBanner
+          :text="t('v-rank.desc')"
+          :icon="EducationHut"
+      />
+<!--      <div class="hats-badge" aria-hidden="true">-->
+<!--        <img :src="currentRankIcon" :alt="currentRankTitle"/>-->
+<!--      </div>-->
+<!--      <div class="hats-meta">-->
+<!--        <div class="hats-rank">{{ currentRankTitle }}</div>-->
+<!--        <div class="hats-hatsline">-->
+<!--          <span class="hat-value">{{ authStore.totalHats }}</span>-->
+<!--        </div>-->
+<!--      </div>-->
     </div>
     <div v-for="rank in store.ranksData" :key="rank.title" class="rank-league">
       <div class="league-line">
@@ -60,7 +58,7 @@
                 <span>
                   <template v-if="typeof lvl.bonus === 'number'">+</template>{{ t(lvl.bonus) }}
                 </span>
-                <img v-if="typeof lvl.bonus === 'number'" class="card__articlus" src="../../assets/images/articlus.png" alt="articlus">
+                <img v-if="typeof lvl.bonus === 'number'" class="card__articlus" src="../../assets/images/article.svg" alt="articlus">
                 <div v-if="typeof lvl.bonus === 'number' && authStore.claimedBonuses?.includes(lvl.hats)" class="claimed-check-circle">✔</div>
               </div>
             </div>
@@ -77,6 +75,7 @@ import {useRankUserStore} from '~/store/rankStore.js'
 import {userAuthStore} from '~/store/authStore.js'
 import {useSeoMeta} from "#imports"
 import EducationHut from '../../assets/images/graduate-hat.svg'
+import VBanner from "~/src/components/V-banner.vue";
 
 const { t } = useI18n()
 const store = useRankUserStore()
@@ -133,17 +132,21 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 .ranks-wrapper {
   margin: 0 auto;
   overflow-y: auto;
-  max-height: calc(100vh - 250px);
+  padding-bottom: 55px;
+  position: relative;
+}
+
+.ranks-wrapper:after {
+  background: var(--overlayAfter);
 }
 
 .ranks-wrapper::-webkit-scrollbar {
-  width: 10px;
+  width: 1px;
+  background: none;
 }
 
 .ranks-wrapper::-webkit-scrollbar-thumb {
-  background: var(--titleColor);
-  border-radius: 10px;
-  border: 2px solid #fff;
+  background: none;
 }
 
 .ranks-wrapper::-webkit-scrollbar-track {
@@ -155,7 +158,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .league-line {
-  border-top: 1px solid #eee;
+  border-top: 1px solid #eeeeee80;
   margin-top: 5px;
   padding-top: 10px;
   text-align: center;
@@ -225,8 +228,8 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 
 .card-icon {
   padding-top: 10px;
-  width: 85px;
-  height: 85px;
+  width: 76px;
+  height: 76px;
 }
 
 .icon-grayscale {
@@ -312,13 +315,10 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   box-shadow: 0 2px 4px rgba(46, 204, 113, 0.3);
 }
 
-/* --- КОНЕЦ СТИЛЕЙ ДЛЯ БЕЙДЖИКОВ --- */
-
-
 .hats-info {
   display: flex;
   align-items: center;
-  padding: 0 10px;
+  padding: 15px 0 5px 0;
   margin-bottom: 15px;
 }
 
@@ -358,8 +358,8 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .hat-img {
-  width: 38px;
-  height: 38px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   display: block;
 }
@@ -449,7 +449,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   }
 
   .hats-left {
-    min-width: 200px;
+    min-width: 68px;
   }
 }
 
@@ -460,10 +460,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 @media (max-width: 700px) {
-  .hats-info {
-    flex-direction: column;
-  }
-
   .hats-text {
     font-size: 12px;
   }

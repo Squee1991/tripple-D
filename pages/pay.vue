@@ -1,105 +1,73 @@
-<template>
-  <div class="comic-wrapper">
-    <button @click="backToMain" class="back__btn">
-      <img class="btn__icon" src="../assets/images/close.svg" alt="">
-    </button>
-    <div class="comic__wrapper">
-      <div class="comic__header">
-        <h1 class="comic-description">{{ t('payPage.title') }}</h1>
-        <p class="sub__description">{{ t('payPage.description') }}</p>
-      </div>
-      <div class="subscription-box">
-        <div class="compare-header">
-          <span class="label">{{ t('payPage.compareLabelOne') }}</span>
-          <span class="label">{{ t('payPage.compareLabelTwo') }}</span>
-          <span class="label super-label">{{ t('payPage.compareLabelThree') }}</span>
-        </div>
-        <div class="compare-row" v-for="(feature, index) in features" :key="index">
-          <div class="compare__label">
-            <img class="compare__icon" :src="feature.icon" alt="">
-            <span class="compare__label-text">{{ feature.title }}</span>
-          </div>
-          <span>{{ feature.free ? '✔️' : '—' }}</span>
-          <span>{{ feature.premium ? '✔️' : '—' }}</span>
-        </div>
-        <div v-if="myAvailableCoupons.length > 0" class="discounts-container">
-          <p class="discounts-title">Твои скидочные купоны</p>
-          <div class="coupons-list">
-            <button
-                v-for="coupon in myAvailableCoupons"
-                :key="coupon.id"
-                class="coupon-selector-btn"
-                :class="{ 'is-active': selectedDiscountId === coupon.id }"
-                @click="selectDiscount(coupon.id)"
-            >
-              {{ coupon.label }}
-            </button>
-          </div>
-        </div>
-        <button
-            v-if="!authStore.isPremium"
-            class="pay-btn"
-            ref="payButton"
-            @click="pay"
-        >
-          <span class="btn-title">{{ t('payPage.getPremiumBtn') }}</span>
-          <span class="btn-price-wrapper">
-             <span v-if="selectedDiscountId" class="old-price-inline">{{ BASE_PRICE }} €</span>
-             <span class="new-price">{{ finalPrice }} € {{ t('payPage.month') }}</span>
-           </span>
-        </button>
-      </div>
-    </div>
-    <transition name="slide-up">
-      <div v-if="showStickyFooter && !authStore.isPremium" class="sticky-footer">
-        <button class="footer-btn" @click="pay">
-          <span class="btn-title">{{ t('payPage.getPremiumBtn') }}</span>
-          <span class="btn-price-wrapper">
-             <span v-if="selectedDiscountId" class="old-price-inline">{{ BASE_PRICE }} €</span>
-             <span class="new-price">{{ finalPrice }} € {{ t('payPage.month') }}</span>
-           </span>
-        </button>
-      </div>
-    </transition>
-  </div>
-</template>
-
 <script setup>
-import {ref, onMounted, onUnmounted} from 'vue'
+import {ref, onMounted, onUnmounted, computed, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {userAuthStore} from '../store/authStore'
-import {getStripe} from '@/utils/stripe'
+import { getStripe } from '@/utils/stripe'
 import Books from '../assets/images/pay-images/books.svg'
-import Save from '../assets/images/pay-images/save.svg'
 import Ach from '../assets/images/pay-images/ach.svg'
 import Translate from '../assets/images/pay-images/translate.svg'
-import Award from '../assets/images/pay-images/award.svg'
 import Quests from '../assets/images/pay-images/Quests.svg'
 import Speaker from '../assets/images/pay-images/speaker.svg'
 import Exams from '../assets/images/pay-images/test.svg'
-import Competitions from '../assets/images/pay-images/competition.svg'
-import Future from '../assets/images/pay-images/future.svg'
+import Galaxy from '../assets/images/Galaxy.svg'
+import AudioTasks from '../assets/images/headphones.svg'
+import SupportCup from '../assets/images/cupheart.svg'
+import Ads from '../assets/images/ADS.svg'
+import Future from '../assets/images/FutureFunctions.svg'
+import StatsPlus from '../assets/images/StatsPlus.svg'
+import Forever from '../assets/images/forever.svg'
+import Description from '../assets/images/photo-frame.svg'
+import PremiumIcon from '../assets/images/premium.svg'
 import {useSeoMeta} from "#imports";
+import {useBillingStore} from '../store/billingStore'
+import VBanner from "~/src/components/V-banner.vue";
+
 
 const authStore = userAuthStore()
+const billingStore = useBillingStore()
 const payButton = ref(null)
 const showStickyFooter = ref(false)
 const router = useRouter()
 const {t} = useI18n()
-const backToMain = () => {
-  router.push('/')
-}
 const BASE_PRICE = 1
 
+const step = ref(1)
+const selectedDiscountId = ref(null)
+
+
+const submitLoading = ref(false)
+
+const handleBack = () => {
+  if (step.value === 2) {
+    step.value = 1
+    history.replaceState(null, '')
+  } else {
+    router.back()
+  }
+}
+
+const handlePopState = () => {
+  if (step.value === 2) {
+    step.value = 1
+  }
+}
+
+watch(step, (newStep) => {
+  if (newStep === 2) {
+    history.pushState({step: 2}, '')
+  }
+})
+
 const finalPrice = computed(() => {
+  if (billingStore.isMobile && billingStore.offerings.length > 0) {
+    return billingStore.offerings[0].product.priceString
+  }
   if (!selectedDiscountId.value) return BASE_PRICE.toFixed(2)
   const activeCoupon = myAvailableCoupons.value.find(c => c.id === selectedDiscountId.value)
   const percent = activeCoupon ? activeCoupon.percent : 0
   const discounted = BASE_PRICE - (BASE_PRICE * (percent / 100))
   return discounted.toFixed(2)
 })
-
-const selectedDiscountId = ref(null)
 
 const myAvailableCoupons = computed(() => {
   const list = []
@@ -112,12 +80,14 @@ const myAvailableCoupons = computed(() => {
   if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_5', percent: 5, label: 'Скидка 5%'})
   if (authStore.premiumDiscount.sale_10) list.push({id: 'sale_10', percent: 10, label: 'Скидка 10%'})
   if (authStore.premiumDiscount.sale_15) list.push({id: 'sale_15', percent: 15, label: 'Скидка 15%'})
-
   return list
 })
 
-const selectDiscount = (id) => {
+const selectDiscount = async (id) => {
   selectedDiscountId.value = (selectedDiscountId.value === id) ? null : id
+  if (billingStore.isMobile) {
+    await billingStore.loadOfferings(selectedDiscountId.value)
+  }
 }
 
 useSeoMeta({
@@ -125,19 +95,20 @@ useSeoMeta({
 })
 
 let observer
+
 const features = [
-  {title: t('payPage.featureOne'), free: true, premium: true, icon: Books},
-  {title: t('payPage.featureTwo'), free: true, premium: true, icon: Save},
-  {title: t('payPage.featureThree'), free: true, premium: true, icon: Ach},
-  {title: t('payPage.featureFour'), free: true, premium: true, icon: Quests},
-  {title: t('payPage.featureFive'), free: false, premium: true, icon: Translate},
-  {title: t('payPage.featureSix'), free: false, premium: true, icon: Award},
-  {title: t('payPage.featureSeven'), free: false, premium: true, icon: Exams},
-  {title: t('payPage.featureEight'), free: false, premium: true, icon: Speaker},
-  {title: t('payPage.featureNine'), free: false, premium: true, icon: Competitions},
-  {title: t('payPage.featureTen'), free: false, premium: true, icon: Future},
+  {title: t('Обучение без границ'), icon: Forever},
+  {title: t('Расширенная статистика'), icon: StatsPlus},
+  {title: t('Будущие функции'), icon: Future},
+  {title: t('Поддержка разработчиков'), icon: SupportCup},
+  {title: t('Отсутствие рекламы'), icon: Ads},
 ]
-onMounted(() => {
+
+onMounted(async () => {
+  window.addEventListener('popstate', handlePopState)
+  if (billingStore.isMobile) {
+    await billingStore.initialize()
+  }
   observer = new IntersectionObserver(
       ([entry]) => {
         showStickyFooter.value = !entry.isIntersecting
@@ -150,6 +121,7 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
+  window.removeEventListener('popstate', handlePopState)
   if (observer && payButton.value) {
     observer.unobserve(payButton.value)
   }
@@ -158,6 +130,15 @@ onUnmounted(() => {
 async function pay() {
   if (!authStore.uid || !authStore.email) {
     alert('Пожалуйста, войдите в аккаунт')
+    return
+  }
+  if (billingStore.isMobile) {
+    if (billingStore.offerings.length > 0) {
+      const pkg = billingStore.offerings[0]
+      await billingStore.buy(pkg)
+    } else {
+      alert('Ошибка: Товары для приложения не загружены')
+    }
     return
   }
   const priceId = 'price_1SvdnE24sKuPwF6cZoD2ZJn3'
@@ -174,245 +155,431 @@ async function pay() {
     if (response.url) {
       window.location.href = response.url
     } else if (response.error) {
-      console.error('Ошибка сервера:', response.error)
       alert('Ошибка: ' + response.error)
     }
   } catch (err) {
-    console.error('Ошибка сети:', err)
-    alert('Произошла ошибка соединения. Проверьте логи сервера.')
+    alert('Произошла ошибка соединения.')
   }
 }
 </script>
 
+<template>
+  <div class="pro-vault">
+    <div class="vault-nav">
+      <button @click="handleBack" class="btn-icon-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <div class="step-dots">
+        <div class="dot" :class="{ active: step === 1 }"></div>
+        <div class="dot" :class="{ active: step === 2 }"></div>
+      </div>
+    </div>
+    <div class="main-flow">
+      <transition name="view-slide" mode="out-in">
+        <div v-if="step === 1" key="promo" class="flow-step">
+          <VBanner
+              text="Полный доступ ко всем функциям приложения"
+              :icon="PremiumIcon"
+          />
+          <div class="hero-zone">
+            <h1 class="hero-title">SKILLUP <span class="neon-text">PLUS</span></h1>
+         </div>
+          <div class="perks-grid">
+            <div v-for="(feat, i) in features" :key="i" class="perk-card">
+              <div class="perk-icon">
+                <img :src="feat.icon" alt="" class="icon-svg">
+              </div>
+              <div class="perk-meta">
+                <span class="perk-name">{{ feat.title }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer-action">
+            <button @click="step = 2" class="btn-main-action">ПЕРЕЙТИ К ОПЛАТЕ</button>
+          </div>
+        </div>
+        <div v-else key="checkout" class="flow-step">
+          <div class="hero-zone">
+            <h1 class="hero-title">ТВОИ <span class="neon-text">БОНУСЫ</span></h1>
+            <p class="hero-desc">Примени заработанные за активность скидки</p>
+          </div>
+          <div class="inventory-section">
+            <div class="inventory-list">
+              <div
+                  v-for="coupon in myAvailableCoupons"
+                  :key="coupon.id"
+                  class="loot-card"
+                  :class="{ 'loot-card--active': selectedDiscountId === coupon.id }"
+                  @click="selectDiscount(coupon.id)"
+              >
+                <div class="loot-glow"></div>
+                <div class="loot-content">
+                  <div class="loot-info">
+                    <span class="loot-title">{{ coupon.label }}</span>
+                    <span class="loot-sub">За твою активность</span>
+                  </div>
+                  <div class="loot-val" v-if="coupon.percent > 0">
+                    {{ coupon.percent }}%
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="marketing-pitch">
+            <div class="pitch-text">
+              Целый месяц безлимитного немецкого. Это в разы дешевле одного часа с репетитором, но доступно тебе 24/7.
+            </div>
+          </div>
+          <div class="billing-summary">
+            <div class="bill-line">
+              <span class="bill-text">Месяц обучения</span>
+              <span class="bill-price">{{ BASE_PRICE }}€</span>
+            </div>
+            <div class="bill-line discount" v-if="selectedDiscountId">
+              <span class="bill-text">Твоя скидка</span>
+              <span class="bill-price-neg">-{{
+                  myAvailableCoupons.find(c => c.id === selectedDiscountId).percent
+                }}%</span>
+            </div>
+            <div class="bill-total">
+              <span class="total-text">ИТОГО:</span>
+              <span class="total-price">{{ finalPrice }}€</span>
+            </div>
+          </div>
+          <div class="footer-action">
+            <button @click="pay" class="btn-buy-neon" :disabled="submitLoading">
+              {{ submitLoading ? 'СИНХРОНИЗАЦИЯ...' : 'Приобрести PLUS' }}
+            </button>
+          </div>
+        </div>
+      </transition>
+    </div>
+  </div>
+</template>
+
 <style scoped>
-.comic-wrapper {
-  background: linear-gradient(to bottom, #261d12, #22193f);
-}
 
-.comic__wrapper {
-  padding: 14px;
+.pro-vault {
+  height: 100%;
+  background: var(--bg);
+  color: var(--title);
   font-family: 'Nunito', sans-serif;
+  display: flex;
+  overflow: hidden;
+  padding: 0 10px;
+  flex-direction: column;
+}
+
+.vault-nav {
+  padding: 5px 0 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.step-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.main-flow {
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #ccceee;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: #6366f1;
+  width: 24px;
+  border-radius: 10px;
+}
+
+.hero-zone {
+  margin-bottom: 15px;
   text-align: center;
-  color: #fff;
-  min-height: 100vh;
 }
 
-.old-price-inline {
-  position: relative;
-  display: inline-block;
-  opacity: 0.7;
-  margin-right: 5px;
-  font-size: 1.1rem;
-  font-weight: bold;
+.hero-title {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: var(--title);
+  text-shadow: 2px 2px var(--title);
 }
 
-.old-price-inline::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -5%;
-  width: 110%;
-  height: 3px;
-  background-color: #ff3333;
-  transform: translateY(-50%) rotate(-15deg);
-  border-radius: 2px;
-  box-shadow: 0 0 5px rgba(255, 51, 51, 0.5);
-  pointer-events: none;
+.neon-text {
+  font-size: 34px;
+  color: #6366f1;
+  text-shadow: 2px 2px #6366f1;
 }
 
-.back__btn {
-  border: none;
-  background: none;
-  padding: 20px;
-  cursor: pointer;
-}
-
-.btn__icon {
-  width: 40px;
-}
-
-.discounts-container {
-  margin: 20px 0;
+.hero-desc {
+  color: var(--title);
+  font-size: 15px;
+  margin-top: 6px;
+  font-weight: 600;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
 }
 
-.coupon-selector-btn {
-  background: #333;
-  color: #fff;
-  border: 2px solid transparent;
-  padding: 8px 15px;
-  margin: 5px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.coupon-selector-btn.is-active {
-  border-color: #00e676;
-  background: rgba(0, 230, 118, 0.2);
-}
-
-.compare__label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 20px;
-  gap: 20px;
-}
-
-.compare__label-text {
-  width: 200px;
-  display: flex;
-  justify-content: start;
-}
-
-.comic-description {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.compare__icon {
-  width: 40px;
-}
-
-.comic__header {
-  margin-bottom: 10px;
-}
-
-.subscription-box {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid #fff;
-  border-radius: 20px;
-  padding: 30px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  backdrop-filter: blur(10px);
-}
-
-.compare-header, .compare-row {
+.perks-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 1.1rem;
+  gap: 12px;
 }
 
-.compare-header {
-  font-weight: bold;
-  border-bottom: 2px solid #fff;
+.perk-card {
+  border-bottom: 1px solid rgba(103, 101, 101, 0.24);
+  border-radius: 5px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
-.sub__description {
-  font-size: 0.8rem;
+.perk-icon {
+  width: 46px;
+  height: 46px;
 }
 
-.super-label {
-  color: #fff;
-  background: linear-gradient(to right, #b04727, #ff9900);
-  border-radius: 25px;
-  font-weight: bold;
+.perk-meta {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
-.label {
-  padding: 10px;
+.perk-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--title);
 }
 
-.pay-btn {
-  margin-top: 30px;
-  background: #3889a6;
-  color: white;
+.inventory-header {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 800;
+  color: #6366f1;
+  margin: 10px 0 15px 4px;
+  text-transform: uppercase;
+}
+
+.inventory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loot-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.loot-card--active {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.loot-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.loot-info {
+  text-align: left;
+}
+
+.loot-title {
   font-size: 17px;
-  font-weight: bold;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  box-shadow: 4px 4px 0 #000;
-  transition: background 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  gap: 5px;
+  font-weight: 900;
+  display: block;
 }
 
-.btn-price-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.pay-btn:hover {
-  background: #00c853;
-}
-
-.sticky-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  background: linear-gradient(90deg, #222 0%, #3b2f63 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-  border-top: 2px solid #fff2;
-}
-
-.footer-btn {
-  background: #ffffff;
-  color: #111;
-  font-size: 17px;
+.loot-sub {
+  font-size: 12px;
+  color: #8e8e93;
   font-weight: 700;
-  padding: 18px 36px;
-  border-radius: 14px;
-  box-shadow: 0 4px #000;
+}
+
+.loot-val {
+  font-size: 22px;
+  font-weight: 900;
+  color: #10b981;
+}
+
+.flow-step{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+}
+
+.loot-glow {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #6366f1;
+  filter: blur(50px);
+  top: -50px;
+  right: -50px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.loot-card--active .loot-glow {
+  opacity: 0.2;
+}
+
+.marketing-pitch {
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 18px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.pitch-icon {
+  font-size: 24px;
+}
+
+.pitch-text {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #d1d1d6;
+  text-align: left;
+  font-weight: 600;
+}
+
+.billing-summary {
+  margin-top: 15px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 24px;
+}
+
+.bill-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #8e8e93;
+}
+
+.bill-price-neg {
+  color: #facc15;
+}
+
+.bill-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.total-text {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.total-price {
+  font-weight: 900;
+  font-size: 24px;
+  color: #10b981;
+}
+
+.footer-action {
+  margin-top: auto;
+  padding: 20px 0;
+}
+
+.btn-main-action {
+  width: 100%;
+  padding: 20px;
+  border-radius: 22px;
   border: none;
-  transition: all 0.2s ease;
+  background: #6366f1;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  box-shadow: 0 8px 0 #494cdf;
+}
+
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
 }
 
-.footer-btn:hover {
-  background: linear-gradient(to right, #b04727, #ff9900);
-  transform: translateY(-2px);
-  color: white;
+.btn-icon-back:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
 }
 
-.slide-up-enter-active,
-.slide-up-leave-active {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.btn-buy-neon {
+  width: 100%;
+  padding: 20px;
+  border-radius: 22px;
+  border: none;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
 }
 
-.slide-up-enter-from,
-.slide-up-leave-to {
-  transform: translateY(100%);
+.btn-buy-neon:active {
+  transform: scale(0.98);
+}
+
+.secure-tag {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #444;
+  font-weight: 800;
+  text-align: center;
+}
+
+.view-slide-enter-active, .view-slide-leave-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.view-slide-enter-from {
   opacity: 0;
+  transform: translateX(20px);
 }
 
-@media (max-width: 539px) {
-  .compare__label-text {
-    width: 130px;
-    text-align: start;
-    font-size: 0.9rem;
-  }
-
-  .compare__label {
-    margin-left: 1px;
-  }
-
-  .subscription-box {
-    padding: 15px;
-  }
-
-  .compare-header {
-    font-size: 0.9rem;
-  }
+.view-slide-leave-to {
+  opacity: 0;
+  transform: translateX(-20px);
 }
 </style>

@@ -1,23 +1,43 @@
 import {defineStore} from "pinia";
 import {ref, computed} from 'vue'
+import { Capacitor } from '@capacitor/core';
+import { Purchases } from '@revenuecat/purchases-capacitor'
+import { useBillingStore } from '../store/billingStore.js'
 import {
     getAuth,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
-    EmailAuthProvider, reauthenticateWithCredential,
+    EmailAuthProvider, reauthenticateWithCredential, OAuthProvider,
     updateProfile,
     signOut,
     deleteUser,
     onAuthStateChanged,
     sendPasswordResetEmail,
+    signInWithCredential,
     sendEmailVerification,
     signInWithPopup,
     reauthenticateWithPopup, GoogleAuthProvider, fetchSignInMethodsForEmail
 } from 'firebase/auth';
+import { GoogleSignIn } from '@capawesome/capacitor-google-sign-in';
 import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp, writeBatch} from 'firebase/firestore';
 import {userlangStore} from "./learningStore.js";
 
 let authStateUnsubscribe = null;
+
+const isUserCancelledAuth = (error) => {
+    if (!error) return false
+    const code = String(error.code || '').toLowerCase()
+    const msg = String(error.message || error.errorMessage || '').toLowerCase()
+    if (
+        code === 'sign_in_canceled' ||
+        code === 'sign_in_cancelled' ||
+        code === 'auth/popup-closed-by-user' ||
+        code === 'auth/cancelled-popup-request' ||
+        code === 'auth/user-cancelled' ||
+        code === '12501'
+    ) return true
+    return msg.includes('cancel')
+}
 
 export const userAuthStore = defineStore('auth', () => {
     const auth = getAuth()
@@ -50,7 +70,7 @@ export const userAuthStore = defineStore('auth', () => {
     const claimedBonuses = ref([])
     const freezeEndsAt = ref(null)
     const IMMUNITY_RANK_HATS = 500
-
+    const paymentSource = ref(null)
     const premiumDiscount = ref({
         sale_5: false,
         sale_10: false,
@@ -228,6 +248,7 @@ export const userAuthStore = defineStore('auth', () => {
         registeredAt.value = normalizeDate(data.registeredAt)
         uid.value = data.uid || null
         avatar.value = data.avatar || null
+        paymentSource.value = data.paymentSource || null
         isPremium.value = data.isPremium === true
         subscriptionEndsAt.value = data.subscriptionEndsAt || null
         subscriptionCancelled.value = isPremium.value && data.subscriptionCancelled === true
@@ -309,47 +330,214 @@ export const userAuthStore = defineStore('auth', () => {
         })
     }
 
+    const loginWithApple = async () => {
+        try {
+            const isNative = Capacitor.isNativePlatform();
+            let user;
+            if (isNative) {
+                const result = await SignInWithApple.authorize({
+                    clientId: 'com.skillupgerman',
+                    scopes: 'email name',
+                });
+
+                if (!result || !result.response || !result.response.identityToken) return;
+                const provider = new OAuthProvider('apple.com');
+                const credential = provider.credential({
+                    idToken: result.response.identityToken,
+                });
+
+                const authResult = await signInWithCredential(auth, credential);
+                user = authResult.user;
+            } else {
+
+                const provider = new OAuthProvider('apple.com');
+                provider.addScope('email');
+                provider.addScope('name');
+
+                const authResult = await signInWithPopup(auth, provider);
+                user = authResult.user;
+            }
+            const userDocRef = doc(db, 'users', user.uid);
+            const userDoc = await getDoc(userDocRef);
+
+            const defaultName = user.displayName || '';
+            const defaultEmail = user.email || '';
+            if (!userDoc.exists()) {
+                await setDoc(userDocRef, {
+                    ownedAvatars: ['1.png', '2.png'],
+                    name: defaultName,
+                    email: defaultEmail,
+                    registeredAt: serverTimestamp(),
+                    feedbackSurveyShownAt: null,
+                    avatar: '1.png',
+                    subscriptionEndsAt: null,
+                    subscriptionCancelled: false,
+                    gotPremiumBonus: false,
+                    voiceConsentGiven: false,
+                    hasSeenOnboarding: false,
+                    isPremium: false,
+                    totalHats: 0,
+                    points: 0,
+                    claimedBonuses: [],
+                    sale_5: false,
+                    sale_10: false,
+                    sale_15: false,
+                    ...createInitialAchievementsObject()
+                });
+            }
+            const finalDoc = await getDoc(userDocRef);
+            const userDataFromDb = finalDoc.data() || {};
+            setUserData({
+                name: defaultName,
+                email: defaultEmail,
+                registeredAt: user.metadata.creationTime,
+                uid: user.uid,
+                providerId: user.providerData[0]?.providerId || '',
+                ...userDataFromDb
+            });
+            await checkFeedbackSurveyEligibility();
+        } catch (error) {
+            if (isUserCancelledAuth(error)) return;
+            const errorDetail = JSON.stringify(error, Object.getOwnPropertyNames(error), 2);
+            alert(`❌ ОШИБКА ВХОДА APPLE:\n\n${errorDetail}`);
+        }
+    }
+
+    // const loginWithFacebook = async () => {
+    //     try {
+    //         const isNative = Capacitor.isNativePlatform();
+    //         let user;
+    //         if (isNative) {
+    //             const FACEBOOK_PERMISSIONS = ['email', 'public_profile'];
+    //             const result = await FacebookLogin.login({ permissions: FACEBOOK_PERMISSIONS });
+    //             if (!result.accessToken) {
+    //                 console.error('не вернул токен');
+    //                 return;
+    //             }
+    //             const credential = FacebookAuthProvider.credential(result.accessToken.token);
+    //             const authResult = await signInWithCredential(auth, credential);
+    //             user = authResult.user;
+    //         } else {
+    //             const provider = new FacebookAuthProvider();
+    //             const authResult = await signInWithPopup(auth, provider);
+    //             user = authResult.user;
+    //         }
+    //
+    //         const userDocRef = doc(db, 'users', user.uid);
+    //         const userDoc = await getDoc(userDocRef);
+    //
+    //         if (!userDoc.exists()) {
+    //             await setDoc(userDocRef, {
+    //                 ownedAvatars: ['1.png', '2.png'],
+    //                 name: user.displayName || 'User Facebook',
+    //                 email: user.email,
+    //                 registeredAt: serverTimestamp(),
+    //                 feedbackSurveyShownAt: null,
+    //                 avatar: '1.png',
+    //                 subscriptionEndsAt: null,
+    //                 subscriptionCancelled: false,
+    //                 gotPremiumBonus: false,
+    //                 voiceConsentGiven: false,
+    //                 hasSeenOnboarding: false,
+    //                 isPremium: false,
+    //                 totalHats: 0,
+    //                 points: 0,
+    //                 claimedBonuses: [],
+    //                 sale_5: false,
+    //                 sale_10: false,
+    //                 sale_15: false,
+    //                 ...createInitialAchievementsObject()
+    //             });
+    //         }
+    //
+    //         const finalDoc = await getDoc(userDocRef);
+    //         const userDataFromDb = finalDoc.data() || {};
+    //
+    //         setUserData({
+    //             name: user.displayName,
+    //             email: user.email,
+    //             registeredAt: user.metadata.creationTime,
+    //             uid: user.uid,
+    //             providerId: user.providerData[0]?.providerId || 'facebook.com',
+    //             ...userDataFromDb
+    //         });
+    //
+    //         await checkFeedbackSurveyEligibility();
+    //
+    //     } catch (error) {
+    //         if (isUserCancelledAuth(error)) return;
+    //         console.error('Ошибка входа через Facebook:', error);
+    //         alert(`Ошибка Facebook: ${error.message}`);
+    //     }
+    // }
+
     const loginWithGoogle = async () => {
-        const provider = new GoogleAuthProvider()
-        const result = await signInWithPopup(auth, provider)
-        const user = result.user
-        const userDocRef = doc(db, 'users', user.uid)
-        const userDoc = await getDoc(userDocRef)
-        if (!userDoc.exists()) {
-            await setDoc(userDocRef, {
-                ownedAvatars: ['1.png', '2.png'],
+        try {
+            const isNative = Capacitor.isNativePlatform();
+            let idToken = null;
+            if (isNative) {
+                await GoogleSignIn.initialize({
+                    clientId: '516504654997-15ujeh34o8jc7hkbempel0t60qp0e43g.apps.googleusercontent.com',
+                });
+                const result = await GoogleSignIn.signIn({
+                    clientId: '516504654997-15ujeh34o8jc7hkbempel0t60qp0e43g.apps.googleusercontent.com',
+                });
+                idToken = result.idToken;
+            } else {
+                const provider = new GoogleAuthProvider();
+                const result = await signInWithPopup(auth, provider);
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                idToken = credential.idToken;
+            }
+            if (!idToken) {
+                console.error('Артикль не вернул токен');
+                return;
+            }
+            const credential = GoogleAuthProvider.credential(idToken);
+            const authResult = await signInWithCredential(auth, credential);
+            const user = authResult.user;
+            const userDocRef = doc(db, 'users', user.uid);
+            const userDoc = await getDoc(userDocRef);
+            if (!userDoc.exists()) {
+                await setDoc(userDocRef, {
+                    ownedAvatars: ['1.png', '2.png'],
+                    name: user.displayName,
+                    email: user.email,
+                    registeredAt: serverTimestamp(),
+                    feedbackSurveyShownAt: null,
+                    avatar: '1.png',
+                    subscriptionEndsAt: null,
+                    subscriptionCancelled: false,
+                    gotPremiumBonus: false,
+                    voiceConsentGiven: false,
+                    hasSeenOnboarding: false,
+                    isPremium: false,
+                    totalHats: 0,
+                    points: 0,
+                    claimedBonuses: [],
+                    sale_5: false,
+                    sale_10: false,
+                    sale_15: false,
+                    ...createInitialAchievementsObject()
+                });
+            }
+            const finalDoc = await getDoc(userDocRef);
+            const userDataFromDb = finalDoc.data() || {};
+            setUserData({
                 name: user.displayName,
                 email: user.email,
-                registeredAt: serverTimestamp(),
-                feedbackSurveyShownAt: null,
-                avatar: '1.png',
-                subscriptionEndsAt: null,
-                subscriptionCancelled: false,
-                gotPremiumBonus: false,
-                voiceConsentGiven: false,
-                hasSeenOnboarding: false,
-                isPremium: false,
-                totalHats: 0,
-                points: 0,
-                claimedBonuses: [],
-                sale_5: false,
-                sale_10: false,
-                sale_15: false,
-                ...createInitialAchievementsObject()
-            })
+                registeredAt: user.metadata.creationTime,
+                uid: user.uid,
+                providerId: user.providerData[0]?.providerId || '',
+                ...userDataFromDb
+            });
+
+            await checkFeedbackSurveyEligibility();
+        } catch (error) {
+            if (isUserCancelledAuth(error)) return;
+            const errorDetail = JSON.stringify(error, Object.getOwnPropertyNames(error), 2);
+            alert(`❌ ОШИБКА ВХОДА:\n\n${errorDetail}`);
         }
-        const finalDoc = await getDoc(userDocRef)
-        const userDataFromDb = finalDoc.data() || {}
-        setUserData({
-            name: user.displayName,
-            email: user.email,
-            registeredAt: user.metadata.creationTime,
-            uid: user.uid,
-            providerId: user.providerData[0]?.providerId || '',
-            ...userDataFromDb
-        })
-        await checkFeedbackSurveyEligibility()
-        console.log('✅ Logged into Firebase project:', auth.app.options.projectId)
     }
 
     const registerUser = async (userData) => {
@@ -544,6 +732,9 @@ export const userAuthStore = defineStore('auth', () => {
                 await checkFeedbackSurveyEligibility()
             } else {
                 setUserData({});
+                if (Capacitor.isNativePlatform()) {
+                    await Purchases.logOut()
+                }
             }
             initialized.value = true
         })
@@ -668,6 +859,7 @@ export const userAuthStore = defineStore('auth', () => {
         isFreezeActive,
         activateFreeze,
         cancelFreeze,
+        loginWithApple,
         claimedBonuses,
         addClaimedBonus
     }

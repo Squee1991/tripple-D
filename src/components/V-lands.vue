@@ -1,85 +1,103 @@
 <template>
-  <div class="map__wrapper" :dir="locale === 'ar' ? 'rtl' : 'ltr'">
-    <div id="regions" class="map__title-wrapper">
-      <h1 class="map__title">{{ t('locationsMenu.title') }}</h1>
-    </div>
-    <div class="map-layout">
-      <div
-          class="map-left"
-          :class="[ { 'is-open': isPanelOpen || windowWidth > 1024 },  'theme--' + themeOf(active), { rtl: locale === 'ar' } ]"
-          v-if="active"
-      >
-        <button
-            v-if="windowWidth <= 1024"
-            class="map-left__close"
-            @click="isPanelOpen = false"
-        >×
-        </button>
-        <div class="map-left__art">
-          <img :src="active?.icon" alt="Choose avatar location">
-        </div>
-        <h2 class="map-left__title">{{ t(active.name) }}</h2>
-        <p class="map-left__desc">{{ t(active.desc) }}</p>
-        <p class="map-left__level" :class="isUnlocked ? 'ok' : 'locked'">
-          <span v-if="isUnlocked">{{ t('locationsMenu.access') }}</span>
-          <span v-else>{{ t('locationsMenu.accessWithLevel') }} {{ active.level }}</span>
-        </p>
-        <button class="map-btn" :disabled="!isUnlocked" @click="go(active)">
-          {{ t('locationsMenu.choose') }}
-        </button>
+  <Transition name="menu-appear" appear>
+    <div class="map__wrapper" :dir="locale === 'ar' ? 'rtl' : 'ltr'">
+      <div id="regions" class="map__title-wrapper">
+        <h1 class="map__title">{{ t('locationsMenu.title') }}</h1>
       </div>
-      <div class="map-right-container">
-        <div class="map-pagination-arrows">
-          <button
-              class="arrow-btn"
-              :disabled="isFirstCategory"
-              @click="prevCategory"
-          >‹</button>
-          <div class="current-category-name">
-            {{ t(`categories.${activeCategory}`) }}
+      <div class="map-layout">
+        <transition name="slide">
+          <div
+              class="map-left"
+              v-show="isPanelOpen || windowWidth > 1024"
+              :class="[ 'theme--' + themeOf(active), { rtl: locale === 'ar' } ]"
+              v-if="active"
+          >
+            <div class="mal__left-content">
+              <div>
+                <div class="mal__left-content-wrapper">
+                  <button v-if="windowWidth <= 1024" @click="closePanel" class="btn-icon-back">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                         stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="19" y1="12" x2="5" y2="12"></line>
+                      <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                  </button>
+                  <h2 class="map-left__title">{{ t(active.name) }}</h2>
+                </div>
+                <div class="map__left-content-bottom">
+                  <div class="map-left__art">
+                    <img :src="active?.icon" alt="Choose avatar location" decoding="async">
+                  </div>
+                  <p class="map-left__desc">{{ t(active.desc) }}</p>
+                  <p class="map-left__level" :class="isUnlocked ? 'ok' : 'locked'">
+                    <span v-if="isUnlocked">{{ t('locationsMenu.access') }}</span>
+                    <span v-else>{{ t('locationsMenu.accessWithLevel') }} {{ active.level }}</span>
+                  </p>
+                </div>
+              </div>
+              <button class="map-btn" :disabled="!isUnlocked" @click="go(active)">
+                {{ t('locationsMenu.choose') }}
+              </button>
+            </div>
           </div>
-          <button
-              class="arrow-btn"
-              :disabled="isLastCategory"
-              @click="nextCategory"
-          >›</button>
-        </div>
-        <div class="map-right">
-          <template v-if="filteredRegions.length > 0">
-            <div
-                v-for="region in filteredRegions"
-                :key="region.id"
-                class="region-card"
-                :class="[
+        </transition>
+        <div class="map-right-container">
+          <div class="map-pagination-arrows">
+            <button
+                class="arrow-btn"
+                :disabled="isFirstCategory"
+                @click="prevCategory"
+            >
+              <img class="arrow__btn-icon arrow-back" src="../../assets/images/next.svg" alt="">
+            </button>
+            <div class="current-category-name">
+              {{ t(`categories.${activeCategory}`) }}
+            </div>
+            <button
+                class="arrow-btn"
+                :disabled="isLastCategory"
+                @click="nextCategory"
+            >
+              <img class="arrow__btn-icon" src="../../assets/images/next.svg" alt="">
+            </button>
+          </div>
+          <transition name="fade" mode="out-in">
+            <div class="map-right" v-if="filteredRegions.length > 0" :key="activeCategory">
+              <div
+                  v-for="region in filteredRegions"
+                  :key="region.id"
+                  class="region-card"
+                  :class="[
                   'theme--' + themeOf(region),
                   { active: active?.id === region.id }
                 ]"
-                @click="select(region)"
-            >
-              <div class="region-card__art">
-                <img :src="region.icon" :alt="region.id">
-              </div>
-              <div class="region-card__footer">
-                <span class="region-card__title">{{ t(region.name) }}</span>
-                <div class="region-card-badge-wrapper">
+                  @click="select(region)"
+              >
+                <div class="region-card__art">
+                  <img :src="region.icon" :alt="region.id" decoding="async">
+                </div>
+                <div class="region-card__footer">
+                  <span class="region-card__title">{{ t(region.name) }}</span>
+                  <div class="region-card-badge-wrapper">
                   <span v-if="clampedLevel < region.level" class="region-card__badge">
                     {{ region.level }}
                   </span>
+                  </div>
                 </div>
               </div>
             </div>
-          </template>
-          <div v-else class="map-empty-placeholder">
-            <div class="empty-content">
-              <div class="empty-icon">✨</div>
-              <h3 class="empty-title">{{ t('regionsModal.title')}}</h3>
-              <p class="empty-text">{{ t('regionsModal.text')}}</p>
+            <div v-else class="map-empty-placeholder" key="empty">
+              <div class="empty-content">
+                <div class="empty-icon">✨</div>
+                <h3 class="empty-title">{{ t('regionsModal.title') }}</h3>
+                <p class="empty-text">{{ t('regionsModal.text') }}</p>
+              </div>
             </div>
-          </div>
+          </transition>
         </div>
       </div>
     </div>
-  </div>
+  </Transition>
 </template>
 
 <script setup>
@@ -87,6 +105,7 @@ import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {regions} from '@/utils/regions.js'
 import {userlangStore} from '../../store/learningStore.js'
+
 const {t, locale} = useI18n()
 const langStore = userlangStore()
 const router = useRouter()
@@ -136,7 +155,20 @@ function themeOf(obj) {
 function select(region) {
   active.value = region
   if (windowWidth.value <= 1024) {
+    window.history.pushState({isMapPanelOpen: true}, '')
     isPanelOpen.value = true
+  }
+}
+
+function closePanel() {
+  if (isPanelOpen.value) {
+    window.history.back()
+  }
+}
+
+const handlePopState = () => {
+  if (isPanelOpen.value) {
+    isPanelOpen.value = false
   }
 }
 
@@ -159,12 +191,14 @@ onMounted(() => {
   handleResize()
   if (typeof window !== 'undefined') {
     window.addEventListener('resize', handleResize)
+    window.addEventListener('popstate', handlePopState)
   }
 })
 
 onBeforeUnmount(() => {
   if (typeof window !== 'undefined') {
     window.removeEventListener('resize', handleResize)
+    window.removeEventListener('popstate', handlePopState)
   }
   if (typeof document !== 'undefined') {
     document.body.style.overflow = ''
@@ -173,25 +207,8 @@ onBeforeUnmount(() => {
 </script>
 
 <style>
-
 * {
   font-family: "Nunito", sans-serif;
-}
-
-.back__to-main {
-  border: none;
-  background: none;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 20px;
-  cursor: pointer;
-}
-
-.back__icon {
-  width: 100%;
 }
 
 .map__wrapper {
@@ -204,26 +221,34 @@ onBeforeUnmount(() => {
 }
 
 .map__title-wrapper {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  border: 2px solid var(--border);
-  box-shadow: 2px 2px 0 var(--border);
-  border-radius: 15px;
+  border-radius: 25px;
   padding: 10px 10px;
-  background: var(--labelBg);
+  background: var(--bgTitle);
+  box-shadow: 0 2px 0 var(--boxShadowBottom);
   position: relative;
   overflow: hidden;
 }
 
+.arrow__btn-icon {
+  width: 20px;
+}
+
+.arrow__btn-icon.arrow-back {
+  transform: rotate(-180deg);
+}
+
 .map__title {
-  font-size: 2.3rem;
+  font-size: 20px;
   color: var(--regionBtnColor);
   font-weight: 600;
   letter-spacing: .2px;
   font-family: "Nunito", sans-serif;
+  text-shadow: 1px 1px var(--regionBtnColor);
 }
 
 .map-layout {
@@ -240,7 +265,9 @@ onBeforeUnmount(() => {
   flex: 1;
   border: 3px solid var(--border);
   border-radius: 15px;
-  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: #222;
   overflow-y: auto;
   box-shadow: var(--border);
@@ -250,11 +277,18 @@ onBeforeUnmount(() => {
 .map-left__art {
   width: 100%;
   height: 190px;
-  border: 3px solid var(--border);
+  border: 4px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border-radius: 10px;
   margin-bottom: 14px;
   overflow: hidden;
   background: var(--bg);
+}
+
+.mal__left-content-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 5px 0 15px 0;
 }
 
 .map-left__art img {
@@ -265,17 +299,19 @@ onBeforeUnmount(() => {
 }
 
 .map-left__title {
-  font-size: 1.6rem;
-  margin: 0 0 8px;
+  font-size: 23px;
   font-weight: 900;
-  color: var(--titleColor);
+  color: var(--title);
+  margin-left: 15px;
+  text-shadow: 0px 1px var(--title);
 }
 
 .map-left__desc {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 12px;
   color: var(--titleColor);
+  padding: 4px;
 }
 
 .map-left__level {
@@ -299,7 +335,32 @@ onBeforeUnmount(() => {
   color: #b21f24;
 }
 
+.mal__left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 0 10px 0;
+}
+
 .map-btn {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  background: #3b82f6;
+  border: 2px solid #2563eb;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 24px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  border-bottom: 6px solid #1d4ed8;
+  transition: transform 0.1s;
+}
+
+.map-b {
   padding: 12px 18px;
   background: var(--regionBtnBg);
   color: var(--regionBtnColor);
@@ -335,14 +396,11 @@ onBeforeUnmount(() => {
 
 .region-card {
   position: relative;
-  height: auto;
-  border: 3px solid var(--border);
-  border-radius: 15px;
-  box-shadow: 0 0 0 var(--border);
+  border: 3px solid var(--tabsSlideBorderColor);
+  border-radius: 20px;
   cursor: pointer;
   overflow: hidden;
-  min-height: 160px;
-  max-height: 175px;
+  height: 140px;
   transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
   background: var(--bg);
 }
@@ -354,17 +412,6 @@ onBeforeUnmount(() => {
   height: 100%;
 }
 
-.region-card.active {
-  outline: 3px solid #fff;
-}
-
-@media (min-width: 1024px) {
-  .region-card:hover {
-    transform: translate(1px, 1px);
-    box-shadow: 0px 0px 0 var(--border);
-  }
-}
-
 .region-card__art {
   position: relative;
   width: 100%;
@@ -373,25 +420,37 @@ onBeforeUnmount(() => {
 
 .region-card__footer {
   position: absolute;
-  left: 8px;
-  right: 8px;
-  bottom: 8px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
-  padding: 6px 10px;
-  border: 2px solid var(--border);
-  border-radius: 10px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, .75), rgba(255, 255, 255, .55));
+  gap: 5px;
+  padding: 8px 10px;
+  background: linear-gradient(180deg, rgb(41 38 38 / 75%), rgb(31 29 29 / 60%));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.1);;
   backdrop-filter: blur(2px);
-  box-shadow: 2px 2px 0 var(--border);
+}
+
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
 }
 
 .region-card__title {
   font-size: 1.05rem;
   font-weight: 900;
-  color: #1d1d1d;
+  color: white;
 }
 
 .region-card__badge {
@@ -458,14 +517,12 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 1159px) {
-  grid-template-columns: repeat(1, 1fr);
+  .map-right {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media (max-width: 1090px) {
-  .region-card {
-    height: 175px;
-  }
-
   .map-right {
     grid-template-columns: repeat(1, 2fr);
   }
@@ -494,50 +551,23 @@ onBeforeUnmount(() => {
   .map-left {
     position: fixed;
     top: 0;
+    bottom: 0;
     left: 0;
+    box-sizing: border-box;
+    width: 60%;
     height: 100%;
     border: none;
-    width: 60%;
     border-right: 3px solid;
     border-top-right-radius: 12px;
-    transform: translateX(-100%);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform .25s ease, opacity .25s ease;
     z-index: 111000;
-  }
-
-  .map-left.rtl {
-    left: auto;
-    right: 0;
-    transform: translateX(100%);
-  }
-
-  .map-left.rtl.is-open {
-    transform: translateX(0);
-  }
-
-  .map-left.rtl .map-left__close {
-    left: 8px;
-    right: auto;
-  }
-
-  .map-left.is-open {
+    background: var(--bg);
+    padding: calc(env(safe-area-inset-top, 30px) + 0px) 10px 10px 10px;
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
-    background: var(--bg);
-    padding: 55px 15px 20px 15px;
-  }
-
-  .map__title {
-    font-size: 1.4rem;
   }
 
   .map-left__close {
-    position: absolute;
-    top: 8px;
-    right: 8px;
     width: 36px;
     height: 36px;
     border: 3px solid var(--border);
@@ -548,8 +578,34 @@ onBeforeUnmount(() => {
     z-index: 10;
   }
 
+  .map-left.rtl {
+    left: auto;
+    right: 0;
+  }
+
+  .map-left.rtl .map-left__close {
+    left: 8px;
+    right: auto;
+  }
+
   .region-card__title {
     font-size: 0.9rem;
+  }
+
+  .slide-enter-active,
+  .slide-leave-active {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  }
+
+  .slide-enter-from,
+  .slide-leave-to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .map-left.rtl.slide-enter-from,
+  .map-left.rtl.slide-leave-to {
+    transform: translateX(100%);
   }
 }
 
@@ -561,7 +617,7 @@ onBeforeUnmount(() => {
 
 @media (max-width: 800px) {
   .region-card {
-    height: 170px;
+    height: 136px;
   }
 }
 
@@ -581,6 +637,7 @@ onBeforeUnmount(() => {
 @media (max-width: 636px) {
   .map-left {
     width: 100%;
+    height: 100%;
     border-radius: 0;
     border: none;
   }
@@ -615,6 +672,7 @@ onBeforeUnmount(() => {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-bottom: 6px;
 }
 
 .map-pagination-arrows {
@@ -627,43 +685,43 @@ onBeforeUnmount(() => {
 
 .arrow-btn {
   width: 45px;
-  height: 40px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
-  border: 2px solid var(--border);
-  border-radius: 10px;
+  border-radius: 14px;
   font-size: 24px;
   font-weight: 900;
   cursor: pointer;
-  box-shadow: 2px 2px 0 var(--border);
-  transition: all 0.1s;
+  color: white;
+  box-shadow: 2px 2px 0 var(--boxShadowMobile);
+  border: none;
+  background: var(--tabBg);
 }
 
 .arrow-btn:active:not(:disabled) {
   transform: translate(1px, 1px);
-  box-shadow: 0px 0px 0 var(--border);
+  border: none;
 }
 
 .arrow-btn:disabled {
-  opacity: 0.3;
+  opacity: 0.6;
   cursor: not-allowed;
 }
 
 .current-category-name {
-  font-size: 1.1rem;
+  font-size: 16px;
   font-weight: 900;
-  color: var(--labelTextColor);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 3px 3px 0 var(--border);
-  border: var(--border);
-  border-radius: 8px;
+  box-shadow: 2px 2px 0 var(--boxShadowMobile);
+  border: 2px solid var(--tabsSlideBorderColor);
+  background: var(--tabBg);
+  border-radius: 15px;
   flex: 1;
-  background: white;
-  height: 40px;
+  height: 36px;
 }
 
 .map-empty-placeholder {
@@ -700,4 +758,25 @@ onBeforeUnmount(() => {
   color: #444;
   line-height: 1.4;
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+.menu-appear-enter-active {
+  transition: opacity 0.4s ease, transform 0.4s ease-out;
+}
+
+.menu-appear-enter-from {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
 </style>

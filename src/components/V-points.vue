@@ -1,62 +1,37 @@
 <template>
   <div class="points">
-    <VTips
-        :tips="flattenedTips"
-        v-model="isArticleOpen"
-    />
-    <section id="points" class="points-card" aria-label="Поинты и уровень">
-      <header class="points-card__header">
-        <h2 class="points__title">{{ t('accountPanel.title') }}</h2>
-        <button class="points__info" @click="isArticleOpen = true">
-          <img class="points__info-icon" src="../../assets/images/question.svg" alt="">
-        </button>
-      </header>
-      <ul v-if="langStore" class="points-card__list">
-        <li id="conferats" class="points-card__item">
-          <div class="points-card__label">{{ t('accountPanel.rank') }}</div>
-          <div class="points__hats-wrapper">
-            <button
-                v-if="userAuth.isFreezeActive"
-                class="hats__shield-btn"
-                @click="showFreezeModal = true"
-            >
-              <img class="hats__icon" src="../../assets/images/FreezeShield.svg" alt="Articlus_icon">
-            </button>
-            <div :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
-              <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Articlus_icon">
-              <span class="points-card__value"> {{ userAuth.totalHats}}</span>
-            </div>
-          </div>
-        </li>
-        <li id="articlus" class="points-card__item">
-          <div class="points-card__label">{{ t('accountPanel.articles') }}</div>
-          <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
-            <img class="articlus__icon" src="../../assets/images/articlus.png" alt="Articlus_icon">
-            <span class="points-card__value">{{ langStore.points }}</span>
-          </div>
-        </li>
-        <li class="points-card__item">
-          <span class="points-card__label">{{ t('accountPanel.level') }}</span>
-          <span id="level" :title="hoverTitle.level" class="points-card__badge">{{ langStore.isLeveling }}</span>
-        </li>
-        <li class="points-card__item points-card__progress">
+    <section id="points" class="points-card" aria-label="member_panel">
+      <div class="points_header-title">{{ t('accountPanel.title') }}</div>
+      <div v-if="langStore" class="top-panel-layout">
+        <div class="level-display">
+          <span class="level-label">{{ t('stepHitLabels.levelTitle')}}:</span>
+          <span class="level-value">{{ langStore.isLeveling || '0' }}</span>
+        </div>
+        <div class="custom-progress">
           <div class="progress_exp-bar">
-            <div class="progress__bar" :style="{ width: `${(langStore.exp / 100) * 100}%` }"></div>
-            <div class="progress__meta">{{ langStore.exp }}/100 XP</div>
-          </div>
-        </li>
-      </ul>
-      <ul v-if="langStore" class="points-card__list">
-        <li v-for="section in sections" :key="section.id" :id="section.id" class="ranked__wrapper">
-          <NuxtLink :to="section.route" class="ranked__inner">
-            <div class="ranked__title-icon">
-              <img class="points-card__title-icon" :src="section.icon" :alt="`${section.key}_icon`"/>
-              <div class="ranked__title">{{ section.title }}</div>
+            <div class="progress__bar" :style="{ width: `${(langStore.exp / 100) * 100}%` }">
+              <div class="glare"></div>
             </div>
-            <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="Arrow_icon"/>
+          </div>
+          <div class="progress-circle">
+            {{ langStore.exp }} / 100
+          </div>
+        </div>
+      </div>
+      <ul v-if="langStore" class="action-menu__list">
+        <li v-for="section in sections" :key="section.id" :id="section.id" class="action-menu__item">
+          <NuxtLink :to="section.route" class="action-menu__link">
+            <div class="action-menu__left">
+              <div class="action-menu__icon-bg">
+                <img class="action-menu__icon" :src="section.icon" :alt="`${section.title} Icon`"/>
+              </div>
+              <div class="action-menu__title">{{ section.title }}</div>
+            </div>
+            <VArrowNav/>
           </NuxtLink>
         </li>
       </ul>
+      <AccountManagement/>
     </section>
     <div v-if="showFreezeModal" class="modal-overlay" @click.self="showFreezeModal = false">
       <div class="modal-content">
@@ -81,7 +56,6 @@
 </template>
 
 <script setup>
-import VTips from "~/src/components/V-tips.vue";
 import {userlangStore} from "~/store/learningStore.js";
 import {userAuthStore} from '../../store/authStore.js'
 import {useRouter} from "vue-router";
@@ -92,14 +66,15 @@ import AchPanelIcon from '../../assets/images/AchPanelIcon.svg'
 import RankedIcon from '../../assets/images/RankedIcon.svg'
 import Calendar from '../../assets/images/calendar (2).svg'
 import { useRankUserStore } from '../../store/rankStore.js'
-
-const rankStore = useRankUserStore()
+import VArrowNav from "~/src/components/V-arrowNav.vue";
+import AccountManagement from "~/src/components/AccountManagement.vue";
+import VBanner from "~/src/components/V-banner.vue";
+import CardIcon from "../../assets/images/card.svg";
 const {t} = useI18n()
 const langStore = userlangStore()
 const userAuth = userAuthStore()
 const router = useRouter()
 const friendsStore = useFriendsStore()
-const isArticleOpen = ref(false)
 const showFreezeModal = ref(false)
 
 const formattedFreezeDate = computed(() => {
@@ -108,48 +83,8 @@ const formattedFreezeDate = computed(() => {
   return date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
 })
 
-const flattenedTips = computed(() => {
-  const result = [];
-  infoData.value.forEach(section => {
-    result.push({ label: section.title, isTitle: true });
-    section.tips.forEach(tip => {
-      result.push({ label: tip.label, isTitle: false });
-    });
-  });
-  return result;
-});
-
-const hoverTitle = {
-  title: t('hoverTitle.articles'),
-  level: t('hoverTitle.level')
-}
-const infoData = ref([
-  {id: "rank",
-    title: t('pavelOverlay.rankTitle'),
-    tips:[
-      {label: t('pavelOverlay.rankLabelOne')},
-      {label: t('pavelOverlay.rankLabelTwo')},
-      {label: t('pavelOverlay.rankLabelThree')}
-    ]
-  },
-  {id: "article",
-    title: t('pavelOverlay.articleTitle'),
-    tips:[
-      {label: t('pavelOverlay.articleLabelOne')},
-      {label: t('pavelOverlay.articleLabelTwo')}
-    ]
-  },
-  {id: "level",
-    title: t('pavelOverlay.levelTitle'),
-    tips:[
-      {label: t('pavelOverlay.levelLabelOne')},
-      {label: t('pavelOverlay.levelLabelTwo')}
-    ]
-  }
-])
-
 const sections = ref([
-  {id: "stats", icon: Graph, alt: 'Graph', title: t('accountPanel.stats'), route: "/statistics"},
+  // {id: "stats", icon: Graph, alt: 'Graph', title: t('accountPanel.stats'), route: "/statistics"},
   {id: "achievement", icon: AchPanelIcon, alt: 'AchPanel', title: t('accountPanel.achievement'), route: "/achievements"},
   {id: "ranked", icon: RankedIcon, alt: 'Ranked', title: t('accountPanel.ranked'), route: "/leaderboard"},
   {id: "calendar", icon: Calendar, alt: 'Ranked', title: t('accountPanel.eventCalendar'), route: "/calendar"},
@@ -162,10 +97,206 @@ const toPayment = () => {
 onMounted(() => {
   friendsStore.loadFriends()
 })
-
 </script>
 
 <style scoped>
+.top-panel-layout {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-progress {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.action-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.points_header-title {
+  text-align: center;
+  color: var(--title);
+  font-weight: 600;
+  font-size: 23px;
+  text-shadow: 0 1px var(--title);
+}
+
+.action-menu__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+.action-menu__item {
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s;
+  background:var(--menuItemsBg);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+  border: 2px solid var(--tabsSlideBorderColor);
+  border-radius: 16px;
+  padding: 6px 14px;
+}
+
+.action-menu__link:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #11151c;
+}
+
+.action-menu__left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-menu__icon-bg {
+  background: var(--tabBg);
+  border-radius: 12px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-menu__icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.action-menu__title {
+  color: var(--titleColor);
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+}
+
+.custom-progress .progress_exp-bar {
+  height: 27px;
+}
+
+.progress-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #313030;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.level-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.level-label {
+  color: var(--title);
+  font-size: 21px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 var(--title);
+}
+
+.level-value {
+  background: #8868db;
+  border: none;
+  border-radius: 6px;
+  padding: 2px 8px;
+  color: white;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.premium-button {
+  width: 100%;
+  background: #5093fb;
+  border: 1px solid #363d4a;
+  border-radius: 14px;
+  padding: 14px;
+  color: whitesmoke;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  transition: all 0.2s;
+}
+
+.premium-link-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.premium-link {
+  color: #e2e8f0;
+  font-size: 13px;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.tooltip-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tooltip-box {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  left: auto;
+  transform: translateY(-10px);
+  background-color: white;
+  color: #a0a6b1;
+  border: 3px solid #363d4a;
+  border-radius: 12px;
+  padding: 12px 16px;
+  width: max-content;
+  max-width: 260px;
+  z-index: 9999;
+  transition: all 0.2s ease;
+  box-shadow: 3px 3px 0 black;
+  pointer-events: none;
+}
+
+
+.tooltip-list li {
+  font-size: 13px;
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 14px;
+  line-height: 1.3;
+}
+
+.tooltip-list li:last-child {
+  margin-bottom: 0;
+}
+
+.tooltip-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #6589e0;
+  font-size: 16px;
+  line-height: 1;
+}
 
 .warning__text {
   color: #e53737;
@@ -174,7 +305,7 @@ onMounted(() => {
 }
 
 .warning__message {
-  color: #a0a6b1;;
+  color: #a0a6b1;
   font-size: 13px;
 }
 
@@ -183,315 +314,70 @@ onMounted(() => {
   flex-direction: column;
 }
 
-.points-card__title-icon {
-  width: 45px;
-}
-
-.hats__icon {
-  width: 40px;
-}
-
-.points__hats-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.points__info {
-  border: none;
-  background: none;
-}
-
-.points__info-icon {
-  width: 50px;
-}
-
-.ranked__title-icon {
-  display: flex;
-  align-items: center;
-}
-
-.star{
-  font-size: 30px;
-}
-.ranked__inner {
-  width: 100%;
-  border: 2px solid var(--border);
-  border-radius: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-  padding: 1px 5px;
-  box-shadow: 2px 2px 0  var(--border);
-  transition: .2s;
-  background: white;
-}
-
-.ranked__wrapper:last-child .ranked__inner {
+.ranked__wrapper:last-child {
   margin-bottom: 0;
-}
-
-
-@media (min-width: 1024px) {
-  .ranked__inner:hover {
-    box-shadow: 0 0 0;
-    transform: translate(1px , 1px);
-    transition: .2s;
-  }
-}
-
-.ranked__title {
-  color: var(--labelTextColor);
-  font-size: 18px;
-  margin-left: 8px;
-  font-weight: 600;
 }
 
 .points__title {
   color: var(--panelTextColor);
-}
-
-.stat__icon {
-  width: 40px;
-  transform: rotate(90deg);
-  margin-left: 5px;
-}
-
-@media (min-width: 1023px) {
-  .stats__btn:hover {
-    transform: scale(1.05);
-    transition: .3s;
-  }
-}
-
-.stats__btn {
-  display: flex;
-  align-items: center;
-  border: 2px solid var(--border);
-  box-shadow: 0 3px 0 var(--border);
-  border-radius: 10px;
+  text-shadow: 0px 1px var(--titleColor);
+  text-align: center;
   font-weight: 600;
-  font-size: 1.2rem;
-  padding: 0 5px;
-  color: #6ea4f1;
-  transition: .3s;
-  background: none;
 }
 
-.articlus__wrapper {
+.points-card__header {
   display: flex;
-  width: 90px;
-  border:2px solid var(--border);
-  box-shadow: 2px 2px 0 var(--border);
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  padding: 1px 0.7rem;
-  height: 40px;
-  background: white;
-}
-
-.articlus__icon {
-  width: 35px;
-  height: 31px;
-}
-
-.points {
-  min-width: 340px;
-  display: flex;
-  width: 100%;
-}
-
-.hats__shield-btn {
-  background: none;
-  border: none;
-  margin-right: 5px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.hats__shield-btn:hover {
-  transform: scale(1.05);
+  position: relative;
+  z-index: 1;
 }
 
 .points-card {
   color: #111;
-  border: 3px solid var(--border);
+  border: 2px solid var(--tabBg);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 20px;
-  box-shadow: 2px 2px 0 var(--border);
-  padding: 10px 15px;
+  padding: 12px 15px;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   position: relative;
   z-index: 1;
 }
 
 .progress_exp-bar {
-  width: 100%;
-  height: 23px;
+  flex: 1;
+  height: 25px;
   background: #e8eae5;
-  border-radius: 10px;
-  position: relative;
+  border-radius: 20px;
   overflow: hidden;
 }
 
 .progress__bar {
   height: 100%;
-  background: #6589e0;
-  transition: width .4s;
-}
-
-.points-card__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #10b981;
+  border-radius: 8px;
+  transition: width 0.4s ease-out;
   position: relative;
-  z-index: 1;
 }
 
-.rank-display {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.rank-display__stars {
-  display: flex;
-  justify-content: center;
-  gap: 2px;
-  height: 16px;
-}
-
-.rank-star {
-  color: #ffcc00;
-  font-size: 20px;
-  text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
-}
-
-.rank-display__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.rank-display__icon {
-  width: 51px;
-  height: 51px;
-  object-fit: contain;
-}
-
-.rank-display__placeholder {
-  font-size: 24px;
-}
-
-.rank-display__info {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.rank-display__title {
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #666;
-}
-
-.rank-display__hats {
-  font-size: 14px;
-  font-weight: 700;
-  color: #111;
-}
-
-.points-card__item:nth-child(2) {
-  border-top: 3px dashed var(--border);
-}
-
-.points-card__list {
-  margin-bottom: 2px;
-  padding: 1px 0;
-  position: relative;
-  z-index: 1;
-}
-
-.points-card__item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 4px;
-  margin-top: 8px;
-
+.glare{
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  border-radius: 4px
 }
 
 .points-card__item + .points-card__item {
   border-top: 2px dashed rgba(0, 0, 0, .15);
 }
 
-.points-card__label {
-  font-size: 19px;
-  font-weight: 600;
-  color: var(--panelTextColor);
-  font-family: "Nunito", sans-serif;
-}
-
-.points-card__value {
-  font-size: 18px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: "Nunito", sans-serif;
-  color: #111;
-}
-
-.points-card__badge {
-  font-size: 18px;
-  font-weight: 600;
-  background: #fff;
-  border: 2px solid var(--border);
-  box-shadow: 2px 2px 0 var(--border);
-  border-radius: 10px;
-  font-family: "Nunito", sans-serif;
-  padding: 4px 10px;
-}
-
-.sub-actions {
-  margin-top: 10px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.points-card__progress {
-  margin: 10px 0;
-  padding-bottom: 10px;
-}
-
-.progress__meta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  color: #111;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-weight: 600;
-  font-family: "Nunito", sans-serif;
-}
-
 @media (max-width: 420px) {
   .points-card {
     padding: 14px;
-  }
-
-  .points-card__value {
-    font-size: 16px;
-  }
-
-  .ranked__title {
-    font-size: 18px;
   }
 }
 
@@ -586,4 +472,5 @@ onMounted(() => {
   box-shadow: none;
   transform: translateY(4px);
 }
+
 </style>

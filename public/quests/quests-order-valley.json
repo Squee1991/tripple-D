@@ -1,18 +1,18 @@
 [
   {
-    "questId": "valley_nebensatz_word_order",
+    "questId": "order-one",
     "aliases": ["sub-clauses-order"],
     "title": "orderValleyQuestOne.title",
     "progress": "0/15",
     "description": "orderValleyQuestOne.description",
     "conditions": {
       "goal": "orderValleyQuestOne.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -157,19 +157,19 @@
     ]
   },
   {
-    "questId": "valley_nebensatz_minimal",
+    "questId": "order-two",
     "aliases": ["sub-clauses-short"],
     "title": "orderValleyQuestTwo.title",
     "progress": "0/15",
     "description": "orderValleyQuestTwo.description",
     "conditions": {
       "goal": "orderValleyQuestTwo.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -315,19 +315,19 @@
     ]
   },
   {
-    "questId": "valley_nebensatz_extended",
+    "questId": "order-three",
     "aliases": ["sub-clauses-extended"],
     "title": "orderValleyQuestThree.title",
     "progress": "0/15",
     "description": "orderValleyQuestThree.description",
     "conditions": {
       "goal": "orderValleyQuestThree.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -473,19 +473,19 @@
     ]
   },
   {
-    "questId": "valley_es_gibt_basics",
+    "questId": "order-four",
     "aliases": ["es-gibt-intro"],
     "title": "orderValleyQuestFour.title",
     "progress": "0/15",
     "description": "orderValleyQuestFour.description",
     "conditions": {
       "goal": "orderValleyQuestFour.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -631,19 +631,19 @@
     ]
   },
   {
-    "questId": "valley_es_gibt_advanced",
+    "questId": "order-five",
     "aliases": ["es-gibt-pro"],
     "title": "orderValleyQuestFive.title",
     "progress": "0/15",
     "description": "orderValleyQuestFive.description",
     "conditions": {
       "goal": "orderValleyQuestFive.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -789,19 +789,19 @@
     ]
   },
   {
-    "questId": "reflexivpronomen_clean",
+    "questId": "order-six",
     "aliases": ["reflexiv-base"],
     "title": "orderValleyQuestSix.title",
     "progress": "0/15",
     "description": "orderValleyQuestSix.description",
     "conditions": {
       "goal": "orderValleyQuestSix.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -951,19 +951,19 @@
     ]
   },
   {
-    "questId": "german_hardcore_mix_v2",
+    "questId": "order-seven",
     "aliases": ["summary-hardcore"],
     "title": "orderValleyQuestSeven.title",
     "progress": "0/15",
     "description": "orderValleyQuestSeven.description",
     "conditions": {
       "goal": "orderValleyQuestSeven.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1109,19 +1109,19 @@
     ]
   },
   {
-    "questId": "travel_grammar_hardcore",
+    "questId": "order-eight",
     "aliases": ["travel-mix-pro"],
     "title": "orderValleyQuestEight.title",
     "progress": "0/15",
     "description": "orderValleyQuestEight.description",
     "conditions": {
       "goal": "orderValleyQuestEight.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1267,19 +1267,19 @@
     ]
   },
   {
-    "questId": "valley_career_hardcore",
+    "questId": "order-nine",
     "aliases": ["work-mix-pro"],
     "title": "orderValleyQuestNine.title",
     "progress": "0/15",
     "description": "orderValleyQuestNine.description",
     "conditions": {
       "goal": "orderValleyQuestNine.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1425,19 +1425,19 @@
     ]
   },
   {
-    "questId": "work_simple_life",
+    "questId": "order-ten",
     "aliases": ["work-basic-vibe"],
     "title": "orderValleyQuestTen.title",
     "progress": "0/15",
     "description": "orderValleyQuestTen.description",
     "conditions": {
       "goal": "orderValleyQuestTen.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1583,19 +1583,19 @@
     ]
   },
   {
-    "questId": "grammar_fresh_mix",
+    "questId": "order-eleven",
     "aliases": ["new-real-life-drill"],
     "title": "orderValleyQuestEleven.title",
     "progress": "0/15",
     "description": "orderValleyQuestEleven.description",
     "conditions": {
       "goal": "orderValleyQuestEleven.goal",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -1741,19 +1741,19 @@
     ]
   },
   {
-    "questId": "home_life_mix",
+    "questId": "order-twelve",
     "aliases": ["daily-grammar-v1"],
     "title": "orderValleyQuestTwelve.title",
     "progress": "0/15",
     "description": "orderValleyQuestTwelve.description",
     "conditions": {
       "goal": "orderValleyQuestTwelve.goal",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {

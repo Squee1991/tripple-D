@@ -5,7 +5,6 @@
       <div class="app__cloud app__cloud--2"></div>
       <div class="app__cloud app__cloud--3"></div>
     </div>
-<!--    <button class="back-btn back-btn&#45;&#45;fixed" type="button" @click="goHome">← На главную</button>-->
     <div class="app__container">
       <div class="app__scroll">
         <div v-if="exercisesStore.isLoading" class="panel">

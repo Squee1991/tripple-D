@@ -220,7 +220,6 @@ const toListFriends = () => {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
-  border-bottom: 2px solid var(--border);
   padding-bottom: 10px;
   border-radius: 10px;
 }

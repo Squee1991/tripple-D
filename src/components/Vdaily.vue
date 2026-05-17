@@ -38,7 +38,7 @@
 
 <script setup>
 import {ref, onMounted, onUnmounted} from 'vue'
-import {storeToRefs} from 'pinia'
+import {storeToRefs } from 'pinia'
 import {dailyStore} from '../../store/dailyStore.js'
 import NotCompleted from '../../assets/images/dailyIcons/dailyNotCompleted.svg'
 import Completed from '../../assets/images/dailyIcons/dailyCompleted.svg'
@@ -46,7 +46,7 @@ import Completed from '../../assets/images/dailyIcons/dailyCompleted.svg'
 const { t } = useI18n()
 const store = dailyStore()
 const {todayQuests, msLeft} = storeToRefs(store)
-
+const router = useRouter()
 const ready = ref(false)
 
 onMounted(async () => {
@@ -54,14 +54,14 @@ onMounted(async () => {
   store.startAutoSync()
   ready.value = true
 })
+
 onUnmounted(() => {
   store.stopAutoSync();
   store.stop()
 })
 
-
-function getIconSrc(q) {
-  return q?.isCompleted ? Completed : NotCompleted
+function getIconSrc(quest) {
+  return quest?.isCompleted ? Completed : NotCompleted
 }
 
 function prettyMs(x) {
@@ -73,7 +73,6 @@ function prettyMs(x) {
   const pad = n => String(n).padStart(2, '0')
   return `${pad(h)}:${pad(m)}:${pad(s)}`
 }
-
 
 onMounted(() => {
   store.init()
@@ -104,11 +103,11 @@ onUnmounted(() => {
 .daily {
   width: 100%;
   flex-grow: 1;
-  border: 3px solid var(--border);
+  border: 2px solid var(--tabBg);
   border-radius: 16px;
   padding: 16px;
   color: var(--titleColor);
-  box-shadow: 2px 2px 0 var(--border);
+  box-shadow: var(--boxShadowMobile);
   margin-bottom: 10px;
 }
 
@@ -116,35 +115,35 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   position: relative;
+  border-radius: 20px;
   z-index: 1;
 }
 
 .qd__title {
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 800;
-  color: var(--panelTextColor);
+  color: var(--title);
+  text-shadow: 0px 1px white;
 }
 
 .qd__right {
   display: flex;
   align-items: center;
-  gap: 8px;
   font-size: 14px;
   color: #9aa6b2;
+  gap: 6px;
 }
 
 .qd__timer {
   font-variant-numeric: tabular-nums;
-  padding: 3px 8px;
+  padding: 4px 8px;
   border-radius: 8px;
-  background: var(--timerbg);
-  border: 3px solid #2b3240;
-  box-shadow: 2px 2px 0 #000;
   color: #fff;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
+  background: #08baf2;
 }
 
 .qd__list {
@@ -158,11 +157,11 @@ onUnmounted(() => {
   justify-content: space-between;
   gap: 12px;
   align-items: center;
-  background: #fff;
-  border: 2px solid var(--border);
+  background: var(--menuItemsBg);
+  border: 1px solid var(--tabsSlideBorderColor);
   border-radius: 14px;
   padding: 0 10px;
-  box-shadow: 2px 2px 0 var(--border);
+  box-shadow: 2px 2px 0 var(--tabsSlideBorderColor);
   position: relative;
   z-index: 1;
 }
@@ -177,7 +176,7 @@ onUnmounted(() => {
   font-size: 13px;
   font-weight: 700;
   line-height: 1.25;
-  color: var(--labelTextColor);
+  color: var(--titleColor);
   margin-bottom: 10px;
 }
 
@@ -187,7 +186,9 @@ onUnmounted(() => {
 
 .qd__barlabel {
   position: absolute;
-  inset: 0;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -25%);
   display: grid;
   place-items: center;
   font-size: 12px;
@@ -198,17 +199,16 @@ onUnmounted(() => {
 
 .qd__progress {
   width: 100%;
-  height: 18px;
+  height: 20px;
   border: 1px solid #2a3444;
   border-radius: 10px;
-  background: #222b38;
   overflow: hidden;
   -webkit-appearance: none;
   appearance: none;
 }
 
 .qd__progress::-webkit-progress-bar {
-  background: #222b38;
+  background: #48556b;
 }
 
 .qd__progress::-webkit-progress-value {

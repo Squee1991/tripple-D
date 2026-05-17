@@ -15,6 +15,7 @@ import PuzzleAward from '~/assets/awards/puzzleAward.svg'
 import SwordAward from '~/assets/awards/SwordAwards.svg'
 import HeartAward from '~/assets/awards/heartAward.svg'
 import Telescope from '~/assets/awards/telescope.svg'
+import Scroll from '~/assets/awards/scrollen.svg'
 import Groot from '~/assets/awards/Groot.svg'
 import SantaHat from '../assets/images/event-rewards/winter-event/winter-rewards/santa-hat.svg'
 import ChristmasBall from '../assets/images/event-rewards/winter-event/winter-rewards/christmas-ball.svg'
@@ -28,6 +29,12 @@ export const AWARDS = [
 		title: 'awards.explorer',
 		description: 'awards.explorerDescription',
 		icon: Globus
+	},
+	{
+		key: 'adventures',
+		title: 'awards.adventures',
+		description: 'awards.adventuresDescription',
+		icon: Scroll
 	},
 	{
 		key: 'Articlus',

@@ -2,42 +2,48 @@
   <NuxtLayout>
     <NuxtPage/>
     <AchievementToast @toast-finished="onToastFinished" />
-<!--    <VStepHint v-if="showStepHint" @close="showStepHint = false"/>-->
-<!--      <FeedBack/>-->
     <VLost/>
     <VRankOverlay/>
-    <VInstallPwa/>
   </NuxtLayout>
 </template>
 
 <script setup>
 import VRankOverlay from "./src/components/V-rank-overlay.vue";
+import { StatusBar, Style } from '@capacitor/status-bar';
 import FeedBack from './src/components/V-feedback.vue'
 import VStepHint from "./src/components/V-stephint.vue";
-import VInstallPwa from "./src/components/V-install-pwa.vue";
 import AchievementToast from './src/components/AchievementToast.vue'
 import VLost from './src/components/V-lost.vue'
-import {useRouter, useRoute} from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { useAchievementStore } from './store/achievementStore.js'
-import {useCurrentUser} from "vuefire";
-import {userlangStore} from './store/learningStore.js'
-import {userAuthStore} from './store/authStore.js'
-import {useSentencesStore} from './store/sentencesStore.js';
-import {useTrainerStore} from './store/themenProgressStore.js'
-import {useQuestStore} from './store/questStore.js'
-import {useCardsStore} from './store/cardsStore.js'
-import {useLocalStatGameStore} from './store/localSentenceStore.js'
+import { useCurrentUser } from "vuefire";
+import { userlangStore } from './store/learningStore.js'
+import { userAuthStore } from './store/authStore.js'
+import { useSentencesStore } from './store/sentencesStore.js';
+import { useTrainerStore } from './store/themenProgressStore.js'
+import { useQuestStore } from './store/questStore.js'
+import { useCardsStore } from './store/cardsStore.js'
+import { useLocalStatGameStore } from './store/localSentenceStore.js'
+import { useBillingStore } from './store/billingStore.js'
 import { userChainStore } from './store/chainStore.js'
-import {onMounted} from "vue";
-import {dailyStore} from './store/dailyStore'
-import {computed} from 'vue'
-import {useHead} from '#imports'
+import { Keyboard } from '@capacitor/keyboard';
+import { App } from '@capacitor/app'
+import { onMounted, onUnmounted, ref, watch } from "vue";
+import { dailyStore } from './store/dailyStore'
+import { useHead } from '#imports'
+import { Capacitor } from '@capacitor/core'
+import { SplashScreen } from '@capacitor/splash-screen';
 const { locale, t } = useI18n()
+
+alert("JS FILE LOADED")
+
+const billingStore = useBillingStore()
+
 useHead(() => ({
   htmlAttrs: { lang: locale.value, dir: locale.value === 'ar' ? 'rtl' : "ltr" },
   title: () => t('useHeadApp.title'),
   meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content' },
     { name: 'description', content: t('useHeadApp.content') },
     { property: 'og:title', content: t('useHeadApp.contentThree') },
     { property: 'og:description', content: t('useHeadApp.contentFour') },
@@ -47,6 +53,7 @@ useHead(() => ({
   ],
   link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
 }))
+
 const achStore = useAchievementStore()
 const showStepHint = ref(false)
 const cardStore = useCardsStore()
@@ -58,8 +65,126 @@ const router = useRouter()
 const route = useRoute()
 const user = useCurrentUser()
 const sentencesStore = useSentencesStore();
-const langStore = userlangStore()
 const daily = dailyStore()
+const colorMode = useColorMode();
+
+
+onMounted(async () => {
+  // 1. Прячем заставку сразу, как только Vue «ожил»
+  if (Capacitor.isNativePlatform()) {
+    try {
+      // Можно добавить небольшую задержку в 300мс, чтобы не было резкого мерцания
+      setTimeout(async () => {
+        await SplashScreen.hide();
+        // Этот алерт покажет нам, что занавес поднялся
+        alert("SPLASH HIDE: SUCCESS");
+      }, 300);
+    } catch (e) {
+      console.warn('Ошибка при скрытии Splash Screen:', e);
+    }
+  }
+
+  // 2. Начинаем загрузку данных
+  try {
+    // Ждем, пока база данных отдаст настройки
+    await learningStore.loadFromFirebase();
+    alert("FIREBASE: DATA LOADED");
+  } catch (e) {
+    alert("Критическая ошибка загрузки: " + e.message);
+  }
+
+  // 3. Инициализация остальных сторов, если пользователь залогинен
+  if (authStore.uid) {
+    try {
+      questStore.loadDailyProgress();
+      cardStore.loadCreatedCount();
+      statsStore.loadLocalStats();
+    } catch (e) {
+      console.error("Ошибка инициализации сторов:", e);
+    }
+  }
+
+  // 4. Запуск трекинга достижений
+  achStore.initializeProgressTracking();
+
+  // 5. Обработка системных кнопок и клавиатуры (раскомментировал для iPhone 16)
+  if (Capacitor.isNativePlatform()) {
+    App.addListener('backButton', ({ canGoBack }) => {
+      const state = window.history.state || {};
+      const isModalOpen = !!(state.isMapPanelOpen || state.isSubCategory || state.isSubScreen);
+      const purePath = route.path.replace(/^\/(ru|ar|en)/, '');
+      const isHomePage = purePath === '/' || purePath === '';
+
+      if (isModalOpen || !isHomePage) {
+        window.history.back();
+      } else {
+        App.minimizeApp();
+      }
+    });
+
+    Keyboard.addListener('keyboardWillShow', () => {
+      setTimeout(() => {
+        const activeElement = document.activeElement;
+        if (activeElement && (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA')) {
+          activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 50);
+    });
+  }
+
+  // 6. Таймер для показа подсказок после загрузки
+  setTimeout(() => {
+    if (!achStore.showPopup && !showStepHint.value) {
+      onToastFinished();
+    }
+  }, 2600);
+});
+
+/*
+onMounted(async () => {
+  try {
+    await learningStore.loadFromFirebase()
+  } catch (e) {
+    alert("Firebase Load Error: " + e.message)
+  }
+  learningStore.loadFromFirebase()
+  if (authStore.uid) {
+    questStore.loadDailyProgress()
+    cardStore.loadCreatedCount()
+    statsStore.loadLocalStats()
+  }
+  achStore.initializeProgressTracking()
+  /!*if (Capacitor.isNativePlatform()) {
+    App.addListener('backButton', ({ canGoBack }) => {
+      const state = window.history.state || {}
+      const isModalOpen = !!(state.isMapPanelOpen || state.isSubCategory || state.isSubScreen)
+      const purePath = route.path.replace(/^\/(ru|ar|en)/, '')
+      const isHomePage = purePath === '/' || purePath === ''
+
+      if (isModalOpen || !isHomePage) {
+        window.history.back()
+      } else {
+        App.minimizeApp()
+      }
+    })
+
+    Keyboard.addListener('keyboardWillShow', () => {
+      setTimeout(() => {
+        const activeElement = document.activeElement;
+        if (activeElement && (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA')) {
+          activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 50);
+    });
+  }*!/
+
+  setTimeout(() => {
+    if (!achStore.showPopup && !showStepHint.value) {
+      onToastFinished()
+    }
+  }, 2600)
+})
+*/
 
 const onToastFinished = () => {
   if (authStore.uid) {
@@ -71,69 +196,33 @@ const onToastFinished = () => {
   }
 }
 
-onMounted(() => {
-  watch(user, (user, prevUser) => {
-    if (prevUser && !user) {
-      router.push('/')
-    } else if (user && typeof route.query.redirect === 'string') {
-      router.push(route.query.redirect)
-    }
-  })
+watch(user, (currentUser, prevUser) => {
+  if (prevUser && !currentUser) {
+    router.push('/')
+  } else if (currentUser && typeof route.query.redirect === 'string') {
+    router.push(route.query.redirect)
+  }
 })
 
-onMounted(async () => {
-  await learningStore.loadFromFirebase()
-  // sentencesStore.loadSentences()
-  if (authStore.uid) {
-    questStore.loadDailyProgress()
-    cardStore.loadCreatedCount()
-    statsStore.loadLocalStats()
+/*watch(() => authStore.uid, (newUid) => {
+  if (newUid) billingStore.initialize()
+}, { immediate: true })
+
+watch(() => colorMode.value, async (newTheme) => {
+  if (!Capacitor.isNativePlatform()) return;
+  try {
+    await StatusBar.setStyle({
+      style: newTheme === 'dark' ? Style.Dark : Style.Light
+    });
+    await StatusBar.setOverlaysWebView({ overlay: true });
+  } catch (err) {
+    console.error('StatusBar error:', err);
   }
-  achStore.initializeProgressTracking()
-  setTimeout(() => {
-    if (!achStore.showPopup && !showStepHint.value) {
-      onToastFinished()
-    }
-  }, 2600)
-})
+}, { immediate: true });*/
 
 onUnmounted(() => {
   daily.stop()
 })
-
-// onMounted(() => {
-// 	if (process.client) {
-// 		// 1. Отключение правой кнопки мыши
-// 		document.addEventListener('contextmenu', function(e) {
-// 			e.preventDefault();
-// 			console.log('Правая кнопка мыши заблокирована.');
-// 		});
-//
-// 		// 2. Отключение основных горячих клавиш DevTools
-// 		document.addEventListener('keydown', function(e) {
-// 			// F12
-// 			if (e.key === 'F12') {
-// 				e.preventDefault();
-// 				console.log('F12 заблокирована.');
-// 			}
-// 			// Ctrl+Shift+I (Windows/Linux) или Cmd+Opt+I (Mac) - Открытие DevTools
-// 			if ((e.ctrlKey && e.shiftKey && e.key === 'I') || (e.metaKey && e.altKey && e.key === 'I')) {
-// 				e.preventDefault();
-// 				console.log('Комбинация Ctrl/Cmd+Shift/Opt+I заблокирована.');
-// 			}
-// 			// Ctrl+Shift+J (Windows/Linux) или Cmd+Opt+J (Mac) - Открытие консоли
-// 			if ((e.ctrlKey && e.shiftKey && e.key === 'J') || (e.metaKey && e.altKey && e.key === 'J')) {
-// 				e.preventDefault();
-// 				console.log('Комбинация Ctrl/Cmd+Shift+Opt+J заблокирована.');
-// 			}
-// 			// Ctrl+U (Windows/Linux) или Cmd+U (Mac) - Просмотр исходного кода
-// 			if ((e.ctrlKey && e.key === 'U') || (e.metaKey && e.key === 'U')) {
-// 				e.preventDefault();
-// 				console.log('Комбинация Ctrl/Cmd+U заблокирована.');
-// 			}
-// 		});
-// 	}
-// });
 </script>
 
 <style>
@@ -154,8 +243,35 @@ onUnmounted(() => {
   font-family: "Nunito", sans-serif;
 }
 
-html {
-  font-size: 16px;
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
 }
 
+
+html, body, #__nuxt {
+  height: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: var(--bg);
+}
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding-top: var(--sat);
+  padding-bottom: var(--sab);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+#main-content {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
 </style>

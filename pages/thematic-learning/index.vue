@@ -1,3 +1,91 @@
+<template>
+  <div class="theme-page">
+    <div class="page-header">
+      <VBackBtnNav />
+      <h1 class="page-title">{{ t('sub.themen')}}</h1>
+    </div>
+    <VTransition>
+      <div v-if="isMouted">
+        <div class="banner">
+          <VBanner
+              :text="t('bannerTitles.thematic')"
+              :icon="Banner"
+          />
+        </div>
+        <transition name="toast-fade">
+          <div v-if="showChalkMessage" class="toast-message">
+            {{ chalkMessage }}
+          </div>
+        </transition>
+        <div class="themes-scroll">
+          <div class="themes-container">
+            <button
+                v-for="theme in themes"
+                :key="theme.key"
+                class="theme-card"
+                :class="{ 'active': theme.key === selectedTopic }"
+                @click="selectedTopic = theme.key"
+            >
+              <div class="theme-icon-wrapper">
+                <img :src="theme.img" :alt="t(theme.name)" class="theme-icon" />
+              </div>
+              <span class="theme-name">{{ t(theme.name) }}</span>
+            </button>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="level-tabs-wrapper">
+            <div class="level-tabs">
+              <button
+                  v-for="level in jsonData.levels"
+                  :key="level.level"
+                  class="level-tab"
+                  :class="{ 'active': selectedLevel === level.level }"
+                  @click="selectLevel(level.level)"
+              >
+                {{ t('chooseTheme.level') }} {{ level.level }}
+              </button>
+            </div>
+          </div>
+          <div class="modules-grid" v-if="selectedLevelObj">
+            <button
+                v-for="mod in selectedLevelObj.modules"
+                :key="mod.id"
+                class="module-card"
+                :class="{
+              'locked': !isModuleUnlocked(selectedLevelObj.level, mod.id),
+              'selected': moduleToStart && mod.id === moduleToStart.id
+            }"
+                @click="handleModuleClick(mod)"
+            >
+              <div class="module-title">{{ t('chooseTheme.module') }}</div>
+              <div class="module-number">{{ mod.id }}</div>
+              <div class="module-status-icon" v-if="!isModuleUnlocked(selectedLevelObj.level, mod.id)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--titleColor)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.5;">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <div class="module-status-icon check-icon" v-else-if="moduleToStart && mod.id === moduleToStart.id">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </VTransition>
+    <transition name="slide-up">
+      <div class="bottom-action" v-if="moduleToStart">
+        <button class="btn-start" @click="startSelectedModule">
+          {{ t('chooseTheme.btnStart') }}
+        </button>
+      </div>
+    </transition>
+  </div>
+</template>
+
 <script setup>
 import {useTrainerStore} from '../../store/themenProgressStore.js'
 import {useRouter} from 'vue-router'
@@ -14,7 +102,11 @@ import School from '../../assets/images/school.svg'
 import Travel from '../../assets/images/travel.svg'
 import Clock from '../../assets/images/clock.svg'
 import { useHead, useSeoMeta } from '#imports'
-const canonical = useCanonical()
+import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
+import VBanner from "~/src/components/V-banner.vue";
+import Banner from '../../assets/images/thematicSticker.svg'
+import VTransition from "~/src/components/V-transition.vue";
+const isMouted = ref(false)
 const {t} = useI18n()
 
 useSeoMeta({
@@ -24,20 +116,27 @@ useSeoMeta({
 const router = useRouter()
 const trainer = useTrainerStore()
 const themes = [
-  {key: 'house', name: 'chooseThemeList.home', img: HomeImg, position: {top: '5%', left: '10%', rotate: '-5deg'}},
-  {key: 'zeit', name: 'chooseThemeList.time', img: Clock, position: {top: '25%', left: '55%', rotate: '4deg'}},
-  {key: 'family', name: 'chooseThemeList.family', img: Family, position: {top: '2%', left: '60%', rotate: '8deg'}},
-  {key: 'food', name: 'chooseThemeList.food', img: Food, position: {top: '45%', left: '13%', rotate: '-3deg'}},
-  {key: 'purchases', name: 'chooseThemeList.purchases', img: Purchase, position: {top: '30%', left: '35%', rotate: '-6deg'}},
-  {key: 'health', name: 'chooseThemeList.health', img: Health, position: {top: '20%', left: '2%', rotate: '7deg'}},
-  {key: 'weather', name: 'chooseThemeList.weather', img: Weather, position: {top: '70%', left: '55%', rotate: '-5deg'}},
-  {key: 'clothes', name: 'chooseThemeList.clothes', img: Clothes, position: {top: '48%', left: '65%', rotate: '-3deg'}},
-  {key: 'transport', name: 'chooseThemeList.transport', img: Transport, position: {top: '55%', left: '30%', rotate: '4deg'}},
-  {key: 'school', name: 'chooseThemeList.school', img: School, position: {top: '68%', left: '5%', rotate: '-8deg'}},
-  {key: 'travel', name: 'chooseThemeList.travel', img: Travel, position: {top: '2%', left: '30%', rotate: '3deg'}}
+  {key: 'house', name: 'chooseThemeList.home', img: HomeImg},
+  {key: 'zeit', name: 'chooseThemeList.time', img: Clock},
+  {key: 'family', name: 'chooseThemeList.family', img: Family},
+  {key: 'food', name: 'chooseThemeList.food', img: Food},
+  {key: 'purchases', name: 'chooseThemeList.purchases', img: Purchase},
+  {key: 'health', name: 'chooseThemeList.health', img: Health},
+  {key: 'weather', name: 'chooseThemeList.weather', img: Weather},
+  {key: 'clothes', name: 'chooseThemeList.clothes', img: Clothes},
+  {key: 'transport', name: 'chooseThemeList.transport', img: Transport},
+  {key: 'school', name: 'chooseThemeList.school', img: School},
+  {key: 'travel', name: 'chooseThemeList.travel', img: Travel}
 ]
 const selectedTopic = ref(themes[0].key)
-const jsonData = ref(null)
+const jsonData = ref({
+  levels: [
+    { level: 1, modules: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }] },
+    { level: 2, modules: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }] },
+    { level: 3, modules: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }] }
+  ]
+})
+
 const loading = ref(true)
 const selectedLevel = ref(1)
 const topic = computed(() => selectedTopic.value)
@@ -45,6 +144,7 @@ const chalkMessage = ref('')
 const showChalkMessage = ref(false)
 let messageTimeout = null
 const moduleToStart = ref(null)
+
 const triggerChalkMessage = (text) => {
   clearTimeout(messageTimeout)
   chalkMessage.value = text
@@ -93,10 +193,6 @@ const handleModuleClick = (module) => {
   }
 }
 
-const goBack = () => {
-  router.back()
-}
-
 const goToExercise = async (level, module) => {
   await trainer.setThemeAndModule(topic.value, level, module.id)
   router.push('/thematic-learning/thematic-session')
@@ -118,464 +214,333 @@ const loadThemeData = async () => {
   moduleToStart.value = null
   loading.value = false
 }
+onMounted(() => {
+  setTimeout(() => {
+    isMouted.value = true
+    loadThemeData
+  }, 100)
+})
 
-onMounted(loadThemeData)
 watch(topic, loadThemeData)
-
 </script>
-<template>
-  <div class="classroom-layout">
-    <div class="blackboard-wrapper">
-      <button class="back-card-button" @click="goBack">
-        <div class="pin"></div>
-        <span>{{ t('chooseTheme.btnBack') }}</span>
-      </button>
-      <div class="blackboard">
-        <transition name="chalk-fade">
-          <div v-if="showChalkMessage" class="chalk-message">
-            {{ chalkMessage }}
-          </div>
-        </transition>
-        <div v-if="jsonData" class="blackboard-content">
-          <div class="level-selector">
-            <button
-                v-for="level in jsonData.levels"
-                :key="level.level"
-                class="level-btn"
-                :class="{ 'active': selectedLevel === level.level }"
-                @click="selectLevel(level.level)"
-            >
-              {{ t('chooseTheme.level') }} {{ level.level }}
-            </button>
-          </div>
-          <div class="modules-grid" v-if="selectedLevelObj">
-            <button
-                v-for="mod in selectedLevelObj.modules"
-                :key="mod.id"
-                class="module-btn"
-                :class="{
-                        'locked': !isModuleUnlocked(selectedLevelObj.level, mod.id),
-                        'selected': moduleToStart && mod.id === moduleToStart.id
-                     }"
-                @click="handleModuleClick(mod)"
-            >
-              {{ t('chooseTheme.module') }} {{ mod.id }}
-            </button>
-          </div>
-          <div class="start-button-container" v-if="moduleToStart">
-            <button class="start-button" @click="startSelectedModule">
-              {{ t('chooseTheme.btnStart') }}
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="corkboard">
-      <h2 class="corkboard-title">{{ t('chooseTheme.choose') }}</h2>
-      <div class="corkboard-themes">
-        <button
-            v-for="theme in themes"
-            :key="theme.key"
-            class="theme__card-choice"
-            :class="{ active: theme.key === selectedTopic }"
-            :style="{ top: theme.position.top, left: theme.position.left, transform: `rotate(${theme.position.rotate})` }"
-            @click="selectedTopic = theme.key"
-        >
-          <div class="pin"></div>
-          <img :src="theme.img" :alt="theme.name"/>
-          <span>{{ t(theme.name) }}</span>
-        </button>
-      </div>
-    </div>
-  </div>
 
-</template>
+<style scoped>
 
-<style>
-
-:root {
-  --classroom-bg: #f0ebe5;
-  --blackboard-bg: #2c3e50;
-  --corkboard-bg: #d2b48c;
-  --chalk-color: #ecf0f1;
-  --chalk-yellow: #f1c40f;
-}
-
-.classroom-layout {
-  display: flex;
-  height: 100svh;
-  padding: 2rem;
-  gap: 2rem;
+.theme-page {
   font-family: "Nunito", sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: var(--bg);
 }
 
-.blackboard-wrapper {
-  flex: 2;
-  background: #60a5fa;
-  padding: 20px;
-  border-radius: 24px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0px #1e1e1e;
+
+.banner {
+  padding: 0 15px;
+}
+
+.page-header {
   display: flex;
-  position: relative;
+  align-items: center;
+  padding: 5px 10px 15px 10px;
+  flex-shrink: 0;
+  z-index: 10;
+  background: var(--bg);
 }
 
-.blackboard {
-  flex: 1;
-  background: #1e1e1e;
-  border-radius: 12px;
-  border: none;
-  box-shadow: none;
-  padding: 2.5rem 2rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+.page-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--title);
+  text-shadow: 0 1px var(--title);;
+  margin: 0 0 0 16px;
 }
 
-.blackboard-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.themes-scroll {
+  width: 100%;
+  overflow-x: auto;
+  padding: 8px 0 20px 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.back-card-button {
-  position: absolute;
-  top: 15px;
-  left: -15px;
-  z-index: 20;
-  background: #fff;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 16px;
-  transform: rotate(-5deg);
-  transition: all 0.2s ease-in-out;
-}
-
-.back-card-button .pin {
+.themes-scroll::-webkit-scrollbar {
   display: none;
 }
 
-.back-card-button span {
-  font-size: 1.2rem;
-  color: #1e1e1e;
-  font-weight: 400;
-  font-family: "Nunito", sans-serif;
-}
-
-.level-selector {
+.themes-container {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0.5rem;
-  border-radius: 16px;
+  gap: 12px;
+  padding: 0 16px;
+  width: max-content;
 }
 
-.level-btn {
-  color: #fff;
-  background: transparent;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
-  font-family: "Nunito", sans-serif;
-  border-radius: 12px;
+.theme-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 125px;
+  height: 135px;
+  background: var(--tabBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  border-radius: 20px;
   cursor: pointer;
+  padding: 10px;
   transition: all 0.2s ease;
 }
 
-.level-btn.active {
-  background-color: #f1c40f;
-  color: #1e1e1e;
+.theme-card.active {
+  border: 2px solid #5a96b7;
+}
+
+.theme-icon-wrapper {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.theme-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.theme-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--titleColor);
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.theme-card.active .theme-name {
+  color: var(--titleColor);
+  opacity: 1;
+}
+
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  overflow-y: auto;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 140px);
+  scrollbar-width: none;
+}
+
+.content-area::-webkit-scrollbar {
+  display: none;
+}
+
+.level-tabs-wrapper {
+  margin-bottom: 20px;
+}
+
+.level-tabs {
+  display: flex;
+  background: var(--tabBg);
+  padding: 5px;
+  border-radius: 30px;
+  border: 3px solid var(--tabsSlideBorderColor);
+  gap: 4px;
+  width: 100%;
+}
+
+.level-tab {
+  flex: 1;
+  padding: 10px 4px;
+  background: transparent;
+  color: var(--titleColor);
+  opacity: 0.6;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.level-tab.active {
+  background: var(--tabsSlideBg);
+  color: var(--titleColor);
+  opacity: 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .modules-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
 }
 
-.module-btn {
-  color: #fff;
-  background: transparent;
-  border: 3px dashed #888;
-  padding: 1rem 0.5rem;
-  font-size: 1.1rem;
-  font-family: "Nunito", sans-serif;
-  border-radius: 16px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.module-btn:hover:not(.locked) {
-  border-style: solid;
-  border-color: #fff;
-}
-
-.module-btn.locked {
-  color: #888;
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-.module-btn.selected {
-  border-style: solid;
-  border-color: #f1c40f;
-  background-color: rgba(241, 196, 15, 0.1);
-}
-
-.start-button-container {
-  margin-top: auto;
-  padding-top: 2rem;
-  text-align: center;
-}
-
-.start-button {
-  background: #4ade80;
-  border: 3px solid #1e1e1e;
-  color: #1e1e1e;
-  padding: 0.8rem 2.5rem;
-  font-size: 1.5rem;
-  font-family: "Nunito", sans-serif;
-  border-radius: 16px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 4px 4px 0px #1e1e1e;
-}
-
-.start-button:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
-}
-
-.chalk-message {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-4deg);
-  color: #ee4c4c;
-  font-family: "Nunito", sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  width: 100%;
-  z-index: 100;
-  text-align: center;
-}
-
-.chalk-fade-enter-active, .chalk-fade-leave-active {
-  transition: opacity 0.4s ease;
-}
-
-.chalk-fade-enter-from, .chalk-fade-leave-to {
-  opacity: 0;
-}
-
-.corkboard {
-  flex: 1;
-  background: #ffffff;
-  border-radius: 24px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0px #1e1e1e;
-  padding: 1.5rem;
+.module-card {
   position: relative;
-}
-
-.corkboard-title {
-  font-family: "Nunito", sans-serif;
-  font-size: 2.5rem;
-  text-align: center;
-  color: #1e1e1e;
-  margin-bottom: 1rem;
-}
-
-.corkboard-themes {
-  position: relative;
-  height: calc(100% - 60px);
-}
-
-.theme__card-choice {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  background: #fff;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  cursor: pointer;
+  background: var(--tabBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  border-radius: 16px;
+  padding: 6px 12px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem;
-  transition: all 0.2s ease-in-out;
-  border-radius: 20px;
+  justify-content: center;
+  transition: all 0.1s ease;
+  cursor: pointer;
+
 }
 
-.theme__card-choice:hover {
-  z-index: 10;
+.module-card:active:not(.locked) {
+  background: var(--settingsSectionBg);
 }
 
-.theme__card-choice.active {
-  box-shadow: 0 0 0 4px #1e1e1e, 0 0 0 8px #f1c40f;
-  z-index: 5;
+.module-card.selected {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: #3b82f6;
 }
 
-.theme__card-choice .pin {
-  display: none;
+.module-card.locked {
+  background: var(--settingsSectionBg);
+  border-color: var(--tabsSlideBorderColor);
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
-.theme__card-choice img {
-  width: 50px;
-  height: 50px;
+.module-title {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--titleColor);
+  opacity: 0.7;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
 }
 
-.theme__card-choice span {
-  font-size: 1.1rem;
-  color: #1e1e1e;
-  font-weight: 400;
+.selected .module-title {
+  color: #3b82f6;
+  opacity: 1;
 }
 
-@media (max-width: 1023px) {
-  .classroom-layout {
-    padding: 0;
-    position: relative;
-  }
-
-  .blackboard-wrapper {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-    padding: 1rem;
-    padding-bottom: 180px;
-  }
-
-  .blackboard {
-    padding: 1rem;
-  }
-
-  .back-card-button {
-    top: 10px;
-    left: 10px;
-    transform: rotate(0deg);
-  }
-
-  .corkboard {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 180px;
-    width: auto;
-    max-width: none;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-    z-index: 100;
-  }
-
-  .corkboard-title {
-    display: none;
-  }
-
-  .corkboard-themes {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    overflow-x: auto;
-    padding: 0 1.5rem;
-  }
-
-  .corkboard-themes::-webkit-scrollbar {
-    height: 8px;
-  }
-
-  .corkboard-themes::-webkit-scrollbar-thumb {
-    background: #1e1e1e;
-    border-radius: 4px;
-  }
-
-  .corkboard-themes::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
-  }
-
-  .theme__card-choice {
-    position: static !important;
-    transform: none !important;
-    top: auto !important;
-    left: auto !important;
-    flex-shrink: 0;
-    width: 130px;
-    height: 130px;
-  }
+.locked .module-title {
+  opacity: 0.4;
 }
 
-@media (max-width: 767px) {
-  .blackboard-wrapper {
-    padding: 25px 25px 150px 25px;
-  }
-
-  .start-button-container {
-    padding: 0;
-  }
-
-  .level-selector {
-    flex-wrap: wrap;
-  }
-
-  .blackboard-content {
-    padding: 40px 10px;
-  }
-
-  .modules-grid {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .module-btn {
-    padding: .7rem;
-  }
-
-  .corkboard {
-    height: 160px;
-  }
-
-  .theme__card-choice {
-    width: 110px;
-    height: 110px;
-  }
-
-  .theme__card-choice img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .theme__card-choice span {
-    font-size: 1rem;
-  }
-
-  .back-card-button {
-    padding: 8px 16px;
-    top: 13px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .back-card-button span {
-    font-size: 1rem;
-  }
+.module-number {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--titleColor);
+  line-height: 1;
 }
 
-@media (max-width: 1280px) {
-  .scene-decoration--picture {
-    display: none;
-  }
+.selected .module-number {
+  color: #3b82f6;
 }
 
+.locked .module-number {
+  opacity: 0.4;
+}
 
+.module-status-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+  background: #22c55e;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.bottom-action {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 16px calc(env(safe-area-inset-bottom) + 16px);
+  background: linear-gradient(to top, var(--bg) 80%, transparent);
+  z-index: 20;
+}
+
+.btn-start {
+  width: 100%;
+  padding: 16px;
+  background: #22c55e;
+  border: 2px solid #16a34a;
+  border-bottom-width: 5px;
+  border-radius: 24px;
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.btn-start:active {
+  transform: translateY(3px);
+  border-bottom-width: 2px;
+  margin-bottom: 3px;
+}
+
+.toast-message {
+  position: fixed;
+  top: calc(env(safe-area-inset-top) + 80px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ef4444;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 15px;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
+  text-align: center;
+  width: max-content;
+  max-width: 90%;
+}
+
+.toast-fade-enter-active,
+.toast-fade-leave-active {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.toast-fade-enter-from,
+.toast-fade-leave-to {
+  opacity: 0;
+  transform: translate(-50%, -20px) scale(0.9);
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(150%);
+  opacity: 0;
+}
 </style>
