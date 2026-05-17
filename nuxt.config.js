@@ -74,7 +74,10 @@ export default defineNuxtConfig({
 
 	vuefire: {
 		config: firebaseConfig,
-		auth: false,
+		auth: {
+			enabled: true,
+			popupRedirectResolver: false
+		},
 		firestore: {
 			experimentalForceLongPolling: true,
 		},
@@ -177,26 +180,11 @@ export default defineNuxtConfig({
 			include: [
 				'@capacitor/filesystem',
 				'capacitor-blob-writer'
-			]
+			],
+
 		}
 	},
-
 	nitro: {
 		preset: 'static'
 	},
-
-	/*routeRules: {
-		'/': {
-			prerender: true,
-		},
-		'/!**': {
-			ssr: false,
-			headers: { 'Cache-Control': 'public, max-age=0, must-revalidate' }
-		},
-		'/admin/!**': { status: 404 },
-		'/wp-login.php': { status: 404 },
-		'/sounds/!**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/images/!**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/!*.png': { headers: { 'Cache-Control': 'public, max-age=2592000' } }
-	},*/
 })

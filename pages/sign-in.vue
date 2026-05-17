@@ -88,9 +88,8 @@
 
 <script setup>
 import {ref, computed, watch, onMounted, onUnmounted} from 'vue'
-import {userAuthStore} from '../../store/authStore.js'
+import {userAuthStore} from '../store/authStore.js'
 import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
 import {mapErrors} from '../utils/errorsHandler.js'
 import View from '../../assets/images/loginEyes/view.svg'
 import Hide from '../../assets/images/loginEyes/hide.svg'
@@ -155,7 +154,6 @@ const handleSocialLogin = (provider) => {
     try {
       if (provider === 'google') await authStore.loginWithGoogle()
       if (provider === 'apple') await authStore.loginWithApple()
-      // if (provider === 'facebook') await authStore.loginWithFacebook()
       emits('close-auth-form')
       router.push('/')
     } catch (e) {

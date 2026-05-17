@@ -5,11 +5,10 @@ const config: CapacitorConfig = {
   appId: 'com.skillupgerman',
   appName: 'skillupgerman',
   webDir: '.output/public',
-  server: {
-    iosScheme: "https",
-    androidScheme: "https",
-  },
   plugins: {
+    CapacitorHttp: {
+      enabled: true,
+    },
     /*StatusBar: {
       overlaysWebView: true,
       style: 'DARK',
