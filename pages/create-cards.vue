@@ -6,8 +6,8 @@
       </NuxtLink>
     </div>
 
-    <div class="cards__wrapper">
-
+    <!-- ====================== ARTICLES MODE ====================== -->
+    <div v-if="cardMode === 'articles'" class="cards__wrapper">
       <div class="form-block">
         <div class="mode-switch">
           <button
@@ -28,390 +28,465 @@
           </button>
         </div>
 
-        <!-- =============== ARTICLES PANEL =============== -->
-        <template v-if="cardMode === 'articles'">
-          <h2 class="title">{{ editingCardId ? 'Edit' : t('choiceTheme.create') }}</h2>
+        <h2 class="title">{{ editingCardId ? 'Edit' : t('choiceTheme.create') }}</h2>
 
-          <form @submit.prevent="saveArticleCard" class="form">
-            <div class="custom-topic-list">
-              <div class="custom-topic-label">{{ t('choiceTheme.theme') }}</div>
+        <form @submit.prevent="saveArticleCard" class="form">
+          <div class="custom-topic-list">
+            <div class="custom-topic-label">{{ t('choiceTheme.theme') }}</div>
 
-              <div class="custom-select" tabindex="0" @blur="open = false">
-                <div class="custom-select__trigger" @click="toggle" :class="{ open }">
-                  <span>{{ form.topic ? t(themenMap[form.topic]) : t('choiceTheme.choice') }}</span>
-                  <img :class="{ open }" class="arrow" src="../assets/images/arrowNav.svg" alt="arrow"/>
-                </div>
-
-                <div v-if="open" class="custom-select__dropdown">
-                  <div
-                      v-for="(name, key) in themenMap"
-                      :key="key"
-                      class="custom-select__option"
-                      :class="{ selected: form.topic === key }"
-                      @click="select(key)"
-                  >
-                    {{ t(name) }}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <input
-                v-model="form.level"
-                type="number"
-                class="input"
-                :placeholder="t('choiceTheme.difficult')"
-                min="1"
-                max="10"
-            />
-
-            <textarea
-                v-model="form.sentence"
-                class="input input__area"
-                :placeholder="t('choiceTheme.placeholder')"
-                required
-                rows="2"
-            />
-
-            <input
-                v-model="form.translation"
-                type="text"
-                class="input"
-                :placeholder="t('choiceTheme.translate')"
-            />
-
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary">
-                {{ editingCardId ? 'Сохранить' : t('choiceTheme.btn') }}
-              </button>
-              <button
-                  v-if="editingCardId"
-                  type="button"
-                  @click="resetForm"
-                  class="btn btn-secondary"
-              >
-                cancel
-              </button>
-            </div>
-          </form>
-        </template>
-
-        <!-- =============== PICTURES PANEL =============== -->
-        <template v-else>
-          <div class="pack-info">
-            <h2 class="title">Готовые карточки</h2>
-<!--            <p class="pack-text">-->
-<!--              Режимы: учить / тест. Прогресс сохраняется по теме.-->
-<!--            </p>-->
-
-            <div class="submode-switch">
-              <button
-                  class="submode-btn"
-                  :class="{ active: pictureView === 'learn' }"
-                  @click="startLearn()"
-              >
-                Учить
-              </button>
-              <button
-                  class="submode-btn"
-                  :class="{ active: pictureView === 'test' }"
-                  @click="startTest()"
-              >
-                Тест
-              </button>
-            </div>
-
-            <!-- topic filter -->
-            <div class="custom-topic-list" style="margin-top: 14px;">
-              <div class="custom-topic-label">Тема</div>
-
-              <div class="custom-select" tabindex="0" @blur="open = false">
-                <div class="custom-select__trigger" @click="toggle" :class="{ open }">
-                  <span>{{ pictureTopic ? t(themenMap[pictureTopic]) : 'Выбери тему' }}</span>
-                  <img :class="{ open }"
-                       class="arrow"
-                       src="../assets/images/arrowNav.svg"
-                       alt="arrow"/>
-                </div>
-
-                <div v-if="open" class="custom-select__dropdown">
-
-                  <div
-                      v-for="topic in topicStats"
-                      :key="topic.key"
-                      class="custom-select__option"
-                      :class="{ selected: pictureTopic === topic.key }"
-                      @click="selectPictureTopic(topic.key)"
-                  >
-                    {{ topic.icon }} {{ t(topic.titleKey) }}
-                    <span v-if="!topic.unlocked"> 🔒</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="pack-count">
-              Карточек: <b>{{ basePictureList.length }}</b>
-            </div>
-
-            <div class="progress-box" v-if="topicTotal > 0">
-              Прогресс:
-              <b>{{ topicKnownCount }}/{{ topicTotal }}</b>
-              <span class="progress-pct">({{ topicProgressPct }}%)</span>
-            </div>
-
-            <div class="topic-rail">
-              <button
-                  v-for="topic in topicStats"
-                  :key="topic.key"
-                  type="button"
-                  class="topic-chip"
-                  :class="{
-      active: pictureTopic === topic.key,
-      locked: !topic.unlocked,
-      completed: topic.completed
-    }"
-                  :disabled="!topic.unlocked"
-                  @click="selectPictureTopic(topic.key)"
-              >
-                <div class="topic-chip__icon">{{ topic.icon }}</div>
-                <div class="topic-chip__level">Lv. {{ topic.order }}</div>
-              </button>
-            </div>
-            <div v-if="currentTopicStat" class="topic-spotlight">
-              <div class="topic-spotlight__top">
-                <div class="topic-spotlight__icon">{{ currentTopicStat.icon }}</div>
-                <div>
-                  <div class="topic-spotlight__name">{{ t(currentTopicStat.titleKey) }}</div>
-                  <div class="topic-spotlight__level">Level {{ currentTopicStat.order }}</div>
-                </div>
+            <div class="custom-select" tabindex="0" @blur="open = false">
+              <div class="custom-select__trigger" @click="toggle" :class="{ open }">
+                <span>{{ form.topic ? t(themenMap[form.topic]) : t('choiceTheme.choice') }}</span>
+                <img :class="{ open }" class="arrow" src="../assets/images/arrowNav.svg" alt="arrow"/>
               </div>
 
-              <div class="topic-spotlight__progress">
-                {{ currentTopicStat.knownCount }}/{{ currentTopicStat.total }} · {{ currentTopicStat.percent }}%
-              </div>
-
-              <div class="topic-spotlight__bar">
+              <div v-if="open" class="custom-select__dropdown">
                 <div
-                    class="topic-spotlight__bar-fill"
-                    :style="{ width: `${currentTopicStat.percent}%` }"
-                />
+                    v-for="(name, key) in themenMap"
+                    :key="key"
+                    class="custom-select__option"
+                    :class="{ selected: form.topic === key }"
+                    @click="select(key)"
+                >
+                  {{ t(name) }}
+                </div>
               </div>
-
-              <div class="topic-spotlight__status">
-                <span v-if="currentTopicStat.completed">✅ Пройдено</span>
-                <span v-else-if="!currentTopicStat.unlocked">🔒 Закрыто</span>
-                <span v-else>🟢 Открыто</span>
-              </div>
-            </div>
-
-            <div class="progress-box" v-if="pictureView === 'test' && testWrongCount">
-              Ошибок в тесте: <b>{{ testWrongCount }}</b>
             </div>
           </div>
-        </template>
+
+          <input
+              v-model="form.level"
+              type="number"
+              class="input"
+              :placeholder="t('choiceTheme.difficult')"
+              min="1"
+              max="10"
+          />
+
+          <textarea
+              v-model="form.sentence"
+              class="input input__area"
+              :placeholder="t('choiceTheme.placeholder')"
+              required
+              rows="2"
+          />
+
+          <input
+              v-model="form.translation"
+              type="text"
+              class="input"
+              :placeholder="t('choiceTheme.translate')"
+          />
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+              {{ editingCardId ? 'Сохранить' : t('choiceTheme.btn') }}
+            </button>
+            <button
+                v-if="editingCardId"
+                type="button"
+                @click="resetForm"
+                class="btn btn-secondary"
+            >
+              cancel
+            </button>
+          </div>
+        </form>
       </div>
 
       <div class="cards-block">
         <h2 class="title cards-title">{{ t('choiceTheme.available') }}</h2>
 
+        <div class="search-bar">
+          <input
+              v-model="searchQuery"
+              class="input search-input"
+              type="text"
+              :placeholder="t('choiceTheme.search')"
+          />
+          <input
+              v-model="levelFilter"
+              class="input search-level"
+              type="number"
+              min="1"
+              max="10"
+              :placeholder="t('choiceTheme.difficult')"
+          />
+        </div>
 
-        <template v-if="cardMode === 'articles'">
-          <div class="search-bar">
-            <input
-                v-model="searchQuery"
-                class="input search-input"
-                type="text"
-                :placeholder="t('choiceTheme.search')"
-            />
-            <input
-                v-model="levelFilter"
-                class="input search-level"
-                type="number"
-                min="1"
-                max="10"
-                :placeholder="t('choiceTheme.difficult')"
-            />
+        <div class="cards-grid">
+          <div v-for="card in filteredArticleCards" :key="card.id" class="card-scene">
+            <div
+                class="magic-card"
+                :class="{ 'is-flipped': flippedCardId === card.id }"
+                @click="!isCardFlipped(card.id) && flipCard(card)"
+            >
+              <div class="card-face card-front" :class="getTopicColorClass(card.topic)">
+                <div v-if="canEdit(card)" class="card-actions">
+                  <button @click.stop="initiateEdit(card)" class="action-btn edit-btn" title="edit">✏️</button>
+                  <button @click.stop="initiateDelete(card)" class="action-btn delete-btn" title="Delete">🗑️</button>
+                </div>
+
+                <div class="card-content">
+                  <div v-if="card.topic" class="card-topic">{{ t(themenMap[card.topic]) }}</div>
+                </div>
+
+                <div class="card-footer">
+                  <div v-if="card.level" class="card-level">⚡️ Level {{ card.level }}</div>
+                </div>
+              </div>
+
+              <div class="card-face card-back">
+                <button @click.stop="unflipCard()" class="card-close-btn">×</button>
+
+                <div class="card-back-content">
+                  <div class="modal-sentence">{{ card.hiddenSentence }}</div>
+
+                  <form v-if="!guessResult" @submit.prevent="makeGuess" class="guess-form">
+                    <div v-for="(pos, idx) in card.articles" :key="idx" class="guess-field">
+                      <input
+                          v-model="userAnswers[idx]"
+                          class="input guess-input"
+                          required
+                          autocomplete="off"
+                          @click.stop
+                      />
+                    </div>
+
+                    <button type="submit" class="btn guess-btn" @click.stop>Check</button>
+                  </form>
+
+                  <div v-else class="guess-result">
+                    <div
+                        v-for="(art, idx) in card.articles"
+                        :key="'result' + idx"
+                        class="guess-answer"
+                        :class="{ correct: guessResult[idx]?.correct, wrong: !guessResult[idx]?.correct }"
+                    >
+                      <b>Пропуск {{ idx + 1 }}:</b>
+                      <span v-if="guessResult[idx]?.correct"> Right! ({{ art }})</span>
+                      <span v-else> Mistate! (Right {{ card.articles[idx] }})</span>
+                    </div>
+
+                    <button @click.stop="unflipCard(true)" class="btn close-btn">further</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div class="cards-grid">
-            <div v-for="card in filteredArticleCards" :key="card.id" class="card-scene">
-              <div
-                  class="magic-card"
-                  :class="{ 'is-flipped': flippedCardId === card.id }"
-                  @click="!isCardFlipped(card.id) && flipCard(card)"
+        <div v-if="!filteredArticleCards.length" class="empty-state">
+          Нет карточек 😿
+        </div>
+      </div>
+    </div>
+
+    <div v-else class="picture-page">
+      <div class="mode-switch picture-mode-switch">
+        <button
+            type="button"
+            class="mode-btn"
+            :class="{ active: cardMode === 'articles' }"
+            @click="setMode('articles')"
+        >
+          Артикли
+        </button>
+        <button
+            type="button"
+            class="mode-btn"
+            :class="{ active: cardMode === 'picture' }"
+            @click="setMode('picture')"
+        >
+          Картинки
+        </button>
+      </div>
+
+      <!-- ====================== SETUP STAGE ====================== -->
+      <div v-if="pageStage === 'setup'" class="setup-layout">
+        <div class="setup-panel">
+          <div class="setup-card">
+            <h2 class="title">Выбери режим обучения</h2>
+
+            <div class="setup-section">
+              <div class="setup-step">Шаг 1</div>
+              <div class="setup-label">Способ изучения</div>
+
+              <div class="game-mode-grid">
+                <button
+                    class="game-mode-card"
+                    :class="{ active: pictureView === 'learn' }"
+                    @click="setPictureSubmode('learn')"
+                >
+                  <span class="game-mode-card__icon">📘</span>
+                  <span class="game-mode-card__title">Учить</span>
+                  <span class="game-mode-card__text">
+                Открывай карточки, слушай слово и отмечай, знаешь его или нет
+              </span>
+                </button>
+
+                <button
+                    class="game-mode-card"
+                    :class="{ active: pictureView === 'test' }"
+                    @click="setPictureSubmode('test')"
+                >
+                  <span class="game-mode-card__icon">🧠</span>
+                  <span class="game-mode-card__title">Тест</span>
+                  <span class="game-mode-card__text">
+                Проверка знаний: смотри на картинку и выбирай правильный ответ
+              </span>
+                </button>
+              </div>
+            </div>
+
+            <div class="setup-section">
+              <div class="setup-step">Шаг 2</div>
+              <div class="setup-label">Темы</div>
+
+              <div class="topic-level-grid">
+                <button
+                    v-for="topic in topicStats"
+                    :key="topic.key"
+                    type="button"
+                    class="topic-level-card"
+                    :class="{
+                active: pictureTopic === topic.key,
+                locked: !topic.unlocked,
+                completed: topic.completed
+              }"
+                    :disabled="!topic.unlocked"
+                    @click="selectPictureTopic(topic.key)"
+                >
+                  <div class="topic-level-card__top">
+                    <div class="topic-level-card__icon">{{ topic.icon }}</div>
+                    <div class="topic-level-card__badge">
+                      Lv. {{ topic.order }}
+                    </div>
+                  </div>
+
+                  <div class="topic-level-card__name">
+                    {{ t(topic.titleKey) }}
+                  </div>
+
+                  <div class="topic-level-card__meta">
+                    <span v-if="topic.unlocked">{{ topic.knownCount }}/{{ topic.total }}</span>
+                    <span v-else>Закрыто</span>
+                  </div>
+
+                  <div class="topic-level-card__bar" v-if="topic.unlocked">
+                    <div
+                        class="topic-level-card__bar-fill"
+                        :style="{ width: `${topic.percent}%` }"
+                    />
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <div v-if="currentTopicStat" class="selected-topic-panel">
+              <div class="setup-step">Шаг 3</div>
+
+              <div class="selected-topic-panel__top">
+                <div class="selected-topic-panel__icon">{{ currentTopicStat.icon }}</div>
+                <div>
+                  <div class="selected-topic-panel__title">{{ t(currentTopicStat.titleKey) }}</div>
+                  <div class="selected-topic-panel__subtitle">
+                    Level {{ currentTopicStat.order }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="selected-topic-stats">
+                <div class="selected-topic-stat">
+                  <span class="selected-topic-stat__label">Карточек</span>
+                  <span class="selected-topic-stat__value">{{ currentTopicStat.total }}</span>
+                </div>
+                <div class="selected-topic-stat">
+                  <span class="selected-topic-stat__label">Изучено</span>
+                  <span class="selected-topic-stat__value">{{ currentTopicStat.knownCount }}</span>
+                </div>
+                <div class="selected-topic-stat">
+                  <span class="selected-topic-stat__label">Прогресс</span>
+                  <span class="selected-topic-stat__value">{{ currentTopicStat.percent }}%</span>
+                </div>
+              </div>
+
+              <div class="selected-topic-panel__status">
+                <span v-if="currentTopicStat.completed">✅ Пройдено</span>
+                <span v-else-if="!currentTopicStat.unlocked">🔒 Закрыто</span>
+                <span v-else>🟢 Открыто</span>
+              </div>
+
+              <button
+                  class="btn btn-primary launch-btn"
+                  @click="startSession"
+                  :disabled="!canStartPictureSession"
               >
-                <!-- FRONT -->
-                <div class="card-face card-front" :class="getTopicColorClass(card.topic)">
-                  <div v-if="canEdit(card)" class="card-actions">
-                    <button @click.stop="initiateEdit(card)" class="action-btn edit-btn" title="edit">✏️</button>
-                    <button @click.stop="initiateDelete(card)" class="action-btn delete-btn" title="Delete">🗑️</button>
-                  </div>
+                {{ canStartPictureSession ? 'Начать' : 'Недоступно' }}
+              </button>
 
-                  <div class="card-content">
-                    <div v-if="card.topic" class="card-topic">{{ t(themenMap[card.topic]) }}</div>
-                  </div>
+              <p v-if="!canStartPictureSession" class="launch-hint">
+                <span v-if="!currentTopicStat?.unlocked">Сначала пройди предыдущую тему</span>
+                <span v-else-if="!currentTopicStat?.total">В этой теме пока нет карточек</span>
+              </p>
+            </div>
+          </div>
+        </div>
 
-                  <div class="card-footer">
-                    <div v-if="card.level" class="card-level">⚡️ Level {{ card.level }}</div>
-                  </div>
-                </div>
+        <div class="preview-panel">
+          <div class="preview-card">
+            <h2 class="title preview-title">Предпросмотр</h2>
 
-                <!-- BACK -->
-                <div class="card-face card-back">
-                  <button @click.stop="unflipCard()" class="card-close-btn">×</button>
+            <div class="preview-mode-line">
+              <span class="preview-pill">{{ pictureViewLabel }}</span>
+              <span class="preview-pill muted">
+            {{ currentTopicStat ? t(currentTopicStat.titleKey) : 'Тема' }}
+          </span>
+              <span v-if="currentTopicStat" class="preview-pill muted">
+            {{ currentTopicStat.total }} карточек
+          </span>
+            </div>
 
-                  <div class="card-back-content">
-                    <div class="modal-sentence">{{ card.hiddenSentence }}</div>
+            <div class="preview-demo-card">
+              <img
+                  v-if="previewCard"
+                  class="preview-demo-card__image"
+                  :src="getWordImageUrl(previewCard.imageKey)"
+                  :alt="previewCard.deWord || 'preview'"
+              />
+              <div v-else class="preview-demo-card__empty">Нет карточек</div>
+            </div>
 
-                    <form v-if="!guessResult" @submit.prevent="makeGuess" class="guess-form">
-                      <div v-for="(pos, idx) in card.articles" :key="idx" class="guess-field">
-                        <input
-                            v-model="userAnswers[idx]"
-                            class="input guess-input"
-                            required
-                            autocomplete="off"
-                            @click.stop
-                        />
-                      </div>
+            <div class="preview-description">
+              <template v-if="pictureView === 'learn'">
+                Открой карточку, послушай слово и отметь, знаешь его или нет.
+              </template>
+              <template v-else>
+                Посмотри на картинку и выбери правильное немецкое слово из вариантов.
+              </template>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                      <button type="submit" class="btn guess-btn" @click.stop>Check</button>
-                    </form>
+      <!-- ====================== SESSION ====================== -->
+      <div v-else class="session-container">
+        <div class="session-header">
+          <button class="icon-btn exit-icon-btn" @click="goToSetup">✕</button>
 
-                    <div v-else class="guess-result">
-                      <div
-                          v-for="(art, idx) in card.articles"
-                          :key="'result' + idx"
-                          class="guess-answer"
-                          :class="{ correct: guessResult[idx]?.correct, wrong: !guessResult[idx]?.correct }"
-                      >
-                        <b>Пропуск {{ idx + 1 }}:</b>
-                        <span v-if="guessResult[idx]?.correct"> Right! ({{ art }})</span>
-                        <span v-else> Mistate! (Right {{ card.articles[idx] }})</span>
-                      </div>
+          <div class="session-header-center">
+        <span class="session-header-title">
+          {{ currentTopicStat?.icon }} {{ t(currentTopicStat?.titleKey) }}
+        </span>
 
-                      <button @click.stop="unflipCard(true)" class="btn close-btn">further</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="session-header-subline">
+              <span class="session-mode-badge">{{ pictureViewLabel }}</span>
+              <span class="session-step-badge">{{ sessionCurrentStep }}/{{ sessionTotalSteps }}</span>
+            </div>
+
+            <div class="mini-progress-bg">
+              <div class="mini-progress-fill" :style="{ width: `${topicProgressPct}%` }"></div>
             </div>
           </div>
 
-          <div v-if="!filteredArticleCards.length" class="empty-state">
-            Нет карточек 😿
+          <div class="session-stats">
+        <span v-if="pictureView === 'test'" class="error-badge">
+          Ошибок: {{ testWrongCount }}
+        </span>
+            <span v-else class="error-badge neutral-badge">
+          Раунд {{ learnRound }}
+        </span>
           </div>
-        </template>
+        </div>
 
-        <!-- =============== PICTURES: LEARN =============== -->
-        <template v-else-if="pictureView === 'learn'">
-          <div class="learn-wrap" v-if="learnQueue.length">
-            <div class="learn-card">
-              <div class="learn-top">
-                <div class="learn-count --learned">
-                  {{ learnedWordsCount }}
-                </div>
-                <div class="badge --notlearned">{{ learnUnknownCount }}</div>
-              </div>
-              <!-- FLIP IMAGE CARD -->
+        <main class="session-content">
+          <template v-if="pictureView === 'learn'">
+            <div class="focused-card-wrapper">
+              <div class="learn-flip-scene" @click="toggleLearnFlip">
+                <div class="learn-flip-card" :class="{ flipped: learnFlipped }">
+                  <div class="learn-flip-face learn-flip-front">
+                    <img :src="getWordImageUrl(currentLearnCard.imageKey)" class="main-img"/>
+                    <div class="hint-tap">Нажми, чтобы увидеть слово</div>
+                  </div>
 
-              <div class="learn-nav">
-                <button class="btn btn-secondary tiny-btn" :disabled="learnIndex === 0" @click="learnPrev">←</button>
-                <div class="learn-flip-scene" @click="toggleLearnFlip">
-                  <div class="learn-flip-card" :class="{ flipped: learnFlipped }">
-                    <div class="learn-flip-face learn-flip-front">
-                      <img
-                          class="learn-image"
-                          :src="getWordImageUrl(currentLearnCard.imageKey)"
-                          alt="img"
-                          draggable="false"
-                      />
+                  <div class="learn-flip-face learn-flip-back">
+                    <div class="word-info">
+                      <SoundBtn :text="currentLearnCard.deWord" class="large-sound"/>
+                      <h2 class="de-word">{{ currentLearnCard.deWord }}</h2>
                     </div>
-
-                    <div class="learn-flip-face learn-flip-back">
-                      <SoundBtn
-                          :text="currentLearnCard.deWord"
-                      />
-                      <div class="learn-de">
-                        {{ currentLearnCard.deWord || currentLearnCard.imageKey }}
-                      </div>
-                    </div>
+                    <div class="word-subtext">Послушай и оцени, насколько хорошо ты знаешь это слово</div>
                   </div>
                 </div>
-                <button class="btn btn-secondary tiny-btn" :disabled="learnIndex >= learnQueue.length - 1" @click="learnNext">→</button>
               </div>
 
-
-              <div class="learn-actions">
-                <button class="btn btn-primary" @click="learnAnswer(true)">
-                  ✔️
-                </button>
-                <button class="btn btn-secondary" @click="learnAnswer(false)">
-                  ❌
-                </button>
+              <div class="learn-help-text">
+                <template v-if="!learnFlipped">
+                  Нажми на карточку, чтобы открыть перевод
+                </template>
+                <template v-else>
+                  Отметь, знаешь ты это слово или нет
+                </template>
               </div>
 
+              <div class="action-footer">
+                <button class="session-answer-btn session-answer-btn--wrong" @click="learnAnswer(false)">
+                  <span class="session-answer-btn__icon">✕</span>
+                  <span class="session-answer-btn__label">Не знаю</span>
+                </button>
 
-              <div class="flip-hint">Нажми на карточку, чтобы увидеть перевод</div>
+                <button class="session-answer-btn session-answer-btn--right" @click="learnAnswer(true)">
+                  <span class="session-answer-btn__icon">✓</span>
+                  <span class="session-answer-btn__label">Знаю</span>
+                </button>
+              </div>
             </div>
-          </div>
+          </template>
 
-          <div v-else class="empty-state">
-            Нет карточек для обучения 😿
-          </div>
-        </template>
-
-        <!-- =============== PICTURES: TEST =============== -->
-        <template v-else-if="pictureView === 'test'">
-          <div class="test-wrap" v-if="testQueue.length">
-            <div class="test-card">
-              <div class="learn-top">
-                <div class="learn-count">
-                  {{ testIndex + 1 }} / {{ testQueue.length }}
-                </div>
+          <template v-else-if="pictureView === 'test'">
+            <div class="focused-card-wrapper">
+              <div class="test-card-shell">
+                <img :src="getWordImageUrl(currentTestCard.imageKey)" class="test-img-preview"/>
               </div>
 
-              <img class="learn-image" :src="getWordImageUrl(currentTestCard.imageKey)" alt="img"/>
+              <div class="test-prompt">
+                Выбери правильное слово на немецком
+              </div>
 
-              <div class="test-question">Выбери перевод на немецкий:</div>
-
-              <div class="test-answers">
+              <div class="test-options-list">
                 <button
                     v-for="opt in testOptions"
                     :key="opt.key"
-                    class="test-option"
+                    class="test-opt-btn"
                     :class="testOptionClass(opt)"
-                    :disabled="testLocked"
                     @click="pickTestOption(opt)"
                 >
                   {{ opt.label }}
                 </button>
               </div>
 
-              <div class="test-result" v-if="testLocked">
-                <span v-if="testWasCorrect" class="ok">✅ Правильно!</span>
-                <span v-else class="bad">
-                  ❌ Неправильно. Верно:
-                  <b>{{ currentTestCard.deWord || currentTestCard.imageKey }}</b>
-                </span>
+              <div
+                  v-if="testLocked"
+                  class="test-feedback"
+                  :class="{ ok: testWasCorrect, bad: !testWasCorrect }"
+              >
+                <template v-if="testWasCorrect">
+                  ✅ Верно
+                </template>
+                <template v-else>
+                  ❌ Неверно. Правильный ответ: <b>{{ currentTestCard.deWord }}</b>
+                </template>
               </div>
 
-              <div class="learn-actions" style="gap: 10px;">
-                <button class="btn btn-secondary" :disabled="!testLocked" @click="nextTest">
-                  Далее
-                </button>
-              </div>
+              <button v-if="testLocked" class="btn btn-primary btn-next-step" @click="nextTest">
+                Далее →
+              </button>
             </div>
-          </div>
-
-          <div v-else class="empty-state">
-            Нет карточек для теста 😿
-          </div>
-        </template>
+          </template>
+        </main>
       </div>
     </div>
 
-    <!-- =============== LEARN FINISH MODAL =============== -->
+    <!-- LEARN FINISH MODAL -->
     <div
         v-if="learnFinishModalOpen"
         class="modal-overlay"
@@ -437,7 +512,8 @@
         </template>
       </div>
     </div>
-    <!-- =============== TEST FINISH MODAL =============== -->
+
+    <!-- TEST FINISH MODAL -->
     <div
         v-if="testFinishModalOpen"
         class="modal-overlay"
@@ -478,9 +554,7 @@
       </div>
     </div>
   </div>
-
 </template>
-
 <script setup>
 import {ref, watch, computed, onMounted} from 'vue'
 import {useCardsStore} from '../store/cardsStore.js'
@@ -493,6 +567,7 @@ const cardsStore = useCardsStore()
 const learnedWordsCount = ref(0)
 // ✅ pictures
 const {picturePack, getWordImageUrl} = usePicturePack()
+const pageStage = ref('setup') // 'setup' | 'session'
 
 // ====== Topics ======
 const themenMap = {
@@ -511,11 +586,24 @@ const themenMap = {
   Sport: 'cardThemen.Sport',
   Other: 'cardThemen.Other',
 }
+const canStartPictureSession = computed(() => {
+  return !!currentTopicStat.value?.unlocked && !!currentTopicStat.value?.total
+})
 
+const sessionCurrentStep = computed(() => {
+  return pictureView.value === 'learn'
+      ? learnIndex.value + 1
+      : testIndex.value + 1
+})
+
+const sessionTotalSteps = computed(() => {
+  return pictureView.value === 'learn'
+      ? learnQueue.value.length
+      : testQueue.value.length
+})
 const currentTopicStat = computed(() => {
   return topicStats.value.find((topic) => topic.key === pictureTopic.value) || topicStats.value.find((topic) => topic.unlocked)
 })
-
 
 
 const shuffleArray = (arr) => {
@@ -530,7 +618,6 @@ const shuffleArray = (arr) => {
 // ====== Mode ======
 const cardMode = ref('articles') // 'articles' | 'picture'
 const setMode = (mode) => {
-  // reset article flip
   flippedCardId.value = null
   guessResult.value = null
   userAnswers.value = []
@@ -538,23 +625,51 @@ const setMode = (mode) => {
   open.value = false
 
   cardMode.value = mode
+
   if (mode === 'articles') {
+    pageStage.value = 'setup'
     resetForm()
   } else {
-    // ✅ in pictures: default = Learn
-    startLearn()
+    pageStage.value = 'setup'
+    if (!pictureTopic.value) {
+      pictureTopic.value = firstUnlockedTopic.value
+    }
+    setPictureSubmode('learn')
   }
 }
 
 // ====== PICTURE submode (ONLY learn/test) ======
 const pictureView = ref('learn') // 'learn' | 'test'
-const setPictureView = (v) => {
+const setPictureSubmode = (v) => {
   pictureView.value = v
-  // reset learn/test UI state
   learnFlipped.value = false
   testLocked.value = false
   testSelectedKey.value = null
   testWasCorrect.value = false
+}
+const pictureViewLabel = computed(() => {
+  return pictureView.value === 'learn' ? 'Учить' : 'Тест'
+})
+
+const previewCard = computed(() => {
+  return basePictureList.value[0] || null
+})
+const startSession = () => {
+  if (!pictureTopic.value) {
+    pictureTopic.value = firstUnlockedTopic.value
+  }
+
+  if (pictureView.value === 'learn') {
+    startLearn()
+  } else {
+    startTest()
+  }
+
+  pageStage.value = 'session'
+}
+
+const goToSetup = () => {
+  pageStage.value = 'setup'
 }
 
 // ====== Dropdown state ======
@@ -887,7 +1002,7 @@ const firstUnlockedTopic = computed(() => {
   return topicStats.value.find((t) => t.unlocked && t.total > 0)?.key || ''
 })
 const startLearn = () => {
-  setPictureView('learn')
+  setPictureSubmode('learn')
 
   if (!pictureTopic.value) {
     pictureTopic.value = firstUnlockedTopic.value
@@ -924,24 +1039,22 @@ const learnAnswer = (known) => {
   const card = currentLearnCard.value
   if (!card) return
 
-  // persist progress
   markKnown(card, known)
 
-  // manage unknown map
-  if (!known) learnUnknownMap.value[card.imageKey] = true
-  else if (known) learnedWordsCount.value++
-  else delete learnUnknownMap.value[card.imageKey]
+  if (!known) {
+    learnUnknownMap.value[card.imageKey] = true
+  } else {
+    delete learnUnknownMap.value[card.imageKey]
+    learnedWordsCount.value++
+  }
 
-  // always reset flip after answer
   learnFlipped.value = false
 
-  // not last => next
   if (learnIndex.value < learnQueue.value.length - 1) {
     learnIndex.value++
     return
   }
 
-  // last => modal
   const unknownList = getLearnUnknownList()
   if (!unknownList.length) openLearnFinishModal('success')
   else openLearnFinishModal('errors')
@@ -1012,7 +1125,7 @@ const buildTestOptions = () => {
   const wrong = shuffleArray(pool).slice(0, 3)
 
   testOptions.value = shuffleArray([
-    { key: correct.imageKey, label: correct.deWord || correct.imageKey, isCorrect: true },
+    {key: correct.imageKey, label: correct.deWord || correct.imageKey, isCorrect: true},
     ...wrong.map((c) => ({
       key: c.imageKey,
       label: c.deWord || c.imageKey,
@@ -1026,7 +1139,7 @@ const buildTestOptions = () => {
 }
 
 const startTest = () => {
-  setPictureView('test')
+  setPictureSubmode('test')
 
   if (!pictureTopic.value) {
     pictureTopic.value = firstUnlockedTopic.value
@@ -1099,6 +1212,7 @@ const goToNextTopic = () => {
   closeTestFinishModal()
 
   startLearn()
+  pageStage.value = 'session'
 }
 
 const nextTest = () => {
@@ -1580,25 +1694,6 @@ const nextTest = () => {
   color: #fff;
 }
 
-.pack-info {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 24px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0 #1e1e1e;
-}
-
-.pack-text {
-  margin-top: -0.5rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  opacity: 0.8;
-}
-
-.pack-count {
-  margin-top: 1rem;
-  font-weight: 700;
-}
 
 .empty-state {
   margin-top: 1rem;
@@ -1607,191 +1702,6 @@ const nextTest = () => {
   opacity: 0.7;
 }
 
-.submode-switch {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.25rem;
-}
-
-.submode-btn {
-  flex: 1;
-  font-family: 'Fredoka One', cursive;
-  border: 3px solid #1e1e1e;
-  border-radius: 14px;
-  padding: 10px 10px;
-  cursor: pointer;
-  box-shadow: 4px 4px 0 #1e1e1e;
-  background: #fff;
-  transition: all 0.2s;
-  font-size: 0.95rem;
-}
-
-.submode-btn:hover {
-  transform: translate(1px, 1px);
-  box-shadow: 3px 3px 0 #1e1e1e;
-}
-
-.submode-btn.active {
-  background: #4ade80;
-}
-
-.tiny-btn {
-  padding: 10px 14px;
-  font-size: 0.95rem;
-}
-
-.progress-box {
-  margin-top: 10px;
-  font-weight: 800;
-}
-
-.progress-pct {
-  opacity: 0.75;
-  margin-left: 6px;
-}
-
-.learn-wrap,
-.test-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
-}
-
-.learn-card,
-.test-card {
-  position: relative;
-  overflow: hidden;
-  background: #fff;
-  border: 3px solid #1e1e1e;
-  border-radius: 24px;
-  box-shadow: 8px 8px 0 #1e1e1e;
-  padding: 18px;
-}
-
-.learn-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
-}
-
-.learn-count {
-  font-weight: 900;
-  font-family: 'Fredoka One', cursive;
-}
-
-.learn-count.--learned {
-  background: #0eba0e;
-  color: #FFFFFF;
-  padding: 10px;
-  width: 50px;
-  text-align: center;
-  border-bottom-right-radius: 20px;
-  border-bottom: 3px solid #1e1e1e;
-}
-
-.badge {
-  font-weight: 900;
-  width: 50px;
-  color: #FFFFFF;
-  text-align: center;
-  border: 2px solid rgba(0, 0, 0, 0.12);
-  padding: 10px;
-  background: #e05f5f;
-  border-bottom-left-radius: 20px;
-  border-bottom: 3px solid #1e1e1e;
-}
-
-.learn-image {
-  width: 160px;
-  height: 160px;
-  object-fit: contain;
-  display: block;
-  margin: 10px auto 0;
-  background: rgba(0, 0, 0, 0.04);
-  border-radius: 22px;
-  padding: 14px;
-  border: 3px solid rgba(0, 0, 0, 0.1);
-}
-
-.learn-de {
-  margin-top: 12px;
-  text-align: center;
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.2rem;
-  color: #1e1e1e;
-}
-
-.learn-actions {
-  display: flex;
-  gap: 12px;
-  margin-top: 14px;
-}
-
-.learn-actions .btn {
-  flex: 1;
-}
-
-.learn-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 12px;
-}
-
-.test-question {
-  text-align: center;
-  margin-top: 12px;
-  font-weight: 800;
-}
-
-.test-answers {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin-top: 12px;
-}
-
-.test-option {
-  background: #fef8e4;
-  border: 3px solid #1e1e1e;
-  border-radius: 16px;
-  padding: 12px 14px;
-  font-weight: 900;
-  cursor: pointer;
-  box-shadow: 4px 4px 0 #1e1e1e;
-  transition: all 0.2s;
-  text-align: center;
-}
-
-.test-option:hover {
-  transform: translate(1px, 1px);
-  box-shadow: 3px 3px 0 #1e1e1e;
-}
-
-.test-option.correct {
-  background: #dcfce7;
-}
-
-.test-option.wrong {
-  background: #fee2e2;
-}
-
-.test-option.muted {
-  opacity: 0.7;
-}
-
-.test-result {
-  margin-top: 12px;
-  font-weight: 900;
-  text-align: center;
-}
 
 .test-result .ok {
   color: #166534;
@@ -1801,8 +1711,6 @@ const nextTest = () => {
   color: #b91c1c;
 }
 
-.learn-badges {
-}
 
 .learn-flip-scene {
   width: 100%;
@@ -1850,13 +1758,6 @@ const nextTest = () => {
   padding: 14px;
 }
 
-.flip-hint {
-  margin-top: 10px;
-  text-align: center;
-  font-weight: 700;
-  opacity: 0.65;
-  font-size: 0.95rem;
-}
 
 .modal-overlay {
   position: fixed;
@@ -1904,7 +1805,6 @@ const nextTest = () => {
 .btn:focus-visible,
 .mode-btn:focus-visible,
 .submode-btn:focus-visible,
-
 .custom-select__trigger:focus-visible,
 .test-option:focus-visible,
 .back-btn:focus-visible,
@@ -1929,7 +1829,7 @@ const nextTest = () => {
     padding-right: 0;
   }
 
-   .pack-info,
+  .pack-info,
   .form,
   .learn-card,
   .test-card,
@@ -1977,6 +1877,7 @@ const nextTest = () => {
     font-size: 1.5rem;
   }
 }
+
 .topic-rail {
   display: flex;
   gap: 10px;
@@ -2116,6 +2017,477 @@ const nextTest = () => {
   font-weight: 800;
 }
 
+.picture-page {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.picture-mode-switch {
+  max-width: 420px;
+  margin-bottom: 1.25rem;
+}
+
+.setup-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 1000px; /* Ограничение для десктопа */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.setup-card,
+.preview-card,
+.session-info-card {
+  background: #ffffff;
+  border: 3px solid #1e1e1e;
+  border-radius: 28px;
+  box-shadow: 8px 8px 0 #1e1e1e;
+  padding: 1.5rem;
+}
+
+.setup-section + .setup-section {
+  margin-top: 1.5rem;
+}
+
+.setup-label {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  color: #1e1e1e;
+  margin-bottom: 0.85rem;
+}
+
+.game-mode-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.game-mode-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+  text-align: left;
+  min-height: 150px;
+  padding: 1rem;
+  background: #fffdf5;
+  border: 3px solid #1e1e1e;
+  border-radius: 22px;
+  box-shadow: 5px 5px 0 #1e1e1e;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.game-mode-card:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 #1e1e1e;
+}
+
+.game-mode-card.active {
+  background: #fef3c7;
+  outline: 3px solid #fca13a;
+  outline-offset: 2px;
+}
+
+.game-mode-card__icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.game-mode-card__title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.15rem;
+  color: #1e1e1e;
+}
+
+.game-mode-card__text {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #444;
+  line-height: 1.35;
+}
+
+.topic-level-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.topic-level-card {
+  background: #fffdf5;
+  border: 3px solid #1e1e1e;
+  border-radius: 22px;
+  box-shadow: 5px 5px 0 #1e1e1e;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.topic-level-card:hover:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 #1e1e1e;
+}
+
+.topic-level-card.locked {
+  opacity: 0.5;
+  background: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.topic-level-card.active {
+  background: #fef3c7;
+  outline: 3px solid #fca13a;
+  outline-offset: 2px;
+}
+
+.topic-level-card.completed {
+  background: #dcfce7;
+}
+
+.topic-level-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.topic-level-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  border: 3px solid #1e1e1e;
+  background: #fff7d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.topic-level-card__badge {
+  font-family: 'Fredoka One', cursive;
+  font-size: 0.9rem;
+  color: #1e1e1e;
+}
+
+.topic-level-card__name {
+  font-weight: 900;
+  font-size: 1rem;
+  color: #1e1e1e;
+  margin-bottom: 0.5rem;
+}
+
+.topic-level-card__meta {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 0.6rem;
+}
+
+.topic-level-card__bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.08);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.topic-level-card__bar-fill {
+  height: 100%;
+  background: #4ade80;
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+.selected-topic-panel {
+  margin-top: 1.5rem;
+  background: #fffdf5;
+  border: 3px solid #1e1e1e;
+  border-radius: 24px;
+  box-shadow: 5px 5px 0 #1e1e1e;
+  padding: 1rem;
+}
+
+.selected-topic-panel__top {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.selected-topic-panel__icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  border: 3px solid #1e1e1e;
+  background: #fef3c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.selected-topic-panel__title {
+  font-weight: 900;
+  color: #1e1e1e;
+  font-size: 1.05rem;
+}
+
+.selected-topic-panel__subtitle {
+  font-family: 'Fredoka One', cursive;
+  color: #555;
+  margin-top: 0.15rem;
+  font-size: 0.9rem;
+}
+
+.selected-topic-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.selected-topic-stat {
+  background: #fff;
+  border: 2px solid #1e1e1e;
+  border-radius: 16px;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.selected-topic-stat__label {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.selected-topic-stat__value {
+  display: block;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  color: #1e1e1e;
+}
+
+.selected-topic-panel__status {
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.launch-btn {
+  width: 100%;
+  min-height: 56px;
+  font-size: 1.2rem;
+}
+
+.preview-panel {
+  min-width: 0;
+}
+
+.preview-title {
+  margin-bottom: 1rem;
+}
+
+.preview-mode-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.preview-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.8rem;
+  border: 2px solid #1e1e1e;
+  border-radius: 999px;
+  background: #fef3c7;
+  font-weight: 800;
+}
+
+.preview-pill.muted {
+  background: #f3f4f6;
+}
+
+.preview-demo-card {
+  min-height: 340px;
+  border: 3px solid #1e1e1e;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #fffdf8 0%, #fef8e4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.04);
+  padding: 1rem;
+}
+
+.preview-demo-card__image {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 24px;
+  padding: 1rem;
+  border: 3px solid rgba(0, 0, 0, 0.08);
+}
+
+.preview-demo-card__empty {
+  font-weight: 800;
+  opacity: 0.6;
+}
+
+.preview-description {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #444;
+}
+.setup-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.55rem;
+  padding: 0.32rem 0.72rem;
+  border-radius: 999px;
+  border: 2px solid #1e1e1e;
+  background: #fff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #1e1e1e;
+}
+.launch-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 4px 4px 0 #1e1e1e;
+}
+
+.launch-hint {
+  margin-top: 0.7rem;
+  text-align: center;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #666;
+}
+.session-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.session-sidebar {
+  position: sticky;
+  top: 1.5rem;
+}
+
+.session-info-card__top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.session-topic {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.session-topic__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #fef3c7;
+  border: 3px solid #1e1e1e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.session-topic__name {
+  font-weight: 900;
+  font-size: 1.05rem;
+}
+
+.session-topic__mode {
+  font-family: 'Fredoka One', cursive;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.exit-btn {
+  width: 100%;
+}
+
+.session-progress__label {
+  font-weight: 800;
+  margin-bottom: 0.65rem;
+}
+
+.session-progress__bar {
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.08);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.session-progress__fill {
+  height: 100%;
+  background: #4ade80;
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+.session-errors {
+  margin-top: 1rem;
+  font-weight: 800;
+  color: #b91c1c;
+}
+
+.session-main {
+  min-width: 0;
+}
+
+@media (max-width: 1100px) {
+  .setup-layout,
+  .session-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .session-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 700px) {
+  .game-mode-grid,
+  .topic-level-grid,
+  .selected-topic-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-demo-card {
+    min-height: 260px;
+  }
+
+  .preview-demo-card__image {
+    width: 180px;
+    height: 180px;
+  }
+}
+
 @media (max-width: 640px) {
   .topic-chip {
     width: 64px;
@@ -2143,6 +2515,103 @@ const nextTest = () => {
 
   .topic-spotlight__name {
     font-size: 0.95rem;
+  }
+}
+
+.session-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 600px; /* Важно: ограничиваем ширину, чтобы не растягивалось */
+  margin: 0 auto;
+  background: #f8fafc;
+}
+
+.session-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mini-progress-bg {
+  width: 100%;
+  height: 4px;
+  background: #eee;
+  border-radius: 2px;
+  margin-top: 4px;
+}
+
+.mini-progress-fill {
+  height: 100%;
+  background: #4caf50;
+  transition: width 0.3s ease;
+}
+
+.focused-card-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.learn-flip-scene {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Квадратная карточка */
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Картинка не обрезается и не тянется */
+  border-radius: 20px;
+}
+
+.action-footer {
+  display: flex;
+  gap: 40px;
+  margin-top: auto;
+  padding-bottom: 30px;
+}
+
+.action-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.action-btn:active {
+  transform: scale(0.9);
+}
+
+.circle-red {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.circle-green {
+  background: #dcfce7;
+  color: #22c55e;
+}
+
+/* Адаптивность для десктопа */
+@media (min-width: 768px) {
+  .session-container {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
   }
 }
 </style>
