@@ -341,7 +341,7 @@ const goToPay = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px;
+  margin: 5px 0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
 }

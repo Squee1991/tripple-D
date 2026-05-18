@@ -4,9 +4,10 @@
   "level": "A2",
   "tasks": [
     {
-      "id": "hobby_1",
+      "id": "hobby_A2_1",
       "title": "Wandern in den Bergen",
       "translation": "Поход в горы",
+      "icon": "\uD83E\uDD7E",
       "wordsPool": ["bin", "muss", "den", "mag", "will", "meinem"],
       "textElements": [
         { "type": "text", "content": "Hallo! Ich " },
@@ -25,9 +26,10 @@
       ]
     },
     {
-      "id": "hobby_2",
+      "id": "hobby_A2_2",
       "title": "Mein Hobby: Fotografie",
-      "translation": "Моё хобби: Фотография",
+      "translation": "Фотография",
+      "icon": "\uD83D\uDCF8",
       "wordsPool": ["bin", "meines", "muss", "der", "mag", "will"],
       "textElements": [
         { "type": "text", "content": "Ich " },
@@ -46,9 +48,10 @@
       ]
     },
     {
-      "id": "hobby_3",
+      "id": "hobby_A2_3",
       "title": "Mein Hobby: Malen",
-      "translation": "Моё хобби: Рисование",
+      "translation": "Рисование",
+      "icon": "\uD83C\uDFA8",
       "wordsPool": ["bin", "des", "muss", "einem", "mag", "will"],
       "textElements": [
         { "type": "text", "content": "Ich " },
@@ -67,9 +70,10 @@
       ]
     },
     {
-      "id": "hobby_4",
+      "id": "hobby_A2_4",
       "title": "Mein Hobby: Tanzen",
-      "translation": "Моё хобби: Танцы",
+      "translation": "Танцы",
+      "icon": "\uD83D\uDC83",
       "wordsPool": ["bin", "des", "muss", "einem", "mag", "will"],
       "textElements": [
         { "type": "text", "content": "Hallo! Ich " },
@@ -88,9 +92,10 @@
       ]
     },
     {
-      "id": "hobby_5",
+      "id": "hobby_A2_5",
       "title": "Leidenschaft Fußball",
-      "translation": "Страсть к футболу",
+      "translation": "Футбол",
+      "icon": "⚽",
       "wordsPool": ["bin", "des", "muss", "meinem", "mag", "will", "nicht"],
       "textElements": [
         { "type": "text", "content": "Hallo! Ich " },
@@ -111,9 +116,10 @@
       ]
     },
     {
-      "id": "hobby_6",
+      "id": "hobby_A2_6",
       "title": "Nach der Arbeit ins Wasser",
-      "translation": "После работы — в воду",
+      "translation": "Плаванье",
+      "icon": "\uD83C\uDFCA",
       "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "will", "den"],
       "textElements": [
         { "type": "text", "content": "Nach einem langen Tag gehe ich oft ins Schwimmbad. Dort " },
@@ -134,9 +140,10 @@
       ]
     },
     {
-      "id": "hobby_7",
+      "id": "hobby_A2_7",
       "title": "Brettspiele",
       "translation": "Настольные игры",
+      "icon": "\uD83C\uDFB2",
       "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "diesen", "will"],
       "textElements": [
         { "type": "text", "content": "Ich spiele oft Brettspiele. — Es " },
@@ -156,9 +163,10 @@
       ]
     },
     {
-      "id": "hobby_8",
+      "id": "hobby_A2_8",
       "title": "Logik und Brettspiele",
       "translation": "Настольные игры и логика",
+      "icon": "\uD83E\uDDE9",
       "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "den", "will"],
       "textElements": [
         { "type": "text", "content": "Ich liebe anspruchsvolle Brettspiele. — Es " },
@@ -179,9 +187,10 @@
       ]
     },
     {
-      "id": "hobby_9",
+      "id": "hobby_A2_9",
       "title": "Schach und Strategie",
-      "translation": "Шахматы и стратегия",
+      "translation": "Шахматы",
+      "icon": "♟\uFE0F",
       "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "den", "will"],
       "textElements": [
         { "type": "text", "content": "Ich spiele sehr gerne Schach. — Es " },
@@ -202,9 +211,10 @@
       ]
     },
     {
-      "id": "hobby_10",
+      "id": "hobby_A2_10",
       "title": "Hobby: Filme",
-      "translation": "Хобби: Фильмы",
+      "translation": "Фильмы",
+      "icon": "\uD83C\uDF7F",
       "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "den", "will"],
       "textElements": [
         { "type": "text", "content": "Ich schaue gerne Filme im Original. Im Kino " },

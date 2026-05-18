@@ -9219,12 +9219,12 @@
     "themen": "Mavzuli darajalar",
     "idioms": "Frazeologizmlar",
     "wordDuel": "So'zlar dueli",
-    "describePicture": "Describe Picture",
     "quests": "Kvest jurnali",
     "languagesLands": "Til diyorlari",
     "describePicture": "Rasmlar tavsifi",
     "fight": "Nemis tili koinoti",
-    "audio": "Audio topshiriqlar"
+    "audio": "Audio topshiriqlar",
+    "textTask": "Matnlar"
   },
   "underSub": {
     "prev": "Kirish",
@@ -9802,7 +9802,8 @@
     "audio": "Audio topshiriqlarni bajarib, nemis tilini eshitib tushunishni rivojlantiring",
     "images": "Rasmlarni tasvirlash qobiliyatingizni rivojlantiring! Boshlash uchun mavzu tanlang",
     "settings": "Hisob sozlamalari",
-    "achievements": "Sening progressiyang uchun olingan barcha yutuqlar va mukofotlarning kolleksiyasi"
+    "achievements": "Sening progressiyang uchun olingan barcha yutuqlar va mukofotlarning kolleksiyasi",
+    "textTask": "Matnlardagi bo'shliqlarni to'ldir va nemis tilingni rivojlantir"
   },
   "imageDescription": {
     "listen": "Dialogni tinglang!",
@@ -9846,5 +9847,18 @@
     "check": "HISOB:",
     "again": "Qayta parvoz",
     "constellations": "Yulduz turkumini tark etish"
+  },
+  "textTasksTip": {
+    "title": "Matnli topshiriqlar",
+    "description": "Topshiriqni bajarish uchun so'zni bo'sh joyga sudrab o'tkazing yoki so'z ustiga bosib, keyin uni qo'shmoqchi bo'lgan maydonni bosing."
+  },
+  "textThemes": {
+    "basic": "Tanishuv",
+    "routine": "Kun tartibi",
+    "shopping": "Xaridlar",
+    "work": "Ish va o'qish",
+    "hobby": "Xobbi",
+    "objects": "Buyumlar va narsalar",
+    "travel": "Sayohatlar"
   }
 }

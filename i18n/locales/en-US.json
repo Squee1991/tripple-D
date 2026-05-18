@@ -9247,7 +9247,8 @@
     "languagesLands": "Language Lands",
     "describePicture": "Picture Description",
     "fight": "German Universe",
-    "audio": "Audio Tasks"
+    "audio": "Audio Tasks",
+    "textTask": "Texts"
   },
   "underSub": {
     "prev": "Introduction",
@@ -9825,7 +9826,8 @@
     "audio": "Improve your German listening comprehension by completing audio tasks",
     "images": "Level up your image description skills! Choose a topic to start",
     "settings": "Account settings",
-    "achievements": "Your collection of all earned achievements and rewards for your progress"
+    "achievements": "Your collection of all earned achievements and rewards for your progress",
+    "textTask": "Fill in the blanks in the texts and improve your German"
   },
   "imageDescription": {
     "listen": "Listen to the dialogue!",
@@ -9869,5 +9871,18 @@
     "check": "SCORE:",
     "again": "Fly again",
     "constellations": "Leave constellation"
+  },
+  "textTasksTip": {
+    "title": "Text tasks",
+    "description": "To complete the task, drag the word into the empty space or click on the word and then on the field where you want to add it."
+  },
+  "textThemes": {
+    "basic": "Introduction",
+    "routine": "Daily routine",
+    "shopping": "Shopping",
+    "work": "Work and study",
+    "hobby": "Hobbies",
+    "objects": "Objects and things",
+    "travel": "Travel"
   }
 }

@@ -9241,7 +9241,8 @@
     "languagesLands": "Tierras lingüísticas",
     "describePicture": "Descripción de Imágenes",
     "fight": "Universo Alemán",
-    "audio": "Tareas de Audio"
+    "audio": "Tareas de Audio",
+    "textTask": "Textos"
   },
   "underSub": {
     "prev": "Introducción",
@@ -9819,7 +9820,8 @@
     "audio": "Mejora tu comprensión auditiva del alemán completando tareas de audio",
     "images": "¡Mejora tu habilidad para describir imágenes! Elige un tema para empezar",
     "settings": "Configuración de la cuenta",
-    "achievements": "Tu colección de todos los logros y recompensas obtenidos por tu progreso"
+    "achievements": "Tu colección de todos los logros y recompensas obtenidos por tu progreso",
+    "textTask": "Completa los espacios en blanco en los textos y mejora tu alemán"
   },
   "imageDescription": {
     "listen": "¡Escucha el diálogo!",
@@ -9863,5 +9865,18 @@
     "check": "PUNTUACIÓN:",
     "again": "Volar de nuevo",
     "constellations": "Salir de la constelación"
+  },
+  "textTasksTip": {
+    "title": "Tareas de texto",
+    "description": "Para completar la tarea, arrastra la palabra al espacio vacío o haz clic en la palabra y luego en el campo donde quieras añadirla."
+  },
+  "textThemes": {
+    "basic": "Introducción",
+    "routine": "Rutina diaria",
+    "shopping": "Compras",
+    "work": "Trabajo y estudios",
+    "hobby": "Hobbies",
+    "objects": "Objetos y cosas",
+    "travel": "Viajes"
   }
 }

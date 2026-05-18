@@ -599,10 +599,6 @@ onMounted(async () => {
     font-size: 15px;
   }
 
-  .region__title-name {
-    font-size: 20px;
-  }
-
   .quest-meta .rewards-container {
     font-size: 14px;
     padding: 4px 8px;

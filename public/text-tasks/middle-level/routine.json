@@ -7,6 +7,7 @@
       "id": "meet_A2_1",
       "title": "Die neue Nachbarin",
       "translation": "Новая соседка",
+      "icon": "\uD83C\uDFE2",
       "wordsPool": ["vorstellen", "sympathisch", "wohnt", "zusammen", "geholfen", "weil", "möchte"],
       "textElements": [
         { "type": "text", "content": "Gestern ist eine neue Frau in unser Haus eingezogen. — Ich möchte mich ihr heute Nachmittag gerne " },
@@ -30,6 +31,7 @@
       "id": "meet_A2_2",
       "title": "Ein Treffen im Café",
       "translation": "Встреча в кафе",
+      "icon": "☕",
       "wordsPool": ["Treffen", "bestellt", "über", "ledig", "als", "lachen", "werden"],
       "textElements": [
         { "type": "text", "content": "Ich habe heute ein erstes " },
@@ -52,7 +54,8 @@
     {
       "id": "meet_A2_3",
       "title": "Auf der Geburtstagsparty",
-      "translation": "На вечеринке по случаю дня рождения",
+      "translation": "На вечеринке",
+      "icon": "\uD83C\uDF89",
       "wordsPool": ["eingeladen", "niemanden", "Gespräch", "trinken", "gemeinsam", "dass", "Nummer"],
       "textElements": [
         { "type": "text", "content": "Meine beste Freundin Anna hat mich zu ihrer Party " },
@@ -76,6 +79,7 @@
       "id": "meet_A2_4",
       "title": "Die neuen Kollegen",
       "translation": "Новые коллеги",
+      "icon": "\uD83D\uDC54",
       "wordsPool": ["Kollegen", "Pause", "erzählt", "woher", "obwohl", "verheiratet", "freue"],
       "textElements": [
         { "type": "text", "content": "Heute lerne ich meine neuen " },
@@ -97,6 +101,7 @@
       "id": "meet_A2_5",
       "title": "Im Sportverein",
       "translation": "В спортивном клубе",
+      "icon": "\uD83C\uDFBE",
       "wordsPool": ["Mitglied", "kennengelernt", "gleiche", "Spaß", "zu", "treffen", "denn"],
       "textElements": [
         { "type": "text", "content": "Seit einem Monat bin ich " },
@@ -120,6 +125,7 @@
       "id": "meet_A2_6",
       "title": "Begegnung im Zug",
       "translation": "Встреча в поезде",
+      "icon": "\uD83D\uDE84",
       "wordsPool": ["als", "zu", "weil", "lässt", "gemeinsam", "dass", "werden"],
       "textElements": [
         { "type": "text", "content": "Ich fahre heute mit dem Zug nach Berlin. — Der Mann neben mir ist viel gesprächiger " },
@@ -143,6 +149,7 @@
       "id": "meet_A2_7",
       "title": "Im Park mit dem Hund",
       "translation": "В парке с собакой",
+      "icon": "\uD83D\uDC15",
       "wordsPool": ["wie", "zu", "sympathisch", "ledig", "denn", "lässt", "werden"],
       "textElements": [
         { "type": "text", "content": "Ich gehe jeden Morgen mit meinem Hund im Park spazieren. — Heute treffe ich dort einen Mann, der genau so alt ist " },
@@ -165,7 +172,8 @@
     {
       "id": "meet_A2_8",
       "title": "Partnersuche im Internet",
-      "translation": "Поиск партнера в интернете",
+      "translation": "Поиск партнера",
+      "icon": "\uD83D\uDCBB",
       "wordsPool": ["zu", "geschrieben", "als", "obwohl", "sondern", "Treffen", "werde"],
       "textElements": [
         { "type": "text", "content": "Ich habe ein Profil auf einer Webseite für Singles. — Es ist nicht immer leicht, den richtigen Partner im Internet " },
@@ -189,6 +197,7 @@
       "id": "meet_A2_9",
       "title": "Auf dem Konzert",
       "translation": "На концерте",
+      "icon": "\uD83C\uDFB8",
       "wordsPool": ["wie", "vorstellen", "bevor", "weil", "lässt", "werden", "als"],
       "textElements": [
         { "type": "text", "content": "Am Samstag war ich auf einem tollen Konzert. — Die Musik dort war viel lauter " },
@@ -212,6 +221,7 @@
       "id": "meet_A2_10",
       "title": "Die neue Mitbewohnerin",
       "translation": "Новая соседка по квартире",
+      "icon": "\uD83D\uDECB\uFE0F",
       "wordsPool": ["vorstellen", "als", "gemeinsam", "sondern", "wenn", "lassen", "werden"],
       "textElements": [
         { "type": "text", "content": "Wir suchen eine neue Person für unsere Wohngemeinschaft. — Heute kommt Anna vorbei, denn sie möchte sich gerne " },

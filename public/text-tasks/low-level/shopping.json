@@ -7,6 +7,7 @@
       "id": "shop_a1_1_supermarket",
       "title": "Im Supermarkt",
       "translation": "В супермаркете",
+      "icon": "\uD83D\uDED2",
       "wordsPool": ["eine", "keine", "muss", "Kauf", "besser", "ein", "gekauft"],
       "textElements": [
         { "type": "text", "content": "Ich gehe heute in den Supermarkt. — Ich brauche einen Apfel und " },
@@ -30,6 +31,7 @@
       "id": "shop_a1_2_clothes",
       "title": "Kleidung suchen",
       "translation": "Поиск одежды",
+      "icon": "\uD83D\uDC55",
       "wordsPool": ["mein", "will", "aber", "die", "schönsten", "beraten", "nicht"],
       "textElements": [
         { "type": "text", "content": "Wir sind im Zentrum. Das ist " },
@@ -53,6 +55,7 @@
       "id": "shop_a1_3_bakery",
       "title": "In der Bäckerei",
       "translation": "В пекарне",
+      "icon": "\uD83E\uDD50",
       "wordsPool": ["oder", "mag", "am", "Brötchen", "Bring", "mit", "gegessen"],
       "textElements": [
         { "type": "text", "content": "Ich bin in der kleinen Bäckerei. — Kaufst du heute Brot " },
@@ -76,6 +79,7 @@
       "id": "shop_a1_4_online",
       "title": "Online einkaufen",
       "translation": "Покупки онлайн",
+      "icon": "\uD83D\uDCE6",
       "wordsPool": ["das", "dein", "musst", "Schuhe", "an", "bestellt", "und"],
       "textElements": [
         { "type": "text", "content": "Ich kaufe gerne im Internet ein. — Wo ist " },
@@ -99,6 +103,7 @@
       "id": "shop_a1_5_market",
       "title": "Auf dem Markt",
       "translation": "На рынке",
+      "icon": "\uD83E\uDD55",
       "wordsPool": ["auf", "ein", "kein", "billiger", "Geh", "wollen", "bezahlt"],
       "textElements": [
         { "type": "text", "content": "Heute ist Samstag. — Wir kaufen frisches Gemüse direkt " },
@@ -122,6 +127,7 @@
       "id": "shop_a1_6_shoes",
       "title": "Im Schuhgeschäft",
       "translation": "В обувном магазине",
+      "icon": "\uD83D\uDC5F",
       "wordsPool": ["will", "die", "kleiner", "Probier", "oder", "an", "gefunden"],
       "textElements": [
         { "type": "text", "content": "Ich " },
@@ -145,6 +151,7 @@
       "id": "shop_a1_7_furniture",
       "title": "Möbel kaufen",
       "translation": "Покупка мебели",
+      "icon": "\uD83E\uDE91",
       "wordsPool": ["mein", "müssen", "kein", "Stühle", "Frag", "und", "verkauft"],
       "textElements": [
         { "type": "text", "content": "Das ist " },
@@ -168,6 +175,7 @@
       "id": "shop_a1_8_fleamarket",
       "title": "Auf dem Flohmarkt",
       "translation": "На блошином рынке",
+      "icon": "\uD83D\uDCFB",
       "wordsPool": ["am", "mag", "billigsten", "das", "nicht", "mit", "gesehen"],
       "textElements": [
         { "type": "text", "content": "Wir gehen " },
@@ -191,6 +199,7 @@
       "id": "shop_a1_9_dinner",
       "title": "Essen für den Abend",
       "translation": "Еда на вечер",
+      "icon": "\uD83C\uDF55",
       "wordsPool": ["aber", "eine", "Tomaten", "in", "Komm", "ein", "gemacht"],
       "textElements": [
         { "type": "text", "content": "Ich habe großen Hunger, " },
@@ -214,6 +223,7 @@
       "id": "shop_a1_10_bookstore",
       "title": "Im Buchladen",
       "translation": "В книжном магазине",
+      "icon": "\uD83D\uDCDA",
       "wordsPool": ["der", "meine", "will", "dicker", "keine", "oder", "bekommen"],
       "textElements": [
         { "type": "text", "content": "Entschuldigung, wo ist " },

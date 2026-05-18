@@ -4,9 +4,10 @@
   "level": "A2",
   "tasks": [
     {
-      "id": "work_study_1_interview",
+      "id": "work_study_A2_1",
       "title": "Das Vorstellungsgespräch",
       "translation": "Собеседование",
+      "icon": "\uD83D\uDC54",
       "wordsPool": ["als", "zu", "sondern", "wird", "lasse", "dass", "bevor"],
       "textElements": [
         { "type": "text", "content": "Ich habe morgen ein wichtiges Vorstellungsgespräch in einer großen Firma. — Ein neues Büro ist oft spannender " },
@@ -30,6 +31,7 @@
       "id": "work_study_2_homework",
       "title": "Die Hausaufgaben",
       "translation": "Домашнее задание",
+      "icon": "\uD83D\uDCDD",
       "wordsPool": ["wie", "zu", "aber", "werden", "lässt", "nachdem", "weil"],
       "textElements": [
         { "type": "text", "content": "Nach der Schule mache ich sofort meine Hausaufgaben. — Die Aufgaben in Mathe sind genau so schwer " },
@@ -53,6 +55,7 @@
       "id": "work_study_3_firstday",
       "title": "Der erste Arbeitstag",
       "translation": "Первый рабочий день",
+      "icon": "\uD83D\uDCBC",
       "wordsPool": ["als", "zu", "denn", "wird", "lasse", "obwohl", "dass"],
       "textElements": [
         { "type": "text", "content": "Heute ist mein allererster Arbeitstag in der neuen Firma. — Das Büro ist wirklich viel größer " },
@@ -76,6 +79,7 @@
       "id": "work_study_4_presentation",
       "title": "Die Präsentation",
       "translation": "Презентация",
+      "icon": "\uD83D\uDCCA",
       "wordsPool": ["wie", "zu", "sondern", "werden", "lässt", "bevor", "wenn"],
       "textElements": [
         { "type": "text", "content": "Ich halte heute eine wichtige Präsentation in der Universität. — Ich bin genauso nervös " },
@@ -99,6 +103,7 @@
       "id": "work_study_5_further_education",
       "title": "Die Weiterbildung",
       "translation": "Повышение квалификации",
+      "icon": "\uD83D\uDCDC",
       "wordsPool": ["als", "zu", "und", "werde", "lässt", "weil", "dass"],
       "textElements": [
         { "type": "text", "content": "Ich mache ab nächstem Monat eine Weiterbildung für meinen Beruf. — Der neue Kurs ist deutlich intensiver " },
@@ -122,6 +127,7 @@
       "id": "work_study_6_homeoffice",
       "title": "Im Home-Office",
       "translation": "В домашнем офисе",
+      "icon": "\uD83D\uDCBB",
       "wordsPool": ["wie", "zu", "oder", "wird", "lasse", "bevor", "dass"],
       "textElements": [
         { "type": "text", "content": "Heute arbeite ich wieder von zu Hause aus. — Die Arbeit hier ist genau so anstrengend " },
@@ -144,7 +150,8 @@
     {
       "id": "work_study_7_internship",
       "title": "Das Praktikum",
-      "translation": "Практика (стажировка)",
+      "translation": "Стажировка",
+      "icon": "\uD83C\uDFE5",
       "wordsPool": ["als", "zu", "denn", "werde", "lässt", "obwohl", "nachdem"],
       "textElements": [
         { "type": "text", "content": "Mein Praktikum im Krankenhaus ist wirklich sehr interessant. — Die Tage sind oft viel länger " },
@@ -168,6 +175,7 @@
       "id": "work_study_8_exam",
       "title": "Die Prüfung",
       "translation": "Экзамен",
+      "icon": "✍\uFE0F",
       "wordsPool": ["wie", "zu", "sondern", "werden", "lassen", "weil", "wenn"],
       "textElements": [
         { "type": "text", "content": "Wir haben heute unsere große Abschlussprüfung. — Die erste Aufgabe ist so schwer " },
@@ -191,6 +199,7 @@
       "id": "work_study_9_languagecourse_abroad",
       "title": "Der Sprachkurs im Ausland",
       "translation": "Языковой курс за границей",
+      "icon": "\uD83C\uDF0D",
       "wordsPool": ["als", "zu", "aber", "wird", "lasse", "bevor", "dass"],
       "textElements": [
         { "type": "text", "content": "Ich mache einen tollen Englischkurs in London. — Das Leben hier ist viel teurer " },
@@ -214,6 +223,7 @@
       "id": "work_study_10_first_client",
       "title": "Der erste Kunde",
       "translation": "Первый клиент",
+      "icon": "\uD83E\uDD1D",
       "wordsPool": ["wie", "zu", "und", "werden", "lässt", "obwohl", "weil"],
       "textElements": [
         { "type": "text", "content": "Ich habe heute meinen ersten eigenen Kunden im Geschäft. — Er ist genau so freundlich " },

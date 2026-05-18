@@ -7,6 +7,7 @@
       "id": "work_1",
       "title": "Mein Arbeitstag",
       "translation": "Мой рабочий день",
+      "icon": "\uD83D\uDCBC",
       "wordsPool": ["Die", "ich", "eine", "einem", "das", "nicht"],
       "textElements": [
         { "type": "text", "content": " " },
@@ -28,6 +29,7 @@
       "id": "work_2",
       "title": "Das Dokument suchen",
       "translation": "Поиск документа",
+      "icon": "\uD83D\uDD0D",
       "wordsPool": ["Die", "ich", "ein", "kein", "Das", "nicht"],
       "textElements": [
         { "type": "text", "content": " " },
@@ -49,6 +51,7 @@
       "id": "work_3",
       "title": "Der Kurs",
       "translation": "Курс (В университете)",
+      "icon": "\uD83C\uDF93",
       "wordsPool": ["ich", "und", "kein", "aber", "oder", "nicht"],
       "textElements": [
         { "type": "text", "content": "Heute bin " },
@@ -70,6 +73,7 @@
       "id": "work_4",
       "title": "Mein Job",
       "translation": "Моя работа",
+      "icon": "\uD83D\uDCBB",
       "wordsPool": ["Ich", "bin", "habe", "und", "aber", "nicht"],
       "textElements": [
         { "type": "text", "content": "Heute " },
@@ -91,6 +95,7 @@
       "id": "work_5",
       "title": "Die Hausaufgaben",
       "translation": "Домашнее задание",
+      "icon": "\uD83D\uDCDD",
       "wordsPool": ["ich", "bin", "und", "dem", "aber", "nicht"],
       "textElements": [
         { "type": "text", "content": "Die Schule ist zu Ende. Jetzt " },
@@ -112,6 +117,7 @@
       "id": "work_6",
       "title": "Mein Job auf der Baustelle",
       "translation": "Моя работа на стройке",
+      "icon": "\uD83D\uDD28",
       "wordsPool": ["ich", "bin", "habe", "und", "dem", "aber", "nicht"],
       "textElements": [
         { "type": "text", "content": "Heute " },
@@ -135,6 +141,7 @@
       "id": "work_7",
       "title": "Home-Office",
       "translation": "Работа из дома",
+      "icon": "\uD83C\uDFE0",
       "wordsPool": ["bin", "muss", "mag", "dem", "will", "nicht"],
       "textElements": [
         { "type": "text", "content": "Heute " },
@@ -156,6 +163,7 @@
       "id": "work_8",
       "title": "Im Lager arbeiten",
       "translation": "Работа на складе",
+      "icon": "\uD83D\uDCE6",
       "wordsPool": ["bin", "muss", "dem", "mag", "will", "nicht"],
       "textElements": [
         { "type": "text", "content": "Heute " },

@@ -38,7 +38,6 @@
             Все слова использованы!
           </div>
         </div>
-
         <div class="text-card">
           <div class="text-content">
             <template v-for="(part, index) in store.currentTask.textElements" :key="index">
@@ -73,13 +72,10 @@
         </button>
       </div>
     </div>
-
     <div v-else class="error-state">
       <p>Задача не выбрана.</p>
       <button @click="$router.push('/text-tasks')">Вернуться к списку</button>
     </div>
-
-    <!-- Модальное окно подтверждения выхода -->
     <div v-if="showExitModal" class="modal-overlay" @click.self="cancelExit">
       <div class="modal-content">
         <h3 class="modal-title">Прервать задание?</h3>
@@ -290,7 +286,7 @@ const handleBlankClick = (blankId) => {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  padding: 5px 15px;
+  padding: 5px 10px;
   overflow: hidden;
 }
 
