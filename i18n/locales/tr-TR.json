@@ -9221,7 +9221,8 @@
     "languagesLands": "Dil Diyarları",
     "describePicture": "Resim Açıklama",
     "fight": "Almanca Evreni",
-    "audio": "Sesli Görevler"
+    "audio": "Sesli Görevler",
+    "textTask": "Metinler"
   },
   "underSub": {
     "prev": "Giriş",
@@ -9799,7 +9800,8 @@
     "audio": "Sesli görevleri tamamlayarak Almanca dinleme becerini geliştir",
     "images": "Resim betimleme becerini geliştir! Başlamak için bir tema seç",
     "settings": "Hesap ayarları",
-    "achievements": "İlerlemen için kazandığın tüm başarıların ve ödüllerin koleksiyonu"
+    "achievements": "İlerlemen için kazandığın tüm başarıların ve ödüllerin koleksiyonu",
+    "textTask": "Metinlerdeki boşlukları doldur ve Almancanı geliştir"
   },
   "imageDescription": {
     "listen": "Diyaloğu dinleyin!",
@@ -9843,5 +9845,18 @@
     "check": "PUAN:",
     "again": "Yeniden havalan",
     "constellations": "Takımyıldızdan ayrıl"
+  },
+  "textTasksTip": {
+    "title": "Metin görevleri",
+    "description": "Görevi tamamlamak için kelimeyi boş alana sürükleyin veya kelimeye tıklayıp ardından eklemek istediğiniz alana tıklayın."
+  },
+  "textThemes": {
+    "basic": "Tanışma",
+    "routine": "Günlük rutin",
+    "shopping": "Alışveriş",
+    "work": "İş ve eğitim",
+    "hobby": "Hobiler",
+    "objects": "Nesneler ve eşyalar",
+    "travel": "Seyahat"
   }
 }

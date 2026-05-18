@@ -9236,7 +9236,8 @@
     "languagesLands": "Ținuturi lingvistice",
     "describePicture": "Descrierea Imaginilor",
     "fight": "Universul Germanei",
-    "audio": "Sarcini Audio"
+    "audio": "Sarcini Audio",
+    "textTask": "Texte"
   },
   "underSub": {
     "prev": "Introducere",
@@ -9814,7 +9815,8 @@
     "audio": "Îmbunătățește-ți înțelegerea limbii germane vorbite prin exerciții audio",
     "images": "Îmbunătățește-ți abilitatea de a descrie imagini! Alege o temă pentru a începe",
     "settings": "Setările contului",
-    "achievements": "Colecția ta de toate realizările și recompensele obținute pentru progresul tău"
+    "achievements": "Colecția ta de toate realizările și recompensele obținute pentru progresul tău",
+    "textTask": "Completează spațiile libere din texte și îmbunătățește-ți germana"
   },
   "imageDescription": {
     "listen": "Ascultă dialogul!",
@@ -9858,5 +9860,18 @@
     "check": "SCOR:",
     "again": "Zbor nou",
     "constellations": "Părăsește constelația"
+  },
+  "textTasksTip": {
+    "title": "Sarcini de text",
+    "description": "Pentru a finaliza sarcina, trage cuvântul în spațiul gol sau dă clic pe cuvânt și apoi pe câmpul în care dorești să îl adaugi."
+  },
+  "textThemes": {
+    "basic": "Introducere",
+    "routine": "Rutina zilnică",
+    "shopping": "Cumpărături",
+    "work": "Muncă și studii",
+    "hobby": "Hobby-uri",
+    "objects": "Obiecte și lucruri",
+    "travel": "Călătorii"
   }
 }

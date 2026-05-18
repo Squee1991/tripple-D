@@ -9249,7 +9249,8 @@
     "languagesLands": "Krainy Językowe",
     "describePicture": "Opis Obrazków",
     "fight": "Wszechświat Niemieckiego",
-    "audio": "Zadania Audio"
+    "audio": "Zadania Audio",
+    "textTask": "Teksty"
   },
   "underSub": {
     "prev": "Wprowadzenie",
@@ -9828,7 +9829,8 @@
     "audio": "Popraw swoje rozumienie ze słuchu в języku niemieckim, wykonując zadania audio",
     "images": "Podszkol umiejętność opisywania obrazków! Wybierz temat, aby zacząć",
     "settings": "Ustawienia konta",
-    "achievements": "Twoja kolekcja wszystkich zdobytych osiągnięć i nagród za Twoje postępy"
+    "achievements": "Twoja kolekcja wszystkich zdobytych osiągnięć i nagród za Twoje postępy",
+    "textTask": "Uzupełniaj luki w tekstach i poprawiaj swój niemiecki"
   },
   "imageDescription": {
     "listen": "Posłuchaj dialogu!",
@@ -9872,5 +9874,18 @@
     "check": "WYNIK:",
     "again": "Ponowny wylot",
     "constellations": "Opuść gwiazdozbiór"
+  },
+  "textTasksTip": {
+    "title": "Zadania tekstowe",
+    "description": "Aby wykonać zadanie, przeciągnij słowo w puste miejsce lub kliknij słowo, a następnie pole, w którym chcesz je dodać."
+  },
+  "textThemes": {
+    "basic": "Zapoznanie",
+    "routine": "Codzienna rutyna",
+    "shopping": "Zakupy",
+    "work": "Praca i nauka",
+    "hobby": "Hobby",
+    "objects": "Przedmioty i rzeczy",
+    "travel": "Podróże"
   }
 }

@@ -1,222 +1,745 @@
 {
   "themeId": "hobbies_A1",
-  "themeTitle": "Основы: Приветствия и Числа",
+  "themeTitle": "Хобби: Базовая грамматика А1",
   "level": "A1",
   "tasks": [
     {
-      "themeId": "hobbies_A1",
-      "themeTitle": "Хобби: Базовая грамматика А1",
-      "level": "A1",
-      "tasks": [
+      "id": "hobby_A1_1",
+      "title": "Fußball spielen",
+      "translation": "Игра в футбол",
+      "icon": "⚽",
+      "wordsPool": [
+        "bin",
+        "aber",
+        "Spiele",
+        "kein",
+        "muss",
+        "schneller"
+      ],
+      "textElements": [
         {
-          "id": "hobby_1_football",
-          "title": "Fußball spielen",
-          "translation": "Игра в футбол",
-          "wordsPool": ["bin", "aber", "Spiele", "kein", "muss", "schneller"],
-          "textElements": [
-            { "type": "text", "content": "Hallo! Ich " },
-            { "type": "blank", "id": 1, "correct": "bin" },
-            { "type": "text", "content": " Ben. — Fußball ist mein Lieblingssport, " },
-            { "type": "blank", "id": 2, "correct": "aber" },
-            { "type": "text", "content": " ich spiele auch Tennis. — Die " },
-            { "type": "blank", "id": 3, "correct": "Spiele" },
-            { "type": "text", "content": " am Wochenende sind oft spannend. — Ich bin leider " },
-            { "type": "blank", "id": 4, "correct": "kein" },
-            { "type": "text", "content": " Profi. — Man " },
-            { "type": "blank", "id": 5, "correct": "muss" },
-            { "type": "text", "content": " im Team gut zusammenarbeiten. — Heute laufe ich " },
-            { "type": "blank", "id": 6, "correct": "schneller" },
-            { "type": "text", "content": " als gestern." }
-          ]
+          "type": "text",
+          "content": "Hallo! Ich "
         },
         {
-          "id": "hobby_2_photo",
-          "title": "Fotografieren",
-          "translation": "Фотография",
-          "wordsPool": ["Fotografin", "mache", "besser", "nicht", "an", "will"],
-          "textElements": [
-            { "type": "text", "content": "Ich arbeite als " },
-            { "type": "blank", "id": 1, "correct": "Fotografin" },
-            { "type": "text", "content": ". — In der Freizeit " },
-            { "type": "blank", "id": 2, "correct": "mache" },
-            { "type": "text", "content": " ich auch gerne Bilder. — Die Handykamera ist gut, aber eine echte Kamera ist " },
-            { "type": "blank", "id": 3, "correct": "besser" },
-            { "type": "text", "content": ". — Ich fotografiere heute " },
-            { "type": "blank", "id": 4, "correct": "nicht" },
-            { "type": "text", "content": " im Studio. — Ich schaue mir lieber die Natur " },
-            { "type": "blank", "id": 5, "correct": "an" },
-            { "type": "text", "content": ". — Am Abend " },
-            { "type": "blank", "id": 6, "correct": "will" },
-            { "type": "text", "content": " ich die Fotos bearbeiten." }
-          ]
+          "type": "blank",
+          "id": 1,
+          "correct": "bin"
         },
         {
-          "id": "hobby_3_guitar",
-          "title": "Gitarre spielen",
-          "translation": "Игра на гитаре",
-          "wordsPool": ["meine", "habe", "gekauft", "Diese", "jeden", "oder"],
-          "textElements": [
-            { "type": "text", "content": "Musik ist " },
-            { "type": "blank", "id": 1, "correct": "meine" },
-            { "type": "text", "content": " große Leidenschaft. — Ich " },
-            { "type": "blank", "id": 2, "correct": "habe" },
-            { "type": "text", "content": " gestern eine neue Gitarre " },
-            { "type": "blank", "id": 3, "correct": "gekauft" },
-            { "type": "text", "content": ". — " },
-            { "type": "blank", "id": 4, "correct": "Diese" },
-            { "type": "text", "content": " Gitarre klingt wirklich wunderbar. — Ich spiele " },
-            { "type": "blank", "id": 5, "correct": "jeden" },
-            { "type": "text", "content": " Tag am Nachmittag. — Manchmal übe ich allein " },
-            { "type": "blank", "id": 6, "correct": "oder" },
-            { "type": "text", "content": " mit Freunden." }
-          ]
+          "type": "text",
+          "content": " Ben. — Fußball ist mein Lieblingssport, "
         },
         {
-          "id": "hobby_4_swimming",
-          "title": "Schwimmen",
-          "translation": "Плавание",
-          "wordsPool": ["ins", "brauche", "Schwimmbäder", "und", "kann", "ein"],
-          "textElements": [
-            { "type": "text", "content": "Am Morgen gehe ich oft " },
-            { "type": "blank", "id": 1, "correct": "ins" },
-            { "type": "text", "content": " Schwimmbad. — Ich " },
-            { "type": "blank", "id": 2, "correct": "brauche" },
-            { "type": "text", "content": " Bewegung für meine Gesundheit. — Die " },
-            { "type": "blank", "id": 3, "correct": "Schwimmbäder" },
-            { "type": "text", "content": " in der Stadt sind sehr modern. — Das Wasser ist kalt " },
-            { "type": "blank", "id": 4, "correct": "und" },
-            { "type": "text", "content": " erfrischend. — Hier " },
-            { "type": "blank", "id": 5, "correct": "kann" },
-            { "type": "text", "content": " man gut trainieren. — Nach dem Training trinke ich " },
-            { "type": "blank", "id": 6, "correct": "ein" },
-            { "type": "text", "content": " Glas Wasser." }
-          ]
+          "type": "blank",
+          "id": 2,
+          "correct": "aber"
         },
         {
-          "id": "hobby_5_cooking",
-          "title": "Kochen",
-          "translation": "Кулинария",
-          "wordsPool": ["Schneide", "Viertel", "oder", "bekomme", "mein", "keine"],
-          "textElements": [
-            { "type": "text", "content": "Willkommen in meiner Küche! — " },
-            { "type": "blank", "id": 1, "correct": "Schneide" },
-            { "type": "text", "content": " das Gemüse bitte klein! — Ich brauche ein " },
-            { "type": "blank", "id": 2, "correct": "Viertel" },
-            { "type": "text", "content": " Liter Milch für die Suppe. — Kochen wir heute Pasta " },
-            { "type": "blank", "id": 3, "correct": "oder" },
-            { "type": "text", "content": " Reis? — Ich " },
-            { "type": "blank", "id": 4, "correct": "bekomme" },
-            { "type": "text", "content": " oft Hunger beim Kochen. — Das ist " },
-            { "type": "blank", "id": 5, "correct": "mein" },
-            { "type": "text", "content": " Lieblingsrezept. — Ich mache heute " },
-            { "type": "blank", "id": 6, "correct": "keine" },
-            { "type": "text", "content": " Fehler." }
-          ]
+          "type": "text",
+          "content": " ich spiele auch Tennis. — Die "
         },
         {
-          "id": "hobby_6_traveling",
-          "title": "Reisen",
-          "translation": "Путешествия",
-          "wordsPool": ["reise", "ersten", "bin", "gefahren", "Dieser", "möchte"],
-          "textElements": [
-            { "type": "text", "content": "Ich " },
-            { "type": "blank", "id": 1, "correct": "reise" },
-            { "type": "text", "content": " sehr gern in neue Länder. — Im " },
-            { "type": "blank", "id": 2, "correct": "ersten" },
-            { "type": "text", "content": " Monat des Jahres war ich in Italien. — Ich " },
-            { "type": "blank", "id": 3, "correct": "bin" },
-            { "type": "text", "content": " mit dem Zug nach Rom " },
-            { "type": "blank", "id": 4, "correct": "gefahren" },
-            { "type": "text", "content": ". — " },
-            { "type": "blank", "id": 5, "correct": "Dieser" },
-            { "type": "text", "content": " Urlaub war fantastisch. — Nächstes Jahr " },
-            { "type": "blank", "id": 6, "correct": "möchte" },
-            { "type": "text", "content": " ich nach Spanien fliegen." }
-          ]
+          "type": "blank",
+          "id": 3,
+          "correct": "Spiele"
         },
         {
-          "id": "hobby_7_reading",
-          "title": "Lesen",
-          "translation": "Чтение",
-          "wordsPool": ["Bücher", "jener", "will", "lesen", "mich", "sind"],
-          "textElements": [
-            { "type": "text", "content": "Ich liebe spannende " },
-            { "type": "blank", "id": 1, "correct": "Bücher" },
-            { "type": "text", "content": ". — Dieser Roman ist gut, aber " },
-            { "type": "blank", "id": 2, "correct": "jener" },
-            { "type": "text", "content": " Krimi ist noch besser. — Am Abend " },
-            { "type": "blank", "id": 3, "correct": "will" },
-            { "type": "text", "content": " ich ein neues Kapitel " },
-            { "type": "blank", "id": 4, "correct": "lesen" },
-            { "type": "text", "content": ". — Lesen entspannt " },
-            { "type": "blank", "id": 5, "correct": "mich" },
-            { "type": "text", "content": " nach der Arbeit. — Die Geschichten " },
-            { "type": "blank", "id": 6, "correct": "sind" },
-            { "type": "text", "content": " immer sehr interessant." }
-          ]
+          "type": "text",
+          "content": " am Wochenende sind oft spannend. — Ich bin leider "
         },
         {
-          "id": "hobby_8_gardening",
-          "title": "Gartenarbeit",
-          "translation": "Садоводство",
-          "wordsPool": ["pflanze", "an", "nicht", "muss", "schöner", "die"],
-          "textElements": [
-            { "type": "text", "content": "Mein Garten ist mein Hobby. — Ich " },
-            { "type": "blank", "id": 1, "correct": "pflanze" },
-            { "type": "text", "content": " im Frühling viele Blumen " },
-            { "type": "blank", "id": 2, "correct": "an" },
-            { "type": "text", "content": ". — Die Arbeit ist " },
-            { "type": "blank", "id": 3, "correct": "nicht" },
-            { "type": "text", "content": " immer leicht. — Man " },
-            { "type": "blank", "id": 4, "correct": "muss" },
-            { "type": "text", "content": " die Pflanzen oft gießen. — Die roten Rosen sind " },
-            { "type": "blank", "id": 5, "correct": "schöner" },
-            { "type": "text", "content": " als die gelben. — Am Abend genieße ich " },
-            { "type": "blank", "id": 6, "correct": "die" },
-            { "type": "text", "content": " Ruhe draußen." }
-          ]
+          "type": "blank",
+          "id": 4,
+          "correct": "kein"
         },
         {
-          "id": "hobby_9_dancing",
-          "title": "Tanzen",
-          "translation": "Танцы",
-          "wordsPool": ["tanze", "und", "verstehe", "besser", "keinen", "will"],
-          "textElements": [
-            { "type": "text", "content": "Ich " },
-            { "type": "blank", "id": 1, "correct": "tanze" },
-            { "type": "text", "content": " schon seit fünf Jahren. — Die Musik " },
-            { "type": "blank", "id": 2, "correct": "und" },
-            { "type": "text", "content": " der Rhythmus sind extrem wichtig. — Ich " },
-            { "type": "blank", "id": 3, "correct": "verstehe" },
-            { "type": "text", "content": " die neuen Schritte jetzt gut. — Meine Freundin tanzt noch " },
-            { "type": "blank", "id": 4, "correct": "besser" },
-            { "type": "text", "content": " als ich. — Ich habe heute leider " },
-            { "type": "blank", "id": 5, "correct": "keinen" },
-            { "type": "text", "content": " Partner. — Trotzdem " },
-            { "type": "blank", "id": 6, "correct": "will" },
-            { "type": "text", "content": " ich den ganzen Abend üben." }
-          ]
+          "type": "text",
+          "content": " Profi. — Man "
         },
         {
-          "id": "hobby_10_languages",
-          "title": "Sprachen lernen",
-          "translation": "Изучение языков",
-          "wordsPool": ["habe", "gelernt", "Dieser", "Drittel", "aber", "möchte"],
-          "textElements": [
-            { "type": "text", "content": "Ich lerne gerne neue Sprachen. — Ich " },
-            { "type": "blank", "id": 1, "correct": "habe" },
-            { "type": "text", "content": " letztes Jahr etwas Spanisch " },
-            { "type": "blank", "id": 2, "correct": "gelernt" },
-            { "type": "text", "content": ". — " },
-            { "type": "blank", "id": 3, "correct": "Dieser" },
-            { "type": "text", "content": " Kurs war sehr hilfreich. — Ein " },
-            { "type": "blank", "id": 4, "correct": "Drittel" },
-            { "type": "text", "content": " der Klasse kommt aus Europa. — Die Grammatik ist schwer, " },
-            { "type": "blank", "id": 5, "correct": "aber" },
-            { "type": "text", "content": " logisch. — Ich " },
-            { "type": "blank", "id": 6, "correct": "möchte" },
-            { "type": "text", "content": " bald fließend sprechen." }
-          ]
+          "type": "blank",
+          "id": 5,
+          "correct": "muss"
+        },
+        {
+          "type": "text",
+          "content": " im Team gut zusammenarbeiten. — Heute laufe ich "
+        },
+        {
+          "type": "blank",
+          "id": 6,
+          "correct": "schneller"
+        },
+        {
+          "type": "text",
+          "content": " als gestern."
+        }
+      ]
+    },
+    {
+      "id": "hobby_A1_2",
+      "title": "Fotografieren",
+      "translation": "Фотография",
+      "icon": "\uD83D\uDCF8",
+      "wordsPool": [
+        "Fotografin",
+        "mache",
+        "besser",
+        "nicht",
+        "an",
+        "will"
+      ],
+      "textElements": [
+        {
+          "type": "text",
+          "content": "Ich arbeite als "
+        },
+        {
+          "type": "blank",
+          "id": 1,
+          "correct": "Fotografin"
+        },
+        {
+          "type": "text",
+          "content": ". — In der Freizeit "
+        },
+        {
+          "type": "blank",
+          "id": 2,
+          "correct": "mache"
+        },
+        {
+          "type": "text",
+          "content": " ich auch gerne Bilder. — Die Handykamera ist gut, aber eine echte Kamera ist "
+        },
+        {
+          "type": "blank",
+          "id": 3,
+          "correct": "besser"
+        },
+        {
+          "type": "text",
+          "content": ". — Ich fotografiere heute "
+        },
+        {
+          "type": "blank",
+          "id": 4,
+          "correct": "nicht"
+        },
+        {
+          "type": "text",
+          "content": " im Studio. — Ich schaue mir lieber die Natur "
+        },
+        {
+          "type": "blank",
+          "id": 5,
+          "correct": "an"
+        },
+        {
+          "type": "text",
+          "content": ". — Am Abend "
+        },
+        {
+          "type": "blank",
+          "id": 6,
+          "correct": "will"
+        },
+        {
+          "type": "text",
+          "content": " ich die Fotos bearbeiten."
+        }
+      ]
+    },
+    {
+      "id": "hobby_A1_3",
+      "title": "Gitarre spielen",
+      "translation": "Игра на гитаре",
+      "icon": "\uD83C\uDFB8",
+      "wordsPool": [
+        "meine",
+        "habe",
+        "gekauft",
+        "Diese",
+        "jeden",
+        "oder"
+      ],
+      "textElements": [
+        {
+          "type": "text",
+          "content": "Musik ist "
+        },
+        {
+          "type": "blank",
+          "id": 1,
+          "correct": "meine"
+        },
+        {
+          "type": "text",
+          "content": " große Leidenschaft. — Ich "
+        },
+        {
+          "type": "blank",
+          "id": 2,
+          "correct": "habe"
+        },
+        {
+          "type": "text",
+          "content": " gestern eine neue Gitarre "
+        },
+        {
+          "type": "blank",
+          "id": 3,
+          "correct": "gekauft"
+        },
+        {
+          "type": "text",
+          "content": ". — "
+        },
+        {
+          "type": "blank",
+          "id": 4,
+          "correct": "Diese"
+        },
+        {
+          "type": "text",
+          "content": " Gitarre klingt wirklich wunderbar. — Ich spiele "
+        },
+        {
+          "type": "blank",
+          "id": 5,
+          "correct": "jeden"
+        },
+        {
+          "type": "text",
+          "content": " Tag am Nachmittag. — Manchmal übe ich allein "
+        },
+        {
+          "type": "blank",
+          "id": 6,
+          "correct": "oder"
+        },
+        {
+          "type": "text",
+          "content": " mit Freunden."
+        }
+      ]
+    },
+    {
+      "id": "hobby_A1_4",
+      "title": "Schwimmen",
+      "translation": "Плавание",
+      "icon": "\uD83C\uDFCA",
+      "wordsPool": [
+        "ins",
+        "brauche",
+        "Schwimmbäder",
+        "und",
+        "kann",
+        "ein"
+      ],
+      "textElements": [
+        {
+          "type": "text",
+          "content": "Am Morgen gehe ich oft "
+        },
+        {
+          "type": "blank",
+          "id": 1,
+          "correct": "ins"
+        },
+        {
+          "type": "text",
+          "content": " Schwimmbad. — Ich "
+        },
+        {
+          "type": "blank",
+          "id": 2,
+          "correct": "brauche"
+        },
+        {
+          "type": "text",
+          "content": " Bewegung für meine Gesundheit. — Die "
+        },
+        {
+          "type": "blank",
+          "id": 3,
+          "correct": "Schwimmbäder"
+        },
+        {
+          "type": "text",
+          "content": " in der Stadt sind sehr modern. — Das Wasser ist kalt "
+        },
+        {
+          "type": "blank",
+          "id": 4,
+          "correct": "und"
+        },
+        {
+          "type": "text",
+          "content": " erfrischend. — Hier "
+        },
+        {
+          "type": "blank",
+          "id": 5,
+          "correct": "kann"
+        },
+        {
+          "type": "text",
+          "content": " man gut trainieren. — Nach dem Training trinke ich "
+        },
+        {
+          "type": "blank",
+          "id": 6,
+          "correct": "ein"
+        },
+        {
+          "type": "text",
+          "content": " Glas Wasser."
+        }
+      ]
+    },
+    {
+      "id": "hobby_A1_5",
+      "title": "Kochen",
+      "translation": "Кулинария",
+      "icon": "\uD83C\uDF73",
+      "wordsPool": [
+        "Schneide",
+        "Viertel",
+        "oder",
+        "bekomme",
+        "mein",
+        "keine"
+      ],
+      "textElements": [
+        {
+          "type": "text",
+          "content": "Willkommen in meiner Küche! — "
+        },
+        {
+          "type": "blank",
+          "id": 1,
+          "correct": "Schneide"
+        },
+        {
+          "type": "text",
+          "content": " das Gemüse bitte klein! — Ich brauche ein "
+        },
+        {
+          "type": "blank",
+          "id": 2,
+          "correct": "Viertel"
+        },
+        {
+          "type": "text",
+          "content": " Liter Milch für die Suppe. — Kochen wir heute Pasta "
+        },
+        {
+          "type": "blank",
+          "id": 3,
+          "correct": "oder"
+        },
+        {
+          "type": "text",
+          "content": " Reis? — Ich "
+        },
+        {
+          "type": "blank",
+          "id": 4,
+          "correct": "bekomme"
+        },
+        {
+          "type": "text",
+          "content": " oft Hunger beim Kochen. — Das ist "
+        },
+        {
+          "type": "blank",
+          "id": 5,
+          "correct": "mein"
+        },
+        {
+          "type": "text",
+          "content": " Lieblingsrezept. — Ich mache heute "
+        },
+        {
+          "type": "blank",
+          "id": 6,
+          "correct": "keine"
+        },
+        {
+          "type": "text",
+          "content": " Fehler."
+        }
+      ]
+    },
+    {
+      "id": "hobby_A1_6",
+      "title": "Reisen",
+      "translation": "Путешествия",
+      "icon": "\uD83E\uDDF3",
+      "wordsPool": [
+        "reise",
+        "ersten",
+        "bin",
+        "gefahren",
+        "Dieser",
+        "möchte"
+      ],
+      "textElements": [
+        {
+          "type": "text",
+          "content": "Ich "
+        },
+        {
+          "type": "blank",
+          "id": 1,
+          "correct": "reise"
+        },
+        {
+          "type": "text",
+          "content": " sehr gern in neue Länder. — Im "
+        },
+        {
+          "type": "blank",
+          "id": 2,
+          "correct": "ersten"
+        },
+        {
+          "type": "text",
+          "content": " Monat des Jahres war ich in Italien. — Ich "
+        },
+        {
+          "type": "blank",
+          "id": 3,
+          "correct": "bin"
+        },
+        {
+          "type": "text",
+          "content": " mit dem Zug nach Rom "
+        },
+        {
+          "type": "blank",
+          "id": 4,
+          "correct": "gefahren"
+        },
+        {
+          "type": "text",
+          "content": ". — "
+        },
+        {
+          "type": "blank",
+          "id": 5,
+          "correct": "Dieser"
+        },
+        {
+          "type": "text",
+          "content": " Urlaub war fantastisch. — Nächstes Jahr "
+        },
+        {
+          "type": "blank",
+          "id": 6,
+          "correct": "möchte"
+        },
+        {
+          "type": "text",
+          "content": " ich nach Spanien fliegen."
+        }
+      ]
+    },
+    {
+      "id": "hobby_A1_7",
+      "title": "Lesen",
+      "translation": "Чтение",
+      "icon": "\uD83D\uDCD6",
+      "wordsPool": [
+        "Bücher",
+        "jener",
+        "will",
+        "lesen",
+        "mich",
+        "sind"
+      ],
+      "textElements": [
+        {
+          "type": "text",
+          "content": "Ich liebe spannende "
+        },
+        {
+          "type": "blank",
+          "id": 1,
+          "correct": "Bücher"
+        },
+        {
+          "type": "text",
+          "content": ". — Dieser Roman ist gut, aber "
+        },
+        {
+          "type": "blank",
+          "id": 2,
+          "correct": "jener"
+        },
+        {
+          "type": "text",
+          "content": " Krimi ist noch besser. — Am Abend "
+        },
+        {
+          "type": "blank",
+          "id": 3,
+          "correct": "will"
+        },
+        {
+          "type": "text",
+          "content": " ich ein neues Kapitel "
+        },
+        {
+          "type": "blank",
+          "id": 4,
+          "correct": "lesen"
+        },
+        {
+          "type": "text",
+          "content": ". — Lesen entspannt "
+        },
+        {
+          "type": "blank",
+          "id": 5,
+          "correct": "mich"
+        },
+        {
+          "type": "text",
+          "content": " nach der Arbeit. — Die Geschichten "
+        },
+        {
+          "type": "blank",
+          "id": 6,
+          "correct": "sind"
+        },
+        {
+          "type": "text",
+          "content": " immer sehr interessant."
+        }
+      ]
+    },
+    {
+      "id": "hobby_A1_8",
+      "title": "Gartenarbeit",
+      "translation": "Садоводство",
+      "icon": "\uD83C\uDF31",
+      "wordsPool": [
+        "pflanze",
+        "an",
+        "nicht",
+        "muss",
+        "schöner",
+        "die"
+      ],
+      "textElements": [
+        {
+          "type": "text",
+          "content": "Mein Garten ist mein Hobby. — Ich "
+        },
+        {
+          "type": "blank",
+          "id": 1,
+          "correct": "pflanze"
+        },
+        {
+          "type": "text",
+          "content": " im Frühling viele Blumen "
+        },
+        {
+          "type": "blank",
+          "id": 2,
+          "correct": "an"
+        },
+        {
+          "type": "text",
+          "content": ". — Die Arbeit ist "
+        },
+        {
+          "type": "blank",
+          "id": 3,
+          "correct": "nicht"
+        },
+        {
+          "type": "text",
+          "content": " immer leicht. — Man "
+        },
+        {
+          "type": "blank",
+          "id": 4,
+          "correct": "muss"
+        },
+        {
+          "type": "text",
+          "content": " die Pflanzen oft gießen. — Die roten Rosen sind "
+        },
+        {
+          "type": "blank",
+          "id": 5,
+          "correct": "schöner"
+        },
+        {
+          "type": "text",
+          "content": " als die gelben. — Am Abend genieße ich "
+        },
+        {
+          "type": "blank",
+          "id": 6,
+          "correct": "die"
+        },
+        {
+          "type": "text",
+          "content": " Ruhe draußen."
+        }
+      ]
+    },
+    {
+      "id": "hobby_A1_9",
+      "title": "Tanzen",
+      "translation": "Танцы",
+      "icon": "\uD83D\uDC83",
+      "wordsPool": [
+        "tanze",
+        "und",
+        "verstehe",
+        "besser",
+        "keinen",
+        "will"
+      ],
+      "textElements": [
+        {
+          "type": "text",
+          "content": "Ich "
+        },
+        {
+          "type": "blank",
+          "id": 1,
+          "correct": "tanze"
+        },
+        {
+          "type": "text",
+          "content": " schon seit fünf Jahren. — Die Musik "
+        },
+        {
+          "type": "blank",
+          "id": 2,
+          "correct": "und"
+        },
+        {
+          "type": "text",
+          "content": " der Rhythmus sind extrem wichtig. — Ich "
+        },
+        {
+          "type": "blank",
+          "id": 3,
+          "correct": "verstehe"
+        },
+        {
+          "type": "text",
+          "content": " die neuen Schritte jetzt gut. — Meine Freundin tanzt noch "
+        },
+        {
+          "type": "blank",
+          "id": 4,
+          "correct": "besser"
+        },
+        {
+          "type": "text",
+          "content": " als ich. — Ich habe heute leider "
+        },
+        {
+          "type": "blank",
+          "id": 5,
+          "correct": "keinen"
+        },
+        {
+          "type": "text",
+          "content": " Partner. — Trotzdem "
+        },
+        {
+          "type": "blank",
+          "id": 6,
+          "correct": "will"
+        },
+        {
+          "type": "text",
+          "content": " ich den ganzen Abend üben."
+        }
+      ]
+    },
+    {
+      "id": "hobby_A1_10",
+      "title": "Sprachen lernen",
+      "translation": "Изучение языков",
+      "icon": "\uD83D\uDDE3\uFE0F",
+      "wordsPool": [
+        "habe",
+        "gelernt",
+        "Dieser",
+        "Drittel",
+        "aber",
+        "möchte"
+      ],
+      "textElements": [
+        {
+          "type": "text",
+          "content": "Ich lerne gerne neue Sprachen. — Ich "
+        },
+        {
+          "type": "blank",
+          "id": 1,
+          "correct": "habe"
+        },
+        {
+          "type": "text",
+          "content": " letztes Jahr etwas Spanisch "
+        },
+        {
+          "type": "blank",
+          "id": 2,
+          "correct": "gelernt"
+        },
+        {
+          "type": "text",
+          "content": ". — "
+        },
+        {
+          "type": "blank",
+          "id": 3,
+          "correct": "Dieser"
+        },
+        {
+          "type": "text",
+          "content": " Kurs war sehr hilfreich. — Ein "
+        },
+        {
+          "type": "blank",
+          "id": 4,
+          "correct": "Drittel"
+        },
+        {
+          "type": "text",
+          "content": " der Klasse kommt aus Europa. — Die Grammatik ist schwer, "
+        },
+        {
+          "type": "blank",
+          "id": 5,
+          "correct": "aber"
+        },
+        {
+          "type": "text",
+          "content": " logisch. — Ich "
+        },
+        {
+          "type": "blank",
+          "id": 6,
+          "correct": "möchte"
+        },
+        {
+          "type": "text",
+          "content": " bald fließend sprechen."
         }
       ]
     }

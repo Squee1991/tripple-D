@@ -137,7 +137,7 @@ onMounted(() => {
 .topic-list-item {
   background: var(--menuItemsBg);
   border-radius: 20px;
-  padding: 14px 16px;
+  padding: 10px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;

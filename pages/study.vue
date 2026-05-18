@@ -134,7 +134,7 @@ function setTab(id) {
 const practiceCategories = computed(() => [
   { id: 'words', icon: BannerIcon, url: '/articles', title: t('sub.words') },
   { id: 'audio', icon: Sound, url: '/audio-tasks', title: t('sub.audio') },
-  { id: 'text', icon: TextBook, url: '/text-tasks', title: t('Задания с текстом') },
+  { id: 'text', icon: TextBook, url: '/text-tasks', title: t('sub.textTask') },
   { id: 'description', icon: Photo, url: '/image-description', title: t('sub.describePicture') },
   { id: 'themen', icon: Thematic, url: '/thematic-learning', title: t('sub.themen') },
   { id: 'exams', icon: Exam, url: '/exams', title: t('nav.tests') },
@@ -330,7 +330,7 @@ definePageMeta({
 
 .topic-list-item {
   border-radius: 20px;
-  padding: 14px 16px;
+  padding: 10px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;

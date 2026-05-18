@@ -4,9 +4,10 @@
   "level": "A2",
   "tasks": [
     {
-      "id": "shop_grammar_1_supermarket",
+      "id": "shop_A2_1",
       "title": "Im Supermarkt",
       "translation": "В супермаркете",
+      "icon": "\uD83D\uDED2",
       "wordsPool": ["als", "zu", "denn", "werde", "lasse", "weil", "dass"],
       "textElements": [
         { "type": "text", "content": "Ich gehe heute Nachmittag in den großen Supermarkt. — Die Tomaten hier sind frischer " },
@@ -27,9 +28,10 @@
       ]
     },
     {
-      "id": "shop_grammar_2_clothes",
+      "id": "shop_A2_2",
       "title": "Kleidung kaufen",
       "translation": "Покупка одежды",
+      "icon": "\uD83E\uDDE5",
       "wordsPool": ["wie", "zu", "sondern", "werden", "lässt", "obwohl", "wenn"],
       "textElements": [
         { "type": "text", "content": "Wir gehen am Samstag in die Stadt, um neue Kleidung einzukaufen. — Die rote Jacke ist genau so teuer " },
@@ -50,9 +52,10 @@
       ]
     },
     {
-      "id": "shop_grammar_3_market",
+      "id": "shop_A2_3",
       "title": "Auf dem Markt",
       "translation": "На рынке",
+      "icon": "\uD83E\uDDFA",
       "wordsPool": ["als", "zu", "aber", "wird", "lassen", "bevor", "dass"],
       "textElements": [
         { "type": "text", "content": "Am Samstagmorgen gehe ich immer auf den Gemüsemarkt im Zentrum. — Das frische Obst hier ist viel leckerer " },
@@ -73,9 +76,10 @@
       ]
     },
     {
-      "id": "shop_grammar_4_online",
+      "id": "shop_A2_4",
       "title": "Online einkaufen",
       "translation": "Покупки онлайн",
+      "icon": "\uD83D\uDCE6",
       "wordsPool": ["wie", "zu", "oder", "werde", "lässt", "nachdem", "weil"],
       "textElements": [
         { "type": "text", "content": "Ich kaufe meine Technik meistens sehr günstig im Internet. — Ein Laptop online ist oft genau so gut " },
@@ -96,9 +100,10 @@
       ]
     },
     {
-      "id": "shop_grammar_5_furniture",
+      "id": "shop_A2_5",
       "title": "Im Möbelhaus",
       "translation": "В мебельном магазине",
+      "icon": "\uD83D\uDECB\uFE0F",
       "wordsPool": ["als", "zu", "sondern", "werden", "lassen", "obwohl", "wenn"],
       "textElements": [
         { "type": "text", "content": "Wir brauchen unbedingt ein neues Sofa für unser kleines Wohnzimmer. — Das graue Sofa dort ist viel größer " },
@@ -119,9 +124,10 @@
       ]
     },
     {
-      "id": "shop_grammar_6_bakery",
+      "id": "shop_A2_6",
       "title": "In der Bäckerei",
       "translation": "В пекарне",
+      "icon": "\uD83E\uDD56",
       "wordsPool": ["wie", "zu", "aber", "wird", "lasse", "bevor", "weil"],
       "textElements": [
         { "type": "text", "content": "Ich gehe jeden Morgen in die kleine Bäckerei an der Ecke. — Das frische Brot hier ist genau so lecker " },
@@ -142,9 +148,10 @@
       ]
     },
     {
-      "id": "shop_grammar_7_shoes",
+      "id": "shop_A2_7",
       "title": "Schuhe kaufen",
       "translation": "Покупка обуви",
+      "icon": "\uD83D\uDC5F",
       "wordsPool": ["als", "zu", "sondern", "werden", "lassen", "obwohl", "dass"],
       "textElements": [
         { "type": "text", "content": "Ich brauche unbedingt neue Schuhe für das Training. — Diese weißen Sportschuhe sind viel bequemer " },
@@ -165,9 +172,10 @@
       ]
     },
     {
-      "id": "shop_grammar_8_gift",
+      "id": "shop_A2_8",
       "title": "Das Geschenk",
       "translation": "Подарок",
+      "icon": "\uD83C\uDF81",
       "wordsPool": ["wie", "zu", "denn", "werde", "lasse", "nachdem", "wenn"],
       "textElements": [
         { "type": "text", "content": "Ich suche im Zentrum ein schönes Geschenk für meine Schwester. — Dieses dicke Buch ist genau so spannend " },
@@ -188,9 +196,10 @@
       ]
     },
     {
-      "id": "shop_grammar_9_electronics",
+      "id": "shop_A2_9",
       "title": "Im Elektronikmarkt",
       "translation": "В магазине электроники",
+      "icon": "\uD83D\uDCF1",
       "wordsPool": ["als", "zu", "oder", "wird", "lässt", "weil", "bevor"],
       "textElements": [
         { "type": "text", "content": "Ich brauche heute unbedingt ein neues Smartphone für die Arbeit. — Das neue Modell ist natürlich viel besser " },
@@ -211,9 +220,10 @@
       ]
     },
     {
-      "id": "shop_grammar_10_weekend_shopping",
+      "id": "shop_A2_10",
       "title": "Der Großeinkauf",
       "translation": "Большая закупка",
+      "icon": "\uD83D\uDECD\uFE0F",
       "wordsPool": ["wie", "zu", "und", "werden", "lassen", "dass", "obwohl"],
       "textElements": [
         { "type": "text", "content": "Wir machen am Freitagabend immer unseren großen Wocheneinkauf. — Der Supermarkt ist heute leider genau so voll " },
