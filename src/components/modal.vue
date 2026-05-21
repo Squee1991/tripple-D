@@ -9,15 +9,11 @@
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
           </button>
-
           <div class="modal-content">
             <h3 class="modal-title" v-if="title">{{ title }}</h3>
-
             <img v-if="img" class="modal-icon" :src="img" :alt="alt">
-
             <p class="modal-text" v-if="text">{{ text }}</p>
             <p class="modal-text" v-if="description">{{ description }}</p>
-
             <button class="btn-game btn-yellow" v-if="button" @click="$emit('button')">
               {{ button.label || button }}
             </button>

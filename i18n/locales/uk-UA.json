@@ -524,9 +524,6 @@
     "questFifteen": "Оберіть правильний варіант: Це був прекрасний день",
     "questFifteenTip": "Неозначений артикль (вперше). Чоловічий рід (der). Артикль 'ein' порожній, тому прикметник бере у артикля 'der' закінчення -er."
   },
-
-
-
   "secretLandsQuestOne": {
     "title": "Підсумок",
     "description": "Змішаний тренінг: робота з неозначеним артиклем у Perfekt та Futur 1. Теми: побут, місто, транспорт, їжа.",
@@ -1052,11 +1049,6 @@
     "questFifteen": "Зберіть речення: Ми побачимо цікаву виставку",
     "questFifteenTip": "Виставка — жіночий рід (die). Артикль 'eine' закінчується на -e, тому прикметник бере у артикля закінчення -e."
   },
-
-
-
-
-
   "edgeImagesQuestOne": {
     "title": "Старт",
     "description": "Тренуємося правильно відмінювати прикметники після der, die, das.",
@@ -1582,11 +1574,6 @@
     "questFifteen": "Впишіть форму (lecker): Ich werde die ___ Pizza essen.",
     "questFifteenTip": "Akkusativ (жін. рід): артикль 'die' базовий, прикметник бере у артикля закінчення -e."
   },
-
-
-
-
-
   "timeGageQuestOne": {
     "title": "Знайомство та спілкування",
     "description": "Відпрацьовуємо граматику в ситуаціях спілкування: від планів на зустріч до розповідей про минуле.",
@@ -8096,8 +8083,8 @@
     "exam": "Друзі"
   },
   "cabinetSidebar": {
-    "valueOne": "Параметри аккаунта",
-    "valueTwo": "Архів іспитів",
+    "valueOne": "Акаунт",
+    "valueTwo": "Іспити",
     "valueThree": "Магазин",
     "valueFour": "Налаштування"
   },
@@ -9461,33 +9448,97 @@
   "nameMap": {
     "Furniture": "Меблі",
     "Animals": "Тварини",
+    "Birds": "Птахи",
+    "SeaAnimals": "Морські тварини",
+    "Insects": "Комахи",
+    "Savanna": "Савана",
     "Clothes": "Одяг",
+    "Shoes": "Взуття",
     "Food": "Їжа",
-    "Body": "Частини тіла",
+    "SweetEat": "Солодощі",
+    "MilkEat": "Молочні продукти",
+    "Vegetables": "Овочі",
+    "Fruits": "Фрукти",
+    "Drinks": "Напої",
+    "Body": "Тіло",
     "Professions": "Професії",
     "Transport": "Транспорт",
     "Colors": "Кольори",
     "Nature": "Природа",
+    "Weather": "Погода",
+    "Landscape": "Ландшафт",
     "Home": "Дім",
     "Zeit": "Час",
-    "City": "Місто",
+    "CityBuildings": "Міські будівлі",
+    "CityInfrastructure": "Міська інфраструктура",
     "School": "Школа",
     "DaysAndMonths": "Дні та місяці",
     "Toys": "Іграшки",
-    "CommonItems": "Загальні предмети",
+    "CommonItems": "Повсякденні речі",
     "BathroomItems": "Речі для ванної",
     "Kosmetik": "Косметика",
     "Familie": "Сім'я",
     "Emotions": "Емоції",
-    "Werkzeuge": "Інструменти",
     "Kitchen": "Кухня",
     "Health": "Здоров'я",
-    "Sport": "Спорт",
-    "SportEquipment": "Фітнес-інвентар",
+    "SportBasic": "Базовий спорт",
+    "SportCombatWinter": "Зимові та бойові види спорту",
+    "SportEvents": "Спортивні заходи",
+    "SportLife": "Спортивне життя",
+    "SportEquipment": "Спортивний інвентар",
+    "TravelDocuments": "Документи для подорожей",
+    "Tourism": "Туризм",
     "Travel": "Подорожі",
+    "MusicInstruments": "Музичні інструменти",
     "Musik": "Музика",
-    "Amount": "Кількість",
-    "Informatik": "Інформатика"
+    "Amount": "Кількість та міри",
+    "Hardware": "Апаратне забезпечення",
+    "Software": "Програмне забезпечення",
+    "Internet": "Інтернет",
+    "WinterHolidays": "Зимові свята",
+    "FamilyAndReligious": "Сімейні та релігійні свята",
+    "PersonalCelebrations": "Особисті свята",
+    "FestivalsAndDecor": "Фестивалі та декор",
+    "DwellingTypes": "Типи житла",
+    "Rooms": "Кімнати",
+    "ConstructionAndDetails": "Будівництво та деталі",
+    "CoreFamily": "Найближчі родичі",
+    "ExtendedFamily": "Далекі родичі",
+    "Relationships": "Відносини",
+    "HandTools": "Ручні інструменти",
+    "PowerTools": "Електроінструменти",
+    "ConsumablesAndSafety": "Витратні матеріали та безпека",
+    "JobOffice": "Офісна робота",
+    "JobTech": "Технічні професії",
+    "JobMed": "Медичні професії",
+    "JobEdu": "Освіта",
+    "JobService": "Сфера послуг",
+    "CityTransport": "Міський транспорт",
+    "TravelTransport": "Транспорт для подорожей",
+    "usualClothes": "Повсякденний одяг",
+    "winterClothes": "Зимовий одяг",
+    "emotionsPositive": "Емоції",
+    "emotionsNegative": "Емоції 2"
+  },
+  "categoryWords": {
+    "nature": "Природа",
+    "animals": "Тварини",
+    "food": "Їжа",
+    "people": "Людина",
+    "family": "Сім'я",
+    "dailyRoutine": "Побут",
+    "house": "Дім",
+    "city": "Місто",
+    "school": "Школа",
+    "professions": "Професії",
+    "construction": "Будівництво",
+    "clothes": "Одяг",
+    "holidays": "Свята",
+    "sport": "Спорт",
+    "music": "Музика",
+    "travel": "Подорожі",
+    "informatics": "Інформатика",
+    "abstract": "Абстрактні теми"
   },
   "modes": {
     "themeTitle": "Теми вивчення артиклів",
@@ -9868,5 +9919,244 @@
     "hobby": "Хобі",
     "objects": "Предмети та речі",
     "travel": "Подорожі"
+  },
+  "themeTextTitleBasic_A1": {
+    "basicOne": "Формальне знайомство",
+    "basicTwo": "Неформальне знайомство",
+    "basicThree": "Плани на день",
+    "basicFour": "Плани на вечір",
+    "basicFive": "У вихідні",
+    "basicSix": "Заняття спортом",
+    "basicSeven": "Готуємо разом",
+    "basicEight": "Поїздка в місто",
+    "basicNine": "Вчимося разом",
+    "basicTen": "Займаємося музикою"
+  },
+  "themeTextTitleHobby_A1": {
+    "hobbyOne": "Гра у футбол",
+    "hobbyTwo": "Фотографія",
+    "hobbyThree": "Гра на гітарі",
+    "hobbyFour": "Плавання",
+    "hobbyFive": "Кулінарія",
+    "hobbySix": "Подорожі",
+    "hobbySeven": "Читання",
+    "hobbyEight": "Садівництво",
+    "hobbyNine": "Танці",
+    "hobbyTen": "Вивчення мов"
+  },
+  "themeTextTitleRoutine_A1": {
+    "routineOne": "Плани на день",
+    "routineTwo": "Плани на вечір",
+    "routineThree": "У вихідні",
+    "routineFour": "Заняття спортом",
+    "routineFive": "Готуємо разом",
+    "routineSix": "Поїздка в місто",
+    "routineSeven": "Вчимося разом",
+    "routineEight": "Займаємося музикою",
+    "routineNine": "П'ємо каву",
+    "routineTen": "В парку"
+  },
+  "themeTextTitleShopping_A1": {
+    "shoppingOne": "У супермаркеті",
+    "shoppingTwo": "Пошук одягу",
+    "shoppingThree": "В пекарні",
+    "shoppingFour": "Покупки онлайн",
+    "shoppingFive": "На ринку",
+    "shoppingSix": "В взуттєвому магазині",
+    "shoppingSeven": "Купівля меблів",
+    "shoppingEight": "На блошиному ринку",
+    "shoppingNine": "Їжа на вечір",
+    "shoppingTen": "В книжковому магазині"
+  },
+  "themeTextTitleTravel_A1": {
+    "travelOne": "Збирання валізи",
+    "travelTwo": "На вокзалі",
+    "travelThree": "В готелі",
+    "travelFour": "Відпустка на морі",
+    "travelFive": "Огляд міста",
+    "travelSix": "В ресторані",
+    "travelSeven": "В аеропорту",
+    "travelEight": "В горах",
+    "travelNine": "Купівля сувенірів",
+    "travelTen": "Повернення додому"
+  },
+  "themeTextTitleWork_A1": {
+    "workOne": "Мій робочий день",
+    "workTwo": "Пошук документа",
+    "workThree": "В університеті",
+    "workFour": "Моя робота",
+    "workFive": "Домашнє завдання",
+    "workSix": "Моя работа на будівництві",
+    "workSeven": "Робота з дому",
+    "workEight": "Робота на складі",
+    "workNine": "Нарада",
+    "workTen": "Обідня перерва"
+  },
+  "themeTextTitleBasic_A2": {
+    "basicOne": "На курсах німецької",
+    "basicTwo": "Тандем-партнер",
+    "basicThree": "В університеті",
+    "basicFour": "В бібліотеці",
+    "basicFive": "Груповий проєкт",
+    "basicSix": "Мовна поїздка",
+    "basicSeven": "Новий учень",
+    "basicEight": "Онлайн-курс",
+    "basicNine": "Навчальна група",
+    "basicTen": "Партнер по іспиту"
+  },
+  "themeTextTitleHobby_A2": {
+    "hobbyOne": "Похід у гори",
+    "hobbyTwo": "Фотографія",
+    "hobbyThree": "Малювання",
+    "hobbyFour": "Танці",
+    "hobbyFive": "Футбол",
+    "hobbySix": "Плавання",
+    "hobbySeven": "Настільні ігри",
+    "hobbyEight": "Настільні ігри та логіка",
+    "hobbyNine": "Шахи",
+    "hobbyTen": "Фільми"
+  },
+  "themeTextTitleRoutine_A2": {
+    "routineOne": "Нова сусідка",
+    "routineTwo": "Зустріч у кафе",
+    "routineThree": "На вечірці",
+    "routineFour": "Нові колеги",
+    "routineFive": "У спортивному клубі",
+    "routineSix": "Зустріч у поїзді",
+    "routineSeven": "У парку з собакою",
+    "routineEight": "Пошук партнера",
+    "routineNine": "На концерті",
+    "routineTen": "Нова сусідка по квартирі"
+  },
+  "themeTextTitleShopping_A2": {
+    "shoppingOne": "У супермаркеті",
+    "shoppingTwo": "Купівля одягу",
+    "shoppingThree": "На ринку",
+    "shoppingFour": "Покупки онлайн",
+    "shoppingFive": "У меблевому магазині",
+    "shoppingSix": "В пекарні",
+    "shoppingSeven": "Купівля взуття",
+    "shoppingEight": "Подарунок",
+    "shoppingNine": "У магазині електроніки",
+    "shoppingTen": "Велика закупка"
+  },
+  "themeTextTitleTravel_A2": {
+    "travelOne": "Підготовка до поїздки",
+    "travelTwo": "В аеропорту",
+    "travelThree": "Прибуття в готель",
+    "travelFour": "На пляжі",
+    "travelFive": "Екскурсія",
+    "travelSix": "В ресторані",
+    "travelSeven": "Запитування дороги",
+    "travelEight": "Проблеми у відпустці",
+    "travelNine": "Купівля подарунків",
+    "travelTen": "Повернення додому"
+  },
+  "themeTextTitleWork_A2": {
+    "workOne": "Співбесіда",
+    "workTwo": "Домашнє завдання",
+    "workThree": "Перший робочий день",
+    "workFour": "Презентація",
+    "workFive": "Підвищення кваліфікації",
+    "workSix": "В домашньому офісі",
+    "workSeven": "Стажування",
+    "workEight": "Іспит",
+    "workNine": "Мовний курс",
+    "workTen": "Перший клієнт"
+  },
+  "themeTextTitleBasic_B1": {
+    "basicOne": "На вечірці",
+    "basicTwo": "Перше побачення",
+    "basicThree": "Мовний тандем",
+    "basicFour": "Зустріч у поїзді",
+    "basicFive": "Новий колега",
+    "basicSix": "На семінарі",
+    "basicSeven": "На прогулянці з собакою",
+    "basicEight": "Нові сусіди",
+    "basicNine": "У спортивному клубі",
+    "basicTen": "В хостелі"
+  },
+  "themeTextTitleHobby_B1": {
+    "hobbyOne": "Нічна фотографія",
+    "hobbyTwo": "Альпінізм",
+    "hobbyThree": "Гра на піаніно",
+    "hobbyFour": "Розробка ігор",
+    "hobbyFive": "Віндсерфінг",
+    "hobbySix": "Гра в театрі",
+    "hobbySeven": "Стрільба з лука",
+    "hobbyEight": "Реставрація мотоциклів",
+    "hobbyNine": "Випічка",
+    "hobbyTen": "Геокешинг"
+  },
+  "themeTextTitleRoutine_B1": {
+    "routineOne": "Ранній ранок",
+    "routineTwo": "Сніданок і шлях на роботу",
+    "routineThree": "В офісі",
+    "routineFour": "Обідня перерва",
+    "routineFive": "Кінець робочого дня",
+    "routineSix": "Спорт після роботи",
+    "routineSeven": "Вечеря та відпочинок",
+    "routineEight": "Підготовка до сну",
+    "routineNine": "Вечірня прогулянка",
+    "routineTen": "Прибирання будинку"
+  },
+  "themeTextTitleShopping_B1": {
+    "shoppingOne": "Купівля одягу",
+    "shoppingTwo": "У супермаркеті",
+    "shoppingThree": "Купівля техніки онлайн",
+    "shoppingFour": "На блошиному ринку",
+    "shoppingFive": "Пошук подарунка",
+    "shoppingSix": "Повернення товару",
+    "shoppingSeven": "У будівельному магазині",
+    "shoppingEight": "В аптеці",
+    "shoppingNine": "У зоомагазині",
+    "shoppingTen": "В секонд-хенді"
+  },
+  "themeTextTitleTravel_B1": {
+    "travelOne": "Поїздка в місто",
+    "travelTwo": "Пляжний відпочинок",
+    "travelThree": "Похід у гори",
+    "travelFour": "Автомобільна подорож",
+    "travelFive": "Подорож Азією",
+    "travelSix": "Круїз",
+    "travelSeven": "Кемпінг",
+    "travelEight": "Зимова відпустка",
+    "travelNine": "Мовна поїздка",
+    "travelTen": "Сафарі"
+  },
+  "themeTextTitleWork_B1": {
+    "workOne": "Співбесіда на роботу",
+    "workTwo": "Управління проєктом",
+    "workThree": "Семестр за кордоном",
+    "workFour": "Презентація в офісі",
+    "workFive": "Підготовка до іспитів",
+    "workSix": "Обслуговування клієнтів",
+    "workSeven": "Магістерська дисертація",
+    "workEight": "Відрядження",
+    "workNine": "Стажування",
+    "workTen": "Курси"
+  },
+  "textTaskSession": {
+    "allUsed": "Всі слова використано!",
+    "errorText": "Текст не вибрано",
+    "back": "Повернутися до списку"
+  },
+  "exitSessionModal": {
+    "text": "Шкода зупинятися на півдорозі! Якщо закриєте вкладку зараз, ваші старання не збережуться.",
+    "continueLesson": "Продовжити урок",
+    "cancelLesson": "Вийти"
+  },
+  "premiumBannerText": {
+    "text": "Отримай максимум від платформи, прискор своє навчання."
+  },
+  "rulesModal": {
+    "text": "Підказка з граматики доступна після відповіді!"
+  },
+  "footerNavLabel": {
+    "learn": "Навчання",
+    "games": "Ігри",
+    "home": "Головна",
+    "events": "Події",
+    "cabinet": "Кабінет"
   }
 }

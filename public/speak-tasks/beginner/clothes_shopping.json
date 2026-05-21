@@ -1,0 +1,525 @@
+{
+  "start": {
+    "botText": "Guten Tag! Kann ich Ihnen helfen?",
+    "tips": {
+      "ar-SA": "الفعل 'helfen' (يساعد) يأخذ دائماً حالة القابل (Dativ). 'Ihnen' هي صيغة الاحترام من 'Sie'.",
+      "en-US": "The verb 'helfen' (to help) always takes Dativ. 'Ihnen' is the formal 'you'.",
+      "es-ES": "El verbo 'helfen' (ayudar) siempre usa Dativ. 'Ihnen' es el 'usted' formal.",
+      "fr-FR": "Le verbe 'helfen' (aider) prend toujours le Dativ. 'Ihnen' est le vouvoiement.",
+      "hi-IN": "क्रिया 'helfen' (मदद करना) हमेशा Dativ लेती है। 'Ihnen' औपचारिक 'आप' है।",
+      "pl-PL": "Czasownik 'helfen' (pomagać) wymaga celownika (Dativ). 'Ihnen' to formalne 'Panu/Pani'.",
+      "ro-RO": "Verbul 'helfen' (a ajuta) cere Dativ. 'Ihnen' este forma de politețe pentru 'Dumneavoastră'.",
+      "ru-RU": "Глагол 'helfen' (помогать) всегда требует Dativ. 'Ihnen' — это вежливое 'Вам'.",
+      "tr-TR": "'helfen' (yardım etmek) fiili Dativ gerektirir. 'Ihnen' resmi 'Size' demektir.",
+      "uk-UA": "Дієслово 'helfen' (допомагати) завжди вимагає Dativ. 'Ihnen' — це ввічливе 'Вам'.",
+      "uz-UZ": "'helfen' (yordam bermoq) fe'li har doim Dativ talab qiladi. 'Ihnen' rasmiy 'Sizga' degani."
+    },
+    "botTranslation": {
+      "ar-SA": "طاب يومك! هل يمكنني مساعدتك؟",
+      "en-US": "Good day! Can I help you?",
+      "es-ES": "¡Buen día! ¿Puedo ayudarle?",
+      "fr-FR": "Bonjour ! Puis-je vous aider ?",
+      "hi-IN": "शुभ दिन! क्या मैं आपकी मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! W czym mogę pomóc?",
+      "ro-RO": "Bună ziua! Vă pot ajuta?",
+      "ru-RU": "Добрый день! Я могу Вам помочь?",
+      "tr-TR": "İyi günler! Size yardım edebilir miyim?",
+      "uk-UA": "Добрий день! Я можу Вам допомогти?",
+      "uz-UZ": "Xayrli kun! Sizga yordam bera olamanmi?"
+    },
+    "options": [
+      {
+        "text": "Guten Tag! Ja, ich möchte eine Jeans kaufen.",
+        "translation": {
+          "ar-SA": "طاب يومك! نعم، أريد شراء بنطلون جينز.",
+          "en-US": "Good day! Yes, I would like to buy jeans.",
+          "es-ES": "¡Buen día! Sí, quisiera comprar unos vaqueros.",
+          "fr-FR": "Bonjour ! Oui, je voudrais acheter un jean.",
+          "hi-IN": "शुभ दिन! हाँ, मैं जींस खरीदना चाहूँगा।",
+          "pl-PL": "Dzień dobry! Tak, chciałbym/chciałabym kupić dżinsy.",
+          "ro-RO": "Bună ziua! Da, aș dori să cumpăr blugi.",
+          "ru-RU": "Добрый день! Да, я хотел бы купить джинсы.",
+          "tr-TR": "İyi günler! Evet, bir kot pantolon almak istiyorum.",
+          "uk-UA": "Добрий день! Так, я хотів би купити джинси.",
+          "uz-UZ": "Xayrli kun! Ha, men jinsi sotib olmoqchiman."
+        },
+        "nextStep": "ask_which"
+      },
+      {
+        "text": "Hallo! Ja, ich suche eine Jeans.",
+        "tips": {
+          "ru-RU": "Глагол 'suchen' (искать) требует Akkusativ (eine Jeans)."
+        },
+        "translation": {
+          "ar-SA": "مرحباً! نعم، أبحث عن بنطلون جينز.",
+          "en-US": "Hello! Yes, I am looking for jeans.",
+          "es-ES": "¡Hola! Sí, busco unos vaqueros.",
+          "fr-FR": "Bonjour ! Oui, je cherche un jean.",
+          "hi-IN": "नमस्ते! हाँ, मैं एक जींस की तलाश में हूँ।",
+          "pl-PL": "Cześć! Tak, szukam dżinsów.",
+          "ro-RO": "Salut! Da, caut o pereche de blugi.",
+          "ru-RU": "Здравствуйте! Да, я ищу джинсы.",
+          "tr-TR": "Merhaba! Evet, bir kot pantolon arıyorum.",
+          "uk-UA": "Добрий день! Так, я шукаю джинси.",
+          "uz-UZ": "Salom! Ha, men jinsi qidiryapman."
+        },
+        "nextStep": "ask_which"
+      }
+    ],
+    "defaultNext": "ask_which"
+  },
+  "ask_which": {
+    "botText": "Gerne. Welche Jeans möchten Sie?",
+    "tips": {
+      "ar-SA": "'Welche' تعني 'أيّ'.",
+      "en-US": "'Welche' means 'Which'.",
+      "es-ES": "'Welche' significa 'Cuál'.",
+      "fr-FR": "'Welche' signifie 'Lequel / Laquelle'.",
+      "hi-IN": "'Welche' का अर्थ है 'कौन सा'।",
+      "pl-PL": "'Welche' oznacza 'które'.",
+      "ro-RO": "'Welche' înseamnă 'Care'.",
+      "ru-RU": "Вопросительное слово 'Welche' переводится как 'какие' أو 'какая'.",
+      "tr-TR": "'Welche' 'Hangi' demektir.",
+      "uk-UA": "Запитальне слово 'Welche' перекладається як 'які' або 'яка'.",
+      "uz-UZ": "'Welche' 'Qaysi' degan ma'noni anglatadi."
+    },
+    "botTranslation": {
+      "ar-SA": "بكل سرور. أي جينز تريد؟",
+      "en-US": "Gladly. Which jeans would you like?",
+      "es-ES": "Con gusto. ¿Qué vaqueros desea?",
+      "fr-FR": "Volontiers. Quel jean souhaitez-vous ?",
+      "hi-IN": "खुशी से। आप कौन सी जींस चाहेंगे?",
+      "pl-PL": "Z przyjemnością. Które dżinsy pan/pani sobie życzy?",
+      "ro-RO": "Cu plăcere. Ce blugi ați dori?",
+      "ru-RU": "С удовольствием. Какие джинсы Вы хотите?",
+      "tr-TR": "Memnuniyetle. Hangi kotu istersiniz?",
+      "uk-UA": "Із задоволенням. Які джинси Ви хочете?",
+      "uz-UZ": "Bajonidil. Qaysi jinsini xohlaysiz?"
+    },
+    "options": [
+      {
+        "text": "Diese blaue Jeans, bitte.",
+        "translation": {
+          "ar-SA": "هذا الجينز الأزرق، من فضلك.",
+          "en-US": "These blue jeans, please.",
+          "es-ES": "Estos vaqueros azules, por favor.",
+          "fr-FR": "Ce jean bleu, s'il vous plaît.",
+          "hi-IN": "ये नीली जींस, कृपया।",
+          "pl-PL": "Te niebieskie dżinsy, poproszę.",
+          "ro-RO": "Acești blugi albaștri, vă rog.",
+          "ru-RU": "Вот эти синие джинсы, пожалуйста.",
+          "tr-TR": "Bu mavi kot, lütfen.",
+          "uk-UA": "Ось ці сині джинси, будь ласка.",
+          "uz-UZ": "Shu ko'k jinsini, iltimos."
+        },
+        "nextStep": "ask_size"
+      },
+      {
+        "text": "Die blaue Jeans hier, bitte.",
+        "translation": {
+          "ar-SA": "الجينز الأزرق هنا، من فضلك.",
+          "en-US": "The blue jeans here, please.",
+          "es-ES": "Los vaqueros azules de aquí, por favor.",
+          "fr-FR": "Le jean bleu ici, s'il vous plaît.",
+          "hi-IN": "नीली जींस यहाँ, कृपया।",
+          "pl-PL": "Te niebieskie dżinsy tutaj, poproszę.",
+          "ro-RO": "Blugii albaștri de aici, vă rog.",
+          "ru-RU": "Синие джинсы вот здесь, пожалуйста.",
+          "tr-TR": "Buradaki mavi kot, lütfen.",
+          "uk-UA": "Сині джинси ось тут, будь ласка.",
+          "uz-UZ": "Yerdagi ko'k jinsini, iltimos."
+        },
+        "nextStep": "ask_size"
+      }
+    ],
+    "defaultNext": "ask_size"
+  },
+  "ask_size": {
+    "botText": "Sehr schön. Welche Größe haben Sie?",
+    "tips": {
+      "ar-SA": "كلمة 'Größe' تعني مقاس.",
+      "en-US": "The word 'Größe' means size.",
+      "es-ES": "La palabra 'Größe' significa talla.",
+      "fr-FR": "Le mot 'Größe' signifie taille.",
+      "hi-IN": "शब्द 'Größe' का अर्थ आकार/साइज है।",
+      "pl-PL": "Słowo 'Größe' oznacza rozmiar.",
+      "ro-RO": "Cuvântul 'Größe' înseamnă mărime.",
+      "ru-RU": "Слово 'die Größe' означает размер.",
+      "tr-TR": "'Größe' beden (boyut) demektir.",
+      "uk-UA": "Слово 'die Größe' означає розмір.",
+      "uz-UZ": "'Größe' o'lcham (razmer) degani."
+    },
+    "botTranslation": {
+      "ar-SA": "جميل جداً. ما هو مقاسك؟",
+      "en-US": "Very nice. What size are you?",
+      "es-ES": "Muy bien. ¿Qué talla tiene?",
+      "fr-FR": "Très bien. Quelle taille faites-vous ?",
+      "hi-IN": "बहुत अच्छा। आपका साइज क्या है?",
+      "pl-PL": "Bardzo ładne. Jaki nosi pan/pani rozmiar?",
+      "ro-RO": "Foarte frumos. Ce mărime aveți?",
+      "ru-RU": "Очень хорошо. Какой у Вас размер?",
+      "tr-TR": "Çok güzel. Bedeniniz nedir?",
+      "uk-UA": "Дуже добре. Який у Вас розмір?",
+      "uz-UZ": "Juda yaxshi. O'lchamingiz qanday?"
+    },
+    "options": [
+      {
+        "text": "Größe M, bitte.",
+        "translation": {
+          "ar-SA": "مقاس M، من فضلك.",
+          "en-US": "Size M, please.",
+          "es-ES": "Talla M, por favor.",
+          "fr-FR": "Taille M, s'il vous plaît.",
+          "hi-IN": "साइज M, कृपया।",
+          "pl-PL": "Rozmiar M, poproszę.",
+          "ro-RO": "Mărimea M, vă rog.",
+          "ru-RU": "Размер M, пожалуйста.",
+          "tr-TR": "M beden, lütfen.",
+          "uk-UA": "Розмір M, будь ласка.",
+          "uz-UZ": "M o'lcham, iltimos."
+        },
+        "nextStep": "fitting_room"
+      },
+      {
+        "text": "Ich brauche Größe 40, bitte.",
+        "translation": {
+          "ar-SA": "أحتاج مقاس 40، من فضلك.",
+          "en-US": "I need size 40, please.",
+          "es-ES": "Necesito la talla 40, por favor.",
+          "fr-FR": "J'ai besoin de la taille 40, s'il vous plaît.",
+          "hi-IN": "मुझे साइज 40 चाहिए, कृपया।",
+          "pl-PL": "Potrzebuję rozmiaru 40, poproszę.",
+          "ro-RO": "Am nevoie de mărimea 40, vă rog.",
+          "ru-RU": "Мне нужен размер 40, пожалуйста.",
+          "tr-TR": "40 bedene ihtiyacım var, lütfen.",
+          "uk-UA": "Мені потрібен розмір 40, будь ласка.",
+          "uz-UZ": "Menga 40 o'lcham kerak, iltimos."
+        },
+        "nextStep": "fitting_room"
+      }
+    ],
+    "defaultNext": "fitting_room"
+  },
+  "fitting_room": {
+    "botText": "Hier, bitte. Die Umkleidekabine ist geradeaus und links.",
+    "tips": {
+      "ar-SA": "'Umkleidekabine' تعني غرفة القياس (بروفا). 'geradeaus' تعني إلى الأمام مباشرة.",
+      "en-US": "'Umkleidekabine' means fitting room. 'geradeaus' means straight ahead.",
+      "es-ES": "'Umkleidekabine' significa probador. 'geradeaus' significa todo recto.",
+      "fr-FR": "'Umkleidekabine' signifie cabine d'essayage. 'geradeaus' signifie tout droit.",
+      "hi-IN": "'Umkleidekabine' का अर्थ ट्रायल रूम है। 'geradeaus' का अर्थ सीधे है।",
+      "pl-PL": "'Umkleidekabine' to przymierzalnia. 'geradeaus' to prosto.",
+      "ro-RO": "'Umkleidekabine' înseamnă cabina de probă. 'geradeaus' înseamnă drept înainte.",
+      "ru-RU": "Слово 'Umkleidekabine' — примерочная. 'geradeaus' — прямо, 'links' — налево.",
+      "tr-TR": "'Umkleidekabine' deneme kabini demektir. 'geradeaus' dümdüz demektir.",
+      "uk-UA": "Слово 'Umkleidekabine' — примірочна. 'geradeaus' — прямо, 'links' — наліво.",
+      "uz-UZ": "'Umkleidekabine' kiyinish xonasi. 'geradeaus' to'g'riga degani."
+    },
+    "botTranslation": {
+      "ar-SA": "تفضل. غرفة القياس في الأمام مباشرة وإلى اليسار.",
+      "en-US": "Here you go. The fitting room is straight ahead and to the left.",
+      "es-ES": "Aquí tiene. El probador está todo recto y a la izquierda.",
+      "fr-FR": "Voici. La cabine d'essayage est tout droit et à gauche.",
+      "hi-IN": "यह लीजिए। ट्रायल रूम सीधे आगे और बाईं ओर है।",
+      "pl-PL": "Proszę bardzo. Przymierzalnia jest prosto i po lewej stronie.",
+      "ro-RO": "Poftiți. Cabina de probă este drept înainte și la stânga.",
+      "ru-RU": "Вот, пожалуйста. Примерочная прямо и налево.",
+      "tr-TR": "Buyurun. Deneme kabini dümdüz ileride ve solda.",
+      "uk-UA": "Ось, будь ласка. Примірочна прямо і наліво.",
+      "uz-UZ": "Marhamat. Kiyinish xonasi to'g'riga va chapda."
+    },
+    "options": [
+      {
+        "text": "Danke schön!",
+        "translation": {
+          "ar-SA": "شكراً جزيلاً!",
+          "en-US": "Thank you!",
+          "es-ES": "¡Muchas gracias!",
+          "fr-FR": "Merci beaucoup !",
+          "hi-IN": "धन्यवाद!",
+          "pl-PL": "Dziękuję bardzo!",
+          "ro-RO": "Mulțumesc!",
+          "ru-RU": "Спасибо большое!",
+          "tr-TR": "Teşekkürler!",
+          "uk-UA": "Дуже дякую!",
+          "uz-UZ": "Katta rahmat!"
+        },
+        "nextStep": "ask_bag"
+      },
+      {
+        "text": "Vielen Dank!",
+        "translation": {
+          "ar-SA": "شكراً جزيلاً!",
+          "en-US": "Thank you very much!",
+          "es-ES": "¡Muchas gracias!",
+          "fr-FR": "Merci beaucoup !",
+          "hi-IN": "बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję!",
+          "ro-RO": "Vă mulțumesc mult!",
+          "ru-RU": "Большое спасибо!",
+          "tr-TR": "Çok teşekkür ederim!",
+          "uk-UA": "Велике дякую!",
+          "uz-UZ": "Katta rahmat!"
+        },
+        "nextStep": "ask_bag"
+      }
+    ],
+    "defaultNext": "ask_bag"
+  },
+  "ask_bag": {
+    "botText": "Nehmen Sie die Jeans? Und brauchen Sie eine Tüte?",
+    "tips": {
+      "ar-SA": "كلمة 'Tüte' تعني كيس تسوق (بلاستيك أو ورق).",
+      "en-US": "The word 'Tüte' means a shopping bag (plastic or paper).",
+      "es-ES": "La palabra 'Tüte' significa bolsa de la compra (de plástico o papel).",
+      "fr-FR": "Le mot 'Tüte' signifie sac de courses (plastique ou papier).",
+      "hi-IN": "शब्द 'Tüte' का अर्थ है शॉपिंग बैग (प्लास्टिक या कागज)।",
+      "pl-PL": "Słowo 'Tüte' oznacza torbę/reklamówkę na zakupy.",
+      "ro-RO": "Cuvântul 'Tüte' înseamnă pungă de cumpărături.",
+      "ru-RU": "Слово 'die Tüte' означает пакет (в магазине).",
+      "tr-TR": "'Tüte' alışveriş poşeti demektir.",
+      "uk-UA": "Слово 'die Tüte' означає пакет (у магазині).",
+      "uz-UZ": "'Tüte' xarid sumkasi (paket) degani."
+    },
+    "botTranslation": {
+      "ar-SA": "هل ستأخذ الجينز؟ وهل تحتاج إلى كيس؟",
+      "en-US": "Are you taking the jeans? And do you need a bag?",
+      "es-ES": "¿Se lleva los vaqueros? ¿Y necesita una bolsa?",
+      "fr-FR": "Prenez-vous le jean ? Et avez-vous besoin d'un sac ?",
+      "hi-IN": "क्या आप जींस ले रहे हैं? और क्या आपको एक बैग चाहिए?",
+      "pl-PL": "Bierze pan/pani te dżinsy? I czy potrzebuje pan/pani reklamówki?",
+      "ro-RO": "Luați blugii? Și aveți nevoie de o pungă?",
+      "ru-RU": "Вы берете джинсы? И нужен ли Вам пакет?",
+      "tr-TR": "Kotu alıyor musunuz? Ve bir poşete ihtiyacınız var mı?",
+      "uk-UA": "Ви берете джинси? І чи потрібен Вам пакет?",
+      "uz-UZ": "Jinsini olasizmi? Va sizga paket kerakmi?"
+    },
+    "options": [
+      {
+        "text": "Ja, ich nehme sie. Und eine Tüte, bitte.",
+        "translation": {
+          "ar-SA": "نعم، سآخذها. وكيس من فضلك.",
+          "en-US": "Yes, I'll take them. And a bag, please.",
+          "es-ES": "Sí, me los llevo. Y una bolsa, por favor.",
+          "fr-FR": "Oui, je le prends. Et un sac, s'il vous plaît.",
+          "hi-IN": "हाँ, मैं ले रहा हूँ। और एक बैग, कृपया।",
+          "pl-PL": "Tak, wezmę je. I poproszę reklamówkę.",
+          "ro-RO": "Da, îi iau. Și o pungă, vă rog.",
+          "ru-RU": "Да, я беру их. И пакет, пожалуйста.",
+          "tr-TR": "Evet, alıyorum. Ve bir poşet, lütfen.",
+          "uk-UA": "Так, я беру їх. І пакет, будь ласка.",
+          "uz-UZ": "Ha, men olaman. Va paket, iltimos."
+        },
+        "nextStep": "price"
+      },
+      {
+        "text": "Ja, ich kaufe die Jeans. Bitte eine Tüte.",
+        "translation": {
+          "ar-SA": "نعم، سأشتري الجينز. كيس من فضلك.",
+          "en-US": "Yes, I am buying the jeans. A bag, please.",
+          "es-ES": "Sí, compro los vaqueros. Una bolsa, por favor.",
+          "fr-FR": "Oui, j'achète le jean. Un sac, s'il vous plaît.",
+          "hi-IN": "हाँ, मैं जींस खरीद रहा हूँ। कृपया एक बैग।",
+          "pl-PL": "Tak, kupuję te dżinsy. Poproszę reklamówkę.",
+          "ro-RO": "Da, cumpăr blugii. O pungă, vă rog.",
+          "ru-RU": "Да, я покупаю джинсы. Пакет, пожалуйста.",
+          "tr-TR": "Evet, kotu alıyorum. Lütfen bir poşet.",
+          "uk-UA": "Так, я купую джинси. Пакет, будь ласка.",
+          "uz-UZ": "Ha, men jinsini sotib olaman. Paket, iltimos."
+        },
+        "nextStep": "price"
+      }
+    ],
+    "defaultNext": "price"
+  },
+  "price": {
+    "botText": "Das macht zusammen 41 Euro. Zahlen Sie bar oder mit Karte?",
+    "tips": {
+      "ar-SA": "كلمة 'zusammen' تعني 'معاً' (الإجمالي).",
+      "en-US": "The word 'zusammen' means 'together' (total).",
+      "es-ES": "La palabra 'zusammen' significa 'juntos' (en total).",
+      "fr-FR": "Le mot 'zusammen' signifie 'ensemble' (au total).",
+      "hi-IN": "शब्द 'zusammen' का अर्थ 'एक साथ' (कुल) है।",
+      "pl-PL": "Słowo 'zusammen' oznacza 'razem' (łącznie).",
+      "ro-RO": "Cuvântul 'zusammen' înseamnă 'împreună' (în total).",
+      "ru-RU": "Слово 'zusammen' (вместе) здесь означает общую сумму: 'Всё вместе стоит...'.",
+      "tr-TR": "'zusammen' 'birlikte' (toplam) demektir.",
+      "uk-UA": "Слово 'zusammen' (разом) тут означає загальну суму.",
+      "uz-UZ": "'zusammen' 'birgalikda' (jami) degani."
+    },
+    "botTranslation": {
+      "ar-SA": "إجمالي الحساب 41 يورو. هل ستدفع نقداً أم بالبطاقة؟",
+      "en-US": "That comes to 41 Euros in total. Do you pay cash or with card?",
+      "es-ES": "Son 41 euros en total. ¿Paga en efectivo o con tarjeta?",
+      "fr-FR": "Cela fait 41 euros au total. Payez-vous en espèces ou par carte ?",
+      "hi-IN": "यह कुल मिलाकर 41 यूरो हुआ। क्या आप नकद या कार्ड से भुगतान करते हैं?",
+      "pl-PL": "To będzie razem 41 euro. Płaci pan/pani gotówką czy kartą?",
+      "ro-RO": "Asta face 41 de euro în total. Plătiți cash sau cu cardul?",
+      "ru-RU": "Всё вместе стоит 41 евро. Вы платите наличными или картой?",
+      "tr-TR": "Toplam 41 Euro tutuyor. Nakit mi kartla mı ödüyorsunuz?",
+      "uk-UA": "Усе разом коштує 41 євро. Ви платите готівкою чи карткою?",
+      "uz-UZ": "Jami 41 yevro bo'ldi. Naqd to'laysizmi yoki karta bilanmi?"
+    },
+    "options": [
+      {
+        "text": "Ich zahle mit Karte, bitte.",
+        "translation": {
+          "ar-SA": "سأدفع بالبطاقة، من فضلك.",
+          "en-US": "I will pay with card, please.",
+          "es-ES": "Pago con tarjeta, por favor.",
+          "fr-FR": "Je paie par carte, s'il vous plaît.",
+          "hi-IN": "मैं कार्ड से भुगतान करूँगा, कृपया।",
+          "pl-PL": "Płacę kartą, poproszę.",
+          "ro-RO": "Plătesc cu cardul, vă rog.",
+          "ru-RU": "Я плачу картой, пожалуйста.",
+          "tr-TR": "Kartla ödüyorum, lütfen.",
+          "uk-UA": "Я плачу карткою, будь ласка.",
+          "uz-UZ": "Men karta bilan to'layman, iltimos."
+        },
+        "nextStep": "thanks_day"
+      },
+      {
+        "text": "Ich bezahle bar.",
+        "translation": {
+          "ar-SA": "سأدفع نقداً.",
+          "en-US": "I am paying cash.",
+          "es-ES": "Pago en efectivo.",
+          "fr-FR": "Je paie en espèces.",
+          "hi-IN": "मैं नकद भुगतान कर रहा हूँ।",
+          "pl-PL": "Płacę gotówką.",
+          "ro-RO": "Plătesc cash.",
+          "ru-RU": "Я плачу наличными.",
+          "tr-TR": "Nakit ödüyorum.",
+          "uk-UA": "Я плачу готівкою.",
+          "uz-UZ": "Men naqd to'layman."
+        },
+        "nextStep": "thanks_day"
+      }
+    ],
+    "defaultNext": "thanks_day"
+  },
+  "thanks_day": {
+    "botText": "Vielen Dank. Hier ist Ihre Tüte. Einen schönen Tag noch!",
+    "botTranslation": {
+      "ar-SA": "شكراً جزيلاً. هذا كيسك. يوماً سعيداً!",
+      "en-US": "Thank you very much. Here is your bag. Have a nice day!",
+      "es-ES": "Muchas gracias. Aquí tiene su bolsa. ¡Que tenga un buen día!",
+      "fr-FR": "Merci beaucoup. Voici votre sac. Bonne journée !",
+      "hi-IN": "बहुत-बहुत धन्यवाद। यहाँ आपका बैग है। आपका दिन शुभ हो!",
+      "pl-PL": "Bardzo dziękuję. Oto pańska/pani reklamówka. Miłego dnia!",
+      "ro-RO": "Vă mulțumesc mult. Iată punga dumneavoastră. O zi frumoasă în continuare!",
+      "ru-RU": "Большое спасибо. Вот Ваш пакет. Хорошего Вам дня!",
+      "tr-TR": "Çok teşekkürler. İşte poşetiniz. İyi günler!",
+      "uk-UA": "Велике дякую. Ось Ваш пакет. Гарного Вам дня!",
+      "uz-UZ": "Katta rahmat. Mana paketingiz. Yaxshi kun tilayman!"
+    },
+    "options": [
+      {
+        "text": "Danke, Ihnen auch!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً!",
+          "en-US": "Thanks, you too!",
+          "es-ES": "¡Gracias, a usted también!",
+          "fr-FR": "Merci, à vous aussi !",
+          "hi-IN": "धन्यवाद, आपको भी!",
+          "pl-PL": "Dziękuję, panu/pani również!",
+          "ro-RO": "Mulțumesc, și dumneavoastră la fel!",
+          "ru-RU": "Спасибо, Вам тоже!",
+          "tr-TR": "Teşekkürler, size de!",
+          "uk-UA": "Дякую, Вам також!",
+          "uz-UZ": "Rahmat, sizga ham!"
+        },
+        "nextStep": "goodbye"
+      },
+      {
+        "text": "Danke, gleichfalls!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً!",
+          "en-US": "Thanks, same to you!",
+          "es-ES": "¡Gracias, igualmente!",
+          "fr-FR": "Merci, pareillement !",
+          "hi-IN": "धन्यवाद, आपको भी!",
+          "pl-PL": "Dziękuję, nawzajem!",
+          "ro-RO": "Mulțumesc, la fel!",
+          "ru-RU": "Спасибо, взаимно!",
+          "tr-TR": "Teşekkürler, size de!",
+          "uk-UA": "Дякую, навзаєм!",
+          "uz-UZ": "Rahmat, sizga ham!"
+        },
+        "nextStep": "goodbye"
+      }
+    ],
+    "defaultNext": "goodbye"
+  },
+  "goodbye": {
+    "botText": "Auf Wiedersehen!",
+    "botTranslation": {
+      "ar-SA": "إلى اللقاء!",
+      "en-US": "Goodbye!",
+      "es-ES": "¡Adiós!",
+      "fr-FR": "Au revoir !",
+      "hi-IN": "अलविदा!",
+      "pl-PL": "Do widzenia!",
+      "ro-RO": "La revedere!",
+      "ru-RU": "До свидания!",
+      "tr-TR": "Hoşça kalın!",
+      "uk-UA": "До побачення!",
+      "uz-UZ": "Xayr!"
+    },
+    "options": [
+      {
+        "text": "Auf Wiedersehen!",
+        "translation": {
+          "ar-SA": "إلى اللقاء!",
+          "en-US": "Goodbye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Do widzenia!",
+          "ro-RO": "La revedere!",
+          "ru-RU": "До свидания!",
+          "tr-TR": "Hoşça kalın!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Ko'rishguncha!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Tschüss!",
+        "translation": {
+          "ar-SA": "وداعاً!",
+          "en-US": "Bye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Salut !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Cześć!",
+          "ro-RO": "Pa!",
+          "ru-RU": "Пока!",
+          "tr-TR": "Görüşürüz!",
+          "uk-UA": "Бувай!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Der Einkauf ist beendet.",
+    "botTranslation": {
+      "ar-SA": "انتهى التسوق.",
+      "en-US": "The shopping is finished.",
+      "es-ES": "La compra ha terminado.",
+      "fr-FR": "L'achat est terminé.",
+      "hi-IN": "खरीदारी समाप्त हो गई है।",
+      "pl-PL": "Zakupy zostały zakończone.",
+      "ro-RO": "Cumpărăturile s-au încheiat.",
+      "ru-RU": "Покупка завершена.",
+      "tr-TR": "Alışveriş bitti.",
+      "uk-UA": "Покупку завершено.",
+      "uz-UZ": "Xarid qilish tugadi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

@@ -6,7 +6,7 @@
     {
       "id": "hobby_A2_1",
       "title": "Wandern in den Bergen",
-      "translation": "Поход в горы",
+      "translation": "themeTextTitleHobby_A2.hobbyOne",
       "icon": "\uD83E\uDD7E",
       "wordsPool": ["bin", "muss", "den", "mag", "will", "meinem"],
       "textElements": [
@@ -28,7 +28,7 @@
     {
       "id": "hobby_A2_2",
       "title": "Mein Hobby: Fotografie",
-      "translation": "Фотография",
+      "translation": "themeTextTitleHobby_A2.hobbyTwo",
       "icon": "\uD83D\uDCF8",
       "wordsPool": ["bin", "meines", "muss", "der", "mag", "will"],
       "textElements": [
@@ -50,7 +50,7 @@
     {
       "id": "hobby_A2_3",
       "title": "Mein Hobby: Malen",
-      "translation": "Рисование",
+      "translation": "themeTextTitleHobby_A2.hobbyThree",
       "icon": "\uD83C\uDFA8",
       "wordsPool": ["bin", "des", "muss", "einem", "mag", "will"],
       "textElements": [
@@ -72,7 +72,7 @@
     {
       "id": "hobby_A2_4",
       "title": "Mein Hobby: Tanzen",
-      "translation": "Танцы",
+      "translation": "themeTextTitleHobby_A2.hobbyFour",
       "icon": "\uD83D\uDC83",
       "wordsPool": ["bin", "des", "muss", "einem", "mag", "will"],
       "textElements": [
@@ -94,7 +94,7 @@
     {
       "id": "hobby_A2_5",
       "title": "Leidenschaft Fußball",
-      "translation": "Футбол",
+      "translation": "themeTextTitleHobby_A2.hobbyFive",
       "icon": "⚽",
       "wordsPool": ["bin", "des", "muss", "meinem", "mag", "will", "nicht"],
       "textElements": [
@@ -118,7 +118,7 @@
     {
       "id": "hobby_A2_6",
       "title": "Nach der Arbeit ins Wasser",
-      "translation": "Плаванье",
+      "translation": "themeTextTitleHobby_A2.hobbySix",
       "icon": "\uD83C\uDFCA",
       "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "will", "den"],
       "textElements": [
@@ -142,7 +142,7 @@
     {
       "id": "hobby_A2_7",
       "title": "Brettspiele",
-      "translation": "Настольные игры",
+      "translation": "themeTextTitleHobby_A2.hobbySeven",
       "icon": "\uD83C\uDFB2",
       "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "diesen", "will"],
       "textElements": [
@@ -165,7 +165,7 @@
     {
       "id": "hobby_A2_8",
       "title": "Logik und Brettspiele",
-      "translation": "Настольные игры и логика",
+      "translation": "themeTextTitleHobby_A2.hobbyEight",
       "icon": "\uD83E\uDDE9",
       "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "den", "will"],
       "textElements": [
@@ -189,7 +189,7 @@
     {
       "id": "hobby_A2_9",
       "title": "Schach und Strategie",
-      "translation": "Шахматы",
+      "translation": "themeTextTitleHobby_A2.hobbyNine",
       "icon": "♟\uFE0F",
       "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "den", "will"],
       "textElements": [
@@ -213,7 +213,7 @@
     {
       "id": "hobby_A2_10",
       "title": "Hobby: Filme",
-      "translation": "Фильмы",
+      "translation": "themeTextTitleHobby_A2.hobbyTen",
       "icon": "\uD83C\uDF7F",
       "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "den", "will"],
       "textElements": [

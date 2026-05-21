@@ -575,8 +575,8 @@ onMounted(async () => {
 }
 
 .back__btn-icon {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
 }
 
 .sidebar-title {
@@ -618,14 +618,14 @@ onMounted(async () => {
   border-radius: 14px;
   transition: transform 0.4s cubic-bezier(0.34, 1.20, 0.64, 1), opacity 0.3s ease;
   z-index: 1;
-  box-shadow: 0 4px 12px rgba(99, 88, 172, 0.5);
+  box-shadow: var(--tabSlideBoxShadow);
 }
 
 .nav-item {
   flex: 1;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   padding: 0 16px;
   position: relative;
   z-index: 2;
@@ -648,14 +648,6 @@ onMounted(async () => {
   font-weight: 700;
   font-size: 1.05rem;
   font-family: "Nunito", sans-serif;
-}
-
-.nav-item.is-active .nav-icon {
-  transform: translateY(-1px) scale(1.02);
-}
-
-.nav-item:active .nav-icon {
-  transform: scale(0.9);
 }
 
 .settings-wrapper {
@@ -695,7 +687,7 @@ onMounted(async () => {
   border: 3px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile);
   margin-bottom: 10px;
-  max-width: 768px;
+  max-width: 1024px;
 }
 
 .sliding-bg-account {
@@ -860,7 +852,14 @@ onMounted(async () => {
   font-weight: 900;
 }
 
-@media (max-width: 1023px) {
+
+@media (max-width: 767px) {
+  .nav-label {
+    display: none;
+  }
+}
+
+@media (max-width: 1240px) {
   .cabinet-wrapper {
     overflow: hidden;
   }
@@ -908,21 +907,15 @@ onMounted(async () => {
 
   .nav-item {
     justify-content: center;
-    padding: 0;
-    gap: 0;
-  }
-
-  .nav-label {
-    display: none;
   }
 
   .nav-icon {
-    width: 32px;
-    height: 32px;
+    width: 35px;
+    height: 35px;
   }
 
   .back-btn {
-    width: 52px;
+    width: 61px;
     height: 52px;
     padding: 0;
     display: grid;

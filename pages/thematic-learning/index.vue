@@ -66,7 +66,7 @@
                   <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                 </svg>
               </div>
-              <div class="module-status-icon check-icon" v-else-if="moduleToStart && mod.id === moduleToStart.id">
+              <div class="module-status-icon check-icon" v-else-if="isModuleCompleted(selectedLevelObj.level, mod.id)">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
@@ -430,7 +430,7 @@ watch(topic, loadThemeData)
 }
 
 .selected .module-title {
-  color: #3b82f6;
+  color: var(--title);
   opacity: 1;
 }
 
@@ -446,7 +446,7 @@ watch(topic, loadThemeData)
 }
 
 .selected .module-number {
-  color: #3b82f6;
+  color: var(--title);
 }
 
 .locked .module-number {
@@ -476,7 +476,7 @@ watch(topic, loadThemeData)
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 16px 16px calc(env(safe-area-inset-bottom) + 16px);
+  padding: 16px 16px calc(env(safe-area-inset-bottom) + 20px);
   background: linear-gradient(to top, var(--bg) 80%, transparent);
   z-index: 20;
 }
@@ -484,10 +484,10 @@ watch(topic, loadThemeData)
 .btn-start {
   width: 100%;
   padding: 16px;
-  background: #22c55e;
-  border: 2px solid #16a34a;
-  border-bottom-width: 5px;
-  border-radius: 24px;
+  background: #3b82f6;
+  border: none;
+  box-shadow: 0 5px 0 #1d4ed8;
+  border-radius: 34px;
   color: #ffffff;
   font-family: "Nunito", sans-serif;
   font-size: 18px;
@@ -499,43 +499,54 @@ watch(topic, loadThemeData)
 }
 
 .btn-start:active {
-  transform: translateY(3px);
+  transform: translateY(2px);
   border-bottom-width: 2px;
   margin-bottom: 3px;
 }
 
 .toast-message {
-  position: fixed;
-  top: calc(env(safe-area-inset-top) + 80px);
-  left: 50%;
-  transform: translateX(-50%);
-  background: #ef4444;
+  position: absolute;
+  top: calc(env(safe-area-inset-top));
+  left: 0;
+  width: 100%;
+  background: #6b21a8;
+  box-shadow: 0 4px 12px rgba(107, 33, 168, 0.4);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   color: #ffffff;
-  padding: 12px 20px;
-  border-radius: 14px;
+  padding: 5px 10px 15px 10px;
   font-weight: 800;
-  font-size: 15px;
+  font-size: 18px;
   z-index: 100;
-  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
+
   text-align: center;
-  width: max-content;
-  max-width: 90%;
+}
+
+.toast-message:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  left: 0;
+  bottom: 100%;
+  background: #6b21a8;
+  z-index: 1;
 }
 
 .toast-fade-enter-active,
 .toast-fade-leave-active {
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.2s ease-in-out;
 }
 
 .toast-fade-enter-from,
 .toast-fade-leave-to {
   opacity: 0;
-  transform: translate(-50%, -20px) scale(0.9);
+  transform: translateY(-100%)
 }
 
 .slide-up-enter-active,
 .slide-up-leave-active {
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.2s ease-in-out;
 }
 
 .slide-up-enter-from,

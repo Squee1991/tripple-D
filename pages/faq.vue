@@ -251,24 +251,26 @@ function isQuestionOpen(sectionIndex, questionIndex) {
 .faq__bottom-btn {
   margin-top: 24px;
   text-align: center;
+  padding: 15px;
 }
 
 .faq__contact-text {
   margin-bottom: 25px;
   font-weight: 700;
   color: var(--titleColor);
-  font-size: 1.4rem;
+  font-size: 19px;
 }
 
 .faq__btn-contact {
   background: #007bff;
+  box-shadow: 0 5px 0 #0b5baf;
   color: #fff;
   padding: 12px 20px;
-  border-radius: 12px;
+  border-radius: 32px;
   border: none;
   cursor: pointer;
   font-weight: 700;
-  min-width: 260px;
+  width: 100%;
   font-size: 1.4rem;
 }
 
@@ -349,17 +351,20 @@ function isQuestionOpen(sectionIndex, questionIndex) {
 .faq__steps {
   padding-left: 20px;
   margin: 0 0 8px 0;
+  font-size: 15px;
+  color: var(--title);
 }
 
 .faq__step {
   margin: 4px 0;
-  font-size: 20px;
 }
 
 .faq__note {
   margin-top: 8px;
   font-weight: 700;
   padding-left: 20px;
+  font-size: 15px;
+  color: var(--title);
 }
 
 .faq__answer {

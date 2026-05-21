@@ -13,6 +13,7 @@
             :class="{ 'is-active': activeIndex === index }"
         >
           <img class="nav__icon" :src="item.icon" :alt="item.alt">
+          <span class="nav__label">{{ item.label }}</span>
         </NuxtLink>
       </nav>
     </div>
@@ -23,7 +24,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { userAuthStore } from "../../store/authStore.js";
-
+const { t } = useI18n();
 import Home from '../../assets/images/app-nav-icons/home.svg'
 import Events from '../../assets/images/app-nav-icons/events.svg'
 import Game from '../../assets/images/app-nav-icons/game.svg'
@@ -33,11 +34,11 @@ import Study from '../../assets/images/app-nav-icons/study.svg'
 const authStore = userAuthStore()
 const route = useRoute()
 const footerNav = [
-  { id: 'study', path: '/study', icon: Study, alt: 'Study' },
-  { id: 'game', path: '/play', icon: Game, alt: 'Game' },
-  { id: 'home', path: '/', icon: Home, alt: 'Home' },
-  { id: 'events', path: '/events', icon: Events, alt: 'Events' },
-  { id: 'exams', path: '/cabinet', icon: Cabinet, alt: 'Exams' },
+  { id: 'study', path: '/study', label: t('footerNavLabel.learn'), icon: Study, alt: 'Study' },
+  { id: 'game', path: '/play', label: t('footerNavLabel.games'), icon: Game, alt: 'Game' },
+  { id: 'home', path: '/', label: t('footerNavLabel.home'), icon: Home, alt: 'Home' },
+  { id: 'events', path: '/events', label: t('footerNavLabel.events'), icon: Events, alt: 'Events' },
+  { id: 'exams', path: '/cabinet', label: t('footerNavLabel.cabinet'), icon: Cabinet, alt: 'Exams' },
 ]
 const activeIndex = computed(() => {
   return footerNav.findIndex(item => {
@@ -52,11 +53,13 @@ const activeIndex = computed(() => {
 
 .footer {
   position: fixed;
+  max-width: 1240px;
+  margin: 0 auto;
   bottom: 21px;
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 20px);
-  z-index: 100;
+  z-index: 1;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -120,8 +123,18 @@ const activeIndex = computed(() => {
   will-change: transform;
 }
 
-.nav__item.is-active .nav__icon {
-  transform: translateY(-1px) scale(1.02);
+.nav__label{
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .nav__label {
+    display: block;
+    color: var(--title);
+    font-weight: 600;
+    margin-left: 8px;
+    font-size: 15px;
+  }
 }
 
 </style>

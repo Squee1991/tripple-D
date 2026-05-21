@@ -6,7 +6,7 @@
     {
       "id": "basics_A1_1",
       "title": "Formelle Vorstellung",
-      "translation": "Формальное знакомство",
+      "translation": "themeTextTitleBasic_A1.basicOne",
       "icon": "\uD83E\uDD1D",
       "wordsPool": ["Guten Tag", "heißen", "Sie", "bin", "freut", "mich", "wohnen", "sprechen"],
       "textElements": [
@@ -31,7 +31,7 @@
     {
       "id": "basics_A1_2",
       "title": "Informelles Kennenlernen",
-      "translation": "Неформальное знакомство",
+      "translation": "themeTextTitleBasic_A1.basicTwo",
       "icon": "\uD83D\uDC4B",
       "wordsPool": ["bist", "heiße", "Freut", "Woher", "aus", "wohne"],
       "textElements": [
@@ -53,7 +53,7 @@
     {
       "id": "basics_A1_3",
       "title": "Ein Treffen planen",
-      "translation": "Планы на день",
+      "translation": "themeTextTitleBasic_A1.basicThree",
       "icon": "\uD83D\uDCC5",
       "wordsPool": ["du", "heute", "ich", "wir", "um", "Uhr"],
       "textElements": [
@@ -75,7 +75,7 @@
     {
       "id": "basics_A1_4",
       "title": "Abendpläne",
-      "translation": "Планы на вечер",
+      "translation": "themeTextTitleBasic_A1.basicFour",
       "icon": "\uD83C\uDFAC",
       "wordsPool": ["du", "heute", "ich", "wir", "um", "Uhr"],
       "textElements": [
@@ -97,7 +97,7 @@
     {
       "id": "basics_A1_5",
       "title": "Am Wochenende",
-      "translation": "В выходные",
+      "translation": "themeTextTitleBasic_A1.basicFive",
       "icon": "\uD83C\uDF33",
       "wordsPool": ["du", "Samstag", "ich", "wir", "um", "Uhr"],
       "textElements": [
@@ -119,7 +119,7 @@
     {
       "id": "basics_A1_6",
       "title": "Sport machen",
-      "translation": "Занятия спортом",
+      "translation": "themeTextTitleBasic_A1.basicSix",
       "icon": "\uD83E\uDDD8\u200D♀\uFE0F",
       "wordsPool": ["du", "ich", "wir", "Dienstag", "Wann", "Uhr"],
       "textElements": [
@@ -141,7 +141,7 @@
     {
       "id": "basics_A1_7",
       "title": "Zusammen kochen",
-      "translation": "Готовим вместе",
+      "translation": "themeTextTitleBasic_A1.basicSeven",
       "icon": "\uD83C\uDF55",
       "wordsPool": ["du", "ich", "wir", "Abend", "um", "Uhr"],
       "textElements": [
@@ -163,7 +163,7 @@
     {
       "id": "basics_A1_8",
       "title": "In die Stadt gehen",
-      "translation": "Поездка в город",
+      "translation": "themeTextTitleBasic_A1.basicEight",
       "icon": "\uD83C\uDFD9\uFE0F",
       "wordsPool": ["heute", "ich", "wir", "Um", "Uhr", "jetzt"],
       "textElements": [
@@ -185,7 +185,7 @@
     {
       "id": "basics_A1_9",
       "title": "Zusammen lernen",
-      "translation": "Учимся вместе",
+      "translation": "themeTextTitleBasic_A1.basicNine",
       "icon": "\uD83D\uDCDA",
       "wordsPool": ["du", "ich", "wir", "Wann", "um", "Uhr"],
       "textElements": [
@@ -207,7 +207,7 @@
     {
       "id": "basics_A1_10",
       "title": "Musik machen",
-      "translation": "Занимаемся музыкой",
+      "translation": "themeTextTitleBasic_A1.basicTen",
       "icon": "\uD83C\uDFB5",
       "wordsPool": ["du", "ich", "wir", "Wann", "um", "Uhr"],
       "textElements": [

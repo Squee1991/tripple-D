@@ -155,7 +155,6 @@ onMounted(() => {
 }
 
 .action-menu__icon-bg {
-  background: var(--tabBg);
   border-radius: 12px;
   width: 45px;
   height: 45px;

@@ -106,6 +106,7 @@ import BannerIcon from '../assets/images/articleBannerIcon.svg'
 import PracticeIcon from '../assets/images/practiceIcon.svg'
 import GrammarIcon from '../assets/images/GrammarIcon.svg'
 import TextBook from '../assets/images/TextBook.svg'
+import SpeakingIcon from '../assets/images/speakingIcon.svg'
 
 const { t } = useI18n()
 const router = useRouter()
@@ -133,6 +134,7 @@ function setTab(id) {
 
 const practiceCategories = computed(() => [
   { id: 'words', icon: BannerIcon, url: '/articles', title: t('sub.words') },
+  { id: 'words', icon: SpeakingIcon, url: '/speak-practice', title: t('Разговорная практика') },
   { id: 'audio', icon: Sound, url: '/audio-tasks', title: t('sub.audio') },
   { id: 'text', icon: TextBook, url: '/text-tasks', title: t('sub.textTask') },
   { id: 'description', icon: Photo, url: '/image-description', title: t('sub.describePicture') },
@@ -315,7 +317,7 @@ definePageMeta({
 }
 
 .tab-label {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 800;
   font-family: "Nunito", sans-serif;
   color: var(--titleColor);

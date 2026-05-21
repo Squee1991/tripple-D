@@ -11,7 +11,6 @@
             @submit.prevent="sendMessage"
         >
           <div class="form__header">
-            <p class="form__label">{{ t(data.label) }}</p>
             <h2 class="form__title">{{ t(data.title) }}</h2>
           </div>
           <div class="form__field">
@@ -23,13 +22,13 @@
             />
             <span class="error__message" v-if="errors.email">{{ errors.email }}</span>
           </div>
-          <div class="form__field  --area">
-                        <textarea
-                            class="area"
-                            v-model="userMessage"
-                            :placeholder="t(data.placeholder.message)"
-                        ></textarea>
-            <span class="error__message" v-if="errors.message">{{ errors.message }}  </span>
+          <div class="form__field --area">
+            <textarea
+                class="area"
+                v-model="userMessage"
+                :placeholder="t(data.placeholder.message)"
+            ></textarea>
+            <span class="error__message" v-if="errors.message">{{ errors.message }}</span>
           </div>
           <div class="form__field-screenshot">
             <input
@@ -41,15 +40,15 @@
             />
             <label for="file" class="custom-btn">
               <span class="paper_clip">📎</span>
-              <span> {{ t('feedBack.screenShot') }}</span>
+              <span>{{ t('feedBack.screenShot') }}</span>
             </label>
             <span class="error__message" v-if="errors.file">{{ errors.file }}</span>
             <div class="btn-screenshot" v-for="(item, index) in images" :key="index">
               <div class="file-info">
-                <span class="file-icon">- 📄 screenshot({{ index + 1 }})</span>
+                <span class="file-icon">📄 Скриншот ({{ index + 1 }})</span>
               </div>
               <button type="button" class="delete-image" @click="removeImage(index)">
-                <img src="../../assets/images/garbage.svg" alt="garbage">
+                <img src="../../assets/images/garbage.svg" alt="garbage" class="garbage-icon">
               </button>
             </div>
           </div>
@@ -67,13 +66,14 @@
 </template>
 
 <script setup>
-import {ref, onMounted, onUnmounted, computed} from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 import emailjs from 'emailjs-com'
 import Lottie from 'lottie-web'
 import MessageAnimation from '@/assets/animation/sendMessage.json'
-import {gsap} from 'gsap'
-import {ScrollTrigger} from 'gsap/ScrollTrigger'
-import {userAuthStore} from '~/store/authStore.js'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { userAuthStore } from '~/store/authStore.js'
+import { useI18n } from "vue-i18n"
 
 import {
   getStorage,
@@ -83,7 +83,7 @@ import {
 } from 'firebase/storage'
 
 gsap.registerPlugin(ScrollTrigger)
-const {t} = useI18n()
+const { t } = useI18n()
 const authStore = userAuthStore()
 const contactSection = ref(null)
 const contactFormRef = ref(null)
@@ -104,7 +104,7 @@ const MAX_FILE_SIZE = 2 * 1024 * 1024
 const data = {
   label: 'feedBack.label',
   title: 'feedBack.title',
-  btn: {text: 'feedBack.btn'},
+  btn: { text: 'feedBack.btn' },
   placeholder: {
     email: 'feedBack.emailPlaceholder',
     message: 'feedBack.messagePlaceholder'
@@ -129,10 +129,12 @@ const onFileChange = (e) => {
   }
   e.target.value = "";
 };
+
 const removeImage = (index) => {
   URL.revokeObjectURL(images.value[index].url)
   images.value.splice(index, 1)
 }
+
 const uploadScreenshot = async (file) => {
   const storage = getStorage()
   const fileRef = storageRef(
@@ -142,8 +144,9 @@ const uploadScreenshot = async (file) => {
   await uploadBytes(fileRef, file)
   return await getDownloadURL(fileRef)
 }
+
 const sendMessage = async () => {
-  errors.value = {email: '', message: '', file: ''}
+  errors.value = { email: '', message: '', file: '' }
 
   if (!userEmail.value.trim()) {
     errors.value.email = t('feedBack.emailPlaceholder')
@@ -205,6 +208,7 @@ onMounted(() => {
     })
   }
 })
+
 onUnmounted(() => {
   ScrollTrigger.killAll()
 })
@@ -215,27 +219,25 @@ onUnmounted(() => {
 
 .contact__wrapper {
   width: 100%;
-  padding: 2rem 1.5rem;
   font-family: "Nunito", sans-serif;
-  margin-bottom: 50px;
 }
 
 .contact-form {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .form__animation-wrapper {
   flex: 1;
   min-width: 300px;
-  align-self: stretch;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #60a5fa;
+  background: #1C1E26;
   border-radius: 24px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0px #1e1e1e;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .form__animation {
@@ -245,163 +247,90 @@ onUnmounted(() => {
 
 .form__content {
   flex: 1;
-  padding: 2.5rem;
-  background: #ffffff;
+  padding: 15px;
+  background: var(--menuItemsBg);
   border-radius: 24px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0px #1e1e1e;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
 }
 
 .form__header {
   text-align: center;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .form__label {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #e53935;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #EB5757;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  margin: 0;
 }
 
 .form__title {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #1e1e1e;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #A3A3A3;
   margin-top: 0.5rem;
+  margin-bottom: 0;
 }
 
 .form__field {
-  height: 80px;
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
 .form__field.--area {
-  height: 170px;
-  margin-bottom: 5px;
-}
-
-.form__field-screenshot {
-  margin-bottom: 15px;
-}
-
-.form__field-label {
-  display: none;
+  flex-grow: 1;
 }
 
 .input,
 .area {
   width: 100%;
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  color: #1e1e1e;
-  background: #fef8e4;
-  border: 3px solid #1e1e1e;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  background: white;
+  border: none;
   border-radius: 16px;
-  font-size: .8rem;
-  padding: 1rem;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 3px 3px 0px #1e1e1e;
+  font-size: 1rem;
+  padding: 1.2rem;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .input::placeholder,
 .area::placeholder {
-  color: #a1a1a1;
-  font-family: "Nunito", sans-serif;
+  color: #5C5E6A;
   font-weight: 500;
 }
 
 .input:focus,
 .area:focus {
   outline: none;
-  background: #ffffff;
-  border-color: #fca13a;
-  box-shadow: 3px 3px 0px #fca13a;
+  /* Голубое свечение при фокусе */
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1), 0 0 0 2px #55a8f5;
 }
 
 .area {
-  min-height: 145px;
-  resize: none;
+  min-height: 140px;
+  resize: vertical;
 }
 
 .error__message {
-  color: #e53935;
-  font-size: 0.9rem;
-  text-align: center;
-  font-family: "Nunito", sans-serif;
+  color: #EB5757;
+  font-size: 0.85rem;
+  margin-top: 5px;
   font-weight: 700;
   display: block;
+  text-align: left;
+  padding-left: 10px;
 }
 
-.btn--submit {
-  width: 100%;
-  font-family: "Nunito", sans-serif;
-  font-weight: bold;
-  padding: 1rem 1.5rem;
-  font-size: 1.3rem;
-  border-radius: 16px;
-  cursor: pointer;
-  border: 3px solid #1e1e1e;
-  transition: all 0.1s ease-in-out;
-  background-color: #4ade80;
-  color: #1e1e1e;
-  box-shadow: 3px 3px 0px #1e1e1e;
-}
-
-.btn--submit:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px #1e1e1e;
-}
-
-.btn--submit:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0px 0px 0px #1e1e1e;
-}
-
-@media (max-width: 900px) {
-  .contact-form {
-    flex-direction: column;
-  }
-
-  .form__animation-wrapper {
-    display: none;
-  }
-
-  .form__content {
-    width: 100%;
-    flex-basis: auto;
-    padding: 2.5rem;
-    box-shadow: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .contact__wrapper {
-    padding: 0 15px;
-  }
-}
-
-@media (max-width: 640px) {
-
-  .form__content {
-    padding: 2rem 1.5rem;
-  }
-
-  .form__title {
-    font-size: 1.2rem;
-  }
-
-  .form__header {
-    margin-bottom: 1rem;
-  }
-
-  .btn__back {
-    font-size: 1rem;
-  }
-
-  .btn--submit {
-    font-size: 1rem;
-  }
+.form__field-screenshot {
+  margin-bottom: 1.5rem;
 }
 
 .custom-input {
@@ -409,51 +338,120 @@ onUnmounted(() => {
 }
 
 .custom-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
   cursor: pointer;
-  border: 2px solid #1e1e1e;
-  max-width: 200px;
-  border-radius: 12px;
-  background-color: white;
-  box-shadow: 3px 3px 0 black;
-}
-
-.file-info {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
-}
-
-.file-name {
+  background-color: #323647;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 16px;
   font-weight: 700;
-  color: #1e1e1e;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  transition: transform 0.1s, box-shadow 0.1s;
+  box-shadow: 0 5px 0 #222532;
+}
+
+.custom-btn:active {
+  transform: translateY(5px);
+  box-shadow: 0 0 0 #222532;
+}
+
+.paper_clip {
+  font-size: 1.2rem;
 }
 
 .btn-screenshot {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 0 ;
-  background: #ffffff;
-  padding: 4px;
-  border-bottom: 2px dashed #1e1e1e;
-  border-radius: 8px;
+  margin-top: 15px;
+  background: #2A2D3A;
+  padding: 10px 15px;
+  border-radius: 12px;
+  color: #ffffff;
 }
 
-.paper_clip {
-  font-size: 30px;
-  cursor: pointer;
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-icon {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #55a8f5;
 }
 
 .delete-image {
-  display: flex;
-  justify-content: space-between;
   border: none;
-  background: none;
-  width: 30px;
-  height: 30px;
+  background: rgba(235, 87, 87, 0.1);
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.delete-image:hover {
+  background: rgba(235, 87, 87, 0.2);
+}
+
+.garbage-icon {
+  width: 18px;
+  height: 18px;
+  filter: invert(1);
+}
+
+.btn--submit {
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border-radius: 18px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  background-color: #2ECC71;
+  color: #ffffff;
+  text-transform: lowercase;
+  /* 3D тень снизу */
+  box-shadow: 0 6px 0 #24A055;
+}
+
+.btn--submit:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #24A055;
+}
+
+.btn--submit:disabled {
+  background-color: #5C5E6A;
+  box-shadow: 0 6px 0 #4A4C56;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .contact-form {
+    flex-direction: column;
+  }
+  .form__animation-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .input, .area {
+    padding: 1rem;
+  }
+
+  .custom-btn {
+    width: 100%;
+  }
 }
 </style>

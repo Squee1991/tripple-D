@@ -134,6 +134,26 @@ onBeforeUnmount(() => {
 
 .lands__container {
   height: 100vh;
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 155px;
+}
+
+.lands__container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.lands__container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.lands__container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.lands__container::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 1023px) {
@@ -194,10 +214,6 @@ onBeforeUnmount(() => {
     -webkit-tap-highlight-color: transparent;
   }
 
-  .mobile-nav__btn--active .tab__icon {
-    transform: scale(1.07);
-  }
-
   .mobile-panel {
     flex: 1;
     min-height: 0;
@@ -226,5 +242,13 @@ onBeforeUnmount(() => {
     width: 100%;
   }
 }
+
+@media (min-width: 767px) {
+  .stats__wrapper {
+    padding-bottom: 155px;
+  }
+}
+
+
 
 </style>

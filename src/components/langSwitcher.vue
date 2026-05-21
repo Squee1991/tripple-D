@@ -49,7 +49,7 @@ const selectLanguage = async (code) => {
           <input
               v-model="searchQuery"
               type="text"
-              placeholder="Поиск..."
+              :placeholder="t('friendList.searching')"
               class="search-input"
           />
         </div>

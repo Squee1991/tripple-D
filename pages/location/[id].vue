@@ -542,7 +542,7 @@ onMounted(async () => {
   z-index: 2;
   padding: 15px 22px;
   margin-top: 12px;
-  border-radius: 24px;
+  border-radius: 34px;
   font-size: 17px;
   font-weight: 900;
   letter-spacing: .02em;

@@ -5,6 +5,13 @@
         <h1 class="map__title">{{ t('locationsMenu.title') }}</h1>
       </div>
       <div class="map-layout">
+        <transition name="fade">
+          <div
+              class="map-overlay"
+              v-if="isPanelOpen && windowWidth <= 1024"
+              @click="closePanel"
+          ></div>
+        </transition>
         <transition name="slide">
           <div
               class="map-left"
@@ -235,7 +242,7 @@ onBeforeUnmount(() => {
 }
 
 .arrow__btn-icon {
-  width: 20px;
+  width: 16px;
 }
 
 .arrow__btn-icon.arrow-back {
@@ -554,7 +561,7 @@ onBeforeUnmount(() => {
     bottom: 0;
     left: 0;
     box-sizing: border-box;
-    width: 60%;
+    width: 50%;
     height: 100%;
     border: none;
     border-right: 3px solid;
@@ -564,6 +571,18 @@ onBeforeUnmount(() => {
     padding: calc(env(safe-area-inset-top, 30px) + 0px) 10px 10px 10px;
     transform: translateX(0);
     opacity: 1;
+    pointer-events: auto;
+  }
+
+  .map-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+    z-index: 110999;
     pointer-events: auto;
   }
 
@@ -621,6 +640,12 @@ onBeforeUnmount(() => {
   }
 }
 
+@media (width: 768px) {
+  .map-right {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 @media (max-width: 766px) {
   .map-right {
     grid-template-columns: repeat(2, 2fr);
@@ -631,6 +656,12 @@ onBeforeUnmount(() => {
 @media (max-width: 700px) {
   .map-left {
     width: 60%;
+  }
+}
+
+@media (min-width: 768px) {
+  region-card {
+    height: 166px;
   }
 }
 
@@ -651,12 +682,8 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 500px) {
-  .region-card-badge-wrapper {
-    display: none;
-  }
-
   .region-card__title {
-    font-size: 0.83rem;
+    font-size: 12px;
   }
 }
 

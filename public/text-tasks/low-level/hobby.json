@@ -6,7 +6,7 @@
     {
       "id": "hobby_A1_1",
       "title": "Fußball spielen",
-      "translation": "Игра в футбол",
+      "translation": "themeTextTitleHobby_A1.hobbyOne",
       "icon": "⚽",
       "wordsPool": [
         "bin",
@@ -80,7 +80,7 @@
     {
       "id": "hobby_A1_2",
       "title": "Fotografieren",
-      "translation": "Фотография",
+      "translation": "themeTextTitleHobby_A1.hobbyTwo",
       "icon": "\uD83D\uDCF8",
       "wordsPool": [
         "Fotografin",
@@ -154,7 +154,7 @@
     {
       "id": "hobby_A1_3",
       "title": "Gitarre spielen",
-      "translation": "Игра на гитаре",
+      "translation": "themeTextTitleHobby_A1.hobbyThree",
       "icon": "\uD83C\uDFB8",
       "wordsPool": [
         "meine",
@@ -228,7 +228,7 @@
     {
       "id": "hobby_A1_4",
       "title": "Schwimmen",
-      "translation": "Плавание",
+      "translation": "themeTextTitleHobby_A1.hobbyFour",
       "icon": "\uD83C\uDFCA",
       "wordsPool": [
         "ins",
@@ -302,7 +302,7 @@
     {
       "id": "hobby_A1_5",
       "title": "Kochen",
-      "translation": "Кулинария",
+      "translation": "themeTextTitleHobby_A1.hobbyFive",
       "icon": "\uD83C\uDF73",
       "wordsPool": [
         "Schneide",
@@ -376,7 +376,7 @@
     {
       "id": "hobby_A1_6",
       "title": "Reisen",
-      "translation": "Путешествия",
+      "translation": "themeTextTitleHobby_A1.hobbySix",
       "icon": "\uD83E\uDDF3",
       "wordsPool": [
         "reise",
@@ -450,7 +450,7 @@
     {
       "id": "hobby_A1_7",
       "title": "Lesen",
-      "translation": "Чтение",
+      "translation": "themeTextTitleHobby_A1.hobbySeven",
       "icon": "\uD83D\uDCD6",
       "wordsPool": [
         "Bücher",
@@ -524,7 +524,7 @@
     {
       "id": "hobby_A1_8",
       "title": "Gartenarbeit",
-      "translation": "Садоводство",
+      "translation": "themeTextTitleHobby_A1.hobbyEight",
       "icon": "\uD83C\uDF31",
       "wordsPool": [
         "pflanze",
@@ -598,7 +598,7 @@
     {
       "id": "hobby_A1_9",
       "title": "Tanzen",
-      "translation": "Танцы",
+      "translation": "themeTextTitleHobby_A1.hobbyNine",
       "icon": "\uD83D\uDC83",
       "wordsPool": [
         "tanze",
@@ -672,7 +672,7 @@
     {
       "id": "hobby_A1_10",
       "title": "Sprachen lernen",
-      "translation": "Изучение языков",
+      "translation": "themeTextTitleHobby_A1.hobbyTen",
       "icon": "\uD83D\uDDE3\uFE0F",
       "wordsPool": [
         "habe",

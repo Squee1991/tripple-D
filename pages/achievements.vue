@@ -587,7 +587,7 @@ const handleCategoryClick = (category) => {
   height: 100%;
   width: 100%;
   padding: 10px;
-  gap: 10px;
+  gap: 15px;
   font-family: "Nunito", sans-serif;
   box-sizing: border-box;
   position: relative;
@@ -624,23 +624,6 @@ const handleCategoryClick = (category) => {
   flex-direction: column;
   transition: all 0.3s ease;
   z-index: 1;
-}
-
-.btn__back {
-  width: 100%;
-  border: 3px solid #1e1e1e;
-  padding: 15px;
-  background: #f1c40f;
-  border-radius: 16px;
-  cursor: pointer;
-  color: #1e1e1e;
-  font-size: 1.2rem;
-  font-family: "Nunito", sans-serif;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  transition: all 0.1s ease-in-out;
-  margin-bottom: 1.5rem;
-  flex-shrink: 0;
-  font-weight: 600;
 }
 
 .header__title {
@@ -689,7 +672,7 @@ const handleCategoryClick = (category) => {
 }
 
 .submenu-item.active {
-  border-color: #1e1e1e;
+  border-color: #328c32;
 }
 
 .submenu-arrow {
@@ -769,7 +752,7 @@ const handleCategoryClick = (category) => {
   background-color: var(--bg);
   border-radius: 24px;
   border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0px #1e1e1e;
+  box-shadow: 0 4px 0 #1e1e1e;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -829,7 +812,7 @@ const handleCategoryClick = (category) => {
 }
 
 .category-description {
-  font-size: 1.2em;
+  font-size: 18px;
   color: #1e1e1e;
 }
 

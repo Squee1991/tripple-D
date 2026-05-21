@@ -6,7 +6,7 @@
     {
       "id": "meet_A2_1",
       "title": "Im Deutschkurs",
-      "translation": "На курсах немецкого",
+      "translation": "themeTextTitleBasic_A2.basicOne",
       "icon": "\uD83D\uDD24",
       "wordsPool": ["wie", "zu", "denn", "werden", "lasse", "weil", "dass"],
       "textElements": [
@@ -30,7 +30,7 @@
     {
       "id": "meet_A2_2",
       "title": "Der Tandempartner",
-      "translation": "Тандем-партнер",
+      "translation": "themeTextTitleBasic_A2.basicTwo",
       "icon": "\uD83D\uDCAC",
       "wordsPool": ["als", "zu", "sondern", "dass", "lasse", "werden", "wenn"],
       "textElements": [
@@ -54,7 +54,7 @@
     {
       "id": "meet_A2_3",
       "title": "Erster Tag an der Uni",
-      "translation": "В университете",
+      "translation": "themeTextTitleBasic_A2.basicThree",
       "icon": "\uD83C\uDFDB\uFE0F",
       "wordsPool": ["zu", "wie", "aber", "werden", "lasse", "obwohl", "nachdem"],
       "textElements": [
@@ -78,7 +78,7 @@
     {
       "id": "meet_A2_4",
       "title": "In der Bibliothek",
-      "translation": "В библиотеке",
+      "translation": "themeTextTitleBasic_A2.basicFour",
       "icon": "\uD83D\uDCDA",
       "wordsPool": ["als", "zu", "bevor", "oder", "lässt", "werden", "weil"],
       "textElements": [
@@ -102,7 +102,7 @@
     {
       "id": "meet_A2_5",
       "title": "Das Gruppenprojekt",
-      "translation": "Групповой проект",
+      "translation": "themeTextTitleBasic_A2.basicFive",
       "icon": "\uD83D\uDC65",
       "wordsPool": ["zu", "dass", "und", "wie", "werden", "lassen", "nachdem"],
       "textElements": [
@@ -126,7 +126,7 @@
     {
       "id": "meet_A2_6",
       "title": "Die Sprachreise",
-      "translation": "Языковая поездка",
+      "translation": "themeTextTitleBasic_A2.basicSix",
       "icon": "\uD83C\uDF0D",
       "wordsPool": ["als", "zu", "aber", "werden", "lasse", "weil", "dass"],
       "textElements": [
@@ -150,7 +150,7 @@
     {
       "id": "meet_A2_7",
       "title": "Der neue Schüler",
-      "translation": "Новый ученик",
+      "translation": "themeTextTitleBasic_A2.basicSeven",
       "icon": "\uD83D\uDE4B\u200D♂\uFE0F",
       "wordsPool": ["wie", "zu", "denn", "wird", "lässt", "bevor", "obwohl"],
       "textElements": [
@@ -174,7 +174,7 @@
     {
       "id": "meet_A2_8",
       "title": "Der Online-Kurs",
-      "translation": "Онлайн-курс",
+      "translation": "themeTextTitleBasic_A2.basicEight",
       "icon": "\uD83C\uDF10",
       "wordsPool": ["als", "zu", "oder", "werden", "lasse", "nachdem", "dass"],
       "textElements": [
@@ -198,7 +198,7 @@
     {
       "id": "meet_A2_9",
       "title": "Die Lerngruppe",
-      "translation": "Учебная группа",
+      "translation": "themeTextTitleBasic_A2.basicNine",
       "icon": "\uD83E\uDDD1\u200D\uD83E\uDD1D\u200D\uD83E\uDDD1",
       "wordsPool": ["wie", "zu", "sondern", "werden", "lassen", "weil", "wenn"],
       "textElements": [
@@ -222,7 +222,7 @@
     {
       "id": "meet_A2_10",
       "title": "Der Prüfungspartner",
-      "translation": "Партнер по экзамену",
+      "translation": "themeTextTitleBasic_A2.basicTen",
       "icon": "\uD83D\uDCDD",
       "wordsPool": ["als", "zu", "aber", "wird", "lässt", "obwohl", "dass"],
       "textElements": [

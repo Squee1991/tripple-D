@@ -1,12 +1,13 @@
 {
-  "themeId": "hobbies_A1",
+  "themeId": "hobbies_1",
   "themeTitle": "Основы: Приветствия и Числа",
   "level": "B1",
   "tasks": [
     {
-      "id": "hobby_1",
+      "id": "hobby_B1_1",
       "title": "Nachtfotografie",
-      "translation": "Ночная фотография",
+      "translation": "themeTextTitleHobby_B1.hobbyOne",
+      "icon": "\uD83C\uDF0C",
       "wordsPool": ["hatte", "kaufte", "trotzdem", "sonst", "dann", "nämlich", "deshalb"],
       "tasks": [
         { "type": "text", "content": "Ich " },
@@ -27,9 +28,10 @@
       ]
     },
     {
-      "id": "hobby_2",
+      "id": "hobby_B1_2",
       "title": "Bergsteigen",
-      "translation": "Альпинизм",
+      "translation": "themeTextTitleHobby_B1.hobbyTwo",
+      "icon": "\uD83E\uDDD7\u200D♂\uFE0F",
       "wordsPool": ["hatten", "bestiegen", "trotzdem", "deshalb", "sonst", "dann", "nämlich"],
       "tasks": [
         { "type": "text", "content": "Wir " },
@@ -50,9 +52,10 @@
       ]
     },
     {
-      "id": "hobby_3",
+      "id": "hobby_B1_3",
       "title": "Klavier spielen",
-      "translation": "Игра на пианино",
+      "translation": "themeTextTitleHobby_B1.hobbyThree",
+      "icon": "\uD83C\uDFB9",
       "wordsPool": ["spielte", "hatte", "deshalb", "trotzdem", "sonst", "Außerdem", "nämlich"],
       "tasks": [
         { "type": "text", "content": "Als ich klein war, " },
@@ -73,9 +76,10 @@
       ]
     },
     {
-      "id": "hobby_4",
+      "id": "hobby_B1_4",
       "title": "Spieleentwicklung",
-      "translation": "Разработка игр",
+      "translation": "themeTextTitleHobby_B1.hobbyFour",
+      "icon": "\uD83C\uDFAE",
       "wordsPool": ["programmierte", "hatte", "trotzdem", "deshalb", "dann", "sonst", "nämlich"],
       "tasks": [
         { "type": "text", "content": "Schon während meiner Schulzeit " },
@@ -96,9 +100,10 @@
       ]
     },
     {
-      "id": "hobby_5",
+      "id": "hobby_B1_5",
       "title": "Windsurfen",
-      "translation": "Виндсерфинг",
+      "translation": "themeTextTitleHobby_B1.hobbyFive",
+      "icon": "\uD83C\uDFC4\u200D♂\uFE0F",
       "wordsPool": ["probierte", "hatte", "trotzdem", "deshalb", "sonst", "dann", "nämlich"],
       "tasks": [
         { "type": "text", "content": "Im letzten Sommer " },
@@ -119,9 +124,10 @@
       ]
     },
     {
-      "id": "hobby_6",
+      "id": "hobby_B1_6",
       "title": "Theaterspielen",
-      "translation": "Игра в театре",
+      "translation": "themeTextTitleHobby_B1.hobbySix",
+      "icon": "\uD83C\uDFAD",
       "wordsPool": ["spielte", "hatte", "trotzdem", "sonst", "dann", "nämlich", "deshalb"],
       "tasks": [
         { "type": "text", "content": "In meiner Schulzeit " },
@@ -142,9 +148,10 @@
       ]
     },
     {
-      "id": "hobby_7",
+      "id": "hobby_B1_7",
       "title": "Bogenschießen",
-      "translation": "Стрельба из лука",
+      "translation": "themeTextTitleHobby_B1.hobbySeven",
+      "icon": "\uD83C\uDFF9",
       "wordsPool": ["probierte", "hatte", "trotzdem", "sonst", "dann", "nämlich", "außerdem"],
       "tasks": [
         { "type": "text", "content": "Letztes Jahr " },
@@ -165,9 +172,10 @@
       ]
     },
     {
-      "id": "hobby_8",
+      "id": "hobby_B1_8",
       "title": "Motorräder restaurieren",
-      "translation": "Восстановление мотоциклов",
+      "translation": "themeTextTitleHobby_B1.hobbyEight",
+      "icon": "\uD83C\uDFCD\uFE0F",
       "wordsPool": ["verbrachte", "hatte", "deshalb", "trotzdem", "sonst", "nämlich", "dann"],
       "tasks": [
         { "type": "text", "content": "Früher " },
@@ -188,9 +196,10 @@
       ]
     },
     {
-      "id": "hobby_9",
+      "id": "hobby_B1_9",
       "title": "Aufwendig backen",
-      "translation": "Сложная выпечка",
+      "translation": "themeTextTitleHobby_B1.hobbyNine",
+      "icon": "\uD83C\uDF82",
       "wordsPool": ["backte", "hatte", "deshalb", "trotzdem", "sonst", "nämlich", "Außerdem"],
       "tasks": [
         { "type": "text", "content": "Als Jugendlicher " },
@@ -211,9 +220,10 @@
       ]
     },
     {
-      "id": "hobby_10",
+      "id": "hobby_B1_10",
       "title": "Geocaching",
-      "translation": "Геокэшинг (поиск тайников)",
+      "translation": "themeTextTitleHobby_B1.hobbyTen",
+      "icon": "\uD83E\uDDED",
       "wordsPool": ["entdeckte", "hatte", "deshalb", "trotzdem", "sonst", "dann", "nämlich"],
       "tasks": [
         { "type": "text", "content": "Vor zwei Jahren " },

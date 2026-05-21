@@ -485,7 +485,7 @@ const goToPay = () => {
 }
 
 .modal-overlay {
-  position: fixed;
+  position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
   display: flex;
@@ -507,6 +507,16 @@ const goToPay = () => {
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
+}
+
+.discovery-card:after {
+  content: '';
+  top: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  background: #1a1c24;
 }
 
 .modal-enter-active,
