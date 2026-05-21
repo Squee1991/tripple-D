@@ -196,7 +196,8 @@ watch(() => colorMode.value, async (newTheme) => {
 html, body, #__nuxt {
   height: 100% !important;
   width: 100% !important;
-  margin: 0 !important;
+  max-width: 1240px;
+  margin: 0 auto !important;
   padding: 0 !important;
   overflow: hidden !important;
   background-color: var(--bg);
@@ -206,6 +207,7 @@ html, body, #__nuxt {
   flex-direction: column;
   height: 100%;
   width: 100%;
+  max-width: 1240px;
   padding-top: var(--sat);
   padding-bottom: var(--sab);
   box-sizing: border-box;

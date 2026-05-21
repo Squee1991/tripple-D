@@ -10,7 +10,7 @@
           </svg>
         </button>
         <div class="page-title">
-          {{ selectedTheme ? selectedTheme.title : 'Темы текстов' }}
+          {{ selectedTheme ? selectedTheme.title : t('sub.textTask') }}
         </div>
         <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
@@ -78,7 +78,7 @@
                 >
                   <div v-if="task.icon" class="task-number">{{ task.icon }}</div>
                   <div class="task-info">
-                    <div class="task-translation">{{ task.translation }}</div>
+                    <div class="task-translation">{{ t(task.translation) }}</div>
                   </div>
                   <VArrowNav/>
                 </div>

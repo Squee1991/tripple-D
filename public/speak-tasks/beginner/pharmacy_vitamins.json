@@ -1,0 +1,443 @@
+{
+  "start": {
+    "botText": "Guten Tag! Was kann ich für Sie tun?",
+    "tips": {
+      "ar-SA": "عبارة 'Was kann ich für Sie tun؟' تعني 'ماذا يمكنني أن أفعل لك؟' وهي شائعة جداً في المتاجر.",
+      "en-US": "The phrase 'Was kann ich für Sie tun?' means 'What can I do for you?' and is very common in shops.",
+      "es-ES": "La frase 'Was kann ich für Sie tun?' significa '¿Qué puedo hacer por usted?'.",
+      "fr-FR": "L'expression 'Was kann ich für Sie tun ?' signifie 'Que puis-je faire pour vous ?'.",
+      "hi-IN": "वाक्यांश 'Was kann ich für Sie tun?' का अर्थ है 'मैं आपके लिए क्या कर सकता हूँ?'",
+      "pl-PL": "Fraza 'Was kann ich für Sie tun?' oznacza 'W czym mogę pomóc?'.",
+      "ro-RO": "Expresia 'Was kann ich pentru Sie tun?' înseamnă 'Ce pot face pentru dumneavoastră?'.",
+      "ru-RU": "Фраза 'Was kann ich für Sie tun?' означает 'Что я могу для Вас сделать? / Чем могу помочь?'.",
+      "tr-TR": "'Was kann ich für Sie tun?' ifadesi 'Sizin için ne yapabilirim?' demektir.",
+      "uk-UA": "Фраза 'Was kann ich für Sie tun?' означає 'Що я можу для Вас зробити?'.",
+      "uz-UZ": "'Was kann ich für Sie tun?' iborasi 'Siz uchun nima qila olaman?' degan ma'noni anglatadi."
+    },
+    "botTranslation": {
+      "ar-SA": "طاب يومك! ماذا يمكنني أن أفعل لك؟",
+      "en-US": "Good day! What can I do for you?",
+      "es-ES": "¡Buen día! ¿Qué puedo hacer por usted?",
+      "fr-FR": "Bonjour ! Que puis-je faire pour vous ?",
+      "hi-IN": "शुभ दिन! मैं आपके लिए क्या कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! W czym mogę panu/pani pomóc?",
+      "ro-RO": "Bună ziua! Ce pot face pentru dumneavoastră?",
+      "ru-RU": "Добрый день! Чем могу Вам помочь?",
+      "tr-TR": "İyi günler! Sizin için ne yapabilirim?",
+      "uk-UA": "Добрий день! Чим можу Вам допомогти?",
+      "uz-UZ": "Xayrli kun! Siz uchun nima qila olaman?"
+    },
+    "options": [
+      {
+        "text": "Guten Tag! Ich möchte Vitamine kaufen, bitte.",
+        "translation": {
+          "ar-SA": "طاب يومك! أريد شراء فيتامينات، من فضلك.",
+          "en-US": "Good day! I would like to buy vitamins, please.",
+          "es-ES": "¡Buen día! Quisiera comprar vitaminas, por favor.",
+          "fr-FR": "Bonjour ! Je voudrais acheter des vitamines, s'il vous plaît.",
+          "hi-IN": "शुभ दिन! मैं विटामिन खरीदना चाहूँगा, कृपया।",
+          "pl-PL": "Dzień dobry! Chciałbym/Chciałabym kupić witaminy.",
+          "ro-RO": "Bună ziua! Aș dori să cumpăr vitamine, vă rog.",
+          "ru-RU": "Добрый день! Я хотел бы купить витамины, пожалуйста.",
+          "tr-TR": "İyi günler! Vitamin almak istiyorum, lütfen.",
+          "uk-UA": "Добрий день! Я хотів би купити вітаміни, будь ласка.",
+          "uz-UZ": "Xayrli kun! Men vitaminlar sotib olmoqchiman, iltimos."
+        },
+        "nextStep": "ask_type"
+      },
+      {
+        "text": "Hallo! Ich brauche Vitamine.",
+        "translation": {
+          "ar-SA": "مرحباً! أحتاج إلى فيتامينات.",
+          "en-US": "Hello! I need vitamins.",
+          "es-ES": "¡Hola! Necesito vitaminas.",
+          "fr-FR": "Bonjour ! J'ai besoin de vitamines.",
+          "hi-IN": "नमस्ते! मुझे विटामिन चाहिए।",
+          "pl-PL": "Cześć! Potrzebuję witamin.",
+          "ro-RO": "Salut! Am nevoie de vitamine.",
+          "ru-RU": "Здравствуйте! Мне нужны витамины.",
+          "tr-TR": "Merhaba! Vitaminlere ihtiyacım var.",
+          "uk-UA": "Добрий день! Мені потрібні вітаміни.",
+          "uz-UZ": "Salom! Menga vitaminlar kerak."
+        },
+        "nextStep": "ask_type"
+      }
+    ],
+    "defaultNext": "ask_type"
+  },
+  "ask_type": {
+    "botText": "Gerne. Welche Vitamine möchten Sie?",
+    "tips": {
+      "ar-SA": "'Welche' تعني 'أيّ'.",
+      "en-US": "'Welche' means 'Which'.",
+      "es-ES": "'Welche' significa 'Cuáles'.",
+      "fr-FR": "'Welche' signifie 'Quelles'.",
+      "hi-IN": "'Welche' का अर्थ है 'कौन सा'।",
+      "pl-PL": "'Welche' oznacza 'które'.",
+      "ro-RO": "'Welche' înseamnă 'Care'.",
+      "ru-RU": "Вопросительное слово 'Welche' переводится как 'какие'.",
+      "tr-TR": "'Welche' 'Hangi' demektir.",
+      "uk-UA": "Запитальне слово 'Welche' перекладається як 'які'.",
+      "uz-UZ": "'Welche' 'Qaysi' degan ma'noni anglatadi."
+    },
+    "botTranslation": {
+      "ar-SA": "بكل سرور. أي فيتامينات تريد؟",
+      "en-US": "Gladly. Which vitamins would you like?",
+      "es-ES": "Con gusto. ¿Qué vitaminas desea?",
+      "fr-FR": "Volontiers. Quelles vitamines souhaitez-vous ?",
+      "hi-IN": "खुशी से। आप कौन से विटामिन चाहेंगे?",
+      "pl-PL": "Z przyjemnością. Które witaminy pan/pani sobie życzy?",
+      "ro-RO": "Cu plăcere. Ce vitamine ați dori?",
+      "ru-RU": "С удовольствием. Какие витамины Вы хотите?",
+      "tr-TR": "Memnuniyetle. Hangi vitaminleri istersiniz?",
+      "uk-UA": "Із задоволенням. Які вітаміни Ви хочете?",
+      "uz-UZ": "Bajonidil. Qaysi vitaminlarni xohlaysiz?"
+    },
+    "options": [
+      {
+        "text": "Vitamin C, bitte.",
+        "translation": {
+          "ar-SA": "فيتامين سي، من فضلك.",
+          "en-US": "Vitamin C, please.",
+          "es-ES": "Vitamina C, por favor.",
+          "fr-FR": "Vitamine C, s'il vous plaît.",
+          "hi-IN": "विटामिन सी, कृपया।",
+          "pl-PL": "Witaminę C, poproszę.",
+          "ro-RO": "Vitamina C, vă rog.",
+          "ru-RU": "Витамин С, пожалуйста.",
+          "tr-TR": "C Vitamini, lütfen.",
+          "uk-UA": "Вітамін С, будь ласка.",
+          "uz-UZ": "Vitamin C, iltimos."
+        },
+        "nextStep": "ask_size"
+      },
+      {
+        "text": "Ich brauche Vitamin C.",
+        "translation": {
+          "ar-SA": "أحتاج إلى فيتامين سي.",
+          "en-US": "I need Vitamin C.",
+          "es-ES": "Necesito vitamina C.",
+          "fr-FR": "J'ai besoin de vitamine C.",
+          "hi-IN": "मुझे विटामिन सी चाहिए।",
+          "pl-PL": "Potrzebuję witaminy C.",
+          "ro-RO": "Am nevoie de vitamina C.",
+          "ru-RU": "Мне нужен витамин С.",
+          "tr-TR": "C vitaminine ihtiyacım var.",
+          "uk-UA": "Мені потрібен вітамін С.",
+          "uz-UZ": "Menga vitamin C kerak."
+        },
+        "nextStep": "ask_size"
+      }
+    ],
+    "defaultNext": "ask_size"
+  },
+  "ask_size": {
+    "botText": "Möchten Sie eine große oder eine kleine Packung?",
+    "tips": {
+      "ar-SA": "كلمة 'Packung' تعني علبة أو عبوة.",
+      "en-US": "The word 'Packung' means pack or box.",
+      "es-ES": "La palabra 'Packung' significa paquete o caja.",
+      "fr-FR": "Le mot 'Packung' signifie paquet ou boîte.",
+      "hi-IN": "शब्द 'Packung' का अर्थ पैकेट या डिब्बा है।",
+      "pl-PL": "Słowo 'Packung' oznacza opakowanie.",
+      "ro-RO": "Cuvântul 'Packung' înseamnă pachet sau cutie.",
+      "ru-RU": "Слово 'die Packung' означает 'упаковка' или 'пачка'.",
+      "tr-TR": "'Packung' paket veya kutu demektir.",
+      "uk-UA": "Слово 'die Packung' означає 'упаковка' або 'пачка'.",
+      "uz-UZ": "'Packung' so'zi qadoq yoki quti degani."
+    },
+    "botTranslation": {
+      "ar-SA": "هل تريد عبوة كبيرة أم صغيرة؟",
+      "en-US": "Would you like a large or a small pack?",
+      "es-ES": "¿Desea un paquete grande o uno pequeño?",
+      "fr-FR": "Souhaitez-vous un grand ou un petit paquet ?",
+      "hi-IN": "क्या आप एक बड़ा या छोटा पैकेट चाहेंगे?",
+      "pl-PL": "Chce pan/pani duże czy małe opakowanie?",
+      "ro-RO": "Doriți un pachet mare sau unul mic?",
+      "ru-RU": "Вы хотите большую или маленькую упаковку?",
+      "tr-TR": "Büyük mü yoksa küçük bir paket mi istersiniz?",
+      "uk-UA": "Ви хочете велику чи маленьку упаковку?",
+      "uz-UZ": "Katta yoki kichik qadoqni xohlaysizmi?"
+    },
+    "options": [
+      {
+        "text": "Eine kleine Packung, bitte.",
+        "translation": {
+          "ar-SA": "عبوة صغيرة، من فضلك.",
+          "en-US": "A small pack, please.",
+          "es-ES": "Un paquete pequeño, por favor.",
+          "fr-FR": "Un petit paquet, s'il vous plaît.",
+          "hi-IN": "एक छोटा पैकेट, कृपया।",
+          "pl-PL": "Małe opakowanie, poproszę.",
+          "ro-RO": "Un pachet mic, vă rog.",
+          "ru-RU": "Маленькую упаковку, пожалуйста.",
+          "tr-TR": "Küçük bir paket, lütfen.",
+          "uk-UA": "Маленьку упаковку, будь ласка.",
+          "uz-UZ": "Kichik qadoq, iltimos."
+        },
+        "nextStep": "price"
+      },
+      {
+        "text": "Die kleine, bitte.",
+        "translation": {
+          "ar-SA": "الصغيرة، من فضلك.",
+          "en-US": "The small one, please.",
+          "es-ES": "El pequeño, por favor.",
+          "fr-FR": "Le petit, s'il vous plaît.",
+          "hi-IN": "छोटा वाला, कृपया।",
+          "pl-PL": "To małe, poproszę.",
+          "ro-RO": "Cel mic, vă rog.",
+          "ru-RU": "Маленькую, пожалуйста.",
+          "tr-TR": "Küçük olanı, lütfen.",
+          "uk-UA": "Маленьку, будь ласка.",
+          "uz-UZ": "Kichigini, iltimos."
+        },
+        "nextStep": "price"
+      }
+    ],
+    "defaultNext": "price"
+  },
+  "price": {
+    "botText": "Alles klar. Das macht 15 Euro und 10 Cent, bitte.",
+    "botTranslation": {
+      "ar-SA": "حسناً. الحساب 15 يورو و 10 سنتات، من فضلك.",
+      "en-US": "Alright. That makes 15 Euros and 10 cents, please.",
+      "es-ES": "De acuerdo. Son 15 euros y 10 céntimos, por favor.",
+      "fr-FR": "D'accord. Cela fait 15 euros et 10 centimes, s'il vous plaît.",
+      "hi-IN": "ठीक है। यह 15 यूरो और 10 सेंट हुआ, कृपया।",
+      "pl-PL": "W porządku. To będzie 15 euro i 10 centów.",
+      "ro-RO": "În regulă. Asta face 15 euro și 10 cenți, vă rog.",
+      "ru-RU": "Ясно. С Вас 15 евро и 10 центов, пожалуйста.",
+      "tr-TR": "Tamam. Tutar 15 Euro ve 10 Sent, lütfen.",
+      "uk-UA": "Зрозуміло. З Вас 15 євро та 10 центів, будь ласка.",
+      "uz-UZ": "Tushunarli. Jami 15 yevro va 10 sent bo'ldi, iltimos."
+    },
+    "options": [
+      {
+        "text": "Ich zahle bar. Hier sind 20 Euro.",
+        "translation": {
+          "ar-SA": "سأدفع نقداً. تفضل 20 يورو.",
+          "en-US": "I pay cash. Here are 20 Euros.",
+          "es-ES": "Pago en efectivo. Aquí tiene 20 euros.",
+          "fr-FR": "Je paie en espèces. Voici 20 euros.",
+          "hi-IN": "मैं नकद भुगतान करता हूँ। यहाँ 20 यूरो हैं।",
+          "pl-PL": "Płacę gotówką. Oto 20 euro.",
+          "ro-RO": "Plătesc cash. Iată 20 de euro.",
+          "ru-RU": "Я плачу наличными. Вот 20 евро.",
+          "tr-TR": "Nakit ödüyorum. İşte 20 Euro.",
+          "uk-UA": "Я плачу готівкою. Ось 20 євро.",
+          "uz-UZ": "Men naqd to'layman. Mana 20 yevro."
+        },
+        "nextStep": "change"
+      },
+      {
+        "text": "Hier sind 20 Euro. Ich bezahle mit Bargeld.",
+        "translation": {
+          "ar-SA": "تفضل 20 يورو. سأدفع نقداً.",
+          "en-US": "Here are 20 Euros. I am paying with cash.",
+          "es-ES": "Aquí tiene 20 euros. Pago con efectivo.",
+          "fr-FR": "Voici 20 euros. Je paie avec de l'argent liquide.",
+          "hi-IN": "यहाँ 20 यूरो हैं। मैं नकद भुगतान कर रहा हूँ।",
+          "pl-PL": "Oto 20 euro. Płacę gotówką.",
+          "ro-RO": "Iată 20 de euro. Plătesc cu bani gheață.",
+          "ru-RU": "Вот 20 евро. Я расплачиваюсь наличными.",
+          "tr-TR": "İşte 20 Euro. Nakit ödüyorum.",
+          "uk-UA": "Ось 20 євро. Я розраховуюсь готівкою.",
+          "uz-UZ": "Mana 20 yevro. Men naqd to'layman."
+        },
+        "nextStep": "change"
+      }
+    ],
+    "defaultNext": "change"
+  },
+  "change": {
+    "botText": "Vielen Dank. Hier sind 4 Euro und 90 Cent zurück.",
+    "tips": {
+      "ar-SA": "كلمة 'zurück' هنا تعني 'الباقي' (عند إرجاع النقود).",
+      "en-US": "The word 'zurück' here means 'back' (giving change).",
+      "es-ES": "La palabra 'zurück' aquí significa 'de vuelta' (al dar el cambio).",
+      "fr-FR": "Le mot 'zurück' ici signifie 'en retour' (la monnaie).",
+      "hi-IN": "यहाँ 'zurück' का अर्थ 'वापस' (छुट्टे देना) है।",
+      "pl-PL": "Słowo 'zurück' oznacza tu 'z powrotem' (reszta).",
+      "ro-RO": "Cuvântul 'zurück' aici înseamnă 'înapoi' (restul).",
+      "ru-RU": "Слово 'zurück' означает 'назад/обратно' — так немцы говорят, когда дают сдачу.",
+      "tr-TR": "Buradaki 'zurück' kelimesi 'geri' (para üstü) anlamına gelir.",
+      "uk-UA": "Слово 'zurück' означає 'назад/назад' — так кажуть, коли дають здачу.",
+      "uz-UZ": "Bu yerdagi 'zurück' so'zi 'orqaga' (qaytim) degan ma'noni anglatadi."
+    },
+    "botTranslation": {
+      "ar-SA": "شكراً جزيلاً. تفضل 4 يورو و 90 سنتاً الباقي.",
+      "en-US": "Thank you very much. Here are 4 Euros and 90 cents back.",
+      "es-ES": "Muchas gracias. Aquí tiene 4 euros y 90 céntimos de vuelta.",
+      "fr-FR": "Merci beaucoup. Voici 4 euros et 90 centimes en retour.",
+      "hi-IN": "बहुत-बहुत धन्यवाद। यहाँ 4 यूरो और 90 सेंट वापस हैं।",
+      "pl-PL": "Bardzo dziękuję. Oto 4 euro i 90 centów reszty.",
+      "ro-RO": "Vă mulțumesc mult. Iată 4 euro și 90 de cenți înapoi.",
+      "ru-RU": "Большое спасибо. Вот 4 евро и 90 центов сдачи.",
+      "tr-TR": "Çok teşekkürler. İşte 4 Euro ve 90 Sent para üstü.",
+      "uk-UA": "Велике дякую. Ось 4 євро та 90 центів здачі.",
+      "uz-UZ": "Katta rahmat. Mana 4 yevro va 90 sent qaytim."
+    },
+    "options": [
+      {
+        "text": "Danke schön!",
+        "translation": {
+          "ar-SA": "شكراً جزيلاً!",
+          "en-US": "Thank you!",
+          "es-ES": "¡Muchas gracias!",
+          "fr-FR": "Merci beaucoup !",
+          "hi-IN": "धन्यवाद!",
+          "pl-PL": "Dziękuję bardzo!",
+          "ro-RO": "Mulțumesc frumos!",
+          "ru-RU": "Спасибо большое!",
+          "tr-TR": "Teşekkürler!",
+          "uk-UA": "Дуже дякую!",
+          "uz-UZ": "Katta rahmat!"
+        },
+        "nextStep": "wish_day"
+      },
+      {
+        "text": "Vielen Dank!",
+        "translation": {
+          "ar-SA": "شكراً جزيلاً!",
+          "en-US": "Thank you very much!",
+          "es-ES": "¡Muchas gracias!",
+          "fr-FR": "Merci beaucoup !",
+          "hi-IN": "बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję!",
+          "ro-RO": "Vă mulțumesc mult!",
+          "ru-RU": "Большое спасибо!",
+          "tr-TR": "Çok teşekkür ederim!",
+          "uk-UA": "Велике дякую!",
+          "uz-UZ": "Katta rahmat!"
+        },
+        "nextStep": "wish_day"
+      }
+    ],
+    "defaultNext": "wish_day"
+  },
+  "wish_day": {
+    "botText": "Gerne. Einen schönen Tag noch!",
+    "botTranslation": {
+      "ar-SA": "بكل سرور. أتمنى لك يوماً سعيداً!",
+      "en-US": "You are welcome. Have a nice day!",
+      "es-ES": "De nada. ¡Que tenga un buen día!",
+      "fr-FR": "Je vous en prie. Bonne journée !",
+      "hi-IN": "आपका स्वागत है। आपका दिन शुभ हो!",
+      "pl-PL": "Proszę bardzo. Miłego dnia!",
+      "ro-RO": "Cu plăcere. O zi frumoasă în continuare!",
+      "ru-RU": "Пожалуйста. Хорошего Вам дня!",
+      "tr-TR": "Rica ederim. İyi günler!",
+      "uk-UA": "Будь ласка. Гарного Вам дня!",
+      "uz-UZ": "Arzimaydi. Yaxshi kun tilayman!"
+    },
+    "options": [
+      {
+        "text": "Danke, Ihnen auch!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً!",
+          "en-US": "Thanks, you too!",
+          "es-ES": "¡Gracias, a usted también!",
+          "fr-FR": "Merci, à vous aussi !",
+          "hi-IN": "धन्यवाद, आपको भी!",
+          "pl-PL": "Dziękuję, panu/pani również!",
+          "ro-RO": "Mulțumesc, și dumneavoastră la fel!",
+          "ru-RU": "Спасибо, Вам тоже!",
+          "tr-TR": "Teşekkürler, size de!",
+          "uk-UA": "Дякую, Вам також!",
+          "uz-UZ": "Rahmat, sizga ham!"
+        },
+        "nextStep": "goodbye"
+      },
+      {
+        "text": "Danke, gleichfalls!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً!",
+          "en-US": "Thanks, same to you!",
+          "es-ES": "¡Gracias, igualmente!",
+          "fr-FR": "Merci, pareillement !",
+          "hi-IN": "धन्यवाद, आपको भी!",
+          "pl-PL": "Dziękuję, nawzajem!",
+          "ro-RO": "Mulțumesc, la fel!",
+          "ru-RU": "Спасибо, взаимно!",
+          "tr-TR": "Teşekkürler, size de!",
+          "uk-UA": "Дякую, навзаєм!",
+          "uz-UZ": "Rahmat, sizga ham!"
+        },
+        "nextStep": "goodbye"
+      }
+    ],
+    "defaultNext": "goodbye"
+  },
+  "goodbye": {
+    "botText": "Auf Wiedersehen!",
+    "botTranslation": {
+      "ar-SA": "إلى اللقاء!",
+      "en-US": "Goodbye!",
+      "es-ES": "¡Adiós!",
+      "fr-FR": "Au revoir !",
+      "hi-IN": "अलविदा!",
+      "pl-PL": "Do widzenia!",
+      "ro-RO": "La revedere!",
+      "ru-RU": "До свидания!",
+      "tr-TR": "Hoşça kalın!",
+      "uk-UA": "До побачення!",
+      "uz-UZ": "Xayr!"
+    },
+    "options": [
+      {
+        "text": "Auf Wiedersehen!",
+        "translation": {
+          "ar-SA": "إلى اللقاء!",
+          "en-US": "Goodbye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Do widzenia!",
+          "ro-RO": "La revedere!",
+          "ru-RU": "До свидания!",
+          "tr-TR": "Hoşça kalın!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Ko'rishguncha!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Tschüss!",
+        "translation": {
+          "ar-SA": "وداعاً!",
+          "en-US": "Bye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Salut !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Cześć!",
+          "ro-RO": "Pa!",
+          "ru-RU": "Пока!",
+          "tr-TR": "Görüşürüz!",
+          "uk-UA": "Бувай!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Der Apothekenbesuch ist beendet.",
+    "botTranslation": {
+      "ar-SA": "انتهت زيارة الصيدلية.",
+      "en-US": "The pharmacy visit is finished.",
+      "es-ES": "La visita a la farmacia ha terminado.",
+      "fr-FR": "La visite à la pharmacie est terminée.",
+      "hi-IN": "फार्मेसी का दौरा समाप्त हो गया है।",
+      "pl-PL": "Wizyta w aptece została zakończona.",
+      "ro-RO": "Vizita la farmacie s-a încheiat.",
+      "ru-RU": "Посещение аптеки окончено.",
+      "tr-TR": "Eczane ziyareti bitti.",
+      "uk-UA": "Відвідування аптеки завершено.",
+      "uz-UZ": "Dorixonaga tashrif tugadi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

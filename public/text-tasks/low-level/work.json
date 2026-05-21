@@ -4,9 +4,9 @@
   "level": "A1",
   "tasks": [
     {
-      "id": "work_1",
+      "id": "work_A1_1",
       "title": "Mein Arbeitstag",
-      "translation": "Мой рабочий день",
+      "translation": "themeTextTitleWork_A1.workOne",
       "icon": "\uD83D\uDCBC",
       "wordsPool": ["Die", "ich", "eine", "einem", "das", "nicht"],
       "textElements": [
@@ -26,9 +26,9 @@
       ]
     },
     {
-      "id": "work_2",
+      "id": "work_A1_2",
       "title": "Das Dokument suchen",
-      "translation": "Поиск документа",
+      "translation": "themeTextTitleWork_A1.workTwo",
       "icon": "\uD83D\uDD0D",
       "wordsPool": ["Die", "ich", "ein", "kein", "Das", "nicht"],
       "textElements": [
@@ -48,9 +48,9 @@
       ]
     },
     {
-      "id": "work_3",
+      "id": "work_A1_3",
       "title": "Der Kurs",
-      "translation": "Курс (В университете)",
+      "translation": "themeTextTitleWork_A1.workThree",
       "icon": "\uD83C\uDF93",
       "wordsPool": ["ich", "und", "kein", "aber", "oder", "nicht"],
       "textElements": [
@@ -70,9 +70,9 @@
       ]
     },
     {
-      "id": "work_4",
+      "id": "work_A1_4",
       "title": "Mein Job",
-      "translation": "Моя работа",
+      "translation": "themeTextTitleWork_A1.workFour",
       "icon": "\uD83D\uDCBB",
       "wordsPool": ["Ich", "bin", "habe", "und", "aber", "nicht"],
       "textElements": [
@@ -92,9 +92,9 @@
       ]
     },
     {
-      "id": "work_5",
+      "id": "work_A1_5",
       "title": "Die Hausaufgaben",
-      "translation": "Домашнее задание",
+      "translation": "themeTextTitleWork_A1.workFive",
       "icon": "\uD83D\uDCDD",
       "wordsPool": ["ich", "bin", "und", "dem", "aber", "nicht"],
       "textElements": [
@@ -114,9 +114,9 @@
       ]
     },
     {
-      "id": "work_6",
+      "id": "work_A1_6",
       "title": "Mein Job auf der Baustelle",
-      "translation": "Моя работа на стройке",
+      "translation": "themeTextTitleWork_A1.workSix",
       "icon": "\uD83D\uDD28",
       "wordsPool": ["ich", "bin", "habe", "und", "dem", "aber", "nicht"],
       "textElements": [
@@ -138,9 +138,9 @@
       ]
     },
     {
-      "id": "work_7",
+      "id": "work_A1_7",
       "title": "Home-Office",
-      "translation": "Работа из дома",
+      "translation": "themeTextTitleWork_A1.workSeven",
       "icon": "\uD83C\uDFE0",
       "wordsPool": ["bin", "muss", "mag", "dem", "will", "nicht"],
       "textElements": [
@@ -160,9 +160,9 @@
       ]
     },
     {
-      "id": "work_8",
+      "id": "work_A1_8",
       "title": "Im Lager arbeiten",
-      "translation": "Работа на складе",
+      "translation": "themeTextTitleWork_A1.workEight",
       "icon": "\uD83D\uDCE6",
       "wordsPool": ["bin", "muss", "dem", "mag", "will", "nicht"],
       "textElements": [
@@ -179,6 +179,50 @@
         { "type": "text", "content": " heute schnell fertig sein. — Die Pakete sind " },
         { "type": "blank", "id": 6, "correct": "nicht" },
         { "type": "text", "content": " schwer." }
+      ]
+    },
+    {
+      "id": "work_A1_9",
+      "title": "Die Besprechung",
+      "translation": "themeTextTitleWork_A1.workNine",
+      "icon": "👥",
+      "wordsPool": ["haben", "Der", "über", "einen", "und", "nicht"],
+      "textElements": [
+        { "type": "text", "content": "Heute " },
+        { "type": "blank", "id": 1, "correct": "haben" },
+        { "type": "text", "content": " wir eine Besprechung. — " },
+        { "type": "blank", "id": 2, "correct": "Der" },
+        { "type": "text", "content": " Chef ist schon da. — Wir sprechen " },
+        { "type": "blank", "id": 3, "correct": "über" },
+        { "type": "text", "content": " das Projekt. — Ich brauche " },
+        { "type": "blank", "id": 4, "correct": "einen" },
+        { "type": "text", "content": " Stift " },
+        { "type": "blank", "id": 5, "correct": "und" },
+        { "type": "text", "content": " Papier. — Das Projekt ist " },
+        { "type": "blank", "id": 6, "correct": "nicht" },
+        { "type": "text", "content": " einfach." }
+      ]
+    },
+    {
+      "id": "work_A1_10",
+      "title": "Die Mittagspause",
+      "translation": "themeTextTitleWork_A1.workTen",
+      "icon": "🍽️",
+      "wordsPool": ["ist", "habe", "die", "einen", "und", "nicht"],
+      "textElements": [
+        { "type": "text", "content": "Es " },
+        { "type": "blank", "id": 1, "correct": "ist" },
+        { "type": "text", "content": " zwölf Uhr. — Ich " },
+        { "type": "blank", "id": 2, "correct": "habe" },
+        { "type": "text", "content": " Hunger. — Ich gehe jetzt in " },
+        { "type": "blank", "id": 3, "correct": "die" },
+        { "type": "text", "content": " Kantine. — Ich esse " },
+        { "type": "blank", "id": 4, "correct": "einen" },
+        { "type": "text", "content": " Salat " },
+        { "type": "blank", "id": 5, "correct": "und" },
+        { "type": "text", "content": " trinke Wasser. — Das Essen schmeckt gut, aber die Pause ist " },
+        { "type": "blank", "id": 6, "correct": "nicht" },
+        { "type": "text", "content": " lang." }
       ]
     }
   ]

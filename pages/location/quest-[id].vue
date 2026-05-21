@@ -192,6 +192,7 @@
         </div>
       </div>
     </div>
+
     <VReviveModal
         :show="forceRevive || showRevive"
         :correct-count="questStore.correctCount"
@@ -203,11 +204,15 @@
         @watchAd="watchAdForLife"
         @back="goThemes"
     />
-    <VLeaveModal
+
+    <!-- Наш новый компонент модалки -->
+    <VStopSessionModal
         :show="showLeaveModal"
-        @leave="confirmLeave"
-        @continue="stayHere"
+        @update:show="showLeaveModal = $event"
+        @confirm="confirmLeave"
+        @cancel="stayHere"
     />
+
     <VRulesModal
         :show="showTipModal"
         :show-result="questStore.showResult"
@@ -230,10 +235,12 @@ import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 import {useSeoMeta} from '#imports'
 import VHelpModal from "~/src/components/V-help-modal.vue";
 import VHearts from '../../src/components/V-hearts.vue'
-import VLeaveModal from "~/src/components/V-leaveModal.vue";
 import VRulesModal from "~/src/components/V-rulesModal.vue";
 import VReviveModal from "~/src/components/V-reviveModal.vue";
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
+
+import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
+
 useSeoMeta({robots: 'noindex, nofollow'})
 
 const { getDotClass,  optionClass } = useClasses()
@@ -432,7 +439,6 @@ function restart() {
   questStore.loadQuest(questId.value, regionKey.value)
 }
 
-
 function handleClick() {
   unlockAudioByUserGesture()
   if (!questStore.showResult) {
@@ -590,7 +596,6 @@ onMounted(() => {
 watchEffect(() => {
   forceRevive.value = showRevive.value
 })
-
 </script>
 
 <style scoped>
@@ -790,9 +795,8 @@ watchEffect(() => {
   font-size: 18px;
   background: #fff;
   color: #1e1e1e;
-  border: 3px solid #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
   border-radius: 16px;
-  box-shadow: 4px 4px 0 #1e1e1e;
 }
 
 .quest__speech {
@@ -874,10 +878,9 @@ watchEffect(() => {
   top: 18px;
   z-index: 50;
   font-weight: 900;
-  border: 4px solid #1e1e1e;
+  border: 3px solid #1e1e1e;
   padding: 6px 12px;
   border-radius: 10px;
-  box-shadow: 6px 6px 0 #1e1e1e;
   transform: rotate(-6deg);
 }
 
@@ -921,17 +924,17 @@ watchEffect(() => {
 }
 
 .btn {
-  height: 56px;
-  padding: 0 26px;
-  border-radius: 16px;
+  width: 80%;
+  padding: 14px;
+  border-radius: 36px;
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-size: 22px;
-  border: 2px solid #1e1e1e;
-  color: #1e1e1e;
-  background: #9dceff;
+  border: none;
+  color: white;
+  background: #3b82f6;
   cursor: pointer;
-  box-shadow: 2px 2px 0 #1e1e1e;
+  box-shadow: 0px 5px 0 #2261c7;
   transition: all .1s ease-in-out;
 }
 
@@ -984,7 +987,6 @@ watchEffect(() => {
   background: #fff;
   border: 3px solid #111;
   border-radius: 18px;
-  box-shadow: 4px 4px 0 #1e1e1e;
   padding: 20px 35px;
   text-align: center;
   z-index: 1;
@@ -1079,7 +1081,6 @@ watchEffect(() => {
 
   .quest__question {
     font-size: 1.1rem;
-    border-bottom: 2px solid #9dceff;
     border-radius: 15px;
   }
   .quest__option-btn {
@@ -1088,12 +1089,6 @@ watchEffect(() => {
     border: 3px solid var(--tabsSlideBorderColor);
     box-shadow: var(--boxShadowMobile);
     padding: 3px;
-  }
-  .btn {
-    height: 45px;
-    padding: 0 28px;
-    font-size: 20px;
-    max-width: 100%;
   }
   .quest__feedback.is-red {
     font-size: 1.5rem;
@@ -1162,10 +1157,9 @@ watchEffect(() => {
   font-weight: 800;
   font-size: 16px;
   color: #1e1e1e;
-  background: #fffbe9;
-  border: 2px solid #1e1e1e;
+  background: #ffffff;
+  border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 12px;
-  box-shadow: 3px 3px 0 #1e1e1e;
   cursor: pointer;
   transition: all .1s ease-in-out;
 }
@@ -1215,5 +1209,4 @@ watchEffect(() => {
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
-
 </style>

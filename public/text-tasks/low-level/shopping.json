@@ -4,9 +4,9 @@
   "level": "A1",
   "tasks": [
     {
-      "id": "shop_a1_1_supermarket",
+      "id": "shop_a1_1",
       "title": "Im Supermarkt",
-      "translation": "В супермаркете",
+      "translation": "themeTextTitleShopping_A1.shoppingOne",
       "icon": "\uD83D\uDED2",
       "wordsPool": ["eine", "keine", "muss", "Kauf", "besser", "ein", "gekauft"],
       "textElements": [
@@ -28,9 +28,9 @@
       ]
     },
     {
-      "id": "shop_a1_2_clothes",
+      "id": "shop_a1_2",
       "title": "Kleidung suchen",
-      "translation": "Поиск одежды",
+      "translation": "themeTextTitleShopping_A1.shoppingTwo",
       "icon": "\uD83D\uDC55",
       "wordsPool": ["mein", "will", "aber", "die", "schönsten", "beraten", "nicht"],
       "textElements": [
@@ -52,9 +52,9 @@
       ]
     },
     {
-      "id": "shop_a1_3_bakery",
+      "id": "shop_a1_3",
       "title": "In der Bäckerei",
-      "translation": "В пекарне",
+      "translation": "themeTextTitleShopping_A1.shoppingThree",
       "icon": "\uD83E\uDD50",
       "wordsPool": ["oder", "mag", "am", "Brötchen", "Bring", "mit", "gegessen"],
       "textElements": [
@@ -76,9 +76,9 @@
       ]
     },
     {
-      "id": "shop_a1_4_online",
+      "id": "shop_a1_4",
       "title": "Online einkaufen",
-      "translation": "Покупки онлайн",
+      "translation": "themeTextTitleShopping_A1.shoppingFour",
       "icon": "\uD83D\uDCE6",
       "wordsPool": ["das", "dein", "musst", "Schuhe", "an", "bestellt", "und"],
       "textElements": [
@@ -100,9 +100,9 @@
       ]
     },
     {
-      "id": "shop_a1_5_market",
+      "id": "shop_a1_5",
       "title": "Auf dem Markt",
-      "translation": "На рынке",
+      "translation": "themeTextTitleShopping_A1.shoppingFive",
       "icon": "\uD83E\uDD55",
       "wordsPool": ["auf", "ein", "kein", "billiger", "Geh", "wollen", "bezahlt"],
       "textElements": [
@@ -124,9 +124,9 @@
       ]
     },
     {
-      "id": "shop_a1_6_shoes",
+      "id": "shop_a1_6",
       "title": "Im Schuhgeschäft",
-      "translation": "В обувном магазине",
+      "translation": "themeTextTitleShopping_A1.shoppingSix",
       "icon": "\uD83D\uDC5F",
       "wordsPool": ["will", "die", "kleiner", "Probier", "oder", "an", "gefunden"],
       "textElements": [
@@ -148,9 +148,9 @@
       ]
     },
     {
-      "id": "shop_a1_7_furniture",
+      "id": "shop_a1_7",
       "title": "Möbel kaufen",
-      "translation": "Покупка мебели",
+      "translation": "themeTextTitleShopping_A1.shoppingSeven",
       "icon": "\uD83E\uDE91",
       "wordsPool": ["mein", "müssen", "kein", "Stühle", "Frag", "und", "verkauft"],
       "textElements": [
@@ -172,9 +172,9 @@
       ]
     },
     {
-      "id": "shop_a1_8_fleamarket",
+      "id": "shop_a1_8",
       "title": "Auf dem Flohmarkt",
-      "translation": "На блошином рынке",
+      "translation": "themeTextTitleShopping_A1.shoppingEight",
       "icon": "\uD83D\uDCFB",
       "wordsPool": ["am", "mag", "billigsten", "das", "nicht", "mit", "gesehen"],
       "textElements": [
@@ -196,9 +196,9 @@
       ]
     },
     {
-      "id": "shop_a1_9_dinner",
+      "id": "shop_a1_9",
       "title": "Essen für den Abend",
-      "translation": "Еда на вечер",
+      "translation": "themeTextTitleShopping_A1.shoppingNine",
       "icon": "\uD83C\uDF55",
       "wordsPool": ["aber", "eine", "Tomaten", "in", "Komm", "ein", "gemacht"],
       "textElements": [
@@ -220,9 +220,9 @@
       ]
     },
     {
-      "id": "shop_a1_10_bookstore",
+      "id": "shop_a1_10",
       "title": "Im Buchladen",
-      "translation": "В книжном магазине",
+      "translation": "themeTextTitleShopping_A1.shoppingTen",
       "icon": "\uD83D\uDCDA",
       "wordsPool": ["der", "meine", "will", "dicker", "keine", "oder", "bekommen"],
       "textElements": [

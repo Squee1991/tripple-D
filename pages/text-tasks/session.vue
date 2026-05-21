@@ -20,7 +20,6 @@
           {{ currentTaskNumber }} / {{ totalTasks }}
         </div>
       </div>
-
       <div class="content-area">
         <div class="word-pool-card">
           <transition-group name="list" tag="div" class="word-pool">
@@ -34,9 +33,7 @@
               {{ word }}
             </div>
           </transition-group>
-          <div v-if="store.availableWords.length === 0" class="empty-pool-msg">
-            Все слова использованы!
-          </div>
+          <div v-if="store.availableWords.length === 0" class="empty-pool-msg">{{ t('textTaskSession.allUsed')}}</div>
         </div>
         <div class="text-card">
           <div class="text-content">
@@ -68,62 +65,62 @@
             :disabled="!store.isAllFilled && !store.isChecking"
             @click="handleMainAction"
         >
-          {{ isSuccess ? 'Далее' : (store.isChecking ? 'Повторить' : 'Проверить') }}
+          {{
+            isSuccess ? t('questCompletedModals.further') : (store.isChecking ? t('trainerPage.repeat') : t('questCompletedModals.check'))
+          }}
         </button>
       </div>
     </div>
     <div v-else class="error-state">
-      <p>Задача не выбрана.</p>
-      <button @click="$router.push('/text-tasks')">Вернуться к списку</button>
+      <p>{{ t('textTaskSession.errorText')}}</p>
+      <button @click="$router.push('/text-tasks')">{{ t('textTaskSession.back')}}</button>
     </div>
-    <div v-if="showExitModal" class="modal-overlay" @click.self="cancelExit">
-      <div class="modal-content">
-        <h3 class="modal-title">Прервать задание?</h3>
-        <p class="modal-text">Текущий прогресс в этом тексте не будет сохранен. Вы уверены, что хотите выйти?</p>
-        <div class="modal-actions">
-          <button class="btn-cancel" @click="cancelExit">Отмена</button>
-          <button class="btn-confirm" @click="confirmExit">Выйти</button>
-        </div>
-      </div>
-    </div>
+    <ExitSessionModal
+        :show="showExitModal"
+        @update:show="val => showExitModal = val"
+        :icon="SadHedgehogIcon"
+        @cancel="cancelExit"
+        @confirm="confirmExit"
+    />
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
-import { useRouter, onBeforeRouteLeave } from 'vue-router'
-import { useTextTasksStore } from '../../store/textTasksStore.js'
+import {ref, computed, onMounted} from 'vue'
+import {useRouter, onBeforeRouteLeave} from 'vue-router'
+import {useTextTasksStore} from '../../store/textTasksStore.js'
+import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
+import SadHedgehogIcon from '../../assets/images/Sadlyhedgehog.png'
 
+const {t} = useI18n()
 const router = useRouter()
 const store = useTextTasksStore()
 
 const selectedWordForTap = ref(null)
 
-// --- Состояния модального окна выхода ---
 const showExitModal = ref(false)
 const isConfirmedExit = ref(false)
 let pendingRoute = null
 
 onMounted(() => {
   if (!store.currentTask) {
-    isConfirmedExit.value = true // Разрешаем выйти без модалки
+    isConfirmedExit.value = true
     router.push('/text-tasks')
   }
 })
 
-// Перехват ухода со страницы (нажатие "Назад" в браузере или интерфейсе)
 onBeforeRouteLeave((to, from, next) => {
   if (isConfirmedExit.value) {
     next()
   } else {
     showExitModal.value = true
     pendingRoute = to
-    next(false) // Отменяем переход, показываем модалку
+    next(false)
   }
 })
 
 const handleBackClick = () => {
-  router.push('/text-tasks') // Провоцирует onBeforeRouteLeave
+  router.push('/text-tasks')
 }
 
 const confirmExit = () => {
@@ -140,7 +137,6 @@ const cancelExit = () => {
   showExitModal.value = false
   pendingRoute = null
 }
-// ---------------------------------------
 
 const currentTaskNumber = computed(() => {
   return store.currentTaskIndex >= 0 ? store.currentTaskIndex + 1 : 1
@@ -163,12 +159,11 @@ const isSuccess = computed(() => {
 
 const handleMainAction = async () => {
   if (isSuccess.value) {
-    // Сохраняем прогресс перед переходом
     await store.saveTaskProgress()
 
     const hasNext = store.nextTask()
     if (!hasNext) {
-      isConfirmedExit.value = true // Если тексты закончились, выходим без вопросов
+      isConfirmedExit.value = true
       router.push('/text-tasks')
     }
   } else {
@@ -176,7 +171,6 @@ const handleMainAction = async () => {
   }
 }
 
-// === Логика Тапов (Клик по слову -> Клик по пропуску) ===
 const selectWordForTap = (word) => {
   if (store.isChecking) return
   selectedWordForTap.value = selectedWordForTap.value === word ? null : word
@@ -184,14 +178,10 @@ const selectWordForTap = (word) => {
 
 const handleBlankClick = (blankId) => {
   if (store.isChecking) return
-
-  // Если в пропуске уже есть слово, возвращаем его
   if (store.blanksState[blankId]) {
     store.returnWord(blankId)
     return
   }
-
-  // Если слово выбрано и пропуск пустой, ставим слово
   if (selectedWordForTap.value && !store.blanksState[blankId]) {
     store.placeWord(blankId, selectedWordForTap.value)
     selectedWordForTap.value = null
@@ -202,7 +192,7 @@ const handleBlankClick = (blankId) => {
 <style scoped>
 .drag-page {
   font-family: "Nunito", sans-serif;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -295,7 +285,7 @@ const handleBlankClick = (blankId) => {
   padding: 10px;
   border: 2px solid #e2e8f0;
   box-shadow: 0 3px 0 #e2e8f0;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   flex-shrink: 0;
 }
 
@@ -392,7 +382,6 @@ const handleBlankClick = (blankId) => {
 .drop-zone.has-word {
   background: #ebf8ff;
   border: 2px solid #3182ce;
-  border-bottom-width: 4px;
   color: #2b6cb0;
 }
 
@@ -420,7 +409,7 @@ const handleBlankClick = (blankId) => {
 }
 
 .footer-area {
-  padding: 15px 20px 25px;
+  padding: 10px 10px 20px 10px;
   flex-shrink: 0;
 }
 
@@ -469,9 +458,15 @@ const handleBlankClick = (blankId) => {
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(79, 172, 254, 0.4); }
-  70% { box-shadow: 0 0 0 6px rgba(79, 172, 254, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(79, 172, 254, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(79, 172, 254, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(79, 172, 254, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(79, 172, 254, 0);
+  }
 }
 
 .error-state {
@@ -492,88 +487,5 @@ const handleBlankClick = (blankId) => {
   color: white;
   border: none;
   font-weight: bold;
-}
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  backdrop-filter: blur(3px);
-  padding: 20px;
-}
-
-.modal-content {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 24px;
-  width: 100%;
-  max-width: 320px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  animation: slideIn 0.2s ease-out;
-}
-
-@keyframes slideIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-.modal-title {
-  color: #2d3748;
-  margin: 0 0 12px 0;
-  font-size: 20px;
-  font-weight: 800;
-}
-
-.modal-text {
-  color: #718096;
-  font-size: 15px;
-  line-height: 1.5;
-  margin-bottom: 24px;
-}
-
-.modal-actions {
-  display: flex;
-  gap: 12px;
-}
-
-.btn-cancel, .btn-confirm {
-  flex: 1;
-  padding: 12px;
-  border: none;
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 16px;
-  cursor: pointer;
-  transition: transform 0.1s;
-}
-
-.btn-cancel {
-  background: #edf2f7;
-  color: #4a5568;
-  box-shadow: 0 4px 0 #cbd5e0;
-}
-
-.btn-cancel:active {
-  transform: translateY(4px);
-  box-shadow: none;
-}
-
-.btn-confirm {
-  background: #e53e3e;
-  color: white;
-  box-shadow: 0 4px 0 #c53030;
-}
-
-.btn-confirm:active {
-  transform: translateY(4px);
-  box-shadow: none;
 }
 </style>

@@ -1,14 +1,21 @@
 <template>
-  <div>
-    <div class="btn__back-wrapper">
-      <button type="button" @click="path" class="btn__back">Home</button>
-    </div>
+  <div class="privacy_wrapper">
     <div class="privacy">
-      <h1>Privacy Policy</h1>
-      <section v-for="(s, i) in sections" :key="i" class="section">
-        <h2>{{ s.heading }}</h2>
-        <p v-for="(p, j) in s.paragraphs" :key="j">{{ p }}</p>
-      </section>
+      <div class="privacy_header">
+        <VBackBtn/>
+        <div class="privacy__title">Privacy Policy</div>
+      </div>
+      <div class="privacy_section-inner">
+        <div class="privacy__banner">
+          <VBanner
+              text="Privacy Policy"
+          />
+        </div>
+        <section v-for="(section, index) in sections" :key="index" class="section">
+          <h2>{{ section.heading }}</h2>
+          <p v-for="(paragraph, j) in section.paragraphs" :key="j">{{ paragraph }}</p>
+        </section>
+      </div>
       <p class="last-updated">
         Last updated: {{ lastUpdated }}
       </p>
@@ -16,19 +23,17 @@
   </div>
 </template>
 
-
 <script setup>
+import VBackBtn from '../src/components/V-back-btn.vue'
 import { ref } from "vue"
 import { useRouter } from "vue-router"
+import VBanner from "~/src/components/V-banner.vue";
+import Privacy from "~/pages/privacy.vue";
 const router = useRouter()
 const PROJECT = "skillupgerman"
 const EMAIL = "skillupgerman@gmail.com"
 const COUNTRY = "Poland"
 
-
-const path = () => {
-  router.push('/')
-}
 const lastUpdated = ref("Januar 4, 2026")
 const sections = ref([
   {
@@ -123,57 +128,42 @@ const sections = ref([
   }
 ])
 
-
 </script>
 
 <style scoped>
 
-* {
-  font-family: "Nunito", sans-serif ;
-}
-
-.btn__back-wrapper{
-  position: sticky;
-  display: flex;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 1110px;
-  margin: 0 auto;
-  padding: 10px;
-  border-bottom: 2px solid black;
-  border-radius: 15px;
-  background: var(--bg);
-}
-
-.btn__back {
-  width: 100%;
-  max-width: 320px;
-  padding: 10px;
-  border-radius: 12px;
-  border: 2px solid black;
-  box-shadow: 3px 3px 0 black;
-  font-family: "Nunito", sans-serif;
+.privacy__title{
+  font-size: 23px;
   font-weight: 600;
-  font-size: 1rem;
-  background: #f1c40f;
+  font-family: Nunito, sans-serif;
+  color: var(--title);
+  text-shadow: 1px 1px var(--title);
+  margin-left: 15px;
 }
 
-@media (min-width: 1024px) {
-  .btn__back:hover {
-     transform: translate(2px, 2px);
-     box-shadow: 1px 1px 0 black;
-  }
+.privacy_wrapper{
+  height: 100vh;
+  overflow: hidden;
+}
+
+.privacy__banner {
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.privacy_header {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px 15px 10px;
+  margin-bottom: 15px;
 }
 
 .privacy {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 32px 20px 64px;
+  height: 100%;
   line-height: 1.75;
   color: var(--titleColor);
-  font-family: "Nunito", sans-serif;
 }
 
 h1 {
@@ -190,7 +180,14 @@ h1 {
 }
 
 .section {
-  margin: 22px 0;
+  padding: 0 15px;
+}
+
+.privacy_section-inner{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto ;
 }
 
 .section h2 {

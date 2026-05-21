@@ -6,7 +6,7 @@
     {
       "id": "shop_A2_1",
       "title": "Im Supermarkt",
-      "translation": "В супермаркете",
+      "translation": "themeTextTitleShopping_A2.shoppingOne",
       "icon": "\uD83D\uDED2",
       "wordsPool": ["als", "zu", "denn", "werde", "lasse", "weil", "dass"],
       "textElements": [
@@ -30,7 +30,7 @@
     {
       "id": "shop_A2_2",
       "title": "Kleidung kaufen",
-      "translation": "Покупка одежды",
+      "translation": "themeTextTitleShopping_A2.shoppingTwo",
       "icon": "\uD83E\uDDE5",
       "wordsPool": ["wie", "zu", "sondern", "werden", "lässt", "obwohl", "wenn"],
       "textElements": [
@@ -54,7 +54,7 @@
     {
       "id": "shop_A2_3",
       "title": "Auf dem Markt",
-      "translation": "На рынке",
+      "translation": "themeTextTitleShopping_A2.shoppingThree",
       "icon": "\uD83E\uDDFA",
       "wordsPool": ["als", "zu", "aber", "wird", "lassen", "bevor", "dass"],
       "textElements": [
@@ -78,7 +78,7 @@
     {
       "id": "shop_A2_4",
       "title": "Online einkaufen",
-      "translation": "Покупки онлайн",
+      "translation": "themeTextTitleShopping_A2.shoppingFour",
       "icon": "\uD83D\uDCE6",
       "wordsPool": ["wie", "zu", "oder", "werde", "lässt", "nachdem", "weil"],
       "textElements": [
@@ -102,7 +102,7 @@
     {
       "id": "shop_A2_5",
       "title": "Im Möbelhaus",
-      "translation": "В мебельном магазине",
+      "translation": "themeTextTitleShopping_A2.shoppingFive",
       "icon": "\uD83D\uDECB\uFE0F",
       "wordsPool": ["als", "zu", "sondern", "werden", "lassen", "obwohl", "wenn"],
       "textElements": [
@@ -126,7 +126,7 @@
     {
       "id": "shop_A2_6",
       "title": "In der Bäckerei",
-      "translation": "В пекарне",
+      "translation": "themeTextTitleShopping_A2.shoppingSix",
       "icon": "\uD83E\uDD56",
       "wordsPool": ["wie", "zu", "aber", "wird", "lasse", "bevor", "weil"],
       "textElements": [
@@ -150,7 +150,7 @@
     {
       "id": "shop_A2_7",
       "title": "Schuhe kaufen",
-      "translation": "Покупка обуви",
+      "translation": "themeTextTitleShopping_A2.shoppingSeven",
       "icon": "\uD83D\uDC5F",
       "wordsPool": ["als", "zu", "sondern", "werden", "lassen", "obwohl", "dass"],
       "textElements": [
@@ -174,7 +174,7 @@
     {
       "id": "shop_A2_8",
       "title": "Das Geschenk",
-      "translation": "Подарок",
+      "translation": "themeTextTitleShopping_A2.shoppingEight",
       "icon": "\uD83C\uDF81",
       "wordsPool": ["wie", "zu", "denn", "werde", "lasse", "nachdem", "wenn"],
       "textElements": [
@@ -198,7 +198,7 @@
     {
       "id": "shop_A2_9",
       "title": "Im Elektronikmarkt",
-      "translation": "В магазине электроники",
+      "translation": "themeTextTitleShopping_A2.shoppingNine",
       "icon": "\uD83D\uDCF1",
       "wordsPool": ["als", "zu", "oder", "wird", "lässt", "weil", "bevor"],
       "textElements": [
@@ -222,7 +222,7 @@
     {
       "id": "shop_A2_10",
       "title": "Der Großeinkauf",
-      "translation": "Большая закупка",
+      "translation": "themeTextTitleShopping_A2.shoppingTen",
       "icon": "\uD83D\uDECD\uFE0F",
       "wordsPool": ["wie", "zu", "und", "werden", "lassen", "dass", "obwohl"],
       "textElements": [

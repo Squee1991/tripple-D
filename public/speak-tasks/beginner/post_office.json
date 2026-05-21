@@ -1,0 +1,588 @@
+{
+  "start": {
+    "botText": "Guten Tag! Was kann ich für Sie tun?",
+    "tips": {
+      "ar-SA": "عبارة 'Was kann ich für Sie tun؟' تعني 'كيف يمكنني مساعدتك؟'.",
+      "en-US": "The phrase 'Was kann ich für Sie tun?' means 'What can I do for you?'.",
+      "es-ES": "La frase 'Was kann ich für Sie tun?' significa '¿Qué puedo hacer por usted?'.",
+      "fr-FR": "L'expression 'Was kann ich für Sie tun ?' signifie 'Que puis-je faire pour vous ?'.",
+      "hi-IN": "वाक्यांश 'Was kann ich für Sie tun?' का अर्थ है 'मैं आपकी क्या मदद कर सकता हूँ?'.",
+      "pl-PL": "Fraza 'Was kann ich für Sie tun?' oznacza 'W czym mogę pomóc?'.",
+      "ro-RO": "Expresia 'Was kann ich für Sie tun?' înseamnă 'Ce pot face pentru dumneavoastră?'.",
+      "ru-RU": "Фраза 'Was kann ich für Sie tun?' переводится как 'Чем я могу Вам помочь?'.",
+      "tr-TR": "'Was kann ich für Sie tun?' ifadesi 'Sizin için ne yapabilirim?' demektir.",
+      "uk-UA": "Фраза 'Was kann ich für Sie tun?' перекладається як 'Чим я можу Вам допомогти?'.",
+      "uz-UZ": "'Was kann ich für Sie tun?' iborasi 'Sizga qanday yordam bera olaman?' degani."
+    },
+    "botTranslation": {
+      "ar-SA": "طاب يومك! ماذا يمكنني أن أفعل لك؟",
+      "en-US": "Good day! What can I do for you?",
+      "es-ES": "¡Buen día! ¿Qué puedo hacer por usted?",
+      "fr-FR": "Bonjour ! Que puis-je faire pour vous ?",
+      "hi-IN": "शुभ दिन! मैं आपके लिए क्या कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! W czym mogę panu/pani pomóc?",
+      "ro-RO": "Bună ziua! Ce pot face pentru dumneavoastră?",
+      "ru-RU": "Добрый день! Чем я могу Вам помочь?",
+      "tr-TR": "İyi günler! Sizin için ne yapabilirim?",
+      "uk-UA": "Добрий день! Чим я можу Вам допомогти?",
+      "uz-UZ": "Xayrli kun! Siz uchun nima qila olaman?"
+    },
+    "options": [
+      {
+        "text": "Guten Tag! Ich möchte einen Brief verschicken.",
+        "translation": {
+          "ar-SA": "طاب يومك! أريد إرسال رسالة.",
+          "en-US": "Good day! I would like to send a letter.",
+          "es-ES": "¡Buen día! Quisiera enviar una carta.",
+          "fr-FR": "Bonjour ! Je voudrais envoyer une lettre.",
+          "hi-IN": "शुभ दिन! मैं एक पत्र भेजना चाहूँगा।",
+          "pl-PL": "Dzień dobry! Chciałbym/Chciałabym wysłać list.",
+          "ro-RO": "Bună ziua! Aș dori să trimit o scrisoare.",
+          "ru-RU": "Добрый день! Я хотел бы отправить письмо.",
+          "tr-TR": "İyi günler! Bir mektup göndermek istiyorum.",
+          "uk-UA": "Добрий день! Я хотів би відправити листа.",
+          "uz-UZ": "Xayrli kun! Men xat yubormoqchiman."
+        },
+        "nextStep": "destination"
+      },
+      {
+        "text": "Hallo! Ich möchte ein Paket senden.",
+        "translation": {
+          "ar-SA": "مرحباً! أريد إرسال طرد.",
+          "en-US": "Hello! I want to send a parcel.",
+          "es-ES": "¡Hola! Quiero enviar un paquete.",
+          "fr-FR": "Bonjour ! Je veux envoyer un colis.",
+          "hi-IN": "नमस्ते! मैं एक पार्सल भेजना चाहता हूँ।",
+          "pl-PL": "Cześć! Chcę wysłać paczkę.",
+          "ro-RO": "Salut! Vreau să trimit un pachet.",
+          "ru-RU": "Здравствуйте! Я хочу отправить посылку.",
+          "tr-TR": "Merhaba! Bir paket göndermek istiyorum.",
+          "uk-UA": "Добрий день! Я хочу відправити посилку.",
+          "uz-UZ": "Salom! Men posilka yubormoqchiman."
+        },
+        "nextStep": "destination"
+      }
+    ],
+    "defaultNext": "destination"
+  },
+  "destination": {
+    "botText": "Gerne. Wohin soll es gehen?",
+    "tips": {
+      "ar-SA": "للسؤال عن الوجهة نستخدم 'Wohin' (إلى أين).",
+      "en-US": "To ask for a destination, we use 'Wohin' (Where to).",
+      "es-ES": "Para preguntar por un destino usamos 'Wohin' (Adónde).",
+      "fr-FR": "Pour demander une destination, on utilise 'Wohin' (Vers où).",
+      "hi-IN": "गंतव्य पूछने के लिए, हम 'Wohin' (कहाँ) का उपयोग करते हैं।",
+      "pl-PL": "Pytając o cel podróży używamy 'Wohin' (Dokąd).",
+      "ro-RO": "Pentru a întreba destinația, folosim 'Wohin' (Încotro).",
+      "ru-RU": "Вопросительное слово 'Wohin?' означает 'Куда?'.",
+      "tr-TR": "Hedef sormak için 'Wohin' (Nereye) kullanılır.",
+      "uk-UA": "Запитальне слово 'Wohin?' означає 'Куди?'.",
+      "uz-UZ": "Manzilni so'rash uchun 'Wohin' (Qayerga) ishlatiladi."
+    },
+    "botTranslation": {
+      "ar-SA": "بكل سرور. إلى أين سترسلها؟",
+      "en-US": "Gladly. Where should it go?",
+      "es-ES": "Con gusto. ¿Adónde debe ir?",
+      "fr-FR": "Volontiers. Où cela doit-il aller ?",
+      "hi-IN": "खुशी से। यह कहाँ जाना चाहिए?",
+      "pl-PL": "Z przyjemnością. Dokąd to ma trafić?",
+      "ro-RO": "Cu plăcere. Încotro trebuie să meargă?",
+      "ru-RU": "С удовольствием. Куда это нужно отправить?",
+      "tr-TR": "Memnuniyetle. Nereye gitmesi gerekiyor?",
+      "uk-UA": "Із задоволенням. Куди це потрібно відправити?",
+      "uz-UZ": "Bajonidil. U qayerga borishi kerak?"
+    },
+    "options": [
+      {
+        "text": "Nach Spanien, bitte.",
+        "translation": {
+          "ar-SA": "إلى إسبانيا، من فضلك.",
+          "en-US": "To Spain, please.",
+          "es-ES": "A España, por favor.",
+          "fr-FR": "En Espagne, s'il vous plaît.",
+          "hi-IN": "स्पेन को, कृपया।",
+          "pl-PL": "Do Hiszpanii, poproszę.",
+          "ro-RO": "În Spania, vă rog.",
+          "ru-RU": "В Испанию, пожалуйста.",
+          "tr-TR": "İspanya'ya, lütfen.",
+          "uk-UA": "До Іспанії, будь ласка.",
+          "uz-UZ": "Ispaniyaga, iltimos."
+        },
+        "nextStep": "type"
+      },
+      {
+        "text": "Nach Österreich, bitte.",
+        "translation": {
+          "ar-SA": "إلى النمسا، من فضلك.",
+          "en-US": "To Austria, please.",
+          "es-ES": "A Austria, por favor.",
+          "fr-FR": "En Autriche, s'il vous plaît.",
+          "hi-IN": "ऑस्ट्रिया को, कृपया।",
+          "pl-PL": "Do Austrii, poproszę.",
+          "ro-RO": "În Austria, vă rog.",
+          "ru-RU": "В Австрию, пожалуйста.",
+          "tr-TR": "Avusturya'ya, lütfen.",
+          "uk-UA": "До Австрії, будь ласка.",
+          "uz-UZ": "Avstriyaga, iltimos."
+        },
+        "nextStep": "type"
+      }
+    ],
+    "defaultNext": "type"
+  },
+  "type": {
+    "botText": "Soll es ein Einschreiben sein oder ein normaler Brief?",
+    "tips": {
+      "ar-SA": "كلمة 'Einschreiben' تعني رسالة مسجلة (بالبريد المضمون).",
+      "en-US": "The word 'Einschreiben' means registered mail (with tracking).",
+      "es-ES": "La palabra 'Einschreiben' significa correo certificado.",
+      "fr-FR": "Le mot 'Einschreiben' signifie courrier recommandé.",
+      "hi-IN": "शब्द 'Einschreiben' का अर्थ पंजीकृत डाक है।",
+      "pl-PL": "Słowo 'Einschreiben' oznacza list polecony.",
+      "ro-RO": "Cuvântul 'Einschreiben' înseamnă scrisoare recomandată.",
+      "ru-RU": "Слово 'Einschreiben' означает заказное письмо (с трек-номером).",
+      "tr-TR": "'Einschreiben' taahhütlü posta demektir.",
+      "uk-UA": "Слово 'Einschreiben' означає рекомендований лист (з трек-номером).",
+      "uz-UZ": "'Einschreiben' so'zi buyurtma xat (kuzatuv raqami bilan) degani."
+    },
+    "botTranslation": {
+      "ar-SA": "هل يجب أن تكون رسالة مسجلة أم رسالة عادية؟",
+      "en-US": "Should it be registered mail or a normal letter?",
+      "es-ES": "¿Debe ser correo certificado o una carta normal?",
+      "fr-FR": "Doit-il s'agir d'un courrier recommandé ou d'une lettre normale ?",
+      "hi-IN": "क्या यह पंजीकृत डाक होनी चाहिए या एक सामान्य पत्र?",
+      "pl-PL": "Czy to ma być list polecony czy zwykły?",
+      "ro-RO": "Ar trebui să fie o scrisoare recomandată sau una normală?",
+      "ru-RU": "Это должно быть заказное письмо или обычное?",
+      "tr-TR": "Taahhütlü posta mı yoksa normal bir mektup mu olmalı?",
+      "uk-UA": "Це має бути рекомендований лист чи звичайний?",
+      "uz-UZ": "Bu buyurtma xat bo'lishi kerakmi yoki oddiy xatmi?"
+    },
+    "options": [
+      {
+        "text": "Ein normaler Brief, bitte.",
+        "translation": {
+          "ar-SA": "رسالة عادية، من فضلك.",
+          "en-US": "A normal letter, please.",
+          "es-ES": "Una carta normal, por favor.",
+          "fr-FR": "Une lettre normale, s'il vous plaît.",
+          "hi-IN": "एक सामान्य पत्र, कृपया।",
+          "pl-PL": "Zwykły list, poproszę.",
+          "ro-RO": "O scrisoare normală, vă rog.",
+          "ru-RU": "Обычное письмо, пожалуйста.",
+          "tr-TR": "Normal bir mektup, lütfen.",
+          "uk-UA": "Звичайний лист, будь ласка.",
+          "uz-UZ": "Oddiy xat, iltimos."
+        },
+        "nextStep": "weighing"
+      },
+      {
+        "text": "Bitte als Einschreiben.",
+        "translation": {
+          "ar-SA": "كرسالة مسجلة، من فضلك.",
+          "en-US": "As registered mail, please.",
+          "es-ES": "Como correo certificado, por favor.",
+          "fr-FR": "En recommandé, s'il vous plaît.",
+          "hi-IN": "पंजीकृत डाक के रूप में, कृपया।",
+          "pl-PL": "Jako list polecony, poproszę.",
+          "ro-RO": "Ca scrisoare recomandată, vă rog.",
+          "ru-RU": "Пожалуйста, заказным.",
+          "tr-TR": "Taahhütlü olarak, lütfen.",
+          "uk-UA": "Будь ласка, рекомендованим.",
+          "uz-UZ": "Buyurtma xat sifatida, iltimos."
+        },
+        "nextStep": "weighing"
+      }
+    ],
+    "defaultNext": "weighing"
+  },
+  "weighing": {
+    "botText": "Alles klar, ich wiege ihn kurz. Das macht 3,50 Euro.",
+    "tips": {
+      "ar-SA": "الفعل 'wiegen' يعني 'يزن' أو 'يوزن'.",
+      "en-US": "The verb 'wiegen' means 'to weigh'.",
+      "es-ES": "El verbo 'wiegen' significa 'pesar'.",
+      "fr-FR": "Le verbe 'wiegen' signifie 'peser'.",
+      "hi-IN": "क्रिया 'wiegen' का अर्थ है 'वजन करना'।",
+      "pl-PL": "Czasownik 'wiegen' oznacza 'ważyć'.",
+      "ro-RO": "Verbul 'wiegen' înseamnă 'a cântări'.",
+      "ru-RU": "Глагол 'wiegen' означает 'взвешивать'.",
+      "tr-TR": "'wiegen' fiili 'tartmak' anlamına gelir.",
+      "uk-UA": "Дієслово 'wiegen' означає 'зважувати'.",
+      "uz-UZ": "'wiegen' fe'li 'o'lchamoq' (tortmoq) degan ma'noni anglatadi."
+    },
+    "botTranslation": {
+      "ar-SA": "حسناً، سأزنه بسرعة. التكلفة 3.50 يورو.",
+      "en-US": "Alright, I'll weigh it quickly. That comes to 3.50 Euros.",
+      "es-ES": "De acuerdo, lo peso un momento. Son 3,50 euros.",
+      "fr-FR": "D'accord, je le pèse rapidement. Cela fait 3,50 euros.",
+      "hi-IN": "ठीक है, मैं इसे जल्दी से तौलता हूँ। यह 3.50 यूरो हुआ।",
+      "pl-PL": "W porządku, szybko go zważę. To będzie 3,50 euro.",
+      "ro-RO": "În regulă, o să-l cântăresc scurt. Asta face 3,50 euro.",
+      "ru-RU": "Понятно, я его быстро взвешу. С Вас 3,50 евро.",
+      "tr-TR": "Tamam, hemen tartıyorum. Tutar 3,50 Euro.",
+      "uk-UA": "Зрозуміло, я його швидко зважу. З Вас 3,50 євро.",
+      "uz-UZ": "Tushunarli, men uni tezda tortib ko'raman. Jami 3,50 yevro bo'ldi."
+    },
+    "options": [
+      {
+        "text": "Kann ich mit Karte zahlen?",
+        "translation": {
+          "ar-SA": "هل يمكنني الدفع بالبطاقة؟",
+          "en-US": "Can I pay by card?",
+          "es-ES": "¿Puedo pagar con tarjeta?",
+          "fr-FR": "Puis-je payer par carte ?",
+          "hi-IN": "क्या मैं कार्ड से भुगतान कर सकता हूँ?",
+          "pl-PL": "Czy mogę zapłacić kartą?",
+          "ro-RO": "Pot plăti cu cardul?",
+          "ru-RU": "Могу я заплатить картой?",
+          "tr-TR": "Kartla ödeyebilir miyim?",
+          "uk-UA": "Можу я заплатити карткою?",
+          "uz-UZ": "Karta bilan to'lasam bo'ladimi?"
+        },
+        "nextStep": "payment"
+      },
+      {
+        "text": "Ich zahle mit Karte, bitte.",
+        "translation": {
+          "ar-SA": "سأدفع بالبطاقة، من فضلك.",
+          "en-US": "I am paying by card, please.",
+          "es-ES": "Pago con tarjeta, por favor.",
+          "fr-FR": "Je paie par carte, s'il vous plaît.",
+          "hi-IN": "मैं कार्ड से भुगतान कर रहा हूँ, कृपया।",
+          "pl-PL": "Płacę kartą, poproszę.",
+          "ro-RO": "Plătesc cu cardul, vă rog.",
+          "ru-RU": "Я плачу картой, пожалуйста.",
+          "tr-TR": "Kartla ödüyorum, lütfen.",
+          "uk-UA": "Я плачу карткою, будь ласка.",
+          "uz-UZ": "Men karta bilan to'layman, iltimos."
+        },
+        "nextStep": "payment"
+      }
+    ],
+    "defaultNext": "payment"
+  },
+  "payment": {
+    "botText": "Ja, das geht. Bitte hier das Gerät.",
+    "tips": {
+      "ar-SA": "'das geht' تعني 'هذا ممكن' أو 'هذا يعمل'.",
+      "en-US": "'das geht' means 'that works' or 'that is possible'.",
+      "es-ES": "'das geht' significa 'eso funciona' o 'eso es posible'.",
+      "fr-FR": "'das geht' signifie 'c'est possible' ou 'ça marche'.",
+      "hi-IN": "'das geht' का अर्थ है 'यह संभव है' या 'यह काम करता है'।" ,
+      "pl-PL": "'das geht' oznacza 'to działa' lub 'to możliwe'.",
+      "ro-RO": "'das geht' înseamnă 'se poate' sau 'funcționează'.",
+      "ru-RU": "Фраза 'das geht' означает 'это возможно' или 'так можно'.",
+      "tr-TR": "'das geht' 'olur' veya 'mümkün' demektir.",
+      "uk-UA": "Фраза 'das geht' означає 'це можливо' або 'так можна'.",
+      "uz-UZ": "'das geht' iborasi 'bu mumkin' yoki 'bo'ladi' degani."
+    },
+    "botTranslation": {
+      "ar-SA": "نعم، هذا ممكن. تفضل الجهاز هنا.",
+      "en-US": "Yes, that works. Here is the device, please.",
+      "es-ES": "Sí, es posible. Aquí está el dispositivo, por favor.",
+      "fr-FR": "Oui, c'est possible. Voici l'appareil, s'il vous plaît.",
+      "hi-IN": "हाँ, यह संभव है। कृपया यहाँ उपकरण है।",
+      "pl-PL": "Tak, można. Proszę, oto terminal.",
+      "ro-RO": "Da, se poate. Vă rog, aici este dispozitivul.",
+      "ru-RU": "Да, можно. Пожалуйста, вот терминал.",
+      "tr-TR": "Evet, olur. Lütfen cihaz burada.",
+      "uk-UA": "Так, можна. Будь ласка, ось термінал.",
+      "uz-UZ": "Ha, bo'ladi. Marhamat, qurilma bu yerda."
+    },
+    "options": [
+      {
+        "text": "Danke, hier ist die Karte.",
+        "translation": {
+          "ar-SA": "شكراً، هذه هي البطاقة.",
+          "en-US": "Thanks, here is the card.",
+          "es-ES": "Gracias, aquí está la tarjeta.",
+          "fr-FR": "Merci, voici la carte.",
+          "hi-IN": "धन्यवाद, यहाँ कार्ड है।",
+          "pl-PL": "Dziękuję, oto karta.",
+          "ro-RO": "Mulțumesc, aici este cardul.",
+          "ru-RU": "Спасибо, вот карта.",
+          "tr-TR": "Teşekkürler, işte kart.",
+          "uk-UA": "Дякую, ось картка.",
+          "uz-UZ": "Rahmat, mana karta."
+        },
+        "nextStep": "receipt"
+      },
+      {
+        "text": "Hier, bitte schön.",
+        "translation": {
+          "ar-SA": "تفضل.",
+          "en-US": "Here, please.",
+          "es-ES": "Aquí tiene, por favor.",
+          "fr-FR": "Voici, s'il vous plaît.",
+          "hi-IN": "यहाँ, कृपया।",
+          "pl-PL": "Proszę bardzo.",
+          "ro-RO": "Poftiți.",
+          "ru-RU": "Вот, пожалуйста.",
+          "tr-TR": "Buyurun, lütfen.",
+          "uk-UA": "Ось, будь ласка.",
+          "uz-UZ": "Mana, marhamat."
+        },
+        "nextStep": "receipt"
+      }
+    ],
+    "defaultNext": "receipt"
+  },
+  "receipt": {
+    "botText": "Vielen Dank. Benötigen Sie eine Quittung?",
+    "tips": {
+      "ar-SA": "'Quittung' أو 'Beleg' تعني إيصال أو فاتورة.",
+      "en-US": "'Quittung' or 'Beleg' means receipt.",
+      "es-ES": "'Quittung' o 'Beleg' significa recibo o comprobante.",
+      "fr-FR": "'Quittung' ou 'Beleg' signifie reçu ou ticket de caisse.",
+      "hi-IN": "'Quittung' या 'Beleg' का अर्थ रसीद है।",
+      "pl-PL": "'Quittung' lub 'Beleg' oznacza paragon/pokwitowanie.",
+      "ro-RO": "'Quittung' sau 'Beleg' înseamnă chitanță sau bon.",
+      "ru-RU": "Слова 'die Quittung' и 'der Beleg' означают чек или квитанцию.",
+      "tr-TR": "'Quittung' veya 'Beleg' makbuz veya fiş demektir.",
+      "uk-UA": "Слова 'die Quittung' та 'der Beleg' означають чек або квитанцію.",
+      "uz-UZ": "'Quittung' yoki 'Beleg' kvitansiya (chek) degani."
+    },
+    "botTranslation": {
+      "ar-SA": "شكراً جزيلاً. هل تحتاج إلى إيصال؟",
+      "en-US": "Thank you very much. Do you need a receipt?",
+      "es-ES": "Muchas gracias. ¿Necesita un recibo?",
+      "fr-FR": "Merci beaucoup. Avez-vous besoin d'un reçu ?",
+      "hi-IN": "बहुत-बहुत धन्यवाद। क्या आपको रसीद की आवश्यकता है?",
+      "pl-PL": "Bardzo dziękuję. Czy potrzebuje pan/pani pokwitowania?",
+      "ro-RO": "Vă mulțumesc mult. Aveți nevoie de o chitanță?",
+      "ru-RU": "Большое спасибо. Вам нужна квитанция?",
+      "tr-TR": "Çok teşekkürler. Bir makbuza ihtiyacınız var mı?",
+      "uk-UA": "Велике дякую. Вам потрібна квитанція?",
+      "uz-UZ": "Katta rahmat. Sizga kvitansiya kerakmi?"
+    },
+    "options": [
+      {
+        "text": "Ja, bitte.",
+        "translation": {
+          "ar-SA": "نعم، من فضلك.",
+          "en-US": "Yes, please.",
+          "es-ES": "Sí, por favor.",
+          "fr-FR": "Oui, s'il vous plaît.",
+          "hi-IN": "हाँ, कृपया।",
+          "pl-PL": "Tak, poproszę.",
+          "ro-RO": "Da, vă rog.",
+          "ru-RU": "Да, пожалуйста.",
+          "tr-TR": "Evet, lütfen.",
+          "uk-UA": "Так, будь ласка.",
+          "uz-UZ": "Ha, iltimos."
+        },
+        "nextStep": "get_receipt"
+      },
+      {
+        "text": "Nein, danke.",
+        "translation": {
+          "ar-SA": "لا، شكراً.",
+          "en-US": "No, thanks.",
+          "es-ES": "No, gracias.",
+          "fr-FR": "Non, merci.",
+          "hi-IN": "नहीं, धन्यवाद।",
+          "pl-PL": "Nie, dziękuję.",
+          "ro-RO": "Nu, mulțumesc.",
+          "ru-RU": "Нет, спасибо.",
+          "tr-TR": "Hayır, teşekkürler.",
+          "uk-UA": "Ні, дякую.",
+          "uz-UZ": "Yo'q, rahmat."
+        },
+        "nextStep": "get_receipt"
+      }
+    ],
+    "defaultNext": "get_receipt"
+  },
+  "get_receipt": {
+    "botText": "Hier ist der Beleg. Alles erledigt.",
+    "tips": {
+      "ar-SA": "عبارة 'Alles erledigt' تعني 'تم إنجاز كل شيء'.",
+      "en-US": "The phrase 'Alles erledigt' means 'All done' or 'Everything is taken care of'.",
+      "es-ES": "La frase 'Alles erledigt' significa 'Todo hecho' o 'Todo listo'.",
+      "fr-FR": "L'expression 'Alles erledigt' signifie 'Tout est réglé' ou 'C'est tout bon'.",
+      "hi-IN": "वाक्यांश 'Alles erledigt' का अर्थ है 'सब हो गया' या 'सब कुछ पूरा हो गया'।",
+      "pl-PL": "Fraza 'Alles erledigt' oznacza 'Wszystko załatwione'.",
+      "ro-RO": "Expresia 'Alles erledigt' înseamnă 'Totul este gata' sau 'Totul e rezolvat'.",
+      "ru-RU": "Фраза 'Alles erledigt' означает 'Всё готово' или 'Всё сделано'.",
+      "tr-TR": "'Alles erledigt' ifadesi 'Her şey tamam' veya 'İşlem tamamlandı' demektir.",
+      "uk-UA": "Фраза 'Alles erledigt' означає 'Все готово' або 'Все зроблено'.",
+      "uz-UZ": "'Alles erledigt' iborasi 'Hammasi tayyor' yoki 'Bajarildi' degani."
+    },
+    "botTranslation": {
+      "ar-SA": "هنا الإيصال. تم كل شيء.",
+      "en-US": "Here is the receipt. All done.",
+      "es-ES": "Aquí está el recibo. Todo listo.",
+      "fr-FR": "Voici le reçu. Tout est réglé.",
+      "hi-IN": "यहाँ रसीद है। सब हो गया।",
+      "pl-PL": "Oto paragon. Wszystko załatwione.",
+      "ro-RO": "Iată chitanța. Totul este rezolvat.",
+      "ru-RU": "Вот чек. Всё готово.",
+      "tr-TR": "İşte makbuz. Her şey tamam.",
+      "uk-UA": "Ось чек. Все готово.",
+      "uz-UZ": "Mana kvitansiya. Hammasi tayyor."
+    },
+    "options": [
+      {
+        "text": "Vielen Dank für Ihre Hilfe!",
+        "translation": {
+          "ar-SA": "شكراً جزيلاً لمساعدتك!",
+          "en-US": "Thank you very much for your help!",
+          "es-ES": "¡Muchas gracias por su ayuda!",
+          "fr-FR": "Merci beaucoup pour votre aide !",
+          "hi-IN": "आपकी मदद के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję za pomoc!",
+          "ro-RO": "Vă mulțumesc mult pentru ajutor!",
+          "ru-RU": "Большое спасибо за Вашу помощь!",
+          "tr-TR": "Yardımınız için çok teşekkür ederim!",
+          "uk-UA": "Велике дякую за Вашу допомогу!",
+          "uz-UZ": "Yordamingiz uchun katta rahmat!"
+        },
+        "nextStep": "wish_day"
+      },
+      {
+        "text": "Danke, einen schönen Tag!",
+        "translation": {
+          "ar-SA": "شكراً، يوماً سعيداً!",
+          "en-US": "Thanks, have a nice day!",
+          "es-ES": "¡Gracias, un buen día!",
+          "fr-FR": "Merci, bonne journée !",
+          "hi-IN": "धन्यवाद, आपका दिन शुभ हो!",
+          "pl-PL": "Dziękuję, miłego dnia!",
+          "ro-RO": "Mulțumesc, o zi frumoasă!",
+          "ru-RU": "Спасибо, хорошего дня!",
+          "tr-TR": "Teşekkürler, iyi günler!",
+          "uk-UA": "Дякую, гарного дня!",
+          "uz-UZ": "Rahmat, yaxshi kun tilayman!"
+        },
+        "nextStep": "wish_day"
+      }
+    ],
+    "defaultNext": "wish_day"
+  },
+  "wish_day": {
+    "botText": "Gern geschehen! Einen schönen Tag noch!",
+    "botTranslation": {
+      "ar-SA": "على الرحب والسعة! أتمنى لك يوماً سعيداً!",
+      "en-US": "You are welcome! Have a nice day!",
+      "es-ES": "¡De nada! ¡Que tenga un buen día!",
+      "fr-FR": "Je vous en prie ! Bonne journée !",
+      "hi-IN": "आपका स्वागत है! आपका दिन शुभ हो!",
+      "pl-PL": "Nie ma za co! Miłego dnia!",
+      "ro-RO": "Cu plăcere! O zi frumoasă în continuare!",
+      "ru-RU": "Пожалуйста! Хорошего Вам дня!",
+      "tr-TR": "Rica ederim! İyi günler!",
+      "uk-UA": "Будь ласка! Гарного Вам дня!",
+      "uz-UZ": "Arzimaydi! Yaxshi kun tilayman!"
+    },
+    "options": [
+      {
+        "text": "Danke, Ihnen auch!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً!",
+          "en-US": "Thanks, you too!",
+          "es-ES": "¡Gracias, a usted también!",
+          "fr-FR": "Merci, à vous aussi !",
+          "hi-IN": "धन्यवाद, आपको भी!",
+          "pl-PL": "Dziękuję, panu/pani również!",
+          "ro-RO": "Mulțumesc, și dumneavoastră la fel!",
+          "ru-RU": "Спасибо, Вам тоже!",
+          "tr-TR": "Teşekkürler, size de!",
+          "uk-UA": "Дякую, Вам також!",
+          "uz-UZ": "Rahmat, sizga ham!"
+        },
+        "nextStep": "goodbye"
+      },
+      {
+        "text": "Danke, gleichfalls!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً!",
+          "en-US": "Thanks, same to you!",
+          "es-ES": "¡Gracias, igualmente!",
+          "fr-FR": "Merci, pareillement !",
+          "hi-IN": "धन्यवाद, आपको भी!",
+          "pl-PL": "Dziękuję, nawzajem!",
+          "ro-RO": "Mulțumesc, la fel!",
+          "ru-RU": "Спасибо, взаимно!",
+          "tr-TR": "Teşekkürler, size de!",
+          "uk-UA": "Дякую, навзаєм!",
+          "uz-UZ": "Rahmat, sizga ham!"
+        },
+        "nextStep": "goodbye"
+      }
+    ],
+    "defaultNext": "goodbye"
+  },
+  "goodbye": {
+    "botText": "Auf Wiedersehen!",
+    "botTranslation": {
+      "ar-SA": "إلى اللقاء!",
+      "en-US": "Goodbye!",
+      "es-ES": "¡Adiós!",
+      "fr-FR": "Au revoir !",
+      "hi-IN": "अलविदा!",
+      "pl-PL": "Do widzenia!",
+      "ro-RO": "La revedere!",
+      "ru-RU": "До свидания!",
+      "tr-TR": "Hoşça kalın!",
+      "uk-UA": "До побачення!",
+      "uz-UZ": "Xayr!"
+    },
+    "options": [
+      {
+        "text": "Auf Wiedersehen!",
+        "translation": {
+          "ar-SA": "إلى اللقاء!",
+          "en-US": "Goodbye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Do widzenia!",
+          "ro-RO": "La revedere!",
+          "ru-RU": "До свидания!",
+          "tr-TR": "Hoşça kalın!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Ko'rishguncha!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Tschüss!",
+        "translation": {
+          "ar-SA": "وداعاً!",
+          "en-US": "Bye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Salut !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Cześć!",
+          "ro-RO": "Pa!",
+          "ru-RU": "Пока!",
+          "tr-TR": "Görüşürüz!",
+          "uk-UA": "Бувай!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Der Vorgang ist beendet.",
+    "botTranslation": {
+      "ar-SA": "انتهت العملية.",
+      "en-US": "The process is finished.",
+      "es-ES": "El proceso ha terminado.",
+      "fr-FR": "L'opération est terminée.",
+      "hi-IN": "प्रक्रिया समाप्त हो गई है।",
+      "pl-PL": "Proces został zakończony.",
+      "ro-RO": "Procesul s-a încheiat.",
+      "ru-RU": "Операция завершена.",
+      "tr-TR": "İşlem bitti.",
+      "uk-UA": "Операція завершена.",
+      "uz-UZ": "Jarayon tugadi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

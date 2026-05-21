@@ -1,0 +1,391 @@
+{
+  "start": {
+    "botText": "Hallo, [Имя]!",
+    "botTranslation": {
+      "ar-SA": "مرحباً،",
+      "en-US": "Hello!",
+      "es-ES": "¡Hola!",
+      "fr-FR": "Bonjour!",
+      "hi-IN": "नमस्ते!",
+      "pl-PL": "Cześć!",
+      "ro-RO": "Salut!",
+      "ru-RU": "Привет!",
+      "tr-TR": "Merhaba!",
+      "uk-UA": "Привіт!",
+      "uz-UZ": "Salom!"
+    },
+    "options": [
+      {
+        "text": "Hallo!",
+        "translation": {
+          "ar-SA": "مرحباً!",
+          "en-US": "Hello!",
+          "es-ES": "¡Hola!",
+          "fr-FR": "Bonjour !",
+          "hi-IN": "नमस्ते!",
+          "pl-PL": "Cześć!",
+          "ro-RO": "Salut!",
+          "ru-RU": "Привет!",
+          "tr-TR": "Merhaba!",
+          "uk-UA": "Привіт!",
+          "uz-UZ": "Salom!"
+        },
+        "nextStep": "ask_mood"
+      },
+      {
+        "text": "Guten Tag!",
+        "translation": {
+          "ar-SA": "طاب يومك!",
+          "en-US": "Good day!",
+          "es-ES": "¡Buen día!",
+          "fr-FR": "Bonne journée !",
+          "hi-IN": "शुभ दिन!",
+          "pl-PL": "Dzień dobry!",
+          "ro-RO": "Bună ziua!",
+          "ru-RU": "Добрый день!",
+          "tr-TR": "İyi günler!",
+          "uk-UA": "Добрий день!",
+          "uz-UZ": "Xayrli kun!"
+        },
+        "nextStep": "ask_mood"
+      }
+    ],
+    "defaultNext": "ask_mood"
+  },
+  "ask_mood": {
+    "botText": "Wie geht es dir heute?",
+    "botTranslation": {
+      "ar-SA": "كيف حالك اليوم؟",
+      "en-US": "How are you today?",
+      "es-ES": "¿Cómo estás hoy?",
+      "fr-FR": "Comment vas-tu aujourd'hui ?",
+      "hi-IN": "आज तुम कैसे हो?",
+      "pl-PL": "Jak się dzisiaj masz?",
+      "ro-RO": "Ce mai faci astăzi?",
+      "ru-RU": "Как твои дела сегодня?",
+      "tr-TR": "Bugün nasılsın?",
+      "uk-UA": "Як твої справи сьогодні?",
+      "uz-UZ": "Bugun ahvoling qanday?"
+    },
+    "options": [
+      {
+        "text": "Danke, sehr gut. Und dir?",
+        "translation": {
+          "ar-SA": "شكراً، جيد جداً. وأنت؟",
+          "en-US": "Thanks, very good. And you?",
+          "es-ES": "Gracias, muy bien. ¿Y tú?",
+          "fr-FR": "Merci, très bien. Et toi ?",
+          "hi-IN": "धन्यवाद, बहुत बढ़िया। और तुम?",
+          "pl-PL": "Dziękuję, bardzo dobrze. A u ciebie?",
+          "ro-RO": "Mulțumesc, foarte bine. Dar tu?",
+          "ru-RU": "Спасибо, очень хорошо. А у тебя?",
+          "tr-TR": "Teşekkürler, çok iyi. Ya sen?",
+          "uk-UA": "Дякую, дуже добре. А у тебе?",
+          "uz-UZ": "Rahmat, juda yaxshi. Sen-chi?"
+        },
+        "nextStep": "ask_wohin"
+      },
+      {
+        "text": "Es geht so. Und dir?",
+        "translation": {
+          "ar-SA": "لابأس. وأنت؟",
+          "en-US": "So-so. And you?",
+          "es-ES": "Más o menos. ¿Y tú?",
+          "fr-FR": "Comme ci, comme ça. Et toi ?",
+          "hi-IN": "ठीक-ठाक। और तुम?",
+          "pl-PL": "Tak sobie. A u ciebie?",
+          "ro-RO": "Așa și așa. Dar tu?",
+          "ru-RU": "Так себе. А у тебя?",
+          "tr-TR": "İdare eder. Ya sen?",
+          "uk-UA": "Так собі. А у тебе?",
+          "uz-UZ": "Yomon emas. Sen-chi?"
+        },
+        "nextStep": "ask_wohin"
+      }
+    ],
+    "defaultNext": "ask_wohin"
+  },
+  "ask_wohin": {
+    "botText": "Gut, danke. Wohin gehst du jetzt?",
+    "botTranslation": {
+      "ar-SA": "أنا أيضاً بخير، شكراً. إلى أين أنت ذاهب الآن؟",
+      "en-US": "Also good, thanks. Where are you going now?",
+      "es-ES": "También bien, gracias. ¿Adónde vas ahora?",
+      "fr-FR": "Bien aussi, merci. Où vas-tu maintenant ?",
+      "hi-IN": "मैं भी ठीक हूँ, धन्यवाद। तुम अब कहाँ जा रहे हो?",
+      "pl-PL": "Też dobrze, dziękuję. Dokąd teraz idziesz?",
+      "ro-RO": "Și eu sunt bine, mulțumesc. Încotro te duci acum?",
+      "ru-RU": "Тоже хорошо, спасибо. Куда ты сейчас идешь?",
+      "tr-TR": "Ben de iyiyim, teşekkürler. Şimdi nereye gidiyorsun?",
+      "uk-UA": "Теж добре, дякую. Куди ти зараз йдеш?",
+      "uz-UZ": "Men ham yaxshiman, rahmat. Hozir qayerga ketyapsan?"
+    },
+    "options": [
+      {
+        "text": "Ich gehe nach Hause.",
+        "translation": {
+          "ar-SA": "أنا ذاهب إلى المنزل.",
+          "en-US": "I am going home.",
+          "es-ES": "Me voy a casa.",
+          "fr-FR": "Je rentre à la maison.",
+          "hi-IN": "मैं घर जा रहा हूँ।",
+          "pl-PL": "Idę do domu.",
+          "ro-RO": "Mă duc acasă.",
+          "ru-RU": "Я иду домой.",
+          "tr-TR": "Eve gidiyorum.",
+          "uk-UA": "Я йду додому.",
+          "uz-UZ": "Men uyga ketyapman."
+        },
+        "nextStep": "ask_transport"
+      },
+      {
+        "text": "Ich gehe in den Park.",
+        "translation": {
+          "ar-SA": "أنا ذاهب إلى الحديقة (Wohin? Akkusativ، يأخذ من الأداة).",
+          "en-US": "I am going to the park (Wohin? Akkusativ, takes from the article).",
+          "es-ES": "Voy al parque (Wohin? Akkusativ, toma del artículo).",
+          "fr-FR": "Je vais au parc (Wohin? Akkusativ, prend de l'article).",
+          "hi-IN": "मैं पार्क जा रहा हूँ (Wohin? Akkusativ, आर्टिकल से लेता है)।",
+          "pl-PL": "Idę do parku (Wohin? Akkusativ, bierze od przedimka).",
+          "ro-RO": "Mă duc în parc (Wohin? Akkusativ, ia de la articol).",
+          "ru-RU": "Я иду в парк (Wohin? Akkusativ, берет у артикля).",
+          "tr-TR": "Parka gidiyorum (Wohin? Akkusativ, artikelden alır).",
+          "uk-UA": "Я йду в парк (Wohin? Akkusativ, бере у артикля).",
+          "uz-UZ": "Men parkka ketyapman (Wohin? Akkusativ, artikldan oladi)."
+        },
+        "nextStep": "ask_transport"
+      }
+    ],
+    "defaultNext": "ask_transport"
+  },
+  "ask_transport": {
+    "botText": "Gehst du zu Fuß?",
+    "botTranslation": {
+      "ar-SA": "هل تذهب مشياً على الأقدام؟",
+      "en-US": "Are you going on foot?",
+      "es-ES": "¿Vas a pie?",
+      "fr-FR": "Y vas-tu à pied ?",
+      "hi-IN": "क्या तुम पैदल जा रहे हो?",
+      "pl-PL": "Idziesz na piechotę?",
+      "ro-RO": "Mergi pe jos?",
+      "ru-RU": "Ты идешь пешком?",
+      "tr-TR": "Yürüyerek mi gidiyorsun?",
+      "uk-UA": "Ти йдеш пішки?",
+      "uz-UZ": "Piyoda ketyapsanmi?"
+    },
+    "options": [
+      {
+        "text": "Ja, ich gehe zu Fuß.",
+        "translation": {
+          "ar-SA": "نعم، أنا أمشي.",
+          "en-US": "Yes, I am walking.",
+          "es-ES": "Sí, voy a pie.",
+          "fr-FR": "Oui, j'y vais à pied.",
+          "hi-IN": "हाँ, मैं पैदल जा रहा हूँ।",
+          "pl-PL": "Tak, idę na piechotę.",
+          "ro-RO": "Da, merg pe jos.",
+          "ru-RU": "Да, я иду пешком.",
+          "tr-TR": "Evet, yürüyerek gidiyorum.",
+          "uk-UA": "Так, я йду пішки.",
+          "uz-UZ": "Ha, men piyoda ketyapman."
+        },
+        "nextStep": "ask_weather"
+      },
+      {
+        "text": "Nein, ich fahre mit dem Bus.",
+        "translation": {
+          "ar-SA": "لا، أنا أذهب بالحافلة.",
+          "en-US": "No, I am taking the bus.",
+          "es-ES": "No, voy en autobús.",
+          "fr-FR": "Non, je prends le bus.",
+          "hi-IN": "नहीं, मैं बस से जा रहा हूँ।",
+          "pl-PL": "Nie, jadę autobusem.",
+          "ro-RO": "Nu, merg cu autobuzul.",
+          "ru-RU": "Нет, я еду на автобусе.",
+          "tr-TR": "Hayır, otobüsle gidiyorum.",
+          "uk-UA": "Ні, я їду на автобусі.",
+          "uz-UZ": "Yo'q, men avtobusda ketyapman."
+        },
+        "nextStep": "ask_weather"
+      }
+    ],
+    "defaultNext": "ask_weather"
+  },
+  "ask_weather": {
+    "botText": "Das Wetter ist heute schön, oder?",
+    "botTranslation": {
+      "ar-SA": "الطقس جميل اليوم، أليس كذلك؟",
+      "en-US": "The weather is nice today, isn't it?",
+      "es-ES": "El tiempo está agradable hoy, ¿verdad?",
+      "fr-FR": "Le temps est beau aujourd'hui, n'est-ce pas ?",
+      "hi-IN": "आज मौसम अच्छा है, है ना?",
+      "pl-PL": "Pogoda jest dzisiaj ładna, prawda?",
+      "ro-RO": "Vremea e frumoasă azi, nu-i așa?",
+      "ru-RU": "Погода сегодня хорошая, правда?",
+      "tr-TR": "Bugün hava güzel, değil mi?",
+      "uk-UA": "Погода сьогодні гарна, правда?",
+      "uz-UZ": "Bugun ob-havo yaxshi, shunday emasmi?"
+    },
+    "options": [
+      {
+        "text": "Ja, es ist sehr warm.",
+        "translation": {
+          "ar-SA": "نعم، إنه دافئ جداً.",
+          "en-US": "Yes, it is very warm.",
+          "es-ES": "Sí, hace mucho calor.",
+          "fr-FR": "Oui, il fait très chaud.",
+          "hi-IN": "हाँ, बहुत गर्मी है।",
+          "pl-PL": "Tak, jest bardzo ciepło.",
+          "ro-RO": "Da, este foarte cald.",
+          "ru-RU": "Да, очень тепло.",
+          "tr-TR": "Evet, çok sıcak.",
+          "uk-UA": "Так, дуже тепло.",
+          "uz-UZ": "Ha, juda issiq."
+        },
+        "nextStep": "ask_time"
+      },
+      {
+        "text": "Nein, es ist ein bisschen kalt.",
+        "translation": {
+          "ar-SA": "لا، إنه بارد قليلاً.",
+          "en-US": "No, it is a bit cold.",
+          "es-ES": "No, hace un poco de frío.",
+          "fr-FR": "Non, il fait un peu froid.",
+          "hi-IN": "नहीं, थोड़ी ठंड है।",
+          "pl-PL": "Nie, jest trochę zimno.",
+          "ro-RO": "Nu, e puțin cam frig.",
+          "ru-RU": "Нет, немного холодно.",
+          "tr-TR": "Hayır, biraz soğuk.",
+          "uk-UA": "Ні, трохи холодно.",
+          "uz-UZ": "Yo'q, biroz sovuq."
+        },
+        "nextStep": "ask_time"
+      }
+    ],
+    "defaultNext": "ask_time"
+  },
+  "ask_time": {
+    "botText": "Wie spät ist es jetzt?",
+    "botTranslation": {
+      "ar-SA": "كم الساعة الآن؟",
+      "en-US": "What time is it now?",
+      "es-ES": "¿Qué hora es ahora?",
+      "fr-FR": "Quelle heure est-il maintenant ?",
+      "hi-IN": "अभी क्या समय हुआ है?",
+      "pl-PL": "Która jest teraz godzina?",
+      "ro-RO": "Cât este ceasul acum?",
+      "ru-RU": "Который сейчас час?",
+      "tr-TR": "Şimdi saat kaç?",
+      "uk-UA": "Котра зараз година?",
+      "uz-UZ": "Hozir soat necha?"
+    },
+    "options": [
+      {
+        "text": "Es ist fünf Uhr.",
+        "translation": {
+          "ar-SA": "إنها الساعة الخامسة.",
+          "en-US": "It is five o'clock.",
+          "es-ES": "Son las cinco.",
+          "fr-FR": "Il est cinq heures.",
+          "hi-IN": "पाँच बजे हैं।",
+          "pl-PL": "Jest piąta.",
+          "ro-RO": "Este ora cinci.",
+          "ru-RU": "Сейчас пять часов.",
+          "tr-TR": "Saat beş.",
+          "uk-UA": "Зараз п'ята година.",
+          "uz-UZ": "Soat besh."
+        },
+        "nextStep": "wish_evening"
+      },
+      {
+        "text": "Ich weiß es nicht.",
+        "translation": {
+          "ar-SA": "أنا لا أعرف.",
+          "en-US": "I don't know.",
+          "es-ES": "No lo sé.",
+          "fr-FR": "Je ne sais pas.",
+          "hi-IN": "मुझे नहीं पता।",
+          "pl-PL": "Nie wiem.",
+          "ro-RO": "Nu știu.",
+          "ru-RU": "Я не знаю.",
+          "tr-TR": "Bilmiyorum.",
+          "uk-UA": "Я не знаю.",
+          "uz-UZ": "Men bilmayman."
+        },
+        "nextStep": "wish_evening"
+      }
+    ],
+    "defaultNext": "wish_evening"
+  },
+  "wish_evening": {
+    "botText": "Oh, ich muss gehen. Einen schönen Abend noch!",
+    "botTranslation": {
+      "ar-SA": "أوه، يجب أن أذهب. أتمنى لك مساءً سعيداً!",
+      "en-US": "Oh, I have to go. Have a nice evening!",
+      "es-ES": "Oh, tengo que irme. ¡Que pases una buena tarde!",
+      "fr-FR": "Oh, je dois y aller. Bonne soirée !",
+      "hi-IN": "ओह, मुझे जाना होगा। आपकी शाम अच्छी हो!",
+      "pl-PL": "Och, muszę iść. Miłego wieczoru!",
+      "ro-RO": "Oh, trebuie să plec. O seară frumoasă în continuare!",
+      "ru-RU": "Ой, мне нужно идти. Хорошего вечера!",
+      "tr-TR": "Oh, gitmem gerek. İyi akşamlar!",
+      "uk-UA": "Ой, мені треба йти. Гарного вечора!",
+      "uz-UZ": "Oh, men ketishim kerak. Xayrli oqshom!"
+    },
+    "options": [
+      {
+        "text": "Danke, gleichfalls!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً!",
+          "en-US": "Thanks, same to you!",
+          "es-ES": "¡Gracias, igualmente!",
+          "fr-FR": "Merci, pareillement !",
+          "hi-IN": "धन्यवाद, आपको भी!",
+          "pl-PL": "Dziękuję, nawzajem!",
+          "ro-RO": "Mulțumesc, la fel!",
+          "ru-RU": "Спасибо, взаимно!",
+          "tr-TR": "Teşekkürler, sana da!",
+          "uk-UA": "Дякую, навзаєм!",
+          "uz-UZ": "Rahmat, senga ham!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Danke, dir auch!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً!",
+          "en-US": "Thanks, you too!",
+          "es-ES": "¡Gracias, a ti también!",
+          "fr-FR": "Merci, à toi aussi !",
+          "hi-IN": "धन्यवाद, आपको भी!",
+          "pl-PL": "Dziękuję, tobie również!",
+          "ro-RO": "Mulțumesc, și ție!",
+          "ru-RU": "Спасибо, тебе тоже!",
+          "tr-TR": "Teşekkürler, sana da!",
+          "uk-UA": "Дякую, тобі теж!",
+          "uz-UZ": "Rahmat, senga ham!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Tschüss! Bis bald!",
+    "botTranslation": {
+      "ar-SA": "وداعاً! أراك قريباً!",
+      "en-US": "Bye! See you soon!",
+      "es-ES": "¡Adiós! ¡Hasta pronto!",
+      "fr-FR": "Au revoir ! À bientôt !",
+      "hi-IN": "अलविदा! जल्द ही मिलेंगे!",
+      "pl-PL": "Cześć! Do zobaczenia wkrótce!",
+      "ro-RO": "Pa! Pe curând!",
+      "ru-RU": "Пока! До скорого!",
+      "tr-TR": "Hoşça kal! Görüşmek üzere!",
+      "uk-UA": "Бувай! До зустрічі!",
+      "uz-UZ": "Xayr! Tez orada ko'rishguncha!"
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

@@ -12,15 +12,15 @@
 .topic-arrow {
   background-color: #3b82f6;
   color: #ffffff;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   margin-left: 10px;
-  padding: 10px;
+  padding: 9px;
 }
 
 </style>
