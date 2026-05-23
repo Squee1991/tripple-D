@@ -6,7 +6,8 @@
     {
       "id": "travel_a1_1",
       "title": "Koffer packen",
-      "translation": "Сбор чемодана",
+      "translation": "themeTextTitleTravel_A1.travelOne",
+      "icon": "\uD83E\uDDF3",
       "wordsPool": ["mein", "muss", "nicht", "schöner", "ein", "oder", "gekauft"],
       "textElements": [
         { "type": "text", "content": "Ich fahre morgen nach Berlin. Das ist " },
@@ -29,7 +30,8 @@
     {
       "id": "travel_a1_2",
       "title": "Am Bahnhof",
-      "translation": "На вокзале",
+      "translation": "themeTextTitleTravel_A1.travelTwo",
+      "icon": "\uD83D\uDE89",
       "wordsPool": ["der", "keine", "wollen", "um", "Taschen", "an", "geschlafen"],
       "textElements": [
         { "type": "text", "content": "Wir sind am Bahnhof. — Entschuldigung, wo ist " },
@@ -52,7 +54,8 @@
     {
       "id": "travel_a1_3",
       "title": "Im Hotel",
-      "translation": "В отеле",
+      "translation": "themeTextTitleTravel_A1.travelThree",
+      "icon": "\uD83C\uDFE8",
       "wordsPool": ["ein", "aber", "mag", "schönsten", "Gib", "aus", "bezahlt"],
       "textElements": [
         { "type": "text", "content": "Wir suchen heute " },
@@ -75,7 +78,8 @@
     {
       "id": "travel_a1_4",
       "title": "Urlaub am Meer",
-      "translation": "Отпуск на море",
+      "translation": "themeTextTitleTravel_A1.travelFour",
+      "icon": "\uD83C\uDFD6\uFE0F",
       "wordsPool": ["am", "besser", "die", "will", "und", "Komm", "gemacht"],
       "textElements": [
         { "type": "text", "content": "Wir machen dieses Jahr Urlaub " },
@@ -98,7 +102,8 @@
     {
       "id": "travel_a1_5",
       "title": "Die Stadtbesichtigung",
-      "translation": "Осмотр города",
+      "translation": "themeTextTitleTravel_A1.travelFive",
+      "icon": "\uD83D\uDDFA\uFE0F",
       "wordsPool": ["müssen", "keinen", "höher", "oder", "Zeig", "zurück", "gesehen"],
       "textElements": [
         { "type": "text", "content": "Wir machen heute eine lange Tour durch die Stadt. — Wir " },
@@ -119,9 +124,10 @@
       ]
     },
     {
-      "id": "travel_a1_6_restaurant",
+      "id": "travel_a1_6",
       "title": "Im Restaurant",
-      "translation": "В ресторане",
+      "translation": "themeTextTitleTravel_A1.travelSix",
+      "icon": "\uD83C\uDF7D\uFE0F",
       "wordsPool": ["will", "keinen", "am", "Bring", "und", "eine", "bezahlt"],
       "textElements": [
         { "type": "text", "content": "Wir sind im Restaurant in Spanien. — Ich " },
@@ -142,9 +148,10 @@
       ]
     },
     {
-      "id": "travel_a1_7_airport",
+      "id": "travel_a1_7",
       "title": "Auf dem Flughafen",
-      "translation": "В аэропорту",
+      "translation": "themeTextTitleTravel_A1.travelSeven",
+      "icon": "\uD83D\uDEEB",
       "wordsPool": ["der", "müssen", "Koffer", "schneller", "Zeig", "ab", "geflogen"],
       "textElements": [
         { "type": "text", "content": "Wir sind am Flughafen. — Entschuldigung, wo ist " },
@@ -165,9 +172,10 @@
       ]
     },
     {
-      "id": "travel_a1_8_mountains",
+      "id": "travel_a1_8",
       "title": "In den Bergen",
-      "translation": "В горах",
+      "translation": "themeTextTitleTravel_A1.travelEight",
+      "icon": "\uD83C\uDFD4\uFE0F",
       "wordsPool": ["das", "nicht", "oder", "schöner", "Komm", "mag", "gemacht"],
       "textElements": [
         { "type": "text", "content": "Wir machen einen Ausflug in die Berge. — Ist " },
@@ -188,9 +196,10 @@
       ]
     },
     {
-      "id": "travel_a1_9_souvenirs",
+      "id": "travel_a1_9",
       "title": "Souvenirs kaufen",
-      "translation": "Покупка сувениров",
+      "translation": "themeTextTitleTravel_A1.travelNine",
+      "icon": "\uD83D\uDECD\uFE0F",
       "wordsPool": ["ein", "aber", "Tassen", "meine", "Nimm", "wollen", "gekauft"],
       "textElements": [
         { "type": "text", "content": "Wir suchen heute Souvenirs für die Familie. — Ich brauche " },
@@ -211,9 +220,10 @@
       ]
     },
     {
-      "id": "travel_a1_10_return",
+      "id": "travel_a1_10",
       "title": "Die Rückreise",
-      "translation": "Возвращение домой",
+      "translation": "themeTextTitleTravel_A1.travelTen",
+      "icon": "\uD83C\uDFE1",
       "wordsPool": ["am", "keine", "Pack", "besser", "ein", "muss", "gehabt"],
       "textElements": [
         { "type": "text", "content": "Der Urlaub ist vorbei. — Wir fahren " },

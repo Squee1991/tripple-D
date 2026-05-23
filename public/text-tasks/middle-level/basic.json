@@ -6,7 +6,8 @@
     {
       "id": "meet_A2_1",
       "title": "Im Deutschkurs",
-      "translation": "На курсах немецкого",
+      "translation": "themeTextTitleBasic_A2.basicOne",
+      "icon": "\uD83D\uDD24",
       "wordsPool": ["wie", "zu", "denn", "werden", "lasse", "weil", "dass"],
       "textElements": [
         { "type": "text", "content": "Heute lerne ich eine neue Studentin in meinem Sprachkurs kennen. — Sie spricht schon fast so gut " },
@@ -29,7 +30,8 @@
     {
       "id": "meet_A2_2",
       "title": "Der Tandempartner",
-      "translation": "Тандем-партнер",
+      "translation": "themeTextTitleBasic_A2.basicTwo",
+      "icon": "\uD83D\uDCAC",
       "wordsPool": ["als", "zu", "sondern", "dass", "lasse", "werden", "wenn"],
       "textElements": [
         { "type": "text", "content": "Ich suche online einen Partner für mein englisches Studium. — Mein Englisch ist leider viel schlechter " },
@@ -52,7 +54,8 @@
     {
       "id": "meet_A2_3",
       "title": "Erster Tag an der Uni",
-      "translation": "Первый день в университете",
+      "translation": "themeTextTitleBasic_A2.basicThree",
+      "icon": "\uD83C\uDFDB\uFE0F",
       "wordsPool": ["zu", "wie", "aber", "werden", "lasse", "obwohl", "nachdem"],
       "textElements": [
         { "type": "text", "content": "Heute ist mein allererster Tag an der großen Universität. — Es ist am Anfang nicht leicht, sofort neue Leute " },
@@ -75,7 +78,8 @@
     {
       "id": "meet_A2_4",
       "title": "In der Bibliothek",
-      "translation": "В библиотеке",
+      "translation": "themeTextTitleBasic_A2.basicFour",
+      "icon": "\uD83D\uDCDA",
       "wordsPool": ["als", "zu", "bevor", "oder", "lässt", "werden", "weil"],
       "textElements": [
         { "type": "text", "content": "Ich lerne jeden Tag fleißig für mein Studium in der Bibliothek. — Es ist viel ruhiger hier " },
@@ -98,7 +102,8 @@
     {
       "id": "meet_A2_5",
       "title": "Das Gruppenprojekt",
-      "translation": "Групповой проект",
+      "translation": "themeTextTitleBasic_A2.basicFive",
+      "icon": "\uD83D\uDC65",
       "wordsPool": ["zu", "dass", "und", "wie", "werden", "lassen", "nachdem"],
       "textElements": [
         { "type": "text", "content": "Wir machen ein wichtiges Projekt für unseren Kurs an der Universität. — Es macht wirklich Spaß, mit anderen Leuten zusammen " },
@@ -121,7 +126,8 @@
     {
       "id": "meet_A2_6",
       "title": "Die Sprachreise",
-      "translation": "Языковая поездка",
+      "translation": "themeTextTitleBasic_A2.basicSix",
+      "icon": "\uD83C\uDF0D",
       "wordsPool": ["als", "zu", "aber", "werden", "lasse", "weil", "dass"],
       "textElements": [
         { "type": "text", "content": "Ich mache eine Sprachreise nach Berlin. — Es ist wichtig, jeden Tag Deutsch " },
@@ -144,7 +150,8 @@
     {
       "id": "meet_A2_7",
       "title": "Der neue Schüler",
-      "translation": "Новый ученик",
+      "translation": "themeTextTitleBasic_A2.basicSeven",
+      "icon": "\uD83D\uDE4B\u200D♂\uFE0F",
       "wordsPool": ["wie", "zu", "denn", "wird", "lässt", "bevor", "obwohl"],
       "textElements": [
         { "type": "text", "content": "Ein neuer Schüler ist heute in unserer Klasse. — Er ist genau so alt " },
@@ -167,7 +174,8 @@
     {
       "id": "meet_A2_8",
       "title": "Der Online-Kurs",
-      "translation": "Онлайн-курс",
+      "translation": "themeTextTitleBasic_A2.basicEight",
+      "icon": "\uD83C\uDF10",
       "wordsPool": ["als", "zu", "oder", "werden", "lasse", "nachdem", "dass"],
       "textElements": [
         { "type": "text", "content": "Ich lerne jetzt Programmieren im Internet. — Ein Online-Kurs ist oft günstiger " },
@@ -190,7 +198,8 @@
     {
       "id": "meet_A2_9",
       "title": "Die Lerngruppe",
-      "translation": "Учебная группа",
+      "translation": "themeTextTitleBasic_A2.basicNine",
+      "icon": "\uD83E\uDDD1\u200D\uD83E\uDD1D\u200D\uD83E\uDDD1",
       "wordsPool": ["wie", "zu", "sondern", "werden", "lassen", "weil", "wenn"],
       "textElements": [
         { "type": "text", "content": "Ich habe eine neue Lerngruppe für Englisch gefunden. — Mein Vokabular ist leider nicht so groß " },
@@ -211,9 +220,10 @@
       ]
     },
     {
-      "id": "meet_A2_5_10",
+      "id": "meet_A2_10",
       "title": "Der Prüfungspartner",
-      "translation": "Партнер по экзамену",
+      "translation": "themeTextTitleBasic_A2.basicTen",
+      "icon": "\uD83D\uDCDD",
       "wordsPool": ["als", "zu", "aber", "wird", "lässt", "obwohl", "dass"],
       "textElements": [
         { "type": "text", "content": "Ich suche einen Partner für meine mündliche Prüfung. — Alleine zu lernen ist oft schwerer " },

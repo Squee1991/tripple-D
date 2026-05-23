@@ -1,12 +1,13 @@
 {
-  "themeId": "travel_b1_b2",
+  "themeId": "travel_b1",
   "themeTitle": "Путешествия: würde + Infinitiv und Partizip II",
-  "level": "B1-B2",
+  "level": "B1",
   "tasks": [
     {
       "id": "travel_B1_1",
       "title": "Der Städtetrip",
-      "translation": "Поездка в город (Сити-тур)",
+      "translation": "themeTextTitleTravel_B1.travelOne",
+      "icon": "\uD83D\uDDFC",
       "wordsPool": ["geplante", "hatte", "würde", "trotzdem", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Letztes Jahr machte ich einen wunderbaren und aufregenden Städtetrip nach Paris. — Die lange vorher " },
@@ -29,7 +30,8 @@
     {
       "id": "travel_B1_2",
       "title": "Der Strandurlaub",
-      "translation": "Пляжный отдых",
+      "translation": "themeTextTitleTravel_B1.travelTwo",
+      "icon": "\uD83C\uDFD6\uFE0F",
       "wordsPool": ["gebuchte", "hatte", "würde", "deshalb", "sonst", "nämlich", "Außerdem"],
       "textElements": [
         { "type": "text", "content": "Mein letzter Sommerurlaub auf der spanischen Insel Mallorca war wirklich sehr erholsam. — Das online " },
@@ -52,7 +54,8 @@
     {
       "id": "travel_B1_3",
       "title": "Wandern in den Bergen",
-      "translation": "Поход в горы",
+      "translation": "themeTextTitleTravel_B1.travelThree",
+      "icon": "\uD83E\uDD7E",
       "wordsPool": ["markierte", "hatte", "würde", "trotzdem", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Im Herbst fuhren wir für eine sportliche Wanderwoche in die wunderschönen österreichischen Alpen. — Der sehr deutlich " },
@@ -75,7 +78,8 @@
     {
       "id": "travel_B1_4",
       "title": "Der Roadtrip",
-      "translation": "Дорожное путешествие",
+      "translation": "themeTextTitleTravel_B1.travelFour",
+      "icon": "\uD83D\uDEE3\uFE0F",
       "wordsPool": ["gemietete", "hatte", "würde", "deshalb", "sonst", "nämlich", "Außerdem"],
       "textElements": [
         { "type": "text", "content": "Wir machten vor genau zwei Jahren einen völlig unvergesslichen Roadtrip quer durch die gesamten USA. — Der direkt am Flughafen " },
@@ -98,7 +102,8 @@
     {
       "id": "travel_B1_5",
       "title": "Backpacking in Asien",
-      "translation": "Путешествие с рюкзаком по Азии",
+      "translation": "themeTextTitleTravel_B1.travelFive",
+      "icon": "\uD83C\uDF92",
       "wordsPool": ["gesparte", "hatte", "würde", "trotzdem", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Direkt nach meinem anstrengenden Studium reiste ich mit einem einfachen Rucksack für drei Monate nach Südostasien. — Das über viele Jahre mühsam " },
@@ -121,7 +126,8 @@
     {
       "id": "travel_B1_6",
       "title": "Die Kreuzfahrt",
-      "translation": "Круиз",
+      "translation": "themeTextTitleTravel_B1.travelSix",
+      "icon": "\uD83D\uDEA2",
       "wordsPool": ["gebuchte", "hatte", "würde", "trotzdem", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Letzten Winter machten wir eine unglaublich luxuriöse Kreuzfahrt durch die sonnige Karibik. — Die lange im Voraus " },
@@ -144,7 +150,8 @@
     {
       "id": "travel_B1_7",
       "title": "Der Campingurlaub",
-      "translation": "Кемпинг (отдых в палатках)",
+      "translation": "themeTextTitleTravel_B1.travelSeven",
+      "icon": "⛺",
       "wordsPool": ["aufgebaute", "hatte", "würde", "deshalb", "sonst", "nämlich", "Außerdem"],
       "textElements": [
         { "type": "text", "content": "Im August verbrachten wir unseren Jahresurlaub auf einem idyllischen Campingplatz direkt in den Bergen. — Das frisch " },
@@ -167,7 +174,8 @@
     {
       "id": "travel_B1_8",
       "title": "Der Winterurlaub",
-      "translation": "Зимний отпуск (катание на лыжах)",
+      "translation": "themeTextTitleTravel_B1.travelEight",
+      "icon": "⛷\uFE0F",
       "wordsPool": ["geliehene", "hatte", "würde", "trotzdem", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Zwischen den Feiertagen fuhren wir für eine Woche in ein tief verschneites Skigebiet in der malerischen Schweiz. — Die vor Ort " },
@@ -190,7 +198,8 @@
     {
       "id": "travel_B1_9",
       "title": "Die Sprachreise",
-      "translation": "Языковая поездка",
+      "translation": "themeTextTitleTravel_B1.travelNine",
+      "icon": "\uD83C\uDFEB",
       "wordsPool": ["empfohlene", "hatte", "würde", "deshalb", "sonst", "nämlich", "Außerdem"],
       "textElements": [
         { "type": "text", "content": "Um mein Englisch weiter zu perfektionieren, reiste ich für vier intensive Wochen in die britische Hauptstadt London. — Die von meinem Lehrer " },
@@ -213,7 +222,8 @@
     {
       "id": "travel_B1_10",
       "title": "Die Safari",
-      "translation": "Сафари (в Африке)",
+      "translation": "themeTextTitleTravel_B1.travelTen",
+      "icon": "\uD83E\uDD81",
       "wordsPool": ["geführte", "hatte", "würde", "trotzdem", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Im vergangenen Herbst erfüllte ich mir meinen großen und langen Lebenstraum von einer echten Safari in Kenia. — Die professionell " },

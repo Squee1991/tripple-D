@@ -10,7 +10,7 @@
           </svg>
         </button>
         <div class="page-title">
-          {{ selectedTheme ? selectedTheme.title : 'Темы текстов' }}
+          {{ selectedTheme ? selectedTheme.title : t('sub.textTask') }}
         </div>
         <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
@@ -24,7 +24,7 @@
       <VTransition>
         <div class="content__wrapper" v-if="isMounted">
           <VBanner
-              text="Заполни пропуски в тексте. Прокачай свой немецкий лучше"
+              :text="t('bannerTitles.textTask')"
               :icon="TextBooks"
           />
           <nav class="mobile-nav" role="tablist" v-if="!selectedTheme">
@@ -48,11 +48,19 @@
                   class="theme-card"
                   @click="selectTheme(theme)"
               >
-                <div class="theme-icon-box">{{ theme.icon }}</div>
-                <div class="theme-info">
-                  <div class="theme-name">{{ theme.title }}</div>
+                <div class="theme-card-top">
+                  <div class="theme-icon-box">{{ theme.icon }}</div>
+                  <div class="theme-info">
+                    <div class="theme-name">{{ theme.title }}</div>
+                  </div>
+                  <VArrowNav/>
                 </div>
-                <VArrowNav/>
+                <div class="theme-card-bottom">
+                  <div class="progress-track">
+                    <div class="progress-fill" :style="{ width: `${getStats(theme.id).total > 0 ? (getStats(theme.id).completed / getStats(theme.id).total) * 100 : 0}%` }"></div>
+                  </div>
+                  <span class="progress-text">{{ getStats(theme.id).completed }}/{{ getStats(theme.id).total }}</span>
+                </div>
               </div>
               <div v-if="displayedThemes.length === 0" class="empty-state">
                 В этом разделе пока нет тем
@@ -68,9 +76,9 @@
                     class="task-card"
                     @click="startTask(task, index)"
                 >
-                  <div class="task-number">{{ index + 1 }}</div>
+                  <div v-if="task.icon" class="task-number">{{ task.icon }}</div>
                   <div class="task-info">
-                    <div class="task-translation">{{ task.translation }}</div>
+                    <div class="task-translation">{{ t(task.translation) }}</div>
                   </div>
                   <VArrowNav/>
                 </div>
@@ -91,20 +99,22 @@
 </template>
 
 <script setup>
-import {ref, computed, onMounted} from 'vue'
+import {ref, computed, onMounted, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {useTextTasksStore} from '../../store/textTasksStore.js'
 import VBanner from "~/src/components/V-banner.vue"
 import TextBooks from "../../assets/images/TextBook.svg"
 import VTransition from "~/src/components/V-transition.vue"
-import VArrowNav from "~/src/components/V-arrowNav.vue";
-import HeadPhones from "assets/images/headphones.svg";
-import Modal from "~/src/components/modal.vue";
+import VArrowNav from "~/src/components/V-arrowNav.vue"
+import HeadPhones from "assets/images/headphones.svg"
+import Modal from "~/src/components/modal.vue"
+
 const showDevModal = ref(false)
 const router = useRouter()
 const store = useTextTasksStore()
 const isMounted = ref(false)
-const { t} = useI18n()
+const { t } = useI18n()
+
 const levels = [
   {id: 'low-level', label: 'A1'},
   {id: 'middle-level', label: 'A2'},
@@ -115,23 +125,25 @@ const currentLevel = ref('low-level')
 const selectedTheme = ref(null)
 const themeData = ref(null)
 const isLoading = ref(false)
+const themesStats = ref({})
 
 const activeIndex = computed(() => levels.findIndex(level => level.id === currentLevel.value))
 
 const overlayData = {
-  title: t('Текстовые задания'),
-  text: t('Для выполения задания нужно перетащив слово в пустые места и нажать на текст и поле куда хотите добавить текст'),
+  title: t('textTasksTip.title'),
+  text: t('textTasksTip.description'),
 }
 
 const allThemesMeta = {
-  basic: {id: 'basic', file: 'basic.json', title: 'Знакомство', icon: '👋'},
-  routine: {id: 'routine', file: 'routine.json', title: 'Распорядок дня', icon: '⏰'},
-  shopping: {id: 'shopping', file: 'shopping.json', title: 'Покупки', icon: '🛒'},
-  work: {id: 'work', file: 'work.json', title: 'Работа и учеба', icon: '💼'},
-  hobby: {id: 'hobby', file: 'hobby.json', title: 'Хобби', icon: '🎨'},
-  objects: {id: 'objects', file: 'objects.json', title: 'Предметы и вещи', icon: '🎒'},
-  travel: {id: 'travel', file: 'travel.json', title: 'Путешествия', icon: '✈️'},
+  basic: {id: 'basic', file: 'basic.json', title: t('textThemes.basic'), icon: '👋'},
+  routine: {id: 'routine', file: 'routine.json', title: t('textThemes.routine'), icon: '⏰'},
+  shopping: {id: 'shopping', file: 'shopping.json', title: t('textThemes.shopping'), icon: '🛒'},
+  work: {id: 'work', file: 'work.json', title: t('textThemes.work'), icon: '💼'},
+  hobby: {id: 'hobby', file: 'hobby.json', title: t('textThemes.hobby'), icon: '🎨'},
+  objects: {id: 'objects', file: 'objects.json', title: t('textThemes.objects'), icon: '🎒'},
+  travel: {id: 'travel', file: 'travel.json', title: t('textThemes.travel'), icon: '✈️'},
 }
+
 const themesByLevel = {
   'low-level': ['basic', 'hobby', 'work', 'routine', 'shopping', 'travel'],
   'middle-level': ['basic', 'hobby', 'work', 'routine', 'shopping', 'travel'],
@@ -141,6 +153,38 @@ const themesByLevel = {
 const displayedThemes = computed(() => {
   const activeLevelThemes = themesByLevel[currentLevel.value] || []
   return activeLevelThemes.map(themeKey => allThemesMeta[themeKey])
+})
+
+const getStats = (themeId) => {
+  const key = `${currentLevel.value}-${themeId}`
+  return themesStats.value[key] || { total: 0, completed: 0 }
+}
+
+const loadLevelStats = async (level) => {
+  const themes = themesByLevel[level] || []
+  const fetchPromises = themes.map(async (themeId) => {
+    const key = `${level}-${themeId}`
+    if (!themesStats.value[key]) {
+      try {
+        const themeMeta = allThemesMeta[themeId]
+        const res = await fetch(`/text-tasks/${level}/${themeMeta.file}`)
+        if (res.ok) {
+          const data = await res.json()
+          themesStats.value[key] = {
+            total: data.tasks ? data.tasks.length : 0,
+            completed: 0
+          }
+        }
+      } catch (e) {
+        console.error(e)
+      }
+    }
+  })
+  await Promise.all(fetchPromises)
+}
+
+watch(currentLevel, (newLevel) => {
+  loadLevelStats(newLevel)
 })
 
 const selectTheme = async (theme) => {
@@ -176,6 +220,7 @@ onMounted(() => {
   setTimeout(() => {
     isMounted.value = true
   }, 120)
+  loadLevelStats(currentLevel.value)
 })
 </script>
 
@@ -317,10 +362,10 @@ onMounted(() => {
   border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border-radius: 16px;
-  padding: 8px 10px;
+  padding: 12px 14px;
   display: flex;
-  align-items: center;
-  gap: 15px;
+  flex-direction: column;
+  gap: 14px;
   cursor: pointer;
   transition: transform 0.1s;
 }
@@ -328,6 +373,12 @@ onMounted(() => {
 .theme-card:active {
   transform: translateY(4px);
   box-shadow: 0 0 0 #e2e8f0;
+}
+
+.theme-card-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .theme-icon-box {
@@ -341,7 +392,36 @@ onMounted(() => {
 .theme-name {
   font-weight: 800;
   color: var(--titleColor);
-  font-size: 15px;
+  font-size: 17px;
+}
+
+.theme-card-bottom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-track {
+  flex-grow: 1;
+  height: 8px;
+  background: var(--tabsSlideBorderColor, #2d3748);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #5c6bc0;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--titleColor);
+  min-width: 35px;
+  text-align: right;
 }
 
 .theme-arrow {
@@ -360,7 +440,7 @@ onMounted(() => {
 .tasks-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .task-card {
@@ -368,7 +448,6 @@ onMounted(() => {
   padding: 10px 16px;
   display: flex;
   align-items: center;
-  gap: 5px;
   background: var(--menuItemsBg);
   border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
@@ -382,21 +461,12 @@ onMounted(() => {
 }
 
 .task-number {
-  width: 40px;
-  height: 40px;
-  background: #ebf8ff;
-  color: #3182ce;
-  font-weight: 800;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  flex-shrink: 0;
+  font-size: 30px;
 }
 
 .task-info {
   flex-grow: 1;
+  margin-left: 10px;
 }
 
 .task-translation {

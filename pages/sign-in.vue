@@ -73,7 +73,7 @@
             <img class="google__icon" src="../assets/images/google.svg" alt="google_icon">
             <span class="auth__text-method">GOOGLE</span>
           </button>
-          <button class="apple__auth-wrapper" @click="handleSocialLogin('apple')" :disabled="submitLoading">
+          <button v-if="Capacitor.isNativePlatform() === 'ios'" class="apple__auth-wrapper" @click="handleSocialLogin('apple')" :disabled="submitLoading">
             <img class="apple__icon" src="../assets/images/apple.svg" alt="apple_icon">
             <span class="auth__text-method">APPLE</span>
           </button>
@@ -94,6 +94,7 @@ import {mapErrors} from '../utils/errorsHandler.js'
 import View from '../../assets/images/loginEyes/view.svg'
 import Hide from '../../assets/images/loginEyes/hide.svg'
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
+import { Capacitor } from '@capacitor/core'
 const forgot = ref(false);
 const {t, locale} = useI18n()
 const router = useRouter()

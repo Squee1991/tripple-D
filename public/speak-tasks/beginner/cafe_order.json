@@ -1,0 +1,393 @@
+{
+  "start": {
+    "botText": "Guten Tag! Was möchten Sie trinken?",
+    "botTranslation": {
+      "ar-SA": "طاب يومك! ماذا تود أن تشرب؟",
+      "en-US": "Good day! What would you like to drink?",
+      "es-ES": "¡Buen día! ¿Qué le gustaría beber?",
+      "fr-FR": "Bonjour ! Que souhaitez-vous boire ?",
+      "hi-IN": "शुभ दिन! आप क्या पीना चाहेंगे?",
+      "pl-PL": "Dzień dobry! Czego się pan/pani napije?",
+      "ro-RO": "Bună ziua! Ce ați dori să beți?",
+      "ru-RU": "Добрый день! Что Вы хотели бы выпить?",
+      "tr-TR": "İyi günler! Ne içmek istersiniz?",
+      "uk-UA": "Добрий день! Що Ви хотіли б випити?",
+      "uz-UZ": "Xayrli kun! Nima ichishni xohlaysiz?"
+    },
+    "options": [
+      {
+        "text": "Ich möchte einen Kaffee, bitte.",
+        "translation": {
+          "ar-SA": "أريد قهوة من فضلك (Akkusativ).",
+          "en-US": "I would like a coffee, please (Akkusativ).",
+          "es-ES": "Quisiera un café, por favor (Akkusativ).",
+          "fr-FR": "Je voudrais un café, s'il vous plaît (Akkusativ).",
+          "hi-IN": "मैं एक कॉफी चाहूँगा, कृपया (Akkusativ)।",
+          "pl-PL": "Poproszę kawę (Akkusativ).",
+          "ro-RO": "Aș dori o cafea, vă rog (Akkusativ).",
+          "ru-RU": "Я хотел бы кофе, пожалуйста (Akkusativ).",
+          "tr-TR": "Bir kahve istiyorum, lütfen (Akkusativ).",
+          "uk-UA": "Я хотів би каву, будь ласка (Akkusativ).",
+          "uz-UZ": "Men qahva xohlayman, iltimos (Akkusativ)."
+        },
+        "nextStep": "ask_food"
+      },
+      {
+        "text": "Ich möchte einen Tee, bitte.",
+        "translation": {
+          "ar-SA": "أريد شاياً من فضلك (Akkusativ).",
+          "en-US": "I would like a tea, please (Akkusativ).",
+          "es-ES": "Quisiera un té, por favor (Akkusativ).",
+          "fr-FR": "Je voudrais un thé, s'il vous plaît (Akkusativ).",
+          "hi-IN": "मैं एक चाय चाहूँगा, कृपया (Akkusativ)।",
+          "pl-PL": "Poproszę herbatę (Akkusativ).",
+          "ro-RO": "Aș dori un ceai, vă rog (Akkusativ).",
+          "ru-RU": "Я хотел бы чай, пожалуйста (Akkusativ).",
+          "tr-TR": "Bir çay istiyorum, lütfen (Akkusativ).",
+          "uk-UA": "Я хотів би чай, будь ласка (Akkusativ).",
+          "uz-UZ": "Men choy xohlayman, iltimos (Akkusativ)."
+        },
+        "nextStep": "ask_food"
+      }
+    ],
+    "defaultNext": "ask_food"
+  },
+  "ask_food": {
+    "botText": "Gerne. Möchten Sie auch etwas essen?",
+    "botTranslation": {
+      "ar-SA": "بكل سرور. هل تود أن تأكل شيئاً أيضاً؟",
+      "en-US": "Gladly. Would you like to eat something too?",
+      "es-ES": "Con gusto. ¿Le gustaría comer algo también?",
+      "fr-FR": "Volontiers. Souhaitez-vous aussi manger quelque chose ?",
+      "hi-IN": "खुशी से। क्या आप कुछ खाना भी चाहेंगे?",
+      "pl-PL": "Z przyjemnością. Czy chciałby pan/pani też coś zjeść?",
+      "ro-RO": "Cu plăcere. Ați dori să și mâncați ceva?",
+      "ru-RU": "С удовольствием. Вы хотели бы также что-нибудь поесть?",
+      "tr-TR": "Memnuniyetle. Bir şeyler yemek de ister misiniz?",
+      "uk-UA": "Із задоволенням. Ви хотіли б також щось поїсти?",
+      "uz-UZ": "Bajonidil. Nimadir yeyishni ham xohlaysizmi?"
+    },
+    "options": [
+      {
+        "text": "Ja, einen Kuchen, bitte.",
+        "translation": {
+          "ar-SA": "نعم، كعكة من فضلك (Akkusativ).",
+          "en-US": "Yes, a cake, please (Akkusativ).",
+          "es-ES": "Sí, un pastel, por favor (Akkusativ).",
+          "fr-FR": "Oui, un gâteau, s'il vous plaît (Akkusativ).",
+          "hi-IN": "हाँ, एक केक, कृपया (Akkusativ)।",
+          "pl-PL": "Tak, ciasto poproszę (Akkusativ).",
+          "ro-RO": "Da, o prăjitură, vă rog (Akkusativ).",
+          "ru-RU": "Да, пирог, пожалуйста (Akkusativ).",
+          "tr-TR": "Evet, bir pasta lütfen (Akkusativ).",
+          "uk-UA": "Так, пиріг, будь ласка (Akkusativ).",
+          "uz-UZ": "Ha, pirog, iltimos (Akkusativ)."
+        },
+        "nextStep": "bring_order"
+      },
+      {
+        "text": "Ja, ein Croissant, bitte.",
+        "translation": {
+          "ar-SA": "نعم، كرواسون من فضلك (Akkusativ).",
+          "en-US": "Yes, a croissant, please (Akkusativ).",
+          "es-ES": "Sí, un cruasán, por favor (Akkusativ).",
+          "fr-FR": "Oui, un croissant, s'il vous plaît (Akkusativ).",
+          "hi-IN": "हाँ, एक क्रोइसेंट, कृपया (Akkusativ)।",
+          "pl-PL": "Tak, rogalika poproszę (Akkusativ).",
+          "ro-RO": "Da, un corn, vă rog (Akkusativ).",
+          "ru-RU": "Да, круассан, пожалуйста (Akkusativ).",
+          "tr-TR": "Evet, bir kruvasan lütfen (Akkusativ).",
+          "uk-UA": "Так, круасан, будь ласка (Akkusativ).",
+          "uz-UZ": "Ha, kruassan, iltimos (Akkusativ)."
+        },
+        "nextStep": "bring_order"
+      }
+    ],
+    "defaultNext": "bring_order"
+  },
+  "bring_order": {
+    "botText": "Alles klar, ich bringe das sofort.",
+    "botTranslation": {
+      "ar-SA": "حسناً، سأحضره فوراً.",
+      "en-US": "Alright, I will bring it right away.",
+      "es-ES": "Todo claro, lo traigo enseguida.",
+      "fr-FR": "Très bien, je l'apporte tout de suite.",
+      "hi-IN": "ठीक है, मैं इसे तुरंत लाता हूँ।",
+      "pl-PL": "Wszystko jasne, zaraz przyniosę.",
+      "ro-RO": "În regulă, aduc imediat.",
+      "ru-RU": "Всё ясно, я сейчас принесу.",
+      "tr-TR": "Peki, hemen getiriyorum.",
+      "uk-UA": "Все зрозуміло, я зараз принесу.",
+      "uz-UZ": "Tushunarli, hozir olib kelaman."
+    },
+    "options": [
+      {
+        "text": "Danke schön!",
+        "translation": {
+          "ar-SA": "شكراً جزيلاً!",
+          "en-US": "Thank you very much!",
+          "es-ES": "¡Muchas gracias!",
+          "fr-FR": "Merci beaucoup !",
+          "hi-IN": "बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Dziękuję bardzo!",
+          "ro-RO": "Mulțumesc mult!",
+          "ru-RU": "Большое спасибо!",
+          "tr-TR": "Çok teşekkürler!",
+          "uk-UA": "Дуже дякую!",
+          "uz-UZ": "Katta rahmat!"
+        },
+        "nextStep": "serve_food"
+      }
+    ],
+    "defaultNext": "serve_food"
+  },
+  "serve_food": {
+    "botText": "Hier ist Ihre Bestellung. Guten Appetit!",
+    "botTranslation": {
+      "ar-SA": "هنا طلبك. بالهناء والشفاء!",
+      "en-US": "Here is your order. Enjoy your meal!",
+      "es-ES": "Aquí tiene su pedido. ¡Buen provecho!",
+      "fr-FR": "Voici votre commande. Bon appétit !",
+      "hi-IN": "यहाँ आपका ऑर्डर है। भोजन का आनंद लें!",
+      "pl-PL": "Oto pana/pani zamówienie. Smacznego!",
+      "ro-RO": "Iată comanda dumneavoastră. Poftă bună!",
+      "ru-RU": "Вот Ваш заказ. Приятного аппетита!",
+      "tr-TR": "İşte siparişiniz. Afiyet olsun!",
+      "uk-UA": "Ось Ваше замовлення. Смачного!",
+      "uz-UZ": "Mana buyurtmangiz. Yoqimli ishtaha!"
+    },
+    "options": [
+      {
+        "text": "Vielen Dank!",
+        "translation": {
+          "ar-SA": "شكراً جزيلاً!",
+          "en-US": "Thank you very much!",
+          "es-ES": "¡Muchas gracias!",
+          "fr-FR": "Merci beaucoup !",
+          "hi-IN": "बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Dziękuję bardzo!",
+          "ro-RO": "Vă mulțumesc mult!",
+          "ru-RU": "Большое спасибо!",
+          "tr-TR": "Çok teşekkür ederim!",
+          "uk-UA": "Велике дякую!",
+          "uz-UZ": "Katta rahmat!"
+        },
+        "nextStep": "feedback"
+      }
+    ],
+    "defaultNext": "feedback"
+  },
+  "feedback": {
+    "botText": "Schmeckt es gut?",
+    "botTranslation": {
+      "ar-SA": "هل طعمه لذيذ؟",
+      "en-US": "Does it taste good?",
+      "es-ES": "¿Está rico?",
+      "fr-FR": "Est-ce que c'est bon ?",
+      "hi-IN": "क्या यह स्वादिष्ट है?",
+      "pl-PL": "Czy smakuje dobrze?",
+      "ro-RO": "E gustos?",
+      "ru-RU": "Вам вкусно?",
+      "tr-TR": "Tadı güzel mi?",
+      "uk-UA": "Вам смачно?",
+      "uz-UZ": "Ta'mi yaxshimi?"
+    },
+    "options": [
+      {
+        "text": "Ja, es ist sehr lecker!",
+        "translation": {
+          "ar-SA": "نعم، إنه لذيذ جداً!",
+          "en-US": "Yes, it is very delicious!",
+          "es-ES": "¡Sí, está muy rico!",
+          "fr-FR": "Oui, c'est très délicieux !",
+          "hi-IN": "हाँ, यह बहुत स्वादिष्ट है!",
+          "pl-PL": "Tak, jest bardzo smaczne!",
+          "ro-RO": "Da, este foarte delicios!",
+          "ru-RU": "Да, очень вкусно!",
+          "tr-TR": "Evet, çok lezzetli!",
+          "uk-UA": "Так, дуже смачно!",
+          "uz-UZ": "Ha, juda mazali!"
+        },
+        "nextStep": "ask_bill"
+      },
+      {
+        "text": "Ja, alles ist super!",
+        "translation": {
+          "ar-SA": "نعم، كل شيء ممتاز!",
+          "en-US": "Yes, everything is great!",
+          "es-ES": "¡Sí, todo está súper!",
+          "fr-FR": "Oui, tout est super !",
+          "hi-IN": "हाँ, सब कुछ बहुत बढ़िया है!",
+          "pl-PL": "Tak, wszystko jest super!",
+          "ro-RO": "Da, totul este super!",
+          "ru-RU": "Да, всё супер!",
+          "tr-TR": "Evet, her şey harika!",
+          "uk-UA": "Так, все супер!",
+          "uz-UZ": "Ha, hammasi zo'r!"
+        },
+        "nextStep": "ask_bill"
+      }
+    ],
+    "defaultNext": "ask_bill"
+  },
+  "ask_bill": {
+    "botText": "Das freut mich. Möchten Sie noch etwas?",
+    "botTranslation": {
+      "ar-SA": "هذا يسعدني. هل تريد شيئاً آخر؟",
+      "en-US": "I am glad to hear that. Would you like anything else?",
+      "es-ES": "Me alegro. ¿Le gustaría algo más?",
+      "fr-FR": "J'en suis ravi. Désirez-vous autre chose ?",
+      "hi-IN": "मुझे यह सुनकर खुशी हुई। क्या आप कुछ और चाहेंगे?",
+      "pl-PL": "To mnie cieszy. Czy życzy pan/pani sobie coś jeszcze?",
+      "ro-RO": "Mă bucur. Mai doriți ceva?",
+      "ru-RU": "Я рад. Хотите ли Вы что-нибудь еще?",
+      "tr-TR": "Buna sevindim. Başka bir şey ister misiniz?",
+      "uk-UA": "Я радий. Чи бажаєте Ви що-небудь ще?",
+      "uz-UZ": "Bundan xursandman. Yana nimadir xohlaysizmi?"
+    },
+    "options": [
+      {
+        "text": "Nein, danke. Die Rechnung, bitte.",
+        "translation": {
+          "ar-SA": "لا، شكراً. الفاتورة من فضلك.",
+          "en-US": "No, thanks. The bill, please.",
+          "es-ES": "No, gracias. La cuenta, por favor.",
+          "fr-FR": "Non, merci. L'addition, s'il vous plaît.",
+          "hi-IN": "नहीं, धन्यवाद। बिल दे दीजिये।",
+          "pl-PL": "Nie, dziękuję. Rachunek poproszę.",
+          "ro-RO": "Nu, mulțumesc. Nota de plată, vă rog.",
+          "ru-RU": "Нет, спасибо. Счёт, пожалуйста.",
+          "tr-TR": "Hayır, teşekkürler. Hesap lütfen.",
+          "uk-UA": "Ні, дякую. Рахунок, будь ласка.",
+          "uz-UZ": "Yo'q, rahmat. Hisob-kitob qiling, iltimos."
+        },
+        "nextStep": "price"
+      },
+      {
+        "text": "Ich möchte zahlen, bitte.",
+        "translation": {
+          "ar-SA": "أود الدفع من فضلك.",
+          "en-US": "I would like to pay, please.",
+          "es-ES": "Me gustaría pagar, por favor.",
+          "fr-FR": "Je voudrais payer, s'il vous plaît.",
+          "hi-IN": "मैं भुगतान करना चाहूँगा, कृपया।",
+          "pl-PL": "Chciałbym/Chciałabym zapłacić.",
+          "ro-RO": "Aș dori să plătesc, vă rog.",
+          "ru-RU": "Я хотел бы расплатиться, пожалуйста.",
+          "tr-TR": "Ödemek istiyorum, lütfen.",
+          "uk-UA": "Я хотів би розрахуватися, будь ласка.",
+          "uz-UZ": "Men to'lamoqchiman, iltimos."
+        },
+        "nextStep": "price"
+      }
+    ],
+    "defaultNext": "price"
+  },
+  "price": {
+    "botText": "Gerne. Das macht 8 Euro, bitte.",
+    "botTranslation": {
+      "ar-SA": "بكل سرور. الحساب 8 يورو من فضلك.",
+      "en-US": "Gladly. That makes 8 Euros, please.",
+      "es-ES": "Con gusto. Son 8 euros, por favor.",
+      "fr-FR": "Bien sûr. Cela fait 8 euros, s'il vous plaît.",
+      "hi-IN": "खुशी से। यह 8 यूरो हुआ, कृपया।",
+      "pl-PL": "Bardzo proszę. To będzie 8 euro.",
+      "ro-RO": "Cu plăcere. Asta face 8 euro, vă rog.",
+      "ru-RU": "С удовольствием. С Вас 8 евро, пожалуйста.",
+      "tr-TR": "Tabii ki. Tutar 8 Euro lütfen.",
+      "uk-UA": "Із задоволенням. З Вас 8 євро, будь ласка.",
+      "uz-UZ": "Bajonidil. Jami 8 yevro bo'ldi."
+    },
+    "options": [
+      {
+        "text": "Hier, bitte.",
+        "translation": {
+          "ar-SA": "تفضل.",
+          "en-US": "Here, please.",
+          "es-ES": "Aquí tiene, por favor.",
+          "fr-FR": "Voici, s'il vous plaît.",
+          "hi-IN": "यहाँ, कृपया।",
+          "pl-PL": "Proszę bardzo.",
+          "ro-RO": "Iată, vă rog.",
+          "ru-RU": "Вот, пожалуйста.",
+          "tr-TR": "Buyurun.",
+          "uk-UA": "Ось, будь ласка.",
+          "uz-UZ": "Mana, oling."
+        },
+        "nextStep": "payment_done"
+      },
+      {
+        "text": "Mit Karte, bitte.",
+        "translation": {
+          "ar-SA": "بالبطاقة من فضلك.",
+          "en-US": "With card, please.",
+          "es-ES": "Con tarjeta, por favor.",
+          "fr-FR": "Par carte, s'il vous plaît.",
+          "hi-IN": "कार्ड से, कृपया।",
+          "pl-PL": "Kartą poproszę.",
+          "ro-RO": "Cu cardul, vă rog.",
+          "ru-RU": "Картой, пожалуйста.",
+          "tr-TR": "Kartla lütfen.",
+          "uk-UA": "Карткою, будь ласка.",
+          "uz-UZ": "Karta orqali, iltimos."
+        },
+        "nextStep": "payment_done"
+      }
+    ],
+    "defaultNext": "payment_done"
+  },
+  "payment_done": {
+    "botText": "Danke schön! Einen schönen Tag noch!",
+    "botTranslation": {
+      "ar-SA": "شكراً جزيلاً! طاب يومك!",
+      "en-US": "Thank you! Have a nice day!",
+      "es-ES": "¡Muchas gracias! ¡Que tenga un buen día!",
+      "fr-FR": "Merci beaucoup ! Bonne journée !",
+      "hi-IN": "धन्यवाद! आपका दिन शुभ हो!",
+      "pl-PL": "Dziękuję bardzo! Miłego dnia!",
+      "ro-RO": "Mulțumesc! O zi frumoasă în continuare!",
+      "ru-RU": "Большое спасибо! Хорошего дня!",
+      "tr-TR": "Teşekkür ederim! İyi günler dilerim!",
+      "uk-UA": "Велике дякую! Гарного дня!",
+      "uz-UZ": "Katta rahmat! Yaxshi kun tilayman!"
+    },
+    "options": [
+      {
+        "text": "Danke, gleichfalls. Auf Wiedersehen!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً. إلى اللقاء!",
+          "en-US": "Thanks, same to you. Goodbye!",
+          "es-ES": "Gracias, igualmente. ¡Adiós!",
+          "fr-FR": "Merci, pareillement. Au revoir !",
+          "hi-IN": "धन्यवाद, आपको भी। अलविदा!",
+          "pl-PL": "Dziękuję, nawzajem. Do widzenia!",
+          "ro-RO": "Mulțumesc, la fel. La revedere!",
+          "ru-RU": "Спасибо, взаимно. До свидания!",
+          "tr-TR": "Teşekkürler, size de. Hoşça kalın!",
+          "uk-UA": "Дякую, навзаєм. До побачення!",
+          "uz-UZ": "Rahmat, sizga ham. Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Auf Wiedersehen!",
+    "botTranslation": {
+      "ar-SA": "إلى اللقاء!",
+      "en-US": "Goodbye!",
+      "es-ES": "¡Adiós!",
+      "fr-FR": "Au revoir !",
+      "hi-IN": "अलविदा!",
+      "pl-PL": "Do widzenia!",
+      "ro-RO": "La revedere!",
+      "ru-RU": "До свидания!",
+      "tr-TR": "Hoşça kalın!",
+      "uk-UA": "До побачення!",
+      "uz-UZ": "Ko'rishguncha!"
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

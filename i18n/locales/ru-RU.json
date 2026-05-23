@@ -524,9 +524,6 @@
     "questFifteen": "Выберите верный вариант: Это был прекрасный день",
     "questFifteenTip": "Неопределенный артикль (впервые). Мужской род (der). Артикль 'ein' пустой, поэтому прилагательное берет у артикля 'der' окончание -er."
   },
-
-
-
   "secretLandsQuestOne": {
     "title": "Итог",
     "description": "Смешанный тренинг: работа с неопределенным артиклем в Perfekt и Futur 1. Темы: быт, город, транспорт, еда.",
@@ -1052,8 +1049,6 @@
     "questFifteen": "Соберите предложение: Мы увидим интересную выставку",
     "questFifteenTip": "Выставка — женский род (die). Артикль 'eine' заканчивается на -e, поэтому прилагательное берет у артикля окончание -e."
   },
-
-
   "edgeImagesQuestOne": {
     "title": "Старт",
     "description": "Тренируемся правильно склонять прилагательные после der, die, das.",
@@ -1579,7 +1574,6 @@
     "questFifteen": "Впишите форму (lecker): Ich werde die ___ Pizza essen.",
     "questFifteenTip": "Akkusativ (жен. род): артикль 'die' базовый, прилагательное берет у артикля окончание -e."
   },
-
   "timeGageQuestOne": {
     "title": "Знакомство и общение",
     "description": "Отрабатываем грамматику в ситуациях общения: от планов на встречу до рассказов о прошлом.",
@@ -2084,8 +2078,6 @@
     "questFifteen": "Я куплю билет, если у меня будет время.",
     "questFifteenTip": "Wenn ставит глагол в конец."
   },
-
-
   "pastValleyQuestOne": {
     "title": "Основы Perfekt",
     "description": "Что ты сделал? Знакомимся с прошедшим временем: 'Я купил', 'Мы сделали'.",
@@ -2423,8 +2415,6 @@
     "questFourteenTip": "singen — сильный глагол. Прибавляется приставка ge-, а окончание -en сохраняется. В корне смена гласной (i меняется на u).",
     "questFifteen": "Выберите: Я занимался спортом."
   },
-
-
   "actionValleyQuestOne": {
     "title": "Мне, тебе, ему",
     "description": "Отрабатываем Dativ с личными местоимениями. Кому мы помогаем и кому дарим подарки?",
@@ -2791,7 +2781,6 @@
     "questFifteen": "Выберите: С кем ты разговариваешь?",
     "questFifteenTip": "Для людей используем предлог + вопрос (Mit wem?)"
   },
-
   "pluralLandQuestOne": {
     "title": "Путешествие",
     "description": "Планируем поездку, используя Futur I. Учимся соединять время, место и действие.",
@@ -3093,7 +3082,6 @@
     "questFourteen": "Соберите: Мы не забудем праздник.",
     "questFifteen": "Выберите правильный вариант"
   },
-
   "orderValleyQuestOne": {
     "title": "Глагол в конце!",
     "description": "Отрабатываем порядок слов в придаточных предложениях. Главное правило: глагол уходит в самый конец.",
@@ -3513,7 +3501,6 @@
     "questFifteen": "Прослушайте и напишите предложение",
     "questFifteenTip": "Отрицание 'нет чего-то' с конструкцией 'es gibt' строится через 'kein'. После союза 'dass' глагол-сказуемое 'gibt' всегда убегает в самый конец предложения."
   },
-
   "pwa": {
     "title": "Установите Skillupgerman",
     "sub": "Добавьте приложение на экран для быстрого доступа и удобства!",
@@ -3567,7 +3554,6 @@
     "valentineReputationDescription": "Заслужите всеобщее признание! Наберите 300 очков репутации, выполняя задания события.",
     "valentineAllAchievementsLabel": "Легенда фестиваля",
     "valentineAllAchievementsDescription": "Легенда фестиваля"
-
   },
   "categories": {
     "beginner": "Стартовые земли",
@@ -4136,7 +4122,8 @@
   "faq": {
     "btnBack": "На главную",
     "questions": "Есть ещё вопросы? Напишите нам!",
-    "send": "Отправить сообщение"
+    "send": "Отправить сообщение",
+    "title": "Справка"
   },
   "howToUse": {
     "title": "Как пользоваться",
@@ -8107,8 +8094,8 @@
     "exam": "Друзья"
   },
   "cabinetSidebar": {
-    "valueOne": "Параметры аккаунта",
-    "valueTwo": "Архив экзаменов",
+    "valueOne": "Аккаунт",
+    "valueTwo": "Экзамены",
     "valueThree": "Магазин",
     "valueFour": "Настройки"
   },
@@ -9242,7 +9229,8 @@
     "languagesLands": "Языковые земли",
     "describePicture": "Описание картинок",
     "fight": "Вселенная немецкого",
-    "audio": "Аудио задания"
+    "audio": "Аудио задания",
+    "textTask": "Тексты"
   },
   "underSub": {
     "prev": "Введение",
@@ -9471,16 +9459,30 @@
   "nameMap": {
     "Furniture": "Мебель",
     "Animals": "Животные",
+    "Birds": "Птицы",
+    "SeaAnimals": "Морские животные",
+    "Insects": "Насекомые",
+    "Savanna": "Саванна",
     "Clothes": "Одежда",
+    "Shoes": "Обувь",
     "Food": "Еда",
+    "SweetEat": "Сладости",
+    "MilkEat": "Молочные продукты",
+    "Vegetables": "Овощи",
+    "Fruits": "Фрукты",
+    "Drinks": "Напитки",
     "Body": "Части тела",
     "Professions": "Профессии",
     "Transport": "Транспорт",
     "Colors": "Цвета",
     "Nature": "Природа",
+    "Weather": "Погода",
+    "Landscape": "Ландшафт",
     "Home": "Дом",
     "Zeit": "Время",
     "City": "Город",
+    "CityBuildings": "Здания",
+    "CityInfrastructure": "Инфраструктура",
     "School": "Школа",
     "DaysAndMonths": "Дни и месяцы",
     "Toys": "Игрушки",
@@ -9493,11 +9495,65 @@
     "Kitchen": "Кухня",
     "Health": "Здоровье",
     "Sport": "Спорт",
-    "SportEquipment": "Фитнес-инвентарь",
+    "SportBasic": "Виды спорта",
+    "SportCombatWinter": "Зимний спорт и борьба",
+    "SportEvents": "Турниры и награды",
+    "SportLife": "Тренировки",
+    "SportEquipment": "Спортинвентарь",
+    "TravelDocuments": "Документы",
+    "Tourism": "Туризм",
     "Travel": "Путешествия",
+    "MusicInstruments": "Музыкальные инструменты",
     "Musik": "Музыка",
-    "Amount": "Колличество",
-    "Informatik": "Информатика"
+    "Amount": "Количество",
+    "Informatik": "Информатика",
+    "Hardware": "Оборудование",
+    "Software": "Программы",
+    "Internet": "Интернет",
+    "WinterHolidays": "Зимние",
+    "FamilyAndReligious": "Семейные",
+    "PersonalCelebrations": "Торжества",
+    "FestivalsAndDecor": "Фестивали",
+    "DwellingTypes": "Жилье",
+    "Rooms": "Комнаты",
+    "ConstructionAndDetails": "Детали",
+    "CoreFamily": "Близкие",
+    "ExtendedFamily": "Родственники",
+    "Relationships": "Пара и свояки",
+    "HandTools": "Ручной",
+    "PowerTools": "Электро",
+    "ConsumablesAndSafety": "Материал",
+    "JobOffice": "Бизнес",
+    "JobTech": "Инженерное",
+    "JobMed": "Медицина",
+    "JobEdu": "Обучение",
+    "JobService": "Услуги",
+    "CityTransport": "Транспорт",
+    "TravelTransport": "Транспорт",
+    "usualClothes": "Повседневная",
+    "winterClothes": "Зимняя",
+    "emotionsPositive": 'Эмоции',
+    "emotionsNegative": 'Эмоции 2'
+  },
+  "categoryWords": {
+    "nature": "Природа",
+    "animals": "Животные",
+    "food": "Еда",
+    "people": "Человек",
+    "family": "Семья",
+    "dailyRoutine": "Быт",
+    "house": "Дом",
+    "city": "Город",
+    "school": "Школа",
+    "professions": "Профессии",
+    "construction": "Строительство",
+    "clothes": "Одежда",
+    "holidays": "Праздники",
+    "sport": "Спорт",
+    "music": "Музыка",
+    "travel": "Путешествия",
+    "informatics": "Информатика",
+    "abstract": "Абстрактные темы"
   },
   "modes": {
     "themeTitle": "Темы изучения артиклей",
@@ -9820,7 +9876,8 @@
     "audio": "Прокачивай понимание немецкого на слух, выполняя аудиозадания",
     "images": "Прокачай навык описания картинок! Выбери тему, чтобы начать",
     "settings": "Параметры аккаунта",
-    "achievements": "Твоя коллекция всех полученных достижений и наград за твой прогресс"
+    "achievements": "Твоя коллекция всех полученных достижений и наград за твой прогресс",
+    "textTask": "Заполняй пропуски в текстах и улучшай свой немецкий"
   },
   "imageDescription": {
     "listen": "Прослушайте диалог!",
@@ -9863,6 +9920,258 @@
     "newRecord": "НОВЫЙ РЕКОРД!",
     "check": "СЧЕТ:",
     "again": "Повторный вылет",
-    "constellations": "Покинуть созвездие",
+    "constellations": "Покинуть созвездие"
+  },
+  "textTasksTip": {
+    "title": "Текстовые задания",
+    "description": "Для выполнения задания перетащите слово в пустое место или нажмите на слово, а затем на поле, куда хотите его добавить."
+  },
+  "textThemes": {
+    "basic": "Знакомство",
+    "routine": "Распорядок дня",
+    "shopping": "Покупки",
+    "work": "Работа и учеба",
+    "hobby": "Хобби",
+    "objects": "Предметы и вещи",
+    "travel": "Путешествия"
+  },
+  "themeTextTitleBasic_A1": {
+    "basicOne": "Формальное знакомство",
+    "basicTwo": "Неформальное знакомство",
+    "basicThree": "Планы на день",
+    "basicFour": "Планы на вечер",
+    "basicFive": "В выходные",
+    "basicSix": "Занятия спортом",
+    "basicSeven": "Готовим вместе",
+    "basicEight": "Поездка в город",
+    "basicNine": "Учимся вместе",
+    "basicTen": "Занимаемся музыкой"
+  },
+  "themeTextTitleHobby_A1": {
+    "hobbyOne": "Игра в футбол",
+    "hobbyTwo": "Фотография",
+    "hobbyThree": "Игра на гитаре",
+    "hobbyFour": "Плавание",
+    "hobbyFive": "Кулинария",
+    "hobbySix": "Путешествия",
+    "hobbySeven": "Чтение",
+    "hobbyEight": "Садоводство",
+    "hobbyNine": "Танцы",
+    "hobbyTen": "Изучение языков"
+  },
+  "themeTextTitleRoutine_A1": {
+    "routineOne": "Планы на день",
+    "routineTwo": "Планы на вечер",
+    "routineThree": "В выходные",
+    "routineFour": "Занятия спортом",
+    "routineFive": "Готовим вместе",
+    "routineSix": "Поездка в город",
+    "routineSeven": "Учимся вместе",
+    "routineEight": "Занимаемся музыкой",
+    "routineNine": "Пьем кофе",
+    "routineTen": "В парке"
+  },
+  "themeTextTitleShopping_A1": {
+    "shoppingOne": "В супермаркете",
+    "shoppingTwo": "Поиск одежды",
+    "shoppingThree": "В пекарне",
+    "shoppingFour": "Покупки онлайн",
+    "shoppingFive": "На рынке",
+    "shoppingSix": "В обувном магазине",
+    "shoppingSeven": "Покупка мебели",
+    "shoppingEight": "На блошином рынке",
+    "shoppingNine": "Еда на вечер",
+    "shoppingTen": "В книжном магазине"
+  },
+  "themeTextTitleTravel_A1": {
+    "travelOne": "Сбор чемодана",
+    "travelTwo": "На вокзале",
+    "travelThree": "В отеле",
+    "travelFour": "Отпуск на море",
+    "travelFive": "Осмотр города",
+    "travelSix": "В ресторане",
+    "travelSeven": "В аэропорту",
+    "travelEight": "В горах",
+    "travelNine": "Покупка сувениров",
+    "travelTen": "Возвращение домой"
+  },
+  "themeTextTitleWork_A1": {
+    "workOne": "Мой рабочий день",
+    "workTwo": "Поиск документа",
+    "workThree": "В университете",
+    "workFour": "Моя работа",
+    "workFive": "Домашнее задание",
+    "workSix": "Моя работа на стройке",
+    "workSeven": "Работа из дома",
+    "workEight": "Работа на складе",
+    "workNine": "Совещание",
+    "workTen": "Обеденный перерыв"
+  },
+  "themeTextTitleBasic_A2": {
+    "basicOne": "На курсах немецкого",
+    "basicTwo": "Тандем-партнер",
+    "basicThree": "В университете",
+    "basicFour": "В библиотеке",
+    "basicFive": "Групповой проект",
+    "basicSix": "Языковая поездка",
+    "basicSeven": "Новый ученик",
+    "basicEight": "Онлайн-курс",
+    "basicNine": "Учебная группа",
+    "basicTen": "Партнер по экзамену"
+  },
+  "themeTextTitleHobby_A2": {
+    "hobbyOne": "Поход в горы",
+    "hobbyTwo": "Фотография",
+    "hobbyThree": "Рисование",
+    "hobbyFour": "Танцы",
+    "hobbyFive": "Футбол",
+    "hobbySix": "Плаванье",
+    "hobbySeven": "Настольные игры",
+    "hobbyEight": "Настольные игры и логика",
+    "hobbyNine": "Шахматы",
+    "hobbyTen": "Фильмы"
+  },
+  "themeTextTitleRoutine_A2": {
+    "routineOne": "Новая соседка",
+    "routineTwo": "Встреча в кафе",
+    "routineThree": "На вечеринке",
+    "routineFour": "Новые коллеги",
+    "routineFive": "В спортивном клубе",
+    "routineSix": "Встреча в поезде",
+    "routineSeven": "В парке с собакой",
+    "routineEight": "Поиск партнера",
+    "routineNine": "На концерте",
+    "routineTen": "Новая соседка по квартире"
+  },
+  "themeTextTitleShopping_A2": {
+    "shoppingOne": "В супермаркете",
+    "shoppingTwo": "Покупка одежды",
+    "shoppingThree": "На рынке",
+    "shoppingFour": "Покупки онлайн",
+    "shoppingFive": "В мебельном магазине",
+    "shoppingSix": "В пекарне",
+    "shoppingSeven": "Покупка обуви",
+    "shoppingEight": "Подарок",
+    "shoppingNine": "В магазине электроники",
+    "shoppingTen": "Большая закупка"
+  },
+  "themeTextTitleTravel_A2": {
+    "travelOne": "Подготовка к поездке",
+    "travelTwo": "В аэропорту",
+    "travelThree": "Прибытие в отель",
+    "travelFour": "На пляже",
+    "travelFive": "Экскурсия",
+    "travelSix": "В ресторане",
+    "travelSeven": "Спрашивая дорогу",
+    "travelEight": "Проблемы в отпуске",
+    "travelNine": "Покупка подарков",
+    "travelTen": "Возвращение домой"
+  },
+  "themeTextTitleWork_A2": {
+    "workOne": "Собеседование",
+    "workTwo": "Домашнее задание",
+    "workThree": "Первый рабочий день",
+    "workFour": "Презентация",
+    "workFive": "Повышение квалификации",
+    "workSix": "В домашнем офисе",
+    "workSeven": "Стажировка",
+    "workEight": "Экзамен",
+    "workNine": "Языковой курс",
+    "workTen": "Первый клиент"
+  },
+  "themeTextTitleBasic_B1": {
+    "basicOne": "На вечеринке",
+    "basicTwo": "Первое свидание",
+    "basicThree": "Языковой тандем",
+    "basicFour": "Встреча в поезде",
+    "basicFive": "Новый коллега",
+    "basicSix": "На семинаре",
+    "basicSeven": "На прогулке с собакой",
+    "basicEight": "Новые соседи",
+    "basicNine": "В спортивном клубе",
+    "basicTen": "В хостеле"
+  },
+  "themeTextTitleHobby_B1": {
+    "hobbyOne": "Ночная фотография",
+    "hobbyTwo": "Альпинизм",
+    "hobbyThree": "Игра на пианино",
+    "hobbyFour": "Разработка игр",
+    "hobbyFive": "Виндсерфинг",
+    "hobbySix": "Игра в театре",
+    "hobbySeven": "Стрельба из лука",
+    "hobbyEight": "Восстановление мотоциклов",
+    "hobbyNine": "Выпечка",
+    "hobbyTen": "Геокэшинг"
+  },
+  "themeTextTitleRoutine_B1": {
+    "routineOne": "Раннее утро",
+    "routineTwo": "Завтрак и путь на работу",
+    "routineThree": "В офисе",
+    "routineFour": "Обеденный перерыв",
+    "routineFive": "Конец рабочего дня",
+    "routineSix": "Спорт после работы",
+    "routineSeven": "Ужин и отдых",
+    "routineEight": "Подготовка ко сну",
+    "routineNine": "Вечерняя прогулка",
+    "routineTen": "Уборка дома"
+  },
+  "themeTextTitleShopping_B1": {
+    "shoppingOne": "Покупка одежды",
+    "shoppingTwo": "В супермаркете",
+    "shoppingThree": "Покупка техники онлайн",
+    "shoppingFour": "На блошином рынке",
+    "shoppingFive": "Поиск подарка",
+    "shoppingSix": "Возврат товара",
+    "shoppingSeven": "В строительном магазине",
+    "shoppingEight": "В аптеке",
+    "shoppingNine": "В зоомагазине",
+    "shoppingTen": "В секонд-хенде"
+  },
+  "themeTextTitleTravel_B1": {
+    "travelOne": "Поездка в город",
+    "travelTwo": "Пляжный отдых",
+    "travelThree": "Поход в горы",
+    "travelFour": "Дорожное путешествие",
+    "travelFive": "Путешествие по Азии",
+    "travelSix": "Круиз",
+    "travelSeven": "Кемпинг",
+    "travelEight": "Зимний отпуск",
+    "travelNine": "Языковая поездка",
+    "travelTen": "Сафари"
+  },
+  "themeTextTitleWork_B1": {
+    "workOne": "Собеседование на работу",
+    "workTwo": "Управление проектом",
+    "workThree": "Семестр за границей",
+    "workFour": "Презентация в офисе",
+    "workFive": "Подготовка к экзаменам",
+    "workSix": "Обслуживание клиентов",
+    "workSeven": "Магистерская диссертация",
+    "workEight": "Командировка",
+    "workNine": "Стажировка",
+    "workTen": "Курсы"
+  },
+  "textTaskSession": {
+    "allUsed": " Все слова использованы!",
+    "errorText": "Текст не выбран",
+    "back": "Вернуться к списку"
+  },
+  "exitSessionModal": {
+    "text": "Жаль останавливаться на полпути! Если закроете вкладку сейчас, ваши старания не сохранятся.",
+    "continueLesson": "Продолжить урок",
+    "cancelLesson": "Выйти"
+  },
+  "premiumBannerText": {
+    "text": "Получи максимум от платформы, ускорь свое обучение."
+  },
+  "rulesModal": {
+    "text": "Подсказка по грамматике доступна после ответа!"
+  },
+  "footerNavLabel": {
+    "learn": "Обучение",
+    "games": "Игры",
+    "home": "Главная",
+    "events": "События",
+    "cabinet": "Кабинет",
   }
 }

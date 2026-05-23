@@ -6,7 +6,8 @@
     {
       "id": "work_b1_1",
       "title": "Das Jobinterview",
-      "translation": "Собеседование на работу",
+      "translation": "themeTextTitleWork_B1.workOne",
+      "icon": "\uD83D\uDC54",
       "wordsPool": ["hatte", "trotzdem", "sonst", "dann", "nämlich", "deshalb"],
       "textElements": [
         { "type": "text", "content": "Ich " },
@@ -27,7 +28,8 @@
     {
       "id": "work_b1_2",
       "title": "Projektmanagement",
-      "translation": "Управление проектом",
+      "translation": "themeTextTitleWork_B1.workTwo",
+      "icon": "\uD83D\uDCCB",
       "wordsPool": ["leitete", "hatte", "deshalb", "trotzdem", "sonst", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Letztes Jahr " },
@@ -48,7 +50,8 @@
     {
       "id": "work_b1_3",
       "title": "Auslandssemester",
-      "translation": "Семестр за границей",
+      "translation": "themeTextTitleWork_B1.workThree",
+      "icon": "\uD83C\uDF0D",
       "wordsPool": ["studierte", "hatte", "deshalb", "dann", "nämlich", "Außerdem"],
       "textElements": [
         { "type": "text", "content": "Während meines Bachelorstudiums " },
@@ -69,7 +72,8 @@
     {
       "id": "work_b1_4",
       "title": "Präsentation im Büro",
-      "translation": "Презентация в офисе",
+      "translation": "themeTextTitleWork_B1.workFour",
+      "icon": "\uD83D\uDCCA",
       "wordsPool": ["hielt", "hatte", "trotzdem", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Gestern Vormittag " },
@@ -90,7 +94,8 @@
     {
       "id": "work_b1_5",
       "title": "Prüfungsvorbereitung",
-      "translation": "Подготовка к экзаменам",
+      "translation": "themeTextTitleWork_B1.workFive",
+      "icon": "\uD83D\uDCDA",
       "wordsPool": ["lernte", "hatte", "deshalb", "sonst", "nämlich", "außerdem"],
       "textElements": [
         { "type": "text", "content": "Vor den Abschlussprüfungen " },
@@ -111,7 +116,8 @@
     {
       "id": "work_b1_6",
       "title": "Kundenservice",
-      "translation": "Обслуживание клиентов",
+      "translation": "themeTextTitleWork_B1.workSix",
+      "icon": "\uD83C\uDFA7",
       "wordsPool": ["arbeitete", "hatte", "trotzdem", "deshalb", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Nach meinem Schulabschluss " },
@@ -132,7 +138,8 @@
     {
       "id": "work_b1_7",
       "title": "Die Masterarbeit",
-      "translation": "Магистерская диссертация",
+      "translation": "themeTextTitleWork_B1.workSeven",
+      "icon": "✍\uFE0F",
       "wordsPool": ["schrieb", "hatte", "deshalb", "sonst", "Dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "In meinem letzten Semester " },
@@ -153,7 +160,8 @@
     {
       "id": "work_b1_8",
       "title": "Die Geschäftsreise",
-      "translation": "Командировка",
+      "translation": "themeTextTitleWork_B1.workEight",
+      "icon": "✈\uFE0F",
       "wordsPool": ["flog", "hatte", "trotzdem", "deshalb", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Letzte Woche " },
@@ -169,6 +177,50 @@
         { "type": "text", "content": " geht man gemeinsam abends in ein gutes Restaurant. — Persönliche Kontakte sind " },
         { "type": "blank", "id": 6, "correct": "nämlich" },
         { "type": "text", "content": " in unserer Branche durch nichts zu ersetzen." }
+      ]
+    },
+    {
+      "id": "work_b1_9",
+      "title": "Das Praktikum",
+      "translation": "themeTextTitleWork_B1.workNine",
+      "icon": "\uD83D\uDCBC",
+      "wordsPool": ["machte", "hatte", "trotzdem", "sonst", "deshalb", "nämlich"],
+      "textElements": [
+        { "type": "text", "content": "Im letzten Sommer " },
+        { "type": "blank", "id": 1, "correct": "machte" },
+        { "type": "text", "content": " ich ein wichtiges Praktikum in einer großen Bank. — Ich " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " mich schon sehr früh beworben, bevor alle Plätze vergeben waren. — Die Arbeit war an einigen Tagen sehr anstrengend, " },
+        { "type": "blank", "id": 3, "correct": "trotzdem" },
+        { "type": "text", "content": " hat sie mir großen Spaß gemacht. — Man muss den Kollegen immer viele Fragen stellen, " },
+        { "type": "blank", "id": 4, "correct": "sonst" },
+        { "type": "text", "content": " lernt man in den ersten Wochen nichts. — Ich möchte später in dieser Branche arbeiten, " },
+        { "type": "blank", "id": 5, "correct": "deshalb" },
+        { "type": "text", "content": " war diese Erfahrung wirklich sehr wertvoll für mich. — Praktische Erfahrung ist " },
+        { "type": "blank", "id": 6, "correct": "nämlich" },
+        { "type": "text", "content": " ein großer Vorteil bei der späteren Jobsuche." }
+      ]
+    },
+    {
+      "id": "work_b1_10",
+      "title": "Die Weiterbildung",
+      "translation": "themeTextTitleWork_B1.workTen",
+      "icon": "\uD83D\uDDA5\uFE0F",
+      "wordsPool": ["besuchte", "hatte", "trotzdem", "dann", "sonst", "nämlich"],
+      "textElements": [
+        { "type": "text", "content": "Letzten Monat " },
+        { "type": "blank", "id": 1, "correct": "besuchte" },
+        { "type": "text", "content": " ich ein interessantes Seminar für neues Webdesign. — Mein Chef " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " den Kurs schon bezahlt, lange bevor die Anmeldung geschlossen wurde. — Der Kursleiter sprach manchmal ein bisschen schnell, " },
+        { "type": "blank", "id": 3, "correct": "trotzdem" },
+        { "type": "text", "content": " konnte ich die neuen Themen gut verstehen. — Zuerst lernt man die wichtige Theorie, " },
+        { "type": "blank", "id": 4, "correct": "dann" },
+        { "type": "text", "content": " macht man viele praktische Übungen direkt am Computer. — Man muss die Aufgaben immer selbst üben, " },
+        { "type": "blank", "id": 5, "correct": "sonst" },
+        { "type": "text", "content": " vergisst man die neuen Informationen sofort wieder. — Ständige Weiterbildung ist " },
+        { "type": "blank", "id": 6, "correct": "nämlich" },
+        { "type": "text", "content": " in unserem Beruf heute extrem wichtig." }
       ]
     }
   ]

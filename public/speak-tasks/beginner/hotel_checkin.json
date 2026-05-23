@@ -1,0 +1,607 @@
+{
+  "start": {
+    "botText": "Guten Tag! Willkommen im Hotel!",
+    "tips": {
+      "ar-SA": "'Willkommen' تعني مرحباً.",
+      "en-US": "'Willkommen' means Welcome.",
+      "es-ES": "'Willkommen' significa Bienvenido.",
+      "fr-FR": "'Willkommen' signifie Bienvenue.",
+      "hi-IN": "'Willkommen' का अर्थ है स्वागत है।",
+      "pl-PL": "'Willkommen' oznacza Witamy.",
+      "ro-RO": "'Willkommen' înseamnă Bun venit.",
+      "ru-RU": "'Willkommen' означает 'Добро пожаловать'.",
+      "tr-TR": "'Willkommen' Hoş geldiniz demektir.",
+      "uk-UA": "'Willkommen' означає 'Ласкаво просимо'.",
+      "uz-UZ": "'Willkommen' Xush kelibsiz degani."
+    },
+    "botTranslation": {
+      "ar-SA": "طاب يومك! مرحباً بك في الفندق!",
+      "en-US": "Good day! Welcome to the hotel!",
+      "es-ES": "¡Buen día! ¡Bienvenido al hotel!",
+      "fr-FR": "Bonjour ! Bienvenue à l'hôtel !",
+      "hi-IN": "शुभ दिन! होटल में आपका स्वागत है!",
+      "pl-PL": "Dzień dobry! Witamy w hotelu!",
+      "ro-RO": "Bună ziua! Bun venit la hotel!",
+      "ru-RU": "Добрый день! Добро пожаловать в отель!",
+      "tr-TR": "İyi günler! Otele hoş geldiniz!",
+      "uk-UA": "Добрий день! Ласкаво просимо до готелю!",
+      "uz-UZ": "Xayrli kun! Mehmonxonaga xush kelibsiz!"
+    },
+    "options": [
+      {
+        "text": "Guten Tag! Ich möchte ein Zimmer, bitte.",
+        "translation": {
+          "ar-SA": "طاب يومك! أريد غرفة من فضلك.",
+          "en-US": "Good day! I would like a room, please.",
+          "es-ES": "¡Buen día! Quisiera una habitación, por favor.",
+          "fr-FR": "Bonjour ! Je voudrais une chambre, s'il vous plaît.",
+          "hi-IN": "शुभ दिन! मुझे एक कमरा चाहिए, कृपया।",
+          "pl-PL": "Dzień dobry! Chciałbym/Chciałabym pokój.",
+          "ro-RO": "Bună ziua! Aș dori o cameră, vă rog.",
+          "ru-RU": "Добрый день! Я хотел бы номер, пожалуйста.",
+          "tr-TR": "İyi günler! Bir oda istiyorum, lütfen.",
+          "uk-UA": "Добрий день! Я хотів би номер, будь ласка.",
+          "uz-UZ": "Xayrli kun! Men xona xohlayman, iltimos."
+        },
+        "nextStep": "ask_rooms"
+      },
+      {
+        "text": "Hallo! Ich brauche ein Zimmer.",
+        "tips": {
+          "ru-RU": "Глагол 'brauchen' (нуждаться) всегда требует Akkusativ (ein Zimmer)."
+        },
+        "translation": {
+          "ar-SA": "مرحباً! أحتاج إلى غرفة.",
+          "en-US": "Hello! I need a room.",
+          "es-ES": "¡Hola! Necesito una habitación.",
+          "fr-FR": "Bonjour ! J'ai besoin d'une chambre.",
+          "hi-IN": "नमस्ते! मुझे एक कमरे की आवश्यकता है।",
+          "pl-PL": "Cześć! Potrzebuję pokoju.",
+          "ro-RO": "Salut! Am nevoie de o cameră.",
+          "ru-RU": "Здравствуйте! Мне нужен номер.",
+          "tr-TR": "Merhaba! Bir odaya ihtiyacım var.",
+          "uk-UA": "Добрий день! Мені потрібен номер.",
+          "uz-UZ": "Salom! Menga xona kerak."
+        },
+        "nextStep": "ask_rooms"
+      }
+    ],
+    "defaultNext": "ask_rooms"
+  },
+  "ask_rooms": {
+    "botText": "Gerne. Wie viele Zimmer möchten Sie?",
+    "tips": {
+      "ar-SA": "'Wie viele' تعني 'كم عدد'.",
+      "en-US": "'Wie viele' means 'How many'.",
+      "es-ES": "'Wie viele' significa 'Cuántas'.",
+      "fr-FR": "'Wie viele' signifie 'Combien'.",
+      "hi-IN": "'Wie viele' का अर्थ है 'कितने'।",
+      "pl-PL": "'Wie wiele' oznacza 'ile'.",
+      "ro-RO": "'Wie viele' înseamnă 'Câte'.",
+      "ru-RU": "Вопросительное слово 'Wie viele' переводится как 'Сколько' (для исчисляемых).",
+      "tr-TR": "'Wie viele' 'Kaç tane' demektir.",
+      "uk-UA": "Запитальне слово 'Wie viele' перекладається як 'Скільки' (для злічуваних).",
+      "uz-UZ": "'Wie viele' 'Nechta' degan ma'noni anglatadi."
+    },
+    "botTranslation": {
+      "ar-SA": "بكل سرور. كم عدد الغرف التي تريدها؟",
+      "en-US": "Gladly. How many rooms would you like?",
+      "es-ES": "Con gusto. ¿Cuántas habitaciones desea?",
+      "fr-FR": "Volontiers. Combien de chambres souhaitez-vous ?",
+      "hi-IN": "खुशी से। आप कितने कमरे चाहेंगे?",
+      "pl-PL": "Z przyjemnością. Ile pokoi pan/pani sobie życzy?",
+      "ro-RO": "Cu plăcere. Câte camere doriți?",
+      "ru-RU": "С удовольствием. Сколько номеров Вы хотите?",
+      "tr-TR": "Memnuniyetle. Kaç oda istersiniz?",
+      "uk-UA": "Із задоволенням. Скільки номерів Ви хочете?",
+      "uz-UZ": "Bajonidil. Nechta xona xohlaysiz?"
+    },
+    "options": [
+      {
+        "text": "Ein Zimmer, bitte.",
+        "translation": {
+          "ar-SA": "غرفة واحدة من فضلك.",
+          "en-US": "One room, please.",
+          "es-ES": "Una habitación, por favor.",
+          "fr-FR": "Une chambre, s'il vous plaît.",
+          "hi-IN": "एक कमरा, कृपया।",
+          "pl-PL": "Jeden pokój poproszę.",
+          "ro-RO": "O cameră, vă rog.",
+          "ru-RU": "Один номер, пожалуйста.",
+          "tr-TR": "Bir oda, lütfen.",
+          "uk-UA": "Один номер, будь ласка.",
+          "uz-UZ": "Bitta xona, iltimos."
+        },
+        "nextStep": "ask_parking"
+      },
+      {
+        "text": "Nur eins, danke.",
+        "translation": {
+          "ar-SA": "واحدة فقط، شكراً.",
+          "en-US": "Just one, thanks.",
+          "es-ES": "Solo una, gracias.",
+          "fr-FR": "Juste une, merci.",
+          "hi-IN": "बस एक, धन्यवाद।",
+          "pl-PL": "Tylko jeden, dziękuję.",
+          "ro-RO": "Doar una, mulțumesc.",
+          "ru-RU": "Только один, спасибо.",
+          "tr-TR": "Sadece bir tane, teşekkürler.",
+          "uk-UA": "Тільки один, дякую.",
+          "uz-UZ": "Faqat bitta, rahmat."
+        },
+        "nextStep": "ask_parking"
+      }
+    ],
+    "defaultNext": "ask_parking"
+  },
+  "ask_parking": {
+    "botText": "In Ordnung. Mit Parkplatz oder ohne Parkplatz?",
+    "tips": {
+      "ar-SA": "حرف الجر 'mit' (مع) يأخذ Dativ، و 'ohne' (بدون) يأخذ Akkusativ.",
+      "en-US": "The preposition 'mit' (with) takes Dativ, 'ohne' (without) takes Akkusativ.",
+      "es-ES": "La preposición 'mit' (con) usa Dativ, 'ohne' (sin) usa Akkusativ.",
+      "fr-FR": "La préposition 'mit' (avec) prend le Dativ, 'ohne' (sans) prend l'Akkusativ.",
+      "hi-IN": "पूर्वसर्ग 'mit' Dativ लेता है, 'ohne' Akkusativ लेता है।",
+      "pl-PL": "Przyimek 'mit' (z) wymaga celownika (Dativ), 'ohne' (bez) wymaga biernika (Akkusativ).",
+      "ro-RO": "Prepoziția 'mit' (cu) cere Dativ, 'ohne' (fără) cere Akkusativ.",
+      "ru-RU": "Предлог 'mit' (с) всегда требует Dativ, а 'ohne' (без) всегда требует Akkusativ.",
+      "tr-TR": "'mit' (ile) edatı Dativ, 'ohne' (onsuz) edatı Akkusativ gerektirir.",
+      "uk-UA": "Прийменник 'mit' (з) завжди вимагає Dativ, а 'ohne' (без) завжди вимагає Akkusativ.",
+      "uz-UZ": "'mit' (bilan) predlogi Dativ, 'ohne' (siz) predlogi Akkusativ talab qiladi."
+    },
+    "botTranslation": {
+      "ar-SA": "حسناً. مع موقف سيارات أم بدون؟",
+      "en-US": "Alright. With parking or without parking?",
+      "es-ES": "De acuerdo. ¿Con aparcamiento o sin aparcamiento?",
+      "fr-FR": "D'accord. Avec parking ou sans parking ?",
+      "hi-IN": "ठीक है। पार्किंग के साथ या पार्किंग के बिना?",
+      "pl-PL": "W porządku. Z parkingiem czy bez parkingu?",
+      "ro-RO": "În regulă. Cu parcare sau fără parcare?",
+      "ru-RU": "В порядке. С парковкой или без парковки?",
+      "tr-TR": "Tamam. Otoparklı mı otoparksız mı?",
+      "uk-UA": "Гаразд. З парковкою чи без парковки?",
+      "uz-UZ": "Mayli. Avtoturargoh bilanmi yoki avtoturargohsizmi?"
+    },
+    "options": [
+      {
+        "text": "Nein, danke. Ohne Parkplatz.",
+        "translation": {
+          "ar-SA": "لا شكراً. بدون موقف.",
+          "en-US": "No thanks. Without parking.",
+          "es-ES": "No, gracias. Sin aparcamiento.",
+          "fr-FR": "Non, merci. Sans parking.",
+          "hi-IN": "नहीं, धन्यवाद। बिना पार्किंग के।",
+          "pl-PL": "Nie, dziękuję. Bez parkingu.",
+          "ro-RO": "Nu, mulțumesc. Fără parcare.",
+          "ru-RU": "Нет, спасибо. Без парковки.",
+          "tr-TR": "Hayır, teşekkürler. Otoparksız.",
+          "uk-UA": "Ні, дякую. Без парковки.",
+          "uz-UZ": "Yo'q, rahmat. Avtoturargohsiz."
+        },
+        "nextStep": "price"
+      },
+      {
+        "text": "Ohne Parkplatz, bitte.",
+        "translation": {
+          "ar-SA": "بدون موقف، من فضلك.",
+          "en-US": "Without parking, please.",
+          "es-ES": "Sin aparcamiento, por favor.",
+          "fr-FR": "Sans parking, s'il vous plaît.",
+          "hi-IN": "पार्किंग के बिना, कृपया।",
+          "pl-PL": "Bez parkingu, poproszę.",
+          "ro-RO": "Fără parcare, vă rog.",
+          "ru-RU": "Без парковки, пожалуйста.",
+          "tr-TR": "Otoparksız, lütfen.",
+          "uk-UA": "Без парковки, будь ласка.",
+          "uz-UZ": "Avtoturargohsiz, iltimos."
+        },
+        "nextStep": "price"
+      }
+    ],
+    "defaultNext": "price"
+  },
+  "price": {
+    "botText": "Alles klar. Das kostet 80 Euro für die Nacht.",
+    "tips": {
+      "ar-SA": "'zahlen' أو 'bezahlen' كلاهما يعني 'الدفع'.",
+      "en-US": "'zahlen' or 'bezahlen' both mean 'to pay'.",
+      "es-ES": "'zahlen' o 'bezahlen' ambos significan 'pagar'.",
+      "fr-FR": "'zahlen' ou 'bezahlen' signifient tous deux 'payer'.",
+      "hi-IN": "'zahlen' या 'bezahlen' दोनों का अर्थ 'भुगतान करना' है।",
+      "pl-PL": "'zahlen' lub 'bezahlen' oba oznaczają 'płacić'.",
+      "ro-RO": "'zahlen' sau 'bezahlen' ambele înseamnă 'a plăti'.",
+      "ru-RU": "Глаголы 'zahlen' и 'bezahlen' означают одно и то же — 'платить'.",
+      "tr-TR": "'zahlen' veya 'bezahlen' ikisi de 'ödemek' anlamına gelir.",
+      "uk-UA": "Дієслова 'zahlen' і 'bezahlen' означають одне і те ж — 'платити'.",
+      "uz-UZ": "'zahlen' yoki 'bezahlen' ikkalasi ham 'to'lamoq' degan ma'noni anglatadi."
+    },
+    "botTranslation": {
+      "ar-SA": "حسناً. التكلفة 80 يورو لليلة.",
+      "en-US": "Alright. That costs 80 Euros for the night.",
+      "es-ES": "De acuerdo. Eso cuesta 80 euros por la noche.",
+      "fr-FR": "D'accord. Cela coûte 80 euros pour la nuit.",
+      "hi-IN": "ठीक है। इसके लिए 80 यूरो लगते हैं।",
+      "pl-PL": "W porządku. To kosztuje 80 euro za noc.",
+      "ro-RO": "În regulă. Costă 80 de euro pe noapte.",
+      "ru-RU": "Понятно. Это стоит 80 евро за ночь.",
+      "tr-TR": "Tamam. Geceliği 80 Euro tutuyor.",
+      "uk-UA": "Зрозуміло. Це коштує 80 євро за ніч.",
+      "uz-UZ": "Tushunarli. Tun uchun 80 yevro turadi."
+    },
+    "options": [
+      {
+        "text": "Gut, ich zahle mit Karte.",
+        "translation": {
+          "ar-SA": "جيد، سأدفع بالبطاقة.",
+          "en-US": "Good, I pay with card.",
+          "es-ES": "Bien, pago con tarjeta.",
+          "fr-FR": "Bien, je paie par carte.",
+          "hi-IN": "अच्छा, मैं कार्ड से भुगतान करूँगा।",
+          "pl-PL": "Dobrze, płacę kartą.",
+          "ro-RO": "Bine, plătesc cu cardul.",
+          "ru-RU": "Хорошо, я плачу картой.",
+          "tr-TR": "İyi, kartla ödeyeceğim.",
+          "uk-UA": "Добре, я плачу карткою.",
+          "uz-UZ": "Yaxshi, men karta bilan to'layman."
+        },
+        "nextStep": "terminal"
+      },
+      {
+        "text": "In Ordnung. Mit Karte, bitte.",
+        "translation": {
+          "ar-SA": "حسناً. بالبطاقة من فضلك.",
+          "en-US": "Alright. With card, please.",
+          "es-ES": "De acuerdo. Con tarjeta, por favor.",
+          "fr-FR": "D'accord. Par carte, s'il vous plaît.",
+          "hi-IN": "ठीक है। कार्ड से, कृपया।",
+          "pl-PL": "W porządku. Kartą, poproszę.",
+          "ro-RO": "În regulă. Cu cardul, vă rog.",
+          "ru-RU": "В порядке. Картой, пожалуйста.",
+          "tr-TR": "Tamam. Kartla, lütfen.",
+          "uk-UA": "Гаразд. Карткою, будь ласка.",
+          "uz-UZ": "Mayli. Karta orqali, iltimos."
+        },
+        "nextStep": "terminal"
+      }
+    ],
+    "defaultNext": "terminal"
+  },
+  "terminal": {
+    "botText": "Gerne. Hier ist das Gerät für die Karte.",
+    "tips": {
+      "ar-SA": "كلمة 'Gerät' تعني جهاز، وتستخدم هنا لجهاز الدفع.",
+      "en-US": "The word 'Gerät' means device, used here for the payment terminal.",
+      "es-ES": "La palabra 'Gerät' significa dispositivo, aquí el terminal de pago.",
+      "fr-FR": "Le mot 'Gerät' signifie appareil, ici le terminal de paiement.",
+      "hi-IN": "शब्द 'Gerät' का अर्थ उपकरण है, यहाँ भुगतान टर्मिनल के लिए उपयोग किया जाता है।",
+      "pl-PL": "Słowo 'Gerät' to urządzenie, tutaj terminal płatniczy.",
+      "ro-RO": "Cuvântul 'Gerät' înseamnă dispozitiv, aici terminalul de plată.",
+      "ru-RU": "Слово 'das Gerät' означает 'устройство/прибор', в данном случае — терминал для оплаты.",
+      "tr-TR": "'Gerät' cihaz demektir, burada ödeme terminali için kullanılmıştır.",
+      "uk-UA": "Слово 'das Gerät' означає 'пристрій/прилад', в даному випадку — термінал для оплати.",
+      "uz-UZ": "'Gerät' qurilma degani, bu yerda to'lov terminali uchun ishlatilgan."
+    },
+    "botTranslation": {
+      "ar-SA": "بكل سرور. هذا هو جهاز البطاقة.",
+      "en-US": "Gladly. Here is the device for the card.",
+      "es-ES": "Con gusto. Aquí tiene el dispositivo para la tarjeta.",
+      "fr-FR": "Volontiers. Voici l'appareil pour la carte.",
+      "hi-IN": "खुशी से। कार्ड के लिए उपकरण यहाँ है।",
+      "pl-PL": "Z przyjemnością. Oto terminal na kartę.",
+      "ro-RO": "Cu plăcere. Iată dispozitivul pentru card.",
+      "ru-RU": "Пожалуйста. Вот терминал для карты.",
+      "tr-TR": "Memnuniyetle. İşte kart cihazı.",
+      "uk-UA": "Будь ласка. Ось термінал для картки.",
+      "uz-UZ": "Bajonidil. Karta uchun qurilma mana."
+    },
+    "options": [
+      {
+        "text": "Danke schön.",
+        "translation": {
+          "ar-SA": "شكراً جزيلاً.",
+          "en-US": "Thank you.",
+          "es-ES": "Muchas gracias.",
+          "fr-FR": "Merci beaucoup.",
+          "hi-IN": "धन्यवाद।",
+          "pl-PL": "Dziękuję bardzo.",
+          "ro-RO": "Mulțumesc frumos.",
+          "ru-RU": "Спасибо.",
+          "tr-TR": "Teşekkürler.",
+          "uk-UA": "Дякую.",
+          "uz-UZ": "Katta rahmat."
+        },
+        "nextStep": "give_keys"
+      },
+      {
+        "text": "Bitte sehr.",
+        "translation": {
+          "ar-SA": "تفضل.",
+          "en-US": "Here you go.",
+          "es-ES": "Aquí tiene.",
+          "fr-FR": "Voici.",
+          "hi-IN": "यह लीजिए।",
+          "pl-PL": "Proszę bardzo.",
+          "ro-RO": "Poftiți.",
+          "ru-RU": "Вот, пожалуйста (передавая карту).",
+          "tr-TR": "Buyurun.",
+          "uk-UA": "Ось, будь ласка.",
+          "uz-UZ": "Marhamat."
+        },
+        "nextStep": "give_keys"
+      }
+    ],
+    "defaultNext": "give_keys"
+  },
+  "give_keys": {
+    "botText": "Vielen Dank. Hier ist der Schlüssel. Ihr Zimmer ist Nummer 12.",
+    "tips": {
+      "ar-SA": "كلمة 'Schlüssel' تعني مفتاح، و'Zimmer' تعني غرفة.",
+      "en-US": "The word 'Schlüssel' means key, and 'Zimmer' is room.",
+      "es-ES": "La palabra 'Schlüssel' significa llave, y 'Zimmer' habitación.",
+      "fr-FR": "Le mot 'Schlüssel' signifie clé, et 'Zimmer' chambre.",
+      "hi-IN": "शब्द 'Schlüssel' का अर्थ कुंजी है, और 'Zimmer' कमरा है।",
+      "pl-PL": "Słowo 'Schlüssel' to klucz, a 'Zimmer' to pokój.",
+      "ro-RO": "Cuvântul 'Schlüssel' înseamnă cheie, iar 'Zimmer' cameră.",
+      "ru-RU": "Слово 'der Schlüssel' переводится как 'ключ', а 'die Nummer' — 'номер/число'.",
+      "tr-TR": "'Schlüssel' anahtar, 'Zimmer' oda demektir.",
+      "uk-UA": "Слово 'der Schlüssel' перекладається як 'ключ', а 'die Nummer' — 'номер/число'.",
+      "uz-UZ": "'Schlüssel' kalit, 'Zimmer' esa xona degani."
+    },
+    "botTranslation": {
+      "ar-SA": "شكراً جزيلاً. هذا هو المفتاح. غرفتك رقم 12.",
+      "en-US": "Thank you very much. Here is the key. Your room is number 12.",
+      "es-ES": "Muchas gracias. Aquí tiene la llave. Su habitación es la número 12.",
+      "fr-FR": "Merci beaucoup. Voici la clé. Votre chambre est le numéro 12.",
+      "hi-IN": "बहुत-बहुत धन्यवाद। यहाँ कुंजी है। आपका कमरा नंबर 12 है।",
+      "pl-PL": "Bardzo dziękuję. Oto klucz. Pana/Pani pokój to numer 12.",
+      "ro-RO": "Vă mulțumesc mult. Iată cheia. Camera dumneavoastră este numărul 12.",
+      "ru-RU": "Большое спасибо. Вот ключ. Ваш номер — 12.",
+      "tr-TR": "Çok teşekkürler. İşte anahtar. Odanız 12 numara.",
+      "uk-UA": "Велике дякую. Ось ключ. Ваш номер — 12.",
+      "uz-UZ": "Katta rahmat. Mana kalit. Xonangiz 12-raqam."
+    },
+    "options": [
+      {
+        "text": "Danke, ich nehme den Schlüssel.",
+        "tips": {
+          "ru-RU": "Глагол 'nehmen' (брать) требует Akkusativ (den Schlüssel)."
+        },
+        "translation": {
+          "ar-SA": "شكراً، سآخذ المفتاح.",
+          "en-US": "Thanks, I'll take the key.",
+          "es-ES": "Gracias, cojo la llave.",
+          "fr-FR": "Merci, je prends la clé.",
+          "hi-IN": "धन्यवाद, मैं कुंजी ले लूँगा।",
+          "pl-PL": "Dziękuję, wezmę klucz.",
+          "ro-RO": "Mulțumesc, iau cheia.",
+          "ru-RU": "Спасибо, я беру ключ.",
+          "tr-TR": "Teşekkürler, anahtarı alıyorum.",
+          "uk-UA": "Дякую, я беру ключ.",
+          "uz-UZ": "Rahmat, men kalitni olaman."
+        },
+        "nextStep": "directions"
+      },
+      {
+        "text": "Super, danke schön.",
+        "translation": {
+          "ar-SA": "رائع، شكراً جزيلاً.",
+          "en-US": "Super, thank you.",
+          "es-ES": "Súper, muchas gracias.",
+          "fr-FR": "Super, merci beaucoup.",
+          "hi-IN": "सुपर, बहुत-बहुत धन्यवाद।",
+          "pl-PL": "Super, dziękuję bardzo.",
+          "ro-RO": "Super, mulțumesc frumos.",
+          "ru-RU": "Супер, большое спасибо.",
+          "tr-TR": "Süper, çok teşekkürler.",
+          "uk-UA": "Супер, велике дякую.",
+          "uz-UZ": "Super, katta rahmat."
+        },
+        "nextStep": "directions"
+      }
+    ],
+    "defaultNext": "directions"
+  },
+  "directions": {
+    "botText": "Der Aufzug ist gleich da rechts.",
+    "tips": {
+      "ar-SA": "'Aufzug' تعني مصعد.",
+      "en-US": "'Aufzug' means elevator / lift.",
+      "es-ES": "'Aufzug' significa ascensor.",
+      "fr-FR": "'Aufzug' signifie ascenseur.",
+      "hi-IN": "'Aufzug' का अर्थ लिफ्ट है।",
+      "pl-PL": "'Aufzug' to winda.",
+      "ro-RO": "'Aufzug' înseamnă lift.",
+      "ru-RU": "'der Aufzug' — лифт. 'rechts' — направо / справа.",
+      "tr-TR": "'Aufzug' asansör demektir.",
+      "uk-UA": "'der Aufzug' — ліфт. 'rechts' — направо / справа.",
+      "uz-UZ": "'Aufzug' lift degani."
+    },
+    "botTranslation": {
+      "ar-SA": "المصعد هناك على اليمين مباشرة.",
+      "en-US": "The elevator is right there on the right.",
+      "es-ES": "El ascensor está justo ahí a la derecha.",
+      "fr-FR": "L'ascenseur est juste là à droite.",
+      "hi-IN": "लिफ्ट वहीं दाईं ओर है।",
+      "pl-PL": "Winda jest zaraz po prawej stronie.",
+      "ro-RO": "Liftul este chiar acolo, în dreapta.",
+      "ru-RU": "Лифт находится прямо там, справа.",
+      "tr-TR": "Asansör hemen sağda.",
+      "uk-UA": "Ліфт знаходиться прямо там, праворуч.",
+      "uz-UZ": "Lift shu yerda o'ng tomonda."
+    },
+    "options": [
+      {
+        "text": "Alles klar, danke.",
+        "translation": {
+          "ar-SA": "حسناً، شكراً.",
+          "en-US": "Alright, thanks.",
+          "es-ES": "Todo claro, gracias.",
+          "fr-FR": "C'est clair, merci.",
+          "hi-IN": "ठीक है, धन्यवाद।",
+          "pl-PL": "Wszystko jasne, dziękuję.",
+          "ro-RO": "Am înțeles, mulțumesc.",
+          "ru-RU": "Всё понятно, спасибо.",
+          "tr-TR": "Anlaşıldı, teşekkürler.",
+          "uk-UA": "Все зрозуміло, дякую.",
+          "uz-UZ": "Tushunarli, rahmat."
+        },
+        "nextStep": "wish_day"
+      },
+      {
+        "text": "Perfekt, verstanden.",
+        "translation": {
+          "ar-SA": "ممتاز، فهمت.",
+          "en-US": "Perfect, understood.",
+          "es-ES": "Perfecto, entendido.",
+          "fr-FR": "Parfait, compris.",
+          "hi-IN": "एकदम सही, समझ गया।",
+          "pl-PL": "Idealnie, zrozumiałem.",
+          "ro-RO": "Perfect, am înțeles.",
+          "ru-RU": "Отлично, понял.",
+          "tr-TR": "Harika, anlaşıldı.",
+          "uk-UA": "Чудово, зрозумів.",
+          "uz-UZ": "Ajoyib, tushundim."
+        },
+        "nextStep": "wish_day"
+      }
+    ],
+    "defaultNext": "wish_day"
+  },
+  "wish_day": {
+    "botText": "Ich wünsche Ihnen einen schönen Aufenthalt!",
+    "tips": {
+      "ar-SA": "'Aufenthalt' تعني إقامة.",
+      "en-US": "'Aufenthalt' means stay (at a hotel).",
+      "es-ES": "'Aufenthalt' significa estancia.",
+      "fr-FR": "'Aufenthalt' signifie séjour.",
+      "hi-IN": "'Aufenthalt' का अर्थ रुकना (ठहरना) है।",
+      "pl-PL": "'Aufenthalt' oznacza pobyt.",
+      "ro-RO": "'Aufenthalt' înseamnă ședere.",
+      "ru-RU": "Слово 'Aufenthalt' означает 'пребывание' или 'остановка' (в отеле).",
+      "tr-TR": "'Aufenthalt' konaklama demektir.",
+      "uk-UA": "Слово 'Aufenthalt' означає 'перебування' або 'зупинка' (в готелі).",
+      "uz-UZ": "'Aufenthalt' yashash (qolish) degani."
+    },
+    "botTranslation": {
+      "ar-SA": "أتمنى لك إقامة ممتعة!",
+      "en-US": "I wish you a pleasant stay!",
+      "es-ES": "¡Le deseo una estancia agradable!",
+      "fr-FR": "Je vous souhaite un bon séjour !",
+      "hi-IN": "मैं आपके सुखद प्रवास की कामना करता हूँ!",
+      "pl-PL": "Życzę panu/pani udanego pobytu!",
+      "ro-RO": "Vă doresc o ședere plăcută!",
+      "ru-RU": "Желаю Вам хорошего пребывания (в отеле)!",
+      "tr-TR": "Size iyi bir konaklama dilerim!",
+      "uk-UA": "Бажаю Вам гарного перебування!",
+      "uz-UZ": "Sizga yoqimli dam olishingizni tilayman!"
+    },
+    "options": [
+      {
+        "text": "Danke, Ihnen auch einen schönen Tag!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً يوماً سعيداً!",
+          "en-US": "Thanks, have a nice day too!",
+          "es-ES": "¡Gracias, a usted también un buen día!",
+          "fr-FR": "Merci, à vous aussi une bonne journée !",
+          "hi-IN": "धन्यवाद, आपका दिन भी शुभ हो!",
+          "pl-PL": "Dziękuję, panu/pani również miłego dnia!",
+          "ro-RO": "Mulțumesc, și dumneavoastră o zi frumoasă!",
+          "ru-RU": "Спасибо, Вам тоже хорошего дня!",
+          "tr-TR": "Teşekkürler, size de iyi günler!",
+          "uk-UA": "Дякую, Вам теж гарного дня!",
+          "uz-UZ": "Rahmat, sizga ham yaxshi kun!"
+        },
+        "nextStep": "goodbye"
+      },
+      {
+        "text": "Vielen Dank, gleichfalls!",
+        "translation": {
+          "ar-SA": "شكراً جزيلاً، ولك أيضاً!",
+          "en-US": "Thank you very much, same to you!",
+          "es-ES": "¡Muchas gracias, igualmente!",
+          "fr-FR": "Merci beaucoup, pareillement !",
+          "hi-IN": "बहुत-बहुत धन्यवाद, आपको भी!",
+          "pl-PL": "Bardzo dziękuję, nawzajem!",
+          "ro-RO": "Vă mulțumesc mult, la fel!",
+          "ru-RU": "Большое спасибо, взаимно!",
+          "tr-TR": "Çok teşekkürler, size de!",
+          "uk-UA": "Велике дякую, навзаєм!",
+          "uz-UZ": "Katta rahmat, sizga ham shunday!"
+        },
+        "nextStep": "goodbye"
+      }
+    ],
+    "defaultNext": "goodbye"
+  },
+  "goodbye": {
+    "botText": "Auf Wiedersehen!",
+    "botTranslation": {
+      "ar-SA": "إلى اللقاء!",
+      "en-US": "Goodbye!",
+      "es-ES": "¡Adiós!",
+      "fr-FR": "Au revoir !",
+      "hi-IN": "अलविदा!",
+      "pl-PL": "Do widzenia!",
+      "ro-RO": "La revedere!",
+      "ru-RU": "До свидания!",
+      "tr-TR": "Hoşça kalın!",
+      "uk-UA": "До побачення!",
+      "uz-UZ": "Xayr!"
+    },
+    "options": [
+      {
+        "text": "Auf Wiedersehen!",
+        "translation": {
+          "ar-SA": "إلى اللقاء!",
+          "en-US": "Goodbye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Do widzenia!",
+          "ro-RO": "La revedere!",
+          "ru-RU": "До свидания!",
+          "tr-TR": "Hoşça kalın!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Ko'rishguncha!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Tschüss!",
+        "translation": {
+          "ar-SA": "وداعاً!",
+          "en-US": "Bye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Salut !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Cześć!",
+          "ro-RO": "Pa!",
+          "ru-RU": "Пока!",
+          "tr-TR": "Görüşürüz!",
+          "uk-UA": "Бувай!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Der Check-in ist beendet.",
+    "botTranslation": {
+      "ar-SA": "انتهى تسجيل الدخول.",
+      "en-US": "The check-in is finished.",
+      "es-ES": "El registro ha terminado.",
+      "fr-FR": "L'enregistrement est terminé.",
+      "hi-IN": "चेक-इन समाप्त हो गया है।",
+      "pl-PL": "Zameldowanie zostało zakończone.",
+      "ro-RO": "Check-in-ul s-a încheiat.",
+      "ru-RU": "Заселение завершено.",
+      "tr-TR": "Giriş işlemi bitti.",
+      "uk-UA": "Реєстрацію завершено.",
+      "uz-UZ": "Ro'yxatdan o'tish tugadi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

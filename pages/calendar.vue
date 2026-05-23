@@ -294,7 +294,7 @@ function endOfDay(dateObj) {
 }
 
 .legend__wrapper {
-  padding:  0 15px 15px 15px ;
+  padding:  0 11px 15px 11px ;
 }
 
 .page {

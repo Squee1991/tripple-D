@@ -1,5 +1,10 @@
 <template>
   <div class="header-stats">
+    <!-- ПОЛНОЭКРАННЫЙ ОВЕРЛЕЙ -->
+    <transition name="fade">
+      <div v-if="activeTooltip" class="global-overlay" @click="closeTooltips"></div>
+    </transition>
+
     <div
         v-for="item in infoData"
         :key="item.id"
@@ -22,7 +27,8 @@
         <span v-if="!userAuth.isPremium || item.id !== 'lives'" class="stat-value">{{ item.value }}</span>
       </button>
       <transition name="fade">
-        <div v-if="activeTooltip === item.id" class="tooltip-box" @click="activeTooltip === false">
+        <!-- Добавил уникальный класс для каждого тултипа на основе его id -->
+        <div v-if="activeTooltip === item.id" class="tooltip-box" :class="'tooltip-' + item.id" @click="activeTooltip = false">
           <div class="tooltip-header">
             <img :src="item.icon" class="tooltip-title-icon" :alt="item.alt">
             <div class="tooltip-title">{{ item.title }}</div>
@@ -62,6 +68,7 @@ import {ref, computed, onMounted, onBeforeUnmount} from 'vue'
 import {userlangStore} from "~/store/learningStore.js"
 import {userAuthStore} from '../../store/authStore.js'
 import { userChainStore } from '../../store/chainStore.js'
+import { useI18n } from 'vue-i18n'
 import FreezeShield from '../../assets/images/FreezeShield.svg'
 import Hats from '../../assets/images/hatsNAv.svg'
 import Articlus from '../../assets/images/article.svg'
@@ -145,6 +152,18 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
+/* СТИЛИ ОВЕРЛЕЯ */
+.global-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 9998;
+}
+
 .header-stats {
   display: flex;
   align-items: center;
@@ -216,21 +235,25 @@ onBeforeUnmount(() => {
   top: -10px;
   border-width: 0 10px 10px 10px;
   border-style: solid;
-  border-color: transparent transparent  var(--tabsSlideBorderColor) transparent;
+  border-color: transparent transparent var(--tabsSlideBorderColor) transparent;
 }
 
-.stat-item-wrapper:first-child .tooltip-box::before {
+/* Привязка стрелочек к конкретным ID, теперь они железно стоят на своих местах */
+.tooltip-rank::before {
   left: 20px;
+  right: auto;
 }
 
-.stat-item-wrapper:nth-child(2) .tooltip-box::before {
+.tooltip-article::before {
   left: 50%;
   transform: translateX(-50%);
+  right: auto;
 }
 
-.stat-item-wrapper:last-child .tooltip-box::before {
+.tooltip-lives::before {
   right: 20px;
   left: auto;
+  transform: none;
 }
 
 .tooltip-header {
@@ -271,6 +294,7 @@ onBeforeUnmount(() => {
   position: relative;
   padding-left: 14px;
   line-height: 1.4;
+  text-align: left;
 }
 
 .tooltip-list li:last-child {

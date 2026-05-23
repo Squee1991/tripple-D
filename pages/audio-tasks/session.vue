@@ -35,7 +35,7 @@
                     :fileName="currentTask.id + '_main'"
                     class="quest-card-mega-play"
                 />
-                <p class="quest-card-instruction">{{ t('imageDescription.listen')}}</p>
+                <p class="quest-card-instruction">{{ t('imageDescription.listen') }}</p>
               </div>
               <transition name="quiz-expand">
                 <div v-if="isTaskChecked" class="chat-flow">
@@ -74,38 +74,42 @@
                       @click="checkResult"
                       :disabled="!hasUserSelected"
                       class="quiz-btn quiz-btn-primary"
-              >{{ t('imageDescription.check')}}
+              >{{ t('imageDescription.check') }}
               </button>
               <div v-else class="quest-card-actions">
-                <button v-if="!isLastTask" @click="goToNextTask" class="quiz-btn quiz-btn-next">{{ t('imageDescription.further')}}</button>
-                <button v-else @click="finishAndSave" class="quiz-btn quiz-btn-finish">{{ t('imageDescription.finish')}}</button>
+                <button v-if="!isLastTask" @click="goToNextTask" class="quiz-btn quiz-btn-next">
+                  {{ t('imageDescription.further') }}
+                </button>
+                <button v-else @click="finishAndSave" class="quiz-btn quiz-btn-finish">
+                  {{ t('imageDescription.finish') }}
+                </button>
               </div>
-              <button v-if="!isTaskChecked && canSkip" @click="skipTask" class="quiz-btn quiz-btn-skip">{{ t('imageDescription.skip')}}
+              <button v-if="!isTaskChecked && canSkip" @click="skipTask" class="quiz-btn quiz-btn-skip">
+                {{ t('imageDescription.skip') }}
               </button>
             </footer>
           </article>
         </main>
       </div>
-      <div v-if="activeModal" class="modal-overlay">
-        <div class="modal-card">
-          <h3 class="modal-title">{{ modalData.title }}</h3>
-          <p :class="['modal-text', modalData.textClass]">{{ modalData.text }}</p>
-          <div v-if="activeModal === 'finish'" class="stats-grid">
-            <div v-for="(val, key) in statsMap" :key="key" :class="['stat-item', 'stat-' + key]">
-              <span v-if="key === 'total'">{{ t('imageDescription.total')}}</span>
-              <span v-else-if="key === 'correct'">{{ t('imageDescription.perfect')}}</span>
-              <span v-else-if="key === 'partial'">{{ t('imageDescription.notPerfect')}}</span>
-              <span v-else-if="key === 'wrong'">{{ t('imageDescription.mistakes')}}</span>
-              <span v-else-if="key === 'accuracy'">{{ t('imageDescription.value')}}</span>
-              <b>{{ key === 'accuracy' ? val + '%' : val }}</b>
-            </div>
-          </div>
-          <div class="modal-actions">
-            <button @click="modalData.onConfirm" class="modal-btn modal-btn-confirm">{{modalData.confirmLabel}}</button>
-            <button @click="modalData.onCancel" class="modal-btn modal-btn-cancel">{{ modalData.cancelLabel }}</button>
+      <ExitSessionModal
+          :show="!!activeModal"
+          @update:show="val => { if (!val) activeModal = null }"
+          :text-class="modalData?.textClass"
+          :icon="activeModal === 'exit' ? SadHedgehogIcon : null"
+          @cancel="modalData?.onCancel"
+          @confirm="modalData?.onConfirm"
+      >
+        <div v-if="activeModal === 'finish'" class="stats-grid">
+          <div v-for="(val, key) in statsMap" :key="key" :class="['stat-item', 'stat-' + key]">
+            <span v-if="key === 'total'">{{ t('imageDescription.total') }}</span>
+            <span v-else-if="key === 'correct'">{{ t('imageDescription.perfect') }}</span>
+            <span v-else-if="key === 'partial'">{{ t('imageDescription.notPerfect') }}</span>
+            <span v-else-if="key === 'wrong'">{{ t('imageDescription.mistakes') }}</span>
+            <span v-else-if="key === 'accuracy'">{{ t('imageDescription.value') }}</span>
+            <b>{{ key === 'accuracy' ? val + '%' : val }}</b>
           </div>
         </div>
-      </div>
+      </ExitSessionModal>
     </div>
   </div>
 </template>
@@ -117,7 +121,10 @@ import {storeToRefs} from 'pinia'
 import {useAudioTaskStore} from '../../store/audioTaskStore.js'
 import AudioButton from '../../src/components/AudioBtn.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
-const { t } = useI18n()
+import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
+import SadHedgehogIcon from '../../assets/images/Sadlyhedgehog.png'
+
+const {t} = useI18n()
 const router = useRouter()
 const store = useAudioTaskStore()
 const {allTasks, currentLevel, currentTopicId, loading, userProgress} = storeToRefs(store)
@@ -176,12 +183,12 @@ const modalData = computed(() => {
     },
     onCancel: () => activeModal.value = null
   }
-  return {
+  if (activeModal.value === 'finish') return {
     title: sessionStats.value.passed ? t('imageDescription.goodWork') : t('imageDescription.needTraining'),
     text: sessionStats.value.passed ? t('imageDescription.themeSuccess') : t('imageDescription.themeNotSuccess'),
     textClass: sessionStats.value.passed ? 'success-text' : 'fail-text',
-    confirmLabel: 'Повторить',
-    cancelLabel: 'Назад',
+    confirmLabel: t('trainerPage.repeat'),
+    cancelLabel: t('sessionNotSuccessModal.back'),
     onConfirm: () => {
       activeModal.value = null;
       initializeSession()
@@ -191,6 +198,7 @@ const modalData = computed(() => {
       router.push('/audio-tasks')
     }
   }
+  return null
 })
 
 const stopAllAudio = () => {
@@ -365,7 +373,7 @@ watch(currentIndex, stopAllAudio)
   position: relative;
 }
 
-.glare{
+.glare {
   background: rgba(255, 255, 255, 0.5);
   position: absolute;
   top: 3px;
@@ -406,7 +414,6 @@ watch(currentIndex, stopAllAudio)
 .quest-card-audio {
   flex: 1;
   background: #f1f1f1;
-
   border-radius: 16px;
   padding: 10px;
   margin-bottom: 8px;
@@ -468,7 +475,6 @@ watch(currentIndex, stopAllAudio)
   border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
 }
-
 
 .quest-card-options,
 .quest-feedback,
@@ -676,42 +682,6 @@ watch(currentIndex, stopAllAudio)
   width: 100%;
 }
 
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(30, 39, 46, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  padding: 16px;
-}
-
-.modal-card {
-  background: #ffffff;
-  padding: 24px;
-  border-radius: 28px;
-  width: 100%;
-  max-width: 340px;
-  text-align: center;
-  border: 2px solid var(--tabsSlideBorderColor);
-  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
-}
-
-.modal-title {
-  font-size: 24px;
-  font-weight: 900;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-}
-
-.modal-text {
-  font-weight: 800;
-  font-size: 16px;
-  color: #57606f;
-  margin-bottom: 20px;
-}
-
 .success-text {
   color: #2ed573;
 }
@@ -747,36 +717,6 @@ watch(currentIndex, stopAllAudio)
   margin-top: 4px;
   font-size: 16px;
   color: #ff6b81;
-}
-
-.modal-actions {
-  display: flex;
-  gap: 12px;
-}
-
-.modal-btn {
-  flex: 1;
-  padding: 12px;
-  border-radius: 26px;
-  border: 2px solid var(--tabsSlideBorderColor);
-  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
-  font-weight: 900;
-  font-size: 15px;
-  cursor: pointer;
-  transition: transform 0.1s, box-shadow 0.1s;
-}
-
-.modal-btn:active {
-  transform: translate(3px, 4px);
-  box-shadow: 0px 0px 0px #1e272e;
-}
-
-.modal-btn-confirm {
-  background: #b8e994;
-}
-
-.modal-btn-cancel {
-  background: #feca57;
 }
 
 .quiz-expand-enter-active {

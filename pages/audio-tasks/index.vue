@@ -307,7 +307,7 @@ onUnmounted(() => {
 
 .topic-list-item {
   border-radius: 20px;
-  padding: 10px 16px;
+  padding: 8px 16px;
   display: flex;
   flex-direction: column;
   cursor: pointer;

@@ -6,7 +6,8 @@
     {
       "id": "party_b1_1",
       "title": "Auf einer Party",
-      "translation": "На вечеринке",
+      "translation": "themeTextTitleBasic_B1.basicOne",
+      "icon": "\uD83E\uDD73",
       "wordsPool": ["eingeladene", "hatte", "würde", "trotzdem", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Letztes Wochenende ging ich zu einer großen Geburtstagsparty meiner besten Freundin. — Der neu " },
@@ -29,7 +30,8 @@
     {
       "id": "party_b1_2",
       "title": "Das erste Date",
-      "translation": "Первое свидание",
+      "translation": "themeTextTitleBasic_B1.basicTwo",
+      "icon": "\uD83C\uDF39",
       "wordsPool": ["vereinbarte", "hatte", "würde", "deshalb", "sonst", "nämlich", "Außerdem"],
       "textElements": [
         { "type": "text", "content": "Am Freitagnachmittag wartete ich extrem nervös vor unserem Lieblingscafé in der Innenstadt. — Das online " },
@@ -52,7 +54,8 @@
     {
       "id": "party_b1_3",
       "title": "Sprachtandem",
-      "translation": "Языковой тандем",
+      "translation": "themeTextTitleBasic_B1.basicThree",
+      "icon": "\uD83D\uDCAC",
       "wordsPool": ["gesuchte", "hatte", "würde", "trotzdem", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Ich wollte mein Spanisch verbessern und meldete mich auf einer internationalen Sprachplattform an. — Der " },
@@ -75,7 +78,8 @@
     {
       "id": "party_b1_4",
       "title": "Begegnung im Zug",
-      "translation": "Встреча в поезде",
+      "translation": "themeTextTitleBasic_B1.basicFour",
+      "icon": "\uD83D\uDE84",
       "wordsPool": ["reservierte", "hatte", "würde", "deshalb", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Auf meiner langen Reise nach München war der ICE am Wochenende extrem voll. — Der " },
@@ -98,7 +102,8 @@
     {
       "id": "party_b1_5",
       "title": "Der neue Kollege",
-      "translation": "Новый коллега",
+      "translation": "themeTextTitleBasic_B1.basicFive",
+      "icon": "\uD83E\uDDD1\u200D\uD83D\uDCBC",
       "wordsPool": ["eingestellte", "hatte", "würde", "trotzdem", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Am Montagmorgen stellte der Chef uns im Meetingraum ein völlig neues Teammitglied vor. — Der frisch " },
@@ -121,7 +126,8 @@
     {
       "id": "party_b1_6",
       "title": "Auf einem Seminar",
-      "translation": "На семинаре",
+      "translation": "themeTextTitleBasic_B1.basicSix",
+      "icon": "\uD83D\uDCF8",
       "wordsPool": ["organisierte", "hatte", "würde", "deshalb", "sonst", "nämlich", "Außerdem"],
       "textElements": [
         { "type": "text", "content": "Letzte Woche nahm ich an einem sehr interessanten Wochenendseminar für digitale Fotografie teil. — Das perfekt " },
@@ -144,7 +150,8 @@
     {
       "id": "party_b1_7",
       "title": "Beim Gassigehen",
-      "translation": "На прогулке с собакой",
+      "translation": "themeTextTitleBasic_B1.basicSeven",
+      "icon": "\uD83D\uDC15",
       "wordsPool": ["gerettete", "hatte", "würde", "trotzdem", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Am frühen Sonntagmorgen ging ich mit meinem Hund im großen Stadtpark gemütlich spazieren. — Der aus dem Tierheim " },
@@ -167,7 +174,8 @@
     {
       "id": "party_b1_8",
       "title": "Die neuen Nachbarn",
-      "translation": "Новые соседи",
+      "translation": "themeTextTitleBasic_B1.basicEight",
+      "icon": "\uD83C\uDFE1",
       "wordsPool": ["gebackene", "hatte", "würde", "deshalb", "sonst", "nämlich", "Außerdem"],
       "textElements": [
         { "type": "text", "content": "Vor genau einem Monat zog eine junge Familie in die leere Wohnung direkt neben mir ein. — Der von mir liebevoll " },
@@ -190,7 +198,8 @@
     {
       "id": "party_b1_9",
       "title": "Im Sportverein",
-      "translation": "В спортивном клубе",
+      "translation": "themeTextTitleBasic_B1.basicNine",
+      "icon": "\uD83C\uDFD0",
       "wordsPool": ["gegründete", "hatte", "würde", "trotzdem", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Im Januar beschloss ich endlich, einem lokalen Volleyballverein in meiner neuen Stadt beizutreten. — Die neu " },
@@ -213,7 +222,8 @@
     {
       "id": "party_b1_10",
       "title": "Im Hostel auf Reisen",
-      "translation": "В хостеле в путешествии",
+      "translation": "themeTextTitleBasic_B1.basicTen",
+      "icon": "\uD83C\uDF92",
       "wordsPool": ["gebuchte", "hatte", "würde", "deshalb", "sonst", "nämlich", "Außerdem"],
       "textElements": [
         { "type": "text", "content": "Während meiner Rucksacktour durch Italien übernachtete ich in einem sehr günstigen und lauten Hostel in Rom. — Das kurzfristig " },

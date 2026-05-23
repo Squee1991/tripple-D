@@ -203,11 +203,11 @@ async function processAccountCleanup() {
 }
 
 .account-cleanup__title {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 900;
   margin-left: 15px;
-  color: var(--titleColor);
-  text-shadow: 0 1px var(--titleColor);
+  color: var(--title);
+  text-shadow: 0 1px var(--title);
 }
 
 .header-spacer {
@@ -231,7 +231,7 @@ async function processAccountCleanup() {
 }
 
 .account-cleanup__section {
-  background: #FFFFFF;
+  background: var(--settingsSectionBg);
   border-radius: 28px;
   padding: 24px;
   margin-bottom: 15px;
@@ -240,20 +240,20 @@ async function processAccountCleanup() {
 }
 
 .account-cleanup__section--danger {
-  background: #ffffff;
+  background: var(--settingsSectionBg);
 }
 
 .account-cleanup__icon-box {
   width: 40px;
   height: 40px;
-  background: #FF4B4B;
+  background: #d56363;
   border-radius: 12px;
   color: #FFF;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 24px;
   flex-shrink: 0;
 }
 
@@ -269,18 +269,19 @@ async function processAccountCleanup() {
   margin: 0;
   font-size: 15px;
   line-height: 1.4;
+  color: var(--title);
 }
 
 .account-cleanup__heading {
   font-size: 1.4rem;
   font-weight: 900;
   margin-bottom: 12px;
-  color: #000;
+  color: var(--titleColor);
 }
 
 .account-cleanup__info-text {
   font-weight: 700;
-  color: #666;
+  color: var(--title);
   margin-bottom: 24px;
 }
 
@@ -295,8 +296,8 @@ async function processAccountCleanup() {
   flex-direction: column;
   gap: 12px;
   padding: 16px;
-  background: #F9FBFF;
-  border: 2px solid #EEE;
+  border: var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 20px;
 }
 
@@ -310,19 +311,20 @@ async function processAccountCleanup() {
   font-size: 1.1rem;
   font-weight: 900;
   margin: 0;
+  color: var(--titleColor);
 }
 
 .account-cleanup__card-desc {
   font-weight: 700;
   font-size: 14px;
-  color: #444;
+  color: var(--title);
   margin: 0 0 8px 0;
 }
 
 .account-cleanup__card-hint {
   background: #FFF;
   border: 2px solid #e1dfdf;
-  border-radius: 12px;
+  border-radius: 18px;
   padding: 12px;
   font-size: 13px;
   font-weight: 800;
@@ -334,7 +336,7 @@ async function processAccountCleanup() {
 
 .account-cleanup__btn-main {
   width: 100%;
-  background: #FFF;
+  background: none;
   color: #9f9696;
   border-radius: 24px;
   padding: 10px;

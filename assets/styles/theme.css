@@ -40,7 +40,7 @@
     --tabsSlideBg: #fff;
     --tabsSlideBorderColor: #d9d8d8;
 
-    --tabSlideBoxShadow: 0 4px 12px rgba(141, 134, 190, 0.5);
+    --tabSlideBoxShadow: 0 4px 6px rgba(141, 134, 190, 0.5);
     --tabBg: #e1dddd;
      --bgTitle: #36c95d;
     --borderRegion: #726a6a;
@@ -52,10 +52,12 @@
     --homeBg: #f3f1f0;
     --landNameBg: linear-gradient(180deg, rgb(170 158 158 / 75%), rgb(31 29 29 / 60%));
     --title: #636161;
+    --bgModal: white;
 
 }
 
 .dark {
+    --bgModal: #1b1a1a;
     --title: #ebe5e5;
     --landNameBg: linear-gradient(180deg, rgb(41 38 38 / 75%), rgb(31 29 29 / 60%));;
     --homeBg: #ffd54f;

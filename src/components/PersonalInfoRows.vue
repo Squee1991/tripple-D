@@ -109,7 +109,7 @@
             📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}
           </p>
           <p v-else>
-            Получи максимум от платформы, ускорь свое обучение.
+           {{ t('premiumBannerText.text')}}
           </p>
         </div>
         <div class="premium-actions">
