@@ -1,0 +1,548 @@
+{
+  "start": {
+    "botText": "Zahnarztpraxis Dr. Weber, guten Tag.",
+    "botTranslation": {
+      "ru-RU": "Стоматологическая практика доктора Вебера, добрый день.",
+      "en-US": "Dental practice Dr. Weber, good day.",
+      "ar-SA": "عيادة طبيب الأسنان الدكتور فيبر، نهارك سعيد.",
+      "es-ES": "Consulta odontológica del Dr. Weber, buenos días.",
+      "fr-FR": "Cabinet dentaire Dr Weber, bonjour.",
+      "hi-IN": "दंत चिकित्सा अभ्यास डॉ. वेबर, शुभ दिन।",
+      "pl-PL": "Gabinet stomatologiczny dr Webera, dzień dobry.",
+      "ro-RO": "Cabinetul stomatologic Dr. Weber, bună ziua.",
+      "tr-TR": "Diş Hekimi Dr. Weber Muayenehanesi, iyi günler.",
+      "uk-UA": "Стоматологічна практика доктора Вебера, добрий день.",
+      "uz-UZ": "Stomatologiya klinikasi doktor Weber, xayrli kun."
+    },
+    "tips": {
+      "ru-RU": "Сложное слово 'die Zahnarztpraxis' состоит из Zahn (зуб) + Arzt (врач) + Praxis (практика). В ответе 'ich möchte einen Termin' глагол 'möchten' требует Akkusativ: мужской род 'der Termin' берет у артикля форму 'einen' -> 'einen Termin'.",
+      "en-US": "The compound word 'Zahnarztpraxis' consists of Zahn + Arzt + Praxis. In 'ich möchte einen Termin', 'möchten' requires Akkusativ: masculine 'der Termin' takes the article form 'einen'.",
+      "ar-SA": "الكلمة المركبة 'Zahnarztpraxis' تتكون من سن + طبيب + عيادة. الفعل 'möchten' يتطلب حالة Akkusativ.",
+      "es-ES": "La palabra compuesta 'Zahnarztpraxis' se compone de diente + médico + consulta. El verbo 'möchten' requiere Akkusativ.",
+      "fr-FR": "Le mot composé 'Zahnarztpraxis' se compose de dent + médecin + cabinet. Le verbe 'möchten' requiert l'Akkusativ.",
+      "hi-IN": "यौगिक शब्द 'Zahnarztpraxis' दांत + डॉक्टर + अभ्यास से बना है। 'möchten' को Akkusativ की आवश्यकता होती है।",
+      "pl-PL": "Słowo złożone 'Zahnarztpraxis' składa się z Zahn + Arzt + Praxis. Czasownik 'möchten' wymaga biernika (Akkusativ).",
+      "ro-RO": "Cuvântul compus 'Zahnarztpraxis' este format aus din dinte + medic + cabinet. Verbul 'möchten' cere Akkusativ.",
+      "tr-TR": "'Zahnarztpraxis' bileşik bir kelimedir: diş + doktor + muayenehane. 'möchten' fiili Akkusativ gerektirir.",
+      "uk-UA": "Складне слово 'die Zahnarztpraxis' складається з Zahn + Arzt + Praxis. Дієслово 'möchten' вимагає Akkusativ: чоловічий рід 'der Termin' бере форму 'einen'.",
+      "uz-UZ": "'Zahnarztpraxis' murakkab so'zi tish + shifokor + klinika qismlaridan iborat. 'möchten' fe'li Akkusativ talab qiladi."
+    },
+    "options": [
+      {
+        "text": "Guten Tag, ich möchte einen Termin vereinbaren.",
+        "translation": {
+          "ru-RU": "Добрый день, я бы хотел(а) назначить прием.",
+          "en-US": "Good day, I would like to make an appointment.",
+          "ar-SA": "طاب يومك، أود تحديد موعد.",
+          "es-ES": "Buen día, me gustaría pedir una cita.",
+          "fr-FR": "Bonjour, je voudrais prendre un rendez-vous.",
+          "hi-IN": "शुभ दिन, मैं एक अपॉइंटमेंट लेना चाहूंगी।",
+          "pl-PL": "Dzień dobry, chciał(a)bym umówić wizytę.",
+          "ro-RO": "Bună ziua, aș dori să fac o programare.",
+          "tr-TR": "İyi günler, bir randevu almak istiyorum.",
+          "uk-UA": "Добрий день, я хотів(ла) би призначити прийом.",
+          "uz-UZ": "Xayrli kun, men qabulga yozilmoqchi edim."
+        },
+        "nextStep": "problem"
+      },
+      {
+        "text": "Guten Tag, ich brauche einen Termin, ich habe Zahnschmerzen.",
+        "translation": {
+          "ru-RU": "Добрый день, мне нужен прием, у меня зубная боль.",
+          "en-US": "Good day, I need an appointment, I have a toothache.",
+          "ar-SA": "طاب يومك، أحتاج إلى موعد، لدي ألم في الأسنان.",
+          "es-ES": "Buen día, necesito una cita, tengo dolor de muelas.",
+          "fr-FR": "Bonjour, j'ai besoin d'un rendez-vous, j'ai mal aux dents.",
+          "hi-IN": "शुभ दिन, मुझे एक अपॉइंटमेंट चाहिए, मेरे दांत में दर्द है।",
+          "pl-PL": "Dzień dobry, potrzebuję terminu wizyty, boli mnie ząb.",
+          "ro-RO": "Bună ziua, am nevoie de o programare, am dureri de dinți.",
+          "tr-TR": "İyi günler, bir randevuya ihtiyacım var, diş ağrım var.",
+          "uk-UA": "Добрий день, мені потрібен прийом, у мене зубний біль.",
+          "uz-UZ": "Xayrli kun, menga qabul vaqti kerak, tishim og'riyapti."
+        },
+        "nextStep": "problem"
+      }
+    ],
+    "defaultNext": "problem"
+  },
+  "problem": {
+    "botText": "Oh, das tut mir leid. Was genau ist denn das Problem?",
+    "botTranslation": {
+      "ru-RU": "О, мне очень жаль. Что именно за проблема?",
+      "en-US": "Oh, I'm sorry to hear that. What exactly is the problem?",
+      "ar-SA": "أوه، أنا آسف لسماع ذلك. ما هي المشكلة بالضبط؟",
+      "es-ES": "Oh, lo siento. ¿Cuál es exactamente el problema?",
+      "fr-FR": "Oh, je suis désolé. Quel est le problème exactement ?",
+      "hi-IN": "ओह, मुझे खेद है। वास्तव में समस्या क्या है?",
+      "pl-PL": "Och, przykro mi. Co dokładnie się dzieje?",
+      "ro-RO": "Oh, îmi pare rău. Care este mai exact problema?",
+      "tr-TR": "Oh, üzüldüm. Sorun tam olarak nedir?",
+      "uk-UA": "О, мені дуже шкода. Що саме за проблема?",
+      "uz-UZ": "Oh, afsusdaman. Muammo aniq nimada?"
+    },
+    "tips": {
+      "ru-RU": "В ответе 'Schmerzen an einem Backenzahn' предлог 'an' отвечает на вопрос 'Где?' (Wo? — на коренном зубе), поэтому мы используем Dativ и ставим артикль существительного в Dativ. Мужской род 'der Backenzahn' берет у артикля форму 'einem'.",
+      "en-US": "In 'Schmerzen an einem Backenzahn', the preposition 'an' answers 'Where?' (Wo?), so we use Dativ. Masculine 'der Backenzahn' takes the article form 'einem'.",
+      "ar-SA": "حرف الجر 'an' يجيب على السؤال 'أين؟' (Wo؟)، لذا نستخدم Dativ.",
+      "es-ES": "La preposición 'an' responde a '¿Dónde?' (Wo?), por lo que usamos Dativ.",
+      "fr-FR": "La préposition 'an' répond à 'Où ?' (Wo?), donc on utilise le Datif.",
+      "hi-IN": "पूर्वसर्ग 'an' 'कहाँ?' (Wo?) का उत्तर देता है, इसलिए हम Dativ का उपयोग करते हैं।",
+      "pl-PL": "Przyimek 'an' odpowiada na pytanie 'Gdzie?' (Wo?), dlatego używamy celownika (Dativ).",
+      "ro-RO": "Prepoziția 'an' răspunde la 'Unde?' (Wo?), deci folosim Dativ.",
+      "tr-TR": "'an' edatı 'Nerede?' (Wo?) sorusuna yanıt verir, bu yüzden Dativ kullanırız.",
+      "uk-UA": "У відповіді прийменник 'an' відповідає на питання 'Де?' (Wo?), тому використовується Dativ. Чоловічий рід 'der Backenzahn' бере форму 'einem'.",
+      "uz-UZ": "'an' predlogi 'Qayerda?' (Wo?) savoliga javob beradi, shuning uchun Dativ qo'llaniladi."
+    },
+    "options": [
+      {
+        "text": "Ich habe seit zwei Tagen Schmerzen an einem Backenzahn.",
+        "translation": {
+          "ru-RU": "У меня уже два дня болит коренной зуб.",
+          "en-US": "I have had pain in a molar for two days.",
+          "ar-SA": "لدي ألم في أحد الضروس منذ يومين.",
+          "es-ES": "Tengo dolor en una muela desde hace dos días.",
+          "fr-FR": "J'ai mal à una molaire depuis deux jours.",
+          "hi-IN": "मुझे दो दिनों से दाढ़ में दर्द है।",
+          "pl-PL": "Od dwóch dni boli mnie ząb trzonowy.",
+          "ro-RO": "Am dureri la un dinte molar de două zile.",
+          "tr-TR": "İki gündür azı dişimde ağrı var.",
+          "uk-UA": "У мене вже два дні болить корінний зуб.",
+          "uz-UZ": "Ikki kundan beri azı tishim og'riyapti."
+        },
+        "nextStep": "historie"
+      },
+      {
+        "text": "Mein Zahnfleisch ist entzündet und tut sehr weh.",
+        "translation": {
+          "ru-RU": "У меня воспалилась десна и очень болит.",
+          "en-US": "My gums are inflamed and hurt a lot.",
+          "ar-SA": "لثتي ملتهبة وتؤلمني كثيراً.",
+          "es-ES": "Mis encías están inflamadas y me duelen mucho.",
+          "fr-FR": "Mes gencives sont enflammées et me font très mal.",
+          "hi-IN": "मसूड़ों में सूजन है और बहुत दर्द हो रहा है।",
+          "pl-PL": "Moje dziąsło jest zapalone i bardzo boli.",
+          "ro-RO": "Gingiile mele sunt inflamate și mă dor foarte tare.",
+          "tr-TR": "Diş etim iltihaplandı ve çok ağrıyor.",
+          "uk-UA": "У мене запалилися ясна і дуже болять.",
+          "uz-UZ": "Milkim yallig'langan va juda qattiq og'riyapti."
+        },
+        "nextStep": "historie"
+      }
+    ],
+    "defaultNext": "historie"
+  },
+  "historie": {
+    "botText": "Waren Sie schon einmal bei uns in der Praxis?",
+    "botTranslation": {
+      "ru-RU": "Вы уже были когда-нибудь у нас в праксисе (клинике)?",
+      "en-US": "Have you ever been to our practice before?",
+      "ar-SA": "هل زرت عيادتنا من قبل؟",
+      "es-ES": "¿Ha estado alguna vez в nuestra consulta?",
+      "fr-FR": "Êtes-vous déjà venu à notre cabinet ?",
+      "hi-IN": "क्या आप पहले कभी हमारे अभ्यास में आए हैं?",
+      "pl-PL": "Czy był(a) pan/pani już kiedyś w naszym gabinecie?",
+      "ro-RO": "Ați mai fost vreodată la cabinetul nostru?",
+      "tr-TR": "Daha önce muayenehanemize gelmiş miydiniz?",
+      "uk-UA": "Ви вже були колись у нас в праксисі (клініці)?",
+      "uz-UZ": "Oldin ham klinikamizga kelganmisiz?"
+    },
+    "tips": {
+      "ru-RU": "Предлог 'bei' всегда требует Dativ ('bei uns'). На вопрос 'Где?' (Wo? — в праксисе) мы используем Dativ и ставим артикль в Dativ: женский род 'die Praxis' берет у артикля форму 'der' (in + der = in der Praxis). Выражение 'zum ersten Mal' (в первый раз) — устойчивое.",
+      "en-US": "The preposition 'bei' always requires Dativ. For 'Where?' (Wo?), feminine 'die Praxis' takes the article form 'der' (in der Praxis).",
+      "ar-SA": "حرف الجر 'bei' يتطلب دائماً Dativ. كلمة 'die Praxis' مؤنثة وتأخذ 'der' في حالة Dativ.",
+      "es-ES": "La preposición 'bei' siempre requiere Dativ. El sustantivo femenino 'die Praxis' toma 'der' en Dativ.",
+      "fr-FR": "La préposition 'bei' requiert toujours le Datif. Le nom féminin 'die Praxis' prend la forme 'der' au Datif.",
+      "hi-IN": "पूर्वसर्ग 'bei' को हमेशा Dativ की आवश्यकता होती है। 'die Praxis' Dativ में 'der' रूप लेती है।",
+      "pl-PL": "Przyimek 'bei' zawsze wymaga celownika (Dativ). Rzeczownik żeński 'die Praxis' przyjmuje formę przedimka 'der'.",
+      "ro-RO": "Prepoziția 'bei' cere mereu Dativ. Substantivul feminin 'die Praxis' ia forma 'der' în Dativ.",
+      "tr-TR": "'bei' edatı her zaman Dativ gerektirir. Dişil isim 'die Praxis', Dativ'de 'der' formunu alır.",
+      "uk-UA": "Прийменник 'bei' завжди вимагає Dativ. На питання 'Де?' (Wo?) жіночий рід 'die Praxis' бере форму 'der' (in der Praxis).",
+      "uz-UZ": "'bei' predlogi doim Dativni talab qiladi. Ayol jinsidagi 'die Praxis' Dativda 'der' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Ja, ich war schon einmal bei Ihnen.",
+        "translation": {
+          "ru-RU": "Да, я уже был(а) у Вас.",
+          "en-US": "Yes, I have been to see you before.",
+          "ar-SA": "نعم، لقد زرتكم من قبل.",
+          "es-ES": "Sí, ya he estado aquí antes.",
+          "fr-FR": "Oui, je suis déjà venu chez vous.",
+          "hi-IN": "हाँ, मैं पहले आपके पास आ चुकी हूँ।",
+          "pl-PL": "Tak, już kiedyś u państwa był(e)m/am.",
+          "ro-RO": "Да, am mai fost la dumneavoastră.",
+          "tr-TR": "Evet, daha önce size gelmiştim.",
+          "uk-UA": "Так, я вже був(ла) у Вас.",
+          "uz-UZ": "Ha, oldin sizning qabulingizda bo'lganman."
+        },
+        "nextStep": "name"
+      },
+      {
+        "text": "Nein, ich bin zum ersten Mal bei Ihnen.",
+        "translation": {
+          "ru-RU": "Нет, я у Вас в первый раз.",
+          "en-US": "No, I am here for the first time.",
+          "ar-SA": "لا، هذه هي المرة الأولى لي عندكم.",
+          "es-ES": "No, es mi primera vez aquí.",
+          "fr-FR": "Non, c'est la première fois que je viens chez vous.",
+          "hi-IN": "नहीं, मैं पहली बार आपके पास आई हूँ।",
+          "pl-PL": "Nie, jestem u państwa po raz pierwszy.",
+          "ro-RO": "Nu, sunt pentru prima dată la dumneavoastră.",
+          "tr-TR": "Hayır, size ilk defa geliyorum.",
+          "uk-UA": "Ні, я у Вас вперше.",
+          "uz-UZ": "Yo'q, men birinchi marta kelyapman."
+        },
+        "nextStep": "name"
+      }
+    ],
+    "defaultNext": "name"
+  },
+  "name": {
+    "botText": "Alles klar. Wie ist Ihr Name bitte?",
+    "botTranslation": {
+      "ru-RU": "Хорошо. Как Ваше имя, пожалуйста?",
+      "en-US": "All right. What is your name, please?",
+      "ar-SA": "حسناً. ما اسمك من فضلك؟",
+      "es-ES": "Muy bien. ¿Su nombre, por favor?",
+      "fr-FR": "D'accord. Quel est votre nom, s'il vous plaît ?",
+      "hi-IN": "सब ठीक है। कृपया आपका नाम क्या है?",
+      "pl-PL": "Wszystko jasne. Jak się pan/pani nazywa?",
+      "ro-RO": "În regulă. Cum vă numiți, vă rog?",
+      "tr-TR": "Anlaşıldı. Adınız nedir lütfen?",
+      "uk-UA": "Все зрозуміло. Як Ваше ім'я, будь ласка?",
+      "uz-UZ": "Tushunarli. Ismingiz nima, iltimos?"
+    },
+    "tips": {
+      "ru-RU": "Конструкция 'Wie ist Ihr Name?' или 'Ich heiße...' использует Nominativ (именительный падеж). Притяжательное местоимение 'Ihr' пишется с большой буквы при вежливом обращении.",
+      "en-US": "The constructions 'Wie ist Ihr Name?' or 'Ich heiße...' use Nominativ. 'Ihr' is capitalized as a sign of respect.",
+      "ar-SA": "التراكيب مثل 'Wie ist Ihr Name؟' تستخدم حالة الرفع Nominativ.",
+      "es-ES": "Las estructuras 'Wie ist Ihr Name?' o 'Ich heiße...' usan Nominativ.",
+      "fr-FR": "Les structures 'Wie ist Ihr Name ?' ou 'Ich heiße...' utilisent le Nominatif.",
+      "hi-IN": "'Wie ist Ihr Name?' या 'Ich heiße...' संरचनाएं Nominativ का उपयोग करती हैं।",
+      "pl-PL": "Konstrukcje 'Wie ist Ihr Name?' oraz 'Ich heiße...' wymagają mianownika (Nominativ).",
+      "ro-RO": "Construcțiile 'Wie ist Ihr Name?' sau 'Ich heiße...' folosesc Nominativ.",
+      "tr-TR": "'Wie ist Ihr Name?' veya 'Ich heiße...' yapıları Nominativ kullanır.",
+      "uk-UA": "Конструкції 'Wie ist Ihr Name?' або 'Ich heiße...' використовують Nominativ. Займенник 'Ihr' пишеться з великої літери.",
+      "uz-UZ": "'Wie ist Ihr Name?' yoki 'Ich heiße...' qurilmalari Nominativ shaklida bo'ladi."
+    },
+    "options": [
+      {
+        "text": "Mein Name ist Ivanov.",
+        "translation": {
+          "ru-RU": "Меня зовут Иванов.",
+          "en-US": "My name is Ivanov.",
+          "ar-SA": "اسمي إيفانوف.",
+          "es-ES": "Mi nombre es Ivanov.",
+          "fr-FR": "Mon nom est Ivanov.",
+          "hi-IN": "मेरा नाम इवानोव है।",
+          "pl-PL": "Nazywam się Ivanov.",
+          "ro-RO": "Numele meu este Ivanov.",
+          "tr-TR": "Adım Ivanov.",
+          "uk-UA": "Мене звати Іванов.",
+          "uz-UZ": "Mening ismim Ivanov."
+        },
+        "nextStep": "zeit"
+      },
+      {
+        "text": "Ich heiße Ivanov.",
+        "translation": {
+          "ru-RU": "Я зовусь Иванов (Моя фамилия Иванов).",
+          "en-US": "I am called Ivanov.",
+          "ar-SA": "أدعى إيفانوف.",
+          "es-ES": "Me llamo Ivanov.",
+          "fr-FR": "Je m'appelle Ivanov.",
+          "hi-IN": "मुझे इवानोव कहा जाता है।",
+          "pl-PL": "Nazywam się Ivanov.",
+          "ro-RO": "Mă numesc Ivanov.",
+          "tr-TR": "Benim adım Ivanov.",
+          "uk-UA": "Я звуся Іванов.",
+          "uz-UZ": "Ismim Ivanov."
+        },
+        "nextStep": "zeit"
+      }
+    ],
+    "defaultNext": "zeit"
+  },
+  "zeit": {
+    "botText": "Danke. Haben Sie heute um 14:00 Uhr Zeit?",
+    "botTranslation": {
+      "ru-RU": "Спасибо. У Вас есть сегодня время в 14:00?",
+      "en-US": "Thank you. Do you have time today at 2:00 PM?",
+      "ar-SA": "شكراً لك. هل لديك وقت اليوم الساعة الثانية ظهراً؟",
+      "es-ES": "Gracias. ¿Tiene tiempo hoy a las 14:00?",
+      "fr-FR": "Merci. Avez-vous du temps aujourd'hui à 14h00 ?",
+      "hi-IN": "धन्यवाद। क्या आपके पास आज दोपहर 2:00 बजे का समय है?",
+      "pl-PL": "Dziękuję. Czy ma pan/pani dziś czas o 14:00?",
+      "ro-RO": "Mulțumesc. Aveți timp astăzi la ora 14:00?",
+      "tr-TR": "Teşekkürler. Bugün saat 14:00'te vaktiniz var mı?",
+      "uk-UA": "Дякую. У Вас є сьогодні час о 14:00?",
+      "uz-UZ": "Rahmat. Bugun soat 14:00 da vaqtingiz bormi?"
+    },
+    "tips": {
+      "ru-RU": "Перед указанием времени всегда используется предлог 'um' (um 14:00 Uhr). Слово 'die Zeit' (время) женского рода, глагол 'haben' требует Akkusativ (haben Sie Zeit).",
+      "en-US": "Before time, the preposition 'um' is always used. The noun 'die Zeit' is feminine, and 'haben' requires Akkusativ.",
+      "ar-SA": "قبل الوقت نستخدم دائماً حرف الجر 'um'.",
+      "es-ES": "Antes de la hora siempre se usa la preposición 'um'.",
+      "fr-FR": "Avant l'heure, on utilise toujours la préposition 'um'.",
+      "hi-IN": "समय से पहले हमेशा 'um' पूर्वसर्ग का उपयोग किया जाता है।",
+      "pl-PL": "Przed określaniem godziny zawsze używamy przyimka 'um' (um 14:00 Uhr).",
+      "ro-RO": "Înainte de oră se folosește întotdeauna prepoziția 'um'.",
+      "tr-TR": "Saatlerden önce her zaman 'um' edatı kullanılır.",
+      "uk-UA": "Перед часом завжди використовується прийменник 'um'. Іменник 'die Zeit' жіночого роду.",
+      "uz-UZ": "Vaqtlar oldidan doim 'um' predlogi ishlatiladi."
+    },
+    "options": [
+      {
+        "text": "Ja, das passt mir sehr gut.",
+        "translation": {
+          "ru-RU": "Да, это мне очень хорошо подходит.",
+          "en-US": "Yes, that suits me very well.",
+          "ar-SA": "نعم، هذا يناسبني جداً.",
+          "es-ES": "Sí, me viene muy bien.",
+          "fr-FR": "Oui, ça me convient très bien.",
+          "hi-IN": "हाँ, यह मेरे लिए बहुत उपयुक्त है।",
+          "pl-PL": "Tak, to mi bardzo odpowiada.",
+          "ro-RO": "Da, îmi convine foarte bine.",
+          "tr-TR": "Evet, bu bana çok uyuyor.",
+          "uk-UA": "Так, це мені дуже добре підходить.",
+          "uz-UZ": "Ha, bu menga juda mos keladi."
+        },
+        "nextStep": "karte"
+      },
+      {
+        "text": "Super, das geht bei mir perfekt.",
+        "translation": {
+          "ru-RU": "Супер, у меня это идеально получается (подходит).",
+          "en-US": "Great, that works perfectly for me.",
+          "ar-SA": "ممتاز، هذا يناسبني تماماً.",
+          "es-ES": "Genial, me va perfecto.",
+          "fr-FR": "Super, ça marche parfaitement pour moi.",
+          "hi-IN": "बढ़िया, यह मेरे लिए बिल्कुल सही रहेगा।",
+          "pl-PL": "Super, to mi idealnie pasuje.",
+          "ro-RO": "Super, funcționează perfect la mine.",
+          "tr-TR": "Harika, bu benim için mükemmel olur.",
+          "uk-UA": "Супер, у мене це ідеально виходить.",
+          "uz-UZ": "Ajoyib, bu vaqt menga to'liq to'g'ri keladi."
+        },
+        "nextStep": "karte"
+      }
+    ],
+    "defaultNext": "karte"
+  },
+  "karte": {
+    "botText": "Gut, ich habe den Termin notiert. Bitte Krankenkassenkarte mitbringen.",
+    "botTranslation": {
+      "ru-RU": "Хорошо, я записал(а) прием. Пожалуйста, принесите с собой карточку медицинского страхования.",
+      "en-US": "Good, I have noted the appointment. Please bring your health insurance card.",
+      "ar-SA": "حسنًا، لقد سجلت الموعد. يرجى إحضار بطاقة التأمين الصحي الخاصة بك.",
+      "es-ES": "Bien, he anotado la cita. Por favor, traiga su tarjeta de seguro médico.",
+      "fr-FR": "Bien, j'ai noté le rendez-vous. Veuillez apporter votre carte d'assurance maladie.",
+      "hi-IN": "अच्छा, मैंने अपॉइंटमेंट नोट कर लिया है। कृपया अपना स्वास्थ्य बीमा कार्ड लाएँ।",
+      "pl-PL": "Dobrze, zapisałem/am wizytę. Proszę przynieść kartę ubezpieczenia zdrowotnego.",
+      "ro-RO": "Bine, am notat programarea. Vă rog să aduceți cardul de asigurări de sănătate.",
+      "tr-TR": "Güzel, randevuyu kaydettim. Lütfen sağlık sigortası kartınızı yanınızda getirin.",
+      "uk-UA": "Добре, я записав(ла) прийом. Будь ласка, принесіть із собою картку медичного страхування.",
+      "uz-UZ": "Yaxshi, men qabul vaqtini belgiladim. Iltimos, tibbiy sug'urta kartangizni olib keling."
+    },
+    "tips": {
+      "ru-RU": "В ответе 'die bringe ich mit' используется глагол с отделяемой приставкой 'mitbringen' (приставка 'mit' уходит в самый конец). Местоимение 'die' заменяет слово 'die Krankenkassenkarte' в Akkusativ.",
+      "en-US": "The verb 'mitbringen' has a separable prefix 'mit' which goes to the very end. 'die' replaces the feminine noun in Akkusativ.",
+      "ar-SA": "الفعل 'mitbringen' له بادئة قابلة للانفصال تذهب إلى النهاية.",
+      "es-ES": "El verbo 'mitbringen' tiene un prefijo separable 'mit' que va al final.",
+      "fr-FR": "Le verbe 'mitbringen' a un préfixe séparable 'mit' qui se place tout à la fin.",
+      "hi-IN": "क्रिया 'mitbringen' में एक अलग होने वाला उपसर्ग 'mit' है जो अंत में जाता है।",
+      "pl-PL": "Czasownik 'mitbringen' posiada rozdzielny przedrostek 'mit', który wędruje na sam koniec zdania.",
+      "ro-RO": "Verbul 'mitbringen' are un prefix separabil 'mit' care merge la sfârșit.",
+      "tr-TR": "'mitbringen' fiili ayrılabilen bir öneke ('mit') sahiptir ve bu ek cümlenin en sonuna gider.",
+      "uk-UA": "Дієслово 'mitbringen' має відокремлювану префікс 'mit', яка йде в самий кінець. Займенник 'die' замінює іменник жіночого роду.",
+      "uz-UZ": "'mitbringen' fe'li ajraladigan 'mit' old qo'shimchasiga ega va u gap oxiriga o'tadi."
+    },
+    "options": [
+      {
+        "text": "Alles klar, die bringe ich mit.",
+        "translation": {
+          "ru-RU": "Все ясно, я ее принесу с собой.",
+          "en-US": "All right, I'll bring it with me.",
+          "ar-SA": "واضح، سأحضرها معي.",
+          "es-ES": "Está bien, la traeré conmigo.",
+          "fr-FR": "D'accord, je l'apporterai.",
+          "hi-IN": "सब समझ आ गया, मैं इसे साथ लाऊंगी।",
+          "pl-PL": "Wszystko jasne, przyniosę ją.",
+          "ro-RO": "În regulă, o voi aduce cu mine.",
+          "tr-TR": "Anlaşıldı, onu yanımda getiririm.",
+          "uk-UA": "Все ясно, я її принесу з собою.",
+          "uz-UZ": "Tushunarli, uni o'zim bilan olib kelaman."
+        },
+        "nextStep": "puenktlich"
+      },
+      {
+        "text": "Danke für den Hinweis, ich vergesse sie nicht.",
+        "translation": {
+          "ru-RU": "Спасибо за напоминание (указание), я её не забуду.",
+          "en-US": "Thanks for the reminder, I won't forget it.",
+          "ar-SA": "شكراً على التنبيه، لن أنساها.",
+          "es-ES": "Gracias por el aviso, no её olvidaré.",
+          "fr-FR": "Merci pour le rappel, je ne l'oublierai pas.",
+          "hi-IN": "याद दिलाने के लिए धन्यवाद, मैं इसे नहीं भूलूंगी।",
+          "pl-PL": "Dziękuję za przypomnienie, nie zapomnę jej.",
+          "ro-RO": "Mulțumesc pentru informare, nu o voi uita.",
+          "tr-TR": "Hatırlatma için teşekkürler, onu unutmam.",
+          "uk-UA": "Дякую за нагадування, я її не забуду.",
+          "uz-UZ": "Eslatma uchun rahmat, uni unutmayman."
+        },
+        "nextStep": "puenktlich"
+      }
+    ],
+    "defaultNext": "puenktlich"
+  },
+  "puenktlich": {
+    "botText": "Bitte kommen Sie 10 Minuten vor dem Termin.",
+    "botTranslation": {
+      "ru-RU": "Пожалуйста, приходите за 10 минут до приема.",
+      "en-US": "Please arrive 10 minutes before the appointment.",
+      "ar-SA": "يرجى الحضور قبل الموعد بـ 10 دقائق.",
+      "es-ES": "Por favor, venga 10 minutos antes de la cita.",
+      "fr-FR": "Veuillez venir 10 minutes avant le rendez-vous.",
+      "hi-IN": "कृपया अपॉइंटमेंट से 10 मिनट पहले आएं।",
+      "pl-PL": "Proszę przyjść 10 minut przed wizytą.",
+      "ro-RO": "Vă rog să veniți cu 10 minute înainte de programare.",
+      "tr-TR": "Lütfen randevudan 10 dakika önce gelin.",
+      "uk-UA": "Будь ласка, приходьте за 10 хвилин до прийому.",
+      "uz-UZ": "Iltimos, qabul vaqtidan 10 daqiqa oldin keling."
+    },
+    "tips": {
+      "ru-RU": "Когда вопрос касается времени или положения 'Перед чем?' (в значении времени 'перед приемом' — vor), предлог 'vor' требует Dativ. Мужской род 'der Termin' берет у артикля форму 'dem' (vor dem Termin).",
+      "en-US": "The preposition 'vor' takes Dativ here. The masculine noun 'der Termin' takes the article form 'dem' (vor dem Termin).",
+      "ar-SA": "حرف الجر 'vor' يتطلب Dativ هنا. الاسم المذكر يأخذ شكل 'dem'.",
+      "es-ES": "La preposición 'vor' requiere Dativ aquí. El sustantivo masculino toma la forma 'dem'.",
+      "fr-FR": "La préposition 'vor' requiert le Datif ici. Le nom masculin prend la forme 'dem'.",
+      "hi-IN": "पूर्वसर्ग 'vor' यहाँ Dativ लेता है। पुल्लिंग संज्ञा 'dem' रूप लेती है।",
+      "pl-PL": "Przyimek 'vor' w odniesieniu do czasu wymaga celownika (Dativ). Rzeczownik męski 'der Termin' przyjmuje formę przedimka 'dem'.",
+      "ro-RO": "Prepoziția 'vor' cere Dativ aici. Substantivul masculin ia forma 'dem'.",
+      "tr-TR": "'vor' edatı burada Dativ gerektirir. Eril isim 'der Termin', 'dem' formunu alır.",
+      "uk-UA": "Прийменник 'vor' вимагає Dativ у значенні часу. Чоловічий рід 'der Termin' бере форму 'dem' (vor dem Termin).",
+      "uz-UZ": "'vor' predlogi bu yerda Dativni talab qiladi. Erkak jinsidagi ot 'dem' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Danke, ich werde pünktlich da sein.",
+        "translation": {
+          "ru-RU": "Спасибо, я буду вовремя (вовремя там).",
+          "en-US": "Thank you, I will be there on time.",
+          "ar-SA": "شكراً، سأكون هناك في الموعد تماماً.",
+          "es-ES": "Gracias, estaré allí puntual.",
+          "fr-FR": "Merci, je serai à l'heure.",
+          "hi-IN": "धन्यवाद, मैं समय पर वहाँ पहुँच जाऊंगी।",
+          "pl-PL": "Dziękuję, będę punktualnie.",
+          "ro-RO": "Mulțumesc, voi fi acolo la timp.",
+          "tr-TR": "Teşekkürler, zamanında orada olacağım.",
+          "uk-UA": "Дякую, я буду вчасно.",
+          "uz-UZ": "Rahmat, men vaqtida yetib boraman."
+        },
+        "nextStep": "abschied"
+      },
+      {
+        "text": "Verstanden, ich plane das ein.",
+        "translation": {
+          "ru-RU": "Понятно, я это запланирую (учту при планировании).",
+          "en-US": "Understood, I will plan for that.",
+          "ar-SA": "مفهوم، سأضع ذلك في الحسبان.",
+          "es-ES": "Entendido, lo planificaré.",
+          "fr-FR": "Compris, je vais planifier cela.",
+          "hi-IN": "समझ गई, मैं इसकी योजना बना लूंगी।",
+          "pl-PL": "Zrozumiałem/am, zaplanuję to.",
+          "ro-RO": "Am înțeles, voi planifica asta.",
+          "tr-TR": "Anlaşıldı, bunu hesaba katarım.",
+          "uk-UA": "Зрозуміло, я це запланую.",
+          "uz-UZ": "Tushunarli, buni hisobga olib qo'yaman."
+        },
+        "nextStep": "abschied"
+      }
+    ],
+    "defaultNext": "abschied"
+  },
+  "abschied": {
+    "botText": "Gerne. Bis dann, auf Wiederhören!",
+    "botTranslation": {
+      "ru-RU": "Не за что. До встречи, до свидания (по телефону)!",
+      "en-US": "You're welcome. See you then, goodbye!",
+      "ar-SA": "على الرحب والسعة. إلى اللقاء إذن، مع السلامة!",
+      "es-ES": "Con gusto. Hasta entonces, ¡adiós!",
+      "fr-FR": "De rien. À bientôt, au revoir !",
+      "hi-IN": "बड़ी खुशी से। तब मिलते हैं, अलविदा!",
+      "pl-PL": "Z przyjemnością. Do zobaczenia, do usłyszenia!",
+      "ro-RO": "Cu plăcere. Pe curând, la revedere!",
+      "tr-TR": "Rica ederim. O zamana kadar hoşça kalın!",
+      "uk-UA": "Нема за що. До зустрічі, до побачення!",
+      "uz-UZ": "Arzimaydi. Ko'rishguncha, xayr!"
+    },
+    "tips": {
+      "ru-RU": "Выражение 'auf Wiederhören' используется исключительно для прощания по телефону. При личной встрече говорят 'auf Wiedersehen'.",
+      "en-US": "The phrase 'auf Wiederhören' is used exclusively for phone goodbyes. For face-to-face, 'auf Wiedersehen' is used.",
+      "ar-SA": "العبارة 'auf Wiederhören' تُستخدم حصرياً للوداع عبر الهاتف.",
+      "es-ES": "La expresión 'auf Wiederhören' se usa exclusivamente para despedidas por teléfono.",
+      "fr-FR": "L'expression 'auf Wiederhören' est utilisée exclusivement pour les adieux au téléphone.",
+      "hi-IN": "वाक्यांश 'auf Wiederhören' का उपयोग विशेष रूप से फोन पर अलविदा कहने के लिए किया जाता है।",
+      "pl-PL": "Zwrot 'auf Wiederhören' jest używany wyłącznie podczas pożegnania przez telefon.",
+      "ro-RO": "Expresia 'auf Wiederhören' se folosește exclusiv pentru la revedere la telefon.",
+      "tr-TR": "'auf Wiederhören' ifadesi sadece telefonda vedalaşırken kullanılır. Yüz yüze görüşmede 'auf Wiedersehen' denir.",
+      "uk-UA": "Вираз 'auf Wiederhören' використовується виключно для прощання телефоном. При особистій зустрічі кажуть 'auf Wiedersehen'.",
+      "uz-UZ": "'auf Wiederhören' iborasi faqat telefonda xayrlashganda ishlatiladi. Yuzma-yuz uchrashganda 'auf Wiedersehen' deyiladi."
+    },
+    "options": [
+      {
+        "text": "Auf Wiederhören!",
+        "translation": {
+          "ru-RU": "До свидания!",
+          "en-US": "Goodbye!",
+          "ar-SA": "مع السلامة!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Do usłyszenia!",
+          "ro-RO": "La revedere!",
+          "tr-TR": "Hoşça kalın!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Danke, auf Wiederhören!",
+        "translation": {
+          "ru-RU": "Спасибо, до свидания!",
+          "en-US": "Thank you, goodbye!",
+          "ar-SA": "شكراً، مع السلامة!",
+          "es-ES": "Gracias, ¡adiós!",
+          "fr-FR": "Merci, au revoir !",
+          "hi-IN": "धन्यवाद, अलविदा!",
+          "pl-PL": "Dziękuję, do usłyszenia!",
+          "ro-RO": "Mulțumesc, la revedere!",
+          "tr-TR": "Teşekkürler, hoşça kalın!",
+          "uk-UA": "Дякую, до побачення!",
+          "uz-UZ": "Rahmat, xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है।",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

@@ -4,10 +4,10 @@ const config: CapacitorConfig = {
   appId: 'com.skillupgerman.app',
   appName: 'skillupgerman',
   webDir: '.output/public',
-  server: {
-    url: 'http://192.168.178.21:3000',
-    cleartext: true
-  },
+  // server: {
+  //   url: 'http://192.168.178.21:3000',
+  //   cleartext: true
+  // },
   plugins: {
     StatusBar: {
       overlaysWebView: true,
@@ -18,13 +18,18 @@ const config: CapacitorConfig = {
     },
     SplashScreen: {
       launchAutoHide: false,
-      launchShowDuration: 3000
+      backgroundColor: "#8AC03D",
+      showSpinner: false,
     },
     AdMob: {
       androidAppId: 'ca-app-pub-3940256099942544~3347511713',
       iosAppId: 'ca-app-pub-3940256099942544~1458002511',
     },
   },
+  android: {
+    allowMixedContent: true,
+    webContentsDebuggingEnabled: true
+  }
 };
 
 export default config;

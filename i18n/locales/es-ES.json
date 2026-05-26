@@ -9242,7 +9242,8 @@
     "describePicture": "Descripción de Imágenes",
     "fight": "Universo Alemán",
     "audio": "Tareas de Audio",
-    "textTask": "Textos"
+    "textTask": "Textos",
+    "speak": "Práctica oral"
   },
   "underSub": {
     "prev": "Introducción",
@@ -10181,5 +10182,59 @@
     "home": "Inicio",
     "events": "Eventos",
     "cabinet": "Cuenta"
+  },
+  "speakTopics": {
+    "speak": "Presentación y conversación",
+    "food": "Comida y compras",
+    "transport": "Viajes y transporte",
+    "city": "Servicios urbanos y vida cotidiana",
+    "health": "Salud",
+    "work": "Trabajo y carrera"
+  },
+  "speakThemes": {
+    "firstmeet": "Presentación",
+    "acquaintance": "Presentación 2",
+    "secondmeet": "Encuentro",
+    "family_talk": "Charla",
+    "weekend_plans": "Planes",
+    "friend_call": "Llamada",
+    "hobby_talk": "Hobbies",
+    "party_talk": "Fiesta",
+    "cafe_order": "Pedir café",
+    "restaurant_dinner": "Restaurante",
+    "store_checkout": "En la caja",
+    "order_eat": "Pedir comida",
+    "consultation_talk": "Consulta",
+    "train_station": "En la estación",
+    "train_ticket": "Control de billete",
+    "taxi_berlin": "Taxi",
+    "bus_talk": "En el autobús",
+    "hotel_checkin": "Hotel",
+    "border_check": "Frontera",
+    "airport_talk": "Aeropuerto",
+    "info_talk": "Centro de información",
+    "bank_account": "Banco",
+    "apartment_rent": "Alquiler",
+    "clothes_shopping": "Compras",
+    "shopping": "Compras 2",
+    "post_office": "Correos",
+    "police_talk": "Policía",
+    "barbershop": "Peluquería",
+    "doctor_visit": "Cita médica",
+    "pharmacy_vitamins": "Farmacia",
+    "insurance": "Seguro",
+    "at_doctor": "En el médico",
+    "dentist": "Dentista",
+    "veterinary": "Veterinario",
+    "job_looking": "Búsqueda de empleo",
+    "job_interview": "Entrevista",
+    "bos_talk": "Charla con el jefe",
+    "vacation": "Vacaciones",
+    "salary_talk": "Salario",
+    "dismissal_talk": "Despido"
+  },
+  "speakIndexPage": {
+    "title": "Práctica oral",
+    "bannerText": "Practica tus habilidades de expresión oral con ejemplos reales"
   }
 }

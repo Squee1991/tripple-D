@@ -9250,7 +9250,8 @@
     "describePicture": "Opis Obrazków",
     "fight": "Wszechświat Niemieckiego",
     "audio": "Zadania Audio",
-    "textTask": "Teksty"
+    "textTask": "Teksty",
+    "speak": "Ćwiczenia konwersacyjne"
   },
   "underSub": {
     "prev": "Wprowadzenie",
@@ -10190,5 +10191,59 @@
     "home": "Główna",
     "events": "Wydarzenia",
     "cabinet": "Konto"
+  },
+  "speakTopics": {
+    "speak": "Zapoznanie i komunikacja",
+    "food": "Jedzenie i zakupy",
+    "transport": "Wyjazdy i transport",
+    "city": "Usługi miejskie i życie codzienne",
+    "health": "Zdrowie",
+    "work": "Praca i kariera"
+  },
+  "speakThemes": {
+    "firstmeet": "Zapoznanie",
+    "acquaintance": "Zapoznanie 2",
+    "secondmeet": "Spotkanie",
+    "family_talk": "Rozmowa",
+    "weekend_plans": "Plany",
+    "friend_call": "Telefon",
+    "hobby_talk": "Hobby",
+    "party_talk": "Impreza",
+    "cafe_order": "Zamawianie kawy",
+    "restaurant_dinner": "Restauracja",
+    "store_checkout": "Przy kasie",
+    "order_eat": "Zamawianie jedzenia",
+    "consultation_talk": "Konsultacja",
+    "train_station": "Na dworcu",
+    "train_ticket": "Kontrola biletu",
+    "taxi_berlin": "Taxi",
+    "bus_talk": "W autobusie",
+    "hotel_checkin": "Hotel",
+    "border_check": "Granica",
+    "airport_talk": "Lotnisko",
+    "info_talk": "Punkt informacyjny",
+    "bank_account": "Bank",
+    "apartment_rent": "Wynajem",
+    "clothes_shopping": "Zakupy",
+    "shopping": "Zakupy 2",
+    "post_office": "Poczta",
+    "police_talk": "Policja",
+    "barbershop": "Fryzjer",
+    "doctor_visit": "Wizyta u lekarza",
+    "pharmacy_vitamins": "Apteka",
+    "insurance": "Ubezpieczenie",
+    "at_doctor": "U lekarza",
+    "dentist": "Dentysta",
+    "veterinary": "Weterynarz",
+    "job_looking": "Szukanie pracy",
+    "job_interview": "Rozmowa kwalifikacyjna",
+    "bos_talk": "Rozmowa z szefem",
+    "vacation": "Urlop",
+    "salary_talk": "Wynagrodzenie",
+    "dismissal_talk": "Zwolnienie"
+  },
+  "speakIndexPage": {
+    "title": "Ćwiczenia konwersacyjne",
+    "bannerText": "Ćwicz umiejętności mówienia na prawdziwych przykładach"
   }
 }

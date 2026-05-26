@@ -9230,7 +9230,8 @@
     "describePicture": "Description d'Images",
     "fight": "L'Univers d'Allemand",
     "audio": "Exercices Audio",
-    "textTask": "Textes"
+    "textTask": "Textes",
+    "speak": "Pratique orale"
   },
   "underSub": {
     "prev": "Introduction",
@@ -10169,5 +10170,59 @@
     "home": "Accueil",
     "events": "Événements",
     "cabinet": "Compte"
+  },
+  "speakTopics": {
+    "speak": "Présentation et discussion",
+    "food": "Nourriture et shopping",
+    "transport": "Voyages et transports",
+    "city": "Services urbains et vie quotidienne",
+    "health": "Santé",
+    "work": "Travail et carrière"
+  },
+  "speakThemes": {
+    "firstmeet": "Présentation",
+    "acquaintance": "Présentation 2",
+    "secondmeet": "Rencontre",
+    "family_talk": "Discussion",
+    "weekend_plans": "Projets",
+    "friend_call": "Appel",
+    "hobby_talk": "Loisirs",
+    "party_talk": "Fête",
+    "cafe_order": "Commander un café",
+    "restaurant_dinner": "Restaurant",
+    "store_checkout": "À la caisse",
+    "order_eat": "Commander à manger",
+    "consultation_talk": "Consultation",
+    "train_station": "À la gare",
+    "train_ticket": "Contrôle des billets",
+    "taxi_berlin": "Taxi",
+    "bus_talk": "Dans le bus",
+    "hotel_checkin": "Hôtel",
+    "border_check": "Frontière",
+    "airport_talk": "Aéroport",
+    "info_talk": "Info centre",
+    "bank_account": "Banque",
+    "apartment_rent": "Location",
+    "clothes_shopping": "Shopping",
+    "shopping": "Shopping 2",
+    "post_office": "La poste",
+    "police_talk": "Police",
+    "barbershop": "Coiffeur",
+    "doctor_visit": "Prendre RDV chez le médecin",
+    "pharmacy_vitamins": "Pharmacie",
+    "insurance": "Assurance",
+    "at_doctor": "Chez le médecin",
+    "dentist": "Dentiste",
+    "veterinary": "Vétérinaire",
+    "job_looking": "Recherche d'emploi",
+    "job_interview": "Entretien",
+    "bos_talk": "Discussion avec le responsable",
+    "vacation": "Vacances",
+    "salary_talk": "Salaire",
+    "dismissal_talk": "Licenciement"
+  },
+  "speakIndexPage": {
+    "title": "Pratique orale",
+    "bannerText": "Pratique tes compétences à l'oral avec des exemples concrets"
   }
 }

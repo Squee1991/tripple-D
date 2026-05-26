@@ -922,7 +922,9 @@ onMounted(async () => {
     place-items: center;
     border-radius: 50%;
     flex: 0 0 auto;
-    background: var(--homeBg);
+    background: none;
+    border: none;
+    box-shadow: none;
   }
 
   .back-label {
@@ -1036,7 +1038,7 @@ onMounted(async () => {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin-left: 18px;
+  margin-left: 20px;
 }
 
 .user-name {

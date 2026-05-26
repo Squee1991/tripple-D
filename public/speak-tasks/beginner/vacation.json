@@ -1,0 +1,482 @@
+{
+  "start": {
+    "botText": "Hallo Anna, worum geht es heute?",
+    "botTranslation": {
+      "ru-RU": "Привет, Анна, о чем пойдет речь сегодня?",
+      "en-US": "Hello Anna, what is it about today?",
+      "ar-SA": "مرحباً آنا، ما هو موضوع اليوم؟",
+      "es-ES": "Hola Anna, ¿de qué se trata hoy?",
+      "fr-FR": "Bonjour Anna, de quoi s'agit-il aujourd'hui ?",
+      "hi-IN": "नमस्ते अन्ना, आज किस बारे में बात करनी है?",
+      "pl-PL": "Cześć Anna, o czym dzisiaj porozmawiamy?",
+      "ro-RO": "Bună Anna, despre ce este vorba astăzi?",
+      "tr-TR": "Merhaba Anna, bugün konu nedir?",
+      "uk-UA": "Привіт, Анно, про що сьогодні піде мова?",
+      "uz-UZ": "Salom Anna, bugun gap nima haqida?"
+    },
+    "tips": {
+      "ru-RU": "Для Akkusativ мы применяем то же правило: мужской род 'der Urlaub' (отпуск) в качестве прямого объекта берет у артикля форму 'meinen' -> 'meinen Urlaub'.",
+      "en-US": "For Akkusativ, the masculine noun 'der Urlaub' (vacation) takes the article form 'meinen'.",
+      "ar-SA": "في حالة النصب (Akkusativ)، تأخذ الكلمة المذكرة 'der Urlaub' أداة 'meinen'.",
+      "es-ES": "En Akkusativ, el sustantivo masculino 'der Urlaub' toma la forma del artículo 'meinen'.",
+      "fr-FR": "À l'Akkusativ, le nom masculin 'der Urlaub' prend l'article 'meinen'.",
+      "hi-IN": "Akkusativ के लिए, पुल्लिंग संज्ञा 'der Urlaub' 'meinen' रूप लेती है।",
+      "pl-PL": "W bierniku r. męski 'der Urlaub' przyjmuje formę 'meinen'.",
+      "ro-RO": "În Akkusativ, substantivul masculin 'der Urlaub' ia forma 'meinen'.",
+      "tr-TR": "Akkusativ için eril isim 'der Urlaub' 'meinen' formunu alır.",
+      "uk-UA": "Для Akkusativ чоловічий рід 'der Urlaub' бере форму 'meinen'.",
+      "uz-UZ": "Akkusativda erkak jinsidagi 'der Urlaub' 'meinen' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Ich möchte meinen Urlaub planen.",
+        "translation": {
+          "ru-RU": "Я хочу спланировать свой отпуск.",
+          "en-US": "I want to plan my vacation.",
+          "ar-SA": "أريد التخطيط لإجازتي.",
+          "es-ES": "Quiero planificar mis vacaciones.",
+          "fr-FR": "Je veux planifier mes vacances.",
+          "hi-IN": "मैं अपनी छुट्टियों की योजना बनाना चाहता हूँ।",
+          "pl-PL": "Chcę zaplanować mój urlop.",
+          "ro-RO": "Vreau să-mi planific concediul.",
+          "tr-TR": "Tatilimi planlamak istiyorum.",
+          "uk-UA": "Я хочу спланувати свою відпустку.",
+          "uz-UZ": "Men ta'tilimni rejalashtirmoqchiman."
+        },
+        "nextStep": "wann_urlaub"
+      },
+      {
+        "text": "Ich möchte Urlaub beantragen, bitte.",
+        "translation": {
+          "ru-RU": "Я хотела бы подать заявление на отпуск, пожалуйста.",
+          "en-US": "I would like to apply for vacation, please.",
+          "ar-SA": "أود التقدم بطلب للحصول على إجازة، من فضلك.",
+          "es-ES": "Me gustaría solicitar vacaciones, por favor.",
+          "fr-FR": "Je voudrais demander des vacances, s'il vous plaît.",
+          "hi-IN": "मैं छुट्टियों के लिए आवेदन करना चाहता हूँ, कृपया।",
+          "pl-PL": "Chciałabym złożyć wniosek o urlop.",
+          "ro-RO": "Aș dori să solicit concediu, vă rog.",
+          "tr-TR": "Tatil başvurusunda bulunmak istiyorum, lütfen.",
+          "uk-UA": "Я хотіла б подати заяву на відпустку, будь ласка.",
+          "uz-UZ": "Iltimos, ta'til uchun ariza bermoqchiman."
+        },
+        "nextStep": "wann_urlaub"
+      }
+    ],
+    "defaultNext": "wann_urlaub"
+  },
+  "wann_urlaub": {
+    "botText": "Wann möchtest du denn Urlaub nehmen?",
+    "botTranslation": {
+      "ru-RU": "Когда же ты хочешь взять отпуск?",
+      "en-US": "When would you like to take vacation then?",
+      "ar-SA": "متى تودين أخذ الإجازة إذاً؟",
+      "es-ES": "¿Cuándo quieres tomarte las vacaciones entonces?",
+      "fr-FR": "Quand aimerais-tu prendre tes vacances ?",
+      "hi-IN": "तो तुम कब छुट्टियां लेना चाहते हो?",
+      "pl-PL": "Kiedy więc chcesz wziąć urlop?",
+      "ro-RO": "Când ai vrea să-ți iei concediul?",
+      "tr-TR": "Peki ne zaman tatil yapmak istersin?",
+      "uk-UA": "Коли ж ти хочеш взяти відпустку?",
+      "uz-UZ": "Qachon ta'tilga chiqmoqchisiz?"
+    },
+    "tips": {
+      "ru-RU": "При ответе на вопрос 'Когда?' мы используем Dativ. Месяцы всегда с предлогом 'im' (сокращение от in dem).",
+      "en-US": "When answering 'When?', we use Dativ. Months always take the preposition 'im' (in dem).",
+      "ar-SA": "عند الإجابة على 'متى؟' نستخدم Dativ. الأشهر تأخذ دائماً حرف الجر 'im'.",
+      "es-ES": "Al responder '¿Cuándo?', usamos Dativ. Los meses siempre llevan la preposición 'im'.",
+      "fr-FR": "Pour répondre à 'Quand ?', on utilise le Datif. Les mois prennent toujours la préposition 'im'.",
+      "hi-IN": "'कब?' का उत्तर देते समय, мы Dativ का उपयोग करते हैं। महीनों के साथ हमेशा 'im' आता है।",
+      "pl-PL": "Odpowiadając na 'Kiedy?', używamy Dativu. Miesiące zawsze z przyimkiem 'im'.",
+      "ro-RO": "Când răspundem la 'Când?', folosim Dativ. Lunile iau mereu prepoziția 'im'.",
+      "tr-TR": "'Ne zaman?' sorusuna cevap verirken Dativ kullanılır. Aylar her zaman 'im' edatını alır.",
+      "uk-UA": "Відповідаючи на питання 'Коли?', ми використовуємо Dativ. Місяці завжди з прийменником 'im'.",
+      "uz-UZ": "'Qachon?' savoliga javob berishda Dativdan foydalanamiz. Oylar doim 'im' predlogi bilan keladi."
+    },
+    "options": [
+      {
+        "text": "Ich möchte im Juli verreisen.",
+        "translation": {
+          "ru-RU": "Я хочу уехать (путешествовать) в июле.",
+          "en-US": "I want to travel in July.",
+          "ar-SA": "أريد السفر في شهر يوليو.",
+          "es-ES": "Quiero viajar en julio.",
+          "fr-FR": "Je veux partir en voyage en juillet.",
+          "hi-IN": "मैं जुलाई में यात्रा करना चाहता हूँ।",
+          "pl-PL": "Chcę wyjechać w lipcu.",
+          "ro-RO": "Vreau să călătoresc în iulie.",
+          "tr-TR": "Temmuz ayında seyahate çıkmak istiyorum.",
+          "uk-UA": "Я хочу поїхати (подорожувати) у липні.",
+          "uz-UZ": "Men iyul oyida sayohatga chiqmoqchiman."
+        },
+        "nextStep": "wochen_check"
+      },
+      {
+        "text": "Ich brauche Urlaub im August.",
+        "translation": {
+          "ru-RU": "Мне нужен отпуск в августе.",
+          "en-US": "I need vacation in August.",
+          "ar-SA": "أحتاج إلى إجازة في أغسطس.",
+          "es-ES": "Necesito vacaciones en agosto.",
+          "fr-FR": "J'ai besoin de vacances en août.",
+          "hi-IN": "मुझे अगस्त में छुट्टियां चाहिए।",
+          "pl-PL": "Potrzebuję urlopu w sierpniu.",
+          "ro-RO": "Am nevoie de concediu în august.",
+          "tr-TR": "Ağustos ayında tatile ihtiyacım var.",
+          "uk-UA": "Мені потрібна відпустка в серпні.",
+          "uz-UZ": "Menga avgust oyida ta'til kerak."
+        },
+        "nextStep": "wochen_check"
+      }
+    ],
+    "defaultNext": "wochen_check"
+  },
+  "wochen_check": {
+    "botText": "Sind zwei Wochen für dich okay?",
+    "botTranslation": {
+      "ru-RU": "Две недели для тебя — это окей?",
+      "en-US": "Are two weeks okay for you?",
+      "ar-SA": "هل أسبوعان مناسبان لكِ؟",
+      "es-ES": "¿Están bien dos semanas para ti?",
+      "fr-FR": "Est-ce que deux semaines te conviennent ?",
+      "hi-IN": "क्या तुम्हारे लिए दो सप्ताह ठीक हैं?",
+      "pl-PL": "Czy dwa tygodnie są dla ciebie okej?",
+      "ro-RO": "Sunt două săptămâni în regulă pentru tine?",
+      "tr-TR": "İki hafta senin için uygun mu?",
+      "uk-UA": "Два тижні для тебе — це нормально?",
+      "uz-UZ": "Ikki hafta siz uchun ma'qulmi?"
+    },
+    "tips": {
+      "ru-RU": "Предлог 'für' всегда требует Akkusativ. В выражении 'für mich' местоимение 'ich' берет у артикля форму 'mich'.",
+      "en-US": "The preposition 'für' always requires Akkusativ. 'Ich' becomes 'mich'.",
+      "ar-SA": "حرف الجر 'für' يتطلب دائماً Akkusativ. يتحول الضمير 'ich' إلى 'mich'.",
+      "es-ES": "La preposición 'für' siempre requiere Akkusativ. 'Ich' se convierte en 'mich'.",
+      "fr-FR": "La préposition 'für' exige toujours l'Akkusativ. 'Ich' devient 'mich'.",
+      "hi-IN": "पूर्वसर्ग 'für' को हमेशा Akkusativ की आवश्यकता होती है। 'Ich' 'mich' में बदल जाता है।",
+      "pl-PL": "Przyimek 'für' zawsze wymaga biernika. 'Ich' zmienia się w 'mich'.",
+      "ro-RO": "Prepoziția 'für' necesită întotdeauna Akkusativ. 'Ich' devine 'mich'.",
+      "tr-TR": "'für' edatı her zaman Akkusativ gerektirir. 'Ich', 'mich'e dönüşür.",
+      "uk-UA": "Прийменник 'für' завжди вимагає Akkusativ. 'Ich' стає 'mich'.",
+      "uz-UZ": "'für' predlogi doim Akkusativni talab qiladi. 'Ich' olmoshi 'mich'ga aylanadi."
+    },
+    "options": [
+      {
+        "text": "Ja, zwei Wochen passen mir gut.",
+        "translation": {
+          "ru-RU": "Да, две недели мне хорошо подходят.",
+          "en-US": "Yes, two weeks suit me well.",
+          "ar-SA": "نعم، أسبوعان يناسبانني جيداً.",
+          "es-ES": "Sí, dos semanas me vienen bien.",
+          "fr-FR": "Oui, deux semaines me conviennent bien.",
+          "hi-IN": "हाँ, दो सप्ताह मेरे लिए उपयुक्त हैं।",
+          "pl-PL": "Tak, dwa tygodnie mi pasują.",
+          "ro-RO": "Da, două săptămâni îmi convin.",
+          "tr-TR": "Evet, iki hafta bana uyar.",
+          "uk-UA": "Так, два тижні мені добре підходять.",
+          "uz-UZ": "Ha, ikki hafta menga yaxshi to'g'ri keladi."
+        },
+        "nextStep": "projekte_check"
+      },
+      {
+        "text": "Ja, das ist perfekt für mich.",
+        "translation": {
+          "ru-RU": "Да, это идеально для меня.",
+          "en-US": "Yes, that is perfect for me.",
+          "ar-SA": "نعم، هذا مثالي بالنسبة لي.",
+          "es-ES": "Sí, eso es perfecto para mí.",
+          "fr-FR": "Oui, c'est parfait pour moi.",
+          "hi-IN": "हाँ, यह मेरे लिए एकदम सही है।",
+          "pl-PL": "Tak, to dla mnie idealne.",
+          "ro-RO": "Da, este perfect pentru mine.",
+          "tr-TR": "Evet, bu benim için mükemmel.",
+          "uk-UA": "Так, це ідеально для мене.",
+          "uz-UZ": "Ha, bu men uchun ideal."
+        },
+        "nextStep": "projekte_check"
+      }
+    ],
+    "defaultNext": "projekte_check"
+  },
+  "projekte_check": {
+    "botText": "Gibt es da wichtige Projekte bei dir?",
+    "botTranslation": {
+      "ru-RU": "Есть ли там у тебя важные проекты?",
+      "en-US": "Are there any important projects for you there?",
+      "ar-SA": "هل هناك مشاريع مهمة لديك؟",
+      "es-ES": "¿Hay proyectos importantes por tu parte?",
+      "fr-FR": "As-tu des projets importants en cours ?",
+      "hi-IN": "क्या वहां तुम्हारे पास कोई महत्वपूर्ण प्रोजेक्ट हैं?",
+      "pl-PL": "Czy masz jakieś ważne projekty?",
+      "ro-RO": "Există proiecte importante la tine?",
+      "tr-TR": "Orada önemli projelerin var mı?",
+      "uk-UA": "Чи є там у тебе важливі проєкти?",
+      "uz-UZ": "U yerda muhim loyihalaringiz bormi?"
+    },
+    "tips": {
+      "ru-RU": "В Akkusativ множественное число 'die Projekte' или 'die Aufgaben' не меняется. Мы используем форму 'meine Aufgaben'.",
+      "en-US": "In Akkusativ plural, 'die Projekte' or 'die Aufgaben' does not change. We use 'meine Aufgaben'.",
+      "ar-SA": "في حالة النصب للجمع، لا تتغير الكلمات. نستخدم صيغة 'meine Aufgaben'.",
+      "es-ES": "En plural Akkusativ, no cambian. Usamos la forma 'meine Aufgaben'.",
+      "fr-FR": "Au pluriel Akkusativ, cela ne change pas. On utilise 'meine Aufgaben'.",
+      "hi-IN": "Akkusativ बहुवचन में, शब्द नहीं बदलते। हम 'meine Aufgaben' का उपयोग करते हैं।",
+      "pl-PL": "W bierniku liczba mnoga nie zmienia się. Używamy formy 'meine Aufgaben'.",
+      "ro-RO": "În Akkusativ plural, nu se schimbă. Folosim forma 'meine Aufgaben'.",
+      "tr-TR": "Akkusativ çoğulda değişmezler. 'meine Aufgaben' formunu kullanırız.",
+      "uk-UA": "В Akkusativ множина не змінюється. Ми використовуємо форму 'meine Aufgaben'.",
+      "uz-UZ": "Akkusativ ko'plikda o'zgarmaydi. Biz 'meine Aufgaben' shaklidan foydalanamiz."
+    },
+    "options": [
+      {
+        "text": "Nein, alle Aufgaben sind erledigt.",
+        "translation": {
+          "ru-RU": "Нет, все задачи выполнены.",
+          "en-US": "No, all tasks are completed.",
+          "ar-SA": "لا، جميع المهام منجزة.",
+          "es-ES": "No, todas las tareas están terminadas.",
+          "fr-FR": "Non, toutes les tâches sont accomplies.",
+          "hi-IN": "नहीं, सभी कार्य पूरे हो गए हैं।",
+          "pl-PL": "Nie, wszystkie zadania są wykonane.",
+          "ro-RO": "Nu, toate sarcinile sunt finalizate.",
+          "tr-TR": "Hayır, tüm görevler tamamlandı.",
+          "uk-UA": "Ні, всі завдання виконані.",
+          "uz-UZ": "Yo'q, hamma vazifalar bajarilgan."
+        },
+        "nextStep": "vertretung_check"
+      },
+      {
+        "text": "Meine Projekte sind alle fertig.",
+        "translation": {
+          "ru-RU": "Мои проекты все готовы.",
+          "en-US": "My projects are all finished.",
+          "ar-SA": "مشاريعي كلها جاهزة.",
+          "es-ES": "Mis proyectos están todos listos.",
+          "fr-FR": "Mes projets sont tous terminés.",
+          "hi-IN": "मेरे सभी प्रोजेक्ट तैयार हैं।",
+          "pl-PL": "Moje projekty są wszystkie gotowe.",
+          "ro-RO": "Proiectele mele sunt toate gata.",
+          "tr-TR": "Projelerimin hepsi bitti.",
+          "uk-UA": "Мої проєкти всі готові.",
+          "uz-UZ": "Loyihalarimning barchasi tayyor."
+        },
+        "nextStep": "vertretung_check"
+      }
+    ],
+    "defaultNext": "vertretung_check"
+  },
+  "vertretung_check": {
+    "botText": "Wer vertritt dich in dieser Zeit?",
+    "botTranslation": {
+      "ru-RU": "Кто подменит тебя в это время?",
+      "en-US": "Who will represent you during this time?",
+      "ar-SA": "من سينوب عنكِ في هذا الوقت؟",
+      "es-ES": "¿Quién te sustituirá en ese tiempo?",
+      "fr-FR": "Qui va te remplacer pendant cette période ?",
+      "hi-IN": "इस दौरान तुम्हारी जगह कौन काम करेगा?",
+      "pl-PL": "Kto cię zastąpi w tym czasie?",
+      "ro-RO": "Cine te va înlocui în această perioadă?",
+      "tr-TR": "Bu sürede yerine kim bakacak?",
+      "uk-UA": "Хто підмінить тебе в цей час?",
+      "uz-UZ": "Bu vaqt ichida o'rningizga kim qaraydi?"
+    },
+    "tips": {
+      "ru-RU": "Когда вопрос 'Когда?' (Wann?), мы используем Dativ. Женский род 'die Zeit' берет у артикля форму 'dieser Zeit'. Мужской род 'der Kollege' в Akkusativ берет 'meine Aufgaben'.",
+      "en-US": "When answering 'When?', use Dativ. Feminine 'die Zeit' takes the form 'dieser Zeit'.",
+      "ar-SA": "عند الإجابة على 'متى؟'، نستخدم Dativ. تتحول 'die Zeit' إلى 'dieser Zeit'.",
+      "es-ES": "Al responder '¿Cuándo?', usamos Dativ. El femenino 'die Zeit' toma la forma 'dieser Zeit'.",
+      "fr-FR": "Pour répondre à 'Quand ?', on utilise le Datif. Le féminin 'die Zeit' devient 'dieser Zeit'.",
+      "hi-IN": "जब सवाल 'कब?' हो, तो Dativ का उपयोग करें। स्त्रीलिंग 'die Zeit' 'dieser Zeit' बन जाता है।",
+      "pl-PL": "Odpowiadając na 'Kiedy?', używamy Dativu. Rodzaj żeński 'die Zeit' przyjmuje formę 'dieser Zeit'.",
+      "ro-RO": "Când întrebarea este 'Când?', folosim Dativ. Femininul 'die Zeit' ia forma 'dieser Zeit'.",
+      "tr-TR": "'Ne zaman?' sorusunda Dativ kullanılır. Dişil 'die Zeit', 'dieser Zeit' formunu alır.",
+      "uk-UA": "Коли питання 'Коли?', ми використовуємо Dativ. Жіночий рід 'die Zeit' бере форму 'dieser Zeit'.",
+      "uz-UZ": "'Qachon?' savolida Dativ ishlatiladi. Ayol jinsidagi 'die Zeit' 'dieser Zeit' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Mein Kollege übernimmt meine Aufgaben.",
+        "translation": {
+          "ru-RU": "Мой коллега берет на себя мои задачи.",
+          "en-US": "My colleague will take over my tasks.",
+          "ar-SA": "زميلي سيتولى مهامي.",
+          "es-ES": "Mi colega se encargará de mis tareas.",
+          "fr-FR": "Mon collègue reprend mes tâches.",
+          "hi-IN": "मेरा सहकर्मी मेरे कार्यभार को संभालेगा।",
+          "pl-PL": "Mój kolega przejmie moje zadania.",
+          "ro-RO": "Colegul meu preia sarcinile mele.",
+          "tr-TR": "İşlerimi meslektaşım üstlenecek.",
+          "uk-UA": "Мій колега бере на себе мої завдання.",
+          "uz-UZ": "Hamkasbim mening vazifalarimni o'z zimmasiga oladi."
+        },
+        "nextStep": "antrag_step"
+      },
+      {
+        "text": "Meine Kollegin macht meine Vertretung.",
+        "translation": {
+          "ru-RU": "Моя коллега будет моей заменой.",
+          "en-US": "My colleague will be my substitute.",
+          "ar-SA": "زميلتي ستقوم بالنيابة عني.",
+          "es-ES": "Mi colega hará mi sustitución.",
+          "fr-FR": "Ma collègue assure mon remplacement.",
+          "hi-IN": "मेरी सहकर्मी मेरी जगह काम करेगी।",
+          "pl-PL": "Moja koleżanka będzie mnie zastępować.",
+          "ro-RO": "Colega mea va fi înlocuitoarea mea.",
+          "tr-TR": "Meslektaşım yerime bakacak.",
+          "uk-UA": "Моя колега буде моєю заміною.",
+          "uz-UZ": "Hamkasbim mening o'rnimga qaraydi."
+        },
+        "nextStep": "antrag_step"
+      }
+    ],
+    "defaultNext": "antrag_step"
+  },
+  "antrag_step": {
+    "botText": "Das klingt sehr gut, Anna.",
+    "botTranslation": {
+      "ru-RU": "Это звучит очень хорошо, Анна.",
+      "en-US": "That sounds very good, Anna.",
+      "ar-SA": "هذا يبدو جيداً جداً يا آنا.",
+      "es-ES": "Eso suena muy bien, Anna.",
+      "fr-FR": "C'est très bien, Anna.",
+      "hi-IN": "यह बहुत अच्छा लग रहा है, अन्ना।",
+      "pl-PL": "To brzmi bardzo dobrze, Anna.",
+      "ro-RO": "Sună foarte bine, Anna.",
+      "tr-TR": "Bu kulağa çok iyi geliyor, Anna.",
+      "uk-UA": "Це звучить дуже добре, Анно.",
+      "uz-UZ": "Bu juda yaxshi eshitilyapti, Anna."
+    },
+    "tips": {
+      "ru-RU": "Глагол 'ausfüllen' или 'einreichen' требует Akkusativ. Мужской род 'der Antrag' (заявление) берет у артикля форму 'den'.",
+      "en-US": "Verbs 'ausfüllen' or 'einreichen' require Akkusativ. Masculine 'der Antrag' takes the article form 'den'.",
+      "ar-SA": "أفعال 'ausfüllen' أو 'einreichen' تتطلب Akkusativ. تتحول 'der Antrag' إلى 'den'.",
+      "es-ES": "Los verbos 'ausfüllen' o 'einreichen' requieren Akkusativ. El masculino 'der Antrag' toma la forma 'den'.",
+      "fr-FR": "Les verbes 'ausfüllen' ou 'einreichen' exigent l'Akkusativ. Le masculin 'der Antrag' prend l'article 'den'.",
+      "hi-IN": "क्रिया 'ausfüllen' या 'einreichen' को Akkusativ की आवश्यकता होती है। पुल्लिंग 'der Antrag' 'den' रूप लेता है।",
+      "pl-PL": "Czasowniki 'ausfüllen' lub 'einreichen' wymagają biernika. Rodzaj męski 'der Antrag' przyjmuje formę 'den'.",
+      "ro-RO": "Verbele 'ausfüllen' sau 'einreichen' cer Akkusativ. Masculinul 'der Antrag' ia forma 'den'.",
+      "tr-TR": "'ausfüllen' veya 'einreichen' fiilleri Akkusativ gerektirir. Eril 'der Antrag', 'den' formunu alır.",
+      "uk-UA": "Дієслова 'ausfüllen' або 'einreichen' вимагають Akkusativ. Чоловічий рід 'der Antrag' бере форму 'den'.",
+      "uz-UZ": "'ausfüllen' yoki 'einreichen' fe'llari Akkusativni talab qiladi. Erkak jinsidagi 'der Antrag' 'den' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Soll ich den Antrag ausfüllen?",
+        "translation": {
+          "ru-RU": "Мне нужно заполнить заявление?",
+          "en-US": "Should I fill out the application?",
+          "ar-SA": "هل يجب علي ملء الطلب؟",
+          "es-ES": "¿Debo rellenar la solicitud?",
+          "fr-FR": "Dois-je remplir le formulaire ?",
+          "hi-IN": "क्या मुझे आवेदन पत्र भरना चाहिए?",
+          "pl-PL": "Czy powinnam wypełnić wniosek?",
+          "ro-RO": "Ar trebui să completez cererea?",
+          "tr-TR": "Başvuru formunu doldurmalı mıyım?",
+          "uk-UA": "Мені потрібно заповнити заяву?",
+          "uz-UZ": "Arizani to'ldirishim kerakmi?"
+        },
+        "nextStep": "abschied"
+      },
+      {
+        "text": "Kann ich den Antrag einreichen?",
+        "translation": {
+          "ru-RU": "Могу я подать заявление?",
+          "en-US": "Can I submit the application?",
+          "ar-SA": "هل يمكنني تقديم الطلب؟",
+          "es-ES": "¿Puedo entregar la solicitud?",
+          "fr-FR": "Puis-je soumettre la demande ?",
+          "hi-IN": "क्या मैं आवेदन जमा कर सकता हूँ?",
+          "pl-PL": "Czy mogę złożyć wniosek?",
+          "ro-RO": "Pot depune cererea?",
+          "tr-TR": "Başvuruyu teslim edebilir miyim?",
+          "uk-UA": "Можу я подати заяву?",
+          "uz-UZ": "Arizani topshirsam bo'ladimi?"
+        },
+        "nextStep": "abschied"
+      }
+    ],
+    "defaultNext": "abschied"
+  },
+  "abschied": {
+    "botText": "Ja, mach das bitte diese Woche.",
+    "botTranslation": {
+      "ru-RU": "Да, сделай это, пожалуйста, на этой неделе.",
+      "en-US": "Yes, please do that this week.",
+      "ar-SA": "نعم، افعلي ذلك هذا الأسبوع من فضلك.",
+      "es-ES": "Sí, hazlo esta semana por favor.",
+      "fr-FR": "Oui, fais-le cette semaine s'il te plaît.",
+      "hi-IN": "हाँ, कृपया इसे इसी सप्ताह करें।",
+      "pl-PL": "Tak, zrób to proszę w tym tygodniu.",
+      "ro-RO": "Da, fă asta săptămâna aceasta, te rog.",
+      "tr-TR": "Evet, lütfen bu hafta yap.",
+      "uk-UA": "Так, зроби це, будь ласка, на цьому тижні.",
+      "uz-UZ": "Ha, iltimos, buni shu hafta bajaring."
+    },
+    "tips": {
+      "ru-RU": "Для Akkusativ женский род 'die Woche' берет у артикля форму 'diese Woche' (на этой неделе). 'Das Verständnis' (понимание) — средний род, остается 'das'.",
+      "en-US": "In Akkusativ, feminine 'die Woche' takes the form 'diese Woche'. 'Das Verständnis' is neuter and stays 'das'.",
+      "ar-SA": "في حالة النصب، تتحول 'die Woche' إلى 'diese Woche'.",
+      "es-ES": "En Akkusativ, el femenino 'die Woche' toma la forma 'diese Woche'.",
+      "fr-FR": "À l'Akkusativ, le féminin 'die Woche' prend la forme 'diese Woche'.",
+      "hi-IN": "Akkusativ में स्त्रीलिंग 'die Woche' 'diese Woche' बन जाता है।",
+      "pl-PL": "W bierniku rodzaj żeński 'die Woche' przyjmuje formę 'diese Woche'.",
+      "ro-RO": "În Akkusativ, femininul 'die Woche' ia forma 'diese Woche'.",
+      "tr-TR": "Akkusativ'de dişil 'die Woche', 'diese Woche' formunu alır.",
+      "uk-UA": "В Akkusativ жіночий рід 'die Woche' бере форму 'diese Woche'.",
+      "uz-UZ": "Akkusativda ayol jinsidagi 'die Woche' 'diese Woche' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Danke, das mache ich sofort.",
+        "translation": {
+          "ru-RU": "Спасибо, я сделаю это немедленно.",
+          "en-US": "Thanks, I will do that immediately.",
+          "ar-SA": "شكراً، سأفعل ذلك فوراً.",
+          "es-ES": "Gracias, lo haré inmediatamente.",
+          "fr-FR": "Merci, je le fais tout de suite.",
+          "hi-IN": "धन्यवाद, मैं इसे तुरंत करूँगा।",
+          "pl-PL": "Dzięki, zrobię to natychmiast.",
+          "ro-RO": "Mulțumesc, voi face asta imediat.",
+          "tr-TR": "Teşekkürler, hemen yapacağım.",
+          "uk-UA": "Дякую, я зроблю це негайно.",
+          "uz-UZ": "Rahmat, buni hoziroq bajaraman."
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Vielen Dank für das Verständnis!",
+        "translation": {
+          "ru-RU": "Большое спасибо за понимание!",
+          "en-US": "Thank you very much for understanding!",
+          "ar-SA": "شكراً جزيلاً على تفهمك!",
+          "es-ES": "¡Muchas gracias por su comprensión!",
+          "fr-FR": "Merci beaucoup pour votre compréhension !",
+          "hi-IN": "समझने के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję za zrozumienie!",
+          "ro-RO": "Vă mulțumesc mult pentru înțelegere!",
+          "tr-TR": "Anlayışınız için çok teşekkürler!",
+          "uk-UA": "Велике дякую за розуміння!",
+          "uz-UZ": "Tushunganingiz uchun katta rahmat!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है।",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

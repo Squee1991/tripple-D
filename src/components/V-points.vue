@@ -117,6 +117,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  padding-bottom: 22px;
 }
 
 .points_header-title {

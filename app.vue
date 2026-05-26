@@ -29,7 +29,7 @@ import { userChainStore } from './store/chainStore.js'
 import { SplashScreen } from '@capacitor/splash-screen'
 import { Keyboard } from '@capacitor/keyboard';
 import { App } from '@capacitor/app'
-import {onMounted, onUnmounted, ref, watch} from "vue";
+import {onMounted, onUnmounted, ref, watch, nextTick} from "vue";
 import {dailyStore} from './store/dailyStore'
 import {useHead} from '#imports'
 import { Capacitor } from '@capacitor/core'
@@ -123,13 +123,24 @@ const onToastFinished = () => {
 }
 
 watch(() => authStore.initialized, async (isReady) => {
-  if (isReady && Capacitor.isNativePlatform()) {
-    setTimeout(async () => {
-      await SplashScreen.hide({ fadeOutDuration: 250 })
-    }, 100)
+  if (isReady) {
+    await learningStore.loadFromFirebase();
 
+    if (authStore.uid) {
+      await Promise.all([
+        questStore.loadDailyProgress(),
+        cardStore.loadCreatedCount(),
+        statsStore.loadLocalStats()
+      ]);
+    }
+    if (Capacitor.isNativePlatform()) {
+      await nextTick();
+      requestAnimationFrame(async () => {
+        await SplashScreen.hide({ fadeOutDuration: 250 });
+      });
+    }
   }
-}, { immediate: true })
+}, { immediate: true });
 
 onUnmounted(() => {
   daily.stop()

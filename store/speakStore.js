@@ -1,12 +1,16 @@
 import { ref, computed } from 'vue';
 import { defineStore } from 'pinia';
+import { getAuth } from 'firebase/auth';
+import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 
 export const useSpeakStore = defineStore('speakStore', () => {
+	const db = getFirestore();
 	const dialogueData = ref(null);
 	const currentStepKey = ref('');
 	const chatHistory = ref([]);
 	const chatStarted = ref(false);
 	const isOptionsDisabled = ref(false);
+	const userProgress = ref({});
 
 	const currentOptions = computed(() => {
 		if (!dialogueData.value || !currentStepKey.value) return [];
@@ -27,6 +31,35 @@ export const useSpeakStore = defineStore('speakStore', () => {
 			}
 			dialogueData.value = await response.json();
 		} catch (error) {
+			console.error(error);
+		}
+	};
+
+	const loadUserProgress = async () => {
+		const auth = getAuth();
+		if (!auth.currentUser) return;
+		try {
+			const docRef = doc(db, 'users', auth.currentUser.uid, 'speak_tasks', 'progress');
+			const snap = await getDoc(docRef);
+			if (snap.exists()) {
+				userProgress.value = snap.data();
+			}
+		} catch (error) {
+			console.error('Ошибка при загрузке прогресса:', error);
+		}
+	};
+
+	const saveDialogueCompletion = async (themeId) => {
+		if (userProgress.value[themeId] === true) return;
+		userProgress.value[themeId] = true;
+		const auth = getAuth();
+		if (!auth.currentUser) return;
+
+		try {
+			const docRef = doc(db, 'users', auth.currentUser.uid, 'speak_tasks', 'progress');
+			await setDoc(docRef, { [themeId]: true }, { merge: true });
+		} catch (error) {
+			console.error('Ошибка при сохранении прогресса:', error);
 		}
 	};
 
@@ -54,7 +87,10 @@ export const useSpeakStore = defineStore('speakStore', () => {
 		isOptionsDisabled,
 		currentOptions,
 		currentStepData,
+		userProgress,
 		loadDialogue,
+		loadUserProgress,
+		saveDialogueCompletion,
 		resetSession,
 		addMessage,
 		setStep

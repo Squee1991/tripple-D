@@ -9212,7 +9212,8 @@
     "describePicture": "चित्र वर्णन",
     "fight": "जर्मन ब्रह्मांड",
     "audio": "ऑडियो कार्य",
-    "textTask": "टेक्स्ट"
+    "textTask": "टेक्स्ट",
+    "speak": "बोलने का अभ्यास"
   },
   "underSub": {
     "prev": "प्रस्तावना",
@@ -10151,5 +10152,59 @@
     "home": "होम",
     "events": "इवेंट्स",
     "cabinet": "खाता"
+  },
+  "speakTopics": {
+    "speak": "परिचय और बातचीत",
+    "food": "भोजन और खरीदारी",
+    "transport": "यात्रा और परिवहन",
+    "city": "शहरी सेवाएं और दैनिक जीवन",
+    "health": "स्वास्थ्य",
+    "work": "काम और करियर"
+  },
+  "speakThemes": {
+    "firstmeet": "परिचय",
+    "acquaintance": "परिचय 2",
+    "secondmeet": "मुलाकात",
+    "family_talk": "बातचीत",
+    "weekend_plans": "योजनाएं",
+    "friend_call": "कॉल",
+    "hobby_talk": "शौक",
+    "party_talk": "पार्टी",
+    "cafe_order": "कॉफी ऑर्डर करना",
+    "restaurant_dinner": "रेस्तरां",
+    "store_checkout": "कैश काउंटर पर",
+    "order_eat": "खाना ऑर्डर करना",
+    "consultation_talk": "परामर्श",
+    "train_station": "स्टेशन पर",
+    "train_ticket": "टिकट चेकिंग",
+    "taxi_berlin": "टैक्सी",
+    "bus_talk": "बस में",
+    "hotel_checkin": "होटल",
+    "border_check": "सीमा",
+    "airport_talk": "हवाई अड्डा",
+    "info_talk": "सूचना केंद्र",
+    "bank_account": "बैंक",
+    "apartment_rent": "किराया",
+    "clothes_shopping": "खरीदारी",
+    "shopping": "खरीदारी 2",
+    "post_office": "डाकघर",
+    "police_talk": "पुलिस",
+    "barbershop": "नाई की दुकान",
+    "doctor_visit": "डॉक्टर से अपॉइंटमेंट",
+    "pharmacy_vitamins": "फार्मेसी",
+    "insurance": "बीमा",
+    "at_doctor": "डॉक्टर के पास",
+    "dentist": "दंत चिकित्सक",
+    "veterinary": "पशु चिकित्सक",
+    "job_looking": "नौकरी की तलाश",
+    "job_interview": "साक्षात्कार",
+    "bos_talk": "मैनेजर के साथ बातचीत",
+    "vacation": "छुट्टियां",
+    "salary_talk": "वेतन",
+    "dismissal_talk": "बर्खास्तगी"
+  },
+  "speakIndexPage": {
+    "title": "बोलने का अभ्यास",
+    "bannerText": "वास्तविक उदाहरणों के साथ अपने बोलने के कौशल का अभ्यास करें"
   }
 }

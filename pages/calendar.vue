@@ -314,7 +314,6 @@ function endOfDay(dateObj) {
   grid-template-columns: 56px 1fr 56px;
   align-items: center;
   padding: 5px 10px 15px 10px;
-  box-shadow: 0 6px 0 rgba(0, 0, 0, .06);
   margin-bottom: 5px;
   background: var(--bg);
 }
@@ -342,10 +341,11 @@ function endOfDay(dateObj) {
 }
 
 .page-title {
-  margin-left: 15px;
-  font-size: 22px;
-  font-weight: 1000;
-  color: var(--titleColor)
+  margin-left: 10px;
+  font-size: 23px;
+  font-weight: 600;
+  color: var(--title);
+  text-shadow: 1px 1px var(--title);
 }
 
 .spacer {

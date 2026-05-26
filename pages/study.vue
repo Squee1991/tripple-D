@@ -134,7 +134,7 @@ function setTab(id) {
 
 const practiceCategories = computed(() => [
   { id: 'words', icon: BannerIcon, url: '/articles', title: t('sub.words') },
-  { id: 'words', icon: SpeakingIcon, url: '/speak-practice', title: t('Разговорная практика') },
+  { id: 'words', icon: SpeakingIcon, url: '/speak-practice', title: t('sub.speak') },
   { id: 'audio', icon: Sound, url: '/audio-tasks', title: t('sub.audio') },
   { id: 'text', icon: TextBook, url: '/text-tasks', title: t('sub.textTask') },
   { id: 'description', icon: Photo, url: '/image-description', title: t('sub.describePicture') },

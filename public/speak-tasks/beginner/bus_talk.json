@@ -1,0 +1,716 @@
+{
+  "start": {
+    "botText": "Entschuldigung, fährt dieser Bus zum Zentrum?",
+    "botTranslation": {
+      "ru-RU": "Извините, этот автобус едет к центру?",
+      "en-US": "Excuse me, does this bus go to the center?",
+      "ar-SA": "عذراً، هل هذه الحافلة تذهب إلى وسط المدينة؟",
+      "es-ES": "¿Disculpe, este autobús va al centro?",
+      "fr-FR": "Excusez-moi, est-ce que ce bus va au centre-ville ?",
+      "hi-IN": "क्षमा कीजिए, क्या यह बस केंद्र की ओर जाती है?",
+      "pl-PL": "Przepraszam, czy ten autobus jedzie do centrum?",
+      "ro-RO": "Scuzați-mă, acest autobuz merge spre centru?",
+      "tr-TR": "Affedersiniz, bu otobüs merkeze gider mi?",
+      "uk-UA": "Перепрошую, цей автобус їде до центру?",
+      "uz-UZ": "Kechirasiz, bu avtobus markazga boradimi?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Bus",
+        "translation": {
+          "ru-RU": "автобус",
+          "en-US": "the bus",
+          "ar-SA": "الحافلة",
+          "es-ES": "el autobús",
+          "fr-FR": "le bus",
+          "hi-IN": "बस",
+          "pl-PL": "autobus",
+          "ro-RO": "autobuzul",
+          "tr-TR": "otobüs",
+          "uk-UA": "автобус",
+          "uz-UZ": "avtobus"
+        }
+      },
+      {
+        "german": "zum Zentrum",
+        "translation": {
+          "ru-RU": "в центр",
+          "en-US": "to the center",
+          "ar-SA": "إلى المركز",
+          "es-ES": "al centro",
+          "fr-FR": "au centre",
+          "hi-IN": "केंद्र की ओर",
+          "pl-PL": "do centrum",
+          "ro-RO": "spre centru",
+          "tr-TR": "merkeze",
+          "uk-UA": "до центру",
+          "uz-UZ": "markazga"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, das ist die richtige Richtung.",
+        "translation": {
+          "ru-RU": "Да, это правильное направление.",
+          "en-US": "Yes, that is the right direction.",
+          "ar-SA": "نعم، هذا هو الاتجاه الصحيح.",
+          "es-ES": "Sí, esta es la dirección correcta.",
+          "fr-FR": "Oui, c'est la bonne direction.",
+          "hi-IN": "हाँ, यह सही दिशा है।",
+          "pl-PL": "Tak, to jest właściwy kierunek.",
+          "ro-RO": "Da, aceasta este direcția corectă.",
+          "tr-TR": "Evet, bu doğru yön.",
+          "uk-UA": "Так, це правильний напрямок.",
+          "uz-UZ": "Ha, bu to'g'ri yo'nalish."
+        },
+        "nextStep": "fahrkarten"
+      },
+      {
+        "text": "Nein, das ist die falsche Richtung.",
+        "translation": {
+          "ru-RU": "Нет, это неправильное направление.",
+          "en-US": "No, that is the wrong direction.",
+          "ar-SA": "لا، هذا هو الاتجاه الخاطئ.",
+          "es-ES": "No, esta es la dirección equivocada.",
+          "fr-FR": "Non, c'est la mauvaise direction.",
+          "hi-IN": "नहीं, यह गलत दिशा है।",
+          "pl-PL": "Nie, to jest zły kierunek.",
+          "ro-RO": "Nu, aceasta este direcția greșită.",
+          "tr-TR": "Hayır, bu yanlış yön.",
+          "uk-UA": "Ні, це неправильний напрямок.",
+          "uz-UZ": "Yo'q, bu noto'g'ri yo'nalish."
+        },
+        "nextStep": "fahrkarten"
+      }
+    ],
+    "defaultNext": "fahrkarten"
+  },
+  "fahrkarten": {
+    "botText": "Oh, danke! Wo kann man hier eigentlich Fahrkarten kaufen?",
+    "botTranslation": {
+      "ru-RU": "О, спасибо! А где здесь вообще можно купить билеты?",
+      "en-US": "Oh, thank you! Where can you actually buy tickets here?",
+      "ar-SA": "أوه، شكراً! أين يمكن للمرء شراء التذاكر هنا في الواقع؟",
+      "es-ES": "¡Oh, gracias! ¿Dónde se pueden comprar billetes aquí en realidad?",
+      "fr-FR": "Oh, merci ! Où peut-on acheter des tickets ici en fait ?",
+      "hi-IN": "ओह, धन्यवाद! वास्तव में यहाँ टिकट कहाँ से खरीदे जा सकते हैं?",
+      "pl-PL": "Och, dziękuję! Gdzie właściwie można tutaj kupić bilety?",
+      "ro-RO": "Oh, mulțumesc! De unde se pot cumpăra bilete aici, de fapt?",
+      "tr-TR": "Oh, teşekkürler! Aslında buradan nereden bilet satın alınabilir?",
+      "uk-UA": "О, дякую! А де тут взагалі можна купити квитки?",
+      "uz-UZ": "Oh, rahmat! Bu yerda biletlarni aniq qayerdan sotib olsa bo'ladi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Fahrkarten",
+        "translation": {
+          "ru-RU": "билеты",
+          "en-US": "the tickets",
+          "ar-SA": "التذاكر",
+          "es-ES": "los billetes",
+          "fr-FR": "les tickets",
+          "hi-IN": "टिकट",
+          "pl-PL": "bilety",
+          "ro-RO": "biletele",
+          "tr-TR": "biletler",
+          "uk-UA": "квитки",
+          "uz-UZ": "chiptalar"
+        }
+      },
+      {
+        "german": "kaufen",
+        "translation": {
+          "ru-RU": "покупать",
+          "en-US": "to buy",
+          "ar-SA": "يشتري",
+          "es-ES": "comprar",
+          "fr-FR": "acheter",
+          "hi-IN": "खरीदना",
+          "pl-PL": "kupować",
+          "ro-RO": "a cumpăra",
+          "tr-TR": "satın almak",
+          "uk-UA": "купувати",
+          "uz-UZ": "sotib olmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Direkt vorne beim Busfahrer.",
+        "translation": {
+          "ru-RU": "Прямо впереди у водителя автобуса.",
+          "en-US": "Right at the front from the bus driver.",
+          "ar-SA": "في الأمام مباشرة عند سائق الحافلة.",
+          "es-ES": "Directamente al frente, con el conductor.",
+          "fr-FR": "Directement à l'avant, auprès du chauffeur.",
+          "hi-IN": "ठीक सामने बस ड्राइवर के पास।",
+          "pl-PL": "Bezpośrednio z przodu u kierowcy autobusu.",
+          "ro-RO": "Direct în față, la șoferul autobuzului.",
+          "tr-TR": "Doğrudan ön tarafta, otobüs şoföründen.",
+          "uk-UA": "Прямо попереду у водія автобуса.",
+          "uz-UZ": "To'g'ridan-to'g'ri oldinda, avtobus haydovchisidan."
+        },
+        "nextStep": "haltestellen"
+      },
+      {
+        "text": "Über die App auf dem Handy.",
+        "translation": {
+          "ru-RU": "Через приложение на телефоне.",
+          "en-US": "Via the app on the phone.",
+          "ar-SA": "عبر التطبيق على الهاتف.",
+          "es-ES": "A través de la aplicación en el móvil.",
+          "fr-FR": "Via l'application sur le téléphone.",
+          "hi-IN": "फोन पर ऐप के माध्यम से।",
+          "pl-PL": "Przez aplikację w telefonie.",
+          "ro-RO": "Prin aplicația de pe telefon.",
+          "tr-TR": "Telefondaki uygulama üzerinden.",
+          "uk-UA": "Через додаток на телефоні.",
+          "uz-UZ": "Telefondagi ilova orqali."
+        },
+        "nextStep": "haltestellen"
+      }
+    ],
+    "defaultNext": "haltestellen"
+  },
+  "haltestellen": {
+    "botText": "Alles klar. Wissen Sie, wie viele Haltestellen es noch sind?",
+    "botTranslation": {
+      "ru-RU": "Всё понятно. Вы не знаете, сколько еще осталось остановок?",
+      "en-US": "All right. Do you know how many stops are left?",
+      "ar-SA": "واضح. هل تعرف كم عدد المحطات المتبقية؟",
+      "es-ES": "Muy bien. ¿Sabe cuántas paradas quedan?",
+      "fr-FR": "D'accord. Savez-vous combien d'arrêts il reste ?",
+      "hi-IN": "सब समझ आ गया। क्या आप जानते हैं कि कितने स्टॉप बचे हैं?",
+      "pl-PL": "Wszystko jasne. Wie pan/pani, ile przystanków jeszcze zostało?",
+      "ro-RO": "În regulă. Știți câte stații mai sunt?",
+      "tr-TR": "Anlaşıldı. Daha kaç durak olduğunu biliyor musunuz?",
+      "uk-UA": "Все зрозуміло. Ви не знаєте, скільки ще залишилося зупинок?",
+      "uz-UZ": "Tushunarli. Yana nechta bekat qolganini bilmaysizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "wie viele",
+        "translation": {
+          "ru-RU": "сколько",
+          "en-US": "how many",
+          "ar-SA": "كم عدد",
+          "es-ES": "cuántos",
+          "fr-FR": "combien",
+          "hi-IN": "कितने",
+          "pl-PL": "ile",
+          "ro-RO": "câți/câte",
+          "tr-TR": "kaç tane",
+          "uk-UA": "скільки",
+          "uz-UZ": "nechta"
+        }
+      },
+      {
+        "german": "die Haltestellen",
+        "translation": {
+          "ru-RU": "остановки",
+          "en-US": "the stops",
+          "ar-SA": "المحطات",
+          "es-ES": "las paradas",
+          "fr-FR": "les arrêts",
+          "hi-IN": "स्टॉप",
+          "pl-PL": "przystanki",
+          "ro-RO": "stațiile",
+          "tr-TR": "duraklar",
+          "uk-UA": "зупинки",
+          "uz-UZ": "bekatlar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das sind noch ungefähr vier Haltestellen.",
+        "translation": {
+          "ru-RU": "Это еще примерно четыре остановки.",
+          "en-US": "That's about four stops left.",
+          "ar-SA": "بقي حوالي أربع محطات.",
+          "es-ES": "Son unas cuatro paradas más.",
+          "fr-FR": "C'est encore environ quatre arrêts.",
+          "hi-IN": "यह लगभग चार स्टॉप और हैं।",
+          "pl-PL": "To jeszcze około czterech przystanków.",
+          "ro-RO": "Mai sunt aproximativ patru stații.",
+          "tr-TR": "Daha yaklaşık dört durak var.",
+          "uk-UA": "Це ще приблизно чотири зупинки.",
+          "uz-UZ": "Yana taxminan to'rtta bekat bor."
+        },
+        "nextStep": "sitzplaetze"
+      },
+      {
+        "text": "Keine Ahnung, ich kenne den Weg auch nicht so gut.",
+        "translation": {
+          "ru-RU": "Без понятия, я тоже не очень хорошо знаю дорогу.",
+          "en-US": "No idea, I don't know the way very well either.",
+          "ar-SA": "لا فكرة لدي، أنا أيضاً لا أعرف الطريق جيداً.",
+          "es-ES": "Ni idea, yo tampoco conozco muy bien el camino.",
+          "fr-FR": "Aucune idée, je ne connais pas très bien le chemin non plus.",
+          "hi-IN": "कोई अंदाज़ा नहीं, मैं भी रास्ता इतनी अच्छी तरह नहीं जानता।",
+          "pl-PL": "Nie mam pojęcia, też nie znam drogi zbyt dobrze.",
+          "ro-RO": "Habar n-am, nici eu nu cunosc drumul prea bine.",
+          "tr-TR": "Hiçbir fikrim yok, ben de yolu çok iyi bilmiyorum.",
+          "uk-UA": "Без поняття, я теж не дуже добре знаю дорогу.",
+          "uz-UZ": "Bilmasam, men ham yo'lni unchalik yaxshi bilmayman."
+        },
+        "nextStep": "sitzplaetze"
+      }
+    ],
+    "defaultNext": "sitzplaetze"
+  },
+  "sitzplaetze": {
+    "botText": "Hier gibt es leider überhaupt keine freien Sitzplätze mehr.",
+    "botTranslation": {
+      "ru-RU": "К сожалению, здесь вообще больше нет свободных мест.",
+      "en-US": "Unfortunately, there are absolutely no free seats left here.",
+      "ar-SA": "للأسف لا توجد مقاعد شاغرة هنا على الإطلاق بعد الآن.",
+      "es-ES": "Lamentablemente, aquí ya no hay ningún asiento libre.",
+      "fr-FR": "Malheureusement, il n'y a absolument plus de sièges libres ici.",
+      "hi-IN": "दुर्भाग्य से, यहाँ अब कोई खाली सीट नहीं बची है।",
+      "pl-PL": "Niestety, nie ma tu już absolutnie żadnych wolnych miejsc siedzących.",
+      "ro-RO": "Din păcate, nu mai sunt deloc locuri libere aici.",
+      "tr-TR": "Maalesef burada hiç boş koltuk kalmadı.",
+      "uk-UA": "На жаль, тут взагалі більше немає вільних місць.",
+      "uz-UZ": "Afsuski, bu yerda umuman bo'sh joy qolmadi."
+    },
+    "vocabulary": [
+      {
+        "german": "leider",
+        "translation": {
+          "ru-RU": "к сожалению",
+          "en-US": "unfortunately",
+          "ar-SA": "للأسف",
+          "es-ES": "lamentablemente",
+          "fr-FR": "malheureusement",
+          "hi-IN": "दुर्भाग्य से",
+          "pl-PL": "niestety",
+          "ro-RO": "din păcate",
+          "tr-TR": "maalesef",
+          "uk-UA": "на жаль",
+          "uz-UZ": "afsuski"
+        }
+      },
+      {
+        "german": "freie Sitzplätze",
+        "translation": {
+          "ru-RU": "свободные места",
+          "en-US": "free seats",
+          "ar-SA": "مقاعد شاغرة",
+          "es-ES": "asientos libres",
+          "fr-FR": "sièges libres",
+          "hi-IN": "खाली सीटें",
+          "pl-PL": "wolne miejsca",
+          "ro-RO": "locuri libere",
+          "tr-TR": "boş koltuklar",
+          "uk-UA": "вільні місця",
+          "uz-UZ": "bo'sh joylar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, man muss leider die ganze Zeit stehen.",
+        "translation": {
+          "ru-RU": "Да, к сожалению, придется стоять всё время.",
+          "en-US": "Yes, unfortunately you have to stand the whole time.",
+          "ar-SA": "نعم، للأسف عليك الوقوف طوال الوقت.",
+          "es-ES": "Sí, por desgracia hay que estar de pie todo el tiempo.",
+          "fr-FR": "Oui, malheureusement, on doit rester debout tout le temps.",
+          "hi-IN": "हाँ, दुर्भाग्य से आपको हर समय खड़ा रहना पड़ता है।",
+          "pl-PL": "Tak, niestety trzeba stać cały czas.",
+          "ro-RO": "Da, din păcate trebuie să stai în picioare tot timpul.",
+          "tr-TR": "Evet, maalesef bütün zaman ayakta durmak gerekiyor.",
+          "uk-UA": "Так, на жаль, доведеться стояти весь час.",
+          "uz-UZ": "Ha, afsuski butun vaqt tik turishga to'g'ri keladi."
+        },
+        "nextStep": "hitze"
+      },
+      {
+        "text": "Da vorne steht gleich jemand auf, glaube ich.",
+        "translation": {
+          "ru-RU": "Там впереди кто-то сейчас встанет, я думаю.",
+          "en-US": "Somebody up there is about to get up, I think.",
+          "ar-SA": "أعتقد أن شخصاً ما في الأمام سيقف قريباً.",
+          "es-ES": "Creo que alguien ahí delante se va a levantar ahora mismo.",
+          "fr-FR": "Je crois que quelqu'un devant va se lever dans un instant.",
+          "hi-IN": "मुझे लगता है कि आगे कोई उठने वाला है।",
+          "pl-PL": "Myślę, że tam z przodu zaraz ktoś wstanie.",
+          "ro-RO": "Cred că cineva de acolo din față se va ridica imediat.",
+          "tr-TR": "Sanırım ileride biri hemen kalkacak.",
+          "uk-UA": "Там попереду хтось зараз встане, я думаю.",
+          "uz-UZ": "O'ylaymanki, u yerda oldinda kimdir tez orada o'rnidan turadi."
+        },
+        "nextStep": "hitze"
+      }
+    ],
+    "defaultNext": "hitze"
+  },
+  "hitze": {
+    "botText": "Der Bus ist heute wirklich sehr voll und es ist extrem heiß hier drin.",
+    "botTranslation": {
+      "ru-RU": "Автобус сегодня действительно очень полный, и здесь внутри ужасно жарко.",
+      "en-US": "The bus is really very full today and it's extremely hot in here.",
+      "ar-SA": "الحافلة مزدحمة جداً اليوم والجو حار للغاية بالداخل.",
+      "es-ES": "El autobús está realmente muy lleno hoy y hace muchísimo calor aquí dentro.",
+      "fr-FR": "Le bus est vraiment très plein aujourd'hui et il fait extrêmement chaud ici-dedans.",
+      "hi-IN": "आज बस वास्तव में बहुत भरी हुई है और यहाँ अंदर बहुत गर्मी है।",
+      "pl-PL": "Autobus jest dzisiaj naprawdę bardzo pełny i jest tu strasznie gorąco.",
+      "ro-RO": "Autobuzul este într-adevăr foarte plin astăzi și este extrem de cald aici înăuntru.",
+      "tr-TR": "Otobüs bugün gerçekten çok dolu ve içerisi aşırı sıcak.",
+      "uk-UA": "Автобус сьогодні дійсно дуже повний, і тут всередині жахливо гаряче.",
+      "uz-UZ": "Bugun avtobus haqiqatdan ham juda to'la va ichkarida juda issiq."
+    },
+    "vocabulary": [
+      {
+        "german": "sehr voll",
+        "translation": {
+          "ru-RU": "очень полный",
+          "en-US": "very full",
+          "ar-SA": "ممتلئ جداً",
+          "es-ES": "muy lleno",
+          "fr-FR": "très plein",
+          "hi-IN": "बहुत भरा हुआ",
+          "pl-PL": "bardzo pełny",
+          "ro-RO": "foarte plin",
+          "tr-TR": "çok dolu",
+          "uk-UA": "дуже повний",
+          "uz-UZ": "juda to'la"
+        }
+      },
+      {
+        "german": "extrem heiß",
+        "translation": {
+          "ru-RU": "очень жарко",
+          "en-US": "extremely hot",
+          "ar-SA": "حار للغاية",
+          "es-ES": "extremadamente caliente",
+          "fr-FR": "extrêmement chaud",
+          "hi-IN": "बहुत गर्म",
+          "pl-PL": "ekstremalnie gorąco",
+          "ro-RO": "extrem de cald",
+          "tr-TR": "aşırı sıcak",
+          "uk-UA": "надзвичайно жарко",
+          "uz-UZ": "o'ta issiq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, das stimmt, um diese Uhrzeit ist immer viel los.",
+        "translation": {
+          "ru-RU": "Да, это правда, в это время всегда много народу (многое происходит).",
+          "en-US": "Yes, that's true, at this time it's always very busy.",
+          "ar-SA": "نعم، هذا صحيح، في هذا الوقت هناك دائماً الكثير من الحركة.",
+          "es-ES": "Sí, es verdad, a esta hora siempre hay mucha gente.",
+          "fr-FR": "Oui, c'est vrai, à cette heure-ci, il y a toujours beaucoup de monde.",
+          "hi-IN": "हाँ, यह सही है, इस समय हमेशा बहुत भीड़ होती है।",
+          "pl-PL": "Tak, to prawda, o tej porze zawsze jest duży ruch.",
+          "ro-RO": "Da, așa este, la această oră este întotdeauna multă agitație.",
+          "tr-TR": "Evet, doğru, bu saatte her zaman çok yoğun olur.",
+          "uk-UA": "Так, це правда, в цей час завжди багато народу.",
+          "uz-UZ": "Ha, to'g'ri, bu vaqtda doim odam ko'p bo'ladi."
+        },
+        "nextStep": "geschwindigkeit"
+      },
+      {
+        "text": "Ja, man kann leider auch die Fenster nicht öffnen.",
+        "translation": {
+          "ru-RU": "Да, к сожалению, еще и окна нельзя открыть.",
+          "en-US": "Yes, unfortunately you can't open the windows either.",
+          "ar-SA": "نعم، للأسف لا يمكن فتح النوافذ أيضاً.",
+          "es-ES": "Sí, por desgracia tampoco se pueden abrir las ventanas.",
+          "fr-FR": "Oui, malheureusement on ne peut pas non plus ouvrir les fenêtres.",
+          "hi-IN": "हाँ, दुर्भाग्य से खिड़कियाँ भी नहीं खोली जा सकतीं।",
+          "pl-PL": "Tak, niestety nie można też otworzyć okien.",
+          "ro-RO": "Da, din păcate nu se pot deschide nici ferestrele.",
+          "tr-TR": "Evet, maalesef pencereler de açılmıyor.",
+          "uk-UA": "Так, на жаль, ще й вікна не можна відкрити.",
+          "uz-UZ": "Ha, afsuski derazalarni ham ochib bo'lmaydi."
+        },
+        "nextStep": "geschwindigkeit"
+      }
+    ],
+    "defaultNext": "geschwindigkeit"
+  },
+  "geschwindigkeit": {
+    "botText": "Ich muss mich kurz festhalten, der Busfahrer fährt ziemlich schnell.",
+    "botTranslation": {
+      "ru-RU": "Мне нужно крепко держаться, водитель автобуса едет довольно быстро.",
+      "en-US": "I need to hold on for a moment, the bus driver is driving quite fast.",
+      "ar-SA": "يجب أن تمسك جيداً، سائق الحافلة يقود بسرعة كبيرة.",
+      "es-ES": "Tengo que agarrarme un momento, el conductor va bastante rápido.",
+      "fr-FR": "Je dois me tenir un instant, le chauffeur conduit assez vite.",
+      "hi-IN": "मुझे थोड़ी देर पकड़ना होगा, बस ड्राइवर काफी तेज़ गाड़ी चला रहा है।",
+      "pl-PL": "Muszę się na chwilę przytrzymać, kierowca autobusu jedzie dość szybko.",
+      "ro-RO": "Trebuie să mă țin un moment, șoferul autobuzului conduce destul de repede.",
+      "tr-TR": "Sıkıca tutunmam lazım, otobüs şoförü epey hızlı sürüyor.",
+      "uk-UA": "Мені потрібно міцно триматися, водій автобуса їде досить швидко.",
+      "uz-UZ": "Biroz ushlab turishim kerak, avtobus haydovchisi ancha tez haydayapti."
+    },
+    "vocabulary": [
+      {
+        "german": "festhalten",
+        "translation": {
+          "ru-RU": "держаться",
+          "en-US": "hold on",
+          "ar-SA": "يتمسك",
+          "es-ES": "agarrarse",
+          "fr-FR": "s'accrocher",
+          "hi-IN": "पकड़ना",
+          "pl-PL": "trzymać się",
+          "ro-RO": "a se ține",
+          "tr-TR": "tutunmak",
+          "uk-UA": "триматися",
+          "uz-UZ": "ushlab turmoq"
+        }
+      },
+      {
+        "german": "ziemlich schnell",
+        "translation": {
+          "ru-RU": "довольно быстро",
+          "en-US": "quite fast",
+          "ar-SA": "سريع جداً",
+          "es-ES": "bastante rápido",
+          "fr-FR": "assez vite",
+          "hi-IN": "काफी तेज़",
+          "pl-PL": "dość szybko",
+          "ro-RO": "destul de repede",
+          "tr-TR": "oldukça hızlı",
+          "uk-UA": "досить швидко",
+          "uz-UZ": "ancha tez"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, er hat bestimmt Verspätung und beeilt sich.",
+        "translation": {
+          "ru-RU": "Да, он наверняка опаздывает и торопится.",
+          "en-US": "Yes, he is definitely running late and is in a hurry.",
+          "ar-SA": "نعم، بالتأكيد هو متأخر ولديه عجلة.",
+          "es-ES": "Sí, seguro que tiene retraso y tiene prisa.",
+          "fr-FR": "Oui, il est sûrement en retard et se dépêche.",
+          "hi-IN": "हाँ, वह निश्चित रूप से लेट है और जल्दी में है।",
+          "pl-PL": "Tak, na pewno ma opóźnienie i się spieszy.",
+          "ro-RO": "Da, cu siguranță are întârziere și se grăbește.",
+          "tr-TR": "Evet, kesin gecikti ve acele ediyor.",
+          "uk-UA": "Так, він напевно спізнюється і поспішає.",
+          "uz-UZ": "Ha, u aniq kechikmoqda va shoshilyapti."
+        },
+        "nextStep": "aussteigen"
+      },
+      {
+        "text": "Stimmt, man muss hier wirklich gut aufpassen.",
+        "translation": {
+          "ru-RU": "Правда, здесь действительно нужно быть очень внимательным.",
+          "en-US": "True, you really have to pay close attention here.",
+          "ar-SA": "صحيح، يجب على المرء أن ينتبه جيداً هنا.",
+          "es-ES": "Verdad, realmente hay que tener mucho cuidado aquí.",
+          "fr-FR": "C'est vrai, il faut vraiment faire très attention ici.",
+          "hi-IN": "सही कहा, यहाँ वास्तव में बहुत ध्यान देना पड़ता है।",
+          "pl-PL": "Prawda, trzeba tutaj naprawdę uważać.",
+          "ro-RO": "Adevărat, aici chiar trebuie să fii foarte atent.",
+          "tr-TR": "Doğru, burada gerçekten çok dikkat etmek gerekiyor.",
+          "uk-UA": "Правда, тут дійсно потрібно бути дуже уважним.",
+          "uz-UZ": "To'g'ri, bu yerda haqiqatdan ham juda ehtiyot bo'lish kerak."
+        },
+        "nextStep": "aussteigen"
+      }
+    ],
+    "defaultNext": "aussteigen"
+  },
+  "aussteigen": {
+    "botText": "An der nächsten Haltestelle steige ich endlich aus.",
+    "botTranslation": {
+      "ru-RU": "На следующей остановке я наконец-то выхожу.",
+      "en-US": "At the next stop, I'm finally getting off.",
+      "ar-SA": "في المحطة القادمة سأنزل أخيراً.",
+      "es-ES": "En la próxima parada por fin me bajo.",
+      "fr-FR": "Au prochain arrêt, je descends enfin.",
+      "hi-IN": "अगले स्टॉप पर मैं आखिरकार उतर रही हूँ।",
+      "pl-PL": "Na następnym przystanku w końcu wysiadam.",
+      "ro-RO": "La următoarea stație cobor în sfârșit.",
+      "tr-TR": "Bir sonraki durakta nihayet iniyorum.",
+      "uk-UA": "На наступній зупинці я нарешті виходжу.",
+      "uz-UZ": "Keyingi bekatda nihoyat tushaman."
+    },
+    "vocabulary": [
+      {
+        "german": "nächsten Haltestelle",
+        "translation": {
+          "ru-RU": "следующая остановка",
+          "en-US": "next stop",
+          "ar-SA": "المحطة التالية",
+          "es-ES": "próxima parada",
+          "fr-FR": "prochain arrêt",
+          "hi-IN": "अगला स्टॉप",
+          "pl-PL": "następny przystanek",
+          "ro-RO": "următoarea stație",
+          "tr-TR": "sonraki durak",
+          "uk-UA": "наступна зупинка",
+          "uz-UZ": "keyingi bekat"
+        }
+      },
+      {
+        "german": "aussteigen",
+        "translation": {
+          "ru-RU": "выходить",
+          "en-US": "to get off",
+          "ar-SA": "ينزل",
+          "es-ES": "bajarse",
+          "fr-FR": "descendre",
+          "hi-IN": "उतरना",
+          "pl-PL": "wysiadać",
+          "ro-RO": "a coborî",
+          "tr-TR": "inmek",
+          "uk-UA": "виходити",
+          "uz-UZ": "tushmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, einen schönen Tag noch!",
+        "translation": {
+          "ru-RU": "Хорошо, хорошего дня вам дальше!",
+          "en-US": "All right, have a nice day!",
+          "ar-SA": "واضح، أتمنى لك يوماً سعيداً بقية اليوم!",
+          "es-ES": "Muy bien, ¡que tenga un buen día!",
+          "fr-FR": "D'accord, bonne fin de journée !",
+          "hi-IN": "सब ठीक है, आपका दिन शुभ हो!",
+          "pl-PL": "Wszystko jasne, miłego dnia!",
+          "ro-RO": "În regulă, o zi bună în continuare!",
+          "tr-TR": "Anlaşıldı, iyi günler dilerim!",
+          "uk-UA": "Добре, гарного дня вам далі!",
+          "uz-UZ": "Tushunarli, kuningiz xayrli o'tsin!"
+        },
+        "nextStep": "abschied"
+      },
+      {
+        "text": "Gute Reise weiterhin!",
+        "translation": {
+          "ru-RU": "Хорошего дальнейшего пути!",
+          "en-US": "Have a good journey onward!",
+          "ar-SA": "رحلة ممتعة في بقية طريقك!",
+          "es-ES": "¡Buen viaje en adelante!",
+          "fr-FR": "Bonne continuation de voyage !",
+          "hi-IN": "आगे की यात्रा शुभ हो!",
+          "pl-PL": "Dalszej udanej podróży!",
+          "ro-RO": "Călătorie plăcută în continuare!",
+          "tr-TR": "Yolculuğunuzun kalanı iyi geçsin!",
+          "uk-UA": "Гарного подальшого шляху!",
+          "uz-UZ": "Sayohatingiz yaxshi davom etsin!"
+        },
+        "nextStep": "abschied"
+      }
+    ],
+    "defaultNext": "abschied"
+  },
+  "abschied": {
+    "botText": "Danke, gleichfalls! Tschüss!",
+    "botTranslation": {
+      "ru-RU": "Спасибо, взаимно! Пока!",
+      "en-US": "Thanks, you too! Bye!",
+      "ar-SA": "شكراً، ولك بمثل! وداعاً!",
+      "es-ES": "¡Gracias, igualmente! ¡Adiós!",
+      "fr-FR": "Merci, de même ! Salut !",
+      "hi-IN": "धन्यवाद, आपको भी! अलविदा!",
+      "pl-PL": "Dziękuję, nawzajem! Cześć!",
+      "ro-RO": "Mulțumesc, la fel! Pa!",
+      "tr-TR": "Teşekkürler, size de! Hoşça kalın!",
+      "uk-UA": "Дякую, навзаєм! Бувай!",
+      "uz-UZ": "Rahmat, sizga ham! Xayr!"
+    },
+    "vocabulary": [
+      {
+        "german": "gleichfalls",
+        "translation": {
+          "ru-RU": "взаимно",
+          "en-US": "likewise",
+          "ar-SA": "وبالمثل",
+          "es-ES": "igualmente",
+          "fr-FR": "de même",
+          "hi-IN": "आपको भी",
+          "pl-PL": "nawzajem",
+          "ro-RO": "la fel",
+          "tr-TR": "bilmukabele",
+          "uk-UA": "навзаєм",
+          "uz-UZ": "sizga ham"
+        }
+      },
+      {
+        "german": "Tschüss",
+        "translation": {
+          "ru-RU": "пока",
+          "en-US": "bye",
+          "ar-SA": "وداعاً",
+          "es-ES": "adiós",
+          "fr-FR": "salut",
+          "hi-IN": "अलविदा",
+          "pl-PL": "cześć",
+          "ro-RO": "pa",
+          "tr-TR": "hoşça kal",
+          "uk-UA": "бувай",
+          "uz-UZ": "xayr"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Tschüss!",
+        "translation": {
+          "ru-RU": "Пока!",
+          "en-US": "Bye!",
+          "ar-SA": "وداعاً!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Salut !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Cześć!",
+          "ro-RO": "Pa!",
+          "tr-TR": "Hoşça kal!",
+          "uk-UA": "Бувай!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Auf Wiedersehen!",
+        "translation": {
+          "ru-RU": "До свидания!",
+          "en-US": "Goodbye!",
+          "ar-SA": "إلى اللقاء!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "फिर मिलेंगे!",
+          "pl-PL": "Do widzenia!",
+          "ro-RO": "La revedere!",
+          "tr-TR": "Görüşmek üzere!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Ko'rishguncha!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

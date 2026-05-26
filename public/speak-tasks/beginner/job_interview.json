@@ -1,0 +1,461 @@
+{
+  "start": {
+    "botText": "Guten Tag, hier ist Herr Müller.",
+    "botTranslation": {
+      "ar-SA": "طاب يومك، معك السيد مولر.",
+      "en-US": "Good day, Mr. Müller here.",
+      "es-ES": "¡Buen día! Aquí el señor Müller.",
+      "fr-FR": "Bonjour, ici Monsieur Müller.",
+      "hi-IN": "शुभ दिन, यहाँ श्री मुलर हूँ।",
+      "pl-PL": "Dzień dobry, z tej strony pan Müller.",
+      "ro-RO": "Bună ziua, aici este domnul Müller.",
+      "ru-RU": "Добрый день, это господин Мюллер.",
+      "tr-TR": "İyi günler, ben Bay Müller.",
+      "uk-UA": "Доброго дня, це пан Мюллер.",
+      "uz-UZ": "Xayrli kun, bu janob Myuller."
+    },
+    "tips": {
+      "ru-RU": "Глагол 'heißen' (называться/зваться) используется в А1 для представления. Он не требует предлогов.",
+      "en-US": "The verb 'heißen' (to be called) is used in A1 for introduction. It does not require any prepositions.",
+      "ar-SA": "الفعل 'heißen' (يُسمى) يُستخدم في المستوى A1 للتعريف بالنفس.",
+      "es-ES": "El verbo 'heißen' (llamarse) se usa en A1 для представления.",
+      "fr-FR": "Le verbe 'heißen' (s'appeler) est utilisé en A1 pour se présenter.",
+      "hi-IN": "'heißen' क्रिया का उपयोग परिचय के लिए किया जाता है।",
+      "pl-PL": "Czasownik 'heißen' (nazywać się) jest używany w A1 do przedstawiania się.",
+      "ro-RO": "Verbul 'heißen' (a se numi) este folosit în A1 pentru prezentare.",
+      "tr-TR": "'heißen' fiili A1 seviyesinde kendini tanıtmak için kullanılır.",
+      "uk-UA": "Дієслово 'heißen' (називатися) використовується в А1 для відрекомендування.",
+      "uz-UZ": "'heißen' fe'li A1 darajasida o'zini tanishtirish uchun ishlatiladi."
+    },
+    "options": [
+      {
+        "text": "Guten Tag! Ich heiße Anna.",
+        "translation": {
+          "ar-SA": "طاب يومك! اسمي آنا.",
+          "en-US": "Good day! My name is Anna.",
+          "es-ES": "¡Buen día! Me llamo Anna.",
+          "fr-FR": "Bonjour ! Je m'appelle Anna.",
+          "hi-IN": "शुभ दिन! मेरा नाम अन्ना है।",
+          "pl-PL": "Dzień dobry! Nazywam się Anna.",
+          "ro-RO": "Bună ziua! Mă numesc Anna.",
+          "ru-RU": "Добрый день! Меня зовут Анна.",
+          "tr-TR": "İyi günler! Adım Anna.",
+          "uk-UA": "Доброго дня! Мене звати Анна.",
+          "uz-UZ": "Xayrli kun! Ismim Anna."
+        },
+        "nextStep": "job_wish"
+      }
+    ],
+    "defaultNext": "job_wish"
+  },
+  "job_wish": {
+    "botText": "Wollen Sie als Kellnerin arbeiten?",
+    "botTranslation": {
+      "ar-SA": "هل تريدين العمل كنادلة؟",
+      "en-US": "Do you want to work as a waitress?",
+      "es-ES": "¿Quiere trabajar como camarera?",
+      "fr-FR": "Voulez-vous travailler comme serveuse ?",
+      "hi-IN": "क्या आप एक वेट्रेस के रूप में काम करना चाहती हैं?",
+      "pl-PL": "Czy chce pani pracować jako kelnerka?",
+      "ro-RO": "Vreți să lucrați ca chelneriță?",
+      "ru-RU": "Вы хотите работать официанткой?",
+      "tr-TR": "Garson olarak mı çalışmak istiyorsunuz?",
+      "uk-UA": "Ви хочете працювати офіціанткою?",
+      "uz-UZ": "Siz ofitsiant bo'lib ishlamoqchimisiz?"
+    },
+    "tips": {
+      "ru-RU": "Модальный глагол 'wollen' (хотеть) стоит на втором месте, а смысловой глагол 'arbeiten' уходит в самый конец предложения.",
+      "en-US": "The modal verb 'wollen' stands in the second position, and the main verb 'arbeiten' goes to the very end of the sentence.",
+      "ar-SA": "الفعل الناقص 'wollen' يكون في الموضع الثاني، والفعل الأساسي 'arbeiten' يذهب إلى نهاية الجملة.",
+      "es-ES": "El verbo modal 'wollen' va en segunda posición, и el verbo principal 'arbeiten' va al final.",
+      "fr-FR": "Le verbe modal 'wollen' est en deuxième position, et le verbe principal 'arbeiten' va à la fin.",
+      "hi-IN": "मोडल क्रिया 'wollen' दूसरे स्थान पर होती है, और मुख्य क्रिया 'arbeiten' अंत में जाती है।",
+      "pl-PL": "Czasownik modalny 'wollen' stoi na drugim miejscu, a czasownik główny 'arbeiten' na samym końcu.",
+      "ro-RO": "Verbul modal 'wollen' stă pe a doua poziție, iar verbul principal 'arbeiten' merge la sfârșit.",
+      "tr-TR": "Modal fiil 'wollen' ikinci sıradadır ve ana fiil 'arbeiten' cümlenin en sonuna gider.",
+      "uk-UA": "Модальне дієслово 'wollen' стоїть на другому місці, а основне дієслово 'arbeiten' йде в самий кінець.",
+      "uz-UZ": "'wollen' modal fe'li ikkinchi o'rinda turadi, asosiy fe'l 'arbeiten' esa gapning oxiriga o'tadi."
+    },
+    "options": [
+      {
+        "text": "Ja, ich möchte als Kellnerin arbeiten.",
+        "translation": {
+          "ar-SA": "نعم، أود العمل كنادلة.",
+          "en-US": "Yes, I would like to work as a waitress.",
+          "es-ES": "Sí, me gustaría trabajar como camarera.",
+          "fr-FR": "Oui, je voudrais travailler comme serveuse.",
+          "hi-IN": "हाँ, मैं एक वेट्रेस के रूप में काम करना चाहती हूँ।",
+          "pl-PL": "Tak, chciałabym pracować jako kelnerka.",
+          "ro-RO": "Da, aș dori să lucrez ca chelneriță.",
+          "ru-RU": "Да, я хочу работать официанткой.",
+          "tr-TR": "Evet, garson olarak çalışmak istiyorum.",
+          "uk-UA": "Так, я хочу працювати офіціанткою.",
+          "uz-UZ": "Ha, men ofitsiant bo'lib ishlashni xohlayman."
+        },
+        "nextStep": "experience_check"
+      }
+    ],
+    "defaultNext": "experience_check"
+  },
+  "experience_check": {
+    "botText": "Haben Sie Erfahrung?",
+    "botTranslation": {
+      "ar-SA": "هل لديك خبرة؟",
+      "en-US": "Do you have experience?",
+      "es-ES": "¿Tiene experiencia?",
+      "fr-FR": "Avez-vous de l'expérience ?",
+      "hi-IN": "क्या आपके पास अनुभव है?",
+      "pl-PL": "Czy ma pani doświadczenie?",
+      "ro-RO": "Aveți experiență?",
+      "ru-RU": "У Вас есть опыт?",
+      "tr-TR": "Deneyiminiz var mı?",
+      "uk-UA": "У Вас є досвід?",
+      "uz-UZ": "Sizda tajriba bormi?"
+    },
+    "tips": {
+      "ru-RU": "Глагол 'haben' требует Akkusativ. Слово 'Erfahrung' женского рода, в А1 часто используется без артикля в таких устойчивых фразах.",
+      "en-US": "The verb 'haben' requires Akkusativ. 'Erfahrung' is feminine and is often used without an article in A1.",
+      "ar-SA": "الفعل 'haben' يتطلب حالة النصب. كلمة 'Erfahrung' مؤنثة وتُستخدم غالباً بدون أداة.",
+      "es-ES": "El verbo 'haben' requiere Akkusativ. 'Erfahrung' es femenino y se usa sin artículo.",
+      "fr-FR": "Le verbe 'haben' exige l'accusatif. 'Erfahrung' est féminin et s'utilise souvent sans article.",
+      "hi-IN": "'haben' क्रिया को Akkusativ की आवश्यकता होती है। 'Erfahrung' स्त्रीलिंग है।",
+      "pl-PL": "Czasownik 'haben' wymaga Akkusativu. Słowo 'Erfahrung' jest rodzaju żeńskiego.",
+      "ro-RO": "Verbul 'haben' cere Akkusativ. 'Erfahrung' este feminin și se folosește adesea fără articol.",
+      "tr-TR": "'haben' fiili Akkusativ gerektirir. 'Erfahrung' dişil bir kelimedir.",
+      "uk-UA": "Дієслово 'haben' вимагає Akkusativ. Слово 'Erfahrung' жіночого роду.",
+      "uz-UZ": "'haben' fe'li Akkusativ talab qiladi. 'Erfahrung' ayol jinsidagi so'zdir."
+    },
+    "options": [
+      {
+        "text": "Ja, ich habe Erfahrung.",
+        "translation": {
+          "ar-SA": "نعم، لدي خبرة.",
+          "en-US": "Yes, I have experience.",
+          "es-ES": "Sí, tengo experiencia.",
+          "fr-FR": "Oui, j'ai de l'expérience.",
+          "hi-IN": "हाँ, मेरे पास अनुभव है।",
+          "pl-PL": "Tak, mam doświadczenie.",
+          "ro-RO": "Da, am experiență.",
+          "ru-RU": "Да, у меня есть опыт.",
+          "tr-TR": "Evet, deneyimim var.",
+          "uk-UA": "Так, у мене є досвід.",
+          "uz-UZ": "Ha, menda tajriba bor."
+        },
+        "nextStep": "past_work"
+      }
+    ],
+    "defaultNext": "past_work"
+  },
+  "past_work": {
+    "botText": "Wo haben Sie gearbeitet?",
+    "botTranslation": {
+      "ar-SA": "أين عملتِ؟",
+      "en-US": "Where did you work?",
+      "es-ES": "¿Dónde работал?",
+      "fr-FR": "Où avez-vous travaillé ?",
+      "hi-IN": "आपने कहाँ काम किया था?",
+      "pl-PL": "Gdzie pani pracowała?",
+      "ro-RO": "Unde ați lucrat?",
+      "ru-RU": "Где Вы работали?",
+      "tr-TR": "Nerede çalıştınız?",
+      "uk-UA": "Где Ви працювали?",
+      "uz-UZ": "Qayerda ishlagansiz?"
+    },
+    "tips": {
+      "ru-RU": "При ответе на вопрос 'Wo?' (Где?) предлог 'in' требует Dativ. Средний род 'das Restaurant' берет у артикля форму 'einem'.",
+      "en-US": "When answering 'Wo?' (Where?), 'in' requires Dativ. 'das Restaurant' (neuter) takes the article form 'einem'.",
+      "ar-SA": "عند الإجابة على 'Wo?'، يتطلب حرف الجر 'in' حالة Dativ. الاسم 'das Restaurant' يأخذ الأداة 'einem'.",
+      "es-ES": "Al responder 'Wo?', 'in' requiere Dativ. 'das Restaurant' toma la forma 'einem'.",
+      "fr-FR": "Pour répondre à 'Wo?', 'in' requiert le Dativ. 'das Restaurant' prend la forme 'einem'.",
+      "hi-IN": "'Wo?' का उत्तर देते समय 'in' को Dativ की आवश्यकता होती है। 'das Restaurant' 'einem' का रूप लेता है।",
+      "pl-PL": "Odpowiadając na 'Wo?', 'in' wymaga Dativu. 'das Restaurant' przyjmuje formę 'einem'.",
+      "ro-RO": "La răspunsul pentru 'Wo?', 'in' cere Dativ. 'das Restaurant' ia forma 'einem'.",
+      "tr-TR": "'Wo?' sorusuna cevap verirken 'in' edatı Dativ gerektirir. 'das Restaurant' artikeli 'einem' olur.",
+      "uk-UA": "При відповіді на 'Wo?' прийменник 'in' вимагає Dativ. 'das Restaurant' бере форму 'einem'.",
+      "uz-UZ": "'Wo?' savoliga javob berishda 'in' predlogi Dativni talab qiladi. 'das Restaurant' 'einem' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Ich habe in einem Restaurant gearbeitet.",
+        "translation": {
+          "ar-SA": "لقد عملت في مطعم.",
+          "en-US": "I worked in a restaurant.",
+          "es-ES": "Trabajé en un restaurante.",
+          "fr-FR": "J'ai travaillé dans un restaurant.",
+          "hi-IN": "मैंने एक रेस्तरां में काम किया था।",
+          "pl-PL": "Pracowałam w restauracji.",
+          "ro-RO": "Am lucrat într-un restaurant.",
+          "ru-RU": "Я работала в ресторане.",
+          "tr-TR": "Bir restoranda çalıştım.",
+          "uk-UA": "Я працювала в ресторані.",
+          "uz-UZ": "Men restoranda ishlaganman."
+        },
+        "nextStep": "start_time"
+      }
+    ],
+    "defaultNext": "start_time"
+  },
+  "start_time": {
+    "botText": "Wann können Sie anfangen?",
+    "botTranslation": {
+      "ar-SA": "متى يمكنك البدء؟",
+      "en-US": "When can you start?",
+      "es-ES": "¿Cuándo puede empezar?",
+      "fr-FR": "Quand pouvez-vous commencer ?",
+      "hi-IN": "आप कब शुरू कर सकती हैं?",
+      "pl-PL": "Kiedy może pani zacząć?",
+      "ro-RO": "Când puteți începe?",
+      "ru-RU": "Когда Вы можете начать?",
+      "tr-TR": "Ne zaman başlayabilirsiniz?",
+      "uk-UA": "Коли Ви можете почати?",
+      "uz-UZ": "Qachon boshlay olasiz?"
+    },
+    "tips": {
+      "ru-RU": "С днями недели в А1 всегда используется предлог 'am' (am Montag). Модальный глагол стоит на втором месте.",
+      "en-US": "With days of the week, the preposition 'am' is always used (am Montag).",
+      "ar-SA": "مع أيام الأسبوع، نستخدم دائماً حرف الجر 'am' (am Montag).",
+      "es-ES": "Con los días de la semana, siempre se usa 'am' (am Montag).",
+      "fr-FR": "Avec les jours de la semaine, on utilise toujours 'am' (am Montag).",
+      "hi-IN": "सप्ताह के दिनों के साथ हमेशा 'am' (am Montag) का उपयोग किया जाता है।",
+      "pl-PL": "Z dniami tygodnia zawsze używamy przyimka 'am' (am Montag).",
+      "ro-RO": "Cu zilele săptămânii se folosește întotdeauna prepoziția 'am' (am Montag).",
+      "tr-TR": "Haftanın günleriyle her zaman 'am' edatı kullanılır (am Montag).",
+      "uk-UA": "З днями тижня завжди використовується прийменник 'am' (am Montag).",
+      "uz-UZ": "Hafta kunlari bilan har doim 'am' predlogi ishlatiladi (am Montag)."
+    },
+    "options": [
+      {
+        "text": "Ich kann am Montag anfangen.",
+        "translation": {
+          "ar-SA": "يمكنني البدء يوم الاثنين.",
+          "en-US": "I can start on Monday.",
+          "es-ES": "Puedo empezar el lunes.",
+          "fr-FR": "Je peux commencer lundi.",
+          "hi-IN": "मैं सोमवार को शुरू कर सकती हूँ।",
+          "pl-PL": "Mogę zacząć w poniedziałek.",
+          "ro-RO": "Pot începe luni.",
+          "ru-RU": "Я могу начать в понедельник.",
+          "tr-TR": "Pazartesi günü başlayabilirim.",
+          "uk-UA": "Я можу почати в понеділок.",
+          "uz-UZ": "Men dushanba kuni boshlashim mumkin."
+        },
+        "nextStep": "questions_ask"
+      }
+    ],
+    "defaultNext": "questions_ask"
+  },
+  "questions_ask": {
+    "botText": "Haben Sie Fragen?",
+    "botTranslation": {
+      "ar-SA": "هل لديك أسئلة؟",
+      "en-US": "Do you have questions?",
+      "es-ES": "¿Tiene preguntas?",
+      "fr-FR": "Avez-vous des questions ?",
+      "hi-IN": "क्या आपके पास प्रश्न हैं?",
+      "pl-PL": "Czy ma pani pytania?",
+      "ro-RO": "Aveți întrebări?",
+      "ru-RU": "У Вас есть вопросы?",
+      "tr-TR": "Sorularınız var mı?",
+      "uk-UA": "У Вас є запитання?",
+      "uz-UZ": "Savollaringiz bormi?"
+    },
+    "tips": {
+      "ru-RU": "В вопросительных предложениях с вопросительным словом (Wie) глагол всегда занимает второе место (sind).",
+      "en-US": "In interrogative sentences with a question word (Wie), the verb always takes the second position (sind).",
+      "ar-SA": "في الجمل الاستفهامية التي تبدأ بكلمة استفهام (Wie)، يأخذ الفعل دائماً الموضع الثاني (sind).",
+      "es-ES": "En las oraciones interrogativas con palabra interrogativa (Wie), el verbo ocupa la segunda posición.",
+      "fr-FR": "Dans les phrases interrogatives avec un mot interrogatif (Wie), le verbe occupe toujours la deuxième position.",
+      "hi-IN": "प्रश्नवाचक वाक्य में (Wie), क्रिया हमेशा दूसरे स्थान पर होती है (sind)।",
+      "pl-PL": "W zdaniach pytających z zaimkiem pytającym (Wie) czasownik zajmuje drugie miejsce (sind).",
+      "ro-RO": "În propozițiile interogative cu un cuvânt interogativ (Wie), verbul ocupă a doua poziție (sind).",
+      "tr-TR": "Soru kelimesi (Wie) olan soru cümlelerinde fiil her zaman ikinci sıradadır (sind).",
+      "uk-UA": "У питальних реченнях з питальним словом (Wie) дієслово завжди займає друге місце (sind).",
+      "uz-UZ": "So'roq so'zli gaplarda (Wie) fe'l har doim ikkinchi o'rinni egallaydi (sind)."
+    },
+    "options": [
+      {
+        "text": "Wie sind die Arbeitszeiten?",
+        "translation": {
+          "ar-SA": "كيف هي أوقات العمل؟",
+          "en-US": "What are the working hours?",
+          "es-ES": "¿Cómo son los horarios de trabajo?",
+          "fr-FR": "Quels sont les horaires de travail ?",
+          "hi-IN": "काम के घंटे क्या हैं?",
+          "pl-PL": "Jakie są godziny pracy?",
+          "ro-RO": "Care este programul de lucru?",
+          "ru-RU": "Какие часы работы?",
+          "tr-TR": "Çalışma saatleri nasıl?",
+          "uk-UA": "Які години роботи?",
+          "uz-UZ": "Ish vaqtlari qanday?"
+        },
+        "nextStep": "work_hours"
+      }
+    ],
+    "defaultNext": "work_hours"
+  },
+  "work_hours": {
+    "botText": "Wir arbeiten von Montag bis Freitag.",
+    "botTranslation": {
+      "ar-SA": "نحن نعمل من الاثنين إلى الجمعة.",
+      "en-US": "We work from Monday to Friday.",
+      "es-ES": "Trabajamos de lunes a viernes.",
+      "fr-FR": "Nous travaillons du lundi au vendredi.",
+      "hi-IN": "हम सोमवार से शुक्रवार तक काम करते हैं।",
+      "pl-PL": "Pracujemy od poniedziałku do piątku.",
+      "ro-RO": "Lucrăm de luni până vineri.",
+      "ru-RU": "Мы работаем с понедельника по пятницу.",
+      "tr-TR": "Pazartesiden cumaya çalışıyoruz.",
+      "uk-UA": "Ми працюємо з понеділка по п'ятницю.",
+      "uz-UZ": "Biz dushanbadan jumagacha ishlaymiz."
+    },
+    "tips": {
+      "ru-RU": "Конструкция 'von ... bis ...' (с ... до ...) используется для указания временных промежутков и не требует артиклей.",
+      "en-US": "The construction 'von ... bis ...' (from ... to ...) is used for time intervals and does not require articles.",
+      "ar-SA": "التعبير 'von ... bis ...' يُستخدم للفترات الزمنية ولا يتطلب أدوات تعريف.",
+      "es-ES": "La estructura 'von ... bis ...' se usa para intervalos de tiempo y no requiere artículos.",
+      "fr-FR": "La structure 'von ... bis ...' est utilisée pour les intervalles de temps.",
+      "hi-IN": "'von ... bis ...' संरचना का उपयोग समय अंतराल के लिए किया जाता है।",
+      "pl-PL": "Konstrukcja 'von ... bis ...' służy do określania przedziałów czasowych.",
+      "ro-RO": "Construcția 'von ... bis ...' se folosește pentru intervale de timp.",
+      "tr-TR": "'von ... bis ...' kalıbı zaman aralıkları için kullanılır.",
+      "uk-UA": "Конструкція 'von ... bis ...' використовується для часових проміжків.",
+      "uz-UZ": "'von ... bis ...' qurilmasi vaqt oraliqlari uchun ishlatiladi."
+    },
+    "options": [
+      {
+        "text": "Und wie hoch ist das Gehalt?",
+        "translation": {
+          "ar-SA": "وكم هو الراتب؟",
+          "en-US": "And how high is the salary?",
+          "es-ES": "¿Y qué tan alto es el salario?",
+          "fr-FR": "Et à combien s'élève le salaire ?",
+          "hi-IN": "और वेतन कितना है?",
+          "pl-PL": "A jak wysokie jest wynagrodzenie?",
+          "ro-RO": "Și cât de mare este salariul?",
+          "ru-RU": "А какая зарплата?",
+          "tr-TR": "Peki maaş ne kadar?",
+          "uk-UA": "А яка зарплата?",
+          "uz-UZ": "Maosh qancha?"
+        },
+        "nextStep": "salary_info"
+      }
+    ],
+    "defaultNext": "salary_info"
+  },
+  "salary_info": {
+    "botText": "Das Gehalt ist 15 Euro pro Stunde.",
+    "botTranslation": {
+      "ar-SA": "الراتب 15 يورو في الساعة.",
+      "en-US": "The salary is 15 Euros per hour.",
+      "es-ES": "El salario es de 15 euros por hora.",
+      "fr-FR": "Le salaire est de 15 euros par heure.",
+      "hi-IN": "वेतन 15 यूरो प्रति घंटा है।",
+      "pl-PL": "Wynagrodzenie wynosi 15 euro za godzinę.",
+      "ro-RO": "Salariul este de 15 euro pe oră.",
+      "ru-RU": "Зарплата — 15 евро в час.",
+      "tr-TR": "Maaş saatlik 15 Euro.",
+      "uk-UA": "Зарплата — 15 євро за годину.",
+      "uz-UZ": "Maosh soatiga 15 yevro."
+    },
+    "tips": {
+      "ru-RU": "Слово 'pro' (в / за) употребляется с существительными без артикля для выражения регулярности (pro Stunde — в час).",
+      "en-US": "The word 'pro' (per) is used with nouns without articles to express regularity (pro Stunde — per hour).",
+      "ar-SA": "كلمة 'pro' تُستخدم مع الأسماء بدون أداة للتعبير عن المعدل (pro Stunde).",
+      "es-ES": "La palabra 'pro' se usa con sustantivos sin artículo para expresar frecuencia.",
+      "fr-FR": "Le mot 'pro' est utilisé avec des noms sans article pour exprimer la régularité.",
+      "hi-IN": "'pro' शब्द का उपयोग बिना आर्टिकल के नियमितता व्यक्त करने के लिए किया जाता है।",
+      "pl-PL": "Słowo 'pro' jest używane z rzeczownikami bez przedimka.",
+      "ro-RO": "Cuvântul 'pro' se folosește cu substantive fără articol.",
+      "tr-TR": "'pro' kelimesi artikelsiz isimlerle düzenlilik belirtmek için kullanılır.",
+      "uk-UA": "Слово 'pro' вживається з іменниками без артикля для вираження регулярності.",
+      "uz-UZ": "'pro' so'zi muntazamlikni ifodalash uchun artiklsiz otlar bilan ishlatiladi."
+    },
+    "options": [
+      {
+        "text": "Alles klar. Vielen Dank!",
+        "translation": {
+          "ar-SA": "كل شيء واضح. شكراً جزيلاً!",
+          "en-US": "All clear. Thank you very much!",
+          "es-ES": "Todo claro. ¡Muchas gracias!",
+          "fr-FR": "C'est très clair. Merci beaucoup !",
+          "hi-IN": "सब साफ़ है। बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Wszystko jasne. Bardzo dziękuję!",
+          "ro-RO": "Totul este clar. Mulțumesc mult!",
+          "ru-RU": "Всё понятно. Большое спасибо!",
+          "tr-TR": "Her şey net. Çok teşekkürler!",
+          "uk-UA": "Все зрозуміло. Дуже дякую!",
+          "uz-UZ": "Hammasi tushunarli. Katta rahmat!"
+        },
+        "nextStep": "hr_response"
+      }
+    ],
+    "defaultNext": "hr_response"
+  },
+  "hr_response": {
+    "botText": "Danke, Anna. Wir melden uns. Auf Wiedersehen!",
+    "botTranslation": {
+      "ar-SA": "شكراً يا آنا. سنتواصل معك. إلى اللقاء!",
+      "en-US": "Thank you, Anna. We will be in touch. Goodbye!",
+      "es-ES": "Gracias, Anna. Nos comunicaremos. ¡Adiós!",
+      "fr-FR": "Merci, Anna. Nous vous recontactons. Au revoir !",
+      "hi-IN": "धन्यवाद, अन्ना। हम संपर्क करेंगे। अलविदा!",
+      "pl-PL": "Dziękuję, Anna. Odezwiemy się. Do widzenia!",
+      "ro-RO": "Mulțumesc, Anna. Ne vom auzi. La revedere!",
+      "ru-RU": "Спасибо, Анна. Мы свяжемся с Вами. До свидания!",
+      "tr-TR": "Teşekkürler Anna. Biz arayacağız. Hoşça kalın!",
+      "uk-UA": "Дякую, Анна. Ми зв'яжемося з Вами. До побачення!",
+      "uz-UZ": "Rahmat, Anna. Biz bog'lanamiz. Xayr!"
+    },
+    "tips": {
+      "ru-RU": "Фраза 'Wir melden uns' (Мы свяжемся) состоит из глагола 'melden' и возвратного местоимения 'uns' (нас/себя).",
+      "en-US": "The phrase 'Wir melden uns' consists of the verb 'melden' and the reflexive pronoun 'uns'.",
+      "ar-SA": "العبارة 'Wir melden uns' تتكون من الفعل 'melden' والضمير المنعكس 'uns'.",
+      "es-ES": "La frase 'Wir melden uns' consiste en el verbo 'melden' y el pronombre reflexivo 'uns'.",
+      "fr-FR": "La phrase 'Wir melden uns' est composée du verbe 'melden' et du pronom réfléchi 'uns'.",
+      "hi-IN": "'Wir melden uns' वाक्य में 'melden' क्रिया और रिफ्लेक्सिव सर्वनाम 'uns' शामिल हैं।",
+      "pl-PL": "Zwrot 'Wir melden uns' składa się z czasownika 'melden' i zaimka zwrotnego 'uns'.",
+      "ro-RO": "Expresia 'Wir melden uns' conține verbul 'melden' și pronumele reflexiv 'uns'.",
+      "tr-TR": "'Wir melden uns' ifadesi 'melden' fiili ve dönüşlü zamir 'uns'tan oluşur.",
+      "uk-UA": "Фраза 'Wir melden uns' складається з дієслова 'melden' та зворотного займенника 'uns'.",
+      "uz-UZ": "'Wir melden uns' iborasi 'melden' fe'li va 'uns' o'zlik olmoshidan tashkil topgan."
+    },
+    "options": [
+      {
+        "text": "Auf Wiedersehen!",
+        "translation": {
+          "ar-SA": "إلى اللقاء!",
+          "en-US": "Goodbye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Do widzenia!",
+          "ro-RO": "La revedere!",
+          "ru-RU": "До свидания!",
+          "tr-TR": "Hoşça kalın!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Job-Interview ist beendet.",
+    "botTranslation": {
+      "ar-SA": "انتهت مقابلة العمل.",
+      "en-US": "The job interview is finished.",
+      "es-ES": "La entrevista de trabajo ha terminado.",
+      "fr-FR": "L'entretien d'embauche est terminé.",
+      "hi-IN": "नौकरी का साक्षात्कार समाप्त हो गया है।",
+      "pl-PL": "Rozmowa kwalifikacyjna została zakończona.",
+      "ro-RO": "Interviul de angajare s-a încheiat.",
+      "ru-RU": "Собеседование завершено.",
+      "tr-TR": "İş görüşmesi bitti.",
+      "uk-UA": "Співбесіда завершена.",
+      "uz-UZ": "Ish suhbati yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

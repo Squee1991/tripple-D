@@ -14,38 +14,72 @@
       "uk-UA": "Добрий день! Що Ви хотіли б випити?",
       "uz-UZ": "Xayrli kun! Nima ichishni xohlaysiz?"
     },
+    "vocabulary": [
+      {
+        "german": "trinken",
+        "translation": {
+          "ru-RU": "пить",
+          "en-US": "to drink",
+          "ar-SA": "يشرب",
+          "es-ES": "beber",
+          "fr-FR": "boire",
+          "hi-IN": "पीना",
+          "pl-PL": "pić",
+          "ro-RO": "a bea",
+          "tr-TR": "içmek",
+          "uk-UA": "пити",
+          "uz-UZ": "ichmoq"
+        }
+      },
+      {
+        "german": "möchten",
+        "translation": {
+          "ru-RU": "хотеть",
+          "en-US": "would like",
+          "ar-SA": "يود",
+          "es-ES": "gustaría",
+          "fr-FR": "vouloir",
+          "hi-IN": "चाहना",
+          "pl-PL": "chcieć",
+          "ro-RO": "a dori",
+          "tr-TR": "istemek",
+          "uk-UA": "хотіти",
+          "uz-UZ": "xohlamoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ich möchte einen Kaffee, bitte.",
         "translation": {
-          "ar-SA": "أريد قهوة من فضلك (Akkusativ).",
-          "en-US": "I would like a coffee, please (Akkusativ).",
-          "es-ES": "Quisiera un café, por favor (Akkusativ).",
-          "fr-FR": "Je voudrais un café, s'il vous plaît (Akkusativ).",
-          "hi-IN": "मैं एक कॉफी चाहूँगा, कृपया (Akkusativ)।",
-          "pl-PL": "Poproszę kawę (Akkusativ).",
-          "ro-RO": "Aș dori o cafea, vă rog (Akkusativ).",
-          "ru-RU": "Я хотел бы кофе, пожалуйста (Akkusativ).",
-          "tr-TR": "Bir kahve istiyorum, lütfen (Akkusativ).",
-          "uk-UA": "Я хотів би каву, будь ласка (Akkusativ).",
-          "uz-UZ": "Men qahva xohlayman, iltimos (Akkusativ)."
+          "ar-SA": "أريد قهوة من فضلك.",
+          "en-US": "I would like a coffee, please.",
+          "es-ES": "Quisiera un café, por favor.",
+          "fr-FR": "Je voudrais un café, s'il vous plaît.",
+          "hi-IN": "मैं एक कॉफी चाहूँगा, कृपया।",
+          "pl-PL": "Poproszę kawę.",
+          "ro-RO": "Aș dori o cafea, vă rog.",
+          "ru-RU": "Я хотел бы кофе, пожалуйста.",
+          "tr-TR": "Bir kahve istiyorum, lütfen.",
+          "uk-UA": "Я хотів би каву, будь ласка.",
+          "uz-UZ": "Men qahva xohlayman, iltimos."
         },
         "nextStep": "ask_food"
       },
       {
         "text": "Ich möchte einen Tee, bitte.",
         "translation": {
-          "ar-SA": "أريد شاياً من فضلك (Akkusativ).",
-          "en-US": "I would like a tea, please (Akkusativ).",
-          "es-ES": "Quisiera un té, por favor (Akkusativ).",
-          "fr-FR": "Je voudrais un thé, s'il vous plaît (Akkusativ).",
-          "hi-IN": "मैं एक चाय चाहूँगा, कृपया (Akkusativ)।",
-          "pl-PL": "Poproszę herbatę (Akkusativ).",
-          "ro-RO": "Aș dori un ceai, vă rog (Akkusativ).",
-          "ru-RU": "Я хотел бы чай, пожалуйста (Akkusativ).",
-          "tr-TR": "Bir çay istiyorum, lütfen (Akkusativ).",
-          "uk-UA": "Я хотів би чай, будь ласка (Akkusativ).",
-          "uz-UZ": "Men choy xohlayman, iltimos (Akkusativ)."
+          "ar-SA": "أريد شاياً من فضلك.",
+          "en-US": "I would like a tea, please.",
+          "es-ES": "Quisiera un té, por favor.",
+          "fr-FR": "Je voudrais un thé, s'il vous plaît.",
+          "hi-IN": "मैं एक चाय चाहूँगा, कृपया।",
+          "pl-PL": "Poproszę herbatę.",
+          "ro-RO": "Aș dori un ceai, vă rog.",
+          "ru-RU": "Я хотел бы чай, пожалуйста.",
+          "tr-TR": "Bir çay istiyorum, lütfen.",
+          "uk-UA": "Я хотів би чай, будь ласка.",
+          "uz-UZ": "Men choy xohlayman, iltimos."
         },
         "nextStep": "ask_food"
       }
@@ -67,38 +101,72 @@
       "uk-UA": "Із задоволенням. Ви хотіли б також щось поїсти?",
       "uz-UZ": "Bajonidil. Nimadir yeyishni ham xohlaysizmi?"
     },
+    "vocabulary": [
+      {
+        "german": "gerne",
+        "translation": {
+          "ru-RU": "с удовольствием",
+          "en-US": "gladly",
+          "ar-SA": "بكل سرور",
+          "es-ES": "con gusto",
+          "fr-FR": "volontiers",
+          "hi-IN": "खुशी से",
+          "pl-PL": "chętnie",
+          "ro-RO": "cu plăcere",
+          "tr-TR": "memnuniyetle",
+          "uk-UA": "із задоволенням",
+          "uz-UZ": "bajonidil"
+        }
+      },
+      {
+        "german": "etwas essen",
+        "translation": {
+          "ru-RU": "что-нибудь поесть",
+          "en-US": "eat something",
+          "ar-SA": "يأكل شيئاً",
+          "es-ES": "comer algo",
+          "fr-FR": "manger quelque chose",
+          "hi-IN": "कुछ खाना",
+          "pl-PL": "coś zjeść",
+          "ro-RO": "a mânca ceva",
+          "tr-TR": "bir şeyler yemek",
+          "uk-UA": "щось поїсти",
+          "uz-UZ": "nimadir yeyish"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, einen Kuchen, bitte.",
         "translation": {
-          "ar-SA": "نعم، كعكة من فضلك (Akkusativ).",
-          "en-US": "Yes, a cake, please (Akkusativ).",
-          "es-ES": "Sí, un pastel, por favor (Akkusativ).",
-          "fr-FR": "Oui, un gâteau, s'il vous plaît (Akkusativ).",
-          "hi-IN": "हाँ, एक केक, कृपया (Akkusativ)।",
-          "pl-PL": "Tak, ciasto poproszę (Akkusativ).",
-          "ro-RO": "Da, o prăjitură, vă rog (Akkusativ).",
-          "ru-RU": "Да, пирог, пожалуйста (Akkusativ).",
-          "tr-TR": "Evet, bir pasta lütfen (Akkusativ).",
-          "uk-UA": "Так, пиріг, будь ласка (Akkusativ).",
-          "uz-UZ": "Ha, pirog, iltimos (Akkusativ)."
+          "ar-SA": "نعم، كعكة من فضلك.",
+          "en-US": "Yes, a cake, please.",
+          "es-ES": "Sí, un pastel, por favor.",
+          "fr-FR": "Oui, un gâteau, s'il vous plaît.",
+          "hi-IN": "हाँ, एक केक, कृपया।",
+          "pl-PL": "Tak, ciasto poproszę.",
+          "ro-RO": "Da, o prăjitură, vă rog.",
+          "ru-RU": "Да, пирог, пожалуйста.",
+          "tr-TR": "Evet, bir pasta lütfen.",
+          "uk-UA": "Так, пиріг, будь ласка.",
+          "uz-UZ": "Ha, pirog, iltimos."
         },
         "nextStep": "bring_order"
       },
       {
         "text": "Ja, ein Croissant, bitte.",
         "translation": {
-          "ar-SA": "نعم، كرواسون من فضلك (Akkusativ).",
-          "en-US": "Yes, a croissant, please (Akkusativ).",
-          "es-ES": "Sí, un cruasán, por favor (Akkusativ).",
-          "fr-FR": "Oui, un croissant, s'il vous plaît (Akkusativ).",
-          "hi-IN": "हाँ, एक क्रोइसेंट, कृपया (Akkusativ)।",
-          "pl-PL": "Tak, rogalika poproszę (Akkusativ).",
-          "ro-RO": "Da, un corn, vă rog (Akkusativ).",
-          "ru-RU": "Да, круассан, пожалуйста (Akkusativ).",
-          "tr-TR": "Evet, bir kruvasan lütfen (Akkusativ).",
-          "uk-UA": "Так, круасан, будь ласка (Akkusativ).",
-          "uz-UZ": "Ha, kruassan, iltimos (Akkusativ)."
+          "ar-SA": "نعم، كرواسون من فضلك.",
+          "en-US": "Yes, a croissant, please.",
+          "es-ES": "Sí, un cruasán, por favor.",
+          "fr-FR": "Oui, un croissant, s'il vous plaît.",
+          "hi-IN": "हाँ, एक क्रोइसेंट, कृपया।",
+          "pl-PL": "Tak, rogalika poproszę.",
+          "ro-RO": "Da, un corn, vă rog.",
+          "ru-RU": "Да, круассан, пожалуйста.",
+          "tr-TR": "Evet, bir kruvasan lütfen.",
+          "uk-UA": "Так, круасан, будь ласка.",
+          "uz-UZ": "Ha, kruassan, iltimos."
         },
         "nextStep": "bring_order"
       }
@@ -120,6 +188,40 @@
       "uk-UA": "Все зрозуміло, я зараз принесу.",
       "uz-UZ": "Tushunarli, hozir olib kelaman."
     },
+    "vocabulary": [
+      {
+        "german": "alles klar",
+        "translation": {
+          "ru-RU": "всё ясно",
+          "en-US": "all right",
+          "ar-SA": "حسناً",
+          "es-ES": "todo claro",
+          "fr-FR": "très bien",
+          "hi-IN": "सब ठीक",
+          "pl-PL": "wszystko jasne",
+          "ro-RO": "în regulă",
+          "tr-TR": "pekala",
+          "uk-UA": "все зрозуміло",
+          "uz-UZ": "tushunarli"
+        }
+      },
+      {
+        "german": "sofort",
+        "translation": {
+          "ru-RU": "сразу / сейчас",
+          "en-US": "immediately",
+          "ar-SA": "فوراً",
+          "es-ES": "enseguida",
+          "fr-FR": "tout de suite",
+          "hi-IN": "तुरंत",
+          "pl-PL": "natychmiast",
+          "ro-RO": "imediat",
+          "tr-TR": "hemen",
+          "uk-UA": "одразу",
+          "uz-UZ": "darhol"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke schön!",
@@ -156,6 +258,40 @@
       "uk-UA": "Ось Ваше замовлення. Смачного!",
       "uz-UZ": "Mana buyurtmangiz. Yoqimli ishtaha!"
     },
+    "vocabulary": [
+      {
+        "german": "die Bestellung",
+        "translation": {
+          "ru-RU": "заказ",
+          "en-US": "the order",
+          "ar-SA": "الطلب",
+          "es-ES": "el pedido",
+          "fr-FR": "la commande",
+          "hi-IN": "ऑर्डर",
+          "pl-PL": "zamówienie",
+          "ro-RO": "comanda",
+          "tr-TR": "sipariş",
+          "uk-UA": "замовлення",
+          "uz-UZ": "buyurtma"
+        }
+      },
+      {
+        "german": "guten Appetit",
+        "translation": {
+          "ru-RU": "приятного аппетита",
+          "en-US": "enjoy your meal",
+          "ar-SA": "بالهناء والشفاء",
+          "es-ES": "buen provecho",
+          "fr-FR": "bon appétit",
+          "hi-IN": "भोजन का आनंद लें",
+          "pl-PL": "smacznego",
+          "ro-RO": "poftă bună",
+          "tr-TR": "afiyet olsun",
+          "uk-UA": "смачного",
+          "uz-UZ": "yoqimli ishtaha"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Vielen Dank!",
@@ -192,6 +328,40 @@
       "uk-UA": "Вам смачно?",
       "uz-UZ": "Ta'mi yaxshimi?"
     },
+    "vocabulary": [
+      {
+        "german": "schmeckt es",
+        "translation": {
+          "ru-RU": "вкусно ли",
+          "en-US": "does it taste good",
+          "ar-SA": "هل طعمه لذيذ",
+          "es-ES": "sabe bien",
+          "fr-FR": "est-ce bon",
+          "hi-IN": "स्वाद कैसा है",
+          "pl-PL": "czy smakuje",
+          "ro-RO": "are gust bun",
+          "tr-TR": "tadı güzel mi",
+          "uk-UA": "чи смачно",
+          "uz-UZ": "ta'mi yaxshimi"
+        }
+      },
+      {
+        "german": "sehr lecker",
+        "translation": {
+          "ru-RU": "очень вкусно",
+          "en-US": "very delicious",
+          "ar-SA": "لذيذ جداً",
+          "es-ES": "muy rico",
+          "fr-FR": "très délicieux",
+          "hi-IN": "बहुत स्वादिष्ट",
+          "pl-PL": "bardzo smaczne",
+          "ro-RO": "foarte delicios",
+          "tr-TR": "çok lezzetli",
+          "uk-UA": "дуже смачно",
+          "uz-UZ": "juda mazali"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, es ist sehr lecker!",
@@ -245,6 +415,40 @@
       "uk-UA": "Я радий. Чи бажаєте Ви що-небудь ще?",
       "uz-UZ": "Bundan xursandman. Yana nimadir xohlaysizmi?"
     },
+    "vocabulary": [
+      {
+        "german": "die Rechnung",
+        "translation": {
+          "ru-RU": "счет",
+          "en-US": "the bill",
+          "ar-SA": "الفاتورة",
+          "es-ES": "la cuenta",
+          "fr-FR": "l'addition",
+          "hi-IN": "बिल",
+          "pl-PL": "rachunek",
+          "ro-RO": "nota de plată",
+          "tr-TR": "hesap",
+          "uk-UA": "рахунок",
+          "uz-UZ": "hisob"
+        }
+      },
+      {
+        "german": "zahlen",
+        "translation": {
+          "ru-RU": "платить",
+          "en-US": "to pay",
+          "ar-SA": "يدفع",
+          "es-ES": "pagar",
+          "fr-FR": "payer",
+          "hi-IN": "भुगतान करना",
+          "pl-PL": "płacić",
+          "ro-RO": "a plăti",
+          "tr-TR": "ödemek",
+          "uk-UA": "платити",
+          "uz-UZ": "to'lamoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Nein, danke. Die Rechnung, bitte.",
@@ -298,6 +502,40 @@
       "uk-UA": "Із задоволенням. З Вас 8 євро, будь ласка.",
       "uz-UZ": "Bajonidil. Jami 8 yevro bo'ldi."
     },
+    "vocabulary": [
+      {
+        "german": "das macht",
+        "translation": {
+          "ru-RU": "с вас / итого",
+          "en-US": "that makes",
+          "ar-SA": "هذا يكلف",
+          "es-ES": "eso hace",
+          "fr-FR": "cela fait",
+          "hi-IN": "यह हुआ",
+          "pl-PL": "to wynosi",
+          "ro-RO": "asta face",
+          "tr-TR": "tutar",
+          "uk-UA": "з вас / разом",
+          "uz-UZ": "jami"
+        }
+      },
+      {
+        "german": "mit Karte",
+        "translation": {
+          "ru-RU": "картой",
+          "en-US": "by card",
+          "ar-SA": "بالبطاقة",
+          "es-ES": "con tarjeta",
+          "fr-FR": "par carte",
+          "hi-IN": "कार्ड से",
+          "pl-PL": "kartą",
+          "ro-RO": "cu cardul",
+          "tr-TR": "kartla",
+          "uk-UA": "карткою",
+          "uz-UZ": "karta bilan"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Hier, bitte.",
@@ -351,6 +589,40 @@
       "uk-UA": "Велике дякую! Гарного дня!",
       "uz-UZ": "Katta rahmat! Yaxshi kun tilayman!"
     },
+    "vocabulary": [
+      {
+        "german": "schönen Tag",
+        "translation": {
+          "ru-RU": "хорошего дня",
+          "en-US": "nice day",
+          "ar-SA": "يوم جميل",
+          "es-ES": "buen día",
+          "fr-FR": "bonne journée",
+          "hi-IN": "अच्छा दिन",
+          "pl-PL": "miłego dnia",
+          "ro-RO": "o zi frumoasă",
+          "tr-TR": "iyi günler",
+          "uk-UA": "гарного дня",
+          "uz-UZ": "yaxshi kun"
+        }
+      },
+      {
+        "german": "gleichfalls",
+        "translation": {
+          "ru-RU": "взаимно",
+          "en-US": "likewise",
+          "ar-SA": "وبالمثل",
+          "es-ES": "igualmente",
+          "fr-FR": "pareillement",
+          "hi-IN": "आपको भी",
+          "pl-PL": "nawzajem",
+          "ro-RO": "la fel",
+          "tr-TR": "bilmukabele",
+          "uk-UA": "навзаєм",
+          "uz-UZ": "sizga ham"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke, gleichfalls. Auf Wiedersehen!",

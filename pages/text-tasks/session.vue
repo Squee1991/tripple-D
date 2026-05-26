@@ -1,5 +1,10 @@
 <template>
-  <div class="drag-page">
+  <div
+      class="drag-page"
+      @touchstart="handleTouchStart"
+      @touchmove="handleTouchMove"
+      @touchend="handleTouchEnd"
+  >
     <div class="drag-page-container" v-if="store.currentTask">
       <div class="header-wrapper">
         <button class="btn-icon-back" @click="handleBackClick">
@@ -102,6 +107,9 @@ const showExitModal = ref(false)
 const isConfirmedExit = ref(false)
 let pendingRoute = null
 
+let touchStartX = 0
+let touchStartY = 0
+
 onMounted(() => {
   if (!store.currentTask) {
     isConfirmedExit.value = true
@@ -118,6 +126,29 @@ onBeforeRouteLeave((to, from, next) => {
     next(false)
   }
 })
+
+const handleTouchStart = (e) => {
+  touchStartX = e.touches[0].clientX
+  touchStartY = e.touches[0].clientY
+}
+
+const handleTouchMove = (e) => {
+  if (e.target.closest('.text-card') || e.target.closest('.word-pool-card')) return
+}
+
+const handleTouchEnd = (e) => {
+  if (e.target.closest('.text-card') || e.target.closest('.word-pool-card')) return
+
+  const touchEndX = e.changedTouches[0].clientX
+  const touchEndY = e.changedTouches[0].clientY
+
+  const deltaX = touchEndX - touchStartX
+  const deltaY = Math.abs(touchEndY - touchStartY)
+
+  if (deltaX > 80 && deltaY < 40) {
+    handleBackClick()
+  }
+}
 
 const handleBackClick = () => {
   router.push('/text-tasks')
@@ -196,6 +227,7 @@ const handleBlankClick = (blankId) => {
   display: flex;
   justify-content: center;
   overflow: hidden;
+  touch-action: none;
 }
 
 .drag-page-container {
@@ -339,6 +371,7 @@ const handleBlankClick = (blankId) => {
   box-shadow: 0 4px 0 #e2e8f0;
   overflow-y: auto;
   scrollbar-width: none;
+  touch-action: pan-y;
 }
 
 .text-card::-webkit-scrollbar {

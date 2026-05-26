@@ -9211,7 +9211,8 @@
     "describePicture": "Rasmlar tavsifi",
     "fight": "Nemis tili koinoti",
     "audio": "Audio topshiriqlar",
-    "textTask": "Matnlar"
+    "textTask": "Matnlar",
+    "speak": "Gaplashish amaliyoti"
   },
   "underSub": {
     "prev": "Kirish",
@@ -10150,5 +10151,59 @@
     "home": "Asosiy",
     "events": "Tadbirlar",
     "cabinet": "Hisob"
+  },
+  "speakTopics": {
+    "speak": "Tanishuv va muloqot",
+    "food": "Ovqat va xaridlar",
+    "transport": "Sayohat va transport",
+    "city": "Shahar xizmatlari va kundalik hayot",
+    "health": "Sog'liq",
+    "work": "Ish va martaba"
+  },
+  "speakThemes": {
+    "firstmeet": "Tanishuv",
+    "acquaintance": "Tanishuv 2",
+    "secondmeet": "Uchrashuv",
+    "family_talk": "Suhbat",
+    "weekend_plans": "Rejalar",
+    "friend_call": "Qo'ng'iroq",
+    "hobby_talk": "Xobbi",
+    "party_talk": "Kechalik",
+    "cafe_order": "Kofe buyurtma qilish",
+    "restaurant_dinner": "Restoran",
+    "store_checkout": "Kassada",
+    "order_eat": "Ovqat buyurtma qilish",
+    "consultation_talk": "Maslahatlashuv",
+    "train_station": "Vokzalda",
+    "train_ticket": "Chiptani tekshirish",
+    "taxi_berlin": "Taksi",
+    "bus_talk": "Avtobusda",
+    "hotel_checkin": "Mehmonxona",
+    "border_check": "Chegara",
+    "airport_talk": "Aeroport",
+    "info_talk": "Ma'lumot markazi",
+    "bank_account": "Bank",
+    "apartment_rent": "Ijaraga olish",
+    "clothes_shopping": "Xaridlar",
+    "shopping": "Xaridlar 2",
+    "post_office": "Pochta",
+    "police_talk": "Politsiya",
+    "barbershop": "Sartaroshxona",
+    "doctor_visit": "Shifokorga yozilish",
+    "pharmacy_vitamins": "Dorixona",
+    "insurance": "Sug'urta",
+    "at_doctor": "Shifokor huzurida",
+    "dentist": "Stomatolog",
+    "veterinary": "Veterinar",
+    "job_looking": "Ish qidirish",
+    "job_interview": "Suhbat",
+    "bos_talk": "Rahbar bilan suhbat",
+    "vacation": "Ta'til",
+    "salary_talk": "Maosh",
+    "dismissal_talk": "Ishdan bo'shatish"
+  },
+  "speakIndexPage": {
+    "title": "Gaplashish amaliyoti",
+    "bannerText": "Haqiqiy misollar yordamida nutq ko'nikmalaringizni rivojlantiring"
   }
 }

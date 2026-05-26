@@ -1,0 +1,416 @@
+{
+  "start": {
+    "botText": "Guten Tag! Herzlich willkommen im Hotel Zentral. Wie kann ich Ihnen helfen?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Добро пожаловать в отель «Централь». Как я могу Вам помочь?",
+      "en-US": "Good day! Welcome to Hotel Zentral. How can I help you?",
+      "ar-SA": "طاب يومك! مرحبًا بك في فندق زونترال. كيف يمكنني مساعدتك؟",
+      "es-ES": "¡Buen día! Bienvenido al Hotel Zentral. ¿Cómo puedo ayudarle?",
+      "fr-FR": "Bonjour ! Bienvenue à l'Hôtel Zentral. Comment puis-je vous aider ?",
+      "hi-IN": "शुभ दिन! होटल ज़ेंट्रल में आपका स्वागत है। मैं आपकी क्या मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! Witamy в hotelu Zentral. W czym mogę pomóc?",
+      "ro-RO": "Bună ziua! Bine ați venit la Hotelul Zentral. Cu ce vă pot ajuta?",
+      "tr-TR": "İyi günler! Zentral Otel'e hoş geldiniz. Size nasıl yardımcı olabilirim?",
+      "uk-UA": "Добрий день! Ласкаво просимо до готелю «Централь». Як я можу Вам допомогти?",
+      "uz-UZ": "Xayrli kun! Zentral mehmonxonasiga xush kelibsiz. Sizga qanday yordam bera olamanmi?"
+    },
+    "tips": {
+      "ru-RU": "Когда вопрос звучит 'Где?' (Wo? — в отеле), мы используем Dativ и ставим артикль существительного в Dativ. Средний род 'das Hotel' берет у артикля форму 'dem' (in + dem = im Hotel). Вежливая форма 'Ihnen' (Вам) всегда пишется с большой буквы.",
+      "en-US": "When the question is 'Where?' (Wo?), we use Dativ and put the noun's article in Dativ. The neuter noun 'das Hotel' takes the article form 'dem' (in + dem = im).",
+      "ar-SA": "عندما يكون السؤال 'أين؟' (Wo؟)، نستخدم Dativ ونضع أداة الاسم في Dativ.",
+      "es-ES": "Cuando la pregunta es '¿Dónde?' (Wo?), usamos Dativ y ponemos el artículo en Dativ.",
+      "fr-FR": "Quand la question est 'Où ?' (Wo?), nous utilisons le Datif et mettons l'article du nom au Datif.",
+      "hi-IN": "जब प्रश्न 'कहाँ?' (Wo?) हो, तो мы Dativ का उपयोग करते हैं और संज्ञा के लेख को Dativ में रखते हैं।",
+      "pl-PL": "Gdy pytanie brzmi 'Gdzie?' (Wo?), używamy celownika (Dativ) i wstawiamy odpowiedni przedimek.",
+      "ro-RO": "Când întrebarea este 'Unde?' (Wo?), folosim Dativ și punem articolul în Dativ.",
+      "tr-TR": "Soru 'Nerede?' (Wo?) olduğunda, Dativ kullanırız ve ismin artikelini Dativ'e koyarız.",
+      "uk-UA": "Коли питання 'Де?' (Wo?), ми використовуємо Dativ і ставимо артикль іменника в Dativ.",
+      "uz-UZ": "Savol 'Qayerda?' (Wo?) bo'lganda, biz Dativdan foydalanamiz va otning artiklini Dativga qo'yamiz."
+    },
+    "options": [
+      {
+        "text": "Guten Tag, ich möchte einchecken. Ich habe eine Reservierung.",
+        "translation": {
+          "ru-RU": "Добрый день, я хотел(а) бы заселиться. У меня есть бронь.",
+          "en-US": "Good day, I would like to check in. I have a reservation.",
+          "ar-SA": "طاب يومك، أود تسجيل الوصول. لدي حجز.",
+          "es-ES": "Buen día, me gustaría registrarme. Tengo una reserva.",
+          "fr-FR": "Bonjour, je voudrais s'enregistrer. J'ai une réservation.",
+          "hi-IN": "शुभ दिन, मैं चेक-इन करना चाहूंगी। मेरे पास एक बुकिंग है।",
+          "pl-PL": "Dzień dobry, chciał(a)bym się zameldować. Mam rezerwację.",
+          "ro-RO": "Bună ziua, aș dori să mă cazez. Am o rezervare.",
+          "tr-TR": "İyi günler, giriş yapmak istiyorum. Rezervasyonum var.",
+          "uk-UA": "Добрий день, я хотів(ла) би заселитися. У мене є бронь.",
+          "uz-UZ": "Xayrli kun, men joylashmoqchi edim. Menda buyurtma bor."
+        },
+        "nextStep": "pass"
+      },
+      {
+        "text": "Guten Tag, ich habe ein Zimmer auf den Namen Ivanov reserviert.",
+        "translation": {
+          "ru-RU": "Добрый день, я забронировал(а) номер на имя Иванов.",
+          "en-US": "Good day, I have reserved a room under the name Ivanov.",
+          "ar-SA": "طاب يومك، لقد حجزت غرفة باسم إيفانوف.",
+          "es-ES": "Buen día, he reservado una habitación a nombre de Ivanov.",
+          "fr-FR": "Bonjour, j'ai réservé une chambre au nom de Ivanov.",
+          "hi-IN": "शुभ दिन, मैंने इवानोव के नाम पर एक कमरा बुक किया है।",
+          "pl-PL": "Dzień dobry, zarezerwowałem/am pokój na nazwisko Ivanov.",
+          "ro-RO": "Bună ziua, am rezervat o cameră pe numele Ivanov.",
+          "tr-TR": "İyi günler, Ivanov adına bir oda rezerve etmiştim.",
+          "uk-UA": "Добрий день, я забронював(ла) номер на ім'я Іванов.",
+          "uz-UZ": "Xayrli kun, men Ivanov nomiga xona buyurtma qilgandim."
+        },
+        "nextStep": "pass"
+      }
+    ],
+    "defaultNext": "pass"
+  },
+  "pass": {
+    "botText": "Sehr gerne. Einen Moment bitte... Ja, ich habe Ihre Buchung. Ihren Reisepass, bitte.",
+    "botTranslation": {
+      "ru-RU": "С удовольствием. Один момент, пожалуйста... Да, я вижу Вашу бронь. Ваш паспорт, пожалуйста.",
+      "en-US": "With pleasure. One moment, please... Yes, I have your booking. Your passport, please.",
+      "ar-SA": "بكل سرور. لحظة واحدة من فضلك... نعم، لدي حجزك. جواز سفرك من فضلك.",
+      "es-ES": "Con mucho gusto. Un momento, por favor... Sí, tengo su reserva. Su pasaporte, por favor.",
+      "fr-FR": "Avec plaisir. Un moment s'il vous plaît... Oui, j'ai votre réservation. Votre passeport, s'il vous plaît.",
+      "hi-IN": "बड़ी खुशी से। एक पल रुकिए... हाँ, मुझे आपकी बुकिंग मिल गई है। आपका पासपोर्ट, कृपया।",
+      "pl-PL": "Z przyjemnością. Momencik... Tak, mam pańską rezerwację. Poproszę paszport.",
+      "ro-RO": "Cu plăcere. Un moment, vă rog... Da, am rezervarea dumneavoastră. Pașaportul, vă rog.",
+      "tr-TR": "Memnuniyetle. Bir dakika lütfen... Evet, rezervasyonunuzu buldum. Pasaportunuz lütfen.",
+      "uk-UA": "З задоволенням. Один момент, будь ласка... Так, я бачу Ваше бронювання. Ваш паспорт, будь ласка.",
+      "uz-UZ": "Bajonidil. Bir daqiqa... Ha, buyurtmangizni topsam. Pasportingizni bersangiz, iltimos."
+    },
+    "tips": {
+      "ru-RU": "Глагол 'haben' требует Akkusativ. Для Akkusativ мы применяем то же правило: мужской род 'der Reisepass' берет у артикля форму 'einen' (или притяжательное местоимение 'Ihren' в вежливой форме).",
+      "en-US": "The verb 'haben' requires Akkusativ. The masculine noun 'der Reisepass' takes the article form 'einen' (or 'Ihren' in the polite form).",
+      "ar-SA": "الفعل 'haben' يتطلب Akkusativ. الكلمة المذكرة 'der Reisepass' تأخذ صيغة 'Ihren'.",
+      "es-ES": "El verbo 'haben' requiere Akkusativ. El sustantivo masculino 'der Reisepass' toma la forma del artículo 'Ihren'.",
+      "fr-FR": "Le verbe 'haben' requiert l'Akkusativ. Le nom masculin 'der Reisepass' prend la forme 'Ihren'.",
+      "hi-IN": "क्रिया 'haben' को Akkusativ की आवश्यकता होती है। पुल्लिंग संज्ञा 'Ihren' रूप लेती है।",
+      "pl-PL": "Czasownik 'haben' wymaga biernika. Rzeczownik męski 'der Reisepass' przyjmuje formę przedimka 'Ihren'.",
+      "ro-RO": "Verbul 'haben' cere Akkusativ. Substantivul masculin 'der Reisepass' ia forma 'Ihren'.",
+      "tr-TR": "'haben' fiili Akkusativ gerektirir. Eril isim 'der Reisepass' 'Ihren' formunu alır.",
+      "uk-UA": "Дієслово 'haben' вимагає Akkusativ. Чоловічий рід 'der Reisepass' бере форму 'Ihren'.",
+      "uz-UZ": "'haben' fe'li Akkusativni talab qiladi. Erkak jinsidagi 'der Reisepass' 'Ihren' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Hier bitte, das ist mein Pass.",
+        "translation": {
+          "ru-RU": "Вот, пожалуйста, это мой паспорт.",
+          "en-US": "Here you go, this is my passport.",
+          "ar-SA": "تفضل، هذا جواز سفري.",
+          "es-ES": "Aquí tiene, este es mi pasaporte.",
+          "fr-FR": "Voilà, c'est mon passeport.",
+          "hi-IN": "यह लीजिए, यह मेरा पासपोर्ट है।",
+          "pl-PL": "Proszę bardzo, to mój paszport.",
+          "ro-RO": "Poftiți, acesta este pașaportul meu.",
+          "tr-TR": "Buyurun, bu benim pasaportum.",
+          "uk-UA": "Ось, будь ласка, це мій паспорт.",
+          "uz-UZ": "Marhamat, bu mening pasportim."
+        },
+        "nextStep": "fruehstueck"
+      },
+      {
+        "text": "Natürlich, hier ist er.",
+        "translation": {
+          "ru-RU": "Конечно, вот он.",
+          "en-US": "Of course, here it is.",
+          "ar-SA": "بالطبع، ها هو.",
+          "es-ES": "Por supuesto, aquí está.",
+          "fr-FR": "Bien sûr, le voici.",
+          "hi-IN": "बिल्कुल, यह यहाँ है।",
+          "pl-PL": "Oczywiście, oto on.",
+          "ro-RO": "Desigur, iată-l.",
+          "tr-TR": "Elbette, işte burada.",
+          "uk-UA": "Звісно, ось він.",
+          "uz-UZ": "Albatta, mana u."
+        },
+        "nextStep": "fruehstueck"
+      }
+    ],
+    "defaultNext": "fruehstueck"
+  },
+  "fruehstueck": {
+    "botText": "Danke. Möchten Sie das Frühstück dazu buchen? Es kostet 15 Euro pro Tag.",
+    "botTranslation": {
+      "ru-RU": "Спасибо. Желаете дополнительно включить завтрак? Он стоит 15 евро в день.",
+      "en-US": "Thank you. Would you like to book breakfast with that? It costs 15 euros per day.",
+      "ar-SA": "شكراً لك. هل تود إضافة الإفطار؟ يكلف 15 يورو في اليوم.",
+      "es-ES": "Gracias. ¿Desea reservar el desayuno también? Cuesta 15 euros por día.",
+      "fr-FR": "Merci. Souhaitez-vous réserver le petit-déjeuner en plus ? Il coûte 15 euros par jour.",
+      "hi-IN": "धन्यवाद। क्या आप साथ में नाश्ता भी बुक करना चाहेंगी? इसकी कीमत 15 यूरो प्रति दिन है।",
+      "pl-PL": "Dziękuję. Czy chce pan/pani dokupić śniadanie? Kosztuje 15 euro za dzień.",
+      "ro-RO": "Mulțumesc. Doriți să rezervați și micul dejun? Costă 15 euro pe zi.",
+      "tr-TR": "Teşekkürler. Kahvaltı da eklemek ister misiniz? Günlük 15 Euro.",
+      "uk-UA": "Дякую. Чи бажаєте додатково включити сніданок? Він коштує 15 євро на день.",
+      "uz-UZ": "Rahmat. Nonushtani ham qo'shmoqchimisiz? Kuniga 15 yevro turadi."
+    },
+    "tips": {
+      "ru-RU": "Слово 'das Frühstück' (завтрак) среднего рода. В сочетании 'pro Tag' предлог 'pro' используется без артикля, это устойчивое выражение уровня А2.",
+      "en-US": "The word 'das Frühstück' (breakfast) is neuter. In 'pro Tag', the preposition 'pro' is used without an article.",
+      "ar-SA": "كلمة 'das Frühstück' محايدة. العبارة 'pro Tag' تُستخدم بدون أداة تعريفيّة.",
+      "es-ES": "La palabra 'das Frühstück' es neutra. En 'pro Tag', la preposición 'pro' se usa sin artículo.",
+      "fr-FR": "Le mot 'das Frühstück' est neutre. Dans 'pro Tag', la préposition 'pro' est utilisée sans article.",
+      "hi-IN": "शब्द 'das Frühstück' नपुंसक लिंग है। 'pro Tag' में 'pro' बिना किसी लेख के उपयोग किया जाता है।",
+      "pl-PL": "Słowo 'das Frühstück' jest rodzaju nijakiego. Wyrażenie 'pro Tag' występuje bez przedimka.",
+      "ro-RO": "Cuvântul 'das Frühstück' este neutru. În 'pro Tag', prepoziția 'pro' se folosește fără articol.",
+      "tr-TR": "'das Frühstück' kelimesi nötrdür. 'pro Tag' ifadesinde 'pro' edatı artikelsiz kullanılır.",
+      "uk-UA": "Слово 'das Frühstück' середнього роду. Вираз 'pro Tag' використовується без артикля.",
+      "uz-UZ": "'das Frühstück' so'zi o'rta jinsga tegishli. 'pro Tag' iborasida 'pro' artikelsiz ishlatiladi."
+    },
+    "options": [
+      {
+        "text": "Ja, gerne. Ich frühstücke im Hotel.",
+        "translation": {
+          "ru-RU": "Да, с удовольствием. Я буду завтракать в отеле.",
+          "en-US": "Yes, gladly. I will have breakfast at the hotel.",
+          "ar-SA": "نعم، بكل سرور. سآكل الإفطار في الفندق.",
+          "es-ES": "Sí, con gusto. Desayunaré en el hotel.",
+          "fr-FR": "Oui, avec plaisir. Je prends le petit-déjeuner à l'hôtel.",
+          "hi-IN": "हाँ, ज़रूर। मैं होटल में नाश्ता करूंगी।",
+          "pl-PL": "Tak, chętnie. Będę jeść śniadanie w hotelu.",
+          "ro-RO": "Da, cu plăcere. Voi lua micul dejun la hotel.",
+          "tr-TR": "Evet, lütfen. Kahvaltıyı otelde yapacağım.",
+          "uk-UA": "Так, із задоволенням. Я буду снідати в готелі.",
+          "uz-UZ": "Ha, bajonidil. Men mehmonxonada nonushta qilaman."
+        },
+        "nextStep": "schluessel"
+      },
+      {
+        "text": "Nein danke, ich brauche kein Frühstück.",
+        "translation": {
+          "ru-RU": "Нет, спасибо, мне не нужен завтрак.",
+          "en-US": "No thanks, I don't need breakfast.",
+          "ar-SA": "لا شكراً، لا أحتاج إلى إفطار.",
+          "es-ES": "No gracias, no necesito desayuno.",
+          "fr-FR": "Non merci, je n'ai pas besoin de petit-déjeuner.",
+          "hi-IN": "नहीं धन्यवाद, मुझे नाश्ते की आवश्यकता नहीं है।",
+          "pl-PL": "Nie, dziękuję, nie potrzebuję śniadania.",
+          "ro-RO": "Nu, mulțumesc, nu am nevoie de mic dejun.",
+          "tr-TR": "Hayır teşekkürler, kahvaltı istemiyorum.",
+          "uk-UA": "Ні, дякую, мені не потрібен сніданок.",
+          "uz-UZ": "Yo'q, rahmat, menga nonushta kerak emas."
+        },
+        "nextStep": "schluessel"
+      }
+    ],
+    "defaultNext": "schluessel"
+  },
+  "schluessel": {
+    "botText": "Alles klar. Hier ist Ihr Zimmerschlüssel. Sie haben Zimmer 204 im zweiten Stock.",
+    "botTranslation": {
+      "ru-RU": "Все понятно. Вот Ваш ключ от номера. У Вас комната 204 на втором этаже.",
+      "en-US": "All right. Here is your room key. You have room 204 on the second floor.",
+      "ar-SA": "حسناً. ها هو مفتاح غرفتك. غرفتك هي 204 في الطابق الثاني.",
+      "es-ES": "Muy bien. Aquí está la llave de su habitación. Tiene la habitación 204 en el segundo piso.",
+      "fr-FR": "D'accord. Voici la clé de votre chambre. Vous avez la chambre 204 au deuxième étage.",
+      "hi-IN": "सब ठीक है। यह रहा आपके कमरे की चाबी। आपका कमरा दूसरी मंजिल पर 204 है।",
+      "pl-PL": "Wszystko jasne. Oto klucz do pokoju. Ma pan/pani pokój 204 na drugim piętrze.",
+      "ro-RO": "În regulă. Iată cheia camerei dumneavoastră. Aveți camera 204 la etajul doi.",
+      "tr-TR": "Pekala. İşte oda anahtarınız. İkinci katta 204 numaralı odadasınız.",
+      "uk-UA": "Все зрозуміло. Ось Ваш ключ від номера. У Вас кімната 204 на другому поверсі.",
+      "uz-UZ": "Tushunarli. Mana xonangiz kaliti. Siz ikkinchi qavatdagi 204-xonadasiz."
+    },
+    "tips": {
+      "ru-RU": "Когда вопрос звучит 'Где?' (Wo? — на втором этаже), мы используем Dativ и ставим артикль существительного в Dativ. Мужской род 'der Stock' берет у артикля форму 'dem' (in + dem = im zweiten Stock). Также обратите внимание на порядковое числительное с окончанием '-en'.",
+      "en-US": "When the question is 'Where?' (Wo?), we use Dativ. The masculine noun 'der Stock' takes 'dem' (im zweiten Stock).",
+      "ar-SA": "عندما يكون السؤال 'أين؟' (Wo؟)، نستخدم Dativ. الكلمة المذكرة 'der Stock' تأخذ 'dem'.",
+      "es-ES": "Cuando la pregunta es '¿Dónde?' (Wo?), usamos Dativ. El sustantivo masculino 'der Stock' toma 'dem'.",
+      "fr-FR": "Quand la question est 'Où ?' (Wo?), on utilise le Datif. Le nom masculin 'der Stock' prend la forme 'dem'.",
+      "hi-IN": "जब प्रश्न 'कहाँ?' (Wo?) हो, तो हम Dativ का उपयोग करते हैं। पुल्लिंग संज्ञा 'der Stock' 'dem' रूप लेती है।",
+      "pl-PL": "Gdy pytanie brzmi 'Gdzie?' (Wo?), używamy celownika. Rzeczownik męski 'der Stock' przyjmuje formę 'dem'.",
+      "ro-RO": "Când întrebarea este 'Unde?' (Wo?), folosim Dativ. Substantivul masculin 'der Stock' ia forma 'dem'.",
+      "tr-TR": "Soru 'Nerede?' (Wo?) olduğunda Dativ kullanırız. Eril isim 'der Stock' 'dem' formunu alır.",
+      "uk-UA": "Коли питання 'Де?' (Wo?), ми використовуємо Dativ. Чоловічий рід 'der Stock' бере форму 'dem' (im zweiten Stock).",
+      "uz-UZ": "Savol 'Qayerda?' (Wo?) bo'lganda, biz Dativdan foydalanamiz. Erkak jinsidagi 'der Stock' 'dem' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Vielen Dank! Wo ist der Aufzug?",
+        "translation": {
+          "ru-RU": "Большое спасибо! Где находится лифт?",
+          "en-US": "Thank you very much! Where is the elevator?",
+          "ar-SA": "شكراً جزيلاً! أين المصعد؟",
+          "es-ES": "¡Muchas gracias! ¿Dónde está el ascensor?",
+          "fr-FR": "Merci beaucoup ! Où est l'ascenseur ?",
+          "hi-IN": "बहुत-बहुत धन्यवाद! लिफ्ट कहाँ है?",
+          "pl-PL": "Bardzo dziękuję! Gdzie jest winda?",
+          "ro-RO": "Vă mulțumesc mult! Unde este liftul?",
+          "tr-TR": "Çok teşekkürler! Asansör nerede?",
+          "uk-UA": "Велике дякую! Де ліфт?",
+          "uz-UZ": "Katta rahmat! Lift qayerda?"
+        },
+        "nextStep": "wlan"
+      },
+      {
+        "text": "Perfekt, danke. Gibt es hier WLAN?",
+        "translation": {
+          "ru-RU": "Отлично, спасибо. Здесь есть Wi-Fi?",
+          "en-US": "Perfect, thank you. Is there Wi-Fi here?",
+          "ar-SA": "ممتاز، شكراً لك. هل يوجد واي فاي هنا؟",
+          "es-ES": "Perfecto, gracias. ¿Hay Wi-Fi aquí?",
+          "fr-FR": "Parfait, merci. Y a-t-il le Wi-Fi ici ?",
+          "hi-IN": "बढ़िया, धन्यवाद। क्या यहाँ वाई-फाई है?",
+          "pl-PL": "Doskonale, dziękuję. Czy jest tu Wi-Fi?",
+          "ro-RO": "Perfect, mulțumesc. Există Wi-Fi aici?",
+          "tr-TR": "Harika, teşekkürler. Burada Wi-Fi var mı?",
+          "uk-UA": "Чудово, дякую. Тут є Wi-Fi?",
+          "uz-UZ": "Ajoyib, rahmat. Bu yerda Wi-Fi bormi?"
+        },
+        "nextStep": "wlan"
+      }
+    ],
+    "defaultNext": "wlan"
+  },
+  "wlan": {
+    "botText": "Der Aufzug ist dort rechts. Das WLAN-Passwort steht auf der Karte.",
+    "botTranslation": {
+      "ru-RU": "Лифт там справа. Пароль от Wi-Fi указан на карте (электронном ключе).",
+      "en-US": "The elevator is over there on the right. The Wi-Fi password is on the card.",
+      "ar-SA": "المصعد هناك على اليمين. كلمة مرور الواي فاي مكتوبة على البطاقة.",
+      "es-ES": "El ascensor está allí a la derecha. La contraseña de Wi-Fi está en la tarjeta.",
+      "fr-FR": "L'ascenseur est là-bas à droite. Le mot de passe du Wi-Fi est sur la carte.",
+      "hi-IN": "लिफ्ट वहाँ दाईं ओर है। वाई-फाई का पासवर्ड कार्ड पर लिखा है।",
+      "pl-PL": "Winda jest tam po prawej. Hasło do Wi-Fi jest na karcie.",
+      "ro-RO": "Liftul este acolo, în dreapta. Parola de Wi-Fi este pe card.",
+      "tr-TR": "Asansör orada sağda. Wi-Fi şifresi kartın üzerinde yazıyor.",
+      "uk-UA": "Ліфт там праворуч. Пароль від Wi-Fi вказаний на картці.",
+      "uz-UZ": "Lift ana u yerda o'ng tomonda. Wi-Fi paroli kartada yozilgan."
+    },
+    "tips": {
+      "ru-RU": "Когда вопрос звучит 'Где?' (Wo? — на карте), мы используем Dativ и ставим артикль существительного в Dativ. Женский род 'die Karte' берет у артикля форму 'der' (auf der Karte). Предлог 'für' требует Akkusativ: 'für Ihre Hilfe'.",
+      "en-US": "When the question is 'Where?' (Wo?), we use Dativ. The feminine noun 'die Karte' takes 'der' (auf der Karte). The preposition 'für' takes Akkusativ.",
+      "ar-SA": "عندما يكون السؤال 'أين؟' نستخدم Dativ. الكلمة المؤنثة 'die Karte' تأخذ 'der'.",
+      "es-ES": "Cuando la pregunta es '¿Dónde?' usamos Dativ. El sustantivo femenino 'die Karte' toma 'der'.",
+      "fr-FR": "Quand la question est 'Où ?' on utilise le Datif. Le nom féminin 'die Karte' prend la forme 'der'.",
+      "hi-IN": "जब प्रश्न 'कहाँ?' हो, तो мы Dativ का उपयोग करते हैं। 'die Karte' 'der' रूप लेती है।",
+      "pl-PL": "Gdy pytanie brzmi 'Gdzie?', używamy celownika. Rzeczownik żeński 'die Karte' przyjmuje formę 'der'.",
+      "ro-RO": "Când întrebarea este 'Unde?', folosim Dativ. Substantivul feminin 'die Karte' ia forma 'der'.",
+      "tr-TR": "Soru 'Nerede?' olduğunda Dativ kullanırız. Dişil isim 'die Karte' 'der' formunu alır.",
+      "uk-UA": "Коли питання 'Де?', ми використовуємо Dativ. Жіночий рід 'die Karte' бере форму 'der' (auf der Karte).",
+      "uz-UZ": "Savol 'Qayerda?' bo'lganda, biz Dativdan foydalanamiz. Ayol jinsidagi 'die Karte' 'der' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Alles klar. Vielen Dank für Ihre Hilfe!",
+        "translation": {
+          "ru-RU": "Все понятно. Большое спасибо за Вашу помощь!",
+          "en-US": "All right. Thank you very much for your help!",
+          "ar-SA": "حسناً. شكراً جزيلاً على مساعدتك!",
+          "es-ES": "De acuerdo. ¡Muchas gracias por su ayuda!",
+          "fr-FR": "D'accord. Merci beaucoup pour votre aide !",
+          "hi-IN": "सब समझ आ गया। आपकी मदद के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Wszystko jasne. Bardzo dziękuję за pańską pomoc!",
+          "ro-RO": "În regulă. Vă mulțumesc mult pentru ajutor!",
+          "tr-TR": "Anlaşıldı. Yardımınız için çok teşekkürler!",
+          "uk-UA": "Все зрозуміло. Велике дякую за Вашу допомогу!",
+          "uz-UZ": "Tushunarli. Yordamingiz uchun katta rahmat!"
+        },
+        "nextStep": "aufenthalt"
+      },
+      {
+        "text": "Super, danke schön.",
+        "translation": {
+          "ru-RU": "Супер, спасибо большое.",
+          "en-US": "Super, thank you.",
+          "ar-SA": "ممتاز، شكراً جزيلاً.",
+          "es-ES": "Genial, muchas gracias.",
+          "fr-FR": "Super, merci beaucoup.",
+          "hi-IN": "बढ़िया, बहुत-बहुत धन्यवाद।",
+          "pl-PL": "Super, dziękuję bardzo.",
+          "ro-RO": "Super, mulțumesc frumos.",
+          "tr-TR": "Harika, çok teşekkürler.",
+          "uk-UA": "Супер, дуже дякую.",
+          "uz-UZ": "Ajoyib, katta rahmat."
+        },
+        "nextStep": "aufenthalt"
+      }
+    ],
+    "defaultNext": "aufenthalt"
+  },
+  "aufenthalt": {
+    "botText": "Sehr gerne. Ich wünsche Ihnen einen schönen Aufenthalt! Auf Wiedersehen!",
+    "botTranslation": {
+      "ru-RU": "Не за что (с удовольствием). Желаю Вам приятного пребывания! До свидания!",
+      "en-US": "You're very welcome. I wish you a pleasant stay! Goodbye!",
+      "ar-SA": "على الرحب والسعة. أتمنى لك إقامة سعيدة! وداعاً!",
+      "es-ES": "Con mucho gusto. ¡Le deseo una feliz estancia! ¡Adiós!",
+      "fr-FR": "Je vous en prie. Je vous souhaite un agréable séjour ! Au revoir !",
+      "hi-IN": "बड़ी खुशी से। मैं आपके अच्छे प्रवास की कामना करता हूँ! अलविदा!",
+      "pl-PL": "Z przyjemnością. Życzę miłego pobytu! Do widzenia!",
+      "ro-RO": "Cu mare drag. Vă doresc un sejur plăcut! La revedere!",
+      "tr-TR": "Rica ederim. Keyifli konaklamalar dilerim! Hoşça kalın!",
+      "uk-UA": "З задоволенням. Бажаю Вам приємного перебування! До побачення!",
+      "uz-UZ": "Bajonidil. Mehmonxonamizda vaqtingiz maroqli o'tsin! Xayr!"
+    },
+    "tips": {
+      "ru-RU": "Пожелание 'Einen schönen Aufenthalt!' используется в Akkusativ, так как это сокращение от 'Ich wünsche Ihnen...'. Мужской род 'der Aufenthalt' берет у артикля форму 'einen' -> 'einen schönen Aufenthalt'.",
+      "en-US": "The wish implies Akkusativ. The masculine noun 'der Aufenthalt' takes the article form 'einen'.",
+      "ar-SA": "التمني يتضمن Akkusativ. الكلمة المذكرة 'der Aufenthalt' تأخذ 'einen'.",
+      "es-ES": "El deseo implica Akkusativ. El sustantivo masculino 'der Aufenthalt' toma 'einen'.",
+      "fr-FR": "Le souhait sous-entend l'Akkusativ. Le nom masculin 'der Aufenthalt' prend 'einen'.",
+      "hi-IN": "शुभकामना में Akkusativ शामिल है। पुल्लिंग संज्ञा 'der Aufenthalt' 'einen' रूप लेती है।",
+      "pl-PL": "Życzenie zakłada użycie biernika. Rzeczownik męski 'der Aufenthalt' przyjmuje formę 'einen'.",
+      "ro-RO": "Urările implică Akkusativ. Substantivul masculin 'der Aufenthalt' ia forma 'einen'.",
+      "tr-TR": "İyi dilek ifadesi Akkusativ gerektirir. Eril isim 'der Aufenthalt' 'einen' formunu alır.",
+      "uk-UA": "Побажання використовує Akkusativ. Чоловічий рід 'der Aufenthalt' бере форму 'einen'.",
+      "uz-UZ": "Istak bildirishda Akkusativ qo'llaniladi. Erkak jinsidagi 'der Aufenthalt' 'einen' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Auf Wiedersehen!",
+        "translation": {
+          "ru-RU": "До свидания!",
+          "en-US": "Goodbye!",
+          "ar-SA": "وداعاً!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Do widzenia!",
+          "ro-RO": "La revedere!",
+          "tr-TR": "Hoşça kalın!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Danke, tschüss!",
+        "translation": {
+          "ru-RU": "Спасибо, пока!",
+          "en-US": "Thanks, bye!",
+          "ar-SA": "شكراً، وداعاً!",
+          "es-ES": "¡Gracias, adiós!",
+          "fr-FR": "Merci, salut !",
+          "hi-IN": "धन्यवाद, अलविदा!",
+          "pl-PL": "Dzięki, cześć!",
+          "ro-RO": "Mulțumesc, pa!",
+          "tr-TR": "Teşekkürler, güle güle!",
+          "uk-UA": "Дякую, бувай!",
+          "uz-UZ": "Rahmat, xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है।",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

@@ -1,3 +1,559 @@
 {
-
+  "start": {
+    "botText": "Praxis Doktor Schmidt, guten Tag.",
+    "botTranslation": {
+      "ar-SA": "عيادة الدكتور شميدت، طاب يومك.",
+      "en-US": "Practice Doctor Schmidt, good day.",
+      "es-ES": "Consultorio del Doctor Schmidt, buen día.",
+      "fr-FR": "Cabinet du Docteur Schmidt, bonjour.",
+      "hi-IN": "डॉक्टर श्मिट क्लिनिक, शुभ दिन।",
+      "pl-PL": "Gabinet doktora Schmidta, dzień dobry.",
+      "ro-RO": "Cabinetul Doctorului Schmidt, bună ziua.",
+      "ru-RU": "Праксис доктора Шмидта, добрый день.",
+      "tr-TR": "Doktor Schmidt muayenehanesi, iyi günler.",
+      "uk-UA": "Праксис доктора Шмідта, добрий день.",
+      "uz-UZ": "Doktor Shmidt klinikasi, xayrli kun."
+    },
+    "tips": {
+      "ru-RU": "Глагол 'brauchen' требует Akkusativ. Для мужского рода он берет у артикля форму 'einen' (einen Termin).",
+      "en-US": "The verb 'brauchen' requires Akkusativ. For masculine nouns, it takes the article 'einen' (einen Termin).",
+      "ar-SA": "الفعل 'brauchen' يتطلب حالة النصب. للاسم المذكر يأخذ الأداة 'einen'.",
+      "es-ES": "El verbo 'brauchen' requiere Akkusativ. Para sustantivos masculinos, toma el artículo 'einen'.",
+      "fr-FR": "Le verbe 'brauchen' nécessite l'accusatif. Pour les noms masculins, il prend l'article 'einen'.",
+      "hi-IN": "क्रिया 'brauchen' को Akkusativ की आवश्यकता होती है। यह 'einen' (einen Termin) लेख लेता है।",
+      "pl-PL": "Czasownik 'brauchen' wymaga biernika. Dla rodzaju męskiego bierze przedimek 'einen'.",
+      "ro-RO": "Verbul 'brauchen' cere Acuzativ. Pentru masculin ia articolul 'einen'.",
+      "tr-TR": "'brauchen' fiili Akkusativ gerektirir. Eril isimler için 'einen' artikelini alır.",
+      "uk-UA": "Дієслово 'brauchen' вимагає Akkusativ. Для чоловічого роду воно бере форму артикля 'einen'.",
+      "uz-UZ": "'brauchen' fe'li Akkusativ talab qiladi. Erkak jinsi uchun u 'einen' artiklini oladi."
+    },
+    "options": [
+      {
+        "text": "Guten Tag. Ich heiße Anna und ich brauche einen Termin.",
+        "translation": {
+          "ar-SA": "طاب يومك. اسمي آنا وأحتاج إلى موعد.",
+          "en-US": "Good day. My name is Anna and I need an appointment.",
+          "es-ES": "Buen día. Me llamo Anna y necesito una cita.",
+          "fr-FR": "Bonjour. Je m'appelle Anna et j'ai besoin d'un rendez-vous.",
+          "hi-IN": "शुभ दिन। मेरा नाम अन्ना है और मुझे एक अपॉइंटमेंट चाहिए।",
+          "pl-PL": "Dzień dobry. Nazywam się Anna i potrzebuję wizyty.",
+          "ro-RO": "Bună ziua. Mă numesc Anna și am nevoie de o programare.",
+          "ru-RU": "Добрый день. Меня зовут Анна, и мне нужен термин (запись).",
+          "tr-TR": "İyi günler. Adım Anna ve bir randevuya ihtiyacım var.",
+          "uk-UA": "Добрий день. Мене звати Анна, і мені потрібен запис.",
+          "uz-UZ": "Xayrli kun. Ismim Anna va menga qabul vaqti kerak."
+        },
+        "nextStep": "is_new"
+      }
+    ],
+    "defaultNext": "is_new"
+  },
+  "is_new": {
+    "botText": "Sind Sie neu hier?",
+    "botTranslation": {
+      "ar-SA": "هل أنت جديد هنا؟",
+      "en-US": "Are you new here?",
+      "es-ES": "¿Es usted nueva aquí?",
+      "fr-FR": "Êtes-vous nouvelle ici ?",
+      "hi-IN": "क्या आप यहाँ नए हैं?",
+      "pl-PL": "Czy jest pani tu nowa?",
+      "ro-RO": "Sunteți nouă aici?",
+      "ru-RU": "Вы здесь новенькая?",
+      "tr-TR": "Burada yeni misiniz?",
+      "uk-UA": "Ви тут новенька?",
+      "uz-UZ": "Siz bu yerda yangimisiz?"
+    },
+    "tips": {
+      "ru-RU": "Глагол 'sein' (быть) — неправильный. В вежливой форме 'Sie' (Вы) он имеет форму 'sind'.",
+      "en-US": "The verb 'sein' (to be) is irregular. In the formal 'Sie' (You) it takes the form 'sind'.",
+      "ar-SA": "الفعل 'sein' غير منتظم. مع الضمير 'Sie' يأخذ الشكل 'sind'.",
+      "es-ES": "El verbo 'sein' es irregular. Con 'Sie' (Usted) toma la forma 'sind'.",
+      "fr-FR": "Le verbe 'sein' est irrégulier. Avec 'Sie' (Vous), il prend la forme 'sind'.",
+      "hi-IN": "'sein' क्रिया अनियमित है। 'Sie' के साथ यह 'sind' का रूप लेता है।",
+      "pl-PL": "Czasownik 'sein' jest nieregularny. Z formą grzecznościową 'Sie' przybiera formę 'sind'.",
+      "ro-RO": "Verbul 'sein' este neregulat. Pentru 'Sie' (Dumneavoastră) are forma 'sind'.",
+      "tr-TR": "'sein' fiili düzensizdir. 'Sie' formunda 'sind' şeklini alır.",
+      "uk-UA": "Дієслово 'sein' — неправильне. У ввічливій формі 'Sie' воно має форму 'sind'.",
+      "uz-UZ": "'sein' fe'li noto'g'ri fe'ldir. 'Sie' shaklida 'sind' bo'ladi."
+    },
+    "options": [
+      {
+        "text": "Ja, ich bin neu hier.",
+        "translation": {
+          "ar-SA": "نعم، أنا جديد هنا.",
+          "en-US": "Yes, I am new here.",
+          "es-ES": "Sí, soy nueva aquí.",
+          "fr-FR": "Oui, je suis nouvelle ici.",
+          "hi-IN": "हाँ, मैं यहाँ नई हूँ।",
+          "pl-PL": "Tak, jestem tu nowa.",
+          "ro-RO": "Da, sunt nouă aici.",
+          "ru-RU": "Да, я здесь новенькая.",
+          "tr-TR": "Evet, burada yeniyim.",
+          "uk-UA": "Так, я тут новенька.",
+          "uz-UZ": "Ha, men bu yerda yangiman."
+        },
+        "nextStep": "problem"
+      }
+    ],
+    "defaultNext": "problem"
+  },
+  "problem": {
+    "botText": "Was haben Sie?",
+    "botTranslation": {
+      "ar-SA": "مِمَّ تشكو؟ (ماذا لديك؟)",
+      "en-US": "What do you have? (What is wrong?)",
+      "es-ES": "¿Qué tiene? (¿Qué le pasa?)",
+      "fr-FR": "Qu'avez-vous ? (De quoi souffrez-vous ?)",
+      "hi-IN": "आपको क्या हुआ है?",
+      "pl-PL": "Co pani dolega?",
+      "ro-RO": "Ce aveți? (Ce vă supără?)",
+      "ru-RU": "На что жалуетесь? (Дословно: что Вы имеете?)",
+      "tr-TR": "Neyiniz var?",
+      "uk-UA": "На що скаржитесь? (Дослівно: що Ви маєте?)",
+      "uz-UZ": "Sizga nima bo'ldi?"
+    },
+    "tips": {
+      "ru-RU": "Конструкция 'Ich habe Kopfschmerzen' (У меня болит голова) — базовая для уровня А1 при описании болезней.",
+      "en-US": "The construction 'Ich habe Kopfschmerzen' (I have a headache) is standard A1 for describing illnesses.",
+      "ar-SA": "التركيب 'Ich habe Kopfschmerzen' (عندي صداع) أساسي لوصف الأمراض في مستوى A1.",
+      "es-ES": "La construcción 'Ich habe Kopfschmerzen' (Tengo dolor de cabeza) es básica en A1.",
+      "fr-FR": "La structure 'Ich habe Kopfschmerzen' (J'ai mal à la tête) est basique en A1.",
+      "hi-IN": "'Ich habe Kopfschmerzen' (मुझे सिरदर्द है) बीमारी बताने के लिए मानक A1 है।",
+      "pl-PL": "Konstrukcja 'Ich habe Kopfschmerzen' (Mam ból głowy) to podstawa na poziomie A1.",
+      "ro-RO": "Construcția 'Ich habe Kopfschmerzen' (Am dureri de cap) este de bază în A1.",
+      "tr-TR": "'Ich habe Kopfschmerzen' (Baş ağrım var) hastalıkları tanımlamak için temel A1 yapısıdır.",
+      "uk-UA": "Конструкція 'Ich habe Kopfschmerzen' (У мене болить голова) — базова для A1.",
+      "uz-UZ": "'Ich habe Kopfschmerzen' (Boshim og'riyapti) kasalliklarni tasvirlash uchun standart A1 qurilmasi."
+    },
+    "options": [
+      {
+        "text": "Ich bin krank. Ich habe Kopfschmerzen.",
+        "translation": {
+          "ar-SA": "أنا مريض. عندي صداع.",
+          "en-US": "I am sick. I have a headache.",
+          "es-ES": "Estoy enferma. Tengo dolor de cabeza.",
+          "fr-FR": "Je suis malade. J'ai mal à la tête.",
+          "hi-IN": "मैं बीमार हूँ। मुझे सिरदर्द है।",
+          "pl-PL": "Jestem chora. Mam ból głowy.",
+          "ro-RO": "Sunt bolnavă. Am dureri de cap.",
+          "ru-RU": "Я болею. У меня болит голова.",
+          "tr-TR": "Hastayım. Baş ağrım var.",
+          "uk-UA": "Я хворію. У мене болить голова.",
+          "uz-UZ": "Men kasalman. Boshim og'riyapti."
+        },
+        "nextStep": "time_offer"
+      }
+    ],
+    "defaultNext": "time_offer"
+  },
+  "time_offer": {
+    "botText": "Kommen Sie am Montag oder am Dienstag?",
+    "botTranslation": {
+      "ar-SA": "هل ستأتي يوم الاثنين أم يوم الثلاثاء؟",
+      "en-US": "Are you coming on Monday or on Tuesday?",
+      "es-ES": "¿Viene el lunes o el martes?",
+      "fr-FR": "Venez-vous lundi ou mardi ?",
+      "hi-IN": "क्या आप सोमवार या मंगलवार को आ रहे हैं?",
+      "pl-PL": "Przyjdzie pani w poniedziałek czy we wtorek?",
+      "ro-RO": "Veniți luni sau marți?",
+      "ru-RU": "Вы придете в понедельник или во вторник?",
+      "tr-TR": "Pazartesi mi salı mı gelirsiniz?",
+      "uk-UA": "Ви прийдете в понеділок чи у вівторок?",
+      "uz-UZ": "Siz dushanba yoki seshanba kuni kelasizmi?"
+    },
+    "tips": {
+      "ru-RU": "С днями недели всегда используется предлог 'am' (am Montag, am Dienstag).",
+      "en-US": "With days of the week, always use the preposition 'am' (am Montag, am Dienstag).",
+      "ar-SA": "يُستخدم حرف الجر 'am' دائماً مع أيام الأسبوع.",
+      "es-ES": "Con los días de la semana siempre se usa la preposición 'am'.",
+      "fr-FR": "Avec les jours de la semaine, utilisez toujours la préposition 'am'.",
+      "hi-IN": "सप्ताह के दिनों के साथ हमेशा 'am' पूर्वसर्ग का प्रयोग करें।",
+      "pl-PL": "Z dniami tygodnia zawsze używamy przyimka 'am'.",
+      "ro-RO": "Cu zilele săptămânii se folosește întotdeauna prepoziția 'am'.",
+      "tr-TR": "Haftanın günleriyle her zaman 'am' edatı kullanılır.",
+      "uk-UA": "З днями тижня завжди використовується прийменник 'am'.",
+      "uz-UZ": "Hafta kunlari bilan har doim 'am' predlogi ishlatiladi."
+    },
+    "options": [
+      {
+        "text": "Ich komme am Dienstag.",
+        "translation": {
+          "ar-SA": "سآتي يوم الثلاثاء.",
+          "en-US": "I am coming on Tuesday.",
+          "es-ES": "Voy el martes.",
+          "fr-FR": "Je viens mardi.",
+          "hi-IN": "मैं मंगलवार को आ रही हूँ।",
+          "pl-PL": "Przyjdę we wtorek.",
+          "ro-RO": "Vin marți.",
+          "ru-RU": "Я приду во вторник.",
+          "tr-TR": "Salı günü geliyorum.",
+          "uk-UA": "Я прийду у вівторок.",
+          "uz-UZ": "Men seshanba kuni kelaman."
+        },
+        "nextStep": "hour_offer"
+      }
+    ],
+    "defaultNext": "hour_offer"
+  },
+  "hour_offer": {
+    "botText": "Passt es um 14 Uhr?",
+    "botTranslation": {
+      "ar-SA": "هل يناسبك الساعة 14 (2 ظهراً)؟",
+      "en-US": "Does 2 PM (14 Uhr) suit you?",
+      "es-ES": "¿Le va bien a las 14 horas?",
+      "fr-FR": "Est-ce que 14h vous convient ?",
+      "hi-IN": "क्या 14 बजे (दोपहर 2 बजे) ठीक रहेगा?",
+      "pl-PL": "Czy pasuje pani o godzinie 14?",
+      "ro-RO": "Vă convine la ora 14?",
+      "ru-RU": "Подходит в 14 часов?",
+      "tr-TR": "Saat 14 uygun mu?",
+      "uk-UA": "Підходить о 14 годині?",
+      "uz-UZ": "Soat 14 da ma'qulmi?"
+    },
+    "tips": {
+      "ru-RU": "Для указания времени (часов) всегда используется предлог 'um' (um 14 Uhr).",
+      "en-US": "To indicate the exact time, the preposition 'um' is always used.",
+      "ar-SA": "لتحديد الوقت الدقيق، يُستخدم حرف الجر 'um' دائماً.",
+      "es-ES": "Para indicar la hora exacta, siempre se usa la preposición 'um'.",
+      "fr-FR": "Pour indiquer l'heure exacte, on utilise toujours la préposition 'um'.",
+      "hi-IN": "सटीक समय बताने के लिए हमेशा 'um' का उपयोग किया जाता है।",
+      "pl-PL": "Do określania dokładnego czasu (godzin) używamy przyimka 'um'.",
+      "ro-RO": "Pentru a indica ora exactă, se folosește mereu prepoziția 'um'.",
+      "tr-TR": "Kesin saati belirtmek için her zaman 'um' edatı kullanılır.",
+      "uk-UA": "Для вказівки точного часу завжди використовується прийменник 'um'.",
+      "uz-UZ": "Aniq vaqtni bildirish uchun har doim 'um' predlogi ishlatiladi."
+    },
+    "options": [
+      {
+        "text": "Ja, 14 Uhr passt gut.",
+        "translation": {
+          "ar-SA": "نعم، الساعة 14 مناسبة.",
+          "en-US": "Yes, 14 o'clock works well.",
+          "es-ES": "Sí, a las 14 me viene bien.",
+          "fr-FR": "Oui, 14h me convient bien.",
+          "hi-IN": "हाँ, 14 बजे ठीक है।",
+          "pl-PL": "Tak, godzina 14 pasuje dobrze.",
+          "ro-RO": "Da, ora 14 este bine.",
+          "ru-RU": "Да, 14 часов подходит.",
+          "tr-TR": "Evet, 14 uygun.",
+          "uk-UA": "Так, 14 година підходить.",
+          "uz-UZ": "Ha, soat 14 yaxshi."
+        },
+        "nextStep": "insurance_card"
+      }
+    ],
+    "defaultNext": "insurance_card"
+  },
+  "insurance_card": {
+    "botText": "Haben Sie eine Versicherungskarte?",
+    "botTranslation": {
+      "ar-SA": "هل لديك بطاقة تأمين صحي؟",
+      "en-US": "Do you have an insurance card?",
+      "es-ES": "¿Tiene una tarjeta de seguro?",
+      "fr-FR": "Avez-vous une carte d'assurance ?",
+      "hi-IN": "क्या आपके पास बीमा कार्ड है?",
+      "pl-PL": "Czy ma pani kartę ubezpieczeniową?",
+      "ro-RO": "Aveți un card de asigurare?",
+      "ru-RU": "У Вас есть страховая карточка?",
+      "tr-TR": "Sigorta kartınız var mı?",
+      "uk-UA": "У Вас є страхова картка?",
+      "uz-UZ": "Sizda sug'urta kartasi bormi?"
+    },
+    "tips": {
+      "ru-RU": "Глагол 'haben' требует Akkusativ. Для женского рода он берет у артикля форму 'eine' (eine Versicherungskarte).",
+      "en-US": "The verb 'haben' requires Akkusativ. For feminine nouns, it takes the article form 'eine'.",
+      "ar-SA": "الفعل 'haben' يتطلب حالة النصب. للأسم المؤنث يأخذ الأداة 'eine'.",
+      "es-ES": "El verbo 'haben' requiere Akkusativ. Para femeninos toma la forma 'eine'.",
+      "fr-FR": "Le verbe 'haben' nécessite l'accusatif. Pour le féminin, il prend la forme 'eine'.",
+      "hi-IN": "क्रिया 'haben' को Akkusativ की आवश्यकता होती है। स्त्रीलिंग के लिए यह 'eine' लेता है।",
+      "pl-PL": "Czasownik 'haben' wymaga biernika. Dla rodzaju żeńskiego przedimek to 'eine'.",
+      "ro-RO": "Verbul 'haben' cere Acuzativ. Pentru feminin ia forma 'eine'.",
+      "tr-TR": "'haben' fiili Akkusativ gerektirir. Dişil isimler için 'eine' artikelini alır.",
+      "uk-UA": "Дієслово 'haben' вимагає Akkusativ. Для жіночого роду воно бере форму артикля 'eine'.",
+      "uz-UZ": "'haben' fe'li Akkusativ talab qiladi. Ayol jinsi uchun 'eine' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Ja, ich habe die Karte.",
+        "translation": {
+          "ar-SA": "نعم، معي البطاقة.",
+          "en-US": "Yes, I have the card.",
+          "es-ES": "Sí, tengo la tarjeta.",
+          "fr-FR": "Oui, j'ai la carte.",
+          "hi-IN": "हाँ, मेरे पास कार्ड है।",
+          "pl-PL": "Tak, mam kartę.",
+          "ro-RO": "Da, am cardul.",
+          "ru-RU": "Да, у меня есть карточка.",
+          "tr-TR": "Evet, kartım var.",
+          "uk-UA": "Так, у мене є картка.",
+          "uz-UZ": "Ha, menda karta bor."
+        },
+        "nextStep": "name_ask"
+      }
+    ],
+    "defaultNext": "name_ask"
+  },
+  "name_ask": {
+    "botText": "Wie ist Ihr Familienname, bitte?",
+    "botTranslation": {
+      "ar-SA": "ما هو اسم عائلتك من فضلك؟",
+      "en-US": "What is your surname, please?",
+      "es-ES": "¿Cuál es su apellido, por favor?",
+      "fr-FR": "Quel est votre nom de famille, s'il vous plaît ?",
+      "hi-IN": "कृपया आपका उपनाम क्या है?",
+      "pl-PL": "Jakie jest pani nazwisko, proszę?",
+      "ro-RO": "Care este numele dumneavoastră de familie, vă rog?",
+      "ru-RU": "Как Ваша фамилия, пожалуйста?",
+      "tr-TR": "Soyadınız nedir, lütfen?",
+      "uk-UA": "Яке Ваше прізвище, будь ласка?",
+      "uz-UZ": "Iltimos, familiyangiz nima?"
+    },
+    "tips": {
+      "ru-RU": "В немецком языке спрашивают 'Wie ist Ihr Name?' (Как Ваше имя/фамилия?), а не 'Wer' (Кто) или 'Was' (Что).",
+      "en-US": "In German, you ask 'Wie ist Ihr Name?' (How is your name?), not 'What'.",
+      "ar-SA": "في الألمانية نسأل بـ 'Wie' للاسم، وليس بـ 'Was'.",
+      "es-ES": "En alemán se pregunta 'Wie ist Ihr Name?' (¿Cómo es su nombre?), no con 'Was' (Qué).",
+      "fr-FR": "En allemand, on demande 'Wie est Ihr Name ?' (Comment est votre nom ?), et non avec 'Was'.",
+      "hi-IN": "जर्मन में 'Wie ist Ihr Name?' (आपका नाम कैसे है?) पूछा जाता है।",
+      "pl-PL": "W języku niemieckim pytamy 'Wie ist Ihr Name?' (Jakie jest nazwisko?), a nie 'Was'.",
+      "ro-RO": "În germană se întreabă 'Wie ist Ihr Name?' (Cum este numele dvs?), nu cu 'Was'.",
+      "tr-TR": "Almancada 'Was' ile değil, 'Wie ist Ihr Name?' (Adınız nasıl?) şeklinde sorulur.",
+      "uk-UA": "Німецькою питають 'Wie ist Ihr Name?' (Як Ваше ім'я/прізвище?), а не 'Was'.",
+      "uz-UZ": "Nemis tilida 'Was' bilan emas, 'Wie ist Ihr Name?' deb so'raladi."
+    },
+    "options": [
+      {
+        "text": "Mein Familienname ist Ivanova.",
+        "translation": {
+          "ar-SA": "اسم عائلتي هو إيفانوفا.",
+          "en-US": "My surname is Ivanova.",
+          "es-ES": "Mi apellido es Ivanova.",
+          "fr-FR": "Mon nom de famille est Ivanova.",
+          "hi-IN": "मेरा उपनाम इवानोवा है।",
+          "pl-PL": "Moje nazwisko to Ivanova.",
+          "ro-RO": "Numele meu de familie este Ivanova.",
+          "ru-RU": "Моя фамилия Иванова.",
+          "tr-TR": "Soyadım Ivanova.",
+          "uk-UA": "Моє прізвище Іванова.",
+          "uz-UZ": "Mening familiyam Ivanova."
+        },
+        "nextStep": "spell_ask"
+      }
+    ],
+    "defaultNext": "spell_ask"
+  },
+  "confirm": {
+    "botText": "Danke. Sie haben den Termin am Dienstag um 14 Uhr.",
+    "botTranslation": {
+      "ar-SA": "شكراً. لديك الموعد يوم الثلاثاء الساعة 14.",
+      "en-US": "Thank you. You have the appointment on Tuesday at 2 PM.",
+      "es-ES": "Gracias. Tiene la cita el martes a las 14.",
+      "fr-FR": "Merci. Vous avez le rendez-vous mardi à 14h.",
+      "hi-IN": "धन्यवाद। आपका अपॉइंटमेंट मंगलवार को 14 बजे है।",
+      "pl-PL": "Dziękuję. Ma pani wizytę we wtorek o 14:00.",
+      "ro-RO": "Mulțumesc. Aveți programarea marți la ora 14.",
+      "ru-RU": "Спасибо. У Вас термин во вторник в 14:00.",
+      "tr-TR": "Teşekkürler. Salı saat 14'te randevunuz var.",
+      "uk-UA": "Дякую. У Вас термін у вівторок о 14:00.",
+      "uz-UZ": "Rahmat. Sizda seshanba kuni soat 14 da qabul bor."
+    },
+    "tips": {
+      "ru-RU": "Глагол 'mitbringen' (приносить с собой) имеет отделяемую приставку 'mit'. Но с модальным глаголом (muss) он весь стоит в конце.",
+      "en-US": "'mitbringen' has a separable prefix 'mit'. But with a modal verb (muss), it goes to the end completely.",
+      "ar-SA": "الفعل 'mitbringen' له سابقة منفصلة، لكن مع الفعل الناقص (muss) يذهب بأكمله للنهاية.",
+      "es-ES": "'mitbringen' tiene prefijo separable, pero con verbo modal (muss) va todo al final.",
+      "fr-FR": "'mitbringen' a un préfixe séparable, mais avec un verbe modal (muss), il va entier à la fin.",
+      "hi-IN": "'mitbringen' में अलग होने योग्य उपसर्ग है, लेकिन मोडल क्रिया (muss) के साथ यह पूरा अंत में जाता है।",
+      "pl-PL": "'mitbringen' ma przedrostek rozdzielny, ale z czasownikiem modalnym (muss) idzie w całości na koniec.",
+      "ro-RO": "'mitbringen' are un prefix separabil, dar cu un verb modal (muss) merge întreg la sfârșit.",
+      "tr-TR": "'mitbringen' ayrılabilen bir öneke sahiptir, ancak modal fiille (muss) tümüyle sona gider.",
+      "uk-UA": "Дієслово 'mitbringen' має відокремлюваний префікс, але з модальним дієсловом (muss) він весь стоїть в кінці.",
+      "uz-UZ": "'mitbringen' ajraladigan old qo'shimchaga ega, lekin modal fe'l bilan u to'liqligicha oxiriga o'tadi."
+    },
+    "options": [
+      {
+        "text": "Muss ich noch etwas mitbringen?",
+        "translation": {
+          "ar-SA": "هل يجب أن أحضر أي شيء آخر؟",
+          "en-US": "Do I need to bring anything else?",
+          "es-ES": "¿Debo traer algo más?",
+          "fr-FR": "Dois-je apporter autre chose ?",
+          "hi-IN": "क्या मुझे कुछ और लाने की आवश्यकता है?",
+          "pl-PL": "Czy muszę przynieść coś jeszcze?",
+          "ro-RO": "Trebuie să mai aduc ceva?",
+          "ru-RU": "Я должна принести что-то еще?",
+          "tr-TR": "Başka bir şey getirmem gerekiyor mu?",
+          "uk-UA": "Чи повинна я принести щось ще?",
+          "uz-UZ": "Yana biror narsa olib kelishim kerakmi?"
+        },
+        "nextStep": "bring_ask"
+      }
+    ],
+    "defaultNext": "bring_ask"
+  },
+  "bring_ask": {
+    "botText": "Nein, bringen Sie bitte nur die Karte mit.",
+    "botTranslation": {
+      "ar-SA": "لا، يرجى إحضار البطاقة فقط.",
+      "en-US": "No, please bring only the card.",
+      "es-ES": "No, por favor traiga solo la tarjeta.",
+      "fr-FR": "Non, apportez seulement la carte s'il vous plaît.",
+      "hi-IN": "नहीं, कृपया केवल कार्ड लाएं।",
+      "pl-PL": "Nie, proszę przynieść tylko kartę.",
+      "ro-RO": "Nu, vă rugăm să aduceți doar cardul.",
+      "ru-RU": "Нет, принесите, пожалуйста, только карточку.",
+      "tr-TR": "Hayır, lütfen sadece kartı getirin.",
+      "uk-UA": "Ні, принесіть, будь ласка, тільки картку.",
+      "uz-UZ": "Yo'q, iltimos, faqat kartani olib keling."
+    },
+    "tips": {
+      "ru-RU": "В повелительном наклонении на 'Вы' (Sie) отделяемая приставка (mit) уходит в конец: 'Bringen Sie... mit'.",
+      "en-US": "In the formal imperative (Sie), the separable prefix goes to the end: 'Bringen Sie... mit'.",
+      "ar-SA": "في صيغة الأمر (Sie)، تذهب السابقة المنفصلة إلى النهاية: 'Bringen Sie... mit'.",
+      "es-ES": "En el imperativo formal (Sie), el prefijo separable va al final: 'Bringen Sie... mit'.",
+      "fr-FR": "A l'impératif formel (Sie), le préfixe séparable va à la fin : 'Bringen Sie... mit'.",
+      "hi-IN": "औपचारिक आदेश रूप (Sie) में, अलग होने योग्य उपसर्ग अंत में जाता है।",
+      "pl-PL": "W trybie rozkazującym z 'Sie', przedrostek rozdzielny idzie na koniec.",
+      "ro-RO": "La imperativul formal (Sie), prefixul separabil merge la sfârșit.",
+      "tr-TR": "Resmi emir kipinde (Sie) ayrılabilen önek sona gider: 'Bringen Sie... mit'.",
+      "uk-UA": "У наказовому способі на 'Ви' (Sie) відокремлюваний префікс йде в кінець.",
+      "uz-UZ": "Rasmiy buyruq maylida (Sie) ajraladigan old qo'shimcha oxiriga tushadi."
+    },
+    "options": [
+      {
+        "text": "Alles klar, vielen Dank.",
+        "translation": {
+          "ar-SA": "حسناً، شكراً جزيلاً.",
+          "en-US": "Alright, thank you very much.",
+          "es-ES": "Muy bien, muchas gracias.",
+          "fr-FR": "C'est noté, merci beaucoup.",
+          "hi-IN": "ठीक है, बहुत-बहुत धन्यवाद।",
+          "pl-PL": "Wszystko jasne, bardzo dziękuję.",
+          "ro-RO": "În regulă, mulțumesc mult.",
+          "ru-RU": "Все понятно, большое спасибо.",
+          "tr-TR": "Tamam, çok teşekkürler.",
+          "uk-UA": "Все зрозуміло, велике дякую.",
+          "uz-UZ": "Tushunarli, katta rahmat."
+        },
+        "nextStep": "wish"
+      }
+    ],
+    "defaultNext": "wish"
+  },
+  "wish": {
+    "botText": "Gute Besserung! Bis Dienstag.",
+    "botTranslation": {
+      "ar-SA": "بالشفاء العاجل! أراك يوم الثلاثاء.",
+      "en-US": "Get well soon! Until Tuesday.",
+      "es-ES": "¡Que se mejore! Hasta el martes.",
+      "fr-FR": "Bon rétablissement ! À mardi.",
+      "hi-IN": "जल्दी ठीक हो जाओ! मंगलवार को मिलते हैं।",
+      "pl-PL": "Szybkiego powrotu do zdrowia! Do wtorku.",
+      "ro-RO": "Însănătoșire grabnică! Pe marți.",
+      "ru-RU": "Скорейшего выздоровления! До вторника.",
+      "tr-TR": "Geçmiş olsun! Salıya kadar görüşmek üzere.",
+      "uk-UA": "Швидкого одужання! До вівторка.",
+      "uz-UZ": "Tezroq tuzaling! Seshanbagacha."
+    },
+    "tips": {
+      "ru-RU": "Фраза 'Gute Besserung' — стандартное пожелание выздоровления (база А1).",
+      "en-US": "The phrase 'Gute Besserung' is the standard A1 expression for 'Get well soon'.",
+      "ar-SA": "عبارة 'Gute Besserung' تعني 'بالشفاء العاجل' وهي أساسية في A1.",
+      "es-ES": "La frase 'Gute Besserung' es la expresión estándar de A1 para 'Que se mejore'.",
+      "fr-FR": "L'expression 'Gute Besserung' est la phrase standard en A1 pour 'Bon rétablissement'.",
+      "hi-IN": "'Gute Besserung' 'जल्दी ठीक हो जाओ' के लिए मानक A1 अभिव्यक्ति है।",
+      "pl-PL": "Zwrot 'Gute Besserung' to standardowe życzenie zdrowia na poziomie A1.",
+      "ro-RO": "Fraza 'Gute Besserung' este expresia standard A1 pentru 'Însănătoșire grabnică'.",
+      "tr-TR": "'Gute Besserung' ifadesi 'Geçmiş olsun' anlamına gelen standart A1 ifadesidir.",
+      "uk-UA": "Фраза 'Gute Besserung' — стандартне побажання одужання.",
+      "uz-UZ": "'Gute Besserung' iborasi 'Tezroq tuzaling' degan ma'noni anglatuvchi A1 iborasi."
+    },
+    "options": [
+      {
+        "text": "Danke, auf Wiedersehen!",
+        "translation": {
+          "ar-SA": "شكراً، إلى اللقاء!",
+          "en-US": "Thanks, goodbye!",
+          "es-ES": "Gracias, ¡adiós!",
+          "fr-FR": "Merci, au revoir !",
+          "hi-IN": "धन्यवाद, अलविदा!",
+          "pl-PL": "Dziękuję, do widzenia!",
+          "ro-RO": "Mulțumesc, la revedere!",
+          "ru-RU": "Спасибо, до свидания!",
+          "tr-TR": "Teşekkürler, hoşça kalın!",
+          "uk-UA": "Дякую, до побачення!",
+          "uz-UZ": "Rahmat, xayr!"
+        },
+        "nextStep": "goodbye"
+      }
+    ],
+    "defaultNext": "goodbye"
+  },
+  "goodbye": {
+    "botText": "Auf Wiedersehen!",
+    "botTranslation": {
+      "ar-SA": "إلى اللقاء!",
+      "en-US": "Goodbye!",
+      "es-ES": "¡Adiós!",
+      "fr-FR": "Au revoir !",
+      "hi-IN": "अलविदा!",
+      "pl-PL": "Do widzenia!",
+      "ro-RO": "La revedere!",
+      "ru-RU": "До свидания!",
+      "tr-TR": "Hoşça kalın!",
+      "uk-UA": "До побачення!",
+      "uz-UZ": "Xayr!"
+    },
+    "tips": {
+      "ru-RU": "'Auf Wiedersehen' — это устойчивое вежливое прощание при официальном общении.",
+      "en-US": "'Auf Wiedersehen' is a standard formal goodbye expression.",
+      "ar-SA": "'Auf Wiedersehen' هو وداع رسمي قياسي.",
+      "es-ES": "'Auf Wiedersehen' es un adiós formal estándar.",
+      "fr-FR": "'Auf Wiedersehen' est un au revoir formel standard.",
+      "hi-IN": "'Auf Wiedersehen' एक मानक औपचारिक विदाई है।",
+      "pl-PL": "'Auf Wiedersehen' to standardowe oficjalne pożegnanie.",
+      "ro-RO": "'Auf Wiedersehen' este un salut de despărțire formal.",
+      "tr-TR": "'Auf Wiedersehen' standart resmi bir vedalaşmadır.",
+      "uk-UA": "'Auf Wiedersehen' — це стійке ввічливе прощання при офіційному спілкуванні.",
+      "uz-UZ": "'Auf Wiedersehen' — standart rasmiy xayrlashuv iborasi."
+    },
+    "options": [
+      {
+        "text": "Auf Wiedersehen!",
+        "translation": {
+          "ar-SA": "إلى اللقاء!",
+          "en-US": "Goodbye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Do widzenia!",
+          "ro-RO": "La revedere!",
+          "ru-RU": "До свидания!",
+          "tr-TR": "Hoşça kalın!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Der Anruf ist beendet.",
+    "botTranslation": {
+      "ar-SA": "انتهت المكالمة.",
+      "en-US": "The call has ended.",
+      "es-ES": "La llamada ha finalizado.",
+      "fr-FR": "L'appel est terminé.",
+      "hi-IN": "कॉल समाप्त हो गई है।",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Apelul s-a încheiat.",
+      "ru-RU": "Звонок завершен.",
+      "tr-TR": "Görüşme sona erdi.",
+      "uk-UA": "Дзвінок завершено.",
+      "uz-UZ": "Qo'ng'iroq yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
 }

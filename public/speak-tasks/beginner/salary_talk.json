@@ -1,0 +1,482 @@
+{
+  "start": {
+    "botText": "Hallo Anna, worum geht es?",
+    "botTranslation": {
+      "ru-RU": "Привет, Анна, о чем идет речь?",
+      "en-US": "Hello Anna, what is it about?",
+      "ar-SA": "مرحباً آنا، حول ماذا يدور الأمر؟",
+      "es-ES": "Hola Anna, ¿de qué se trata?",
+      "fr-FR": "Bonjour Anna, de quoi s'agit-il ?",
+      "hi-IN": "नमस्ते अन्ना, यह किस बारे में है?",
+      "pl-PL": "Cześć Anna, o co chodzi?",
+      "ro-RO": "Bună Anna, despre ce este vorba?",
+      "tr-TR": "Merhaba Anna, konu nedir?",
+      "uk-UA": "Привіт, Анно, про що йдеться?",
+      "uz-UZ": "Salom Anna, gap nima haqida?"
+    },
+    "tips": {
+      "ru-RU": "Глагол 'besprechen' требует Akkusativ. Для Akkusativ мы применяем то же правило: средний род 'das Gehalt' берет у артикля форму 'mein'.",
+      "en-US": "The verb 'besprechen' requires the Akkusativ case. The neuter noun 'das Gehalt' takes the form 'mein'.",
+      "ar-SA": "الفعل 'besprechen' يتطلب حالة النصب. الكلمة المحايدة 'das Gehalt' تأخذ صيغة 'mein'.",
+      "es-ES": "El verbo 'besprechen' requiere el caso Akkusativ. El sustantivo neutro 'das Gehalt' toma la forma 'mein'.",
+      "fr-FR": "Le verbe 'besprechen' requiert l'Akkusativ. Le nom neutre 'das Gehalt' prend la forme 'mein'.",
+      "hi-IN": "क्रिया 'besprechen' को Akkusativ की आवश्यकता होती है। नपुंसक संज्ञा 'das Gehalt' 'mein' रूप लेती है।",
+      "pl-PL": "Czasownik 'besprechen' wymaga biernika. Rzeczownik nijaki 'das Gehalt' przyjmuje formę 'mein'.",
+      "ro-RO": "Verbul 'besprechen' cere Akkusativ. Substantivul neutru 'das Gehalt' ia forma 'mein'.",
+      "tr-TR": "'besprechen' fiili Akkusativ gerektirir. Nötr isim 'das Gehalt' 'mein' formunu alır.",
+      "uk-UA": "Дієслово 'besprechen' вимагає Akkusativ. Середній рід 'das Gehalt' бере форму 'mein'.",
+      "uz-UZ": "'besprechen' fe'li Akkusativni talab qiladi. O'rta jinsdagi 'das Gehalt' 'mein' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Ich möchte mein Gehalt besprechen.",
+        "translation": {
+          "ru-RU": "Я хочу обсудить свою зарплату.",
+          "en-US": "I would like to discuss my salary.",
+          "ar-SA": "أريد مناقشة راتبي.",
+          "es-ES": "Me gustaría hablar sobre mi salario.",
+          "fr-FR": "Je voudrais discuter de mon salaire.",
+          "hi-IN": "मैं अपने वेतन पर चर्चा करना चाहता हूँ।",
+          "pl-PL": "Chciałabym omówić moją pensję.",
+          "ro-RO": "Aș dori să discut despre salariul meu.",
+          "tr-TR": "Maaşımı görüşmek istiyorum.",
+          "uk-UA": "Я хочу обговорити свою зарплату.",
+          "uz-UZ": "Men maoshimni muhokama qilmoqchiman."
+        },
+        "nextStep": "warum"
+      },
+      {
+        "text": "Ich möchte mein Gehalt neu verhandeln.",
+        "translation": {
+          "ru-RU": "Я хочу пересмотреть (заново обсудить) свою зарплату.",
+          "en-US": "I would like to renegotiate my salary.",
+          "ar-SA": "أريد إعادة التفاوض على راتبي.",
+          "es-ES": "Me gustaría renegociar mi salario.",
+          "fr-FR": "Je voudrais renégocier mon salaire.",
+          "hi-IN": "मैं अपने वेतन पर फिर से बातचीत करना चाहता हूँ।",
+          "pl-PL": "Chciałabym renegocjować moją pensję.",
+          "ro-RO": "Aș dori să renegociez salariul meu.",
+          "tr-TR": "Maaşımı yeniden müzakere etmek istiyorum.",
+          "uk-UA": "Я хочу переглянути свою зарплату.",
+          "uz-UZ": "Men maoshimni qayta ko'rib chiqmoqchiman."
+        },
+        "nextStep": "warum"
+      }
+    ],
+    "defaultNext": "warum"
+  },
+  "warum": {
+    "botText": "Warum ist das jetzt angebracht?",
+    "botTranslation": {
+      "ru-RU": "Почему это уместно сейчас?",
+      "en-US": "Why is that appropriate now?",
+      "ar-SA": "لماذا هذا مناسب الآن؟",
+      "es-ES": "¿Por qué es apropiado ahora?",
+      "fr-FR": "Pourquoi est-ce approprié maintenant ?",
+      "hi-IN": "अब यह उचित क्यों है?",
+      "pl-PL": "Dlaczego to jest teraz stosowne?",
+      "ro-RO": "De ce este adecvat acum?",
+      "tr-TR": "Bu neden şimdi uygun?",
+      "uk-UA": "Чому це доречно зараз?",
+      "uz-UZ": "Nima uchun bu hozir o'rinli?"
+    },
+    "tips": {
+      "ru-RU": "В Akkusativ множественное число 'die Projekte' берет у артикля форму 'viele' (многие). То же самое с 'Aufgaben' (задачи) - 'mehr Aufgaben'.",
+      "en-US": "In Akkusativ plural, 'die Projekte' takes the form 'viele' (many). The same applies to 'Aufgaben' (tasks) with 'mehr'.",
+      "ar-SA": "في حالة النصب للجمع، 'die Projekte' تأخذ صيغة 'viele' (كثير). ينطبق نفس الشيء على 'Aufgaben'.",
+      "es-ES": "En plural Akkusativ, 'die Projekte' toma la forma 'viele'. Lo mismo ocurre con 'Aufgaben' (tareas).",
+      "fr-FR": "Au pluriel Akkusativ, 'die Projekte' prend la forme 'viele'. Il en va de même pour 'Aufgaben' (tâches).",
+      "hi-IN": "बहुवचन Akkusativ में, 'die Projekte' 'viele' रूप लेता है। यही बात 'Aufgaben' पर लागू होती है।",
+      "pl-PL": "W bierniku w liczbie mnogiej 'die Projekte' przyjmuje formę 'viele'. To samo dotyczy 'Aufgaben' (zadań).",
+      "ro-RO": "În plural Akkusativ, 'die Projekte' ia forma 'viele'. Același lucru este valabil și pentru 'Aufgaben'.",
+      "tr-TR": "Çoğul Akkusativ'de 'die Projekte' 'viele' formunu alır. Aynı durum 'Aufgaben' için de geçerlidir.",
+      "uk-UA": "В Akkusativ множина 'die Projekte' бере форму 'viele'. Те саме з 'Aufgaben'.",
+      "uz-UZ": "Ko'plikdagi Akkusativda 'die Projekte' 'viele' shaklini oladi. Xuddi shu narsa 'Aufgaben' (vazifalar) uchun ham amal qiladi."
+    },
+    "options": [
+      {
+        "text": "Ich habe viele Projekte erfolgreich abgeschlossen.",
+        "translation": {
+          "ru-RU": "Я успешно завершила много проектов.",
+          "en-US": "I have successfully completed many projects.",
+          "ar-SA": "لقد أكملت العديد من المشاريع بنجاح.",
+          "es-ES": "He completado con éxito muchos proyectos.",
+          "fr-FR": "J'ai mené à bien de nombreux projets.",
+          "hi-IN": "मैंने कई परियोजनाओं को सफलतापूर्वक पूरा कर लिया है।",
+          "pl-PL": "Z powodzeniem zakończyłam wiele projektów.",
+          "ro-RO": "Am finalizat cu succes multe proiecte.",
+          "tr-TR": "Birçok projeyi başarıyla tamamladım.",
+          "uk-UA": "Я успішно завершила багато проєктів.",
+          "uz-UZ": "Men ko'plab loyihalarni muvaffaqiyatli yakunladim."
+        },
+        "nextStep": "budget"
+      },
+      {
+        "text": "Ich habe deutlich mehr Aufgaben übernommen.",
+        "translation": {
+          "ru-RU": "Я взяла на себя значительно больше задач.",
+          "en-US": "I have taken on significantly more tasks.",
+          "ar-SA": "لقد توليت مهام أكثر بكثير.",
+          "es-ES": "He asumido significativamente más tareas.",
+          "fr-FR": "J'ai assumé beaucoup plus de tâches.",
+          "hi-IN": "मैंने काफी अधिक कार्यभार संभाला है।",
+          "pl-PL": "Przejęłam znacznie więcej obowiązków.",
+          "ro-RO": "Am preluat semnificativ mai multe sarcini.",
+          "tr-TR": "Önemli ölçüde daha fazla görev üstlendim.",
+          "uk-UA": "Я взяла на себе значно більше завдань.",
+          "uz-UZ": "Men o'z zimmamga ancha ko'p vazifalarni oldim."
+        },
+        "nextStep": "budget"
+      }
+    ],
+    "defaultNext": "budget"
+  },
+  "budget": {
+    "botText": "Unser Budget ist aktuell leider begrenzt.",
+    "botTranslation": {
+      "ru-RU": "Наш бюджет сейчас, к сожалению, ограничен.",
+      "en-US": "Unfortunately, our budget is currently limited.",
+      "ar-SA": "للأسف، ميزانيتنا محدودة حالياً.",
+      "es-ES": "Lamentablemente, nuestro presupuesto es actualmente limitado.",
+      "fr-FR": "Malheureusement, notre budget est actuellement limité.",
+      "hi-IN": "दुर्भाग्य से, हमारा बजट वर्तमान में सीमित है।",
+      "pl-PL": "Nasz budżet jest obecnie niestety ograniczony.",
+      "ro-RO": "Din păcate, bugetul nostru este momentan limitat.",
+      "tr-TR": "Maalesef şu anda bütçemiz kısıtlı.",
+      "uk-UA": "Наш бюджет зараз, на жаль, обмежений.",
+      "uz-UZ": "Afsuski, bizning byudjetimiz hozirda cheklangan."
+    },
+    "tips": {
+      "ru-RU": "Предлог 'für' всегда требует Akkusativ. В выражении 'für uns' местоимение 'wir' (мы) берет у артикля форму 'uns' (нас). Женский род 'die Erhöhung' (повышение) берет у артикля форму 'eine'.",
+      "en-US": "The preposition 'für' always takes the Akkusativ case. The pronoun 'wir' takes the form 'uns'. The feminine noun 'die Erhöhung' takes the article form 'eine'.",
+      "ar-SA": "حرف الجر 'für' يتطلب دائماً النصب. الضمير 'wir' يأخذ صيغة 'uns'.",
+      "es-ES": "La preposición 'für' siempre toma el caso Akkusativ. El pronombre 'wir' toma la forma 'uns'.",
+      "fr-FR": "La préposition 'für' prend toujours l'Akkusativ. Le pronom 'wir' prend la forme 'uns'.",
+      "hi-IN": "पूर्वसर्ग 'für' हमेशा Akkusativ लेता है। सर्वनाम 'wir' 'uns' रूप लेता है।",
+      "pl-PL": "Przyimek 'für' zawsze wymaga biernika. Zaimek 'wir' przyjmuje formę 'uns'.",
+      "ro-RO": "Prepoziția 'für' cere mereu Akkusativ. Pronumele 'wir' ia forma 'uns'.",
+      "tr-TR": "'für' edatı her zaman Akkusativ gerektirir. 'wir' zamiri 'uns' formunu alır.",
+      "uk-UA": "Прийменник 'für' завжди вимагає Akkusativ. Займенник 'wir' бере форму 'uns'.",
+      "uz-UZ": "'für' predlogi doim Akkusativni talab qiladi. 'wir' olmoshi 'uns' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Meine Leistung ist wichtig für uns.",
+        "translation": {
+          "ru-RU": "Мой результат важен для нас.",
+          "en-US": "My performance is important for us.",
+          "ar-SA": "أدائي مهم بالنسبة لنا.",
+          "es-ES": "Mi rendimiento es importante para nosotros.",
+          "fr-FR": "Ma performance est importante pour nous.",
+          "hi-IN": "मेरा प्रदर्शन हमारे लिए महत्वपूर्ण है।",
+          "pl-PL": "Moje wyniki są dla nas ważne.",
+          "ro-RO": "Performanța mea este importantă pentru noi.",
+          "tr-TR": "Performansım bizim için önemli.",
+          "uk-UA": "Мій результат важливий для нас.",
+          "uz-UZ": "Mening natijam biz uchun muhim."
+        },
+        "nextStep": "wieviel"
+      },
+      {
+        "text": "Ich finde eine Erhöhung trotzdem fair.",
+        "translation": {
+          "ru-RU": "Тем не менее, я считаю повышение справедливым.",
+          "en-US": "I still find an increase fair.",
+          "ar-SA": "ما زلت أجد الزيادة عادلة.",
+          "es-ES": "Todavía considero que un aumento es justo.",
+          "fr-FR": "Je trouve néanmoins qu'une augmentation est juste.",
+          "hi-IN": "मुझे अभी भी वृद्धि उचित लगती है।",
+          "pl-PL": "Mimo to uważam, że podwyżka jest sprawiedliwa.",
+          "ro-RO": "Totuși, consider că o mărire este corectă.",
+          "tr-TR": "Yine de bir artışın adil olduğunu düşünüyorum.",
+          "uk-UA": "Тим не менш, я вважаю підвищення справедливим.",
+          "uz-UZ": "Shunga qaramay, men oylik oshishini adolatli deb bilaman."
+        },
+        "nextStep": "wieviel"
+      }
+    ],
+    "defaultNext": "wieviel"
+  },
+  "wieviel": {
+    "botText": "Wie viel mehr möchtest du haben?",
+    "botTranslation": {
+      "ru-RU": "На сколько больше ты хочешь?",
+      "en-US": "How much more do you want to have?",
+      "ar-SA": "كم تريدين أكثر؟",
+      "es-ES": "¿Cuánto más quieres tener?",
+      "fr-FR": "Combien de plus aimerais-tu avoir ?",
+      "hi-IN": "आप कितना अधिक चाहते हैं?",
+      "pl-PL": "O ile więcej chciałabyś dostać?",
+      "ro-RO": "Cât de mult mai mult ai vrea?",
+      "tr-TR": "Ne kadar daha fazla istiyorsun?",
+      "uk-UA": "На скільки більше ти хочеш?",
+      "uz-UZ": "Qanchaga ko'proq xohlaysiz?"
+    },
+    "tips": {
+      "ru-RU": "Глагол 'wünschen' (когда мы желаем чего-то себе - 'sich wünschen') требует Dativ для возвратного местоимения (mir), а объект 'sieben Prozent' стоит в Akkusativ.",
+      "en-US": "The verb 'sich wünschen' (to wish for oneself) requires Dativ for the reflexive pronoun (mir), and the object 'sieben Prozent' is in Akkusativ.",
+      "ar-SA": "الفعل 'sich wünschen' يتطلب حالة Dativ للضمير المنعكس (mir)، والمفعول به 'sieben Prozent' في حالة النصب.",
+      "es-ES": "El verbo 'sich wünschen' requiere Dativ para el pronombre reflexivo (mir), y el objeto 'sieben Prozent' está en Akkusativ.",
+      "fr-FR": "Le verbe 'sich wünschen' requiert le Datif pour le pronom réfléchi (mir), et l'objet 'sieben Prozent' est à l'Akkusativ.",
+      "hi-IN": "क्रिया 'sich wünschen' के लिए रिफ्लेक्सिव सर्वनाम (mir) के लिए Dativ की आवश्यकता होती है।",
+      "pl-PL": "Czasownik 'sich wünschen' wymaga celownika dla zaimka zwrotnego (mir), a obiekt w bierniku.",
+      "ro-RO": "Verbul 'sich wünschen' cere Dativ pentru pronumele reflexiv (mir).",
+      "tr-TR": "'sich wünschen' fiili dönüşlü zamir (mir) için Dativ gerektirir.",
+      "uk-UA": "Дієслово 'sich wünschen' вимагає Dativ для зворотного займенника (mir).",
+      "uz-UZ": "'sich wünschen' fe'li o'zlik olmoshi (mir) uchun Dativni talab qiladi."
+    },
+    "options": [
+      {
+        "text": "Ich halte sieben Prozent für angemessen.",
+        "translation": {
+          "ru-RU": "Я считаю семь процентов уместными.",
+          "en-US": "I consider seven percent to be appropriate.",
+          "ar-SA": "أعتبر سبعة بالمائة مناسبة.",
+          "es-ES": "Considero que un siete por ciento es adecuado.",
+          "fr-FR": "Je considère que sept pour cent est approprié.",
+          "hi-IN": "मैं सात प्रतिशत को उपयुक्त मानता हूँ।",
+          "pl-PL": "Uważam, że siedem procent to odpowiednia kwota.",
+          "ro-RO": "Consider că șapte procente este adecvat.",
+          "tr-TR": "Yüzde yediyi uygun buluyorum.",
+          "uk-UA": "Я вважаю сім відсотків доречними.",
+          "uz-UZ": "Men yetti foizni o'rinli deb hisoblayman."
+        },
+        "nextStep": "fuenf_prozent"
+      },
+      {
+        "text": "Ich wünsche mir sieben Prozent mehr.",
+        "translation": {
+          "ru-RU": "Я хочу (желаю себе) на семь процентов больше.",
+          "en-US": "I would like seven percent more.",
+          "ar-SA": "أتمنى زيادة بنسبة سبعة بالمائة.",
+          "es-ES": "Deseo un siete por ciento más.",
+          "fr-FR": "Je souhaiterais sept pour cent de plus.",
+          "hi-IN": "मुझे सात प्रतिशत और चाहिए।",
+          "pl-PL": "Życzyłabym sobie o siedem procent więcej.",
+          "ro-RO": "Îmi doresc cu șapte procente mai mult.",
+          "tr-TR": "Yüzde yedi daha fazla istiyorum.",
+          "uk-UA": "Я хочу на сім відсотків більше.",
+          "uz-UZ": "Men yetti foiz ko'proq bo'lishini xohlayman."
+        },
+        "nextStep": "fuenf_prozent"
+      }
+    ],
+    "defaultNext": "fuenf_prozent"
+  },
+  "fuenf_prozent": {
+    "botText": "Vielleicht können wir fünf Prozent vereinbaren?",
+    "botTranslation": {
+      "ru-RU": "Возможно, мы сможем договориться на пять процентов?",
+      "en-US": "Perhaps we can agree on five percent?",
+      "ar-SA": "ربما يمكننا الاتفاق على خمسة بالمائة؟",
+      "es-ES": "¿Tal vez podamos acordar un cinco por ciento?",
+      "fr-FR": "Peut-être pouvons-nous convenir de cinq pour cent ?",
+      "hi-IN": "शायद हम पांच प्रतिशत पर सहमत हो सकते हैं?",
+      "pl-PL": "Może uda nam się dogadać na pięć procent?",
+      "ro-RO": "Poate ne putem înțelege la cinci procente?",
+      "tr-TR": "Belki yüzde beşte anlaşabiliriz?",
+      "uk-UA": "Можливо, ми зможемо домовитися на п'ять відсотків?",
+      "uz-UZ": "Balki besh foizga kelishib olarz?"
+    },
+    "tips": {
+      "ru-RU": "Глагол 'sich einigen auf' (сойтись на) требует Akkusativ. Так как мы говорим о числах (на шести), мы просто используем 'auf sechs'. 'Ein guter Kompromiss' стоит в именительном падеже.",
+      "en-US": "The verb 'sich einigen auf' (to agree on) requires the Akkusativ case. 'Ein guter Kompromiss' is in the nominative case.",
+      "ar-SA": "الفعل 'sich einigen auf' (الاتفاق على) يتطلب حالة النصب.",
+      "es-ES": "El verbo 'sich einigen auf' (acordar en) requiere el caso Akkusativ.",
+      "fr-FR": "Le verbe 'sich einigen auf' (se mettre d'accord sur) requiert l'Akkusativ.",
+      "hi-IN": "क्रिया 'sich einigen auf' (सहमत होना) के लिए Akkusativ की आवश्यकता होती है।",
+      "pl-PL": "Czasownik 'sich rozliczyć auf' (zgodzić się na) wymaga biernika.",
+      "ro-RO": "Verbul 'sich einigen auf' (a fi de acord cu) cere Akkusativ.",
+      "tr-TR": "'sich einigen auf' (üzerinde anlaşmak) fiili Akkusativ gerektirir.",
+      "uk-UA": "Дієслово 'sich einigen auf' вимагає Akkusativ.",
+      "uz-UZ": "'sich einigen auf' (kelishib olmoq) fe'li Akkusativni talab qiladi."
+    },
+    "options": [
+      {
+        "text": "Können wir uns auf sechs einigen?",
+        "translation": {
+          "ru-RU": "Можем ли мы сойтись на шести?",
+          "en-US": "Can we agree on six?",
+          "ar-SA": "هل يمكننا الاتفاق على ستة؟",
+          "es-ES": "¿Podemos acordar un seis?",
+          "fr-FR": "Pouvons-nous nous mettre d'accord sur six ?",
+          "hi-IN": "क्या हम छह पर सहमत हो सकते हैं?",
+          "pl-PL": "Czy możemy zgodzić się na sześć?",
+          "ro-RO": "Ne putem înțelege la șase?",
+          "tr-TR": "Altıda anlaşabilir miyiz?",
+          "uk-UA": "Чи можемо ми зійтися на шести?",
+          "uz-UZ": "Oltiga kelishib olsak bo'ladimi?"
+        },
+        "nextStep": "sechs_ok"
+      },
+      {
+        "text": "Wären sechs Prozent ein guter Kompromiss?",
+        "translation": {
+          "ru-RU": "Были бы шесть процентов хорошим компромиссом?",
+          "en-US": "Would six percent be a good compromise?",
+          "ar-SA": "هل سيكون ستة بالمائة حلاً وسطاً جيداً؟",
+          "es-ES": "¿Sería el seis por ciento un buen compromiso?",
+          "fr-FR": "Est-ce que six pour cent serait un bon compromis ?",
+          "hi-IN": "क्या छह प्रतिशत एक अच्छा समझौता होगा?",
+          "pl-PL": "Czy sześć procent byłoby dobrym kompromisem?",
+          "ro-RO": "Ar fi șase procente un compromis bun?",
+          "tr-TR": "Yüzde altı iyi bir uzlaşma olur mu?",
+          "uk-UA": "Були б шість відсотків хорошим компромісом?",
+          "uz-UZ": "Olti foiz yaxshi kelishuv bo'lardimi?"
+        },
+        "nextStep": "sechs_ok"
+      }
+    ],
+    "defaultNext": "sechs_ok"
+  },
+  "sechs_ok": {
+    "botText": "Okay, sechs Prozent sind in Ordnung.",
+    "botTranslation": {
+      "ru-RU": "Хорошо, шесть процентов устраивают (в порядке).",
+      "en-US": "Okay, six percent is fine.",
+      "ar-SA": "حسناً، ستة بالمائة لا بأس بها.",
+      "es-ES": "Vale, un seis por ciento está bien.",
+      "fr-FR": "D'accord, six pour cent c'est bien.",
+      "hi-IN": "ठीक है, छह प्रतिशत ठीक है।",
+      "pl-PL": "Okej, sześć procent jest w porządku.",
+      "ro-RO": "Ok, șase procente este în regulă.",
+      "tr-TR": "Tamam, yüzde altı uygun.",
+      "uk-UA": "Добре, шість відсотків влаштовують.",
+      "uz-UZ": "Yaxshi, olti foiz ma'qul."
+    },
+    "tips": {
+      "ru-RU": "Предлог 'für' всегда требует Akkusativ. Средний род 'das Vertrauen' (доверие) берет у артикля форму 'das' (für das Vertrauen). То же самое с 'die Einigung' (договоренность) — берет форму 'die'.",
+      "en-US": "The preposition 'für' always requires the Akkusativ case. The neuter noun 'das Vertrauen' takes the article 'das', and 'die Einigung' takes 'die'.",
+      "ar-SA": "حرف الجر 'für' يتطلب دائماً النصب. الكلمة المحايدة 'das Vertrauen' تأخذ الأداة 'das'.",
+      "es-ES": "La preposición 'für' siempre requiere el caso Akkusativ. El sustantivo neutro 'das Vertrauen' toma el artículo 'das'.",
+      "fr-FR": "La préposition 'für' exige toujours l'Akkusativ. Le nom neutre 'das Vertrauen' prend l'article 'das'.",
+      "hi-IN": "पूर्वसर्ग 'für' को हमेशा Akkusativ की आवश्यकता होती है।",
+      "pl-PL": "Przyimek 'für' zawsze wymaga biernika. Rzeczownik nijaki 'das Vertrauen' przyjmuje 'das'.",
+      "ro-RO": "Prepoziția 'für' necesită întotdeauna Akkusativ. Substantivul neutru 'das Vertrauen' ia 'das'.",
+      "tr-TR": "'für' edatı her zaman Akkusativ gerektirir. Nötr isim 'das Vertrauen' 'das' artikelini alır.",
+      "uk-UA": "Прийменник 'für' завжди вимагає Akkusativ. Середній рід 'das Vertrauen' бере форму 'das'.",
+      "uz-UZ": "'für' predlogi doim Akkusativni talab qiladi. O'rta jinsdagi 'das Vertrauen' 'das' artiklini oladi."
+    },
+    "options": [
+      {
+        "text": "Vielen Dank für das Vertrauen!",
+        "translation": {
+          "ru-RU": "Большое спасибо за доверие!",
+          "en-US": "Thank you very much for the trust!",
+          "ar-SA": "شكراً جزيلاً على الثقة!",
+          "es-ES": "¡Muchas gracias por la confianza!",
+          "fr-FR": "Merci beaucoup pour la confiance !",
+          "hi-IN": "विश्वास के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję za zaufanie!",
+          "ro-RO": "Vă mulțumesc mult pentru încredere!",
+          "tr-TR": "Güveniniz için çok teşekkürler!",
+          "uk-UA": "Велике дякую за довіру!",
+          "uz-UZ": "Ishonch uchun katta rahmat!"
+        },
+        "nextStep": "end_bot"
+      },
+      {
+        "text": "Sehr gut, danke für die Einigung.",
+        "translation": {
+          "ru-RU": "Очень хорошо, спасибо за договоренность.",
+          "en-US": "Very good, thanks for the agreement.",
+          "ar-SA": "جيد جداً، شكراً على الاتفاق.",
+          "es-ES": "Muy bien, gracias por el acuerdo.",
+          "fr-FR": "Très bien, merci pour l'accord.",
+          "hi-IN": "बहुत अच्छा, समझौते के लिए धन्यवाद।",
+          "pl-PL": "Bardzo dobrze, dziękuję za porozumienie.",
+          "ro-RO": "Foarte bine, mulțumesc pentru acord.",
+          "tr-TR": "Çok iyi, anlaşma için teşekkürler.",
+          "uk-UA": "Дуже добре, дякую за домовленість.",
+          "uz-UZ": "Juda yaxshi, kelishuv uchun rahmat."
+        },
+        "nextStep": "end_bot"
+      }
+    ],
+    "defaultNext": "end_bot"
+  },
+  "end_bot": {
+    "botText": "Kein Problem, wir sehen uns später.",
+    "botTranslation": {
+      "ru-RU": "Без проблем, увидимся позже.",
+      "en-US": "No problem, see you later.",
+      "ar-SA": "لا مشكلة، نراك لاحقاً.",
+      "es-ES": "No hay problema, nos vemos luego.",
+      "fr-FR": "Pas de problème, on se voit plus tard.",
+      "hi-IN": "कोई बात नहीं, बाद में मिलते हैं।",
+      "pl-PL": "Nie ma problemu, do zobaczenia później.",
+      "ro-RO": "Nicio problemă, ne vedem mai târziu.",
+      "tr-TR": "Sorun değil, sonra görüşürüz.",
+      "uk-UA": "Без проблем, побачимося пізніше.",
+      "uz-UZ": "Muammo yo'q, keyinroq ko'rishamiz."
+    },
+    "tips": {
+      "ru-RU": "Пожелание хорошего дня: '(Ich wünsche dir) einen schönen Tag'. Это Akkusativ, поэтому мужской род 'der Tag' берет форму 'einen schönen Tag'.",
+      "en-US": "Wishing a nice day: '(Ich wünsche dir) einen schönen Tag'. It is in Akkusativ, so the masculine noun 'der Tag' takes 'einen schönen Tag'.",
+      "ar-SA": "لتمني يوم جميل، نستخدم النصب: 'einen schönen Tag'.",
+      "es-ES": "Deseando un buen día: '(Ich wünsche dir) einen schönen Tag'. Está en Akkusativ, por lo que el sustantivo masculino 'der Tag' toma 'einen schönen Tag'.",
+      "fr-FR": "Pour souhaiter une bonne journée : '(Ich wünsche dir) einen schönen Tag'. C'est à l'Akkusativ, le nom masculin 'der Tag' prend donc 'einen schönen Tag'.",
+      "hi-IN": "शुभ दिन की कामना: Akkusativ में 'einen schönen Tag'।",
+      "pl-PL": "Życząc miłego dnia, używamy biernika: 'einen schönen Tag'.",
+      "ro-RO": "Urând o zi bună, folosim Akkusativ: 'einen schönen Tag'.",
+      "tr-TR": "İyi günler dilerken Akkusativ kullanılır: 'einen schönen Tag'.",
+      "uk-UA": "Побажання гарного дня стоїть у Akkusativ, тому 'der Tag' бере форму 'einen schönen Tag'.",
+      "uz-UZ": "Yaxshi kun tilash Akkusativda bo'ladi, shuning uchun 'der Tag' 'einen schönen Tag' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Bis später, schönen Tag noch!",
+        "translation": {
+          "ru-RU": "До скорого, хорошего дня!",
+          "en-US": "See you later, have a nice day!",
+          "ar-SA": "أراك لاحقاً، أتمنى لك يوماً سعيداً!",
+          "es-ES": "¡Hasta luego, que tenga un buen día!",
+          "fr-FR": "À plus tard, bonne journée !",
+          "hi-IN": "बाद में मिलते हैं, आपका दिन शुभ हो!",
+          "pl-PL": "Do zobaczenia później, miłego dnia!",
+          "ro-RO": "Pe mai târziu, o zi frumoasă!",
+          "tr-TR": "Sonra görüşürüz, iyi günler!",
+          "uk-UA": "До зустрічі, гарного дня!",
+          "uz-UZ": "Keyinroq ko'rishamiz, yaxshi kun!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Danke, bis dann. Tschüss!",
+        "translation": {
+          "ru-RU": "Спасибо, до встречи. Пока!",
+          "en-US": "Thanks, see you then. Bye!",
+          "ar-SA": "شكراً، أراك حينها. وداعاً!",
+          "es-ES": "Gracias, hasta entonces. ¡Adiós!",
+          "fr-FR": "Merci, à plus tard. Salut !",
+          "hi-IN": "धन्यवाद, फिर मिलते हैं। अलविदा!",
+          "pl-PL": "Dzięki, do zobaczenia. Cześć!",
+          "ro-RO": "Mersi, pe atunci. Pa!",
+          "tr-TR": "Teşekkürler, görüşmek üzere. Hoşça kal!",
+          "uk-UA": "Дякую, до зустрічі. Бувай!",
+          "uz-UZ": "Rahmat, ko'rishguncha. Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है।",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

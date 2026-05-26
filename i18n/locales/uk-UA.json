@@ -9219,7 +9219,8 @@
     "describePicture": "Опис картинок",
     "fight": "Всесвіт німецької",
     "audio": "Аудіо завдання",
-    "textTask": "Тексти"
+    "textTask": "Тексти",
+    "speak": "Розмовна практика"
   },
   "underSub": {
     "prev": "Вступ",
@@ -10158,5 +10159,59 @@
     "home": "Головна",
     "events": "Події",
     "cabinet": "Кабінет"
+  },
+  "speakTopics": {
+    "speak": "Знайомство та спілкування",
+    "food": "Їжа та покупки",
+    "transport": "Поїздки та транспорт",
+    "city": "Міські служби та побут",
+    "health": "Здоров'я",
+    "work": "Робота та кар'єра"
+  },
+  "speakThemes": {
+    "firstmeet": "Знайомство",
+    "acquaintance": "Знайомство 2",
+    "secondmeet": "Зустріч",
+    "family_talk": "Бесіда",
+    "weekend_plans": "Плани",
+    "friend_call": "Дзвінок",
+    "hobby_talk": "Хобі",
+    "party_talk": "Вечірка",
+    "cafe_order": "Замовлення кави",
+    "restaurant_dinner": "Ресторан",
+    "store_checkout": "На касі",
+    "order_eat": "Замовлення їжі",
+    "consultation_talk": "Консультація",
+    "train_station": "На вокзалі",
+    "train_ticket": "Перевірка квитка",
+    "taxi_berlin": "Таксі",
+    "bus_talk": "В автобусі",
+    "hotel_checkin": "Готель",
+    "border_check": "Кордон",
+    "airport_talk": "Аеропорт",
+    "info_talk": "Інфоцентр",
+    "bank_account": "Банк",
+    "apartment_rent": "Оренда",
+    "clothes_shopping": "Покупки",
+    "shopping": "Покупки 2",
+    "post_office": "Пошта",
+    "police_talk": "Поліція",
+    "barbershop": "Перукарня",
+    "doctor_visit": "Запис до лікаря",
+    "pharmacy_vitamins": "Аптека",
+    "insurance": "Страховка",
+    "at_doctor": "У лікаря",
+    "dentist": "Стоматолог",
+    "veterinary": "Ветеринар",
+    "job_looking": "Пошук роботи",
+    "job_interview": "Співбесіда",
+    "bos_talk": "Розмова з керівником",
+    "vacation": "Відпустка",
+    "salary_talk": "Зарплата",
+    "dismissal_talk": "Звільнення"
+  },
+  "speakIndexPage": {
+    "title": "Розмовна практика",
+    "bannerText": "Відпрацьовуй навички мовлення на реальних прикладах"
   }
 }

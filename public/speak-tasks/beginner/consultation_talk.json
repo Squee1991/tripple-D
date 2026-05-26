@@ -1,0 +1,548 @@
+{
+  "start": {
+    "botText": "Guten Tag! Kann ich Ihnen helfen?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Могу я Вам помочь?",
+      "en-US": "Good day! Can I help you?",
+      "ar-SA": "طاب يومك! هل يمكنني مساعدتك؟",
+      "es-ES": "¡Buen día! ¿Puedo ayudarle?",
+      "fr-FR": "Bonjour ! Puis-je vous aider ?",
+      "hi-IN": "शुभ दिन! क्या मैं आपकी मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! W czym mogę pomóc?",
+      "ro-RO": "Bună ziua! Vă pot ajuta?",
+      "tr-TR": "İyi günler! Size yardım edebilir miyim?",
+      "uk-UA": "Добрий день! Можу я Вам допомогти?",
+      "uz-UZ": "Xayrli kun! Sizga yordam bera olamanmi?"
+    },
+    "tips": {
+      "ru-RU": "Глагол 'helfen' (помогать) требует Dativ (Ihnen). Во фразе 'ich suche einen neuen Fernseher' глагол 'suchen' требует Akkusativ: мужской род 'der Fernseher' берет у артикля форму 'einen' -> 'einen neuen Fernseher'.",
+      "en-US": "The verb 'helfen' requires Dativ (Ihnen). For 'suchen' (Akkusativ), the masculine noun 'der Fernseher' takes the article form 'einen'.",
+      "ar-SA": "الفعل 'helfen' يتطلب حالة Dativ. بالنسبة للمذكر 'der Fernseher' يأخذ الأداة 'einen' في حالة Akkusativ.",
+      "es-ES": "El verbo 'helfen' requiere Dativ. Para 'suchen' (Akkusativ), el sustantivo masculino toma 'einen'.",
+      "fr-FR": "Le verbe 'helfen' requiert le Datif. Pour 'suchen' (Akkusativ), le nom masculin prend la forme 'einen'.",
+      "hi-IN": "'helfen' को Dativ की आवश्यकता होती है। 'suchen' के लिए, पुल्लिंग संज्ञा 'einen' रूप लेती है।",
+      "pl-PL": "Czasownik 'helfen' wymaga celownika. W bierniku rzeczownik męski 'der Fernseher' przyjmuje formę 'einen'.",
+      "ro-RO": "Verbul 'helfen' cere Dativ. Pentru Akkusativ, substantivul masculin ia forma 'einen'.",
+      "tr-TR": "'helfen' fiili Dativ gerektirir. Akkusativ için eril isim 'einen' formunu alır.",
+      "uk-UA": "Дієслово 'helfen' вимагає Dativ. Для Akkusativ чоловічий рід 'der Fernseher' бере форму 'einen'.",
+      "uz-UZ": "'helfen' fe'li Dativ talab qiladi. Akkusativda erkak jinsidagi ot 'einen' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Ja, ich suche einen neuen Fernseher.",
+        "translation": {
+          "ru-RU": "Да, я ищу новый телевизор.",
+          "en-US": "Yes, I am looking for a new TV.",
+          "ar-SA": "نعم، أبحث عن تلفاز جديد.",
+          "es-ES": "Sí, estoy buscando un televisor nuevo.",
+          "fr-FR": "Oui, je cherche une nouvelle télévision.",
+          "hi-IN": "हाँ, मैं एक नया टीवी ढूंढ रहा हूँ।",
+          "pl-PL": "Tak, szukam nowego telewizora.",
+          "ro-RO": "Da, caut un televizor nou.",
+          "tr-TR": "Evet, yeni bir televizyon arıyorum.",
+          "uk-UA": "Так, я шукаю новий телевізор.",
+          "uz-UZ": "Ha, men yangi televizor qidiryapman."
+        },
+        "nextStep": "groesse"
+      },
+      {
+        "text": "Guten Tag, ich brauche eine Beratung für einen Fernseher.",
+        "translation": {
+          "ru-RU": "Добрый день, мне нужна консультация по телевизору.",
+          "en-US": "Good day, I need a consultation for a TV.",
+          "ar-SA": "طاب يومك، أحتاج إلى استشارة بخصوص تلفاز.",
+          "es-ES": "Buen día, necesito asesoramiento para un televisor.",
+          "fr-FR": "Bonjour, j'ai besoin de conseils pour une télévision.",
+          "hi-IN": "शुभ दिन, मुझे टीवी के लिए सलाह चाहिए।",
+          "pl-PL": "Dzień dobry, potrzebuję porady w sprawie telewizora.",
+          "ro-RO": "Bună ziua, am nevoie de consultanță pentru un televizor.",
+          "tr-TR": "İyi günler, bir televizyon için danışmanlığa ihtiyacım var.",
+          "uk-UA": "Добрий день, мені потрібна консультація щодо телевізора.",
+          "uz-UZ": "Xayrli kun, televizor bo'yicha maslahat kerak edi."
+        },
+        "nextStep": "groesse"
+      }
+    ],
+    "defaultNext": "groesse"
+  },
+  "groesse": {
+    "botText": "Sehr gerne. Welche Größe suchen Sie denn?",
+    "botTranslation": {
+      "ru-RU": "С удовольствием. Какой размер Вы ищете?",
+      "en-US": "With pleasure. Which size are you looking for?",
+      "ar-SA": "بكل سرور. ما هو الحجم الذي تبحث عنه؟",
+      "es-ES": "Con mucho gusto. ¿Qué tamaño busca?",
+      "fr-FR": "Volontiers. Quelle taille cherchez-vous ?",
+      "hi-IN": "बड़ी खुशी से। आप किस आकार की तलाश में हैं?",
+      "pl-PL": "Z przyjemnością. Jakiego rozmiaru pani szuka?",
+      "ro-RO": "Cu plăcere. Ce mărime căutați?",
+      "tr-TR": "Memnuniyetle. Hangi boyutu arıyorsunuz?",
+      "uk-UA": "З задоволенням. Який розмір Ви шукаєте?",
+      "uz-UZ": "Bajonidil. Qanday o'lcham qidiryapsiz?"
+    },
+    "tips": {
+      "ru-RU": "Слово 'die Größe' (размер) женского рода, поэтому вопросительное слово принимает форму 'Welche' (Какую). В ответе 'eine mittlere Größe' (средний размер) предлог 'in' требует Dativ: женский род берет у артикля форму 'einer'.",
+      "en-US": "'Größe' is feminine, so we use 'Welche'. In the answer 'in einer mittleren Größe', 'in' takes Dativ, so the feminine article becomes 'einer'.",
+      "ar-SA": "كلمة 'die Größe' مؤنثة، لذا نستخدم 'Welche'.",
+      "es-ES": "La palabra 'die Größe' es femenina, por lo que usamos 'Welche'.",
+      "fr-FR": "Le mot 'die Größe' est féminin, on utilise donc 'Welche'.",
+      "hi-IN": "'die Größe' स्त्रीलिंग है, इसलिए हम 'Welche' का उपयोग करते हैं।",
+      "pl-PL": "Słowo 'die Größe' jest rodzaju żeńskiego, stąd forma 'Welche'.",
+      "ro-RO": "Cuvântul 'die Größe' este feminin, deci folosim 'Welche'.",
+      "tr-TR": "'die Größe' dişildir, bu yüzden 'Welche' kullanırız.",
+      "uk-UA": "Слово 'die Größe' жіночого роду, тому використовується 'Welche'. В Dativ беремо форму 'einer'.",
+      "uz-UZ": "'die Größe' ayol jinsiga tegishli, shuning uchun 'Welche' ishlatiladi. Dativda 'einer' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Ich möchte ein Modell mit 55 Zoll.",
+        "translation": {
+          "ru-RU": "Я бы хотел модель на 55 дюймов.",
+          "en-US": "I would like a 55-inch model.",
+          "ar-SA": "أود نموذجاً بحجم 55 بوصة.",
+          "es-ES": "Me gustaría un modelo de 55 pulgadas.",
+          "fr-FR": "Je voudrais un modèle de 55 pouces.",
+          "hi-IN": "मैं 55 इंच का मॉडल चाहूंगी।",
+          "pl-PL": "Chciałabym model 55-calowy.",
+          "ro-RO": "Aș dori un model de 55 de inchi.",
+          "tr-TR": "55 inçlik bir model istiyorum.",
+          "uk-UA": "Я б хотіла модель на 55 дюймів.",
+          "uz-UZ": "Menga 55 dyuymli model kerak."
+        },
+        "nextStep": "qualitaet"
+      },
+      {
+        "text": "Haben Sie etwas in einer mittleren Größe?",
+        "translation": {
+          "ru-RU": "У Вас есть что-то среднего размера?",
+          "en-US": "Do you have anything in a medium size?",
+          "ar-SA": "هل لديك شيء بحجم متوسط؟",
+          "es-ES": "¿Tiene algo en un tamaño mediano?",
+          "fr-FR": "Avez-vous quelque chose de taille moyenne ?",
+          "hi-IN": "क्या आपके पास मध्यम आकार में कुछ है?",
+          "pl-PL": "Czy ma pan coś w średnim rozmiarze?",
+          "ro-RO": "Aveți ceva de mărime medie?",
+          "tr-TR": "Orta boyutta bir şeyiniz var mı?",
+          "uk-UA": "У Вас є щось середнього розміру?",
+          "uz-UZ": "Sizda o'rtacha o'lchamdagi biror narsa bormi?"
+        },
+        "nextStep": "qualitaet"
+      }
+    ],
+    "defaultNext": "qualitaet"
+  },
+  "qualitaet": {
+    "botText": "Wir haben hier tolle Modelle mit 4K-Auflösung.",
+    "botTranslation": {
+      "ru-RU": "У нас здесь отличные модели с разрешением 4K.",
+      "en-US": "We have great models here with 4K resolution.",
+      "ar-SA": "لدينا هنا نماذج رائعة بدقة 4K.",
+      "es-ES": "Aquí tenemos modelos fantásticos con resolución 4K.",
+      "fr-FR": "Nous avons ici de superbes modèles avec une résolution 4K.",
+      "hi-IN": "हमारे पास यहाँ 4K रिज़ॉल्यूशन वाले शानदार मॉडल हैं।",
+      "pl-PL": "Mamy tu świetne modele o rozdzielczości 4K.",
+      "ro-RO": "Avem aici modele grozave cu rezoluție 4K.",
+      "tr-TR": "Burada 4K çözünürlüklü harika modellerimiz var.",
+      "uk-UA": "У нас тут чудові моделі з роздільною здатністю 4K.",
+      "uz-UZ": "Bu yerda bizda 4K o'lchamli ajoyib modellar bor."
+    },
+    "tips": {
+      "ru-RU": "Во фразе 'Ist die Bildqualität scharf?' используется Nominativ, так как глагол 'sein' (ist) не требует ни Dativ, ни Akkusativ.",
+      "en-US": "The phrase 'Ist die Bildqualität scharf?' uses Nominativ, since the verb 'sein' (ist) does not take Dativ or Akkusativ.",
+      "ar-SA": "نستخدم حالة الرفع (Nominativ) مع الفعل 'sein'.",
+      "es-ES": "Se usa Nominativ con el verbo 'sein'.",
+      "fr-FR": "On utilise le Nominatif avec le verbe 'sein'.",
+      "hi-IN": "क्रिया 'sein' के साथ Nominativ का उपयोग किया जाता है।",
+      "pl-PL": "W zwrocie z czasownikiem 'sein' używamy mianownika (Nominativ).",
+      "ro-RO": "Folosim Nominativ cu verbul 'sein'.",
+      "tr-TR": "'sein' fiili ile Nominativ kullanılır.",
+      "uk-UA": "З дієсловом 'sein' використовується Nominativ.",
+      "uz-UZ": "'sein' fe'li bilan Nominativ ishlatiladi."
+    },
+    "options": [
+      {
+        "text": "Das klingt gut. Ist die Bildqualität scharf?",
+        "translation": {
+          "ru-RU": "Звучит хорошо. Качество картинки четкое?",
+          "en-US": "That sounds good. Is the picture quality sharp?",
+          "ar-SA": "هذا يبدو جيداً. هل جودة الصورة واضحة؟",
+          "es-ES": "Suena bien. ¿La calidad de la imagen es nítida?",
+          "fr-FR": "Ça a l'air bien. La qualité d'image est-elle nette ?",
+          "hi-IN": "यह अच्छा लग रहा है। क्या तस्वीर की गुणवत्ता तेज है?",
+          "pl-PL": "Brzmi dobrze. Czy jakość obrazu jest ostra?",
+          "ro-RO": "Sună bine. Calitatea imaginii este clară?",
+          "tr-TR": "Kulağa hoş geliyor. Görüntü kalitesi net mi?",
+          "uk-UA": "Звучить добре. Якість картинки чітка?",
+          "uz-UZ": "Yaxshi eshitilyapti. Rasm sifati aniqmi?"
+        },
+        "nextStep": "smart_tv"
+      },
+      {
+        "text": "Hat das Gerät auch Smart-TV?",
+        "translation": {
+          "ru-RU": "У устройства есть также Smart-TV?",
+          "en-US": "Does the device also have Smart-TV?",
+          "ar-SA": "هل يحتوي الجهاز أيضاً على تلفاز ذكي؟",
+          "es-ES": "¿El dispositivo también tiene Smart-TV?",
+          "fr-FR": "L'appareil a-t-il aussi une Smart-TV ?",
+          "hi-IN": "क्या डिवाइस में स्मार्ट-टीवी भी है?",
+          "pl-PL": "Czy urządzenie ma również Smart-TV?",
+          "ro-RO": "Aparatul are și Smart-TV?",
+          "tr-TR": "Cihazın Smart-TV'si de var mı?",
+          "uk-UA": "Пристрій також має Smart-TV?",
+          "uz-UZ": "Qurilmada Smart-TV ham bormi?"
+        },
+        "nextStep": "smart_tv"
+      }
+    ],
+    "defaultNext": "smart_tv"
+  },
+  "smart_tv": {
+    "botText": "Ja, es ist ein Smart-TV mit allen Apps und sehr guter Bildqualität.",
+    "botTranslation": {
+      "ru-RU": "Да, это Smart-TV со всеми приложениями и очень хорошим качеством картинки.",
+      "en-US": "Yes, it is a Smart-TV with all apps and very good picture quality.",
+      "ar-SA": "نعم، إنه تلفاز ذكي يحتوي على جميع التطبيقات وجودة صورة جيدة جداً.",
+      "es-ES": "Sí, es un Smart-TV con todas las aplicaciones y muy buena calidad de imagen.",
+      "fr-FR": "Oui, c'est une Smart-TV avec toutes les applications et une très bonne qualité d'image.",
+      "hi-IN": "हाँ, यह सभी ऐप्स और बहुत अच्छी तस्वीर गुणवत्ता वाला एक स्मार्ट-टीवी है।",
+      "pl-PL": "Tak, to Smart-TV ze wszystkimi aplikacjami i bardzo dobrą jakością obrazu.",
+      "ro-RO": "Da, este un Smart-TV cu toate aplicațiile și o calitate a imaginii foarte bună.",
+      "tr-TR": "Evet, tüm uygulamalara ve çok iyi görüntü kalitesine sahip bir Smart-TV'dir.",
+      "uk-UA": "Так, це Smart-TV з усіма додатками та дуже хорошою якістю картинки.",
+      "uz-UZ": "Ha, bu barcha ilovalar va juda yaxshi rasm sifatiga ega Smart-TV."
+    },
+    "tips": {
+      "ru-RU": "Предлог 'für' (для) требует Akkusativ: 'für dieses Modell'. А слово 'das Angebot' (акция/предложение) стоит в Akkusativ, так как глагол 'geben' (в конструкции 'es gibt') берет у артикля форму 'ein' (ein Angebot).",
+      "en-US": "The preposition 'für' requires Akkusativ. In 'es gibt', the neuter noun 'das Angebot' takes the article form 'ein'.",
+      "ar-SA": "حرف الجر 'für' يتطلب Akkusativ. التركيب 'es gibt' يتطلب أيضاً Akkusativ.",
+      "es-ES": "La preposición 'für' requiere Akkusativ. La estructura 'es gibt' también usa Akkusativ.",
+      "fr-FR": "La préposition 'für' exige l'Akkusativ. La structure 'es gibt' requiert aussi l'Akkusativ.",
+      "hi-IN": "'für' को Akkusativ की आवश्यकता होती है। 'es gibt' संरचना भी Akkusativ लेती है।",
+      "pl-PL": "Przyimek 'für' wymaga biernika. Konstrukcja 'es gibt' również wymaga biernika.",
+      "ro-RO": "Prepoziția 'für' cere Akkusativ. Structura 'es gibt' cere de asemenea Akkusativ.",
+      "tr-TR": "'für' edatı Akkusativ gerektirir. 'es gibt' yapısı da Akkusativ alır.",
+      "uk-UA": "Прийменник 'für' вимагає Akkusativ. Конструкція 'es gibt' також бере форму Akkusativ.",
+      "uz-UZ": "'für' predlogi Akkusativni talab qiladi. 'es gibt' qurilmasi ham Akkusativ oladi."
+    },
+    "options": [
+      {
+        "text": "Wie hoch ist der Preis für dieses Gerät?",
+        "translation": {
+          "ru-RU": "Какова цена этого устройства?",
+          "en-US": "How high is the price for this device?",
+          "ar-SA": "كم سعر هذا الجهاز؟",
+          "es-ES": "¿Cuál es el precio de este dispositivo?",
+          "fr-FR": "Quel est le prix de cet appareil ?",
+          "hi-IN": "इस डिवाइस की कीमत क्या है?",
+          "pl-PL": "Jaka jest cena tego urządzenia?",
+          "ro-RO": "Care este prețul acestui aparat?",
+          "tr-TR": "Bu cihazın fiyatı nedir?",
+          "uk-UA": "Яка ціна цього пристрою?",
+          "uz-UZ": "Bu qurilmaning narxi qancha?"
+        },
+        "nextStep": "preis"
+      },
+      {
+        "text": "Gibt es für dieses Modell gerade ein Angebot?",
+        "translation": {
+          "ru-RU": "Есть ли на эту модель сейчас акция/скидка?",
+          "en-US": "Is there currently an offer for this model?",
+          "ar-SA": "هل يوجد عرض على هذا النموذج حالياً؟",
+          "es-ES": "¿Hay alguna oferta en este momento para este modelo?",
+          "fr-FR": "Y a-t-il une offre actuellement pour ce modèle ?",
+          "hi-IN": "क्या इस मॉडल के लिए अभी कोई ऑफर है?",
+          "pl-PL": "Czy na ten model jest teraz jakaś promocja?",
+          "ro-RO": "Există vreo ofertă pentru acest model în prezent?",
+          "tr-TR": "Şu anda bu model için bir kampanya var mı?",
+          "uk-UA": "Чи є на цю модель зараз акція?",
+          "uz-UZ": "Hozir bu model uchun biror chegirma bormi?"
+        },
+        "nextStep": "preis"
+      }
+    ],
+    "defaultNext": "preis"
+  },
+  "preis": {
+    "botText": "Dieses Gerät kostet aktuell 799 Euro.",
+    "botTranslation": {
+      "ru-RU": "Это устройство в данный момент стоит 799 евро.",
+      "en-US": "This device currently costs 799 euros.",
+      "ar-SA": "سعر هذا الجهاز حالياً 799 يورو.",
+      "es-ES": "Este dispositivo cuesta actualmente 799 euros.",
+      "fr-FR": "Cet appareil coûte actuellement 799 euros.",
+      "hi-IN": "इस डिवाइस की कीमत अभी 799 यूरो है।",
+      "pl-PL": "To urządzenie kosztuje obecnie 799 euro.",
+      "ro-RO": "Acest aparat costă în prezent 799 euro.",
+      "tr-TR": "Bu cihazın şu anki fiyatı 799 Euro.",
+      "uk-UA": "Цей пристрій наразі коштує 799 євро.",
+      "uz-UZ": "Bu qurilma hozir 799 yevro turadi."
+    },
+    "tips": {
+      "ru-RU": "Глаголы 'nehmen' (брать) и 'kaufen' (покупать) требуют Akkusativ. Местоимение среднего рода 'es' (заменяет 'das Gerät') в Akkusativ остается 'es' (ich nehme es).",
+      "en-US": "The verbs 'nehmen' and 'kaufen' require Akkusativ. The neuter pronoun 'es' remains 'es' in Akkusativ.",
+      "ar-SA": "الأفعال 'nehmen' و 'kaufen' تتطلب Akkusativ. الضمير المحايد 'es' يبقى كما هو.",
+      "es-ES": "Los verbos 'nehmen' y 'kaufen' requieren Akkusativ. El pronombre neutro 'es' se mantiene.",
+      "fr-FR": "Les verbes 'nehmen' et 'kaufen' requièrent l'Akkusativ. Le pronom neutre 'es' reste identique.",
+      "hi-IN": "'nehmen' और 'kaufen' क्रियाओं को Akkusativ की आवश्यकता होती है।",
+      "pl-PL": "Czasowniki 'nehmen' i 'kaufen' wymagają biernika. Zaimek 'es' pozostaje bez zmian.",
+      "ro-RO": "Verbele 'nehmen' și 'kaufen' cer Akkusativ. Pronumele neutru 'es' rămâne neschimbat.",
+      "tr-TR": "'nehmen' ve 'kaufen' fiilleri Akkusativ gerektirir. Nötr zamir 'es' değişmez.",
+      "uk-UA": "Дієслова 'nehmen' і 'kaufen' вимагають Akkusativ. Займенник середнього роду 'es' залишається без змін.",
+      "uz-UZ": "'nehmen' va 'kaufen' fe'llari Akkusativ talab qiladi. O'rta jins olmoshi 'es' o'zgarmaydi."
+    },
+    "options": [
+      {
+        "text": "Das passt mir, ich nehme es.",
+        "translation": {
+          "ru-RU": "Это мне подходит, я беру его.",
+          "en-US": "That suits me, I'll take it.",
+          "ar-SA": "هذا يناسبني، سآخذه.",
+          "es-ES": "Me viene bien, me lo llevo.",
+          "fr-FR": "Ça me convient, je le prends.",
+          "hi-IN": "यह मेरे लिए उपयुक्त है, मैं इसे लूंगी।",
+          "pl-PL": "Odpowiada mi to, wezmę to.",
+          "ro-RO": "Îmi convine, îl iau.",
+          "tr-TR": "Bu bana uyar, onu alıyorum.",
+          "uk-UA": "Це мені підходить, я беру його.",
+          "uz-UZ": "Bu menga mos, men buni olaman."
+        },
+        "nextStep": "garantie"
+      },
+      {
+        "text": "Das ist ein guter Preis, ich kaufe es.",
+        "translation": {
+          "ru-RU": "Это хорошая цена, я покупаю его.",
+          "en-US": "That is a good price, I'll buy it.",
+          "ar-SA": "هذا سعر جيد، سأشتريه.",
+          "es-ES": "Es un buen precio, lo compro.",
+          "fr-FR": "C'est un bon prix, je l'achète.",
+          "hi-IN": "यह एक अच्छी कीमत है, मैं इसे खरीदूंगी।",
+          "pl-PL": "To dobra cena, kupuję.",
+          "ro-RO": "Este un preț bun, îl cumpăr.",
+          "tr-TR": "Bu iyi bir fiyat, onu satın alıyorum.",
+          "uk-UA": "Це хороша ціна, я купую його.",
+          "uz-UZ": "Bu yaxshi narx, men buni sotib olaman."
+        },
+        "nextStep": "garantie"
+      }
+    ],
+    "defaultNext": "garantie"
+  },
+  "garantie": {
+    "botText": "Sehr gute Wahl! Möchten Sie auch eine Garantieverlängerung dazu?",
+    "botTranslation": {
+      "ru-RU": "Отличный выбор! Хотите также продление гарантии к этому?",
+      "en-US": "Very good choice! Would you also like an extended warranty with that?",
+      "ar-SA": "خيار جيد جداً! هل تودين أيضاً تمديد الضمان؟",
+      "es-ES": "¡Muy buena elección! ¿Desea también una extensión de garantía?",
+      "fr-FR": "Très bon choix ! Souhaitez-vous également une extension de garantie avec cela ?",
+      "hi-IN": "बहुत अच्छा विकल्प! क्या आप इसके साथ विस्तारित वारंटी भी चाहेंगी?",
+      "pl-PL": "Bardzo dobry wybór! Czy chciałaby pani do tego również przedłużenie gwarancji?",
+      "ro-RO": "Alegere foarte bună! Doriți și o extensie de garanție?",
+      "tr-TR": "Çok iyi bir seçim! Yanında garanti uzatması da ister misiniz?",
+      "uk-UA": "Відмінний вибір! Хочете також подовження гарантії?",
+      "uz-UZ": "Juda yaxshi tanlov! Bunga qo'shimcha kafolatni uzaytirishni xohlaysizmi?"
+    },
+    "tips": {
+      "ru-RU": "Слово 'die Garantieverlängerung' длинное, но логичное: Garantie + Verlängerung. Так как это женский род, для Akkusativ (после Möchten Sie) мы применяем то же правило и берем у артикля форму 'eine'.",
+      "en-US": "The word 'Garantieverlängerung' is feminine. After 'Möchten Sie' (Akkusativ), we apply the same rule and take the article form 'eine'.",
+      "ar-SA": "الكلمة مؤنثة. بعد 'Möchten Sie' نستخدم Akkusativ ونأخذ الأداة 'eine'.",
+      "es-ES": "La palabra es femenina. Después de 'Möchten Sie' usamos Akkusativ y toma el artículo 'eine'.",
+      "fr-FR": "Le mot est féminin. Après 'Möchten Sie', on applique l'Akkusativ et prend la forme 'eine'.",
+      "hi-IN": "स्त्रीलिंग शब्द के लिए 'Möchten Sie' के बाद 'eine' का उपयोग किया जाता है।",
+      "pl-PL": "Słowo jest rodzaju żeńskiego. W bierniku przyjmuje przedimek 'eine'.",
+      "ro-RO": "Cuvântul este feminin. Pentru Akkusativ luăm forma 'eine'.",
+      "tr-TR": "Kelime dişildir. Akkusativ için 'eine' formunu alır.",
+      "uk-UA": "Це слово жіночого роду. Для Akkusativ (після Möchten Sie) беремо форму 'eine'.",
+      "uz-UZ": "Bu so'z ayol jinsiga tegishli. Akkusativda 'eine' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Ja, bitte. Sicherheit ist wichtig.",
+        "translation": {
+          "ru-RU": "Да, пожалуйста. Надежность (безопасность) важна.",
+          "en-US": "Yes, please. Security/Safety is important.",
+          "ar-SA": "نعم، من فضلك. الأمان مهم.",
+          "es-ES": "Sí, por favor. La seguridad es importante.",
+          "fr-FR": "Oui, s'il vous plaît. La sécurité est importante.",
+          "hi-IN": "हाँ, कृपया। सुरक्षा महत्वपूर्ण है।",
+          "pl-PL": "Tak, proszę. Bezpieczeństwo jest ważne.",
+          "ro-RO": "Da, vă rog. Siguranța este importantă.",
+          "tr-TR": "Evet, lütfen. Güvenlik önemlidir.",
+          "uk-UA": "Так, будь ласка. Надійність важлива.",
+          "uz-UZ": "Ha, iltimos. Xavfsizlik muhim."
+        },
+        "nextStep": "kasse"
+      },
+      {
+        "text": "Nein danke, das ist nicht nötig.",
+        "translation": {
+          "ru-RU": "Нет, спасибо, это не нужно (нет необходимости).",
+          "en-US": "No thanks, that is not necessary.",
+          "ar-SA": "لا شكراً، ليس هناك حاجة لذلك.",
+          "es-ES": "No gracias, no es necesario.",
+          "fr-FR": "Non merci, ce n'est pas nécessaire.",
+          "hi-IN": "नहीं धन्यवाद, यह आवश्यक नहीं है।",
+          "pl-PL": "Nie, dziękuję, nie ma takiej potrzeby.",
+          "ro-RO": "Nu, mulțumesc, nu este necesar.",
+          "tr-TR": "Hayır teşekkürler, buna gerek yok.",
+          "uk-UA": "Ні, дякую, це не потрібно.",
+          "uz-UZ": "Yo'q, rahmat, buning keragi yo'q."
+        },
+        "nextStep": "kasse"
+      }
+    ],
+    "defaultNext": "kasse"
+  },
+  "kasse": {
+    "botText": "Alles klar. Dann gehen wir zur Kasse.",
+    "botTranslation": {
+      "ru-RU": "Все понятно. Тогда идем на кассу.",
+      "en-US": "Alright. Then let's go to the cash register.",
+      "ar-SA": "حسناً. دعنا نذهب إلى أمين الصندوق إذن.",
+      "es-ES": "De acuerdo. Entonces vamos a la caja.",
+      "fr-FR": "Très bien. Alors allons à la caisse.",
+      "hi-IN": "ठीक है। तो चलिए कैश रजिस्टर की ओर चलते हैं।",
+      "pl-PL": "Wszystko jasne. W takim razie idziemy do kasy.",
+      "ro-RO": "În regulă. Atunci mergem la casă.",
+      "tr-TR": "Pekala. O zaman kasaya gidelim.",
+      "uk-UA": "Все ясно. Тоді йдемо на касу.",
+      "uz-UZ": "Tushunarli. Unda kassaga boramiz."
+    },
+    "tips": {
+      "ru-RU": "Обычно на вопрос 'Куда?' (Wohin?) мы используем Akkusativ. Но здесь есть предлог 'zu', а он всегда требует Dativ. Поэтому женский род 'die Kasse' берет у артикля форму 'der' (zur = zu der Kasse).",
+      "en-US": "Usually, 'Where to?' (Wohin?) takes Akkusativ. But the preposition 'zu' always requires Dativ, so the feminine noun 'die Kasse' takes 'der' (zur = zu der).",
+      "ar-SA": "عادةً للإجابة على 'إلى أين؟' نستخدم Akkusativ، ولكن حرف الجر 'zu' يتطلب دائماً Dativ.",
+      "es-ES": "Normalmente '¿Adónde?' requiere Akkusativ. Pero la preposición 'zu' siempre requiere Dativ.",
+      "fr-FR": "Généralement 'Vers où ?' nécessite l'Akkusativ. Mais la préposition 'zu' exige toujours le Datif.",
+      "hi-IN": "आमतौर पर 'कहाँ को?' के लिए Akkusativ का उपयोग होता है, लेकिन 'zu' के साथ हमेशा Dativ लगता है।",
+      "pl-PL": "Zazwyczaj na 'Dokąd?' używamy biernika, ale przyimek 'zu' zawsze wymusza celownik (Dativ).",
+      "ro-RO": "De obicei pentru 'Încotro?' folosim Akkusativ. Dar prepoziția 'zu' cere mereu Dativ.",
+      "tr-TR": "Genellikle 'Nereye?' Akkusativ alır. Ancak 'zu' edatı her zaman Dativ gerektirir.",
+      "uk-UA": "Зазвичай на питання 'Куди?' використовується Akkusativ. Але прийменник 'zu' завжди вимагає Dativ (zur = zu der).",
+      "uz-UZ": "Odatda 'Qayerga?' savoli Akkusativni talab qiladi. Lekin 'zu' predlogi doim Dativ bilan keladi (zur = zu der)."
+    },
+    "options": [
+      {
+        "text": "Vielen Dank für die Beratung!",
+        "translation": {
+          "ru-RU": "Большое спасибо за консультацию!",
+          "en-US": "Thank you very much for the consultation/advice!",
+          "ar-SA": "شكراً جزيلاً على الاستشارة!",
+          "es-ES": "¡Muchas gracias por el asesoramiento!",
+          "fr-FR": "Merci beaucoup pour vos conseils !",
+          "hi-IN": "परामर्श के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję za doradztwo!",
+          "ro-RO": "Vă mulțumesc mult pentru consultanță!",
+          "tr-TR": "Danışmanlık için çok teşekkürler!",
+          "uk-UA": "Велике дякую за консультацію!",
+          "uz-UZ": "Maslahat uchun katta rahmat!"
+        },
+        "nextStep": "abschied"
+      },
+      {
+        "text": "Super, danke für die Hilfe!",
+        "translation": {
+          "ru-RU": "Супер, спасибо за помощь!",
+          "en-US": "Super, thanks for the help!",
+          "ar-SA": "ممتاز، شكراً على المساعدة!",
+          "es-ES": "¡Genial, gracias por la ayuda!",
+          "fr-FR": "Super, merci pour l'aide !",
+          "hi-IN": "बढ़िया, मदद के लिए धन्यवाद!",
+          "pl-PL": "Super, dzięki za pomoc!",
+          "ro-RO": "Super, mulțumesc pentru ajutor!",
+          "tr-TR": "Süper, yardım için teşekkürler!",
+          "uk-UA": "Супер, дякую за допомогу!",
+          "uz-UZ": "Ajoyib, yordam uchun rahmat!"
+        },
+        "nextStep": "abschied"
+      }
+    ],
+    "defaultNext": "abschied"
+  },
+  "abschied": {
+    "botText": "Sehr gerne. Auf Wiedersehen!",
+    "botTranslation": {
+      "ru-RU": "С удовольствием. До свидания!",
+      "en-US": "With pleasure. Goodbye!",
+      "ar-SA": "بكل سرور. وداعاً!",
+      "es-ES": "Con mucho gusto. ¡Adiós!",
+      "fr-FR": "Avec plaisir. Au revoir !",
+      "hi-IN": "बड़ी खुशी से। अलविदा!",
+      "pl-PL": "Z przyjemnością. Do widzenia!",
+      "ro-RO": "Cu plăcere. La revedere!",
+      "tr-TR": "Memnuniyetle. Hoşça kalın!",
+      "uk-UA": "З задоволенням. До побачення!",
+      "uz-UZ": "Bajonidil. Xayr!"
+    },
+    "tips": {
+      "ru-RU": "Простая и вежливая фраза для завершения диалога. 'Auf Wiedersehen' (до свидания) используется при личном общении.",
+      "en-US": "A simple and polite phrase to end the dialogue. 'Auf Wiedersehen' is used for in-person goodbyes.",
+      "ar-SA": "عبارة بسيطة ومهذبة لإنهاء المحادثة.",
+      "es-ES": "Una frase sencilla y educada para terminar el diálogo.",
+      "fr-FR": "Une phrase simple et polie pour terminer le dialogue.",
+      "hi-IN": "संवाद समाप्त करने के लिए एक सरल और विनम्र वाक्यांश।",
+      "pl-PL": "Prosty i uprzejmy zwrot na zakończenie dialogu.",
+      "ro-RO": "O frază simplă și politicoasă pentru a încheia dialogul.",
+      "tr-TR": "Diyaloğu bitirmek için basit ve kibar bir ifade.",
+      "uk-UA": "Проста та ввічлива фраза для завершення діалогу.",
+      "uz-UZ": "Suhbatni yakunlash uchun oddiy va xushmuomala ibora."
+    },
+    "options": [
+      {
+        "text": "Auf Wiedersehen!",
+        "translation": {
+          "ru-RU": "До свидания!",
+          "en-US": "Goodbye!",
+          "ar-SA": "وداعاً!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Do widzenia!",
+          "ro-RO": "La revedere!",
+          "tr-TR": "Hoşça kalın!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Tschüss, schönen Tag noch!",
+        "translation": {
+          "ru-RU": "Пока, хорошего дня!",
+          "en-US": "Bye, have a nice day!",
+          "ar-SA": "وداعاً، طاب يومك!",
+          "es-ES": "¡Adiós, que tenga un buen día!",
+          "fr-FR": "Au revoir, bonne journée !",
+          "hi-IN": "अलविदा, आपका दिन शुभ हो!",
+          "pl-PL": "Cześć, miłego dnia!",
+          "ro-RO": "Pa, o zi frumoasă în continuare!",
+          "tr-TR": "Hoşça kalın, iyi günler!",
+          "uk-UA": "Бувай, гарного дня!",
+          "uz-UZ": "Xayr, kuningiz yaxshi o'tsin!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है।",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

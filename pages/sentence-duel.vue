@@ -23,7 +23,7 @@
         <div class="duel__header">
           <div class="duel__header--left">
             <VBackBtn/>
-            <div class="duel__header--title">Дуэли</div>
+            <div class="duel__header--title">{{ t('categoryAchievments.duel')}}</div>
           </div>
           <div class="tiips__info-wrapper">
             <button class="btn__tips" @click="tipsModule">

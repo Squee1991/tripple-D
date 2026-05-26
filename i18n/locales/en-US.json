@@ -9248,7 +9248,8 @@
     "describePicture": "Picture Description",
     "fight": "German Universe",
     "audio": "Audio Tasks",
-    "textTask": "Texts"
+    "textTask": "Texts",
+    "speak": "Speaking practice"
   },
   "underSub": {
     "prev": "Introduction",
@@ -10187,5 +10188,59 @@
     "home": "Home",
     "events": "Events",
     "cabinet": "Account"
+  },
+  "speakTopics": {
+    "speak": "Introduction and socializing",
+    "food": "Food and shopping",
+    "transport": "Trips and transport",
+    "city": "City services and everyday life",
+    "health": "Health",
+    "work": "Work and career"
+  },
+  "speakThemes": {
+    "firstmeet": "Introduction",
+    "acquaintance": "Acquaintance 2",
+    "secondmeet": "Meeting",
+    "family_talk": "Conversation",
+    "weekend_plans": "Plans",
+    "friend_call": "Phone call",
+    "hobby_talk": "Hobbies",
+    "party_talk": "Party",
+    "cafe_order": "Ordering coffee",
+    "restaurant_dinner": "Restaurant",
+    "store_checkout": "At the checkout",
+    "order_eat": "Ordering food",
+    "consultation_talk": "Consultation",
+    "train_station": "At the station",
+    "train_ticket": "Ticket inspection",
+    "taxi_berlin": "Taxi",
+    "bus_talk": "On the bus",
+    "hotel_checkin": "Hotel",
+    "border_check": "Border",
+    "airport_talk": "Airport",
+    "info_talk": "Info center",
+    "bank_account": "Bank",
+    "apartment_rent": "Rent",
+    "clothes_shopping": "Shopping",
+    "shopping": "Shopping 2",
+    "post_office": "Post office",
+    "police_talk": "Police",
+    "barbershop": "Barbershop",
+    "doctor_visit": "Booking an appointment",
+    "pharmacy_vitamins": "Pharmacy",
+    "insurance": "Insurance",
+    "at_doctor": "At the doctor",
+    "dentist": "Dentist",
+    "veterinary": "Vet",
+    "job_looking": "Job search",
+    "job_interview": "Interview",
+    "bos_talk": "Talk with manager",
+    "vacation": "Vacation",
+    "salary_talk": "Salary",
+    "dismissal_talk": "Dismissal"
+  },
+  "speakIndexPage": {
+    "title": "Speaking practice",
+    "bannerText": "Practice your speaking skills with real-life examples"
   }
 }

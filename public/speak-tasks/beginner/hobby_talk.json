@@ -1,0 +1,548 @@
+{
+  "start": {
+    "botText": "Hallo! Was machst du eigentlich so in deiner Freizeit?",
+    "botTranslation": {
+      "ru-RU": "Привет! Что ты вообще делаешь в свободное время?",
+      "en-US": "Hello! What do you actually do in your free time?",
+      "ar-SA": "مرحباً! ماذا تفعل عادة في وقت فراغك؟",
+      "es-ES": "¡Hola! ¿Qué sueles hacer en tu tiempo libre?",
+      "fr-FR": "Salut ! Que fais-tu généralement pendant ton temps libre ?",
+      "hi-IN": "नमस्ते! आप वास्तव में अपने खाली समय में क्या करते हैं?",
+      "pl-PL": "Cześć! Co właściwie robisz w wolnym czasie?",
+      "ro-RO": "Bună! Ce faci de obicei în timpul liber?",
+      "tr-TR": "Merhaba! Boş zamanlarında genelde ne yaparsın?",
+      "uk-UA": "Привіт! Що ти взагалі робиш у вільний час?",
+      "uz-UZ": "Salom! O'z bo'sh vaqtingizda asosan nima qilasiz?"
+    },
+    "tips": {
+      "ru-RU": "Для выражения того, что вам нравится что-то делать, используется наречие 'gerne', которое ставится после глагола.",
+      "en-US": "To express that you like doing something, use the adverb 'gerne' right after the conjugated verb.",
+      "ar-SA": "للتعبير عن أنك تحب فعل شيء ما، استخدم الظرف 'gerne' بعد الفعل مباشرة.",
+      "es-ES": "Para expresar que te gusta hacer algo, usa el adverbio 'gerne' después del verbo.",
+      "fr-FR": "Pour exprimer que vous aimez faire quelque chose, utilisez l'adverbe 'gerne' après le verbe.",
+      "hi-IN": "यह व्यक्त करने के लिए कि आपको कुछ करना पसंद है, 'gerne' का उपयोग करें।",
+      "pl-PL": "Aby wyrazić, że lubisz coś robić, użyj przysłówka 'gerne' po czasowniku.",
+      "ro-RO": "Pentru a exprima că îți place să faci ceva, folosește adverbul 'gerne' după verb.",
+      "tr-TR": "Bir şeyi yapmayı sevdiğinizi belirtmek için fiilden sonra 'gerne' zarfını kullanın.",
+      "uk-UA": "Щоб висловити, що вам подобається щось робити, використовується прислівник 'gerne' після дієслова.",
+      "uz-UZ": "Biror narsa qilishni yoqtirishingizni bildirish uchun fe'ldan keyin 'gerne' ravishidan foydalaning."
+    },
+    "options": [
+      {
+        "text": "Ich lese gerne.",
+        "translation": {
+          "ru-RU": "Я люблю читать.",
+          "en-US": "I like to read.",
+          "ar-SA": "أحب القراءة.",
+          "es-ES": "Me gusta leer.",
+          "fr-FR": "J'aime lire.",
+          "hi-IN": "मुझे पढ़ना पसंद है।",
+          "pl-PL": "Lubię czytać.",
+          "ro-RO": "Îmi place să citesc.",
+          "tr-TR": "Okumayı severim.",
+          "uk-UA": "Я люблю читати.",
+          "uz-UZ": "Men kitob o'qishni yoqtiraman."
+        },
+        "nextStep": "warum"
+      },
+      {
+        "text": "Ich mache gerne Sport.",
+        "translation": {
+          "ru-RU": "Я люблю заниматься спортом.",
+          "en-US": "I like doing sports.",
+          "ar-SA": "أحب ممارسة الرياضة.",
+          "es-ES": "Me gusta hacer deporte.",
+          "fr-FR": "J'aime faire du sport.",
+          "hi-IN": "मुझे खेलकूद पसंद है।",
+          "pl-PL": "Lubię uprawiać sport.",
+          "ro-RO": "Îmi place să fac sport.",
+          "tr-TR": "Spor yapmayı severim.",
+          "uk-UA": "Я люблю займатися спортом.",
+          "uz-UZ": "Men sport bilan shug'ullanishni yoqtiraman."
+        },
+        "nextStep": "warum"
+      }
+    ],
+    "defaultNext": "warum"
+  },
+  "warum": {
+    "botText": "Ach so! Und warum genau machst du das?",
+    "botTranslation": {
+      "ru-RU": "А, понятно! И почему именно ты это делаешь?",
+      "en-US": "I see! And why exactly do you do that?",
+      "ar-SA": "آه فهمت! ولماذا تفعل ذلك بالضبط؟",
+      "es-ES": "¡Ah, ya veo! ¿Y por qué exactamente haces eso?",
+      "fr-FR": "Ah, je vois ! Et pourquoi exactement fais-tu ça ?",
+      "hi-IN": "अच्छा! और आप वास्तव में ऐसा क्यों करते हैं?",
+      "pl-PL": "Aha, rozumiem! A dlaczego właściwie to robisz?",
+      "ro-RO": "Am înțeles! Și de ce anume faci asta?",
+      "tr-TR": "Anlıyorum! Peki tam olarak neden bunu yapıyorsun?",
+      "uk-UA": "А, зрозуміло! І чому саме ти це робиш?",
+      "uz-UZ": "Tushunarli! Xo'sh, buni aniq nega qilasiz?"
+    },
+    "tips": {
+      "ru-RU": "Предлог 'gegen' всегда требует Akkusativ. Мужской род 'der Stress' берет у артикля форму 'den' (gegen den Stress). 'Ach so!' — очень частая реакция в разговоре, означающая 'А, понятно/вот как'.",
+      "en-US": "The preposition 'gegen' always requires Akkusativ. 'Ach so!' is a common conversational reaction meaning 'I see' or 'Oh, right'.",
+      "ar-SA": "حرف الجر 'gegen' يتطلب دائماً Akkusativ.",
+      "es-ES": "La preposición 'gegen' siempre requiere Akkusativ.",
+      "fr-FR": "La préposition 'gegen' requiert toujours l'Akkusativ.",
+      "hi-IN": "पूर्वसर्ग 'gegen' हमेशा Akkusativ की आवश्यकता होती है।",
+      "pl-PL": "Przyimek 'gegen' zawsze wymaga biernika (Akkusativ).",
+      "ro-RO": "Prepoziția 'gegen' cere întotdeauna Akkusativ.",
+      "tr-TR": "'gegen' edatı her zaman Akkusativ gerektirir.",
+      "uk-UA": "Прийменник 'gegen' завжди вимагає Akkusativ. Чоловічий рід 'der Stress' бере форму 'den'.",
+      "uz-UZ": "'gegen' predlogi doim Akkusativ talab qiladi."
+    },
+    "options": [
+      {
+        "text": "Ich habe dabei einfach viel Spaß.",
+        "translation": {
+          "ru-RU": "Мне просто это доставляет много удовольствия.",
+          "en-US": "I just have a lot of fun doing it.",
+          "ar-SA": "أنا فقط أستمتع كثيراً بذلك.",
+          "es-ES": "Simplemente me divierto mucho haciéndolo.",
+          "fr-FR": "Je m'amuse juste beaucoup à le faire.",
+          "hi-IN": "मुझे इसे करने में बहुत मज़ा आता है।",
+          "pl-PL": "Po prostu sprawia mi to dużo radości.",
+          "ro-RO": "Pur și simplu mă distrez mult făcând asta.",
+          "tr-TR": "Bunu yaparken çok eğleniyorum.",
+          "uk-UA": "Мені просто це приносить багато задоволення.",
+          "uz-UZ": "Buni qilish menga shunchaki juda ko'p zavq bag'ishlaydi."
+        },
+        "nextStep": "dauer"
+      },
+      {
+        "text": "Das hilft mir gegen den Stress.",
+        "translation": {
+          "ru-RU": "Это помогает мне от стресса.",
+          "en-US": "That helps me against stress.",
+          "ar-SA": "هذا يساعدني ضد التوتر.",
+          "es-ES": "Eso me ayuda contra el estrés.",
+          "fr-FR": "Ça m'aide contre le stress.",
+          "hi-IN": "यह मुझे तनाव के खिलाफ मदद करता है।",
+          "pl-PL": "To pomaga mi na stres.",
+          "ro-RO": "Asta mă ajută împotriva stresului.",
+          "tr-TR": "Bu strese karşı bana yardımcı oluyor.",
+          "uk-UA": "Це допомагає мені від стресу.",
+          "uz-UZ": "Bu menga stressga qarshi yordam beradi."
+        },
+        "nextStep": "dauer"
+      }
+    ],
+    "defaultNext": "dauer"
+  },
+  "dauer": {
+    "botText": "Verstehe. Wie lange hast du das Hobby schon?",
+    "botTranslation": {
+      "ru-RU": "Понимаю. Как давно у тебя уже это хобби?",
+      "en-US": "I understand. How long have you had this hobby?",
+      "ar-SA": "أفهم. منذ متى ولديك هذه الهواية؟",
+      "es-ES": "Entiendo. ¿Cuánto tiempo hace que tienes este pasatiempo?",
+      "fr-FR": "Je comprends. Depuis combien de temps as-tu ce passe-temps ?",
+      "hi-IN": "मैं समझता हूँ। आपको यह शौक कब से है?",
+      "pl-PL": "Rozumiem. Od jak dawna masz to hobby?",
+      "ro-RO": "Înțeleg. De cât timp ai acest hobby?",
+      "tr-TR": "Anlıyorum. Bu hobiye ne zamandır sahipsin?",
+      "uk-UA": "Розумію. Як давно у тебе вже це хобі?",
+      "uz-UZ": "Tushunaman. Bu xobbi sizda qachondan beri bor?"
+    },
+    "tips": {
+      "ru-RU": "Вопрос 'Wie lange?' (Как долго?) часто используется с предлогом 'seit'. Предлог 'seit' всегда требует Dativ. Во множественном числе 'die Jahre' берет у артикля форму 'den' и получает окончание '-n' -> 'seit zwei Jahren'.",
+      "en-US": "The question 'Wie lange?' is often answered with 'seit'. 'Seit' always requires Dativ. The plural noun 'Jahre' gets an extra '-n' -> 'Jahren'.",
+      "ar-SA": "حرف الجر 'seit' يتطلب دائماً Dativ.",
+      "es-ES": "La preposición 'seit' siempre requiere Dativ.",
+      "fr-FR": "La préposition 'seit' requiert toujours le Datif.",
+      "hi-IN": "पूर्वसर्ग 'seit' को हमेशा Dativ की आवश्यकता होती है।",
+      "pl-PL": "Przyimek 'seit' zawsze wymaga celownika (Dativ). Rzeczownik w liczbie mnogiej otrzymuje końcówkę '-n'.",
+      "ro-RO": "Prepoziția 'seit' cere întotdeauna Dativ.",
+      "tr-TR": "'seit' edatı her zaman Dativ gerektirir. Çoğul isim 'Jahre', sonuna bir '-n' alır.",
+      "uk-UA": "Прийменник 'seit' завжди вимагає Dativ. У множині 'die Jahre' отримує закінчення '-n' -> 'seit два Jahren'.",
+      "uz-UZ": "'seit' predlogi doim Dativni talab qiladi. Ko'plikdagi ot '-n' qo'shimchasini oladi."
+    },
+    "options": [
+      {
+        "text": "Seit ungefähr zwei Jahren.",
+        "translation": {
+          "ru-RU": "Примерно два года.",
+          "en-US": "For about two years.",
+          "ar-SA": "منذ حوالي عامين.",
+          "es-ES": "Desde hace unos dos años.",
+          "fr-FR": "Depuis environ deux ans.",
+          "hi-IN": "लगभग दो साल से।",
+          "pl-PL": "Od około dwóch lat.",
+          "ro-RO": "De aproximativ doi ani.",
+          "tr-TR": "Yaklaşık iki yıldır.",
+          "uk-UA": "Приблизно два роки.",
+          "uz-UZ": "Taxminan ikki yildan beri."
+        },
+        "nextStep": "anderes_hobby"
+      },
+      {
+        "text": "Schon ziemlich lange, seit der Schule.",
+        "translation": {
+          "ru-RU": "Уже довольно долго, со школы.",
+          "en-US": "For quite a long time, since school.",
+          "ar-SA": "منذ وقت طويل جداً، منذ المدرسة.",
+          "es-ES": "Desde hace bastante tiempo, desde la escuela.",
+          "fr-FR": "Depuis assez longtemps, depuis l'école.",
+          "hi-IN": "काफी लंबे समय से, स्कूल के दिनों से।",
+          "pl-PL": "Już dość długo, od czasów szkoły.",
+          "ro-RO": "De destul de mult timp, de la școală.",
+          "tr-TR": "Bayağı uzun zamandır, okuldan beri.",
+          "uk-UA": "Вже досить довго, зі школи.",
+          "uz-UZ": "Ancha vaqtdan beri, maktab davridan."
+        },
+        "nextStep": "anderes_hobby"
+      }
+    ],
+    "defaultNext": "anderes_hobby"
+  },
+  "anderes_hobby": {
+    "botText": "Nicht schlecht! Hast du vielleicht noch ein anderes Hobby?",
+    "botTranslation": {
+      "ru-RU": "Неплохо! У тебя есть, может быть, еще какое-нибудь хобби?",
+      "en-US": "Not bad! Do you perhaps have another hobby?",
+      "ar-SA": "ليس سيئاً! هل لديك ربما هواية أخرى؟",
+      "es-ES": "¡Nada mal! ¿Tienes quizás otro pasatiempo?",
+      "fr-FR": "Pas mal ! As-tu peut-être un autre passe-temps ?",
+      "hi-IN": "बुरा नहीं है! क्या आपके पास शायद कोई और शौक है?",
+      "pl-PL": "Nieźle! Masz może jakieś inne hobby?",
+      "ro-RO": "Nu-i rău! Ai cumva un alt hobby?",
+      "tr-TR": "Fena değil! Belki başka bir hobin daha var mı?",
+      "uk-UA": "Непогано! У тебе є, можливо, ще якесь хобі?",
+      "uz-UZ": "Yomon emas! Balki boshqa xobbingiz ham bordir?"
+    },
+    "tips": {
+      "ru-RU": "Фраза 'mit meinen Freunden' использует предлог 'mit', который всегда требует Dativ. Множественное число берет у артикля форму 'den' (в притяжательном местоимении 'meinen') и добавляет '-n' к существительному.",
+      "en-US": "The preposition 'mit' always takes Dativ. The plural possessive becomes 'meinen' and the noun gets an '-n' ('Freunden').",
+      "ar-SA": "حرف الجر 'mit' يأخذ دائماً Dativ.",
+      "es-ES": "La preposición 'mit' siempre toma Dativ.",
+      "fr-FR": "La préposition 'mit' prend toujours le Datif.",
+      "hi-IN": "पूर्वसर्ग 'mit' हमेशा Dativ लेता है।",
+      "pl-PL": "Przyimek 'mit' zawsze łączy się z celownikiem (Dativ).",
+      "ro-RO": "Prepoziția 'mit' cere întotdeauna Dativ.",
+      "tr-TR": "'mit' edatı her zaman Dativ alır.",
+      "uk-UA": "Прийменник 'mit' завжди вимагає Dativ. Множина бере форму 'meinen' і додає '-n' до іменника.",
+      "uz-UZ": "'mit' predlogi doim Dativ bilan ishlatiladi."
+    },
+    "options": [
+      {
+        "text": "Ich treffe mich oft mit meinen Freunden.",
+        "translation": {
+          "ru-RU": "Я часто встречаюсь со своими друзьями.",
+          "en-US": "I often meet up with my friends.",
+          "ar-SA": "غالباً ما ألتقي بأصدقائي.",
+          "es-ES": "A menudo me reúno con mis amigos.",
+          "fr-FR": "Je vois souvent mes amis.",
+          "hi-IN": "मैं अक्सर अपने दोस्तों से मिलता हूँ।",
+          "pl-PL": "Często spotykam się z przyjaciółmi.",
+          "ro-RO": "Mă întâlnesc adesea cu prietenii mei.",
+          "tr-TR": "Sık sık arkadaşlarımla buluşurum.",
+          "uk-UA": "Я часто зустрічаюся зі своїми друзями.",
+          "uz-UZ": "Men do'stlarim bilan tez-tez uchrashib turaman."
+        },
+        "nextStep": "haeufigkeit"
+      },
+      {
+        "text": "Ich bleibe auch gerne mal allein zu Hause.",
+        "translation": {
+          "ru-RU": "Я также люблю иногда оставаться дома один.",
+          "en-US": "I also like to stay home alone sometimes.",
+          "ar-SA": "كما أنني أحب البقاء في المنزل بمفردي أحياناً.",
+          "es-ES": "También me gusta quedarme en casa solo a veces.",
+          "fr-FR": "J'aime aussi rester parfois seul à la maison.",
+          "hi-IN": "मुझे कभी-कभी घर पर अकेले रहना भी पसंद है।",
+          "pl-PL": "Lubię też czasem zostać sam w domu.",
+          "ro-RO": "De asemenea, îmi place să stau uneori singur acasă.",
+          "tr-TR": "Bazen evde yalnız kalmayı da severim.",
+          "uk-UA": "Я також люблю іноді залишатися вдома наодинці.",
+          "uz-UZ": "Ba'zan uyda yolg'iz qolishni ham yaxshi ko'raman."
+        },
+        "nextStep": "haeufigkeit"
+      }
+    ],
+    "defaultNext": "haeufigkeit"
+  },
+  "haeufigkeit": {
+    "botText": "Das klingt gut! Wie oft machst du das?",
+    "botTranslation": {
+      "ru-RU": "Звучит хорошо! Как часто ты это делаешь?",
+      "en-US": "That sounds good! How often do you do that?",
+      "ar-SA": "هذا يبدو جيداً! كم مرة تفعل ذلك؟",
+      "es-ES": "¡Suena bien! ¿Con qué frecuencia haces eso?",
+      "fr-FR": "Ça a l'air bien ! À quelle fréquence fais-tu ça ?",
+      "hi-IN": "यह अच्छा लग रहा है! आप ऐसा कितनी बार करते हैं?",
+      "pl-PL": "Brzmi dobrze! Jak często to robisz?",
+      "ro-RO": "Sună bine! Cât de des faci asta?",
+      "tr-TR": "Kulağa hoş geliyor! Bunu ne sıklıkla yaparsın?",
+      "uk-UA": "Звучить добре! Як часто ти це робиш?",
+      "uz-UZ": "Yaxshi eshitilmoqda! Buni qanchalik tez-tez qilasiz?"
+    },
+    "tips": {
+      "ru-RU": "В выражениях времени 'am Wochenende' (на выходных) и 'am Abend' (вечером) используется 'am', что является слиянием предлога 'an' и артикля 'dem' в Dativ.",
+      "en-US": "In time expressions like 'am Wochenende' (at the weekend) and 'am Abend' (in the evening), 'am' is a contraction of 'an' + 'dem' (Dativ).",
+      "ar-SA": "في التعبيرات الزمنية، تُستخدم 'am' كدمج بين 'an' و 'dem' في حالة Dativ.",
+      "es-ES": "En expresiones de tiempo, 'am' es la contracción de 'an' y 'dem' en Dativ.",
+      "fr-FR": "Dans les expressions de temps, 'am' est la contraction de 'an' et 'dem' au Datif.",
+      "hi-IN": "समय की अभिव्यक्तियों में, 'am' Dativ में 'an' और 'dem' का संकुचन है।",
+      "pl-PL": "W wyrażeniach czasowych 'am' to ściągnięta forma 'an' oraz 'dem' (Dativ).",
+      "ro-RO": "În expresiile de timp, 'am' este contracția lui 'an' și 'dem' în Dativ.",
+      "tr-TR": "Zaman ifadelerinde 'am', Dativ durumundaki 'an' ve 'dem' kelimelerinin birleşimidir.",
+      "uk-UA": "У виразах часу 'am Wochenende' та 'am Abend' використовується 'am' (an + dem у Dativ).",
+      "uz-UZ": "Vaqt iboralarida 'am' Dativdagi 'an' va 'dem' qisqartmasidir."
+    },
+    "options": [
+      {
+        "text": "Meistens am Wochenende.",
+        "translation": {
+          "ru-RU": "Чаще всего на выходных.",
+          "en-US": "Mostly on the weekend.",
+          "ar-SA": "في الغالب في عطلة نهاية الأسبوع.",
+          "es-ES": "Normalmente los fines de semana.",
+          "fr-FR": "La plupart du temps le week-end.",
+          "hi-IN": "ज्यादातर सप्ताहांत पर।",
+          "pl-PL": "Zazwyczaj w weekendy.",
+          "ro-RO": "De cele mai multe ori în weekend.",
+          "tr-TR": "Çoğunlukla hafta sonları.",
+          "uk-UA": "Найчастіше на вихідних.",
+          "uz-UZ": "Asosan dam olish kunlarida."
+        },
+        "nextStep": "urlaub"
+      },
+      {
+        "text": "Fast jeden Tag am Abend.",
+        "translation": {
+          "ru-RU": "Почти каждый день вечером.",
+          "en-US": "Almost every day in the evening.",
+          "ar-SA": "تقريباً كل يوم في المساء.",
+          "es-ES": "Casi todos los días por la tarde/noche.",
+          "fr-FR": "Presque tous les jours le soir.",
+          "hi-IN": "लगभग हर दिन शाम को।",
+          "pl-PL": "Prawie codziennie wieczorem.",
+          "ro-RO": "Aproape în fiecare zi seara.",
+          "tr-TR": "Neredeyse her gün akşamları.",
+          "uk-UA": "Майже кожен день увечері.",
+          "uz-UZ": "Deyarli har kuni kechqurun."
+        },
+        "nextStep": "urlaub"
+      }
+    ],
+    "defaultNext": "urlaub"
+  },
+  "urlaub": {
+    "botText": "Super. Hast du schon Pläne für den nächsten Urlaub?",
+    "botTranslation": {
+      "ru-RU": "Супер. У тебя уже есть планы на следующий отпуск?",
+      "en-US": "Super. Do you already have plans for the next vacation?",
+      "ar-SA": "ممتاز. هل لديك خطط لعطلتك القادمة بالفعل؟",
+      "es-ES": "Súper. ¿Ya tienes planes para las próximas vacaciones?",
+      "fr-FR": "Super. As-tu déjà des projets pour les prochaines vacances ?",
+      "hi-IN": "बढ़िया। क्या आपके पास अगली छुट्टी के लिए पहले से कोई योजना है?",
+      "pl-PL": "Super. Masz już plany na następny urlop?",
+      "ro-RO": "Super. Ai deja planuri pentru următoarea vacanță?",
+      "tr-TR": "Süper. Bir sonraki tatil için planların var mı?",
+      "uk-UA": "Супер. У тебе вже є плани на наступну відпустку?",
+      "uz-UZ": "Zo'r. Keyingi ta'til uchun rejalaringiz bormi?"
+    },
+    "tips": {
+      "ru-RU": "Предлог 'für' (для/на) всегда требует Akkusativ. Мужской род 'der Urlaub' берет у артикля форму 'den' (für den nächsten Urlaub).",
+      "en-US": "The preposition 'für' always requires Akkusativ. The masculine noun 'der Urlaub' takes the article form 'den' (für den nächsten Urlaub).",
+      "ar-SA": "حرف الجر 'für' يتطلب دائماً Akkusativ. الاسم المذكر يأخذ 'den'.",
+      "es-ES": "La preposición 'für' siempre requiere Akkusativ.",
+      "fr-FR": "La préposition 'für' requiert toujours l'Akkusativ.",
+      "hi-IN": "पूर्वसर्ग 'für' को हमेशा Akkusativ की आवश्यकता होती है।",
+      "pl-PL": "Przyimek 'für' zawsze wymaga biernika (Akkusativ).",
+      "ro-RO": "Prepoziția 'für' cere întotdeauna Akkusativ.",
+      "tr-TR": "'für' edatı her zaman Akkusativ gerektirir.",
+      "uk-UA": "Прийменник 'für' завжди вимагає Akkusativ. Чоловічий рід 'der Urlaub' бере форму 'den'.",
+      "uz-UZ": "'für' predlogi doim Akkusativ talab qiladi. Erkak jinsidagi ot 'den' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Ja, ich will dieses Jahr verreisen.",
+        "translation": {
+          "ru-RU": "Да, я хочу в этом году поехать в поездку.",
+          "en-US": "Yes, I want to travel this year.",
+          "ar-SA": "نعم، أريد السفر هذا العام.",
+          "es-ES": "Sí, quiero viajar este año.",
+          "fr-FR": "Oui, je veux voyager cette année.",
+          "hi-IN": "हाँ, मैं इस साल यात्रा करना चाहता हूँ।",
+          "pl-PL": "Tak, chcę w tym roku wyjechać.",
+          "ro-RO": "Da, vreau să călătoresc anul acesta.",
+          "tr-TR": "Evet, bu yıl seyahate çıkmak istiyorum.",
+          "uk-UA": "Так, я хочу цього року поїхати у подорож.",
+          "uz-UZ": "Ha, men bu yil sayohat qilmoqchiman."
+        },
+        "nextStep": "reisen"
+      },
+      {
+        "text": "Nein, ich will einfach nur entspannen.",
+        "translation": {
+          "ru-RU": "Нет, я хочу просто расслабиться.",
+          "en-US": "No, I just want to relax.",
+          "ar-SA": "لا، أريد فقط الاسترخاء.",
+          "es-ES": "No, solo quiero relajarme.",
+          "fr-FR": "Non, je veux juste me détendre.",
+          "hi-IN": "नहीं, मैं बस आराम करना चाहता हूँ।",
+          "pl-PL": "Nie, chcę po prostu odpocząć.",
+          "ro-RO": "Nu, vreau doar să mă relaxez.",
+          "tr-TR": "Hayır, sadece dinlenmek istiyorum.",
+          "uk-UA": "Ні, я хочу просто розслабитися.",
+          "uz-UZ": "Yo'q, men shunchaki dam olishni xohlayman."
+        },
+        "nextStep": "reisen"
+      }
+    ],
+    "defaultNext": "reisen"
+  },
+  "reisen": {
+    "botText": "Das kann ich gut verstehen. Reist du denn generell gerne?",
+    "botTranslation": {
+      "ru-RU": "Я это прекрасно понимаю. А вообще ты любишь путешествовать?",
+      "en-US": "I can understand that well. Do you like traveling in general?",
+      "ar-SA": "أستطيع أن أفهم ذلك جيداً. هل تحب السفر بشكل عام؟",
+      "es-ES": "Lo entiendo perfectamente. ¿Te gusta viajar en general?",
+      "fr-FR": "Je peux très bien le comprendre. Aimes-tu voyager en général ?",
+      "hi-IN": "मैं इसे अच्छी तरह समझ सकता हूँ। क्या आपको सामान्य रूप से यात्रा करना पसंद है?",
+      "pl-PL": "Dobrze to rozumiem. A tak ogólnie to lubisz podróżować?",
+      "ro-RO": "Pot înțelege foarte bine asta. Îți place să călătorești în general?",
+      "tr-TR": "Bunu çok iyi anlayabiliyorum. Genel olarak seyahat etmeyi sever misin?",
+      "uk-UA": "Я це чудово розумію. А взагалі ти любиш подорожувати?",
+      "uz-UZ": "Buni juda yaxshi tushunaman. Umuman olganda sayohat qilishni yoqtirasizmi?"
+    },
+    "tips": {
+      "ru-RU": "В ответе 'eine große Reise' (большая поездка) используется Akkusativ, так как это прямое дополнение (Что сделать? -> поездку). Женский род 'die Reise' берет у артикля форму 'eine'.",
+      "en-US": "In 'eine große Reise', the Akkusativ case is used because it's a direct object. The feminine noun 'die Reise' takes the article form 'eine'.",
+      "ar-SA": "في 'eine große Reise'، يتم استخدام حالة Akkusativ.",
+      "es-ES": "En 'eine große Reise', se usa el caso Akkusativ.",
+      "fr-FR": "Dans 'eine große Reise', l'Akkusativ est utilisé car c'est un objet direct.",
+      "hi-IN": "'eine große Reise' में, Akkusativ मामले का उपयोग किया जाता है।",
+      "pl-PL": "W wyrażeniu 'eine große Reise' używamy biernika (Akkusativ), ponieważ jest to dopełnienie bliższe.",
+      "ro-RO": "În 'eine große Reise' se folosește cazul Akkusativ.",
+      "tr-TR": "'eine große Reise' ifadesinde Akkusativ kullanılır.",
+      "uk-UA": "У відповіді 'eine große Reise' використовується Akkusativ. Жіночий рід 'die Reise' бере форму 'eine'.",
+      "uz-UZ": "'eine große Reise' javobida Akkusativ ishlatiladi. Ayol jinsidagi 'die Reise' 'eine' shaklini oladi."
+    },
+    "options": [
+      {
+        "text": "Ja, ich möchte mal eine große Reise machen.",
+        "translation": {
+          "ru-RU": "Да, я хотел(а) бы когда-нибудь совершить большое путешествие.",
+          "en-US": "Yes, I would like to take a big trip sometime.",
+          "ar-SA": "نعم، أود القيام برحلة كبيرة يوماً ما.",
+          "es-ES": "Sí, me gustaría hacer un gran viaje alguna vez.",
+          "fr-FR": "Oui, j'aimerais faire un grand voyage un jour.",
+          "hi-IN": "हाँ, मैं कभी एक बड़ी यात्रा करना चाहूंगा।",
+          "pl-PL": "Tak, chciał(a)bym kiedyś odbyć dużą podróż.",
+          "ro-RO": "Da, mi-ar plăcea să fac o călătorie mare cândva.",
+          "tr-TR": "Evet, bir gün büyük bir seyahate çıkmak isterim.",
+          "uk-UA": "Так, я хотів(ла) би колись здійснити велику подорож.",
+          "uz-UZ": "Ha, men qachondir katta sayohatga chiqishni xohlardim."
+        },
+        "nextStep": "abschied"
+      },
+      {
+        "text": "Ja, ich möchte neue Städte sehen.",
+        "translation": {
+          "ru-RU": "Да, я хочу посмотреть новые города.",
+          "en-US": "Yes, I want to see new cities.",
+          "ar-SA": "نعم، أريد أن أرى مدناً جديدة.",
+          "es-ES": "Sí, quiero ver ciudades nuevas.",
+          "fr-FR": "Oui, je veux voir de nouvelles villes.",
+          "hi-IN": "हाँ, मैं नए शहर देखना चाहता हूँ।",
+          "pl-PL": "Tak, chcę zobaczyć nowe miasta.",
+          "ro-RO": "Da, vreau să văd orașe noi.",
+          "tr-TR": "Evet, yeni şehirler görmek istiyorum.",
+          "uk-UA": "Так, я хочу побачити нові міста.",
+          "uz-UZ": "Ha, yangi shaharlarni ko'rishni istayman."
+        },
+        "nextStep": "abschied"
+      }
+    ],
+    "defaultNext": "abschied"
+  },
+  "abschied": {
+    "botText": "Das klingt nach einem guten Plan, viel Spaß dabei!",
+    "botTranslation": {
+      "ru-RU": "Звучит как хороший план, желаю много удовольствия (весело провести время)!",
+      "en-US": "That sounds like a good plan, have fun with it!",
+      "ar-SA": "هذا يبدو كخطة جيدة، استمتع بوقتك!",
+      "es-ES": "Suena como un buen plan, ¡diviértete!",
+      "fr-FR": "Cela ressemble à un bon plan, amuse-toi bien !",
+      "hi-IN": "यह एक अच्छी योजना की तरह लगता है, मज़े करो!",
+      "pl-PL": "Brzmi jak dobry plan, życzę dobrej zabawy!",
+      "ro-RO": "Sună a un plan bun, distracție plăcută!",
+      "tr-TR": "İyi bir plana benziyor, iyi eğlenceler!",
+      "uk-UA": "Звучить як гарний план, бажаю добре провести час!",
+      "uz-UZ": "Yaxshi rejaga o'xshaydi, maroqli vaqt tilayman!"
+    },
+    "tips": {
+      "ru-RU": "Конструкция 'klingt nach' (звучит как) всегда требует Dativ ('einem guten Plan'). Слово 'dabei' (при этом/в этом) заменяет повторение всего действия.",
+      "en-US": "The construction 'klingt nach' (sounds like) always requires Dativ ('einem guten Plan'). The word 'dabei' (at it/with it) avoids repeating the whole action.",
+      "ar-SA": "التركيب 'klingt nach' يتطلب دائماً Dativ.",
+      "es-ES": "La construcción 'klingt nach' siempre requiere Dativ.",
+      "fr-FR": "La construction 'klingt nach' requiert toujours le Datif.",
+      "hi-IN": "निर्माण 'klingt nach' को हमेशा Dativ की आवश्यकता होती है।",
+      "pl-PL": "Konstrukcja 'klingt nach' zawsze wymaga celownika (Dativ).",
+      "ro-RO": "Construcția 'klingt nach' cere întotdeauna Dativ.",
+      "tr-TR": "'klingt nach' yapısı her zaman Dativ gerektirir.",
+      "uk-UA": "Конструкція 'klingt nach' завжди вимагає Dativ. Слово 'dabei' замінює повторення всієї дії.",
+      "uz-UZ": "'klingt nach' qurilmasi doim Dativni talab qiladi."
+    },
+    "options": [
+      {
+        "text": "Danke, dir auch!",
+        "translation": {
+          "ru-RU": "Спасибо, тебе тоже!",
+          "en-US": "Thanks, you too!",
+          "ar-SA": "شكراً، وأنت أيضاً!",
+          "es-ES": "¡Gracias, a ti también!",
+          "fr-FR": "Merci, à toi aussi !",
+          "hi-IN": "धन्यवाद, आपको भी!",
+          "pl-PL": "Dziękuję, nawzajem!",
+          "ro-RO": "Mulțumesc, la fel!",
+          "tr-TR": "Teşekkürler, sana da!",
+          "uk-UA": "Дякую, тобі також!",
+          "uz-UZ": "Rahmat, senga ham!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Tschüss!",
+        "translation": {
+          "ru-RU": "Пока!",
+          "en-US": "Bye!",
+          "ar-SA": "وداعاً!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Salut !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Cześć!",
+          "ro-RO": "Pa!",
+          "tr-TR": "Hoşça kal!",
+          "uk-UA": "Бувай!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है.",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

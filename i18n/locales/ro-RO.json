@@ -9237,7 +9237,8 @@
     "describePicture": "Descrierea Imaginilor",
     "fight": "Universul Germanei",
     "audio": "Sarcini Audio",
-    "textTask": "Texte"
+    "textTask": "Texte",
+    "speak": "Practică de vorbire"
   },
   "underSub": {
     "prev": "Introducere",
@@ -10176,5 +10177,59 @@
     "home": "Acasă",
     "events": "Evenimente",
     "cabinet": "Cont"
+  },
+  "speakTopics": {
+    "speak": "Prezentare și socializare",
+    "food": "Mâncare și cumpărături",
+    "transport": "Călătorii și transport",
+    "city": "Servicii urbane și viața cotidiană",
+    "health": "Sănătate",
+    "work": "Muncă și carieră"
+  },
+  "speakThemes": {
+    "firstmeet": "Prezentare",
+    "acquaintance": "Prezentare 2",
+    "secondmeet": "Întâlnire",
+    "family_talk": "Conversație",
+    "weekend_plans": "Planuri",
+    "friend_call": "Apel",
+    "hobby_talk": "Hobby-uri",
+    "party_talk": "Petrecere",
+    "cafe_order": "Comandă cafea",
+    "restaurant_dinner": "Restaurant",
+    "store_checkout": "La casă",
+    "order_eat": "Comandă mâncare",
+    "consultation_talk": "Consultație",
+    "train_station": "La gară",
+    "train_ticket": "Control bilet",
+    "taxi_berlin": "Taxi",
+    "bus_talk": "În autobuz",
+    "hotel_checkin": "Hotel",
+    "border_check": "Graniță",
+    "airport_talk": "Aeroport",
+    "info_talk": "Centru de informații",
+    "bank_account": "Bancă",
+    "apartment_rent": "Chirie",
+    "clothes_shopping": "Cumpărături",
+    "shopping": "Cumpărături 2",
+    "post_office": "Poștă",
+    "police_talk": "Poliție",
+    "barbershop": "Frizerie",
+    "doctor_visit": "Programare la medic",
+    "pharmacy_vitamins": "Farmacie",
+    "insurance": "Asigurare",
+    "at_doctor": "La medic",
+    "dentist": "Stomatolog",
+    "veterinary": "Veterinar",
+    "job_looking": "Căutare de job",
+    "job_interview": "Interviu",
+    "bos_talk": "Discuție cu șeful",
+    "vacation": "Vacanță",
+    "salary_talk": "Salariu",
+    "dismissal_talk": "Concediere"
+  },
+  "speakIndexPage": {
+    "title": "Practică de vorbire",
+    "bannerText": "Exersează-ți abilitățile de vorbire cu exemple din viața reală"
   }
 }
