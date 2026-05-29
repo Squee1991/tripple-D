@@ -1,460 +1,450 @@
 {
   "start": {
-    "botText": "Hallo! Ich bin Markus. Und wie heißt du?",
+    "botText": "Hallo! Wie heißt du?",
     "botTranslation": {
-      "ru-RU": "Привет! Я Маркус. А как тебя зовут?",
-      "en-US": "Hello! I'm Markus. And what is your name?",
-      "ar-SA": "مرحباً! أنا ماركوس. وما اسمك؟",
-      "es-ES": "¡Hola! Soy Markus. ¿Y cómo te llamas?",
-      "fr-FR": "Salut ! Je suis Markus. Et comment t'appelles-tu ?",
-      "hi-IN": "नमस्ते! मैं मार्कस हूँ। और तुम्हारा नाम क्या है?",
-      "pl-PL": "Cześć! Jestem Markus. A ty jak masz na imię?",
-      "ro-RO": "Salut! Sunt Markus. Și cum te numești?",
-      "tr-TR": "Merhaba! Ben Markus. Senin adın ne?",
-      "uk-UA": "Привіт! Я Маркус. А як тебе звати?",
-      "uz-UZ": "Salom! Men Markusman. Sening isming nima?"
+      "ar-SA": "مرحباً! ما اسمك؟",
+      "en-US": "Hello! What is your name?",
+      "es-ES": "¡Hola! ¿Cómo te llamas?",
+      "fr-FR": "Bonjour ! Comment t'appelles-tu ?",
+      "hi-IN": "नमस्ते! तुम्हारा नाम क्या है?",
+      "pl-PL": "Cześć! Jak masz na imię?",
+      "ro-RO": "Salut! Cum te cheamă?",
+      "ru-RU": "Привет! Как тебя зовут?",
+      "tr-TR": "Merhaba! Adın ne?",
+      "uk-UA": "Привіт! Як тебе звати?",
+      "uz-UZ": "Salom! Isming nima?"
     },
-    "tips": {
-      "ru-RU": "В конструкции 'dich kennenzulernen' (с тобой познакомиться) местоимение 'ты' (du) стоит в Akkusativ и берет у артикля форму 'dich'.",
-      "en-US": "In 'dich kennenzulernen' (to get to know you), 'du' (you) is in the Akkusativ case, becoming 'dich'.",
-      "ar-SA": "في عبارة 'dich kennenzulernen' (التعرف عليك)، الضمير 'du' (أنت) في حالة النصب (Akkusativ) ويصبح 'dich'.",
-      "es-ES": "En 'dich kennenzulernen' (conocerte), 'du' (tú) está en Akkusativ, convirtiéndose en 'dich'.",
-      "fr-FR": "Dans 'dich kennenzulernen' (te rencontrer), 'du' (tu) est à l'Akkusativ et devient 'dich'.",
-      "hi-IN": "'dich kennenzulernen' (आपसे मिलकर) में, 'du' (तुम) Akkusativ में है, जो 'dich' बन जाता है।",
-      "pl-PL": "W 'dich kennenzulernen' (Cię poznać), 'du' (ty) jest w bierniku (Akkusativ) i staje się 'dich'.",
-      "ro-RO": "În 'dich kennenzulernen' (a te cunoaște), 'du' (tu) este în Akkusativ, devenind 'dich'.",
-      "tr-TR": "'dich kennenzulernen' (seninle tanışmak) ifadesinde, 'du' (sen) Akkusativ durumundadır ve 'dich' olur.",
-      "uk-UA": "У конструкції 'dich kennenzulernen' (з тобою познайомитися) займенник 'du' стоїть в Akkusativ і стає 'dich'.",
-      "uz-UZ": "'dich kennenzulernen' (sen bilan tanishish) qurilmasida 'du' (sen) Akkusativda va 'dich' shaklini oladi."
-    },
-    "options": [
+    "vocabulary": [
       {
-        "text": "Hallo Markus! Ich bin Anna. Schön, dich kennenzulernen.",
+        "german": "heißen",
         "translation": {
-          "ru-RU": "Привет, Маркус! Я Анна. Приятно познакомиться.",
-          "en-US": "Hello Markus! I'm Anna. Nice to meet you.",
-          "ar-SA": "مرحباً ماركوس! أنا آنا. سعدت بلقائك.",
-          "es-ES": "¡Hola Markus! Soy Anna. Encantada de conocerte.",
-          "fr-FR": "Salut Markus ! Je suis Anna. Ravie de te rencontrer.",
-          "hi-IN": "नमस्ते मार्कस! मैं अन्ना हूँ। आपसे मिलकर अच्छा लगा।",
-          "pl-PL": "Cześć Markus! Jestem Anna. Miło cię poznać.",
-          "ro-RO": "Salut Markus! Sunt Anna. Încântată de cunoștință.",
-          "tr-TR": "Merhaba Markus! Ben Anna. Tanıştığımıza memnun oldum.",
-          "uk-UA": "Привіт, Маркус! Я Анна. Приємно познайомитися.",
-          "uz-UZ": "Salom Markus! Men Annaman. Tanishganimdan xursandman."
-        },
-        "nextStep": "party_opinion"
+          "ar-SA": "يُدعى",
+          "en-US": "to be called",
+          "es-ES": "llamarse",
+          "fr-FR": "s'appeler",
+          "hi-IN": "कहलाना",
+          "pl-PL": "nazywać się",
+          "ro-RO": "a se numi",
+          "ru-RU": "зваться",
+          "tr-TR": "adlandırılmak",
+          "uk-UA": "зватися",
+          "uz-UZ": "atalmoq"
+        }
       },
       {
-        "text": "Hi! Mein Name ist Anna. Freut mich sehr.",
+        "german": "der Name",
         "translation": {
-          "ru-RU": "Привет! Меня зовут Анна. Очень приятно.",
-          "en-US": "Hi! My name is Anna. Very pleased to meet you.",
-          "ar-SA": "أهلاً! اسمي آنا. سعيدة جداً بلقائك.",
-          "es-ES": "¡Hola! Mi nombre es Anna. Mucho gusto.",
-          "fr-FR": "Salut ! Mon nom est Anna. Très heureuse.",
-          "hi-IN": "नमस्ते! मेरा नाम अन्ना है। बहुत खुशी हुई।",
-          "pl-PL": "Hej! Mam na imię Anna. Bardzo mi miło.",
-          "ro-RO": "Bună! Numele meu este Anna. Îmi pare foarte bine.",
-          "tr-TR": "Selam! Benim adım Anna. Çok memnun oldum.",
-          "uk-UA": "Привіт! Моє ім'я Анна. Дуже приємно.",
-          "uz-UZ": "Salom! Mening ismim Anna. Juda xursandman."
-        },
-        "nextStep": "party_opinion"
+          "ar-SA": "الاسم",
+          "en-US": "the name",
+          "es-ES": "el nombre",
+          "fr-FR": "le nom",
+          "hi-IN": "नाम",
+          "pl-PL": "imię / nazwisko",
+          "ro-RO": "numele",
+          "ru-RU": "имя",
+          "tr-TR": "isim",
+          "uk-UA": "ім'я",
+          "uz-UZ": "ism"
+        }
       }
     ],
-    "defaultNext": "party_opinion"
-  },
-  "party_opinion": {
-    "botText": "Ganz meinerseits! Wie findest du die Party bisher?",
-    "botTranslation": {
-      "ru-RU": "Взаимно! Как тебе вечеринка пока что?",
-      "en-US": "The pleasure is mine! How do you like the party so far?",
-      "ar-SA": "الشرف لي! كيف تجدين الحفلة حتى الآن؟",
-      "es-ES": "¡Igualmente! ¿Qué te parece la fiesta hasta ahora?",
-      "fr-FR": "Tout le plaisir est pour moi ! Comment trouves-tu la fête jusqu'à présent ?",
-      "hi-IN": "मुझे भी खुशी हुई! आपको अब तक पार्टी कैसी लगी?",
-      "pl-PL": "Z mojej strony również! Jak ci się na razie podoba impreza?",
-      "ro-RO": "Plăcerea este a mea! Cum ți se pare petrecerea până acum?",
-      "tr-TR": "O zevk bana ait! Partiyi şu ana kadar nasıl buldun?",
-      "uk-UA": "Навзаєм! Як тобі вечірка поки що?",
-      "uz-UZ": "Men ham xursandman! Hozirgacha kecha senga qanday yoqdi?"
-    },
-    "tips": {
-      "ru-RU": "При оценке чего-либо мы используем глагол 'finden' + Akkusativ. Женский род (die Party) в Akkusativ берет у артикля форму 'die'.",
-      "en-US": "To express an opinion, we use 'finden' + Akkusativ. 'die Party' (feminine) remains 'die' in Akkusativ.",
-      "ar-SA": "للتعبير عن رأي، نستخدم الفعل 'finden' + حالة النصب (Akkusativ). 'die Party' (مؤنث) تظل 'die'.",
-      "es-ES": "Para expresar una opinión, usamos 'finden' + Akkusativ. 'die Party' (femenino) sigue siendo 'die'.",
-      "fr-FR": "Pour exprimer une opinion, on utilise 'finden' + Akkusativ. 'die Party' (féminin) reste 'die'.",
-      "hi-IN": "राय व्यक्त करने के लिए, हम 'finden' + Akkusativ का उपयोग करते हैं। 'die Party' (स्त्रीलिंग) 'die' ही रहता है।",
-      "pl-PL": "Do wyrażenia opinii używamy 'finden' + Akkusativ. 'die Party' (r. żeński) pozostaje jako 'die'.",
-      "ro-RO": "Pentru a exprima o opinie, folosim 'finden' + Akkusativ. 'die Party' (feminin) rămâne 'die'.",
-      "tr-TR": "Fikir belirtirken 'finden' + Akkusativ kullanırız. 'die Party' (dişil) 'die' olarak kalır.",
-      "uk-UA": "Для вираження думки використовується 'finden' + Akkusativ. Жіночий рід 'die Party' залишається 'die'.",
-      "uz-UZ": "Fikr bildirish uchun 'finden' + Akkusativ ishlatamiz. 'die Party' (ayol jinsi) 'die' shaklida qoladi."
-    },
     "options": [
       {
-        "text": "Die Musik ist super! Ich tanze sehr gern.",
+        "text": "Ich heiße...",
         "translation": {
-          "ru-RU": "Музыка супер! Я очень люблю танцевать.",
-          "en-US": "The music is super! I really like dancing.",
-          "ar-SA": "الموسيقى رائعة! أنا أحب الرقص كثيراً.",
-          "es-ES": "¡La música es genial! Me gusta mucho bailar.",
-          "fr-FR": "La musique est super ! J'aime beaucoup danser.",
-          "hi-IN": "संगीत बहुत बढ़िया है! मुझे नाचना बहुत पसंद है।",
-          "pl-PL": "Muzyka jest super! Bardzo lubię tańczyć.",
-          "ro-RO": "Muzica este super! Îmi place foarte mult să dansez.",
-          "tr-TR": "Müzik süper! Dans etmeyi çok seviyorum.",
-          "uk-UA": "Музика супер! Я дуже люблю танцювати.",
-          "uz-UZ": "Musiqa super! Raqsga tushishni juda yaxshi ko'raman."
+          "ar-SA": "اسمي...",
+          "en-US": "My name is...",
+          "es-ES": "Me llamo...",
+          "fr-FR": "Je m'appelle...",
+          "hi-IN": "मेरा नाम... है",
+          "pl-PL": "Nazywam się...",
+          "ro-RO": "Mă numesc...",
+          "ru-RU": "Меня зовут...",
+          "tr-TR": "Benim adım...",
+          "uk-UA": "Мене звати...",
+          "uz-UZ": "Mening ismim..."
         },
-        "nextStep": "drink_offer"
+        "nextStep": "ask_mood"
       },
       {
-        "text": "Die Stimmung ist toll! Die Leute sind sehr nett.",
+        "text": "Mein Name ist...",
         "translation": {
-          "ru-RU": "Атмосфера отличная! Люди очень милые.",
-          "en-US": "The atmosphere is great! The people are very nice.",
-          "ar-SA": "الجو رائع! الناس لطفاء جداً.",
-          "es-ES": "¡El ambiente es genial! La gente es muy agradable.",
-          "fr-FR": "L'ambiance est géniale ! Les gens sont très gentils.",
-          "hi-IN": "माहौल बहुत अच्छा है! लोग बहुत अच्छे हैं।",
-          "pl-PL": "Atmosfera jest wspaniała! Ludzie są bardzo mili.",
-          "ro-RO": "Atmosfera este grozavă! Oamenii sunt foarte drăguți.",
-          "tr-TR": "Atmosfer harika! İnsanlar çok nazik.",
-          "uk-UA": "Атмосфера чудова! Люди дуже милі.",
-          "uz-UZ": "Muhit ajoyib! Odamlar juda mehribon."
+          "ar-SA": "أنا أدعى...",
+          "en-US": "My name is...",
+          "es-ES": "Mi nombre es...",
+          "fr-FR": "Mon nom est...",
+          "hi-IN": "मुझे... कहते हैं",
+          "pl-PL": "Moje imię to...",
+          "ro-RO": "Numele meu este...",
+          "ru-RU": "Мое имя...",
+          "tr-TR": "İsmim...",
+          "uk-UA": "Моє ім'я...",
+          "uz-UZ": "Meni ... deb chaqirishadi"
         },
-        "nextStep": "drink_offer"
+        "nextStep": "ask_mood"
       }
     ],
-    "defaultNext": "drink_offer"
+    "defaultNext": "ask_mood"
   },
-  "drink_offer": {
-    "botText": "Da hast du recht. Möchtest du etwas trinken?",
+  "ask_mood": {
+    "botText": "Freut mich! Wie geht es dir heute?",
     "botTranslation": {
-      "ru-RU": "Тут ты права. Хочешь что-нибудь выпить?",
-      "en-US": "You are right about that. Would you like something to drink?",
-      "ar-SA": "أنت محقة في ذلك. هل ترغبين في شرب شيء؟",
-      "es-ES": "Tienes razón en eso. ¿Te gustaría beber algo?",
-      "fr-FR": "Tu as raison. Voudrais-tu boire quelque chose ?",
-      "hi-IN": "तुम सही हो। क्या तुम कुछ पीना चाहोगी?",
-      "pl-PL": "Masz rację. Chciałabyś coś do picia?",
-      "ro-RO": "Ai dreptate. Ai vrea să bei ceva?",
-      "tr-TR": "Haklısın. Bir şey içmek ister misin?",
-      "uk-UA": "Тут ти маєш рацію. Хочеш щось випити?",
-      "uz-UZ": "Senda haqiqat bor (Haqsan). Biror narsa ichishni xohlaysanmi?"
+      "ar-SA": "سعدت بلقائك! كيف حالك اليوم؟",
+      "en-US": "Nice to meet you! How are you today?",
+      "es-ES": "¡Encantado! ¿Cómo estás hoy?",
+      "fr-FR": "Enchanté ! Comment vas-tu aujourd'hui ?",
+      "hi-IN": "तुमसे मिलकर खुशी हुई! तुम आज कैसे हो?",
+      "pl-PL": "Miło cię poznać! Jak się dzisiaj masz?",
+      "ro-RO": "Îmi pare bine să te cunosc! Ce mai faci astăzi?",
+      "ru-RU": "Рад знакомству! Как твои дела сегодня?",
+      "tr-TR": "Tanıştığıma memnun oldum! Bugün nasılsın?",
+      "uk-UA": "Радий знайомству! Як твої справи сьогодні?",
+      "uz-UZ": "Tanishganimdan xursandman! Bugun ahvoling qanday?"
     },
-    "tips": {
-      "ru-RU": "Конструкция 'ein Wasser' стоит в Akkusativ. Средний род 'das Wasser' в винительном падеже берет у артикля форму 'ein'.",
-      "en-US": "The object 'ein Wasser' is in Akkusativ. The neuter noun 'das Wasser' takes the article 'ein'.",
-      "ar-SA": "كلمة 'ein Wasser' في حالة النصب (Akkusativ). الكلمة المحايدة 'das Wasser' تأخذ الأداة 'ein'.",
-      "es-ES": "El objeto 'ein Wasser' está en Akkusativ. El sustantivo neutro 'das Wasser' toma el artículo 'ein'.",
-      "fr-FR": "L'objet 'ein Wasser' est à l'Akkusativ. Le nom neutre 'das Wasser' prend l'article 'ein'.",
-      "hi-IN": "वस्तु 'ein Wasser' Akkusativ में है। नपुंसक संज्ञा 'das Wasser' लेख 'ein' लेती है।",
-      "pl-PL": "Dopełnienie 'ein Wasser' jest w bierniku. Rzeczownik nijaki 'das Wasser' przyjmuje przedimek 'ein'.",
-      "ro-RO": "Obiectul 'ein Wasser' este în Akkusativ. Substantivul neutru 'das Wasser' ia articolul 'ein'.",
-      "tr-TR": "'ein Wasser' nesnesi Akkusativ durumundadır. Nötr 'das Wasser' ismi 'ein' artikelini alır.",
-      "uk-UA": "Конструкція 'ein Wasser' стоїть в Akkusativ. Середній рід 'das Wasser' бере форму 'ein'.",
-      "uz-UZ": "'ein Wasser' obyekti Akkusativda. O'rta jinsdagi 'das Wasser' oti 'ein' artiklini oladi."
-    },
-    "options": [
+    "vocabulary": [
       {
-        "text": "Ja, gerne. Hast du ein Wasser für mich?",
+        "german": "freut mich",
         "translation": {
-          "ru-RU": "Да, с удовольствием. У тебя есть для меня вода?",
-          "en-US": "Yes, gladly. Do you have a water for me?",
-          "ar-SA": "نعم، بكل سرور. هل لديك ماء لي؟",
-          "es-ES": "Sí, con gusto. ¿Tienes un agua para mí?",
-          "fr-FR": "Oui, volontiers. As-tu de l'eau pour moi ?",
-          "hi-IN": "हाँ, खुशी से। क्या आपके पास मेरे लिए पानी है?",
-          "pl-PL": "Tak, chętnie. Masz dla mnie wodę?",
-          "ro-RO": "Da, cu plăcere. Ai o apă pentru mine?",
-          "tr-TR": "Evet, memnuniyetle. Benim için bir suyun var mı?",
-          "uk-UA": "Так, із задоволенням. У тебе є для мене вода?",
-          "uz-UZ": "Ha, bajonidil. Men uchun suving bormi?"
-        },
-        "nextStep": "drink_give"
+          "ar-SA": "سعيد بلقائك",
+          "en-US": "pleased to meet you",
+          "es-ES": "encantado",
+          "fr-FR": "enchanté",
+          "hi-IN": "मिलकर खुशी हुई",
+          "pl-PL": "miło mi",
+          "ro-RO": "îmi pare bine",
+          "ru-RU": "очень приятно",
+          "tr-TR": "memnun oldum",
+          "uk-UA": "дуже приємно",
+          "uz-UZ": "xursandman"
+        }
       },
       {
-        "text": "Ja, danke. Ein Glas Wein wäre schön.",
+        "german": "heute",
         "translation": {
-          "ru-RU": "Да, спасибо. Бокал вина было бы хорошо.",
-          "en-US": "Yes, thanks. A glass of wine would be nice.",
-          "ar-SA": "نعم، شكراً. كأس من النبيذ سيكون جميلاً.",
-          "es-ES": "Sí, gracias. Una copa de vino estaría bien.",
-          "fr-FR": "Oui, merci. Un verre de vin serait sympa.",
-          "hi-IN": "हाँ, धन्यवाद। एक गिलास वाइन अच्छी रहेगी।",
-          "pl-PL": "Tak, dziękuję. Lampka wina byłaby super.",
-          "ro-RO": "Da, mulțumesc. Un pahar de vin ar fi frumos.",
-          "tr-TR": "Evet, teşekkürler. Bir kadeh şarap güzel olurdu.",
-          "uk-UA": "Так, дякую. Келих вина було б чудово.",
-          "uz-UZ": "Ha, rahmat. Bir qadah vino yaxshi bo'lardi."
-        },
-        "nextStep": "drink_give"
+          "ar-SA": "اليوم",
+          "en-US": "today",
+          "es-ES": "hoy",
+          "fr-FR": "aujourd'hui",
+          "hi-IN": "आज",
+          "pl-PL": "dzisiaj",
+          "ro-RO": "astăzi",
+          "ru-RU": "сегодня",
+          "tr-TR": "bugün",
+          "uk-UA": "сьогодні",
+          "uz-UZ": "bugun"
+        }
       }
     ],
-    "defaultNext": "drink_give"
-  },
-  "drink_give": {
-    "botText": "Natürlich. Hier, bitte schön.",
-    "botTranslation": {
-      "ru-RU": "Конечно. Вот, пожалуйста.",
-      "en-US": "Of course. Here you go.",
-      "ar-SA": "بالطبع. تفضلي.",
-      "es-ES": "Por supuesto. Aquí tienes.",
-      "fr-FR": "Bien sûr. Voici.",
-      "hi-IN": "बिल्कुल। ये लीजिए।",
-      "pl-PL": "Oczywiście. Proszę bardzo.",
-      "ro-RO": "Desigur. Poftim.",
-      "tr-TR": "Elbette. Buyurun.",
-      "uk-UA": "Звісно. Ось, будь ласка.",
-      "uz-UZ": "Albatta. Marhamat, oling."
-    },
-    "tips": {
-      "ru-RU": "Для вопроса 'Кем ты работаешь?' используют 'Was machst du beruflich?'. При ответе женская профессия ('die Lehrerin', 'die Designerin') употребляется без артикля.",
-      "en-US": "To ask 'What do you do for a living?', use 'Was machst du beruflich?'. In the answer, the profession is used without an article.",
-      "ar-SA": "للسؤال عن العمل نستخدم 'Was machst du beruflich?'. في الإجابة، تُذكر المهنة بدون أداة تعريف.",
-      "es-ES": "Para preguntar por la profesión se usa 'Was machst du beruflich?'. En la respuesta, la profesión va sin artículo.",
-      "fr-FR": "Pour demander la profession, on dit 'Was machst du beruflich ?'. Dans la réponse, la profession s'utilise sans article.",
-      "hi-IN": "पेशा पूछने के लिए 'Was machst du beruflich?' का उपयोग करें। उत्तर में, पेशे का उपयोग लेख के बिना किया जाता है।",
-      "pl-PL": "Aby zapytać o zawód, mówimy 'Was machst du beruflich?'. W odpowiedzi zawód podaje się bez przedimka.",
-      "ro-RO": "Pentru a întreba despre profesie se folosește 'Was machst du beruflich?'. În răspuns, profesia este fără articol.",
-      "tr-TR": "Meslek sormak için 'Was machst du beruflich?' kullanılır. Cevapta meslek artikelsiz kullanılır.",
-      "uk-UA": "Для питання про професію використовують 'Was machst du beruflich?'. У відповіді професія вживається без артикля.",
-      "uz-UZ": "Kasbni so'rash uchun 'Was machst du beruflich?' ishlatiladi. Javobda kasb artiklsiz qo'llaniladi."
-    },
     "options": [
       {
-        "text": "Vielen Dank! Was machst du beruflich?",
+        "text": "Danke, sehr gut!",
         "translation": {
-          "ru-RU": "Большое спасибо! Кем ты работаешь?",
-          "en-US": "Thank you very much! What do you do for a living?",
-          "ar-SA": "شكراً جزيلاً! ماذا تعمل؟",
-          "es-ES": "¡Muchas gracias! ¿A qué te dedicas?",
-          "fr-FR": "Merci beaucoup ! Que fais-tu dans la vie ?",
-          "hi-IN": "बहुत-बहुत धन्यवाद! तुम क्या काम करते हो?",
-          "pl-PL": "Bardzo dziękuję! Czym się zajmujesz zawodowo?",
-          "ro-RO": "Mulțumesc mult! Cu ce te ocupi?",
-          "tr-TR": "Çok teşekkürler! Mesleğin nedir?",
-          "uk-UA": "Велике дякую! Ким ти працюєш?",
-          "uz-UZ": "Katta rahmat! Kasbingiz nima?"
+          "ar-SA": "شكراً، جيد جداً!",
+          "en-US": "Thanks, very good!",
+          "es-ES": "¡Gracias, muy bien!",
+          "fr-FR": "Merci, très bien !",
+          "hi-IN": "धन्यवाद, बहुत बढ़िया!",
+          "pl-PL": "Dziękuję, bardzo dobrze!",
+          "ro-RO": "Mulțumesc, foarte bine!",
+          "ru-RU": "Спасибо, очень хорошо!",
+          "tr-TR": "Teşekkürler, çok iyiyim!",
+          "uk-UA": "Дякую, дуже добре!",
+          "uz-UZ": "Rahmat, juda yaxshi!"
         },
-        "nextStep": "job_answer"
+        "nextStep": "ask_origin"
       },
       {
-        "text": "Danke! Was arbeitest du eigentlich?",
+        "text": "Es geht so.",
         "translation": {
-          "ru-RU": "Спасибо! А кем ты вообще работаешь?",
-          "en-US": "Thanks! What do you actually work as?",
-          "ar-SA": "شكراً! ماذا تعمل في الواقع؟",
-          "es-ES": "¡Gracias! ¿De qué trabajas, por cierto?",
-          "fr-FR": "Merci ! En fait, quel est ton travail ?",
-          "hi-IN": "धन्यवाद! तुम वास्तव में क्या काम करते हो?",
-          "pl-PL": "Dzięki! Gdzie właściwie pracujesz?",
-          "ro-RO": "Mulțumesc! De fapt, cu ce te ocupi?",
-          "tr-TR": "Teşekkürler! Gerçekte ne iş yapıyorsun?",
-          "uk-UA": "Дякую! А ким ти взагалі працюєш?",
-          "uz-UZ": "Rahmat! Aslida kim bo'lib ishlaysan?"
+          "ar-SA": "لابأس.",
+          "en-US": "So-so.",
+          "es-ES": "Más o menos.",
+          "fr-FR": "Comme ci, comme ça.",
+          "hi-IN": "ठीक-ठाक।",
+          "pl-PL": "Tak sobie.",
+          "ro-RO": "Așa și așa.",
+          "ru-RU": "Так себе.",
+          "tr-TR": "İdare eder.",
+          "uk-UA": "Так собі.",
+          "uz-UZ": "Yomon emas."
         },
-        "nextStep": "job_answer"
+        "nextStep": "ask_origin"
       }
     ],
-    "defaultNext": "job_answer"
+    "defaultNext": "ask_origin"
   },
-  "job_answer": {
-    "botText": "Ich bin Informatiker. Und was machst du so?",
+  "ask_origin": {
+    "botText": "Schön! Woher kommst du?",
     "botTranslation": {
-      "ru-RU": "Я информатик (айтишник). А чем занимаешься ты?",
-      "en-US": "I am a computer scientist. And what do you do?",
-      "ar-SA": "أنا عالم حاسوب. وماذا تفعلين أنت؟",
-      "es-ES": "Soy informático. ¿Y tú qué haces?",
-      "fr-FR": "Je suis informaticien. Et toi, que fais-tu ?",
-      "hi-IN": "मैं एक कंप्यूटर वैज्ञानिक हूँ। और तुम क्या करते हो?",
-      "pl-PL": "Jestem informatykiem. A ty co porabiasz?",
-      "ro-RO": "Sunt informatician. Și tu ce faci?",
-      "tr-TR": "Ben bilişimciyim. Peki sen ne yapıyorsun?",
-      "uk-UA": "Я інформатик (айтішник). А чим займаєшся ти?",
-      "uz-UZ": "Men informatikman (IT mutaxassisi). Sen nima bilan shug'ullanasan?"
+      "ar-SA": "عظيم! من أين أنت؟",
+      "en-US": "Great! Where are you from?",
+      "es-ES": "¡Genial! ¿De dónde eres?",
+      "fr-FR": "Super ! D'où viens-tu ?",
+      "hi-IN": "बहुत अच्छा! तुम कहाँ से हो?",
+      "pl-PL": "Świetnie! Skąd jesteś?",
+      "ro-RO": "Grozav! De unde ești?",
+      "ru-RU": "Здорово! Откуда ты?",
+      "tr-TR": "Harika! Nerelisin?",
+      "uk-UA": "Чудово! Звідки ти?",
+      "uz-UZ": "Ajoyib! Qayerdansan?"
     },
-    "tips": {
-      "ru-RU": "Фраза 'als Lehrerin' означает 'в качестве учительницы'. Слово 'die Arbeit' (работа) женского рода, поэтому в Akkusativ берет у артикля форму 'meine' (meine Arbeit).",
-      "en-US": "The phrase 'als Lehrerin' means 'as a teacher'. 'die Arbeit' (work) is feminine, so in Akkusativ it takes 'meine' (my).",
-      "ar-SA": "عبارة 'als Lehrerin' تعني 'كمعلمة'. كلمة 'die Arbeit' (العمل) مؤنث، لذا في حالة النصب تأخذ 'meine'.",
-      "es-ES": "La frase 'als Lehrerin' significa 'como profesora'. 'die Arbeit' (el trabajo) es femenino, por lo que en Akkusativ toma 'meine'.",
-      "fr-FR": "La phrase 'als Lehrerin' signifie 'en tant que professeure'. 'die Arbeit' (le travail) est féminin, donc à l'Akkusativ il prend 'meine'.",
-      "hi-IN": "'als Lehrerin' का अर्थ है 'एक शिक्षिका के रूप में'। 'die Arbeit' (काम) स्त्रीलिंग है, इसलिए Akkusativ में यह 'meine' लेता है।",
-      "pl-PL": "Zwrot 'als Lehrerin' oznacza 'jako nauczycielka'. 'die Arbeit' (praca) to r. żeński, więc w bierniku przyjmuje 'meine'.",
-      "ro-RO": "Expresia 'als Lehrerin' înseamnă 'ca profesoară'. 'die Arbeit' (munca) este feminin, deci în Akkusativ ia 'meine'.",
-      "tr-TR": "'als Lehrerin' 'öğretmen olarak' anlamına gelir. 'die Arbeit' (iş) dişildir, bu yüzden Akkusativ'de 'meine' alır.",
-      "uk-UA": "Фраза 'als Lehrerin' означає 'як вчителька'. Слово 'die Arbeit' жіночого роду, тому в Akkusativ бере форму 'meine'.",
-      "uz-UZ": "'als Lehrerin' 'o'qituvchi sifatida' degan ma'noni anglatadi. 'die Arbeit' (ish) ayol jinsida, shuning uchun Akkusativda 'meine' shaklini oladi."
-    },
-    "options": [
+    "vocabulary": [
       {
-        "text": "Ich arbeite als Lehrerin. Das macht viel Spaß.",
+        "german": "woher",
         "translation": {
-          "ru-RU": "Я работаю учительницей. Это приносит много удовольствия.",
-          "en-US": "I work as a teacher. It's a lot of fun.",
-          "ar-SA": "أنا أعمل كمعلمة. هذا ممتع جداً.",
-          "es-ES": "Trabajo como profesora. Es muy divertido.",
-          "fr-FR": "Je travaille comme professeure. C'est très amusant.",
-          "hi-IN": "मैं एक शिक्षिका के रूप में काम करती हूँ। इसमें बहुत मज़ा आता है।",
-          "pl-PL": "Pracuję jako nauczycielka. Sprawia mi to dużo radości.",
-          "ro-RO": "Lucrez ca profesoară. Este foarte distractiv.",
-          "tr-TR": "Öğretmen olarak çalışıyorum. Çok eğlenceli.",
-          "uk-UA": "Я працюю вчителькою. Це приносить багато задоволення.",
-          "uz-UZ": "Men o'qituvchi bo'lib ishlayman. Bu juda qiziqarli."
-        },
-        "nextStep": "know_people"
+          "ar-SA": "من أين",
+          "en-US": "where from",
+          "es-ES": "de dónde",
+          "fr-FR": "d'où",
+          "hi-IN": "कहाँ से",
+          "pl-PL": "skąd",
+          "ro-RO": "de unde",
+          "ru-RU": "откуда",
+          "tr-TR": "nereden",
+          "uk-UA": "звідки",
+          "uz-UZ": "qayerdan"
+        }
       },
       {
-        "text": "Ich bin Grafikdesignerin. Ich mag meine Arbeit.",
+        "german": "kommen",
         "translation": {
-          "ru-RU": "Я графический дизайнер. Я люблю свою работу.",
-          "en-US": "I am a graphic designer. I like my work.",
-          "ar-SA": "أنا مصممة جرافيك. أنا أحب عملي.",
-          "es-ES": "Soy diseñadora gráfica. Me gusta mi trabajo.",
-          "fr-FR": "Je suis graphiste. J'aime mon travail.",
-          "hi-IN": "मैं एक ग्राफिक डिज़ाइनर हूँ। मुझे अपना काम पसंद है।",
-          "pl-PL": "Jestem graficzką. Lubię swoją pracę.",
-          "ro-RO": "Sunt designer grafic. Îmi place munca mea.",
-          "tr-TR": "Ben grafik tasarımcıyım. İşimi seviyorum.",
-          "uk-UA": "Я графічний дизайнер. Я люблю свою роботу.",
-          "uz-UZ": "Men grafik dizaynerman. O'z ishimni yaxshi ko'raman."
-        },
-        "nextStep": "know_people"
+          "ar-SA": "يأتي",
+          "en-US": "to come",
+          "es-ES": "venir",
+          "fr-FR": "venir",
+          "hi-IN": "आना",
+          "pl-PL": "pochodzić",
+          "ro-RO": "a veni",
+          "ru-RU": "приходить",
+          "tr-TR": "gelmek",
+          "uk-UA": "приходити",
+          "uz-UZ": "kelmoq"
+        }
       }
     ],
-    "defaultNext": "know_people"
-  },
-  "know_people": {
-    "botText": "Das klingt interessant. Kennst du schon viele Leute hier?",
-    "botTranslation": {
-      "ru-RU": "Звучит интересно. Ты уже знаешь здесь много людей?",
-      "en-US": "That sounds interesting. Do you already know many people here?",
-      "ar-SA": "يبدو هذا مثيراً للاهتمام. هل تعرفين الكثير من الناس هنا بالفعل؟",
-      "es-ES": "Suena interesante. ¿Conoces ya a mucha gente aquí?",
-      "fr-FR": "Ça a l'air intéressant. Connais-tu déjà beaucoup de monde ici ?",
-      "hi-IN": "यह दिलचस्प लगता है। क्या आप पहले से ही यहाँ बहुत से लोगों को जानती हैं?",
-      "pl-PL": "Brzmi interesująco. Znasz już tu wiele osób?",
-      "ro-RO": "Sună interesant. Cunoști deja mulți oameni aici?",
-      "tr-TR": "Kulağa ilginç geliyor. Burada çok kişi tanıyor musun?",
-      "uk-UA": "Звучить цікаво. Ти вже знаєш тут багато людей?",
-      "uz-UZ": "Qiziqarli eshitilyapti. Bu yerda ko'p odamlarni taniysanmi?"
-    },
-    "tips": {
-      "ru-RU": "Слово 'niemanden' (никого) — это местоимение 'niemand' в Akkusativ. Оно используется, когда действие направлено на объект.",
-      "en-US": "The word 'niemanden' (nobody) is the pronoun 'niemand' in Akkusativ. Used when the action is directed at the object.",
-      "ar-SA": "كلمة 'niemanden' (لا أحد) هي الضمير 'niemand' في حالة النصب (Akkusativ).",
-      "es-ES": "La palabra 'niemanden' (nadie) es el pronombre 'niemand' en Akkusativ.",
-      "fr-FR": "Le mot 'niemanden' (personne) est le pronom 'niemand' à l'Akkusativ.",
-      "hi-IN": "शब्द 'niemanden' (कोई नहीं) Akkusativ में सर्वनाम 'niemand' है।",
-      "pl-PL": "Słowo 'niemanden' (nikogo) to zaimek 'niemand' w bierniku (Akkusativ).",
-      "ro-RO": "Cuvântul 'niemanden' (nimeni) este pronumele 'niemand' în Akkusativ.",
-      "tr-TR": "'niemanden' (hiç kimse) kelimesi 'niemand' zamirinin Akkusativ halidir.",
-      "uk-UA": "Слово 'niemanden' (нікого) — це займенник 'niemand' в Akkusativ.",
-      "uz-UZ": "'niemanden' (hech kimni) so'zi Akkusativdagi 'niemand' olmoshidir."
-    },
     "options": [
       {
-        "text": "Nein, ich kenne hier leider niemanden.",
+        "text": "Ich komme aus...",
         "translation": {
-          "ru-RU": "Нет, я здесь, к сожалению, никого не знаю.",
-          "en-US": "No, unfortunately I don't know anyone here.",
-          "ar-SA": "لا، للأسف لا أعرف أحداً هنا.",
-          "es-ES": "No, lamentablemente no conozco a nadie aquí.",
-          "fr-FR": "Non, je ne connais malheureusement personne ici.",
-          "hi-IN": "नहीं, दुर्भाग्य से मैं यहाँ किसी को नहीं जानती।",
-          "pl-PL": "Nie, niestety nikogo tu nie znam.",
-          "ro-RO": "Nu, din păcate nu cunosc pe nimeni aici.",
-          "tr-TR": "Hayır, maalesef burada kimseyi tanımıyorum.",
-          "uk-UA": "Ні, я тут, на жаль, нікого не знаю.",
-          "uz-UZ": "Yo'q, afsuski, bu yerda hech kimni tanimayman."
+          "ar-SA": "أنا من...",
+          "en-US": "I am from...",
+          "es-ES": "Soy de...",
+          "fr-FR": "Je viens de...",
+          "hi-IN": "मैं... से हूँ",
+          "pl-PL": "Jestem z...",
+          "ro-RO": "Sunt din...",
+          "ru-RU": "Я из...",
+          "tr-TR": "Ben buralıyım...",
+          "uk-UA": "Я з...",
+          "uz-UZ": "Men ... danman"
         },
-        "nextStep": "introduce_friends"
+        "nextStep": "ask_location"
+      }
+    ],
+    "defaultNext": "ask_location"
+  },
+  "ask_location": {
+    "botText": "Interessant! Und wo bist du gerade?",
+    "botTranslation": {
+      "ar-SA": "مثير للاهتمام! وأين أنت الآن؟",
+      "en-US": "Interesting! And where are you right now?",
+      "es-ES": "¡Interesante! ¿Y dónde estás ahora mismo?",
+      "fr-FR": "Intéressant ! Et où es-tu en ce moment ?",
+      "hi-IN": "रोचक! और तुम अभी कहाँ हो?",
+      "pl-PL": "Ciekawe! A gdzie teraz jesteś?",
+      "ro-RO": "Interesant! Și unde ești acum?",
+      "ru-RU": "Интересно! А где ты сейчас?",
+      "tr-TR": "İlginç! Peki şu an neredesin?",
+      "uk-UA": "Цікаво! А де ти зараз?",
+      "uz-UZ": "Qiziqarli! Hozir qayerdasan?"
+    },
+    "vocabulary": [
+      {
+        "german": "gerade",
+        "translation": {
+          "ar-SA": "الآن",
+          "en-US": "right now",
+          "es-ES": "ahora mismo",
+          "fr-FR": "en ce moment",
+          "hi-IN": "अभी",
+          "pl-PL": "właśnie / teraz",
+          "ro-RO": "chiar acum",
+          "ru-RU": "сейчас",
+          "tr-TR": "şu an",
+          "uk-UA": "зараз",
+          "uz-UZ": "hozir"
+        }
       },
       {
-        "text": "Nicht wirklich, ich bin erst heute gekommen.",
+        "german": "die Schule",
         "translation": {
-          "ru-RU": "Не особо, я только сегодня пришла.",
-          "en-US": "Not really, I just arrived today.",
-          "ar-SA": "ليس حقاً، لقد جئت اليوم فقط.",
-          "es-ES": "La verdad es que no, acabo de llegar hoy.",
-          "fr-FR": "Pas vraiment, je viens juste d'arriver aujourd'hui.",
-          "hi-IN": "वास्तव में नहीं, मैं आज ही आई हूँ।",
-          "pl-PL": "Nie bardzo, przyszłam dopiero dzisiaj.",
-          "ro-RO": "Nu chiar, abia astăzi am venit.",
-          "tr-TR": "Pek değil, daha bugün geldim.",
-          "uk-UA": "Не зовсім, я тільки сьогодні прийшла.",
-          "uz-UZ": "Unchalik emas, men faqat bugun keldim."
-        },
-        "nextStep": "introduce_friends"
+          "ar-SA": "المدرسة",
+          "en-US": "the school",
+          "es-ES": "la escuela",
+          "fr-FR": "l'école",
+          "hi-IN": "स्कूल",
+          "pl-PL": "szkoła",
+          "ro-RO": "școala",
+          "ru-RU": "школа",
+          "tr-TR": "okul",
+          "uk-UA": "школа",
+          "uz-UZ": "maktab"
+        }
       }
     ],
-    "defaultNext": "introduce_friends"
-  },
-  "introduce_friends": {
-    "botText": "Dann komm mit! Ich stelle dich meinen Freunden vor.",
-    "botTranslation": {
-      "ru-RU": "Тогда пошли! Я познакомлю тебя со своими друзьями.",
-      "en-US": "Then come with me! I will introduce you to my friends.",
-      "ar-SA": "إذاً تعالي معي! سأقدمك لأصدقائي.",
-      "es-ES": "¡Entonces ven conmigo! Te presentaré a mis amigos.",
-      "fr-FR": "Alors viens avec moi ! Je vais te présenter à mes amis.",
-      "hi-IN": "तो मेरे साथ आओ! मैं तुम्हें अपने दोस्तों से मिलवाता हूँ।",
-      "pl-PL": "Więc chodź ze mną! Przedstawię cię moim przyjaciołom.",
-      "ro-RO": "Atunci vino cu mine! Te voi prezenta prietenilor mei.",
-      "tr-TR": "O zaman benimle gel! Seni arkadaşlarımla tanıştırayım.",
-      "uk-UA": "Тоді ходімо! Я познайомлю тебе зі своїми друзями.",
-      "uz-UZ": "Unda yur! Men seni do'stlarim bilan tanishtiraman."
-    },
-    "tips": {
-      "ru-RU": "Глагол 'vorstellen' (представлять) имеет отделяемую приставку 'vor', которая уходит в конец предложения.",
-      "en-US": "The verb 'vorstellen' (to introduce) has a separable prefix 'vor', which goes to the end of the sentence.",
-      "ar-SA": "الفعل 'vorstellen' (يقدم) يحتوي على بادئة منفصلة 'vor' تذهب إلى نهاية الجملة.",
-      "es-ES": "El verbo 'vorstellen' (presentar) tiene el prefijo separable 'vor', que va al final de la oración.",
-      "fr-FR": "Le verbe 'vorstellen' (présenter) a un préfixe séparable 'vor' qui se place à la fin de la phrase.",
-      "hi-IN": "क्रिया 'vorstellen' (परिचय कराना) में अलग होने वाला उपसर्ग 'vor' है, जो वाक्य के अंत में जाता है।",
-      "pl-PL": "Czasownik 'vorstellen' (przedstawiać) ma rozdzielny przedrostek 'vor', który wędruje na koniec zdania.",
-      "ro-RO": "Verbul 'vorstellen' (a prezenta) are prefixul separabil 'vor', care merge la sfârșitul propoziției.",
-      "tr-TR": "'vorstellen' (tanıştırmak) fiilinin ayrılabilen bir ön eki 'vor' vardır ve cümlenin sonuna gider.",
-      "uk-UA": "Дієслово 'vorstellen' (представляти) має відокремлюваний префікс 'vor', який йде в кінець речення.",
-      "uz-UZ": "'vorstellen' (tanishtirmoq) fe'lida ajraladigan 'vor' old qo'shimchasi bor, u gapning oxiriga o'tadi."
-    },
     "options": [
       {
-        "text": "Das ist sehr lieb, danke!",
+        "text": "Ich bin in der Schule",
         "translation": {
-          "ru-RU": "Это очень мило, спасибо!",
-          "en-US": "That is very sweet, thank you!",
-          "ar-SA": "هذا لطف كبير، شكراً!",
-          "es-ES": "¡Es muy amable de tu parte, gracias!",
-          "fr-FR": "C'est très gentil, merci !",
-          "hi-IN": "यह बहुत प्यारा है, धन्यवाद!",
-          "pl-PL": "To bardzo miłe, dziękuję!",
-          "ro-RO": "E foarte drăguț, mulțumesc!",
-          "tr-TR": "Bu çok nazikçe, teşekkürler!",
-          "uk-UA": "Це дуже мило, дякую!",
-          "uz-UZ": "Bu juda mehribonlik, rahmat!"
+          "ar-SA": "أنا في المدرسة",
+          "en-US": "I am at school",
+          "es-ES": "Estoy en la escuela",
+          "fr-FR": "Je suis à l'école",
+          "hi-IN": "मैं स्कूल में हूँ",
+          "pl-PL": "Jestem w szkole",
+          "ro-RO": "Sunt la școală",
+          "ru-RU": "Я в школе",
+          "tr-TR": "Okuldayım",
+          "uk-UA": "Я в школі",
+          "uz-UZ": "Men maktabdaman"
+        },
+        "nextStep": "ask_activity"
+      },
+      {
+        "text": "Ich bin auf der Arbeit",
+        "translation": {
+          "ar-SA": "أنا في العمل",
+          "en-US": "I am at work",
+          "es-ES": "Estoy en el trabajo",
+          "fr-FR": "Je suis au travail",
+          "hi-IN": "मैं काम पर हूँ",
+          "pl-PL": "Jestem w pracy",
+          "ro-RO": "Sunt la muncă",
+          "ru-RU": "Я на работе",
+          "tr-TR": "İşteyim",
+          "uk-UA": "Я на роботі",
+          "uz-UZ": "Men ishdaman"
+        },
+        "nextStep": "ask_activity"
+      },
+      {
+        "text": "Ich bin zu Hause",
+        "translation": {
+          "ar-SA": "أنا في المنزل",
+          "en-US": "I am at home",
+          "es-ES": "Estoy en casa",
+          "fr-FR": "Je suis à la maison",
+          "hi-IN": "मैं घर पर हूँ",
+          "pl-PL": "Jestem w domu",
+          "ro-RO": "Sunt acasă",
+          "ru-RU": "Я дома",
+          "tr-TR": "Evdeyim",
+          "uk-UA": "Я вдома",
+          "uz-UZ": "Men uydaman"
+        },
+        "nextStep": "ask_activity"
+      }
+    ],
+    "defaultNext": "ask_activity"
+  },
+  "ask_activity": {
+    "botText": "Was machst du da?",
+    "botTranslation": {
+      "ar-SA": "ماذا تفعل هناك؟",
+      "en-US": "What are you doing there?",
+      "es-ES": "¿Qué haces ahí?",
+      "fr-FR": "Que fais-tu là-bas ?",
+      "hi-IN": "तुम वहाँ क्या कर रहे हो?",
+      "pl-PL": "Co tam robisz?",
+      "ro-RO": "Ce faci acolo?",
+      "ru-RU": "Что ты там делаешь?",
+      "tr-TR": "Orada ne yapıyorsun?",
+      "uk-UA": "Що ти там робиш?",
+      "uz-UZ": "U yerda nima qilyapsan?"
+    },
+    "vocabulary": [
+      {
+        "german": "machen",
+        "translation": {
+          "ar-SA": "يفعل",
+          "en-US": "to do",
+          "es-ES": "hacer",
+          "fr-FR": "faire",
+          "hi-IN": "करना",
+          "pl-PL": "robić",
+          "ro-RO": "a face",
+          "ru-RU": "делать",
+          "tr-TR": "yapmak",
+          "uk-UA": "робити",
+          "uz-UZ": "qilmoq"
+        }
+      },
+      {
+        "german": "lernen",
+        "translation": {
+          "ar-SA": "يتعلم",
+          "en-US": "to learn",
+          "es-ES": "aprender",
+          "fr-FR": "apprendre",
+          "hi-IN": "सीखना",
+          "pl-PL": "uczyć się",
+          "ro-RO": "a învăța",
+          "ru-RU": "учить",
+          "tr-TR": "öğrenmek",
+          "uk-UA": "вчити",
+          "uz-UZ": "o'rganmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich lerne Deutsch",
+        "translation": {
+          "ar-SA": "أنا أتعلم الألمانية",
+          "en-US": "I am learning German",
+          "es-ES": "Estoy aprendiendo alemán",
+          "fr-FR": "J'apprends l'allemand",
+          "hi-IN": "मैं जर्मन सीख रहा हूँ",
+          "pl-PL": "Uczę się niemieckiego",
+          "ro-RO": "Învăț germană",
+          "ru-RU": "Я учу немецкий",
+          "tr-TR": "Almanca öğreniyorum",
+          "uk-UA": "Я вчу німецьку",
+          "uz-UZ": "Men nemis tilini o'rganyapman"
         },
         "nextStep": "end"
       },
       {
-        "text": "Sehr gerne, danke für die Einladung!",
+        "text": "Ich arbeite",
         "translation": {
-          "ru-RU": "С удовольствием, спасибо за приглашение!",
-          "en-US": "Very gladly, thank you for the invitation!",
-          "ar-SA": "بكل سرور، شكراً على الدعوة!",
-          "es-ES": "Con mucho gusto, ¡gracias por la invitación!",
-          "fr-FR": "Avec grand plaisir, merci pour l'invitation !",
-          "hi-IN": "बहुत खुशी से, निमंत्रण के लिए धन्यवाद!",
-          "pl-PL": "Bardzo chętnie, dziękuję za zaproszenie!",
-          "ro-RO": "Cu mare drag, mulțumesc pentru invitație!",
-          "tr-TR": "Seve seve, davet için teşekkürler!",
-          "uk-UA": "Із задоволенням, дякую за запрошення!",
-          "uz-UZ": "Bajonidil, taklif uchun rahmat!"
+          "ar-SA": "أنا أعمل",
+          "en-US": "I am working",
+          "es-ES": "Estoy trabajando",
+          "fr-FR": "Je travaille",
+          "hi-IN": "मैं काम कर रहा हूँ",
+          "pl-PL": "Pracuję",
+          "ro-RO": "Muncesc",
+          "ru-RU": "Я работаю",
+          "tr-TR": "Çalışıyorum",
+          "uk-UA": "Я працюю",
+          "uz-UZ": "Men ishlayapman"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Ich trinke Kaffee",
+        "translation": {
+          "ar-SA": "أنا أشرب القهوة",
+          "en-US": "I am drinking coffee",
+          "es-ES": "Estoy bebiendo café",
+          "fr-FR": "Je bois du café",
+          "hi-IN": "मैं कॉफी पी रहा हूँ",
+          "pl-PL": "Piję kawę",
+          "ro-RO": "Beau cafea",
+          "ru-RU": "Я пью кофе",
+          "tr-TR": "Kahve içiyorum",
+          "uk-UA": "Я п'ю каву",
+          "uz-UZ": "Men qahva ichyapman"
         },
         "nextStep": "end"
       }
@@ -462,20 +452,54 @@
     "defaultNext": "end"
   },
   "end": {
-    "botText": "Viel Spaß auf der Party!",
+    "botText": "Das ist toll! Viel Erfolg! Tschüss!",
     "botTranslation": {
-      "ru-RU": "Хорошего веселья на вечеринке!",
-      "en-US": "Have fun at the party!",
-      "ar-SA": "استمتعي بالحفلة!",
-      "es-ES": "¡Diviértete en la fiesta!",
-      "fr-FR": "Amuse-toi bien à la fête !",
-      "hi-IN": "पार्टी में मज़े करो!",
-      "pl-PL": "Miłej zabawy na imprezie!",
-      "ro-RO": "Distracție plăcută la petrecere!",
-      "tr-TR": "Partide iyi eğlenceler!",
-      "uk-UA": "Гарної розваги на вечірці!",
-      "uz-UZ": "Kechada yaxshi dam oling!"
+      "ar-SA": "هذا رائع! بالتوفيق! وداعاً!",
+      "en-US": "That is great! Good luck! Bye!",
+      "es-ES": "¡Eso es genial! ¡Mucho éxito! ¡Adiós!",
+      "fr-FR": "C'est génial ! Bonne chance ! Au revoir !",
+      "hi-IN": "यह बहुत अच्छा है! शुभकामनाएँ! अलविदा!",
+      "pl-PL": "To wspaniale! Powodzenia! Cześć!",
+      "ro-RO": "Asta e grozav! Mult succes! Pa!",
+      "ru-RU": "Это здорово! Успехов! Пока!",
+      "tr-TR": "Bu harika! Başarılar! Hoşça kal!",
+      "uk-UA": "Це чудово! Успіхів! Бувай!",
+      "uz-UZ": "Bu ajoyib! Omad! Xayr!"
     },
+    "vocabulary": [
+      {
+        "german": "toll",
+        "translation": {
+          "ar-SA": "رائع",
+          "en-US": "great",
+          "es-ES": "genial",
+          "fr-FR": "super",
+          "hi-IN": "बहुत बढ़िया",
+          "pl-PL": "wspaniale",
+          "ro-RO": "grozav",
+          "ru-RU": "здорово",
+          "tr-TR": "harika",
+          "uk-UA": "чудово",
+          "uz-UZ": "ajoyib"
+        }
+      },
+      {
+        "german": "viel Erfolg",
+        "translation": {
+          "ar-SA": "بالتوفيق",
+          "en-US": "much success",
+          "es-ES": "mucho éxito",
+          "fr-FR": "bonne chance",
+          "hi-IN": "बहुत सफलता",
+          "pl-PL": "powodzenia",
+          "ro-RO": "mult succes",
+          "ru-RU": "успехов",
+          "tr-TR": "başarılar",
+          "uk-UA": "успіхів",
+          "uz-UZ": "omad"
+        }
+      }
+    ],
     "options": [],
     "defaultNext": null
   }

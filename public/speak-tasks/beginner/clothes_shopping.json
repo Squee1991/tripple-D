@@ -1,19 +1,6 @@
 {
   "start": {
     "botText": "Guten Tag! Kann ich Ihnen helfen?",
-    "tips": {
-      "ar-SA": "الفعل 'helfen' (يساعد) يأخذ دائماً حالة القابل (Dativ). 'Ihnen' هي صيغة الاحترام من 'Sie'.",
-      "en-US": "The verb 'helfen' (to help) always takes Dativ. 'Ihnen' is the formal 'you'.",
-      "es-ES": "El verbo 'helfen' (ayudar) siempre usa Dativ. 'Ihnen' es el 'usted' formal.",
-      "fr-FR": "Le verbe 'helfen' (aider) prend toujours le Dativ. 'Ihnen' est le vouvoiement.",
-      "hi-IN": "क्रिया 'helfen' (मदद करना) हमेशा Dativ लेती है। 'Ihnen' औपचारिक 'आप' है।",
-      "pl-PL": "Czasownik 'helfen' (pomagać) wymaga celownika (Dativ). 'Ihnen' to formalne 'Panu/Pani'.",
-      "ro-RO": "Verbul 'helfen' (a ajuta) cere Dativ. 'Ihnen' este forma de politețe pentru 'Dumneavoastră'.",
-      "ru-RU": "Глагол 'helfen' (помогать) всегда требует Dativ. 'Ihnen' — это вежливое 'Вам'.",
-      "tr-TR": "'helfen' (yardım etmek) fiili Dativ gerektirir. 'Ihnen' resmi 'Size' demektir.",
-      "uk-UA": "Дієслово 'helfen' (допомагати) завжди вимагає Dativ. 'Ihnen' — це ввічливе 'Вам'.",
-      "uz-UZ": "'helfen' (yordam bermoq) fe'li har doim Dativ talab qiladi. 'Ihnen' rasmiy 'Sizga' degani."
-    },
     "botTranslation": {
       "ar-SA": "طاب يومك! هل يمكنني مساعدتك؟",
       "en-US": "Good day! Can I help you?",
@@ -27,6 +14,40 @@
       "uk-UA": "Добрий день! Я можу Вам допомогти?",
       "uz-UZ": "Xayrli kun! Sizga yordam bera olamanmi?"
     },
+    "vocabulary": [
+      {
+        "german": "helfen",
+        "translation": {
+          "ru-RU": "помогать",
+          "en-US": "to help",
+          "ar-SA": "يساعد",
+          "es-ES": "ayudar",
+          "fr-FR": "aider",
+          "hi-IN": "मदद करना",
+          "pl-PL": "pomagać",
+          "ro-RO": "a ajuta",
+          "tr-TR": "yardım etmek",
+          "uk-UA": "допомагати",
+          "uz-UZ": "yordam bermoq"
+        }
+      },
+      {
+        "german": "kaufen",
+        "translation": {
+          "ru-RU": "покупать",
+          "en-US": "to buy",
+          "ar-SA": "يشتري",
+          "es-ES": "comprar",
+          "fr-FR": "acheter",
+          "hi-IN": "खरीदना",
+          "pl-PL": "kupować",
+          "ro-RO": "a cumpăra",
+          "tr-TR": "satın almak",
+          "uk-UA": "купувати",
+          "uz-UZ": "sotib olmoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Guten Tag! Ja, ich möchte eine Jeans kaufen.",
@@ -47,9 +68,6 @@
       },
       {
         "text": "Hallo! Ja, ich suche eine Jeans.",
-        "tips": {
-          "ru-RU": "Глагол 'suchen' (искать) требует Akkusativ (eine Jeans)."
-        },
         "translation": {
           "ar-SA": "مرحباً! نعم، أبحث عن بنطلون جينز.",
           "en-US": "Hello! Yes, I am looking for jeans.",
@@ -70,19 +88,6 @@
   },
   "ask_which": {
     "botText": "Gerne. Welche Jeans möchten Sie?",
-    "tips": {
-      "ar-SA": "'Welche' تعني 'أيّ'.",
-      "en-US": "'Welche' means 'Which'.",
-      "es-ES": "'Welche' significa 'Cuál'.",
-      "fr-FR": "'Welche' signifie 'Lequel / Laquelle'.",
-      "hi-IN": "'Welche' का अर्थ है 'कौन सा'।",
-      "pl-PL": "'Welche' oznacza 'które'.",
-      "ro-RO": "'Welche' înseamnă 'Care'.",
-      "ru-RU": "Вопросительное слово 'Welche' переводится как 'какие' أو 'какая'.",
-      "tr-TR": "'Welche' 'Hangi' demektir.",
-      "uk-UA": "Запитальне слово 'Welche' перекладається як 'які' або 'яка'.",
-      "uz-UZ": "'Welche' 'Qaysi' degan ma'noni anglatadi."
-    },
     "botTranslation": {
       "ar-SA": "بكل سرور. أي جينز تريد؟",
       "en-US": "Gladly. Which jeans would you like?",
@@ -96,6 +101,40 @@
       "uk-UA": "Із задоволенням. Які джинси Ви хочете?",
       "uz-UZ": "Bajonidil. Qaysi jinsini xohlaysiz?"
     },
+    "vocabulary": [
+      {
+        "german": "welche",
+        "translation": {
+          "ru-RU": "какие",
+          "en-US": "which",
+          "ar-SA": "أي",
+          "es-ES": "cuáles",
+          "fr-FR": "quel/quelle",
+          "hi-IN": "कौन सा",
+          "pl-PL": "które",
+          "ro-RO": "care",
+          "tr-TR": "hangi",
+          "uk-UA": "які",
+          "uz-UZ": "qaysi"
+        }
+      },
+      {
+        "german": "diese",
+        "translation": {
+          "ru-RU": "эти",
+          "en-US": "these",
+          "ar-SA": "هذه",
+          "es-ES": "estos",
+          "fr-FR": "ce/cette",
+          "hi-IN": "ये",
+          "pl-PL": "te",
+          "ro-RO": "acești",
+          "tr-TR": "bunlar",
+          "uk-UA": "ці",
+          "uz-UZ": "shular"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Diese blaue Jeans, bitte.",
@@ -136,19 +175,6 @@
   },
   "ask_size": {
     "botText": "Sehr schön. Welche Größe haben Sie?",
-    "tips": {
-      "ar-SA": "كلمة 'Größe' تعني مقاس.",
-      "en-US": "The word 'Größe' means size.",
-      "es-ES": "La palabra 'Größe' significa talla.",
-      "fr-FR": "Le mot 'Größe' signifie taille.",
-      "hi-IN": "शब्द 'Größe' का अर्थ आकार/साइज है।",
-      "pl-PL": "Słowo 'Größe' oznacza rozmiar.",
-      "ro-RO": "Cuvântul 'Größe' înseamnă mărime.",
-      "ru-RU": "Слово 'die Größe' означает размер.",
-      "tr-TR": "'Größe' beden (boyut) demektir.",
-      "uk-UA": "Слово 'die Größe' означає розмір.",
-      "uz-UZ": "'Größe' o'lcham (razmer) degani."
-    },
     "botTranslation": {
       "ar-SA": "جميل جداً. ما هو مقاسك؟",
       "en-US": "Very nice. What size are you?",
@@ -162,6 +188,40 @@
       "uk-UA": "Дуже добре. Який у Вас розмір?",
       "uz-UZ": "Juda yaxshi. O'lchamingiz qanday?"
     },
+    "vocabulary": [
+      {
+        "german": "sehr schön",
+        "translation": {
+          "ru-RU": "очень хорошо",
+          "en-US": "very nice",
+          "ar-SA": "جميل جداً",
+          "es-ES": "muy bien",
+          "fr-FR": "très bien",
+          "hi-IN": "बहुत अच्छा",
+          "pl-PL": "bardzo ładnie",
+          "ro-RO": "foarte frumos",
+          "tr-TR": "çok güzel",
+          "uk-UA": "дуже добре",
+          "uz-UZ": "juda yaxshi"
+        }
+      },
+      {
+        "german": "die Größe",
+        "translation": {
+          "ru-RU": "размер",
+          "en-US": "size",
+          "ar-SA": "مقاس",
+          "es-ES": "talla",
+          "fr-FR": "taille",
+          "hi-IN": "आकार",
+          "pl-PL": "rozmiar",
+          "ro-RO": "mărime",
+          "tr-TR": "beden",
+          "uk-UA": "розмір",
+          "uz-UZ": "o'lcham"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Größe M, bitte.",
@@ -202,19 +262,6 @@
   },
   "fitting_room": {
     "botText": "Hier, bitte. Die Umkleidekabine ist geradeaus und links.",
-    "tips": {
-      "ar-SA": "'Umkleidekabine' تعني غرفة القياس (بروفا). 'geradeaus' تعني إلى الأمام مباشرة.",
-      "en-US": "'Umkleidekabine' means fitting room. 'geradeaus' means straight ahead.",
-      "es-ES": "'Umkleidekabine' significa probador. 'geradeaus' significa todo recto.",
-      "fr-FR": "'Umkleidekabine' signifie cabine d'essayage. 'geradeaus' signifie tout droit.",
-      "hi-IN": "'Umkleidekabine' का अर्थ ट्रायल रूम है। 'geradeaus' का अर्थ सीधे है।",
-      "pl-PL": "'Umkleidekabine' to przymierzalnia. 'geradeaus' to prosto.",
-      "ro-RO": "'Umkleidekabine' înseamnă cabina de probă. 'geradeaus' înseamnă drept înainte.",
-      "ru-RU": "Слово 'Umkleidekabine' — примерочная. 'geradeaus' — прямо, 'links' — налево.",
-      "tr-TR": "'Umkleidekabine' deneme kabini demektir. 'geradeaus' dümdüz demektir.",
-      "uk-UA": "Слово 'Umkleidekabine' — примірочна. 'geradeaus' — прямо, 'links' — наліво.",
-      "uz-UZ": "'Umkleidekabine' kiyinish xonasi. 'geradeaus' to'g'riga degani."
-    },
     "botTranslation": {
       "ar-SA": "تفضل. غرفة القياس في الأمام مباشرة وإلى اليسار.",
       "en-US": "Here you go. The fitting room is straight ahead and to the left.",
@@ -228,6 +275,40 @@
       "uk-UA": "Ось, будь ласка. Примірочна прямо і наліво.",
       "uz-UZ": "Marhamat. Kiyinish xonasi to'g'riga va chapda."
     },
+    "vocabulary": [
+      {
+        "german": "die Umkleidekabine",
+        "translation": {
+          "ru-RU": "примерочная",
+          "en-US": "fitting room",
+          "ar-SA": "غرفة القياس",
+          "es-ES": "probador",
+          "fr-FR": "cabine d'essayage",
+          "hi-IN": "ट्रायल रूम",
+          "pl-PL": "przymierzalnia",
+          "ro-RO": "cabina de probă",
+          "tr-TR": "deneme kabini",
+          "uk-UA": "примірочна",
+          "uz-UZ": "kiyinish xonasi"
+        }
+      },
+      {
+        "german": "geradeaus",
+        "translation": {
+          "ru-RU": "прямо",
+          "en-US": "straight ahead",
+          "ar-SA": "إلى الأمام",
+          "es-ES": "todo recto",
+          "fr-FR": "tout droit",
+          "hi-IN": "सीधे",
+          "pl-PL": "prosto",
+          "ro-RO": "drept înainte",
+          "tr-TR": "dümdüz",
+          "uk-UA": "прямо",
+          "uz-UZ": "to'g'riga"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke schön!",
@@ -268,19 +349,6 @@
   },
   "ask_bag": {
     "botText": "Nehmen Sie die Jeans? Und brauchen Sie eine Tüte?",
-    "tips": {
-      "ar-SA": "كلمة 'Tüte' تعني كيس تسوق (بلاستيك أو ورق).",
-      "en-US": "The word 'Tüte' means a shopping bag (plastic or paper).",
-      "es-ES": "La palabra 'Tüte' significa bolsa de la compra (de plástico o papel).",
-      "fr-FR": "Le mot 'Tüte' signifie sac de courses (plastique ou papier).",
-      "hi-IN": "शब्द 'Tüte' का अर्थ है शॉपिंग बैग (प्लास्टिक या कागज)।",
-      "pl-PL": "Słowo 'Tüte' oznacza torbę/reklamówkę na zakupy.",
-      "ro-RO": "Cuvântul 'Tüte' înseamnă pungă de cumpărături.",
-      "ru-RU": "Слово 'die Tüte' означает пакет (в магазине).",
-      "tr-TR": "'Tüte' alışveriş poşeti demektir.",
-      "uk-UA": "Слово 'die Tüte' означає пакет (у магазині).",
-      "uz-UZ": "'Tüte' xarid sumkasi (paket) degani."
-    },
     "botTranslation": {
       "ar-SA": "هل ستأخذ الجينز؟ وهل تحتاج إلى كيس؟",
       "en-US": "Are you taking the jeans? And do you need a bag?",
@@ -294,6 +362,40 @@
       "uk-UA": "Ви берете джинси? І чи потрібен Вам пакет?",
       "uz-UZ": "Jinsini olasizmi? Va sizga paket kerakmi?"
     },
+    "vocabulary": [
+      {
+        "german": "nehmen",
+        "translation": {
+          "ru-RU": "брать",
+          "en-US": "to take",
+          "ar-SA": "يأخذ",
+          "es-ES": "tomar / llevar",
+          "fr-FR": "prendre",
+          "hi-IN": "लेना",
+          "pl-PL": "brać",
+          "ro-RO": "a lua",
+          "tr-TR": "almak",
+          "uk-UA": "брати",
+          "uz-UZ": "olmoq"
+        }
+      },
+      {
+        "german": "die Tüte",
+        "translation": {
+          "ru-RU": "пакет",
+          "en-US": "bag",
+          "ar-SA": "كيس",
+          "es-ES": "bolsa",
+          "fr-FR": "sac",
+          "hi-IN": "थैला / बैग",
+          "pl-PL": "torba / reklamówka",
+          "ro-RO": "pungă",
+          "tr-TR": "poşet",
+          "uk-UA": "пакет",
+          "uz-UZ": "paket / sumka"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, ich nehme sie. Und eine Tüte, bitte.",
@@ -334,19 +436,6 @@
   },
   "price": {
     "botText": "Das macht zusammen 41 Euro. Zahlen Sie bar oder mit Karte?",
-    "tips": {
-      "ar-SA": "كلمة 'zusammen' تعني 'معاً' (الإجمالي).",
-      "en-US": "The word 'zusammen' means 'together' (total).",
-      "es-ES": "La palabra 'zusammen' significa 'juntos' (en total).",
-      "fr-FR": "Le mot 'zusammen' signifie 'ensemble' (au total).",
-      "hi-IN": "शब्द 'zusammen' का अर्थ 'एक साथ' (कुल) है।",
-      "pl-PL": "Słowo 'zusammen' oznacza 'razem' (łącznie).",
-      "ro-RO": "Cuvântul 'zusammen' înseamnă 'împreună' (în total).",
-      "ru-RU": "Слово 'zusammen' (вместе) здесь означает общую сумму: 'Всё вместе стоит...'.",
-      "tr-TR": "'zusammen' 'birlikte' (toplam) demektir.",
-      "uk-UA": "Слово 'zusammen' (разом) тут означає загальну суму.",
-      "uz-UZ": "'zusammen' 'birgalikda' (jami) degani."
-    },
     "botTranslation": {
       "ar-SA": "إجمالي الحساب 41 يورو. هل ستدفع نقداً أم بالبطاقة؟",
       "en-US": "That comes to 41 Euros in total. Do you pay cash or with card?",
@@ -360,6 +449,40 @@
       "uk-UA": "Усе разом коштує 41 євро. Ви платите готівкою чи карткою?",
       "uz-UZ": "Jami 41 yevro bo'ldi. Naqd to'laysizmi yoki karta bilanmi?"
     },
+    "vocabulary": [
+      {
+        "german": "zusammen",
+        "translation": {
+          "ru-RU": "итого / вместе",
+          "en-US": "in total / together",
+          "ar-SA": "الإجمالي / معاً",
+          "es-ES": "en total",
+          "fr-FR": "au total / ensemble",
+          "hi-IN": "कुल मिलाकर",
+          "pl-PL": "razem",
+          "ro-RO": "în total / împreună",
+          "tr-TR": "toplam / birlikte",
+          "uk-UA": "разом",
+          "uz-UZ": "jami / birgalikda"
+        }
+      },
+      {
+        "german": "bar",
+        "translation": {
+          "ru-RU": "наличными",
+          "en-US": "in cash",
+          "ar-SA": "نقداً",
+          "es-ES": "en efectivo",
+          "fr-FR": "en espèces",
+          "hi-IN": "नकद",
+          "pl-PL": "gotówką",
+          "ro-RO": "cash",
+          "tr-TR": "nakit",
+          "uk-UA": "готівкою",
+          "uz-UZ": "naqd"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ich zahle mit Karte, bitte.",
@@ -413,6 +536,40 @@
       "uk-UA": "Велике дякую. Ось Ваш пакет. Гарного Вам дня!",
       "uz-UZ": "Katta rahmat. Mana paketingiz. Yaxshi kun tilayman!"
     },
+    "vocabulary": [
+      {
+        "german": "vielen Dank",
+        "translation": {
+          "ru-RU": "большое спасибо",
+          "en-US": "thank you very much",
+          "ar-SA": "شكراً جزيلاً",
+          "es-ES": "muchas gracias",
+          "fr-FR": "merci beaucoup",
+          "hi-IN": "बहुत-बहुत धन्यवाद",
+          "pl-PL": "bardzo dziękuję",
+          "ro-RO": "vă mulțumesc mult",
+          "tr-TR": "çok teşekkürler",
+          "uk-UA": "велике дякую",
+          "uz-UZ": "katta rahmat"
+        }
+      },
+      {
+        "german": "schönen Tag",
+        "translation": {
+          "ru-RU": "хорошего дня",
+          "en-US": "nice day",
+          "ar-SA": "يوم جميل",
+          "es-ES": "buen día",
+          "fr-FR": "bonne journée",
+          "hi-IN": "अच्छा दिन",
+          "pl-PL": "miłego dnia",
+          "ro-RO": "o zi frumoasă",
+          "tr-TR": "iyi günler",
+          "uk-UA": "гарного дня",
+          "uz-UZ": "yaxshi kun"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke, Ihnen auch!",
@@ -464,8 +621,42 @@
       "ru-RU": "До свидания!",
       "tr-TR": "Hoşça kalın!",
       "uk-UA": "До побачення!",
-      "uz-UZ": "Xayr!"
+      "uz-UZ": "Ko'rishguncha!"
     },
+    "vocabulary": [
+      {
+        "german": "gleichfalls",
+        "translation": {
+          "ru-RU": "взаимно",
+          "en-US": "likewise",
+          "ar-SA": "وبالمثل",
+          "es-ES": "igualmente",
+          "fr-FR": "pareillement",
+          "hi-IN": "आपको भी",
+          "pl-PL": "nawzajem",
+          "ro-RO": "la fel",
+          "tr-TR": "bilmukabele",
+          "uk-UA": "навзаєм",
+          "uz-UZ": "sizga ham"
+        }
+      },
+      {
+        "german": "auf Wiedersehen",
+        "translation": {
+          "ru-RU": "до свидания",
+          "en-US": "goodbye",
+          "ar-SA": "إلى اللقاء",
+          "es-ES": "adiós",
+          "fr-FR": "au revoir",
+          "hi-IN": "अलविदा",
+          "pl-PL": "do widzenia",
+          "ro-RO": "la revedere",
+          "tr-TR": "hoşça kalın",
+          "uk-UA": "до побачення",
+          "uz-UZ": "xayr"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Auf Wiedersehen!",
@@ -511,7 +702,7 @@
       "en-US": "The shopping is finished.",
       "es-ES": "La compra ha terminado.",
       "fr-FR": "L'achat est terminé.",
-      "hi-IN": "खरीदारी समाप्त हो गई है।",
+      "hi-IN": "खरीदारी समाप्त हो गई है。",
       "pl-PL": "Zakupy zostały zakończone.",
       "ro-RO": "Cumpărăturile s-au încheiat.",
       "ru-RU": "Покупка завершена.",

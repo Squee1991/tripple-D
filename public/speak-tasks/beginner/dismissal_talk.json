@@ -14,19 +14,40 @@
       "uk-UA": "Добрий день. Проходьте, будь ласка, і сідайте. Нам потрібно поговорити.",
       "uz-UZ": "Xayrli kun. Iltimos, kiring va o'tiring. Biz gaplashib olishimiz kerak."
     },
-    "tips": {
-      "ru-RU": "Глагол 'sich setzen' (садиться) требует Akkusativ (Куда?). Возвратное местоимение 'sich' здесь обязательно.",
-      "en-US": "The verb 'sich setzen' (to sit down) requires Akkusativ. The reflexive pronoun 'sich' is mandatory.",
-      "ar-SA": "الفعل 'sich setzen' يتطلب حالة Akkusativ.",
-      "es-ES": "El verbo 'sich setzen' requiere Akkusativ.",
-      "fr-FR": "Le verbe 'sich setzen' exige l'Akkusativ.",
-      "hi-IN": "क्रिया 'sich setzen' को Akkusativ की आवश्यकता होती है।",
-      "pl-PL": "Czasownik 'sich setzen' (siadać) wymaga biernika (Akkusativ).",
-      "ro-RO": "Verbul 'sich setzen' cere Akkusativ.",
-      "tr-TR": "'sich setzen' fiili Akkusativ gerektirir.",
-      "uk-UA": "Дієслово 'sich setzen' вимагає Akkusativ. Зворотний займенник 'sich' обов'язковий.",
-      "uz-UZ": "'sich setzen' fe'li Akkusativ talab qiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "rein",
+        "translation": {
+          "ru-RU": "внутрь",
+          "en-US": "in",
+          "ar-SA": "إلى الداخل",
+          "es-ES": "dentro",
+          "fr-FR": "dedans",
+          "hi-IN": "अंदर",
+          "pl-PL": "do środka",
+          "ro-RO": "înauntru",
+          "tr-TR": "içeri",
+          "uk-UA": "всередину",
+          "uz-UZ": "ichkariga"
+        }
+      },
+      {
+        "german": "sprechen",
+        "translation": {
+          "ru-RU": "говорить",
+          "en-US": "to speak/talk",
+          "ar-SA": "يتحدث",
+          "es-ES": "hablar",
+          "fr-FR": "parler",
+          "hi-IN": "बात करना",
+          "pl-PL": "rozmawiać",
+          "ro-RO": "a vorbi",
+          "tr-TR": "konuşmak",
+          "uk-UA": "говорити",
+          "uz-UZ": "gaplashmoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Guten Tag. Gibt es ein Problem?",
@@ -80,19 +101,40 @@
       "uk-UA": "Ситуація в нашій фірмі зараз, на жаль, дуже важка. Ми повинні економити.",
       "uz-UZ": "Kompaniyamizdagi vaziyat afsuski hozir juda og'ir. Biz tejashimiz kerak."
     },
-    "tips": {
-      "ru-RU": "На вопрос 'Где?' (Wo?) предлог 'in' требует Dativ. Женский род 'die Firma' берет у артикля форму 'der' (in unserer Firma).",
-      "en-US": "Answering 'Where?' (Wo?), the preposition 'in' takes Dativ. The feminine noun 'die Firma' takes the article form 'der'.",
-      "ar-SA": "حرف الجر 'in' يجيب على سؤال أين (Wo) ويأخذ Dativ.",
-      "es-ES": "Respondiendo '¿Dónde?' (Wo?), la preposición 'in' toma Dativ.",
-      "fr-FR": "Répondant à 'Où ?' (Wo), la préposition 'in' prend le Datif.",
-      "hi-IN": "'कहाँ?' (Wo?) का उत्तर देते समय, 'in' Dativ लेता है।",
-      "pl-PL": "Na pytanie 'Gdzie?' (Wo?) przyimek 'in' wymaga celownika (Dativ).",
-      "ro-RO": "Răspunzând la 'Unde?' (Wo?), prepoziția 'in' ia Dativ.",
-      "tr-TR": "'Nerede?' (Wo?) sorusuna yanıt verirken 'in' edatı Dativ alır.",
-      "uk-UA": "На питання 'Де?' (Wo?) прийменник 'in' вимагає Dativ. Жіночий рід бере форму 'der'.",
-      "uz-UZ": "'Qayerda?' (Wo?) savoliga javob berganda 'in' predlogi Dativni talab qiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "die Firma",
+        "translation": {
+          "ru-RU": "фирма / компания",
+          "en-US": "company",
+          "ar-SA": "شركة",
+          "es-ES": "empresa",
+          "fr-FR": "entreprise",
+          "hi-IN": "कंपनी",
+          "pl-PL": "firma",
+          "ro-RO": "firmă",
+          "tr-TR": "şirket",
+          "uk-UA": "фірма",
+          "uz-UZ": "kompaniya"
+        }
+      },
+      {
+        "german": "sparen",
+        "translation": {
+          "ru-RU": "экономить",
+          "en-US": "to save",
+          "ar-SA": "يقتصد",
+          "es-ES": "ahorrar",
+          "fr-FR": "économiser",
+          "hi-IN": "बचाना",
+          "pl-PL": "oszczędzać",
+          "ro-RO": "a economisi",
+          "tr-TR": "tasarruf etmek",
+          "uk-UA": "економити",
+          "uz-UZ": "tejash"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Oh nein, das klingt gar nicht gut.",
@@ -146,19 +188,40 @@
       "uk-UA": "Мені справді дуже шкода, але я, на жаль, змушений вас звільнити.",
       "uz-UZ": "Haqiqatan ham juda afsusdaman, lekin afsuski sizni ishdan bo'shatishim kerak."
     },
-    "tips": {
-      "ru-RU": "Фраза 'Es tut mir leid' (мне жаль) всегда используется с Dativ (mir). Глагол 'entlassen' (увольнять) требует Akkusativ (Sie).",
-      "en-US": "The phrase 'Es tut mir leid' (I'm sorry) always uses Dativ (mir). The verb 'entlassen' (to fire) requires Akkusativ (Sie).",
-      "ar-SA": "عبارة 'Es tut mir leid' تأخذ Dativ. والفعل 'entlassen' يأخذ Akkusativ.",
-      "es-ES": "La frase 'Es tut mir leid' siempre usa Dativ. El verbo 'entlassen' requiere Akkusativ.",
-      "fr-FR": "L'expression 'Es tut mir leid' utilise toujours le Datif. Le verbe 'entlassen' requiert l'Akkusativ.",
-      "hi-IN": "वाक्यांश 'Es tut mir leid' हमेशा Dativ का उपयोग करता है। क्रिया 'entlassen' को Akkusativ की आवश्यकता होती है।",
-      "pl-PL": "Zwrot 'Es tut mir leid' (przykro mi) łączy się z celownikiem (mir).",
-      "ro-RO": "Expresia 'Es tut mir leid' folosește mereu Dativ. Verbul 'entlassen' cere Akkusativ.",
-      "tr-TR": "'Es tut mir leid' (üzgünüm) ifadesi her zaman Dativ alır.",
-      "uk-UA": "Фраза 'Es tut mir leid' завжди використовується з Dativ. Дієслово 'entlassen' вимагає Akkusativ.",
-      "uz-UZ": "'Es tut mir leid' iborasi har doim Dativ bilan ishlatiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "entlassen",
+        "translation": {
+          "ru-RU": "увольнять",
+          "en-US": "to fire",
+          "ar-SA": "يقيل",
+          "es-ES": "despedir",
+          "fr-FR": "licencier",
+          "hi-IN": "निकालना",
+          "pl-PL": "zwolnić",
+          "ro-RO": "a concedia",
+          "tr-TR": "işten çıkarmak",
+          "uk-UA": "звільняти",
+          "uz-UZ": "ishdan bo'shatmoq"
+        }
+      },
+      {
+        "german": "tut leid",
+        "translation": {
+          "ru-RU": "жаль",
+          "en-US": "sorry",
+          "ar-SA": "آسف",
+          "es-ES": "lo siento",
+          "fr-FR": "désolé",
+          "hi-IN": "खेद है",
+          "pl-PL": "przykro",
+          "ro-RO": "îmi pare rău",
+          "tr-TR": "üzgünüm",
+          "uk-UA": "шкода",
+          "uz-UZ": "afsusdaman"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Das ist ein Schock für mich! Warum ich?",
@@ -212,19 +275,40 @@
       "uk-UA": "Ми закриваємо ваш відділ. Справа не у вашій роботі, ви добре виконували свою роботу.",
       "uz-UZ": "Biz sizning bo'limingizni yopmoqdamiz. Bu sizning ishingizga bog'liq emas, siz yaxshi ish qildingiz."
     },
-    "tips": {
-      "ru-RU": "Конструкция 'es liegt an' (дело в...) требует Dativ, так как отвечает на вопрос 'Wo? / Woran?'. Женский род 'die Arbeit' берет у артикля форму 'der' (an Ihrer Arbeit).",
-      "en-US": "The construction 'es liegt an' (it is due to) requires Dativ. The feminine noun 'die Arbeit' takes the article form 'der'.",
-      "ar-SA": "التركيب 'es liegt an' يتطلب Dativ.",
-      "es-ES": "La construcción 'es liegt an' requiere Dativ.",
-      "fr-FR": "La construction 'es liegt an' exige le Datif.",
-      "hi-IN": "संरचना 'es liegt an' को Dativ की आवश्यकता होती है।",
-      "pl-PL": "Konstrukcja 'es liegt an' (zależy od) wymaga celownika (Dativ).",
-      "ro-RO": "Construcția 'es liegt an' cere Dativ.",
-      "tr-TR": "'es liegt an' yapısı Dativ gerektirir.",
-      "uk-UA": "Конструкція 'es liegt an' вимагає Dativ. Жіночий рід 'die Arbeit' бере форму 'der'.",
-      "uz-UZ": "'es liegt an' qurilmasi Dativ talab qiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "die Abteilung",
+        "translation": {
+          "ru-RU": "отдел",
+          "en-US": "department",
+          "ar-SA": "قسم",
+          "es-ES": "departamento",
+          "fr-FR": "département",
+          "hi-IN": "विभाग",
+          "pl-PL": "dział",
+          "ro-RO": "departament",
+          "tr-TR": "departman",
+          "uk-UA": "відділ",
+          "uz-UZ": "bo'lim"
+        }
+      },
+      {
+        "german": "gut gemacht",
+        "translation": {
+          "ru-RU": "хорошо сделано",
+          "en-US": "did well",
+          "ar-SA": "قام بعمل جيد",
+          "es-ES": "bien hecho",
+          "fr-FR": "bien fait",
+          "hi-IN": "अच्छा किया",
+          "pl-PL": "dobra robota",
+          "ro-RO": "treabă bună",
+          "tr-TR": "iyi iş",
+          "uk-UA": "добре зроблено",
+          "uz-UZ": "yaxshi bajarilgan"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Wie lange kann ich denn noch hier arbeiten?",
@@ -278,19 +362,40 @@
       "uk-UA": "Ваш договір діє ще до кінця наступного місяця.",
       "uz-UZ": "Sizning shartnomangiz keyingi oyning oxirigacha amal qiladi."
     },
-    "tips": {
-      "ru-RU": "Предлог 'zu' всегда требует Dativ. 'bis zum' = 'bis zu dem'. Средний род 'das Ende' берет у артикля форму 'dem'.",
-      "en-US": "The preposition 'zu' always requires Dativ ('bis zum' = 'bis zu dem'). The neuter noun 'das Ende' takes the article form 'dem'.",
-      "ar-SA": "حرف الجر 'zu' يتطلب دائماً Dativ.",
-      "es-ES": "La preposición 'zu' siempre requiere Dativ.",
-      "fr-FR": "La préposition 'zu' requiert toujours le Datif.",
-      "hi-IN": "पूर्वसर्ग 'zu' को हमेशा Dativ की आवश्यकता होती है।",
-      "pl-PL": "Przyimek 'zu' zawsze wymaga celownika (Dativ).",
-      "ro-RO": "Prepoziția 'zu' cere întotdeauna Dativ.",
-      "tr-TR": "'zu' edatı her zaman Dativ gerektirir.",
-      "uk-UA": "Прийменник 'zu' завжди вимагає Dativ. Середній рід 'das Ende' бере форму 'dem'.",
-      "uz-UZ": "'zu' predlogi har doim Dativni talab qiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "der Vertrag",
+        "translation": {
+          "ru-RU": "договор / контракт",
+          "en-US": "contract",
+          "ar-SA": "عقد",
+          "es-ES": "contrato",
+          "fr-FR": "contrat",
+          "hi-IN": "अनुबंध",
+          "pl-PL": "umowa",
+          "ro-RO": "contract",
+          "tr-TR": "sözleşme",
+          "uk-UA": "договір",
+          "uz-UZ": "shartnoma"
+        }
+      },
+      {
+        "german": "der Monat",
+        "translation": {
+          "ru-RU": "месяц",
+          "en-US": "month",
+          "ar-SA": "شهر",
+          "es-ES": "mes",
+          "fr-FR": "mois",
+          "hi-IN": "महीना",
+          "pl-PL": "miesiąc",
+          "ro-RO": "lună",
+          "tr-TR": "ay",
+          "uk-UA": "місяць",
+          "uz-UZ": "oy"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Gut, dann suche ich sofort eine neue Stelle.",
@@ -344,19 +449,40 @@
       "uk-UA": "Так, звісно. Я напишу вам дуже хорошу характеристику.",
       "uz-UZ": "Ha, albatta. Men sizga juda yaxshi ish tavsifnomasini yozib beraman."
     },
-    "tips": {
-      "ru-RU": "Глагол 'schreiben' требует Dativ для получателя (Ihnen - вам) и Akkusativ для того, что пишут (ein gutes Arbeitszeugnis).",
-      "en-US": "The verb 'schreiben' takes Dativ for the recipient (Ihnen) and Akkusativ for the object being written.",
-      "ar-SA": "الفعل 'schreiben' يأخذ Dativ للمستلم و Akkusativ للشيء المكتوب.",
-      "es-ES": "El verbo 'schreiben' toma Dativ para el destinatario y Akkusativ para lo que se escribe.",
-      "fr-FR": "Le verbe 'schreiben' prend le Datif pour le destinataire et l'Akkusativ pour l'objet écrit.",
-      "hi-IN": "क्रिया 'schreiben' प्राप्तकर्ता के लिए Dativ और लिखी जा रही वस्तु के लिए Akkusativ लेती है।",
-      "pl-PL": "Czasownik 'schreiben' wymaga celownika (Ihnen) i biernika (ein Arbeitszeugnis).",
-      "ro-RO": "Verbul 'schreiben' ia Dativ pentru destinatar și Akkusativ pentru obiectul scris.",
-      "tr-TR": "'schreiben' fiili alıcı için Dativ (Ihnen), yazılan nesne için Akkusativ gerektirir.",
-      "uk-UA": "Дієслово 'schreiben' вимагає Dativ для отримувача та Akkusativ для об'єкта.",
-      "uz-UZ": "'schreiben' fe'li qabul qiluvchi uchun Dativ, ob'ekt uchun Akkusativ talab qiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "das Arbeitszeugnis",
+        "translation": {
+          "ru-RU": "характеристика с работы",
+          "en-US": "employment reference",
+          "ar-SA": "شهادة عمل",
+          "es-ES": "carta de recomendación",
+          "fr-FR": "certificat de travail",
+          "hi-IN": "कार्य प्रमाण पत्र",
+          "pl-PL": "świadectwo pracy",
+          "ro-RO": "recomandare",
+          "tr-TR": "çalışma belgesi",
+          "uk-UA": "характеристика з роботи",
+          "uz-UZ": "ish tavsifnomasi"
+        }
+      },
+      {
+        "german": "sehr gut",
+        "translation": {
+          "ru-RU": "очень хорошо",
+          "en-US": "very good",
+          "ar-SA": "جيد جداً",
+          "es-ES": "muy bueno",
+          "fr-FR": "très bon",
+          "hi-IN": "बहुत अच्छा",
+          "pl-PL": "bardzo dobry",
+          "ro-RO": "foarte bun",
+          "tr-TR": "çok iyi",
+          "uk-UA": "дуже добре",
+          "uz-UZ": "juda yaxshi"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Vielen Dank, das hilft mir sehr bei der Jobsuche.",
@@ -384,7 +510,7 @@
           "es-ES": "Gracias, al menos esa es una buena noticia.",
           "fr-FR": "Merci, c'est au moins une bonne nouvelle.",
           "hi-IN": "धन्यवाद, यह कम से कम एक अच्छी खबर है।",
-          "pl-PL": "Dziękuję, to przynajmniej dobra wiadomoсть.",
+          "pl-PL": "Dziękuję, to przynajmniej dobra wiadomość.",
           "ro-RO": "Mulțumesc, asta este cel puțin o veste bună.",
           "tr-TR": "Teşekkürler, bu en azından iyi bir haber.",
           "uk-UA": "Дякую, це принаймні хороша новина.",
@@ -410,19 +536,40 @@
       "uk-UA": "Я бажаю вам великих успіхів у майбутньому.",
       "uz-UZ": "Kelajagingizda sizga katta muvaffaqiyatlar tilayman."
     },
-    "tips": {
-      "ru-RU": "В ответе 'bei der Jobsuche' предлог 'bei' (при) требует Dativ. Женский род 'die Jobsuche' берет у артикля форму 'der'. Предлог 'für' (для) всегда требует Akkusativ (für Ihre Zukunft).",
-      "en-US": "'bei' always requires Dativ ('bei der Jobsuche'). The preposition 'für' always requires Akkusativ ('für Ihre Zukunft').",
-      "ar-SA": "حرف الجر 'bei' يتطلب Dativ. حرف الجر 'für' يتطلب Akkusativ.",
-      "es-ES": "La preposición 'bei' requiere Dativ. La preposición 'für' requiere Akkusativ.",
-      "fr-FR": "La préposition 'bei' requiert le Datif. La préposition 'für' requiert l'Akkusativ.",
-      "hi-IN": "'bei' को हमेशा Dativ की आवश्यकता होती है। 'für' को हमेशा Akkusativ की आवश्यकता होती है।",
-      "pl-PL": "Przyimek 'bei' wymaga celownika (Dativ). Przyimek 'für' wymaga biernika (Akkusativ).",
-      "ro-RO": "Prepoziția 'bei' cere Dativ. Prepoziția 'für' cere Akkusativ.",
-      "tr-TR": "'bei' edatı Dativ gerektirir. 'für' edatı her zaman Akkusativ gerektirir.",
-      "uk-UA": "Прийменник 'bei' вимагає Dativ. Прийменник 'für' завжди вимагає Akkusativ.",
-      "uz-UZ": "'bei' predlogi Dativni, 'für' esa Akkusativni talab qiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "der Erfolg",
+        "translation": {
+          "ru-RU": "успех",
+          "en-US": "success",
+          "ar-SA": "نجاح",
+          "es-ES": "éxito",
+          "fr-FR": "succès",
+          "hi-IN": "सफलता",
+          "pl-PL": "sukces",
+          "ro-RO": "succes",
+          "tr-TR": "başarı",
+          "uk-UA": "успіх",
+          "uz-UZ": "muvaffaqiyat"
+        }
+      },
+      {
+        "german": "die Zukunft",
+        "translation": {
+          "ru-RU": "будущее",
+          "en-US": "future",
+          "ar-SA": "مستقبل",
+          "es-ES": "futuro",
+          "fr-FR": "avenir",
+          "hi-IN": "भविष्य",
+          "pl-PL": "przyszłość",
+          "ro-RO": "viitor",
+          "tr-TR": "gelecek",
+          "uk-UA": "майбутнє",
+          "uz-UZ": "kelajak"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke für die Zusammenarbeit. Auf Wiedersehen.",
@@ -475,37 +622,6 @@
       "tr-TR": "Hoşça kalın ve her şey gönlünüzce olsun!",
       "uk-UA": "До побачення і всього найкращого!",
       "uz-UZ": "Xayr va barcha yaxshiliklarni tilayman!"
-    },
-    "tips": {
-      "ru-RU": "Выражение 'alles Gute' (всего хорошего) используется как универсальное теплое пожелание при прощании.",
-      "en-US": "The expression 'alles Gute' (all the best) is a universal warm wish when saying goodbye.",
-      "ar-SA": "التعبير 'alles Gute' هو أمنية دافئة عامة عند الوداع.",
-      "es-ES": "La expresión 'alles Gute' es un deseo cálido universal al despedirse.",
-      "fr-FR": "L'expression 'alles Gute' est un souhait universel chaleureux au moment de se dire au revoir.",
-      "hi-IN": "विदाई के समय 'alles Gute' (सब अच्छा हो) एक सार्वभौमिक शुभकामना है।",
-      "pl-PL": "Wyrażenie 'alles Gute' (wszystkiego dobrego) to uniwersalne życzenie przy pożegnaniu.",
-      "ro-RO": "Expresia 'alles Gute' este o urare caldă universală la despărțire.",
-      "tr-TR": "'alles Gute' (her şeyin en iyisi) ifadesi vedalaşırken kullanılan evrensel sıcak bir dilektir.",
-      "uk-UA": "Вираз 'alles Gute' використовується як універсальне тепле побажання при прощанні.",
-      "uz-UZ": "'alles Gute' (barcha yaxshiliklar) iborasi xayrlashayotganda universal tilak hisoblanadi."
-    },
-    "options": [],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Das Gespräch ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Разговор завершен.",
-      "en-US": "The conversation is ended.",
-      "ar-SA": "انتهت المحادثة.",
-      "es-ES": "La conversación ha terminado.",
-      "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत समाप्त हो गई है।",
-      "pl-PL": "Rozmowa została zakończona.",
-      "ro-RO": "Conversația s-a încheiat.",
-      "tr-TR": "Konuşma sona erdi.",
-      "uk-UA": "Розмову завершено.",
-      "uz-UZ": "Suhbat yakunlandi."
     },
     "options": [],
     "defaultNext": null

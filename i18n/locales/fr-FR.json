@@ -10224,5 +10224,31 @@
   "speakIndexPage": {
     "title": "Pratique orale",
     "bannerText": "Pratique tes compétences à l'oral avec des exemples concrets"
+  },
+  "rankModal": {
+    "title": "NOUVEAU RANG",
+    "rankedLabel": "Rang",
+    "accept": "ACCEPTER"
+  },
+  "premiumBanner": {
+    "textBanner": "Tire le maximum de la plateforme, accélère ton apprentissage."
+  },
+  "netWork": {
+    "successTitle": "Connexion rétablie !",
+    "notSuccessTitle": "Oups ! Pas d'internet",
+    "successText": "Retour au travail...",
+    "notSuccessText": "En attente de connexion réseau..."
+  },
+  "termsBlock": {
+    "first": "En vous inscrivant, vous acceptez les",
+    "second": "Conditions d'utilisation",
+    "third": "et la",
+    "fourth": "Politique de confidentialité"
+  },
+  "languagePage": {
+    "title": "Langue de l'application",
+    "placeholder": "Rechercher une langue...",
+    "notfound": "Aucun résultat",
+    "further": "Continuer"
   }
 }

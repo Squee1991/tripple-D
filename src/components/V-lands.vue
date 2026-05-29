@@ -255,7 +255,6 @@ onBeforeUnmount(() => {
   font-weight: 600;
   letter-spacing: .2px;
   font-family: "Nunito", sans-serif;
-  text-shadow: 1px 1px var(--regionBtnColor);
 }
 
 .map-layout {
@@ -270,7 +269,8 @@ onBeforeUnmount(() => {
   min-width: 300px;
   max-width: 100%;
   flex: 1;
-  border: 3px solid var(--border);
+  border: 3px solid var(--borderMobile);
+  padding: 0 10px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -535,12 +535,16 @@ onBeforeUnmount(() => {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .map-layout {
     position: relative;
     display: block;
     overflow-y: auto;
     height: auto;
+  }
+
+  .mal__left-content{
+    justify-content: start;
   }
 
   .map-right {
@@ -707,7 +711,6 @@ onBeforeUnmount(() => {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  padding: 0 5px;
 }
 
 .arrow-btn {

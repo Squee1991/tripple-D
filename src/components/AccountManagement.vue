@@ -1,5 +1,5 @@
 <template>
-  <div class="account-tab-body">
+  <div v-if="!authStore.isPremium" class="account-tab-body">
     <div
         class="premium-banner"
         :class="{
@@ -14,9 +14,7 @@
         <h4 v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
           ⚠️ Подписка отменена
         </h4>
-        <h4 v-else>
-          👑 SKILLUP PLUS
-        </h4>
+        <h4 v-else>SKILLUP PLUS</h4>
         <p v-if="authStore.isPremium && !authStore.subscriptionCancelled">
           📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}
         </p>
@@ -24,7 +22,7 @@
           📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}
         </p>
         <p v-else>
-          Получи максимум от платформы, ускорь свое обучение.
+          {{ t('premiumBanner.textBanner')}}
         </p>
       </div>
       <div class="premium-actions">
@@ -73,9 +71,6 @@ const openCancelModal = () => {
 </script>
 
 <style scoped>
-.account-tab-body {
-  padding: 15px 0;
-}
 
 .premium-banner {
   margin-top: 5px;

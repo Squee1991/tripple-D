@@ -75,8 +75,7 @@ const initGame = () => {
 }
 
 const goHome = () => {
-  const currentLocale = route.params.locale || 'ru'
-  router.push(`/german-universe`)
+  router.push('/german-universe')
 }
 
 const goToPay = () => {
@@ -94,6 +93,14 @@ onMounted(() => {
     })
   }
 })
+
+onBeforeRouteLeave((to, from, next) => {
+  if (to.path.includes('undefined') || to.matched.length === 0) {
+    next('/german-universe')
+  } else {
+    next()
+  }
+})
 </script>
 
 <template>
@@ -108,7 +115,6 @@ onMounted(() => {
     </div>
     <div v-else class="sky" ref="skyRef">
       <div class="star-layer"></div>
-
       <div class="score-board">
         <span class="score-label"> {{ t('galaxyMenu.points') }} </span>
         <span class="score-value">{{ score }}</span>
@@ -264,8 +270,9 @@ onMounted(() => {
 .score__wrapper{
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 6px;
-  margin: 10px 0;
+  margin-left: 20px;
 }
 
 .sector-info {
@@ -400,11 +407,10 @@ onMounted(() => {
 }
 
 .score-display {
-  margin-bottom: 15px;
+  margin-bottom: 28px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-around;
   gap: 5px;
 }
 
@@ -453,7 +459,7 @@ onMounted(() => {
 }
 
 .astronaut {
-  width: 160px;
+  width: 120px;
 }
 
 .ground-impact-explosion {
@@ -550,7 +556,7 @@ onMounted(() => {
 
 .score-text {
   color: #a0aec0;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 900;
 }
 

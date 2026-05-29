@@ -65,7 +65,7 @@
                             <img
                                 v-if="authStore.avatarUrl"
                                 :src="authStore.avatarUrl"
-                                alt="Аватар"
+                                alt="image"
                                 class="avatar-current"
                             />
                             <div v-else class="avatar-placeholder"></div>
@@ -73,7 +73,7 @@
                           <button
                               @click="isAvatarModalOpen = true"
                               class="change-avatar-btn"
-                              title="Сменить аватар"
+                              title="Change avatar"
                               type="button"
                           >
                             <img src="../assets/images/add.svg" alt="Сменить"/>
@@ -601,11 +601,9 @@ onMounted(async () => {
   display: flex;
   flex-direction: column;
   position: relative;
-  background: #1e1e1e;
   border-radius: 20px;
   padding: 8px;
-  border: 3px solid #2a2a2a;
-  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.1);
+
 }
 
 .sliding-bg {
@@ -626,7 +624,7 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 0 16px;
+  padding:10px 16px;
   position: relative;
   z-index: 2;
   border: none;
@@ -646,8 +644,10 @@ onMounted(async () => {
 
 .nav-label {
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 17px;
   font-family: "Nunito", sans-serif;
+  color: var(--titleColor);
+  margin-left: 10px;
 }
 
 .settings-wrapper {
@@ -859,7 +859,7 @@ onMounted(async () => {
   }
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1023px) {
   .cabinet-wrapper {
     overflow: hidden;
   }
@@ -867,7 +867,7 @@ onMounted(async () => {
   .sidebar-panel {
     position: fixed;
     left: 50%;
-    bottom: 21px;
+    bottom: 25px;
     transform: translateX(-50%);
     width: calc(100% - 20px);
     height: 63px;
@@ -1057,6 +1057,12 @@ onMounted(async () => {
 
 .no-transition {
   transition: none !important;
+}
+
+@media  (min-width: 1024px) {
+  .user__interface {
+    padding: 10px;
+  }
 }
 
 </style>

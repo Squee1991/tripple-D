@@ -10225,5 +10225,31 @@
   "speakIndexPage": {
     "title": "ممارسة المحادثة",
     "bannerText": "تدرب على مهارات التحدث من خلال أمثلة واقعية"
+  },
+  "rankModal": {
+    "title": "رتبة جديدة",
+    "rankedLabel": "الرتبة",
+    "accept": "قبول"
+  },
+  "premiumBanner": {
+    "textBanner": "احصل على أقصى استفادة من المنصة، وسرّع وتيرة تعلمك."
+  },
+  "netWork": {
+    "successTitle": "تم استعادة الاتصال!",
+    "notSuccessTitle": "عذراً! لا يوجد إنترنت",
+    "successText": "نعود للعمل...",
+    "notSuccessText": "بانتظار الاتصال بالشبكة..."
+  },
+  "termsBlock": {
+    "first": "بالتسجيل، أنت توافق على",
+    "second": "شروط الاستخدام",
+    "third": "و",
+    "fourth": "سياسة الخصوصية"
+  },
+  "languagePage": {
+    "title": "لغة التطبيق",
+    "placeholder": "البحث عن لغة...",
+    "notfound": "لم يتم العثور على شيء",
+    "further": "متابعة"
   }
 }

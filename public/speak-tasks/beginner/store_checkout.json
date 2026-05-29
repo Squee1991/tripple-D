@@ -14,19 +14,40 @@
       "uk-UA": "Добрий день! Ви збираєте бонусні бали?",
       "uz-UZ": "Xayrli kun! Sodliqlik ballarini yig'asizmi?"
     },
-    "tips": {
-      "ru-RU": "Прямое дополнение 'Treuepunkte' (баллы) стоит в Akkusativ. Поскольку это множественное число с неопределенным количеством, мы используем его без артикля.",
-      "en-US": "The direct object 'Treuepunkte' is in Akkusativ. As an indefinite plural, it is used without an article.",
-      "ar-SA": "المفعول به المباشر 'Treuepunkte' في حالة النصب. كونه جمعاً غير محدد، يُستخدم بدون أداة.",
-      "es-ES": "El objeto directo 'Treuepunkte' está en Akkusativ. Al ser plural indefinido, se usa sin artículo.",
-      "fr-FR": "L'objet direct 'Treuepunkte' est à l'Akkusativ. Au pluriel indéfini, il s'utilise sans article.",
-      "hi-IN": "प्रत्यक्ष वस्तु 'Treuepunkte' Akkusativ में है। अनिश्चित बहुवचन के रूप में, यह बिना लेख के प्रयोग किया जाता है।",
-      "pl-PL": "Dopełnienie bliższe 'Treuepunkte' jest w bierniku. Jako nieokreślona liczba mnoga, występuje bez przedimka.",
-      "ro-RO": "Obiectul direct 'Treuepunkte' este în Akkusativ. Ca plural nedefinit, se folosește fără articol.",
-      "tr-TR": "Doğrudan nesne 'Treuepunkte' Akkusativ'dedir. Belirsiz çoğul olduğu için artikelsiz kullanılır.",
-      "uk-UA": "Прямий додаток 'Treuepunkte' стоїть у Akkusativ. Оскільки це множина, артикль не використовується.",
-      "uz-UZ": "To'g'ridan-to'g'ri obyekt 'Treuepunkte' Akkusativda. Noaniq ko'plik bo'lgani uchun u artiklsiz ishlatiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "sammeln",
+        "translation": {
+          "ru-RU": "собирать",
+          "en-US": "to collect",
+          "ar-SA": "يجمع",
+          "es-ES": "coleccionar",
+          "fr-FR": "collectionner",
+          "hi-IN": "इकट्ठा करना",
+          "pl-PL": "zbierać",
+          "ro-RO": "a colecta",
+          "tr-TR": "toplamak",
+          "uk-UA": "збирати",
+          "uz-UZ": "yig'moq"
+        }
+      },
+      {
+        "german": "die Treuepunkte",
+        "translation": {
+          "ru-RU": "бонусные баллы",
+          "en-US": "loyalty points",
+          "ar-SA": "نقاط الولاء",
+          "es-ES": "puntos de fidelidad",
+          "fr-FR": "points de fidélité",
+          "hi-IN": "लॉयल्टी पॉइंट",
+          "pl-PL": "punkty lojalnościowe",
+          "ro-RO": "puncte de fidelitate",
+          "tr-TR": "sadakat puanları",
+          "uk-UA": "бонусні бали",
+          "uz-UZ": "sodiqlik ballari"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Nein, danke.",
@@ -80,19 +101,40 @@
       "uk-UA": "Ви все знайшли?",
       "uz-UZ": "Hamma narsani topdingizmi?"
     },
-    "tips": {
-      "ru-RU": "Глагол 'finden' (находить) требует Akkusativ. 'Alles' (всё) выступает как прямое дополнение.",
-      "en-US": "The verb 'finden' (to find) requires Akkusativ. 'Alles' (everything) acts as the direct object.",
-      "ar-SA": "الفعل 'finden' (يجد) يتطلب النصب. 'Alles' (كل شيء) تعمل كمفعول به مباشر.",
-      "es-ES": "El verbo 'finden' (encontrar) requiere Akkusativ. 'Alles' (todo) actúa como objeto directo.",
-      "fr-FR": "Le verbe 'finden' (trouver) requiert l'Akkusativ. 'Alles' (tout) agit comme objet direct.",
-      "hi-IN": "क्रिया 'finden' को Akkusativ की आवश्यकता होती है। 'Alles' (सब कुछ) प्रत्यक्ष वस्तु के रूप में कार्य करता है।",
-      "pl-PL": "Czasownik 'finden' (znaleźć) wymaga biernika. 'Alles' (wszystko) pełni funkcję dopełnienia bliższego.",
-      "ro-RO": "Verbul 'finden' (a găsi) cere Akkusativ. 'Alles' (totul) acționează ca obiect direct.",
-      "tr-TR": "'finden' fiili Akkusativ gerektirir. 'Alles' (her şey) doğrudan nesne görevi görür.",
-      "uk-UA": "Дієслово 'finden' вимагає Akkusativ. 'Alles' (все) виступає як прямий додаток.",
-      "uz-UZ": "'finden' fe'li Akkusativni talab qiladi. 'Alles' (hamma narsa) to'g'ridan-to'g'ri obyekt vazifasini bajaradi."
-    },
+    "vocabulary": [
+      {
+        "german": "alles",
+        "translation": {
+          "ru-RU": "всё",
+          "en-US": "everything",
+          "ar-SA": "كل شيء",
+          "es-ES": "todo",
+          "fr-FR": "tout",
+          "hi-IN": "सब कुछ",
+          "pl-PL": "wszystko",
+          "ro-RO": "totul",
+          "tr-TR": "her şey",
+          "uk-UA": "все",
+          "uz-UZ": "hamma narsa"
+        }
+      },
+      {
+        "german": "finden",
+        "translation": {
+          "ru-RU": "находить",
+          "en-US": "to find",
+          "ar-SA": "يجد",
+          "es-ES": "encontrar",
+          "fr-FR": "trouver",
+          "hi-IN": "खोजना",
+          "pl-PL": "znaleźć",
+          "ro-RO": "a găsi",
+          "tr-TR": "bulmak",
+          "uk-UA": "знаходити",
+          "uz-UZ": "topmoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, alles super, danke.",
@@ -146,19 +188,40 @@
       "uk-UA": "Вам потрібен пакет?",
       "uz-UZ": "Sizga paket kerakmi?"
     },
-    "tips": {
-      "ru-RU": "Для Akkusativ мы применяем то же правило: женский род 'die Tüte' (пакет) берет у артикля форму 'eine'.",
-      "en-US": "For Akkusativ, the feminine noun 'die Tüte' (bag) takes the article form 'eine'.",
-      "ar-SA": "في حالة النصب (Akkusativ)، تأخذ الكلمة المؤنثة 'die Tüte' أداة 'eine'.",
-      "es-ES": "En Akkusativ, el sustantivo femenino 'die Tüte' toma la forma del artículo 'eine'.",
-      "fr-FR": "À l'Akkusativ, le nom féminin 'die Tüte' prend l'article 'eine'.",
-      "hi-IN": "Akkusativ के लिए, स्त्रीलिंग संज्ञा 'die Tüte' (बैग) 'eine' रूप लेती है।",
-      "pl-PL": "W bierniku (Akkusativ) rzeczownik żeński 'die Tüte' przyjmuje formę 'eine'.",
-      "ro-RO": "Pentru Akkusativ, substantivul feminin 'die Tüte' ia forma 'eine'.",
-      "tr-TR": "Akkusativ için dişil isim 'die Tüte' (poşet) 'eine' formunu alır.",
-      "uk-UA": "Для Akkusativ жіночий рід 'die Tüte' бере форму 'eine'.",
-      "uz-UZ": "Akkusativda ayol jinsidagi 'die Tüte' 'eine' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "brauchen",
+        "translation": {
+          "ru-RU": "нуждаться",
+          "en-US": "to need",
+          "ar-SA": "يحتاج",
+          "es-ES": "necesitar",
+          "fr-FR": "avoir besoin",
+          "hi-IN": "आवश्यकता होना",
+          "pl-PL": "potrzebować",
+          "ro-RO": "a avea nevoie",
+          "tr-TR": "ihtiyacı olmak",
+          "uk-UA": "потребувати",
+          "uz-UZ": "kerak bo'lmoq"
+        }
+      },
+      {
+        "german": "die Tüte",
+        "translation": {
+          "ru-RU": "пакет",
+          "en-US": "bag",
+          "ar-SA": "كيس",
+          "es-ES": "bolsa",
+          "fr-FR": "sac",
+          "hi-IN": "थैला / बैग",
+          "pl-PL": "reklamówka / torba",
+          "ro-RO": "pungă",
+          "tr-TR": "poşet",
+          "uk-UA": "пакет",
+          "uz-UZ": "sumka / paket"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Nein, ich habe eine Tasche dabei.",
@@ -212,19 +275,40 @@
       "uk-UA": "З Вас 12 євро 50.",
       "uz-UZ": "Hammasi bo'lib 12 yevro 50 bo'ladi."
     },
-    "tips": {
-      "ru-RU": "Предлог 'mit' (с) всегда требует Dativ. Так же, как и при ответе на вопрос 'Где?' (Wo?), женский род 'die Karte' берет у артикля форму 'der' (mit der Karte). Часто артикль опускают: 'mit Karte'.",
-      "en-US": "The preposition 'mit' requires Dativ. Just like answering 'Where?' (Wo?), 'die Karte' takes the form 'der'. Often used without article: 'mit Karte'.",
-      "ar-SA": "حرف الجر 'mit' يتطلب Dativ. وتأخذ 'die Karte' صيغة 'der'.",
-      "es-ES": "La preposición 'mit' requiere Dativ. 'die Karte' toma la forma 'der'. A menudo se usa sin artículo: 'mit Karte'.",
-      "fr-FR": "La préposition 'mit' requiert le Datif. 'die Karte' prend la forme 'der'. Souvent utilisé sans article : 'mit Karte'.",
-      "hi-IN": "पूर्वसर्ग 'mit' को Dativ की आवश्यकता होती है। 'die Karte' 'der' रूप लेता है।",
-      "pl-PL": "Przyimek 'mit' wymaga celownika. 'die Karte' przyjmuje formę 'der'. Często mówi się po prostu 'mit Karte'.",
-      "ro-RO": "Prepoziția 'mit' cere Dativ. 'die Karte' ia forma 'der'. Deseori se folosește fără articol: 'mit Karte'.",
-      "tr-TR": "'mit' edatı Dativ gerektirir. 'die Karte' 'der' formunu alır. Genellikle artikelsiz kullanılır: 'mit Karte'.",
-      "uk-UA": "Прийменник 'mit' завжди вимагає Dativ. Жіночий рід 'die Karte' бере форму 'der'.",
-      "uz-UZ": "'mit' predlogi doim Dativ talab qiladi. 'die Karte' 'der' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "zusammen",
+        "translation": {
+          "ru-RU": "вместе",
+          "en-US": "together",
+          "ar-SA": "معاً",
+          "es-ES": "juntos",
+          "fr-FR": "ensemble",
+          "hi-IN": "साथ में",
+          "pl-PL": "razem",
+          "ro-RO": "împreună",
+          "tr-TR": "birlikte",
+          "uk-UA": "разом",
+          "uz-UZ": "birga"
+        }
+      },
+      {
+        "german": "das macht",
+        "translation": {
+          "ru-RU": "итого / с вас",
+          "en-US": "that makes / total",
+          "ar-SA": "الحساب",
+          "es-ES": "en total / eso hace",
+          "fr-FR": "ça fait",
+          "hi-IN": "कुल हुआ",
+          "pl-PL": "to wynosi",
+          "ro-RO": "în total",
+          "tr-TR": "tutar",
+          "uk-UA": "разом / з вас",
+          "uz-UZ": "jami"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Kann ich mit Karte bezahlen?",
@@ -237,6 +321,7 @@
           "hi-IN": "क्या मैं कार्ड से भुगतान कर सकता हूँ?",
           "pl-PL": "Czy mogę zapłacić kartą?",
           "ro-RO": "Pot plăti cu cardul?",
+          "ru-RU": "Могу я заплатить картой?",
           "tr-TR": "Kartla ödeyebilir miyim?",
           "uk-UA": "Чи можу я оплатити карткою?",
           "uz-UZ": "Karta bilan to'lasam bo'ladimi?"
@@ -278,19 +363,40 @@
       "uk-UA": "Звісно. Вам потрібен чек?",
       "uz-UZ": "Albatta. Sizga chek kerakmi?"
     },
-    "tips": {
-      "ru-RU": "Для Akkusativ мы применяем то же правило: мужской род 'der Kassenbon' берет у артикля форму 'den'.",
-      "en-US": "For Akkusativ, the masculine noun 'der Kassenbon' takes the article form 'den'.",
-      "ar-SA": "في حالة النصب، تأخذ الكلمة المذكرة 'der Kassenbon' أداة 'den'.",
-      "es-ES": "En Akkusativ, el sustantivo masculino 'der Kassenbon' toma la forma del artículo 'den'.",
-      "fr-FR": "À l'Akkusativ, le nom masculin 'der Kassenbon' prend l'article 'den'.",
-      "hi-IN": "Akkusativ के लिए, पुल्लिंग संज्ञा 'der Kassenbon' 'den' रूप लेती है।",
-      "pl-PL": "W bierniku rodzaj męski 'der Kassenbon' przyjmuje formę 'den'.",
-      "ro-RO": "În Akkusativ, substantivul masculin 'der Kassenbon' ia forma 'den'.",
-      "tr-TR": "Akkusativ için eril isim 'der Kassenbon' 'den' formunu alır.",
-      "uk-UA": "Для Akkusativ чоловічий рід 'der Kassenbon' бере форму 'den'.",
-      "uz-UZ": "Akkusativda erkak jinsidagi 'der Kassenbon' 'den' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "natürlich",
+        "translation": {
+          "ru-RU": "конечно",
+          "en-US": "of course",
+          "ar-SA": "بالطبع",
+          "es-ES": "por supuesto",
+          "fr-FR": "bien sûr",
+          "hi-IN": "बिल्कुल",
+          "pl-PL": "oczywiście",
+          "ro-RO": "desigur",
+          "tr-TR": "elbette",
+          "uk-UA": "звісно",
+          "uz-UZ": "albatta"
+        }
+      },
+      {
+        "german": "der Kassenbon",
+        "translation": {
+          "ru-RU": "чек",
+          "en-US": "receipt",
+          "ar-SA": "إيصال",
+          "es-ES": "recibo",
+          "fr-FR": "ticket de caisse",
+          "hi-IN": "रसीद",
+          "pl-PL": "paragon",
+          "ro-RO": "bon fiscal",
+          "tr-TR": "fiş",
+          "uk-UA": "чек",
+          "uz-UZ": "chek"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, bitte geben Sie mir den Bon.",
@@ -344,19 +450,40 @@
       "uk-UA": "Все ясно. Бажаю гарного дня!",
       "uz-UZ": "Tushunarli. Yaxshi kun tilayman!"
     },
-    "tips": {
-      "ru-RU": "Здесь пожелание 'einen schönen Tag' стоит в Akkusativ. Мужской род 'der Tag' берет у артикля форму 'einen' (einen schönen Tag).",
-      "en-US": "The wish 'einen schönen Tag' is in Akkusativ. The masculine noun 'der Tag' takes the form 'einen'.",
-      "ar-SA": "التمني 'einen schönen Tag' في حالة النصب. 'der Tag' تأخذ صيغة 'einen'.",
-      "es-ES": "El deseo 'einen schönen Tag' está en Akkusativ. El sustantivo masculino 'der Tag' toma la forma 'einen'.",
-      "fr-FR": "Le souhait 'einen schönen Tag' est à l'Akkusativ. Le nom masculin 'der Tag' prend la forme 'einen'.",
-      "hi-IN": "शुभकामना 'einen schönen Tag' Akkusativ में है। पुल्लिंग संज्ञा 'der Tag' 'einen' रूप लेती है।",
-      "pl-PL": "Życzenie 'einen schönen Tag' jest w bierniku. Rzeczownik męski 'der Tag' przyjmuje formę 'einen'.",
-      "ro-RO": "Urarea 'einen schönen Tag' este în Akkusativ. Substantivul masculin 'der Tag' ia forma 'einen'.",
-      "tr-TR": "Dilek 'einen schönen Tag' Akkusativ'dedir. Eril isim 'der Tag' 'einen' formunu alır.",
-      "uk-UA": "Побажання стоїть у Akkusativ. Чоловічий рід 'der Tag' бере форму 'einen'.",
-      "uz-UZ": "Tilak Akkusativda. Erkak jinsidagi 'der Tag' 'einen' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "wünschen",
+        "translation": {
+          "ru-RU": "желать",
+          "en-US": "to wish",
+          "ar-SA": "يتمنى",
+          "es-ES": "desear",
+          "fr-FR": "souhaiter",
+          "hi-IN": "कामना करना",
+          "pl-PL": "życzyć",
+          "ro-RO": "a ura",
+          "tr-TR": "dilemek",
+          "uk-UA": "бажати",
+          "uz-UZ": "tilamoq"
+        }
+      },
+      {
+        "german": "einen schönen Tag",
+        "translation": {
+          "ru-RU": "хорошего дня",
+          "en-US": "a nice day",
+          "ar-SA": "يوم جميل",
+          "es-ES": "un buen día",
+          "fr-FR": "une bonne journée",
+          "hi-IN": "अच्छा दिन",
+          "pl-PL": "miłego dnia",
+          "ro-RO": "o zi frumoasă",
+          "tr-TR": "iyi günler",
+          "uk-UA": "гарного дня",
+          "uz-UZ": "yaxshi kun"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke, Ihnen auch einen schönen Tag!",
@@ -410,19 +537,40 @@
       "uk-UA": "До побачення і до наступного разу!",
       "uz-UZ": "Xayr va keyingi safargacha!"
     },
-    "tips": {
-      "ru-RU": "Ответ 'Tschüss!' (Пока) — самый частый и естественный вариант прощания на кассе в Германии.",
-      "en-US": "The response 'Tschüss!' (Bye) is the most common and natural way to say goodbye at a checkout in Germany.",
-      "ar-SA": "الرد 'Tschüss!' هو الطريقة الأكثر شيوعاً وطبيعية للوداع عند الخزينة في ألمانيا.",
-      "es-ES": "La respuesta 'Tschüss!' es la forma más común y natural de despedirse en la caja en Alemania.",
-      "fr-FR": "La réponse 'Tschüss !' est la façon la plus courante et naturelle de dire au revoir à la caisse en Allemagne.",
-      "hi-IN": "जर्मनी में चेकआउट पर विदाई कहने का सबसे आम तरीका 'Tschüss!' है।",
-      "pl-PL": "Odpowiedź 'Tschüss!' to najczęstszy i najbardziej naturalny sposób pożegnania przy kasie w Niemczech.",
-      "ro-RO": "Răspunsul 'Tschüss!' este cel mai des întâlnit și natural mod de a-ți lua rămas bun la o casă de marcat în Germania.",
-      "tr-TR": "Almanya'da kasada veda etmenin en yaygın ve doğal yolu 'Tschüss!' demektir.",
-      "uk-UA": "Відповідь 'Tschüss!' — найчастіший і найприродніший варіант прощання на касі в Німеччині.",
-      "uz-UZ": "'Tschüss!' javobi - Germaniyada kassada xayrlashishning eng keng tarqalgan va tabiiy usuli."
-    },
+    "vocabulary": [
+      {
+        "german": "auf Wiedersehen",
+        "translation": {
+          "ru-RU": "до свидания",
+          "en-US": "goodbye",
+          "ar-SA": "إلى اللقاء",
+          "es-ES": "adiós",
+          "fr-FR": "au revoir",
+          "hi-IN": "अलविदा",
+          "pl-PL": "do widzenia",
+          "ro-RO": "la revedere",
+          "tr-TR": "hoşça kalın",
+          "uk-UA": "до побачення",
+          "uz-UZ": "xayr"
+        }
+      },
+      {
+        "german": "bis zum nächsten Mal",
+        "translation": {
+          "ru-RU": "до следующего раза",
+          "en-US": "until next time",
+          "ar-SA": "حتى المرة القادمة",
+          "es-ES": "hasta la próxima",
+          "fr-FR": "à la prochaine fois",
+          "hi-IN": "अगली बार तक",
+          "pl-PL": "do następnego razu",
+          "ro-RO": "pe data viitoare",
+          "tr-TR": "bir dahaki sefere",
+          "uk-UA": "до наступного разу",
+          "uz-UZ": "keyingi safargacha"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Tschüss!",
@@ -469,7 +617,7 @@
       "ar-SA": "انتهت المحادثة.",
       "es-ES": "La conversación ha terminado.",
       "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत समाप्त हो गई है।",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
       "pl-PL": "Rozmowa została zakończona.",
       "ro-RO": "Conversația s-a încheiat.",
       "tr-TR": "Konuşma sona erdi.",

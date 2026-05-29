@@ -1,7 +1,7 @@
 <template>
   <div class="game-loader-overlay">
     <div class="loader-container">
-      <h1 class="app-title">skillupgerman</h1>
+      <img class="preloader__icon" src="../../assets/images/PreloaderIcon.svg" alt="">
       <div class="loader-box"></div>
     </div>
   </div>
@@ -18,6 +18,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.preloader__icon {
+  width: 120px;
+  margin: 0 auto;
 }
 
 .loader-container {

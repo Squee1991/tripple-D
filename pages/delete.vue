@@ -56,7 +56,7 @@
             <div class="account-cleanup__modal">
               <div class="modal-drag-pill"></div>
               <h3 class="account-cleanup__modal-title">{{t('deletePage.modalTitle')}}</h3>
-              <img class="cleanup__icon-modal" src="../assets/images/Sadlyhedgehog.png" alt="Грустный ежик">
+              <img class="cleanup__icon-modal" src="../assets/images/DeleteAccountIcon.svg" alt="Грустный ежик">
               <div class="account-cleanup__auth-zone">
                 <div v-if="isGoogleUser" class="account-cleanup__google-status">
                   {{t('deletePage.cleanUpGoogle')}} <strong>Google</strong>. <br>
@@ -179,6 +179,8 @@ async function processAccountCleanup() {
 
 .account-cleanup__google-status {
   text-align: center;
+  padding: 10px;
+  color: var(--titleColor);
 }
 
 .account-cleanup__header {
@@ -363,7 +365,7 @@ async function processAccountCleanup() {
 .account-cleanup__modal {
   width: 100%;
   max-width: 600px;
-  background: #FFF;
+  background: var(--tabBg);
   border-top: 3px solid var(--tabsSlideBorderColor);
   border-bottom: none;
   border-radius: 32px 32px 0 0;
@@ -390,12 +392,14 @@ async function processAccountCleanup() {
 .account-cleanup__modal-title {
   font-size: 24px;
   font-weight: 900;
+  color: var(--title);
   margin: 15px 0;
 }
 
 .account-cleanup__auth-zone {
   width: 100%;
   margin-bottom: 24px;
+  padding-top: 10px;
 }
 
 .account-cleanup__field-input {

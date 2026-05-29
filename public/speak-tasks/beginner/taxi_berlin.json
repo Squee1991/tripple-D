@@ -1,19 +1,6 @@
 {
   "start": {
     "botText": "Guten Tag! Brauchen Sie ein Taxi?",
-    "tips": {
-      "ar-SA": "السؤال 'Brauchen Sie...؟' يعني 'هل تحتاج...؟' ويأخذ حالة النصب (Akkusativ).",
-      "en-US": "The question 'Brauchen Sie...?' means 'Do you need...?' and takes Akkusativ.",
-      "es-ES": "La pregunta 'Brauchen Sie...?' significa '¿Necesita usted...?' y usa Akkusativ.",
-      "fr-FR": "La question 'Brauchen Sie...?' signifie 'Avez-vous besoin de...?' et prend l'Akkusativ.",
-      "hi-IN": "प्रश्न 'Brauchen Sie...?' का अर्थ है 'क्या आपको... चाहिए?'",
-      "pl-PL": "Pytanie 'Brauchen Sie...?' oznacza 'Czy potrzebuje pan/pani...?' i wymaga biernika.",
-      "ro-RO": "Întrebarea 'Brauchen Sie...?' înseamnă 'Aveți nevoie de...?' și cere Akkusativ.",
-      "ru-RU": "Вопрос 'Brauchen Sie...?' означает 'Вам нужно...?' и требует Akkusativ.",
-      "tr-TR": "'Brauchen Sie...?' sorusu '... ihtiyacınız var mı?' demektir.",
-      "uk-UA": "Запитання 'Brauchen Sie...?' означає 'Вам потрібно...?' і вимагає Akkusativ.",
-      "uz-UZ": "'Brauchen Sie...?' so'rovi 'Sizga ... kerakmi?' degan ma'noni anglatadi."
-    },
     "botTranslation": {
       "ar-SA": "طاب يومك! هل تحتاج إلى سيارة أجرة؟",
       "en-US": "Good day! Do you need a taxi?",
@@ -27,6 +14,40 @@
       "uk-UA": "Добрий день! Вам потрібне таксі?",
       "uz-UZ": "Xayrli kun! Sizga taksi kerakmi?"
     },
+    "vocabulary": [
+      {
+        "german": "brauchen",
+        "translation": {
+          "ru-RU": "нуждаться",
+          "en-US": "to need",
+          "ar-SA": "يحتاج",
+          "es-ES": "necesitar",
+          "fr-FR": "avoir besoin",
+          "hi-IN": "आवश्यकता होना",
+          "pl-PL": "potrzebować",
+          "ro-RO": "a avea nevoie",
+          "tr-TR": "ihtiyacı olmak",
+          "uk-UA": "потребувати",
+          "uz-UZ": "kerak bo'lmoq"
+        }
+      },
+      {
+        "german": "das Taxi",
+        "translation": {
+          "ru-RU": "такси",
+          "en-US": "taxi",
+          "ar-SA": "سيارة أجرة",
+          "es-ES": "taxi",
+          "fr-FR": "taxi",
+          "hi-IN": "टैक्सी",
+          "pl-PL": "taksówka",
+          "ro-RO": "taxi",
+          "tr-TR": "taksi",
+          "uk-UA": "таксі",
+          "uz-UZ": "taksi"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Guten Tag! Ja, bitte.",
@@ -67,19 +88,6 @@
   },
   "destination": {
     "botText": "Gerne. Wohin möchten Sie fahren?",
-    "tips": {
-      "ar-SA": "للسؤال عن الوجهة نستخدم 'Wohin' (إلى أين).",
-      "en-US": "To ask for a destination, we use 'Wohin' (Where to).",
-      "es-ES": "Para preguntar por un destino usamos 'Wohin' (Adónde).",
-      "fr-FR": "Pour demander une destination, on utilise 'Wohin' (Vers où).",
-      "hi-IN": "गंतव्य पूछने के लिए, हम 'Wohin' (कहाँ) का उपयोग करते हैं।",
-      "pl-PL": "Pytając o cel podróży używamy 'Wohin' (Dokąd).",
-      "ro-RO": "Pentru a întreba destinația, folosim 'Wohin' (Încotro).",
-      "ru-RU": "Для вопроса о направлении движения используется 'Wohin' (Куда).",
-      "tr-TR": "Hedef sormak için 'Wohin' (Nereye) kullanılır.",
-      "uk-UA": "Для запитання про напрямок руху використовується 'Wohin' (Куди).",
-      "uz-UZ": "Manzilni so'rash uchun 'Wohin' (Qayerga) ishlatiladi."
-    },
     "botTranslation": {
       "ar-SA": "بكل سرور. إلى أين تود الذهاب؟",
       "en-US": "Gladly. Where would you like to go?",
@@ -93,13 +101,43 @@
       "uk-UA": "Із задоволенням. Куди Ви хочете поїхати?",
       "uz-UZ": "Bajonidil. Qayerga borishni xohlaysiz?"
     },
+    "vocabulary": [
+      {
+        "german": "wohin",
+        "translation": {
+          "ru-RU": "куда",
+          "en-US": "where to",
+          "ar-SA": "إلى أين",
+          "es-ES": "adónde",
+          "fr-FR": "où",
+          "hi-IN": "कहाँ",
+          "pl-PL": "dokąd",
+          "ro-RO": "încotro",
+          "tr-TR": "nereye",
+          "uk-UA": "куди",
+          "uz-UZ": "qayerga"
+        }
+      },
+      {
+        "german": "fahren",
+        "translation": {
+          "ru-RU": "ехать",
+          "en-US": "to drive / go",
+          "ar-SA": "يذهب / يقود",
+          "es-ES": "ir / conducir",
+          "fr-FR": "aller / conduire",
+          "hi-IN": "जाना / चलाना",
+          "pl-PL": "jechać",
+          "ro-RO": "a merge / a conduce",
+          "tr-TR": "gitmek / sürmek",
+          "uk-UA": "їхати",
+          "uz-UZ": "bormoq / haydamoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Zum Alexanderplatz, bitte.",
-        "tips": {
-          "ru-RU": "Предлог 'zu' требует Dativ. zu dem = zum.",
-          "en-US": "The preposition 'zu' requires Dativ. zu dem = zum."
-        },
         "translation": {
           "ar-SA": "إلى ميدان ألكسندر، من فضلك.",
           "en-US": "To Alexanderplatz, please.",
@@ -117,10 +155,6 @@
       },
       {
         "text": "Zur Friedrichstraße, bitte.",
-        "tips": {
-          "ru-RU": "Предлог 'zu' требует Dativ. zu der = zur (женский род).",
-          "en-US": "The preposition 'zu' requires Dativ. zu der = zur."
-        },
         "translation": {
           "ar-SA": "إلى شارع فريدريش، من فضلك.",
           "en-US": "To Friedrichstraße, please.",
@@ -141,19 +175,6 @@
   },
   "price": {
     "botText": "Alles klar. Das kostet ungefähr 20 Euro.",
-    "tips": {
-      "ar-SA": "كلمة 'ungefähr' تعني 'حوالي' أو 'تقريباً'.",
-      "en-US": "The word 'ungefähr' means 'about' or 'approximately'.",
-      "es-ES": "La palabra 'ungefähr' significa 'aproximadamente'.",
-      "fr-FR": "Le mot 'ungefähr' signifie 'environ'.",
-      "hi-IN": "शब्द 'ungefähr' का अर्थ 'लगभग' है।",
-      "pl-PL": "Słowo 'ungefähr' oznacza 'około'.",
-      "ro-RO": "Cuvântul 'ungefähr' înseamnă 'aproximativ'.",
-      "ru-RU": "Слово 'ungefähr' означает 'примерно' или 'около'.",
-      "tr-TR": "'ungefähr' kelimesi 'yaklaşık' anlamına gelir.",
-      "uk-UA": "Слово 'ungefähr' означає 'приблизно' або 'близько'.",
-      "uz-UZ": "'ungefähr' so'zi 'taxminan' degan ma'noni anglatadi."
-    },
     "botTranslation": {
       "ar-SA": "حسناً. هذا سيكلف حوالي 20 يورو.",
       "en-US": "Alright. That will cost about 20 Euros.",
@@ -167,12 +188,27 @@
       "uk-UA": "Зрозуміло. Це буде коштувати приблизно 20 євро.",
       "uz-UZ": "Tushunarli. Bu taxminan 20 yevro bo'ladi."
     },
+    "vocabulary": [
+      {
+        "german": "ungefähr",
+        "translation": {
+          "ru-RU": "примерно",
+          "en-US": "approximately / about",
+          "ar-SA": "تقريباً",
+          "es-ES": "aproximadamente",
+          "fr-FR": "environ",
+          "hi-IN": "लगभग",
+          "pl-PL": "około",
+          "ro-RO": "aproximativ",
+          "tr-TR": "yaklaşık",
+          "uk-UA": "приблизно",
+          "uz-UZ": "taxminan"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Gut. Ich bezahle bar.",
-        "tips": {
-          "ru-RU": "'bar bezahlen' — устойчивое выражение: платить наличными."
-        },
         "translation": {
           "ar-SA": "جيد. سأدفع نقداً.",
           "en-US": "Good. I will pay in cash.",
@@ -210,19 +246,6 @@
   },
   "boarding": {
     "botText": "Kein Problem. Bitte steigen Sie ein.",
-    "tips": {
-      "ar-SA": "'einsteigen' هو فعل منفصل يعني 'الركوب في السيارة'.",
-      "en-US": "'einsteigen' is a separable verb meaning 'to get in (a vehicle)'.",
-      "es-ES": "'einsteigen' es un verbo separable que significa 'subirse'.",
-      "fr-FR": "'einsteigen' est un verbe séparable signifiant 'monter (dans un véhicule)'.",
-      "hi-IN": "'einsteigen' एक अलग करने योग्य क्रिया है जिसका अर्थ है 'गाड़ी में चढ़ना'।",
-      "pl-PL": "'einsteigen' to czasownik rozdzielnie złożony oznaczający 'wsiadać'.",
-      "ro-RO": "'einsteigen' este un verb separabil care înseamnă 'a urca'.",
-      "ru-RU": "Глагол 'einsteigen' (садиться в транспорт) — с отделяемой приставкой 'ein'.",
-      "tr-TR": "'einsteigen' 'binmek' anlamına gelen ayrılabilir bir fiildir.",
-      "uk-UA": "Дієслово 'einsteigen' (сідати в транспорт) — з відокремлюваним префіксом 'ein'.",
-      "uz-UZ": "'einsteigen' (transportga o'tirmoq) ajraladigan fe'l."
-    },
     "botTranslation": {
       "ar-SA": "لا مشكلة. تفضل بالركوب.",
       "en-US": "No problem. Please get in.",
@@ -236,6 +259,24 @@
       "uk-UA": "Без проблем. Будь ласка, сідайте.",
       "uz-UZ": "Muammo yo'q. Iltimos, mashinaga o'tiring."
     },
+    "vocabulary": [
+      {
+        "german": "einsteigen",
+        "translation": {
+          "ru-RU": "садиться (в транспорт)",
+          "en-US": "to get in / board",
+          "ar-SA": "يركب",
+          "es-ES": "subir (a un vehículo)",
+          "fr-FR": "monter (dans un véhicule)",
+          "hi-IN": "चढ़ना",
+          "pl-PL": "wsiadać",
+          "ro-RO": "a urca",
+          "tr-TR": "binmek",
+          "uk-UA": "сідати (в транспорт)",
+          "uz-UZ": "o'tirmoq / chiqmoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke schön.",
@@ -276,19 +317,6 @@
   },
   "duration": {
     "botText": "Wir fahren los. Die Fahrt dauert etwa 15 Minuten.",
-    "tips": {
-      "ar-SA": "الفعل 'dauern' يعني 'يستغرق من الوقت'.",
-      "en-US": "The verb 'dauern' means 'to take time' or 'to last'.",
-      "es-ES": "El verbo 'dauern' significa 'durar' o 'tardar'.",
-      "fr-FR": "Le verbe 'dauern' signifie 'durer' ou 'prendre du temps'.",
-      "hi-IN": "क्रिया 'dauern' का अर्थ है 'समय लगना'।",
-      "pl-PL": "Czasownik 'dauern' oznacza 'trwać'.",
-      "ro-RO": "Verbul 'dauern' înseamnă 'a dura'.",
-      "ru-RU": "Глагол 'dauern' переводится как 'длиться' или 'занимать время'.",
-      "tr-TR": "'dauern' fiili 'sürmek' (zaman almak) anlamına gelir.",
-      "uk-UA": "Дієслово 'dauern' перекладається як 'тривати' або 'займати час'.",
-      "uz-UZ": "'dauern' fe'li 'davom etmoq' degan ma'noni anglatadi."
-    },
     "botTranslation": {
       "ar-SA": "نحن ننطلق. الرحلة تستغرق حوالي 15 دقيقة.",
       "en-US": "We are setting off. The ride takes about 15 minutes.",
@@ -302,6 +330,40 @@
       "uk-UA": "Ми вирушаємо. Поїздка займе близько 15 хвилин.",
       "uz-UZ": "Biz yo'lga chiqyapmiz. Safar taxminan 15 daqiqa davom etadi."
     },
+    "vocabulary": [
+      {
+        "german": "losfahren",
+        "translation": {
+          "ru-RU": "отправляться",
+          "en-US": "to set off / start driving",
+          "ar-SA": "ينطلق",
+          "es-ES": "ponerse en marcha",
+          "fr-FR": "partir",
+          "hi-IN": "रवाना होना",
+          "pl-PL": "wyruszać",
+          "ro-RO": "a porni",
+          "tr-TR": "yola çıkmak",
+          "uk-UA": "вирушати",
+          "uz-UZ": "yo'lga chiqmoq"
+        }
+      },
+      {
+        "german": "dauern",
+        "translation": {
+          "ru-RU": "длиться / занимать время",
+          "en-US": "to last / take (time)",
+          "ar-SA": "يستغرق",
+          "es-ES": "durar / tardar",
+          "fr-FR": "durer",
+          "hi-IN": "समय लगना",
+          "pl-PL": "trwać",
+          "ro-RO": "a dura",
+          "tr-TR": "sürmek",
+          "uk-UA": "тривати",
+          "uz-UZ": "davom etmoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Super!",
@@ -355,6 +417,40 @@
       "uk-UA": "Ось ми і приїхали. З Вас 20 євро, будь ласка.",
       "uz-UZ": "Mana, biz keldik. 20 yevro bo'ladi, iltimos."
     },
+    "vocabulary": [
+      {
+        "german": "da sein",
+        "translation": {
+          "ru-RU": "быть на месте / прибыть",
+          "en-US": "to be there / arrive",
+          "ar-SA": "يصل / يكون هناك",
+          "es-ES": "estar ahí / llegar",
+          "fr-FR": "être là / arriver",
+          "hi-IN": "पहुँचना",
+          "pl-PL": "być na miejscu",
+          "ro-RO": "a fi acolo / a ajunge",
+          "tr-TR": "orada olmak / varmak",
+          "uk-UA": "бути на місці / прибути",
+          "uz-UZ": "yetib kelmoq / shu yerda bo'lmoq"
+        }
+      },
+      {
+        "german": "das macht",
+        "translation": {
+          "ru-RU": "с вас / итого",
+          "en-US": "that makes / comes to",
+          "ar-SA": "الحساب",
+          "es-ES": "eso hace",
+          "fr-FR": "ça fait",
+          "hi-IN": "यह हुआ",
+          "pl-PL": "to wynosi",
+          "ro-RO": "asta face",
+          "tr-TR": "tutar",
+          "uk-UA": "з вас / разом",
+          "uz-UZ": "jami"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Hier sind 20 Euro. Danke.",
@@ -408,6 +504,40 @@
       "uk-UA": "І Вам дякую! Гарного Вам дня в Берліні!",
       "uz-UZ": "Rahmat sizga! Berlinda yaxshi kun tilayman!"
     },
+    "vocabulary": [
+      {
+        "german": "danken",
+        "translation": {
+          "ru-RU": "благодарить",
+          "en-US": "to thank",
+          "ar-SA": "يشكر",
+          "es-ES": "agradecer",
+          "fr-FR": "remercier",
+          "hi-IN": "धन्यवाद देना",
+          "pl-PL": "dziękować",
+          "ro-RO": "a mulțumi",
+          "tr-TR": "teşekkür etmek",
+          "uk-UA": "дякувати",
+          "uz-UZ": "rahmat aytmoq"
+        }
+      },
+      {
+        "german": "schönen Tag",
+        "translation": {
+          "ru-RU": "хорошего дня",
+          "en-US": "nice day",
+          "ar-SA": "يوم جميل",
+          "es-ES": "buen día",
+          "fr-FR": "bonne journée",
+          "hi-IN": "अच्छा दिन",
+          "pl-PL": "miłego dnia",
+          "ro-RO": "o zi frumoasă",
+          "tr-TR": "iyi günler",
+          "uk-UA": "гарного дня",
+          "uz-UZ": "yaxshi kun"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke, Ihnen auch!",
@@ -461,6 +591,24 @@
       "uk-UA": "До побачення!",
       "uz-UZ": "Xayr!"
     },
+    "vocabulary": [
+      {
+        "german": "auf Wiedersehen",
+        "translation": {
+          "ru-RU": "до свидания",
+          "en-US": "goodbye",
+          "ar-SA": "إلى اللقاء",
+          "es-ES": "adiós",
+          "fr-FR": "au revoir",
+          "hi-IN": "अलविदा",
+          "pl-PL": "do widzenia",
+          "ro-RO": "la revedere",
+          "tr-TR": "hoşça kalın",
+          "uk-UA": "до побачення",
+          "uz-UZ": "xayr"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Auf Wiedersehen!",
@@ -506,7 +654,7 @@
       "en-US": "The taxi ride is finished.",
       "es-ES": "El viaje en taxi ha terminado.",
       "fr-FR": "Le trajet en taxi est terminé.",
-      "hi-IN": "टैक्सी की सवारी समाप्त हो गई है।",
+      "hi-IN": "टैक्सी की सवारी समाप्त हो गई है。",
       "pl-PL": "Jazda taksówką zakończona.",
       "ro-RO": "Călătoria cu taxiul s-a încheiat.",
       "ru-RU": "Поездка на такси окончена.",

@@ -100,7 +100,7 @@
             ⚠️ Подписка отменена
           </h4>
           <h4 v-else>
-            👑 Стань Plus
+            SKILLUP PLUS
           </h4>
           <p v-if="authStore.isPremium && !authStore.subscriptionCancelled">
             📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}

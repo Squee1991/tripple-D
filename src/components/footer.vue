@@ -55,7 +55,7 @@ const activeIndex = computed(() => {
   position: fixed;
   max-width: 1240px;
   margin: 0 auto;
-  bottom: 21px;
+  bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 20px);

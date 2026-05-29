@@ -14,19 +14,40 @@
       "uk-UA": "Привіт Анна, як пройшли твої вихідні?",
       "uz-UZ": "Salom Anna, dam olish kuningiz qanday o'tdi?"
     },
-    "tips": {
-      "ru-RU": "Вопросительное слово 'wie' (как). Слово 'das Wochenende' (выходные) среднего рода, поэтому берет у артикля форму 'dein' (твои).",
-      "en-US": "'Wie' means 'how'. 'das Wochenende' is neuter, so it takes the possessive 'dein'.",
-      "ar-SA": "كلمة 'Wie' تعني 'كيف'. 'Wochenende' محايد، لذا تأخذ 'dein'.",
-      "es-ES": "'Wie' significa 'cómo'. 'Wochenende' es neutro, así que toma 'dein'.",
-      "fr-FR": "'Wie' signifie 'comment'. 'Wochenende' est neutre, donc on utilise 'dein'.",
-      "hi-IN": "'Wie' का अर्थ है 'कैसे'। 'Wochenende' नपुंसक लिंग है, इसलिए यह 'dein' लेता है।",
-      "pl-PL": "'Wie' oznacza 'jak'. 'Wochenende' jest rodzaju nijakiego, więc przyjmuje 'dein'.",
-      "ro-RO": "'Wie' înseamnă 'cum'. 'Wochenende' este neutru, deci ia 'dein'.",
-      "tr-TR": "'Wie' 'nasıl' demektir. 'Wochenende' nötrdür, bu yüzden 'dein' alır.",
-      "uk-UA": "Питальне слово 'wie' (як). Слово 'das Wochenende' середнього роду, тому бере 'dein'.",
-      "uz-UZ": "'Wie' 'qanday' degani. 'Wochenende' o'rta jinsda, shuning uchun 'dein' oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "das Wochenende",
+        "translation": {
+          "ru-RU": "выходные",
+          "en-US": "the weekend",
+          "ar-SA": "عطلة نهاية الأسبوع",
+          "es-ES": "el fin de semana",
+          "fr-FR": "le week-end",
+          "hi-IN": "सप्ताहांत",
+          "pl-PL": "weekend",
+          "ro-RO": "weekendul",
+          "tr-TR": "hafta sonu",
+          "uk-UA": "вихідні",
+          "uz-UZ": "dam olish kuni"
+        }
+      },
+      {
+        "german": "wie war",
+        "translation": {
+          "ru-RU": "как прошли",
+          "en-US": "how was",
+          "ar-SA": "كيف كان",
+          "es-ES": "cómo estuvo",
+          "fr-FR": "comment c'était",
+          "hi-IN": "कैसा था",
+          "pl-PL": "jak minął",
+          "ro-RO": "cum a fost",
+          "tr-TR": "nasıldı",
+          "uk-UA": "як минув",
+          "uz-UZ": "qanday o'tdi"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Hallo! Es war toll. Ich habe einen Ausflug gemacht.",
@@ -80,19 +101,40 @@
       "uk-UA": "Правда? Куди ти їздила?",
       "uz-UZ": "Rostdanmi? Qayerga bording?"
     },
-    "tips": {
-      "ru-RU": "Глагол движения 'fahren' образует Perfekt с вспомогательным глаголом 'sein' -> 'bist du gefahren'.",
-      "en-US": "The verb of motion 'fahren' forms Perfekt with the auxiliary 'sein' -> 'bist du gefahren'.",
-      "ar-SA": "فعل الحركة 'fahren' يشكل الماضي التام مع الفعل المساعد 'sein'.",
-      "es-ES": "El verbo de movimiento 'fahren' forma el Perfekt con el auxiliar 'sein'.",
-      "fr-FR": "Le verbe de mouvement 'fahren' forme le Perfekt avec l'auxiliaire 'sein'.",
-      "hi-IN": "गतिविधि की क्रिया 'fahren' सहायक 'sein' के साथ Perfekt बनाती है।",
-      "pl-PL": "Czasownik ruchu 'fahren' tworzy czas Perfekt z czasownikiem posiłkowym 'sein'.",
-      "ro-RO": "Verbul de mișcare 'fahren' formează Perfekt cu auxiliarul 'sein'.",
-      "tr-TR": "'fahren' hareket fiili, Perfekt zamanını 'sein' yardımcı fiili ile kurar.",
-      "uk-UA": "Дієслово руху 'fahren' утворює Perfekt з допоміжним дієсловом 'sein'.",
-      "uz-UZ": "Harakat fe'li 'fahren' Perfektni 'sein' yordamchi fe'li bilan yasaydi."
-    },
+    "vocabulary": [
+      {
+        "german": "wohin",
+        "translation": {
+          "ru-RU": "куда",
+          "en-US": "where to",
+          "ar-SA": "إلى أين",
+          "es-ES": "a dónde",
+          "fr-FR": "où",
+          "hi-IN": "कहाँ",
+          "pl-PL": "dokąd",
+          "ro-RO": "încotro",
+          "tr-TR": "nereye",
+          "uk-UA": "куди",
+          "uz-UZ": "qayerga"
+        }
+      },
+      {
+        "german": "gefahren",
+        "translation": {
+          "ru-RU": "ездила",
+          "en-US": "went / drove",
+          "ar-SA": "ذهبت",
+          "es-ES": "fuiste",
+          "fr-FR": "allé",
+          "hi-IN": "गए",
+          "pl-PL": "pojechałaś",
+          "ro-RO": "ai mers",
+          "tr-TR": "gittin",
+          "uk-UA": "їздила",
+          "uz-UZ": "bording"
+        }
+      }
+    ],
     "options": [
       {
         "text": "In den Harz. Das Wetter war super.",
@@ -146,19 +188,40 @@
       "uk-UA": "Вірю! Ти зробила багато фото?",
       "uz-UZ": "Ishonaman! Ko'p rasmga oldingmi?"
     },
-    "tips": {
-      "ru-RU": "Направление (Wohin?) требует Akkusativ. Горы Гарц ('der Harz') мужского рода, поэтому берет у артикля 'den' (in den Harz).",
-      "en-US": "Direction (Wohin?) requires Akkusativ. 'der Harz' takes 'den' (in den Harz).",
-      "ar-SA": "الاتجاه يتطلب Akkusativ. 'der Harz' تأخذ الأداة 'den'.",
-      "es-ES": "Dirección (Wohin?) requiere Akkusativ. 'der Harz' toma el artículo 'den'.",
-      "fr-FR": "La direction (Wohin?) requiert l'Akkusativ. 'der Harz' prend l'article 'den'.",
-      "hi-IN": "दिशा (Wohin?) के लिए Akkusativ की आवश्यकता होती है। 'der Harz' 'den' लेता है।",
-      "pl-PL": "Kierunek (Wohin?) wymaga biernika. 'der Harz' przyjmuje przedimek 'den'.",
-      "ro-RO": "Direcția (Wohin?) cere Akkusativ. 'der Harz' ia articolul 'den'.",
-      "tr-TR": "Yön (Wohin?) Akkusativ gerektirir. 'der Harz' 'den' alır.",
-      "uk-UA": "Напрямок (Wohin?) вимагає Akkusativ. Гори 'der Harz' беруть артикль 'den'.",
-      "uz-UZ": "Yo'nalish (Wohin?) Akkusativ talab qiladi. 'der Harz' 'den' artiklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "glaube ich",
+        "translation": {
+          "ru-RU": "я верю",
+          "en-US": "I believe",
+          "ar-SA": "أصدق",
+          "es-ES": "lo creo",
+          "fr-FR": "je crois",
+          "hi-IN": "मुझे विश्वास है",
+          "pl-PL": "wierzę",
+          "ro-RO": "cred",
+          "tr-TR": "inanırım",
+          "uk-UA": "я вірю",
+          "uz-UZ": "ishonaman"
+        }
+      },
+      {
+        "german": "viele Fotos",
+        "translation": {
+          "ru-RU": "много фото",
+          "en-US": "many photos",
+          "ar-SA": "صور كثيرة",
+          "es-ES": "muchas fotos",
+          "fr-FR": "beaucoup de photos",
+          "hi-IN": "बहुत तस्वीरें",
+          "pl-PL": "dużo zdjęć",
+          "ro-RO": "multe poze",
+          "tr-TR": "çok fotoğraf",
+          "uk-UA": "багато фото",
+          "uz-UZ": "ko'p rasm"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, ich habe viele Fotos. Willst du sie sehen?",
@@ -191,7 +254,8 @@
           "tr-TR": "Evet, birkaç tane. Sana göstereyim mi?",
           "uk-UA": "Так, декілька. Мені тобі їх показати?",
           "uz-UZ": "Ha, bir nechta. Senga ko'rsataymi?"
-        }
+        },
+        "nextStep": "meetup_ask"
       }
     ],
     "defaultNext": "meetup_ask"
@@ -211,19 +275,40 @@
       "uk-UA": "Із задоволенням! Давай зустрінемося цього тижня?",
       "uz-UZ": "Bajonidil! Bu hafta uchrashamizmi?"
     },
-    "tips": {
-      "ru-RU": "Модальный глагол 'sollen' (быть должным). В вопросе ставится на 1 место: 'Sollen wir...' (Давай / Стоит ли нам...).",
-      "en-US": "The modal verb 'sollen' is used here to make a suggestion: 'Sollen wir...' (Shall we...).",
-      "ar-SA": "الفعل الناقص 'sollen' يُستخدم هنا لتقديم اقتراح: 'Sollen wir...' (هل يجب أن...).",
-      "es-ES": "El verbo modal 'sollen' se usa para sugerir: 'Sollen wir...' (¿Deberíamos... / Nos vemos...).",
-      "fr-FR": "Le verbe modal 'sollen' est utilisé pour suggérer : 'Sollen wir...' (Devrions-nous...).",
-      "hi-IN": "सुझाव देने के लिए 'sollen' का उपयोग किया जाता है: 'Sollen wir...' (क्या हम...)।",
-      "pl-PL": "Czasownik modalny 'sollen' służy tu do propozycji: 'Sollen wir...' (Spotkamy się...?).",
-      "ro-RO": "Verbul modal 'sollen' este folosit pentru o sugestie: 'Sollen wir...' (Să...).",
-      "tr-TR": "'sollen' modal fiili burada öneri için kullanılır: 'Sollen wir...' (Buluşalım mı...).",
-      "uk-UA": "Модальне дієслово 'sollen' у питанні означає пропозицію: 'Sollen wir...' (Давай...).",
-      "uz-UZ": "'sollen' modal fe'li bu yerda taklif uchun ishlatiladi: 'Sollen wir...' (Uchrashamizmi...)."
-    },
+    "vocabulary": [
+      {
+        "german": "diese Woche",
+        "translation": {
+          "ru-RU": "на этой неделе",
+          "en-US": "this week",
+          "ar-SA": "هذا الأسبوع",
+          "es-ES": "esta semana",
+          "fr-FR": "cette semaine",
+          "hi-IN": "इस सप्ताह",
+          "pl-PL": "w tym tygodniu",
+          "ro-RO": "săptămâna aceasta",
+          "tr-TR": "bu hafta",
+          "uk-UA": "цього тижня",
+          "uz-UZ": "bu hafta"
+        }
+      },
+      {
+        "german": "treffen",
+        "translation": {
+          "ru-RU": "встречаться",
+          "en-US": "to meet",
+          "ar-SA": "يلتقي",
+          "es-ES": "encontrarse",
+          "fr-FR": "se rencontrer",
+          "hi-IN": "मिलना",
+          "pl-PL": "spotkać się",
+          "ro-RO": "a se întâlni",
+          "tr-TR": "buluşmak",
+          "uk-UA": "зустрічатися",
+          "uz-UZ": "uchrashmoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Gute Idee. Passt es dir Mittwoch?",
@@ -277,19 +362,40 @@
       "uk-UA": "У середу я довго працюю. Як щодо четверга?",
       "uz-UZ": "Chorshanba kuni men uzoq ishlashim kerak. Payshanba qanday?"
     },
-    "tips": {
-      "ru-RU": "Дни недели (Mittwoch, Donnerstag) могут использоваться без предлога 'am' в быстрой разговорной речи.",
-      "en-US": "Days of the week can be used without the preposition 'am' in fast conversational speech.",
-      "ar-SA": "يمكن استخدام أيام الأسبوع بدون حرف الجر 'am' في الحديث السريع.",
-      "es-ES": "Los días de la semana se pueden usar sin la preposición 'am' en el habla coloquial.",
-      "fr-FR": "Les jours de la semaine peuvent être utilisés sans la préposition 'am' dans le langage courant.",
-      "hi-IN": "तेज़ बातचीत में सप्ताह के दिनों का उपयोग 'am' के बिना किया जा सकता है।",
-      "pl-PL": "Dni tygodnia można używać bez przyimka 'am' w szybkiej mowie potocznej.",
-      "ro-RO": "Zilele săptămânii pot fi folosite fără prepoziția 'am' în vorbirea rapidă.",
-      "tr-TR": "Haftanın günleri hızlı konuşmada 'am' edatı olmadan kullanılabilir.",
-      "uk-UA": "Дні тижня можна використовувати без прийменника 'am' у швидкій розмовній мові.",
-      "uz-UZ": "Hafta kunlari tez so'zlashuvda 'am' predlogisiz ishlatilishi mumkin."
-    },
+    "vocabulary": [
+      {
+        "german": "lange arbeiten",
+        "translation": {
+          "ru-RU": "долго работать",
+          "en-US": "work late",
+          "ar-SA": "يعمل طويلاً",
+          "es-ES": "trabajar mucho",
+          "fr-FR": "travailler tard",
+          "hi-IN": "देर तक काम",
+          "pl-PL": "długo pracować",
+          "ro-RO": "lucra mult",
+          "tr-TR": "uzun çalışmak",
+          "uk-UA": "довго працювати",
+          "uz-UZ": "uzoq ishlash"
+        }
+      },
+      {
+        "german": "wie wäre",
+        "translation": {
+          "ru-RU": "как насчет",
+          "en-US": "how about",
+          "ar-SA": "ماذا عن",
+          "es-ES": "qué tal",
+          "fr-FR": "que dirais-tu",
+          "hi-IN": "कैसा रहेगा",
+          "pl-PL": "co powiesz na",
+          "ro-RO": "ce zici de",
+          "tr-TR": "ne dersin",
+          "uk-UA": "як щодо",
+          "uz-UZ": "nima deysan"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Donnerstag habe ich Zeit. Um wie viel Uhr?",
@@ -343,19 +449,40 @@
       "uk-UA": "О 19:00 у нашому кафе?",
       "uz-UZ": "Soat 19:00 da bizning kafeda?"
     },
-    "tips": {
-      "ru-RU": "Предлог 'in' для вопроса 'Где?' требует Dativ. Кафе (das Café) среднего рода берет у артикля форму 'dem', поэтому 'in unserem Café'.",
-      "en-US": "The preposition 'in' for 'Where?' requires Dativ. 'das Café' takes 'dem', so 'in unserem Café'.",
-      "ar-SA": "حرف الجر 'in' للإجابة على 'أين؟' يتطلب Dativ. 'das Café' تأخذ 'dem', فتصبح 'in unserem Café'.",
-      "es-ES": "La preposición 'in' para '¿Dónde?' requiere Dativ. 'das Café' toma 'dem', así que 'in unserem Café'.",
-      "fr-FR": "La préposition 'in' pour 'Où?' requiert le Datif. 'das Café' prend 'dem', donc 'in unserem Café'.",
-      "hi-IN": "'कहाँ?' के लिए 'in' Dativ लेता है। 'das Café' 'dem' लेता है, इसलिए 'in unserem Café'।",
-      "pl-PL": "Przyimek 'in' dla 'Gdzie?' wymaga celownika. 'das Café' przyjmuje 'dem', stąd 'in unserem Café'.",
-      "ro-RO": "Prepoziția 'in' pentru 'Unde?' cere Dativ. 'das Café' ia 'dem', deci 'in unserem Café'.",
-      "tr-TR": "'Nerede?' için 'in' edatı Dativ gerektirir. 'das Café' 'dem' alır, bu yüzden 'in unserem Café'.",
-      "uk-UA": "Прийменник 'in' для питання 'Де?' вимагає Dativ. 'das Café' бере форму 'dem', тому 'in unserem Café'.",
-      "uz-UZ": "'Qayerda?' savoli uchun 'in' Dativ talab qiladi. 'das Café' 'dem' oladi, shuning uchun 'in unserem Café'."
-    },
+    "vocabulary": [
+      {
+        "german": "das Café",
+        "translation": {
+          "ru-RU": "кафе",
+          "en-US": "the cafe",
+          "ar-SA": "المقهى",
+          "es-ES": "la cafetería",
+          "fr-FR": "le café",
+          "hi-IN": "कैफे",
+          "pl-PL": "kawiarnia",
+          "ro-RO": "cafeneaua",
+          "tr-TR": "kafe",
+          "uk-UA": "кафе",
+          "uz-UZ": "kafe"
+        }
+      },
+      {
+        "german": "um 19:00",
+        "translation": {
+          "ru-RU": "в 19:00",
+          "en-US": "at 19:00",
+          "ar-SA": "الساعة 19:00",
+          "es-ES": "a las 19:00",
+          "fr-FR": "à 19h00",
+          "hi-IN": "19:00 बजे",
+          "pl-PL": "o 19:00",
+          "ro-RO": "la 19:00",
+          "tr-TR": "saat 19:00'da",
+          "uk-UA": "о 19:00",
+          "uz-UZ": "soat 19:00 da"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Abgemacht! Ich freue mich.",
@@ -409,19 +536,40 @@
       "uk-UA": "Я також. До четверга!",
       "uz-UZ": "Men ham. Payshanbagacha!"
     },
-    "tips": {
-      "ru-RU": "Глагол 'sich freuen' возвратный. Подруга говорит 'Ich (freue) mich auch', опуская сам глагол для краткости.",
-      "en-US": "The verb 'sich freuen' is reflexive. The friend says 'Ich (freue) mich auch', omitting the verb for brevity.",
-      "ar-SA": "الفعل 'sich freuen' منعكس. الصديقة تقول 'Ich (freue) mich auch'، مع حذف الفعل للاختصار.",
-      "es-ES": "El verbo 'sich freuen' es reflexivo. Ella dice 'Ich (freue) mich auch', omitiendo el verbo para abreviar.",
-      "fr-FR": "Le verbe 'sich freuen' est réfléchi. L'amie dit 'Ich (freue) mich auch', en omettant le verbe pour faire court.",
-      "hi-IN": "क्रिया 'sich freuen' रिफ्लेक्सिव है। 'Ich (freue) mich auch' में संक्षेप के लिए क्रिया छोड़ दी गई है।",
-      "pl-PL": "Czasownik 'sich freuen' jest zwrotny. Przyjaciółka mówi 'Ich (freue) mich auch', skracając zdanie.",
-      "ro-RO": "Verbul 'sich freuen' este reflexiv. Prietena zice 'Ich (freue) mich auch', omițând verbul pe scurt.",
-      "tr-TR": "'sich freuen' dönüşlü fiildir. Arkadaşı kısa kesmek için fiili atlayarak 'Ich (freue) mich auch' der.",
-      "uk-UA": "Дієслово 'sich freuen' зворотне. Подруга каже 'Ich (freue) mich auch', опускаючи дієслово для стислості.",
-      "uz-UZ": "'sich freuen' o'zlik fe'li. Dugonasi qisqartirib 'Ich (freue) mich auch' deydi."
-    },
+    "vocabulary": [
+      {
+        "german": "ich auch",
+        "translation": {
+          "ru-RU": "я тоже",
+          "en-US": "me too",
+          "ar-SA": "أنا أيضاً",
+          "es-ES": "yo también",
+          "fr-FR": "moi aussi",
+          "hi-IN": "मैं भी",
+          "pl-PL": "ja też",
+          "ro-RO": "și eu",
+          "tr-TR": "ben de",
+          "uk-UA": "я також",
+          "uz-UZ": "men ham"
+        }
+      },
+      {
+        "german": "bis Donnerstag",
+        "translation": {
+          "ru-RU": "до четверга",
+          "en-US": "until Thursday",
+          "ar-SA": "حتى الخميس",
+          "es-ES": "hasta el jueves",
+          "fr-FR": "à jeudi",
+          "hi-IN": "गुरुवार तक",
+          "pl-PL": "do czwartku",
+          "ro-RO": "pe joi",
+          "tr-TR": "perşembeye kadar",
+          "uk-UA": "до четверга",
+          "uz-UZ": "payshanbagacha"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Bis dann! Tschüss!",
@@ -468,7 +616,7 @@
       "ar-SA": "انتهت المحادثة.",
       "es-ES": "La conversación ha terminado.",
       "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत समाप्त हो गई है।",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
       "pl-PL": "Rozmowa została zakończona.",
       "ro-RO": "Conversația s-a încheiat.",
       "tr-TR": "Konuşma sona erdi.",

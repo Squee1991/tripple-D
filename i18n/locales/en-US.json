@@ -1,5 +1,4 @@
 {
-
   "definiteIndefiniteQuestOne": {
     "title": "Battle for Endings",
     "description": "Mixed practice: indefinite and definite articles in sentences.",
@@ -525,10 +524,6 @@
     "questFifteen": "Choose the correct option: It was a beautiful day",
     "questFifteenTip": "Indefinite article (first time). Masculine (der). The article 'ein' is empty, so the adjective takes the -er ending from the article 'der'."
   },
-
-
-
-
   "secretLandsQuestOne": {
     "title": "Result",
     "description": "Mixed training: working with the indefinite article in Perfekt and Futur 1. Topics: daily life, city, transport, food.",
@@ -1054,8 +1049,6 @@
     "questFifteen": "Assemble the sentence: We will see an interesting exhibition",
     "questFifteenTip": "Exhibition — feminine (die). The article 'eine' ends in -e, so the adjective takes the -e ending from the article."
   },
-
-
   "edgeImagesQuestOne": {
     "title": "Start",
     "description": "Practicing the correct declension of adjectives after der, die, das.",
@@ -1581,11 +1574,6 @@
     "questFifteen": "Enter the form (lecker): Ich werde die ___ Pizza essen.",
     "questFifteenTip": "Akkusativ (feminine): 'die' is the basic article, the adjective takes the -e ending from the article."
   },
-
-
-
-
-
   "timeGageQuestOne": {
     "title": "Meeting and Communication",
     "description": "Practicing grammar in communication situations: from meeting plans to stories about the past.",
@@ -10242,5 +10230,31 @@
   "speakIndexPage": {
     "title": "Speaking practice",
     "bannerText": "Practice your speaking skills with real-life examples"
+  },
+  "rankModal": {
+    "title": "NEW RANK",
+    "rankedLabel": "Rank",
+    "accept": "ACCEPT"
+  },
+  "premiumBanner": {
+    "textBanner": "Get the most out of the platform, accelerate your learning."
+  },
+  "netWork": {
+    "successTitle": "Connection restored!",
+    "notSuccessTitle": "Oops! No internet",
+    "successText": "Back to work...",
+    "notSuccessText": "Waiting for network connection..."
+  },
+  "termsBlock": {
+    "first": "By registering, you accept the",
+    "second": "Terms of Use",
+    "third": "and",
+    "fourth": "Privacy Policy"
+  },
+  "languagePage": {
+    "title": "App language",
+    "placeholder": "Search language...",
+    "notfound": "Nothing found",
+    "further": "Continue"
   }
 }

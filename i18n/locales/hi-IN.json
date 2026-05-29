@@ -10206,5 +10206,31 @@
   "speakIndexPage": {
     "title": "बोलने का अभ्यास",
     "bannerText": "वास्तविक उदाहरणों के साथ अपने बोलने के कौशल का अभ्यास करें"
+  },
+  "rankModal": {
+    "title": "नई रैंक",
+    "rankedLabel": "रैंक",
+    "accept": "स्वीकार करें"
+  },
+  "premiumBanner": {
+    "textBanner": "प्लेटफ़ॉर्म का अधिकतम लाभ उठाएं, अपनी सीखने की गति बढ़ाएं।"
+  },
+  "netWork": {
+    "successTitle": "कनेक्शन बहाल हो गया!",
+    "notSuccessTitle": "उफ़! इंटरनेट नहीं है",
+    "successText": "काम पर वापस लौट रहे हैं...",
+    "notSuccessText": "नेटवर्क कनेक्शन की प्रतीक्षा की जा रही है..."
+  },
+  "termsBlock": {
+    "first": "पंजीकरण करके, आप स्वीकार करते हैं",
+    "second": "उपयोग की शर्तें",
+    "third": "और",
+    "fourth": "गोपनीयता नीति"
+  },
+  "languagePage": {
+    "title": "ऐप की भाषा",
+    "placeholder": "भाषा खोजें...",
+    "notfound": "कुछ नहीं मिला",
+    "further": "जारी रखें"
   }
 }

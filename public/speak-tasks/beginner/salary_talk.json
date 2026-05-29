@@ -14,19 +14,40 @@
       "uk-UA": "Привіт, Анно, про що йдеться?",
       "uz-UZ": "Salom Anna, gap nima haqida?"
     },
-    "tips": {
-      "ru-RU": "Глагол 'besprechen' требует Akkusativ. Для Akkusativ мы применяем то же правило: средний род 'das Gehalt' берет у артикля форму 'mein'.",
-      "en-US": "The verb 'besprechen' requires the Akkusativ case. The neuter noun 'das Gehalt' takes the form 'mein'.",
-      "ar-SA": "الفعل 'besprechen' يتطلب حالة النصب. الكلمة المحايدة 'das Gehalt' تأخذ صيغة 'mein'.",
-      "es-ES": "El verbo 'besprechen' requiere el caso Akkusativ. El sustantivo neutro 'das Gehalt' toma la forma 'mein'.",
-      "fr-FR": "Le verbe 'besprechen' requiert l'Akkusativ. Le nom neutre 'das Gehalt' prend la forme 'mein'.",
-      "hi-IN": "क्रिया 'besprechen' को Akkusativ की आवश्यकता होती है। नपुंसक संज्ञा 'das Gehalt' 'mein' रूप लेती है।",
-      "pl-PL": "Czasownik 'besprechen' wymaga biernika. Rzeczownik nijaki 'das Gehalt' przyjmuje formę 'mein'.",
-      "ro-RO": "Verbul 'besprechen' cere Akkusativ. Substantivul neutru 'das Gehalt' ia forma 'mein'.",
-      "tr-TR": "'besprechen' fiili Akkusativ gerektirir. Nötr isim 'das Gehalt' 'mein' formunu alır.",
-      "uk-UA": "Дієслово 'besprechen' вимагає Akkusativ. Середній рід 'das Gehalt' бере форму 'mein'.",
-      "uz-UZ": "'besprechen' fe'li Akkusativni talab qiladi. O'rta jinsdagi 'das Gehalt' 'mein' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "besprechen",
+        "translation": {
+          "ru-RU": "обсуждать",
+          "en-US": "to discuss",
+          "ar-SA": "يناقش",
+          "es-ES": "discutir",
+          "fr-FR": "discuter",
+          "hi-IN": "चर्चा करना",
+          "pl-PL": "omawiać",
+          "ro-RO": "a discuta",
+          "tr-TR": "görüşmek",
+          "uk-UA": "обговорювати",
+          "uz-UZ": "muhokama qilmoq"
+        }
+      },
+      {
+        "german": "das Gehalt",
+        "translation": {
+          "ru-RU": "зарплата",
+          "en-US": "salary",
+          "ar-SA": "راتب",
+          "es-ES": "salario",
+          "fr-FR": "salaire",
+          "hi-IN": "वेतन",
+          "pl-PL": "pensja",
+          "ro-RO": "salariu",
+          "tr-TR": "maaş",
+          "uk-UA": "зарплата",
+          "uz-UZ": "maosh"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ich möchte mein Gehalt besprechen.",
@@ -80,19 +101,40 @@
       "uk-UA": "Чому це доречно зараз?",
       "uz-UZ": "Nima uchun bu hozir o'rinli?"
     },
-    "tips": {
-      "ru-RU": "В Akkusativ множественное число 'die Projekte' берет у артикля форму 'viele' (многие). То же самое с 'Aufgaben' (задачи) - 'mehr Aufgaben'.",
-      "en-US": "In Akkusativ plural, 'die Projekte' takes the form 'viele' (many). The same applies to 'Aufgaben' (tasks) with 'mehr'.",
-      "ar-SA": "في حالة النصب للجمع، 'die Projekte' تأخذ صيغة 'viele' (كثير). ينطبق نفس الشيء على 'Aufgaben'.",
-      "es-ES": "En plural Akkusativ, 'die Projekte' toma la forma 'viele'. Lo mismo ocurre con 'Aufgaben' (tareas).",
-      "fr-FR": "Au pluriel Akkusativ, 'die Projekte' prend la forme 'viele'. Il en va de même pour 'Aufgaben' (tâches).",
-      "hi-IN": "बहुवचन Akkusativ में, 'die Projekte' 'viele' रूप लेता है। यही बात 'Aufgaben' पर लागू होती है।",
-      "pl-PL": "W bierniku w liczbie mnogiej 'die Projekte' przyjmuje formę 'viele'. To samo dotyczy 'Aufgaben' (zadań).",
-      "ro-RO": "În plural Akkusativ, 'die Projekte' ia forma 'viele'. Același lucru este valabil și pentru 'Aufgaben'.",
-      "tr-TR": "Çoğul Akkusativ'de 'die Projekte' 'viele' formunu alır. Aynı durum 'Aufgaben' için de geçerlidir.",
-      "uk-UA": "В Akkusativ множина 'die Projekte' бере форму 'viele'. Те саме з 'Aufgaben'.",
-      "uz-UZ": "Ko'plikdagi Akkusativda 'die Projekte' 'viele' shaklini oladi. Xuddi shu narsa 'Aufgaben' (vazifalar) uchun ham amal qiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "das Projekt",
+        "translation": {
+          "ru-RU": "проект",
+          "en-US": "project",
+          "ar-SA": "مشروع",
+          "es-ES": "proyecto",
+          "fr-FR": "projet",
+          "hi-IN": "परियोजना",
+          "pl-PL": "projekt",
+          "ro-RO": "proiect",
+          "tr-TR": "proje",
+          "uk-UA": "проєкт",
+          "uz-UZ": "loyiha"
+        }
+      },
+      {
+        "german": "die Aufgabe",
+        "translation": {
+          "ru-RU": "задача",
+          "en-US": "task",
+          "ar-SA": "مهمة",
+          "es-ES": "tarea",
+          "fr-FR": "tâche",
+          "hi-IN": "कार्य",
+          "pl-PL": "zadanie",
+          "ro-RO": "sarcină",
+          "tr-TR": "görev",
+          "uk-UA": "завдання",
+          "uz-UZ": "vazifa"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ich habe viele Projekte erfolgreich abgeschlossen.",
@@ -146,19 +188,40 @@
       "uk-UA": "Наш бюджет зараз, на жаль, обмежений.",
       "uz-UZ": "Afsuski, bizning byudjetimiz hozirda cheklangan."
     },
-    "tips": {
-      "ru-RU": "Предлог 'für' всегда требует Akkusativ. В выражении 'für uns' местоимение 'wir' (мы) берет у артикля форму 'uns' (нас). Женский род 'die Erhöhung' (повышение) берет у артикля форму 'eine'.",
-      "en-US": "The preposition 'für' always takes the Akkusativ case. The pronoun 'wir' takes the form 'uns'. The feminine noun 'die Erhöhung' takes the article form 'eine'.",
-      "ar-SA": "حرف الجر 'für' يتطلب دائماً النصب. الضمير 'wir' يأخذ صيغة 'uns'.",
-      "es-ES": "La preposición 'für' siempre toma el caso Akkusativ. El pronombre 'wir' toma la forma 'uns'.",
-      "fr-FR": "La préposition 'für' prend toujours l'Akkusativ. Le pronom 'wir' prend la forme 'uns'.",
-      "hi-IN": "पूर्वसर्ग 'für' हमेशा Akkusativ लेता है। सर्वनाम 'wir' 'uns' रूप लेता है।",
-      "pl-PL": "Przyimek 'für' zawsze wymaga biernika. Zaimek 'wir' przyjmuje formę 'uns'.",
-      "ro-RO": "Prepoziția 'für' cere mereu Akkusativ. Pronumele 'wir' ia forma 'uns'.",
-      "tr-TR": "'für' edatı her zaman Akkusativ gerektirir. 'wir' zamiri 'uns' formunu alır.",
-      "uk-UA": "Прийменник 'für' завжди вимагає Akkusativ. Займенник 'wir' бере форму 'uns'.",
-      "uz-UZ": "'für' predlogi doim Akkusativni talab qiladi. 'wir' olmoshi 'uns' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "begrenzt",
+        "translation": {
+          "ru-RU": "ограниченный",
+          "en-US": "limited",
+          "ar-SA": "محدود",
+          "es-ES": "limitado",
+          "fr-FR": "limité",
+          "hi-IN": "सीमित",
+          "pl-PL": "ograniczony",
+          "ro-RO": "limitat",
+          "tr-TR": "sınırlı",
+          "uk-UA": "обмежений",
+          "uz-UZ": "cheklangan"
+        }
+      },
+      {
+        "german": "die Erhöhung",
+        "translation": {
+          "ru-RU": "повышение",
+          "en-US": "increase",
+          "ar-SA": "زيادة",
+          "es-ES": "aumento",
+          "fr-FR": "augmentation",
+          "hi-IN": "वृद्धि",
+          "pl-PL": "podwyżka",
+          "ro-RO": "mărire",
+          "tr-TR": "artış",
+          "uk-UA": "підвищення",
+          "uz-UZ": "oshirish"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Meine Leistung ist wichtig für uns.",
@@ -212,19 +275,40 @@
       "uk-UA": "На скільки більше ти хочеш?",
       "uz-UZ": "Qanchaga ko'proq xohlaysiz?"
     },
-    "tips": {
-      "ru-RU": "Глагол 'wünschen' (когда мы желаем чего-то себе - 'sich wünschen') требует Dativ для возвратного местоимения (mir), а объект 'sieben Prozent' стоит в Akkusativ.",
-      "en-US": "The verb 'sich wünschen' (to wish for oneself) requires Dativ for the reflexive pronoun (mir), and the object 'sieben Prozent' is in Akkusativ.",
-      "ar-SA": "الفعل 'sich wünschen' يتطلب حالة Dativ للضمير المنعكس (mir)، والمفعول به 'sieben Prozent' في حالة النصب.",
-      "es-ES": "El verbo 'sich wünschen' requiere Dativ para el pronombre reflexivo (mir), y el objeto 'sieben Prozent' está en Akkusativ.",
-      "fr-FR": "Le verbe 'sich wünschen' requiert le Datif pour le pronom réfléchi (mir), et l'objet 'sieben Prozent' est à l'Akkusativ.",
-      "hi-IN": "क्रिया 'sich wünschen' के लिए रिफ्लेक्सिव सर्वनाम (mir) के लिए Dativ की आवश्यकता होती है।",
-      "pl-PL": "Czasownik 'sich wünschen' wymaga celownika dla zaimka zwrotnego (mir), a obiekt w bierniku.",
-      "ro-RO": "Verbul 'sich wünschen' cere Dativ pentru pronumele reflexiv (mir).",
-      "tr-TR": "'sich wünschen' fiili dönüşlü zamir (mir) için Dativ gerektirir.",
-      "uk-UA": "Дієслово 'sich wünschen' вимагає Dativ для зворотного займенника (mir).",
-      "uz-UZ": "'sich wünschen' fe'li o'zlik olmoshi (mir) uchun Dativni talab qiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "angemessen",
+        "translation": {
+          "ru-RU": "уместный / соответствующий",
+          "en-US": "appropriate",
+          "ar-SA": "مناسب",
+          "es-ES": "adecuado",
+          "fr-FR": "approprié",
+          "hi-IN": "उचित",
+          "pl-PL": "odpowiedni",
+          "ro-RO": "adecvat",
+          "tr-TR": "uygun",
+          "uk-UA": "доречний",
+          "uz-UZ": "o'rinli"
+        }
+      },
+      {
+        "german": "das Prozent",
+        "translation": {
+          "ru-RU": "процент",
+          "en-US": "percent",
+          "ar-SA": "بالمائة",
+          "es-ES": "por ciento",
+          "fr-FR": "pour cent",
+          "hi-IN": "प्रतिशत",
+          "pl-PL": "procent",
+          "ro-RO": "procent",
+          "tr-TR": "yüzde",
+          "uk-UA": "відсоток",
+          "uz-UZ": "foiz"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ich halte sieben Prozent für angemessen.",
@@ -278,19 +362,40 @@
       "uk-UA": "Можливо, ми зможемо домовитися на п'ять відсотків?",
       "uz-UZ": "Balki besh foizga kelishib olarz?"
     },
-    "tips": {
-      "ru-RU": "Глагол 'sich einigen auf' (сойтись на) требует Akkusativ. Так как мы говорим о числах (на шести), мы просто используем 'auf sechs'. 'Ein guter Kompromiss' стоит в именительном падеже.",
-      "en-US": "The verb 'sich einigen auf' (to agree on) requires the Akkusativ case. 'Ein guter Kompromiss' is in the nominative case.",
-      "ar-SA": "الفعل 'sich einigen auf' (الاتفاق على) يتطلب حالة النصب.",
-      "es-ES": "El verbo 'sich einigen auf' (acordar en) requiere el caso Akkusativ.",
-      "fr-FR": "Le verbe 'sich einigen auf' (se mettre d'accord sur) requiert l'Akkusativ.",
-      "hi-IN": "क्रिया 'sich einigen auf' (सहमत होना) के लिए Akkusativ की आवश्यकता होती है।",
-      "pl-PL": "Czasownik 'sich rozliczyć auf' (zgodzić się na) wymaga biernika.",
-      "ro-RO": "Verbul 'sich einigen auf' (a fi de acord cu) cere Akkusativ.",
-      "tr-TR": "'sich einigen auf' (üzerinde anlaşmak) fiili Akkusativ gerektirir.",
-      "uk-UA": "Дієслово 'sich einigen auf' вимагає Akkusativ.",
-      "uz-UZ": "'sich einigen auf' (kelishib olmoq) fe'li Akkusativni talab qiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "sich einigen",
+        "translation": {
+          "ru-RU": "договориться",
+          "en-US": "to agree",
+          "ar-SA": "يتفق",
+          "es-ES": "llegar a un acuerdo",
+          "fr-FR": "se mettre d'accord",
+          "hi-IN": "सहमत होना",
+          "pl-PL": "dojść do porozumienia",
+          "ro-RO": "a cădea de acord",
+          "tr-TR": "anlaşmak",
+          "uk-UA": "домовитися",
+          "uz-UZ": "kelishib olmoq"
+        }
+      },
+      {
+        "german": "der Kompromiss",
+        "translation": {
+          "ru-RU": "компромисс",
+          "en-US": "compromise",
+          "ar-SA": "حل وسط",
+          "es-ES": "compromiso",
+          "fr-FR": "compromis",
+          "hi-IN": "समझौता",
+          "pl-PL": "kompromis",
+          "ro-RO": "compromis",
+          "tr-TR": "uzlaşma",
+          "uk-UA": "компроміс",
+          "uz-UZ": "murosa"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Können wir uns auf sechs einigen?",
@@ -344,19 +449,40 @@
       "uk-UA": "Добре, шість відсотків влаштовують.",
       "uz-UZ": "Yaxshi, olti foiz ma'qul."
     },
-    "tips": {
-      "ru-RU": "Предлог 'für' всегда требует Akkusativ. Средний род 'das Vertrauen' (доверие) берет у артикля форму 'das' (für das Vertrauen). То же самое с 'die Einigung' (договоренность) — берет форму 'die'.",
-      "en-US": "The preposition 'für' always requires the Akkusativ case. The neuter noun 'das Vertrauen' takes the article 'das', and 'die Einigung' takes 'die'.",
-      "ar-SA": "حرف الجر 'für' يتطلب دائماً النصب. الكلمة المحايدة 'das Vertrauen' تأخذ الأداة 'das'.",
-      "es-ES": "La preposición 'für' siempre requiere el caso Akkusativ. El sustantivo neutro 'das Vertrauen' toma el artículo 'das'.",
-      "fr-FR": "La préposition 'für' exige toujours l'Akkusativ. Le nom neutre 'das Vertrauen' prend l'article 'das'.",
-      "hi-IN": "पूर्वसर्ग 'für' को हमेशा Akkusativ की आवश्यकता होती है।",
-      "pl-PL": "Przyimek 'für' zawsze wymaga biernika. Rzeczownik nijaki 'das Vertrauen' przyjmuje 'das'.",
-      "ro-RO": "Prepoziția 'für' necesită întotdeauna Akkusativ. Substantivul neutru 'das Vertrauen' ia 'das'.",
-      "tr-TR": "'für' edatı her zaman Akkusativ gerektirir. Nötr isim 'das Vertrauen' 'das' artikelini alır.",
-      "uk-UA": "Прийменник 'für' завжди вимагає Akkusativ. Середній рід 'das Vertrauen' бере форму 'das'.",
-      "uz-UZ": "'für' predlogi doim Akkusativni talab qiladi. O'rta jinsdagi 'das Vertrauen' 'das' artiklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "das Vertrauen",
+        "translation": {
+          "ru-RU": "доверие",
+          "en-US": "trust",
+          "ar-SA": "ثقة",
+          "es-ES": "confianza",
+          "fr-FR": "confiance",
+          "hi-IN": "विश्वास",
+          "pl-PL": "zaufanie",
+          "ro-RO": "încredere",
+          "tr-TR": "güven",
+          "uk-UA": "довіра",
+          "uz-UZ": "ishonch"
+        }
+      },
+      {
+        "german": "die Einigung",
+        "translation": {
+          "ru-RU": "договоренность / соглашение",
+          "en-US": "agreement",
+          "ar-SA": "اتفاق",
+          "es-ES": "acuerdo",
+          "fr-FR": "accord",
+          "hi-IN": "समझौता",
+          "pl-PL": "porozumienie",
+          "ro-RO": "acord",
+          "tr-TR": "anlaşma",
+          "uk-UA": "домовленість",
+          "uz-UZ": "kelishuv"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Vielen Dank für das Vertrauen!",
@@ -410,19 +536,40 @@
       "uk-UA": "Без проблем, побачимося пізніше.",
       "uz-UZ": "Muammo yo'q, keyinroq ko'rishamiz."
     },
-    "tips": {
-      "ru-RU": "Пожелание хорошего дня: '(Ich wünsche dir) einen schönen Tag'. Это Akkusativ, поэтому мужской род 'der Tag' берет форму 'einen schönen Tag'.",
-      "en-US": "Wishing a nice day: '(Ich wünsche dir) einen schönen Tag'. It is in Akkusativ, so the masculine noun 'der Tag' takes 'einen schönen Tag'.",
-      "ar-SA": "لتمني يوم جميل، نستخدم النصب: 'einen schönen Tag'.",
-      "es-ES": "Deseando un buen día: '(Ich wünsche dir) einen schönen Tag'. Está en Akkusativ, por lo que el sustantivo masculino 'der Tag' toma 'einen schönen Tag'.",
-      "fr-FR": "Pour souhaiter une bonne journée : '(Ich wünsche dir) einen schönen Tag'. C'est à l'Akkusativ, le nom masculin 'der Tag' prend donc 'einen schönen Tag'.",
-      "hi-IN": "शुभ दिन की कामना: Akkusativ में 'einen schönen Tag'।",
-      "pl-PL": "Życząc miłego dnia, używamy biernika: 'einen schönen Tag'.",
-      "ro-RO": "Urând o zi bună, folosim Akkusativ: 'einen schönen Tag'.",
-      "tr-TR": "İyi günler dilerken Akkusativ kullanılır: 'einen schönen Tag'.",
-      "uk-UA": "Побажання гарного дня стоїть у Akkusativ, тому 'der Tag' бере форму 'einen schönen Tag'.",
-      "uz-UZ": "Yaxshi kun tilash Akkusativda bo'ladi, shuning uchun 'der Tag' 'einen schönen Tag' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "bis später",
+        "translation": {
+          "ru-RU": "до скорого",
+          "en-US": "see you later",
+          "ar-SA": "أراك لاحقاً",
+          "es-ES": "hasta luego",
+          "fr-FR": "à plus tard",
+          "hi-IN": "बाद में मिलते हैं",
+          "pl-PL": "do zobaczenia później",
+          "ro-RO": "pe mai târziu",
+          "tr-TR": "sonra görüşürüz",
+          "uk-UA": "до зустрічі",
+          "uz-UZ": "keyinroq ko'rishguncha"
+        }
+      },
+      {
+        "german": "schönen Tag",
+        "translation": {
+          "ru-RU": "хорошего дня",
+          "en-US": "nice day",
+          "ar-SA": "يوم جميل",
+          "es-ES": "buen día",
+          "fr-FR": "bonne journée",
+          "hi-IN": "अच्छा दिन",
+          "pl-PL": "miłego dnia",
+          "ro-RO": "o zi frumoasă",
+          "tr-TR": "iyi günler",
+          "uk-UA": "гарного дня",
+          "uz-UZ": "yaxshi kun"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Bis später, schönen Tag noch!",
@@ -469,7 +616,7 @@
       "ar-SA": "انتهت المحادثة.",
       "es-ES": "La conversación ha terminado.",
       "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत समाप्त हो गई है।",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
       "pl-PL": "Rozmowa została zakończona.",
       "ro-RO": "Conversația s-a încheiat.",
       "tr-TR": "Konuşma sona erdi.",

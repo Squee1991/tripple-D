@@ -3,16 +3,16 @@
     <div v-if="show" class="modal-overlay" @click.self="handleCancel">
       <div class="modal-content">
         <div v-if="icon" class="modal-icon">
-          <img :src="icon" class="modal-icon-item" alt="" />
+          <img :src="icon" class="modal-icon-item" alt=""/>
         </div>
-        <p class="modal-text" :class="textClass">{{ t('exitSessionModal.text')}}</p>
+        <p class="modal-text" :class="textClass">{{ t('exitSessionModal.text') }}</p>
         <slot></slot>
         <div class="modal-actions">
           <button class="modal-btn modal-btn-cancel" @click="handleCancel">
-            {{ t('exitSessionModal.continueLesson')}}
+            {{ t('exitSessionModal.continueLesson') }}
           </button>
           <button class="modal-btn modal-btn-confirm" @click="handleConfirm">
-            {{ t('exitSessionModal.cancelLesson')}}
+            {{ t('exitSessionModal.cancelLesson') }}
           </button>
         </div>
       </div>
@@ -21,13 +21,15 @@
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router'
-const { t } = useI18n()
+import {useRouter} from 'vue-router'
+import LeaveLesson from '../../assets/images/LeaveLesson.svg'
+
+const {t} = useI18n()
 const props = defineProps({
-  show: { type: Boolean, required: true },
-  textClass: { type: String, default: '' },
-  icon: { type: String, default: '' },
-  returnRoute: { type: String, default: null }
+  show: {type: Boolean, required: true},
+  textClass: {type: String, default: ''},
+  icon: {type: String, default: LeaveLesson},
+  returnRoute: {type: String, default: null}
 })
 
 const emit = defineEmits(['update:show', 'confirm', 'cancel'])
@@ -62,46 +64,49 @@ const handleCancel = () => {
 
 .modal-content {
   background: var(--bgModal);
-  padding: 24px 24px 30px 24px;
-  border-radius: 28px 28px 0 0;
+  padding: 40px 24px 30px 24px;
+  border-radius: 20px 20px 0 0;
   width: 100%;
   max-width: 700px;
   text-align: center;
   border: none;
-  box-shadow: 0 -4px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-top: 3px solid whitesmoke;
 }
 
 .modal-icon-item {
-  width: 170px;
-  margin-bottom: 8px;
+  width: 140px;
 }
 
 .modal-fade-enter-active,
 .modal-fade-leave-active {
   transition: opacity 0.2s ease-out;
 }
+
 .modal-fade-enter-from,
 .modal-fade-leave-to {
   opacity: 0;
 }
+
 .modal-fade-enter-active .modal-content,
 .modal-fade-leave-active .modal-content {
   transition: transform 0.2s ease-out;
 }
+
 .modal-fade-enter-from .modal-content,
 .modal-fade-leave-to .modal-content {
   transform: translateY(100%);
 }
 
 .modal-text {
-  padding: 0 10px;
+  padding: 24px 10px 15px 10px;
   font-weight: 800;
   font-size: 16px;
   color: var(--title);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .modal-actions {

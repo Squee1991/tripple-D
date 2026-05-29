@@ -1,7 +1,13 @@
 <template>
   <div class="terms">
     <div class="terms__header">
-      <VBackBtn/>
+      <button @click="router.back()" class="btn-icon-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
       <div class="terms__title">Terms</div>
     </div>
     <div class="terms__content">
@@ -180,6 +186,25 @@ const sections = ref([
   height: 100%;
   padding: 0 15px 70px 15px;
   overflow-y: auto;
+}
+
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-icon-back:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
 }
 
 .terms__header{

@@ -1,5 +1,4 @@
 {
-
   "definiteIndefiniteQuestOne": {
     "title": "Bitwa o końcówki",
     "description": "Praktyka mieszana: rodzajniki nieokreślone i określone w zdaniach.",
@@ -525,12 +524,6 @@
     "questFifteen": "Wybierz poprawny wariant: To był piękny dzień",
     "questFifteenTip": "Rodzajnik nieokreślony (po raz pierwszy). Rodzaj męski (der). Rodzajnik 'ein' jest pusty, więc przymiotnik bierze od rodzajnika 'der' końcówkę -er."
   },
-
-
-
-
-
-
   "secretLandsQuestOne": {
     "title": "Podsumowanie",
     "description": "Trening mieszany: praca z rodzajnikiem nieokreślonym w Perfekt i Futur 1. Tematy: życie codzienne, miasto, transport, jedzenie.",
@@ -1056,9 +1049,6 @@
     "questFifteen": "Ułóż zdanie: Zobaczymy interesującą wystawę",
     "questFifteenTip": "Wystawa — rodzaj żeński (die). Rodzajnik 'eine' kończy się na -e, więc przymiotnik bierze od rodzajnika końcówkę -e."
   },
-
-
-
   "edgeImagesQuestOne": {
     "title": "Start",
     "description": "Trenujemy poprawną odmianę przymiotników po der, die, das.",
@@ -1584,10 +1574,6 @@
     "questFifteen": "Wpisz formę (lecker): Ich werde die ___ Pizza essen.",
     "questFifteenTip": "Akkusativ (r. żeński): rodzajnik 'die' jest podstawowy, przymiotnik bierze od rodzajnika końcówkę -e."
   },
-
-
-
-
   "timeGageQuestOne": {
     "title": "Poznawanie się i komunikacja",
     "description": "Ćwiczymy gramatykę w sytuacjach komunikacyjnych: od planów na spotkanie po opowieści o przeszłości.",
@@ -2092,8 +2078,6 @@
     "questFifteen": "Kupię bilet, jeśli będę mieć czas.",
     "questFifteenTip": "'Wenn' stawia czasownik na końcu."
   },
-
-
   "pastValleyQuestOne": {
     "title": "Podstawy Perfekt",
     "description": "Co zrobiłeś? Poznajemy czas przeszły: 'Kupiłem', 'Zrobiliśmy'.",
@@ -2431,7 +2415,6 @@
     "questFourteenTip": "singen — czasownik mocny. Dodajemy ge-, -en zostaje. Zmiana samogłoski (i na u).",
     "questFifteen": "Wybierz: Uprawiałem sport."
   },
-
   "actionValleyQuestOne": {
     "title": "Mnie, tobie, jemu",
     "description": "Ćwiczymy Dativ z zaimkami osobowymi. Komu pomagamy i komu dajemy prezenty?",
@@ -2798,7 +2781,6 @@
     "questFifteen": "Wybierz: Z kim rozmawiasz?",
     "questFifteenTip": "Dla osób używamy przyimek + pytanie (Mit wem?)."
   },
-
   "pluralLandQuestOne": {
     "title": "Podróż",
     "description": "Planujemy podróż, używając czasu Futur I. Uczymy się łączyć czas, miejsce i czynność.",
@@ -3100,8 +3082,6 @@
     "questFourteen": "Ułóż: Nie zapomnimy o święcie.",
     "questFifteen": "Wybierz poprawny wariant"
   },
-
-
   "orderValleyQuestOne": {
     "title": "Czasownik na koniec!",
     "description": "Ćwiczymy szyk wyrazów w zdaniach podrzędnych. Główna zasada: czasownik wędruje na sam koniec.",
@@ -3521,8 +3501,6 @@
     "questFifteen": "Posłuchaj i napisz zdanie",
     "questFifteenTip": "Przeczenie w 'es gibt' to 'kein'. Po 'dass' czasownik 'gibt' ucieka na sam koniec."
   },
-
-
   "pwa": {
     "title": "Zainstaluj Skillupgerman",
     "sub": "Dodaj aplikację do ekranu głównego, aby mieć szybki i wygodny dostęp!",
@@ -10245,5 +10223,31 @@
   "speakIndexPage": {
     "title": "Ćwiczenia konwersacyjne",
     "bannerText": "Ćwicz umiejętności mówienia na prawdziwych przykładach"
+  },
+  "rankModal": {
+    "title": "NOWA RANDA",
+    "rankedLabel": "Ranga",
+    "accept": "AKCEPTUJ"
+  },
+  "premiumBanner": {
+    "textBanner": "Wykorzystaj w pełni platformę, przyspiesz swoją naukę."
+  },
+  "netWork": {
+    "successTitle": "Połączenie przywrócone!",
+    "notSuccessTitle": "Ups! Brak internetu",
+    "successText": "Wracamy do pracy...",
+    "notSuccessText": "Oczekiwanie na połączenie z siecią..."
+  },
+  "termsBlock": {
+    "first": "Rejestrując się, akceptujesz",
+    "second": "Regulamin",
+    "third": "oraz",
+    "fourth": "Politykę prywatności"
+  },
+  "languagePage": {
+    "title": "Język aplikacji",
+    "placeholder": "Szukaj języka...",
+    "notfound": "Nic nie znaleziono",
+    "further": "Kontynuuj"
   }
 }

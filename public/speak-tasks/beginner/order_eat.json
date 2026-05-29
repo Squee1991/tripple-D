@@ -14,19 +14,40 @@
       "uk-UA": "Піцерія «Белла Італія», добрий день!",
       "uz-UZ": "Bella Italia pitsseriyasi, xayrli kun!"
     },
-    "tips": {
-      "ru-RU": "Глагол 'bestellen' (заказывать) требует Akkusativ. Средний род 'etwas' (что-то) или женский род 'eine Pizza' выступают как прямые дополнения.",
-      "en-US": "The verb 'bestellen' (to order) requires Akkusativ. 'Etwas' (something) or 'eine Pizza' act as direct objects.",
-      "ar-SA": "الفعل 'bestellen' (يطلب) يتطلب حالة النصب.",
-      "es-ES": "El verbo 'bestellen' (pedir) requiere Akkusativ.",
-      "fr-FR": "Le verbe 'bestellen' (commander) requiert l'Akkusativ.",
-      "hi-IN": "क्रिया 'bestellen' (आदेश देना) को Akkusativ की आवश्यकता होती है।",
-      "pl-PL": "Czasownik 'bestellen' (zamawiać) wymaga biernika.",
-      "ro-RO": "Verbul 'bestellen' (a comanda) cere Akkusativ.",
-      "tr-TR": "'bestellen' (sipariş vermek) fiili Akkusativ gerektirir.",
-      "uk-UA": "Дієслово 'bestellen' (замовляти) вимагає Akkusativ.",
-      "uz-UZ": "'bestellen' (buyurtma bermoq) fe'li Akkusativni talab qiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "die Pizzeria",
+        "translation": {
+          "ru-RU": "пиццерия",
+          "en-US": "pizzeria",
+          "ar-SA": "مطعم بيتزا",
+          "es-ES": "pizzería",
+          "fr-FR": "pizzeria",
+          "hi-IN": "पिज़्ज़ेरिया",
+          "pl-PL": "pizzeria",
+          "ro-RO": "pizzerie",
+          "tr-TR": "pizzacı",
+          "uk-UA": "піцерія",
+          "uz-UZ": "pitsseriya"
+        }
+      },
+      {
+        "german": "guten Tag",
+        "translation": {
+          "ru-RU": "добрый день",
+          "en-US": "good day",
+          "ar-SA": "طاب يومك",
+          "es-ES": "buen día",
+          "fr-FR": "bonjour",
+          "hi-IN": "शुभ दिन",
+          "pl-PL": "dzień dobry",
+          "ro-RO": "bună ziua",
+          "tr-TR": "iyi günler",
+          "uk-UA": "добрий день",
+          "uz-UZ": "xayrli kun"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Guten Tag, ich möchte gerne etwas zu essen bestellen.",
@@ -80,19 +101,40 @@
       "uk-UA": "З задоволенням. Що б Ви хотіли?",
       "uz-UZ": "Bajonidil. Nima xohlaysiz?"
     },
-    "tips": {
-      "ru-RU": "Для Akkusativ мы применяем то же правило: мужской род 'der Salat' берет у артикля форму 'einen' (einen Salat), а 'der Döner' берет форму 'einen' (einen Döner).",
-      "en-US": "For Akkusativ, we apply the same rule: the masculine noun 'der Salat' takes the article form 'einen', as does 'der Döner'.",
-      "ar-SA": "في حالة النصب (Akkusativ)، تأخذ الكلمة المذكرة 'der Salat' صيغة 'einen'.",
-      "es-ES": "Para Akkusativ, aplicamos la misma regla: el sustantivo masculino 'der Salat' toma la forma del artículo 'einen'.",
-      "fr-FR": "Pour l'Akkusativ, nous appliquons la même règle : le nom masculin 'der Salat' prend l'article 'einen'.",
-      "hi-IN": "Akkusativ के लिए, हम वही नियम लागू करते हैं: पुल्लिंग संज्ञा 'der Salat' 'einen' रूप लेती है।",
-      "pl-PL": "W bierniku stosujemy tę samą regułę: rzeczownik męski 'der Salat' przyjmuje formę 'einen'.",
-      "ro-RO": "Pentru Akkusativ, aplicăm aceeași regulă: substantivul masculin 'der Salat' ia forma 'einen'.",
-      "tr-TR": "Akkusativ için aynı kuralı uygularız: eril isim 'der Salat' 'einen' formunu alır.",
-      "uk-UA": "Для Akkusativ ми застосовуємо те ж правило: чоловічий рід 'der Salat' бере форму 'einen'.",
-      "uz-UZ": "Akkusativda xuddi shu qoidani qo'llaymiz: erkak jinsidagi 'der Salat' 'einen' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "sehr gerne",
+        "translation": {
+          "ru-RU": "с удовольствием",
+          "en-US": "with pleasure",
+          "ar-SA": "بكل سرور",
+          "es-ES": "con gusto",
+          "fr-FR": "avec plaisir",
+          "hi-IN": "खुशी से",
+          "pl-PL": "z przyjemnością",
+          "ro-RO": "cu plăcere",
+          "tr-TR": "memnuniyetle",
+          "uk-UA": "із задоволенням",
+          "uz-UZ": "bajonidil"
+        }
+      },
+      {
+        "german": "was darf",
+        "translation": {
+          "ru-RU": "что можно",
+          "en-US": "what may",
+          "ar-SA": "ماذا يمكن",
+          "es-ES": "qué puede",
+          "fr-FR": "que puis-je",
+          "hi-IN": "क्या हो सकता है",
+          "pl-PL": "co podać",
+          "ro-RO": "ce doriți",
+          "tr-TR": "ne arzu",
+          "uk-UA": "що можна",
+          "uz-UZ": "nima xohlaysiz"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ich nehme eine Pizza Salami und einen Salat.",
@@ -146,19 +188,40 @@
       "uk-UA": "Хочете до цього ще щось попити?",
       "uz-UZ": "Bunga qo'shimcha ichishga ham biror narsa xohlaysizmi?"
     },
-    "tips": {
-      "ru-RU": "Для Akkusativ мы применяем то же правило: женский род 'die Cola' и 'die Sprite' берет у артикля форму 'eine' (eine Cola).",
-      "en-US": "For Akkusativ, we apply the same rule: the feminine noun 'die Cola' takes the article form 'eine'.",
-      "ar-SA": "في حالة النصب، نطبق نفس القاعدة: الكلمة المؤنثة 'die Cola' تأخذ صيغة 'eine'.",
-      "es-ES": "Para Akkusativ, aplicamos la misma regla: el sustantivo femenino 'die Cola' toma la forma del artículo 'eine'.",
-      "fr-FR": "Pour l'Akkusativ, nous appliquons la même règle : le nom féminin 'die Cola' prend la forme 'eine'.",
-      "hi-IN": "Akkusativ के लिए, हम वही नियम लागू करते हैं: स्त्रीलिंग संज्ञा 'die Cola' 'eine' रूप लेती है।",
-      "pl-PL": "Dla biernika (Akkusativ) stosujemy tę samą regułę: rzeczownik żeński 'die Cola' przyjmuje formę 'eine'.",
-      "ro-RO": "Pentru Akkusativ, aplicăm aceeași regulă: substantivul feminin 'die Cola' ia forma 'eine'.",
-      "tr-TR": "Akkusativ için aynı kuralı uygularız: dişil isim 'die Cola' 'eine' formunu alır.",
-      "uk-UA": "Для Akkusativ ми застосовуємо те ж правило: жіночий рід 'die Cola' бере форму 'eine'.",
-      "uz-UZ": "Akkusativda xuddi shu qoidani qo'llaymiz: ayol jinsidagi 'die Cola' 'eine' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "dazu",
+        "translation": {
+          "ru-RU": "к этому",
+          "en-US": "with that",
+          "ar-SA": "مع ذلك",
+          "es-ES": "con eso",
+          "fr-FR": "avec ça",
+          "hi-IN": "इसके साथ",
+          "pl-PL": "do tego",
+          "ro-RO": "la asta",
+          "tr-TR": "yanında",
+          "uk-UA": "до цього",
+          "uz-UZ": "bunga qo'shimcha"
+        }
+      },
+      {
+        "german": "trinken",
+        "translation": {
+          "ru-RU": "пить",
+          "en-US": "to drink",
+          "ar-SA": "يشرب",
+          "es-ES": "beber",
+          "fr-FR": "boire",
+          "hi-IN": "पीना",
+          "pl-PL": "pić",
+          "ro-RO": "a bea",
+          "tr-TR": "içmek",
+          "uk-UA": "пити",
+          "uz-UZ": "ichmoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, bitte eine Cola dazu.",
@@ -212,19 +275,40 @@
       "uk-UA": "Добре. Куди мені доставити замовлення?",
       "uz-UZ": "Yaxshi. Buyurtmani qayerga yetkazib beray?"
     },
-    "tips": {
-      "ru-RU": "Отвечая на вопрос 'Куда?' (Wohin?), мы используем Akkusativ. Для Akkusativ мы применяем то же правило: женский род 'die Hauptstraße' (улица) берет у артикля форму 'die' (an die Hauptstraße).",
-      "en-US": "When answering 'Where to?' (Wohin?), we use Akkusativ. We apply the same rule: the feminine noun 'die Hauptstraße' takes the article form 'die' (an die Hauptstraße).",
-      "ar-SA": "عند الإجابة على 'إلى أين؟' (Wohin؟)، نستخدم النصب (Akkusativ). نطبق نفس القاعدة.",
-      "es-ES": "Al responder '¿Adónde?' (Wohin?), usamos Akkusativ. Aplicamos la misma regla.",
-      "fr-FR": "Pour répondre à 'Vers où ?' (Wohin?), on utilise l'Akkusativ. Nous appliquons la même règle.",
-      "hi-IN": "जब प्रश्न 'कहाँ को?' (Wohin?) हो, तो हम Akkusativ का उपयोग करते हैं और वही नियम लागू करते हैं।",
-      "pl-PL": "Odpowiadając na 'Dokąd?' (Wohin?), używamy biernika (Akkusativ). Stosujemy tę samą regułę.",
-      "ro-RO": "Când răspundem la 'Încotro?' (Wohin?), folosim Akkusativ. Aplicăm aceeași regulă.",
-      "tr-TR": "'Nereye?' (Wohin?) sorusuna yanıt verirken Akkusativ kullanırız. Aynı kuralı uygularız.",
-      "uk-UA": "Відповідаючи на запитання 'Куди?' (Wohin?), ми використовуємо Akkusativ. Застосовуємо те ж правило.",
-      "uz-UZ": "'Qayerga?' (Wohin?) savoliga javob berishda biz Akkusativdan foydalanamiz va xuddi shu qoidani qo'llaymiz."
-    },
+    "vocabulary": [
+      {
+        "german": "wohin",
+        "translation": {
+          "ru-RU": "куда",
+          "en-US": "where to",
+          "ar-SA": "إلى أين",
+          "es-ES": "adónde",
+          "fr-FR": "où",
+          "hi-IN": "कहाँ",
+          "pl-PL": "dokąd",
+          "ro-RO": "încotro",
+          "tr-TR": "nereye",
+          "uk-UA": "куди",
+          "uz-UZ": "qayerga"
+        }
+      },
+      {
+        "german": "liefern",
+        "translation": {
+          "ru-RU": "доставить",
+          "en-US": "deliver",
+          "ar-SA": "يوصل",
+          "es-ES": "entregar",
+          "fr-FR": "livrer",
+          "hi-IN": "पहुंचाना",
+          "pl-PL": "dostarczyć",
+          "ro-RO": "a livra",
+          "tr-TR": "teslim etmek",
+          "uk-UA": "доставити",
+          "uz-UZ": "yetkazib bermoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Bitte an die Hauptstraße 12.",
@@ -278,19 +362,40 @@
       "uk-UA": "Який ваш номер телефону для зворотного зв'язку?",
       "uz-UZ": "Savollar uchun telefon raqamingiz qanday?"
     },
-    "tips": {
-      "ru-RU": "Предлог 'unter' в значении 'по номеру' отвечает на вопрос 'Где?' (Wo?), поэтому мы используем Dativ и ставим артикль в Dativ: женский род 'die Nummer' берет у артикля форму 'der' (unter der 0176...).",
-      "en-US": "The preposition 'unter' meaning 'at the number' answers 'Where?' (Wo?), so we use Dativ. The feminine noun 'die Nummer' takes 'der'.",
-      "ar-SA": "حرف الجر 'unter' للإجابة عن 'أين؟' (Wo؟) يتطلب Dativ.",
-      "es-ES": "La preposición 'unter' para responder '¿Dónde?' (Wo?) requiere Dativ.",
-      "fr-FR": "La préposition 'unter' pour répondre à 'Où ?' (Wo?) requiert le Datif.",
-      "hi-IN": "जब 'कहाँ?' (Wo?) का उत्तर देना हो, तो 'unter' के साथ Dativ का उपयोग करते हैं।",
-      "pl-PL": "Przyimek 'unter' odpowiadając na pytanie 'Gdzie?' (Wo?) wymaga celownika (Dativ).",
-      "ro-RO": "Prepoziția 'unter' răspunzând la 'Unde?' (Wo?) cere Dativ.",
-      "tr-TR": "'Nerede?' (Wo?) sorusunu yanıtlarken 'unter' edatı Dativ gerektirir.",
-      "uk-UA": "Прийменник 'unter' у значенні 'за номером' відповідає на питання 'Де?' (Wo?), тому ми використовуємо Dativ.",
-      "uz-UZ": "'Qayerda?' (Wo?) savoliga javob berishda 'unter' predlogi Dativ talab qiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "Rückfragen",
+        "translation": {
+          "ru-RU": "вопросы / уточнения",
+          "en-US": "queries",
+          "ar-SA": "استفسارات",
+          "es-ES": "consultas",
+          "fr-FR": "questions",
+          "hi-IN": "प्रश्न",
+          "pl-PL": "pytania",
+          "ro-RO": "întrebări",
+          "tr-TR": "sorular",
+          "uk-UA": "питання",
+          "uz-UZ": "savollar"
+        }
+      },
+      {
+        "german": "die Telefonnummer",
+        "translation": {
+          "ru-RU": "номер телефона",
+          "en-US": "phone number",
+          "ar-SA": "رقم الهاتف",
+          "es-ES": "número de teléfono",
+          "fr-FR": "numéro de téléphone",
+          "hi-IN": "फोन नंबर",
+          "pl-PL": "numer telefonu",
+          "ro-RO": "număr de telefon",
+          "tr-TR": "telefon numarası",
+          "uk-UA": "номер телефону",
+          "uz-UZ": "telefon raqami"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Meine Nummer ist 0176 123 456 78.",
@@ -344,19 +449,40 @@
       "uk-UA": "Все ясно. Це займе близько 45 хвилин.",
       "uz-UZ": "Tushunarli. Bu taxminan 45 daqiqa vaqt oladi."
     },
-    "tips": {
-      "ru-RU": "Слово 'etwa' означает 'примерно' или 'около'. Оно отлично звучит и показывает хороший уровень словарного запаса (А2).",
-      "en-US": "The word 'etwa' means 'approximately' or 'about'. It sounds great and shows a good vocabulary level (A2).",
-      "ar-SA": "كلمة 'etwa' تعني 'حوالي'. إنها تظهر مستوى جيداً من المفردات (A2).",
-      "es-ES": "La palabra 'etwa' significa 'aproximadamente' o 'alrededor de'. Muestra un buen nivel de vocabulario (A2).",
-      "fr-FR": "Le mot 'etwa' signifie 'environ'. Il montre un bon niveau de vocabulaire (A2).",
-      "hi-IN": "शब्द 'etwa' का अर्थ 'लगभग' है। यह एक अच्छा शब्दावली स्तर (A2) दिखाता है।",
-      "pl-PL": "Słowo 'etwa' oznacza 'około'. Pokazuje to dobry poziom słownictwa (A2).",
-      "ro-RO": "Cuvântul 'etwa' înseamnă 'aproximativ'. Arată un nivel bun de vocabular (A2).",
-      "tr-TR": "'etwa' kelimesi 'yaklaşık' anlamına gelir. İyi bir kelime dağarcığı seviyesini (A2) gösterir.",
-      "uk-UA": "Слово 'etwa' означає 'приблизно' або 'близько'. Воно чудово звучить і показує хороший рівень (А2).",
-      "uz-UZ": "'etwa' so'zi 'taxminan' degan ma'noni anglatadi. U yaxshi lug'at boyligini ko'rsatadi (A2)."
-    },
+    "vocabulary": [
+      {
+        "german": "dauert",
+        "translation": {
+          "ru-RU": "длится / займет",
+          "en-US": "takes / lasts",
+          "ar-SA": "يستغرق",
+          "es-ES": "tarda",
+          "fr-FR": "prend",
+          "hi-IN": "लगता है",
+          "pl-PL": "trwa",
+          "ro-RO": "durează",
+          "tr-TR": "sürer",
+          "uk-UA": "триває",
+          "uz-UZ": "davom etadi"
+        }
+      },
+      {
+        "german": "etwa",
+        "translation": {
+          "ru-RU": "примерно",
+          "en-US": "about / roughly",
+          "ar-SA": "حوالي",
+          "es-ES": "aproximadamente",
+          "fr-FR": "environ",
+          "hi-IN": "लगभग",
+          "pl-PL": "około",
+          "ro-RO": "aproximativ",
+          "tr-TR": "yaklaşık",
+          "uk-UA": "приблизно",
+          "uz-UZ": "taxminan"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Alles klar, vielen Dank!",
@@ -410,19 +536,24 @@
       "uk-UA": "Будь ласка, до побачення (по телефону)!",
       "uz-UZ": "Arzimaydi, xayr (telefonda)!"
     },
-    "tips": {
-      "ru-RU": "Фраза 'Auf Wiederhören' используется исключительно при разговоре по телефону, чтобы подчеркнуть, что вы 'услышитесь' снова, а не 'увидитесь' (Auf Wiedersehen).",
-      "en-US": "The phrase 'Auf Wiederhören' is used exclusively on the phone to emphasize that you will 'hear' each other again, not 'see' each other (Auf Wiedersehen).",
-      "ar-SA": "تُستخدم عبارة 'Auf Wiederhören' حصرياً على الهاتف.",
-      "es-ES": "La frase 'Auf Wiederhören' se usa exclusivamente por teléfono.",
-      "fr-FR": "La phrase 'Auf Wiederhören' s'utilise exclusivement au téléphone.",
-      "hi-IN": "वाक्यांश 'Auf Wiederhören' का उपयोग विशेष रूप से फोन पर किया जाता है।",
-      "pl-PL": "Zwrot 'Auf Wiederhören' jest używany wyłącznie przez telefon.",
-      "ro-RO": "Expresia 'Auf Wiederhören' este folosită exclusiv la telefon.",
-      "tr-TR": "'Auf Wiederhören' ifadesi yalnızca telefonda kullanılır.",
-      "uk-UA": "Фраза 'Auf Wiederhören' використовується виключно при розмові по телефону.",
-      "uz-UZ": "'Auf Wiederhören' iborasi faqat telefonda suhbatlashganda ishlatiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "auf Wiederhören",
+        "translation": {
+          "ru-RU": "до свидания",
+          "en-US": "goodbye",
+          "ar-SA": "مع السلامة",
+          "es-ES": "adiós",
+          "fr-FR": "au revoir",
+          "hi-IN": "अलविदा",
+          "pl-PL": "do usłyszenia",
+          "ro-RO": "la revedere",
+          "tr-TR": "iyi günler",
+          "uk-UA": "до побачення",
+          "uz-UZ": "xayr"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Auf Wiederhören!",
@@ -469,7 +600,7 @@
       "ar-SA": "انتهت المحادثة.",
       "es-ES": "La conversación ha terminado.",
       "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत समाप्त हो गई है।",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
       "pl-PL": "Rozmowa została zakończona.",
       "ro-RO": "Conversația s-a încheiat.",
       "tr-TR": "Konuşma sona erdi.",

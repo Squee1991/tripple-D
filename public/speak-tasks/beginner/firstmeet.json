@@ -14,6 +14,40 @@
       "uk-UA": "Привіт! Як тебе звати?",
       "uz-UZ": "Salom! Isming nima?"
     },
+    "vocabulary": [
+      {
+        "german": "heißen",
+        "translation": {
+          "ar-SA": "يُدعى",
+          "en-US": "be called",
+          "es-ES": "llamarse",
+          "fr-FR": "s'appeler",
+          "hi-IN": "कहलाना",
+          "pl-PL": "nazywać się",
+          "ro-RO": "a se numi",
+          "ru-RU": "зваться",
+          "tr-TR": "adlandırılmak",
+          "uk-UA": "зватися",
+          "uz-UZ": "atalmoq"
+        }
+      },
+      {
+        "german": "der Name",
+        "translation": {
+          "ar-SA": "الاسم",
+          "en-US": "the name",
+          "es-ES": "el nombre",
+          "fr-FR": "le nom",
+          "hi-IN": "नाम",
+          "pl-PL": "imię / nazwisko",
+          "ro-RO": "numele",
+          "ru-RU": "имя",
+          "tr-TR": "isim",
+          "uk-UA": "ім'я",
+          "uz-UZ": "ism"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ich heiße...",
@@ -67,6 +101,40 @@
       "uk-UA": "Радий знайомству! Як твої справи сьогодні?",
       "uz-UZ": "Tanishganimdan xursandman! Bugun ahvoling qanday?"
     },
+    "vocabulary": [
+      {
+        "german": "freut mich",
+        "translation": {
+          "ar-SA": "سعيد بلقائك",
+          "en-US": "pleased to meet you",
+          "es-ES": "encantado",
+          "fr-FR": "enchanté",
+          "hi-IN": "मिलकर खुशी हुई",
+          "pl-PL": "miło mi",
+          "ro-RO": "îmi pare bine",
+          "ru-RU": "очень приятно",
+          "tr-TR": "memnun oldum",
+          "uk-UA": "дуже приємно",
+          "uz-UZ": "xursandman"
+        }
+      },
+      {
+        "german": "heute",
+        "translation": {
+          "ar-SA": "اليوم",
+          "en-US": "today",
+          "es-ES": "hoy",
+          "fr-FR": "aujourd'hui",
+          "hi-IN": "आज",
+          "pl-PL": "dzisiaj",
+          "ro-RO": "astăzi",
+          "ru-RU": "сегодня",
+          "tr-TR": "bugün",
+          "uk-UA": "сьогодні",
+          "uz-UZ": "bugun"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke, sehr gut!",
@@ -120,6 +188,40 @@
       "uk-UA": "Чудово! Звідки ти?",
       "uz-UZ": "Ajoyib! Qayerdansan?"
     },
+    "vocabulary": [
+      {
+        "german": "woher",
+        "translation": {
+          "ar-SA": "من أين",
+          "en-US": "where from",
+          "es-ES": "de dónde",
+          "fr-FR": "d'où",
+          "hi-IN": "कहाँ से",
+          "pl-PL": "skąd",
+          "ro-RO": "de unde",
+          "ru-RU": "откуда",
+          "tr-TR": "nereden",
+          "uk-UA": "звідки",
+          "uz-UZ": "qayerdan"
+        }
+      },
+      {
+        "german": "kommen",
+        "translation": {
+          "ar-SA": "يأتي",
+          "en-US": "to come",
+          "es-ES": "venir",
+          "fr-FR": "venir",
+          "hi-IN": "आना",
+          "pl-PL": "pochodzić",
+          "ro-RO": "a veni",
+          "ru-RU": "приходить",
+          "tr-TR": "gelmek",
+          "uk-UA": "приходити",
+          "uz-UZ": "kelmoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ich komme aus...",
@@ -156,38 +258,72 @@
       "uk-UA": "Цікаво! А де ти зараз?",
       "uz-UZ": "Qiziqarli! Hozir qayerdasan?"
     },
+    "vocabulary": [
+      {
+        "german": "gerade",
+        "translation": {
+          "ar-SA": "الآن",
+          "en-US": "right now",
+          "es-ES": "ahora mismo",
+          "fr-FR": "en ce moment",
+          "hi-IN": "अभी",
+          "pl-PL": "właśnie / teraz",
+          "ro-RO": "chiar acum",
+          "ru-RU": "сейчас",
+          "tr-TR": "şu an",
+          "uk-UA": "зараз",
+          "uz-UZ": "hozir"
+        }
+      },
+      {
+        "german": "die Schule",
+        "translation": {
+          "ar-SA": "المدرسة",
+          "en-US": "the school",
+          "es-ES": "la escuela",
+          "fr-FR": "l'école",
+          "hi-IN": "स्कूल",
+          "pl-PL": "szkoła",
+          "ro-RO": "școala",
+          "ru-RU": "школа",
+          "tr-TR": "okul",
+          "uk-UA": "школа",
+          "uz-UZ": "maktab"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ich bin in der Schule",
         "translation": {
-          "ar-SA": "أنا في المدرسة (Wo? Dativ, يأخذ من الأداة)",
-          "en-US": "I am at school (Wo? Dativ, takes from the article)",
-          "es-ES": "Estoy en la escuela (Wo? Dativ, toma del artículo)",
-          "fr-FR": "Je suis à l'école (Wo? Dativ, prend de l'article)",
-          "hi-IN": "मैं स्कूल में हूँ (Wo? Dativ, आर्टिकल से लेता है)",
-          "pl-PL": "Jestem w szkole (Wo? Dativ, bierze od przedimka)",
-          "ro-RO": "Sunt la școală (Wo? Dativ, ia de la articol)",
-          "ru-RU": "Я в школе (Wo? Dativ, берет у артикля)",
-          "tr-TR": "Okuldayım (Wo? Dativ, artikelden alır)",
-          "uk-UA": "Я в школі (Wo? Dativ, бере у артикля)",
-          "uz-UZ": "Men maktabdaman (Wo? Dativ, artikldan oladi)"
+          "ar-SA": "أنا في المدرسة",
+          "en-US": "I am at school",
+          "es-ES": "Estoy en la escuela",
+          "fr-FR": "Je suis à l'école",
+          "hi-IN": "मैं स्कूल में हूँ",
+          "pl-PL": "Jestem w szkole",
+          "ro-RO": "Sunt la școală",
+          "ru-RU": "Я в школе",
+          "tr-TR": "Okuldayım",
+          "uk-UA": "Я в школі",
+          "uz-UZ": "Men maktabdaman"
         },
         "nextStep": "ask_activity"
       },
       {
         "text": "Ich bin auf der Arbeit",
         "translation": {
-          "ar-SA": "أنا في العمل (Wo? Dativ, يأخذ من الأداة)",
-          "en-US": "I am at work (Wo? Dativ, takes from the article)",
-          "es-ES": "Estoy en el trabajo (Wo? Dativ, toma del artículo)",
-          "fr-FR": "Je suis au travail (Wo? Dativ, prend de l'article)",
-          "hi-IN": "मैं काम पर हूँ (Wo? Dativ, आर्टिकल से लेता है)",
-          "pl-PL": "Jestem w pracy (Wo? Dativ, bierze od przedimka)",
-          "ro-RO": "Sunt la muncă (Wo? Dativ, ia de la articol)",
-          "ru-RU": "Я на работе (Wo? Dativ, берет у артикля)",
-          "tr-TR": "İşteyim (Wo? Dativ, artikelden alır)",
-          "uk-UA": "Я на роботі (Wo? Dativ, бере у артикля)",
-          "uz-UZ": "Men ishdaman (Wo? Dativ, artikldan oladi)"
+          "ar-SA": "أنا في العمل",
+          "en-US": "I am at work",
+          "es-ES": "Estoy en el trabajo",
+          "fr-FR": "Je suis au travail",
+          "hi-IN": "मैं काम पर हूँ",
+          "pl-PL": "Jestem w pracy",
+          "ro-RO": "Sunt la muncă",
+          "ru-RU": "Я на работе",
+          "tr-TR": "İşteyim",
+          "uk-UA": "Я на роботі",
+          "uz-UZ": "Men ishdaman"
         },
         "nextStep": "ask_activity"
       },
@@ -226,6 +362,40 @@
       "uk-UA": "Що ти там робиш?",
       "uz-UZ": "U yerda nima qilyapsan?"
     },
+    "vocabulary": [
+      {
+        "german": "machen",
+        "translation": {
+          "ar-SA": "يفعل",
+          "en-US": "to do / make",
+          "es-ES": "hacer",
+          "fr-FR": "faire",
+          "hi-IN": "करना",
+          "pl-PL": "robić",
+          "ro-RO": "a face",
+          "ru-RU": "делать",
+          "tr-TR": "yapmak",
+          "uk-UA": "робити",
+          "uz-UZ": "qilmoq"
+        }
+      },
+      {
+        "german": "lernen",
+        "translation": {
+          "ar-SA": "يتعلم",
+          "en-US": "to learn",
+          "es-ES": "aprender",
+          "fr-FR": "apprendre",
+          "hi-IN": "सीखना",
+          "pl-PL": "uczyć się",
+          "ro-RO": "a învăța",
+          "ru-RU": "учить",
+          "tr-TR": "öğrenmek",
+          "uk-UA": "вчити",
+          "uz-UZ": "o'rganmoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ich lerne Deutsch",
@@ -296,6 +466,40 @@
       "uk-UA": "Це чудово! Успіхів! Бувай!",
       "uz-UZ": "Bu ajoyib! Omad! Xayr!"
     },
+    "vocabulary": [
+      {
+        "german": "toll",
+        "translation": {
+          "ar-SA": "رائع",
+          "en-US": "great",
+          "es-ES": "genial",
+          "fr-FR": "super",
+          "hi-IN": "बहुत बढ़िया",
+          "pl-PL": "wspaniale",
+          "ro-RO": "grozav",
+          "ru-RU": "здорово / классно",
+          "tr-TR": "harika",
+          "uk-UA": "чудово",
+          "uz-UZ": "ajoyib"
+        }
+      },
+      {
+        "german": "viel Erfolg",
+        "translation": {
+          "ar-SA": "بالتوفيق",
+          "en-US": "much success",
+          "es-ES": "mucho éxito",
+          "fr-FR": "bonne chance",
+          "hi-IN": "बहुत सफलता",
+          "pl-PL": "powodzenia",
+          "ro-RO": "mult succes",
+          "ru-RU": "больших успехов",
+          "tr-TR": "başarılar",
+          "uk-UA": "великих успіхів",
+          "uz-UZ": "omad"
+        }
+      }
+    ],
     "options": [],
     "defaultNext": null
   }

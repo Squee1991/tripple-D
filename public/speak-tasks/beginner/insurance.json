@@ -14,19 +14,40 @@
       "uk-UA": "Добрий день, лікарняна каса. Чим я можу Вам допомогти?",
       "uz-UZ": "Xayrli kun, tibbiy sug'urta. Sizga qanday yordam bera olaman?"
     },
-    "tips": {
-      "ru-RU": "Глагол 'helfen' (помогать) всегда требует Dativ. 'Ihnen' — это вежливое 'Sie' в дательном падеже.",
-      "en-US": "The verb 'helfen' (to help) always requires the Dativ case. 'Ihnen' is the formal 'Sie' in Dativ.",
-      "ar-SA": "الفعل 'helfen' (يساعد) يتطلب دائماً حالة Dativ. 'Ihnen' هي الصيغة الرسمية لـ 'Sie' في Dativ.",
-      "es-ES": "El verbo 'helfen' (ayudar) siempre requiere el caso Dativ. 'Ihnen' es el 'Sie' formal en Dativ.",
-      "fr-FR": "Le verbe 'helfen' (aider) requiert toujours le cas Datif. 'Ihnen' est le 'Sie' formel au Datif.",
-      "hi-IN": "क्रिया 'helfen' (मदद करना) के लिए हमेशा Dativ कारक की आवश्यकता होती है। 'Ihnen' Dativ में औपचारिक 'Sie' है।",
-      "pl-PL": "Czasownik 'helfen' (pomagać) zawsze wymaga celownika (Dativ). 'Ihnen' to formalne 'Sie' w Dativie.",
-      "ro-RO": "Verbul 'helfen' (a ajuta) cere mereu cazul Dativ. 'Ihnen' este 'Sie' formal în Dativ.",
-      "tr-TR": "'helfen' (yardım etmek) fiili her zaman Dativ gerektirir. 'Ihnen', Dativ'deki resmi 'Sie'dir.",
-      "uk-UA": "Дієслово 'helfen' (допомагати) завжди вимагає Dativ. 'Ihnen' — це ввічливе 'Sie' у давальному відмінку.",
-      "uz-UZ": "'helfen' (yordam bermoq) fe'li har doim Dativni talab qiladi. 'Ihnen' Dativdagi rasmiy 'Sie' dir."
-    },
+    "vocabulary": [
+      {
+        "german": "die Krankenkasse",
+        "translation": {
+          "ru-RU": "больничная касса",
+          "en-US": "health insurance",
+          "ar-SA": "تأمين صحي",
+          "es-ES": "seguro médico",
+          "fr-FR": "assurance maladie",
+          "hi-IN": "स्वास्थ्य बीमा",
+          "pl-PL": "kasa chorych",
+          "ro-RO": "casa de asigurări",
+          "tr-TR": "sağlık sigortası",
+          "uk-UA": "лікарняна каса",
+          "uz-UZ": "tibbiy sug'urta"
+        }
+      },
+      {
+        "german": "helfen",
+        "translation": {
+          "ru-RU": "помогать",
+          "en-US": "to help",
+          "ar-SA": "يساعد",
+          "es-ES": "ayudar",
+          "fr-FR": "aider",
+          "hi-IN": "मदद करना",
+          "pl-PL": "pomagać",
+          "ro-RO": "a ajuta",
+          "tr-TR": "yardım etmek",
+          "uk-UA": "допомагати",
+          "uz-UZ": "yordam bermoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Guten Tag. Ich brauche eine neue Gesundheitskarte.",
@@ -80,19 +101,40 @@
       "uk-UA": "Я розумію. Чи можете Ви, будь ласка, назвати свій страховий номер?",
       "uz-UZ": "Tushunaman. Iltimos, sug'urta raqamingizni ayta olasizmi?"
     },
-    "tips": {
-      "ru-RU": "Слово 'Nummer' женского рода. Для Akkusativ мы применяем правило: женский род берет у артикля форму 'Ihre' (Ihre Nummer).",
-      "en-US": "The word 'Nummer' is feminine. In Akkusativ, it takes the form 'Ihre' (your).",
-      "ar-SA": "كلمة 'Nummer' مؤنثة. في حالة النصب، تأخذ صيغة 'Ihre'.",
-      "es-ES": "La palabra 'Nummer' es femenina. En Akkusativ, toma la forma 'Ihre'.",
-      "fr-FR": "Le mot 'Nummer' est féminin. À l'Akkusativ, il prend la forme 'Ihre'.",
-      "hi-IN": "शब्द 'Nummer' स्त्रीलिंग है। Akkusativ में, यह 'Ihre' रूप लेता है।",
-      "pl-PL": "Słowo 'Nummer' jest r. żeńskiego. W bierniku przyjmuje formę 'Ihre'.",
-      "ro-RO": "Cuvântul 'Nummer' este feminin. În Akkusativ, ia forma 'Ihre'.",
-      "tr-TR": "'Nummer' kelimesi dişildir. Akkusativ'de 'Ihre' şeklini alır.",
-      "uk-UA": "Слово 'Nummer' жіночого роду. В Akkusativ воно бере форму 'Ihre'.",
-      "uz-UZ": "'Nummer' so'zi ayol jinsiga tegishli. Akkusativda u 'Ihre' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "verstehe",
+        "translation": {
+          "ru-RU": "понимаю",
+          "en-US": "understand",
+          "ar-SA": "أفهم",
+          "es-ES": "entiendo",
+          "fr-FR": "comprends",
+          "hi-IN": "समझता हूँ",
+          "pl-PL": "rozumiem",
+          "ro-RO": "înțeleg",
+          "tr-TR": "anlıyorum",
+          "uk-UA": "розумію",
+          "uz-UZ": "tushunaman"
+        }
+      },
+      {
+        "german": "die Nummer",
+        "translation": {
+          "ru-RU": "номер",
+          "en-US": "number",
+          "ar-SA": "رقم",
+          "es-ES": "número",
+          "fr-FR": "numéro",
+          "hi-IN": "संख्या",
+          "pl-PL": "numer",
+          "ro-RO": "numărul",
+          "tr-TR": "numara",
+          "uk-UA": "номер",
+          "uz-UZ": "raqam"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, einen Moment. Die Nummer ist 123456789.",
@@ -146,19 +188,40 @@
       "uk-UA": "Дякую. І Ваше ім'я та дата народження?",
       "uz-UZ": "Rahmat. Ismingiz va tug'ilgan sanangiz nima?"
     },
-    "tips": {
-      "ru-RU": "При указании точных дат с числами используется предлог 'am' (сокращение от an dem).",
-      "en-US": "When specifying exact dates with numbers, use the preposition 'am' (contraction of an dem).",
-      "ar-SA": "عند تحديد تواريخ دقيقة بالأرقام، استخدم حرف الجر 'am'.",
-      "es-ES": "Al especificar fechas exactas con números, use la preposición 'am'.",
-      "fr-FR": "Pour préciser des dates exactes avec des nombres, on utilise la préposition 'am'.",
-      "hi-IN": "संख्याओं के साथ सटीक तिथियां निर्दिष्ट करते समय, पूर्वसर्ग 'am' का उपयोग करें।",
-      "pl-PL": "Przy podawaniu dokładnych dat z liczbami używamy przyimka 'am'.",
-      "ro-RO": "La specificarea datelor exacte cu numere, folosiți prepoziția 'am'.",
-      "tr-TR": "Sayılarla kesin tarihleri belirtirken 'am' edatını kullanın.",
-      "uk-UA": "При вказівці точних дат з числами використовується прийменник 'am'.",
-      "uz-UZ": "Raqamlar bilan aniq sanalarni ko'rsatishda 'am' predlogidan foydalaning."
-    },
+    "vocabulary": [
+      {
+        "german": "der Name",
+        "translation": {
+          "ru-RU": "имя",
+          "en-US": "name",
+          "ar-SA": "الاسم",
+          "es-ES": "nombre",
+          "fr-FR": "nom",
+          "hi-IN": "नाम",
+          "pl-PL": "imię",
+          "ro-RO": "numele",
+          "tr-TR": "isim",
+          "uk-UA": "ім'я",
+          "uz-UZ": "ism"
+        }
+      },
+      {
+        "german": "das Geburtsdatum",
+        "translation": {
+          "ru-RU": "дата рождения",
+          "en-US": "date of birth",
+          "ar-SA": "تاريخ الميلاد",
+          "es-ES": "fecha de nacimiento",
+          "fr-FR": "date de naissance",
+          "hi-IN": "जन्म तिथि",
+          "pl-PL": "data urodzenia",
+          "ro-RO": "data nașterii",
+          "tr-TR": "doğum tarihi",
+          "uk-UA": "дата народження",
+          "uz-UZ": "tug'ilgan sana"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ich heiße Anna Schmidt, geboren am 10. Mai 1995.",
@@ -212,19 +275,40 @@
       "uk-UA": "Все вірно. Вам потрібна нова картка для себе?",
       "uz-UZ": "Hammasi to'g'ri. O'zingiz uchun yangi karta kerakmi?"
     },
-    "tips": {
-      "ru-RU": "Слово 'Karte' (карта) — женского рода. Поскольку это объект (Что вам нужно?), мы используем Akkusativ. Женский род берет у артикля форму 'eine'.",
-      "en-US": "The word 'Karte' is feminine. Since it's the direct object, we use Akkusativ. It takes the article form 'eine'.",
-      "ar-SA": "كلمة 'Karte' مؤنثة، وبما أنها مفعول به نستخدم Akkusativ، وتأخذ صيغة 'eine'.",
-      "es-ES": "La palabra 'Karte' es femenina. Como es objeto directo, usamos Akkusativ, y toma el artículo 'eine'.",
-      "fr-FR": "Le mot 'Karte' est féminin. C'est l'objet direct, donc à l'Akkusativ, l'article est 'eine'.",
-      "hi-IN": "शब्द 'Karte' स्त्रीलिंग है। चूँकि यह प्रत्यक्ष वस्तु है, हम Akkusativ का उपयोग करते हैं। यह 'eine' रूप लेता है।",
-      "pl-PL": "Słowo 'Karte' jest r. żeńskiego. Ponieważ to dopełnienie bliższe (Akkusativ), przyjmuje przedimek 'eine'.",
-      "ro-RO": "Cuvântul 'Karte' este feminin. Fiind obiect direct, folosim Akkusativ și ia forma 'eine'.",
-      "tr-TR": "'Karte' kelimesi dişildir. Nesne olduğu için Akkusativ kullanılır ve 'eine' artikelini alır.",
-      "uk-UA": "Слово 'Karte' жіночого роду. Оскільки це об'єкт, ми використовуємо Akkusativ. Артикль бере форму 'eine'.",
-      "uz-UZ": "'Karte' so'zi ayol jinsiga tegishli. U obyekt bo'lgani uchun Akkusativda 'eine' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "korrekt",
+        "translation": {
+          "ru-RU": "верно",
+          "en-US": "correct",
+          "ar-SA": "صحيح",
+          "es-ES": "correcto",
+          "fr-FR": "correct",
+          "hi-IN": "सही",
+          "pl-PL": "poprawne",
+          "ro-RO": "corect",
+          "tr-TR": "doğru",
+          "uk-UA": "вірно",
+          "uz-UZ": "to'g'ri"
+        }
+      },
+      {
+        "german": "neue Karte",
+        "translation": {
+          "ru-RU": "новая карта",
+          "en-US": "new card",
+          "ar-SA": "بطاقة جديدة",
+          "es-ES": "nueva tarjeta",
+          "fr-FR": "nouvelle carte",
+          "hi-IN": "नया कार्ड",
+          "pl-PL": "nowa karta",
+          "ro-RO": "card nou",
+          "tr-TR": "yeni kart",
+          "uk-UA": "нова картка",
+          "uz-UZ": "yangi karta"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, genau. Bitte senden Sie mir eine neue Karte.",
@@ -278,19 +362,40 @@
       "uk-UA": "Зроблю. Надішліть нам, будь ласка, актуальне фото через додаток.",
       "uz-UZ": "Buni qilaman. Iltimos, ilova orqali bizga joriy pasport rasmini yuboring."
     },
-    "tips": {
-      "ru-RU": "Фотография 'das Bild' — среднего рода. В Akkusativ средний род берет у артикля форму 'ein' (ein aktuelles Passbild).",
-      "en-US": "The photo 'das Bild' is neuter. In Akkusativ, the neuter gender takes the article form 'ein' (ein aktuelles Passbild).",
-      "ar-SA": "صورة 'das Bild' محايدة. في حالة النصب تأخذ الأداة صيغة 'ein'.",
-      "es-ES": "La foto 'das Bild' es neutra. En Akkusativ, toma la forma del artículo 'ein'.",
-      "fr-FR": "La photo 'das Bild' est neutre. À l'Akkusativ, elle prend l'article 'ein'.",
-      "hi-IN": "फोटो 'das Bild' नपुंसक है। Akkusativ में, यह 'ein' रूप लेता है।",
-      "pl-PL": "Zdjęcie 'das Bild' jest r. nijakiego. W bierniku przyjmuje przedimek 'ein'.",
-      "ro-RO": "Fotografia 'das Bild' este neutră. În Akkusativ, ia articolul 'ein'.",
-      "tr-TR": "Fotoğraf 'das Bild' nötrdür. Akkusativ'de 'ein' artikelini alır.",
-      "uk-UA": "Фотографія 'das Bild' — середнього роду. В Akkusativ середній рід бере форму 'ein'.",
-      "uz-UZ": "Rasm 'das Bild' o'rta jinsda. Akkusativda u 'ein' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "das Passbild",
+        "translation": {
+          "ru-RU": "фото на паспорт",
+          "en-US": "passport photo",
+          "ar-SA": "صورة جواز السفر",
+          "es-ES": "foto de carnet",
+          "fr-FR": "photo d'identité",
+          "hi-IN": "पासपोर्ट फोटो",
+          "pl-PL": "zdjęcie paszportowe",
+          "ro-RO": "poză de pașaport",
+          "tr-TR": "vesikalık fotoğraf",
+          "uk-UA": "фото на паспорт",
+          "uz-UZ": "pasport rasmi"
+        }
+      },
+      {
+        "german": "per App",
+        "translation": {
+          "ru-RU": "через приложение",
+          "en-US": "via app",
+          "ar-SA": "عبر التطبيق",
+          "es-ES": "por la app",
+          "fr-FR": "via l'application",
+          "hi-IN": "ऐप के जरिए",
+          "pl-PL": "przez aplikację",
+          "ro-RO": "prin aplicație",
+          "tr-TR": "uygulama üzerinden",
+          "uk-UA": "через додаток",
+          "uz-UZ": "ilova orqali"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Geht das auch per E-Mail?",
@@ -344,19 +449,40 @@
       "uk-UA": "Так, найкраще через додаток. Це найшвидше.",
       "uz-UZ": "Ha, eng yaxshisi ilova orqali. Bu eng tezi."
     },
-    "tips": {
-      "ru-RU": "Конструкция 'über die App'. Когда вопрос звучит 'через что?' или 'как?', предлог 'über' требует Akkusativ. Женский род (die App) берет у артикля форму 'die'.",
-      "en-US": "The preposition 'über' requires Akkusativ here. 'die App' takes the form 'die'.",
-      "ar-SA": "حرف الجر 'über' يتطلب Akkusativ هنا. 'die App' تأخذ الصيغة 'die'.",
-      "es-ES": "La preposición 'über' requiere Akkusativ aquí. 'die App' toma la forma 'die'.",
-      "fr-FR": "La préposition 'über' requiert l'Akkusativ ici. 'die App' prend la forme 'die'.",
-      "hi-IN": "यहाँ पूर्वसर्ग 'über' को Akkusativ की आवश्यकता है। 'die App' 'die' रूप लेता है।",
-      "pl-PL": "Przyimek 'über' wymaga tu biernika. 'die App' przyjmuje formę 'die'.",
-      "ro-RO": "Prepoziția 'über' cere Akkusativ aici. 'die App' ia forma 'die'.",
-      "tr-TR": "Burada 'über' edatı Akkusativ gerektirir. 'die App' 'die' şeklini alır.",
-      "uk-UA": "Прийменник 'über' вимагає Akkusativ. Жіночий рід (die App) бере форму 'die'.",
-      "uz-UZ": "'über' predlogi bu yerda Akkusativ talab qiladi. 'die App' 'die' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "am besten",
+        "translation": {
+          "ru-RU": "лучше всего",
+          "en-US": "best",
+          "ar-SA": "من الأفضل",
+          "es-ES": "lo mejor",
+          "fr-FR": "le mieux",
+          "hi-IN": "सबसे अच्छा",
+          "pl-PL": "najlepiej",
+          "ro-RO": "cel mai bine",
+          "tr-TR": "en iyisi",
+          "uk-UA": "найкраще",
+          "uz-UZ": "eng yaxshisi"
+        }
+      },
+      {
+        "german": "schnellsten",
+        "translation": {
+          "ru-RU": "быстрее всего",
+          "en-US": "fastest",
+          "ar-SA": "الأسرع",
+          "es-ES": "lo más rápido",
+          "fr-FR": "le plus rapide",
+          "hi-IN": "सबसे तेज़",
+          "pl-PL": "najszybciej",
+          "ro-RO": "cel mai rapid",
+          "tr-TR": "en hızlı",
+          "uk-UA": "найшвидше",
+          "uz-UZ": "eng tez"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Gut, ich lade das Foto heute noch hoch.",
@@ -410,19 +536,40 @@
       "uk-UA": "Відмінно. Картка прийде приблизно через два тижні. Вам потрібна ще якась допомога?",
       "uz-UZ": "Ajoyib. Karta taxminan ikki haftadan keyin keladi. Yana yordam kerakmi?"
     },
-    "tips": {
-      "ru-RU": "Помните правило: когда вопрос 'Где?' (Wo?) или когда (через 2 недели — in zwei Wochen), мы используем Dativ и ставим артикль существительного в Dativ. Для Akkusativ мы применяем то же правило (берет у артикля нужную форму).",
-      "en-US": "Remember: when answering 'Wo?' (Where?) or referring to time with 'in', use Dativ. For Akkusativ, the same rule applies regarding articles.",
-      "ar-SA": "تذكر: عند الإجابة على 'Wo؟' أو التعبير عن الوقت بـ 'in'، نستخدم Dativ.",
-      "es-ES": "Recuerde: al responder 'Wo?' (¿Dónde?) o referirse al tiempo con 'in', use Dativ.",
-      "fr-FR": "Rappelez-vous : pour répondre à 'Wo?' (Où ?) ou indiquer le temps avec 'in', utilisez le Datif.",
-      "hi-IN": "याद रखें: 'Wo?' का उत्तर देते समय या 'in' के साथ समय बताते समय, Dativ का उपयोग करें।",
-      "pl-PL": "Pamiętaj: odpowiadając na 'Wo?' lub określając czas z 'in', używamy celownika.",
-      "ro-RO": "Rețineți: când răspundeți la 'Wo?' sau indicați timpul cu 'in', folosiți Dativ.",
-      "tr-TR": "Unutmayın: 'Wo?' sorusuna cevap verirken veya 'in' ile zaman belirtirken Dativ kullanılır.",
-      "uk-UA": "Пам'ятайте правило: коли питання 'Де?' (Wo?) або коли (через 2 тижні), ми використовуємо Dativ.",
-      "uz-UZ": "Yodingizda bo'lsin: 'Wo?' savoliga javob berishda yoki 'in' bilan vaqtni bildirishda Dativ ishlatiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "zwei Wochen",
+        "translation": {
+          "ru-RU": "две недели",
+          "en-US": "two weeks",
+          "ar-SA": "أسبوعين",
+          "es-ES": "dos semanas",
+          "fr-FR": "deux semaines",
+          "hi-IN": "दो सप्ताह",
+          "pl-PL": "dwa tygodnie",
+          "ro-RO": "două săptămâni",
+          "tr-TR": "iki hafta",
+          "uk-UA": "два тижні",
+          "uz-UZ": "ikki hafta"
+        }
+      },
+      {
+        "german": "die Hilfe",
+        "translation": {
+          "ru-RU": "помощь",
+          "en-US": "help",
+          "ar-SA": "مساعدة",
+          "es-ES": "ayuda",
+          "fr-FR": "aide",
+          "hi-IN": "सहायता",
+          "pl-PL": "pomoc",
+          "ro-RO": "ajutor",
+          "tr-TR": "yardım",
+          "uk-UA": "допомога",
+          "uz-UZ": "yordam"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Nein, das war alles. Vielen Dank!",
@@ -469,7 +616,7 @@
       "ar-SA": "انتهت المحادثة.",
       "es-ES": "La conversación ha terminado.",
       "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत समाप्त हो गई है।",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
       "pl-PL": "Rozmowa została zakończona.",
       "ro-RO": "Conversația s-a încheiat.",
       "tr-TR": "Konuşma sona erdi.",

@@ -60,7 +60,7 @@
           <button class="close-btn" @click="activeGalaxy = null">✖</button>
           <div class="visual-stage">
             <div class="astro-side">
-              <img src="../../../assets/images/galaxy-images/astonauntWithMap.svg" alt="astronaut" class="astro-unit">
+              <img src="../../../assets/images/galaxy-images/AstronauntWithMap.svg" alt="astronaut" class="astro-unit">
             </div>
             <div class="projection-side">
               <div class="hologram-platform"></div>
@@ -86,7 +86,7 @@
           <button class="close-btn" @click="showPlusModal = false">✖</button>
           <div class="visual-stage">
             <div class="astro-side">
-              <img src="../../../assets/images/galaxy-images/astonauntWithMap.svg" alt="astronaut" class="astro-unit">
+              <img :src="Astronaut" alt="astronaut" class="astro-unit">
             </div>
             <div class="projection-side">
               <div class="hologram-platform plus-glow"></div>
@@ -116,6 +116,7 @@ import {useRouter} from 'vue-router'
 import {useGalaxyStore} from '../../../store/galaxyStore.js'
 import {userAuthStore} from '../../../store/authStore.js'
 
+import Astronaut from '../../../assets/images/galaxy-images/AstronauntWithMap.svg'
 import ConstellationOne from 'assets/images/constellation/constellation-1.svg'
 import ConstellationTwo from 'assets/images/constellation/constellation-2.svg'
 import ConstellationThree from 'assets/images/constellation/constellation-3.svg'
@@ -557,7 +558,6 @@ const goToPay = () => {
 .visual-stage {
   display: flex;
   padding: 30px 20px 0;
-  height: 160px;
   align-items: flex-end;
   justify-content: space-around;
   background: linear-gradient(to bottom, rgba(83, 75, 255, 0.1), transparent);
@@ -565,7 +565,7 @@ const goToPay = () => {
 }
 
 .astro-unit {
-  width: 134px;
+  width: 120px;
   height: auto;
 }
 
@@ -579,7 +579,7 @@ const goToPay = () => {
 }
 
 .galaxy-projection {
-  width: 80px;
+  width: 100px;
   z-index: 2;
   animation: floatEffect 6s ease-in-out infinite;
 }
@@ -639,14 +639,14 @@ const goToPay = () => {
 .start-mission-btn {
   width: 100%;
   padding: 15px;
-  background: #ccff00;
+  background: #2196f3;
   border: none;
-  border-radius: 20px;
-  color: #000;
+  border-radius: 50px;
+  color:white;
   font-size: 20px;
   font-weight: 900;
   cursor: pointer;
-  box-shadow: 0 6px 0 #89aa00;
+  box-shadow: 0 6px 0 #0d47a1;
   transition: all 0.1s;
 }
 

@@ -14,19 +14,40 @@
       "uk-UA": "Добрий день! Чи знаєте Ви, чому я Вас зупинив?",
       "uz-UZ": "Xayrli kun! Sizni nima uchun to'xtatganimni bilasizmi?"
     },
-    "tips": {
-      "ru-RU": "Местоимение 'Sie' (Вы) выступает как прямое дополнение. Для Akkusativ мы применяем правило: оно берет у артикля нужную форму, оставаясь 'Sie'.",
-      "en-US": "The pronoun 'Sie' (You) is the direct object. For Akkusativ, we apply the rule: it takes the appropriate article form, remaining 'Sie'.",
-      "ar-SA": "الضمير 'Sie' (أنت) هو المفعول به المباشر. في حالة النصب (Akkusativ)، يبقى كما هو 'Sie'.",
-      "es-ES": "El pronombre 'Sie' (Usted) es el objeto directo. Para Akkusativ, aplicamos la regla: toma la forma correspondiente, permaneciendo 'Sie'.",
-      "fr-FR": "Le pronom 'Sie' (Vous) est l'objet direct. Pour l'Akkusativ, il reste 'Sie'.",
-      "hi-IN": "सर्वनाम 'Sie' (आप) प्रत्यक्ष वस्तु है। Akkusativ के लिए, यह 'Sie' ही रहता है।",
-      "pl-PL": "Zaimek 'Sie' (Pani) to dopełnienie bliższe. W bierniku przyjmuje odpowiednią formę, pozostając 'Sie'.",
-      "ro-RO": "Pronumele 'Sie' (Dumneavoastră) este obiectul direct. Pentru Akkusativ, rămâne 'Sie'.",
-      "tr-TR": "'Sie' (Siz) zamiri doğrudan nesnedir. Akkusativ'de 'Sie' olarak kalır.",
-      "uk-UA": "Займенник 'Sie' (Ви) є прямим додатком. В Akkusativ він бере потрібну форму, залишаючись 'Sie'.",
-      "uz-UZ": "'Sie' (Siz) olmoshi to'g'ridan-to'g'ri obyektdir. Akkusativda u 'Sie' shaklida qoladi."
-    },
+    "vocabulary": [
+      {
+        "german": "warum",
+        "translation": {
+          "ru-RU": "почему",
+          "en-US": "why",
+          "ar-SA": "لماذا",
+          "es-ES": "por qué",
+          "fr-FR": "pourquoi",
+          "hi-IN": "क्यों",
+          "pl-PL": "dlaczego",
+          "ro-RO": "de ce",
+          "tr-TR": "neden",
+          "uk-UA": "чому",
+          "uz-UZ": "nima uchun"
+        }
+      },
+      {
+        "german": "anhalten",
+        "translation": {
+          "ru-RU": "останавливать",
+          "en-US": "to stop",
+          "ar-SA": "يوقف",
+          "es-ES": "parar",
+          "fr-FR": "arrêter",
+          "hi-IN": "रोकना",
+          "pl-PL": "zatrzymać",
+          "ro-RO": "a opri",
+          "tr-TR": "durdurmak",
+          "uk-UA": "зупиняти",
+          "uz-UZ": "to'xtatmoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Nein, leider nicht. Was habe ich falsch gemacht?",
@@ -80,19 +101,40 @@
       "uk-UA": "Ви припаркувалися тут у зоні заборони паркування.",
       "uz-UZ": "Siz bu yerda parkovka taqiqlangan joyda to'xtadingiz."
     },
-    "tips": {
-      "ru-RU": "Когда вопрос 'Где?' (Wo?), мы используем Dativ и ставим артикль существительного в Dativ. Средний род 'das Parkverbot' берет у артикля форму 'dem' (im Parkverbot).",
-      "en-US": "When the question is 'Where?' (Wo?), we use Dativ and put the noun's article in Dativ. 'Das Parkverbot' takes the article form 'dem' (im).",
-      "ar-SA": "عندما يكون السؤال 'أين؟' (Wo؟)، نستخدم حالة Dativ ونضع أداة الاسم في Dativ.",
-      "es-ES": "Cuando la pregunta es '¿Dónde?' (Wo?), usamos Dativ y ponemos el artículo en Dativ. 'Das Parkverbot' toma la forma 'dem' (im).",
-      "fr-FR": "Quand la question est 'Où ?' (Wo?), nous utilisons le Datif et mettons l'article du nom au Datif.",
-      "hi-IN": "जब प्रश्न 'कहाँ?' (Wo?) हो, तो हम Dativ का उपयोग करते हैं और संज्ञा के लेख को Dativ में रखते हैं।",
-      "pl-PL": "Kiedy pytanie brzmi 'Gdzie?' (Wo?), używamy celownika i wstawiamy przedimek w Dativie.",
-      "ro-RO": "Când întrebarea este 'Unde?' (Wo?), folosim Dativ și punem articolul în Dativ.",
-      "tr-TR": "Soru 'Nerede?' (Wo?) olduğunda, Dativ kullanırız ve ismin artikelini Dativ'e koyarız.",
-      "uk-UA": "Коли питання 'Де?' (Wo?), ми використовуємо Dativ і ставимо артикль іменника в Dativ. 'Das Parkverbot' бере форму 'dem' (im).",
-      "uz-UZ": "Savol 'Qayerda?' (Wo?) bo'lganda, biz Dativdan foydalanamiz va otning artiklini Dativga qo'yamiz."
-    },
+    "vocabulary": [
+      {
+        "german": "das Parkverbot",
+        "translation": {
+          "ru-RU": "запрет парковки",
+          "en-US": "no-parking zone",
+          "ar-SA": "ممنوع الوقوف",
+          "es-ES": "prohibido aparcar",
+          "fr-FR": "interdiction de stationner",
+          "hi-IN": "नो-पार्किंग",
+          "pl-PL": "zakaz parkowania",
+          "ro-RO": "parcarea interzisă",
+          "tr-TR": "park yasağı",
+          "uk-UA": "заборона паркування",
+          "uz-UZ": "to'xtash taqiqlangan"
+        }
+      },
+      {
+        "german": "geparkt",
+        "translation": {
+          "ru-RU": "припарковался",
+          "en-US": "parked",
+          "ar-SA": "ركن",
+          "es-ES": "aparcado",
+          "fr-FR": "garé",
+          "hi-IN": "पार्क किया",
+          "pl-PL": "zaparkował",
+          "ro-RO": "parcat",
+          "tr-TR": "park etti",
+          "uk-UA": "припаркувався",
+          "uz-UZ": "parkovka qildi"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Oh, das habe ich leider nicht gesehen.",
@@ -146,19 +188,40 @@
       "uk-UA": "Мені потрібні, будь ласка, водійські права та техпаспорт.",
       "uz-UZ": "Iltimos, haydovchilik guvohnomasi va texnik pasportni bering."
     },
-    "tips": {
-      "ru-RU": "Для Akkusativ мы применяем то же правило. Мужской род 'der Führerschein' (права) берет у артикля форму 'den' (или 'meinen'), даже если в быстрой речи артикль иногда опускается.",
-      "en-US": "For Akkusativ, we apply the same rule. The masculine noun 'der Führerschein' takes the article form 'den' (or 'meinen').",
-      "ar-SA": "بالنسبة لحالة النصب (Akkusativ)، نطبق نفس القاعدة.",
-      "es-ES": "Para Akkusativ, aplicamos la misma regla. El sustantivo masculino 'der Führerschein' toma la forma 'den'.",
-      "fr-FR": "Pour l'Akkusativ, nous appliquons la même règle. Le nom masculin 'der Führerschein' prend la forme 'den'.",
-      "hi-IN": "Akkusativ के लिए, हम वही नियम लागू करते हैं। पुल्लिंग संज्ञा 'der Führerschein' 'den' रूप लेती है।",
-      "pl-PL": "Dla Akkusativu stosujemy tę samą regułę. Rzeczownik męski 'der Führerschein' przyjmuje formę 'den'.",
-      "ro-RO": "Pentru Akkusativ, aplicăm aceeași regulă. Substantivul masculin 'der Führerschein' ia forma 'den'.",
-      "tr-TR": "Akkusativ için aynı kuralı uygularız. Eril isim 'der Führerschein' 'den' formunu alır.",
-      "uk-UA": "Для Akkusativ ми застосовуємо те ж правило. Чоловічий рід 'der Führerschein' бере форму 'den'.",
-      "uz-UZ": "Akkusativ uchun biz xuddi shu qoidani qo'llaymiz. Erkak jinsidagi 'der Führerschein' 'den' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "der Führerschein",
+        "translation": {
+          "ru-RU": "водительские права",
+          "en-US": "driver's license",
+          "ar-SA": "رخصة القيادة",
+          "es-ES": "carnet de conducir",
+          "fr-FR": "permis de conduire",
+          "hi-IN": "ड्राइविंग लाइसेंस",
+          "pl-PL": "prawo jazdy",
+          "ro-RO": "permis de conducere",
+          "tr-TR": "ehliyet",
+          "uk-UA": "водійські права",
+          "uz-UZ": "haydovchilik guvohnomasi"
+        }
+      },
+      {
+        "german": "der Fahrzeugschein",
+        "translation": {
+          "ru-RU": "техпаспорт",
+          "en-US": "vehicle registration",
+          "ar-SA": "رخصة السيارة",
+          "es-ES": "permiso de circulación",
+          "fr-FR": "carte grise",
+          "hi-IN": "वाहन पंजीकरण",
+          "pl-PL": "dowód rejestracyjny",
+          "ro-RO": "certificat de înmatriculare",
+          "tr-TR": "ruhsat",
+          "uk-UA": "техпаспорт",
+          "uz-UZ": "texnik pasport"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, einen Moment bitte. Hier sind sie.",
@@ -212,19 +275,40 @@
       "uk-UA": "Дякую. Це коштує зараз 30 євро штрафу.",
       "uz-UZ": "Rahmat. Buning jarimasi hozir 30 yevro."
     },
-    "tips": {
-      "ru-RU": "Для Akkusativ мы применяем то же правило. Мужской род 'der Betrag' (сумма) в качестве прямого дополнения берет у артикля форму 'den' (den Betrag).",
-      "en-US": "For Akkusativ, we apply the same rule. The masculine noun 'der Betrag' (amount) takes the article form 'den' (den Betrag).",
-      "ar-SA": "بالنسبة لحالة النصب، نطبق نفس القاعدة. الاسم المذكر 'der Betrag' يأخذ أداة 'den'.",
-      "es-ES": "Para Akkusativ, aplicamos la misma regla. El sustantivo masculino 'der Betrag' toma la forma del artículo 'den'.",
-      "fr-FR": "Pour l'Akkusativ, nous appliquons la même règle. Le nom masculin 'der Betrag' prend la forme 'den'.",
-      "hi-IN": "Akkusativ के लिए, हम वही नियम लागू करते हैं। पुल्लिंग संज्ञा 'der Betrag' 'den' रूप लेती है।",
-      "pl-PL": "Dla biernika stosujemy tę samą regułę. Rzeczownik męski 'der Betrag' przyjmuje formę 'den'.",
-      "ro-RO": "Pentru Akkusativ, aplicăm aceeași regulă. Substantivul masculin 'der Betrag' ia forma 'den'.",
-      "tr-TR": "Akkusativ için aynı kuralı uygularız. Eril isim 'der Betrag' 'den' formunu alır.",
-      "uk-UA": "Для Akkusativ ми застосовуємо те ж правило. Чоловічий рід 'der Betrag' бере форму 'den'.",
-      "uz-UZ": "Akkusativ uchun biz xuddi shu qoidani qo'llaymiz. Erkak jinsidagi 'der Betrag' 'den' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "die Strafe",
+        "translation": {
+          "ru-RU": "штраф",
+          "en-US": "fine / penalty",
+          "ar-SA": "غرامة",
+          "es-ES": "multa",
+          "fr-FR": "amende",
+          "hi-IN": "जुर्माना",
+          "pl-PL": "mandat / kara",
+          "ro-RO": "amendă",
+          "tr-TR": "ceza",
+          "uk-UA": "штраф",
+          "uz-UZ": "jarima"
+        }
+      },
+      {
+        "german": "kosten",
+        "translation": {
+          "ru-RU": "стоить",
+          "en-US": "to cost",
+          "ar-SA": "يكلف",
+          "es-ES": "costar",
+          "fr-FR": "coûter",
+          "hi-IN": "कीमत होना",
+          "pl-PL": "kosztować",
+          "ro-RO": "a costa",
+          "tr-TR": "mal olmak",
+          "uk-UA": "коштувати",
+          "uz-UZ": "turmoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Kann ich das direkt vor Ort bezahlen?",
@@ -278,19 +362,40 @@
       "uk-UA": "Ви отримаєте рахунок поштою.",
       "uz-UZ": "Siz pochtadan hisob varaqasini olasiz."
     },
-    "tips": {
-      "ru-RU": "Для Akkusativ мы применяем то же правило: женский род 'die Rechnung' (счет) берет у артикля форму 'eine'.",
-      "en-US": "For Akkusativ, we apply the same rule: the feminine noun 'die Rechnung' (invoice) takes the article form 'eine'.",
-      "ar-SA": "بالنسبة لحالة النصب، نطبق نفس القاعدة: الاسم المؤنث 'die Rechnung' يأخذ أداة 'eine'.",
-      "es-ES": "Para Akkusativ, aplicamos la misma regla: el sustantivo femenino 'die Rechnung' toma la forma del artículo 'eine'.",
-      "fr-FR": "Pour l'Akkusativ, nous appliquons la même règle : le nom féminin 'die Rechnung' prend la forme 'eine'.",
-      "hi-IN": "Akkusativ के लिए, हम वही नियम लागू करते हैं: स्त्रीलिंग संज्ञा 'die Rechnung' 'eine' रूप लेती है।",
-      "pl-PL": "Dla biernika stosujemy tę samą regułę: rzeczownik żeński 'die Rechnung' przyjmuje formę 'eine'.",
-      "ro-RO": "Pentru Akkusativ, aplicăm aceeași regulă: substantivul feminin 'die Rechnung' ia forma 'eine'.",
-      "tr-TR": "Akkusativ için aynı kuralı uygularız: dişil isim 'die Rechnung' 'eine' formunu alır.",
-      "uk-UA": "Для Akkusativ ми застосовуємо те ж правило: жіночий рід 'die Rechnung' бере форму 'eine'.",
-      "uz-UZ": "Akkusativ uchun xuddi shu qoidani qo'llaymiz: ayol jinsidagi 'die Rechnung' 'eine' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "die Rechnung",
+        "translation": {
+          "ru-RU": "счет",
+          "en-US": "invoice / bill",
+          "ar-SA": "فاتورة",
+          "es-ES": "factura",
+          "fr-FR": "facture",
+          "hi-IN": "बिल",
+          "pl-PL": "rachunek",
+          "ro-RO": "factură",
+          "tr-TR": "fatura",
+          "uk-UA": "рахунок",
+          "uz-UZ": "hisob"
+        }
+      },
+      {
+        "german": "per Post",
+        "translation": {
+          "ru-RU": "по почте",
+          "en-US": "by mail",
+          "ar-SA": "بالبريد",
+          "es-ES": "por correo",
+          "fr-FR": "par la poste",
+          "hi-IN": "डाक से",
+          "pl-PL": "pocztą",
+          "ro-RO": "prin poștă",
+          "tr-TR": "posta ile",
+          "uk-UA": "поштою",
+          "uz-UZ": "pochta orqali"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Alles klar, ich verstehe das.",
@@ -344,19 +449,40 @@
       "uk-UA": "Будь ласка, паркуйтеся в майбутньому за правилами.",
       "uz-UZ": "Iltimos, kelajakda qoidalarga muvofiq parkovka qiling."
     },
-    "tips": {
-      "ru-RU": "Когда вопрос звучит 'Когда?' (Wann?), мы используем Dativ. Женский род 'die Zukunft' (будущее) берет у артикля форму 'der' (in der Zukunft).",
-      "en-US": "When answering 'When?' (Wann?), we use Dativ. The feminine noun 'die Zukunft' takes the article form 'der' (in der Zukunft).",
-      "ar-SA": "عند الإجابة على 'متى؟' (Wann؟)، نستخدم Dativ. الاسم المؤنث 'die Zukunft' يأخذ أداة 'der'.",
-      "es-ES": "Al responder '¿Cuándo?' (Wann?), usamos Dativ. El sustantivo femenino 'die Zukunft' toma la forma del artículo 'der'.",
-      "fr-FR": "Pour répondre à 'Quand ?' (Wann?), on utilise le Datif. Le nom féminin 'die Zukunft' prend la forme 'der'.",
-      "hi-IN": "जब 'कब?' (Wann?) का उत्तर देना हो, तो Dativ का उपयोग करते हैं। स्त्रीलिंग संज्ञा 'die Zukunft' 'der' रूप लेती है।",
-      "pl-PL": "Odpowiadając na 'Kiedy?' (Wann?), używamy celownika. Rodzaj żeński 'die Zukunft' przyjmuje formę 'der'.",
-      "ro-RO": "Când răspundem la 'Când?' (Wann?), folosim Dativ. Substantivul feminin 'die Zukunft' ia forma 'der'.",
-      "tr-TR": "'Ne zaman?' (Wann?) sorusunu yanıtlarken Dativ kullanırız. Dişil isim 'die Zukunft' 'der' formunu alır.",
-      "uk-UA": "Коли питання 'Коли?' (Wann?), ми використовуємо Dativ. Жіночий рід 'die Zukunft' бере форму 'der'.",
-      "uz-UZ": "'Qachon?' (Wann?) savoliga javob berishda Dativdan foydalanamiz. Ayol jinsidagi 'die Zukunft' 'der' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "in Zukunft",
+        "translation": {
+          "ru-RU": "в будущем",
+          "en-US": "in the future",
+          "ar-SA": "في المستقبل",
+          "es-ES": "en el futuro",
+          "fr-FR": "à l'avenir",
+          "hi-IN": "भविष्य में",
+          "pl-PL": "w przyszłości",
+          "ro-RO": "în viitor",
+          "tr-TR": "gelecekte",
+          "uk-UA": "у майбутньому",
+          "uz-UZ": "kelajakda"
+        }
+      },
+      {
+        "german": "vorschriftsmäßig",
+        "translation": {
+          "ru-RU": "по правилам",
+          "en-US": "according to regulations",
+          "ar-SA": "وفقاً للقواعد",
+          "es-ES": "según las normas",
+          "fr-FR": "selon les règles",
+          "hi-IN": "नियमों के अनुसार",
+          "pl-PL": "zgodnie z przepisami",
+          "ro-RO": "regulamentar",
+          "tr-TR": "kurallara uygun",
+          "uk-UA": "за правилами",
+          "uz-UZ": "qoidalarga muvofiq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Das mache ich, das ist versprochen.",
@@ -410,19 +536,24 @@
       "uk-UA": "Гарного дня та щасливої подальшої дороги.",
       "uz-UZ": "Yaxshi kun va oq yo'l."
     },
-    "tips": {
-      "ru-RU": "Пожелания в немецком ('gute Weiterfahrt' или 'schönen Tag') требуют Akkusativ. Женский род 'die Fahrt' (поездка) берет у прилагательного форму 'gute'.",
-      "en-US": "Wishes in German require Akkusativ. The feminine noun 'die Fahrt' takes the adjective ending 'gute'.",
-      "ar-SA": "التمنيات في الألمانية تتطلب Akkusativ. الكلمة المؤنثة 'die Fahrt' تأخذ صفة تنتهي بـ 'gute'.",
-      "es-ES": "Los deseos en alemán requieren Akkusativ. El sustantivo femenino 'die Fahrt' toma la terminación del adjetivo 'gute'.",
-      "fr-FR": "Les souhaits en allemand exigent l'Akkusativ. Le nom féminin 'die Fahrt' prend la terminaison de l'adjectif 'gute'.",
-      "hi-IN": "जर्मन में शुभकामनाओं के लिए Akkusativ की आवश्यकता होती है। स्त्रीलिंग संज्ञा 'die Fahrt' में विशेषण का अंत 'gute' होता है।",
-      "pl-PL": "Życzenia w języku niemieckim wymagają biernika. Rodzaj żeński 'die Fahrt' przyjmuje przymiotnik w formie 'gute'.",
-      "ro-RO": "Urările în germană necesită Akkusativ. Substantivul feminin 'die Fahrt' ia adjectivul cu forma 'gute'.",
-      "tr-TR": "Almancada dilekler Akkusativ gerektirir. Dişil isim 'die Fahrt', 'gute' sıfat ekini alır.",
-      "uk-UA": "Побажання в німецькій мові вимагають Akkusativ. Жіночий рід 'die Fahrt' бере прикметник 'gute'.",
-      "uz-UZ": "Nemis tilidagi tilaklar Akkusativni talab qiladi. Ayol jinsidagi 'die Fahrt' 'gute' sifatini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "die Weiterfahrt",
+        "translation": {
+          "ru-RU": "дальнейшая поездка",
+          "en-US": "onward journey",
+          "ar-SA": "رحلة آمنة",
+          "es-ES": "buen viaje",
+          "fr-FR": "bonne route",
+          "hi-IN": "आगे की यात्रा",
+          "pl-PL": "dalsza droga",
+          "ro-RO": "drum în continuare",
+          "tr-TR": "yolculuğun devamı",
+          "uk-UA": "подальша поїздка",
+          "uz-UZ": "keyingi safar"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke, Ihnen auch. Auf Wiedersehen!",
@@ -469,7 +600,7 @@
       "ar-SA": "انتهت المحادثة.",
       "es-ES": "La conversación ha terminado.",
       "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत समाप्त हो गई है।",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
       "pl-PL": "Rozmowa została zakończona.",
       "ro-RO": "Conversația s-a încheiat.",
       "tr-TR": "Konuşma sona erdi.",

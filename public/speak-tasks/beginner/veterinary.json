@@ -14,19 +14,40 @@
       "uk-UA": "Ветеринарна клініка доктора Шмідта, добрий день.",
       "uz-UZ": "Doktor Shmidt veterinariya klinikasi, xayrli kun."
     },
-    "tips": {
-      "ru-RU": "Предлог 'für' (для) всегда требует Akkusativ. Для Akkusativ мы применяем то же правило: женский род 'die Katze' (кошка) берет у артикля форму 'meine' -> 'für meine Katze'.",
-      "en-US": "The preposition 'für' (for) always takes the Akkusativ case. We apply the same rule: the feminine noun 'die Katze' takes the article form 'meine'.",
-      "ar-SA": "حرف الجر 'für' يتطلب دائماً حالة النصب. الكلمة المؤنثة 'die Katze' تأخذ صيغة 'meine'.",
-      "es-ES": "La preposición 'für' siempre toma el caso Akkusativ. El sustantivo femenino 'die Katze' toma la forma del artículo 'meine'.",
-      "fr-FR": "La préposition 'für' exige toujours l'Akkusativ. Le nom féminin 'die Katze' prend la forme 'meine'.",
-      "hi-IN": "पूर्वसर्ग 'für' हमेशा Akkusativ लेता है। स्त्रीलिंग संज्ञा 'die Katze' 'meine' रूप लेती है।",
-      "pl-PL": "Przyimek 'für' zawsze wymaga biernika. Rodzaj żeński 'die Katze' przyjmuje formę 'meine'.",
-      "ro-RO": "Prepoziția 'für' cere mereu Akkusativ. Substantivul feminin 'die Katze' ia forma 'meine'.",
-      "tr-TR": "'für' edatı her zaman Akkusativ gerektirir. Dişil isim 'die Katze' 'meine' formunu alır.",
-      "uk-UA": "Прийменник 'für' завжди вимагає Akkusativ. Для Akkusativ ми застосовуємо те ж правило: жіночий рід 'die Katze' бере форму 'meine'.",
-      "uz-UZ": "'für' predlogi doim Akkusativni talab qiladi. Ayol jinsidagi 'die Katze' 'meine' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "die Tierarztpraxis",
+        "translation": {
+          "ru-RU": "ветеринарная клиника",
+          "en-US": "veterinary clinic",
+          "ar-SA": "عيادة بيطرية",
+          "es-ES": "clínica veterinaria",
+          "fr-FR": "clinique vétérinaire",
+          "hi-IN": "पशु चिकित्सा क्लिनिक",
+          "pl-PL": "klinika weterynaryjna",
+          "ro-RO": "clinică veterinară",
+          "tr-TR": "veteriner kliniği",
+          "uk-UA": "ветеринарна клініка",
+          "uz-UZ": "veterinariya klinikasi"
+        }
+      },
+      {
+        "german": "der Termin",
+        "translation": {
+          "ru-RU": "прием / запись",
+          "en-US": "appointment",
+          "ar-SA": "موعد",
+          "es-ES": "cita",
+          "fr-FR": "rendez-vous",
+          "hi-IN": "अपॉइंटमेंट",
+          "pl-PL": "wizyta",
+          "ro-RO": "programare",
+          "tr-TR": "randevu",
+          "uk-UA": "прийом / запис",
+          "uz-UZ": "qabul / uchrashuv"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Guten Tag, ich brauche einen Termin für meine Katze.",
@@ -80,19 +101,40 @@
       "uk-UA": "З задоволенням. Що з нею трапилося?",
       "uz-UZ": "Bajonidil. Unga nima bo'ldi?"
     },
-    "tips": {
-      "ru-RU": "Когда мы говорим 'с какого-то времени', используется предлог 'seit', который всегда требует Dativ. Однако 'gestern' (вчера) — это наречие, поэтому оно не меняется.",
-      "en-US": "When saying 'since a certain time', the preposition 'seit' is used, which requires Dativ. However, 'gestern' (yesterday) is an adverb, so it doesn't change.",
-      "ar-SA": "عند قول 'منذ وقت معين'، يُستخدم حرف الجر 'seit' الذي يتطلب Dativ. كلمة 'gestern' (أمس) ظرف فلا تتغير.",
-      "es-ES": "Al decir 'desde un tiempo determinado', se usa la preposición 'seit', que requiere Dativ. Sin embargo, 'gestern' (ayer) es un adverbio, por lo que no cambia.",
-      "fr-FR": "Lorsqu'on dit 'depuis un certain temps', on utilise la préposition 'seit', qui requiert le Datif. Cependant, 'gestern' (hier) est un adverbe, donc il ne change pas.",
-      "hi-IN": "समय के साथ 'seit' का प्रयोग Dativ की मांग करता है। लेकिन 'gestern' (कल) एक क्रियाविशेषण है, इसलिए यह नहीं बदलता।",
-      "pl-PL": "Mówiąc 'od jakiegoś czasu', używamy przyimka 'seit', który wymaga celownika. Jednak 'gestern' (wczoraj) to przysłówek, więc się nie zmienia.",
-      "ro-RO": "Când spunem 'din', folosim prepoziția 'seit', care cere Dativ. Totuși, 'gestern' (ieri) este adverb, deci nu se schimbă.",
-      "tr-TR": "Zaman belirtirken Dativ gerektiren 'seit' edatı kullanılır. Ancak 'gestern' (dün) bir zarf olduğu için değişmez.",
-      "uk-UA": "Коли ми говоримо 'з якогось часу', використовується прийменник 'seit' (Dativ). Але 'gestern' (вчора) — це прислівник, тому він не змінюється.",
-      "uz-UZ": "Vaqtni bildiruvchi 'seit' doim Dativ talab qiladi. Ammo 'gestern' (kecha) ravish bo'lgani uchun u o'zgarmaydi."
-    },
+    "vocabulary": [
+      {
+        "german": "fressen",
+        "translation": {
+          "ru-RU": "есть (о животных)",
+          "en-US": "to eat (for animals)",
+          "ar-SA": "يأكل (للحيوانات)",
+          "es-ES": "comer (animales)",
+          "fr-FR": "manger (pour animaux)",
+          "hi-IN": "खाना (जानवरों के लिए)",
+          "pl-PL": "jeść (o zwierzętach)",
+          "ro-RO": "a mânca (pentru animale)",
+          "tr-TR": "yemek (hayvanlar için)",
+          "uk-UA": "їсти (про тварин)",
+          "uz-UZ": "yemoq (hayvonlar uchun)"
+        }
+      },
+      {
+        "german": "krank",
+        "translation": {
+          "ru-RU": "больной",
+          "en-US": "sick",
+          "ar-SA": "مريض",
+          "es-ES": "enfermo",
+          "fr-FR": "malade",
+          "hi-IN": "बीमार",
+          "pl-PL": "chory",
+          "ro-RO": "bolnav",
+          "tr-TR": "hasta",
+          "uk-UA": "хворий",
+          "uz-UZ": "kasal"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Sie frisst seit gestern leider nichts mehr.",
@@ -146,19 +188,40 @@
       "uk-UA": "Ох, мені дуже шкода. У мене є вільний час (прийом) сьогодні о 16:00.",
       "uz-UZ": "Oh, bundan afsusdaman. Menda bugun soat 16:00 da bo'sh qabul (termin) bor."
     },
-    "tips": {
-      "ru-RU": "Для Akkusativ мы применяем то же правило: мужской род 'der Termin' (прием/запись) берет у артикля форму 'einen' -> 'einen Termin frei' (один свободный термин).",
-      "en-US": "For Akkusativ, we apply the same rule: the masculine noun 'der Termin' takes the article form 'einen'.",
-      "ar-SA": "في حالة النصب (Akkusativ)، نطبق نفس القاعدة: الكلمة المذكرة 'der Termin' تأخذ صيغة 'einen'.",
-      "es-ES": "Para el Akkusativ, aplicamos la misma regla: el sustantivo masculino 'der Termin' toma la forma del artículo 'einen'.",
-      "fr-FR": "Pour l'Akkusativ, nous appliquons la même règle : le nom masculin 'der Termin' prend la forme 'einen'.",
-      "hi-IN": "Akkusativ के लिए, हम वही नियम लागू करते हैं: पुल्लिंग संज्ञा 'der Termin' 'einen' रूप लेती है।",
-      "pl-PL": "W bierniku (Akkusativ) stosujemy tę samą regułę: rzeczownik męski 'der Termin' przyjmuje formę 'einen'.",
-      "ro-RO": "Pentru Akkusativ, aplicăm aceeași regulă: substantivul masculin 'der Termin' ia forma 'einen'.",
-      "tr-TR": "Akkusativ için aynı kuralı uygularız: eril isim 'der Termin' 'einen' formunu alır.",
-      "uk-UA": "Для Akkusativ ми застосовуємо те ж правило: чоловічий рід 'der Termin' бере форму 'einen'.",
-      "uz-UZ": "Akkusativda biz xuddi shu qoidani qo'llaymiz: erkak jinsidagi 'der Termin' 'einen' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "leidtun",
+        "translation": {
+          "ru-RU": "сожалеть (мне жаль)",
+          "en-US": "to be sorry",
+          "ar-SA": "يأسف (أنا آسف)",
+          "es-ES": "sentirlo (lo siento)",
+          "fr-FR": "être désolé",
+          "hi-IN": "खेद होना",
+          "pl-PL": "być przykro",
+          "ro-RO": "a-i părea rău",
+          "tr-TR": "üzgün olmak",
+          "uk-UA": "шкодувати",
+          "uz-UZ": "afsuslanmoq"
+        }
+      },
+      {
+        "german": "passen",
+        "translation": {
+          "ru-RU": "подходить (устраивать)",
+          "en-US": "to suit / fit",
+          "ar-SA": "يناسب",
+          "es-ES": "venir bien",
+          "fr-FR": "convenir",
+          "hi-IN": "अनुकूल होना",
+          "pl-PL": "pasować",
+          "ro-RO": "a conveni",
+          "tr-TR": "uygun olmak / uymak",
+          "uk-UA": "підходити (влаштовувати)",
+          "uz-UZ": "to'g'ri kelmoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Das passt mir sehr gut. Danke.",
@@ -212,19 +275,40 @@
       "uk-UA": "Добре, як звати кішку?",
       "uz-UZ": "Yaxshi, mushukning ismi nima?"
     },
-    "tips": {
-      "ru-RU": "В немецком 'heißen' (называться) требует Nominativ (именительный падеж). Поэтому 'die Katze' остается 'die'.",
-      "en-US": "In German, 'heißen' (to be called) requires the Nominativ case. Therefore, 'die Katze' stays 'die'.",
-      "ar-SA": "في الألمانية، 'heißen' (يُدعى) يتطلب حالة الرفع (Nominativ). لذلك تبقى 'die Katze' كما هي.",
-      "es-ES": "En alemán, 'heißen' (llamarse) requiere el caso Nominativ. Por lo tanto, 'die Katze' se mantiene como 'die'.",
-      "fr-FR": "En allemand, 'heißen' (s'appeler) exige le Nominatif. Par conséquent, 'die Katze' reste 'die'.",
-      "hi-IN": "जर्मन में 'heißen' को Nominativ की आवश्यकता होती है। इसलिए 'die Katze' 'die' ही रहता है।",
-      "pl-PL": "W języku niemieckim 'heißen' (nazywać się) wymaga mianownika (Nominativ). Dlatego 'die Katze' pozostaje 'die'.",
-      "ro-RO": "În germană, 'heißen' cere Nominativ. Prin urmare, 'die Katze' rămâne 'die'.",
-      "tr-TR": "Almancada 'heißen' (adlandırılmak) Nominativ gerektirir. Bu nedenle 'die Katze' 'die' olarak kalır.",
-      "uk-UA": "У німецькій мові 'heißen' (називатися) вимагає Nominativ. Тому 'die Katze' залишається 'die'.",
-      "uz-UZ": "Nemis tilida 'heißen' Nominativ (bosh kelishik)ni talab qiladi. Shuning uchun 'die Katze' o'zgarmaydi."
-    },
+    "vocabulary": [
+      {
+        "german": "heißen",
+        "translation": {
+          "ru-RU": "называться (звать)",
+          "en-US": "to be called",
+          "ar-SA": "يُدعى",
+          "es-ES": "llamarse",
+          "fr-FR": "s'appeler",
+          "hi-IN": "नाम होना",
+          "pl-PL": "nazywać się",
+          "ro-RO": "a se numi",
+          "tr-TR": "adlandırılmak",
+          "uk-UA": "називатися (звати)",
+          "uz-UZ": "ismli bo'lmoq"
+        }
+      },
+      {
+        "german": "die Katze",
+        "translation": {
+          "ru-RU": "кошка",
+          "en-US": "cat",
+          "ar-SA": "قطة",
+          "es-ES": "gato",
+          "fr-FR": "chat",
+          "hi-IN": "बिल्ली",
+          "pl-PL": "kot",
+          "ro-RO": "pisică",
+          "tr-TR": "kedi",
+          "uk-UA": "кішка",
+          "uz-UZ": "mushuk"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Sie heißt Luna.",
@@ -278,19 +362,40 @@
       "uk-UA": "Луна записана (відмічена).",
       "uz-UZ": "Luna qayd etildi."
     },
-    "tips": {
-      "ru-RU": "Для Akkusativ мы применяем то же правило: мужской род 'der Hausbesuch' (вызов на дом) берет у артикля форму 'einen' (einen Hausbesuch machen).",
-      "en-US": "For Akkusativ, we apply the same rule: the masculine noun 'der Hausbesuch' (house visit) takes the article form 'einen'.",
-      "ar-SA": "بالنسبة لحالة النصب، نطبق نفس القاعدة: الكلمة المذكرة 'der Hausbesuch' تأخذ صيغة 'einen'.",
-      "es-ES": "Para Akkusativ, aplicamos la misma regla: el sustantivo masculino 'der Hausbesuch' (visita a domicilio) toma la forma del artículo 'einen'.",
-      "fr-FR": "Pour l'Akkusativ, nous appliquons la même règle : le nom masculin 'der Hausbesuch' prend la forme 'einen'.",
-      "hi-IN": "Akkusativ के लिए, हम वही नियम लागू करते हैं: पुल्लिंग संज्ञा 'der Hausbesuch' 'einen' रूप लेती है।",
-      "pl-PL": "Dla biernika (Akkusativ) stosujemy tę samą regułę: rzeczownik męski 'der Hausbesuch' przyjmuje formę 'einen'.",
-      "ro-RO": "Pentru Akkusativ, aplicăm aceeași regulă: substantivul masculin 'der Hausbesuch' ia forma 'einen'.",
-      "tr-TR": "Akkusativ için aynı kuralı uygularız: eril isim 'der Hausbesuch' 'einen' formunu alır.",
-      "uk-UA": "Для Akkusativ ми застосовуємо те ж правило: чоловічий рід 'der Hausbesuch' бере форму 'einen'.",
-      "uz-UZ": "Akkusativda biz xuddi shu qoidani qo'llaymiz: erkak jinsidagi 'der Hausbesuch' 'einen' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "notieren",
+        "translation": {
+          "ru-RU": "записывать / отмечать",
+          "en-US": "to note / record",
+          "ar-SA": "يسجل / يلاحظ",
+          "es-ES": "anotar",
+          "fr-FR": "noter",
+          "hi-IN": "नोट करना",
+          "pl-PL": "notować / zapisać",
+          "ro-RO": "a nota",
+          "tr-TR": "not etmek / kaydetmek",
+          "uk-UA": "записувати / відмічати",
+          "uz-UZ": "qayd etmoq"
+        }
+      },
+      {
+        "german": "der Hausbesuch",
+        "translation": {
+          "ru-RU": "вызов на дом",
+          "en-US": "house visit",
+          "ar-SA": "زيارة منزلية",
+          "es-ES": "visita a domicilio",
+          "fr-FR": "visite à domicile",
+          "hi-IN": "घर का दौरा",
+          "pl-PL": "wizyta domowa",
+          "ro-RO": "vizită la domiciliu",
+          "tr-TR": "ev ziyareti",
+          "uk-UA": "виклик додому",
+          "uz-UZ": "uyga tashrif"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Können Sie vielleicht einen Hausbesuch machen?",
@@ -344,19 +449,40 @@
       "uk-UA": "Ні, на жаль, ми не робимо виклики додому. Тут, у клініці, у нас є все.",
       "uz-UZ": "Yo'q, afsuski, biz uyga tashrif buyurmaymiz. Bu yerda, klinikada hamma narsa bor."
     },
-    "tips": {
-      "ru-RU": "Когда вопрос звучит 'Где?' (Wo?), мы используем Dativ и ставим артикль существительного в Dativ. Женский род 'die Praxis' (клиника) берет у артикля форму 'der' (in der Praxis). Если же вопрос 'Куда?' (Wohin? - 'в клинику'), мы применяем правило Akkusativ и используем 'in die Praxis'.",
-      "en-US": "When the question is 'Where?' (Wo?), we use Dativ and put the noun's article in Dativ. 'Die Praxis' takes 'der' (in der Praxis). For 'Where to?' (Wohin? - Akkusativ), we apply the same rule: 'in die Praxis'.",
-      "ar-SA": "عندما يكون السؤال 'أين؟' (Wo؟)، نستخدم Dativ ونضع أداة الاسم في Dativ. وإذا كان 'إلى أين؟' (Wohin؟)، نطبق نفس القاعدة للنصب (Akkusativ).",
-      "es-ES": "Cuando la pregunta es '¿Dónde?' (Wo?), usamos Dativ y ponemos el artículo en Dativ. Para '¿Adónde?' (Wohin? - Akkusativ), aplicamos la misma regla.",
-      "fr-FR": "Quand la question est 'Où ?' (Wo?), nous utilisons le Datif et mettons l'article du nom au Datif. Pour 'Vers où ?' (Wohin? - Akkusativ), nous appliquons la même règle.",
-      "hi-IN": "जब प्रश्न 'कहाँ?' (Wo?) हो, तो हम Dativ का उपयोग करते हैं और संज्ञा के लेख को Dativ में रखते हैं। 'कहाँ को?' (Wohin?) के लिए हम Akkusativ नियम लागू करते हैं।",
-      "pl-PL": "Gdy pytanie brzmi 'Gdzie?' (Wo?), używamy celownika (Dativ) i wstawiamy odpowiedni przedimek. Na pytanie 'Dokąd?' (Wohin?) stosujemy tę samą regułę dla biernika (Akkusativ).",
-      "ro-RO": "Când întrebarea este 'Unde?' (Wo?), folosim Dativ și punem articolul în Dativ. Pentru 'Încotro?' (Wohin?), aplicăm aceeași regulă pentru Akkusativ.",
-      "tr-TR": "Soru 'Nerede?' (Wo?) olduğunda, Dativ kullanırız ve ismin artikelini Dativ'e koyarız. 'Nereye?' (Wohin?) sorusunda Akkusativ için aynı kuralı uygularız.",
-      "uk-UA": "Коли питання 'Де?' (Wo?), ми використовуємо Dativ і ставимо артикль іменника в Dativ. Для Akkusativ (куди?) ми застосовуємо те ж правило.",
-      "uz-UZ": "Savol 'Qayerda?' (Wo?) bo'lganda, biz Dativdan foydalanamiz va otning artiklini Dativga qo'yamiz. 'Qayerga?' (Wohin?) uchun esa Akkusativ qoidasini qo'llaymiz."
-    },
+    "vocabulary": [
+      {
+        "german": "die Praxis",
+        "translation": {
+          "ru-RU": "клиника / кабинет",
+          "en-US": "clinic / practice",
+          "ar-SA": "عيادة",
+          "es-ES": "clínica / consultorio",
+          "fr-FR": "clinique / cabinet",
+          "hi-IN": "क्लिनिक",
+          "pl-PL": "gabinet / klinika",
+          "ro-RO": "clinică / cabinet",
+          "tr-TR": "muayenehane / klinik",
+          "uk-UA": "клініка / кабінет",
+          "uz-UZ": "klinika / amaliyot"
+        }
+      },
+      {
+        "german": "vorbeikommen",
+        "translation": {
+          "ru-RU": "зайти / заехать",
+          "en-US": "to come by / drop by",
+          "ar-SA": "يمر بـ / يزور",
+          "es-ES": "pasarse por",
+          "fr-FR": "passer (voir qqn)",
+          "hi-IN": "मिलने आना",
+          "pl-PL": "wpaść / przyjść",
+          "ro-RO": "a trece pe la",
+          "tr-TR": "uğramak",
+          "uk-UA": "зайти / заїхати",
+          "uz-UZ": "kirib o'tmoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Alles klar, dann komme ich in die Praxis.",
@@ -366,7 +492,7 @@
           "ar-SA": "حسناً، سآتي إلى العيادة إذن.",
           "es-ES": "De acuerdo, entonces iré a la clínica.",
           "fr-FR": "D'accord, je viendrai donc à la clinique.",
-          "hi-IN": "ठीक है, फिर मैं क्लिनिक आऊँगी।",
+          "hi-IN": "ठीक है, फिर मैं क्लिनिक आऊँगी。",
           "pl-PL": "Wszystko jasne, w takim razie przyjadę do kliniki.",
           "ro-RO": "În regulă, atunci voi veni la clinică.",
           "tr-TR": "Pekala, o zaman kliniğe geleceğim.",
@@ -410,19 +536,40 @@
       "uk-UA": "Тоді до зустрічі, до побачення.",
       "uz-UZ": "Unda keyinroq ko'rishamiz, xayr."
     },
-    "tips": {
-      "ru-RU": "Прощание в клинике стандартное и вежливое. 'Bis später' означает, что вы увидитесь уже сегодня.",
-      "en-US": "Goodbyes at a clinic are standard and polite. 'Bis später' means you will see each other later today.",
-      "ar-SA": "الوداع في العيادة يكون قياسياً ومهذباً. 'Bis später' تعني أنكما ستريان بعضكما لاحقاً اليوم.",
-      "es-ES": "Las despedidas en una clínica son estándar y educadas. 'Bis später' significa que se verán más tarde hoy.",
-      "fr-FR": "Les adieux dans une clinique sont standards et polis. 'Bis später' signifie que vous vous verrez plus tard dans la journée.",
-      "hi-IN": "क्लिनिक में विदाई मानक और विनम्र होती है। 'Bis später' का अर्थ है कि आप आज बाद में मिलेंगे।",
-      "pl-PL": "Pożegnanie w klinice jest standardowe i uprzejme. 'Bis później' oznacza, że zobaczycie się jeszcze dzisiaj.",
-      "ro-RO": "Despărțirea într-o clinică este standard și politicoasă. 'Bis später' înseamnă că vă veți vedea mai târziu azi.",
-      "tr-TR": "Klinikte vedalar standart ve kibardır. 'Bis später', bugün daha sonra görüşeceğiniz anlamına gelir.",
-      "uk-UA": "Прощання в клініці стандартне та ввічливе. 'Bis später' означає, що ви побачитеся вже сьогодні.",
-      "uz-UZ": "Klinikadagi xayrlashish standart va xushmuomaladir. 'Bis später' siz bugun keyinroq ko'rishishingizni anglatadi."
-    },
+    "vocabulary": [
+      {
+        "german": "bis später",
+        "translation": {
+          "ru-RU": "до скорого / увидимся позже",
+          "en-US": "see you later",
+          "ar-SA": "أراك لاحقاً",
+          "es-ES": "hasta luego",
+          "fr-FR": "à plus tard",
+          "hi-IN": "बाद में मिलते हैं",
+          "pl-PL": "do zobaczenia później",
+          "ro-RO": "pe mai târziu",
+          "tr-TR": "sonra görüşürüz",
+          "uk-UA": "до зустрічі / побачимося пізніше",
+          "uz-UZ": "keyinroq ko'rishamiz"
+        }
+      },
+      {
+        "german": "auf Wiedersehen",
+        "translation": {
+          "ru-RU": "до свидания",
+          "en-US": "goodbye",
+          "ar-SA": "إلى اللقاء",
+          "es-ES": "adiós",
+          "fr-FR": "au revoir",
+          "hi-IN": "अलविदा",
+          "pl-PL": "do widzenia",
+          "ro-RO": "la revedere",
+          "tr-TR": "hoşça kalın",
+          "uk-UA": "до побачення",
+          "uz-UZ": "xayr"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Bis später, auf Wiedersehen!",

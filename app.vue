@@ -4,6 +4,7 @@
     <AchievementToast @toast-finished="onToastFinished" />
     <VLost/>
     <VRankOverlay/>
+    <VNetwork/>
   </NuxtLayout>
 </template>
 
@@ -14,26 +15,28 @@ import FeedBack from './src/components/V-feedback.vue'
 import VStepHint from "./src/components/V-stephint.vue";
 import AchievementToast from './src/components/AchievementToast.vue'
 import VLost from './src/components/V-lost.vue'
-import {useRouter, useRoute} from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { useAchievementStore } from './store/achievementStore.js'
-import {useCurrentUser} from "vuefire";
-import {userlangStore} from './store/learningStore.js'
-import {userAuthStore} from './store/authStore.js'
-import {useSentencesStore} from './store/sentencesStore.js';
-import {useTrainerStore} from './store/themenProgressStore.js'
-import {useQuestStore} from './store/questStore.js'
-import {useCardsStore} from './store/cardsStore.js'
-import {useLocalStatGameStore} from './store/localSentenceStore.js'
+import { useCurrentUser } from "vuefire";
+import { userlangStore } from './store/learningStore.js'
+import { userAuthStore } from './store/authStore.js'
+import { useSentencesStore } from './store/sentencesStore.js';
+import { useTrainerStore } from './store/themenProgressStore.js'
+import { useQuestStore } from './store/questStore.js'
+import { useCardsStore } from './store/cardsStore.js'
+import { useLocalStatGameStore } from './store/localSentenceStore.js'
 import { useBillingStore } from './store/billingStore.js'
 import { userChainStore } from './store/chainStore.js'
 import { SplashScreen } from '@capacitor/splash-screen'
 import { Keyboard } from '@capacitor/keyboard';
 import { App } from '@capacitor/app'
-import {onMounted, onUnmounted, ref, watch, nextTick} from "vue";
-import {dailyStore} from './store/dailyStore'
-import {useHead} from '#imports'
+import { onMounted, onUnmounted, ref, watch, nextTick } from "vue";
+import { dailyStore } from './store/dailyStore'
+import { useHead } from '#imports'
 import { Capacitor } from '@capacitor/core'
 import { AdMob } from '@capacitor-community/admob';
+import VNetwork from "./src/components/V-network.vue";
+
 const { locale, t } = useI18n()
 const billingStore = useBillingStore()
 
@@ -66,24 +69,29 @@ const sentencesStore = useSentencesStore();
 const daily = dailyStore()
 const colorMode = useColorMode();
 
+const onToastFinished = () => {
+  if (authStore.uid) {
+    const key = `step_hint_seen_${authStore.uid}`
+    if (!localStorage.getItem(key)) {
+      showStepHint.value = true
+      localStorage.setItem(key, 'true')
+    }
+  }
+}
 
 onMounted(async () => {
-  learningStore.loadFromFirebase()
-  if (authStore.uid) {
-    questStore.loadDailyProgress()
-    cardStore.loadCreatedCount()
-    statsStore.loadLocalStats()
-  }
   achStore.initializeProgressTracking()
-
-  watch(user, (currentUser, prevUser) => {
-    if (prevUser && !currentUser) {
-      router.push('/')
-    } else if (currentUser && typeof route.query.redirect === 'string') {
-      router.push(route.query.redirect)
-    }
-  })
   if (Capacitor.isNativePlatform()) {
+    try {
+      await SplashScreen.hide({ fadeOutDuration: 0 });
+    } catch (e) {
+      console.error(e);
+    }
+    try {
+      await AdMob.initialize({ initializeForTesting: true });
+    } catch (e) {
+      console.error(e);
+    }
     App.addListener('backButton', ({ canGoBack }) => {
       const state = window.history.state || {}
       const isModalOpen = !!(state.isMapPanelOpen || state.isSubCategory || state.isSubScreen)
@@ -96,6 +104,7 @@ onMounted(async () => {
         App.minimizeApp()
       }
     })
+
     Keyboard.addListener('keyboardWillShow', () => {
       setTimeout(() => {
         const activeElement = document.activeElement;
@@ -105,6 +114,7 @@ onMounted(async () => {
       }, 150);
     });
   }
+
   setTimeout(() => {
     if (!achStore.showPopup && !showStepHint.value) {
       onToastFinished()
@@ -112,58 +122,34 @@ onMounted(async () => {
   }, 2600)
 })
 
-const onToastFinished = () => {
-  if (authStore.uid) {
-    const key = `step_hint_seen_${authStore.uid}`
-    if (!localStorage.getItem(key)) {
-      showStepHint.value = true
-      localStorage.setItem(key, 'true')
-    }
-  }
-}
-
-watch(() => authStore.initialized, async (isReady) => {
-  if (isReady) {
-    await learningStore.loadFromFirebase();
-
-    if (authStore.uid) {
-      await Promise.all([
-        questStore.loadDailyProgress(),
-        cardStore.loadCreatedCount(),
-        statsStore.loadLocalStats()
-      ]);
-    }
-    if (Capacitor.isNativePlatform()) {
-      await nextTick();
-      requestAnimationFrame(async () => {
-        await SplashScreen.hide({ fadeOutDuration: 250 });
-      });
-    }
-  }
-}, { immediate: true });
-
 onUnmounted(() => {
   daily.stop()
 })
 
-onMounted(async () => {
-  if (Capacitor.isNativePlatform()) {
-    try {
-      await AdMob.initialize({
-        initializeForTesting: true,
-      });
-      console.log('AdMob успешно инициализирован!');
-    } catch (e) {
-      console.error('Ошибка инициализации AdMob:', e);
-    }
+watch(() => authStore.initialized, (isReady) => {
+  if (isReady) {
+    learningStore.loadFromFirebase().catch(err => {
+      console.error(err);
+    });
   }
-});
+}, { immediate: true });
 
 watch(() => authStore.uid, (newUid) => {
-      if (newUid) billingStore.initialize()
-    },
-    { immediate: true }
-)
+  if (newUid) {
+    billingStore.initialize();
+    questStore.loadDailyProgress();
+    cardStore.loadCreatedCount();
+    statsStore.loadLocalStats();
+  }
+}, { immediate: true });
+
+watch(user, (currentUser, prevUser) => {
+  if (prevUser && !currentUser) {
+    router.push('/')
+  } else if (currentUser && typeof route.query.redirect === 'string') {
+    router.push(route.query.redirect)
+  }
+})
 
 watch(() => colorMode.value, async (newTheme) => {
   if (!Capacitor.isNativePlatform()) return;
@@ -171,10 +157,8 @@ watch(() => colorMode.value, async (newTheme) => {
     await StatusBar.setStyle({
       style: newTheme === 'dark' ? Style.Dark : Style.Light
     });
-
     await StatusBar.setOverlaysWebView({ overlay: true });
   } catch (err) {
-    console.error('StatusBar error:', err);
   }
 }, { immediate: true });
 
@@ -203,7 +187,6 @@ watch(() => colorMode.value, async (newTheme) => {
   --sab: env(safe-area-inset-bottom, 0px);
 }
 
-
 html, body, #__nuxt {
   height: 100% !important;
   width: 100% !important;
@@ -224,7 +207,6 @@ html, body, #__nuxt {
   box-sizing: border-box;
   overflow: hidden;
 }
-
 
 #main-content {
   flex: 1;

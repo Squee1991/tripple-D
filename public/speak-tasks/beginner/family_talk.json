@@ -5,7 +5,7 @@
       "ru-RU": "Привет, я вернулся!",
       "en-US": "Hello, I'm back!",
       "ar-SA": "مرحباً، لقد عدت!",
-      "es-ES": "¡Hola, ya estoy здесь!",
+      "es-ES": "¡Hola, ya estoy aquí!",
       "fr-FR": "Salut, je suis de retour !",
       "hi-IN": "नमस्ते, मैं वापस आ गया हूँ!",
       "pl-PL": "Cześć, wróciłem!",
@@ -14,19 +14,24 @@
       "uk-UA": "Привіт, я повернувся!",
       "uz-UZ": "Salom, men qaytdim!"
     },
-    "tips": {
-      "ru-RU": "Фраза 'wieder da' используется, когда человек возвращается домой или на рабочее место.",
-      "en-US": "The phrase 'wieder da' is used when someone returns home or to their workspace.",
-      "ar-SA": "تُستخدم العبارة 'wieder da' عندما يعود الشخص إلى المنزل.",
-      "es-ES": "La frase 'wieder da' se usa cuando alguien regresa a casa.",
-      "fr-FR": "L'expression 'wieder da' est utilisée когда quelqu'un revient à la maison.",
-      "hi-IN": "'wieder da' का उपयोग तब किया जाता है जब कोई घर वापस आता है।",
-      "pl-PL": "Zwrot 'wieder da' jest używany, gdy ktoś wraca do domu.",
-      "ro-RO": "Expresia 'wieder da' este folosită când cineva revine acasă.",
-      "tr-TR": "'wieder da' ifadesi eve geri dönüldüğünde kullanılır.",
-      "uk-UA": "Фраза 'wieder da' використовується, коли людина повертається додому.",
-      "uz-UZ": "'wieder da' iborasi uyga qaytilganda ishlatiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "wieder da",
+        "translation": {
+          "ru-RU": "вернулся",
+          "en-US": "back",
+          "ar-SA": "عدت",
+          "es-ES": "de vuelta",
+          "fr-FR": "de retour",
+          "hi-IN": "वापस",
+          "pl-PL": "z powrotem",
+          "ro-RO": "înapoi",
+          "tr-TR": "geri döndüm",
+          "uk-UA": "повернувся",
+          "uz-UZ": "qaytdim"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Hallo! Wie war dein Tag heute?",
@@ -80,19 +85,24 @@
       "uk-UA": "Він був утомливим. А твій день як минув?",
       "uz-UZ": "Chorchatarli bo'ldi. Sening kuning qanday o'tdi?"
     },
-    "tips": {
-      "ru-RU": "Слово 'Tag' мужского рода (der Tag), поэтому бот заменяет его местоимением 'er' (он).",
-      "en-US": "The word 'Tag' is masculine (der Tag), so the bot replaces it with the pronoun 'er' (it).",
-      "ar-SA": "كلمة 'Tag' مذكر، لذا يستبدلها البوت بالضمير 'er'.",
-      "es-ES": "La palabra 'Tag' es masculina (der Tag), por lo que el bot la reemplaza con 'er'.",
-      "fr-FR": "Le mot 'Tag' est masculin (der Tag), le bot le remplace donc par 'er'.",
-      "hi-IN": "'Tag' शब्द पुल्लिंग (der Tag) है, इसलिए बॉट इसे 'er' सर्वनाम से बदल देता है।",
-      "pl-PL": "Słowo 'Tag' jest rodzaju męskiego (der Tag), więc bot zastępuje je zaimkiem 'er'.",
-      "ro-RO": "Cuvântul 'Tag' este masculin (der Tag), deci botul îl înlocuiește cu pronumele 'er'.",
-      "tr-TR": "'Tag' kelimesi eril olduğundan (der Tag), bot onun yerine 'er' zamirini kullanır.",
-      "uk-UA": "Слово 'Tag' чоловічого роду (der Tag), тому бот замінює його займенником 'er'.",
-      "uz-UZ": "'Tag' so'zi muzokar jinsida (der Tag), shuning uchun bot uni 'er' olmoshi bilan almashtiradi."
-    },
+    "vocabulary": [
+      {
+        "german": "anstrengend",
+        "translation": {
+          "ru-RU": "утомительный",
+          "en-US": "exhausting",
+          "ar-SA": "مرهق",
+          "es-ES": "agotador",
+          "fr-FR": "fatigant",
+          "hi-IN": "थकाऊ",
+          "pl-PL": "męczący",
+          "ro-RO": "obositoare",
+          "tr-TR": "yorucu",
+          "uk-UA": "утомливий",
+          "uz-UZ": "charchatadigan"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Mein Tag war ganz gut. Was machen wir heute?",
@@ -146,19 +156,40 @@
       "uk-UA": "Я хочу просто відпочити на дивані.",
       "uz-UZ": "Men shunchaki divanda dam olmoqchiman."
     },
-    "tips": {
-      "ru-RU": "Вопрос 'Где?' (Wo?) требует Dativ. Предлог 'auf' берет у артикля среднего рода 'das Sofa' форму 'dem Sofa'.",
-      "en-US": "The question 'Where?' (Wo?) requires Dativ. 'auf' changes 'das Sofa' to 'dem Sofa'.",
-      "ar-SA": "السؤال عن المكان 'Wo?' يتطلب حالة Dativ. الأداة تتغير إلى 'dem Sofa'.",
-      "es-ES": "La pregunta '¿Dónde?' (Wo?) requiere Dativ. 'das Sofa' se convierte en 'dem Sofa'.",
-      "fr-FR": "La question 'Où ?' (Wo?) requiert le Dativ. 'das Sofa' devient 'dem Sofa'.",
-      "hi-IN": "'Wo?' (कहाँ) प्रश्न के लिए Dativ की आवश्यकता होती है। 'das Sofa' 'dem Sofa' में बदल जाता है।",
-      "pl-PL": "Pytanie 'Gdzie?' (Wo?) wymaga Dativu. Przedimek zmienia 'das Sofa' na 'dem Sofa'.",
-      "ro-RO": "Întrebarea 'Unde?' (Wo?) cere Dativ. 'das Sofa' devine 'dem Sofa'.",
-      "tr-TR": "'Nerede?' (Wo?) sorusu Dativ gerektirir. 'das Sofa' artikeli 'dem Sofa' olur.",
-      "uk-UA": "Запитання 'Де?' (Wo?) вимагає Dativ. Прийменник 'auf' змінює 'das Sofa' на 'dem Sofa'.",
-      "uz-UZ": "'Qayerda?' (Wo?) savoli Dativ talab qiladi. 'das Sofa' artikli 'dem Sofa'ga o'zgaradi."
-    },
+    "vocabulary": [
+      {
+        "german": "entspannen",
+        "translation": {
+          "ru-RU": "отдыхать",
+          "en-US": "to relax",
+          "ar-SA": "يسترخي",
+          "es-ES": "relajarse",
+          "fr-FR": "se détendre",
+          "hi-IN": "आराम करना",
+          "pl-PL": "odpoczywać",
+          "ro-RO": "a se relaxa",
+          "tr-TR": "dinlenmek",
+          "uk-UA": "відпочивати",
+          "uz-UZ": "dam olmoq"
+        }
+      },
+      {
+        "german": "das Sofa",
+        "translation": {
+          "ru-RU": "диван",
+          "en-US": "sofa",
+          "ar-SA": "أريكة",
+          "es-ES": "sofá",
+          "fr-FR": "canapé",
+          "hi-IN": "सोफा",
+          "pl-PL": "kanapa",
+          "ro-RO": "canapea",
+          "tr-TR": "kanepe",
+          "uk-UA": "диван",
+          "uz-UZ": "divan"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Gute Idee. Wollen wir einen Film sehen?",
@@ -212,24 +243,45 @@
       "uk-UA": "Так, із задоволенням. Який фільм ти хочеш?",
       "uz-UZ": "Ha, bajonidil. Qaysi filmni xohlaysan?"
     },
-    "tips": {
-      "ru-RU": "Вопрос 'Какой фильм?' стоит в Akkusativ. Мужской род 'der Film' берет у артикля форму 'welchen'.",
-      "en-US": "The question 'Which movie?' is in Akkusativ. Masculine 'der Film' takes the form 'welchen'.",
-      "ar-SA": "السؤال 'أي فيلم؟' في حالة Akkusativ. المذكر يأخذ الصيغة 'welchen'.",
-      "es-ES": "La pregunta '¿Qué película?' está en Akkusativ. El masculino 'der Film' toma la forma 'welchen'.",
-      "fr-FR": "La question 'Quel film ?' est à l'Akkusativ. Le masculin 'der Film' prend la forme 'welchen'.",
-      "hi-IN": "'कौन सी फिल्म?' प्रश्न Akkusativ में है। पुल्लिंग 'der Film' 'welchen' का रूप लेता है।",
-      "pl-PL": "Pytanie 'Jaki film?' jest w Akkusativie. Rodzaj męski 'der Film' przyjmuje formę 'welchen'.",
-      "ro-RO": "Întrebarea 'Ce film?' este în Akkusativ. Masculinul 'der Film' ia forma 'welchen'.",
-      "tr-TR": "'Hangi film?' sorusu Akkusativ halindedir. Eril olan 'der Film' 'welchen' şeklini alır.",
-      "uk-UA": "Запитання 'Який фільм?' стоїть в Akkusativ. Чоловічий рід 'der Film' бере форму 'welchen'.",
-      "uz-UZ": "'Qaysi film?' savoli Akkusativ kelishigida. Muzokar jinsidagi 'der Film' 'welchen' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "sehr gern",
+        "translation": {
+          "ru-RU": "с удовольствием",
+          "en-US": "very gladly",
+          "ar-SA": "بكل سرور",
+          "es-ES": "con gusto",
+          "fr-FR": "très volontiers",
+          "hi-IN": "बहुत खुशी से",
+          "pl-PL": "bardzo chętnie",
+          "ro-RO": "cu mare drag",
+          "tr-TR": "memnuniyetle",
+          "uk-UA": "із задоволенням",
+          "uz-UZ": "bajonidil"
+        }
+      },
+      {
+        "german": "die Komödie",
+        "translation": {
+          "ru-RU": "комедия",
+          "en-US": "comedy",
+          "ar-SA": "كوميديا",
+          "es-ES": "comedia",
+          "fr-FR": "comédie",
+          "hi-IN": "कॉमेडी",
+          "pl-PL": "komedia",
+          "ro-RO": "comedie",
+          "tr-TR": "komedi",
+          "uk-UA": "комедія",
+          "uz-UZ": "komediya"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ich habe Lust auf eine Komödie.",
         "translation": {
-          "ru-RU": "Я бы хотела комедию. (Дословно: У меня есть желание на комедию).",
+          "ru-RU": "Я бы хотела комедию.",
           "en-US": "I feel like watching a comedy.",
           "ar-SA": "لدي رغبة في مشاهدة فيلم كوميدي.",
           "es-ES": "Tengo ganas de una comedia.",
@@ -276,21 +328,26 @@
       "ro-RO": "De acord. Ai popcornul acolo?",
       "tr-TR": "Anlaştık. Patlamış mısır var mı?",
       "uk-UA": "Згоден. У тебе є попкорн під рукою?",
-      "uz-UZ": "Kelishdik. Ppcorn bormi?"
+      "uz-UZ": "Kelishdik. Popcorn bormi?"
     },
-    "tips": {
-      "ru-RU": "Глагол 'haben' требует Akkusativ. Женский род 'die Komödie' берет у артикля форму 'eine'.",
-      "en-US": "The verb 'haben' requires Akkusativ. Feminine 'die Komödie' takes the form 'eine'.",
-      "ar-SA": "الفعل 'haben' يتطلب حالة النصب. المؤنث 'die Komödie' يأخذ 'eine'.",
-      "es-ES": "El verbo 'haben' requiere Akkusativ. El femenino 'die Komödie' toma la forma 'eine'.",
-      "fr-FR": "Le verbe 'haben' requiert l'Akkusativ. Le féminin 'die Komödie' prend la forme 'eine'.",
-      "hi-IN": "'haben' क्रिया Akkusativ लेती है। स्त्रीलिंग 'die Komödie' 'eine' का रूप लेती है।",
-      "pl-PL": "Czasownik 'haben' wymaga Akkusativu. Rodzaj żeński 'die Komödie' przyjmuje formę 'eine'.",
-      "ro-RO": "Verbul 'haben' cere Akkusativ. Femininul 'die Komödie' ia forma 'eine'.",
-      "tr-TR": "'haben' fiili Akkusativ gerektirir. Dişil olan 'die Komödie' 'eine' şeklini alır.",
-      "uk-UA": "Дієслово 'haben' вимагає Akkusativ. Жіночий рід 'die Komödie' бере форму 'eine'.",
-      "uz-UZ": "'haben' fe'li Akkusativ talab qiladi. Ayol jinsidagi 'die Komödie' 'eine' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "einverstanden",
+        "translation": {
+          "ru-RU": "согласен",
+          "en-US": "agreed",
+          "ar-SA": "موافق",
+          "es-ES": "de acuerdo",
+          "fr-FR": "d'accord",
+          "hi-IN": "सहमत",
+          "pl-PL": "zgoda",
+          "ro-RO": "de acord",
+          "tr-TR": "anlaştık",
+          "uk-UA": "згоден",
+          "uz-UZ": "kelishdik"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Nein, ich muss welches kaufen.",
@@ -316,7 +373,7 @@
           "en-US": "No, we don't have any popcorn here.",
           "ar-SA": "لا، ليس لدينا فشار هنا.",
           "es-ES": "No, no tenemos palomitas aquí.",
-          "fr-FR": "Non, мы n'avons pas de pop-corn ici.",
+          "fr-FR": "Non, nous n'avons pas de pop-corn ici.",
           "hi-IN": "नहीं, हमारे पास यहाँ पॉपकॉर्न नहीं है।",
           "pl-PL": "Nie, nie mamy tu popcornu.",
           "ro-RO": "Nu, nu avem popcorn aici.",
@@ -344,19 +401,40 @@
       "uk-UA": "Без проблем, я швидко сходжу в магазин.",
       "uz-UZ": "Muammo yo'q, men tezda do'konga boraman."
     },
-    "tips": {
-      "ru-RU": "Слово 'Laden' мужского рода (der Laden). Направление 'к чему-то' требует Dativ. 'Zu dem' стягивается в 'zum'.",
-      "en-US": "The word 'Laden' is masculine (der Laden). The direction 'to' requires Dativ. 'Zu dem' shortens to 'zum'.",
-      "ar-SA": "كلمة 'Laden' مذكر. الاتجاه يتطلب حالة Dativ. 'Zu dem' تُختصر إلى 'zum'.",
-      "es-ES": "La palabra 'Laden' es masculina (der Laden). La dirección requiere Dativ. 'Zu dem' se contrae en 'zum'.",
-      "fr-FR": "Le mot 'Laden' est masculin (der Laden). La direction requiert le Dativ. 'Zu dem' se contracte en 'zum'.",
-      "hi-IN": "'Laden' शब्द पुल्लिंग है। दिशा के लिए Dativ की आवश्यकता होती है। 'Zu dem' सिकुड़कर 'zum' हो जाता है।",
-      "pl-PL": "Słowo 'Laden' jest rodzaju męskiego. Kierunek wymaga Dativu. 'Zu dem' skraca się do 'zum'.",
-      "ro-RO": "Cuvântul 'Laden' este masculin. Direcția cere Dativ. 'Zu dem' se contractă în 'zum'.",
-      "tr-TR": "'Laden' kelimesi erildir. Yön belirtmek Dativ gerektirir. 'Zu dem', 'zum' haline gelir.",
-      "uk-UA": "Слово 'Laden' чоловічого роду. Напрямок вимагає Dativ. 'Zu dem' скорочується до 'zum'.",
-      "uz-UZ": "'Laden' so'zi muzokar jinsida. Yo'nalish Dativ talab qiladi. 'Zu dem' shakli 'zum'ga qisqaradi."
-    },
+    "vocabulary": [
+      {
+        "german": "der Laden",
+        "translation": {
+          "ru-RU": "магазин",
+          "en-US": "store",
+          "ar-SA": "متجر",
+          "es-ES": "tienda",
+          "fr-FR": "magasin",
+          "hi-IN": "दुकान",
+          "pl-PL": "sklep",
+          "ro-RO": "magazin",
+          "tr-TR": "dükkan",
+          "uk-UA": "магазин",
+          "uz-UZ": "do'kon"
+        }
+      },
+      {
+        "german": "kurz",
+        "translation": {
+          "ru-RU": "быстро / ненадолго",
+          "en-US": "briefly / shortly",
+          "ar-SA": "سريعاً",
+          "es-ES": "un momento",
+          "fr-FR": "vite",
+          "hi-IN": "थोड़ी देर",
+          "pl-PL": "na chwilę",
+          "ro-RO": "repede",
+          "tr-TR": "kısaca",
+          "uk-UA": "швидко",
+          "uz-UZ": "tezda"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke, das ist sehr lieb von dir.",
@@ -364,7 +442,7 @@
           "ru-RU": "Спасибо, это очень мило с твоей стороны.",
           "en-US": "Thank you, that's very sweet of you.",
           "ar-SA": "شكراً لكِ، هذا لطف كبير منكِ.",
-          "es-ES": "Gracias, это muy amable de tu parte.",
+          "es-ES": "Gracias, es muy amable de tu parte.",
           "fr-FR": "Merci, c'est très gentil de ta part.",
           "hi-IN": "धन्यवाद, यह आपकी बहुत दयालुता है।",
           "pl-PL": "Dziękuję, to bardzo miłe z twojej strony.",
@@ -410,19 +488,24 @@
       "uk-UA": "Все зрозуміло, до зустрічі!",
       "uz-UZ": "Kelishdik, tezda ko'rishguncha!"
     },
-    "tips": {
-      "ru-RU": "Фраза 'bis gleich' используется, когда люди снова увидятся через короткое время (10-15 минут).",
-      "en-US": "The phrase 'bis gleich' is used when people will see each other again in a short time (10-15 minutes).",
-      "ar-SA": "تُستخدم العبارة 'bis gleich' عندما يلتقي الأشخاص مجدداً بعد وقت قصير جداً.",
-      "es-ES": "La frase 'bis gleich' se usa cuando las personas se volverán a ver en poco tiempo.",
-      "fr-FR": "L'expression 'bis gleich' est utilisée lorsque les gens se revoient bientôt.",
-      "hi-IN": "'bis gleich' का उपयोग तब किया जाता है जब लोग थोड़े समय बाद दोबारा मिलेंगे।",
-      "pl-PL": "Zwrot 'bis gleich' jest używany, gdy ludzie zobaczą się ponownie za chwilę.",
-      "ro-RO": "Expresia 'bis gleich' se folosește când persoanele se revăd în scurt timp.",
-      "tr-TR": "'bis gleich' ifadesi kısa süre sonra tekrar görüşüleceğinde kullanılır.",
-      "uk-UA": "Фраза 'bis gleich' використовується, коли люди знову побачаться за короткий час.",
-      "uz-UZ": "'bis gleich' iborasi odamlar qisqa vaqtdan keyin yana ko'rishganda ishlatiladi."
-    },
+    "vocabulary": [
+      {
+        "german": "bis gleich",
+        "translation": {
+          "ru-RU": "до скорого",
+          "en-US": "see you soon",
+          "ar-SA": "أراك قريباً",
+          "es-ES": "hasta ahora",
+          "fr-FR": "à tout de suite",
+          "hi-IN": "जल्द मिलते हैं",
+          "pl-PL": "do zobaczenia za chwilę",
+          "ro-RO": "pe curând",
+          "tr-TR": "yakında görüşürüz",
+          "uk-UA": "до скорої зустрічі",
+          "uz-UZ": "tezda ko'rishguncha"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Bis gleich!",
@@ -469,7 +552,7 @@
       "ar-SA": "انتهت المحادثة.",
       "es-ES": "La conversación ha terminado.",
       "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत समाप्त हो गई है।",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
       "pl-PL": "Rozmowa została zakończona.",
       "ro-RO": "Conversația s-a încheiat.",
       "tr-TR": "Konuşma sona erdi.",

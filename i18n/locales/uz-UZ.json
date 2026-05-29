@@ -10205,5 +10205,31 @@
   "speakIndexPage": {
     "title": "Gaplashish amaliyoti",
     "bannerText": "Haqiqiy misollar yordamida nutq ko'nikmalaringizni rivojlantiring"
+  },
+  "rankModal": {
+    "title": "YANGI DARAJA",
+    "rankedLabel": "Daraja",
+    "accept": "QABUL QILISH"
+  },
+  "premiumBanner": {
+    "textBanner": "Platformadan maksimal darajada foydalan, o'rganishingni tezlashtir."
+  },
+  "netWork": {
+    "successTitle": "Tarmoq tiklandi!",
+    "notSuccessTitle": "Voy! Internet yo'q",
+    "successText": "Ishga qaytamiz...",
+    "notSuccessText": "Tarmoqqa ulanish kutilmoqda..."
+  },
+  "termsBlock": {
+    "first": "Ro'yxatdan o'tish orqali siz quyidagilarni qabul qilasiz:",
+    "second": "Foydalanish shartlari",
+    "third": "va",
+    "fourth": "Maxfiylik siyosati"
+  },
+  "languagePage": {
+    "title": "Ilova tili",
+    "placeholder": "Tilni qidirish...",
+    "notfound": "Hech narsa topilmadi",
+    "further": "Davom etish"
   }
 }

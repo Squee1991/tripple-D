@@ -1050,4 +1050,10 @@ onBeforeUnmount(() => {
 
 }
 
+@media  (min-width: 1024px) {
+  .header {
+    padding: 12px 0 ;
+  }
+}
+
 </style>

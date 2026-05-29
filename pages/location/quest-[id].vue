@@ -925,6 +925,7 @@ watchEffect(() => {
 
 .btn {
   width: 80%;
+  max-width: 440px;
   padding: 14px;
   border-radius: 36px;
   font-family: "Nunito", sans-serif;

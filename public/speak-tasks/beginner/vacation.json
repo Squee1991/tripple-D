@@ -14,19 +14,40 @@
       "uk-UA": "Привіт, Анно, про що сьогодні піде мова?",
       "uz-UZ": "Salom Anna, bugun gap nima haqida?"
     },
-    "tips": {
-      "ru-RU": "Для Akkusativ мы применяем то же правило: мужской род 'der Urlaub' (отпуск) в качестве прямого объекта берет у артикля форму 'meinen' -> 'meinen Urlaub'.",
-      "en-US": "For Akkusativ, the masculine noun 'der Urlaub' (vacation) takes the article form 'meinen'.",
-      "ar-SA": "في حالة النصب (Akkusativ)، تأخذ الكلمة المذكرة 'der Urlaub' أداة 'meinen'.",
-      "es-ES": "En Akkusativ, el sustantivo masculino 'der Urlaub' toma la forma del artículo 'meinen'.",
-      "fr-FR": "À l'Akkusativ, le nom masculin 'der Urlaub' prend l'article 'meinen'.",
-      "hi-IN": "Akkusativ के लिए, पुल्लिंग संज्ञा 'der Urlaub' 'meinen' रूप लेती है।",
-      "pl-PL": "W bierniku r. męski 'der Urlaub' przyjmuje formę 'meinen'.",
-      "ro-RO": "În Akkusativ, substantivul masculin 'der Urlaub' ia forma 'meinen'.",
-      "tr-TR": "Akkusativ için eril isim 'der Urlaub' 'meinen' formunu alır.",
-      "uk-UA": "Для Akkusativ чоловічий рід 'der Urlaub' бере форму 'meinen'.",
-      "uz-UZ": "Akkusativda erkak jinsidagi 'der Urlaub' 'meinen' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "worum geht es",
+        "translation": {
+          "ru-RU": "о чем идет речь",
+          "en-US": "what is it about",
+          "ar-SA": "عن ماذا يدور الموضوع",
+          "es-ES": "de qué se trata",
+          "fr-FR": "de quoi s'agit-il",
+          "hi-IN": "यह किस बारे में है",
+          "pl-PL": "o co chodzi",
+          "ro-RO": "despre ce este vorba",
+          "tr-TR": "konu nedir",
+          "uk-UA": "про що йдеться",
+          "uz-UZ": "nima haqida gap ketyapti"
+        }
+      },
+      {
+        "german": "heute",
+        "translation": {
+          "ru-RU": "сегодня",
+          "en-US": "today",
+          "ar-SA": "اليوم",
+          "es-ES": "hoy",
+          "fr-FR": "aujourd'hui",
+          "hi-IN": "आज",
+          "pl-PL": "dzisiaj",
+          "ro-RO": "astăzi",
+          "tr-TR": "bugün",
+          "uk-UA": "сьогодні",
+          "uz-UZ": "bugun"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ich möchte meinen Urlaub planen.",
@@ -80,19 +101,40 @@
       "uk-UA": "Коли ж ти хочеш взяти відпустку?",
       "uz-UZ": "Qachon ta'tilga chiqmoqchisiz?"
     },
-    "tips": {
-      "ru-RU": "При ответе на вопрос 'Когда?' мы используем Dativ. Месяцы всегда с предлогом 'im' (сокращение от in dem).",
-      "en-US": "When answering 'When?', we use Dativ. Months always take the preposition 'im' (in dem).",
-      "ar-SA": "عند الإجابة على 'متى؟' نستخدم Dativ. الأشهر تأخذ دائماً حرف الجر 'im'.",
-      "es-ES": "Al responder '¿Cuándo?', usamos Dativ. Los meses siempre llevan la preposición 'im'.",
-      "fr-FR": "Pour répondre à 'Quand ?', on utilise le Datif. Les mois prennent toujours la préposition 'im'.",
-      "hi-IN": "'कब?' का उत्तर देते समय, мы Dativ का उपयोग करते हैं। महीनों के साथ हमेशा 'im' आता है।",
-      "pl-PL": "Odpowiadając na 'Kiedy?', używamy Dativu. Miesiące zawsze z przyimkiem 'im'.",
-      "ro-RO": "Când răspundem la 'Când?', folosim Dativ. Lunile iau mereu prepoziția 'im'.",
-      "tr-TR": "'Ne zaman?' sorusuna cevap verirken Dativ kullanılır. Aylar her zaman 'im' edatını alır.",
-      "uk-UA": "Відповідаючи на питання 'Коли?', ми використовуємо Dativ. Місяці завжди з прийменником 'im'.",
-      "uz-UZ": "'Qachon?' savoliga javob berishda Dativdan foydalanamiz. Oylar doim 'im' predlogi bilan keladi."
-    },
+    "vocabulary": [
+      {
+        "german": "wann",
+        "translation": {
+          "ru-RU": "когда",
+          "en-US": "when",
+          "ar-SA": "متى",
+          "es-ES": "cuándo",
+          "fr-FR": "quand",
+          "hi-IN": "कब",
+          "pl-PL": "kiedy",
+          "ro-RO": "când",
+          "tr-TR": "ne zaman",
+          "uk-UA": "коли",
+          "uz-UZ": "qachon"
+        }
+      },
+      {
+        "german": "nehmen",
+        "translation": {
+          "ru-RU": "взять",
+          "en-US": "to take",
+          "ar-SA": "يأخذ",
+          "es-ES": "tomar",
+          "fr-FR": "prendre",
+          "hi-IN": "लेना",
+          "pl-PL": "wziąć",
+          "ro-RO": "a lua",
+          "tr-TR": "almak",
+          "uk-UA": "брати",
+          "uz-UZ": "olmoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ich möchte im Juli verreisen.",
@@ -146,19 +188,24 @@
       "uk-UA": "Два тижні для тебе — це нормально?",
       "uz-UZ": "Ikki hafta siz uchun ma'qulmi?"
     },
-    "tips": {
-      "ru-RU": "Предлог 'für' всегда требует Akkusativ. В выражении 'für mich' местоимение 'ich' берет у артикля форму 'mich'.",
-      "en-US": "The preposition 'für' always requires Akkusativ. 'Ich' becomes 'mich'.",
-      "ar-SA": "حرف الجر 'für' يتطلب دائماً Akkusativ. يتحول الضمير 'ich' إلى 'mich'.",
-      "es-ES": "La preposición 'für' siempre requiere Akkusativ. 'Ich' se convierte en 'mich'.",
-      "fr-FR": "La préposition 'für' exige toujours l'Akkusativ. 'Ich' devient 'mich'.",
-      "hi-IN": "पूर्वसर्ग 'für' को हमेशा Akkusativ की आवश्यकता होती है। 'Ich' 'mich' में बदल जाता है।",
-      "pl-PL": "Przyimek 'für' zawsze wymaga biernika. 'Ich' zmienia się w 'mich'.",
-      "ro-RO": "Prepoziția 'für' necesită întotdeauna Akkusativ. 'Ich' devine 'mich'.",
-      "tr-TR": "'für' edatı her zaman Akkusativ gerektirir. 'Ich', 'mich'e dönüşür.",
-      "uk-UA": "Прийменник 'für' завжди вимагає Akkusativ. 'Ich' стає 'mich'.",
-      "uz-UZ": "'für' predlogi doim Akkusativni talab qiladi. 'Ich' olmoshi 'mich'ga aylanadi."
-    },
+    "vocabulary": [
+      {
+        "german": "zwei Wochen",
+        "translation": {
+          "ru-RU": "две недели",
+          "en-US": "two weeks",
+          "ar-SA": "أسبوعان",
+          "es-ES": "dos semanas",
+          "fr-FR": "deux semaines",
+          "hi-IN": "दो सप्ताह",
+          "pl-PL": "dwa tygodnie",
+          "ro-RO": "două săptămâni",
+          "tr-TR": "iki hafta",
+          "uk-UA": "два тижні",
+          "uz-UZ": "ikki hafta"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, zwei Wochen passen mir gut.",
@@ -212,19 +259,40 @@
       "uk-UA": "Чи є там у тебе важливі проєкти?",
       "uz-UZ": "U yerda muhim loyihalaringiz bormi?"
     },
-    "tips": {
-      "ru-RU": "В Akkusativ множественное число 'die Projekte' или 'die Aufgaben' не меняется. Мы используем форму 'meine Aufgaben'.",
-      "en-US": "In Akkusativ plural, 'die Projekte' or 'die Aufgaben' does not change. We use 'meine Aufgaben'.",
-      "ar-SA": "في حالة النصب للجمع، لا تتغير الكلمات. نستخدم صيغة 'meine Aufgaben'.",
-      "es-ES": "En plural Akkusativ, no cambian. Usamos la forma 'meine Aufgaben'.",
-      "fr-FR": "Au pluriel Akkusativ, cela ne change pas. On utilise 'meine Aufgaben'.",
-      "hi-IN": "Akkusativ बहुवचन में, शब्द नहीं बदलते। हम 'meine Aufgaben' का उपयोग करते हैं।",
-      "pl-PL": "W bierniku liczba mnoga nie zmienia się. Używamy formy 'meine Aufgaben'.",
-      "ro-RO": "În Akkusativ plural, nu se schimbă. Folosim forma 'meine Aufgaben'.",
-      "tr-TR": "Akkusativ çoğulda değişmezler. 'meine Aufgaben' formunu kullanırız.",
-      "uk-UA": "В Akkusativ множина не змінюється. Ми використовуємо форму 'meine Aufgaben'.",
-      "uz-UZ": "Akkusativ ko'plikda o'zgarmaydi. Biz 'meine Aufgaben' shaklidan foydalanamiz."
-    },
+    "vocabulary": [
+      {
+        "german": "gibt es",
+        "translation": {
+          "ru-RU": "есть ли / имеется ли",
+          "en-US": "is there / are there",
+          "ar-SA": "هل يوجد",
+          "es-ES": "¿hay?",
+          "fr-FR": "y a-t-il",
+          "hi-IN": "क्या वहाँ है",
+          "pl-PL": "czy są",
+          "ro-RO": "există",
+          "tr-TR": "var mı",
+          "uk-UA": "чи є",
+          "uz-UZ": "bormi"
+        }
+      },
+      {
+        "german": "wichtig",
+        "translation": {
+          "ru-RU": "важный",
+          "en-US": "important",
+          "ar-SA": "مهم",
+          "es-ES": "importante",
+          "fr-FR": "important",
+          "hi-IN": "महत्वपूर्ण",
+          "pl-PL": "ważny",
+          "ro-RO": "important",
+          "tr-TR": "önemli",
+          "uk-UA": "важливий",
+          "uz-UZ": "muhim"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Nein, alle Aufgaben sind erledigt.",
@@ -278,19 +346,40 @@
       "uk-UA": "Хто підмінить тебе в цей час?",
       "uz-UZ": "Bu vaqt ichida o'rningizga kim qaraydi?"
     },
-    "tips": {
-      "ru-RU": "Когда вопрос 'Когда?' (Wann?), мы используем Dativ. Женский род 'die Zeit' берет у артикля форму 'dieser Zeit'. Мужской род 'der Kollege' в Akkusativ берет 'meine Aufgaben'.",
-      "en-US": "When answering 'When?', use Dativ. Feminine 'die Zeit' takes the form 'dieser Zeit'.",
-      "ar-SA": "عند الإجابة على 'متى؟'، نستخدم Dativ. تتحول 'die Zeit' إلى 'dieser Zeit'.",
-      "es-ES": "Al responder '¿Cuándo?', usamos Dativ. El femenino 'die Zeit' toma la forma 'dieser Zeit'.",
-      "fr-FR": "Pour répondre à 'Quand ?', on utilise le Datif. Le féminin 'die Zeit' devient 'dieser Zeit'.",
-      "hi-IN": "जब सवाल 'कब?' हो, तो Dativ का उपयोग करें। स्त्रीलिंग 'die Zeit' 'dieser Zeit' बन जाता है।",
-      "pl-PL": "Odpowiadając na 'Kiedy?', używamy Dativu. Rodzaj żeński 'die Zeit' przyjmuje formę 'dieser Zeit'.",
-      "ro-RO": "Când întrebarea este 'Când?', folosim Dativ. Femininul 'die Zeit' ia forma 'dieser Zeit'.",
-      "tr-TR": "'Ne zaman?' sorusunda Dativ kullanılır. Dişil 'die Zeit', 'dieser Zeit' formunu alır.",
-      "uk-UA": "Коли питання 'Коли?', ми використовуємо Dativ. Жіночий рід 'die Zeit' бере форму 'dieser Zeit'.",
-      "uz-UZ": "'Qachon?' savolida Dativ ishlatiladi. Ayol jinsidagi 'die Zeit' 'dieser Zeit' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "vertreten",
+        "translation": {
+          "ru-RU": "замещать / представлять",
+          "en-US": "to represent / substitute",
+          "ar-SA": "ينوب",
+          "es-ES": "sustituir",
+          "fr-FR": "remplacer",
+          "hi-IN": "प्रतिनिधित्व करना",
+          "pl-PL": "zastępować",
+          "ro-RO": "a înlocui",
+          "tr-TR": "yerine bakmak",
+          "uk-UA": "заміщати",
+          "uz-UZ": "o'rniga qaramoq"
+        }
+      },
+      {
+        "german": "in dieser Zeit",
+        "translation": {
+          "ru-RU": "в это время",
+          "en-US": "during this time",
+          "ar-SA": "في هذا الوقت",
+          "es-ES": "en ese tiempo",
+          "fr-FR": "pendant cette période",
+          "hi-IN": "इस समय के दौरान",
+          "pl-PL": "w tym czasie",
+          "ro-RO": "în acest timp",
+          "tr-TR": "bu sürede",
+          "uk-UA": "у цей час",
+          "uz-UZ": "bu vaqt ichida"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Mein Kollege übernimmt meine Aufgaben.",
@@ -344,19 +433,40 @@
       "uk-UA": "Це звучить дуже добре, Анно.",
       "uz-UZ": "Bu juda yaxshi eshitilyapti, Anna."
     },
-    "tips": {
-      "ru-RU": "Глагол 'ausfüllen' или 'einreichen' требует Akkusativ. Мужской род 'der Antrag' (заявление) берет у артикля форму 'den'.",
-      "en-US": "Verbs 'ausfüllen' or 'einreichen' require Akkusativ. Masculine 'der Antrag' takes the article form 'den'.",
-      "ar-SA": "أفعال 'ausfüllen' أو 'einreichen' تتطلب Akkusativ. تتحول 'der Antrag' إلى 'den'.",
-      "es-ES": "Los verbos 'ausfüllen' o 'einreichen' requieren Akkusativ. El masculino 'der Antrag' toma la forma 'den'.",
-      "fr-FR": "Les verbes 'ausfüllen' ou 'einreichen' exigent l'Akkusativ. Le masculin 'der Antrag' prend l'article 'den'.",
-      "hi-IN": "क्रिया 'ausfüllen' या 'einreichen' को Akkusativ की आवश्यकता होती है। पुल्लिंग 'der Antrag' 'den' रूप लेता है।",
-      "pl-PL": "Czasowniki 'ausfüllen' lub 'einreichen' wymagają biernika. Rodzaj męski 'der Antrag' przyjmuje formę 'den'.",
-      "ro-RO": "Verbele 'ausfüllen' sau 'einreichen' cer Akkusativ. Masculinul 'der Antrag' ia forma 'den'.",
-      "tr-TR": "'ausfüllen' veya 'einreichen' fiilleri Akkusativ gerektirir. Eril 'der Antrag', 'den' formunu alır.",
-      "uk-UA": "Дієслова 'ausfüllen' або 'einreichen' вимагають Akkusativ. Чоловічий рід 'der Antrag' бере форму 'den'.",
-      "uz-UZ": "'ausfüllen' yoki 'einreichen' fe'llari Akkusativni talab qiladi. Erkak jinsidagi 'der Antrag' 'den' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "klingen",
+        "translation": {
+          "ru-RU": "звучать",
+          "en-US": "to sound",
+          "ar-SA": "يبدو (للصوت)",
+          "es-ES": "sonar",
+          "fr-FR": "sonner",
+          "hi-IN": "ध्वनि होना",
+          "pl-PL": "brzmieć",
+          "ro-RO": "a suna",
+          "tr-TR": "kulağa gelmek",
+          "uk-UA": "звучати",
+          "uz-UZ": "eshitilmoq"
+        }
+      },
+      {
+        "german": "sehr gut",
+        "translation": {
+          "ru-RU": "очень хорошо",
+          "en-US": "very good",
+          "ar-SA": "جيد جداً",
+          "es-ES": "muy bien",
+          "fr-FR": "très bien",
+          "hi-IN": "बहुत अच्छा",
+          "pl-PL": "bardzo dobrze",
+          "ro-RO": "foarte bine",
+          "tr-TR": "çok iyi",
+          "uk-UA": "дуже добре",
+          "uz-UZ": "juda yaxshi"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Soll ich den Antrag ausfüllen?",
@@ -410,19 +520,40 @@
       "uk-UA": "Так, зроби це, будь ласка, на цьому тижні.",
       "uz-UZ": "Ha, iltimos, buni shu hafta bajaring."
     },
-    "tips": {
-      "ru-RU": "Для Akkusativ женский род 'die Woche' берет у артикля форму 'diese Woche' (на этой неделе). 'Das Verständnis' (понимание) — средний род, остается 'das'.",
-      "en-US": "In Akkusativ, feminine 'die Woche' takes the form 'diese Woche'. 'Das Verständnis' is neuter and stays 'das'.",
-      "ar-SA": "في حالة النصب، تتحول 'die Woche' إلى 'diese Woche'.",
-      "es-ES": "En Akkusativ, el femenino 'die Woche' toma la forma 'diese Woche'.",
-      "fr-FR": "À l'Akkusativ, le féminin 'die Woche' prend la forme 'diese Woche'.",
-      "hi-IN": "Akkusativ में स्त्रीलिंग 'die Woche' 'diese Woche' बन जाता है।",
-      "pl-PL": "W bierniku rodzaj żeński 'die Woche' przyjmuje formę 'diese Woche'.",
-      "ro-RO": "În Akkusativ, femininul 'die Woche' ia forma 'diese Woche'.",
-      "tr-TR": "Akkusativ'de dişil 'die Woche', 'diese Woche' formunu alır.",
-      "uk-UA": "В Akkusativ жіночий рід 'die Woche' бере форму 'diese Woche'.",
-      "uz-UZ": "Akkusativda ayol jinsidagi 'die Woche' 'diese Woche' shaklini oladi."
-    },
+    "vocabulary": [
+      {
+        "german": "machen",
+        "translation": {
+          "ru-RU": "делать",
+          "en-US": "to do",
+          "ar-SA": "يفعل",
+          "es-ES": "hacer",
+          "fr-FR": "faire",
+          "hi-IN": "करना",
+          "pl-PL": "zrobić",
+          "ro-RO": "a face",
+          "tr-TR": "yapmak",
+          "uk-UA": "робити",
+          "uz-UZ": "qilmoq"
+        }
+      },
+      {
+        "german": "diese Woche",
+        "translation": {
+          "ru-RU": "на этой неделе",
+          "en-US": "this week",
+          "ar-SA": "هذا الأسبوع",
+          "es-ES": "esta semana",
+          "fr-FR": "cette semaine",
+          "hi-IN": "इस सप्ताह",
+          "pl-PL": "w tym tygodniu",
+          "ro-RO": "săptămâna aceasta",
+          "tr-TR": "bu hafta",
+          "uk-UA": "на цьому тижні",
+          "uz-UZ": "shu hafta"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke, das mache ich sofort.",

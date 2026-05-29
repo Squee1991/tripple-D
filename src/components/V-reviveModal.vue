@@ -44,7 +44,6 @@ const props = defineProps({
     type: Number,
     default: 0
   },
-  // ДОБАВЛЯЕМ НОВЫЙ ПРОП
   cancelText: {
     type: String,
     default: ''
@@ -83,8 +82,6 @@ const actionButtons = computed(() => {
     style: ''
   })
 
-  // МЕНЯЕМ ЛОГИКУ ТЕКСТА ТУТ
-  // Если передали cancelText, используем его. Иначе старый дефолтный текст.
   buttons.push({
     text: props.cancelText ? props.cancelText : t('questCompletedModals.back'),
     action: () => emit('back'),

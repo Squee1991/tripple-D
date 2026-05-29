@@ -10236,5 +10236,31 @@
   "speakIndexPage": {
     "title": "Práctica oral",
     "bannerText": "Practica tus habilidades de expresión oral con ejemplos reales"
+  },
+  "rankModal": {
+    "title": "NUEVO RANGO",
+    "rankedLabel": "Rango",
+    "accept": "ACEPTAR"
+  },
+  "premiumBanner": {
+    "textBanner": "Saca el máximo provecho de la plataforma, acelera tu aprendizaje."
+  },
+  "netWork": {
+    "successTitle": "¡Conexión restaurada!",
+    "notSuccessTitle": "¡Ups! Sin internet",
+    "successText": "Volviendo al trabajo...",
+    "notSuccessText": "Esperando la conexión a la red..."
+  },
+  "termsBlock": {
+    "first": "Al registrarte, aceptas los",
+    "second": "Términos de uso",
+    "third": "y la",
+    "fourth": "Política de privacidad"
+  },
+  "languagePage": {
+    "title": "Idioma de la aplicación",
+    "placeholder": "Buscar idioma...",
+    "notfound": "No se ha encontrado nada",
+    "further": "Continuar"
   }
 }

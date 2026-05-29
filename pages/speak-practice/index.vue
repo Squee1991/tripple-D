@@ -157,11 +157,11 @@ const goToSession = (themeId) => {
   router.push({ path: '/speak-practice/session', query: { theme: themeId } });
 };
 
-onMounted(async () => {
-  await speakStore.loadUserProgress();
+onMounted(() => {
+  speakStore.loadUserProgress();
   setTimeout(() => {
     isMounted.value = true;
-  }, 120);
+  }, 90);
 });
 
 </script>

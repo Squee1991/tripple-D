@@ -1,19 +1,6 @@
 {
   "start": {
     "botText": "Guten Tag! Was kann ich für Sie tun?",
-    "tips": {
-      "ar-SA": "عبارة 'Was kann ich für Sie tun؟' تعني 'كيف يمكنني مساعدتك؟'.",
-      "en-US": "The phrase 'Was kann ich für Sie tun?' means 'What can I do for you?'.",
-      "es-ES": "La frase 'Was kann ich für Sie tun?' significa '¿Qué puedo hacer por usted?'.",
-      "fr-FR": "L'expression 'Was kann ich für Sie tun ?' signifie 'Que puis-je faire pour vous ?'.",
-      "hi-IN": "वाक्यांश 'Was kann ich für Sie tun?' का अर्थ है 'मैं आपकी क्या मदद कर सकता हूँ?'.",
-      "pl-PL": "Fraza 'Was kann ich für Sie tun?' oznacza 'W czym mogę pomóc?'.",
-      "ro-RO": "Expresia 'Was kann ich für Sie tun?' înseamnă 'Ce pot face pentru dumneavoastră?'.",
-      "ru-RU": "Фраза 'Was kann ich für Sie tun?' переводится как 'Чем я могу Вам помочь?'.",
-      "tr-TR": "'Was kann ich für Sie tun?' ifadesi 'Sizin için ne yapabilirim?' demektir.",
-      "uk-UA": "Фраза 'Was kann ich für Sie tun?' перекладається як 'Чим я можу Вам допомогти?'.",
-      "uz-UZ": "'Was kann ich für Sie tun?' iborasi 'Sizga qanday yordam bera olaman?' degani."
-    },
     "botTranslation": {
       "ar-SA": "طاب يومك! ماذا يمكنني أن أفعل لك؟",
       "en-US": "Good day! What can I do for you?",
@@ -27,6 +14,40 @@
       "uk-UA": "Добрий день! Чим я можу Вам допомогти?",
       "uz-UZ": "Xayrli kun! Siz uchun nima qila olaman?"
     },
+    "vocabulary": [
+      {
+        "german": "tun",
+        "translation": {
+          "ru-RU": "делать",
+          "en-US": "to do",
+          "ar-SA": "يفعل",
+          "es-ES": "hacer",
+          "fr-FR": "faire",
+          "hi-IN": "करना",
+          "pl-PL": "robić",
+          "ro-RO": "a face",
+          "tr-TR": "yapmak",
+          "uk-UA": "робити",
+          "uz-UZ": "qilmoq"
+        }
+      },
+      {
+        "german": "für Sie",
+        "translation": {
+          "ru-RU": "для Вас",
+          "en-US": "for you",
+          "ar-SA": "من أجلك",
+          "es-ES": "para usted",
+          "fr-FR": "pour vous",
+          "hi-IN": "आपके लिए",
+          "pl-PL": "dla pana/pani",
+          "ro-RO": "pentru dumneavoastră",
+          "tr-TR": "sizin için",
+          "uk-UA": "для Вас",
+          "uz-UZ": "siz uchun"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Guten Tag! Ich möchte einen Brief verschicken.",
@@ -67,19 +88,6 @@
   },
   "destination": {
     "botText": "Gerne. Wohin soll es gehen?",
-    "tips": {
-      "ar-SA": "للسؤال عن الوجهة نستخدم 'Wohin' (إلى أين).",
-      "en-US": "To ask for a destination, we use 'Wohin' (Where to).",
-      "es-ES": "Para preguntar por un destino usamos 'Wohin' (Adónde).",
-      "fr-FR": "Pour demander une destination, on utilise 'Wohin' (Vers où).",
-      "hi-IN": "गंतव्य पूछने के लिए, हम 'Wohin' (कहाँ) का उपयोग करते हैं।",
-      "pl-PL": "Pytając o cel podróży używamy 'Wohin' (Dokąd).",
-      "ro-RO": "Pentru a întreba destinația, folosim 'Wohin' (Încotro).",
-      "ru-RU": "Вопросительное слово 'Wohin?' означает 'Куда?'.",
-      "tr-TR": "Hedef sormak için 'Wohin' (Nereye) kullanılır.",
-      "uk-UA": "Запитальне слово 'Wohin?' означає 'Куди?'.",
-      "uz-UZ": "Manzilni so'rash uchun 'Wohin' (Qayerga) ishlatiladi."
-    },
     "botTranslation": {
       "ar-SA": "بكل سرور. إلى أين سترسلها؟",
       "en-US": "Gladly. Where should it go?",
@@ -93,6 +101,40 @@
       "uk-UA": "Із задоволенням. Куди це потрібно відправити?",
       "uz-UZ": "Bajonidil. U qayerga borishi kerak?"
     },
+    "vocabulary": [
+      {
+        "german": "wohin",
+        "translation": {
+          "ru-RU": "куда",
+          "en-US": "where to",
+          "ar-SA": "إلى أين",
+          "es-ES": "adónde",
+          "fr-FR": "où",
+          "hi-IN": "कहाँ",
+          "pl-PL": "dokąd",
+          "ro-RO": "încotro",
+          "tr-TR": "nereye",
+          "uk-UA": "куди",
+          "uz-UZ": "qayerga"
+        }
+      },
+      {
+        "german": "nach",
+        "translation": {
+          "ru-RU": "в (направление)",
+          "en-US": "to (direction)",
+          "ar-SA": "إلى",
+          "es-ES": "a (dirección)",
+          "fr-FR": "à / en (direction)",
+          "hi-IN": "की ओर",
+          "pl-PL": "do (kierunek)",
+          "ro-RO": "spre / la",
+          "tr-TR": "-e doğru",
+          "uk-UA": "до / в (напрямок)",
+          "uz-UZ": "ga (yo'nalish)"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Nach Spanien, bitte.",
@@ -133,19 +175,6 @@
   },
   "type": {
     "botText": "Soll es ein Einschreiben sein oder ein normaler Brief?",
-    "tips": {
-      "ar-SA": "كلمة 'Einschreiben' تعني رسالة مسجلة (بالبريد المضمون).",
-      "en-US": "The word 'Einschreiben' means registered mail (with tracking).",
-      "es-ES": "La palabra 'Einschreiben' significa correo certificado.",
-      "fr-FR": "Le mot 'Einschreiben' signifie courrier recommandé.",
-      "hi-IN": "शब्द 'Einschreiben' का अर्थ पंजीकृत डाक है।",
-      "pl-PL": "Słowo 'Einschreiben' oznacza list polecony.",
-      "ro-RO": "Cuvântul 'Einschreiben' înseamnă scrisoare recomandată.",
-      "ru-RU": "Слово 'Einschreiben' означает заказное письмо (с трек-номером).",
-      "tr-TR": "'Einschreiben' taahhütlü posta demektir.",
-      "uk-UA": "Слово 'Einschreiben' означає рекомендований лист (з трек-номером).",
-      "uz-UZ": "'Einschreiben' so'zi buyurtma xat (kuzatuv raqami bilan) degani."
-    },
     "botTranslation": {
       "ar-SA": "هل يجب أن تكون رسالة مسجلة أم رسالة عادية؟",
       "en-US": "Should it be registered mail or a normal letter?",
@@ -159,6 +188,40 @@
       "uk-UA": "Це має бути рекомендований лист чи звичайний?",
       "uz-UZ": "Bu buyurtma xat bo'lishi kerakmi yoki oddiy xatmi?"
     },
+    "vocabulary": [
+      {
+        "german": "das Einschreiben",
+        "translation": {
+          "ru-RU": "заказное письмо",
+          "en-US": "registered mail",
+          "ar-SA": "بريد مسجل",
+          "es-ES": "correo certificado",
+          "fr-FR": "courrier recommandé",
+          "hi-IN": "पंजीकृत डाक",
+          "pl-PL": "list polecony",
+          "ro-RO": "scrisoare recomandată",
+          "tr-TR": "taahhütlü posta",
+          "uk-UA": "рекомендований лист",
+          "uz-UZ": "buyurtma xat"
+        }
+      },
+      {
+        "german": "der Brief",
+        "translation": {
+          "ru-RU": "письмо",
+          "en-US": "letter",
+          "ar-SA": "رسالة",
+          "es-ES": "carta",
+          "fr-FR": "lettre",
+          "hi-IN": "पत्र",
+          "pl-PL": "list",
+          "ro-RO": "scrisoare",
+          "tr-TR": "mektup",
+          "uk-UA": "лист",
+          "uz-UZ": "xat"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ein normaler Brief, bitte.",
@@ -199,19 +262,6 @@
   },
   "weighing": {
     "botText": "Alles klar, ich wiege ihn kurz. Das macht 3,50 Euro.",
-    "tips": {
-      "ar-SA": "الفعل 'wiegen' يعني 'يزن' أو 'يوزن'.",
-      "en-US": "The verb 'wiegen' means 'to weigh'.",
-      "es-ES": "El verbo 'wiegen' significa 'pesar'.",
-      "fr-FR": "Le verbe 'wiegen' signifie 'peser'.",
-      "hi-IN": "क्रिया 'wiegen' का अर्थ है 'वजन करना'।",
-      "pl-PL": "Czasownik 'wiegen' oznacza 'ważyć'.",
-      "ro-RO": "Verbul 'wiegen' înseamnă 'a cântări'.",
-      "ru-RU": "Глагол 'wiegen' означает 'взвешивать'.",
-      "tr-TR": "'wiegen' fiili 'tartmak' anlamına gelir.",
-      "uk-UA": "Дієслово 'wiegen' означає 'зважувати'.",
-      "uz-UZ": "'wiegen' fe'li 'o'lchamoq' (tortmoq) degan ma'noni anglatadi."
-    },
     "botTranslation": {
       "ar-SA": "حسناً، سأزنه بسرعة. التكلفة 3.50 يورو.",
       "en-US": "Alright, I'll weigh it quickly. That comes to 3.50 Euros.",
@@ -225,6 +275,40 @@
       "uk-UA": "Зрозуміло, я його швидко зважу. З Вас 3,50 євро.",
       "uz-UZ": "Tushunarli, men uni tezda tortib ko'raman. Jami 3,50 yevro bo'ldi."
     },
+    "vocabulary": [
+      {
+        "german": "wiegen",
+        "translation": {
+          "ru-RU": "взвешивать",
+          "en-US": "to weigh",
+          "ar-SA": "يزن",
+          "es-ES": "pesar",
+          "fr-FR": "peser",
+          "hi-IN": "वजन करना",
+          "pl-PL": "ważyć",
+          "ro-RO": "a cântări",
+          "tr-TR": "tartmak",
+          "uk-UA": "зважувати",
+          "uz-UZ": "o'lchamoq (tortmoq)"
+        }
+      },
+      {
+        "german": "kurz",
+        "translation": {
+          "ru-RU": "быстро / ненадолго",
+          "en-US": "briefly / shortly",
+          "ar-SA": "لفترة وجيزة",
+          "es-ES": "un momento / brevemente",
+          "fr-FR": "brièvement",
+          "hi-IN": "थोड़ी देर के लिए",
+          "pl-PL": "krótko / na chwilę",
+          "ro-RO": "scurt / rapid",
+          "tr-TR": "kısaca",
+          "uk-UA": "коротко / швидко",
+          "uz-UZ": "qisqacha / tezda"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Kann ich mit Karte zahlen?",
@@ -265,19 +349,6 @@
   },
   "payment": {
     "botText": "Ja, das geht. Bitte hier das Gerät.",
-    "tips": {
-      "ar-SA": "'das geht' تعني 'هذا ممكن' أو 'هذا يعمل'.",
-      "en-US": "'das geht' means 'that works' or 'that is possible'.",
-      "es-ES": "'das geht' significa 'eso funciona' o 'eso es posible'.",
-      "fr-FR": "'das geht' signifie 'c'est possible' ou 'ça marche'.",
-      "hi-IN": "'das geht' का अर्थ है 'यह संभव है' या 'यह काम करता है'।" ,
-      "pl-PL": "'das geht' oznacza 'to działa' lub 'to możliwe'.",
-      "ro-RO": "'das geht' înseamnă 'se poate' sau 'funcționează'.",
-      "ru-RU": "Фраза 'das geht' означает 'это возможно' или 'так можно'.",
-      "tr-TR": "'das geht' 'olur' veya 'mümkün' demektir.",
-      "uk-UA": "Фраза 'das geht' означає 'це можливо' або 'так можна'.",
-      "uz-UZ": "'das geht' iborasi 'bu mumkin' yoki 'bo'ladi' degani."
-    },
     "botTranslation": {
       "ar-SA": "نعم، هذا ممكن. تفضل الجهاز هنا.",
       "en-US": "Yes, that works. Here is the device, please.",
@@ -291,6 +362,40 @@
       "uk-UA": "Так, можна. Будь ласка, ось термінал.",
       "uz-UZ": "Ha, bo'ladi. Marhamat, qurilma bu yerda."
     },
+    "vocabulary": [
+      {
+        "german": "das geht",
+        "translation": {
+          "ru-RU": "это возможно",
+          "en-US": "that works / is possible",
+          "ar-SA": "هذا ممكن",
+          "es-ES": "es posible / funciona",
+          "fr-FR": "c'est possible / ça marche",
+          "hi-IN": "यह संभव है",
+          "pl-PL": "to możliwe / to działa",
+          "ro-RO": "se poate",
+          "tr-TR": "bu olur / mümkün",
+          "uk-UA": "це можливо",
+          "uz-UZ": "bu bo'ladi / mumkin"
+        }
+      },
+      {
+        "german": "das Gerät",
+        "translation": {
+          "ru-RU": "устройство",
+          "en-US": "device",
+          "ar-SA": "جهاز",
+          "es-ES": "dispositivo",
+          "fr-FR": "appareil",
+          "hi-IN": "उपकरण",
+          "pl-PL": "urządzenie",
+          "ro-RO": "dispozitiv",
+          "tr-TR": "cihaz",
+          "uk-UA": "пристрій",
+          "uz-UZ": "qurilma"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke, hier ist die Karte.",
@@ -331,19 +436,6 @@
   },
   "receipt": {
     "botText": "Vielen Dank. Benötigen Sie eine Quittung?",
-    "tips": {
-      "ar-SA": "'Quittung' أو 'Beleg' تعني إيصال أو فاتورة.",
-      "en-US": "'Quittung' or 'Beleg' means receipt.",
-      "es-ES": "'Quittung' o 'Beleg' significa recibo o comprobante.",
-      "fr-FR": "'Quittung' ou 'Beleg' signifie reçu ou ticket de caisse.",
-      "hi-IN": "'Quittung' या 'Beleg' का अर्थ रसीद है।",
-      "pl-PL": "'Quittung' lub 'Beleg' oznacza paragon/pokwitowanie.",
-      "ro-RO": "'Quittung' sau 'Beleg' înseamnă chitanță sau bon.",
-      "ru-RU": "Слова 'die Quittung' и 'der Beleg' означают чек или квитанцию.",
-      "tr-TR": "'Quittung' veya 'Beleg' makbuz veya fiş demektir.",
-      "uk-UA": "Слова 'die Quittung' та 'der Beleg' означають чек або квитанцію.",
-      "uz-UZ": "'Quittung' yoki 'Beleg' kvitansiya (chek) degani."
-    },
     "botTranslation": {
       "ar-SA": "شكراً جزيلاً. هل تحتاج إلى إيصال؟",
       "en-US": "Thank you very much. Do you need a receipt?",
@@ -357,6 +449,40 @@
       "uk-UA": "Велике дякую. Вам потрібна квитанція?",
       "uz-UZ": "Katta rahmat. Sizga kvitansiya kerakmi?"
     },
+    "vocabulary": [
+      {
+        "german": "benötigen",
+        "translation": {
+          "ru-RU": "нуждаться",
+          "en-US": "to need / require",
+          "ar-SA": "يحتاج",
+          "es-ES": "necesitar",
+          "fr-FR": "avoir besoin",
+          "hi-IN": "आवश्यकता होना",
+          "pl-PL": "potrzebować",
+          "ro-RO": "a avea nevoie",
+          "tr-TR": "ihtiyaç duymak",
+          "uk-UA": "потребувати",
+          "uz-UZ": "muhtoj bo'lmoq"
+        }
+      },
+      {
+        "german": "die Quittung",
+        "translation": {
+          "ru-RU": "квитанция",
+          "en-US": "receipt",
+          "ar-SA": "إيصال",
+          "es-ES": "recibo",
+          "fr-FR": "reçu",
+          "hi-IN": "रसीद",
+          "pl-PL": "pokwitowanie",
+          "ro-RO": "chitanță",
+          "tr-TR": "makbuz",
+          "uk-UA": "квитанція",
+          "uz-UZ": "kvitansiya"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, bitte.",
@@ -397,19 +523,6 @@
   },
   "get_receipt": {
     "botText": "Hier ist der Beleg. Alles erledigt.",
-    "tips": {
-      "ar-SA": "عبارة 'Alles erledigt' تعني 'تم إنجاز كل شيء'.",
-      "en-US": "The phrase 'Alles erledigt' means 'All done' or 'Everything is taken care of'.",
-      "es-ES": "La frase 'Alles erledigt' significa 'Todo hecho' o 'Todo listo'.",
-      "fr-FR": "L'expression 'Alles erledigt' signifie 'Tout est réglé' ou 'C'est tout bon'.",
-      "hi-IN": "वाक्यांश 'Alles erledigt' का अर्थ है 'सब हो गया' या 'सब कुछ पूरा हो गया'।",
-      "pl-PL": "Fraza 'Alles erledigt' oznacza 'Wszystko załatwione'.",
-      "ro-RO": "Expresia 'Alles erledigt' înseamnă 'Totul este gata' sau 'Totul e rezolvat'.",
-      "ru-RU": "Фраза 'Alles erledigt' означает 'Всё готово' или 'Всё сделано'.",
-      "tr-TR": "'Alles erledigt' ifadesi 'Her şey tamam' veya 'İşlem tamamlandı' demektir.",
-      "uk-UA": "Фраза 'Alles erledigt' означає 'Все готово' або 'Все зроблено'.",
-      "uz-UZ": "'Alles erledigt' iborasi 'Hammasi tayyor' yoki 'Bajarildi' degani."
-    },
     "botTranslation": {
       "ar-SA": "هنا الإيصال. تم كل شيء.",
       "en-US": "Here is the receipt. All done.",
@@ -423,6 +536,40 @@
       "uk-UA": "Ось чек. Все готово.",
       "uz-UZ": "Mana kvitansiya. Hammasi tayyor."
     },
+    "vocabulary": [
+      {
+        "german": "der Beleg",
+        "translation": {
+          "ru-RU": "чек",
+          "en-US": "receipt",
+          "ar-SA": "إيصال / فاتورة",
+          "es-ES": "comprobante / recibo",
+          "fr-FR": "reçu / ticket",
+          "hi-IN": "रसीद / प्रमाण",
+          "pl-PL": "paragon / dowód",
+          "ro-RO": "bon / dovadă",
+          "tr-TR": "fiş / belge",
+          "uk-UA": "чек",
+          "uz-UZ": "chek"
+        }
+      },
+      {
+        "german": "alles erledigt",
+        "translation": {
+          "ru-RU": "всё готово",
+          "en-US": "all done",
+          "ar-SA": "تم كل شيء",
+          "es-ES": "todo listo",
+          "fr-FR": "tout est réglé",
+          "hi-IN": "सब हो गया",
+          "pl-PL": "wszystko załatwione",
+          "ro-RO": "totul este rezolvat",
+          "tr-TR": "her şey tamam",
+          "uk-UA": "все зроблено",
+          "uz-UZ": "hammasi tayyor"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Vielen Dank für Ihre Hilfe!",
@@ -476,6 +623,40 @@
       "uk-UA": "Будь ласка! Гарного Вам дня!",
       "uz-UZ": "Arzimaydi! Yaxshi kun tilayman!"
     },
+    "vocabulary": [
+      {
+        "german": "gern geschehen",
+        "translation": {
+          "ru-RU": "пожалуйста / не за что",
+          "en-US": "you're welcome",
+          "ar-SA": "على الرحب والسعة",
+          "es-ES": "de nada",
+          "fr-FR": "de rien / je vous en prie",
+          "hi-IN": "आपका स्वागत है",
+          "pl-PL": "nie ma za co",
+          "ro-RO": "cu plăcere",
+          "tr-TR": "rica ederim",
+          "uk-UA": "будь ласка / нема за що",
+          "uz-UZ": "arzimaydi"
+        }
+      },
+      {
+        "german": "schönen Tag",
+        "translation": {
+          "ru-RU": "хорошего дня",
+          "en-US": "nice day",
+          "ar-SA": "يوم جميل",
+          "es-ES": "buen día",
+          "fr-FR": "bonne journée",
+          "hi-IN": "अच्छा दिन",
+          "pl-PL": "miłego dnia",
+          "ro-RO": "o zi frumoasă",
+          "tr-TR": "iyi günler",
+          "uk-UA": "гарного дня",
+          "uz-UZ": "yaxshi kun"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke, Ihnen auch!",
@@ -529,6 +710,24 @@
       "uk-UA": "До побачення!",
       "uz-UZ": "Xayr!"
     },
+    "vocabulary": [
+      {
+        "german": "auf Wiedersehen",
+        "translation": {
+          "ru-RU": "до свидания",
+          "en-US": "goodbye",
+          "ar-SA": "إلى اللقاء",
+          "es-ES": "adiós",
+          "fr-FR": "au revoir",
+          "hi-IN": "अलविदा",
+          "pl-PL": "do widzenia",
+          "ro-RO": "la revedere",
+          "tr-TR": "hoşça kalın",
+          "uk-UA": "до побачення",
+          "uz-UZ": "xayr"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Auf Wiedersehen!",

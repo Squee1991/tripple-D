@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 const router = useRouter()
-const { locales, locale, setLocale } = useI18n()
+const { locales, locale, setLocale , t } = useI18n()
 const pendingLocale = ref(null)
 const currentActiveCode = computed(() => pendingLocale.value || locale.value)
 
@@ -35,17 +35,16 @@ const goToSignIn = () => {
 <template>
   <div class="lang-container">
     <div class="lang-header">
-      <h2 class="title">Язык приложения</h2>
+      <h2 class="title">{{ t('languagePage.title')}}</h2>
       <div class="search-wrapper">
         <input
             v-model="searchQuery"
             type="text"
-            placeholder="Поиск языка..."
+            :placeholder="t('languagePage.placeholder')"
             class="search-input"
         />
       </div>
     </div>
-
     <div class="scroll-area">
       <div class="lang-list">
         <button
@@ -59,14 +58,14 @@ const goToSignIn = () => {
           <div class="lang-item__indicator"></div>
         </button>
         <div v-if="filteredLocales.length === 0" class="not-found">
-          Ничего не найдено
+          {{ t('languagePage.notfound')}}
         </div>
       </div>
     </div>
 
     <div class="lang-footer">
       <button class="next-button" @click="goToSignIn">
-        ДАЛЕЕ
+        {{ t('languagePage.further')}}
       </button>
     </div>
   </div>
@@ -83,9 +82,8 @@ const goToSignIn = () => {
   padding: 10px;
 }
 
-
 .lang-header {
-  padding: 10px 10px 20px;
+  padding: 15px;
 }
 
 .title {
@@ -188,25 +186,24 @@ const goToSignIn = () => {
 }
 
 .lang-footer {
-  padding: 20px 10px 10px;
+  padding: 15px;
 }
 
 .next-button {
   width: 100%;
-  height: 55px;
-  background: #50c18d;
+  padding: 15px;
+  background: #10B981;
   border: none;
-  border-radius: 24px;
+  border-radius: 38px;
   color: #fff;
   font-size: 18px;
   font-weight: 800;
   cursor: pointer;
-  box-shadow: 0 5px 0 #3a8e68;
+  box-shadow: 0 8px 0 #065f46;
   transition: all 0.1s;
 }
 
 .next-button:active {
-  transform: translateY(3px);
   box-shadow: 0 2px 0 #3a8e68;
 }
 

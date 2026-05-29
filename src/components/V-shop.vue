@@ -9,7 +9,6 @@
           />
         </div>
       </header>
-
       <div class="shop__cards">
         <article
             v-for="card in shopCards"
@@ -66,7 +65,6 @@
         </article>
       </div>
     </div>
-
     <div v-if="showModal" class="modal-overlay" @click.self="closeModal">
       <div class="modal-content" :class="{'modal-content--success': isSuccessState}">
         <div class="modal-header">
@@ -149,11 +147,11 @@ const rankStore = useRankUserStore()
 const PRICES = {
   HEART: 10,
   FREEZE_DAY: 10,
-  SALE_5: 30,
-  SALE_10: 50,
+  SALE_5: 100,
+  SALE_10: 150,
   SALE_15: 70
 }
-const DISCOUNT_REQ_HATS = {5: 90, 10: 210, 15: 400}
+const DISCOUNT_REQ_HATS = {5: 210, 10: 500, 15: 400}
 
 const showModal = ref(false)
 const modalType = ref('freeze')
@@ -204,16 +202,16 @@ const shopCards = computed(() => {
       requiredHats: DISCOUNT_REQ_HATS[10],
       type: 'permanent'
     },
-    {
-      id: "sale_15",
-      title:  t('cardSales.title15'),
-      description: "",
-      hotIcon: HotDeal,
-      icon: Sale15,
-      price: PRICES.SALE_15,
-      requiredHats: DISCOUNT_REQ_HATS[15],
-      type: 'permanent'
-    },
+    // {
+    //   id: "sale_15",
+    //   title:  t('cardSales.title15'),
+    //   description: "",
+    //   hotIcon: HotDeal,
+    //   icon: Sale15,
+    //   price: PRICES.SALE_15,
+    //   requiredHats: DISCOUNT_REQ_HATS[15],
+    //   type: 'permanent'
+    // },
   ]
 
   return cardsData.map(card => {
@@ -251,7 +249,7 @@ const shopCards = computed(() => {
     const isLevelClaimed = authStore.claimedBonuses?.includes(card.requiredHats)
     if (isLevelClaimed && card.type !== 'consumable') {
       isOwned = true
-      btnLabel = "Бонус получен"
+      btnLabel = "got bonus"
       isDisabled = true
     }
     const classes = {

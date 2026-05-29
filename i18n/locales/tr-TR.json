@@ -10216,5 +10216,31 @@
   "speakIndexPage": {
     "title": "Konuşma pratiği",
     "bannerText": "Gerçek örneklerle konuşma becerilerini geliştir"
+  },
+  "rankModal": {
+    "title": "YENİ RÜTBE",
+    "rankedLabel": "Rütbe",
+    "accept": "KABUL ET"
+  },
+  "premiumBanner": {
+    "textBanner": "Platformdan en iyi şekilde yararlan, öğrenimini hızlandır."
+  },
+  "netWork": {
+    "successTitle": "Bağlantı sağlandı!",
+    "notSuccessTitle": "Hata! İnternet yok",
+    "successText": "Çalışmaya devam ediyoruz...",
+    "notSuccessText": "Ağ bağlantısı bekleniyor..."
+  },
+  "termsBlock": {
+    "first": "Kaydolarak şunları kabul etmiş olursunuz:",
+    "second": "Kullanım Koşulları",
+    "third": "ve",
+    "fourth": "Gizlilik Politikası"
+  },
+  "languagePage": {
+    "title": "Uygulama dili",
+    "placeholder": "Dil ara...",
+    "notfound": "Hiçbir şey bulunamadı",
+    "further": "Devam et"
   }
 }
