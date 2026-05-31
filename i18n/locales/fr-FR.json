@@ -10223,7 +10223,9 @@
   },
   "speakIndexPage": {
     "title": "Pratique orale",
-    "bannerText": "Pratique tes compétences à l'oral avec des exemples concrets"
+    "bannerText": "Pratique tes compétences à l'oral avec des exemples concrets",
+    "modalTitle": "Pratique orale",
+    "modalText": "Développez vos compétences de communication avec des dialogues réels ! Vous pouvez choisir une réponse suggérée, la saisir manuellement au clavier ou simplement la dire à voix haute en appuyant sur le bouton du microphone."
   },
   "rankModal": {
     "title": "NOUVEAU RANG",
@@ -10250,5 +10252,8 @@
     "placeholder": "Rechercher une langue...",
     "notfound": "Aucun résultat",
     "further": "Continuer"
+  },
+  "statistics": {
+    "title": "Vos statistiques et votre progression dans l'apprentissage des mots et la réussite des niveaux thématiques"
   }
 }

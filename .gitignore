@@ -27,5 +27,6 @@ key: process.env.FIREBASE_RECAPTCHA_KEY || ''
 /service-account.json
 .vercel
 android
+public/audio/
 # Admin tools
 admin/

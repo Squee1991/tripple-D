@@ -274,22 +274,6 @@
           "uk-UA": "зараз",
           "uz-UZ": "hozir"
         }
-      },
-      {
-        "german": "die Schule",
-        "translation": {
-          "ar-SA": "المدرسة",
-          "en-US": "the school",
-          "es-ES": "la escuela",
-          "fr-FR": "l'école",
-          "hi-IN": "स्कूल",
-          "pl-PL": "szkoła",
-          "ro-RO": "școala",
-          "ru-RU": "школа",
-          "tr-TR": "okul",
-          "uk-UA": "школа",
-          "uz-UZ": "maktab"
-        }
       }
     ],
     "options": [
@@ -367,7 +351,7 @@
         "german": "machen",
         "translation": {
           "ar-SA": "يفعل",
-          "en-US": "to do / make",
+          "en-US": "to do",
           "es-ES": "hacer",
           "fr-FR": "faire",
           "hi-IN": "करना",
@@ -380,19 +364,19 @@
         }
       },
       {
-        "german": "lernen",
+        "german": "da",
         "translation": {
-          "ar-SA": "يتعلم",
-          "en-US": "to learn",
-          "es-ES": "aprender",
-          "fr-FR": "apprendre",
-          "hi-IN": "सीखना",
-          "pl-PL": "uczyć się",
-          "ro-RO": "a învăța",
-          "ru-RU": "учить",
-          "tr-TR": "öğrenmek",
-          "uk-UA": "вчити",
-          "uz-UZ": "o'rganmoq"
+          "ar-SA": "هناك",
+          "en-US": "there",
+          "es-ES": "ahí",
+          "fr-FR": "là-bas",
+          "hi-IN": "वहाँ",
+          "pl-PL": "tam",
+          "ro-RO": "acolo",
+          "ru-RU": "там",
+          "tr-TR": "orada",
+          "uk-UA": "там",
+          "uz-UZ": "u yerda"
         }
       }
     ],
@@ -412,7 +396,7 @@
           "uk-UA": "Я вчу німецьку",
           "uz-UZ": "Men nemis tilini o'rganyapman"
         },
-        "nextStep": "end"
+        "nextStep": "encourage"
       },
       {
         "text": "Ich arbeite",
@@ -429,7 +413,7 @@
           "uk-UA": "Я працюю",
           "uz-UZ": "Men ishlayapman"
         },
-        "nextStep": "end"
+        "nextStep": "encourage"
       },
       {
         "text": "Ich trinke Kaffee",
@@ -446,25 +430,25 @@
           "uk-UA": "Я п'ю каву",
           "uz-UZ": "Men qahva ichyapman"
         },
-        "nextStep": "end"
+        "nextStep": "encourage"
       }
     ],
-    "defaultNext": "end"
+    "defaultNext": "encourage"
   },
-  "end": {
-    "botText": "Das ist toll! Viel Erfolg! Tschüss!",
+  "encourage": {
+    "botText": "Das ist toll! Viel Erfolg und noch einen schönen Tag!",
     "botTranslation": {
-      "ar-SA": "هذا رائع! بالتوفيق! وداعاً!",
-      "en-US": "That is great! Good luck! Bye!",
-      "es-ES": "¡Eso es genial! ¡Mucho éxito! ¡Adiós!",
-      "fr-FR": "C'est génial ! Bonne chance ! Au revoir !",
-      "hi-IN": "यह बहुत अच्छा है! शुभकामनाएँ! अलविदा!",
-      "pl-PL": "To wspaniale! Powodzenia! Cześć!",
-      "ro-RO": "Asta e grozav! Mult succes! Pa!",
-      "ru-RU": "Это здорово! Успехов! Пока!",
-      "tr-TR": "Bu harika! Başarılar! Hoşça kal!",
-      "uk-UA": "Це чудово! Успіхів! Бувай!",
-      "uz-UZ": "Bu ajoyib! Omad! Xayr!"
+      "ar-SA": "هذا رائع! حظاً موفقاً ويوم جميل لك!",
+      "en-US": "That is great! Good luck and have a nice day!",
+      "es-ES": "¡Eso es genial! ¡Mucho éxito y que tengas un buen día!",
+      "fr-FR": "C'est génial ! Bonne chance et bonne journée !",
+      "hi-IN": "यह बहुत अच्छा है! शुभकामनाएँ और आपका दिन शुभ हो!",
+      "pl-PL": "To wspaniale! Powodzenia i miłego dnia!",
+      "ro-RO": "Asta e grozav! Mult succes și o zi frumoasă în continuare!",
+      "ru-RU": "Это здорово! Успехов и хорошего дня!",
+      "tr-TR": "Bu harika! Başarılar ve iyi günler!",
+      "uk-UA": "Це чудово! Успіхів і гарного дня!",
+      "uz-UZ": "Bu ajoyib! Omad va yaxshi kun tilayman!"
     },
     "vocabulary": [
       {
@@ -477,7 +461,7 @@
           "hi-IN": "बहुत बढ़िया",
           "pl-PL": "wspaniale",
           "ro-RO": "grozav",
-          "ru-RU": "здорово / классно",
+          "ru-RU": "здорово",
           "tr-TR": "harika",
           "uk-UA": "чудово",
           "uz-UZ": "ajoyib"
@@ -493,13 +477,66 @@
           "hi-IN": "बहुत सफलता",
           "pl-PL": "powodzenia",
           "ro-RO": "mult succes",
-          "ru-RU": "больших успехов",
+          "ru-RU": "успехов",
           "tr-TR": "başarılar",
-          "uk-UA": "великих успіхів",
+          "uk-UA": "успіхів",
           "uz-UZ": "omad"
         }
       }
     ],
+    "options": [
+      {
+        "text": "Danke, dir auch!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً!",
+          "en-US": "Thanks, you too!",
+          "es-ES": "¡Gracias, a ti también!",
+          "fr-FR": "Merci, à toi aussi !",
+          "hi-IN": "धन्यवाद, आपको भी!",
+          "pl-PL": "Dziękuję, tobie również!",
+          "ro-RO": "Mulțumesc, și ție!",
+          "ru-RU": "Спасибо, тебе тоже!",
+          "tr-TR": "Teşekkürler, sana da!",
+          "uk-UA": "Дякую, тобі також!",
+          "uz-UZ": "Rahmat, senga ham!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Tschüss!",
+        "translation": {
+          "ar-SA": "وداعاً!",
+          "en-US": "Bye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Salut !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Cześć!",
+          "ro-RO": "Pa!",
+          "ru-RU": "Пока!",
+          "tr-TR": "Görüşürüz!",
+          "uk-UA": "Бувай!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Bis bald!",
+    "botTranslation": {
+      "ar-SA": "أراك قريباً!",
+      "en-US": "See you soon!",
+      "es-ES": "¡Hasta pronto!",
+      "fr-FR": "À bientôt !",
+      "hi-IN": "जल्द ही मिलेंगे!",
+      "pl-PL": "Do zobaczenia wkrótce!",
+      "ro-RO": "Pe curând!",
+      "ru-RU": "До скорого!",
+      "tr-TR": "Yakında görüşürüz!",
+      "uk-UA": "До скорої зустрічі!",
+      "uz-UZ": "Tez orada ko'rishguncha!"
+    },
     "options": [],
     "defaultNext": null
   }

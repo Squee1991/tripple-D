@@ -8,7 +8,15 @@
           <polyline points="12 19 5 12 12 5"></polyline>
         </svg>
       </button>
-      <h1 class="title">Практика диалогов</h1>
+      <h1 class="title">Практика общения</h1>
+      <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+             stroke="orange" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+      </button>
     </header>
     <main class="chat-window" ref="chatContainer">
       <Transition name="fade">
@@ -16,19 +24,16 @@
           <div class="menu-card">
             <div class="icon-circle vocab-icon">📚</div>
             <div class="menu-card-content">
-              <h2>Учить слова</h2>
-              <p>Новых слов: {{ vocabList.length }}</p>
+              <h2>Слова к диалогу</h2>
             </div>
             <button class="btn-primary" @click="startVocabLearning">
               {{ isVocabLearned ? 'Повторить' : 'Учить' }}
             </button>
           </div>
-
           <div class="menu-card">
             <div class="icon-circle start-icon">💬</div>
             <div class="menu-card-content">
               <h2>Диалог</h2>
-              <p>Практика общения</p>
             </div>
             <button class="btn-primary" @click="startDialogue">
               {{ dialogueCompleted ? 'Повторить' : 'Начать' }}
@@ -36,13 +41,11 @@
           </div>
         </div>
       </Transition>
-
       <Transition name="fade">
         <div v-if="viewState === 'vocab'" class="vocab-learning-block">
           <div class="vocab-progress">
             {{ currentVocabIndex + 1 }} / {{ vocabList.length }}
           </div>
-
           <div class="flashcard">
             <button class="btn-sound-large" @click="speakGerman(vocabList[currentVocabIndex].german)">
               🔊
@@ -50,7 +53,6 @@
             <h2 class="vocab-german">{{ vocabList[currentVocabIndex].german }}</h2>
             <p class="vocab-russian">{{ getTranslation(vocabList[currentVocabIndex].translation) }}</p>
           </div>
-
           <div class="vocab-actions">
             <button class="btn-secondary" @click="prevVocab" :disabled="currentVocabIndex === 0">Назад</button>
             <button class="btn-primary" @click="nextVocab">
@@ -139,6 +141,13 @@
         v-model:show="showExitModal"
         @confirm="confirmExit"
     />
+    <Modal
+     :visible="showDevModal"
+     @close="showDevModal = false"
+     :img="SpeakingIcon"
+     :title="t('speakIndexPage.modalTitle')"
+     :text="t('speakIndexPage.modalText')"
+    />
   </div>
 </template>
 
@@ -148,8 +157,9 @@ import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router';
 import {useSpeakStore} from '../../store/speakStore.js';
 import SoundBtn from "~/src/components/soundBtn.vue";
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
-import { TextToSpeech } from '@capacitor-community/text-to-speech';
-const {locale} = useI18n();
+import Modal from '../../src/components/modal.vue';
+import SpeakingIcon from "assets/images/speakingIcon.svg";
+const {locale, t } = useI18n();
 const route = useRoute();
 const router = useRouter();
 const store = useSpeakStore();
@@ -163,7 +173,7 @@ const isTyping = ref(false);
 const dialogueCompleted = ref(false);
 const showExitModal = ref(false);
 const isConfirmedExit = ref(false);
-
+const showDevModal = ref(false);
 const isVocabLearned = ref(false);
 const currentVocabIndex = ref(0);
 
@@ -437,11 +447,9 @@ const toggleListening = () => {
   recognition = new SpeechRecognition();
   recognition.lang = 'de-DE';
   recognition.interimResults = false;
-
   recognition.onstart = () => isListening.value = true;
   recognition.onerror = () => isListening.value = false;
   recognition.onend = () => isListening.value = false;
-
   recognition.onresult = (event) => {
     const transcript = event.results[0][0].transcript;
     manualInput.value += (manualInput.value ? ' ' : '') + transcript;
@@ -467,11 +475,13 @@ const toggleListening = () => {
 .session__header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 5px 10px 15px 10px;
   background: var(--bg);
 }
 
-.btn-icon-back {
+.btn-icon-back,
+.quiz__btn--info{
   background: #fff;
   border: 3px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile);
@@ -494,6 +504,7 @@ const toggleListening = () => {
   font-size: 23px;
   color: var(--title);
   margin-left: 15px;
+  text-shadow: 1px 1px var(--title);
 }
 
 .menu-block {
@@ -509,7 +520,6 @@ const toggleListening = () => {
 }
 
 .menu-card {
-  background: #FFFFFF;
   border-radius: 20px;
   padding: 20px;
   width: 100%;
@@ -523,7 +533,8 @@ const toggleListening = () => {
 
 .menu-card-content h2 {
   font-size: 18px;
-  color: #1f2937;
+  color: var(--titleColor);
+  font-weight: 600;
   margin: 0 0 5px 0;
 }
 
@@ -635,7 +646,7 @@ const toggleListening = () => {
   color: #FFFFFF;
   border: none;
   padding: 14px 24px;
-  border-radius: 12px;
+  border-radius: 42px;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
@@ -841,17 +852,17 @@ const toggleListening = () => {
 }
 
 .options-title {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--titleColor);
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   text-align: center;
 }
 
 .options-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 3px;
 }
 
 .option-btn {
@@ -893,7 +904,7 @@ const toggleListening = () => {
 .mic-btn, .send-btn {
   background-color: #2d3042;
   color: #ffffff;
-  border: 1px solid #3f4257;
+  border: 2px solid #3f4257;
   border-radius: 50%;
   width: 44px;
   height: 44px;

@@ -8,6 +8,7 @@ const config: CapacitorConfig = {
   //   url: 'http://192.168.178.21:3000',
   //   cleartext: true
   // },
+  backgroundColor: '#00000000',
   plugins: {
     StatusBar: {
       overlaysWebView: true,
@@ -18,7 +19,6 @@ const config: CapacitorConfig = {
     },
     SplashScreen: {
       launchAutoHide: false,
-      backgroundColor: "#8AC03D",
       showSpinner: false,
     },
     AdMob: {

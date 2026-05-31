@@ -10206,7 +10206,9 @@
   },
   "speakIndexPage": {
     "title": "Practică de vorbire",
-    "bannerText": "Exersează-ți abilitățile de vorbire cu exemple din viața reală"
+    "bannerText": "Exersează-ți abilitățile de vorbire cu exemple din viața reală",
+    "modalTitle": "Practică de vorbire",
+    "modalText": "Dezvoltă-ți abilitățile de comunicare în dialoguri reale! Poți alege un răspuns gata pregătit din cele sugerate, să îl introduci manual de la tastatură sau pur și simplu să îl spui cu voce tare apăsând butonul microfonului."
   },
   "rankModal": {
     "title": "RANG NOU",
@@ -10233,5 +10235,8 @@
     "placeholder": "Caută limba...",
     "notfound": "Nu s-a găsit nimic",
     "further": "Continuă"
+  },
+  "statistics": {
+    "title": "Statisticile și progresul tău în învățarea cuvintelor și finalizarea nivelurilor tematice"
   }
 }

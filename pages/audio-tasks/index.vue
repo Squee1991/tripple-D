@@ -239,10 +239,9 @@ onUnmounted(() => {
 }
 
 .quiz__title {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 900;
   color: var(--title);
-  text-transform: uppercase;
   margin: 0;
   -webkit-text-stroke: 1px var(--title);
 }

@@ -10215,7 +10215,9 @@
   },
   "speakIndexPage": {
     "title": "Konuşma pratiği",
-    "bannerText": "Gerçek örneklerle konuşma becerilerini geliştir"
+    "bannerText": "Gerçek örneklerle konuşma becerilerini geliştir",
+    "modalTitle": "Konuşma pratiği",
+    "modalText": "Gerçek diyaloglarla iletişim becerilerinizi geliştirin! Sunulan hazır cevaplardan birini seçebilir, klavyeden manuel olarak yazabilir veya sadece mikrofon düğmesine basarak sesli bir şekilde söyleyebilirsiniz."
   },
   "rankModal": {
     "title": "YENİ RÜTBE",
@@ -10242,5 +10244,8 @@
     "placeholder": "Dil ara...",
     "notfound": "Hiçbir şey bulunamadı",
     "further": "Devam et"
+  },
+  "statistics": {
+    "title": "Kelime öğrenme ve tematik seviyeleri tamamlama konusundaki istatistikleriniz ve ilerlemeniz"
   }
 }

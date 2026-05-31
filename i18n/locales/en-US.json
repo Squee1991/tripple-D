@@ -10229,7 +10229,9 @@
   },
   "speakIndexPage": {
     "title": "Speaking practice",
-    "bannerText": "Practice your speaking skills with real-life examples"
+    "bannerText": "Practice your speaking skills with real-life examples",
+    "modalTitle": "Speaking practice",
+    "modalText": "Develop your communication skills with real-life dialogues! You can choose a suggested answer, type it manually, or simply say it aloud by tapping the microphone button."
   },
   "rankModal": {
     "title": "NEW RANK",
@@ -10256,5 +10258,8 @@
     "placeholder": "Search language...",
     "notfound": "Nothing found",
     "further": "Continue"
+  },
+  "statistics": {
+    "title": "Your statistics and progress in learning words and completing thematic levels"
   }
 }

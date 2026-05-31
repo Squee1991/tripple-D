@@ -16,7 +16,7 @@
             />
           </div>
           <nav class="mobile-nav" role="tablist">
-            <div class="sliding-bg" :style="{ transform: `translateX(${activeIndex * 100}%)` }"></div>
+            <div class="sliding-bg" :style="{ transform: `translateX(${getTransformX(activeIndex)}%)` }"></div>
             <button
                 v-for="(tab, index) in learnTabs"
                 :key="tab.id"
@@ -108,11 +108,18 @@ import GrammarIcon from '../assets/images/GrammarIcon.svg'
 import TextBook from '../assets/images/TextBook.svg'
 import SpeakingIcon from '../assets/images/speakingIcon.svg'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const router = useRouter()
 const selectedCategory = ref(null)
 const isMounted = ref(false)
 
+const getTransformX = (index) => {
+  if (index === -1) return 0;
+  if (locale.value === 'ar') {
+    return (learnTabs.length - 1 - index) * 100;
+  }
+  return index * 100;
+};
 
 const learnTabs = [
   { id: 'practice', label: t('studyNavAndBanner.practice'), icon: PracticeIcon },

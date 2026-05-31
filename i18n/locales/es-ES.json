@@ -10235,7 +10235,9 @@
   },
   "speakIndexPage": {
     "title": "Práctica oral",
-    "bannerText": "Practica tus habilidades de expresión oral con ejemplos reales"
+    "bannerText": "Practica tus habilidades de expresión oral con ejemplos reales",
+    "modalTitle": "Práctica oral",
+    "modalText": "¡Desarrolla tus habilidades de comunicación con diálogos reales! Puedes elegir una respuesta sugerida, escribirla manualmente con el teclado o simplemente decirla en voz alta presionando el botón del micrófono."
   },
   "rankModal": {
     "title": "NUEVO RANGO",
@@ -10262,5 +10264,8 @@
     "placeholder": "Buscar idioma...",
     "notfound": "No se ha encontrado nada",
     "further": "Continuar"
+  },
+  "statistics": {
+    "title": "Tus estadísticas y progreso en el aprendizaje de palabras y la superación de niveles temáticos"
   }
 }

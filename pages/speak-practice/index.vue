@@ -3,6 +3,14 @@
     <header class="header">
       <VBackBtn/>
       <h1 class="header__title">{{ t('speakIndexPage.title')}}</h1>
+      <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+             stroke="orange" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+      </button>
     </header>
     <VTransition>
       <div v-if="isMounted" class="speak__content-inner">
@@ -57,6 +65,13 @@
         </main>
       </div>
     </VTransition>
+    <Modal
+        @close="showDevModal = false"
+        :visible="showDevModal"
+        :title="t('speakIndexPage.modalTitle')"
+        :img="SpeakingIcon"
+        :text="t('speakIndexPage.modalText')"
+    />
   </div>
 </template>
 
@@ -68,12 +83,13 @@ import VBanner from "~/src/components/V-banner.vue";
 import SpeakIcon from "../../assets/images/speakingIcon.svg";
 import VTransition from "~/src/components/V-transition.vue";
 import { useSpeakStore } from '../../store/speakStore.js';
-
+import Modal from '../../src/components/modal.vue'
+import SpeakingIcon from '../../assets/images/speakingIcon.svg'
 const { t } = useI18n();
 const router = useRouter();
 const speakStore = useSpeakStore();
 const isMounted = ref(false);
-
+const showDevModal = ref(false);
 const categories = [
   {
     id: 'society_lifestyle',
@@ -178,6 +194,26 @@ onMounted(() => {
   padding: 5px 10px 15px 10px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.quiz__btn {
+  background: #fff;
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  transition: all 0.1s;
+}
+
+.quiz__btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
 }
 
 .header__title {

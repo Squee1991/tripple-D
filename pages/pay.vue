@@ -1,8 +1,11 @@
 <script setup>
-import {ref, onMounted, onUnmounted, computed, watch} from 'vue'
+import {ref, onMounted, onUnmounted, computed} from 'vue'
 import {useRouter} from 'vue-router'
 import {userAuthStore} from '../store/authStore'
-import { getStripe } from '@/utils/stripe'
+import {useBillingStore} from '../store/billingStore'
+import {useI18n} from 'vue-i18n'
+import {useSeoMeta} from "#imports"
+
 import Books from '../assets/images/pay-images/books.svg'
 import Ach from '../assets/images/pay-images/ach.svg'
 import Translate from '../assets/images/pay-images/translate.svg'
@@ -18,45 +21,22 @@ import StatsPlus from '../assets/images/StatsPlus.svg'
 import Forever from '../assets/images/forever.svg'
 import Description from '../assets/images/photo-frame.svg'
 import PremiumIcon from '../assets/images/premium.svg'
-import {useSeoMeta} from "#imports";
-import {useBillingStore} from '../store/billingStore'
-import VBanner from "~/src/components/V-banner.vue";
-
+import VBanner from "~/src/components/V-banner.vue"
 
 const authStore = userAuthStore()
 const billingStore = useBillingStore()
-const payButton = ref(null)
-const showStickyFooter = ref(false)
 const router = useRouter()
 const {t} = useI18n()
 const BASE_PRICE = 1
 
-const step = ref(1)
 const selectedDiscountId = ref(null)
-
-
 const submitLoading = ref(false)
+const payButton = ref(null)
+const showStickyFooter = ref(false)
 
 const handleBack = () => {
-  if (step.value === 2) {
-    step.value = 1
-    history.replaceState(null, '')
-  } else {
-    router.back()
-  }
+  router.back()
 }
-
-const handlePopState = () => {
-  if (step.value === 2) {
-    step.value = 1
-  }
-}
-
-watch(step, (newStep) => {
-  if (newStep === 2) {
-    history.pushState({step: 2}, '')
-  }
-})
 
 const finalPrice = computed(() => {
   if (billingStore.isMobile && billingStore.offerings.length > 0) {
@@ -95,17 +75,15 @@ useSeoMeta({
 })
 
 let observer
-
 const features = [
   {title: t('Обучение без границ'), icon: Forever},
-  {title: t('Расширенная статистика'), icon: StatsPlus},
+  // {title: t('Расширенная статистика'), icon: StatsPlus},
   {title: t('Будущие функции'), icon: Future},
   {title: t('Поддержка разработчиков'), icon: SupportCup},
   {title: t('Отсутствие рекламы'), icon: Ads},
 ]
 
 onMounted(async () => {
-  window.addEventListener('popstate', handlePopState)
   if (billingStore.isMobile) {
     await billingStore.initialize()
   }
@@ -121,27 +99,23 @@ onMounted(async () => {
 })
 
 onUnmounted(() => {
-  window.removeEventListener('popstate', handlePopState)
   if (observer && payButton.value) {
     observer.unobserve(payButton.value)
   }
 })
 
 async function pay() {
-  if (!authStore.uid || !authStore.email) {
-    alert('Пожалуйста, войдите в аккаунт')
-    return
-  }
+  if (!authStore.uid || !authStore.email) return
+
   if (billingStore.isMobile) {
     if (billingStore.offerings.length > 0) {
       const pkg = billingStore.offerings[0]
       await billingStore.buy(pkg)
-    } else {
-      alert('Ошибка: Товары для приложения не загружены')
-    }
+    } else { }
     return
   }
   const priceId = 'price_1SvdnE24sKuPwF6cZoD2ZJn3'
+  submitLoading.value = true
   try {
     const response = await $fetch('/api/stripe/checkout', {
       method: 'POST',
@@ -155,10 +129,11 @@ async function pay() {
     if (response.url) {
       window.location.href = response.url
     } else if (response.error) {
-      alert('Ошибка: ' + response.error)
+      console.log(response.error)
     }
   } catch (err) {
-    alert('Произошла ошибка соединения.')
+  } finally {
+    submitLoading.value = false
   }
 }
 </script>
@@ -173,38 +148,29 @@ async function pay() {
           <polyline points="12 19 5 12 12 5"></polyline>
         </svg>
       </button>
-      <div class="step-dots">
-        <div class="dot" :class="{ active: step === 1 }"></div>
-        <div class="dot" :class="{ active: step === 2 }"></div>
-      </div>
     </div>
     <div class="main-flow">
-      <transition name="view-slide" mode="out-in">
-        <div v-if="step === 1" key="promo" class="flow-step">
-          <VBanner
-              text="Полный доступ ко всем функциям приложения"
-              :icon="PremiumIcon"
-          />
-          <div class="hero-zone">
-            <h1 class="hero-title">SKILLUP <span class="neon-text">PLUS</span></h1>
-         </div>
-          <div class="perks-grid">
-            <div v-for="(feat, i) in features" :key="i" class="perk-card">
-              <div class="perk-icon">
-                <img :src="feat.icon" alt="" class="icon-svg">
-              </div>
-              <div class="perk-meta">
-                <span class="perk-name">{{ feat.title }}</span>
-              </div>
+      <div class="flow-step">
+        <VBanner
+            text="Полный доступ ко всем функциям приложения"
+            :icon="PremiumIcon"
+        />
+        <div class="hero-zone">
+          <h1 class="hero-title">SKILLUP <span class="neon-text">PLUS</span></h1>
+        </div>
+        <div class="perks-grid">
+          <div v-for="(feat, i) in features" :key="i" class="perk-card">
+            <div class="perk-icon">
+              <img :src="feat.icon" alt="" class="icon-svg">
+            </div>
+            <div class="perk-meta">
+              <span class="perk-name">{{ feat.title }}</span>
             </div>
           </div>
-          <div class="footer-action">
-            <button @click="step = 2" class="btn-main-action">ПЕРЕЙТИ К ОПЛАТЕ</button>
-          </div>
         </div>
-        <div v-else key="checkout" class="flow-step">
-          <div class="hero-zone">
-            <h1 class="hero-title">ТВОИ <span class="neon-text">БОНУСЫ</span></h1>
+        <div class="bonus-section" v-if="myAvailableCoupons.length > 1">
+          <div class="hero-zone bonus-hero">
+            <h2 class="hero-title">ТВОИ <span class="neon-text">БОНУСЫ</span></h2>
             <p class="hero-desc">Примени заработанные за активность скидки</p>
           </div>
           <div class="inventory-section">
@@ -229,40 +195,32 @@ async function pay() {
               </div>
             </div>
           </div>
-          <div class="marketing-pitch">
-            <div class="pitch-text">
-              Целый месяц безлимитного немецкого. Это в разы дешевле одного часа с репетитором, но доступно тебе 24/7.
-            </div>
+        </div>
+        <div class="billing-summary">
+          <div class="bill-line">
+            <span class="bill-text">Месяц обучения</span>
+            <span class="bill-price">{{ BASE_PRICE }}€</span>
           </div>
-          <div class="billing-summary">
-            <div class="bill-line">
-              <span class="bill-text">Месяц обучения</span>
-              <span class="bill-price">{{ BASE_PRICE }}€</span>
-            </div>
-            <div class="bill-line discount" v-if="selectedDiscountId">
-              <span class="bill-text">Твоя скидка</span>
-              <span class="bill-price-neg">-{{
-                  myAvailableCoupons.find(c => c.id === selectedDiscountId).percent
-                }}%</span>
-            </div>
-            <div class="bill-total">
-              <span class="total-text">ИТОГО:</span>
-              <span class="total-price">{{ finalPrice }}€</span>
-            </div>
+          <div class="bill-line discount" v-if="selectedDiscountId">
+            <span class="bill-text">Твоя скидка</span>
+            <span class="bill-price-neg">-{{myAvailableCoupons.find(c => c.id === selectedDiscountId).percent}}%</span>
           </div>
-          <div class="footer-action">
-            <button @click="pay" class="btn-buy-neon" :disabled="submitLoading">
-              {{ submitLoading ? 'СИНХРОНИЗАЦИЯ...' : 'Приобрести PLUS' }}
-            </button>
+          <div class="bill-total">
+            <span class="total-text">ИТОГО:</span>
+            <span class="total-price">{{ finalPrice }}€</span>
           </div>
         </div>
-      </transition>
+        <div class="footer-action" ref="payButton">
+          <button @click="pay" class="btn-buy-neon" :disabled="submitLoading">
+            {{ submitLoading ? 'СИНХРОНИЗАЦИЯ...' : 'Приобрести PLUS' }}
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-
 .pro-vault {
   height: 100%;
   background: var(--bg);
@@ -278,12 +236,6 @@ async function pay() {
   padding: 5px 0 15px 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.step-dots {
-  display: flex;
-  gap: 8px;
 }
 
 .main-flow {
@@ -292,23 +244,13 @@ async function pay() {
   padding-bottom: 20px;
 }
 
-.dot {
-  width: 8px;
-  height: 8px;
-  background: #ccceee;
-  border-radius: 50%;
-  transition: 0.3s;
-}
-
-.dot.active {
-  background: #6366f1;
-  width: 24px;
-  border-radius: 10px;
-}
-
 .hero-zone {
   margin-bottom: 15px;
   text-align: center;
+}
+
+.bonus-hero {
+  margin-top: 30px;
 }
 
 .hero-title {
@@ -319,10 +261,18 @@ async function pay() {
   text-shadow: 2px 2px var(--title);
 }
 
+.hero-title h2 {
+  font-size: 26px;
+}
+
 .neon-text {
   font-size: 34px;
   color: #6366f1;
   text-shadow: 2px 2px #6366f1;
+}
+
+.bonus-hero .neon-text {
+  font-size: 28px;
 }
 
 .hero-desc {
@@ -364,15 +314,6 @@ async function pay() {
   color: var(--title);
 }
 
-.inventory-header {
-  text-align: left;
-  font-size: 14px;
-  font-weight: 800;
-  color: #6366f1;
-  margin: 10px 0 15px 4px;
-  text-transform: uppercase;
-}
-
 .inventory-list {
   display: flex;
   flex-direction: column;
@@ -387,6 +328,7 @@ async function pay() {
   position: relative;
   overflow: hidden;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .loot-card--active {
@@ -424,8 +366,7 @@ async function pay() {
   color: #10b981;
 }
 
-.flow-step{
-  height: 100%;
+.flow-step {
   display: flex;
   flex-direction: column;
   padding: 0 5px;
@@ -448,7 +389,7 @@ async function pay() {
 }
 
 .marketing-pitch {
-  margin-top: 20px;
+  margin-top: 25px;
   padding: 16px;
   background: rgba(99, 102, 241, 0.1);
   border-radius: 18px;
@@ -456,10 +397,6 @@ async function pay() {
   gap: 12px;
   align-items: center;
   border: 1px solid rgba(99, 102, 241, 0.2);
-}
-
-.pitch-icon {
-  font-size: 24px;
 }
 
 .pitch-text {
@@ -510,20 +447,8 @@ async function pay() {
 }
 
 .footer-action {
-  margin-top: auto;
+  margin-top: 20px;
   padding: 20px 0;
-}
-
-.btn-main-action {
-  width: 100%;
-  padding: 20px;
-  border-radius: 22px;
-  border: none;
-  background: #6366f1;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 900;
-  box-shadow: 0 8px 0 #494cdf;
 }
 
 .btn-icon-back {
@@ -547,39 +472,25 @@ async function pay() {
 
 .btn-buy-neon {
   width: 100%;
-  padding: 20px;
+  padding: 16px 20px;
   border-radius: 22px;
   border: none;
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: #fff;
   font-size: 18px;
   font-weight: 900;
-  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 6px 0 #228b5f;
+  cursor: pointer;
+  transition: transform 0.1s;
 }
 
 .btn-buy-neon:active {
   transform: scale(0.98);
 }
 
-.secure-tag {
-  margin-top: 14px;
-  font-size: 12px;
-  color: #444;
-  font-weight: 800;
-  text-align: center;
-}
-
-.view-slide-enter-active, .view-slide-leave-active {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.view-slide-enter-from {
-  opacity: 0;
-  transform: translateX(20px);
-}
-
-.view-slide-leave-to {
-  opacity: 0;
-  transform: translateX(-20px);
+.btn-buy-neon:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
 }
 </style>

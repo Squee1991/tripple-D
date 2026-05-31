@@ -10222,7 +10222,9 @@
   },
   "speakIndexPage": {
     "title": "Ćwiczenia konwersacyjne",
-    "bannerText": "Ćwicz umiejętności mówienia na prawdziwych przykładach"
+    "bannerText": "Ćwicz umiejętności mówienia na prawdziwych przykładach",
+    "modalTitle": "Ćwiczenia konwersacyjne",
+    "modalText": "Rozwijaj umiejętności komunikacyjne w prawdziwych dialogach! Możesz wybrać gotową odpowiedź z proponowanych, wpisać ją ręcznie z klawiatury lub po prostu powiedzieć na głos, naciskając przycisk mikrofonu."
   },
   "rankModal": {
     "title": "NOWA RANDA",
@@ -10249,5 +10251,8 @@
     "placeholder": "Szukaj języka...",
     "notfound": "Nic nie znaleziono",
     "further": "Kontynuuj"
+  },
+  "statistics": {
+    "title": "Twoje statystyki i postępy w nauce słówek oraz przechodzeniu poziomów tematycznych"
   }
 }

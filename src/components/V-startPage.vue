@@ -1,15 +1,15 @@
 <template>
   <div class="welcome-container">
-    <div class="ui-layout">
-      <div class="hero-wrap">
-        <div class="hero-clay">
-          <img src="../../assets/images/AuthIcon.svg" alt="Logo" class="hero-img">
-          <div class="skill-tag tag-purple">Sprechen</div>
-          <div class="skill-tag tag-cyan">Hören</div>
-          <div class="skill-tag tag-pink">Lesen</div>
-          <div class="skill-tag tag-amber">Schreiben</div>
-        </div>
-      </div>
+    <div class="ui-layout welcome-bg">
+<!--      <div class="hero-wrap">-->
+<!--        <div class="hero-clay">-->
+<!--          <img src="../../assets/images/AuthIcon.svg" alt="Logo" class="hero-img">-->
+<!--          <div class="skill-tag tag-purple">Sprechen</div>-->
+<!--          <div class="skill-tag tag-cyan">Hören</div>-->
+<!--          <div class="skill-tag tag-pink">Lesen</div>-->
+<!--          <div class="skill-tag tag-amber">Schreiben</div>-->
+<!--        </div>-->
+<!--      </div>-->
       <div class="text-content">
         <div class="game-title">
           <img src="../../assets/images/logoReview.webp" alt="logo">
@@ -20,16 +20,17 @@
 <!--          начни говорить уже сегодня.-->
 <!--        </p>-->
       </div>
-      <div class="cta-block">
-        <button @click="router.push('/language')" class="btn-emerald-3d">
-          Начать обучение
-        </button>
-      </div>
+    </div>
+    <div class="cta-block">
+      <button @click="router.push('/language')" class="btn-emerald-3d">
+        Начать обучение
+      </button>
     </div>
   </div>
 </template>
 
 <script setup>
+import Bg from '../../assets/images/bg_1.webp'
 const router = useRouter()
 </script>
 
@@ -50,6 +51,14 @@ const router = useRouter()
   justify-content: end;
   flex-grow: 1;
   padding: 10px;
+}
+
+.welcome-bg {
+  background-image: url("../../assets/images/bg_1.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--bg);
 }
 
 .hero-wrap {
@@ -147,7 +156,10 @@ const router = useRouter()
 
 .cta-block {
   width: 100%;
-  padding: 15px;
+  position: absolute;
+  bottom: 15px;
+  padding-bottom: env(safe-area-inset-bottom);
+
 }
 
 .btn-emerald-3d {

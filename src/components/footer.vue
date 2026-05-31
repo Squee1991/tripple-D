@@ -2,8 +2,7 @@
   <footer v-if="authStore.uid" class="footer" role="contentinfo">
     <div class="footer__container">
       <nav class="nav">
-        <div class="sliding-bg"
-             :style="{ transform: `translateX(${activeIndex * 100}%)`,  opacity: activeIndex === -1 ? 0 : 1 }">
+        <div class="sliding-bg" :style="{ transform: `translateX(${getTransformX(activeIndex)}%)`,   opacity: activeIndex === -1 ? 0 : 1 }">
         </div>
         <NuxtLink
             v-for="(item, index) in footerNav"
@@ -24,12 +23,21 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { userAuthStore } from "../../store/authStore.js";
-const { t } = useI18n();
+const { t , locale } = useI18n();
 import Home from '../../assets/images/app-nav-icons/home.svg'
 import Events from '../../assets/images/app-nav-icons/events.svg'
 import Game from '../../assets/images/app-nav-icons/game.svg'
 import Cabinet from '../../assets/images/app-nav-icons/cabinet.svg'
 import Study from '../../assets/images/app-nav-icons/study.svg'
+
+
+const getTransformX = (index) => {
+  if (index === -1) return 0;
+  if (locale.value === 'ar') {
+    return (footerNav.length - 1 - index) * 100;
+  }
+  return index * 100;
+};
 
 const authStore = userAuthStore()
 const route = useRoute()
@@ -55,7 +63,7 @@ const activeIndex = computed(() => {
   position: fixed;
   max-width: 1240px;
   margin: 0 auto;
-  bottom: 25px;
+  bottom: 27px;
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 20px);

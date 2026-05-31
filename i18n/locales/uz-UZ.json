@@ -10204,7 +10204,9 @@
   },
   "speakIndexPage": {
     "title": "Gaplashish amaliyoti",
-    "bannerText": "Haqiqiy misollar yordamida nutq ko'nikmalaringizni rivojlantiring"
+    "bannerText": "Haqiqiy misollar yordamida nutq ko'nikmalaringizni rivojlantiring",
+    "modalTitle": "Gaplashish amaliyoti",
+    "modalText": "Haqiqiy dialoglar orqali muloqot qobiliyatlaringizni rivojlantiring! Taklif etilgan tayyor javob variantlaridan birini tanlashingiz, uni klaviatura yordamida kiritishingiz yoki shunchaki mikrofon tugmasini bosib, ovoz chiqarib aytishingiz mumkin."
   },
   "rankModal": {
     "title": "YANGI DARAJA",
@@ -10231,5 +10233,8 @@
     "placeholder": "Tilni qidirish...",
     "notfound": "Hech narsa topilmadi",
     "further": "Davom etish"
+  },
+  "statistics": {
+    "title": "So'zlarni o'rganish va tematik bosqichlarni yakunlash bo'yicha statistikangiz va taraqqiyotingiz"
   }
 }
