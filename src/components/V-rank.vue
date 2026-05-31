@@ -68,6 +68,7 @@ import {useSeoMeta} from "#imports"
 import EducationHut from '../../assets/images/graduate-hat.svg'
 import VBanner from "~/src/components/V-banner.vue";
 
+
 const { t } = useI18n()
 const store = useRankUserStore()
 const authStore = userAuthStore()
