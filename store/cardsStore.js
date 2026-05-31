@@ -35,7 +35,6 @@ export const useCardsStore = defineStore('cardsStore', () => {
         type: c.type || 'articles',
     })
 
-    // ===== Stats =====
     const cardStatsDocRef = (uid) => doc(db, 'users', uid, 'cardStats', 'summary')
 
     const loadCreatedCount = async () => {
@@ -65,7 +64,7 @@ export const useCardsStore = defineStore('cardsStore', () => {
         )
     }
 
-        const loadPublicCards = async () => {
+    const loadPublicCards = async () => {
         const q = query(collection(db, 'cards'), where('isPublic', '==', true))
         const snapshot = await getDocs(q)
         cards.value = snapshot.docs.map((d) => normalizeCard({id: d.id, ...d.data()}))
@@ -104,7 +103,7 @@ export const useCardsStore = defineStore('cardsStore', () => {
         const cardRef = doc(db, 'cards', cardData.id)
         const {id, ...dataToUpdate} = cardData
 
-        // подстраховка: не даём потерять type
+
         if (!dataToUpdate.type) dataToUpdate.type = 'articles'
 
         await updateDoc(cardRef, dataToUpdate)
@@ -119,9 +118,7 @@ export const useCardsStore = defineStore('cardsStore', () => {
         }
     }
 
-    // ===== Migrations =====
 
-    // Перенос старой статистики (как у тебя было)
     const migrateCardStats = async () => {
         const uid = getUserId()
         if (!uid) return
@@ -134,7 +131,7 @@ export const useCardsStore = defineStore('cardsStore', () => {
         }
     }
 
-    // (Опционально) Проставить type='articles' всем старым карточкам без type
+
     const migrateCardTypes = async () => {
         const q = query(collection(db, 'cards'), where('isPublic', '==', true))
         const snapshot = await getDocs(q)

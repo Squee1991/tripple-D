@@ -123,8 +123,9 @@
             >
               <div class="card-face card-front" :class="getTopicColorClass(card.topic)">
                 <div v-if="canEdit(card)" class="card-actions">
-                  <button @click.stop="initiateEdit(card)" class="action-btn edit-btn" title="edit">✏️</button>
-                  <button @click.stop="initiateDelete(card)" class="action-btn delete-btn" title="Delete">🗑️</button>
+                  <button @click.stop="initiateEdit(card)" class="card-action-btn edit-btn" title="edit">✏️</button>
+                  <button @click.stop="initiateDelete(card)" class="card-action-btn delete-btn" title="Delete">🗑️
+                  </button>
                 </div>
 
                 <div class="card-content">
@@ -203,168 +204,100 @@
       </div>
 
       <!-- ====================== SETUP STAGE ====================== -->
-      <div v-if="pageStage === 'setup'" class="setup-layout">
-        <div class="setup-panel">
-          <div class="setup-card">
-            <h2 class="title">Выбери режим обучения</h2>
+      <div v-if="pageStage === 'setup'" class="word-select-screen">
+        <div class="word-select-card">
+          <h2 class="title">Выбери слова для изучения</h2>
 
-            <div class="setup-section">
-              <div class="setup-step">Шаг 1</div>
-              <div class="setup-label">Способ изучения</div>
+          <!-- MODE -->
+          <div class="quick-mode-switch">
+            <button
+                class="quick-mode-btn"
+                :class="{ active: pictureView === 'learn' }"
+                @click="setPictureSubmode('learn')"
+            >
+              <span>📘</span>
+              <b>Учить</b>
+            </button>
 
-              <div class="game-mode-grid">
-                <button
-                    class="game-mode-card"
-                    :class="{ active: pictureView === 'learn' }"
-                    @click="setPictureSubmode('learn')"
-                >
-                  <span class="game-mode-card__icon">📘</span>
-                  <span class="game-mode-card__title">Учить</span>
-                  <span class="game-mode-card__text">
-                Открывай карточки, слушай слово и отмечай, знаешь его или нет
-              </span>
-                </button>
-
-                <button
-                    class="game-mode-card"
-                    :class="{ active: pictureView === 'test' }"
-                    @click="setPictureSubmode('test')"
-                >
-                  <span class="game-mode-card__icon">🧠</span>
-                  <span class="game-mode-card__title">Тест</span>
-                  <span class="game-mode-card__text">
-                Проверка знаний: смотри на картинку и выбирай правильный ответ
-              </span>
-                </button>
-              </div>
-            </div>
-
-            <div class="setup-section">
-              <div class="setup-step">Шаг 2</div>
-              <div class="setup-label">Темы</div>
-
-              <div class="topic-level-grid">
-                <button
-                    v-for="topic in topicStats"
-                    :key="topic.key"
-                    type="button"
-                    class="topic-level-card"
-                    :class="{
-                active: pictureTopic === topic.key,
-                locked: !topic.unlocked,
-                completed: topic.completed
-              }"
-                    :disabled="!topic.unlocked"
-                    @click="selectPictureTopic(topic.key)"
-                >
-                  <div class="topic-level-card__top">
-                    <div class="topic-level-card__icon">{{ topic.icon }}</div>
-                    <div class="topic-level-card__badge">
-                      Lv. {{ topic.order }}
-                    </div>
-                  </div>
-
-                  <div class="topic-level-card__name">
-                    {{ t(topic.titleKey) }}
-                  </div>
-
-                  <div class="topic-level-card__meta">
-                    <span v-if="topic.unlocked">{{ topic.knownCount }}/{{ topic.total }}</span>
-                    <span v-else>Закрыто</span>
-                  </div>
-
-                  <div class="topic-level-card__bar" v-if="topic.unlocked">
-                    <div
-                        class="topic-level-card__bar-fill"
-                        :style="{ width: `${topic.percent}%` }"
-                    />
-                  </div>
-                </button>
-              </div>
-            </div>
-
-            <div v-if="currentTopicStat" class="selected-topic-panel">
-              <div class="setup-step">Шаг 3</div>
-
-              <div class="selected-topic-panel__top">
-                <div class="selected-topic-panel__icon">{{ currentTopicStat.icon }}</div>
-                <div>
-                  <div class="selected-topic-panel__title">{{ t(currentTopicStat.titleKey) }}</div>
-                  <div class="selected-topic-panel__subtitle">
-                    Level {{ currentTopicStat.order }}
-                  </div>
-                </div>
-              </div>
-
-              <div class="selected-topic-stats">
-                <div class="selected-topic-stat">
-                  <span class="selected-topic-stat__label">Карточек</span>
-                  <span class="selected-topic-stat__value">{{ currentTopicStat.total }}</span>
-                </div>
-                <div class="selected-topic-stat">
-                  <span class="selected-topic-stat__label">Изучено</span>
-                  <span class="selected-topic-stat__value">{{ currentTopicStat.knownCount }}</span>
-                </div>
-                <div class="selected-topic-stat">
-                  <span class="selected-topic-stat__label">Прогресс</span>
-                  <span class="selected-topic-stat__value">{{ currentTopicStat.percent }}%</span>
-                </div>
-              </div>
-
-              <div class="selected-topic-panel__status">
-                <span v-if="currentTopicStat.completed">✅ Пройдено</span>
-                <span v-else-if="!currentTopicStat.unlocked">🔒 Закрыто</span>
-                <span v-else>🟢 Открыто</span>
-              </div>
-
-              <button
-                  class="btn btn-primary launch-btn"
-                  @click="startSession"
-                  :disabled="!canStartPictureSession"
-              >
-                {{ canStartPictureSession ? 'Начать' : 'Недоступно' }}
-              </button>
-
-              <p v-if="!canStartPictureSession" class="launch-hint">
-                <span v-if="!currentTopicStat?.unlocked">Сначала пройди предыдущую тему</span>
-                <span v-else-if="!currentTopicStat?.total">В этой теме пока нет карточек</span>
-              </p>
-            </div>
+            <button
+                class="quick-mode-btn"
+                :class="{ active: pictureView === 'test' }"
+                @click="setPictureSubmode('test')"
+            >
+              <span>🧠</span>
+              <b>Тест</b>
+            </button>
           </div>
-        </div>
 
-        <div class="preview-panel">
-          <div class="preview-card">
-            <h2 class="title preview-title">Предпросмотр</h2>
+          <!-- SEARCH -->
+          <div class="word-search-box">
+            <input
+                v-model="pictureSearchQuery"
+                class="input"
+                type="text"
+                placeholder="Найти слово..."
+            />
+          </div>
 
-            <div class="preview-mode-line">
-              <span class="preview-pill">{{ pictureViewLabel }}</span>
-              <span class="preview-pill muted">
-            {{ currentTopicStat ? t(currentTopicStat.titleKey) : 'Тема' }}
-          </span>
-              <span v-if="currentTopicStat" class="preview-pill muted">
-            {{ currentTopicStat.total }} карточек
-          </span>
+          <!-- TOPICS -->
+          <div class="free-topic-grid">
+            <button
+                v-for="topic in topicStats"
+                :key="topic.key"
+                type="button"
+                class="free-topic-card"
+                :class="{
+          active: pictureTopic === topic.key,
+          completed: topic.completed
+        }"
+                @click="selectPictureTopic(topic.key)"
+            >
+              <div class="free-topic-card__icon">{{ topic.icon }}</div>
+
+              <div class="free-topic-card__content">
+                <div class="free-topic-card__title">
+                  {{ t(topic.titleKey) }}
+                </div>
+
+                <div class="free-topic-card__meta">
+                  {{ topic.knownCount }}/{{ topic.total }} слов
+                </div>
+
+                <div class="free-topic-card__bar">
+                  <div
+                      class="free-topic-card__bar-fill"
+                      :style="{ width: `${topic.percent}%` }"
+                  />
+                </div>
+              </div>
+            </button>
+          </div>
+
+          <!-- SELECTED TOPIC -->
+          <div v-if="currentTopicStat" class="selected-free-topic">
+            <div class="selected-free-topic__top">
+              <div class="selected-free-topic__icon">
+                {{ currentTopicStat.icon }}
+              </div>
+
+              <div>
+                <div class="selected-free-topic__title">
+                  {{ t(currentTopicStat.titleKey) }}
+                </div>
+
+                <div class="selected-free-topic__subtitle">
+                  {{ currentTopicStat.knownCount }}/{{ currentTopicStat.total }} слов изучено
+                </div>
+              </div>
             </div>
 
-            <div class="preview-demo-card">
-              <img
-                  v-if="previewCard"
-                  class="preview-demo-card__image"
-                  :src="getWordImageUrl(previewCard.imageKey)"
-                  :alt="previewCard.deWord || 'preview'"
-              />
-              <div v-else class="preview-demo-card__empty">Нет карточек</div>
-            </div>
-
-            <div class="preview-description">
-              <template v-if="pictureView === 'learn'">
-                Открой карточку, послушай слово и отметь, знаешь его или нет.
-              </template>
-              <template v-else>
-                Посмотри на картинку и выбери правильное немецкое слово из вариантов.
-              </template>
-            </div>
+            <button
+                class="btn btn-primary launch-btn"
+                @click="startSession"
+                :disabled="!canStartPictureSession"
+            >
+              {{ canStartPictureSession ? `Начать: ${pictureViewLabel}` : 'Нет карточек' }}
+            </button>
           </div>
         </div>
       </div>
@@ -406,8 +339,7 @@
                 <div class="learn-flip-card" :class="{ flipped: learnFlipped }">
                   <div class="learn-flip-face learn-flip-front">
                     <img :src="getWordImageUrl(currentLearnCard.imageKey)" class="main-img"/>
-                    <div class="hint-tap">Нажми, чтобы увидеть слово</div>
-                  </div>
+                    </div>
 
                   <div class="learn-flip-face learn-flip-back">
                     <div class="word-info">
@@ -587,7 +519,7 @@ const themenMap = {
   Other: 'cardThemen.Other',
 }
 const canStartPictureSession = computed(() => {
-  return !!currentTopicStat.value?.unlocked && !!currentTopicStat.value?.total
+  return !!currentTopicStat.value?.total
 })
 
 const sessionCurrentStep = computed(() => {
@@ -602,7 +534,7 @@ const sessionTotalSteps = computed(() => {
       : testQueue.value.length
 })
 const currentTopicStat = computed(() => {
-  return topicStats.value.find((topic) => topic.key === pictureTopic.value) || topicStats.value.find((topic) => topic.unlocked)
+  return topicStats.value.find((topic) => topic.key === pictureTopic.value) || topicStats.value[0] || null
 })
 
 
@@ -632,7 +564,7 @@ const setMode = (mode) => {
   } else {
     pageStage.value = 'setup'
     if (!pictureTopic.value) {
-      pictureTopic.value = firstUnlockedTopic.value
+      pictureTopic.value = topicStats.value[0]?.key || ''
     }
     setPictureSubmode('learn')
   }
@@ -651,12 +583,9 @@ const pictureViewLabel = computed(() => {
   return pictureView.value === 'learn' ? 'Учить' : 'Тест'
 })
 
-const previewCard = computed(() => {
-  return basePictureList.value[0] || null
-})
 const startSession = () => {
   if (!pictureTopic.value) {
-    pictureTopic.value = firstUnlockedTopic.value
+    pictureTopic.value = topicStats.value[0]?.key || ''
   }
 
   if (pictureView.value === 'learn') {
@@ -685,13 +614,9 @@ const select = (key) => {
 // picture topic select
 const pictureTopic = ref('')
 const selectPictureTopic = (key) => {
-  if (key && !isTopicUnlocked(key)) return
-
   pictureTopic.value = key
   open.value = false
 }
-
-
 const topicColors = ['color-1', 'color-2', 'color-3', 'color-4', 'color-5']
 const getTopicColorClass = (topic) => {
   if (!topic) return ''
@@ -700,8 +625,6 @@ const getTopicColorClass = (topic) => {
   const index = Math.abs(hash % topicColors.length)
   return topicColors[index]
 }
-
-
 const editingCardId = ref(null)
 
 const defaultArticleFormState = {topic: '', level: '', sentence: '', translation: ''}
@@ -855,18 +778,31 @@ const makeGuess = () => {
   })
 }
 
-// ====== Permission for edit/delete ======
 const uid = computed(() => getAuth().currentUser?.uid || null)
 const canEdit = (card) => !!card?.ownerId && !!uid.value && card.ownerId === uid.value
 
-// =======================================================
-// ===================== PICTURES =========================
-// =======================================================
 
 // ✅ base picture list (ready only, by topic)
+const pictureSearchQuery = ref('')
+
 const basePictureList = computed(() => {
   let list = picturePack.filter((c) => c.isReady)
-  if (pictureTopic.value) list = list.filter((c) => c.topic === pictureTopic.value)
+
+  if (pictureTopic.value) {
+    list = list.filter((c) => c.topic === pictureTopic.value)
+  }
+
+  const q = pictureSearchQuery.value.trim().toLowerCase()
+
+  if (q) {
+    list = list.filter((c) => {
+      return (
+          String(c.deWord || '').toLowerCase().includes(q) ||
+          String(c.imageKey || '').toLowerCase().includes(q)
+      )
+    })
+  }
+
   return list
 })
 
@@ -923,17 +859,8 @@ const getKnownMapByTopic = (topic) => {
 const getCardsByTopic = (topic) => {
   return picturePack.filter((card) => card.topic === topic && card.isReady)
 }
-
-const isTopicCompleted = (topic) => {
-  const cards = getCardsByTopic(topic)
-  if (!cards.length) return false
-
-  const knownMap = getKnownMapByTopic(topic)
-  return cards.every((card) => knownMap[card.imageKey])
-}
-
 const topicStats = computed(() => {
-  return pictureTopics.map((topicMeta, index) => {
+  return pictureTopics.map((topicMeta) => {
     const cards = getCardsByTopic(topicMeta.key)
     const total = cards.length
     const knownMap = getKnownMapByTopic(topicMeta.key)
@@ -941,28 +868,15 @@ const topicStats = computed(() => {
     const percent = total ? Math.round((knownCount / total) * 100) : 0
     const completed = total > 0 && knownCount === total
 
-    let unlocked = index === 0
-
-    if (index > 0) {
-      const prevTopic = pictureTopics[index - 1]
-      unlocked = isTopicCompleted(prevTopic.key)
-    }
-
     return {
       ...topicMeta,
       total,
       knownCount,
       percent,
       completed,
-      unlocked,
     }
   })
 })
-
-const isTopicUnlocked = (topicKey) => {
-  const stat = topicStats.value.find((t) => t.key === topicKey)
-  return !!stat?.unlocked
-}
 
 const learnQueue = ref([])
 const learnIndex = ref(0)
@@ -998,14 +912,11 @@ const getLearnUnknownList = () => {
   const byKey = new Map(basePictureList.value.map((c) => [c.imageKey, c]))
   return keys.map((k) => byKey.get(k)).filter(Boolean)
 }
-const firstUnlockedTopic = computed(() => {
-  return topicStats.value.find((t) => t.unlocked && t.total > 0)?.key || ''
-})
 const startLearn = () => {
   setPictureSubmode('learn')
 
   if (!pictureTopic.value) {
-    pictureTopic.value = firstUnlockedTopic.value
+    pictureTopic.value = topicStats.value[0]?.key || ''
   }
 
   learnQueue.value = shuffleArray(basePictureList.value)
@@ -1018,23 +929,6 @@ const startLearn = () => {
   learnFinishModalType.value = 'success'
 }
 
-const learnNext = () => {
-  if (learnIndex.value < learnQueue.value.length - 1) {
-    learnIndex.value++
-    learnFlipped.value = false
-  }
-}
-
-const learnPrev = () => {
-  if (learnIndex.value > 0) {
-    learnIndex.value--
-    learnFlipped.value = false
-  }
-}
-
-// answer + finish behaviour:
-// - at end: if no errors -> success modal
-// - if errors -> errors modal with "repeat mistakes"
 const learnAnswer = (known) => {
   const card = currentLearnCard.value
   if (!card) return
@@ -1142,7 +1036,7 @@ const startTest = () => {
   setPictureSubmode('test')
 
   if (!pictureTopic.value) {
-    pictureTopic.value = firstUnlockedTopic.value
+    pictureTopic.value = topicStats.value[0]?.key || ''
   }
 
   let list = testUseWrongOnly.value ? getWrongListFromMap() : basePictureList.value
@@ -1236,9 +1130,11 @@ const nextTest = () => {
 <style scoped>
 .cards-layout {
   background-color: #fef8e4;
-  min-height: 100vh;
-  padding: 1.5rem;
+  min-height: 100dvh;
+  padding: 1rem;
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom));
   font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
 }
 
 .title {
@@ -1350,7 +1246,7 @@ const nextTest = () => {
   padding: 1.5rem;
   border-radius: 24px;
   border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0 #1e1e1e;
+  box-shadow: 4px 4px 0 #1e1e1e;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -1440,15 +1336,6 @@ const nextTest = () => {
   font-weight: 700;
 }
 
-.custom-select__option.locked {
-  opacity: 0.55;
-  cursor: not-allowed;
-}
-
-.custom-select__option.locked:hover {
-  background-color: transparent;
-}
-
 .search-bar {
   display: flex;
   gap: 1rem;
@@ -1494,7 +1381,7 @@ const nextTest = () => {
   flex-direction: column;
   border-radius: 24px;
   border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0 #1e1e1e;
+  box-shadow: 4px 4px 0 #1e1e1e;
 }
 
 .card-back {
@@ -1535,23 +1422,6 @@ const nextTest = () => {
 
 .card-scene:hover .card-actions {
   opacity: 1;
-}
-
-.action-btn {
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 2px solid #1e1e1e;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: #1e1e1e;
-}
-
-.action-btn:hover {
-  background-color: #ffffff;
 }
 
 .card-content {
@@ -1605,6 +1475,23 @@ const nextTest = () => {
   padding: 1.5rem;
   overflow-y: auto;
   max-height: 100%;
+}
+
+.card-action-btn {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid #1e1e1e;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #1e1e1e;
+}
+
+.card-action-btn:hover {
+  background-color: #ffffff;
 }
 
 .modal-sentence {
@@ -1702,16 +1589,6 @@ const nextTest = () => {
   opacity: 0.7;
 }
 
-
-.test-result .ok {
-  color: #166534;
-}
-
-.test-result .bad {
-  color: #b91c1c;
-}
-
-
 .learn-flip-scene {
   width: 100%;
   display: flex;
@@ -1723,12 +1600,14 @@ const nextTest = () => {
 }
 
 .learn-flip-card {
-  width: 200px;
-  height: 200px;
+  width: min(92vw, 420px);
+  min-height: min(58dvh, 420px);
+  height: auto;
+  aspect-ratio: 1 / 1;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.6s;
-  border-radius: 22px;
+  border-radius: 28px;
 }
 
 .learn-flip-card.flipped {
@@ -1739,23 +1618,27 @@ const nextTest = () => {
   position: absolute;
   inset: 0;
   backface-visibility: hidden;
-  border-radius: 22px;
+  border-radius: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.learn-flip-front {
-  background: transparent;
+.learn-flip-front,
+.learn-flip-back {
+  background: #fff;
+  border: 3px solid #1e1e1e;
+  box-shadow: 4px 4px 0 #1e1e1e;
+  padding: 16px;
+  flex-direction: column;
+  gap: 12px;
 }
 
+
 .learn-flip-back {
-  display: flex;
   flex-direction: column;
   transform: rotateY(180deg);
-  background: #fff;
-  border: 3px solid rgba(0, 0, 0, 0.1);
-  padding: 14px;
+  padding: 18px;
 }
 
 
@@ -1775,7 +1658,7 @@ const nextTest = () => {
   background: #fff;
   border: 3px solid #1e1e1e;
   border-radius: 24px;
-  box-shadow: 8px 8px 0 #1e1e1e;
+  box-shadow: 4px 4px 0 #1e1e1e;
   padding: 18px;
   text-align: center;
 }
@@ -1801,14 +1684,56 @@ const nextTest = () => {
   flex: 1;
 }
 
+.test-card-shell {
+  width: min(92vw, 420px);
+  min-height: 260px;
+  max-height: 42dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 3px solid #1e1e1e;
+  border-radius: 28px;
+  box-shadow: 4px 4px 0 #1e1e1e;
+  padding: 16px;
+}
+
+.test-img-preview {
+  width: 100%;
+  height: 100%;
+  max-height: 38dvh;
+  object-fit: contain;
+}
+
+.test-options-list {
+  width: 100%;
+  max-width: 420px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.test-opt-btn {
+  min-height: 52px;
+  border: 2px solid #1e1e1e;
+  border-radius: 16px;
+  background: #fff;
+  font-weight: 900;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #1e1e1e;
+}
 
 .btn:focus-visible,
 .mode-btn:focus-visible,
-.submode-btn:focus-visible,
+.quick-mode-btn:focus-visible,
+.free-topic-card:focus-visible,
+.test-opt-btn:focus-visible,
 .custom-select__trigger:focus-visible,
-.test-option:focus-visible,
 .back-btn:focus-visible,
-.action-btn:focus-visible,
+.card-action-btn:focus-visible,
+.session-answer-btn:focus-visible,
 .card-close-btn:focus-visible {
   outline: 3px solid #fca13a;
   outline-offset: 3px;
@@ -1829,13 +1754,11 @@ const nextTest = () => {
     padding-right: 0;
   }
 
-  .pack-info,
+
   .form,
-  .learn-card,
-  .test-card,
   .card-face,
   .modal-window {
-    box-shadow: 6px 6px 0 #1e1e1e;
+    box-shadow: 4px 4px 0 #1e1e1e;
   }
 }
 
@@ -1850,7 +1773,6 @@ const nextTest = () => {
 
   .search-bar,
   .form-actions,
-  .learn-actions,
   .modal-actions {
     flex-direction: column;
   }
@@ -1863,159 +1785,12 @@ const nextTest = () => {
     width: 100%;
   }
 
-  .learn-image {
-    width: 140px;
-    height: 140px;
-  }
-
-  .learn-flip-card {
-    width: 200px;
-    height: 200px;
-  }
 
   .card-topic {
     font-size: 1.5rem;
   }
 }
 
-.topic-rail {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  padding: 4px 2px 10px;
-  margin-top: 14px;
-  scrollbar-width: thin;
-}
-
-.topic-chip {
-  flex: 0 0 auto;
-  width: 72px;
-  min-height: 76px;
-  border: 3px solid #1e1e1e;
-  border-radius: 18px;
-  background: #fff;
-  box-shadow: 4px 4px 0 #1e1e1e;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  cursor: pointer;
-  transition: all 0.2s;
-  padding: 8px 6px;
-}
-
-.topic-chip:hover:not(:disabled) {
-  transform: translate(1px, 1px);
-  box-shadow: 3px 3px 0 #1e1e1e;
-}
-
-.topic-chip:disabled {
-  opacity: 1;
-  -webkit-text-fill-color: inherit;
-}
-
-.topic-chip.locked {
-  opacity: 0.45;
-  background: #f3f4f6;
-  cursor: not-allowed;
-}
-
-.topic-chip.completed {
-  background: #dcfce7;
-}
-
-.topic-chip.active {
-  background: #fef3c7;
-  outline: 3px solid #fca13a;
-  outline-offset: 2px;
-}
-
-.topic-chip.active.completed {
-  background: #bbf7d0;
-}
-
-.topic-chip__icon {
-  font-size: 1.3rem;
-  line-height: 1;
-}
-
-.topic-chip__level {
-  font-family: 'Fredoka One', cursive;
-  font-size: 0.78rem;
-  color: #1e1e1e;
-}
-
-.topic-spotlight {
-  margin-top: 12px;
-  background: #fffdf5;
-  border: 3px solid #1e1e1e;
-  border-radius: 20px;
-  box-shadow: 5px 5px 0 #1e1e1e;
-  padding: 14px;
-}
-
-.topic-spotlight__top {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.topic-spotlight__icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  background: #fef3c7;
-  border: 3px solid #1e1e1e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  flex-shrink: 0;
-}
-
-.topic-spotlight__name {
-  font-weight: 900;
-  font-size: 1rem;
-  color: #1e1e1e;
-}
-
-.topic-spotlight__level {
-  margin-top: 2px;
-  font-size: 0.9rem;
-  font-family: 'Fredoka One', cursive;
-  color: #444;
-}
-
-.topic-spotlight__progress {
-  margin-top: 12px;
-  font-size: 0.92rem;
-  font-weight: 800;
-  color: #1e1e1e;
-}
-
-.topic-spotlight__bar {
-  width: 100%;
-  height: 12px;
-  margin-top: 8px;
-  border-radius: 999px;
-  border: 2px solid rgba(0, 0, 0, 0.12);
-  background: rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-}
-
-.topic-spotlight__bar-fill {
-  height: 100%;
-  border-radius: 999px;
-  background: #4ade80;
-  transition: width 0.25s ease;
-}
-
-.topic-spotlight__status {
-  margin-top: 10px;
-  font-size: 0.85rem;
-  font-weight: 800;
-}
 
 .picture-page {
   max-width: 1400px;
@@ -2027,342 +1802,12 @@ const nextTest = () => {
   margin-bottom: 1.25rem;
 }
 
-.setup-layout {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 24px;
-  max-width: 1000px; /* Ограничение для десктопа */
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.setup-card,
-.preview-card,
-.session-info-card {
-  background: #ffffff;
-  border: 3px solid #1e1e1e;
-  border-radius: 28px;
-  box-shadow: 8px 8px 0 #1e1e1e;
-  padding: 1.5rem;
-}
-
-.setup-section + .setup-section {
-  margin-top: 1.5rem;
-}
-
-.setup-label {
-  font-family: 'Fredoka One', cursive;
-  font-size: 1rem;
-  color: #1e1e1e;
-  margin-bottom: 0.85rem;
-}
-
-.game-mode-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.game-mode-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.45rem;
-  text-align: left;
-  min-height: 150px;
-  padding: 1rem;
-  background: #fffdf5;
-  border: 3px solid #1e1e1e;
-  border-radius: 22px;
-  box-shadow: 5px 5px 0 #1e1e1e;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.game-mode-card:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 3px 3px 0 #1e1e1e;
-}
-
-.game-mode-card.active {
-  background: #fef3c7;
-  outline: 3px solid #fca13a;
-  outline-offset: 2px;
-}
-
-.game-mode-card__icon {
-  font-size: 1.8rem;
-  line-height: 1;
-}
-
-.game-mode-card__title {
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.15rem;
-  color: #1e1e1e;
-}
-
-.game-mode-card__text {
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: #444;
-  line-height: 1.35;
-}
-
-.topic-level-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.topic-level-card {
-  background: #fffdf5;
-  border: 3px solid #1e1e1e;
-  border-radius: 22px;
-  box-shadow: 5px 5px 0 #1e1e1e;
-  padding: 1rem;
-  cursor: pointer;
-  transition: all 0.2s;
-  text-align: left;
-}
-
-.topic-level-card:hover:not(:disabled) {
-  transform: translate(2px, 2px);
-  box-shadow: 3px 3px 0 #1e1e1e;
-}
-
-.topic-level-card.locked {
-  opacity: 0.5;
-  background: #f3f4f6;
-  cursor: not-allowed;
-}
-
-.topic-level-card.active {
-  background: #fef3c7;
-  outline: 3px solid #fca13a;
-  outline-offset: 2px;
-}
-
-.topic-level-card.completed {
-  background: #dcfce7;
-}
-
-.topic-level-card__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.topic-level-card__icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  border: 3px solid #1e1e1e;
-  background: #fff7d6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-}
-
-.topic-level-card__badge {
-  font-family: 'Fredoka One', cursive;
-  font-size: 0.9rem;
-  color: #1e1e1e;
-}
-
-.topic-level-card__name {
-  font-weight: 900;
-  font-size: 1rem;
-  color: #1e1e1e;
-  margin-bottom: 0.5rem;
-}
-
-.topic-level-card__meta {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #444;
-  margin-bottom: 0.6rem;
-}
-
-.topic-level-card__bar {
-  width: 100%;
-  height: 10px;
-  border-radius: 999px;
-  overflow: hidden;
-  background: rgba(0, 0, 0, 0.08);
-  border: 2px solid rgba(0, 0, 0, 0.1);
-}
-
-.topic-level-card__bar-fill {
-  height: 100%;
-  background: #4ade80;
-  border-radius: 999px;
-  transition: width 0.25s ease;
-}
-
-.selected-topic-panel {
-  margin-top: 1.5rem;
-  background: #fffdf5;
-  border: 3px solid #1e1e1e;
-  border-radius: 24px;
-  box-shadow: 5px 5px 0 #1e1e1e;
-  padding: 1rem;
-}
-
-.selected-topic-panel__top {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  margin-bottom: 1rem;
-}
-
-.selected-topic-panel__icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
-  border: 3px solid #1e1e1e;
-  background: #fef3c7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  flex-shrink: 0;
-}
-
-.selected-topic-panel__title {
-  font-weight: 900;
-  color: #1e1e1e;
-  font-size: 1.05rem;
-}
-
-.selected-topic-panel__subtitle {
-  font-family: 'Fredoka One', cursive;
-  color: #555;
-  margin-top: 0.15rem;
-  font-size: 0.9rem;
-}
-
-.selected-topic-stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-}
-
-.selected-topic-stat {
-  background: #fff;
-  border: 2px solid #1e1e1e;
-  border-radius: 16px;
-  padding: 0.75rem;
-  text-align: center;
-}
-
-.selected-topic-stat__label {
-  display: block;
-  font-size: 0.8rem;
-  color: #666;
-  font-weight: 700;
-  margin-bottom: 0.25rem;
-}
-
-.selected-topic-stat__value {
-  display: block;
-  font-family: 'Fredoka One', cursive;
-  font-size: 1rem;
-  color: #1e1e1e;
-}
-
-.selected-topic-panel__status {
-  font-weight: 800;
-  margin-bottom: 1rem;
-}
-
 .launch-btn {
   width: 100%;
   min-height: 56px;
   font-size: 1.2rem;
 }
 
-.preview-panel {
-  min-width: 0;
-}
-
-.preview-title {
-  margin-bottom: 1rem;
-}
-
-.preview-mode-line {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.preview-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.45rem 0.8rem;
-  border: 2px solid #1e1e1e;
-  border-radius: 999px;
-  background: #fef3c7;
-  font-weight: 800;
-}
-
-.preview-pill.muted {
-  background: #f3f4f6;
-}
-
-.preview-demo-card {
-  min-height: 340px;
-  border: 3px solid #1e1e1e;
-  border-radius: 28px;
-  background: linear-gradient(180deg, #fffdf8 0%, #fef8e4 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.04);
-  padding: 1rem;
-}
-
-.preview-demo-card__image {
-  width: 240px;
-  height: 240px;
-  object-fit: contain;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 24px;
-  padding: 1rem;
-  border: 3px solid rgba(0, 0, 0, 0.08);
-}
-
-.preview-demo-card__empty {
-  font-weight: 800;
-  opacity: 0.6;
-}
-
-.preview-description {
-  margin-top: 1rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 700;
-  color: #444;
-}
-.setup-step {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.55rem;
-  padding: 0.32rem 0.72rem;
-  border-radius: 999px;
-  border: 2px solid #1e1e1e;
-  background: #fff;
-  font-size: 0.8rem;
-  font-weight: 800;
-  color: #1e1e1e;
-}
 .launch-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
@@ -2370,170 +1815,119 @@ const nextTest = () => {
   box-shadow: 4px 4px 0 #1e1e1e;
 }
 
-.launch-hint {
-  margin-top: 0.7rem;
-  text-align: center;
-  font-size: 0.92rem;
-  font-weight: 700;
-  color: #666;
-}
-.session-layout {
-  display: grid;
-  grid-template-columns: minmax(280px, 360px) 1fr;
-  gap: 2rem;
-  align-items: start;
-}
-
-.session-sidebar {
-  position: sticky;
-  top: 1.5rem;
-}
-
-.session-info-card__top {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.session-topic {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.session-topic__icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
-  background: #fef3c7;
-  border: 3px solid #1e1e1e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-}
-
-.session-topic__name {
-  font-weight: 900;
-  font-size: 1.05rem;
-}
-
-.session-topic__mode {
-  font-family: 'Fredoka One', cursive;
-  color: #666;
-  font-size: 0.9rem;
-}
-
-.exit-btn {
-  width: 100%;
-}
-
-.session-progress__label {
-  font-weight: 800;
-  margin-bottom: 0.65rem;
-}
-
-.session-progress__bar {
-  width: 100%;
-  height: 12px;
-  border-radius: 999px;
-  overflow: hidden;
-  background: rgba(0, 0, 0, 0.08);
-  border: 2px solid rgba(0, 0, 0, 0.1);
-}
-
-.session-progress__fill {
-  height: 100%;
-  background: #4ade80;
-  border-radius: 999px;
-  transition: width 0.25s ease;
-}
-
-.session-errors {
-  margin-top: 1rem;
-  font-weight: 800;
-  color: #b91c1c;
-}
-
-.session-main {
-  min-width: 0;
-}
-
-@media (max-width: 1100px) {
-  .setup-layout,
-  .session-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .session-sidebar {
-    position: static;
-  }
-}
-
-@media (max-width: 700px) {
-  .game-mode-grid,
-  .topic-level-grid,
-  .selected-topic-stats {
-    grid-template-columns: 1fr;
-  }
-
-  .preview-demo-card {
-    min-height: 260px;
-  }
-
-  .preview-demo-card__image {
-    width: 180px;
-    height: 180px;
-  }
-}
-
-@media (max-width: 640px) {
-  .topic-chip {
-    width: 64px;
-    min-height: 70px;
-    border-radius: 16px;
-  }
-
-  .topic-chip__icon {
-    font-size: 1.15rem;
-  }
-
-  .topic-chip__level {
-    font-size: 0.72rem;
-  }
-
-  .topic-spotlight {
-    padding: 12px;
-  }
-
-  .topic-spotlight__icon {
-    width: 46px;
-    height: 46px;
-    font-size: 1.3rem;
-  }
-
-  .topic-spotlight__name {
-    font-size: 0.95rem;
-  }
-}
-
 .session-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  max-width: 600px; /* Важно: ограничиваем ширину, чтобы не растягивалось */
+  min-height: 100dvh;
+  max-width: 600px;
   margin: 0 auto;
   background: #f8fafc;
+  overflow: hidden;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .session-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 0.75rem;
+  padding-top: calc(0.75rem + env(safe-area-inset-top));
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.session-header-center {
+  min-width: 0;
+}
+
+.session-header-title {
+  display: block;
+  font-weight: 900;
+  font-size: 0.95rem;
+  color: #1e1e1e;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.session-header-subline {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.session-mode-badge,
+.session-step-badge,
+.error-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #fef3c7;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.error-badge {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.neutral-badge {
+  background: #f3f4f6;
+  color: #444;
+}
+
+.session-answer-btn {
+  min-width: 0;
+  width: 100%;
+  min-height: 56px;
+  height: 56px;
+  border: 2px solid #1e1e1e;
+  border-radius: 18px;
+  font-size: 1rem;
+  font-weight: 900;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #1e1e1e;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.session-answer-btn:active {
+  transform: scale(0.96);
+}
+
+.session-answer-btn--wrong {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.session-answer-btn--right {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.session-answer-btn__icon {
+  font-size: 1.3rem;
+}
+
+.session-answer-btn__label {
+  font-size: 1rem;
+}
+
+.session-content {
+  flex: 1;
+  display: flex;
+  min-height: 0;
 }
 
 .mini-progress-bg {
@@ -2552,66 +1946,264 @@ const nextTest = () => {
 
 .focused-card-wrapper {
   flex: 1;
+  min-height: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
+  padding: 16px;
+  padding-bottom: calc(96px + env(safe-area-inset-bottom));
+  box-sizing: border-box;
 }
 
 .learn-flip-scene {
   width: 100%;
-  aspect-ratio: 1 / 1; /* Квадратная карточка */
+  max-width: 420px;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   perspective: 1000px;
   cursor: pointer;
+  user-select: none;
+}
+
+.hint-tap {
+  max-width: 100%;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 .main-img {
   width: 100%;
-  height: 100%;
-  object-fit: contain; /* Картинка не обрезается и не тянется */
+  max-width: 260px;
+  max-height: 260px;
+  object-fit: contain;
   border-radius: 20px;
 }
 
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  border: 2px solid #1e1e1e;
+  border-radius: 14px;
+  background: #fff;
+  font-weight: 900;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.exit-icon-btn:active {
+  transform: scale(0.96);
+}
+
 .action-footer {
-  display: flex;
-  gap: 40px;
-  margin-top: auto;
-  padding-bottom: 30px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  background: rgba(254, 248, 228, 0.96);
+  backdrop-filter: blur(10px);
+  border-top: 2px solid rgba(30, 30, 30, 0.12);
 }
 
-.action-btn {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: none;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-}
-
-.action-btn:active {
-  transform: scale(0.9);
-}
-
-.circle-red {
-  background: #fee2e2;
-  color: #ef4444;
-}
-
-.circle-green {
-  background: #dcfce7;
-  color: #22c55e;
-}
-
-/* Адаптивность для десктопа */
 @media (min-width: 768px) {
   .session-container {
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;
+  }
+}
+
+.word-select-screen {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+}
+
+.word-select-card {
+  background: #fff;
+  border: 3px solid #1e1e1e;
+  border-radius: 28px;
+  box-shadow: 4px 4px 0 #1e1e1e;
+  padding: 1.5rem;
+}
+
+.quick-mode-switch {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.quick-mode-btn {
+  min-height: 76px;
+  border: 3px solid #1e1e1e;
+  border-radius: 22px;
+  background: #fffdf5;
+  box-shadow: 4px 4px 0 #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.quick-mode-btn span {
+  font-size: 1.6rem;
+}
+
+.quick-mode-btn.active {
+  background: #fef3c7;
+  outline: 3px solid #fca13a;
+  outline-offset: 2px;
+}
+
+.word-search-box {
+  margin-bottom: 1.2rem;
+}
+
+.free-topic-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.free-topic-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 3px solid #1e1e1e;
+  border-radius: 22px;
+  background: #fffdf5;
+  box-shadow: 4px 4px 0 #1e1e1e;
+  padding: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.free-topic-card.active {
+  background: #fef3c7;
+  outline: 3px solid #fca13a;
+  outline-offset: 2px;
+}
+
+.free-topic-card.completed {
+  background: #dcfce7;
+}
+
+.free-topic-card__icon {
+  width: 54px;
+  height: 54px;
+  border: 3px solid #1e1e1e;
+  border-radius: 16px;
+  background: #fff7d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.free-topic-card__content {
+  flex: 1;
+}
+
+.free-topic-card__title {
+  font-weight: 900;
+  color: #1e1e1e;
+  margin-bottom: 4px;
+}
+
+.free-topic-card__meta {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.free-topic-card__bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.free-topic-card__bar-fill {
+  height: 100%;
+  background: #4ade80;
+  border-radius: 999px;
+}
+
+.selected-free-topic {
+  margin-top: 1.2rem;
+  padding: 1rem;
+  border: 3px solid #1e1e1e;
+  border-radius: 24px;
+  background: #fffdf5;
+}
+
+.selected-free-topic__top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.selected-free-topic__icon {
+  width: 56px;
+  height: 56px;
+  border: 3px solid #1e1e1e;
+  border-radius: 18px;
+  background: #fef3c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.selected-free-topic__title {
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+.selected-free-topic__subtitle {
+  font-weight: 700;
+  color: #555;
+  margin-top: 2px;
+}
+
+@media (max-width: 640px) {
+  .word-select-card {
+    border-radius: 24px;
+    padding: 1rem;
+    box-shadow: 4px 4px 0 #1e1e1e;
+  }
+
+  .quick-mode-btn {
+    min-height: 68px;
+  }
+
+  .free-topic-card {
+    padding: 12px;
+    border-radius: 20px;
+  }
+
+  .launch-btn {
+    min-height: 56px;
   }
 }
 </style>
