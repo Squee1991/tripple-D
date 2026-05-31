@@ -28,5 +28,6 @@ key: process.env.FIREBASE_RECAPTCHA_KEY || ''
 .vercel
 android
 public/audio/
+android/app/release/app-release.zip
 # Admin tools
 admin/
