@@ -31,12 +31,24 @@ const BASE_PRICE = 1
 
 const selectedDiscountId = ref(null)
 const submitLoading = ref(false)
+const restoreLoading = ref(false)
+const showToast = ref(false)
+const toastMessage = ref('')
 const payButton = ref(null)
 const showStickyFooter = ref(false)
 
 const handleBack = () => {
   router.back()
 }
+
+const restoreComputed = computed(() => {
+  return restoreLoading ? t('restoreComputed.restoring') : t('restoreComputed.restore')
+})
+
+const submitComputed = computed(() => {
+  return submitLoading ? t('restoreComputed.sync') : t('restoreComputed.getPlus')
+})
+
 
 const finalPrice = computed(() => {
   if (billingStore.isMobile && billingStore.offerings.length > 0) {
@@ -77,7 +89,6 @@ useSeoMeta({
 let observer
 const features = [
   {title: t('Обучение без границ'), icon: Forever},
-  // {title: t('Расширенная статистика'), icon: StatsPlus},
   {title: t('Будущие функции'), icon: Future},
   {title: t('Поддержка разработчиков'), icon: SupportCup},
   {title: t('Отсутствие рекламы'), icon: Ads},
@@ -103,6 +114,35 @@ onUnmounted(() => {
     observer.unobserve(payButton.value)
   }
 })
+
+const triggerToast = (msg) => {
+  toastMessage.value = msg
+  showToast.value = true
+  setTimeout(() => {
+    showToast.value = false
+  }, 2000)
+}
+
+async function handleRestore() {
+  if (!billingStore.isMobile) return
+  if (authStore.isPremium) {
+    triggerToast('pay.triggerToastIsPlus')
+    return
+  }
+  restoreLoading.value = true
+  try {
+    const success = await billingStore.restore()
+    if (success) {
+      triggerToast('pay.triggerToastSuccess')
+    } else {
+      triggerToast('pay.triggerToastNotFound')
+    }
+  } catch (err) {
+    triggerToast('pay.triggerToastError')
+  } finally {
+    restoreLoading.value = false
+  }
+}
 
 async function pay() {
   if (!authStore.uid || !authStore.email) return
@@ -140,6 +180,11 @@ async function pay() {
 
 <template>
   <div class="pro-vault">
+    <transition name="toast-fade">
+      <div v-if="showToast" class="toast-notification">
+        {{ t(toastMessage) }}
+      </div>
+    </transition>
     <div class="vault-nav">
       <button @click="handleBack" class="btn-icon-back">
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -152,7 +197,7 @@ async function pay() {
     <div class="main-flow">
       <div class="flow-step">
         <VBanner
-            text="Полный доступ ко всем функциям приложения"
+            :text="t('pay.banner')"
             :icon="PremiumIcon"
         />
         <div class="hero-zone">
@@ -170,8 +215,8 @@ async function pay() {
         </div>
         <div class="bonus-section" v-if="myAvailableCoupons.length > 1">
           <div class="hero-zone bonus-hero">
-            <h2 class="hero-title">ТВОИ <span class="neon-text">БОНУСЫ</span></h2>
-            <p class="hero-desc">Примени заработанные за активность скидки</p>
+<!--            <h2 class="hero-title">ТВОИ <span class="neon-text">БОНУСЫ</span></h2>-->
+            <p class="hero-desc">{{ t('pay.sales')}}</p>
           </div>
           <div class="inventory-section">
             <div class="inventory-list">
@@ -211,8 +256,14 @@ async function pay() {
           </div>
         </div>
         <div class="footer-action" ref="payButton">
-          <button @click="pay" class="btn-buy-neon" :disabled="submitLoading">
-            {{ submitLoading ? 'СИНХРОНИЗАЦИЯ...' : 'Приобрести PLUS' }}
+          <button @click="pay" class="btn-buy-neon" :disabled="submitLoading || restoreLoading">{{ submitComputed }}</button>
+          <button
+              v-if="billingStore.isMobile"
+              @click="handleRestore"
+              class="btn-restore"
+              :disabled="restoreLoading || submitLoading"
+          >
+            {{ restoreComputed }}
           </button>
         </div>
       </div>
@@ -221,6 +272,71 @@ async function pay() {
 </template>
 
 <style scoped>
+.toast-notification {
+  position: absolute;
+  width: 100%;
+  top: calc(env(safe-area-inset-top));
+  left: 0;
+  background: #10b981;
+  color: #fff;
+  padding: 14px 24px;
+  font-weight: 800;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+  z-index: 1000;
+  text-align: center;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.toast-notification:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  left: 0;
+  bottom: 100%;
+  background: #10b981;
+  z-index: 1;
+}
+
+.toast-fade-enter-active,
+.toast-fade-leave-active {
+  transition: all 0.2s ease-in-out;
+}
+
+.toast-fade-enter-from,
+.toast-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-100%)
+}
+
+.btn-restore {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  background: transparent;
+  border: none;
+  color: #8e8e93;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+}
+
+.btn-restore:active {
+  color: #d1d1d6;
+  text-decoration-color: #d1d1d6;
+}
+
+.btn-restore:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
 .pro-vault {
   height: 100%;
   background: var(--bg);
@@ -388,25 +504,6 @@ async function pay() {
   opacity: 0.2;
 }
 
-.marketing-pitch {
-  margin-top: 25px;
-  padding: 16px;
-  background: rgba(99, 102, 241, 0.1);
-  border-radius: 18px;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  border: 1px solid rgba(99, 102, 241, 0.2);
-}
-
-.pitch-text {
-  font-size: 13px;
-  line-height: 1.4;
-  color: #d1d1d6;
-  text-align: left;
-  font-weight: 600;
-}
-
 .billing-summary {
   margin-top: 15px;
   padding: 20px;
@@ -449,6 +546,7 @@ async function pay() {
 .footer-action {
   margin-top: 20px;
   padding: 20px 0;
+  position: relative;
 }
 
 .btn-icon-back {

@@ -118,7 +118,7 @@ const handleCancel = () => {
 
 .modal-btn {
   width: 100%;
-  padding: 16px;
+  padding: 14px;
   border-radius: 36px;
   border: none;
   font-family: "Nunito", sans-serif;

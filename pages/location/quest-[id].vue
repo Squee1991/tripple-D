@@ -1,5 +1,9 @@
 <template>
-  <div>
+  <div
+      @touchstart="handleTouchStart"
+      @touchmove="handleTouchMove"
+      @touchend="handleTouchEnd"
+  >
     <div v-if="isAdLoading" class="ad-overlay">
       <div class="ad-spinner"></div>
     </div>
@@ -56,7 +60,8 @@
               </div>
               <ul class="quest__options" :class="{ 'quest__options--locked': questStore.showResult }">
                 <li v-for="option in questStore.task.options" :key="option">
-                  <button class="quest__option-btn" :class="optionClass(option, questStore)"
+                  <button class="quest__option-btn"
+                          :class="optionClass(option, questStore)"
                           @click="handleOptionClick(option)"
                   >
                     {{ t(option) }}
@@ -192,7 +197,6 @@
         </div>
       </div>
     </div>
-
     <VReviveModal
         :show="forceRevive || showRevive"
         :correct-count="questStore.correctCount"
@@ -204,15 +208,12 @@
         @watchAd="watchAdForLife"
         @back="goThemes"
     />
-
-    <!-- Наш новый компонент модалки -->
     <VStopSessionModal
         :show="showLeaveModal"
         @update:show="showLeaveModal = $event"
         @confirm="confirmLeave"
         @cancel="stayHere"
     />
-
     <VRulesModal
         :show="showTipModal"
         :show-result="questStore.showResult"
@@ -238,8 +239,8 @@ import VHearts from '../../src/components/V-hearts.vue'
 import VRulesModal from "~/src/components/V-rulesModal.vue";
 import VReviveModal from "~/src/components/V-reviveModal.vue";
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
-
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
+import { useSwipeBack } from '~/composables/useSwipeBack.js'
 
 useSeoMeta({robots: 'noindex, nofollow'})
 
@@ -255,6 +256,13 @@ const isAdLoading = ref(false)
 const MAX_ADS = 5;
 const remainingAds = ref(MAX_ADS);
 const PRICE = 10
+
+const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipeBack(() => {
+  openLeave()
+}, {
+  ignoreSelector: '.quest__input, .german__letters-item, .quest__option-btn, .quest__word-btn, .btn'
+})
+
 const questId = computed(() => {
   const rawId = String(route.params.id || route.params.questId || '')
   return rawId.replace('quest-', '')

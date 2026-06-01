@@ -63,6 +63,9 @@ import { useSpeakStore } from '../../store/speakStore.js';
 import { useI18n } from 'vue-i18n';
 import SoundBtn from '../../src/components/soundBtn.vue';
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
+
+import { useSwipeBack } from '~/composables/useSwipeBack.js';
+
 const router = useRouter();
 const route = useRoute();
 const store = useSpeakStore();
@@ -77,8 +80,9 @@ const showExitModal = ref(false);
 const isConfirmedExit = ref(false);
 let pendingRoute = null;
 
-let touchStartX = 0;
-let touchStartY = 0;
+const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipeBack(() => {
+  handleBackClick();
+});
 
 const totalSteps = computed(() => learningSequence.value.length);
 const progressPercentage = computed(() => (currentStep.value / totalSteps.value) * 100);
@@ -96,48 +100,6 @@ const getTranslation = (translationData) => {
   if (matchedKey) return translationData[matchedKey];
   return translationData['en-US'] || '';
 };
-
-onMounted(async () => {
-  const theme = route.query.theme;
-  const level = route.query.level;
-
-  if (!store.dialogueData) {
-    await store.loadDialogue(level, theme);
-  }
-
-  const uniqueWordsMap = new Map();
-  for (const key in store.dialogueData) {
-    const step = store.dialogueData[key];
-    if (step.vocabulary) {
-      step.vocabulary.forEach(v => {
-        if (!uniqueWordsMap.has(v.german)) {
-          uniqueWordsMap.set(v.german, {
-            german: v.german,
-            correctTranslation: getTranslation(v.translation)
-          });
-        }
-      });
-    }
-  }
-
-  const baseWords = Array.from(uniqueWordsMap.values());
-  const allTranslations = baseWords.map(w => w.correctTranslation);
-  const sequence = [];
-
-  baseWords.forEach(word => {
-    sequence.push({ ...word, displayType: 'visual' });
-    sequence.push({ ...word, displayType: 'audio' });
-  });
-
-  learningSequence.value = sequence.sort(() => Math.random() - 0.5);
-
-  if (learningSequence.value.length > 0) {
-    generateOptions(allTranslations);
-    setTimeout(() => {
-      playSound(currentWord.value.german);
-    }, 300);
-  }
-});
 
 const generateOptions = (allTranslations) => {
   const correct = currentWord.value.correctTranslation;
@@ -185,27 +147,6 @@ onBeforeRouteLeave((to, from, next) => {
   }
 });
 
-const handleTouchStart = (e) => {
-  touchStartX = e.touches[0].clientX;
-  touchStartY = e.touches[0].clientY;
-};
-
-const handleTouchMove = (e) => {
-  if (e.target.closest('.options-container')) return;
-};
-
-const handleTouchEnd = (e) => {
-  if (e.target.closest('.options-container')) return;
-  const touchEndX = e.changedTouches[0].clientX;
-  const touchEndY = e.changedTouches[0].clientY;
-  const deltaX = touchEndX - touchStartX;
-  const deltaY = Math.abs(touchEndY - touchStartY);
-
-  if (deltaX > 80 && deltaY < 40) {
-    handleBackClick();
-  }
-};
-
 const handleBackClick = () => {
   if (currentStep.value >= totalSteps.value) {
     isConfirmedExit.value = true;
@@ -232,8 +173,51 @@ const cancelExit = () => {
 
 const finishLearning = () => {
   isConfirmedExit.value = true;
-  router.push('/speak-practice')
+  router.push('/speak-practice');
 };
+
+onMounted(async () => {
+  const theme = route.query.theme;
+  const level = route.query.level;
+
+  if (!store.dialogueData) {
+    await store.loadDialogue(level, theme);
+  }
+
+  const uniqueWordsMap = new Map();
+  for (const key in store.dialogueData) {
+    const step = store.dialogueData[key];
+    if (step.vocabulary) {
+      step.vocabulary.forEach(v => {
+        if (!uniqueWordsMap.has(v.german)) {
+          uniqueWordsMap.set(v.german, {
+            german: v.german,
+            correctTranslation: getTranslation(v.translation)
+          });
+        }
+      });
+    }
+  }
+
+  const baseWords = Array.from(uniqueWordsMap.values());
+  const allTranslations = baseWords.map(w => w.correctTranslation);
+  const sequence = [];
+
+  baseWords.forEach(word => {
+    sequence.push({ ...word, displayType: 'visual' });
+    sequence.push({ ...word, displayType: 'audio' });
+  });
+
+  learningSequence.value = sequence.sort(() => Math.random() - 0.5);
+
+  if (learningSequence.value.length > 0) {
+    generateOptions(allTranslations);
+    setTimeout(() => {
+      playSound(currentWord.value.german);
+    }, 300);
+  }
+});
+
 </script>
 
 <style scoped>

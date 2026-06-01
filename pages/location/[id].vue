@@ -540,7 +540,7 @@ onMounted(async () => {
 .btn {
   position: relative;
   z-index: 2;
-  padding: 15px 22px;
+  padding: 12px 22px;
   margin-top: 12px;
   border-radius: 34px;
   font-size: 17px;

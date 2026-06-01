@@ -38,7 +38,6 @@ export const useBillingStore = defineStore('billing', () => {
 			console.error('RC Init Error:', e)
 		}
 	}
-
 	const syncSubscription = async () => {
 		if (!authStore.uid) return
 		if (isPurchasing.value) return
@@ -46,19 +45,15 @@ export const useBillingStore = defineStore('billing', () => {
 		try {
 			const info = await Purchases.getCustomerInfo()
 			const premiumEntitlement = info?.entitlements?.active?.['premium']
-
 			if (premiumEntitlement) {
 				const expDate = premiumEntitlement.expirationDate
 				const isCancelled = !premiumEntitlement.willRenew
-
 				if (!authStore.isPremium ||
 					authStore.subscriptionEndsAt !== expDate ||
 					authStore.subscriptionCancelled !== isCancelled) {
-
 					authStore.isPremium = true
 					authStore.subscriptionEndsAt = expDate
 					authStore.subscriptionCancelled = isCancelled
-
 					await updateDoc(doc(db, 'users', authStore.uid), {
 						isPremium: true,
 						paymentSource: 'google',
@@ -69,15 +64,6 @@ export const useBillingStore = defineStore('billing', () => {
 				}
 			} else {
 				if (authStore.isPremium) {
-					const expTime = new Date(authStore.subscriptionEndsAt).getTime()
-					const now = Date.now()
-					if (expTime && now < expTime) {
-						console.log('🛑 RC вернул пустоту, но время не вышло! Блокируем сброс в false.')
-						await updateDoc(doc(db, 'users', authStore.uid), {
-							debug_last_action: "SAVED_BY_TIME_LOCK_" + Date.now()
-						})
-						return
-					}
 					authStore.isPremium = false
 					authStore.subscriptionCancelled = false
 					await updateDoc(doc(db, 'users', authStore.uid), {
@@ -91,6 +77,94 @@ export const useBillingStore = defineStore('billing', () => {
 			await updateDoc(doc(db, 'users', authStore.uid), {
 				debug_error: "CRASH: " + e.message
 			})
+		}
+	}
+	// const syncSubscription = async () => {
+	// 	if (!authStore.uid) return
+	// 	if (isPurchasing.value) return
+	//
+	// 	try {
+	// 		const info = await Purchases.getCustomerInfo()
+	// 		const premiumEntitlement = info?.entitlements?.active?.['premium']
+	//
+	// 		if (premiumEntitlement) {
+	// 			const expDate = premiumEntitlement.expirationDate
+	// 			const isCancelled = !premiumEntitlement.willRenew
+	//
+	// 			if (!authStore.isPremium ||
+	// 				authStore.subscriptionEndsAt !== expDate ||
+	// 				authStore.subscriptionCancelled !== isCancelled) {
+	//
+	// 				authStore.isPremium = true
+	// 				authStore.subscriptionEndsAt = expDate
+	// 				authStore.subscriptionCancelled = isCancelled
+	//
+	// 				await updateDoc(doc(db, 'users', authStore.uid), {
+	// 					isPremium: true,
+	// 					paymentSource: 'google',
+	// 					subscriptionEndsAt: expDate,
+	// 					subscriptionCancelled: isCancelled,
+	// 					debug_last_action: "SYNC_UPDATED_PREMIUM_" + Date.now()
+	// 				})
+	// 			}
+	// 		} else {
+	// 			if (authStore.isPremium) {
+	// 				const expTime = new Date(authStore.subscriptionEndsAt).getTime()
+	// 				const now = Date.now()
+	// 				if (expTime && now < expTime) {
+	// 					console.log('🛑 RC вернул пустоту, но время не вышло! Блокируем сброс в false.')
+	// 					await updateDoc(doc(db, 'users', authStore.uid), {
+	// 						debug_last_action: "SAVED_BY_TIME_LOCK_" + Date.now()
+	// 					})
+	// 					return
+	// 				}
+	// 				authStore.isPremium = false
+	// 				authStore.subscriptionCancelled = false
+	// 				await updateDoc(doc(db, 'users', authStore.uid), {
+	// 					isPremium: false,
+	// 					subscriptionCancelled: false,
+	// 					debug_last_action: "EXPIRED_SET_FALSE_" + Date.now()
+	// 				})
+	// 			}
+	// 		}
+	// 	} catch (e) {
+	// 		await updateDoc(doc(db, 'users', authStore.uid), {
+	// 			debug_error: "CRASH: " + e.message
+	// 		})
+	// 	}
+	// }
+
+	const restore = async () => {
+		if (!isMobile.value) return false
+		isPurchasing.value = true
+		try {
+			const customerInfo = await Purchases.restorePurchases()
+			const premiumEntitlement = customerInfo.entitlements.active['premium']
+
+			if (premiumEntitlement) {
+				const expDate = premiumEntitlement.expirationDate
+				const isCancelled = !premiumEntitlement.willRenew
+				authStore.isPremium = true
+				authStore.subscriptionEndsAt = expDate
+				authStore.subscriptionCancelled = isCancelled
+				if (authStore.uid) {
+					await updateDoc(doc(db, 'users', authStore.uid), {
+						isPremium: true,
+						paymentSource: Capacitor.getPlatform() === 'ios' ? 'apple' : 'google',
+						subscriptionEndsAt: expDate,
+						subscriptionCancelled: isCancelled,
+						debug_last_action: "RESTORE_SUCCESS_" + Date.now()
+					})
+				}
+				return true
+			}
+
+			return false
+		} catch (e) {
+			console.error('Ошибка восстановления RC:', e.message)
+			return false
+		} finally {
+			isPurchasing.value = false
 		}
 	}
 
@@ -163,6 +237,7 @@ export const useBillingStore = defineStore('billing', () => {
 		initialize,
 		syncSubscription,
 		loadOfferings,
-		buy
+		buy,
+		restore
 	}
 })

@@ -282,8 +282,8 @@ watch(topic, loadThemeData)
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 125px;
-  height: 135px;
+  width: 115px;
+  height: 130px;
   background: var(--tabBg);
   border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 20px;
@@ -297,8 +297,8 @@ watch(topic, loadThemeData)
 }
 
 .theme-icon-wrapper {
-  width: 75px;
-  height: 75px;
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;

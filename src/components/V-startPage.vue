@@ -1,18 +1,18 @@
 <template>
   <div class="welcome-container">
     <div class="ui-layout welcome-bg">
-<!--      <div class="hero-wrap">-->
-<!--        <div class="hero-clay">-->
-<!--          <img src="../../assets/images/AuthIcon.svg" alt="Logo" class="hero-img">-->
-<!--          <div class="skill-tag tag-purple">Sprechen</div>-->
-<!--          <div class="skill-tag tag-cyan">Hören</div>-->
-<!--          <div class="skill-tag tag-pink">Lesen</div>-->
-<!--          <div class="skill-tag tag-amber">Schreiben</div>-->
-<!--        </div>-->
-<!--      </div>-->
       <div class="text-content">
         <div class="game-title">
           <img src="../../assets/images/logoReview.webp" alt="logo">
+        </div>
+        <div class="hero-wrap">
+          <div class="hero-clay">
+            <img src="../../assets/images/AuthIcon.svg" alt="Logo" class="hero-img">
+            <div class="skill-tag tag-purple">Sprechen</div>
+            <div class="skill-tag tag-cyan">Hören</div>
+            <div class="skill-tag tag-pink">Lesen</div>
+            <div class="skill-tag tag-amber">Schreiben</div>
+          </div>
         </div>
 <!--        <p class="game-info">-->
 <!--          Твой интерактивный путь к свободному немецкому.-->
@@ -22,14 +22,13 @@
       </div>
     </div>
     <div class="cta-block">
-      <button @click="router.push('/language')" class="btn-emerald-3d">
-        Начать обучение
-      </button>
+      <button @click="router.push('/language')" class="btn-emerald-3d"> {{ t('selectedpage.startBtn')}}</button>
     </div>
   </div>
 </template>
 
 <script setup>
+const { t } = useI18n();
 import Bg from '../../assets/images/bg_1.webp'
 const router = useRouter()
 </script>
@@ -48,13 +47,12 @@ const router = useRouter()
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
   flex-grow: 1;
   padding: 10px;
 }
 
 .welcome-bg {
-  background-image: url("../../assets/images/bg_1.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -136,6 +134,7 @@ const router = useRouter()
   line-height: 1.1;
   margin-bottom: 24px;
   text-align: center;
+  padding: 30px;
 }
 
 .brand-neon {
@@ -157,8 +156,9 @@ const router = useRouter()
 .cta-block {
   width: 100%;
   position: absolute;
-  bottom: 15px;
-  padding-bottom: env(safe-area-inset-bottom);
+  bottom: 10px;
+  padding: 0 25px;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 15px);
 
 }
 

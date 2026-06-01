@@ -1,5 +1,9 @@
 <template>
-  <div class="quiz-app">
+  <div class="quiz-app"
+       @touchstart="handleTouchStart"
+       @touchmove="handleTouchMove"
+       @touchend="handleTouchEnd"
+  >
     <div class="quiz-app-container">
       <div v-if="loading" class="quiz-screen">
         <p class="loading-text">{{ t('dailyPanel.loading') }}</p>
@@ -95,7 +99,6 @@
           :show="!!activeModal"
           @update:show="val => { if (!val) activeModal = null }"
           :text-class="modalData?.textClass"
-          :icon="activeModal === 'exit' ? SadHedgehogIcon : null"
           @cancel="modalData?.onCancel"
           @confirm="modalData?.onConfirm"
       >
@@ -122,7 +125,7 @@ import {useAudioTaskStore} from '../../store/audioTaskStore.js'
 import AudioButton from '../../src/components/AudioBtn.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
-import SadHedgehogIcon from '../../assets/images/Sadlyhedgehog.png'
+import { useSwipeBack } from '~/composables/useSwipeBack.js'
 
 const {t} = useI18n()
 const router = useRouter()
@@ -136,6 +139,11 @@ const userSelections = ref({})
 const taskResults = ref({})
 const activeModal = ref(null)
 const sessionStats = ref({correct: 0, partial: 0, wrong: 0, passed: false})
+const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipeBack(() => {
+  handleExitTrigger()
+}, {
+  ignoreSelector: '.chat-flow, .quest-option-button, .quiz-btn, .quest-option'
+})
 
 const progressPercentage = computed(() => {
   if (!sessionTasks.value.length) return 0

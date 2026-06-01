@@ -83,7 +83,6 @@
     <ExitSessionModal
         :show="showExitModal"
         @update:show="val => showExitModal = val"
-        :icon="SadHedgehogIcon"
         @cancel="cancelExit"
         @confirm="confirmExit"
     />
@@ -95,7 +94,7 @@ import {ref, computed, onMounted} from 'vue'
 import {useRouter, onBeforeRouteLeave} from 'vue-router'
 import {useTextTasksStore} from '../../store/textTasksStore.js'
 import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
-import SadHedgehogIcon from '../../assets/images/Sadlyhedgehog.png'
+import { useSwipeBack } from '~/composables/useSwipeBack.js'
 
 const {t} = useI18n()
 const router = useRouter()
@@ -107,8 +106,11 @@ const showExitModal = ref(false)
 const isConfirmedExit = ref(false)
 let pendingRoute = null
 
-let touchStartX = 0
-let touchStartY = 0
+const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipeBack(() => {
+  handleBackClick()
+}, {
+  ignoreSelector: '.text-card, .word-pool-card'
+})
 
 onMounted(() => {
   if (!store.currentTask) {
@@ -126,29 +128,6 @@ onBeforeRouteLeave((to, from, next) => {
     next(false)
   }
 })
-
-const handleTouchStart = (e) => {
-  touchStartX = e.touches[0].clientX
-  touchStartY = e.touches[0].clientY
-}
-
-const handleTouchMove = (e) => {
-  if (e.target.closest('.text-card') || e.target.closest('.word-pool-card')) return
-}
-
-const handleTouchEnd = (e) => {
-  if (e.target.closest('.text-card') || e.target.closest('.word-pool-card')) return
-
-  const touchEndX = e.changedTouches[0].clientX
-  const touchEndY = e.changedTouches[0].clientY
-
-  const deltaX = touchEndX - touchStartX
-  const deltaY = Math.abs(touchEndY - touchStartY)
-
-  if (deltaX > 80 && deltaY < 40) {
-    handleBackClick()
-  }
-}
 
 const handleBackClick = () => {
   router.push('/text-tasks')

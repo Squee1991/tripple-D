@@ -1,5 +1,9 @@
 <template>
-  <div class="app-container">
+  <div class="app-container"
+       @touchstart="handleTouchStart"
+       @touchmove="handleTouchMove"
+       @touchend="handleTouchEnd"
+  >
     <header class="session__header" style="flex-shrink: 0; z-index: 10;">
       <button class="btn-icon-back" @click="goBack">
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -163,7 +167,7 @@ const {locale, t } = useI18n();
 const route = useRoute();
 const router = useRouter();
 const store = useSpeakStore();
-
+import { useSwipeBack } from '~/composables/useSwipeBack.js';
 const viewState = ref('menu');
 const chatContainer = ref(null);
 const inputField = ref(null);
@@ -178,6 +182,13 @@ const isVocabLearned = ref(false);
 const currentVocabIndex = ref(0);
 
 let recognition = null;
+
+
+const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipeBack(() => {
+  goBack();
+}, {
+  ignoreSelector: '.options-list, .vocab-actions, .text-input'
+});
 
 const vocabList = computed(() => {
   if (!store.dialogueData) return [];
@@ -311,7 +322,6 @@ const scrollToBottom = async () => {
 const completeDialogue = async () => {
   dialogueCompleted.value = true;
   await scrollToBottom();
-
   const theme = route.query.theme || 'firstmeet';
   await store.saveDialogueCompletion(theme);
 };
@@ -344,9 +354,7 @@ const startDialogue = async () => {
     );
 
     await scrollToBottom();
-
     store.isOptionsDisabled = false;
-
     checkDialogueEnd(step);
   }, 900);
 };
