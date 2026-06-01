@@ -9533,8 +9533,8 @@
     "TravelTransport": "Транспорт",
     "usualClothes": "Повседневная",
     "winterClothes": "Зимняя",
-    "emotionsPositive": 'Эмоции',
-    "emotionsNegative": 'Эмоции 2'
+    "emotionsPositive": "Эмоции",
+    "emotionsNegative": "Эмоции 2"
   },
   "categoryWords": {
     "nature": "Природа",
@@ -10258,7 +10258,7 @@
     "further": "Продолжить"
   },
   "statistics": {
-    title: "Ваша статистика и прогресс в изучении слов и прохождении тематических уровней"
+    "title": "Ваша статистика и прогресс в изучении слов и прохождении тематических уровней"
   },
   "restoreComputed": {
     "restoring": "Восстановление...",
@@ -10274,6 +10274,6 @@
     "triggerToastSuccess": "Покупка восстановлена!",
     "triggerToastNotFound": "Активных подписок не найдено",
     "triggerToastError": "Ошибка при восстановлении",
-    "triggerToastIsPlus": "У вас уже активен PLUS!",
+    "triggerToastIsPlus": "У вас уже активен PLUS!"
   }
 }
