@@ -1,3 +1,5 @@
+/*
+// @ts-ignore
 import * as Sentry from "@sentry/nuxt";
 
 Sentry.init({
@@ -13,3 +15,4 @@ Sentry.init({
     replaysOnErrorSampleRate: 1.0,
     debug: true,
 });
+*/
