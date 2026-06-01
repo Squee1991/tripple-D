@@ -10236,5 +10236,21 @@
   },
   "statistics": {
     "title": "So'zlarni o'rganish va tematik bosqichlarni yakunlash bo'yicha statistikangiz va taraqqiyotingiz"
+  },
+  "restoreComputed": {
+    "restoring": "Tiklanmoqda...",
+    "restore": "Xaridlarni tiklash."
+  },
+  "submitComputed": {
+    "sync": "Sinxronizatsiya...",
+    "getPlus": "PLUS-ni xarid qilish"
+  },
+  "pay": {
+    "banner": "Ilovaning barcha funksiyalariga to'liq kirish",
+    "sales": "Faollik uchun berilgan chegirmalarni qo'llash",
+    "triggerToastSuccess": "Xarid tiklandi!",
+    "triggerToastNotFound": "Faol obunalar topilmadi",
+    "triggerToastError": "Tiklashda xatolik yuz berdi",
+    "triggerToastIsPlus": "Sizda PLUS allaqachon faol!"
   }
 }

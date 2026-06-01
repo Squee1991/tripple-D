@@ -730,6 +730,13 @@ export const userAuthStore = defineStore('auth', () => {
                         ...userDataFromDb
                     })
                 }
+                if (Capacitor.isNativePlatform()) {
+                    try {
+                        await Purchases.logIn({ appUserID: user.uid })
+                    } catch (e) {
+                        console.error(e)
+                    }
+                }
                 await checkFeedbackSurveyEligibility()
             } else {
                 setUserData({});
@@ -766,6 +773,14 @@ export const userAuthStore = defineStore('auth', () => {
                         providerId: user.providerData[0]?.providerId || '',
                         ...userDataFromDb
                     })
+
+                    if (Capacitor.isNativePlatform()) {
+                        try {
+                            await Purchases.logIn({ appUserID: user.uid })
+                        } catch (e) {
+                            console.error(e)
+                        }
+                    }
                     await checkFeedbackSurveyEligibility()
                 } else {
                     setUserData({});

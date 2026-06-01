@@ -10238,5 +10238,21 @@
   },
   "statistics": {
     "title": "Statisticile și progresul tău în învățarea cuvintelor și finalizarea nivelurilor tematice"
+  },
+  "restoreComputed": {
+    "restoring": "Restaurare...",
+    "restore": "Restaurează achizițiile."
+  },
+  "submitComputed": {
+    "sync": "Sincronizare...",
+    "getPlus": "Achiziționează PLUS"
+  },
+  "pay": {
+    "banner": "Acces complet la toate funcțiile aplicației",
+    "sales": "Aplică reducerile obținute din activitate",
+    "triggerToastSuccess": "Achiziție restaurată!",
+    "triggerToastNotFound": "Nu s-au găsit abonamente active",
+    "triggerToastError": "Eroare la restaurare",
+    "triggerToastIsPlus": "Aveți deja un abonament PLUS activ!"
   }
 }

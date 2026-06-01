@@ -10267,5 +10267,21 @@
   },
   "statistics": {
     "title": "Tus estadísticas y progreso en el aprendizaje de palabras y la superación de niveles temáticos"
+  },
+  "restoreComputed": {
+    "restoring": "Restaurando...",
+    "restore": "Restaurar compras."
+  },
+  "submitComputed": {
+    "sync": "Sincronizando...",
+    "getPlus": "Adquirir PLUS"
+  },
+  "pay": {
+    "banner": "Acceso completo a todas las funciones de la aplicación",
+    "sales": "Aplica los descuentos ganados por tu actividad",
+    "triggerToastSuccess": "¡Compra restaurada!",
+    "triggerToastNotFound": "No se encontraron suscripciones activas",
+    "triggerToastError": "Error al restaurar",
+    "triggerToastIsPlus": "¡Ya tienes PLUS activo!"
   }
 }

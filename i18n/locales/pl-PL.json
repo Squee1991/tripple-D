@@ -10254,5 +10254,21 @@
   },
   "statistics": {
     "title": "Twoje statystyki i postępy w nauce słówek oraz przechodzeniu poziomów tematycznych"
+  },
+  "restoreComputed": {
+    "restoring": "Przywracanie...",
+    "restore": "Przywróć zakupy."
+  },
+  "submitComputed": {
+    "sync": "Synchronizacja...",
+    "getPlus": "Kup PLUS"
+  },
+  "pay": {
+    "banner": "Pełen dostęp do wszystkich funkcji aplikacji",
+    "sales": "Zastosuj zniżki zdobyte za aktywność",
+    "triggerToastSuccess": "Zakup został przywrócony!",
+    "triggerToastNotFound": "Nie znaleziono aktywnych subskrypcji",
+    "triggerToastError": "Błąd podczas przywracania",
+    "triggerToastIsPlus": "Masz już aktywny profil PLUS!"
   }
 }

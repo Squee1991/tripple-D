@@ -42,11 +42,11 @@ const handleBack = () => {
 }
 
 const restoreComputed = computed(() => {
-  return restoreLoading ? t('restoreComputed.restoring') : t('restoreComputed.restore')
+  return restoreLoading.value ? t('restoreComputed.restoring') : t('restoreComputed.restore')
 })
 
 const submitComputed = computed(() => {
-  return submitLoading ? t('restoreComputed.sync') : t('restoreComputed.getPlus')
+  return submitLoading.value ? t('submitComputed.sync') : t('submitComputed.getPlus')
 })
 
 

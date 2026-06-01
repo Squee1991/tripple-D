@@ -10247,5 +10247,21 @@
   },
   "statistics": {
     "title": "Kelime öğrenme ve tematik seviyeleri tamamlama konusundaki istatistikleriniz ve ilerlemeniz"
+  },
+  "restoreComputed": {
+    "restoring": "Geri yükleniyor...",
+    "restore": "Satın almaları geri yükle."
+  },
+  "submitComputed": {
+    "sync": "Senkronize ediliyor...",
+    "getPlus": "PLUS Satın Al"
+  },
+  "pay": {
+    "banner": "Uygulamanın tüm özelliklerine tam erişim",
+    "sales": "Aktivitelerden kazanılan indirimleri uygula",
+    "triggerToastSuccess": "Satın alma geri yüklendi!",
+    "triggerToastNotFound": "Aktif abonelik bulunamadı",
+    "triggerToastError": "Geri yükleme sırasında hata oluştu",
+    "triggerToastIsPlus": "Zaten aktif bir PLUS aboneliğiniz var!"
   }
 }

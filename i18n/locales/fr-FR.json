@@ -10255,5 +10255,21 @@
   },
   "statistics": {
     "title": "Vos statistiques et votre progression dans l'apprentissage des mots et la réussite des niveaux thématiques"
+  },
+  "restoreComputed": {
+    "restoring": "Restauration...",
+    "restore": "Restaurer les achats."
+  },
+  "submitComputed": {
+    "sync": "Synchronisation...",
+    "getPlus": "Acheter PLUS"
+  },
+  "pay": {
+    "banner": "Accès complet à toutes les fonctionnalités de l'application",
+    "sales": "Appliquez les réductions obtenues grâce à votre activité",
+    "triggerToastSuccess": "Achat restauré !",
+    "triggerToastNotFound": "Aucun abonnement actif trouvé",
+    "triggerToastError": "Erreur lors de la restauration",
+    "triggerToastIsPlus": "Vous avez déjà un abonnement PLUS actif !"
   }
 }

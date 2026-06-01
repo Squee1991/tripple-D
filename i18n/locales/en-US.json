@@ -10261,5 +10261,21 @@
   },
   "statistics": {
     "title": "Your statistics and progress in learning words and completing thematic levels"
+  },
+  "restoreComputed": {
+    "restoring": "Restoring...",
+    "restore": "Restore purchases."
+  },
+  "submitComputed": {
+    "sync": "Syncing...",
+    "getPlus": "Get PLUS"
+  },
+  "pay": {
+    "banner": "Full access to all app features",
+    "sales": "Apply discounts earned from activity",
+    "triggerToastSuccess": "Purchase restored!",
+    "triggerToastNotFound": "No active subscriptions found",
+    "triggerToastError": "Error during restoration",
+    "triggerToastIsPlus": "You already have an active PLUS subscription!"
   }
 }

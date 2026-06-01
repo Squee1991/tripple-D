@@ -10237,5 +10237,21 @@
   },
   "statistics": {
     "title": "शब्द सीखने और विषयगत स्तरों को पूरा करने में आपकी सांख्यिकी और प्रगति"
+  },
+  "restoreComputed": {
+    "restoring": "बहाल किया जा रहा है...",
+    "restore": "खरीदारी बहाल करें।"
+  },
+  "submitComputed": {
+    "sync": "सिंक हो रहा है...",
+    "getPlus": "PLUS प्राप्त करें"
+  },
+  "pay": {
+    "banner": "ऐप की सभी सुविधाओं तक पूर्ण पहुंच",
+    "sales": "गतिविधि से अर्जित छूट लागू करें",
+    "triggerToastSuccess": "खरीदारी बहाल कर दी गई है!",
+    "triggerToastNotFound": "कोई सक्रिय सब्सक्रिप्शन नहीं मिला",
+    "triggerToastError": "बहाली के दौरान त्रुटि",
+    "triggerToastIsPlus": "आपके पास पहले से ही PLUS सक्रिय है!"
   }
 }

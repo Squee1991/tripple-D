@@ -10256,5 +10256,21 @@
   },
   "statistics": {
     "title": "إحصائياتك وتقدمك في تعلم الكلمات وإكمال المستويات الموضوعية"
+  },
+  "restoreComputed": {
+    "restoring": "جاري الاستعادة...",
+    "restore": "استعادة المشتريات."
+  },
+  "submitComputed": {
+    "sync": "جاري المزامنة...",
+    "getPlus": "الحصول على PLUS"
+  },
+  "pay": {
+    "banner": "وصول كامل إلى جميع ميزات التطبيق",
+    "sales": "تطبيق الخصومات المكتسبة من خلال النشاط",
+    "triggerToastSuccess": "تم استعادة المشتريات بنجاح!",
+    "triggerToastNotFound": "لم يتم العثور على اشتراكات نشطة",
+    "triggerToastError": "حدث خطأ أثناء الاستعادة",
+    "triggerToastIsPlus": "لديك اشتراك PLUS نشط بالفعل!"
   }
 }
