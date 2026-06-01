@@ -1,0 +1,565 @@
+{
+  "start": {
+    "botText": "Hallo, ich bin wieder da!",
+    "botTranslation": {
+      "ru-RU": "Привет, я вернулся!",
+      "en-US": "Hello, I'm back!",
+      "ar-SA": "مرحباً، لقد عدت!",
+      "es-ES": "¡Hola, ya estoy aquí!",
+      "fr-FR": "Salut, je suis de retour !",
+      "hi-IN": "नमस्ते, मैं वापस आ गया हूँ!",
+      "pl-PL": "Cześć, wróciłem!",
+      "ro-RO": "Salut, m-am întors!",
+      "tr-TR": "Merhaba, döndüm!",
+      "uk-UA": "Привіт, я повернувся!",
+      "uz-UZ": "Salom, men qaytdim!"
+    },
+    "vocabulary": [
+      {
+        "german": "wieder da",
+        "translation": {
+          "ru-RU": "вернулся",
+          "en-US": "back",
+          "ar-SA": "عدت",
+          "es-ES": "de vuelta",
+          "fr-FR": "de retour",
+          "hi-IN": "वापस",
+          "pl-PL": "z powrotem",
+          "ro-RO": "înapoi",
+          "tr-TR": "geri döndüm",
+          "uk-UA": "повернувся",
+          "uz-UZ": "qaytdim"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hallo! Wie war dein Tag heute?",
+        "translation": {
+          "ru-RU": "Привет! Как прошел твой день сегодня?",
+          "en-US": "Hello! How was your day today?",
+          "ar-SA": "مرحباً! كيف كان يومك اليوم؟",
+          "es-ES": "¡Hola! ¿Cómo estuvo tu día hoy?",
+          "fr-FR": "Salut ! Comment s'est passée ta journée aujourd'hui ?",
+          "hi-IN": "नमस्ते! आज आपका दिन कैसा रहा?",
+          "pl-PL": "Cześć! Jak minął twój dzień dzisiaj?",
+          "ro-RO": "Salut! Cum a fost ziua ta azi?",
+          "tr-TR": "Merhaba! Bugün günün nasıl geçti?",
+          "uk-UA": "Привіт! Як минув твій день сьогодні?",
+          "uz-UZ": "Salom! Bugun kuning qanday o'tdi?"
+        },
+        "nextStep": "day_check"
+      },
+      {
+        "text": "Hi! Wie war dein Tag?",
+        "translation": {
+          "ru-RU": "Привет! Как твой день?",
+          "en-US": "Hi! How was your day?",
+          "ar-SA": "مرحباً! كيف كان يومك؟",
+          "es-ES": "¡Hola! ¿Qué tal tu día?",
+          "fr-FR": "Salut ! Comment était ta journée ?",
+          "hi-IN": "हाय! आपका दिन कैसा रहा?",
+          "pl-PL": "Cześć! Jak tam twój dzień?",
+          "ro-RO": "Salut! Cum a fost ziua ta?",
+          "tr-TR": "Selam! Günün nasıldı?",
+          "uk-UA": "Привіт! Як твій день?",
+          "uz-UZ": "Salom! Kuning qanday o'tdi?"
+        },
+        "nextStep": "day_check"
+      }
+    ],
+    "defaultNext": "day_check"
+  },
+  "day_check": {
+    "botText": "Er war anstrengend. Wie war dein Tag?",
+    "botTranslation": {
+      "ru-RU": "Он был утомительным. А твой день как прошел?",
+      "en-US": "It was exhausting. How was your day?",
+      "ar-SA": "كان متعباً. كيف كان يومكِ؟",
+      "es-ES": "Fue agotador. ¿Cómo estuvo tu día?",
+      "fr-FR": "C'était fatiguant. Comment s'est passée ta journée ?",
+      "hi-IN": "यह थका देने वाला था। आपका दिन कैसा रहा?",
+      "pl-PL": "Był męczący. Jak minął twój dzień?",
+      "ro-RO": "A fost obositoare. Cum a fost ziua ta?",
+      "tr-TR": "Yorucuydu. Senin günün nasıldı?",
+      "uk-UA": "Він був утомливим. А твій день як минув?",
+      "uz-UZ": "Chorchatarli bo'ldi. Sening kuning qanday o'tdi?"
+    },
+    "vocabulary": [
+      {
+        "german": "anstrengend",
+        "translation": {
+          "ru-RU": "утомительный",
+          "en-US": "exhausting",
+          "ar-SA": "مرهق",
+          "es-ES": "agotador",
+          "fr-FR": "fatigant",
+          "hi-IN": "थकाऊ",
+          "pl-PL": "męczący",
+          "ro-RO": "obositoare",
+          "tr-TR": "yorucu",
+          "uk-UA": "утомливий",
+          "uz-UZ": "charchatadigan"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Mein Tag war ganz gut. Was machen wir heute?",
+        "translation": {
+          "ru-RU": "Мой день был неплох. Что мы делаем сегодня?",
+          "en-US": "My day was quite good. What are we doing today?",
+          "ar-SA": "يومي كان جيداً جداً. ماذا سنفعل اليوم؟",
+          "es-ES": "Mi día estuvo bastante bien. ¿Qué hacemos hoy?",
+          "fr-FR": "Ma journée s'est plutôt bien passée. Qu'est-ce qu'on fait aujourd'hui ?",
+          "hi-IN": "मेरा दिन काफी अच्छा रहा। आज हम क्या कर रहे हैं?",
+          "pl-PL": "Mój dzień był całkiem dobry. Co robimy dzisiaj?",
+          "ro-RO": "Ziua mea a fost destul de bună. Ce facem azi?",
+          "tr-TR": "Günüm oldukça iyiydi. Bugün ne yapıyoruz?",
+          "uk-UA": "Мій день був непоганий. Що ми робимо сьогодні?",
+          "uz-UZ": "Mening kunim anchagina yaxshi o'tdi. Bugun nima qilamiz?"
+        },
+        "nextStep": "evening_plans"
+      },
+      {
+        "text": "Alles okay bei mir. Was machen wir heute Abend?",
+        "translation": {
+          "ru-RU": "У меня всё хорошо. Что делаем сегодня вечером?",
+          "en-US": "Everything is okay with me. What are we doing tonight?",
+          "ar-SA": "كل شيء على ما يرام معي. ماذا سنفعل هذا المساء؟",
+          "es-ES": "Todo bien conmigo. ¿Qué hacemos esta noche?",
+          "fr-FR": "Tout va bien pour moi. Qu'est-ce qu'on fait ce soir ?",
+          "hi-IN": "मेरे साथ सब ठीक है। आज शाम हम क्या कर रहे हैं?",
+          "pl-PL": "U mnie wszystko w porządku. Co robimy dziś wieczorem?",
+          "ro-RO": "Totul e în regulă la mine. Ce facem în această seară?",
+          "tr-TR": "Bende her şey yolunda. Bu akşam ne yapıyoruz?",
+          "uk-UA": "У мене все гаразд. Що робимо сьогодні ввечері?",
+          "uz-UZ": "Menda hammasi yaxshi. Bugun oqshom nima qilamiz?"
+        },
+        "nextStep": "evening_plans"
+      }
+    ],
+    "defaultNext": "evening_plans"
+  },
+  "evening_plans": {
+    "botText": "Ich möchte einfach auf dem Sofa entspannen.",
+    "botTranslation": {
+      "ru-RU": "Я хочу просто отдохнуть на диване.",
+      "en-US": "I just want to relax on the sofa.",
+      "ar-SA": "أريد فقط الاسترخاء على الأريكة.",
+      "es-ES": "Solo quiero relajarme en el sofá.",
+      "fr-FR": "Je veux juste me détendre sur le canapé.",
+      "hi-IN": "मैं बस सोफे पर आराम करना चाहता हूँ।",
+      "pl-PL": "Chcę po prostu odpocząć na kanapie.",
+      "ro-RO": "Vreau doar să mă relaxez pe canapea.",
+      "tr-TR": "Sadece kanepede dinlenmek istiyorum.",
+      "uk-UA": "Я хочу просто відпочити на дивані.",
+      "uz-UZ": "Men shunchaki divanda dam olmoqchiman."
+    },
+    "vocabulary": [
+      {
+        "german": "entspannen",
+        "translation": {
+          "ru-RU": "отдыхать",
+          "en-US": "to relax",
+          "ar-SA": "يسترخي",
+          "es-ES": "relajarse",
+          "fr-FR": "se détendre",
+          "hi-IN": "आराम करना",
+          "pl-PL": "odpoczywać",
+          "ro-RO": "a se relaxa",
+          "tr-TR": "dinlenmek",
+          "uk-UA": "відпочивати",
+          "uz-UZ": "dam olmoq"
+        }
+      },
+      {
+        "german": "das Sofa",
+        "translation": {
+          "ru-RU": "диван",
+          "en-US": "sofa",
+          "ar-SA": "أريكة",
+          "es-ES": "sofá",
+          "fr-FR": "canapé",
+          "hi-IN": "सोफा",
+          "pl-PL": "kanapa",
+          "ro-RO": "canapea",
+          "tr-TR": "kanepe",
+          "uk-UA": "диван",
+          "uz-UZ": "divan"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Gute Idee. Wollen wir einen Film sehen?",
+        "translation": {
+          "ru-RU": "Хорошая идея. Хотим посмотреть фильм?",
+          "en-US": "Good idea. Do we want to watch a movie?",
+          "ar-SA": "فكرة جيدة. هل نريد أن نشاهد فيلماً؟",
+          "es-ES": "Buena idea. ¿Queremos ver una película?",
+          "fr-FR": "Bonne idée. On veut regarder un film ?",
+          "hi-IN": "अच्छा विचार। क्या हम एक फिल्म देखना चाहते हैं?",
+          "pl-PL": "Dobry pomysł. Chcemy obejrzeć film?",
+          "ro-RO": "Bună idee. Vrem să vedem un film?",
+          "tr-TR": "İyi fikir. Bir film izlemek ister miyiz?",
+          "uk-UA": "Хороша ідея. Хочемо подивитися фільм?",
+          "uz-UZ": "Yaxshi fikr. Film ko'rishni xohlaymizmi?"
+        },
+        "nextStep": "movie_genre"
+      },
+      {
+        "text": "Das verstehe ich. Wollen wir einen Film schauen?",
+        "translation": {
+          "ru-RU": "Я это понимаю. Посмотрим фильм?",
+          "en-US": "I understand that. Do we want to watch a movie?",
+          "ar-SA": "أنا أفهم ذلك. هل نشاهد فيلماً؟",
+          "es-ES": "Lo entiendo. ¿Vemos una película?",
+          "fr-FR": "Je comprends. On regarde un film ?",
+          "hi-IN": "मैं समझता हूँ। क्या हम एक फिल्म देखें?",
+          "pl-PL": "Rozumiem. Obejrzymy film?",
+          "ro-RO": "Înțeleg asta. Ne uităm la un film?",
+          "tr-TR": "Anlıyorum. Bir film izleyelim mi?",
+          "uk-UA": "Я це розумію. Подивимося фільм?",
+          "uz-UZ": "Buni tushunaman. Film tomosha qilamizmi?"
+        },
+        "nextStep": "movie_genre"
+      }
+    ],
+    "defaultNext": "movie_genre"
+  },
+  "movie_genre": {
+    "botText": "Ja, sehr gern. Welchen Film möchtest du?",
+    "botTranslation": {
+      "ru-RU": "Да, с удовольствием. Какой фильм ты хочешь?",
+      "en-US": "Yes, gladly. Which movie would you like?",
+      "ar-SA": "نعم، بكل سرور. أي فيلم تريدين؟",
+      "es-ES": "Sí, con gusto. ¿Qué película te gustaría?",
+      "fr-FR": "Oui, avec plaisir. Quel film aimerais-tu ?",
+      "hi-IN": "हाँ, खुशी से। आप कौन सी फिल्म पसंद करेंगी?",
+      "pl-PL": "Tak, bardzo chętnie. Jaki film byś chciała?",
+      "ro-RO": "Da, cu plăcere. Ce film ai dori?",
+      "tr-TR": "Evet, memnuniyetle. Hangi filmi istersin?",
+      "uk-UA": "Так, із задоволенням. Який фільм ти хочеш?",
+      "uz-UZ": "Ha, bajonidil. Qaysi filmni xohlaysan?"
+    },
+    "vocabulary": [
+      {
+        "german": "sehr gern",
+        "translation": {
+          "ru-RU": "с удовольствием",
+          "en-US": "very gladly",
+          "ar-SA": "بكل سرور",
+          "es-ES": "con gusto",
+          "fr-FR": "très volontiers",
+          "hi-IN": "बहुत खुशी से",
+          "pl-PL": "bardzo chętnie",
+          "ro-RO": "cu mare drag",
+          "tr-TR": "memnuniyetle",
+          "uk-UA": "із задоволенням",
+          "uz-UZ": "bajonidil"
+        }
+      },
+      {
+        "german": "die Komödie",
+        "translation": {
+          "ru-RU": "комедия",
+          "en-US": "comedy",
+          "ar-SA": "كوميديا",
+          "es-ES": "comedia",
+          "fr-FR": "comédie",
+          "hi-IN": "कॉमेडी",
+          "pl-PL": "komedia",
+          "ro-RO": "comedie",
+          "tr-TR": "komedi",
+          "uk-UA": "комедія",
+          "uz-UZ": "komediya"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich habe Lust auf eine Komödie.",
+        "translation": {
+          "ru-RU": "Я бы хотела комедию.",
+          "en-US": "I feel like watching a comedy.",
+          "ar-SA": "لدي رغبة في مشاهدة فيلم كوميدي.",
+          "es-ES": "Tengo ganas de una comedia.",
+          "fr-FR": "J'ai envie d'une comédie.",
+          "hi-IN": "मेरा मन कॉमेडी देखने का है।",
+          "pl-PL": "Mam ochotę na komedię.",
+          "ro-RO": "Am chef de o comedie.",
+          "tr-TR": "Canım bir komedi istiyor.",
+          "uk-UA": "Я б хотіла комедію.",
+          "uz-UZ": "Komediya ko'rgim kelyapti."
+        },
+        "nextStep": "popcorn_check"
+      },
+      {
+        "text": "Ich möchte eine Komödie sehen.",
+        "translation": {
+          "ru-RU": "Я хочу посмотреть комедию.",
+          "en-US": "I want to watch a comedy.",
+          "ar-SA": "أريد أن أرى فيلماً كوميدياً.",
+          "es-ES": "Quiero ver una comedia.",
+          "fr-FR": "Je veux voir une comédie.",
+          "hi-IN": "मैं एक कॉमेडी देखना चाहती हूँ।",
+          "pl-PL": "Chcę obejrzeć komedię.",
+          "ro-RO": "Vreau să văd o comedie.",
+          "tr-TR": "Bir komedi izlemek istiyorum.",
+          "uk-UA": "Я хочу подивитися комедію.",
+          "uz-UZ": "Komediya tomosha qilmoqchiman."
+        },
+        "nextStep": "popcorn_check"
+      }
+    ],
+    "defaultNext": "popcorn_check"
+  },
+  "popcorn_check": {
+    "botText": "Einverstanden. Hast du das Popcorn da?",
+    "botTranslation": {
+      "ru-RU": "Согласен. У тебя есть попкорн дома (под рукой)?",
+      "en-US": "Agreed. Do you have the popcorn there?",
+      "ar-SA": "موافق. هل لديكِ فشار هنا؟",
+      "es-ES": "De acuerdo. ¿Tienes las palomitas ahí?",
+      "fr-FR": "D'accord. As-tu le pop-corn là ?",
+      "hi-IN": "सहमत। क्या आपके पास पॉपकॉर्न है?",
+      "pl-PL": "Zgoda. Masz popcorn na miejscu?",
+      "ro-RO": "De acord. Ai popcornul acolo?",
+      "tr-TR": "Anlaştık. Patlamış mısır var mı?",
+      "uk-UA": "Згоден. У тебе є попкорн під рукою?",
+      "uz-UZ": "Kelishdik. Popcorn bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "einverstanden",
+        "translation": {
+          "ru-RU": "согласен",
+          "en-US": "agreed",
+          "ar-SA": "موافق",
+          "es-ES": "de acuerdo",
+          "fr-FR": "d'accord",
+          "hi-IN": "सहमत",
+          "pl-PL": "zgoda",
+          "ro-RO": "de acord",
+          "tr-TR": "anlaştık",
+          "uk-UA": "згоден",
+          "uz-UZ": "kelishdik"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, ich muss welches kaufen.",
+        "translation": {
+          "ru-RU": "Нет, мне нужно купить немного.",
+          "en-US": "No, I need to buy some.",
+          "ar-SA": "لا، يجب أن أشتري بعضاً منه.",
+          "es-ES": "No, tengo que comprar un poco.",
+          "fr-FR": "Non, je dois en acheter.",
+          "hi-IN": "नहीं, मुझे कुछ खरीदना होगा।",
+          "pl-PL": "Nie, muszę trochę kupić.",
+          "ro-RO": "Nu, trebuie să cumpăr ceva.",
+          "tr-TR": "Hayır, biraz almam lazım.",
+          "uk-UA": "Ні, мені потрібно купити трохи.",
+          "uz-UZ": "Yo'q, biroz sotib olishim kerak."
+        },
+        "nextStep": "store_offer"
+      },
+      {
+        "text": "Nein, wir haben kein Popcorn hier.",
+        "translation": {
+          "ru-RU": "Нет, у нас здесь нет попкорна.",
+          "en-US": "No, we don't have any popcorn here.",
+          "ar-SA": "لا، ليس لدينا فشار هنا.",
+          "es-ES": "No, no tenemos palomitas aquí.",
+          "fr-FR": "Non, nous n'avons pas de pop-corn ici.",
+          "hi-IN": "नहीं, हमारे पास यहाँ पॉपकॉर्न नहीं है।",
+          "pl-PL": "Nie, nie mamy tu popcornu.",
+          "ro-RO": "Nu, nu avem popcorn aici.",
+          "tr-TR": "Hayır, burada hiç patlamış mısırımız yok.",
+          "uk-UA": "Ні, у нас тут немає попкорну.",
+          "uz-UZ": "Yo'q, bizda bu yerda popcorn yo'q."
+        },
+        "nextStep": "store_offer"
+      }
+    ],
+    "defaultNext": "store_offer"
+  },
+  "store_offer": {
+    "botText": "Kein Problem, ich gehe kurz zum Laden.",
+    "botTranslation": {
+      "ru-RU": "Без проблем, я быстро схожу в магазин.",
+      "en-US": "No problem, I'll quickly go to the store.",
+      "ar-SA": "لا مشكلة، سأذهب سريعاً إلى المتجر.",
+      "es-ES": "No hay problema, voy un momento a la tienda.",
+      "fr-FR": "Pas de problème, je vais vite au magasin.",
+      "hi-IN": "कोई बात नहीं, मैं थोड़ी देर के लिए दुकान पर जाता हूँ।",
+      "pl-PL": "Nie ma sprawy, skoczę na chwilę do sklepu.",
+      "ro-RO": "Nicio problemă, merg repede până la magazin.",
+      "tr-TR": "Sorun değil, hemen dükkana gidiyorum.",
+      "uk-UA": "Без проблем, я швидко сходжу в магазин.",
+      "uz-UZ": "Muammo yo'q, men tezda do'konga boraman."
+    },
+    "vocabulary": [
+      {
+        "german": "der Laden",
+        "translation": {
+          "ru-RU": "магазин",
+          "en-US": "store",
+          "ar-SA": "متجر",
+          "es-ES": "tienda",
+          "fr-FR": "magasin",
+          "hi-IN": "दुकान",
+          "pl-PL": "sklep",
+          "ro-RO": "magazin",
+          "tr-TR": "dükkan",
+          "uk-UA": "магазин",
+          "uz-UZ": "do'kon"
+        }
+      },
+      {
+        "german": "kurz",
+        "translation": {
+          "ru-RU": "быстро / ненадолго",
+          "en-US": "briefly / shortly",
+          "ar-SA": "سريعاً",
+          "es-ES": "un momento",
+          "fr-FR": "vite",
+          "hi-IN": "थोड़ी देर",
+          "pl-PL": "na chwilę",
+          "ro-RO": "repede",
+          "tr-TR": "kısaca",
+          "uk-UA": "швидко",
+          "uz-UZ": "tezda"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke, das ist sehr lieb von dir.",
+        "translation": {
+          "ru-RU": "Спасибо, это очень мило с твоей стороны.",
+          "en-US": "Thank you, that's very sweet of you.",
+          "ar-SA": "شكراً لكِ، هذا لطف كبير منكِ.",
+          "es-ES": "Gracias, es muy amable de tu parte.",
+          "fr-FR": "Merci, c'est très gentil de ta part.",
+          "hi-IN": "धन्यवाद, यह आपकी बहुत दयालुता है।",
+          "pl-PL": "Dziękuję, to bardzo miłe z twojej strony.",
+          "ro-RO": "Mulțumesc, este foarte drăguț din partea ta.",
+          "tr-TR": "Teşekkürler, çok naziksin.",
+          "uk-UA": "Дякую, це дуже мило з твого боку.",
+          "uz-UZ": "Rahmat, bu sening tomondan juda yoqimli ish."
+        },
+        "nextStep": "goodbye_bot"
+      },
+      {
+        "text": "Super, vielen Dank! Du bist sehr nett.",
+        "translation": {
+          "ru-RU": "Супер, большое спасибо! Ты очень добр.",
+          "en-US": "Super, thank you so much! You are very kind.",
+          "ar-SA": "رائع، شكراً جزيلاً! أنت لطيف للغاية.",
+          "es-ES": "¡Súper, muchas gracias! Eres muy amable.",
+          "fr-FR": "Super, merci beaucoup ! Tu es très gentil.",
+          "hi-IN": "सुपर, बहुत-बहुत धन्यवाद! आप बहुत अच्छे हैं।",
+          "pl-PL": "Super, wielkie dzięki! Jesteś bardzo miły.",
+          "ro-RO": "Super, mulțumesc mult! Ești foarte amabil.",
+          "tr-TR": "Harika, çok teşekkürler! Çok iyisin.",
+          "uk-UA": "Супер, красно дякую! Ти дуже добрий.",
+          "uz-UZ": "Super, katta rahmat! Sen juda mehribonsan."
+        },
+        "nextStep": "goodbye_bot"
+      }
+    ],
+    "defaultNext": "goodbye_bot"
+  },
+  "goodbye_bot": {
+    "botText": "Alles klar, bis gleich!",
+    "botTranslation": {
+      "ru-RU": "Всё понятно, до скорого!",
+      "en-US": "All right, see you soon!",
+      "ar-SA": "حسنًا، أراكِ بعد قليل!",
+      "es-ES": "Muy bien, ¡hasta ahora!",
+      "fr-FR": "D'accord, à tout de suite !",
+      "hi-IN": "सब ठीक है, जल्द ही मिलते हैं!",
+      "pl-PL": "Wszystko jasne, do zobaczenia za chwilę!",
+      "ro-RO": "În regulă, ne vedem imediat!",
+      "tr-TR": "Tamamdır, yakında görüşürüz!",
+      "uk-UA": "Все зрозуміло, до зустрічі!",
+      "uz-UZ": "Kelishdik, tezda ko'rishguncha!"
+    },
+    "vocabulary": [
+      {
+        "german": "bis gleich",
+        "translation": {
+          "ru-RU": "до скорого",
+          "en-US": "see you soon",
+          "ar-SA": "أراك قريباً",
+          "es-ES": "hasta ahora",
+          "fr-FR": "à tout de suite",
+          "hi-IN": "जल्द मिलते हैं",
+          "pl-PL": "do zobaczenia za chwilę",
+          "ro-RO": "pe curând",
+          "tr-TR": "yakında görüşürüz",
+          "uk-UA": "до скорої зустрічі",
+          "uz-UZ": "tezda ko'rishguncha"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Bis gleich!",
+        "translation": {
+          "ru-RU": "До скорого!",
+          "en-US": "See you soon!",
+          "ar-SA": "أراكِ بعد قليل!",
+          "es-ES": "¡Hasta ahora!",
+          "fr-FR": "À tout de suite !",
+          "hi-IN": "जल्द ही मिलते हैं!",
+          "pl-PL": "Do zobaczenia!",
+          "ro-RO": "Pe curând!",
+          "tr-TR": "Görüşmek üzere!",
+          "uk-UA": "До зустрічі!",
+          "uz-UZ": "Ko'rishguncha!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Bis gleich! Tschüss!",
+        "translation": {
+          "ru-RU": "До скорого! Пока!",
+          "en-US": "See you soon! Bye!",
+          "ar-SA": "أراكِ بعد قليل! وداعاً!",
+          "es-ES": "¡Hasta ahora! ¡Adiós!",
+          "fr-FR": "À tout de suite ! Salut !",
+          "hi-IN": "जल्द ही मिलते हैं! बाय!",
+          "pl-PL": "Do zobaczenia! Cześć!",
+          "ro-RO": "Pe curând! Pa!",
+          "tr-TR": "Görüşmek üzere! Hoşça kal!",
+          "uk-UA": "До зустрічі! Бувай!",
+          "uz-UZ": "Ko'rishguncha! Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

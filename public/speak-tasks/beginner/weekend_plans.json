@@ -1,0 +1,476 @@
+{
+  "start": {
+    "botText": "Anna, hallo! Hast du am Samstag Zeit?",
+    "botTranslation": {
+      "ru-RU": "Анна, привет! У тебя есть время в субботу?",
+      "en-US": "Anna, hello! Do you have time on Saturday?",
+      "ar-SA": "آنا، مرحباً! هل لديك وقت يوم السبت؟",
+      "es-ES": "¡Anna, hola! ¿Tienes tiempo el sábado?",
+      "fr-FR": "Anna, salut ! As-tu du temps samedi ?",
+      "hi-IN": "अन्ना, नमस्ते! क्या आपके पास शनिवार को समय है?",
+      "pl-PL": "Anna, cześć! Masz czas w sobotę?",
+      "ro-RO": "Anna, bună! Ai timp sâmbătă?",
+      "tr-TR": "Anna, merhaba! Cumartesi günü vaktin var mı?",
+      "uk-UA": "Анна, привіт! У тебе є час у суботу?",
+      "uz-UZ": "Anna, salom! Shanba kuni vaqting bormi?"
+    },
+    "tips": {
+      "ru-RU": "Дни недели берут у артикля мужского рода 'der' форму 'am' (am Samstag).",
+      "en-US": "Days of the week take the preposition 'am' (am Samstag).",
+      "ar-SA": "أيام الأسبوع تأخذ حرف الجر 'am' (am Samstag).",
+      "es-ES": "Los días de la semana toman la preposición 'am' (am Samstag).",
+      "fr-FR": "Les jours de la semaine prennent la préposition 'am' (am Samstag).",
+      "hi-IN": "सप्ताह के दिनों के साथ 'am' पूर्वसर्ग लगता है (am Samstag)।",
+      "pl-PL": "Dni tygodnia przyjmują przyimek 'am' (am Samstag).",
+      "ro-RO": "Zilele săptămânii iau prepoziția 'am' (am Samstag).",
+      "tr-TR": "Haftanın günleri 'am' edatını alır (am Samstag).",
+      "uk-UA": "Дні тижня беруть прийменник 'am' (am Samstag).",
+      "uz-UZ": "Hafta kunlari 'am' predlogini oladi (am Samstag)."
+    },
+    "options": [
+      {
+        "text": "Hallo Maria! Ja, ich habe Zeit. Was wollen wir machen?",
+        "translation": {
+          "ru-RU": "Привет Мария! Да, у меня есть время. Что мы хотим делать?",
+          "en-US": "Hello Maria! Yes, I have time. What do we want to do?",
+          "ar-SA": "مرحباً ماريا! نعم، لدي وقت. ماذا نريد أن نفعل؟",
+          "es-ES": "¡Hola Maria! Sí, tengo tiempo. ¿Qué queremos hacer?",
+          "fr-FR": "Salut Maria ! Oui, j'ai du temps. Que voulons-nous faire ?",
+          "hi-IN": "नमस्ते मारिया! हाँ, मेरे पास समय है। हम क्या करना चाहते हैं?",
+          "pl-PL": "Cześć Maria! Tak, mam czas. Co chcemy robić?",
+          "ro-RO": "Bună Maria! Da, am timp. Ce vrem să facem?",
+          "tr-TR": "Merhaba Maria! Evet, vaktim var. Ne yapmak istiyoruz?",
+          "uk-UA": "Привіт Марія! Так, у мене є час. Що ми хочемо робити?",
+          "uz-UZ": "Salom Mariya! Ha, menda vaqt bor. Nima qilmoqchimiz?"
+        },
+        "nextStep": "cinema_proposal"
+      },
+      {
+        "text": "Hallo! Ja, am Samstag habe ich Zeit. Was machen wir?",
+        "translation": {
+          "ru-RU": "Привет! Да, в субботу у меня есть время. Что делаем?",
+          "en-US": "Hello! Yes, I have time on Saturday. What are we doing?",
+          "ar-SA": "مرحباً! نعم، لدي وقت يوم السبت. ماذا سنفعل؟",
+          "es-ES": "¡Hola! Sí, el sábado tengo tiempo. ¿Qué hacemos?",
+          "fr-FR": "Salut ! Oui, samedi j'ai du temps. Qu'est-ce qu'on fait ?",
+          "hi-IN": "नमस्ते! हाँ, शनिवार को मेरे पास समय है। हम क्या कर रहे हैं?",
+          "pl-PL": "Cześć! Tak, w sobotę mam czas. Co robimy?",
+          "ro-RO": "Bună! Da, sâmbătă am timp. Ce facem?",
+          "tr-TR": "Merhaba! Evet, cumartesi günü vaktim var. Ne yapıyoruz?",
+          "uk-UA": "Привіт! Так, у суботу я маю час. Що робимо?",
+          "uz-UZ": "Salom! Ha, shanba kuni menda vaqt bor. Nima qilamiz?"
+        },
+        "nextStep": "cinema_proposal"
+      }
+    ],
+    "defaultNext": "cinema_proposal"
+  },
+  "cinema_proposal": {
+    "botText": "Ich möchte ins Kino gehen.",
+    "botTranslation": {
+      "ru-RU": "Я хочу пойти в кино.",
+      "en-US": "I want to go to the cinema.",
+      "ar-SA": "أريد الذهاب إلى السينما.",
+      "es-ES": "Quiero ir al cine.",
+      "fr-FR": "Je veux aller au cinéma.",
+      "hi-IN": "मैं सिनेमा जाना चाहता हूँ।",
+      "pl-PL": "Chcę iść do kina.",
+      "ro-RO": "Vreau să merg la cinema.",
+      "tr-TR": "Sinemaya gitmek istiyorum.",
+      "uk-UA": "Я хочу піти в кіно.",
+      "uz-UZ": "Men kinoga bormoqchiman."
+    },
+    "tips": {
+      "ru-RU": "Направление 'куда?' (Akkusativ) берет у артикля 'das' (das Kino) форму 'in das', которую мы сокращаем до 'ins'.",
+      "en-US": "For direction 'to' (Akkusativ), we use 'in das', which contracts to 'ins'.",
+      "es-ES": "Para la dirección 'hacia' (Akkusativ), usamos 'in das', que se contrae a 'ins'.",
+      "fr-FR": "Pour la direction 'vers' (Akkusativ), on utilise 'in das', qui se contracte en 'ins'.",
+      "hi-IN": "दिशा 'की ओर' (Akkusativ) के लिए, हम 'in das' का उपयोग करते हैं, जो 'ins' बन जाता है।",
+      "pl-PL": "Do określenia kierunku 'do' (Akkusativ) używamy 'in das', co skraca się do 'ins'.",
+      "ro-RO": "Pentru direcția 'spre' (Akkusativ), folosim 'in das', care se contractă la 'ins'.",
+      "tr-TR": "Yön belirtmek için (Akkusativ) 'in das' kullanırız, bu da 'ins' olarak kısalır.",
+      "uk-UA": "Напрямок 'куди?' (Akkusativ) бере форму 'in das', скорочуємо до 'ins'.",
+      "uz-UZ": "Yo'nalish 'qayerga?' (Akkusativ) uchun biz 'in das' ishlatamiz, u 'ins' ga qisqaradi."
+    },
+    "options": [
+      {
+        "text": "Gute Idee! Welchen Film wollen wir sehen?",
+        "translation": {
+          "ru-RU": "Хорошая идея! Какой фильм хотим посмотреть?",
+          "en-US": "Good idea! Which movie do we want to see?",
+          "ar-SA": "فكرة جيدة! أي فيلم نريد أن نرى؟",
+          "es-ES": "¡Buena idea! ¿Qué película queremos ver?",
+          "fr-FR": "Bonne idée ! Quel film voulons-nous voir ?",
+          "hi-IN": "अच्छा विचार! हम कौन सी फिल्म देखना चाहते हैं?",
+          "pl-PL": "Dobry pomysł! Jaki film chcemy obejrzeć?",
+          "ro-RO": "Bună idee! Ce film vrem să vedem?",
+          "tr-TR": "İyi fikir! Hangi filmi görmek istiyoruz?",
+          "uk-UA": "Хороша ідея! Який фільм хочемо подивитися?",
+          "uz-UZ": "Yaxshi fikr! Qaysi filmni ko'rmoqchimiz?"
+        },
+        "nextStep": "movie_time"
+      },
+      {
+        "text": "Super! Was wollen wir sehen?",
+        "translation": {
+          "ru-RU": "Супер! Что хотим посмотреть?",
+          "en-US": "Super! What do we want to see?",
+          "ar-SA": "ممتاز! ماذا نريد أن نرى؟",
+          "es-ES": "¡Súper! ¿Qué queremos ver?",
+          "fr-FR": "Super ! Qu'est-ce qu'on veut voir ?",
+          "hi-IN": "सुपर! हम क्या देखना चाहते हैं?",
+          "pl-PL": "Super! Co chcemy obejrzeć?",
+          "ro-RO": "Super! Ce vrem să vedem?",
+          "tr-TR": "Süper! Ne görmek istiyoruz?",
+          "uk-UA": "Супер! Що хочемо подивитися?",
+          "uz-UZ": "Super! Nimani ko'rmoqchimiz?"
+        },
+        "nextStep": "movie_time"
+      }
+    ],
+    "defaultNext": "movie_time"
+  },
+  "movie_time": {
+    "botText": "Der neue Film läuft um 18:00 Uhr.",
+    "botTranslation": {
+      "ru-RU": "Новый фильм идет в 18:00.",
+      "en-US": "The new movie plays at 18:00.",
+      "ar-SA": "الفيلم الجديد يعرض الساعة 18:00.",
+      "es-ES": "La nueva película empieza a las 18:00.",
+      "fr-FR": "Le nouveau film passe à 18h00.",
+      "hi-IN": "नई फिल्म 18:00 बजे चलती है।",
+      "pl-PL": "Nowy film grają o 18:00.",
+      "ro-RO": "Noul film rulează la ora 18:00.",
+      "tr-TR": "Yeni film saat 18:00'de oynuyor.",
+      "uk-UA": "Новий фільм йде о 18:00.",
+      "uz-UZ": "Yangi film soat 18:00 da boshlanadi."
+    },
+    "tips": {
+      "ru-RU": "Для точного времени (часов) всегда берем предлог 'um'. Вопрос 'Какой фильм?' (объект) берет у артикля 'der' форму 'welchen' (Akkusativ).",
+      "en-US": "Always use 'um' for exact time. For 'Which movie?' (object), 'der' becomes 'welchen' (Akkusativ).",
+      "es-ES": "Usa 'um' para la hora exacta. Para '¿Qué película?' (objeto), 'der' cambia a 'welchen' (Akkusativ).",
+      "fr-FR": "Utilisez 'um' pour l'heure exacte. Pour 'Quel film ?' (objet), 'der' devient 'welchen' (Akkusativ).",
+      "hi-IN": "सटीक समय के लिए हमेशा 'um' का प्रयोग करें। 'कौन सी फिल्म?' (कर्म) के लिए, 'der' 'welchen' (Akkusativ) बन जाता है।",
+      "pl-PL": "Dla dokładnego czasu zawsze używaj 'um'. Dla 'Jaki film?' (obiekt), 'der' zmienia się na 'welchen' (Akkusativ).",
+      "ro-RO": "Folosiți întotdeauna 'um' pentru ora exactă. Pentru 'Ce film?' (obiect), 'der' devine 'welchen' (Akkusativ).",
+      "tr-TR": "Tam saat için her zaman 'um' kullanın. 'Hangi film?' (nesne) için 'der' artikeli 'welchen' (Akkusativ) olur.",
+      "uk-UA": "Для точного часу завжди беремо 'um'. Питання 'Який фільм?' (об'єкт) бере форму 'welchen' (Akkusativ).",
+      "uz-UZ": "Aniq vaqt uchun har doim 'um' dan foydalaning. 'Qaysi film?' (obyekt) uchun 'der' artikli 'welchen' (Akkusativ) bo'ladi."
+    },
+    "options": [
+      {
+        "text": "Super, 18:00 Uhr passt mir gut.",
+        "translation": {
+          "ru-RU": "Супер, 18:00 мне хорошо подходит.",
+          "en-US": "Super, 18:00 works well for me.",
+          "ar-SA": "ممتاز، الساعة 18:00 تناسبني جيداً.",
+          "es-ES": "Súper, a las 18:00 me viene bien.",
+          "fr-FR": "Super, 18h00 me convient bien.",
+          "hi-IN": "सुपर, 18:00 बजे मेरे लिए ठीक रहेगा।",
+          "pl-PL": "Super, 18:00 mi pasuje.",
+          "ro-RO": "Super, ora 18:00 îmi convine bine.",
+          "tr-TR": "Süper, 18:00 bana uyar.",
+          "uk-UA": "Супер, 18:00 мені добре підходить.",
+          "uz-UZ": "Super, soat 18:00 menga yaxshi mos keladi."
+        },
+        "nextStep": "time_confirm"
+      },
+      {
+        "text": "Sehr gut. Ich habe um 18:00 Uhr Zeit.",
+        "translation": {
+          "ru-RU": "Очень хорошо. В 18:00 у меня есть время.",
+          "en-US": "Very good. I have time at 18:00.",
+          "ar-SA": "جيد جداً. لدي وقت الساعة 18:00.",
+          "es-ES": "Muy bien. Tengo tiempo a las 18:00.",
+          "fr-FR": "Très bien. J'ai du temps à 18h00.",
+          "hi-IN": "बहुत अच्छा। मेरे पास 18:00 बजे समय है।",
+          "pl-PL": "Bardzo dobrze. Mam czas o 18:00.",
+          "ro-RO": "Foarte bine. Am timp la ora 18:00.",
+          "tr-TR": "Çok iyi. Saat 18:00'de vaktim var.",
+          "uk-UA": "Дуже добре. О 18:00 я маю час.",
+          "uz-UZ": "Juda yaxshi. Soat 18:00 da vaqtim bor."
+        },
+        "nextStep": "time_confirm"
+      }
+    ],
+    "defaultNext": "time_confirm"
+  },
+  "time_confirm": {
+    "botText": "Wann wollen wir uns treffen?",
+    "botTranslation": {
+      "ru-RU": "Когда мы хотим встретиться?",
+      "en-US": "When do we want to meet?",
+      "ar-SA": "متى نريد أن نلتقي؟",
+      "es-ES": "¿Cuándo nos queremos encontrar?",
+      "fr-FR": "Quand voulons-nous nous rencontrer ?",
+      "hi-IN": "हम कब मिलना चाहते हैं?",
+      "pl-PL": "Kiedy chcemy się spotkać?",
+      "ro-RO": "Când vrem să ne întâlnim?",
+      "tr-TR": "Ne zaman buluşmak istiyoruz?",
+      "uk-UA": "Коли ми хочемо зустрітися?",
+      "uz-UZ": "Qachon uchrashmoqchimiz?"
+    },
+    "tips": {
+      "ru-RU": "В вопросе с модальным глаголом 'wollen' стоит на втором месте, а 'treffen' идет в самый конец.",
+      "en-US": "In a question with a modal verb, 'wollen' is in the second position and 'treffen' goes to the very end.",
+      "es-ES": "En una pregunta con verbo modal, 'wollen' va en segunda posición y 'treffen' al final.",
+      "fr-FR": "Dans une question avec un verbe modal, 'wollen' est en deuxième position et 'treffen' va à la toute fin.",
+      "hi-IN": "मोडल क्रिया वाले प्रश्न में, 'wollen' दूसरे स्थान पर होता है और 'treffen' बिल्कुल अंत में जाता है।",
+      "pl-PL": "W pytaniu z czasownikiem modalnym 'wollen' jest na drugim miejscu, a 'treffen' idzie na sam koniec.",
+      "ro-RO": "Într-o întrebare cu un verb modal, 'wollen' este pe poziția a doua, iar 'treffen' merge la sfârșit.",
+      "tr-TR": "Modal fiilli bir soruda 'wollen' ikinci sıradadır ve 'treffen' en sona gider.",
+      "uk-UA": "У питанні з модальним дієсловом 'wollen' стоїть на другому місці, а 'treffen' йде в кінець.",
+      "uz-UZ": "Modal fe'l ishtirok etgan savolda 'wollen' ikkinchi o'rinda turadi va 'treffen' eng oxiriga tushadi."
+    },
+    "options": [
+      {
+        "text": "Treffen wir uns um 17:30 Uhr am Kino?",
+        "translation": {
+          "ru-RU": "Встретимся в 17:30 у кино?",
+          "en-US": "Shall we meet at 17:30 at the cinema?",
+          "ar-SA": "هل نلتقي الساعة 17:30 عند السينما؟",
+          "es-ES": "¿Nos encontramos a las 17:30 en el cine?",
+          "fr-FR": "On se retrouve à 17h30 au cinéma ?",
+          "hi-IN": "क्या हम सिनेमा में 17:30 बजे मिलें?",
+          "pl-PL": "Spotkajmy się o 17:30 pod kinem?",
+          "ro-RO": "Ne întâlnim la 17:30 la cinema?",
+          "tr-TR": "Saat 17:30'da sinemada buluşalım mı?",
+          "uk-UA": "Зустрінемося о 17:30 біля кіно?",
+          "uz-UZ": "Soat 17:30 da kino oldida uchrashamizmi?"
+        },
+        "nextStep": "meeting_agree"
+      },
+      {
+        "text": "Ich bin um 17:30 Uhr am Kino. Ist das gut?",
+        "translation": {
+          "ru-RU": "Я буду в 17:30 у кино. Это хорошо?",
+          "en-US": "I will be at the cinema at 17:30. Is that good?",
+          "ar-SA": "سأكون عند السينما الساعة 17:30. هل هذا جيد؟",
+          "es-ES": "Estaré en el cine a las 17:30. ¿Está bien?",
+          "fr-FR": "Je serai au cinéma à 17h30. Est-ce bien ?",
+          "hi-IN": "मैं 17:30 बजे सिनेमा में रहूँगा। क्या यह ठीक है?",
+          "pl-PL": "Będę pod kinem o 17:30. Czy to dobrze?",
+          "ro-RO": "Voi fi la cinema la 17:30. Este bine?",
+          "tr-TR": "Saat 17:30'da sinemada olacağım. Bu iyi mi?",
+          "uk-UA": "Я буду о 17:30 біля кіно. Це добре?",
+          "uz-UZ": "Men soat 17:30 da kino oldida bo'laman. Bu yaxshimi?"
+        },
+        "nextStep": "meeting_agree"
+      }
+    ],
+    "defaultNext": "meeting_agree"
+  },
+  "meeting_agree": {
+    "botText": "Ja, das ist eine gute Idee.",
+    "botTranslation": {
+      "ru-RU": "Да, хорошая идея.",
+      "en-US": "Yes, that's a good idea.",
+      "ar-SA": "نعم، إنها فكرة جيدة.",
+      "es-ES": "Sí, es una buena idea.",
+      "fr-FR": "Oui, c'est une bonne idée.",
+      "hi-IN": "हाँ, यह एक अच्छा विचार है।",
+      "pl-PL": "Tak, to dobry pomysł.",
+      "ro-RO": "Da, este o idee bună.",
+      "tr-TR": "Evet, bu iyi bir fikir.",
+      "uk-UA": "Так, хороша ідея.",
+      "uz-UZ": "Ha, bu yaxshi fikr."
+    },
+    "tips": {
+      "ru-RU": "Возвратный глагол 'sich treffen' (встречаться). Мы встречаемся = 'wir treffen uns'.",
+      "en-US": "The reflexive verb 'sich treffen' (to meet). We meet = 'wir treffen uns'.",
+      "es-ES": "El verbo reflexivo 'sich treffen' (encontrarse). Nos encontramos = 'wir treffen uns'.",
+      "fr-FR": "Le verbe réfléchi 'sich treffen' (se rencontrer). Nous nous rencontrons = 'wir treffen uns'.",
+      "hi-IN": "रिफ्लेक्सिव क्रिया 'sich treffen' (मिलना)। हम मिलते हैं = 'wir treffen uns'।",
+      "pl-PL": "Czasownik zwrotny 'sich treffen' (spotykać się). My spotykamy się = 'wir treffen uns'.",
+      "ro-RO": "Verbul reflexiv 'sich treffen' (a se întâlni). Ne întâlnim = 'wir treffen uns'.",
+      "tr-TR": "'sich treffen' (buluşmak) dönüşlü fiili. Buluşuyoruz = 'wir treffen uns'.",
+      "uk-UA": "Зворотне дієслово 'sich treffen' (зустрічатися). Ми зустрічаємося = 'wir treffen uns'.",
+      "uz-UZ": "O'zlik fe'li 'sich treffen' (uchrashmoq). Biz uchrashamiz = 'wir treffen uns'."
+    },
+    "options": [
+      {
+        "text": "Ich kaufe die Tickets.",
+        "translation": {
+          "ru-RU": "Я куплю билеты.",
+          "en-US": "I will buy the tickets.",
+          "ar-SA": "سأشتري التذاكر.",
+          "es-ES": "Yo compraré las entradas.",
+          "fr-FR": "J'achète les billets.",
+          "hi-IN": "मैं टिकट खरीदूंगा।",
+          "pl-PL": "Ja kupię bilety.",
+          "ro-RO": "Eu cumpăr biletele.",
+          "tr-TR": "Biletleri ben alırım.",
+          "uk-UA": "Я куплю квитки.",
+          "uz-UZ": "Men chiptalarni sotib olaman."
+        },
+        "nextStep": "help_offer"
+      },
+      {
+        "text": "Ich bezahle die Tickets.",
+        "translation": {
+          "ru-RU": "Я оплачу билеты.",
+          "en-US": "I will pay for the tickets.",
+          "ar-SA": "سأدفع ثمن التذاكر.",
+          "es-ES": "Yo pagaré las entradas.",
+          "fr-FR": "Je paierai les billets.",
+          "hi-IN": "मैं टिकटों का भुगतान करूँगा।",
+          "pl-PL": "Ja zapłacę za bilety.",
+          "ro-RO": "Eu plătesc biletele.",
+          "tr-TR": "Biletlerin parasını ben öderim.",
+          "uk-UA": "Я оплачу квитки.",
+          "uz-UZ": "Men chiptalar uchun to'layman."
+        },
+        "nextStep": "help_offer"
+      }
+    ],
+    "defaultNext": "help_offer"
+  },
+  "help_offer": {
+    "botText": "Danke! Brauchst du Hilfe?",
+    "botTranslation": {
+      "ru-RU": "Спасибо! Тебе нужна помощь?",
+      "en-US": "Thanks! Do you need help?",
+      "ar-SA": "شكراً! هل تحتاجين إلى المساعدة؟",
+      "es-ES": "¡Gracias! ¿Necesitas ayuda?",
+      "fr-FR": "Merci ! As-tu besoin d'aide ?",
+      "hi-IN": "धन्यवाद! क्या आपको मदद चाहिए?",
+      "pl-PL": "Dzięki! Potrzebujesz pomocy?",
+      "ro-RO": "Mulțumesc! Ai nevoie de ajutor?",
+      "tr-TR": "Teşekkürler! Yardıma ihtiyacın var mı?",
+      "uk-UA": "Дякую! Тобі потрібна допомога?",
+      "uz-UZ": "Rahmat! Senga yordam kerakmi?"
+    },
+    "tips": {
+      "ru-RU": "Множественное число слова билеты — 'die Tickets'. Берем артикль множественного числа 'die'.",
+      "en-US": "The word 'Tickets' is plural and takes the article 'die'.",
+      "es-ES": "La palabra 'Tickets' es plural y toma el artículo 'die'.",
+      "fr-FR": "Le mot 'Tickets' est au pluriel et prend l'article 'die'.",
+      "hi-IN": "'Tickets' शब्द बहुवचन है और 'die' लेख लेता है।",
+      "pl-PL": "Słowo 'Tickets' jest w liczbie mnogiej i przyjmuje przedimek 'die'.",
+      "ro-RO": "Cuvântul 'Tickets' este la plural și ia articolul 'die'.",
+      "tr-TR": "'Tickets' kelimesi çoğuldur ve 'die' artikelini alır.",
+      "uk-UA": "Множина слова квитки — 'die Tickets'. Артикль 'die'.",
+      "uz-UZ": "'Tickets' so'zi ko'plikda va 'die' artiklini oladi."
+    },
+    "options": [
+      {
+        "text": "Nein, danke. Alles klar.",
+        "translation": {
+          "ru-RU": "Нет, спасибо. Всё ок.",
+          "en-US": "No, thanks. Everything is fine.",
+          "ar-SA": "لا، شكراً. كل شيء واضح.",
+          "es-ES": "No, gracias. Todo está bien.",
+          "fr-FR": "Non, merci. Tout est clair.",
+          "hi-IN": "नहीं, धन्यवाद। सब ठीक है।",
+          "pl-PL": "Nie, dziękuję. Wszystko w porządku.",
+          "ro-RO": "Nu, mulțumesc. Totul este în regulă.",
+          "tr-TR": "Hayır, teşekkürler. Her şey yolunda.",
+          "uk-UA": "Ні, дякую. Все гаразд.",
+          "uz-UZ": "Yo'q, rahmat. Hammasi joyida."
+        },
+        "nextStep": "goodbye_bot"
+      },
+      {
+        "text": "Nein, ich brauche keine Hilfe.",
+        "translation": {
+          "ru-RU": "Нет, мне не нужна помощь.",
+          "en-US": "No, I don't need any help.",
+          "ar-SA": "لا، لا أحتاج إلى مساعدة.",
+          "es-ES": "No, no necesito ayuda.",
+          "fr-FR": "Non, je n'ai pas besoin d'aide.",
+          "hi-IN": "नहीं, मुझे किसी मदद की आवश्यकता नहीं है।",
+          "pl-PL": "Nie, nie potrzebuję pomocy.",
+          "ro-RO": "Nu, nu am nevoie de ajutor.",
+          "tr-TR": "Hayır, yardıma ihtiyacım yok.",
+          "uk-UA": "Ні, мені не потрібна допомога.",
+          "uz-UZ": "Yo'q, menga yordam kerak emas."
+        },
+        "nextStep": "goodbye_bot"
+      }
+    ],
+    "defaultNext": "goodbye_bot"
+  },
+  "goodbye_bot": {
+    "botText": "Prima. Bis Samstag!",
+    "botTranslation": {
+      "ru-RU": "Отлично. До субботы!",
+      "en-US": "Great. See you on Saturday!",
+      "ar-SA": "ممتاز. إلى يوم السبت!",
+      "es-ES": "Genial. ¡Hasta el sábado!",
+      "fr-FR": "Super. À samedi !",
+      "hi-IN": "बहुत बढ़िया। शनिवार को मिलते हैं!",
+      "pl-PL": "Świetnie. Do soboty!",
+      "ro-RO": "Grozav. Pe sâmbătă!",
+      "tr-TR": "Harika. Cumartesi görüşürüz!",
+      "uk-UA": "Чудово. До суботи!",
+      "uz-UZ": "Ajoyib. Shanbagacha!"
+    },
+    "tips": {
+      "ru-RU": "Отрицание существительного 'die Hilfe' берет у артикля женского рода 'eine' букву 'k' -> 'keine Hilfe'.",
+      "en-US": "To negate the feminine noun 'die Hilfe', 'eine' becomes 'keine'.",
+      "es-ES": "Para negar el sustantivo femenino 'die Hilfe', 'eine' se convierte en 'keine'.",
+      "fr-FR": "Pour nier le nom féminin 'die Hilfe', 'eine' devient 'keine'.",
+      "hi-IN": "स्त्रीलिंग संज्ञा 'die Hilfe' को नकारने के लिए, 'eine' 'keine' बन जाता है।",
+      "pl-PL": "Aby zaprzeczyć rzeczownikowi żeńskiemu 'die Hilfe', 'eine' staje się 'keine'.",
+      "ro-RO": "Pentru a nega substantivul feminin 'die Hilfe', 'eine' devine 'keine'.",
+      "tr-TR": "Dişil isim 'die Hilfe'yi olumsuz yapmak için 'eine', 'keine' olur.",
+      "uk-UA": "Заперечення іменника 'die Hilfe' бере форму 'keine Hilfe'.",
+      "uz-UZ": "Ayol jinsidagi 'die Hilfe' otini inkor qilish uchun 'eine' 'keine' ga aylanadi."
+    },
+    "options": [
+      {
+        "text": "Bis Samstag! Tschüss!",
+        "translation": {
+          "ru-RU": "До субботы! Пока!",
+          "en-US": "See you on Saturday! Bye!",
+          "ar-SA": "إلى يوم السبت! وداعاً!",
+          "es-ES": "¡Hasta el sábado! ¡Adiós!",
+          "fr-FR": "À samedi ! Salut !",
+          "hi-IN": "शनिवार को मिलते हैं! अलविदा!",
+          "pl-PL": "Do soboty! Cześć!",
+          "ro-RO": "Pe sâmbătă! Pa!",
+          "tr-TR": "Cumartesi görüşürüz! Hoşça kal!",
+          "uk-UA": "До суботи! Бувай!",
+          "uz-UZ": "Shanbagacha! Xayr!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Tschüss, bis dann!",
+        "translation": {
+          "ru-RU": "Пока, до связи!",
+          "en-US": "Bye, see you then!",
+          "ar-SA": "وداعاً، أراك حينها!",
+          "es-ES": "¡Adiós, nos vemos entonces!",
+          "fr-FR": "Salut, à plus !",
+          "hi-IN": "अलविदा, फिर मिलते हैं!",
+          "pl-PL": "Cześć, na razie!",
+          "ro-RO": "Pa, ne vedem atunci!",
+          "tr-TR": "Hoşça kal, görüşmek üzere!",
+          "uk-UA": "Бувай, до зв'язку!",
+          "uz-UZ": "Xayr, ko'rishguncha!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है.",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

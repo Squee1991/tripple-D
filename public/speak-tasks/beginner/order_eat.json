@@ -1,0 +1,613 @@
+{
+  "start": {
+    "botText": "Pizzeria Bella Italia, guten Tag!",
+    "botTranslation": {
+      "ru-RU": "Пиццерия «Белла Италия», добрый день!",
+      "en-US": "Pizzeria Bella Italia, good day!",
+      "ar-SA": "مطعم بيتزا بيلا إيطاليا، طاب يومك!",
+      "es-ES": "Pizzería Bella Italia, ¡buen día!",
+      "fr-FR": "Pizzeria Bella Italia, bonjour !",
+      "hi-IN": "पिज़्ज़ेरिया बेला इटालिया, शुभ दिन!",
+      "pl-PL": "Pizzeria Bella Italia, dzień dobry!",
+      "ro-RO": "Pizzeria Bella Italia, bună ziua!",
+      "tr-TR": "Bella Italia Pizzeriası, iyi günler!",
+      "uk-UA": "Піцерія «Белла Італія», добрий день!",
+      "uz-UZ": "Bella Italia pitsseriyasi, xayrli kun!"
+    },
+    "vocabulary": [
+      {
+        "german": "die Pizzeria",
+        "translation": {
+          "ru-RU": "пиццерия",
+          "en-US": "pizzeria",
+          "ar-SA": "مطعم بيتزا",
+          "es-ES": "pizzería",
+          "fr-FR": "pizzeria",
+          "hi-IN": "पिज़्ज़ेरिया",
+          "pl-PL": "pizzeria",
+          "ro-RO": "pizzerie",
+          "tr-TR": "pizzacı",
+          "uk-UA": "піцерія",
+          "uz-UZ": "pitsseriya"
+        }
+      },
+      {
+        "german": "guten Tag",
+        "translation": {
+          "ru-RU": "добрый день",
+          "en-US": "good day",
+          "ar-SA": "طاب يومك",
+          "es-ES": "buen día",
+          "fr-FR": "bonjour",
+          "hi-IN": "शुभ दिन",
+          "pl-PL": "dzień dobry",
+          "ro-RO": "bună ziua",
+          "tr-TR": "iyi günler",
+          "uk-UA": "добрий день",
+          "uz-UZ": "xayrli kun"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag, ich möchte gerne etwas zu essen bestellen.",
+        "translation": {
+          "ru-RU": "Добрый день, я хотел(а) бы заказать что-нибудь поесть.",
+          "en-US": "Good day, I would like to order something to eat.",
+          "ar-SA": "طاب يومك، أود طلب شيء لآكله.",
+          "es-ES": "Buen día, me gustaría pedir algo de comer.",
+          "fr-FR": "Bonjour, je voudrais commander quelque chose à manger.",
+          "hi-IN": "शुभ दिन, मैं कुछ खाने का आर्डर देना चाहूंगी।",
+          "pl-PL": "Dzień dobry, chciałabym zamówić coś do jedzenia.",
+          "ro-RO": "Bună ziua, aș dori să comand ceva de mâncare.",
+          "tr-TR": "İyi günler, yiyecek bir şeyler sipariş etmek istiyorum.",
+          "uk-UA": "Добрий день, я хотіла б замовити щось поїсти.",
+          "uz-UZ": "Xayrli kun, men yeyishga biror narsa buyurtma qilmoqchiman."
+        },
+        "nextStep": "was_darf_sein"
+      },
+      {
+        "text": "Guten Tag, ich würde gerne eine Pizza bestellen.",
+        "translation": {
+          "ru-RU": "Добрый день, я хотел(а) бы заказать пиццу.",
+          "en-US": "Good day, I would like to order a pizza.",
+          "ar-SA": "طاب يومك، أود طلب بيتزا.",
+          "es-ES": "Buen día, me gustaría pedir una pizza.",
+          "fr-FR": "Bonjour, je voudrais commander une pizza.",
+          "hi-IN": "शुभ दिन, मैं एक पिज्जा ऑर्डर करना चाहूंगी।",
+          "pl-PL": "Dzień dobry, chciałabym zamówić pizzę.",
+          "ro-RO": "Bună ziua, aș dori să comand o pizza.",
+          "tr-TR": "İyi günler, bir pizza sipariş etmek istiyorum.",
+          "uk-UA": "Добрий день, я хотіла б замовити піцу.",
+          "uz-UZ": "Xayrli kun, men pitssa buyurtma qilmoqchiman."
+        },
+        "nextStep": "was_darf_sein"
+      }
+    ],
+    "defaultNext": "was_darf_sein"
+  },
+  "was_darf_sein": {
+    "botText": "Sehr gerne. Was darf es denn sein?",
+    "botTranslation": {
+      "ru-RU": "С удовольствием. Что бы Вы хотели?",
+      "en-US": "With pleasure. What would you like?",
+      "ar-SA": "بكل سرور. ماذا تودين؟",
+      "es-ES": "Con mucho gusto. ¿Qué le gustaría?",
+      "fr-FR": "Avec plaisir. Que désirez-vous ?",
+      "hi-IN": "बड़ी खुशी से। आप क्या चाहेंगी?",
+      "pl-PL": "Z przyjemnością. Na co ma pani ochotę?",
+      "ro-RO": "Cu mare drag. Ce doriți?",
+      "tr-TR": "Memnuniyetle. Ne arzu ederdiniz?",
+      "uk-UA": "З задоволенням. Що б Ви хотіли?",
+      "uz-UZ": "Bajonidil. Nima xohlaysiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "sehr gerne",
+        "translation": {
+          "ru-RU": "с удовольствием",
+          "en-US": "with pleasure",
+          "ar-SA": "بكل سرور",
+          "es-ES": "con gusto",
+          "fr-FR": "avec plaisir",
+          "hi-IN": "खुशी से",
+          "pl-PL": "z przyjemnością",
+          "ro-RO": "cu plăcere",
+          "tr-TR": "memnuniyetle",
+          "uk-UA": "із задоволенням",
+          "uz-UZ": "bajonidil"
+        }
+      },
+      {
+        "german": "was darf",
+        "translation": {
+          "ru-RU": "что можно",
+          "en-US": "what may",
+          "ar-SA": "ماذا يمكن",
+          "es-ES": "qué puede",
+          "fr-FR": "que puis-je",
+          "hi-IN": "क्या हो सकता है",
+          "pl-PL": "co podać",
+          "ro-RO": "ce doriți",
+          "tr-TR": "ne arzu",
+          "uk-UA": "що можна",
+          "uz-UZ": "nima xohlaysiz"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich nehme eine Pizza Salami und einen Salat.",
+        "translation": {
+          "ru-RU": "Я возьму пиццу Салями и салат.",
+          "en-US": "I'll take a salami pizza and a salad.",
+          "ar-SA": "سآخذ بيتزا بالسلامي وسلطة.",
+          "es-ES": "Tomaré una pizza de salami y una ensalada.",
+          "fr-FR": "Je prendrai une pizza au salami et une salade.",
+          "hi-IN": "मैं एक सलामी पिज्जा और एक सलाद लूंगी।",
+          "pl-PL": "Wezmę pizzę salami i sałatkę.",
+          "ro-RO": "Voi lua o pizza cu salam și o salată.",
+          "tr-TR": "Bir salamlı pizza ve bir salata alayım.",
+          "uk-UA": "Я візьму піцу Салямі та салат.",
+          "uz-UZ": "Men Salami pitssasi va salat olaman."
+        },
+        "nextStep": "trinken"
+      },
+      {
+        "text": "Für mich bitte eine Pizza Margherita und einen Döner.",
+        "translation": {
+          "ru-RU": "Мне, пожалуйста, пиццу Маргарита и донер.",
+          "en-US": "For me, a Margherita pizza and a doner kebab, please.",
+          "ar-SA": "لي من فضلك، بيتزا مارغريتا وشاورما.",
+          "es-ES": "Para mí una pizza margarita y un döner, por favor.",
+          "fr-FR": "Pour moi, s'il vous plaît, une pizza Margherita et un kebab.",
+          "hi-IN": "मेरे लिए कृपया एक मार्गेरिटा पिज्जा और एक डोनर कबाब।",
+          "pl-PL": "Dla mnie proszę pizzę margheritę i kebab.",
+          "ro-RO": "Pentru mine, vă rog, o pizza Margherita și un kebab.",
+          "tr-TR": "Benim için lütfen bir Margarita pizza ve bir döner.",
+          "uk-UA": "Мені, будь ласка, піцу Маргарита та донер.",
+          "uz-UZ": "Menga, iltimos, Margarita pitssasi va doner."
+        },
+        "nextStep": "trinken"
+      }
+    ],
+    "defaultNext": "trinken"
+  },
+  "trinken": {
+    "botText": "Möchten Sie dazu noch etwas trinken?",
+    "botTranslation": {
+      "ru-RU": "Хотите к этому еще что-нибудь попить?",
+      "en-US": "Would you like something to drink with that?",
+      "ar-SA": "هل تودين شيئاً لتشربيه مع ذلك؟",
+      "es-ES": "¿Le gustaría beber algo con eso?",
+      "fr-FR": "Voudriez-vous boire quelque chose avec ça ?",
+      "hi-IN": "क्या आप इसके साथ कुछ पीना चाहेंगी?",
+      "pl-PL": "Czy chciałaby pani coś do picia?",
+      "ro-RO": "Ați dori și ceva de băut?",
+      "tr-TR": "Yanında içecek bir şey ister misiniz?",
+      "uk-UA": "Хочете до цього ще щось попити?",
+      "uz-UZ": "Bunga qo'shimcha ichishga ham biror narsa xohlaysizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "dazu",
+        "translation": {
+          "ru-RU": "к этому",
+          "en-US": "with that",
+          "ar-SA": "مع ذلك",
+          "es-ES": "con eso",
+          "fr-FR": "avec ça",
+          "hi-IN": "इसके साथ",
+          "pl-PL": "do tego",
+          "ro-RO": "la asta",
+          "tr-TR": "yanında",
+          "uk-UA": "до цього",
+          "uz-UZ": "bunga qo'shimcha"
+        }
+      },
+      {
+        "german": "trinken",
+        "translation": {
+          "ru-RU": "пить",
+          "en-US": "to drink",
+          "ar-SA": "يشرب",
+          "es-ES": "beber",
+          "fr-FR": "boire",
+          "hi-IN": "पीना",
+          "pl-PL": "pić",
+          "ro-RO": "a bea",
+          "tr-TR": "içmek",
+          "uk-UA": "пити",
+          "uz-UZ": "ichmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, bitte eine Cola dazu.",
+        "translation": {
+          "ru-RU": "Да, пожалуйста, колу к этому.",
+          "en-US": "Yes, a cola with that, please.",
+          "ar-SA": "نعم، كولا مع ذلك من فضلك.",
+          "es-ES": "Sí, una cola con eso, por favor.",
+          "fr-FR": "Oui, un cola avec ça, s'il vous plaît.",
+          "hi-IN": "हाँ, कृपया इसके साथ एक कोला।",
+          "pl-PL": "Tak, proszę o colę do tego.",
+          "ro-RO": "Da, vă rog o cola la asta.",
+          "tr-TR": "Evet, lütfen yanına bir kola.",
+          "uk-UA": "Так, будь ласка, колу до цього.",
+          "uz-UZ": "Ha, iltimos, bunga qo'shimcha kola."
+        },
+        "nextStep": "wohin"
+      },
+      {
+        "text": "Ja, ich hätte gerne eine Sprite.",
+        "translation": {
+          "ru-RU": "Да, я хотела бы спрайт.",
+          "en-US": "Yes, I would like a Sprite.",
+          "ar-SA": "نعم، أود سبرايت.",
+          "es-ES": "Sí, me gustaría un Sprite.",
+          "fr-FR": "Oui, je voudrais un Sprite.",
+          "hi-IN": "हाँ, मैं एक स्प्राइट लेना चाहूँगी।",
+          "pl-PL": "Tak, poproszę o Sprite'a.",
+          "ro-RO": "Da, aș dori un Sprite.",
+          "tr-TR": "Evet, bir Sprite rica edeyim.",
+          "uk-UA": "Так, я б хотіла спрайт.",
+          "uz-UZ": "Ha, men sprayt xohlayman."
+        },
+        "nextStep": "wohin"
+      }
+    ],
+    "defaultNext": "wohin"
+  },
+  "wohin": {
+    "botText": "Gerne. Wohin soll ich die Bestellung liefern?",
+    "botTranslation": {
+      "ru-RU": "Хорошо. Куда мне доставить заказ?",
+      "en-US": "Alright. Where should I deliver the order?",
+      "ar-SA": "حسناً. إلى أين يجب أن أوصل الطلب؟",
+      "es-ES": "De acuerdo. ¿A dónde debo entregar el pedido?",
+      "fr-FR": "Entendu. Où dois-je livrer la commande ?",
+      "hi-IN": "ठीक है। मुझे ऑर्डर कहाँ डिलीवर करना चाहिए?",
+      "pl-PL": "Dobrze. Dokąd mam dostarczyć zamówienie?",
+      "ro-RO": "În regulă. Unde să livrez comanda?",
+      "tr-TR": "Peki. Siparişi nereye teslim etmeliyim?",
+      "uk-UA": "Добре. Куди мені доставити замовлення?",
+      "uz-UZ": "Yaxshi. Buyurtmani qayerga yetkazib beray?"
+    },
+    "vocabulary": [
+      {
+        "german": "wohin",
+        "translation": {
+          "ru-RU": "куда",
+          "en-US": "where to",
+          "ar-SA": "إلى أين",
+          "es-ES": "adónde",
+          "fr-FR": "où",
+          "hi-IN": "कहाँ",
+          "pl-PL": "dokąd",
+          "ro-RO": "încotro",
+          "tr-TR": "nereye",
+          "uk-UA": "куди",
+          "uz-UZ": "qayerga"
+        }
+      },
+      {
+        "german": "liefern",
+        "translation": {
+          "ru-RU": "доставить",
+          "en-US": "deliver",
+          "ar-SA": "يوصل",
+          "es-ES": "entregar",
+          "fr-FR": "livrer",
+          "hi-IN": "पहुंचाना",
+          "pl-PL": "dostarczyć",
+          "ro-RO": "a livra",
+          "tr-TR": "teslim etmek",
+          "uk-UA": "доставити",
+          "uz-UZ": "yetkazib bermoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Bitte an die Hauptstraße 12.",
+        "translation": {
+          "ru-RU": "Пожалуйста, на Хауптштрассе 12.",
+          "en-US": "To Hauptstraße 12, please.",
+          "ar-SA": "إلى شارع هاوبتشترسا 12، من فضلك.",
+          "es-ES": "A Hauptstraße 12, por favor.",
+          "fr-FR": "Au 12 Hauptstraße, s'il vous plaît.",
+          "hi-IN": "कृपया हाउटस्ट्रासे 12 पर।",
+          "pl-PL": "Na Hauptstraße 12, proszę.",
+          "ro-RO": "La Hauptstraße 12, vă rog.",
+          "tr-TR": "Hauptstraße 12'ye lütfen.",
+          "uk-UA": "Будь ласка, на Хауптштрассе 12.",
+          "uz-UZ": "Iltimos, Hauptstraße 12 ga."
+        },
+        "nextStep": "telefonnummer"
+      },
+      {
+        "text": "Die Adresse ist Blumenweg 5.",
+        "translation": {
+          "ru-RU": "Адрес — Блуменвег 5.",
+          "en-US": "The address is Blumenweg 5.",
+          "ar-SA": "العنوان هو بلومنويغ 5.",
+          "es-ES": "La dirección es Blumenweg 5.",
+          "fr-FR": "L'adresse est Blumenweg 5.",
+          "hi-IN": "पता ब्लुमेनवेग 5 है।",
+          "pl-PL": "Adres to Blumenweg 5.",
+          "ro-RO": "Adresa este Blumenweg 5.",
+          "tr-TR": "Adres Blumenweg 5.",
+          "uk-UA": "Адреса — Блуменвег 5.",
+          "uz-UZ": "Manzil - Blumenweg 5."
+        },
+        "nextStep": "telefonnummer"
+      }
+    ],
+    "defaultNext": "telefonnummer"
+  },
+  "telefonnummer": {
+    "botText": "Wie ist Ihre Telefonnummer für Rückfragen?",
+    "botTranslation": {
+      "ru-RU": "Какой ваш номер телефона для обратной связи?",
+      "en-US": "What is your phone number for queries?",
+      "ar-SA": "ما هو رقم هاتفك للاستفسارات؟",
+      "es-ES": "¿Cuál es su número de teléfono para consultas?",
+      "fr-FR": "Quel est votre numéro de téléphone pour toute question ?",
+      "hi-IN": "प्रश्नों के लिए आपका फोन नंबर क्या है?",
+      "pl-PL": "Jaki jest pani numer telefonu do kontaktu?",
+      "ro-RO": "Care este numărul dumneavoastră de telefon pentru întrebări?",
+      "tr-TR": "Sorular için telefon numaranız nedir?",
+      "uk-UA": "Який ваш номер телефону для зворотного зв'язку?",
+      "uz-UZ": "Savollar uchun telefon raqamingiz qanday?"
+    },
+    "vocabulary": [
+      {
+        "german": "Rückfragen",
+        "translation": {
+          "ru-RU": "вопросы / уточнения",
+          "en-US": "queries",
+          "ar-SA": "استفسارات",
+          "es-ES": "consultas",
+          "fr-FR": "questions",
+          "hi-IN": "प्रश्न",
+          "pl-PL": "pytania",
+          "ro-RO": "întrebări",
+          "tr-TR": "sorular",
+          "uk-UA": "питання",
+          "uz-UZ": "savollar"
+        }
+      },
+      {
+        "german": "die Telefonnummer",
+        "translation": {
+          "ru-RU": "номер телефона",
+          "en-US": "phone number",
+          "ar-SA": "رقم الهاتف",
+          "es-ES": "número de teléfono",
+          "fr-FR": "numéro de téléphone",
+          "hi-IN": "फोन नंबर",
+          "pl-PL": "numer telefonu",
+          "ro-RO": "număr de telefon",
+          "tr-TR": "telefon numarası",
+          "uk-UA": "номер телефону",
+          "uz-UZ": "telefon raqami"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Meine Nummer ist 0176 123 456 78.",
+        "translation": {
+          "ru-RU": "Мой номер 0176 123 456 78.",
+          "en-US": "My number is 0176 123 456 78.",
+          "ar-SA": "رقمي هو 0176 123 456 78.",
+          "es-ES": "Mi número es 0176 123 456 78.",
+          "fr-FR": "Mon numéro est le 0176 123 456 78.",
+          "hi-IN": "मेरा नंबर 0176 123 456 78 है।",
+          "pl-PL": "Mój numer to 0176 123 456 78.",
+          "ro-RO": "Numărul meu este 0176 123 456 78.",
+          "tr-TR": "Numaram 0176 123 456 78.",
+          "uk-UA": "Мій номер 0176 123 456 78.",
+          "uz-UZ": "Mening raqamim 0176 123 456 78."
+        },
+        "nextStep": "dauer"
+      },
+      {
+        "text": "Sie erreichen mich unter der 0176 123 456 78.",
+        "translation": {
+          "ru-RU": "Вы можете связаться со мной по номеру 0176 123 456 78.",
+          "en-US": "You can reach me at 0176 123 456 78.",
+          "ar-SA": "يمكنك الوصول إلي على 0176 123 456 78.",
+          "es-ES": "Puede localizarme en el 0176 123 456 78.",
+          "fr-FR": "Vous pouvez me joindre au 0176 123 456 78.",
+          "hi-IN": "आप मुझसे 0176 123 456 78 पर संपर्क कर सकते हैं।",
+          "pl-PL": "Zastaniecie mnie państwo pod numerem 0176 123 456 78.",
+          "ro-RO": "Mă puteți găsi la 0176 123 456 78.",
+          "tr-TR": "Bana 0176 123 456 78 numarasından ulaşabilirsiniz.",
+          "uk-UA": "Ви можете зв'язатися зі мною за номером 0176 123 456 78.",
+          "uz-UZ": "Men bilan 0176 123 456 78 raqami orqali bog'lanishingiz mumkin."
+        },
+        "nextStep": "dauer"
+      }
+    ],
+    "defaultNext": "dauer"
+  },
+  "dauer": {
+    "botText": "Alles klar. Das dauert etwa 45 Minuten.",
+    "botTranslation": {
+      "ru-RU": "Все ясно. Это займет около 45 минут.",
+      "en-US": "Alright. That will take about 45 minutes.",
+      "ar-SA": "حسناً. سيستغرق ذلك حوالي 45 دقيقة.",
+      "es-ES": "De acuerdo. Eso tardará unos 45 minutos.",
+      "fr-FR": "D'accord. Cela prendra environ 45 minutes.",
+      "hi-IN": "ठीक है। इसमें लगभग 45 मिनट लगेंगे।",
+      "pl-PL": "Wszystko jasne. Potrwa to około 45 minut.",
+      "ro-RO": "În regulă. Asta va dura cam 45 de minute.",
+      "tr-TR": "Pekala. Bu yaklaşık 45 dakika sürecek.",
+      "uk-UA": "Все ясно. Це займе близько 45 хвилин.",
+      "uz-UZ": "Tushunarli. Bu taxminan 45 daqiqa vaqt oladi."
+    },
+    "vocabulary": [
+      {
+        "german": "dauert",
+        "translation": {
+          "ru-RU": "длится / займет",
+          "en-US": "takes / lasts",
+          "ar-SA": "يستغرق",
+          "es-ES": "tarda",
+          "fr-FR": "prend",
+          "hi-IN": "लगता है",
+          "pl-PL": "trwa",
+          "ro-RO": "durează",
+          "tr-TR": "sürer",
+          "uk-UA": "триває",
+          "uz-UZ": "davom etadi"
+        }
+      },
+      {
+        "german": "etwa",
+        "translation": {
+          "ru-RU": "примерно",
+          "en-US": "about / roughly",
+          "ar-SA": "حوالي",
+          "es-ES": "aproximadamente",
+          "fr-FR": "environ",
+          "hi-IN": "लगभग",
+          "pl-PL": "około",
+          "ro-RO": "aproximativ",
+          "tr-TR": "yaklaşık",
+          "uk-UA": "приблизно",
+          "uz-UZ": "taxminan"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, vielen Dank!",
+        "translation": {
+          "ru-RU": "Все ясно, большое спасибо!",
+          "en-US": "Alright, thank you very much!",
+          "ar-SA": "حسناً، شكراً جزيلاً!",
+          "es-ES": "De acuerdo, ¡muchas gracias!",
+          "fr-FR": "D'accord, merci beaucoup !",
+          "hi-IN": "ठीक है, बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Wszystko jasne, bardzo dziękuję!",
+          "ro-RO": "În regulă, mulțumesc mult!",
+          "tr-TR": "Pekala, çok teşekkürler!",
+          "uk-UA": "Все ясно, велике дякую!",
+          "uz-UZ": "Tushunarli, katta rahmat!"
+        },
+        "nextStep": "verabschiedung"
+      },
+      {
+        "text": "Super, danke für die Info.",
+        "translation": {
+          "ru-RU": "Супер, спасибо за информацию.",
+          "en-US": "Super, thanks for the info.",
+          "ar-SA": "ممتاز، شكراً على المعلومة.",
+          "es-ES": "Genial, gracias por la información.",
+          "fr-FR": "Super, merci pour l'info.",
+          "hi-IN": "बढ़िया, जानकारी के लिए धन्यवाद।",
+          "pl-PL": "Super, dzięki za informację.",
+          "ro-RO": "Super, mersi de info.",
+          "tr-TR": "Süper, bilgi için teşekkürler.",
+          "uk-UA": "Супер, дякую за інформацію.",
+          "uz-UZ": "Ajoyib, ma'lumot uchun rahmat."
+        },
+        "nextStep": "verabschiedung"
+      }
+    ],
+    "defaultNext": "verabschiedung"
+  },
+  "verabschiedung": {
+    "botText": "Bitte, auf Wiederhören!",
+    "botTranslation": {
+      "ru-RU": "Пожалуйста, до свидания (по телефону)!",
+      "en-US": "You're welcome, goodbye (on the phone)!",
+      "ar-SA": "على الرحب، وداعاً (على الهاتف)!",
+      "es-ES": "¡De nada, adiós (por teléfono)!",
+      "fr-FR": "De rien, au revoir (au téléphone) !",
+      "hi-IN": "आपका स्वागत है, अलविदा (फोन पर)!",
+      "pl-PL": "Proszę, do usłyszenia!",
+      "ro-RO": "Cu plăcere, la revedere (la telefon)!",
+      "tr-TR": "Rica ederim, iyi günler (telefonda)!",
+      "uk-UA": "Будь ласка, до побачення (по телефону)!",
+      "uz-UZ": "Arzimaydi, xayr (telefonda)!"
+    },
+    "vocabulary": [
+      {
+        "german": "auf Wiederhören",
+        "translation": {
+          "ru-RU": "до свидания",
+          "en-US": "goodbye",
+          "ar-SA": "مع السلامة",
+          "es-ES": "adiós",
+          "fr-FR": "au revoir",
+          "hi-IN": "अलविदा",
+          "pl-PL": "do usłyszenia",
+          "ro-RO": "la revedere",
+          "tr-TR": "iyi günler",
+          "uk-UA": "до побачення",
+          "uz-UZ": "xayr"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Auf Wiederhören!",
+        "translation": {
+          "ru-RU": "До свидания!",
+          "en-US": "Goodbye!",
+          "ar-SA": "وداعاً!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Do usłyszenia!",
+          "ro-RO": "La revedere!",
+          "tr-TR": "İyi günler!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Danke, auf Wiederhören!",
+        "translation": {
+          "ru-RU": "Спасибо, до свидания!",
+          "en-US": "Thanks, goodbye!",
+          "ar-SA": "شكراً، وداعاً!",
+          "es-ES": "¡Gracias, adiós!",
+          "fr-FR": "Merci, au revoir !",
+          "hi-IN": "धन्यवाद, अलविदा!",
+          "pl-PL": "Dziękuję, do usłyszenia!",
+          "ro-RO": "Mulțumesc, la revedere!",
+          "tr-TR": "Teşekkürler, iyi günler!",
+          "uk-UA": "Дякую, до побачення!",
+          "uz-UZ": "Rahmat, xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

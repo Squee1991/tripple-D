@@ -1,19 +1,6 @@
 {
   "start": {
     "botText": "Guten Tag! Die Fahrkarten, bitte.",
-    "tips": {
-      "ar-SA": "كلمة 'Fahrkarten' هي صيغة الجمع لتذكرة السفر.",
-      "en-US": "The word 'Fahrkarten' is the plural form of ticket.",
-      "es-ES": "La palabra 'Fahrkarten' es la forma plural de billete.",
-      "fr-FR": "Le mot 'Fahrkarten' est le pluriel de billet.",
-      "hi-IN": "शब्द 'Fahrkarten' टिकट का बहुवचन रूप है।",
-      "pl-PL": "Słowo 'Fahrkarten' to liczba mnoga od biletu.",
-      "ro-RO": "Cuvântul 'Fahrkarten' este forma de plural pentru bilet.",
-      "ru-RU": "Слово 'Fahrkarten' — это множественное число от 'die Fahrkarte' (билет).",
-      "tr-TR": "'Fahrkarten' kelimesi biletin çoğul halidir.",
-      "uk-UA": "Слово 'Fahrkarten' — це множина від 'die Fahrkarte' (квиток).",
-      "uz-UZ": "'Fahrkarten' so'zi chiptaning ko'plik shaklidir."
-    },
     "botTranslation": {
       "ar-SA": "طاب يومك! التذاكر، من فضلك.",
       "en-US": "Good day! Tickets, please.",
@@ -27,6 +14,40 @@
       "uk-UA": "Добрий день! Ваші квитки, будь ласка.",
       "uz-UZ": "Xayrli kun! Chiptalarni ko'rsating, iltimos."
     },
+    "vocabulary": [
+      {
+        "german": "die Fahrkarten",
+        "translation": {
+          "ru-RU": "билеты",
+          "en-US": "tickets",
+          "ar-SA": "تذاكر",
+          "es-ES": "billetes",
+          "fr-FR": "billets",
+          "hi-IN": "टिकट",
+          "pl-PL": "bilety",
+          "ro-RO": "bilete",
+          "tr-TR": "biletler",
+          "uk-UA": "квитки",
+          "uz-UZ": "chiptalar"
+        }
+      },
+      {
+        "german": "bitte",
+        "translation": {
+          "ru-RU": "пожалуйста",
+          "en-US": "please",
+          "ar-SA": "من فضلك",
+          "es-ES": "por favor",
+          "fr-FR": "s'il vous plaît",
+          "hi-IN": "कृपया",
+          "pl-PL": "proszę",
+          "ro-RO": "vă rog",
+          "tr-TR": "lütfen",
+          "uk-UA": "будь ласка",
+          "uz-UZ": "iltimos"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Guten Tag! Hier, bitte.",
@@ -67,19 +88,6 @@
   },
   "check_ticket": {
     "botText": "Danke. Haben Sie auch einen Ausweis, bitte?",
-    "tips": {
-      "ar-SA": "الفعل 'haben' (يملك) يأخذ دائماً حالة النصب (Akkusativ).",
-      "en-US": "The verb 'haben' (to have) always requires Akkusativ.",
-      "es-ES": "El verbo 'haben' (tener) siempre requiere Akkusativ.",
-      "fr-FR": "Le verbe 'haben' (avoir) nécessite toujours l'Akkusativ.",
-      "hi-IN": "क्रिया 'haben' (पास होना) के लिए हमेशा Akkusativ की आवश्यकता होती है।",
-      "pl-PL": "Czasownik 'haben' (mieć) zawsze wymaga biernika (Akkusativ).",
-      "ro-RO": "Verbul 'haben' (a avea) necesită întotdeauna Akkusativ.",
-      "ru-RU": "Слово 'Ausweis' (паспорт/ID) мужского рода, после глагола 'haben' стоит в Akkusativ (einen).",
-      "tr-TR": "'haben' (sahip olmak) fiili her zaman Akkusativ gerektirir.",
-      "uk-UA": "Слово 'Ausweis' (паспорт/ID) чоловічого роду, після дієслова 'haben' стоїть у Akkusativ (einen).",
-      "uz-UZ": "'haben' (ega bo'lmoq) fe'li har doim Akkusativni talab qiladi."
-    },
     "botTranslation": {
       "ar-SA": "شكراً. هل معك بطاقة هوية أيضاً من فضلك؟",
       "en-US": "Thank you. Do you also have an ID card, please?",
@@ -93,6 +101,40 @@
       "uk-UA": "Дякую. У Вас є також посвідчення особи (паспорт)?",
       "uz-UZ": "Rahmat. Sizda shaxsni tasdiqlovchi hujjat ham bormi, iltimos?"
     },
+    "vocabulary": [
+      {
+        "german": "haben",
+        "translation": {
+          "ru-RU": "иметь",
+          "en-US": "to have",
+          "ar-SA": "يملك",
+          "es-ES": "tener",
+          "fr-FR": "avoir",
+          "hi-IN": "पास होना",
+          "pl-PL": "mieć",
+          "ro-RO": "a avea",
+          "tr-TR": "sahip olmak",
+          "uk-UA": "мати",
+          "uz-UZ": "ega bo'lmoq"
+        }
+      },
+      {
+        "german": "der Ausweis",
+        "translation": {
+          "ru-RU": "удостоверение личности",
+          "en-US": "ID card",
+          "ar-SA": "بطاقة هوية",
+          "es-ES": "documento de identidad",
+          "fr-FR": "pièce d'identité",
+          "hi-IN": "पहचान पत्र",
+          "pl-PL": "dowód tożsamości",
+          "ro-RO": "act de identitate",
+          "tr-TR": "kimlik",
+          "uk-UA": "посвідчення особи",
+          "uz-UZ": "shaxsni tasdiqlovchi hujjat"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, hier ist mein Ausweis.",
@@ -133,19 +175,6 @@
   },
   "check_id": {
     "botText": "Danke schön. Sie fahren nach Berlin, richtig?",
-    "tips": {
-      "ar-SA": "حرف الجر 'nach' يُستخدم دائماً مع أسماء المدن والبلدان.",
-      "en-US": "The preposition 'nach' is always used with names of cities and countries.",
-      "es-ES": "La preposición 'nach' se usa siempre con nombres de ciudades y países.",
-      "fr-FR": "La préposition 'nach' est toujours utilisée avec les noms de villes et de pays.",
-      "hi-IN": "पूर्वसर्ग 'nach' हमेशा शहरों और देशों के नामों के साथ प्रयोग किया जाता है।",
-      "pl-PL": "Przyimek 'nach' jest zawsze używany z nazwami miast i państw.",
-      "ro-RO": "Prepoziția 'nach' este folosită mereu cu nume de orașe și țări.",
-      "ru-RU": "Предлог 'nach' (в/до) используется при движении в города и страны.",
-      "tr-TR": "'nach' edatı her zaman şehir ve ülke isimleriyle kullanılır.",
-      "uk-UA": "Прийменник 'nach' (в/до) використовується при русі до міст і країн.",
-      "uz-UZ": "'nach' predlogi har doim shahar va mamlakat nomlari bilan ishlatiladi."
-    },
     "botTranslation": {
       "ar-SA": "شكراً لك. أنت مسافر إلى برلين، صحيح؟",
       "en-US": "Thank you. You are traveling to Berlin, right?",
@@ -159,6 +188,40 @@
       "uk-UA": "Велике дякую. Ви їдете до Берліна, вірно?",
       "uz-UZ": "Rahmat. Siz Berlinga ketyapsiz, shundaymi?"
     },
+    "vocabulary": [
+      {
+        "german": "fahren",
+        "translation": {
+          "ru-RU": "ехать",
+          "en-US": "to travel / drive",
+          "ar-SA": "يسافر",
+          "es-ES": "viajar / ir",
+          "fr-FR": "voyager / aller",
+          "hi-IN": "यात्रा करना",
+          "pl-PL": "jechać",
+          "ro-RO": "a călători / a merge",
+          "tr-TR": "seyahat etmek / gitmek",
+          "uk-UA": "їхати",
+          "uz-UZ": "sayohat qilmoq / bormoq"
+        }
+      },
+      {
+        "german": "richtig",
+        "translation": {
+          "ru-RU": "правильно / верно",
+          "en-US": "right / correct",
+          "ar-SA": "صحيح",
+          "es-ES": "correcto / ¿verdad?",
+          "fr-FR": "vrai / correct",
+          "hi-IN": "सही",
+          "pl-PL": "zgadza się / poprawnie",
+          "ro-RO": "corect / nu-i așa?",
+          "tr-TR": "doğru",
+          "uk-UA": "вірно",
+          "uz-UZ": "to'g'ri / shundaymi"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, genau.",
@@ -212,6 +275,40 @@
       "uk-UA": "Все в порядку. Ось Ваше посвідчення назад.",
       "uz-UZ": "Hammasi joyida. Mana hujjatingizni oling."
     },
+    "vocabulary": [
+      {
+        "german": "in Ordnung",
+        "translation": {
+          "ru-RU": "в порядке",
+          "en-US": "in order",
+          "ar-SA": "على ما يرام",
+          "es-ES": "en orden",
+          "fr-FR": "en ordre",
+          "hi-IN": "ठीक है",
+          "pl-PL": "w porządku",
+          "ro-RO": "în regulă",
+          "tr-TR": "yolunda",
+          "uk-UA": "в порядку",
+          "uz-UZ": "joyida"
+        }
+      },
+      {
+        "german": "zurück",
+        "translation": {
+          "ru-RU": "обратно / назад",
+          "en-US": "back",
+          "ar-SA": "عودة / استرجاع",
+          "es-ES": "de vuelta",
+          "fr-FR": "en retour",
+          "hi-IN": "वापस",
+          "pl-PL": "z powrotem",
+          "ro-RO": "înapoi",
+          "tr-TR": "geri",
+          "uk-UA": "назад",
+          "uz-UZ": "qaytarib"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke schön.",
@@ -252,19 +349,6 @@
   },
   "train_status": {
     "botText": "Gerne. Der Zug ist heute pünktlich. Wir sind bald da.",
-    "tips": {
-      "ar-SA": "'pünktlich' تعني في الوقت المحدد، عكسها 'Verspätung' (تأخير).",
-      "en-US": "'pünktlich' means on time, the opposite is 'Verspätung' (delay).",
-      "es-ES": "'pünktlich' significa puntual, lo opuesto es 'Verspätung' (retraso).",
-      "fr-FR": "'pünktlich' signifie à l'heure, le contraire est 'Verspätung' (retard).",
-      "hi-IN": "'pünktlich' का अर्थ है समय पर, विपरीत है 'Verspätung' (देरी)।",
-      "pl-PL": "'pünktlich' oznacza punktualnie, przeciwieństwo to 'Verspätung' (opóźnienie).",
-      "ro-RO": "'pünktlich' înseamnă la timp, opusul este 'Verspätung' (întârziere).",
-      "ru-RU": "'pünktlich' означает вовремя / пунктуально.",
-      "tr-TR": "'pünktlich' zamanında demektir, zıttı 'Verspätung' (gecikme) kelimesidir.",
-      "uk-UA": "'pünktlich' означає вчасно.",
-      "uz-UZ": "'pünktlich' o'z vaqtida degani, aksi esa 'Verspätung' (kechikish)."
-    },
     "botTranslation": {
       "ar-SA": "بكل سرور. القطار في موعده اليوم. سنصل قريباً.",
       "en-US": "You're welcome. The train is on time today. We will be there soon.",
@@ -278,6 +362,40 @@
       "uk-UA": "Будь ласка. Поїзд сьогодні йде за розкладом. Ми скоро будемо на місці.",
       "uz-UZ": "Arzimaydi. Poyezd bugun o'z vaqtida ketyapti. Tez orada yetib boramiz."
     },
+    "vocabulary": [
+      {
+        "german": "pünktlich",
+        "translation": {
+          "ru-RU": "вовремя / по расписанию",
+          "en-US": "on time / punctual",
+          "ar-SA": "في الوقت المحدد",
+          "es-ES": "puntual",
+          "fr-FR": "à l'heure",
+          "hi-IN": "समय पर",
+          "pl-PL": "punktualny",
+          "ro-RO": "la timp / punctual",
+          "tr-TR": "zamanında",
+          "uk-UA": "вчасно / за розкладом",
+          "uz-UZ": "o'z vaqtida"
+        }
+      },
+      {
+        "german": "bald",
+        "translation": {
+          "ru-RU": "скоро",
+          "en-US": "soon",
+          "ar-SA": "قريباً",
+          "es-ES": "pronto",
+          "fr-FR": "bientôt",
+          "hi-IN": "जल्द ही",
+          "pl-PL": "wkrótce",
+          "ro-RO": "curând",
+          "tr-TR": "yakında",
+          "uk-UA": "скоро",
+          "uz-UZ": "tez orada"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Sehr gut, danke.",
@@ -318,19 +436,6 @@
   },
   "wish_trip": {
     "botText": "Ich wünsche Ihnen noch eine gute Fahrt!",
-    "tips": {
-      "ar-SA": "التعبير 'eine gute Fahrt' في حالة النصب (Akkusativ) لأنها مفعول به.",
-      "en-US": "The phrase 'eine gute Fahrt' is Akkusativ because it is the object of the verb.",
-      "es-ES": "La frase 'eine gute Fahrt' está en Akkusativ porque es el objeto del verbo.",
-      "fr-FR": "L'expression 'eine gute Fahrt' est à l'Akkusativ car c'est l'objet du verbe.",
-      "hi-IN": "वाक्यांश 'eine gute Fahrt' Akkusativ है।",
-      "pl-PL": "Wyrażenie 'eine gute Fahrt' jest w bierniku (Akkusativ).",
-      "ro-RO": "Expresia 'eine gute Fahrt' este în Akkusativ.",
-      "ru-RU": "Фраза 'eine gute Fahrt' (хорошей поездки) стоит в Akkusativ.",
-      "tr-TR": "'eine gute Fahrt' ifadesi Akkusativ durumundadır.",
-      "uk-UA": "Фраза 'eine gute Fahrt' (гарної поїздки) стоїть у Akkusativ.",
-      "uz-UZ": "'eine gute Fahrt' iborasi Akkusativda keladi."
-    },
     "botTranslation": {
       "ar-SA": "أتمنى لك رحلة سعيدة!",
       "en-US": "I wish you a good trip!",
@@ -344,6 +449,40 @@
       "uk-UA": "Бажаю Вам гарної поїздки!",
       "uz-UZ": "Sizga oq yo'l tilayman!"
     },
+    "vocabulary": [
+      {
+        "german": "wünschen",
+        "translation": {
+          "ru-RU": "желать",
+          "en-US": "to wish",
+          "ar-SA": "يتمنى",
+          "es-ES": "desear",
+          "fr-FR": "souhaiter",
+          "hi-IN": "कामना करना",
+          "pl-PL": "życzyć",
+          "ro-RO": "a ura",
+          "tr-TR": "dilemek",
+          "uk-UA": "бажати",
+          "uz-UZ": "tilamoq"
+        }
+      },
+      {
+        "german": "die Fahrt",
+        "translation": {
+          "ru-RU": "поездка",
+          "en-US": "trip / journey",
+          "ar-SA": "رحلة",
+          "es-ES": "viaje",
+          "fr-FR": "trajet / voyage",
+          "hi-IN": "यात्रा",
+          "pl-PL": "podróż / jazda",
+          "ro-RO": "călătorie",
+          "tr-TR": "yolculuk",
+          "uk-UA": "поїздка",
+          "uz-UZ": "sayohat / safar"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke, Ihnen auch!",
@@ -397,6 +536,24 @@
       "uk-UA": "До побачення!",
       "uz-UZ": "Xayr!"
     },
+    "vocabulary": [
+      {
+        "german": "auf Wiedersehen",
+        "translation": {
+          "ru-RU": "до свидания",
+          "en-US": "goodbye",
+          "ar-SA": "إلى اللقاء",
+          "es-ES": "adiós",
+          "fr-FR": "au revoir",
+          "hi-IN": "अलविदा",
+          "pl-PL": "do widzenia",
+          "ro-RO": "la revedere",
+          "tr-TR": "hoşça kalın",
+          "uk-UA": "до побачення",
+          "uz-UZ": "xayr"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Auf Wiedersehen!",

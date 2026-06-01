@@ -11,7 +11,7 @@
     </template>
     <template v-else>
       <nav class="mobile-nav" role="tablist" aria-label="Статистика и прогресс">
-        <div class="sliding-bg" :style="{ transform: `translateX(${activeIndex * 100}%)` }"></div>
+        <div class="sliding-bg" :style="{ transform: `translateX(${getTransformX(activeIndex)}%)` }"></div>
         <button
             v-for="(tab, index) in tabs"
             :key="tab.id"
@@ -44,13 +44,19 @@ import Daily from '../../assets/images/daily.svg'
 import Card from '../../assets/images/card.svg'
 import VTransition from "~/src/components/V-transition.vue";
 
-const {t} = useI18n();
+const {t , locale} = useI18n();
 const tabs = [
   {id: 'locations', icon: Location, alt: 'achIcon', label: t('tabsMobile.locations'), component: VLands},
   {id: 'daily', icon: Daily, alt: 'daily icon', label: t('tabsMobile.daily'), component: VDaily},
   {id: 'profile', icon: Card, alt: 'ach icon', label: t('tabsMobile.profile'), component: VPoints},
 ]
-
+const getTransformX = (index) => {
+  if (index === -1) return 0;
+  if (locale.value === 'ar') {
+    return (tabs.length - 1 - index) * 100;
+  }
+  return index * 100;
+};
 const savedTab = typeof window !== 'undefined' ? sessionStorage.getItem('activeMobileTab') : null
 const activeTabId = ref(savedTab || tabs[0].id)
 const currentTab = computed(() => tabs.find(tab => tab.id === activeTabId.value) || tabs[0])
@@ -136,7 +142,7 @@ onBeforeUnmount(() => {
   height: 100vh;
   flex: 1;
   overflow-y: auto;
-  padding-bottom: 155px;
+  padding-bottom: 160px;
 }
 
 .lands__container::-webkit-scrollbar {
@@ -245,7 +251,7 @@ onBeforeUnmount(() => {
 
 @media (min-width: 767px) {
   .stats__wrapper {
-    padding-bottom: 155px;
+    padding-bottom: 165px;
   }
 }
 

@@ -16,7 +16,7 @@
     </div>
     <div class="layout__cabinet">
       <aside class="sidebar-panel">
-        <button class="back-btn" @click="backToMain" aria-label="На главную" type="button">
+        <button v-if="!isMobile" class="back-btn" @click="backToMain" aria-label="На главную" type="button">
           <img class="back__btn-icon" :src="Home" alt="Home"/>
           <span class="back-label">{{ t('cabinet.main') }}</span>
         </button>
@@ -25,7 +25,9 @@
           <div
               class="sliding-bg"
               :class="{ 'no-transition': !enableTransition }"
-              :style="{ transform: isMobile ? `translateX(${activeIndex * 100}%)` : `translateY(${activeIndex * 100}%)`, opacity: activeIndex === -1 ? 0 : 1}"
+              :style="{  transform: isMobile   ? `translateX(${getTransform(activeIndex, TAB_ITEMS.length)}%)`  : `translateY(${getTransform(activeIndex, TAB_ITEMS.length, true)}%)`,
+                opacity: activeIndex === -1 ? 0 : 1
+          }"
           ></div>
           <button
               v-for="tabItem in TAB_ITEMS"
@@ -65,7 +67,7 @@
                             <img
                                 v-if="authStore.avatarUrl"
                                 :src="authStore.avatarUrl"
-                                alt="Аватар"
+                                alt="image"
                                 class="avatar-current"
                             />
                             <div v-else class="avatar-placeholder"></div>
@@ -73,7 +75,7 @@
                           <button
                               @click="isAvatarModalOpen = true"
                               class="change-avatar-btn"
-                              title="Сменить аватар"
+                              title="Change avatar"
                               type="button"
                           >
                             <img src="../assets/images/add.svg" alt="Сменить"/>
@@ -82,7 +84,7 @@
                         <div class="user-info-container">
                           <div class="user-name">{{ userNameSafe }}</div>
                           <div class="user-reg-date">
-                            <div>{{ t('cabinetInfoRows.registerDate' )}}:  {{ registrationDateText }}</div>
+                            <div>{{ t('cabinetInfoRows.registerDate') }}: {{ registrationDateText }}</div>
                           </div>
                         </div>
                       </div>
@@ -90,7 +92,9 @@
                         <div
                             class="sliding-bg-account"
                             :class="{ 'no-transition': !enableTransition }"
-                            :style="{ transform: `translateX(${activeAccountIndex * 100}%)`, opacity: activeAccountIndex === -1 ? 0 : 1 }"
+                            :style="{  transform: `translateX(${getTransform(activeAccountIndex, ACCOUNT_TABS.length)}%)`,
+                              opacity: activeAccountIndex === -1 ? 0 : 1
+                        }"
                         ></div>
                         <button
                             v-for="tab in ACCOUNT_TABS"
@@ -253,6 +257,14 @@ definePageMeta({
   robots: {index: false, follow: false}
 })
 
+const getTransform = (index, arrayLength, isVertical = false) => {
+  if (index === -1) return 0;
+  if (locale.value === 'ar' && !isVertical) {
+    return (arrayLength - 1 - index) * 100;
+  }
+  return index * 100;
+};
+
 const {t, locale} = useI18n()
 const router = useRouter()
 const authStore = userAuthStore()
@@ -260,7 +272,6 @@ const learningStore = userlangStore()
 const achievementStore = useAchievementStore()
 const friendsStore = useFriendsStore()
 const eventStore = useEventSessionStore()
-
 const MAIN_TAB_KEY = 'cabinet_active_main_tab'
 const ACC_TAB_KEY = 'cabinet_active_acc_tab'
 const isSettingsOpen = ref(false)
@@ -268,17 +279,24 @@ const isMobile = ref(false)
 const activeTabKey = ref((typeof window !== 'undefined' && sessionStorage.getItem(MAIN_TAB_KEY)) || 'info')
 const accountTab = ref((typeof window !== 'undefined' && sessionStorage.getItem(ACC_TAB_KEY)) || 'common')
 
-const TAB_ITEMS = [
-  {key: 'info', label: t('cabinetSidebar.valueOne'), alt: 'infoIcon', icon: AccountIcon},
-  {key: 'archive', label: t('cabinetSidebar.valueTwo'), alt: 'archiveIcon', icon: Folder},
-  {key: 'shop', label: t('cabinetSidebar.valueThree'), alt: 'shopIcon', icon: ShoppingCart},
-  {key: 'settings', label: t('cabinetSidebar.valueFour'), alt: 'settingsIcon', icon: SettingsIcon}
-]
+const TAB_ITEMS = computed(() => {
+  const items = [
+    {key: 'info', label: t('cabinetSidebar.valueOne'), alt: 'infoIcon', icon: AccountIcon},
+    {key: 'archive', label: t('cabinetSidebar.valueTwo'), alt: 'archiveIcon', icon: Folder},
+    {key: 'shop', label: t('cabinetSidebar.valueThree'), alt: 'shopIcon', icon: ShoppingCart},
+    {key: 'settings', label: t('cabinetSidebar.valueFour'), alt: 'settingsIcon', icon: SettingsIcon}
+  ]
 
-const activeIndex = computed(() => {
-  return TAB_ITEMS.findIndex(item => item.key === activeTabKey.value)
+  if (isMobile.value) {
+    return [{key: 'home', label: t('cabinet.main'), alt: 'Home', icon: Home, url: '/'}, ...items]
+  }
+
+  return items
 })
 
+const activeIndex = computed(() => {
+  return TAB_ITEMS.value.findIndex(item => item.key === activeTabKey.value)
+})
 const activeAccountIndex = computed(() => {
   return ACCOUNT_TABS.value.findIndex(tab => tab.key === accountTab.value)
 })
@@ -311,8 +329,8 @@ const registrationDateText = computed(() => {
   else date = new Date(registeredAt)
 
   if (isNaN(date.getTime())) return '—'
-  const options = { day: 'numeric', month: 'long', year: 'numeric' }
-  let formatted = date.toLocaleDateString(locale.value , options)
+  const options = {day: 'numeric', month: 'long', year: 'numeric'}
+  let formatted = date.toLocaleDateString(locale.value, options)
   formatted = formatted.replace(/\s*г\.$/, '')
   const parts = formatted.split(' ')
   if (parts.length === 3) {
@@ -331,7 +349,7 @@ const tabs = {
 const components = computed(() => tabs[activeTabKey.value] || null)
 
 function setActiveTab(key) {
-  const selectedTab = TAB_ITEMS.find(tab => tab.key === key)
+  const selectedTab = TAB_ITEMS.value.find(tab => tab.key === key)
   if (selectedTab && selectedTab.url) {
     router.push(selectedTab.url)
   } else {
@@ -437,7 +455,6 @@ async function cancelSubscription() {
     if (res.success) {
       authStore.subscriptionCancelled = true
       isCancelModalOpen.value = false
-
     }
   } catch (e) {
     console.error(e)
@@ -521,8 +538,7 @@ onMounted(async () => {
   gap: 20px;
 }
 
-
-.layout__cabinet:after{
+.layout__cabinet:after {
   content: "";
   position: fixed;
   bottom: 0;
@@ -601,11 +617,8 @@ onMounted(async () => {
   display: flex;
   flex-direction: column;
   position: relative;
-  background: #1e1e1e;
   border-radius: 20px;
   padding: 8px;
-  border: 3px solid #2a2a2a;
-  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
 .sliding-bg {
@@ -626,7 +639,7 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 0 16px;
+  padding: 10px 16px;
   position: relative;
   z-index: 2;
   border: none;
@@ -646,8 +659,10 @@ onMounted(async () => {
 
 .nav-label {
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 17px;
   font-family: "Nunito", sans-serif;
+  color: var(--titleColor);
+  margin-left: 10px;
 }
 
 .settings-wrapper {
@@ -852,14 +867,13 @@ onMounted(async () => {
   font-weight: 900;
 }
 
-
 @media (max-width: 767px) {
   .nav-label {
     display: none;
   }
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1023px) {
   .cabinet-wrapper {
     overflow: hidden;
   }
@@ -867,7 +881,7 @@ onMounted(async () => {
   .sidebar-panel {
     position: fixed;
     left: 50%;
-    bottom: 21px;
+    bottom: 27px;
     transform: translateX(-50%);
     width: calc(100% - 20px);
     height: 63px;
@@ -898,7 +912,7 @@ onMounted(async () => {
   }
 
   .sliding-bg {
-    width: 25%;
+    width: 20%;
     height: 100%;
     top: 0;
     left: 0;
@@ -912,21 +926,6 @@ onMounted(async () => {
   .nav-icon {
     width: 35px;
     height: 35px;
-  }
-
-  .back-btn {
-    width: 61px;
-    height: 52px;
-    padding: 0;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    flex: 0 0 auto;
-    background: var(--homeBg);
-  }
-
-  .back-label {
-    display: none;
   }
 
   .content-panel {
@@ -1036,7 +1035,7 @@ onMounted(async () => {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin-left: 18px;
+  margin-left: 20px;
 }
 
 .user-name {
@@ -1057,4 +1056,9 @@ onMounted(async () => {
   transition: none !important;
 }
 
+@media (min-width: 1024px) {
+  .user__interface {
+    padding: 10px;
+  }
+}
 </style>

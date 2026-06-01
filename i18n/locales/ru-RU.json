@@ -9230,7 +9230,8 @@
     "describePicture": "Описание картинок",
     "fight": "Вселенная немецкого",
     "audio": "Аудио задания",
-    "textTask": "Тексты"
+    "textTask": "Тексты",
+    "speak": "Разговорная практика"
   },
   "underSub": {
     "prev": "Введение",
@@ -10173,5 +10174,106 @@
     "home": "Главная",
     "events": "События",
     "cabinet": "Кабинет"
+  },
+  "speakTopics": {
+    "speak": "Знакомство и общение",
+    "food": "Еда и покупки",
+    "transport": "Поездки и транспорт",
+    "city": "Городские службы и быт",
+    "health": "Здоровье",
+    "work": "Работа и карьера"
+  },
+  "speakThemes": {
+    "firstmeet": "Знакомство",
+    "acquaintance": "Знакомство 2",
+    "secondmeet": "Встреча",
+    "family_talk": "Беседа",
+    "weekend_plans": "Планы",
+    "friend_call": "Звонок",
+    "hobby_talk": "Хобби",
+    "party_talk": "Вечеринка",
+    "cafe_order": "Заказ кофе",
+    "restaurant_dinner": "Ресторан",
+    "store_checkout": "На кассе",
+    "order_eat": "Заказ еды",
+    "consultation_talk": "Консультация",
+    "train_station": "На вокзале",
+    "train_ticket": "Проверка билета",
+    "taxi_berlin": "Такси",
+    "bus_talk": "В автобусе",
+    "hotel_checkin": "Отель",
+    "border_check": "Граница",
+    "airport_talk": "Аэропорт",
+    "info_talk": "Инфоцентр",
+    "bank_account": "Банк",
+    "apartment_rent": "Аренда",
+    "clothes_shopping": "Покупки",
+    "shopping": "Покупки 2",
+    "post_office": "Почта",
+    "police_talk": "Полиция",
+    "barbershop": "Парикмахерская",
+    "doctor_visit": "Запись к врачу",
+    "pharmacy_vitamins": "Аптека",
+    "insurance": "Страховка",
+    "at_doctor": "У врача",
+    "dentist": "Стоматолог",
+    "veterinary": "Ветеринар",
+    "job_looking": "Поиск работы",
+    "job_interview": "Интервью",
+    "bos_talk": "Разговор с руководителем",
+    "vacation": "Отпуск",
+    "salary_talk": "О зарплате",
+    "dismissal_talk": "Увольнение"
+  },
+  "speakIndexPage": {
+    "title": "Разговорная практика",
+    "bannerText": "Отрабатывай навыки развития речи на реальных примерах",
+    "modalTitle": "Разговорная практика",
+    "modalText": "Развивайте навыки общения в реальных диалогах! Вы можете выбрать готовый вариант ответа из предложенных, ввести его вручную с клавиатуры или просто произнести вслух, нажав на кнопку микрофона."
+  },
+  "rankModal": {
+    "title": "НОВЫЙ РАНГ",
+    "rankedLabel": "Ранг",
+    "accept": "ПРИНЯТЬ"
+  },
+  "premiumBanner": {
+    "textBanner": " Получи максимум от платформы, ускорь свое обучение."
+  },
+  "netWork": {
+    "successTitle": "Сеть восстановлена!",
+    "notSuccessTitle": "Упс! Нет интернета",
+    "successText": "Возвращаемся к работе...",
+    "notSuccessText": "Ожидаем подключения к сети..."
+  },
+  "termsBlock": {
+    "first": "Регистрируясь, вы принимаете",
+    "second": "Условия использования",
+    "third": "и",
+    "fourth": "Политику конфиденциальности"
+  },
+  "languagePage": {
+    "title": "Язык приложения",
+    "placeholder": "Поиск языка...",
+    "notfound": "Ничего не найдено",
+    "further": "Продолжить"
+  },
+  "statistics": {
+    title: "Ваша статистика и прогресс в изучении слов и прохождении тематических уровней"
+  },
+  "restoreComputed": {
+    "restoring": "Восстановление...",
+    "restore": "Восстановить покупки."
+  },
+  "submitComputed": {
+    "sync": "Синхронизация...",
+    "getPlus": "Приобрести PLUS"
+  },
+  "pay": {
+    "banner": "Полный доступ ко всем функциям приложения",
+    "sales": "Примени заработанные за активность скидки",
+    "triggerToastSuccess": "Покупка восстановлена!",
+    "triggerToastNotFound": "Активных подписок не найдено",
+    "triggerToastError": "Ошибка при восстановлении",
+    "triggerToastIsPlus": "У вас уже активен PLUS!",
   }
 }

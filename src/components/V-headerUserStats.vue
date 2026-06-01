@@ -1,16 +1,15 @@
 <template>
   <div class="header-stats">
-    <!-- ПОЛНОЭКРАННЫЙ ОВЕРЛЕЙ -->
     <transition name="fade">
       <div v-if="activeTooltip" class="global-overlay" @click="closeTooltips"></div>
     </transition>
-
     <div
         v-for="item in infoData"
         :key="item.id"
         class="stat-item-wrapper"
     >
       <button class="stat-btn" @click.stop="handleStatClick(item)">
+        <span  class="item__label"> {{ item.title }}</span>
         <img
             v-if="item.id === 'rank' && userAuth.isFreezeActive"
             class="stat-icon freeze-icon"
@@ -18,16 +17,17 @@
             alt="Freeze"
             @click.stop="openFreezeModal"
         >
-        <img
-            :class="{'heart': item.id === 'lives'}"
-            class="stat-icon"
-            :src="item.icon"
-            :alt="item.alt"
-        >
+        <span class="stat__items-wrapper">
+          <img
+              :class="{'heart': item.id === 'lives'}"
+              class="stat-icon"
+              :src="item.icon"
+              :alt="item.alt"
+          >
         <span v-if="!userAuth.isPremium || item.id !== 'lives'" class="stat-value">{{ item.value }}</span>
+        </span>
       </button>
       <transition name="fade">
-        <!-- Добавил уникальный класс для каждого тултипа на основе его id -->
         <div v-if="activeTooltip === item.id" class="tooltip-box" :class="'tooltip-' + item.id" @click="activeTooltip = false">
           <div class="tooltip-header">
             <img :src="item.icon" class="tooltip-title-icon" :alt="item.alt">
@@ -152,7 +152,7 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-/* СТИЛИ ОВЕРЛЕЯ */
+
 .global-overlay {
   position: fixed;
   top: 0;
@@ -213,6 +213,14 @@ onBeforeUnmount(() => {
   font-family: "Nunito", sans-serif;
 }
 
+.item__label {
+  display: none;
+  color: var(--titleColor);
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
 .tooltip-box {
   position: absolute;
   top: calc(100% + 5px);
@@ -238,7 +246,6 @@ onBeforeUnmount(() => {
   border-color: transparent transparent var(--tabsSlideBorderColor) transparent;
 }
 
-/* Привязка стрелочек к конкретным ID, теперь они железно стоят на своих местах */
 .tooltip-rank::before {
   left: 20px;
   right: auto;
@@ -263,6 +270,12 @@ onBeforeUnmount(() => {
   margin-bottom: 12px;
   padding-bottom: 12px;
   border-bottom: 2px dashed #eaeaea;
+}
+
+.stat__items-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .tooltip-title-icon {
@@ -423,5 +436,19 @@ onBeforeUnmount(() => {
 .modal-close-btn:active {
   box-shadow: none;
   transform: translateY(4px);
+}
+
+@media  (min-width: 1024px) {
+  .item__label {
+    display: block;
+    font-size: 20px;
+  }
+
+  .stat__items-wrapper {
+    border: 2px solid var(--tabsSlideBorderColor);
+    padding: 4px 14px;
+    background: var(--menuItemsBg);
+    border-radius: 10px;
+  }
 }
 </style>

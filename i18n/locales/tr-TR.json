@@ -9222,7 +9222,8 @@
     "describePicture": "Resim Açıklama",
     "fight": "Almanca Evreni",
     "audio": "Sesli Görevler",
-    "textTask": "Metinler"
+    "textTask": "Metinler",
+    "speak": "Konuşma pratiği"
   },
   "underSub": {
     "prev": "Giriş",
@@ -10161,5 +10162,106 @@
     "home": "Ana Sayfa",
     "events": "Etkinlikler",
     "cabinet": "Hesap"
+  },
+  "speakTopics": {
+    "speak": "Tanışma ve sohbet",
+    "food": "Yiyecek ve alışveriş",
+    "transport": "Seyahat ve ulaşım",
+    "city": "Şehir hizmetleri ve günlük yaşam",
+    "health": "Sağlık",
+    "work": "İş ve kariyer"
+  },
+  "speakThemes": {
+    "firstmeet": "Tanışma",
+    "acquaintance": "Tanışma 2",
+    "secondmeet": "Buluşma",
+    "family_talk": "Sohbet",
+    "weekend_plans": "Planlar",
+    "friend_call": "Telefon görüşmesi",
+    "hobby_talk": "Hobiler",
+    "party_talk": "Parti",
+    "cafe_order": "Kahve siparişi",
+    "restaurant_dinner": "Restoran",
+    "store_checkout": "Kasada",
+    "order_eat": "Yemek siparişi",
+    "consultation_talk": "Danışma",
+    "train_station": "İstasyonda",
+    "train_ticket": "Bilet kontrolü",
+    "taxi_berlin": "Taksi",
+    "bus_talk": "Otobüste",
+    "hotel_checkin": "Otel",
+    "border_check": "Sınır",
+    "airport_talk": "Havalimanı",
+    "info_talk": "Danışma merkezi",
+    "bank_account": "Banka",
+    "apartment_rent": "Kira",
+    "clothes_shopping": "Alışveriş",
+    "shopping": "Alışveriş 2",
+    "post_office": "Postane",
+    "police_talk": "Polis",
+    "barbershop": "Kuaför",
+    "doctor_visit": "Doktor randevusu",
+    "pharmacy_vitamins": "Eczane",
+    "insurance": "Sigorta",
+    "at_doctor": "Doktorda",
+    "dentist": "Diş hekimi",
+    "veterinary": "Veteriner",
+    "job_looking": "İş arama",
+    "job_interview": "İş görüşmesi",
+    "bos_talk": "Yönetici ile konuşma",
+    "vacation": "Tatil",
+    "salary_talk": "Maaş",
+    "dismissal_talk": "İşten çıkarma"
+  },
+  "speakIndexPage": {
+    "title": "Konuşma pratiği",
+    "bannerText": "Gerçek örneklerle konuşma becerilerini geliştir",
+    "modalTitle": "Konuşma pratiği",
+    "modalText": "Gerçek diyaloglarla iletişim becerilerinizi geliştirin! Sunulan hazır cevaplardan birini seçebilir, klavyeden manuel olarak yazabilir veya sadece mikrofon düğmesine basarak sesli bir şekilde söyleyebilirsiniz."
+  },
+  "rankModal": {
+    "title": "YENİ RÜTBE",
+    "rankedLabel": "Rütbe",
+    "accept": "KABUL ET"
+  },
+  "premiumBanner": {
+    "textBanner": "Platformdan en iyi şekilde yararlan, öğrenimini hızlandır."
+  },
+  "netWork": {
+    "successTitle": "Bağlantı sağlandı!",
+    "notSuccessTitle": "Hata! İnternet yok",
+    "successText": "Çalışmaya devam ediyoruz...",
+    "notSuccessText": "Ağ bağlantısı bekleniyor..."
+  },
+  "termsBlock": {
+    "first": "Kaydolarak şunları kabul etmiş olursunuz:",
+    "second": "Kullanım Koşulları",
+    "third": "ve",
+    "fourth": "Gizlilik Politikası"
+  },
+  "languagePage": {
+    "title": "Uygulama dili",
+    "placeholder": "Dil ara...",
+    "notfound": "Hiçbir şey bulunamadı",
+    "further": "Devam et"
+  },
+  "statistics": {
+    "title": "Kelime öğrenme ve tematik seviyeleri tamamlama konusundaki istatistikleriniz ve ilerlemeniz"
+  },
+  "restoreComputed": {
+    "restoring": "Geri yükleniyor...",
+    "restore": "Satın almaları geri yükle."
+  },
+  "submitComputed": {
+    "sync": "Senkronize ediliyor...",
+    "getPlus": "PLUS Satın Al"
+  },
+  "pay": {
+    "banner": "Uygulamanın tüm özelliklerine tam erişim",
+    "sales": "Aktivitelerden kazanılan indirimleri uygula",
+    "triggerToastSuccess": "Satın alma geri yüklendi!",
+    "triggerToastNotFound": "Aktif abonelik bulunamadı",
+    "triggerToastError": "Geri yükleme sırasında hata oluştu",
+    "triggerToastIsPlus": "Zaten aktif bir PLUS aboneliğiniz var!"
   }
 }

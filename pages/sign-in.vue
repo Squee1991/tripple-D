@@ -73,11 +73,20 @@
             <img class="google__icon" src="../assets/images/google.svg" alt="google_icon">
             <span class="auth__text-method">GOOGLE</span>
           </button>
-          <button v-if="Capacitor.getPlatform() === 'ios'" class="apple__auth-wrapper" @click="handleSocialLogin('apple')" :disabled="submitLoading">
+          <button v-if="Capacitor.isNativePlatform() === 'ios'" class="apple__auth-wrapper" @click="handleSocialLogin('apple')" :disabled="submitLoading">
             <img class="apple__icon" src="../assets/images/apple.svg" alt="apple_icon">
             <span class="auth__text-method">APPLE</span>
           </button>
+<!--          <button class="facebook__auth-wrapper" @click="handleSocialLogin('facebook')" :disabled="submitLoading">-->
+<!--            <img class="facebook__icon" src="../assets/images/facebook.svg" alt="facebook_icon">-->
+<!--          </button>-->
         </div>
+      </div>
+      <div class="privacy__block">
+        {{ t('termsBlock.first') }}
+        <router-link class="links" to="/terms">{{ t('termsBlock.second') }}</router-link>
+        {{ t('termsBlock.third') }}
+        <router-link class="links" to="/privacy">{{ t('termsBlock.fourth') }}</router-link>.
       </div>
     </div>
   </div>
@@ -85,8 +94,9 @@
 
 <script setup>
 import {ref, computed, watch, onMounted, onUnmounted} from 'vue'
-import {userAuthStore} from '../store/authStore.js'
+import {userAuthStore} from '../../store/authStore.js'
 import {useRouter} from 'vue-router'
+import {useI18n} from 'vue-i18n'
 import {mapErrors} from '../utils/errorsHandler.js'
 import View from '../../assets/images/loginEyes/view.svg'
 import Hide from '../../assets/images/loginEyes/hide.svg'
@@ -386,16 +396,32 @@ onUnmounted(() => {
   text-align: left;
 }
 
+.links{
+ color: #3d5a98;
+}
+
 .auth__tabs {
   width: 100%;
   display: flex;
-  background: #fff;
+  background: var(--tabBg);
   border-radius: 45px;
   position: relative;
   margin-bottom: 1.5rem;
-  border: 3px solid #1e1e1e;
+  box-shadow: var(--boxShadowMobile);
+  border: 3px solid var(--tabsSlideBorderColor);
   overflow: hidden;
   padding: 4px;
+}
+
+.privacy__block {
+  position: absolute;
+  bottom: 0;
+  color: var(--titleColor);
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 0 15px;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .auth__tab {
@@ -403,7 +429,7 @@ onUnmounted(() => {
   text-align: center;
   padding: 14px 5px;
   cursor: pointer;
-  color: #1e1e1e;
+  color: var(--titleColor);
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
@@ -423,7 +449,8 @@ onUnmounted(() => {
   left: 4px;
   width: calc(50% - 4px);
   height: calc(100% - 8px);
-  background: #575555;
+  background: var(--tabsSlideBg);
+  box-shadow: var(--tabSlideBoxShadow);
   border-radius: 45px;
   transition: transform 0.4s cubic-bezier(.38, 1.32, .39, 1);
   z-index: 0;

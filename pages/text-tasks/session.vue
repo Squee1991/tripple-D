@@ -1,5 +1,10 @@
 <template>
-  <div class="drag-page">
+  <div
+      class="drag-page"
+      @touchstart="handleTouchStart"
+      @touchmove="handleTouchMove"
+      @touchend="handleTouchEnd"
+  >
     <div class="drag-page-container" v-if="store.currentTask">
       <div class="header-wrapper">
         <button class="btn-icon-back" @click="handleBackClick">
@@ -78,7 +83,6 @@
     <ExitSessionModal
         :show="showExitModal"
         @update:show="val => showExitModal = val"
-        :icon="SadHedgehogIcon"
         @cancel="cancelExit"
         @confirm="confirmExit"
     />
@@ -90,7 +94,7 @@ import {ref, computed, onMounted} from 'vue'
 import {useRouter, onBeforeRouteLeave} from 'vue-router'
 import {useTextTasksStore} from '../../store/textTasksStore.js'
 import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
-import SadHedgehogIcon from '../../assets/images/Sadlyhedgehog.png'
+import { useSwipeBack } from '~/composables/useSwipeBack.js'
 
 const {t} = useI18n()
 const router = useRouter()
@@ -101,6 +105,12 @@ const selectedWordForTap = ref(null)
 const showExitModal = ref(false)
 const isConfirmedExit = ref(false)
 let pendingRoute = null
+
+const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipeBack(() => {
+  handleBackClick()
+}, {
+  ignoreSelector: '.text-card, .word-pool-card'
+})
 
 onMounted(() => {
   if (!store.currentTask) {
@@ -196,6 +206,7 @@ const handleBlankClick = (blankId) => {
   display: flex;
   justify-content: center;
   overflow: hidden;
+  touch-action: none;
 }
 
 .drag-page-container {
@@ -339,6 +350,7 @@ const handleBlankClick = (blankId) => {
   box-shadow: 0 4px 0 #e2e8f0;
   overflow-y: auto;
   scrollbar-width: none;
+  touch-action: pan-y;
 }
 
 .text-card::-webkit-scrollbar {

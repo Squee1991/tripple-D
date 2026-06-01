@@ -1,25 +1,26 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { userAuthStore } from "~/store/authStore.js"
 import Header from '../src/components/header.vue'
-import Banner from '../src/components/Banner.vue'
+import Banner from '../src/components/banner.vue'
 import Description from '../src/components/DescriptionBlock.vue'
-import About from '../src/components/About.vue'
+import About from '../src/components/about.vue'
 import FeedBack from '../src/components/feedBack.vue'
-import Footer from '../src/components/Footer.vue'
+import Footer from '../src/components/footer.vue'
 import VUid from '../src/components/V-uid.vue'
-import VEventAvailableModal from "../src/components/V-eventAvailableModal.vue"
-import VShowFall from "../src/components/V-showFall.vue"
-import Snow from "../assets/images/mery-christmas/Snow.svg"
-import HeartFall from "assets/images/mery-christmas/heartFall.svg"
+import VEventAvailableModal from "../src/components/V-eventAvailableModal.vue";
+import VShowFall from "../src/components/V-showFall.vue";
+import Snow from "../assets/images/mery-christmas/Snow.svg";
+import HeartFall from "assets/images/mery-christmas/heartFall.svg";
 import { useEventSessionStore } from '../store/eventsStore.js'
-import VStartPage from "~/src/components/V-startPage.vue"
-import LogIn from "~/src/components/logIn.vue"
+import VStartPage from "~/src/components/V-startPage.vue";
+
 
 const showLogin = ref(false)
 const eventStore = useEventSessionStore()
 const authStore = userAuthStore()
 const hydrated = ref(false)
+const isLocallyLogged = ref(false)
 
 definePageMeta({
   layout: 'footerlayout'
@@ -27,20 +28,33 @@ definePageMeta({
 
 onMounted(() => {
   hydrated.value = true
+  isLocallyLogged.value = localStorage.getItem('app_user_logged') === 'true'
+})
+
+watch(() => authStore.uid, (newUid) => {
+  if (newUid) {
+    localStorage.setItem('app_user_logged', 'true')
+    isLocallyLogged.value = true
+  } else if (authStore.initialized && !newUid) {
+    localStorage.removeItem('app_user_logged')
+    isLocallyLogged.value = false
+  }
 })
 </script>
 
 <template>
-<!--  <VEventAvailableModal @close="false" v-if="authStore.initialized"/>-->
+  <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
   <VShowFall v-if="eventStore.isSnowEnabled" :image="Snow"/>
   <div class="container">
-    <div v-if="authStore.uid" class="stat">
-      <Header/>
-      <VUid/>
-    </div>
-    <div v-else>
+    <template v-if="isLocallyLogged || authStore.uid">
+      <div class="stat">
+        <Header/>
+        <VUid/>
+      </div>
+    </template>
+    <template v-else-if="authStore.initialized && !authStore.uid">
       <VStartPage/>
-    </div>
+    </template>
   </div>
 </template>
 
@@ -48,6 +62,7 @@ onMounted(() => {
 .container {
   max-width: 1240px;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -59,7 +74,7 @@ onMounted(() => {
   flex-direction: column;
 }
 
-.stat::after {
+.stat::after{
   content: "";
   position: fixed;
   bottom: 0;
@@ -75,20 +90,6 @@ onMounted(() => {
     flex-direction: column;
     justify-content: center;
   }
-}
-
-.loading-screen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: var(--bg);
-}
-
-.loading {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 10px;
 }
 
 @media (max-width: 767px) {

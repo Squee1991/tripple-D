@@ -1,0 +1,629 @@
+{
+  "start": {
+    "botText": "Hallo Anna, worum geht es?",
+    "botTranslation": {
+      "ru-RU": "Привет, Анна, о чем идет речь?",
+      "en-US": "Hello Anna, what is it about?",
+      "ar-SA": "مرحباً آنا، حول ماذا يدور الأمر؟",
+      "es-ES": "Hola Anna, ¿de qué se trata?",
+      "fr-FR": "Bonjour Anna, de quoi s'agit-il ?",
+      "hi-IN": "नमस्ते अन्ना, यह किस बारे में है?",
+      "pl-PL": "Cześć Anna, o co chodzi?",
+      "ro-RO": "Bună Anna, despre ce este vorba?",
+      "tr-TR": "Merhaba Anna, konu nedir?",
+      "uk-UA": "Привіт, Анно, про що йдеться?",
+      "uz-UZ": "Salom Anna, gap nima haqida?"
+    },
+    "vocabulary": [
+      {
+        "german": "besprechen",
+        "translation": {
+          "ru-RU": "обсуждать",
+          "en-US": "to discuss",
+          "ar-SA": "يناقش",
+          "es-ES": "discutir",
+          "fr-FR": "discuter",
+          "hi-IN": "चर्चा करना",
+          "pl-PL": "omawiać",
+          "ro-RO": "a discuta",
+          "tr-TR": "görüşmek",
+          "uk-UA": "обговорювати",
+          "uz-UZ": "muhokama qilmoq"
+        }
+      },
+      {
+        "german": "das Gehalt",
+        "translation": {
+          "ru-RU": "зарплата",
+          "en-US": "salary",
+          "ar-SA": "راتب",
+          "es-ES": "salario",
+          "fr-FR": "salaire",
+          "hi-IN": "वेतन",
+          "pl-PL": "pensja",
+          "ro-RO": "salariu",
+          "tr-TR": "maaş",
+          "uk-UA": "зарплата",
+          "uz-UZ": "maosh"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich möchte mein Gehalt besprechen.",
+        "translation": {
+          "ru-RU": "Я хочу обсудить свою зарплату.",
+          "en-US": "I would like to discuss my salary.",
+          "ar-SA": "أريد مناقشة راتبي.",
+          "es-ES": "Me gustaría hablar sobre mi salario.",
+          "fr-FR": "Je voudrais discuter de mon salaire.",
+          "hi-IN": "मैं अपने वेतन पर चर्चा करना चाहता हूँ।",
+          "pl-PL": "Chciałabym omówić moją pensję.",
+          "ro-RO": "Aș dori să discut despre salariul meu.",
+          "tr-TR": "Maaşımı görüşmek istiyorum.",
+          "uk-UA": "Я хочу обговорити свою зарплату.",
+          "uz-UZ": "Men maoshimni muhokama qilmoqchiman."
+        },
+        "nextStep": "warum"
+      },
+      {
+        "text": "Ich möchte mein Gehalt neu verhandeln.",
+        "translation": {
+          "ru-RU": "Я хочу пересмотреть (заново обсудить) свою зарплату.",
+          "en-US": "I would like to renegotiate my salary.",
+          "ar-SA": "أريد إعادة التفاوض على راتبي.",
+          "es-ES": "Me gustaría renegociar mi salario.",
+          "fr-FR": "Je voudrais renégocier mon salaire.",
+          "hi-IN": "मैं अपने वेतन पर फिर से बातचीत करना चाहता हूँ।",
+          "pl-PL": "Chciałabym renegocjować moją pensję.",
+          "ro-RO": "Aș dori să renegociez salariul meu.",
+          "tr-TR": "Maaşımı yeniden müzakere etmek istiyorum.",
+          "uk-UA": "Я хочу переглянути свою зарплату.",
+          "uz-UZ": "Men maoshimni qayta ko'rib chiqmoqchiman."
+        },
+        "nextStep": "warum"
+      }
+    ],
+    "defaultNext": "warum"
+  },
+  "warum": {
+    "botText": "Warum ist das jetzt angebracht?",
+    "botTranslation": {
+      "ru-RU": "Почему это уместно сейчас?",
+      "en-US": "Why is that appropriate now?",
+      "ar-SA": "لماذا هذا مناسب الآن؟",
+      "es-ES": "¿Por qué es apropiado ahora?",
+      "fr-FR": "Pourquoi est-ce approprié maintenant ?",
+      "hi-IN": "अब यह उचित क्यों है?",
+      "pl-PL": "Dlaczego to jest teraz stosowne?",
+      "ro-RO": "De ce este adecvat acum?",
+      "tr-TR": "Bu neden şimdi uygun?",
+      "uk-UA": "Чому це доречно зараз?",
+      "uz-UZ": "Nima uchun bu hozir o'rinli?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Projekt",
+        "translation": {
+          "ru-RU": "проект",
+          "en-US": "project",
+          "ar-SA": "مشروع",
+          "es-ES": "proyecto",
+          "fr-FR": "projet",
+          "hi-IN": "परियोजना",
+          "pl-PL": "projekt",
+          "ro-RO": "proiect",
+          "tr-TR": "proje",
+          "uk-UA": "проєкт",
+          "uz-UZ": "loyiha"
+        }
+      },
+      {
+        "german": "die Aufgabe",
+        "translation": {
+          "ru-RU": "задача",
+          "en-US": "task",
+          "ar-SA": "مهمة",
+          "es-ES": "tarea",
+          "fr-FR": "tâche",
+          "hi-IN": "कार्य",
+          "pl-PL": "zadanie",
+          "ro-RO": "sarcină",
+          "tr-TR": "görev",
+          "uk-UA": "завдання",
+          "uz-UZ": "vazifa"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich habe viele Projekte erfolgreich abgeschlossen.",
+        "translation": {
+          "ru-RU": "Я успешно завершила много проектов.",
+          "en-US": "I have successfully completed many projects.",
+          "ar-SA": "لقد أكملت العديد من المشاريع بنجاح.",
+          "es-ES": "He completado con éxito muchos proyectos.",
+          "fr-FR": "J'ai mené à bien de nombreux projets.",
+          "hi-IN": "मैंने कई परियोजनाओं को सफलतापूर्वक पूरा कर लिया है।",
+          "pl-PL": "Z powodzeniem zakończyłam wiele projektów.",
+          "ro-RO": "Am finalizat cu succes multe proiecte.",
+          "tr-TR": "Birçok projeyi başarıyla tamamladım.",
+          "uk-UA": "Я успішно завершила багато проєктів.",
+          "uz-UZ": "Men ko'plab loyihalarni muvaffaqiyatli yakunladim."
+        },
+        "nextStep": "budget"
+      },
+      {
+        "text": "Ich habe deutlich mehr Aufgaben übernommen.",
+        "translation": {
+          "ru-RU": "Я взяла на себя значительно больше задач.",
+          "en-US": "I have taken on significantly more tasks.",
+          "ar-SA": "لقد توليت مهام أكثر بكثير.",
+          "es-ES": "He asumido significativamente más tareas.",
+          "fr-FR": "J'ai assumé beaucoup plus de tâches.",
+          "hi-IN": "मैंने काफी अधिक कार्यभार संभाला है।",
+          "pl-PL": "Przejęłam znacznie więcej obowiązków.",
+          "ro-RO": "Am preluat semnificativ mai multe sarcini.",
+          "tr-TR": "Önemli ölçüde daha fazla görev üstlendim.",
+          "uk-UA": "Я взяла на себе значно більше завдань.",
+          "uz-UZ": "Men o'z zimmamga ancha ko'p vazifalarni oldim."
+        },
+        "nextStep": "budget"
+      }
+    ],
+    "defaultNext": "budget"
+  },
+  "budget": {
+    "botText": "Unser Budget ist aktuell leider begrenzt.",
+    "botTranslation": {
+      "ru-RU": "Наш бюджет сейчас, к сожалению, ограничен.",
+      "en-US": "Unfortunately, our budget is currently limited.",
+      "ar-SA": "للأسف، ميزانيتنا محدودة حالياً.",
+      "es-ES": "Lamentablemente, nuestro presupuesto es actualmente limitado.",
+      "fr-FR": "Malheureusement, notre budget est actuellement limité.",
+      "hi-IN": "दुर्भाग्य से, हमारा बजट वर्तमान में सीमित है।",
+      "pl-PL": "Nasz budżet jest obecnie niestety ograniczony.",
+      "ro-RO": "Din păcate, bugetul nostru este momentan limitat.",
+      "tr-TR": "Maalesef şu anda bütçemiz kısıtlı.",
+      "uk-UA": "Наш бюджет зараз, на жаль, обмежений.",
+      "uz-UZ": "Afsuski, bizning byudjetimiz hozirda cheklangan."
+    },
+    "vocabulary": [
+      {
+        "german": "begrenzt",
+        "translation": {
+          "ru-RU": "ограниченный",
+          "en-US": "limited",
+          "ar-SA": "محدود",
+          "es-ES": "limitado",
+          "fr-FR": "limité",
+          "hi-IN": "सीमित",
+          "pl-PL": "ograniczony",
+          "ro-RO": "limitat",
+          "tr-TR": "sınırlı",
+          "uk-UA": "обмежений",
+          "uz-UZ": "cheklangan"
+        }
+      },
+      {
+        "german": "die Erhöhung",
+        "translation": {
+          "ru-RU": "повышение",
+          "en-US": "increase",
+          "ar-SA": "زيادة",
+          "es-ES": "aumento",
+          "fr-FR": "augmentation",
+          "hi-IN": "वृद्धि",
+          "pl-PL": "podwyżka",
+          "ro-RO": "mărire",
+          "tr-TR": "artış",
+          "uk-UA": "підвищення",
+          "uz-UZ": "oshirish"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Meine Leistung ist wichtig für uns.",
+        "translation": {
+          "ru-RU": "Мой результат важен для нас.",
+          "en-US": "My performance is important for us.",
+          "ar-SA": "أدائي مهم بالنسبة لنا.",
+          "es-ES": "Mi rendimiento es importante para nosotros.",
+          "fr-FR": "Ma performance est importante pour nous.",
+          "hi-IN": "मेरा प्रदर्शन हमारे लिए महत्वपूर्ण है।",
+          "pl-PL": "Moje wyniki są dla nas ważne.",
+          "ro-RO": "Performanța mea este importantă pentru noi.",
+          "tr-TR": "Performansım bizim için önemli.",
+          "uk-UA": "Мій результат важливий для нас.",
+          "uz-UZ": "Mening natijam biz uchun muhim."
+        },
+        "nextStep": "wieviel"
+      },
+      {
+        "text": "Ich finde eine Erhöhung trotzdem fair.",
+        "translation": {
+          "ru-RU": "Тем не менее, я считаю повышение справедливым.",
+          "en-US": "I still find an increase fair.",
+          "ar-SA": "ما زلت أجد الزيادة عادلة.",
+          "es-ES": "Todavía considero que un aumento es justo.",
+          "fr-FR": "Je trouve néanmoins qu'une augmentation est juste.",
+          "hi-IN": "मुझे अभी भी वृद्धि उचित लगती है।",
+          "pl-PL": "Mimo to uważam, że podwyżka jest sprawiedliwa.",
+          "ro-RO": "Totuși, consider că o mărire este corectă.",
+          "tr-TR": "Yine de bir artışın adil olduğunu düşünüyorum.",
+          "uk-UA": "Тим не менш, я вважаю підвищення справедливим.",
+          "uz-UZ": "Shunga qaramay, men oylik oshishini adolatli deb bilaman."
+        },
+        "nextStep": "wieviel"
+      }
+    ],
+    "defaultNext": "wieviel"
+  },
+  "wieviel": {
+    "botText": "Wie viel mehr möchtest du haben?",
+    "botTranslation": {
+      "ru-RU": "На сколько больше ты хочешь?",
+      "en-US": "How much more do you want to have?",
+      "ar-SA": "كم تريدين أكثر؟",
+      "es-ES": "¿Cuánto más quieres tener?",
+      "fr-FR": "Combien de plus aimerais-tu avoir ?",
+      "hi-IN": "आप कितना अधिक चाहते हैं?",
+      "pl-PL": "O ile więcej chciałabyś dostać?",
+      "ro-RO": "Cât de mult mai mult ai vrea?",
+      "tr-TR": "Ne kadar daha fazla istiyorsun?",
+      "uk-UA": "На скільки більше ти хочеш?",
+      "uz-UZ": "Qanchaga ko'proq xohlaysiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "angemessen",
+        "translation": {
+          "ru-RU": "уместный / соответствующий",
+          "en-US": "appropriate",
+          "ar-SA": "مناسب",
+          "es-ES": "adecuado",
+          "fr-FR": "approprié",
+          "hi-IN": "उचित",
+          "pl-PL": "odpowiedni",
+          "ro-RO": "adecvat",
+          "tr-TR": "uygun",
+          "uk-UA": "доречний",
+          "uz-UZ": "o'rinli"
+        }
+      },
+      {
+        "german": "das Prozent",
+        "translation": {
+          "ru-RU": "процент",
+          "en-US": "percent",
+          "ar-SA": "بالمائة",
+          "es-ES": "por ciento",
+          "fr-FR": "pour cent",
+          "hi-IN": "प्रतिशत",
+          "pl-PL": "procent",
+          "ro-RO": "procent",
+          "tr-TR": "yüzde",
+          "uk-UA": "відсоток",
+          "uz-UZ": "foiz"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich halte sieben Prozent für angemessen.",
+        "translation": {
+          "ru-RU": "Я считаю семь процентов уместными.",
+          "en-US": "I consider seven percent to be appropriate.",
+          "ar-SA": "أعتبر سبعة بالمائة مناسبة.",
+          "es-ES": "Considero que un siete por ciento es adecuado.",
+          "fr-FR": "Je considère que sept pour cent est approprié.",
+          "hi-IN": "मैं सात प्रतिशत को उपयुक्त मानता हूँ।",
+          "pl-PL": "Uważam, że siedem procent to odpowiednia kwota.",
+          "ro-RO": "Consider că șapte procente este adecvat.",
+          "tr-TR": "Yüzde yediyi uygun buluyorum.",
+          "uk-UA": "Я вважаю сім відсотків доречними.",
+          "uz-UZ": "Men yetti foizni o'rinli deb hisoblayman."
+        },
+        "nextStep": "fuenf_prozent"
+      },
+      {
+        "text": "Ich wünsche mir sieben Prozent mehr.",
+        "translation": {
+          "ru-RU": "Я хочу (желаю себе) на семь процентов больше.",
+          "en-US": "I would like seven percent more.",
+          "ar-SA": "أتمنى زيادة بنسبة سبعة بالمائة.",
+          "es-ES": "Deseo un siete por ciento más.",
+          "fr-FR": "Je souhaiterais sept pour cent de plus.",
+          "hi-IN": "मुझे सात प्रतिशत और चाहिए।",
+          "pl-PL": "Życzyłabym sobie o siedem procent więcej.",
+          "ro-RO": "Îmi doresc cu șapte procente mai mult.",
+          "tr-TR": "Yüzde yedi daha fazla istiyorum.",
+          "uk-UA": "Я хочу на сім відсотків більше.",
+          "uz-UZ": "Men yetti foiz ko'proq bo'lishini xohlayman."
+        },
+        "nextStep": "fuenf_prozent"
+      }
+    ],
+    "defaultNext": "fuenf_prozent"
+  },
+  "fuenf_prozent": {
+    "botText": "Vielleicht können wir fünf Prozent vereinbaren?",
+    "botTranslation": {
+      "ru-RU": "Возможно, мы сможем договориться на пять процентов?",
+      "en-US": "Perhaps we can agree on five percent?",
+      "ar-SA": "ربما يمكننا الاتفاق على خمسة بالمائة؟",
+      "es-ES": "¿Tal vez podamos acordar un cinco por ciento?",
+      "fr-FR": "Peut-être pouvons-nous convenir de cinq pour cent ?",
+      "hi-IN": "शायद हम पांच प्रतिशत पर सहमत हो सकते हैं?",
+      "pl-PL": "Może uda nam się dogadać na pięć procent?",
+      "ro-RO": "Poate ne putem înțelege la cinci procente?",
+      "tr-TR": "Belki yüzde beşte anlaşabiliriz?",
+      "uk-UA": "Можливо, ми зможемо домовитися на п'ять відсотків?",
+      "uz-UZ": "Balki besh foizga kelishib olarz?"
+    },
+    "vocabulary": [
+      {
+        "german": "sich einigen",
+        "translation": {
+          "ru-RU": "договориться",
+          "en-US": "to agree",
+          "ar-SA": "يتفق",
+          "es-ES": "llegar a un acuerdo",
+          "fr-FR": "se mettre d'accord",
+          "hi-IN": "सहमत होना",
+          "pl-PL": "dojść do porozumienia",
+          "ro-RO": "a cădea de acord",
+          "tr-TR": "anlaşmak",
+          "uk-UA": "домовитися",
+          "uz-UZ": "kelishib olmoq"
+        }
+      },
+      {
+        "german": "der Kompromiss",
+        "translation": {
+          "ru-RU": "компромисс",
+          "en-US": "compromise",
+          "ar-SA": "حل وسط",
+          "es-ES": "compromiso",
+          "fr-FR": "compromis",
+          "hi-IN": "समझौता",
+          "pl-PL": "kompromis",
+          "ro-RO": "compromis",
+          "tr-TR": "uzlaşma",
+          "uk-UA": "компроміс",
+          "uz-UZ": "murosa"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Können wir uns auf sechs einigen?",
+        "translation": {
+          "ru-RU": "Можем ли мы сойтись на шести?",
+          "en-US": "Can we agree on six?",
+          "ar-SA": "هل يمكننا الاتفاق على ستة؟",
+          "es-ES": "¿Podemos acordar un seis?",
+          "fr-FR": "Pouvons-nous nous mettre d'accord sur six ?",
+          "hi-IN": "क्या हम छह पर सहमत हो सकते हैं?",
+          "pl-PL": "Czy możemy zgodzić się na sześć?",
+          "ro-RO": "Ne putem înțelege la șase?",
+          "tr-TR": "Altıda anlaşabilir miyiz?",
+          "uk-UA": "Чи можемо ми зійтися на шести?",
+          "uz-UZ": "Oltiga kelishib olsak bo'ladimi?"
+        },
+        "nextStep": "sechs_ok"
+      },
+      {
+        "text": "Wären sechs Prozent ein guter Kompromiss?",
+        "translation": {
+          "ru-RU": "Были бы шесть процентов хорошим компромиссом?",
+          "en-US": "Would six percent be a good compromise?",
+          "ar-SA": "هل سيكون ستة بالمائة حلاً وسطاً جيداً؟",
+          "es-ES": "¿Sería el seis por ciento un buen compromiso?",
+          "fr-FR": "Est-ce que six pour cent serait un bon compromis ?",
+          "hi-IN": "क्या छह प्रतिशत एक अच्छा समझौता होगा?",
+          "pl-PL": "Czy sześć procent byłoby dobrym kompromisem?",
+          "ro-RO": "Ar fi șase procente un compromis bun?",
+          "tr-TR": "Yüzde altı iyi bir uzlaşma olur mu?",
+          "uk-UA": "Були б шість відсотків хорошим компромісом?",
+          "uz-UZ": "Olti foiz yaxshi kelishuv bo'lardimi?"
+        },
+        "nextStep": "sechs_ok"
+      }
+    ],
+    "defaultNext": "sechs_ok"
+  },
+  "sechs_ok": {
+    "botText": "Okay, sechs Prozent sind in Ordnung.",
+    "botTranslation": {
+      "ru-RU": "Хорошо, шесть процентов устраивают (в порядке).",
+      "en-US": "Okay, six percent is fine.",
+      "ar-SA": "حسناً، ستة بالمائة لا بأس بها.",
+      "es-ES": "Vale, un seis por ciento está bien.",
+      "fr-FR": "D'accord, six pour cent c'est bien.",
+      "hi-IN": "ठीक है, छह प्रतिशत ठीक है।",
+      "pl-PL": "Okej, sześć procent jest w porządku.",
+      "ro-RO": "Ok, șase procente este în regulă.",
+      "tr-TR": "Tamam, yüzde altı uygun.",
+      "uk-UA": "Добре, шість відсотків влаштовують.",
+      "uz-UZ": "Yaxshi, olti foiz ma'qul."
+    },
+    "vocabulary": [
+      {
+        "german": "das Vertrauen",
+        "translation": {
+          "ru-RU": "доверие",
+          "en-US": "trust",
+          "ar-SA": "ثقة",
+          "es-ES": "confianza",
+          "fr-FR": "confiance",
+          "hi-IN": "विश्वास",
+          "pl-PL": "zaufanie",
+          "ro-RO": "încredere",
+          "tr-TR": "güven",
+          "uk-UA": "довіра",
+          "uz-UZ": "ishonch"
+        }
+      },
+      {
+        "german": "die Einigung",
+        "translation": {
+          "ru-RU": "договоренность / соглашение",
+          "en-US": "agreement",
+          "ar-SA": "اتفاق",
+          "es-ES": "acuerdo",
+          "fr-FR": "accord",
+          "hi-IN": "समझौता",
+          "pl-PL": "porozumienie",
+          "ro-RO": "acord",
+          "tr-TR": "anlaşma",
+          "uk-UA": "домовленість",
+          "uz-UZ": "kelishuv"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Vielen Dank für das Vertrauen!",
+        "translation": {
+          "ru-RU": "Большое спасибо за доверие!",
+          "en-US": "Thank you very much for the trust!",
+          "ar-SA": "شكراً جزيلاً على الثقة!",
+          "es-ES": "¡Muchas gracias por la confianza!",
+          "fr-FR": "Merci beaucoup pour la confiance !",
+          "hi-IN": "विश्वास के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję za zaufanie!",
+          "ro-RO": "Vă mulțumesc mult pentru încredere!",
+          "tr-TR": "Güveniniz için çok teşekkürler!",
+          "uk-UA": "Велике дякую за довіру!",
+          "uz-UZ": "Ishonch uchun katta rahmat!"
+        },
+        "nextStep": "end_bot"
+      },
+      {
+        "text": "Sehr gut, danke für die Einigung.",
+        "translation": {
+          "ru-RU": "Очень хорошо, спасибо за договоренность.",
+          "en-US": "Very good, thanks for the agreement.",
+          "ar-SA": "جيد جداً، شكراً على الاتفاق.",
+          "es-ES": "Muy bien, gracias por el acuerdo.",
+          "fr-FR": "Très bien, merci pour l'accord.",
+          "hi-IN": "बहुत अच्छा, समझौते के लिए धन्यवाद।",
+          "pl-PL": "Bardzo dobrze, dziękuję za porozumienie.",
+          "ro-RO": "Foarte bine, mulțumesc pentru acord.",
+          "tr-TR": "Çok iyi, anlaşma için teşekkürler.",
+          "uk-UA": "Дуже добре, дякую за домовленість.",
+          "uz-UZ": "Juda yaxshi, kelishuv uchun rahmat."
+        },
+        "nextStep": "end_bot"
+      }
+    ],
+    "defaultNext": "end_bot"
+  },
+  "end_bot": {
+    "botText": "Kein Problem, wir sehen uns später.",
+    "botTranslation": {
+      "ru-RU": "Без проблем, увидимся позже.",
+      "en-US": "No problem, see you later.",
+      "ar-SA": "لا مشكلة، نراك لاحقاً.",
+      "es-ES": "No hay problema, nos vemos luego.",
+      "fr-FR": "Pas de problème, on se voit plus tard.",
+      "hi-IN": "कोई बात नहीं, बाद में मिलते हैं।",
+      "pl-PL": "Nie ma problemu, do zobaczenia później.",
+      "ro-RO": "Nicio problemă, ne vedem mai târziu.",
+      "tr-TR": "Sorun değil, sonra görüşürüz.",
+      "uk-UA": "Без проблем, побачимося пізніше.",
+      "uz-UZ": "Muammo yo'q, keyinroq ko'rishamiz."
+    },
+    "vocabulary": [
+      {
+        "german": "bis später",
+        "translation": {
+          "ru-RU": "до скорого",
+          "en-US": "see you later",
+          "ar-SA": "أراك لاحقاً",
+          "es-ES": "hasta luego",
+          "fr-FR": "à plus tard",
+          "hi-IN": "बाद में मिलते हैं",
+          "pl-PL": "do zobaczenia później",
+          "ro-RO": "pe mai târziu",
+          "tr-TR": "sonra görüşürüz",
+          "uk-UA": "до зустрічі",
+          "uz-UZ": "keyinroq ko'rishguncha"
+        }
+      },
+      {
+        "german": "schönen Tag",
+        "translation": {
+          "ru-RU": "хорошего дня",
+          "en-US": "nice day",
+          "ar-SA": "يوم جميل",
+          "es-ES": "buen día",
+          "fr-FR": "bonne journée",
+          "hi-IN": "अच्छा दिन",
+          "pl-PL": "miłego dnia",
+          "ro-RO": "o zi frumoasă",
+          "tr-TR": "iyi günler",
+          "uk-UA": "гарного дня",
+          "uz-UZ": "yaxshi kun"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Bis später, schönen Tag noch!",
+        "translation": {
+          "ru-RU": "До скорого, хорошего дня!",
+          "en-US": "See you later, have a nice day!",
+          "ar-SA": "أراك لاحقاً، أتمنى لك يوماً سعيداً!",
+          "es-ES": "¡Hasta luego, que tenga un buen día!",
+          "fr-FR": "À plus tard, bonne journée !",
+          "hi-IN": "बाद में मिलते हैं, आपका दिन शुभ हो!",
+          "pl-PL": "Do zobaczenia później, miłego dnia!",
+          "ro-RO": "Pe mai târziu, o zi frumoasă!",
+          "tr-TR": "Sonra görüşürüz, iyi günler!",
+          "uk-UA": "До зустрічі, гарного дня!",
+          "uz-UZ": "Keyinroq ko'rishamiz, yaxshi kun!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Danke, bis dann. Tschüss!",
+        "translation": {
+          "ru-RU": "Спасибо, до встречи. Пока!",
+          "en-US": "Thanks, see you then. Bye!",
+          "ar-SA": "شكراً، أراك حينها. وداعاً!",
+          "es-ES": "Gracias, hasta entonces. ¡Adiós!",
+          "fr-FR": "Merci, à plus tard. Salut !",
+          "hi-IN": "धन्यवाद, फिर मिलते हैं। अलविदा!",
+          "pl-PL": "Dzięki, do zobaczenia. Cześć!",
+          "ro-RO": "Mersi, pe atunci. Pa!",
+          "tr-TR": "Teşekkürler, görüşmek üzere. Hoşça kal!",
+          "uk-UA": "Дякую, до зустрічі. Бувай!",
+          "uz-UZ": "Rahmat, ko'rishguncha. Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

@@ -1,0 +1,661 @@
+{
+  "start": {
+    "botText": "Guten Tag, Anna. Haben Sie eine Minute Zeit?",
+    "botTranslation": {
+      "ru-RU": "Добрый день, Анна. У Вас есть минута?",
+      "en-US": "Good day, Anna. Do you have a minute?",
+      "ar-SA": "طاب يومك، آنا. هل لديك دقيقة؟",
+      "es-ES": "Buen día, Anna. ¿Tiene un minuto?",
+      "fr-FR": "Bonjour, Anna. Avez-vous une minute ?",
+      "hi-IN": "शुभ दिन, अन्ना। क्या आपके पास एक मिनट है?",
+      "pl-PL": "Dzień dobry, Anna. Ma pani minutę?",
+      "ro-RO": "Bună ziua, Anna. Aveți un minut?",
+      "tr-TR": "İyi günler, Anna. Bir dakikanız var mı?",
+      "uk-UA": "Добрий день, Анно. У Вас є хвилина?",
+      "uz-UZ": "Xayrli kun, Anna. Bir daqiqa vaqtingiz bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "eine Minute",
+        "translation": {
+          "ru-RU": "одна минута",
+          "en-US": "a minute",
+          "ar-SA": "دقيقة واحدة",
+          "es-ES": "un minuto",
+          "fr-FR": "une minute",
+          "hi-IN": "एक मिनट",
+          "pl-PL": "jedna minuta",
+          "ro-RO": "un minut",
+          "tr-TR": "bir dakika",
+          "uk-UA": "одна хвилина",
+          "uz-UZ": "bir daqiqa"
+        }
+      },
+      {
+        "german": "die Zeit",
+        "translation": {
+          "ru-RU": "время",
+          "en-US": "time",
+          "ar-SA": "الوقت",
+          "es-ES": "el tiempo",
+          "fr-FR": "le temps",
+          "hi-IN": "समय",
+          "pl-PL": "czas",
+          "ro-RO": "timpul",
+          "tr-TR": "zaman",
+          "uk-UA": "час",
+          "uz-UZ": "vaqt"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, natürlich, Herr Müller.",
+        "translation": {
+          "ru-RU": "Да, конечно, господин Мюллер.",
+          "en-US": "Yes, of course, Herr Müller.",
+          "ar-SA": "نعم، بالطبع، سيد مولر.",
+          "es-ES": "Sí, por supuesto, señor Müller.",
+          "fr-FR": "Oui, bien sûr, Monsieur Müller.",
+          "hi-IN": "हाँ, बिल्कुल, मिस्टर मुलर।",
+          "pl-PL": "Tak, oczywiście, panie Müller.",
+          "ro-RO": "Da, desigur, domnule Müller.",
+          "tr-TR": "Evet, elbette Bay Müller.",
+          "uk-UA": "Так, звісно, пане Мюллер.",
+          "uz-UZ": "Ha, albatta, janob Myuller."
+        },
+        "nextStep": "task_assign"
+      },
+      {
+        "text": "Gerne, Herr Müller. Was kann ich tun?",
+        "translation": {
+          "ru-RU": "С удовольствием, господин Мюллер. Что я могу сделать?",
+          "en-US": "Gladly, Herr Müller. What can I do?",
+          "ar-SA": "بكل سرور، سيد مولر. ماذا يمكنني أن أفعل؟",
+          "es-ES": "Con gusto, señor Müller. ¿Qué puedo hacer?",
+          "fr-FR": "Volontiers, Monsieur Müller. Que puis-je faire ?",
+          "hi-IN": "खुशी से, मिस्टर मुलर। मैं क्या कर सकता हूँ?",
+          "pl-PL": "Chętnie, panie Müller. W czym mogę pomóc?",
+          "ro-RO": "Cu plăcere, domnule Müller. Ce pot să fac?",
+          "tr-TR": "Memnuniyetle Bay Müller. Ne yapabilirim?",
+          "uk-UA": "Із задоволенням, пане Мюллер. Що я можу зробити?",
+          "uz-UZ": "Bajonidil, janob Myuller. Nima qila olaman?"
+        },
+        "nextStep": "task_assign"
+      }
+    ],
+    "defaultNext": "task_assign"
+  },
+  "task_assign": {
+    "botText": "Ich habe eine neue Aufgabe für Sie. Sie müssen den Bericht bis Freitag schreiben.",
+    "botTranslation": {
+      "ru-RU": "У меня для Вас новое задание. Вы должны написать отчет до пятницы.",
+      "en-US": "I have a new task for you. You must write the report by Friday.",
+      "ar-SA": "لدي مهمة جديدة لك. يجب عليك كتابة التقرير بحلول يوم الجمعة.",
+      "es-ES": "Tengo una nueva tarea para usted. Debe escribir el informe para el viernes.",
+      "fr-FR": "J'ai une nouvelle tâche pour vous. Vous devez écrire le rapport pour vendredi.",
+      "hi-IN": "मेरे पास आपके लिए एक नया काम है। आपको शुक्रवार तक रिपोर्ट लिखनी होगी।",
+      "pl-PL": "Mam dla pani nowe zadanie. Musi pani napisać raport do piątku.",
+      "ro-RO": "Am o sarcină nouă pentru dumneavoastră. Trebuie să scrieți raportul până vineri.",
+      "tr-TR": "Sizin için yeni bir görevim var. Raporu cumaya kadar yazmalısınız.",
+      "uk-UA": "Маю для Вас нове завдання. Ви повинні написати звіт до п'ятниці.",
+      "uz-UZ": "Siz uchun yangi vazifam bor. Juma kunigacha hisobotni yozishingiz kerak."
+    },
+    "vocabulary": [
+      {
+        "german": "neue Aufgabe",
+        "translation": {
+          "ru-RU": "новое задание",
+          "en-US": "new task",
+          "ar-SA": "مهمة جديدة",
+          "es-ES": "nueva tarea",
+          "fr-FR": "nouvelle tâche",
+          "hi-IN": "नया काम",
+          "pl-PL": "nowe zadanie",
+          "ro-RO": "sarcină nouă",
+          "tr-TR": "yeni görev",
+          "uk-UA": "нове завдання",
+          "uz-UZ": "yangi vazifa"
+        }
+      },
+      {
+        "german": "der Bericht",
+        "translation": {
+          "ru-RU": "отчет",
+          "en-US": "the report",
+          "ar-SA": "التقرير",
+          "es-ES": "el informe",
+          "fr-FR": "le rapport",
+          "hi-IN": "रिपोर्ट",
+          "pl-PL": "raport",
+          "ro-RO": "raportul",
+          "tr-TR": "rapor",
+          "uk-UA": "звіт",
+          "uz-UZ": "hisobot"
+        }
+      },
+      {
+        "german": "bis Freitag",
+        "translation": {
+          "ru-RU": "до пятницы",
+          "en-US": "by Friday",
+          "ar-SA": "حتى الجمعة",
+          "es-ES": "para el viernes",
+          "fr-FR": "d'ici vendredi",
+          "hi-IN": "शुक्रवार तक",
+          "pl-PL": "do piątku",
+          "ro-RO": "până vineri",
+          "tr-TR": "cumaya kadar",
+          "uk-UA": "до п'ятниці",
+          "uz-UZ": "jumagacha"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, ich schreibe den Bericht bis Freitag.",
+        "translation": {
+          "ru-RU": "Всё понятно, я напишу отчет до пятницы.",
+          "en-US": "Alright, I will write the report by Friday.",
+          "ar-SA": "حسناً، سأكتب التقرير بحلول يوم الجمعة.",
+          "es-ES": "De acuerdo, escribiré el informe para el viernes.",
+          "fr-FR": "Entendu, j'écrirai le rapport d'ici vendredi.",
+          "hi-IN": "ठीक है, मैं शुक्रवार तक रिपोर्ट लिखूंगा।",
+          "pl-PL": "Wszystko jasne, napiszę raport do piątku.",
+          "ro-RO": "În regulă, voi scrie raportul până vineri.",
+          "tr-TR": "Tamam, raporu cumaya kadar yazacağım.",
+          "uk-UA": "Все зрозуміло, я напишу звіт до п'ятниці.",
+          "uz-UZ": "Tushunarli, hisobotni juma kunigacha yozaman."
+        },
+        "nextStep": "format_req"
+      },
+      {
+        "text": "Verstanden, ich mache den Bericht bis Freitag fertig.",
+        "translation": {
+          "ru-RU": "Поняла, я сделаю отчет до пятницы.",
+          "en-US": "Understood, I will have the report done by Friday.",
+          "ar-SA": "مفهوم، سأجهز التقرير بحلول يوم الجمعة.",
+          "es-ES": "Entendido, tendré el informe listo para el viernes.",
+          "fr-FR": "Compris, je terminerai le rapport pour vendredi.",
+          "hi-IN": "समझ गया, मैं शुक्रवार तक रिपोर्ट तैयार कर दूँगा।",
+          "pl-PL": "Zrozumiałam, przygotuję raport do piątku.",
+          "ro-RO": "Am înțeles, voi termina raportul până vineri.",
+          "tr-TR": "Anlaşıldı, raporu cumaya kadar bitireceğim.",
+          "uk-UA": "Зрозуміла, я зроблю звіт до п'ятниці.",
+          "uz-UZ": "Tushundim, hisobotni juma kunigacha tayyorlayman."
+        },
+        "nextStep": "format_req"
+      }
+    ],
+    "defaultNext": "format_req"
+  },
+  "format_req": {
+    "botText": "Senden Sie mir bitte den Bericht per E-Mail.",
+    "botTranslation": {
+      "ru-RU": "Пожалуйста, пришлите мне отчет по e-mail.",
+      "en-US": "Please send me the report via email.",
+      "ar-SA": "يرجى إرسال التقرير إليّ عبر البريد الإلكتروني.",
+      "es-ES": "Por favor, envíeme el informe por correo electrónico.",
+      "fr-FR": "Veuillez m'envoyer le rapport par e-mail.",
+      "hi-IN": "कृपया मुझे रिपोर्ट ईमेल के माध्यम से भेजें।",
+      "pl-PL": "Proszę przesłać mi raport e-mailem.",
+      "ro-RO": "Vă rog să-mi trimiteți raportul prin e-mail.",
+      "tr-TR": "Lütfen raporu bana e-posta ile gönderin.",
+      "uk-UA": "Будь ласка, надішліть мені звіт електронною поштою.",
+      "uz-UZ": "Iltimos, hisobotni menga elektron pochta orqali yuboring."
+    },
+    "vocabulary": [
+      {
+        "german": "senden Sie",
+        "translation": {
+          "ru-RU": "пришлите",
+          "en-US": "send",
+          "ar-SA": "أرسل",
+          "es-ES": "envíe",
+          "fr-FR": "envoyez",
+          "hi-IN": "भेजें",
+          "pl-PL": "proszę wysłać",
+          "ro-RO": "trimiteți",
+          "tr-TR": "gönderin",
+          "uk-UA": "надішліть",
+          "uz-UZ": "yuboring"
+        }
+      },
+      {
+        "german": "per E-Mail",
+        "translation": {
+          "ru-RU": "по e-mail",
+          "en-US": "by email",
+          "ar-SA": "عبر الإيميل",
+          "es-ES": "por correo",
+          "fr-FR": "par e-mail",
+          "hi-IN": "ईमेल द्वारा",
+          "pl-PL": "przez e-mail",
+          "ro-RO": "prin e-mail",
+          "tr-TR": "e-posta ile",
+          "uk-UA": "по e-mail",
+          "uz-UZ": "elektron pochta orqali"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Gut, ich sende Ihnen den Bericht per E-Mail.",
+        "translation": {
+          "ru-RU": "Хорошо, я пришлю Вам отчет по e-mail.",
+          "en-US": "Good, I will send you the report via email.",
+          "ar-SA": "حسناً، سأرسل لك التقرير عبر البريد الإلكتروني.",
+          "es-ES": "Bien, le enviaré el informe por correo electrónico.",
+          "fr-FR": "Bien, je vous enverrai le rapport par e-mail.",
+          "hi-IN": "अच्छा, मैं आपको रिपोर्ट ईमेल से भेज दूँगा।",
+          "pl-PL": "Dobrze, wyślę panu raport e-mailem.",
+          "ro-RO": "Bine, vă voi trimite raportul prin e-mail.",
+          "tr-TR": "Peki, raporu size e-posta ile göndereceğim.",
+          "uk-UA": "Добре, я надішлю Вам звіт електронною поштою.",
+          "uz-UZ": "Yaxshi, hisobotni sizga elektron pochta orqali yuboraman."
+        },
+        "nextStep": "questions_check"
+      },
+      {
+        "text": "Okay, das mache ich am Freitag.",
+        "translation": {
+          "ru-RU": "Окей, я сделаю это в пятницу.",
+          "en-US": "Okay, I will do that on Friday.",
+          "ar-SA": "حسناً، سأفعل ذلك يوم الجمعة.",
+          "es-ES": "Vale, lo haré el viernes.",
+          "fr-FR": "D'accord, je ferai ça vendredi.",
+          "hi-IN": "ठीक है, मैं यह शुक्रवार को करूँगा।",
+          "pl-PL": "Okej, zrobię to w piątek.",
+          "ro-RO": "Ok, voi face asta vineri.",
+          "tr-TR": "Tamam, bunu cuma günü yapacağım.",
+          "uk-UA": "Окей, я зроблю це в п'ятницю.",
+          "uz-UZ": "Xo'p, buni juma kuni qilaman."
+        },
+        "nextStep": "questions_check"
+      }
+    ],
+    "defaultNext": "questions_check"
+  },
+  "questions_check": {
+    "botText": "Danke. Gibt es Fragen dazu?",
+    "botTranslation": {
+      "ru-RU": "Спасибо. Есть ли вопросы по этому поводу?",
+      "en-US": "Thank you. Are there any questions about this?",
+      "ar-SA": "شكراً. هل هناك أي أسئلة حول ذلك؟",
+      "es-ES": "Gracias. ¿Hay alguna pregunta al respecto?",
+      "fr-FR": "Merci. Y a-t-il des questions à ce sujet ?",
+      "hi-IN": "धन्यवाद। क्या इसके बारे में कोई प्रश्न हैं?",
+      "pl-PL": "Dziękuję. Czy są jakieś pytania do tego?",
+      "ro-RO": "Mulțumesc. Există întrebări despre asta?",
+      "tr-TR": "Teşekkürler. Bununla ilgili soru var mı?",
+      "uk-UA": "Дякую. Чи є питання щодо цього?",
+      "uz-UZ": "Rahmat. Bunga oid savollar bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "es gibt",
+        "translation": {
+          "ru-RU": "есть / имеется",
+          "en-US": "there are",
+          "ar-SA": "يوجد",
+          "es-ES": "hay",
+          "fr-FR": "il y a",
+          "hi-IN": "हैं",
+          "pl-PL": "są",
+          "ro-RO": "există",
+          "tr-TR": "var",
+          "uk-UA": "є / мається",
+          "uz-UZ": "bor"
+        }
+      },
+      {
+        "german": "die Fragen",
+        "translation": {
+          "ru-RU": "вопросы",
+          "en-US": "questions",
+          "ar-SA": "أسئلة",
+          "es-ES": "preguntas",
+          "fr-FR": "questions",
+          "hi-IN": "प्रश्न",
+          "pl-PL": "pytania",
+          "ro-RO": "întrebări",
+          "tr-TR": "sorular",
+          "uk-UA": "питання",
+          "uz-UZ": "savollar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, ich habe keine Fragen.",
+        "translation": {
+          "ru-RU": "Нет, у меня нет вопросов.",
+          "en-US": "No, I have no questions.",
+          "ar-SA": "لا، ليس لدي أي أسئلة.",
+          "es-ES": "No, no tengo preguntas.",
+          "fr-FR": "Non, je n'ai pas de questions.",
+          "hi-IN": "नहीं, मेरे कोई प्रश्न नहीं हैं।",
+          "pl-PL": "Nie, nie mam pytań.",
+          "ro-RO": "Nu, nu am întrebări.",
+          "tr-TR": "Hayır, sorum yok.",
+          "uk-UA": "Ні, у мене немає питань.",
+          "uz-UZ": "Yo'q, menda savollar yo'q."
+        },
+        "nextStep": "project_check"
+      },
+      {
+        "text": "Alles ist klar, vielen Dank.",
+        "translation": {
+          "ru-RU": "Всё понятно, большое спасибо.",
+          "en-US": "Everything is clear, thank you very much.",
+          "ar-SA": "كل شيء واضح، شكراً جزيلاً.",
+          "es-ES": "Todo está claro, muchas gracias.",
+          "fr-FR": "Tout est clair, merci beaucoup.",
+          "hi-IN": "सब कुछ स्पष्ट है, बहुत-बहुत धन्यवाद।",
+          "pl-PL": "Wszystko jasne, bardzo dziękuję.",
+          "ro-RO": "Totul este clar, mulțumesc mult.",
+          "tr-TR": "Her şey net, çok teşekkürler.",
+          "uk-UA": "Все зрозуміло, велике дякую.",
+          "uz-UZ": "Hammasi tushunarli, katta rahmat."
+        },
+        "nextStep": "project_check"
+      }
+    ],
+    "defaultNext": "project_check"
+  },
+  "project_check": {
+    "botText": "Gut. Arbeiten Sie auch an dem Projekt?",
+    "botTranslation": {
+      "ru-RU": "Хорошо. Вы также работаете над проектом?",
+      "en-US": "Good. Are you also working on the project?",
+      "ar-SA": "جيد. هل تعملين أيضاً في المشروع؟",
+      "es-ES": "Bien. ¿También está trabajando en el proyecto?",
+      "fr-FR": "Bien. Travaillez-vous également sur le projet ?",
+      "hi-IN": "अच्छा। क्या आप भी प्रोजेक्ट पर काम कर रहे हैं?",
+      "pl-PL": "Dobrze. Pracuje pani również nad projektem?",
+      "ro-RO": "Bine. Lucrați și la proiect?",
+      "tr-TR": "Güzel. Proje üzerinde de çalışıyor musunuz?",
+      "uk-UA": "Добре. Ви також працюєте над проєктом?",
+      "uz-UZ": "Yaxshi. Loyiha ustida ham ishlayapsizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "arbeiten",
+        "translation": {
+          "ru-RU": "работать",
+          "en-US": "to work",
+          "ar-SA": "يعمل",
+          "es-ES": "trabajar",
+          "fr-FR": "travailler",
+          "hi-IN": "काम करना",
+          "pl-PL": "pracować",
+          "ro-RO": "a lucra",
+          "tr-TR": "çalışmak",
+          "uk-UA": "працювати",
+          "uz-UZ": "ishlash"
+        }
+      },
+      {
+        "german": "das Projekt",
+        "translation": {
+          "ru-RU": "проект",
+          "en-US": "the project",
+          "ar-SA": "المشروع",
+          "es-ES": "el proyecto",
+          "fr-FR": "le projet",
+          "hi-IN": "प्रोजेक्ट",
+          "pl-PL": "projekt",
+          "ro-RO": "proiectul",
+          "tr-TR": "proje",
+          "uk-UA": "проєкт",
+          "uz-UZ": "loyiha"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, ich arbeite an dem Projekt.",
+        "translation": {
+          "ru-RU": "Да, я работаю над проектом.",
+          "en-US": "Yes, I am working on the project.",
+          "ar-SA": "نعم، أنا أعمل على المشروع.",
+          "es-ES": "Sí, trabajo en el proyecto.",
+          "fr-FR": "Oui, je travaille sur le projet.",
+          "hi-IN": "हाँ, मैं प्रोजेक्ट पर काम कर रहा हूँ।",
+          "pl-PL": "Tak, pracuję nad projektem.",
+          "ro-RO": "Da, lucrez la proiect.",
+          "tr-TR": "Evet, proje üzerinde çalışıyorum.",
+          "uk-UA": "Так, я працюю над проєктом.",
+          "uz-UZ": "Ha, men loyiha ustida ishlayapman."
+        },
+        "nextStep": "boss_thanks"
+      },
+      {
+        "text": "Ja, das Projekt mache ich auch.",
+        "translation": {
+          "ru-RU": "Да, проект я тоже делаю.",
+          "en-US": "Yes, I am doing the project too.",
+          "ar-SA": "نعم، أنا أقوم بالمشروع أيضاً.",
+          "es-ES": "Sí, también hago el proyecto.",
+          "fr-FR": "Oui, je fais le projet aussi.",
+          "hi-IN": "हाँ, मैं भी प्रोजेक्ट कर रहा हूँ।",
+          "pl-PL": "Tak, projekt też robię.",
+          "ro-RO": "Da, fac și proiectul.",
+          "tr-TR": "Evet, projeyi de ben yapıyorum.",
+          "uk-UA": "Так, проєкт я теж роблю.",
+          "uz-UZ": "Ha, loyihani ham bajaryapman."
+        },
+        "nextStep": "boss_thanks"
+      }
+    ],
+    "defaultNext": "boss_thanks"
+  },
+  "boss_thanks": {
+    "botText": "Das freut mich. Vielen Dank!",
+    "botTranslation": {
+      "ru-RU": "Я рад этому. Большое спасибо!",
+      "en-US": "I am glad to hear that. Thank you very much!",
+      "ar-SA": "يسعدني ذلك. شكراً جزيلاً!",
+      "es-ES": "Me alegro. ¡Muchas gracias!",
+      "fr-FR": "J'en suis ravi. Merci beaucoup !",
+      "hi-IN": "मुझे यह सुनकर खुशी हुई। बहुत-बहुत धन्यवाद!",
+      "pl-PL": "Cieszę się. Bardzo dziękuję!",
+      "ro-RO": "Mă bucur. Mulțumesc mult!",
+      "tr-TR": "Buna sevindim. Çok teşekkürler!",
+      "uk-UA": "Я радий цьому. Велике дякую!",
+      "uz-UZ": "Bundan xursandman. Katta rahmat!"
+    },
+    "vocabulary": [
+      {
+        "german": "freut mich",
+        "translation": {
+          "ru-RU": "очень рад",
+          "en-US": "glad to",
+          "ar-SA": "يسعدني",
+          "es-ES": "me alegro",
+          "fr-FR": "ravi",
+          "hi-IN": "खुशी है",
+          "pl-PL": "cieszę się",
+          "ro-RO": "mă bucur",
+          "tr-TR": "sevindim",
+          "uk-UA": "дуже радий",
+          "uz-UZ": "xursandman"
+        }
+      },
+      {
+        "german": "vielen Dank",
+        "translation": {
+          "ru-RU": "большое спасибо",
+          "en-US": "many thanks",
+          "ar-SA": "شكراً جزيلاً",
+          "es-ES": "muchas gracias",
+          "fr-FR": "merci beaucoup",
+          "hi-IN": "बहुत धन्यवाद",
+          "pl-PL": "bardzo dziękuję",
+          "ro-RO": "mulțumesc mult",
+          "tr-TR": "çok teşekkürler",
+          "uk-UA": "велике дякую",
+          "uz-UZ": "katta rahmat"
+        }
+      },
+      {
+        "german": "gerne",
+        "translation": {
+          "ru-RU": "с удовольствием",
+          "en-US": "gladly",
+          "ar-SA": "بكل سرور",
+          "es-ES": "con gusto",
+          "fr-FR": "avec plaisir",
+          "hi-IN": "खुशी से",
+          "pl-PL": "z przyjemnością",
+          "ro-RO": "cu plăcere",
+          "tr-TR": "memnuniyetle",
+          "uk-UA": "із задоволенням",
+          "uz-UZ": "bajonidil"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Gerne, Herr Müller.",
+        "translation": {
+          "ru-RU": "С удовольствием, господин Мюллер. (В ответ на спасибо)",
+          "en-US": "Gladly, Herr Müller. (You're welcome)",
+          "ar-SA": "بكل سرور، سيد مولر.",
+          "es-ES": "Con gusto, señor Müller.",
+          "fr-FR": "Avec plaisir, Monsieur Müller.",
+          "hi-IN": "खुशी से, मिस्टर मुलर।",
+          "pl-PL": "Z przyjemnością, panie Müller.",
+          "ro-RO": "Cu plăcere, domnule Müller.",
+          "tr-TR": "Rica ederim, Bay Müller.",
+          "uk-UA": "Будь ласка (Із задоволенням), пане Мюллер.",
+          "uz-UZ": "Arzimaydi, janob Myuller."
+        },
+        "nextStep": "goodbye_boss"
+      },
+      {
+        "text": "Bitte, Herr Müller.",
+        "translation": {
+          "ru-RU": "Пожалуйста, господин Мюллер.",
+          "en-US": "You're welcome, Herr Müller.",
+          "ar-SA": "عفواً، سيد مولر.",
+          "es-ES": "De nada, señor Müller.",
+          "fr-FR": "Je vous en prie, Monsieur Müller.",
+          "hi-IN": "आपका स्वागत है, मिस्टर मुलर।",
+          "pl-PL": "Proszę bardzo, panie Müller.",
+          "ro-RO": "Vă rog, domnule Müller.",
+          "tr-TR": "Rica ederim, Bay Müller.",
+          "uk-UA": "Прошу, пане Мюллер.",
+          "uz-UZ": "Arzimaydi, janob Myuller."
+        },
+        "nextStep": "goodbye_boss"
+      }
+    ],
+    "defaultNext": "goodbye_boss"
+  },
+  "goodbye_boss": {
+    "botText": "Auf Wiedersehen, Anna.",
+    "botTranslation": {
+      "ru-RU": "До свидания, Анна.",
+      "en-US": "Goodbye, Anna.",
+      "ar-SA": "إلى اللقاء، آنا.",
+      "es-ES": "Adiós, Anna.",
+      "fr-FR": "Au revoir, Anna.",
+      "hi-IN": "अलविदा, अन्ना।",
+      "pl-PL": "Do widzenia, Anna.",
+      "ro-RO": "La revedere, Anna.",
+      "tr-TR": "Hoşça kal, Anna.",
+      "uk-UA": "До побачення, Анно.",
+      "uz-UZ": "Xayr, Anna."
+    },
+    "vocabulary": [
+      {
+        "german": "auf Wiedersehen",
+        "translation": {
+          "ru-RU": "до свидания",
+          "en-US": "goodbye",
+          "ar-SA": "إلى اللقاء",
+          "es-ES": "adiós",
+          "fr-FR": "au revoir",
+          "hi-IN": "अलविदा",
+          "pl-PL": "do widzenia",
+          "ro-RO": "la revedere",
+          "tr-TR": "hoşça kalın",
+          "uk-UA": "до побачення",
+          "uz-UZ": "xayr"
+        }
+      },
+      {
+        "german": "schönen Tag",
+        "translation": {
+          "ru-RU": "хорошего дня",
+          "en-US": "nice day",
+          "ar-SA": "يوم جميل",
+          "es-ES": "buen día",
+          "fr-FR": "bonne journée",
+          "hi-IN": "अच्छा दिन",
+          "pl-PL": "miłego dnia",
+          "ro-RO": "o zi frumoasă",
+          "tr-TR": "iyi günler",
+          "uk-UA": "гарного дня",
+          "uz-UZ": "yaxshi kun"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Auf Wiedersehen, Herr Müller!",
+        "translation": {
+          "ru-RU": "До свидания, господин Мюллер!",
+          "en-US": "Goodbye, Herr Müller!",
+          "ar-SA": "إلى اللقاء، سيد مولر!",
+          "es-ES": "¡Adiós, señor Müller!",
+          "fr-FR": "Au revoir, Monsieur Müller !",
+          "hi-IN": "अलविदा, मिस्टर मुलर!",
+          "pl-PL": "Do widzenia, panie Müller!",
+          "ro-RO": "La revedere, domnule Müller!",
+          "tr-TR": "Hoşça kalın, Bay Müller!",
+          "uk-UA": "До побачення, пане Мюллер!",
+          "uz-UZ": "Xayr, janob Myuller!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Einen schönen Tag noch, Herr Müller!",
+        "translation": {
+          "ru-RU": "Хорошего дня, господин Мюллер!",
+          "en-US": "Have a nice day, Herr Müller!",
+          "ar-SA": "أتمنى لك يوماً سعيداً، سيد مولر!",
+          "es-ES": "¡Que tenga un buen día, señor Müller!",
+          "fr-FR": "Bonne journée, Monsieur Müller !",
+          "hi-IN": "आपका दिन शुभ हो, मिस्टर मुलर!",
+          "pl-PL": "Miłego dnia, panie Müller!",
+          "ro-RO": "O zi frumoasă, domnule Müller!",
+          "tr-TR": "İyi günler, Bay Müller!",
+          "uk-UA": "Гарного дня, пане Мюллер!",
+          "uz-UZ": "Yaxshi kun tilayman, janob Myuller!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

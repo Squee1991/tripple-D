@@ -271,10 +271,15 @@ const clearSelectedTopic = () => {
   if (showModesBlock.value) window.history.back()
 }
 
+onMounted(()=> {
+  setTimeout(() => {
+    isPageLoaded.value = true
+  }, 100)
+})
+
 onMounted(async () => {
   const res = await fetch('/words.json')
   themeList.value = await res.json()
-  isPageLoaded.value = true
   window.addEventListener('popstate', handlePopState)
 })
 

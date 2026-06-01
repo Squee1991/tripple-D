@@ -9219,7 +9219,8 @@
     "describePicture": "Опис картинок",
     "fight": "Всесвіт німецької",
     "audio": "Аудіо завдання",
-    "textTask": "Тексти"
+    "textTask": "Тексти",
+    "speak": "Розмовна практика"
   },
   "underSub": {
     "prev": "Вступ",
@@ -10158,5 +10159,106 @@
     "home": "Головна",
     "events": "Події",
     "cabinet": "Кабінет"
+  },
+  "speakTopics": {
+    "speak": "Знайомство та спілкування",
+    "food": "Їжа та покупки",
+    "transport": "Поїздки та транспорт",
+    "city": "Міські служби та побут",
+    "health": "Здоров'я",
+    "work": "Робота та кар'єра"
+  },
+  "speakThemes": {
+    "firstmeet": "Знайомство",
+    "acquaintance": "Знайомство 2",
+    "secondmeet": "Зустріч",
+    "family_talk": "Бесіда",
+    "weekend_plans": "Плани",
+    "friend_call": "Дзвінок",
+    "hobby_talk": "Хобі",
+    "party_talk": "Вечірка",
+    "cafe_order": "Замовлення кави",
+    "restaurant_dinner": "Ресторан",
+    "store_checkout": "На касі",
+    "order_eat": "Замовлення їжі",
+    "consultation_talk": "Консультація",
+    "train_station": "На вокзалі",
+    "train_ticket": "Перевірка квитка",
+    "taxi_berlin": "Таксі",
+    "bus_talk": "В автобусі",
+    "hotel_checkin": "Готель",
+    "border_check": "Кордон",
+    "airport_talk": "Аеропорт",
+    "info_talk": "Інфоцентр",
+    "bank_account": "Банк",
+    "apartment_rent": "Оренда",
+    "clothes_shopping": "Покупки",
+    "shopping": "Покупки 2",
+    "post_office": "Пошта",
+    "police_talk": "Поліція",
+    "barbershop": "Перукарня",
+    "doctor_visit": "Запис до лікаря",
+    "pharmacy_vitamins": "Аптека",
+    "insurance": "Страховка",
+    "at_doctor": "У лікаря",
+    "dentist": "Стоматолог",
+    "veterinary": "Ветеринар",
+    "job_looking": "Пошук роботи",
+    "job_interview": "Співбесіда",
+    "bos_talk": "Розмова з керівником",
+    "vacation": "Відпустка",
+    "salary_talk": "Зарплата",
+    "dismissal_talk": "Звільнення"
+  },
+  "speakIndexPage": {
+    "title": "Розмовна практика",
+    "bannerText": "Відпрацьовуй навички мовлення на реальних прикладах",
+    "modalTitle": "Розмовна практика",
+    "modalText": "Розвивайте навички спілкування в реальних діалогах! Ви можете обрати готовий варіант відповіді із запропонованих, ввести його вручну з клавіатури або просто вимовити вголос, натиснувши на кнопку мікрофона."
+  },
+  "rankModal": {
+    "title": "НОВИЙ РАНГ",
+    "rankedLabel": "Ранг",
+    "accept": "ПРИЙНЯТИ"
+  },
+  "premiumBanner": {
+    "textBanner": "Отримай максимум від платформи, прискор своє навчання."
+  },
+  "netWork": {
+    "successTitle": "Мережу відновлено!",
+    "notSuccessTitle": "Ой! Немає інтернету",
+    "successText": "Повертаємося до роботи...",
+    "notSuccessText": "Очікуємо на підключення до мережі..."
+  },
+  "termsBlock": {
+    "first": "Реєструючись, ви приймаєте",
+    "second": "Умови використання",
+    "third": "та",
+    "fourth": "Політику конфіденційності"
+  },
+  "languagePage": {
+    "title": "Мова додатка",
+    "placeholder": "Пошук мови...",
+    "notfound": "Нічого не знайдено",
+    "further": "Продовжити"
+  },
+  "statistics": {
+    "title": "Ваша статистика та прогрес у вивченні слів і проходженні тематичних рівнів"
+  },
+  "restoreComputed": {
+    "restoring": "Відновлення...",
+    "restore": "Відновити покупки."
+  },
+  "submitComputed": {
+    "sync": "Синхронізація...",
+    "getPlus": "Придбати PLUS"
+  },
+  "pay": {
+    "banner": "Повний доступ до всіх функцій додатка",
+    "sales": "Застосуй знижки, зароблені за активність",
+    "triggerToastSuccess": "Покупку відновлено!",
+    "triggerToastNotFound": "Активних підписок не знайдено",
+    "triggerToastError": "Помилка під час відновлення",
+    "triggerToastIsPlus": "У вас вже активовано PLUS!"
   }
 }

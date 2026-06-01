@@ -1,47 +1,68 @@
 {
   "start": {
-    "botText": "Guten Tag! Willkommen in Berlin. Was kann ich für Sie tun?",
-    "tips": {
-      "ru-RU": "В немецких банках общение короткое: меньше слов — больше дела. Ценится четкость.",
-      "en-US": "In German banks, communication is short and direct. Efficiency is key.",
-      "ar-SA": "التواصل في البنوك الألمانية مباشر ومختصر.",
-      "es-ES": "En los bancos alemanes, se valora la comunicación directa y concisa.",
-      "fr-FR": "La communication dans les banques allemandes est directe et concise.",
-      "hi-IN": "जर्मन बैंकों में संवाद संक्षिप्त और सीधा होता है।",
-      "pl-PL": "W niemieckich bankach komunikacja jest zwięzła i bezpośrednia.",
-      "ro-RO": "În băncile germane, comunicarea este directă și concisă.",
-      "tr-TR": "Alman bankalarında iletişim kısa ve özdür.",
-      "uk-UA": "У німецьких банках комунікація коротка і пряма.",
-      "uz-UZ": "Germaniya banklarida muloqot qisqa va aniq."
-    },
+    "botText": "Guten Tag! Was kann ich für Sie tun?",
     "botTranslation": {
-      "ar-SA": "طاب يومك! مرحباً بك في برلين. ماذا يمكنني أن أفعل لك؟",
-      "en-US": "Good day! Welcome to Berlin. What can I do for you?",
-      "es-ES": "¡Buen día! Bienvenido a Berlín. ¿Qué puedo hacer por usted?",
-      "fr-FR": "Bonjour ! Bienvenue à Berlin. Que puis-je faire pour vous ?",
-      "hi-IN": "शुभ दिन! बर्लिन में आपका स्वागत है। मैं आपकी क्या मदद कर सकता हूँ?",
-      "pl-PL": "Dzień dobry! Witamy w Berlinie. W czym mogę pomóc?",
-      "ro-RO": "Bună ziua! Bun venit în Berlin. Cu ce vă pot ajuta?",
-      "ru-RU": "Добрый день! Добро пожаловать в Берлин. Чем я могу Вам помочь?",
-      "tr-TR": "İyi günler! Berlin'e hoş geldiniz. Size nasıl yardımcı olabilirim?",
-      "uk-UA": "Добрий день! Ласкаво просимо до Берліна. Чим я можу Вам допомогти?",
-      "uz-UZ": "Xayrli kun! Berlinga xush kelibsiz. Sizga qanday yordam bera olaman?"
+      "ru-RU": "Добрый день! Чем я могу Вам помочь?",
+      "en-US": "Good day! What can I do for you?",
+      "ar-SA": "طاب يومك! ماذا يمكنني أن أفعل لك؟",
+      "es-ES": "¡Buen día! ¿Qué puedo hacer por usted?",
+      "fr-FR": "Bonjour ! Que puis-je faire pour vous ?",
+      "hi-IN": "शुभ दिन! मैं आपकी क्या मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! W czym mogę pomóc?",
+      "ro-RO": "Bună ziua! Cu ce vă pot ajuta?",
+      "tr-TR": "İyi günler! Size nasıl yardımcı olabilirim?",
+      "uk-UA": "Добрий день! Чим я можу Вам допомогти?",
+      "uz-UZ": "Xayrli kun! Sizga qanday yordam bera olaman?"
     },
+    "vocabulary": [
+      {
+        "german": "ein Konto",
+        "translation": {
+          "ru-RU": "счет",
+          "en-US": "an account",
+          "ar-SA": "حساب",
+          "es-ES": "una cuenta",
+          "fr-FR": "un compte",
+          "hi-IN": "एक खाता",
+          "pl-PL": "konto",
+          "ro-RO": "un cont",
+          "tr-TR": "bir hesap",
+          "uk-UA": "рахунок",
+          "uz-UZ": "hisob raqami"
+        }
+      },
+      {
+        "german": "für Sie",
+        "translation": {
+          "ru-RU": "для Вас",
+          "en-US": "for you",
+          "ar-SA": "من أجلك",
+          "es-ES": "para usted",
+          "fr-FR": "pour vous",
+          "hi-IN": "आपके लिए",
+          "pl-PL": "dla Pana/Pani",
+          "ro-RO": "pentru dumneavoastră",
+          "tr-TR": "sizin için",
+          "uk-UA": "для Вас",
+          "uz-UZ": "siz uchun"
+        }
+      }
+    ],
     "options": [
       {
-        "text": "Guten Tag! Ich möchte ein Konto eröffnen.",
+        "text": "Ich möchte ein Konto eröffnen.",
         "translation": {
-          "ar-SA": "طاب يومك! أريد فتح حساب.",
-          "en-US": "Good day! I would like to open an account.",
-          "es-ES": "¡Buen día! Quisiera abrir una cuenta.",
-          "fr-FR": "Bonjour ! Je voudrais ouvrir un compte.",
-          "hi-IN": "शुभ दिन! मैं एक खाता खोलना चाहता हूँ।",
-          "pl-PL": "Dzień dobry! Chciałbym otworzyć konto.",
-          "ro-RO": "Bună ziua! Aș dori să deschid un cont.",
-          "ru-RU": "Добрый день! Я хочу открыть счет.",
-          "tr-TR": "İyi günler! Bir hesap açmak istiyorum.",
-          "uk-UA": "Добрий день! Я хочу відкрити рахунок.",
-          "uz-UZ": "Xayrli kun! Men hisob raqami ochmoqchiman."
+          "ru-RU": "Я хочу открыть счет.",
+          "en-US": "I want to open an account.",
+          "ar-SA": "أريد فتح حساب.",
+          "es-ES": "Quiero abrir una cuenta.",
+          "fr-FR": "Je veux ouvrir un compte.",
+          "hi-IN": "मैं एक खाता खोलना चाहता हूँ।",
+          "pl-PL": "Chcę otworzyć konto.",
+          "ro-RO": "Vreau să deschid un cont.",
+          "tr-TR": "Bir hesap açmak istiyorum.",
+          "uk-UA": "Я хочу відкрити рахунок.",
+          "uz-UZ": "Men hisob raqami ochmoqchiman."
         },
         "nextStep": "docs"
       }
@@ -49,45 +70,66 @@
     "defaultNext": "docs"
   },
   "docs": {
-    "botText": "Gerne. Haben Sie Ihren Pass und die Anmeldung dabei?",
-    "tips": {
-      "ru-RU": "Anmeldung — регистрация по месту жительства. Без неё в Германии почти ничего нельзя сделать официально.",
-      "en-US": "Anmeldung is your address registration. It is essential for all official processes.",
-      "ar-SA": "شهادة السكن (Anmeldung) هي أهم وثيقة في ألمانيا.",
-      "es-ES": "El 'Anmeldung' es el registro de domicilio, obligatorio para trámites.",
-      "fr-FR": "L''Anmeldung' est l'enregistrement du domicile, essentiel pour les démarches.",
-      "hi-IN": "Anmeldung पता पंजीकरण है, जो हर आधिकारिक काम के लिए जरूरी है।",
-      "pl-PL": "Anmeldung to zameldowanie, niezbędne do wszelkich spraw urzędowych.",
-      "ro-RO": "Anmeldung este înregistrarea adresei, necesară pentru orice act oficial.",
-      "tr-TR": "Anmeldung, her türlü resmi işlem için gerekli olan ikamet kaydıdır.",
-      "uk-UA": "Anmeldung — це реєстрація за місцем проживання, обов'язкова для всіх справ.",
-      "uz-UZ": "Anmeldung — bu ro'yxatdan o'tganlik hujjati, har qanday rasmiy ish uchun kerak."
-    },
+    "botText": "Gerne. Haben Sie Ihren Reisepass und die Anmeldung dabei?",
     "botTranslation": {
-      "ar-SA": "بكل سرور. هل لديك جواز سفرك وشهادة السكن معك؟",
+      "ru-RU": "С удовольствием. У Вас есть с собой паспорт и прописка?",
       "en-US": "Gladly. Do you have your passport and registration with you?",
+      "ar-SA": "بكل سرور. هل لديك جواز سفرك وشهادة السكن معك؟",
       "es-ES": "Con gusto. ¿Tiene su pasaporte y su registro consigo?",
       "fr-FR": "Volontiers. Avez-vous votre passeport et votre inscription avec vous ?",
       "hi-IN": "खुशी से। क्या आपके पास अपना पासपोर्ट और पंजीकरण है?",
-      "pl-PL": "Z przyjemnością. Czy ma pan przy sobie paszport i potwierdzenie zameldowania?",
+      "pl-PL": "Z przyjemnością. Czy ma pan/pani przy sobie paszport i potwierdzenie zameldowania?",
       "ro-RO": "Cu plăcere. Aveți la dumneavoastră pașaportul și înregistrarea?",
-      "ru-RU": "С удовольствием. У Вас есть с собой паспорт и прописка?",
       "tr-TR": "Memnuniyetle. Yanınızda pasaportunuz ve ikamet kaydınız var mı?",
       "uk-UA": "Із задоволенням. Чи є у Вас із собою паспорт і прописка?",
       "uz-UZ": "Bajonidil. Pasportingiz va ro'yxatdan o'tganlik hujjatingiz yoningizdami?"
     },
+    "vocabulary": [
+      {
+        "german": "der Reisepass",
+        "translation": {
+          "ru-RU": "паспорт",
+          "en-US": "the passport",
+          "ar-SA": "جواز السفر",
+          "es-ES": "el pasaporte",
+          "fr-FR": "le passeport",
+          "hi-IN": "पासपोर्ट",
+          "pl-PL": "paszport",
+          "ro-RO": "pașaportul",
+          "tr-TR": "pasaport",
+          "uk-UA": "паспорт",
+          "uz-UZ": "pasport"
+        }
+      },
+      {
+        "german": "die Anmeldung",
+        "translation": {
+          "ru-RU": "прописка",
+          "en-US": "registration",
+          "ar-SA": "التسجيل",
+          "es-ES": "el registro",
+          "fr-FR": "l'inscription",
+          "hi-IN": "पंजीकरण",
+          "pl-PL": "zameldowanie",
+          "ro-RO": "înregistrarea",
+          "tr-TR": "ikamet kaydı",
+          "uk-UA": "прописка",
+          "uz-UZ": "ro'yxatdan o'tish"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, hier ist mein Pass und die Anmeldung.",
         "translation": {
-          "ar-SA": "نعم، هذا جواز سفري وشهادة السكن.",
+          "ru-RU": "Да, вот мой паспорт и прописка.",
           "en-US": "Yes, here is my passport and registration.",
+          "ar-SA": "نعم، هذا جواز سفري وشهادة السكن.",
           "es-ES": "Sí, aquí está mi pasaporte y mi registro.",
           "fr-FR": "Oui, voici mon passeport et mon inscription.",
           "hi-IN": "हाँ, यह रहा मेरा पासपोर्ट और पंजीकरण।",
           "pl-PL": "Tak, oto mój paszport i zameldowanie.",
           "ro-RO": "Da, iată pașaportul meu și înregistrarea.",
-          "ru-RU": "Да, вот мой паспорт и прописка.",
           "tr-TR": "Evet, işte pasaportum ve ikamet kaydım.",
           "uk-UA": "Так, ось мій паспорт і прописка.",
           "uz-UZ": "Ha, mana pasportim va ro'yxatdan o'tganlik hujjatim."
@@ -98,52 +140,69 @@
     "defaultNext": "residence"
   },
   "residence": {
-    "botText": "Danke. Wohnen Sie hier in Berlin?",
+    "botText": "Danke. Wohnen Sie hier?",
     "botTranslation": {
-      "ar-SA": "شكراً. هل تعيش هنا في برلين؟",
-      "en-US": "Thank you. Do you live here in Berlin?",
-      "es-ES": "Gracias. ¿Vive usted aquí en Berlín?",
-      "fr-FR": "Merci. Vivez-vous ici à Berlin ?",
-      "hi-IN": "धन्यवाद। क्या आप बर्लिन में रहते हैं?",
-      "pl-PL": "Dziękuję. Mieszka pan w Berlinie?",
-      "ro-RO": "Mulțumesc. Locuiți aici în Berlin?",
-      "ru-RU": "Спасибо. Вы живете здесь, в Берлине?",
-      "tr-TR": "Teşekkürler. Burada, Berlin'de mi yaşıyorsunuz?",
-      "uk-UA": "Дякую. Ви живете тут, у Берліні?",
-      "uz-UZ": "Rahmat. Siz shu yerda, Berlinda yashaysizmi?"
+      "ru-RU": "Спасибо. Вы живете здесь?",
+      "en-US": "Thank you. Do you live here?",
+      "ar-SA": "شكراً. هل تعيش هنا؟",
+      "es-ES": "Gracias. ¿Vive usted aquí?",
+      "fr-FR": "Merci. Vivez-vous ici ?",
+      "hi-IN": "धन्यवाद। क्या आप यहाँ रहते हैं?",
+      "pl-PL": "Dziękuję. Mieszka pan/pani tutaj?",
+      "ro-RO": "Mulțumesc. Locuiți aici?",
+      "tr-TR": "Teşekkürler. Burada mı yaşıyorsunuz?",
+      "uk-UA": "Дякую. Ви живете тут?",
+      "uz-UZ": "Rahmat. Siz shu yerda yashaysizmi?"
     },
-    "options": [
+    "vocabulary": [
       {
-        "text": "Ja, ich wohne in Berlin.",
+        "german": "wohnen",
         "translation": {
-          "ar-SA": "نعم، أنا أعيش في برلين.",
-          "en-US": "Yes, I live in Berlin.",
-          "es-ES": "Sí, vivo en Berlín.",
-          "fr-FR": "Oui, je vis à Berlin.",
-          "hi-IN": "हाँ, मैं बर्लिन में रहता हूँ।",
-          "pl-PL": "Tak, mieszkam w Berlinie.",
-          "ro-RO": "Da, locuiesc în Berlin.",
-          "ru-RU": "Да, я живу в Берлине.",
-          "tr-TR": "Evet, Berlin'de yaşıyorum.",
-          "uk-UA": "Так, я живу в Берліні.",
-          "uz-UZ": "Ha, men Berlinda yashayman."
-        },
-        "nextStep": "signature"
+          "ru-RU": "жить",
+          "en-US": "to live",
+          "ar-SA": "يعيش",
+          "es-ES": "vivir",
+          "fr-FR": "habiter",
+          "hi-IN": "रहना",
+          "pl-PL": "mieszkać",
+          "ro-RO": "a locui",
+          "tr-TR": "yaşamak",
+          "uk-UA": "жити",
+          "uz-UZ": "yashash"
+        }
       },
       {
-        "text": "Nein, ich wohne in Hamburg.",
+        "german": "hier",
         "translation": {
-          "ar-SA": "لا، أنا أعيش في هامبورغ.",
-          "en-US": "No, I live in Hamburg.",
-          "es-ES": "No, vivo en Hamburgo.",
-          "fr-FR": "Non, je vis à Hambourg.",
-          "hi-IN": "नहीं, मैं हैम्बर्ग में रहता हूँ।",
-          "pl-PL": "Nie, mieszkam w Hamburgu.",
-          "ro-RO": "Nu, locuiesc în Hamburg.",
-          "ru-RU": "Нет, я живу в Гамбурге.",
-          "tr-TR": "Hayır, Hamburg'da yaşıyorum.",
-          "uk-UA": "Ні, я живу в Гамбурзі.",
-          "uz-UZ": "Yo'q, men Gamburgda yashayman."
+          "ru-RU": "здесь",
+          "en-US": "here",
+          "ar-SA": "هنا",
+          "es-ES": "aquí",
+          "fr-FR": "ici",
+          "hi-IN": "यहाँ",
+          "pl-PL": "tutaj",
+          "ro-RO": "aici",
+          "tr-TR": "burada",
+          "uk-UA": "тут",
+          "uz-UZ": "shu yerda"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, ich wohne hier.",
+        "translation": {
+          "ru-RU": "Да, я живу здесь.",
+          "en-US": "Yes, I live here.",
+          "ar-SA": "نعم، أنا أعيش هنا.",
+          "es-ES": "Sí, vivo aquí.",
+          "fr-FR": "Oui, je vis ici.",
+          "hi-IN": "हाँ, मैं यहाँ रहता हूँ।",
+          "pl-PL": "Tak, mieszkam tutaj.",
+          "ro-RO": "Da, locuiesc aici.",
+          "tr-TR": "Evet, burada yaşıyorum.",
+          "uk-UA": "Так, я живу тут.",
+          "uz-UZ": "Ha, men shu yerda yashayman."
         },
         "nextStep": "signature"
       }
@@ -151,45 +210,66 @@
     "defaultNext": "signature"
   },
   "signature": {
-    "botText": "Sehr gut. Bitte unterschreiben Sie hier.",
-    "tips": {
-      "ru-RU": "Unterschrift состоит из 'unter' (под) и 'Schrift' (письмо/текст). Дословно: подпись.",
-      "en-US": "Unterschrift comes from 'unter' (under) and 'Schrift' (writing/text). Literally: signature.",
-      "ar-SA": "كلمة Un-terschrift تتكون من (تحت) و (كتابة).",
-      "es-ES": "Unterschrift combina 'unter' (bajo) y 'Schrift' (texto).",
-      "fr-FR": "Unterschrift combine 'unter' (sous) et 'Schrift' (écriture).",
-      "hi-IN": "Unterschrift शब्द 'unter' (नीचे) और 'Schrift' (लिखाई) से बना है।",
-      "pl-PL": "Unterschrift składa się z 'unter' (pod) i 'Schrift' (pismo).",
-      "ro-RO": "Unterschrift se formează din 'unter' (sub) și 'Schrift' (scriere).",
-      "tr-TR": "Unterschrift kelimesi 'unter' (alt) ve 'Schrift' (yazı) birleşimidir.",
-      "uk-UA": "Unterschrift складається з 'unter' (під) і 'Schrift' (письмо).",
-      "uz-UZ": "Unterschrift so'zi 'unter' (ost) va 'Schrift' (yozuv) birikmasi."
-    },
+    "botText": "Bitte unterschreiben Sie hier.",
     "botTranslation": {
-      "ar-SA": "جيد جداً. يرجى التوقيع هنا.",
-      "en-US": "Very good. Please sign here.",
-      "es-ES": "Muy bien. Por favor, firme aquí.",
-      "fr-FR": "Très bien. Veuillez signer ici.",
-      "hi-IN": "बहुत अच्छा। कृपया यहाँ हस्ताक्षर करें।",
-      "pl-PL": "Bardzo dobrze. Proszę tutaj podpisać.",
-      "ro-RO": "Foarte bine. Vă rugăm să semnați aici.",
-      "ru-RU": "Очень хорошо. Пожалуйста, подпишите здесь.",
-      "tr-TR": "Çok iyi. Lütfen burayı imzalayın.",
-      "uk-UA": "Дуже добре. Будь ласка, підпишіть тут.",
-      "uz-UZ": "Juda yaxshi. Iltimos, shu yerga imzo cheking."
+      "ru-RU": "Пожалуйста, подпишите здесь.",
+      "en-US": "Please sign here.",
+      "ar-SA": "يرجى التوقيع هنا.",
+      "es-ES": "Por favor, firme aquí.",
+      "fr-FR": "Veuillez signer ici.",
+      "hi-IN": "कृपया यहाँ हस्ताक्षर करें।",
+      "pl-PL": "Proszę tutaj podpisać.",
+      "ro-RO": "Vă rugăm să semnați aici.",
+      "tr-TR": "Lütfen burayı imzalayın.",
+      "uk-UA": "Будь ласка, підпишіть тут.",
+      "uz-UZ": "Iltimos, shu yerga imzo cheking."
     },
+    "vocabulary": [
+      {
+        "german": "unterschreiben",
+        "translation": {
+          "ru-RU": "подписать",
+          "en-US": "to sign",
+          "ar-SA": "يوقع",
+          "es-ES": "firmar",
+          "fr-FR": "signer",
+          "hi-IN": "हस्ताक्षर करना",
+          "pl-PL": "podpisać",
+          "ro-RO": "a semna",
+          "tr-TR": "imzalamak",
+          "uk-UA": "підписати",
+          "uz-UZ": "imzolash"
+        }
+      },
+      {
+        "german": "die Unterschrift",
+        "translation": {
+          "ru-RU": "подпись",
+          "en-US": "signature",
+          "ar-SA": "التوقيع",
+          "es-ES": "la firma",
+          "fr-FR": "la signature",
+          "hi-IN": "हस्ताक्षर",
+          "pl-PL": "podpis",
+          "ro-RO": "semnătura",
+          "tr-TR": "imza",
+          "uk-UA": "підпис",
+          "uz-UZ": "imzo"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Alles klar, hier ist die Unterschrift.",
         "translation": {
-          "ar-SA": "حسناً، هذا هو التوقيع.",
+          "ru-RU": "Хорошо, вот подпись.",
           "en-US": "Alright, here is the signature.",
+          "ar-SA": "حسناً، هذا هو التوقيع.",
           "es-ES": "Muy bien, aquí está la firma.",
           "fr-FR": "Très bien, voici la signature.",
           "hi-IN": "ठीक है, यह रहे हस्ताक्षर।",
           "pl-PL": "Dobrze, oto podpis.",
           "ro-RO": "În regulă, iată semnătura.",
-          "ru-RU": "Хорошо, вот подпись.",
           "tr-TR": "Tamam, işte imza.",
           "uk-UA": "Добре, ось підпис.",
           "uz-UZ": "Yaxshi, mana imzo."
@@ -200,117 +280,206 @@
     "defaultNext": "status"
   },
   "status": {
-    "botText": "Danke. Das Konto ist jetzt eröffnet.",
+    "botText": "Danke. Das Konto ist eröffnet.",
     "botTranslation": {
-      "ar-SA": "شكراً. تم فتح الحساب الآن.",
-      "en-US": "Thank you. The account is opened now.",
-      "es-ES": "Gracias. La cuenta está abierta ahora.",
-      "fr-FR": "Merci. Le compte est maintenant ouvert.",
-      "hi-IN": "धन्यवाद। खाता अब खुल गया है।",
-      "pl-PL": "Dziękuję. Konto zostało teraz otwarte.",
-      "ro-RO": "Mulțumesc. Contul este acum deschis.",
-      "ru-RU": "Спасибо. Счет теперь открыт.",
-      "tr-TR": "Teşekkürler. Hesap şimdi açıldı.",
-      "uk-UA": "Дякую. Рахунок тепер відкрито.",
-      "uz-UZ": "Rahmat. Hisob raqami endi ochildi."
+      "ru-RU": "Спасибо. Счет открыт.",
+      "en-US": "Thank you. The account is opened.",
+      "ar-SA": "شكراً. تم فتح الحساب.",
+      "es-ES": "Gracias. La cuenta está abierta.",
+      "fr-FR": "Merci. Le compte est ouvert.",
+      "hi-IN": "धन्यवाद। खाता खुल गया है।",
+      "pl-PL": "Dziękuję. Konto zostało otwarte.",
+      "ro-RO": "Mulțumesc. Contul este deschis.",
+      "tr-TR": "Teşekkürler. Hesap açıldı.",
+      "uk-UA": "Дякую. Рахунок відкрито.",
+      "uz-UZ": "Rahmat. Hisob raqami ochildi."
     },
+    "vocabulary": [
+      {
+        "german": "das Konto",
+        "translation": {
+          "ru-RU": "счет",
+          "en-US": "the account",
+          "ar-SA": "الحساب",
+          "es-ES": "la cuenta",
+          "fr-FR": "le compte",
+          "hi-IN": "खाता",
+          "pl-PL": "konto",
+          "ro-RO": "contul",
+          "tr-TR": "hesap",
+          "uk-UA": "рахунок",
+          "uz-UZ": "hisob"
+        }
+      },
+      {
+        "german": "eröffnet",
+        "translation": {
+          "ru-RU": "открыт",
+          "en-US": "opened",
+          "ar-SA": "مفتوح",
+          "es-ES": "abierto",
+          "fr-FR": "ouvert",
+          "hi-IN": "खुला",
+          "pl-PL": "otwarte",
+          "ro-RO": "deschis",
+          "tr-TR": "açıldı",
+          "uk-UA": "відкрито",
+          "uz-UZ": "ochilgan"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Wann kommt meine Karte?",
         "translation": {
-          "ar-SA": "متى ستصل بطاقتي؟",
+          "ru-RU": "Когда придет моя карта?",
           "en-US": "When will my card arrive?",
+          "ar-SA": "متى ستصل بطاقتي؟",
           "es-ES": "¿Cuándo llegará mi tarjeta?",
           "fr-FR": "Quand ma carte arrivera-t-elle ?",
           "hi-IN": "मेरा कार्ड कब आएगा?",
           "pl-PL": "Kiedy przyjdzie moja karta?",
           "ro-RO": "Când îmi va veni cardul?",
-          "ru-RU": "Когда придет моя карта?",
           "tr-TR": "Kartım ne zaman gelecek?",
           "uk-UA": "Коли прийде моя картка?",
           "uz-UZ": "Kartim qachon keladi?"
         },
-        "nextStep": "card_info"
+        "nextStep": "pin"
       }
     ],
-    "defaultNext": "card_info"
+    "defaultNext": "pin"
   },
-  "card_info": {
-    "botText": "Die Karte kommt in einer Woche.",
+  "pin": {
+    "botText": "Die Karte kommt in einer Woche. Haben Sie noch Fragen zum PIN-Code?",
     "botTranslation": {
-      "ar-SA": "ستصل البطاقة في غضون أسبوع.",
-      "en-US": "The card arrives in one week.",
-      "es-ES": "La tarjeta llegará en una semana.",
-      "fr-FR": "La carte arrivera dans une semaine.",
-      "hi-IN": "कार्ड एक सप्ताह में आएगा।",
-      "pl-PL": "Karta przyjdzie za tydzień.",
-      "ro-RO": "Cardul sosește într-o săptămână.",
-      "ru-RU": "Карта придет через неделю.",
-      "tr-TR": "Kart bir hafta içinde gelecek.",
-      "uk-UA": "Картка прийде за тиждень.",
-      "uz-UZ": "Karta bir haftada keladi."
+      "ru-RU": "Карта придет через неделю. У Вас есть еще вопросы по ПИН-коду?",
+      "en-US": "The card arrives in one week. Do you have more questions about the PIN code?",
+      "ar-SA": "ستصل البطاقة في غضون أسبوع. هل لديك أسئلة أخرى حول رمز PIN؟",
+      "es-ES": "La tarjeta llegará en una semana. ¿Tiene más preguntas sobre el PIN?",
+      "fr-FR": "La carte arrivera dans une semaine. Avez-vous d'autres questions sur le code PIN ?",
+      "hi-IN": "कार्ड एक सप्ताह में आएगा। क्या आपके पास पिन-कोड के बारे में कोई और प्रश्न हैं?",
+      "pl-PL": "Karta przyjdzie za tydzień. Czy ma pan/pani jeszcze pytania dotyczące kodu PIN?",
+      "ro-RO": "Cardul sosește într-o săptămână. Aveți alte întrebări despre codul PIN?",
+      "tr-TR": "Kart bir hafta içinde gelecek. PIN kodu hakkında başka sorunuz var mı?",
+      "uk-UA": "Картка прийде за тиждень. Чи є у Вас ще запитання щодо ПІН-коду?",
+      "uz-UZ": "Karta bir haftada keladi. PIN-kod haqida yana savollaringiz bormi?"
     },
+    "vocabulary": [
+      {
+        "german": "die Karte",
+        "translation": {
+          "ru-RU": "карта",
+          "en-US": "the card",
+          "ar-SA": "البطاقة",
+          "es-ES": "la tarjeta",
+          "fr-FR": "la carte",
+          "hi-IN": "कार्ड",
+          "pl-PL": "karta",
+          "ro-RO": "cardul",
+          "tr-TR": "kart",
+          "uk-UA": "картка",
+          "uz-UZ": "karta"
+        }
+      },
+      {
+        "german": "eine Woche",
+        "translation": {
+          "ru-RU": "одна неделя",
+          "en-US": "one week",
+          "ar-SA": "أسبوع واحد",
+          "es-ES": "una semana",
+          "fr-FR": "une semaine",
+          "hi-IN": "एक सप्ताह",
+          "pl-PL": "jeden tydzień",
+          "ro-RO": "o săptămână",
+          "tr-TR": "bir hafta",
+          "uk-UA": "один тиждень",
+          "uz-UZ": "bir hafta"
+        }
+      }
+    ],
     "options": [
       {
-        "text": "Und wann kommt der PIN-Code?",
+        "text": "Wann kommt der PIN-Code?",
         "translation": {
-          "ar-SA": "ومتى سيصل رمز PIN؟",
-          "en-US": "And when does the PIN code arrive?",
-          "es-ES": "¿Y cuándo llegará el código PIN?",
-          "fr-FR": "Et quand le code PIN arrivera-t-il ?",
-          "hi-IN": "और पिन-कोड कब आएगा?",
-          "pl-PL": "A kiedy przyjdzie kod PIN?",
-          "ro-RO": "Și când vine codul PIN?",
-          "ru-RU": "А когда придет ПИН-код?",
-          "tr-TR": "Peki PIN kodu ne zaman gelecek?",
-          "uk-UA": "А коли прийде ПІН-код?",
+          "ru-RU": "Когда придет ПИН-код?",
+          "en-US": "When does the PIN code arrive?",
+          "ar-SA": "متى سيصل رمز PIN؟",
+          "es-ES": "¿Cuándo llegará el código PIN?",
+          "fr-FR": "Quand le code PIN arrivera-t-il ?",
+          "hi-IN": "पिन-कोड कब आएगा?",
+          "pl-PL": "Kiedy przyjdzie kod PIN?",
+          "ro-RO": "Când vine codul PIN?",
+          "tr-TR": "PIN kodu ne zaman gelecek?",
+          "uk-UA": "Коли прийде ПІН-код?",
           "uz-UZ": "PIN-kod qachon keladi?"
         },
-        "nextStep": "pin_info"
+        "nextStep": "answer"
       }
     ],
-    "defaultNext": "pin_info"
+    "defaultNext": "answer"
   },
-  "pin_info": {
-    "botText": "Der PIN-Code kommt separat per Post.",
-    "tips": {
-      "ru-RU": "Слово 'separat' имеет латинские корни и похоже во многих языках.",
-      "en-US": "The word 'separat' has Latin roots and sounds similar in many languages.",
-      "ar-SA": "كلمة 'separat' لاتينية الأصل.",
-      "es-ES": "La palabra 'separat' tiene raíces latinas.",
-      "fr-FR": "Le mot 'separat' a des racines latines.",
-      "hi-IN": "'separat' शब्द की जड़ें लैटिन भाषा में हैं।",
-      "pl-PL": "'separat' wywodzi się z łaciny.",
-      "ro-RO": "'separat' provine din rădăcini latine.",
-      "tr-TR": "'separat' Latince kökenlidir.",
-      "uk-UA": "Слово 'separat' має латинське коріння.",
-      "uz-UZ": "'separat' so'zi lotincha o'zakka ega."
-    },
+  "answer": {
+    "botText": "Der PIN-Code kommt separat mit der Post.",
     "botTranslation": {
-      "ar-SA": "سيصل رمز PIN بشكل منفصل عبر البريد.",
+      "ru-RU": "ПИН-код придет отдельно по почте.",
       "en-US": "The PIN code arrives separately by mail.",
+      "ar-SA": "سيصل رمز PIN بشكل منفصل عن طريق البريد.",
       "es-ES": "El código PIN llega por separado por correo.",
       "fr-FR": "Le code PIN arrivera séparément par courrier.",
       "hi-IN": "पिन-कोड डाक द्वारा अलग से आएगा।",
       "pl-PL": "Kod PIN przyjdzie osobno pocztą.",
       "ro-RO": "Codul PIN sosește separat prin poștă.",
-      "ru-RU": "ПИН-код придет отдельно по почте.",
       "tr-TR": "PIN kodu posta yoluyla ayrı olarak gelecek.",
       "uk-UA": "ПІН-код прийде окремо поштою.",
-      "uz-UZ": "PIN-kod pochta orqali alohida keladi."
+      "uz-UZ": "PIN-kod poshta orqali alohida keladi."
     },
+    "vocabulary": [
+      {
+        "german": "separat",
+        "translation": {
+          "ru-RU": "отдельно",
+          "en-US": "separately",
+          "ar-SA": "بشكل منفصل",
+          "es-ES": "por separado",
+          "fr-FR": "séparément",
+          "hi-IN": "अलग से",
+          "pl-PL": "osobno",
+          "ro-RO": "separat",
+          "tr-TR": "ayrı olarak",
+          "uk-UA": "окремо",
+          "uz-UZ": "alohida"
+        }
+      },
+      {
+        "german": "die Post",
+        "translation": {
+          "ru-RU": "почта",
+          "en-US": "the mail",
+          "ar-SA": "البريد",
+          "es-ES": "el correo",
+          "fr-FR": "le courrier",
+          "hi-IN": "डाक",
+          "pl-PL": "poczta",
+          "ro-RO": "poșta",
+          "tr-TR": "posta",
+          "uk-UA": "пошта",
+          "uz-UZ": "poshta"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Super, vielen Dank.",
         "translation": {
-          "ar-SA": "رائع، شكراً جزيلاً.",
+          "ru-RU": "Супер, большое спасибо.",
           "en-US": "Super, thank you very much.",
+          "ar-SA": "رائع، شكراً جزيلاً.",
           "es-ES": "Súper, muchas gracias.",
           "fr-FR": "Super, merci beaucoup.",
           "hi-IN": "सुपर, बहुत बहुत धन्यवाद।",
           "pl-PL": "Super, bardzo dziękuję.",
           "ro-RO": "Super, mersi mult.",
-          "ru-RU": "Супер, большое спасибо.",
           "tr-TR": "Süper, çok teşekkürler.",
           "uk-UA": "Супер, велике дякую.",
           "uz-UZ": "Super, katta rahmat."
@@ -323,30 +492,48 @@
   "needs": {
     "botText": "Brauchen Sie sonst noch etwas?",
     "botTranslation": {
-      "ar-SA": "هل تحتاج إلى أي شيء آخر؟",
+      "ru-RU": "Вам нужно еще что-нибудь?",
       "en-US": "Do you need anything else?",
+      "ar-SA": "هل تحتاج إلى أي شيء آخر؟",
       "es-ES": "¿Necesita algo más?",
       "fr-FR": "Avez-vous besoin d'autre chose ?",
       "hi-IN": "क्या आपको और कुछ चाहिए?",
       "pl-PL": "Czy potrzebuje pan/pani czegoś jeszcze?",
       "ro-RO": "Aveți nevoie de altceva?",
-      "ru-RU": "Вам нужно еще что-нибудь?",
       "tr-TR": "Başka bir şeye ihtiyacınız var mı?",
       "uk-UA": "Вам потрібно ще що-небудь?",
       "uz-UZ": "Yana biror narsaga ehtiyojingiz bormi?"
     },
+    "vocabulary": [
+      {
+        "german": "sonst noch",
+        "translation": {
+          "ru-RU": "еще что-то",
+          "en-US": "anything else",
+          "ar-SA": "شيء آخر",
+          "es-ES": "algo más",
+          "fr-FR": "autre chose",
+          "hi-IN": "कुछ और",
+          "pl-PL": "coś jeszcze",
+          "ro-RO": "altceva",
+          "tr-TR": "başka",
+          "uk-UA": "ще щось",
+          "uz-UZ": "yana biror narsa"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Nein, danke. Das ist alles.",
         "translation": {
-          "ar-SA": "لا، شكراً. هذا كل شيء.",
+          "ru-RU": "Нет, спасибо. Это всё.",
           "en-US": "No, thanks. That's all.",
+          "ar-SA": "لا، شكراً. هذا كل شيء.",
           "es-ES": "No, gracias. Eso es todo.",
           "fr-FR": "Non, merci. C'est tout.",
           "hi-IN": "नहीं, धन्यवाद। बस इतना ही।",
           "pl-PL": "Nie, dziękuję. To wszystko.",
           "ro-RO": "Nu, mersi. Asta e tot.",
-          "ru-RU": "Нет, спасибо. Это всё.",
           "tr-TR": "Hayır, teşekkürler. Hepsi bu.",
           "uk-UA": "Ні, дякую. Це все.",
           "uz-UZ": "Yo'q, rahmat. Hammasi shu."
@@ -359,50 +546,68 @@
   "wish": {
     "botText": "Einen schönen Tag noch!",
     "botTranslation": {
-      "ar-SA": "أتمنى لك يوماً سعيداً!",
+      "ru-RU": "Хорошего дня!",
       "en-US": "Have a nice day!",
+      "ar-SA": "أتمنى لك يوماً سعيداً!",
       "es-ES": "¡Que tenga un buen día!",
       "fr-FR": "Bonne journée !",
       "hi-IN": "आपका दिन शुभ हो!",
       "pl-PL": "Miłego dnia!",
       "ro-RO": "O zi frumoasă!",
-      "ru-RU": "Хорошего дня!",
       "tr-TR": "İyi günler!",
       "uk-UA": "Гарного дня!",
       "uz-UZ": "Yaxshi kun tilayman!"
     },
+    "vocabulary": [
+      {
+        "german": "schönen Tag",
+        "translation": {
+          "ru-RU": "хорошего дня",
+          "en-US": "nice day",
+          "ar-SA": "يوم جميل",
+          "es-ES": "buen día",
+          "fr-FR": "bonne journée",
+          "hi-IN": "अच्छा दिन",
+          "pl-PL": "miłego dnia",
+          "ro-RO": "o zi frumoasă",
+          "tr-TR": "iyi günler",
+          "uk-UA": "гарного дня",
+          "uz-UZ": "yaxshi kun"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke, Ihnen auch!",
         "translation": {
-          "ar-SA": "شكراً، ولك أيضاً!",
+          "ru-RU": "Спасибо, Вам тоже!",
           "en-US": "Thanks, you too!",
+          "ar-SA": "شكراً، ولك أيضاً!",
           "es-ES": "Gracias, a usted también.",
           "fr-FR": "Merci, à vous aussi !",
           "hi-IN": "धन्यवाद, आपको भी!",
           "pl-PL": "Dziękuję, panu/pani również!",
           "ro-RO": "Mulțumesc, și dumneavoastră!",
-          "ru-RU": "Спасибо, Вам тоже!",
           "tr-TR": "Teşekkürler, size de!",
           "uk-UA": "Дякую, Вам також!",
           "uz-UZ": "Rahmat, sizga ham!"
         },
-        "nextStep": "goodbye"
+        "nextStep": "bye"
       }
     ],
-    "defaultNext": "goodbye"
+    "defaultNext": "bye"
   },
-  "goodbye": {
+  "bye": {
     "botText": "Auf Wiedersehen!",
     "botTranslation": {
-      "ar-SA": "إلى اللقاء!",
+      "ru-RU": "До свидания!",
       "en-US": "Goodbye!",
+      "ar-SA": "إلى اللقاء!",
       "es-ES": "Adiós.",
       "fr-FR": "Au revoir !",
       "hi-IN": "अलविदा!",
       "pl-PL": "Do widzenia!",
       "ro-RO": "La revedere!",
-      "ru-RU": "До свидания!",
       "tr-TR": "Hoşça kalın!",
       "uk-UA": "До побачення!",
       "uz-UZ": "Xayr!"
@@ -411,17 +616,17 @@
       {
         "text": "Auf Wiedersehen!",
         "translation": {
-          "ar-SA": "إلى اللقاء!",
+          "ru-RU": "До свидания!",
           "en-US": "Goodbye!",
+          "ar-SA": "إلى اللقاء!",
           "es-ES": "Adiós.",
           "fr-FR": "Au revoir !",
           "hi-IN": "अलविदा!",
           "pl-PL": "Do widzenia!",
           "ro-RO": "La revedere!",
-          "ru-RU": "До свидания!",
           "tr-TR": "Hoşça kalın!",
           "uk-UA": "До побачення!",
-          "uz-UZ": "Ko'rishguncha!"
+          "uz-UZ": "Xayr!"
         },
         "nextStep": "end"
       }
@@ -431,14 +636,14 @@
   "end": {
     "botText": "Der Vorgang ist abgeschlossen.",
     "botTranslation": {
-      "ar-SA": "تم الانتهاء من العملية.",
+      "ru-RU": "Процесс завершен.",
       "en-US": "The process is completed.",
+      "ar-SA": "تم الانتهاء من العملية.",
       "es-ES": "El proceso ha concluido.",
       "fr-FR": "Le processus est terminé.",
-      "hi-IN": "प्रक्रिया पूरी हो गई है।",
+      "hi-IN": "प्रक्रिया पूरी हो गई है。",
       "pl-PL": "Proces został zakończony.",
       "ro-RO": "Procesul este finalizat.",
-      "ru-RU": "Процесс завершен.",
       "tr-TR": "İşlem tamamlandı.",
       "uk-UA": "Процес завершено.",
       "uz-UZ": "Jarayon yakunlandi."

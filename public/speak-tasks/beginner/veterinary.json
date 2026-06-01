@@ -1,0 +1,629 @@
+{
+  "start": {
+    "botText": "Tierarztpraxis Dr. Schmidt, guten Tag.",
+    "botTranslation": {
+      "ru-RU": "Ветеринарная клиника доктора Шмидта, добрый день.",
+      "en-US": "Veterinary clinic Dr. Schmidt, good day.",
+      "ar-SA": "عيادة الطبيب البيطري د. شميدت، طاب يومك.",
+      "es-ES": "Clínica veterinaria Dr. Schmidt, buen día.",
+      "fr-FR": "Clinique vétérinaire du Dr Schmidt, bonjour.",
+      "hi-IN": "पशु चिकित्सा क्लिनिक डॉ. श्मिट, शुभ दिन।",
+      "pl-PL": "Klinika weterynaryjna dr Schmidt, dzień dobry.",
+      "ro-RO": "Clinica veterinară Dr. Schmidt, bună ziua.",
+      "tr-TR": "Veteriner kliniği Dr. Schmidt, iyi günler.",
+      "uk-UA": "Ветеринарна клініка доктора Шмідта, добрий день.",
+      "uz-UZ": "Doktor Shmidt veterinariya klinikasi, xayrli kun."
+    },
+    "vocabulary": [
+      {
+        "german": "die Tierarztpraxis",
+        "translation": {
+          "ru-RU": "ветеринарная клиника",
+          "en-US": "veterinary clinic",
+          "ar-SA": "عيادة بيطرية",
+          "es-ES": "clínica veterinaria",
+          "fr-FR": "clinique vétérinaire",
+          "hi-IN": "पशु चिकित्सा क्लिनिक",
+          "pl-PL": "klinika weterynaryjna",
+          "ro-RO": "clinică veterinară",
+          "tr-TR": "veteriner kliniği",
+          "uk-UA": "ветеринарна клініка",
+          "uz-UZ": "veterinariya klinikasi"
+        }
+      },
+      {
+        "german": "der Termin",
+        "translation": {
+          "ru-RU": "прием / запись",
+          "en-US": "appointment",
+          "ar-SA": "موعد",
+          "es-ES": "cita",
+          "fr-FR": "rendez-vous",
+          "hi-IN": "अपॉइंटमेंट",
+          "pl-PL": "wizyta",
+          "ro-RO": "programare",
+          "tr-TR": "randevu",
+          "uk-UA": "прийом / запис",
+          "uz-UZ": "qabul / uchrashuv"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag, ich brauche einen Termin für meine Katze.",
+        "translation": {
+          "ru-RU": "Добрый день, мне нужен прием (термин) для моей кошки.",
+          "en-US": "Good day, I need an appointment for my cat.",
+          "ar-SA": "طاب يومك، أحتاج إلى موعد لقطتي.",
+          "es-ES": "Buen día, necesito una cita para mi gato.",
+          "fr-FR": "Bonjour, j'ai besoin d'un rendez-vous pour mon chat.",
+          "hi-IN": "शुभ दिन, मुझे अपनी बिल्ली के लिए एक अपॉइंटमेंट चाहिए।",
+          "pl-PL": "Dzień dobry, potrzebuję wizyty dla mojego kota.",
+          "ro-RO": "Bună ziua, am nevoie de o programare pentru pisica mea.",
+          "tr-TR": "İyi günler, kedim için bir randevuya ihtiyacım var.",
+          "uk-UA": "Добрий день, мені потрібен прийом для моєї кішки.",
+          "uz-UZ": "Xayrli kun, mushugim uchun qabul (termin) kerak."
+        },
+        "nextStep": "symptome"
+      },
+      {
+        "text": "Guten Tag, ich möchte einen Termin für meine Katze.",
+        "translation": {
+          "ru-RU": "Добрый день, я хотела бы записаться на прием для моей кошки.",
+          "en-US": "Good day, I would like an appointment for my cat.",
+          "ar-SA": "طاب يومك، أود تحديد موعد لقطتي.",
+          "es-ES": "Buen día, me gustaría una cita para mi gato.",
+          "fr-FR": "Bonjour, je voudrais un rendez-vous pour mon chat.",
+          "hi-IN": "शुभ दिन, मैं अपनी बिल्ली के लिए एक अपॉइंटमेंट लेना चाहूंगी।",
+          "pl-PL": "Dzień dobry, chciałabym umówić wizytę dla mojego kota.",
+          "ro-RO": "Bună ziua, aș dori o programare pentru pisica mea.",
+          "tr-TR": "İyi günler, kedim için bir randevu almak istiyorum.",
+          "uk-UA": "Добрий день, я хотіла б записатися на прийом для моєї кішки.",
+          "uz-UZ": "Xayrli kun, men mushugim uchun qabulga yozilmoqchiman."
+        },
+        "nextStep": "symptome"
+      }
+    ],
+    "defaultNext": "symptome"
+  },
+  "symptome": {
+    "botText": "Gerne. Was ist denn mit ihr los?",
+    "botTranslation": {
+      "ru-RU": "С удовольствием (конечно). Что с ней стряслось?",
+      "en-US": "Gladly. What is the matter with her?",
+      "ar-SA": "بكل سرور. ما خطبها؟",
+      "es-ES": "Con gusto. ¿Qué le pasa?",
+      "fr-FR": "Volontiers. Qu'est-ce qui ne va pas avec elle ?",
+      "hi-IN": "खुशी से। उसके साथ क्या समस्या है?",
+      "pl-PL": "Oczywiście. Co się z nią dzieje?",
+      "ro-RO": "Cu plăcere. Ce s-a întâmplat cu ea?",
+      "tr-TR": "Memnuniyetle. Onun nesi var?",
+      "uk-UA": "З задоволенням. Що з нею трапилося?",
+      "uz-UZ": "Bajonidil. Unga nima bo'ldi?"
+    },
+    "vocabulary": [
+      {
+        "german": "fressen",
+        "translation": {
+          "ru-RU": "есть (о животных)",
+          "en-US": "to eat (for animals)",
+          "ar-SA": "يأكل (للحيوانات)",
+          "es-ES": "comer (animales)",
+          "fr-FR": "manger (pour animaux)",
+          "hi-IN": "खाना (जानवरों के लिए)",
+          "pl-PL": "jeść (o zwierzętach)",
+          "ro-RO": "a mânca (pentru animale)",
+          "tr-TR": "yemek (hayvanlar için)",
+          "uk-UA": "їсти (про тварин)",
+          "uz-UZ": "yemoq (hayvonlar uchun)"
+        }
+      },
+      {
+        "german": "krank",
+        "translation": {
+          "ru-RU": "больной",
+          "en-US": "sick",
+          "ar-SA": "مريض",
+          "es-ES": "enfermo",
+          "fr-FR": "malade",
+          "hi-IN": "बीमार",
+          "pl-PL": "chory",
+          "ro-RO": "bolnav",
+          "tr-TR": "hasta",
+          "uk-UA": "хворий",
+          "uz-UZ": "kasal"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Sie frisst seit gestern leider nichts mehr.",
+        "translation": {
+          "ru-RU": "К сожалению, со вчерашнего дня она больше ничего не ест.",
+          "en-US": "Unfortunately, she hasn't eaten anything since yesterday.",
+          "ar-SA": "للأسف، لم تأكل أي شيء منذ الأمس.",
+          "es-ES": "Lamentablemente, no ha comido nada desde ayer.",
+          "fr-FR": "Malheureusement, elle ne mange plus rien depuis hier.",
+          "hi-IN": "दुर्भाग्य से, उसने कल से कुछ भी नहीं खाया है।",
+          "pl-PL": "Niestety, od wczoraj nic nie je.",
+          "ro-RO": "Din păcate, nu a mâncat nimic de ieri.",
+          "tr-TR": "Maalesef dünden beri hiçbir şey yemedi.",
+          "uk-UA": "На жаль, від учорашнього дня вона більше нічого не їсть.",
+          "uz-UZ": "Afsuski, u kechadan beri hech narsa yemayapti."
+        },
+        "nextStep": "termin"
+      },
+      {
+        "text": "Sie ist krank und frisst seit gestern nicht.",
+        "translation": {
+          "ru-RU": "Она болеет и со вчерашнего дня не ест.",
+          "en-US": "She is sick and hasn't eaten since yesterday.",
+          "ar-SA": "إنها مريضة ولم تأكل منذ الأمس.",
+          "es-ES": "Está enferma y no come desde ayer.",
+          "fr-FR": "Elle est malade et ne mange pas depuis hier.",
+          "hi-IN": "वह बीमार है और कल से नहीं खा रही है।",
+          "pl-PL": "Jest chora i nie je od wczoraj.",
+          "ro-RO": "Este bolnavă și nu mănâncă de ieri.",
+          "tr-TR": "O hasta ve dünden beri yemiyor.",
+          "uk-UA": "Вона хворіє і від учорашнього дня не їсть.",
+          "uz-UZ": "U kasal va kechadan beri yemayapti."
+        },
+        "nextStep": "termin"
+      }
+    ],
+    "defaultNext": "termin"
+  },
+  "termin": {
+    "botText": "Oh, das tut mir leid. Ich habe heute um 16:00 Uhr einen Termin frei.",
+    "botTranslation": {
+      "ru-RU": "Ох, мне очень жаль. У меня есть свободное время (термин) сегодня в 16:00.",
+      "en-US": "Oh, I'm sorry to hear that. I have an appointment available today at 4:00 PM.",
+      "ar-SA": "أوه، أنا آسف لسماع ذلك. لدي موعد متاح اليوم في الساعة 16:00.",
+      "es-ES": "Oh, lo siento. Tengo una cita libre hoy a las 16:00.",
+      "fr-FR": "Oh, j'en suis désolé. J'ai un rendez-vous de libre aujourd'hui à 16h00.",
+      "hi-IN": "ओह, मुझे खेद है। मेरे पास आज 16:00 बजे एक अपॉइंटमेंट खाली है।",
+      "pl-PL": "Och, przykro mi to słyszeć. Mam dziś wolny termin o 16:00.",
+      "ro-RO": "Oh, îmi pare rău. Am o programare liberă azi la ora 16:00.",
+      "tr-TR": "Oh, buna üzüldüm. Bugün saat 16:00'da boş bir randevum var.",
+      "uk-UA": "Ох, мені дуже шкода. У мене є вільний час (прийом) сьогодні о 16:00.",
+      "uz-UZ": "Oh, bundan afsusdaman. Menda bugun soat 16:00 da bo'sh qabul (termin) bor."
+    },
+    "vocabulary": [
+      {
+        "german": "leidtun",
+        "translation": {
+          "ru-RU": "сожалеть (мне жаль)",
+          "en-US": "to be sorry",
+          "ar-SA": "يأسف (أنا آسف)",
+          "es-ES": "sentirlo (lo siento)",
+          "fr-FR": "être désolé",
+          "hi-IN": "खेद होना",
+          "pl-PL": "być przykro",
+          "ro-RO": "a-i părea rău",
+          "tr-TR": "üzgün olmak",
+          "uk-UA": "шкодувати",
+          "uz-UZ": "afsuslanmoq"
+        }
+      },
+      {
+        "german": "passen",
+        "translation": {
+          "ru-RU": "подходить (устраивать)",
+          "en-US": "to suit / fit",
+          "ar-SA": "يناسب",
+          "es-ES": "venir bien",
+          "fr-FR": "convenir",
+          "hi-IN": "अनुकूल होना",
+          "pl-PL": "pasować",
+          "ro-RO": "a conveni",
+          "tr-TR": "uygun olmak / uymak",
+          "uk-UA": "підходити (влаштовувати)",
+          "uz-UZ": "to'g'ri kelmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das passt mir sehr gut. Danke.",
+        "translation": {
+          "ru-RU": "Это мне очень подходит. Спасибо.",
+          "en-US": "That suits me very well. Thank you.",
+          "ar-SA": "هذا يناسبني جداً. شكراً.",
+          "es-ES": "Eso me viene muy bien. Gracias.",
+          "fr-FR": "Cela me convient très bien. Merci.",
+          "hi-IN": "यह मेरे लिए बहुत उपयुक्त है। धन्यवाद।",
+          "pl-PL": "Bardzo mi to pasuje. Dziękuję.",
+          "ro-RO": "Îmi convine foarte mult. Mulțumesc.",
+          "tr-TR": "Bu bana çok uygun. Teşekkürler.",
+          "uk-UA": "Це мені дуже підходить. Дякую.",
+          "uz-UZ": "Bu menga juda mos keladi. Rahmat."
+        },
+        "nextStep": "name"
+      },
+      {
+        "text": "Ja, 16:00 Uhr ist perfekt. Danke.",
+        "translation": {
+          "ru-RU": "Да, 16:00 — это идеально. Спасибо.",
+          "en-US": "Yes, 4:00 PM is perfect. Thank you.",
+          "ar-SA": "نعم، 16:00 مثالي. شكراً.",
+          "es-ES": "Sí, las 16:00 es perfecto. Gracias.",
+          "fr-FR": "Oui, 16h00 c'est parfait. Merci.",
+          "hi-IN": "हाँ, 16:00 बजे एकदम सही है। धन्यवाद।",
+          "pl-PL": "Tak, 16:00 jest idealnie. Dziękuję.",
+          "ro-RO": "Da, ora 16:00 este perfectă. Mulțumesc.",
+          "tr-TR": "Evet, 16:00 mükemmel. Teşekkürler.",
+          "uk-UA": "Так, 16:00 — це ідеально. Дякую.",
+          "uz-UZ": "Ha, 16:00 - ideal. Rahmat."
+        },
+        "nextStep": "name"
+      }
+    ],
+    "defaultNext": "name"
+  },
+  "name": {
+    "botText": "Gut, wie heißt die Katze?",
+    "botTranslation": {
+      "ru-RU": "Хорошо, как зовут кошку?",
+      "en-US": "Good, what is the cat's name?",
+      "ar-SA": "جيد، ما اسم القطة؟",
+      "es-ES": "Bien, ¿cómo se llama el gato?",
+      "fr-FR": "Bien, comment s'appelle le chat ?",
+      "hi-IN": "अच्छा, बिल्ली का नाम क्या है?",
+      "pl-PL": "Dobrze, jak wabi się kot?",
+      "ro-RO": "Bine, cum se numește pisica?",
+      "tr-TR": "Güzel, kedinin adı ne?",
+      "uk-UA": "Добре, як звати кішку?",
+      "uz-UZ": "Yaxshi, mushukning ismi nima?"
+    },
+    "vocabulary": [
+      {
+        "german": "heißen",
+        "translation": {
+          "ru-RU": "называться (звать)",
+          "en-US": "to be called",
+          "ar-SA": "يُدعى",
+          "es-ES": "llamarse",
+          "fr-FR": "s'appeler",
+          "hi-IN": "नाम होना",
+          "pl-PL": "nazywać się",
+          "ro-RO": "a se numi",
+          "tr-TR": "adlandırılmak",
+          "uk-UA": "називатися (звати)",
+          "uz-UZ": "ismli bo'lmoq"
+        }
+      },
+      {
+        "german": "die Katze",
+        "translation": {
+          "ru-RU": "кошка",
+          "en-US": "cat",
+          "ar-SA": "قطة",
+          "es-ES": "gato",
+          "fr-FR": "chat",
+          "hi-IN": "बिल्ली",
+          "pl-PL": "kot",
+          "ro-RO": "pisică",
+          "tr-TR": "kedi",
+          "uk-UA": "кішка",
+          "uz-UZ": "mushuk"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Sie heißt Luna.",
+        "translation": {
+          "ru-RU": "Ее зовут Луна.",
+          "en-US": "Her name is Luna.",
+          "ar-SA": "اسمها لونا.",
+          "es-ES": "Se llama Luna.",
+          "fr-FR": "Elle s'appelle Luna.",
+          "hi-IN": "उसका नाम लूना है।",
+          "pl-PL": "Wabi się Luna.",
+          "ro-RO": "O cheamă Luna.",
+          "tr-TR": "Adı Luna.",
+          "uk-UA": "Її звати Луна.",
+          "uz-UZ": "Uning ismi Luna."
+        },
+        "nextStep": "hausbesuch"
+      },
+      {
+        "text": "Ihr Name ist Luna.",
+        "translation": {
+          "ru-RU": "Её имя — Луна.",
+          "en-US": "Her name is Luna.",
+          "ar-SA": "اسمها هو لونا.",
+          "es-ES": "Su nombre es Luna.",
+          "fr-FR": "Son nom est Luna.",
+          "hi-IN": "उसका नाम लूना है।",
+          "pl-PL": "Jej imię to Luna.",
+          "ro-RO": "Numele ei este Luna.",
+          "tr-TR": "Onun adı Luna.",
+          "uk-UA": "Її ім'я — Луна.",
+          "uz-UZ": "Uning ismi - Luna."
+        },
+        "nextStep": "hausbesuch"
+      }
+    ],
+    "defaultNext": "hausbesuch"
+  },
+  "hausbesuch": {
+    "botText": "Luna ist notiert.",
+    "botTranslation": {
+      "ru-RU": "Луна записана (отмечена).",
+      "en-US": "Luna is noted.",
+      "ar-SA": "تم تسجيل لونا.",
+      "es-ES": "Luna está anotada.",
+      "fr-FR": "Luna est notée.",
+      "hi-IN": "लूना दर्ज कर लिया गया है।",
+      "pl-PL": "Luna została zapisana.",
+      "ro-RO": "Luna este notată.",
+      "tr-TR": "Luna kaydedildi.",
+      "uk-UA": "Луна записана (відмічена).",
+      "uz-UZ": "Luna qayd etildi."
+    },
+    "vocabulary": [
+      {
+        "german": "notieren",
+        "translation": {
+          "ru-RU": "записывать / отмечать",
+          "en-US": "to note / record",
+          "ar-SA": "يسجل / يلاحظ",
+          "es-ES": "anotar",
+          "fr-FR": "noter",
+          "hi-IN": "नोट करना",
+          "pl-PL": "notować / zapisać",
+          "ro-RO": "a nota",
+          "tr-TR": "not etmek / kaydetmek",
+          "uk-UA": "записувати / відмічати",
+          "uz-UZ": "qayd etmoq"
+        }
+      },
+      {
+        "german": "der Hausbesuch",
+        "translation": {
+          "ru-RU": "вызов на дом",
+          "en-US": "house visit",
+          "ar-SA": "زيارة منزلية",
+          "es-ES": "visita a domicilio",
+          "fr-FR": "visite à domicile",
+          "hi-IN": "घर का दौरा",
+          "pl-PL": "wizyta domowa",
+          "ro-RO": "vizită la domiciliu",
+          "tr-TR": "ev ziyareti",
+          "uk-UA": "виклик додому",
+          "uz-UZ": "uyga tashrif"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Können Sie vielleicht einen Hausbesuch machen?",
+        "translation": {
+          "ru-RU": "Можете ли Вы, возможно, сделать вызов на дом?",
+          "en-US": "Could you perhaps do a house visit?",
+          "ar-SA": "هل يمكنك ربما القيام بزيارة منزلية؟",
+          "es-ES": "¿Podría quizás hacer una visita a domicilio?",
+          "fr-FR": "Pourriez-vous éventuellement faire une visite à domicile ?",
+          "hi-IN": "क्या आप शायद घर का दौरा कर सकते हैं?",
+          "pl-PL": "Czy mogliby państwo złożyć wizytę domową?",
+          "ro-RO": "Ați putea face o vizită la domiciliu?",
+          "tr-TR": "Belki ev ziyareti yapabilir misiniz?",
+          "uk-UA": "Чи можете Ви, можливо, зробити виклик додому?",
+          "uz-UZ": "Balki uyga ham kelib ko'rarsiz?"
+        },
+        "nextStep": "praxis"
+      },
+      {
+        "text": "Ist auch ein Hausbesuch bei uns möglich?",
+        "translation": {
+          "ru-RU": "Возможен ли у нас также вызов на дом?",
+          "en-US": "Is a house visit also possible at our place?",
+          "ar-SA": "هل الزيارة المنزلية ممكنة لدينا أيضاً؟",
+          "es-ES": "¿También es posible una visita a domicilio en nuestra casa?",
+          "fr-FR": "Une visite à domicile est-elle également possible chez nous ?",
+          "hi-IN": "क्या हमारे यहाँ घर का दौरा भी संभव है?",
+          "pl-PL": "Czy możliwa jest również wizyta domowa u nas?",
+          "ro-RO": "Este posibilă și o vizită la domiciliu la noi?",
+          "tr-TR": "Bizde ev ziyareti de mümkün mü?",
+          "uk-UA": "Чи можливий у нас також виклик додому?",
+          "uz-UZ": "Biznikiga uyga tashrif buyurish ham mumkinmi?"
+        },
+        "nextStep": "praxis"
+      }
+    ],
+    "defaultNext": "praxis"
+  },
+  "praxis": {
+    "botText": "Nein, leider machen wir keine Hausbesuche. Hier in der Praxis haben wir alles.",
+    "botTranslation": {
+      "ru-RU": "Нет, к сожалению, мы не делаем вызовы на дом. Здесь, в клинике, у нас есть всё.",
+      "en-US": "No, unfortunately we don't do house visits. Here in the clinic we have everything.",
+      "ar-SA": "لا، للأسف لا نقوم بزيارات منزلية. هنا في العيادة لدينا كل شيء.",
+      "es-ES": "No, lamentablemente no hacemos visitas a domicilio. Aquí en la clínica tenemos de todo.",
+      "fr-FR": "Non, malheureusement nous ne faisons pas de visites à domicile. Ici à la clinique, nous avons tout.",
+      "hi-IN": "नहीं, दुर्भाग्य से हम घर का दौरा नहीं करते हैं। यहाँ क्लिनिक में हमारे पास सब कुछ है।",
+      "pl-PL": "Nie, niestety nie robimy wizyt domowych. Tutaj w klinice mamy wszystko.",
+      "ro-RO": "Nu, din păcate nu facem vizite la domiciliu. Aici, în clinică, avem totul.",
+      "tr-TR": "Hayır, maalesef ev ziyareti yapmıyoruz. Burada, klinikte her şeye sahibiz.",
+      "uk-UA": "Ні, на жаль, ми не робимо виклики додому. Тут, у клініці, у нас є все.",
+      "uz-UZ": "Yo'q, afsuski, biz uyga tashrif buyurmaymiz. Bu yerda, klinikada hamma narsa bor."
+    },
+    "vocabulary": [
+      {
+        "german": "die Praxis",
+        "translation": {
+          "ru-RU": "клиника / кабинет",
+          "en-US": "clinic / practice",
+          "ar-SA": "عيادة",
+          "es-ES": "clínica / consultorio",
+          "fr-FR": "clinique / cabinet",
+          "hi-IN": "क्लिनिक",
+          "pl-PL": "gabinet / klinika",
+          "ro-RO": "clinică / cabinet",
+          "tr-TR": "muayenehane / klinik",
+          "uk-UA": "клініка / кабінет",
+          "uz-UZ": "klinika / amaliyot"
+        }
+      },
+      {
+        "german": "vorbeikommen",
+        "translation": {
+          "ru-RU": "зайти / заехать",
+          "en-US": "to come by / drop by",
+          "ar-SA": "يمر بـ / يزور",
+          "es-ES": "pasarse por",
+          "fr-FR": "passer (voir qqn)",
+          "hi-IN": "मिलने आना",
+          "pl-PL": "wpaść / przyjść",
+          "ro-RO": "a trece pe la",
+          "tr-TR": "uğramak",
+          "uk-UA": "зайти / заїхати",
+          "uz-UZ": "kirib o'tmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, dann komme ich in die Praxis.",
+        "translation": {
+          "ru-RU": "Все ясно, тогда я приеду в клинику.",
+          "en-US": "Alright, then I will come to the clinic.",
+          "ar-SA": "حسناً، سآتي إلى العيادة إذن.",
+          "es-ES": "De acuerdo, entonces iré a la clínica.",
+          "fr-FR": "D'accord, je viendrai donc à la clinique.",
+          "hi-IN": "ठीक है, फिर मैं क्लिनिक आऊँगी。",
+          "pl-PL": "Wszystko jasne, w takim razie przyjadę do kliniki.",
+          "ro-RO": "În regulă, atunci voi veni la clinică.",
+          "tr-TR": "Pekala, o zaman kliniğe geleceğim.",
+          "uk-UA": "Все ясно, тоді я приїду в клініку.",
+          "uz-UZ": "Tushunarli, unda men klinikaga kelaman."
+        },
+        "nextStep": "abschied"
+      },
+      {
+        "text": "Verstanden, dann komme ich um 16:00 Uhr vorbei.",
+        "translation": {
+          "ru-RU": "Понятно, тогда я зайду (приеду) в 16:00.",
+          "en-US": "Understood, then I'll come by at 4:00 PM.",
+          "ar-SA": "مفهوم، سآتي في الساعة 16:00 إذن.",
+          "es-ES": "Entendido, entonces me pasaré a las 16:00.",
+          "fr-FR": "Compris, je passerai donc à 16h00.",
+          "hi-IN": "समझ गई, फिर मैं 16:00 बजे आऊँगी।",
+          "pl-PL": "Zrozumiałam, w takim razie przyjdę o 16:00.",
+          "ro-RO": "Am înțeles, atunci voi trece la ora 16:00.",
+          "tr-TR": "Anlaşıldı, o zaman saat 16:00'da uğrayacağım.",
+          "uk-UA": "Зрозуміло, тоді я зайду о 16:00.",
+          "uz-UZ": "Tushunarli, unda soat 16:00 da kelaman."
+        },
+        "nextStep": "abschied"
+      }
+    ],
+    "defaultNext": "abschied"
+  },
+  "abschied": {
+    "botText": "Bis später dann, auf Wiedersehen.",
+    "botTranslation": {
+      "ru-RU": "Тогда до встречи, до свидания.",
+      "en-US": "See you later then, goodbye.",
+      "ar-SA": "أراك لاحقاً إذن، وداعاً.",
+      "es-ES": "Hasta luego entonces, adiós.",
+      "fr-FR": "À plus tard alors, au revoir.",
+      "hi-IN": "तो बाद में मिलते हैं, अलविदा।",
+      "pl-PL": "W takim razie do zobaczenia, do widzenia.",
+      "ro-RO": "Pe mai târziu atunci, la revedere.",
+      "tr-TR": "Sonra görüşürüz o zaman, hoşça kalın.",
+      "uk-UA": "Тоді до зустрічі, до побачення.",
+      "uz-UZ": "Unda keyinroq ko'rishamiz, xayr."
+    },
+    "vocabulary": [
+      {
+        "german": "bis später",
+        "translation": {
+          "ru-RU": "до скорого / увидимся позже",
+          "en-US": "see you later",
+          "ar-SA": "أراك لاحقاً",
+          "es-ES": "hasta luego",
+          "fr-FR": "à plus tard",
+          "hi-IN": "बाद में मिलते हैं",
+          "pl-PL": "do zobaczenia później",
+          "ro-RO": "pe mai târziu",
+          "tr-TR": "sonra görüşürüz",
+          "uk-UA": "до зустрічі / побачимося пізніше",
+          "uz-UZ": "keyinroq ko'rishamiz"
+        }
+      },
+      {
+        "german": "auf Wiedersehen",
+        "translation": {
+          "ru-RU": "до свидания",
+          "en-US": "goodbye",
+          "ar-SA": "إلى اللقاء",
+          "es-ES": "adiós",
+          "fr-FR": "au revoir",
+          "hi-IN": "अलविदा",
+          "pl-PL": "do widzenia",
+          "ro-RO": "la revedere",
+          "tr-TR": "hoşça kalın",
+          "uk-UA": "до побачення",
+          "uz-UZ": "xayr"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Bis später, auf Wiedersehen!",
+        "translation": {
+          "ru-RU": "До встречи, до свидания!",
+          "en-US": "See you later, goodbye!",
+          "ar-SA": "أراك لاحقاً، وداعاً!",
+          "es-ES": "¡Hasta luego, adiós!",
+          "fr-FR": "À plus tard, au revoir !",
+          "hi-IN": "बाद में मिलते हैं, अलविदा!",
+          "pl-PL": "Do zobaczenia, do widzenia!",
+          "ro-RO": "Pe mai târziu, la revedere!",
+          "tr-TR": "Sonra görüşürüz, hoşça kalın!",
+          "uk-UA": "До зустрічі, до побачення!",
+          "uz-UZ": "Keyinroq ko'rishamiz, xayr!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Vielen Dank, tschüss!",
+        "translation": {
+          "ru-RU": "Большое спасибо, пока!",
+          "en-US": "Thank you very much, bye!",
+          "ar-SA": "شكراً جزيلاً، وداعاً!",
+          "es-ES": "¡Muchas gracias, adiós!",
+          "fr-FR": "Merci beaucoup, salut !",
+          "hi-IN": "बहुत-बहुत धन्यवाद, अलविदा!",
+          "pl-PL": "Bardzo dziękuję, cześć!",
+          "ro-RO": "Mulțumesc mult, pa!",
+          "tr-TR": "Çok teşekkürler, hoşça kalın!",
+          "uk-UA": "Велике дякую, бувай!",
+          "uz-UZ": "Katta rahmat, xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है।",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

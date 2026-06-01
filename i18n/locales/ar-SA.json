@@ -9231,7 +9231,8 @@
     "describePicture": "وصف الصور",
     "fight": "كون الألمانية",
     "audio": "مهام صوتية",
-    "textTask": "النصوص"
+    "textTask": "النصوص",
+    "speak": "ممارسة المحادثة"
   },
   "underSub": {
     "prev": "مقدمة",
@@ -10170,5 +10171,106 @@
     "home": "الرئيسية",
     "events": "الفعاليات",
     "cabinet": "الحساب"
+  },
+  "speakTopics": {
+    "speak": "التعارف والمحادثة",
+    "food": "الطعام والتسوق",
+    "transport": "السفر والمواصلات",
+    "city": "خدمات المدينة والحياة اليومية",
+    "health": "الصحة",
+    "work": "العمل والمسيرة المهنية"
+  },
+  "speakThemes": {
+    "firstmeet": "التعارف",
+    "acquaintance": "التعارف 2",
+    "secondmeet": "لقاء",
+    "family_talk": "حديث",
+    "weekend_plans": "خطط",
+    "friend_call": "مكالمة هاتفية",
+    "hobby_talk": "هوايات",
+    "party_talk": "حفلة",
+    "cafe_order": "طلب قهوة",
+    "restaurant_dinner": "مطعم",
+    "store_checkout": "عند الدفع",
+    "order_eat": "طلب طعام",
+    "consultation_talk": "استشارة",
+    "train_station": "في المحطة",
+    "train_ticket": "فحص التذكرة",
+    "taxi_berlin": "تاكسي",
+    "bus_talk": "في الحافلة",
+    "hotel_checkin": "فندق",
+    "border_check": "حدود",
+    "airport_talk": "مطار",
+    "info_talk": "مركز معلومات",
+    "bank_account": "بنك",
+    "apartment_rent": "إيجار",
+    "clothes_shopping": "تسوق",
+    "shopping": "تسوق 2",
+    "post_office": "مكتب بريد",
+    "police_talk": "شرطة",
+    "barbershop": "صالون حلاقة",
+    "doctor_visit": "حجز موعد طبيب",
+    "pharmacy_vitamins": "صيدلية",
+    "insurance": "تأمين",
+    "at_doctor": "عند الطبيب",
+    "dentist": "طبيب أسنان",
+    "veterinary": "بيطري",
+    "job_looking": "البحث عن عمل",
+    "job_interview": "مقابلة عمل",
+    "bos_talk": "حديث مع المدير",
+    "vacation": "إجازة",
+    "salary_talk": "راتب",
+    "dismissal_talk": "إنهاء الخدمة"
+  },
+  "speakIndexPage": {
+    "title": "ممارسة المحادثة",
+    "bannerText": "تدرب على مهارات التحدث من خلال أمثلة واقعية",
+    "modalTitle": "ممارسة المحادثة",
+    "modalText": "طور مهارات التواصل لديك من خلال حوارات واقعية! يمكنك اختيار إجابة جاهزة من المقترحات، أو كتابتها يدوياً عبر لوحة المفاتيح، أو ببساطة نطقها بصوت عالٍ بالضغط على زر الميكروفون."
+  },
+  "rankModal": {
+    "title": "رتبة جديدة",
+    "rankedLabel": "الرتبة",
+    "accept": "قبول"
+  },
+  "premiumBanner": {
+    "textBanner": "احصل على أقصى استفادة من المنصة، وسرّع وتيرة تعلمك."
+  },
+  "netWork": {
+    "successTitle": "تم استعادة الاتصال!",
+    "notSuccessTitle": "عذراً! لا يوجد إنترنت",
+    "successText": "نعود للعمل...",
+    "notSuccessText": "بانتظار الاتصال بالشبكة..."
+  },
+  "termsBlock": {
+    "first": "بالتسجيل، أنت توافق على",
+    "second": "شروط الاستخدام",
+    "third": "و",
+    "fourth": "سياسة الخصوصية"
+  },
+  "languagePage": {
+    "title": "لغة التطبيق",
+    "placeholder": "البحث عن لغة...",
+    "notfound": "لم يتم العثور على شيء",
+    "further": "متابعة"
+  },
+  "statistics": {
+    "title": "إحصائياتك وتقدمك في تعلم الكلمات وإكمال المستويات الموضوعية"
+  },
+  "restoreComputed": {
+    "restoring": "جاري الاستعادة...",
+    "restore": "استعادة المشتريات."
+  },
+  "submitComputed": {
+    "sync": "جاري المزامنة...",
+    "getPlus": "الحصول على PLUS"
+  },
+  "pay": {
+    "banner": "وصول كامل إلى جميع ميزات التطبيق",
+    "sales": "تطبيق الخصومات المكتسبة من خلال النشاط",
+    "triggerToastSuccess": "تم استعادة المشتريات بنجاح!",
+    "triggerToastNotFound": "لم يتم العثور على اشتراكات نشطة",
+    "triggerToastError": "حدث خطأ أثناء الاستعادة",
+    "triggerToastIsPlus": "لديك اشتراك PLUS نشط بالفعل!"
   }
 }

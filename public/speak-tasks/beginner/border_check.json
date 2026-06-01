@@ -1,0 +1,629 @@
+{
+  "start": {
+    "botText": "Guten Tag. Ihren Pass bitte.",
+    "botTranslation": {
+      "ru-RU": "Добрый день. Ваш паспорт, пожалуйста.",
+      "en-US": "Good day. Your passport, please.",
+      "ar-SA": "طاب يومك. جواز سفرك من فضلك.",
+      "es-ES": "Buen día. Su pasaporte, por favor.",
+      "fr-FR": "Bonjour. Votre passeport, s'il vous plaît.",
+      "hi-IN": "शुभ दिन। आपका पासपोर्ट, कृपया।",
+      "pl-PL": "Dzień dobry. Proszę pani paszport.",
+      "ro-RO": "Bună ziua. Pașaportul dumneavoastră, vă rog.",
+      "tr-TR": "İyi günler. Pasaportunuz lütfen.",
+      "uk-UA": "Добрий день. Ваш паспорт, будь ласка.",
+      "uz-UZ": "Xayrli kun. Pasportingizni bering, iltimos."
+    },
+    "vocabulary": [
+      {
+        "german": "der Pass",
+        "translation": {
+          "ru-RU": "паспорт",
+          "en-US": "passport",
+          "ar-SA": "جواز السفر",
+          "es-ES": "pasaporte",
+          "fr-FR": "passeport",
+          "hi-IN": "पासपोर्ट",
+          "pl-PL": "paszport",
+          "ro-RO": "pașaportul",
+          "tr-TR": "pasaport",
+          "uk-UA": "паспорт",
+          "uz-UZ": "pasport"
+        }
+      },
+      {
+        "german": "bitte",
+        "translation": {
+          "ru-RU": "пожалуйста",
+          "en-US": "please",
+          "ar-SA": "من فضلك",
+          "es-ES": "por favor",
+          "fr-FR": "s'il vous plaît",
+          "hi-IN": "कृपया",
+          "pl-PL": "proszę",
+          "ro-RO": "vă rog",
+          "tr-TR": "lütfen",
+          "uk-UA": "будь ласка",
+          "uz-UZ": "iltimos"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hier, bitte.",
+        "translation": {
+          "ru-RU": "Вот, пожалуйста.",
+          "en-US": "Here, please.",
+          "ar-SA": "تفضل، ها هو.",
+          "es-ES": "Aquí tiene, por favor.",
+          "fr-FR": "Voici, s'il vous plaît.",
+          "hi-IN": "यहाँ, कृपया।",
+          "pl-PL": "Proszę bardzo.",
+          "ro-RO": "Poftim, vă rog.",
+          "tr-TR": "Buyurun, lütfen.",
+          "uk-UA": "Ось, будь ласка.",
+          "uz-UZ": "Marhamat, oling."
+        },
+        "nextStep": "reason"
+      },
+      {
+        "text": "Bitte schön.",
+        "translation": {
+          "ru-RU": "Пожалуйста.",
+          "en-US": "Here you go.",
+          "ar-SA": "تفضل.",
+          "es-ES": "Aquí tiene.",
+          "fr-FR": "Je vous en prie (voici).",
+          "hi-IN": "ये लीजिये।",
+          "pl-PL": "Proszę.",
+          "ro-RO": "Poftim.",
+          "tr-TR": "Buyurun.",
+          "uk-UA": "Прошу.",
+          "uz-UZ": "Marhamat."
+        },
+        "nextStep": "reason"
+      }
+    ],
+    "defaultNext": "reason"
+  },
+  "reason": {
+    "botText": "Was ist der Grund Ihrer Reise?",
+    "botTranslation": {
+      "ru-RU": "Какова цель Вашей поездки?",
+      "en-US": "What is the reason for your trip?",
+      "ar-SA": "ما هو سبب رحلتك؟",
+      "es-ES": "¿Cuál es el motivo de su viaje?",
+      "fr-FR": "Quel est le motif de votre voyage ?",
+      "hi-IN": "आपकी यात्रा का कारण क्या है?",
+      "pl-PL": "Jaki jest cel pani podróży?",
+      "ro-RO": "Care este motivul călătoriei dumneavoastră?",
+      "tr-TR": "Seyahatinizin amacı nedir?",
+      "uk-UA": "Яка мета Вашої поїздки?",
+      "uz-UZ": "Sayohat maqsadingiz nima?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Grund",
+        "translation": {
+          "ru-RU": "причина",
+          "en-US": "reason",
+          "ar-SA": "السبب",
+          "es-ES": "motivo",
+          "fr-FR": "motif",
+          "hi-IN": "कारण",
+          "pl-PL": "powód",
+          "ro-RO": "motivul",
+          "tr-TR": "sebep",
+          "uk-UA": "причина",
+          "uz-UZ": "sabab"
+        }
+      },
+      {
+        "german": "die Reise",
+        "translation": {
+          "ru-RU": "поездка",
+          "en-US": "trip",
+          "ar-SA": "رحلة",
+          "es-ES": "viaje",
+          "fr-FR": "voyage",
+          "hi-IN": "यात्रा",
+          "pl-PL": "podróż",
+          "ro-RO": "călătoria",
+          "tr-TR": "seyahat",
+          "uk-UA": "поїздка",
+          "uz-UZ": "sayohat"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich mache Urlaub.",
+        "translation": {
+          "ru-RU": "Я в отпуске (на отдыхе).",
+          "en-US": "I am on vacation.",
+          "ar-SA": "أنا في إجازة.",
+          "es-ES": "Estoy de vacaciones.",
+          "fr-FR": "Je suis en vacances.",
+          "hi-IN": "मैं छुट्टी पर हूँ।",
+          "pl-PL": "Jestem na wakacjach.",
+          "ro-RO": "Sunt în vacanță.",
+          "tr-TR": "Tatildeyim.",
+          "uk-UA": "Я у відпустці.",
+          "uz-UZ": "Men ta'tildaman."
+        },
+        "nextStep": "duration"
+      },
+      {
+        "text": "Ich besuche Freunde.",
+        "translation": {
+          "ru-RU": "Я навещаю друзей.",
+          "en-US": "I am visiting friends.",
+          "ar-SA": "أنا أزور الأصدقاء.",
+          "es-ES": "Visito a unos amigos.",
+          "fr-FR": "Je rends visite à des amis.",
+          "hi-IN": "मैं दोस्तों से मिलने आया हूँ।",
+          "pl-PL": "Odwiedzam przyjaciół.",
+          "ro-RO": "Vizitez prieteni.",
+          "tr-TR": "Arkadaşları ziyaret ediyorum.",
+          "uk-UA": "Я відвідую друзів.",
+          "uz-UZ": "Men do'stlarimnikiga keldim."
+        },
+        "nextStep": "duration"
+      }
+    ],
+    "defaultNext": "duration"
+  },
+  "duration": {
+    "botText": "Wie lange bleiben Sie in Deutschland?",
+    "botTranslation": {
+      "ru-RU": "Как долго Вы остаетесь в Германии?",
+      "en-US": "How long are you staying in Germany?",
+      "ar-SA": "كم ستبقى في ألمانيا؟",
+      "es-ES": "¿Cuánto tiempo se queda en Alemania?",
+      "fr-FR": "Combien de temps restez-vous en Allemagne ?",
+      "hi-IN": "आप जर्मनी में कब तक रुक रहे हैं?",
+      "pl-PL": "Jak długo zostaje pani w Niemczech?",
+      "ro-RO": "Cât timp rămâneți în Germania?",
+      "tr-TR": "Almanya'da ne kadar kalacaksınız?",
+      "uk-UA": "Як довго Ви залишаєтеся в Німеччині?",
+      "uz-UZ": "Germaniyada qancha qolasiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "wie lange",
+        "translation": {
+          "ru-RU": "как долго",
+          "en-US": "how long",
+          "ar-SA": "كم المدة",
+          "es-ES": "cuánto tiempo",
+          "fr-FR": "combien de temps",
+          "hi-IN": "कब तक",
+          "pl-PL": "jak długo",
+          "ro-RO": "cât timp",
+          "tr-TR": "ne kadar",
+          "uk-UA": "як довго",
+          "uz-UZ": "qancha muddat"
+        }
+      },
+      {
+        "german": "bleiben",
+        "translation": {
+          "ru-RU": "оставаться",
+          "en-US": "to stay",
+          "ar-SA": "يبقى",
+          "es-ES": "quedarse",
+          "fr-FR": "rester",
+          "hi-IN": "रुकना",
+          "pl-PL": "zostać",
+          "ro-RO": "a rămâne",
+          "tr-TR": "kalmak",
+          "uk-UA": "залишатися",
+          "uz-UZ": "qolmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich bleibe eine Woche.",
+        "translation": {
+          "ru-RU": "Я останусь на одну неделю.",
+          "en-US": "I am staying for one week.",
+          "ar-SA": "سأبقى لمدة أسبوع.",
+          "es-ES": "Me quedo una semana.",
+          "fr-FR": "Je reste une semaine.",
+          "hi-IN": "मैं एक सप्ताह रुकूँगा।",
+          "pl-PL": "Zostaję na tydzień.",
+          "ro-RO": "Rămân o săptămână.",
+          "tr-TR": "Bir hafta kalacağım.",
+          "uk-UA": "Я залишаюся на тиждень.",
+          "uz-UZ": "Men bir haftaga qolaman."
+        },
+        "nextStep": "accommodation"
+      },
+      {
+        "text": "Für zehn Tage.",
+        "translation": {
+          "ru-RU": "На десять дней.",
+          "en-US": "For ten days.",
+          "ar-SA": "لمدة عشرة أيام.",
+          "es-ES": "Por diez días.",
+          "fr-FR": "Pour dix jours.",
+          "hi-IN": "दस दिनों के लिए।",
+          "pl-PL": "Na dziesięć dni.",
+          "ro-RO": "Pentru zece zile.",
+          "tr-TR": "On günlüğüne.",
+          "uk-UA": "На десять днів.",
+          "uz-UZ": "O'n kunga."
+        },
+        "nextStep": "accommodation"
+      }
+    ],
+    "defaultNext": "accommodation"
+  },
+  "accommodation": {
+    "botText": "Wo wohnen Sie?",
+    "botTranslation": {
+      "ru-RU": "Где Вы будете жить?",
+      "en-US": "Where are you staying?",
+      "ar-SA": "أين ستقيم؟",
+      "es-ES": "¿Dónde se aloja?",
+      "fr-FR": "Où logez-vous ?",
+      "hi-IN": "आप कहाँ ठहर रहे हैं?",
+      "pl-PL": "Gdzie będzie pani mieszkać?",
+      "ro-RO": "Unde locuiți?",
+      "tr-TR": "Nerede kalacaksınız?",
+      "uk-UA": "Де Ви будете жити?",
+      "uz-UZ": "Qayerda turasiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "wo",
+        "translation": {
+          "ru-RU": "где",
+          "en-US": "where",
+          "ar-SA": "أين",
+          "es-ES": "dónde",
+          "fr-FR": "où",
+          "hi-IN": "कहाँ",
+          "pl-PL": "gdzie",
+          "ro-RO": "unde",
+          "tr-TR": "nerede",
+          "uk-UA": "де",
+          "uz-UZ": "qayerda"
+        }
+      },
+      {
+        "german": "wohnen",
+        "translation": {
+          "ru-RU": "жить",
+          "en-US": "to live",
+          "ar-SA": "يسكن",
+          "es-ES": "vivir",
+          "fr-FR": "habiter",
+          "hi-IN": "रहना",
+          "pl-PL": "mieszkać",
+          "ro-RO": "a locui",
+          "tr-TR": "yaşamak",
+          "uk-UA": "жити",
+          "uz-UZ": "yashamoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich wohne bei Freunden.",
+        "translation": {
+          "ru-RU": "Я буду жить у друзей.",
+          "en-US": "I am staying with friends.",
+          "ar-SA": "سأقيم عند الأصدقاء.",
+          "es-ES": "Me quedo con amigos.",
+          "fr-FR": "Je loge chez des amis.",
+          "hi-IN": "मैं दोस्तों के साथ रह रहा हूँ।",
+          "pl-PL": "Mieszkam u przyjaciół.",
+          "ro-RO": "Locuiesc la prieteni.",
+          "tr-TR": "Arkadaşlarda kalıyorum.",
+          "uk-UA": "Я буду жити в друзів.",
+          "uz-UZ": "Men do'stlarimnikida turaman."
+        },
+        "nextStep": "return_ticket"
+      },
+      {
+        "text": "Ich wohne in einem Hotel.",
+        "translation": {
+          "ru-RU": "Я буду жить в отеле.",
+          "en-US": "I am staying in a hotel.",
+          "ar-SA": "سأقيم في فندق.",
+          "es-ES": "Me alojo en un hotel.",
+          "fr-FR": "Je loge dans un hôtel.",
+          "hi-IN": "मैं एक होटल में रुक रहा हूँ।",
+          "pl-PL": "Mieszkam w hotelu.",
+          "ro-RO": "Locuiesc într-un hotel.",
+          "tr-TR": "Bir otelde kalıyorum.",
+          "uk-UA": "Я буду жити в готелі.",
+          "uz-UZ": "Men mehmonxonada turaman."
+        },
+        "nextStep": "return_ticket"
+      }
+    ],
+    "defaultNext": "return_ticket"
+  },
+  "return_ticket": {
+    "botText": "Haben Sie ein Rückflugticket?",
+    "botTranslation": {
+      "ru-RU": "У Вас есть обратный билет?",
+      "en-US": "Do you have a return ticket?",
+      "ar-SA": "هل لديك تذكرة عودة؟",
+      "es-ES": "¿Tiene billete de vuelta?",
+      "fr-FR": "Avez-vous un billet de retour ?",
+      "hi-IN": "क्या आपके पास वापसी का टिकट है?",
+      "pl-PL": "Czy ma pani bilet powrotny?",
+      "ro-RO": "Aveți bilet de întoarcere?",
+      "tr-TR": "Dönüş biletiniz var mı?",
+      "uk-UA": "У Вас є зворотній квиток?",
+      "uz-UZ": "Qaytish chiptangiz bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Rückflugticket",
+        "translation": {
+          "ru-RU": "обратный билет",
+          "en-US": "return ticket",
+          "ar-SA": "تذكرة عودة",
+          "es-ES": "billete de vuelta",
+          "fr-FR": "billet de retour",
+          "hi-IN": "वापसी टिकट",
+          "pl-PL": "bilet powrotny",
+          "ro-RO": "bilet de întoarcere",
+          "tr-TR": "dönüş bileti",
+          "uk-UA": "зворотній квиток",
+          "uz-UZ": "qaytish chiptasi"
+        }
+      },
+      {
+        "german": "die Bestätigung",
+        "translation": {
+          "ru-RU": "подтверждение",
+          "en-US": "confirmation",
+          "ar-SA": "تأكيد",
+          "es-ES": "confirmación",
+          "fr-FR": "confirmation",
+          "hi-IN": "पुष्टि",
+          "pl-PL": "potwierdzenie",
+          "ro-RO": "confirmarea",
+          "tr-TR": "onay",
+          "uk-UA": "підтвердження",
+          "uz-UZ": "tasdiqnoma"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, hier ist mein Ticket.",
+        "translation": {
+          "ru-RU": "Да, вот мой билет.",
+          "en-US": "Yes, here is my ticket.",
+          "ar-SA": "نعم، هذه تذكرتي.",
+          "es-ES": "Sí, aquí está mi billete.",
+          "fr-FR": "Oui, voici mon billet.",
+          "hi-IN": "हाँ, यह मेरा टिकट है।",
+          "pl-PL": "Tak, oto mój bilet.",
+          "ro-RO": "Da, iată biletul meu.",
+          "tr-TR": "Evet, işte biletim.",
+          "uk-UA": "Так, ось мій квиток.",
+          "uz-UZ": "Ha, mana mening chiptam."
+        },
+        "nextStep": "officer_ok"
+      },
+      {
+        "text": "Ja, hier ist die Bestätigung.",
+        "translation": {
+          "ru-RU": "Да, вот подтверждение.",
+          "en-US": "Yes, here is the confirmation.",
+          "ar-SA": "نعم، هذا هو التأكيد.",
+          "es-ES": "Sí, aquí está la confirmación.",
+          "fr-FR": "Oui, voici la confirmation.",
+          "hi-IN": "हाँ, यह पुष्टि है।",
+          "pl-PL": "Tak, tu jest potwierdzenie.",
+          "ro-RO": "Da, iată confirmarea.",
+          "tr-TR": "Evet, işte onay belgesi.",
+          "uk-UA": "Так, ось підтвердження.",
+          "uz-UZ": "Ha, mana tasdiqnomasi."
+        },
+        "nextStep": "officer_ok"
+      }
+    ],
+    "defaultNext": "officer_ok"
+  },
+  "officer_ok": {
+    "botText": "Danke. Das ist in Ordnung.",
+    "botTranslation": {
+      "ru-RU": "Спасибо. Всё в порядке.",
+      "en-US": "Thank you. That is fine.",
+      "ar-SA": "شكراً. هذا على ما يرام.",
+      "es-ES": "Gracias. Está bien.",
+      "fr-FR": "Merci. C'est en ordre.",
+      "hi-IN": "धन्यवाद। यह ठीक है।",
+      "pl-PL": "Dziękuję. Wszystko w porządku.",
+      "ro-RO": "Mulțumesc. Este în regulă.",
+      "tr-TR": "Teşekkürler. Bu uygun.",
+      "uk-UA": "Дякую. Все в порядку.",
+      "uz-UZ": "Rahmat. Hammasi joyida."
+    },
+    "vocabulary": [
+      {
+        "german": "in Ordnung",
+        "translation": {
+          "ru-RU": "в порядке",
+          "en-US": "fine",
+          "ar-SA": "على ما يرام",
+          "es-ES": "en orden",
+          "fr-FR": "en ordre",
+          "hi-IN": "ठीक है",
+          "pl-PL": "w porządku",
+          "ro-RO": "în regulă",
+          "tr-TR": "yolunda",
+          "uk-UA": "в порядку",
+          "uz-UZ": "joyida"
+        }
+      },
+      {
+        "german": "vielen Dank",
+        "translation": {
+          "ru-RU": "большое спасибо",
+          "en-US": "thank you very much",
+          "ar-SA": "شكراً جزيلاً",
+          "es-ES": "muchas gracias",
+          "fr-FR": "merci beaucoup",
+          "hi-IN": "बहुत धन्यवाद",
+          "pl-PL": "bardzo dziękuję",
+          "ro-RO": "mulțumesc mult",
+          "tr-TR": "çok teşekkürler",
+          "uk-UA": "велике дякую",
+          "uz-UZ": "katta rahmat"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke.",
+        "translation": {
+          "ru-RU": "Спасибо.",
+          "en-US": "Thank you.",
+          "ar-SA": "شكراً.",
+          "es-ES": "Gracias.",
+          "fr-FR": "Merci.",
+          "hi-IN": "धन्यवाद।",
+          "pl-PL": "Dziękuję.",
+          "ro-RO": "Mulțumesc.",
+          "tr-TR": "Teşekkürler.",
+          "uk-UA": "Дякую.",
+          "uz-UZ": "Rahmat."
+        },
+        "nextStep": "leave"
+      },
+      {
+        "text": "Vielen Dank.",
+        "translation": {
+          "ru-RU": "Большое спасибо.",
+          "en-US": "Thank you very much.",
+          "ar-SA": "شكراً جزيلاً.",
+          "es-ES": "Muchas gracias.",
+          "fr-FR": "Merci beaucoup.",
+          "hi-IN": "बहुत-बहुत धन्यवाद।",
+          "pl-PL": "Bardzo dziękuję.",
+          "ro-RO": "Vă mulțumesc mult.",
+          "tr-TR": "Çok teşekkürler.",
+          "uk-UA": "Велике дякую.",
+          "uz-UZ": "Katta rahmat."
+        },
+        "nextStep": "leave"
+      }
+    ],
+    "defaultNext": "leave"
+  },
+  "leave": {
+    "botText": "Sie können gehen.",
+    "botTranslation": {
+      "ru-RU": "Вы можете идти.",
+      "en-US": "You may go.",
+      "ar-SA": "يمكنك الانصراف.",
+      "es-ES": "Puede irse.",
+      "fr-FR": "Vous pouvez y aller.",
+      "hi-IN": "आप जा सकते हैं।",
+      "pl-PL": "Może pani iść.",
+      "ro-RO": "Puteți pleca.",
+      "tr-TR": "Gidebilirsiniz.",
+      "uk-UA": "Ви можете йти.",
+      "uz-UZ": "Ketishingiz mumkin."
+    },
+    "vocabulary": [
+      {
+        "german": "können",
+        "translation": {
+          "ru-RU": "мочь",
+          "en-US": "can/may",
+          "ar-SA": "يستطيع",
+          "es-ES": "poder",
+          "fr-FR": "pouvoir",
+          "hi-IN": "सकना",
+          "pl-PL": "móc",
+          "ro-RO": "a putea",
+          "tr-TR": "yapabilmek",
+          "uk-UA": "могти",
+          "uz-UZ": "olmoq"
+        }
+      },
+      {
+        "german": "gehen",
+        "translation": {
+          "ru-RU": "идти",
+          "en-US": "to go",
+          "ar-SA": "يذهب",
+          "es-ES": "ir",
+          "fr-FR": "aller",
+          "hi-IN": "जाना",
+          "pl-PL": "iść",
+          "ro-RO": "a merge",
+          "tr-TR": "gitmek",
+          "uk-UA": "йти",
+          "uz-UZ": "bormoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Auf Wiedersehen.",
+        "translation": {
+          "ru-RU": "До свидания.",
+          "en-US": "Goodbye.",
+          "ar-SA": "إلى اللقاء.",
+          "es-ES": "Adiós.",
+          "fr-FR": "Au revoir.",
+          "hi-IN": "अलविदा।",
+          "pl-PL": "Do widzenia.",
+          "ro-RO": "La revedere.",
+          "tr-TR": "Hoşça kalın.",
+          "uk-UA": "До побачення.",
+          "uz-UZ": "Xayr."
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Danke, auf Wiedersehen.",
+        "translation": {
+          "ru-RU": "Спасибо, до свидания.",
+          "en-US": "Thank you, goodbye.",
+          "ar-SA": "شكراً، إلى اللقاء.",
+          "es-ES": "Gracias, adiós.",
+          "fr-FR": "Merci, au revoir.",
+          "hi-IN": "धन्यवाद, अलविदा।",
+          "pl-PL": "Dziękuję, do widzenia.",
+          "ro-RO": "Mulțumesc, la revedere.",
+          "tr-TR": "Teşekkürler, hoşça kalın.",
+          "uk-UA": "Дякую, до побачення.",
+          "uz-UZ": "Rahmat, xayr."
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Die Grenzkontrolle ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Паспортный контроль завершен.",
+      "en-US": "Border control is finished.",
+      "ar-SA": "انتهت مراقبة الحدود.",
+      "es-ES": "El control fronterizo ha terminado.",
+      "fr-FR": "Le contrôle aux frontières est terminé.",
+      "hi-IN": "सीमा नियंत्रण समाप्त हो गया है।",
+      "pl-PL": "Kontrola graniczna została zakończona.",
+      "ro-RO": "Controlul de frontieră s-a încheiat.",
+      "tr-TR": "Sınır kontrolü tamamlandı.",
+      "uk-UA": "Паспортний контроль завершено.",
+      "uz-UZ": "Chegara nazorati yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

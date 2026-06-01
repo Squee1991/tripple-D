@@ -13,7 +13,7 @@
     </header>
     <div class="banner">
        <VBanner
-           text="Ваша статистика и прогресс в изучении слов и прохождении тематических уровней"
+           :text="t('statistics.title')"
            :icon="StatsIcon"
        />
     </div>

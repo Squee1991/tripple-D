@@ -1,19 +1,6 @@
 {
   "start": {
     "botText": "Guten Tag! Wohin möchten Sie fahren?",
-    "tips": {
-      "ar-SA": "السؤال 'Wohin؟' (إلى أين؟) يُستخدم للاتجاهات والوجهات.",
-      "en-US": "The question 'Wohin?' (Where to?) is used for directions and destinations.",
-      "es-ES": "La pregunta 'Wohin?' (¿Adónde?) se usa para direcciones y destinos.",
-      "fr-FR": "La question 'Wohin ?' (Où vas-tu / allez-vous ?) est utilisée pour les directions.",
-      "hi-IN": "प्रश्न 'Wohin?' (कहाँ?) दिशा और गंतव्य के लिए प्रयोग किया जाता है।",
-      "pl-PL": "Pytanie 'Wohin?' (Dokąd?) jest używane do określania kierunku.",
-      "ro-RO": "Întrebarea 'Wohin?' (Încotro?) este folosită pentru direcții și destinații.",
-      "ru-RU": "Вопрос 'Wohin?' (Куда?) всегда используется для направления движения.",
-      "tr-TR": "'Wohin?' (Nereye?) sorusu yönler ve hedefler için kullanılır.",
-      "uk-UA": "Запитання 'Wohin?' (Куди?) завжди використовується для напрямку руху.",
-      "uz-UZ": "'Wohin?' (Qayerga?) so'rovi yo'nalishlar va manzillar uchun ishlatiladi."
-    },
     "botTranslation": {
       "ar-SA": "طاب يومك! إلى أين تود الذهاب؟",
       "en-US": "Good day! Where would you like to travel?",
@@ -27,6 +14,24 @@
       "uk-UA": "Добрий день! Куди Ви хочете поїхати?",
       "uz-UZ": "Xayrli kun! Qayerga sayohat qilishni xohlaysiz?"
     },
+    "vocabulary": [
+      {
+        "german": "wohin",
+        "translation": {
+          "ru-RU": "куда",
+          "en-US": "where to",
+          "ar-SA": "إلى أين",
+          "es-ES": "adónde",
+          "fr-FR": "où",
+          "hi-IN": "कहाँ",
+          "pl-PL": "dokąd",
+          "ro-RO": "încotro",
+          "tr-TR": "nereye",
+          "uk-UA": "куди",
+          "uz-UZ": "qayerga"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ich möchte nach Berlin fahren.",
@@ -67,19 +72,6 @@
   },
   "ask_time": {
     "botText": "Wann möchten Sie fahren?",
-    "tips": {
-      "ar-SA": "حرف الجر 'nach' يُستخدم دائماً مع أسماء المدن والبلدان.",
-      "en-US": "The preposition 'nach' is always used with names of cities and countries.",
-      "es-ES": "La preposición 'nach' se usa siempre con nombres de ciudades y países.",
-      "fr-FR": "La préposition 'nach' est toujours utilisée avec les noms de villes et de pays.",
-      "hi-IN": "पूर्वसर्ग 'nach' हमेशा शहरों और देशों के नामों के साथ प्रयोग किया जाता है।",
-      "pl-PL": "Przyimek 'nach' jest zawsze używany z nazwami miast i państw.",
-      "ro-RO": "Prepoziția 'nach' este folosită mereu cu nume de orașe și țări.",
-      "ru-RU": "Предлог 'nach' (в/до) используется при движении в города и страны.",
-      "tr-TR": "'nach' edatı her zaman şehir ve ülke isimleriyle kullanılır.",
-      "uk-UA": "Прийменник 'nach' (в/до) використовується при русі до міст і країн.",
-      "uz-UZ": "'nach' predlogi har doim shahar va mamlakat nomlari bilan ishlatiladi."
-    },
     "botTranslation": {
       "ar-SA": "متى تود الذهاب؟",
       "en-US": "When would you like to go?",
@@ -93,6 +85,24 @@
       "uk-UA": "Коли Ви хочете поїхати?",
       "uz-UZ": "Qachon jo'nab ketishni xohlaysiz?"
     },
+    "vocabulary": [
+      {
+        "german": "nach",
+        "translation": {
+          "ru-RU": "в / до (направление)",
+          "en-US": "to (direction)",
+          "ar-SA": "إلى",
+          "es-ES": "a (dirección)",
+          "fr-FR": "à / en",
+          "hi-IN": "की ओर",
+          "pl-PL": "do",
+          "ro-RO": "spre / la",
+          "tr-TR": "-e / -a",
+          "uk-UA": "до / в (напрямок)",
+          "uz-UZ": "ga"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Um 8 Uhr, bitte.",
@@ -133,19 +143,6 @@
   },
   "price": {
     "botText": "Das macht 15 Euro.",
-    "tips": {
-      "ar-SA": "حرف الجر 'um' يُستخدم لتحديد الوقت الدقيق (في تمام الساعة كذا).",
-      "en-US": "The preposition 'um' is used for exact clock times (at X o'clock).",
-      "es-ES": "La preposición 'um' se usa para horas exactas del reloj.",
-      "fr-FR": "La préposition 'um' est utilisée pour les heures précises.",
-      "hi-IN": "पूर्वसर्ग 'um' का प्रयोग सटीक समय के लिए किया जाता है।",
-      "pl-PL": "Przyimek 'um' jest używany do określania dokładnego czasu.",
-      "ro-RO": "Prepoziția 'um' este folosită pentru ore exacte.",
-      "ru-RU": "Предлог 'um' используется только для точного времени по часам.",
-      "tr-TR": "'um' edatı kesin saatler için kullanılır.",
-      "uk-UA": "Прийменник 'um' використовується тільки для точного часу.",
-      "uz-UZ": "'um' predlogi aniq soat vaqtlarini bildirish uchun ishlatiladi."
-    },
     "botTranslation": {
       "ar-SA": "التكلفة 15 يورو.",
       "en-US": "That is 15 Euros.",
@@ -159,6 +156,24 @@
       "uk-UA": "З Вас 15 євро.",
       "uz-UZ": "Jami 15 yevro bo'ladi."
     },
+    "vocabulary": [
+      {
+        "german": "um",
+        "translation": {
+          "ru-RU": "в (о времени)",
+          "en-US": "at (time)",
+          "ar-SA": "في تمام",
+          "es-ES": "a las",
+          "fr-FR": "à (heure)",
+          "hi-IN": "बजे",
+          "pl-PL": "o (czas)",
+          "ro-RO": "la ora",
+          "tr-TR": "saat ...'te",
+          "uk-UA": "о (про час)",
+          "uz-UZ": "soat ... da"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Hier, bitte.",
@@ -199,19 +214,6 @@
   },
   "platform": {
     "botText": "Danke. Der Zug fährt von Gleis 2.",
-    "tips": {
-      "ar-SA": "'Gleis' تعني الرصيف أو المسار في محطة القطار.",
-      "en-US": "'Gleis' means track or platform at a train station.",
-      "es-ES": "'Gleis' significa vía o andén en una estación de tren.",
-      "fr-FR": "'Gleis' signifie voie ou quai dans une gare.",
-      "hi-IN": "'Gleis' का अर्थ ट्रेन स्टेशन पर ट्रैक या प्लेटफॉर्म होता है।",
-      "pl-PL": "'Gleis' oznacza peron lub tor na stacji kolejowej.",
-      "ro-RO": "'Gleis' înseamnă linie sau peron la gară.",
-      "ru-RU": "Технически 'Gleis' означает 'путь' (рельсы), но переводится как перрон или платформа.",
-      "tr-TR": "'Gleis', tren istasyonunda peron veya ray anlamına gelir.",
-      "uk-UA": "Технічно 'Gleis' означає 'колія', але перекладається як перон або платформа.",
-      "uz-UZ": "'Gleis' poyezd stantsiyasida yo'l yoki platformani anglatadi."
-    },
     "botTranslation": {
       "ar-SA": "شكراً. يغادر القطار من الرصيف رقم 2.",
       "en-US": "Thanks. The train leaves from platform 2.",
@@ -225,6 +227,24 @@
       "uk-UA": "Дякую. Поїзд відправляється з перону 2.",
       "uz-UZ": "Rahmat. Poyezd 2-platformadan jo'naydi."
     },
+    "vocabulary": [
+      {
+        "german": "das Gleis",
+        "translation": {
+          "ru-RU": "путь / перрон",
+          "en-US": "platform / track",
+          "ar-SA": "الرصيف",
+          "es-ES": "vía / andén",
+          "fr-FR": "voie / quai",
+          "hi-IN": "प्लेटफॉर्म / ट्रैक",
+          "pl-PL": "peron / tor",
+          "ro-RO": "linie / peron",
+          "tr-TR": "peron / ray",
+          "uk-UA": "колія / перон",
+          "uz-UZ": "platforma / yo'l"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Wo ist Gleis 2?",
@@ -265,19 +285,6 @@
   },
   "directions": {
     "botText": "Gehen Sie geradeaus und dann rechts.",
-    "tips": {
-      "ar-SA": "السؤال 'Wo؟' (أين؟) يحدد الموقع الثابت ويأخذ حالة Dativ.",
-      "en-US": "The question 'Wo?' (Where?) specifies a fixed location and takes Dativ.",
-      "es-ES": "La pregunta 'Wo?' (¿Dónde?) especifica una ubicación fija y requiere Dativ.",
-      "fr-FR": "La question 'Wo ?' (Où ?) spécifie un emplacement fixe.",
-      "hi-IN": "प्रश्न 'Wo?' (कहाँ?) एक निश्चित स्थान निर्दिष्ट करता है और Dativ लेता है।",
-      "pl-PL": "Pytanie 'Wo?' (Gdzie?) określa stałą lokalizację i wymaga celownika (Dativ).",
-      "ro-RO": "Întrebarea 'Wo?' (Unde?) specifică o locație fixă și cere Dativ.",
-      "ru-RU": "Вопрос 'Wo?' (Где?) используется для статического местонахождения и требует Dativ.",
-      "tr-TR": "'Wo?' (Nerede?) sorusu sabit bir konumu belirtir ve Dativ gerektirir.",
-      "uk-UA": "Запитання 'Wo?' (Де?) використовується для місцезнаходження і вимагає Dativ.",
-      "uz-UZ": "'Wo?' (Qayerda?) so'rovi aniq manzilni bildiradi."
-    },
     "botTranslation": {
       "ar-SA": "اذهب بشكل مستقيم ثم إلى اليمين.",
       "en-US": "Go straight ahead and then right.",
@@ -291,6 +298,24 @@
       "uk-UA": "Йдіть прямо, а потім направо.",
       "uz-UZ": "To'g'riga boring va keyin o'ngga."
     },
+    "vocabulary": [
+      {
+        "german": "wo",
+        "translation": {
+          "ru-RU": "где",
+          "en-US": "where",
+          "ar-SA": "أين",
+          "es-ES": "dónde",
+          "fr-FR": "où",
+          "hi-IN": "कहाँ",
+          "pl-PL": "gdzie",
+          "ro-RO": "unde",
+          "tr-TR": "nerede",
+          "uk-UA": "де",
+          "uz-UZ": "qayerda"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ist das weit?",
@@ -331,19 +356,6 @@
   },
   "distance": {
     "botText": "Nein, nur 2 Minuten zu Fuß.",
-    "tips": {
-      "ar-SA": "التعبير 'zu Fuß' يعني مشياً على الأقدام.",
-      "en-US": "The phrase 'zu Fuß' means walking or on foot.",
-      "es-ES": "La frase 'zu Fuß' significa caminando o a pie.",
-      "fr-FR": "L'expression 'zu Fuß' signifie à pied.",
-      "hi-IN": "वाक्यांश 'zu Fuß' का अर्थ पैदल है।",
-      "pl-PL": "Wyrażenie 'zu Fuß' oznacza na piechotę.",
-      "ro-RO": "Expresia 'zu Fuß' înseamnă pe jos.",
-      "ru-RU": "Выражение 'zu Fuß' переводится как 'пешком'. Предлог 'zu' здесь фиксированный.",
-      "tr-TR": "'zu Fuß' ifadesi yürüyerek anlamına gelir.",
-      "uk-UA": "Вираз 'zu Fuß' перекладається як 'пішки'. Прийменник 'zu' тут фіксований.",
-      "uz-UZ": "'zu Fuß' iborasi piyoda degan ma'noni anglatadi."
-    },
     "botTranslation": {
       "ar-SA": "لا، فقط دقيقتين مشياً على الأقدام.",
       "en-US": "No, only 2 minutes on foot.",
@@ -357,6 +369,24 @@
       "uk-UA": "Ні, всього 2 хвилини пішки.",
       "uz-UZ": "Yo'q, piyoda atigi 2 daqiqa."
     },
+    "vocabulary": [
+      {
+        "german": "zu Fuß",
+        "translation": {
+          "ru-RU": "пешком",
+          "en-US": "on foot",
+          "ar-SA": "مشياً على الأقدام",
+          "es-ES": "a pie",
+          "fr-FR": "à pied",
+          "hi-IN": "पैदल",
+          "pl-PL": "na piechotę",
+          "ro-RO": "pe jos",
+          "tr-TR": "yürüyerek",
+          "uk-UA": "пішки",
+          "uz-UZ": "piyoda"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Vielen Dank für Ihre Hilfe!",

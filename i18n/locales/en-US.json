@@ -1,5 +1,4 @@
 {
-
   "definiteIndefiniteQuestOne": {
     "title": "Battle for Endings",
     "description": "Mixed practice: indefinite and definite articles in sentences.",
@@ -525,10 +524,6 @@
     "questFifteen": "Choose the correct option: It was a beautiful day",
     "questFifteenTip": "Indefinite article (first time). Masculine (der). The article 'ein' is empty, so the adjective takes the -er ending from the article 'der'."
   },
-
-
-
-
   "secretLandsQuestOne": {
     "title": "Result",
     "description": "Mixed training: working with the indefinite article in Perfekt and Futur 1. Topics: daily life, city, transport, food.",
@@ -1054,8 +1049,6 @@
     "questFifteen": "Assemble the sentence: We will see an interesting exhibition",
     "questFifteenTip": "Exhibition — feminine (die). The article 'eine' ends in -e, so the adjective takes the -e ending from the article."
   },
-
-
   "edgeImagesQuestOne": {
     "title": "Start",
     "description": "Practicing the correct declension of adjectives after der, die, das.",
@@ -1581,11 +1574,6 @@
     "questFifteen": "Enter the form (lecker): Ich werde die ___ Pizza essen.",
     "questFifteenTip": "Akkusativ (feminine): 'die' is the basic article, the adjective takes the -e ending from the article."
   },
-
-
-
-
-
   "timeGageQuestOne": {
     "title": "Meeting and Communication",
     "description": "Practicing grammar in communication situations: from meeting plans to stories about the past.",
@@ -9248,7 +9236,8 @@
     "describePicture": "Picture Description",
     "fight": "German Universe",
     "audio": "Audio Tasks",
-    "textTask": "Texts"
+    "textTask": "Texts",
+    "speak": "Speaking practice"
   },
   "underSub": {
     "prev": "Introduction",
@@ -10187,5 +10176,106 @@
     "home": "Home",
     "events": "Events",
     "cabinet": "Account"
+  },
+  "speakTopics": {
+    "speak": "Introduction and socializing",
+    "food": "Food and shopping",
+    "transport": "Trips and transport",
+    "city": "City services and everyday life",
+    "health": "Health",
+    "work": "Work and career"
+  },
+  "speakThemes": {
+    "firstmeet": "Introduction",
+    "acquaintance": "Acquaintance 2",
+    "secondmeet": "Meeting",
+    "family_talk": "Conversation",
+    "weekend_plans": "Plans",
+    "friend_call": "Phone call",
+    "hobby_talk": "Hobbies",
+    "party_talk": "Party",
+    "cafe_order": "Ordering coffee",
+    "restaurant_dinner": "Restaurant",
+    "store_checkout": "At the checkout",
+    "order_eat": "Ordering food",
+    "consultation_talk": "Consultation",
+    "train_station": "At the station",
+    "train_ticket": "Ticket inspection",
+    "taxi_berlin": "Taxi",
+    "bus_talk": "On the bus",
+    "hotel_checkin": "Hotel",
+    "border_check": "Border",
+    "airport_talk": "Airport",
+    "info_talk": "Info center",
+    "bank_account": "Bank",
+    "apartment_rent": "Rent",
+    "clothes_shopping": "Shopping",
+    "shopping": "Shopping 2",
+    "post_office": "Post office",
+    "police_talk": "Police",
+    "barbershop": "Barbershop",
+    "doctor_visit": "Booking an appointment",
+    "pharmacy_vitamins": "Pharmacy",
+    "insurance": "Insurance",
+    "at_doctor": "At the doctor",
+    "dentist": "Dentist",
+    "veterinary": "Vet",
+    "job_looking": "Job search",
+    "job_interview": "Interview",
+    "bos_talk": "Talk with manager",
+    "vacation": "Vacation",
+    "salary_talk": "Salary",
+    "dismissal_talk": "Dismissal"
+  },
+  "speakIndexPage": {
+    "title": "Speaking practice",
+    "bannerText": "Practice your speaking skills with real-life examples",
+    "modalTitle": "Speaking practice",
+    "modalText": "Develop your communication skills with real-life dialogues! You can choose a suggested answer, type it manually, or simply say it aloud by tapping the microphone button."
+  },
+  "rankModal": {
+    "title": "NEW RANK",
+    "rankedLabel": "Rank",
+    "accept": "ACCEPT"
+  },
+  "premiumBanner": {
+    "textBanner": "Get the most out of the platform, accelerate your learning."
+  },
+  "netWork": {
+    "successTitle": "Connection restored!",
+    "notSuccessTitle": "Oops! No internet",
+    "successText": "Back to work...",
+    "notSuccessText": "Waiting for network connection..."
+  },
+  "termsBlock": {
+    "first": "By registering, you accept the",
+    "second": "Terms of Use",
+    "third": "and",
+    "fourth": "Privacy Policy"
+  },
+  "languagePage": {
+    "title": "App language",
+    "placeholder": "Search language...",
+    "notfound": "Nothing found",
+    "further": "Continue"
+  },
+  "statistics": {
+    "title": "Your statistics and progress in learning words and completing thematic levels"
+  },
+  "restoreComputed": {
+    "restoring": "Restoring...",
+    "restore": "Restore purchases."
+  },
+  "submitComputed": {
+    "sync": "Syncing...",
+    "getPlus": "Get PLUS"
+  },
+  "pay": {
+    "banner": "Full access to all app features",
+    "sales": "Apply discounts earned from activity",
+    "triggerToastSuccess": "Purchase restored!",
+    "triggerToastNotFound": "No active subscriptions found",
+    "triggerToastError": "Error during restoration",
+    "triggerToastIsPlus": "You already have an active PLUS subscription!"
   }
 }

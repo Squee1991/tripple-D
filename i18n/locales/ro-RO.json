@@ -1,5 +1,4 @@
 {
-
   "definiteIndefiniteQuestOne": {
     "title": "Bătălia pentru terminații",
     "description": "Practică mixtă: articole nehotărâte și hotărâte în propoziții.",
@@ -525,13 +524,6 @@
     "questFifteen": "Alegeți varianta corectă: A fost o zi minunată",
     "questFifteenTip": "Articol nehotărât (prima dată). Gen masculin (der). Articolul 'ein' este gol, deci adjectivul ia de la articolul 'der' terminația -er."
   },
-
-
-
-
-
-
-
   "secretLandsQuestOne": {
     "title": "Rezultat",
     "description": "Antrenament mixt: lucrul cu articolul nehotărât în Perfekt și Futur 1. Teme: viața de zi cu zi, oraș, transport, mâncare.",
@@ -1057,9 +1049,6 @@
     "questFifteen": "Asamblează propoziția: Vom vedea o expoziție interesantă",
     "questFifteenTip": "Expoziție — genul feminin (die). Articolul 'eine' se termină în -e, deci adjectivul ia de la articol terminația -e."
   },
-
-
-
   "edgeImagesQuestOne": {
     "title": "Start",
     "description": "Exersăm declinarea corectă a adjectivelor după der, die, das.",
@@ -1585,12 +1574,6 @@
     "questFifteen": "Inserați forma (lecker): Voi mânca noua ___ Pizza.",
     "questFifteenTip": "Akkusativ (feminin): articolul 'die' este de bază, adjectivul ia de la articol terminația -e."
   },
-
-
-
-
-
-
   "timeGageQuestOne": {
     "title": "Cunoștință și comunicare",
     "description": "Exersăm gramatica în situații de comunicare: de la planuri de întâlnire până la povești despre trecut.",
@@ -2095,8 +2078,6 @@
     "questFifteen": "Voi cumpăra bilet dacă voi avea timp.",
     "questFifteenTip": "'Wenn' pune verbul la sfârșit."
   },
-
-
   "pastValleyQuestOne": {
     "title": "Bazele Perfekt",
     "description": "Ce ai făcut? Facem cunoștință cu timpul trecut: 'Am cumpărat', 'Am făcut'.",
@@ -2434,7 +2415,6 @@
     "questFourteenTip": "singen — strong verb. ge- is added, and the -en ending is kept. A vowel change occurs (i to u).",
     "questFifteen": "Select: I did sports."
   },
-
   "actionValleyQuestOne": {
     "title": "Mie, ție, lui",
     "description": "Exersăm Dativul cu pronumele personale. Pe cine ajutăm și cui îi dăm cadouri?",
@@ -2801,7 +2781,6 @@
     "questFifteen": "Alege: Cu cine vorbești?",
     "questFifteenTip": "Pentru persoane folosim prepoziție + întrebare (Mit wem?)."
   },
-
   "pluralLandQuestOne": {
     "title": "Călătorie",
     "description": "Planificăm o călătorie folosind Futur I. Învățăm să conectăm timpul, locul și acțiunea.",
@@ -3103,8 +3082,6 @@
     "questFourteen": "Asamblați: Nu vom uita sărbătoarea.",
     "questFifteen": "Alegeți varianta corectă"
   },
-
-
   "orderValleyQuestOne": {
     "title": "Verbul la sfârșit!",
     "description": "Exersăm ordinea cuvintelor în propozițiile subordonate. Regula principală: verbul merge la bun sfârșit.",
@@ -3508,7 +3485,6 @@
     "questFifteen": "Ascultați și scrieți propoziția",
     "questFifteenTip": "Negația în 'es gibt' este 'kein'. După 'dass', verbul 'gibt' fuge la bun sfârșit."
   },
-
   "pwa": {
     "title": "Instalează Skillupgerman",
     "sub": "Adaugă aplicația pe ecranul principal pentru acces rapid și confort!",
@@ -9237,7 +9213,8 @@
     "describePicture": "Descrierea Imaginilor",
     "fight": "Universul Germanei",
     "audio": "Sarcini Audio",
-    "textTask": "Texte"
+    "textTask": "Texte",
+    "speak": "Practică de vorbire"
   },
   "underSub": {
     "prev": "Introducere",
@@ -10176,5 +10153,106 @@
     "home": "Acasă",
     "events": "Evenimente",
     "cabinet": "Cont"
+  },
+  "speakTopics": {
+    "speak": "Prezentare și socializare",
+    "food": "Mâncare și cumpărături",
+    "transport": "Călătorii și transport",
+    "city": "Servicii urbane și viața cotidiană",
+    "health": "Sănătate",
+    "work": "Muncă și carieră"
+  },
+  "speakThemes": {
+    "firstmeet": "Prezentare",
+    "acquaintance": "Prezentare 2",
+    "secondmeet": "Întâlnire",
+    "family_talk": "Conversație",
+    "weekend_plans": "Planuri",
+    "friend_call": "Apel",
+    "hobby_talk": "Hobby-uri",
+    "party_talk": "Petrecere",
+    "cafe_order": "Comandă cafea",
+    "restaurant_dinner": "Restaurant",
+    "store_checkout": "La casă",
+    "order_eat": "Comandă mâncare",
+    "consultation_talk": "Consultație",
+    "train_station": "La gară",
+    "train_ticket": "Control bilet",
+    "taxi_berlin": "Taxi",
+    "bus_talk": "În autobuz",
+    "hotel_checkin": "Hotel",
+    "border_check": "Graniță",
+    "airport_talk": "Aeroport",
+    "info_talk": "Centru de informații",
+    "bank_account": "Bancă",
+    "apartment_rent": "Chirie",
+    "clothes_shopping": "Cumpărături",
+    "shopping": "Cumpărături 2",
+    "post_office": "Poștă",
+    "police_talk": "Poliție",
+    "barbershop": "Frizerie",
+    "doctor_visit": "Programare la medic",
+    "pharmacy_vitamins": "Farmacie",
+    "insurance": "Asigurare",
+    "at_doctor": "La medic",
+    "dentist": "Stomatolog",
+    "veterinary": "Veterinar",
+    "job_looking": "Căutare de job",
+    "job_interview": "Interviu",
+    "bos_talk": "Discuție cu șeful",
+    "vacation": "Vacanță",
+    "salary_talk": "Salariu",
+    "dismissal_talk": "Concediere"
+  },
+  "speakIndexPage": {
+    "title": "Practică de vorbire",
+    "bannerText": "Exersează-ți abilitățile de vorbire cu exemple din viața reală",
+    "modalTitle": "Practică de vorbire",
+    "modalText": "Dezvoltă-ți abilitățile de comunicare în dialoguri reale! Poți alege un răspuns gata pregătit din cele sugerate, să îl introduci manual de la tastatură sau pur și simplu să îl spui cu voce tare apăsând butonul microfonului."
+  },
+  "rankModal": {
+    "title": "RANG NOU",
+    "rankedLabel": "Rang",
+    "accept": "ACCEPTĂ"
+  },
+  "premiumBanner": {
+    "textBanner": "Obține maximum de la platformă, accelerează-ți învățarea."
+  },
+  "netWork": {
+    "successTitle": "Conexiune restabilită!",
+    "notSuccessTitle": "Hopa! Nu există internet",
+    "successText": "Revenim la lucru...",
+    "notSuccessText": "Așteptăm conexiunea la rețea..."
+  },
+  "termsBlock": {
+    "first": "Prin înregistrare, accepți",
+    "second": "Termenii de utilizare",
+    "third": "și",
+    "fourth": "Politica de confidențialitate"
+  },
+  "languagePage": {
+    "title": "Limba aplicației",
+    "placeholder": "Caută limba...",
+    "notfound": "Nu s-a găsit nimic",
+    "further": "Continuă"
+  },
+  "statistics": {
+    "title": "Statisticile și progresul tău în învățarea cuvintelor și finalizarea nivelurilor tematice"
+  },
+  "restoreComputed": {
+    "restoring": "Restaurare...",
+    "restore": "Restaurează achizițiile."
+  },
+  "submitComputed": {
+    "sync": "Sincronizare...",
+    "getPlus": "Achiziționează PLUS"
+  },
+  "pay": {
+    "banner": "Acces complet la toate funcțiile aplicației",
+    "sales": "Aplică reducerile obținute din activitate",
+    "triggerToastSuccess": "Achiziție restaurată!",
+    "triggerToastNotFound": "Nu s-au găsit abonamente active",
+    "triggerToastError": "Eroare la restaurare",
+    "triggerToastIsPlus": "Aveți deja un abonament PLUS activ!"
   }
 }

@@ -5,15 +5,6 @@
           :text="t('v-rank.desc')"
           :icon="EducationHut"
       />
-<!--      <div class="hats-badge" aria-hidden="true">-->
-<!--        <img :src="currentRankIcon" :alt="currentRankTitle"/>-->
-<!--      </div>-->
-<!--      <div class="hats-meta">-->
-<!--        <div class="hats-rank">{{ currentRankTitle }}</div>-->
-<!--        <div class="hats-hatsline">-->
-<!--          <span class="hat-value">{{ authStore.totalHats }}</span>-->
-<!--        </div>-->
-<!--      </div>-->
     </div>
     <div v-for="rank in store.ranksData" :key="rank.title" class="rank-league">
       <div class="league-line">
@@ -76,6 +67,7 @@ import {userAuthStore} from '~/store/authStore.js'
 import {useSeoMeta} from "#imports"
 import EducationHut from '../../assets/images/graduate-hat.svg'
 import VBanner from "~/src/components/V-banner.vue";
+
 
 const { t } = useI18n()
 const store = useRankUserStore()

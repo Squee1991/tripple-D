@@ -1,9 +1,12 @@
 <template>
-  <main class="session-page">
+  <main class="session-page"
+        @touchstart="handleTouchStart"
+        @touchmove="handleTouchMove"
+        @touchend="handleTouchEnd"
+  >
     <ExitSessionModal
         :show="showExitModal"
         @update:show="val => showExitModal = val"
-        :icon="SadHedgehogIcon"
         @cancel="cancelExit"
         @confirm="confirmExit"
     />
@@ -110,6 +113,7 @@ import VBackBtn from "~/src/components/V-back-btn.vue";
 import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue";
 import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
 import SadHedgehogIcon from '../../assets/images/Sadlyhedgehog.png'
+import {useSwipeBack} from '~/composables/useSwipeBack.js'
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -128,7 +132,11 @@ const finished = ref(false)
 const isChecked = ref(false)
 const showExitModal = ref(false)
 const sessionMistakes = ref([])
-
+const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
+  exit()
+}, {
+  ignoreSelector: '.options-grid, .option-pill, .bottom-sheet, .btn-gummy'
+})
 
 const tasks = computed(() => {
   const allTasks = thematic.selectedModule?.tasks || []
@@ -197,7 +205,6 @@ const check = (selectedAnswer) => {
   if (isCorrect) {
     correctAnswers.value += 1
   } else {
-    // Сохраняем оригинальный индекс, чтобы потом отфильтровать из всего массива
     sessionMistakes.value.push(task.originalIndex)
   }
 }
@@ -208,7 +215,6 @@ const next = async () => {
     setupCurrentQuestion();
   } else {
     finished.value = true
-    // Сохраняем прогресс только в конце!
     await thematic.saveModuleAttempt(thematic.selectedLevel.level, thematic.selectedModule.id, sessionMistakes.value)
   }
 }
@@ -257,6 +263,7 @@ onMounted(async () => {
 onUnmounted(() => {
   window.removeEventListener('beforeunload', handleBeforeUnload);
 })
+
 </script>
 
 <style scoped>

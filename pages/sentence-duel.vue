@@ -23,7 +23,7 @@
         <div class="duel__header">
           <div class="duel__header--left">
             <VBackBtn/>
-            <div class="duel__header--title">Дуэли</div>
+            <div class="duel__header--title">{{ t('categoryAchievments.duel')}}</div>
           </div>
           <div class="tiips__info-wrapper">
             <button class="btn__tips" @click="tipsModule">
@@ -96,8 +96,15 @@
         </div>
       </div>
       <div v-else class="status-overlay">
-        <div v-if="isWaitingForOpponent">
-          <p class="status-text">{{ t('wordDuel.searching') }}<span class="dots">...</span></p>
+        <div v-if="isWaitingForOpponent" class="search-container">
+          <div class="duel__icon-wrapper">
+            <div class="duel__icon">
+              <img src="../assets/images/DuelIcon.svg" alt="duel_icon">
+            </div>
+          </div>
+          <p class="status-text">
+            {{ t('wordDuel.searching') }}<span class="animated-dots"><span>.</span><span>.</span><span>.</span></span>
+          </p>
           <button @click="cancelSearch" class="cancel-button">{{ t('wordDuel.cancel') }}</button>
         </div>
         <div v-if="isOpponentFound">
@@ -110,7 +117,6 @@
 </template>
 
 <script setup>
-
 import {ref, computed, watch, onMounted, onUnmounted} from 'vue'
 import {useSentencesStore} from '../store/sentencesStore.js'
 import {useDuelStore} from '../store/sentenceDuelStore.js'
@@ -297,7 +303,11 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   box-shadow: 0 5px 0 #583ee1;
 }
 
-
+.duel__icon{
+  width: 200px;
+  margin: 0 auto;
+  padding: 30px;
+}
 
 .tiips__info-wrapper {
   display: flex;
@@ -322,7 +332,6 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 .duel__header--left {
   display: flex;
   align-items: center;
-
 }
 
 .mode-toggle-option {
@@ -432,7 +441,6 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 }
 
 .level-card {
-
   width: 100%;
 }
 
@@ -445,7 +453,6 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   font-size: 24px;
   font-weight: 800;
   margin: 0;
-
   text-align: center;
 }
 
@@ -454,12 +461,13 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 60vh;
+  min-height: 100vh;
 }
 
 .status-text {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 800;
+  color: var(--titleColor);
 }
 
 @keyframes pulse {
@@ -479,23 +487,20 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 }
 
 .cancel-button {
+  min-width: 180px;
   margin-top: 25px;
-  background-color: #f7f7f7;
-  border: 3px solid #E89C9C;
-  color: #a85252;
+  background-color: #da5252;
+  border: none;
+  box-shadow: 0 5px 0 #e36363;
+  color:white;
   font-weight: 600;
   font-size: 1rem;
-  padding: 10px 25px;
-  border-radius: 12px;
+  padding: 12px 16px;
+  border-radius: 40px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-.cancel-button:hover {
-  background-color: #E89C9C;
-  color: white;
-  transform: translateY(-2px);
-}
 
 .main-content-wrapper {
   display: flex;
@@ -509,7 +514,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   border: 3px solid var(--menuBorder);
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 4px 4px 0 var(--menuBorder);
+  box-shadow: 0 4px 0 var(--menuBorder);
   top: 20px;
   width: 100%;
 }
@@ -530,7 +535,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   background-color: #FFD24B;
   color: #1e1e1e;
   padding: 2px 12px;
-  border-radius: 8px;
+  border-radius: 15px;
   margin-top: 8px;
   border: 2px solid #1e1e1e;
 }
@@ -548,7 +553,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   align-items: center;
   background: #f7f7f7;
   padding: 12px 18px;
-  border-radius: 12px;
+  border-radius: 18px;
   border: 2px solid #e0e0e0;
   transition: all 0.2s ease;
 }
@@ -572,12 +577,12 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   background: #3b82f6;
   color: #ffffff;
   padding: 15px;
-  border-radius: 24px;
+  border-radius: 54px;
   font-size: 20px;
   font-weight: 800;
   text-align: center;
-  border: 2px solid #2563eb;
-  border-bottom: 6px solid #1d4ed8;
+  border: none;
+  box-shadow: 0 6px 0 #1d4ed8;
   transition: transform 0.1s;
 }
 
@@ -592,6 +597,59 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 @media (max-width: 767px) {
   .level-grid {
     display: flex;
+  }
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.duel__icon-wrapper {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.radar-pulse.p2 {
+  animation-delay: 1s;
+}
+
+.radar-pulse.p3 {
+  animation-delay: 2s;
+}
+
+.animated-dots span {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: var(--titleColor);
+  line-height: 0;
+  animation: dotJump 1.4s infinite both;
+}
+
+.animated-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.animated-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dotJump {
+  0%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-6px);
   }
 }
 

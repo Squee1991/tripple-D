@@ -9212,7 +9212,8 @@
     "describePicture": "चित्र वर्णन",
     "fight": "जर्मन ब्रह्मांड",
     "audio": "ऑडियो कार्य",
-    "textTask": "टेक्स्ट"
+    "textTask": "टेक्स्ट",
+    "speak": "बोलने का अभ्यास"
   },
   "underSub": {
     "prev": "प्रस्तावना",
@@ -10151,5 +10152,106 @@
     "home": "होम",
     "events": "इवेंट्स",
     "cabinet": "खाता"
+  },
+  "speakTopics": {
+    "speak": "परिचय और बातचीत",
+    "food": "भोजन और खरीदारी",
+    "transport": "यात्रा और परिवहन",
+    "city": "शहरी सेवाएं और दैनिक जीवन",
+    "health": "स्वास्थ्य",
+    "work": "काम और करियर"
+  },
+  "speakThemes": {
+    "firstmeet": "परिचय",
+    "acquaintance": "परिचय 2",
+    "secondmeet": "मुलाकात",
+    "family_talk": "बातचीत",
+    "weekend_plans": "योजनाएं",
+    "friend_call": "कॉल",
+    "hobby_talk": "शौक",
+    "party_talk": "पार्टी",
+    "cafe_order": "कॉफी ऑर्डर करना",
+    "restaurant_dinner": "रेस्तरां",
+    "store_checkout": "कैश काउंटर पर",
+    "order_eat": "खाना ऑर्डर करना",
+    "consultation_talk": "परामर्श",
+    "train_station": "स्टेशन पर",
+    "train_ticket": "टिकट चेकिंग",
+    "taxi_berlin": "टैक्सी",
+    "bus_talk": "बस में",
+    "hotel_checkin": "होटल",
+    "border_check": "सीमा",
+    "airport_talk": "हवाई अड्डा",
+    "info_talk": "सूचना केंद्र",
+    "bank_account": "बैंक",
+    "apartment_rent": "किराया",
+    "clothes_shopping": "खरीदारी",
+    "shopping": "खरीदारी 2",
+    "post_office": "डाकघर",
+    "police_talk": "पुलिस",
+    "barbershop": "नाई की दुकान",
+    "doctor_visit": "डॉक्टर से अपॉइंटमेंट",
+    "pharmacy_vitamins": "फार्मेसी",
+    "insurance": "बीमा",
+    "at_doctor": "डॉक्टर के पास",
+    "dentist": "दंत चिकित्सक",
+    "veterinary": "पशु चिकित्सक",
+    "job_looking": "नौकरी की तलाश",
+    "job_interview": "साक्षात्कार",
+    "bos_talk": "मैनेजर के साथ बातचीत",
+    "vacation": "छुट्टियां",
+    "salary_talk": "वेतन",
+    "dismissal_talk": "बर्खास्तगी"
+  },
+  "speakIndexPage": {
+    "title": "बोलने का अभ्यास",
+    "bannerText": "वास्तविक उदाहरणों के साथ अपने बोलने के कौशल का अभ्यास करें",
+    "modalTitle": "बोलने का अभ्यास",
+    "modalText": "वास्तविक संवादों में अपनी बातचीत करने की क्षमता विकसित करें! आप दिए गए विकल्पों में से कोई उत्तर चुन सकते हैं, उसे कीबोर्ड से मैन्युअल रूप से टाइप कर सकते हैं, या माइक्रोफ़ोन बटन दबाकर उसे बोलकर बता सकते हैं।"
+  },
+  "rankModal": {
+    "title": "नई रैंक",
+    "rankedLabel": "रैंक",
+    "accept": "स्वीकार करें"
+  },
+  "premiumBanner": {
+    "textBanner": "प्लेटफ़ॉर्म का अधिकतम लाभ उठाएं, अपनी सीखने की गति बढ़ाएं।"
+  },
+  "netWork": {
+    "successTitle": "कनेक्शन बहाल हो गया!",
+    "notSuccessTitle": "उफ़! इंटरनेट नहीं है",
+    "successText": "काम पर वापस लौट रहे हैं...",
+    "notSuccessText": "नेटवर्क कनेक्शन की प्रतीक्षा की जा रही है..."
+  },
+  "termsBlock": {
+    "first": "पंजीकरण करके, आप स्वीकार करते हैं",
+    "second": "उपयोग की शर्तें",
+    "third": "और",
+    "fourth": "गोपनीयता नीति"
+  },
+  "languagePage": {
+    "title": "ऐप की भाषा",
+    "placeholder": "भाषा खोजें...",
+    "notfound": "कुछ नहीं मिला",
+    "further": "जारी रखें"
+  },
+  "statistics": {
+    "title": "शब्द सीखने और विषयगत स्तरों को पूरा करने में आपकी सांख्यिकी और प्रगति"
+  },
+  "restoreComputed": {
+    "restoring": "बहाल किया जा रहा है...",
+    "restore": "खरीदारी बहाल करें।"
+  },
+  "submitComputed": {
+    "sync": "सिंक हो रहा है...",
+    "getPlus": "PLUS प्राप्त करें"
+  },
+  "pay": {
+    "banner": "ऐप की सभी सुविधाओं तक पूर्ण पहुंच",
+    "sales": "गतिविधि से अर्जित छूट लागू करें",
+    "triggerToastSuccess": "खरीदारी बहाल कर दी गई है!",
+    "triggerToastNotFound": "कोई सक्रिय सब्सक्रिप्शन नहीं मिला",
+    "triggerToastError": "बहाली के दौरान त्रुटि",
+    "triggerToastIsPlus": "आपके पास पहले से ही PLUS सक्रिय है!"
   }
 }

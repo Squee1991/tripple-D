@@ -28,7 +28,7 @@
               :icon="TextBooks"
           />
           <nav class="mobile-nav" role="tablist" v-if="!selectedTheme">
-            <div class="sliding-bg" :style="{ transform: `translateX(${activeIndex * 100}%)` }"></div>
+            <div class="sliding-bg" :style="{ transform: `translateX(${getTransformX(activeIndex)}%)` }"></div>
             <button
                 v-for="level in levels"
                 :key="level.id"
@@ -101,7 +101,7 @@
 <script setup>
 import {ref, computed, onMounted, watch} from 'vue'
 import {useRouter} from 'vue-router'
-import {useTextTasksStore} from '../../store/textTasksStore.js'
+import {useTextTasksStore} from '/store/textTasksStore.js'
 import VBanner from "~/src/components/V-banner.vue"
 import TextBooks from "../../assets/images/TextBook.svg"
 import VTransition from "~/src/components/V-transition.vue"
@@ -113,13 +113,22 @@ const showDevModal = ref(false)
 const router = useRouter()
 const store = useTextTasksStore()
 const isMounted = ref(false)
-const { t } = useI18n()
+const { t , locale} = useI18n()
 
 const levels = [
   {id: 'low-level', label: 'A1'},
   {id: 'middle-level', label: 'A2'},
   {id: 'high-level', label: 'B1'}
 ]
+
+const getTransformX = (index) => {
+  if (index === -1) return 0;
+  if (locale.value === 'ar') {
+    return (levels.length - 1 - index) * 100;
+  }
+
+  return index * 100;
+};
 
 const currentLevel = ref('low-level')
 const selectedTheme = ref(null)
