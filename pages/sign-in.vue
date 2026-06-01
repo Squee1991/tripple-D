@@ -73,13 +73,10 @@
             <img class="google__icon" src="../assets/images/google.svg" alt="google_icon">
             <span class="auth__text-method">GOOGLE</span>
           </button>
-          <button v-if="Capacitor.isNativePlatform() === 'ios'" class="apple__auth-wrapper" @click="handleSocialLogin('apple')" :disabled="submitLoading">
+          <button v-if="Capacitor.getPlatform() === 'ios'" class="apple__auth-wrapper" @click="handleSocialLogin('apple')" :disabled="submitLoading">
             <img class="apple__icon" src="../assets/images/apple.svg" alt="apple_icon">
             <span class="auth__text-method">APPLE</span>
           </button>
-<!--          <button class="facebook__auth-wrapper" @click="handleSocialLogin('facebook')" :disabled="submitLoading">-->
-<!--            <img class="facebook__icon" src="../assets/images/facebook.svg" alt="facebook_icon">-->
-<!--          </button>-->
         </div>
       </div>
     </div>

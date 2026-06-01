@@ -128,21 +128,40 @@ onUnmounted(() => {
 })
 
 async function pay() {
+  alert(`Клик по кнопке. Платформа: ${Capacitor.getPlatform()}`)
+
   if (!authStore.uid || !authStore.email) {
-    alert('Пожалуйста, войдите в аккаунт')
+    alert('Пожалуйста, войдите в аккаунт (UID не найден)')
     return
   }
+
   if (billingStore.isMobile) {
+    // Если массив товаров пуст, пробуем запросить их у Apple еще раз принудительно
+    if (billingStore.offerings.length === 0) {
+      alert('Массив товаров пуст. Пытаемся принудительно запросить продукты у Apple...')
+      submitLoading.value = true
+      await billingStore.loadOfferings(selectedDiscountId.value)
+      submitLoading.value = false
+    }
+
     if (billingStore.offerings.length > 0) {
       const pkg = billingStore.offerings[0]
-      await billingStore.buy(pkg)
+      alert(`Товары найдены. Готовимся купить: ${pkg.product.title}`)
+
+      const success = await billingStore.buy(pkg)
+      if (success) {
+        // Тут можно добавить логику закрытия экрана или редиректа, если нужно
+      }
     } else {
-      alert('Ошибка: Товары для приложения не загружены')
+      alert('ОШИБКА: Товары от Apple всё ещё равны 0.\nПричины: 1) Глюк кэша Sandbox (надо подождать). 2) Не выполнен вход в Sandbox аккаунт в настройках Mac. 3) Разные Bundle ID.')
     }
     return
   }
+
+  // Запасная логика для Веба (Stripe)
   const priceId = 'price_1SvdnE24sKuPwF6cZoD2ZJn3'
   try {
+    alert('Запускаем Stripe (Веб)...')
     const response = await $fetch('/api/stripe/checkout', {
       method: 'POST',
       body: {
@@ -155,10 +174,10 @@ async function pay() {
     if (response.url) {
       window.location.href = response.url
     } else if (response.error) {
-      alert('Ошибка: ' + response.error)
+      alert('Ошибка Stripe: ' + response.error)
     }
   } catch (err) {
-    alert('Произошла ошибка соединения.')
+    alert('Произошла ошибка соединения со Stripe.')
   }
 }
 </script>
