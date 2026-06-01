@@ -56,7 +56,7 @@ export default defineNuxtConfig({
 		'@nuxtjs/google-fonts',
 		'@nuxtjs/i18n',
 		'@nuxtjs/color-mode',
-		'@sentry/nuxt/module'
+		/*'@sentry/nuxt/module'*/
 	],
 	sentry: {
 		sourceMapsUploadOptions: {
