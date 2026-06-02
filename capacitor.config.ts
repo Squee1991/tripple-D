@@ -20,14 +20,14 @@ const config: CapacitorConfig = {
       launchAutoHide: true,
       launchShowDuration: 1500
     },*/
-    /*AdMob: {
+    AdMob: {
       androidAppId: 'ca-app-pub-3940256099942544~3347511713',
       iosAppId: 'ca-app-pub-3940256099942544~1458002511',
-    },*/
-    /*Keyboard: {
+    },
+    Keyboard: {
       resize: KeyboardResize.Native,
       resizeOnFullScreen: true
-    },*/
+    },
   },
 };
 

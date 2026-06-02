@@ -4,7 +4,6 @@ import { Capacitor } from '@capacitor/core'
 import { Purchases } from '@revenuecat/purchases-capacitor'
 import { doc, updateDoc, getFirestore } from 'firebase/firestore'
 import { userAuthStore } from '../store/authStore.js'
-import { App } from '@capacitor/app'
 
 export const useBillingStore = defineStore('billing', () => {
 	const authStore = userAuthStore()
@@ -20,7 +19,11 @@ export const useBillingStore = defineStore('billing', () => {
 	const initialize = async () => {
 		if (!isMobile.value) return
 		try {
-			if (!authStore.uid) return
+			if (!authStore.uid || authStore.uid === '') {
+				console.warn('🛑 Инициализация прервана: authStore.uid пустой.')
+				return
+			}
+
 			let apiKey = ''
 			if (currentPlatform === 'ios') {
 				apiKey = 'appl_AJSNvgOPCFscmWguFDVeIucVoRS'
@@ -33,71 +36,63 @@ export const useBillingStore = defineStore('billing', () => {
 			await Purchases.configure({ apiKey })
 			await Purchases.logIn({ appUserID: authStore.uid })
 
-			App.addListener('appStateChange', ({ isActive }) => {
-				if (isActive) {
-					syncSubscription()
-				}
+			// 🔥 ОФИЦИАЛЬНЫЙ СЛУШАТЕЛЬ REVENUECAT
+			// Срабатывает сам, если Apple пришлет вебхук или если статус изменится в фоне
+			Purchases.addCustomerInfoUpdateListener((info) => {
+				console.log('🔄 RevenueCat зафиксировал изменение статуса юзера')
+				handleSubscriptionStatus(info)
 			})
 
 			await loadOfferings()
-			await syncSubscription()
+
+			// При старте приложения один раз синхронизируем статус
+			const initialInfo = await Purchases.getCustomerInfo()
+			await handleSubscriptionStatus(initialInfo)
 
 		} catch (e) {
 			console.error('RC Init Error:', e)
 		}
 	}
 
-	const syncSubscription = async () => {
+	// Универсальная функция обновления Firebase
+	const handleSubscriptionStatus = async (info) => {
 		if (!authStore.uid) return
-		if (isPurchasing.value) return
 
-		try {
-			const info = await Purchases.getCustomerInfo()
-			const premiumEntitlement = info?.entitlements?.active?.['premium']
+		const premiumEntitlement = info?.entitlements?.active?.['premium']
 
-			if (premiumEntitlement) {
-				const expDate = premiumEntitlement.expirationDate
-				const isCancelled = !premiumEntitlement.willRenew
+		if (premiumEntitlement) {
+			// ПРАВО ЕСТЬ = ПРЕМИУМ АКТИВЕН
+			const expDate = premiumEntitlement.expirationDate
+			const isCancelled = !premiumEntitlement.willRenew
 
-				if (!authStore.isPremium ||
-					authStore.subscriptionEndsAt !== expDate ||
-					authStore.subscriptionCancelled !== isCancelled) {
+			if (!authStore.isPremium ||
+				authStore.subscriptionEndsAt !== expDate ||
+				authStore.subscriptionCancelled !== isCancelled) {
 
-					authStore.isPremium = true
-					authStore.subscriptionEndsAt = expDate
-					authStore.subscriptionCancelled = isCancelled
+				authStore.isPremium = true
+				authStore.subscriptionEndsAt = expDate
+				authStore.subscriptionCancelled = isCancelled
 
-					await updateDoc(doc(db, 'users', authStore.uid), {
-						isPremium: true,
-						paymentSource: paymentSource,
-						subscriptionEndsAt: expDate,
-						subscriptionCancelled: isCancelled,
-						debug_last_action: "SYNC_UPDATED_PREMIUM_" + Date.now()
-					})
-				}
-			} else {
-             if (authStore.isPremium) {
-                const expTime = new Date(authStore.subscriptionEndsAt).getTime()
-                const now = Date.now()
-                if (expTime && now < expTime) {
-                   await updateDoc(doc(db, 'users', authStore.uid), {
-                      debug_last_action: "SAVED_BY_TIME_LOCK_" + Date.now()
-                   })
-                   return
-                }
-                authStore.isPremium = false
-                authStore.subscriptionCancelled = false
-                await updateDoc(doc(db, 'users', authStore.uid), {
-                   isPremium: false,
-                   subscriptionCancelled: false,
-                   debug_last_action: "EXPIRED_SET_FALSE_" + Date.now()
-                })
-             }
-          }
-		} catch (e) {
-			await updateDoc(doc(db, 'users', authStore.uid), {
-				debug_error: "CRASH: " + e.message
-			})
+				await updateDoc(doc(db, 'users', authStore.uid), {
+					isPremium: true,
+					paymentSource: paymentSource,
+					subscriptionEndsAt: expDate,
+					subscriptionCancelled: isCancelled,
+					debug_last_action: "SYNC_UPDATED_PREMIUM_" + Date.now()
+				})
+			}
+		} else {
+			// ПРАВА НЕТ = ПРЕМИУМ ОТКЛЮЧЕН
+			if (authStore.isPremium) {
+				authStore.isPremium = false
+				authStore.subscriptionCancelled = false
+
+				await updateDoc(doc(db, 'users', authStore.uid), {
+					isPremium: false,
+					subscriptionCancelled: false,
+					debug_last_action: "EXPIRED_SET_FALSE_" + Date.now()
+				})
+			}
 		}
 	}
 
@@ -112,28 +107,12 @@ export const useBillingStore = defineStore('billing', () => {
 					console.log('Sync err:', syncErr)
 				}
 			}
+
+			console.log('🔄 Запуск restorePurchases()...')
 			const customerInfo = await Purchases.restorePurchases()
-			const premiumEntitlement = customerInfo.entitlements.active['premium']
+			await handleSubscriptionStatus(customerInfo)
 
-			if (premiumEntitlement) {
-				const expDate = premiumEntitlement.expirationDate
-				const isCancelled = !premiumEntitlement.willRenew
-				authStore.isPremium = true
-				authStore.subscriptionEndsAt = expDate
-				authStore.subscriptionCancelled = isCancelled
-				if (authStore.uid) {
-					await updateDoc(doc(db, 'users', authStore.uid), {
-						isPremium: true,
-						paymentSource: paymentSource,
-						subscriptionEndsAt: expDate,
-						subscriptionCancelled: isCancelled,
-						debug_last_action: "RESTORE_SUCCESS_" + Date.now()
-					})
-				}
-				return true
-			}
-
-			return false
+			return !!customerInfo?.entitlements?.active?.['premium']
 		} catch (e) {
 			console.error('Ошибка восстановления RC:', e.message)
 			return false
@@ -159,60 +138,36 @@ export const useBillingStore = defineStore('billing', () => {
 				activeDiscountId.value = currentDiscount
 			}
 		} catch (e) {
-			console.error('Ошибка:', e)
+			console.error('Ошибка при загрузке продуктов:', e)
 		}
 	}
 
 	const buy = async (pkg) => {
-		if (!isMobile.value) {
-			alert('Ошибка: Платформа не мобильная')
-			return false
-		}
+		if (!isMobile.value) return false
 		isPurchasing.value = true
 
 		try {
 			const rawPkg = toRaw(pkg)
-
-			alert(`Отправляем чистый запрос в Apple...`)
 			const usedDiscount = activeDiscountId.value
-			const { customerInfo } = await Purchases.purchasePackage({ aPackage: rawPkg })
 
-			alert('Apple вернул успешный ответ! Активируем Премиум...')
-			const premiumEntitlement = customerInfo.entitlements.active['premium']
+			const purchaseResult = await Purchases.purchasePackage({ aPackage: rawPkg })
+			const customerInfo = purchaseResult.customerInfo || purchaseResult
 
-			if (premiumEntitlement) {
-				const expDate = premiumEntitlement.expirationDate
-				authStore.isPremium = true
-				authStore.subscriptionEndsAt = expDate
-				authStore.subscriptionCancelled = false
+			await handleSubscriptionStatus(customerInfo)
 
-				const updateData = {
-					isPremium: true,
-					paymentSource: paymentSource,
-					subscriptionEndsAt: expDate,
-					subscriptionCancelled: false,
-					debug_last_action: "NEW_PURCHASE_SUCCESS_" + Date.now()
-				}
-
-				if (usedDiscount) {
-					updateData[usedDiscount] = false
-					authStore.premiumDiscount[usedDiscount] = false
-				}
-
+			if (usedDiscount) {
+				authStore.premiumDiscount[usedDiscount] = false
 				if (authStore.uid) {
-					await updateDoc(doc(db, 'users', authStore.uid), updateData)
+					await updateDoc(doc(db, 'users', authStore.uid), {
+						[usedDiscount]: false
+					})
 				}
-				alert('УСПЕХ: Покупка прошла!')
-				return true
-			} else {
-				alert('ОШИБКА: Права не выданы.')
-				return false
 			}
+
+			return !!customerInfo?.entitlements?.active?.['premium']
 		} catch (e) {
-			if (e.userCancelled) {
-				alert('Покупка отменена пользователем.')
-			} else {
-				alert(`КРИТИЧЕСКАЯ ОШИБКА RC:\nКод: ${e.code}\nСообщение: ${e.message}`)
+			if (!e.userCancelled) {
+				console.error(`КРИТИЧЕСКАЯ ОШИБКА RC: Код: ${e.code} | Сообщение: ${e.message}`)
 			}
 			return false
 		} finally {
@@ -224,7 +179,7 @@ export const useBillingStore = defineStore('billing', () => {
 		offerings,
 		isMobile,
 		initialize,
-		syncSubscription,
+		handleSubscriptionStatus,
 		loadOfferings,
 		buy,
 		restore

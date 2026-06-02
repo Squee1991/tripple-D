@@ -7,7 +7,7 @@ import {userAuthStore} from '../../store/authStore.js'
 import Modal from "../../src/components/modal.vue"
 import VBanner from "~/src/components/V-banner.vue"
 import HeadPhones from '../../assets/images/headphones.svg'
-/*import { showInterstitial } from '../../utils/admob.js'*/
+import { showInterstitial } from '../../utils/admob.js'
 import VTransition from "~/src/components/V-transition.vue"
 import VPremiumModal from "~/src/components/V-premiumModal.vue"
 
@@ -65,7 +65,7 @@ const selectLevel = (level) => {
   screen.value = 'topics'
 }
 
-/*const selectTopic = (topic, index) => {
+const selectTopic = (topic, index) => {
   if (index === 0 || authStore.isPremium) {
     showInterstitial(()=> {
       store.setCurrentTopicId(topic.id)
@@ -74,7 +74,7 @@ const selectLevel = (level) => {
   } else {
     showPremiumModal.value = true
   }
-}*/
+}
 
 onMounted(async () => {
   setTimeout(()=> {

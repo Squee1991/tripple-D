@@ -213,8 +213,15 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			completedSet.add(id)
 			saveCompleted(completedSet)
 			const mapVal = achievementToAwardMap[id]
-			if (isBooting.value) {
-				if (id === 'registerAchievement') {
+
+			// 1) ЖЕСТКИЙ БЛОК: Ачивка за регистрацию
+			if (id === 'registerAchievement' || id === 'firstStepAward') {
+				// Берем дату регистрации аккаунта. Если её нет или аккаунту больше 5 минут — это старый аккаунт
+				const regTime = authStore.registeredAt ? new Date(authStore.registeredAt).getTime() : 0;
+				const isBrandNewAccount = regTime > 0 && (Date.now() - regTime < 300000); // 300000 мс = 5 минут
+
+				if (isBrandNewAccount) {
+					// Аккаунт реально свежий (только что зарегался) — показываем попап ОДИН РАЗ
 					popupQueue.value.push(ach)
 					showNextPopup()
 					lastUnlockedAchievement.value = { id: ach.id, title: ach.title, groupTitle: ach.groupTitle || null, ts: Date.now() }
@@ -222,16 +229,27 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 						shownSet.add(mapVal)
 						saveShown(shownSet)
 						lastUnlockedAward.value = { titleKey: mapVal, achId: id, ts: Date.now() }
-						// updateProgress('Collection', shownSet.size)
-						updateCollectionCount()
 					}
 				} else {
-					bootUnlocked.push(ach.id)
+					// Если аккаунт старый (зашли с другого устройства или обновили страницу) — ТИХО сохраняем без попапа
 					if (mapVal && !shownSet.has(mapVal)) {
-						bootAwards.push({ titleKey: mapVal, achId: id })
+						shownSet.add(mapVal)
+						saveShown(shownSet)
 					}
 				}
+				updateCollectionCount()
+				return; // Прерываем выполнение, чтобы не сработала логика ниже
+			}
+
+			// 2) Обычная логика для всех остальных достижений
+			if (isBooting.value) {
+				// Во время входа в аккаунт — глушим старые ачивки (тихая синхронизация)
+				if (mapVal && !shownSet.has(mapVal)) {
+					shownSet.add(mapVal)
+					saveShown(shownSet)
+				}
 			} else {
+				// Во время игры — показываем попапы, если прошло время блокировки спама
 				if (Date.now() >= suppressReplaysUntil.value) {
 					popupQueue.value.push(ach)
 					showNextPopup()
@@ -242,7 +260,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 						saveShown(shownSet)
 						lastUnlockedAward.value = { titleKey: mapVal, achId: id, ts: Date.now() }
 						setTimeout(() => { if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null }, 0)
-						// updateProgress('Collection', shownSet.size)
 						updateCollectionCount()
 					}
 				}

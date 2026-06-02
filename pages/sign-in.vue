@@ -73,7 +73,7 @@
             <img class="google__icon" src="../assets/images/google.svg" alt="google_icon">
             <span class="auth__text-method">GOOGLE</span>
           </button>
-          <button v-if="Capacitor.isNativePlatform() === 'ios'" class="apple__auth-wrapper" @click="handleSocialLogin('apple')" :disabled="submitLoading">
+          <button class="apple__auth-wrapper" @click="handleSocialLogin('apple')" :disabled="submitLoading">
             <img class="apple__icon" src="../assets/images/apple.svg" alt="apple_icon">
             <span class="auth__text-method">APPLE</span>
           </button>
