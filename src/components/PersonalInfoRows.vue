@@ -85,7 +85,7 @@
       </div>
     </div>
     <div class="premium__management">
-      <div
+      <div v-if="!authStore.isPremium"
           class="premium-banner"
           :class="{
         'is-active': authStore.isPremium && !authStore.subscriptionCancelled,
@@ -364,7 +364,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 
 .premium-banner {
   margin-top: 5px;
-  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
   border-radius: 24px;
   padding: 15px;
   display: flex;
@@ -390,7 +390,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .premium-banner.is-active {
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
   box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
 }
 

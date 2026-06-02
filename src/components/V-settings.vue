@@ -85,22 +85,16 @@
             :to="item.path"
         >
           {{ item.label }}
-          <span class="link-arrow">
-            <img src="../../assets/images/next.svg" alt="">
-          </span>
+          <VArrowNav/>
         </NuxtLink>
       </div>
     </div>
     <div class="settings-section account-actions">
       <div class="section-title"> {{ t('settingsGroup.account')}}</div>
-      <div class="account-buttons">
-        <button class="btn btn-logout w-full btn-m" @click="authStore.logOut()">
-          {{ t('auth.logOut') }}
-        </button>
-        <button class="btn btn-danger w-full btn-m" @click.stop="openDeleteModal">
-          {{ t('cabinet.deleteAcc') }}
-        </button>
-      </div>
+      <button @click="router.push('/profile')" class="account-buttons">
+          <a class="link-row">{{ t('cabinetToggle.profileData')}}</a>
+          <VArrowNav/>
+      </button>
     </div>
     <div v-if="isLockedModalOpen" class="modal-overlay locked-priority" @click.self="isLockedModalOpen = false">
       <div class="modal-card">
@@ -128,6 +122,7 @@ import {userAuthStore} from "../../store/authStore.js";
 import LangSwitcher from "~/src/components/langSwitcher.vue";
 import VBanner from "~/src/components/V-banner.vue";
 import SettingIcon from "../../assets/images/settings.svg";
+import VArrowNav from "~/src/components/V-arrowNav.vue";
 const router = useRouter();
 const authStore = userAuthStore()
 const props = defineProps({
@@ -167,10 +162,6 @@ const isValentineThemeUnlocked = computed(() => {
   const ach = achievementStore.findById('valentineTheme')
   return ach ? ach.currentProgress >= 1 : false
 })
-
-const  openDeleteModal = () => {
-  router.push('/delete')
-}
 
 const isSnowUnlocked = computed(() => {
   const ach = achievementStore.findById('snowFall')
@@ -333,13 +324,6 @@ onMounted(async () => {
   font-size: 13px;
 }
 
-.link-arrow {
-  color: #64748b;
-  font-size: 20px;
-  font-weight: 400;
-  width: 12px;
-}
-
 .toggle__wrapper {
   font-weight: 900;
   font-size: 13px;
@@ -369,35 +353,18 @@ onMounted(async () => {
 
 .account-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: space-between;
   align-items: center;
   background: var(--settingsSectionBg);
   padding: 20px;
   border-radius: 16px;
+  border: none;
+  width: 100%;
 }
 
 .btn-m {
   width: 100%;
   max-width: 320px;
-}
-
-.btn-logout {
-  background: #f3f4f6;
-  color: #000;
-  border: 2px solid #000;
-  border-radius: 10px;
-  padding: 14px 24px;
-  font-weight: 800;
-}
-
-.btn-danger {
-  background: none;
-  color: var(--titleColor);
-  border: none;
-  border-radius: 10px;
-  padding: 14px 24px;
-  font-weight: 800;
 }
 
 .locked-setting {

@@ -4927,7 +4927,10 @@
     "start": "Początek:",
     "middle": "Średni wynik:",
     "share": "Udostępnij",
+    "cancel": "Anuluj",
     "delete": "Usuń",
+    "deleteResultTitle": "Usunąć wynik?",
+    "textModal": "Czy na pewno chcesz usunąć ten egzamin? Tej operacji не można cofnąć.",
     "sent": "Test wysłany",
     "sended": "Już wysłałeś ten test",
     "error": "Nie udało się udostępnić egzaminu"
@@ -8114,7 +8117,8 @@
     "ach": "Powiadomienia o osiągnięciach",
     "themeBtn": "Motyw",
     "snowFall": "Opady śniegu",
-    "language": "Język interfejsu"
+    "language": "Język interfejsu",
+    "profileData": "Dane profilu"
   },
   "cabinet": {
     "important": "WAŻNE!!!",

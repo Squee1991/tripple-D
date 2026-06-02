@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!authStore.isPremium" class="account-tab-body">
+  <div v-if="authStore.isPremium" class="account-tab-body">
     <div
         class="premium-banner"
         :class="{
@@ -48,7 +48,6 @@
 <script setup>
 import {computed} from 'vue'
 import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
 import {userAuthStore} from '../../store/authStore.js'
 const emit = defineEmits(['open'])
 const {t, locale} = useI18n()
@@ -74,8 +73,7 @@ const openCancelModal = () => {
 
 .premium-banner {
   margin-top: 5px;
-  background: linear-gradient(135deg, #8b5cf6, #ec4899);
-  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.25);
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
   border-radius: 24px;
   padding: 15px;
   display: flex;
@@ -100,8 +98,8 @@ const openCancelModal = () => {
 }
 
 .premium-banner.is-active {
-  background: linear-gradient(135deg, #10b981, #059669);
-  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.25);
 }
 
 

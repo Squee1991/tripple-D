@@ -4928,7 +4928,10 @@
     "start": "Début :",
     "middle": "Note moyenne :",
     "share": "Partager",
+    "cancel": "Annuler",
     "delete": "Supprimer",
+    "deleteResultTitle": "Supprimer le résultat ?",
+    "textModal": "Êtes-vous sûr de vouloir supprimer cet examen ? Cette action est irréversible.",
     "sent": "Test envoyé",
     "sended": "Vous avez déjà envoyé ce test",
     "error": "Échec du partage de l'examen"
@@ -8115,7 +8118,8 @@
     "ach": "Notifications de succès",
     "themeBtn": "Thème",
     "snowFall": "Chute de neige",
-    "language": "Langue de l'interface"
+    "language": "Langue de l'interface",
+    "profileData": "Données du profil"
   },
   "cabinet": {
     "important": "IMPORTANT !!!",

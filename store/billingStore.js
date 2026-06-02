@@ -45,15 +45,19 @@ export const useBillingStore = defineStore('billing', () => {
 		try {
 			const info = await Purchases.getCustomerInfo()
 			const premiumEntitlement = info?.entitlements?.active?.['premium']
+
 			if (premiumEntitlement) {
 				const expDate = premiumEntitlement.expirationDate
 				const isCancelled = !premiumEntitlement.willRenew
+
 				if (!authStore.isPremium ||
 					authStore.subscriptionEndsAt !== expDate ||
 					authStore.subscriptionCancelled !== isCancelled) {
+
 					authStore.isPremium = true
 					authStore.subscriptionEndsAt = expDate
 					authStore.subscriptionCancelled = isCancelled
+
 					await updateDoc(doc(db, 'users', authStore.uid), {
 						isPremium: true,
 						paymentSource: 'google',
@@ -64,6 +68,15 @@ export const useBillingStore = defineStore('billing', () => {
 				}
 			} else {
 				if (authStore.isPremium) {
+					const expTime = new Date(authStore.subscriptionEndsAt).getTime()
+					const now = Date.now()
+					if (expTime && now < expTime) {
+						await updateDoc(doc(db, 'users', authStore.uid), {
+							debug_last_action: "SAVED_BY_TIME_LOCK_" + Date.now()
+						})
+						return
+					}
+
 					authStore.isPremium = false
 					authStore.subscriptionCancelled = false
 					await updateDoc(doc(db, 'users', authStore.uid), {
@@ -138,6 +151,13 @@ export const useBillingStore = defineStore('billing', () => {
 		if (!isMobile.value) return false
 		isPurchasing.value = true
 		try {
+			if (Capacitor.getPlatform() === 'android') {
+				try {
+					await Purchases.syncPurchases()
+				} catch (syncErr) {
+					console.log('Sync err:', syncErr)
+				}
+			}
 			const customerInfo = await Purchases.restorePurchases()
 			const premiumEntitlement = customerInfo.entitlements.active['premium']
 

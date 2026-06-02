@@ -4940,7 +4940,10 @@
     "start": "Inicio:",
     "middle": "Puntuación media:",
     "share": "Compartir",
+    "cancel": "Cancelar",
     "delete": "Eliminar",
+    "deleteResultTitle": "¿Eliminar resultado?",
+    "textModal": "¿Estás seguro de que deseas eliminar este examen? Esta acción no se puede deshacer.",
     "sent": "Examen enviado",
     "sended": "Ya has enviado este examen",
     "error": "No se pudo compartir el examen"
@@ -8127,7 +8130,8 @@
     "ach": "Notificaciones de logros",
     "themeBtn": "Tema",
     "snowFall": "Nevada",
-    "language": "Idioma de la interfaz"
+    "language": "Idioma de la interfaz",
+    "profileData": "Datos del perfil"
   },
   "cabinet": {
     "important": "¡IMPORTANTE!",
