@@ -444,7 +444,6 @@
         </template>
       </div>
     </div>
-
     <!-- TEST FINISH MODAL -->
     <div
         v-if="testFinishModalOpen"

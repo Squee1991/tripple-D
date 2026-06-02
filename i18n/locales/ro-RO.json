@@ -4911,7 +4911,10 @@
     "start": "Început:",
     "middle": "Nota medie:",
     "share": "Trimite",
+    "cancel": "Anulează",
     "delete": "Șterge",
+    "deleteResultTitle": "Ștergi rezultatul?",
+    "textModal": "Sigur dorești să ștergi acest examen? Această acțiune este ireversibilă.",
     "sent": "Test trimis",
     "sended": "Ai trimis deja acest test",
     "error": "Trimiterea examenului a eșuat"
@@ -8098,7 +8101,8 @@
     "ach": "Notificări realizări",
     "themeBtn": "Temă",
     "snowFall": "Ninsoare",
-    "language": "Limba interfeței"
+    "language": "Limba interfeței",
+    "profileData": "Datele profilului"
   },
   "cabinet": {
     "important": "IMPORTANT!!!",

@@ -186,6 +186,10 @@ const shouldShowGermanLetters = computed(() => {
   return germanLetters.some(letter => textToCheck.includes(letter));
 });
 
+const saveProgressOnExit = () => {
+  store.saveToFirebase()
+}
+
 const currentModeIndex = computed(() => store.currentModeIndex)
 const currentMode = computed(() => selectedModes.value[currentModeIndex.value])
 const currentWord = computed(() => store.selectedWords[store.currentIndex])
@@ -317,7 +321,10 @@ function nextStep() {
   userInput.value = ''
   usedLetters.value = []
   result.value = ''
-  if (store.currentIndex >= store.selectedWords.length) finished.value = true
+  if (store.currentIndex >= store.selectedWords.length) {
+    finished.value = true
+    store.saveToFirebase()
+  }
 }
 
 function restartAll() {
@@ -363,13 +370,21 @@ onMounted(async () => {
 
   allWords.value = [...store.selectedWords]
   isReview.value = ['1','true','repeat','review'].includes(String(route.query.review || '').toLowerCase())
-
   isReady.value = true
+  window.addEventListener('beforeunload', saveProgressOnExit)
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('pointerdown', unlockAudioByUserGesture, { capture: true })
   window.removeEventListener('keydown', unlockAudioByUserGesture, { capture: true })
+  window.removeEventListener('beforeunload', saveProgressOnExit)
+  store.saveToFirebase()
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('pointerdown', unlockAudioByUserGesture, { capture: true })
+  window.removeEventListener('keydown', unlockAudioByUserGesture, { capture: true })
+  store.saveToFirebase()
 })
 
 watch(userInput, (newVal, oldVal) => {
@@ -567,7 +582,7 @@ watch(userInput, (newVal, oldVal) => {
 
 .translation-word {
   font-size: 1.6rem;
-  color: #4b5563;
+  color: var(--titleColor);
   font-weight: 700;
 }
 

@@ -144,7 +144,7 @@ import VPremiumModal from "~/src/components/V-premiumModal.vue"
 
 const getTopicColor = (index) => topicColors[index % topicColors.length]
 
-const {t} = useI18n()
+const { t, locale } = useI18n()
 const showModesBlock = ref(false)
 const router = useRouter()
 const store = userlangStore()
@@ -233,18 +233,29 @@ const selectTopic = (key) => {
 const startLearning = async () => {
   if (!selectedModes.value.length || isLoading.value) return
   isLoading.value = true
+
   try {
     const sortedSelectedModes = baseModes.filter(m => selectedModes.value.includes(m.key)).map(m => m.key)
+    const currentLangKey = locale.value || 'en'
+
     const topicWordsLocal = (themeList.value[selectedTopic.value] || [])
         .filter(word => {
           const globalWord = store.words.find(w => w.de === word.de && w.topic === selectedTopic.value)
           return sortedSelectedModes.some(mode => !(globalWord?.progress?.[mode] === true))
         })
-        .map(w => ({...w, topic: selectedTopic.value}))
+        .map(w => ({
+          de: w.de,
+          article: w.article,
+          plural: w.plural || '',
+          topic: selectedTopic.value,
+          [currentLangKey]: w[currentLangKey]
+        }))
+
     await store.addWordsToGlobal(topicWordsLocal)
     await store.setSelectedWords(topicWordsLocal)
     await store.setSelectedTopics([selectedTopic.value])
     await store.saveToFirebase()
+
     await nextTick()
     await router.push(localePath({
       path: '/articles/articles-session',

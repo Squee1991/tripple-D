@@ -4920,7 +4920,10 @@
     "start": "Başlangıç:",
     "middle": "Ortalama puan:",
     "share": "Paylaş",
+    "cancel": "İptal",
     "delete": "Sil",
+    "deleteResultTitle": "Sonuç silinsin mi?",
+    "textModal": "Bu sınavı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
     "sent": "Test gönderildi",
     "sended": "Bu testi zaten gönderdiniz",
     "error": "Sınav paylaşılamadı"
@@ -8107,7 +8110,8 @@
     "ach": "Başarı bildirimleri",
     "themeBtn": "Tema",
     "snowFall": "Kar yağışı",
-    "language": "Arayüz dili"
+    "language": "Arayüz dili",
+    "profileData": "Profil verileri"
   },
   "cabinet": {
     "important": "ÖNEMLİ!!!",

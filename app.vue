@@ -195,6 +195,7 @@ html, body, #__nuxt {
   padding: 0 !important;
   overflow: hidden !important;
   background-color: var(--bg);
+  overscroll-behavior-x: none;
 }
 .layout {
   display: flex;

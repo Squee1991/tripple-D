@@ -12,7 +12,7 @@ useSeoMeta({robots: "noindex, follow"})
 
 const route = useRoute()
 const router = useRouter()
-const {locale: i18nLocale} = useI18n()
+const {locale: i18nLocale , t} = useI18n()
 
 const examStore = userExamStore()
 const userInput = ref("")
@@ -159,7 +159,7 @@ onMounted(() => {
             <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
         </button>
-        <div class="exam__title-pill">Уровень {{ level }}</div>
+        <div class="exam__title-pill">{{ t('chooseTheme.level')}} {{ level }}</div>
       </div>
       <div v-else class="header-actions">
         <button class="game-btn game-btn--back" @click="router.back()">
@@ -180,7 +180,6 @@ onMounted(() => {
     </div>
     <div v-if="examStore.loading" class="exam__status-card">
       <div class="loader-spinner"></div>
-      <p>Загрузка испытания...</p>
     </div>
     <div v-else-if="isIntroVisible" class="exam__card exam__card--intro">
       <Transition name="menu-appear" appear>
@@ -188,10 +187,10 @@ onMounted(() => {
           <div class="card-icon">
             <img class="card__icon-item" src="../../../assets/images/exam-results.svg" alt="exam-results">
           </div>
-          <h2 class="card-title">Готовы к тесту?</h2>
+          <h2 class="card-title">{{ t('examSession.ready') }}</h2>
           <p class="card-text">
-            Вас ждет <strong>{{ moduleCounts.length }}</strong> этапа и
-            <strong>{{ examStore.exercises.length }}</strong> заданий.
+            {{ t('examSession.cardTextOne') }} <strong>{{ moduleCounts.length }}</strong> {{ t('examSession.cardTextTwo') }}
+            <strong>{{ examStore.exercises.length }}</strong> {{ t('examSession.cardTextThree') }}
           </p>
           <div class="intro-stats">
             <div v-for="mod in moduleCounts" :key="mod.name" class="stat-badge">
@@ -199,7 +198,7 @@ onMounted(() => {
               <span class="stat-info">{{ mod.name }}: {{ mod.count }}</span>
             </div>
           </div>
-          <button class="action-btn action-btn--primary" @click="startExam">Начать тест</button>
+          <button class="action-btn action-btn--primary" @click="startExam">{{ t('examSession.begin') }}</button>
         </div>
       </Transition>
     </div>
@@ -211,14 +210,12 @@ onMounted(() => {
             {{ currentExercise.task.text }}
           </div>
           <div v-if="currentExercise.type==='audio-choice'" class="audio-section">
-            <div class="audio-label">Прослушайте аудио:</div>
+            <div class="audio-label">{{ t('examSession.listen') }}</div>
             <SoundBtn :text="currentExercise.task.text" lang="de-DE" class="custom-sound-btn"/>
           </div>
-
           <div class="question-text">
             {{ currentExercise.task.question }}
           </div>
-
           <div class="options-grid">
             <button
                 v-for="option in currentExercise.task.options"
@@ -236,7 +233,7 @@ onMounted(() => {
           <textarea v-model="userInput" class="game-textarea" placeholder="Ваш ответ здесь..."/>
           <button class="action-btn action-btn--submit" :disabled="isSubmitting || examStore.saveLoading"
                   @click="submitTextAnswer">
-            {{ isSubmitting ? 'Проверяем...' : 'Отправить ответ' }}
+            {{ isSubmitting ? t('examSession.check') : t('examSession.send') }}
           </button>
         </div>
 
@@ -247,12 +244,10 @@ onMounted(() => {
                 topic
               }}</span>
           </div>
-
           <div class="recording-ui">
             <div class="voice-indicator" v-if="isRecording">
-              <span class="record-dot"/> Запись...
+              <span class="record-dot">{{ t('examSession.record') }}</span>
             </div>
-
             <VoiceRecorder
                 :lang="'de-DE'"
                 :key="examStore.currentIndex"
@@ -272,14 +267,14 @@ onMounted(() => {
 
     <div v-else class="exam__results-screen">
       <div class="results-header">
-        <h2 class="results-main-title">🎉 Поздравляем!</h2>
+        <h2 class="results-main-title">🎉 {{ t('examSession.great') }}</h2>
         <div class="score-circle">
           <span class="score-value">{{ examResult.averageScore }}</span>
           <span class="score-max">/ 10</span>
         </div>
-        <p class="results-subtitle">Ваш результат для уровня {{ level }}</p>
+        <p class="results-subtitle">{{ t('examSession.result') }} {{ level }}</p>
       </div>
-      <div v-if="examStore.saveLoading" class="saving-status">Сохраняем прогресс...</div>
+      <div v-if="examStore.saveLoading" class="saving-status">{{ t('examSession.save') }}</div>
       <div class="results-scroll-area">
         <div
             v-for="(moduleData, moduleName) in examResult.groupedResults"
@@ -296,7 +291,7 @@ onMounted(() => {
               <div v-if="item.feedback" class="feedback-box">
                 <p class="feedback-comment">💬 {{ item.feedback.feedback }}</p>
                 <div v-if="item.feedback.correctedVersion" class="correction-box">
-                  <strong>Корректно:</strong> {{ item.feedback.correctedVersion }}
+                  <strong>{{ t('examSession.correctly') }}</strong> {{ item.feedback.correctedVersion }}
                 </div>
               </div>
             </div>
@@ -304,15 +299,15 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <NuxtLink to="/exams" class="action-btn action-btn--primary">На главную</NuxtLink>
+      <NuxtLink to="/exams" class="action-btn action-btn--primary">{{ t('examSession.back') }}</NuxtLink>
     </div>
     <div v-if="isLeaveModalOpen" class="game-modal-overlay">
       <div class="game-modal">
-        <h3 class="modal-title">Прервать тест?</h3>
-        <p class="modal-text">Прогресс этой попытки будет потерян. Вы уверены?</p>
+        <h3 class="modal-title">{{ t('examSession.interrupt') }}</h3>
+        <p class="modal-text">{{ t('examSession.modalText') }}</p>
         <div class="modal-buttons">
-          <button class="modal-btn modal-btn--cancel" @click="isLeaveModalOpen = false">Продолжить</button>
-          <button class="modal-btn modal-btn--confirm" @click="leaveExamConfirmed">Выйти</button>
+          <button class="modal-btn modal-btn--cancel" @click="isLeaveModalOpen = false">{{ t('examSession.continue') }}</button>
+          <button class="modal-btn modal-btn--confirm" @click="leaveExamConfirmed">{{ t('examSession.leave') }}</button>
         </div>
       </div>
     </div>
@@ -352,6 +347,13 @@ onMounted(() => {
   justify-content: center;
   cursor: pointer;
   transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.saving-status {
+  text-align: center;
+  color: var(--title);
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .game-btn:active {
@@ -550,11 +552,15 @@ onMounted(() => {
   background: #3b82f6;
   box-shadow: 0 5px 0 #306ccc;
   color: white;
+  display: flex;
+  justify-content: center;
+
 }
 
 .action-btn--submit {
-  background: #4ade80;
-  color: #000;
+  background: #3b82f6;
+  box-shadow: 0 5px 0 #306ccc;
+  color: white;
 }
 
 .results-header {

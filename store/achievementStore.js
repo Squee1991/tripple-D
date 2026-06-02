@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import { ref, watch, watchEffect } from 'vue'
 import { getFirestore, doc, onSnapshot } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
+
 // --- 1) Импорты групп достижений ---
 import { overAchievment } from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
 import { wordAchievementsGroup } from '../src/achieveGroup/wordGroup/wordAchievements.js'
@@ -27,6 +28,7 @@ import { typeVerbs } from '../src/achieveGroup/verbs/typeVerbs.js'
 import { sentenceAchievement } from '../src/achieveGroup/sentenceDuel/sentenceAchievementsА1.js'
 import { eventWinterAchievements } from '../src/achieveGroup/eventAchievement/winterAchievements.js'
 import { valentineAchievements } from '../src/achieveGroup/eventAchievement/valentineAchievements.js'
+
 // --- 2) Сторы-источники ---
 import { userChainStore } from '../store/chainStore.js'
 import { userAuthStore } from '../store/authStore.js'
@@ -158,12 +160,18 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		if (!showPopup.value && popupQueue.value.length) {
 			popupAchievement.value = popupQueue.value.shift()
 			showPopup.value = true
+
+			setTimeout(() => {
+				if (showPopup.value) closePopup()
+			}, 5000)
 		}
 	}
 
 	function closePopup() {
 		showPopup.value = false
-		showNextPopup()
+		setTimeout(() => {
+			showNextPopup()
+		}, 300)
 	}
 
 	function resetAllProgress(options = {}) {
@@ -209,57 +217,37 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		const next     = isBooting.value ? incoming : Math.max(prev, incoming)
 		ach.currentProgress = Math.min(next, target)
 		const justCompleted = ach.currentProgress >= target && !completedSet.has(id)
+
 		if (justCompleted) {
 			completedSet.add(id)
 			saveCompleted(completedSet)
 			const mapVal = achievementToAwardMap[id]
 
-			// 1) ЖЕСТКИЙ БЛОК: Ачивка за регистрацию
-			if (id === 'registerAchievement' || id === 'firstStepAward') {
-				// Берем дату регистрации аккаунта. Если её нет или аккаунту больше 5 минут — это старый аккаунт
-				const regTime = authStore.registeredAt ? new Date(authStore.registeredAt).getTime() : 0;
-				const isBrandNewAccount = regTime > 0 && (Date.now() - regTime < 300000); // 300000 мс = 5 минут
-
-				if (isBrandNewAccount) {
-					// Аккаунт реально свежий (только что зарегался) — показываем попап ОДИН РАЗ
-					popupQueue.value.push(ach)
-					showNextPopup()
-					lastUnlockedAchievement.value = { id: ach.id, title: ach.title, groupTitle: ach.groupTitle || null, ts: Date.now() }
-					if (mapVal && !shownSet.has(mapVal)) {
-						shownSet.add(mapVal)
-						saveShown(shownSet)
-						lastUnlockedAward.value = { titleKey: mapVal, achId: id, ts: Date.now() }
-					}
-				} else {
-					// Если аккаунт старый (зашли с другого устройства или обновили страницу) — ТИХО сохраняем без попапа
-					if (mapVal && !shownSet.has(mapVal)) {
-						shownSet.add(mapVal)
-						saveShown(shownSet)
-					}
-				}
-				updateCollectionCount()
-				return; // Прерываем выполнение, чтобы не сработала логика ниже
-			}
-
-			// 2) Обычная логика для всех остальных достижений
 			if (isBooting.value) {
-				// Во время входа в аккаунт — глушим старые ачивки (тихая синхронизация)
 				if (mapVal && !shownSet.has(mapVal)) {
 					shownSet.add(mapVal)
 					saveShown(shownSet)
 				}
+				if (id === 'registerAchievement') {
+					updateCollectionCount()
+				}
 			} else {
-				// Во время игры — показываем попапы, если прошло время блокировки спама
-				if (Date.now() >= suppressReplaysUntil.value) {
+				// Игнорируем блокировку спама для ачивки за регистрацию
+				if (Date.now() >= suppressReplaysUntil.value || id === 'registerAchievement') {
 					popupQueue.value.push(ach)
 					showNextPopup()
+
 					lastUnlockedAchievement.value = { id: ach.id, title: ach.title, groupTitle: ach.groupTitle || null, ts: Date.now() }
-					setTimeout(() => { if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null }, 0)
+					// Увеличен таймаут, чтобы Vue гарантированно заметил изменение
+					setTimeout(() => { if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null }, 500)
+
 					if (mapVal && !shownSet.has(mapVal)) {
 						shownSet.add(mapVal)
 						saveShown(shownSet)
+
 						lastUnlockedAward.value = { titleKey: mapVal, achId: id, ts: Date.now() }
-						setTimeout(() => { if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null }, 0)
+						// Увеличен таймаут для награды, чтобы она 100% отрисовалась
+						setTimeout(() => { if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null }, 500)
 						updateCollectionCount()
 					}
 				}
@@ -349,20 +337,17 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 	function finishBootAndReplay() {
 		isBooting.value = false
-		if (bootUnlocked.length) {
-			bootUnlocked.map(findById).filter(Boolean).forEach(a => popupQueue.value.push(a))
-			showNextPopup()
-		}
+
 		if (bootAwards.length) {
-			bootAwards.forEach(({ titleKey, achId }) => {
+			bootAwards.forEach(({ titleKey }) => {
 				if (!shownSet.has(titleKey)) {
 					shownSet.add(titleKey)
 					saveShown(shownSet)
-					lastUnlockedAward.value = { titleKey, achId, ts: Date.now() }
 				}
 			})
 			updateProgress('Collection', shownSet.size)
 		}
+
 		bootUnlocked.length = 0
 		bootAwards.length = 0
 	}
@@ -370,7 +355,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	if (process.client) {
 		watch(() => authStore.uid, (uid) => {
 			isBooting.value = true
-			suppressReplaysUntil.value = Date.now() + 2000
+			suppressReplaysUntil.value = Date.now() + 4000
 			shownSet = loadShown()
 			completedSet = loadCompleted()
 
@@ -391,13 +376,20 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 			attachDailyAggListener()
 			setTimeout(() => {
-				if (!completedSet.has('registerAchievement')) updateProgress('registerAchievement', 1)
-			}, 0)
-			setTimeout(() => {
 				finishBootAndReplay()
+
 				recomputeAllCasesMeta()
 				recomputeAllAdjectivesMeta()
 				recomputeAllVerbsMeta()
+
+				// Задержка 1.5 секунды, чтобы страница успела полностью загрузиться,
+				// и только потом эффектно показываем ачивку и награду за регистрацию
+				setTimeout(() => {
+					if (!completedSet.has('registerAchievement')) {
+						updateProgress('registerAchievement', 1)
+					}
+				}, 1500)
+
 			}, 0)
 		}, { immediate: true })
 	}
@@ -540,7 +532,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				if (g.category === 'wordArticle') g.achievements.forEach(a => updateProgress(a.id, wordArticleCnt));
 
 				if (g.category === 'write') {
-					const title = g.title.toLowerCase();
+					const title = (g.title || '').toLowerCase();
 					if (title.includes('der')) g.achievements.forEach(a => updateProgress(a.id, derCnt));
 					if (title.includes('die')) g.achievements.forEach(a => updateProgress(a.id, dieCnt));
 					if (title.includes('das')) g.achievements.forEach(a => updateProgress(a.id, dasCnt));
@@ -638,7 +630,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const questsProgress = eventData.quests || {}
 				const shopItems = eventData.shopItems || {}
 				winterRank1BoughtCount.value = ['santaHat', 'christmasBall', 'christmasWreath'].reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
-				// updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
 				updateCollectionCount()
 				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
 				updateProgress('firstQuest', completedQuestsCount > 0 ? 1 : 0)
@@ -652,7 +643,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 				const metaChildrenIds = ['firstQuest', 'santaLexicon', 'everyQuest', 'snowFall', 'santaHat', 'winterHonor', 'christmasBall', 'christmasWreath'];
 				updateProgress('metaChristmas', metaChildrenIds.filter(id => completedSet.has(id)).length);
-				// updateProgress('Collection', shownSet.size)
 			})
 			eventUnsubs.push(unsubWinter)
 			const valentineEventRef = doc(db, 'users', uid, 'eventSessions', 'valentine')
@@ -661,7 +651,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const questsProgress = eventData.quests || {}
 				const shopItems = eventData.shopItems || {}
 				valentineRank1BoughtCount.value = ['teddy', 'cupidArrow'].reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
-				// updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
 				updateCollectionCount()
 				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
 				updateProgress('valentineWords', questsProgress['quest-1']?.score || 0)
@@ -678,7 +667,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		}, { immediate: true })
 	}
 	watch(lastUnlockedAward, (award) => {
-		// if (award) updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
 		if (award) updateCollectionCount()
 	})
 

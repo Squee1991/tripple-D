@@ -82,9 +82,21 @@
                           </button>
                         </div>
                         <div class="user-info-container">
-                          <div class="user-name">{{ userNameSafe }}</div>
-                          <div class="user-reg-date">
-                            <div>{{ t('cabinetInfoRows.registerDate') }}: {{ registrationDateText }}</div>
+                          <div v-if="learningStore" class="top-panel-layout">
+                            <div class="level-display">
+                              <span class="level-label">{{ t('stepHitLabels.levelTitle')}}:</span>
+                              <span class="level-value">{{ learningStore.isLeveling || '0' }}</span>
+                            </div>
+                            <div class="custom-progress">
+                              <div class="progress_exp-bar">
+                                <div class="progress__bar" :style="{ width: `${(learningStore.exp / 100) * 100}%` }">
+                                  <div class="glare"></div>
+                                </div>
+                              </div>
+                              <div class="progress-circle">
+                                {{ learningStore.exp }} / 100
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -638,7 +650,6 @@ onMounted(async () => {
   flex: 1;
   display: flex;
   align-items: center;
-  gap: 8px;
   padding: 10px 16px;
   position: relative;
   z-index: 2;
@@ -659,7 +670,7 @@ onMounted(async () => {
 
 .nav-label {
   font-weight: 700;
-  font-size: 17px;
+  font-size: 16px;
   font-family: "Nunito", sans-serif;
   color: var(--titleColor);
   margin-left: 10px;
@@ -956,7 +967,7 @@ onMounted(async () => {
   background: var(--tabBg, #1f222b);
   border: 3px solid var(--tabsSlideBorderColor);
   border-radius: 24px;
-  padding: 14px 10px 12px 10px;
+  padding: 9px 25px 9px 10px;
   box-shadow: 0 6px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -965,7 +976,7 @@ onMounted(async () => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 
 .avatar-container {
@@ -1036,20 +1047,7 @@ onMounted(async () => {
   flex-direction: column;
   gap: 5px;
   margin-left: 20px;
-}
-
-.user-name {
-  font-size: 22px;
-  font-weight: 900;
-  color: var(--titleColor);
-  letter-spacing: 0.5px;
-}
-
-.user-reg-date {
-  font-size: 13px;
-  color: var(--text-muted, #8b92a5);
-  font-weight: 800;
-  text-align: start;
+  flex: 1;
 }
 
 .no-transition {
@@ -1060,5 +1058,83 @@ onMounted(async () => {
   .user__interface {
     padding: 10px;
   }
+}
+
+.top-panel-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.custom-progress {
+  position: relative;
+  width: 100%;
+}
+
+.custom-progress .progress_exp-bar {
+  height: 27px;
+}
+
+.progress-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #313030;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.level-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.level-label {
+  color: var(--titleColor);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.level-value {
+  background: #8868db;
+  border: none;
+  border-radius: 6px;
+  padding: 2px 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.progress_exp-bar {
+  flex: 1;
+  height: 25px;
+  background: #e8eae5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress__bar {
+  height: 100%;
+  background-color: #10b981;
+  border-radius: 8px;
+  transition: width 0.4s ease-out;
+  position: relative;
+}
+
+.glare {
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  border-radius: 4px;
 }
 </style>
