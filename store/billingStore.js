@@ -68,8 +68,6 @@ export const useBillingStore = defineStore('billing', () => {
 		} else {
 			// УМНЫЙ ELSE: Проверяем, умерла ли подписка по-настоящему
 			const pastPremium = info?.entitlements?.all?.['premium']
-
-			// Если подписка вообще есть в истории юзера, но RevenueCat явно говорит, что она больше не активна
 			if (pastPremium && pastPremium.isActive === false) {
 				if (authStore.isPremium) {
 					authStore.isPremium = false
