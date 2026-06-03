@@ -704,6 +704,13 @@ export const userAuthStore = defineStore('auth', () => {
         const auth = getAuth()
         await signOut(auth)
         setUserData({});
+        if (Capacitor.isNativePlatform()) {
+            try {
+                await Purchases.logOut();
+            } catch (e) {
+                console.error("RC Logout Error:", e);
+            }
+        }
         if (authStateUnsubscribe) {
             authStateUnsubscribe();
             authStateUnsubscribe = null;

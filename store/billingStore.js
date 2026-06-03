@@ -84,14 +84,10 @@ export const useBillingStore = defineStore('billing', () => {
 
 	const handleSubscriptionStatus = async (info) => {
 		if (!authStore.uid) return
-
 		const premiumEntitlement = info?.entitlements?.active?.['premium']
-
 		if (premiumEntitlement) {
 			const expDate = premiumEntitlement.expirationDate
 			const isCancelled = !premiumEntitlement.willRenew
-
-			// Просто меняем локальные переменные Pinia, базу НЕ трогаем!
 			authStore.isPremium = true
 			authStore.subscriptionEndsAt = expDate
 			authStore.subscriptionCancelled = isCancelled
