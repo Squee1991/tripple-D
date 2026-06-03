@@ -36,7 +36,7 @@ const showToast = ref(false)
 const toastMessage = ref('')
 const payButton = ref(null)
 const showStickyFooter = ref(false)
-
+const justBought = ref(false)
 const handleBack = () => {
   router.back()
 }
@@ -125,7 +125,7 @@ const triggerToast = (msg) => {
 
 async function handleRestore() {
   if (!billingStore.isMobile) return
-  if (authStore.isPremium) {
+  if (justBought.value) {
     triggerToast('pay.triggerToastIsPlus')
     return
   }
@@ -146,12 +146,14 @@ async function handleRestore() {
 
 async function pay() {
   if (!authStore.uid || !authStore.email) return
-
   if (billingStore.isMobile) {
     if (billingStore.offerings.length > 0) {
       const pkg = billingStore.offerings[0]
-      await billingStore.buy(pkg)
-    } else { }
+      const success = await billingStore.buy(pkg)
+      if (success) {
+        justBought.value = true
+      }
+    }
     return
   }
   const priceId = 'price_1SvdnE24sKuPwF6cZoD2ZJn3'
