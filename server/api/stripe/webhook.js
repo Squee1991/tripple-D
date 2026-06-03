@@ -4,7 +4,6 @@ import { getFirestore } from 'firebase-admin/firestore'
 import { initializeApp, getApps, cert } from 'firebase-admin/app'
 
 export default defineEventHandler(async (event) => {
-	// 1. ИНИЦИАЛИЗАЦИЯ FIREBASE
 	if (getApps().length === 0) {
 		try {
 			const serviceAccountJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
