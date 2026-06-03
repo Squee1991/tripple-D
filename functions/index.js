@@ -2,7 +2,7 @@ const { onSchedule } = require("firebase-functions/v2/scheduler");
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
 const { defineSecret } = require("firebase-functions/params");
 const admin = require("firebase-admin");
-const { onDocumentCreated } = require("firebase-functions/v2/firestore");
+const { onRequest } = require("firebase-functions/v2/https");
 
 if (admin.apps.length === 0) admin.initializeApp();
 
@@ -207,9 +207,12 @@ OUTPUT JSON FORMAT:
 	}
 });
 
-exports.handleRevenueCatWebhook = onDocumentCreated("revenuecat_events/{eventId}", async (event) => {
-	const eventData = event.data.data();
-	if (!eventData) return;
+
+exports.handleRevenueCatWebhook = onRequest(async (req, res) => {
+	const eventData = req.body.event;
+	if (!eventData || !eventData.app_user_id) {
+		return res.status(200).send("No data");
+	}
 
 	const userId = eventData.app_user_id;
 	const eventType = eventData.type;
@@ -219,72 +222,33 @@ exports.handleRevenueCatWebhook = onDocumentCreated("revenuecat_events/{eventId}
 		switch (eventType) {
 			case "INITIAL_PURCHASE":
 			case "RENEWAL":
-				if (userId) {
-					await db.collection("users").doc(userId).update({
-						isPremium: true,
-						subscriptionCancelled: false,
-						subscriptionEndsAt: eventData.expiration_at_ms ? new Date(eventData.expiration_at_ms).toISOString() : null,
-						paymentSource: eventData.store === "PLAY_STORE" ? "google" : "apple",
-						debug_last_action: `SERVER_ACTIVATED_${eventType}_${Date.now()}`
-					});
-					console.log(`Премиум успешно включен для юзера: ${userId}`);
-				}
+				await db.collection("users").doc(userId).update({
+					isPremium: true,
+					subscriptionCancelled: false
+				});
 				break;
 			case "CANCELLATION":
-				if (userId) {
-					await db.collection("users").doc(userId).update({
-						subscriptionCancelled: true,
-						debug_last_action: `SERVER_CANCELLED_${Date.now()}`
-					});
-					console.log(`Юзер ${userId} отменил автопродление.`);
-				}
-				break;
 			case "EXPIRATION":
-				if (userId) {
-					await db.collection("users").doc(userId).update({
-						isPremium: false,
-						subscriptionCancelled: false,
-						debug_last_action: `SERVER_EXPIRED_${Date.now()}`
-					});
-					console.log(`Премиум отключен для юзера: ${userId}`);
-				}
+				await db.collection("users").doc(userId).update({
+					isPremium: false,
+					subscriptionCancelled: true
+				});
 				break;
 			case "TRANSFER":
-				if (eventData.transferred_from && Array.isArray(eventData.transferred_from)) {
+				if (eventData.transferred_from) {
 					for (const oldUid of eventData.transferred_from) {
-						try {
-							await db.collection("users").doc(oldUid).update({
-								isPremium: false,
-								debug_last_action: `SERVER_TRANSFER_LOST_${Date.now()}`
-							});
-							console.log(`Забрали премиум у старого аккаунта: ${oldUid}`);
-						} catch (err) {
-							console.error(`Ошибка сброса у ${oldUid}:`, err);
-						}
+						await db.collection("users").doc(oldUid).update({ isPremium: false });
 					}
 				}
-
-				if (eventData.transferred_to && Array.isArray(eventData.transferred_to)) {
+				if (eventData.transferred_to) {
 					for (const newUid of eventData.transferred_to) {
-						try {
-							await db.collection("users").doc(newUid).update({
-								isPremium: true,
-								paymentSource: eventData.store === "PLAY_STORE" ? "google" : "apple",
-								debug_last_action: `SERVER_TRANSFER_RECEIVED_${Date.now()}`
-							});
-							console.log(`Выдали премиум новому аккаунту: ${newUid}`);
-						} catch (err) {
-							console.error(`Ошибка выдачи для ${newUid}:`, err);
-						}
+						await db.collection("users").doc(newUid).update({ isPremium: true });
 					}
 				}
-				break;
-
-			default:
-				console.log(`Событие (${eventType}) игнорируем.`);
 				break;
 		}
+		res.status(200).send("OK");
 	} catch (error) {
-		console.error(`Общая ошибка вебхука:`, error);
+		res.status(500).send("Error");
 	}
 });
