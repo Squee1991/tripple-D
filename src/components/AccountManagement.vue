@@ -1,5 +1,5 @@
 <template>
-  <div v-if="authStore.isPremium" class="account-tab-body">
+  <div class="account-tab-body">
     <div
         class="premium-banner"
         :class="{
@@ -12,7 +12,7 @@
           💎 {{ t('cabinet.active') }} PLUS
         </h4>
         <h4 v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-          ⚠️ Подписка отменена
+          Подписка отменена
         </h4>
         <h4 v-else>SKILLUP PLUS</h4>
         <p v-if="authStore.isPremium && !authStore.subscriptionCancelled">

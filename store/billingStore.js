@@ -19,33 +19,20 @@ export const useBillingStore = defineStore('billing', () => {
 	const initialize = async () => {
 		if (!isMobile.value) return
 		try {
-			if (!authStore.uid || authStore.uid === '') {
-				console.warn('🛑 Инициализация прервана: authStore.uid пустой.')
-				return
-			}
-
+			if (!authStore.uid || authStore.uid === '') return
 			let apiKey = ''
 			if (currentPlatform === 'ios') {
 				apiKey = 'appl_AJSNvgOPCFscmWguFDVeIucVoRS'
 			} else if (currentPlatform === 'android') {
 				apiKey = 'goog_zJiiRlMjdJmJNBtZXxiePlRaHmv'
 			}
-
 			if (!apiKey) return
-
 			await Purchases.configure({ apiKey })
 			await Purchases.logIn({ appUserID: authStore.uid })
-
-			// 🔥 ОФИЦИАЛЬНЫЙ СЛУШАТЕЛЬ REVENUECAT
-			// Срабатывает сам, если Apple пришлет вебхук или если статус изменится в фоне
 			Purchases.addCustomerInfoUpdateListener((info) => {
-				console.log('🔄 RevenueCat зафиксировал изменение статуса юзера')
 				handleSubscriptionStatus(info)
 			})
-
 			await loadOfferings()
-
-			// При старте приложения один раз синхронизируем статус
 			const initialInfo = await Purchases.getCustomerInfo()
 			await handleSubscriptionStatus(initialInfo)
 
@@ -54,21 +41,18 @@ export const useBillingStore = defineStore('billing', () => {
 		}
 	}
 
-	// Универсальная функция обновления Firebase
 	const handleSubscriptionStatus = async (info) => {
 		if (!authStore.uid) return
 
 		const premiumEntitlement = info?.entitlements?.active?.['premium']
 
 		if (premiumEntitlement) {
-			// ПРАВО ЕСТЬ = ПРЕМИУМ АКТИВЕН
 			const expDate = premiumEntitlement.expirationDate
 			const isCancelled = !premiumEntitlement.willRenew
 
 			if (!authStore.isPremium ||
 				authStore.subscriptionEndsAt !== expDate ||
 				authStore.subscriptionCancelled !== isCancelled) {
-
 				authStore.isPremium = true
 				authStore.subscriptionEndsAt = expDate
 				authStore.subscriptionCancelled = isCancelled
@@ -82,16 +66,21 @@ export const useBillingStore = defineStore('billing', () => {
 				})
 			}
 		} else {
-			// ПРАВА НЕТ = ПРЕМИУМ ОТКЛЮЧЕН
-			if (authStore.isPremium) {
-				authStore.isPremium = false
-				authStore.subscriptionCancelled = false
+			// УМНЫЙ ELSE: Проверяем, умерла ли подписка по-настоящему
+			const pastPremium = info?.entitlements?.all?.['premium']
 
-				await updateDoc(doc(db, 'users', authStore.uid), {
-					isPremium: false,
-					subscriptionCancelled: false,
-					debug_last_action: "EXPIRED_SET_FALSE_" + Date.now()
-				})
+			// Если подписка вообще есть в истории юзера, но RevenueCat явно говорит, что она больше не активна
+			if (pastPremium && pastPremium.isActive === false) {
+				if (authStore.isPremium) {
+					authStore.isPremium = false
+					authStore.subscriptionCancelled = false
+
+					await updateDoc(doc(db, 'users', authStore.uid), {
+						isPremium: false,
+						subscriptionCancelled: false,
+						debug_last_action: "EXPLICITLY_EXPIRED_" + Date.now()
+					})
+				}
 			}
 		}
 	}
@@ -107,8 +96,6 @@ export const useBillingStore = defineStore('billing', () => {
 					console.log('Sync err:', syncErr)
 				}
 			}
-
-			console.log('🔄 Запуск restorePurchases()...')
 			const customerInfo = await Purchases.restorePurchases()
 			await handleSubscriptionStatus(customerInfo)
 
@@ -152,7 +139,6 @@ export const useBillingStore = defineStore('billing', () => {
 
 			const purchaseResult = await Purchases.purchasePackage({ aPackage: rawPkg })
 			const customerInfo = purchaseResult.customerInfo || purchaseResult
-
 			await handleSubscriptionStatus(customerInfo)
 
 			if (usedDiscount) {
@@ -167,7 +153,7 @@ export const useBillingStore = defineStore('billing', () => {
 			return !!customerInfo?.entitlements?.active?.['premium']
 		} catch (e) {
 			if (!e.userCancelled) {
-				console.error(`КРИТИЧЕСКАЯ ОШИБКА RC: Код: ${e.code} | Сообщение: ${e.message}`)
+				console.error(`Ошибка RC: ${e.message}`)
 			}
 			return false
 		} finally {
