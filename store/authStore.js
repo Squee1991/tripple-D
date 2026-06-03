@@ -1,5 +1,5 @@
 import {defineStore} from "pinia";
-import {ref, computed} from 'vue'
+import {ref, computed, watch} from 'vue'
 import { Capacitor } from '@capacitor/core';
 import { Purchases } from '@revenuecat/purchases-capacitor'
 import { useBillingStore } from '../store/billingStore.js'
@@ -61,7 +61,7 @@ export const userAuthStore = defineStore('auth', () => {
     const subscriptionCancelled = ref(false)
     const availableAvatars = ref(['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '12.png', '7.png', '8.png', '9.png', '10.png', '11.png', '13.png', '14.png']);
     const ownedAvatars = ref(['1.png', '2.png']);
-    const isPremium = ref(false)
+    const isPremium = ref(typeof window !== 'undefined' ? localStorage.getItem('cached_premium') === 'true' : false)
     const achievements = ref(null);
     const isWebView = ref(false)
     const hasSeenOnboarding = ref(false)
@@ -704,6 +704,9 @@ export const userAuthStore = defineStore('auth', () => {
         const auth = getAuth()
         await signOut(auth)
         setUserData({});
+        if (typeof window !== 'undefined') {
+            localStorage.removeItem('cached_premium');
+        }
         if (Capacitor.isNativePlatform()) {
             try {
                 await Purchases.logOut();
