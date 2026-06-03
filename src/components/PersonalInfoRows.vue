@@ -85,8 +85,7 @@
       </div>
     </div>
     <div class="premium__management">
-      <div v-if="!authStore.isPremium"
-          class="premium-banner"
+      <div class="premium-banner"
           :class="{
         'is-active': authStore.isPremium && !authStore.subscriptionCancelled,
         'is-cancelled': authStore.isPremium && authStore.subscriptionCancelled
@@ -97,7 +96,7 @@
             💎 {{ t('cabinet.active') }} Plus
           </h4>
           <h4 v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-            ⚠️ Подписка отменена
+            Подписка отменена
           </h4>
           <h4 v-else>
             SKILLUP PLUS
