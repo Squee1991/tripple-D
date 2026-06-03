@@ -5,7 +5,6 @@ import {userAuthStore} from '../store/authStore'
 import {useBillingStore} from '../store/billingStore'
 import {useI18n} from 'vue-i18n'
 import {useSeoMeta} from "#imports"
-import { Capacitor } from '@capacitor/core'
 
 import Books from '../assets/images/pay-images/books.svg'
 import Ach from '../assets/images/pay-images/ach.svg'
@@ -37,7 +36,7 @@ const showToast = ref(false)
 const toastMessage = ref('')
 const payButton = ref(null)
 const showStickyFooter = ref(false)
-
+const justBought = ref(false)
 const handleBack = () => {
   router.back()
 }
@@ -49,6 +48,7 @@ const restoreComputed = computed(() => {
 const submitComputed = computed(() => {
   return submitLoading.value ? t('submitComputed.sync') : t('submitComputed.getPlus')
 })
+
 
 const finalPrice = computed(() => {
   if (billingStore.isMobile && billingStore.offerings.length > 0) {
@@ -89,7 +89,6 @@ useSeoMeta({
 let observer
 const features = [
   {title: t('Обучение без границ'), icon: Forever},
-  {title: t('Расширенная статистика'), icon: StatsPlus},
   {title: t('Будущие функции'), icon: Future},
   {title: t('Поддержка разработчиков'), icon: SupportCup},
   {title: t('Отсутствие рекламы'), icon: Ads},
@@ -126,7 +125,7 @@ const triggerToast = (msg) => {
 
 async function handleRestore() {
   if (!billingStore.isMobile) return
-  if (authStore.isPremium) {
+  if (justBought.value) {
     triggerToast('pay.triggerToastIsPlus')
     return
   }
@@ -146,38 +145,20 @@ async function handleRestore() {
 }
 
 async function pay() {
-  alert(`Клик по кнопке. Платформа: ${Capacitor.getPlatform()}`)
-
-  if (!authStore.uid || !authStore.email) {
-    alert('Пожалуйста, войдите в аккаунт (UID не найден)')
-    return
-  }
-
+  if (!authStore.uid || !authStore.email) return
   if (billingStore.isMobile) {
-    if (billingStore.offerings.length === 0) {
-      alert('Массив товаров пуст. Пытаемся принудительно запросить продукты у Apple...')
-      submitLoading.value = true
-      await billingStore.loadOfferings(selectedDiscountId.value)
-      submitLoading.value = false
-    }
-
     if (billingStore.offerings.length > 0) {
       const pkg = billingStore.offerings[0]
-      alert(`Товары найдены. Готовимся купить: ${pkg.product.title}`)
-
       const success = await billingStore.buy(pkg)
       if (success) {
+        justBought.value = true
       }
-    } else {
-      alert('ОШИБКА: Товары от Apple всё ещё равны 0.\nПричины: 1) Глюк кэша Sandbox (надо подождать). 2) Не выполнен вход в Sandbox аккаунт в настройках Mac. 3) Разные Bundle ID.')
     }
     return
   }
-
   const priceId = 'price_1SvdnE24sKuPwF6cZoD2ZJn3'
   submitLoading.value = true
   try {
-    alert('Запускаем Stripe (Веб)...')
     const response = await $fetch('/api/stripe/checkout', {
       method: 'POST',
       body: {
@@ -190,10 +171,9 @@ async function pay() {
     if (response.url) {
       window.location.href = response.url
     } else if (response.error) {
-      alert('Ошибка Stripe: ' + response.error)
+      console.log(response.error)
     }
   } catch (err) {
-    alert('Произошла ошибка соединения со Stripe.')
   } finally {
     submitLoading.value = false
   }
@@ -237,6 +217,7 @@ async function pay() {
         </div>
         <div class="bonus-section" v-if="myAvailableCoupons.length > 1">
           <div class="hero-zone bonus-hero">
+<!--            <h2 class="hero-title">ТВОИ <span class="neon-text">БОНУСЫ</span></h2>-->
             <p class="hero-desc">{{ t('pay.sales')}}</p>
           </div>
           <div class="inventory-section">
