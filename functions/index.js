@@ -107,7 +107,6 @@ exports.visionAnalyze = onCall({
 	timeoutSeconds: 60
 }, async (request) => {
 	const { userLevel, userMessage, userLocale, imageUrl, referenceDescription } = request.data;
-
 	try {
 		let finalImageUrl = imageUrl;
 		if (imageUrl.startsWith('http') && !imageUrl.includes('localhost')) {
@@ -227,10 +226,15 @@ exports.handleRevenueCatWebhook = onRequest(async (req, res) => {
 					subscriptionCancelled: false
 				});
 				break;
-			case "CANCELLATION":
 			case "EXPIRATION":
 				await db.collection("users").doc(userId).update({
 					isPremium: false,
+					subscriptionCancelled: true
+				});
+				break;
+
+			case "CANCELLATION":
+				await db.collection("users").doc(userId).update({
 					subscriptionCancelled: true
 				});
 				break;

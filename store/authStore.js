@@ -72,10 +72,17 @@ export const userAuthStore = defineStore('auth', () => {
     const freezeEndsAt = ref(null)
     const IMMUNITY_RANK_HATS = 500
     const paymentSource = ref(null)
+
     const premiumDiscount = ref({
         sale_5: false,
         sale_10: false,
         sale_15: false
+    })
+
+    watch(isPremium, (newValue) => {
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('cached_premium', newValue ? 'true' : 'false')
+        }
     })
 
     const addClaimedBonus = async (hatAmount) => {
@@ -150,10 +157,8 @@ export const userAuthStore = defineStore('auth', () => {
         if (premiumDiscount.value[discountId] === true) {
             return {success: false, reason: 'already-owned'}
         }
-
         const userRef = doc(db, 'users', user.uid)
         await updateDoc(userRef, {[discountId]: true})
-
         premiumDiscount.value[discountId] = true
         return {success: true}
     }
@@ -175,7 +180,6 @@ export const userAuthStore = defineStore('auth', () => {
                 : null
 
         if (shownAt) return
-
         const regDateFromAuth = authUser?.metadata?.creationTime ? new Date(authUser.metadata.creationTime) : null
         const regDateFromDb = data.registeredAt && typeof data.registeredAt.toDate === 'function' ? data.registeredAt.toDate() : null
         const regDate = regDateFromDb || regDateFromAuth
@@ -340,27 +344,22 @@ export const userAuthStore = defineStore('auth', () => {
                     clientId: 'com.skillupgerman',
                     scopes: 'email name',
                 });
-
                 if (!result || !result.response || !result.response.identityToken) return;
                 const provider = new OAuthProvider('apple.com');
                 const credential = provider.credential({
                     idToken: result.response.identityToken,
                 });
-
                 const authResult = await signInWithCredential(auth, credential);
                 user = authResult.user;
             } else {
-
                 const provider = new OAuthProvider('apple.com');
                 provider.addScope('email');
                 provider.addScope('name');
-
                 const authResult = await signInWithPopup(auth, provider);
                 user = authResult.user;
             }
             const userDocRef = doc(db, 'users', user.uid);
             const userDoc = await getDoc(userDocRef);
-
             const defaultName = user.displayName || '';
             const defaultEmail = user.email || '';
             if (!userDoc.exists()) {
@@ -701,9 +700,10 @@ export const userAuthStore = defineStore('auth', () => {
     }
 
     const logOut = async () => {
-        const auth = getAuth()
-        await signOut(auth)
-        setUserData({});
+        if (authStateUnsubscribe) {
+            authStateUnsubscribe();
+            authStateUnsubscribe = null;
+        }
         if (typeof window !== 'undefined') {
             localStorage.removeItem('cached_premium');
         }
@@ -714,10 +714,9 @@ export const userAuthStore = defineStore('auth', () => {
                 console.error("RC Logout Error:", e);
             }
         }
-        if (authStateUnsubscribe) {
-            authStateUnsubscribe();
-            authStateUnsubscribe = null;
-        }
+        setUserData({});
+        const auth = getAuth()
+        await signOut(auth)
     }
 
     const fetchuser = () => {
