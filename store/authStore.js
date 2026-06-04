@@ -74,6 +74,12 @@ export const userAuthStore = defineStore('auth', () => {
     const paymentSource = ref(null);
     const premiumDiscount = ref({ sale_5: false, sale_10: false, sale_15: false });
 
+    watch(isPremium, (newValue) => {
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('cached_premium', newValue ? 'true' : 'false')
+        }
+    })
+
     const isWebView = ref(false);
     const shouldShowFeedbackSurvey = ref(false);
     let initPromise = null;
@@ -310,7 +316,6 @@ export const userAuthStore = defineStore('auth', () => {
                 const result = await AppleSignIn.signIn({
                     scopes: [SignInScope.Email, SignInScope.FullName],
                 });
-
                 // ИСПРАВЛЕНО: у Capawesome токен берется напрямую из result.idToken
                 const idToken = result.idToken;
 
@@ -642,8 +647,18 @@ export const userAuthStore = defineStore('auth', () => {
     };
 
     const logOut = async () => {
-        await signOut(auth);
-        setUserData({});
+        // 1. Сначала "затыкаем уши" Firebase, чтобы слушатель не сработал параллельно
+        if (authStateUnsubscribe) {
+            authStateUnsubscribe();
+            authStateUnsubscribe = null;
+        }
+
+        // 2. Чистим кэш
+        if (typeof window !== 'undefined') {
+            localStorage.removeItem('cached_premium');
+        }
+
+        // 3. Выходим из RevenueCat
         if (Capacitor.isNativePlatform()) {
             try {
                 await Purchases.logOut();
@@ -651,11 +666,14 @@ export const userAuthStore = defineStore('auth', () => {
                 console.error("RC Logout Error:", e);
             }
         }
-        if (authStateUnsubscribe) {
-            authStateUnsubscribe();
-            authStateUnsubscribe = null;
-        }
-    };
+
+        // 4. Очищаем локальные переменные
+        setUserData({});
+
+        // 5. И только теперь спокойно выходим из Firebase
+        const auth = getAuth()
+        await signOut(auth)
+    }
 
     const activatePremium = (premiumData) => {
         isPremium.value = true;
