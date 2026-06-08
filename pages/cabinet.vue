@@ -82,11 +82,8 @@
                           </button>
                         </div>
                         <div class="user-info-container">
+                          <div class="user__name"> {{ authStore.name}}</div>
                           <div v-if="learningStore" class="top-panel-layout">
-                            <div class="level-display">
-                              <span class="level-label">{{ t('stepHitLabels.levelTitle')}}:</span>
-                              <span class="level-value">{{ learningStore.isLeveling || '0' }}</span>
-                            </div>
                             <div class="custom-progress">
                               <div class="progress_exp-bar">
                                 <div class="progress__bar" :style="{ width: `${(learningStore.exp / 100) * 100}%` }">
@@ -96,6 +93,10 @@
                               <div class="progress-circle">
                                 {{ learningStore.exp }} / 100
                               </div>
+                            </div>
+                            <div class="level-display">
+<!--                              <span class="level-label">{{ t('stepHitLabels.levelTitle')}}:</span>-->
+                              <span class="level-value">{{ learningStore.isLeveling || '0' }}</span>
                             </div>
                           </div>
                         </div>
@@ -584,6 +585,13 @@ onMounted(async () => {
   width: 28px;
 }
 
+.user__name {
+  color: var(--titleColor);
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 19px;
+}
+
 .back-btn {
   width: 100%;
   display: flex;
@@ -1062,9 +1070,9 @@ onMounted(async () => {
 
 .top-panel-layout {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
+  gap: 5px;
 }
 
 .custom-progress {
@@ -1093,7 +1101,6 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 8px;
 }
 
 .level-label {
@@ -1105,10 +1112,10 @@ onMounted(async () => {
 .level-value {
   background: #8868db;
   border: none;
-  border-radius: 6px;
-  padding: 2px 8px;
+  border-radius: 10px;
+  padding: 6px 14px;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
 }
 

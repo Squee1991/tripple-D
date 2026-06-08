@@ -62,7 +62,6 @@
           </div>
         </div>
       </div>
-
       <div class="footer-area">
         <button
             class="btn-check"
