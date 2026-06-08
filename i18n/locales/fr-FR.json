@@ -1,5 +1,4 @@
 {
-
   "definiteIndefiniteQuestOne": {
     "title": "Bataille pour les terminaisons",
     "description": "Pratique mixte : articles indéfinis et définis dans les phrases.",
@@ -525,10 +524,6 @@
     "questFifteen": "Choisissez la bonne option : C'était une belle journée",
     "questFifteenTip": "Article indéfini (première fois). Masculin (der). L'article 'ein' est vide, donc l'adjectif prend la terminaison -er de l'article 'der'."
   },
-
-
-
-
   "secretLandsQuestOne": {
     "title": "Bilan",
     "description": "Entraînement mixte : travail avec l'article indéfini au Perfekt et Futur 1. Thèmes : vie quotidienne, ville, transport, nourriture.",
@@ -1054,10 +1049,6 @@
     "questFifteen": "Assemblez la phrase : Nous verrons une exposition intéressante",
     "questFifteenTip": "Exposition — féminin (die). L'article 'eine' se termine par -e, donc l'adjectif prend la terminaison -e de l'article."
   },
-
-
-
-
   "edgeImagesQuestOne": {
     "title": "Départ",
     "description": "Nous pratiquons la déclinaison correcte des adjectifs après der, die, das.",
@@ -1583,12 +1574,6 @@
     "questFifteen": "Inscrivez la forme (lecker) : Je mangerai la ___ pizza.",
     "questFifteenTip": "Accusatif (féminin) : l'article 'die' est basique, l'adjectif prend la terminaison -e de l'article."
   },
-
-
-
-
-
-
   "timeGageQuestOne": {
     "title": "Rencontre et communication",
     "description": "Pratiquer la grammaire dans des situations de communication : des projets de rencontre aux récits sur le passé.",
@@ -2093,7 +2078,6 @@
     "questFifteen": "J'achèterai un billet si j'ai le temps.",
     "questFifteenTip": "'Wenn' place le verbe à la fin."
   },
-
   "pastValleyQuestOne": {
     "title": "Bases du Perfekt",
     "description": "Qu'as-tu fait ? Découverte du passé : 'J'ai acheté', 'Nous avons fait'.",
@@ -2431,7 +2415,6 @@
     "questFourteenTip": "singen — verbe fort. On ajoute ge- et on garde -en. Changement de voyelle (i en u).",
     "questFifteen": "Choisissez : J'ai fait du sport."
   },
-
   "actionValleyQuestOne": {
     "title": "Moi, toi, lui",
     "description": "On travaille le Dativ avec les pronoms personnels. Qui aidons-nous et à qui offrons-nous des cadeaux ?",
@@ -2798,7 +2781,6 @@
     "questFifteen": "Choisis : Avec qui parles-tu ?",
     "questFifteenTip": "Pour les personnes, utilise préposition + question (Mit wem ?)."
   },
-
   "pluralLandQuestOne": {
     "title": "Voyage",
     "description": "Nous planifions un voyage en utilisant le Futur I. Apprendre à lier le temps, le lieu et l'action.",
@@ -3100,8 +3082,6 @@
     "questFourteen": "Assemblez : Nous n'oublierons pas la fête.",
     "questFifteen": "Choisissez la bonne option"
   },
-
-
   "orderValleyQuestOne": {
     "title": "Le verbe à la fin !",
     "description": "On travaille l'ordre des mots dans les subordonnées. Règle d'or : le verbe part tout à la fin.",
@@ -3505,7 +3485,6 @@
     "questFifteen": "Écoute et écris la phrase",
     "questFifteenTip": "La négation dans 'es gibt' est 'kein'. Après 'dass', le verbe 'gibt' s'enfuit tout à la fin."
   },
-
   "pwa": {
     "title": "Installer Skillupgerman",
     "sub": "Ajoutez l'application à votre écran d'accueil pour un accès rapide !",
@@ -10275,5 +10254,44 @@
     "triggerToastNotFound": "Aucun abonnement actif trouvé",
     "triggerToastError": "Erreur lors de la restauration",
     "triggerToastIsPlus": "Vous avez déjà un abonnement PLUS actif !"
+  },
+  "examSession": {
+    "ready": "Prêt для le test ?",
+    "cardTextOne": "Vous aurez",
+    "cardTextTwo": "étapes et",
+    "cardTextThree": "exercices.",
+    "begin": "Commencer le test",
+    "listen": "Écoutez l'audio :",
+    "check": "Vérification...",
+    "send": "Envoyer la réponse",
+    "record": "Enregistrer",
+    "great": "Félicitations !",
+    "result": "Votre résultat pour le niveau",
+    "save": "Enregistrement de la progression...",
+    "correctly": "Correct :",
+    "back": "Retourner",
+    "interrupt": "Interrompre le test ?",
+    "modalText": "La progression de cette tentative sera perdue. Êtes-vous sûr ?",
+    "continue": "Continuer",
+    "leave": "Quitter"
+  },
+  "speakSession": {
+    "title": "Pratique de la conversation",
+    "words": "Vocabulaire pour le dialogue",
+    "wordsText": "Apprenez ou révisez les mots avant de commencer à parler. Cela vous aidera à vous sentir plus confiant !",
+    "learn": "Commencer",
+    "dialogue": "Dialogue",
+    "dialogueText": "Entraînez votre prononciation et votre élocution, écoutez votre interlocuteur et choisissez les réponses de manière interactive.",
+    "back": "Retour",
+    "goodJob": "Beau travail !",
+    "goodJobTitle": "Vous avez terminé ce dialogue. Continuez ainsi !",
+    "list": "Retourner",
+    "repeat": "Répéter",
+    "start": "Commencer l'apprentissage",
+    "choice": "Choisissez une réponse :",
+    "placeHolder": "Écrivez ou dites la réponse...",
+    "hoverVoice": "Parler",
+    "end": "Terminer",
+    "further": "Suivant"
   }
 }

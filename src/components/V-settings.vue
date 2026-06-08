@@ -4,6 +4,13 @@
         :text="t('bannerTitles.settings')"
         :icon="SettingIcon"
     />
+    <div class="settings-section account-actions">
+      <div class="section-title"> {{ t('settingsGroup.account')}}</div>
+      <button @click="router.push('/profile')" class="account-buttons">
+        <a class="link-row">{{ t('cabinetToggle.profileData')}}</a>
+        <VArrowNav/>
+      </button>
+    </div>
     <div v-if="isThemeModalOpen" class="modal-overlay" @click.self="isThemeModalOpen = false">
       <div class="modal-card">
         <div class="theme-grid">
@@ -29,7 +36,6 @@
             </div>
           </label>
         </div>
-
         <div class="modal-actions">
           <button class="btn btn-game btn-success" @click="isThemeModalOpen = false">
             {{ t('themeModal.close') }}
@@ -88,13 +94,6 @@
           <VArrowNav/>
         </NuxtLink>
       </div>
-    </div>
-    <div class="settings-section account-actions">
-      <div class="section-title"> {{ t('settingsGroup.account')}}</div>
-      <button @click="router.push('/profile')" class="account-buttons">
-          <a class="link-row">{{ t('cabinetToggle.profileData')}}</a>
-          <VArrowNav/>
-      </button>
     </div>
     <div v-if="isLockedModalOpen" class="modal-overlay locked-priority" @click.self="isLockedModalOpen = false">
       <div class="modal-card">

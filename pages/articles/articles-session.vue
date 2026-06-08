@@ -14,7 +14,6 @@
                 </div>
               </div>
               <div>
-
               </div>
             </div>
             <header class="session-header">
@@ -38,7 +37,6 @@
                   <div class="word-divider">—</div>
                   <div class="translation-word">{{ currentWord[currentLangKey] }}</div>
                 </div>
-
                 <div v-if="currentMode === 'article'" class="article-mode-container">
                   <p class="question-text">{{ t('sessionLabels.articleFor') }} <span class="highlight-word">{{ currentWord.de }}</span>:</p>
                   <div class="article-options">

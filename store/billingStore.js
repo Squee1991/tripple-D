@@ -122,6 +122,28 @@ export const useBillingStore = defineStore('billing', () => {
 		}
 	}
 
+	// const restore = async () => {
+	// 	if (!isMobile.value) return false
+	// 	isPurchasing.value = true
+	// 	try {
+	// 		if (currentPlatform === 'android') {
+	// 			try {
+	// 				await Purchases.syncPurchases()
+	// 			} catch (syncErr) {
+	// 				console.log('Sync err:', syncErr)
+	// 			}
+	// 		}
+	// 		const customerInfo = await Purchases.restorePurchases()
+	// 		await handleSubscriptionStatus(customerInfo)
+	// 		return !!customerInfo?.entitlements?.active?.['premium']
+	// 	} catch (e) {
+	// 		console.error('Ошибка восстановления RC:', e.message)
+	// 		return false
+	// 	} finally {
+	// 		isPurchasing.value = false
+	// 	}
+	// }
+
 	const restore = async () => {
 		if (!isMobile.value) return false
 		isPurchasing.value = true
@@ -133,11 +155,16 @@ export const useBillingStore = defineStore('billing', () => {
 					console.log('Sync err:', syncErr)
 				}
 			}
-			const customerInfo = await Purchases.restorePurchases()
+			let customerInfo = await Purchases.restorePurchases()
 			await handleSubscriptionStatus(customerInfo)
-			return !!customerInfo?.entitlements?.active?.['premium']
+			if (authStore.isPremium) {
+				return true
+			}
+			await new Promise(resolve => setTimeout(resolve, 2000))
+			customerInfo = await Purchases.getCustomerInfo()
+			await handleSubscriptionStatus(customerInfo)
+			return authStore.isPremium
 		} catch (e) {
-			console.error('Ошибка восстановления RC:', e.message)
 			return false
 		} finally {
 			isPurchasing.value = false

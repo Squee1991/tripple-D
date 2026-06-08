@@ -27,9 +27,9 @@
               class="category-group"
           >
             <div class="category-group__header">
-              <h2 class="category-group__title">{{ category.title }}</h2>
+              <h2 class="category-group__title">{{ t(category.title) }}</h2>
               <span class="category-group__counter">
-                0/{{ category.themes.length }} <span class="check-icon"></span>
+                {{ getCompletedCount(category) }}/{{ category.themes.length }} <span class="check-icon"></span>
               </span>
             </div>
             <div class="themes-slider">
@@ -46,10 +46,10 @@
                 </div>
                 <div class="card__content">
                   <span class="card__icon">{{ theme.icon }}</span>
-                  <span class="card__title">{{ theme.title }}</span>
+                  <span class="card__title">{{ t(theme.title) }}</span>
                 </div>
                 <div class="card__action">
-                  <div v-if="!speakStore.userProgress[theme.id]" class="card__progress-bar">
+                  <div class="card__progress-bar">
                     <div class="card__progress-fill" :style="{ width: '0%' }"></div>
                   </div>
                   <button
@@ -85,89 +85,16 @@ import VTransition from "~/src/components/V-transition.vue";
 import { useSpeakStore } from '../../store/speakStore.js';
 import Modal from '../../src/components/modal.vue'
 import SpeakingIcon from '../../assets/images/speakingIcon.svg'
+import { categories } from'../../utils/speak-themes-category.js'
 const { t } = useI18n();
 const router = useRouter();
 const speakStore = useSpeakStore();
 const isMounted = ref(false);
 const showDevModal = ref(false);
-const categories = [
-  {
-    id: 'society_lifestyle',
-    title: t('speakTopics.speak'),
-    themes: [
-      { id: 'firstmeet', icon: '👋', title: t('speakThemes.firstmeet') },
-      { id: 'acquaintance', icon: '👥', title: t('speakThemes.acquaintance') },
-      { id: 'secondmeet', icon: '🤝', title: t('speakThemes.secondmeet') },
-      { id: 'family_talk', icon: '👨‍👩‍👧‍👦', title: t('speakThemes.family_talk') },
-      { id: 'weekend_plans', icon: '🗓️', title: t('speakThemes.weekend_plans') },
-      { id: 'friend_call', icon: '📞', title: t('speakThemes.friend_call') },
-      { id: 'hobby_talk', icon: '🎨', title: t('speakThemes.hobby_talk') },
-      { id: 'party_talk', icon: '🥳', title: t('speakThemes.party_talk') },
-    ]
-  },
-  {
-    id: 'food_services',
-    title: t('speakTopics.food'),
-    themes: [
-      { id: 'cafe_order', icon: '☕', title: t('speakThemes.cafe_order') },
-      { id: 'restaurant_dinner', icon: '🍽️', title: t('speakThemes.restaurant_dinner') },
-      { id: 'store_checkout', icon: '🛒', title: t('speakThemes.store_checkout') },
-      { id: 'order_eat', icon: '🛵', title: t('speakThemes.order_eat') },
-      { id: 'consultation_talk', icon: '💬', title: t('speakThemes.consultation_talk') }
-    ]
-  },
-  {
-    id: 'travel_transport',
-    title: t('speakTopics.transport'),
-    themes: [
-      { id: 'train_station', icon: '🚉', title: t('speakThemes.train_station') },
-      { id: 'train_ticket', icon: '🎫', title: t('speakThemes.train_ticket') },
-      { id: 'taxi_berlin', icon: '🚖', title: t('speakThemes.taxi_berlin') },
-      { id: 'bus_talk', icon: '🚖', title: t('speakThemes.bus_talk') },
-      { id: 'hotel_checkin', icon: '🏨', title: t('speakThemes.hotel_checkin') },
-      { id: 'border_check', icon: '🛂', title: t('speakThemes.border_check') },
-      { id: 'airport_talk', icon: '✈️', title: t('speakThemes.airport_talk') },
-      { id: 'info_talk', icon: 'ℹ️', title: t('speakThemes.info_talk') }
-    ]
-  },
-  {
-    id: 'city_life',
-    title: t('speakTopics.city'),
-    themes: [
-      { id: 'bank_account', icon: '💳', title: t('speakThemes.bank_account') },
-      { id: 'apartment_rent', icon: '🏠', title: t('speakThemes.apartment_rent') },
-      { id: 'clothes_shopping', icon: '🛍️', title: t('speakThemes.clothes_shopping') },
-      { id: 'shopping', icon: '📦', title: t('speakThemes.shopping') },
-      { id: 'post_office', icon: '📮', title: t('speakThemes.post_office') },
-      { id: 'police_talk', icon: '👮', title: t('speakThemes.police_talk') },
-      { id: 'barbershop', icon: '💈', title: t('speakThemes.barbershop') }
-    ]
-  },
-  {
-    id: 'health',
-    title: t('speakTopics.health'),
-    themes: [
-      { id: 'doctor_visit', icon: '🩺', title: t('speakThemes.doctor_visit') },
-      { id: 'pharmacy_vitamins', icon: '💊', title: t('speakThemes.pharmacy_vitamins') },
-      { id: 'insurance', icon: '📄', title: t('speakThemes.insurance') },
-      { id: 'at_doctor', icon: '🏥', title: t('speakThemes.at_doctor') },
-      { id: 'dentist', icon: '🦷', title: t('speakThemes.dentist') },
-      { id: 'veterinary', icon: '🐾', title: t('speakThemes.veterinary') }
-    ]
-  },
-  {
-    id: 'work_career',
-    title: t('speakTopics.work'),
-    themes: [
-      { id: 'job_looking', icon: '🔍', title: t('speakThemes.job_looking') },
-      { id: 'job_interview', icon: '📋', title: t('speakThemes.job_interview') },
-      { id: 'bos_talk', icon: '💼', title: t('speakThemes.bos_talk') },
-      { id: 'vacation', icon: '🏖️', title: t('speakThemes.vacation') },
-      { id: 'salary_talk', icon: '💰', title: t('speakThemes.salary_talk') },
-      { id: 'dismissal_talk', icon: '🚪', title: t('speakThemes.dismissal_talk') },
-    ]
-  }
-];
+
+const getCompletedCount = (category) => {
+  return category.themes.filter(theme => speakStore.userProgress[theme.id]).length;
+};
 
 const goToSession = (themeId) => {
   router.push({ path: '/speak-practice/session', query: { theme: themeId } });
@@ -236,6 +163,12 @@ onMounted(() => {
   height: 100%;
   overflow-y: auto;
   padding-bottom: 100px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.speak__content-inner::-webkit-scrollbar {
+  display: none;
 }
 
 .categories-container {
@@ -243,7 +176,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .category-group {
@@ -257,7 +190,7 @@ onMounted(() => {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 
 .category-group__title {
@@ -287,14 +220,63 @@ onMounted(() => {
   padding: 5px 20px 15px 20px;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+
+  /* Прячем скроллбар по умолчанию для мобилок (горизонтальный) */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .themes-slider::-webkit-scrollbar {
   display: none;
 }
-.themes-slider {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+
+@media (hover: hover) and (pointer: fine) {
+  .themes-slider {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
+
+  .themes-slider::-webkit-scrollbar {
+    display: block;
+    height: 6px;
+  }
+
+  .themes-slider::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  .themes-slider::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 10px;
+  }
+
+  .themes-slider::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8;
+  }
+  .speak__content-inner {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
+
+  .speak__content-inner::-webkit-scrollbar {
+    display: block;
+    width: 6px;
+  }
+
+  .speak__content-inner::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  .speak__content-inner::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 10px;
+  }
+
+  .speak__content-inner::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8;
+  }
 }
 
 .theme-card {
@@ -383,14 +365,14 @@ onMounted(() => {
 .card__btn {
   width: 100%;
   padding: 8px 0;
-  border-radius: 12px;
+  border-radius: 42px;
   border: none;
   font-weight: bold;
   font-size: 13px;
   cursor: pointer;
   color: #fff;
   background-color: #58cc02;
-  box-shadow: 0 4px 0 #58a700;
+  box-shadow: 0 5px 0 #58a700;
   transition: all 0.2s ease;
   pointer-events: none;
 }

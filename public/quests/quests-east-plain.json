@@ -83,8 +83,7 @@
         "options": [
           "Tschüss",
           "Guten Tag!",
-          "Danke",
-          "wie geht's"
+          "Danke"
         ],
         "answer": "Tschüss"
       },
@@ -114,8 +113,7 @@
           "Hallo",
           "danke",
           "wie geht's",
-          "gut",
-          "sehr"
+          "gut"
         ],
         "correctOrder": [
           "Hallo",
@@ -143,8 +141,7 @@
         "options": [
           "gut",
           "sehr gut",
-          "danke",
-          "Hallo"
+          "danke"
         ],
         "answer": "sehr gut"
       },
@@ -154,7 +151,6 @@
         "question": "eastPlainFirstQuests.questThirteen",
         "options": [
           "Auf Wiedersehen",
-          "Tschüss",
           "danke",
           "Hallo",
           "wie geht's"
@@ -181,7 +177,7 @@
         "id": 14,
         "type": "speechToText",
         "question": "eastPlainFirstQuests.questFifteen",
-        "text": "Hallo! wie geht's? sehr gut, danke ",
+        "text": "Hallo! wie geht's? sehr gut, danke",
         "answer": "Hallo! wie geht's? sehr gut, danke"
       }
     ]

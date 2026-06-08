@@ -1,5 +1,4 @@
 {
-
   "definiteIndefiniteQuestOne": {
     "title": "Batalla por las terminaciones",
     "description": "Práctica mixta: artículos indefinidos y definidos en oraciones.",
@@ -525,11 +524,6 @@
     "questFifteen": "Elige la opción correcta: Fue un día hermoso",
     "questFifteenTip": "Artículo indefinido (primera vez). Género masculino (der). El artículo 'ein' está vacío, por lo que el adjetivo toma del artículo 'der' la terminación -er."
   },
-
-
-
-
-
   "secretLandsQuestOne": {
     "title": "Resultado",
     "description": "Entrenamiento mixto: trabajo con el artículo indefinido en Perfekt y Futur 1. Temas: vida cotidiana, ciudad, transporte, comida.",
@@ -1055,12 +1049,6 @@
     "questFifteen": "Arma la frase: Veremos una exposición interesante",
     "questFifteenTip": "Exposición — género femenino (die). El artículo 'eine' termina en -e, por lo que el adjetivo toma del artículo la terminación -e."
   },
-
-
-
-
-
-
   "edgeImagesQuestOne": {
     "title": "Inicio",
     "description": "Practicamos la declinación correcta de los adjetivos después de der, die, das.",
@@ -1586,15 +1574,6 @@
     "questFifteen": "Escribe la forma (lecker): Ich werde die ___ Pizza essen.",
     "questFifteenTip": "Acusativo (femenino): el artículo 'die' es básico, el adjetivo toma del artículo la terminación -e."
   },
-
-
-
-
-
-
-
-
-
   "timeGageQuestOne": {
     "title": "Conocerse y comunicarse",
     "description": "Practicamos la gramática en situaciones de comunicación: desde planes de reunión hasta historias sobre el pasado.",
@@ -2099,7 +2078,6 @@
     "questFifteen": "Compraré una entrada si tengo tiempo.",
     "questFifteenTip": "'Wenn' pone el verbo al final."
   },
-
   "pastValleyQuestOne": {
     "title": "Fundamentos de Perfekt",
     "description": "¿Qué has hecho? Conocemos el tiempo pasado: 'He comprado', 'Hemos hecho'.",
@@ -2437,7 +2415,6 @@
     "questFourteenTip": "singen — verbo fuerte. Se añade ge- y se mantiene -en. Cambio de vocal (i por u).",
     "questFifteen": "Elige: Hice deporte."
   },
-
   "actionValleyQuestOne": {
     "title": "A mí, a ti, a él",
     "description": "Practicamos el Dativ con los pronombres personales. ¿A quién ayudamos y a quién regalamos?",
@@ -2804,7 +2781,6 @@
     "questFifteen": "Elige: ¿Con quién hablas?",
     "questFifteenTip": "Para personas usa preposición + pregunta (Mit wem?)."
   },
-
   "pluralLandQuestOne": {
     "title": "Viaje",
     "description": "Planificamos un viaje usando Futur I. Aprendemos a conectar tiempo, lugar y acción.",
@@ -3106,8 +3082,6 @@
     "questFourteen": "Construye: No olvidaremos la fiesta.",
     "questFifteen": "Elige la opción correcta"
   },
-
-
   "orderValleyQuestOne": {
     "title": "¡El verbo al final!",
     "description": "Practicamos el orden de las palabras en las oraciones subordinadas. Regla principal: el verbo se va al puro final.",
@@ -3511,9 +3485,6 @@
     "questFifteen": "Escucha и escribe la oración",
     "questFifteenTip": "La negación en 'es gibt' es 'kein'. Tras 'dass' el verbo 'gibt' huye al puro final."
   },
-
-
-
   "pwa": {
     "title": "Instala Skillupgerman",
     "sub": "¡Añade la aplicación a tu pantalla de inicio para un acceso rápido!",
@@ -10287,5 +10258,44 @@
     "triggerToastNotFound": "No se encontraron suscripciones activas",
     "triggerToastError": "Error al restaurar",
     "triggerToastIsPlus": "¡Ya tienes PLUS activo!"
+  },
+  "examSession": {
+    "ready": "¿Listo para la prueba?",
+    "cardTextOne": "Te esperan",
+    "cardTextTwo": "etapas y",
+    "cardTextThree": "tareas.",
+    "begin": "Comenzar prueba",
+    "listen": "Escucha el audio:",
+    "check": "Comprobando...",
+    "send": "Enviar respuesta",
+    "record": "Grabar",
+    "great": "¡Felicidades!",
+    "result": "Tu resultado para el nivel",
+    "save": "Guardando progreso...",
+    "correctly": "Correcto:",
+    "back": "Volver",
+    "interrupt": "¿Interrumpir la prueba?",
+    "modalText": "El progreso de este intento se perderá. ¿Estás seguro?",
+    "continue": "Continuar",
+    "leave": "Salir"
+  },
+  "speakSession": {
+    "title": "Práctica de conversación",
+    "words": "Vocabulario para el diálogo",
+    "wordsText": "Aprende o repasa las palabras antes de empezar a hablar. ¡Esto te ayudará a tener más confianza!",
+    "learn": "Comenzar",
+    "dialogue": "Diálogo",
+    "dialogueText": "Practica la pronunciación y la expresión oral, escucha a tu interlocutor y elige las respuestas en un formato interactivo.",
+    "back": "Atrás",
+    "goodJob": "¡Buen trabajo!",
+    "goodJobTitle": "Has completado este diálogo. ¡Sigue así!",
+    "list": "Volver",
+    "repeat": "Repetir",
+    "start": "Comenzar a aprender",
+    "choice": "Elige una respuesta:",
+    "placeHolder": "Escribe o di la respuesta...",
+    "hoverVoice": "Decir por voz",
+    "end": "Terminar",
+    "further": "Siguiente"
   }
 }
