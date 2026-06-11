@@ -3599,7 +3599,9 @@
     "streak": "G‘alabalar seriyasi",
     "clearWins": "Toza g‘alabalar",
     "start": "O‘yinni boshlash",
-    "info": "Statistikani ko‘rish uchun darajani bosing."
+    "info": "Statistikani ko‘rish uchun darajani bosing.",
+    "answer-placeholder": "Gapni tuzing...",
+    "pending": "Kutilmoqda..."
   },
   "eventSessionPage": {
     "loading": "Yuklanmoqda…",
@@ -10272,7 +10274,9 @@
     "interrupt": "Testni to'xtatish?",
     "modalText": "Ushbu urinishdagi natijalar yo'qoladi. Ishonchingiz komilmi?",
     "continue": "Davom etish",
-    "leave": "Chiqish"
+    "leave": "Chiqish",
+    "placeHolder": "Javobingizni bu yerga yozing...",
+    "say": "Ayting:"
   },
   "speakSession": {
     "title": "Muloqot amaliyoti",
@@ -10292,5 +10296,16 @@
     "hoverVoice": "Ovozli aytish",
     "end": "Yakunlash",
     "further": "Keyingi"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "Yana urinib ko'rasizmi?",
+    "textPartOne": "Siz to'g'ri javob berdingiz",
+    "textPartTwo": "Davom etish uchun urinish sotib oling.",
+    "price": "Narxi:",
+    "youHave": "Sizda bor:",
+    "showADS": "Reklama ko'rish",
+    "buyBy": "Sotib olish",
+    "toThemes": "Mavzularga",
+    "repeat": "Takrorlash"
   }
 }

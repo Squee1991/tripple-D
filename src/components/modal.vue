@@ -15,7 +15,7 @@
             <p class="modal-text" v-if="text">{{ text }}</p>
             <p class="modal-text" v-if="description">{{ description }}</p>
             <button class="btn-game btn-yellow" v-if="button" @click="$emit('button')">
-              {{ button.label || button }}
+              {{ button }}
             </button>
           </div>
         </div>
@@ -154,9 +154,9 @@ const props = defineProps({
 
 .btn-yellow {
   background: #facc15;
-  border: 3px solid #ca8a04;
+  border: none;
   box-shadow: 0 6px 0 #a16207;
-  color: #451a03;
+  color: #333232;
 }
 
 .btn-yellow:active {

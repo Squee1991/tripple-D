@@ -539,7 +539,7 @@ onMounted(async () => {
 .cabinet-wrapper {
   height: 100%;
   font-family: "Nunito", sans-serif;
-  padding: 10px;
+  padding: 5px 10px 10px 10px;
   overflow: hidden;
 }
 
@@ -570,8 +570,8 @@ onMounted(async () => {
 .sidebar-panel {
   padding: 16px;
   border-radius: 26px;
-  border: 3px solid #000;
-  box-shadow: 6px 6px 0 #000;
+  border: 2px solid var(--tabBg);
+  box-shadow: var(--boxShadowMobile);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -626,11 +626,14 @@ onMounted(async () => {
 .modal-title {
   margin-bottom: 10px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 24px;
+  color: var(--titleColor);
 }
 
 .modal-text {
   margin-bottom: 20px;
+  font-size: 16px;
+  color: var(--titleColor);
 }
 
 .nav-container {
@@ -786,7 +789,7 @@ onMounted(async () => {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, .5);
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .modal-card {
@@ -834,7 +837,7 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .avatar-modal-content {
@@ -1072,7 +1075,7 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 5px;
+  gap: 8px;
 }
 
 .custom-progress {
@@ -1113,7 +1116,7 @@ onMounted(async () => {
   background: #8868db;
   border: none;
   border-radius: 10px;
-  padding: 6px 14px;
+  padding: 4px 12px;
   color: white;
   font-size: 20px;
   font-weight: 700;

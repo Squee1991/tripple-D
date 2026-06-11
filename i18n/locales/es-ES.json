@@ -3601,7 +3601,9 @@
     "streak": "Racha de victorias",
     "clearWins": "Victorias limpias",
     "start": "Iniciar juego",
-    "info": "Haz clic en un nivel para ver sus estadísticas."
+    "info": "Haz clic en un nivel para ver sus estadísticas.",
+    "answer-placeholder": "Arma la frase...",
+    "pending": "Espera..."
   },
   "eventSessionPage": {
     "loading": "Cargando…",
@@ -10277,7 +10279,9 @@
     "interrupt": "¿Interrumpir la prueba?",
     "modalText": "El progreso de este intento se perderá. ¿Estás seguro?",
     "continue": "Continuar",
-    "leave": "Salir"
+    "leave": "Salir",
+    "placeHolder": "Escribe tu respuesta aquí...",
+    "say": "Di:"
   },
   "speakSession": {
     "title": "Práctica de conversación",
@@ -10297,5 +10301,16 @@
     "hoverVoice": "Decir por voz",
     "end": "Terminar",
     "further": "Siguiente"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "¿Intentar de nuevo?",
+    "textPartOne": "Respondiste correctamente",
+    "textPartTwo": "Compra un intento para continuar.",
+    "price": "Precio:",
+    "youHave": "Tienes:",
+    "showADS": "Ver anuncio",
+    "buyBy": "Comprar por",
+    "toThemes": "A los temas",
+    "repeat": "Repetir"
   }
 }

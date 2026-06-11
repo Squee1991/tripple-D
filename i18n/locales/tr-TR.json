@@ -3610,7 +3610,9 @@
     "streak": "Galibiyet serisi",
     "clearWins": "Net galibiyetler",
     "start": "Oyunu başlat",
-    "info": "İstatistiklerini görmek için bir seviyeye tıkla."
+    "info": "İstatistiklerini görmek için bir seviyeye tıkla.",
+    "answer-placeholder": "Cümleyi kurun...",
+    "pending": "Bekleniyor..."
   },
   "eventSessionPage": {
     "loading": "Yükleniyor…",
@@ -10286,7 +10288,9 @@
     "interrupt": "Testi yarıda kes?",
     "modalText": "Bu denemedeki ilerlemeniz kaybolacak. Emin misiniz?",
     "continue": "Devam et",
-    "leave": "Çıkış yap"
+    "leave": "Çıkış yap",
+    "placeHolder": "Cevabınızı buraya yazın...",
+    "say": "Söyleyin:"
   },
   "speakSession": {
     "title": "Konuşma pratiği",
@@ -10306,5 +10310,16 @@
     "hoverVoice": "Sesli söyle",
     "end": "Bitir",
     "further": "İleri"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "Tekrar dene?",
+    "textPartOne": "Doğru cevap verdiniz",
+    "textPartTwo": "Devam etmek için bir hak satın alın.",
+    "price": "Fiyat:",
+    "youHave": "Sahip olduğunuz:",
+    "showADS": "Reklam izle",
+    "buyBy": "Şunun için satın al",
+    "toThemes": "Konulara dön",
+    "repeat": "Tekrar et"
   }
 }

@@ -1,15 +1,11 @@
 <script setup>
-import {ref, computed, onMounted} from 'vue'
-import {useRouter, useRoute} from 'vue-router'
-import {useDuelStore} from '../store/sentenceDuelStore.js'
-import {useLocalStatGameStore} from '../store/localSentenceStore.js'
-import {useSeoMeta} from "#imports";
+import { ref, computed, onMounted } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+import { useDuelStore } from '../store/sentenceDuelStore.js'
+import { useLocalStatGameStore } from '../store/localSentenceStore.js'
+import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
 
-useSeoMeta({
-  robots: 'noindex, nofollow'
-})
-
-const {t} = useI18n()
+const { t } = useI18n()
 const router = useRouter()
 const route = useRoute()
 const gameStore = useDuelStore()
@@ -20,78 +16,108 @@ const totalRounds = ref(8)
 const currentRound = ref(0)
 const scrambledWords = ref([])
 const currentQuestion = computed(() => tasks.value[currentRound.value])
-const answer = ref('')
+const answer = ref([])
 const finished = ref(false)
 const correctAnswers = ref(0)
 const showCountdown = ref(true)
 const countdown = ref(3)
-
+const showModal = ref(false)
 const isAnswerChecked = ref(false)
 const feedback = ref(null)
 
-async function checkAnswer() {
-  if (!answer.value) return;
-  isAnswerChecked.value = true;
+const cancelExit = () =>{
+  showModal.value = false
+}
 
-  const userAnswer = answer.value.trim().toLowerCase()
+const confirmExit = () =>{
+  showModal.value = false
+  router.push('/sentence-duel')
+}
+
+const restartDialogue = () => {
+  currentRound.value = 0
+  correctAnswers.value = 0
+  answer.value = []
+  feedback.value = null
+  isAnswerChecked.value = false
+  finished.value = false
+  setScrambled()
+}
+
+async function checkAnswer() {
+  if (answer.value.length === 0) return
+  isAnswerChecked.value = true
+
+  const userAnswer = answer.value.join(' ').trim().toLowerCase()
   const correctAnswer = currentQuestion.value.answer.trim().toLowerCase()
 
   if (userAnswer === correctAnswer) {
-    feedback.value = 'correct';
-    correctAnswers.value++;
+    feedback.value = 'correct'
+    correctAnswers.value++
     await statStore.incrementConstructedSentences()
   } else {
-    feedback.value = 'incorrect';
+    feedback.value = 'incorrect'
   }
 }
 
-
 async function waitForNextQuestion(timeout = 1000) {
-  const start = Date.now();
+  const start = Date.now()
   while (!currentQuestion.value && Date.now() - start < timeout) {
-    await new Promise(resolve => setTimeout(resolve, 20));
+    await new Promise(resolve => setTimeout(resolve, 20))
   }
 }
 
 function proceedToNextRound() {
   if (currentRound.value < totalRounds.value - 1) {
-    currentRound.value++;
-    answer.value = '';
-    feedback.value = null;
-    isAnswerChecked.value = false;
+    currentRound.value++
+    answer.value = []
+    feedback.value = null
+    isAnswerChecked.value = false
     waitForNextQuestion().then(() => {
-      setScrambled();
-    });
+      setScrambled()
+    })
   } else {
-    finished.value = true;
+    finished.value = true
   }
 }
 
 function setScrambled() {
-  if (!currentQuestion.value || !currentQuestion.value.question) return;
-  const words = currentQuestion.value.question.split(' ');
-  scrambledWords.value = words.filter(w => w).sort(() => Math.random() - 0.5);
+  if (!currentQuestion.value || !currentQuestion.value.question) return
+  const words = currentQuestion.value.question.split(' ')
+  scrambledWords.value = words.filter(w => w).sort(() => Math.random() - 0.5)
 }
 
-function addWord(word) {
-  if (isAnswerChecked.value && feedback.value === 'correct') return;
-  if (answer.value) answer.value += ' ' + word
-  else answer.value = word
+function addWord(word, index) {
+  if (isAnswerChecked.value && feedback.value === 'correct') return
+
+  if (feedback.value === 'incorrect') {
+    feedback.value = null
+    isAnswerChecked.value = false
+  }
+
+  answer.value.push(word)
+  scrambledWords.value.splice(index, 1)
 }
 
-function clearAnswer() {
-  answer.value = '';
-  isAnswerChecked.value = false;
-  feedback.value = null;
+function removeWord(index) {
+  if (isAnswerChecked.value && feedback.value === 'correct') return
+
+  if (feedback.value === 'incorrect') {
+    feedback.value = null
+    isAnswerChecked.value = false
+  }
+
+  const word = answer.value[index]
+  answer.value.splice(index, 1)
+  scrambledWords.value.push(word)
 }
 
 onMounted(async () => {
-  console.log('gameStore:', Object.keys(gameStore))
   await gameStore.loadLocalTasks(level)
   try {
     await statStore.loadLocalStats()
   } catch (e) {
-    console.warn("Ошибка при загрузке статистики:", e.message)
+    console.warn(e.message)
   }
 
   tasks.value = gameStore.localTasks.map(sentence => {
@@ -104,10 +130,7 @@ onMounted(async () => {
 
   if (tasks.value.length > 0) {
     setScrambled()
-  } else {
-    console.error("")
   }
-
   let n = 3
   countdown.value = n
   showCountdown.value = true
@@ -121,11 +144,15 @@ onMounted(async () => {
     }
   }, 1000)
 })
-
 </script>
 
 <template>
   <div>
+    <VStopSessionModal
+        :show="showModal"
+        @cancel="cancelExit"
+        @confirm="confirmExit"
+    />
     <div v-if="showCountdown" class="countdown-overlay">
       <div class="countdown-content">
         <p v-if="countdown > 0" class="countdown-number">{{ countdown }}</p>
@@ -135,48 +162,72 @@ onMounted(async () => {
     <div class="game-page-wrapper">
       <div class="game-container">
         <div v-if="!finished" class="game-board">
-          <div class="round-counter">
-            {{ t('wordDuelSession.round') }} {{ currentRound + 1 }} / {{ totalRounds }}
-          </div>
-          <div class="word-pool">
-            <button v-for="(word, i) in scrambledWords" :key="i" @click="addWord(word)" class="word-button"
-                    :disabled="isAnswerChecked && feedback === 'correct'">
-              {{ word }}
+          <div class="duel__header">
+            <button class="btn-icon-back" @click="showModal = true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                   stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
             </button>
+            <div class="custom-progress">
+              <div class="progress_exp-bar">
+                <div class="progress__bar" :style="{ width: `${((currentRound + 1) / totalRounds) * 100}%` }">
+                  <div class="glare"></div>
+                </div>
+              </div>
+            </div>
+            <div class="progress-circle">
+              {{ currentRound + 1 }} / {{ totalRounds }}
+            </div>
           </div>
-          <div class="answer-section">
-            <input type="text" v-model="answer" readonly
-                   :class="{ 'correct-answer': feedback === 'correct', 'incorrect-answer': feedback === 'incorrect' }">
-            <button @click="clearAnswer" class="btn btn-clear"
-                    :disabled="isAnswerChecked && feedback === 'correct'">{{ t('wordDuelSession.clear') }}
-            </button>
-          </div>
-          <div v-if="isAnswerChecked" class="feedback-container">
-            <p v-if="feedback === 'correct'" class="feedback correct">✔ {{ t('prasens.correct') }}</p>
-            <p v-if="feedback === 'incorrect'" class="feedback incorrect">✖ {{ t('prasens.tryAgain') }}</p>
-          </div>
-          <div class="actions-container">
-            <button class="btn btn-leave" @click="router.back()">
-              {{ t('wordDuelSession.leaveBtn') }}
-            </button>
-            <button v-if="!isAnswerChecked" class="btn btn-check" @click="checkAnswer">{{ t('prasens.check') }}</button>
-            <button v-if="isAnswerChecked && feedback === 'correct'" class="btn btn-next"
-                    @click="proceedToNextRound">{{ t('prasens.further') }}
-            </button>
-          </div>
-        </div>
-        <div v-else class="results-board">
-          <div class="result-icon">🏆</div>
-          <h3 class="result-title">{{ t('wordDuelSession.end') }}</h3>
-          <p class="result-subtitle">{{ t('trainerPage.result') }} {{ correctAnswers }} / {{
-              totalRounds
-            }}</p>
-          <div class="result-actions">
-            <button class="btn" @click="router.back()">{{ t('trainerPage.toMain') }}</button>
+          <div class="board__wrapper">
+            <div class="answer-section" :class="{ 'correct-answer': feedback === 'correct', 'incorrect-answer': feedback === 'incorrect' }">
+              <div v-if="answer.length === 0" class="placeholder-text"></div>
+              <button v-for="(word, index) in answer" :key="index" @click="removeWord(index)" class="answer-word"
+                      :disabled="isAnswerChecked && feedback === 'correct'">
+                {{ word }}
+              </button>
+            </div>
+            <div class="word-pool">
+              <button v-for="(word, i) in scrambledWords" :key="i" @click="addWord(word, i)" class="word-button"
+                      :disabled="isAnswerChecked && feedback === 'correct'">
+                {{ word }}
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div v-if="!finished" class="actions-wrapper" :class="feedback">
+      <div class="actions-container">
+        <div v-if="isAnswerChecked" class="feedback-text">
+          <p v-if="feedback === 'correct'" class="feedback correct slide-up">✔ {{ t('prasens.correct') }}</p>
+          <p v-if="feedback === 'incorrect'" class="feedback incorrect shake">✖ {{ t('prasens.tryAgain') }}</p>
+        </div>
+        <button v-if="!isAnswerChecked || feedback === 'incorrect'" class="btn btn-check" @click="checkAnswer">
+          {{ t('prasens.check') }}
+        </button>
+        <button v-if="isAnswerChecked && feedback === 'correct'" class="btn btn-next slide-up" @click="proceedToNextRound">
+          {{ t('prasens.further') }}
+        </button>
+      </div>
+    </div>
+    <Transition name="slide-up">
+      <div v-if="finished" class="completion-overlay">
+        <div class="completion-modal">
+          <h2>{{ t('speakSession.goodJob')}}</h2>
+          <p>{{ t('Вы завершили это задание')}}</p>
+          <div class="completion-overlay_icon">
+            <img src="../assets/images/GoodJobIcon.svg" alt="success_icon">
+          </div>
+          <div class="completion-actions">
+            <button class="btn-primary" @click="confirmExit">{{ t('speakSession.list')}}</button>
+            <button class="btn-secondary" @click="restartDialogue">{{ t('speakSession.repeat')}}</button>
+          </div>
+        </div>
+      </div>
+    </Transition>
   </div>
 </template>
 
@@ -197,49 +248,47 @@ onMounted(async () => {
   color: #fff
 }
 
+.board__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+}
+
+.duel__header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 5px 10px 15px 10px;
+  gap: 10px;
+}
+
 @keyframes countdown-pulse {
-  0% {
-    transform: scale(.8);
-    opacity: 0
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 1
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1
-  }
+  0% { transform: scale(.8); opacity: 0 }
+  50% { transform: scale(1.2); opacity: 1 }
+  100% { transform: scale(1); opacity: 1 }
 }
 
 @keyframes start-fade-out {
-  0% {
-    transform: scale(1);
-    opacity: 1
-  }
-  100% {
-    transform: scale(1.5);
-    opacity: 0
-  }
+  0% { transform: scale(1); opacity: 1 }
+  100% { transform: scale(1.5); opacity: 0 }
 }
 
 .countdown-number {
-  font-family: 'Fredoka One', cursive;
-  font-size: 15rem;
+  font-family: Nunito, sans-serif;
+  font-size: 4rem;
   font-weight: 800;
   animation: countdown-pulse .9s ease-out
 }
 
 .countdown-number.start {
-  font-size: 8rem;
+  font-size: 4rem;
   animation: start-fade-out .5s ease-in forwards
 }
 
 .game-page-wrapper {
-  background-color: #FDF8F0;
-  min-height: 100vh;
+  min-height: 100%;
   font-family: 'Nunito', sans-serif;
-  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,46 +300,70 @@ onMounted(async () => {
 }
 
 .game-board {
-  background: #fff;
-  border-radius: 24px;
-  padding: 2rem 3rem;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0 #1e1e1e;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
   position: relative;
+  padding-bottom: 140px;
 }
 
 .results-board {
   text-align: center;
 }
 
-.round-counter {
-  background-color: rgba(251, 226, 166, 0.8);
-  padding: 8px 20px;
-  border-radius: 12px;
-  font-weight: 700;
-  color: #3A3A3A;
-  border: 2px solid #1e1e1e;
-  margin-bottom: 1rem;
+.custom-progress {
+  position: relative;
+  width: 100%;
+}
+
+.progress_exp-bar {
+  flex: 1;
+  height: 28px;
+  background: #e8eae5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress__bar {
+  height: 100%;
+  background-color: #10b981;
+  border-radius: 8px;
+  transition: width 0.4s ease-out;
+  position: relative;
+}
+
+.glare {
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  border-radius: 4px;
+}
+
+.progress-circle {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--titleColor);
+  white-space: nowrap;
+  z-index: 2;
 }
 
 .word-pool {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 8px;
   justify-content: center;
 }
 
 .word-button {
-  padding: 12px 20px;
-  font-size: 1.3rem;
+  padding: 10px;
+  font-size: 16px;
   font-weight: 700;
   border-radius: 12px;
-  border: 2px solid #1e1e1e;
-  box-shadow: 2px 2px 0 #1e1e1e;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   background-color: #fff;
   cursor: pointer;
   transition: all .1s ease-in-out;
@@ -298,8 +371,7 @@ onMounted(async () => {
 
 .word-button:hover:not(:disabled) {
   transform: translate(2px, 2px);
-  box-shadow: 0  0 0 #1e1e1e;
-  background-color: #FFD24B;
+  box-shadow: 0 0 0 #1e1e1e;
 }
 
 .word-button:disabled {
@@ -309,61 +381,112 @@ onMounted(async () => {
 
 .answer-section {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   width: 100%;
-  padding: 1rem;
+  min-height: 80px;
+  padding: 8px;
+  margin-bottom: 15px;
   border-radius: 16px;
-  border: 3px dashed #ccc;
-}
-
-.answer-section input {
-  width: 100%;
-  flex-grow: 1;
-  border: none;
-  background: #f0f0f0;
-  padding: 15px;
-  border-radius: 12px;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #3A3A3A;
-  text-align: center;
+  background: white;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   transition: all 0.2s ease;
 }
 
-.answer-section input:focus {
-  outline: none;
+.placeholder-text {
+  color: #a0a6b1;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
-.answer-section input.correct-answer {
-  background-color: #d4edda;
-  color: #155724;
+.answer-word {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  background-color: #fff;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
 }
 
-.answer-section input.incorrect-answer {
+.answer-word:hover:not(:disabled) {
   background-color: #f8d7da;
-  color: #721c24;
+  transform: scale(0.95);
 }
 
-.feedback-container {
-  min-height: 30px;
-  text-align: center;
+.answer-word:disabled {
+  cursor: default;
+  opacity: 0.9;
+}
+
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  border-radius: 12px;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-icon-back:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
+}
+
+.actions-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  transition: background-color 0.3s ease;
+  z-index: 100;
+}
+
+.actions-wrapper.correct {
+  background-color: #d4edda;
+  border-top: 3px solid #2E7D32;
+}
+
+.actions-wrapper.incorrect {
+  background-color: #f8d7da;
+  border-top: 2px solid #C62828;
+}
+
+.actions-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 15px 20px;
+  padding-bottom: calc(15px + env(safe-area-inset-bottom));
+}
+
+.feedback-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .feedback {
   font-size: 1.5rem;
   font-weight: bold;
-  animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  margin: 0;
 }
 
 .feedback.correct {
@@ -374,92 +497,141 @@ onMounted(async () => {
   color: #C62828;
 }
 
-.actions-container {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
-}
-
 .btn {
-  padding: 12px 28px;
-  font-size: 1.2rem;
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 18px;
   font-weight: 700;
-  border-radius: 14px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  border-radius: 50px;
+  border: none;
   cursor: pointer;
-  transition: all .1s ease-in-out;
-}
-
-.btn:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1e1e1e;
-}
-
-.btn-leave {
-  background-color: #f1f1f1;
-  color: #555;
-}
-
-.btn-clear {
-  background-color: #f8d7da;
-}
-
-.btn-clear:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+  color: #ffffff;
+  transition: transform 0.1s, box-shadow 0.1s;
 }
 
 .btn-check {
-  background-color: #FFD24B;
+  background-color: #3b82f6;
+  box-shadow: 0 5px 0 #2563eb;
+}
+
+.actions-wrapper.incorrect .btn-check {
+  background-color: #ef4444;
+  box-shadow: 0 5px 0 #dc2626;
 }
 
 .btn-next {
   background-color: #4ade80;
+  box-shadow: 0 5px 0 #12a647;
 }
 
-.result-icon {
-  font-size: 4rem
+.btn:active {
+  transform: translateY(2px);
 }
 
-.result-title {
-  font-size: 2.5rem;
-  margin: 1rem 0;
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: transform 0.3s ease-in-out;
 }
 
-.result-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
 }
 
-.result-actions .btn {
-  margin: 0 auto;
-  background: #FFD24B;
+.slide-up-enter-to,
+.slide-up-leave-from {
+  transform: translateY(0);
+  opacity: 1;
 }
 
-@media (max-width: 767px) {
-  .answer-section {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    border: none;
-  }
-  .game-board {
-    padding: 20px 8px
-  }
-  .answer-section input {
-    padding: 12px 6px;
-    font-size: 0.9rem;
-  }
-  .word-button {
-    padding: 10px;
-    font-size: 1rem;
-  }
-  .btn-clear {
-    max-width: 200px;
-  }
+.completion-overlay_icon {
+  width: 140px;
+  margin-bottom: 20px;
+}
 
+.completion-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 150;
+  pointer-events: none;
+}
+
+.completion-modal {
+  background: var(--bgModal, #ffffff);
+  border-radius: 24px 24px 0 0 ;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 768px;
+  text-align: center;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  border-top: 3px solid whitesmoke;
+  pointer-events: auto;
+}
+
+.completion-modal h2 {
+  font-size: 27px;
+  color: var(--titleColor, #111827);
+  font-weight: 700;
+  margin: 0;
+}
+
+.completion-modal p {
+  font-size: 15px;
+  color: #6b7280;
+  margin: 0 0 10px 0;
+}
+
+.completion-actions {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  flex: 1;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 16px;
+  border: none;
+  background-color: #3b82f6;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #2563eb;
+  transition: transform 0.1s;
+}
+
+.btn-primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #2563eb;
+}
+
+.btn-secondary {
+  flex: 1;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 16px;
+  border: 2px solid var(--tabsSlideBorderColor, #e5e7eb);
+  background-color: #fff;
+  color: #374151;
+  cursor: pointer;
+  box-shadow: var(--boxShadowMobile);
+  transition: transform 0.1s;
+}
+
+.btn-secondary:active {
+  transform: translateY(2px);
 }
 </style>

@@ -7,8 +7,8 @@ android {
         applicationId "com.skillupgerman.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 95
-        versionName "1.0.95"
+        versionCode 103
+        versionName "1.0.103"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -43,12 +43,12 @@ dependencies {
 }
 
 apply from: 'capacitor.build.gradle'
-
-try {
+apply plugin: 'com.google.gms.google-services'
+/* try {
     def servicesJSON = file('google-services.json')
     if (servicesJSON.text) {
         apply plugin: 'com.google.gms.google-services'
     }
 } catch(Exception e) {
     logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
-}
+} */

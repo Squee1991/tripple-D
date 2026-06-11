@@ -24,6 +24,7 @@
   box-shadow: var(--boxShadowMobile);
   border-radius: 12px;
   width: 40px;
+  min-width: 40px;
   height: 40px;
   display: flex;
   align-items: center;

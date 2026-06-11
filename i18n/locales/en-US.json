@@ -3624,7 +3624,9 @@
     "streak": "Win streak",
     "clearWins": "Clean wins",
     "start": "Start game",
-    "info": "Click on a level to see its statistics."
+    "info": "Click on a level to see its statistics.",
+    "answer-placeholder": "Assemble the sentence...",
+    "pending": "Pending..."
   },
   "eventSessionPage": {
     "loading": "Loading…",
@@ -10300,7 +10302,9 @@
     "interrupt": "Interrupt the test?",
     "modalText": "The progress of this attempt will be lost. Are you sure?",
     "continue": "Continue",
-    "leave": "Exit"
+    "leave": "Exit",
+    "placeHolder": "Write your answer here...",
+    "say": "Say:"
   },
   "speakSession": {
     "title": "Speaking practice",
@@ -10320,5 +10324,16 @@
     "hoverVoice": "Speak",
     "end": "Finish",
     "further": "Next"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "Try again?",
+    "textPartOne": "You answered correctly",
+    "textPartTwo": "Buy an attempt to continue.",
+    "price": "Price:",
+    "youHave": "You have:",
+    "showADS": "Watch ad",
+    "buyBy": "Buy for",
+    "toThemes": "To topics",
+    "repeat": "Repeat"
   }
 }

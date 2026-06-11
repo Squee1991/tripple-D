@@ -576,7 +576,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   text-decoration: none;
   background: #3b82f6;
   color: #ffffff;
-  padding: 15px;
+  padding: 14px;
   border-radius: 54px;
   font-size: 20px;
   font-weight: 800;

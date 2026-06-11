@@ -402,85 +402,16 @@ export const userAuthStore = defineStore('auth', () => {
             alert(`❌ ОШИБКА ВХОДА APPLE:\n\n${errorDetail}`);
         }
     }
-
-    // const loginWithFacebook = async () => {
-    //     try {
-    //         const isNative = Capacitor.isNativePlatform();
-    //         let user;
-    //         if (isNative) {
-    //             const FACEBOOK_PERMISSIONS = ['email', 'public_profile'];
-    //             const result = await FacebookLogin.login({ permissions: FACEBOOK_PERMISSIONS });
-    //             if (!result.accessToken) {
-    //                 console.error('не вернул токен');
-    //                 return;
-    //             }
-    //             const credential = FacebookAuthProvider.credential(result.accessToken.token);
-    //             const authResult = await signInWithCredential(auth, credential);
-    //             user = authResult.user;
-    //         } else {
-    //             const provider = new FacebookAuthProvider();
-    //             const authResult = await signInWithPopup(auth, provider);
-    //             user = authResult.user;
-    //         }
-    //
-    //         const userDocRef = doc(db, 'users', user.uid);
-    //         const userDoc = await getDoc(userDocRef);
-    //
-    //         if (!userDoc.exists()) {
-    //             await setDoc(userDocRef, {
-    //                 ownedAvatars: ['1.png', '2.png'],
-    //                 name: user.displayName || 'User Facebook',
-    //                 email: user.email,
-    //                 registeredAt: serverTimestamp(),
-    //                 feedbackSurveyShownAt: null,
-    //                 avatar: '1.png',
-    //                 subscriptionEndsAt: null,
-    //                 subscriptionCancelled: false,
-    //                 gotPremiumBonus: false,
-    //                 voiceConsentGiven: false,
-    //                 hasSeenOnboarding: false,
-    //                 isPremium: false,
-    //                 totalHats: 0,
-    //                 points: 0,
-    //                 claimedBonuses: [],
-    //                 sale_5: false,
-    //                 sale_10: false,
-    //                 sale_15: false,
-    //                 ...createInitialAchievementsObject()
-    //             });
-    //         }
-    //
-    //         const finalDoc = await getDoc(userDocRef);
-    //         const userDataFromDb = finalDoc.data() || {};
-    //
-    //         setUserData({
-    //             name: user.displayName,
-    //             email: user.email,
-    //             registeredAt: user.metadata.creationTime,
-    //             uid: user.uid,
-    //             providerId: user.providerData[0]?.providerId || 'facebook.com',
-    //             ...userDataFromDb
-    //         });
-    //
-    //         await checkFeedbackSurveyEligibility();
-    //
-    //     } catch (error) {
-    //         if (isUserCancelledAuth(error)) return;
-    //         console.error('Ошибка входа через Facebook:', error);
-    //         alert(`Ошибка Facebook: ${error.message}`);
-    //     }
-    // }
-
     const loginWithGoogle = async () => {
         try {
             const isNative = Capacitor.isNativePlatform();
             let idToken = null;
             if (isNative) {
                 await GoogleSignIn.initialize({
-                    clientId: '516504654997-15ujeh34o8jc7hkbempel0t60qp0e43g.apps.googleusercontent.com',
+                    clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
                 });
                 const result = await GoogleSignIn.signIn({
-                    clientId: '516504654997-15ujeh34o8jc7hkbempel0t60qp0e43g.apps.googleusercontent.com',
+                    clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
                 });
                 idToken = result.idToken;
             } else {

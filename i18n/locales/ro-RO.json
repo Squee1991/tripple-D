@@ -3601,7 +3601,9 @@
     "streak": "Serie de victorii",
     "clearWins": "Victorii clare",
     "start": "Începe jocul",
-    "info": "Apasă pe nivel pentru a vedea statisticile acestuia."
+    "info": "Apasă pe nivel pentru a vedea statisticile acestuia.",
+    "answer-placeholder": "Formează propoziția...",
+    "pending": "În așteptare..."
   },
   "eventSessionPage": {
     "loading": "Se încarcă...",
@@ -10277,7 +10279,9 @@
     "interrupt": "Întrerupi testul?",
     "modalText": "Progresul acestei încercări va fi pierdut. Ești sigur?",
     "continue": "Continuă",
-    "leave": "Ieși"
+    "leave": "Ieși",
+    "placeHolder": "Scrie răspunsul tău aici...",
+    "say": "Spune:"
   },
   "speakSession": {
     "title": "Practică de vorbire",
@@ -10297,5 +10301,16 @@
     "hoverVoice": "Spune prin voce",
     "end": "Finalizează",
     "further": "Mai departe"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "Reîncerci?",
+    "textPartOne": "Ai răspuns corect",
+    "textPartTwo": "Cumpără o încercare pentru a continua.",
+    "price": "Preț:",
+    "youHave": "Ai:",
+    "showADS": "Vezi reclama",
+    "buyBy": "Cumpără cu",
+    "toThemes": "La teme",
+    "repeat": "Repetă"
   }
 }

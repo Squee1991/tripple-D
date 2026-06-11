@@ -4,7 +4,6 @@ import { userAuthStore } from '../store/authStore.js';
 
 let isAdProcessing = false;
 const AD_LIMIT_PER_DAY = 5;
-const authStore = userAuthStore();
 
 function getTodayKey() {
 	const today = new Date();
@@ -36,6 +35,7 @@ function recordSuccessfulView() {
 }
 
 export async function showInterstitial(nextStep) {
+	const authStore = userAuthStore();
 	if (authStore.isPremium) {
 		return nextStep();
 	}
