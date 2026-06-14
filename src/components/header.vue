@@ -2,9 +2,9 @@
   <header class="header" :class="{ 'mobile-menu-active': isMobileMenuOpen , 'is-rtl': isAr }">
     <div v-if="isMobileMenuOpen" class="mobile-nav-overlay" @click="isMobileMenuOpen = false"></div>
     <UiOverlay :visible="showAuth" @close="closeAuth"/>
-    <transition name="slide">
-      <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
-    </transition>
+<!--    <transition name="slide">-->
+<!--      <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>-->
+<!--    </transition>-->
     <ModalDev
         :visible="showDevModal"
         @close="closeDevModal"
@@ -15,108 +15,103 @@
         @button="onDevModalButton"
     />
     <div class="header-container">
-      <NuxtLink @click="click" to="/" class="logo" aria-label="German Corner — Home">
-        <span class="logo__name">skillup</span>
-        <NuxtImg
-            src="/images/logo/logo2.png"
-            alt="German Corner"
-            class="logo__img"
-            format="webp"
-            loading="eager"
-            fetchpriority="high"
-        />
-        <span class="logo__name">german</span>
-      </NuxtLink>
-      <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen, 'is-rtl': isAr }"
-           aria-label="Main">
-        <ul class="header-nav__list">
-          <li v-for="item in menuItems" :key="item.id" :id="item.id" class="header-nav__item">
-            <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">
-              {{ t(item.valueKey) }}
-            </NuxtLink>
-            <button v-else @click="handleMenuItemClick(item)" class="header-nav__link"
-                    :class="{'is-active-parent': clickedMenu === item.id}">
-              <span>{{ t(item.valueKey) }}</span>
-              <img
-                  v-if="item.children"
-                  :class="['header-nav__arrow', { 'rotated': clickedMenu === item.id }]"
-                  :src="Arrow"
-                  alt="Arrow__icon"
-              />
-            </button>
-            <ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">
-              <li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">
-                <NuxtLink v-if="child.url" :to="child.url" class="header-nav__submenu-link"
-                          @click="closeAllMenus">
-                  {{ t(child.valueKey) }}
-                </NuxtLink>
-                <button v-else class="header-nav__submenu-link"
-                        @click.stop="handleSubmenuItemClick(child)">
-                  <span>{{ t(child.valueKey) }}</span>
-                  <img
-                      v-if="child.subChildren"
-                      :class="['header-nav__arrow', { 'rotated': clickedSubChild === child.id }]"
-                      :src="Arrow"
-                      alt="Arrow_icon"
-                  />
-                </button>
-                <ul v-if="child.subChildren && clickedSubChild === child.id"
-                    class="header-nav__submenu-sub">
-                  <li v-for="sub in child.subChildren" :key="sub.id"
-                      class="header-nav__submenu-sub-item">
-                    <NuxtLink :to="sub.url" class="header-nav__submenu-link"
-                              @click="closeAllMenus">
-                      {{ t(sub.valueKey) }}
-                    </NuxtLink>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <div class="header-right">
-        <div class="header-nav__tea">
-          <ForTea/>
-        </div>
-        <div class="header-nav__lang">
-          <LanguageSelector/>
-        </div>
-        <div v-if="userAuth.name" class="header-user-wrapper">
-          <button
-              ref="userBtnRef"
-              class="header-user"
-              @click="toggleMenu"
-              aria-haspopup="true"
-              :aria-expanded="menuOpen.toString()"
-              aria-controls="user-menu-dropdown"
-          >
-            <img class="header-user__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>
-            <span class="header-user__name">{{ userAuth.email }}</span>
-            <img :class="['header-nav__arrow', { 'rotated': menuOpen }]" :src="Arrow" alt="Arrow"/>
-          </button>
-          <div
-              ref="dropdownRef"
-              v-if="menuOpen"
-              class="header-user__dropdown"
-              id="user-menu-dropdown"
-          >
-            <button
-                v-for="item in menuActions"
-                :key="item.id"
-                class="header-user__dropdown-btn"
-                @click.stop="item.action"
-            >
-              <img class="header-user__dropdown-icon" :src="item.icon" alt="Arrow_dropdown"/>
-              <span class="header__drop-text">{{ t(item.label) }}</span>
-            </button>
-          </div>
-        </div>
-        <button v-else class="btn-login" @click="openAuth">
-          {{ t('auth.logIn') }}
-        </button>
-        <BurgerMenu class="burger-button" v-model="isMobileMenuOpen"/>
+<!--      <NuxtLink @click="click" to="/" class="logo" aria-label="German Corner — Home">-->
+<!--        <span class="logo__name">skillup</span>-->
+<!--        <NuxtImg-->
+<!--            src="/images/logo/logo2.png"-->
+<!--            alt="German Corner"-->
+<!--            class="logo__img"-->
+<!--            format="webp"-->
+<!--            loading="eager"-->
+<!--            fetchpriority="high"-->
+<!--        />-->
+<!--        <span class="logo__name">german</span>-->
+<!--      </NuxtLink>-->
+<!--      <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen, 'is-rtl': isAr }"-->
+<!--           aria-label="Main">-->
+<!--        <ul class="header-nav__list">-->
+<!--          <li v-for="item in menuItems" :key="item.id" :id="item.id" class="header-nav__item">-->
+<!--            <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">-->
+<!--              {{ t(item.valueKey) }}-->
+<!--            </NuxtLink>-->
+<!--            <button v-else @click="handleMenuItemClick(item)" class="header-nav__link"-->
+<!--                    :class="{'is-active-parent': clickedMenu === item.id}">-->
+<!--              <span>{{ t(item.valueKey) }}</span>-->
+<!--              <img-->
+<!--                  v-if="item.children"-->
+<!--                  :class="['header-nav__arrow', { 'rotated': clickedMenu === item.id }]"-->
+<!--                  :src="Arrow"-->
+<!--                  alt="Arrow__icon"-->
+<!--              />-->
+<!--            </button>-->
+<!--            <ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">-->
+<!--              <li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">-->
+<!--                <NuxtLink v-if="child.url" :to="child.url" class="header-nav__submenu-link"-->
+<!--                          @click="closeAllMenus">-->
+<!--                  {{ t(child.valueKey) }}-->
+<!--                </NuxtLink>-->
+<!--                <button v-else class="header-nav__submenu-link"-->
+<!--                        @click.stop="handleSubmenuItemClick(child)">-->
+<!--                  <span>{{ t(child.valueKey) }}</span>-->
+<!--                  <img-->
+<!--                      v-if="child.subChildren"-->
+<!--                      :class="['header-nav__arrow', { 'rotated': clickedSubChild === child.id }]"-->
+<!--                      :src="Arrow"-->
+<!--                      alt="Arrow_icon"-->
+<!--                  />-->
+<!--                </button>-->
+<!--                <ul v-if="child.subChildren && clickedSubChild === child.id"-->
+<!--                    class="header-nav__submenu-sub">-->
+<!--                  <li v-for="sub in child.subChildren" :key="sub.id"-->
+<!--                      class="header-nav__submenu-sub-item">-->
+<!--                    <NuxtLink :to="sub.url" class="header-nav__submenu-link"-->
+<!--                              @click="closeAllMenus">-->
+<!--                      {{ t(sub.valueKey) }}-->
+<!--                    </NuxtLink>-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </nav>-->
+      <div class="header-stats-wrapper">
+        <VHeaderUserStats v-if="userAuth.uid" />
       </div>
+<!--      <div class="header-right">-->
+<!--        <div v-if="userAuth.name" class="header-user-wrapper">-->
+<!--          <button-->
+<!--              ref="userBtnRef"-->
+<!--              class="header-user"-->
+<!--              @click="router.push('cabinet')"-->
+<!--              aria-haspopup="true"-->
+<!--              :aria-expanded="menuOpen.toString()"-->
+<!--              aria-controls="user-menu-dropdown"-->
+<!--          >-->
+<!--            <img class="header-user__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>-->
+<!--          </button>-->
+<!--&lt;!&ndash;          <div&ndash;&gt;-->
+<!--&lt;!&ndash;              ref="dropdownRef"&ndash;&gt;-->
+<!--&lt;!&ndash;              v-if="menuOpen"&ndash;&gt;-->
+<!--&lt;!&ndash;              class="header-user__dropdown"&ndash;&gt;-->
+<!--&lt;!&ndash;              id="user-menu-dropdown"&ndash;&gt;-->
+<!--&lt;!&ndash;          >&ndash;&gt;-->
+<!--&lt;!&ndash;            <button&ndash;&gt;-->
+<!--&lt;!&ndash;                v-for="item in menuActions"&ndash;&gt;-->
+<!--&lt;!&ndash;                :key="item.id"&ndash;&gt;-->
+<!--&lt;!&ndash;                class="header-user__dropdown-btn"&ndash;&gt;-->
+<!--&lt;!&ndash;                @click.stop="item.action"&ndash;&gt;-->
+<!--&lt;!&ndash;            >&ndash;&gt;-->
+<!--&lt;!&ndash;              <img class="header-user__dropdown-icon" :src="item.icon" alt="Arrow_dropdown"/>&ndash;&gt;-->
+<!--&lt;!&ndash;              <span class="header__drop-text">{{ t(item.label) }}</span>&ndash;&gt;-->
+<!--&lt;!&ndash;            </button>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--        </div>-->
+<!--        <button v-else class="btn-login" @click="openAuth">-->
+<!--          {{ t('auth.logIn') }}-->
+<!--        </button>-->
+<!--&lt;!&ndash;        <BurgerMenu class="burger-button" v-model="isMobileMenuOpen"/>&ndash;&gt;-->
+<!--      </div>-->
     </div>
   </header>
 </template>
@@ -138,20 +133,25 @@ import BurgerMenu from '../components/burgerMenu.vue'
 import UiOverlay from '../components/Uioverlay.vue'
 import ModalDev from '../components/modal.vue'
 
+
 import Arrow from '../../assets/images/arrowNav.svg'
 import Dev from '../../assets/images/dev.svg'
 import User from '../../assets/images/account.svg'
 import Logout from '../../assets/images/logout.svg'
 import PadLock from '../../assets/images/padlock.svg'
 import HD from '../../assets/images/HD.svg'
+import VHeaderUserStats from "~/src/components/V-headerUserStats.vue";
 const easterEggsStore = useEasterEggsStore()
 const router = useRouter()
 const {t, locale} = useI18n()
 const bp = useBreakPointsStore()
 const userAuth = userAuthStore()
-const click = () => {
-  easterEggsStore.triggerTaps()
-}
+
+// const click = () => {
+//   easterEggsStore.triggerTaps()
+// }
+
+
 const wrapperRef = ref(null)
 const showAuth = ref(false)
 const menuOpen = ref(false)
@@ -349,10 +349,6 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('resize', updateWidth)
 })
-const menuActions = ref([
-  {id: 'cabinet', label: 'auth.cabinet', icon: User, action: () => goTo('cabinet')},
-  {id: 'logout', label: 'auth.logOut', icon: Logout, action: () => userAuth.logOut()},
-])
 
 const closeAllMenus = () => {
   isMobileMenuOpen.value = false
@@ -462,6 +458,7 @@ watch(isMobile, (isNowMobile) => {
 
 watch(isMobileMenuOpen, (newVal) => {
   document.body.style.overflow = newVal ? 'hidden' : ''
+
 })
 
 onMounted(() => {
@@ -543,6 +540,10 @@ onBeforeUnmount(() => {
   font-size: 14px;
 }
 
+.header-stats-wrapper {
+  flex: 1;
+}
+
 .header-user-wrapper {
   position: relative;
 }
@@ -552,8 +553,9 @@ onBeforeUnmount(() => {
   position: sticky;
   top: 0;
   z-index: 3;
+  margin-bottom: 10px;
   background-color: var(--navBg);
-  border-bottom: 4px solid var(--borderBottom);
+  border-bottom: 4px solid var(--borderMobile);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: 6px 0 0 var(--bg);
@@ -576,7 +578,7 @@ onBeforeUnmount(() => {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 13px;
+  padding: 5px 10px 5px 10px;
 }
 
 .header-left, .header-right {
@@ -776,13 +778,10 @@ onBeforeUnmount(() => {
 
 .mobile-nav-overlay {
   display: none;
+  color: #1e1d1d;
 }
 
 @media (max-width: 1023px) {
-  .header-container {
-    padding: 0.8rem 10px;
-  }
-
   .mobile-nav-overlay {
     position: fixed;
     inset: 0;
@@ -970,10 +969,6 @@ onBeforeUnmount(() => {
       box-shadow: 2px 2px 0 #1e1e1e;
     }
 
-    .header-right {
-      gap: 7px;
-    }
-
     .header-user__avatar {
       width: 30px;
       height: 30px;
@@ -1053,6 +1048,12 @@ onBeforeUnmount(() => {
     box-shadow: 0 0 0 ;
   }
 
+}
+
+@media  (min-width: 1024px) {
+  .header {
+    padding: 12px 0 ;
+  }
 }
 
 </style>

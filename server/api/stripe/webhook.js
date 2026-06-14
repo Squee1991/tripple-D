@@ -20,6 +20,7 @@ export default defineEventHandler(async (event) => {
 			return { error: 'Server Config Error' }
 		}
 	}
+
 	const config = useRuntimeConfig()
 	const stripeKey = config.stripeSecret || process.env.STRIPE_SECRET_KEY
 	const webhookSecret = config.stripeWebhookSecret || process.env.STRIPE_WEBHOOK_SECRET
@@ -34,6 +35,7 @@ export default defineEventHandler(async (event) => {
 	const body = await readRawBody(event)
 	const signature = getHeader(event, 'stripe-signature')
 	let stripeEvent
+
 	try {
 		stripeEvent = stripe.webhooks.constructEvent(body, signature, webhookSecret)
 	} catch (err) {
@@ -41,6 +43,7 @@ export default defineEventHandler(async (event) => {
 		setResponseStatus(event, 400)
 		return { error: `Webhook Error: ${err.message}` }
 	}
+
 	if (stripeEvent.type === 'checkout.session.completed') {
 		const session = stripeEvent.data.object
 		const userId = session.metadata?.firebaseUID
@@ -57,6 +60,7 @@ export default defineEventHandler(async (event) => {
 
 				const updateData = {
 					isPremium: true,
+					paymentSource: 'stripe',
 					subscriptionCancelled: false,
 					subscriptionEndsAt: subscriptionEndsAt,
 					subscriptionId: session.subscription || null,
@@ -73,5 +77,40 @@ export default defineEventHandler(async (event) => {
 			}
 		}
 	}
+
+	else if (stripeEvent.type === 'customer.subscription.deleted') {
+		const subscription = stripeEvent.data.object
+		const subscriptionId = subscription.id
+
+		try {
+			const db = getFirestore()
+			const usersRef = db.collection('users')
+			const snapshot = await usersRef.where('subscriptionId', '==', subscriptionId).get()
+
+			if (snapshot.empty) {
+				console.log(`⚠️ [Webhook] Юзер с подпиской ${subscriptionId} не найден.`)
+				return { received: true }
+			}
+
+			const batch = db.batch()
+			snapshot.forEach(doc => {
+				batch.update(doc.ref, {
+					isPremium: false,
+					paymentSource: null,
+					subscriptionCancelled: true,
+					subscriptionId: null,
+					updatedAt: new Date().toISOString()
+				})
+			})
+
+			await batch.commit()
+			console.log(`❌ [Webhook] Подписка ${subscriptionId} удалена. Премиум отключен.`)
+
+		} catch (dbError) {
+			console.error('❌ [Webhook] Ошибка при удалении подписки:', dbError)
+		}
+	}
+
+	// 3. ОТВЕЧАЕМ STRIPE, ЧТО ВСЕ ОК
 	return { received: true }
 })

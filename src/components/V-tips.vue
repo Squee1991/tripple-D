@@ -1,15 +1,19 @@
 <template>
-  <div v-if="modelValue" class="tips__overlay" @click.self="close"> <div class="tips__content">
-    <button class="tips__close" @click="close">×</button>
-    <h2 v-if="title" class="tips__main-title">{{ title }}</h2>
-    <div class="tips__container">
-      <ul class="tips__list">
-        <li v-for="(item, index) in tips" :key="index" class="tips__item">
-          <div :class="['tips__text', item.isTitle ? 'tips__text--header' : 'tips__text--body']" v-html="item.text || item.label"></div>
-        </li>
-      </ul>
+  <div v-if="modelValue" class="tips__overlay" @click.self="close">
+    <div class="tips__content">
+      <button class="tips__close" @click="close">×</button>
+      <h2 v-if="title" class="tips__main-title">{{ title }}</h2>
+      <div class="tips__container">
+        <ul class="tips__list">
+          <li v-for="(item, index) in tips" :key="index" class="tips__item">
+            <div
+                :class="['tips__text', item.isTitle ? 'tips__text--header' : 'tips__text--body']"
+                v-html="item.text || item.label"
+            ></div>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -27,57 +31,63 @@ const close = () => emit('update:modelValue', false)
 <style scoped>
 .tips__overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
+  inset: 0;
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(4px);
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .tips__content {
   position: relative;
-  background: white;
-  padding: 1.4rem 1.4rem 1.4rem;
-  border-radius: 16px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 3px 3px 0 #1e1e1e;
-  width: 90%;
+  background: #ffffff;
+  padding: 20px 15px 15px 15px;
+  border-radius: 28px;
+  width: 100%;
   max-width: 500px;
   max-height: 85vh;
   overflow-y: auto;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 .tips__close {
   position: absolute;
   top: 12px;
   right: 12px;
-  background: #f97028;
+  background: #ef4444;
   color: #fff;
-  border: 2px solid #1e1e1e;
+  border: 3px solid #ffffff;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   font-size: 1.5rem;
+  line-height: 1;
   font-weight: bold;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
   z-index: 10;
-  padding-bottom: 4px;
+  padding-bottom: 2px;
 }
 
 .tips__main-title {
-  font-size: 1.7rem;
-  font-weight: 900;
-  color: #333;
-  margin: 0 0 1.5rem 0;
-  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #374151;
+  margin: 0 0 16px 0;
+  padding-right: 40px;
   font-family: "Nunito", sans-serif;
 }
 
@@ -88,43 +98,43 @@ const close = () => emit('update:modelValue', false)
 }
 
 .tips__item {
-  margin-bottom: 0.5rem;
+  margin-bottom: 12px;
 }
 
 .tips__text {
   font-family: "Nunito", sans-serif;
-  line-height: 1.5;
-  border-radius: 8px;
 }
 
 .tips__text--header {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 800;
-  color: #2c3e50;
-  margin: 5px 0 0 5px;
-
+  color: #374151;
+  margin: 10px 0 5px 5px;
 }
 
 .tips__text--body {
-  border-left: 5px solid #519cd1;
-  font-size: .9rem;
+  font-size: 1rem;
+  padding: 10px;
+  background: #f0fdf4;
+  color: #166534;
+  border-radius: 16px;
+  line-height: 1.4;
+  border: 2px solid #bbf7d0;
   font-weight: 500;
-  padding: 0.2rem 1rem;
-  background: transparent;
-  color: #555;
-  margin-left: 5px;
 }
 
 @media (max-width: 767px) {
-  .tips__content {
-    padding: 1.5rem 1rem;
-    box-shadow: 4px 4px 0 #1e1e1e;
+  .tips__overlay {
+    padding: 15px;
   }
-  .tips__text {
-    font-size: .9rem;
+  .tips__content {
+    padding: 20px 15px 15px 15px;
+  }
+  .tips__text--body {
+    font-size: 0.95rem;
   }
   .tips__main-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 </style>

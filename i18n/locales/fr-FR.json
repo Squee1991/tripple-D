@@ -1,5 +1,4 @@
 {
-
   "definiteIndefiniteQuestOne": {
     "title": "Bataille pour les terminaisons",
     "description": "Pratique mixte : articles indéfinis et définis dans les phrases.",
@@ -525,10 +524,6 @@
     "questFifteen": "Choisissez la bonne option : C'était une belle journée",
     "questFifteenTip": "Article indéfini (première fois). Masculin (der). L'article 'ein' est vide, donc l'adjectif prend la terminaison -er de l'article 'der'."
   },
-
-
-
-
   "secretLandsQuestOne": {
     "title": "Bilan",
     "description": "Entraînement mixte : travail avec l'article indéfini au Perfekt et Futur 1. Thèmes : vie quotidienne, ville, transport, nourriture.",
@@ -1054,10 +1049,6 @@
     "questFifteen": "Assemblez la phrase : Nous verrons une exposition intéressante",
     "questFifteenTip": "Exposition — féminin (die). L'article 'eine' se termine par -e, donc l'adjectif prend la terminaison -e de l'article."
   },
-
-
-
-
   "edgeImagesQuestOne": {
     "title": "Départ",
     "description": "Nous pratiquons la déclinaison correcte des adjectifs après der, die, das.",
@@ -1583,12 +1574,6 @@
     "questFifteen": "Inscrivez la forme (lecker) : Je mangerai la ___ pizza.",
     "questFifteenTip": "Accusatif (féminin) : l'article 'die' est basique, l'adjectif prend la terminaison -e de l'article."
   },
-
-
-
-
-
-
   "timeGageQuestOne": {
     "title": "Rencontre et communication",
     "description": "Pratiquer la grammaire dans des situations de communication : des projets de rencontre aux récits sur le passé.",
@@ -2093,7 +2078,6 @@
     "questFifteen": "J'achèterai un billet si j'ai le temps.",
     "questFifteenTip": "'Wenn' place le verbe à la fin."
   },
-
   "pastValleyQuestOne": {
     "title": "Bases du Perfekt",
     "description": "Qu'as-tu fait ? Découverte du passé : 'J'ai acheté', 'Nous avons fait'.",
@@ -2431,7 +2415,6 @@
     "questFourteenTip": "singen — verbe fort. On ajoute ge- et on garde -en. Changement de voyelle (i en u).",
     "questFifteen": "Choisissez : J'ai fait du sport."
   },
-
   "actionValleyQuestOne": {
     "title": "Moi, toi, lui",
     "description": "On travaille le Dativ avec les pronoms personnels. Qui aidons-nous et à qui offrons-nous des cadeaux ?",
@@ -2798,7 +2781,6 @@
     "questFifteen": "Choisis : Avec qui parles-tu ?",
     "questFifteenTip": "Pour les personnes, utilise préposition + question (Mit wem ?)."
   },
-
   "pluralLandQuestOne": {
     "title": "Voyage",
     "description": "Nous planifions un voyage en utilisant le Futur I. Apprendre à lier le temps, le lieu et l'action.",
@@ -3100,8 +3082,6 @@
     "questFourteen": "Assemblez : Nous n'oublierons pas la fête.",
     "questFifteen": "Choisissez la bonne option"
   },
-
-
   "orderValleyQuestOne": {
     "title": "Le verbe à la fin !",
     "description": "On travaille l'ordre des mots dans les subordonnées. Règle d'or : le verbe part tout à la fin.",
@@ -3505,7 +3485,6 @@
     "questFifteen": "Écoute et écris la phrase",
     "questFifteenTip": "La négation dans 'es gibt' est 'kein'. Après 'dass', le verbe 'gibt' s'enfuit tout à la fin."
   },
-
   "pwa": {
     "title": "Installer Skillupgerman",
     "sub": "Ajoutez l'application à votre écran d'accueil pour un accès rapide !",
@@ -3537,9 +3516,12 @@
   },
   "settingsGroup": {
     "notifications": "Notifications",
-    "appearance": "Apparence"
+    "appearance": "Apparence",
+    "language": "Langue",
+    "account": "Gestion du compte"
   },
   "valentineAchievements": {
+    "valentineAchievementsTitle": "Festival des Cœurs",
     "firstValentineQuestLabel": "Premier rendez-vous",
     "firstValentineQuesDescription": "Faites le premier pas ! Terminez n'importe quelle quête de l'événement « Festival des Cœurs » et recevez votre première récompense.",
     "valentineWordsLabel": "Le langage de l'amour",
@@ -3619,7 +3601,9 @@
     "streak": "Série de victoires",
     "clearWins": "Victoires sans faute",
     "start": "Jouer",
-    "info": "Clique sur un niveau pour voir tes statistiques."
+    "info": "Clique sur un niveau pour voir tes statistiques.",
+    "answer-placeholder": "Assemblez la phrase...",
+    "pending": "En attente..."
   },
   "eventSessionPage": {
     "loading": "Chargement...",
@@ -3752,6 +3736,7 @@
     "theme": "Thème romantique"
   },
   "winterAchievements": {
+    "winterAchievementsTitle": "Murmure de l'hiver",
     "firstQuestName": "Première étoile du sapin",
     "firstQuestDescription": "Termine n'importe quelle quête de l'événement d'hiver et allume ta première étoile.",
     "santaLexiconName": "Lexique du Père Noël",
@@ -4924,7 +4909,10 @@
     "start": "Début :",
     "middle": "Note moyenne :",
     "share": "Partager",
+    "cancel": "Annuler",
     "delete": "Supprimer",
+    "deleteResultTitle": "Supprimer le résultat ?",
+    "textModal": "Êtes-vous sûr de vouloir supprimer cet examen ? Cette action est irréversible.",
     "sent": "Test envoyé",
     "sended": "Vous avez déjà envoyé ce test",
     "error": "Échec du partage de l'examen"
@@ -6962,7 +6950,7 @@
     "questThird": "Assemblez la phrase : la fenêtre blanche",
     "questFour": "Choisissez l'option : le canapé vert",
     "questFive": "Écoutez et écrivez",
-    "questSix": "Assemblez : das rote Buch",
+    "questSix": "Assemblez : Le Livre Rouge",
     "questSeven": "Que signifie : eine gelbe Blume",
     "questSevenFirstOption": "Une fleur jaune",
     "questSevenSecondOption": "Un livre rouge",
@@ -8090,8 +8078,8 @@
     "exam": "Amis"
   },
   "cabinetSidebar": {
-    "valueOne": "Paramètres du compte",
-    "valueTwo": "Archives des examens",
+    "valueOne": "Compte",
+    "valueTwo": "Examens",
     "valueThree": "Boutique",
     "valueFour": "Paramètres"
   },
@@ -8108,10 +8096,11 @@
   },
   "cabinetToggle": {
     "sound": "Notifications sonores",
-    "theme": "Mode sombre",
     "ach": "Notifications de succès",
+    "themeBtn": "Thème",
     "snowFall": "Chute de neige",
-    "themeBtn": "Thème"
+    "language": "Langue de l'interface",
+    "profileData": "Données du profil"
   },
   "cabinet": {
     "important": "IMPORTANT !!!",
@@ -8167,7 +8156,10 @@
     "articleLabelTwo": "- Utilisé pour les essais dans les Terres de Langues et dans la boutique du profil.",
     "levelTitle": "Niveau",
     "levelLabelOne": "- Le niveau augmente en accomplissant des tâches.",
-    "levelLabelTwo": "- Les niveaux supérieurs débloquent des tâches dans les Terres de Langues."
+    "levelLabelTwo": "- Les niveaux supérieurs débloquent des tâches dans les Terres de Langues.",
+    "livesTitle": "Vies",
+    "livesLabelOne": "Nécessaires pour traverser les terres de langues",
+    "livesLabelTwo": "S'achètent dans la boutique interne ou pendant la formation contre des Articluses"
   },
   "idioms": {
     "title": "Idiomes et expressions",
@@ -8275,6 +8267,8 @@
     "answer": "Il ferme les yeux sur une erreur"
   },
   "guessWord": {
+    "subtitle": "Devine le mot et améliore ton allemand !",
+    "theme": "Thème :",
     "back": "Retour",
     "guessTitle": "Devine le mot",
     "startGame": "Commencer",
@@ -9058,7 +9052,7 @@
     "main": "Retour à l'accueil"
   },
   "rulesFirstBlock": {
-    "title": "Règles de base des articles en allemand",
+    "title": "Théorie des articles",
     "subTitle": "Un guide simple et clair pour tous ceux qui veulent apprendre à utiliser der, die, das correctement !",
     "firstCardTitle": "L'article dépend du genre",
     "exampleSexM": " — genre masculin",
@@ -9203,6 +9197,7 @@
     "confirm": "Confirmer"
   },
   "sub": {
+    "words": "Mots et articles",
     "sinonim": "Lexique",
     "articles": "Articles",
     "verbs": "Verbes",
@@ -9219,7 +9214,9 @@
     "languagesLands": "Terres de Langues",
     "describePicture": "Description d'Images",
     "fight": "L'Univers d'Allemand",
-    "audio": "Exercices Audio"
+    "audio": "Exercices Audio",
+    "textTask": "Textes",
+    "speak": "Pratique orale"
   },
   "underSub": {
     "prev": "Introduction",
@@ -9448,35 +9445,100 @@
   "nameMap": {
     "Furniture": "Meubles",
     "Animals": "Animaux",
+    "Birds": "Oiseaux",
+    "SeaAnimals": "Animaux marins",
+    "Insects": "Insectes",
+    "Savanna": "Savane",
     "Clothes": "Vêtements",
+    "Shoes": "Chaussures",
     "Food": "Nourriture",
-    "Body": "Corps humain",
-    "Professions": "Métiers",
-    "Transport": "Transport",
+    "SweetEat": "Friandises",
+    "MilkEat": "Produits laitiers",
+    "Vegetables": "Légumes",
+    "Fruits": "Fruits",
+    "Drinks": "Boissons",
+    "Body": "Corps",
+    "Professions": "Professions",
+    "Transport": "Transports",
     "Colors": "Couleurs",
     "Nature": "Nature",
+    "Weather": "Météo",
+    "Landscape": "Paysage",
     "Home": "Maison",
     "Zeit": "Temps",
-    "City": "Ville",
+    "CityBuildings": "Bâtiments de la ville",
+    "CityInfrastructure": "Infrastructure urbaine",
     "School": "École",
     "DaysAndMonths": "Jours et mois",
     "Toys": "Jouets",
-    "CommonItems": "Objets courants",
-    "BathroomItems": "Salle de bain",
-    "Kosmetik": "Cosmétique",
+    "CommonItems": "Objets du quotidien",
+    "BathroomItems": "Articles de salle de bain",
+    "Kosmetik": "Cosmétiques",
     "Familie": "Famille",
     "Emotions": "Émotions",
-    "Werkzeuge": "Outils",
     "Kitchen": "Cuisine",
     "Health": "Santé",
-    "Sport": "Sport",
-    "SportEquipment": "Équipement fitness",
+    "SportBasic": "Sports de base",
+    "SportCombatWinter": "Sports d'hiver et de combat",
+    "SportEvents": "Événements sportifs",
+    "SportLife": "Vie sportive",
+    "SportEquipment": "Équipement sportif",
+    "TravelDocuments": "Documents de voyage",
+    "Tourism": "Tourisme",
     "Travel": "Voyage",
+    "MusicInstruments": "Instruments de musique",
     "Musik": "Musique",
-    "Amount": "Quantité",
-    "Informatik": "Informatique"
+    "Amount": "Quantité et mesures",
+    "Hardware": "Matériel informatique",
+    "Software": "Logiciels",
+    "Internet": "Internet",
+    "WinterHolidays": "Fêtes d'hiver",
+    "FamilyAndReligious": "Fêtes familiales et religieuses",
+    "PersonalCelebrations": "Célébrations personnelles",
+    "FestivalsAndDecor": "Festivals et décoration",
+    "DwellingTypes": "Types de logements",
+    "Rooms": "Pièces",
+    "ConstructionAndDetails": "Construction et détails",
+    "CoreFamily": "Famille proche",
+    "ExtendedFamily": "Famille élargie",
+    "Relationships": "Relations",
+    "HandTools": "Outils manuels",
+    "PowerTools": "Outils électriques",
+    "ConsumablesAndSafety": "Consommables et sécurité",
+    "JobOffice": "Travail de bureau",
+    "JobTech": "Métiers techniques",
+    "JobMed": "Métiers médicaux",
+    "JobEdu": "Éducation",
+    "JobService": "Services",
+    "CityTransport": "Transports urbains",
+    "TravelTransport": "Transports de voyage",
+    "usualClothes": "Vêtements décontractés",
+    "winterClothes": "Vêtements d'hiver",
+    "emotionsPositive": "Émotions",
+    "emotionsNegative": "Émotions 2"
+  },
+  "categoryWords": {
+    "nature": "Nature",
+    "animals": "Animaux",
+    "food": "Nourriture",
+    "people": "Personnes",
+    "family": "Famille",
+    "dailyRoutine": "Vie quotidienne",
+    "house": "Maison",
+    "city": "Ville",
+    "school": "École",
+    "professions": "Professions",
+    "construction": "Construction",
+    "clothes": "Vêtements",
+    "holidays": "Fêtes",
+    "sport": "Sport",
+    "music": "Musique",
+    "travel": "Voyages",
+    "informatics": "Informatique",
+    "abstract": "Thèmes abstraits"
   },
   "modes": {
+    "themeTitle": "Thèmes d'étude des articles",
     "article": "Inscrire l'article",
     "letters": "Assembler le mot",
     "articleWord": "Mot + Article",
@@ -9610,7 +9672,12 @@
     "profile": "Profil",
     "shop": "HANGAR",
     "rank": "Classement",
-    "exit": "QUITTER"
+    "exit": "QUITTER",
+    "start": "COMMENCER LA MISSION",
+    "findGalaxyTitle": "SECTEUR DÉCOUVERT",
+    "points": "POINTS",
+    "errorTitle": "DÉFAILLANCE DU SYSTÈME",
+    "errorBtn": "RETOURNER AU QUARTIER GÉNÉRAL"
   },
   "galaxyCabinet": {
     "back": "RETOUR",
@@ -9619,7 +9686,8 @@
     "money": "ARTICS",
     "commonPoints": "TOTAL POINTS",
     "rank": "Rang:",
-    "streak": "RECORD:"
+    "streak": "RECORD:",
+    "cabinet": "Journal de bord"
   },
   "galaxyRank": {
     "none": "TERRIEN",
@@ -9669,7 +9737,7 @@
     "prepositions": "Prépositions"
   },
   "v-rank": {
-    "desc": "Les toques de confédération sont votre chemin vers le sommet ! Accumulez-les en accomplissant les trois tâches quotidiennes. Augmentez votre rang et achetez des bonus débloqués !",
+    "desc": "Accumulez des toques en accomplissant les quêtes du jour. Augmentez votre rang et achetez des bonus.",
     "rank": "Rang",
     "rank_0": "Recrue",
     "rank_1": "Novice",
@@ -9732,5 +9800,513 @@
   "lives": {
     "next": "Suivante :",
     "full": "Vies au maximum"
+  },
+  "deletePage": {
+    "title": "Suppression du profil",
+    "bubbleText": "Nous sommes désolés de vous voir partir ! Veuillez vérifier les informations importantes avant la suppression.",
+    "cleanUpTitle": "Gestion de l'abonnement",
+    "cleanUpInfoText": "Supprimer le compte",
+    "cleanUpInfoTextTwo": "n'annule pas",
+    "cleanUpInfoTextThree": "l'abonnement ! Vérifiez le statut des paiements.",
+    "deleteAccount": "Supprimer le compte",
+    "modalTitle": "Voulez-vous vraiment supprimer ?",
+    "cleanUpGoogle": "Connexion via",
+    "cleanUpGoogleTwo": " Pour confirmer, une fenêtre d'autorisation s'ouvrira.",
+    "cleanUpPassword": "Entrez votre mot de passe :",
+    "placeholder": "entrez votre mot de passe",
+    "modalLabelOne": "J'ai changé d'avis",
+    "modalLabelTwo": "Confirmer la suppression"
+  },
+  "accountChanges": {
+    "first": "Les données du profil disparaîtront à jamais.",
+    "two": "Le progrès et l'historique des tests seront réinitialisés.",
+    "three": "Tous les prix, titres et succès seront perdus.",
+    "four": "La monnaie, le niveau et les chapeaux seront retirés."
+  },
+  "platformsInformation": {
+    "titleWeb": "Sur le site",
+    "descriptionWeb": "Paiement par carte sur le site.",
+    "instructionWeb": "Désactivez le renouvellement automatique dans votre Espace Client.",
+    "titleStore": "Dans l'application",
+    "descriptionStore": "Google Play ou App Store.",
+    "instructionStore": "Annulez l'abonnement dans les paramètres du téléphone."
+  },
+  "galaxyDescriptions": {
+    "alpha": "Un secteur gouverné par trois grandes puissances : Der, Die et Das. Votre mission est de calibrer vos capteurs linguistiques et de mettre de l'ordre dans le système grammatical en déterminant sans erreur le genre de chaque mot.",
+    "beta": "Zone anormale où tout se multiplie et se transforme. Étudiez les lois de transformation des noms pour comprendre quelle forme prendra un objet lorsqu'il y en aura plus d'un.",
+    "gamma": "La galaxie des mots-doubles. Enrichissez votre vocabulaire en trouvant de nouvelles manières d'exprimer la même pensée. Plus votre arsenal de synonymes est vaste, plus votre discours brille dans l'espace lointain.",
+    "delta": "Un monde de contraste éternel et d'opposition. Ici, tout se comprend par comparaison : de « rapide » à « lent ». Apprenez à trouver les opposés avec brio pour maintenir l'équilibre du système.",
+    "epsilon": "Boucle temporelle du passé. Maîtrisez la forme complexe des verbes pour rédiger des rapports sur les missions accomplies et raconter vos victoires passées dans d'autres systèmes stellaires.",
+    "zeta": "Grille de navigation de l'espace et du temps. Découvrez « où », « vers où » et « comment » mènent les sentiers linguistiques. Les bonnes prépositions sont vos coordonnées exactes dans l'infinité de la langue."
+  },
+  "personalAccount": {
+    "statsAndAchievements": "Statistiques et succès",
+    "streakTitle": "Série du marathon des articles"
+  },
+  "studyNavAndBanner": {
+    "practice": "Pratique",
+    "grammar": "Grammaire",
+    "bannerPractice": "Améliore ton niveau d'allemand en accomplissant diverses tâches pratiques",
+    "bannerGrammar": "Étudie les règles et améliore ton niveau d'allemand sur différents thèmes grammaticaux"
+  },
+  "bannerTitles": {
+    "play": "Apprends l'allemand avec plaisir ! Choisis un mode pratique et améliore ta langue en jouant",
+    "events": "Participe aux événements saisonniers et obtiens des récompenses uniques en accomplissant des tâches",
+    "article": "Apprenez les mots et les articles par thèmes dans différents formats d'entraînement",
+    "awards": "Récompenses pour les succès obtenus et les tâches accomplies",
+    "thematic": "Améliorez votre allemand en parcourant des niveaux thématiques passionnants",
+    "audio": "Améliorez votre compréhension orale de l'allemand en effectuant des exercices audio",
+    "images": "Améliorez votre capacité à décrire des images ! Choisissez un thème pour commencer",
+    "settings": "Paramètres du compte",
+    "achievements": "Ta collection de tous les succès et récompenses obtenus pour ta progression",
+    "textTask": "Remplis les blancs dans les textes et améliore ton allemand"
+  },
+  "imageDescription": {
+    "listen": "Écoutez le dialogue !",
+    "check": "Vérifier",
+    "further": "Suivant",
+    "finish": "Terminer",
+    "skip": "Passer",
+    "total": "Total des tâches :",
+    "perfect": "Parfaitement exact :",
+    "notPerfect": "Partiellement exact :",
+    "mistakes": "Avec des erreurs :",
+    "value": "Précision :",
+    "success": "✅ Tâche accomplie correctement !",
+    "isWrong": "❌ Il y a des réponses fausses !",
+    "isWarning": "⚠️ Toutes les bonnes options ne sont pas sélectionnées !",
+    "modalTitleWarning": "Attention !",
+    "modalTextWarning": "Le thème n'est pas entièrement terminé, la progression ne sera pas sauvegardée !",
+    "leave": "Quitter",
+    "continue": "Continuer",
+    "goodWork": "Excellent travail !",
+    "needTraining": "Il faut s'entraîner !",
+    "themeSuccess": "Thème terminé avec succès !",
+    "themeNotSuccess": "Thème non terminé."
+  },
+  "galaxySelector": {
+    "constellations": "Constellations",
+    "energy": "Énergie du vaisseau",
+    "sectorBlock": "SECTEUR VERROUILLÉ",
+    "admission": "Accès PLUS requis",
+    "descriptionPlusOne": "La galaxie",
+    "descriptionPlusTwo": "se trouve dans l'espace lointain ! Un hypersaut au-delà du secteur Alpha nécessite un abonnement intergalactique",
+    "descriptionPlusThree": "Achetez pour débloquer toutes les constellations !",
+    "getPlusBtn": "Obtenir PLUS",
+    "errorDescription": "'Préparez-vous au débarquement ! Une activité accrue de la langue allemande est observée dans cette zone. Nettoyez le secteur pour restaurer l'ordre dans le système.'"
+  },
+  "galaxySession": {
+    "errorEnergy": "Batterie déchargée. Attendez la récupération ou achetez le PLUS.",
+    "errorID": "L'ID du secteur n'a pas été transmis",
+    "errorData": "Impossible de charger les données de la galaxie",
+    "newRecord": "NOUVEAU RECORD !",
+    "check": "SCORE :",
+    "again": "Repartir en mission",
+    "constellations": "Quitter la constellation"
+  },
+  "textTasksTip": {
+    "title": "Exercices de texte",
+    "description": "Pour accomplir la tâche, glissez le mot dans l'espace vide ou cliquez sur le mot, puis sur le champ où vous souhaitez l'ajouter."
+  },
+  "textThemes": {
+    "basic": "Présentation",
+    "routine": "Routine quotidienne",
+    "shopping": "Shopping",
+    "work": "Travail et études",
+    "hobby": "Loisirs",
+    "objects": "Objets et choses",
+    "travel": "Voyages"
+  },
+  "themeTextTitleBasic_A1": {
+    "basicOne": "Présentation formelle",
+    "basicTwo": "Présentation informelle",
+    "basicThree": "Projets pour la journée",
+    "basicFour": "Projets pour la soirée",
+    "basicFive": "Le week-end",
+    "basicSix": "Faire du sport",
+    "basicSeven": "Cuisiner ensemble",
+    "basicEight": "Sortie en ville",
+    "basicNine": "Étudier ensemble",
+    "basicTen": "Faire de la musique"
+  },
+  "themeTextTitleHobby_A1": {
+    "hobbyOne": "Jouer au football",
+    "hobbyTwo": "Photographie",
+    "hobbyThree": "Jouer de la guitare",
+    "hobbyFour": "Natation",
+    "hobbyFive": "Cuisine",
+    "hobbySix": "Voyages",
+    "hobbySeven": "Lecture",
+    "hobbyEight": "Jardinage",
+    "hobbyNine": "Danse",
+    "hobbyTen": "Apprendre des langues"
+  },
+  "themeTextTitleRoutine_A1": {
+    "routineOne": "Projets pour la journée",
+    "routineTwo": "Projets pour la soirée",
+    "routineThree": "Le week-end",
+    "routineFour": "Faire du sport",
+    "routineFive": "Cuisiner ensemble",
+    "routineSix": "Sortie en ville",
+    "routineSeven": "Étudier ensemble",
+    "routineEight": "Faire de la musique",
+    "routineNine": "Prendre un café",
+    "routineTen": "Dans le park"
+  },
+  "themeTextTitleShopping_A1": {
+    "shoppingOne": "Au supermarché",
+    "shoppingTwo": "Chercher des vêtements",
+    "shoppingThree": "À la boulangerie",
+    "shoppingFour": "Achats en ligne",
+    "shoppingFive": "Au marché",
+    "shoppingSix": "Dans un magasin de chaussures",
+    "shoppingSeven": "Acheter des meubles",
+    "shoppingEight": "Au marché aux puces",
+    "shoppingNine": "Repas pour le soir",
+    "shoppingTen": "Dans une librairie"
+  },
+  "themeTextTitleTravel_A1": {
+    "travelOne": "Faire sa valise",
+    "travelTwo": "À la gare",
+    "travelThree": "À l'hôtel",
+    "travelFour": "Vacances à la mer",
+    "travelFive": "Visite de la ville",
+    "travelSix": "Au restaurant",
+    "travelSeven": "À l'aéroport",
+    "travelEight": "À la montagne",
+    "travelNine": "Acheter des souvenirs",
+    "travelTen": "Retour à la maison"
+  },
+  "themeTextTitleWork_A1": {
+    "workOne": "Ma journée de travail",
+    "workTwo": "Chercher un document",
+    "workThree": "À l'université",
+    "workFour": "Mon travail",
+    "workFive": "Devoirs",
+    "workSix": "Mon travail sur un chantier",
+    "workSeven": "Télétravail",
+    "workEight": "Travail dans un entrepôt",
+    "workNine": "Réunion",
+    "workTen": "Pause déjeuner"
+  },
+  "themeTextTitleBasic_A2": {
+    "basicOne": "Au cours d'allemand",
+    "basicTwo": "Partenaire de tandem",
+    "basicThree": "À l'université",
+    "basicFour": "À la bibliothèque",
+    "basicFive": "Projet de groupe",
+    "basicSix": "Voyage linguistique",
+    "basicSeven": "Nouvel élève",
+    "basicEight": "Cours en ligne",
+    "basicNine": "Groupe d'étude",
+    "basicTen": "Partenaire d'examen"
+  },
+  "themeTextTitleHobby_A2": {
+    "hobbyOne": "Randonnée en montagne",
+    "hobbyTwo": "Photographie",
+    "hobbyThree": "Dessin",
+    "hobbyFour": "Danse",
+    "hobbyFive": "Football",
+    "hobbySix": "Natación -> Natation",
+    "hobbySeven": "Jeux de société",
+    "hobbyEight": "Jeux de société et logique",
+    "hobbyNine": "Échecs",
+    "hobbyTen": "Films"
+  },
+  "themeTextTitleRoutine_A2": {
+    "routineOne": "Nouvelle voisine",
+    "routineTwo": "Rencontre dans un café",
+    "routineThree": "À une fête",
+    "routineFour": "Nouveaux collègues",
+    "routineFive": "Au club de sport",
+    "routineSix": "Rencontre dans le train",
+    "routineSeven": "Dans le park avec le chien",
+    "routineEight": "Recherche de partenaire",
+    "routineNine": "À un concert",
+    "routineTen": "Nouvelle colocataire"
+  },
+  "themeTextTitleShopping_A2": {
+    "shoppingOne": "Au supermarché",
+    "shoppingTwo": "Acheter des vêtements",
+    "shoppingThree": "Au marché",
+    "shoppingFour": "Achats en ligne",
+    "shoppingFive": "Dans un magasin de meubles",
+    "shoppingSix": "À la boulangerie",
+    "shoppingSeven": "Acheter des chaussures",
+    "shoppingEight": "Cadeau",
+    "shoppingNine": "Dans un magasin d'électronique",
+    "shoppingTen": "Grandes courses"
+  },
+  "themeTextTitleTravel_A2": {
+    "travelOne": "Préparation du voyage",
+    "travelTwo": "À l'aéroport",
+    "travelThree": "Arrivée à l'hôtel",
+    "travelFour": "Sur la plage",
+    "travelFive": "Excursion",
+    "travelSix": "Au restaurant",
+    "travelSeven": "Demander son chemin",
+    "travelEight": "Problèmes en vacances",
+    "travelNine": "Acheter des cadeaux",
+    "travelTen": "Retour à la maison"
+  },
+  "themeTextTitleWork_A2": {
+    "workOne": "Entretien d'embauche",
+    "workTwo": "Devoirs",
+    "workThree": "Premier jour de travail",
+    "workFour": "Présentation",
+    "workFive": "Formation continue",
+    "workSix": "En télétravail",
+    "workSeven": "Stage",
+    "workEight": "Examen",
+    "workNine": "Cours de langue",
+    "workTen": "Premier client"
+  },
+  "themeTextTitleBasic_B1": {
+    "basicOne": "À une fête",
+    "basicTwo": "Premier rendez-vous",
+    "basicThree": "Tandem linguistique",
+    "basicFour": "Rencontre dans le train",
+    "basicFive": "Nouveau collègue",
+    "basicSix": "Lors d'un séminaire",
+    "basicSeven": "En promenade avec le chien",
+    "basicEight": "Nouveaux voisins",
+    "basicNine": "Au club de sport",
+    "basicTen": "Dans une auberge de jeunesse"
+  },
+  "themeTextTitleHobby_B1": {
+    "hobbyOne": "Photographie nocturne",
+    "hobbyTwo": "Alpinisme",
+    "hobbyThree": "Jouer du piano",
+    "hobbyFour": "Développement de jeux",
+    "hobbyFive": "Windsurf",
+    "hobbySix": "Jouer au théâtre",
+    "hobbySeven": "Tir à l'arc",
+    "hobbyEight": "Restauration de motos",
+    "hobbyNine": "Pâtisserie",
+    "hobbyTen": "Géocaching"
+  },
+  "themeTextTitleRoutine_B1": {
+    "routineOne": "Tôt le matin",
+    "routineTwo": "Petit-déjeuner et trajet vers le travail",
+    "routineThree": "Au bureau",
+    "routineFour": "Pause déjeuner",
+    "routineFive": "Fin de la journée de travail",
+    "routineSix": "Sport après le travail",
+    "routineSeven": "Dîner et détente",
+    "routineEight": "Préparation au coucher",
+    "routineNine": "Promenade du soir",
+    "routineTen": "Ménage de la maison"
+  },
+  "themeTextTitleShopping_B1": {
+    "shoppingOne": "Acheter des vêtements",
+    "shoppingTwo": "Au supermarché",
+    "shoppingThree": "Acheter de la technologie en ligne",
+    "shoppingFour": "Au marché aux puces",
+    "shoppingFive": "Recherche d'un cadeau",
+    "shoppingSix": "Retour de marchandise",
+    "shoppingSeven": "Dans un magasin de bricolage",
+    "shoppingEight": "À la pharmacie",
+    "shoppingNine": "Dans une animalerie",
+    "shoppingTen": "Dans une friperie"
+  },
+  "themeTextTitleTravel_B1": {
+    "travelOne": "Sortie en ville",
+    "travelTwo": "Vacances à la plage",
+    "travelThree": "Randonnée en montagne",
+    "travelFour": "Road trip",
+    "travelFive": "Voyage en Asie",
+    "travelSix": "Croisière",
+    "travelSeven": "Camping",
+    "travelEight": "Vacances d'hiver",
+    "travelNine": "Voyage linguistique",
+    "travelTen": "Safari"
+  },
+  "themeTextTitleWork_B1": {
+    "workOne": "Entretien d'embauche",
+    "workTwo": "Gestion de projet",
+    "workThree": "Semestre à l'étranger",
+    "workFour": "Présentation au bureau",
+    "workFive": "Préparation aux examens",
+    "workSix": "Service client",
+    "workSeven": "Thèse de master",
+    "workEight": "Voyage d'affaires",
+    "workNine": "Stage",
+    "workTen": "Cours"
+  },
+  "textTaskSession": {
+    "allUsed": "Tous les mots ont été utilisés !",
+    "errorText": "Texte non sélectionné",
+    "back": "Retour à la liste"
+  },
+  "exitSessionModal": {
+    "text": "C'est dommage de s'arrêter à mi-chemin ! Si vous fermez l'onglet maintenant, vos efforts ne seront pas sauvegardés.",
+    "continueLesson": "Continuer la leçon",
+    "cancelLesson": "Quitter"
+  },
+  "premiumBannerText": {
+    "text": "Tire le maximum de la plateforme, accélère ton apprentissage."
+  },
+  "rulesModal": {
+    "text": "L'indice de grammaire est disponible après avoir répondu !"
+  },
+  "footerNavLabel": {
+    "learn": "Apprendre",
+    "games": "Jeux",
+    "home": "Accueil",
+    "events": "Événements",
+    "cabinet": "Compte"
+  },
+  "speakTopics": {
+    "speak": "Présentation et discussion",
+    "food": "Nourriture et shopping",
+    "transport": "Voyages et transports",
+    "city": "Services urbains et vie quotidienne",
+    "health": "Santé",
+    "work": "Travail et carrière"
+  },
+  "speakThemes": {
+    "firstmeet": "Présentation",
+    "acquaintance": "Présentation 2",
+    "secondmeet": "Rencontre",
+    "family_talk": "Discussion",
+    "weekend_plans": "Projets",
+    "friend_call": "Appel",
+    "hobby_talk": "Loisirs",
+    "party_talk": "Fête",
+    "cafe_order": "Commander un café",
+    "restaurant_dinner": "Restaurant",
+    "store_checkout": "À la caisse",
+    "order_eat": "Commander à manger",
+    "consultation_talk": "Consultation",
+    "train_station": "À la gare",
+    "train_ticket": "Contrôle des billets",
+    "taxi_berlin": "Taxi",
+    "bus_talk": "Dans le bus",
+    "hotel_checkin": "Hôtel",
+    "border_check": "Frontière",
+    "airport_talk": "Aéroport",
+    "info_talk": "Info centre",
+    "bank_account": "Banque",
+    "apartment_rent": "Location",
+    "clothes_shopping": "Shopping",
+    "shopping": "Shopping 2",
+    "post_office": "La poste",
+    "police_talk": "Police",
+    "barbershop": "Coiffeur",
+    "doctor_visit": "Prendre RDV chez le médecin",
+    "pharmacy_vitamins": "Pharmacie",
+    "insurance": "Assurance",
+    "at_doctor": "Chez le médecin",
+    "dentist": "Dentiste",
+    "veterinary": "Vétérinaire",
+    "job_looking": "Recherche d'emploi",
+    "job_interview": "Entretien",
+    "bos_talk": "Discussion avec le responsable",
+    "vacation": "Vacances",
+    "salary_talk": "Salaire",
+    "dismissal_talk": "Licenciement"
+  },
+  "speakIndexPage": {
+    "title": "Pratique orale",
+    "bannerText": "Pratique tes compétences à l'oral avec des exemples concrets",
+    "modalTitle": "Pratique orale",
+    "modalText": "Développez vos compétences de communication avec des dialogues réels ! Vous pouvez choisir une réponse suggérée, la saisir manuellement au clavier ou simplement la dire à voix haute en appuyant sur le bouton du microphone."
+  },
+  "rankModal": {
+    "title": "NOUVEAU RANG",
+    "rankedLabel": "Rang",
+    "accept": "ACCEPTER"
+  },
+  "premiumBanner": {
+    "textBanner": "Tire le maximum de la plateforme, accélère ton apprentissage."
+  },
+  "netWork": {
+    "successTitle": "Connexion rétablie !",
+    "notSuccessTitle": "Oups ! Pas d'internet",
+    "successText": "Retour au travail...",
+    "notSuccessText": "En attente de connexion réseau..."
+  },
+  "termsBlock": {
+    "first": "En vous inscrivant, vous acceptez les",
+    "second": "Conditions d'utilisation",
+    "third": "et la",
+    "fourth": "Politique de confidentialité"
+  },
+  "languagePage": {
+    "title": "Langue de l'application",
+    "placeholder": "Rechercher une langue...",
+    "notfound": "Aucun résultat",
+    "further": "Continuer"
+  },
+  "statistics": {
+    "title": "Vos statistiques et votre progression dans l'apprentissage des mots et la réussite des niveaux thématiques"
+  },
+  "restoreComputed": {
+    "restoring": "Restauration...",
+    "restore": "Restaurer les achats."
+  },
+  "submitComputed": {
+    "sync": "Synchronisation...",
+    "getPlus": "Acheter PLUS"
+  },
+  "pay": {
+    "banner": "Accès complet à toutes les fonctionnalités de l'application",
+    "sales": "Appliquez les réductions obtenues grâce à votre activité",
+    "triggerToastSuccess": "Achat restauré !",
+    "triggerToastNotFound": "Aucun abonnement actif trouvé",
+    "triggerToastError": "Erreur lors de la restauration",
+    "triggerToastIsPlus": "Vous avez déjà un abonnement PLUS actif !"
+  },
+  "examSession": {
+    "ready": "Prêt для le test ?",
+    "cardTextOne": "Vous aurez",
+    "cardTextTwo": "étapes et",
+    "cardTextThree": "exercices.",
+    "begin": "Commencer le test",
+    "listen": "Écoutez l'audio :",
+    "check": "Vérification...",
+    "send": "Envoyer la réponse",
+    "record": "Enregistrer",
+    "great": "Félicitations !",
+    "result": "Votre résultat pour le niveau",
+    "save": "Enregistrement de la progression...",
+    "correctly": "Correct :",
+    "back": "Retourner",
+    "interrupt": "Interrompre le test ?",
+    "modalText": "La progression de cette tentative sera perdue. Êtes-vous sûr ?",
+    "continue": "Continuer",
+    "leave": "Quitter",
+    "placeHolder": "Écrivez votre réponse ici...",
+    "say": "Dites :"
+  },
+  "speakSession": {
+    "title": "Pratique de la conversation",
+    "words": "Vocabulaire pour le dialogue",
+    "wordsText": "Apprenez ou révisez les mots avant de commencer à parler. Cela vous aidera à vous sentir plus confiant !",
+    "learn": "Commencer",
+    "dialogue": "Dialogue",
+    "dialogueText": "Entraînez votre prononciation et votre élocution, écoutez votre interlocuteur et choisissez les réponses de manière interactive.",
+    "back": "Retour",
+    "goodJob": "Beau travail !",
+    "goodJobTitle": "Vous avez terminé ce dialogue. Continuez ainsi !",
+    "list": "Retourner",
+    "repeat": "Répéter",
+    "start": "Commencer l'apprentissage",
+    "choice": "Choisissez une réponse :",
+    "placeHolder": "Écrivez ou dites la réponse...",
+    "hoverVoice": "Parler",
+    "end": "Terminer",
+    "further": "Suivant"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "Réessayer ?",
+    "textPartOne": "Vous avez répondu correctement",
+    "textPartTwo": "Achetez une tentative pour continuer.",
+    "price": "Prix :",
+    "youHave": "Vous avez :",
+    "showADS": "Regarder la pub",
+    "buyBy": "Acheter pour",
+    "toThemes": "Aux thèmes",
+    "repeat": "Répéter"
   }
 }

@@ -1,112 +1,149 @@
 <template>
   <div class="session-page">
-    <button @click="goBack" class="exit-sign">
-      <svg class="exit-sign-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path fill="currentColor" d="m12 12.7l-3.2 3.2q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l3.2-3.2l-3.2-3.2q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.2 3.2l3.2-3.2q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7L13.4 12l3.2 3.2q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275zM12 22q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.138T12 2q2.075 0 3.9.788t3.175 2.138q1.35 1.35 2.137 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.137T12 22m0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20"></path>
-      </svg>
-      <span class="exit-sign-text">{{ t('trainerPage.exit') }}</span>
-    </button>
-    <div class="trainer-app" v-if="isReady">
-      <div class="trainer-app__board">
-        <div v-if="!finished && currentWord && currentMode">
-          <div class="session__theme">
-            <div class="session__theme-t">{{ t('sessionPage.theme') }}:</div>
-            <h1 class="session__topic">{{ translatedTopic }}</h1>
-          </div>
-          <div class="progress-line">
-            <span>{{ store.currentIndex + 1 }} / {{ totalWords }}</span>
-            <span>{{ t('sessionPage.choice') }}: <b>{{ t(modeLabel(currentMode)) }}</b> ({{ currentModeIndex + 1 }}/{{ selectedModes.length }})</span>
-          </div>
-          <div class="word-block">
-            <div v-if="currentMode === 'audio'" class="word-question">
-              <span>{{ t('sessionLabels.word') }}: {{ currentWord?.[currentLang] }}</span>
+    <transition name="fade-slide" appear>
+      <div class="trainer-app" v-if="isReady && isMounted">
+        <div class="trainer-app__board">
+          <div v-if="!finished && currentWord && currentMode" class="board-content">
+            <div class="top-nav">
+              <VBackBtnNav/>
+              <div class="progress-wrapper">
+                <div class="progress-bar">
+                  <div class="progress-fill" :style="{ width: progressPercentage + '%' }">
+                    <div class="glare"></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+              </div>
             </div>
-            <div class="mode-exercise">
-              <div v-if="currentMode === 'wordTranslate'" class="word-info-display">
-                <div class="wordTranslate">
-                  <SoundBtn :text="`${currentWord.article} ${currentWord.de}`"/>
-                  <div class="german-word">{{ currentWord.article }} {{ currentWord.de }}</div>
+            <header class="session-header">
+              <div class="session__theme">
+                <span class="session__theme-t">{{ t('sessionPage.theme') }}:</span>
+                <h1 class="session__topic">{{ translatedTopic }}</h1>
+              </div>
+              <div class="progress-line">
+                <span class="progress-mode">{{ t('sessionPage.choice') }}: <b>{{ t(modeLabel(currentMode)) }}</b> ({{ currentModeIndex + 1 }}/{{ selectedModes.length }})</span>
+              </div>
+            </header>
+            <div class="word-block">
+              <div class="mode-exercise">
+                <div v-if="currentMode === 'wordTranslate'" class="word-info-display">
+                  <div class="wordTranslate">
+                    <SoundBtn :text="`${currentWord.article} ${currentWord.de}`"/>
+                    <div class="german-word">
+                      <span class="highlight-word">{{ currentWord.article }} {{ currentWord.de }}</span>
+                    </div>
+                  </div>
+                  <div class="word-divider">—</div>
+                  <div class="translation-word">{{ currentWord[currentLangKey] }}</div>
                 </div>
-                <div class="word-divider">—</div>
-                <div class="translation-word">{{ currentWord[currentLangKey] }}</div>
-              </div>
-              <div v-if="currentMode === 'article'">
-                <p>{{ t('sessionLabels.articleFor') }} <b>{{ currentWord.de }}</b>:</p>
-                <input v-model="userInput" maxlength="3" class="trainer-app__input"/>
-              </div>
-              <div v-if="currentMode === 'letters'">
-                <p>{{ t('sessionLabels.lettersFor') }} <b>{{ currentWord.article }}</b></p>
-                <div class="letters">
-                  <button v-for="(letter, i) in shuffledLetters" :key="i" :disabled="usedLetters[i]" @click="addLetter(letter, i)">
-                    {{ letter === ' ' ? '␣' : letter }}
+                <div v-if="currentMode === 'article'" class="article-mode-container">
+                  <p class="question-text">{{ t('sessionLabels.articleFor') }} <span class="highlight-word">{{ currentWord.de }}</span>:</p>
+                  <div class="article-options">
+                    <button
+                        v-for="art in ['der', 'die', 'das']"
+                        :key="art"
+                        class="article-btn"
+                        :class="{
+                        'is-correct': result === 'correct' && userInput === art,
+                        'is-wrong': result === 'wrong' && userInput === art,
+                        'is-revealed': result === 'wrong' && currentWord.article === art
+                      }"
+                        :disabled="result !== ''"
+                        @click="checkArticle(art)"
+                    >
+                      {{ art }}
+                    </button>
+                  </div>
+                </div>
+
+                <div v-if="currentMode === 'letters'">
+                  <div class="question__content">
+                    <p class="question-text">{{ t('sessionLabels.lettersFor') }} :</p>
+                    <span class="highlight-word">{{ currentWord.ru }}</span>
+                  </div>
+                  <div class="letters">
+                    <button v-for="(letter, i) in shuffledLetters" :key="i" :disabled="usedLetters[i]" @click="addLetter(letter, i)">
+                      {{ letter === ' ' ? '␣' : letter }}
+                    </button>
+                  </div>
+                  <button v-if="userInput" class="letters-clear" @click="clearLetters" type="button">
+                    {{ t('wordDuelSession.clear') || 'clear' }}
                   </button>
+                  <input v-model="userInput" class="trainer-app__input" readonly/>
                 </div>
-                <button v-if="userInput" class="letters-clear" @click="clearLetters" type="button">
-                  {{ t('wordDuelSession.clear') || 'clear' }}
-                </button>
-                <input v-model="userInput" class="trainer-app__input" readonly/>
+
+                <div v-if="currentMode === 'wordArticle'">
+                  <div class="question__content">
+                    <p class="question-text"><b>{{ t('sessionLabels.word')}} :</b></p>
+                    <span class="highlight-word">{{ uiWord }}</span>
+                  </div>
+                  <input v-model="userInput" class="trainer-app__input" autofocus/>
+                </div>
+
+                <div v-if="currentMode === 'plural'">
+                  <p class="question-text">{{ t('sessionLabels.pluralFor') }}: <span class="highlight-word">{{ currentWord.de }}</span></p>
+                  <input v-model="userInput" class="trainer-app__input" autofocus/>
+                </div>
+
+                <div v-if="currentMode === 'audio'">
+                  <p class="question-text">{{ t('sessionLabels.audioFor') }}:</p>
+                  <button @click="speak(currentWord.de)" class="audio-btn">
+                    <img class="megaphones__icon" src="../../assets/images/megaphone.svg" alt="">
+                    <span> {{ t('sessionLabels.listen')}}</span>
+                  </button>
+                  <input v-model="userInput" class="trainer-app__input" autofocus/>
+                </div>
               </div>
 
-              <div v-if="currentMode === 'wordArticle'">
-                <p><b>{{ t('sessionLabels.word')}} : {{ uiWord }}</b></p>
-                <input v-model="userInput" class="trainer-app__input"/>
-              </div>
-              <div v-if="currentMode === 'plural'">
-                <p>{{ t('sessionLabels.pluralFor') }} <b>{{ currentWord.de }}</b>:</p>
-                <input v-model="userInput" class="trainer-app__input"/>
-              </div>
-              <div v-if="currentMode === 'audio'">
-                <p>{{ t('sessionLabels.audioFor') }}:</p>
-                <button @click="speak(currentWord.de)" class="audio-btn">
-                  <img class="megaphones__icon" src="../../assets/images/megaphone.svg" alt="">
-                  <span> {{ t('sessionLabels.listen')}}</span>
+              <div v-if="shouldShowGermanLetters && (currentMode === 'plural' || currentMode === 'wordArticle' || currentMode === 'letters' || currentMode === 'audio')" class="german__letters">
+                <button
+                    @click="addGErmanLetters(letter)"
+                    class="german__letters-item"
+                    v-for="(letter, index) in germanLetters"
+                    :key="index"
+                >
+                  {{ letter }}
                 </button>
-                <input v-model="userInput" class="trainer-app__input"/>
+              </div>
+
+              <div v-if="result" class="answer-result" :class="result">
+                <span class="result-icon" v-if="result === 'correct'">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span class="result-icon" v-if="result === 'wrong'">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </span>
+                <span class="result-text" v-if="currentMode === 'article'">{{ t('result.correctAnswer') }}: <span class="highlight-word">{{ currentWord.article }}</span></span>
+                <span class="result-text" v-if="currentMode === 'letters' || currentMode === 'audio'">{{ t('result.correctAnswer') }}: <span class="highlight-word">{{ currentWord.de }}</span></span>
+                <span class="result-text" v-if="currentMode === 'wordArticle'">{{ t('result.correct') }}: <span class="highlight-word">{{currentWord.article}} {{ currentWord.de }}</span> </span>
+                <span class="result-text" v-if="currentMode === 'plural'">{{ t('result.correct') }}: <span class="highlight-word">{{ currentWord.plural }}</span></span>
               </div>
             </div>
-            <div v-if="shouldShowGermanLetters && (currentMode === 'plural' || currentMode === 'wordArticle' || currentMode === 'letters' || currentMode === 'audio')" class="german__letters">
+            <div class="actions-wrapper">
               <button
-                  @click="addGErmanLetters(letter)"
-                  class="german__letters-item"
-                  v-for="(letter, index) in germanLetters"
-                  :key="index"
+                  v-if="currentMode !== 'article' || result"
+                  class="btn-primary"
+                  @click="!result ? checkAnswer() : nextStep()"
+                  :disabled="!result && (isChecking || (currentMode !== 'wordTranslate' && !userInput))"
               >
-                {{ letter }}
+                {{ currentMode === 'wordTranslate' ? t('trainerPage.further') : (!result ? t('sessionPage.btnCheck') : t('sessionPage.continue')) }}
               </button>
             </div>
-            <div v-if="result" class="answer-result" :class="result">
-              <span v-if="result === 'correct'">✔ </span>
-              <span v-if="result === 'wrong'">✖ </span>
-              <span v-if="currentMode === 'article'">{{ t('result.correctAnswer') }}: {{ currentWord.article }}</span>
-              <span v-if="currentMode === 'letters' || currentMode === 'audio'">{{ t('result.correctAnswer') }}: {{ currentWord.de }}</span>
-              <span v-if="currentMode === 'wordArticle'">{{ t('result.correct') }}: {{currentWord.article}} {{ currentWord.de }} </span>
-              <span v-if="currentMode === 'plural'">{{ t('result.correct') }}: {{ currentWord.plural }}</span>
+          </div>
+          <div v-else class="finish-block">
+            <h2 class="finish-block__title">{{ t('sessionLabels.end')}}</h2>
+            <div class="finish-block__actions">
+              <button class="btn-primary" @click="restartAll">{{ t('sessionLabels.again')}}</button>
+              <button v-if="wrongWords.length" class="btn-secondary" :disabled="wrongWords.length === 0" @click="repeatMistakes">
+                {{ t('sessionLabels.mistakes')}} ({{ wrongWords.length }})
+              </button>
+              <router-link class="btn-secondary" to="/articles">{{ t('sessionLabels.back')}}</router-link>
             </div>
           </div>
-          <button
-              class="btn"
-              @click="!result ? checkAnswer() : nextStep()"
-              :disabled="!result && (isChecking || (currentMode !== 'wordTranslate' && !userInput))"
-          >
-            {{ currentMode === 'wordTranslate' ? t('trainerPage.further') : (!result ? t('sessionPage.btnCheck') : t('sessionPage.continue')) }}
-          </button>
-        </div>
-        <div v-else class="finish-block">
-          <h2 class="finish-block__title">{{ t('sessionLabels.end')}}</h2>
-          <div class="finish-block__actions">
-            <button class="btn" @click="restartAll">{{ t('sessionLabels.again')}}</button>
-            <button v-if="wrongWords.length" class="btn btn--secondary" :disabled="wrongWords.length === 0" @click="repeatMistakes">
-              {{ t('sessionLabels.mistakes')}} ({{ wrongWords.length }})
-            </button>
-            <router-link class="btn btn--secondary" to="/articles">{{ t('sessionLabels.back')}}</router-link>
-          </div>
         </div>
       </div>
-      <div class="trainer-app__ledge">
-        <div class="duster"></div>
-        <div class="chalk"></div>
-      </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -119,17 +156,19 @@ import { nameMap, nameMode } from '../../utils/nameMap.js'
 import { playWrong, playCorrect, unlockAudioByUserGesture } from '../../utils/soundManager.js'
 import { useSeoMeta } from '#imports'
 import SoundBtn from "~/src/components/soundBtn.vue";
+import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
+
 useSeoMeta({ robots: 'noindex, nofollow' })
 
 const { t, locale } = useI18n()
 const store = userlangStore()
 const route = useRoute()
-const router = useRouter()
 
 const wrongWords = ref([])
 const allWords = ref([])
 const isReview = ref(false)
 const isReady = ref(false)
+const isMounted = ref(false)
 const selectedModes = ref([])
 const finished = ref(false)
 const userInput = ref('')
@@ -145,12 +184,22 @@ const shouldShowGermanLetters = computed(() => {
   const textToCheck = currentMode.value === 'plural' ? (currentWord.value.plural || '') : (currentWord.value.de || '');
   return germanLetters.some(letter => textToCheck.includes(letter));
 });
+
+const saveProgressOnExit = () => {
+  store.saveToFirebase()
+}
+
 const currentModeIndex = computed(() => store.currentModeIndex)
 const currentMode = computed(() => selectedModes.value[currentModeIndex.value])
 const currentWord = computed(() => store.selectedWords[store.currentIndex])
 const totalWords = computed(() => store.selectedWords.length)
 const currentLang = computed(() => locale.value)
 const translatedTopic = computed(() => t(nameMap[topicTitle.value]))
+
+const progressPercentage = computed(() => {
+  if (totalWords.value === 0) return 0;
+  return (store.currentIndex / totalWords.value) * 100;
+})
 
 const localeToKeyMap = {
   ru: 'ru', 'ru-RU': 'ru',
@@ -181,7 +230,6 @@ function hasAnyPlural(wordsArray) {
   return (Array.isArray(wordsArray) ? wordsArray : []).some(w => w.plural && String(w.plural).trim() !== '')
 }
 
-const goBack = () => router.back()
 const modeLabel = (mode) => nameMode[mode] || mode
 
 const shuffledLetters = computed(() => {
@@ -213,11 +261,16 @@ function normalize(text) {
   return (text || '').trim().toLowerCase().replace(/\s+/g, ' ')
 }
 
+async function checkArticle(art) {
+  if (result.value) return;
+  userInput.value = art;
+  await checkAnswer();
+}
+
 async function checkAnswer() {
   if (!currentWord.value || isChecking.value) return;
   isChecking.value = true;
 
-  // Если режим "слово-перевод" — сохраняем и мгновенно идем дальше
   if (currentMode.value === 'wordTranslate') {
     if (!isReview.value) {
       await store.markProgress(currentWord.value, currentMode.value, true);
@@ -225,11 +278,10 @@ async function checkAnswer() {
     }
     playCorrect();
     isChecking.value = false;
-    nextStep(); // Сразу переходим к следующему слову
+    nextStep();
     return;
   }
 
-  // Для остальных режимов логика остается прежней
   let correct = '';
   switch (currentMode.value) {
     case 'article':     correct = currentWord.value.article; break;
@@ -268,10 +320,16 @@ function nextStep() {
   userInput.value = ''
   usedLetters.value = []
   result.value = ''
-  if (store.currentIndex >= store.selectedWords.length) finished.value = true
+  if (store.currentIndex >= store.selectedWords.length) {
+    finished.value = true
+    store.saveToFirebase()
+  }
 }
 
 function restartAll() {
+  if (allWords.value && allWords.value.length > 0) {
+    store.selectedWords = [...allWords.value]
+  }
   isReview.value = true
   store.currentIndex = 0
   store.currentModeIndex = 0
@@ -293,6 +351,7 @@ function repeatMistakes() {
 }
 
 onMounted(async () => {
+  isMounted.value = true;
   const unlockOnce = () => {
     unlockAudioByUserGesture()
     window.removeEventListener('pointerdown', unlockOnce, { capture: true })
@@ -310,32 +369,187 @@ onMounted(async () => {
 
   allWords.value = [...store.selectedWords]
   isReview.value = ['1','true','repeat','review'].includes(String(route.query.review || '').toLowerCase())
-
   isReady.value = true
+  window.addEventListener('beforeunload', saveProgressOnExit)
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('pointerdown', unlockAudioByUserGesture, { capture: true })
   window.removeEventListener('keydown', unlockAudioByUserGesture, { capture: true })
+  window.removeEventListener('beforeunload', saveProgressOnExit)
+  store.saveToFirebase()
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('pointerdown', unlockAudioByUserGesture, { capture: true })
+  window.removeEventListener('keydown', unlockAudioByUserGesture, { capture: true })
+  store.saveToFirebase()
 })
 
 watch(userInput, (newVal, oldVal) => {
   if (currentMode.value === 'letters' && newVal.length < oldVal.length) usedLetters.value = []
 })
+
 </script>
 
 <style scoped>
+
 .session-page {
   font-family: "Nunito", sans-serif;
-  background-color: #f0ebe5;
-  background-image: repeating-linear-gradient(90deg, #e9e2db, #e9e2db 20px, #f0ebe5 20px, #f0ebe5 40px);
-  min-height: 100vh;
-  padding: 2rem;
-  box-sizing: border-box;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.trainer-app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+}
+
+.trainer-app__board {
+  flex: 1;
+  padding: 5px 10px 15px 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.board-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.question__content {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 15px;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.progress-wrapper {
+  flex: 1;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 25px;
+  background: #e8eae5;
+  border-radius: 10px;
   position: relative;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #10b981;
+  border-radius: 8px 0 0 8px;
+  transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.glare{
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  border-radius: 4px
+}
+
+.progress-fill[style*="width: 100%"] {
+  border-radius: 8px;
+  border-right: none;
+}
+
+.session-header {
+  border-bottom: 3px solid #f3f4f6;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.session__theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.session__theme-t {
+  font-size:16px;
+  color: var(--titleColor);
+  font-weight: 700;
+}
+
+.session__topic {
+  font-size: 20px;
+  color: var(--titleColor);
+  font-weight: 900;
+  margin: 0;
+}
+
+.progress-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: var(--titleColor);
+  font-weight: 700;
+}
+
+.word-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.word-block::-webkit-scrollbar {
+  display: none;
+}
+
+.word-question {
+  font-size: 1.1rem;
+  color: var(--titleColor);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.word-question b {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.question-text {
+  font-size: 16px;
+  color: var(--titleColor);
+  text-align: center;
+  font-weight: 700;
+  padding: 0 10px;
+}
+
+.question-text b {
+  font-weight: 900;
 }
 
 .word-info-display {
@@ -343,406 +557,369 @@ watch(userInput, (newVal, oldVal) => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px 0;
+  padding: 10px 0;
   text-align: center;
 }
 
+.wordTranslate {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .german-word {
-  font-size: 2rem;
-  color: #f1c40f;
-  font-weight: 700;
+  font-size: 22px;
+  color: var(--titleColor);
+  font-weight: 900;
 }
 
 .word-divider {
-  font-size: 1.5rem;
-  color: #bdc3c7;
-  margin: 10px 0;
+  font-size: 1.6rem;
+  color: #d1d5db;
+  margin: 8px 0;
 }
 
 .translation-word {
-  font-size: 2rem;
-  color: #fff;
-}
-
-.exit-sign {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: all;
-  position: absolute;
-  top: 3vh;
-  left: 3vw;
-  z-index: 20;
-  background-color: #2E7D32;
-  color: rgba(255, 255, 255, 0.9);
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  color: var(--titleColor);
   font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 8px 16px;
-  border: 3px solid #f0ebe5;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 15px rgba(46, 204, 113, 0.6), 0 0 25px rgba(46, 204, 113, 0.5);
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
-  transition: all 0.3s ease;
-  text-decoration: none;
 }
 
-.exit-sign:hover {
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 25px rgba(46, 204, 113, 0.8), 0 0 40px rgba(46, 204, 113, 0.7);
-  color: #ffffff;
-}
-
-.exit-sign-icon {
-  font-size: 1.2rem;
-  filter: invert(1);
-}
-
-.exit-sign-text {
-  padding-left: 10px;
-}
-
-.trainer-app {
-  background: #5D4037;
-  padding: 20px;
-  padding-bottom: 45px;
-  border-radius: 15px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(0, 0, 0, 0.4);
-  width: 100%;
-  max-width: 660px;
-  position: relative;
-}
-
-.trainer-app__board {
-  background: #2c3e50;
-  border: 10px solid #34495e;
-  border-radius: 5px;
-  padding: 2rem 2.5rem;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
-  color: #ecf0f1;
-  min-height: 420px;
+.article-mode-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.trainer-app__ledge {
-  position: absolute;
-  bottom: 10px;
-  left: 5%;
-  width: 90%;
-  height: 25px;
-  background-color: #6d4c41;
-  border-radius: 3px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-}
-
-.duster {
-  position: absolute;
-  left: 20px;
-  bottom: 5px;
-  width: 80px;
-  height: 40px;
-  background-color: #a1887f;
-  border-top: 10px solid #5d4037;
-  border-radius: 4px;
-}
-
-.chalk {
-  position: absolute;
-  right: 30px;
-  bottom: 8px;
-  width: 50px;
-  height: 10px;
-  background-color: #f1c40f;
-  border-radius: 2px;
-  transform: rotate(-5deg);
-}
-
-.session__theme {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 0.5rem;
-  border-bottom: 1px dashed rgba(236, 240, 241, 0.3);
-  padding-bottom: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.session__theme-t {
-  font-size: 1.2rem;
-  color: #bdc3c7;
-}
-
-.session__topic {
-  font-family: "Nunito", sans-serif;
-  font-size: 2.5rem;
-  color: #fff;
-}
-
-.progress-line {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-size: 0.9rem;
-  color: #bdc3c7;
-  margin-bottom: 1rem;
 }
 
-.word-block {
-  min-height: 250px;
+.article-options {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 0 10px;
 }
 
-.word-question {
+.article-btn {
+  flex: 1;
+  padding: 16px 8px;
+  font-family: "Nunito", sans-serif;
   font-size: 1.2rem;
-  color: #bdc3c7;
-  margin-bottom: 1rem;
+  font-weight: 900;
+  background: #ffffff;
+  color: #1e1e1e;
+  border: 3px solid #1e1e1e;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #1e1e1e;
+  transition: all 0.1s ease;
+  text-transform: uppercase;
 }
 
-.word-question b {
-  color: #fff;
-  font-size: 1.3rem;
+.article-btn.is-correct {
+  background: #10b981;
+  color: #ffffff;
+  border-color: #064e3b;
+  box-shadow: 0 4px 0 #064e3b;
 }
 
-.mode-exercise p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  color: #ecf0f1;
+.article-btn.is-wrong {
+  background: #ef4444;
+  color: #ffffff;
+  border-color: #7f1d1d;
+  box-shadow: 0 4px 0 #7f1d1d;
+}
+
+.article-btn.is-revealed {
+  background: #ecfdf5;
+  color: #10b981;
+  border-color: #10b981;
+}
+
+.article-btn:disabled:not(.is-correct):not(.is-wrong):not(.is-revealed) {
+  opacity: 0.5;
+  cursor: default;
+  box-shadow: 0 4px 0 #1e1e1e;
+}
+
+.article-btn:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #1e1e1e;
 }
 
 .trainer-app__input {
   width: 100%;
-  padding: 12px 16px;
-  font-size: 1.2rem;
-  border: 2px dashed rgba(236, 240, 241, 0.5);
-  background: transparent;
-  color: #ecf0f1;
-  border-radius: 8px;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  padding: 10px 15px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  border: 3px solid #1e1e1e;
+  background: #ffffff;
+  color: #1e1e1e;
+  border-radius: 14px;
+  transition: all 0.1s;
+  text-align: center;
+  box-shadow: inset 0 3px 0 rgba(0,0,0,0.05);
 }
 
 .trainer-app__input:focus {
   outline: none;
-  border-color: #f1c40f;
-  border-style: solid;
+  border-color: #3b82f6;
+  box-shadow: inset 0 3px 0 rgba(0,0,0,0.05), 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
 .trainer-app__input[readonly] {
   cursor: default;
-  border-style: solid;
-  border-color: rgba(236, 240, 241, 0.4);
+  background: #f3f4f6;
+  color: #6b7280;
+  border-color: #d1d5db;
+  box-shadow: none;
 }
 
 .letters {
   margin: 1rem 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 8px;
+  justify-content: center;
 }
 
 .letters button {
   font-family: "Nunito", sans-serif;
-  font-size: 1.5rem;
-  width: 45px;
-  height: 45px;
-  background: transparent;
-  color: #f1c40f;
-  border-radius: 8px;
-  border: 2px solid #f1c40f;
+  font-size: 1.4rem;
+  font-weight: 900;
+  width: 40px;
+  height: 48px;
+  background: #ffffff;
+  color: #1e1e1e;
+  border-radius: 12px;
+  border: 3px solid #e5e7eb;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.1s;
+  box-shadow: 0 4px 0 #e5e7eb;
 }
 
-.letters button:hover:not(:disabled) {
-  background: #f1c40f;
-  color: #2c3e50;
+.letters button:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #e5e7eb;
 }
 
 .letters button:disabled {
-  background: transparent;
-  border-color: #7f8c8d;
-  color: #7f8c8d;
+  background: #f3f4f6;
+  border-color: #f3f4f6;
+  color: #d1d5db;
   cursor: not-allowed;
-  opacity: 0.7;
+  box-shadow: 0 4px 0 #f3f4f6;
+}
+
+.letters-clear {
+  display: block;
+  margin: 0 auto 1.2rem;
+  padding: 8px 16px;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  background: #ffffff;
+  color: #4b5563;
+  border: 3px solid #e5e7eb;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.1s;
+  text-transform: uppercase;
+  box-shadow: 0 3px 0 #e5e7eb;
+}
+
+.letters-clear:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #e5e7eb;
+}
+
+.german__letters {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 12px 0;
+}
+
+.german__letters-item {
+  padding: 8px 12px;
+  border: 3px solid #e5e7eb;
+  background: #ffffff;
+  color: #1e1e1e;
+  font-size: 1.2rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.1s;
+  box-shadow: 0 3px 0 #e5e7eb;
+}
+
+.german__letters-item:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #e5e7eb;
 }
 
 .audio-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background: transparent;
-  color: #ecf0f1;
-  border: 2px solid #95a5a6;
-  border-radius: 8px;
-  padding: 7px 18px;
+  justify-content: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #1e1e1e;
+  border: 3px solid #1e1e1e;
+  border-radius: 12px;
+  padding: 10px 20px;
   font-size: 1rem;
+  font-weight: 800;
   cursor: pointer;
-  transition: all 0.2s;
-  margin-bottom: 1rem;
+  transition: all 0.1s;
+  margin: 0 auto 1.2rem;
+  box-shadow: 0 3px 0 #1e1e1e;
 }
 
-.audio-btn:hover {
-  background: #95a5a6;
-  color: #2c3e50;
+.audio-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #1e1e1e;
 }
 
 .megaphones__icon {
   width: 20px;
-  filter: invert(1);
 }
 
 .answer-result {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-top: 0.5rem;
-  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-top: 1.5rem;
+  min-height: 2.5rem;
+  padding: 12px;
+  border-radius: 14px;
+  border: 3px solid transparent;
 }
 
 .answer-result.correct {
-  color: #2ecc71;
+  background: #ecfdf5;
+  color: #10b981;
+  border-color: #10b981;
 }
 
 .answer-result.wrong {
-  color: #e74c3c;
+  background: #fef2f2;
+  color: #ef4444;
+  border-color: #ef4444;
 }
 
-.btn {
-  padding: 12px 24px;
-  font-family: "Nunito", sans-serif;
-  font-size: 1.5rem;
-  color: #f1c40f;
-  background-color: transparent;
-  border: 3px solid #f1c40f;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  white-space: nowrap;
-  text-decoration: none;
-  display: inline-block;
+.result-icon {
+  display: flex;
+  align-items: center;
+}
+
+.btn-primary {
   width: 100%;
+  padding: 16px 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: #ffffff;
+  background-color: #3b82f6;
+  border: 3px solid #1e3a8a;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.1s ease;
   text-align: center;
+  box-shadow: 0 5px 0 #1e3a8a;
+  letter-spacing: 0.5px;
 }
 
-.btn:hover:not(:disabled) {
-  background-color: #f1c40f;
-  color: #2c3e50;
-  transform: translateY(-2px);
+.btn-primary:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #1e3a8a;
 }
 
-.btn:disabled {
-  border-color: #7f8c8d;
-  color: #7f8c8d;
+.btn-primary:disabled {
+  background-color: #9ca3af;
+  border-color: #4b5563;
+  color: #4b5563;
   cursor: not-allowed;
-  background: transparent;
-  transform: none;
+  box-shadow: 0 5px 0 #4b5563;
 }
 
 .finish-block {
   text-align: center;
   padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .finish-block__title {
-  font-family: "Nunito", sans-serif;
-  font-size: 3rem;
-  color: #fff;
+  font-size: 28px;
+  color: var(--titleColor);
+  font-weight: 900;
+  margin-bottom: 2rem;
 }
 
 .finish-block__actions {
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.btn--secondary {
-  border-color: #95a5a6;
-  color: #95a5a6;
-}
-
-.btn--secondary:hover:not(:disabled) {
-  background-color: #95a5a6;
-  color: #2c3e50;
-}
-
-.letters-clear {
-  align-self: flex-start;
-  margin: 0.25rem 0 0.75rem;
-  padding: 6px 14px;
+.btn-secondary {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
   font-family: "Nunito", sans-serif;
-  font-size: 1rem;
-  background: transparent;
-  color: #95a5a6;
-  border: 2px solid #95a5a6;
-  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #1e1e1e;
+  background-color: #ffffff;
+  border-radius: 16px;
   cursor: pointer;
-  transition: all 0.2s;
-}
-.letters-clear:hover {
-  background: #95a5a6;
-  color: #2c3e50;
-}
-
-.german__letters {
-  display: flex;
-  gap: 5px;
-  margin: 8px 0;
-}
-
-.german__letters-item {
-  padding: 6px 9px;
-  border: 1px solid #95a5a6;
-  background: whitesmoke;
-  font-size: 17px;
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  border-radius: 7px;
-}
-
-.wordTranslate {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.word-display-mode {
-  font-size: 2.2rem;
-  color: #fff;
+  transition: all 0.1s ease;
   text-align: center;
-  margin-bottom: 1.5rem;
-  font-family: "Nunito", sans-serif;
+  text-decoration: none;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
 }
 
-@media (max-width: 768px) {
-  .session-page {
-    padding: 0;
-  }
+.highlight-word {
+  color: #3b82f6;
+  font-weight: 900;
+  font-size: 22px;
+}
 
-  .exit-sign {
-    display: none;
-  }
+.answer-result.wrong .highlight-word {
+  color: #ef4444;
+  text-decoration: underline;
+}
 
-  .trainer-app {
-    border-radius: 0;
-    border: none;
-    min-height: 100vh;
-  }
 
-  .trainer-app__board {
-    min-height: calc(100vh - 40px - 45px);
-    padding: 1.5rem 1rem;
-  }
+.answer-result.correct .highlight-word {
+  color: #10b981;
+}
 
-  .session__topic {
-    font-size: 2rem;
-  }
+.btn-secondary:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #1e1e1e;
+}
 
-  .progress-line {
-    flex-direction: column;
-    gap: 0.2rem;
-    align-items: flex-start;
-  }
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateY(15px) scale(0.98);
+}
+
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-15px) scale(0.98);
 }
 </style>

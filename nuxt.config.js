@@ -25,86 +25,39 @@ const siteUrl =
 	(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 
 export default defineNuxtConfig({
-	experimental: {payloadExtraction: false},
+	ssr: false,
+	experimental: {
+		payloadExtraction: false,
+		appManifest: false
+	},
+
 	defaults: {
 		nuxtLink: {
 			prefetch: false,
 			noPrefetch: true
 		}
 	},
+
 	router: {
 		options: {
-			prefetchLinks: false
+			prefetchLinks: false,
+			hashMode: true
 		}
 	},
+
+
+
 	compatibilityDate: '2024-11-01',
-	devtools: {enabled: true},
+	devtools: {enabled: false},
 	modules: [
 		'@nuxt/image',
 		'@pinia/nuxt',
 		'nuxt-vuefire',
 		'@nuxtjs/google-fonts',
 		'@nuxtjs/i18n',
-		'@nuxtjs/color-mode',
-		'@nuxtjs/robots',
-		'@vite-pwa/nuxt',
+		'@nuxtjs/color-mode'
 	],
-	pwa: {
-		registerType: 'autoUpdate',
-		manifest: {
-			name: 'Skillupgerman',
-			short_name: 'Skillupgerman',
-			description: 'Learn german',
-			theme_color: '#0b1020',
-			background_color: '#0b1020',
-			display: 'standalone',
-			start_url: '/',
-			scope: '/',
-			icons: [
-				{ src: '/pwa-192x192.png', sizes: '192x192', type: 'image/png' },
-				{ src: '/pwa-512x512.png', sizes: '512x512', type: 'image/png' },
-				{ src: '/pwa-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }
-			]
-		},
-		workbox: {
-			navigateFallback: '/',
-			globPatterns: ['_nuxt/*.{js,css}', 'favicon.ico', 'pwa-*.png'],
-			globIgnores: ['quests/*.json', 'images/**/*', 'assets/**/*', 'levels/**/*'],
-			runtimeCaching: [
-				{
-					urlPattern: ({ request }) => request.mode === 'navigate',
-					handler: 'NetworkFirst',
-					options: { cacheName: 'pages-cache' },
-				},
-				{
-					urlPattern: ({ request }) => request.destination === 'image',
-					handler: 'StaleWhileRevalidate',
-					options: {
-						cacheName: 'images-cache',
-						expiration: {
-							maxEntries: 100,
-							maxAgeSeconds: 60 * 60 * 24 * 7,
-						},
-					},
-				},
-				{
-					urlPattern: ({ url }) => url.pathname.startsWith('/quests/'),
-					handler: 'StaleWhileRevalidate',
-					options: {
-						cacheName: 'quests-json-cache',
-						expiration: {
-							maxEntries: 50,
-							maxAgeSeconds: 60 * 60 * 24
-						},
-					},
-				},
-			],
-		},
-		devOptions: {
-			enabled: true,
-			type: 'module',
-		}
-	},
+
 	vuefire: {
 		config: firebaseConfig,
 		auth: true,
@@ -113,6 +66,7 @@ export default defineNuxtConfig({
 		},
 		...(admin ? {admin} : {}),
 	},
+
 	runtimeConfig: {
 		stripeSecret: process.env.STRIPE_SECRET_KEY || env.STRIPE_SECRET_KEY,
 		stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET || env.STRIPE_WEBHOOK_SECRET,
@@ -122,6 +76,7 @@ export default defineNuxtConfig({
 		public: {
 			stripePublishableKey: process.env.VITE_STRIPE_PUBLIC_KEY || env.VITE_STRIPE_PUBLIC_KEY,
 			firebaseApiKey: firebaseConfig.apiKey,
+			revenuecatGoogleApiKey: process.env.NUXT_PUBLIC_REVENUECAT_GOOGLE_API_KEY,
 			firebaseAuthDomain: firebaseConfig.authDomain,
 			firebaseProjectId: firebaseConfig.projectId,
 			firebaseStorageBucket: firebaseConfig.storageBucket,
@@ -130,51 +85,18 @@ export default defineNuxtConfig({
 			siteUrl,
 		},
 	},
+
 	app: {
+		baseURL: './',
+		buildAssetsDir: 'assets',
 		head: {
-			link: [
-				{rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
-				{rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png'},
-				{rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png'},
-				{rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png'},
-				{ rel: 'manifest', href: '/manifest.webmanifest' }
-			],
 			meta: [
-				{property: 'og:image', content: 'https://www.skillupgerman.com/android-chrome-512x512.png'},
-				{property: 'og:image:type', content: 'image/png'},
-				{property: 'og:image:width', content: '512'},
-				{property: 'og:image:height', content: '512'},
-				{name: 'twitter:card', content: 'summary_large_image'},
-				{name: 'twitter:image', content: 'https://www.skillupgerman.com/android-chrome-512x512.png'},
-				{name: 'robots', content: 'max-image-preview:large'}
+				{
+					name: 'viewport',
+					content: 'width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover'
+				}
 			]
 		}
-	},
-	// sitemap: {
-	// 	siteUrl,
-	// 	autoLastmod: true,
-	// 	exclude: [
-	// 		'/**/success',
-	// 		'/**/battle',
-	// 		'/**/cabinet',
-	// 		'/**/calendar',
-	// 		'/**/chat',
-	// 		'/**/statistics'
-	// 	],
-	// },
-	robots: {
-		rules: process.env.VERCEL_ENV === 'production'
-			? [
-				{userAgent: '*', allow: '/'},
-				{userAgent: '*', disallow: '/*success'},
-				{userAgent: '*', disallow: '/*battle'},
-				{userAgent: '*', disallow: '/*cabinet'},
-				{userAgent: '*', disallow: '/*calendar'},
-				{userAgent: '*', disallow: '/*chat'},
-				{userAgent: '*', disallow: '/*statistics'}
-			]
-			: [{userAgent: '*', disallow: '/'}],
-		// sitemap: `${siteUrl}/sitemap.xml`,
 	},
 
 	css: [
@@ -185,16 +107,18 @@ export default defineNuxtConfig({
 	],
 
 	colorMode: {
-		preference: 'system',
-		fallback: 'light',
+		preference: 'dark',
+		fallback: 'dark',
 		globalName: '__NUXT_COLOR_MODE__',
 		classSuffix: '',
 		storage: 'localStorage',
 		storageKey: 'nuxt-color-mode',
 	},
+
 	sourcemap: mode !== 'production',
+
 	i18n: {
-		strategy: 'prefix',
+		strategy: 'no_prefix',
 		lazy: true,
 		langDir: 'locales',
 		defaultLocale: 'en',
@@ -224,7 +148,12 @@ export default defineNuxtConfig({
 	plugins: ['~/plugins/simplebar.client.js'],
 
 	googleFonts: {
-		families: {'Uncial Antiqua': true, Kurale: true, Fredoka: true, Nunito: true},
+		families: {
+			'Uncial Antiqua': true,
+			Kurale: true,
+			Fredoka: true,
+			'Lilita One': true,
+			Nunito: true},
 	},
 
 	vite: {
@@ -238,14 +167,14 @@ export default defineNuxtConfig({
 	},
 
 	nitro: {
-		preset: 'vercel',
 		prerender: {
-			crawlLinks: false,
+			crawlLinks: true,
 			routes: ['/'],
 			failOnError: false,
 		},
 		compressPublicAssets: false
 	},
+
 	routeRules: {
 		'/': {
 			prerender: true,
@@ -254,17 +183,10 @@ export default defineNuxtConfig({
 			ssr: false,
 			headers: { 'Cache-Control': 'public, max-age=0, must-revalidate' }
 		},
-		'/home': { redirect: { to: '/', statusCode: 301 } },
-		'/about': { redirect: { to: '/', statusCode: 301 } },
-		'/contact': { redirect: { to: '/', statusCode: 301 } },
 		'/admin/**': { status: 404 },
 		'/wp-login.php': { status: 404 },
-		'/_nuxt/**': { headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
 		'/sounds/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/sw.js': { headers: { 'Cache-Control': 'public, max-age=7200, must-revalidate' } },
 		'/images/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/*.png': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/*.ico': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/*.webmanifest': { headers: { 'Cache-Control': 'public, max-age=86400' } }
+		'/*.png': { headers: { 'Cache-Control': 'public, max-age=2592000' } }
 	},
 })

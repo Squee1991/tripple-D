@@ -1,7 +1,14 @@
 <template>
-  <div>
+  <div
+      @touchstart="handleTouchStart"
+      @touchmove="handleTouchMove"
+      @touchend="handleTouchEnd"
+  >
+    <div v-if="isAdLoading" class="ad-overlay">
+      <div class="ad-spinner"></div>
+    </div>
     <div class="quest">
-      <button class="quest__back-btn" @click="openLeave('back')">×</button>
+      <VLoginPreloader v-if="questStore.loading"/>
       <div v-if="questStore.finished && questStore.success && !questStore.hasMistakes" class="quest__stamp quest__stamp--ok">{{ t('locationQuests.done')}}</div>
       <div v-if="questStore.loading" class="quest__panel quest__panel--loading"></div>
       <div v-else-if="questStore.error" class="quest__panel quest__panel--error">
@@ -11,18 +18,14 @@
       <div v-else-if="questStore.task" class="quest__card">
         <VHelpModal :open="showHint" @close="showHint=false" />
         <div class="quest__top">
+          <button class="quest__back-btn" @click="openLeave('back')">×</button>
           <div class="quest__stat">
             <div class="quest__stat-value">
               {{ questStore.currentIndex + 1 }} / {{ questStore.requiredTasks }}
             </div>
             <div class="quest__progress-line">
-              <template v-for="(step, i) in progressSteps" :key="i">
-                <div class="quest__dot" :class="{
-            'quest__dot--done': step === 'done',
-            'quest__dot--wrong': step === 'wrong',
-            'quest__dot--current': step === 'current',
-          }"
-                ></div>
+              <template v-for="(step, index) in progressSteps" :key="index">
+                <div class="quest__dot" :class="getDotClass(step)"></div>
               </template>
             </div>
           </div>
@@ -56,10 +59,12 @@
                 }}
               </div>
               <ul class="quest__options" :class="{ 'quest__options--locked': questStore.showResult }">
-                <li v-for="opt in questStore.task.options" :key="opt">
-                  <button class="quest__option-btn" :class="optionClass(opt)"
-                          @click="handleOptionClick(opt)">
-                    {{ t(opt) }}
+                <li v-for="option in questStore.task.options" :key="option">
+                  <button class="quest__option-btn"
+                          :class="optionClass(option, questStore)"
+                          @click="handleOptionClick(option)"
+                  >
+                    {{ t(option) }}
                   </button>
                 </li>
               </ul>
@@ -99,7 +104,7 @@
                     v-model="questStore.userInput"
                     :disabled="questStore.showResult"
                     @keyup.enter="handleClick"
-                    :placeholder="inputPlaceholders.inputType"
+                    :placeholder="inputPlaceholders.inputTypeSTT"
                 />
                 <div v-if="shouldShowGermanLetters" class="german__letters">
                   <button
@@ -141,7 +146,7 @@
             </template>
           </div>
           <div v-if="questStore.showResult" :class="statusClassComputed" class="quest__feedback">
-            <img class="quest__feedback-icon" :src="questStore.isCorrect ? RightIcon : WrongIcon" alt="">
+            <img class="quest__feedback-icon" :src="questStore.isCorrect ? RightIcon : WrongIcon" alt="answer_icons">
             <div class="quest__feedback-text">
               <div v-if="questStore.isCorrect">{{ t('questCompletedModals.correct')}}</div>
               <div class="quest__correct-answer-block" v-else>
@@ -181,78 +186,40 @@
             </template>
           </div>
           <div class="modal__actions">
-            <template v-if="questStore.success && !questStore.hasMistakes">
-              <button class="btn" @click="restart">{{ t('questCompletedModals.again') }}</button>
-              <button class="btn btn--primary" @click="goThemes">{{ t('questCompletedModals.back') }}</button>
-            </template>
-            <template v-else-if="questStore.success && questStore.hasMistakes">
-              <button class="btn" @click="questStore.startRetryMistakes()">{{ t('locationQuests.repeatMistakes') }}</button>
-              <button class="btn btn--primary" @click="goThemes">{{ t('questCompletedModals.back') }}</button>
-            </template>
-            <template v-else>
-              <button class="btn" @click="restart">{{ t('questCompletedModals.again') }}</button>
-              <button class="btn btn--primary" @click="goThemes">{{ t('questCompletedModals.back') }}</button>
-            </template>
+            <button v-for="(btn, index) in footerButtons"
+                    :key="index" class="btn"
+                    :class="btn.style"
+                    @click="btn.action"
+            >
+              {{ btn.text }}
+            </button>
           </div>
         </div>
       </div>
     </div>
-    <div v-if="forceRevive || showRevive" class="modal">
-      <div class="modal__overlay"></div>
-      <div class="modal__window">
-        <div class="modal__title">{{ t('questCompletedModals.lives')}}</div>
-        <div class="modal__text">
-          {{ t('questCompletedModals.count')}} {{ questStore.correctCount }} / {{ questStore.requiredTasks }}.<br/>
-          {{ t('questCompletedModals.buyLive')}}
-        </div>
-        <div class="wallet">
-          <div class="wallet__row">
-            <div class="wallet__label">{{ t('questCompletedModals.prise')}}</div>
-            <div class="wallet__value">{{ t('questCompletedModals.priseValue')}}</div>
-          </div>
-          <div class="wallet__row">
-            <div class="wallet__label">{{ t('questCompletedModals.balance')}}</div>
-            <div class="wallet__value">{{ wallet }} {{ t('questCompletedModals.points')}}</div>
-          </div>
-        </div>
-        <div class="modal__actions">
-          <button class="btn" :disabled="!canBuyLife" @click="purchaseLife">
-            {{ canBuyLife ? t('questCompletedModals.buy') : t('questCompletedModals.notEnough') }}
-          </button>
-          <button class="btn btn--primary" @click="goThemes">{{ t('questCompletedModals.back')}}</button>
-        </div>
-      </div>
-    </div>
-    <div v-if="showLeaveModal" class="modal">
-      <div class="modal__overlay"></div>
-      <div class="modal__window">
-        <div class="modal__title">{{ t('questCompletedModals.questNotCompleted')}}</div>
-        <div class="modal__text">{{ t('questCompletedModals.warning')}}</div>
-        <div class="modal__actions">
-          <button class="btn btn--danger" @click="confirmLeave">{{ t('questCompletedModals.leave')}}</button>
-          <button class="btn btn--primary" @click="stayHere">{{ t('questCompletedModals.continue')}}</button>
-        </div>
-      </div>
-    </div>
-    <transition name="modal-slide">
-      <div v-if="showTipModal" class="modal modal--tip">
-        <div class="modal__overlay" @click="showTipModal = false"></div>
-        <div class="modal__window modal__window--bottom">
-          <div class="modal__title">💡</div>
-          <div class="modal__text quest__tip-text">
-            <template v-if="questStore.showResult">
-              {{ t(currentTip) }}
-            </template>
-            <template v-else>
-              Подсказка по грамматика доступна после ответа.
-            </template>
-          </div>
-          <div class="modal__actions">
-            <button class="btn btn--primary" @click="showTipModal = false">{{ t('modalLocations.btnAccept') }}</button>
-          </div>
-        </div>
-      </div>
-    </transition>
+    <VReviveModal
+        :show="forceRevive || showRevive"
+        :correct-count="questStore.correctCount"
+        :required-tasks="questStore.requiredTasks"
+        :wallet="wallet"
+        :can-buy-life="canBuyLife"
+        :remaining-ads="remainingAds"
+        @purchase="purchaseLife"
+        @watchAd="watchAdForLife"
+        @back="goThemes"
+    />
+    <VStopSessionModal
+        :show="showLeaveModal"
+        @update:show="showLeaveModal = $event"
+        @confirm="confirmLeave"
+        @cancel="stayHere"
+    />
+    <VRulesModal
+        :show="showTipModal"
+        :show-result="questStore.showResult"
+        :current-tip="currentTip"
+        @close="showTipModal = false"
+    />
   </div>
 </template>
 
@@ -263,14 +230,21 @@ import {userChainStore} from '~/store/chainStore.js'
 import {userlangStore} from '~/store/learningStore.js'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '~/utils/soundManager.js'
+import { showRewarded } from '~/utils/admob.js';
 import RightIcon from '~/assets/images/location-icons/accept.svg'
 import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 import {useSeoMeta} from '#imports'
 import VHelpModal from "~/src/components/V-help-modal.vue";
 import VHearts from '../../src/components/V-hearts.vue'
+import VRulesModal from "~/src/components/V-rulesModal.vue";
+import VReviveModal from "~/src/components/V-reviveModal.vue";
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
+import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
+import { useSwipeBack } from '~/composables/useSwipeBack.js'
+
 useSeoMeta({robots: 'noindex, nofollow'})
 
-const PRICE = 10
+const { getDotClass,  optionClass } = useClasses()
 const {t, locale} = useI18n()
 const route = useRoute()
 const router = useRouter()
@@ -278,6 +252,17 @@ const questStore = userChainStore()
 const langStore = userlangStore()
 const forceRevive = ref(false)
 const showTipModal = ref(false)
+const isAdLoading = ref(false)
+const MAX_ADS = 5;
+const remainingAds = ref(MAX_ADS);
+const PRICE = 10
+
+const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipeBack(() => {
+  openLeave()
+}, {
+  ignoreSelector: '.quest__input, .german__letters-item, .quest__option-btn, .quest__word-btn, .btn'
+})
+
 const questId = computed(() => {
   const rawId = String(route.params.id || route.params.questId || '')
   return rawId.replace('quest-', '')
@@ -317,33 +302,49 @@ function updateTimer() {
   rafId = requestAnimationFrame(updateTimer)
 }
 
-onMounted(() => {
-  updateTimer()
-})
+function updateRemainingAds() {
+  const today = new Date();
+  const todayKey = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+  const statsStr = localStorage.getItem('adRewardStats');
+  if (!statsStr) {
+    remainingAds.value = MAX_ADS;
+    return;
+  }
+  try {
+    const stats = JSON.parse(statsStr);
+    if (stats.date !== todayKey) {
+      remainingAds.value = MAX_ADS;
+    } else {
+      remainingAds.value = Math.max(0, MAX_ADS - stats.count);
+    }
+  } catch (e) {
+    remainingAds.value = MAX_ADS;
+  }
+}
 
 onBeforeUnmount(() => {
   if (rafId) cancelAnimationFrame(rafId)
 })
 
-function getWaterGroupStyle(i) {
-  if (i < questStore.lives) {
-    return { transform: 'translateY(-6px)', transition: 'transform 0.3s ease-in-out' }
+const footerButtons = computed(() => [
+  {text: questStore.success && questStore.hasMistakes
+        ? t('locationQuests.repeatMistakes')
+        : t('questCompletedModals.again'),
+    action: questStore.success && questStore.hasMistakes
+        ? () => questStore.startRetryMistakes()
+        : restart,
+    style: ''
+  },
+  {
+    text: t('questCompletedModals.back'),
+    action: goThemes,
+    style: 'btn--primary'
   }
-  if (i === questStore.lives && questStore.lives < questStore.maxLives && questStore.lastLifeAtMs > 0) {
-    const regenMs = questStore.REGEN_INTERVAL_MS
-    const elapsed = Math.max(0, now.value - questStore.lastLifeAtMs)
-    const progress = Math.min(100, (elapsed / regenMs) * 100)
-    const yPos = 30 - (progress / 100) * 36;
-    return {
-      transform: `translateY(${yPos}px)`,
-      transition: 'none'
-    }
-  }
-  return { transform: 'translateY(30px)', transition: 'transform 0.3s ease-in-out' }
-}
+])
 
 const inputPlaceholders = {
-  inputType: t('locationsPlaceholder.inputType'),
+  inputTypeSTT: t('locationsPlaceholder.inputType'),
+  inputType: 'впишите правильный вариант'
 }
 
 const shouldShowGermanLetters = computed(() => {
@@ -446,15 +447,6 @@ function restart() {
   questStore.loadQuest(questId.value, regionKey.value)
 }
 
-function optionClass(opt) {
-  if (questStore.showResult) {
-    if (opt === questStore.task?.answer) return 'quest__option-btn--correct'
-    if (opt === questStore.selected) return 'quest__option-btn--wrong'
-    return 'quest__option-btn--dim'
-  }
-  return questStore.selected === opt ? 'quest__option-btn--chosen' : ''
-}
-
 function handleClick() {
   unlockAudioByUserGesture()
   if (!questStore.showResult) {
@@ -540,6 +532,25 @@ async function trySpendLocal(amount) {
   return true
 }
 
+function watchAdForLife() {
+  isAdLoading.value = true;
+  showRewarded(
+      async () => {
+        await questStore.addLife(1);
+        if (questStore.finished && !questStore.success) questStore.finished = false;
+        if (!questStore.sessionStarted) questStore.sessionStarted = true;
+        forceRevive.value = false;
+        updateRemainingAds();
+      },
+      (gotReward) => {
+        isAdLoading.value = false;
+        if (!gotReward) {
+          console.log("Юзер закрыл рекламу раньше времени. Жизнь не даем.");
+        }
+      }
+  );
+}
+
 async function purchaseLife() {
   if (!canBuyLife.value) return
   const ok = await trySpendLocal(PRICE)
@@ -585,20 +596,24 @@ onBeforeUnmount(() => {
   if (rafId) cancelAnimationFrame(rafId)
 })
 
+onMounted(() => {
+  updateTimer()
+  updateRemainingAds()
+})
+
 watchEffect(() => {
   forceRevive.value = showRevive.value
 })
-
 </script>
 
 <style scoped>
 .quest {
-  min-height: 100svh;
+  min-height: 100%;
   font-family: "Nunito", sans-serif;
   color: #1e1e1e;
   display: flex;
   flex-direction: column;
-  padding: 10px 1.5rem;
+  padding: 10px 16px;
 }
 
 .quest__panel--error {
@@ -606,12 +621,6 @@ watchEffect(() => {
   padding: 20px;
   border-radius: 12px;
   text-align: center;
-}
-
-.quest__tiny {
-  font-size: 12px;
-  opacity: .85;
-  margin-top: 6px;
 }
 
 .quest__correct-answer-block {
@@ -622,10 +631,10 @@ watchEffect(() => {
 
 .quest__back-btn {
   position: absolute;
-  left: 1.5rem;
-  top: 1.5rem;
-  width: 46px;
-  height: 46px;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
   display: grid;
   place-items: center;
   background: #fff;
@@ -633,22 +642,11 @@ watchEffect(() => {
   font-weight: 900;
   font-size: 22px;
   line-height: 1;
-  border: 3px solid #1e1e1e;
-  border-radius: 12px;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  border: 2px solid #1e1e1e;
+  border-radius: 40px;
   cursor: pointer;
   transition: all .1s ease-in-out;
   z-index: 99;
-}
-
-.quest__back-btn:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1e1e1e;
-}
-
-.quest__back-btn:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0 0 0 #1e1e1e;
 }
 
 .quest__card {
@@ -699,47 +697,7 @@ watchEffect(() => {
 .quest__lives {
   padding: .5rem 1rem;
   text-align: center;
-}
-
-.quest__hearts {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.quest__heart-wrapper {
   position: relative;
-  width: 30px;
-  height: 30px;
-}
-
-.quest__heart-svg {
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(0 2px 1px rgba(0,0,0,0.1));
-}
-
-.heart-bg {
-  fill: #e2e2e2;
-  stroke: #ccc;
-  stroke-width: 1px;
-}
-.water-group {
-  will-change: transform;
-}
-
-.water-wave {
-  fill: #ff4d4d;
-  animation: wave-action 1.5s linear infinite;
-}
-
-@keyframes wave-action {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-32px);
-  }
 }
 
 .quest__section {
@@ -845,9 +803,8 @@ watchEffect(() => {
   font-size: 18px;
   background: #fff;
   color: #1e1e1e;
-  border: 3px solid #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
   border-radius: 16px;
-  box-shadow: 4px 4px 0 #1e1e1e;
 }
 
 .quest__speech {
@@ -929,10 +886,9 @@ watchEffect(() => {
   top: 18px;
   z-index: 50;
   font-weight: 900;
-  border: 4px solid #1e1e1e;
+  border: 3px solid #1e1e1e;
   padding: 6px 12px;
   border-radius: 10px;
-  box-shadow: 6px 6px 0 #1e1e1e;
   transform: rotate(-6deg);
 }
 
@@ -976,26 +932,23 @@ watchEffect(() => {
 }
 
 .btn {
-  height: 56px;
-  padding: 0 26px;
-  border-radius: 16px;
+  width: 80%;
+  max-width: 440px;
+  padding: 14px;
+  border-radius: 36px;
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-size: 22px;
-  border: 2px solid #1e1e1e;
-  color: #1e1e1e;
-  background: #9dceff;
+  border: none;
+  color: white;
+  background: #3b82f6;
   cursor: pointer;
-  box-shadow: 2px 2px 0 #1e1e1e;
+  box-shadow: 0px 5px 0 #2261c7;
   transition: all .1s ease-in-out;
 }
 
 .btn--primary {
   background: #a7ecb8;
-}
-
-.btn--danger {
-  background: #ffd0cc;
 }
 
 .modal {
@@ -1043,7 +996,6 @@ watchEffect(() => {
   background: #fff;
   border: 3px solid #111;
   border-radius: 18px;
-  box-shadow: 4px 4px 0 #1e1e1e;
   padding: 20px 35px;
   text-align: center;
   z-index: 1;
@@ -1087,10 +1039,6 @@ watchEffect(() => {
 }
 
 @media (max-width: 1023px) {
-  .quest__back-btn {
-    left: 1rem;
-    top: 1rem;
-  }
   .quest__top {
     flex-direction: column;
     align-items: center;
@@ -1139,36 +1087,17 @@ watchEffect(() => {
     left: 50%;
     transform: translateX(-50%);
   }
-  .quest__heart-wrapper {
-    width: 28px;
-    height: 28px;
-  }
+
   .quest__question {
     font-size: 1.1rem;
-    border-bottom: 2px solid #9dceff;
     border-radius: 15px;
-  }
-  .quest__back-btn {
-    font-size: 30px;
-    top: 10px;
-    left: 0;
-    border: none;
-    background: none;
-    box-shadow: none;
-    color: var(--titleColor);
   }
   .quest__option-btn {
     height: 40px;
     font-size: 14px;
-    box-shadow: 3px 3px 0 black;
-    border: 2px solid black;
+    border: 3px solid var(--tabsSlideBorderColor);
+    box-shadow: var(--boxShadowMobile);
     padding: 3px;
-  }
-  .btn {
-    height: 45px;
-    padding: 0 28px;
-    font-size: 20px;
-    max-width: 100%;
   }
   .quest__feedback.is-red {
     font-size: 1.5rem;
@@ -1199,7 +1128,7 @@ watchEffect(() => {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: white;
+  background: #cec7c7;
   transition: all 0.3s ease;
 }
 
@@ -1237,10 +1166,9 @@ watchEffect(() => {
   font-weight: 800;
   font-size: 16px;
   color: #1e1e1e;
-  background: #fffbe9;
-  border: 2px solid #1e1e1e;
+  background: #ffffff;
+  border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 12px;
-  box-shadow: 3px 3px 0 #1e1e1e;
   cursor: pointer;
   transition: all .1s ease-in-out;
 }
@@ -1255,31 +1183,6 @@ watchEffect(() => {
   box-shadow: 0 0 0 #1e1e1e;
 }
 
-.quest__tip-text {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.4;
-  padding: 15px 5px;
-  color: #333;
-}
-
-/* Анимации для плавного появления */
-.modal-slide-enter-active,
-.modal-slide-leave-active {
-  transition: opacity 0.3s ease;
-}
-.modal-slide-enter-from,
-.modal-slide-leave-to {
-  opacity: 0;
-}
-
-.modal-slide-enter-active .modal__window--bottom {
-  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-.modal-slide-leave-active .modal__window--bottom {
-  animation: slideDown 0.3s ease-in forwards;
-}
-
 @keyframes slideUp {
   from { transform: translateY(100%); }
   to { transform: translateY(0); }
@@ -1290,70 +1193,29 @@ watchEffect(() => {
   to { transform: translateY(100%); }
 }
 
-/* Мобильная адаптация: всегда внизу на 767px и меньше */
-@media (max-width: 767px) {
-  .modal--tip {
-    /* Прижимаем все к самому низу без отступов */
-    align-items: flex-end;
-    padding: 0;
-  }
-
-  .modal__window--bottom {
-    width: 100%;
-    /* Скругляем только верхние углы, низ прямой */
-    border-radius: 30px 30px 0 0;
-    /* Тонкая, аккуратная обводка */
-    border: 1px solid #e0e0e0;
-    /* Мягкая, современная тень для объема, а не грубая черная */
-    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.05);
-    /* Учитываем системную полоску на iOS/Android, добавляя padding снизу */
-    margin: 0;
-    padding: 30px 24px calc(20px + env(safe-area-inset-bottom, 0px));
-    background: #ffffff; /* Чистый белый фон для свежести */
-  }
-
-  /* --- Стилизация контента внутри --- */
-
-  .modal--tip .modal__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 22px;
-    font-weight: 800;
-    color: #1e1e1e;
-    margin-bottom: 20px;
-  }
-
-  /* Можно добавить иконку 💡 прямо перед текстом заголовка, если хочешь */
-  /* .modal--tip .modal__title::before { content: '💡'; font-size: 26px; } */
-
-  .modal--tip .quest__tip-text {
-    font-size: 17px;
-    line-height: 1.6; /* Увеличенное межстрочное расстояние для легкого чтения */
-    padding: 0 0 30px;
-    color: #4f4f4f; /* Чуть мягче, чем чистый черный */
-    text-align: center;
-  }
-
-  /* Кнопка "Понятно" тоже должна быть современной */
-  .modal--tip .modal__actions .btn--primary {
-    width: 100%; /* Растягиваем кнопку на всю ширину */
-    height: 54px;
-    border-radius: 16px;
-    background: #a7ecb8; /* Твой базовый зеленый */
-    border: none; /* Убираем обводку для modern look */
-    box-shadow: 0 4px 15px rgba(167, 236, 184, 0.3); /* Мягкая цветная тень */
-    font-size: 18px;
-    font-weight: 700;
-    color: #1a532a; /* Темно-зеленый текст для контраста */
-    transition: transform 0.1s ease, box-shadow 0.2s ease;
-  }
-
-  .modal--tip .modal__actions .btn--primary:active {
-    transform: scale(0.98); /* Эффект нажатия */
-    box-shadow: 0 2px 8px rgba(167, 236, 184, 0.2);
-  }
+.ad-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 27, 27, 0.6);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
+.ad-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #00c2ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
 </style>

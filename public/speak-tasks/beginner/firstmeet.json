@@ -1,0 +1,543 @@
+{
+  "start": {
+    "botText": "Hallo! Wie heißt du?",
+    "botTranslation": {
+      "ar-SA": "مرحباً! ما اسمك؟",
+      "en-US": "Hello! What is your name?",
+      "es-ES": "¡Hola! ¿Cómo te llamas?",
+      "fr-FR": "Bonjour ! Comment t'appelles-tu ?",
+      "hi-IN": "नमस्ते! तुम्हारा नाम क्या है?",
+      "pl-PL": "Cześć! Jak masz na imię?",
+      "ro-RO": "Salut! Cum te cheamă?",
+      "ru-RU": "Привет! Как тебя зовут?",
+      "tr-TR": "Merhaba! Adın ne?",
+      "uk-UA": "Привіт! Як тебе звати?",
+      "uz-UZ": "Salom! Isming nima?"
+    },
+    "vocabulary": [
+      {
+        "german": "heißen",
+        "translation": {
+          "ar-SA": "يُدعى",
+          "en-US": "be called",
+          "es-ES": "llamarse",
+          "fr-FR": "s'appeler",
+          "hi-IN": "कहलाना",
+          "pl-PL": "nazywać się",
+          "ro-RO": "a se numi",
+          "ru-RU": "зваться",
+          "tr-TR": "adlandırılmak",
+          "uk-UA": "зватися",
+          "uz-UZ": "atalmoq"
+        }
+      },
+      {
+        "german": "der Name",
+        "translation": {
+          "ar-SA": "الاسم",
+          "en-US": "the name",
+          "es-ES": "el nombre",
+          "fr-FR": "le nom",
+          "hi-IN": "नाम",
+          "pl-PL": "imię / nazwisko",
+          "ro-RO": "numele",
+          "ru-RU": "имя",
+          "tr-TR": "isim",
+          "uk-UA": "ім'я",
+          "uz-UZ": "ism"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich heiße...",
+        "translation": {
+          "ar-SA": "اسمي...",
+          "en-US": "My name is...",
+          "es-ES": "Me llamo...",
+          "fr-FR": "Je m'appelle...",
+          "hi-IN": "मेरा नाम... है",
+          "pl-PL": "Nazywam się...",
+          "ro-RO": "Mă numesc...",
+          "ru-RU": "Меня зовут...",
+          "tr-TR": "Benim adım...",
+          "uk-UA": "Мене звати...",
+          "uz-UZ": "Mening ismim..."
+        },
+        "nextStep": "ask_mood"
+      },
+      {
+        "text": "Mein Name ist...",
+        "translation": {
+          "ar-SA": "أنا أدعى...",
+          "en-US": "My name is...",
+          "es-ES": "Mi nombre es...",
+          "fr-FR": "Mon nom est...",
+          "hi-IN": "मुझे... कहते हैं",
+          "pl-PL": "Moje imię to...",
+          "ro-RO": "Numele meu este...",
+          "ru-RU": "Мое имя...",
+          "tr-TR": "İsmim...",
+          "uk-UA": "Моє ім'я...",
+          "uz-UZ": "Meni ... deb chaqirishadi"
+        },
+        "nextStep": "ask_mood"
+      }
+    ],
+    "defaultNext": "ask_mood"
+  },
+  "ask_mood": {
+    "botText": "Freut mich! Wie geht es dir heute?",
+    "botTranslation": {
+      "ar-SA": "سعدت بلقائك! كيف حالك اليوم؟",
+      "en-US": "Nice to meet you! How are you today?",
+      "es-ES": "¡Encantado! ¿Cómo estás hoy?",
+      "fr-FR": "Enchanté ! Comment vas-tu aujourd'hui ?",
+      "hi-IN": "तुमसे मिलकर खुशी हुई! तुम आज कैसे हो?",
+      "pl-PL": "Miło cię poznać! Jak się dzisiaj masz?",
+      "ro-RO": "Îmi pare bine să te cunosc! Ce mai faci astăzi?",
+      "ru-RU": "Рад знакомству! Как твои дела сегодня?",
+      "tr-TR": "Tanıştığıma memnun oldum! Bugün nasılsın?",
+      "uk-UA": "Радий знайомству! Як твої справи сьогодні?",
+      "uz-UZ": "Tanishganimdan xursandman! Bugun ahvoling qanday?"
+    },
+    "vocabulary": [
+      {
+        "german": "freut mich",
+        "translation": {
+          "ar-SA": "سعيد بلقائك",
+          "en-US": "pleased to meet you",
+          "es-ES": "encantado",
+          "fr-FR": "enchanté",
+          "hi-IN": "मिलकर खुशी हुई",
+          "pl-PL": "miło mi",
+          "ro-RO": "îmi pare bine",
+          "ru-RU": "очень приятно",
+          "tr-TR": "memnun oldum",
+          "uk-UA": "дуже приємно",
+          "uz-UZ": "xursandman"
+        }
+      },
+      {
+        "german": "heute",
+        "translation": {
+          "ar-SA": "اليوم",
+          "en-US": "today",
+          "es-ES": "hoy",
+          "fr-FR": "aujourd'hui",
+          "hi-IN": "आज",
+          "pl-PL": "dzisiaj",
+          "ro-RO": "astăzi",
+          "ru-RU": "сегодня",
+          "tr-TR": "bugün",
+          "uk-UA": "сьогодні",
+          "uz-UZ": "bugun"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke, sehr gut!",
+        "translation": {
+          "ar-SA": "شكراً، جيد جداً!",
+          "en-US": "Thanks, very good!",
+          "es-ES": "¡Gracias, muy bien!",
+          "fr-FR": "Merci, très bien !",
+          "hi-IN": "धन्यवाद, बहुत बढ़िया!",
+          "pl-PL": "Dziękuję, bardzo dobrze!",
+          "ro-RO": "Mulțumesc, foarte bine!",
+          "ru-RU": "Спасибо, очень хорошо!",
+          "tr-TR": "Teşekkürler, çok iyiyim!",
+          "uk-UA": "Дякую, дуже добре!",
+          "uz-UZ": "Rahmat, juda yaxshi!"
+        },
+        "nextStep": "ask_origin"
+      },
+      {
+        "text": "Es geht so.",
+        "translation": {
+          "ar-SA": "لابأس.",
+          "en-US": "So-so.",
+          "es-ES": "Más o menos.",
+          "fr-FR": "Comme ci, comme ça.",
+          "hi-IN": "ठीक-ठाक।",
+          "pl-PL": "Tak sobie.",
+          "ro-RO": "Așa și așa.",
+          "ru-RU": "Так себе.",
+          "tr-TR": "İdare eder.",
+          "uk-UA": "Так собі.",
+          "uz-UZ": "Yomon emas."
+        },
+        "nextStep": "ask_origin"
+      }
+    ],
+    "defaultNext": "ask_origin"
+  },
+  "ask_origin": {
+    "botText": "Schön! Woher kommst du?",
+    "botTranslation": {
+      "ar-SA": "عظيم! من أين أنت؟",
+      "en-US": "Great! Where are you from?",
+      "es-ES": "¡Genial! ¿De dónde eres?",
+      "fr-FR": "Super ! D'où viens-tu ?",
+      "hi-IN": "बहुत अच्छा! तुम कहाँ से हो?",
+      "pl-PL": "Świetnie! Skąd jesteś?",
+      "ro-RO": "Grozav! De unde ești?",
+      "ru-RU": "Здорово! Откуда ты?",
+      "tr-TR": "Harika! Nerelisin?",
+      "uk-UA": "Чудово! Звідки ти?",
+      "uz-UZ": "Ajoyib! Qayerdansan?"
+    },
+    "vocabulary": [
+      {
+        "german": "woher",
+        "translation": {
+          "ar-SA": "من أين",
+          "en-US": "where from",
+          "es-ES": "de dónde",
+          "fr-FR": "d'où",
+          "hi-IN": "कहाँ से",
+          "pl-PL": "skąd",
+          "ro-RO": "de unde",
+          "ru-RU": "откуда",
+          "tr-TR": "nereden",
+          "uk-UA": "звідки",
+          "uz-UZ": "qayerdan"
+        }
+      },
+      {
+        "german": "kommen",
+        "translation": {
+          "ar-SA": "يأتي",
+          "en-US": "to come",
+          "es-ES": "venir",
+          "fr-FR": "venir",
+          "hi-IN": "आना",
+          "pl-PL": "pochodzić",
+          "ro-RO": "a veni",
+          "ru-RU": "приходить",
+          "tr-TR": "gelmek",
+          "uk-UA": "приходити",
+          "uz-UZ": "kelmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich komme aus...",
+        "translation": {
+          "ar-SA": "أنا من...",
+          "en-US": "I am from...",
+          "es-ES": "Soy de...",
+          "fr-FR": "Je viens de...",
+          "hi-IN": "मैं... से हूँ",
+          "pl-PL": "Jestem z...",
+          "ro-RO": "Sunt din...",
+          "ru-RU": "Я из...",
+          "tr-TR": "Ben buralıyım...",
+          "uk-UA": "Я з...",
+          "uz-UZ": "Men ... danman"
+        },
+        "nextStep": "ask_location"
+      }
+    ],
+    "defaultNext": "ask_location"
+  },
+  "ask_location": {
+    "botText": "Interessant! Und wo bist du gerade?",
+    "botTranslation": {
+      "ar-SA": "مثير للاهتمام! وأين أنت الآن؟",
+      "en-US": "Interesting! And where are you right now?",
+      "es-ES": "¡Interesante! ¿Y dónde estás ahora mismo?",
+      "fr-FR": "Intéressant ! Et où es-tu en ce moment ?",
+      "hi-IN": "रोचक! और तुम अभी कहाँ हो?",
+      "pl-PL": "Ciekawe! A gdzie teraz jesteś?",
+      "ro-RO": "Interesant! Și unde ești acum?",
+      "ru-RU": "Интересно! А где ты сейчас?",
+      "tr-TR": "İlginç! Peki şu an neredesin?",
+      "uk-UA": "Цікаво! А де ти зараз?",
+      "uz-UZ": "Qiziqarli! Hozir qayerdasan?"
+    },
+    "vocabulary": [
+      {
+        "german": "gerade",
+        "translation": {
+          "ar-SA": "الآن",
+          "en-US": "right now",
+          "es-ES": "ahora mismo",
+          "fr-FR": "en ce moment",
+          "hi-IN": "अभी",
+          "pl-PL": "właśnie / teraz",
+          "ro-RO": "chiar acum",
+          "ru-RU": "сейчас",
+          "tr-TR": "şu an",
+          "uk-UA": "зараз",
+          "uz-UZ": "hozir"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich bin in der Schule",
+        "translation": {
+          "ar-SA": "أنا في المدرسة",
+          "en-US": "I am at school",
+          "es-ES": "Estoy en la escuela",
+          "fr-FR": "Je suis à l'école",
+          "hi-IN": "मैं स्कूल में हूँ",
+          "pl-PL": "Jestem w szkole",
+          "ro-RO": "Sunt la școală",
+          "ru-RU": "Я в школе",
+          "tr-TR": "Okuldayım",
+          "uk-UA": "Я в школі",
+          "uz-UZ": "Men maktabdaman"
+        },
+        "nextStep": "ask_activity"
+      },
+      {
+        "text": "Ich bin auf der Arbeit",
+        "translation": {
+          "ar-SA": "أنا في العمل",
+          "en-US": "I am at work",
+          "es-ES": "Estoy en el trabajo",
+          "fr-FR": "Je suis au travail",
+          "hi-IN": "मैं काम पर हूँ",
+          "pl-PL": "Jestem w pracy",
+          "ro-RO": "Sunt la muncă",
+          "ru-RU": "Я на работе",
+          "tr-TR": "İşteyim",
+          "uk-UA": "Я на роботі",
+          "uz-UZ": "Men ishdaman"
+        },
+        "nextStep": "ask_activity"
+      },
+      {
+        "text": "Ich bin zu Hause",
+        "translation": {
+          "ar-SA": "أنا في المنزل",
+          "en-US": "I am at home",
+          "es-ES": "Estoy en casa",
+          "fr-FR": "Je suis à la maison",
+          "hi-IN": "मैं घर पर हूँ",
+          "pl-PL": "Jestem w domu",
+          "ro-RO": "Sunt acasă",
+          "ru-RU": "Я дома",
+          "tr-TR": "Evdeyim",
+          "uk-UA": "Я вдома",
+          "uz-UZ": "Men uydaman"
+        },
+        "nextStep": "ask_activity"
+      }
+    ],
+    "defaultNext": "ask_activity"
+  },
+  "ask_activity": {
+    "botText": "Was machst du da?",
+    "botTranslation": {
+      "ar-SA": "ماذا تفعل هناك؟",
+      "en-US": "What are you doing there?",
+      "es-ES": "¿Qué haces ahí?",
+      "fr-FR": "Que fais-tu là-bas ?",
+      "hi-IN": "तुम वहाँ क्या कर रहे हो?",
+      "pl-PL": "Co tam robisz?",
+      "ro-RO": "Ce faci acolo?",
+      "ru-RU": "Что ты там делаешь?",
+      "tr-TR": "Orada ne yapıyorsun?",
+      "uk-UA": "Що ти там робиш?",
+      "uz-UZ": "U yerda nima qilyapsan?"
+    },
+    "vocabulary": [
+      {
+        "german": "machen",
+        "translation": {
+          "ar-SA": "يفعل",
+          "en-US": "to do",
+          "es-ES": "hacer",
+          "fr-FR": "faire",
+          "hi-IN": "करना",
+          "pl-PL": "robić",
+          "ro-RO": "a face",
+          "ru-RU": "делать",
+          "tr-TR": "yapmak",
+          "uk-UA": "робити",
+          "uz-UZ": "qilmoq"
+        }
+      },
+      {
+        "german": "da",
+        "translation": {
+          "ar-SA": "هناك",
+          "en-US": "there",
+          "es-ES": "ahí",
+          "fr-FR": "là-bas",
+          "hi-IN": "वहाँ",
+          "pl-PL": "tam",
+          "ro-RO": "acolo",
+          "ru-RU": "там",
+          "tr-TR": "orada",
+          "uk-UA": "там",
+          "uz-UZ": "u yerda"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich lerne Deutsch",
+        "translation": {
+          "ar-SA": "أنا أتعلم الألمانية",
+          "en-US": "I am learning German",
+          "es-ES": "Estoy aprendiendo alemán",
+          "fr-FR": "J'apprends l'allemand",
+          "hi-IN": "मैं जर्मन सीख रहा हूँ",
+          "pl-PL": "Uczę się niemieckiego",
+          "ro-RO": "Învăț germană",
+          "ru-RU": "Я учу немецкий",
+          "tr-TR": "Almanca öğreniyorum",
+          "uk-UA": "Я вчу німецьку",
+          "uz-UZ": "Men nemis tilini o'rganyapman"
+        },
+        "nextStep": "encourage"
+      },
+      {
+        "text": "Ich arbeite",
+        "translation": {
+          "ar-SA": "أنا أعمل",
+          "en-US": "I am working",
+          "es-ES": "Estoy trabajando",
+          "fr-FR": "Je travaille",
+          "hi-IN": "मैं काम कर रहा हूँ",
+          "pl-PL": "Pracuję",
+          "ro-RO": "Muncesc",
+          "ru-RU": "Я работаю",
+          "tr-TR": "Çalışıyorum",
+          "uk-UA": "Я працюю",
+          "uz-UZ": "Men ishlayapman"
+        },
+        "nextStep": "encourage"
+      },
+      {
+        "text": "Ich trinke Kaffee",
+        "translation": {
+          "ar-SA": "أنا أشرب القهوة",
+          "en-US": "I am drinking coffee",
+          "es-ES": "Estoy bebiendo café",
+          "fr-FR": "Je bois du café",
+          "hi-IN": "मैं कॉफी पी रहा हूँ",
+          "pl-PL": "Piję kawę",
+          "ro-RO": "Beau cafea",
+          "ru-RU": "Я пью кофе",
+          "tr-TR": "Kahve içiyorum",
+          "uk-UA": "Я п'ю каву",
+          "uz-UZ": "Men qahva ichyapman"
+        },
+        "nextStep": "encourage"
+      }
+    ],
+    "defaultNext": "encourage"
+  },
+  "encourage": {
+    "botText": "Das ist toll! Viel Erfolg und noch einen schönen Tag!",
+    "botTranslation": {
+      "ar-SA": "هذا رائع! حظاً موفقاً ويوم جميل لك!",
+      "en-US": "That is great! Good luck and have a nice day!",
+      "es-ES": "¡Eso es genial! ¡Mucho éxito y que tengas un buen día!",
+      "fr-FR": "C'est génial ! Bonne chance et bonne journée !",
+      "hi-IN": "यह बहुत अच्छा है! शुभकामनाएँ और आपका दिन शुभ हो!",
+      "pl-PL": "To wspaniale! Powodzenia i miłego dnia!",
+      "ro-RO": "Asta e grozav! Mult succes și o zi frumoasă în continuare!",
+      "ru-RU": "Это здорово! Успехов и хорошего дня!",
+      "tr-TR": "Bu harika! Başarılar ve iyi günler!",
+      "uk-UA": "Це чудово! Успіхів і гарного дня!",
+      "uz-UZ": "Bu ajoyib! Omad va yaxshi kun tilayman!"
+    },
+    "vocabulary": [
+      {
+        "german": "toll",
+        "translation": {
+          "ar-SA": "رائع",
+          "en-US": "great",
+          "es-ES": "genial",
+          "fr-FR": "super",
+          "hi-IN": "बहुत बढ़िया",
+          "pl-PL": "wspaniale",
+          "ro-RO": "grozav",
+          "ru-RU": "здорово",
+          "tr-TR": "harika",
+          "uk-UA": "чудово",
+          "uz-UZ": "ajoyib"
+        }
+      },
+      {
+        "german": "viel Erfolg",
+        "translation": {
+          "ar-SA": "بالتوفيق",
+          "en-US": "much success",
+          "es-ES": "mucho éxito",
+          "fr-FR": "bonne chance",
+          "hi-IN": "बहुत सफलता",
+          "pl-PL": "powodzenia",
+          "ro-RO": "mult succes",
+          "ru-RU": "успехов",
+          "tr-TR": "başarılar",
+          "uk-UA": "успіхів",
+          "uz-UZ": "omad"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke, dir auch!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً!",
+          "en-US": "Thanks, you too!",
+          "es-ES": "¡Gracias, a ti también!",
+          "fr-FR": "Merci, à toi aussi !",
+          "hi-IN": "धन्यवाद, आपको भी!",
+          "pl-PL": "Dziękuję, tobie również!",
+          "ro-RO": "Mulțumesc, și ție!",
+          "ru-RU": "Спасибо, тебе тоже!",
+          "tr-TR": "Teşekkürler, sana da!",
+          "uk-UA": "Дякую, тобі також!",
+          "uz-UZ": "Rahmat, senga ham!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Tschüss!",
+        "translation": {
+          "ar-SA": "وداعاً!",
+          "en-US": "Bye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Salut !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Cześć!",
+          "ro-RO": "Pa!",
+          "ru-RU": "Пока!",
+          "tr-TR": "Görüşürüz!",
+          "uk-UA": "Бувай!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Bis bald!",
+    "botTranslation": {
+      "ar-SA": "أراك قريباً!",
+      "en-US": "See you soon!",
+      "es-ES": "¡Hasta pronto!",
+      "fr-FR": "À bientôt !",
+      "hi-IN": "जल्द ही मिलेंगे!",
+      "pl-PL": "Do zobaczenia wkrótce!",
+      "ro-RO": "Pe curând!",
+      "ru-RU": "До скорого!",
+      "tr-TR": "Yakında görüşürüz!",
+      "uk-UA": "До скорої зустрічі!",
+      "uz-UZ": "Tez orada ko'rishguncha!"
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

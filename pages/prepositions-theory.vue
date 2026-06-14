@@ -1,10 +1,13 @@
 <template>
   <div class="prepositions-page">
     <header class="page-header">
-      <h1 class="page-title">{{ t('preposition.title') }}</h1>
-      <p class="page-subtitle">{{ t('preposition.guideTitle') }}</p>
+      <div class="prep__header-wrapper">
+        <VBackBtn/>
+        <h1 class="page-title">{{ t('preposition.title') }}</h1>
+      </div>
     </header>
     <main class="page-content">
+      <p class="page-subtitle">{{ t('preposition.guideTitle') }}</p>
       <section v-for="(section, index) in pageSections" :key="index" class="topic-card"
                :class="section.customClass">
         <h2 class="card-title">{{ section.title }}</h2>
@@ -89,11 +92,9 @@
 <script setup>
 import {ref, computed} from 'vue';
 import { useHead, useSeoMeta} from '#imports'
-const route = useRoute()
-const canonical = useCanonical()
+import VBackBtn from "~/src/components/V-back-btn.vue";
+
 const { t } = useI18n()
-
-
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -243,64 +244,72 @@ const getOptionClass = (option) => {
   return '';
 };
 
-definePageMeta({
-  layout: 'footerlayout',
-});
-
 </script>
 
 <style scoped>
 .prepositions-page {
   font-family: 'Nunito', sans-serif;
   color: #1e1e1e;
-  padding: 2rem;
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: 40px;
+}
+
+.prep__header-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 5px 10px 15px 10px;
+  z-index: 1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 5px;
 }
 
 .page-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 5px;
 }
 
 .page-title {
   font-family: "Nunito", sans-serif;
-  font-size: 2.8rem;
+  font-size: 22px;
   font-weight: 600;
-  color: white;
-  background: #4ade80;
-  padding: 1rem 2rem;
-  border: 3px solid #1e1e1e;
-  border-radius: 16px;
-  transform: rotate(1deg);
-  box-shadow: 8px 8px 0px #1e1e1e;
-  display: inline-block;
-  margin-bottom: 30px;
+  color: var(--titleColor);
+  margin-left: 15px;
 }
 
 .page-subtitle {
   font-size: 1.2rem;
   color: var(--titleColor);
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
 }
 
 .page-content {
   max-width: 1000px;
   margin: 0 auto;
+  height: 100%;
+  overflow-y: auto;
+  padding: 0 10px;
 }
 
 .topic-card {
   background-color: #ffffff;
-  border: 3px solid #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 16px;
-  box-shadow: 8px 8px 0px rgba(30, 30, 30, 0.8);
   padding: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .card-title {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 900;
   border-bottom: 3px solid #f1c40f;
   padding-bottom: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   display: inline-block;
 }
 
@@ -311,7 +320,6 @@ definePageMeta({
 }
 
 .bullet-list {
-  list-style: none;
   padding-left: 0;
 }
 
@@ -332,7 +340,7 @@ definePageMeta({
 }
 
 .group-title {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
@@ -360,11 +368,11 @@ definePageMeta({
   width: 100%;
   border-collapse: collapse;
   margin-top: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 16px;
 }
 
 .contractions-table th, .contractions-table td {
-  border: 3px solid #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
   padding: 0.8rem;
   text-align: center;
 }
@@ -374,7 +382,7 @@ definePageMeta({
 }
 
 .case-block {
-  border: 2px solid #1e1e1e;
+  border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 12px;
   padding: 1.5rem;
   margin-top: 1.5rem;
@@ -382,8 +390,9 @@ definePageMeta({
 }
 
 .case-title {
-  margin-top: 0;
-  font-size: 1.5rem;
+  margin-bottom: 7px;
+  font-size: 1.1rem;
+  color: #4e4fd3;
 }
 
 .case-block.dativ {
@@ -419,7 +428,6 @@ definePageMeta({
 
 .practice-card {
   text-align: center;
-  background-color: #4ade80;
 }
 
 .practice-button {
@@ -429,10 +437,10 @@ definePageMeta({
   color: #1e1e1e;
   font-size: 1.3rem;
   font-weight: bold;
-  padding: 1rem 2.5rem;
+  padding: .6rem 2.5rem;
   border-radius: 16px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   transition: all 0.2s;
   margin-top: 1rem;
   cursor: pointer;
@@ -451,7 +459,7 @@ definePageMeta({
 .quiz-question {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .quiz-options {
@@ -461,23 +469,23 @@ definePageMeta({
   margin-bottom: 2rem;
 }
 
+.quiz-option:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
 .quiz-option {
   width: 100%;
   padding: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
   font-family: 'Nunito', sans-serif;
-  border: 3px solid #1e1e1e;
   border-radius: 12px;
   background-color: #fff;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 4px 4px 0 #1e1e1e;
-}
-
-.quiz-option:disabled {
-  cursor: not-allowed;
-  opacity: 0.7;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
 }
 
 .quiz-option.correct {
@@ -516,24 +524,4 @@ definePageMeta({
   margin-bottom: 2rem;
 }
 
-@media (max-width: 767px) {
-  .prepositions-page {
-    padding: 1rem;
-  }
-
-  .page-title {
-    font-size: 2.2rem;
-    box-shadow: 2px 2px 0 black;
-  }
-
-  .card-title {
-    font-size: 1.6rem;
-  }
-
-  .topic-card {
-    padding: 1.5rem;
-    box-shadow: 2px 2px 0px rgba(30, 30, 30, 0.8);
-  }
-
-}
 </style>

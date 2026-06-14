@@ -8,9 +8,15 @@
         :text="infoAch.text"
     />
     <div class="sidebar">
-      <button class="btn__back" @click="backToMainPage">{{ t('chooseTheme.btnBack') }}</button>
-      <nav class="nav__sidebar" ref="scrollRef">
-        <h3 class="sidebar-title">{{ t('categoryAchievments.categoryLabel') }}</h3>
+      <div class="header__title">
+        <VBackBtn/>
+        <h3 class="sidebar-title">{{ t('accountPanel.achievement') }}</h3>
+      </div>
+      <nav class="nav__sidebar" >
+        <VBanner
+            :text="t('bannerTitles.achievements')"
+            :icon="AchIconReward"
+        />
         <ul class="achievement-categories">
           <template v-for="category in achievementCategories" :key="category.id">
             <li
@@ -50,16 +56,19 @@
         </ul>
       </nav>
     </div>
-    <div class="mobile-backdrop" @click="closeContent"/>
     <main class="content-area" :class="{'open': isContentOpen}">
       <header class="content-header">
+        <button class="content-close" @click="closeContent" aria-label="Close achievements panel">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+               stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </button>
         <h1>{{ t('categoryAchievments.achievmentAreaLabel') }}</h1>
         <div class="content-header-actions">
           <button :title="t('hoverTitle.ach')" @click="showInfo" class="header__icon-info">
             <img :src="Quest" alt="ques_icon">
-          </button>
-          <button class="content-close" @click="closeContent" aria-label="Close achievements panel">
-            ✖
           </button>
         </div>
       </header>
@@ -76,31 +85,31 @@
 
 <script setup>
 import {ref, computed, nextTick, onMounted, onBeforeUnmount} from 'vue';
-import GuessAchievementDisplay from '../src/components/guessAchievment.vue';
-import OverallAchievments from '../src/components/overallAchiements.vue';
-import LocationsAchievements from '../src/components/locationAchievements.vue';
-import EasyModeAchieve from '../src/components/easyModeAchieve.vue'
-import NormalModeAchieve from '../src/components/normalModeAchieve.vue'
-import HardModeAchieve from '../src/components/hardModeAchieve.vue'
-import SpecialAchievments from '../src/components/specialAсhievments.vue'
-import WriteArticle from '../src/components/writeArticleAchievment.vue'
-import WordsFromLetters from '../src/components/wordFromLetters.vue'
-import WordsPlusArticle from '../src/components/wordPlusArticle.vue'
-import SentenceAchievement from '../src/components/sentenceAchievement.vue'
-import Plural from '../src/components/pluralAcvievements.vue'
-import Listen from '../src/components/listenAchievements.vue'
-import NominativAchievements from "../src/components/nominativAchievements.vue";
-import AkkusativAchievements from "../src/components/akkusativAchievements.vue";
-import GenitivAchievements from "../src/components/genitivAchievements.vue";
-import DativAchievements from "../src/components/dativAchievements.vue";
-import AdjectiveBasicAchievements from "../src/components/adjectiveBasicAchievements.vue";
-import AdjectiveDeclensionAchievements from "../src/components/adjectiveDeclensionAchievements.vue";
-import AdjectiveComparisonAchievements from "../src/components/adjectiveComparisonAchievements.vue";
-import TensesAchievements from "../src/components/tensesAchievements.vue";
-import ModalVerbs from "../src/components/modalVerbs.vue";
-import TypeVerbsAchievement from "../src/components/typeVerbsAchievement.vue";
-import WinterAchievement from '../src/components/winterAchievement.vue'
-import ValentineAchievement from '../src/components/valentineAchievement.vue'
+import GuessAchievementDisplay from '../src/components/achievements-group/guessAchievment.vue';
+import OverallAchievments from '../src/components/achievements-group/overallAchiements.vue';
+import LocationsAchievements from '../src/components/achievements-group/locationAchievements.vue';
+import EasyModeAchieve from '../src/components/achievements-group/easyModeAchieve.vue'
+import NormalModeAchieve from '../src/components/achievements-group/normalModeAchieve.vue'
+import HardModeAchieve from '../src/components/achievements-group/hardModeAchieve.vue'
+import SpecialAchievments from '../src/components/achievements-group/specialAсhievments.vue'
+import WriteArticle from '../src/components/achievements-group/writeArticleAchievment.vue'
+import WordsFromLetters from '../src/components/achievements-group/wordFromLetters.vue'
+import WordsPlusArticle from '../src/components/achievements-group/wordPlusArticle.vue'
+import SentenceAchievement from '../src/components/achievements-group/sentenceAchievement.vue'
+import Plural from '../src/components/achievements-group/pluralAcvievements.vue'
+import Listen from '../src/components/achievements-group/listenAchievements.vue'
+import NominativAchievements from "../src/components/achievements-group/nominativAchievements.vue";
+import AkkusativAchievements from "../src/components/achievements-group/akkusativAchievements.vue";
+import GenitivAchievements from "../src/components/achievements-group/genitivAchievements.vue";
+import DativAchievements from "../src/components/achievements-group/dativAchievements.vue";
+import AdjectiveBasicAchievements from "../src/components/achievements-group/adjectiveBasicAchievements.vue";
+import AdjectiveDeclensionAchievements from "../src/components/achievements-group/adjectiveDeclensionAchievements.vue";
+import AdjectiveComparisonAchievements from "../src/components/achievements-group/adjectiveComparisonAchievements.vue";
+import TensesAchievements from "../src/components/achievements-group/tensesAchievements.vue";
+import ModalVerbs from "../src/components/achievements-group/modalVerbs.vue";
+import TypeVerbsAchievement from "../src/components/achievements-group/typeVerbsAchievement.vue";
+import WinterAchievement from '../src/components/achievements-group/winterAchievement.vue'
+import ValentineAchievement from '../src/components/achievements-group/valentineAchievement.vue'
 
 import { eventWinterAchievements } from '../src/achieveGroup/eventAchievement/winterAchievements.js'
 import { valentineAchievements } from '../src/achieveGroup/eventAchievement/valentineAchievements.js'
@@ -133,7 +142,9 @@ import Quest from '../assets/images/question.svg'
 import {useRouter} from 'vue-router'
 import {useAchievementStore} from '../store/achievementStore.js'
 import {useSeoMeta} from "#imports";
-
+import VBackBtn from "~/src/components/V-back-btn.vue";
+import VBanner from "~/src/components/V-banner.vue";
+import AchIconReward from '../assets/images/AchPanelIcon.svg'
 const scrollRef = ref(null)
 const {$SimpleBar} = useNuxtApp()
 const router = useRouter()
@@ -147,9 +158,6 @@ const isContentOpen = ref(false)
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
-const backToMainPage = () => {
-  router.push('/')
-}
 
 const showInfo = () => {
   achInfo.value = true
@@ -576,12 +584,14 @@ const handleCategoryClick = (category) => {
 <style scoped>
 .achievements-page-container {
   display: flex;
-  height: 100vh;
-  padding: 1rem;
-  gap: 10px;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  gap: 15px;
   font-family: "Nunito", sans-serif;
   box-sizing: border-box;
   position: relative;
+  overflow: hidden;
 }
 
 .category__item-left {
@@ -597,7 +607,7 @@ const handleCategoryClick = (category) => {
 }
 
 .header__icon-info {
-  width: 60px;
+  width: 50px;
   cursor: pointer;
   background: none;
   border: none;
@@ -606,11 +616,9 @@ const handleCategoryClick = (category) => {
 .sidebar {
   min-width: 400px;
   max-width: 400px;
-  background-color: #ffffff;
-  color: #1e1e1e;
-  padding: 1.5rem;
+  color: var(--titleColor);
+  padding: 0 10px;
   border-radius: 24px;
-  border: 3px solid #1e1e1e;
   box-shadow: 8px 8px 0px #1e1e1e;
   display: flex;
   flex-direction: column;
@@ -618,34 +626,22 @@ const handleCategoryClick = (category) => {
   z-index: 1;
 }
 
-.btn__back {
+.header__title {
+  display: flex;
+  align-items: center;
+  padding: 5px 0 15px 0;
   width: 100%;
-  border: 3px solid #1e1e1e;
-  padding: 15px;
-  background: #f1c40f;
-  border-radius: 16px;
-  cursor: pointer;
-  color: #1e1e1e;
-  font-size: 1.2rem;
-  font-family: "Nunito", sans-serif;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  transition: all 0.1s ease-in-out;
-  margin-bottom: 1.5rem;
-  flex-shrink: 0;
-  font-weight: 600;
-}
-
-.btn__back:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
+  margin-bottom: 15px;
+  border-radius: 5px;
 }
 
 .sidebar-title {
+  margin-left: 15px;
   text-align: center;
-  margin-bottom: 1.4rem;
-  color: #1e1e1e;
+  color: var(--title);
+  text-shadow: 1px 1px var(--title);
   font-family: "Nunito", sans-serif;
-  font-size: 1.7rem;
+  font-size: 22px;
   flex-shrink: 0;
 }
 
@@ -661,36 +657,22 @@ const handleCategoryClick = (category) => {
 }
 
 .category-item, .submenu-item {
-  padding: 12px 1.25rem;
+  padding: 10px;
   margin-bottom: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
-  font-size: 1.1rem;
-  border-radius: 16px;
+  font-size: 17px;
+  border-radius: 5px;
   transition: background-color 0.2s ease, transform 0.2s ease;
-  border: 2px solid transparent;
+  border-bottom: 2px solid #716969;
   font-weight: 600;
 }
 
-.category-item:hover, .submenu-item:hover {
-  background-color: #fef8e4;
-  border-color: #1e1e1e;
-}
-
-.category-item.active {
-  background-color: #4ade80;
-  color: #1e1e1e;
-  border-color: #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
-}
-
 .submenu-item.active {
-  background-color: #60a5fa;
-  color: #fff;
-  border-color: #1e1e1e;
+  border-color: #328c32;
 }
 
 .submenu-arrow {
@@ -757,7 +739,7 @@ const handleCategoryClick = (category) => {
 }
 
 .category-icon, .submenu-icon {
-  font-size: 1.5rem;
+  font-size: 30px;
 }
 
 .achievement-categories {
@@ -766,11 +748,11 @@ const handleCategoryClick = (category) => {
 
 .content-area {
   flex-grow: 1;
-  padding: 2rem;
-  background-color: #60a5fa;
+  padding: 0 10px 0 10px;
+  background-color: var(--bg);
   border-radius: 24px;
   border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0px #1e1e1e;
+  box-shadow: 0 4px 0 #1e1e1e;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -781,7 +763,6 @@ const handleCategoryClick = (category) => {
 .content-header {
   padding-bottom: 0.5rem;
   margin-bottom: 10px;
-  border-bottom: 4px solid #1e1e1e;
   text-align: center;
   flex-shrink: 0;
   display: flex;
@@ -791,7 +772,7 @@ const handleCategoryClick = (category) => {
 
 .content-header h1 {
   font-size: 2.5em;
-  color: #1e1e1e;
+  color: var(--titleColor);
   margin: 0;
   font-family: "Nunito", sans-serif;
 }
@@ -803,14 +784,22 @@ const handleCategoryClick = (category) => {
 }
 
 .content-close {
-  border: 3px solid #1e1e1e;
   background: #fff;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 12px;
-  padding: 8px 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  box-shadow: 3px 3px 0 #1e1e1e;
-  font-weight: 800;
-  display: none;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.content-close:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
 }
 
 .category-content {
@@ -818,8 +807,12 @@ const handleCategoryClick = (category) => {
   min-height: 0;
 }
 
+.category-content::-webkit-scrollbar {
+  display: none;
+}
+
 .category-description {
-  font-size: 1.2em;
+  font-size: 18px;
   color: #1e1e1e;
 }
 
@@ -835,24 +828,17 @@ const handleCategoryClick = (category) => {
   opacity: 0;
 }
 
-.simplebar-scrollbar:before {
-  background-color: #1e1e1e;
-  border-radius: 4px;
-  left: 2px;
-  right: 2px;
-}
-
-.simplebar-track.simplebar-vertical {
-  background-color: rgba(30, 30, 30, 0.1);
-  width: 11px;
-  border-radius: 6px;
-}
-
 @media (max-width: 1023px) {
+  .achievements-page-container {
+    padding: 0;
+  }
+
   .sidebar {
     width: 100%;
     min-width: 100%;
     max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .content-close {
@@ -864,39 +850,27 @@ const handleCategoryClick = (category) => {
   }
 
   .content-area {
-    position: fixed;
-    padding: 10px;
+    position: absolute;
     top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
+    margin: 0;
     border-radius: 0;
-    border-left: none;
-    border-right: none;
-    transform: translateX(100%);
-    transition: transform .3s ease;
-    z-index: 2;
     border: none;
+    box-shadow: none;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
   }
 
   .content-header h1 {
-    font-size: 2rem;
+    font-size: 24px;
   }
 
   .content-area.open {
     transform: translateX(0);
-  }
-
-  .mobile-backdrop {
-    display: none;
-  }
-
-  .is-mobile-open .mobile-backdrop {
-    display: block;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, .25);
-    z-index: 1;
   }
 
   .content-close {
@@ -904,23 +878,7 @@ const handleCategoryClick = (category) => {
   }
 }
 
-
 @media (max-width: 480px) {
-  .achievements-page-container {
-    padding: 0;
-  }
-
-  .sidebar, .content-area {
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-    box-shadow: none;
-  }
-
-  .content-area {
-    border-bottom: none;
-  }
-
   .achievements-list {
     grid-template-columns: 1fr;
   }

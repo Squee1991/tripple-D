@@ -1,0 +1,716 @@
+{
+  "start": {
+    "botText": "Hallo! Was machst du am liebsten in deiner Freizeit?",
+    "botTranslation": {
+      "ru-RU": "Привет! Что ты больше всего любишь делать в свободное время?",
+      "en-US": "Hello! What do you like to do most in your free time?",
+      "ar-SA": "مرحباً! ماذا تحب أن تفعل في وقت فراغك؟",
+      "es-ES": "¡Hola! ¿Qué haces en tu tiempo libre?",
+      "fr-FR": "Salut ! Que fais-tu de ton temps libre ?",
+      "hi-IN": "नमस्ते! आप अपने खाली समय में सबसे ज्यादा क्या करना पसंद करते हैं?",
+      "pl-PL": "Cześć! Co najbardziej lubisz robić w wolnym czasie?",
+      "ro-RO": "Bună! Ce îți place să faci cel mai mult în timpul liber?",
+      "tr-TR": "Merhaba! Boş zamanlarında en çok ne yapmayı seversin?",
+      "uk-UA": "Привіт! Що ти найбільше любиш робити у вільний час?",
+      "uz-UZ": "Salom! Bo'sh vaqtingizda eng ko'p nima qilishni yoqtirasiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Freizeit",
+        "translation": {
+          "ru-RU": "свободное время",
+          "en-US": "free time",
+          "ar-SA": "وقت الفراغ",
+          "es-ES": "tiempo libre",
+          "fr-FR": "temps libre",
+          "hi-IN": "खाली समय",
+          "pl-PL": "wolny czas",
+          "ro-RO": "timp liber",
+          "tr-TR": "boş zaman",
+          "uk-UA": "вільний час",
+          "uz-UZ": "bo'sh vaqt"
+        }
+      },
+      {
+        "german": "am liebsten",
+        "translation": {
+          "ru-RU": "больше всего",
+          "en-US": "most of all",
+          "ar-SA": "أكثر من غيره",
+          "es-ES": "lo que más",
+          "fr-FR": "le plus",
+          "hi-IN": "सबसे ज्यादा",
+          "pl-PL": "najbardziej",
+          "ro-RO": "cel mai mult",
+          "tr-TR": "en çok",
+          "uk-UA": "найбільше",
+          "uz-UZ": "eng ko'p"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich höre sehr gerne Musik.",
+        "translation": {
+          "ru-RU": "Я очень люблю слушать музыку.",
+          "en-US": "I like listening to music very much.",
+          "ar-SA": "أنا أحب الاستماع إلى الموسيقى كثيراً.",
+          "es-ES": "Me gusta mucho escuchar música.",
+          "fr-FR": "J'aime beaucoup écouter de la musique.",
+          "hi-IN": "मुझे संगीत सुनना बहुत पसंद है।",
+          "pl-PL": "Bardzo lubię słuchać muzyki.",
+          "ro-RO": "Îmi place foarte mult să ascult muzică.",
+          "tr-TR": "Müzik dinlemeyi çok severim.",
+          "uk-UA": "Я дуже люблю слухати музику.",
+          "uz-UZ": "Men musiqa tinglashni juda yoqtiraman."
+        },
+        "nextStep": "musik"
+      },
+      {
+        "text": "Ich male gerne Bilder.",
+        "translation": {
+          "ru-RU": "Я люблю рисовать картины.",
+          "en-US": "I like painting pictures.",
+          "ar-SA": "أحب رسم الصور.",
+          "es-ES": "Me gusta pintar cuadros.",
+          "fr-FR": "J'aime peindre des images.",
+          "hi-IN": "मुझे चित्र बनाना पसंद है।",
+          "pl-PL": "Lubię malować obrazy.",
+          "ro-RO": "Îmi place să pictez.",
+          "tr-TR": "Resim yapmayı severim.",
+          "uk-UA": "Я люблю малювати картини.",
+          "uz-UZ": "Men rasm chizishni yoqtiraman."
+        },
+        "nextStep": "musik"
+      }
+    ],
+    "defaultNext": "musik"
+  },
+  "musik": {
+    "botText": "Das ist toll! Hast du eine Lieblingsmusik oder ein anderes Hobby?",
+    "botTranslation": {
+      "ru-RU": "Это здорово! У тебя есть любимая музыка или другое хобби?",
+      "en-US": "That is great! Do you have a favorite music or another hobby?",
+      "ar-SA": "هذا رائع! هل لديك موسيقى مفضلة أو هواية أخرى؟",
+      "es-ES": "¡Eso es genial! ¿Tienes música favorita u otro pasatiempo?",
+      "fr-FR": "C'est super ! As-tu une musique préférée ou un autre passe-temps ?",
+      "hi-IN": "यह बहुत बढ़िया है! क्या आपके पास कोई पसंदीदा संगीत या दूसरा शौक है?",
+      "pl-PL": "To świetnie! Masz ulubioną muzykę albo inne hobby?",
+      "ro-RO": "Este grozav! Ai o muzică preferată sau un alt hobby?",
+      "tr-TR": "Bu harika! Favori bir müziğin veya başka bir hobin var mı?",
+      "uk-UA": "Це чудово! У тебе є улюблена музика або інше хобі?",
+      "uz-UZ": "Bu juda zo'r! Sevimli musiqangiz yoki boshqa xobbingiz bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Lieblingsmusik",
+        "translation": {
+          "ru-RU": "любимая музыка",
+          "en-US": "favorite music",
+          "ar-SA": "الموسيقى المفضلة",
+          "es-ES": "música favorita",
+          "fr-FR": "musique préférée",
+          "hi-IN": "पसंदीदा संगीत",
+          "pl-PL": "ulubiona muzyka",
+          "ro-RO": "muzica preferată",
+          "tr-TR": "favori müzik",
+          "uk-UA": "улюблена музика",
+          "uz-UZ": "sevimli musiqa"
+        }
+      },
+      {
+        "german": "das Hobby",
+        "translation": {
+          "ru-RU": "хобби",
+          "en-US": "hobby",
+          "ar-SA": "هواية",
+          "es-ES": "pasatiempo",
+          "fr-FR": "passe-temps",
+          "hi-IN": "शौक",
+          "pl-PL": "hobby",
+          "ro-RO": "hobby",
+          "tr-TR": "hobi",
+          "uk-UA": "хобі",
+          "uz-UZ": "xobbi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich mag am liebsten Rockmusik.",
+        "translation": {
+          "ru-RU": "Я больше всего люблю рок.",
+          "en-US": "I like rock music best.",
+          "ar-SA": "أحب موسيقى الروك أكثر من غيرها.",
+          "es-ES": "Lo que más me gusta es la música rock.",
+          "fr-FR": "Ce que je préfère, c'est la musique rock.",
+          "hi-IN": "मुझे रॉक संगीत सबसे ज्यादा पसंद है।",
+          "pl-PL": "Najbardziej lubię muzykę rockową.",
+          "ro-RO": "Cel mai mult îmi place muzica rock.",
+          "tr-TR": "En çok rock müziği severim.",
+          "uk-UA": "Я найбільше люблю рок.",
+          "uz-UZ": "Men eng ko'p rok musiqasini yoqtiraman."
+        },
+        "nextStep": "farbe"
+      },
+      {
+        "text": "Mein Hobby ist Kochen.",
+        "translation": {
+          "ru-RU": "Мое хобби — готовить.",
+          "en-US": "My hobby is cooking.",
+          "ar-SA": "هوايتي هي الطبخ.",
+          "es-ES": "Mi pasatiempo es cocinar.",
+          "fr-FR": "Mon passe-temps est la cuisine.",
+          "hi-IN": "मेरा शौक खाना बनाना है।",
+          "pl-PL": "Moim hobby jest gotowanie.",
+          "ro-RO": "Hobby-ul meu este gătitul.",
+          "tr-TR": "Benim hobim yemek yapmak.",
+          "uk-UA": "Моє хобі — готувати.",
+          "uz-UZ": "Mening xobbim ovqat pishirish."
+        },
+        "nextStep": "farbe"
+      }
+    ],
+    "defaultNext": "farbe"
+  },
+  "farbe": {
+    "botText": "Interessant! Und was ist deine Lieblingsfarbe?",
+    "botTranslation": {
+      "ru-RU": "Интересно! А какой твой любимый цвет?",
+      "en-US": "Interesting! And what is your favorite color?",
+      "ar-SA": "مثير للاهتمام! وما هو لونك المفضل؟",
+      "es-ES": "¡Interesante! ¿Y cuál es tu color favorito?",
+      "fr-FR": "Intéressant ! Et quelle est ta couleur préférée ?",
+      "hi-IN": "रोचक! और आपका पसंदीदा रंग क्या है?",
+      "pl-PL": "Ciekawe! A jaki jest twój ulubiony kolor?",
+      "ro-RO": "Interesant! Și care este culoarea ta preferată?",
+      "tr-TR": "İlginç! Peki senin en sevdiğin renk ne?",
+      "uk-UA": "Цікаво! А який твій улюблений колір?",
+      "uz-UZ": "Qiziqarli! Sevimli rangingiz qaysi?"
+    },
+    "vocabulary": [
+      {
+        "german": "Interessant",
+        "translation": {
+          "ru-RU": "интересно",
+          "en-US": "interesting",
+          "ar-SA": "مثير للاهتمام",
+          "es-ES": "interesante",
+          "fr-FR": "intéressant",
+          "hi-IN": "रोचक",
+          "pl-PL": "ciekawe",
+          "ro-RO": "interesant",
+          "tr-TR": "ilginç",
+          "uk-UA": "цікаво",
+          "uz-UZ": "qiziqarli"
+        }
+      },
+      {
+        "german": "Lieblingsfarbe",
+        "translation": {
+          "ru-RU": "любимый цвет",
+          "en-US": "favorite color",
+          "ar-SA": "اللون المفضل",
+          "es-ES": "color favorito",
+          "fr-FR": "couleur préférée",
+          "hi-IN": "पसंदीदा रंग",
+          "pl-PL": "ulubiony kolor",
+          "ro-RO": "culoarea preferată",
+          "tr-TR": "favori renk",
+          "uk-UA": "улюблений колір",
+          "uz-UZ": "sevimli rang"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich mag Blau.",
+        "translation": {
+          "ru-RU": "Мне нравится синий.",
+          "en-US": "I like blue.",
+          "ar-SA": "أنا أحب الأزرق.",
+          "es-ES": "Me gusta el azul.",
+          "fr-FR": "J'aime le bleu.",
+          "hi-IN": "मुझे नीला रंग पसंद है।",
+          "pl-PL": "Lubię niebieski.",
+          "ro-RO": "Îmi place albastrul.",
+          "tr-TR": "Maviyi severim.",
+          "uk-UA": "Мені подобається синій.",
+          "uz-UZ": "Men ko'k rangni yoqtiraman."
+        },
+        "nextStep": "natur"
+      },
+      {
+        "text": "Ich finde Grün schön.",
+        "translation": {
+          "ru-RU": "Я считаю зеленый красивым.",
+          "en-US": "I find green beautiful.",
+          "ar-SA": "أجد اللون الأخضر جميلاً.",
+          "es-ES": "El verde me parece bonito.",
+          "fr-FR": "Je trouve le vert beau.",
+          "hi-IN": "मुझे हरा रंग सुंदर लगता है।",
+          "pl-PL": "Uważam, że zielony jest ładny.",
+          "ro-RO": "Găsesc verdele frumos.",
+          "tr-TR": "Yeşili güzel buluyorum.",
+          "uk-UA": "Я вважаю зелений красивим.",
+          "uz-UZ": "Yashil rang chiroyli deb o'ylayman."
+        },
+        "nextStep": "natur"
+      }
+    ],
+    "defaultNext": "natur"
+  },
+  "natur": {
+    "botText": "Gehst du auch gerne in die Natur?",
+    "botTranslation": {
+      "ru-RU": "Ты тоже любишь ходить на природу?",
+      "en-US": "Do you also like going into nature?",
+      "ar-SA": "هل تحب أيضاً الذهاب إلى الطبيعة؟",
+      "es-ES": "¿Te gusta también ir a la naturaleza?",
+      "fr-FR": "Aimes-tu aussi aller dans la nature ?",
+      "hi-IN": "क्या आपको प्रकृति में जाना भी पसंद है?",
+      "pl-PL": "Lubisz też chodzić na łono natury?",
+      "ro-RO": "Îți place și să mergi în natură?",
+      "tr-TR": "Doğaya çıkmayı da sever misin?",
+      "uk-UA": "Ти теж любиш ходити на природу?",
+      "uz-UZ": "Siz ham tabiatga chiqishni yoqtirasizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Natur",
+        "translation": {
+          "ru-RU": "природа",
+          "en-US": "nature",
+          "ar-SA": "الطبيعة",
+          "es-ES": "naturaleza",
+          "fr-FR": "nature",
+          "hi-IN": "प्रकृति",
+          "pl-PL": "natura",
+          "ro-RO": "natura",
+          "tr-TR": "doğa",
+          "uk-UA": "природа",
+          "uz-UZ": "tabiat"
+        }
+      },
+      {
+        "german": "auch gerne",
+        "translation": {
+          "ru-RU": "тоже охотно",
+          "en-US": "also gladly",
+          "ar-SA": "بكل سرور أيضاً",
+          "es-ES": "también con gusto",
+          "fr-FR": "aussi volontiers",
+          "hi-IN": "भी खुशी से",
+          "pl-PL": "też chętnie",
+          "ro-RO": "de asemenea cu plăcere",
+          "tr-TR": "ayrıca severek",
+          "uk-UA": "теж охоче",
+          "uz-UZ": "ham bajonidil"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, ich mache oft Spaziergänge.",
+        "translation": {
+          "ru-RU": "Да, я часто гуляю.",
+          "en-US": "Yes, I often take walks.",
+          "ar-SA": "نعم، أنا غالباً ما أتمشى.",
+          "es-ES": "Sí, a menudo doy paseos.",
+          "fr-FR": "Oui, je me promène souvent.",
+          "hi-IN": "हाँ, मैं अक्सर सैर करता हूँ।",
+          "pl-PL": "Tak, często chodzę na spacery.",
+          "ro-RO": "Da, fac des plimbări.",
+          "tr-TR": "Evet, sık sık yürüyüş yaparım.",
+          "uk-UA": "Так, я часто гуляю.",
+          "uz-UZ": "Ha, men tez-tez sayr qilaman."
+        },
+        "nextStep": "buch"
+      },
+      {
+        "text": "Ja, ich fahre gerne Fahrrad.",
+        "translation": {
+          "ru-RU": "Да, я люблю кататься на велосипеде.",
+          "en-US": "Yes, I like riding a bicycle.",
+          "ar-SA": "نعم، أحب ركوب الدراجة.",
+          "es-ES": "Sí, me gusta andar en bicicleta.",
+          "fr-FR": "Oui, j'aime faire du vélo.",
+          "hi-IN": "हाँ, मुझे साइकिल चलाना पसंद है।",
+          "pl-PL": "Tak, lubię jeździć na rowerze.",
+          "ro-RO": "Da, îmi place să merg cu bicicleta.",
+          "tr-TR": "Evet, bisiklet sürmeyi severim.",
+          "uk-UA": "Так, я люблю кататися на велосипеді.",
+          "uz-UZ": "Ha, men velosipedda yurishni yoqtiraman."
+        },
+        "nextStep": "buch"
+      }
+    ],
+    "defaultNext": "buch"
+  },
+  "buch": {
+    "botText": "Das ist gesund. Liest du auch manchmal Bücher?",
+    "botTranslation": {
+      "ru-RU": "Это полезно для здоровья. Ты тоже иногда читаешь книги?",
+      "en-US": "That is healthy. Do you also sometimes read books?",
+      "ar-SA": "هذا صحي. هل تقرأ الكتب أحياناً أيضاً؟",
+      "es-ES": "Eso es sano. ¿También lees libros a veces?",
+      "fr-FR": "C'est sain. Lis-tu aussi parfois des livres ?",
+      "hi-IN": "यह स्वस्थ है। क्या आप कभी-कभी किताबें भी पढ़ते हैं?",
+      "pl-PL": "To zdrowe. Czytasz też czasem książki?",
+      "ro-RO": "Asta e sănătos. Citești și cărți uneori?",
+      "tr-TR": "Bu sağlıklı. Bazen kitap da okur musun?",
+      "uk-UA": "Це корисно. Ти теж іноді читаєш книги?",
+      "uz-UZ": "Bu foydali. Siz ham ba'zan kitob o'qiysizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "gesund",
+        "translation": {
+          "ru-RU": "полезно/здорово",
+          "en-US": "healthy",
+          "ar-SA": "صحي",
+          "es-ES": "saludable",
+          "fr-FR": "sain",
+          "hi-IN": "स्वस्थ",
+          "pl-PL": "zdrowe",
+          "ro-RO": "sănătos",
+          "tr-TR": "sağlıklı",
+          "uk-UA": "корисно",
+          "uz-UZ": "foydali"
+        }
+      },
+      {
+        "german": "manchmal",
+        "translation": {
+          "ru-RU": "иногда",
+          "en-US": "sometimes",
+          "ar-SA": "أحياناً",
+          "es-ES": "a veces",
+          "fr-FR": "parfois",
+          "hi-IN": "कभी-कभी",
+          "pl-PL": "czasami",
+          "ro-RO": "uneori",
+          "tr-TR": "bazen",
+          "uk-UA": "іноді",
+          "uz-UZ": "ba'zan"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, ich lese gerne am Abend.",
+        "translation": {
+          "ru-RU": "Да, я люблю читать вечером.",
+          "en-US": "Yes, I like reading in the evening.",
+          "ar-SA": "نعم، أحب القراءة في المساء.",
+          "es-ES": "Sí, me gusta leer por la tarde/noche.",
+          "fr-FR": "Oui, j'aime lire le soir.",
+          "hi-IN": "हाँ, मुझे शाम को पढ़ना पसंद है।",
+          "pl-PL": "Tak, lubię czytać wieczorem.",
+          "ro-RO": "Da, îmi place să citesc seara.",
+          "tr-TR": "Evet, akşamları okumayı severim.",
+          "uk-UA": "Так, я люблю читати ввечері.",
+          "uz-UZ": "Ha, men kechqurun o'qishni yaxshi ko'raman."
+        },
+        "nextStep": "wochenende"
+      },
+      {
+        "text": "Nein, ich sehe lieber Filme.",
+        "translation": {
+          "ru-RU": "Нет, я предпочитаю смотреть фильмы.",
+          "en-US": "No, I prefer watching movies.",
+          "ar-SA": "لا، أفضل مشاهدة الأفلام.",
+          "es-ES": "No, prefiero ver películas.",
+          "fr-FR": "Non, je préfère regarder des films.",
+          "hi-IN": "नहीं, मैं फिल्में देखना पसंद करता हूँ।",
+          "pl-PL": "Nie, wolę oglądać filmy.",
+          "ro-RO": "Nu, prefer să mă uit la filme.",
+          "tr-TR": "Hayır, film izlemeyi tercih ederim.",
+          "uk-UA": "Ні, я краще дивлюся фільми.",
+          "uz-UZ": "Yo'q, men kinolarni ko'rishni afzal ko'raman."
+        },
+        "nextStep": "wochenende"
+      }
+    ],
+    "defaultNext": "wochenende"
+  },
+  "wochenende": {
+    "botText": "Und was machst du am Wochenende am liebsten?",
+    "botTranslation": {
+      "ru-RU": "А что ты больше всего любишь делать на выходных?",
+      "en-US": "And what do you like doing most on the weekend?",
+      "ar-SA": "وماذا تحب أن تفعل أكثر في عطلة نهاية الأسبوع؟",
+      "es-ES": "¿Y qué es lo que más te gusta hacer el fin de semana?",
+      "fr-FR": "Et que préfères-tu faire le week-end ?",
+      "hi-IN": "और आपको सप्ताहांत में सबसे ज्यादा क्या करना पसंद है?",
+      "pl-PL": "A co najbardziej lubisz robić w weekend?",
+      "ro-RO": "Și ce îți place cel mai mult să faci în weekend?",
+      "tr-TR": "Peki hafta sonu en çok ne yapmayı seversin?",
+      "uk-UA": "А що ти найбільше любиш робити на вихідних?",
+      "uz-UZ": "Dam olish kunlari eng ko'p nima qilishni yoqtirasiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Wochenende",
+        "translation": {
+          "ru-RU": "выходные",
+          "en-US": "weekend",
+          "ar-SA": "عطلة نهاية الأسبوع",
+          "es-ES": "fin de semana",
+          "fr-FR": "week-end",
+          "hi-IN": "सप्ताहांत",
+          "pl-PL": "weekend",
+          "ro-RO": "weekend",
+          "tr-TR": "hafta sonu",
+          "uk-UA": "вихідні",
+          "uz-UZ": "dam olish kunlari"
+        }
+      },
+      {
+        "german": "was machst",
+        "translation": {
+          "ru-RU": "что делаешь",
+          "en-US": "what do you do",
+          "ar-SA": "ماذا تفعل",
+          "es-ES": "qué haces",
+          "fr-FR": "que fais-tu",
+          "hi-IN": "क्या करते हो",
+          "pl-PL": "co robisz",
+          "ro-RO": "ce faci",
+          "tr-TR": "ne yaparsın",
+          "uk-UA": "що робиш",
+          "uz-UZ": "nima qilasiz"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich treffe mich mit Freunden.",
+        "translation": {
+          "ru-RU": "Я встречаюсь с друзьями.",
+          "en-US": "I meet up with friends.",
+          "ar-SA": "ألتقي بالأصدقاء.",
+          "es-ES": "Me reúno con amigos.",
+          "fr-FR": "Je vois des amis.",
+          "hi-IN": "मैं दोस्तों से मिलता हूँ।",
+          "pl-PL": "Spotykam się z przyjaciółmi.",
+          "ro-RO": "Mă întâlnesc cu prietenii.",
+          "tr-TR": "Arkadaşlarla buluşurum.",
+          "uk-UA": "Я зустрічаюся з друзями.",
+          "uz-UZ": "Men do'stlar bilan ko'rishaman."
+        },
+        "nextStep": "kennenlernen"
+      },
+      {
+        "text": "Ich entspanne mich zu Hause.",
+        "translation": {
+          "ru-RU": "Я расслабляюсь дома.",
+          "en-US": "I relax at home.",
+          "ar-SA": "أسترخي في المنزل.",
+          "es-ES": "Me relajo en casa.",
+          "fr-FR": "Je me détends à la maison.",
+          "hi-IN": "मैं घर पर आराम करता हूँ।",
+          "pl-PL": "Odpoczywam w domu.",
+          "ro-RO": "Mă relaxez acasă.",
+          "tr-TR": "Evde dinlenirim.",
+          "uk-UA": "Я розслабляюся вдома.",
+          "uz-UZ": "Men uyda dam olaman."
+        },
+        "nextStep": "kennenlernen"
+      }
+    ],
+    "defaultNext": "kennenlernen"
+  },
+  "kennenlernen": {
+    "botText": "Schön, das klingt gut! Freut mich sehr, dich kennenzulernen.",
+    "botTranslation": {
+      "ru-RU": "Прекрасно, звучит хорошо! Очень рад с тобой познакомиться.",
+      "en-US": "Nice, that sounds good! Very pleased to meet you.",
+      "ar-SA": "جميل، هذا يبدو جيداً! سعيد جداً بلقائك.",
+      "es-ES": "¡Qué bien, suena bien! Encantado de conocerte.",
+      "fr-FR": "Super, ça a l'air bien ! Très heureux de faire ta connaissance.",
+      "hi-IN": "अच्छा है, यह अच्छा लगता है! आपसे मिलकर बहुत खुशी हुई।",
+      "pl-PL": "Miło, to brzmi dobrze! Bardzo miło cię poznać.",
+      "ro-RO": "Frumos, sună bine! Foarte încântat să te cunosc.",
+      "tr-TR": "Güzel, kulağa hoş geliyor! Seninle tanıştığıma çok memnun oldum.",
+      "uk-UA": "Чудово, звучить добре! Дуже радий з тобою познайомитися.",
+      "uz-UZ": "Yaxshi, bu ajoyib eshitilyapti! Siz bilan tanishganimdan juda xursandman."
+    },
+    "vocabulary": [
+      {
+        "german": "klingt gut",
+        "translation": {
+          "ru-RU": "звучит хорошо",
+          "en-US": "sounds good",
+          "ar-SA": "يبدو جيداً",
+          "es-ES": "suena bien",
+          "fr-FR": "ça a l'air bien",
+          "hi-IN": "अच्छा लगता है",
+          "pl-PL": "brzmi dobrze",
+          "ro-RO": "sună bine",
+          "tr-TR": "kulağa hoş geliyor",
+          "uk-UA": "звучить добре",
+          "uz-UZ": "yaxshi eshitilyapti"
+        }
+      },
+      {
+        "german": "Freut mich",
+        "translation": {
+          "ru-RU": "очень приятно",
+          "en-US": "pleased to meet",
+          "ar-SA": "سعيد بلقائك",
+          "es-ES": "encantado",
+          "fr-FR": "enchanté",
+          "hi-IN": "मिलकर खुशी हुई",
+          "pl-PL": "miło mi",
+          "ro-RO": "îmi pare bine",
+          "tr-TR": "memnun oldum",
+          "uk-UA": "дуже приємно",
+          "uz-UZ": "tanishganimdan xursandman"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke, mich freut es auch.",
+        "translation": {
+          "ru-RU": "Спасибо, мне тоже очень приятно.",
+          "en-US": "Thanks, I am also pleased.",
+          "ar-SA": "شكراً، وأنا سعيد بذلك أيضاً.",
+          "es-ES": "Gracias, a mí también me alegra.",
+          "fr-FR": "Merci, le plaisir est pour moi.",
+          "hi-IN": "धन्यवाद, मुझे भी खुशी हुई.",
+          "pl-PL": "Dziękuję, mnie również jest bardzo miło.",
+          "ro-RO": "Mulțumesc, și mie îmi pare bine.",
+          "tr-TR": "Teşekkürler, ben de memnun oldum.",
+          "uk-UA": "Дякую, мені теж дуже приємно.",
+          "uz-UZ": "Rahmat, menga ham juda yoqimli."
+        },
+        "nextStep": "abschied"
+      },
+      {
+        "text": "Danke, gleichfalls!",
+        "translation": {
+          "ru-RU": "Спасибо, взаимно!",
+          "en-US": "Thanks, likewise!",
+          "ar-SA": "شكراً، ولك بالمثل!",
+          "es-ES": "¡Gracias, igualmente!",
+          "fr-FR": "Merci, de même !",
+          "hi-IN": "धन्यवाद, आपको भी!",
+          "pl-PL": "Dziękuję, nawzajem!",
+          "ro-RO": "Mulțumesc, la fel!",
+          "tr-TR": "Teşekkürler, bilmukabele!",
+          "uk-UA": "Дякую, навзаєм!",
+          "uz-UZ": "Rahmat, sizga ham!"
+        },
+        "nextStep": "abschied"
+      }
+    ],
+    "defaultNext": "abschied"
+  },
+  "abschied": {
+    "botText": "Dann wünsche ich dir noch einen schönen Tag!",
+    "botTranslation": {
+      "ru-RU": "Тогда желаю тебе хорошего дня!",
+      "en-US": "Then I wish you a nice day!",
+      "ar-SA": "إذن أتمنى لك يوماً جميلاً بقية اليوم!",
+      "es-ES": "¡Entonces te deseo un buen día!",
+      "fr-FR": "Alors je te souhaite une bonne journée !",
+      "hi-IN": "फिर मैं आपके अच्छे दिन की कामना करता हूँ!",
+      "pl-PL": "W takim razie życzę miłego dnia!",
+      "ro-RO": "Atunci îți doresc o zi bună în continuare!",
+      "tr-TR": "O zaman sana iyi günler dilerim!",
+      "uk-UA": "Тоді бажаю тобі гарного дня!",
+      "uz-UZ": "Unda senga xayrli kun tilayman!"
+    },
+    "vocabulary": [
+      {
+        "german": "wünschen",
+        "translation": {
+          "ru-RU": "желать",
+          "en-US": "to wish",
+          "ar-SA": "يتمنى",
+          "es-ES": "desear",
+          "fr-FR": "souhaiter",
+          "hi-IN": "कामना करना",
+          "pl-PL": "życzyć",
+          "ro-RO": "a ura",
+          "tr-TR": "dilemek",
+          "uk-UA": "бажати",
+          "uz-UZ": "tilamoq"
+        }
+      },
+      {
+        "german": "schönen Tag",
+        "translation": {
+          "ru-RU": "хорошего дня",
+          "en-US": "nice day",
+          "ar-SA": "يوم جميل",
+          "es-ES": "buen día",
+          "fr-FR": "bonne journée",
+          "hi-IN": "अच्छा दिन",
+          "pl-PL": "miłego dnia",
+          "ro-RO": "o zi bună",
+          "tr-TR": "iyi günler",
+          "uk-UA": "гарного дня",
+          "uz-UZ": "xayrli kun"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke, dir auch! Tschüss!",
+        "translation": {
+          "ru-RU": "Спасибо, тебе тоже! Пока!",
+          "en-US": "Thanks, you too! Bye!",
+          "ar-SA": "شكراً، ولك أيضاً! وداعاً!",
+          "es-ES": "¡Gracias, a ti también! ¡Adiós!",
+          "fr-FR": "Merci, à toi aussi ! Salut !",
+          "hi-IN": "धन्यवाद, आपको भी! अलविदा!",
+          "pl-PL": "Dziękuję, tobie również! Cześć!",
+          "ro-RO": "Mulțumesc, ție de asemenea! Pa!",
+          "tr-TR": "Teşekkürler, sana da! Hoşça kal!",
+          "uk-UA": "Дякую, тобі теж! Бувай!",
+          "uz-UZ": "Rahmat, senga ham! Xayr!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Vielen Dank, tschüss!",
+        "translation": {
+          "ru-RU": "Большое спасибо, пока!",
+          "en-US": "Thank you very much, bye!",
+          "ar-SA": "شكراً جزيلاً، وداعاً!",
+          "es-ES": "¡Muchas gracias, adiós!",
+          "fr-FR": "Merci beaucoup, salut !",
+          "hi-IN": "बहुत-बहुत धन्यवाद, अलविदा!",
+          "pl-PL": "Bardzo dziękuję, cześć!",
+          "ro-RO": "Vă mulțumesc mult, pa!",
+          "tr-TR": "Çok teşekkürler, hoşça kal!",
+          "uk-UA": "Велике дякую, бувай!",
+          "uz-UZ": "Katta rahmat, xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

@@ -1,5 +1,4 @@
 {
-
   "definiteIndefiniteQuestOne": {
     "title": "अंत के लिए लड़ाई",
     "description": "मिश्रित अभ्यास: वाक्यों में अनिश्चित और निश्चित आर्टिकल।",
@@ -525,12 +524,6 @@
     "questFifteen": "सही विकल्प चुनें: यह एक खूबसूरत दिन था",
     "questFifteenTip": "अनिश्चित आर्टिकल (पहली बार)। पुल्लिंग (der)। आर्टिकल 'ein' खाली है, इसलिए विशेषण 'der' आर्टिकल से -er अंत लेता है।"
   },
-
-
-
-
-
-
   "secretLandsQuestOne": {
     "title": "परिणाम",
     "description": "मिश्रित प्रशिक्षण: Perfekt और Futur 1 में अनिश्चित आर्टिकल के साथ काम करना। विषय: दैनिक जीवन, शहर, परिवहन, भोजन।",
@@ -1056,10 +1049,6 @@
     "questFifteen": "वाक्य जोड़ें: हम एक दिलचस्प प्रदर्शनी देखेंगे",
     "questFifteenTip": "प्रदर्शनी — स्त्रीलिंग (die) है। आर्टिकल 'eine' -e पर समाप्त होता है, इसलिए विशेषण आर्टिकल से -e अंत लेता है।"
   },
-
-
-
-
   "edgeImagesQuestOne": {
     "title": "शुरुआत",
     "description": "हम der, die, das के बाद विशेषणों को सही ढंग से डिक्लाइन (decline) करने का अभ्यास करते हैं।",
@@ -1585,11 +1574,6 @@
     "questFifteen": "रूप भरें (lecker): मैं पिज्जा खाऊँगा।",
     "questFifteenTip": "Akkusativ (स्त्रीलिंग): 'die' मूल है, विशेषण आर्टिकल से -e अंत लेता है।"
   },
-
-
-
-
-
   "timeGageQuestOne": {
     "title": "परिचय और संचार",
     "description": "संचार स्थितियों में व्याकरण का अभ्यास: मुलाकात की योजनाओं से लेकर अतीत की कहानियों तक।",
@@ -2079,7 +2063,6 @@
     "questFifteen": "अगर मेरे पास समय होगा तो मैं टिकट खरीदूँगा।",
     "questFifteenTip": "'Wenn' क्रिया को अंत में रखता है।"
   },
-
   "pastValleyQuestOne": {
     "title": "Perfekt की मूल बातें",
     "description": "आपने क्या किया? भूतकाल से परिचय: 'मैंने खरीदा', 'हमने किया'!",
@@ -2417,7 +2400,6 @@
     "questFourteenTip": "singen — एक मजबूत क्रिया है। 'ge-' उपसर्ग जोड़ा जाता है और '-en' अंत बना रहता है। मूल में स्वर बदल जाता है (i से u)।",
     "questFifteen": "चुनें: मैंने खेलकूद किया।"
   },
-
   "actionValleyQuestOne": {
     "title": "मुझे, तुम्हें, उसे",
     "description": "व्यक्तिगत सर्वनामों के साथ Dativ का अभ्यास करना। हम किसकी मदद कर रहे हैं और किसे उपहार दे रहे हैं?",
@@ -2784,7 +2766,6 @@
     "questFifteen": "चुनें: आप किससे बात कर रहे हैं?",
     "questFifteenTip": "लोगों के लिए पूर्वसर्ग + प्रश्न (Mit wem?) का उपयोग करें।"
   },
-
   "pluralLandQuestOne": {
     "title": "यात्रा",
     "description": "Futur I का उपयोग करके यात्रा की योजना बनाना। समय, स्थान और कार्य को जोड़ना सीखना।",
@@ -3086,8 +3067,6 @@
     "questFourteen": "बनाएं: हम त्योहार नहीं भूलेंगे।",
     "questFifteen": "सही विकल्प चुनें"
   },
-
-
   "orderValleyQuestOne": {
     "title": "क्रिया अंत में!",
     "description": "अधीनस्थ वाक्यों (subordinate clauses) में शब्दों के क्रम का अभ्यास। मुख्य नियम: क्रिया बिल्कुल अंत में जाती है।",
@@ -3482,8 +3461,6 @@
     "questEleven": "सुनें और वाक्य लिखें",
     "questElevenTip": "'dass' क्रिया 'wäscht' को अंत में रखता है। वह 'स्वयं' को धो रहा है, इसलिए Akkusativ — 'sich'।"
   },
-
-
   "pwa": {
     "title": "Skillupgerman इंस्टॉल करें",
     "sub": "त्वरित पहुंच के लिए ऐप को अपनी होम स्क्रीन पर जोड़ें!",
@@ -3515,9 +3492,12 @@
   },
   "settingsGroup": {
     "notifications": "सूचनाएं",
-    "appearance": "रूप-रंग"
+    "appearance": "दिखावट",
+    "language": "भाषा",
+    "account": "खाता प्रबंधन"
   },
   "valentineAchievements": {
+    "valentineAchievementsTitle": "दिलों का उत्सव",
     "firstValentineQuestLabel": "पहली डेट",
     "firstValentineQuesDescription": "पहला कदम उठाएं! 'दिलों का उत्सव' ईवेंट का कोई भी कार्य पूरा करें और अपना पहला इनाम पाएं।",
     "valentineWordsLabel": "प्यार की भाषा",
@@ -3597,7 +3577,9 @@
     "streak": "जीत का सिलसिला",
     "clearWins": "शानदार जीत",
     "start": "खेल शुरू करें",
-    "info": "स्तर के आंकड़े देखने के लिए उस पर क्लिक करें।"
+    "info": "स्तर के आंकड़े देखने के लिए उस पर क्लिक करें।",
+    "answer-placeholder": "वाक्य बनाएं...",
+    "pending": "प्रतीक्षा की जा रही है..."
   },
   "eventSessionPage": {
     "loading": "लोड हो रहा है…",
@@ -3730,6 +3712,7 @@
     "theme": "रोमांटिक थीम"
   },
   "winterAchievements": {
+    "winterAchievementsTitle": "सर्दियों की फुसफुसाहट",
     "firstQuestName": "पहला क्रिसमस स्टार",
     "firstQuestDescription": "कोई भी शीतकालीन क्वेस्ट पूरा करें और पहला तारा जलाएं",
     "santaLexiconName": "सांता की शब्दावली",
@@ -4906,7 +4889,10 @@
     "start": "आरंभ:",
     "middle": "औसत अंक:",
     "share": "साझा करें",
+    "cancel": "रद्द करें",
     "delete": "हटाएं",
+    "deleteResultTitle": "परिणाम हटाएं?",
+    "textModal": "क्या आप वाकई इस परीक्षा को हटाना चाहते हैं? इस कार्रवाई को पूर्ववत नहीं किया जा सकता।",
     "sent": "टेस्ट भेज दिया गया",
     "sended": "आप यह टेस्ट पहले ही भेज चुके हैं",
     "error": "परीक्षा साझा करने में विफल"
@@ -6944,7 +6930,7 @@
     "questThird": "वाक्य बनाएँ: सफेद खिड़की",
     "questFour": "विकल्प चुनें: हरा सोफ़ा",
     "questFive": "सुनें और लिखें",
-    "questSix": "बनाएँ: das rote Buch (लाल किताब)",
+    "questSix": "इकट्ठा करें: लाल किताब",
     "questSeven": "eine gelbe Blume का अर्थ क्या है?",
     "questSevenFirstOption": "एक पीला फूल",
     "questSevenSecondOption": "लाल किताब",
@@ -8072,11 +8058,11 @@
     "exam": "मित्र"
   },
   "cabinetSidebar": {
-    "valueOne": "खाता पैरामीटर",
-    "valueTwo": "परीक्षा पुरालेख",
-    "valueThree": "दुकान",
+    "valueOne": "खाता",
+    "valueTwo": "परीक्षाएं",
+    "valueThree": "स्टोर",
     "valueFour": "सेटिंग्स"
-  },
+  } ,
   "cabinetAccordion": {
     "personalData": "व्यक्तिगत डेटा",
     "account": "खाता प्रबंधन",
@@ -8090,10 +8076,11 @@
   },
   "cabinetToggle": {
     "sound": "ध्वनि सूचनाएं",
-    "theme": "डार्क मोड",
-    "ach": "उपलब्धि सूचना",
-    "snowFall": "हिमपात",
-    "themeBtn": "थीम"
+    "ach": "उपलब्धियों की सूचना",
+    "themeBtn": "थीम",
+    "snowFall": "बर्फबारी",
+    "language": "इंटरफ़ेस भाषा",
+    "profileData": "प्रोफ़ाइल डेटा"
   },
   "cabinet": {
     "important": "महत्वपूर्ण!!!",
@@ -8149,7 +8136,10 @@
     "articleLabelTwo": "- भाषा की भूमि में दोबारा प्रयास और प्रोफाइल शॉप में खर्च किया जाता है।",
     "levelTitle": "स्तर",
     "levelLabelOne": "- कार्य पूरे करने पर स्तर बढ़ता है।",
-    "levelLabelTwo": "- स्तर बढ़ने के साथ भाषा की भूमि में नए कार्य खुलते हैं।"
+    "levelLabelTwo": "- स्तर बढ़ने के साथ भाषा की भूमि में नए कार्य खुलते हैं।",
+    "livesTitle": "जीवन",
+    "livesLabelOne": "भाषा की भूमि को पूरा करने के लिए आवश्यक",
+    "livesLabelTwo": "आंतरिक स्टोर में या प्रशिक्षण के दौरान आर्टिक्लूस (Articluses) के लिए खरीदे जा सकते हैं"
   },
   "idioms": {
     "title": "मुहावरे और लोकोक्तियाँ",
@@ -8257,6 +8247,8 @@
     "answer": "गलती को अनदेखा करता है"
   },
   "guessWord": {
+    "subtitle": "शब्द का अनुमान लगाएं और अपनी जर्मन भाषा को बेहतर बनाएं!",
+    "theme": "विषय:",
     "back": "पीछे",
     "guessTitle": "शब्द पहचानो",
     "startGame": "खेल शुरू करें",
@@ -9040,7 +9032,7 @@
     "main": "मुख्य पृष्ठ पर"
   },
   "rulesFirstBlock": {
-    "title": "जर्मन आर्टिकल के मुख्य नियम",
+    "title": "आर्टिकल का सिद्धांत",
     "subTitle": "उन सभी के लिए संक्षिप्त और स्पष्ट मार्गदर्शिका जो der, die, das का सही उपयोग करना चाहते हैं!",
     "firstCardTitle": "आर्टिकल लिंग पर निर्भर करता है",
     "exampleSexM": " — पुल्लिंग (Masculine)",
@@ -9185,6 +9177,7 @@
     "confirm": "दोहराएँ"
   },
   "sub": {
+    "words": "शब्द और आर्टिकल",
     "sinonim": "शब्दावली",
     "articles": "आर्टिकल",
     "verbs": "क्रिया (Verbs)",
@@ -9201,7 +9194,9 @@
     "languagesLands": "भाषाई भूमि",
     "describePicture": "चित्र वर्णन",
     "fight": "जर्मन ब्रह्मांड",
-    "audio": "ऑडियो कार्य"
+    "audio": "ऑडियो कार्य",
+    "textTask": "टेक्स्ट",
+    "speak": "बोलने का अभ्यास"
   },
   "underSub": {
     "prev": "प्रस्तावना",
@@ -9430,35 +9425,100 @@
   "nameMap": {
     "Furniture": "फर्नीचर",
     "Animals": "जानवर",
+    "Birds": "पक्षी",
+    "SeaAnimals": "समुद्री जानवर",
+    "Insects": "कीड़े",
+    "Savanna": "सवाना",
     "Clothes": "कपड़े",
+    "Shoes": "जूते",
     "Food": "भोजन",
-    "Body": "शरीर के अंग",
+    "SweetEat": "मिठाइयाँ",
+    "MilkEat": "डेयरी उत्पाद",
+    "Vegetables": "सब्जियां",
+    "Fruits": "फल",
+    "Drinks": "पेय पदार्थ",
+    "Body": "शरीर",
     "Professions": "पेशे",
     "Transport": "परिवहन",
     "Colors": "रंग",
     "Nature": "प्रकृति",
+    "Weather": "मौसम",
+    "Landscape": "परिदृश्य",
     "Home": "घर",
     "Zeit": "समय",
-    "City": "शहर",
+    "CityBuildings": "शहर की इमारतें",
+    "CityInfrastructure": "शहर का बुनियादी ढांचा",
     "School": "स्कूल",
     "DaysAndMonths": "दिन और महीने",
     "Toys": "खिलौने",
-    "CommonItems": "सामान्य वस्तुएं",
-    "BathroomItems": "बाथरूम की चीज़ें",
-    "Kosmetik": "कॉस्मेटिक्स",
+    "CommonItems": "रोजमर्रा की वस्तुएं",
+    "BathroomItems": "बाथरूम की वस्तुएं",
+    "Kosmetik": "सौंदर्य प्रसाधन",
     "Familie": "परिवार",
-    "Emotions": "भावनाएं",
-    "Werkzeuge": "औज़ार",
+    "Emotions": "भावनाएँ",
     "Kitchen": "रसोई",
     "Health": "स्वास्थ्य",
-    "Sport": "खेल",
-    "SportEquipment": "फिटनेस उपकरण",
+    "SportBasic": "बुनियादी खेल",
+    "SportCombatWinter": "शीतकालीन और लड़ाकू खेल",
+    "SportEvents": "खेल आयोजन",
+    "SportLife": "खेल जीवन शैली",
+    "SportEquipment": "खेल उपकरण",
+    "TravelDocuments": "यात्रा दस्तावेज",
+    "Tourism": "पर्यटन",
     "Travel": "यात्रा",
+    "MusicInstruments": "संगीत वाद्ययंत्र",
     "Musik": "संगीत",
-    "Amount": "मात्रा",
-    "Informatik": "कंप्यूटर विज्ञान"
+    "Amount": "मात्रा और माप",
+    "Hardware": "हार्डवेयर",
+    "Software": "सॉफ्टवेयर",
+    "Internet": "इंटरनेट",
+    "WinterHolidays": "सर्दियों की छुट्टियाँ",
+    "FamilyAndReligious": "पारिवारिक और धार्मिक छुट्टियां",
+    "PersonalCelebrations": "व्यक्तिगत उत्सव",
+    "FestivalsAndDecor": "त्यौहार और सजावट",
+    "DwellingTypes": "आवास के प्रकार",
+    "Rooms": "कमरे",
+    "ConstructionAndDetails": "निर्माण और विवरण",
+    "CoreFamily": "निकटस्थ परिवार",
+    "ExtendedFamily": "विस्तारित परिवार",
+    "Relationships": "रिश्ते",
+    "HandTools": "हाथ के औजार",
+    "PowerTools": "विद्युत उपकरण",
+    "ConsumablesAndSafety": "उपभोग्य वस्तुएं और सुरक्षा",
+    "JobOffice": "कार्यालय की नौकरियां",
+    "JobTech": "तकनीकी नौकरियां",
+    "JobMed": "चिकित्सा नौकरियां",
+    "JobEdu": "शिक्षा",
+    "JobService": "सेवा नौकरियां",
+    "CityTransport": "शहर का परिवहन",
+    "TravelTransport": "यात्रा परिवहन",
+    "usualClothes": "सामान्य कपड़े",
+    "winterClothes": "सर्दियों के कपड़े",
+    "emotionsPositive": "भावनाएँ",
+    "emotionsNegative": "भावनाएँ 2"
+  },
+  "categoryWords": {
+    "nature": "प्रकृति",
+    "animals": "जानवर",
+    "food": "भोजन",
+    "people": "मानव",
+    "family": "परिवार",
+    "dailyRoutine": "दैनिक जीवन",
+    "house": "घर",
+    "city": "शहर",
+    "school": "स्कूल",
+    "professions": "पेशे",
+    "construction": "निर्माण",
+    "clothes": "कपड़े",
+    "holidays": "त्यौहार",
+    "sport": "खेल",
+    "music": "संगीत",
+    "travel": "यात्रा",
+    "informatics": "सूचना विज्ञान",
+    "abstract": "अमूर्त विषय"
   },
   "modes": {
+    "themeTitle": "लेख (आर्टिकल) अध्ययन के विषय",
     "article": "आर्टिकल भरें",
     "letters": "अक्षरों से शब्द बनाएं",
     "articleWord": "शब्द और आर्टिकल लिखें",
@@ -9592,7 +9652,12 @@
     "profile": "प्रोफ़ाइल",
     "shop": "हैंगर",
     "rank": "रैंकिंग",
-    "exit": "निकास"
+    "exit": "निकास",
+    "start": "मिशन शुरू करें",
+    "findGalaxyTitle": "सेक्टर का पता चला",
+    "points": "अंक",
+    "errorTitle": "सिस्टम विफलता",
+    "errorBtn": "मुख्यालय लौटें"
   },
   "galaxyCabinet": {
     "back": "पीछे",
@@ -9601,7 +9666,8 @@
     "money": "आर्टिक्स",
     "commonPoints": "कुल अंक",
     "rank": "रैंक:",
-    "streak": "रिकॉर्ड:"
+    "streak": "रिकॉर्ड:",
+    "cabinet": "लॉगबुक"
   },
   "galaxyRank": {
     "none": "पृथ्वीवासी",
@@ -9651,7 +9717,7 @@
     "prepositions": "पूर्वसर्ग"
   },
   "v-rank": {
-    "desc": "कॉन्फेडरेट कैप्स शीर्ष तक पहुंचने का आपका रास्ता हैं! दिन के सभी तीन कार्यों को पूरा करके उन्हें इकट्ठा करें। अपना रैंक बढ़ाएं और अनलॉक किए गए बोनस खरीदें!",
+    "desc": "दिन के कार्यों को पूरा करके स्नातक टोपियाँ (mortarboards) जमा करें। अपनी रैंक बढ़ाएं और बोनस खरीदें।",
     "rank": "रैंक",
     "rank_0": "रंगरूट",
     "rank_1": "नौसिखिया",
@@ -9714,5 +9780,513 @@
   "lives": {
     "next": "अगला:",
     "full": "जीवन भर गए हैं"
+  },
+  "deletePage": {
+    "title": "प्रोफ़ाइल हटाना",
+    "bubbleText": "हमें दुख है कि आप जा रहे हैं! कृपया हटाने से पहले महत्वपूर्ण जानकारी की जाँच करें।",
+    "cleanUpTitle": "सब्स्क्रिप्शन प्रबंधन",
+    "cleanUpInfoText": "अकाउंट हटाना",
+    "cleanUpInfoTextTwo": "सब्स्क्रिप्शन को रद्द नहीं करता",
+    "cleanUpInfoTextThree": "है! अपने भुगतान की स्थिति जांचें।",
+    "deleteAccount": "अकाउंट हटाएं",
+    "modalTitle": "क्या आप वाकई हटाना चाहते हैं?",
+    "cleanUpGoogle": "इसके माध्यम से लॉगिन करें",
+    "cleanUpGoogleTwo": " पुष्टि करने के लिए, एक प्राधिकरण विंडो खुलेगी।",
+    "cleanUpPassword": "अपना पासवर्ड दर्ज करें:",
+    "placeholder": "अपना पासवर्ड दर्ज करें",
+    "modalLabelOne": "मैंने अपना विचार बदल दिया",
+    "modalLabelTwo": "हटाने की पुष्टि करें"
+  },
+  "accountChanges": {
+    "first": "प्रोफ़ाइल डेटा हमेशा के लिए गायब हो जाएगा।",
+    "two": "प्रगति और टेस्ट इतिहास शून्य हो जाएगा।",
+    "three": "सभी पुरस्कार, पदवियाँ और उपलब्धियाँ खो जाएंगी।",
+    "four": "मुद्रा, स्तर और टोपियाँ वापस ले ली जाएंगी।"
+  },
+  "platformsInformation": {
+    "titleWeb": "वेबसाइट पर",
+    "descriptionWeb": "वेबसाइट पर कार्ड से भुगतान।",
+    "instructionWeb": "व्यक्तिगत खाते में ऑटो-रिन्यूअल बंद करें।",
+    "titleStore": "ऐप में",
+    "descriptionStore": "Google Play या App Store।",
+    "instructionStore": "फ़ोन सेटिंग्स में सब्स्क्रिप्शन रद्द करें।"
+  },
+  "galaxyDescriptions": {
+    "alpha": "तीन महान शक्तियों द्वारा शासित क्षेत्र: Der, Die और Das। आपका कार्य अपने भाषाई सेंसर को कैलिब्रेट करना और प्रत्येक शब्द के लिंग को त्रुटिहीन रूप से निर्धारित करके व्याकरण प्रणाली में व्यवस्था लाना है।",
+    "beta": "एक विसंगति क्षेत्र जहाँ सब कुछ बहुगुणित और रूपांतरित होता है। संज्ञा परिवर्तन के नियमों का अध्ययन करें ताकि यह समझ सकें कि जब कोई वस्तु एक से अधिक हो जाती है, तो वह क्या रूप लेगी।",
+    "gamma": "जुड़वां शब्दों की आकाशगंगा। एक ही विचार को व्यक्त करने के नए तरीके खोजकर अपनी शब्दावली का विस्तार करें। आपके शस्त्रागार में जितने अधिक पर्यायवाची होंगे, गहरे अंतरिक्ष में आपकी वाणी उतनी ही चमक उठेगी।",
+    "delta": "शाश्वत विषमता और विरोध की दुनिया। यहाँ सब कुछ तुलना के माध्यम से जाना जाता है: 'तेज' से 'धीमे' तक। सिस्टम में संतुलन बनाए रखने के लिए कुशलता से विलोम शब्द खोजना सीखें।",
+    "epsilon": "अतीत का टाइम लूप। पूर्ण किए गए मिशनों पर रिपोर्ट लिखने और अन्य तारा प्रणालियों में अपनी पिछली जीत के बारे में बताने के लिए क्रियाओं के जटिल रूप में महारत हासिल करें।",
+    "zeta": "स्थान और समय का नेविगेशन ग्रिड। पता लगाएं कि भाषाई रास्ते 'कहाँ', 'किधर' और 'कैसे' ले जाते हैं। सही पूर्वसर्ग भाषा की अनंतता में आपके सटीक निर्देशांक हैं।"
+  },
+  "personalAccount": {
+    "statsAndAchievements": "आँकड़े और उपलब्धियां",
+    "streakTitle": "आर्टिकल मैराथन स्ट्रीक"
+  },
+  "studyNavAndBanner": {
+    "practice": "अभ्यास",
+    "grammar": "व्याकरण",
+    "bannerPractice": "विभिन्न व्यावहारिक कार्यों को पूरा करके अपने जर्मन स्तर को बेहतर बनाएं",
+    "bannerGrammar": "नियमों का अध्ययन करें और विभिन्न व्याकरण विषयों में अपने जर्मन भाषा के स्तर में सुधार करें"
+  },
+  "bannerTitles": {
+    "play": "मज़े के साथ जर्मन सीखें! एक सुविधाजनक मोड चुनें और खेलते हुए अपनी भाषा को बेहतर बनाएं",
+    "events": "मौसमी आयोजनों में भाग लें और कार्यों को पूरा करने के लिए अद्वितीय पुरस्कार प्राप्त करें",
+    "article": "विभिन्न प्रशिक्षण प्रारूपों में विषयों के आधार पर शब्द और आर्टिकल सीखें",
+    "awards": "प्राप्त उपलब्धियों और कार्यों को पूरा करने के लिए पुरस्कार",
+    "thematic": "रोमांचक विषयगत स्तरों को पूरा करके अपनी जर्मन भाषा को बेहतर बनाएं",
+    "audio": "ऑडियो कार्यों को पूरा करके जर्मन सुनने की अपनी समझ को बेहतर बनाएं",
+    "images": "चित्रों का वर्णन करने के अपने कौशल को बेहतर बनाएं! शुरू करने के लिए एक विषय चुनें",
+    "settings": "खाता सेटिंग",
+    "achievements": "आपकी प्रगति के लिए अर्जित सभी उपलब्धियों और पुरस्कारों का आपका संग्रह",
+    "textTask": "पाठ में रिक्त स्थान भरें और अपनी जर्मन भाषा को बेहतर बनाएं"
+  },
+  "imageDescription": {
+    "listen": "संवाद सुनें!",
+    "check": "जांचें",
+    "further": "आगे",
+    "finish": "समाप्त",
+    "skip": "छोड़ें",
+    "total": "कुल कार्य:",
+    "perfect": "पूरी तरह से सही:",
+    "notPerfect": "आंशिक रूप से सही:",
+    "mistakes": "गलतियों के साथ:",
+    "value": "सटीकता:",
+    "success": "✅ कार्य सही ढंग से पूरा हुआ!",
+    "isWrong": "❌ गलत उत्तर हैं!",
+    "isWarning": "⚠️ सभी सही विकल्प नहीं चुने गए हैं!",
+    "modalTitleWarning": "ध्यान दें!",
+    "modalTextWarning": "विषय पूरी तरह से समाप्त नहीं हुआ है, प्रगति सहेजी नहीं जाएगी!",
+    "leave": "बाहर निकलें",
+    "continue": "जारी रखें",
+    "goodWork": "बहुत बढ़िया!",
+    "needTraining": "अभ्यास करने की आवश्यकता है!",
+    "themeSuccess": "विषय सफलतापूर्वक पूरा हुआ!",
+    "themeNotSuccess": "विषय पूरा नहीं हुआ।"
+  },
+  "galaxySelector": {
+    "constellations": "नक्षत्र",
+    "energy": "जहाज़ की ऊर्जा",
+    "sectorBlock": "सेक्टर लॉक है",
+    "admission": "PLUS एक्सेस की आवश्यकता है",
+    "descriptionPlusOne": "आकाशगंगा",
+    "descriptionPlusTwo": "गहरे अंतरिक्ष में है! अल्फा सेक्टर से परे हाइपरजंप के लिए इंटरगैलेक्टिक सब्सक्रिप्शन की आवश्यकता है",
+    "descriptionPlusThree": "सभी नक्षत्रों को अनलॉक करने के लिए खरीदें!",
+    "getPlusBtn": "PLUS प्राप्त करें",
+    "errorDescription": "'लैंडिंग के लिए तैयार हो जाइए! इस क्षेत्र में जर्मन भाषा की बढ़ी हुई गतिविधि देखी गई है। सिस्टम में व्यवस्था बहाल करने के लिए सेक्टर को साफ करें।'"
+  },
+  "galaxySession": {
+    "errorEnergy": "बैटरी डिस्चार्ज हो गई है। बहाली की प्रतीक्षा करें या PLUS खरीदें।",
+    "errorID": "सेक्टर आईडी प्रदान नहीं की गई",
+    "errorData": "आकाशगंगा डेटा लोड करने में विफल",
+    "newRecord": "नया रिकॉर्ड!",
+    "check": "स्कोर:",
+    "again": "फिर से उड़ान भरें",
+    "constellations": "नक्षत्र छोड़ें"
+  },
+  "textTasksTip": {
+    "title": "टेक्स्ट कार्य",
+    "description": "कार्य को पूरा करने के लिए, शब्द को खाली स्थान पर खींचें или शब्द पर क्लिक करें और फिर उस फ़ील्ड पर क्लिक करें जहाँ आप इसे जोड़ना चाहते हैं।"
+  },
+  "textThemes": {
+    "basic": "परिचय",
+    "routine": "दिनचर्या",
+    "shopping": "खरीदारी",
+    "work": "काम और पढ़ाई",
+    "hobby": "शौक",
+    "objects": "वस्तुएं और चीजें",
+    "travel": "यात्रा"
+  },
+  "themeTextTitleBasic_A1": {
+    "basicOne": "औपचारिक परिचय",
+    "basicTwo": "अनौपचारिक परिचय",
+    "basicThree": "दिन की योजनाएं",
+    "basicFour": "शाम की योजनाएं",
+    "basicFive": "सप्ताहांत पर",
+    "basicSix": "खेलकूद",
+    "basicSeven": "साथ में खाना बनाना",
+    "basicEight": "शहर की यात्रा",
+    "basicNine": "साथ में पढ़ना",
+    "basicTen": "संगीत का अभ्यास"
+  },
+  "themeTextTitleHobby_A1": {
+    "hobbyOne": "फुटबॉल खेलना",
+    "hobbyTwo": "फोटोग्राफी",
+    "hobbyThree": "गिटार बजाना",
+    "hobbyFour": "तैराकी",
+    "hobbyFive": "खाना बनाना",
+    "hobbySix": "यात्रा",
+    "hobbySeven": "पढ़ना",
+    "hobbyEight": "बागवानी",
+    "hobbyNine": "नृत्य",
+    "hobbyTen": "भाषाएं सीखना"
+  },
+  "themeTextTitleRoutine_A1": {
+    "routineOne": "दिन की योजनाएं",
+    "routineTwo": "शाम की योजनाएं",
+    "routineThree": "सप्ताहांत पर",
+    "routineFour": "खेलकूद",
+    "routineFive": "साथ में खाना बनाना",
+    "routineSix": "शहर की यात्रा",
+    "routineSeven": "साथ में पढ़ना",
+    "routineEight": "संगीत का अभ्यास",
+    "routineNine": "कॉफी पीना",
+    "routineTen": "पार्क में"
+  },
+  "themeTextTitleShopping_A1": {
+    "shoppingOne": "सुपरमार्केट में",
+    "shoppingTwo": "कपड़े ढूंढना",
+    "shoppingThree": "बेकरी में",
+    "shoppingFour": "ऑनलाइन शॉपिंग",
+    "shoppingFive": "बाजार में",
+    "shoppingSix": "जूते की दुकान में",
+    "shoppingSeven": "फर्नीचर खरीदना",
+    "shoppingEight": "कबाड़ बाजार में",
+    "shoppingNine": "शाम का खाना",
+    "shoppingTen": "किताबों की दुकान में"
+  },
+  "themeTextTitleTravel_A1": {
+    "travelOne": "सूटकेस पैक करना",
+    "travelTwo": "स्टेशन पर",
+    "travelThree": "होटल में",
+    "travelFour": "समुद्र तट पर छुट्टियां",
+    "travelFive": "शहर की सैर",
+    "travelSix": "रेस्तरां में",
+    "travelSeven": "हवाई अड्डे पर",
+    "travelEight": "पहाड़ों में",
+    "travelNine": "स्मृति चिन्ह खरीदना",
+    "travelTen": "घर लौटना"
+  },
+  "themeTextTitleWork_A1": {
+    "workOne": "मेरा कार्यदिवस",
+    "workTwo": "दस्तावेज़ खोजना",
+    "workThree": "विश्वविद्यालय में",
+    "workFour": "मेरा काम",
+    "workFive": "गृहकार्य",
+    "workSix": "निर्माण स्थल पर मेरा काम",
+    "workSeven": "घर से काम करना",
+    "workEight": "गोदाम में काम",
+    "workNine": "बैठक",
+    "workTen": "दोपहर के भोजन का अवकाश"
+  },
+  "themeTextTitleBasic_A2": {
+    "basicOne": "जर्मन कोर्स में",
+    "basicTwo": "टेंडेम पार्टनर",
+    "basicThree": "विश्वविद्यालय में",
+    "basicFour": "पुस्तकालय में",
+    "basicFive": "समूह परियोजना",
+    "basicSix": "भाषा यात्रा",
+    "basicSeven": "नया छात्र",
+    "basicEight": "ऑनलाइन कोर्स",
+    "basicNine": "अध्ययन समूह",
+    "basicTen": "परीक्षा साथी"
+  },
+  "themeTextTitleHobby_A2": {
+    "hobbyOne": "पहाड़ों में लंबी पैदल यात्रा",
+    "hobbyTwo": "फोटोग्राफी",
+    "hobbyThree": "चित्रकारी",
+    "hobbyFour": "नृत्य",
+    "hobbyFive": "फुटबॉल",
+    "hobbySix": "तैराकी",
+    "hobbySeven": "बोर्ड गेम",
+    "hobbyEight": "बोर्ड गेम और तर्कशास्त्र",
+    "hobbyNine": "शतरंज",
+    "hobbyTen": "फ़िल्में"
+  },
+  "themeTextTitleRoutine_A2": {
+    "routineOne": "नई पड़ोसन",
+    "routineTwo": "कैफे में मुलाकात",
+    "routineThree": "पार्टी में",
+    "routineFour": "नए सहकर्मी",
+    "routineFive": "स्पोर्ट्स क्लब में",
+    "routineSix": "ट्रेन में मुलाकात",
+    "routineSeven": "कुत्ते के साथ पार्क में",
+    "routineEight": "साथी की तलाश",
+    "routineNine": "कॉन्सर्ट में",
+    "routineTen": "फ्लैट में नई साथी"
+  },
+  "themeTextTitleShopping_A2": {
+    "shoppingOne": "सुपरमार्केट में",
+    "shoppingTwo": "कपड़े खरीदना",
+    "shoppingThree": "बाजार में",
+    "shoppingFour": "ऑनलाइन शॉपिंग",
+    "shoppingFive": "फर्नीचर की दुकान में",
+    "shoppingSix": "बेकरी में",
+    "shoppingSeven": "जूते खरीदना",
+    "shoppingEight": "उपहार",
+    "shoppingNine": "इलेक्ट्रॉनिक्स की दुकान में",
+    "shoppingTen": "बड़ी खरीदारी"
+  },
+  "themeTextTitleTravel_A2": {
+    "travelOne": "यात्रा की तैयारी",
+    "travelTwo": "हवाई अड्डे पर",
+    "travelThree": "होटल में आगमन",
+    "travelFour": "समुद्र तट पर",
+    "travelFive": "भ्रमण",
+    "travelSix": "रेस्तरां में",
+    "travelSeven": "रास्ता पूछना",
+    "travelEight": "छुट्टियों में समस्याएँ",
+    "travelNine": "उपहार खरीदना",
+    "travelTen": "घर लौटना"
+  },
+  "themeTextTitleWork_A2": {
+    "workOne": "नौकरी का साक्षात्कार",
+    "workTwo": "गृहकार्य",
+    "workThree": "पहला कार्यदिवस",
+    "workFour": "प्रस्तुति",
+    "workFive": "व्यावसायिक विकास",
+    "workSix": "होम ऑफिस में",
+    "workSeven": "इंटर्नशिप",
+    "workEight": "परीक्षा",
+    "workNine": "भाषा पाठ्यक्रम",
+    "workTen": "पहला ग्राहक"
+  },
+  "themeTextTitleBasic_B1": {
+    "basicOne": "पार्टी में",
+    "basicTwo": "पहली डेट",
+    "basicThree": "भाषा टेंडेम",
+    "basicFour": "ट्रेन में मुलाकात",
+    "basicFive": "नया सहकर्मी",
+    "basicSix": "सेमिनार में",
+    "basicSeven": "कुत्ते के साथ टहलना",
+    "basicEight": "नए पड़ोसी",
+    "basicNine": "स्पोर्ट्स क्लब में",
+    "basicTen": "हॉस्टल में"
+  },
+  "themeTextTitleHobby_B1": {
+    "hobbyOne": "नाइट फोटोग्राफी",
+    "hobbyTwo": "पर्वतारोहण",
+    "hobbyThree": "पियानो बजाना",
+    "hobbyFour": "गेम डेवलपमेंट",
+    "hobbyFive": "विंडसर्फिंग",
+    "hobbySix": "थिएटर में अभिनय",
+    "hobbySeven": "तीरंदाजी",
+    "hobbyEight": "मोटरसाइकिल मरम्मत",
+    "hobbyNine": "बेकिंग",
+    "hobbyTen": "जियोकैचिंग"
+  },
+  "themeTextTitleRoutine_B1": {
+    "routineOne": "सुबह सवेरे",
+    "routineTwo": "नाश्ता और काम पर जाना",
+    "routineThree": "कार्यालय में",
+    "routineFour": "दोपहर के भोजन का अवकाश",
+    "routineFive": "कार्यदिवस की समाप्ति",
+    "routineSix": "काम के बाद खेल",
+    "routineSeven": "रात का खाना और आराम",
+    "routineEight": "सोने की तैयारी",
+    "routineNine": "शाम की सैर",
+    "routineTen": "घर की सफाई"
+  },
+  "themeTextTitleShopping_B1": {
+    "shoppingOne": "कपड़े खरीदना",
+    "shoppingTwo": "सुपरमार्केट में",
+    "shoppingThree": "ऑनलाइन तकनीक खरीदना",
+    "shoppingFour": "कबाड़ बाजार में",
+    "shoppingFive": "उपहार की तलाश",
+    "shoppingSix": "सामान की वापसी",
+    "shoppingSeven": "हार्डवेयर की दुकान में",
+    "shoppingEight": "फार्मेसी में",
+    "shoppingNine": "पालतू जानवरों की दुकान में",
+    "shoppingTen": "सेकंड-हैंड दुकान में"
+  },
+  "themeTextTitleTravel_B1": {
+    "travelOne": "शहर की यात्रा",
+    "travelTwo": "समुद्र तट पर छुट्टियां",
+    "travelThree": "पहाड़ों में लंबी पैदल यात्रा",
+    "travelFour": "रोด ट्रिप",
+    "travelFive": "एशिया की यात्रा",
+    "travelSix": "क्रूज़",
+    "travelSeven": "कैंपिंग",
+    "travelEight": "सर्दियों की छुट्टियां",
+    "travelNine": "भाषा यात्रा",
+    "travelTen": "सफारी"
+  },
+  "themeTextTitleWork_B1": {
+    "workOne": "नौकरी के लिए साक्षात्कार",
+    "workTwo": "परियोजना प्रबंधन",
+    "workThree": "विदेश में सेमेस्टर",
+    "workFour": "कार्यालय में प्रस्तुति",
+    "workFive": "परीक्षा की तैयारी",
+    "workSix": "ग्राहक सेवा",
+    "workSeven": "मास्टर थीसिस",
+    "workEight": "व्यावसायिक यात्रा",
+    "workNine": "इंटर्नशिप",
+    "workTen": "पाठ्यक्रम"
+  },
+  "textTaskSession": {
+    "allUsed": "सभी शब्दों का उपयोग कर लिया गया है!",
+    "errorText": "कोई पाठ नहीं चुना गया",
+    "back": "सूची पर वापस जाएं"
+  },
+  "exitSessionModal": {
+    "text": "आधे रास्ते में रुकना दुखद है! यदि आप अभी टैब बंद करते हैं, तो आपकी मेहनत सहेजी नहीं जाएगी।",
+    "continueLesson": "पाठ जारी रखें",
+    "cancelLesson": "बाहर निकलें"
+  },
+  "premiumBannerText": {
+    "text": "प्लेटफ़ॉर्म का अधिकतम लाभ उठाएं, अपनी सीखने की गति बढ़ाएं।"
+  },
+  "rulesModal": {
+    "text": "उत्तर देने के बाद व्याकरण संकेत उपलब्ध है!"
+  },
+  "footerNavLabel": {
+    "learn": "सीखें",
+    "games": "खेल",
+    "home": "होम",
+    "events": "इवेंट्स",
+    "cabinet": "खाता"
+  },
+  "speakTopics": {
+    "speak": "परिचय और बातचीत",
+    "food": "भोजन और खरीदारी",
+    "transport": "यात्रा और परिवहन",
+    "city": "शहरी सेवाएं और दैनिक जीवन",
+    "health": "स्वास्थ्य",
+    "work": "काम और करियर"
+  },
+  "speakThemes": {
+    "firstmeet": "परिचय",
+    "acquaintance": "परिचय 2",
+    "secondmeet": "मुलाकात",
+    "family_talk": "बातचीत",
+    "weekend_plans": "योजनाएं",
+    "friend_call": "कॉल",
+    "hobby_talk": "शौक",
+    "party_talk": "पार्टी",
+    "cafe_order": "कॉफी ऑर्डर करना",
+    "restaurant_dinner": "रेस्तरां",
+    "store_checkout": "कैश काउंटर पर",
+    "order_eat": "खाना ऑर्डर करना",
+    "consultation_talk": "परामर्श",
+    "train_station": "स्टेशन पर",
+    "train_ticket": "टिकट चेकिंग",
+    "taxi_berlin": "टैक्सी",
+    "bus_talk": "बस में",
+    "hotel_checkin": "होटल",
+    "border_check": "सीमा",
+    "airport_talk": "हवाई अड्डा",
+    "info_talk": "सूचना केंद्र",
+    "bank_account": "बैंक",
+    "apartment_rent": "किराया",
+    "clothes_shopping": "खरीदारी",
+    "shopping": "खरीदारी 2",
+    "post_office": "डाकघर",
+    "police_talk": "पुलिस",
+    "barbershop": "नाई की दुकान",
+    "doctor_visit": "डॉक्टर से अपॉइंटमेंट",
+    "pharmacy_vitamins": "फार्मेसी",
+    "insurance": "बीमा",
+    "at_doctor": "डॉक्टर के पास",
+    "dentist": "दंत चिकित्सक",
+    "veterinary": "पशु चिकित्सक",
+    "job_looking": "नौकरी की तलाश",
+    "job_interview": "साक्षात्कार",
+    "bos_talk": "मैनेजर के साथ बातचीत",
+    "vacation": "छुट्टियां",
+    "salary_talk": "वेतन",
+    "dismissal_talk": "बर्खास्तगी"
+  },
+  "speakIndexPage": {
+    "title": "बोलने का अभ्यास",
+    "bannerText": "वास्तविक उदाहरणों के साथ अपने बोलने के कौशल का अभ्यास करें",
+    "modalTitle": "बोलने का अभ्यास",
+    "modalText": "वास्तविक संवादों में अपनी बातचीत करने की क्षमता विकसित करें! आप दिए गए विकल्पों में से कोई उत्तर चुन सकते हैं, उसे कीबोर्ड से मैन्युअल रूप से टाइप कर सकते हैं, या माइक्रोफ़ोन बटन दबाकर उसे बोलकर बता सकते हैं।"
+  },
+  "rankModal": {
+    "title": "नई रैंक",
+    "rankedLabel": "रैंक",
+    "accept": "स्वीकार करें"
+  },
+  "premiumBanner": {
+    "textBanner": "प्लेटफ़ॉर्म का अधिकतम लाभ उठाएं, अपनी सीखने की गति बढ़ाएं।"
+  },
+  "netWork": {
+    "successTitle": "कनेक्शन बहाल हो गया!",
+    "notSuccessTitle": "उफ़! इंटरनेट नहीं है",
+    "successText": "काम पर वापस लौट रहे हैं...",
+    "notSuccessText": "नेटवर्क कनेक्शन की प्रतीक्षा की जा रही है..."
+  },
+  "termsBlock": {
+    "first": "पंजीकरण करके, आप स्वीकार करते हैं",
+    "second": "उपयोग की शर्तें",
+    "third": "और",
+    "fourth": "गोपनीयता नीति"
+  },
+  "languagePage": {
+    "title": "ऐप की भाषा",
+    "placeholder": "भाषा खोजें...",
+    "notfound": "कुछ नहीं मिला",
+    "further": "जारी रखें"
+  },
+  "statistics": {
+    "title": "शब्द सीखने और विषयगत स्तरों को पूरा करने में आपकी सांख्यिकी और प्रगति"
+  },
+  "restoreComputed": {
+    "restoring": "बहाल किया जा रहा है...",
+    "restore": "खरीदारी बहाल करें।"
+  },
+  "submitComputed": {
+    "sync": "सिंक हो रहा है...",
+    "getPlus": "PLUS प्राप्त करें"
+  },
+  "pay": {
+    "banner": "ऐप की सभी सुविधाओं तक पूर्ण पहुंच",
+    "sales": "गतिविधि से अर्जित छूट लागू करें",
+    "triggerToastSuccess": "खरीदारी बहाल कर दी गई है!",
+    "triggerToastNotFound": "कोई सक्रिय सब्सक्रिप्शन नहीं मिला",
+    "triggerToastError": "बहाली के दौरान त्रुटि",
+    "triggerToastIsPlus": "आपके पास पहले से ही PLUS सक्रिय है!"
+  },
+  "examSession": {
+    "ready": "क्या आप टेस्ट के लिए तैयार हैं?",
+    "cardTextOne": "आपका सामना",
+    "cardTextTwo": "चरणों और",
+    "cardTextThree": "कार्यों से होगा।",
+    "begin": "टेस्ट शुरू करें",
+    "listen": "ऑडियो सुनें:",
+    "check": "जांच की जा रही है...",
+    "send": "उत्तर भेजें",
+    "record": "रिकॉर्ड करें",
+    "great": "बधाई हो!",
+    "result": "स्तर के लिए आपका परिणाम",
+    "save": "प्रगति सहेजी जा रही है...",
+    "correctly": "सही:",
+    "back": "वापस जाएं",
+    "interrupt": "टेस्ट बीच में छोड़ें?",
+    "modalText": "इस प्रयास की प्रगति खो जाएगी। क्या आप सुनिश्चित हैं?",
+    "continue": "जारी रखें",
+    "leave": "बाहर निकलें",
+    "placeHolder": "अपना उत्तर यहाँ लिखें...",
+    "say": "बोलें:"
+  },
+  "speakSession": {
+    "title": "बोलने का अभ्यास",
+    "words": "संवाद के लिए शब्द",
+    "wordsText": "बातचीत शुरू करने से पहले शब्दों को सीखें या दोहराएं। इससे आपको अधिक आत्मविश्वास महसूस करने में मदद मिलेगी!",
+    "learn": "शुरू करें",
+    "dialogue": "संवाद",
+    "dialogueText": "उच्चारण और बोलने का अभ्यास करें, सामने वाले की सुनें और इंटरैक्टिव प्रारूप में उत्तर चुनें।",
+    "back": "पीछे",
+    "goodJob": "शानदार काम!",
+    "goodJobTitle": "आपने यह संवाद पूरा कर लिया है। इसे जारी रखें!",
+    "list": "वापस जाएं",
+    "repeat": "दोहराएं",
+    "start": "सीखना शुरू करें",
+    "choice": "उत्तर चुनें:",
+    "placeHolder": "उत्तर लिखें या बोलें...",
+    "hoverVoice": "आवाज में बोलें",
+    "end": "समाप्त करें",
+    "further": "आगे"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "पुनः प्रयास करें?",
+    "textPartOne": "आपने सही उत्तर दिया",
+    "textPartTwo": "जारी रखने के लिए एक प्रयास खरीदें।",
+    "price": "कीमत:",
+    "youHave": "आपके पास है:",
+    "showADS": "विज्ञापन देखें",
+    "buyBy": "इसके लिए खरीदें",
+    "toThemes": "विषयों पर जाएं",
+    "repeat": "दोहराएं"
   }
 }

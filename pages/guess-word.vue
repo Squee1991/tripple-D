@@ -1,105 +1,108 @@
 <template>
-  <main class="trainer-page">
-    <button @click="backToMainPage" class="exit-sign">
-      <img class="exit-sign-icon" src="../assets/images/exit.svg" alt="">
-      <span class="exit-sign-text">{{ t('guessWord.back') }}</span>
-    </button>
-    <!--        <div class="guess__stats-bar">-->
-    <!--            <div>⚡ не больше 30 сек {{ fastGuessedCount }}</div>-->
-    <!--            <div>🛡️  ≥10 попыток {{ safeGuessedCount }}</div>-->
-    <!--            <div>🛡️ Последняя попытка {{ guessedOnLastTryWords }}</div>-->
-    <!--            <div>🛡️ Все попытки! тест {{ guessedPerfectWords }}</div>-->
-    <!--        </div>-->
-    <div class="trainer-app">
-      <div class="trainer-app__board">
-        <div v-if="!isStarted" class="guess__start-screen">
-          <h1 class="trainer-app__title start-screen__title">{{ t('guessWord.guessTitle') }}</h1>
-          <button class="btn" @click="startGame">{{ t('guessWord.startGame') }}</button>
+  <main class="ios-trainer-page">
+    <div class="ios-app-container">
+      <header class="ios-header" :class="{ 'not__started' : !isStarted }">
+        <VBackBtn/>
+        <span v-if="!isStarted" class="title">{{ t('sub.guess')}}</span>
+        <div v-if="isStarted && !store.win && !store.lose" class="ios-stats">
+          <div class="stat-pill">
+            <img class="guess__icon-header" src="../assets/images/dailyIcons/timer.svg" alt="">
+            <span>{{ timePassed }}</span>
+          </div>
+          <div class="stat-pill">
+            <img class="guess__icon-header" src="../assets/images/heartInfo.svg" alt="heart">
+            <span>{{ store.attempts }}</span>
+          </div>
+          <button class="ios-btn-icon" @click="handleRestart" title="Начать заново">
+            <img class="guess__icon-header -repeat"
+                 :class="{ 'spin-anim': isSpinning }"
+                 src="../assets/images/repeat.svg"
+                 alt="repeat">
+          </button>
         </div>
-        <div class="guess__inner-session" v-else>
-          <div class="guess__top-content">
-            <div class="top-content-spacer"></div>
-            <div class="guess__info" v-if="themeText">
-              <span class="guess__theme-value"> {{ t('choiceTheme.theme')}}: {{ themeText }}</span>
-            </div>
-            <div class="guess__status-group">
-              <div v-if="isStarted && !store.win && !store.lose && store.timeStarted" class="guess__info">
-                {{ t('guessWord.time') }} {{ timePassed }} {{ t('guessWord.sec') }}
-              </div>
-              <div class="guess__info">
-                {{ t('guessWord.try') }}
-                <span class="guess__attempts-value">{{ store.attempts }}</span>
-              </div>
-            </div>
-            <button class="guess__restart" @click="startGame" title="Начать заново">
-              <img src="../assets/images/undo.svg" alt="restart">
-            </button>
-          </div>
-          <div class="guess__word">
-            <span v-for="(char, i) in store.masked" :key="i" class="guess__letter">{{ char || '_' }}</span>
-          </div>
-          <div class="guess__alphabet">
-            <button v-for="letter in store.alphabet" :key="letter" class="btn btn--letter"
-                    :disabled="store.usedLetters.includes(letter) || store.win || store.lose"
-                    @click="store.pickLetter(letter)">{{ letter }}
-            </button>
-          </div>
-          <div class="guess__input-area trainer-app__input-group">
-            <input v-model="guessInput" class="trainer-app__input" :disabled="store.win || store.lose"
-                   @keyup.enter="guessWord" :placeholder="t('guessWord.placeholder')"/>
-            <button class="btn" @click="guessWord" :disabled="store.win || store.lose">{{ t('guessWord.guess') }}
-            </button>
-          </div>
-          <div v-if="store.win" class="feedback__text feedback__text--success guess__result--win">
-            {{ t('guessWord.victory') }}
-          </div>
+      </header>
+      <div v-if="!isStarted" class="screen-start">
+        <div class="mascot-emoji">
+          <img class="guess__icon" src="../assets/images/GuessIcon.svg" alt="">
         </div>
+        <p class="subtitle">{{ t('guessWord.subtitle') }}</p>
+        <button class="ios-btn-primary btn-bounce" @click="startGame">
+          {{ t('guessWord.startGame') }}
+        </button>
       </div>
-      <div class="trainer-app__ledge">
-        <div class="duster-group">
-          <div class="duster"></div>
+      <div v-else class="screen-game">
+        <div v-if="themeText" class="theme-chip">
+          💡 {{ t('guessWord.theme') }} <strong>{{ themeText }}</strong>
         </div>
-        <div class="letter-blocks-pile">
-          <div class="letter-block block-1">W</div>
-          <div class="letter-block block-2">O</div>
-          <div class="letter-block block-3">R</div>
-          <div class="letter-block block-4">T</div>
+        <div class="word-board">
+          <div
+              v-for="(char, i) in store.masked"
+              :key="i"
+              class="letter-box"
+              :class="{ 'letter-box--filled': char }"
+          >
+            {{ char || '' }}
+          </div>
+        </div>
+        <div v-if="store.win" class="success-message bounce-in">
+          🎉 {{ t('guessWord.victory') }} 🎉
+        </div>
+        <div class="game-keyboard">
+          <button
+              v-for="letter in store.alphabet"
+              :key="letter"
+              class="key-btn"
+              :class="getKeyClass(letter)"
+              :disabled="store.usedLetters.includes(letter) || store.win || store.lose"
+              @click="store.pickLetter(letter)"
+          >
+            {{ letter }}
+          </button>
+        </div>
+        <div class="input-section">
+          <input
+              v-model="guessInput"
+              class="ios-input"
+              :disabled="store.win || store.lose"
+              @keyup.enter="guessWord"
+              :placeholder="t('guessWord.placeholder')"
+              autocomplete="off"
+          />
+          <button class="ios-btn-secondary" @click="guessWord" :disabled="store.win || store.lose || !guessInput">
+            {{ t('guessWord.guess') }}
+          </button>
         </div>
       </div>
     </div>
-    <Transition name="modal-fade">
-      <div v-if="showArticleModal" class="modal-overlay" @click.self="closeArticleModal">
-        <div class="modal-content">
-          <div class="modal__icon">🎉</div>
+    <Transition name="ios-modal">
+      <div v-if="showArticleModal" class="ios-modal-overlay" @click.self="closeArticleModal">
+        <div class="ios-modal-card">
           <h3 class="modal-title">{{ t('guessWord.good') }}</h3>
-          <p class="modal-text">{{ t('guessWord.article') }} <strong>{{ store.answer }}</strong>
-          </p>
-          <form class="article__form" @submit.prevent="checkArticle">
-            <input v-model="articleGuess" class="trainer-app__input" placeholder="der / die / das"
-                   :disabled="!!articleResult" @keyup.enter="checkArticle" maxlength="4"/>
-            <button class="btn" @click="checkArticle" :disabled="!!articleResult">{{ t('guessWord.check') }}</button>
-          </form>
-          <div v-if="articleResult" class="feedback__text"
-               :class="{'feedback__text--success': articleResult ==='Верно!', 'feedback__text--error': articleResult !=='Верно!'}">
+          <p class="modal-text">{{ t('guessWord.article') }} <span class="highlight-word">{{ store.answer }}</span></p>
+          <div v-if="!articleResult" class="article-buttons">
+            <button class="ios-btn-primary article-btn" @click="checkArticle('der')">der</button>
+            <button class="ios-btn-primary article-btn" @click="checkArticle('die')">die</button>
+            <button class="ios-btn-primary article-btn" @click="checkArticle('das')">das</button>
+          </div>
+          <div v-if="articleResult" class="feedback-badge bounce-in"
+               :class="{'success': articleResult === 'Верно!', 'error': articleResult !== 'Верно!'}">
             {{ articleResult }}
           </div>
-          <button v-if="articleResult" class="btn modal__close-btn" @click="closeArticleModal">
-            {{ t('guessWord.further') }}
+          <button v-if="articleResult" class="ios-btn-text modal-close" @click="closeArticleModal">
+            {{ t('guessWord.further') }} →
           </button>
         </div>
       </div>
     </Transition>
-    <Transition name="modal-fade">
-      <div v-if="showLoseModal" class="modal-overlay" @click.self="closeLoseModal">
-        <div class="modal-content">
-          <div class="modal__icon">😔</div>
+    <Transition name="ios-modal">
+      <div v-if="showLoseModal" class="ios-modal-overlay" @click.self="closeLoseModal">
+        <div class="ios-modal-card error-card">
+          <div class="modal-emoji">💔</div>
           <h3 class="modal-title">{{ t('guessWord.notToday') }}</h3>
-          <p class="modal-text"> {{ t('guessWord.guessed') }} <strong class="modal__answer">{{
-              store.answer
-            }}</strong></p>
+          <p class="modal-text">{{ t('guessWord.guessed') }} <span class="highlight-error">{{ store.answer }}</span></p>
           <div class="modal-actions">
-            <button class="btn btn--restart" @click="startGame">{{ t('guessWord.tryAgain') }}</button>
-            <NuxtLink to="/" class="btn btn--secondary">{{ t('guessWord.btnToMain') }}</NuxtLink>
+            <button class="ios-btn-primary" @click="startGame">{{ t('guessWord.tryAgain') }}</button>
+            <NuxtLink to="/" class="ios-btn-secondary link-btn">{{ t('guessWord.btnToMain') }}</NuxtLink>
           </div>
         </div>
       </div>
@@ -108,16 +111,17 @@
 </template>
 
 <script setup>
-import {ref, watch, onUnmounted} from 'vue'
+import {ref, watch, onUnmounted, computed} from 'vue'
 import {useGuessWordStore} from '../store/guesStore.js'
 import {useRouter} from 'vue-router'
-import { nameMap } from '../utils/nameMap.js'
-import {useSeoMeta} from "#imports";
+import {nameMap} from '../utils/nameMap.js'
+import {useSeoMeta} from "#imports"
+import VBackBtn from "~/src/components/V-back-btn.vue";
+import { showInterstitial } from '../utils/admob.js'
 const {t} = useI18n()
-const router = useRouter()
 const store = useGuessWordStore()
+const isSpinning = ref(false)
 const guessInput = ref('')
-const articleGuess = ref('')
 const articleResult = ref(null)
 const isStarted = ref(false)
 const showArticleModal = ref(false)
@@ -134,10 +138,6 @@ const timePassed = computed(() => {
   return Math.max(0, Math.floor((now.value - store.timeStarted) / 1000))
 })
 
-const backToMainPage = () => {
-  router.push('/')
-}
-
 const themeText = computed(() => {
   const obj = store.currentWordObj
   if (!obj) return ''
@@ -150,7 +150,6 @@ const themeText = computed(() => {
   return key
 })
 
-
 function startTimer() {
   if (intervalId) clearInterval(intervalId)
   intervalId = setInterval(() => {
@@ -158,10 +157,18 @@ function startTimer() {
   }, 1000)
 }
 
-function checkArticle() {
+function handleRestart() {
+  isSpinning.value = true
+  setTimeout(() => {
+    isSpinning.value = false
+  }, 500)
+  startGame()
+}
+
+function checkArticle(selectedArticle) {
   if (!store.currentWordObj) return
-  const correct = articleGuess.value.trim().toLowerCase() === store.currentWordObj.article.toLowerCase()
-  articleResult.value = correct ? t('trainerPage.right') : `${t('trainerPage.false')}   ${store.currentWordObj.article}`
+  const correct = selectedArticle === store.currentWordObj.article.toLowerCase()
+  articleResult.value = correct ? 'Верно!' : `Неверно! Правильно: ${store.currentWordObj.article}`
 }
 
 function closeArticleModal() {
@@ -177,21 +184,32 @@ function stopTimer() {
   if (intervalId) clearInterval(intervalId)
 }
 
-async function startGame() {
-  await store.startGame()
-  now.value = Date.now()
-  isStarted.value = true
-  guessInput.value = ''
-  articleGuess.value = ''
-  articleResult.value = null
-  showArticleModal.value = false
-  showLoseModal.value = false
-  startTimer()
+function startGame() {
+  showInterstitial(async ()=> {
+    await store.startGame()
+    now.value = Date.now()
+    isStarted.value = true
+    guessInput.value = ''
+    articleResult.value = null
+    showArticleModal.value = false
+    showLoseModal.value = false
+    startTimer()
+  })
 }
 
 function guessWord() {
+  if (!guessInput.value.trim()) return
   store.tryGuessWord(guessInput.value)
   guessInput.value = ''
+}
+
+function getKeyClass(letter) {
+  if (!store.usedLetters.includes(letter)) return ''
+  const answerStr = store.answer || ''
+  if (answerStr.toLowerCase().includes(letter.toLowerCase())) {
+    return 'key-btn--correct'
+  }
+  return 'key-btn--wrong'
 }
 
 onUnmounted(() => stopTimer())
@@ -201,7 +219,7 @@ watch(() => store.win, (isWin) => {
     stopTimer()
     setTimeout(() => {
       showArticleModal.value = true
-    }, 500);
+    }, 600);
   }
 })
 
@@ -210,608 +228,465 @@ watch(() => store.lose, (isLose) => {
     stopTimer()
     setTimeout(() => {
       showLoseModal.value = true
-    }, 500);
+    }, 600);
   }
 })
 </script>
+
 <style scoped>
-.guess__theme-value {
-  color: #e9e0ee;
-  font-weight: 700;
-}
-
-.trainer-page {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-  font-family: 'Nunito', sans-serif;
-  background-color: #f0ebe5;
-  background-image: repeating-linear-gradient(90deg, #e9e2db, #e9e2db 20px, #f0ebe5 20px, #f0ebe5 40px);
+.ios-trainer-page {
+  min-height: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
+  font-family: Nunito, sans-serif;
 }
 
-.exit-sign-icon {
-  width: 10px;
-}
-
-.exit-sign {
-  top: 3vh;
-  left: 3vw;
-  position: absolute;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  background-color: #2E7D32;
-  color: rgba(255, 255, 255, 0.9);
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  padding: 8px 20px;
-  border: 4px solid #e0e0e0;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 15px rgba(46, 204, 113, 0.6), 0 0 25px rgba(46, 204, 113, 0.5);
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
-  transition: all 0.3s ease;
-}
-
-.exit-sign:hover {
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 25px rgba(46, 204, 113, 0.8), 0 0 40px rgba(46, 204, 113, 0.7);
-  color: #ffffff;
-}
-
-.exit-sign-text {
-  padding-left: 10px;
-}
-
-.trainer-app {
-  background: #5D4037;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(0, 0, 0, 0.4);
+.ios-app-container {
   width: 100%;
-  max-width: 1000px;
-  min-height: 640px;
+  max-width: 768px;
+  min-height: 100%;
+  height: 100%;
+  background: var(--bg);
   position: relative;
-}
-
-.trainer-app__board {
-  background: #2c3e50;
-  border: 10px solid #34495e;
-  border-radius: 5px;
-  padding: 2rem 2.5rem;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
-  color: #ecf0f1;
-  min-height: 550px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
   overflow: hidden;
 }
 
-.trainer-app__board::before {
-  content: '?';
-  position: absolute;
-  font-family: "Nunito", sans-serif;
-  font-size: 30rem;
-  color: rgba(236, 240, 241, 0.05);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-15deg);
-  z-index: 0;
-  user-select: none;
-}
-
-.word-of-the-day-sign {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: #8B7355;
-  color: #f0ebe5;
-  font-family: "Nunito", sans-serif;
-  font-size: 1.5rem;
-  padding: 5px 20px;
-  border-radius: 4px;
-  border: 2px solid #6d4c41;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  transform: rotate(3deg);
-  z-index: 2;
-}
-
-.trainer-app__ledge {
-  position: absolute;
-  bottom: 10px;
-  left: 5%;
-  width: 90%;
-  height: 25px;
-  background-color: #6d4c41;
-  border-radius: 3px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.duster-group {
-  display: flex;
-  align-items: flex-end;
-  gap: 10px;
-  padding-left: 20px;
-}
-
-.duster {
-  position: relative;
-  bottom: -15px;
-  width: 80px;
-  height: 40px;
-  background-color: #a1887f;
-  border-top: 10px solid #5d4037;
-  border-radius: 4px;
-}
-
-.chalk {
-  position: relative;
-  bottom: -8px;
-  width: 50px;
-  height: 10px;
-  background-color: #f1c40f;
-  border-radius: 2px;
-  transform: rotate(-5deg);
-}
-
-.letter-blocks-pile {
-  position: relative;
-  right: 20px;
-  width: 100px;
-  height: 40px;
-}
-
-.letter-block {
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  background-color: #DEB887;
-  border: 1px solid #8B7355;
-  border-radius: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Nunito", sans-serif;
-  font-size: 24px;
-  color: #5D4037;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  bottom: -15px;
-}
-
-.block-1 {
-  left: 0;
-  transform: rotate(-10deg);
-  z-index: 1;
-}
-
-.block-2 {
-  left: 25px;
-  transform: rotate(8deg);
-  z-index: 2;
-}
-
-.block-3 {
-  left: 50px;
-  transform: rotate(-5deg);
-  z-index: 1;
-}
-
-.block-4 {
-  left: 20px;
-  bottom: 10px;
-  transform: rotate(15deg);
-  z-index: 0;
-}
-
-.guess__start-screen, .guess__inner-session {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1;
-}
-
-.guess__start-screen {
-  justify-content: center;
-  text-align: center;
-}
-
-.start-screen__title {
-  font-family: 'Caveat', cursive;
-  font-size: 4rem;
-  margin-bottom: 2rem;
-}
-
-.guess__top-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px dashed rgba(236, 240, 241, 0.3);
-  color: #bdc3c7;
-}
-
-.top-content-spacer {
-  min-width: 50px;
-  flex-shrink: 0;
-}
-
-.guess__status-group {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.guess__info {
-  font-size: 1rem;
+.title {
+  color: var(--title);
+  font-size: 23px;
   font-weight: 600;
+  margin-left: 15px;
+  text-shadow: 1px 1px var(--title);
 }
 
-.guess__attempts-value {
-  color: #f1c40f;
-  font-size: 1.2rem;
+.guess__icon-header {
+  width: 34px;
 }
 
-.guess__restart {
+.ios-header {
+  padding: 5px 10px 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
   background: transparent;
+  z-index: 10;
+}
+
+.not__started {
+  justify-content: start;
+}
+
+.ios-btn-back {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
   border: none;
-  width: 32px;
-  height: 32px;
+  color: #007AFF;
+  font-size: 17px;
+  font-weight: 500;
   cursor: pointer;
-  opacity: 0.7;
+  padding: 8px 0;
   transition: opacity 0.2s;
 }
 
-.guess__restart:hover {
-  opacity: 1;
+.ios-btn-back:active {
+  opacity: 0.5;
 }
 
-.guess__restart img {
-  filter: invert(88%) sepia(26%) saturate(1001%) hue-rotate(317deg) brightness(104%) contrast(92%);
-}
-
-.guess__word {
+.ios-stats {
   display: flex;
-  gap: 0.75rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  min-height: 80px;
-  font-family: 'Caveat', cursive;
-  color: #fff;
-  font-size: 2.5rem;
-  letter-spacing: 0.5rem;
-}
-
-.guess__letter {
-  user-select: none;
-  line-height: 1;
-}
-
-.guess__alphabet {
-  max-width: 600px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.btn--letter {
-  width: 50px;
-  height: 50px;
-  font-size: 1.5rem;
-  padding: 0;
-}
-
-.guess__input-area {
-  width: 100%;
-  max-width: 450px;
-  margin-bottom: 1rem;
-}
-
-.trainer-app__input-group {
-  display: flex;
+  align-items: center;
   gap: 12px;
 }
 
-.trainer-app__input {
-  flex-grow: 1;
-  padding: 12px 16px;
-  font-size: 1.2rem;
-  border: 2px dashed rgba(236, 240, 241, 0.5);
-  background: transparent;
-  color: #ecf0f1;
-  border-radius: 8px;
-  transition: border-color 0.3s, box-shadow 0.3s;
+.stat-pill {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--titleColor);
+}
+
+.ios-btn-icon {
+  background: none;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007AFF;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.ios-btn-icon:active {
+  transform: scale(0.95);
+}
+
+.guess__icon {
+  width: 150px;
+}
+
+.screen-start {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
   text-align: center;
 }
 
-.trainer-app__input:focus {
-  outline: none;
-  border-color: #f1c40f;
-  border-style: solid;
-}
-
-.trainer-app__input::placeholder {
-  color: rgba(236, 240, 241, 0.4);
-}
-
-.btn {
+.screen-game {
+  flex: 1;
   display: flex;
+  flex-direction: column;
+  padding: 40px 10px 10px 10px;
+}
+
+.mascot-emoji {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.title-main {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--titleColor);
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 17px;
+  color: #8e8e93;
+  margin-bottom: 40px;
+}
+
+.theme-chip {
+  align-self: center;
+  background: rgba(0, 122, 255, 0.1);
+  color: #007AFF;
+  padding: 8px 16px;
+  border-radius: 16px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.word-board {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 4px;
+  margin-bottom: 40px;
+  min-height: 64px;
+}
+
+.letter-box {
+  width: 30px;
+  height: 40px;
+  background: #e5e5ea;
+  border-radius: 12px;
+  display: flex;
   align-items: center;
-  padding: 12px 24px;
-  font-family: "Nunito", sans-serif;
-  font-size: 24px;
-  color: #f1c40f;
-  font-weight: bold;
-  background-color: transparent;
-  border: 3px solid #f1c40f;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1c1c1e;
+  text-transform: uppercase;
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.letter-box--filled {
+  background: #34C759;
+  color: #fff;
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.game-keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 30px;
+}
+
+.key-btn {
+  width: 40px;
+  height: 50px;
+  background: #ffffff;
+  border: none;
   border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1c1c1e;
+  box-shadow: 0 4px 0 #d1d1d6;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  white-space: nowrap;
-  text-decoration: none;
+  transition: all 0.1s;
+  text-transform: uppercase;
 }
 
-.btn:hover:not(:disabled) {
-  background-color: #f1c40f;
-  color: #2c3e50;
-  transform: translateY(-2px);
+.key-btn:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #d1d1d6;
 }
 
-.btn:disabled {
-  border-color: #7f8c8d;
-  color: #7f8c8d;
+.key-btn--correct {
+  background: #34C759;
+  color: #ffffff;
+  box-shadow: 0 2px 0 #248a3d;
+  transform: translateY(2px);
   cursor: not-allowed;
 }
 
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(44, 62, 80, 0.85);
+.key-btn--wrong {
+  background: #FF8A8A;
+  color: #ffffff;
+  box-shadow: 0 2px 0 #8e8e93;
+  transform: translateY(2px);
+  cursor: not-allowed;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  padding: 15px 0;
+}
+
+.ios-input {
+  flex: 1;
+  background: #fff;
+  border: 2px solid #e5e5ea;
+  border-radius: 16px;
+  padding: 10px 16px;
+  font-size: 17px;
+  color: #1c1c1e;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.ios-input:focus {
+  border-color: #007AFF;
+}
+
+.ios-input:disabled {
+  background: #f2f2f7;
+  color: #aeaeb2;
+}
+
+.ios-btn-primary {
+  background: #007AFF;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 6px 0 #005bb5;
+  cursor: pointer;
+  transition: all 0.1s;
+  width: 100%;
+  max-width: 360px;
+}
+
+.ios-btn-primary:active:not(:disabled) {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #005bb5;
+}
+
+.ios-btn-primary:disabled {
+  background: #a1c9f7;
+  box-shadow: 0 6px 0 #7caee0;
+  cursor: not-allowed;
+}
+
+.ios-btn-secondary {
+  background: #34C759;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 4px 0 #248a3d;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.ios-btn-secondary:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #248a3d;
+}
+
+.ios-btn-text {
+  background: none;
+  border: none;
+  color: #007AFF;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.ios-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-  padding: 1rem;
+  z-index: 100;
+  padding: 20px;
 }
 
-.modal-fade-enter-active, .modal-fade-leave-active {
-  transition: all 0.3s ease;
-}
-
-.modal-fade-enter-from, .modal-fade-leave-to {
-  opacity: 0;
-  transform: scale(0.9);
-}
-
-.modal-content {
-  background: #f0ebe5;
-  padding: 2rem 2.5rem;
-  border-radius: 12px;
-  border: 4px solid #d3c2b2;
-  color: #333;
-  width: 90%;
-  max-width: 500px;
+.ios-modal-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 32px 24px;
+  width: 100%;
+  max-width: 340px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-.modal__icon {
-  font-size: 3rem;
-  line-height: 1;
-  margin-bottom: 1rem;
+.modal-emoji {
+  font-size: 64px;
+  margin-bottom: 16px;
 }
 
 .modal-title {
-  font-family: 'Caveat', cursive;
-  font-size: 2rem;
-  margin: 0 0 1rem 0;
-  color: #5D4037;
+  font-size: 24px;
+  font-weight: 800;
+  color: #1c1c1e;
+  margin-bottom: 8px;
 }
 
 .modal-text {
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  color: #34495e;
+  font-size: 16px;
+  color: #8e8e93;
+  margin-bottom: 24px;
 }
 
-.modal-text strong {
-  color: #2980b9;
-  font-weight: 700;
+.highlight-word {
+  color: #34C759;
+  font-weight: 800;
+  font-size: 18px;
 }
 
-.modal__answer {
-  color: #e74c3c;
-  font-weight: 700;
+.highlight-error {
+  color: #FF3B30;
+  font-weight: 800;
+  font-size: 18px;
 }
 
-.article__form {
+.article-buttons {
   display: flex;
-  flex-direction: column;
+  gap: 10px;
   justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-.article__form .trainer-app__input {
-  border-color: rgba(44, 62, 80, 0.3);
-  color: #2c3e50;
-  margin-bottom: 10px;
-}
-
-.article__form .trainer-app__input:focus {
-  border-color: #2980b9;
-}
-
-.modal-content .btn {
-  border-color: #2c3e50;
-  color: #2c3e50;
   width: 100%;
 }
 
-.modal-content .btn:hover:not(:disabled) {
-  background-color: #2c3e50;
-  color: #f0ebe5;
-}
-
-.modal__close-btn {
-  margin-top: 1.5rem;
+.article-btn {
+  padding: 12px;
+  font-size: 16px;
+  flex: 1;
 }
 
 .modal-actions {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 12px;
 }
 
-.btn--restart {
-  border-color: #f1c40f;
-  color: #f1c40f;
-}
-
-.btn--restart:hover:not(:disabled) {
-  background-color: #f1c40f;
-  color: #2c3e50;
-}
-
-.btn--secondary {
-  border-color: #95a5a6;
-  color: #95a5a6;
+.link-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
+  background: #e5e5ea;
+  color: #1c1c1e;
+  box-shadow: 0 4px 0 #d1d1d6;
+  padding: 14px;
 }
 
-.btn--secondary:hover:not(:disabled) {
-  background-color: #95a5a6;
-  color: #fff;
+.link-btn:active {
+  background: #d1d1d6;
 }
 
-.feedback__text {
+.feedback-badge {
   margin-top: 16px;
-  min-height: 30px;
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: 600;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
 }
 
-.feedback__text--success {
-  color: #2ecc71;
+.feedback-badge.success {
+  background: #e8f8f0;
+  color: #34C759;
 }
 
-.feedback__text--error {
-  color: #e74c3c;
+.feedback-badge.error {
+  background: #ffebe9;
+  color: #FF3B30;
 }
 
-.guess__result--win {
-  margin-top: 1rem;
-  width: 100%;
+.bounce-in {
+  animation: bounceIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-@media (max-width: 767px) {
-  .trainer-app__board {
-    padding: 8px;
-    height: 100vh;
-    border-radius: 0;
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
   }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
-  .trainer-app {
-    padding: 0px;
-    background: none;
-  }
-  .guess__top-content {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
+.spin-anim {
+  animation: spin360 0.5s ease-in-out;
+}
 
-  .guess__word {
-    font-size: 15px;
-    min-height: 50px;
-    margin: 1rem 0;
-    gap: 0;
+@keyframes spin360 {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-  .start-screen__title {
-    font-size: 2.8rem;
-  }
+.ios-modal-enter-active,
+.ios-modal-leave-active {
+  transition: opacity 0.3s ease;
+}
 
-  .btn {
-    padding: 10px;
-  }
+.ios-modal-enter-from,
+.ios-modal-leave-to {
+  opacity: 0;
+}
 
-  .duster,
-  .trainer-app__ledge{
-    display: none;
-  }
-
-  .btn--letter {
-    width: 35px;
-    height: 35px;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .guess__alphabet {
-    gap: 0.4rem;
-  }
-
-  .modal-actions, .article__form {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .word-of-the-day-sign {
-    display: none;
-  }
-
-  .letter-blocks-pile {
-    display: none;
-  }
-
-  .top-content-spacer {
-    display: none;
-  }
-
-  .trainer-app__input-group {
-    flex-direction: column;
-  }
-
-  .exit-sign {
-    z-index: 1000;
-    padding: 4px;
-    font-size: 15px;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .trainer-page {
-    padding: 0;
-  }
+.ios-modal-enter-active .ios-modal-card {
+  animation: bounceIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 </style>

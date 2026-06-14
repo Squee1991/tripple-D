@@ -92,7 +92,7 @@ const achIcon = computed(() => {
   return {type: 'text', text: raw}
 })
 
-const AUTO_CLOSE_MS = 2500
+const AUTO_CLOSE_MS = 2400
 let raf = null
 const remaining = ref(AUTO_CLOSE_MS)
 let lastTick = 0
@@ -149,7 +149,7 @@ function forceClose() {
 
 const awardVisible = ref(false)
 const awardTitle = ref('')
-const AWARD_AUTO_CLOSE_MS = 2500
+const AWARD_AUTO_CLOSE_MS = 2400
 const awardRemaining = ref(AWARD_AUTO_CLOSE_MS)
 let awardLastTick = 0
 let awardRAF = null
@@ -226,7 +226,7 @@ onBeforeUnmount(() => {
 <style scoped>
 .ach-toast-container {
   position: fixed;
-  top: 16px;
+  top: calc(env(safe-area-inset-top) + 10px);
   left: 50%;
   transform: translateX(-50%);
   z-index: 2147483647 !important;
@@ -241,9 +241,9 @@ onBeforeUnmount(() => {
   display: flex;
   align-items: center;
   gap: 12px;
-  min-width: 350px;
-  max-width: 100%;
-  background: linear-gradient(135deg, #1a1d2b, #232737eb);
+  min-width: 370px;
+  width: 100%;
+  background: linear-gradient(135deg, #1a1d2b, rgba(35, 39, 55, 0.95));
   color: #fff;
   border-radius: 14px;
   padding: 14px 16px 18px;
@@ -266,7 +266,7 @@ onBeforeUnmount(() => {
 }
 
 .ach-toast-icon-emoji {
-  font-size: 50px;
+  font-size: 52px;
 }
 
 .ach-toast-icon {

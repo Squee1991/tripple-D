@@ -1,13 +1,13 @@
 :root {
-    --bg: #fef8e4;
-    --navBg: #fef8e4;
+    --bg: #ffffff;
+    --navBg: #ffffff;
     --labelBg:#3c99d3;
     --footerBg: #0f7aaf;
     --labelTextColor:#333;
     --panelTextColor: #333;
     /*--bg: #a2ccd4;*/
     --titleColor: #2c2b2b;
-    --borderBottom: #000000;
+    --borderBottom: #f5ecec;
     --navItems: #000000;
     --border: #000000;
     --shopCardBg: radial-gradient(150% 120% at 50% -15%,
@@ -33,9 +33,45 @@
     --cardShopRankTextColor:#ffd04b;
     --cardShopRankValueColor:#FFFFFFFF;
 
+    --tabTextColor: #1e1d1d;
+    --borderMobile: #eee9e9;
+    --boxShadowMobile: 0 5px 5px rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.1);
+    --boxShadowBottom:#759e74;
+    --tabsSlideBg: #fff;
+    --tabsSlideBorderColor: #d9d8d8;
+
+    --tabSlideBoxShadow: 0 4px 6px rgba(141, 134, 190, 0.5);
+    --tabBg: #e1dddd;
+     --bgTitle: #36c95d;
+    --borderRegion: #726a6a;
+    --bgOpacity: rgba(15, 23, 42, 0.78);
+    --overlayAfter: linear-gradient(to bottom, rgba(198, 200, 231, 0) 0%, rgb(254, 254, 255) 100%);
+    --menuItemsBg: #f5f5f5;
+    --menuBorder: #e6ebf5;
+    --settingsSectionBg: rgb(0 0 0 / 3%);
+    --homeBg: #f3f1f0;
+    --landNameBg: linear-gradient(180deg, rgb(170 158 158 / 75%), rgb(31 29 29 / 60%));
+    --title: #636161;
+    --bgModal: white;
+
 }
 
 .dark {
+    --bgModal: #1b1a1a;
+    --title: #ebe5e5;
+    --landNameBg: linear-gradient(180deg, rgb(41 38 38 / 75%), rgb(31 29 29 / 60%));;
+    --homeBg: #ffd54f;
+    --settingsSectionBg: rgba(255, 255, 255, 0.05);
+    --menuBorder: #363d4a;
+    --menuItemsBg: #2c323d;
+    --overlayAfter: linear-gradient(to bottom, rgba(57, 65, 201, 0) 0%, rgba(23, 24, 34, 1) 100%);
+    --tabTextColor: #ffffff;
+    --borderMobile: #2a2a2a;
+    --boxShadowBottom:#9e61f9;
+    --bgTitle: #793cd3;
+    --tabBg: #1e1e1e;
+    --tabsSlideBorderColor: #2a2a2a;
+    --tabsSlideBg: #6358ac;
     --cardShopBg: #1c222d;
     --cardShopHeadBg: #2a313e;
     --cardShopBtnDisabledBg: #363d4a;
@@ -85,6 +121,10 @@
 
 html, body {
     background: var(--bg);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 button {
@@ -93,4 +133,14 @@ button {
 
 button:focus {
     border: 2px solid #989191;
+}
+
+
+
+.safe-fixed-bottom {
+    bottom: 0 !important;
+    padding-bottom: var(--sab) !important;
+    min-height: calc(60px + var(--sab)) !important;
+    display: flex;
+    align-items: center;
 }

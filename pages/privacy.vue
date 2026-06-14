@@ -1,14 +1,22 @@
 <template>
-  <div>
-    <div class="btn__back-wrapper">
-      <button type="button" @click="path" class="btn__back">Home</button>
-    </div>
+  <div class="privacy_wrapper">
     <div class="privacy">
-      <h1>Privacy Policy</h1>
-      <section v-for="(s, i) in sections" :key="i" class="section">
-        <h2>{{ s.heading }}</h2>
-        <p v-for="(p, j) in s.paragraphs" :key="j">{{ p }}</p>
-      </section>
+      <div class="privacy_header">
+        <button @click="router.back()" class="btn-icon-back">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+               stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </button>
+        <div class="privacy__title">Privacy Policy</div>
+      </div>
+      <div class="privacy_section-inner">
+        <section v-for="(section, index) in sections" :key="index" class="section">
+          <h2>{{ section.heading }}</h2>
+          <p v-for="(paragraph, j) in section.paragraphs" :key="j">{{ paragraph }}</p>
+        </section>
+      </div>
       <p class="last-updated">
         Last updated: {{ lastUpdated }}
       </p>
@@ -16,19 +24,16 @@
   </div>
 </template>
 
-
 <script setup>
 import { ref } from "vue"
 import { useRouter } from "vue-router"
+import VBanner from "~/src/components/V-banner.vue";
+import Privacy from "~/pages/privacy.vue";
 const router = useRouter()
 const PROJECT = "skillupgerman"
 const EMAIL = "skillupgerman@gmail.com"
 const COUNTRY = "Poland"
 
-
-const path = () => {
-  router.push('/')
-}
 const lastUpdated = ref("Januar 4, 2026")
 const sections = ref([
   {
@@ -128,59 +133,61 @@ const sections = ref([
   }
 ])
 
-
-
-
 </script>
 
 <style scoped>
 
-* {
-  font-family: "Nunito", sans-serif ;
-}
-
-.btn__back-wrapper{
-  position: sticky;
-  display: flex;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 1110px;
-  margin: 0 auto;
-  padding: 10px;
-  border-bottom: 2px solid black;
-  border-radius: 15px;
-  background: var(--bg);
-}
-
-.btn__back {
-  width: 100%;
-  max-width: 320px;
-  padding: 10px;
-  border-radius: 12px;
-  border: 2px solid black;
-  box-shadow: 3px 3px 0 black;
-  font-family: "Nunito", sans-serif;
+.privacy__title{
+  font-size: 23px;
   font-weight: 600;
-  font-size: 1rem;
-  background: #f1c40f;
+  font-family: Nunito, sans-serif;
+  color: var(--title);
+  text-shadow: 1px 1px var(--title);
+  margin-left: 15px;
 }
 
-@media (min-width: 1024px) {
-  .btn__back:hover {
-     transform: translate(2px, 2px);
-     box-shadow: 1px 1px 0 black;
-  }
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-icon-back:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
+}
+
+.privacy_wrapper{
+  height: 100vh;
+  overflow: hidden;
+}
+
+.privacy__banner {
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.privacy_header {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px 15px 10px;
+  margin-bottom: 15px;
 }
 
 .privacy {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 32px 20px 64px;
+  height: 100%;
   line-height: 1.75;
   color: var(--titleColor);
-  font-family: "Nunito", sans-serif;
 }
 
 h1 {
@@ -197,7 +204,14 @@ h1 {
 }
 
 .section {
-  margin: 22px 0;
+  padding: 0 15px;
+}
+
+.privacy_section-inner{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto ;
 }
 
 .section h2 {

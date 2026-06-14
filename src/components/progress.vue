@@ -1,30 +1,39 @@
 <template>
   <div v-if="selectedTopic" class="progress-table">
-    <h3 class="pt__title">{{t('articleTable.title')}} {{ t(nameMap[selectedTopic]) || selectedTopic }}</h3>
-    <div class="word-table">
-      <div class="word-row header">
-        <div class="word-cell word-ru">{{t('articleTable.word')}}</div>
-        <div v-for="mode in learningModes" :key="mode.key" class="word-cell mode-label">
-          {{ mode.label }}
+    <!--    <h3 class="card-title">{{ t('articleTable.title') }} {{ t(nameMap[selectedTopic]) || selectedTopic }}</h3>-->
+
+    <div class="table-scroll">
+      <div class="ios-table">
+        <div class="table-header">
+          <div class="cell cell-ru">{{ t('articleTable.word') }}</div>
+          <div v-for="mode in learningModes" :key="mode.key" class="cell mode-label" :class="'bg-soft--' + mode.key">
+            {{ mode.label }}
+          </div>
         </div>
-      </div>
-      <div v-for="(word, idx) in paginatedWords" :key="idx" class="word-row">
-        <div class="word-cell word-ru">{{ word.de }}</div>
-        <div v-for="mode in learningModes" :key="mode.key" class="word-cell status-cell">
-          <span :title="getTooltip(word.progress?.[mode.key])">
-            {{ getStatusIcon(word.progress?.[mode.key]) }}
-          </span>
+        <div v-for="(word, idx) in paginatedWords" :key="idx" class="table-row">
+          <div class="cell cell-ru">{{ word.de }}</div>
+          <div v-for="mode in learningModes" :key="mode.key" class="cell status-cell" :class="'bg-soft--' + mode.key">
+            <span :title="getTooltip(word.progress?.[mode.key])">
+              {{ getStatusIcon(word.progress?.[mode.key]) }}
+            </span>
+          </div>
         </div>
       </div>
     </div>
-    <div class="pagination" v-if="totalWords > wordsPerPage">
-      <button @click="prevPage" :disabled="currentPage === 1">{{t('articleTable.back')}}</button>
-      <span>{{ currentPage }} / {{ totalPages }}</span>
-      <button @click="nextPage" :disabled="currentPage >= totalPages">{{t('articleTable.forward')}}</button>
+
+    <div class="ios-pagination" v-if="totalWords > wordsPerPage">
+      <button class="page-btn" @click="prevPage" :disabled="currentPage === 1">
+        <img class="nav__arrow-item --back" src="../../assets/images/next.svg" alt="next">
+      </button>
+      <span class="page-info">{{ currentPage }} / {{ totalPages }}</span>
+      <button class="page-btn" @click="nextPage" :disabled="currentPage >= totalPages">
+        <img class="nav__arrow-item" src="../../assets/images/next.svg" alt="next">
+      </button>
     </div>
   </div>
+
   <div v-else class="placeholder">
-    <p>{{t('articleTable.choice')}}</p>
+    <p>{{ t('articleTable.choice') }}</p>
   </div>
 </template>
 
@@ -60,7 +69,6 @@ const paginatedWords = computed(() => {
 function prevPage() {
   if (currentPage.value > 1) currentPage.value--
 }
-
 function nextPage() {
   if (currentPage.value < totalPages.value) currentPage.value++
 }
@@ -80,127 +88,141 @@ onMounted(async () => {
 
 <style scoped>
 .progress-table {
-  display: grid;
-  gap: 16px
-}
-
-.pt__title {
-  margin: 0;
-  font-weight: 800;
-  font-size: 1.5rem;
-  font-family: "Nunito", sans-serif
-}
-
-.word-table {
   display: flex;
   flex-direction: column;
-  border: 3px solid #1e1e1e;
+  gap: 16px;
+}
+.card-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #1E1E1E;
+}
+
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-radius: 16px;
-  overflow: hidden
 }
 
-.word-row {
+.ios-table {
+  min-width: 500px;
   display: flex;
-  border-bottom: 2px solid #f3f4f6
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
 }
 
-.word-row:last-child {
-  border-bottom: none
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr repeat(5, 1fr);
+  border-bottom: 1px solid #E5E7EB;
+  color: var(--titleColor);
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
-.word-row.header {
-  background: #60a5fa;
-  color: #fff;
-  font-family: "Nunito", sans-serif
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr repeat(5, 1fr);
+  border-bottom: 1px solid #F3F4F6;
 }
 
-.word-cell {
-  flex: 1;
-  padding: .75rem 1rem;
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.cell {
+  padding: 12px 6px;
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  font-size: 0.95rem;
+  word-break: break-word;
 }
 
-.word-cell.word-ru {
-  flex: 2;
+.cell-ru {
   justify-content: flex-start;
-  font-weight: 700;
-  font-size: 1.1rem
+  font-weight: 600;
+  color: var(--titleColor);
+  padding-left: 14px;
 }
 
-.word-row.header .mode-label {
-  font-size: .9rem
+.mode-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  line-height: 1.1;
 }
 
 .status-cell {
-  font-size: 1.5rem
+  font-size: 1.1rem;
 }
 
-.status-cell span {
-  cursor: help
+.bg-soft--article {
+  background-color: rgba(96, 165, 250, 0.36);
 }
 
-.pagination {
-  margin-top: 1.5rem;
+.bg-soft--letters {
+  background-color: rgba(245, 158, 11, 0.33);
+}
+
+.bg-soft--wordArticle {
+  background-color: rgba(167, 139, 250, 0.41);
+}
+
+.bg-soft--audio {
+  background-color: rgba(52, 211, 153, 0.44);
+}
+
+.bg-soft--plural {
+  background-color: rgba(244, 114, 182, 0.15);
+}
+
+.ios-pagination {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem
+  gap: 26px;
+  margin: 12px 0;
 }
 
-.pagination button {
-  font-family: "Nunito", sans-serif;
-  font-size: 1rem;
-  padding: .5rem 1.5rem;
-  border-radius: 12px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0 #1e1e1e;
-  background: #fca13a;
-  color: #fff;
-  cursor: pointer;
-  transition: .2s
+.page-btn {
+  background: var(--tabBg);
+  border: none;
+  width: 46px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
 }
 
-.pagination button:hover:not(:disabled) {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1e1e1e
+.nav__arrow-item {
+  width: 20px;
 }
 
-.pagination button:disabled {
-  background: #d1d5db;
-  color: #9ca3af;
-  box-shadow: 4px 4px 0 #9ca3af;
-  cursor: not-allowed
+.nav__arrow-item.--back {
+  transform: rotate(180deg);
 }
 
-.pagination span {
-  font-size: 1.2rem;
-  font-family: "Nunito", sans-serif;
-  font-weight: 700
+.page-btn:disabled {
+  opacity: 0.4;
+}
+
+.page-info {
+  font-weight: 700;
+  color: #4B5563;
+  font-size: 20px;
 }
 
 .placeholder {
   text-align: center;
-  padding: 2rem 1rem;
-  border-radius: 16px
-}
-
-.placeholder p {
-  font-family: "Nunito", sans-serif;
-  font-size: 1.1rem;
-  color: #6b7280
-}
-
-@media (max-width: 767px) {
-  .word-cell {
-    padding: 8px;
-    font-size: 1rem
-  }
-
-  .word-cell.word-ru {
-    font-size: .9rem
-  }
+  padding: 20px;
+  color: #9CA3AF;
+  font-size: 0.95rem;
 }
 </style>

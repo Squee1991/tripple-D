@@ -1,89 +1,106 @@
 <template>
   <div v-if="activeTabKey === 'info'" class="tab-content">
+    <VBanner
+        :text="t('bannerTitles.settings')"
+        :icon="SettingIcon"
+    />
+    <div class="settings-section account-actions">
+      <div class="section-title"> {{ t('settingsGroup.account')}}</div>
+      <button @click="router.push('/profile')" class="account-buttons">
+        <a class="link-row">{{ t('cabinetToggle.profileData')}}</a>
+        <VArrowNav/>
+      </button>
+    </div>
     <div v-if="isThemeModalOpen" class="modal-overlay" @click.self="isThemeModalOpen = false">
       <div class="modal-card">
-        <div class="modal-title">{{ t('themeModal.title') }}</div>
         <div class="theme-grid">
           <label
               v-for="(label, key) in THEMES"
               :key="key"
               class="theme-option"
-              :class="{
-                active: colorMode.preference === key,
-                locked: key === 'pink' && !isValentineThemeUnlocked
-              }"
+              :class="{ active: colorMode.preference === key, locked: key === 'pink' && !isValentineThemeUnlocked }"
               @click.prevent="handleThemeSelection(key)"
           >
-            <input
-                type="radio"
-                name="theme"
-                :value="key"
-                :checked="colorMode.preference === key"
-            >
-            <div class="theme-preview" :class="key">
-              <span v-if="key === 'pink' && !isValentineThemeUnlocked">🔒</span>
+            <input type="radio" name="theme" :value="key" :checked="colorMode.preference === key">
+            <div class="theme-option-content">
+              <div class="theme-preview" :class="key">
+                <span v-if="key === 'pink' && !isValentineThemeUnlocked" class="lock-icon">🔒</span>
+              </div>
+              <span class="theme-label">{{ label }}</span>
             </div>
-            <span>{{ label }}</span>
+
+            <div class="theme-check" v-if="colorMode.preference === key">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
           </label>
         </div>
         <div class="modal-actions">
-          <button class="btn btn-success" @click="isThemeModalOpen = false">{{ t('themeModal.close') }}</button>
+          <button class="btn btn-game btn-success" @click="isThemeModalOpen = false">
+            {{ t('themeModal.close') }}
+          </button>
         </div>
       </div>
     </div>
+    <LangSwitcher v-if="isLangModalOpen" @close="isLangModalOpen = false"/>
     <div
         v-for="group in SETTINGS_GROUPS"
         :key="group.id"
-        class="accordion open settings-static settings-block"
-        @click.stop
+        class="settings-section"
     >
-      <div class="accordion__head">
-        <div class="accordion__content-left">
-          <div class="accordion__title">{{ group.title }}</div>
-        </div>
-      </div>
-      <div class="accordion__body" @click.stop>
-        <div class="settings__elements">
-          <div
-              v-for="item in group.items"
-              :key="item.key"
-              class="row__el--wrapper"
-              :class="{ 'locked-setting': item.key === 'snowFall' && !isSnowUnlocked }"
-          >
-            <div class="toggle__wrapper">
-              {{ item.label }}
-              <span v-if="item.key === 'snowFall' && !isSnowUnlocked">🔒</span>
-            </div>
-            <template v-if="item.type === 'button'">
-              <button class="theme-select-btn" @click="isThemeModalOpen = true">
-                {{ currentThemeName }}
-              </button>
-            </template>
-            <template v-else>
-              <VToggle
-                  :key="item.key + toggleForceUpdateKey"
-                  :model-value="getSettingValue(item.key)"
-                  @change="value => onSettingChange(item.key, value)"
-              />
-            </template>
+      <div class="section-title">{{ group.title }}</div>
+      <div class="section-card">
+        <div
+            v-for="item in group.items"
+            :key="item.key"
+            class="section-row"
+            :class="{ 'locked-setting': item.key === 'snowFall' && !isSnowUnlocked }"
+        >
+          <div class="toggle__wrapper">
+            {{ item.label }}
+            <span v-if="item.key === 'snowFall' && !isSnowUnlocked">🔒</span>
           </div>
+
+          <template v-if="item.type === 'button'">
+            <button
+                class="theme-select-btn"
+                @click="item.key === 'theme' ? isThemeModalOpen = true : isLangModalOpen = true"
+            >
+              {{ item.key === 'theme' ? currentThemeName : currentLangName }}
+            </button>
+          </template>
+
+          <template v-else>
+            <VToggle
+                :key="item.key + toggleForceUpdateKey"
+                :model-value="getSettingValue(item.key)"
+                @change="value => onSettingChange(item.key, value)"
+            />
+          </template>
         </div>
       </div>
     </div>
-    <div class="service__items">
-      <div class="accordion__title">{{ t('cabinetAccordion.faq') }}</div>
-      <ul class="service__items-elements">
-        <li v-for="item in servicePaths" :key="item.id" class="service__items-list">
-          <NuxtLink class="service__items-link" :to="item.path">{{ item.label }}</NuxtLink>
-        </li>
-      </ul>
+    <div class="settings-section">
+      <div class="section-title">{{ t('cabinetAccordion.faq') }}</div>
+      <div class="section-card">
+        <NuxtLink
+            v-for="item in servicePaths"
+            :key="item.id"
+            class="section-row link-row"
+            :to="item.path"
+        >
+          {{ item.label }}
+          <VArrowNav/>
+        </NuxtLink>
+      </div>
     </div>
     <div v-if="isLockedModalOpen" class="modal-overlay locked-priority" @click.self="isLockedModalOpen = false">
       <div class="modal-card">
-        <div class="modal-title">{{ lockedModalContent.title }}</div>
+        <div class="modal-title locked-title">{{ lockedModalContent.title }}</div>
         <p class="modal-text" v-html="lockedModalContent.text"></p>
         <div class="modal-actions">
-          <button class="btn" @click="isLockedModalOpen = false" type="button">
+          <button class="btn btn-game btn-primary" @click="isLockedModalOpen = false" type="button">
             {{ t('cabinet.modalNotAllowEffectClose') }}
           </button>
         </div>
@@ -100,25 +117,46 @@ import {useUiSettingsStore} from '../../store/uiSettingsStore.js'
 import {useEventSessionStore} from '../../store/eventsStore.js'
 import {isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture} from '../../utils/soundManager.js'
 import {useAchievementStore} from '../../store/achievementStore.js'
-
+import {userAuthStore} from "../../store/authStore.js";
+import LangSwitcher from "~/src/components/langSwitcher.vue";
+import VBanner from "~/src/components/V-banner.vue";
+import SettingIcon from "../../assets/images/settings.svg";
+import VArrowNav from "~/src/components/V-arrowNav.vue";
+const router = useRouter();
+const authStore = userAuthStore()
 const props = defineProps({
   settingsIcon: String,
   activeTabKey: {type: String, default: 'info'}
 })
 
 const emit = defineEmits(['open'])
-const {t} = useI18n()
+const {t, locales, locale} = useI18n()
 const uiSettings = useUiSettingsStore()
 const eventStore = useEventSessionStore()
 const achievementStore = useAchievementStore()
 const colorMode = useColorMode()
 
 const isThemeModalOpen = ref(false)
+const isLangModalOpen = ref(false)
 const isLockedModalOpen = ref(false)
+
+const currentLangName = computed(() => {
+  const current = (locales.value || []).find(l => l.code === locale.value)
+  return current ? current.name : locale.value
+})
+
 const lockedModalContent = ref({title: '', text: ''})
 const toggleForceUpdateKey = ref(0)
 const soundEnabled = ref(false)
-const THEMES = {light: t('themeModal.light'), dark: t('themeModal.dark'), pink: t('themeModal.pink')}
+
+const THEMES = computed(() => {
+  return {
+    light: t('themeModal.light'),
+    dark: t('themeModal.dark'),
+    pink: t('themeModal.pink')
+  }
+})
+
 const isValentineThemeUnlocked = computed(() => {
   const ach = achievementStore.findById('valentineTheme')
   return ach ? ach.currentProgress >= 1 : false
@@ -145,10 +183,17 @@ const SETTINGS_GROUPS = computed(() => [
       {key: 'theme', label: t('cabinetToggle.themeBtn'), type: 'button'},
       {key: 'snowFall', label: t('cabinetToggle.snowFall'), type: 'toggle'}
     ]
+  },
+  {
+    id: 'language',
+    title: t('settingsGroup.language'),
+    items: [
+      {key: 'lang', label: t('cabinetToggle.language'), type: 'button'}
+    ]
   }
 ])
 
-const currentThemeName = computed(() => THEMES[colorMode.preference] || THEMES.light)
+const currentThemeName = computed(() => THEMES.value[colorMode.value] || THEMES.value.dark)
 
 const showRestriction = (type) => {
   if (type === 'theme') {
@@ -175,9 +220,9 @@ const handleThemeSelection = (key) => {
 }
 
 const servicePaths = [
-  {id: 'Privacy', label: 'Police privacy', path: '/privacy'},
+  {id: 'Privacy', label: 'Privacy Policy', path: '/privacy'},
   {id: 'FAQ', label: 'FAQ', path: '/faq'},
-  {id: 'terms', label: 'Terms', path: '/terms'}
+  {id: 'terms', label: 'Terms of Service', path: '/terms'}
 ]
 
 const getSettingValue = (key) => {
@@ -213,69 +258,121 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-/* Твои стили остались без изменений */
-.accordion {
-  padding: 12px 16px;
-  margin-top: 14px;
-  cursor: pointer;
-  max-height: 60px;
-  overflow: hidden;
-  transition: max-height .3s ease;
+
+.tab-content {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 84px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.accordion.open {
-  max-height: 500px;
+.tab-content::after{
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  background: var(--overlayAfter);
 }
 
-.accordion__title {
-  font-weight: 900;
-  font-size: 1.2rem;
+.tab-content::-webkit-scrollbar {
+  display: none;
+}
+
+.settings-section {
+  margin-bottom: 24px;
+  padding: 0 8px;
+}
+
+.section-title {
+  font-size: 19px;
+  font-weight: 800;
   color: var(--titleColor);
+  margin-bottom: 10px;
+  padding-left: 4px;
 }
 
-.accordion__body {
-  padding-top: 10px;
+.section-card {
+  background: var(--settingsSectionBg);
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-.row__el--wrapper {
+.section-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 8px;
+  padding: 16px;
+  border-bottom: 1px solid rgba(122, 121, 121, 0.08);
 }
 
-.service__items-elements {
-  margin-left: 10px;
-  padding: 10px 0;
+.section-row:last-child {
+  border-bottom: none;
+}
+
+.link-row {
+  text-decoration: none;
+  color: var(--titleColor);
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 13px;
 }
 
 .toggle__wrapper {
   font-weight: 900;
+  font-size: 13px;
   color: var(--titleColor);
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.locked-setting, .theme-option.locked {
-  opacity: 0.5;
-}
-
 .theme-select-btn {
   background: #f3f4f6;
-  border: 2px solid #000;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 9px;
   padding: 8px 12px;
   font-family: "Nunito", sans-serif;
   font-weight: 800;
   cursor: pointer;
-  box-shadow: 2px 2px 0 #000;
   transition: 0.1s;
+  color: #000;
 }
 
 .theme-select-btn:active {
   transform: translate(1px, 1px);
   box-shadow: 0 0 0 #000;
+}
+
+.account-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--settingsSectionBg);
+  padding: 20px;
+  border-radius: 16px;
+  border: none;
+  width: 100%;
+}
+
+.btn-m {
+  width: 100%;
+  max-width: 320px;
+}
+
+.locked-setting {
+  opacity: 0.5;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 .modal-overlay {
@@ -284,126 +381,171 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   z-index: 2000;
+  padding: 20px;
 }
 
 .locked-priority {
   z-index: 3000 !important;
-  background: rgba(0, 0, 0, .7);
 }
 
 .modal-card {
-  background: #fef8e4;
-  border: 3px solid #000;
-  border-radius: 20px;
-  padding: 2rem;
-  width: 90%;
-  max-width: 400px;
-  box-shadow: 3px 3px 0 #000;
+  background: var(--tabBg);
+  border-radius: 28px;
+  padding: 24px;
+  width: 100%;
+  max-width: 340px;
+  border: 3px solid var(--tabsSlideBorderColor);
   text-align: center;
+  animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  position: relative;
 }
 
 .modal-title {
-  font-size: 1.4rem;
+  font-size: 22px;
   font-weight: 900;
-  font-style: italic;
-  margin-bottom: 1rem;
+  color: var(--titleColor);
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.locked-title {
+  font-size: 21px;
 }
 
 .modal-text {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
-}
-
-.modal-actions {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-}
-
-.btn {
-  border: 2px solid #000;
-  border-radius: 10px;
-  padding: 10px 24px;
-  font-weight: 800;
-  background: #f3f4f6;
-  box-shadow: 2px 2px 0 #000;
-  cursor: pointer;
-  transition: 0.1s;
-}
-
-.btn:active {
-  transform: translate(2px, 2px);
-  box-shadow: 0 0 0 #000;
-}
-
-.btn-success {
-  background: #4ade80;
-  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--titleColor);
+  margin-bottom: 24px;
+  line-height: 1.5;
 }
 
 .theme-grid {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .theme-option {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 12px;
-  border: 2px solid #000;
-  border-radius: 16px;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #f8fafc;
+  border: 3px solid #e2e8f0;
+  border-radius: 20px;
   cursor: pointer;
-  font-weight: 800;
-  background: #fff;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.theme-option:active:not(.locked) {
+  transform: scale(0.97);
 }
 
 .theme-option.active {
-  background: #ffd54f;
-  box-shadow: 2px 2px 0 #000;
+  background: #eff6ff;
+  border-color: #3b82f6;
+  box-shadow: inset 0 3px 0 rgba(59, 130, 246, 0.1);
+}
+
+.theme-option.locked {
+  opacity: 0.5;
+  filter: grayscale(100%);
+  background: #f1f5f9;
+  cursor: not-allowed;
+}
+
+.theme-option-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .theme-preview {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: 2px solid #000;
-}
-
-.theme-preview.light {
-  background: #fff;
-}
-
-.theme-preview.dark {
-  background: #222;
-}
-
-.theme-preview.pink {
-  background: #ff85a1;
+  width: 25px;
+  height:  25px;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-.service__items {
-  padding: 12px 16px;
-  margin-top: 10px;
+.theme-preview.light { background: #ffffff; }
+.theme-preview.dark { background: #1e293b; }
+.theme-preview.pink { background: #fbcfe8; }
+
+.lock-icon {
+  font-size: 16px;
 }
 
-.service__items-link {
-  color: var(--titleColor);
+.theme-label {
+  font-size: 17px;
+  font-weight: 800;
+  color: #334155;
+}
+
+.theme-option.active .theme-label {
+  color: #1d4ed8;
+}
+
+.theme-check {
+  width: 24px;
+  height: 24px;
+  color: #3b82f6;
+}
+
+.theme-option input {
+  display: none;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.btn-game {
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
   font-weight: 900;
-  padding: 10px 0;
-  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  color: #ffffff;
 }
 
-.service__items-list {
-  border-bottom: 1px solid var(--titleColor);
-  padding: 5px 0;
+.btn-success {
+  background: #22c55e;
+  border: 3px solid #16a34a;
+  box-shadow: 0 6px 0 #15803d;
+}
+
+.btn-success:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #15803d;
+}
+
+.btn-primary {
+  background: #3b82f6;
+  border: 3px solid #2563eb;
+  box-shadow: 0 6px 0 #1d4ed8;
+}
+
+.btn-primary:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #1d4ed8;
 }
 </style>

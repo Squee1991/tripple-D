@@ -3,9 +3,11 @@
 	border-radius: 8px;
 	transition: 2s;
 	margin-left: 0px;
+	display: none;
 }
 
 .simplebar-content-wrapper {
-	padding: 0 10px 0 0 ;
+	padding: 0 ;
+
 }
 

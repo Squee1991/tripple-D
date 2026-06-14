@@ -1,8 +1,80 @@
+<template>
+  <div class="leaderboard-fullscreen">
+    <div class="animated-bg">
+      <div class="cartoon-clouds"></div>
+    </div>
+    <div class="leaderboard__inner">
+      <div class="leaderboard-header">
+        <div class="header-main">
+          <button @click="$emit('close')" class="btn-icon-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                 stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          <h2 class="toon-title">{{ t('galaxyRankTable.title')}}</h2>
+        </div>
+      </div>
+      <div class="filter-bubble">
+        <select v-model="selectedFilter" class="toon-select">
+          <option v-for="option in galaxyOptions" :key="option.id" :value="option.id">
+            {{ option.label }}
+          </option>
+        </select>
+      </div>
+      <div class="leaderboard-scroll-area">
+        <div v-if="isLoading" class="toon-loader">
+          <div class="bouncing-ship">🚀</div>
+          <span>{{ t('galaxyRankTable.scan')}}</span>
+        </div>
+        <div v-else-if="sortedLeaderboard.length === 0" class="empty-state">
+          <div class="sad-moon">🌑</div>
+          <p class="empty-text">{{ t('galaxyRankTable.empty')}}</p>
+          <span class="empty-subtext">{{ t('galaxyRankTable.empty')}}</span>
+        </div>
+        <div v-else class="players-grid">
+          <div
+              v-for="(player, index) in paginatedLeaderboard"
+              :key="player.uid"
+              class="player-card"
+              :class="{
+              'gold': getGlobalIndex(index) === 0,
+              'silver': getGlobalIndex(index) === 1,
+              'bronze': getGlobalIndex(index) === 2
+            }"
+          >
+            <div class="rank-badge">
+              <span v-if="getGlobalIndex(index) === 0">👑</span>
+              <span v-else>{{ getGlobalIndex(index) + 1 }}</span>
+            </div>
+            <div class="ship-container">
+              <img :src="player.shipImg" :alt="player.captainName" class="floating-ship"/>
+            </div>
+            <div class="details">
+              <div class="name-tag">{{ player.captainName }}</div>
+              <div class="score-pill">
+                <span class="score-val">{{ getPlayerScore(player).toLocaleString() }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pagination-controls" v-if="!isLoading && totalPages > 1">
+        <button class="page-btn" @click="prevPage" :disabled="currentPage === 1">◀</button>
+        <div class="page-info">
+          {{ currentPage }} / {{ totalPages }}
+        </div>
+        <button class="page-btn" @click="nextPage" :disabled="currentPage === totalPages">▶</button>
+      </div>
+    </div>
+  </div>
+</template>
+
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
 import { useGalaxyStore } from '../../store/galaxyStore.js'
 import { getFirestore, collectionGroup, getDocs } from 'firebase/firestore'
-
 const emit = defineEmits(['close'])
 const store = useGalaxyStore()
 const db = getFirestore()
@@ -38,7 +110,7 @@ const fetchLeaderboard = async () => {
         tempPlayers.push({
           uid: docSnapshot.ref.parent.parent.id,
           captainName: data.captainName || 'Anonymous',
-          shipImg: shipInfo.img,
+          shipImg: shipInfo?.img || '',
           highScores: scores,
           totalScore: totalScore
         })
@@ -101,123 +173,44 @@ const getPlayerScore = (player) => {
 onMounted(() => {
   fetchLeaderboard()
 })
-</script>
 
-<template>
-  <div class="leaderboard-fullscreen">
-    <div class="leaderboard__inner">
-      <div class="animated-bg">
-        <div class="cartoon-clouds"></div>
-      </div>
-      <div class="leaderboard-header">
-        <button class="toon-btn-back" @click="$emit('close')">
-          <span class="btn-face">◀ {{ t('galaxyRankTable.back')}}</span>
-        </button>
-        <div class="header-main">
-          <h2 class="toon-title">{{ t('galaxyRankTable.title')}}</h2>
-          <div class="filter-bubble">
-            <select v-model="selectedFilter" class="toon-select">
-              <option v-for="option in galaxyOptions" :key="option.id" :value="option.id">
-                {{ option.label }}
-              </option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="leaderboard-scroll-area">
-        <div v-if="isLoading" class="toon-loader">
-          <div class="bouncing-ship">🚀</div>
-          <span>{{ t('galaxyRankTable.scan')}}</span>
-        </div>
-        <div v-else-if="sortedLeaderboard.length === 0" class="empty-state">
-          <div class="sad-moon">🌑</div>
-          <p class="empty-text">{{ t('galaxyRankTable.empty')}}</p>
-          <span class="empty-subtext">{{ t('galaxyRankTable.empty')}}</span>
-        </div>
-        <div v-else>
-          <div class="players-grid">
-            <div
-                v-for="(player, index) in paginatedLeaderboard"
-                :key="player.uid"
-                class="player-card"
-                :class="{
-                'gold': getGlobalIndex(index) === 0,
-                'silver': getGlobalIndex(index) === 1,
-                'bronze': getGlobalIndex(index) === 2
-              }"
-            >
-              <div class="rank-badge">
-                <span v-if="getGlobalIndex(index) === 0">👑</span>
-                <span v-else>{{ getGlobalIndex(index) + 1 }}</span>
-              </div>
-              <div class="ship-container">
-                <img :src="player.shipImg" :alt="player.captainName" class="floating-ship"/>
-              </div>
-              <div class="details">
-                <div class="name-tag">{{ player.captainName }}</div>
-                <div class="score-pill">
-                  <span class="score-val">{{ getPlayerScore(player).toLocaleString() }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="pagination-controls" v-if="totalPages > 1">
-            <button class="page-btn" @click="prevPage" :disabled="currentPage === 1">◀</button>
-            <div class="page-info">
-              {{ currentPage }} / {{ totalPages }}
-            </div>
-            <button class="page-btn" @click="nextPage" :disabled="currentPage === totalPages">▶</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
+</script>
 
 <style scoped>
 
 .leaderboard-fullscreen {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 6000;
-  background: #4facfe;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 20px 10px;
+  padding: 10px;
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
   overflow: hidden;
+  z-index: 6000;
 }
 
 .leaderboard__inner {
   max-width: 1000px;
   width: 100%;
-  margin: 0 auto;
-}
-
-.animated-bg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
-}
-
-.cartoon-clouds {
-  position: absolute;
-  width: 100%;
   height: 100%;
-  background-image: radial-gradient(white 1.5px, transparent 1.5px);
-  background-size: 30px 30px;
-  opacity: 0.2;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  min-height: 0;
 }
 
 .leaderboard-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+  flex-shrink: 0;
 }
 
 .empty-state {
@@ -225,56 +218,51 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: 100%;
   text-align: center;
   color: white;
 }
 
-.toon-btn-back {
-  background: #ff4b2b;
-  border: 4px solid #000;
-  border-radius: 50px;
-  padding: 10px 25px;
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid #2b2b2b;
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  box-shadow: 0 6px 0 #000;
-  transition: 0.1s;
+  box-shadow: 2px 2px 0px #2b2b2b;
+  transition: transform 0.1s, box-shadow 0.1s;
 }
 
-.toon-btn-back:active {
-  transform: translateY(4px);
-  box-shadow: 0 2px 0 #000;
-}
-
-.btn-face {
-  color: white;
-  font-weight: 900;
-  text-shadow: 2px 2px 0 #000;
-  font-size: 1.1rem;
+.btn-icon-back:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
 }
 
 .header-main {
-  text-align: right;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   gap: 10px;
 }
 
 .toon-title {
-  font-size: 1.8rem;
-  margin: 0;
-  color: #fff;
-  -webkit-text-stroke: 2px #000;
-  text-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
-  transform: rotate(-1deg);
+  font-size: 22px;
+  color: white;
+  margin-left: 10px;
 }
 
 .filter-bubble {
   background: #FFFFFF;
-  border: 4px solid #000;
-  border-radius: 20px;
-  padding: 5px 15px;
-  box-shadow: 4px 4px 0 #000;
+  border: 3px solid #000;
+  border-radius: 16px;
+  padding: 5px 12px;
+  box-shadow: 3px 3px 0 #000;
+  margin-bottom: 10px;
+  width: max-content;
+  max-width: 100%;
 }
 
 .toon-select {
@@ -287,67 +275,70 @@ onMounted(() => {
   outline: none;
 }
 
+
 .leaderboard-scroll-area {
   flex: 1;
   overflow-y: auto;
-  padding-right: 5px;
+  min-height: 0;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.leaderboard-scroll-area::-webkit-scrollbar {
+  display: none;
 }
 
 .players-grid {
-  display: grid;
-  gap: 20px;
-  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .player-card {
   display: flex;
   align-items: center;
   background: white;
-  border: 4px solid #000;
-  border-radius: 30px;
-  padding: 10px 15px;
-  position: relative;
-  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.1);
-  transition: 0.2s;
+  border-radius: 20px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 .gold {
   background: #ffd700;
-  border-color: #000;
-  box-shadow: 0 8px 0 #d4af37;
+  box-shadow: 0 4px 0 #d4af37;
 }
 
 .silver {
   background: #e0e0e0;
-  border-color: #000;
-  box-shadow: 0 8px 0 #a0a0a0;
+  box-shadow: 0 4px 0 #a0a0a0;
 }
 
 .bronze {
   background: #cd7f32;
-  border-color: #000;
-  box-shadow: 0 8px 0 #8c5922;
+  box-shadow: 0 4px 0 #8c5922;
 }
 
 .rank-badge {
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   background: #fff;
-  border: 4px solid #000;
+  border: 3px solid #000;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 900;
-  margin-right: 7px;
+  margin-right: 10px;
   flex-shrink: 0;
 }
 
 .ship-container {
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   margin-right: 10px;
+  flex-shrink: 0;
 }
 
 .floating-ship {
@@ -361,13 +352,18 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-width: 0;
 }
 
 .name-tag {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 900;
   color: #1a1a1a;
   text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 8px;
 }
 
 .score-pill {
@@ -375,19 +371,15 @@ onMounted(() => {
   align-items: center;
   background: #1a1a1a;
   color: #fff;
-  padding: 4px 15px;
+  padding: 4px 12px;
   border-radius: 50px;
+  flex-shrink: 0;
 }
 
 .score-val {
   color: #ccff00;
-  font-size: 1.1rem;
-}
-
-.score-pts {
-  font-size: 0.6rem;
-  margin-left: 5px;
-  opacity: 0.7;
+  font-size: 1rem;
+  font-weight: 900;
 }
 
 .toon-loader {
@@ -403,74 +395,32 @@ onMounted(() => {
 }
 
 @keyframes bounce {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-30px);
-  }
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
 }
 
-.leaderboard-footer {
-  text-align: center;
-  padding: 15px;
-}
-
-.sync-tag {
-  background: rgba(0, 0, 0, 0.2);
-  color: #fff;
-  display: inline-block;
-  padding: 5px 20px;
-  border-radius: 50px;
-  font-size: 0.7rem;
-  letter-spacing: 2px;
-}
-
-@media (max-width: 767px) {
-  .leaderboard-header {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 15px;
-  }
-
-  .header-main {
-    align-items: center;
-  }
-
-  .player-card {
-    padding: 8px 10px;
-  }
-
-  .ship-container {
-    width: 40px;
-    height: 40px;
-  }
-
-  .name-tag {
-    font-size: 15px;
-  }
-
-  .rank-badge {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
+.bouncing-ship {
+  animation: bounce 0.5s infinite alternate ease-in-out;
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
 .pagination-controls {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  padding: 20px 0 40px 0;
+  gap: 12px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  flex-shrink: 0;
 }
 
 .page-btn {
   background: #ffeb3b;
-  border: 4px solid #000;
-  border-radius: 15px;
-  padding: 10px 20px;
-  font-size: 1.2rem;
+  border: 3px solid #000;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: 1.1rem;
   font-weight: 900;
   cursor: pointer;
   box-shadow: 0 4px 0 #000;
@@ -485,28 +435,42 @@ onMounted(() => {
 .page-btn:disabled {
   background: #ccc;
   cursor: not-allowed;
-  opacity: 0.6;
+  box-shadow: 0 2px 0 #888;
+  transform: translateY(2px);
 }
 
 .page-info {
   background: white;
-  border: 4px solid #000;
-  padding: 10px 20px;
-  border-radius: 15px;
+  border: 3px solid #000;
+  padding: 8px 16px;
+  border-radius: 12px;
   font-weight: 900;
   box-shadow: 0 4px 0 #000;
 }
 
 @media (max-width: 767px) {
-  .pagination-controls {
-    gap: 10px;
+
+  .player-card {
+    padding: 6px 10px;
+  }
+  .rank-badge {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  .ship-container {
+    width: 36px;
+    height: 36px;
+  }
+  .name-tag {
+    font-size: 13px;
   }
   .page-btn {
-    padding: 8px 15px;
+    padding: 6px 14px;
     font-size: 1rem;
   }
   .page-info {
-    padding: 8px 15px;
+    padding: 6px 14px;
     font-size: 0.9rem;
   }
 }

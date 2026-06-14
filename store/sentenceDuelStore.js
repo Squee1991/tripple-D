@@ -58,7 +58,6 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
     }
 
     async function updateUserStats(userId, level, isWin, isCleanSweep, isFlawless) {
-        console.log('--- [STATS UPDATE] Вызов функции с данными:', { userId, level, isWin });
         if (!userId || !level || userId !== authStore.uid) return;
         const userDocRef = doc(db, 'users', userId);
         const updates = {};
@@ -74,9 +73,8 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
         try {
             await updateDoc(userDocRef, updates);
             await loadUserAchievements();
-            console.log(`[STATS] ${isWin ? 'Победа' : 'Поражение'} для ${userId} на уровне ${level}`);
         } catch (error) {
-            console.error(`[STATS ERROR] Не удалось обновить статистику для ${userId}`, error);
+            console.error(`${userId}`, error);
         }
     }
 
@@ -87,14 +85,15 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
         }
         const allSentencesForLevel = sentencesStore.db?.levels[level]?.sentences || [];
         if (allSentencesForLevel.length < 11) {
-
             return null;
         }
-
         const shuffled = allSentencesForLevel.sort(() => 0.5 - Math.random());
         const selectedSentences = shuffled.slice(0, 11);
         const expireAt = Timestamp.fromMillis(Date.now() + 60 * 1000);
         const sessionsRef = collection(db, 'gameSessions');
+
+        const avatarToSave = authStore.avatar || '1.png';
+
         const newSession = {
             hostId: hostId,
             guestId: null,
@@ -102,7 +101,14 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
             status: 'waiting',
             createdAt: serverTimestamp(),
             expireAt: expireAt,
-            players: {[hostId]: {score: 0, name: authStore.name, hasMadeError: false}},
+            players: {
+                [hostId]: {
+                    score: 0,
+                    name: authStore.name || 'Player',
+                    avatar: avatarToSave,
+                    hasMadeError: false
+                }
+            },
             rounds: selectedSentences.map(s => ({sentenceId: s.id, winner: null})),
             currentRoundIndex: 0,
             totalRounds: 11,
@@ -111,6 +117,82 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
 
         const newSessionRef = await addDoc(sessionsRef, newSession);
         return newSessionRef.id;
+    }
+
+    async function findGame(level) {
+        if (isSearching.value) return;
+        const myUserId = authStore.uid;
+        if (!myUserId) {
+            error.value = "Ошибка: пользователь не авторизован.";
+            return;
+        }
+        isSearching.value = true;
+        error.value = null;
+        const q = query(collection(db, 'gameSessions'),
+            where('guestId', '==', null),
+            where('status', '==', 'waiting'),
+            where('level', '==', level),
+            orderBy('createdAt'), limit(1));
+        const snapshot = await getDocs(q);
+
+        if (!snapshot.empty) {
+            const sessionToJoin = snapshot.docs[0];
+            const sessionRef = doc(db, 'gameSessions', sessionToJoin.id);
+            const avatarToSave = authStore.avatar || '1.png';
+
+            try {
+                await runTransaction(db, async (t) => {
+                    const docSnap = await t.get(sessionRef);
+                    if (!docSnap.exists() || docSnap.data().guestId) {
+                        throw 'Эту сессию уже заняли!';
+                    }
+                    t.update(sessionRef, {
+                        guestId: myUserId,
+                        status: 'starting',
+                        [`players.${myUserId}`]: {
+                            score: 0,
+                            name: authStore.name || 'Player',
+                            avatar: avatarToSave,
+                            hasMadeError: false
+                        }
+                    });
+                });
+                listenToSession(sessionToJoin.id);
+            } catch (e) {
+                error.value = 'Не удалось присоединиться...';
+                setTimeout(() => findGame(level), 100);
+            }
+
+        } else {
+            const newGameId = await createGameSession(level, myUserId);
+            if (newGameId) {
+                listenToSession(newGameId);
+            }
+        }
+        isSearching.value = false;
+    }
+
+    async function submitAnswer(answerText) {
+        const myUserId = authStore.uid;
+        if (!sessionData.value || !gameId.value || !myUserId || sessionData.value.status !== 'in_progress') return;
+
+        const roundIndex = sessionData.value.currentRoundIndex;
+        const correctSentence = getSentenceById(sessionData.value.rounds[roundIndex]?.sentenceId);
+
+        const sessionRef = doc(db, 'gameSessions', gameId.value);
+        const updates = {
+            [`currentRoundData.answers.${myUserId}`]: answerText
+        };
+
+        if (answerText.toLowerCase().replace(/[.,!?;]/g, '').trim() !== correctSentence) {
+            updates[`players.${myUserId}.hasMadeError`] = true;
+        }
+
+        try {
+            await updateDoc(sessionRef, updates);
+        } catch (e) {
+            console.warn("Не удалось обновить ответ. Возможно сессия уже завершена или удалена.", e);
+        }
     }
 
     async function markSessionAborted(reason) {
@@ -128,58 +210,10 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
             t.update(sessionRef, {
                 status: 'aborted',
                 abortedBy: authStore.uid,
-                abortReason: reason,          // 'host_left' или 'guest_left'
+                abortReason: reason,
                 abortedAt: serverTimestamp(),
             });
         });
-    }
-
-
-    async function findGame(level) {
-        if (isSearching.value) return;
-        const myUserId = authStore.uid;
-        if (!myUserId) {
-            error.value = "Ошибка: пользователь не авторизован.";
-            return;
-        }
-        isSearching.value = true;
-        error.value = null;
-
-        const q = query(collection(db, 'gameSessions'),
-            where('guestId', '==', null),
-            where('status', '==', 'waiting'),
-            where('level', '==', level),
-            orderBy('createdAt'), limit(1));
-        const snapshot = await getDocs(q);
-
-        if (!snapshot.empty) {
-            const sessionToJoin = snapshot.docs[0];
-            const sessionRef = doc(db, 'gameSessions', sessionToJoin.id);
-            try {
-                await runTransaction(db, async (t) => {
-                    const docSnap = await t.get(sessionRef);
-                    if (!docSnap.exists() || docSnap.data().guestId) {
-                        throw 'Эту сессию уже заняли!';
-                    }
-                    t.update(sessionRef, {
-                        guestId: myUserId,
-                        status: 'starting',
-                        [`players.${myUserId}`]: {score: 0, name: authStore.name, hasMadeError: false}
-                    });
-                });
-                listenToSession(sessionToJoin.id);
-            } catch (e) {
-                error.value = 'Не удалось присоединиться...';
-                setTimeout(() => findGame(level), 100);
-            }
-
-        } else {
-            const newGameId = await createGameSession(level, myUserId);
-            if (newGameId) {
-                listenToSession(newGameId);
-            }
-        }
-        isSearching.value = false;
     }
 
     function getSentenceById(id) {
@@ -216,11 +250,9 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
             }
 
             const data = { id: docSnap.id, ...docSnap.data() };
-            sessionData.value = data; // Сначала обновляем данные
+            sessionData.value = data;
             const newStatus = data.status;
-
             if (newStatus === 'finished' && prevStatus !== 'finished') {
-
                 if (!didFinalizeMyStats.value) {
                     const hostId  = data.hostId;
                     const guestId = data.guestId;
@@ -239,10 +271,8 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
                     updateUserStats(myUid, data.level, iWon, isCleanSweep, isFlawless)
                         .finally(() => { didFinalizeMyStats.value = true; });
                 }
-                // 2. Только ХОСТ планирует удаление сессии
                 if (data.hostId === authStore.uid) {
                     console.log(`Я хост, удаляю сессию ${data.id} через 10 секунд...`);
-                    // Задержка нужна, чтобы гость успел получить финальное состояние и обновить свою статистику
                     setTimeout(async () => {
                         try {
                             await deleteDoc(doc(db, 'gameSessions', data.id));
@@ -250,7 +280,7 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
                         } catch (e) {
                             console.log("Не удалось удалить сессию (возможно, она уже удалена).");
                         }
-                    }, 10000); // 10 секунд
+                    }, 10000);
                 }
             }
             if (newStatus === 'aborted' && prevStatus !== 'aborted') {
@@ -372,24 +402,6 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
         }
     }
 
-
-    async function submitAnswer(answerText) {
-        const myUserId = authStore.uid;
-        if (!sessionData.value || !gameId.value || !myUserId || sessionData.value.status !== 'in_progress') return;
-
-        const roundIndex = sessionData.value.currentRoundIndex;
-        const correctSentence = getSentenceById(sessionData.value.rounds[roundIndex]?.sentenceId);
-
-        const sessionRef = doc(db, 'gameSessions', gameId.value);
-        const updates = {
-            [`currentRoundData.answers.${myUserId}`]: answerText
-        };
-
-        if (answerText.toLowerCase().replace(/[.,!?;]/g, '').trim() !== correctSentence) {
-            updates[`players.${myUserId}.hasMadeError`] = true;
-        }
-        await updateDoc(sessionRef, updates);
-    }
 
     return {
         isSearching, gameId, error, sessionData,

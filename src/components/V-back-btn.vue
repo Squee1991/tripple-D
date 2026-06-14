@@ -1,48 +1,41 @@
 <template>
-  <button @click="path" class="btn__back"> {{ t('tenses.barBtn') }} </button>
+  <button @click="path" class="btn-icon-back">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+         stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 19 5 12 12 5"></polyline>
+    </svg>
+  </button>
 </template>
 
 <script setup>
    import { useRouter } from "vue-router";
-   const { t } = useI18n();
    const router = useRouter();
-   const path = () => {
-     router.push('/')
-   }
-
+   defineEmits(['click'])
+   const path = () => { router.push('/')}
 
 </script>
 
 <style scoped>
 
-.btn__back {
-  display: block;
-  width: 100%;
-  border: 3px solid #1e1e1e;
-  margin-bottom: 2rem;
-  padding: 0.8rem;
-  background: #f1c40f;
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 12px;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  color: #1e1e1e;
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: "Nunito", sans-serif;
-  box-shadow: 3px 3px 0px #1e1e1e;
-  transition: all 0.1s ease-in-out;
+  transition: transform 0.1s, box-shadow 0.1s;
 }
 
-@media  (max-width: 767px) {
-  .btn__back {
-    box-shadow: 2px 2px 2px #1e1e1e;
-  }
-}
-
-@media (min-width: 1024px) {
-  .btn__back:hover {
-    transform: translate(2px , 2px);
-    box-shadow: 1px 1px 0px #1e1e1e;
-  }
+.btn-icon-back:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
 }
 
 </style>

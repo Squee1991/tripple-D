@@ -3525,9 +3525,12 @@
   },
   "settingsGroup": {
     "notifications": "Bildirimler",
-    "appearance": "Görünüm"
+    "appearance": "Görünüm",
+    "language": "Dil",
+    "account": "Hesap yönetimi"
   },
   "valentineAchievements": {
+    "valentineAchievementsTitle": "Kalpler Festivali",
     "firstValentineQuestLabel": "İlk Randevu",
     "firstValentineQuesDescription": "İlk adımı atın! 'Kalpler Festivali' etkinliğindeki herhangi bir görevi tamamlayın ve ilk ödülünüzü alın.",
     "valentineWordsLabel": "Aşkın Dili",
@@ -3607,7 +3610,9 @@
     "streak": "Galibiyet serisi",
     "clearWins": "Net galibiyetler",
     "start": "Oyunu başlat",
-    "info": "İstatistiklerini görmek için bir seviyeye tıkla."
+    "info": "İstatistiklerini görmek için bir seviyeye tıkla.",
+    "answer-placeholder": "Cümleyi kurun...",
+    "pending": "Bekleniyor..."
   },
   "eventSessionPage": {
     "loading": "Yükleniyor…",
@@ -3740,6 +3745,7 @@
     "theme": "Romantik Tema"
   },
   "winterAchievements": {
+    "winterAchievementsTitle": "Kış fısıltısı",
     "firstQuestName": "İlk ağaç yıldızı",
     "firstQuestDescription": "Kış etkinliğindeki herhangi bir görevi tamamla ve ilk yıldızı yak.",
     "santaLexiconName": "Noel Baba Sözlüğü",
@@ -4162,17 +4168,17 @@
     "answerThree": "Şu anda kalan günler için iade mevcut değildir."
   },
   "daily": {
-    "first": "Tüm modlarda 10 kelime öğren: Artikel Pratiği",
-    "second": "Artikel pratiğinde 10 Artikluso kazan",
-    "third": "Artikel maratonunda 10 kelimelik seri yap (kolay mod)",
-    "fourth": "Artikel Pratiğinde 15 deneyim puanı kazan",
-    "fifth": "«Kelimeyi Tahmin Et» modunda 10 kelime tahmin et",
-    "sixth": "Artikel maratonunda 10 kelimelik seri yap (orta mod)",
-    "seventh": "Artikel Pratiği modunda 10 çoğul kelime öğren",
-    "eighth": "Tüm modlarda 10 kelime öğren: Artikel Pratiği",
-    "ninth": "Ses modunda 10 kelime öğren: Artikel Pratiği",
-    "tenth": "Artikel maratonunda 10 kelimelik seri yap (zor mod)",
-    "eleventh": "Artikel Pratiğinde 10 deneyim puanı kazan",
+    "first": "Tüm modlarda 5 kelime öğren: Artikel Pratiği",
+    "second": "Artikel pratiğinde 5 Artikluso kazan",
+    "third": "Artikel maratonunda 5 kelimelik seri yap (kolay mod)",
+    "fourth": "Artikel Pratiğinde 5 deneyim puanı kazan",
+    "fifth": "«Kelimeyi Tahmin Et» modunda 5 kelime tahmin et",
+    "sixth": "Artikel maratonunda 5 kelimelik seri yap (orta mod)",
+    "seventh": "Artikel Pratiği modunda 5 çoğul kelime öğren",
+    "eighth": "Tüm modlarda 5 kelime öğren: Artikel Pratiği",
+    "ninth": "Ses modunda 5 kelime öğren: Artikel Pratiği",
+    "tenth": "Artikel maratonunda 5 kelimelik seri yap (zor mod)",
+    "eleventh": "Artikel Pratiğinde 5 deneyim puanı kazan",
     "twelve": "Tematik seviyelerde bir modülü tamamla",
     "thirteenth": "Dil diyarlarında bir görevi tamamla",
     "fourteenth": "«Kelimeyi Tahmin Et» modunda 5 kelime tahmin et"
@@ -4916,7 +4922,10 @@
     "start": "Başlangıç:",
     "middle": "Ortalama puan:",
     "share": "Paylaş",
+    "cancel": "İptal",
     "delete": "Sil",
+    "deleteResultTitle": "Sonuç silinsin mi?",
+    "textModal": "Bu sınavı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
     "sent": "Test gönderildi",
     "sended": "Bu testi zaten gönderdiniz",
     "error": "Sınav paylaşılamadı"
@@ -6954,7 +6963,7 @@
     "questThird": "Cümle kur: beyaz pencere.",
     "questFour": "Seç: yeşil kanepe.",
     "questFive": "Dinle ve yaz",
-    "questSix": "Kur: das rote Buch.",
+    "questSix": "Topla: Kırmızı Kitap",
     "questSeven": "‘eine gelbe Blume’ ne demek?",
     "questSevenFirstOption": "Sarı çiçek.",
     "questSevenSecondOption": "Kırmızı kitap.",
@@ -8082,8 +8091,8 @@
     "exam": "Arkadaşlar"
   },
   "cabinetSidebar": {
-    "valueOne": "Hesap Parametreleri",
-    "valueTwo": "Sınav Arşivi",
+    "valueOne": "Hesap",
+    "valueTwo": "Sınavlar",
     "valueThree": "Mağaza",
     "valueFour": "Ayarlar"
   },
@@ -8099,11 +8108,12 @@
     "registerDate": "Kayıt Tarihi"
   },
   "cabinetToggle": {
-    "sound": "Sesli Bildirimler",
-    "theme": "Karanlık Mod",
-    "ach": "Başarım Bildirimleri",
-    "snowFall": "Kar Yağışı",
-    "themeBtn": "Tema"
+    "sound": "Sesli bildirimler",
+    "ach": "Başarı bildirimleri",
+    "themeBtn": "Tema",
+    "snowFall": "Kar yağışı",
+    "language": "Arayüz dili",
+    "profileData": "Profil verileri"
   },
   "cabinet": {
     "important": "ÖNEMLİ!!!",
@@ -8159,7 +8169,10 @@
     "articleLabelTwo": "- Dil Diyarlarındaki tekrar denemeleri ve profildeki mağazada harcanır.",
     "levelTitle": "Seviye",
     "levelLabelOne": "- Görevleri tamamladıkça seviyen artar.",
-    "levelLabelTwo": "- Seviyen arttıkça Dil Diyarlarındaki yeni görevler açılır."
+    "levelLabelTwo": "- Seviyen arttıkça Dil Diyarlarındaki yeni görevler açılır.",
+    "livesTitle": "Canlar",
+    "livesLabelOne": "Dil diyarlarını tamamlamak için gereklidir",
+    "livesLabelTwo": "Dahili mağazadan veya eğitim sırasında Articlus'lar karşılığında satın alınır"
   },
   "idioms": {
     "title": "Deyimler ve Kalıplaşmış İfadeler",
@@ -8267,6 +8280,8 @@
     "answer": "Hataları görmezden gelir"
   },
   "guessWord": {
+    "subtitle": "Kelimeyi tahmin et ve Almancanı geliştir!",
+    "theme": "Tema:",
     "back": "Geri",
     "guessTitle": "Kelimeyi Tahmin Et",
     "startGame": "Oyuna Başla",
@@ -9050,7 +9065,7 @@
     "main": "Ana sayfaya git"
   },
   "rulesFirstBlock": {
-    "title": "Almanca artikellerin temel kuralları",
+    "title": "Tanımlık teorisi",
     "subTitle": "der, die, das'ı doğru kullanmak isteyen herkes için kısa ve anlaşılır bir kopya kağıdı!",
     "firstCardTitle": "Artikel cinse bağlıdır",
     "exampleSexM": " — eril cins",
@@ -9195,6 +9210,7 @@
     "confirm": "Onayla"
   },
   "sub": {
+    "words": "Kelimeler ve tanımlıklar",
     "sinonim": "Kelime Bilgisi",
     "articles": "Artikeller",
     "verbs": "Fiiller",
@@ -9211,7 +9227,9 @@
     "languagesLands": "Dil Diyarları",
     "describePicture": "Resim Açıklama",
     "fight": "Almanca Evreni",
-    "audio": "Sesli Görevler"
+    "audio": "Sesli Görevler",
+    "textTask": "Metinler",
+    "speak": "Konuşma pratiği"
   },
   "underSub": {
     "prev": "Giriş",
@@ -9440,35 +9458,100 @@
   "nameMap": {
     "Furniture": "Mobilya",
     "Animals": "Hayvanlar",
+    "Birds": "Kuşlar",
+    "SeaAnimals": "Deniz hayvanları",
+    "Insects": "Böcekler",
+    "Savanna": "Savana",
     "Clothes": "Kıyafetler",
+    "Shoes": "Ayakkabılar",
     "Food": "Yiyecek",
-    "Body": "Vücut Parçaları",
+    "SweetEat": "Tatlılar",
+    "MilkEat": "Süt ürünleri",
+    "Vegetables": "Sebzeler",
+    "Fruits": "Meyveler",
+    "Drinks": "İçecekler",
+    "Body": "Vücut",
     "Professions": "Meslekler",
     "Transport": "Ulaşım",
     "Colors": "Renkler",
     "Nature": "Doğa",
+    "Weather": "Hava durumu",
+    "Landscape": "Manzara",
     "Home": "Ev",
     "Zeit": "Zaman",
-    "City": "Şehir",
+    "CityBuildings": "Şehir binaları",
+    "CityInfrastructure": "Şehir altyapısı",
     "School": "Okul",
-    "DaysAndMonths": "Günler ve Aylar",
+    "DaysAndMonths": "Günler ve aylar",
     "Toys": "Oyuncaklar",
-    "CommonItems": "Yaygın Eşyalar",
-    "BathroomItems": "Banyo Eşyaları",
+    "CommonItems": "Günlük eşyalar",
+    "BathroomItems": "Banyo eşyaları",
     "Kosmetik": "Kozmetik",
     "Familie": "Aile",
     "Emotions": "Duygular",
-    "Werkzeuge": "Aletler",
     "Kitchen": "Mutfak",
     "Health": "Sağlık",
-    "Sport": "Spor",
-    "SportEquipment": "Fitness Ekipmanları",
+    "SportBasic": "Temel sporlar",
+    "SportCombatWinter": "Kış ve dövüş sporları",
+    "SportEvents": "Spor etkinlikleri",
+    "SportLife": "Spor yaşamı",
+    "SportEquipment": "Spor ekipmanları",
+    "TravelDocuments": "Seyahat belgeleri",
+    "Tourism": "Turizm",
     "Travel": "Seyahat",
+    "MusicInstruments": "Müzik aletleri",
     "Musik": "Müzik",
-    "Amount": "Miktar",
-    "Informatik": "Bilgisayar Bilimi"
+    "Amount": "Miktar ve ölçüler",
+    "Hardware": "Donanım",
+    "Software": "Yazılım",
+    "Internet": "İnternet",
+    "WinterHolidays": "Kış tatilleri",
+    "FamilyAndReligious": "Aile ve dini bayramlar",
+    "PersonalCelebrations": "Kişisel kutlamalar",
+    "FestivalsAndDecor": "Festivaller ve dekor",
+    "DwellingTypes": "Konut türleri",
+    "Rooms": "Odalar",
+    "ConstructionAndDetails": "İnşaat ve detaylar",
+    "CoreFamily": "Çekirdek aile",
+    "ExtendedFamily": "Geniş aile",
+    "Relationships": "İlişkiler",
+    "HandTools": "El aletleri",
+    "PowerTools": "Elektrikli aletler",
+    "ConsumablesAndSafety": "Sarf malzemeleri ve güvenlik",
+    "JobOffice": "Ofis işleri",
+    "JobTech": "Teknik işler",
+    "JobMed": "Tıbbi işler",
+    "JobEdu": "Eğitim",
+    "JobService": "Hizmet sektörü",
+    "CityTransport": "Şehir içi ulaşım",
+    "TravelTransport": "Seyahat ulaşımı",
+    "usualClothes": "Günlük kıyafetler",
+    "winterClothes": "Kışlık kıyafetler",
+    "emotionsPositive": "Duygular",
+    "emotionsNegative": "Duygular 2"
+  },
+  "categoryWords": {
+    "nature": "Doğa",
+    "animals": "Hayvanlar",
+    "food": "Yiyecek",
+    "people": "İnsan",
+    "family": "Aile",
+    "dailyRoutine": "Günlük yaşam",
+    "house": "Ev",
+    "city": "Şehir",
+    "school": "Okul",
+    "professions": "Meslekler",
+    "construction": "İnşaat",
+    "clothes": "Kıyafetler",
+    "holidays": "Bayramlar",
+    "sport": "Spor",
+    "music": "Müzik",
+    "travel": "Seyahat",
+    "informatics": "Bilişim",
+    "abstract": "Soyut konular"
   },
   "modes": {
+    "themeTitle": "Tanımlık (artel) çalışma konuları",
     "article": "Artikeli Girin",
     "letters": "Kelimeyi Heceleyin",
     "articleWord": "Kelimeyi ve Artikeli Girin",
@@ -9602,7 +9685,12 @@
     "profile": "Profil",
     "shop": "HANGAR",
     "rank": "Sıralama",
-    "exit": "ÇIKIŞ"
+    "exit": "ÇIKIŞ",
+    "start": "GÖREVE BAŞLA",
+    "findGalaxyTitle": "SEKTÖR TESPİT EDİLDİ",
+    "points": "PUAN",
+    "errorTitle": "SİSTEM ARIZASI",
+    "errorBtn": "KARARGAHA DÖN"
   },
   "galaxyCabinet": {
     "back": "GERİ",
@@ -9611,7 +9699,8 @@
     "money": "ARTİKS",
     "commonPoints": "TOPLAM PUAN",
     "rank": "Rütbe:",
-    "streak": "REKOR:"
+    "streak": "REKOR:",
+    "cabinet": "Seyir defteri"
   },
   "galaxyRank": {
     "none": "DÜNYALI",
@@ -9661,7 +9750,7 @@
     "prepositions": "Edatlar"
   },
   "v-rank": {
-    "desc": "Konfederatka şapkaları zirveye giden yolunuzdur! Günlük üç görevi de tamamlayarak onları biriktirin. Rütbenizi yükseltin ve kilidi açılmış bonusları satın alın!",
+    "desc": "Günün görevlerini tamamlayarak kepler biriktirin. Rütbenizi yükseltin ve bonuslar satın alın.",
     "rank": "Rütbe",
     "rank_0": "Acemi",
     "rank_1": "Çaylak",
@@ -9724,5 +9813,513 @@
   "lives": {
     "next": "Sonraki:",
     "full": "Canlar dolu"
+  },
+  "deletePage": {
+    "title": "Profili sil",
+    "bubbleText": "Ayrıldığın için üzgünüz! Lütfen silmeden önce önemli bilgileri kontrol et.",
+    "cleanUpTitle": "Abonelik yönetimi",
+    "cleanUpInfoText": "Hesabı silmek",
+    "cleanUpInfoTextTwo": "aboneliği iptal etmez!",
+    "cleanUpInfoTextThree": "Ödeme durumunu kontrol et.",
+    "deleteAccount": "Hesabı sil",
+    "modalTitle": "Silmek istediğine emin misin?",
+    "cleanUpGoogle": "İle giriş yap",
+    "cleanUpGoogleTwo": " Onaylamak için bir yetkilendirme penceresi açılacaktır.",
+    "cleanUpPassword": "Şifrenizi girin:",
+    "placeholder": "şifrenizi girin",
+    "modalLabelOne": "Vazgeçtim",
+    "modalLabelTwo": "Silme işlemini onayla"
+  },
+  "accountChanges": {
+    "first": "Profil verileri sonsuza dek kaybolacak.",
+    "two": "İlerleme ve test geçmişi sıfırlanacak.",
+    "three": "Tüm ödüller, unvanlar ve başarılar silinecek.",
+    "four": "Para birimi, seviye ve şapkalar geri alınacak."
+  },
+  "platformsInformation": {
+    "titleWeb": "Web sitesinde",
+    "descriptionWeb": "Web sitesinde kartla ödeme.",
+    "instructionWeb": "Kişisel Hesabınızdan otomatik yenilemeyi kapatın.",
+    "titleStore": "Uygulamada",
+    "descriptionStore": "Google Play veya App Store.",
+    "instructionStore": "Telefon ayarlarından aboneliği iptal edin."
+  },
+  "galaxyDescriptions": {
+    "alpha": "Üç büyük gücün hüküm sürdüğü sektör: Der, Die ve Das. Görevin, dilsel sensörlerini kalibre etmek ve her kelimenin cinsiyetini hatasız belirleyerek dilbilgisi sistemine düzen getirmektir.",
+    "beta": "Her şeyin çoğaldığı ve dönüştüğü anomalili bir bölge. Nesnelerin birden fazla olduğunda hangi formu alacağını anlamak için isimlerin dönüşüm yasalarını incele.",
+    "gamma": "İkiz kelimeler galaksisi. Aynı düşünceyi ifade etmenin yeni yollarını bularak kelime dağarcığını genişlet. Cephaneliğinde ne kadar çok eş anlamlı kelime varsa, derin uzayda konuşman o kadar parlar.",
+    "delta": "Sonsuz kontrast ve karşıtlık dünyası. Burada her şey karşılaştırmayla öğrenilir: 'hızlı'dan 'yavaş'a. Sistemde dengeyi korumak için zıtlıkları ustalıkla bulmayı öğren.",
+    "epsilon": "Geçmişin zaman döngüsü. Tamamlanan görevler hakkında raporlar yazmak ve diğer yıldız sistemlerindeki eski zaferlerini anlatmak için fiillerin karmaşık formunda ustalaş.",
+    "zeta": "Uzay ve zamanın navigasyon ağı. Dil yollarının 'nereye', 'nerede' ve 'nasıl' gittiğini keşfet. Doğru edatlar, dilin sonsuzluğundaki kesin koordinatlarındır."
+  },
+  "personalAccount": {
+    "statsAndAchievements": "İstatistikler ve başarılar",
+    "streakTitle": "Tanımlık maratonu serisi"
+  },
+  "studyNavAndBanner": {
+    "practice": "Pratik",
+    "grammar": "Dilbilgisi",
+    "bannerPractice": "Çeşitli pratik görevleri tamamlayarak Almanca seviyeni geliştir",
+    "bannerGrammar": "Kuralları öğren ve çeşitli dilbilgisi konularında Almanca seviyeni ilerlet"
+  },
+  "bannerTitles": {
+    "play": "Almancayı zevkle öğren! Uygun bir mod seç ve oynayarak dilini geliştir",
+    "events": "Sezonluk etkinliklere katıl ve görevleri tamamlayarak benzersiz ödüller kazan",
+    "article": "Farklı antrenman formatlarında konularına göre kelimeleri ve tanımlıkları öğrenin",
+    "awards": "Kazanılan başarılar ve tamamlanan görevler için ödüller",
+    "thematic": "Eğlenceli tematik seviyeleri geçerek Almancanı geliştir",
+    "audio": "Sesli görevleri tamamlayarak Almanca dinleme becerini geliştir",
+    "images": "Resim betimleme becerini geliştir! Başlamak için bir tema seç",
+    "settings": "Hesap ayarları",
+    "achievements": "İlerlemen için kazandığın tüm başarıların ve ödüllerin koleksiyonu",
+    "textTask": "Metinlerdeki boşlukları doldur ve Almancanı geliştir"
+  },
+  "imageDescription": {
+    "listen": "Diyaloğu dinleyin!",
+    "check": "Kontrol et",
+    "further": "İleri",
+    "finish": "Bitir",
+    "skip": "Geç",
+    "total": "Toplam görev:",
+    "perfect": "Kusursuz doğru:",
+    "notPerfect": "Kısmen doğru:",
+    "mistakes": "Hatalı:",
+    "value": "Doğruluk:",
+    "success": "✅ Görev doğru bir şekilde tamamlandı!",
+    "isWrong": "❌ Yanlış cevaplar var!",
+    "isWarning": "⚠️ Tüm doğru seçenekler seçilmedi!",
+    "modalTitleWarning": "Dikkat!",
+    "modalTextWarning": "Konu tamamen bitirilmedi, ilerleme kaydedilmeyecek!",
+    "leave": "Çık",
+    "continue": "Devam et",
+    "goodWork": "Harika iş!",
+    "needTraining": "Pratik yapman gerek!",
+    "themeSuccess": "Konu başarıyla tamamlandı!",
+    "themeNotSuccess": "Konu tamamlanmadı."
+  },
+  "galaxySelector": {
+    "constellations": "Takımyıldızlar",
+    "energy": "Gemi enerjisi",
+    "sectorBlock": "SEKTÖR ENGELLENDİ",
+    "admission": "PLUS izni gerekiyor",
+    "descriptionPlusOne": "Galaksi",
+    "descriptionPlusTwo": "derin uzayda bulunuyor! Alfa sektörünün ötesine hiper sıçrama yapmak için galaksiler arası abonelik gereklidir",
+    "descriptionPlusThree": "Tüm takımyıldızları açmak için satın alın!",
+    "getPlusBtn": "PLUS Al",
+    "errorDescription": "'İniş için hazırlanın! Bu bölgede yoğun Almanca aktivitesi gözlemleniyor. Sistemdeki düzeni sağlamak için sektörü temizleyin.'"
+  },
+  "galaxySession": {
+    "errorEnergy": "Batarya boşaldı. Yenilenmesini bekleyin veya PLUS satın alın.",
+    "errorID": "Sektör kimliği (ID) iletilmedi",
+    "errorData": "Galaksi verileri yüklenemedi",
+    "newRecord": "YENİ REKOR!",
+    "check": "PUAN:",
+    "again": "Yeniden havalan",
+    "constellations": "Takımyıldızdan ayrıl"
+  },
+  "textTasksTip": {
+    "title": "Metin görevleri",
+    "description": "Görevi tamamlamak için kelimeyi boş alana sürükleyin veya kelimeye tıklayıp ardından eklemek istediğiniz alana tıklayın."
+  },
+  "textThemes": {
+    "basic": "Tanışma",
+    "routine": "Günlük rutin",
+    "shopping": "Alışveriş",
+    "work": "İş ve eğitim",
+    "hobby": "Hobiler",
+    "objects": "Nesneler ve eşyalar",
+    "travel": "Seyahat"
+  },
+  "themeTextTitleBasic_A1": {
+    "basicOne": "Resmi tanışma",
+    "basicTwo": "Resmi olmayan tanışma",
+    "basicThree": "Günlük planlar",
+    "basicFour": "Akşam planları",
+    "basicFive": "Hafta sonu",
+    "basicSix": "Spor yapmak",
+    "basicSeven": "Birlikte yemek pişirmek",
+    "basicEight": "Şehir gezisi",
+    "basicNine": "Birlikte çalışmak",
+    "basicTen": "Müzikle ilgilenmek"
+  },
+  "themeTextTitleHobby_A1": {
+    "hobbyOne": "Futbol oynamak",
+    "hobbyTwo": "Fotoğrafçılık",
+    "hobbyThree": "Gitar çalmak",
+    "hobbyFour": "Yüzme",
+    "hobbyFive": "Yemek pişirme",
+    "hobbySix": "Seyahat",
+    "hobbySeven": "Kitap okuma",
+    "hobbyEight": "Bahçecilik",
+    "hobbyNine": "Dans",
+    "hobbyTen": "Dil öğrenimi"
+  },
+  "themeTextTitleRoutine_A1": {
+    "routineOne": "Günlük planlar",
+    "routineTwo": "Akşam planları",
+    "routineThree": "Hafta sonu",
+    "routineFour": "Spor yapmak",
+    "routineFive": "Birlikte yemek pişirmek",
+    "routineSix": "Şehir gezisi",
+    "routineSeven": "Birlikte çalışmak",
+    "routineEight": "Müzikle ilgilenmek",
+    "routineNine": "Kahve içmek",
+    "routineTen": "Parkta"
+  },
+  "themeTextTitleShopping_A1": {
+    "shoppingOne": "Süpermarkette",
+    "shoppingTwo": "Kıyafet aramak",
+    "shoppingThree": "Fırında",
+    "shoppingFour": "Online alışveriş",
+    "shoppingFive": "Pazarda",
+    "shoppingSix": "Ayakkabı mağazasında",
+    "shoppingSeven": "Mobilya alışverişi",
+    "shoppingEight": "Bitpazarında",
+    "shoppingNine": "Akşam yemeği",
+    "shoppingTen": "Kitapçıda"
+  },
+  "themeTextTitleTravel_A1": {
+    "travelOne": "Bavul hazırlamak",
+    "travelTwo": "İstasyonda",
+    "travelThree": "Otelde",
+    "travelFour": "Deniz tatili",
+    "travelFive": "Şehir turu",
+    "travelSix": "Restoranda",
+    "travelSeven": "Havalimanında",
+    "travelEight": "Dağlarda",
+    "travelNine": "Hediyelik eşya almak",
+    "travelTen": "Eve dönüş"
+  },
+  "themeTextTitleWork_A1": {
+    "workOne": "İş günüm",
+    "workTwo": "Belge aramak",
+    "workThree": "Üniversitede",
+    "workFour": "İşim",
+    "workFive": "Ödev",
+    "workSix": "Şantiyedeki işim",
+    "workSeven": "Evden çalışmak",
+    "workEight": "Depoda çalışmak",
+    "workNine": "Toplantı",
+    "workTen": "Öğle arası"
+  },
+  "themeTextTitleBasic_A2": {
+    "basicOne": "Almanca kursunda",
+    "basicTwo": "Tandem partneri",
+    "basicThree": "Üniversitede",
+    "basicFour": "Kütüphanede",
+    "basicFive": "Grup projesi",
+    "basicSix": "Dil gezisi",
+    "basicSeven": "Yeni öğrenci",
+    "basicEight": "Online kurs",
+    "basicNine": "Çalışma grubu",
+    "basicTen": "Sınav partneri"
+  },
+  "themeTextTitleHobby_A2": {
+    "hobbyOne": "Dağ yürüyüşü",
+    "hobbyTwo": "Fotoğrafçılık",
+    "hobbyThree": "Resim yapma",
+    "hobbyFour": "Dans",
+    "hobbyFive": "Futbol",
+    "hobbySix": "Yüzme",
+    "hobbySeven": "Masa oyunları",
+    "hobbyEight": "Masa oyunları ve mantık",
+    "hobbyNine": "Satranç",
+    "hobbyTen": "Filmler"
+  },
+  "themeTextTitleRoutine_A2": {
+    "routineOne": "Yeni komşu",
+    "routineTwo": "Kafede buluşma",
+    "routineThree": "Partide",
+    "routineFour": "Yeni meslektaşlar",
+    "routineFive": "Spor kulübünde",
+    "routineSix": "Trende karşılaşma",
+    "routineSeven": "Parkta köpekle",
+    "routineEight": "Partner arayışı",
+    "routineNine": "Konserde",
+    "routineTen": "Yeni ev arkadaşı"
+  },
+  "themeTextTitleShopping_A2": {
+    "shoppingOne": "Süpermarkette",
+    "shoppingTwo": "Kıyafet alışverişi",
+    "shoppingThree": "Pazarda",
+    "shoppingFour": "Online alışveriş",
+    "shoppingFive": "Mobilya mağazasında",
+    "shoppingSix": "Fırında",
+    "shoppingSeven": "Ayakkabı alışverişi",
+    "shoppingEight": "Hediye",
+    "shoppingNine": "Elektronik mağazasında",
+    "shoppingTen": "Büyük alışveriş"
+  },
+  "themeTextTitleTravel_A2": {
+    "travelOne": "Yolculuk hazırlığı",
+    "travelTwo": "Havalimanında",
+    "travelThree": "Otele varış",
+    "travelFour": "Plajda",
+    "travelFive": "Gezi",
+    "travelSix": "Restoranda",
+    "travelSeven": "Yol sorma",
+    "travelEight": "Tatilde sorunlar",
+    "travelNine": "Hediye alma",
+    "travelTen": "Eve dönüş"
+  },
+  "themeTextTitleWork_A2": {
+    "workOne": "İş görüşmesi",
+    "workTwo": "Ödev",
+    "workThree": "İlk iş günü",
+    "workFour": "Sunum",
+    "workFive": "Mesleki gelişim",
+    "workSix": "Ev-ofiste",
+    "workSeven": "Staj",
+    "workEight": "Sınav",
+    "workNine": "Dil kursu",
+    "workTen": "İlk müşteri"
+  },
+  "themeTextTitleBasic_B1": {
+    "basicOne": "Partide",
+    "basicTwo": "İlk randevu",
+    "basicThree": "Dil tandem ortaklığı",
+    "basicFour": "Trende karşılaşma",
+    "basicFive": "Yeni meslektaş",
+    "basicSix": "Seminerde",
+    "basicSeven": "Köpekle yürüyüşte",
+    "basicEight": "Yeni komşular",
+    "basicNine": "Spor kulübünde",
+    "basicTen": "Hostelde"
+  },
+  "themeTextTitleHobby_B1": {
+    "hobbyOne": "Gece fotoğrafçılığı",
+    "hobbyTwo": "Dağcılık",
+    "hobbyThree": "Piyano çalmak",
+    "hobbyFour": "Oyun geliştirme",
+    "hobbyFive": "Rüzgar sörfü",
+    "hobbySix": "Tiyatroda oynamak",
+    "hobbySeven": "Okçuluk",
+    "hobbyEight": "Motosiklet restorasyonu",
+    "hobbyNine": "Hamur işi pişirmek",
+    "hobbyTen": "Geocaching"
+  },
+  "themeTextTitleRoutine_B1": {
+    "routineOne": "Sabahın erken saatleri",
+    "routineTwo": "Kahvaltı ve işe gidiş",
+    "routineThree": "Ofiste",
+    "routineFour": "Öğle arası",
+    "routineFive": "Mesai bitimi",
+    "routineSix": "İş sonrası spor",
+    "routineSeven": "Akşam yemeği ve dinlenme",
+    "routineEight": "Yatağa hazırlık",
+    "routineNine": "Akşam yürüyüşü",
+    "routineTen": "Ev temizliği"
+  },
+  "themeTextTitleShopping_B1": {
+    "shoppingOne": "Kıyafet alışverişi",
+    "shoppingTwo": "Süpermarkette",
+    "shoppingThree": "Online teknoloji alışverişi",
+    "shoppingFour": "Bitpazarında",
+    "shoppingFive": "Hediye arayışı",
+    "shoppingSix": "Ürün iadesi",
+    "shoppingSeven": "Yapı marketinde",
+    "shoppingEight": "Eczanede",
+    "shoppingNine": "Pet shopta",
+    "shoppingTen": "İkinci el mağazasında"
+  },
+  "themeTextTitleTravel_B1": {
+    "travelOne": "Şehir gezisi",
+    "travelTwo": "Plaj tatili",
+    "travelThree": "Dağ yürüyüşü",
+    "travelFour": "Araba yolculuğu",
+    "travelFive": "Asya seyahati",
+    "travelSix": "Gemi turu",
+    "travelSeven": "Kamping",
+    "travelEight": "Kış tatili",
+    "travelNine": "Dil gezisi",
+    "travelTen": "Safari"
+  },
+  "themeTextTitleWork_B1": {
+    "workOne": "İş görüşmesi",
+    "workTwo": "Proje yönetimi",
+    "workThree": "Yurt dışı sömestri",
+    "workFour": "Ofiste sunum",
+    "workFive": "Sınavlara hazırlık",
+    "workSix": "Müşteri hizmetleri",
+    "workSeven": "Yüksek lisans tezi",
+    "workEight": "İş seyahati",
+    "workNine": "Staj",
+    "workTen": "Kurslar"
+  },
+  "textTaskSession": {
+    "allUsed": "Tüm kelimeler kullanıldı!",
+    "errorText": "Metin seçilmedi",
+    "back": "Listeye geri dön"
+  },
+  "exitSessionModal": {
+    "text": "Yarı yolda durmak çok yazık! Sekmeyi şimdi kapatırsanız emekleriniz kaydedilmeyecektir.",
+    "continueLesson": "Derse devam et",
+    "cancelLesson": "Çık"
+  },
+  "premiumBannerText": {
+    "text": "Platformdan en iyi şekilde yararlan, öğrenimini hızlandır."
+  },
+  "rulesModal": {
+    "text": "Dilbilgisi ipucu cevapladıktan sonra kullanılabilir!"
+  },
+  "footerNavLabel": {
+    "learn": "Öğren",
+    "games": "Oyunlar",
+    "home": "Ana Sayfa",
+    "events": "Etkinlikler",
+    "cabinet": "Hesap"
+  },
+  "speakTopics": {
+    "speak": "Tanışma ve sohbet",
+    "food": "Yiyecek ve alışveriş",
+    "transport": "Seyahat ve ulaşım",
+    "city": "Şehir hizmetleri ve günlük yaşam",
+    "health": "Sağlık",
+    "work": "İş ve kariyer"
+  },
+  "speakThemes": {
+    "firstmeet": "Tanışma",
+    "acquaintance": "Tanışma 2",
+    "secondmeet": "Buluşma",
+    "family_talk": "Sohbet",
+    "weekend_plans": "Planlar",
+    "friend_call": "Telefon görüşmesi",
+    "hobby_talk": "Hobiler",
+    "party_talk": "Parti",
+    "cafe_order": "Kahve siparişi",
+    "restaurant_dinner": "Restoran",
+    "store_checkout": "Kasada",
+    "order_eat": "Yemek siparişi",
+    "consultation_talk": "Danışma",
+    "train_station": "İstasyonda",
+    "train_ticket": "Bilet kontrolü",
+    "taxi_berlin": "Taksi",
+    "bus_talk": "Otobüste",
+    "hotel_checkin": "Otel",
+    "border_check": "Sınır",
+    "airport_talk": "Havalimanı",
+    "info_talk": "Danışma merkezi",
+    "bank_account": "Banka",
+    "apartment_rent": "Kira",
+    "clothes_shopping": "Alışveriş",
+    "shopping": "Alışveriş 2",
+    "post_office": "Postane",
+    "police_talk": "Polis",
+    "barbershop": "Kuaför",
+    "doctor_visit": "Doktor randevusu",
+    "pharmacy_vitamins": "Eczane",
+    "insurance": "Sigorta",
+    "at_doctor": "Doktorda",
+    "dentist": "Diş hekimi",
+    "veterinary": "Veteriner",
+    "job_looking": "İş arama",
+    "job_interview": "İş görüşmesi",
+    "bos_talk": "Yönetici ile konuşma",
+    "vacation": "Tatil",
+    "salary_talk": "Maaş",
+    "dismissal_talk": "İşten çıkarma"
+  },
+  "speakIndexPage": {
+    "title": "Konuşma pratiği",
+    "bannerText": "Gerçek örneklerle konuşma becerilerini geliştir",
+    "modalTitle": "Konuşma pratiği",
+    "modalText": "Gerçek diyaloglarla iletişim becerilerinizi geliştirin! Sunulan hazır cevaplardan birini seçebilir, klavyeden manuel olarak yazabilir veya sadece mikrofon düğmesine basarak sesli bir şekilde söyleyebilirsiniz."
+  },
+  "rankModal": {
+    "title": "YENİ RÜTBE",
+    "rankedLabel": "Rütbe",
+    "accept": "KABUL ET"
+  },
+  "premiumBanner": {
+    "textBanner": "Platformdan en iyi şekilde yararlan, öğrenimini hızlandır."
+  },
+  "netWork": {
+    "successTitle": "Bağlantı sağlandı!",
+    "notSuccessTitle": "Hata! İnternet yok",
+    "successText": "Çalışmaya devam ediyoruz...",
+    "notSuccessText": "Ağ bağlantısı bekleniyor..."
+  },
+  "termsBlock": {
+    "first": "Kaydolarak şunları kabul etmiş olursunuz:",
+    "second": "Kullanım Koşulları",
+    "third": "ve",
+    "fourth": "Gizlilik Politikası"
+  },
+  "languagePage": {
+    "title": "Uygulama dili",
+    "placeholder": "Dil ara...",
+    "notfound": "Hiçbir şey bulunamadı",
+    "further": "Devam et"
+  },
+  "statistics": {
+    "title": "Kelime öğrenme ve tematik seviyeleri tamamlama konusundaki istatistikleriniz ve ilerlemeniz"
+  },
+  "restoreComputed": {
+    "restoring": "Geri yükleniyor...",
+    "restore": "Satın almaları geri yükle."
+  },
+  "submitComputed": {
+    "sync": "Senkronize ediliyor...",
+    "getPlus": "PLUS Satın Al"
+  },
+  "pay": {
+    "banner": "Uygulamanın tüm özelliklerine tam erişim",
+    "sales": "Aktivitelerden kazanılan indirimleri uygula",
+    "triggerToastSuccess": "Satın alma geri yüklendi!",
+    "triggerToastNotFound": "Aktif abonelik bulunamadı",
+    "triggerToastError": "Geri yükleme sırasında hata oluştu",
+    "triggerToastIsPlus": "Zaten aktif bir PLUS aboneliğiniz var!"
+  },
+  "examSession": {
+    "ready": "Teste hazır mısınız?",
+    "cardTextOne": "Sizi",
+    "cardTextTwo": "aşama ve",
+    "cardTextThree": "görev bekliyor.",
+    "begin": "Testi başlat",
+    "listen": "Sesi dinleyin:",
+    "check": "Kontrol ediliyor...",
+    "send": "Cevabı gönder",
+    "record": "Kayıt",
+    "great": "Tebrikler!",
+    "result": "Şu seviye için sonucunuz:",
+    "save": "İlerleme kaydediliyor...",
+    "correctly": "Doğru:",
+    "back": "Geri dön",
+    "interrupt": "Testi yarıda kes?",
+    "modalText": "Bu denemedeki ilerlemeniz kaybolacak. Emin misiniz?",
+    "continue": "Devam et",
+    "leave": "Çıkış yap",
+    "placeHolder": "Cevabınızı buraya yazın...",
+    "say": "Söyleyin:"
+  },
+  "speakSession": {
+    "title": "Konuşma pratiği",
+    "words": "Diyalog kelimeleri",
+    "wordsText": "Konuşmaya başlamadan önce kelimeleri öğrenin veya tekrarlayın. Bu, kendinizi daha güvende hissetmenize yardımcı olur!",
+    "learn": "Başla",
+    "dialogue": "Diyalog",
+    "dialogueText": "Telaffuz ve konuşma pratiği yapın, karşınızdakini dinleyin ve etkileşimli formatta cevapları seçin.",
+    "back": "Geri",
+    "goodJob": "Harika iş!",
+    "goodJobTitle": "Bu diyaloğu tamamladınız. Aynen böyle devam!",
+    "list": "Geri dön",
+    "repeat": "Tekrar et",
+    "start": "Öğrenmeye başla",
+    "choice": "Cevap seçin:",
+    "placeHolder": "Cevabı yazın veya söyleyin...",
+    "hoverVoice": "Sesli söyle",
+    "end": "Bitir",
+    "further": "İleri"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "Tekrar dene?",
+    "textPartOne": "Doğru cevap verdiniz",
+    "textPartTwo": "Devam etmek için bir hak satın alın.",
+    "price": "Fiyat:",
+    "youHave": "Sahip olduğunuz:",
+    "showADS": "Reklam izle",
+    "buyBy": "Şunun için satın al",
+    "toThemes": "Konulara dön",
+    "repeat": "Tekrar et"
   }
 }

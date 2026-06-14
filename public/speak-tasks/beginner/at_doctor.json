@@ -1,0 +1,628 @@
+{
+  "start": {
+    "botText": "Guten Tag, Frau Schmidt! Was fehlt Ihnen denn?",
+    "botTranslation": {
+      "ru-RU": "Добрый день, госпожа Шмидт! На что жалуетесь? (Что Вас беспокоит?)",
+      "en-US": "Good day, Ms. Schmidt! What seems to be the problem?",
+      "ar-SA": "طاب يومك يا سيدة شميدت! مما تشتكين؟",
+      "es-ES": "¡Buen día, Sra. Schmidt! ¿Qué le pasa?",
+      "fr-FR": "Bonjour, Madame Schmidt ! De quoi souffrez-vous ?",
+      "hi-IN": "शुभ दिन, श्रीमती श्मिट! आपको क्या समस्या है?",
+      "pl-PL": "Dzień dobry, pani Schmidt! Co pani dolega?",
+      "ro-RO": "Bună ziua, doamnă Schmidt! Ce vă supără?",
+      "tr-TR": "İyi günler Bayan Schmidt! Şikayetiniz nedir?",
+      "uk-UA": "Добрий день, пані Шмідт! На що скаржитесь?",
+      "uz-UZ": "Xayrli kun, Shmidt xonim! Sizni nima bezovta qilyapti?"
+    },
+    "vocabulary": [
+      {
+        "german": "was fehlt",
+        "translation": {
+          "ru-RU": "что болит",
+          "en-US": "what's wrong",
+          "ar-SA": "ما خطبك",
+          "es-ES": "qué pasa",
+          "fr-FR": "ce qui ne va pas",
+          "hi-IN": "क्या हुआ",
+          "pl-PL": "co dolega",
+          "ro-RO": "ce vă doare",
+          "tr-TR": "neyiniz var",
+          "uk-UA": "що болить",
+          "uz-UZ": "nima bo'ldi"
+        }
+      },
+      {
+        "german": "die Halsschmerzen",
+        "translation": {
+          "ru-RU": "боль в горле",
+          "en-US": "sore throat",
+          "ar-SA": "ألم الحلق",
+          "es-ES": "dolor de garganta",
+          "fr-FR": "mal de gorge",
+          "hi-IN": "गले में दर्द",
+          "pl-PL": "ból gardła",
+          "ro-RO": "durere de gât",
+          "tr-TR": "boğaz ağrısı",
+          "uk-UA": "біль у горлі",
+          "uz-UZ": "tomoq og'rig'i"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag. Ich habe Halsschmerzen und Husten.",
+        "translation": {
+          "ru-RU": "Добрый день. У меня болит горло и кашель.",
+          "en-US": "Good day. I have a sore throat and a cough.",
+          "ar-SA": "طاب يومك. أعاني من التهاب في الحلق وسعال.",
+          "es-ES": "Buen día. Tengo dolor de garganta y tos.",
+          "fr-FR": "Bonjour. J'ai mal à la gorge et je tousse.",
+          "hi-IN": "शुभ दिन। मेरे गले में दर्द और खांसी है।",
+          "pl-PL": "Dzień dobry. Boli mnie gardło i mam kaszel.",
+          "ro-RO": "Bună ziua. Mă doare gâtul și am tuse.",
+          "tr-TR": "İyi günler. Boğaz ağrım ve öksürüğüm var.",
+          "uk-UA": "Добрий день. У мене болить горло і кашель.",
+          "uz-UZ": "Xayrli kun. Tomog'im og'riyapti va yo'talyapman."
+        },
+        "nextStep": "seit_wann"
+      },
+      {
+        "text": "Hallo. Mein Hals tut weh und ich fühle mich nicht gut.",
+        "translation": {
+          "ru-RU": "Здравствуйте. Мое горло болит, и я чувствую себя нехорошо.",
+          "en-US": "Hello. My throat hurts and I don't feel well.",
+          "ar-SA": "مرحباً. حلقي يؤلمني ولا أشعر أنني بحالة جيدة.",
+          "es-ES": "Hola. Me duele la garganta y no me siento bien.",
+          "fr-FR": "Bonjour. Ma gorge me fait mal et je ne me sens pas bien.",
+          "hi-IN": "नमस्ते। मेरे गले में दर्द है और मुझे अच्छा नहीं लग रहा है।",
+          "pl-PL": "Dzień dobry. Boli mnie gardło i nie czuję się dobrze.",
+          "ro-RO": "Bună. Mă doare gâtul și nu mă simt bine.",
+          "tr-TR": "Merhaba. Boğazım ağrıyor ve kendimi iyi hissetmiyorum.",
+          "uk-UA": "Вітаю. Моє горло болить, і я почуваюся зле.",
+          "uz-UZ": "Salom. Tomog'im og'riyapti va o'zimni yaxshi his qilmayapman."
+        },
+        "nextStep": "seit_wann"
+      }
+    ],
+    "defaultNext": "seit_wann"
+  },
+  "seit_wann": {
+    "botText": "Seit wann haben Sie diese Schmerzen?",
+    "botTranslation": {
+      "ru-RU": "С какого времени у Вас эти боли?",
+      "en-US": "Since when have you had this pain?",
+      "ar-SA": "منذ متى وأنت تعانين من هذا الألم؟",
+      "es-ES": "¿Desde cuándo tiene estos dolores?",
+      "fr-FR": "Depuis quand avez-vous ces douleurs ?",
+      "hi-IN": "आपको यह दर्द कब से है?",
+      "pl-PL": "Od kiedy ma pani te bóle?",
+      "ro-RO": "De când aveți aceste dureri?",
+      "tr-TR": "Ne zamandan beri bu ağrılarınız var?",
+      "uk-UA": "Відколи у Вас ці болі?",
+      "uz-UZ": "Qachondan beri bu og'riqlar bor?"
+    },
+    "vocabulary": [
+      {
+        "german": "seit wann",
+        "translation": {
+          "ru-RU": "с каких пор",
+          "en-US": "since when",
+          "ar-SA": "منذ متى",
+          "es-ES": "desde cuándo",
+          "fr-FR": "depuis quand",
+          "hi-IN": "कब से",
+          "pl-PL": "od kiedy",
+          "ro-RO": "de când",
+          "tr-TR": "ne zamandan beri",
+          "uk-UA": "відколи",
+          "uz-UZ": "qachondan beri"
+        }
+      },
+      {
+        "german": "die Schmerzen",
+        "translation": {
+          "ru-RU": "боли",
+          "en-US": "the pains",
+          "ar-SA": "الآلام",
+          "es-ES": "los dolores",
+          "fr-FR": "les douleurs",
+          "hi-IN": "दर्द",
+          "pl-PL": "bóle",
+          "ro-RO": "durerile",
+          "tr-TR": "ağrılar",
+          "uk-UA": "болі",
+          "uz-UZ": "og'riqlar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Seit gestern Abend.",
+        "translation": {
+          "ru-RU": "Со вчерашнего вечера.",
+          "en-US": "Since yesterday evening.",
+          "ar-SA": "منذ مساء أمس.",
+          "es-ES": "Desde ayer por la tarde.",
+          "fr-FR": "Depuis hier soir.",
+          "hi-IN": "कल शाम से।",
+          "pl-PL": "Od wczoraj wieczorem.",
+          "ro-RO": "De ieri seară.",
+          "tr-TR": "Dün akşamdan beri.",
+          "uk-UA": "Від учорашнього вечора.",
+          "uz-UZ": "Kecha kechqurundan beri."
+        },
+        "nextStep": "fieber"
+      },
+      {
+        "text": "Schon seit zwei Tagen.",
+        "translation": {
+          "ru-RU": "Уже как два дня.",
+          "en-US": "Already for two days.",
+          "ar-SA": "منذ يومين بالفعل.",
+          "es-ES": "Desde hace ya dos días.",
+          "fr-FR": "Depuis déjà deux jours.",
+          "hi-IN": "पहले से ही दो दिनों से।",
+          "pl-PL": "Już od dwóch dni.",
+          "ro-RO": "Deja de două zile.",
+          "tr-TR": "İki günden beri.",
+          "uk-UA": "Вже як два дні.",
+          "uz-UZ": "Ikki kundan beri."
+        },
+        "nextStep": "fieber"
+      }
+    ],
+    "defaultNext": "fieber"
+  },
+  "fieber": {
+    "botText": "Haben Sie auch Fieber?",
+    "botTranslation": {
+      "ru-RU": "У Вас также есть температура?",
+      "en-US": "Do you also have a fever?",
+      "ar-SA": "هل تعانين أيضاً من الحمى؟",
+      "es-ES": "¿También tiene fiebre?",
+      "fr-FR": "Avez-vous aussi de la fièvre ?",
+      "hi-IN": "क्या आपको भी बुखार है?",
+      "pl-PL": "Czy ma pani też gorączkę?",
+      "ro-RO": "Aveți și febră?",
+      "tr-TR": "Ateşiniz de var mı?",
+      "uk-UA": "У Вас також є температура?",
+      "uz-UZ": "Isitmangiz ham bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Fieber",
+        "translation": {
+          "ru-RU": "температура",
+          "en-US": "the fever",
+          "ar-SA": "الحمى",
+          "es-ES": "la fiebre",
+          "fr-FR": "la fièvre",
+          "hi-IN": "बुखार",
+          "pl-PL": "gorączka",
+          "ro-RO": "febra",
+          "tr-TR": "ateş",
+          "uk-UA": "температура",
+          "uz-UZ": "isitma"
+        }
+      },
+      {
+        "german": "zum Glück",
+        "translation": {
+          "ru-RU": "к счастью",
+          "en-US": "fortunately",
+          "ar-SA": "لحسن الحظ",
+          "es-ES": "afortunadamente",
+          "fr-FR": "heureusement",
+          "hi-IN": "सौभाग्य से",
+          "pl-PL": "na szczęście",
+          "ro-RO": "din fericire",
+          "tr-TR": "neyse ki",
+          "uk-UA": "на щастя",
+          "uz-UZ": "xayriyatki"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, ich habe leichtes Fieber.",
+        "translation": {
+          "ru-RU": "Да, у меня небольшая температура.",
+          "en-US": "Yes, I have a slight fever.",
+          "ar-SA": "نعم، أعاني من حمى خفيفة.",
+          "es-ES": "Sí, tengo un poco de fiebre.",
+          "fr-FR": "Oui, j'ai une légère fièvre.",
+          "hi-IN": "हाँ, मुझे हल्का बुखार है।",
+          "pl-PL": "Tak, mam lekką gorączkę.",
+          "ro-RO": "Da, am o ușoară febră.",
+          "tr-TR": "Evet, hafif ateşim var.",
+          "uk-UA": "Так, у мене невелика температура.",
+          "uz-UZ": "Ha, menda ozgina isitma bor."
+        },
+        "nextStep": "untersuchung"
+      },
+      {
+        "text": "Nein, ich habe zum Glück kein Fieber.",
+        "translation": {
+          "ru-RU": "Нет, к счастью, у меня нет температуры.",
+          "en-US": "No, luckily I don't have a fever.",
+          "ar-SA": "لا، لحسن الحظ ليس لدي حمى.",
+          "es-ES": "No, afortunadamente no tengo fiebre.",
+          "fr-FR": "Non, heureusement je n'ai pas de fièvre.",
+          "hi-IN": "नहीं, सौभाग्य से मुझे बुखार नहीं है।",
+          "pl-PL": "Nie, na szczęście nie mam gorączki.",
+          "ro-RO": "Nu, din fericire nu am febră.",
+          "tr-TR": "Hayır, neyse ki ateşim yok.",
+          "uk-UA": "Ні, на щастя, у мене немає температури.",
+          "uz-UZ": "Yo'q, xayriyatki, isitmam yo'q."
+        },
+        "nextStep": "untersuchung"
+      }
+    ],
+    "defaultNext": "untersuchung"
+  },
+  "untersuchung": {
+    "botText": "Machen Sie bitte den Mund auf. Ich möchte Ihren Hals sehen.",
+    "botTranslation": {
+      "ru-RU": "Откройте, пожалуйста, рот. Я хочу осмотреть Ваше горло.",
+      "en-US": "Please open your mouth. I want to see your throat.",
+      "ar-SA": "يرجى فتح فمك. أريد أن أرى حلقك.",
+      "es-ES": "Por favor, abra la boca. Quiero ver su garganta.",
+      "fr-FR": "Veuillez ouvrir la bouche. Je voudrais voir votre gorge.",
+      "hi-IN": "कृपया अपना मुंह खोलें। मैं आपका गला देखना चाहता हूँ।",
+      "pl-PL": "Proszę otworzyć usta. Chciałbym obejrzeć pani gardło.",
+      "ro-RO": "Vă rog să deschideți gura. Vreau să văd gâtul.",
+      "tr-TR": "Lütfen ağzınızı açın. Boğazınızı görmek istiyorum.",
+      "uk-UA": "Відкрийте, будь ласка, рот. Я хочу оглянути Ваше горло.",
+      "uz-UZ": "Iltimos, og'zingizni oching. Men tomog'ingizni ko'rmoqchiman."
+    },
+    "vocabulary": [
+      {
+        "german": "den Mund",
+        "translation": {
+          "ru-RU": "рот",
+          "en-US": "the mouth",
+          "ar-SA": "الفم",
+          "es-ES": "la boca",
+          "fr-FR": "la bouche",
+          "hi-IN": "मुंह",
+          "pl-PL": "usta",
+          "ro-RO": "gura",
+          "tr-TR": "ağız",
+          "uk-UA": "рот",
+          "uz-UZ": "og'iz"
+        }
+      },
+      {
+        "german": "der Hals",
+        "translation": {
+          "ru-RU": "горло",
+          "en-US": "the throat",
+          "ar-SA": "الحلق",
+          "es-ES": "la garganta",
+          "fr-FR": "la gorge",
+          "hi-IN": "गला",
+          "pl-PL": "gardło",
+          "ro-RO": "gâtul",
+          "tr-TR": "boğaz",
+          "uk-UA": "горло",
+          "uz-UZ": "tomoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, natürlich. Aaaaah.",
+        "translation": {
+          "ru-RU": "Да, конечно. Ааааа.",
+          "en-US": "Yes, of course. Aaaaah.",
+          "ar-SA": "نعم، بالطبع. آآآآه.",
+          "es-ES": "Sí, por supuesto. Aaaaah.",
+          "fr-FR": "Oui, bien sûr. Aaaaah.",
+          "hi-IN": "हाँ बिल्कुल। आआआआह.",
+          "pl-PL": "Tak, oczywiście. Aaaaah.",
+          "ro-RO": "Da, desigur. Aaaaah.",
+          "tr-TR": "Evet, elbette. Aaaaah.",
+          "uk-UA": "Так, звісно. Ааааа.",
+          "uz-UZ": "Ha, albatta. Aaaaa."
+        },
+        "nextStep": "diagnose"
+      },
+      {
+        "text": "Gerne. Ist es schlimm?",
+        "translation": {
+          "ru-RU": "С удовольствием (пожалуйста). Всё плохо?",
+          "en-US": "Gladly. Is it bad?",
+          "ar-SA": "بكل سرور. هل الأمر سيء؟",
+          "es-ES": "Con gusto. ¿Es grave?",
+          "fr-FR": "Volontiers. Est-ce grave ?",
+          "hi-IN": "खुशी से। क्या यह बुरा है?",
+          "pl-PL": "Proszę. Czy to coś poważnego?",
+          "ro-RO": "Cu plăcere. Este grav?",
+          "tr-TR": "Memnuniyetle. Kötü mü?",
+          "uk-UA": "Залюбки. Це серйозно?",
+          "uz-UZ": "Bajonidil. Jiddiy emasmi?"
+        },
+        "nextStep": "diagnose"
+      }
+    ],
+    "defaultNext": "diagnose"
+  },
+  "diagnose": {
+    "botText": "Ihr Hals ist sehr rot. Sie haben eine Erkältung. Ich verschreibe Ihnen ein Medikament.",
+    "botTranslation": {
+      "ru-RU": "Ваше горло очень красное. У Вас простуда. Я выпишу Вам лекарство.",
+      "en-US": "Your throat is very red. You have a cold. I will prescribe you a medication.",
+      "ar-SA": "حلقك أحمر جداً. أنت مصابة بنزلة برد. سأصف لك دواءً.",
+      "es-ES": "Su garganta está muy roja. Tiene un resfriado. Le recetaré un medicamento.",
+      "fr-FR": "Votre gorge est très rouge. Vous avez un rhume. Je vais vous prescrire un médicament.",
+      "hi-IN": "आपका गला बहुत लाल है। आपको सर्दी है। मैं आपको एक दवा लिख दूँगा।",
+      "pl-PL": "Pani gardło jest bardzo czerwone. Ma pani przeziębienie. Przepiszę pani lekarstwo.",
+      "ro-RO": "Gâtul dumneavoastră este foarte roșu. Aveți o răceală. Vă voi prescrie un medicament.",
+      "tr-TR": "Boğazınız çok kırmızı. Soğuk algınlığınız var. Size bir ilaç yazacağım.",
+      "uk-UA": "Ваше горло дуже червоне. У Вас застуда. Я випишу Вам ліки.",
+      "uz-UZ": "Tomog'ingiz juda qizarib ketibdi. Shamollagansiz. Men sizga dori yozib beraman."
+    },
+    "vocabulary": [
+      {
+        "german": "die Erkältung",
+        "translation": {
+          "ru-RU": "простуда",
+          "en-US": "the cold",
+          "ar-SA": "الزكام",
+          "es-ES": "el resfriado",
+          "fr-FR": "le rhume",
+          "hi-IN": "सर्दी",
+          "pl-PL": "przeziębienie",
+          "ro-RO": "răceala",
+          "tr-TR": "soğuk algınlığı",
+          "uk-UA": "застуда",
+          "uz-UZ": "shamollash"
+        }
+      },
+      {
+        "german": "das Medikament",
+        "translation": {
+          "ru-RU": "лекарство",
+          "en-US": "the medication",
+          "ar-SA": "الدواء",
+          "es-ES": "el medicamento",
+          "fr-FR": "le médicament",
+          "hi-IN": "दवा",
+          "pl-PL": "lekarstwo",
+          "ro-RO": "medicamentul",
+          "tr-TR": "ilaç",
+          "uk-UA": "ліки",
+          "uz-UZ": "dori"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke. Wie muss ich das Medikament nehmen?",
+        "translation": {
+          "ru-RU": "Спасибо. Как мне нужно принимать лекарство?",
+          "en-US": "Thank you. How must I take the medication?",
+          "ar-SA": "شكراً. كيف يجب أن أتناول الدواء؟",
+          "es-ES": "Gracias. ¿Cómo debo tomar el medicamento?",
+          "fr-FR": "Merci. Comment dois-je prendre le médicament ?",
+          "hi-IN": "धन्यवाद। मुझे दवा कैसे लेनी चाहिए?",
+          "pl-PL": "Dziękuję. Jak muszę przyjmować to lekarstwo?",
+          "ro-RO": "Mulțumesc. Cum trebuie să iau medicamentul?",
+          "tr-TR": "Teşekkürler. İlacı nasıl almalıyım?",
+          "uk-UA": "Дякую. Як мені потрібно приймати ліки?",
+          "uz-UZ": "Rahmat. Dorini qanday qabul qilishim kerak?"
+        },
+        "nextStep": "rezept"
+      },
+      {
+        "text": "Vielen Dank. Wie oft soll ich es einnehmen?",
+        "translation": {
+          "ru-RU": "Большое спасибо. Как часто я должна его принимать?",
+          "en-US": "Thank you very much. How often should I take it?",
+          "ar-SA": "شكراً جزيلاً. كم مرة يجب أن أتناوله؟",
+          "es-ES": "Muchas gracias. ¿Con qué frecuencia debo tomarlo?",
+          "fr-FR": "Merci beaucoup. À quelle fréquence dois-je le prendre ?",
+          "hi-IN": "बहुत-बहुत धन्यवाद। मुझे इसे कितनी बार लेना चाहिए?",
+          "pl-PL": "Bardzo dziękuję. Jak często mam je zażywać?",
+          "ro-RO": "Vă mulțumesc mult. Cât de des ar trebui să-l iau?",
+          "tr-TR": "Çok teşekkürler. Ne sıklıkla almalıyım?",
+          "uk-UA": "Велике дякую. Як часто я повинна його приймати?",
+          "uz-UZ": "Katta rahmat. Uni qanchalik tez-tez qabul qilishim kerak?"
+        }
+      }
+    ],
+    "defaultNext": "rezept"
+  },
+  "rezept": {
+    "botText": "Nehmen Sie es dreimal täglich nach dem Essen.",
+    "botTranslation": {
+      "ru-RU": "Принимайте его три раза в день после еды.",
+      "en-US": "Take it three times a day after eating.",
+      "ar-SA": "تناوليه ثلاث مرات في اليوم بعد الأكل.",
+      "es-ES": "Tómelo tres veces al día después de comer.",
+      "fr-FR": "Prenez-le trois fois par jour après les repas.",
+      "hi-IN": "इसे दिन में तीन बार खाने के बाद लें।",
+      "pl-PL": "Proszę brać to trzy razy dziennie po jedzeniu.",
+      "ro-RO": "Luați-l de trei ori pe zi după masă.",
+      "tr-TR": "Günde üç kez yemekten sonra alın.",
+      "uk-UA": "Приймайте його тричі на день після їжі.",
+      "uz-UZ": "Uni ovqatdan keyin kuniga uch marta qabul qiling."
+    },
+    "vocabulary": [
+      {
+        "german": "das Essen",
+        "translation": {
+          "ru-RU": "еда",
+          "en-US": "the food",
+          "ar-SA": "الطعام",
+          "es-ES": "la comida",
+          "fr-FR": "le repas",
+          "hi-IN": "खाना",
+          "pl-PL": "jedzenie",
+          "ro-RO": "mâncarea",
+          "tr-TR": "yemek",
+          "uk-UA": "їжа",
+          "uz-UZ": "ovqat"
+        }
+      },
+      {
+        "german": "ein Attest",
+        "translation": {
+          "ru-RU": "справка",
+          "en-US": "a certificate",
+          "ar-SA": "شهادة طبية",
+          "es-ES": "un justificante",
+          "fr-FR": "un certificat",
+          "hi-IN": "एक प्रमाण पत्र",
+          "pl-PL": "zaświadczenie",
+          "ro-RO": "o adeverință",
+          "tr-TR": "bir rapor",
+          "uk-UA": "довідка",
+          "uz-UZ": "ma'lumotnoma"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Brauche ich ein Attest für die Arbeit?",
+        "translation": {
+          "ru-RU": "Мне нужна справка (больничный) для работы?",
+          "en-US": "Do I need a doctor's note for work?",
+          "ar-SA": "هل أحتاج إلى شهادة طبية للعمل؟",
+          "es-ES": "¿Necesito un justificante médico para el trabajo?",
+          "fr-FR": "Ai-je besoin d'un certificat pour le travail ?",
+          "hi-IN": "क्या मुझे काम के लिए डॉक्टर के नोट की आवश्यकता है?",
+          "pl-PL": "Czy potrzebuję zwolnienia lekarskiego do pracy?",
+          "ro-RO": "Am nevoie de o adeverință medicală pentru muncă?",
+          "tr-TR": "İş için doktor raporuna ihtiyacım var mı?",
+          "uk-UA": "Мені потрібна довідка (лікарняний) для роботи?",
+          "uz-UZ": "Ish uchun tibbiy ma'lumotnoma kerakmi?"
+        },
+        "nextStep": "krankschreibung"
+      },
+      {
+        "text": "Können Sie mich bitte krankschreiben?",
+        "translation": {
+          "ru-RU": "Можете ли Вы, пожалуйста, выписать мне больничный?",
+          "en-US": "Can you please write me a sick note?",
+          "ar-SA": "هل يمكنك إعطائي إجازة مرضية من فضلك؟",
+          "es-ES": "¿Puede darme la baja médica, por favor?",
+          "fr-FR": "Pouvez-vous s'il vous plaît me faire un arrêt maladie ?",
+          "hi-IN": "क्या आप कृपया मुझे बीमार लिख सकते हैं (सिक नोट दे सकते हैं)?",
+          "pl-PL": "Czy może mi pan wypisać zwolnienie lekarskie?",
+          "ro-RO": "Puteți să-mi dați concediu medical, vă rog?",
+          "tr-TR": "Bana hastalık raporu yazabilir misiniz lütfen?",
+          "uk-UA": "Чи можете Ви, будь ласка, виписати мені лікарняний?",
+          "uz-UZ": "Iltimos, menga kasallik varaqasi yozib bera olasizmi?"
+        },
+        "nextStep": "krankschreibung"
+      }
+    ],
+    "defaultNext": "krankschreibung"
+  },
+  "krankschreibung": {
+    "botText": "Ja, hier ist Ihre Krankschreibung für drei Tage. Gute Besserung!",
+    "botTranslation": {
+      "ru-RU": "Да, вот Ваш больничный на три дня. Выздоравливайте!",
+      "en-US": "Yes, here is your sick note for three days. Get well soon!",
+      "ar-SA": "نعم، هذه إجازتك المرضية لمدة ثلاثة أيام. أتمنى لك الشفاء العاجل!",
+      "es-ES": "Sí, aquí está su baja médica por tres días. ¡Que se mejore!",
+      "fr-FR": "Oui, voici votre arrêt de travail pour trois jours. Bon rétablissement !",
+      "hi-IN": "हाँ, यहाँ तीन दिनों के लिए आपका सिक नोट है। जल्दी ठीक हो जाइए!",
+      "pl-PL": "Tak, oto pani zwolnienie lekarskie na trzy dni. Szybkiego powrotu do zdrowia!",
+      "ro-RO": "Da, iată concediul dumneavoastră medical pentru trei zile. Însănătoșire grabnică!",
+      "tr-TR": "Evet, işte üç günlük hastalık raporunuz. Geçmiş olsun!",
+      "uk-UA": "Так, ось Ваш лікарняний на три дні. Одужуйте!",
+      "uz-UZ": "Ha, mana uch kunga kasallik varaqangiz. Tezroq sog'ayib keting!"
+    },
+    "vocabulary": [
+      {
+        "german": "die Krankschreibung",
+        "translation": {
+          "ru-RU": "больничный",
+          "en-US": "sick note",
+          "ar-SA": "إجازة مرضية",
+          "es-ES": "baja médica",
+          "fr-FR": "arrêt maladie",
+          "hi-IN": "बीमार छुट्टी",
+          "pl-PL": "zwolnienie lekarskie",
+          "ro-RO": "concediu medical",
+          "tr-TR": "hastalık raporu",
+          "uk-UA": "лікарняний",
+          "uz-UZ": "kasallik varaqasi"
+        }
+      },
+      {
+        "german": "gute Besserung",
+        "translation": {
+          "ru-RU": "выздоравливайте",
+          "en-US": "get well",
+          "ar-SA": "بالشفاء",
+          "es-ES": "que te mejores",
+          "fr-FR": "bon rétablissement",
+          "hi-IN": "जल्दी ठीक हों",
+          "pl-PL": "zdrowiej",
+          "ro-RO": "însănătoșire grabnică",
+          "tr-TR": "geçmiş olsun",
+          "uk-UA": "одужуйте",
+          "uz-UZ": "tezroq tuzaling"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Vielen Dank, Herr Doktor. Auf Wiedersehen!",
+        "translation": {
+          "ru-RU": "Большое спасибо, господин доктор. До свидания!",
+          "en-US": "Thank you very much, Doctor. Goodbye!",
+          "ar-SA": "شكراً جزيلاً أيها الطبيب. وداعاً!",
+          "es-ES": "Muchas gracias, doctor. ¡Adiós!",
+          "fr-FR": "Merci beaucoup, docteur. Au revoir !",
+          "hi-IN": "बहुत-बहुत धन्यवाद, डॉक्टर। अलविदा!",
+          "pl-PL": "Bardzo dziękuję, panie doktorze. Do widzenia!",
+          "ro-RO": "Vă mulțumesc mult, domnule doctor. La revedere!",
+          "tr-TR": "Çok teşekkürler, doktor bey. Hoşça kalın!",
+          "uk-UA": "Велике дякую, пане лікарю. До побачення!",
+          "uz-UZ": "Katta rahmat, janob shifokor. Xayr!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Danke für Ihre Hilfe. Auf Wiedersehen!",
+        "translation": {
+          "ru-RU": "Спасибо за Вашу помощь. До свидания!",
+          "en-US": "Thank you for your help. Goodbye!",
+          "ar-SA": "شكراً لمساعدتك. وداعاً!",
+          "es-ES": "Gracias por su ayuda. ¡Adiós!",
+          "fr-FR": "Merci pour votre aide. Au revoir !",
+          "hi-IN": "आपकी मदद के लिए धन्यवाद। अलविदा!",
+          "pl-PL": "Dziękuję za pomoc. Do widzenia!",
+          "ro-RO": "Mulțumesc pentru ajutor. La revedere!",
+          "tr-TR": "Yardımınız için teşekkürler. Hoşça kalın!",
+          "uk-UA": "Дякую за Вашу допомогу. До побачення!",
+          "uz-UZ": "Yordamingiz uchun rahmat. Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

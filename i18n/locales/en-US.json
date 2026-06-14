@@ -1,5 +1,4 @@
 {
-
   "definiteIndefiniteQuestOne": {
     "title": "Battle for Endings",
     "description": "Mixed practice: indefinite and definite articles in sentences.",
@@ -525,10 +524,6 @@
     "questFifteen": "Choose the correct option: It was a beautiful day",
     "questFifteenTip": "Indefinite article (first time). Masculine (der). The article 'ein' is empty, so the adjective takes the -er ending from the article 'der'."
   },
-
-
-
-
   "secretLandsQuestOne": {
     "title": "Result",
     "description": "Mixed training: working with the indefinite article in Perfekt and Futur 1. Topics: daily life, city, transport, food.",
@@ -1054,8 +1049,6 @@
     "questFifteen": "Assemble the sentence: We will see an interesting exhibition",
     "questFifteenTip": "Exhibition — feminine (die). The article 'eine' ends in -e, so the adjective takes the -e ending from the article."
   },
-
-
   "edgeImagesQuestOne": {
     "title": "Start",
     "description": "Practicing the correct declension of adjectives after der, die, das.",
@@ -1581,11 +1574,6 @@
     "questFifteen": "Enter the form (lecker): Ich werde die ___ Pizza essen.",
     "questFifteenTip": "Akkusativ (feminine): 'die' is the basic article, the adjective takes the -e ending from the article."
   },
-
-
-
-
-
   "timeGageQuestOne": {
     "title": "Meeting and Communication",
     "description": "Practicing grammar in communication situations: from meeting plans to stories about the past.",
@@ -3551,9 +3539,12 @@
   },
   "settingsGroup": {
     "notifications": "Notifications",
-    "appearance": "Appearance"
+    "appearance": "Appearance",
+    "language": "Language",
+    "account": "Account management"
   },
   "valentineAchievements": {
+    "valentineAchievementsTitle": "Festival of Hearts",
     "firstValentineQuestLabel": "First Date",
     "firstValentineQuesDescription": "Take the first step! Complete any quest in the 'Festival of Hearts' event and get your first reward.",
     "valentineWordsLabel": "Language of Love",
@@ -3633,7 +3624,9 @@
     "streak": "Win streak",
     "clearWins": "Clean wins",
     "start": "Start game",
-    "info": "Click on a level to see its statistics."
+    "info": "Click on a level to see its statistics.",
+    "answer-placeholder": "Assemble the sentence...",
+    "pending": "Pending..."
   },
   "eventSessionPage": {
     "loading": "Loading…",
@@ -3766,6 +3759,7 @@
     "theme": "Romantic Theme"
   },
   "winterAchievements": {
+    "winterAchievementsTitle": "Whisper of Winter",
     "firstQuestName": "First Tree Star",
     "firstQuestDescription": "Complete any quest of the winter event and light the first star.",
     "santaLexiconName": "Santa’s Lexicon",
@@ -4942,7 +4936,10 @@
     "start": "Start:",
     "middle": "Average score:",
     "share": "Share",
+    "cancel": "Cancel",
     "delete": "Delete",
+    "deleteResultTitle": "Delete result?",
+    "textModal": "Are you sure you want to delete this exam? This action cannot be undone.",
     "sent": "Test submitted",
     "sended": "You have already submitted this test",
     "error": "Failed to share the exam"
@@ -6980,7 +6977,7 @@
     "questThird": "Build the sentence: white window",
     "questFour": "Choose the option: green sofa",
     "questFive": "Listen and write",
-    "questSix": "Build: das rote Buch",
+    "questSix": "Build: Red Book",
     "questSeven": "What does 'eine gelbe Blume' mean?",
     "questSevenFirstOption": "Yellow flower",
     "questSevenSecondOption": "Red book",
@@ -8108,8 +8105,8 @@
     "exam": "Friends"
   },
   "cabinetSidebar": {
-    "valueOne": "Account Parameters",
-    "valueTwo": "Exam Archive",
+    "valueOne": "Account",
+    "valueTwo": "Exams",
     "valueThree": "Shop",
     "valueFour": "Settings"
   },
@@ -8125,11 +8122,12 @@
     "registerDate": "Registration Date"
   },
   "cabinetToggle": {
-    "sound": "Sound Notifications",
-    "theme": "Dark Mode",
-    "ach": "Achievement Notifications",
+    "sound": "Sound notifications",
+    "ach": "Achievement notifications",
+    "themeBtn": "Theme",
     "snowFall": "Snowfall",
-    "themeBtn": "Theme"
+    "language": "Interface language",
+    "profileData": "Profile data"
   },
   "cabinet": {
     "important": "IMPORTANT!!!",
@@ -8177,15 +8175,18 @@
   "pavelOverlay": {
     "newbie": "Newbie",
     "rankTitle": "Mortarboards",
-    "rankLabelOne": "- Mortarboards are awarded for completing daily tasks.",
-    "rankLabelTwo": "- You can get 3 per day by completing all daily tasks. Rewards can be viewed in the 'Rank' section of your profile.",
-    "rankLabelThree": "- 3 Mortarboards are deducted for missing daily tasks. Complete at least one to avoid the penalty.",
+    "rankLabelOne": "Mortarboards are awarded for completing daily tasks.",
+    "rankLabelTwo": "You can get 3 per day by completing all daily tasks. Rewards can be viewed in the 'Rank' section of your profile.",
+    "rankLabelThree": "3 Mortarboards are deducted for missing daily tasks. Complete at least one to avoid the penalty.",
     "articleTitle": "Articlus",
-    "articleLabelOne": "- Earned for tasks: Article Practice, Language Lands, and tasks in the 'Learning' section.",
-    "articleLabelTwo": "- Spent on retries in Language Lands and in the shop in your profile.",
+    "articleLabelOne": "Earned for tasks: Article Practice, Language Lands, and tasks in the 'Learning' section.",
+    "articleLabelTwo": "Spent on retries in Language Lands and in the shop in your profile.",
     "levelTitle": "Level",
-    "levelLabelOne": "- Your level increases as you complete tasks.",
-    "levelLabelTwo": "- Higher levels unlock more tasks in Language Lands."
+    "levelLabelOne": "Your level increases as you complete tasks.",
+    "levelLabelTwo": "Higher levels unlock more tasks in Language Lands.",
+    "livesTitle": "Lives",
+    "livesLabelOne": "Required to complete language lands",
+    "livesLabelTwo": "Purchased in the in-app store or during training for Articluses"
   },
   "idioms": {
     "title": "Idioms and Phrases",
@@ -8293,6 +8294,8 @@
     "answer": "Ignores a mistake"
   },
   "guessWord": {
+    "subtitle": "Guess the word and level up your German!",
+    "theme": "Theme:",
     "back": "Back",
     "guessTitle": "Guess the Word",
     "startGame": "Start Game",
@@ -9076,7 +9079,7 @@
     "main": "Go to main page"
   },
   "rulesFirstBlock": {
-    "title": "Basic rules of German articles",
+    "title": "Article theory",
     "subTitle": "A short and clear cheat sheet for everyone who wants to use der, die, das correctly!",
     "firstCardTitle": "The article depends on the gender",
     "exampleSexM": " — masculine gender",
@@ -9221,6 +9224,7 @@
     "confirm": "Confirm"
   },
   "sub": {
+    "words": "Words and articles",
     "sinonim": "Vocabulary",
     "articles": "Articles",
     "verbs": "Verbs",
@@ -9237,7 +9241,9 @@
     "languagesLands": "Language Lands",
     "describePicture": "Picture Description",
     "fight": "German Universe",
-    "audio": "Audio Tasks"
+    "audio": "Audio Tasks",
+    "textTask": "Texts",
+    "speak": "Speaking practice"
   },
   "underSub": {
     "prev": "Introduction",
@@ -9466,35 +9472,100 @@
   "nameMap": {
     "Furniture": "Furniture",
     "Animals": "Animals",
+    "Birds": "Birds",
+    "SeaAnimals": "Sea animals",
+    "Insects": "Insects",
+    "Savanna": "Savanna",
     "Clothes": "Clothes",
+    "Shoes": "Shoes",
     "Food": "Food",
-    "Body": "Body Parts",
+    "SweetEat": "Sweets",
+    "MilkEat": "Dairy products",
+    "Vegetables": "Vegetables",
+    "Fruits": "Fruits",
+    "Drinks": "Drinks",
+    "Body": "Body",
     "Professions": "Professions",
     "Transport": "Transport",
     "Colors": "Colors",
     "Nature": "Nature",
+    "Weather": "Weather",
+    "Landscape": "Landscape",
     "Home": "Home",
     "Zeit": "Time",
-    "City": "City",
+    "CityBuildings": "City buildings",
+    "CityInfrastructure": "City infrastructure",
     "School": "School",
-    "DaysAndMonths": "Days and Months",
+    "DaysAndMonths": "Days and months",
     "Toys": "Toys",
-    "CommonItems": "Common Items",
-    "BathroomItems": "Bathroom Items",
+    "CommonItems": "Everyday items",
+    "BathroomItems": "Bathroom items",
     "Kosmetik": "Cosmetics",
     "Familie": "Family",
     "Emotions": "Emotions",
-    "Werkzeuge": "Tools",
     "Kitchen": "Kitchen",
     "Health": "Health",
-    "Sport": "Sport",
-    "SportEquipment": "Fitness Equipment",
+    "SportBasic": "Basic sports",
+    "SportCombatWinter": "Winter and combat sports",
+    "SportEvents": "Sporting events",
+    "SportLife": "Sports lifestyle",
+    "SportEquipment": "Sports equipment",
+    "TravelDocuments": "Travel documents",
+    "Tourism": "Tourism",
     "Travel": "Travel",
+    "MusicInstruments": "Musical instruments",
     "Musik": "Music",
-    "Amount": "Amount",
-    "Informatik": "Computer Science"
+    "Amount": "Amount and measures",
+    "Hardware": "Hardware",
+    "Software": "Software",
+    "Internet": "Internet",
+    "WinterHolidays": "Winter holidays",
+    "FamilyAndReligious": "Family and religious holidays",
+    "PersonalCelebrations": "Personal celebrations",
+    "FestivalsAndDecor": "Festivals and decor",
+    "DwellingTypes": "Types of housing",
+    "Rooms": "Rooms",
+    "ConstructionAndDetails": "Construction and details",
+    "CoreFamily": "Immediate family",
+    "ExtendedFamily": "Extended family",
+    "Relationships": "Relationships",
+    "HandTools": "Hand tools",
+    "PowerTools": "Power tools",
+    "ConsumablesAndSafety": "Consumables and safety",
+    "JobOffice": "Office jobs",
+    "JobTech": "Technical jobs",
+    "JobMed": "Medical jobs",
+    "JobEdu": "Education jobs",
+    "JobService": "Service jobs",
+    "CityTransport": "City transport",
+    "TravelTransport": "Travel transport",
+    "usualClothes": "Casual clothes",
+    "winterClothes": "Winter clothes",
+    "emotionsPositive": "Emotions",
+    "emotionsNegative": "Emotions 2"
+  },
+  "categoryWords": {
+    "nature": "Nature",
+    "animals": "Animals",
+    "food": "Food",
+    "people": "People",
+    "family": "Family",
+    "dailyRoutine": "Daily routine",
+    "house": "House",
+    "city": "City",
+    "school": "School",
+    "professions": "Professions",
+    "construction": "Construction",
+    "clothes": "Clothes",
+    "holidays": "Holidays",
+    "sport": "Sport",
+    "music": "Music",
+    "travel": "Travel",
+    "informatics": "Informatics",
+    "abstract": "Abstract topics"
   },
   "modes": {
+    "themeTitle": "Article study topics",
     "article": "Insert the Article",
     "letters": "Spell the Word",
     "articleWord": "Insert the Word and Article",
@@ -9628,7 +9699,12 @@
     "profile": "Profile",
     "shop": "HANGAR",
     "rank": "Ranking",
-    "exit": "EXIT"
+    "exit": "EXIT",
+    "start": "START MISSION",
+    "findGalaxyTitle": "SECTOR DISCOVERED",
+    "points": "POINTS",
+    "errorTitle": "SYSTEM FAILURE",
+    "errorBtn": "RETURN TO HEADQUARTERS"
   },
   "galaxyCabinet": {
     "back": "BACK",
@@ -9637,7 +9713,8 @@
     "money": "ARTICS",
     "commonPoints": "TOTAL POINTS",
     "rank": "Rank:",
-    "streak": "RECORD:"
+    "streak": "RECORD:",
+    "cabinet": "Logbook"
   },
   "galaxyRank": {
     "none": "EARTHLING",
@@ -9687,7 +9764,7 @@
     "prepositions": "Prepositions"
   },
   "v-rank": {
-    "desc": "Confederation caps are your path to the top! Accumulate them by completing all three daily tasks. Raise your rank and buy unlocked bonuses!",
+    "desc": "Collect mortarboards by completing daily quests. Increase your rank and buy bonuses.",
     "rank_0": "Recruit",
     "rank": "Rank",
     "rank_1": "Novice",
@@ -9750,5 +9827,513 @@
   "lives": {
     "next": "Next:",
     "full": "Lives are full"
+  },
+  "deletePage": {
+    "title": "Profile deletion",
+    "bubbleText": "We're sorry to see you go! Please review the important information before deleting.",
+    "cleanUpTitle": "Subscription management",
+    "cleanUpInfoText": "Deleting your account",
+    "cleanUpInfoTextTwo": "does not cancel",
+    "cleanUpInfoTextThree": "your subscription! Check your payment status.",
+    "deleteAccount": "Delete account",
+    "modalTitle": "Are you sure you want to delete?",
+    "cleanUpGoogle": "Sign in with",
+    "cleanUpGoogleTwo": " To confirm, an authorization window will open.",
+    "cleanUpPassword": "Enter your password:",
+    "placeholder": "enter your password",
+    "modalLabelOne": "I changed my mind",
+    "modalLabelTwo": "Confirm deletion"
+  },
+  "accountChanges": {
+    "first": "Profile data will disappear forever.",
+    "two": "Progress and test history will be reset.",
+    "three": "All rewards, titles, and achievements will be lost.",
+    "four": "Currency, level, and hats will be removed."
+  },
+  "platformsInformation": {
+    "titleWeb": "On the website",
+    "descriptionWeb": "Card payment on the website.",
+    "instructionWeb": "Disable auto-renewal in your Personal Account.",
+    "titleStore": "In the app",
+    "descriptionStore": "Google Play or App Store.",
+    "instructionStore": "Cancel your subscription in your phone settings."
+  },
+  "galaxyDescriptions": {
+    "alpha": "A sector ruled by three great powers: Der, Die, and Das. Your task is to calibrate your linguistic sensors and bring order to the grammatical system by flawlessly determining the gender of every word.",
+    "beta": "An anomaly zone where everything multiplies and transforms. Study the laws of noun transformation to understand what form an object takes when there is more than one.",
+    "gamma": "The galaxy of twin words. Expand your vocabulary by finding new ways to express the same thought. The more synonyms in your arsenal, the brighter your speech shines in deep space.",
+    "delta": "A world of eternal contrast and opposition. Here, everything is known through comparison: from 'fast' to 'slow'. Learn to masterfully find opposites to maintain balance in the system.",
+    "epsilon": "A time loop of the past. Master the complex form of verbs to write reports on completed missions and tell of your past victories in other star systems.",
+    "zeta": "The navigation grid of space and time. Find out 'where', 'where to', and 'how' the linguistic paths lead. Correct prepositions are your precise coordinates in the infinity of language."
+  },
+  "personalAccount": {
+    "statsAndAchievements": "Statistics and achievements",
+    "streakTitle": "Article marathon streak"
+  },
+  "studyNavAndBanner": {
+    "practice": "Practice",
+    "grammar": "Grammar",
+    "bannerPractice": "Level up your German by completing various practical tasks",
+    "bannerGrammar": "Study the rules and improve your German level across various grammar topics"
+  },
+  "bannerTitles": {
+    "play": "Learn German with pleasure! Choose a convenient mode and level up your language by playing",
+    "events": "Participate in seasonal events and get unique rewards for completing tasks",
+    "article": "Learn words and articles by topics in various training formats",
+    "awards": "Rewards for earned achievements and completed tasks",
+    "thematic": "Level up your German by completing exciting thematic levels",
+    "audio": "Improve your German listening comprehension by completing audio tasks",
+    "images": "Level up your image description skills! Choose a topic to start",
+    "settings": "Account settings",
+    "achievements": "Your collection of all earned achievements and rewards for your progress",
+    "textTask": "Fill in the blanks in the texts and improve your German"
+  },
+  "imageDescription": {
+    "listen": "Listen to the dialogue!",
+    "check": "Check",
+    "further": "Next",
+    "finish": "Finish",
+    "skip": "Skip",
+    "total": "Total tasks:",
+    "perfect": "Perfectly correct:",
+    "notPerfect": "Partially correct:",
+    "mistakes": "With mistakes:",
+    "value": "Accuracy:",
+    "success": "✅ Task completed correctly!",
+    "isWrong": "❌ There are incorrect answers!",
+    "isWarning": "⚠️ Not all correct options are selected!",
+    "modalTitleWarning": "Attention!",
+    "modalTextWarning": "The topic is not fully completed, progress will not be saved!",
+    "leave": "Leave",
+    "continue": "Continue",
+    "goodWork": "Great job!",
+    "needTraining": "Need to practice!",
+    "themeSuccess": "Topic completed successfully!",
+    "themeNotSuccess": "Topic not completed."
+  },
+  "galaxySelector": {
+    "constellations": "Constellations",
+    "energy": "Ship energy",
+    "sectorBlock": "SECTOR LOCKED",
+    "admission": "PLUS access required",
+    "descriptionPlusOne": "Galaxy",
+    "descriptionPlusTwo": "is in deep space! A hyperjump beyond the Alpha sector requires an intergalactic subscription",
+    "descriptionPlusThree": "Purchase to unlock all constellations!",
+    "getPlusBtn": "Get PLUS",
+    "errorDescription": "'Prepare for landing! Increased German language activity is observed in this area. Clear the sector to restore order to the system.'"
+  },
+  "galaxySession": {
+    "errorEnergy": "Battery discharged. Wait for restoration or purchase PLUS.",
+    "errorID": "Sector ID not provided",
+    "errorData": "Failed to load galaxy data",
+    "newRecord": "NEW RECORD!",
+    "check": "SCORE:",
+    "again": "Fly again",
+    "constellations": "Leave constellation"
+  },
+  "textTasksTip": {
+    "title": "Text tasks",
+    "description": "To complete the task, drag the word into the empty space or click on the word and then on the field where you want to add it."
+  },
+  "textThemes": {
+    "basic": "Introduction",
+    "routine": "Daily routine",
+    "shopping": "Shopping",
+    "work": "Work and study",
+    "hobby": "Hobbies",
+    "objects": "Objects and things",
+    "travel": "Travel"
+  },
+  "themeTextTitleBasic_A1": {
+    "basicOne": "Formal introduction",
+    "basicTwo": "Informal introduction",
+    "basicThree": "Plans for the day",
+    "basicFour": "Plans for the evening",
+    "basicFive": "On the weekend",
+    "basicSix": "Doing sports",
+    "basicSeven": "Cooking together",
+    "basicEight": "Trip to the city",
+    "basicNine": "Studying together",
+    "basicTen": "Practicing music"
+  },
+  "themeTextTitleHobby_A1": {
+    "hobbyOne": "Playing football",
+    "hobbyTwo": "Photography",
+    "hobbyThree": "Playing the guitar",
+    "hobbyFour": "Swimming",
+    "hobbyFive": "Cooking",
+    "hobbySix": "Traveling",
+    "hobbySeven": "Reading",
+    "hobbyEight": "Gardening",
+    "hobbyNine": "Dancing",
+    "hobbyTen": "Learning languages"
+  },
+  "themeTextTitleRoutine_A1": {
+    "routineOne": "Plans for the day",
+    "routineTwo": "Plans for the evening",
+    "routineThree": "On the weekend",
+    "routineFour": "Doing sports",
+    "routineFive": "Cooking together",
+    "routineSix": "Trip to the city",
+    "routineSeven": "Studying together",
+    "routineEight": "Practicing music",
+    "routineNine": "Drinking coffee",
+    "routineTen": "In the park"
+  },
+  "themeTextTitleShopping_A1": {
+    "shoppingOne": "At the supermarket",
+    "shoppingTwo": "Looking for clothes",
+    "shoppingThree": "At the bakery",
+    "shoppingFour": "Online shopping",
+    "shoppingFive": "At the market",
+    "shoppingSix": "At the shoe store",
+    "shoppingSeven": "Furniture shopping",
+    "shoppingEight": "At the flea market",
+    "shoppingNine": "Food for the evening",
+    "shoppingTen": "At the bookstore"
+  },
+  "themeTextTitleTravel_A1": {
+    "travelOne": "Packing a suitcase",
+    "travelTwo": "At the train station",
+    "travelThree": "At the hotel",
+    "travelFour": "Vacation by the sea",
+    "travelFive": "City sightseeing",
+    "travelSix": "At the restaurant",
+    "travelSeven": "At the airport",
+    "travelEight": "In the mountains",
+    "travelNine": "Buying souvenirs",
+    "travelTen": "Returning home"
+  },
+  "themeTextTitleWork_A1": {
+    "workOne": "My workday",
+    "workTwo": "Looking for a document",
+    "workThree": "At the university",
+    "workFour": "My job",
+    "workFive": "Homework",
+    "workSix": "My job at the construction site",
+    "workSeven": "Working from home",
+    "workEight": "Working in a warehouse",
+    "workNine": "Meeting",
+    "workTen": "Lunch break"
+  },
+  "themeTextTitleBasic_A2": {
+    "basicOne": "At the German course",
+    "basicTwo": "Tandem partner",
+    "basicThree": "At the university",
+    "basicFour": "In the library",
+    "basicFive": "Group project",
+    "basicSix": "Language trip",
+    "basicSeven": "New student",
+    "basicEight": "Online course",
+    "basicNine": "Study group",
+    "basicTen": "Exam partner"
+  },
+  "themeTextTitleHobby_A2": {
+    "hobbyOne": "Hiking in the mountains",
+    "hobbyTwo": "Photography",
+    "hobbyThree": "Drawing",
+    "hobbyFour": "Dancing",
+    "hobbyFive": "Football",
+    "hobbySix": "Swimming",
+    "hobbySeven": "Board games",
+    "hobbyEight": "Board games and logic",
+    "hobbyNine": "Chess",
+    "hobbyTen": "Movies"
+  },
+  "themeTextTitleRoutine_A2": {
+    "routineOne": "New neighbor",
+    "routineTwo": "Meeting in a cafe",
+    "routineThree": "At a party",
+    "routineFour": "New colleagues",
+    "routineFive": "At the sports club",
+    "routineSix": "Meeting on a train",
+    "routineSeven": "In the park with a dog",
+    "routineEight": "Finding a partner",
+    "routineNine": "At a concert",
+    "routineTen": "New flatmate"
+  },
+  "themeTextTitleShopping_A2": {
+    "shoppingOne": "At the supermarket",
+    "shoppingTwo": "Buying clothes",
+    "shoppingThree": "At the market",
+    "shoppingFour": "Online shopping",
+    "shoppingFive": "At the furniture store",
+    "shoppingSix": "At the bakery",
+    "shoppingSeven": "Buying shoes",
+    "shoppingEight": "A gift",
+    "shoppingNine": "At the electronics store",
+    "shoppingTen": "Big shopping haul"
+  },
+  "themeTextTitleTravel_A2": {
+    "travelOne": "Preparing for a trip",
+    "travelTwo": "At the airport",
+    "travelThree": "Arriving at the hotel",
+    "travelFour": "On the beach",
+    "travelFive": "Excursion",
+    "travelSix": "At the restaurant",
+    "travelSeven": "Asking for directions",
+    "travelEight": "Problems on vacation",
+    "travelNine": "Buying gifts",
+    "travelTen": "Returning home"
+  },
+  "themeTextTitleWork_A2": {
+    "workOne": "Job interview",
+    "workTwo": "Homework",
+    "workThree": "First workday",
+    "workFour": "Presentation",
+    "workFive": "Further training",
+    "workSix": "In the home office",
+    "workSeven": "Internship",
+    "workEight": "Exam",
+    "workNine": "Language course",
+    "workTen": "First client"
+  },
+  "themeTextTitleBasic_B1": {
+    "basicOne": "At a party",
+    "basicTwo": "First date",
+    "basicThree": "Language tandem",
+    "basicFour": "Meeting on a train",
+    "basicFive": "New colleague",
+    "basicSix": "At a seminar",
+    "basicSeven": "Walking the dog",
+    "basicEight": "New neighbors",
+    "basicNine": "At the sports club",
+    "basicTen": "At a hostel"
+  },
+  "themeTextTitleHobby_B1": {
+    "hobbyOne": "Night photography",
+    "hobbyTwo": "Mountaineering",
+    "hobbyThree": "Playing the piano",
+    "hobbyFour": "Game development",
+    "hobbyFive": "Windsurfing",
+    "hobbySix": "Acting in theater",
+    "hobbySeven": "Archery",
+    "hobbyEight": "Motorcycle restoration",
+    "hobbyNine": "Baking",
+    "hobbyTen": "Geocaching"
+  },
+  "themeTextTitleRoutine_B1": {
+    "routineOne": "Early morning",
+    "routineTwo": "Breakfast and commute",
+    "routineThree": "In the office",
+    "routineFour": "Lunch break",
+    "routineFive": "End of the workday",
+    "routineSix": "Sports after work",
+    "routineSeven": "Dinner and relaxation",
+    "routineEight": "Preparing for bed",
+    "routineNine": "Evening walk",
+    "routineTen": "House cleaning"
+  },
+  "themeTextTitleShopping_B1": {
+    "shoppingOne": "Buying clothes",
+    "shoppingTwo": "At the supermarket",
+    "shoppingThree": "Buying tech online",
+    "shoppingFour": "At the flea market",
+    "shoppingFive": "Finding a gift",
+    "shoppingSix": "Product return",
+    "shoppingSeven": "At the hardware store",
+    "shoppingEight": "At the pharmacy",
+    "shoppingNine": "At the pet store",
+    "shoppingTen": "At a second-hand store"
+  },
+  "themeTextTitleTravel_B1": {
+    "travelOne": "City trip",
+    "travelTwo": "Beach vacation",
+    "travelThree": "Hiking in the mountains",
+    "travelFour": "Road trip",
+    "travelFive": "Traveling through Asia",
+    "travelSix": "Cruise",
+    "travelSeven": "Camping",
+    "travelEight": "Winter vacation",
+    "travelNine": "Language trip",
+    "travelTen": "Safari"
+  },
+  "themeTextTitleWork_B1": {
+    "workOne": "Job interview",
+    "workTwo": "Project management",
+    "workThree": "Semester abroad",
+    "workFour": "Office presentation",
+    "workFive": "Exam preparation",
+    "workSix": "Customer service",
+    "workSeven": "Master's thesis",
+    "workEight": "Business trip",
+    "workNine": "Internship",
+    "workTen": "Courses"
+  },
+  "textTaskSession": {
+    "allUsed": "All words have been used!",
+    "errorText": "No text selected",
+    "back": "Back to the list"
+  },
+  "exitSessionModal": {
+    "text": "It's a shame to stop halfway! If you close the tab now, your progress will not be saved.",
+    "continueLesson": "Continue lesson",
+    "cancelLesson": "Leave"
+  },
+  "premiumBannerText": {
+    "text": "Get the most out of the platform, accelerate your learning."
+  },
+  "rulesModal": {
+    "text": "The grammar hint is available after answering!"
+  },
+  "footerNavLabel": {
+    "learn": "Learn",
+    "games": "Games",
+    "home": "Home",
+    "events": "Events",
+    "cabinet": "Account"
+  },
+  "speakTopics": {
+    "speak": "Introduction and socializing",
+    "food": "Food and shopping",
+    "transport": "Trips and transport",
+    "city": "City services and everyday life",
+    "health": "Health",
+    "work": "Work and career"
+  },
+  "speakThemes": {
+    "firstmeet": "Introduction",
+    "acquaintance": "Acquaintance 2",
+    "secondmeet": "Meeting",
+    "family_talk": "Conversation",
+    "weekend_plans": "Plans",
+    "friend_call": "Phone call",
+    "hobby_talk": "Hobbies",
+    "party_talk": "Party",
+    "cafe_order": "Ordering coffee",
+    "restaurant_dinner": "Restaurant",
+    "store_checkout": "At the checkout",
+    "order_eat": "Ordering food",
+    "consultation_talk": "Consultation",
+    "train_station": "At the station",
+    "train_ticket": "Ticket inspection",
+    "taxi_berlin": "Taxi",
+    "bus_talk": "On the bus",
+    "hotel_checkin": "Hotel",
+    "border_check": "Border",
+    "airport_talk": "Airport",
+    "info_talk": "Info center",
+    "bank_account": "Bank",
+    "apartment_rent": "Rent",
+    "clothes_shopping": "Shopping",
+    "shopping": "Shopping 2",
+    "post_office": "Post office",
+    "police_talk": "Police",
+    "barbershop": "Barbershop",
+    "doctor_visit": "Booking an appointment",
+    "pharmacy_vitamins": "Pharmacy",
+    "insurance": "Insurance",
+    "at_doctor": "At the doctor",
+    "dentist": "Dentist",
+    "veterinary": "Vet",
+    "job_looking": "Job search",
+    "job_interview": "Interview",
+    "bos_talk": "Talk with manager",
+    "vacation": "Vacation",
+    "salary_talk": "Salary",
+    "dismissal_talk": "Dismissal"
+  },
+  "speakIndexPage": {
+    "title": "Speaking practice",
+    "bannerText": "Practice your speaking skills with real-life examples",
+    "modalTitle": "Speaking practice",
+    "modalText": "Develop your communication skills with real-life dialogues! You can choose a suggested answer, type it manually, or simply say it aloud by tapping the microphone button."
+  },
+  "rankModal": {
+    "title": "NEW RANK",
+    "rankedLabel": "Rank",
+    "accept": "ACCEPT"
+  },
+  "premiumBanner": {
+    "textBanner": "Get the most out of the platform, accelerate your learning."
+  },
+  "netWork": {
+    "successTitle": "Connection restored!",
+    "notSuccessTitle": "Oops! No internet",
+    "successText": "Back to work...",
+    "notSuccessText": "Waiting for network connection..."
+  },
+  "termsBlock": {
+    "first": "By registering, you accept the",
+    "second": "Terms of Use",
+    "third": "and",
+    "fourth": "Privacy Policy"
+  },
+  "languagePage": {
+    "title": "App language",
+    "placeholder": "Search language...",
+    "notfound": "Nothing found",
+    "further": "Continue"
+  },
+  "statistics": {
+    "title": "Your statistics and progress in learning words and completing thematic levels"
+  },
+  "restoreComputed": {
+    "restoring": "Restoring...",
+    "restore": "Restore purchases."
+  },
+  "submitComputed": {
+    "sync": "Syncing...",
+    "getPlus": "Get PLUS"
+  },
+  "pay": {
+    "banner": "Full access to all app features",
+    "sales": "Apply discounts earned from activity",
+    "triggerToastSuccess": "Purchase restored!",
+    "triggerToastNotFound": "No active subscriptions found",
+    "triggerToastError": "Error during restoration",
+    "triggerToastIsPlus": "You already have an active PLUS subscription!"
+  },
+  "examSession": {
+    "ready": "Ready for the test?",
+    "cardTextOne": "You will face",
+    "cardTextTwo": "stages and",
+    "cardTextThree": "tasks.",
+    "begin": "Start test",
+    "listen": "Listen to the audio:",
+    "check": "Checking...",
+    "send": "Submit answer",
+    "record": "Record",
+    "great": "Congratulations!",
+    "result": "Your result for level",
+    "save": "Saving progress...",
+    "correctly": "Correct:",
+    "back": "Go back",
+    "interrupt": "Interrupt the test?",
+    "modalText": "The progress of this attempt will be lost. Are you sure?",
+    "continue": "Continue",
+    "leave": "Exit",
+    "placeHolder": "Write your answer here...",
+    "say": "Say:"
+  },
+  "speakSession": {
+    "title": "Speaking practice",
+    "words": "Vocabulary for dialogue",
+    "wordsText": "Learn or review the words before you start talking. This will help you feel more confident!",
+    "learn": "Start",
+    "dialogue": "Dialogue",
+    "dialogueText": "Practice pronunciation and speaking, listen to your conversation partner, and choose answers interactively.",
+    "back": "Back",
+    "goodJob": "Great job!",
+    "goodJobTitle": "You have completed this dialogue. Keep it up!",
+    "list": "Go back",
+    "repeat": "Repeat",
+    "start": "Start learning",
+    "choice": "Choose an answer:",
+    "placeHolder": "Type or say the answer...",
+    "hoverVoice": "Speak",
+    "end": "Finish",
+    "further": "Next"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "Try again?",
+    "textPartOne": "You answered correctly",
+    "textPartTwo": "Buy an attempt to continue.",
+    "price": "Price:",
+    "youHave": "You have:",
+    "showADS": "Watch ad",
+    "buyBy": "Buy for",
+    "toThemes": "To topics",
+    "repeat": "Repeat"
   }
 }

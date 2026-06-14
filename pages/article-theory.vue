@@ -2,14 +2,19 @@
   <main class="rules">
     <div class="rules__wrapper">
       <header class="rules__hero">
-        <h1 class="rules__title">
-          {{ t('rulesFirstBlock.title') }}
-        </h1>
+        <!--        <h1 class="rules__title">-->
+        <!--          {{ t('rulesFirstBlock.title') }}-->
+        <!--        </h1>-->
+        <div class="rules__header-wrapper">
+          <VBackBtn/>
+          <div class="rules__header-title">{{ t('rulesFirstBlock.title')}}</div>
+        </div>
+
+      </header>
+      <section class="rules__list" :aria-label="t('rulesFirstBlock.title')">
         <p class="rules__subtitle">
           {{ t('rulesFirstBlock.subTitle') }}
         </p>
-      </header>
-      <section class="rules__list" aria-label="Список правил использования артиклей">
         <article class="rules__card" id="gender" ref="ruleCards">
           <h2 class="rules__card-title">1. {{ t('rulesFirstBlock.firstCardTitle') }}</h2>
           <ul class="rules__list-ul">
@@ -30,7 +35,6 @@
             {{ t('rulesFirstBlock.remember') }}
           </p>
         </article>
-
         <article class="rules__card" id="plural" ref="ruleCards">
           <h2 class="rules__card-title">2. {{ t('rulesSecondBlock.firstCardTitle') }} <strong>die</strong></h2>
           <p class="rules__desc">
@@ -136,14 +140,18 @@
                 />
                 <span v-if="showResults"
                       :class="['quiz-result', isCorrect(index) ? 'correct' : 'incorrect']">
-                           {{ isCorrect(index) ? '✔️' : `'❌ ${word.article}` }}
+                           {{ isCorrect(index) ? '✔️' : `❌ ${word.article}` }}
                         </span>
               </div>
             </div>
             <div class="quiz__button-el">
               <button @click="checkAnswers" class="quiz-button">{{ t('rulesSixthBlock.checkBtn') }}</button>
-              <img v-if="showResults" @click="resetResult" class="quiz__undo-icon" src="../assets/images/undo.svg"
-                   alt="Сбросить">
+              <button class="reset" @click="resetResult">
+                <img class="quiz__undo-icon"
+                     :class="{ 'spin-anim': isSpinning }"
+                     src="../assets/images/repeat.svg"
+                     alt="reset">
+              </button>
             </div>
           </div>
         </article>
@@ -155,6 +163,8 @@
 <script setup>
 import {ref} from 'vue';
 import {useSeoMeta} from "#imports";
+import VBackBtn from "~/src/components/V-back-btn.vue";
+
 const {t} = useI18n()
 
 const quizWords = [
@@ -172,7 +182,7 @@ useSeoMeta({
 
 const userAnswers = ref(Array(quizWords.length).fill(''))
 const showResults = ref(false)
-
+const isSpinning = ref(false)
 function checkAnswers() {
   showResults.value = true
 }
@@ -185,28 +195,47 @@ function isCorrect(index) {
 const resetResult = () => {
   showResults.value = false;
   userAnswers.value = Array(quizWords.length).fill('');
+  isSpinning.value = true;
+  setTimeout(() => {
+    isSpinning.value = false;
+  }, 500);
 }
 
-definePageMeta({
-  layout: 'footerlayout',
-})
 </script>
 
 <style scoped>
 .rules {
-  min-height: 100vh;
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
+  height: 100%;
   font-family: "Nunito", sans-serif;
+  overflow: hidden;
+}
+
+.rules__header-title {
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Nunito", sans-serif;
+  color: var(--titleColor);
+  margin-left: 15px;
+  text-shadow: 0 1px var(--titleColor);
+}
+
+.reset {
+  border: none;
+  background: none;
 }
 
 .rules__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  width: 100%;
 }
 
 .rules__hero {
-  padding: 4rem 0 3rem 0;
+  flex-shrink: 0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -214,54 +243,48 @@ definePageMeta({
   gap: 1rem;
 }
 
-.rules__title {
-  width: 100%;
-  font-family: "Nunito", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: white;
-  background: #4ade80;
-  padding: 1rem 2rem;
-  border: 3px solid #1e1e1e;
-  border-radius: 16px;
-  transform: rotate(-2deg);
-  box-shadow: 8px 8px 0 #1e1e1e;
-}
-
 .rules__subtitle {
-  font-size: 1.25rem;
-  color: white;
+  font-size: 23px;
+  text-align: center;
+  color: var(--titleColor);
   max-width: 600px;
-  line-height: 1.6;
+  line-height: 1.3;
   background: #00c2ff;
-  margin-top: 20px;
   border-radius: 15px;
   padding: 10px;
   font-family: "Nunito", sans-serif;
-  border: 4px solid black;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
 }
 
 .rules__list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 5px 10px;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1rem;
+}
+
+.rules__list::-webkit-scrollbar {
+  width: 1px;
+  display: none;
 }
 
 .rules__card {
   background: #fff;
   border-radius: 24px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0 #1e1e1e;
-  padding: 2rem;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  padding: 1rem;
   transition: all 0.2s ease-in-out;
 }
 
-
 .rules__card-title {
   font-family: "Nunito", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   color: #1e1e1e;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .rules__list-ul {
@@ -274,7 +297,7 @@ definePageMeta({
 }
 
 .rules__list-item {
-  font-size: 1.1rem;
+  font-size: 16px;
 }
 
 .rules__list-item::before {
@@ -286,7 +309,7 @@ definePageMeta({
 .rules__desc {
   color: #555;
   margin: 1.5rem 0 0.5rem 0;
-  font-size: 1.1rem;
+  font-size: 16px;
   line-height: 1.7;
 }
 
@@ -310,10 +333,10 @@ definePageMeta({
 }
 
 .table-wrapper {
-  border: 3px solid #1e1e1e;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   margin-top: 1.5rem;
 }
 
@@ -324,8 +347,9 @@ definePageMeta({
 }
 
 .rules__table th, .rules__table td {
-  border: 2px solid #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
   padding: 0.75rem;
+  border-radius: 8px;
 }
 
 .rules__table thead th {
@@ -348,18 +372,29 @@ definePageMeta({
 .quiz-form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 5px;
   margin-top: 1.5rem;
 }
 
 .quiz-item {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  margin-bottom: 6px;
+}
+
+.rules__header-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 5px 10px 15px 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 5px;
 }
 
 .quiz-item label {
   font-weight: 700;
+  margin-left: 5px;
 }
 
 .quiz__content__inner {
@@ -373,18 +408,16 @@ definePageMeta({
   font-weight: 700;
   padding: 0.75rem;
   border-radius: 12px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   flex-grow: 1;
-  max-width: 300px;
   transition: all 0.2s ease-in-out;
 }
 
 .quiz-input:focus {
   outline: none;
   border-color: #fca13a;
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1e1e1e;
+  box-shadow: 2px 2px 0 #fca13a;
 }
 
 .quiz-result {
@@ -409,22 +442,17 @@ definePageMeta({
 
 .quiz-button {
   font-family: "Nunito", sans-serif;
-  padding: 0.75rem 1.5rem;
+  padding: 14px;
   font-size: 1.2rem;
-  border-radius: 16px;
+  border-radius: 12px;
   cursor: pointer;
-  border: 3px solid #1e1e1e;
   transition: all 0.1s ease-in-out;
   background-color: #f97028;
+  box-shadow: 0 6px 0 #b25626;
+  border: none;
   color: #ffffff;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  flex: 1;
 }
-
-.quiz-button:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1e1e1e;
-}
-
 
 .quiz__undo-icon {
   width: 40px;
@@ -433,29 +461,35 @@ definePageMeta({
   transition: transform 0.2s ease;
 }
 
+.rules__card {
+  padding: 12px;
+}
 
-@media (max-width: 768px) {
-  .rules__title {
-    font-size: 2rem;
-    transform: rotate(0);
+.rules__table thead th {
+  max-width: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rules__table tbody th {
+  width: 85px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spin-anim {
+  animation: spin360 0.5s ease-in-out;
+}
+
+@keyframes spin360 {
+  from {
+    transform: rotate(0deg);
   }
-
-  .rules__card {
-    padding: 1.5rem;
-  }
-
-  .rules__table thead th {
-    max-width: 40px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .rules__table tbody th {
-    width: 85px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  to {
+    transform: rotate(360deg);
   }
 }
+
 </style>

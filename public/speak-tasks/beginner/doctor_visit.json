@@ -1,0 +1,710 @@
+{
+  "start": {
+    "botText": "Praxis Doktor Schmidt, guten Tag.",
+    "botTranslation": {
+      "ar-SA": "عيادة الدكتور شميدت، طاب يومك.",
+      "en-US": "Practice Doctor Schmidt, good day.",
+      "es-ES": "Consultorio del Doctor Schmidt, buen día.",
+      "fr-FR": "Cabinet du Docteur Schmidt, bonjour.",
+      "hi-IN": "डॉक्टर श्मिट क्लिनिक, शुभ दिन।",
+      "pl-PL": "Gabinet doktora Schmidta, dzień dobry.",
+      "ro-RO": "Cabinetul Doctorului Schmidt, bună ziua.",
+      "ru-RU": "Праксис доктора Шмидта, добрый день.",
+      "tr-TR": "Doktor Schmidt muayenehanesi, iyi günler.",
+      "uk-UA": "Праксис доктора Шмідта, добрий день.",
+      "uz-UZ": "Doktor Shmidt klinikasi, xayrli kun."
+    },
+    "vocabulary": [
+      {
+        "german": "die Zahnarztpraxis",
+        "translation": {
+          "ru-RU": "стоматология",
+          "en-US": "dental practice",
+          "ar-SA": "عيادة أسنان",
+          "es-ES": "clínica dental",
+          "fr-FR": "cabinet dentaire",
+          "hi-IN": "दंत चिकित्सालय",
+          "pl-PL": "gabinet dentystyczny",
+          "ro-RO": "cabinet stomatologic",
+          "tr-TR": "diş kliniği",
+          "uk-UA": "стоматологія",
+          "uz-UZ": "stomatologiya"
+        }
+      },
+      {
+        "german": "der Termin",
+        "translation": {
+          "ru-RU": "запись / прием",
+          "en-US": "appointment",
+          "ar-SA": "موعد",
+          "es-ES": "cita",
+          "fr-FR": "rendez-vous",
+          "hi-IN": "अपॉइंटमेंट",
+          "pl-PL": "wizyta",
+          "ro-RO": "programare",
+          "tr-TR": "randevu",
+          "uk-UA": "запис / прийом",
+          "uz-UZ": "qabul / uchrashuv"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag. Ich heiße Anna und ich brauche einen Termin.",
+        "translation": {
+          "ar-SA": "طاب يومك. اسمي آنا وأحتاج إلى موعد.",
+          "en-US": "Good day. My name is Anna and I need an appointment.",
+          "es-ES": "Buen día. Me llamo Anna y necesito una cita.",
+          "fr-FR": "Bonjour. Je m'appelle Anna et j'ai besoin d'un rendez-vous.",
+          "hi-IN": "शुभ दिन। मेरा नाम अन्ना है और मुझे एक अपॉइंटमेंट चाहिए।",
+          "pl-PL": "Dzień dobry. Nazywam się Anna i potrzebuję wizyty.",
+          "ro-RO": "Bună ziua. Mă numesc Anna și am nevoie de o programare.",
+          "ru-RU": "Добрый день. Меня зовут Анна, и мне нужен термин (запись).",
+          "tr-TR": "İyi günler. Adım Anna ve bir randevuya ihtiyacım var.",
+          "uk-UA": "Добрий день. Мене звати Анна, і мені потрібен запис.",
+          "uz-UZ": "Xayrli kun. Ismim Anna va menga qabul vaqti kerak."
+        },
+        "nextStep": "is_new"
+      }
+    ],
+    "defaultNext": "is_new"
+  },
+  "is_new": {
+    "botText": "Sind Sie neu hier?",
+    "botTranslation": {
+      "ar-SA": "هل أنت جديد هنا؟",
+      "en-US": "Are you new here?",
+      "es-ES": "¿Es usted nueva aquí?",
+      "fr-FR": "Êtes-vous nouvelle ici ?",
+      "hi-IN": "क्या आप यहाँ नए हैं?",
+      "pl-PL": "Czy jest pani tu nowa?",
+      "ro-RO": "Sunteți nouă aici?",
+      "ru-RU": "Вы здесь новенькая?",
+      "tr-TR": "Burada yeni misiniz?",
+      "uk-UA": "Ви тут новенька?",
+      "uz-UZ": "Siz bu yerda yangimisiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "neu",
+        "translation": {
+          "ru-RU": "новый / новенькая",
+          "en-US": "new",
+          "ar-SA": "جديد",
+          "es-ES": "nuevo / nueva",
+          "fr-FR": "nouveau / nouvelle",
+          "hi-IN": "नया",
+          "pl-PL": "nowy / nowa",
+          "ro-RO": "nou / nouă",
+          "tr-TR": "yeni",
+          "uk-UA": "новий / новенька",
+          "uz-UZ": "yangi"
+        }
+      },
+      {
+        "german": "hier",
+        "translation": {
+          "ru-RU": "здесь",
+          "en-US": "here",
+          "ar-SA": "هنا",
+          "es-ES": "aquí",
+          "fr-FR": "ici",
+          "hi-IN": "यहाँ",
+          "pl-PL": "tutaj",
+          "ro-RO": "aici",
+          "tr-TR": "burada",
+          "uk-UA": "тут",
+          "uz-UZ": "bu yerda"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, ich bin neu hier.",
+        "translation": {
+          "ar-SA": "نعم، أنا جديد هنا.",
+          "en-US": "Yes, I am new here.",
+          "es-ES": "Sí, soy nueva aquí.",
+          "fr-FR": "Oui, je suis nouvelle ici.",
+          "hi-IN": "हाँ, मैं यहाँ नई हूँ।",
+          "pl-PL": "Tak, jestem tu nowa.",
+          "ro-RO": "Da, sunt nouă aici.",
+          "ru-RU": "Да, я здесь новенькая.",
+          "tr-TR": "Evet, burada yeniyim.",
+          "uk-UA": "Так, я тут новенька.",
+          "uz-UZ": "Ha, men bu yerda yangiman."
+        },
+        "nextStep": "problem"
+      }
+    ],
+    "defaultNext": "problem"
+  },
+  "problem": {
+    "botText": "Was haben Sie?",
+    "botTranslation": {
+      "ar-SA": "مِمَّ تشكو؟ (ماذا لديك؟)",
+      "en-US": "What do you have? (What is wrong?)",
+      "es-ES": "¿Qué tiene? (¿Qué le pasa?)",
+      "fr-FR": "Qu'avez-vous ? (De quoi souffrez-vous ?)",
+      "hi-IN": "आपको क्या हुआ है?",
+      "pl-PL": "Co pani dolega?",
+      "ro-RO": "Ce aveți? (Ce vă supără?)",
+      "ru-RU": "На что жалуетесь? (Дословно: что Вы имеете?)",
+      "tr-TR": "Neyiniz var?",
+      "uk-UA": "На що скаржитесь? (Дослівно: що Ви маєте?)",
+      "uz-UZ": "Sizga nima bo'ldi?"
+    },
+    "vocabulary": [
+      {
+        "german": "krank",
+        "translation": {
+          "ru-RU": "больной",
+          "en-US": "sick",
+          "ar-SA": "مريض",
+          "es-ES": "enfermo",
+          "fr-FR": "malade",
+          "hi-IN": "बीमार",
+          "pl-PL": "chory",
+          "ro-RO": "bolnav",
+          "tr-TR": "hasta",
+          "uk-UA": "хворий",
+          "uz-UZ": "kasal"
+        }
+      },
+      {
+        "german": "die Kopfschmerzen",
+        "translation": {
+          "ru-RU": "головная боль",
+          "en-US": "headache",
+          "ar-SA": "صداع",
+          "es-ES": "dolor de cabeza",
+          "fr-FR": "mal de tête",
+          "hi-IN": "सिरदर्द",
+          "pl-PL": "ból głowy",
+          "ro-RO": "durere de cap",
+          "tr-TR": "baş ağrısı",
+          "uk-UA": "головний біль",
+          "uz-UZ": "bosh og'rig'i"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich bin krank. Ich habe Kopfschmerzen.",
+        "translation": {
+          "ar-SA": "أنا مريض. عندي صداع.",
+          "en-US": "I am sick. I have a headache.",
+          "es-ES": "Estoy enferma. Tengo dolor de cabeza.",
+          "fr-FR": "Je suis malade. J'ai mal à la tête.",
+          "hi-IN": "मैं बीमार हूँ। मुझे सिरदर्द है।",
+          "pl-PL": "Jestem chora. Mam ból głowy.",
+          "ro-RO": "Sunt bolnavă. Am dureri de cap.",
+          "ru-RU": "Я болею. У меня болит голова.",
+          "tr-TR": "Hastayım. Baş ağrım var.",
+          "uk-UA": "Я хворію. У мене болить голова.",
+          "uz-UZ": "Men kasalman. Boshim og'riyapti."
+        },
+        "nextStep": "time_offer"
+      }
+    ],
+    "defaultNext": "time_offer"
+  },
+  "time_offer": {
+    "botText": "Kommen Sie am Montag oder am Dienstag?",
+    "botTranslation": {
+      "ar-SA": "هل ستأتي يوم الاثنين أم يوم الثلاثاء؟",
+      "en-US": "Are you coming on Monday or on Tuesday?",
+      "es-ES": "¿Viene el lunes o el martes?",
+      "fr-FR": "Venez-vous lundi ou mardi ?",
+      "hi-IN": "क्या आप सोमवार या मंगलवार को आ रहे हैं?",
+      "pl-PL": "Przyjdzie pani w poniedziałek czy we wtorek?",
+      "ro-RO": "Veniți luni sau marți?",
+      "ru-RU": "Вы придете в понедельник или во вторник?",
+      "tr-TR": "Pazartesi mi salı mı gelirsiniz?",
+      "uk-UA": "Ви прийдете в понеділок чи у вівторок?",
+      "uz-UZ": "Siz dushanba yoki seshanba kuni kelasizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "am Montag",
+        "translation": {
+          "ru-RU": "в понедельник",
+          "en-US": "on Monday",
+          "ar-SA": "يوم الاثنين",
+          "es-ES": "el lunes",
+          "fr-FR": "lundi",
+          "hi-IN": "सोमवार को",
+          "pl-PL": "w poniedziałek",
+          "ro-RO": "luni",
+          "tr-TR": "pazartesi günü",
+          "uk-UA": "у понеділок",
+          "uz-UZ": "dushanba kuni"
+        }
+      },
+      {
+        "german": "am Dienstag",
+        "translation": {
+          "ru-RU": "во вторник",
+          "en-US": "on Tuesday",
+          "ar-SA": "يوم الثلاثاء",
+          "es-ES": "el martes",
+          "fr-FR": "mardi",
+          "hi-IN": "मंगलवार को",
+          "pl-PL": "we wtorek",
+          "ro-RO": "marți",
+          "tr-TR": "salı günü",
+          "uk-UA": "у вівторок",
+          "uz-UZ": "seshanba kuni"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich komme am Dienstag.",
+        "translation": {
+          "ar-SA": "سآتي يوم الثلاثاء.",
+          "en-US": "I am coming on Tuesday.",
+          "es-ES": "Voy el martes.",
+          "fr-FR": "Je viens mardi.",
+          "hi-IN": "मैं मंगलवार को आ रही हूँ।",
+          "pl-PL": "Przyjdę we wtorek.",
+          "ro-RO": "Vin marți.",
+          "ru-RU": "Я приду во вторник.",
+          "tr-TR": "Salı günü geliyorum.",
+          "uk-UA": "Я прийду у вівторок.",
+          "uz-UZ": "Men seshanba kuni kelaman."
+        },
+        "nextStep": "hour_offer"
+      }
+    ],
+    "defaultNext": "hour_offer"
+  },
+  "hour_offer": {
+    "botText": "Passt es um 14 Uhr?",
+    "botTranslation": {
+      "ar-SA": "هل يناسبك الساعة 14 (2 ظهراً)؟",
+      "en-US": "Does 2 PM (14 Uhr) suit you?",
+      "es-ES": "¿Le va bien a las 14 horas?",
+      "fr-FR": "Est-ce que 14h vous convient ?",
+      "hi-IN": "क्या 14 बजे (दोपहर 2 बजे) ठीक रहेगा?",
+      "pl-PL": "Czy pasuje pani o godzinie 14?",
+      "ro-RO": "Vă convine la ora 14?",
+      "ru-RU": "Подходит в 14 часов?",
+      "tr-TR": "Saat 14 uygun mu?",
+      "uk-UA": "Підходить о 14 годині?",
+      "uz-UZ": "Soat 14 da ma'qulmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "passen",
+        "translation": {
+          "ru-RU": "подходить",
+          "en-US": "to suit / fit",
+          "ar-SA": "يناسب",
+          "es-ES": "convenir",
+          "fr-FR": "convenir",
+          "hi-IN": "अनुकूल होना",
+          "pl-PL": "pasować",
+          "ro-RO": "a se potrivi",
+          "tr-TR": "uymak",
+          "uk-UA": "підходити",
+          "uz-UZ": "to'g'ri kelmoq"
+        }
+      },
+      {
+        "german": "um 14 Uhr",
+        "translation": {
+          "ru-RU": "в 14 часов",
+          "en-US": "at 2 PM",
+          "ar-SA": "الساعة 14",
+          "es-ES": "a las 14",
+          "fr-FR": "à 14h",
+          "hi-IN": "14 बजे",
+          "pl-PL": "o godzinie 14",
+          "ro-RO": "la ora 14",
+          "tr-TR": "saat 14'te",
+          "uk-UA": "о 14 годині",
+          "uz-UZ": "soat 14 da"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, 14 Uhr passt gut.",
+        "translation": {
+          "ar-SA": "نعم، الساعة 14 مناسبة.",
+          "en-US": "Yes, 14 o'clock works well.",
+          "es-ES": "Sí, a las 14 me viene bien.",
+          "fr-FR": "Oui, 14h me convient bien.",
+          "hi-IN": "हाँ, 14 बजे ठीक है।",
+          "pl-PL": "Tak, godzina 14 pasuje dobrze.",
+          "ro-RO": "Da, ora 14 este bine.",
+          "ru-RU": "Да, 14 часов подходит.",
+          "tr-TR": "Evet, 14 uygun.",
+          "uk-UA": "Так, 14 година підходить.",
+          "uz-UZ": "Ha, soat 14 yaxshi."
+        },
+        "nextStep": "insurance_card"
+      }
+    ],
+    "defaultNext": "insurance_card"
+  },
+  "insurance_card": {
+    "botText": "Haben Sie eine Versicherungskarte?",
+    "botTranslation": {
+      "ar-SA": "هل لديك بطاقة تأمين صحي؟",
+      "en-US": "Do you have an insurance card?",
+      "es-ES": "¿Tiene una tarjeta de seguro?",
+      "fr-FR": "Avez-vous une carte d'assurance ?",
+      "hi-IN": "क्या आपके पास बीमा कार्ड है?",
+      "pl-PL": "Czy ma pani kartę ubezpieczeniową?",
+      "ro-RO": "Aveți un card de asigurare?",
+      "ru-RU": "У Вас есть страховая карточка?",
+      "tr-TR": "Sigorta kartınız var mı?",
+      "uk-UA": "У Вас є страхова картка?",
+      "uz-UZ": "Sizda sug'urta kartasi bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Versicherungskarte",
+        "translation": {
+          "ru-RU": "страховая карточка",
+          "en-US": "insurance card",
+          "ar-SA": "بطاقة التأمين",
+          "es-ES": "tarjeta de seguro",
+          "fr-FR": "carte d'assurance",
+          "hi-IN": "बीमा कार्ड",
+          "pl-PL": "karta ubezpieczeniowa",
+          "ro-RO": "card de asigurare",
+          "tr-TR": "sigorta kartı",
+          "uk-UA": "страхова картка",
+          "uz-UZ": "sug'urta kartasi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, ich habe die Karte.",
+        "translation": {
+          "ar-SA": "نعم، معي البطاقة.",
+          "en-US": "Yes, I have the card.",
+          "es-ES": "Sí, tengo la tarjeta.",
+          "fr-FR": "Oui, j'ai la carte.",
+          "hi-IN": "हाँ, मेरे पास कार्ड है।",
+          "pl-PL": "Tak, mam kartę.",
+          "ro-RO": "Da, am cardul.",
+          "ru-RU": "Да, у меня есть карточка.",
+          "tr-TR": "Evet, kartım var.",
+          "uk-UA": "Так, у мене є картка.",
+          "uz-UZ": "Ha, menda karta bor."
+        },
+        "nextStep": "name_ask"
+      }
+    ],
+    "defaultNext": "name_ask"
+  },
+  "name_ask": {
+    "botText": "Wie ist Ihr Familienname, bitte?",
+    "botTranslation": {
+      "ar-SA": "ما هو اسم عائلتك من فضلك؟",
+      "en-US": "What is your surname, please?",
+      "es-ES": "¿Cuál es su apellido, por favor?",
+      "fr-FR": "Quel est votre nom de famille, s'il vous plaît ?",
+      "hi-IN": "कृपया आपका उपनाम क्या है?",
+      "pl-PL": "Jakie jest pani nazwisko, proszę?",
+      "ro-RO": "Care este numele dumneavoastră de familie, vă rog?",
+      "ru-RU": "Как Ваша фамилия, пожалуйста?",
+      "tr-TR": "Soyadınız nedir, lütfen?",
+      "uk-UA": "Яке Ваше прізвище, будь ласка?",
+      "uz-UZ": "Iltimos, familiyangiz nima?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Familienname",
+        "translation": {
+          "ru-RU": "фамилия",
+          "en-US": "surname",
+          "ar-SA": "اسم العائلة",
+          "es-ES": "apellido",
+          "fr-FR": "nom de famille",
+          "hi-IN": "उपनाम",
+          "pl-PL": "nazwisko",
+          "ro-RO": "nume de familie",
+          "tr-TR": "soyadı",
+          "uk-UA": "прізвище",
+          "uz-UZ": "familiya"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Mein Familienname ist Ivanova.",
+        "translation": {
+          "ar-SA": "اسم عائلتي هو إيفانوفا.",
+          "en-US": "My surname is Ivanova.",
+          "es-ES": "Mi apellido es Ivanova.",
+          "fr-FR": "Mon nom de famille est Ivanova.",
+          "hi-IN": "मेरा उपनाम इवानोवा है।",
+          "pl-PL": "Moje nazwisko to Ivanova.",
+          "ro-RO": "Numele meu de familie este Ivanova.",
+          "ru-RU": "Моя фамилия Иванова.",
+          "tr-TR": "Soyadım Ivanova.",
+          "uk-UA": "Моє прізвище Іванова.",
+          "uz-UZ": "Mening familiyam Ivanova."
+        },
+        "nextStep": "confirm"
+      }
+    ],
+    "defaultNext": "confirm"
+  },
+  "confirm": {
+    "botText": "Danke. Sie haben den Termin am Dienstag um 14 Uhr.",
+    "botTranslation": {
+      "ar-SA": "شكراً. لديك الموعد يوم الثلاثاء الساعة 14.",
+      "en-US": "Thank you. You have the appointment on Tuesday at 2 PM.",
+      "es-ES": "Gracias. Tiene la cita el martes a las 14.",
+      "fr-FR": "Merci. Vous avez le rendez-vous mardi à 14h.",
+      "hi-IN": "धन्यवाद। आपका अपॉइंटमेंट मंगलवार को 14 बजे है।",
+      "pl-PL": "Dziękuję. Ma pani wizytę we wtorek o 14:00.",
+      "ro-RO": "Mulțumesc. Aveți programarea marți la ora 14.",
+      "ru-RU": "Спасибо. У Вас термин во вторник в 14:00.",
+      "tr-TR": "Teşekkürler. Salı saat 14'te randevunuz var.",
+      "uk-UA": "Дякую. У Вас термін у вівторок о 14:00.",
+      "uz-UZ": "Rahmat. Sizda seshanba kuni soat 14 da qabul bor."
+    },
+    "vocabulary": [
+      {
+        "german": "mitbringen",
+        "translation": {
+          "ru-RU": "приносить с собой",
+          "en-US": "bring along",
+          "ar-SA": "يحضر معه",
+          "es-ES": "traer consigo",
+          "fr-FR": "apporter",
+          "hi-IN": "साथ लाना",
+          "pl-PL": "przynieść ze sobą",
+          "ro-RO": "a aduce cu sine",
+          "tr-TR": "yanında getirmek",
+          "uk-UA": "приносити з собою",
+          "uz-UZ": "o'zi bilan olib kelish"
+        }
+      },
+      {
+        "german": "noch etwas",
+        "translation": {
+          "ru-RU": "что-то еще",
+          "en-US": "anything else",
+          "ar-SA": "شيء آخر",
+          "es-ES": "algo más",
+          "fr-FR": "autre chose",
+          "hi-IN": "कुछ और",
+          "pl-PL": "coś jeszcze",
+          "ro-RO": "altceva",
+          "tr-TR": "başka bir şey",
+          "uk-UA": "щось ще",
+          "uz-UZ": "yana nimanidir"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Muss ich noch etwas mitbringen?",
+        "translation": {
+          "ar-SA": "هل يجب أن أحضر أي شيء آخر؟",
+          "en-US": "Do I need to bring anything else?",
+          "es-ES": "¿Debo traer algo más?",
+          "fr-FR": "Dois-je apporter autre chose ?",
+          "hi-IN": "क्या मुझे कुछ और लाने की आवश्यकता है?",
+          "pl-PL": "Czy muszę przynieść coś jeszcze?",
+          "ro-RO": "Trebuie să mai aduc ceva?",
+          "ru-RU": "Я должна принести что-то еще?",
+          "tr-TR": "Başka bir şey getirmem gerekiyor mu?",
+          "uk-UA": "Чи повинна я принести щось ще?",
+          "uz-UZ": "Yana biror narsa olib kelishim kerakmi?"
+        },
+        "nextStep": "bring_ask"
+      }
+    ],
+    "defaultNext": "bring_ask"
+  },
+  "bring_ask": {
+    "botText": "Nein, bringen Sie bitte nur die Karte mit.",
+    "botTranslation": {
+      "ar-SA": "لا، يرجى إحضار البطاقة فقط.",
+      "en-US": "No, please bring only the card.",
+      "es-ES": "No, por favor traiga solo la tarjeta.",
+      "fr-FR": "Non, apportez seulement la carte s'il vous plaît.",
+      "hi-IN": "नहीं, कृपया केवल कार्ड लाएं।",
+      "pl-PL": "Nie, proszę przynieść tylko kartę.",
+      "ro-RO": "Nu, vă rugăm să aduceți doar cardul.",
+      "ru-RU": "Нет, принесите, пожалуйста, только карточку.",
+      "tr-TR": "Hayır, lütfen sadece kartı getirin.",
+      "uk-UA": "Ні, принесіть, будь ласка, тільки картку.",
+      "uz-UZ": "Yo'q, iltimos, faqat kartani olib keling."
+    },
+    "vocabulary": [
+      {
+        "german": "nur",
+        "translation": {
+          "ru-RU": "только",
+          "en-US": "only",
+          "ar-SA": "فقط",
+          "es-ES": "solo",
+          "fr-FR": "seulement",
+          "hi-IN": "केवल",
+          "pl-PL": "tylko",
+          "ro-RO": "doar",
+          "tr-TR": "sadece",
+          "uk-UA": "тільки",
+          "uz-UZ": "faqat"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, vielen Dank.",
+        "translation": {
+          "ar-SA": "حسناً، شكراً جزيلاً.",
+          "en-US": "Alright, thank you very much.",
+          "es-ES": "Muy bien, muchas gracias.",
+          "fr-FR": "C'est noté, merci beaucoup.",
+          "hi-IN": "ठीक है, बहुत-बहुत धन्यवाद।",
+          "pl-PL": "Wszystko jasne, bardzo dziękuję.",
+          "ro-RO": "În regulă, mulțumesc mult.",
+          "ru-RU": "Все понятно, большое спасибо.",
+          "tr-TR": "Tamam, çok teşekkürler.",
+          "uk-UA": "Все зрозуміло, велике дякую.",
+          "uz-UZ": "Tushunarli, katta rahmat."
+        },
+        "nextStep": "wish"
+      }
+    ],
+    "defaultNext": "wish"
+  },
+  "wish": {
+    "botText": "Gute Besserung! Bis Dienstag.",
+    "botTranslation": {
+      "ar-SA": "بالشفاء العاجل! أراك يوم الثلاثاء.",
+      "en-US": "Get well soon! Until Tuesday.",
+      "es-ES": "¡Que se mejore! Hasta el martes.",
+      "fr-FR": "Bon rétablissement ! À mardi.",
+      "hi-IN": "जल्दी ठीक हो जाओ! मंगलवार को मिलते हैं।",
+      "pl-PL": "Szybkiego powrotu do zdrowia! Do wtorku.",
+      "ro-RO": "Însănătoșire grabnică! Pe marți.",
+      "ru-RU": "Скорейшего выздоровления! До вторника.",
+      "tr-TR": "Geçmiş olsun! Salıya kadar görüşmek üzere.",
+      "uk-UA": "Швидкого одужання! До вівторка.",
+      "uz-UZ": "Tezroq tuzaling! Seshanbagacha."
+    },
+    "vocabulary": [
+      {
+        "german": "gute Besserung",
+        "translation": {
+          "ru-RU": "скорейшего выздоровления",
+          "en-US": "get well soon",
+          "ar-SA": "بالشفاء العاجل",
+          "es-ES": "que se mejore",
+          "fr-FR": "bon rétablissement",
+          "hi-IN": "जल्दी ठीक हो जाओ",
+          "pl-PL": "szybkiego powrotu do zdrowia",
+          "ro-RO": "însănătoșire grabnică",
+          "tr-TR": "geçmiş olsun",
+          "uk-UA": "швидкого одужання",
+          "uz-UZ": "tezroq tuzaling"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke, auf Wiedersehen!",
+        "translation": {
+          "ar-SA": "شكراً، إلى اللقاء!",
+          "en-US": "Thanks, goodbye!",
+          "es-ES": "Gracias, ¡adiós!",
+          "fr-FR": "Merci, au revoir !",
+          "hi-IN": "धन्यवाद, अलविदा!",
+          "pl-PL": "Dziękuję, do widzenia!",
+          "ro-RO": "Mulțumesc, la revedere!",
+          "ru-RU": "Спасибо, до свидания!",
+          "tr-TR": "Teşekkürler, hoşça kalın!",
+          "uk-UA": "Дякую, до побачення!",
+          "uz-UZ": "Rahmat, xayr!"
+        },
+        "nextStep": "goodbye"
+      }
+    ],
+    "defaultNext": "goodbye"
+  },
+  "goodbye": {
+    "botText": "Auf Wiedersehen!",
+    "botTranslation": {
+      "ar-SA": "إلى اللقاء!",
+      "en-US": "Goodbye!",
+      "es-ES": "¡Adiós!",
+      "fr-FR": "Au revoir !",
+      "hi-IN": "अलविदा!",
+      "pl-PL": "Do widzenia!",
+      "ro-RO": "La revedere!",
+      "ru-RU": "До свидания!",
+      "tr-TR": "Hoşça kalın!",
+      "uk-UA": "До побачення!",
+      "uz-UZ": "Xayr!"
+    },
+    "vocabulary": [
+      {
+        "german": "auf Wiedersehen",
+        "translation": {
+          "ru-RU": "до свидания",
+          "en-US": "goodbye",
+          "ar-SA": "إلى اللقاء",
+          "es-ES": "adiós",
+          "fr-FR": "au revoir",
+          "hi-IN": "अलविदा",
+          "pl-PL": "do widzenia",
+          "ro-RO": "la revedere",
+          "tr-TR": "hoşça kalın",
+          "uk-UA": "до побачення",
+          "uz-UZ": "xayr"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Auf Wiedersehen!",
+        "translation": {
+          "ar-SA": "إلى اللقاء!",
+          "en-US": "Goodbye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Do widzenia!",
+          "ro-RO": "La revedere!",
+          "ru-RU": "До свидания!",
+          "tr-TR": "Hoşça kalın!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Der Anruf ist beendet.",
+    "botTranslation": {
+      "ar-SA": "انتهت المكالمة.",
+      "en-US": "The call has ended.",
+      "es-ES": "La llamada ha finalizado.",
+      "fr-FR": "L'appel est terminé.",
+      "hi-IN": "कॉल समाप्त हो गई है。",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Apelul s-a încheiat.",
+      "ru-RU": "Звонок завершен.",
+      "tr-TR": "Görüşme sona erdi.",
+      "uk-UA": "Дзвінок завершено.",
+      "uz-UZ": "Qo'ng'iroq yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

@@ -2,10 +2,10 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
-import WinterEvent from '../../src/components/winterEvent.vue'
-import ValentineEvent from '../../src/components/ValentineEvent.vue'
-import HalloweenEvent from '../../src/components/halloweenEvent.vue'
-import AprilJokeEvent from '../../src/components/aprilJokeEvent.vue'
+import WinterEvent from '../../src/components/events-group/winterEvent.vue'
+import ValentineEvent from '../../src/components/events-group/ValentineEvent.vue'
+import HalloweenEvent from '../../src/components/events-group/halloweenEvent.vue'
+import AprilJokeEvent from '../../src/components/events-group/aprilJokeEvent.vue'
 import {useSeoMeta} from "#imports";
 const route = useRoute()
 const eventId = computed(() => String(route.params.id))

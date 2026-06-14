@@ -24,7 +24,6 @@
         </div>
       </div>
       <div class="percent">{{ progress }}%</div>
-      <p v-if="tip" class="tip">{{ tip.label }} — {{ tip.text }}</p>
     </div>
   </main>
 </template>
@@ -61,11 +60,11 @@ function start() {
   progressTimer = setInterval(() => {
     progress.value = Math.min(100, progress.value + 1)
     if (progress.value >= 100) finish()
-  }, 28)
+  }, 20)
 
   phraseTimer = setInterval(() => {
     phraseIndex.value = (phraseIndex.value + 1) % phraseSet.length
-  }, 1200)
+  }, 1000)
 }
 
 function finish() {
@@ -117,6 +116,7 @@ onBeforeUnmount(() => clearAll())
   border-radius: 12px;
   font-weight: 800;
   font-size: 25px;
+  color: var(--titleColor);
 }
 
 .subtitle {

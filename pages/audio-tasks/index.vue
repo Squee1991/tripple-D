@@ -1,132 +1,50 @@
-<template>
-  <div class="quiz">
-    <div class="quiz__container">
-      <Modal
-          @close="showDevModal = false"
-          :visible="showDevModal"
-          :title="overlayData.title"
-          :img="HeadPhones"
-          :text="overlayData.text"
-      />
-      <div class="quiz__header-wrapper">
-        <header class="quiz__header">
-          <button @click="handleBackClick" class="quiz__btn quiz__btn--back">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="19" y1="12" x2="5" y2="12"></line>
-              <polyline points="12 19 5 12 12 5"></polyline>
-            </svg>
-          </button>
-          <div class="quiz__titles">
-            <h1 class="quiz__title">{{ headerTitle }}</h1>
-            <p class="quiz__subtitle"> {{ headerText }}</p>
-          </div>
-          <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="16" x2="12" y2="12"></line>
-              <line x1="12" y1="8" x2="12.01" y2="8"></line>
-            </svg>
-          </button>
-        </header>
-      </div>
-      <div class="quiz__content">
-        <transition name="quiz-pop" mode="out-in">
-          <div :key="screen" :class="['quiz__grid', `quiz__grid--${screen}`]">
-            <template v-if="screen === 'levels'">
-              <button
-                  v-for="(level, index) in levels"
-                  :key="level"
-                  @click="selectLevel(level)"
-                  class="card card--level"
-                  :style="{ backgroundColor: levelColors[index] }"
-              >
-                <div class="card__inner">
-                  <span class="card__label">{{t('audioTasks.level')}}</span>
-                  <span class="card__badge">{{ level }}</span>
-                </div>
-                <div class="card__arrow">→</div>
-              </button>
-            </template>
-            <template v-else>
-              <button
-                  v-for="(topic, index) in availableTopics"
-                  :key="topic.id"
-                  @click="selectTopic(topic)"
-                  class="card card--topic"
-                  :style="{ backgroundColor: getTopicColor(index) }"
-              >
-                <div class="card__icon">{{ topic.icon }}</div>
-                <div class="card__info">
-                  <h3 class="card__title">{{ t(topic.title) }}</h3>
-                </div>
-                <div v-if="topic.tasks?.length" class="card__progress">
-                  <div class="circular-progress" :style="getCircularProgressStyle(topic)">
-                    <div class="circular-progress__inner">
-                      <span class="circular-progress__text">
-                        {{ getTopicCompleted(topic) }}/{{ topic.tasks.length }}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </button>
-            </template>
-          </div>
-        </transition>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup>
-import {ref, computed, onMounted} from 'vue'
+import {ref, computed, onMounted, onUnmounted} from 'vue'
 import {useRouter} from 'vue-router'
 import {storeToRefs} from 'pinia'
 import {useAudioTaskStore} from '../../store/audioTaskStore.js'
+import {userAuthStore} from '../../store/authStore.js'
 import Modal from "../../src/components/modal.vue"
+import VBanner from "~/src/components/V-banner.vue"
 import HeadPhones from '../../assets/images/headphones.svg'
+import { showInterstitial } from '../../utils/admob.js'
+import VTransition from "~/src/components/V-transition.vue"
+import VPremiumModal from "~/src/components/V-premiumModal.vue"
+import VArrowNav from "~/src/components/V-arrowNav.vue";
 
 const router = useRouter()
 const store = useAudioTaskStore()
+const authStore = userAuthStore()
 const {allTasks, currentLevel, userProgress} = storeToRefs(store)
-const { t } = useI18n()
+const {t } = useI18n()
 const screen = ref('levels')
 const showDevModal = ref(false)
-
+const isMounted = ref(false)
 const levels = ['A1', 'A2', 'B1']
-const levelColors = ['#7bed9f', '#70a1ff', '#ff7f50']
-
-const topicColors = [
-  '#ffeb3b', '#7bed9f', '#ff9ff3', '#70a1ff',
-  '#ff7f50', '#a29bfe', '#55efc4', '#fab1a0',
-  '#81ecec', '#fdcb6e', '#ffeaa7', '#00cec9',
-  '#ffcccc', '#ccffcc', '#ccccff', '#ffffcc'
-]
+const levelColors = ['#49b36a', '#88B5FF', '#FF9F7F']
+const topicColors = ['#FFEB7F', '#9DFFBB', '#FFAFF3', '#88B5FF', '#FF9F7F', '#AFAFFF', '#7FFFDF', '#FFD1AF']
+const showPremiumModal = ref(false)
 
 const overlayData = {
   title: t('audioTasks.overlayDataTitle'),
   text: t('audioTasks.overlayDataText'),
 }
 
-const headerTitle = computed(() => {
-  return screen.value === 'levels' ? t('audioTasks.audioTheme') : `${currentLevel.value}`
-})
-
-const headerText = computed(() => {
-  return screen.value === 'levels' ? t('audioTasks.takeComplexity') : t('audioTasks.takeTheme')
-})
-
+const headerTitle = computed(() => screen.value === 'levels' ? t('audioTasks.audioTheme') : `${currentLevel.value}`)
+const headerText = computed(() => screen.value === 'levels' ? t('audioTasks.takeComplexity') : t('audioTasks.takeTheme'))
 const availableTopics = computed(() => allTasks.value[currentLevel.value] || [])
 
 const handleBackClick = () => {
-  screen.value === 'levels' ? router.push('/') : screen.value = 'levels'
+  if (screen.value === 'topics') {
+    window.history.back()
+  } else {
+    router.push('/')
+  }
 }
 
-const getCircularProgressStyle = (topic) => {
-  const percent = getTopicProgressPercent(topic)
-  return {
-    background: `conic-gradient(rgb(91 132 255) ${percent}%, rgb(255, 255, 255) 0deg)`
+const handlePopState = () => {
+  if (screen.value === 'topics') {
+    screen.value = 'levels'
   }
 }
 
@@ -143,244 +61,359 @@ const getTopicProgressPercent = (topic) => {
 }
 
 const selectLevel = (level) => {
+  window.history.pushState({ isAudioTopics: true }, '')
   store.setLevel(level)
   screen.value = 'topics'
 }
 
-const selectTopic = (topic) => {
-  store.setCurrentTopicId(topic.id)
-  router.push('/audio-tasks/session')
+const selectTopic = (topic, index) => {
+  if (index === 0 || authStore.isPremium) {
+    showInterstitial(()=> {
+      store.setCurrentTopicId(topic.id)
+      router.push('/audio-tasks/session')
+    })
+  } else {
+    showPremiumModal.value = true
+  }
 }
 
 onMounted(async () => {
+  setTimeout(()=> {
+    isMounted.value = true
+  }, 100)
   await store.fetchTasks()
   await store.loadUserProgress()
+  window.addEventListener('popstate', handlePopState)
 })
 
+onUnmounted(() => {
+  window.removeEventListener('popstate', handlePopState)
+})
 </script>
 
-<style scoped>
+<template>
+  <div class="quiz">
+    <div class="quiz__container">
+      <Modal
+          @close="showDevModal = false"
+          :visible="showDevModal"
+          :title="overlayData.title"
+          :img="HeadPhones"
+          :text="overlayData.text"
+      />
+      <div class="quiz__header-wrapper">
+        <header class="quiz__header">
+          <button @click="handleBackClick" class="btn-icon-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                 stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          <div class="quiz__titles">
+            <h1 class="quiz__title">{{ headerTitle }}</h1>
+          </div>
+          <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                 stroke="orange" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+          </button>
+        </header>
+      </div>
+      <div class="quiz__content">
+        <VTransition>
+          <div v-if="isMounted" :key="screen" class="scrollable-view">
+            <template v-if="screen === 'levels'">
+              <div class="banner-wrapper">
+                <VBanner
+                    :text="t('bannerTitles.audio')"
+                    :icon="HeadPhones"
+                />
+              </div>
+              <div class="topics-list-container">
+                <div
+                    v-for="(level, index) in levels"
+                    :key="level"
+                    @click="selectLevel(level)"
+                    class="topic-list-item"
+                >
+                  <div class="topic-item-content">
+                    <span class="topic-label">{{ t('audioTasks.level') }}</span>
+                    <div class="topic-icon-box" :style="{ color: levelColors[index] }">
+                      <span style="font-size: 28px; font-weight: 900;">{{ level }}</span>
+                    </div>
+                  </div>
+                  <VArrowNav/>
+                </div>
+              </div>
+            </template>
+            <template v-else>
+              <div class="banner-wrapper">
+                <VBanner
+                    :text="t('bannerTitles.audio')"
+                    :icon="HeadPhones"
+                />
+              </div>
+              <div class="topics-list-container">
+                <div
+                    v-for="(topic, index) in availableTopics"
+                    :key="topic.id"
+                    @click="selectTopic(topic, index)"
+                    class="topic-list-item"
+                >
+                  <div class="topic-main-row">
+                    <div class="topic-item-content">
+                      <div class="topic-icon-box">{{ topic.icon }}</div>
+                      <span class="topic-label">{{ t(topic.title) }}</span>
+                    </div>
+                    <div class="topic-arrow" :class="{ 'topic-arrow--locked': index !== 0 && !authStore.isPremium }">
+                      <VArrowNav v-if="index === 0 || authStore.isPremium"/>
+                      <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div v-if="topic.tasks?.length" class="topic-progress-wrapper">
+                    <div class="progress-bar-container">
+                      <div
+                          class="progress-bar-fill"
+                          :style="{
+                          width: `${getTopicProgressPercent(topic)}%`,
+                          backgroundColor: getTopicColor(index)
+                        }"
+                      ></div>
+                    </div>
+                    <div class="progress-text">
+                      {{ getTopicCompleted(topic) }}/{{ topic.tasks.length }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </VTransition>
+      </div>
+      <VPremiumModal v-model:show="showPremiumModal" />
+    </div>
+  </div>
+</template>
 
+<style scoped>
 .quiz {
-  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
   font-family: 'Nunito', sans-serif;
-  color: #2f3542;
+  overflow: hidden;
 }
 
 .quiz__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   width: 100%;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .quiz__header-wrapper {
-  position: sticky;
-  top: 0;
-  background: var(--bg);
-  z-index: 100;
-  padding: 15px 20px;
+  padding: 5px 10px 15px 10px;
+  flex-shrink: 0;
+  margin-bottom: 10px;
 }
 
 .quiz__header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 920px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.quiz__titles {
-  text-align: center;
-  flex-grow: 1;
+  justify-content: space-between;
 }
 
 .quiz__title {
-  font-size: 2rem;
+  font-size: 23px;
   font-weight: 900;
-  text-transform: uppercase;
+  color: var(--title);
   margin: 0;
-  letter-spacing: 1px;
-  color: #ff6b81;
-  text-shadow: 2px 2px 0px #2f3542;
+  -webkit-text-stroke: 1px var(--title);
 }
 
 .quiz__subtitle {
-  color: #57606f;
-  font-weight: 800;
   font-size: 1rem;
-  margin-top: 5px;
+  font-weight: 800;
+  color: var(--titleColor);
+  text-align: center;
   text-transform: uppercase;
+  margin-top: 8px;
 }
 
-.quiz__btn {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid #2f3542;
+.btn-icon-back, .quiz__btn {
+  background: #fff;
   border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  box-shadow: 3px 3px 0px #2f3542;
-  transition: all 0.1s ease;
-  flex-shrink: 0;
-  color: #2f3542;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  transition: all 0.1s;
 }
 
-.quiz__btn:active {
-  transform: translate(3px, 3px);
-  box-shadow: 0px 0px 0px #2f3542;
-}
-
-.quiz__btn--back {
-  background-color: #ffeaa7;
-}
-
-.quiz__btn--info {
-  background-color: #ffffff;
+.btn-icon-back:active, .quiz__btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
 }
 
 .quiz__content {
-  padding: 10px 20px 30px;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.quiz__grid {
-  display: grid;
-  gap: 17px;
+.scrollable-view {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 16px 50px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollable-view::-webkit-scrollbar {
+  display: none;
+}
+
+.topic-arrow--locked {
+  background-color: #a0aec0;
+  box-shadow: 0 3px 0px #718096;
+  width: 28px;
+  height: 28px;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  border-radius: 50%
 }
 
-.quiz__grid--levels {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 420px));
+.banner-wrapper {
+  margin-bottom: 20px;
 }
 
-.quiz__grid--topics {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 345px));
+.topics-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.card {
-  border: 3px solid #2f3542;
+.topic-list-item {
   border-radius: 20px;
+  padding: 4px 16px;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
-  transition: all 0.1s ease;
-  box-sizing: border-box;
-  width: 100%;
-  box-shadow: 4px 4px 0px #2f3542;
+  background: var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+  transition: transform 0.1s, border-bottom-width 0.1s;
+}
+
+.topic-list-item:active {
+  transform: translateY(4px);
+  border-bottom-width: 2px;
+}
+
+.topic-main-row {
   display: flex;
   align-items: center;
-  padding: 8px;
-  gap: 8px;
-  color: #2f3542;
-}
-
-@media (min-width: 1024px) {
-  .card:hover {
-    transform: translateY(-1px);
-    box-shadow: 5px 5px 0px #2f3542;
-  }
-}
-
-.card:active {
-  transform: translate(6px, 6px);
-  box-shadow: 0px 0px 0px #2f3542;
-}
-
-.card__arrow {
-  font-size: 1.5rem;
-  font-weight: 900;
-}
-
-.card--level {
   justify-content: space-between;
+  width: 100%;
 }
 
-.card__inner {
+.topic-list-item:not(:has(.topic-main-row)) {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topic-item-content {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.card__label {
-  font-weight: 900;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-}
-
-.card__badge {
-  font-size: 2rem;
-  font-weight: 900;
-  background: #ffffff;
-  border: 3px solid #2f3542;
-  padding: 4px 10px;
-  border-radius: 12px;
-  box-shadow: 3px 3px 0px #2f3542;
-}
-
-.card__icon {
-  font-size: 3rem;
-  filter: drop-shadow(2px 2px 0px rgba(47, 53, 66, 0.3));
-}
-
-.card__info {
-  flex-grow: 1;
-  text-align: left;
-}
-
-.card__title {
-  font-size: 1.2rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.circular-progress {
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
+.topic-icon-box {
+  font-size: 32px;
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid #2f3542;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
 }
 
-.circular-progress__inner {
-  width: 46px;
-  height: 46px;
-  background: #fff;
-  border-radius: 50%;
+.topic-label {
+  color: var(--titleColor);
+  font-size: 18px;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+}
+
+.topic-progress-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border: 3px solid #2f3542;
+  gap: 12px;
+  margin-top: 14px;
+  width: 100%;
 }
 
-.circular-progress__text {
-  font-size: 0.8rem;
+.progress-bar-container {
+  flex: 1;
+  height: 8px;
+  background-color: #1e272e;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease-out;
+}
+
+.progress-text {
+  color: var(--titleColor);
+  font-size: 14px;
   font-weight: 900;
+  min-width: 36px;
+  text-align: right;
+  font-family: "Nunito", sans-serif;
 }
 
 .quiz-pop-enter-active {
-  animation: quiz-pop-in 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.quiz-pop-leave-active {
+  transition: all 0.2s ease-in;
+}
+.quiz-pop-enter-from {
+  opacity: 0;
+  transform: scale(0.95);
+}
+.quiz-pop-leave-to {
+  opacity: 0;
+  transform: scale(1.02);
 }
 
-@keyframes quiz-pop-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.9) translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-@media (max-width: 767px) {
-  .card__title {
-    font-size: 1.1rem;
-  }
-  .card__icon {
-    font-size: 2.6rem;
+@media (max-width: 400px) {
+  .topic-icon-box {
+    font-size: 28px;
+    width: 35px;
   }
 }
 </style>

@@ -1,9 +1,16 @@
 <template>
-  <div>
-    <div class="btn__back-wrapper">
-      <button type="button" @click="path" class="btn__back">Home</button>
+  <div class="terms">
+    <div class="terms__header">
+      <button @click="router.back()" class="btn-icon-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+      <div class="terms__title">Terms</div>
     </div>
-    <div class="terms">
+    <div class="terms__content">
       <h1>Terms of Service</h1>
       <p class="last-updated">
         Please note that these Terms of Service were last reviewed on {{ lastUpdated }}.
@@ -13,23 +20,22 @@
         REGARDING LIMITATIONS OF LIABILITY, CONTENT RIGHTS, AND DISPUTE RESOLUTION PROCEDURES.
         PLEASE READ THEM CAREFULLY.
       </p>
-      <section v-for="(s, i) in sections" :key="i" class="section">
-        <h2>{{ s.heading }}</h2>
-        <p v-for="(p, j) in s.paragraphs" :key="j">{{ p }}</p>
+      <section v-for="(section, index) in sections" :key="index" class="section">
+        <h2 class="section__title">{{ section.heading }}</h2>
+        <p class="section__paragraph" v-for="(paragraph, j) in section.paragraphs" :key="j">{{ paragraph }}</p>
       </section>
     </div>
   </div>
 </template>
-
-
 <script setup>
 import { ref } from "vue"
 import { useRouter } from "vue-router"
+import VBackBtn from "~/src/components/V-back-btn.vue";
 const PROJECT = "Skillupgerman"
 const EMAIL = "skillupgerman@gmail.com"
 const COUNTRY = "Poland"
 const router = useRouter()
-const lastUpdated = ref("01 october 2025")
+const lastUpdated = ref("01 Januar 2026")
 
 const path = () => {
   router.push('/')
@@ -164,54 +170,62 @@ const sections = ref([
 
 <style scoped>
 
-.btn__back-wrapper{
-  position: sticky;
-  display: flex;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 1110px;
-  margin: 0 auto;
-  padding: 10px;
-  border-bottom: 2px solid black;
-  border-radius: 15px;
-  background: var(--bg);
-}
-
-.btn__back {
-  width: 100%;
-  max-width: 320px;
-  padding: 10px;
-  border-radius: 12px;
-  border: 2px solid black;
-  box-shadow: 3px 3px 0 black;
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  background: #f1c40f;
-}
-
-@media (min-width: 1024px) {
-  .btn__back:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 1px 1px 0 black;
-  }
-}
-
 .terms {
-  max-width: 940px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 32px 20px 90px;
+  overflow: hidden;
+  height: 100%;
   line-height: 1.75;
   font-family: "Nunito", sans-serif;
   color: var(--titleColor);
 }
 
+.terms__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 15px 70px 15px;
+  overflow-y: auto;
+}
+
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-icon-back:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
+}
+
+.terms__header{
+  display: flex;
+  align-items: center;
+  padding: 5px 10px 15px 10px;
+  margin-bottom: 15px;
+}
+
 h1 {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 800;
   margin: 0 0 12px;
+}
+
+.terms__title {
+  color: var(--title);
+  font-size: 23px;
+  font-weight: 600;
+  margin-left: 15px;
+  text-shadow: 1px 1px var(--title);
 }
 
 .last-updated {
@@ -228,16 +242,17 @@ h1 {
 }
 
 .section {
-  margin: 22px 0;
+  margin-bottom: 20px;
 }
 
-.section h2 {
+.section__title {
   font-size: 20px;
   font-weight: 800;
   margin: 0 0 10px;
 }
 
-.section p {
-  margin: 8px 0;
+.section__paragraph {
+  font-size: 15px;
 }
+
 </style>

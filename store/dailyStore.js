@@ -22,7 +22,7 @@ export const dailyStore = defineStore('dailyStore', () => {
     const cloudReady = ref(false)
     const unsubRef = ref(null)
     const syncing = ref(false)
-
+    let isResettingCycle = false;
     let tickTimer = null
     let syncTimer = null
     let visHandler = null
@@ -75,6 +75,7 @@ export const dailyStore = defineStore('dailyStore', () => {
         return (cycleKey.value * QUESTS_PER_CYCLE) % len
     })
 
+
     const todayQuests = computed(() => currentCycle.value?.quests || [])
     const toNum = (v, fb = 0) => (Number.isFinite(Number(v)) ? Number(v) : fb)
     const toStr = (v, fb = '—') => (v === undefined || v === null ? fb : String(v))
@@ -91,7 +92,8 @@ export const dailyStore = defineStore('dailyStore', () => {
             targetValue: Math.max(1, toNum(q?.targetValue ?? 1, 1)),
             currentValue: 0,
             isCompleted: false,
-            rewardClaimed: !!q?.rewardClaimed
+            rewardClaimed: !!q?.rewardClaimed,
+            url: q?.url
         }
     }
 
@@ -220,15 +222,14 @@ export const dailyStore = defineStore('dailyStore', () => {
         cloudReady.value = false
     }
 
-    // ВАЖНО: Теперь функция возвращает true, если день был сброшен
     async function ensureLocalCycle() {
+        if (isResettingCycle) return false;
         const key = cycleKey.value
         let exist = loadLocal()
         const now = Date.now()
         const currentUid = uid() || 'anon'
         let wasReset = false
 
-        // 1. Всегда скачиваем 100% правду из облака (твой expiresAtMs: 1)
         if (uid() && online()) {
             try {
                 const ref = userDocRef()
@@ -245,35 +246,40 @@ export const dailyStore = defineStore('dailyStore', () => {
         const isNewUser = exist && exist.owner && exist.owner !== currentUid
 
         if (isNewDay || isNewUser) {
+            isResettingCycle = true;
 
-            // 2. Мгновенный штраф (работает!)
-            if (exist && exist.owner === currentUid && isNewDay) {
-                if (!exist.penaltyProcessed && (exist.completedCount || 0) === 0) {
-                    const authStore = userAuthStore()
-                    const freezeEndMs = authStore.freezeEndsAt || 0
-                    const previousCycleStartsAt = Number(exist.expiresAtMs || 0) - CYCLE_MS
+            try {
+                if (exist && exist.owner === currentUid && isNewDay) {
+                    if (!exist.penaltyProcessed && (exist.completedCount || 0) === 0) {
+                        const authStore = userAuthStore()
+                        const freezeEndMs = authStore.freezeEndsAt || 0
+                        const previousCycleStartsAt = Number(exist.expiresAtMs || 0) - CYCLE_MS
 
-                    let hadShield = false
-                    if (freezeEndMs && freezeEndMs > previousCycleStartsAt) {
-                        hadShield = true
-                    }
+                        let hadShield = false
+                        if (freezeEndMs && freezeEndMs > previousCycleStartsAt) {
+                            hadShield = true
+                        }
 
-                    if (hadShield) {
-                        console.log('Фронтенд: Заморозка спасла от штрафа!')
-                    } else {
-                        console.log('Фронтенд: Мгновенное списание. Берет у артикля 3 шляпы!')
-                        await authStore.modifyHats(-3)
+                        if (hadShield) {
+                            console.log('Фронтенд: Заморозка спасла от штрафа!')
+                        } else {
+                            console.log('Фронтенд: Мгновенное списание. Берет у артикля 3 шляпы!')
+                            exist.penaltyProcessed = true;
+                            await authStore.modifyHats(-3)
+                        }
                     }
                 }
+
+                const fresh = buildNewCyclePayload(key)
+                currentCycle.value = fresh
+                saveLocal(fresh)
+                await pushCurrentCycleToCloud(fresh, false)
+                wasReset = true
+                return wasReset
+
+            } finally {
+                isResettingCycle = false;
             }
-
-
-            const fresh = buildNewCyclePayload(key)
-            currentCycle.value = fresh
-            saveLocal(fresh)
-            await pushCurrentCycleToCloud(fresh, false)
-            wasReset = true
-            return wasReset
         }
 
         currentCycle.value = exist
@@ -384,15 +390,10 @@ export const dailyStore = defineStore('dailyStore', () => {
         if (syncing.value) return
         syncing.value = true
         try {
-            // === ЗАЩИТА ОТ ГОНКИ ДАННЫХ ===
             const wasReset = await ensureLocalCycle()
-
-            // Если мы только что сбросили день и отправили свежие квесты,
-            // мы ПРЕРЫВАЕМ ФУНКЦИЮ! Мы не даем recomputeAndPersist скачивать старую 1 обратно!
             if (wasReset) {
                 return;
             }
-            // ==============================
 
             await recomputeAndPersist()
         } finally {

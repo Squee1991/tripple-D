@@ -53,7 +53,6 @@ onBeforeUnmount(() => {
 
 .speak-btn__icon {
   width: 42px;
-  height: 42px;
   transition: transform 0.2s;
 }
 

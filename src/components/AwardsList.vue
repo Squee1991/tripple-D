@@ -8,15 +8,18 @@
         @close="closeAward"
     />
     <div class="awards__header">
-      <h1 class="awards__title">{{ t('awardModal.title') }}</h1>
-      <button @click="questionModal" class="awards__info-btn">
-        <!--            <img class="awards__question-icon" :src="Question" alt="quest_icon">-->
-        <div class="awards__counter cartoon-board">
-          <span class="cartoon-board__value">{{ awardsTotalLocked }}</span>
-          <span class="cartoon-board__sep">/</span>
-          <span class="cartoon-board__total">{{ awardsTotal }}</span>
-        </div>
-      </button>
+      <VBanner
+       :text="t('bannerTitles.awards')"
+       :icon="Achicon"
+      />
+<!--      <button @click="questionModal" class="awards__info-btn">-->
+<!--        &lt;!&ndash;            <img class="awards__question-icon" :src="Question" alt="quest_icon">&ndash;&gt;-->
+<!--        <div class="awards__counter cartoon-board">-->
+<!--          <span class="cartoon-board__value">{{ awardsTotalLocked }}</span>-->
+<!--          <span class="cartoon-board__sep">/</span>-->
+<!--          <span class="cartoon-board__total">{{ awardsTotal }}</span>-->
+<!--        </div>-->
+<!--      </button>-->
     </div>
     <div class="awards__list-scroll">
       <div class="items-grid">
@@ -44,7 +47,8 @@ import {ref} from 'vue'
 import VModal from '~/src/components/modal.vue'
 import AwardIconModal from '../../assets/images/AwardForModal.svg'
 import Question from '../../assets/images/question.svg'
-
+import VBanner from "~/src/components/V-banner.vue";
+import Achicon from '../../assets/images/AchPanelIcon.svg'
 const {t} = useI18n()
 const props = defineProps({
   awards: {
@@ -98,16 +102,16 @@ function closeAward() {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border-top: 3px solid #1a1d2b;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   border-radius: 15px;
 }
 
 .shop-item {
-  padding: 13px;
+  padding: 8px;
   text-align: center;
   display: flex;
-  width: 165px;
+  width: 120px;
+  height: 145px;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
@@ -115,7 +119,7 @@ function closeAward() {
 }
 
 .awards__title {
-  font-size: 1.5rem;
+  font-size: 20px;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
   color: var(--titleColor);
@@ -126,7 +130,6 @@ function closeAward() {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
-  padding: 0 20px;
   border-radius: 16px;
 
 }
@@ -143,7 +146,9 @@ function closeAward() {
 
 .image-wrapper {
   position: relative;
-  width: 70px;
+  width: 55px;
+  height: 63px;
+  min-height: 63px;
   margin-bottom: 10px;
 }
 
@@ -165,7 +170,7 @@ function closeAward() {
 .item-name {
   color: var(--titleColor);
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 15px;
   margin-bottom: 0.25rem;
 }
 
@@ -221,20 +226,15 @@ button:disabled {
   box-shadow: none;
 }
 
-.awards__list-scroll {
-  max-height: calc(100vh - 300px);
-  overflow-y: auto;
-  padding-right: 1px;
-}
 
 .awards__list-scroll::-webkit-scrollbar {
-  width: 10px;
+  width: 3px;
+  display: none;
 }
 
 .awards__list-scroll::-webkit-scrollbar-thumb {
   background: #1e1e1e;
   border-radius: 10px;
-  border: 2px solid #fff;
 }
 
 .awards__list-scroll::-webkit-scrollbar-track {
@@ -251,9 +251,9 @@ button:disabled {
   padding: 0 12px;
   min-width: 82px;
   border-radius: 14px;
-  border: 2px solid #000;
   background: #ffffff;
-  box-shadow: 4px 4px 0 #000;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-size: 1.05rem;
@@ -281,6 +281,27 @@ button:disabled {
   transform: translateY(-1px);
 }
 
+.awards__section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0 0 0 ;
+}
+
+.awards__section:after{
+  position: fixed;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  background: var(--overlayAfter);
+}
+
 .cartoon-board__total {
   position: relative;
   z-index: 1;
@@ -301,7 +322,7 @@ button:disabled {
 
   .cartoon-board__value {
     height: 23px;
-    padding: 0 7px;
+    padding: 0 2px;
   }
 }
 
@@ -319,10 +340,6 @@ button:disabled {
 @media (max-width: 767px) {
   .items-grid {
     width: 100%;
-  }
-
-  .awards__title {
-    font-size: 1.7rem;
   }
 }
 

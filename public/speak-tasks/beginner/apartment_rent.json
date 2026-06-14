@@ -1,0 +1,707 @@
+{
+  "start": {
+    "botText": "Müller, hallo?",
+    "botTranslation": {
+      "ar-SA": "مولر، ألو؟",
+      "en-US": "Müller, hello?",
+      "es-ES": "Müller, ¿hola?",
+      "fr-FR": "Müller, allô ?",
+      "hi-IN": "मुलर, हेलो?",
+      "pl-PL": "Müller, słucham?",
+      "ro-RO": "Müller, alo?",
+      "ru-RU": "Мюллер, алло?",
+      "tr-TR": "Müller, alo?",
+      "uk-UA": "Мюллер, алло?",
+      "uz-UZ": "Myuller, allo?"
+    },
+    "vocabulary": [
+      {
+        "german": "anrufen",
+        "translation": {
+          "ar-SA": "يتصل",
+          "en-US": "to call",
+          "es-ES": "llamar",
+          "fr-FR": "appeler",
+          "hi-IN": "कॉल करना",
+          "pl-PL": "dzwonić",
+          "ro-RO": "a suna",
+          "ru-RU": "звонить",
+          "tr-TR": "aramak",
+          "uk-UA": "дзвонити",
+          "uz-UZ": "qo'ng'iroq qilish"
+        }
+      },
+      {
+        "german": "die Wohnung",
+        "translation": {
+          "ar-SA": "الشقة",
+          "en-US": "apartment",
+          "es-ES": "apartamento",
+          "fr-FR": "appartement",
+          "hi-IN": "अपार्टमेंट",
+          "pl-PL": "mieszkanie",
+          "ro-RO": "apartament",
+          "ru-RU": "квартира",
+          "tr-TR": "daire",
+          "uk-UA": "квартира",
+          "uz-UZ": "kvartira"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag! Ich heiße Viola und ich rufe wegen der Wohnung an.",
+        "translation": {
+          "ar-SA": "طاب يومك! اسمي أليكس وأنا أتصل بخصوص الشقة.",
+          "en-US": "Good day! My name is Viola and I am calling about the apartment.",
+          "es-ES": "¡Buen día! Me llamo Viola y llamo por el apartamento.",
+          "fr-FR": "Bonjour ! Je m'appelle Viola et j'appelle au sujet de l'appartement.",
+          "hi-IN": "शुभ दिन! मेरा नाम एलेक्स है और मैं अपार्टमेंट के बारे में कॉल कर रहा हूँ।",
+          "pl-PL": "Dzień dobry! Nazywam się Viola i dzwonię w sprawie mieszkania.",
+          "ro-RO": "Bună ziua! Mă numesc Viola și sun în legătură cu apartamentul.",
+          "ru-RU": "Добрый день! Меня зовут Виола, и я звоню по поводу квартиры.",
+          "tr-TR": "İyi günler! Benim adım Viola ve daire için arıyorum.",
+          "uk-UA": "Добрий день! Мене звати Виола , і я телефоную щодо квартири.",
+          "uz-UZ": "Xayrli kun! Mening ismim Viola va men kvartira haqida qo'ng'iroq qilyapman."
+        },
+        "nextStep": "is_free"
+      }
+    ],
+    "defaultNext": "is_free"
+  },
+  "is_free": {
+    "botText": "Guten Tag! Ja, die Wohnung ist noch frei.",
+    "botTranslation": {
+      "ar-SA": "طاب يومك! نعم، الشقة لا تزال متاحة.",
+      "en-US": "Good day! Yes, the apartment is still available.",
+      "es-ES": "¡Buen día! Sí, el apartamento aún está disponible.",
+      "fr-FR": "Bonjour ! Oui, l'appartement est encore libre.",
+      "hi-IN": "शुभ दिन! हाँ, अपार्टमेंट अभी भी उपलब्ध है।",
+      "pl-PL": "Dzień dobry! Tak, mieszkanie jest wciąż wolne.",
+      "ro-RO": "Bună ziua! Da, apartamentul este încă liber.",
+      "ru-RU": "Добрый день! Да, квартира еще свободна.",
+      "tr-TR": "İyi günler! Evet, daire hala boş.",
+      "uk-UA": "Добрий день! Так, квартира ще вільна.",
+      "uz-UZ": "Xayrli kun! Ha, kvartira hali bo'sh."
+    },
+    "vocabulary": [
+      {
+        "german": "noch frei",
+        "translation": {
+          "ar-SA": "لا تزال متاحة",
+          "en-US": "still free",
+          "es-ES": "aún libre",
+          "fr-FR": "encore libre",
+          "hi-IN": "अभी भी खाली",
+          "pl-PL": "wciąż wolne",
+          "ro-RO": "încă liber",
+          "ru-RU": "еще свободна",
+          "tr-TR": "hala boş",
+          "uk-UA": "ще вільна",
+          "uz-UZ": "hali bo'sh"
+        }
+      },
+      {
+        "german": "die Miete",
+        "translation": {
+          "ar-SA": "الإيجار",
+          "en-US": "rent",
+          "es-ES": "alquiler",
+          "fr-FR": "loyer",
+          "hi-IN": "किराया",
+          "pl-PL": "czynsz",
+          "ro-RO": "chiria",
+          "ru-RU": "аренда",
+          "tr-TR": "kira",
+          "uk-UA": "оренда",
+          "uz-UZ": "ijara"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Wie hoch ist die Miete, bitte?",
+        "translation": {
+          "ar-SA": "كم هو الإيجار من فضلك؟",
+          "en-US": "How much is the rent, please?",
+          "es-ES": "¿A cuánto asciende el alquiler, por favor?",
+          "fr-FR": "A quel prix est le loyer, s'il vous plaît ?",
+          "hi-IN": "कृपया किराया कितना है?",
+          "pl-PL": "Ile wynosi czynsz, proszę?",
+          "ro-RO": "Care este chiria, vă rog?",
+          "ru-RU": "Какая арендная плата, пожалуйста?",
+          "tr-TR": "Kira ne kadar acaba?",
+          "uk-UA": "Яка орендна плата, будь ласка?",
+          "uz-UZ": "Iltimos, ijara haqi qancha?"
+        },
+        "nextStep": "rent_price"
+      }
+    ],
+    "defaultNext": "rent_price"
+  },
+  "rent_price": {
+    "botText": "Die Miete kostet 600 Euro.",
+    "botTranslation": {
+      "ar-SA": "الإيجار يكلف 600 يورو.",
+      "en-US": "The rent costs 600 Euros.",
+      "es-ES": "El alquiler cuesta 600 euros.",
+      "fr-FR": "Le loyer coûte 600 euros.",
+      "hi-IN": "किराया 600 यूरो है।",
+      "pl-PL": "Czynsz wynosi 600 euro.",
+      "ro-RO": "Chiria costă 600 de euro.",
+      "ru-RU": "Арендная плата составляет 600 евро.",
+      "tr-TR": "Kira 600 Euro'dur.",
+      "uk-UA": "Орендна плата становить 600 євро.",
+      "uz-UZ": "Ijara narxi 600 yevro."
+    },
+    "vocabulary": [
+      {
+        "german": "kostet",
+        "translation": {
+          "ar-SA": "يكلف",
+          "en-US": "costs",
+          "es-ES": "cuesta",
+          "fr-FR": "coûte",
+          "hi-IN": "कीमत है",
+          "pl-PL": "kosztuje",
+          "ro-RO": "costă",
+          "ru-RU": "стоит",
+          "tr-TR": "tutuyor",
+          "uk-UA": "коштує",
+          "uz-UZ": "turadi"
+        }
+      },
+      {
+        "german": "der Aufzug",
+        "translation": {
+          "ar-SA": "مصعد",
+          "en-US": "elevator",
+          "es-ES": "ascensor",
+          "fr-FR": "ascenseur",
+          "hi-IN": "लिफ्ट",
+          "pl-PL": "winda",
+          "ro-RO": "lift",
+          "ru-RU": "лифт",
+          "tr-TR": "asansör",
+          "uk-UA": "ліфт",
+          "uz-UZ": "lift"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hat die Wohnung einen Aufzug?",
+        "translation": {
+          "ar-SA": "هل تحتوي الشقة على مصعد؟",
+          "en-US": "Does the apartment have an elevator?",
+          "es-ES": "¿Tiene ascensor el apartamento?",
+          "fr-FR": "L'appartement a-t-il un ascenseur ?",
+          "hi-IN": "क्या अपार्टमेंट में लिफ्ट है?",
+          "pl-PL": "Czy w mieszkaniu jest winda?",
+          "ro-RO": "Are apartamentul un lift?",
+          "ru-RU": "В квартире есть лифт?",
+          "tr-TR": "Dairede asansör var mı?",
+          "uk-UA": "У квартирі є ліфт?",
+          "uz-UZ": "Kvartirada lift bormi?"
+        },
+        "nextStep": "elevator_check"
+      }
+    ],
+    "defaultNext": "elevator_check"
+  },
+  "elevator_check": {
+    "botText": "Ja, die Wohnung hat einen Aufzug.",
+    "botTranslation": {
+      "ar-SA": "نعم، الشقة بها مصعد.",
+      "en-US": "Yes, the apartment has an elevator.",
+      "es-ES": "Sí, el apartamento tiene ascensor.",
+      "fr-FR": "Oui, l'appartement a un ascenseur.",
+      "hi-IN": "हाँ, अपार्टमेंट में लिफ्ट है।",
+      "pl-PL": "Tak, mieszkanie ma windę.",
+      "ro-RO": "Da, apartamentul are un lift.",
+      "ru-RU": "Да, в квартире есть лифт.",
+      "tr-TR": "Evet, dairede asansör var.",
+      "uk-UA": "Так, у квартирі є ліфт.",
+      "uz-UZ": "Ha, kvartirada lift bor."
+    },
+    "vocabulary": [
+      {
+        "german": "die Besichtigung",
+        "translation": {
+          "ar-SA": "معاينة",
+          "en-US": "viewing",
+          "es-ES": "visita",
+          "fr-FR": "visite",
+          "hi-IN": "देखना",
+          "pl-PL": "oglądanie",
+          "ro-RO": "vizionare",
+          "ru-RU": "просмотр",
+          "tr-TR": "evi gezme",
+          "uk-UA": "перегляд",
+          "uz-UZ": "ko'rish"
+        }
+      },
+      {
+        "german": "sehen",
+        "translation": {
+          "ar-SA": "يرى",
+          "en-US": "to see",
+          "es-ES": "ver",
+          "fr-FR": "voir",
+          "hi-IN": "देखना",
+          "pl-PL": "widzieć",
+          "ro-RO": "a vedea",
+          "ru-RU": "смотреть",
+          "tr-TR": "görmek",
+          "uk-UA": "дивитися",
+          "uz-UZ": "ko'rish"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich möchte die Wohnung sehen.",
+        "translation": {
+          "ar-SA": "أريد رؤية الشقة.",
+          "en-US": "I want to see the apartment.",
+          "es-ES": "Quiero ver el apartamento.",
+          "fr-FR": "Je veux voir l'appartement.",
+          "hi-IN": "मैं अपार्टमेंट देखना चाहता हूँ।",
+          "pl-PL": "Chcę zobaczyć mieszkanie.",
+          "ro-RO": "Vreau să văd apartamentul.",
+          "ru-RU": "Я хочу посмотреть квартиру.",
+          "tr-TR": "Daireyi görmek istiyorum.",
+          "uk-UA": "Я хочу подивитися квартиру.",
+          "uz-UZ": "Men kvartirani ko'rmoqchiman."
+        },
+        "nextStep": "appointment_offer"
+      },
+      {
+        "text": "Ich möchte zur Besichtigung kommen.",
+        "translation": {
+          "ar-SA": "أريد المجيء للمعاينة.",
+          "en-US": "I want to come to the viewing.",
+          "es-ES": "Quiero ir a la visita.",
+          "fr-FR": "Je veux venir à la visite.",
+          "hi-IN": "मैं देखने के लिए आना चाहता हूँ।",
+          "pl-PL": "Chcę przyjść na oglądanie.",
+          "ro-RO": "Vreau să vin la vizionare.",
+          "ru-RU": "Я хочу прийти на просмотр.",
+          "tr-TR": "Görüşmeye gelmek istiyorum.",
+          "uk-UA": "Я хочу прийти на перегляд.",
+          "uz-UZ": "Men ko'rishga kelmoqchiman."
+        },
+        "nextStep": "appointment_offer"
+      }
+    ],
+    "defaultNext": "appointment_offer"
+  },
+  "appointment_offer": {
+    "botText": "Gerne. Haben Sie am Mittwoch um 10 Uhr oder am Donnerstag um 15 Uhr Zeit?",
+    "botTranslation": {
+      "ar-SA": "بكل سرور. هل لديك وقت يوم الأربعاء الساعة 10 صباحاً أو يوم الخميس الساعة 3 عصراً؟",
+      "en-US": "Gladly. Do you have time on Wednesday at 10 AM or on Thursday at 3 PM?",
+      "es-ES": "Con gusto. ¿Tiene tiempo el miércoles a las 10 o el jueves a las 15?",
+      "fr-FR": "Volontiers. Avez-vous du temps mercredi à 10h ou jeudi à 15h ?",
+      "hi-IN": "खुशी से। क्या आपके पास बुधवार को सुबह 10 बजे या गुरुवार को दोपहर 3 बजे समय है?",
+      "pl-PL": "Z przyjemnością. Czy ma Pan/Pani czas w środę o 10:00 lub w czwartek o 15:00?",
+      "ro-RO": "Cu plăcere. Aveți timp miercuri la ora 10 sau joi la ora 15?",
+      "ru-RU": "С удовольствием. У Вас есть время в среду в 10:00 или в четверг в 15:00?",
+      "tr-TR": "Memnuniyetle. Çarşamba saat 10'da veya perşembe saat 15'te vaktiniz var mı?",
+      "uk-UA": "Із задоволенням. У Вас є час у середу о 10:00 або в четвер о 15:00?",
+      "uz-UZ": "Bajonidil. Chorshanba kuni soat 10:00 da yoki payshanba kuni soat 15:00 da vaqtingiz bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Zeit",
+        "translation": {
+          "ar-SA": "وقت",
+          "en-US": "time",
+          "es-ES": "tiempo",
+          "fr-FR": "temps",
+          "hi-IN": "समय",
+          "pl-PL": "czas",
+          "ro-RO": "timp",
+          "ru-RU": "время",
+          "tr-TR": "zaman",
+          "uk-UA": "час",
+          "uz-UZ": "vaqt"
+        }
+      },
+      {
+        "german": "passt gut",
+        "translation": {
+          "ar-SA": "يناسب جيداً",
+          "en-US": "fits well",
+          "es-ES": "viene bien",
+          "fr-FR": "convient bien",
+          "hi-IN": "सही बैठता है",
+          "pl-PL": "pasuje dobrze",
+          "ro-RO": "se potrivește bine",
+          "ru-RU": "хорошо подходит",
+          "tr-TR": "iyi uyuyor",
+          "uk-UA": "добре підходить",
+          "uz-UZ": "yaxshi tushadi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Mittwoch um 10 Uhr passt gut.",
+        "translation": {
+          "ar-SA": "يوم الأربعاء الساعة 10 مناسب جداً.",
+          "en-US": "Wednesday at 10 o'clock works well.",
+          "es-ES": "El miércoles a las 10 me viene bien.",
+          "fr-FR": "Mercredi à 10 heures me convient bien.",
+          "hi-IN": "बुधवार को 10 बजे ठीक रहेगा।",
+          "pl-PL": "Środa o 10 pasuje dobrze.",
+          "ro-RO": "Miercuri la ora 10 este perfect.",
+          "ru-RU": "Среда в 10 часов отлично подходит.",
+          "tr-TR": "Çarşamba saat 10 uygun.",
+          "uk-UA": "Середа о 10 годині чудово підходить.",
+          "uz-UZ": "Chorshanba kuni soat 10 yaxshi."
+        },
+        "nextStep": "time_confirm"
+      }
+    ],
+    "defaultNext": "time_confirm"
+  },
+  "time_confirm": {
+    "botText": "Super. Wir treffen uns dann.",
+    "botTranslation": {
+      "ar-SA": "رائع. سنلتقي حينها.",
+      "en-US": "Super. We'll meet then.",
+      "es-ES": "Súper. Nos vemos entonces.",
+      "fr-FR": "Super. On se voit alors.",
+      "hi-IN": "सुपर। हम तब मिलेंगे।",
+      "pl-PL": "Super. Zatem do zobaczenia.",
+      "ro-RO": "Super. Ne vedem atunci.",
+      "ru-RU": "Супер. Тогда встретимся.",
+      "tr-TR": "Süper. O zaman buluşuruz.",
+      "uk-UA": "Супер. Тоді зустрінемося.",
+      "uz-UZ": "Super. Unda uchrashamiz."
+    },
+    "vocabulary": [
+      {
+        "german": "treffen uns",
+        "translation": {
+          "ar-SA": "نلتقي",
+          "en-US": "meet each other",
+          "es-ES": "nos encontramos",
+          "fr-FR": "nous nous rencontrons",
+          "hi-IN": "हम मिलते हैं",
+          "pl-PL": "spotykamy się",
+          "ro-RO": "ne întâlnim",
+          "ru-RU": "встречаемся",
+          "tr-TR": "buluşuyoruz",
+          "uk-UA": "зустрічаємося",
+          "uz-UZ": "uchrashamiz"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Wo ist die Wohnung?",
+        "translation": {
+          "ar-SA": "أين تقع الشقة؟",
+          "en-US": "Where is the apartment?",
+          "es-ES": "¿Dónde está el apartamento?",
+          "fr-FR": "Où est l'appartement ?",
+          "hi-IN": "अपार्टमेंट कहाँ है?",
+          "pl-PL": "Gdzie jest to mieszkanie?",
+          "ro-RO": "Unde este apartamentul?",
+          "ru-RU": "Где находится квартира?",
+          "tr-TR": "Daire nerede?",
+          "uk-UA": "Де знаходиться квартира?",
+          "uz-UZ": "Kvartira qayerda joylashgan?"
+        },
+        "nextStep": "address_ask"
+      }
+    ],
+    "defaultNext": "address_ask"
+  },
+  "address_ask": {
+    "botText": "Die Adresse ist Hauptstraße 5.",
+    "botTranslation": {
+      "ar-SA": "العنوان هو Hauptstraße 5.",
+      "en-US": "The address is Hauptstraße 5.",
+      "es-ES": "La dirección es Hauptstraße 5.",
+      "fr-FR": "L'adresse est Hauptstraße 5.",
+      "hi-IN": "पता Hauptstraße 5 है।",
+      "pl-PL": "Adres to Hauptstraße 5.",
+      "ro-RO": "Adresa este Hauptstraße 5.",
+      "ru-RU": "Адрес: Хауптштрассе 5.",
+      "tr-TR": "Adres Hauptstraße 5.",
+      "uk-UA": "Адреса: Хауптштрассе 5.",
+      "uz-UZ": "Manzil: Hauptstraße 5."
+    },
+    "vocabulary": [
+      {
+        "german": "die Adresse",
+        "translation": {
+          "ar-SA": "عنوان",
+          "en-US": "address",
+          "es-ES": "dirección",
+          "fr-FR": "adresse",
+          "hi-IN": "पता",
+          "pl-PL": "adres",
+          "ro-RO": "adresa",
+          "ru-RU": "адрес",
+          "tr-TR": "adres",
+          "uk-UA": "адреса",
+          "uz-UZ": "manzil"
+        }
+      },
+      {
+        "german": "komme hin",
+        "translation": {
+          "ar-SA": "أصل إلى هناك",
+          "en-US": "get there",
+          "es-ES": "llego allí",
+          "fr-FR": "j'y arrive",
+          "hi-IN": "वहाँ पहुंचें",
+          "pl-PL": "dotrę tam",
+          "ro-RO": "ajung acolo",
+          "ru-RU": "доберусь туда",
+          "tr-TR": "oraya varırım",
+          "uk-UA": "дістануся туди",
+          "uz-UZ": "u yerga yetib boraman"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Wie komme ich hin?",
+        "translation": {
+          "ar-SA": "كيف أصل إلى هناك؟",
+          "en-US": "How do I get there?",
+          "es-ES": "¿Cómo llego allí?",
+          "fr-FR": "Comment m'y rendre ?",
+          "hi-IN": "मैं वहां कैसे पहुंचूं?",
+          "pl-PL": "Jak tam dotrę?",
+          "ro-RO": "Cum ajung acolo?",
+          "ru-RU": "Как мне туда добраться?",
+          "tr-TR": "Oraya nasıl gidebilirim?",
+          "uk-UA": "Як мені туди дістатися?",
+          "uz-UZ": "U yerga qanday boraman?"
+        },
+        "nextStep": "directions"
+      }
+    ],
+    "defaultNext": "directions"
+  },
+  "directions": {
+    "botText": "Nehmen Sie die U-Bahn U2.",
+    "botTranslation": {
+      "ar-SA": "استقل مترو الأنفاق U2.",
+      "en-US": "Take the subway U2.",
+      "es-ES": "Tome el metro U2.",
+      "fr-FR": "Prenez le métro U2.",
+      "hi-IN": "सबवे U2 लें।",
+      "pl-PL": "Proszę pojechać metrem U2.",
+      "ro-RO": "Luați metroul U2.",
+      "ru-RU": "Сядьте на метро U2.",
+      "tr-TR": "U2 metrosuna binin.",
+      "uk-UA": "Сядьте на метро U2.",
+      "uz-UZ": "U2 metrosiga chiqing."
+    },
+    "vocabulary": [
+      {
+        "german": "die U-Bahn",
+        "translation": {
+          "ar-SA": "مترو",
+          "en-US": "subway",
+          "es-ES": "metro",
+          "fr-FR": "métro",
+          "hi-IN": "सबवे",
+          "pl-PL": "metro",
+          "ro-RO": "metrou",
+          "ru-RU": "метро",
+          "tr-TR": "metro",
+          "uk-UA": "метро",
+          "uz-UZ": "metro"
+        }
+      },
+      {
+        "german": "mitbringen",
+        "translation": {
+          "ar-SA": "يحضر",
+          "en-US": "bring along",
+          "es-ES": "traer",
+          "fr-FR": "apporter",
+          "hi-IN": "साथ लाना",
+          "pl-PL": "przynieść",
+          "ro-RO": "a aduce",
+          "ru-RU": "приносить",
+          "tr-TR": "yanında getirmek",
+          "uk-UA": "приносити",
+          "uz-UZ": "o'zi bilan olib kelish"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Muss ich Papiere mitbringen?",
+        "translation": {
+          "ar-SA": "هل يجب أن أحضر مستندات؟",
+          "en-US": "Do I need to bring documents?",
+          "es-ES": "¿Debo llevar documentos?",
+          "fr-FR": "Dois-je apporter des documents ?",
+          "hi-IN": "क्या मुझे दस्तावेज़ लाने होंगे?",
+          "pl-PL": "Czy muszę przynieść dokumenty?",
+          "ro-RO": "Trebuie să aduc documente?",
+          "ru-RU": "Нужно ли мне принести документы?",
+          "tr-TR": "Belgeler getirmem gerekiyor mu?",
+          "uk-UA": "Чи потрібно мені принести документи?",
+          "uz-UZ": "Men hujjatlarni olib kelishim kerakmi?"
+        },
+        "nextStep": "documents"
+      }
+    ],
+    "defaultNext": "documents"
+  },
+  "documents": {
+    "botText": "Für die Besichtigung nicht. Aber bitte bringen Sie Ihren Ausweis mit.",
+    "botTranslation": {
+      "ar-SA": "للمعاينة لا. ولكن يرجى إحضار بطاقة هويتك.",
+      "en-US": "Not for the viewing. But please bring your ID.",
+      "es-ES": "Para la visita no. Pero por favor traiga su identificación.",
+      "fr-FR": "Pas pour la visite. Mais veuillez apporter votre pièce d'identité.",
+      "hi-IN": "देखने के लिए नहीं। लेकिन कृपया अपना आईडी लाएं।",
+      "pl-PL": "Na oglądanie nie. Ale proszę przynieść dowód tożsamości.",
+      "ro-RO": "Pentru vizionare nu. Dar vă rugăm să aduceți actul de identitate.",
+      "ru-RU": "Для просмотра нет. Но, пожалуйста, принесите Ваше удостоверение личности.",
+      "tr-TR": "Görüşme için değil. Ancak lütfen kimliğinizi getirin.",
+      "uk-UA": "Для перегляду ні. Але, будь ласка, принесіть Ваше посвідчення особи.",
+      "uz-UZ": "Ko'rish uchun emas. Lekin iltimos, shaxsingizni tasdiqlovchi hujjatni olib keling."
+    },
+    "vocabulary": [
+      {
+        "german": "der Ausweis",
+        "translation": {
+          "ar-SA": "هوية",
+          "en-US": "ID card",
+          "es-ES": "identificación",
+          "fr-FR": "carte d'identité",
+          "hi-IN": "पहचान पत्र",
+          "pl-PL": "dowód",
+          "ro-RO": "act de identitate",
+          "ru-RU": "удостоверение",
+          "tr-TR": "kimlik",
+          "uk-UA": "посвідчення",
+          "uz-UZ": "guvohnoma"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, vielen Dank!",
+        "translation": {
+          "ar-SA": "حسناً، شكراً جزيلاً!",
+          "en-US": "Alright, thank you very much!",
+          "es-ES": "¡Muy bien, muchas gracias!",
+          "fr-FR": "C'est noté, merci beaucoup !",
+          "hi-IN": "ठीक है, बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Wszystko jasne, bardzo dziękuję!",
+          "ro-RO": "În regulă, mulțumesc mult!",
+          "ru-RU": "Всё понятно, большое спасибо!",
+          "tr-TR": "Tamam, çok teşekkürler!",
+          "uk-UA": "Все зрозуміло, велике дякую!",
+          "uz-UZ": "Tushunarli, katta rahmat!"
+        },
+        "nextStep": "wish"
+      }
+    ],
+    "defaultNext": "wish"
+  },
+  "wish": {
+    "botText": "Gerne! Bis Mittwoch!",
+    "botTranslation": {
+      "ar-SA": "على الرحب والسعة! أراك يوم الأربعاء!",
+      "en-US": "You're welcome! See you on Wednesday!",
+      "es-ES": "¡Con gusto! ¡Hasta el miércoles!",
+      "fr-FR": "Avec plaisir ! À mercredi !",
+      "hi-IN": "आपका स्वागत है! बुधवार को मिलते हैं!",
+      "pl-PL": "Proszę bardzo! Do środy!",
+      "ro-RO": "Cu plăcere! Pe miercuri!",
+      "ru-RU": "Пожалуйста! До среды!",
+      "tr-TR": "Rica ederim! Çarşambaya görüşürüz!",
+      "uk-UA": "Прошу! До середи!",
+      "uz-UZ": "Arzimaydi! Chorshanbagacha ko'rishguncha!"
+    },
+    "options": [
+      {
+        "text": "Danke, Ihnen auch einen schönen Tag!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً يوماً سعيداً!",
+          "en-US": "Thanks, have a nice day too!",
+          "es-ES": "Gracias, ¡a usted también un buen día!",
+          "fr-FR": "Merci, à vous aussi une bonne journée !",
+          "hi-IN": "धन्यवाद, आपका दिन भी शुभ हो!",
+          "pl-PL": "Dziękuję, Panu/Pani również miłego dnia!",
+          "ro-RO": "Mulțumesc, și dumneavoastră o zi frumoasă!",
+          "ru-RU": "Спасибо, и Вам хорошего дня!",
+          "tr-TR": "Teşekkürler, size de iyi günler!",
+          "uk-UA": "Дякую, і Вам гарного дня!",
+          "uz-UZ": "Rahmat, sizga ham yaxshi kun tilayman!"
+        },
+        "nextStep": "goodbye"
+      }
+    ],
+    "defaultNext": "goodbye"
+  },
+  "goodbye": {
+    "botText": "Auf Wiedersehen!",
+    "botTranslation": {
+      "ar-SA": "إلى اللقاء!",
+      "en-US": "Goodbye!",
+      "es-ES": "¡Adiós!",
+      "fr-FR": "Au revoir !",
+      "hi-IN": "अलविदा!",
+      "pl-PL": "Do widzenia!",
+      "ro-RO": "La revedere!",
+      "ru-RU": "До свидания!",
+      "tr-TR": "Hoşça kalın!",
+      "uk-UA": "До побачення!",
+      "uz-UZ": "Xayr!"
+    },
+    "options": [
+      {
+        "text": "Auf Wiedersehen!",
+        "translation": {
+          "ar-SA": "إلى اللقاء!",
+          "en-US": "Goodbye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Do widzenia!",
+          "ro-RO": "La revedere!",
+          "ru-RU": "До свидания!",
+          "tr-TR": "Hoşça kalın!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Telefonat ist beendet.",
+    "botTranslation": {
+      "ar-SA": "انتهت المكالمة الهاتفية.",
+      "en-US": "The phone call is ended.",
+      "es-ES": "La llamada telefónica ha finalizado.",
+      "fr-FR": "L'appel téléphonique est terminé.",
+      "hi-IN": "फोन कॉल समाप्त हो गया है。",
+      "pl-PL": "Rozmowa telefoniczna została zakończona.",
+      "ro-RO": "Apelul telefonic s-a încheiat.",
+      "ru-RU": "Телефонный разговор завершен.",
+      "tr-TR": "Telefon görüşmesi sona erdi.",
+      "uk-UA": "Телефонна розмова завершена.",
+      "uz-UZ": "Telefon suhbati yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}
