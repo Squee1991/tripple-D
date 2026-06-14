@@ -5,18 +5,18 @@
         <div class="modal-title">{{ t('cabinet.cancelPremium') }}</div>
         <p class="modal-text">{{ t('cabinet.cancelPremiumText') }}</p>
         <div class="modal-actions">
-          <button class="btn btn-danger" @click="cancelSubscription" type="button">
-            {{ t('cabinet.accept') }}
-          </button>
           <button class="btn" @click="closeCancelModal" type="button">
             {{ t('cabinet.reject') }}
+          </button>
+          <button class="btn btn-danger" @click="cancelSubscription" type="button">
+            {{ t('cabinet.accept') }}
           </button>
         </div>
       </div>
     </div>
     <div class="layout__cabinet">
       <aside class="sidebar-panel">
-        <button v-if="!isMobile" class="back-btn" @click="backToMain" aria-label="На главную" type="button">
+        <button v-if="!isMobile" class="back-btn" @click="backToMain" aria-label="to main" type="button">
           <img class="back__btn-icon" :src="Home" alt="Home"/>
           <span class="back-label">{{ t('cabinet.main') }}</span>
         </button>
@@ -58,7 +58,7 @@
                       @open="handleSettingsAction"
                   />
                 </div>
-                <div v-else>
+                <div v-else class="settings-wrapper">
                   <Transition name="menu-appear" appear>
                     <div class="user__interface">
                       <div class="user-block">
@@ -95,7 +95,6 @@
                               </div>
                             </div>
                             <div class="level-display">
-<!--                              <span class="level-label">{{ t('stepHitLabels.levelTitle')}}:</span>-->
                               <span class="level-value">{{ learningStore.isLeveling || '0' }}</span>
                             </div>
                           </div>
@@ -155,13 +154,19 @@
               v-for="avatarName in authStore.availableAvatars"
               :key="avatarName"
               class="avatar-option"
-              :class="{ selected: selectedAvatarName === avatarName }"
               @click="authStore.ownedAvatars.includes(avatarName) ? selectAvatar(avatarName) : openPurchaseModal(avatarName)"
           >
-            <img :src="authStore.getAvatarUrl(avatarName)" :alt="avatarName"/>
+            <div class="avatar__image-wrapper"
+                 :class="{
+                   selected: selectedAvatarName === avatarName,
+                   unowned: !authStore.ownedAvatars.includes(avatarName)
+                 }"
+            >
+              <img class="avatar-img" :src="authStore.getAvatarUrl(avatarName)" :alt="avatarName"/>
+            </div>
             <div v-if="!authStore.ownedAvatars.includes(avatarName)" class="avatar-price">
-              <span>50 </span>
-              <img src="../assets/images/article.svg" alt="">
+              <span>50</span>
+              <img class="price-icon" src="../assets/images/article.svg" alt="">
             </div>
           </div>
         </div>
@@ -200,15 +205,17 @@
         </template>
         <template v-else>
           <div class="modal-title">{{ t('cabinet.buyAvatar') }}</div>
-          <p class="modal-text">
-            {{ t('cabinet.costs') }} <b>{{ t('cabinet.price') }}</b>
-          </p>
+          <div class="price__avatar-text">
+            <span class="modal-text">50</span>
+            <img class="articles" src="../assets/images/article.svg" alt="artiles">
+          </div>
+
           <div class="modal-actions">
-            <button class="btn btn-success" @click="confirmPurchase" type="button">
-              {{ t('cabinet.buyAvatarBtn') }}
-            </button>
             <button class="btn" @click="isPurchaseModalOpen = false" type="button">
               {{ t('cabinet.notBuyAvatarBtn') }}
+            </button>
+            <button class="btn btn-success" @click="confirmPurchase" type="button">
+              {{ t('cabinet.buyAvatarBtn') }}
             </button>
           </div>
         </template>
@@ -470,7 +477,6 @@ async function cancelSubscription() {
       isCancelModalOpen.value = false
     }
   } catch (e) {
-    console.error(e)
   }
 }
 
@@ -563,8 +569,15 @@ onMounted(async () => {
   background: var(--overlayAfter);
 }
 
-.tab__component-wrapper {
-  height: 100%;
+.articles {
+  width: 30px;
+}
+
+.price__avatar-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
 
 .sidebar-panel {
@@ -624,15 +637,16 @@ onMounted(async () => {
 }
 
 .modal-title {
-  margin-bottom: 10px;
+  margin-bottom: 24px;
   font-weight: 600;
   font-size: 24px;
   color: var(--titleColor);
 }
 
 .modal-text {
-  margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 28px;
+  font-weight: 400;
+  font-family: 'Lilita One', sans-serif;
   color: var(--titleColor);
 }
 
@@ -661,7 +675,7 @@ onMounted(async () => {
   flex: 1;
   display: flex;
   align-items: center;
-  padding: 10px 16px;
+  padding: 10px 12px;
   position: relative;
   z-index: 2;
   border: none;
@@ -681,31 +695,36 @@ onMounted(async () => {
 
 .nav-label {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Nunito", sans-serif;
   color: var(--titleColor);
   margin-left: 10px;
 }
 
-.settings-wrapper {
+.settings-wrapper,
+.tab__component-wrapper {
+  flex: 1;
   height: 100%;
+  min-height: 0;
 }
 
 .content-panel {
   border-radius: 28px;
-  border: 3px solid #000;
-  box-shadow: 5px 5px 0 #000;
+  border: var(--tabBg);
+  box-shadow: var(--boxShadowMobile);
   flex: 1;
   display: flex;
   flex-direction: column;
   min-width: 0;
   height: 100%;
-  overflow: hidden;
 }
 
 .content-body {
   flex: 1;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .header-surface {
@@ -713,6 +732,10 @@ onMounted(async () => {
   border-radius: 20px;
   background: transparent;
   padding: 2px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .account-tabs {
@@ -807,13 +830,14 @@ onMounted(async () => {
   display: flex;
   gap: 12px;
   justify-content: center;
+  margin-top: 25px;
 }
 
 .btn {
   border: none;
-  box-shadow: 0 4px 0 #c0c2c9;
-  border-radius: 16px;
-  padding: 10px 16px;
+  box-shadow: 0 5px 0 #c0c2c9;
+  border-radius: 50px;
+  padding: 14px 16px;
   font-weight: 800;
   background: #f3f4f6;
   cursor: pointer;
@@ -821,8 +845,9 @@ onMounted(async () => {
 }
 
 .btn-success {
-  background: #4ade80;
-  box-shadow: 0 5px 0 #34be66;
+  background: #3b82f6;
+  box-shadow: 0 5px 0 #1d4ed8;
+  color: white;
 }
 
 .btn-danger {
@@ -832,61 +857,100 @@ onMounted(async () => {
 
 .avatar-modal-overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, .6);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   z-index: 9999;
 }
 
 .avatar-modal-content {
-  max-height: 90vh;
-  overflow: auto;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 24px;
-  width: 90%;
+  background: var(--tabBg);
+  padding: 2rem 1.5rem;
+  border-radius: 24px 24px 0 0;
+  width: 100%;
   max-width: 600px;
+  max-height: 85vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.avatar-modal-content h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--titleColor);
+  font-size: 20px;
 }
 
 .avatar-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .avatar-option {
-  border: 4px solid transparent;
-  border-radius: 24px;
-  overflow: hidden;
-  transition: .15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   cursor: pointer;
-  position: relative;
 }
 
-.avatar-option.selected {
+.avatar__image-wrapper {
+  border: 3px solid transparent;
+  border-radius: 24px;
+  padding: 1px;
+  transition: .15s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar__image-wrapper.selected {
   border-color: #fca13a;
-  transform: scale(1.03);
+  border-radius: 50%;
 }
 
-.avatar-option img {
-  width: 70px;
+.avatar-img {
+  width: 100%;
+  max-width: 70px;
+  height: auto;
   display: block;
 }
 
+.avatar__image-wrapper.unowned .avatar-img {
+  opacity: 0.6;
+  border-radius: 50%;
+  filter: grayscale(1);
+}
+
 .avatar-price {
-  position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
   background: #f3f3f3;
-  color: black;
+  color: #000;
   border-radius: 10px;
-  padding: 4px 8px;
+  padding: 2px 8px;
   font-weight: 900;
+  font-size: 14px;
+}
+
+.price-icon {
+  width: 16px;
+  height: 16px;
 }
 
 @media (max-width: 767px) {
@@ -896,10 +960,6 @@ onMounted(async () => {
 }
 
 @media (max-width: 1023px) {
-  .cabinet-wrapper {
-    overflow: hidden;
-  }
-
   .sidebar-panel {
     position: fixed;
     left: 50%;
@@ -993,10 +1053,6 @@ onMounted(async () => {
 .avatar-container {
   width: 86px;
   height: 86px;
-  border-radius: 50%;
-  border: 4px solid var(--tabsSlideBorderColor, #2a2d39);
-  background: linear-gradient(135deg, #5b65e9, #8a93ff);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1066,8 +1122,9 @@ onMounted(async () => {
 }
 
 @media (min-width: 1024px) {
-  .user__interface {
-    padding: 10px;
+  .user__interface,
+  .tab__component-wrapper {
+    padding: 16px;
   }
 }
 

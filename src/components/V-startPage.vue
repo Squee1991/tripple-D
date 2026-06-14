@@ -154,6 +154,7 @@ const router = useRouter()
 }
 
 .cta-block {
+  max-width: 560px;
   width: 100%;
   position: absolute;
   bottom: 10px;

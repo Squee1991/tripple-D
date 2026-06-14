@@ -80,6 +80,8 @@ const goToSignIn = () => {
   font-family: "Nunito", sans-serif;
   color: #fff;
   padding: 10px;
+  max-width: 768px;
+  margin: 0 auto;
 }
 
 .lang-header {

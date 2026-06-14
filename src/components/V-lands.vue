@@ -388,7 +388,7 @@ onBeforeUnmount(() => {
 
 .map-right {
   display: grid;
-  gap: 16px;
+  gap: 10px;
   overflow-y: auto;
   min-width: 0;
   grid-template-columns: repeat(2, 2fr);
@@ -733,6 +733,10 @@ onBeforeUnmount(() => {
   border: none;
 }
 
+.arrow-btn:focus {
+  border: none;
+}
+
 .arrow-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
@@ -741,7 +745,7 @@ onBeforeUnmount(() => {
 .current-category-name {
   font-size: 16px;
   font-weight: 900;
-  color: white;
+  color: var(--title);
   display: flex;
   justify-content: center;
   align-items: center;

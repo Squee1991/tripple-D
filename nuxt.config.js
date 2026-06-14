@@ -148,7 +148,12 @@ export default defineNuxtConfig({
 	plugins: ['~/plugins/simplebar.client.js'],
 
 	googleFonts: {
-		families: {'Uncial Antiqua': true, Kurale: true, Fredoka: true, Nunito: true},
+		families: {
+			'Uncial Antiqua': true,
+			Kurale: true,
+			Fredoka: true,
+			'Lilita One': true,
+			Nunito: true},
 	},
 
 	vite: {

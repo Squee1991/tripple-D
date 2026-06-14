@@ -741,7 +741,7 @@ const confirmPurchase = async () => {
 .modal-btn, .modal-close-btn {
   flex: 1;
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 50px;
   border: none;
   font-weight: 700;
   font-size: 15px;
@@ -763,7 +763,7 @@ const confirmPurchase = async () => {
 
 .modal-btn.confirm:disabled {
   background: #363d4a;
-  color: #555;
+  color: #ffffff;
   box-shadow: none;
   cursor: not-allowed;
 }
