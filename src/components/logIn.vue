@@ -68,7 +68,6 @@
                 }}
               </button>
             </div>
-
             <div v-if="mode === 'login'" class="auth__forgot" @click="mode = 'reset'">{{
                 t('auth.forgot')
               }}
@@ -77,16 +76,13 @@
         </form>
         <div v-if="mode === 'login'" class="social-auth-container">
           <button class="google__auth-wrapper" @click="handleSocialLogin('google')" :disabled="submitLoading">
-            <img class="google__icon" src="../assets/images/google.svg" alt="google_icon">
+            <img class="google__icon" src="../../assets/images/google.svg" alt="google_icon">
             <span class="auth__text-method">GOOGLE</span>
           </button>
           <button class="apple__auth-wrapper" @click="handleSocialLogin('apple')" :disabled="submitLoading">
-            <img class="apple__icon" src="../assets/images/apple.svg" alt="apple_icon">
+            <img class="apple__icon" src="../../assets/images/apple.svg" alt="apple_icon">
             <span class="auth__text-method">APPLE</span>
           </button>
-<!--          <button class="facebook__auth-wrapper" @click="handleSocialLogin('facebook')" :disabled="submitLoading">-->
-<!--            <img class="facebook__icon" src="../assets/images/facebook.svg" alt="facebook_icon">-->
-<!--          </button>-->
         </div>
       </div>
     </div>
@@ -290,6 +286,10 @@ onUnmounted(() => {
   letter-spacing: .6px;
 }
 
+.auth {
+  height: 100vh;
+}
+
 .social-auth-container {
   display: flex;
   flex-direction: row;
@@ -332,7 +332,6 @@ onUnmounted(() => {
   color: var(--titleColor);
   display: block;
   font-weight: 600;
-
 }
 
 .auth__arrow {
@@ -359,6 +358,8 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   padding-bottom: 12px;
+  max-width: 768px;
+  margin: 0 auto;
 }
 
 .auth__form {
@@ -493,7 +494,7 @@ onUnmounted(() => {
   font-size: 1.5rem;
   padding: 12px 0;
   font-weight: 600;
-  border-radius: 18px;
+  border-radius: 50px;
   cursor: pointer;
   background: #3b82f6;
   border: none;
@@ -533,13 +534,13 @@ onUnmounted(() => {
   .close__btn-modal-wrapper {
     opacity: 1;
   }
+  .auth {
+    height: 100vh;
+    border-left: none;
+  }
 }
 
 @media (max-width: 600px) {
-  .auth {
-    width: 100vw;
-    border-left: none;
-  }
 
   .auth__form {
     padding: 25px;

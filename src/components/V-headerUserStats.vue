@@ -42,7 +42,6 @@
         </div>
       </transition>
     </div>
-
     <transition name="slide-down">
       <div v-if="showFreezeModal" class="modal-overlay" @click.self="showFreezeModal = false">
         <div class="modal-content">
@@ -64,7 +63,6 @@
         </div>
       </div>
     </transition>
-
     <VCalendarStreak v-model="isCalendarOpen"/>
   </div>
 </template>
@@ -211,7 +209,7 @@ onBeforeUnmount(() => {
   background: var(--tabBg);
   justify-content: center;
   padding: 8px 4px;
-  border-radius: 14px;
+  border-radius: 18px;
   box-shadow:  var(--boxShadowMobile);
 }
 

@@ -119,7 +119,7 @@ onMounted(() => {
     duration: 0.3,
     ease: "power3.out",
   });
-  
+
   gsap.set(cards, {opacity: 0, y: 50});
   gsap.to(cards, {
     scrollTrigger: {
@@ -162,8 +162,8 @@ onMounted(() => {
   background: #e55b10;
   padding: 10px 20px;
   transform: rotate(2deg);
-  border: 3px solid black;
-  box-shadow: 3px 3px 0 black;
+  border: none;
+  box-shadow: 6px 6px 0 #c2541a;
   border-radius: 10px;
 }
 
@@ -173,18 +173,16 @@ onMounted(() => {
   left: .7rem;
   top: 50%;
   transform: translateY(-50%);
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  border: 2px solid #1e1e1e;
-  box-shadow: 1px 1px 0 black;
   background: #fff;
 }
 
 .features__list-item {
   position: relative;
-  padding: .55rem .75rem .55rem 2rem;
-  font-size: .98rem;
+  padding: 4px 4px 4px 1.5rem;
+  font-size: 13px;
   text-align: start;
   font-weight: 600;
   color: #fff;
@@ -207,9 +205,9 @@ onMounted(() => {
 
 .features__card {
   border-radius: 24px;
-  border: 3px solid #1e1e1e;
+  border: none;
   box-shadow: 5px 5px 0px #1e1e1e;
-  padding: 2rem 0.9rem;
+  padding: 16px 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -225,45 +223,52 @@ onMounted(() => {
 
 .features__card:nth-child(1) {
   background-color: #60a5fa;
+  box-shadow: 5px 6px 0 #3079d2;
 }
 
 .features__card:nth-child(2) {
   background-color: #fca13a;
+  box-shadow: 5px 6px 0 #c47b29;
 }
 
 .features__card:nth-child(3) {
   background-color: #4ade80;
+  box-shadow: 5px 6px 0 #33b763;
 }
 
 .features__card:nth-child(4) {
   background-color: #f97028;
+  box-shadow: 5px 6px 0 #d25512;
 }
 
 .features__card:nth-child(5) {
   background-color: #88bb65;
+  box-shadow: 5px 6px 0 #6db43c;
 }
 
 .features__card:nth-child(6) {
   background-color: #a855f7;
+  box-shadow: 5px 6px 0 #8237c9;
 }
 
 .features__card:nth-child(7) {
   background-color: #f1c40f;
+  box-shadow: 5px 6px 0 #c49f0d;
 }
 
 .features__card:nth-child(8) {
-  background-color: #fca5a5;
+  background-color: #d57f7f;
+  box-shadow: 5px 6px 0 #b65f5f;
 }
 
 .features__icon-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 110px;
-  height: 110px;
+  width: 86px;
+  height: 86px;
   border-radius: 20px;
-  margin-bottom: 1rem;
-  padding: 8px;
+  margin-bottom: 5px;
 }
 
 .features__icon {
@@ -272,8 +277,7 @@ onMounted(() => {
 
 .features__card-title {
   font-family: "Nunito", sans-serif;
-  font-style: italic;
-  font-size: 1.4rem;
+  font-size: 17px;
   font-weight: 600;
   margin-bottom: 0.75rem;
   color: #ffffff;

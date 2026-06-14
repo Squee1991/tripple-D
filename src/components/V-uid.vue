@@ -141,8 +141,7 @@ onBeforeUnmount(() => {
 .lands__container {
   height: 100vh;
   flex: 1;
-  overflow-y: auto;
-  padding-bottom: 160px;
+  padding-bottom: 100px;
 }
 
 .lands__container::-webkit-scrollbar {
@@ -251,10 +250,8 @@ onBeforeUnmount(() => {
 
 @media (min-width: 767px) {
   .stats__wrapper {
-    padding-bottom: 165px;
+    padding-bottom: 100px;
   }
 }
-
-
 
 </style>

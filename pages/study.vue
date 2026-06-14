@@ -228,6 +228,8 @@ definePageMeta({
 .learn-page {
   font-family: "Nunito", sans-serif;
   height: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   overflow: hidden;

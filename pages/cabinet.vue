@@ -240,17 +240,17 @@
 </template>
 
 <script setup>
-import {ref, computed, onMounted, watch, watchEffect} from 'vue'
+import {ref, computed, onMounted, onUnmounted, watch, watchEffect} from 'vue'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
-
 import AwardsList from '../src/components/AwardsList.vue'
 import VExampResulut from '../src/components/V-exampResulut.vue'
 import VFindFriends from '../src/components/V-findFriends.vue'
+import VTransition from "~/src/components/V-transition.vue";
+import VSettings from '../src/components/V-settings.vue'
 import VRank from '../src/components/V-rank.vue'
 import PersonalInfoRows from '../src/components/PersonalInfoRows.vue'
 import Shop from '../src/components/V-shop.vue'
-
 import {userAuthStore} from '../store/authStore.js'
 import {userlangStore} from '../store/learningStore.js'
 import {useAchievementStore} from '../store/achievementStore.js'
@@ -268,10 +268,8 @@ import Friends from '../assets/images/friend.svg'
 import Rewards from '../assets/images/rewards.svg'
 import IdCard from '../assets/images/monitor.svg'
 import ShoppingCart from '../assets/images/shopping-cart.svg'
-import VSettings from '../src/components/V-settings.vue'
 import RankAward from '../assets/images/rankaward.svg'
 import AccountIcon from '../assets/images/account.png'
-import VTransition from "~/src/components/V-transition.vue";
 
 definePageMeta({
   robots: {index: false, follow: false}
@@ -527,6 +525,11 @@ watch(isAvatarModalOpen, opened => {
 
 const handleResize = () => {
   isMobile.value = window.innerWidth < 1024
+  if (!isMobile.value) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+  }
 }
 
 onMounted(async () => {
@@ -539,22 +542,34 @@ onMounted(async () => {
   await eventStore.loadGlobalWinterSettings()
   friendsStore.loadFriends()
 })
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize)
+  document.body.style.overflow = ''
+})
 </script>
 
 <style scoped>
 .cabinet-wrapper {
-  height: 100%;
+  box-sizing: border-box;
+  height: 100vh;
+  max-width: 1240px;
+  margin: 0 auto;
   font-family: "Nunito", sans-serif;
   padding: 5px 10px 10px 10px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .layout__cabinet {
   display: flex;
-  height: 100%;
+  flex: 1;
+  min-height: 0;
   width: 100%;
   position: relative;
   gap: 20px;
+  overflow: hidden;
 }
 
 .layout__cabinet:after {
@@ -567,6 +582,7 @@ onMounted(async () => {
   height: 50px;
   z-index: 1;
   background: var(--overlayAfter);
+  pointer-events: none;
 }
 
 .articles {
@@ -590,7 +606,7 @@ onMounted(async () => {
   gap: 12px;
   width: 360px;
   height: 100%;
-  overflow: auto;
+  overflow-y: auto;
   flex: 0 0 auto;
 }
 
@@ -612,10 +628,11 @@ onMounted(async () => {
   justify-content: center;
   gap: 10px;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 18px;
   background: #ffd54f;
-  border-radius: 16px;
-  padding: 12px 14px;
+  border-radius: 50px;
+  padding: 10px 14px;
+
   cursor: pointer;
   border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
@@ -710,13 +727,16 @@ onMounted(async () => {
 
 .content-panel {
   border-radius: 28px;
-  border: var(--tabBg);
+  border: 2px solid var(--tabBg);
   box-shadow: var(--boxShadowMobile);
   flex: 1;
   display: flex;
   flex-direction: column;
   min-width: 0;
+  min-height: 0;
   height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .content-body {
@@ -790,19 +810,8 @@ onMounted(async () => {
 
 .account-tab-body {
   margin-top: 4px;
-  max-height: calc(100vh - 200px);
-  overflow-y: auto;
   padding-right: 3px;
-  padding-bottom: 122px;
-}
 
-.account-tab-body::-webkit-scrollbar {
-  width: 2px;
-  display: none;
-}
-
-.account-tab-body::-webkit-scrollbar-thumb {
-  border-radius: 15px;
 }
 
 .modal-overlay {
@@ -960,6 +969,25 @@ onMounted(async () => {
 }
 
 @media (max-width: 1023px) {
+  .cabinet-wrapper {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+    padding-bottom: 84px;
+  }
+
+  .layout__cabinet {
+    overflow: visible;
+  }
+
+  .content-panel {
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+    height: auto;
+  }
+
   .sidebar-panel {
     position: fixed;
     left: 50%;
@@ -1009,17 +1037,6 @@ onMounted(async () => {
     width: 35px;
     height: 35px;
   }
-
-  .content-panel {
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-  }
-}
-
-.account-tab-body {
-  position: relative;
-  overflow-x: hidden;
 }
 
 .menu-appear-enter-active {

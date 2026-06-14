@@ -1,10 +1,10 @@
 <template>
   <header class="header" :class="{ 'mobile-menu-active': isMobileMenuOpen , 'is-rtl': isAr }">
     <div v-if="isMobileMenuOpen" class="mobile-nav-overlay" @click="isMobileMenuOpen = false"></div>
-    <UiOverlay :visible="showAuth" @close="closeAuth"/>
-<!--    <transition name="slide">-->
-<!--      <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>-->
-<!--    </transition>-->
+<!--    <UiOverlay :visible="showAuth" @close="closeAuth"/>-->
+    <transition name="slide">
+      <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
+    </transition>
     <ModalDev
         :visible="showDevModal"
         @close="closeDevModal"
@@ -27,13 +27,13 @@
 <!--        />-->
 <!--        <span class="logo__name">german</span>-->
 <!--      </NuxtLink>-->
-<!--      <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen, 'is-rtl': isAr }"-->
-<!--           aria-label="Main">-->
-<!--        <ul class="header-nav__list">-->
-<!--          <li v-for="item in menuItems" :key="item.id" :id="item.id" class="header-nav__item">-->
-<!--            <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">-->
-<!--              {{ t(item.valueKey) }}-->
-<!--            </NuxtLink>-->
+      <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen, 'is-rtl': isAr }"
+           aria-label="Main">
+        <ul v-if="!userAuth.uid" class="header-nav__list">
+          <li v-for="item in menuItems" :key="item.id" :id="item.id" class="header-nav__item">
+            <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">
+              {{ t(item.valueKey) }}
+            </NuxtLink>
 <!--            <button v-else @click="handleMenuItemClick(item)" class="header-nav__link"-->
 <!--                    :class="{'is-active-parent': clickedMenu === item.id}">-->
 <!--              <span>{{ t(item.valueKey) }}</span>-->
@@ -72,13 +72,13 @@
 <!--                </ul>-->
 <!--              </li>-->
 <!--            </ul>-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--      </nav>-->
+          </li>
+        </ul>
+      </nav>
       <div class="header-stats-wrapper">
         <VHeaderUserStats v-if="userAuth.uid" />
       </div>
-<!--      <div class="header-right">-->
+      <div class="header-right">
 <!--        <div v-if="userAuth.name" class="header-user-wrapper">-->
 <!--          <button-->
 <!--              ref="userBtnRef"-->
@@ -90,28 +90,26 @@
 <!--          >-->
 <!--            <img class="header-user__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>-->
 <!--          </button>-->
-<!--&lt;!&ndash;          <div&ndash;&gt;-->
-<!--&lt;!&ndash;              ref="dropdownRef"&ndash;&gt;-->
-<!--&lt;!&ndash;              v-if="menuOpen"&ndash;&gt;-->
-<!--&lt;!&ndash;              class="header-user__dropdown"&ndash;&gt;-->
-<!--&lt;!&ndash;              id="user-menu-dropdown"&ndash;&gt;-->
-<!--&lt;!&ndash;          >&ndash;&gt;-->
-<!--&lt;!&ndash;            <button&ndash;&gt;-->
-<!--&lt;!&ndash;                v-for="item in menuActions"&ndash;&gt;-->
-<!--&lt;!&ndash;                :key="item.id"&ndash;&gt;-->
-<!--&lt;!&ndash;                class="header-user__dropdown-btn"&ndash;&gt;-->
-<!--&lt;!&ndash;                @click.stop="item.action"&ndash;&gt;-->
-<!--&lt;!&ndash;            >&ndash;&gt;-->
-<!--&lt;!&ndash;              <img class="header-user__dropdown-icon" :src="item.icon" alt="Arrow_dropdown"/>&ndash;&gt;-->
-<!--&lt;!&ndash;              <span class="header__drop-text">{{ t(item.label) }}</span>&ndash;&gt;-->
-<!--&lt;!&ndash;            </button>&ndash;&gt;-->
-<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--          <div-->
+<!--              ref="dropdownRef"-->
+<!--              v-if="menuOpen"-->
+<!--              class="header-user__dropdown"-->
+<!--              id="user-menu-dropdown"-->
+<!--          >-->
+<!--            <button-->
+<!--                v-for="item in menuActions"-->
+<!--                :key="item.id"-->
+<!--                class="header-user__dropdown-btn"-->
+<!--                @click.stop="item.action"-->
+<!--            >-->
+<!--              <img class="header-user__dropdown-icon" :src="item.icon" alt="Arrow_dropdown"/>-->
+<!--              <span class="header__drop-text">{{ t(item.label) }}</span>-->
+<!--            </button>-->
+<!--          </div>-->
 <!--        </div>-->
-<!--        <button v-else class="btn-login" @click="openAuth">-->
-<!--          {{ t('auth.logIn') }}-->
-<!--        </button>-->
-<!--&lt;!&ndash;        <BurgerMenu class="burger-button" v-model="isMobileMenuOpen"/>&ndash;&gt;-->
-<!--      </div>-->
+        <button v-if="!userAuth.uid" class="btn-login" @click="openAuth">{{ t('auth.logIn') }}</button>
+        <BurgerMenu v-if="!userAuth.uid && !showAuth" class="burger-button" v-model="isMobileMenuOpen"/>
+      </div>
     </div>
   </header>
 </template>
@@ -192,85 +190,10 @@ const {start , finish} = useVOnboarding(wrapperRef)
 
 const menuItems = computed(() => {
   const items = [
-    ...(userAuth.uid
-        ? [
-          {
-            id: 'learn',
-            valueKey: 'nav.training',
-            children: [
-              {
-                id: 'articles',
-                valueKey: 'sub.articles',
-                subChildren: [
-                  {id: 'learn-tips', url: '/article-basic', valueKey: 'underSub.prev'},
-                  {id: 'learn-rules', url: '/article-theory', valueKey: 'underSub.rules'},
-                  {id: 'learn-selectedTopics', url: '/articles', valueKey: 'underSub.artRules'}
-                ]
-              },
-              {
-                id: 'verbs',
-                valueKey: 'sub.verbs',
-                subChildren: [
-                  {id: 'verb-theory', url: '/verbs-theory', valueKey: 'underSub.verbsTheory'},
-                  {id: 'verb-form', url: '/verb-forms', valueKey: 'underSub.forms'},
-                  {id: 'tenses', url: '/tenses', valueKey: 'underSub.verbFirst'},
-                  {id: 'modalVerbs', url: '/modal-verbs', valueKey: 'underSub.verbSecond'},
-                  {id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes'}
-                ],
-              },
-              {
-                id: 'prepositions',
-                valueKey: 'sub.prepositions',
-                subChildren: [
-                  {id: 'prepositions-theory', url: '/prepositions-theory', valueKey: 'underSub.rules'},
-                  {id: 'prepositions-practice', url: '/prepositions', valueKey: 'underSub.prepositions'}
-                ],
-              },
-              {
-                id: 'adjectives',
-                valueKey: 'sub.adjectives',
-                subChildren: [
-                  {
-                    id: 'adjectives-theory',
-                    url: '/adjectives-theory',
-                    valueKey: 'underSub.adjectiveTheory'
-                  },
-                  {
-                    id: 'adjectives-basic',
-                    url: '/adjective-basics',
-                    valueKey: 'underSub.adjectivesBasic'
-                  },
-                  {id: 'declination', url: '/adjective-declension', valueKey: 'underSub.declination'},
-                  {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'}
-                ],
-              },
-              // {id: 'audio', url: '/audio-tasks' , valueKey: 'sub.audio'},
-              // {id: 'description', url: '/image-description' , valueKey: 'sub.describePicture'},
-              {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
-              {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
-              {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}
-            ]
-          },
-          {
-            id: 'duel',
-            valueKey: 'nav.gameMode',
-            children: [
-              // {id: 'fight', url: '/german-universe', valueKey: 'sub.fight'},
-              {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
-              {id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel'},
-              {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
-              {id: 'duel-guess', url: '/guess-word', valueKey: 'sub.guess'},
-              {id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon'}
-            ]
-          },
-        ]
-        :[
           {id: 'about', valueKey: 'nav.about', url: '/info-about'},
           {id: 'contact', valueKey: 'nav.contact', url: '/support-request'},
           {id: 'faq', valueKey: 'nav.quest', url: '/faq'}
-        ]),
-    ...(userAuth.uid ? [{id: 'test', url: '/exams', valueKey: 'nav.tests'}] : []),
-  ]
+        ]
   if (userAuth.uid) {
     const allEvents = [
       {
@@ -377,7 +300,10 @@ const closeDevModal = () => {
 }
 
 const closeAuth = () => (showAuth.value = false)
-const openAuth = () => (showAuth.value = true)
+const openAuth = () => (
+
+    showAuth.value = true
+)
 
 const toggleMenu = () => (menuOpen.value = !menuOpen.value)
 

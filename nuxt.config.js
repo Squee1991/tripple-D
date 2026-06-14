@@ -25,28 +25,18 @@ const siteUrl =
 	(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 
 export default defineNuxtConfig({
-	ssr: false,
+	ssr: true,
 	experimental: {
-		payloadExtraction: false,
+		payloadExtraction: true,
 		appManifest: false
 	},
 
 	defaults: {
 		nuxtLink: {
-			prefetch: false,
-			noPrefetch: true
+			prefetch: true,
+			noPrefetch: false
 		}
 	},
-
-	router: {
-		options: {
-			prefetchLinks: false,
-			hashMode: true
-		}
-	},
-
-
-
 	compatibilityDate: '2024-11-01',
 	devtools: {enabled: false},
 	modules: [
@@ -57,7 +47,6 @@ export default defineNuxtConfig({
 		'@nuxtjs/i18n',
 		'@nuxtjs/color-mode'
 	],
-
 	vuefire: {
 		config: firebaseConfig,
 		auth: true,
@@ -87,25 +76,20 @@ export default defineNuxtConfig({
 	},
 
 	app: {
-		baseURL: './',
-		buildAssetsDir: 'assets',
+		baseURL: '/',
 		head: {
 			meta: [
 				{
 					name: 'viewport',
-					content: 'width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover'
+					content: 'width=device-width, initial-scale=1, viewport-fit=cover'
 				}
 			]
 		}
 	},
-
 	css: [
-		'simplebar/dist/simplebar.min.css',
-		'~/assets/styles/simplebar.css',
 		'~/assets/styles/reset.css',
 		'~/assets/styles/theme.css',
 	],
-
 	colorMode: {
 		preference: 'dark',
 		fallback: 'dark',
@@ -114,9 +98,7 @@ export default defineNuxtConfig({
 		storage: 'localStorage',
 		storageKey: 'nuxt-color-mode',
 	},
-
 	sourcemap: mode !== 'production',
-
 	i18n: {
 		strategy: 'no_prefix',
 		lazy: true,
@@ -144,18 +126,16 @@ export default defineNuxtConfig({
 		},
 		bundle: {optimizeTranslationDirective: false},
 	},
-
 	plugins: ['~/plugins/simplebar.client.js'],
-
 	googleFonts: {
 		families: {
 			'Uncial Antiqua': true,
 			Kurale: true,
 			Fredoka: true,
 			'Lilita One': true,
-			Nunito: true},
+			Nunito: true
+		},
 	},
-
 	vite: {
 		build: {
 			minify: 'esbuild',
@@ -165,24 +145,10 @@ export default defineNuxtConfig({
 			legalComments: 'none',
 		},
 	},
-
 	nitro: {
-		prerender: {
-			crawlLinks: true,
-			routes: ['/'],
-			failOnError: false,
-		},
-		compressPublicAssets: false
+		compressPublicAssets: true
 	},
-
 	routeRules: {
-		'/': {
-			prerender: true,
-		},
-		'/**': {
-			ssr: false,
-			headers: { 'Cache-Control': 'public, max-age=0, must-revalidate' }
-		},
 		'/admin/**': { status: 404 },
 		'/wp-login.php': { status: 404 },
 		'/sounds/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },

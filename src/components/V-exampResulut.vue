@@ -452,10 +452,8 @@ onMounted(() => {
     align-items: center;
     justify-content: space-between;
   }
-
   .ec__actions {
     margin-top: 0;
-    width: 250px;
   }
 }
 </style>

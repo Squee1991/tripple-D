@@ -173,30 +173,24 @@ onMounted(() => {
 
 .banner__button {
   font-family: "Nunito", sans-serif;
-  padding: 1rem 2.5rem;
+  padding: 14px;
+  width: 100%;
+  max-width: 380px;
   font-size: 1.5rem;
   font-weight: 600;
-  border-radius: 12px;
+  border-radius: 50px;
   cursor: pointer;
-  border: 2px solid #1e1e1e;
+  border: none;
   transition: all 0.1s ease-in-out;
   background-color: #6368bb;
   color: #ffffff;
-  box-shadow: 2px 2px 0px #1e1e1e;
-
+  box-shadow: 0 6px 0 #4a4fa1;
 }
 
 @media (min-width: 1024px) {
   .banner__button:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 0px 0px 0px #1e1e1e;
+    transform: translateY(2px);
   }
-
-}
-
-.banner__button:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0px 0px 0px #1e1e1e;
 }
 
 .banner__mage-container {
@@ -215,18 +209,18 @@ onMounted(() => {
   background: none;
   padding: 20px;
   transform: rotate(-20deg);
+  border: none;
 }
 
 .banner__mage::before, .banner__mage::after {
   content: '';
   position: absolute;
-  border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0px #1e1e1e;
   transition: all 0.3s ease;
 }
 
 .banner__mage::before {
   background: #f1c40f;
+  box-shadow: 8px 8px 0px #c29e0b;
   width: 70%;
   height: 70%;
   border-radius: 24px;
@@ -239,6 +233,7 @@ onMounted(() => {
   width: 55%;
   height: 55%;
   background: #a855f7;
+  box-shadow: 8px 8px 0px #8a3bd5;
   border-radius: 24px;
   z-index: 2;
   bottom: 0;
@@ -281,27 +276,13 @@ onMounted(() => {
   .banner__section {
     padding: 3rem 1.5rem;
   }
-
   .banner__title {
-    font-size: 2rem;
+    font-size: 24px;
   }
-
   .banner__orbit-word {
     font-size: 1.5rem;
     padding: 0.6rem 1.5rem;
   }
-
-  .banner__button {
-    width: 80%;
-    border-radius: 12px;
-    box-shadow: 2px 2px 0 #1e1e1e;
-  }
 }
 
-@media (max-width: 500px) {
-  .banner__button {
-    width: 90%;
-    padding: 10px;
-  }
-}
 </style>

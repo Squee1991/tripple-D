@@ -261,7 +261,7 @@ onBeforeUnmount(() => {
   display: flex;
   gap: 12px;
   width: 100%;
-  height: calc(100vh - 250px);
+  height: calc(100vh - 20px);
 }
 
 .map-left {
@@ -269,7 +269,6 @@ onBeforeUnmount(() => {
   min-width: 300px;
   max-width: 100%;
   flex: 1;
-  border: 3px solid var(--borderMobile);
   padding: 0 10px;
   border-radius: 15px;
   display: flex;
@@ -326,8 +325,8 @@ onBeforeUnmount(() => {
   align-items: center;
   gap: 8px;
   font-weight: 800;
-  margin-bottom: 18px;
-  padding: 6px 10px;
+  margin-bottom: 13px;
+  padding: 4px 10px;
   border: 2px dashed var(--border);
   border-radius: 999px;
   background: #fff;
@@ -394,6 +393,7 @@ onBeforeUnmount(() => {
   grid-template-columns: repeat(2, 2fr);
   scrollbar-width: none;
   -ms-overflow-style: none;
+  padding-bottom: 100px;
 }
 
 .map-right::-webkit-scrollbar {
@@ -691,10 +691,6 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 478px) {
-  .map-right {
-    grid-template-columns: repeat(2, 2fr);
-    overflow-y: visible;
-  }
 }
 
 .map-right-container {
@@ -703,6 +699,15 @@ onBeforeUnmount(() => {
   flex-direction: column;
   gap: 15px;
   margin-bottom: 6px;
+  overflow-y: auto;
+  min-height: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 160px;
+}
+
+.map-right-container::-webkit-scrollbar {
+  display: none;
 }
 
 .map-pagination-arrows {

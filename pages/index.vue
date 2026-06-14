@@ -28,32 +28,27 @@ definePageMeta({
 
 onMounted(() => {
   hydrated.value = true
-  isLocallyLogged.value = localStorage.getItem('app_user_logged') === 'true'
 })
 
-watch(() => authStore.uid, (newUid) => {
-  if (newUid) {
-    localStorage.setItem('app_user_logged', 'true')
-    isLocallyLogged.value = true
-  } else if (authStore.initialized && !newUid) {
-    localStorage.removeItem('app_user_logged')
-    isLocallyLogged.value = false
-  }
-})
 </script>
 
 <template>
   <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
   <VShowFall v-if="eventStore.isSnowEnabled" :image="Snow"/>
   <div class="container">
-    <template v-if="isLocallyLogged || authStore.uid">
+    <template v-if="authStore.uid">
       <div class="stat">
         <Header/>
         <VUid/>
+        <Footer/>
       </div>
     </template>
     <template v-else-if="authStore.initialized && !authStore.uid">
-      <VStartPage/>
+      <Header/>
+      <Banner/>
+      <Description/>
+      <About/>
+      <FeedBack/>
     </template>
   </div>
 </template>
@@ -62,16 +57,19 @@ watch(() => authStore.uid, (newUid) => {
 .container {
   max-width: 1240px;
   width: 100%;
-  height: 100%;
+  /* Жестко фиксируем высоту по размеру окна браузера */
+  height: 100dvh;
   margin: 0 auto;
   padding: 0 10px;
+  overflow: hidden; /* Обрубает всё, что пытается вылезти за пределы экрана */
 }
 
 .stat {
   display: flex;
-  justify-content: center;
-  height: 100%;
   flex-direction: column;
+  justify-content: center;
+  height: 100%; /* Берет 100% от родительских 100dvh */
+  overflow: hidden; /* Никакого скролла внутри */
 }
 
 .stat::after{
@@ -87,6 +85,7 @@ watch(() => authStore.uid, (newUid) => {
 
 @media (max-width: 767px) {
   .stat {
+    /* flex-direction: column; - уже задано выше, можно не дублировать, но оставил как у тебя */
     flex-direction: column;
     justify-content: center;
   }
