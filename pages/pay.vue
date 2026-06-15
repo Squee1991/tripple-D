@@ -182,6 +182,33 @@ async function pay() {
     submitLoading.value = false
   }
 }
+
+onMounted(async () => {
+  const endDateStr = authStore.subscriptionEndsAt
+  if (endDateStr) {
+    const endDate = new Date(endDateStr)
+    const now = new Date()
+    if (endDate > now) {
+      triggerToast('pay.triggerToastIsPlus')
+      setTimeout(() => {
+        router.back()
+      }, 1115500)
+      return
+    }
+  }
+  if (billingStore.isMobile) {
+    await billingStore.initialize()
+  }
+  observer = new IntersectionObserver(
+      ([entry]) => {
+        showStickyFooter.value = !entry.isIntersecting
+      },
+      {threshold: 1.0}
+  )
+  if (payButton.value) {
+    observer.observe(payButton.value)
+  }
+})
 </script>
 
 <template>
@@ -247,10 +274,6 @@ async function pay() {
           </div>
         </div>
         <div class="billing-summary">
-<!--          <div class="bill-line">-->
-<!--            <span class="bill-text">Месяц обучения</span>-->
-<!--            <span class="bill-price">{{ BASE_PRICE }}€</span>-->
-<!--          </div>-->
           <div class="bill-line discount" v-if="selectedDiscountId">
             <span class="bill-text">Твоя скидка</span>
             <span class="bill-price-neg">-{{myAvailableCoupons.find(c => c.id === selectedDiscountId).percent}}%</span>
