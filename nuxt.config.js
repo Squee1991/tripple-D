@@ -13,7 +13,6 @@ const firebaseConfig = {
 	appId: process.env.FIREBASE_APP_ID || env.FIREBASE_APP_ID,
 }
 
-// === БЕЗОПАСНАЯ СБОРКА АДМИНКИ БЕЗ JSON (ДЛЯ SSR) ===
 let adminConfig = undefined
 
 const adminProjectId = process.env.FIREBASE_ADMIN_PROJECT_ID
@@ -22,12 +21,10 @@ let adminPrivateKey = process.env.FIREBASE_ADMIN_PRIVATE_KEY
 
 if (adminProjectId && adminClientEmail && adminPrivateKey) {
 	try {
-		// Очищаем приватный ключ от возможных искажений Vercel и восстанавливаем правильные переносы строк
 		adminPrivateKey = adminPrivateKey
 			.trim()
 			.replace(/\\n/g, '\n')
 			.replace(/[\r\n]+/g, '\n')
-
 		adminConfig = {
 			serviceAccount: {
 				projectId: adminProjectId,
@@ -46,7 +43,7 @@ const siteUrl =
 	(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 
 export default defineNuxtConfig({
-	ssr: true, // ВЕРНУЛИ SSR!
+	ssr: true,
 	experimental: {
 		payloadExtraction: true,
 		appManifest: false
