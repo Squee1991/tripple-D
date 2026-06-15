@@ -18,6 +18,7 @@ import {
     signInWithPopup,
     reauthenticateWithPopup, GoogleAuthProvider, fetchSignInMethodsForEmail
 } from 'firebase/auth';
+import { useGalaxyStore } from '../store/galaxyStore.js'
 import { GoogleSignIn } from '@capawesome/capacitor-google-sign-in';
 import { SignInWithApple } from '@capacitor-community/apple-sign-in';
 import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp, writeBatch} from 'firebase/firestore';
@@ -644,6 +645,10 @@ export const userAuthStore = defineStore('auth', () => {
             } catch (e) {
                 console.error("RC Logout Error:", e);
             }
+        }
+        const galaxyStore = useGalaxyStore();
+        if (typeof galaxyStore.resetStore === 'function') {
+            galaxyStore.resetStore();
         }
         setUserData({});
         const auth = getAuth()

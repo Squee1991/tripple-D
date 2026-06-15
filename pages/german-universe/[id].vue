@@ -4,9 +4,9 @@ import {useRoute, useRouter} from 'vue-router'
 import {useGalaxyStore} from '../../store/galaxyStore.js'
 import Meteor from '../../assets/images/meteor.svg'
 import MeteorInFire from '../../assets/images/meteorinFire.svg'
-import { useCombatEngine } from '../../composables/useCombatEngine.js'
+import {useCombatEngine} from '../../composables/useCombatEngine.js'
 
-const { t } = useI18n()
+const {t} = useI18n()
 const route = useRoute()
 const router = useRouter()
 const store = useGalaxyStore()
@@ -109,8 +109,10 @@ onBeforeRouteLeave((to, from, next) => {
       <h1>⚠️ {{ t('galaxyMenu.errorTitle') }}</h1>
       <p>{{ errorMessage }}</p>
       <div class="error-actions">
-        <button v-if="errorMessage.includes('PLUS')" class="btn-plus" @click="goToPay">{{ t('galaxySelector.getPlusBtn')}}</button>
-        <button class="btn-go" @click="goHome">{{ t('galaxyMenu.errorBtn')}}</button>
+        <button v-if="errorMessage.includes('PLUS')" class="btn-plus" @click="goToPay">
+          {{ t('galaxySelector.getPlusBtn') }}
+        </button>
+        <button class="btn-go" @click="goHome">{{ t('galaxyMenu.errorBtn') }}</button>
       </div>
     </div>
     <div v-else class="sky" ref="skyRef">
@@ -162,8 +164,14 @@ onBeforeRouteLeave((to, from, next) => {
               </div>
             </div>
             <div class="modal-actions">
-              <button class="action-btn restart-btn toon-btn-blue" @click="initGame">{{ t('galaxySession.again') }}</button>
-              <button class="action-btn home-btn toon-btn-red" @click="goHome">{{ t('galaxySession.constellations') }}</button>
+              <button class="action-btn restart-btn toon-btn-blue" @click="initGame">{{
+                  t('galaxySession.again')
+                }}
+              </button>
+              <button class="action-btn home-btn toon-btn-red" @click="goHome">{{
+                  t('galaxySession.constellations')
+                }}
+              </button>
             </div>
           </div>
         </div>
@@ -190,7 +198,8 @@ onBeforeRouteLeave((to, from, next) => {
 
 <style scoped>
 .game-universe {
-  height: 100%;
+  position: fixed;
+  inset: 0;
   background: linear-gradient(180deg, #020111 0%, #0d0a2b 50%, #1a0b2e 100%);
   overflow: hidden;
   font-family: Nunito, sans-serif;
@@ -199,7 +208,7 @@ onBeforeRouteLeave((to, from, next) => {
 
 .battery-ui {
   position: absolute;
-  top: 20px;
+  top: calc(5px + env(safe-area-inset-top, 0px));
   right: 20px;
   display: flex;
   gap: 4px;
@@ -218,19 +227,29 @@ onBeforeRouteLeave((to, from, next) => {
   transition: background 0.3s ease;
 }
 
-.segment-red.active { background: #ff4b2b; box-shadow: 0 0 8px #ff4b2b; }
-.segment-yellow.active { background: #ffeb3b; box-shadow: 0 0 8px #ffeb3b; }
-.segment-green.active { background: #00e676; box-shadow: 0 0 8px #00e676; }
+.segment-red.active {
+  background: #ff4b2b;
+  box-shadow: 0 0 8px #ff4b2b;
+}
+
+.segment-yellow.active {
+  background: #ffeb3b;
+  box-shadow: 0 0 8px #ffeb3b;
+}
+
+.segment-green.active {
+  background: #00e676;
+  box-shadow: 0 0 8px #00e676;
+}
 
 .star-layer {
   position: absolute;
   width: 100%;
   height: 200%;
   top: -100%;
-  background-image:
-      radial-gradient(1px 1px at 20px 30px, #ffffff, transparent),
-      radial-gradient(2px 2px at 50px 80px, #e2f0ff, transparent),
-      radial-gradient(2px 2px at 150px 180px, #eeddff, transparent);
+  background-image: radial-gradient(1px 1px at 20px 30px, #ffffff, transparent),
+  radial-gradient(2px 2px at 50px 80px, #e2f0ff, transparent),
+  radial-gradient(2px 2px at 150px 180px, #eeddff, transparent);
   background-size: 250px 250px;
   animation: starsScroll 6s linear infinite;
   opacity: 0.85;
@@ -256,8 +275,12 @@ onBeforeRouteLeave((to, from, next) => {
 }
 
 @keyframes starsScroll {
-  from { transform: translateY(0); }
-  to { transform: translateY(50%); }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50%);
+  }
 }
 
 .ammo-selector {
@@ -267,7 +290,7 @@ onBeforeRouteLeave((to, from, next) => {
   gap: 5px;
 }
 
-.score__wrapper{
+.score__wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -277,7 +300,7 @@ onBeforeRouteLeave((to, from, next) => {
 
 .sector-info {
   position: absolute;
-  top: 20px;
+  top: calc(5px + env(safe-area-inset-top, 0px));
   right: 20px;
   text-align: right;
   z-index: 100;
@@ -299,7 +322,7 @@ onBeforeRouteLeave((to, from, next) => {
 
 .score-board {
   position: absolute;
-  top: 20px;
+  top: calc(5px + env(safe-area-inset-top, 0px));
   left: 20px;
   color: #00d2ff;
   z-index: 100;
@@ -365,7 +388,7 @@ onBeforeRouteLeave((to, from, next) => {
 
 .cannon-station {
   position: absolute;
-  bottom: 30px;
+  bottom: calc(10px + env(safe-area-inset-bottom, 0px));
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -399,7 +422,7 @@ onBeforeRouteLeave((to, from, next) => {
 
 .death-title {
   color: #ff5252;
-  font-size:23px;
+  font-size: 23px;
   font-weight: 900;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -464,18 +487,24 @@ onBeforeRouteLeave((to, from, next) => {
 
 .ground-impact-explosion {
   position: absolute;
-  bottom: 50px;
+  bottom: calc(160px + env(safe-area-inset-bottom, 0px));
   left: 50%;
   transform: translateX(-50%);
   z-index: 2000;
   text-align: center;
 }
 
-.big-boom-emoji { font-size: 10rem; }
+.big-boom-emoji {
+  font-size: 11rem;
+}
 
 @keyframes fall {
-  from { top: -150px; }
-  to { top: calc(100% - 170px); }
+  from {
+    top: -150px;
+  }
+  to {
+    top: calc(100% - 250px);
+  }
 }
 
 .error-screen {
