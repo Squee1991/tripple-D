@@ -1,8 +1,9 @@
-import {defineNuxtConfig} from 'nuxt/config'
-import {loadEnv} from 'vite'
+import { defineNuxtConfig } from 'nuxt/config'
+import { loadEnv } from 'vite'
 
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 const env = loadEnv(mode, process.cwd(), '')
+
 const firebaseConfig = {
 	apiKey: process.env.FIREBASE_API_KEY || env.FIREBASE_API_KEY,
 	authDomain: process.env.FIREBASE_AUTH_DOMAIN || env.FIREBASE_AUTH_DOMAIN,
@@ -12,12 +13,30 @@ const firebaseConfig = {
 	appId: process.env.FIREBASE_APP_ID || env.FIREBASE_APP_ID,
 }
 
+// === УМНЫЙ ПАРСЕР ДЛЯ СЛОМАННЫХ СТРОК VERCEL (JS ВЕРСИЯ) ===
 const serviceAccountJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
-let admin
-try {
-	admin = serviceAccountJson ? {serviceAccount: JSON.parse(serviceAccountJson)} : undefined
-} catch {
-	admin = undefined
+let adminConfig = undefined
+
+if (serviceAccountJson) {
+	try {
+		// Очищаем пробелы по краям и склеиваем физические переносы строк в одну линию
+		const cleanedJsonString = serviceAccountJson
+			.trim()
+			.replace(/[\r\n]+/g, ' ')
+
+		const parsedObject = JSON.parse(cleanedJsonString)
+
+		// Исправляем экранирование переносов строк в приватном ключе
+		if (parsedObject.private_key) {
+			parsedObject.private_key = parsedObject.private_key.replace(/\\n/g, '\n')
+		}
+
+		adminConfig = { serviceAccount: parsedObject }
+	} catch (error) {
+		// Если JSON поврежден, сервер не упадет с ошибкой 500
+		console.error('!!! [Firebase Admin] Ошибка обработки GOOGLE_APPLICATION_CREDENTIALS_JSON:', error)
+		adminConfig = undefined
+	}
 }
 
 const siteUrl =
@@ -53,7 +72,8 @@ export default defineNuxtConfig({
 		firestore: {
 			experimentalForceLongPolling: true,
 		},
-		...(admin ? {admin} : {}),
+		// Разворачиваем объект admin только если строка успешно распарсилась
+		...(adminConfig ? { admin: adminConfig } : {}),
 	},
 
 	runtimeConfig: {
