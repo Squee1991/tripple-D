@@ -13,28 +13,30 @@ const firebaseConfig = {
 	appId: process.env.FIREBASE_APP_ID || env.FIREBASE_APP_ID,
 }
 
-// === УМНЫЙ ПАРСЕР ДЛЯ СЛОМАННЫХ СТРОК VERCEL (JS ВЕРСИЯ) ===
-const serviceAccountJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
+// === БЕЗОПАСНАЯ СБОРКА АДМИНКИ БЕЗ JSON (ДЛЯ SSR) ===
 let adminConfig = undefined
 
-if (serviceAccountJson) {
+const adminProjectId = process.env.FIREBASE_ADMIN_PROJECT_ID
+const adminClientEmail = process.env.FIREBASE_ADMIN_CLIENT_EMAIL
+let adminPrivateKey = process.env.FIREBASE_ADMIN_PRIVATE_KEY
+
+if (adminProjectId && adminClientEmail && adminPrivateKey) {
 	try {
-		// Очищаем пробелы по краям и склеиваем физические переносы строк в одну линию
-		const cleanedJsonString = serviceAccountJson
+		// Очищаем приватный ключ от возможных искажений Vercel и восстанавливаем правильные переносы строк
+		adminPrivateKey = adminPrivateKey
 			.trim()
-			.replace(/[\r\n]+/g, ' ')
+			.replace(/\\n/g, '\n')
+			.replace(/[\r\n]+/g, '\n')
 
-		const parsedObject = JSON.parse(cleanedJsonString)
-
-		// Исправляем экранирование переносов строк в приватном ключе
-		if (parsedObject.private_key) {
-			parsedObject.private_key = parsedObject.private_key.replace(/\\n/g, '\n')
+		adminConfig = {
+			serviceAccount: {
+				projectId: adminProjectId,
+				clientEmail: adminClientEmail,
+				privateKey: adminPrivateKey,
+			}
 		}
-
-		adminConfig = { serviceAccount: parsedObject }
 	} catch (error) {
-		// Если JSON поврежден, сервер не упадет с ошибкой 500
-		console.error('!!! [Firebase Admin] Ошибка обработки GOOGLE_APPLICATION_CREDENTIALS_JSON:', error)
+		console.error('Ошибка сборки Firebase Admin:', error)
 		adminConfig = undefined
 	}
 }
@@ -44,7 +46,7 @@ const siteUrl =
 	(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 
 export default defineNuxtConfig({
-	ssr: false,
+	ssr: true, // ВЕРНУЛИ SSR!
 	experimental: {
 		payloadExtraction: true,
 		appManifest: false
@@ -72,7 +74,6 @@ export default defineNuxtConfig({
 		firestore: {
 			experimentalForceLongPolling: true,
 		},
-		// Разворачиваем объект admin только если строка успешно распарсилась
 		...(adminConfig ? { admin: adminConfig } : {}),
 	},
 
