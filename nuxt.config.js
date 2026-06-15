@@ -1,6 +1,6 @@
 import {defineNuxtConfig} from 'nuxt/config'
 import {loadEnv} from 'vite'
-
+delete process.env.GOOGLE_APPLICATION_CREDENTIALS
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 const env = loadEnv(mode, process.cwd(), '')
 const firebaseConfig = {
