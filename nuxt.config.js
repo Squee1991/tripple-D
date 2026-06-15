@@ -1,8 +1,9 @@
-import { defineNuxtConfig } from 'nuxt/config'
-import { loadEnv } from 'vite'
+import {defineNuxtConfig} from 'nuxt/config'
+import {loadEnv} from 'vite'
 
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 const env = loadEnv(mode, process.cwd(), '')
+const isProd = mode === 'production'
 
 const firebaseConfig = {
 	apiKey: process.env.FIREBASE_API_KEY || env.FIREBASE_API_KEY,
@@ -14,46 +15,30 @@ const firebaseConfig = {
 }
 
 let adminConfig = undefined
+const rawJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON || env.GOOGLE_APPLICATION_CREDENTIALS_JSON
 
-const adminProjectId = process.env.FIREBASE_ADMIN_PROJECT_ID
-const adminClientEmail = process.env.FIREBASE_ADMIN_CLIENT_EMAIL
-let adminPrivateKey = process.env.FIREBASE_ADMIN_PRIVATE_KEY
-
-if (adminProjectId && adminClientEmail && adminPrivateKey) {
+if (rawJson) {
 	try {
-		adminPrivateKey = adminPrivateKey
-			.trim()
-			.replace(/\\n/g, '\n')
-			.replace(/[\r\n]+/g, '\n')
-		adminConfig = {
-			serviceAccount: {
-				projectId: adminProjectId,
-				clientEmail: adminClientEmail,
-				privateKey: adminPrivateKey,
-			}
+		const parsed = typeof rawJson === 'string' ? JSON.parse(rawJson) : rawJson
+		if (parsed.private_key) {
+			parsed.private_key = parsed.private_key.replace(/\\n/g, '\n')
 		}
+		adminConfig = {serviceAccount: parsed}
 	} catch (error) {
-		console.error('Ошибка сборки Firebase Admin:', error)
-		adminConfig = undefined
+		console.error('Ошибка инициализации Firebase Admin:', error)
 	}
 }
 
-const siteUrl =
-	process.env.NUXT_SITE_URL ||
-	(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
+const siteUrl = process.env.NUXT_SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 
 export default defineNuxtConfig({
-	ssr: true,
+	ssr: false,
 	experimental: {
 		payloadExtraction: true,
 		appManifest: false
 	},
-
 	defaults: {
-		nuxtLink: {
-			prefetch: true,
-			noPrefetch: false
-		}
+		nuxtLink: {prefetch: true, noPrefetch: false}
 	},
 	compatibilityDate: '2024-11-01',
 	devtools: {enabled: false},
@@ -71,9 +56,8 @@ export default defineNuxtConfig({
 		firestore: {
 			experimentalForceLongPolling: true,
 		},
-		...(adminConfig ? { admin: adminConfig } : {}),
+		...(adminConfig ? {admin: adminConfig} : {}),
 	},
-
 	runtimeConfig: {
 		stripeSecret: process.env.STRIPE_SECRET_KEY || env.STRIPE_SECRET_KEY,
 		stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET || env.STRIPE_WEBHOOK_SECRET,
@@ -92,15 +76,11 @@ export default defineNuxtConfig({
 			siteUrl,
 		},
 	},
-
 	app: {
 		baseURL: '/',
 		head: {
 			meta: [
-				{
-					name: 'viewport',
-					content: 'width=device-width, initial-scale=1, viewport-fit=cover'
-				}
+				{name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover'}
 			]
 		}
 	},
@@ -116,7 +96,7 @@ export default defineNuxtConfig({
 		storage: 'localStorage',
 		storageKey: 'nuxt-color-mode',
 	},
-	sourcemap: mode !== 'production',
+	sourcemap: !isProd,
 	i18n: {
 		strategy: 'no_prefix',
 		lazy: true,
@@ -147,30 +127,22 @@ export default defineNuxtConfig({
 	plugins: ['~/plugins/simplebar.client.js'],
 	googleFonts: {
 		families: {
-			'Uncial Antiqua': true,
-			Kurale: true,
-			Fredoka: true,
-			'Lilita One': true,
-			Nunito: true
+			'Uncial Antiqua': true, Kurale: true, Fredoka: true, 'Lilita One': true, Nunito: true
 		},
 	},
 	vite: {
-		build: {
-			minify: 'esbuild',
-		},
+		build: {minify: 'esbuild'},
 		esbuild: {
-			drop: mode === 'production' ? ['console', 'debugger'] : [],
+			drop: isProd ? ['console', 'debugger'] : [],
 			legalComments: 'none',
 		},
 	},
-	nitro: {
-		compressPublicAssets: true
-	},
+	nitro: {compressPublicAssets: true},
 	routeRules: {
-		'/admin/**': { status: 404 },
-		'/wp-login.php': { status: 404 },
-		'/sounds/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/images/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/*.png': { headers: { 'Cache-Control': 'public, max-age=2592000' } }
+		'/admin/**': {status: 404},
+		'/wp-login.php': {status: 404},
+		'/sounds/**': {headers: {'Cache-Control': 'public, max-age=2592000'}},
+		'/images/**': {headers: {'Cache-Control': 'public, max-age=2592000'}},
+		'/*.png': {headers: {'Cache-Control': 'public, max-age=2592000'}}
 	},
 })

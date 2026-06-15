@@ -8125,6 +8125,7 @@
     "profileData": "بيانات الملف الشخصي"
   },
   "cabinet": {
+    "plusCanceled": "تم إلغاء PLUS",
     "important": "مهم!!!",
     "importantText": "عند حذف الحساب، لا يتم إلغاء الاشتراك تلقائيًا. يرجى إلغاء الاشتراك قبل الحذف.",
     "cancelPremium": "إلغاء الاشتراك؟",
@@ -10330,5 +10331,56 @@
     "buyBy": "شراء مقابل",
     "toThemes": "إلى المواضيع",
     "repeat": "إعادة"
+  },
+  "freezeStatus": {
+    "active": "تجميد الوقت نشط",
+    "inactive": "تجميد الوقت غير نشط"
+  },
+  "guessArticle": {
+    "correct": "صحيح",
+    "incorrect": "غير صحيح، الصحيح هو"
+  },
+  "payPage": {
+    "featureOne": "تعلم بلا حدود",
+    "featureTwo": "الميزات المستقبلية",
+    "featureThree": "دعم المطورين",
+    "featureFour": "بدون إعلانات",
+    "sale5": "خصم 3%",
+    "sale10": "خصم 6%",
+    "sale15": "خصم 15%",
+    "finalePrice": "الإجمالي:",
+    "yourSale": "خصمك"
+  },
+  "stripeCancel": {
+    "cancelSub": "إلغاء الاشتراك",
+    "cancelPayment": "تم إلغاء الدفع",
+    "errorAuth": "خطأ في المصادقة",
+    "pleaseAuth": "يرجى تسجيل الدخول للقيام بهذا الإجراء.",
+    "canceling": "جاري إلغاء الاشتراك...",
+    "canceledSub": "تم إلغاء الاشتراك",
+    "errorCancelSub": "حدث خطأ أثناء الإلغاء",
+    "errorCancelResponse": "فشل إلغاء الاشتراك.",
+    "serverError": "خطأ في الخادم",
+    "serverOffline": "فُقد الاتصال بالخادم. يرجى المحاولة لاحقاً.",
+    "processInterrupted": "تم قطع عملية الدفع. لم يتم خصم أي مبالغ من بطاقتك.",
+    "tryAgain": "المحاولة مرة أخرى",
+    "backToMain": "إلى الرئيسية",
+    "extensionCanceled": "سيتم إيقاف التجديد التلقائي. سيستمر الوصول حتى نهاية الفترة المدفوعة.",
+    "extensionCanceledCanBack": "لن يتم تجديد اشتراكك بعد الآن. يمكنك العودة في أي وقت!",
+    "confirmCancel": "نعم، إلغاء",
+    "notConfirmCancel": "عدم الإلغاء",
+    "backToMainPage": "العودة إلى الصفحة الرئيسية"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "جاري تأكيد المعاملة...",
+    "sessionNotFound": "لم يتم العثور على جلسة الدفع",
+    "authPlease": "يرجى تسجيل الدخول لإتمام العملية",
+    "isPremium": "تم تفعيل الوصول المميز (Premium)",
+    "errorActivation": "خطأ في التفعيل",
+    "errorServer": "خطأ في الاتصال بالخادم",
+    "success": "الآن جميع ميزات الخدمة متاحة لك.",
+    "unsuccess": "حدث خطأ فني أثناء المعالجة.",
+    "toMain": " إلى الرئيسية",
+    "redirectSuccess": "سيتم إعادة التوجيه خلال ثوانٍ قليلة..."
   }
 }

@@ -28,6 +28,14 @@
             </div>
           </div>
           <AccountManagement/>
+          <div class="section-card mt-20" v-if="authStore.isPremium && !authStore.subscriptionCancelled && !isMobileApp">
+            <div class="section-row">
+              <div class="row-label">{{ t('cabinet.active')}}</div>
+              <button class="btn-cancel-sub" @click="router.push('/cancel?action=unsubscribe')">
+                {{ t('cabinet.cancelBtn')}}
+              </button>
+            </div>
+          </div>
         </div>
       </VTransition>
       <div v-if="isMounted" class="settings-section account-actions">
@@ -56,7 +64,7 @@ const router = useRouter()
 const { locale, t } = useI18n()
 const authStore = userAuthStore()
 const isMounted = ref(false)
-
+const isMobileApp = ref(false)
 const registrationDateText = computed(() => {
   const registeredAt = authStore.registeredAt
   if (!registeredAt) return '—'
@@ -86,10 +94,14 @@ const openDeleteModal = () => {
 }
 
 onMounted(() => {
+  if (typeof window !== 'undefined' && window.Capacitor) {
+    isMobileApp.value = window.Capacitor.isNativePlatform()
+  }
   setTimeout(() => {
     isMounted.value = true
   }, 100)
 })
+
 </script>
 
 <style scoped>
@@ -175,6 +187,7 @@ onMounted(() => {
   gap: 12px;
   align-items: center;
   border-radius: 16px;
+  margin-top: 20px;
 }
 
 .w-full {
@@ -238,5 +251,31 @@ onMounted(() => {
 .btn-icon-back:active {
   transform: translate(2px, 2px);
   box-shadow: 0px 0px 0px #2b2b2b;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.btn-cancel-sub {
+  background: #fef2f2;
+  color: #ef4444;
+  border: 1px solid #fca5a5;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+  transition: all 0.2s ease;
+}
+
+.btn-cancel-sub:hover {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-cancel-sub:active {
+  transform: translateY(2px);
 }
 </style>

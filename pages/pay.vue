@@ -67,10 +67,14 @@ const myAvailableCoupons = computed(() => {
       authStore.premiumDiscount.sale_10 ||
       authStore.premiumDiscount.sale_15
   if (hasAnyDiscount) {
-    list.push({id: null, percent: 0, label: 'Без скидки'})
+    list.push(
+        {id: null,
+          percent: 0,
+          label: 'Без скидки'
+        })
   }
-  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_5', percent: 5, label: 'Скидка 5%'})
-  if (authStore.premiumDiscount.sale_10) list.push({id: 'sale_10', percent: 10, label: 'Скидка 10%'})
+  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_5', percent: 5, label: 'Скидка 3%'})
+  if (authStore.premiumDiscount.sale_10) list.push({id: 'sale_10', percent: 10, label: 'Скидка 6%'})
   if (authStore.premiumDiscount.sale_15) list.push({id: 'sale_15', percent: 15, label: 'Скидка 15%'})
   return list
 })
@@ -217,7 +221,6 @@ async function pay() {
         </div>
         <div class="bonus-section" v-if="myAvailableCoupons.length > 1">
           <div class="hero-zone bonus-hero">
-<!--            <h2 class="hero-title">ТВОИ <span class="neon-text">БОНУСЫ</span></h2>-->
             <p class="hero-desc">{{ t('pay.sales')}}</p>
           </div>
           <div class="inventory-section">
@@ -231,7 +234,7 @@ async function pay() {
               >
                 <div class="loot-glow"></div>
                 <div class="loot-content">
-                  <div class="loot-info">
+                  <div v-if="coupon.label" class="loot-info">
                     <span class="loot-title">{{ coupon.label }}</span>
                     <span class="loot-sub">За твою активность</span>
                   </div>
@@ -244,10 +247,10 @@ async function pay() {
           </div>
         </div>
         <div class="billing-summary">
-          <div class="bill-line">
-            <span class="bill-text">Месяц обучения</span>
-            <span class="bill-price">{{ BASE_PRICE }}€</span>
-          </div>
+<!--          <div class="bill-line">-->
+<!--            <span class="bill-text">Месяц обучения</span>-->
+<!--            <span class="bill-price">{{ BASE_PRICE }}€</span>-->
+<!--          </div>-->
           <div class="bill-line discount" v-if="selectedDiscountId">
             <span class="bill-text">Твоя скидка</span>
             <span class="bill-price-neg">-{{myAvailableCoupons.find(c => c.id === selectedDiscountId).percent}}%</span>

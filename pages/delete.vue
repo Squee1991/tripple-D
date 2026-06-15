@@ -190,6 +190,10 @@ async function processAccountCleanup() {
   background: var(--bg);
 }
 
+.account-cleanup__field-label {
+  color: var(--titleColor);
+}
+
 .btn-icon-back {
   background: #fff;
   border: 3px solid var(--tabsSlideBorderColor);
@@ -399,7 +403,7 @@ async function processAccountCleanup() {
 .account-cleanup__auth-zone {
   width: 100%;
   margin-bottom: 24px;
-  padding-top: 10px;
+  padding-top: 24px;
 }
 
 .account-cleanup__field-input {

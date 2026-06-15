@@ -8130,6 +8130,7 @@
     "profileData": "Profile data"
   },
   "cabinet": {
+    "plusCanceled": "PLUS canceled",
     "important": "IMPORTANT!!!",
     "importantText": "When deleting your account, the subscription is not canceled. Please cancel your subscription before deleting.",
     "cancelPremium": "Cancel subscription?",
@@ -10335,5 +10336,56 @@
     "buyBy": "Buy for",
     "toThemes": "To topics",
     "repeat": "Repeat"
+  },
+  "freezeStatus": {
+    "active": "Time freeze is active",
+    "inactive": "Time freeze is inactive"
+  },
+  "guessArticle": {
+    "correct": "Correct",
+    "incorrect": "Incorrect, correct is"
+  },
+  "payPage": {
+    "featureOne": "Learning without borders",
+    "featureTwo": "Future features",
+    "featureThree": "Developer support",
+    "featureFour": "No ads",
+    "sale5": "3% discount",
+    "sale10": "6% discount",
+    "sale15": "15% discount",
+    "finalePrice": "TOTAL:",
+    "yourSale": "Your discount"
+  },
+  "stripeCancel": {
+    "cancelSub": "Cancel subscription",
+    "cancelPayment": "Payment canceled",
+    "errorAuth": "Authentication error",
+    "pleaseAuth": "Please log in to perform this action.",
+    "canceling": "Canceling subscription...",
+    "canceledSub": "Subscription canceled",
+    "errorCancelSub": "Error during cancellation",
+    "errorCancelResponse": "Failed to cancel subscription.",
+    "serverError": "Server error",
+    "serverOffline": "Connection to the server lost. Please try again later.",
+    "processInterrupted": "The checkout process was interrupted. No charges were made to your card.",
+    "tryAgain": "Try again",
+    "backToMain": "To main",
+    "extensionCanceled": "Auto-renewal will be disabled. Access will remain until the end of the paid period.",
+    "extensionCanceledCanBack": "Your subscription will no longer renew. You can come back at any time!",
+    "confirmCancel": "Yes, cancel",
+    "notConfirmCancel": "Keep subscription",
+    "backToMainPage": "Back to main page"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "Confirming transaction...",
+    "sessionNotFound": "Payment session not found",
+    "authPlease": "Please log in to complete",
+    "isPremium": "Premium access activated",
+    "errorActivation": "Activation error",
+    "errorServer": "Server connection error",
+    "success": "All features of the service are now available to you.",
+    "unsuccess": "A technical glitch occurred during processing.",
+    "toMain": " To main page",
+    "redirectSuccess": "Redirecting in a few seconds..."
   }
 }

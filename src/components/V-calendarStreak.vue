@@ -5,20 +5,16 @@
         <div class="drag-handle-container" @click="closeModal">
           <div class="drag-handle"></div>
         </div>
-
         <div class="header">
           <div class="rank-info-card">
             <div class="rank-info-header">
               <div class="hats__left-info">
-                <span
-                    class="rank-icon-emoji"
-                    :class="{ filter : authStore.totalHats}"
-                >🎓</span>
-                <!--              <h3 class="rank-title">{{ t('pavelOverlay.rankTitle') }}: </h3>-->
+                <span class="rank-icon-emoji" :class="{ filter : authStore.totalHats}">🎓</span>
                 <div class="hats__total"> {{ authStore.totalHats }}</div>
               </div>
               <button @click="openList" class="btn__hats-info">
-                <img :class="{ rotated: isOpen }" class="info__btn-icon" src="../../assets/images/next.svg" alt="question">
+                <img :class="{ rotated: isOpen }" class="info__btn-icon" src="../../assets/images/next.svg"
+                     alt="question">
               </button>
             </div>
             <div class="hats__info-wrapper"
@@ -80,13 +76,15 @@
 </template>
 
 <script setup>
-import { computed, watch, ref } from 'vue';
-import { useI18n } from 'vue-i18n';
+import {computed, watch, ref, onMounted} from 'vue';
+import {useI18n} from 'vue-i18n';
 import VArrowNav from "~/src/components/V-arrowNav.vue";
-import { dailyStore } from '../../store/dailyStore.js';
-import { userAuthStore } from '../../store/authStore.js';
+import {dailyStore} from '../../store/dailyStore.js';
+import {userAuthStore} from '../../store/authStore.js';
 import Question from '../../assets/images/question.svg';
 import FreezeShield from '../../assets/images/FreezeShield.svg'
+const { t } = useI18n()
+
 const authStore = userAuthStore();
 const isOpen = ref(false);
 const props = defineProps({
@@ -95,18 +93,15 @@ const props = defineProps({
     default: false
   }
 });
-
-const openList = ( ) => {
+const emit = defineEmits(['update:modelValue']);
+const openList = () => {
   isOpen.value = !isOpen.value;
 }
 
 const freezeComputed = computed(() => {
-   return authStore.isFreezeActive ? 'Остановка времени активна' : 'Остановка времени не активна'
+  return authStore.isFreezeActive ? t('freezeStatus.active') : t('freezeStatus.inactive')
 })
 
-const emit = defineEmits(['update:modelValue']);
-
-const { t } = useI18n();
 const daily = dailyStore();
 const viewMode = ref('month');
 const closeModal = () => {
@@ -150,7 +145,7 @@ const formattedMonthYear = computed(() => {
   return `${month} ${year}`;
 });
 
-const generateCalendar = () => {
+const generateCalendar = async () => {
   const year = currentDate.value.getFullYear();
   const month = currentDate.value.getMonth();
 
@@ -163,36 +158,54 @@ const generateCalendar = () => {
   daysData.value = Array.from({length: daysInMonth}, (_, i) => {
     const dayNumber = i + 1;
     const isToday = year === realToday.getFullYear() && month === realToday.getMonth() && dayNumber === realToday.getDate();
-    const isPast = new Date(year, month, dayNumber) < new Date(realToday.getFullYear(), realToday.getMonth(), realToday.getDate());
     const completedTasks = isToday ? (daily.currentCycle?.completedCount || 0) : 0;
 
     return {
       day: dayNumber,
       tasksCompleted: completedTasks,
       isToday: isToday,
-      isPast: isPast
+      isPast: new Date(year, month, dayNumber) < new Date(realToday.getFullYear(), realToday.getMonth(), realToday.getDate())
     };
   });
 
   const totalFilled = startingDayIndex + daysInMonth;
   trailingDays.value = Array.from({length: 42 - totalFilled});
+
+  const monthHistory = await daily.fetchMonthHistory(year, month);
+
+  daysData.value = daysData.value.map(data => {
+    const historyCount = monthHistory[String(data.day)] ?? 0;
+    const finalCount = data.isToday
+        ? Math.max(historyCount, daily.currentCycle?.completedCount || 0)
+        : historyCount;
+
+    return {
+      ...data,
+      tasksCompleted: finalCount
+    };
+  });
 };
 
-watch(() => daily.currentCycle?.completedCount, () => {
-  generateCalendar();
+watch(() => daily.currentCycle?.completedCount, (newVal) => {
+  const todayCell = daysData.value.find(d => d.isToday);
+  if (todayCell) {
+    todayCell.tasksCompleted = Math.max(todayCell.tasksCompleted, newVal || 0);
+  }
 });
 
-const prevMonth = () => {
+const prevMonth = async () => {
   currentDate.value = new Date(currentDate.value.getFullYear(), currentDate.value.getMonth() - 1, 1);
-  generateCalendar();
+  await generateCalendar();
 };
 
-const nextMonth = () => {
+const nextMonth = async () => {
   currentDate.value = new Date(currentDate.value.getFullYear(), currentDate.value.getMonth() + 1, 1);
-  generateCalendar();
+  await generateCalendar();
 };
 
-generateCalendar();
+onMounted(() => {
+  generateCalendar();
+});
 </script>
 
 <style scoped>
@@ -275,7 +288,7 @@ generateCalendar();
   filter: grayscale(0);
 }
 
-.time__stop{
+.time__stop {
   font-size: 17px;
   font-weight: bold;
   margin-left: 10px;
@@ -306,7 +319,6 @@ generateCalendar();
 .hats__left-info {
   display: flex;
   align-items: center;
-  margin-left: 10px;
   padding: 2px 18px 2px 5px;
   gap: 5px;
 }

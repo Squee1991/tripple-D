@@ -8116,6 +8116,7 @@
     "profileData": "Profil verileri"
   },
   "cabinet": {
+    "plusCanceled": "PLUS iptal edildi",
     "important": "ÖNEMLİ!!!",
     "importantText": "Hesabınızı silerken abonelik iptal edilmez. Lütfen silmeden önce aboneliğinizi iptal edin.",
     "cancelPremium": "Abonelik iptal edilsin mi?",
@@ -10321,5 +10322,56 @@
     "buyBy": "Şunun için satın al",
     "toThemes": "Konulara dön",
     "repeat": "Tekrar et"
+  },
+  "freezeStatus": {
+    "active": "Zaman dondurma aktif",
+    "inactive": "Zaman dondurma aktif değil"
+  },
+  "guessArticle": {
+    "correct": "Doğru",
+    "incorrect": "Yanlış, doğrusu"
+  },
+  "payPage": {
+    "featureOne": "Sınır tanımayan eğitim",
+    "featureTwo": "Gelecek özellikler",
+    "featureThree": "Geliştirici desteği",
+    "featureFour": "Reklamsız",
+    "sale5": "%3 indirim",
+    "sale10": "%6 indirim",
+    "sale15": "%15 indirim",
+    "finalePrice": "TOPLAM:",
+    "yourSale": "İndiriminiz"
+  },
+  "stripeCancel": {
+    "cancelSub": "Aboneliği iptal et",
+    "cancelPayment": "Ödeme iptal edildi",
+    "errorAuth": "Kimlik doğrulama hatası",
+    "pleaseAuth": "Lütfen bu işlemi gerçekleştirmek için giriş yapın.",
+    "canceling": "Abonelik iptal ediliyor...",
+    "canceledSub": "Abonelik iptal edildi",
+    "errorCancelSub": "İptal sırasında hata oluştu",
+    "errorCancelResponse": "Abonelik iptal edilemedi.",
+    "serverError": "Sunucu hatası",
+    "serverOffline": "Sunucuyla bağlantı kesildi. Lütfen daha sonra tekrar deneyin.",
+    "processInterrupted": "Ödeme işlemi kesintiye uğradı. Kartınızdan herhangi bir ücret alınmadı.",
+    "tryAgain": "Tekrar dene",
+    "backToMain": "Ana sayfaya",
+    "extensionCanceled": "Otomatik yenileme devre dışı bırakılacak. Erişiminiz ödenen dönemin sonuna kadar devam edecektir.",
+    "extensionCanceledCanBack": "Aboneliğiniz artık yenilenmeyecek. İstediğiniz zaman geri dönebilirsiniz!",
+    "confirmCancel": "Evet, iptal et",
+    "notConfirmCancel": "İptal etme",
+    "backToMainPage": "Ana sayfaya geri dön"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "İşlem onaylanıyor...",
+    "sessionNotFound": "Ödeme oturumu bulunamadı",
+    "authPlease": "Tamamlamak için lütfen giriş yapın",
+    "isPremium": "Premium erişim aktif edildi",
+    "errorActivation": "Aktivasyon hatası",
+    "errorServer": "Sunucu bağlantı hatası",
+    "success": "Artık servisin tüm özelliklerine erişebilirsiniz.",
+    "unsuccess": "İşlem sırasında teknik bir aksaklık oluştu.",
+    "toMain": " Ana sayfaya",
+    "redirectSuccess": "Birkaç saniye içinde yönlendiriliyorsunuz..."
   }
 }

@@ -12,7 +12,7 @@
           💎 {{ t('cabinet.active') }} PLUS
         </h4>
         <h4 v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-          Подписка отменена
+          {{ t('cabinet.plusCanceled') }}
         </h4>
         <h4 v-else>SKILLUP PLUS</h4>
         <p v-if="authStore.isPremium && !authStore.subscriptionCancelled">

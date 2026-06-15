@@ -8123,6 +8123,7 @@
     "profileData": "Dane profilu"
   },
   "cabinet": {
+    "plusCanceled": "PLUS anulowany",
     "important": "WAŻNE!!!",
     "importantText": "Podczas usuwania konta subskrypcja nie zostaje anulowana. Przed usunięciem anuluj subskrypcję.",
     "cancelPremium": "Anulować subskrypcję?",
@@ -10328,5 +10329,56 @@
     "buyBy": "Kup za",
     "toThemes": "Do tematów",
     "repeat": "Powtórz"
+  },
+  "freezeStatus": {
+    "active": "Zamrożenie czasu jest aktywne",
+    "inactive": "Zamrożenie czasu jest nieaktywne"
+  },
+  "guessArticle": {
+    "correct": "Prawidłowo",
+    "incorrect": "Nieprawidłowo, prawidłowo to"
+  },
+  "payPage": {
+    "featureOne": "Nauka bez granic",
+    "featureTwo": "Przyszłe funkcje",
+    "featureThree": "Wsparcie dla twórców",
+    "featureFour": "Brak reklam",
+    "sale5": "Zniżka 3%",
+    "sale10": "Zniżka 6%",
+    "sale15": "Zniżka 15%",
+    "finalePrice": "RAZEM:",
+    "yourSale": "Twoja zniżka"
+  },
+  "stripeCancel": {
+    "cancelSub": "Anulowanie subskrypcji",
+    "cancelPayment": "Płatność anulowana",
+    "errorAuth": "Błąd autoryzacji",
+    "pleaseAuth": "Zaloguj się, aby wykonać tę operację.",
+    "canceling": "Anulowanie subskrypcji...",
+    "canceledSub": "Subskrypcja anulowana",
+    "errorCancelSub": "Błąd podczas anulowania",
+    "errorCancelResponse": "Nie udało się anulować subskrypcji.",
+    "serverError": "Błąd serwera",
+    "serverOffline": "Utracono połączenie z serwerem. Spróbuj ponownie później.",
+    "processInterrupted": "Proces płatności został przerwany. Twoja karta nie została obciążona.",
+    "tryAgain": "Spróbuj ponownie",
+    "backToMain": "Na główną",
+    "extensionCanceled": "Automatyczne odnawianie zostanie wyłączone. Dostęp pozostanie aktywny do końca opłaconego okresu.",
+    "extensionCanceledCanBack": "Twoja subskrypcja nie będzie już odnawiana. Możesz wrócić w dowolnym momencie!",
+    "confirmCancel": "Tak, anuluj",
+    "notConfirmCancel": "Nie anuluj",
+    "backToMainPage": "Wróć do strony głównej"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "Potwierdzanie transakcji...",
+    "sessionNotFound": "Nie znaleziono sesji płatności",
+    "authPlease": "Zaloguj się, aby ukończyć",
+    "isPremium": "Dostęp Premium został aktywowany",
+    "errorActivation": "Błąd aktywacji",
+    "errorServer": "Błąd połączenia z serwerem",
+    "success": "Teraz masz dostęp do wszystkich funkcji serwisu.",
+    "unsuccess": "Wystąpił problem techniczny podczas przetwarzania.",
+    "toMain": " Na główną",
+    "redirectSuccess": "Przekierowanie za kilka sekund..."
   }
 }
