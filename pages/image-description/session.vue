@@ -230,7 +230,7 @@ function goBack() {
                   <transition-group name="list">
                     <div v-for="(m, i) in messages" :key="i" :class="['msg-row', m.role]">
                       <div v-if="m.isStructured" class="feedback-card">
-                        <div class="feedback-score-badge" :class="getScoreClass(m.score)">{{ m.score }}/10</div>
+<!--                        <div class="feedback-score-badge" :class="getScoreClass(m.score)">{{ m.score }}/10</div>-->
                         <div class="feedback-body">
                           <p class="main-feedback">{{ m.feedback }}</p>
                           <div class="suggestion-box">
@@ -436,7 +436,6 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 
 .image-card img {
   max-width: 100%;
-  max-height: 30vh;
   object-fit: cover;
 }
 
@@ -607,7 +606,7 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 
 .modern-input {
   flex: 1;
-  padding: 5px;
+  padding: 10px;
   font-size: 14px;
   font-weight: 700;
   border: 3px solid var(--tabsSlideBorderColor);
@@ -637,7 +636,7 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 .btn-send-round, .btn-mic {
   border: 3px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile);
-  border-radius: 16px;
+  border-radius: 50px;
   cursor: pointer;
   display: flex;
   align-items: center;

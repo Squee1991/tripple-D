@@ -249,7 +249,7 @@ watch(() => store.lose, (isLose) => {
   width: 100%;
   max-width: 768px;
   min-height: 100%;
-  height: 100%;
+  height: 100vh;
   background: var(--bg);
   position: relative;
   display: flex;

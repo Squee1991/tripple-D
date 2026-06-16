@@ -169,9 +169,9 @@ async function processAccountCleanup() {
 }
 
 .account-cleanup__container {
-  max-width: 600px;
+  max-width: 1024px;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   background: var(--bg);
@@ -368,7 +368,7 @@ async function processAccountCleanup() {
 
 .account-cleanup__modal {
   width: 100%;
-  max-width: 600px;
+  max-width: 1024px;
   background: var(--tabBg);
   border-top: 3px solid var(--tabsSlideBorderColor);
   border-bottom: none;
@@ -401,7 +401,6 @@ async function processAccountCleanup() {
 }
 
 .account-cleanup__auth-zone {
-  width: 100%;
   margin-bottom: 24px;
   padding-top: 24px;
 }

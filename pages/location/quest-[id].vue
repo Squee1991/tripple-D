@@ -987,6 +987,8 @@ watchEffect(() => {
 
 .btn {
   width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
   padding: 14px 24px;
   font-size: 18px;
   font-weight: 700;

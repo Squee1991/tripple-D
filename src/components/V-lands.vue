@@ -282,7 +282,7 @@ onBeforeUnmount(() => {
 
 .map-left__art {
   width: 100%;
-  height: 150px;
+  height: 130px;
   border: 4px solid var(--tabsSlideBorderColor);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border-radius: 10px;
@@ -662,12 +662,6 @@ onBeforeUnmount(() => {
   }
 }
 
-@media (min-width: 768px) {
-  region-card {
-    height: 166px;
-  }
-}
-
 @media (max-width: 636px) {
   .map-left {
     width: 100%;
@@ -815,6 +809,15 @@ onBeforeUnmount(() => {
 .menu-appear-enter-from {
   opacity: 0;
   transform: translateY(15px);
+}
+
+@media (max-width: 767px) {
+  .map-right {
+    padding-bottom: 0;
+  }
+  .map-right-container {
+    padding-bottom: 10px;
+  }
 }
 
 </style>

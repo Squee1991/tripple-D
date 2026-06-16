@@ -3,6 +3,11 @@ import {useRoute, useRouter} from 'vue-router'
 import {userAuthStore} from '../store/authStore.js'
 import {onMounted, ref} from 'vue'
 import {getAuth, onAuthStateChanged} from 'firebase/auth'
+import {useSeoMeta} from "#imports";
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 const route = useRoute()
 const router = useRouter()

@@ -53,6 +53,7 @@ import { useSpeakingRoomStore } from '~/store/speakingRoomStore.js'
 import { userAuthStore } from '~/store/authStore.js'
 import RoomCard from '~/src/components/speaking-rooms/RoomCard.vue'
 import CreateRoomModal from '~/src/components/speaking-rooms/CreateRoomModal.vue'
+import {useSeoMeta} from "#imports";
 
 definePageMeta({ layout: 'footerlayout' })
 
@@ -62,6 +63,10 @@ const store = useSpeakingRoomStore()
 const authStore = userAuthStore()
 
 const showCreateModal = ref(false)
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 function goBack() {
   router.back()

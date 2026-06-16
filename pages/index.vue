@@ -57,19 +57,18 @@ onMounted(() => {
 .container {
   max-width: 1240px;
   width: 100%;
-  /* Жестко фиксируем высоту по размеру окна браузера */
   height: 100dvh;
   margin: 0 auto;
   padding: 0 10px;
-  overflow: hidden; /* Обрубает всё, что пытается вылезти за пределы экрана */
+
 }
 
 .stat {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%; /* Берет 100% от родительских 100dvh */
-  overflow: hidden; /* Никакого скролла внутри */
+  height: 100%;
+  overflow: hidden;
 }
 
 .stat::after{

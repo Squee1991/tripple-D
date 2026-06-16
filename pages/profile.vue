@@ -59,12 +59,19 @@ import { useI18n } from 'vue-i18n'
 import { userAuthStore } from '~/store/authStore.js'
 import VTransition from "~/src/components/V-transition.vue"
 import AccountManagement from "../src/components/AccountManagement.vue";
+import {useSeoMeta} from "#imports";
 
 const router = useRouter()
 const { locale, t } = useI18n()
 const authStore = userAuthStore()
 const isMounted = ref(false)
 const isMobileApp = ref(false)
+
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
+
 const registrationDateText = computed(() => {
   const registeredAt = authStore.registeredAt
   if (!registeredAt) return '—'
@@ -108,7 +115,9 @@ onMounted(() => {
 .tab-content {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
+  max-width: 1024px;
+  margin: 0 auto;
   overflow: hidden;
   background: transparent;
   font-family: "Nunito", sans-serif;

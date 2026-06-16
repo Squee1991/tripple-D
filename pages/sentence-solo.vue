@@ -4,6 +4,7 @@ import { useRouter, useRoute } from 'vue-router'
 import { useDuelStore } from '../store/sentenceDuelStore.js'
 import { useLocalStatGameStore } from '../store/localSentenceStore.js'
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
+import {useSeoMeta} from "#imports";
 
 const { t } = useI18n()
 const router = useRouter()
@@ -24,6 +25,10 @@ const countdown = ref(3)
 const showModal = ref(false)
 const isAnswerChecked = ref(false)
 const feedback = ref(null)
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 const cancelExit = () =>{
   showModal.value = false

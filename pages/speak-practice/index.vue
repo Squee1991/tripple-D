@@ -113,7 +113,7 @@ onMounted(() => {
 .speak__container {
   max-width: 1240px;
   margin: 0 auto;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 

@@ -1,10 +1,12 @@
 import Stripe from 'stripe'
-import { readBody, defineEventHandler, setResponseStatus } from 'h3'
+import { readBody, defineEventHandler, setResponseStatus, getHeaders } from 'h3'
 import { getFirestore } from 'firebase-admin/firestore'
 import { initializeApp, getApps, cert } from 'firebase-admin/app'
-
+// import { getPriceForUser } from '../utils/regionalPrices.js'
 const COUPON_MAP = {
+	sale_3: 'sale_3',
 	sale_5: 'sale_5',
+	sale_6: 'sale_6',
 	sale_10: 'sale_10',
 	sale_15: 'sale_15'
 }
@@ -13,21 +15,16 @@ export default defineEventHandler(async (event) => {
 	if (getApps().length === 0) {
 		try {
 			const serviceAccountJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
-
 			if (!serviceAccountJson) {
 				throw new Error('Ключ GOOGLE_APPLICATION_CREDENTIALS_JSON не найден в Vercel!')
 			}
-
 			const serviceAccount = JSON.parse(serviceAccountJson)
-
 			if (serviceAccount.private_key) {
 				serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n')
 			}
-
 			initializeApp({
 				credential: cert(serviceAccount)
 			})
-
 			console.log('✅ [Checkout] Firebase Admin успешно подключен!')
 		} catch (e) {
 			console.error('❌ ОШИБКА FIREBASE:', e.message)
@@ -35,7 +32,6 @@ export default defineEventHandler(async (event) => {
 			return { error: 'Server Config Error: ' + e.message }
 		}
 	}
-
 	const config = useRuntimeConfig()
 	const siteUrl = config.public?.siteUrl || 'http://localhost:3000'
 	const stripeSecret = config.stripeSecret || process.env.STRIPE_SECRET_KEY
@@ -50,23 +46,26 @@ export default defineEventHandler(async (event) => {
 	})
 
 	const body = await readBody(event) || {}
-
-	let { priceId, userId, email, couponId } = body
+	let { userId, email, couponId } = body
 
 	if (userId) userId = userId.trim()
 	if (email) email = email.trim().toLowerCase()
 	if (couponId) couponId = couponId.trim()
 
-	if (!userId || !email || !priceId) {
+	if (!userId || !email) {
 		setResponseStatus(event, 400)
-		return { error: 'Missing required fields: userId, email or priceId' }
+		return { error: 'Missing required fields: userId or email' }
 	}
+
+	const headers = getHeaders(event)
+	const userCountry = headers['cf-ipcountry'] || headers['x-vercel-ip-country'] || 'DE'
+	const priceData = getPriceDataForUser(userCountry)
+	const priceId = priceData.id
 
 	try {
 		const db = getFirestore()
 		const userDocRef = db.collection('users').doc(userId)
 		const userDoc = await userDocRef.get()
-
 		let userData = {}
 		if (userDoc.exists) {
 			userData = userDoc.data()
@@ -119,6 +118,7 @@ export default defineEventHandler(async (event) => {
 			console.log('🔄 Возвращаем старую ссылку на оплату')
 			return { sessionId: openSessions.data[0].id, url: openSessions.data[0].url }
 		}
+
 		const sessionOptions = {
 			mode: 'subscription',
 			customer: stripeCustomerId,
@@ -144,6 +144,7 @@ export default defineEventHandler(async (event) => {
 		} else {
 			sessionOptions.allow_promotion_codes = true
 		}
+
 		const session = await stripe.checkout.sessions.create(sessionOptions)
 		return { sessionId: session.id, url: session.url }
 

@@ -232,6 +232,7 @@ onBeforeUnmount(() => {
   padding: 0 2px;
   height: 38px;
   cursor: pointer;
+  width: 100%;
 }
 
 .stat-icon {

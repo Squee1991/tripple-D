@@ -8042,9 +8042,11 @@
     "description": "Keplerinizi cezalara karşı korur"
   },
   "cardSales": {
-    "title5": "%5 İndirim",
-    "title10": "%10 İndirim",
-    "title15": "%15 İndirim"
+    "title3": "%3 indirim",
+    "title5": "%5 indirim",
+    "title6": "%6 indirim",
+    "title10": "%10 indirim",
+    "title15": "%15 indirim"
   },
   "cardsShop": {
     "full": "Tam",
@@ -9761,9 +9763,11 @@
     "rank_5": "Kaptan",
     "rank_6": "Muhafız",
     "rank_7": "Efsane",
-    "sale5": "%5 İndirim",
-    "sale10": "%10 İndirim",
-    "sale15": "%15 İndirim"
+    "sale3": "%3 indirim",
+    "sale5": "%5 indirim",
+    "sale6": "%6 indirim",
+    "sale10": "%10 indirim",
+    "sale15": "%15 indirim"
   },
   "audioTasksTitles": {
     "meeting": "Tanışma",

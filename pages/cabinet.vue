@@ -679,10 +679,10 @@ onUnmounted(() => {
   position: absolute;
   top: 8px;
   left: 8px;
-  height: 48px;
+  height: 60px;
   width: calc(100% - 16px);
   background: var(--tabsSlideBg);
-  border-radius: 14px;
+  border-radius: 50px;
   transition: transform 0.4s cubic-bezier(0.34, 1.20, 0.64, 1), opacity 0.3s ease;
   z-index: 1;
   box-shadow: var(--tabSlideBoxShadow);
@@ -704,15 +704,15 @@ onUnmounted(() => {
 }
 
 .nav-icon {
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .nav-label {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 18px;
   font-family: "Nunito", sans-serif;
   color: var(--titleColor);
   margin-left: 10px;
@@ -737,6 +737,11 @@ onUnmounted(() => {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+.content-panel::-webkit-scrollbar {
+  display: none;
 }
 
 .content-body {
@@ -973,7 +978,7 @@ onUnmounted(() => {
     height: auto;
     min-height: 100vh;
     overflow: visible;
-    padding-bottom: 84px;
+    padding-bottom: 100px;
   }
 
   .layout__cabinet {

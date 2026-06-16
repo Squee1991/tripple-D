@@ -151,7 +151,7 @@ const PRICES = {
   SALE_10: 150,
   SALE_15: 70
 }
-const DISCOUNT_REQ_HATS = {5: 210, 10: 500, 15: 400}
+const DISCOUNT_REQ_HATS = {3: 210, 6: 500, 15: 400}
 
 const showModal = ref(false)
 const modalType = ref('freeze')
@@ -183,23 +183,23 @@ const shopCards = computed(() => {
       type: 'consumable'
     },
     {
-      id: "sale_5",
-      title: t('cardSales.title5'),
+      id: "sale_3",
+      title: t('cardSales.title3'),
       description: "",
       hotIcon: HotDeal,
       icon: Sale,
       price: PRICES.SALE_5,
-      requiredHats: DISCOUNT_REQ_HATS[5],
+      requiredHats: DISCOUNT_REQ_HATS[3],
       type: 'permanent'
     },
     {
-      id: "sale_10",
-      title: t('cardSales.title10'),
+      id: "sale_6",
+      title: t('cardSales.title6'),
       description: "",
       hotIcon: HotDeal,
       icon: Sale10,
       price: PRICES.SALE_10,
-      requiredHats: DISCOUNT_REQ_HATS[10],
+      requiredHats: DISCOUNT_REQ_HATS[6],
       type: 'permanent'
     },
     // {

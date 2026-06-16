@@ -190,7 +190,7 @@ onBeforeRouteLeave((to, from, next) => {
 
 <style scoped>
 .game-universe {
-  height: 100%;
+  height: 100vh;
   background: linear-gradient(180deg, #020111 0%, #0d0a2b 50%, #1a0b2e 100%);
   overflow: hidden;
   font-family: Nunito, sans-serif;
@@ -386,7 +386,7 @@ onBeforeRouteLeave((to, from, next) => {
   transition: 0.1s;
   min-width: 100px;
   font-size: 13px;
-  padding: 10px 5px;
+  padding: 14px 5px;
   background: #5f8dc0;
   color: white;
   border: none;

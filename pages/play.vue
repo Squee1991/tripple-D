@@ -48,10 +48,15 @@ import Galaxy from '../assets/images/Galaxy.svg'
 import Game from '../assets/images/app-nav-icons/game.svg'
 import VArrowNav from "~/src/components/V-arrowNav.vue";
 import VTransition from "~/src/components/V-transition.vue";
+import {useSeoMeta} from "#imports";
 const isMounted = ref(false)
 
 definePageMeta({
   layout: 'footerlayout'
+})
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
 })
 
 const {t} = useI18n()
@@ -85,7 +90,7 @@ onMounted(() => {
 .game-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;

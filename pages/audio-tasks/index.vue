@@ -215,9 +215,9 @@ onUnmounted(() => {
 .quiz__container {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  max-width: 800px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 

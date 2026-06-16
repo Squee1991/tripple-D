@@ -8029,9 +8029,11 @@
     "description": "Protège vos toques des pénalités"
   },
   "cardSales": {
-    "title5": "Remise 5%",
-    "title10": "Remise 10%",
-    "title15": "Remise 15%"
+    "title3": "3% de réduction",
+    "title5": "5% de réduction",
+    "title6": "6% de réduction",
+    "title10": "10% de réduction",
+    "title15": "15% de réduction"
   },
   "cardsShop": {
     "full": "Plein",
@@ -9748,7 +9750,9 @@
     "rank_5": "Capitaine",
     "rank_6": "Gardien",
     "rank_7": "Légende",
+    "sale3": "Remise 3%",
     "sale5": "Remise 5%",
+    "sale6": "Remise 6%",
     "sale10": "Remise 10%",
     "sale15": "Remise 15%"
   },

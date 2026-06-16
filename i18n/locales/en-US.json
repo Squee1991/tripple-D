@@ -8056,9 +8056,11 @@
     "description": "Protects your mortarboards from penalties"
   },
   "cardSales": {
-    "title5": "5% Discount",
-    "title10": "10% Discount",
-    "title15": "15% Discount"
+    "title3": "3% discount",
+    "title5": "5% discount",
+    "title6": "6% discount",
+    "title10": "10% discount",
+    "title15": "15% discount"
   },
   "cardsShop": {
     "full": "Full",
@@ -9775,9 +9777,11 @@
     "rank_5": "Captain",
     "rank_6": "Guardian",
     "rank_7": "Legend",
-    "sale5": "5% Discount",
-    "sale10": "10% Discount",
-    "sale15": "15% Discount"
+    "sale3": "3% discount",
+    "sale5": "5% discount",
+    "sale6": "6% discount",
+    "sale10": "10% discount",
+    "sale15": "15% discount"
   },
   "audioTasksTitles": {
     "meeting": "Meeting",

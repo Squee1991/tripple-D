@@ -8028,9 +8028,11 @@
     "description": "Qalpoqlaringizni jarimalardan himoya qiladi"
   },
   "cardSales": {
-    "title5": "5% Chegirma",
-    "title10": "10% Chegirma",
-    "title15": "15% Chegirma"
+    "title3": "3% chegirma",
+    "title5": "5% chegirma",
+    "title6": "6% chegirma",
+    "title10": "10% chegirma",
+    "title15": "15% chegirma"
   },
   "cardsShop": {
     "full": "To'liq",
@@ -9747,7 +9749,9 @@
     "rank_5": "Kapitan",
     "rank_6": "Qo'riqchi",
     "rank_7": "Afsona",
+    "sale3": "3% chegirma",
     "sale5": "5% chegirma",
+    "sale6": "6% chegirma",
     "sale10": "10% chegirma",
     "sale15": "15% chegirma"
   },

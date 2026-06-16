@@ -317,7 +317,7 @@ watch(currentIndex, stopAllAudio)
 <style scoped>
 
 .quiz-app {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
@@ -630,8 +630,8 @@ watch(currentIndex, stopAllAudio)
 
 .quiz-btn {
   width: 100%;
-  padding: 6px;
-  border-radius: 18px;
+  padding: 12px;
+  border-radius: 50px;
   font-weight: 900;
   font-size: 16px;
   text-transform: uppercase;

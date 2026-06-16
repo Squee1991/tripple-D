@@ -105,10 +105,15 @@ import ThematicLevels from '../src/components/thematic-statistic.vue'
 import NodataIcon from '../assets/images/research.svg'
 import VBanner from "~/src/components/V-banner.vue";
 import StatsIcon from '../assets/images/StatsPlus.svg'
+import {useSeoMeta} from "#imports";
 const router = useRouter()
 const {t} = useI18n()
 const lang = userlangStore()
 const view = ref('articles')
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 const activeIndex = computed(() => view.value === 'articles' ? 0 : 1)
 
@@ -170,7 +175,9 @@ onMounted(async () => {
 .mobile-page {
   display: flex;
   flex-direction: column;
-  height:100%;
+  height:100vh;
+  max-width: 1240px;
+  margin: 0 auto;
   font-family: "Nunito", sans-serif;
   overflow: hidden;
 }

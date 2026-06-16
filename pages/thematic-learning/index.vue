@@ -217,7 +217,7 @@ const loadThemeData = async () => {
 onMounted(() => {
   setTimeout(() => {
     isMouted.value = true
-    loadThemeData
+    loadThemeData()
   }, 100)
 })
 
@@ -228,7 +228,9 @@ watch(topic, loadThemeData)
 
 .theme-page {
   font-family: "Nunito", sans-serif;
-  height: 100%;
+  height: 100vh;
+  max-width: 1240px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -261,13 +263,27 @@ watch(topic, loadThemeData)
 .themes-scroll {
   width: 100%;
   overflow-x: auto;
+  overflow-y: hidden;
   padding: 8px 0 20px 0;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  margin-bottom: 10px;
+  scrollbar-color: rgba(90, 150, 183, 0.4) transparent;
+}
+.themes-scroll::-webkit-scrollbar {
+  height: 5px;
 }
 
-.themes-scroll::-webkit-scrollbar {
-  display: none;
+.themes-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.themes-scroll::-webkit-scrollbar-thumb {
+  background: rgba(90, 150, 183, 0.4);
+  border-radius: 10px;
+}
+
+.themes-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(90, 150, 183, 0.7);
 }
 
 .themes-container {
@@ -483,6 +499,8 @@ watch(topic, loadThemeData)
 
 .btn-start {
   width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
   padding: 16px;
   background: #3b82f6;
   border: none;

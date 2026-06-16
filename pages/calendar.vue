@@ -298,8 +298,8 @@ function endOfDay(dateObj) {
 }
 
 .page {
-  height: 100%;
-  max-width: 1400px;
+  height: 100vh;
+  max-width: 1240px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -355,7 +355,6 @@ function endOfDay(dateObj) {
 .calendar__layout {
   flex: 1;
   display: flex;
-  flex-direction: column-reverse;
   gap: 10px;
   padding: 10px;
   overflow-y: auto;
@@ -590,6 +589,11 @@ function endOfDay(dateObj) {
   background: #e3eeff;
 }
 
+@media (max-width: 1023px) {
+  .calendar__layout {
+    flex-direction: column-reverse;
+  }
+}
 
 @media (max-width: 767px) {
   .layout {

@@ -67,7 +67,7 @@ const handleCancel = () => {
   padding: 40px 24px 30px 24px;
   border-radius: 20px 20px 0 0;
   width: 100%;
-  max-width: 700px;
+  max-width: 1024px;
   text-align: center;
   border: none;
   box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.1);

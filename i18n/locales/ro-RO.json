@@ -8033,7 +8033,9 @@
     "description": "Protejează tocile tale de penalizări"
   },
   "cardSales": {
+    "title3": "Reducere 3%",
     "title5": "Reducere 5%",
+    "title6": "Reducere 6%",
     "title10": "Reducere 10%",
     "title15": "Reducere 15%"
   },
@@ -9752,7 +9754,9 @@
     "rank_5": "Căpitan",
     "rank_6": "Gardian",
     "rank_7": "Legendă",
+    "sale3": "Reducere 3%",
     "sale5": "Reducere 5%",
+    "sale6": "Reducere 6%",
     "sale10": "Reducere 10%",
     "sale15": "Reducere 15%"
   },

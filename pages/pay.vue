@@ -27,7 +27,10 @@ const authStore = userAuthStore()
 const billingStore = useBillingStore()
 const router = useRouter()
 const {t} = useI18n()
-const BASE_PRICE = 1
+
+// Динамические данные для цены
+const displayPrice = ref('12.99')
+const displayCurrency = ref('€')
 
 const selectedDiscountId = ref(null)
 const submitLoading = ref(false)
@@ -37,6 +40,7 @@ const toastMessage = ref('')
 const payButton = ref(null)
 const showStickyFooter = ref(false)
 const justBought = ref(false)
+
 const handleBack = () => {
   router.back()
 }
@@ -49,21 +53,27 @@ const submitComputed = computed(() => {
   return submitLoading.value ? t('submitComputed.sync') : t('submitComputed.getPlus')
 })
 
-
 const finalPrice = computed(() => {
   if (billingStore.isMobile && billingStore.offerings.length > 0) {
     return billingStore.offerings[0].product.priceString
   }
-  if (!selectedDiscountId.value) return BASE_PRICE.toFixed(2)
+
+  // Берем базовую цену, загруженную с сервера
+  const base = parseFloat(displayPrice.value) || 12.99
+
+  if (!selectedDiscountId.value) return base.toFixed(2)
+
   const activeCoupon = myAvailableCoupons.value.find(c => c.id === selectedDiscountId.value)
   const percent = activeCoupon ? activeCoupon.percent : 0
-  const discounted = BASE_PRICE - (BASE_PRICE * (percent / 100))
+  const discounted = base - (base * (percent / 100))
   return discounted.toFixed(2)
 })
 
 const myAvailableCoupons = computed(() => {
   const list = []
-  const hasAnyDiscount = authStore.premiumDiscount.sale_5 ||
+  const hasAnyDiscount = authStore.premiumDiscount.sale_3 ||
+      authStore.premiumDiscount.sale_5 ||
+      authStore.premiumDiscount.sale_6 ||
       authStore.premiumDiscount.sale_10 ||
       authStore.premiumDiscount.sale_15
   if (hasAnyDiscount) {
@@ -73,8 +83,10 @@ const myAvailableCoupons = computed(() => {
           label: 'Без скидки'
         })
   }
-  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_5', percent: 5, label: 'Скидка 3%'})
-  if (authStore.premiumDiscount.sale_10) list.push({id: 'sale_10', percent: 10, label: 'Скидка 6%'})
+  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_3', percent: 3, label: 'Скидка 3%'})
+  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_5', percent: 5, label: 'Скидка 5%'})
+  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_6', percent: 6, label: 'Скидка 6%'})
+  if (authStore.premiumDiscount.sale_10) list.push({id: 'sale_10', percent: 10, label: 'Скидка 10%'})
   if (authStore.premiumDiscount.sale_15) list.push({id: 'sale_15', percent: 15, label: 'Скидка 15%'})
   return list
 })
@@ -98,33 +110,12 @@ const features = [
   {title: t('Отсутствие рекламы'), icon: Ads},
 ]
 
-onMounted(async () => {
-  if (billingStore.isMobile) {
-    await billingStore.initialize()
-  }
-  observer = new IntersectionObserver(
-      ([entry]) => {
-        showStickyFooter.value = !entry.isIntersecting
-      },
-      {threshold: 1.0}
-  )
-  if (payButton.value) {
-    observer.observe(payButton.value)
-  }
-})
-
-onUnmounted(() => {
-  if (observer && payButton.value) {
-    observer.unobserve(payButton.value)
-  }
-})
-
 const triggerToast = (msg) => {
   toastMessage.value = msg
   showToast.value = true
   setTimeout(() => {
     showToast.value = false
-  }, 2000)
+  }, 3000)
 }
 
 async function handleRestore() {
@@ -160,7 +151,7 @@ async function pay() {
     }
     return
   }
-  const priceId = 'price_1SvdnE24sKuPwF6cZoD2ZJn3'
+
   submitLoading.value = true
   try {
     const response = await $fetch('/api/stripe/checkout', {
@@ -168,7 +159,6 @@ async function pay() {
       body: {
         userId: authStore.uid,
         email: authStore.email,
-        priceId,
         couponId: selectedDiscountId.value
       },
     })
@@ -178,12 +168,14 @@ async function pay() {
       console.log(response.error)
     }
   } catch (err) {
+    console.error(err)
   } finally {
     submitLoading.value = false
   }
 }
 
 onMounted(async () => {
+  // 1. Проверяем наличие активной подписки
   const endDateStr = authStore.subscriptionEndsAt
   if (endDateStr) {
     const endDate = new Date(endDateStr)
@@ -192,13 +184,28 @@ onMounted(async () => {
       triggerToast('pay.triggerToastIsPlus')
       setTimeout(() => {
         router.back()
-      }, 1115500)
+      }, 5000)
       return
     }
   }
+
+  // 2. Подтягиваем локальную цену с сервера
+  try {
+    const data = await $fetch('/api/stripe/get-price')
+    if (data) {
+      displayPrice.value = data.amount
+      displayCurrency.value = data.currency
+    }
+  } catch (err) {
+    console.error('Не удалось загрузить локальную цену:', err)
+  }
+
+  // 3. Инициализируем мобильные покупки
   if (billingStore.isMobile) {
     await billingStore.initialize()
   }
+
+  // 4. Запускаем обсервер для кнопки
   observer = new IntersectionObserver(
       ([entry]) => {
         showStickyFooter.value = !entry.isIntersecting
@@ -207,6 +214,12 @@ onMounted(async () => {
   )
   if (payButton.value) {
     observer.observe(payButton.value)
+  }
+})
+
+onUnmounted(() => {
+  if (observer && payButton.value) {
+    observer.unobserve(payButton.value)
   }
 })
 </script>
@@ -280,7 +293,7 @@ onMounted(async () => {
           </div>
           <div class="bill-total">
             <span class="total-text">ИТОГО:</span>
-            <span class="total-price">{{ finalPrice }}€</span>
+            <span class="total-price">{{ finalPrice }}{{ displayCurrency }}</span>
           </div>
         </div>
         <div class="footer-action" ref="payButton">
@@ -366,7 +379,9 @@ onMounted(async () => {
 
 
 .pro-vault {
-  height: 100%;
+  height: 100vh;
+  max-width: 1024px;
+  margin: 0 auto;
   background: var(--bg);
   color: var(--title);
   font-family: 'Nunito', sans-serif;

@@ -37,10 +37,6 @@ const COUNTRY = "Poland"
 const router = useRouter()
 const lastUpdated = ref("01 Januar 2026")
 
-const path = () => {
-  router.push('/')
-}
-
 const sections = ref([
   {
     heading: "1. General",

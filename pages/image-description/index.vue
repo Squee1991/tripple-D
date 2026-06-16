@@ -149,7 +149,7 @@ function goBack() {
   justify-content: center;
   box-sizing: border-box;
   color: #1e272e;
-  height: 100%;
+  height: 100vh;
   min-height: 100%;
 }
 
@@ -293,7 +293,6 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   align-items: center;
   justify-content: center;
   padding: 10px 16px;
-  max-width: 450px;
   width: 100%;
 }
 

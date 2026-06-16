@@ -270,6 +270,8 @@ onUnmounted(() => {
 .session-page {
   font-family: "Nunito", sans-serif;
   height: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   background: transparent;
@@ -478,8 +480,10 @@ onUnmounted(() => {
 .bottom-sheet {
   position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
+  max-width: 1024px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 16px 16px calc(env(safe-area-inset-bottom) + 16px);
   border-radius: 24px 24px 0 0;
   border: none;
@@ -694,6 +698,6 @@ onUnmounted(() => {
 }
 
 .slide-up-bouncy-enter-from, .slide-up-bouncy-leave-to {
-  transform: translateY(100%);
+  transform: translateX(-50%) translateY(100%);
 }
 </style>

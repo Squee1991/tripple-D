@@ -8033,9 +8033,11 @@
     "description": "Protege tus birretes de penalizaciones"
   },
   "cardSales": {
-    "title5": "Descuento 5%",
-    "title10": "Descuento 10%",
-    "title15": "Descuento 15%"
+    "title3": "3% de descuento",
+    "title5": "5% de descuento",
+    "title6": "6% de descuento",
+    "title10": "10% de descuento",
+    "title15": "15% de descuento"
   },
   "cardsShop": {
     "full": "Lleno",
@@ -9752,7 +9754,9 @@
     "rank_5": "Capitán",
     "rank_6": "Guardián",
     "rank_7": "Leyenda",
+    "sale3": "Descuento 3%",
     "sale5": "Descuento 5%",
+    "sale6": "Descuento 6%",
     "sale10": "Descuento 10%",
     "sale15": "Descuento 15%"
   },
