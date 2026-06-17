@@ -10391,5 +10391,9 @@
     "unsuccess": "A technical glitch occurred during processing.",
     "toMain": " To main page",
     "redirectSuccess": "Redirecting in a few seconds..."
+  },
+  "installApp": {
+    "stayInBrowser": "Continue in browser",
+    "promoSubTitle": " Learning German is much more convenient with the Skillupgerman app."
   }
 }

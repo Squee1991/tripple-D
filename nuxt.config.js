@@ -32,7 +32,7 @@ if (rawJson) {
 const siteUrl = process.env.NUXT_SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 
 export default defineNuxtConfig({
-	ssr: false,
+	ssr: true,
 	experimental: {
 		payloadExtraction: true,
 		appManifest: false
@@ -131,14 +131,21 @@ export default defineNuxtConfig({
 		},
 	},
 	vite: {
-		build: {minify: 'esbuild'},
+		build: {
+			minify: 'esbuild'
+		},
 		esbuild: {
 			drop: isProd ? ['console', 'debugger'] : [],
 			legalComments: 'none',
 		},
 	},
-	nitro: {compressPublicAssets: true},
+	nitro: {
+		compressPublicAssets: true
+	},
 	routeRules: {
+		'/**': { ssr: false },
+		'/': { ssr: true },
+		'/info-about': { ssr: true },
 		'/admin/**': {status: 404},
 		'/wp-login.php': {status: 404},
 		'/sounds/**': {headers: {'Cache-Control': 'public, max-age=2592000'}},

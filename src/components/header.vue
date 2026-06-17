@@ -15,18 +15,9 @@
         @button="onDevModalButton"
     />
     <div class="header-container">
-<!--      <NuxtLink @click="click" to="/" class="logo" aria-label="German Corner — Home">-->
-<!--        <span class="logo__name">skillup</span>-->
-<!--        <NuxtImg-->
-<!--            src="/images/logo/logo2.png"-->
-<!--            alt="German Corner"-->
-<!--            class="logo__img"-->
-<!--            format="webp"-->
-<!--            loading="eager"-->
-<!--            fetchpriority="high"-->
-<!--        />-->
-<!--        <span class="logo__name">german</span>-->
-<!--      </NuxtLink>-->
+      <NuxtLink v-if="!userAuth.uid" @click="click" to="/" class="logo" aria-label="Skillupgerman logo">
+        <img class="logo__img" src="../../assets/images/logoReview.webp" alt="logo">
+      </NuxtLink>
       <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen, 'is-rtl': isAr }"
            aria-label="Main">
         <ul v-if="!userAuth.uid" class="header-nav__list">
@@ -490,21 +481,25 @@ onBeforeUnmount(() => {
 .logo {
   display: flex;
   align-items: center;
+  margin-right: 80px;
 }
 
 .logo__img {
-  width: 52px;
-  height: 52px;
+  width: 130px;
+  height: 84px;
   object-fit: contain;
   display: block;
 }
 
 .header-container {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 5px 10px 5px 10px;
+  padding: 0 10px;
 }
 
 .header-left, .header-right {
@@ -689,7 +684,7 @@ onBeforeUnmount(() => {
   font-weight: 600;
   padding: 0.8rem 1rem;
   font-size: 1rem;
-  border-radius: 12px;
+  border-radius: 50px;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   background-color: #f1c40f;
@@ -975,10 +970,13 @@ onBeforeUnmount(() => {
   }
 
 }
-
-@media  (min-width: 1024px) {
-  .header {
-    padding: 12px 0 ;
+@media  (max-width: 1023px) {
+  .logo__img {
+    width: 100px;
+    height: 600px;
+  }
+  .header-container {
+    padding: 10px;
   }
 }
 

@@ -10363,5 +10363,9 @@
     "unsuccess": "Ishlov berish jarayonida texnik nosozlik yuz berdi.",
     "toMain": " Asosiy sahifaga",
     "redirectSuccess": "Bir necha soniyadan so'ng qayta yo'naltiriladi..."
+  },
+  "installApp": {
+    "stayInBrowser": "Brauzerda davom etish",
+    "promoSubTitle": " Skillupgerman ilovasi bilan nemis tilini o'rganish ancha qulayroq."
   }
 }

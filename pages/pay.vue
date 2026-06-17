@@ -20,7 +20,7 @@ import Future from '../assets/images/FutureFunctions.svg'
 import StatsPlus from '../assets/images/StatsPlus.svg'
 import Forever from '../assets/images/forever.svg'
 import Description from '../assets/images/photo-frame.svg'
-import PremiumIcon from '../assets/images/premium.svg'
+import PremiumIcon from '../assets/images/PlusLogo.png'
 import VBanner from "~/src/components/V-banner.vue"
 
 const authStore = userAuthStore()
@@ -28,7 +28,6 @@ const billingStore = useBillingStore()
 const router = useRouter()
 const {t} = useI18n()
 
-// Динамические данные для цены
 const displayPrice = ref('12.99')
 const displayCurrency = ref('€')
 
@@ -182,14 +181,12 @@ onMounted(async () => {
     const now = new Date()
     if (endDate > now) {
       triggerToast('pay.triggerToastIsPlus')
-      setTimeout(() => {
-        router.back()
-      }, 5000)
+      // setTimeout(() => {
+      //   router.back()
+      // }, 5000)
       return
     }
   }
-
-  // 2. Подтягиваем локальную цену с сервера
   try {
     const data = await $fetch('/api/stripe/get-price')
     if (data) {
@@ -199,13 +196,9 @@ onMounted(async () => {
   } catch (err) {
     console.error('Не удалось загрузить локальную цену:', err)
   }
-
-  // 3. Инициализируем мобильные покупки
   if (billingStore.isMobile) {
     await billingStore.initialize()
   }
-
-  // 4. Запускаем обсервер для кнопки
   observer = new IntersectionObserver(
       ([entry]) => {
         showStickyFooter.value = !entry.isIntersecting

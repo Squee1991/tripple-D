@@ -10384,5 +10384,9 @@
     "unsuccess": "Wystąpił problem techniczny podczas przetwarzania.",
     "toMain": " Na główną",
     "redirectSuccess": "Przekierowanie za kilka sekund..."
+  },
+  "installApp": {
+    "stayInBrowser": "Kontynuuj w przeglądarce",
+    "promoSubTitle": " Z aplikacją Skillupgerman nauka niemieckiego jest o wiele wygodniejsza."
   }
 }

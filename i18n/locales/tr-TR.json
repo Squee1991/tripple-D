@@ -10377,5 +10377,9 @@
     "unsuccess": "İşlem sırasında teknik bir aksaklık oluştu.",
     "toMain": " Ana sayfaya",
     "redirectSuccess": "Birkaç saniye içinde yönlendiriliyorsunuz..."
+  },
+  "installApp": {
+    "stayInBrowser": "Tarayıcıda devam et",
+    "promoSubTitle": " Skillupgerman uygulaması ile Almanca öğrenmek çok daha pratik."
   }
 }

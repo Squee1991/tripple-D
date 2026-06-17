@@ -2,8 +2,8 @@
 import { ref, onMounted } from 'vue'
 import AppIcon from '~/assets/images/logoReview.webp'
 import { userAuthStore } from "../../store/authStore.js";
-
-const isVisible = ref(true)
+const { t } = useI18n()
+const isVisible = ref(false)
 const authStore = userAuthStore()
 
 const closeModal = () => {
@@ -21,6 +21,9 @@ const openStore = (platform) => {
 }
 
 onMounted(() => {
+  if (isVisible.value) {
+    document.body.style.overflowY = 'hidden'
+  }
   if (!localStorage.getItem('app_promo_seen')) {
     setTimeout(() => {
       isVisible.value = true
@@ -36,14 +39,13 @@ onMounted(() => {
         <div v-if="isVisible && authStore.uid" class="modal-overlay" @click.self="closeModal">
           <div class="promo-modal">
             <button class="close-btn" @click="closeModal">✕</button>
-
             <div class="promo-content">
               <div class="icon-glow-wrapper">
                 <img class="app-icon" :src="AppIcon" alt="App Icon">
                 <div class="glow-effect"></div>
               </div>
               <p class="promo-subtitle">
-                С приложением Skillupgerman учить немецкий гораздо удобнее.
+                {{ t('installApp.promoSubTitle')}}
               </p>
               <div class="store-buttons">
                 <button class="store-btn apple-btn" @click="openStore('ios')">
@@ -52,7 +54,6 @@ onMounted(() => {
                     <span class="btn-large-text">App Store</span>
                   </div>
                 </button>
-
                 <button class="store-btn google-btn" @click="openStore('android')">
                   <svg viewBox="0 0 512 512" class="store-icon"><path fill="currentColor" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
                   <div class="btn-text">
@@ -60,10 +61,7 @@ onMounted(() => {
                   </div>
                 </button>
               </div>
-
-              <button class="continue-browser" @click="closeModal">
-                Продолжить в браузере
-              </button>
+              <button class="continue-browser" @click="closeModal"> {{ t('installApp.stayInBrowser')}}</button>
             </div>
           </div>
         </div>
@@ -102,7 +100,7 @@ onMounted(() => {
   border-radius: 28px;
   width: 100%;
   max-width: 420px;
-  padding: 32px 24px;
+  padding: 48px 24px 30px 24px;
   position: relative;
   color: #fff;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -172,7 +170,7 @@ onMounted(() => {
   line-height: 1.5;
   color: white;
   font-weight: 600;
-  margin: 0 0 28px 0;
+  margin: 0 0 18px 0;
 }
 
 .store-buttons {

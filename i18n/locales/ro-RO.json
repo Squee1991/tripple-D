@@ -10368,5 +10368,9 @@
     "unsuccess": "A apărut o problemă tehnică în timpul procesării.",
     "toMain": " Spre pagina principală",
     "redirectSuccess": "Redirecționare în câteva secunde..."
+  },
+  "installApp": {
+    "stayInBrowser": "Continuă în browser",
+    "promoSubTitle": " Cu aplicația Skillupgerman, învățarea limbii germane este mult mai practică."
   }
 }

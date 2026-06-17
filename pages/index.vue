@@ -36,14 +36,16 @@ onMounted(() => {
   <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
   <VShowFall v-if="eventStore.isSnowEnabled" :image="Snow"/>
   <div class="container">
-    <template v-if="authStore.uid">
-      <div class="stat">
-        <Header/>
-        <VUid/>
-        <Footer/>
-      </div>
-    </template>
-    <template v-else-if="authStore.initialized && !authStore.uid">
+    <ClientOnly>
+      <template v-if="authStore.uid">
+        <div class="stat">
+          <Header/>
+          <VUid/>
+          <Footer/>
+        </div>
+      </template>
+    </ClientOnly>
+    <template v-if="authStore.initialized && !authStore.uid">
       <Header/>
       <Banner/>
       <Description/>
@@ -57,7 +59,7 @@ onMounted(() => {
 .container {
   max-width: 1240px;
   width: 100%;
-  height: 100dvh;
+  min-height: 100dvh;
   margin: 0 auto;
   padding: 0 10px;
 
@@ -67,7 +69,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 

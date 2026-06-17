@@ -267,12 +267,12 @@ onMounted(() => {
 }
 
 .btn-cancel-sub {
-  background: #fef2f2;
-  color: #ef4444;
-  border: 1px solid #fca5a5;
-  border-radius: 10px;
-  padding: 8px 16px;
-  font-weight: 800;
+  background: #e55656;
+  color: #ffffff;
+  border: 2px solid #fca5a5;
+  border-radius: 50px;
+  padding: 8px 10px;
+  font-weight: 600;
   font-size: 14px;
   cursor: pointer;
   font-family: "Nunito", sans-serif;

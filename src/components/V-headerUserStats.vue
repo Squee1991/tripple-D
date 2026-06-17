@@ -79,7 +79,7 @@ import Articlus from '../../assets/images/article.svg'
 import Heart from '../../assets/images/heartInfo.svg'
 import Forever from '../../assets/images/forever.svg'
 import VCalendarStreak from "~/src/components/V-calendarStreak.vue"
-import LogoPlus from '../../assets/images/logoReview.webp'
+import LogoPlus from '../../assets/images/PlusLogo.png'
 const {t} = useI18n()
 const langStore = userlangStore()
 const userAuth = userAuthStore()
@@ -198,7 +198,7 @@ onBeforeUnmount(() => {
   justify-content: space-between;
   gap: 12px;
   width: 100%;
-  padding: 0 0 8px 0;
+  padding: 8px 0;
   position: relative;
 }
 
@@ -490,8 +490,12 @@ onBeforeUnmount(() => {
     display: block;
     font-size: 20px;
   }
-
-  .stat__items-wrapper {
+  .header-stats {
+    padding: 14px 0;
   }
 }
+
+
+
+
 </style>
