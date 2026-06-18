@@ -245,7 +245,7 @@ import {userChainStore} from '~/store/chainStore.js'
 import {userlangStore} from '~/store/learningStore.js'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '~/utils/soundManager.js'
-import {showRewarded} from '~/utils/admob.js';
+import {showRewarded, showInterstitial} from '~/utils/admob.js';
 import RightIcon from '~/assets/images/location-icons/accept.svg'
 import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 import {useSeoMeta} from '#imports'
@@ -464,8 +464,10 @@ function goThemes() {
 }
 
 function restart() {
-  questStore.restart(previouslyCleared.value)
-  questStore.loadQuest(questId.value, regionKey.value)
+  showInterstitial(() => {
+    questStore.restart(previouslyCleared.value)
+    questStore.loadQuest(questId.value, regionKey.value)
+  })
 }
 
 function handleClick() {
@@ -596,7 +598,8 @@ watch([questId, regionKey], () => {
       questStore.reorderSelection = []
       questStore.reorderBank = []
       showHint.value = false
-      ;(async () => {
+
+      showInterstitial(async () => {
         await questStore.loadProgressFromFirebase?.()
         await questStore.loadQuest(questId.value, regionKey.value)
         const hasAccept = questStore.quest?.tasks?.some(t => t.accept?.length)
@@ -605,7 +608,7 @@ watch([questId, regionKey], () => {
         }
         await nextTick()
         forceRevive.value = showRevive.value
-      })()
+      })
     },
     {immediate: true, flush: 'sync'}
 )

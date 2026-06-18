@@ -8,7 +8,7 @@ import TipsModal from '../../src/components/V-tips.vue'
 import { topics } from '@/utils/descriptionImages.js'
 import { VoiceRecorder } from 'capacitor-voice-recorder'
 import { getFunctions, httpsCallable } from 'firebase/functions'
-
+import {showInterstitial} from '../../utils/admob.js'
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
@@ -37,6 +37,8 @@ const functions = getFunctions(undefined, 'us-central1')
 onMounted(() => {
   if (!sessionConfig.value?.topicId || !selectedTopic.value) {
     router.push('/image-description')
+  } else {
+    showInterstitial(() => {})
   }
 })
 

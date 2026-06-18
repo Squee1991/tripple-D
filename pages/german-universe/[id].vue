@@ -160,7 +160,10 @@ onBeforeRouteLeave((to, from, next) => {
               <img class="astronaut" src="../../assets/images/galaxy-images/astronautFail.svg" alt="astronautFail">
               <div class="score__wrapper">
                 <span class="score-text">{{ t('galaxySession.check') }}</span>
-                <span class="fs-val">{{ score }}</span>
+                <div class="score__inner">
+                  <img class="score-coin" src="../../assets/images/galaxy-images/Artics.svg" alt="">
+                  <span class="fs-val">{{ score }}</span>
+                </div>
               </div>
             </div>
             <div class="modal-actions">
@@ -217,6 +220,15 @@ onBeforeRouteLeave((to, from, next) => {
   border: 2px solid #555;
   border-radius: 6px;
   z-index: 100;
+}
+
+.score__inner {
+  display: flex;
+  align-items: center;
+}
+
+.score__coin {
+  width: 44px;
 }
 
 .battery-segment {
@@ -328,9 +340,14 @@ onBeforeRouteLeave((to, from, next) => {
   z-index: 100;
 }
 
+.score-label {
+  font-size: 18px;
+}
+
 .score-value {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 26px;
+  font-family: Lilita One, sans-serif;
+  font-weight: 400;
   margin-left: 10px;
   color: #fff;
 }
@@ -357,10 +374,10 @@ onBeforeRouteLeave((to, from, next) => {
 }
 
 .mob-bubble {
-  background: rgba(0, 0, 0, 0.8);
+  background: none;
+  font-size: 19px;
   color: #fff;
   padding: 5px 15px;
-  border: 2px solid #00d2ff;
   text-align: center;
   border-radius: 5px;
 }
@@ -438,9 +455,11 @@ onBeforeRouteLeave((to, from, next) => {
 }
 
 .fs-val {
-  font-size: 24px;
+  margin-left: 5px;
+  font-size: 36px;
+  font-family: Lilita One, sans-serif;
   color: #3498db;
-  font-weight: 900;
+  font-weight: 400;
   line-height: 1;
   text-shadow: 1px 1px 0px #3498db;
 }
@@ -457,9 +476,13 @@ onBeforeRouteLeave((to, from, next) => {
   font-size: 1.2rem;
   font-weight: 900;
   border: 3px solid #000;
-  border-radius: 15px;
+  border-radius: 50px;
   cursor: pointer;
   transition: 0.1s;
+}
+
+.score-coin {
+  width: 45px;
 }
 
 .toon-btn-blue {

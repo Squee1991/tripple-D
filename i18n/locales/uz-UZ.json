@@ -8028,9 +8028,11 @@
     "description": "Qalpoqlaringizni jarimalardan himoya qiladi"
   },
   "cardSales": {
-    "title5": "5% Chegirma",
-    "title10": "10% Chegirma",
-    "title15": "15% Chegirma"
+    "title3": "3% chegirma",
+    "title5": "5% chegirma",
+    "title6": "6% chegirma",
+    "title10": "10% chegirma",
+    "title15": "15% chegirma"
   },
   "cardsShop": {
     "full": "To'liq",
@@ -8102,6 +8104,7 @@
     "profileData": "Profil ma'lumotlari"
   },
   "cabinet": {
+    "plusCanceled": "PLUS bekor qilindi",
     "important": "MUHIM!!!",
     "importantText": "Hisobni o‘chirganingizda obuna avtomatik bekor qilinmaydi. Avval obunani bekor qiling.",
     "cancelPremium": "Obunani bekor qilasizmi?",
@@ -9746,7 +9749,9 @@
     "rank_5": "Kapitan",
     "rank_6": "Qo'riqchi",
     "rank_7": "Afsona",
+    "sale3": "3% chegirma",
     "sale5": "5% chegirma",
+    "sale6": "6% chegirma",
     "sale10": "10% chegirma",
     "sale15": "15% chegirma"
   },
@@ -10307,5 +10312,64 @@
     "buyBy": "Sotib olish",
     "toThemes": "Mavzularga",
     "repeat": "Takrorlash"
+  },
+  "freezeStatus": {
+    "active": "Vaqtni muzlatish faol",
+    "inactive": "Vaqtni muzlatish faol emas"
+  },
+  "guessArticle": {
+    "correct": "To'g'ri",
+    "incorrect": "Noto'g'ri, to'g'risi"
+  },
+  "payPage": {
+    "featureOne": "Chegarasiz ta'lim",
+    "featureTwo": "Kelgusi funksiyalar",
+    "featureThree": "Dasturchilarni qo'llab-quvvatlash",
+    "featureFour": "Reklamasiz",
+    "sale5": "3% chegirma",
+    "sale10": "6% chegirma",
+    "sale15": "15% chegirma",
+    "finalePrice": "JAMI:",
+    "yourSale": "Sizning chegirmangiz"
+  },
+  "stripeCancel": {
+    "cancelSub": "Obunani bekor qilish",
+    "cancelPayment": "To'lov bekor qilindi",
+    "errorAuth": "Avtorizatsiya xatoligi",
+    "pleaseAuth": "Ushbu amalni bajarish uchun tizimga kiring.",
+    "canceling": "Obuna bekor qilinmoqda...",
+    "canceledSub": "Obuna bekor qilindi",
+    "errorCancelSub": "Bekor qilishda xatolik",
+    "errorCancelResponse": "Obunani bekor qilib bo'lmadi.",
+    "serverError": "Server xatoligi",
+    "serverOffline": "Server bilan aloqa uzildi. Keyinroq qayta urinib ko'ring.",
+    "processInterrupted": "To'lov jarayoni to'xtatildi. Kartangizdan mablag' yechilmadi.",
+    "tryAgain": "Qayta urinish",
+    "backToMain": "Asosiyga",
+    "extensionCanceled": "Avtomatik uzaytirish o'chiriladi. Kirish imkoniyati to'langan davr oxirigacha saqlanib qoladi.",
+    "extensionCanceledCanBack": "Obunangiz endi uzaytirilmaydi. Istalgan vaqtda qaytishingiz mumkin!",
+    "confirmCancel": "Ha, bekor qilinsin",
+    "notConfirmCancel": "Bekor qilinmasin",
+    "backToMainPage": "Asosiy sahifaga qaytish"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "Tranzaksiya tasdiqlanmoqda...",
+    "sessionNotFound": "To'lov sessiyasi topilmadi",
+    "authPlease": "Yakunlash uchun tizimga kiring",
+    "isPremium": "Premium kirish faollashtirildi",
+    "errorActivation": "Faollashtirish xatoligi",
+    "errorServer": "Server bilan aloqa xatoligi",
+    "success": "Endi xizmatning barcha funksiyalari sizga tayyor.",
+    "unsuccess": "Ishlov berish jarayonida texnik nosozlik yuz berdi.",
+    "toMain": " Asosiy sahifaga",
+    "redirectSuccess": "Bir necha soniyadan so'ng qayta yo'naltiriladi..."
+  },
+  "installApp": {
+    "stayInBrowser": "Brauzerda davom etish",
+    "promoSubTitle": " Skillupgerman ilovasi bilan nemis tilini o'rganish ancha qulayroq."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Dialoglarni bajaring. Tinglang, javob variantlarini tanlang va talaffuzni mashq qiling",
+    "words": "Dialogdagi har bir gapni oson tushunish uchun kalit so'z va iboralarni o'rganing"
   }
 }

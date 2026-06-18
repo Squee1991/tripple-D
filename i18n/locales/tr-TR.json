@@ -8042,9 +8042,11 @@
     "description": "Keplerinizi cezalara karşı korur"
   },
   "cardSales": {
-    "title5": "%5 İndirim",
-    "title10": "%10 İndirim",
-    "title15": "%15 İndirim"
+    "title3": "%3 indirim",
+    "title5": "%5 indirim",
+    "title6": "%6 indirim",
+    "title10": "%10 indirim",
+    "title15": "%15 indirim"
   },
   "cardsShop": {
     "full": "Tam",
@@ -8116,6 +8118,7 @@
     "profileData": "Profil verileri"
   },
   "cabinet": {
+    "plusCanceled": "PLUS iptal edildi",
     "important": "ÖNEMLİ!!!",
     "importantText": "Hesabınızı silerken abonelik iptal edilmez. Lütfen silmeden önce aboneliğinizi iptal edin.",
     "cancelPremium": "Abonelik iptal edilsin mi?",
@@ -9760,9 +9763,11 @@
     "rank_5": "Kaptan",
     "rank_6": "Muhafız",
     "rank_7": "Efsane",
-    "sale5": "%5 İndirim",
-    "sale10": "%10 İndirim",
-    "sale15": "%15 İndirim"
+    "sale3": "%3 indirim",
+    "sale5": "%5 indirim",
+    "sale6": "%6 indirim",
+    "sale10": "%10 indirim",
+    "sale15": "%15 indirim"
   },
   "audioTasksTitles": {
     "meeting": "Tanışma",
@@ -10321,5 +10326,64 @@
     "buyBy": "Şunun için satın al",
     "toThemes": "Konulara dön",
     "repeat": "Tekrar et"
+  },
+  "freezeStatus": {
+    "active": "Zaman dondurma aktif",
+    "inactive": "Zaman dondurma aktif değil"
+  },
+  "guessArticle": {
+    "correct": "Doğru",
+    "incorrect": "Yanlış, doğrusu"
+  },
+  "payPage": {
+    "featureOne": "Sınır tanımayan eğitim",
+    "featureTwo": "Gelecek özellikler",
+    "featureThree": "Geliştirici desteği",
+    "featureFour": "Reklamsız",
+    "sale5": "%3 indirim",
+    "sale10": "%6 indirim",
+    "sale15": "%15 indirim",
+    "finalePrice": "TOPLAM:",
+    "yourSale": "İndiriminiz"
+  },
+  "stripeCancel": {
+    "cancelSub": "Aboneliği iptal et",
+    "cancelPayment": "Ödeme iptal edildi",
+    "errorAuth": "Kimlik doğrulama hatası",
+    "pleaseAuth": "Lütfen bu işlemi gerçekleştirmek için giriş yapın.",
+    "canceling": "Abonelik iptal ediliyor...",
+    "canceledSub": "Abonelik iptal edildi",
+    "errorCancelSub": "İptal sırasında hata oluştu",
+    "errorCancelResponse": "Abonelik iptal edilemedi.",
+    "serverError": "Sunucu hatası",
+    "serverOffline": "Sunucuyla bağlantı kesildi. Lütfen daha sonra tekrar deneyin.",
+    "processInterrupted": "Ödeme işlemi kesintiye uğradı. Kartınızdan herhangi bir ücret alınmadı.",
+    "tryAgain": "Tekrar dene",
+    "backToMain": "Ana sayfaya",
+    "extensionCanceled": "Otomatik yenileme devre dışı bırakılacak. Erişiminiz ödenen dönemin sonuna kadar devam edecektir.",
+    "extensionCanceledCanBack": "Aboneliğiniz artık yenilenmeyecek. İstediğiniz zaman geri dönebilirsiniz!",
+    "confirmCancel": "Evet, iptal et",
+    "notConfirmCancel": "İptal etme",
+    "backToMainPage": "Ana sayfaya geri dön"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "İşlem onaylanıyor...",
+    "sessionNotFound": "Ödeme oturumu bulunamadı",
+    "authPlease": "Tamamlamak için lütfen giriş yapın",
+    "isPremium": "Premium erişim aktif edildi",
+    "errorActivation": "Aktivasyon hatası",
+    "errorServer": "Sunucu bağlantı hatası",
+    "success": "Artık servisin tüm özelliklerine erişebilirsiniz.",
+    "unsuccess": "İşlem sırasında teknik bir aksaklık oluştu.",
+    "toMain": " Ana sayfaya",
+    "redirectSuccess": "Birkaç saniye içinde yönlendiriliyorsunuz..."
+  },
+  "installApp": {
+    "stayInBrowser": "Tarayıcıda devam et",
+    "promoSubTitle": " Skillupgerman uygulaması ile Almanca öğrenmek çok daha pratik."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Diyalogları tamamlayın. Dinleyin, cevap seçeneklerini belirleyin ve telaffuz pratiği yapın",
+    "words": "Diyalogdaki her repliği kolayca anlamak için anahtar kelimeleri ve ifadeleri öğrenin"
   }
 }

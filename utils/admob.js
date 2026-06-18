@@ -4,7 +4,7 @@ import { userAuthStore } from '../store/authStore.js';
 
 let isAdProcessing = false;
 const AD_LIMIT_PER_DAY = 5;
-
+const isApplication = Capacitor.isNativePlatform()
 function getTodayKey() {
 	const today = new Date();
 	return `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;

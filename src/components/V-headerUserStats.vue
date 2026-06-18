@@ -81,7 +81,7 @@ import Articlus from '../../assets/images/article.svg'
 import Heart from '../../assets/images/heartInfo.svg'
 import Forever from '../../assets/images/forever.svg'
 import VCalendarStreak from "~/src/components/V-calendarStreak.vue"
-import LogoPlus from '../../assets/images/logoReview.webp'
+import LogoPlus from '../../assets/images/PlusLogo.png'
 const {t} = useI18n()
 const langStore = userlangStore()
 const userAuth = userAuthStore()

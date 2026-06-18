@@ -8033,7 +8033,9 @@
     "description": "Protejează tocile tale de penalizări"
   },
   "cardSales": {
+    "title3": "Reducere 3%",
     "title5": "Reducere 5%",
+    "title6": "Reducere 6%",
     "title10": "Reducere 10%",
     "title15": "Reducere 15%"
   },
@@ -8107,6 +8109,7 @@
     "profileData": "Datele profilului"
   },
   "cabinet": {
+    "plusCanceled": "PLUS anulat",
     "important": "IMPORTANT!!!",
     "importantText": "La ștergerea contului, abonamentul nu se anulează automat. Înainte de ștergere, anulează abonamentul.",
     "cancelPremium": "Anulezi abonamentul?",
@@ -9751,7 +9754,9 @@
     "rank_5": "Căpitan",
     "rank_6": "Gardian",
     "rank_7": "Legendă",
+    "sale3": "Reducere 3%",
     "sale5": "Reducere 5%",
+    "sale6": "Reducere 6%",
     "sale10": "Reducere 10%",
     "sale15": "Reducere 15%"
   },
@@ -10312,5 +10317,64 @@
     "buyBy": "Cumpără cu",
     "toThemes": "La teme",
     "repeat": "Repetă"
+  },
+  "freezeStatus": {
+    "active": "Înghețarea timpului este activă",
+    "inactive": "Înghețarea timpului este inactivă"
+  },
+  "guessArticle": {
+    "correct": "Corect",
+    "incorrect": "Incorect, corect este"
+  },
+  "payPage": {
+    "featureOne": "Învățare fără frontiere",
+    "featureTwo": "Funcții viitoare",
+    "featureThree": "Suport pentru dezvoltatori",
+    "featureFour": "Fără reclame",
+    "sale5": "3% reducere",
+    "sale10": "6% reducere",
+    "sale15": "15% reducere",
+    "finalePrice": "TOTAL:",
+    "yourSale": "Reducerea ta"
+  },
+  "stripeCancel": {
+    "cancelSub": "Anulare abonament",
+    "cancelPayment": "Plată anulată",
+    "errorAuth": "Eroare de autentificare",
+    "pleaseAuth": "Te rugăm să te autentifici pentru a efectua această acțiune.",
+    "canceling": "Se anulează abonamentul...",
+    "canceledSub": "Abonament anulat",
+    "errorCancelSub": "Eroare la anulare",
+    "errorCancelResponse": "Nu s-a putut anula abonamentul.",
+    "serverError": "Eroare de server",
+    "serverOffline": "Conexiune pierdută cu serverul. Încearcă mai târziu.",
+    "processInterrupted": "Procesul de plată a fost întrerupt. Nu au fost debitați bani de pe cardul tău.",
+    "tryAgain": "Încearcă din nou",
+    "backToMain": "Spre principală",
+    "extensionCanceled": "Prelungirea automată va fi dezactivată. Accesul va fi păstrat până la sfârșitul perioadei achitate.",
+    "extensionCanceledCanBack": "Abonamentul tău nu se va mai prelungi. Te poți întoarce în orice moment!",
+    "confirmCancel": "Da, anulează",
+    "notConfirmCancel": "Nu anula",
+    "backToMainPage": "Înapoi la pagina principală"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "Se confirmă tranzacția..." ,
+    "sessionNotFound": "Sesiunea de plată nu a fost găsită",
+    "authPlease": "Te rugăm să te autentifici pentru a finaliza",
+    "isPremium": "Accesul Premium a fost activat",
+    "errorActivation": "Eroare de activare",
+    "errorServer": "Eroare de conexiune cu serverul",
+    "success": "Acum ai acces la toate funcțiile serviciului.",
+    "unsuccess": "A apărut o problemă tehnică în timpul procesării.",
+    "toMain": " Spre pagina principală",
+    "redirectSuccess": "Redirecționare în câteva secunde..."
+  },
+  "installApp": {
+    "stayInBrowser": "Continuă în browser",
+    "promoSubTitle": " Cu aplicația Skillupgerman, învățarea limbii germane este mult mai practică."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Parcurge dialogurile. Ascultă, alege opțiunile de răspuns și exersează pronunția",
+    "words": "Învață cuvintele și expresiile cheie pentru a înțelege cu ușurință fiecare replică din dialog"
   }
 }

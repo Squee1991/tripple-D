@@ -43,17 +43,23 @@
           <div class="content-area" v-if="!selectedTheme">
             <div class="themes-list">
               <div
-                  v-for="theme in displayedThemes"
+                  v-for="(theme, index) in displayedThemes"
                   :key="theme.id"
                   class="theme-card"
-                  @click="selectTheme(theme)"
+                  @click="selectTheme(theme, index)"
               >
                 <div class="theme-card-top">
                   <div class="theme-icon-box">{{ theme.icon }}</div>
                   <div class="theme-info">
                     <div class="theme-name">{{ theme.title }}</div>
                   </div>
-                  <VArrowNav/>
+                  <div class="theme-arrow" :class="{ 'theme-arrow--locked': index !== 0 && !authStore.isPremium }">
+                    <VArrowNav v-if="index === 0 || authStore.isPremium"/>
+                    <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                  </div>
                 </div>
                 <div class="theme-card-bottom">
                   <div class="progress-track">
@@ -94,6 +100,7 @@
           :img="TextBooks"
           :text="overlayData.text"
       />
+      <VPremiumModal v-model:show="showPremiumModal" />
     </div>
   </div>
 </template>
@@ -102,16 +109,20 @@
 import {ref, computed, onMounted, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {useTextTasksStore} from '/store/textTasksStore.js'
+import {userAuthStore} from '../../store/authStore.js'
 import VBanner from "~/src/components/V-banner.vue"
 import TextBooks from "../../assets/images/TextBook.svg"
 import VTransition from "~/src/components/V-transition.vue"
 import VArrowNav from "~/src/components/V-arrowNav.vue"
-import HeadPhones from "assets/images/headphones.svg"
 import Modal from "~/src/components/modal.vue"
+import VPremiumModal from "~/src/components/V-premiumModal.vue"
+import { showInterstitial } from '../../utils/admob.js'
 
 const showDevModal = ref(false)
+const showPremiumModal = ref(false)
 const router = useRouter()
 const store = useTextTasksStore()
+const authStore = userAuthStore()
 const isMounted = ref(false)
 const { t , locale} = useI18n()
 
@@ -196,18 +207,22 @@ watch(currentLevel, (newLevel) => {
   loadLevelStats(newLevel)
 })
 
-const selectTheme = async (theme) => {
-  selectedTheme.value = theme
-  isLoading.value = true
-  try {
-    const res = await fetch(`/text-tasks/${currentLevel.value}/${theme.file}`)
-    if (!res.ok) throw new Error('Network response was not ok')
-    themeData.value = await res.json()
-  } catch (e) {
-    console.error(e)
-    selectedTheme.value = null
-  } finally {
-    isLoading.value = false
+const selectTheme = async (theme, index) => {
+  if (index === 0 || authStore.isPremium) {
+    selectedTheme.value = theme
+    isLoading.value = true
+    try {
+      const res = await fetch(`/text-tasks/${currentLevel.value}/${theme.file}`)
+      if (!res.ok) throw new Error('Network response was not ok')
+      themeData.value = await res.json()
+    } catch (e) {
+      console.error(e)
+      selectedTheme.value = null
+    } finally {
+      isLoading.value = false
+    }
+  } else {
+    showPremiumModal.value = true
   }
 }
 
@@ -221,8 +236,10 @@ const goBack = () => {
 }
 
 const startTask = (task, index) => {
-  store.initTask(task, themeData.value.tasks, index)
-  router.push('/text-tasks/session')
+  showInterstitial(() => {
+    store.initTask(task, themeData.value.tasks, index)
+    router.push('/text-tasks/session')
+  })
 }
 
 onMounted(() => {
@@ -437,6 +454,18 @@ onMounted(() => {
   color: #a0aec0;
   display: flex;
   align-items: center;
+}
+
+.theme-arrow--locked {
+  background-color: #a0aec0;
+  box-shadow: 0 3px 0px #718096;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
 }
 
 .empty-state {

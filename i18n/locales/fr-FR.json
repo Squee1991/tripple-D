@@ -8029,9 +8029,11 @@
     "description": "Protège vos toques des pénalités"
   },
   "cardSales": {
-    "title5": "Remise 5%",
-    "title10": "Remise 10%",
-    "title15": "Remise 15%"
+    "title3": "3% de réduction",
+    "title5": "5% de réduction",
+    "title6": "6% de réduction",
+    "title10": "10% de réduction",
+    "title15": "15% de réduction"
   },
   "cardsShop": {
     "full": "Plein",
@@ -8103,6 +8105,7 @@
     "profileData": "Données du profil"
   },
   "cabinet": {
+    "plusCanceled": "PLUS annulé",
     "important": "IMPORTANT !!!",
     "importantText": "La suppression du compte ne résilie pas l'abonnement. Veuillez annuler votre abonnement avant de supprimer le compte.",
     "cancelPremium": "Annuler l'abonnement ?",
@@ -9747,7 +9750,9 @@
     "rank_5": "Capitaine",
     "rank_6": "Gardien",
     "rank_7": "Légende",
+    "sale3": "Remise 3%",
     "sale5": "Remise 5%",
+    "sale6": "Remise 6%",
     "sale10": "Remise 10%",
     "sale15": "Remise 15%"
   },
@@ -10308,5 +10313,64 @@
     "buyBy": "Acheter pour",
     "toThemes": "Aux thèmes",
     "repeat": "Répéter"
+  },
+  "freezeStatus": {
+    "active": "Gel du temps actif",
+    "inactive": "Gel du temps inactif"
+  },
+  "guessArticle": {
+    "correct": "Correct",
+    "incorrect": "Incorrect, la réponse correcte est"
+  },
+  "payPage": {
+    "featureOne": "Apprentissage sans frontières",
+    "featureTwo": "Futures fonctionnalités",
+    "featureThree": "Soutien aux développeurs",
+    "featureFour": "Sans publicité",
+    "sale5": "3% de réduction",
+    "sale10": "6% de réduction",
+    "sale15": "15% de réduction",
+    "finalePrice": "TOTAL :",
+    "yourSale": "Votre réduction"
+  },
+  "stripeCancel": {
+    "cancelSub": "Résilier l'abonnement",
+    "cancelPayment": "Paiement annulé",
+    "errorAuth": "Erreur d'authentification",
+    "pleaseAuth": "Veuillez vous connecter pour effectuer cette action.",
+    "canceling": "Résiliation de l'abonnement...",
+    "canceledSub": "Abonnement résilié",
+    "errorCancelSub": "Erreur lors de la résiliation",
+    "errorCancelResponse": "Impossible de résilier l'abonnement.",
+    "serverError": "Erreur de serveur",
+    "serverOffline": "Connexion au serveur perdue. Veuillez réessayer plus tard.",
+    "processInterrupted": "Le processus de paiement a été interrompu. Aucun débit n'a été effectué sur votre carte.",
+    "tryAgain": "Réessayer",
+    "backToMain": "Accueil",
+    "extensionCanceled": "Le renouvellement automatique sera désactivé. Votre accès reste valable jusqu'à la fin de la période payée.",
+    "extensionCanceledCanBack": "Votre abonnement ne sera plus renouvelé. Vous pouvez revenir quand vous le souhaitez !",
+    "confirmCancel": "Oui, résilier",
+    "notConfirmCancel": "Ne pas résilier",
+    "backToMainPage": "Retour à la page d'accueil"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "Confirmation de la transaction...",
+    "sessionNotFound": "Session de paiement introuvable",
+    "authPlease": "Veuillez vous connecter pour terminer",
+    "isPremium": "Accès Premium activé",
+    "errorActivation": "Erreur d'activation",
+    "errorServer": "Erreur de connexion avec le serveur",
+    "success": "Toutes les fonctionnalités du service vous sont désormais accessibles.",
+    "unsuccess": "Un problème technique est survenu lors du traitement.",
+    "toMain": " Accueil",
+    "redirectSuccess": "Redirection dans quelques secondes..."
+  },
+  "installApp": {
+    "stayInBrowser": "Continuer dans le navigateur",
+    "promoSubTitle": " Avec l'application Skillupgerman, apprendre l'allemand est beaucoup plus pratique."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Passez les dialogues. Écoutez, choisissez les options de réponse et entraînez votre prononciation",
+    "words": "Apprenez les mots et expressions clés pour comprendre facilement chaque réplique du dialogue"
   }
 }
