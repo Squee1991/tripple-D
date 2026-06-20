@@ -390,10 +390,10 @@ export const userAuthStore = defineStore('auth', () => {
             let idToken = null;
             if (isNative) {
                 await GoogleSignIn.initialize({
-                    clientId: '516504654997-15ujeh34o8jc7hkbempel0t60qp0e43g.apps.googleusercontent.com',
+                    clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
                 });
                 const result = await GoogleSignIn.signIn({
-                    clientId: '516504654997-15ujeh34o8jc7hkbempel0t60qp0e43g.apps.googleusercontent.com',
+                    clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
                 });
                 idToken = result.idToken;
             } else {
