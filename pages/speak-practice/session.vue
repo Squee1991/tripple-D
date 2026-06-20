@@ -373,17 +373,13 @@ const completeDialogue = async () => {
 
 const startDialogue = async () => {
   if (!store.dialogueData || !store.dialogueData['start']) return;
-
   showInterstitial(async () => {
     viewState.value = 'chat';
     store.chatStarted = true;
     dialogueCompleted.value = false;
-
     store.setStep('start');
     store.isOptionsDisabled = true;
-
     const step = store.currentStepData;
-
     setTimeout(async () => {
       await speakGerman(step.botText);
     }, 300);

@@ -56,7 +56,7 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 			levels: [
 				{ hats: 170, bonus: 5 },
 				{ hats: 190, bonus: 10 },
-				{ hats: 210, bonus: 'v-rank.sale5' }
+				{ hats: 210, bonus: 'v-rank.sale3' }
 			]
 		},
 		{
@@ -95,7 +95,7 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 			levels: [
 				{ hats: 420, bonus: 10 },
 				{ hats: 450, bonus: 15 },
-				{ hats: 500, bonus: 'v-rank.sale10' }
+				{ hats: 500, bonus: 'v-rank.sale6' }
 			]
 		}
 	]

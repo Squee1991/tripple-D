@@ -146,7 +146,7 @@ const props = defineProps({
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 12px;
-  border-radius: 20px;
+  border-radius: 50px;
   cursor: pointer;
   transition: all 0.1s ease;
   margin-top: 12px;

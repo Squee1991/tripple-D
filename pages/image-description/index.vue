@@ -321,7 +321,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   align-items: center;
   justify-content: center;
   padding: 10px 16px;
-  max-width: 450px;
+  max-width: 1240px;
   width: 100%;
 }
 
