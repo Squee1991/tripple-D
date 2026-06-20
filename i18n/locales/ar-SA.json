@@ -3619,7 +3619,9 @@
     "streak": "سلسلة الانتصارات",
     "clearWins": "انتصارات نظيفة",
     "start": "ابدأ اللعبة",
-    "info": "اضغط على المستوى لعرض إحصائياته."
+    "info": "اضغط على المستوى لعرض إحصائياته.",
+    "answer-placeholder": "رتب الجملة...",
+    "pending": "في الانتظار..."
   },
   "eventSessionPage": {
     "loading": "جارٍ التحميل…",
@@ -8049,7 +8051,9 @@
     "description": "يحمي قبعاتك من العقوبات"
   },
   "cardSales": {
+    "title3": "خصم 3%",
     "title5": "خصم 5%",
+    "title6": "خصم 6%",
     "title10": "خصم 10%",
     "title15": "خصم 15%"
   },
@@ -8123,6 +8127,7 @@
     "profileData": "بيانات الملف الشخصي"
   },
   "cabinet": {
+    "plusCanceled": "تم إلغاء PLUS",
     "important": "مهم!!!",
     "importantText": "عند حذف الحساب، لا يتم إلغاء الاشتراك تلقائيًا. يرجى إلغاء الاشتراك قبل الحذف.",
     "cancelPremium": "إلغاء الاشتراك؟",
@@ -9767,7 +9772,9 @@
     "rank_5": "كابتن",
     "rank_6": "حارس",
     "rank_7": "أسطورة",
+    "sale3": "خصم 3%",
     "sale5": "خصم 5%",
+    "sale6": "خصм 6%",
     "sale10": "خصم 10%",
     "sale15": "خصم 15%"
   },
@@ -10295,7 +10302,9 @@
     "interrupt": "قطع الاختبار؟",
     "modalText": "سيتم فقدان تقدم هذه المحاولة. هل أنت متأكد؟",
     "continue": "متابعة",
-    "leave": "خروج"
+    "leave": "خروج",
+    "placeHolder": "اكتب إجابتك هنا...",
+    "say": "قل:"
   },
   "speakSession": {
     "title": "ممارسة التحدث",
@@ -10315,5 +10324,75 @@
     "hoverVoice": "التحدث بصوتك",
     "end": "إنهاء",
     "further": "التالي"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "محاولة أخرى؟",
+    "textPartOne": "لقد أجبت بشكل صحيح",
+    "textPartTwo": "اشترِ محاولة للمتابعة.",
+    "price": "السعر:",
+    "youHave": "لديك:",
+    "showADS": "شاهد الإعلان",
+    "buyBy": "شراء مقابل",
+    "toThemes": "إلى المواضيع",
+    "repeat": "إعادة"
+  },
+  "freezeStatus": {
+    "active": "تجميد الوقت نشط",
+    "inactive": "تجميد الوقت غير نشط"
+  },
+  "guessArticle": {
+    "correct": "صحيح",
+    "incorrect": "غير صحيح، الصحيح هو"
+  },
+  "payPage": {
+    "featureOne": "تعلم بلا حدود",
+    "featureTwo": "الميزات المستقبلية",
+    "featureThree": "دعم المطورين",
+    "featureFour": "بدون إعلانات",
+    "sale5": "خصم 3%",
+    "sale10": "خصم 6%",
+    "sale15": "خصم 15%",
+    "finalePrice": "الإجمالي:",
+    "yourSale": "خصمك"
+  },
+  "stripeCancel": {
+    "cancelSub": "إلغاء الاشتراك",
+    "cancelPayment": "تم إلغاء الدفع",
+    "errorAuth": "خطأ في المصادقة",
+    "pleaseAuth": "يرجى تسجيل الدخول للقيام بهذا الإجراء.",
+    "canceling": "جاري إلغاء الاشتراك...",
+    "canceledSub": "تم إلغاء الاشتراك",
+    "errorCancelSub": "حدث خطأ أثناء الإلغاء",
+    "errorCancelResponse": "فشل إلغاء الاشتراك.",
+    "serverError": "خطأ في الخادم",
+    "serverOffline": "فُقد الاتصال بالخادم. يرجى المحاولة لاحقاً.",
+    "processInterrupted": "تم قطع عملية الدفع. لم يتم خصم أي مبالغ من بطاقتك.",
+    "tryAgain": "المحاولة مرة أخرى",
+    "backToMain": "إلى الرئيسية",
+    "extensionCanceled": "سيتم إيقاف التجديد التلقائي. سيستمر الوصول حتى نهاية الفترة المدفوعة.",
+    "extensionCanceledCanBack": "لن يتم تجديد اشتراكك بعد الآن. يمكنك العودة في أي وقت!",
+    "confirmCancel": "نعم، إلغاء",
+    "notConfirmCancel": "عدم الإلغاء",
+    "backToMainPage": "العودة إلى الصفحة الرئيسية"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "جاري تأكيد المعاملة...",
+    "sessionNotFound": "لم يتم العثور على جلسة الدفع",
+    "authPlease": "يرجى تسجيل الدخول لإتمام العملية",
+    "isPremium": "تم تفعيل الوصول المميز (Premium)",
+    "errorActivation": "خطأ في التفعيل",
+    "errorServer": "خطأ في الاتصال بالخادم",
+    "success": "الآن جميع ميزات الخدمة متاحة لك.",
+    "unsuccess": "حدث خطأ فني أثناء المعالجة.",
+    "toMain": " إلى الرئيسية",
+    "redirectSuccess": "سيتم إعادة التوجيه خلال ثوانٍ قليلة..."
+  },
+  "installApp": {
+    "stayInBrowser": "المتابعة في المتصفح",
+    "promoSubTitle": " مع تطبيق Skillupgerman، تعلم اللغة الألمانية أكثر ملاءمة بكثير."
+  },
+  "speakSessionsBanner": {
+    "dialog": "خض الحوارات. استمع، واختر خيارات الإجابة، وتدرب على النطق",
+    "words": "تعلم الكلمات والعبارات الرئيسية لتفهم كل عبارة في الحوار بسهولة"
   }
 }

@@ -3617,7 +3617,9 @@
     "streak": "Seria zwycięstw",
     "clearWins": "Czyste zwycięstwa",
     "start": "Rozpocznij grę",
-    "info": "Kliknij poziom, aby zobaczyć jego statystyki."
+    "info": "Kliknij poziom, aby zobaczyć jego statystyki.",
+    "answer-placeholder": "Ułóż zdanie...",
+    "pending": "Oczekiwanie..."
   },
   "eventSessionPage": {
     "loading": "Ładowanie…",
@@ -8047,7 +8049,9 @@
     "description": "Chroni Twoje birety przed karami"
   },
   "cardSales": {
+    "title3": "Zniżka 3%",
     "title5": "Zniżka 5%",
+    "title6": "Zniżka 6%",
     "title10": "Zniżka 10%",
     "title15": "Zniżka 15%"
   },
@@ -8121,6 +8125,7 @@
     "profileData": "Dane profilu"
   },
   "cabinet": {
+    "plusCanceled": "PLUS anulowany",
     "important": "WAŻNE!!!",
     "importantText": "Podczas usuwania konta subskrypcja nie zostaje anulowana. Przed usunięciem anuluj subskrypcję.",
     "cancelPremium": "Anulować subskrypcję?",
@@ -9765,7 +9770,9 @@
     "rank_5": "Kapitan",
     "rank_6": "Strażnik",
     "rank_7": "Legenda",
+    "sale3": "Zniżka 3%",
     "sale5": "Zniżka 5%",
+    "sale6": "Zniżka 6%",
     "sale10": "Zniżka 10%",
     "sale15": "Zniżka 15%"
   },
@@ -10293,7 +10300,9 @@
     "interrupt": "Przerwać test?",
     "modalText": "Postęp tej próby zostanie utracony. Czy na pewno chcesz kontynuować?",
     "continue": "Kontynuuj",
-    "leave": "Wyjdź"
+    "leave": "Wyjdź",
+    "placeHolder": "Napisz swoją odpowiedź tutaj...",
+    "say": "Powiedz:"
   },
   "speakSession": {
     "title": "Praktyka rozmawiania",
@@ -10313,5 +10322,75 @@
     "hoverVoice": "Powiedz na głos",
     "end": "Zakończ",
     "further": "Dalej"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "Spróbować ponownie?",
+    "textPartOne": "Odpowiedziałeś poprawnie",
+    "textPartTwo": "Kup próbę, aby kontynuować.",
+    "price": "Cena:",
+    "youHave": "Masz:",
+    "showADS": "Oglądaj reklamę",
+    "buyBy": "Kup za",
+    "toThemes": "Do tematów",
+    "repeat": "Powtórz"
+  },
+  "freezeStatus": {
+    "active": "Zamrożenie czasu jest aktywne",
+    "inactive": "Zamrożenie czasu jest nieaktywne"
+  },
+  "guessArticle": {
+    "correct": "Prawidłowo",
+    "incorrect": "Nieprawidłowo, prawidłowo to"
+  },
+  "payPage": {
+    "featureOne": "Nauka bez granic",
+    "featureTwo": "Przyszłe funkcje",
+    "featureThree": "Wsparcie dla twórców",
+    "featureFour": "Brak reklam",
+    "sale5": "Zniżka 3%",
+    "sale10": "Zniżka 6%",
+    "sale15": "Zniżka 15%",
+    "finalePrice": "RAZEM:",
+    "yourSale": "Twoja zniżka"
+  },
+  "stripeCancel": {
+    "cancelSub": "Anulowanie subskrypcji",
+    "cancelPayment": "Płatność anulowana",
+    "errorAuth": "Błąd autoryzacji",
+    "pleaseAuth": "Zaloguj się, aby wykonać tę operację.",
+    "canceling": "Anulowanie subskrypcji...",
+    "canceledSub": "Subskrypcja anulowana",
+    "errorCancelSub": "Błąd podczas anulowania",
+    "errorCancelResponse": "Nie udało się anulować subskrypcji.",
+    "serverError": "Błąd serwera",
+    "serverOffline": "Utracono połączenie z serwerem. Spróbuj ponownie później.",
+    "processInterrupted": "Proces płatności został przerwany. Twoja karta nie została obciążona.",
+    "tryAgain": "Spróbuj ponownie",
+    "backToMain": "Na główną",
+    "extensionCanceled": "Automatyczne odnawianie zostanie wyłączone. Dostęp pozostanie aktywny do końca opłaconego okresu.",
+    "extensionCanceledCanBack": "Twoja subskrypcja nie będzie już odnawiana. Możesz wrócić w dowolnym momencie!",
+    "confirmCancel": "Tak, anuluj",
+    "notConfirmCancel": "Nie anuluj",
+    "backToMainPage": "Wróć do strony głównej"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "Potwierdzanie transakcji...",
+    "sessionNotFound": "Nie znaleziono sesji płatności",
+    "authPlease": "Zaloguj się, aby ukończyć",
+    "isPremium": "Dostęp Premium został aktywowany",
+    "errorActivation": "Błąd aktywacji",
+    "errorServer": "Błąd połączenia z serwerem",
+    "success": "Teraz masz dostęp do wszystkich funkcji serwisu.",
+    "unsuccess": "Wystąpił problem techniczny podczas przetwarzania.",
+    "toMain": " Na główną",
+    "redirectSuccess": "Przekierowanie za kilka sekund..."
+  },
+  "installApp": {
+    "stayInBrowser": "Kontynuuj w przeglądarce",
+    "promoSubTitle": " Z aplikacją Skillupgerman nauka niemieckiego jest o wiele wygodniejsza."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Przechodź dialogi. Słuchaj, wybieraj opcje odpowiedzi i ćwicz wymowę",
+    "words": "Naucz się kluczowych słów i zwrotów, aby z łatwością zrozumieć każdą kwestię w dialogu"
   }
 }

@@ -65,13 +65,11 @@
       <div class="footer-area">
         <button
             class="btn-check"
-            :class="{ 'btn-success': isSuccess }"
+            :class="{ 'btn-success': isSuccess && store.isChecking }"
             :disabled="!store.isAllFilled && !store.isChecking"
             @click="handleMainAction"
         >
-          {{
-            isSuccess ? t('questCompletedModals.further') : (store.isChecking ? t('trainerPage.repeat') : t('questCompletedModals.check'))
-          }}
+          {{ store.isChecking ? t('questCompletedModals.further') : t('questCompletedModals.check') }}
         </button>
       </div>
     </div>
@@ -79,12 +77,24 @@
       <p>{{ t('textTaskSession.errorText')}}</p>
       <button @click="$router.push('/text-tasks')">{{ t('textTaskSession.back')}}</button>
     </div>
+
     <ExitSessionModal
         :show="showExitModal"
         @update:show="val => showExitModal = val"
         @cancel="cancelExit"
         @confirm="confirmExit"
     />
+    <transition name="slide-up">
+      <div v-if="!showFinishModal" class="bottom-modal-overlay">
+        <div class="bottom-modal-content">
+          <img class="modal__image" src="../../assets/images/CorrectAnswerIcon.svg" alt="">
+          <p class="bottom-modal-text">
+            {{ t('questCompletedModals.count')}} <span>{{ correctAnswersCount }}</span> /  <span>{{ totalTasks }}</span>
+          </p>
+          <button class="btn-check btn-success finish-btn" @click="finishQuest">{{ t('speakSession.end')}}</button>
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -104,6 +114,9 @@ const selectedWordForTap = ref(null)
 const showExitModal = ref(false)
 const isConfirmedExit = ref(false)
 let pendingRoute = null
+
+const showFinishModal = ref(false)
+const correctAnswersCount = ref(0)
 
 const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipeBack(() => {
   handleBackClick()
@@ -156,7 +169,9 @@ const totalTasks = computed(() => {
 })
 
 const progressPercentage = computed(() => {
-  return (currentTaskNumber.value / totalTasks.value) * 100
+  if (store.currentTaskIndex < 0) return 0;
+  const visuallyCompleted = store.currentTaskIndex + (store.isChecking && isSuccess.value ? 1 : 0);
+  return (visuallyCompleted / totalTasks.value) * 100;
 })
 
 const isSuccess = computed(() => {
@@ -167,17 +182,24 @@ const isSuccess = computed(() => {
 })
 
 const handleMainAction = async () => {
-  if (isSuccess.value) {
-    await store.saveTaskProgress()
-
-    const hasNext = store.nextTask()
-    if (!hasNext) {
-      isConfirmedExit.value = true
-      router.push('/text-tasks')
+  if (!store.isChecking) {
+    store.toggleCheck()
+    if (isSuccess.value) {
+      correctAnswersCount.value++
+      await store.saveTaskProgress()
     }
   } else {
-    store.toggleCheck()
+    const hasNext = store.nextTask()
+    if (!hasNext) {
+      showFinishModal.value = true
+    }
   }
+}
+
+const finishQuest = () => {
+  showFinishModal.value = false
+  isConfirmedExit.value = true
+  router.push('/text-tasks')
 }
 
 const selectWordForTap = (word) => {
@@ -214,6 +236,11 @@ const handleBlankClick = (blankId) => {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.modal__image {
+  width: 140px;
+  margin: 0 auto;
 }
 
 .header-wrapper {
@@ -433,15 +460,15 @@ const handleBlankClick = (blankId) => {
   color: white;
   background-color: #4facfe;
   border: none;
-  border-radius: 24px;
+  border-radius: 50px;
   box-shadow: 0 6px 0 #0088ff;
   cursor: pointer;
   transition: transform 0.1s, background-color 0.2s;
 }
 
 .btn-check.btn-success {
-  background-color: #38a169;
-  box-shadow: 0 6px 0 #276749;
+  background-color: #2b6be2;
+  box-shadow: 0 6px 0 #2959b0;
 }
 
 .btn-check:disabled {
@@ -498,5 +525,73 @@ const handleBlankClick = (blankId) => {
   color: white;
   border: none;
   font-weight: bold;
+}
+
+.bottom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.93);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 100;
+}
+
+.bottom-modal-content {
+  background: var(--bgModal);
+  width: 100%;
+  max-width: 500px;
+  border-radius: 24px 24px 0 0;
+  padding: 30px 20px 40px;
+  text-align: center;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-modal-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.bottom-modal-title {
+  font-size: 26px;
+  font-weight: 900;
+  color: #38a169;
+  margin-bottom: 15px;
+}
+
+.bottom-modal-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--title);
+  margin: 32px 0;
+}
+
+.bottom-modal-text span {
+  color: #38a169;
+  font-size: 20px;
+}
+
+.finish-btn {
+  margin-top: 10px;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: transform 0.4s cubic-bezier(0.34, 1.35, 0.64, 1), opacity 0.4s ease;
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.slide-up-enter-to,
+.slide-up-leave-from {
+  transform: translateY(0);
+  opacity: 1;
 }
 </style>

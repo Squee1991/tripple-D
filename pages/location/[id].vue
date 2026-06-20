@@ -74,11 +74,11 @@
         :required-tasks="0"
         :wallet="wallet"
         :can-buy-life="canBuyLife"
-        :remaining-ads="remainingAds"
+        :remaining-ads="showRewardBtn ? remainingAds : null"
         @purchase="purchaseLife"
         @watchAd="watchAdForLife"
         @back="closeModal"
-        cancel-text="Закрыть"
+        :cancel-text="t('themeModal.close')"
     />
   </div>
 </template>
@@ -95,6 +95,7 @@ import VBackBtn from "~/src/components/V-back-btn.vue";
 import VReviveModal from "~/src/components/V-reviveModal.vue";
 import { showInterstitial, showRewarded } from '~/utils/admob.js';
 import VTransition from "~/src/components/V-transition.vue";
+import {Capacitor} from "@capacitor/core";
 
 const route = useRoute();
 const router = useRouter();
@@ -105,20 +106,27 @@ const langStore = userlangStore();
 const questList = ref([]);
 const isLoading = ref(true);
 const errorMessage = ref("");
-
+const showRewardBtn = ref(false);
 const showNoLivesModal = ref(false);
 const isAdLoading = ref(false);
 const pendingQuest = ref(null);
 const PRICE = 10;
 const MAX_ADS = 5;
 const remainingAds = ref(MAX_ADS);
-
+const mobile = Capacitor.isNativePlatform()
 const wallet = computed(() => Number(langStore.points || 0));
 const canBuyLife = computed(() => wallet.value >= PRICE);
 
 useSeoMeta({
   robots: 'noindex, nofollow'
 });
+
+const isApplication = () => {
+  if (mobile === 'ios' || mobile === 'android') {
+    showRewardBtn.value = true;
+  }
+}
+
 
 const currentRegionKey = computed(() => String(route.query.region || route.params.id || ""));
 const currentRegion = computed(() => {
@@ -219,7 +227,6 @@ function proceedToQuest(quest, skipAd = false) {
     });
   };
   if (skipAd) {
-
     navigateToQuest();
   } else {
     showInterstitial(navigateToQuest);
@@ -228,7 +235,7 @@ function proceedToQuest(quest, skipAd = false) {
 
 function handleStartQuest(quest) {
   if (!quest?.questId) return;
-
+  isApplication()
   if (chainStore.lives <= 0) {
     pendingQuest.value = quest;
     showNoLivesModal.value = true;

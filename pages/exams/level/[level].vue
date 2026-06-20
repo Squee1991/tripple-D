@@ -214,7 +214,8 @@ onMounted(() => {
             <SoundBtn :text="currentExercise.task.text" lang="de-DE" class="custom-sound-btn"/>
           </div>
           <div class="question-text">
-            {{ currentExercise.task.question }}
+            <div class="question__label">Die Frage:</div>
+            <div>{{ currentExercise.task.question }}</div>
           </div>
           <div class="options-grid">
             <button
@@ -230,7 +231,7 @@ onMounted(() => {
 
         <div v-else-if="currentExercise.type==='text-input'" class="task-content">
           <p class="instruction-text">{{ currentExercise.task.instruction }}</p>
-          <textarea v-model="userInput" class="game-textarea" placeholder="Ваш ответ здесь..."/>
+          <textarea v-model="userInput" class="game-textarea" :placeholder="t('examSession.placeHolder')"/>
           <button class="action-btn action-btn--submit" :disabled="isSubmitting || examStore.saveLoading"
                   @click="submitTextAnswer">
             {{ isSubmitting ? t('examSession.check') : t('examSession.send') }}
@@ -238,7 +239,7 @@ onMounted(() => {
         </div>
 
         <div v-else-if="currentExercise.type==='speaking-prompt'" class="task-content">
-          <p class="instruction-text"><strong>Скажите:</strong> {{ currentExercise.task.prompt }}</p>
+          <p class="instruction-text"><strong>{{ t('examSession.say')}}</strong> {{ currentExercise.task.prompt }}</p>
           <div class="topics-pills">
             <span v-for="topic in currentExercise.task.expectedTopics" :key="topic" class="topic-pill"># {{
                 topic
@@ -321,6 +322,23 @@ onMounted(() => {
   flex-direction: column;
 }
 
+.question__label {
+  display: inline-block;
+  background: orange;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 6px 18px;
+  color: white;
+  min-width: 120px;
+  margin-bottom: 10px;
+}
+
+.instruction-text{
+  color: var(--title);
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
 
 .exam__header {
   display: flex;
@@ -331,8 +349,9 @@ onMounted(() => {
 .exam__title-pill {
   font-weight: 900;
   font-size: 23px;
-  color: white;
+  color: var(--title);
   margin-left: 15px;
+  text-shadow: 1px 1px var(--title);
 }
 
 .game-btn {
@@ -375,7 +394,6 @@ onMounted(() => {
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 8px;
 }
 
 .card__icon-item {
@@ -394,16 +412,19 @@ onMounted(() => {
 }
 
 .card-title {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 900;
   text-align: center;
   margin-bottom: 15px;
+  color: var(--title);
 }
 
 .card-text {
-  color: #a5a8ff;
+  color: var(--title);
+  font-size: 17px;
   text-align: center;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .intro-stats {
@@ -414,15 +435,45 @@ onMounted(() => {
 }
 
 .stat-badge {
-  background: rgba(124, 77, 255, 0.2);
   padding: 10px 15px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 1px solid #7c4dff;
+  border: 1px solid transparent;
+  background: rgba(124, 77, 255, 0.2);
+  border-color: #7c4dff;
 }
 
+.stat-badge:nth-child(5n + 1) {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.6);
+  color: #93c5fd;
+}
+
+.stat-badge:nth-child(5n + 2) {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.6);
+  color: #6ee7b7;
+}
+
+.stat-badge:nth-child(5n + 3) {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.6);
+  color: #fcd34d;
+}
+
+.stat-badge:nth-child(5n + 4) {
+  background: rgba(236, 72, 153, 0.15);
+  border-color: rgba(236, 72, 153, 0.6);
+  color: #f9a8d4;
+}
+
+.stat-badge:nth-child(5n + 5) {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.6);
+  color: #c4b5fd;
+}
 
 .progress-container {
   margin: 10px 0 20px;
@@ -442,6 +493,7 @@ onMounted(() => {
   background: #e8eae5;
   border-radius: 10px;
   overflow: hidden;
+  margin: 0 10px;
 }
 
 .progress__bar {
@@ -450,7 +502,6 @@ onMounted(() => {
   border-radius: 10px;
   transition: width 0.3s ease-out;
   position: relative;
-
 }
 
 .glare{
@@ -464,7 +515,7 @@ onMounted(() => {
 }
 
 .exercise-title {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 900;
   margin-bottom: 15px;
   color: var(--titleColor);
@@ -482,28 +533,30 @@ onMounted(() => {
 
 .question-text {
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 900;
   margin: 15px 0;
-  color: #fef08a;
+  color: var(--titleColor);
 }
 
 .options-grid {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .option-btn {
-  background: #fff;
-  border: 3px solid #000;
-  border-radius: 15px;
-  padding: 14px;
+  background: #60a5fa;
+  border: none;
+  border-radius: 35px;
+  padding: 12px;
   font-weight: 800;
   font-size: 16px;
-  color: #000;
-  text-align: left;
-  box-shadow: 0 4px 0 #000;
+  max-width: 200px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 5px 0 #3c7fd2;
   cursor: pointer;
+
 }
 
 .option-btn:active {
@@ -513,23 +566,25 @@ onMounted(() => {
 
 .game-textarea {
   width: 100%;
-  background: #120f26;
-  border: 3px solid #000;
+  background: white;
+  border: 2px solid #000;
   border-radius: 15px;
   padding: 12px;
-  color: #fff;
+  color: #282828;
+  font-weight: 600;
   font-family: inherit;
   font-size: 16px;
   margin-bottom: 15px;
-  min-height: 120px;
+  min-height: 140px;
+  overflow-y: auto;
+  resize: none;
 }
-
 
 .action-btn {
   width: 100%;
   border: none;
-  border-radius: 24px;
-  padding: 15px;
+  border-radius: 50px;
+  padding: 14px;
   font-weight: 900;
   font-size: 18px;
   text-transform: uppercase;
@@ -715,7 +770,6 @@ onMounted(() => {
   color: #000;
 }
 
-/* VOICE INDICATOR */
 .voice-indicator {
   display: flex;
   align-items: center;
@@ -759,4 +813,5 @@ onMounted(() => {
   background: #7c4dff;
   border-radius: 10px;
 }
+
 </style>

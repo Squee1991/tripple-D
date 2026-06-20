@@ -22,7 +22,9 @@
                 <h1 class="session__topic">{{ translatedTopic }}</h1>
               </div>
               <div class="progress-line">
-                <span class="progress-mode">{{ t('sessionPage.choice') }}: <b>{{ t(modeLabel(currentMode)) }}</b> ({{ currentModeIndex + 1 }}/{{ selectedModes.length }})</span>
+                <span class="progress-mode">{{ t('sessionPage.choice') }}: <b>{{
+                    t(modeLabel(currentMode))
+                  }}</b> ({{ currentModeIndex + 1 }}/{{ selectedModes.length }})</span>
               </div>
             </header>
             <div class="word-block">
@@ -38,7 +40,8 @@
                   <div class="translation-word">{{ currentWord[currentLangKey] }}</div>
                 </div>
                 <div v-if="currentMode === 'article'" class="article-mode-container">
-                  <p class="question-text">{{ t('sessionLabels.articleFor') }} <span class="highlight-word">{{ currentWord.de }}</span>:</p>
+                  <p class="question-text">{{ t('sessionLabels.articleFor') }} <span
+                      class="highlight-word">{{ currentWord.de }}</span>:</p>
                   <div class="article-options">
                     <button
                         v-for="art in ['der', 'die', 'das']"
@@ -63,7 +66,8 @@
                     <span class="highlight-word">{{ currentWord.ru }}</span>
                   </div>
                   <div class="letters">
-                    <button v-for="(letter, i) in shuffledLetters" :key="i" :disabled="usedLetters[i]" @click="addLetter(letter, i)">
+                    <button v-for="(letter, i) in shuffledLetters" :key="i" :disabled="usedLetters[i]"
+                            @click="addLetter(letter, i)">
                       {{ letter === ' ' ? '␣' : letter }}
                     </button>
                   </div>
@@ -75,14 +79,15 @@
 
                 <div v-if="currentMode === 'wordArticle'">
                   <div class="question__content">
-                    <p class="question-text"><b>{{ t('sessionLabels.word')}} :</b></p>
+                    <p class="question-text"><b>{{ t('sessionLabels.word') }} :</b></p>
                     <span class="highlight-word">{{ uiWord }}</span>
                   </div>
                   <input v-model="userInput" class="trainer-app__input" autofocus/>
                 </div>
 
                 <div v-if="currentMode === 'plural'">
-                  <p class="question-text">{{ t('sessionLabels.pluralFor') }}: <span class="highlight-word">{{ currentWord.de }}</span></p>
+                  <p class="question-text">{{ t('sessionLabels.pluralFor') }}: <span
+                      class="highlight-word">{{ currentWord.de }}</span></p>
                   <input v-model="userInput" class="trainer-app__input" autofocus/>
                 </div>
 
@@ -90,13 +95,15 @@
                   <p class="question-text">{{ t('sessionLabels.audioFor') }}:</p>
                   <button @click="speak(currentWord.de)" class="audio-btn">
                     <img class="megaphones__icon" src="../../assets/images/megaphone.svg" alt="">
-                    <span> {{ t('sessionLabels.listen')}}</span>
+                    <span> {{ t('sessionLabels.listen') }}</span>
                   </button>
                   <input v-model="userInput" class="trainer-app__input" autofocus/>
                 </div>
               </div>
 
-              <div v-if="shouldShowGermanLetters && (currentMode === 'plural' || currentMode === 'wordArticle' || currentMode === 'letters' || currentMode === 'audio')" class="german__letters">
+              <div
+                  v-if="shouldShowGermanLetters && (currentMode === 'plural' || currentMode === 'wordArticle' || currentMode === 'letters' || currentMode === 'audio')"
+                  class="german__letters">
                 <button
                     @click="addGErmanLetters(letter)"
                     class="german__letters-item"
@@ -109,15 +116,24 @@
 
               <div v-if="result" class="answer-result" :class="result">
                 <span class="result-icon" v-if="result === 'correct'">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline
+                      points="20 6 9 17 4 12"></polyline></svg>
                 </span>
                 <span class="result-icon" v-if="result === 'wrong'">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line
+                      x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </span>
-                <span class="result-text" v-if="currentMode === 'article'">{{ t('result.correctAnswer') }}: <span class="highlight-word">{{ currentWord.article }}</span></span>
-                <span class="result-text" v-if="currentMode === 'letters' || currentMode === 'audio'">{{ t('result.correctAnswer') }}: <span class="highlight-word">{{ currentWord.de }}</span></span>
-                <span class="result-text" v-if="currentMode === 'wordArticle'">{{ t('result.correct') }}: <span class="highlight-word">{{currentWord.article}} {{ currentWord.de }}</span> </span>
-                <span class="result-text" v-if="currentMode === 'plural'">{{ t('result.correct') }}: <span class="highlight-word">{{ currentWord.plural }}</span></span>
+                <span class="result-text" v-if="currentMode === 'article'">{{ t('result.correctAnswer') }}: <span
+                    class="highlight-word">{{ currentWord.article }}</span></span>
+                <span class="result-text"
+                      v-if="currentMode === 'letters' || currentMode === 'audio'">{{ t('result.correctAnswer') }}: <span
+                    class="highlight-word">{{ currentWord.de }}</span></span>
+                <span class="result-text" v-if="currentMode === 'wordArticle'">{{ t('result.correct') }}: <span
+                    class="highlight-word">{{ currentWord.article }} {{ currentWord.de }}</span> </span>
+                <span class="result-text" v-if="currentMode === 'plural'">{{ t('result.correct') }}: <span
+                    class="highlight-word">{{ currentWord.plural }}</span></span>
               </div>
             </div>
             <div class="actions-wrapper">
@@ -127,18 +143,21 @@
                   @click="!result ? checkAnswer() : nextStep()"
                   :disabled="!result && (isChecking || (currentMode !== 'wordTranslate' && !userInput))"
               >
-                {{ currentMode === 'wordTranslate' ? t('trainerPage.further') : (!result ? t('sessionPage.btnCheck') : t('sessionPage.continue')) }}
+                {{
+                  currentMode === 'wordTranslate' ? t('trainerPage.further') : (!result ? t('sessionPage.btnCheck') : t('sessionPage.continue'))
+                }}
               </button>
             </div>
           </div>
           <div v-else class="finish-block">
-            <h2 class="finish-block__title">{{ t('sessionLabels.end')}}</h2>
+            <h2 class="finish-block__title">{{ t('sessionLabels.end') }}</h2>
             <div class="finish-block__actions">
-              <button class="btn-primary" @click="restartAll">{{ t('sessionLabels.again')}}</button>
-              <button v-if="wrongWords.length" class="btn-secondary" :disabled="wrongWords.length === 0" @click="repeatMistakes">
-                {{ t('sessionLabels.mistakes')}} ({{ wrongWords.length }})
+              <button class="btn-primary" @click="restartAll">{{ t('sessionLabels.again') }}</button>
+              <button v-if="wrongWords.length" class="btn-secondary" :disabled="wrongWords.length === 0"
+                      @click="repeatMistakes">
+                {{ t('sessionLabels.mistakes') }} ({{ wrongWords.length }})
               </button>
-              <router-link class="btn-secondary" to="/articles">{{ t('sessionLabels.back')}}</router-link>
+              <router-link class="btn-secondary" to="/articles">{{ t('sessionLabels.back') }}</router-link>
             </div>
           </div>
         </div>
@@ -148,19 +167,20 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import { userlangStore } from '../../store/learningStore.js'
-import { getSpeechAudio } from '../../utils/googleTTS.js'
-import { nameMap, nameMode } from '../../utils/nameMap.js'
-import { playWrong, playCorrect, unlockAudioByUserGesture } from '../../utils/soundManager.js'
-import { useSeoMeta } from '#imports'
+import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
+import {useRoute, useRouter} from 'vue-router'
+import {userlangStore} from '../../store/learningStore.js'
+import {getSpeechAudio} from '../../utils/googleTTS.js'
+import {nameMap, nameMode} from '../../utils/nameMap.js'
+import {playWrong, playCorrect, unlockAudioByUserGesture} from '../../utils/soundManager.js'
+import {useSeoMeta} from '#imports'
 import SoundBtn from "~/src/components/soundBtn.vue";
 import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
+import {showInterstitial} from '../../utils/admob.js';
 
-useSeoMeta({ robots: 'noindex, nofollow' })
+useSeoMeta({robots: 'noindex, nofollow'})
 
-const { t, locale } = useI18n()
+const {t, locale} = useI18n()
 const store = userlangStore()
 const route = useRoute()
 
@@ -284,11 +304,21 @@ async function checkAnswer() {
 
   let correct = '';
   switch (currentMode.value) {
-    case 'article':     correct = currentWord.value.article; break;
-    case 'letters':     correct = currentWord.value.de; break;
-    case 'wordArticle': correct = `${currentWord.value.article} ${currentWord.value.de}`; break;
-    case 'plural':      correct = currentWord.value.plural; break;
-    case 'audio':       correct = currentWord.value.de; break;
+    case 'article':
+      correct = currentWord.value.article;
+      break;
+    case 'letters':
+      correct = currentWord.value.de;
+      break;
+    case 'wordArticle':
+      correct = `${currentWord.value.article} ${currentWord.value.de}`;
+      break;
+    case 'plural':
+      correct = currentWord.value.plural;
+      break;
+    case 'audio':
+      correct = currentWord.value.de;
+      break;
   }
 
   const ok = normalize(userInput.value) === normalize(correct);
@@ -327,38 +357,42 @@ function nextStep() {
 }
 
 function restartAll() {
-  if (allWords.value && allWords.value.length > 0) {
-    store.selectedWords = [...allWords.value]
-  }
-  isReview.value = true
-  store.currentIndex = 0
-  store.currentModeIndex = 0
-  finished.value = false
-  userInput.value = ''
-  result.value = ''
-  wrongWords.value = []
+  showInterstitial(() => {
+    if (allWords.value && allWords.value.length > 0) {
+      store.selectedWords = [...allWords.value]
+    }
+    isReview.value = true
+    store.currentIndex = 0
+    store.currentModeIndex = 0
+    finished.value = false
+    userInput.value = ''
+    result.value = ''
+    wrongWords.value = []
+  })
 }
 
 function repeatMistakes() {
-  if (wrongWords.value.length === 0) return
-  store.selectedWords = [...wrongWords.value]
-  store.currentIndex = 0
-  store.currentModeIndex = 0
-  finished.value = false
-  userInput.value = ''
-  result.value = ''
-  wrongWords.value = []
+  showInterstitial(() => {
+    if (wrongWords.value.length === 0) return
+    store.selectedWords = [...wrongWords.value]
+    store.currentIndex = 0
+    store.currentModeIndex = 0
+    finished.value = false
+    userInput.value = ''
+    result.value = ''
+    wrongWords.value = []
+  })
 }
 
 onMounted(async () => {
   isMounted.value = true;
   const unlockOnce = () => {
     unlockAudioByUserGesture()
-    window.removeEventListener('pointerdown', unlockOnce, { capture: true })
-    window.removeEventListener('keydown', unlockOnce, { capture: true })
+    window.removeEventListener('pointerdown', unlockOnce, {capture: true})
+    window.removeEventListener('keydown', unlockOnce, {capture: true})
   }
-  window.addEventListener('pointerdown', unlockOnce, { capture: true })
-  window.addEventListener('keydown', unlockOnce, { capture: true })
+  window.addEventListener('pointerdown', unlockOnce, {capture: true})
+  window.addEventListener('keydown', unlockOnce, {capture: true})
 
   await store.loadFromFirebase()
   store.syncSelectedWordsProgress()
@@ -368,21 +402,20 @@ onMounted(async () => {
   if (route.query.topic) topicTitle.value = route.query.topic
 
   allWords.value = [...store.selectedWords]
-  isReview.value = ['1','true','repeat','review'].includes(String(route.query.review || '').toLowerCase())
-  isReady.value = true
+  isReview.value = ['1', 'true', 'repeat', 'review'].includes(String(route.query.review || '').toLowerCase())
+
+  // ВЫЗОВ РЕКЛАМЫ ПЕРЕД НАЧАЛОМ СЕССИИ
+  showInterstitial(() => {
+    isReady.value = true
+  })
+
   window.addEventListener('beforeunload', saveProgressOnExit)
 })
 
 onBeforeUnmount(() => {
-  window.removeEventListener('pointerdown', unlockAudioByUserGesture, { capture: true })
-  window.removeEventListener('keydown', unlockAudioByUserGesture, { capture: true })
+  window.removeEventListener('pointerdown', unlockAudioByUserGesture, {capture: true})
+  window.removeEventListener('keydown', unlockAudioByUserGesture, {capture: true})
   window.removeEventListener('beforeunload', saveProgressOnExit)
-  store.saveToFirebase()
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('pointerdown', unlockAudioByUserGesture, { capture: true })
-  window.removeEventListener('keydown', unlockAudioByUserGesture, { capture: true })
   store.saveToFirebase()
 })
 
@@ -462,7 +495,7 @@ watch(userInput, (newVal, oldVal) => {
   transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.glare{
+.glare {
   background: rgba(255, 255, 255, 0.5);
   position: absolute;
   top: 3px;
@@ -492,7 +525,7 @@ watch(userInput, (newVal, oldVal) => {
 }
 
 .session__theme-t {
-  font-size:16px;
+  font-size: 16px;
   color: var(--titleColor);
   font-weight: 700;
 }
@@ -658,13 +691,13 @@ watch(userInput, (newVal, oldVal) => {
   border-radius: 14px;
   transition: all 0.1s;
   text-align: center;
-  box-shadow: inset 0 3px 0 rgba(0,0,0,0.05);
+  box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 .trainer-app__input:focus {
   outline: none;
   border-color: #3b82f6;
-  box-shadow: inset 0 3px 0 rgba(0,0,0,0.05), 0 0 0 3px rgba(59, 130, 246, 0.2);
+  box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.05), 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
 .trainer-app__input[readonly] {

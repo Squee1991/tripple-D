@@ -31,7 +31,7 @@
           </NuxtLink>
         </li>
       </ul>
-      <AccountManagement/>
+
     </section>
     <div v-if="showFreezeModal" class="modal-overlay" @click.self="showFreezeModal = false">
       <div class="modal-content">

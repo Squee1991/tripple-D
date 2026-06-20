@@ -20,14 +20,16 @@ import Future from '../assets/images/FutureFunctions.svg'
 import StatsPlus from '../assets/images/StatsPlus.svg'
 import Forever from '../assets/images/forever.svg'
 import Description from '../assets/images/photo-frame.svg'
-import PremiumIcon from '../assets/images/premium.svg'
+import PremiumIcon from '../assets/images/PlusLogo.png'
 import VBanner from "~/src/components/V-banner.vue"
 
 const authStore = userAuthStore()
 const billingStore = useBillingStore()
 const router = useRouter()
 const {t} = useI18n()
-const BASE_PRICE = 1
+
+const displayPrice = ref('12.99')
+const displayCurrency = ref('€')
 
 const selectedDiscountId = ref(null)
 const submitLoading = ref(false)
@@ -37,6 +39,7 @@ const toastMessage = ref('')
 const payButton = ref(null)
 const showStickyFooter = ref(false)
 const justBought = ref(false)
+
 const handleBack = () => {
   router.back()
 }
@@ -49,29 +52,39 @@ const submitComputed = computed(() => {
   return submitLoading.value ? t('submitComputed.sync') : t('submitComputed.getPlus')
 })
 
-
 const finalPrice = computed(() => {
   if (billingStore.isMobile && billingStore.offerings.length > 0) {
     return billingStore.offerings[0].product.priceString
   }
-  if (!selectedDiscountId.value) return BASE_PRICE.toFixed(2)
+
+  const base = parseFloat(displayPrice.value) || 12.99
+  if (!selectedDiscountId.value) return base.toFixed(2)
   const activeCoupon = myAvailableCoupons.value.find(c => c.id === selectedDiscountId.value)
   const percent = activeCoupon ? activeCoupon.percent : 0
-  const discounted = BASE_PRICE - (BASE_PRICE * (percent / 100))
+  const discounted = base - (base * (percent / 100))
   return discounted.toFixed(2)
 })
 
 const myAvailableCoupons = computed(() => {
   const list = []
-  const hasAnyDiscount = authStore.premiumDiscount.sale_5 ||
+  const hasAnyDiscount = authStore.premiumDiscount.sale_3 ||
+      authStore.premiumDiscount.sale_5 ||
+      authStore.premiumDiscount.sale_6 ||
       authStore.premiumDiscount.sale_10 ||
       authStore.premiumDiscount.sale_15
   if (hasAnyDiscount) {
-    list.push({id: null, percent: 0, label: 'Без скидки'})
+    list.push(
+        {
+          id: null,
+          percent: 0,
+          label: 'Без скидки'
+        })
   }
-  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_5', percent: 5, label: 'Скидка 5%'})
-  if (authStore.premiumDiscount.sale_10) list.push({id: 'sale_10', percent: 10, label: 'Скидка 10%'})
-  if (authStore.premiumDiscount.sale_15) list.push({id: 'sale_15', percent: 15, label: 'Скидка 15%'})
+  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_3', percent: 3, label: t('cardSales.title3')})
+  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_5', percent: 5, label: t('cardSales.title5')})
+  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_6', percent: 6, label: t('cardSales.title6')})
+  if (authStore.premiumDiscount.sale_10) list.push({id: 'sale_10', percent: 10, label: t('cardSales.title10')})
+  if (authStore.premiumDiscount.sale_15) list.push({id: 'sale_15', percent: 15, label: t('cardSales.title15')})
   return list
 })
 
@@ -88,39 +101,18 @@ useSeoMeta({
 
 let observer
 const features = [
-  {title: t('Обучение без границ'), icon: Forever},
-  {title: t('Будущие функции'), icon: Future},
-  {title: t('Поддержка разработчиков'), icon: SupportCup},
-  {title: t('Отсутствие рекламы'), icon: Ads},
+  {title: t('payPage.featureOne'), icon: Forever},
+  {title: t('payPage.featureTwo'), icon: Future},
+  {title: t('payPage.featureThree'), icon: SupportCup},
+  {title: t('payPage.featureFour'), icon: Ads},
 ]
-
-onMounted(async () => {
-  if (billingStore.isMobile) {
-    await billingStore.initialize()
-  }
-  observer = new IntersectionObserver(
-      ([entry]) => {
-        showStickyFooter.value = !entry.isIntersecting
-      },
-      {threshold: 1.0}
-  )
-  if (payButton.value) {
-    observer.observe(payButton.value)
-  }
-})
-
-onUnmounted(() => {
-  if (observer && payButton.value) {
-    observer.unobserve(payButton.value)
-  }
-})
 
 const triggerToast = (msg) => {
   toastMessage.value = msg
   showToast.value = true
   setTimeout(() => {
     showToast.value = false
-  }, 2000)
+  }, 3200)
 }
 
 async function handleRestore() {
@@ -156,7 +148,7 @@ async function pay() {
     }
     return
   }
-  const priceId = 'price_1SvdnE24sKuPwF6cZoD2ZJn3'
+
   submitLoading.value = true
   try {
     const response = await $fetch('/api/stripe/checkout', {
@@ -164,7 +156,6 @@ async function pay() {
       body: {
         userId: authStore.uid,
         email: authStore.email,
-        priceId,
         couponId: selectedDiscountId.value
       },
     })
@@ -174,18 +165,59 @@ async function pay() {
       console.log(response.error)
     }
   } catch (err) {
+    console.error(err)
   } finally {
     submitLoading.value = false
   }
 }
+
+onMounted(async () => {
+  const endDateStr = authStore.subscriptionEndsAt
+  if (endDateStr) {
+    const endDate = new Date(endDateStr)
+    const now = new Date()
+    if (endDate > now) {
+      triggerToast('pay.triggerToastIsPlus')
+      // setTimeout(() => {
+      //   router.back()
+      // }, 5000)
+      return
+    }
+  }
+  try {
+    const data = await $fetch('/api/stripe/get-price')
+    if (data) {
+      displayPrice.value = data.amount
+      displayCurrency.value = data.currency
+    }
+  } catch (err) {
+    console.error('Не удалось загрузить локальную цену:', err)
+  }
+  if (billingStore.isMobile) {
+    await billingStore.initialize()
+  }
+  observer = new IntersectionObserver(
+      ([entry]) => {
+        showStickyFooter.value = !entry.isIntersecting
+      },
+      {threshold: 1.0}
+  )
+  if (payButton.value) {
+    observer.observe(payButton.value)
+  }
+})
+
+onUnmounted(() => {
+  if (observer && payButton.value) {
+    observer.unobserve(payButton.value)
+  }
+})
 </script>
 
 <template>
   <div class="pro-vault">
     <transition name="toast-fade">
-      <div v-if="showToast" class="toast-notification">
-        {{ t(toastMessage) }}
-      </div>
+      <div v-if="showToast" class="toast-notification">{{ t(toastMessage) }}</div>
     </transition>
     <div class="vault-nav">
       <button @click="handleBack" class="btn-icon-back">
@@ -198,15 +230,12 @@ async function pay() {
     </div>
     <div class="main-flow">
       <div class="flow-step">
-        <VBanner
-            :text="t('pay.banner')"
-            :icon="PremiumIcon"
-        />
-        <div class="hero-zone">
-          <h1 class="hero-title">SKILLUP <span class="neon-text">PLUS</span></h1>
+        <div class="flow__banner-pay">
+          <span class="flow__banner-text"> {{ t('pay.banner') }}</span>
+          <img class="flow__banner-icon" :src="PremiumIcon" alt="PremiumIcon">
         </div>
         <div class="perks-grid">
-          <div v-for="(feat, i) in features" :key="i" class="perk-card">
+          <div v-for="(feat, index) in features" :key="index" class="perk-card">
             <div class="perk-icon">
               <img :src="feat.icon" alt="" class="icon-svg">
             </div>
@@ -217,8 +246,7 @@ async function pay() {
         </div>
         <div class="bonus-section" v-if="myAvailableCoupons.length > 1">
           <div class="hero-zone bonus-hero">
-<!--            <h2 class="hero-title">ТВОИ <span class="neon-text">БОНУСЫ</span></h2>-->
-            <p class="hero-desc">{{ t('pay.sales')}}</p>
+            <p class="hero-desc">{{ t('pay.sales') }}</p>
           </div>
           <div class="inventory-section">
             <div class="inventory-list">
@@ -231,34 +259,32 @@ async function pay() {
               >
                 <div class="loot-glow"></div>
                 <div class="loot-content">
-                  <div class="loot-info">
+                  <div v-if="coupon.label" class="loot-info">
                     <span class="loot-title">{{ coupon.label }}</span>
                     <span class="loot-sub">За твою активность</span>
                   </div>
-                  <div class="loot-val" v-if="coupon.percent > 0">
-                    {{ coupon.percent }}%
-                  </div>
+                  <div class="loot-val" v-if="coupon.percent > 0">{{ coupon.percent }}%</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="billing-summary">
-          <div class="bill-line">
-            <span class="bill-text">Месяц обучения</span>
-            <span class="bill-price">{{ BASE_PRICE }}€</span>
-          </div>
           <div class="bill-line discount" v-if="selectedDiscountId">
             <span class="bill-text">Твоя скидка</span>
-            <span class="bill-price-neg">-{{myAvailableCoupons.find(c => c.id === selectedDiscountId).percent}}%</span>
+            <span
+                class="bill-price-neg">-{{ myAvailableCoupons.find(c => c.id === selectedDiscountId).percent }}%</span>
           </div>
           <div class="bill-total">
             <span class="total-text">ИТОГО:</span>
-            <span class="total-price">{{ finalPrice }}€</span>
+            <span class="total-price">{{ finalPrice }}{{ displayCurrency }}</span>
           </div>
         </div>
         <div class="footer-action" ref="payButton">
-          <button @click="pay" class="btn-buy-neon" :disabled="submitLoading || restoreLoading">{{ submitComputed }}</button>
+          <button @click="pay" class="btn-buy-neon" :disabled="submitLoading || restoreLoading">{{
+              submitComputed
+            }}
+          </button>
           <button
               v-if="billingStore.isMobile"
               @click="handleRestore"
@@ -281,7 +307,7 @@ async function pay() {
   left: 0;
   background: #10b981;
   color: #fff;
-  padding: 14px 24px;
+  padding: 18px 24px;
   font-weight: 800;
   font-size: 16px;
   box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
@@ -328,6 +354,24 @@ async function pay() {
   text-decoration-color: transparent;
 }
 
+.flow__banner-pay {
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgb(0, 194, 255), rgb(0, 168, 219)) rgb(0, 194, 255);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3), inset 0 -2px 4px rgba(0, 0, 0, 0.1), 0 6px 0 rgb(0, 160, 220);
+}
+
+.flow__banner-icon {
+  width: 150px;
+}
+
+.flow__banner-text {
+  font-weight: 600;
+  font-size: 17px;
+}
+
 .btn-restore:active {
   color: #d1d1d6;
   text-decoration-color: #d1d1d6;
@@ -340,7 +384,9 @@ async function pay() {
 
 
 .pro-vault {
-  height: 100%;
+  height: 100vh;
+  max-width: 1024px;
+  margin: 0 auto;
   background: var(--bg);
   color: var(--title);
   font-family: 'Nunito', sans-serif;
@@ -404,6 +450,7 @@ async function pay() {
 .perks-grid {
   display: grid;
   gap: 12px;
+  margin-top: 30px;
 }
 
 .perk-card {

@@ -147,11 +147,11 @@ const rankStore = useRankUserStore()
 const PRICES = {
   HEART: 10,
   FREEZE_DAY: 10,
-  SALE_5: 100,
-  SALE_10: 150,
-  SALE_15: 70
+  SALE_3: 100,
+  SALE_6: 150,
+  // SALE_15: 70
 }
-const DISCOUNT_REQ_HATS = {5: 210, 10: 500, 15: 400}
+const DISCOUNT_REQ_HATS = {3: 210, 6: 500}
 
 const showModal = ref(false)
 const modalType = ref('freeze')
@@ -184,22 +184,22 @@ const shopCards = computed(() => {
     },
     {
       id: "sale_5",
-      title: t('cardSales.title5'),
+      title: t('cardSales.title3'),
       description: "",
       hotIcon: HotDeal,
       icon: Sale,
-      price: PRICES.SALE_5,
-      requiredHats: DISCOUNT_REQ_HATS[5],
+      price: PRICES.SALE_3,
+      requiredHats: DISCOUNT_REQ_HATS[3],
       type: 'permanent'
     },
     {
       id: "sale_10",
-      title: t('cardSales.title10'),
+      title: t('cardSales.title6'),
       description: "",
       hotIcon: HotDeal,
       icon: Sale10,
-      price: PRICES.SALE_10,
-      requiredHats: DISCOUNT_REQ_HATS[10],
+      price: PRICES.SALE_6,
+      requiredHats: DISCOUNT_REQ_HATS[6],
       type: 'permanent'
     },
     // {
@@ -741,7 +741,7 @@ const confirmPurchase = async () => {
 .modal-btn, .modal-close-btn {
   flex: 1;
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 50px;
   border: none;
   font-weight: 700;
   font-size: 15px;
@@ -763,7 +763,7 @@ const confirmPurchase = async () => {
 
 .modal-btn.confirm:disabled {
   background: #363d4a;
-  color: #555;
+  color: #ffffff;
   box-shadow: none;
   cursor: not-allowed;
 }

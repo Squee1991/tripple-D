@@ -261,7 +261,7 @@ onBeforeUnmount(() => {
   display: flex;
   gap: 12px;
   width: 100%;
-  height: calc(100vh - 110px);
+  height: calc(100vh - 250px);
 }
 
 .map-left {
@@ -283,7 +283,7 @@ onBeforeUnmount(() => {
 
 .map-left__art {
   width: 100%;
-  height: 190px;
+  height: 150px;
   border: 4px solid var(--tabsSlideBorderColor);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border-radius: 10px;
@@ -314,7 +314,7 @@ onBeforeUnmount(() => {
 }
 
 .map-left__desc {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   margin-bottom: 12px;
   color: var(--titleColor);
@@ -345,7 +345,6 @@ onBeforeUnmount(() => {
 .mal__left-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
   padding: 0 0 10px 0;
 }
@@ -358,7 +357,7 @@ onBeforeUnmount(() => {
   background: #3b82f6;
   border: none;
   color: #ffffff;
-  padding: 12px;
+  padding: 10px;
   border-radius: 40px;
   margin-bottom: 10px;
   font-size: 20px;
@@ -389,7 +388,7 @@ onBeforeUnmount(() => {
 
 .map-right {
   display: grid;
-  gap: 16px;
+  gap: 10px;
   overflow-y: auto;
   min-width: 0;
   grid-template-columns: repeat(2, 2fr);
@@ -734,6 +733,10 @@ onBeforeUnmount(() => {
   border: none;
 }
 
+.arrow-btn:focus {
+  border: none;
+}
+
 .arrow-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
@@ -742,7 +745,7 @@ onBeforeUnmount(() => {
 .current-category-name {
   font-size: 16px;
   font-weight: 900;
-  color: white;
+  color: var(--title);
   display: flex;
   justify-content: center;
   align-items: center;

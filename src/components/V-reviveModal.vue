@@ -1,6 +1,6 @@
 <template>
-  <div v-if="show" class="modal">
-    <div class="modal__overlay"></div>
+  <div v-if="show" class="modal" >
+    <div @click="emit('back')" class="modal__overlay"></div>
     <div class="modal__window">
       <div class="modal__title">{{ t('questCompletedModals.lives') }}</div>
       <div class="modal__text">
@@ -175,7 +175,7 @@ const actionButtons = computed(() => {
   border: 2px solid #58CC02;
   border-bottom-width: 4px;
   border-bottom-color: #58A700;
-  border-radius: 16px;
+  border-radius: 50px;
   background: #58CC02;
   cursor: pointer;
   font-size: 1.1rem;

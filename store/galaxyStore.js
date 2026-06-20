@@ -106,9 +106,27 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 
 				checkBatteryRegen()
 			} else {
-				captainName.value = authStore.name || 'ПИЛОТ-01'
+				captainName.value = authStore.name || 'Pilot'
+				balance.value = 0
+				highScores.value = {}
+				selectedTankId.value = 1
+				ownedTanks.value = [1]
+				shipBatteries.value = { 1: { lives: 3, lastRegen: Date.now() } }
+
+				checkBatteryRegen()
+
+				await sync({
+					captainName: captainName.value,
+					balance: balance.value,
+					highScores: highScores.value,
+					selectedTankId: selectedTankId.value,
+					ownedTanks: ownedTanks.value,
+					shipBatteries: shipBatteries.value
+				})
 			}
-		} catch (e) {}
+		} catch (e) {
+			console.error('Ошибка инициализации пользователя:', e)
+		}
 	}
 
 	const sync = async (payload) => {

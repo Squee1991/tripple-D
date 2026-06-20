@@ -3624,7 +3624,9 @@
     "streak": "Win streak",
     "clearWins": "Clean wins",
     "start": "Start game",
-    "info": "Click on a level to see its statistics."
+    "info": "Click on a level to see its statistics.",
+    "answer-placeholder": "Assemble the sentence...",
+    "pending": "Pending..."
   },
   "eventSessionPage": {
     "loading": "Loading…",
@@ -8054,9 +8056,11 @@
     "description": "Protects your mortarboards from penalties"
   },
   "cardSales": {
-    "title5": "5% Discount",
-    "title10": "10% Discount",
-    "title15": "15% Discount"
+    "title3": "3% discount",
+    "title5": "5% discount",
+    "title6": "6% discount",
+    "title10": "10% discount",
+    "title15": "15% discount"
   },
   "cardsShop": {
     "full": "Full",
@@ -8128,6 +8132,7 @@
     "profileData": "Profile data"
   },
   "cabinet": {
+    "plusCanceled": "PLUS canceled",
     "important": "IMPORTANT!!!",
     "importantText": "When deleting your account, the subscription is not canceled. Please cancel your subscription before deleting.",
     "cancelPremium": "Cancel subscription?",
@@ -9772,9 +9777,11 @@
     "rank_5": "Captain",
     "rank_6": "Guardian",
     "rank_7": "Legend",
-    "sale5": "5% Discount",
-    "sale10": "10% Discount",
-    "sale15": "15% Discount"
+    "sale3": "3% discount",
+    "sale5": "5% discount",
+    "sale6": "6% discount",
+    "sale10": "10% discount",
+    "sale15": "15% discount"
   },
   "audioTasksTitles": {
     "meeting": "Meeting",
@@ -10300,7 +10307,9 @@
     "interrupt": "Interrupt the test?",
     "modalText": "The progress of this attempt will be lost. Are you sure?",
     "continue": "Continue",
-    "leave": "Exit"
+    "leave": "Exit",
+    "placeHolder": "Write your answer here...",
+    "say": "Say:"
   },
   "speakSession": {
     "title": "Speaking practice",
@@ -10320,5 +10329,75 @@
     "hoverVoice": "Speak",
     "end": "Finish",
     "further": "Next"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "Try again?",
+    "textPartOne": "You answered correctly",
+    "textPartTwo": "Buy an attempt to continue.",
+    "price": "Price:",
+    "youHave": "You have:",
+    "showADS": "Watch ad",
+    "buyBy": "Buy for",
+    "toThemes": "To topics",
+    "repeat": "Repeat"
+  },
+  "freezeStatus": {
+    "active": "Time freeze is active",
+    "inactive": "Time freeze is inactive"
+  },
+  "guessArticle": {
+    "correct": "Correct",
+    "incorrect": "Incorrect, correct is"
+  },
+  "payPage": {
+    "featureOne": "Learning without borders",
+    "featureTwo": "Future features",
+    "featureThree": "Developer support",
+    "featureFour": "No ads",
+    "sale5": "3% discount",
+    "sale10": "6% discount",
+    "sale15": "15% discount",
+    "finalePrice": "TOTAL:",
+    "yourSale": "Your discount"
+  },
+  "stripeCancel": {
+    "cancelSub": "Cancel subscription",
+    "cancelPayment": "Payment canceled",
+    "errorAuth": "Authentication error",
+    "pleaseAuth": "Please log in to perform this action.",
+    "canceling": "Canceling subscription...",
+    "canceledSub": "Subscription canceled",
+    "errorCancelSub": "Error during cancellation",
+    "errorCancelResponse": "Failed to cancel subscription.",
+    "serverError": "Server error",
+    "serverOffline": "Connection to the server lost. Please try again later.",
+    "processInterrupted": "The checkout process was interrupted. No charges were made to your card.",
+    "tryAgain": "Try again",
+    "backToMain": "To main",
+    "extensionCanceled": "Auto-renewal will be disabled. Access will remain until the end of the paid period.",
+    "extensionCanceledCanBack": "Your subscription will no longer renew. You can come back at any time!",
+    "confirmCancel": "Yes, cancel",
+    "notConfirmCancel": "Keep subscription",
+    "backToMainPage": "Back to main page"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "Confirming transaction...",
+    "sessionNotFound": "Payment session not found",
+    "authPlease": "Please log in to complete",
+    "isPremium": "Premium access activated",
+    "errorActivation": "Activation error",
+    "errorServer": "Server connection error",
+    "success": "All features of the service are now available to you.",
+    "unsuccess": "A technical glitch occurred during processing.",
+    "toMain": " To main page",
+    "redirectSuccess": "Redirecting in a few seconds..."
+  },
+  "installApp": {
+    "stayInBrowser": "Continue in browser",
+    "promoSubTitle": " Learning German is much more convenient with the Skillupgerman app."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Go through dialogues. Listen, choose answer options, and practice your pronunciation",
+    "words": "Learn key words and phrases to easily understand every line in the dialogue"
   }
 }

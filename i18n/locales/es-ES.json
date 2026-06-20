@@ -3601,7 +3601,9 @@
     "streak": "Racha de victorias",
     "clearWins": "Victorias limpias",
     "start": "Iniciar juego",
-    "info": "Haz clic en un nivel para ver sus estadísticas."
+    "info": "Haz clic en un nivel para ver sus estadísticas.",
+    "answer-placeholder": "Arma la frase...",
+    "pending": "Espera..."
   },
   "eventSessionPage": {
     "loading": "Cargando…",
@@ -8031,9 +8033,11 @@
     "description": "Protege tus birretes de penalizaciones"
   },
   "cardSales": {
-    "title5": "Descuento 5%",
-    "title10": "Descuento 10%",
-    "title15": "Descuento 15%"
+    "title3": "3% de descuento",
+    "title5": "5% de descuento",
+    "title6": "6% de descuento",
+    "title10": "10% de descuento",
+    "title15": "15% de descuento"
   },
   "cardsShop": {
     "full": "Lleno",
@@ -8105,6 +8109,7 @@
     "profileData": "Datos del perfil"
   },
   "cabinet": {
+    "plusCanceled": "PLUS cancelado",
     "important": "¡IMPORTANTE!",
     "importantText": "Al eliminar la cuenta, la suscripción no se cancela. Cancela la suscripción antes de eliminar la cuenta.",
     "cancelPremium": "¿Cancelar la suscripción?",
@@ -9749,7 +9754,9 @@
     "rank_5": "Capitán",
     "rank_6": "Guardián",
     "rank_7": "Leyenda",
+    "sale3": "Descuento 3%",
     "sale5": "Descuento 5%",
+    "sale6": "Descuento 6%",
     "sale10": "Descuento 10%",
     "sale15": "Descuento 15%"
   },
@@ -10277,7 +10284,9 @@
     "interrupt": "¿Interrumpir la prueba?",
     "modalText": "El progreso de este intento se perderá. ¿Estás seguro?",
     "continue": "Continuar",
-    "leave": "Salir"
+    "leave": "Salir",
+    "placeHolder": "Escribe tu respuesta aquí...",
+    "say": "Di:"
   },
   "speakSession": {
     "title": "Práctica de conversación",
@@ -10297,5 +10306,75 @@
     "hoverVoice": "Decir por voz",
     "end": "Terminar",
     "further": "Siguiente"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "¿Intentar de nuevo?",
+    "textPartOne": "Respondiste correctamente",
+    "textPartTwo": "Compra un intento para continuar.",
+    "price": "Precio:",
+    "youHave": "Tienes:",
+    "showADS": "Ver anuncio",
+    "buyBy": "Comprar por",
+    "toThemes": "A los temas",
+    "repeat": "Repetir"
+  },
+  "freezeStatus": {
+    "active": "Congelación de tiempo activa",
+    "inactive": "Congelación de tiempo inactiva"
+  },
+  "guessArticle": {
+    "correct": "Correcto",
+    "incorrect": "Incorrecto, lo correcto es"
+  },
+  "payPage": {
+    "featureOne": "Aprendizaje sin fronteras",
+    "featureTwo": "Próximas funciones",
+    "featureThree": "Soporte para desarrolladores",
+    "featureFour": "Sin anuncios",
+    "sale5": "3% de descuento",
+    "sale10": "6% de descuento",
+    "sale15": "15% de descuento",
+    "finalePrice": "TOTAL:",
+    "yourSale": "Tu descuento"
+  },
+  "stripeCancel": {
+    "cancelSub": "Cancelar suscripción",
+    "cancelPayment": "Pago cancelado",
+    "errorAuth": "Error de autenticación",
+    "pleaseAuth": "Por favor, inicia sesión para realizar esta acción.",
+    "canceling": "Cancelando suscripción...",
+    "canceledSub": "Suscripción cancelada",
+    "errorCancelSub": "Error al cancelar",
+    "errorCancelResponse": "No se pudo cancelar la suscripción.",
+    "serverError": "Error del servidor",
+    "serverOffline": "Conexión con el servidor perdida. Inténtalo más tarde.",
+    "processInterrupted": "El proceso de pago fue interrumpido. No se realizaron cargos en tu tarjeta.",
+    "tryAgain": "Intentar de nuevo",
+    "backToMain": "Inicio",
+    "extensionCanceled": "La renovación automática se desactivará. El acceso se mantendrá hasta el final del período pagado.",
+    "extensionCanceledCanBack": "Tu suscripción ya no se renovará. ¡Puedes volver en cualquier momento!",
+    "confirmCancel": "Sí, cancelar",
+    "notConfirmCancel": "No cancelar",
+    "backToMainPage": "Volver a la página principal"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "Confirmando transacción...",
+    "sessionNotFound": "Sesión de pago no encontrada",
+    "authPlease": "Por favor, inicia sesión para completar",
+    "isPremium": "Acceso Premium activado",
+    "errorActivation": "Error de activación",
+    "errorServer": "Error de conexión con el servidor",
+    "success": "Ahora tienes acceso a todas las funciones del servicio.",
+    "unsuccess": "Ocurrió un problema técnico durante el procesamiento.",
+    "toMain": " Inicio",
+    "redirectSuccess": "Redireccionando en unos segundos..."
+  },
+  "installApp": {
+    "stayInBrowser": "Continuar en el navegador",
+    "promoSubTitle": " Con la aplicación Skillupgerman, aprender alemán es mucho más cómodo."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Completa los diálogos. Escucha, elige las opciones de respuesta y practica la pronunciación",
+    "words": "Aprende palabras y frases clave para entender fácilmente cada línea del diálogo"
   }
 }

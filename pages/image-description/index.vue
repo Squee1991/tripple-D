@@ -38,16 +38,22 @@
           </div>
           <div class="topics-list-container">
             <div
-                v-for="topic in topics"
+                v-for="(topic, index) in topics"
                 :key="topic.id"
                 class="topic-list-item"
-                @click="selectTopic(topic)"
+                @click="selectTopic(topic, index)"
             >
               <div class="topic-item-content">
                 <div class="topic-icon-box">{{ topic.icon }}</div>
                 <span class="topic-label">{{ t(topic.label) }}</span>
               </div>
-              <VArrowNav/>
+              <div class="topic-arrow" :class="{ 'topic-arrow--locked': index !== 0 && !authStore.isPremium }">
+                <VArrowNav v-if="index === 0 || authStore.isPremium"/>
+                <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -64,6 +70,7 @@
         </div>
       </VTransition>
     </div>
+    <VPremiumModal v-model:show="showPremiumModal" />
   </div>
 </template>
 
@@ -74,11 +81,12 @@ import {useRouter} from 'vue-router'
 import Modal from '../../src/components/modal.vue'
 import Description from '@/assets/images/reporting.svg'
 import {topics} from '@/utils/descriptionImages.js'
-/*import {showInterstitial} from '../../utils/admob.js'*/
-import VBanner from "~/src/components/V-banner.vue";
-import PhotoFrame from "../../assets/images/photo-frame.svg";
-import VArrowNav from "~/src/components/V-arrowNav.vue";
-import VTransition from "~/src/components/V-transition.vue";
+import VBanner from "~/src/components/V-banner.vue"
+import PhotoFrame from "../../assets/images/photo-frame.svg"
+import VArrowNav from "~/src/components/V-arrowNav.vue"
+import VTransition from "~/src/components/V-transition.vue"
+import { userAuthStore } from '../../store/authStore.js'
+import VPremiumModal from "~/src/components/V-premiumModal.vue"
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -86,12 +94,14 @@ useSeoMeta({
 
 const router = useRouter()
 const {t} = useI18n()
+const authStore = userAuthStore()
 
 const levels = ['A1', 'A2', 'B1']
 const viewState = ref('topics')
 const selectedTopic = ref(null)
 const selectedLevel = ref('A1')
 const showDevModal = ref(false)
+const showPremiumModal = ref(false)
 
 const isPageLoaded = ref(false)
 
@@ -113,24 +123,26 @@ const closeModal = () => {
   showDevModal.value = false
 }
 
-function selectTopic(topic) {
-  selectedTopic.value = topic
-  viewState.value = 'level'
+function selectTopic(topic, index) {
+  if (index === 0 || authStore.isPremium) {
+    selectedTopic.value = topic
+    viewState.value = 'level'
+  } else {
+    showPremiumModal.value = true
+  }
 }
 
 function selectLevel(level) {
   selectedLevel.value = level
 }
 
-/*function startGame() {
-  showInterstitial(() => {
+function startGame() {
     sessionConfig.value = {
       topicId: selectedTopic.value.id,
       level: selectedLevel.value
     }
     router.push('/image-description/session')
-  })
-}*/
+}
 
 function goBack() {
   if (viewState.value === 'level') {
@@ -280,6 +292,22 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   font-family: "Nunito", sans-serif;
 }
 
+.topic-arrow {
+  display: flex;
+  align-items: center;
+}
+
+.topic-arrow--locked {
+  background-color: #a0aec0;
+  box-shadow: 0 3px 0px #718096;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+}
 
 .task-count {
   font-size: 14px;
@@ -293,7 +321,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   align-items: center;
   justify-content: center;
   padding: 10px 16px;
-  max-width: 450px;
+  max-width: 1240px;
   width: 100%;
 }
 
