@@ -36,7 +36,7 @@ import { useHead } from '#imports'
 import { Capacitor } from '@capacitor/core'
 import { AdMob } from '@capacitor-community/admob';
 import VNetwork from "./src/components/V-network.vue";
-
+const chainStore = userChainStore()
 const { locale, t } = useI18n()
 const billingStore = useBillingStore()
 
@@ -140,6 +140,7 @@ watch(() => authStore.uid, (newUid) => {
     questStore.loadDailyProgress();
     cardStore.loadCreatedCount();
     statsStore.loadLocalStats();
+    chainStore.loadProgressFromFirebase()
   }
 }, { immediate: true });
 

@@ -93,9 +93,9 @@ import { useSeoMeta } from '#imports';
 import VHearts from '../../src/components/V-hearts.vue';
 import VBackBtn from "~/src/components/V-back-btn.vue";
 import VReviveModal from "~/src/components/V-reviveModal.vue";
-import { showInterstitial, showRewarded } from '~/utils/admob.js';
+import { showRewarded } from '~/utils/admob.js';
 import VTransition from "~/src/components/V-transition.vue";
-import {Capacitor} from "@capacitor/core";
+import { Capacitor } from "@capacitor/core";
 
 const route = useRoute();
 const router = useRouter();
@@ -113,7 +113,7 @@ const pendingQuest = ref(null);
 const PRICE = 10;
 const MAX_ADS = 5;
 const remainingAds = ref(MAX_ADS);
-const mobile = Capacitor.isNativePlatform()
+const mobile = Capacitor.isNativePlatform();
 const wallet = computed(() => Number(langStore.points || 0));
 const canBuyLife = computed(() => wallet.value >= PRICE);
 
@@ -122,11 +122,10 @@ useSeoMeta({
 });
 
 const isApplication = () => {
-  if (mobile === 'ios' || mobile === 'android') {
+  if (mobile) {
     showRewardBtn.value = true;
   }
 }
-
 
 const currentRegionKey = computed(() => String(route.query.region || route.params.id || ""));
 const currentRegion = computed(() => {
@@ -219,30 +218,23 @@ const processedQuests = computed(() => {
   });
 });
 
-function proceedToQuest(quest, skipAd = false) {
-  const navigateToQuest = () => {
-    router.push({
-      path: `/location/quest-${quest.questId}`,
-      query: { region: currentRegionKey.value }
-    });
-  };
-  if (skipAd) {
-    navigateToQuest();
-  } else {
-    showInterstitial(navigateToQuest);
-  }
+function proceedToQuest(quest) {
+  router.push({
+    path: `/location/quest-${quest.questId}`,
+    query: { region: currentRegionKey.value }
+  });
 }
 
 function handleStartQuest(quest) {
   if (!quest?.questId) return;
-  isApplication()
+  isApplication();
   if (chainStore.lives <= 0) {
     pendingQuest.value = quest;
     showNoLivesModal.value = true;
     return;
   }
 
-  proceedToQuest(quest, false);
+  proceedToQuest(quest);
 }
 
 async function trySpendLocal(amount) {
@@ -269,7 +261,7 @@ async function purchaseLife() {
   showNoLivesModal.value = false;
 
   if (pendingQuest.value) {
-    proceedToQuest(pendingQuest.value, false);
+    proceedToQuest(pendingQuest.value);
     pendingQuest.value = null;
   }
 }
@@ -283,7 +275,7 @@ function watchAdForLife() {
         showNoLivesModal.value = false;
 
         if (pendingQuest.value) {
-          proceedToQuest(pendingQuest.value, true);
+          proceedToQuest(pendingQuest.value);
           pendingQuest.value = null;
         }
       },

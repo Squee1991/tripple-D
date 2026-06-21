@@ -72,7 +72,7 @@ export const userAuthStore = defineStore('auth', () => {
     const subscriptionEndsAt = ref(null);
     const subscriptionCancelled = ref(false);
     const paymentSource = ref(null);
-    const premiumDiscount = ref({ sale_5: false, sale_10: false, sale_15: false });
+    const premiumDiscount = ref({ sale_3: false, sale_5: false, sale_6: false, sale_10: false, sale_15: false });
 
     watch(isPremium, (newValue) => {
         if (typeof window !== 'undefined') {
@@ -144,9 +144,15 @@ export const userAuthStore = defineStore('auth', () => {
         if (data.points !== undefined) langStore.points = data.points;
         if (data.exp !== undefined) langStore.exp = data.exp;
         if (data.totalEarnedPoints !== undefined) langStore.totalEarnedPoints = data.totalEarnedPoints;
-
+        if (data.isLeveling !== undefined) langStore.isLeveling = data.isLeveling;
+        if (langStore.isLeveling === 0 && langStore.totalEarnedPoints >= 100) {
+            langStore.isLeveling = Math.floor(langStore.totalEarnedPoints / 100);
+            langStore.exp = langStore.totalEarnedPoints % 100;
+        }
         premiumDiscount.value = {
+            sale_3: data.sale_3 || false,
             sale_5: data.sale_5 || false,
+            sale_6: data.sale_6 || false,
             sale_10: data.sale_10 || false,
             sale_15: data.sale_15 || false
         };
@@ -231,7 +237,7 @@ export const userAuthStore = defineStore('auth', () => {
     const purchase = async (cost, discountId) => {
         const user = auth.currentUser;
         if (!user) return { success: false, reason: 'no-user' };
-        if (!['sale_5', 'sale_10', 'sale_15'].includes(discountId)) return { success: false, reason: 'invalid-item' };
+        if (!['sale_3', 'sale_5', 'sale_6', 'sale_10', 'sale_15'].includes(discountId)) return { success: false, reason: 'invalid-item' };
         if (totalHats.value < cost) return { success: false, reason: 'insufficient' };
         if (premiumDiscount.value[discountId] === true) return { success: false, reason: 'already-owned' };
 
@@ -354,7 +360,9 @@ export const userAuthStore = defineStore('auth', () => {
                     totalHats: 0,
                     points: 0,
                     claimedBonuses: [],
+                    sale_3: false,
                     sale_5: false,
+                    sale_6: false,
                     sale_10: false,
                     sale_15: false,
                     ...createInitialAchievementsObject()
@@ -432,7 +440,9 @@ export const userAuthStore = defineStore('auth', () => {
                     totalHats: 0,
                     points: 0,
                     claimedBonuses: [],
+                    sale_3: false,
                     sale_5: false,
+                    sale_6: false,
                     sale_10: false,
                     sale_15: false,
                     ...createInitialAchievementsObject()
@@ -482,7 +492,9 @@ export const userAuthStore = defineStore('auth', () => {
             totalHats: 0,
             points: 0,
             claimedBonuses: [],
+            sale_3: false,
             sale_5: false,
+            sale_6: false,
             sale_10: false,
             sale_15: false,
             ...createInitialAchievementsObject()

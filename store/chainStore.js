@@ -262,19 +262,19 @@ export const userChainStore = defineStore('chain', () => {
 			if (isSuccessNow && !reward) {
 				let currentExp = Number(data.exp || 0);
 				let currentLevel = Number(data.isLeveling || 0);
-				currentExp += 20;
+				currentExp += 10;
 				if (currentExp >= 100) {
 					currentLevel += 1;
 					currentExp -= 100;
 				}
 				tx.set(userRef, {
-					points: increment(20),
+					points: increment(10),
 					exp: currentExp,
 					isLeveling: currentLevel
 				}, { merge: true });
 				reward = true;
 				awardedNow = true;
-				langStore.points = Number(langStore.points || 0) + 20;
+				langStore.points = Number(langStore.points || 0) + 10;
 				langStore.exp = currentExp;
 				langStore.isLeveling = currentLevel;
 			}
