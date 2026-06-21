@@ -3,7 +3,19 @@ import { Capacitor } from '@capacitor/core';
 import { userAuthStore } from '../store/authStore.js';
 
 let isAdProcessing = false;
+
 const AD_LIMIT_PER_DAY = 5;
+const INTERSTITIAL_COOLDOWN_MS = 3 * 60 * 1000; // 3 минуты
+const LAST_INTERSTITIAL_KEY = 'lastInterstitialAdTime';
+
+function canShowInterstitialAd() {
+	const lastTime = Number(localStorage.getItem(LAST_INTERSTITIAL_KEY) || 0);
+	return Date.now() - lastTime >= INTERSTITIAL_COOLDOWN_MS;
+}
+
+function recordInterstitialView() {
+	localStorage.setItem(LAST_INTERSTITIAL_KEY, Date.now().toString());
+}
 
 function getTodayKey() {
 	const today = new Date();
@@ -14,21 +26,26 @@ function canShowRewardedAd() {
 	const todayKey = getTodayKey();
 	const statsStr = localStorage.getItem('adRewardStats');
 	if (!statsStr) return true;
+
 	const stats = JSON.parse(statsStr);
 	if (stats.date !== todayKey) return true;
+
 	return stats.count < AD_LIMIT_PER_DAY;
 }
 
 function recordSuccessfulView() {
 	const todayKey = getTodayKey();
 	const statsStr = localStorage.getItem('adRewardStats');
+
 	let stats = { date: todayKey, count: 0 };
+
 	if (statsStr) {
 		const parsedStats = JSON.parse(statsStr);
 		if (parsedStats.date === todayKey) {
 			stats = parsedStats;
 		}
 	}
+
 	stats.count++;
 	localStorage.setItem('adRewardStats', JSON.stringify(stats));
 	console.log(`Пользователь берет бонус! Использовано: ${stats.count}/${AD_LIMIT_PER_DAY}`);
@@ -36,13 +53,23 @@ function recordSuccessfulView() {
 
 export async function showInterstitial(nextStep) {
 	const authStore = userAuthStore();
+
 	if (authStore.isPremium) {
 		return nextStep();
 	}
+
 	if (!Capacitor.isNativePlatform()) {
 		return nextStep();
 	}
+
+	// 🔥 Главное ограничение: не чаще 1 раза в 3 минуты
+	if (!canShowInterstitialAd()) {
+		console.log('Interstitial реклама недавно уже показывалась. Идём дальше.');
+		return nextStep();
+	}
+
 	if (isAdProcessing) return;
+
 	isAdProcessing = true;
 	let hasTransitioned = false;
 
@@ -53,19 +80,23 @@ export async function showInterstitial(nextStep) {
 			nextStep();
 		}
 	};
+
 	const listener = await AdMob.addListener(InterstitialAdPluginEvents.Dismissed, () => {
 		console.log('Реклама закрыта, начинаем задание!');
 		listener.remove();
+		recordInterstitialView();
 		goNext();
 	});
+
 	try {
 		await AdMob.prepareInterstitial({
 			adId: 'ca-app-pub-3940256099942544/1033173712',
 		});
+
 		await AdMob.showInterstitial();
 
 	} catch (e) {
-		console.log("Ошибка рекламы, просто идем дальше", e);
+		console.log('Ошибка рекламы, просто идем дальше', e);
 		listener.remove();
 		goNext();
 	}
@@ -73,21 +104,25 @@ export async function showInterstitial(nextStep) {
 
 export async function showRewarded(onReward, onComplete, onLimitReached) {
 	const authStore = userAuthStore();
+
 	if (authStore.isPremium) {
 		onReward();
 		return onComplete(true);
 	}
+
 	if (!Capacitor.isNativePlatform()) {
 		onReward();
 		return onComplete(true);
 	}
+
 	if (!canShowRewardedAd()) {
-		console.log("Дневной лимит рекламы исчерпан.");
+		console.log('Дневной лимит рекламы исчерпан.');
 		if (onLimitReached) onLimitReached();
 		return;
 	}
 
 	if (isAdProcessing) return;
+
 	isAdProcessing = true;
 	let rewardReceived = false;
 
@@ -108,9 +143,11 @@ export async function showRewarded(onReward, onComplete, onLimitReached) {
 		await AdMob.prepareRewardVideoAd({
 			adId: 'ca-app-pub-3940256099942544/5224354917',
 		});
+
 		await AdMob.showRewardVideoAd();
+
 	} catch (e) {
-		console.log("Ошибка Rewarded рекламы", e);
+		console.log('Ошибка Rewarded рекламы', e);
 		rewardListener.remove();
 		dismissListener.remove();
 		isAdProcessing = false;
