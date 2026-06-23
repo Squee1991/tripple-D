@@ -25,7 +25,6 @@ import {
 import { GoogleSignIn } from '@capawesome/capacitor-google-sign-in';
 import { doc, setDoc, getDoc, getFirestore, updateDoc, serverTimestamp, writeBatch } from 'firebase/firestore';
 import { userlangStore } from "./learningStore.js";
-import { AppleSignIn, SignInScope } from '@capawesome/capacitor-apple-sign-in';
 let authStateUnsubscribe = null;
 
 const isUserCancelledAuth = (error) => {

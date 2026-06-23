@@ -84,10 +84,10 @@
           >
             <div class="g-header">
               <span class="g-title" :style="{ color: g.color }">{{ g.label }}</span>
-              <div class="g-rank-badge">{{ t('galaxyCabinet.rank') }} {{
-                  getRank(store.highScores[g.id] || 0).label
-                }}
-              </div>
+<!--              <div class="g-rank-badge">{{ t('galaxyCabinet.rank') }} {{-->
+<!--                  getRank(store.highScores[g.id] || 0).label-->
+<!--                }}-->
+<!--              </div>-->
             </div>
             <div class="g-body">
               <div class="g-score-line">
@@ -547,7 +547,7 @@ onMounted(async () => {
 
 .galaxy-card {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   padding: 15px;
   border-left: 4px solid var(--g-color);
   transition: all 0.2s;

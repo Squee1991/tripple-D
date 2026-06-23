@@ -1,0 +1,659 @@
+{
+  "start": {
+    "botText": "Guten Tag! Arbeitsvermittlung, wie kann ich Ihnen heute helfen?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Агентство по трудоустройству, чем я могу вам сегодня помочь?",
+      "en-US": "Good day! Employment agency, how can I help you today?",
+      "ar-SA": "طاب يومك! وكالة التوظيف، كيف يمكنني مساعدتك اليوم؟",
+      "es-ES": "¡Buenos días! Agencia de empleo, ¿en qué puedo ayudarle hoy?",
+      "fr-FR": "Bonjour ! Agence pour l'emploi, comment puis-je vous aider aujourd'hui ?",
+      "hi-IN": "शुभ दिन! रोजगार एजेंसी, आज मैं आपकी कैसे मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! Agencja pracy, w czym mogę dzisiaj pomóc?",
+      "ro-RO": "Bună ziua! Agenția de plasare a forței de muncă, cu ce vă pot ajuta astăzi?",
+      "tr-TR": "İyi günler! İş bulma kurumu, bugün size nasıl yardımcı olabilirim?",
+      "uk-UA": "Добрий день! Агентство з працевлаштування, чим я можу вам сьогодні допомогти?",
+      "uz-UZ": "Xayrli kun! Bandlik agentligi, bugun sizga qanday yordam bera olaman?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Arbeitsvermittlung",
+        "translation": {
+          "ru-RU": "агентство по трудоустройству",
+          "en-US": "employment agency",
+          "ar-SA": "وكالة التوظيف",
+          "es-ES": "agencia de empleo",
+          "fr-FR": "agence pour l'emploi",
+          "hi-IN": "रोजगार एजेंसी",
+          "pl-PL": "agencja pracy",
+          "ro-RO": "agenția de muncă",
+          "tr-TR": "iş bulma kurumu",
+          "uk-UA": "агентство з працевлаштування",
+          "uz-UZ": "bandlik agentligi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hallo, ich suche Arbeit.",
+        "translation": {
+          "ru-RU": "Здравствуйте, я ищу работу.",
+          "en-US": "Hello, I am looking for work.",
+          "ar-SA": "مرحباً، أنا أبحث عن عمل.",
+          "es-ES": "Hola, busco trabajo.",
+          "fr-FR": "Bonjour, je cherche du travail.",
+          "hi-IN": "नमस्ते, मैं काम ढूंढ रहा हूँ।",
+          "pl-PL": "Witam, szukam pracy.",
+          "ro-RO": "Bună, caut de muncă.",
+          "tr-TR": "Merhaba, iş arıyorum.",
+          "uk-UA": "Добрий день, я шукаю роботу.",
+          "uz-UZ": "Salom, men ish qidiryapman."
+        },
+        "nextStep": "offers"
+      },
+      {
+        "text": "Guten Tag, haben Sie offene Stellen?",
+        "translation": {
+          "ru-RU": "Добрый день, у вас есть открытые вакансии?",
+          "en-US": "Good day, do you have open positions?",
+          "ar-SA": "طاب يومك، هل لديكم وظائف شاغرة؟",
+          "es-ES": "Buenos días, ¿tienen puestos vacantes?",
+          "fr-FR": "Bonjour, avez-vous des postes vacants ?",
+          "hi-IN": "शुभ दिन, क्या आपके पास खुली रिक्तियां हैं?",
+          "pl-PL": "Dzień dobry, czy macie wolne stanowiska?",
+          "ro-RO": "Bună ziua, aveți posturi vacante?",
+          "tr-TR": "İyi günler, açık pozisyonlarınız var mı?",
+          "uk-UA": "Добрий день, у вас є відкриті вакансії?",
+          "uz-UZ": "Xayrli kun, sizda bo'sh ish o'rinlari bormi?"
+        },
+        "nextStep": "offers"
+      }
+    ],
+    "defaultNext": "offers"
+  },
+  "offers": {
+    "botText": "Sehr gerne. Wir haben gerade viele neue Angebote in unserer Datenbank.",
+    "botTranslation": {
+      "ru-RU": "С удовольствием. В нашей базе данных как раз появилось много новых предложений.",
+      "en-US": "With pleasure. We currently have many new offers in our database.",
+      "ar-SA": "بكل سرور. لدينا حاليا العديد من العروض الجديدة في قاعدة بياناتنا.",
+      "es-ES": "Con mucho gusto. Ahora mismo tenemos muchas ofertas nuevas en nuestra base de datos.",
+      "fr-FR": "Très volontiers. Nous avons actuellement de nombreuses nouvelles offres dans notre base de données.",
+      "hi-IN": "बहुत खुशी से। हमारे डेटाबेस में अभी कई नए प्रस्ताव हैं।",
+      "pl-PL": "Bardzo chętnie. Mamy obecnie wiele nowych ofert w naszej bazie danych.",
+      "ro-RO": "Cu mare drag. Avem chiar acum multe oferte noi în baza noastră de date.",
+      "tr-TR": "Memnuniyetle. Şu anda veritabanımızda birçok yeni teklifimiz var.",
+      "uk-UA": "Із задоволенням. У нашій базі даних якраз багато нових пропозицій.",
+      "uz-UZ": "Bajonidil. Hozir bazamizda ko'plab yangi takliflar bor."
+    },
+    "vocabulary": [
+      {
+        "german": "viele neue Angebote",
+        "translation": {
+          "ru-RU": "много новых предложений",
+          "en-US": "many new offers",
+          "ar-SA": "العديد من العروض الجديدة",
+          "es-ES": "muchas ofertas nuevas",
+          "fr-FR": "beaucoup de nouvelles offres",
+          "hi-IN": "कई नए प्रस्ताव",
+          "pl-PL": "wiele nowych ofert",
+          "ro-RO": "multe oferte noi",
+          "tr-TR": "birçok yeni teklif",
+          "uk-UA": "багато нових пропозицій",
+          "uz-UZ": "ko'plab yangi takliflar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das ist super, ich brauche dringend einen Job.",
+        "translation": {
+          "ru-RU": "Это супер, мне срочно нужна работа.",
+          "en-US": "That's super, I urgently need a job.",
+          "ar-SA": "هذا رائع، أنا بحاجة ماسة إلى وظيفة.",
+          "es-ES": "Eso es súper, necesito un trabajo urgentemente.",
+          "fr-FR": "C'est super, j'ai un besoin urgent d'un travail.",
+          "hi-IN": "यह बहुत अच्छा है, मुझे तत्काल नौकरी की आवश्यकता है।",
+          "pl-PL": "To super, pilnie potrzebuję pracy.",
+          "ro-RO": "E super, am nevoie urgent de un loc de muncă.",
+          "tr-TR": "Bu harika, acilen bir işe ihtiyacım var.",
+          "uk-UA": "Це супер, мені терміново потрібна робота.",
+          "uz-UZ": "Bu zo'r, menga zudlik bilan ish kerak."
+        },
+        "nextStep": "job_type"
+      },
+      {
+        "text": "Das klingt gut, was bieten Sie an?",
+        "translation": {
+          "ru-RU": "Звучит хорошо, что вы предлагаете?",
+          "en-US": "That sounds good, what do you offer?",
+          "ar-SA": "هذا يبدو جيداً، ماذا تقدمون؟",
+          "es-ES": "Suena bien, ¿qué ofrecen?",
+          "fr-FR": "Ça a l'air bien, que proposez-vous ?",
+          "hi-IN": "यह अच्छा लगता है, आप क्या पेशकश करते हैं?",
+          "pl-PL": "Brzmi dobrze, co proponujecie?",
+          "ro-RO": "Sună bine, ce oferiți?",
+          "tr-TR": "Kulağa hoş geliyor, ne öneriyorsunuz?",
+          "uk-UA": "Звучить добре, що ви пропонуєте?",
+          "uz-UZ": "Yaxshi eshitilyapti, nima taklif qilasizlar?"
+        },
+        "nextStep": "job_type"
+      }
+    ],
+    "defaultNext": "job_type"
+  },
+  "job_type": {
+    "botText": "Wir haben gute Arbeit für Sie, zum Beispiel in dem Lager oder in der Produktion.",
+    "botTranslation": {
+      "ru-RU": "У нас есть хорошая работа для вас, например, на складе или на производстве.",
+      "en-US": "We have good work for you, for example in the warehouse or in production.",
+      "ar-SA": "لدينا عمل جيد لك، على سبيل المثال في المستودع أو في الإنتاج.",
+      "es-ES": "Tenemos un buen trabajo para usted, por ejemplo en el almacén o en la producción.",
+      "fr-FR": "Nous avons du bon travail pour vous, par exemple dans l'entrepôt ou dans la production.",
+      "hi-IN": "हमारे पास आपके लिए अच्छा काम है, उदाहरण के लिए गोदाम में या उत्पादन में।",
+      "pl-PL": "Mamy dla pana/pani dobrą pracę, na przykład w magazynie lub przy produkcji.",
+      "ro-RO": "Avem de lucru bun pentru dumneavoastră, de exemplu în depozit sau în producție.",
+      "tr-TR": "Sizin için iyi işlerimiz var, örneğin depoda veya üretimde.",
+      "uk-UA": "У нас є хороша робота для вас, наприклад, на складі або на виробництві.",
+      "uz-UZ": "Bizda siz uchun yaxshi ish bor, masalan omborda yoki ishlab chiqarishda."
+    },
+    "vocabulary": [
+      {
+        "german": "in dem Lager (Dativ)",
+        "translation": {
+          "ru-RU": "на складе (где?)",
+          "en-US": "in the warehouse (where?)",
+          "ar-SA": "في المستودع (أين؟)",
+          "es-ES": "en el almacén (¿dónde?)",
+          "fr-FR": "dans l'entrepôt (où ?)",
+          "hi-IN": "गोदाम में (कहाँ?)",
+          "pl-PL": "w magazynie (gdzie?)",
+          "ro-RO": "în depozit (unde?)",
+          "tr-TR": "depoda (nerede?)",
+          "uk-UA": "на складі (де?)",
+          "uz-UZ": "omborda (qayerda?)"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich habe Erfahrung in dem Lager.",
+        "translation": {
+          "ru-RU": "У меня есть опыт работы на складе.",
+          "en-US": "I have experience in the warehouse.",
+          "ar-SA": "لدي خبرة في المستودع.",
+          "es-ES": "Tengo experiencia en el almacén.",
+          "fr-FR": "J'ai de l'expérience dans l'entrepôt.",
+          "hi-IN": "मुझे गोदाम का अनुभव है।",
+          "pl-PL": "Mam doświadczenie w magazynie.",
+          "ro-RO": "Am experiență în depozit.",
+          "tr-TR": "Depoda deneyimim var.",
+          "uk-UA": "У мене є досвід роботи на складі.",
+          "uz-UZ": "Omborda tajribam bor."
+        },
+        "nextStep": "interview_invite"
+      },
+      {
+        "text": "Ich möchte lieber in der Produktion arbeiten.",
+        "translation": {
+          "ru-RU": "Я бы предпочел работать на производстве.",
+          "en-US": "I would rather work in production.",
+          "ar-SA": "أفضل العمل في الإنتاج.",
+          "es-ES": "Prefiero trabajar en producción.",
+          "fr-FR": "Je préférerais travailler dans la production.",
+          "hi-IN": "मैं उत्पादन में काम करना पसंद करूँगा।",
+          "pl-PL": "Wolałbym pracować przy produkcji.",
+          "ro-RO": "Aș prefera să lucrez în producție.",
+          "tr-TR": "Üretimde çalışmayı tercih ederim.",
+          "uk-UA": "Я б волів працювати на виробництві.",
+          "uz-UZ": "Men ko'proq ishlab chiqarishda ishlashni xohlardim."
+        },
+        "nextStep": "interview_invite"
+      }
+    ],
+    "defaultNext": "interview_invite"
+  },
+  "interview_invite": {
+    "botText": "Das klingt interessant. Für diese Arbeit brauchen wir aber ein kurzes Gespräch in dem Büro.",
+    "botTranslation": {
+      "ru-RU": "Звучит интересно. Но для этой работы нам нужно коротко побеседовать в офисе.",
+      "en-US": "That sounds interesting. However, for this work we need a short conversation in the office.",
+      "ar-SA": "هذا يبدو مثيراً للاهتمام. ولكن من أجل هذا العمل نحتاج إلى محادثة قصيرة في المكتب.",
+      "es-ES": "Suena interesante. Pero para este trabajo necesitamos una breve charla en la oficina.",
+      "fr-FR": "Cela semble intéressant. Mais pour ce travail, nous avons besoin d'un court entretien au bureau.",
+      "hi-IN": "यह दिलचस्प लगता है। लेकिन इस काम के लिए हमें कार्यालय में एक छोटी सी बातचीत की आवश्यकता है।",
+      "pl-PL": "To brzmi interesująco. Do tej pracy potrzebujemy jednak krótkiej rozmowy w biurze.",
+      "ro-RO": "Sună interesant. Dar pentru această muncă avem nevoie de o scurtă discuție în birou.",
+      "tr-TR": "Bu ilginç geliyor. Ancak bu iş için ofiste kısa bir görüşmeye ihtiyacımız var.",
+      "uk-UA": "Звучить цікаво. Але для цієї роботи нам потрібна коротка розмова в офісі.",
+      "uz-UZ": "Bu qiziqarli eshitilyapti. Lekin bu ish uchun ofisda qisqacha suhbatlashishimiz kerak."
+    },
+    "vocabulary": [
+      {
+        "german": "in dem Büro (Dativ)",
+        "translation": {
+          "ru-RU": "в офисе (где?)",
+          "en-US": "in the office (where?)",
+          "ar-SA": "في المكتب (أين؟)",
+          "es-ES": "en la oficina (¿dónde?)",
+          "fr-FR": "dans le bureau (où ?)",
+          "hi-IN": "कार्यालय में (कहाँ?)",
+          "pl-PL": "w biurze (gdzie?)",
+          "ro-RO": "în birou (unde?)",
+          "tr-TR": "ofiste (nerede?)",
+          "uk-UA": "в офісі (де?)",
+          "uz-UZ": "ofisda (qayerda?)"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Kein Problem, wann soll ich kommen?",
+        "translation": {
+          "ru-RU": "Без проблем, когда мне прийти?",
+          "en-US": "No problem, when should I come?",
+          "ar-SA": "لا مشكلة، متى يجب أن أحضر؟",
+          "es-ES": "Ningún problema, ¿cuándo debo ir?",
+          "fr-FR": "Pas de problème, quand dois-je venir ?",
+          "hi-IN": "कोई बात नहीं, मुझे कब आना चाहिए?",
+          "pl-PL": "Nie ma problemu, kiedy mam przyjść?",
+          "ro-RO": "Nici o problemă, când ar trebui să vin?",
+          "tr-TR": "Sorun değil, ne zaman gelmeliyim?",
+          "uk-UA": "Без проблем, коли мені прийти?",
+          "uz-UZ": "Muammo yo'q, qachon kelishim kerak?"
+        },
+        "nextStep": "details_explain"
+      },
+      {
+        "text": "Geht das auch morgen?",
+        "translation": {
+          "ru-RU": "Можно и завтра?",
+          "en-US": "Is tomorrow also possible?",
+          "ar-SA": "هل يمكن ذلك غداً أيضاً؟",
+          "es-ES": "¿También es posible mañana?",
+          "fr-FR": "Est-ce possible demain aussi ?",
+          "hi-IN": "क्या यह कल भी संभव है?",
+          "pl-PL": "Czy można też jutro?",
+          "ro-RO": "Merge și mâine?",
+          "tr-TR": "Yarın da olur mu?",
+          "uk-UA": "Можна й завтра?",
+          "uz-UZ": "Ertaga ham bo'ladimi?"
+        },
+        "nextStep": "details_explain"
+      }
+    ],
+    "defaultNext": "details_explain"
+  },
+  "details_explain": {
+    "botText": "Das ist kein Problem. Wir müssen nur die Details für die Stelle besprechen.",
+    "botTranslation": {
+      "ru-RU": "Это не проблема. Нам просто нужно обсудить детали для этой должности.",
+      "en-US": "That is no problem. We just need to discuss the details for the position.",
+      "ar-SA": "هذه ليست مشكلة. علينا فقط مناقشة تفاصيل الوظيفة.",
+      "es-ES": "No hay problema. Sólo tenemos que discutir los detalles para el puesto.",
+      "fr-FR": "Ce n'est pas un problème. Nous devons juste discuter des détails pour le poste.",
+      "hi-IN": "यह कोई समस्या नहीं है। हमें बस पद के विवरण पर चर्चा करने की आवश्यकता है।",
+      "pl-PL": "Nie ma problemu. Musimy tylko omówić szczegóły dotyczące tego stanowiska.",
+      "ro-RO": "Nu e nicio problemă. Trebuie doar să discutăm detaliile pentru post.",
+      "tr-TR": "Bu sorun değil. Sadece pozisyon için detayları konuşmamız gerekiyor.",
+      "uk-UA": "Це не проблема. Нам просто потрібно обговорити деталі для цієї посади.",
+      "uz-UZ": "Bu muammo emas. Biz shunchaki bu lavozim bo'yicha tafsilotlarni muhokama qilishimiz kerak."
+    },
+    "vocabulary": [
+      {
+        "german": "für die Stelle (Akkusativ)",
+        "translation": {
+          "ru-RU": "для должности",
+          "en-US": "for the position",
+          "ar-SA": "للوظيفة",
+          "es-ES": "para el puesto",
+          "fr-FR": "pour le poste",
+          "hi-IN": "पद के लिए",
+          "pl-PL": "na stanowisko",
+          "ro-RO": "pentru post",
+          "tr-TR": "pozisyon için",
+          "uk-UA": "для посади",
+          "uz-UZ": "lavozim uchun"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Okay, ich komme morgen.",
+        "translation": {
+          "ru-RU": "Хорошо, я приду завтра.",
+          "en-US": "Okay, I will come tomorrow.",
+          "ar-SA": "حسناً، سأحضر غداً.",
+          "es-ES": "Vale, vendré mañana.",
+          "fr-FR": "D'accord, je viens demain.",
+          "hi-IN": "ठीक है, मैं कल आऊंगा।",
+          "pl-PL": "Okej, przyjdę jutro.",
+          "ro-RO": "Ok, vin mâine.",
+          "tr-TR": "Tamam, yarın geleceğim.",
+          "uk-UA": "Добре, я прийду завтра.",
+          "uz-UZ": "Yaxshi, men ertaga kelaman."
+        },
+        "nextStep": "time_proposal"
+      },
+      {
+        "text": "Verstehe, ich bin bereit für das Gespräch.",
+        "translation": {
+          "ru-RU": "Понимаю, я готов к разговору.",
+          "en-US": "I understand, I am ready for the conversation.",
+          "ar-SA": "أفهم، أنا مستعد للمحادثة.",
+          "es-ES": "Entiendo, estoy listo para la entrevista.",
+          "fr-FR": "Je comprends, je suis prêt pour l'entretien.",
+          "hi-IN": "मैं समझता हूँ, मैं बातचीत के लिए तैयार हूँ।",
+          "pl-PL": "Rozumiem, jestem gotów na rozmowę.",
+          "ro-RO": "Înțeleg, sunt gata pentru discuție.",
+          "tr-TR": "Anlıyorum, görüşme için hazırım.",
+          "uk-UA": "Розумію, я готовий до розмови.",
+          "uz-UZ": "Tushundim, men suhbatga tayyorman."
+        },
+        "nextStep": "time_proposal"
+      }
+    ],
+    "defaultNext": "time_proposal"
+  },
+  "time_proposal": {
+    "botText": "Perfekt! Um 10:00 Uhr passt es uns am besten für den Termin.",
+    "botTranslation": {
+      "ru-RU": "Идеально! В 10:00 нам лучше всего подходит для встречи.",
+      "en-US": "Perfect! At 10:00 suits us best for the appointment.",
+      "ar-SA": "ممتاز! الساعة 10:00 تناسبنا أفضل للموعد.",
+      "es-ES": "¡Perfecto! A las 10:00 nos viene mejor para la cita.",
+      "fr-FR": "Parfait ! 10h00 nous convient le mieux pour le rendez-vous.",
+      "hi-IN": "उत्तम! नियुक्ति के लिए 10:00 बजे हमारे लिए सबसे उपयुक्त है।",
+      "pl-PL": "Idealnie! Godzina 10:00 najbardziej nam pasuje na spotkanie.",
+      "ro-RO": "Perfect! Ora 10:00 ne convine cel mai bine pentru programare.",
+      "tr-TR": "Mükemmel! Randevu için saat 10:00 bize en uygun olanı.",
+      "uk-UA": "Ідеально! О 10:00 нам найкраще підходить для зустрічі.",
+      "uz-UZ": "Ajoyib! Soat 10:00 uchrashuv uchun bizga eng ma'qul vaqt."
+    },
+    "vocabulary": [
+      {
+        "german": "für den Termin (Akkusativ)",
+        "translation": {
+          "ru-RU": "для встречи",
+          "en-US": "for the appointment",
+          "ar-SA": "للموعد",
+          "es-ES": "para la cita",
+          "fr-FR": "pour le rendez-vous",
+          "hi-IN": "नियुक्ति के लिए",
+          "pl-PL": "na termin/spotkanie",
+          "ro-RO": "pentru programare",
+          "tr-TR": "randevu için",
+          "uk-UA": "для зустрічі",
+          "uz-UZ": "uchrashuv uchun"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, 10:00 Uhr passt.",
+        "translation": {
+          "ru-RU": "Все ясно, 10:00 подходит.",
+          "en-US": "All right, 10:00 suits me.",
+          "ar-SA": "حسناً، الساعة 10:00 مناسبة.",
+          "es-ES": "De acuerdo, a las 10:00 me viene bien.",
+          "fr-FR": "Très bien, 10h00 me convient.",
+          "hi-IN": "ठीक है, 10:00 बजे ठीक है।",
+          "pl-PL": "Wszystko jasne, godzina 10:00 pasuje.",
+          "ro-RO": "Am înțeles, 10:00 e bine.",
+          "tr-TR": "Tamam, 10:00 uyar.",
+          "uk-UA": "Все зрозуміло, 10:00 підходить.",
+          "uz-UZ": "Tushunarli, 10:00 to'g'ri keladi."
+        },
+        "nextStep": "bring_cv"
+      },
+      {
+        "text": "Gut, ich bin um 10:00 Uhr da.",
+        "translation": {
+          "ru-RU": "Хорошо, я буду там в 10:00.",
+          "en-US": "Good, I will be there at 10:00.",
+          "ar-SA": "جيد، سأكون هناك في الساعة 10:00.",
+          "es-ES": "Bien, estaré allí a las 10:00.",
+          "fr-FR": "Bien, je serai là à 10h00.",
+          "hi-IN": "अच्छा, मैं 10:00 बजे वहाँ पहुँच जाऊँगा।",
+          "pl-PL": "Dobrze, będę o 10:00.",
+          "ro-RO": "Bine, voi fi acolo la 10:00.",
+          "tr-TR": "Güzel, saat 10:00'da orada olacağım.",
+          "uk-UA": "Добре, я буду там о 10:00.",
+          "uz-UZ": "Yaxshi, men soat 10:00 da o'sha yerda bo'laman."
+        },
+        "nextStep": "bring_cv"
+      }
+    ],
+    "defaultNext": "bring_cv"
+  },
+  "bring_cv": {
+    "botText": "Super. Bitte bringen Sie Ihren Lebenslauf mit in das Gespräch.",
+    "botTranslation": {
+      "ru-RU": "Супер. Пожалуйста, принесите с собой резюме на собеседование.",
+      "en-US": "Super. Please bring your CV with you to the interview/conversation.",
+      "ar-SA": "رائع. يرجى إحضار سيرتك الذاتية معك إلى المقابلة.",
+      "es-ES": "Súper. Por favor, traiga su currículum a la entrevista.",
+      "fr-FR": "Super. Veuillez apporter votre CV à l'entretien.",
+      "hi-IN": "बढ़िया। कृपया बातचीत/साक्षात्कार में अपना रिज्यूमे साथ लाएं।",
+      "pl-PL": "Super. Proszę przynieść ze sobą CV na rozmowę.",
+      "ro-RO": "Super. Vă rog să aduceți CV-ul dumneavoastră la interviu.",
+      "tr-TR": "Harika. Lütfen görüşmeye özgeçmişinizi getirin.",
+      "uk-UA": "Супер. Будь ласка, принесіть своє резюме на співбесіду.",
+      "uz-UZ": "Zo'r. Iltimos, suhbatga o'zingiz bilan rezyumeni olib keling."
+    },
+    "vocabulary": [
+      {
+        "german": "in das Gespräch (Akkusativ)",
+        "translation": {
+          "ru-RU": "на разговор/встречу (куда?)",
+          "en-US": "into the conversation (where to?)",
+          "ar-SA": "في المحادثة (إلى أين؟)",
+          "es-ES": "a la conversación (¿a dónde?)",
+          "fr-FR": "dans la conversation (vers où ?)",
+          "hi-IN": "बातचीत में (कहाँ को?)",
+          "pl-PL": "na rozmowę (dokąd?)",
+          "ro-RO": "în conversație (încotro?)",
+          "tr-TR": "görüşmeye (nereye?)",
+          "uk-UA": "на розмову (куди?)",
+          "uz-UZ": "suhbatga (qayerga?)"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich habe ihn schon digital.",
+        "translation": {
+          "ru-RU": "Он у меня уже в цифровом виде.",
+          "en-US": "I already have it digitally.",
+          "ar-SA": "لديها بالفعل بصيغة رقمية.",
+          "es-ES": "Ya lo tengo en formato digital.",
+          "fr-FR": "Je l'ai déjà au format numérique.",
+          "hi-IN": "मेरे पास यह पहले से ही डिजिटल रूप में है।",
+          "pl-PL": "Mam je już w wersji cyfrowej.",
+          "ro-RO": "Îl am deja în format digital.",
+          "tr-TR": "Bende zaten dijital olarak var.",
+          "uk-UA": "Він у мене вже в цифровому вигляді.",
+          "uz-UZ": "Menda u allaqachon raqamli ko'rinishda bor."
+        },
+        "nextStep": "final_confirmation"
+      },
+      {
+        "text": "Ich bringe ihn auf Papier mit.",
+        "translation": {
+          "ru-RU": "Я принесу его на бумаге.",
+          "en-US": "I will bring it on paper.",
+          "ar-SA": "سأحضرها ورقياً.",
+          "es-ES": "Lo traeré en papel.",
+          "fr-FR": "Je l'apporterai sur papier.",
+          "hi-IN": "मैं इसे कागज पर लाऊंगा।",
+          "pl-PL": "Przyniosę je na papierze.",
+          "ro-RO": "Îl voi aduce pe hârtie.",
+          "tr-TR": "Kağıt üzerinde getireceğim.",
+          "uk-UA": "Я принесу його на папері.",
+          "uz-UZ": "Men uni qog'ozda olib kelaman."
+        },
+        "nextStep": "final_confirmation"
+      }
+    ],
+    "defaultNext": "final_confirmation"
+  },
+  "final_confirmation": {
+    "botText": "Das ist egal, hauptsache Sie haben ihn dabei, wenn Sie in das Büro kommen.",
+    "botTranslation": {
+      "ru-RU": "Это неважно, главное, чтобы он был с вами, когда вы придете в офис.",
+      "en-US": "That doesn't matter, the main thing is you have it with you when you come into the office.",
+      "ar-SA": "لا يهم، الشيء الرئيسي هو أن يكون معك عندما تأتي إلى المكتب.",
+      "es-ES": "No importa, lo principal es que lo tenga consigo cuando venga a la oficina.",
+      "fr-FR": "Peu importe, l'essentiel est que vous l'ayez avec vous quand vous viendrez au bureau.",
+      "hi-IN": "इससे कोई फर्क नहीं पड़ता, मुख्य बात यह है कि जब आप कार्यालय में आते हैं तो यह आपके पास हो।",
+      "pl-PL": "To obojętne, najważniejsze, żeby pan/pani je miał(a) przy sobie, kiedy pan/pani przyjdzie do biura.",
+      "ro-RO": "Nu contează, important e să-l aveți la dumneavoastră când veniți în birou.",
+      "tr-TR": "Fark etmez, önemli olan ofise geldiğinizde yanınızda olması.",
+      "uk-UA": "Це не має значення, головне, щоб він був з вами, коли ви прийдете в офіс.",
+      "uz-UZ": "Buning farqi yo'q, asosiysi ofisga kelganingizda u yoningizda bo'lsin."
+    },
+    "vocabulary": [
+      {
+        "german": "in das Büro (Akkusativ)",
+        "translation": {
+          "ru-RU": "в офис (куда?)",
+          "en-US": "into the office (where to?)",
+          "ar-SA": "إلى المكتب (إلى أين؟)",
+          "es-ES": "a la oficina (¿a dónde?)",
+          "fr-FR": "dans le bureau (vers où ?)",
+          "hi-IN": "कार्यालय में (कहाँ को?)",
+          "pl-PL": "do biura (dokąd?)",
+          "ro-RO": "în birou (încotro?)",
+          "tr-TR": "ofise (nereye?)",
+          "uk-UA": "в офіс (куди?)",
+          "uz-UZ": "ofisga (qayerga?)"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, bis morgen!",
+        "translation": {
+          "ru-RU": "Все ясно, до завтра!",
+          "en-US": "All right, see you tomorrow!",
+          "ar-SA": "حسناً، أراك غداً!",
+          "es-ES": "¡Todo claro, hasta mañana!",
+          "fr-FR": "D'accord, à demain !",
+          "hi-IN": "ठीक है, कल मिलते हैं!",
+          "pl-PL": "Wszystko jasne, do jutra!",
+          "ro-RO": "Am înțeles, pe mâine!",
+          "tr-TR": "Tamam, yarına görüşürüz!",
+          "uk-UA": "Все зрозуміло, до завтра!",
+          "uz-UZ": "Tushunarli, ertagacha!"
+        },
+        "nextStep": "goodbye_bot"
+      },
+      {
+        "text": "Danke, wir sehen uns morgen!",
+        "translation": {
+          "ru-RU": "Спасибо, увидимся завтра!",
+          "en-US": "Thanks, see you tomorrow!",
+          "ar-SA": "شكراً، نلتقي غداً!",
+          "es-ES": "¡Gracias, nos vemos mañana!",
+          "fr-FR": "Merci, on se voit demain !",
+          "hi-IN": "धन्यवाद, कल मिलते हैं!",
+          "pl-PL": "Dziękuję, do zobaczenia jutro!",
+          "ro-RO": "Mulțumesc, ne vedem mâine!",
+          "tr-TR": "Teşekkürler, yarın görüşürüz!",
+          "uk-UA": "Дякую, побачимось завтра!",
+          "uz-UZ": "Rahmat, ertaga ko'rishamiz!"
+        },
+        "nextStep": "goodbye_bot"
+      }
+    ],
+    "defaultNext": "goodbye_bot"
+  },
+  "goodbye_bot": {
+    "botText": "Sehr gut, wir sehen uns dann morgen in dem Büro! Auf Wiederhören.",
+    "botTranslation": {
+      "ru-RU": "Очень хорошо, тогда увидимся завтра в офисе! До свидания.",
+      "en-US": "Very good, we will see each other tomorrow in the office! Goodbye.",
+      "ar-SA": "جيد جداً، سنلتقي غداً في المكتب! إلى اللقاء.",
+      "es-ES": "¡Muy bien, entonces nos vemos mañana en la oficina! Adiós.",
+      "fr-FR": "Très bien, on se voit donc demain au bureau ! Au revoir.",
+      "hi-IN": "बहुत अच्छा, तो हम कल कार्यालय में मिलेंगे! अलविदा।",
+      "pl-PL": "Bardzo dobrze, w takim razie widzimy się jutro w biurze! Do usłyszenia.",
+      "ro-RO": "Foarte bine, atunci ne vedem mâine la birou! La revedere.",
+      "tr-TR": "Çok iyi, o zaman yarın ofiste görüşürüz! Hoşça kalın.",
+      "uk-UA": "Дуже добре, тоді побачимось завтра в офісі! До побачення.",
+      "uz-UZ": "Juda yaxshi, unda ertaga ofisda ko'rishamiz! Xayr."
+    },
+    "vocabulary": [
+      {
+        "german": "in dem Büro (Dativ)",
+        "translation": {
+          "ru-RU": "в офисе (где?)",
+          "en-US": "in the office (where?)",
+          "ar-SA": "في المكتب (أين؟)",
+          "es-ES": "en la oficina (¿dónde?)",
+          "fr-FR": "dans le bureau (où ?)",
+          "hi-IN": "कार्यालय में (कहाँ?)",
+          "pl-PL": "w biurze (gdzie?)",
+          "ro-RO": "în birou (unde?)",
+          "tr-TR": "ofiste (nerede?)",
+          "uk-UA": "в офісі (де?)",
+          "uz-UZ": "ofisda (qayerda?)"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Auf Wiederhören! Tschüss!",
+        "translation": {
+          "ru-RU": "До свидания! Пока!",
+          "en-US": "Goodbye! Bye!",
+          "ar-SA": "إلى اللقاء! وداعاً!",
+          "es-ES": "¡Adiós! ¡Chao!",
+          "fr-FR": "Au revoir ! Salut !",
+          "hi-IN": "अलविदा! बाय!",
+          "pl-PL": "Do usłyszenia! Cześć!",
+          "ro-RO": "La revedere! Pa!",
+          "tr-TR": "Hoşça kalın! Görüşürüz!",
+          "uk-UA": "До побачення! Бувай!",
+          "uz-UZ": "Xayr! Ko'rishguncha!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Bis morgen! Einen schönen Tag noch!",
+        "translation": {
+          "ru-RU": "До завтра! Хорошего дня!",
+          "en-US": "Until tomorrow! Have a nice day!",
+          "ar-SA": "حتى الغد! أتمنى لك يوماً سعيداً!",
+          "es-ES": "¡Hasta mañana! ¡Que tenga un buen día!",
+          "fr-FR": "À demain ! Bonne journée !",
+          "hi-IN": "कल तक! आपका दिन शुभ हो!",
+          "pl-PL": "Do jutra! Miłego dnia!",
+          "ro-RO": "Pe mâine! O zi frumoasă în continuare!",
+          "tr-TR": "Yarına kadar! İyi günler!",
+          "uk-UA": "До завтра! Гарного дня!",
+          "uz-UZ": "Ertagacha! Kuningiz yaxshi o'tsin!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

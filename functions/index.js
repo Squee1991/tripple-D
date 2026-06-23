@@ -22,18 +22,14 @@ exports.takeFromArticlePenalty = onSchedule({
 }, async (event) => {
 	const db = admin.firestore();
 	const now = Date.now();
-
 	const snapshot = await db.collectionGroup('daily')
 		.where('expiresAtMs', '<=', now)
 		.where('penaltyProcessed', '==', false)
 		.get();
-
 	if (snapshot.empty) return null;
-
 	let batch = db.batch();
 	let count = 0;
 	const promises = [];
-
 	for (const doc of snapshot.docs) {
 		if (doc.id !== 'currentDailyQuests') continue;
 
@@ -67,7 +63,6 @@ exports.takeFromArticlePenalty = onSchedule({
 			count = 0;
 		}
 	}
-
 	if (count > 0) promises.push(batch.commit());
 	await Promise.all(promises);
 	return null;

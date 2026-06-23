@@ -224,8 +224,8 @@ const textComputed = computed(() => {
 })
 
 const learnTabs = [
-  {id: 'dialog', label: 'Диалог', icon: Dialog},
-  {id: 'words', label: 'Слова', icon: Words},
+  {id: 'dialog', label: t('speakSession.dialogue'), icon: Dialog},
+  {id: 'words', label: t('speakSession.words'), icon: Words},
 ]
 
 const activeIndex = computed(() => learnTabs.findIndex(tab => tab.id === toggleState.value))
@@ -1017,7 +1017,7 @@ onMounted(() => {
 
 .option-btn {
   background-color: var(--menuItemsBg);
-  padding: 8px 20px;
+  padding: 8px 4px;
   text-align: left;
   cursor: pointer;
   transition: all 0.2s ease;

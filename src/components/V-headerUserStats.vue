@@ -42,7 +42,6 @@
         </div>
       </transition>
     </div>
-
     <transition name="slide-down">
       <div v-if="showFreezeModal" class="modal-overlay" @click.self="showFreezeModal = false">
         <div class="modal-content">
@@ -76,12 +75,13 @@ import {userAuthStore} from '../../store/authStore.js'
 import {userChainStore} from '../../store/chainStore.js'
 import {useI18n} from 'vue-i18n'
 import FreezeShield from '../../assets/images/FreezeShield.svg'
-import Hats from '../../assets/images/hatsNAv.svg'
+import Hats from '../../assets/images/Hats.svg'
 import Articlus from '../../assets/images/article.svg'
 import Heart from '../../assets/images/heartInfo.svg'
 import Forever from '../../assets/images/forever.svg'
 import VCalendarStreak from "~/src/components/V-calendarStreak.vue"
 import LogoPlus from '../../assets/images/PlusLogo.png'
+
 const {t} = useI18n()
 const langStore = userlangStore()
 const userAuth = userAuthStore()
@@ -212,7 +212,7 @@ onBeforeUnmount(() => {
   justify-content: center;
   padding: 8px 4px;
   border-radius: 14px;
-  box-shadow:  var(--boxShadowMobile);
+  box-shadow: var(--boxShadowMobile);
 }
 
 .stat-item-wrapper.plus {
@@ -229,7 +229,6 @@ onBeforeUnmount(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
   border: none;
   background: none;
   padding: 0 2px;

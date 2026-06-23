@@ -22,7 +22,7 @@
         </div>
         <main class="categories-container">
           <div
-              v-for="(category, catIndex) in categories"
+              v-for="(category, catIndex) in categoriesSpeak"
               :key="category.id"
               class="category-group"
           >
@@ -100,7 +100,7 @@ import VTransition from "~/src/components/V-transition.vue";
 import {useSpeakStore} from '../../store/speakStore.js';
 import Modal from '../../src/components/modal.vue';
 import SpeakingIcon from '../../assets/images/speakingIcon.svg';
-import {categories} from '../../utils/speak-themes-category.js';
+import { categoriesSpeak} from '../../utils/speak-themes-category.js';
 import {userAuthStore} from '../../store/authStore.js';
 import VPremiumModal from "~/src/components/V-premiumModal.vue";
 

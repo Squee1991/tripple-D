@@ -55,8 +55,6 @@
     "nuxt-vuefire": "1.0.5",
     "phaser": "3.90.0",
     "simplebar": "6.3.1",
-    "socket.io": "4.8.1",
-    "socket.io-client": "4.8.1",
     "stripe": "18.3.0",
     "three": "0.176.0",
     "turn.js": "1.0.5",

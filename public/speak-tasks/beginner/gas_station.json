@@ -1,0 +1,531 @@
+{
+  "start": {
+    "botText": "Hallo! Was bekommen Sie?",
+    "botTranslation": {
+      "ru-RU": "Привет! Что у Вас?",
+      "en-US": "Hello! What can I get you?",
+      "ar-SA": "مرحباً! ماذا لديك؟",
+      "es-ES": "¡Hola! ¿Qué le pongo?",
+      "fr-FR": "Bonjour ! Que prenez-vous ?",
+      "hi-IN": "नमस्ते! आपको क्या चाहिए?",
+      "pl-PL": "Cześć! Co podać?",
+      "ro-RO": "Salut! Ce doriți?",
+      "tr-TR": "Merhaba! Ne alırdınız?",
+      "uk-UA": "Привіт! Що у Вас?",
+      "uz-UZ": "Salom! Sizga nima kerak?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Tanksäule",
+        "translation": {
+          "ru-RU": "бензоколонка",
+          "en-US": "gas pump",
+          "ar-SA": "مضخة الوقود",
+          "es-ES": "surtidor de gasolina",
+          "fr-FR": "pompe à essence",
+          "hi-IN": "पेट्रोल पंप",
+          "pl-PL": "dystrybutor paliwa",
+          "ro-RO": "pompă de benzină",
+          "tr-TR": "benzin pompası",
+          "uk-UA": "бензоколонка",
+          "uz-UZ": "benzin pompasi"
+        }
+      },
+      {
+        "german": "das Benzin",
+        "translation": {
+          "ru-RU": "бензин",
+          "en-US": "gasoline",
+          "ar-SA": "بنزين",
+          "es-ES": "gasolina",
+          "fr-FR": "essence",
+          "hi-IN": "पेट्रोल",
+          "pl-PL": "benzyna",
+          "ro-RO": "benzină",
+          "tr-TR": "benzin",
+          "uk-UA": "бензин",
+          "uz-UZ": "benzin"
+        }
+      },
+      {
+        "german": "bezahlen",
+        "translation": {
+          "ru-RU": "оплачивать",
+          "en-US": "pay",
+          "ar-SA": "يدفع",
+          "es-ES": "pagar",
+          "fr-FR": "payer",
+          "hi-IN": "भुगतान करना",
+          "pl-PL": "płacić",
+          "ro-RO": "a plăti",
+          "tr-TR": "ödemek",
+          "uk-UA": "оплачувати",
+          "uz-UZ": "to'lamoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hallo! Ich möchte bitte die Tanksäule Nummer 3 bezahlen.",
+        "translation": {
+          "ru-RU": "Здравствуйте! Я хотел бы оплатить колонку номер 3.",
+          "en-US": "Hello! I would like to pay for gas pump number 3, please.",
+          "ar-SA": "مرحباً! أود الدفع لمضخة الوقود رقم 3 من فضلك.",
+          "es-ES": "¡Hola! Me gustaría pagar el surtidor número 3, por favor.",
+          "fr-FR": "Bonjour ! Je voudrais payer la pompe numéro 3, s'il vous plaît.",
+          "hi-IN": "नमस्ते! मैं कृपया पेट्रोल पंप नंबर 3 के लिए भुगतान करना चाहता हूँ।",
+          "pl-PL": "Dzień dobry! Chciałbym zapłacić za dystrybutor numer 3.",
+          "ro-RO": "Bună! Aș dori să plătesc pentru pompa numărul 3, vă rog.",
+          "tr-TR": "Merhaba! 3 numaralı pompayı ödemek istiyorum, lütfen.",
+          "uk-UA": "Доброго дня! Я хотів би оплатити колонку номер 3.",
+          "uz-UZ": "Salom! Men 3-raqamli benzinkalonkani to'lamoqchi edim."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo! Ich muss das Benzin von Tanksäule 3 bezahlen.",
+        "translation": {
+          "ru-RU": "Здравствуйте! Мне нужно оплатить бензин с 3-й колонки.",
+          "en-US": "Hello! I need to pay for the gas from pump 3.",
+          "ar-SA": "مرحباً! يجب أن أدفع ثمن البنزين من المضخة 3.",
+          "es-ES": "¡Hola! Tengo que pagar la gasolina del surtidor 3.",
+          "fr-FR": "Bonjour ! Je dois payer l'essence de la pompe 3.",
+          "hi-IN": "नमस्ते! मुझे पंप 3 से पेट्रोल का भुगतान करना है।",
+          "pl-PL": "Dzień dobry! Muszę zapłacić za benzynę z dystrybutora 3.",
+          "ro-RO": "Salut! Trebuie să plătesc benzina de la pompa 3.",
+          "tr-TR": "Merhaba! 3 numaralı pompadan aldığım benzini ödemem gerekiyor.",
+          "uk-UA": "Доброго дня! Мені потрібно оплатити бензин з 3-ї колонки.",
+          "uz-UZ": "Salom! Men 3-pompadagi benzin uchun to'lashim kerak."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Alles klar. Das macht 45 Euro. Möchten Sie noch etwas dazu?",
+    "botTranslation": {
+      "ru-RU": "Все ясно. С Вас 45 евро. Желаете что-нибудь еще?",
+      "en-US": "All right. That's 45 euros. Would you like anything else?",
+      "ar-SA": "حسناً. الحساب 45 يورو. هل تريد أي شيء آخر؟",
+      "es-ES": "De acuerdo. Son 45 euros. ¿Desea algo más?",
+      "fr-FR": "Très bien. Cela fait 45 euros. Désirez-vous autre chose ?",
+      "hi-IN": "ठीक है। यह 45 यूरो हुए। क्या आपको कुछ और चाहिए?",
+      "pl-PL": "Wszystko jasne. To będzie 45 euro. Czy życzy Pan sobie coś jeszcze?",
+      "ro-RO": "Am înțeles. Face 45 de euro. Mai doriți ceva?",
+      "tr-TR": "Tamam. 45 Euro yapıyor. Başka bir şey ister misiniz?",
+      "uk-UA": "Усе ясно. З Вас 45 євро. Бажаєте що-небудь ще?",
+      "uz-UZ": "Tushunarli. Bu 45 yevro bo'ladi. Yana nimadir xohlaysizmi?"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Nein, danke. Kann ich mit Karte bezahlen?",
+        "translation": {
+          "ru-RU": "Нет, спасибо. Могу ли я оплатить картой?",
+          "en-US": "No, thanks. Can I pay by card?",
+          "ar-SA": "لا، شكراً. هل يمكنني الدفع بالبطاقة؟",
+          "es-ES": "No, gracias. ¿Puedo pagar con tarjeta?",
+          "fr-FR": "Non, merci. Puis-je payer par carte ?",
+          "hi-IN": "नहीं, धन्यवाद। क्या मैं कार्ड से भुगतान कर सकता हूँ?",
+          "pl-PL": "Nie, dziękuję. Czy mogę zapłacić kartą?",
+          "ro-RO": "Nu, mulțumesc. Pot plăti cu cardul?",
+          "tr-TR": "Hayır, teşekkürler. Kartla ödeyebilir miyim?",
+          "uk-UA": "Ні, дякую. Чи можу я оплатити карткою?",
+          "uz-UZ": "Yo'q, rahmat. Karta orqali to'lay olamanmi?"
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Nein, das ist alles. Ich bezahle bar.",
+        "translation": {
+          "ru-RU": "Нет, это все. Я плачу наличными.",
+          "en-US": "No, that's all. I'll pay in cash.",
+          "ar-SA": "لا، هذا كل شيء. سأدفع نقداً.",
+          "es-ES": "No, eso es todo. Pago en efectivo.",
+          "fr-FR": "Non, c'est tout. Je paie en espèces.",
+          "hi-IN": "नहीं, बस इतना ही। मैं नकद भुगतान करूँगा।",
+          "pl-PL": "Nie, to wszystko. Płacę gotówką.",
+          "ro-RO": "Nu, asta e tot. Plătesc cash.",
+          "tr-TR": "Hayır, hepsi bu. Nakit ödeyeceğim.",
+          "uk-UA": "Ні, це все. Я плачу готівкою.",
+          "uz-UZ": "Yo'q, hammasi shu. Men naqd to'layman."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Natürlich, das geht. Bitte schön, die Zahlung ist fertig.",
+    "botTranslation": {
+      "ru-RU": "Конечно, это возможно. Пожалуйста, оплата завершена.",
+      "en-US": "Of course, that works. Here you go, the payment is complete.",
+      "ar-SA": "بالطبع، هذا ممكن. تفضل، اكتمل الدفع.",
+      "es-ES": "Por supuesto, es posible. Aquí tiene, el pago está completo.",
+      "fr-FR": "Bien sûr, ça marche. Voilà, le paiement est terminé.",
+      "hi-IN": "बिल्कुल, यह संभव है। यह लीजिए, भुगतान पूरा हो गया है।",
+      "pl-PL": "Oczywiście, można. Proszę bardzo, płatność zakończona.",
+      "ro-RO": "Desigur, se poate. Poftiți, plata este finalizată.",
+      "tr-TR": "Elbette, mümkün. Buyurun, ödeme tamamlandı.",
+      "uk-UA": "Звісно, це можливо. Будь ласка, оплату завершено.",
+      "uz-UZ": "Albatta, iloji bor. Marhamat, to'lov tugallandi."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Super, vielen Dank!",
+        "translation": {
+          "ru-RU": "Супер, большое спасибо!",
+          "en-US": "Super, thank you very much!",
+          "ar-SA": "رائع، شكراً جزيلاً!",
+          "es-ES": "¡Súper, muchas gracias!",
+          "fr-FR": "Super, merci beaucoup !",
+          "hi-IN": "सुपर, बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Super, bardzo dziękuję!",
+          "ro-RO": "Super, vă mulțumesc mult!",
+          "tr-TR": "Harika, çok teşekkür ederim!",
+          "uk-UA": "Супер, дуже дякую!",
+          "uz-UZ": "Zo'r, katta rahmat!"
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Alles klar, danke Ihnen.",
+        "translation": {
+          "ru-RU": "Все ясно, спасибо Вам.",
+          "en-US": "All right, thank you.",
+          "ar-SA": "حسناً، شكراً لك.",
+          "es-ES": "De acuerdo, gracias.",
+          "fr-FR": "Très bien, merci.",
+          "hi-IN": "ठीक है, धन्यवाद।",
+          "pl-PL": "Wszystko jasne, dziękuję.",
+          "ro-RO": "În regulă, vă mulțumesc.",
+          "tr-TR": "Tamam, teşekkür ederim.",
+          "uk-UA": "Усе ясно, дякую Вам.",
+          "uz-UZ": "Tushunarli, rahmat sizga."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Hier ist Ihre Quittung.",
+    "botTranslation": {
+      "ru-RU": "Вот Ваша квитанция.",
+      "en-US": "Here is your receipt.",
+      "ar-SA": "ها هو إيصالك.",
+      "es-ES": "Aquí tiene su recibo.",
+      "fr-FR": "Voici votre reçu.",
+      "hi-IN": "यहाँ आपकी रसीद है।",
+      "pl-PL": "Oto Pana pokwitowanie.",
+      "ro-RO": "Iată chitanța dumneavoastră.",
+      "tr-TR": "İşte makbuzunuz.",
+      "uk-UA": "Ось Ваша квитанція.",
+      "uz-UZ": "Mana chekingiz."
+    },
+    "vocabulary": [
+      {
+        "german": "die Quittung",
+        "translation": {
+          "ru-RU": "квитанция",
+          "en-US": "receipt",
+          "ar-SA": "إيصال",
+          "es-ES": "recibo",
+          "fr-FR": "reçu",
+          "hi-IN": "रसीद",
+          "pl-PL": "pokwitowanie",
+          "ro-RO": "chitanță",
+          "tr-TR": "makbuz",
+          "uk-UA": "квитанція",
+          "uz-UZ": "chek"
+        }
+      },
+      {
+        "german": "das Scheibenwischwasser",
+        "translation": {
+          "ru-RU": "вода для омывателя стекол",
+          "en-US": "windshield washer fluid",
+          "ar-SA": "سائل مساحات الزجاج",
+          "es-ES": "líquido limpiaparabrisas",
+          "fr-FR": "lave-glace",
+          "hi-IN": "विंडशील्ड वाशर तरल",
+          "pl-PL": "płyn do spryskiwaczy",
+          "ro-RO": "lichid de parbriz",
+          "tr-TR": "cam silecek suyu",
+          "uk-UA": "вода для омивача скла",
+          "uz-UZ": "oyna yuvish suyuqligi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke. Sagen Sie mal, wo finde ich hier das Scheibenwischwasser?",
+        "translation": {
+          "ru-RU": "Спасибо. Скажите, где я могу найти здесь воду для омывателя?",
+          "en-US": "Thanks. Tell me, where can I find the windshield washer fluid here?",
+          "ar-SA": "شكراً. أخبرني، أين يمكنني العثور على سائل غسيل الزجاج هنا؟",
+          "es-ES": "Gracias. Dígame, ¿dónde puedo encontrar aquí el líquido limpiaparabrisas?",
+          "fr-FR": "Merci. Dites-moi, où puis-je trouver le lave-glace ici ?",
+          "hi-IN": "धन्यवाद। मुझे बताइए, मैं यहाँ विंडशील्ड वाशर तरल कहाँ पा सकता हूँ?",
+          "pl-PL": "Dziękuję. Proszę mi powiedzieć, gdzie tu znajdę płyn do spryskiwaczy?",
+          "ro-RO": "Mulțumesc. Spuneți-mi, unde găsesc aici lichidul de parbriz?",
+          "tr-TR": "Teşekkürler. Söyleyin bakalım, cam silecek suyunu burada nerede bulabilirim?",
+          "uk-UA": "Дякую. Скажіть, де я можу знайти тут воду для омивача?",
+          "uz-UZ": "Rahmat. Ayting-chi, bu yerda oyna yuvish suyuqligini qayerdan topsam bo'ladi?"
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Vielen Dank. Eine Frage: Wo kann ich Wasser für die Scheiben finden?",
+        "translation": {
+          "ru-RU": "Большое спасибо. Один вопрос: где я могу найти воду для стекол?",
+          "en-US": "Thank you very much. One question: Where can I find water for the windows?",
+          "ar-SA": "شكراً جزيلاً. سؤال واحد: أين يمكنني العثور على الماء للزجاج؟",
+          "es-ES": "Muchas gracias. Una pregunta: ¿Dónde puedo encontrar agua para los cristales?",
+          "fr-FR": "Merci beaucoup. Une question : Où puis-je trouver de l'eau pour les vitres ?",
+          "hi-IN": "बहुत-बहुत धन्यवाद। एक सवाल: मुझे शीशों के लिए पानी कहाँ मिल सकता है?",
+          "pl-PL": "Bardzo dziękuję. Jedno pytanie: Gdzie znajdę wodę do szyb?",
+          "ro-RO": "Vă mulțumesc mult. O întrebare: Unde pot găsi apă pentru geamuri?",
+          "tr-TR": "Çok teşekkür ederim. Bir soru: Camlar için suyu nerede bulabilirim?",
+          "uk-UA": "Дуже дякую. Одне запитання: де я можу знайти воду для скла?",
+          "uz-UZ": "Katta rahmat. Bir savol: oynalar uchun suvni qayerdan topsam bo'ladi?"
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Das Wasser gibt es draußen neben den Staubsaugern. Dort steht ein Eimer.",
+    "botTranslation": {
+      "ru-RU": "Вода есть снаружи рядом с пылесосами. Там стоит ведро.",
+      "en-US": "The water is outside next to the vacuum cleaners. There is a bucket there.",
+      "ar-SA": "الماء موجود بالخارج بجوار المكانس الكهربائية. يوجد دلو هناك.",
+      "es-ES": "El agua está afuera junto a las aspiradoras. Allí hay un cubo.",
+      "fr-FR": "L'eau est dehors à côté des aspirateurs. Il y a un seau là-bas.",
+      "hi-IN": "पानी वैक्यूम क्लीनर के बगल में बाहर है। वहाँ एक बाल्टी है।",
+      "pl-PL": "Woda jest na zewnątrz obok odkurzaczy. Stoi tam wiadro.",
+      "ro-RO": "Apa este afară, lângă aspiratoare. Acolo se află o găleată.",
+      "tr-TR": "Su dışarıda elektrikli süpürgelerin yanında. Orada bir kova var.",
+      "uk-UA": "Вода є надворі поруч із пилососами. Там стоїть відро.",
+      "uz-UZ": "Suv tashqarida changyutgichlar yonida joylashgan. U yerda chelak turibdi."
+    },
+    "vocabulary": [
+      {
+        "german": "draußen",
+        "translation": {
+          "ru-RU": "снаружи",
+          "en-US": "outside",
+          "ar-SA": "بالخارج",
+          "es-ES": "afuera",
+          "fr-FR": "dehors",
+          "hi-IN": "बाहर",
+          "pl-PL": "na zewnątrz",
+          "ro-RO": "afară",
+          "tr-TR": "dışarıda",
+          "uk-UA": "надворі",
+          "uz-UZ": "tashqarida"
+        }
+      },
+      {
+        "german": "die Ladestation",
+        "translation": {
+          "ru-RU": "зарядная станция",
+          "en-US": "charging station",
+          "ar-SA": "محطة الشحن",
+          "es-ES": "estación de carga",
+          "fr-FR": "station de recharge",
+          "hi-IN": "चार्जिंग स्टेशन",
+          "pl-PL": "stacja ładowania",
+          "ro-RO": "stație de încărcare",
+          "tr-TR": "şarj istasyonu",
+          "uk-UA": "зарядна станція",
+          "uz-UZ": "quvvatlash stansiyasi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ah, wunderbar! Vielen Dank für die Information.",
+        "translation": {
+          "ru-RU": "А, чудесно! Большое спасибо за информацию.",
+          "en-US": "Ah, wonderful! Thank you very much for the information.",
+          "ar-SA": "آه، رائع! شكراً جزيلاً على المعلومات.",
+          "es-ES": "¡Ah, maravilloso! Muchas gracias por la información.",
+          "fr-FR": "Ah, merveilleux ! Merci beaucoup pour l'information.",
+          "hi-IN": "आह, अद्भुत! जानकारी के लिए बहुत-बहुत धन्यवाद।",
+          "pl-PL": "Ach, wspaniale! Bardzo dziękuję za informację.",
+          "ro-RO": "Ah, minunat! Vă mulțumesc mult pentru informație.",
+          "tr-TR": "Ah, harika! Bilgi için çok teşekkür ederim.",
+          "uk-UA": "А, чудово! Дуже дякую за інформацію.",
+          "uz-UZ": "A, ajoyib! Ma'lumot uchun katta rahmat."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Super, danke. Gibt es hier auch eine Ladestation für E-Autos?",
+        "translation": {
+          "ru-RU": "Супер, спасибо. Здесь есть также зарядная станция для электрокаров?",
+          "en-US": "Super, thanks. Is there also a charging station for electric cars here?",
+          "ar-SA": "رائع، شكراً. هل توجد هنا أيضاً محطة شحن للسيارات الكهربائية؟",
+          "es-ES": "Súper, gracias. ¿Hay aquí también una estación de carga para coches eléctricos?",
+          "fr-FR": "Super, merci. Y a-t-il aussi une station de recharge pour les voitures électriques ici ?",
+          "hi-IN": "सुपर, धन्यवाद। क्या यहाँ इलेक्ट्रिक कारों के लिए कोई चार्जिंग स्टेशन भी है?",
+          "pl-PL": "Super, dzięki. Czy jest tu również stacja ładowania aut elektrycznych?",
+          "ro-RO": "Super, mulțumesc. Există aici și o stație de încărcare pentru mașini electrice?",
+          "tr-TR": "Harika, teşekkürler. Burada elektrikli araçlar için bir şarj istasyonu da var mı?",
+          "uk-UA": "Супер, дякую. Чи є тут також зарядна станція для електромобілів?",
+          "uz-UZ": "Zo'r, rahmat. Bu yerda elektromobillar uchun quvvatlash stansiyasi ham bormi?"
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Ja, natürlich. Die Ladestation steht direkt hinter der Tankstelle.",
+    "botTranslation": {
+      "ru-RU": "Да, конечно. Зарядная станция стоит прямо за заправкой.",
+      "en-US": "Yes, of course. The charging station is right behind the gas station.",
+      "ar-SA": "نعم، بالطبع. محطة الشحن موجودة خلف محطة الوقود مباشرة.",
+      "es-ES": "Sí, por supuesto. La estación de carga está justo detrás de la gasolinera.",
+      "fr-FR": "Oui, bien sûr. La station de recharge se trouve juste derrière la station-service.",
+      "hi-IN": "हाँ, बिल्कुल। चार्जिंग स्टेशन पेट्रोल पंप के ठीक पीछे है।",
+      "pl-PL": "Tak, oczywiście. Stacja ładowania znajduje się bezpośrednio za stacją benzynową.",
+      "ro-RO": "Da, desigur. Stația de încărcare se află chiar în spatele benzinăriei.",
+      "tr-TR": "Evet, tabii ki. Şarj istasyonu hemen benzin istasyonunun arkasında.",
+      "uk-UA": "Так, звісно. Зарядна станція стоїть прямо за заправкою.",
+      "uz-UZ": "Ha, albatta. Quvvatlash stansiyasi to'g'ridan-to'g'ri yoqilg'i quyish shoxobchasining orqasida joylashgan."
+    },
+    "vocabulary": [
+      {
+        "german": "wissen",
+        "translation": {
+          "ru-RU": "знать",
+          "en-US": "know",
+          "ar-SA": "يعرف",
+          "es-ES": "saber",
+          "fr-FR": "savoir",
+          "hi-IN": "जानना",
+          "pl-PL": "wiedzieć",
+          "ro-RO": "a ști",
+          "tr-TR": "bilmek",
+          "uk-UA": "знати",
+          "uz-UZ": "bilmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Perfekt, das ist gut zu wissen. Vielen Dank für Ihre Hilfe!",
+        "translation": {
+          "ru-RU": "Идеально, это хорошо знать. Большое спасибо за Вашу помощь!",
+          "en-US": "Perfect, that's good to know. Thank you very much for your help!",
+          "ar-SA": "ممتاز، من الجيد معرفة ذلك. شكراً جزيلاً على مساعدتك!",
+          "es-ES": "Perfecto, es bueno saberlo. ¡Muchas gracias por su ayuda!",
+          "fr-FR": "Parfait, c'est bon à savoir. Merci beaucoup pour votre aide !",
+          "hi-IN": "एकदम सही, यह जानना अच्छा है। आपकी मदद के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Idealnie, dobrze wiedzieć. Bardzo dziękuję za pomoc!",
+          "ro-RO": "Perfect, e bine de știut. Vă mulțumesc mult pentru ajutor!",
+          "tr-TR": "Mükemmel, bunu bilmek güzel. Yardımınız için çok teşekkür ederim!",
+          "uk-UA": "Ідеально, це добре знати. Дуже дякую за Вашу допомогу!",
+          "uz-UZ": "Ajoyib, buni bilish yaxshi. Yordamingiz uchun katta rahmat!"
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Alles klar, danke Ihnen für die Erklärung!",
+        "translation": {
+          "ru-RU": "Все ясно, спасибо Вам за объяснение!",
+          "en-US": "All right, thank you for the explanation!",
+          "ar-SA": "حسناً، شكراً لك على الشرح!",
+          "es-ES": "De acuerdo, ¡gracias por la explicación!",
+          "fr-FR": "Très bien, merci pour l'explication !",
+          "hi-IN": "ठीक है, स्पष्टीकरण के लिए धन्यवाद!",
+          "pl-PL": "Wszystko jasne, dziękuję za wyjaśnienie!",
+          "ro-RO": "În regulă, vă mulțumesc pentru explicație!",
+          "tr-TR": "Tamam, açıklama için teşekkür ederim!",
+          "uk-UA": "Усе ясно, дякую Вам за пояснення!",
+          "uz-UZ": "Tushunarli, tushuntirish uchun sizga rahmat!"
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Sehr gerne. Gute Fahrt und einen schönen Tag noch!",
+    "botTranslation": {
+      "ru-RU": "С удовольствием. Счастливого пути и хорошего дня!",
+      "en-US": "With pleasure. Have a good trip and a nice day!",
+      "ar-SA": "بكل سرور. رحلة سعيدة ويوم جميل!",
+      "es-ES": "Con mucho gusto. ¡Buen viaje y que tenga un buen día!",
+      "fr-FR": "Avec plaisir. Bonne route et bonne journée !",
+      "hi-IN": "खुशी से। आपकी यात्रा सुखद हो और आपका दिन शुभ हो!",
+      "pl-PL": "Bardzo proszę. Szerokiej drogi i miłego dnia!",
+      "ro-RO": "Cu mare plăcere. Drum bun și o zi frumoasă în continuare!",
+      "tr-TR": "Memnuniyetle. İyi yolculuklar ve iyi günler!",
+      "uk-UA": "Із задоволенням. Щасливої дороги та гарного дня!",
+      "uz-UZ": "Bajonidil. Oq yo'l va kuningiz xayrli o'tsin!"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Danke, Ihnen auch! Auf Wiedersehen.",
+        "translation": {
+          "ru-RU": "Спасибо, Вам тоже! До свидания.",
+          "en-US": "Thanks, you too! Goodbye.",
+          "ar-SA": "شكراً، لك أيضاً! وداعاً.",
+          "es-ES": "¡Gracias, a usted también! Adiós.",
+          "fr-FR": "Merci, à vous aussi ! Au revoir.",
+          "hi-IN": "धन्यवाद, आपको भी! अलविदा।",
+          "pl-PL": "Dziękuję, nawzajem! Do widzenia.",
+          "ro-RO": "Mulțumesc, la fel! La revedere.",
+          "tr-TR": "Teşekkürler, size de! Güle güle.",
+          "uk-UA": "Дякую, Вам також! До побачення.",
+          "uz-UZ": "Rahmat, sizga ham! Xayr."
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Vielen Dank, gleichfalls! Tschüss.",
+        "translation": {
+          "ru-RU": "Большое спасибо, взаимно! Пока.",
+          "en-US": "Thank you very much, likewise! Bye.",
+          "ar-SA": "شكراً جزيلاً، وبالمثل! وداعاً.",
+          "es-ES": "¡Muchas gracias, igualmente! Adiós.",
+          "fr-FR": "Merci beaucoup, pareillement ! Salut.",
+          "hi-IN": "बहुत-बहुत धन्यवाद, आपको भी! अलविदा।",
+          "pl-PL": "Bardzo dziękuję, wzajemnie! Cześć.",
+          "ro-RO": "Vă mulțumesc mult, la fel! Pa.",
+          "tr-TR": "Çok teşekkür ederim, size de! Hoşça kalın.",
+          "uk-UA": "Дуже дякую, навзаєм! Бувай.",
+          "uz-UZ": "Katta rahmat, sizga ham! Xayr."
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор окончен.",
+      "en-US": "The conversation is over.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत खत्म हो गई है।",
+      "pl-PL": "Rozmowa zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмова закінчена.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

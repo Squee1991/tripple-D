@@ -1,0 +1,642 @@
+{
+  "start": {
+    "botText": "Hallo Anna! Hast du am Wochenende Zeit?",
+    "botTranslation": {
+      "ru-RU": "Привет, Анна! У тебя есть время на выходных?",
+      "en-US": "Hello Anna! Do you have time on the weekend?",
+      "ar-SA": "مرحباً آنا! هل لديكِ وقت في عطلة نهاية الأسبوع؟",
+      "es-ES": "¡Hola Anna! ¿Tienes tiempo el fin de semana?",
+      "fr-FR": "Salut Anna ! Tu as du temps ce week-end ?",
+      "hi-IN": "नमस्ते अन्ना! क्या आपके पास सप्ताहांत में समय है?",
+      "pl-PL": "Cześć Anna! Masz czas w weekend?",
+      "ro-RO": "Bună Anna! Ai timp în weekend?",
+      "tr-TR": "Merhaba Anna! Hafta sonu vaktin var mı?",
+      "uk-UA": "Привіт, Анно! У тебе є час на вихідних?",
+      "uz-UZ": "Salom Anna! Dam olish kuni vaqting bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Wochenende",
+        "translation": {
+          "ru-RU": "выходные",
+          "en-US": "the weekend",
+          "ar-SA": "عطلة نهاية الأسبوع",
+          "es-ES": "el fin de semana",
+          "fr-FR": "le week-end",
+          "hi-IN": "सप्ताहांत",
+          "pl-PL": "weekend",
+          "ro-RO": "weekendul",
+          "tr-TR": "hafta sonu",
+          "uk-UA": "вихідні",
+          "uz-UZ": "dam olish kuni"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hallo Maria! Es kommt darauf an. Was hast du vor?",
+        "translation": {
+          "ru-RU": "Привет, Мария! Смотря когда. Что ты планируешь?",
+          "en-US": "Hello Maria! It depends. What are your plans?",
+          "ar-SA": "مرحباً ماريا! هذا يعتمد. ما هي خططكِ؟",
+          "es-ES": "¡Hola Maria! Depende. ¿Qué planes tienes?",
+          "fr-FR": "Salut Maria ! Ça dépend. Qu'est-ce que tu prévois ?",
+          "hi-IN": "नमस्ते मारिया! यह निर्भर करता है। तुम्हारी क्या योजनाएं हैं?",
+          "pl-PL": "Cześć Maria! To zależy. Jakie masz plany?",
+          "ro-RO": "Bună Maria! Depinde. Ce planuri ai?",
+          "tr-TR": "Merhaba Maria! Duruma göre değişir. Planın ne?",
+          "uk-UA": "Привіт, Маріє! Дивлячись коли. Що ти плануєш?",
+          "uz-UZ": "Salom Mariya! Bunga bog'liq. Nima rejalaring bor?"
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hi Maria! Das weiß ich noch nicht genau. Warum fragst du?",
+        "translation": {
+          "ru-RU": "Привет, Мария! Пока точно не знаю. А почему ты спрашиваешь?",
+          "en-US": "Hi Maria! I don't know exactly yet. Why do you ask?",
+          "ar-SA": "أهلاً ماريا! لا أعرف بالضبط بعد. لماذا تسألين؟",
+          "es-ES": "¡Hola Maria! Aún no lo sé exactamente. ¿Por qué lo preguntas?",
+          "fr-FR": "Salut Maria ! Je ne sais pas encore exactement. Pourquoi demandes-tu ?",
+          "hi-IN": "हाय मारिया! मुझे अभी ठीक से नहीं पता। तुम क्यों पूछ रही हो?",
+          "pl-PL": "Hej Maria! Jeszcze nie wiem dokładnie. Dlaczego pytasz?",
+          "ro-RO": "Salut Maria! Nu știu exact încă. De ce întrebi?",
+          "tr-TR": "Selam Maria! Henüz tam olarak bilmiyorum. Neden soruyorsun?",
+          "uk-UA": "Привіт, Маріє! Поки точно не знаю. А чому ти питаєш?",
+          "uz-UZ": "Salom Mariya! Hali aniq bilmayman. Nega so'rayapsan?"
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Ich möchte dich zu mir einladen.",
+    "botTranslation": {
+      "ru-RU": "Я хочу пригласить тебя к себе.",
+      "en-US": "I would like to invite you to my place.",
+      "ar-SA": "أود أن أدعوكِ إلى منزلي.",
+      "es-ES": "Me gustaría invitarte a mi casa.",
+      "fr-FR": "J'aimerais t'inviter chez moi.",
+      "hi-IN": "मैं तुम्हें अपने घर आमंत्रित करना चाहती हूँ।",
+      "pl-PL": "Chciałabym cię zaprosić do siebie.",
+      "ro-RO": "Aș dori să te invit la mine.",
+      "tr-TR": "Seni bize davet etmek istiyorum.",
+      "uk-UA": "Я хочу запросити тебе до себе.",
+      "uz-UZ": "Seni uyimga taklif qilmoqchiman."
+    },
+    "vocabulary": [
+      {
+        "german": "einladen",
+        "translation": {
+          "ru-RU": "приглашать",
+          "en-US": "to invite",
+          "ar-SA": "يدعو",
+          "es-ES": "invitar",
+          "fr-FR": "inviter",
+          "hi-IN": "आमंत्रित करना",
+          "pl-PL": "zapraszać",
+          "ro-RO": "a invita",
+          "tr-TR": "davet etmek",
+          "uk-UA": "запрошувати",
+          "uz-UZ": "taklif qilmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das ist super nett! An welchem Tag und um wie viel Uhr soll ich kommen?",
+        "translation": {
+          "ru-RU": "Это супер мило! В какой день и во сколько мне прийти?",
+          "en-US": "That is super nice! What day and time should I come?",
+          "ar-SA": "هذا لطيف جداً! في أي يوم وفي أي وقت يجب أن آتي؟",
+          "es-ES": "¡Es súper amable! ¿Qué día y a qué hora debo ir?",
+          "fr-FR": "C'est super gentil ! Quel jour et à quelle heure dois-je venir ?",
+          "hi-IN": "यह बहुत अच्छा है! मुझे किस दिन और कितने बजे आना चाहिए?",
+          "pl-PL": "To super miłe! W jaki dzień i o której godzinie mam przyjść?",
+          "ro-RO": "Este super drăguț! În ce zi și la ce oră să vin?",
+          "tr-TR": "Bu çok nazikçe! Hangi gün ve saat kaçta geleyim?",
+          "uk-UA": "Це супер мило! У який день і о котрій мені прийти?",
+          "uz-UZ": "Bu juda yoqimli! Qaysi kuni va soat nechada kelishim kerak?"
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Sehr gerne! Wann genau passt es dir denn am besten?",
+        "translation": {
+          "ru-RU": "С удовольствием! Когда именно тебе удобнее всего?",
+          "en-US": "Very gladly! When exactly suits you best?",
+          "ar-SA": "بكل سرور! متى يناسبكِ بالضبط أكثر شيء؟",
+          "es-ES": "¡Con mucho gusto! ¿Cuándo exactamente te viene mejor?",
+          "fr-FR": "Avec grand plaisir ! Quand exactement cela te convient-il le mieux ?",
+          "hi-IN": "बहुत खुशी से! तुम्हारे लिए बिल्कुल सही समय क्या रहेगा?",
+          "pl-PL": "Bardzo chętnie! Kiedy dokładnie najbardziej ci pasuje?",
+          "ro-RO": "Cu mare drag! Când anume îți convine cel mai bine?",
+          "tr-TR": "Memnuniyetle! Tam olarak ne zaman sana en uygun olur?",
+          "uk-UA": "Із задоволенням! Коли саме тобі найзручніше?",
+          "uz-UZ": "Bajonidil! Aynan qachon senga eng qulay?"
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Passt es dir am Sonntag um 15:00 Uhr?",
+    "botTranslation": {
+      "ru-RU": "Тебе подходит в воскресенье в 15:00?",
+      "en-US": "Does Sunday at 3:00 PM suit you?",
+      "ar-SA": "هل يناسبكِ يوم الأحد الساعة 15:00؟",
+      "es-ES": "¿Te viene bien el domingo a las 15:00?",
+      "fr-FR": "Est-ce que dimanche à 15h00 te convient ?",
+      "hi-IN": "क्या रविवार को दोपहर 3:00 बजे आपके लिए ठीक है?",
+      "pl-PL": "Czy pasuje ci w niedzielę o 15:00?",
+      "ro-RO": "Îți convine duminică la ora 15:00?",
+      "tr-TR": "Pazar günü saat 15:00 sana uyar mı?",
+      "uk-UA": "Тобі підходить у неділю о 15:00?",
+      "uz-UZ": "Senga yakshanba kuni soat 15:00 to'g'ri keladimi?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Sonntag",
+        "translation": {
+          "ru-RU": "воскресенье",
+          "en-US": "Sunday",
+          "ar-SA": "الأحد",
+          "es-ES": "el domingo",
+          "fr-FR": "le dimanche",
+          "hi-IN": "रविवार",
+          "pl-PL": "niedziela",
+          "ro-RO": "duminica",
+          "tr-TR": "Pazar",
+          "uk-UA": "неділя",
+          "uz-UZ": "yakshanba"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Oh, am Sonntag um 15:00 Uhr habe ich leider keine Zeit.",
+        "translation": {
+          "ru-RU": "Ой, в воскресенье в 15:00 у меня, к сожалению, нет времени.",
+          "en-US": "Oh, unfortunately I don't have time on Sunday at 3:00 PM.",
+          "ar-SA": "أوه، يوم الأحد الساعة 15:00 للأسف ليس لدي وقت.",
+          "es-ES": "Oh, lamentablemente no tengo tiempo el domingo a las 15:00.",
+          "fr-FR": "Oh, malheureusement je n'ai pas le temps dimanche à 15h00.",
+          "hi-IN": "ओह, रविवार को दोपहर 3:00 बजे मेरे पास दुर्भाग्य से समय नहीं है।",
+          "pl-PL": "Och, w niedzielę o 15:00 niestety nie mam czasu.",
+          "ro-RO": "Oh, duminică la ora 15:00 din păcate nu am timp.",
+          "tr-TR": "Oh, Pazar günü saat 15:00'te maalesef vaktim yok.",
+          "uk-UA": "Ой, у неділю о 15:00 у мене, на жаль, немає часу.",
+          "uz-UZ": "Oh, afsuski, yakshanba kuni soat 15:00 da vaqtim yo'q."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Schade, aber genau zu dieser Zeit geht es bei mir leider nicht.",
+        "translation": {
+          "ru-RU": "Жаль, но именно в это время у меня, к сожалению, не получится.",
+          "en-US": "Too bad, but unfortunately I can't make it exactly at that time.",
+          "ar-SA": "للأسف، لكن لا يمكنني ذلك في هذا الوقت تحديداً.",
+          "es-ES": "Qué pena, pero exactamente a esa hora no me viene bien.",
+          "fr-FR": "Dommage, mais je ne suis malheureusement pas disponible à cette heure-là.",
+          "hi-IN": "अफ़सोस, लेकिन ठीक उसी समय मैं दुर्भाग्य से नहीं आ पाऊँगी।",
+          "pl-PL": "Szkoda, ale dokładnie o tej porze niestety mi nie pasuje.",
+          "ro-RO": "Păcat, dar exact la această oră din păcate nu pot.",
+          "tr-TR": "Ne yazık ki tam bu saatte maalesef bana uymuyor.",
+          "uk-UA": "Шкода, але саме в цей час у мене, на жаль, не вийде.",
+          "uz-UZ": "Afsus, lekin aynan shu vaqtda menda iloji yo'q."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Das ist wirklich schade, Anna! Warum geht es denn nicht?",
+    "botTranslation": {
+      "ru-RU": "Это действительно очень жаль, Анна! А почему не получается?",
+      "en-US": "That's really a pity, Anna! Why doesn't it work?",
+      "ar-SA": "أوه، هذا مؤسف حقاً يا آنا! لماذا لا يمكنكِ ذلك؟",
+      "es-ES": "Qué pena de verdad, Anna! ¿Por qué no puedes?",
+      "fr-FR": "C'est vraiment dommage, Anna ! Pourquoi ça ne va pas ?",
+      "hi-IN": "यह वास्तव में अफ़सोस की बात है, अन्ना! ऐसा क्यों नहीं हो सकता?",
+      "pl-PL": "To naprawdę szkoda, Anna! Dlaczego nie da rady?",
+      "ro-RO": "Este chiar păcat, Anna! De ce nu se poate?",
+      "tr-TR": "Bu gerçekten çok yazık Anna! Neden olmuyor?",
+      "uk-UA": "Wе дійсно дуже шкода, Анно! А чому не виходить?",
+      "uz-UZ": "Bu rostdan ham juda yomon, Anna! Nega iloji yo'q?"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Ich muss für eine schwere Prüfung lernen.",
+        "translation": {
+          "ru-RU": "Мне нужно готовиться к трудному экзамену.",
+          "en-US": "I have to study for a difficult exam.",
+          "ar-SA": "يجب أن أدرس لامتحان صعب.",
+          "es-ES": "Tengo que estudiar para un examen difícil.",
+          "fr-FR": "Je dois réviser pour un examen difficile.",
+          "hi-IN": "मुझे एक कठिन परीक्षा के लिए पढ़ना है।",
+          "pl-PL": "Muszę się uczyć do trudnego egzaminu.",
+          "ro-RO": "Trebuie să învăț pentru un examen greu.",
+          "tr-TR": "Zor bir sınav için çalışmam gerekiyor.",
+          "uk-UA": "Мені потрібно готуватися до важкого іспиту.",
+          "uz-UZ": "Men qiyin imtihonga tayyorlanishim kerak."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Ich besuche meine Familie in einer anderen Stadt.",
+        "translation": {
+          "ru-RU": "Я навещаю свою семью в другом городе.",
+          "en-US": "I am visiting my family in another city.",
+          "ar-SA": "سأزور عائلتي في مدينة أخرى.",
+          "es-ES": "Voy a visitar a mi familia a otra ciudad.",
+          "fr-FR": "Je rends visite à ma famille dans une autre ville.",
+          "hi-IN": "मैं दूसरे शहर में अपने परिवार से मिलने जा रही हूँ।",
+          "pl-PL": "Odwiedzam moją rodzinę w innym mieście.",
+          "ro-RO": "O vizitez pe familia mea într-un alt oraș.",
+          "tr-TR": "Başka bir şehirdeki ailemi ziyaret edeceğim.",
+          "uk-UA": "Я відвідую свою родину в іншому місті.",
+          "uz-UZ": "Men boshqa shahardagi oilamni ko'rgani boryapman."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Ich verstehe dich natürlich. Das ist ein wichtiger Grund.",
+    "botTranslation": {
+      "ru-RU": "Я тебя, конечно, понимаю. Это важная причина.",
+      "en-US": "I understand you, of course. That is an important reason.",
+      "ar-SA": "بالطبع أنا أفهمكِ. هذا سبب مهم.",
+      "es-ES": "Te entiendo, por supuesto. Es un motivo importante.",
+      "fr-FR": "Je te comprends, bien sûr. C'est une raison importante.",
+      "hi-IN": "मैं तुम्हें समझती हूँ, बेशक। यह एक महत्वपूर्ण कारण है।",
+      "pl-PL": "Oczywiście cię rozumiem. To ważny powód.",
+      "ro-RO": "Te înțeleg, desigur. Acesta este un motiv important.",
+      "tr-TR": "Seni anlıyorum tabii. Bu önemli bir neden.",
+      "uk-UA": "Я тебе, звісно, розумію. Це важлива причина.",
+      "uz-UZ": "Seni tushunaman, albatta. Bu muhim sabab."
+    },
+    "vocabulary": [
+      {
+        "german": "die Prüfung",
+        "translation": {
+          "ru-RU": "экзамен",
+          "en-US": "the exam",
+          "ar-SA": "الامتحان",
+          "es-ES": "el examen",
+          "fr-FR": "l'examen",
+          "hi-IN": "परीक्षा",
+          "pl-PL": "egzamin",
+          "ro-RO": "examenul",
+          "tr-TR": "sınav",
+          "uk-UA": "іспит",
+          "uz-UZ": "imtihon"
+        }
+      },
+      {
+        "german": "die Familie",
+        "translation": {
+          "ru-RU": "семья",
+          "en-US": "the family",
+          "ar-SA": "العائلة",
+          "es-ES": "la familia",
+          "fr-FR": "la famille",
+          "hi-IN": "परिवार",
+          "pl-PL": "rodzina",
+          "ro-RO": "familia",
+          "tr-TR": "aile",
+          "uk-UA": "родина",
+          "uz-UZ": "oila"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke für dein Verständnis, Maria. Die Prüfung ist schon bald.",
+        "translation": {
+          "ru-RU": "Спасибо за понимание, Мария. Экзамен уже скоро.",
+          "en-US": "Thank you for your understanding, Maria. The exam is quite soon.",
+          "ar-SA": "شكراً لتفهمكِ يا ماريا. الامتحان قريباً جداً.",
+          "es-ES": "Gracias por tu comprensión, Maria. El examen es pronto.",
+          "fr-FR": "Merci pour ta compréhension, Maria. L'examen est pour bientôt.",
+          "hi-IN": "तुम्हारी समझ के लिए धन्यवाद, मारिया। परीक्षा जल्द ही है।",
+          "pl-PL": "Dziękuję za zrozumienie, Maria. Egzamin jest już niedługo.",
+          "ro-RO": "Mulțumesc pentru înțelegere, Maria. Examenul este în curând.",
+          "tr-TR": "Anlayışın için teşekkürler, Maria. Sınav yakında.",
+          "uk-UA": "Дякую за розуміння, Маріє. Іспит уже скоро.",
+          "uz-UZ": "Tushunganing uchun rahmat, Mariya. Imtihon yaqinda."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Ja, wir haben uns einfach schon lange nicht mehr gesehen.",
+        "translation": {
+          "ru-RU": "Да, мы просто очень давно не виделись.",
+          "en-US": "Yes, we simply haven't seen each other for a long time.",
+          "ar-SA": "نعم، نحن ببساطة لم نلتقِ منذ فترة طويلة.",
+          "es-ES": "Sí, simplemente hace mucho tiempo que no nos vemos.",
+          "fr-FR": "Oui, nous ne nous sommes simplement pas vues depuis longtemps.",
+          "hi-IN": "हाँ, हम बस बहुत लंबे समय से एक-दूसरे से नहीं मिले हैं।",
+          "pl-PL": "Tak, po prostu dawno się nie widzieliśmy.",
+          "ro-RO": "Da, pur și simplu nu ne-am mai văzut de mult.",
+          "tr-TR": "Evet, sadece uzun zamandır birbirimizi görmedik.",
+          "uk-UA": "Так, ми просто дуже давно не бачилися.",
+          "uz-UZ": "Ha, biz shunchaki ancha vaqtdan beri ko'rishmadik."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Kein Problem! Wir können uns ja einfach an einem anderen Tag treffen.",
+    "botTranslation": {
+      "ru-RU": "Без проблем! Мы можем просто встретиться в какой-нибудь другой день.",
+      "en-US": "No problem! We can just meet on another day.",
+      "ar-SA": "لا مشكلة! يمكننا ببساطة أن نلتقي في يوم آخر.",
+      "es-ES": "¡Sin problema! Podemos vernos simplemente otro día.",
+      "fr-FR": "Pas de problème ! Nous pouvons simplement nous rencontrer un autre jour.",
+      "hi-IN": "कोई बात नहीं! हम बस किसी और दिन मिल सकते हैं।",
+      "pl-PL": "Nie ma problemu! Możemy się po prostu spotkać innego dnia.",
+      "ro-RO": "Nicio problemă! Ne putem întâlni pur și simplu în altă zi.",
+      "tr-TR": "Sorun değil! Başka bir gün buluşabiliriz.",
+      "uk-UA": "Без проблем! Ми можемо просто зустрітися в якийсь інший день.",
+      "uz-UZ": "Muammo yo'q! Shunchaki boshqa kuni uchrashishimiz mumkin."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Das ist eine gute Idee. Wann hast du Zeit?",
+        "translation": {
+          "ru-RU": "Это хорошая идея. Когда у тебя есть время?",
+          "en-US": "That is a good idea. When do you have time?",
+          "ar-SA": "هذه فكرة جيدة. متى لديكِ وقت؟",
+          "es-ES": "Es una buena idea. ¿Cuándo tienes tiempo?",
+          "fr-FR": "C'est une bonne idée. Quand as-tu du temps ?",
+          "hi-IN": "यह एक अच्छा विचार है। तुम्हारे पास कब समय है?",
+          "pl-PL": "To dobry pomysł. Kiedy masz czas?",
+          "ro-RO": "Este o idee bună. Când ai timp?",
+          "tr-TR": "Bu iyi bir fikir. Ne zaman vaktin var?",
+          "uk-UA": "Це гарна ідея. Коли у тебе є час?",
+          "uz-UZ": "Bu yaxshi fikr. Qachon vaqting bor?"
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Ja, sehr gerne! Schlag was vor.",
+        "translation": {
+          "ru-RU": "Да, с удовольствием! Предложи что-нибудь.",
+          "en-US": "Yes, very gladly! Suggest something.",
+          "ar-SA": "نعم، بكل سرور! اقترحي شيئاً.",
+          "es-ES": "¡Sí, con mucho gusto! Propón algo.",
+          "fr-FR": "Oui, très volontiers ! Propose quelque chose.",
+          "hi-IN": "हाँ, बहुत खुशी से! कुछ सुझाव दो।",
+          "pl-PL": "Tak, bardzo chętnie! Zaproponuj coś.",
+          "ro-RO": "Da, cu mare drag! Propune ceva.",
+          "tr-TR": "Evet, çok isterim! Bir şey öner.",
+          "uk-UA": "Так, із задоволенням! Запропонуй щось.",
+          "uz-UZ": "Ha, bajonidil! Biror narsa taklif qil."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Wie wäre es nächste Woche? Passt es dir am Dienstag nach der Arbeit?",
+    "botTranslation": {
+      "ru-RU": "Как насчет следующей недели? Тебе подходит во вторник после работы?",
+      "en-US": "How about next week? Does Tuesday after work suit you?",
+      "ar-SA": "ما رأيكِ في الأسبوع القادم؟ هل يناسبكِ يوم الثلاثاء بعد العمل؟",
+      "es-ES": "¿Qué tal la próxima semana? ¿Te viene bien el martes después del trabajo?",
+      "fr-FR": "Qu'en dis-tu la semaine prochaine ? Est-ce que ça te convient mardi après le travail ?",
+      "hi-IN": "अगले हफ्ते कैसा रहेगा? क्या मंगलवार को काम के बाद आपके लिए ठीक है?",
+      "pl-PL": "Co powiesz na przyszły tydzień? Pasuje ci we wtorek po pracy?",
+      "ro-RO": "Ce zici de săptămâna viitoare? Îți convine marți după muncă?",
+      "tr-TR": "Haftaya ne dersin? Salı günü iş çıkışı sana uyar mı?",
+      "uk-UA": "Як щодо наступного тижня? Тобі підходить у вівторок після роботи?",
+      "uz-UZ": "Kelasi haftaga nima deysan? Senga seshanba kuni ishdan keyin to'g'ri keladimi?"
+    },
+    "vocabulary": [
+      {
+        "german": "nach der Arbeit",
+        "translation": {
+          "ru-RU": "после работы",
+          "en-US": "after work",
+          "ar-SA": "بعد العمل",
+          "es-ES": "después del trabajo",
+          "fr-FR": "après le travail",
+          "hi-IN": "काम के बाद",
+          "pl-PL": "po pracy",
+          "ro-RO": "după muncă",
+          "tr-TR": "işten sonra",
+          "uk-UA": "після роботи",
+          "uz-UZ": "ishdan keyin"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, Dienstag klingt perfekt für mich.",
+        "translation": {
+          "ru-RU": "Да, вторник звучит идеально для меня.",
+          "en-US": "Yes, Tuesday sounds perfect to me.",
+          "ar-SA": "نعم، يوم الثلاثاء يبدو مثالياً بالنسبة لي.",
+          "es-ES": "Sí, el martes suena perfecto para mí.",
+          "fr-FR": "Oui, mardi me semble parfait.",
+          "hi-IN": "हाँ, मंगलवार मेरे लिए एकदम सही रहेगा।",
+          "pl-PL": "Tak, wtorek brzmi dla mnie idealnie.",
+          "ro-RO": "Da, marți sună perfect pentru mine.",
+          "tr-TR": "Evet, Salı günü benim için mükemmel olur.",
+          "uk-UA": "Так, вівторок звучить ідеально для мене.",
+          "uz-UZ": "Ha, seshanba men uchun ajoyib eshitilyapti."
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Nach der Arbeit passt es mir eigentlich sehr gut.",
+        "translation": {
+          "ru-RU": "После работы мне вообще очень хорошо подходит.",
+          "en-US": "After work actually suits me very well.",
+          "ar-SA": "بعد العمل يناسبني جداً في الواقع.",
+          "es-ES": "Después del trabajo me viene muy bien, la verdad.",
+          "fr-FR": "Après le travail, ça me convient vraiment très bien.",
+          "hi-IN": "काम के बाद वास्तव में मेरे लिए बहुत अच्छा रहेगा।",
+          "pl-PL": "Po pracy właściwie bardzo mi pasuje.",
+          "ro-RO": "După muncă îmi convine de fapt foarte bine.",
+          "tr-TR": "İşten sonra aslında bana çok iyi uyar.",
+          "uk-UA": "Після роботи мені взагалі дуже добре підходить.",
+          "uz-UZ": "Ishdan keyin menga aslida juda yaxshi to'g'ri keladi."
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Wunderbar! Sollen wir uns bei mir oder in dem Café treffen?",
+    "botTranslation": {
+      "ru-RU": "Чудесно! Нам встретиться у меня или в кафе?",
+      "en-US": "Wonderful! Should we meet at my place or in the cafe?",
+      "ar-SA": "رائع! هل يجب أن نلتقي عندي أم في المقهى؟",
+      "es-ES": "¡Maravilloso! ¿Quedamos en mi casa o en la cafetería?",
+      "fr-FR": "Merveilleux ! Devrions-nous nous retrouver chez moi ou au café ?",
+      "hi-IN": "अद्भुत! क्या हमें मेरे यहाँ या कैफे में मिलना चाहिए?",
+      "pl-PL": "Wspaniale! Spotkamy się u mnie czy w kawiarni?",
+      "ro-RO": "Minunat! Să ne întâlnim la mine sau în cafenea?",
+      "tr-TR": "Harika! Bende mi buluşalım yoksa kafede mi?",
+      "uk-UA": "Чудово! Нам зустрітися у мене чи в кафе?",
+      "uz-UZ": "Ajoyib! Biznikida uchrashaylikmi yoki kafedami?"
+    },
+    "vocabulary": [
+      {
+        "german": "in dem Café",
+        "translation": {
+          "ru-RU": "в кафе",
+          "en-US": "in the cafe",
+          "ar-SA": "في المقهى",
+          "es-ES": "en la cafetería",
+          "fr-FR": "dans le café",
+          "hi-IN": "कैफे में",
+          "pl-PL": "w kawiarni",
+          "ro-RO": "în cafenea",
+          "tr-TR": "kafede",
+          "uk-UA": "в кафе",
+          "uz-UZ": "kafeda"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Lass uns lieber in dem Café treffen.",
+        "translation": {
+          "ru-RU": "Давай лучше встретимся в кафе.",
+          "en-US": "Let's rather meet in the cafe.",
+          "ar-SA": "دعينا نلتقي في المقهى أفضل.",
+          "es-ES": "Mejor quedamos en la cafetería.",
+          "fr-FR": "Retrouvons-nous plutôt au café.",
+          "hi-IN": "आइए कैफे में ही मिलते हैं।",
+          "pl-PL": "Spotkajmy się lepiej w kawiarni.",
+          "ro-RO": "Mai bine să ne întâlnim în cafenea.",
+          "tr-TR": "Kafede buluşalım daha iyi.",
+          "uk-UA": "Давай краще зустрінемося в кафе.",
+          "uz-UZ": "Yaxshisi kafeda uchrashaylik."
+        },
+        "nextStep": "step_17"
+      },
+      {
+        "text": "Komm, wir treffen uns bei dir in dem Haus.",
+        "translation": {
+          "ru-RU": "Давай встретимся у тебя в доме.",
+          "en-US": "Come on, let's meet at your house.",
+          "ar-SA": "هيا، لنلتقي في منزلكِ.",
+          "es-ES": "Venga, quedamos en tu casa.",
+          "fr-FR": "Viens, on se retrouve chez toi, dans la maison.",
+          "hi-IN": "चलो, तुम्हारे घर पर ही मिलते हैं।",
+          "pl-PL": "Chodź, spotkamy się u ciebie w domu.",
+          "ro-RO": "Hai să ne întâlnim la tine în casă.",
+          "tr-TR": "Gel, senin evinde buluşalım.",
+          "uk-UA": "Давай зустрінемося у тебе в будинку.",
+          "uz-UZ": "Kel, sizning uyingizda uchrashamiz."
+        },
+        "nextStep": "step_17"
+      }
+    ],
+    "defaultNext": "step_17"
+  },
+  "step_17": {
+    "botText": "Alles klar, das machen wir so. Bis nächste Woche! Tschüss!",
+    "botTranslation": {
+      "ru-RU": "Все ясно, так и сделаем. До следующей недели! Пока!",
+      "en-US": "All right, let's do it that way. See you next week! Bye!",
+      "ar-SA": "حسناً، سنفعل ذلك. أراكِ الأسبوع القادم! وداعاً!",
+      "es-ES": "De acuerdo, lo hacemos así. ¡Hasta la próxima semana! ¡Adiós!",
+      "fr-FR": "D'accord, on fait comme ça. À la semaine prochaine ! Salut !",
+      "hi-IN": "ठीक है, हम ऐसा ही करेंगे। अगले सप्ताह मिलते हैं! बाय!",
+      "pl-PL": "Wszystko jasne, tak zrobimy. Do przyszłego tygodnia! Cześć!",
+      "ro-RO": "Am înțeles, așa facem. Pe săptămâna viitoare! Pa!",
+      "tr-TR": "Tamam, öyle yapalım. Haftaya görüşürüz! Hoşça kal!",
+      "uk-UA": "Все ясно, так і зробимо. До наступного тижня! Бувай!",
+      "uz-UZ": "Tushunarli, shunday qilamiz. Kelasi haftagacha! Xayr!"
+    },
+    "vocabulary": [
+      {
+        "german": "in dem Haus",
+        "translation": {
+          "ru-RU": "в доме",
+          "en-US": "in the house",
+          "ar-SA": "في المنزل",
+          "es-ES": "en la casa",
+          "fr-FR": "dans la maison",
+          "hi-IN": "घर में",
+          "pl-PL": "w domu",
+          "ro-RO": "în casă",
+          "tr-TR": "evde",
+          "uk-UA": "в будинку",
+          "uz-UZ": "uyda"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Bis dann! Tschüss!",
+        "translation": {
+          "ru-RU": "До встречи! Пока!",
+          "en-US": "See you then! Bye!",
+          "ar-SA": "إلى اللقاء إذن! وداعاً!",
+          "es-ES": "¡Hasta entonces! ¡Adiós!",
+          "fr-FR": "À plus tard ! Salut !",
+          "hi-IN": "फिर मिलते हैं! बाय!",
+          "pl-PL": "Do zobaczenia! Cześć!",
+          "ro-RO": "Pe curând! Pa!",
+          "tr-TR": "Görüşmek üzere! Hoşça kal!",
+          "uk-UA": "До зустрічі! Бувай!",
+          "uz-UZ": "Ko'rishguncha! Xayr!"
+        },
+        "nextStep": "step_19"
+      },
+      {
+        "text": "Bis nächste Woche! Mach's gut!",
+        "translation": {
+          "ru-RU": "До следующей недели! Счастливо!",
+          "en-US": "See you next week! Take care!",
+          "ar-SA": "أراكِ الأسبوع القادم! اعتني بنفسكِ!",
+          "es-ES": "¡Hasta la próxima semana! ¡Cuídate!",
+          "fr-FR": "À la semaine prochaine ! Prends soin de toi !",
+          "hi-IN": "अगले सप्ताह मिलते हैं! अपना ख्याल रखना!",
+          "pl-PL": "Do przyszłego tygodnia! Trzymaj się!",
+          "ro-RO": "Pe săptămâna viitoare! Numai bine!",
+          "tr-TR": "Haftaya görüşürüz! Kendine iyi bak!",
+          "uk-UA": "До наступного тижня! Щасти!",
+          "uz-UZ": "Kelasi haftagacha! Yaxshi qol!"
+        },
+        "nextStep": "step_19"
+      }
+    ],
+    "defaultNext": "step_19"
+  },
+  "step_19": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор окончен.",
+      "en-US": "The conversation is over.",
+      "ar-SA": "المحادثة انتهت.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत खत्म हो गई है।",
+      "pl-PL": "Rozmowa zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмова закінчена.",
+      "uz-UZ": "Suhbat tugadi."
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

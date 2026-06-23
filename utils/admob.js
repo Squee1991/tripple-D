@@ -6,7 +6,6 @@ let isAdProcessing = false;
 let lastInterstitialTime = 0;
 const AD_LIMIT_PER_DAY = 5;
 const INTERSTITIAL_COOLDOWN = 3 * 60 * 1000;
-const isApplication = Capacitor.isNativePlatform();
 
 function getTodayKey() {
 	const today = new Date();

@@ -146,7 +146,7 @@ const practiceCategories = computed(() => [
   { id: 'text', icon: TextBook, url: '/text-tasks', title: t('sub.textTask') },
   { id: 'description', icon: Photo, url: '/image-description', title: t('sub.describePicture') },
   { id: 'themen', icon: Thematic, url: '/thematic-learning', title: t('sub.themen') },
-  { id: 'exams', icon: Exam, url: '/exams', title: t('nav.tests') },
+  // { id: 'exams', icon: Exam, url: '/exams', title: t('nav.tests') },
 ])
 
 const grammarCategories = computed(() => [

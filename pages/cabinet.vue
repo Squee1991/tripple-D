@@ -246,6 +246,7 @@ import {useI18n} from 'vue-i18n'
 
 import AwardsList from '../src/components/AwardsList.vue'
 import VExampResulut from '../src/components/V-exampResulut.vue'
+import VNews from '../src/components/V-news.vue'
 import VFindFriends from '../src/components/V-findFriends.vue'
 import VRank from '../src/components/V-rank.vue'
 import PersonalInfoRows from '../src/components/PersonalInfoRows.vue'
@@ -260,6 +261,7 @@ import {useEventSessionStore} from '../../store/eventsStore.js'
 
 import Home from '../assets/images/home.svg'
 import Folder from '../assets/images/folder.svg'
+import News from '../assets/images/news.svg'
 import UserAccIcon from '../assets/accountToggleIcons/user.svg'
 import SettingsIcon from '../assets/images/settings.svg'
 import FaqIcon from '../assets/accountToggleIcons/faq.svg'
@@ -302,7 +304,7 @@ const accountTab = ref((typeof window !== 'undefined' && sessionStorage.getItem(
 const TAB_ITEMS = computed(() => {
   const items = [
     {key: 'info', label: t('cabinetSidebar.valueOne'), alt: 'infoIcon', icon: AccountIcon},
-    {key: 'archive', label: t('cabinetSidebar.valueTwo'), alt: 'archiveIcon', icon: Folder},
+    {key: 'archive', label: t('cabinetSidebar.valueTwo'), alt: 'archiveIcon', icon: News},
     {key: 'shop', label: t('cabinetSidebar.valueThree'), alt: 'shopIcon', icon: ShoppingCart},
     {key: 'settings', label: t('cabinetSidebar.valueFour'), alt: 'settingsIcon', icon: SettingsIcon}
   ]
@@ -340,28 +342,28 @@ const userNameSafe = computed(() => authStore.initialized && authStore.name ? au
 
 const iconDisplayComputed = computed(() => ({"iconHide": iconDisplay.value}))
 
-const registrationDateText = computed(() => {
-  const registeredAt = authStore.registeredAt
-  if (!registeredAt) return '—'
-
-  let date
-  if (typeof registeredAt.toDate === 'function') date = registeredAt.toDate()
-  else date = new Date(registeredAt)
-
-  if (isNaN(date.getTime())) return '—'
-  const options = {day: 'numeric', month: 'long', year: 'numeric'}
-  let formatted = date.toLocaleDateString(locale.value, options)
-  formatted = formatted.replace(/\s*г\.$/, '')
-  const parts = formatted.split(' ')
-  if (parts.length === 3) {
-    parts[1] = parts[1].charAt(0).toUpperCase() + parts[1].slice(1)
-    return parts.join(' ')
-  }
-  return formatted
-})
+// const registrationDateText = computed(() => {
+//   const registeredAt = authStore.registeredAt
+//   if (!registeredAt) return '—'
+//
+//   let date
+//   if (typeof registeredAt.toDate === 'function') date = registeredAt.toDate()
+//   else date = new Date(registeredAt)
+//
+//   if (isNaN(date.getTime())) return '—'
+//   const options = {day: 'numeric', month: 'long', year: 'numeric'}
+//   let formatted = date.toLocaleDateString(locale.value, options)
+//   formatted = formatted.replace(/\s*г\.$/, '')
+//   const parts = formatted.split(' ')
+//   if (parts.length === 3) {
+//     parts[1] = parts[1].charAt(0).toUpperCase() + parts[1].slice(1)
+//     return parts.join(' ')
+//   }
+//   return formatted
+// })
 
 const tabs = {
-  archive: VExampResulut,
+  archive: VNews,
   settings: VSettings,
   shop: Shop,
 }

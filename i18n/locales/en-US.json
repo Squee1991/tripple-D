@@ -10194,7 +10194,9 @@
     "transport": "Trips and transport",
     "city": "City services and everyday life",
     "health": "Health",
-    "work": "Work and career"
+    "work": "Work and career",
+    "auto": "Car and road"
+
   },
   "speakThemes": {
     "firstmeet": "Introduction",
@@ -10236,7 +10238,14 @@
     "bos_talk": "Talk with manager",
     "vacation": "Vacation",
     "salary_talk": "Salary",
-    "dismissal_talk": "Dismissal"
+    "dismissal_talk": "Dismissal",
+    "library": "Library",
+    "refusal_invite": "Declining an invitation",
+    "road_assistance": "Car breakdown",
+    "oil_change": "Oil change",
+    "car_buying": "Buying a car",
+    "police_control": "Speeding ticket",
+    "gas_station": "Gas station"
   },
   "speakIndexPage": {
     "title": "Speaking practice",
@@ -10313,7 +10322,7 @@
   },
   "speakSession": {
     "title": "Speaking practice",
-    "words": "Vocabulary for dialogue",
+    "words": "Words",
     "wordsText": "Learn or review the words before you start talking. This will help you feel more confident!",
     "learn": "Start",
     "dialogue": "Dialogue",
@@ -10399,5 +10408,134 @@
   "speakSessionsBanner": {
     "dialog": "Go through dialogues. Listen, choose answer options, and practice your pronunciation",
     "words": "Learn key words and phrases to easily understand every line in the dialogue"
+  },
+  "newsTitleBanner": {
+    "title": "Articles about the features of the German language, topic breakdowns, and useful knowledge to boost your level.",
+    "badgeArticle": "In the world of Skillupgerman"
+  },
+  "newsArticleOne": {
+    "first": "Do you eat chocolate when stressed or sad? Meet der Kummerspeck.",
+    "second": "These are those exact extra pounds that persistently appear from worrying. Literally - 'bacon of grief'.",
+    "third": "It consists of der Kummer (grief) and der Speck (bacon). As expected, this 'bacon' takes its gender from the article of the last noun.",
+    "cta": "Admit it, have you ever had Kummerspeck?"
+  },
+  "newsArticleTwo": {
+    "first": "Know that sacred bliss when the workday is finally over? That's der Feierabend.",
+    "second": "Literally - 'celebration evening'. A special time of rest when even thinking about work is forbidden.",
+    "third": "It is made up of die Feier (celebration) and der Abend (evening). This pleasant time takes its gender from the article of the last noun — der Abend.",
+    "cta": "Do you always look forward to Feierabend at work?"
+  },
+  "newsArticleThree": {
+    "first": "German is the only major language in the world where absolutely all nouns are capitalized, regardless of their position in the sentence.",
+    "second": "It doesn't matter if you're talking about a person, a dog, a regular chair, or an abstract thought — the first letter will always be uppercase. This often confuses beginners when learning.",
+    "third": "However, this rule has a huge plus: when reading a German text, you can always accurately and at first glance identify exactly where an object is hidden in the sentence.",
+    "cta": "Is it a convenient rule?"
+  },
+  "newsArticleFour": {
+    "first": "One of the most mind-blowing things about learning German is counting. Germans pronounce two-digit numbers from the end.",
+    "second": "For example, they say the number twenty-one as 'one and twenty'. Because of this, when listening to spoken German, you have to mentally flip the digits in your head.",
+    "third": "This linguistic trick often breaks the pattern for beginners, especially when they need to quickly write down a phone number or a price in a store by ear.",
+    "cta": "Did you get used to this counting quickly, or do you still get confused?"
+  },
+  "newsArticleFive": {
+    "first": "In German, there is a strict word order rule that forces you to listen to your conversation partner until the very last word.",
+    "second": "In certain types of sentences, the most important verb that indicates the action flies off to the very, very end.",
+    "third": "You can build a long phrase and list a bunch of details, but your listener won't know if you bought, sold, broke, or lost the item until you utter the final word.",
+    "cta": "Is it hard to rewire your thinking for this kind of word order?"
+  },
+  "newsArticleSix": {
+    "first": "When learning German, you will definitely panic sooner or later at the length of some words. The secret is that in German, there is officially no limit to the length of a noun.",
+    "second": "You can endlessly glue words together, creating huge locomotives of letters just to describe a single object.",
+    "third": "But the ultimate saving rule applies here: no matter how crazy the length of this monster is, it always takes its final grammatical gender from the article of the very last word.",
+    "cta": "Do these long locomotive-words scare you?"
+  },
+  "newsArticleSeven": {
+    "first": "Does it ever happen that before an important event or sleep, you start playing out fictional scenarios and entire movies in your head in full detail? Germans describe this state as having your own cinema in your head.",
+    "second": "This is when your imagination or anxiety runs so wild that you literally get sucked into directing and watching your own thoughts.",
+    "third": "It is merged from der Kopf (head) and das Kino (cinema). This mental cinema obediently takes its final neuter gender from the article of the last noun.",
+    "cta": "Does this Kopfkino often turn on before you go to sleep?"
+  },
+  "newsArticleEight": {
+    "first": "The German language is full of self-irony when it comes to body shape. If you've gained a little extra weight on your sides, Germans won't talk about fat rolls; they will call it gold on the hips.",
+    "second": "Literally, it translates to 'hip gold'. Such a delicate and precious description for love handles that got a bit rounder after delicious German sausages, buns, or beer.",
+    "third": "The word consists of die Hüfte (hip) and das Gold (gold). Quite expectedly, this funny word takes its shiny neuter gender from the article of the last noun.",
+    "cta": "How do you like such a poetic name?"
+  },
+  "newsArticleNine": {
+    "first": "Everyone knows what homesickness is, but Germans have a unique word for the exact opposite feeling. It is a longing for distant countries and travel.",
+    "second": "Literally, it translates as 'distance-pain'. This is that exact aching feeling when you are sitting at home and unbearably want to go somewhere you have never been.",
+    "third": "The word is assembled from die Ferne (distance) and das Weh (pain/woe). This romantic longing takes its final neuter gender from the article of the last word.",
+    "cta": "Do you ever experience this kind of Fernweh?"
+  },
+  "newsArticleTen": {
+    "first": "Look at a regular electric light bulb. What shape does it remind you of? Germans saw a glowing fruit in it.",
+    "second": "The literal translation of this word is 'glowing pear'. A very cozy, simple, and warm domestic description for a device we are so used to.",
+    "third": "It comes from the verb glühen (to glow) and the noun die Birne (pear). Our light bulb takes its feminine gender from the article of the last word — die Birne.",
+    "cta": "Does a light bulb look like a pear to you?"
+  },
+  "newsArticleEleven": {
+    "first": "How do you name that exact heavy emotional suffering when your love turns out to be unrequited? Germans combined these feelings into one expressive concept.",
+    "second": "Literally, it translates as 'love-grief'. This is a very accurate description for that longing and sadness that literally break your heart.",
+    "third": "The word is glued together from die Liebe (love) and der Kummer (grief). This broken heart obediently takes its masculine gender from the article of the very last word — der Kummer.",
+    "cta": "Is this feeling familiar to you?"
+  },
+  "newsArticleTwelve": {
+    "first": "Are you walking through the forest after the rain and notice a regular slug without a shell? The German language describes it in a highly stripped-down way.",
+    "second": "The literal translation of this funny word is 'naked snail'. Indeed, why invent a new name if it's just a snail left without a house.",
+    "third": "It is formed from the adjective nackt (naked) and the noun die Schnecke (snail). This forest dweller takes its feminine gender from the article of the last word.",
+    "cta": "Did this name make you smile?"
+  },
+  "newsArticleThirteen": {
+    "first": "If you have ever learned English, we have great news for you. You already automatically know part of the German vocabulary, even if you have never specially studied it.",
+    "second": "The thing is, English and German are close linguistic relatives from the same Germanic family. Words like brother, sister, water, green, or apple are written and sound incredibly similar.",
+    "third": "This is precisely why learning German words with an English background is much faster — your brain subconsciously recognizes familiar patterns.",
+    "cta": "Have you noticed the similarity between English and German?"
+  },
+  "newsArticleFourteen": {
+    "first": "The German letter eszett, which is written like a capital B, is a unique hallmark of the German alphabet. But when learning the language, few people know that by no means all German-speaking regions use it.",
+    "second": "In Switzerland and Liechtenstein, this letter was officially and completely abandoned in the last century. In Swiss schools, newspapers, and official documents, they write the usual double 'ss' everywhere instead.",
+    "third": "This happened due to the mass adoption of typewriters, where the Swiss simply didn't have enough space on the layout for both German and French characters simultaneously. Therefore, if you read Swiss texts, you won't find this letter there.",
+    "cta": "Did you know about the Swiss secret of the German alphabet?"
+  },
+  "newsArticleFifteen": {
+    "first": "In German, there are amazing shape-shifter verbs that are spelled absolutely identically, but their meaning changes drastically depending on the stress. This fact often shocks beginners.",
+    "second": "A prime example is the verb umfahren. If you stress the first part of the word, it means to knock over, hit, or run over an obstacle. But if you shift the stress to the second part, the word instantly changes to the opposite meaning — to drive around or bypass an obstacle.",
+    "third": "This is precisely why, when learning such verbs, it is critically important to listen to where the stress falls; otherwise, during a practical driving lesson in Germany, you might accidentally terrify your instructor.",
+    "cta": "Did you know about these tricky double-meaning verbs?"
+  },
+  "newsArticleSixteen": {
+    "first": "When foreigners don't understand what is being discussed, they usually say 'it's Greek to me.' Germans, however, apply pure railway logic in such a situation.",
+    "second": "If a German completely fails to understand the speaker or doesn't want to listen to them, they will say: 'Ich verstehe nur Bahnhof' (I only understand train station).",
+    "third": "Over time, the phrase turned into a popular idiom. Now, if someone is explaining directions too confusingly or overwhelming you with a complex topic, you can safely use this expression.",
+    "cta": "Have you already heard this funny expression about the train station?"
+  },
+  "newsArticleSeventeen": {
+    "first": "Learning the articles der, die, das is an eternal headache for everyone learning German. But don't worry — sometimes even native speakers aren't sure about the correct choice of article.",
+    "second": "The realest and never-ending linguistic war in Germany unfolds every morning at breakfast around the famous Nutella chocolate spread. Germans have been arguing for decades about its grammatical gender.",
+    "third": "Some say die because it's a spread (creme), others think it's das since it's the neuter gender for foreign product names. The dispute escalated to such an extent that even the official Duden dictionary gave up and admitted that Nutella has no fixed article at all and any option can be used.",
+    "cta": "And which article would you give to Nutella?"
+  },
+  "newsArticleEighteen": {
+    "first": "If a person persistently fails to notice obvious things happening right under their nose, Germans won't say they are inattentive. They will find vegetables on their face.",
+    "second": "The literal translation of this iconic idiom is 'to have tomatoes on one's eyes.' This is said about a driver who doesn't see a red light, or a friend who completely misses your hints.",
+    "third": "The origins of the phrase date back to ancient courts, where the guilty were forced to wear blindfolds as a sign of shame, and sometimes real vegetables were tied to their eyes. Today, it's just a fun way to tell someone it's time to open their eyes.",
+    "cta": "Have you already heard this phrase about tomatoes?"
+  },
+  "newsArticleNineteen": {
+    "first": "German textbooks teach us to greet people depending on the time of day: good morning, good afternoon, or good evening. But in northern Germany, they simply laugh at this system.",
+    "second": "There, absolutely everyone uses one iconic word: Moin. The most interesting part is that you can say it absolutely anytime: at 8 AM to your boss, at 3 PM to a shop assistant, or late at night to friends at a bar. It simply means hello.",
+    "third": "But be careful: if you decide to double the greeting and say 'Moin Moin,' the locals will immediately consider you a terrible chatterbox. In the north, they value brevity, so one word is more than enough.",
+    "cta": "Have you already heard this greeting from people in Germany?"
+  },
+  "newsTitle": {
+    "article_3": "All nouns are capitalized!",
+    "article_4": "Numbers are backward!",
+    "article_5": "The verb is at the very end of the sentence!",
+    "article_6": "Endless words!",
+    "article_13": "You already know many German words!",
+    "article_14": "The letter an entire country lost!",
+    "article_15": "One verb - two opposite meanings!",
+    "article_17": "The battle for Nutella's article!",
+    "article_19": "Moin is universal!"
   }
 }

@@ -202,7 +202,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 
 .card-stars {
   color: #e0e0e0;
-  font-size: 21px;
+  font-size: 22px;
   position: absolute;
   left: 50%;
   top: -3px;
@@ -219,9 +219,9 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .card-icon {
-  padding-top: 10px;
+  padding-top: 22px;
   width: 76px;
-  height: 76px;
+  margin-bottom: 5px;
 }
 
 .icon-grayscale {
@@ -231,6 +231,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 .card-label {
   font-weight: 700;
   color: var(--titleColor);
+  display: none;
 }
 
 
