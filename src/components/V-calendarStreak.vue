@@ -380,15 +380,14 @@ onMounted(() => {
 .hats__info-wrapper {
   opacity: 0;
   height: 0;
-  transition: .3s ease-in-out;
   overflow: hidden;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  will-change: height, opacity;
 }
 
 .hats__info-wrapper.open__info {
   height: 194px;
   opacity: 1;
-  transition: .3s ease-in-out;
-  overflow: hidden;
 }
 
 .rank-info-list li {
