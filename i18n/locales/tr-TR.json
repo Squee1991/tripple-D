@@ -10522,5 +10522,10 @@
     "article_15": "Bir fiil - iki zıt anlam!",
     "article_17": "Nutella'nın artikeli savaşı!",
     "article_19": "Moin her duruma uyar!"
+  },
+  "i18nDays": {
+    "days": "g",
+    "hours": "sa",
+    "mins": "dk"
   }
 }

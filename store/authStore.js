@@ -658,13 +658,11 @@ export const userAuthStore = defineStore('auth', () => {
     };
 
     const logOut = async () => {
-        // 1. Сначала "затыкаем уши" Firebase, чтобы слушатель не сработал параллельно
         if (authStateUnsubscribe) {
             authStateUnsubscribe();
             authStateUnsubscribe = null;
         }
 
-        // 2. Чистим кэш
         if (typeof window !== 'undefined') {
             localStorage.removeItem('cached_premium');
         }

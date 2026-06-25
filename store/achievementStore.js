@@ -2,7 +2,6 @@ import { defineStore } from 'pinia'
 import { ref, watch, watchEffect } from 'vue'
 import { getFirestore, doc, onSnapshot } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
-
 // --- 1) Импорты групп достижений ---
 import { overAchievment } from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
 import { wordAchievementsGroup } from '../src/achieveGroup/wordGroup/wordAchievements.js'
@@ -28,7 +27,6 @@ import { typeVerbs } from '../src/achieveGroup/verbs/typeVerbs.js'
 import { sentenceAchievement } from '../src/achieveGroup/sentenceDuel/sentenceAchievementsА1.js'
 import { eventWinterAchievements } from '../src/achieveGroup/eventAchievement/winterAchievements.js'
 import { valentineAchievements } from '../src/achieveGroup/eventAchievement/valentineAchievements.js'
-
 // --- 2) Сторы-источники ---
 import { userChainStore } from '../store/chainStore.js'
 import { userAuthStore } from '../store/authStore.js'
@@ -44,9 +42,7 @@ import { guessAchievment } from '../src/achieveGroup/guessAchieve/guessAchievmen
 import { useQuizStore } from '../store/adjectiveStore.js'
 import { useEventSessionStore } from '../store/eventsStore.js'
 import { useEasterEggsStore } from '../store/easterEggsStore.js'
-
 export const useAchievementStore = defineStore('achievementStore', () => {
-
 	const rawGroups = [
 		...valentineAchievements.map(g => ({category: 'valentine' , ...g})),
 		...eventWinterAchievements.map(g => ({category: 'winter' , ...g})),
@@ -74,7 +70,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		...assembleWordGroupAchievement.map(g => ({ category: 'letters', ...g })),
 		...cpecialGroupAchievment.map(g => ({ category: 'special', ...g }))
 	]
-
 	const groups = ref(
 		rawGroups.map(group => ({
 			...group,
@@ -85,7 +80,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			}))
 		}))
 	)
-
 	const lastUnlockedAward = ref(null)
 	const lastUnlockedAchievement = ref(null)
 	const popupQueue = ref([])
@@ -105,12 +99,10 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	const duelStore = useDuelStore()
 	const eventStore = useEventSessionStore()
 	const eggStore = useEasterEggsStore()
-
 	const isBooting = ref(true)
 	const suppressReplaysUntil = ref(0)
 	const bootUnlocked = []
 	const bootAwards = []
-
 	let eventUnsubs = []
 	const dailyAggUnsub = ref(null)
 	const prevMap = new Map()
@@ -120,10 +112,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		'Rote Bete','Radieschen','Bohne','Mais','Pilz','Knoblauch'
 	]);
 	const hasAllModes = (word) => required.every(m => word?.progress?.[m])
-
 	const awardsKey = () => `awards_shown_v1_${authStore?.uid}`
 	const completedKey = () => `achievements_completed_v1_${authStore?.uid}`
-
 	function loadShown() {
 		if (!process.client) return new Set()
 		try { return new Set(JSON.parse(localStorage.getItem(awardsKey()) || '[]')) }
@@ -142,12 +132,10 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		if (!process.client) return
 		try { localStorage.setItem(completedKey(), JSON.stringify([...set])) } catch {}
 	}
-
 	let shownSet = loadShown()
 	let completedSet = loadCompleted()
 	const winterRank1BoughtCount = ref(0)
 	const valentineRank1BoughtCount = ref(0)
-
 	function findById(id) {
 		for (const g of groups.value) {
 			const ach = g.achievements.find(a => a.id === id)
@@ -232,21 +220,16 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 					updateCollectionCount()
 				}
 			} else {
-				// Игнорируем блокировку спама для ачивки за регистрацию
 				if (Date.now() >= suppressReplaysUntil.value || id === 'registerAchievement') {
 					popupQueue.value.push(ach)
 					showNextPopup()
-
 					lastUnlockedAchievement.value = { id: ach.id, title: ach.title, groupTitle: ach.groupTitle || null, ts: Date.now() }
-					// Увеличен таймаут, чтобы Vue гарантированно заметил изменение
 					setTimeout(() => { if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null }, 500)
 
 					if (mapVal && !shownSet.has(mapVal)) {
 						shownSet.add(mapVal)
 						saveShown(shownSet)
-
 						lastUnlockedAward.value = { titleKey: mapVal, achId: id, ts: Date.now() }
-						// Увеличен таймаут для награды, чтобы она 100% отрисовалась
 						setTimeout(() => { if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null }, 500)
 						updateCollectionCount()
 					}
@@ -581,13 +564,18 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		watch(() => langStore.articlesSpentForAchievement, spent => updateProgress('Articlus', Number(spent) || 0), { immediate: true })
 		watch(() => gameStore.onTheEdgeProgress, v => updateProgress('Impuls', v), { immediate: true })
 
-		;(async function checkLeaderboard() {
-			if (!authStore.uid) return
-			const levels = [1, 2, 3], ids = ['leaderboardEasy', 'leaderboardNormal', 'leaderboardHard']
-			for (let i = 0; i < 3; i++) {
-				const lb = await gameStore.loadMarathonLeaderboard(levels[i])
-				updateProgress(ids[i], lb.length > 0 && lb[0].id === authStore.uid ? 1 : 0)
-			}
+		;(async function checkSeasonAchievements() {
+			setTimeout(async function checkSeasonAchievements() {
+				if (!authStore.uid) return
+				const state = gameStore.getSeasonState()
+				const seasonToCheck = state.isOpen ? state.previousSeasonId : state.currentSeasonId;
+				const rankEasy = await gameStore.getPreviousSeasonRank(1, seasonToCheck)
+				if (rankEasy === 1) updateProgress('leaderboardEasy', 1)
+				const rankNormal = await gameStore.getPreviousSeasonRank(2, seasonToCheck)
+				if (rankNormal === 1) updateProgress('leaderboardNormal', 1)
+				const rankHard = await gameStore.getPreviousSeasonRank(3, seasonToCheck)
+				if (rankHard === 1) updateProgress('leaderboardHard', 1)
+			}, 4500)
 		})()
 
 		watch(() => authStore.registeredAt, date => {

@@ -220,7 +220,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 
 .card-icon {
   padding-top: 22px;
-  width: 76px;
+  width: 86px;
   margin-bottom: 5px;
 }
 
@@ -405,7 +405,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 @media (max-width: 1023px) {
   .grid {
     display: flex;
-    gap: 16px;
+
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;

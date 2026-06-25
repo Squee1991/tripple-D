@@ -10529,5 +10529,10 @@
     "article_15": "Jedno słowo - dwa przeciwstawne znaczenia!",
     "article_17": "Bitwa o rodzajnik Nutelli!",
     "article_19": "Uniwersalne Moin!"
+  },
+  "i18nDays": {
+    "days": "dn.",
+    "hours": "g.",
+    "mins": "min"
   }
 }

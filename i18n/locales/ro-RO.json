@@ -10513,5 +10513,10 @@
     "article_15": "Un singur verb - două sensuri opuse!",
     "article_17": "Bătălia pentru articolul Nutellei!",
     "article_19": "Moin este universal!"
+  },
+  "i18nDays": {
+    "days": "z",
+    "hours": "h",
+    "mins": "min"
   }
 }

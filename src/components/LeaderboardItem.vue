@@ -4,7 +4,8 @@ import {userAuthStore} from '../../store/authStore.js'
 import GoldMedal from '../../assets/images/ranked-medals/GoldMedal.svg'
 import SilverMedal from '../../assets/images/ranked-medals/SilverMedal.svg'
 import BronzeMedal from '../../assets/images/ranked-medals/BronzeMedal.svg'
-
+import VTransition from "~/src/components/V-transition.vue";
+const isMounted = ref(false);
 const props = defineProps({
   player: {type: Object, required: true},
   rank: {type: Number, required: true},
@@ -31,6 +32,13 @@ const rankClass = computed(() => {
   if (props.rank === 3) return 'rank--bronze'
   return 'rank--default'
 })
+
+onMounted(() => {
+  setTimeout(()=> {
+    isMounted.value = true
+  }, 90)
+})
+
 </script>
 
 <template>
@@ -39,25 +47,24 @@ const rankClass = computed(() => {
     <span class="dot"></span>
     <span class="dot"></span>
   </div>
-
-  <li class="leaderboard-item" :class="{ 'leaderboard-item--current': isCurrentUser }">
-    <div class="leaderboard-player-info">
-      <div class="leaderboard-player-rank" :class="rankClass">
-        <img v-if="medal" :src="medal.src" :alt="medal.alt" class="rank-medal"/>
-        <span v-else>#{{ rank }}</span>
+    <li class="leaderboard-item" :class="{ 'leaderboard-item--current': isCurrentUser }">
+      <div class="leaderboard-player-info">
+        <div class="leaderboard-player-rank" :class="rankClass">
+          <img v-if="medal" :src="medal.src" :alt="medal.alt" class="rank-medal"/>
+          <span v-else>#{{ rank }}</span>
+        </div>
+        <img class="leaderboard-player-avatar"
+             :src="isCurrentUser ? authStore.avatarUrl : authStore.getAvatarUrl(player.avatar)"
+             alt="avatar"
+        />
+        <span class="leaderboard-player-name">{{ player.name }}</span>
       </div>
-      <img class="leaderboard-player-avatar"
-           :src="isCurrentUser ? authStore.avatarUrl : authStore.getAvatarUrl(player.avatar)"
-           alt="avatar"
-      />
-      <span class="leaderboard-player-name">{{ player.name }}</span>
-    </div>
-    <div class="leaderboard-score-wrapper">
+      <div class="leaderboard-score-wrapper">
       <span class="leaderboard-player-score">
         {{ playerScore }} {{ scoreUnit }}
       </span>
-    </div>
-  </li>
+      </div>
+    </li>
 </template>
 
 <style scoped>

@@ -10508,5 +10508,10 @@
     "article_15": "Bitta fe'l - ikkita teskari ma'no!",
     "article_17": "Nutella artikli uchun jang!",
     "article_19": "Moin har doim mos keladi!"
+  },
+  "i18nDays": {
+    "days": "k",
+    "hours": "soat",
+    "mins": "daqiqa"
   }
 }

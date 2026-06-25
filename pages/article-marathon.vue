@@ -374,7 +374,7 @@ const difficultyBase = ref([
   background: #007AFF;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 50px;
   padding: 16px 32px;
   font-size: 18px;
   font-weight: 700;

@@ -10509,5 +10509,10 @@
     "article_15": "Un verbe - deux sens opposés !",
     "article_17": "La bataille pour l'article du Nutella !",
     "article_19": "Moin est universel !"
+  },
+  "i18nDays": {
+    "days": "j",
+    "hours": "h",
+    "mins": "min"
   }
 }

@@ -1,16 +1,16 @@
 <script setup>
-import {ref, watch, computed, onMounted} from 'vue'
-import {userAuthStore} from '../store/authStore.js'
-import {useGuessWordStore} from '../store/guesStore.js'
-import {useGameStore} from '../store/marafonStore.js'
-import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
+import { ref, watch, computed, onMounted, onUnmounted } from 'vue'
+import { userAuthStore } from '../store/authStore.js'
+import { useGuessWordStore } from '../store/guesStore.js'
+import { useGameStore } from '../store/marafonStore.js'
+import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import LeaderboardItem from '../src/components/LeaderboardItem.vue'
 import ModalOverlay from '../src/components/modalOverlay.vue'
 import CloseIcon from '../assets/images/close.svg'
 import VBackBtn from "~/src/components/V-back-btn.vue";
 
-const {t, locale} = useI18n()
+const { t, locale } = useI18n()
 const router = useRouter()
 const authStore = userAuthStore()
 const guessStore = useGuessWordStore()
@@ -24,15 +24,20 @@ const isMarathonLoading = ref(true)
 const isModal = ref(false)
 const activeMarathonDifficulty = ref(1)
 
+const isLeaderboardOpen = ref(false)
+// const timeLeftToOpen = ref({ d: 0, h: 0, m: 0 })
+const timeLeftToOpen = ref({ d: 0, h: 0, m: 0, s: 0 })
+let timerInterval = null
+
 const disciplines = ref([
-  {id: 'guess', label: 'ranked.guessTab'},
-  {id: 'marathon', label: 'ranked.marathonTab'}
-]);
+  { id: 'guess', label: 'ranked.guessTab' },
+  { id: 'marathon', label: 'ranked.marathonTab' }
+])
 
 const difficultyOptions = ref([
-  {level: 1, label: 'ranked.easy'},
-  {level: 2, label: 'ranked.normal'},
-  {level: 3, label: 'ranked.hard'}
+  { level: 1, label: 'ranked.easy' },
+  { level: 2, label: 'ranked.normal' },
+  { level: 3, label: 'ranked.hard' }
 ])
 
 const modalValues = ref({
@@ -42,19 +47,19 @@ const modalValues = ref({
 
 const activeDisciplineIndex = computed(() =>
     disciplines.value.findIndex(tab => tab.id === activeDiscipline.value)
-);
+)
 
 const activeDifficultyIndex = computed(() =>
     difficultyOptions.value.findIndex(diff => diff.level === activeMarathonDifficulty.value)
-);
+)
 
 const getTransformX = (index, length) => {
-  if (index === -1) return 0;
+  if (index === -1) return 0
   if (locale.value === 'ar') {
-    return (length - 1 - index) * 100;
+    return (length - 1 - index) * 100
   }
-  return index * 100;
-};
+  return index * 100
+}
 
 const backToMainPage = () => {
   router.push('/')
@@ -62,15 +67,21 @@ const backToMainPage = () => {
 
 const isInGuessLeaderboard = computed(() =>
     guessRating.value.some(r => r.name === authStore.name)
-);
+)
 
 const userMarathonRecord = computed(() => {
   if (!authStore.uid || !marathonRating.value || marathonRating.value.length === 0) {
-    return 0;
+    return 0
   }
-  const userRecord = marathonRating.value.find(player => player.id === authStore.uid);
-  return userRecord ? userRecord.streak : 0;
+  const userRecord = marathonRating.value.find(player => player.id === authStore.uid)
+  return userRecord ? userRecord.streak : 0
 })
+
+function updateTimer() {
+  const state = gameStore.getSeasonState()
+  isLeaderboardOpen.value = state.isOpen
+  timeLeftToOpen.value = state.timeLeft
+}
 
 async function loadGuessStatistics() {
   isGuessLoading.value = true
@@ -82,7 +93,7 @@ async function loadGuessStatistics() {
 }
 
 async function loadMarathonStatistics() {
-  isMarathonLoading.value = true;
+  isMarathonLoading.value = true
   marathonRating.value = await gameStore.loadMarathonLeaderboard(activeMarathonDifficulty.value)
   if (authStore.uid) {
     await gameStore.fetchRecord()
@@ -93,7 +104,7 @@ async function loadMarathonStatistics() {
 async function addToLeaderboard() {
   if (!Array.isArray(guessStore.guessedWords) || guessStore.guessedWords.length === 0) {
     isModal.value = true
-    return;
+    return
   }
   await guessStore.saveToLeaderboard(authStore.name, guessStore.guessedWords.length)
   guessRating.value = await guessStore.loadLeaderboard()
@@ -103,7 +114,7 @@ watch(activeMarathonDifficulty, () => {
   if (activeDiscipline.value === 'marathon') {
     loadMarathonStatistics()
   }
-});
+})
 
 watch(activeDiscipline, (newDiscipline) => {
   if (newDiscipline === 'guess') {
@@ -111,7 +122,7 @@ watch(activeDiscipline, (newDiscipline) => {
   } else if (newDiscipline === 'marathon') {
     loadMarathonStatistics()
   }
-}, {immediate: true});
+}, { immediate: true })
 
 watch(() => authStore.uid, () => {
   if (activeDiscipline.value === 'guess') {
@@ -119,12 +130,27 @@ watch(() => authStore.uid, () => {
   } else if (activeDiscipline.value === 'marathon') {
     loadMarathonStatistics()
   }
-}, {immediate: true});
+}, { immediate: true })
+
+// onMounted(async () => {
+//   if (authStore.uid) {
+//     await gameStore.fetchRecord()
+//   }
+//   updateTimer()
+//   timerInterval = setInterval(updateTimer, 60000)
+// })
 
 onMounted(async () => {
   if (authStore.uid) {
     await gameStore.fetchRecord()
   }
+  updateTimer()
+  // Обновляем таймер каждую 1 секунду (1000 мс) вместо 60000
+  timerInterval = setInterval(updateTimer, 1000)
+})
+
+onUnmounted(() => {
+  if (timerInterval) clearInterval(timerInterval)
 })
 </script>
 
@@ -138,7 +164,6 @@ onMounted(async () => {
           :overlayBtn="t(modalValues.btn)"
       />
     </div>
-
     <div class="ranked-sidebar-corkboard">
       <div class="ranked__header">
         <div class="ranked__side-btnBack-wrapper">
@@ -146,9 +171,7 @@ onMounted(async () => {
         </div>
         <h1 class="ranked-title">{{ t('ranked.label') }}</h1>
       </div>
-
       <div class="control-card">
-        <div class="pin"></div>
         <nav class="toggle-nav" role="tablist">
           <div
               class="sliding-bg"
@@ -165,9 +188,7 @@ onMounted(async () => {
           </button>
         </nav>
       </div>
-
       <div class="control-card" v-if="activeDiscipline === 'marathon'">
-        <div class="pin"></div>
         <h3 class="control-card__title">{{ t('ranked.difficulty') }}</h3>
         <nav class="toggle-nav" role="tablist">
           <div
@@ -203,8 +224,7 @@ onMounted(async () => {
         <div class="blackboard">
           <div class="blackboard__content">
             <div v-if="activeDiscipline === 'guess'" class="discipline-container">
-              <div v-if="isGuessLoading" class="blackboard__message">{{ t('ranked.loading') }}</div>
-              <div v-else-if="guessRating.length" class="leaderboard-wrapper">
+              <div v-if="guessRating.length" class="leaderboard-wrapper">
                 <h2 class="blackboard__title">{{ t('ranked.guesTabelelable') }}</h2>
                 <ul class="leaderboard__items-container">
                   <li v-for="(r, index) in guessRating" :key="r.name">
@@ -218,12 +238,23 @@ onMounted(async () => {
                 </ul>
               </div>
               <div v-else class="blackboard__message">
-                <div class="black__board-title">{{ t('ranked.notData') }}</div>
-                <img src="../assets/images/leadership.svg" alt="">
+                <!--                <div class="black__board-title">{{ t('ranked.notData') }}</div>-->
+                <!--                <img src="../assets/images/leadership.svg" alt="">-->
               </div>
             </div>
             <div v-if="activeDiscipline === 'marathon'" class="discipline-container">
-              <div v-if="isMarathonLoading" class="blackboard__message">{{ t('ranked.loading') }}</div>
+              <div v-if="!isLeaderboardOpen" class="blackboard__message timer-message">
+                <p class="timer-subtitle">До начала гонки:</p>
+                <div class="countdown-timer" v-if="timeLeftToOpen">
+                  {{ timeLeftToOpen.m }} {{ t('i18nDays.mins') }}
+                  {{ timeLeftToOpen.s }} сек </div>
+<!--                <div class="countdown-timer" v-if="timeLeftToOpen">-->
+<!--                  {{ timeLeftToOpen.d }} {{ t('i18nDays.days') }}-->
+<!--                  {{ timeLeftToOpen.h }} {{ t('i18nDays.hours') }}-->
+<!--                  {{ timeLeftToOpen.m }} {{ t('i18nDays.mins') }}-->
+<!--                </div>-->
+                <!--                <img class="leaderboard__icon" src="../assets/images/leadership.svg" alt="locked" style="opacity: 0.5;">-->
+              </div>
               <div v-else-if="marathonRating.length" class="leaderboard-wrapper">
                 <h2 class="blackboard__title">
                   {{ t('ranked.guesMarathonlable') }}:
@@ -242,7 +273,7 @@ onMounted(async () => {
               </div>
               <div v-else class="blackboard__message">
                 <div class="black__board-title">{{ t('ranked.emptydifficult') }}</div>
-                <img class="leaderboard__icon" src="../assets/images/leadership.svg" alt="leadership">
+                <!--                <img class="leaderboard__icon" src="../assets/images/leadership.svg" alt="leadership">-->
               </div>
             </div>
           </div>
@@ -257,6 +288,7 @@ onMounted(async () => {
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow: hidden;
   font-family: "Nunito", sans-serif;
 }
 
@@ -291,7 +323,8 @@ onMounted(async () => {
 .black__board-title {
   text-align: center;
   font-weight: 800;
-  font-size: 1.8rem;
+  font-size: 16px;
+  padding: 0 20px;
   color: #ffffff;
 }
 
@@ -322,7 +355,6 @@ onMounted(async () => {
   color: var(--titleColor);
   margin-bottom: 6px;
 }
-
 
 .toggle-nav {
   display: flex;
@@ -405,8 +437,9 @@ onMounted(async () => {
   border-radius: 30px;
   display: flex;
   max-width: 100%;
+  height: 100vh;
+  overflow-y: auto;
   margin: 0 10px 10px 10px;
-
 }
 
 .blackboard-frame, .blackboard {
@@ -449,13 +482,35 @@ onMounted(async () => {
 
 .blackboard__message {
   display: flex;
-  justify-content: center;
+  margin-top: 30px;
   align-items: center;
   flex-direction: column;
   height: 100%;
   font-size: 1.8rem;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.timer-message {
+  gap: 15px;
+}
+
+.timer-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #d1c4e9;
+  text-align: center;
+}
+
+.countdown-timer {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: 'Lilita One', sans-serif;
+  color: #00c2ff;
+  border: 2px solid #00c2ff;
 }
 
 .leaderboard__items-container {
@@ -466,11 +521,11 @@ onMounted(async () => {
 }
 
 ::-webkit-scrollbar {
-  width: 16px;
+  width: 2px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #d1c4e9;
+  background: #2f2d31;
   border-radius: 10px;
 }
 

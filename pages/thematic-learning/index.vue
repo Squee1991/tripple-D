@@ -288,7 +288,7 @@ watch(topic, loadThemeData)
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 115px;
+  width: 125px;
   height: 130px;
   background: var(--tabBg);
   border: 2px solid var(--tabsSlideBorderColor);

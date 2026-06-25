@@ -10537,5 +10537,10 @@
     "article_15": "One verb - two opposite meanings!",
     "article_17": "The battle for Nutella's article!",
     "article_19": "Moin is universal!"
+  },
+  "i18nDays": {
+    "days": "d",
+    "hours": "h",
+    "mins": "m"
   }
 }
