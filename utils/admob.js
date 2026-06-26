@@ -3,7 +3,9 @@ import { Capacitor } from '@capacitor/core';
 import { userAuthStore } from '../store/authStore.js';
 
 let isAdProcessing = false;
+let lastInterstitialTime = 0;
 const AD_LIMIT_PER_DAY = 5;
+const INTERSTITIAL_COOLDOWN = 3 * 60 * 1000;
 
 function getTodayKey() {
 	const today = new Date();
@@ -42,6 +44,12 @@ export async function showInterstitial(nextStep) {
 	if (!Capacitor.isNativePlatform()) {
 		return nextStep();
 	}
+
+	const now = Date.now();
+	if (now - lastInterstitialTime < INTERSTITIAL_COOLDOWN) {
+		return nextStep();
+	}
+
 	if (isAdProcessing) return;
 	isAdProcessing = true;
 	let hasTransitioned = false;
@@ -53,17 +61,19 @@ export async function showInterstitial(nextStep) {
 			nextStep();
 		}
 	};
+
 	const listener = await AdMob.addListener(InterstitialAdPluginEvents.Dismissed, () => {
 		console.log('Реклама закрыта, начинаем задание!');
 		listener.remove();
 		goNext();
 	});
+
 	try {
 		await AdMob.prepareInterstitial({
 			adId: 'ca-app-pub-3940256099942544/1033173712',
 		});
 		await AdMob.showInterstitial();
-
+		lastInterstitialTime = Date.now();
 	} catch (e) {
 		console.log("Ошибка рекламы, просто идем дальше", e);
 		listener.remove();

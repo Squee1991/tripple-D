@@ -1,5 +1,5 @@
-import {ref, computed, watch} from 'vue';
-import {defineStore} from 'pinia';
+import { ref, computed, watch } from 'vue';
+import { defineStore } from 'pinia';
 import {
 	doc,
 	getDoc,
@@ -10,9 +10,11 @@ import {
 	query,
 	orderBy,
 	where,
+	limit,
+	getCountFromServer
 } from 'firebase/firestore';
-import {userAuthStore} from './authStore.js';
-import {dailyStore} from './dailyStore.js'
+import { userAuthStore } from './authStore.js';
+import { dailyStore } from './dailyStore.js';
 
 const LEADERBOARD_COLLECTION = 'marathon_leaderboard';
 
@@ -34,19 +36,18 @@ export const useGameStore = defineStore('game', () => {
 	const marginForErrorProgress = ref(0);
 	const onTheEdgeProgress = ref(0);
 	const fastAnswerStreak = ref(0);
+	const personalBests = ref({ 1: 0, 2: 0, 3: 0 });
+	const totalCorrectAnswers = ref({ 1: 0, 2: 0, 3: 0 });
 
-	const personalBests = ref({1: 0, 2: 0, 3: 0});
-	const totalCorrectAnswers = ref({1: 0, 2: 0, 3: 0});
 	const userId = computed(() => authStore.uid);
 	const levelSettings = computed(() => {
 		const settings = {
-			1: {lives: 5, timer: null},
-			2: {lives: 5, timer: 10},
-			3: {lives: 1, timer: 5},
+			1: { lives: 5, timer: null },
+			2: { lives: 5, timer: 10 },
+			3: { lives: 1, timer: 5 },
 		};
 		return settings[difficulty.value];
 	});
-
 
 	function resetGameState() {
 		sessionStreak.value = 0;
@@ -68,8 +69,8 @@ export const useGameStore = defineStore('game', () => {
 
 	async function fetchRecord() {
 		if (!userId.value) {
-			personalBests.value = {1: 0, 2: 0, 3: 0};
-			totalCorrectAnswers.value = {1: 0, 2: 0, 3: 0};
+			personalBests.value = { 1: 0, 2: 0, 3: 0 };
+			totalCorrectAnswers.value = { 1: 0, 2: 0, 3: 0 };
 			lastChanceProgress.value = 0;
 			marginForErrorProgress.value = 0;
 			onTheEdgeProgress.value = 0;
@@ -98,8 +99,8 @@ export const useGameStore = defineStore('game', () => {
 			marginForErrorProgress.value = data.marginForErrorProgress || 0;
 			onTheEdgeProgress.value = data.onTheEdgeProgress || 0;
 		} else {
-			personalBests.value = {1: 0, 2: 0, 3: 0};
-			totalCorrectAnswers.value = {1: 0, 2: 0, 3: 0};
+			personalBests.value = { 1: 0, 2: 0, 3: 0 };
+			totalCorrectAnswers.value = { 1: 0, 2: 0, 3: 0 };
 			lastChanceProgress.value = 0;
 			marginForErrorProgress.value = 0;
 			onTheEdgeProgress.value = 0;
@@ -120,7 +121,7 @@ export const useGameStore = defineStore('game', () => {
 				marginForErrorProgress: marginForErrorProgress.value,
 				onTheEdgeProgress: onTheEdgeProgress.value
 			},
-			{merge: true},
+			{ merge: true },
 		);
 	}
 
@@ -130,10 +131,13 @@ export const useGameStore = defineStore('game', () => {
 		const q = query(
 			leaderboardRef,
 			where(`streaks.${level}`, '>', 0),
-			orderBy(`streaks.${level}`, 'desc')
+			orderBy(`streaks.${level}`, 'desc'),
+			limit(11)
 		);
+
 		const querySnapshot = await getDocs(q);
 		const leaderboard = [];
+		let index = 1;
 		querySnapshot.forEach(doc => {
 			const data = doc.data();
 			leaderboard.push({
@@ -141,8 +145,32 @@ export const useGameStore = defineStore('game', () => {
 				name: data.name,
 				avatar: data.avatar || '1.png',
 				streak: data.streaks[level],
+				rank: index++,
+				isCurrentUser: doc.id === userId.value
 			});
 		});
+
+		const isMeInTop10 = leaderboard.some(player => player.id === userId.value);
+		const myCurrentStreak = personalBests.value[level] || 0;
+		if (!isMeInTop10 && userId.value && myCurrentStreak > 0) {
+			const countQuery = query(
+				leaderboardRef,
+				where(`streaks.${level}`, '>', myCurrentStreak)
+			);
+			const countSnapshot = await getCountFromServer(countQuery);
+			const playersAhead = countSnapshot.data().count;
+			const myActualRank = playersAhead + 1;
+			leaderboard.push({
+				id: userId.value,
+				name: authStore.name,
+				avatar: authStore.avatar || '1.png',
+				streak: myCurrentStreak,
+				rank: myActualRank,
+				isCurrentUser: true,
+				isSeparated: true
+			});
+		}
+
 		return leaderboard;
 	}
 
@@ -151,9 +179,9 @@ export const useGameStore = defineStore('game', () => {
 			fetchRecord();
 		} else {
 			resetGameState();
-			personalBests.value = {1: 0, 2: 0, 3: 0};
+			personalBests.value = { 1: 0, 2: 0, 3: 0 };
 		}
-	}, {immediate: true});
+	}, { immediate: true });
 
 	function selectGameSettings(level) {
 		difficulty.value = level;
@@ -180,10 +208,9 @@ export const useGameStore = defineStore('game', () => {
 	}
 
 	function retryGame() {
-		lives.value = levelSettings.value.lives
-		sessionStreak.value = 0
-		startNewRound()
-
+		lives.value = levelSettings.value.lives;
+		sessionStreak.value = 0;
+		startNewRound();
 	}
 
 	function submitAnswer(isCorrect) {
@@ -200,26 +227,19 @@ export const useGameStore = defineStore('game', () => {
 			sessionStreak.value = 0;
 			fastAnswerStreak.value = 0;
 		}
+
 		if (difficulty.value === 2) {
-			try {
-				daily.noteMarathonMediumStreak(sessionStreak.value);
-			} catch {}
+			try { daily.noteMarathonMediumStreak(sessionStreak.value); } catch {}
 		}
 		if (difficulty.value === 1) {
-			try {
-				daily.noteEasyStreak(sessionStreak.value);
-			} catch {}
+			try { daily.noteEasyStreak(sessionStreak.value); } catch {}
 		}
 		if (difficulty.value === 3) {
-			try { daily.noteHardStreak(sessionStreak.value) } catch {}
+			try { daily.noteHardStreak(sessionStreak.value); } catch {}
 		}
 		if (!isCorrect) {
-			try {
-				daily.addWrong(1);
-			} catch {
-			}
+			try { daily.addWrong(1); } catch {}
 		}
-
 		if (difficulty.value === 1 && lives.value === 1) {
 			if (sessionStreak.value > lastChanceProgress.value) {
 				lastChanceProgress.value = Math.min(sessionStreak.value, 20);
@@ -241,7 +261,6 @@ export const useGameStore = defineStore('game', () => {
 		if (fastAnswerStreak.value > onTheEdgeProgress.value) {
 			onTheEdgeProgress.value = Math.min(fastAnswerStreak.value, 20);
 		}
-
 		if (isCorrect) {
 			saveRecord();
 			startNewRound();

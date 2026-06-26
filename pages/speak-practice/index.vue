@@ -2,7 +2,7 @@
   <div class="speak__container">
     <header class="header">
       <VBackBtn/>
-      <h1 class="header__title">{{ t('speakIndexPage.title')}}</h1>
+      <h1 class="header__title">{{ t('speakIndexPage.title') }}</h1>
       <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
              stroke="orange" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
@@ -22,7 +22,7 @@
         </div>
         <main class="categories-container">
           <div
-              v-for="category in categories"
+              v-for="(category, catIndex) in categoriesSpeak"
               :key="category.id"
               class="category-group"
           >
@@ -34,13 +34,14 @@
             </div>
             <div class="themes-slider">
               <div
-                  v-for="theme in category.themes"
+                  v-for="(theme, themeIndex) in category.themes"
                   :key="theme.id"
                   class="theme-card"
-                  @click="goToSession(theme.id)"
+                  @click="goToSession(theme, catIndex, themeIndex)"
               >
                 <div v-if="speakStore.userProgress[theme.id]" class="card__check">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </div>
@@ -54,9 +55,22 @@
                   </div>
                   <button
                       class="card__btn"
-                      :class="{ 'card__btn--completed': speakStore.userProgress[theme.id] }"
+                      :class="{
+                        'card__btn--completed': speakStore.userProgress[theme.id] && ((catIndex === 0 && (themeIndex === 0 || themeIndex === 1)) || authStore.isPremium),
+                        'card__btn--locked': !((catIndex === 0 && (themeIndex === 0 || themeIndex === 1)) || authStore.isPremium)
+                      }"
                   >
-                    {{ speakStore.userProgress[theme.id] ? t('locationQuests.repeat') : t('locationQuests.start') }}
+                    <template v-if="(catIndex === 0 && (themeIndex === 0 || themeIndex === 1)) || authStore.isPremium">
+                      {{ speakStore.userProgress[theme.id] ? t('locationQuests.repeat') : t('locationQuests.start') }}
+                    </template>
+                    <template v-else>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                           style="margin-bottom: -3px;">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                    </template>
                   </button>
                 </div>
               </div>
@@ -72,32 +86,42 @@
         :img="SpeakingIcon"
         :text="t('speakIndexPage.modalText')"
     />
+    <VPremiumModal v-model:show="showPremiumModal"/>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { useRouter } from 'vue-router';
+import {ref, onMounted} from 'vue';
+import {useRouter} from 'vue-router';
 import VBackBtn from "~/src/components/V-back-btn.vue";
 import VBanner from "~/src/components/V-banner.vue";
 import SpeakIcon from "../../assets/images/speakingIcon.svg";
 import VTransition from "~/src/components/V-transition.vue";
-import { useSpeakStore } from '../../store/speakStore.js';
-import Modal from '../../src/components/modal.vue'
-import SpeakingIcon from '../../assets/images/speakingIcon.svg'
-import { categories } from'../../utils/speak-themes-category.js'
-const { t } = useI18n();
+import {useSpeakStore} from '../../store/speakStore.js';
+import Modal from '../../src/components/modal.vue';
+import SpeakingIcon from '../../assets/images/speakingIcon.svg';
+import { categoriesSpeak} from '../../utils/speak-themes-category.js';
+import {userAuthStore} from '../../store/authStore.js';
+import VPremiumModal from "~/src/components/V-premiumModal.vue";
+
+const {t} = useI18n();
 const router = useRouter();
 const speakStore = useSpeakStore();
+const authStore = userAuthStore();
 const isMounted = ref(false);
 const showDevModal = ref(false);
+const showPremiumModal = ref(false);
 
 const getCompletedCount = (category) => {
   return category.themes.filter(theme => speakStore.userProgress[theme.id]).length;
 };
 
-const goToSession = (themeId) => {
-  router.push({ path: '/speak-practice/session', query: { theme: themeId } });
+const goToSession = (theme, catIndex, themeIndex) => {
+  if ((catIndex === 0 && (themeIndex === 0 || themeIndex === 1)) || authStore.isPremium) {
+    router.push({path: '/speak-practice/session', query: {theme: theme.id}});
+  } else {
+    showPremiumModal.value = true;
+  }
 };
 
 onMounted(() => {
@@ -106,7 +130,6 @@ onMounted(() => {
     isMounted.value = true;
   }, 90);
 });
-
 </script>
 
 <style scoped>
@@ -220,8 +243,6 @@ onMounted(() => {
   padding: 5px 20px 15px 20px;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-
-  /* Прячем скроллбар по умолчанию для мобилок (горизонтальный) */
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -254,6 +275,7 @@ onMounted(() => {
   .themes-slider::-webkit-scrollbar-thumb:hover {
     background-color: #94a3b8;
   }
+
   .speak__content-inner {
     scrollbar-width: thin;
     scrollbar-color: #cbd5e1 transparent;
@@ -299,6 +321,7 @@ onMounted(() => {
   transform: translateY(4px);
   box-shadow: 0 2px 0 var(--tabsSlideBorderColor);
 }
+
 .theme-card:active .card__btn {
   transform: translateY(2px);
   box-shadow: 0 2px 0 transparent;
@@ -316,7 +339,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .card__content {
@@ -380,5 +403,10 @@ onMounted(() => {
 .card__btn--completed {
   background-color: #1cb0f6;
   box-shadow: 0 4px 0 #1899d6;
+}
+
+.card__btn--locked {
+  background-color: #a0aec0;
+  box-shadow: 0 4px 0 #718096;
 }
 </style>

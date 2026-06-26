@@ -10167,7 +10167,8 @@
     "transport": "Voyages et transports",
     "city": "Services urbains et vie quotidienne",
     "health": "Santé",
-    "work": "Travail et carrière"
+    "work": "Travail et carrière",
+    "auto": "La voiture et la route"
   },
   "speakThemes": {
     "firstmeet": "Présentation",
@@ -10209,7 +10210,14 @@
     "bos_talk": "Discussion avec le responsable",
     "vacation": "Vacances",
     "salary_talk": "Salaire",
-    "dismissal_talk": "Licenciement"
+    "dismissal_talk": "Licenciement",
+    "library": "Bibliothèque",
+    "refusal_invite": "Refuser une invitation",
+    "road_assistance": "Panne de voiture",
+    "oil_change": "Vidange d'huile",
+    "car_buying": "Achat d'une voiture",
+    "police_control": "Excès de vitesse",
+    "gas_station": "Station-service"
   },
   "speakIndexPage": {
     "title": "Pratique orale",
@@ -10286,7 +10294,7 @@
   },
   "speakSession": {
     "title": "Pratique de la conversation",
-    "words": "Vocabulaire pour le dialogue",
+    "words": "Mots",
     "wordsText": "Apprenez ou révisez les mots avant de commencer à parler. Cela vous aidera à vous sentir plus confiant !",
     "learn": "Commencer",
     "dialogue": "Dialogue",
@@ -10368,5 +10376,138 @@
   "installApp": {
     "stayInBrowser": "Continuer dans le navigateur",
     "promoSubTitle": " Avec l'application Skillupgerman, apprendre l'allemand est beaucoup plus pratique."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Passez les dialogues. Écoutez, choisissez les options de réponse et entraînez votre prononciation",
+    "words": "Apprenez les mots et expressions clés pour comprendre facilement chaque réplique du dialogue"
+  },
+  "newsTitleBanner": {
+    "title": "Articles sur les spécificités de la langue allemande, analyses de thèmes et connaissances utiles pour améliorer votre niveau.",
+    "badgeArticle": "Dans le monde de Skillupgerman"
+  },
+  "newsArticleOne": {
+    "first": "Tu manges du chocolat quand tu es stressé ou triste ? Voici der Kummerspeck.",
+    "second": "Ce sont ces kilos en trop qui apparaissent insidieusement à cause des soucis. Littéralement - le 'bacon du chagrin'.",
+    "third": "Il se compose de der Kummer (chagrin) et der Speck (bacon). Comme on pouvait s'y attendre, ce 'bacon' prend son genre de l'article du dernier nom.",
+    "cta": "Avoue, as-tu déjà eu un Kummerspeck ?"
+  },
+  "newsArticleTwo": {
+    "first": "Tu connais ce soulagement sacré quand la journée de travail est enfin terminée ? C'est der Feierabend.",
+    "second": "Littéralement - 'soirée de fête'. Un moment de repos privilégié où il est même interdit de penser au travail.",
+    "third": "Il est composé de die Feier (fête) et der Abend (soir). Le genre de ce moment agréable provient de l'article du dernier nom — der Abend.",
+    "cta": "Tu attends toujours le Feierabend avec impatience au travail ?"
+  },
+  "newsArticleThree": {
+    "first": "L'allemand est la seule langue majeure au monde où absolument tous les noms prennent une majuscule, quelle que soit leur place dans la phrase.",
+    "second": "Qu'il s'agisse d'une personne, d'un chien, d'une simple chaise ou d'une pensée abstraite, la première lettre sera toujours majuscule. Cela perturbe souvent les débutants lors de l'apprentissage.",
+    "third": "En revanche, cette règle présente un avantage considérable : en lisant un texte allemand, vous pouvez toujours identifier sans erreur et au premier coup d'œil l'endroit exact où se cache un objet dans la phrase.",
+    "cta": "Une règle bien pratique, non ?"
+  },
+  "newsArticleFour": {
+    "first": "L'une des choses les plus déroutantes lors de l'apprentissage de l'allemand, c'est la numération. Les Allemands prononcent les nombres à deux chiffres en commençant par la fin.",
+    "second": "Par exemple, pour le nombre vingt-et-un, ils disent 'un et vingt'. C'est pourquoi, lors de l'écoute de l'allemand, il faut mentalement inverser les chiffres dans sa tête.",
+    "third": "Cette astuce linguistique brise souvent les repères des débutants, surtout lorsqu'il s'agit de noter rapidement par écrit un numéro de téléphone ou un prix dans un magasin.",
+    "cta": "Vous vous êtes vite habitué à cette façon de compter ou vous confondez encore ?"
+  },
+  "newsArticleFive": {
+    "first": "En allemand, il existe une règle de syntaxe stricte qui vous oblige à écouter votre interlocuteur jusqu'au tout dernier mot.",
+    "second": "Dans certains types de phrases, le verbe principal, qui exprime l'action, est propulsé tout à la fin.",
+    "third": "Vous pouvez construire une longue phrase, énumérer des tas de détails, votre auditeur ne saura pas si vous avez acheté, vendu, cassé ou perdu l'objet tant que vous n'aurez pas prononcé le mot final.",
+    "cta": "Est-ce difficile d'adapter sa façon de penser à cet ordre des mots ?"
+  },
+  "newsArticleSix": {
+    "first": "En apprenant l'allemand, vous serez certainement pris de panique tôt ou tard face à la longueur de certains mots. Le secret, c'est qu'en allemand, il n'y a officiellement aucune limite à la longueur d'un nom.",
+    "second": "Vous pouvez coller des mots entre eux à l'infini, créant d'immenses trains de lettres juste pour décrire un seul objet.",
+    "third": "Mais c'est là qu'intervient la règle salvatrice : quelle que soit la longueur folle de ce monstre, son genre final dépendra toujours de l'article du tout dernier mot.",
+    "cta": "Ces mots-trains interminables vous font-ils peur ?"
+  },
+  "newsArticleSeven": {
+    "first": "Vous arrive-t-il, avant un événement important ou avant de dormir, de vous passer dans la tête des scénarios fictifs et des films entiers avec tous les détails ? Les Allemands décrivent cet état comme un propre cinéma dans la tête.",
+    "second": "C'est lorsque votre imagination ou votre anxiété s'emballent tellement que vous restez littéralement scotché à mettre en scène et à regarder vos propres pensées.",
+    "third": "Il est né de la fusion de der Kopf (la tête) et das Kino (le cinéma). Ce cinéma mental prend docilement son genre neutre final de l'article du dernier nom.",
+    "cta": "Ce Kopfkino s'active-t-il souvent chez vous avant de dormir ?"
+  },
+  "newsArticleEight": {
+    "first": "La langue allemande est pleine d'autodérision lorsqu'il s'agit de la silhouette. Si vous avez pris un peu de brioche ou de poignées d'amour, les Allemands ne parleront de bourrelets de graisse, ils appelleront cela de l'or sur les hanches.",
+    "second": "Littéralement, cela donne 'l'or des hanches'. Une description si délicate et précieuse pour des hanches qui se sont arrondies après de délicieuses saucisses allemandes, des petits pains ou de la bière.",
+    "third": "Le mot se compose de die Hüfte (la hanche) et das Gold (l'or). Comme on pouvait s'y attendre, ce mot amusant prend son genre neutre brillant de l'article du dernier nom.",
+    "cta": "Que pensez-vous de cette appellation si poétique ?"
+  },
+  "newsArticleNine": {
+    "first": "Tout el monde sait ce qu'est le mal du pays, mais les Allemands ont un mot unique pour le sentiment inverse. C'est l'envie de voyager et de découvrir des pays lointains.",
+    "second": "Littéralement, cela se traduit par la 'douleur du lointain'. C'est ce sentiment lancinant que l'on ressent lorsque l'on est chez soi et que l'on a un désir irrépressible de partir là où on n'est jamais allé.",
+    "third": "Le mot est formé de die Ferne (le lointain) et das Weh (la douleur). Ce désir romantique d'évasion prend son genre neutre final de l'article du dernier mot.",
+    "cta": "Ressentez-vous parfois ce Fernweh ?"
+  },
+  "newsArticleTen": {
+    "first": "Regardez une ampoule électrique ordinaire. À quelle forme vous fait-elle penser ? Les Allemands y ont vu un fruit lumineux.",
+    "second": "La traduction littérale de ce mot est 'poire lumineuse'. Une description domestique très chaleureuse, simple et accueillante pour un objet si familier.",
+    "third": "Il provient du verbe glühen (briller/être incandescent) et du nom die Birne (la poire). Notre ampoule prend son genre féminin de l'article du dernier mot — die Birne.",
+    "cta": "L'ampoule ressemble-t-elle à une poire selon vous ?"
+  },
+  "newsArticleEleven": {
+    "first": "Comment appeler cette lourde souffrance affective lorsque votre amour n'est pas partagé ? Les Allemands ont réuni ces sentiments en un seul concept très évocateur.",
+    "second": "Littéralement, cela se traduit par 'chagrin d'amour'. C'est une description très juste de cette nostalgie et de cette tristesse qui brisent littéralement le cœur.",
+    "third": "Le mot est né de la fusion de die Liebe (l'amour) et de der Kummer (le chagrin). Ce cœur brisé prend docilement son genre masculin de l'article du tout dernier mot — der Kummer.",
+    "cta": "C'est un sentiment qui vous parle ?"
+  },
+  "newsArticleTwelve": {
+    "first": "Vous vous promenez en forêt après la pluie et vous tombez sur une limace sans coquille ? La langue allemande la décrit de la manière la plus dévêtue possible.",
+    "second": "La traduction littérale de ce mot amusant est 'escargot nu'. En effet, pourquoi inventer un nouveau nom alors qu'il s'agit simplement d'un escargot qui s'est retrouvé sans maison.",
+    "third": "Il est formé de l'adjectif nackt (nu) et du nom die Schnecke (l'escargot). Cet habitant de la forêt prend son genre de l'article du dernier mot.",
+    "cta": "Cette appellation vous a fait sourire ?"
+  },
+  "newsArticleThirteen": {
+    "first": "Si vous avez déjà appris l'anglais, nous avons une excellente nouvelle pour vous. Vous connaissez déjà automatiquement une partie du vocabulaire allemand, même si vous ne l'avez jamais étudié spécifiquement.",
+    "second": "En fait, l'anglais et l'allemand sont des langues très proches, issues de la même famille germanique. Des mots comme frère, sœur, eau, vert ou pomme s'écrivent et se prononcent de manière extrêmement similaire.",
+    "third": "C'est pourquoi l'apprentissage des mots allemands est beaucoup plus rapide si l'on a des bases en anglais — votre cerveau reconnaît inconsciemment des schémas familiers.",
+    "cta": "Aviez-vous remarqué la ressemblance entre l'anglais et l'allemand ?"
+  },
+  "newsArticleFourteen": {
+    "first": "La lettre allemande eszett, qui s'écrit comme un B majuscule, est la marque de fabrique unique de l'alphabet allemand. Pourtant, lors de l'apprentissage, peu de gens savent qu'elle n'est pas utilisée dans toutes les régions germanophones.",
+    "second": "En Suisse et au Liechtenstein, cette lettre a été officiellement et complètement abandonnée au siècle dernier. Dans les écoles, les journaux et les documents officiels suisses, on écrit partout le double 'ss' habituel à la place.",
+    "third": "Cela est dû à l'introduction massive des machines à écrire, sur lesquelles les Suisses manquaient tout simplement de place sur le clavier pour intégrer à la fois les caractères allemands et français. Par conséquent, si vous lisez des textes suisses, vous n'y trouverez pas cette lettre.",
+    "cta": "Connaissiez-vous le secret suisse de l'alphabet allemand ?"
+  },
+  "newsArticleFifteen": {
+    "first": "En allemand, il existe de surprenants verbes caméléons qui s'écrivent exactement de la même manière, mais dont le sens change radicalement selon l'accentuation. Cela choque souvent les débutants.",
+    "second": "L'exemple parfait est le verbe umfahren. Si vous accentuez la première partie du mot, cela signifie renverser, percuter ou rouler sur un obstacle. Mais si vous déplacez l'accent sur la deuxième partie, le mot change instantanément pour prendre le sens inverse : contourner un obstacle.",
+    "third": "C'est pourquoi, lors de l'apprentissage de ces verbes, il est crucial d'écouter où tombe l'accent, sous peine de faire une belle frayeur à votre moniteur lors d'une leçon de conduite en Allemagne.",
+    "cta": "Connaissiez-vous ces verbes trompeurs à double sens ?"
+  },
+  "newsArticleSixteen": {
+    "first": "Quand les étrangers ne comprennent pas de quoi il s'agit, ils disent généralement que 'c'est du chinois'. Les Allemands, eux, adoptent dans cette situation une logique purement ferroviaire.",
+    "second": "Si un Allemand ne comprend absolument pas son interlocuteur ou ne veut pas l'écouter, il dira : 'Ich verstehe nur Bahnhof' (Je ne comprends que la gare).",
+    "third": "Au fil du temps, cette phrase est devenue une expression idiomatique très populaire. Désormais, si quelqu'un vous explique un itinéraire de façon trop confuse ou vous assomme avec un sujet complexe, vous pouvez utiliser cette expression en toute liberté.",
+    "cta": "Aviez-vous déjà entendu cette drôle d'expression sur la gare ?"
+  },
+  "newsArticleSeventeen": {
+    "first": "L'apprentissage des articles der, die, das est un éternel casse-tête pour tous ceux qui apprennent l'allemand. Mais rassurez-vous, il arrive que même les locuteurs natifs hésitent sur le bon choix.",
+    "second": "Une véritable guerre linguistique sans fin éclate chaque matin en Allemagne au moment du petit-déjeuner autour de la célèbre pâte à tartiner Nutella. Les Allemands débattent depuis des décennies de son genre grammatical.",
+    "third": "Certains disent die parce que c'est une pâte (creme), d'autres pensent que c'est das car c'est le genre neutre appliqué aux noms de produits étrangers. La dispute a pris une telle ampleur que même le dictionnaire officiel Duden a jeté l'éponge et a reconnu que Nutella n'avait pas d'article fixe et que chaque variante était correcte.",
+    "cta": "Et vous, quel article donneriez-vous au Nutella ?"
+  },
+  "newsArticleEighteen": {
+    "first": "Si une personne s'obstine à ne pas remarquer des évidences qui se passent juste sous son nez, les Allemands ne diront pas qu'elle est distraite. Ils lui trouveront des légumes sur le visage.",
+    "second": "La traduction littérale de cette expression culte est 'avoir des tomates sur les yeux'. On dit cela d'un conducteur qui ne voit pas le feu rouge, ou d'un ami qui ne remarque absolument pas tes indices.",
+    "third": "L'origine de cette phrase remonte aux tribunaux anciens, où les coupables étaient forcés de porter un bandeau en signe de honte, et parfois on leur attachait de vrais légumes sur les yeux. Aujourd'hui, c'est juste un moyen amusant de dire à quelqu'un qu'il serait temps d'ouvrir les yeux.",
+    "cta": "Tu as déjà entendu cette expression avec les tomates ?"
+  },
+  "newsArticleNineteen": {
+    "first": "Dans les manuels d'allemand, on nous apprend à saluer en fonction du moment de la journée : bonjour (le matin), bonjour (l'après-midi) ou bonsoir. Mais dans le nord de l'Allemagne, on se moque gentiment de ce système.",
+    "second": "Là-bas, tout le monde utilise un seul mot culte : Moin. Le plus intéressant, c'est qu'on peut le dire absolument tout le temps : à 8 heures du matin à son patron, à 15 heures à un vendeur ou en pleine nuit à des amis dans un bar. Cela signifie simplement 'salut'.",
+    "third": "Mais attention : si tu décides d'en rajouter et que tu dis 'Moin Moin', les habitants du coin te prendront immédiatement pour un bavard invétéré. Dans le Nord, on apprécie la concision, un seul mot est donc amplement suffisant.",
+    "cta": "Tu as déjà entendu cette salutation de la part d'Allemands ?"
+  },
+  "newsTitle": {
+    "article_3": "Tous les noms prennent une majuscule !",
+    "article_4": "Les chiffres à l'envers !",
+    "article_5": "Le verbe tout à la fin de la phrase !",
+    "article_6": "Des mots interminables !",
+    "article_13": "Vous connaissez déjà beaucoup de mots allemands !",
+    "article_14": "La lettre dont tout un pays s'est privé !",
+    "article_15": "Un verbe - deux sens opposés !",
+    "article_17": "La bataille pour l'article du Nutella !",
+    "article_19": "Moin est universel !"
   }
 }

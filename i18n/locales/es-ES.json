@@ -10171,7 +10171,8 @@
     "transport": "Viajes y transporte",
     "city": "Servicios urbanos y vida cotidiana",
     "health": "Salud",
-    "work": "Trabajo y carrera"
+    "work": "Trabajo y carrera",
+    "auto": "El coche y la carretera"
   },
   "speakThemes": {
     "firstmeet": "Presentación",
@@ -10213,7 +10214,14 @@
     "bos_talk": "Charla con el jefe",
     "vacation": "Vacaciones",
     "salary_talk": "Salario",
-    "dismissal_talk": "Despido"
+    "dismissal_talk": "Despido",
+    "library": "Biblioteca",
+    "refusal_invite": "Rechazar una invitación",
+    "road_assistance": "Avería del coche",
+    "oil_change": "Cambio de aceite",
+    "car_buying": "Comprar un coche",
+    "police_control": "Exceso de velocidad",
+    "gas_station": "Gasolinera"
   },
   "speakIndexPage": {
     "title": "Práctica oral",
@@ -10290,7 +10298,7 @@
   },
   "speakSession": {
     "title": "Práctica de conversación",
-    "words": "Vocabulario para el diálogo",
+    "words": "Palabras",
     "wordsText": "Aprende o repasa las palabras antes de empezar a hablar. ¡Esto te ayudará a tener más confianza!",
     "learn": "Comenzar",
     "dialogue": "Diálogo",
@@ -10372,5 +10380,138 @@
   "installApp": {
     "stayInBrowser": "Continuar en el navegador",
     "promoSubTitle": " Con la aplicación Skillupgerman, aprender alemán es mucho más cómodo."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Completa los diálogos. Escucha, elige las opciones de respuesta y practica la pronunciación",
+    "words": "Aprende palabras y frases clave para entender fácilmente cada línea del diálogo"
+  },
+  "newsTitleBanner": {
+    "title": "Artículos sobre las particularidades del idioma alemán, análisis de temas y conocimientos útiles para mejorar tu nivel.",
+    "badgeArticle": "En el mundo de Skillupgerman"
+  },
+  "newsArticleOne": {
+    "first": "¿Comes chocolates cuando estás estresado o triste? Te presento der Kummerspeck.",
+    "second": "Esos son exactamente los kilos de más que aparecen insistentemente debido a las preocupaciones. Literalmente: 'tocino de la pena'.",
+    "third": "Se compone de der Kummer (pena) y der Speck (tocino). Como era de esperar, este 'tocino' toma su género del artículo del último sustantivo.",
+    "cta": "Confiésalo, ¿has tenido alguna vez Kummerspeck?"
+  },
+  "newsArticleTwo": {
+    "first": "¿Conoces ese glorioso alivio cuando por fin termina la jornada laboral? Eso es der Feierabend.",
+    "second": "Literalmente: 'tarde de fiesta'. Un tiempo especial de descanso en el que está prohibido incluso pensar en el trabajo.",
+    "third": "Está compuesto por die Feier (fiesta) y der Abend (tarde/noche). El género de este agradable momento proviene del artículo del último sustantivo: der Abend.",
+    "cta": "¿Siempre estás esperando el Feierabend en el trabajo?"
+  },
+  "newsArticleThree": {
+    "first": "El alemán es el único idioma importante del mundo en el que absolutamente todos los sustantivos se escriben con mayúscula, independientemente de su posición en la frase.",
+    "second": "No importa si se trata de una persona, un perro, una silla común o un pensamiento abstracto: la primera letra siempre será mayúscula. Esto suele confundir a los principiantes al estudiar.",
+    "third": "Sin embargo, esta regla tiene una gran ventaja: al leer un texto en alemán, siempre puedes identificar con precisión y a primera vista dónde se esconde exactamente el objeto en la frase.",
+    "cta": "¿Es una regla conveniente?"
+  },
+  "newsArticleFour": {
+    "first": "Una de las cosas más desconcertantes al aprender alemán es la forma de contar. Los alemanes pronuncian los números de dos dígitos empezando por el final.",
+    "second": "Por ejemplo, el número veintiuno lo dicen como 'uno y veinte'. Debido a esto, al escuchar el alemán hablado, hay que invertir mentalmente las cifras en la cabeza.",
+    "third": "Este truco lingüístico suele romper los esquemas de los principiantes, especialmente cuando necesitan anotar rápidamente de oído el número de teléfono de alguien o el precio en una tienda.",
+    "cta": "¿Te acostumbraste rápido a esta forma de contar o todavía te confundes?"
+  },
+  "newsArticleFive": {
+    "first": "En alemán existe una regla estricta sobre el orden de las palabras que te obliga a escuchar a tu interlocutor hasta la ultimísima palabra.",
+    "second": "En ciertos tipos de oraciones, el verbo principal, el que indica la acción, se desplaza al mismísimo final.",
+    "third": "Puedes construir una frase larga y enumerar un montón de detalles, pero quien te escucha no sabrá si compraste, vendiste, rompiste o perdiste el objeto hasta que pronuncies la palabra final.",
+    "cta": "¿Es difícil adaptar la mente a este orden de palabras?"
+  },
+  "newsArticleSix": {
+    "first": "Al aprender alemán, tarde o temprano te entrará el pánico con la longitud de algunas palabras. El secreto es que en alemán, oficialmente, no hay límite para la longitud de un sustantivo.",
+    "second": "Puedes encadenar palabras indefinidamente, creando enormes locomotoras de letras solo para describir un único objeto.",
+    "third": "Pero aquí funciona la regla de salvación clave: por muy descabellada que sea la longitud de este monstruo, siempre toma su género definitivo del artículo de la última palabra.",
+    "cta": "¿Te asustan estas palabras tan largas como trenes?"
+  },
+  "newsArticleSeven": {
+    "first": "¿Te pasa a veces que antes de un evento importante или de dormir empiezas a reproducir en tu mente escenarios ficticios y películas enteras con todo lujo de detalles? Los alemanes describen este estado como tener su propio cine en la cabeza.",
+    "second": "Es cuando tu imaginación o tu ansiedad se desatan tanto que, literalmente, te quedas absorto dirigiendo y viendo tus propios pensamientos.",
+    "third": "Se formó a partir de der Kopf (cabeza) y das Kino (cine). Este cine mental toma obedientemente su género neutro final del artículo del último sustantivo.",
+    "cta": "¿Se te enciende a menudo este Kopfkino antes de dormir?"
+  },
+  "newsArticleEight": {
+    "first": "El idioma alemán está lleno de autoironía cuando se trata de la figura. Si has ganado un poco de peso en los lados, los alemanes no hablarán de michelines, lo llamarán oro en las caderas.",
+    "second": "Literalmente significa 'oro de las caderas'. Una descripción tan delicada y valiosa para esos costados que se han redondeado tras unas ricas salchichas alemanas, panecillos o cerveza.",
+    "third": "La palabra se compone de die Hüfte (cadera) y das Gold (oro). Como era de esperar, esta divertida palabra toma su brillante género neutro del artículo del último sustantivo.",
+    "cta": "¿Qué te parece este nombre tan poético?"
+  },
+  "newsArticleNine": {
+    "first": "Todo el mundo sabe lo que es la nostalgia por el hogar, pero los alemanes tienen una palabra única para el sentimiento opuesto. Es la nostalgia por los países lejanos y los viajes.",
+    "second": "Literalmente se traduce como 'dolor por la distancia'. Es esa sensación de añoranza cuando estás en casa y deseas insoportablemente marcharte a un lugar en el que nunca has estado.",
+    "third": "La palabra se compone de die Ferne (la distancia) y das Weh (el dolor). Esta romántica nostalgia toma su género neutro final del artículo de la última palabra.",
+    "cta": "¿Sientes a veces este Fernweh?"
+  },
+  "newsArticleTen": {
+    "first": "Mira una bombilla eléctrica común. ¿A qué forma te recuerda? Los alemanes vieron en ella una fruta brillante.",
+    "second": "La traducción literal de esta palabra es 'pera luminosa'. Una descripción casera muy acogedora, sencilla y cálida para un aparato tan común.",
+    "third": "Proviene del verbo glühen (brillar/estar incandescente) y del sustantivo die Birne (pera). Nuestra bombilla toma su género femenino del artículo de la última palabra: die Birne.",
+    "cta": "¿Te parece que la bombilla tiene forma de pera?"
+  },
+  "newsArticleEleven": {
+    "first": "¿Cómo llamar a ese profundo sufrimiento emocional cuando tu amor resulta no ser correspondido? Los alemanes unieron estos sentimientos en un solo concepto muy expresivo.",
+    "second": "Literalmente se traduce como 'pena de amor'. Es una descripción muy exacta para esa melancolía y tristeza que literalmente rompen el corazón.",
+    "third": "La palabra se formó uniendo die Liebe (amor) y der Kummer (pena). Este corazón roto toma obedientemente su género masculino del artículo de la ultimísima palabra: der Kummer.",
+    "cta": "¿Te resulta familiar este sentimiento?"
+  },
+  "newsArticleTwelve": {
+    "first": "¿Paseas por el bosque después de la lluvia y ves a una babosa común sin caparazón? El idioma alemán la describe de la forma más desvestida posible.",
+    "second": "La traducción literal de esta divertida palabra es 'caracol desnudo'. Realmente, ¿para qué inventar un nombre nuevo si es simplemente un caracol que se ha quedado sin casa?",
+    "third": "Está formada por el adjetivo nackt (desnudo) y el sustantivo die Schnecke (caracol). Este habitante del bosque toma su género del artículo de la última palabra.",
+    "cta": "¿Te ha hecho sonreír este nombre?"
+  },
+  "newsArticleThirteen": {
+    "first": "Si alguna vez has estudiado inglés, tenemos excelentes noticias para ti. Ya conoces de forma automática una parte del vocabulario alemán, incluso si nunca lo has estudiado a propósito.",
+    "second": "El caso es que el inglés y el alemán son parientes lingüísticos cercanos de la misma familia germánica. Palabras como hermano, hermana, agua, verde o manzana se escriben y suenan increíblemente parecidas.",
+    "third": "Es por eso que aprender palabras en alemán teniendo una base de inglés resulta mucho más rápido: tu cerebro reconoce inconscientemente patrones familiares.",
+    "cta": "¿Habías notado el parecido entre el inglés y el alemán?"
+  },
+  "newsArticleFourteen": {
+    "first": "La letra alemana eszett, que se escribe como una B mayúscula, es un sello distintivo único del alfabeto alemán. Pero al estudiar el idioma, poca gente sabe que no se utiliza en todas las regiones de habla alemana.",
+    "second": "En Suiza y Liechtenstein se renunció a esta letra de forma oficial y completa en el siglo pasado. En las escuelas, periódicos y documentos oficiales suizos, en su lugar se escribe siempre la doble 'ss' habitual.",
+    "third": "Esto ocurrió debido a la introducción masiva de las máquinas de escribir, donde los suizos sencillamente no tenían espacio suficiente en el teclado para los caracteres alemanes y franceses al mismo tiempo. Por lo tanto, si lees textos suizos, no encontrarás esa letra.",
+    "cta": "¿Sabías este secreto suizo del alfabeto alemán?"
+  },
+  "newsArticleFifteen": {
+    "first": "En alemán existen unos fascinantes verbos 'camaleónicos' que se escriben exactamente igual, pero cuyo significado cambia radicalmente según el acento. Este hecho suele dejar en shock a los principiantes.",
+    "second": "Un claro ejemplo es el verbo umfahren. Si pones el acento en la primera parte de la palabra, significa atropellar, embestir o pasar por encima de un obstáculo. Pero si trasladas el acento a la segunda parte, la palabra cambia instantáneamente al significado opuesto: esquivar o rodear un obstáculo.",
+    "third": "Por eso, al estudiar estos verbos, es fundamental escuchar dónde recae el acento; de lo contrario, en una clase práctica de conducir en Alemania, podrías asustar accidentalmente a tu instructor.",
+    "cta": "¿Conocías estos traicioneros verbos con doble sentido?"
+  },
+  "newsArticleSixteen": {
+    "first": "Cuando los extranjeros no entienden de qué se está hablando, suelen decir que 'les suena a chino'. Los alemanes, en cambio, aplican en esa situación una lógica puramente ferroviaria.",
+    "second": "Si un alemán no entiende en absoluto a su interlocutor o no quiere escucharle, dirá: 'Ich verstehe nur Bahnhof' (Solo entiendo estación de tren).",
+    "third": "Con el tiempo, la frase se convirtió en un modismo muy popular. Ahora, si alguien te explica una dirección de forma muy enrevesada o te agobia con un tema complejo, puedes usar esta expresión sin dudarlo.",
+    "cta": "¿Habías oído ya esta divertida expresión sobre la estación de tren?"
+  },
+  "newsArticleSeventeen": {
+    "first": "Aprender los artículos der, die, das es un eterno dolor de cabeza para cualquiera que estudie alemán. Pero no te preocupes, a veces ni los propios nativos están seguros de cuál elegir.",
+    "second": "Una auténtica e interminable guerra lingüística se desata en Alemania cada mañana durante el desayuno en torno a la famosa crema de chocolate Nutella. Los alemanes llevan décadas discutiendo qué género tiene.",
+    "third": "Algunos dicen die porque es una crema (creme), otros consideran que es das porque es el género neutro para nombres extranjeros de productos. La disputa llegó a tal punto que incluso el diccionario oficial Duden se rindió y admitió que Nutella no tiene un artículo fijo y que se puede usar cualquier opción.",
+    "cta": "¿Y tú, qué artículo le darías a Nutella?"
+  },
+  "newsArticleEighteen": {
+    "first": "Si una persona se obstina en no notar cosas obvias que pasan justo delante de sus narices, los alemanes no dirán que es despistada. Le encontrarán verduras en la cara.",
+    "second": "La traducción literal de este icónico modismo es 'tener tomates en los ojos'. Se dice de un conductor que no ve el semáforo en rojo, o de un amigo que ignora por completo tus indirectas.",
+    "third": "El origen de la frase se remonta a los antiguos tribunales, donde a los culpables se les obligaba a llevar vendas en los ojos en señal de vergüenza, y a veces se les ataban verduras de verdad. Hoy en día, es solo una forma divertida de decirle a alguien que ya va siendo hora de que abra los ojos.",
+    "cta": "¿Habías oído ya esta frase sobre los tomates?"
+  },
+  "newsArticleNineteen": {
+    "first": "Los libros de texto de alemán nos enseñan a saludar según la hora del día: buenos días, buenas tardes o buenas noches. Pero en el norte de Alemania se ríen de este sistema.",
+    "second": "Allí, todo el mundo utiliza una sola palabra icónica: Moin. Lo más curioso es que se puede decir absolutamente a cualquier hora: a las ocho de la mañana al jefe, a las tres de la tarde al dependiente o a altas horas de la noche a los amigos en un bar. Significa simplemente 'hola'.",
+    "third": "Pero ten cuidado: si decides enfatizar el saludo y dices 'Moin Moin', los lugareños te considerarán de inmediato un hablador insoportable. En el norte se valora la brevedad, así que con una sola palabra basta y sobra.",
+    "cta": "¿Has escuchado ya este saludo de boca de gente en Alemania?"
+  },
+  "newsTitle": {
+    "article_3": "¡Todos los sustantivos con mayúscula!",
+    "article_4": "¡Números al revés!",
+    "article_5": "¡El verbo al mismísimo final de la frase!",
+    "article_6": "¡Palabras infinitas!",
+    "article_13": "¡Ya conoces muchas palabras en alemán!",
+    "article_14": "¡La letra de la que se deshizo un país entero!",
+    "article_15": "¡Un verbo - dos significados opuestos!",
+    "article_17": "¡La batalla por el artículo de Nutella!",
+    "article_19": "¡Moin es universal!"
   }
 }

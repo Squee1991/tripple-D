@@ -10180,7 +10180,8 @@
     "transport": "Seyahat ve ulaşım",
     "city": "Şehir hizmetleri ve günlük yaşam",
     "health": "Sağlık",
-    "work": "İş ve kariyer"
+    "work": "İş ve kariyer",
+    "auto": "Araba ve yol"
   },
   "speakThemes": {
     "firstmeet": "Tanışma",
@@ -10222,7 +10223,14 @@
     "bos_talk": "Yönetici ile konuşma",
     "vacation": "Tatil",
     "salary_talk": "Maaş",
-    "dismissal_talk": "İşten çıkarma"
+    "dismissal_talk": "İşten çıkarma",
+    "library": "Kütüphane",
+    "refusal_invite": "Daveti reddetme",
+    "road_assistance": "Araba arızası",
+    "oil_change": "Yağ değişimi",
+    "car_buying": "Araba satın alma",
+    "police_control": "Hız ihlali",
+    "gas_station": "Akaryakıt istasyonu"
   },
   "speakIndexPage": {
     "title": "Konuşma pratiği",
@@ -10299,7 +10307,7 @@
   },
   "speakSession": {
     "title": "Konuşma pratiği",
-    "words": "Diyalog kelimeleri",
+    "words": "Kelimeler",
     "wordsText": "Konuşmaya başlamadan önce kelimeleri öğrenin veya tekrarlayın. Bu, kendinizi daha güvende hissetmenize yardımcı olur!",
     "learn": "Başla",
     "dialogue": "Diyalog",
@@ -10381,5 +10389,138 @@
   "installApp": {
     "stayInBrowser": "Tarayıcıda devam et",
     "promoSubTitle": " Skillupgerman uygulaması ile Almanca öğrenmek çok daha pratik."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Diyalogları tamamlayın. Dinleyin, cevap seçeneklerini belirleyin ve telaffuz pratiği yapın",
+    "words": "Diyalogdaki her repliği kolayca anlamak için anahtar kelimeleri ve ifadeleri öğrenin"
+  },
+  "newsTitleBanner": {
+    "title": "Almanca dilinin özellikleri hakkında makaleler, konu analizleri ve seviyenizi yükseltecek faydalı bilgiler.",
+    "badgeArticle": "Skillupgerman dünyasında"
+  },
+  "newsArticleOne": {
+    "first": "Stresli veya üzgün olduğunda çikolataya mı sarılıyorsun? Karşılaş: der Kummerspeck.",
+    "second": "Bu, endişeler yüzünden ısrarla ortaya çıkan o fazla kilolardır. Kelime anlamıyla - 'keder pastırması'.",
+    "third": "der Kummer (keder) ve der Speck (pastırma/yağ) kelimelerinden oluşur. Tahmin edileceği gibi, bu 'pastırma' cinsiyetini son ismin artikeli olan 'der'den alır.",
+    "cta": "İtiraf et, sende hiç Kummerspeck oldu mu?"
+  },
+  "newsArticleTwo": {
+    "first": "İş gününün nihayet bittiği o kutsal huzur anını bilir misin? İşte o der Feierabend.",
+    "second": "Kelime anlamıyla - 'kutlama akşamı'. İş hakkında düşünmenin bile yasak olduğu, dinlenmeye ayrılan özel bir zaman dilimi.",
+    "third": "die Feier (kutlama) ve der Abend (akşam) kelimelerinden oluşur. Bu keyifli zamanın artikeli, son ismin artikelinden gelir — der Abend.",
+    "cta": "İş yerinde her zaman Feierabend'ı mı beklersin?"
+  },
+  "newsArticleThree": {
+    "first": "Almanca, cümledeki yerine bakılmaksızın kesinlikle tüm isimlerin büyük harfle yazıldığı dünyadaki tek büyük dildir.",
+    "second": "Bir insandan, bir köpekten, sıradan bir sandalyeden veya soyut bir düşünceden bahsedilmesi fark etmez; ilk harf her zaman büyük olur. Bu durum, öğrenme aşamasında yeni başlayanların kafasını sıkça karıştırır.",
+    "third": "Ancak bu kuralın çok büyük bir artısı vardır: Almanca bir metni okurken, nesnenin cümle içinde tam olarak nerede saklandığını her zaman hatasız ve ilk bakışta belirleyebilirsiniz.",
+    "cta": "Kullanışlı bir kural mı?"
+  },
+  "newsArticleFour": {
+    "first": "Almanca öğrenirken beyni en çok zorlayan şeylerden biri de sayılardır. Almanlar iki basamaklı sayıları sondan başlayarak söylerler.",
+    "second": "Örneğin, yirmi bir sayısını 'bir ve yirmi' şeklinde söylerler. Bu nedenle, Almanca bir konuşmayı dinlerken sayıları zihninizde tersine çevirmeniz gerekir.",
+    "third": "Bu dilsel tuhaflık, özellikle birinin telefon numarasını veya mağazadaki bir fiyatı duyarak hızlıca not etmek gerektiğinde, yeni başlayanların ezberini sıkça bozar.",
+    "cta": "Bu sayma şekline çabuk alıştınız mı yoksa hâlâ karıştırıyor musunuz?"
+  },
+  "newsArticleFive": {
+    "first": "Almancada, sizi karşınızdakini son kelimesine kadar dinlemeye zorlayan katı bir sözdizimi kuralı vardır.",
+    "second": "Belirli cümle türlerinde, eylemi belirten en önemli ana fiil cümlenin en oscillation en sonuna uçar.",
+    "third": "Uzun una bir cümle kurabilir, bir sürü detay sıralayabilirsiniz; fakat dinleyiciniz, siz son kelimeyi söyleyene kadar o şeyi satın mı aldığınızı, sattığınızı mı, kırdığınızı mı yoksa kaybettiğinizi mi asla bilemez.",
+    "cta": "Düşünce yapısını böyle bir kelime sırasına göre değiştirmek zor mu?"
+  },
+  "newsArticleSix": {
+    "first": "Almanca öğrenirken er ya da geç bazı kelimelerin uzunluğu yüzünden panikleyeceğiniz kesin. İşin sırrı şu ki, Almancada resmi olarak bir isim uzunluğu sınırı yoktur.",
+    "second": "Sırf tek bir nesneyi tarif etmek için kelimeleri birbirine sonsuza dek yapıştırabilir, harflerden devasa lokomotifler oluşturabilirsiniz.",
+    "third": "Ancak burada hayat kurtaran temel bir kural devreye girer: Bu canavarın uzunluğu ne kadar çılgınca olursa olsun, kelimenin nihai artikeli her zaman tereddütsüz bir şekilde en sondaki kelimeden gelir.",
+    "cta": "Böyle tren gibi upuzun kelimeler gözünüzü korkutuyor mu?"
+  },
+  "newsArticleSeven": {
+    "first": "Önemli bir olaydan önce veya uyumadan hemen önce, kafanızda kurgusal senaryoları ve koca bir filmi tüm canlılığıyla oynatmaya başladığınız olur mu? Almanlar bu durumu kafanın içindeki sinema salonu olarak tanımlar.",
+    "second": "Hayal gücünüzün veya kaygılarınızın o kadar çok canlandığı bir andır ki, kelimenin tam anlamıyla kendi düşüncelerinizin yönetmenliğine ve seyrine dalıp gidersiniz.",
+    "third": "Bu kelime der Kopf (kafa) ve das Kino (sinema) kelimelerinin birleşmesiyle oluşmuştur. Bu zihinsel sinema, nihai nötr cinsiyetini (das) uysalca son ismin artikelinden alır.",
+    "cta": "Uyumadan önce sizde de sık sık böyle bir Kopfkino açılır mı?"
+  },
+  "newsArticleEight": {
+    "first": "Konu dış görünüş ve kilo olduğunda Almanca kendiyle alay etmeyi çok iyi bilir. Eğer bel çevrenizde biraz fazla kilo oluştuysa, Almanlar yağ katmanlarından bahsetmezler; buna kalçalardaki altın derler.",
+    "second": "Kelime anlamıyla 'kalça altını' demektir. Lezzetli Alman sosisleri, çörekleri veya birasından sonra yuvarlaklaşan simit bölgeleri için son derece kibar ve değerli bir tanımlama.",
+    "third": "Kelime die Hüfte (kalça) ve das Gold (altın) kelimelerinden oluşur. Tahmin edileceği üzere bu eğlenceli kelime, parlak nötr cinsiyetini son ismin artikelinden alır.",
+    "cta": "Bu şiirsel ismi nasıl buldunuz?"
+  },
+  "newsArticleNine": {
+    "first": "Ev hasretinin ne olduğunu herkes bilir, ancak Almanların bunun tam tersi bir duygu için eşsiz bir kelimesi vardır. Bu, uzak ülkelere ve seyahate duyulan özlemdir.",
+    "second": "Kelime anlamıyla 'uzaklık acısı' olarak çevrilir. Evde otururken hiç gitmediğiniz yerlere gitmeyi dayanılmaz bir şekilde arzuladığınız o sızım sızım sızlayan duygudur.",
+    "third": "Kelime die Ferne (uzaklık) ve das Weh (acı/dert) kelimelerinden oluşur. Bu romantik özlem, nihai nötr cinsiyetini son kelimenin artikelinden alır.",
+    "cta": "Sizde de ara sıra böyle bir Fernweh baş gösterir mi?"
+  },
+  "newsArticleTen": {
+    "first": "Sıradan bir elektrik ampulüne bakın. Size hangi şekli hatırlatıyor? Almanlar onda parıldayan bir meyve gördüler.",
+    "second": "Bu kelimenin tam çevirisi 'parıldayan armut' şeklindedir. Alışık olduğumuz bu cihaz için çok samimi, basit ve sıcak bir evsel tanımlama.",
+    "third": "glühen (parıldamak/akor haline gelmek) fiili ile die Birne (armut) isminden türetilmiştir. Ampulümüz dişil cinsiyetini (die) en sondaki kelimenin artikelinden alır — die Birne.",
+    "cta": "Ampul sizce de armuda benziyor mu?"
+  },
+  "newsArticleEleven": {
+    "first": "Aşkınız karşılıksız kaldığında çektiğiniz o ağır ruhsal acıyı nasıl adlandırırsınız? Almanlar bu hisleri tek bir kapsayıcı kavramda birleştirdi.",
+    "second": "Kelime anlamıyla 'aşk kederi' olarak çevrilir. Kelimenin tam anlamıyla kalbi paramparça eden o özlem ve hüzün için çok isabetli bir tanımlama.",
+    "third": "Sözcük die Liebe (aşk) ve der Kummer (keder/dert) kelimelerinden türetilmiştir. Bu kırık kalp, eril cinsiyetini (der) uysalca en sondaki kelimenin artikelinden alır — der Kummer.",
+    "cta": "Tanıdık bir duygu mu?"
+  },
+  "newsArticleTwelve": {
+    "first": "Yağmurdan sonra ormanda yürürken kabuksuz sıradan bir sümüklüböcek gördünüz mü? Almanca onu olabildiğince çıplak bir şekilde tanımlıyor.",
+    "second": "Bu eğlenceli kelimenin tam çevirisi 'çıplak salyangoz' şeklindedir. Gerçekten de, evsiz kalmış bir salyangozdan ibaretse neden yeni bir isim uydurulsun ki?",
+    "third": "nackt (çıplak) sıfatı ve die Schnecke (salyangoz) isminden oluşmuştur. Bu orman sakini, cinsiyetini en sondaki kelimenin artikelinden alır.",
+    "cta": "Bu isim sizi gülümsetti mi?"
+  },
+  "newsArticleThirteen": {
+    "first": "Eğer daha önce İngilizce öğrendiyseniz, size harika bir haberimiz var. Hiç özel olarak çalışmamış olsanız bile, bazı Almanca kelimeleri zaten otomatik olarak biliyorsunuz.",
+    "second": "Mesele şu ki, İngilizce ve Almanca aynı Cermen dil ailesinden gelen yakın akrabalardır. Erkek kardeş, kız kardeş, su, yeşil veya elma gibi kelimeler yazılış ve okunuş olarak inanılmaz derecede benzerdir.",
+    "third": "İşte tam de bu yüzden, İngilizce altyapısı ile Almanca kelimeleri öğrenmek çok daha hızlı olur; beyniniz bilinçaltında tanıdık kalıpları hemen fark eder.",
+    "cta": "İngilizce ve Almanca arasındaki benzerliği fark etmiş miydiniz?"
+  },
+  "newsArticleFourteen": {
+    "first": "Büyük B harfi gibi yazılan Almanca eszett harfi, Almanca alfabesinin benzersiz bir kartvizitidir. Ancak dili öğrenirken, bu harfin Almanca konuşulan tüm bölgelerde kullanılmadığını çok az kişi bilir.",
+    "second": "İsviçre ve Lihtenştayn'da bu harf geçen yüzyılda resmi olarak ve tamamen kullanımdan kaldırıldı. İsviçre okullarında, gazetelerinde ve resmi belgelerinde bunun yerine her yerde alışık olduğumuz çift 'ss' harfleri yazılır.",
+    "third": "Bu durum, İsviçrelilerin klavye düzeninde aynı anda hem Almanca hem de Fransızca karakterler için yeterli alana sahip olamadığı daktiloların kitlesel olarak yaygınlaşması nedeniyle gerçekleşti. Dolayısıyla, İsviçre menşeili metinleri okursanız bu harfi orada bulamazsınız.",
+    "cta": "Almanca alfabesinin bu İsviçre sırrını biliyor muydunuz?"
+  },
+  "newsArticleFifteen": {
+    "first": "Almancada, kesinlikle aynı şekilde yazılan ancak vurguya bağlı olarak anlamı tamamen değişen inanılmaz 'şekil değiştiren' fiiller vardır. Bu durum yeni başlayanları genellikle şoka uğratır.",
+    "second": "Bunun en net örneği umfahren fiilidir. Eğer vurguyu kelimenin ilk kısmına koyarsanız, bu bir Engeleyi devirmek, çarpmak veya ezmek anlamına gelir. Ancak vurguyu ikinci kısma kaydırdığınız anda, kelime anında tamamen zıt bir anlama bürünür: bir engelin etrafından dolaşmak (kaçınmak).",
+    "third": "İşte bu yüzden, bu tarz fiilleri öğrenirken vurgunun nereye düştüğünü dinlemek kritik önem taşır; aksi takdirde Almanya'daki direksiyon dersinde yanlışlıkla eğitmeninize kalp krizi geçirtebilirsiniz.",
+    "cta": "İki anlama gelen bu sinsi fiillerden haberdar mıydınız?"
+  },
+  "newsArticleSixteen": {
+    "first": "Yabancılar bir konuyu anlamadıklarında genellikle 'Bu bana Fransız kaldı' derler. Almanlarda ise böyle durumlarda tamamen demiryolu mantığı devreye girer.",
+    "second": "Eğer bir Alman karşısındakini hiçbir şekilde anlamıyor ya da onu dinlemek istemiyorsa şöyle der: 'Ich verstehe nur Bahnhof' (Sadece tren istasyonu anlıyorum).",
+    "third": "Zamanla bu ifade popüler bir deyim haline geldi. Artık birisi size yolu çok karmaşık anlattığında veya kafanızı zor bir konuyla şişirdiğinde bu ifadeyi rahatlıkla kullanabilirsiniz.",
+    "cta": "Tren istasyonuyla ilgili bu eğlenceli deyimi daha önce duymuş muydunuz?"
+  },
+  "newsArticleSeventeen": {
+    "first": "der, die, das artikellerini öğrenmek, Almanca çalışan herkes için bitmek bilmeyen bir baş ağrısıdır. Ancak endişelenmeyin; bazen doğru artikel seçiminden anadili Almanca olanlar bile emin olamıyor.",
+    "second": "Almanya'daki en gerçek ve sonu gelmez dilbilimsel savaş, her sabah kahvaltıda ünlü çikolata kreması Nutella etrafında yaşanıyor. Almanlar onlarca yıldır Nutella'nın hangi cinsiyette olduğunu tartışıyor.",
+    "third": "Kimileri krema (creme) olduğu için 'die' diyor, kimileri ise yabancı ürün isimlerine uygulanan nötr cinsiyet olduğu için 'das' olması gerektiğini savunuyor. Tartışma öyle bir boyuta ulaştı ki, resmi Duden sözlüğü bile pes ederek Nutella'nın sabit bir artikeli olmadığını ve her iki seçeneğin de kullanılabileceğini kabul etti.",
+    "cta": "Peki siz Nutella'ya hangi artikeli verirdiniz?"
+  },
+  "newsArticleEighteen": {
+    "first": "Eğer bir kişi burnunun dibinde gerçekleşen bariz şeyleri inatla fark etmiyorsa, Almanlar onun dikkatsiz olduğunu söylemezler. Yüzünde sebze bulurlar.",
+    "second": "Bu ikonik deyimin tam çevirisi 'gözlerinde domates olmak' şeklindedir. Kırmızı ışığı görmeyen bir sürücü veya ipuçlarınızı ısrarla fark etmeyen bir arkadaş için bu söylenir.",
+    "third": "İfadenin kökenleri, suçluların bir utanç göstergesi olarak göz bağı takmaya zorlandığı ve bazen gözlerine gerçek sebzelerin bağlandığı eski mahkemelere kadar uzanır. Bugün ise bu, karşınızdakine gözünü açma vaktinin geldiğini söylemenin eğlenceli bir yoludur.",
+    "cta": "Domateslerle ilgili bu sözü daha önce duymuş muydunuz?"
+  },
+  "newsArticleNineteen": {
+    "first": "Almanca ders kitaplarında bize günün saatine göre selamlaşmayı öğretirler: günaydın, iyi günler veya iyi akşamlar. Ancak Almanya'nın kuzeyinde bu sistemle sadece dalga geçerler.",
+    "second": "Orada istisnasız herkes tek bir ikonik kelime kullanır: Moin. İşin en ilginç yanı, bunu kesinlikle her zaman söyleyebilmenizdir: sabah saat sekizde patronunuza, öğleden sonra saat üçte bir satıcıya veya gecenin bir yarısı bardaki arkadaşlarınıza. Sadece 'selam' anlamına gelir.",
+    "third": "Ancak dikkatli olun: Selamı pekiştirmek isteyip 'Moin Moin' derseniz, yerel halk sizi hemen çok geveze biri olarak görecektir. Kuzeyde sadelik ve kısa konuşma değer görür, bu yüzden tek bir kelime fazlasıyla yeterlidir.",
+    "cta": "Almanya'da yaşayanlardan böyle bir selamlaşmayı daha önce duymuş muydunuz?"
+  },
+  "newsTitle": {
+    "article_3": "Tüm isimler büyük harfle!",
+    "article_4": "Sayılar tersten okunuyor!",
+    "article_5": "Fiil cümlenin en sonunda!",
+    "article_6": "Ucu bucağı olmayan kelimeler!",
+    "article_13": "Zaten pek çok Almanca kelime biliyorsunuz!",
+    "article_14": "Koskoca bir ülkenin vazgeçtiği harf!",
+    "article_15": "Bir fiil - iki zıt anlam!",
+    "article_17": "Nutella'nın artikeli savaşı!",
+    "article_19": "Moin her duruma uyar!"
   }
 }

@@ -1,6 +1,6 @@
 {
   "start": {
-    "botText": "Hallo, [Имя]!",
+    "botText": "Hallo!",
     "botTranslation": {
       "ar-SA": "مرحباً،",
       "en-US": "Hello!",

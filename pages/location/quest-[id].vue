@@ -155,17 +155,16 @@
             <div v-if="questStore.showResult" class="feedback-text">
               <div v-if="questStore.isCorrect" class="feedback correct slide-up">
                 <img class="quest__feedback-icon" :src="RightIcon" alt="correct_icon">
-                ✔ {{ t('questCompletedModals.correct') }}
+                {{ t('questCompletedModals.correct') }}
               </div>
               <div v-else class="feedback incorrect shake quest__correct-answer-block">
                 <div class="feedback-wrong-header">
                   <img class="quest__feedback-icon" :src="WrongIcon" alt="wrong_icon">
-                  ✖ {{ t('questCompletedModals.correctAnswer') }}
+                   {{ t('questCompletedModals.correctAnswer') }}
                 </div>
                 <div class="correct-answer-text">{{ t(questStore.correctAnswer) }}</div>
               </div>
             </div>
-
             <button v-if="!questStore.showResult" class="btn btn-check" :disabled="questStore.isConfirmDisabled"
                     @click="handleClick">
               {{ t('questCompletedModals.check') }}
@@ -176,7 +175,6 @@
             </button>
           </div>
         </div>
-
       </div>
       <div v-else-if="questStore.finished && questStore.success && !questStore.hasMistakes && questStore.justAwarded"
            class="quest-complete quest-complete--solo">
@@ -245,7 +243,7 @@ import {userChainStore} from '~/store/chainStore.js'
 import {userlangStore} from '~/store/learningStore.js'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '~/utils/soundManager.js'
-import {showRewarded} from '~/utils/admob.js';
+import {showRewarded, showInterstitial} from '~/utils/admob.js';
 import RightIcon from '~/assets/images/location-icons/accept.svg'
 import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 import {useSeoMeta} from '#imports'
@@ -464,8 +462,10 @@ function goThemes() {
 }
 
 function restart() {
-  questStore.restart(previouslyCleared.value)
-  questStore.loadQuest(questId.value, regionKey.value)
+  showInterstitial(() => {
+    questStore.restart(previouslyCleared.value)
+    questStore.loadQuest(questId.value, regionKey.value)
+  })
 }
 
 function handleClick() {
@@ -596,7 +596,8 @@ watch([questId, regionKey], () => {
       questStore.reorderSelection = []
       questStore.reorderBank = []
       showHint.value = false
-      ;(async () => {
+
+      showInterstitial(async () => {
         await questStore.loadProgressFromFirebase?.()
         await questStore.loadQuest(questId.value, regionKey.value)
         const hasAccept = questStore.quest?.tasks?.some(t => t.accept?.length)
@@ -605,7 +606,7 @@ watch([questId, regionKey], () => {
         }
         await nextTick()
         forceRevive.value = showRevive.value
-      })()
+      })
     },
     {immediate: true, flush: 'sync'}
 )
@@ -987,8 +988,6 @@ watchEffect(() => {
 
 .btn {
   width: 100%;
-  max-width: 440px;
-  margin: 0 auto;
   padding: 14px 24px;
   font-size: 18px;
   font-weight: 700;

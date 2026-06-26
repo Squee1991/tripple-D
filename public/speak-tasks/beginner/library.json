@@ -1,0 +1,640 @@
+{
+  "start": {
+    "botText": "Hallo! Suchst du ein Buch?",
+    "botTranslation": {
+      "ru-RU": "Привет! Ты ищешь книгу?",
+      "en-US": "Hello! Are you looking for a book?",
+      "ar-SA": "مرحباً! هل تبحث عن كتاب؟",
+      "es-ES": "¡Hola! ¿Buscas un libro?",
+      "fr-FR": "Salut ! Tu cherches un livre ?",
+      "hi-IN": "नमस्ते! क्या आप कोई किताब ढूंढ रहे हैं?",
+      "pl-PL": "Cześć! Szukasz książki?",
+      "ro-RO": "Salut! Cauți o carte?",
+      "tr-TR": "Merhaba! Bir kitap mı arıyorsun?",
+      "uk-UA": "Привіт! Ти шукаєш книгу?",
+      "uz-UZ": "Salom! Kitob qidiryapsanmi?"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Hallo! Ich muss für eine Prüfung lernen.",
+        "translation": {
+          "ru-RU": "Привет! Мне нужно учиться к экзамену.",
+          "en-US": "Hello! I have to study for an exam.",
+          "ar-SA": "مرحباً! يجب أن أدرس للامتحان.",
+          "es-ES": "¡Hola! Tengo que estudiar para un examen.",
+          "fr-FR": "Salut ! Je dois réviser pour un examen.",
+          "hi-IN": "नमस्ते! मुझे एक परीक्षा के लिए पढ़ना है।",
+          "pl-PL": "Cześć! Muszę się uczyć do egzaminu.",
+          "ro-RO": "Salut! Trebuie să învăț pentru un examen.",
+          "tr-TR": "Merhaba! Bir sınav için çalışmam gerekiyor.",
+          "uk-UA": "Привіт! Мені потрібно готуватися до іспиту.",
+          "uz-UZ": "Salom! Imtihonga tayyorlanishim kerak."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hi! Ich suche einen Platz zum Lesen.",
+        "translation": {
+          "ru-RU": "Привет! Я ищу место для чтения.",
+          "en-US": "Hi! I am looking for a place to read.",
+          "ar-SA": "أهلاً! أنا أبحث عن مكان للقراءة.",
+          "es-ES": "¡Hola! Busco un lugar para leer.",
+          "fr-FR": "Salut ! Je cherche une place pour lire.",
+          "hi-IN": "हाय! मैं पढ़ने के लिए जगह ढूंढ रही हूँ।",
+          "pl-PL": "Hej! Szukam miejsca do czytania.",
+          "ro-RO": "Salut! Caut un loc pentru a citi.",
+          "tr-TR": "Selam! Okumak için bir yer arıyorum.",
+          "uk-UA": "Привіт! Я шукаю місце для читання.",
+          "uz-UZ": "Salom! O'qish uchun joy qidiryapman."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Ich kann dir helfen. Welches Buch brauchst du?",
+    "botTranslation": {
+      "ru-RU": "Я могу тебе помочь. Какая книга тебе нужна?",
+      "en-US": "I can help you. Which book do you need?",
+      "ar-SA": "يمكنني مساعدتك. ما الكتاب الذي تحتاجه؟",
+      "es-ES": "Puedo ayudarte. ¿Qué libro necesitas?",
+      "fr-FR": "Je peux t'aider. De quel livre as-tu besoin ?",
+      "hi-IN": "मैं आपकी मदद कर सकता हूँ। आपको कौन सी किताब चाहिए?",
+      "pl-PL": "Mogę ci pomóc. Jakiej książki potrzebujesz?",
+      "ro-RO": "Te pot ajuta. De ce carte ai nevoie?",
+      "tr-TR": "Sana yardım edebilirim. Hangi kitaba ihtiyacın var?",
+      "uk-UA": "Я можу тобі допомогти. Яка книга тобі потрібна?",
+      "uz-UZ": "Senga yordam bera olaman. Qaysi kitob kerak?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Lehrbuch",
+        "translation": {
+          "ru-RU": "учебник",
+          "en-US": "the textbook",
+          "ar-SA": "الكتاب المدرسي",
+          "es-ES": "el libro de texto",
+          "fr-FR": "le manuel",
+          "hi-IN": "पाठ्यपुस्तक",
+          "pl-PL": "podręcznik",
+          "ro-RO": "manualul",
+          "tr-TR": "ders kitabı",
+          "uk-UA": "підручник",
+          "uz-UZ": "darslik"
+        }
+      },
+      {
+        "german": "das Wörterbuch",
+        "translation": {
+          "ru-RU": "словарь",
+          "en-US": "the dictionary",
+          "ar-SA": "القاموس",
+          "es-ES": "el diccionario",
+          "fr-FR": "le dictionnaire",
+          "hi-IN": "शब्दकोश",
+          "pl-PL": "słownik",
+          "ro-RO": "dicționarul",
+          "tr-TR": "sözlük",
+          "uk-UA": "словник",
+          "uz-UZ": "lug'at"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Wo ist das Lehrbuch für Geschichte?",
+        "translation": {
+          "ru-RU": "Где учебник по истории?",
+          "en-US": "Where is the textbook for history?",
+          "ar-SA": "أين كتاب التاريخ المدرسي؟",
+          "es-ES": "¿Dónde está el libro de texto de historia?",
+          "fr-FR": "Où est le manuel d'histoire ?",
+          "hi-IN": "इतिहास की पाठ्यपुस्तक कहाँ है?",
+          "pl-PL": "Gdzie jest podręcznik do historii?",
+          "ro-RO": "Unde este manualul de istorie?",
+          "tr-TR": "Tarih ders kitabı nerede?",
+          "uk-UA": "Де підручник з історії?",
+          "uz-UZ": "Tarix darsligi qayerda?"
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Ich brauche das Wörterbuch für Deutsch.",
+        "translation": {
+          "ru-RU": "Мне нужен словарь по немецкому.",
+          "en-US": "I need the dictionary for German.",
+          "ar-SA": "أحتاج إلى قاموس اللغة الألمانية.",
+          "es-ES": "Necesito el diccionario de alemán.",
+          "fr-FR": "J'ai besoin du dictionnaire d'allemand.",
+          "hi-IN": "मुझे जर्मन के लिए शब्दकोश चाहिए।",
+          "pl-PL": "Potrzebuję słownika do niemieckiego.",
+          "ro-RO": "Am nevoie de dicționarul de germană.",
+          "tr-TR": "Almanca sözlüğe ihtiyacım var.",
+          "uk-UA": "Мені потрібен словник з німецької.",
+          "uz-UZ": "Menga nemis tili lug'ati kerak."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Geh in den ersten Stock. Die Bücher sind im Regal 4.",
+    "botTranslation": {
+      "ru-RU": "Иди на первый этаж. Книги на полке 4.",
+      "en-US": "Go to the first floor. The books are on shelf 4.",
+      "ar-SA": "اذهب إلى الطابق الأول. الكتب على الرف 4.",
+      "es-ES": "Ve al primer piso. Los libros están en el estante 4.",
+      "fr-FR": "Va au premier étage. Les livres sont sur l'étagère 4.",
+      "hi-IN": "पहली मंजिल पर जाओ। किताबें शेल्फ 4 पर हैं।",
+      "pl-PL": "Idź na pierwsze piętro. Książki są na półce 4.",
+      "ro-RO": "Mergi la primul etaj. Cărțile sunt pe raftul 4.",
+      "tr-TR": "Birinci kata git. Kitaplar 4. rafta.",
+      "uk-UA": "Йди на перший поверх. Книги на полиці 4.",
+      "uz-UZ": "Birinchi qavatga bor. Kitoblar 4-javonda."
+    },
+    "vocabulary": [
+      {
+        "german": "im ersten Stock",
+        "translation": {
+          "ru-RU": "на первом этаже",
+          "en-US": "on the first floor",
+          "ar-SA": "في الطابق الأول",
+          "es-ES": "en el primer piso",
+          "fr-FR": "au premier étage",
+          "hi-IN": "पहली मंजिल पर",
+          "pl-PL": "na pierwszym piętrze",
+          "ro-RO": "la primul etaj",
+          "tr-TR": "birinci katta",
+          "uk-UA": "на першому поверсі",
+          "uz-UZ": "birinchi qavatda"
+        }
+      },
+      {
+        "german": "im Regal",
+        "translation": {
+          "ru-RU": "на полке",
+          "en-US": "on the shelf",
+          "ar-SA": "على الرف",
+          "es-ES": "en el estante",
+          "fr-FR": "sur l'étagère",
+          "hi-IN": "शेल्फ पर",
+          "pl-PL": "na półce",
+          "ro-RO": "pe raft",
+          "tr-TR": "rafta",
+          "uk-UA": "на полиці",
+          "uz-UZ": "javonda"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich war im ersten Stock, aber dort ist kein Buch.",
+        "translation": {
+          "ru-RU": "Я была на первом этаже, но там нет книги.",
+          "en-US": "I was on the first floor, but there is no book there.",
+          "ar-SA": "كنت في الطابق الأول، لكن لا يوجد كتاب هناك.",
+          "es-ES": "Estuve en el primer piso, pero no hay ningún libro allí.",
+          "fr-FR": "J'étais au premier étage, mais il n'y a pas de livre là-bas.",
+          "hi-IN": "मैं पहली मंजिल पर थी, लेकिन वहां कोई किताब नहीं है।",
+          "pl-PL": "Byłam na pierwszym piętrze, ale nie ma tam książki.",
+          "ro-RO": "Am fost la primul etaj, dar nu este nicio carte acolo.",
+          "tr-TR": "Birinci kattaydım ama orada kitap yok.",
+          "uk-UA": "Я була на першому поверсі, але там немає книги.",
+          "uz-UZ": "Men birinchi qavatda edim, lekin u yerda kitob yo'q."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Ich habe im Regal 4 geschaut, aber es ist leer.",
+        "translation": {
+          "ru-RU": "Я смотрела на полке 4, но она пустая.",
+          "en-US": "I looked on shelf 4, but it is empty.",
+          "ar-SA": "نظرت في الرف 4، لكنه فارغ.",
+          "es-ES": "Miré en el estante 4, pero está vacío.",
+          "fr-FR": "J'ai regardé sur l'étagère 4, mais elle est vide.",
+          "hi-IN": "मैंने शेल्फ 4 पर देखा, लेकिन यह खाली है।",
+          "pl-PL": "Patrzyłam na półce 4, ale jest pusta.",
+          "ro-RO": "M-am uitat pe raftul 4, dar este gol.",
+          "tr-TR": "4. rafa baktım ama boş.",
+          "uk-UA": "Я дивилася на полиці 4, але вона порожня.",
+          "uz-UZ": "Men 4-javonga qaradim, lekin u bo'sh."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Oh, das ist schade! Jemand hat das Buch schon mitgenommen.",
+    "botTranslation": {
+      "ru-RU": "Ой, как жаль! Кто-то уже забрал эту книгу.",
+      "en-US": "Oh, that's a pity! Someone has already taken the book.",
+      "ar-SA": "أوه، هذا مؤسف! لقد أخذ شخص ما الكتاب بالفعل.",
+      "es-ES": "¡Oh, qué pena! Alguien ya se ha llevado el libro.",
+      "fr-FR": "Oh, c'est dommage ! Quelqu'un a déjà pris le livre.",
+      "hi-IN": "ओह, यह अफ़सोस की बात है! कोई पहले ही किताब ले जा चुका है।",
+      "pl-PL": "Och, szkoda! Ktoś już zabrał tę książkę.",
+      "ro-RO": "Oh, ce păcat! Cineva a luat deja cartea.",
+      "tr-TR": "Oh, ne yazık! Biri kitabı çoktan almış.",
+      "uk-UA": "Ой, як шкода! Хтось вже забрав цю книгу.",
+      "uz-UZ": "Oh, afsus! Kimdir kitobni allaqachon olib ketibdi."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Kann ich das Buch online reservieren?",
+        "translation": {
+          "ru-RU": "Могу ли я забронировать книгу онлайн?",
+          "en-US": "Can I reserve the book online?",
+          "ar-SA": "هل يمكنني حجز الكتاب عبر الإنترنت؟",
+          "es-ES": "¿Puedo reservar el libro online?",
+          "fr-FR": "Puis-je réserver le livre en ligne ?",
+          "hi-IN": "क्या मैं किताब ऑनलाइन रिजर्व कर सकती हूँ?",
+          "pl-PL": "Czy mogę zarezerwować książkę online?",
+          "ro-RO": "Pot rezerva cartea online?",
+          "tr-TR": "Kitabı çevrimiçi rezerve edebilir miyim?",
+          "uk-UA": "Чи можу я забронювати книгу онлайн?",
+          "uz-UZ": "Kitobni onlayn band qilsam bo'ladimi?"
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Gibt es vielleicht noch ein anderes Buch?",
+        "translation": {
+          "ru-RU": "Есть ли, возможно, еще какая-нибудь другая книга?",
+          "en-US": "Is there perhaps another book?",
+          "ar-SA": "هل يوجد ربما كتاب آخر؟",
+          "es-ES": "¿Hay quizás algún otro libro?",
+          "fr-FR": "Y a-t-il peut-être un autre livre ?",
+          "hi-IN": "क्या शायद कोई अन्य किताब है?",
+          "pl-PL": "Czy jest może jakaś inna książka?",
+          "ro-RO": "Există poate o altă carte?",
+          "tr-TR": "Belki başka bir kitap var mıdır?",
+          "uk-UA": "Чи є, можливо, ще якась інша книга?",
+          "uz-UZ": "Balki boshqa kitob bordir?"
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Ja, natürlich. Das ist kein Problem.",
+    "botTranslation": {
+      "ru-RU": "Да, конечно. Это не проблема.",
+      "en-US": "Yes, of course. That is no problem.",
+      "ar-SA": "نعم، بالطبع. هذه ليست مشكلة.",
+      "es-ES": "Sí, por supuesto. No hay problema.",
+      "fr-FR": "Oui, bien sûr. Ce n'est pas un problème.",
+      "hi-IN": "हाँ, बिल्कुल। यह कोई समस्या नहीं है।",
+      "pl-PL": "Tak, oczywiście. To nie problem.",
+      "ro-RO": "Da, desigur. Nu este nicio problemă.",
+      "tr-TR": "Evet, tabii ki. Bu bir sorun değil.",
+      "uk-UA": "Так, звісно. Це не проблема.",
+      "uz-UZ": "Ha, albatta. Bu muammo emas."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Gut, dann mache ich das am Computer.",
+        "translation": {
+          "ru-RU": "Хорошо, тогда я сделаю это за компьютером.",
+          "en-US": "Good, then I'll do that on the computer.",
+          "ar-SA": "جيد، إذن سأفعل ذلك على الكمبيوتر.",
+          "es-ES": "Bien, entonces lo haré en el ordenador.",
+          "fr-FR": "Bien, alors je vais le faire sur l'ordinateur.",
+          "hi-IN": "अच्छा, तो मैं वह कंप्यूटर पर करूँगी।",
+          "pl-PL": "Dobrze, w takim razie zrobię to na komputerze.",
+          "ro-RO": "Bine, atunci voi face asta la calculator.",
+          "tr-TR": "Güzel, o zaman bunu bilgisayarda yaparım.",
+          "uk-UA": "Добре, тоді я зроблю це за комп'ютером.",
+          "uz-UZ": "Yaxshi, unda men buni kompyuterda qilaman."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Perfekt, dann suche ich ein anderes Thema.",
+        "translation": {
+          "ru-RU": "Прекрасно, тогда я поищу другую тему.",
+          "en-US": "Perfect, then I'll look for another topic.",
+          "ar-SA": "ممتاز، إذن سأبحث عن موضوع آخر.",
+          "es-ES": "Perfecto, entonces buscaré otro tema.",
+          "fr-FR": "Parfait, alors je vais chercher un autre sujet.",
+          "hi-IN": "बिल्कुल सही, तो मैं कोई और विषय खोजूँगी।",
+          "pl-PL": "Idealnie, w takim razie poszukam innego tematu.",
+          "ro-RO": "Perfect, atunci voi căuta un alt subiect.",
+          "tr-TR": "Harika, o zaman başka bir konu arayacağım.",
+          "uk-UA": "Чудово, тоді я пошукаю іншу тему.",
+          "uz-UZ": "Ajoyib, unda boshqa mavzu qidiraman."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Alles klar. Hier im Lesesaal haben wir noch freie Tische.",
+    "botTranslation": {
+      "ru-RU": "Все ясно. Здесь в читальном зале у нас еще есть свободные столы.",
+      "en-US": "All right. Here in the reading room we still have free tables.",
+      "ar-SA": "حسناً. هنا في غرفة القراءة لا يزال لدينا طاولات فارغة.",
+      "es-ES": "De acuerdo. Aquí en la sala de lectura todavía tenemos mesas libres.",
+      "fr-FR": "D'accord. Ici dans la salle de lecture, nous avons encore des tables libres.",
+      "hi-IN": "ठीक है। यहाँ वाचनालय में हमारे पास अभी भी खाली मेज हैं।",
+      "pl-PL": "Wszystko jasne. Tutaj w czytelni mamy jeszcze wolne stoły.",
+      "ro-RO": "Am înțeles. Aici, în sala de lectură, mai avem mese libere.",
+      "tr-TR": "Tamam. Burada okuma salonunda hala boş masalarımız var.",
+      "uk-UA": "Все ясно. Тут у читальному залі у нас ще є вільні столи.",
+      "uz-UZ": "Tushunarli. Bu yerda o'qish zalida bizda hali bo'sh stollar bor."
+    },
+    "vocabulary": [
+      {
+        "german": "im Lesesaal",
+        "translation": {
+          "ru-RU": "в читальном зале",
+          "en-US": "in the reading room",
+          "ar-SA": "في غرفة القراءة",
+          "es-ES": "en la sala de lectura",
+          "fr-FR": "dans la salle de lecture",
+          "hi-IN": "वाचनालय में",
+          "pl-PL": "w czytelni",
+          "ro-RO": "în sala de lectură",
+          "tr-TR": "okuma salonunda",
+          "uk-UA": "у читальному залі",
+          "uz-UZ": "o'qish zalida"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Super, ich suche mir jetzt einen Tisch aus.",
+        "translation": {
+          "ru-RU": "Супер, я сейчас выберу себе стол.",
+          "en-US": "Super, I'll pick a table now.",
+          "ar-SA": "رائع، سأختار طاولة الآن.",
+          "es-ES": "Súper, voy a elegir una mesa ahora.",
+          "fr-FR": "Super, je vais choisir une table maintenant.",
+          "hi-IN": "बढ़िया, मैं अब एक मेज चुनूंगी।",
+          "pl-PL": "Super, teraz wybiorę sobie stół.",
+          "ro-RO": "Super, îmi voi alege o masă acum.",
+          "tr-TR": "Harika, şimdi kendime bir masa seçeceğim.",
+          "uk-UA": "Супер, я зараз виберу собі стіл.",
+          "uz-UZ": "Zo'r, hozir o'zimga stol tanlayman."
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Danke, hier ist es gerade sehr ruhig.",
+        "translation": {
+          "ru-RU": "Спасибо, здесь как раз очень тихо.",
+          "en-US": "Thank you, it's very quiet here right now.",
+          "ar-SA": "شكراً، المكان هادئ جداً هنا الآن.",
+          "es-ES": "Gracias, aquí está muy tranquilo ahora mismo.",
+          "fr-FR": "Merci, c'est très calme ici en ce moment.",
+          "hi-IN": "धन्यवाद, यहाँ अभी बहुत शांति है।",
+          "pl-PL": "Dzięki, jest tu teraz bardzo cicho.",
+          "ro-RO": "Mulțumesc, este foarte liniște aici chiar acum.",
+          "tr-TR": "Teşekkürler, burası şu an çok sessiz.",
+          "uk-UA": "Дякую, тут якраз дуже тихо.",
+          "uz-UZ": "Rahmat, bu yer hozir juda tinch."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Es gibt Tische am Fenster oder in der Mitte.",
+    "botTranslation": {
+      "ru-RU": "Есть столы у окна или в середине.",
+      "en-US": "There are tables by the window or in the middle.",
+      "ar-SA": "هناك طاولات بجوار النافذة أو في المنتصف.",
+      "es-ES": "Hay mesas junto a la ventana o en el medio.",
+      "fr-FR": "Il y a des tables près de la fenêtre ou au milieu.",
+      "hi-IN": "खिड़की के पास या बीच में मेज हैं।",
+      "pl-PL": "Są stoły przy oknie lub w środku.",
+      "ro-RO": "Sunt mese la fereastră sau în mijloc.",
+      "tr-TR": "Pencere kenarında veya ortada masalar var.",
+      "uk-UA": "Є столи біля вікна або посередині.",
+      "uz-UZ": "Deraza oldida yoki o'rtada stollar bor."
+    },
+    "vocabulary": [
+      {
+        "german": "an das Fenster",
+        "translation": {
+          "ru-RU": "к окну",
+          "en-US": "to the window",
+          "ar-SA": "إلى النافذة",
+          "es-ES": "a la ventana",
+          "fr-FR": "à la fenêtre",
+          "hi-IN": "खिड़की के पास (दिशा)",
+          "pl-PL": "do okna",
+          "ro-RO": "la fereastră",
+          "tr-TR": "pencereye",
+          "uk-UA": "до вікна",
+          "uz-UZ": "deraza tomonga"
+        }
+      },
+      {
+        "german": "in der Mitte",
+        "translation": {
+          "ru-RU": "в середине",
+          "en-US": "in the middle",
+          "ar-SA": "في المنتصف",
+          "es-ES": "en el medio",
+          "fr-FR": "au milieu",
+          "hi-IN": "बीच में",
+          "pl-PL": "w środku",
+          "ro-RO": "în mijloc",
+          "tr-TR": "ortada",
+          "uk-UA": "посередині",
+          "uz-UZ": "o'rtasida"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich setze mich lieber an das Fenster.",
+        "translation": {
+          "ru-RU": "Я лучше сяду к окну.",
+          "en-US": "I prefer to sit down at the window.",
+          "ar-SA": "أفضل الجلوس عند النافذة.",
+          "es-ES": "Prefiero sentarme junto a la ventana.",
+          "fr-FR": "Je préfère m'asseoir près de la fenêtre.",
+          "hi-IN": "मैं खिड़की के पास बैठना पसंद करूंगी।",
+          "pl-PL": "Wolę usiąść przy oknie.",
+          "ro-RO": "Prefer să mă așez la fereastră.",
+          "tr-TR": "Pencere kenarına oturmayı tercih ederim.",
+          "uk-UA": "Я краще сяду біля вікна.",
+          "uz-UZ": "Men deraza oldiga o'tirishni afzal ko'raman."
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "In der Mitte ist es für mich besser.",
+        "translation": {
+          "ru-RU": "В середине для меня лучше.",
+          "en-US": "In the middle is better for me.",
+          "ar-SA": "في المنتصف أفضل بالنسبة لي.",
+          "es-ES": "En el medio es mejor para mí.",
+          "fr-FR": "Au milieu, c'est mieux pour moi.",
+          "hi-IN": "बीच में मेरे लिए बेहतर है।",
+          "pl-PL": "W środku jest dla mnie lepiej.",
+          "ro-RO": "În mijloc este mai bine pentru mine.",
+          "tr-TR": "Ortada olmak benim için daha iyi.",
+          "uk-UA": "Посередині для мене краще.",
+          "uz-UZ": "O'rtada bo'lish men uchun yaxshiroq."
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Schick. Ich bin am Info-Schalter, wenn du Hilfe brauchst.",
+    "botTranslation": {
+      "ru-RU": "Отлично. Я буду у стойки информации, если тебе понадобится помощь.",
+      "en-US": "Great. I am at the info desk if you need help.",
+      "ar-SA": "رائع. أنا عند مكتب المعلومات إذا احتجت إلى مساعدة.",
+      "es-ES": "Genial. Estoy en el mostrador de información si necesitas ayuda.",
+      "fr-FR": "Super. Je suis au bureau d'information si tu as besoin d'aide.",
+      "hi-IN": "बहुत बढ़िया। अगर आपको मदद चाहिए तो मैं पूछताछ डेस्क पर हूँ।",
+      "pl-PL": "Świetnie. Jestem przy punkcie informacyjnym, jeśli potrzebujesz pomocy.",
+      "ro-RO": "Grozav. Sunt la biroul de informații dacă ai nevoie de ajutor.",
+      "tr-TR": "Harika. Yardıma ihtiyacın olursa danışma masasındayım.",
+      "uk-UA": "Чудово. Я буду біля стійки інформації, якщо тобі знадобиться допомога.",
+      "uz-UZ": "Ajoyib. Yordam kerak bo'lsa, men ma'lumot stolida bo'laman."
+    },
+    "vocabulary": [
+      {
+        "german": "am Info-Schalter",
+        "translation": {
+          "ru-RU": "у стойки информации",
+          "en-US": "at the info desk",
+          "ar-SA": "عند مكتب المعلومات",
+          "es-ES": "en el mostrador de información",
+          "fr-FR": "au bureau d'information",
+          "hi-IN": "पूछताछ डेस्क पर",
+          "pl-PL": "przy punkcie informacyjnym",
+          "ro-RO": "la biroul de informații",
+          "tr-TR": "danışma masasında",
+          "uk-UA": "біля стійки інформації",
+          "uz-UZ": "ma'lumot stoli yonida"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Vielen Dank für deine Hilfe!",
+        "translation": {
+          "ru-RU": "Большое спасибо за твою помощь!",
+          "en-US": "Thank you very much for your help!",
+          "ar-SA": "شكراً جزيلاً على مساعدتك!",
+          "es-ES": "¡Muchas gracias por tu ayuda!",
+          "fr-FR": "Merci beaucoup pour ton aide !",
+          "hi-IN": "आपकी मदद के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję za pomoc!",
+          "ro-RO": "Mulțumesc mult pentru ajutor!",
+          "tr-TR": "Yardımın için çok teşekkür ederim!",
+          "uk-UA": "Дуже дякую за твою допомогу!",
+          "uz-UZ": "Yordaming uchun katta rahmat!"
+        },
+        "nextStep": "step_17"
+      },
+      {
+        "text": "Danke dir, das ist sehr nett!",
+        "translation": {
+          "ru-RU": "Спасибо тебе, это очень мило!",
+          "en-US": "Thank you, that is very nice!",
+          "ar-SA": "شكراً لك، هذا لطيف جداً!",
+          "es-ES": "¡Gracias, es muy amable!",
+          "fr-FR": "Merci, c'est très gentil !",
+          "hi-IN": "धन्यवाद, यह बहुत अच्छा है!",
+          "pl-PL": "Dziękuję, to bardzo miłe!",
+          "ro-RO": "Mulțumesc, este foarte drăguț!",
+          "tr-TR": "Teşekkür ederim, bu çok nazikçe!",
+          "uk-UA": "Дякую тобі, це дуже мило!",
+          "uz-UZ": "Rahmat senga, bu juda yoqimli!"
+        },
+        "nextStep": "step_17"
+      }
+    ],
+    "defaultNext": "step_17"
+  },
+  "step_17": {
+    "botText": "Gerne! Viel Erfolg und bis bald!",
+    "botTranslation": {
+      "ru-RU": "Не за что! Удачи и до скорого!",
+      "en-US": "You're welcome! Good luck and see you soon!",
+      "ar-SA": "على الرحب والسعة! حظاً موفقاً وأراك قريباً!",
+      "es-ES": "¡De nada! ¡Mucho éxito y hasta pronto!",
+      "fr-FR": "Avec plaisir ! Bonne chance et à bientôt !",
+      "hi-IN": "स्वागत है! शुभकामनाएँ और जल्द ही मिलते हैं!",
+      "pl-PL": "Nie ma za co! Powodzenia i do zobaczenia!",
+      "ro-RO": "Cu plăcere! Mult succes și pe curând!",
+      "tr-TR": "Rica ederim! Başarılar ve yakında görüşmek üzere!",
+      "uk-UA": "Нема за що! Успіхів і до скорої зустрічі!",
+      "uz-UZ": "Arzimaydi! Omad va tez orada ko'rishguncha!"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Danke, bis bald! Tschüss!",
+        "translation": {
+          "ru-RU": "Спасибо, до скорого! Пока!",
+          "en-US": "Thanks, see you soon! Bye!",
+          "ar-SA": "شكراً، أراك قريباً! وداعاً!",
+          "es-ES": "¡Gracias, hasta pronto! ¡Adiós!",
+          "fr-FR": "Merci, à bientôt ! Salut !",
+          "hi-IN": "धन्यवाद, जल्द ही मिलते हैं! बाय!",
+          "pl-PL": "Dzięki, do zobaczenia! Cześć!",
+          "ro-RO": "Mulțumesc, pe curând! Pa!",
+          "tr-TR": "Teşekkürler, yakında görüşürüz! Hoşça kal!",
+          "uk-UA": "Дякую, до скорої зустрічі! Бувай!",
+          "uz-UZ": "Rahmat, tez orada ko'rishguncha! Xayr!"
+        },
+        "nextStep": "step_19"
+      },
+      {
+        "text": "Mach's gut, ciao!",
+        "translation": {
+          "ru-RU": "Счастливо, чао!",
+          "en-US": "Take care, ciao!",
+          "ar-SA": "اعتن بنفسك، تشاو!",
+          "es-ES": "¡Cuídate, ciao!",
+          "fr-FR": "Prends soin de toi, ciao !",
+          "hi-IN": "अपना ख्याल रखना, चाओ!",
+          "pl-PL": "Trzymaj się, ciao!",
+          "ro-RO": "Numai bine, ciao!",
+          "tr-TR": "Kendine iyi bak, çav!",
+          "uk-UA": "Щасти, чао!",
+          "uz-UZ": "Yaxshi qol, chao!"
+        },
+        "nextStep": "step_19"
+      }
+    ],
+    "defaultNext": "step_19"
+  },
+  "step_19": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор окончен.",
+      "en-US": "The conversation is over.",
+      "ar-SA": "المحادثة انتهت.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत खत्म हो गई है।",
+      "pl-PL": "Rozmowa zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмова закінчена.",
+      "uz-UZ": "Suhbat tugadi."
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

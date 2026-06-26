@@ -246,7 +246,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 .profile-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 10px 5px 5px 5px;
+  padding: 10px 5px 45px 5px;
   height: 100%;
 }
 

@@ -10,8 +10,8 @@
         :class="{'plus' : item.id === 'plus'}"
     >
       <button class="stat-btn"
-              @click.stop="item.id === 'plus' ? toPay() : handleStatClick(item)">
-        <span v-if="item.title" class="item__label"> {{ item.title }}</span>
+              @click.stop="handleStatClick(item.id === 'plus' ? toPay() : item)">
+        <span class="item__label"> {{ item.title }}</span>
         <img
             v-if="item.id === 'rank' && userAuth.isFreezeActive"
             class="stat-icon freeze-icon"
@@ -63,6 +63,7 @@
         </div>
       </div>
     </transition>
+
     <VCalendarStreak v-model="isCalendarOpen"/>
   </div>
 </template>
@@ -74,12 +75,13 @@ import {userAuthStore} from '../../store/authStore.js'
 import {userChainStore} from '../../store/chainStore.js'
 import {useI18n} from 'vue-i18n'
 import FreezeShield from '../../assets/images/FreezeShield.svg'
-import Hats from '../../assets/images/hatsNAv.svg'
+import Hats from '../../assets/images/Hats.svg'
 import Articlus from '../../assets/images/article.svg'
 import Heart from '../../assets/images/heartInfo.svg'
 import Forever from '../../assets/images/forever.svg'
 import VCalendarStreak from "~/src/components/V-calendarStreak.vue"
 import LogoPlus from '../../assets/images/PlusLogo.png'
+
 const {t} = useI18n()
 const langStore = userlangStore()
 const userAuth = userAuthStore()
@@ -112,6 +114,7 @@ const getIconClass = (item) => {
 const infoData = computed(() => [
   {
     id: 'plus',
+    title: 'Skillup+',
     icon: LogoPlus
   },
   {
@@ -198,7 +201,7 @@ onBeforeUnmount(() => {
   justify-content: space-between;
   gap: 12px;
   width: 100%;
-  padding: 8px 0;
+  padding: 0 0 8px 0;
   position: relative;
 }
 
@@ -208,8 +211,8 @@ onBeforeUnmount(() => {
   background: var(--tabBg);
   justify-content: center;
   padding: 8px 4px;
-  border-radius: 18px;
-  box-shadow:  var(--boxShadowMobile);
+  border-radius: 14px;
+  box-shadow: var(--boxShadowMobile);
 }
 
 .stat-item-wrapper.plus {
@@ -226,13 +229,11 @@ onBeforeUnmount(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
   border: none;
   background: none;
   padding: 0 2px;
   height: 38px;
   cursor: pointer;
-  width: 100%;
 }
 
 .stat-icon {
@@ -490,12 +491,8 @@ onBeforeUnmount(() => {
     display: block;
     font-size: 20px;
   }
-  .header-stats {
-    padding: 14px 0;
+
+  .stat__items-wrapper {
   }
 }
-
-
-
-
 </style>

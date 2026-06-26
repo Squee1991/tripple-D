@@ -217,6 +217,24 @@ export const userlangStore = defineStore('learning', () => {
 				const docSnap = await getDoc(userDoc)
 				if (docSnap.exists()) {
 					const data = docSnap.data()
+					if (!data.expRecovered && data.questProgress) {
+						let totalRecoveredExp = 0;
+
+						for (const key in data.questProgress) {
+							if (data.questProgress[key].completed === true) {
+								totalRecoveredExp += 10;
+							}
+						}
+
+						if (totalRecoveredExp > 0) {
+							data.exp = (data.exp || 0) + totalRecoveredExp;
+							await updateDoc(userDoc, {  // Убедись, что тут правильное имя ссылки на документ
+								exp: data.exp,
+								expRecovered: true
+							});
+							console.log(`Начислено ${totalRecoveredExp} опыта за старые задания.`);
+						}
+					}
 					words.value = data.words || []
 					learnedWords.value = data.learnedWords || []
 					wrongAnswers.value = data.wrongAnswers || []

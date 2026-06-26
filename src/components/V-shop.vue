@@ -147,11 +147,11 @@ const rankStore = useRankUserStore()
 const PRICES = {
   HEART: 10,
   FREEZE_DAY: 10,
-  SALE_5: 100,
-  SALE_10: 150,
-  SALE_15: 70
+  SALE_3: 100,
+  SALE_6: 150,
+  // SALE_15: 70
 }
-const DISCOUNT_REQ_HATS = {3: 210, 6: 500, 15: 400}
+const DISCOUNT_REQ_HATS = {3: 210, 6: 500}
 
 const showModal = ref(false)
 const modalType = ref('freeze')
@@ -183,22 +183,22 @@ const shopCards = computed(() => {
       type: 'consumable'
     },
     {
-      id: "sale_3",
+      id: "sale_5",
       title: t('cardSales.title3'),
       description: "",
       hotIcon: HotDeal,
       icon: Sale,
-      price: PRICES.SALE_5,
+      price: PRICES.SALE_3,
       requiredHats: DISCOUNT_REQ_HATS[3],
       type: 'permanent'
     },
     {
-      id: "sale_6",
+      id: "sale_10",
       title: t('cardSales.title6'),
       description: "",
       hotIcon: HotDeal,
       icon: Sale10,
-      price: PRICES.SALE_10,
+      price: PRICES.SALE_6,
       requiredHats: DISCOUNT_REQ_HATS[6],
       type: 'permanent'
     },

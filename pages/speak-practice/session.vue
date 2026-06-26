@@ -12,7 +12,7 @@
           <polyline points="12 19 5 12 12 5"></polyline>
         </svg>
       </button>
-      <h1 class="title"> {{ t('speakSession.title')}} </h1>
+      <h1 class="title"> {{ t('speakSession.title') }} </h1>
       <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
              stroke="orange" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
@@ -44,7 +44,7 @@
                   role="tab"
                   @click="setTab(tab.id)"
               >
-                <img :src="tab.icon" alt="" class="tab-icon" />
+                <img :src="tab.icon" alt="" class="tab-icon"/>
                 <span class="tab-label">{{ tab.label }}</span>
               </button>
             </nav>
@@ -52,8 +52,8 @@
               <div v-if="toggleState === 'words'" class="menu-card" key="words">
                 <div class="icon-circle vocab-icon">📚</div>
                 <div class="menu-card-content">
-                  <h2>{{ t('speakSession.words')}}</h2>
-                  <p>{{ t('speakSession.wordsText')}}</p>
+                  <h2>{{ t('speakSession.words') }}</h2>
+                  <p>{{ t('speakSession.wordsText') }}</p>
                 </div>
                 <button class="btn-primary" @click="startVocabLearning">
                   {{ isVocabLearned ? t('speakSession.repeat') : t('speakSession.start') }}
@@ -62,8 +62,8 @@
               <div v-else class="menu-card" key="dialog">
                 <div class="icon-circle start-icon">💬</div>
                 <div class="menu-card-content">
-                  <h2>{{ t('speakSession.dialogue')}}</h2>
-                  <p>{{ t('speakSession.dialogueText')}}</p>
+                  <h2>{{ t('speakSession.dialogue') }}</h2>
+                  <p>{{ t('speakSession.dialogueText') }}</p>
                 </div>
                 <button class="btn-primary" @click="startDialogue">
                   {{ dialogueCompleted ? t('speakSession.repeat') : t('speakSession.start') }}
@@ -113,20 +113,20 @@
     <Transition name="slide-up">
       <div v-if="showCompletionModal" class="completion-overlay">
         <div class="completion-modal">
-          <h2>{{ t('speakSession.goodJob')}}</h2>
-          <p>{{ t('speakSession.goodJobTitle')}}</p>
+          <h2>{{ t('speakSession.goodJob') }}</h2>
+          <p>{{ t('speakSession.goodJobTitle') }}</p>
           <div class="completion-overlay_icon">
             <img src="../../assets/images/GoodJobIcon.svg" alt="success_icon">
           </div>
           <div class="completion-actions">
-            <button class="btn-primary" @click="confirmExit">{{ t('speakSession.list')}}</button>
-            <button class="btn-secondary" @click="restartDialogue">{{ t('speakSession.repeat')}}</button>
+            <button class="btn-primary" @click="confirmExit">{{ t('speakSession.list') }}</button>
+            <button class="btn-secondary" @click="restartDialogue">{{ t('speakSession.repeat') }}</button>
           </div>
         </div>
       </div>
     </Transition>
     <footer class="options-panel" v-if="viewState === 'chat' && !dialogueCompleted">
-      <p class="options-title" v-if="store.currentOptions?.length > 0">{{ t('speakSession.choice')}}</p>
+      <p class="options-title" v-if="store.currentOptions?.length > 0">{{ t('speakSession.choice') }}</p>
       <div class="options-list" v-if="store.currentOptions?.length > 0">
         <button
             v-for="(option, index) in store.currentOptions"
@@ -189,6 +189,7 @@ import Words from '../../assets/images/word.svg'
 import VBanner from "~/src/components/V-banner.vue";
 import {useSwipeBack} from '~/composables/useSwipeBack.js';
 import VTransition from "~/src/components/V-transition.vue";
+import {showInterstitial} from '../../utils/admob.js';
 
 const {locale, t} = useI18n();
 const route = useRoute();
@@ -218,13 +219,13 @@ const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
 
 const textComputed = computed(() => {
   return toggleState.value === 'dialog'
-      ? 'Проходи диалоги. Cлушай, выбирай варианты ответов и тренируй произношение'
-      : 'Выучи ключевые слова и фразы, чтобы легко понимать каждую реплику в диалоге'
+      ? t('speakSessionsBanner.dialog')
+      : t('speakSessionsBanner.words')
 })
 
 const learnTabs = [
-  { id: 'dialog', label: 'Диалог', icon: Dialog },
-  { id: 'words', label: 'Слова', icon: Words },
+  {id: 'dialog', label: t('speakSession.dialogue'), icon: Dialog},
+  {id: 'words', label: t('speakSession.words'), icon: Words},
 ]
 
 const activeIndex = computed(() => learnTabs.findIndex(tab => tab.id === toggleState.value))
@@ -295,21 +296,25 @@ const confirmExit = () => {
 };
 
 const startVocabLearning = () => {
-  router.push({
-    path: '/speak-practice/words-session',
-    query: {
-      theme: route.query.theme,
-      level: route.query.level
-    }
+  showInterstitial(() => {
+    router.push({
+      path: '/speak-practice/words-session',
+      query: {
+        theme: route.query.theme,
+        level: route.query.level
+      }
+    });
   });
 };
 
 const restartDialogue = async () => {
   showCompletionModal.value = false;
-  store.resetSession();
-  dialogueCompleted.value = false;
-  viewState.value = 'menu';
-  await loadDialogueData();
+  showInterstitial(async () => {
+    store.resetSession();
+    dialogueCompleted.value = false;
+    viewState.value = 'menu';
+    await loadDialogueData();
+  });
 };
 
 const speakGerman = async (text) => {
@@ -335,7 +340,7 @@ const speakGerman = async (text) => {
       if (playingAudio) {
         playingAudio.addEventListener('ended', () => {
           setTimeout(resolve, 200);
-        }, { once: true });
+        }, {once: true});
       } else if ('speechSynthesis' in window && window.speechSynthesis.speaking) {
         const checkInterval = setInterval(() => {
           if (!window.speechSynthesis.speaking) {
@@ -368,35 +373,33 @@ const completeDialogue = async () => {
 
 const startDialogue = async () => {
   if (!store.dialogueData || !store.dialogueData['start']) return;
+  showInterstitial(async () => {
+    viewState.value = 'chat';
+    store.chatStarted = true;
+    dialogueCompleted.value = false;
+    store.setStep('start');
+    store.isOptionsDisabled = true;
+    const step = store.currentStepData;
+    setTimeout(async () => {
+      await speakGerman(step.botText);
+    }, 300);
 
-  viewState.value = 'chat';
-  store.chatStarted = true;
-  dialogueCompleted.value = false;
-
-  store.setStep('start');
-  store.isOptionsDisabled = true;
-
-  const step = store.currentStepData;
-
-  setTimeout(async () => {
-    await speakGerman(step.botText);
-  }, 300);
-
-  isTyping.value = true;
-  await scrollToBottom();
-
-  setTimeout(async () => {
-    isTyping.value = false;
-    store.addMessage(
-        'bot',
-        step.botText,
-        step.botTranslation
-    );
-
+    isTyping.value = true;
     await scrollToBottom();
-    store.isOptionsDisabled = false;
-    checkDialogueEnd(step);
-  }, 900);
+
+    setTimeout(async () => {
+      isTyping.value = false;
+      store.addMessage(
+          'bot',
+          step.botText,
+          step.botTranslation
+      );
+
+      await scrollToBottom();
+      store.isOptionsDisabled = false;
+      checkDialogueEnd(step);
+    }, 900);
+  });
 };
 
 const handleOptionClick = async (option) => {
@@ -609,7 +612,7 @@ onMounted(() => {
   left: 6px;
   width: calc(50% - 6px);
   background: var(--tabsSlideBg);
-  box-shadow: var(--tabSlideBoxShadow, 0 2px 0 rgba(0,0,0,0.1));
+  box-shadow: var(--tabSlideBoxShadow, 0 2px 0 rgba(0, 0, 0, 0.1));
   border-radius: 30px;
   transition: transform 0.4s cubic-bezier(0.34, 1.35, 0.64, 1);
   z-index: 1;
@@ -825,7 +828,7 @@ onMounted(() => {
 
 .completion-modal {
   background: var(--bgModal);
-  border-radius: 24px 24px 0 0 ;
+  border-radius: 24px 24px 0 0;
   padding: 30px 20px;
   width: 100%;
   max-width: 768px;
@@ -1013,7 +1016,7 @@ onMounted(() => {
 
 .option-btn {
   background-color: var(--menuItemsBg);
-  padding: 8px 20px;
+  padding: 8px 4px;
   text-align: left;
   cursor: pointer;
   transition: all 0.2s ease;

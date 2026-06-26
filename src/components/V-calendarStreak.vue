@@ -2,9 +2,7 @@
   <Transition name="slide-bottom">
     <div v-if="modelValue" class="modal-overlay-streak" @click.self="closeModal">
       <div class="modal-content">
-        <div class="drag-handle-container" @click="closeModal">
-          <div class="drag-handle"></div>
-        </div>
+        <div class="drag-handle-container" @click="closeModal"></div>
         <div class="header">
           <div class="rank-info-card">
             <div class="rank-info-header">
@@ -44,7 +42,7 @@
           </button>
           <span class="current-month">{{ formattedMonthYear }}</span>
           <button @click="nextMonth" class="nav-btn">
-            <img class="calendar__arrow" src="../../assets/images/next.svg" alt="prev">
+            <img class="calendar__arrow" src="../../assets/images/next.svg" alt="next">
           </button>
         </div>
         <div class="calendar-grid">
@@ -57,15 +55,24 @@
               :key="'day-' + index"
               class="day-cell"
               :class="{
-                'success': data.tasksCompleted >= 1,
-                'is-today': data.isToday
+                'success': data.tasksCompleted > 0,
+                'penalty': data.tasksCompleted < 0,
+                'is-today': data.isToday,
+                'before-reg': data.isBeforeRegistration
               }"
           >
             <div class="cell-background"></div>
             <span class="day-number">{{ data.day }}</span>
-            <div class="task-count">
+
+            <div class="task-count" v-if="data.isBeforeRegistration">
+              <span class="icon-small" style="opacity: 0.3;">🎓</span>
+              <span class="task-number" style="opacity: 0.3;">0</span>
+            </div>
+            <div class="task-count" v-else>
               <span class="icon-small">🎓</span>
-              <span class="task-number">{{ data.tasksCompleted }}</span>
+              <span class="task-number" v-if="data.tasksCompleted > 0">{{ data.tasksCompleted }}</span>
+              <span class="task-number" v-else-if="data.tasksCompleted < 0">{{ data.tasksCompleted }}</span>
+              <span class="task-number" v-else>0</span>
             </div>
           </div>
           <div v-for="(empty, index) in trailingDays" :key="'empty-end-' + index" class="day-cell empty-cell"></div>
@@ -76,34 +83,37 @@
 </template>
 
 <script setup>
-import {computed, watch, ref, onMounted} from 'vue';
-import {useI18n} from 'vue-i18n';
+import { computed, watch, ref, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
 import VArrowNav from "~/src/components/V-arrowNav.vue";
-import {dailyStore} from '../../store/dailyStore.js';
-import {userAuthStore} from '../../store/authStore.js';
-import Question from '../../assets/images/question.svg';
-import FreezeShield from '../../assets/images/FreezeShield.svg'
-const { t } = useI18n()
+import { dailyStore } from '../../store/dailyStore.js';
+import { userAuthStore } from '../../store/authStore.js';
+import FreezeShield from '../../assets/images/FreezeShield.svg';
 
+const { t } = useI18n();
 const authStore = userAuthStore();
 const isOpen = ref(false);
+
 const props = defineProps({
   modelValue: {
     type: Boolean,
     default: false
   }
 });
+
 const emit = defineEmits(['update:modelValue']);
+
 const openList = () => {
   isOpen.value = !isOpen.value;
 }
 
 const freezeComputed = computed(() => {
-  return authStore.isFreezeActive ? t('freezeStatus.active') : t('freezeStatus.inactive')
-})
+  return authStore.isFreezeActive ? t('freezeStatus.active') : t('freezeStatus.inactive');
+});
 
 const daily = dailyStore();
 const viewMode = ref('month');
+
 const closeModal = () => {
   emit('update:modelValue', false);
 };
@@ -148,36 +158,36 @@ const formattedMonthYear = computed(() => {
 const generateCalendar = async () => {
   const year = currentDate.value.getFullYear();
   const month = currentDate.value.getMonth();
-
   const firstDay = new Date(year, month, 1).getDay();
   const startingDayIndex = firstDay === 0 ? 6 : firstDay - 1;
-
   emptyDays.value = Array.from({length: startingDayIndex});
   const daysInMonth = new Date(year, month + 1, 0).getDate();
+  let regDate = new Date();
+  if (authStore.registeredAt) {
+    regDate = new Date(authStore.registeredAt);
+  }
+  regDate.setHours(0, 0, 0, 0);
 
   daysData.value = Array.from({length: daysInMonth}, (_, i) => {
     const dayNumber = i + 1;
     const isToday = year === realToday.getFullYear() && month === realToday.getMonth() && dayNumber === realToday.getDate();
-    const completedTasks = isToday ? (daily.currentCycle?.completedCount || 0) : 0;
+    const dayDate = new Date(year, month, dayNumber);
 
     return {
       day: dayNumber,
-      tasksCompleted: completedTasks,
       isToday: isToday,
-      isPast: new Date(year, month, dayNumber) < new Date(realToday.getFullYear(), realToday.getMonth(), realToday.getDate())
+      isBeforeRegistration: dayDate < regDate
     };
   });
-
   const totalFilled = startingDayIndex + daysInMonth;
   trailingDays.value = Array.from({length: 42 - totalFilled});
-
   const monthHistory = await daily.fetchMonthHistory(year, month);
-
   daysData.value = daysData.value.map(data => {
-    const historyCount = monthHistory[String(data.day)] ?? 0;
-    const finalCount = data.isToday
-        ? Math.max(historyCount, daily.currentCycle?.completedCount || 0)
-        : historyCount;
+    const historyCount = monthHistory[String(data.day)];
+    let finalCount = historyCount !== undefined ? historyCount : 0;
+    if (data.isToday) {
+      finalCount = Math.max(finalCount, daily.currentCycle?.completedCount || 0);
+    }
 
     return {
       ...data,
@@ -189,7 +199,9 @@ const generateCalendar = async () => {
 watch(() => daily.currentCycle?.completedCount, (newVal) => {
   const todayCell = daysData.value.find(d => d.isToday);
   if (todayCell) {
-    todayCell.tasksCompleted = Math.max(todayCell.tasksCompleted, newVal || 0);
+    if (todayCell.tasksCompleted >= 0) {
+      todayCell.tasksCompleted = Math.max(todayCell.tasksCompleted, newVal || 0);
+    }
   }
 });
 
@@ -209,7 +221,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-
 .modal-overlay-streak {
   position: fixed;
   top: 0;
@@ -300,7 +311,7 @@ onMounted(() => {
   border-radius: 6px;
   padding: 10px;
   margin: 6px;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .rank-info-header {
@@ -341,6 +352,7 @@ onMounted(() => {
   background: none;
   padding: 10px;
   color: white;
+  cursor: pointer;
 }
 
 .rank-icon-emoji {
@@ -419,7 +431,7 @@ onMounted(() => {
 .nav-btn {
   background: #2492cc;
   border: none;
-  color: #94a3b8;
+  color: #ffffff;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -484,6 +496,11 @@ onMounted(() => {
   font-size: 16px;
   font-weight: 800;
   color: var(--title);
+  z-index: 1;
+}
+
+.day-cell.before-reg .day-number {
+  opacity: 0.3;
 }
 
 .task-count {
@@ -491,6 +508,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
   gap: 2px;
+  z-index: 1;
 }
 
 .icon-small {
@@ -505,8 +523,9 @@ onMounted(() => {
   color: #475569;
 }
 
+/* СТИЛИ УСПЕШНОГО ДНЯ (ЗЕЛЕНЫЙ) */
 .day-cell.success {
-  background: linear-gradient(135deg, #eab308, #ca8a04);
+  background: linear-gradient(135deg, #22c55e, #16a34a);
   transform: translateY(-2px);
   border-color: transparent;
 }
@@ -516,13 +535,33 @@ onMounted(() => {
 }
 
 .day-cell.success .day-number, .day-cell.success .task-number {
-  color: #101c3d;
+  color: #ffffff;
 }
 
 .day-cell.success .icon-small {
   filter: none;
 }
 
+/* СТИЛИ ШТРАФА (ЖЕЛТЫЙ) - Сработает только если в Firebase реально будет -3 */
+.day-cell.penalty {
+  background: linear-gradient(135deg, #eab308, #ca8a04);
+  transform: translateY(-2px);
+  border-color: transparent;
+}
+
+.day-cell.penalty .cell-background {
+  display: none;
+}
+
+.day-cell.penalty .day-number, .day-cell.penalty .task-number {
+  color: #101c3d;
+}
+
+.day-cell.penalty .icon-small {
+  filter: none;
+}
+
+/* СТИЛИ СЕГОДНЯШНЕГО ДНЯ */
 .day-cell.is-today {
   border-color: #3b82f6;
   box-shadow: inset 0 0 12px rgba(59, 130, 246, 0.2);
@@ -537,6 +576,14 @@ onMounted(() => {
 }
 
 .day-cell.success.is-today .day-number {
+  color: #ffffff;
+}
+
+.day-cell.penalty.is-today {
+  border-color: #ffffff;
+}
+
+.day-cell.penalty.is-today .day-number {
   color: #101c3d;
 }
 </style>

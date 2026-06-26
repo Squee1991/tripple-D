@@ -12,9 +12,7 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 	const highScores = ref({})
 	const selectedTankId = ref(1)
 	const ownedTanks = ref([1])
-
 	const shipBatteries = ref({ 1: { lives: 3, lastRegen: Date.now() } })
-
 	const score = ref(0)
 	const activeGalaxyId = ref(null)
 	const galaxies = ref([])
@@ -106,9 +104,28 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 
 				checkBatteryRegen()
 			} else {
-				captainName.value = authStore.name || 'ПИЛОТ-01'
+				captainName.value = authStore.name || 'Pilot'
+				balance.value = 0
+				highScores.value = {}
+				selectedTankId.value = 1
+				ownedTanks.value = [1]
+				shipBatteries.value = { 1: { lives: 3, lastRegen: Date.now() } }
+
+				checkBatteryRegen()
+
+				await sync({
+					captainName: captainName.value,
+					balance: balance.value,
+					highScores: highScores.value,
+					totalScore: 0,
+					selectedTankId: selectedTankId.value,
+					ownedTanks: ownedTanks.value,
+					shipBatteries: shipBatteries.value
+				})
 			}
-		} catch (e) {}
+		} catch (e) {
+			console.error(e)
+		}
 	}
 
 	const sync = async (payload) => {
@@ -160,10 +177,13 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 		const currentBest = highScores.value[galaxyId] || 0
 		if (finalScore > currentBest) {
 			highScores.value[galaxyId] = finalScore
+			const totalScore = Object.values(highScores.value).reduce((a, b) => a + b, 0)
+
 			await sync({
 				captainName: authStore.name || 'ПИЛОТ-01',
 				balance: balance.value,
 				highScores: highScores.value,
+				totalScore: totalScore,
 				selectedTankId: selectedTankId.value,
 				ownedTanks: ownedTanks.value
 			})

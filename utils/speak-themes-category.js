@@ -1,4 +1,4 @@
-export const categories = [
+export const categoriesSpeak = [
 	{
 		id: 'society_lifestyle',
 		title: 'speakTopics.speak',
@@ -6,6 +6,7 @@ export const categories = [
 			{ id: 'firstmeet', icon: '👋', title: 'speakThemes.firstmeet' },
 			{ id: 'acquaintance', icon: '👥', title: 'speakThemes.acquaintance' },
 			{ id: 'secondmeet', icon: '🤝', title: 'speakThemes.secondmeet' },
+			{ id: 'refusal_invite', icon: '🤝', title: 'speakThemes.refusal_invite' },
 			{ id: 'family_talk', icon: '👨‍👩‍👧‍👦', title: 'speakThemes.family_talk' },
 			{ id: 'weekend_plans', icon: '🗓️', title: 'speakThemes.weekend_plans' },
 			{ id: 'friend_call', icon: '📞', title: 'speakThemes.friend_call' },
@@ -46,9 +47,10 @@ export const categories = [
 			{ id: 'apartment_rent', icon: '🏠', title: 'speakThemes.apartment_rent' },
 			{ id: 'clothes_shopping', icon: '🛍️', title: 'speakThemes.clothes_shopping' },
 			{ id: 'shopping', icon: '📦', title: 'speakThemes.shopping' },
+			{ id: 'library', icon: '📚', title: 'speakThemes.library' },
 			{ id: 'post_office', icon: '📮', title: 'speakThemes.post_office' },
 			{ id: 'police_talk', icon: '👮', title: 'speakThemes.police_talk' },
-			{ id: 'barbershop', icon: '💈', title: 'speakThemes.barbershop' }
+			{ id: 'barbershop', icon: '💈', title: 'speakThemes.barbershop' },
 		]
 	},
 	{
@@ -74,5 +76,17 @@ export const categories = [
 			{ id: 'salary_talk', icon: '💰', title: 'speakThemes.salary_talk' },
 			{ id: 'dismissal_talk', icon: '🚪', title: 'speakThemes.dismissal_talk' },
 		]
-	}
+	},
+	{
+		id: 'auto',
+		title: 'speakTopics.auto',
+		themes: [
+			{ id: 'road_assistance', icon: '🦺', title: 'speakThemes.road_assistance' },
+			{ id: 'oil_change', icon: '🛢️', title: 'speakThemes.oil_change' },
+			{ id: 'car_buying', icon: '🚗', title: 'speakThemes.car_buying' },
+			{ id: 'police_control', icon: '🚨', title: 'speakThemes.police_control' },
+			{ id: 'gas_station', icon: '⛽', title: 'speakThemes.gas_station' },
+		]
+	},
+
 ];

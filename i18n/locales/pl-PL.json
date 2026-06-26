@@ -10187,7 +10187,8 @@
     "transport": "Wyjazdy i transport",
     "city": "Usługi miejskie i życie codzienne",
     "health": "Zdrowie",
-    "work": "Praca i kariera"
+    "work": "Praca i kariera",
+    "auto": "Samochód i droga"
   },
   "speakThemes": {
     "firstmeet": "Zapoznanie",
@@ -10229,7 +10230,14 @@
     "bos_talk": "Rozmowa z szefem",
     "vacation": "Urlop",
     "salary_talk": "Wynagrodzenie",
-    "dismissal_talk": "Zwolnienie"
+    "dismissal_talk": "Zwolnienie",
+    "library": "Biblioteka",
+    "refusal_invite": "Odrzucenie zaproszenia",
+    "road_assistance": "Awaria samochodu",
+    "oil_change": "Wymiana oleju",
+    "car_buying": "Zakup samochodu",
+    "police_control": "Przekroczenie prędkości",
+    "gas_station": "Stacja benzynowa"
   },
   "speakIndexPage": {
     "title": "Ćwiczenia konwersacyjne",
@@ -10306,7 +10314,7 @@
   },
   "speakSession": {
     "title": "Praktyka rozmawiania",
-    "words": "Słownictwo do dialogu",
+    "words": "Słowa",
     "wordsText": "Naucz się lub powtórz słówka przed rozpoczęciem rozmowy. To pomoże Ci poczuć się pewniej!",
     "learn": "Rozpocznij",
     "dialogue": "Dialog",
@@ -10388,5 +10396,138 @@
   "installApp": {
     "stayInBrowser": "Kontynuuj w przeglądarce",
     "promoSubTitle": " Z aplikacją Skillupgerman nauka niemieckiego jest o wiele wygodniejsza."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Przechodź dialogi. Słuchaj, wybieraj opcje odpowiedzi i ćwicz wymowę",
+    "words": "Naucz się kluczowych słów i zwrotów, aby z łatwością zrozumieć każdą kwestię w dialogu"
+  },
+  "newsTitleBanner": {
+    "title": "Artykuły o specyfice języka niemieckiego, analizy tematów i przydatna wiedza do podnoszenia poziomu.",
+    "badgeArticle": "W świecie Skillupgerman"
+  },
+  "newsArticleOne": {
+    "first": "Zajadasz stres lub smutek czekoladą? Łap der Kummerspeck.",
+    "second": "To te same dodatkowe kilogramy, które natrętnie pojawiają się z powodu zmartwień. Dosłownie – „bekon smutku”.",
+    "third": "Składa się z der Kummer (smutek) i der Speck (bekon). Zgodnie z oczekiwaniami, ten „bekon” przyjmuje swój rodzaj od rodzajnika ostatniego rzeczownika.",
+    "cta": "Przyznaj się, miałeś kiedyś Kummerspeck?"
+  },
+  "newsArticleTwo": {
+    "first": "Znasz ten święty spokój, kiedy dzień pracy wreszcie dobiega końca? To der Feierabend.",
+    "second": "Dosłownie – „świąteczny wieczór”. Wyjątkowy czas odpoczynku, w którym myślenie o pracy jest wręcz zabronione.",
+    "third": "Składa się z die Feier (święto) i der Abend (wieczór). Rodzaj tego przyjemnego czasu pochodzi od rodzajnika ostatniego rzeczownika — der Abend.",
+    "cta": "Czy w pracy zawsze czekasz na Feierabend?"
+  },
+  "newsArticleThree": {
+    "first": "Język niemiecki to jedyny duży język na świecie, w którym absolutnie wszystkie rzeczowniki pisze się wielką literą, niezależnie od ich miejsca w zdaniu.",
+    "second": "Nieważne, czy mowa o człowieku, psie, zwykłym krześle czy abstrakcyjnej myśli — pierwsza litera zawsze będzie wielka. Początkujących podczas nauki często to dezorientuje.",
+    "third": "Z drugiej strony ta zasada ma ogromny plus: czytając niemiecki tekst, zawsze bezbłędnie i na pierwszy rzut oka możesz określić, gdzie dokładnie w zdaniu ukrył się przedmiot.",
+    "cta": "Wygodna zasada?"
+  },
+  "newsArticleFour": {
+    "first": "Jedną z najbardziej zaskakujących rzeczy podczas nauki niemieckiego jest liczenie. Niemcy wymawiają liczby dwucyfrowe od końca.",
+    "second": "Na przykład liczbę dwadzieścia jeden wymawiają jako 'jeden i dwadzieścia'. Z tego powodu słuchając niemieckiej mowy, trzeba w myślach odwracać cyfry w głowie.",
+    "third": "Ta lingwistyczna sztuczka często burzy schematy początkującym, zwłaszcza gdy trzeba szybko zapisać ze słuchu czyjś numer telefonu lub cenę w sklepie.",
+    "cta": "Szybko przyzwyczaiłeś się do takiego liczenia, czy wciąż się mylisz?"
+  },
+  "newsArticleFive": {
+    "first": "W języku niemieckim istnieje surowa zasada dotycząca szyku wyrazów, która zmusza Cię do wysłuchania rozmówcy do samego ostatniego słowa.",
+    "second": "W określonych typach zdań najważniejszy czasownik, który wyraża czynność, wędruje na sam, samiutki koniec.",
+    "third": "Możesz zbudować długie zdanie, wymienić mnóstwo szczegółów, ale Twój słuchacz nie dowie się, czy kupiłeś, sprzedałeś, popsułeś czy zgubiłeś daną rzecz, dopóki nie wypowiesz finałowego słowa.",
+    "cta": "Czy ciężko jest przestawić swoje myślenie na taki szyk wyrazów?"
+  },
+  "newsArticleSix": {
+    "first": "Podczas nauki niemieckiego prędzej czy później na pewno ogarnie Cię panika na widok długości niektórych słów. Sekret tkwi w tym, że w niemieckim oficjalnie nie ma limitu długości rzeczownika.",
+    "second": "Możesz bez końca sklejać słowa ze sobą, tworząc ogromne pociągi z liter tylko po to, by opisać jeden przedmiot.",
+    "third": "Działa tu jednak kluczowa, ratunkowa zasada: nieważne, jak szaloną długość ma ten potwór, jego ostateczny rodzaj zawsze twardo zależy od rodzajnika ostatniego słowa.",
+    "cta": "Przerażają Cię takie długie słowa-pociągi?"
+  },
+  "newsArticleSeven": {
+    "first": "Czy zdarza Ci się, że przed ważnym wydarzeniem lub snem zaczynasz odtwarzać w głowie fikcyjne scenariusze i całe filmy z wszystkimi szczegółami? Niemcy opisują ten stan jako własne kino w głowie.",
+    "second": "To moment, kiedy Twoja wyobraźnia lub lęk rozkręcają się tak bardzo, że dosłownie zawieszasz się na reżyserowaniu i oglądaniu własnych myśli.",
+    "third": "Słowo to powstało z połączenia der Kopf (głowa) i das Kino (kino). To mentalne kino posłusznie przyjmuje swój ostateczny rodzaj nijaki od rodzajnika ostatniego rzeczownika.",
+    "cta": "Czy przed snem często włącza Ci się takie Kopfkino?"
+  },
+  "newsArticleEight": {
+    "first": "Język niemiecki jest pełen autoironii, gdy mowa o sylwetce. Jeśli przybyło Ci trochę ciałka po bokach, Niemcy nie będą mówić o fałdkach tłuszczu – nazwą to złotem na biodrach.",
+    "second": "Dosłownie wychodzi 'złoto bioder'. To niezwykle delikatny i cenny opis boczków, które zaokrągliły się po pysznych niemieckich kiełbaskach, bułeczkach czy piwie.",
+    "third": "Słowo składa się z die Hüfte (biodro) i das Gold (złoto). Ten zabawny zwrot oczekiwanie przyjmuje swój lśniący rodzaj nijaki od rodzajnika ostatniego rzeczownika.",
+    "cta": "Jak Podoba Ci się taka poetycka nazwa?"
+  },
+  "newsArticleNine": {
+    "first": "Everyone knows what homesickness is, but Germans have a unique word for the exact opposite feeling. It is a longing for distant countries and travel.",
+    "second": "Literally, it translates as 'distance-pain'. This is that exact aching feeling when you are sitting at home and unbearably want to go somewhere you have never been.",
+    "third": "The word is assembled from die Ferne (distance) and das Weh (pain/woe). This romantic longing takes its final neuter gender from the article of the last word.",
+    "cta": "Do you ever experience this kind of Fernweh?"
+  },
+  "newsArticleTen": {
+    "first": "Look at a regular electric light bulb. What shape does it remind you of? Germans saw a glowing fruit in it.",
+    "second": "The literal translation of this word is 'glowing pear'. A very cozy, simple, and warm domestic description for a device we are so used to.",
+    "third": "It comes from the verb glühen (to glow) and the noun die Birne (pear). Our light bulb takes its feminine gender from the article of the last word — die Birne.",
+    "cta": "Does a light bulb look like a pear to you?"
+  },
+  "newsArticleEleven": {
+    "first": "Jak nazwać to ciężkie duchowe cierpienie, gdy Twoja miłość okaże się nieodwzajemniona? Niemcy połączyli te uczucia в jedno pojemne pojęcie.",
+    "second": "Dosłownie tłumaczy się to jako 'smutek miłości'. To bardzo dokładny opis tęsknoty i żalu, które dosłownie złamią serce.",
+    "third": "Słowo to zlepiło się z die Liebe (miłość) i der Kummer (smutek/żal). To złamane serce posłusznie przyjmuje swój rodzaj męski od rodzajnika ostatniego słowa — der Kummer.",
+    "cta": "Znajome uczucie?"
+  },
+  "newsArticleTwelve": {
+    "first": "Spacerujesz po lesie po deszczu i widzisz zwykłego ślimaka bez muszli? Język niemiecki opisuje go w maksymalnie roznegliżowany sposób.",
+    "second": "Dosłowne tłumaczenie tego zabawnego słowa to 'nagi ślimak'. Rzeczywiście, po co wymyślać nową nazwę, skoro to po prostu ślimak, który został bez domku.",
+    "third": "Powstało z przymiotnika nackt (nagi) i rzeczownika die Schnecke (ślimak). Ten leśny mieszkaniec przyjmuje swój rodzaj od rodzajnika ostatniego słowa.",
+    "cta": "Rozbawiła Cię ta nazwa?"
+  },
+  "newsArticleThirteen": {
+    "first": "Jeśli kiedykolwiek uczyłeś się angielskiego, mamy dla Ciebie świetną wiadomość. Już automatycznie znasz część niemieckiego słownictwa, nawet jeśli nigdy celowo się go nie uczyłeś.",
+    "second": "Rzecz w tym, że angielski i niemiecki to bliscy krewni językowi z tej samej grupy germańskiej. Słowa takie jak brat, siostra, woda, zielony czy jabłko pisze się i brzmią niesamowicie podobnie.",
+    "third": "Właśnie dlatego nauka niemieckich słówek mając angielskie podstawy idzie znacznie szybciej — Twój mózg podświadomie rozpoznaje znajome schematy.",
+    "cta": "Zauważyłeś podobieństwo między angielskim a niemieckim?"
+  },
+  "newsArticleFourteen": {
+    "first": "Niemiecka litera eszett, pisana jak wielkie B, to unikalna wizytówka niemieckiego alfabetu. Jednak podczas nauki języka mało kto wie, że nie we wszystkich regionach niemieckojęzycznych jest ona używana.",
+    "second": "W Szwajcarii i Liechtensteinie z tej litery oficjalnie i całkowicie zrezygnowano już w ubiegłym wieku. W szwajcarskich szkołach, gazetach i oficjalnych dokumentach zamiast niej wszędzie pisze się zwykłe podwójne 'ss'.",
+    "third": "Stało się tak z powodu masowego wprowadzania maszyn do pisania, na których układzie Szwajcarom po prostu brakowało miejsca na jednoczesne umieszczenie znaków niemieckich i francuskich. Dlatego czytając szwajcarskie teksty, nie znajdziesz tam tej litery.",
+    "cta": "Wiedziałeś o szwajcarskim sekrecie niemieckiego alfabetu?"
+  },
+  "newsArticleFifteen": {
+    "first": "W języku niemieckim istnieją niesamowite czasowniki-kameleony, które pisze się absolutnie tak samo, ale ich znaczenie zmienia się diametralnie w zależności od akcentu. Ten fakt często szokuje początkujących.",
+    "second": "Doskonałym przykładem jest czasownik umfahren. Jeśli postawisz akcent na pierwszą część słowa, oznacza to potrącić, najechać lub przejechać przeszkodę. Wystarczy jednak przenieść akcent na drugą część, aby słowo natychmiast zmieniło sens na przeciwny — ominąć lub objechać przeszkodę.",
+    "third": "Właśnie dlatego podczas nauki takich czasowników kluczowe jest słuchanie, gdzie pada akcent. W przeciwnym razie na lekcji jazdy w Niemczech można przypadkowo przerazić swojego instruktora.",
+    "cta": "Wiedziałeś o takich podstępnych czasownikach o podwójnym znaczeniu?"
+  },
+  "newsArticleSixteen": {
+    "first": "Kiedy obcokrajowcy czegoś nie rozumieją, zazwyczaj mówią, że to dla nich 'chińszczyzna'. U Niemców w takiej sytuacji włącza się czysto kolejowa logika.",
+    "second": "Jeśli Niemiec absolutnie nie rozumie rozmówcy lub nie chce go słuchać, powie: 'Ich verstehe nur Bahnhof' (Rozumiem tylko dworzec).",
+    "third": "Z czasem to zdanie przekształciło się w popularny idiom. Teraz, jeśli ktoś tłumaczy Ci drogę w zbyt zagmatwany sposób lub zarzuca Cię skomplikowanym tematem, możesz śmiało użyć tego wyrażenia.",
+    "cta": "Słyszałeś już to zabawne powiedzenie o dworcu?"
+  },
+  "newsArticleSeventeen": {
+    "first": "Nauka rodzajników der, die, das to odwieczny koszmar każdego, kto uczy się niemieckiego. Nie martw się jednak — czasem nawet sami rodowici Niemcy nie są pewni właściwego wyboru.",
+    "second": "Prawdziwa i niekończąca się wojna lingwistyczna w Niemczech rozwija się każdego ranka przy śniadaniu wokół słynnego kremu czekoladowego Nutella. Niemcy od dziesięcioleci kłócą się, jakiego jest rodzaju.",
+    "third": "Jedni mówią die, bo to pasta/krem, inni uważają, że das, ponieważ to rodzaj nijaki dla zagranicznych nazw produktów. Spór zaszedł tak daleko, że nawet oficjalny słownik Duden poddał się i uznał, że Nutella w ogóle nie ma przypisanego stałego rodzajnika i można używać każdej wersji.",
+    "cta": "A Ty jaki rodzajnik dałbyś Nutelli?"
+  },
+  "newsArticleEighteen": {
+    "first": "Jeśli ktoś uporczywie nie zauważa oczywistych rzeczy dziejących się tuż pod jego nosem, Niemcy nie powiedzą, że jest nieuważny. Znajdą na jego twarzy warzywa.",
+    "second": "Dosłowne tłumaczenie tego kultowego idiomu to 'mieć pomidory na oczach'. Tak mówi się o kierowcy, który nie widzi czerwonego światła, lub o przyjacielu, który zupełnie nie dostrzega Twoich wskazówek.",
+    "third": "Korzenie tego sformułowania sięgają dawnych sądów, gdzie winnych zmuszano do noszenia opasek na znak hańby, a czasem przywiązywano im do oczu prawdziwe warzywa. Dziś to po prostu zabawny sposób, by powiedzieć komuś, że czas przejrzeć na oczy.",
+    "cta": "Słyszałeś już to powiedzenie o pomidorach?"
+  },
+  "newsArticleNineteen": {
+    "first": "Podręczniki do niemieckiego uczą nas witać się w zależności od pory dnia: dzień dobry rano, po południu czy wieczorem. Jednak na północy Niemiec po prostu się z tego systemu śmieją.",
+    "second": "Tam wszyscy jak jeden mąż używają jednego kultowego słowa: Moin. Co najciekawsze, można je mówić absolutnie zawsze: o ósmej rano do szefa, o trzeciej po południu do sprzedawcy czy w środku nocy do znajomych w barze. Oznacza ono po prostu 'cześć'.",
+    "third": "Bądź jednak ostrożny: jeśli postanowisz wzmocnić powitanie i powiesz 'Moin Moin', lokalni mieszkańcy od razu uznają Cię za strasznego gadułę. Na północy ceni się zwięzłość, więc jedno słowo w zupełności wystarczy.",
+    "cta": "Słyszałeś już takie powitanie od mieszkańców Niemiec?"
+  },
+  "newsTitle": {
+    "article_3": "Wszystkie rzeczowniki wielką literą!",
+    "article_4": "Liczby od końca!",
+    "article_5": "Czasownik na samym końcu zdania!",
+    "article_6": "Nieskończone słowa!",
+    "article_13": "Znasz już wiele niemieckich słów!",
+    "article_14": "Litera, którą stracił cały kraj!",
+    "article_15": "Jedno słowo - dwa przeciwstawne znaczenia!",
+    "article_17": "Bitwa o rodzajnik Nutelli!",
+    "article_19": "Uniwersalne Moin!"
   }
 }

@@ -125,7 +125,8 @@ import {useAudioTaskStore} from '../../store/audioTaskStore.js'
 import AudioButton from '../../src/components/AudioBtn.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
-import { useSwipeBack } from '~/composables/useSwipeBack.js'
+import {useSwipeBack} from '~/composables/useSwipeBack.js'
+import {showInterstitial} from '../../utils/admob.js'
 
 const {t} = useI18n()
 const router = useRouter()
@@ -139,7 +140,7 @@ const userSelections = ref({})
 const taskResults = ref({})
 const activeModal = ref(null)
 const sessionStats = ref({correct: 0, partial: 0, wrong: 0, passed: false})
-const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipeBack(() => {
+const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   handleExitTrigger()
 }, {
   ignoreSelector: '.chat-flow, .quest-option-button, .quiz-btn, .quest-option'
@@ -307,7 +308,10 @@ onMounted(async () => {
   if (!currentTopicId.value) return router.push('/audio-tasks')
   await store.fetchTasks();
   await store.loadUserProgress();
-  initializeSession()
+
+  showInterstitial(() => {
+    initializeSession();
+  });
 })
 onUnmounted(stopAllAudio)
 watch(currentIndex, stopAllAudio)

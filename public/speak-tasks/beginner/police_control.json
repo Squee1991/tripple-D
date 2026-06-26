@@ -1,0 +1,532 @@
+{
+  "start": {
+    "botText": "Guten Tag! Wissen Sie, warum ich Sie angehalten habe?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Вы знаете, почему я Вас остановил?",
+      "en-US": "Good day! Do you know why I stopped you?",
+      "ar-SA": "طاب يومك! هل تعرف لماذا أوقفتك؟",
+      "es-ES": "¡Buenos días! ¿Sabe por qué le he detenido?",
+      "fr-FR": "Bonjour ! Savez-vous pourquoi je vous ai arrêté ?",
+      "hi-IN": "शुभ दोपहर! क्या आप जानते हैं कि मैंने आपको क्यों रोका?",
+      "pl-PL": "Dzień dobry! Czy wie Pan, dlaczego Pana zatrzymałem?",
+      "ro-RO": "Bună ziua! Știți de ce v-am oprit?",
+      "tr-TR": "İyi günler! Sizi neden durdurduğumu biliyor musunuz?",
+      "uk-UA": "Добрий день! Ви знаєте, чому я Вас зупинив?",
+      "uz-UZ": "Xayrli kun! Sizni nega to'xtatganimni bilasizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Tempolimit",
+        "translation": {
+          "ru-RU": "ограничение скорости",
+          "en-US": "speed limit",
+          "ar-SA": "حد السرعة",
+          "es-ES": "límite de velocidad",
+          "fr-FR": "limite de vitesse",
+          "hi-IN": "गति सीमा",
+          "pl-PL": "ograniczenie prędkości",
+          "ro-RO": "limită de viteză",
+          "tr-TR": "hız sınırı",
+          "uk-UA": "обмеження швидкості",
+          "uz-UZ": "tezlik cheklovi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag! Nein, das weiß ich leider nicht.",
+        "translation": {
+          "ru-RU": "Добрый день! Нет, к сожалению, я не знаю.",
+          "en-US": "Good day! No, unfortunately I don't know.",
+          "ar-SA": "طاب يومك! لا، للأسف لا أعرف.",
+          "es-ES": "¡Buenos días! No, lamentablemente no lo sé.",
+          "fr-FR": "Bonjour ! Non, je ne sais malheureusement pas.",
+          "hi-IN": "शुभ दोपहर! नहीं, दुर्भाग्य से मुझे नहीं पता।",
+          "pl-PL": "Dzień dobry! Nie, niestety nie wiem.",
+          "ro-RO": "Bună ziua! Nu, din păcate nu știu.",
+          "tr-TR": "İyi günler! Hayır, maalesef bilmiyorum.",
+          "uk-UA": "Добрий день! Ні, на жаль, я не знаю.",
+          "uz-UZ": "Xayrli kun! Yo'q, afsuski bilmayman."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo! Nein, habe ich einen Fehler gemacht?",
+        "translation": {
+          "ru-RU": "Здравствуйте! Нет, я совершил ошибку?",
+          "en-US": "Hello! No, did I make a mistake?",
+          "ar-SA": "مرحباً! لا، هل ارتكبت خطأ؟",
+          "es-ES": "¡Hola! No, ¿he cometido un error?",
+          "fr-FR": "Bonjour ! Non, ai-je fait une erreur ?",
+          "hi-IN": "नमस्ते! नहीं, क्या मैंने कोई गलती की है?",
+          "pl-PL": "Dzień dobry! Nie, czy popełniłem błąd?",
+          "ro-RO": "Salut! Nu, am făcut o greșeală?",
+          "tr-TR": "Merhaba! Hayır, bir hata mı yaptım?",
+          "uk-UA": "Добрий день! Ні, я зробив помилку?",
+          "uz-UZ": "Salom! Yo'q, xato qildimmi?"
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Sie sind zu schnell gefahren. Hier ist das Tempolimit 50, Sie sind 60 gefahren.",
+    "botTranslation": {
+      "ru-RU": "Вы ехали слишком быстро. Здесь ограничение скорости 50, Вы ехали 60.",
+      "en-US": "You were driving too fast. The speed limit here is 50, you were driving 60.",
+      "ar-SA": "كنت تقود بسرعة كبيرة. حد السرعة هنا هو 50، وأنت كنت تقود بسرعة 60.",
+      "es-ES": "Conducía demasiado rápido. El límite de velocidad aquí es 50, usted iba a 60.",
+      "fr-FR": "Vous rouliez trop vite. La limitation de vitesse ici est de 50, vous rouliez à 60.",
+      "hi-IN": "आप बहुत तेज़ गाड़ी चला रहे थे। यहाँ गति सीमा 50 है, आप 60 की गति से गाड़ी चला रहे थे।",
+      "pl-PL": "Jechał Pan za szybko. Tutaj ograniczenie prędkości wynosi 50, a jechał Pan 60.",
+      "ro-RO": "Ați condus prea repede. Limita de viteză aici este de 50, ați condus cu 60.",
+      "tr-TR": "Çok hızlı sürüyordunuz. Burada hız sınırı 50, siz 60 ile gidiyordunuz.",
+      "uk-UA": "Ви їхали занадто швидко. Тут обмеження швидкості 50, Ви їхали 60.",
+      "uz-UZ": "Juda tez haydayapsiz. Bu yerda tezlik cheklovi 50, siz 60 bilan ketayapsiz."
+    },
+    "vocabulary": [
+      {
+        "german": "der Tacho",
+        "translation": {
+          "ru-RU": "спидометр",
+          "en-US": "speedometer",
+          "ar-SA": "عداد السرعة",
+          "es-ES": "velocímetro",
+          "fr-FR": "compteur de vitesse",
+          "hi-IN": "स्पीडोमीटर",
+          "pl-PL": "prędkościomierz",
+          "ro-RO": "vitezometru",
+          "tr-TR": "hız göstergesi",
+          "uk-UA": "спідометр",
+          "uz-UZ": "tezlik o'lchagich"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Oh, das tut mir leid. Ich habe nicht auf den Tacho geschaut.",
+        "translation": {
+          "ru-RU": "О, мне очень жаль. Я не смотрел на спидометр.",
+          "en-US": "Oh, I'm sorry. I didn't look at the speedometer.",
+          "ar-SA": "أوه، أنا آسف. لم أنظر إلى عداد السرعة.",
+          "es-ES": "Oh, lo siento. No he mirado el velocímetro.",
+          "fr-FR": "Oh, je suis désolé. Je n'ai pas regardé le compteur.",
+          "hi-IN": "ओह, मुझे खेद है। मैंने स्पीडोमीटर नहीं देखा।",
+          "pl-PL": "Och, przepraszam. Nie spojrzałem na prędkościomierz.",
+          "ro-RO": "Oh, îmi pare rău. Nu m-am uitat la vitezometru.",
+          "tr-TR": "Ah, üzgünüm. Hız göstergesine bakmadım.",
+          "uk-UA": "О, мені дуже шкода. Я не дивився на спідометр.",
+          "uz-UZ": "Oh, uzr so'rayman. Tezlik o'lchagichga qaramabman."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Entschuldigung, das war keine Absicht.",
+        "translation": {
+          "ru-RU": "Простите, это было не специально.",
+          "en-US": "Sorry, that was not intentional.",
+          "ar-SA": "عذراً، لم يكن ذلك متعمداً.",
+          "es-ES": "Disculpe, no ha sido mi intención.",
+          "fr-FR": "Pardon, ce n'était pas intentionnel.",
+          "hi-IN": "क्षमा करें, यह जानबूझकर नहीं था।",
+          "pl-PL": "Przepraszam, to nie było celowe.",
+          "ro-RO": "Scuze, nu a fost intenționat.",
+          "tr-TR": "Özür dilerim, bu kasıtlı değildi.",
+          "uk-UA": "Вибачте, це було не навмисно.",
+          "uz-UZ": "Uzr, bu ataylab qilinmadi."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Das kostet 50 Euro. Bitte zeigen Sie mir Ihren Führerschein und Fahrzeugschein.",
+    "botTranslation": {
+      "ru-RU": "Это стоит 50 евро. Пожалуйста, покажите Ваши водительские права и техпаспорт.",
+      "en-US": "That costs 50 euros. Please show me your driver's license and vehicle registration.",
+      "ar-SA": "هذا يكلف 50 يورو. يرجى إظهار رخصة قيادتك ورخصة المركبة.",
+      "es-ES": "Cuesta 50 euros. Por favor, enséñeme su permiso de conducir y el permiso de circulación.",
+      "fr-FR": "Cela coûte 50 euros. Veuillez me montrer votre permis de conduire et votre carte grise.",
+      "hi-IN": "इसकी कीमत 50 यूरो है। कृपया मुझे अपना ड्राइविंग लाइसेंस और वाहन पंजीकरण दिखाएं।",
+      "pl-PL": "Kosztuje to 50 euro. Proszę pokazać mi prawo jazdy i dowód rejestracyjny.",
+      "ro-RO": "Costă 50 de euro. Vă rog să-mi arătați permisul de conducere și certificatul de înmatriculare.",
+      "tr-TR": "Bunun maliyeti 50 Euro. Lütfen ehliyetinizi ve araç ruhsatınızı gösterin.",
+      "uk-UA": "Це коштує 50 євро. Будь ласка, покажіть Ваші водійські права та техпаспорт.",
+      "uz-UZ": "Bu 50 yevro turadi. Iltimos, haydovchilik guvohnomangiz va texnik pasportingizni ko'rsating."
+    },
+    "vocabulary": [
+      {
+        "german": "der Führerschein",
+        "translation": {
+          "ru-RU": "водительские права",
+          "en-US": "driver's license",
+          "ar-SA": "رخصة القيادة",
+          "es-ES": "permiso de conducir",
+          "fr-FR": "permis de conduire",
+          "hi-IN": "ड्राइविंग लाइसेंस",
+          "pl-PL": "prawo jazdy",
+          "ro-RO": "permis de conducere",
+          "tr-TR": "ehliyet",
+          "uk-UA": "водійські права",
+          "uz-UZ": "haydovchilik guvohnomasi"
+        }
+      },
+      {
+        "german": "der Fahrzeugschein",
+        "translation": {
+          "ru-RU": "техпаспорт",
+          "en-US": "vehicle registration",
+          "ar-SA": "رخصة المركبة",
+          "es-ES": "permiso de circulación",
+          "fr-FR": "carte grise",
+          "hi-IN": "वाहन पंजीकरण",
+          "pl-PL": "dowód rejestracyjny",
+          "ro-RO": "certificat de înmatriculare",
+          "tr-TR": "araç ruhsatı",
+          "uk-UA": "техпаспорт",
+          "uz-UZ": "texnik pasport"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Selbstverständlich, hier sind meine Dokumente.",
+        "translation": {
+          "ru-RU": "Разумеется, вот мои документы.",
+          "en-US": "Of course, here are my documents.",
+          "ar-SA": "بالطبع، ها هي مستنداتي.",
+          "es-ES": "Por supuesto, aquí están mis documentos.",
+          "fr-FR": "Bien sûr, voici mes documents.",
+          "hi-IN": "बेशक, ये रहे मेरे दस्तावेज़।",
+          "pl-PL": "Oczywiście, oto moje dokumenty.",
+          "ro-RO": "Desigur, iată documentele mele.",
+          "tr-TR": "Elbette, işte belgelerim.",
+          "uk-UA": "Звісно, ось мої документи.",
+          "uz-UZ": "Albatta, mana mening hujjatlarim."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Natürlich, einen Moment bitte, hier sind sie.",
+        "translation": {
+          "ru-RU": "Конечно, минуточку, пожалуйста, вот они.",
+          "en-US": "Of course, one moment please, here they are.",
+          "ar-SA": "بالطبع، لحظة من فضلك، ها هي.",
+          "es-ES": "Por supuesto, un momento por favor, aquí están.",
+          "fr-FR": "Bien sûr, un instant s'il vous plaît, les voici.",
+          "hi-IN": "बेशक, एक पल कृपया, ये रहे।",
+          "pl-PL": "Oczywiście, chwileczkę, proszę, oto one.",
+          "ro-RO": "Desigur, o secundă vă rog, iată-le.",
+          "tr-TR": "Elbette, bir saniye lütfen, işte buradalar.",
+          "uk-UA": "Звісно, хвилинку, будь ласка, ось вони.",
+          "uz-UZ": "Albatta, bir daqiqa, marhamat, mana ular."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Danke. Haben Sie das Geld dabei oder möchten Sie überweisen?",
+    "botTranslation": {
+      "ru-RU": "Спасибо. У Вас есть деньги с собой или хотите перевести?",
+      "en-US": "Thank you. Do you have the money with you or would you like to transfer it?",
+      "ar-SA": "شكراً. هل معك المال أم تود التحويل؟",
+      "es-ES": "Gracias. ¿Tiene el dinero consigo o prefiere hacer una transferencia?",
+      "fr-FR": "Merci. Avez-vous l'argent sur vous ou souhaitez-vous faire un virement ?",
+      "hi-IN": "धन्यवाद। क्या आपके पास पैसे हैं या आप ट्रांसफर करना चाहेंगे?",
+      "pl-PL": "Dziękuję. Czy ma Pan pieniądze przy sobie, czy chce Pan zrobić przelew?",
+      "ro-RO": "Mulțumesc. Aveți banii la dumneavoastră sau doriți să faceți un transfer?",
+      "tr-TR": "Teşekkürler. Yanınızda nakit var mı yoksa havale mi yapmak istersiniz?",
+      "uk-UA": "Дякую. У Вас є гроші з собою чи хочете переказати?",
+      "uz-UZ": "Rahmat. Pulingiz bormi yoki o'tkazma qilmoqchimisiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Bußgeld",
+        "translation": {
+          "ru-RU": "штраф",
+          "en-US": "fine",
+          "ar-SA": "غرامة",
+          "es-ES": "multa",
+          "fr-FR": "amende",
+          "hi-IN": "जुर्माना",
+          "pl-PL": "mandat",
+          "ro-RO": "amendă",
+          "tr-TR": "ceza",
+          "uk-UA": "штраф",
+          "uz-UZ": "jarima"
+        }
+      },
+      {
+        "german": "bar",
+        "translation": {
+          "ru-RU": "наличными",
+          "en-US": "cash",
+          "ar-SA": "نقداً",
+          "es-ES": "en efectivo",
+          "fr-FR": "en espèces",
+          "hi-IN": "नकद",
+          "pl-PL": "gotówką",
+          "ro-RO": "numerar",
+          "tr-TR": "nakit",
+          "uk-UA": "готівкою",
+          "uz-UZ": "naqd"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Kann ich das Bußgeld direkt hier mit Karte bezahlen?",
+        "translation": {
+          "ru-RU": "Могу ли я оплатить штраф прямо здесь картой?",
+          "en-US": "Can I pay the fine directly here by card?",
+          "ar-SA": "هل يمكنني دفع الغرامة مباشرة هنا بالبطاقة؟",
+          "es-ES": "¿Puedo pagar la multa directamente aquí con tarjeta?",
+          "fr-FR": "Puis-je payer l'amende directement ici par carte ?",
+          "hi-IN": "क्या मैं जुर्माना सीधे यहाँ कार्ड से भर सकता हूँ?",
+          "pl-PL": "Czy mogę zapłacić mandat bezpośrednio tutaj kartą?",
+          "ro-RO": "Pot plăti amenda direct aici cu cardul?",
+          "tr-TR": "Cezayı doğrudan buradan kartla ödeyebilir miyim?",
+          "uk-UA": "Чи можу я оплатити штраф прямо тут карткою?",
+          "uz-UZ": "Jarimani to'g'ridan-to'g'ri shu yerda karta bilan to'lay olamanmi?"
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Kann ich den Betrag sofort bar bezahlen?",
+        "translation": {
+          "ru-RU": "Могу ли я оплатить сумму сразу наличными?",
+          "en-US": "Can I pay the amount in cash immediately?",
+          "ar-SA": "هل يمكنني دفع المبلغ نقداً على الفور؟",
+          "es-ES": "¿Puedo pagar el importe inmediatamente en efectivo?",
+          "fr-FR": "Puis-je payer le montant immédiatement en espèces ?",
+          "hi-IN": "क्या मैं राशि का भुगतान तुरंत नकद में कर सकता हूँ?",
+          "pl-PL": "Czy mogę zapłacić kwotę od razu gotówką?",
+          "ro-RO": "Pot plăti suma imediat în numerar?",
+          "tr-TR": "Tutarı hemen nakit ödeyebilir miyim?",
+          "uk-UA": "Чи можу я оплатити суму відразу готівкою?",
+          "uz-UZ": "Summani darhol naqd to'lay olamanmi?"
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Mit Karte ist möglich. Bitte stecken Sie die Karte in das Gerät.",
+    "botTranslation": {
+      "ru-RU": "Картой можно. Пожалуйста, вставьте карту в терминал.",
+      "en-US": "By card is possible. Please insert the card into the device.",
+      "ar-SA": "بالبطاقة ممكن. يرجى إدخال البطاقة في الجهاز.",
+      "es-ES": "Con tarjeta es posible. Por favor, inserte la tarjeta en el dispositivo.",
+      "fr-FR": "Par carte, c'est possible. Veuillez insérer la carte dans l'appareil.",
+      "hi-IN": "कार्ड से भुगतान संभव है। कृपया कार्ड को डिवाइस में डालें।",
+      "pl-PL": "Kartą jest możliwe. Proszę włożyć kartę do urządzenia.",
+      "ro-RO": "Cu cardul este posibil. Vă rog să introduceți cardul în dispozitiv.",
+      "tr-TR": "Kartla ödeme mümkün. Lütfen kartı cihaza takın.",
+      "uk-UA": "Карткою можливо. Будь ласка, вставте картку в пристрій.",
+      "uz-UZ": "Karta bilan to'lash mumkin. Iltimos, kartani qurilmaga soling."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Okay, ich mache das sofort.",
+        "translation": {
+          "ru-RU": "Хорошо, я сделаю это немедленно.",
+          "en-US": "Okay, I'll do that immediately.",
+          "ar-SA": "حسناً، سأفعل ذلك فوراً.",
+          "es-ES": "Vale, lo haré de inmediato.",
+          "fr-FR": "Ok, je fais ça tout de suite.",
+          "hi-IN": "ठीक है, मैं यह तुरंत करता हूँ।",
+          "pl-PL": "Okej, zrobię to natychmiast.",
+          "ro-RO": "Ok, fac asta imediat.",
+          "tr-TR": "Tamam, hemen yapıyorum.",
+          "uk-UA": "Окей, я зроблю це негайно.",
+          "uz-UZ": "Xo'p, buni darhol qilaman."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Alles klar, hier ist die Karte.",
+        "translation": {
+          "ru-RU": "Все ясно, вот карта.",
+          "en-US": "All right, here is the card.",
+          "ar-SA": "حسناً، ها هي البطاقة.",
+          "es-ES": "De acuerdo, aquí tiene la tarjeta.",
+          "fr-FR": "C'est d'accord, voici la carte.",
+          "hi-IN": "ठीक है, कार्ड यह रहा।",
+          "pl-PL": "Wszystko jasne, oto karta.",
+          "ro-RO": "În regulă, iată cardul.",
+          "tr-TR": "Tamam, işte kart.",
+          "uk-UA": "Усе ясно, ось картка.",
+          "uz-UZ": "Tushunarli, mana karta."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Danke. Hier ist Ihre Quittung. Bitte fahren Sie in Zukunft vorsichtiger.",
+    "botTranslation": {
+      "ru-RU": "Спасибо. Вот Ваша квитанция. Пожалуйста, ездите в будущем осторожнее.",
+      "en-US": "Thank you. Here is your receipt. Please drive more carefully in the future.",
+      "ar-SA": "شكراً. ها هو إيصالك. يرجى القيادة بحذر أكبر في المستقبل.",
+      "es-ES": "Gracias. Aquí tiene su recibo. Por favor, conduzca con más cuidado en el futuro.",
+      "fr-FR": "Merci. Voici votre reçu. Veuillez conduire plus prudemment à l'avenir.",
+      "hi-IN": "धन्यवाद। यहाँ आपकी रसीद है। कृपया भविष्य में अधिक सावधानी से गाड़ी चलाएं।",
+      "pl-PL": "Dziękuję. Oto Pana pokwitowanie. Proszę w przyszłości jeździć ostrożniej.",
+      "ro-RO": "Mulțumesc. Iată chitanța dumneavoastră. Vă rugăm să conduceți mai prudent în viitor.",
+      "tr-TR": "Teşekkürler. İşte makbuzunuz. Lütfen gelecekte daha dikkatli sürün.",
+      "uk-UA": "Дякую. Ось Ваша квитанція. Будь ласка, їздіть у майбутньому обережніше.",
+      "uz-UZ": "Rahmat. Mana chekingiz. Iltimos, kelajakda ehtiyotkorroq haydang."
+    },
+    "vocabulary": [
+      {
+        "german": "die Quittung",
+        "translation": {
+          "ru-RU": "квитанция",
+          "en-US": "receipt",
+          "ar-SA": "إيصال",
+          "es-ES": "recibo",
+          "fr-FR": "reçu",
+          "hi-IN": "रसीद",
+          "pl-PL": "pokwitowanie",
+          "ro-RO": "chitanță",
+          "tr-TR": "makbuz",
+          "uk-UA": "квитанція",
+          "uz-UZ": "chek"
+        }
+      },
+      {
+        "german": "vorsichtig",
+        "translation": {
+          "ru-RU": "осторожно",
+          "en-US": "carefully",
+          "ar-SA": "بحذر",
+          "es-ES": "con cuidado",
+          "fr-FR": "prudemment",
+          "hi-IN": "सावधानी से",
+          "pl-PL": "ostrożnie",
+          "ro-RO": "prudent",
+          "tr-TR": "dikkatli",
+          "uk-UA": "обережно",
+          "uz-UZ": "ehtiyotkorlik bilan"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, das werde ich. Vielen Dank für den Hinweis.",
+        "translation": {
+          "ru-RU": "Да, я буду. Спасибо за предупреждение.",
+          "en-US": "Yes, I will. Thank you for the advice.",
+          "ar-SA": "نعم، سأفعل ذلك. شكراً على النصيحة.",
+          "es-ES": "Sí, lo haré. Gracias por el aviso.",
+          "fr-FR": "Oui, je le ferai. Merci pour l'avertissement.",
+          "hi-IN": "हाँ, मैं करूँगा। सलाह के लिए धन्यवाद।",
+          "pl-PL": "Tak, będę. Dziękuję za uwagę.",
+          "ro-RO": "Da, voi face asta. Mulțumesc pentru avertisment.",
+          "tr-TR": "Evet, yapacağım. Uyarı için teşekkürler.",
+          "uk-UA": "Так, я буду. Дякую за попередження.",
+          "uz-UZ": "Ha, albatta. Eslatma uchun rahmat."
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Vielen Dank, ich werde ab jetzt mehr auf die Schilder achten.",
+        "translation": {
+          "ru-RU": "Большое спасибо, теперь я буду больше обращать внимание на знаки.",
+          "en-US": "Thank you very much, I will pay more attention to the signs from now on.",
+          "ar-SA": "شكراً جزيلاً، سأولي اهتماماً أكبر للعلامات من الآن فصاعداً.",
+          "es-ES": "Muchas gracias, de ahora en adelante prestaré más atención a las señales.",
+          "fr-FR": "Merci beaucoup, je ferai plus attention aux panneaux désormais.",
+          "hi-IN": "बहुत-बहुत धन्यवाद, अब से मैं संकेतों पर अधिक ध्यान दूँगा।",
+          "pl-PL": "Bardzo dziękuję, od teraz będę bardziej zwracać uwagę na znaki.",
+          "ro-RO": "Vă mulțumesc mult, de acum încolo voi acorda mai multă atenție semnelor.",
+          "tr-TR": "Çok teşekkür ederim, bundan sonra tabelalara daha fazla dikkat edeceğim.",
+          "uk-UA": "Дуже дякую, тепер я буду більше звертати увагу на знаки.",
+          "uz-UZ": "Katta rahmat, bundan buyon belgilarga ko'proq e'tibor beraman."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Schönen Tag noch. Auf Wiedersehen.",
+    "botTranslation": {
+      "ru-RU": "Хорошего дня. До свидания.",
+      "en-US": "Have a nice day. Goodbye.",
+      "ar-SA": "يوم سعيد. وداعاً.",
+      "es-ES": "Que tenga un buen día. Adiós.",
+      "fr-FR": "Bonne journée. Au revoir.",
+      "hi-IN": "आपका दिन शुभ हो। अलविदा।",
+      "pl-PL": "Miłego dnia. Do widzenia.",
+      "ro-RO": "O zi bună. La revedere.",
+      "tr-TR": "İyi günler. Güle güle.",
+      "uk-UA": "Гарного дня. До побачення.",
+      "uz-UZ": "Xayrli kun. Xayr."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Danke, Ihnen auch einen schönen Tag. Auf Wiedersehen.",
+        "translation": {
+          "ru-RU": "Спасибо, Вам тоже хорошего дня. До свидания.",
+          "en-US": "Thanks, have a nice day too. Goodbye.",
+          "ar-SA": "شكراً، أتمنى لك يوماً سعيداً أيضاً. وداعاً.",
+          "es-ES": "Gracias, igualmente que tenga un buen día. Adiós.",
+          "fr-FR": "Merci, bonne journée à vous aussi. Au revoir.",
+          "hi-IN": "धन्यवाद, आपका भी दिन शुभ हो। अलविदा।",
+          "pl-PL": "Dziękuję, nawzajem miłego dnia. Do widzenia.",
+          "ro-RO": "Mulțumesc, o zi bună și dumneavoastră. La revedere.",
+          "tr-TR": "Teşekkürler, size de iyi günler. Güle güle.",
+          "uk-UA": "Дякую, Вам теж гарного дня. До побачення.",
+          "uz-UZ": "Rahmat, sizga ham xayrli kun. Xayr."
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Auf Wiedersehen!",
+        "translation": {
+          "ru-RU": "До свидания!",
+          "en-US": "Goodbye!",
+          "ar-SA": "وداعاً!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Do widzenia!",
+          "ro-RO": "La revedere!",
+          "tr-TR": "Güle güle!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор окончен.",
+      "en-US": "The conversation is over.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत खत्म हो गई है.",
+      "pl-PL": "Rozmowa zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмова закінчена.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

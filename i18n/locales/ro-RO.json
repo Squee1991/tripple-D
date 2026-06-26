@@ -10171,7 +10171,8 @@
     "transport": "Călătorii și transport",
     "city": "Servicii urbane și viața cotidiană",
     "health": "Sănătate",
-    "work": "Muncă și carieră"
+    "work": "Muncă și carieră",
+    "auto": "Mașina și drumul"
   },
   "speakThemes": {
     "firstmeet": "Prezentare",
@@ -10213,7 +10214,14 @@
     "bos_talk": "Discuție cu șeful",
     "vacation": "Vacanță",
     "salary_talk": "Salariu",
-    "dismissal_talk": "Concediere"
+    "dismissal_talk": "Concediere",
+    "library": "Bibliotecă",
+    "refusal_invite": "Refuzarea unei invitații",
+    "road_assistance": "Pană de mașină",
+    "oil_change": "Schimb de ulei",
+    "car_buying": "Cumpărarea unei mașini",
+    "police_control": "Depășirea vitezei",
+    "gas_station": "Benzinărie"
   },
   "speakIndexPage": {
     "title": "Practică de vorbire",
@@ -10290,7 +10298,7 @@
   },
   "speakSession": {
     "title": "Practică de vorbire",
-    "words": "Cuvinte pentru dialog",
+    "words": "Cuvinte",
     "wordsText": "Învață sau repetă cuvintele înainte de a începe conversația. Acest lucru te va ajuta să ai mai multă încredere!",
     "learn": "Începe",
     "dialogue": "Dialog",
@@ -10372,5 +10380,138 @@
   "installApp": {
     "stayInBrowser": "Continuă în browser",
     "promoSubTitle": " Cu aplicația Skillupgerman, învățarea limbii germane este mult mai practică."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Parcurge dialogurile. Ascultă, alege opțiunile de răspuns și exersează pronunția",
+    "words": "Învață cuvintele și expresiile cheie pentru a înțelege cu ușurință fiecare replică din dialog"
+  },
+  "newsTitleBanner": {
+    "title": "Articole despre particularitățile limbii germane, analize de teme și cunoștințe utile pentru a-ți îmbunătăți nivelul.",
+    "badgeArticle": "În lumea Skillupgerman"
+  },
+  "newsArticleOne": {
+    "first": "Mănânci ciocolată când ești stresat sau trist? Îți prezint der Kummerspeck.",
+    "second": "Sunt exact acele kilograme în plus care apar cu încăpățânare din cauza grijilor. Literalmente - 'baconul suferinței'.",
+    "third": "Este compus din der Kummer (suferință) și der Speck (bacon). Așa cum era de așteptat, acest 'bacon' își ia genul de la articolul ultimului substantiv.",
+    "cta": "Recunoaște, ai avut vreodată Kummerspeck?"
+  },
+  "newsArticleTwo": {
+    "first": "Știi acea relaxare sacră când ziua de muncă s-a terminat în sfârșit? Aceasta este der Feierabend.",
+    "second": "Literalmente - 'seara de sărbătoare'. Un moment special de odihnă în care este interzis chiar și să te gândești la muncă.",
+    "third": "Este compus din die Feier (sărbătoare) și der Abend (seară). Genul acestui moment plăcut provine de la articolul ultimului substantiv — der Abend.",
+    "cta": "Aștepți mereu Feierabend când ești la muncă?"
+  },
+  "newsArticleThree": {
+    "first": "Limba germană este singura limbă majoră din lume în care absolut toate substantivele se scriu cu majusculă, indiferent de locul lor în propoziție.",
+    "second": "Nu contează dacă este vorba despre o persoană, un câine, un scaun obișnuit sau un gând abstract — prima literă va fi întotdeauna majusculă. Acest lucru îi induce adesea în eroare pe începători atunci când învață.",
+    "third": "Totuși, această regulă are un mare avantaj: citind un text în germană, poți identifica întotdeauna fără greșeală și de la prima vedere unde anume în propoziție s-a ascuns obiectul.",
+    "cta": "O regulă utilă?"
+  },
+  "newsArticleFour": {
+    "first": "Unul dintre cele mai uimitoare lucruri când înveți germana este numărătoarea. Germanii pronunță numerele din două cifre de la sfârșit.",
+    "second": "De exemplu, numărul douăzeci și unu îl spun ca 'unu și douăzeci'. Din această cauză, când asculți limba germană vorbită, trebuie să inversezi mental cifrele în minte.",
+    "third": "Acest truc lingvistic le dă adesea bătăi de cap începătorilor, mai ales atunci când trebuie să noteze rapid, după auz, numărul de telefon al cuiva sau un preț dintr-un magazin.",
+    "cta": "Te-ai obișnuit repede cu acest mod de numărare sau încă te mai încurci?"
+  },
+  "newsArticleFive": {
+    "first": "În limba germană există o regulă strictă privind ordinea cuvintelor, care te obligă să îți asculți interlocutorul până la ultimul cuvânt.",
+    "second": "În anumite tipuri de propoziții, cel mai important verb, cel care exprimă acțiunea, zboară la cel mai îndepărtat sfârșit.",
+    "third": "Poți construi o frază lungă, poți enumera o grămadă de detalii, dar cel yang te ascultă nu va afla dacă ai cumpărat lucrul, l-ai vândut, l-ai spart sau l-ai pierdut, până când nu vei pronunța cuvântul final.",
+    "cta": "Este greu să-ți reconfigurezi gândirea pentru o astfel de ordine a cuvintelor?"
+  },
+  "newsArticleSix": {
+    "first": "Când înveți germana, mai devreme sau mai târziu te va cuprinde cu siguranță panica din cauza lungimii unor cuvinte. Secretul este că în limba germană nu există oficial o limită pentru lungimea unui substantiv.",
+    "second": "Poți lipi cuvintele între ele la nesfârșit, creând locomotive uriașe de litere doar pentru a descrie un singur obiect.",
+    "third": "Însă aici funcționează o regulă salvatoare de bază: oricât de nebunească ar fi lungimea acestui monstru, genul final este preluat întotdeauna, fără excepție, de la articolul ultimului cuvânt.",
+    "cta": "Te sperie aceste cuvinte-tren atât de lungi?"
+  },
+  "newsArticleSeven": {
+    "first": "Se întâmplă uneori ca, înaintea unui eveniment important sau înainte de culcare, să începi să rulezi în minte scenarii fictive și filme întregi în toate detaliile? Nemții descriu această stare ca fiind propriul cinematograf din cap.",
+    "second": "Este momentul în care imaginația sau anxietatea ta se dezlănțuie atât de tare, încât devii literalmente captivat de regia și vizionarea propriilor gânduri.",
+    "third": "Cuvântul s-a format din der Kopf (cap) și das Kino (cinematograf). Acest cinematograf mental își ia cu supunere genul neutru final de la articolul ultimului substantiv.",
+    "cta": "Ți se aprinde des un astfel de Kopfkino înainte de culcare?"
+  },
+  "newsArticleEight": {
+    "first": "Limba germană este plină de autoironie când vine vorba despre siluetă. Dacă ai pus puțină greutate în plus pe lateral, nemții nu vor vorbi despre colăcei de grăsime, ci vor numi asta aur pe șolduri.",
+    "second": "Literalmente înseamnă 'aurul șoldurilor'. O descriere atât de delicată și prețioasă pentru aripioarele care s-au rotunjit după cârnați nemțești delicioși, chifle sau bere.",
+    "third": "Cuvântul este compus din die Hüfte (șold) și das Gold (aur). Așa cum era de așteptat, acest cuvânt amuzant își ia genul neutru strălucitor de la articolul ultimului substantiv.",
+    "cta": "Cum ți se pare această denumire atât de poetică?"
+  },
+  "newsArticleNine": {
+    "first": "Toată lumea știe ce este dorul de casă, dar germanii au un cuvânt unic pentru sentimentul opus. Acesta este dorul de țări îndepărtate și călătorii.",
+    "second": "Se traduce literal prin 'durerea depărtării'. Este acel sentiment profund de nostalgie când stai acasă și îți dorești cu ardoare să pleci undeva unde nu ai mai fost niciodată.",
+    "third": "Cuvântul este compus din die Ferne (depărtare) și das Weh (durere/suferință). Acest dor romantic își ia genul neutru final de la articolul ultimului cuvânt.",
+    "cta": "Ți se declanșează uneori un astfel de Fernweh?"
+  },
+  "newsArticleTen": {
+    "first": "Uită-te la un bec electric obișnuit. Cu ce formă seamănă? Germanii au văzut în el un fruct luminos.",
+    "second": "Traducerea literală a acestui cuvânt este 'pară luminoasă'. O descriere casnică foarte confortabilă, simplă și caldă pentru un obiect atât de familiar nouă.",
+    "third": "Acesta s-a format din verbul glühen (a lumina/a fi incandescent) și substantivul die Birne (pară). Becul nostru își ia genul feminin de la articolul ultimului cuvânt — die Birne.",
+    "cta": "Seamănă becul cu o pară?"
+  },
+  "newsArticleEleven": {
+    "first": "Cum să numeşti acea suferință sufletească grea, când iubirea ta s-a dovedit a fi neîmpărtășită? Germanii au unit aceste sentimente într-un singur concept cuprinzător.",
+    "second": "Se traduce literal prin 'chagrinul iubirii'. Este o descriere foarte exactă pentru acea nostalgie și tristețe care, la propriu, zdrobesc inima.",
+    "third": "Cuvântul s-a lipit din die Liebe (iubire) și der Kummer (chagrin/suferință). Această inimă frântă își ia cu supunere genul masculin de la articolul ultimului cuvânt — der Kummer.",
+    "cta": "Un sentiment cunoscut?"
+  },
+  "newsArticleTwelve": {
+    "first": "Te plimbi prin pădure după ploaie și vezi un melc gol-goluț, fără cochilie? Limba germană îl descrie în cel mai dezbrăcat mod posibil.",
+    "second": "Traducerea literală a acestui cuvânt amuzant este 'melc golaș'. Într-adevăr, de ce să mai inventezi o nouă denumire, dacă este doar un melc rămas fără căsuță.",
+    "third": "Este format din adjectivul nackt (golaș/dezbrăcat) și substantivul die Schnecke (melc). Acest locuitor al pădurii își ia genul de la articolul ultimului cuvânt.",
+    "cta": "Ți-a smuls un zâmbet această denumire?"
+  },
+  "newsArticleThirteen": {
+    "first": "Dacă ai învățat vreodată limba engleză, avem vești grozave pentru tine. Cunoști deja automat o parte din vocabularul german, chiar dacă nu l-ai studiat niciodată în mod special.",
+    "second": "Ideea este că engleza și germana sunt rude lingvistice apropiate din aceeași familie germanică. Cuvinte precum frate, soră, apă, verde sau măr se scriu și sună incredibil de asemănător.",
+    "third": "Tocmai de aceea, învățarea cuvintelor germane având o bază de engleză este mult mai rapidă — creierul tău recunoaște subconștient tipare familiare.",
+    "cta": "Ai observat asemănarea dintre engleză și germană?"
+  },
+  "newsArticleFourteen": {
+    "first": "Litera germană eszett, care se scrie ca o literă B majusculă, este o carte de vizită unică a alfabetului german. Însă, când înveți limba, puțini știu că nu este folosită chiar în toate regiunile vorbitoare de germană.",
+    "second": "În Elveția și Liechtenstein s-a renunțat oficial și complet la această literă încă din secolul trecut. În școlile, ziarele și documentele oficiale elvețiene se scrie peste tot dublul 'ss' obișnuit în locul ei.",
+    "third": "Acest lucru s-a întâmplat din cauza introducerii în masă a mașinilor de scris, unde elvețienii pur și simplu nu aveau destul spațiu pe tastatură pentru caracterele germane și franceze în același timp. Prin urmare, dacă vei citi texte elvețiene, nu vei găsi această literă acolo.",
+    "cta": "Știai despre secretul elvețian al alfabetului german?"
+  },
+  "newsArticleFifteen": {
+    "first": "În limba germană există verbe-cameleon uimitoare, care se scriu absolut identic, dar sensul lor se schimbă radical în funcție de accent. Acest fapt îi șochează adesea pe începători.",
+    "second": "Un exemplu clar este verbul umfahren. Dacă pui accentul pe prima parte a cuvântului, înseamnă a lovi, a călca sau a trece peste un obstacol cu mașina. Dar dacă muți accentul pe partea a doua, cuvântul își schimbă instantaneu sensul în opusul său — a ocoli un obstacol.",
+    "third": "Tocmai de aceea, când înveți astfel de verbe, este extrem de important să asculți unde cade accentul, altfel, la o lecție practică de conducere în Germania, îți poți speria accidental instructorul.",
+    "cta": "Știai despre aceste verbe viclene cu dublu sens?"
+  },
+  "newsArticleSixteen": {
+    "first": "Când străinii nu înțeleg despre ce este vorba, de obicei spun că pentru ei este 'găinărie' (sau 'păsărească'). La nemți însă, într-o astfel de situație se activează o logică pur feroviară.",
+    "second": "Dacă un german nu își înțelege absolut deloc interlocutorul sau nu vrea să îl asculte, va spune: 'Ich verstehe nur Bahnhof' (Înțeleg doar gara).",
+    "third": "Cu timpul, fraza s-a transformat într-o expresie idiomatică populară. Acum, dacă cineva îți explică drumul prea încâlcit sau te încarcă cu o temă complexă, poți folosi cu încredere această expresie.",
+    "cta": "Ai auzit deja această expresie amuzantă despre gară?"
+  },
+  "newsArticleSeventeen": {
+    "first": "Învățarea articolelor der, die, das este o veșnică durere de cap pentru toți cei care studiază germana. Dar nu-ți face griji, uneori nici chiar vorbitorii nativi nu sunt siguri de alegerea corectă a articolului.",
+    "second": "Un adevărat și nesfârșit război lingvistic se desfășoară în Germania în fiecare dimineață la micul dejun în jurul celebrei paste de ciocolată Nutella. Germanii se ceartă de decenii de ce gen este aceasta.",
+    "third": "Unii spun die, pentru că este o pastă (creme), alții consideră că das, deoarece este genul neutru pentru denumirile străine de produse. Disputa a ajuns în asemenea punct încât chiar și dicționarul oficial Duden a cedat și a recunoscut că Nutella nu are un articol fix și se poate folosi orice variantă.",
+    "cta": "Tu ce articol i-ai da Nutellei?"
+  },
+  "newsArticleEighteen": {
+    "first": "Dacă o persoană refuză cu încăpățânare să observe lucruri evidente care se petrec chiar sub nasul ei, nemții nu vor spune că este neatentă. Îi vor găsi legume pe față.",
+    "second": "Traducerea literală a acestei expresii culte este 'a avea roșii pe ochi'. Așa se spune despre un șofer care nu vede culoarea roșie a semaforului, sau despre un prieten care ignoră complet indiciile tale.",
+    "third": "Originile frazei trimit la vechile tribunale, unde cei vinovați erau obligați să poarte legături la ochi în semn de rușine, iar uneori le erau legate legume adevărate la ochi. Astăzi, este doar un mod amuzant de a-i spune interlocutorului că e timpul să deschidă ochii.",
+    "cta": "Ai auzit deja această expresie despre roșii?"
+  },
+  "newsArticleNineteen": {
+    "first": "În manualele de germană suntem învățați să salutăm în funcție de momentul zilei: bună dimineața, bună ziua sau bună seara. Însă în nordul Germaniei se râde pur și simplu de acest sistem.",
+    "second": "Acolo toată lumea folosește un singur cuvânt cult: Moin. Cel mai interesant este că îl poți spune absolut oricând: la opt dimineața șefului, la trei după-amiaza vânzătorului sau târziu în noapte prietenilor din bar. Înseamnă pur și simplu 'salut'.",
+    "third": "Dar fii atent: dacă decizi să accentuezi salutul și spui 'Moin Moin', localnicii te vor considera imediat o moară stricată (foarte guraliv). În nord se apreciază concizia, așa că un singur cuvânt este mai mult decât suficient.",
+    "cta": "Ai auzit deja acest salut de la locuitorii Germaniei?"
+  },
+  "newsTitle": {
+    "article_3": "Toate substantivele cu majusculă!",
+    "article_4": "Numerele inversate!",
+    "article_5": "Verbul la cel mai îndepărtat sfârșit al propoziției!",
+    "article_6": "Cuvinte nesfârșite!",
+    "article_13": "Cunoști deja multe cuvinte germane!",
+    "article_14": "Litera de care s-a lipsit o țară întreagă!",
+    "article_15": "Un singur verb - două sensuri opuse!",
+    "article_17": "Bătălia pentru articolul Nutellei!",
+    "article_19": "Moin este universal!"
   }
 }

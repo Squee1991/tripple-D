@@ -10166,7 +10166,8 @@
     "transport": "Sayohat va transport",
     "city": "Shahar xizmatlari va kundalik hayot",
     "health": "Sog'liq",
-    "work": "Ish va martaba"
+    "work": "Ish va martaba",
+    "auto": "Avtomobil va yo'l"
   },
   "speakThemes": {
     "firstmeet": "Tanishuv",
@@ -10208,7 +10209,14 @@
     "bos_talk": "Rahbar bilan suhbat",
     "vacation": "Ta'til",
     "salary_talk": "Maosh",
-    "dismissal_talk": "Ishdan bo'shatish"
+    "dismissal_talk": "Ishdan bo'shatish",
+    "library": "Kutubxona",
+    "refusal_invite": "Taklifni rad etish",
+    "road_assistance": "Mashina buzilishi",
+    "oil_change": "Moy almashtirish",
+    "car_buying": "Avto sotib olish",
+    "police_control": "Tezlikni oshirish",
+    "gas_station": "Yoqilg'i quyish shoxobchasi"
   },
   "speakIndexPage": {
     "title": "Gaplashish amaliyoti",
@@ -10285,7 +10293,7 @@
   },
   "speakSession": {
     "title": "Muloqot amaliyoti",
-    "words": "Dialog uchun so'zlar",
+    "words": "So'zlar",
     "wordsText": "Muloqotni boshlashdan oldin so'zlarni o'rganing yoki takrorlang. Bu sizga o'zingizga ishonch hosil qilishingizga yordam beradi!",
     "learn": "Boshlash",
     "dialogue": "Dialog",
@@ -10367,5 +10375,138 @@
   "installApp": {
     "stayInBrowser": "Brauzerda davom etish",
     "promoSubTitle": " Skillupgerman ilovasi bilan nemis tilini o'rganish ancha qulayroq."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Dialoglarni bajaring. Tinglang, javob variantlarini tanlang va talaffuzni mashq qiling",
+    "words": "Dialogdagi har bir gapni oson tushunish uchun kalit so'z va iboralarni o'rganing"
+  },
+  "newsTitleBanner": {
+    "title": "Nemis tilining xususiyatlari haqida maqolalar, mavzular tahlili va darajangizni oshirish uchun foydali bilimlar.",
+    "badgeArticle": "Skillupgerman dunyosida"
+  },
+  "newsArticleOne": {
+    "first": "Stress yoki xafalik paytida shokolad yeysizmi? Bu der Kummerspeck deyiladi.",
+    "second": "Bu tashvishlar tufayli qaysarlik bilan paydo bo'ladigan o'sha ortiqcha vazndir. To'g'ridan-to'g'ri ma'nosi - 'g'am bekoni'.",
+    "third": "U der Kummer (g'am) va der Speck (bekon) so'zlaridan tashkil topgan. Kutilganidek, ushbu 'bekon' o'z jinsini oxirgi otning artiklidan oladi.",
+    "cta": "Tan oling, sizda hech Kummerspeck bo'lganmi?"
+  },
+  "newsArticleTwo": {
+    "first": "Ish kuni nihoyat tugaganda paydo bo'ladigan o'sha ajoyib hisni bilasizmi? Bu der Feierabend.",
+    "second": "To'g'ridan-to'g'ri ma'nosi - 'bayram oqshomi'. Ish haqida o'ylash ham taqiqlangan alohida hordiq vaqti.",
+    "third": "U die Feier (bayram) va der Abend (oqshom) so'zlaridan tuzilgan. Ushbu yoqimli vaqt o'z jinsini oxirgi otning artiklidan oladi — der Abend.",
+    "cta": "Ishda har doim Feierabend bo'lishini kutasizmi?"
+  },
+  "newsArticleThree": {
+    "first": "Nemis tili — dunyodagi yagona yirik til bo'lib, unda mutloq barcha otlar gapdagi o'rnidan qat'i nazar, bosh harf bilan yoziladi.",
+    "second": "Inson, kuchuk, oddiy stul yoki mavhum fikr haqida gap ketyotganining farqi yo'q — birinchi harf har doim bosh harf bo'ladi. Bu o'rganish jarayonida yangi boshlovchilarni ko'pincha chalg'itadi.",
+    "third": "Lekin bu qoidaning juda katta plyusi bor: nemischa matnni o'qiyotganda, gapda aynan qaysi so'z narsa-buyum ekanini har doim aniq va bir qarashda bilib olishingiz mumkin.",
+    "cta": "Qulay qoidami?"
+  },
+  "newsArticleFour": {
+    "first": "Nemis tilini o'rganishda miyani eng ko'p chalg'itadigan narsalardan biri — bu sanashdir. Nemislar ikki xonali sonlarni oxiridan boshlab talaffuz qilishadi.",
+    "second": "Masalan, yigirma bir sonini ular 'bir va yigirma' deb aytishadi. Shu sababli, nemischa nutqni eshitganda, sonlarni xayolan boshda teskari aylantirishga to'g'ri keladi.",
+    "third": "Ushbu lingvistik usul yangi boshlovchilarning o'rgangan qoliplarini buzadi, ayniqsa, birovning telefon raqamini yoki do'kondagi narxni eshitib, tezda yozib olish kerak bo'lganda.",
+    "cta": "Bunday sanashga tez ko'nikdingizmi yoki hali ham chalkashyapsizmi?"
+  },
+  "newsArticleFive": {
+    "first": "Nemis tilida gapdagi so'zlar tartibining qat'iy qoidasi bor, bu sizni suhbatdoshingizni eng oxirgi so'zigacha tinglashga majbur qiladi.",
+    "second": "Ma'lum bir gap turlarida harakatni anglatuvchi eng asosiy fe'l eng, eng oxirga borib tushadi.",
+    "third": "Siz uzun gap tuzishingiz, ko'plab tafsilotlarni sanashingiz mumkin, ammo tinglovchingiz siz yakuniy so'zni aytmaguningizcha, o'sha narsani sotib oldingizmi, sotdingizmi, sindirdingizmi yoki yo'qotdingizmi — buni bilolmaydi.",
+    "cta": "Bunday so'z tartibiga fikrlashni moslashtirish qiyinmi?"
+  },
+  "newsArticleSix": {
+    "first": "Nemis tilini o'rganishda ertami-kechmi ba'zi so'zlarning uzunligidan vahimaga tushishingiz aniq. Sir shundaki, nemis tilida otlarning uzunligiga rasman cheklov yo'q.",
+    "second": "Faqatgina bitta narsani tasvirlash uchun so'zlarni bir-biriga cheksiz yopishtirib, harflardan iborat ulkan parovozlarni yaratishingiz mumkin.",
+    "third": "Lekin bu yerda asosiy qutqaruvchi qoida mavjud: bu maxluqning uzunligi qanchalik aqlbovar qilmas bo'lmasin, yakuniy jinsni (rodni) u har doim eng oxirgi so'zning artiklidan oladi.",
+    "cta": "Shunday uzun parovoz-so'zlar sizni qo'rqitadimi?"
+  },
+  "newsArticleSeven": {
+    "first": "Muhim bir voqea oldidan yoki uxlashdan oldin xayolingizda uydurma ssenariylar va butun boshli filmlarni barcha tafsilotlari bilan aylantirishni boshlaysizmi? Bu holatni nemislar bosh ichidagi shaxsiy kinoteatr deb ta'riflashadi.",
+    "second": "Bu sizning tasavvuringiz yoki xavotiringiz shunchalik kuchayib ketgandaki, siz tom ma'noda o'z fikrlaringizni rejissyorlik qilish va tomosha qilishga g'arq bo'lasiz.",
+    "third": "U der Kopf (bosh) va das Kino (kinoteatr) so'zlaridan birlashgan. Ushbu hayoliy kinoteatr o'zining yakuniy o'rta jinsini itoatkorlik bilan oxirgi otning artiklidan oladi.",
+    "cta": "Sizda ham uxlashdan oldin shunday Kopfkino tez-tez yoqiladimi?"
+  },
+  "newsArticleEight": {
+    "first": "Nemis tili qomat haqida gap ketganda o'z-o'zini piching (prikol) qilishga boy til. Agar bellaringizda bir oz ortiqcha vazn to'plangan bo'lsa, nemislar yog' qatlamlari haqida gapirishmaydi, buni boksadagi oltin deb hisoblashadi.",
+    "second": "To'g'ridan-to'g'ri ma'nosi 'boksa oltini' bo'ladi. Mazali nemis sosiskalari, bulochkalari yoki pivosidan keyin yumaloq bo'lib qolgan bellar uchun shunday muloyim va qimmatbaho ta'rif.",
+    "third": "So'z die Hüfte (boksa/tos) va das Gold (oltin) so'zlaridan iborat. Kutilganidek, ushbu qiziqarli so'z o'zining yaltiroq o'rta jinsini oxirgi otning artiklidan oladi.",
+    "cta": "Bunday she'riy nom sizga qanday yoqdi?"
+  },
+  "newsArticleNine": {
+    "first": "Uyni sog'inish nimaligini hamma biladi, ammo nemislarda buning mutlaqo teskarisi bo'lgan tuyg'u uchun noyob so'z bor. Bu olis o'lkalar va sayohatlarni qumsashdir.",
+    "second": "To'g'ridan-to'g'ri ma'nosi 'olislik azobi' deb tarjima qilinadi. Bu uyda o'tirib, o'zingiz hech qachon bo'lmagan joylarga borishni juda ham qattiq xohlaganingizdagi o'sha o'rtovchi tuyg'udir.",
+    "third": "So'z die Ferne (olislik) va das Weh (og'riq/azob) so'zlaridan yasalgan. Ushbu romantik sog'inch o'zining yakuniy o'rta jinsini oxirgi so'zning artiklidan oladi.",
+    "cta": "Sizda ham ba'zan shunday Fernweh uyg'onib turadimi?"
+  },
+  "newsArticleTen": {
+    "first": "Oddiy elektr lampochkasiga qarang. U sizga qaysi shaklni eslatadi? Nemislar unda nur sochuvchi mevani ko'rishgan.",
+    "second": "Bu so'zning so'zma-so'z tarjimasi — 'nur sochuvchi nok'. Biz uchun odatiy bo'lgan ushbu buyumga juda ham yoqimli, oddiy va issiq uyona ta'rif.",
+    "third": "U glühen (nur sochish/porlash) fe'li va die Birne (nok) otidan hosil bo'lgan. Lampochkamiz o'zining ayol jinsini oxirgi so'zning artiklidan oladi — die Birne.",
+    "cta": "Lampochka nokka o'xshashmi?"
+  },
+  "newsArticleEleven": {
+    "first": "Muhabbatingiz javobsiz qolgandagi o'sha og'ir ruhiy azoblarni qanday nomlash mumkin? Nemislar bu tuyg'ularni bitta lo'nda tushunchaga birlashtirganlar.",
+    "second": "To'g'ridan-to'g'ri ma'nosi 'sevgi g'ami' deb tarjima qilinadi. Bu tom ma'noda qalbni vayron qiladigan o'sha sog'inch va g'amning juda aniq ta'rifidir.",
+    "third": "So'z die Liebe (sevgi) va der Kummer (g'am/g'ussa) so'zlaridan yopishgan. Ushbu yarador qalb o'zining erkak jinsini itoatkorlik bilan eng oxirgi so'zning artiklidan oladi — der Kummer.",
+    "cta": "Tanish tuyg'umi?"
+  },
+  "newsArticleTwelve": {
+    "first": "Yomg'irdan keyin o'rmonda sayr qilib, uychasiz oddiy shilliq qurtni ko'rib qoldingizmi? Nemis tili uni maksimal darajada yalang'och tasvirlaydi.",
+    "second": "Ushbu qiziqarli so'zning so'zma-so'z tarjimasi — 'yalang'och shilliq qurt (shilliqqurt)'. Haqiqatan ham, agar u shunchaki uysiz qolgan shilliq qurt bo'lsa, yangi nom o'ylab topishning nima keragi bor.",
+    "third": "U nackt (yalang'och) sifati va die Schnecke (shilliq qurt/shilliqqurt) otidan hosil bo'lgan. Ushbu o'rmon rezidenti o'z jinsini oxirgi so'zning artiklidan oladi.",
+    "cta": "Bunday nom sizni kuldirdimi?"
+  },
+  "newsArticleThirteen": {
+    "first": "Agar siz qachondir ingliz tilini o'rgangan bo'lsangiz, siz uchun ajoyib yangiligimiz bor. Nemischa so'zlarning bir qismini, hatto ularni hech qachon maxsus o'rganmagan bo'lsangiz ham, allaqachon avtomatik ravishda bilasiz.",
+    "second": "Gap shundaki, ingliz va nemis tillari bitta german guruhiga mansub yaqin qarindosh tillardir. Aka/uka, opa/singil, suv, yashil yoki olma kabi so'zlar nihoyatda o'xshash yoziladi va eshitiladi.",
+    "third": "Aynan shu sababli ingliz tili bazasidan keyin nemischa so'zlarni o'rganish ancha tezroq kechadi — miyangiz ongsiz ravishda tanish qoliplarni taniy boshlaydi.",
+    "cta": "Ingliz va nemis tillari o'rtasidagi o'xshashlikni sezganmidingiz?"
+  },
+  "newsArticleFourteen": {
+    "first": "Katta B harfiga o'xshash yoziladigan nemischa eszett (ß) harfi nemis alfabesining o'ziga xos tashrif qog'ozidir. Ammo tilni o'rganishda ko'pchilik bu harfdan hamma nemiszabon hududlarda ham foydalanilavermasligini bilmaydi.",
+    "second": "Shveysariya va Lixtenshteynda o'tgan asrdayoq ushbu harfdan rasman va butunlay voz kechilgan. Shveysariya maktablari, gazetalari va rasmiy hujjatlarida uning o'rniga hamma joyda odatiy ikkita 'ss' harflari yoziladi.",
+    "third": "Bu yozuv mashinkalarining ommaviy joriy etilishi sababli yuz bergan, chunki shveysariyaliklarda klaviaturada nemis va fransuz belgilari uchun bir vaqtning o'zida joy yetishmagan. Shuning uchun, agar shveysarcha matnlarni o'qisangiz, u yerda bu harfni topolmaysiz.",
+    "cta": "Nemis alifbosining Shveysariyaga oid siri haqida bilarmidingiz?"
+  },
+  "newsArticleFifteen": {
+    "first": "Nemis tilida mutlaqo bir xil yoziladigan, ammo urg'uga qarab ma'nosi tubdan o'zgaradigan ajoyib 'alvasti-fe'llar' mavjud. Bu fakt ko'pincha yangi boshlovchilarni hayratda qoldiradi.",
+    "second": "Yorqin misol — umfahren fe'li. Agar urg'uni so'zning birinchi qismiga qo'ysangiz, bu to'siqni urib yuborish, bosib ketish yoki mashina bilan ustidan o'tishni anglatadi. Ammo urg'uni ikkinchi qismga ko'chirsangiz, so'z zudlik bilan teskari ma'noga o'zgaradi — to'siqni chetlab o'tish.",
+    "third": "Aynan shu sababli, bunday fe'llarni o'rganayotganda urg'u qayerga tushayotganini eshitish juda muhim, aks holda Germaniyadagi amaliy haydash darsida bilmasdan instruktoringizni qo'rqitib yuborishingiz mumkin.",
+    "cta": "Ikki xil ma'noga ega shunday ayyor fe'llar haqida bilarmidingiz?"
+  },
+  "newsArticleSixteen": {
+    "first": "Chet elliklar gap nima haqida ketayotganini tushunishmasa, odatda bu men uchun 'xitoycha savod' deyishadi. Nemislarda esa bunday vaziyatda sof temir yo'l logikasi ishga tushadi.",
+    "second": "Agar nemis suhbatdoshini mutlaqo tushunmasa yoki uni eshitishni xohlamasa, u shunday deydi: 'Ich verstehe nur Bahnhof' (Men faqat vokzalni tushunyapman).",
+    "third": "Vaqt o'tishi bilan bu ibora mashhur idiomaga aylandi. Endi, agar kimdir sizga yo'lni juda chalkash tushuntirsa yoki murakkab mavzu bilan miyangizni chalg'itsa, ushbu iborani bemalol ishlatishingiz mumkin.",
+    "cta": "Vokzal haqidagi ushbu qiziqarli iborani eshitganmidingiz?"
+  },
+  "newsArticleSeventeen": {
+    "first": "der, die, das artikllarini o'rganish — nemis tilini o'rganuvchilar uchun abadiy bosh og'rig'i. Ammo xavotir olmang, ba'zida to'g'ri artikl tanlashda hatto til egalarining (nemislar) o'zlari ham ishonch hosil qilisholmaydi.",
+    "second": "Germaniyadagi eng haqiqiy va cheksiz lingvistik urush har tong nonushta paytida mashhur Nutella shokolad pastasi atrofida sodir bo'ladi. Nemislar o'n yilliklar davomida uning qaysi jinsga (rodga) tegishli ekanligi ustida bahslashishadi.",
+    "third": "Ba'zilar bu pasta bo'lgani uchun 'die' deyishadi, boshqalari esa xorijiy mahsulot nomlari uchun o'rta jins to'g'ri keladi deb 'das' deb hisoblashadi. Bahs shu darajaga yetdiki, hatto rasmiy Duden lug'ati ham taslim bo'ldi va Nutellaning umuman qat'iy artikli yo'qligini, har qanday variantni ishlatish mumkinligini tan oldi.",
+    "cta": "Siz esa Nutellaga qaysi artiklni bergan bo'lardingiz?"
+  },
+  "newsArticleEighteen": {
+    "first": "Agar biror kishi burnining tagida sodir bo'layotgan yaqqol narsalarni qaysarlik bilan payqamasa, nemislar uni e'tiborsiz deyishmaydi. Uning yuzidan sabzavot topishadi.",
+    "second": "Ushbu mashhur idomaning so'zma-so'z tarjimasi — 'ko'zida pomidor bo'lish'. Bu qizil chiroqni ko'rmayotgan haydovchi yoki siz berayotgan ishoralarni sira sezmayotgan do'st haqida aytiladi.",
+    "third": "Iboraning ildizlari qadimgi sudlarga borib taqaladi, u yerda aybdorlarni sharmandalik belgisi sifatida ko'zlarini bog'lashga majbur qilishgan, ba'zan esa ko'zlariga haqiqiy sabzavotlarni bog'lab qo'yishgan. Bugungi kunda esa bu shunchaki suhbatdoshga ko'zini ochish vaqti kelganini aytishning quvnoq usulidir.",
+    "cta": "Pomidorlar haqidagi ushbu iborani eshitganmidingiz?"
+  },
+  "newsArticleNineteen": {
+    "first": "Nemis tili darsliklarida bizga kunning vaqtiga qarab salomlashishni o'rgatishadi: xayrli tong, xayrli kun yoki xayrli kech. Ammo Germaniyaning shimolida bu tizim ustidan shunchaki kulishadi.",
+    "second": "U yerda hamma birdek bitta mashhur so'zdan foydalanadi — Moin. Eng qizig'i shundaki, uni mutloq har doim aytish mumkin: ertalab soat sakkizda boshliqqa, kunduzi soat uchda sotuvchiga yoki tunda bardagi do'stlarga. Bu shunchaki 'salom' deganini bildiradi.",
+    "third": "Leki ehtiyot bo'ling: agar siz salomni kuchaytirmoqchi bo'lib 'Moin Moin' desangiz, mahalliy aholi sizni darhol o'ta vaysoqqa chiqaradi. Shimolda qisqalikni qadrlashadi, shuning uchun bitta so'zning o'zi yetib ortadi.",
+    "cta": "Germaniya aholisidan shunday salomlashishni eshitganmisiz?"
+  },
+  "newsTitle": {
+    "article_3": "Barcha otlar bosh harfda!",
+    "article_4": "Sonlar teskari sanaladi!",
+    "article_5": "Fe'l gapning eng oxirida!",
+    "article_6": "Cheksiz so'zlar!",
+    "article_13": "Siz allaqachon ko'plab nemischa so'zlarni bilasiz!",
+    "article_14": "Butun bir mamlakat voz kechgan harf!",
+    "article_15": "Bitta fe'l - ikkita teskari ma'no!",
+    "article_17": "Nutella artikli uchun jang!",
+    "article_19": "Moin har doim mos keladi!"
   }
 }
