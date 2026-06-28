@@ -583,10 +583,15 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 		;(async function checkLeaderboard() {
 			if (!authStore.uid) return
-			const levels = [1, 2, 3], ids = ['leaderboardEasy', 'leaderboardNormal', 'leaderboardHard']
+			const levels = [1, 2, 3]
+			const prefixes = ['leaderboardEasy', 'leaderboardNormal', 'leaderboardHard']
+
 			for (let i = 0; i < 3; i++) {
 				const lb = await gameStore.loadMarathonLeaderboard(levels[i])
-				updateProgress(ids[i], lb.length > 0 && lb[0].id === authStore.uid ? 1 : 0)
+				const rankIndex = lb.findIndex(user => user.id === authStore.uid)
+				if (rankIndex === 0) updateProgress(`${prefixes[i]}-1`, 1)
+				if (rankIndex === 1) updateProgress(`${prefixes[i]}-2`, 1)
+				if (rankIndex === 2) updateProgress(`${prefixes[i]}-3`, 1)
 			}
 		})()
 

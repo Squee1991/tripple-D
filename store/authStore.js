@@ -59,7 +59,12 @@ export const userAuthStore = defineStore('auth', () => {
     const gotPremiumBonus = ref(false)
     const subscriptionEndsAt = ref(null)
     const subscriptionCancelled = ref(false)
-    const availableAvatars = ref(['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '12.png', '7.png', '8.png', '9.png', '10.png', '11.png', '13.png', '14.png', '15.png', '16.png', '17.png', '18.png']);
+    const availableAvatars = ref([
+        '1.png', '2.png', '3.png', '4.png', '5.png', '6.png',
+        '12.png', '7.png', '8.png', '9.png', '10.png', '11.png',
+        '13.png', '14.png', '15.png', '16.png', '17.png', '18.png',
+        '19.png', '20.png', '21.png', '22.png', '23.png', '24.png'
+    ]);
     const ownedAvatars = ref(['1.png', '2.png']);
     const isPremium = ref(typeof window !== 'undefined' ? localStorage.getItem('cached_premium') === 'true' : false)
     const achievements = ref(null);
@@ -624,26 +629,41 @@ export const userAuthStore = defineStore('auth', () => {
         notEnoughArticle.value = false
         if (ownedAvatars.value.includes(fileName)) return 'owned'
         const specialAvatars = {
-            '16.png': { ach: 'leaderboardEasy', error: 'locked_easy' },
-            '17.png': { ach: 'leaderboardNormal', error: 'locked_normal' },
-            '18.png': { ach: 'leaderboardHard', error: 'locked_hard' }
+            '16.png': { ach: 'leaderboardEasy-1', error: 'locked_easy_1' },
+            '17.png': { ach: 'leaderboardEasy-2', error: 'locked_easy_2' },
+            '18.png': { ach: 'leaderboardEasy-3', error: 'locked_easy_3' },
+
+            '19.png': { ach: 'leaderboardNormal-1', error: 'locked_normal_1' },
+            '20.png': { ach: 'leaderboardNormal-2', error: 'locked_normal_2' },
+            '21.png': { ach: 'leaderboardNormal-3', error: 'locked_normal_3' },
+
+            '22.png': { ach: 'leaderboardHard-1', error: 'locked_hard_1' },
+            '23.png': { ach: 'leaderboardHard-2', error: 'locked_hard_2' },
+            '24.png': { ach: 'leaderboardHard-3', error: 'locked_hard_3' }
         }
+
         if (specialAvatars[fileName]) {
             const achievementStore = useAchievementStore()
             const config = specialAvatars[fileName]
             const ach = achievementStore.findById(config.ach)
             const isUnlocked = ach && ach.currentProgress >= (ach.targetProgress || 1)
+
             if (!isUnlocked) {
-                return config.error
+                return config.error // Возвращаем конкретный статус блокировки
             }
         }
+
         if (langStore.points < 50) {
             notEnoughArticle.value = true
             return 'insufficient'
         }
+
+        // Списание валюты
         langStore.points -= 50
         langStore.articlesSpentForAchievement += 50
         await langStore.saveToFirebase()
+
+        // Добавление аватара в купленные
         ownedAvatars.value.push(fileName)
         const userDocRef = doc(db, 'users', uid.value)
         await updateDoc(userDocRef, {ownedAvatars: ownedAvatars.value})

@@ -146,30 +146,58 @@
         </ClientOnly>
       </section>
     </div>
+
     <div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
       <div class="avatar-modal-content">
         <h3>{{ t('cabinet.newAvatarTitle') }}</h3>
-        <div class="avatar-grid">
+
+        <div class="account-tabs avatar-tabs">
           <div
-              v-for="avatarName in authStore.availableAvatars"
-              :key="avatarName"
-              class="avatar-option"
-              @click="authStore.ownedAvatars.includes(avatarName) ? selectAvatar(avatarName) : openPurchaseModal(avatarName)"
+              class="sliding-bg-account avatar-sliding-bg"
+              :class="{ 'no-transition': !enableTransition }"
+              :style="{
+                transform: `translateX(${getTransform(activeAvatarTabIndex, AVATAR_TABS.length)}%)`,
+                opacity: activeAvatarTabIndex === -1 ? 0 : 1
+              }"
+          ></div>
+          <button
+              v-for="tab in AVATAR_TABS"
+              :key="tab.key"
+              class="account-tab"
+              :class="{ active: activeAvatarTab === tab.key }"
+              @click="activeAvatarTab = tab.key"
+              type="button"
           >
-            <div class="avatar__image-wrapper"
-                 :class="{
-                   selected: selectedAvatarName === avatarName,
-                   unowned: !authStore.ownedAvatars.includes(avatarName)
-                 }"
-            >
-              <img class="avatar-img" :src="authStore.getAvatarUrl(avatarName)" :alt="avatarName"/>
-            </div>
-            <div v-if="!authStore.ownedAvatars.includes(avatarName)" class="avatar-price">
-              <span>50</span>
-              <img class="price-icon" src="../assets/images/article.svg" alt="">
-            </div>
-          </div>
+            <span class="tab__text">{{ tab.label }}</span>
+          </button>
         </div>
+
+        <div class="avatar-scroll-container">
+          <transition name="fade" mode="out-in">
+            <div class="avatar-grid" :key="activeAvatarTab">
+              <div
+                  v-for="avatarName in currentViewAvatars"
+                  :key="avatarName"
+                  class="avatar-option"
+                  @click="authStore.ownedAvatars.includes(avatarName) ? selectAvatar(avatarName) : openPurchaseModal(avatarName)"
+              >
+                <div class="avatar__image-wrapper"
+                     :class="{
+                       selected: selectedAvatarName === avatarName,
+                       unowned: !authStore.ownedAvatars.includes(avatarName)
+                     }"
+                >
+                  <img class="avatar-img" :src="authStore.getAvatarUrl(avatarName)" :alt="avatarName"/>
+                </div>
+                <div v-if="!authStore.ownedAvatars.includes(avatarName)" class="avatar-price">
+                  <span>50</span>
+                  <img class="price-icon" src="../assets/images/article.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </transition>
+        </div>
+
         <div class="modal-actions">
           <button @click="isAvatarModalOpen = false" class="btn" type="button">
             {{ t('cabinet.avatarCancel') }}
@@ -185,6 +213,7 @@
         </div>
       </div>
     </div>
+
     <div v-if="isPurchaseModalOpen" class="modal-overlay" @click.self="isPurchaseModalOpen = false">
       <div class="modal-card">
         <template v-if="purchaseState === 'success'">
@@ -204,13 +233,10 @@
           </div>
         </template>
         <template v-else-if="isRankAvatarLocked">
-          <div class="modal-title">🏆 Элита!</div>
-          <p class="modal-text" style="font-size: 18px; margin-top: 10px;">
-            {{ rankAvatarsComputed }}
-          </p>
+          <p class="modal-text" style="font-size: 18px; margin-top: 10px;">{{ rankAvatarsComputed }}</p>
           <div class="modal-actions">
             <button class="btn" @click="closePurchaseOk" type="button">
-              Понял, иду побеждать!
+              Понятно
             </button>
           </div>
         </template>
@@ -311,16 +337,22 @@ const accountTab = ref((typeof window !== 'undefined' && sessionStorage.getItem(
 
 
 const isRankAvatarLocked = computed(() => {
-  return ['locked_easy', 'locked_normal', 'locked_hard'].includes(purchaseState.value)
+  return purchaseState.value.startsWith('locked_')
 })
 
-const rankAvatarsComputed = computed(()=> {
-    const texts = {
-      'locked_easy': "Эта аватарка доступна только для топ-1 в Лёгком марафоне! Займи первое место, чтобы открыть её.",
-      'locked_normal': "Эта аватарка доступна только для топ-1 в Нормальном марафоне! Займи первое место, чтобы открыть её.",
-      'locked_hard': "Эта аватарка доступна только для топ-1 в Хардкорном марафоне! Займи первое место, чтобы открыть её.",
-    }
-    return texts[purchaseState.value] || ''
+const rankAvatarsComputed = computed(() => {
+  const texts = {
+    'locked_easy_1': "Эта аватарка доступна только за 1-е место в Лёгком марафоне!",
+    'locked_easy_2': "Эта аватарка доступна только за 2-е место в Лёгком марафоне!",
+    'locked_easy_3': "Эта аватарка доступна только за 3-е место в Лёгком марафоне!",
+    'locked_normal_1': "Эта аватарка доступна только за 1-е место в Среднем марафоне!",
+    'locked_normal_2': "Эта аватарка доступна только за 2-е место в Среднем марафоне!",
+    'locked_normal_3': "Эта аватарка доступна только за 3-е место в Среднем марафоне!",
+    'locked_hard_1': "Эта аватарка доступна только за 1-е место в Сложном марафоне!",
+    'locked_hard_2': "Эта аватарка доступна только за 2-е место в Сложном марафоне!",
+    'locked_hard_3': "Эта аватарка доступна только за 3-е место в Сложном марафоне!",
+  }
+  return texts[purchaseState.value] || ''
 })
 
 const TAB_ITEMS = computed(() => {
@@ -329,7 +361,7 @@ const TAB_ITEMS = computed(() => {
     {key: 'archive', label: t('cabinetSidebar.valueTwo'), alt: 'archiveIcon', icon: News},
     {key: 'shop', label: t('cabinetSidebar.valueThree'), alt: 'shopIcon', icon: ShoppingCart},
     {key: 'settings', label: t('cabinetSidebar.valueFour'), alt: 'settingsIcon', icon: SettingsIcon}
-  ]t
+  ]
   if (isMobile.value) {
     return [{key: 'home', label: t('cabinet.main'), alt: 'Home', icon: Home, url: '/'}, ...items]
   }
@@ -349,6 +381,31 @@ const ACCOUNT_TABS = computed(() => [
   {key: 'awards', label: t('cabinetNav.awards'), icon: Rewards, alt: 'award'},
   {key: 'rank', label: t('cabinetNav.rank'), icon: RankAward, alt: 'rank'}
 ])
+
+
+const activeAvatarTab = ref('regular')
+const AVATAR_TABS = computed(() => [
+  {key: 'regular', label: 'Обычные'},
+  {key: 'rank', label: 'Марафонскийе'}
+])
+
+const activeAvatarTabIndex = computed(() => {
+  return AVATAR_TABS.value.findIndex(t => t.key === activeAvatarTab.value)
+})
+
+const RANK_AVATAR_FILES = ['16.png', '17.png', '18.png', '19.png', '20.png', '21.png', '22.png', '23.png', '24.png']
+
+const regularAvatars = computed(() => {
+  return authStore.availableAvatars.filter(a => !RANK_AVATAR_FILES.includes(a))
+})
+
+const rankAvatars = computed(() => {
+  return authStore.availableAvatars.filter(a => RANK_AVATAR_FILES.includes(a))
+})
+
+const currentViewAvatars = computed(() => {
+  return activeAvatarTab.value === 'regular' ? regularAvatars.value : rankAvatars.value
+})
 
 const isSnowWarningModalOpen = ref(false)
 const isCancelModalOpen = ref(false)
@@ -506,7 +563,7 @@ async function confirmPurchase() {
   } else if (status === 'insufficient') {
     purchaseState.value = 'insufficient'
     isPurchaseModalOpen.value = true
-  } else if (['locked_easy', 'locked_normal', 'locked_hard'].includes(status)) {
+  } else if (status && status.startsWith('locked_')) {
     purchaseState.value = status
     isPurchaseModalOpen.value = true
   }
@@ -529,7 +586,10 @@ function closePurchaseOk() {
 }
 
 watch(isAvatarModalOpen, opened => {
-  if (opened) selectedAvatarName.value = authStore.avatar
+  if (opened) {
+    selectedAvatarName.value = authStore.avatar
+    activeAvatarTab.value = 'regular'
+  }
 })
 
 const handleResize = () => {
@@ -672,8 +732,8 @@ onUnmounted(() => {
 .modal-text {
   font-size: 28px;
   font-weight: 400;
-  font-family: 'Lilita One', sans-serif;
   color: var(--titleColor);
+  margin-bottom: 15px;
 }
 
 .nav-container {
@@ -784,6 +844,12 @@ onUnmounted(() => {
   max-width: 1024px;
 }
 
+.avatar-tabs {
+  margin: 0 auto 20px auto;
+  width: 100%;
+  max-width: 400px;
+}
+
 .sliding-bg-account {
   position: absolute;
   top: 8px;
@@ -795,6 +861,10 @@ onUnmounted(() => {
   transition: transform 0.4s cubic-bezier(0.34, 1.20, 0.64, 1), opacity 0.3s ease;
   z-index: 1;
   box-shadow: 0 4px 12px rgba(99, 88, 172, 0.5);
+}
+
+.avatar-sliding-bg {
+  width: calc((100% - 16px) / 2);
 }
 
 .account-tab {
@@ -825,7 +895,6 @@ onUnmounted(() => {
 .account-tab-body {
   margin-top: 4px;
   padding-right: 3px;
-
 }
 
 .modal-overlay {
@@ -853,7 +922,7 @@ onUnmounted(() => {
   display: flex;
   gap: 12px;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 .btn {
@@ -893,12 +962,12 @@ onUnmounted(() => {
 
 .avatar-modal-content {
   background: var(--tabBg);
-  padding: 2rem 1.5rem;
+  padding: 20px 12px;
   border-radius: 24px 24px 0 0;
   width: 100%;
   max-width: 600px;
   max-height: 85vh;
-  overflow-y: auto;
+  overflow-y: hidden;
   animation: slideUp 0.3s ease-out forwards;
 }
 
@@ -913,14 +982,32 @@ onUnmounted(() => {
 
 .avatar-modal-content h3 {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   color: var(--titleColor);
   font-size: 20px;
+}
+
+.avatar-scroll-container {
+  height: 340px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.avatar-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.avatar-scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--tabsSlideBorderColor, #ccc);
+  border-radius: 10px;
 }
 
 .avatar-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
 }
 
 .avatar-option {
