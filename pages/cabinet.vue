@@ -329,8 +329,7 @@ const TAB_ITEMS = computed(() => {
     {key: 'archive', label: t('cabinetSidebar.valueTwo'), alt: 'archiveIcon', icon: News},
     {key: 'shop', label: t('cabinetSidebar.valueThree'), alt: 'shopIcon', icon: ShoppingCart},
     {key: 'settings', label: t('cabinetSidebar.valueFour'), alt: 'settingsIcon', icon: SettingsIcon}
-  ]
-
+  ]t
   if (isMobile.value) {
     return [{key: 'home', label: t('cabinet.main'), alt: 'Home', icon: Home, url: '/'}, ...items]
   }
