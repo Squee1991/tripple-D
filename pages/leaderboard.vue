@@ -25,8 +25,7 @@ const isModal = ref(false)
 const activeMarathonDifficulty = ref(1)
 
 const isLeaderboardOpen = ref(false)
-// const timeLeftToOpen = ref({ d: 0, h: 0, m: 0 })
-const timeLeftToOpen = ref({ d: 0, h: 0, m: 0, s: 0 })
+const timeLeftToOpen = ref({ d: 0, h: 0, m: 0 })
 let timerInterval = null
 
 const disciplines = ref([
@@ -246,13 +245,10 @@ onUnmounted(() => {
               <div v-if="!isLeaderboardOpen" class="blackboard__message timer-message">
                 <p class="timer-subtitle">До начала гонки:</p>
                 <div class="countdown-timer" v-if="timeLeftToOpen">
+                  {{ timeLeftToOpen.d }} {{ t('i18nDays.days') }}
+                  {{ timeLeftToOpen.h }} {{ t('i18nDays.hours') }}
                   {{ timeLeftToOpen.m }} {{ t('i18nDays.mins') }}
-                  {{ timeLeftToOpen.s }} сек </div>
-<!--                <div class="countdown-timer" v-if="timeLeftToOpen">-->
-<!--                  {{ timeLeftToOpen.d }} {{ t('i18nDays.days') }}-->
-<!--                  {{ timeLeftToOpen.h }} {{ t('i18nDays.hours') }}-->
-<!--                  {{ timeLeftToOpen.m }} {{ t('i18nDays.mins') }}-->
-<!--                </div>-->
+                </div>
                 <!--                <img class="leaderboard__icon" src="../assets/images/leadership.svg" alt="locked" style="opacity: 0.5;">-->
               </div>
               <div v-else-if="marathonRating.length" class="leaderboard-wrapper">

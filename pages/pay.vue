@@ -80,9 +80,9 @@ const myAvailableCoupons = computed(() => {
           label: 'Без скидки'
         })
   }
-  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_3', percent: 3, label: t('cardSales.title3')})
+  if (authStore.premiumDiscount.sale_3) list.push({id: 'sale_3', percent: 3, label: t('cardSales.title3')})
   if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_5', percent: 5, label: t('cardSales.title5')})
-  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_6', percent: 6, label: t('cardSales.title6')})
+  if (authStore.premiumDiscount.sale_6) list.push({id: 'sale_6', percent: 6, label: t('cardSales.title6')})
   if (authStore.premiumDiscount.sale_10) list.push({id: 'sale_10', percent: 10, label: t('cardSales.title10')})
   if (authStore.premiumDiscount.sale_15) list.push({id: 'sale_15', percent: 15, label: t('cardSales.title15')})
   return list

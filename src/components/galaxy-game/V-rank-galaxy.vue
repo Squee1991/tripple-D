@@ -75,12 +75,12 @@ const store = useGalaxyStore()
 const db = getFirestore()
 
 const playersData = ref([])
-const selectedFilter = ref('total')
+const selectedFilter = ref('alpha')
 const isLoading = ref(true)
 const {t} = useI18n()
 
 const galaxyOptions = [
-  {id: 'total', label: t('galaxyList.all')},
+  // {id: 'total', label: t('galaxyList.all')},
   {id: 'alpha', label: t('galaxyList.alpha')},
   {id: 'beta', label: t('galaxyList.beta')},
   {id: 'gamma', label: t('galaxyList.gamma')},

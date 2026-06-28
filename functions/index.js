@@ -190,16 +190,16 @@ YOUR TASK: OUTPUT A RAW JSON OBJECT EXCLUSIVELY. Do NOT wrap in markdown.
 });
 
 
+
 exports.handleRevenueCatWebhook = onRequest(async (req, res) => {
 	const eventData = req.body.event;
 	if (!eventData || !eventData.app_user_id) {
 		return res.status(200).send("No data");
-	}
 
+	}
 	const userId = eventData.app_user_id;
 	const eventType = eventData.type;
 	const db = admin.firestore();
-
 	try {
 		switch (eventType) {
 			case "INITIAL_PURCHASE":
@@ -215,12 +215,12 @@ exports.handleRevenueCatWebhook = onRequest(async (req, res) => {
 					subscriptionCancelled: true
 				});
 				break;
-
 			case "CANCELLATION":
 				await db.collection("users").doc(userId).update({
 					subscriptionCancelled: true
 				});
 				break;
+
 			case "TRANSFER":
 				if (eventData.transferred_from) {
 					for (const oldUid of eventData.transferred_from) {
@@ -237,5 +237,7 @@ exports.handleRevenueCatWebhook = onRequest(async (req, res) => {
 		res.status(200).send("OK");
 	} catch (error) {
 		res.status(500).send("Error");
+
 	}
+
 });
