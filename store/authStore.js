@@ -22,7 +22,7 @@ import { GoogleSignIn } from '@capawesome/capacitor-google-sign-in';
 // import { SignInWithApple } from '@capacitor-community/apple-sign-in';
 import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp, writeBatch} from 'firebase/firestore';
 import {userlangStore} from "./learningStore.js";
-
+import { useAchievementStore } from '../store/achievementStore.js'
 let authStateUnsubscribe = null;
 
 const isUserCancelledAuth = (error) => {
@@ -59,7 +59,7 @@ export const userAuthStore = defineStore('auth', () => {
     const gotPremiumBonus = ref(false)
     const subscriptionEndsAt = ref(null)
     const subscriptionCancelled = ref(false)
-    const availableAvatars = ref(['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '12.png', '7.png', '8.png', '9.png', '10.png', '11.png', '13.png', '14.png', '15.png']);
+    const availableAvatars = ref(['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '12.png', '7.png', '8.png', '9.png', '10.png', '11.png', '13.png', '14.png', '15.png', '16.png', '17.png', '18.png']);
     const ownedAvatars = ref(['1.png', '2.png']);
     const isPremium = ref(typeof window !== 'undefined' ? localStorage.getItem('cached_premium') === 'true' : false)
     const achievements = ref(null);
@@ -623,6 +623,20 @@ export const userAuthStore = defineStore('auth', () => {
     const purchaseAvatar = async (fileName) => {
         notEnoughArticle.value = false
         if (ownedAvatars.value.includes(fileName)) return 'owned'
+        const specialAvatars = {
+            '16.png': { ach: 'leaderboardEasy', error: 'locked_easy' },
+            '17.png': { ach: 'leaderboardNormal', error: 'locked_normal' },
+            '18.png': { ach: 'leaderboardHard', error: 'locked_hard' }
+        }
+        if (specialAvatars[fileName]) {
+            const achievementStore = useAchievementStore()
+            const config = specialAvatars[fileName]
+            const ach = achievementStore.findById(config.ach)
+            const isUnlocked = ach && ach.currentProgress >= (ach.targetProgress || 1)
+            if (!isUnlocked) {
+                return config.error
+            }
+        }
         if (langStore.points < 50) {
             notEnoughArticle.value = true
             return 'insufficient'
@@ -633,6 +647,7 @@ export const userAuthStore = defineStore('auth', () => {
         ownedAvatars.value.push(fileName)
         const userDocRef = doc(db, 'users', uid.value)
         await updateDoc(userDocRef, {ownedAvatars: ownedAvatars.value})
+
         return 'success'
     }
 

@@ -82,7 +82,7 @@
                           </button>
                         </div>
                         <div class="user-info-container">
-                          <div class="user__name"> {{ authStore.name}}</div>
+                          <div class="user__name"> {{ authStore.name }}</div>
                           <div v-if="learningStore" class="top-panel-layout">
                             <div class="custom-progress">
                               <div class="progress_exp-bar">
@@ -203,13 +203,23 @@
             </button>
           </div>
         </template>
+        <template v-else-if="isRankAvatarLocked">
+          <div class="modal-title">🏆 Элита!</div>
+          <p class="modal-text" style="font-size: 18px; margin-top: 10px;">
+            {{ rankAvatarsComputed }}
+          </p>
+          <div class="modal-actions">
+            <button class="btn" @click="closePurchaseOk" type="button">
+              Понял, иду побеждать!
+            </button>
+          </div>
+        </template>
         <template v-else>
           <div class="modal-title">{{ t('cabinet.buyAvatar') }}</div>
           <div class="price__avatar-text">
             <span class="modal-text">50</span>
             <img class="articles" src="../assets/images/article.svg" alt="artiles">
           </div>
-
           <div class="modal-actions">
             <button class="btn" @click="isPurchaseModalOpen = false" type="button">
               {{ t('cabinet.notBuyAvatarBtn') }}
@@ -299,6 +309,20 @@ const isMobile = ref(false)
 const activeTabKey = ref((typeof window !== 'undefined' && sessionStorage.getItem(MAIN_TAB_KEY)) || 'info')
 const accountTab = ref((typeof window !== 'undefined' && sessionStorage.getItem(ACC_TAB_KEY)) || 'common')
 
+
+const isRankAvatarLocked = computed(() => {
+  return ['locked_easy', 'locked_normal', 'locked_hard'].includes(purchaseState.value)
+})
+
+const rankAvatarsComputed = computed(()=> {
+    const texts = {
+      'locked_easy': "Эта аватарка доступна только для топ-1 в Лёгком марафоне! Займи первое место, чтобы открыть её.",
+      'locked_normal': "Эта аватарка доступна только для топ-1 в Нормальном марафоне! Займи первое место, чтобы открыть её.",
+      'locked_hard': "Эта аватарка доступна только для топ-1 в Хардкорном марафоне! Займи первое место, чтобы открыть её.",
+    }
+    return texts[purchaseState.value] || ''
+})
+
 const TAB_ITEMS = computed(() => {
   const items = [
     {key: 'info', label: t('cabinetSidebar.valueOne'), alt: 'infoIcon', icon: AccountIcon},
@@ -339,26 +363,6 @@ const enableTransition = ref(false)
 const userNameSafe = computed(() => authStore.initialized && authStore.name ? authStore.name : '—')
 
 const iconDisplayComputed = computed(() => ({"iconHide": iconDisplay.value}))
-
-// const registrationDateText = computed(() => {
-//   const registeredAt = authStore.registeredAt
-//   if (!registeredAt) return '—'
-//
-//   let date
-//   if (typeof registeredAt.toDate === 'function') date = registeredAt.toDate()
-//   else date = new Date(registeredAt)
-//
-//   if (isNaN(date.getTime())) return '—'
-//   const options = {day: 'numeric', month: 'long', year: 'numeric'}
-//   let formatted = date.toLocaleDateString(locale.value, options)
-//   formatted = formatted.replace(/\s*г\.$/, '')
-//   const parts = formatted.split(' ')
-//   if (parts.length === 3) {
-//     parts[1] = parts[1].charAt(0).toUpperCase() + parts[1].slice(1)
-//     return parts.join(' ')
-//   }
-//   return formatted
-// })
 
 const tabs = {
   archive: VNews,
@@ -496,11 +500,15 @@ function selectAvatar(name) {
 
 async function confirmPurchase() {
   const status = await authStore.purchaseAvatar(purchaseAvatarName.value)
+
   if (status === 'success' || status === 'owned') {
     selectedAvatarName.value = purchaseAvatarName.value
     purchaseState.value = 'success'
   } else if (status === 'insufficient') {
     purchaseState.value = 'insufficient'
+    isPurchaseModalOpen.value = true
+  } else if (['locked_easy', 'locked_normal', 'locked_hard'].includes(status)) {
+    purchaseState.value = status
     isPurchaseModalOpen.value = true
   }
 }
