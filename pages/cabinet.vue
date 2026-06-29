@@ -149,26 +149,50 @@
     <div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
       <div class="avatar-modal-content">
         <h3>{{ t('cabinet.newAvatarTitle') }}</h3>
-        <div class="avatar-grid">
+        <div class="account-tabs avatar-tabs">
           <div
-              v-for="avatarName in authStore.availableAvatars"
-              :key="avatarName"
-              class="avatar-option"
-              @click="authStore.ownedAvatars.includes(avatarName) ? selectAvatar(avatarName) : openPurchaseModal(avatarName)"
+              class="sliding-bg-account avatar-sliding-bg"
+              :class="{ 'no-transition': !enableTransition }"
+              :style="{
+                transform: `translateX(${getTransform(activeAvatarTabIndex, AVATAR_TABS.length)}%)`,
+                opacity: activeAvatarTabIndex === -1 ? 0 : 1
+              }"
+          ></div>
+          <button
+              v-for="tab in AVATAR_TABS"
+              :key="tab.key"
+              class="account-tab"
+              :class="{ active: activeAvatarTab === tab.key }"
+              @click="activeAvatarTab = tab.key"
+              type="button"
           >
-            <div class="avatar__image-wrapper"
-                 :class="{
-                   selected: selectedAvatarName === avatarName,
-                   unowned: !authStore.ownedAvatars.includes(avatarName)
-                 }"
-            >
-              <img class="avatar-img" :src="authStore.getAvatarUrl(avatarName)" :alt="avatarName"/>
+            <span class="tab__text">{{ tab.label }}</span>
+          </button>
+        </div>
+        <div class="avatar-scroll-container">
+          <transition name="fade" mode="out-in">
+            <div class="avatar-grid" :key="activeAvatarTab">
+              <div
+                  v-for="avatarName in currentViewAvatars"
+                  :key="avatarName"
+                  class="avatar-option"
+                  @click="authStore.ownedAvatars.includes(avatarName) ? selectAvatar(avatarName) : openPurchaseModal(avatarName)"
+              >
+                <div class="avatar__image-wrapper"
+                     :class="{
+                       selected: selectedAvatarName === avatarName,
+                       unowned: !authStore.ownedAvatars.includes(avatarName)
+                     }"
+                >
+                  <img class="avatar-img" :src="authStore.getAvatarUrl(avatarName)" :alt="avatarName"/>
+                </div>
+                <div v-if="!authStore.ownedAvatars.includes(avatarName)" class="avatar-price">
+                  <span>50</span>
+                  <img class="price-icon" src="../assets/images/article.svg" alt="">
+                </div>
+              </div>
             </div>
-            <div v-if="!authStore.ownedAvatars.includes(avatarName)" class="avatar-price">
-              <span>50</span>
-              <img class="price-icon" src="../assets/images/article.svg" alt="">
-            </div>
-          </div>
+          </transition>
         </div>
         <div class="modal-actions">
           <button @click="isAvatarModalOpen = false" class="btn" type="button">
@@ -200,6 +224,14 @@
           <div class="modal-actions">
             <button class="btn" @click="closePurchaseOk" type="button">
               {{ t('cabinet.boughtBtn') }}
+            </button>
+          </div>
+        </template>
+        <template v-else-if="isRankAvatarLocked">
+          <p class="modal-text" style="font-size: 18px; margin-top: 10px;">{{ rankAvatarsComputed }}</p>
+          <div class="modal-actions">
+            <button class="btn" @click="closePurchaseOk" type="button">
+              Понятно
             </button>
           </div>
         </template>
@@ -301,6 +333,26 @@ const isMobile = ref(false)
 const activeTabKey = ref((typeof window !== 'undefined' && sessionStorage.getItem(MAIN_TAB_KEY)) || 'info')
 const accountTab = ref((typeof window !== 'undefined' && sessionStorage.getItem(ACC_TAB_KEY)) || 'common')
 
+
+const isRankAvatarLocked = computed(() => {
+  return purchaseState.value.startsWith('locked_')
+})
+
+const rankAvatarsComputed = computed(() => {
+  const texts = {
+    'locked_easy_1': "Эта аватарка доступна только за 1-е место в Лёгком марафоне!",
+    'locked_easy_2': "Эта аватарка доступна только за 2-е место в Лёгком марафоне!",
+    'locked_easy_3': "Эта аватарка доступна только за 3-е место в Лёгком марафоне!",
+    'locked_normal_1': "Эта аватарка доступна только за 1-е место в Среднем марафоне!",
+    'locked_normal_2': "Эта аватарка доступна только за 2-е место в Среднем марафоне!",
+    'locked_normal_3': "Эта аватарка доступна только за 3-е место в Среднем марафоне!",
+    'locked_hard_1': "Эта аватарка доступна только за 1-е место в Сложном марафоне!",
+    'locked_hard_2': "Эта аватарка доступна только за 2-е место в Сложном марафоне!",
+    'locked_hard_3': "Эта аватарка доступна только за 3-е место в Сложном марафоне!",
+  }
+  return texts[purchaseState.value] || ''
+})
+
 const TAB_ITEMS = computed(() => {
   const items = [
     {key: 'info', label: t('cabinetSidebar.valueOne'), alt: 'infoIcon', icon: AccountIcon},
@@ -328,6 +380,30 @@ const ACCOUNT_TABS = computed(() => [
   {key: 'awards', label: t('cabinetNav.awards'), icon: Rewards, alt: 'award'},
   {key: 'rank', label: t('cabinetNav.rank'), icon: RankAward, alt: 'rank'}
 ])
+
+const activeAvatarTab = ref('regular')
+const AVATAR_TABS = computed(() => [
+  {key: 'regular', label: 'Обычные'},
+  {key: 'rank', label: 'Марафонскийе'}
+])
+
+const activeAvatarTabIndex = computed(() => {
+  return AVATAR_TABS.value.findIndex(t => t.key === activeAvatarTab.value)
+})
+
+const RANK_AVATAR_FILES = ['16.png', '17.png', '18.png', '19.png', '20.png', '21.png', '22.png', '23.png', '24.png']
+
+const regularAvatars = computed(() => {
+  return authStore.availableAvatars.filter(a => !RANK_AVATAR_FILES.includes(a))
+})
+
+const rankAvatars = computed(() => {
+  return authStore.availableAvatars.filter(a => RANK_AVATAR_FILES.includes(a))
+})
+
+const currentViewAvatars = computed(() => {
+  return activeAvatarTab.value === 'regular' ? regularAvatars.value : rankAvatars.value
+})
 
 const isSnowWarningModalOpen = ref(false)
 const isCancelModalOpen = ref(false)
@@ -765,6 +841,10 @@ onMounted(async () => {
   box-shadow: 0 4px 12px rgba(99, 88, 172, 0.5);
 }
 
+.avatar-sliding-bg {
+  width: calc((100% - 16px) / 2);
+}
+
 .account-tab {
   flex: 1;
   display: flex;
@@ -872,12 +952,12 @@ onMounted(async () => {
 
 .avatar-modal-content {
   background: var(--tabBg);
-  padding: 2rem 1.5rem;
+  padding: 20px 12px;
   border-radius: 24px 24px 0 0;
   width: 100%;
   max-width: 600px;
   max-height: 85vh;
-  overflow-y: auto;
+  overflow-y: hidden;
   animation: slideUp 0.3s ease-out forwards;
 }
 
@@ -897,6 +977,23 @@ onMounted(async () => {
   font-size: 20px;
 }
 
+.avatar-scroll-container {
+  height: 340px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.avatar-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.avatar-scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--tabsSlideBorderColor, #ccc);
+  border-radius: 10px;
+}
+
 .avatar-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -907,6 +1004,7 @@ onMounted(async () => {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  margin-bottom: 5px;
 }
 
 .avatar__image-wrapper {
@@ -1206,4 +1304,5 @@ onMounted(async () => {
   height: 4px;
   border-radius: 4px;
 }
+
 </style>

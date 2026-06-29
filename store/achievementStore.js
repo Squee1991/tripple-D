@@ -564,18 +564,18 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		watch(() => langStore.articlesSpentForAchievement, spent => updateProgress('Articlus', Number(spent) || 0), { immediate: true })
 		watch(() => gameStore.onTheEdgeProgress, v => updateProgress('Impuls', v), { immediate: true })
 
-		;(async function checkSeasonAchievements() {
-			setTimeout(async function checkSeasonAchievements() {
-				if (!authStore.uid) return
-				const state = gameStore.getSeasonState()
-				const seasonToCheck = state.isOpen ? state.previousSeasonId : state.currentSeasonId;
-				const rankEasy = await gameStore.getPreviousSeasonRank(1, seasonToCheck)
-				if (rankEasy === 1) updateProgress('leaderboardEasy', 1)
-				const rankNormal = await gameStore.getPreviousSeasonRank(2, seasonToCheck)
-				if (rankNormal === 1) updateProgress('leaderboardNormal', 1)
-				const rankHard = await gameStore.getPreviousSeasonRank(3, seasonToCheck)
-				if (rankHard === 1) updateProgress('leaderboardHard', 1)
-			}, 4500)
+		;(async function checkLeaderboard() {
+			if (!authStore.uid) return
+			const levels = [1, 2, 3]
+			const prefixes = ['leaderboardEasy', 'leaderboardNormal', 'leaderboardHard']
+
+			for (let i = 0; i < 3; i++) {
+				const lb = await gameStore.loadMarathonLeaderboard(levels[i])
+				const rankIndex = lb.findIndex(user => user.id === authStore.uid)
+				if (rankIndex === 0) updateProgress(`${prefixes[i]}-1`, 1)
+				if (rankIndex === 1) updateProgress(`${prefixes[i]}-2`, 1)
+				if (rankIndex === 2) updateProgress(`${prefixes[i]}-3`, 1)
+			}
 		})()
 
 		watch(() => authStore.registeredAt, date => {
