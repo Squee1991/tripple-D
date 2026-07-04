@@ -1,0 +1,531 @@
+{
+  "start": {
+    "botText": "Hallo! Entschuldigung, sehen Sie verloren aus? Kann ich Ihnen helfen?",
+    "botTranslation": {
+      "ru-RU": "Здравствуйте! Извините, вы выглядите потерянными? Я могу вам помочь?",
+      "en-US": "Hello! Excuse me, do you look lost? Can I help you?",
+      "ar-SA": "مرحباً! المعذرة، هل تبدو تائهاً؟ هل يمكنني مساعدتك؟",
+      "es-ES": "¡Hola! Disculpe, ¿se ha perdido? ¿Puedo ayudarle?",
+      "fr-FR": "Bonjour ! Excusez-moi, vous avez l'air perdu ? Puis-je vous aider ?",
+      "hi-IN": "नमस्ते! क्षमा करें, क्या आप खो गए हैं? क्या मैं आपकी मदद कर सकता हूँ?",
+      "pl-PL": "Cześć! Przepraszam, czy się zgubiłeś? Czy mogę w czymś pomóc?",
+      "ro-RO": "Bună! Scuzați-mă, păreți rătăcit? Vă pot ajuta?",
+      "tr-TR": "Merhaba! Affedersiniz, kaybolmuş gibi görünüyorsunuz? Size yardım edebilir miyim?",
+      "uk-UA": "Добрий день! Вибачте, ви виглядаєте загубленими? Я можу вам допомогти?",
+      "uz-UZ": "Salom! Kechirasiz, adashib qoldingizmi? Sizga yordam bera olamanmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Weg",
+        "translation": {
+          "ru-RU": "путь / дорога",
+          "en-US": "way / path",
+          "ar-SA": "طريق",
+          "es-ES": "camino / ruta",
+          "fr-FR": "chemin",
+          "hi-IN": "रास्ता",
+          "pl-PL": "droga",
+          "ro-RO": "drum",
+          "tr-TR": "yol",
+          "uk-UA": "шлях / дорога",
+          "uz-UZ": "yo'l"
+        }
+      },
+      {
+        "german": "das Stadtzentrum",
+        "translation": {
+          "ru-RU": "центр города",
+          "en-US": "city center",
+          "ar-SA": "وسط المدينة",
+          "es-ES": "centro de la ciudad",
+          "fr-FR": "centre-ville",
+          "hi-IN": "शहर का केंद्र",
+          "pl-PL": "centrum miasta",
+          "ro-RO": "centrul orașului",
+          "tr-TR": "şehir merkezi",
+          "uk-UA": "центр міста",
+          "uz-UZ": "shahar markazi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, vielen Dank! Ich suche den Bahnhof.",
+        "translation": {
+          "ru-RU": "Да, большое спасибо! Я ищу вокзал.",
+          "en-US": "Yes, thank you very much! I am looking for the train station.",
+          "ar-SA": "نعم، شكراً جزيلاً! أنا أبحث عن محطة القطار.",
+          "es-ES": "¡Sí, muchas gracias! Busco la estación de tren.",
+          "fr-FR": "Oui, merci beaucoup ! Je cherche la gare.",
+          "hi-IN": "हाँ, आपका बहुत-बहुत धन्यवाद! मैं रेलवे स्टेशन ढूंढ रहा हूँ।",
+          "pl-PL": "Tak, bardzo dziękuję! Szukam dworca.",
+          "ro-RO": "Da, mulțumesc mult! Caut gara.",
+          "tr-TR": "Evet, çok teşekkür ederim! Tren istasyonunu arıyorum.",
+          "uk-UA": "Так, дуже дякую! Я шукаю вокзал.",
+          "uz-UZ": "Ha, katta rahmat! Men vokzalni qidiryapman."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo! Ja, bitte. Ich finde das Stadtzentrum nicht.",
+        "translation": {
+          "ru-RU": "Здравствуйте! Да, пожалуйста. Я не могу найти центр города.",
+          "en-US": "Hello! Yes, please. I can't find the city center.",
+          "ar-SA": "مرحباً! نعم من فضلك. لا أستطيع العثور على وسط المدينة.",
+          "es-ES": "¡Hola! Sí, por favor. No encuentro el centro de la ciudad.",
+          "fr-FR": "Bonjour ! Oui, s'il vous plaît. Je ne trouve pas le centre-ville.",
+          "hi-IN": "नमस्ते! जी, कृपया। मुझे शहर का केंद्र नहीं मिल रहा है।",
+          "pl-PL": "Dzień dobry! Tak, proszę. Nie mogę znaleźć centrum miasta.",
+          "ro-RO": "Bună! Da, vă rog. Nu găsesc centrul orașului.",
+          "tr-TR": "Merhaba! Evet, lütfen. Şehir merkezini bulamıyorum.",
+          "uk-UA": "Добрий день! Так, будь ласка. Я не можу знайти центр міста.",
+          "uz-UZ": "Salom! Ha, iltimos. Men shahar markazini topolmayapman."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Der Bahnhof ist ganz einfach zu finden. Gehen Sie hier immer geradeaus.",
+    "botTranslation": {
+      "ru-RU": "Вокзал найти совсем просто. Идите здесь всё время прямо.",
+      "en-US": "The train station is very easy to find. Just keep going straight here.",
+      "ar-SA": "من السهل جداً العثور على محطة القطار. فقط استمر في السير للأمام هنا.",
+      "es-ES": "La estación es muy fácil de encontrar. Vaya todo recto por aquí.",
+      "fr-FR": "La gare est très facile à trouver. Allez toujours tout droit ici.",
+      "hi-IN": "रेलवे स्टेशन खोजना बहुत आसान है। बस यहाँ से सीधे चलते रहें।",
+      "pl-PL": "Dworzec bardzo łatwo znaleźć. Proszę iść cały czas prosto.",
+      "ro-RO": "Gara este foarte ușor de găsit. Mergeți tot înainte pe aici.",
+      "tr-TR": "Tren istasyonunu bulmak çok kolay. Buradan hep dümdüz gidin.",
+      "uk-UA": "Вокзал знайти дуже просто. Йдіть тут весь час прямо.",
+      "uz-UZ": "Vokzalni topish juda oson. Shu yerdan doim to'g'riga yuring."
+    },
+    "vocabulary": [
+      {
+        "german": "der Bahnhof",
+        "translation": {
+          "ru-RU": "вокзал",
+          "en-US": "train station",
+          "ar-SA": "محطة القطار",
+          "es-ES": "estación de tren",
+          "fr-FR": "gare",
+          "hi-IN": "रेलवे स्टेशन",
+          "pl-PL": "dworzec",
+          "ro-RO": "gară",
+          "tr-TR": "tren istasyonu",
+          "uk-UA": "вокзал",
+          "uz-UZ": "vokzal"
+        }
+      },
+      {
+        "german": "geradeaus",
+        "translation": {
+          "ru-RU": "прямо",
+          "en-US": "straight ahead",
+          "ar-SA": "إلى الأمام مباشرة",
+          "es-ES": "recto",
+          "fr-FR": "tout droit",
+          "hi-IN": "सीधे",
+          "pl-PL": "prosto",
+          "ro-RO": "tot înainte / drept",
+          "tr-TR": "dümdüz",
+          "uk-UA": "прямо",
+          "uz-UZ": "to'g'riga"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, geradeaus. Wie lange dauert es zu Fuß?",
+        "translation": {
+          "ru-RU": "Все ясно, прямо. Как долго это займет пешком?",
+          "en-US": "All right, straight ahead. How long does it take on foot?",
+          "ar-SA": "حسناً، للأمام مباشرة. كم يستغرق من الوقت سيراً على الأقدام؟",
+          "es-ES": "De acuerdo, recto. ¿Cuánto se tarda a pie?",
+          "fr-FR": "Très bien, tout droit. Combien de temps cela prend-il à pied ?",
+          "hi-IN": "ठीक है, सीधे। पैदल जाने में कितना समय लगता है?",
+          "pl-PL": "Wszystko jasne, prosto. Ile czasu zajmuje to na pieszo?",
+          "ro-RO": "Am înțeles, tot înainte. Cât durează pe jos?",
+          "tr-TR": "Tamam, dümdüz. Yürüyerek ne kadar sürer?",
+          "uk-UA": "Все ясно, прямо. Скільки часу це займе пішки?",
+          "uz-UZ": "Tushunarli, to'g'riga. Piyoda qancha vaqt ketadi?"
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Gut, wie weit ist es bis dorthin?",
+        "translation": {
+          "ru-RU": "Хорошо, как далеко это отсюда?",
+          "en-US": "Good, how far is it from here?",
+          "ar-SA": "جيد، ما مدى بعدها عن هنا؟",
+          "es-ES": "Bien, ¿a qué distancia está?",
+          "fr-FR": "Bien, à quelle distance est-ce ?",
+          "hi-IN": "अच्छा, यह यहाँ से कितनी दूर है?",
+          "pl-PL": "Dobrze, jak daleko to jest stąd?",
+          "ro-RO": "Bine, cât de departe este până acolo?",
+          "tr-TR": "Güzel, oraya ne kadar uzaklıkta?",
+          "uk-UA": "Добре, як далеко це звідси?",
+          "uz-UZ": "Yaxshi, u yergacha qancha masofa bor?"
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Das dauert etwa zehn Minuten bis zur nächsten Ampel.",
+    "botTranslation": {
+      "ru-RU": "Это займет около десяти минут до следующего светофора.",
+      "en-US": "It takes about ten minutes to the next traffic light.",
+      "ar-SA": "يستغرق الأمر حوالي عشر دقائق حتى إشارة المرور التالية.",
+      "es-ES": "Se tarda unos diez minutos hasta el próximo semáforo.",
+      "fr-FR": "Cela prend environ dix minutes jusqu'au prochain feu de circulation.",
+      "hi-IN": "अगले ट्रैफिक लाइट तक पहुंचने में लगभग दस मिनट लगते हैं।",
+      "pl-PL": "Zajmie to około dziesięciu minut do następnych świateł.",
+      "ro-RO": "Durează cam zece minute până la următorul semafor.",
+      "tr-TR": "Sonraki trafik lambasına kadar yaklaşık on dakika sürer.",
+      "uk-UA": "Це займе близько десяти хвилин до наступного світлофора.",
+      "uz-UZ": "Keyingi svetoforgacha taxminan o'n daqiqa vaqt ketadi."
+    },
+    "vocabulary": [
+      {
+        "german": "die Ampel",
+        "translation": {
+          "ru-RU": "светофор",
+          "en-US": "traffic light",
+          "ar-SA": "إشارة مرور",
+          "es-ES": "semáforo",
+          "fr-FR": "feu de circulation",
+          "hi-IN": "ट्रैफिक लाइट",
+          "pl-PL": "sygnalizacja świetlna / światła",
+          "ro-RO": "semafor",
+          "tr-TR": "trafik lambası",
+          "uk-UA": "світлофор",
+          "uz-UZ": "svetofor"
+        }
+      },
+      {
+        "german": "zu Fuß",
+        "translation": {
+          "ru-RU": "пешком",
+          "en-US": "on foot",
+          "ar-SA": "سيراً على الأقدام",
+          "es-ES": "a pie",
+          "fr-FR": "à pied",
+          "hi-IN": "पैदल",
+          "pl-PL": "pieszo",
+          "ro-RO": "pe jos",
+          "tr-TR": "yürüyerek",
+          "uk-UA": "пішки",
+          "uz-UZ": "piyoda"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Und an der Ampel? Muss ich da links gehen?",
+        "translation": {
+          "ru-RU": "А на светофоре? Мне нужно там повернуть (пойти) налево?",
+          "en-US": "And at the traffic light? Do I have to go left there?",
+          "ar-SA": "وعند إشارة المرور؟ هل يجب أن أذهب لليسار هناك؟",
+          "es-ES": "¿Y en el semáforo? ¿Tengo que ir a la izquierda ahí?",
+          "fr-FR": "Et au feu de circulation ? Dois-je aller à gauche là-bas ?",
+          "hi-IN": "और ट्रैफिक लाइट पर? क्या मुझे वहां बाईं ओर जाना है?",
+          "pl-PL": "A na światłach? Muszę tam iść w lewo?",
+          "ro-RO": "Și la semafor? Trebuie să o iau la stânga acolo?",
+          "tr-TR": "Peki trafik lambasında? Oradan sola mı gitmeliyim?",
+          "uk-UA": "А на світлофорі? Мені потрібно там піти ліворуч?",
+          "uz-UZ": "Svetoforda-chi? U yerda chapga yurishim kerakmi?"
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Und dann? Gehe ich da nach rechts?",
+        "translation": {
+          "ru-RU": "А потом? Я иду там направо?",
+          "en-US": "And then? Do I go right there?",
+          "ar-SA": "وبعد ذلك؟ هل أذهب لليمين هناك؟",
+          "es-ES": "¿Y entonces? ¿Voy a la derecha allí?",
+          "fr-FR": "Et ensuite ? Est-ce que je vais à droite là-bas ?",
+          "hi-IN": "और फिर? क्या मैं वहां दाईं ओर जाऊँ?",
+          "pl-PL": "A potem? Idę tam w prawo?",
+          "ro-RO": "Și apoi? Merg la dreapta acolo?",
+          "tr-TR": "Sonra? Oradan sağa mı gideceğim?",
+          "uk-UA": "А потім? Я йду там праворуч?",
+          "uz-UZ": "Keyin-chi? U yerda o'ngga yuramanmi?"
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Genau, an der Ampel gehen Sie bitte links in die Nebenstraße.",
+    "botTranslation": {
+      "ru-RU": "Точно, на светофоре, пожалуйста, сверните налево в переулок (боковую улицу).",
+      "en-US": "Exactly, at the traffic light please go left into the side street.",
+      "ar-SA": "بالضبط، عند الإشارة، يرجى الذهاب يساراً في الشارع الجانبي.",
+      "es-ES": "Exacto, en el semáforo, por favor, vaya a la izquierda hacia la calle lateral.",
+      "fr-FR": "Exactement, au feu, s'il vous plaît, allez à gauche dans la rue transversale.",
+      "hi-IN": "बिल्कुल, ट्रैफिक लाइट पर कृपया बाईं ओर साइड स्ट्रीट में जाएँ।",
+      "pl-PL": "Dokładnie, na światłach proszę iść w lewo w boczną uliczkę.",
+      "ro-RO": "Exact, la semafor vă rog să o luați la stânga pe strada laterală.",
+      "tr-TR": "Aynen, trafik lambasında lütfen sola, ara sokağa girin.",
+      "uk-UA": "Точно, на світлофорі, будь ласка, йдіть ліворуч у бічну вулицю (провулок).",
+      "uz-UZ": "Aniq, svetoforda iltimos, chapga yon ko'chaga kiring."
+    },
+    "vocabulary": [
+      {
+        "german": "links",
+        "translation": {
+          "ru-RU": "налево / слева",
+          "en-US": "left",
+          "ar-SA": "يسار",
+          "es-ES": "izquierda",
+          "fr-FR": "gauche",
+          "hi-IN": "बाएं",
+          "pl-PL": "lewo",
+          "ro-RO": "stânga",
+          "tr-TR": "sol",
+          "uk-UA": "наліво / ліворуч",
+          "uz-UZ": "chapga / chap"
+        }
+      },
+      {
+        "german": "rechts",
+        "translation": {
+          "ru-RU": "направо / справа",
+          "en-US": "right",
+          "ar-SA": "يمين",
+          "es-ES": "derecha",
+          "fr-FR": "droite",
+          "hi-IN": "दाएं",
+          "pl-PL": "prawo",
+          "ro-RO": "dreapta",
+          "tr-TR": "sağ",
+          "uk-UA": "направо / праворуч",
+          "uz-UZ": "o'ngga / o'ng"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Links gehen. Ist das Gebäude dann auf der rechten Seite?",
+        "translation": {
+          "ru-RU": "Пойти налево. Здание потом будет с правой стороны?",
+          "en-US": "Go left. Is the building then on the right side?",
+          "ar-SA": "أذهب لليسار. هل المبنى بعد ذلك على الجانب الأيمن؟",
+          "es-ES": "Ir a la izquierda. ¿El edificio estará entonces en el lado derecho?",
+          "fr-FR": "Aller à gauche. Le bâtiment est-il ensuite sur le côté droit ?",
+          "hi-IN": "बाएं जाएँ। क्या तब इमारत दाईं ओर है?",
+          "pl-PL": "Iść w lewo. Czy budynek będzie wtedy po prawej stronie?",
+          "ro-RO": "Merg la stânga. Clădirea va fi apoi pe partea dreaptă?",
+          "tr-TR": "Sola gitmek. O zaman bina sağ tarafta mı kalıyor?",
+          "uk-UA": "Піти ліворуч. Будівля потім буде з правої сторони?",
+          "uz-UZ": "Chapga yurish. Bino undan keyin o'ng tomonda bo'ladimi?"
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Alles klar, links gehen. Vielen Dank!",
+        "translation": {
+          "ru-RU": "Все ясно, налево. Большое спасибо!",
+          "en-US": "All right, go left. Thank you very much!",
+          "ar-SA": "حسناً، أذهب لليسار. شكراً جزيلاً!",
+          "es-ES": "De acuerdo, ir a la izquierda. ¡Muchas gracias!",
+          "fr-FR": "Très bien, aller à gauche. Merci beaucoup !",
+          "hi-IN": "ठीक है, बाएं जाएं। बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Wszystko jasne, iść w lewo. Bardzo dziękuję!",
+          "ro-RO": "Am înțeles, la stânga. Vă mulțumesc mult!",
+          "tr-TR": "Tamam, sola gitmek. Çok teşekkürler!",
+          "uk-UA": "Все ясно, ліворуч. Велике дякую!",
+          "uz-UZ": "Tushunarli, chapga yurish. Katta rahmat!"
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Ja, es ist direkt hinter dem großen Park auf der rechten Seite.",
+    "botTranslation": {
+      "ru-RU": "Да, оно прямо за большим парком с правой стороны.",
+      "en-US": "Yes, it is directly behind the big park on the right side.",
+      "ar-SA": "نعم، إنه مباشرة خلف الحديقة الكبيرة على الجانب الأيمن.",
+      "es-ES": "Sí, está justo detrás del gran parque en el lado derecho.",
+      "fr-FR": "Oui, c'est juste derrière le grand parc sur le côté droit.",
+      "hi-IN": "हाँ, यह दाईं ओर बड़े पार्क के ठीक पीछे है।",
+      "pl-PL": "Tak, znajduje się tuż za dużym parkiem po prawej stronie.",
+      "ro-RO": "Da, se află chiar în spatele parcului mare, pe partea dreaptă.",
+      "tr-TR": "Evet, sağ taraftaki büyük parkın hemen arkasında.",
+      "uk-UA": "Так, воно прямо за великим парком з правої сторони.",
+      "uz-UZ": "Ha, u to'g'ridan-to'g'ri o'ng tomondagi katta park orqasida."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Super, danke für die Hilfe! Gibt es dort auch ein Café?",
+        "translation": {
+          "ru-RU": "Супер, спасибо за помощь! Там есть кафе?",
+          "en-US": "Super, thanks for the help! Is there a cafe there too?",
+          "ar-SA": "ممتاز، شكراً على المساعدة! هل يوجد مقهى هناك أيضاً؟",
+          "es-ES": "Genial, ¡gracias por la ayuda! ¿Hay también una cafetería allí?",
+          "fr-FR": "Super, merci pour l'aide ! Y a-t-il aussi un café là-bas ?",
+          "hi-IN": "बहुत बढ़िया, मदद के लिए धन्यवाद! क्या वहां कोई कैफे भी है?",
+          "pl-PL": "Super, dziękuję za pomoc! Czy jest tam też kawiarnia?",
+          "ro-RO": "Super, mulțumesc pentru ajutor! Există și o cafenea acolo?",
+          "tr-TR": "Harika, yardımınız için teşekkürler! Orada bir kafe de var mı?",
+          "uk-UA": "Супер, дякую за допомогу! Там також є кафе?",
+          "uz-UZ": "Ajoyib, yordam uchun rahmat! U yerda kafe ham bormi?"
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Perfekt, danke. Kann ich dort auch ein Ticket kaufen?",
+        "translation": {
+          "ru-RU": "Идеально, спасибо. Могу ли я там также купить билет?",
+          "en-US": "Perfect, thanks. Can I also buy a ticket there?",
+          "ar-SA": "ممتاز، شكراً. هل يمكنني أيضاً شراء تذكرة هناك؟",
+          "es-ES": "Perfecto, gracias. ¿También puedo comprar un billete allí?",
+          "fr-FR": "Parfait, merci. Puis-je aussi y acheter un billet ?",
+          "hi-IN": "बिल्कुल सही, धन्यवाद। क्या मैं वहां टिकट भी खरीद सकता हूँ?",
+          "pl-PL": "Idealnie, dziękuję. Czy mogę tam również kupić bilet?",
+          "ro-RO": "Perfect, mulțumesc. Pot cumpăra un bilet de acolo?",
+          "tr-TR": "Mükemmel, teşekkürler. Orada bilet de satın alabilir miyim?",
+          "uk-UA": "Ідеально, дякую. Чи можу я там також купити квиток?",
+          "uz-UZ": "Ajoyib, rahmat. U yerda chipta ham sotib olsam bo'ladimi?"
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Ja, am Bahnhof gibt es viele Cafés und auch einen Ticket-Schalter.",
+    "botTranslation": {
+      "ru-RU": "Да, на вокзале есть много кафе и еще касса для билетов.",
+      "en-US": "Yes, there are many cafes and also a ticket counter at the train station.",
+      "ar-SA": "نعم، يوجد في المحطة العديد من المقاهي وكذلك شباك تذاكر.",
+      "es-ES": "Sí, en la estación hay muchas cafeterías y también una taquilla para billetes.",
+      "fr-FR": "Oui, à la gare, il y a de nombreux cafés et aussi un guichet de billets.",
+      "hi-IN": "हाँ, रेलवे स्टेशन पर कई कैफे और एक टिकट काउंटर भी है।",
+      "pl-PL": "Tak, na dworcu jest wiele kawiarni i kasa biletowa.",
+      "ro-RO": "Da, în gară sunt multe cafenele și, de asemenea, o casă de bilete.",
+      "tr-TR": "Evet, istasyonda birçok kafe ve bir bilet gişesi de var.",
+      "uk-UA": "Так, на вокзалі є багато кафе, а також каса для квитків.",
+      "uz-UZ": "Ha, vokzalda ko'plab kafelar va chipta kassasi ham bor."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Das hilft mir sehr weiter. Vielen Dank!",
+        "translation": {
+          "ru-RU": "Это мне очень поможет. Большое спасибо!",
+          "en-US": "That helps me a lot. Thank you very much!",
+          "ar-SA": "هذا يساعدني كثيراً. شكراً جزيلاً!",
+          "es-ES": "Eso me ayuda mucho. ¡Muchas gracias!",
+          "fr-FR": "Cela m'aide beaucoup. Merci beaucoup !",
+          "hi-IN": "इससे मुझे बहुत मदद मिलेगी। आपका बहुत-बहुत धन्यवाद!",
+          "pl-PL": "To mi bardzo pomaga. Bardzo dziękuję!",
+          "ro-RO": "Asta mă ajută foarte mult. Vă mulțumesc mult!",
+          "tr-TR": "Bu bana çok yardımcı olacak. Çok teşekkür ederim!",
+          "uk-UA": "Це мені дуже допоможе. Велике дякую!",
+          "uz-UZ": "Bu menga juda katta yordam beradi. Katta rahmat!"
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Alles klar, das ist sehr gut zu wissen. Danke!",
+        "translation": {
+          "ru-RU": "Все ясно, это очень полезно знать. Спасибо!",
+          "en-US": "All right, that's very good to know. Thanks!",
+          "ar-SA": "حسناً، من الجيد جداً معرفة ذلك. شكراً!",
+          "es-ES": "De acuerdo, es muy bueno saberlo. ¡Gracias!",
+          "fr-FR": "Très bien, c'est bon à savoir. Merci !",
+          "hi-IN": "ठीक है, यह जानना बहुत अच्छा है। धन्यवाद!",
+          "pl-PL": "Wszystko jasne, dobrze wiedzieć. Dziękuję!",
+          "ro-RO": "Am înțeles, e bine de știut. Mulțumesc!",
+          "tr-TR": "Tamam, bunu bilmek çok iyi. Teşekkürler!",
+          "uk-UA": "Все ясно, це дуже корисно знати. Дякую!",
+          "uz-UZ": "Tushunarli, buni bilish juda yaxshi. Rahmat!"
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Sehr gerne. Ich wünsche Ihnen einen schönen Tag!",
+    "botTranslation": {
+      "ru-RU": "Не за что. Желаю вам хорошего дня!",
+      "en-US": "You're very welcome. I wish you a nice day!",
+      "ar-SA": "بكل سرور. أتمنى لك يوماً سعيداً!",
+      "es-ES": "Con mucho gusto. ¡Le deseo un buen día!",
+      "fr-FR": "Avec grand plaisir. Je vous souhaite une bonne journée !",
+      "hi-IN": "आपका स्वागत है। आपका दिन शुभ हो!",
+      "pl-PL": "Nie ma za co. Życzę miłego dnia!",
+      "ro-RO": "Cu mare plăcere. Vă doresc o zi frumoasă!",
+      "tr-TR": "Rica ederim. İyi günler dilerim!",
+      "uk-UA": "Нема за що. Бажаю вам гарного дня!",
+      "uz-UZ": "Arzimaydi. Sizga xayrli kun tilayman!"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Danke, gleichfalls! Auf Wiedersehen.",
+        "translation": {
+          "ru-RU": "Спасибо, взаимно! До свидания.",
+          "en-US": "Thanks, same to you! Goodbye.",
+          "ar-SA": "شكراً، ولك أيضاً! وداعاً.",
+          "es-ES": "¡Gracias, igualmente! Adiós.",
+          "fr-FR": "Merci, de même ! Au revoir.",
+          "hi-IN": "धन्यवाद, आपको भी! अलविदा।",
+          "pl-PL": "Dziękuję, nawzajem! Do widzenia.",
+          "ro-RO": "Mulțumesc, la fel! La revedere.",
+          "tr-TR": "Teşekkürler, size de! Hoşça kalın.",
+          "uk-UA": "Дякую, навзаєм! До побачення.",
+          "uz-UZ": "Rahmat, sizga ham! Xayr."
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Vielen Dank, auf Wiedersehen!",
+        "translation": {
+          "ru-RU": "Большое спасибо, до свидания!",
+          "en-US": "Thank you very much, goodbye!",
+          "ar-SA": "شكراً جزيلاً، وداعاً!",
+          "es-ES": "¡Muchas gracias, adiós!",
+          "fr-FR": "Merci beaucoup, au revoir !",
+          "hi-IN": "बहुत-बहुत धन्यवाद, अलविदा!",
+          "pl-PL": "Bardzo dziękuję, do widzenia!",
+          "ro-RO": "Vă mulțumesc mult, la revedere!",
+          "tr-TR": "Çok teşekkür ederim, hoşça kalın!",
+          "uk-UA": "Велике дякую, до побачення!",
+          "uz-UZ": "Katta rahmat, xayr!"
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Auf Wiedersehen! Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "До свидания! Разговор окончен.",
+      "en-US": "Goodbye! The conversation is over.",
+      "ar-SA": "وداعاً! انتهت المحادثة.",
+      "es-ES": "¡Adiós! La conversación ha terminado.",
+      "fr-FR": "Au revoir ! La conversation est terminée.",
+      "hi-IN": "अलविदा! बातचीत खत्म हो गई है।",
+      "pl-PL": "Do widzenia! Rozmowa zakończona.",
+      "ro-RO": "La revedere! Conversația s-a încheiat.",
+      "tr-TR": "Hoşça kalın! Konuşma sona erdi.",
+      "uk-UA": "До побачення! Розмова закінчена.",
+      "uz-UZ": "Xayr! Suhbat yakunlandi."
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

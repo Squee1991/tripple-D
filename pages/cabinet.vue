@@ -69,6 +69,7 @@
                                 :src="authStore.avatarUrl"
                                 alt="image"
                                 class="avatar-current"
+                                :class="currentAvatarEffectClass"
                             />
                             <div v-else class="avatar-placeholder"></div>
                           </div>
@@ -228,10 +229,10 @@
           </div>
         </template>
         <template v-else-if="isRankAvatarLocked">
-          <p class="modal-text" style="font-size: 18px; margin-top: 10px;">{{ rankAvatarsComputed }}</p>
+          <p class="modal__text--computed" style="font-size: 18px; margin-top: 10px;">{{ rankAvatarsComputed }}</p>
           <div class="modal-actions">
             <button class="btn" @click="closePurchaseOk" type="button">
-              Понятно
+              {{ t('cardsShop.accessibly')}}
             </button>
           </div>
         </template>
@@ -338,17 +339,29 @@ const isRankAvatarLocked = computed(() => {
   return purchaseState.value.startsWith('locked_')
 })
 
+
+const currentAvatarEffectClass = computed(() => {
+  const avatar = authStore.avatar;
+  if (!avatar) return '';
+  if (['16.png', '17.png', '18.png'].includes(avatar)) return 'effect-unicorn';
+  if (['19.png', '20.png', '21.png'].includes(avatar)) return 'effect-dragon';
+  if (['22.png', '23.png', '24.png'].includes(avatar)) return 'effect-griffin';
+
+  return '';
+});
+
+
 const rankAvatarsComputed = computed(() => {
   const texts = {
-    'locked_easy_1': "Эта аватарка доступна только за 1-е место в Лёгком марафоне!",
-    'locked_easy_2': "Эта аватарка доступна только за 2-е место в Лёгком марафоне!",
-    'locked_easy_3': "Эта аватарка доступна только за 3-е место в Лёгком марафоне!",
-    'locked_normal_1': "Эта аватарка доступна только за 1-е место в Среднем марафоне!",
-    'locked_normal_2': "Эта аватарка доступна только за 2-е место в Среднем марафоне!",
-    'locked_normal_3': "Эта аватарка доступна только за 3-е место в Среднем марафоне!",
-    'locked_hard_1': "Эта аватарка доступна только за 1-е место в Сложном марафоне!",
-    'locked_hard_2': "Эта аватарка доступна только за 2-е место в Сложном марафоне!",
-    'locked_hard_3': "Эта аватарка доступна только за 3-е место в Сложном марафоне!",
+    'locked_easy_1': t('rankAvatars.locked_easy_1'),
+    'locked_easy_2': t('rankAvatars.locked_easy_2'),
+    'locked_easy_3': t('rankAvatars.locked_easy_3'),
+    'locked_normal_1': t('rankAvatars.locked_normal_1'),
+    'locked_normal_2': t('rankAvatars.locked_normal_2'),
+    'locked_normal_3': t('rankAvatars.locked_normal_3'),
+    'locked_hard_1': t('rankAvatars.locked_hard_1'),
+    'locked_hard_2': t('rankAvatars.locked_hard_2'),
+    'locked_hard_3': t('rankAvatars.locked_hard_3'),
   }
   return texts[purchaseState.value] || ''
 })
@@ -360,11 +373,9 @@ const TAB_ITEMS = computed(() => {
     {key: 'shop', label: t('cabinetSidebar.valueThree'), alt: 'shopIcon', icon: ShoppingCart},
     {key: 'settings', label: t('cabinetSidebar.valueFour'), alt: 'settingsIcon', icon: SettingsIcon}
   ]
-
   if (isMobile.value) {
     return [{key: 'home', label: t('cabinet.main'), alt: 'Home', icon: Home, url: '/'}, ...items]
   }
-
   return items
 })
 
@@ -382,23 +393,24 @@ const ACCOUNT_TABS = computed(() => [
 ])
 
 const activeAvatarTab = ref('regular')
+
 const AVATAR_TABS = computed(() => [
-  {key: 'regular', label: 'Обычные'},
-  {key: 'rank', label: 'Марафонскийе'}
+  {key: 'regular', label: t('typeOfAvatars.usual')},
+  {key: 'rank', label: t('typeOfAvatars.ranked')}
 ])
 
 const activeAvatarTabIndex = computed(() => {
-  return AVATAR_TABS.value.findIndex(t => t.key === activeAvatarTab.value)
+  return AVATAR_TABS.value.findIndex(tab => tab.key === activeAvatarTab.value)
 })
 
 const RANK_AVATAR_FILES = ['16.png', '17.png', '18.png', '19.png', '20.png', '21.png', '22.png', '23.png', '24.png']
 
 const regularAvatars = computed(() => {
-  return authStore.availableAvatars.filter(a => !RANK_AVATAR_FILES.includes(a))
+  return authStore.availableAvatars.filter(avatar => !RANK_AVATAR_FILES.includes(avatar))
 })
 
 const rankAvatars = computed(() => {
-  return authStore.availableAvatars.filter(a => RANK_AVATAR_FILES.includes(a))
+  return authStore.availableAvatars.filter(avatar => RANK_AVATAR_FILES.includes(avatar))
 })
 
 const currentViewAvatars = computed(() => {
@@ -580,6 +592,9 @@ async function confirmPurchase() {
   } else if (status === 'insufficient') {
     purchaseState.value = 'insufficient'
     isPurchaseModalOpen.value = true
+  } else if (status && status.startsWith('locked_')) {
+    purchaseState.value = status
+    isPurchaseModalOpen.value = true
   }
 }
 
@@ -681,6 +696,11 @@ onMounted(async () => {
   font-weight: bold;
   margin-bottom: 5px;
   font-size: 19px;
+}
+
+
+.btn {
+  font-size: 18px;
 }
 
 .back-btn {
@@ -919,7 +939,7 @@ onMounted(async () => {
   border: none;
   box-shadow: 0 5px 0 #c0c2c9;
   border-radius: 50px;
-  padding: 14px 16px;
+  padding: 12px 16px;
   font-weight: 800;
   background: #f3f4f6;
   cursor: pointer;
@@ -1035,17 +1055,20 @@ onMounted(async () => {
   filter: grayscale(1);
 }
 
+.tab__text {
+  padding: 5px 0;
+}
+
 .avatar-price {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  background: #f3f3f3;
-  color: #000;
+  color: var(--titleColor);
   border-radius: 10px;
   padding: 2px 8px;
   font-weight: 900;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .price-icon {
@@ -1151,12 +1174,11 @@ onMounted(async () => {
 }
 
 .avatar-container {
-  width: 86px;
-  height: 86px;
+  width: 96px;
+  height: 96px;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .avatar-current,
@@ -1168,12 +1190,12 @@ onMounted(async () => {
 
 .change-avatar-btn {
   position: absolute;
-  bottom: -5px;
-  right: -8px;
-  width: 32px;
-  height: 32px;
+  bottom: -8px;
+  right: -6px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  padding: 8px;
+  padding: 5px;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -1207,6 +1229,13 @@ onMounted(async () => {
   white-space: nowrap;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 2;
+}
+
+.modal__text--computed {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--titleColor);
+  font-family: Nunito, sans-serif;
 }
 
 .user-info-container {
@@ -1303,6 +1332,37 @@ onMounted(async () => {
   right: 8px;
   height: 4px;
   border-radius: 4px;
+}
+
+.effect-unicorn {
+  border-radius: 50%;
+  outline: 3px solid #da70d6;
+  animation: glow-in-gap-unicorn 1.5s infinite alternate ease-in-out;
+}
+@keyframes glow-in-gap-unicorn {
+  0% { box-shadow: 0 0 0 0px transparent; }
+  100% { box-shadow: 0 0 8px 3px rgba(218, 112, 214, 0.9); }
+}
+
+.effect-dragon {
+  border-radius: 50%;
+  outline: 3px solid #ff8c00;
+  animation: glow-in-gap-dragon 1.5s infinite alternate ease-in-out;
+}
+@keyframes glow-in-gap-dragon {
+  0% { box-shadow: 0 0 0 0px transparent; }
+  100% { box-shadow: 0 0 8px 3px rgba(255, 140, 0, 0.9); }
+}
+
+.effect-griffin {
+  border-radius: 50%;
+  outline: 3px solid #4169e1;
+
+  animation: glow-in-gap-griffin 1.5s infinite alternate ease-in-out;
+}
+@keyframes glow-in-gap-griffin {
+  0% { box-shadow: 0 0 0 0px transparent; }
+  100% { box-shadow: 0 0 8px 3px rgba(65, 105, 225, 0.9); }
 }
 
 </style>

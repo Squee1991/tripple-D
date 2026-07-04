@@ -8,7 +8,7 @@
           <polyline points="12 19 5 12 12 5"></polyline>
         </svg>
       </button>
-      <div class="terms__title">Terms</div>
+      <div class="terms__title"> {{ t('helpCenter.terms')}}</div>
     </div>
     <div class="terms__content">
       <h1>Terms of Service</h1>
@@ -30,17 +30,11 @@
 <script setup>
 import { ref } from "vue"
 import { useRouter } from "vue-router"
-import VBackBtn from "~/src/components/V-back-btn.vue";
-const PROJECT = "Skillupgerman"
 const EMAIL = "skillupgerman@gmail.com"
 const COUNTRY = "Poland"
 const router = useRouter()
-const lastUpdated = ref("01 Januar 2026")
-
-const path = () => {
-  router.push('/')
-}
-
+const lastUpdated = ref("January 1, 2026")
+const { t } = useI18n()
 const sections = ref([
   {
     heading: "1. General",
@@ -65,8 +59,9 @@ const sections = ref([
   {
     heading: "4. Registration and account security",
     paragraphs: [
-      "To access certain features of the Service, you may need to register an account. You agree to provide accurate, current, and complete information during registration and to keep it up to date. You are responsible for maintaining the confidentiality of your login credentials and for all activities that occur under your account.",
-      `You agree to promptly notify Skillupgerman of any unauthorized access to or use of your account. You can contact us at ${EMAIL}. Skillupgerman reserves the right to suspend or terminate account access in case of Terms violations or for security reasons.`
+      "To access certain features, you may register an account using a name (real or pseudonymous) and an email address. You are not required to provide your real name, but you are entirely responsible for providing a valid and accessible email address.",
+      "Account Recovery Warning: If you choose to register with a fake, temporary, or inaccessible email address, YOU ACKNOWLEDGE THAT ACCOUNT RECOVERY WILL BE IMPOSSIBLE if you forget your password. Skillupgerman is not responsible for lost accounts, progress, or active Subscriptions resulting from the use of invalid email addresses.",
+      `You are responsible for maintaining the confidentiality of your login credentials. You agree to promptly notify us of any unauthorized access at ${EMAIL}.`
     ]
   },
   {
@@ -79,9 +74,10 @@ const sections = ref([
   {
     heading: "6. Subscriptions, payment, and renewal",
     paragraphs: [
-      "The Service may be offered free of charge or as a paid subscription (Premium) providing access to extended features and materials. The exact scope of subscription features and its price may vary.",
-      "Subscriptions are offered for a period (for example, monthly or yearly) and generally renew automatically until canceled. If auto-renewal is available in your country and payment system, the subscription fee will be charged at the beginning of each new period. You can cancel auto-renewal before the next billing date in your account interface (if available) or by contacting support.",
-      "We may offer trial periods and promotions. Unless stated otherwise, after the trial period ends, the subscription becomes paid unless you cancel in advance. Refunds are provided in accordance with applicable laws and/or our refund policy (if any). We may notify users of price changes in advance; the new price applies from the next billing cycle."
+      "The Service offers paid subscription plans (Premium). All fees are billed in advance on a recurring cycle (e.g., monthly or annually) and are non-refundable, except as expressly required by applicable law or specific app store policies.",
+      "In-App Purchases (Apple App Store & Google Play): If you purchase a Subscription through a mobile platform, your payment, billing, and any refund requests are handled exclusively by Apple or Google in accordance with their respective terms and conditions. Skillupgerman does not process these payments directly and cannot issue refunds for in-app purchases.",
+      "No-Refund Policy & EU Waiver: For purchases made directly through our website, you expressly agree that Premium access is provided immediately upon purchase. By accessing the Premium content, you acknowledge and agree that you lose your statutory 14-day right of withdrawal under EU consumer law, and ALL SALES ARE FINAL. No refunds or credits will be provided for partially used subscription periods.",
+      "Cancellation: You can cancel your subscription auto-renewal at any time through your Account settings or your Apple/Google subscription management menu. To avoid being charged for the next period, you must cancel at least 24 hours before your current billing cycle ends."
     ]
   },
   {

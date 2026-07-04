@@ -229,7 +229,7 @@ const difficultyBase = ref([
   font-size: 23px;
   font-weight: 900;
   background: #fca13a;
-  color: #1e1e1e;
+  color: white;
   padding: 4px 16px;
   border-radius: 12px;
 }
@@ -254,8 +254,8 @@ const difficultyBase = ref([
   align-items: center;
   padding: 16px 20px;
   border-radius: 20px;
-  border: 3px solid var(--menuBorder);
-  box-shadow: 2px 2px 0 var(--menuBorder);
+  border: 2px solid var(--menuBorder);
+  box-shadow: 0 2px 0 var(--menuBorder);
   cursor: pointer;
   transition: all 0.1s cubic-bezier(0.34, 1.56, 0.64, 1);
   text-align: left;

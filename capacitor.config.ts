@@ -9,10 +9,10 @@ const config: CapacitorConfig = {
     // CapacitorHttp: {
     //   enabled: true,
     // },
-    // server: {
-    //   url: 'http://192.168.178.1:3000',
-    //   cleartext: true
-    // },
+    server: {
+      url: 'http://192.168.178.1:3000',
+      cleartext: true
+    },
     // StatusBar: {
     //   overlaysWebView: true,
     //   style: 'DARK',

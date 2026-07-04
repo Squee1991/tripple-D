@@ -77,7 +77,7 @@ const myAvailableCoupons = computed(() => {
         {
           id: null,
           percent: 0,
-          label: 'Без скидки'
+          label: t('payPage.withoutDiscount')
         })
   }
   if (authStore.premiumDiscount.sale_3) list.push({id: 'sale_3', percent: 3, label: t('cardSales.title3')})
@@ -261,7 +261,7 @@ onUnmounted(() => {
                 <div class="loot-content">
                   <div v-if="coupon.label" class="loot-info">
                     <span class="loot-title">{{ coupon.label }}</span>
-                    <span class="loot-sub">За твою активность</span>
+<!--                    <span class="loot-sub">За твою активность</span>-->
                   </div>
                   <div class="loot-val" v-if="coupon.percent > 0">{{ coupon.percent }}%</div>
                 </div>
@@ -271,12 +271,12 @@ onUnmounted(() => {
         </div>
         <div class="billing-summary">
           <div class="bill-line discount" v-if="selectedDiscountId">
-            <span class="bill-text">Твоя скидка</span>
+            <span class="bill-text">{{ t('payPage.yourSale')}}</span>
             <span
                 class="bill-price-neg">-{{ myAvailableCoupons.find(c => c.id === selectedDiscountId).percent }}%</span>
           </div>
           <div class="bill-total">
-            <span class="total-text">ИТОГО:</span>
+            <span class="total-text">{{ t('payPage.finalePrice')}}</span>
             <span class="total-price">{{ finalPrice }}{{ displayCurrency }}</span>
           </div>
         </div>
@@ -305,7 +305,7 @@ onUnmounted(() => {
   width: 100%;
   top: calc(env(safe-area-inset-top));
   left: 0;
-  background: #10b981;
+  background: #d97706;
   color: #fff;
   padding: 18px 24px;
   font-weight: 800;
@@ -324,7 +324,7 @@ onUnmounted(() => {
   height: 60px;
   left: 0;
   bottom: 100%;
-  background: #10b981;
+  background: #d97706;
   z-index: 1;
 }
 
@@ -382,9 +382,8 @@ onUnmounted(() => {
   cursor: not-allowed;
 }
 
-
 .pro-vault {
-  height: 100vh;
+  height: 100%;
   max-width: 1024px;
   margin: 0 auto;
   background: var(--bg);
@@ -620,7 +619,7 @@ onUnmounted(() => {
 .btn-buy-neon {
   width: 100%;
   padding: 16px 20px;
-  border-radius: 22px;
+  border-radius: 50px;
   border: none;
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: #fff;

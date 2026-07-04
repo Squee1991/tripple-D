@@ -17,8 +17,7 @@
 import FeedBack from "~/src/components/feedBack.vue";
 import { useRouter } from "vue-router";
 import { ref } from "vue";
-import { useI18n } from "vue-i18n"; // Добавил импорт, если его не было
-
+import { useI18n } from "vue-i18n";
 const router = useRouter();
 const { t } = useI18n();
 
@@ -32,6 +31,7 @@ const pathFunction = (pathValue) => {
     router.push(pathValue);
   }
 }
+
 </script>
 
 <style scoped>
@@ -55,7 +55,7 @@ const pathFunction = (pathValue) => {
 .back__btn {
   width: 100%;
   padding: 14px 20px;
-  border-radius: 18px;
+  border-radius: 50px;
   font-family: "Nunito", sans-serif;
   font-size: 1.1rem;
   font-weight: 700;

@@ -149,6 +149,13 @@ const lockedModalContent = ref({title: '', text: ''})
 const toggleForceUpdateKey = ref(0)
 const soundEnabled = ref(false)
 
+
+const servicePaths = computed(()=> [
+  {id: 'Privacy', label: t('helpCenter.privacy'), path: '/privacy'},
+  {id: 'FAQ', label: t('helpCenter.faq'), path: '/faq'},
+  {id: 'terms', label: t('helpCenter.terms'), path: '/terms'}
+])
+
 const THEMES = computed(() => {
   return {
     light: t('themeModal.light'),
@@ -218,12 +225,6 @@ const handleThemeSelection = (key) => {
   }
   colorMode.preference = key
 }
-
-const servicePaths = [
-  {id: 'Privacy', label: 'Privacy Policy', path: '/privacy'},
-  {id: 'FAQ', label: 'FAQ', path: '/faq'},
-  {id: 'terms', label: 'Terms of Service', path: '/terms'}
-]
 
 const getSettingValue = (key) => {
   if (key === 'sound') return soundEnabled.value
@@ -520,8 +521,8 @@ onMounted(async () => {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 12px;
-  border-radius: 20px;
+  padding: 10px;
+  border-radius: 50px;
   cursor: pointer;
   transition: all 0.1s ease;
   color: #ffffff;
@@ -529,7 +530,7 @@ onMounted(async () => {
 
 .btn-success {
   background: #22c55e;
-  border: 3px solid #16a34a;
+  border: none;
   box-shadow: 0 6px 0 #15803d;
 }
 
@@ -540,7 +541,7 @@ onMounted(async () => {
 
 .btn-primary {
   background: #3b82f6;
-  border: 3px solid #2563eb;
+  border: none;
   box-shadow: 0 6px 0 #1d4ed8;
 }
 

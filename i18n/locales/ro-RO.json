@@ -3952,23 +3952,23 @@
     "text": "Ascunde"
   },
   "payPage": {
+    "sale5": "3% reducere",
+    "sale10": "6% reducere",
+    "sale15": "15% reducere",
+    "finalePrice": "TOTAL:",
+    "yourSale": "Reducerea ta",
     "title": "Obține maximum de la platformă",
     "description": "Învățare, recompense, sarcini, progres și multe altele!",
     "compareLabelOne": "Funcții",
     "compareLabelTwo": "Gratuit",
     "compareLabelThree": "Abonament",
-    "getPremiumBtn": "Achiziționează abonament",
-    "month": "lun.",
-    "featureOne": "Material de studiu",
-    "featureTwo": "Salvarea progresului",
-    "featureThree": "Realizări",
-    "featureFour": "Sarcini zilnice",
-    "featureFive": "Evenimente sezoniere",
-    "featureSix": "Obținerea recompenselor",
-    "featureSeven": "Teste cu verificare prin IA",
-    "featureEight": "Pronunție audio",
-    "featureNine": "Dueluri și clasament",
-    "featureTen": "Funcții viitoare"
+    "getPremiumBtn": "Obține",
+    "month": "luni",
+    "featureOne": "Învățare fără limite",
+    "featureTwo": "Funcții viitoare",
+    "featureThree": "Suport pentru dezvoltatori",
+    "featureFour": "Fără reclame",
+    "withoutDiscount": "Fără reducere"
   },
   "useHeadApp": {
     "title": "Skillupgerman — Învață germana ușor și interesant prin joc",
@@ -4111,25 +4111,29 @@
     "send": "Trimite mesaj"
   },
   "howToUse": {
-    "title": "Cum se utilizează",
+    "title": "Cum se folosește",
     "questOne": "Cum încep învățarea?",
-    "answerOne": "Pentru a începe practica limbii germane, este suficient să te înregistrezi și să îți creezi un cont. Fără acesta, accesul la sarcini va fi restricționat.",
+    "answerOne": "Pentru a începe să practici germana, este suficient să te înregistrezi și să îți creezi un cont. Fără acesta, accesul la sarcini va fi blocat.",
     "questTwo": "Ce sunt evenimentele sezoniere?",
-    "answerTwo": "Evenimentele sezoniere sunt evenimente temporare organizate cu ocazia sărbătorilor. În cadrul acestora apar misiuni speciale, sarcini tematice și recompense unice, disponibile doar pentru o perioadă limitată.",
+    "answerTwo": "Evenimentele sezoniere sunt activități temporare dedicate sărbătorilor. În cadrul acestora apar quest-uri speciale, sarcini tematice și recompense unice, disponibile doar pentru o perioadă limitată de timp.",
     "questThree": "Ce este o realizare?",
-    "answerThree": "O realizare este un marcaj pentru o activitate finalizată (progres, răspunsuri corecte, sarcini zilnice etc.).",
+    "answerThree": "O realizare (achievement) este un marcaj primit pentru o activitate îndeplinită (progres, răspunsuri corecte, sarcini zilnice etc.).",
     "questFour": "Ce sunt recompensele?",
-    "answerFour": "Recompensele sunt acordate pentru îndeplinirea anumitor realizări și sunt afișate în cabinetul tău personal.",
-    "questFive": "Unde pot vedea progresul la articole?",
-    "answerFive": "Pe pagina principală, în „Panoul participantului”, alege „Statistici”, apoi progresul categoriei care te interesează. Important: dacă nu ai teme active la articole, statisticile nu vor fi afișate.",
-    "questSix": "Ce este un Articluș?",
-    "answerSix": "Articlușul este moneda internă. Se acordă pentru răspunsurile corecte în sarcina „Practica articolelor” și pentru finalizarea sarcinilor în Ținuturile Lingvistice. Poate fi cheltuit pe încercări suplimentare.",
+    "answerFour": "Recompensele sunt acordate pentru îndeplinirea anumitor realizări și sunt afișate în panoul contului tău personal.",
+    "questFive": "Unde pot vedea progresul pentru articole?",
+    "answerFive": "Pe pagina principală, în „Panoul de membru”, selectează „Statistici”, apoi progresul categoriei care te interesează. Important: dacă nu ai teme active la articole, statisticile nu se vor afișa.",
+    "questSix": "Ce este Articlus?",
+    "answerSix": "Articlus este moneda internă a platformei. Se acordă pentru răspunsurile corecte din cadrul exercițiului „Practica articolelor” și pentru îndeplinirea sarcinilor în Ținuturile Lingvistice. Poate fi cheltuită pe încercări suplimentare.",
     "questSeven": "Cum ajung în clasament?",
-    "answerSeven": "Trebuie să obții cel puțin nivelul 2 jucând în modul „Practica articolelor” sau „Ținuturi lingvistice”. După aceea, tabelul de clasament va deveni disponibil.",
+    "answerSeven": "Clasamentul maratonului de articole se actualizează o dată la două săptămâni. Timp de două săptămâni concurezi cu ceilalți participanți. După finalizarea maratonului, primele trei locuri primesc realizări și recompense!",
     "questEight": "Ce sunt sarcinile zilnice?",
-    "answerEight": "Acestea sunt sarcini tematice care pot fi efectuate o dată pe zi. Se pot finaliza 3 sarcini pe zi. Sunt disponibile pe pagina principală.",
+    "answerEight": "Acestea sunt sarcini pe teme specifice care pot fi efectuate o singură dată pe zi. Se pot finaliza 3 sarcini pe zi. Ele sunt accesibile pe pagina principală.",
     "questNine": "Ce sunt evenimentele?",
-    "answerNine": "Evenimente temporare care au loc o dată pe an. În perioada activă, se deschid sarcini și recompense tematice. În afara acestui interval, secțiunea este indisponibilă. Datele de desfășurare pot fi consultate în „Calendarul evenimentelor” din Panoul participantului."
+    "answerNine": "Evenimente temporare care au loc o singură dată pe an. În perioada activă se deschid sarcini și recompense tematice. În afara intervalului de date, secțiunea este inaccesibilă. Datele de desfășurare pot fi consultate în „Calendarul de evenimente” din Panoul de membru.",
+    "questTen": "Ce sunt tocile (pălăriile de absolvent)?",
+    "answerTen": "Tocile sunt pălării academice care se oferă pentru îndeplinirea sarcinilor zilnice. Datorită lor se obțin bonusuri de rang și reduceri la cursuri. Neîndeplinirea sarcinilor zilnice atrage o penalizare.",
+    "questEleven": "Există penalizări la pălării?",
+    "answerEleven": "Da, pentru neîndeplinirea sarcinilor zilnice este prevăzută o penalizare (3 pălării). Efectuează cel puțin o sarcină zilnică și penalizarea nu se va aplica. În caz de absență, poți cumpăra o „înghețare a timpului” din magazinul intern; aceasta va împiedica sistemul de penalizări să îți scadă pălăriile!"
   },
   "accountManagement": {
     "title": "Gestionarea contului",
@@ -4141,22 +4145,23 @@
     "answerThree": "În formularul de autentificare, selectează „Ai uitat parola?” și urmează instrucțiunile. Un e-mail cu un link de recuperare va fi trimis la adresa indicată la înregistrare. Important: folosește o adresă de e-mail reală la înregistrare."
   },
   "subscribe": {
-    "title": "Abonament (Premium)",
-    "questOne": "Ce oferă abonamentul Premium?",
-    "questOneStepOne": "1 Pronunție audio pentru toate cuvintele și propozițiile — exersează percepția auditivă.",
+    "title": "Abonament (Plus)",
+    "questOne": "Ce oferă abonamentul Plus?",
+    "questOneStepOne": "1 Audio pentru toate cuvintele și propozițiile — antrenează-ți înțelegerea după auz.",
     "questOneStepTwo": "2 Învățare fără limite — parcurge orice cantitate de material pe zi.",
-    "questOneStepThree": "3 Acces la toate testele cu auto-verificare și evaluare prin IA.",
-    "questOneStepFour": "4 Sarcini audio și de vorbire pentru exersarea limbajului oral.",
-    "questOneStepFive": "5 Materiale și exerciții exclusive, indisponibile în versiunea gratuită.",
-    "questOneStepSix": "6 Susținerea dezvoltatorilor — premium ne ajută să dezvoltăm proiectul, să lansăm noi sarcini și să îmbunătățim funcționalitățile pentru toți elevii. Scopul nostru este să facem studiul germanei accesibil și captivant. Creăm o atmosferă interactivă, de joc și competiție, astfel încât studiul să fie o aventură în care să vrei să te întorci în fiecare zi!",
-    "questTwo": "Cum dezactivez Premium?",
+    "questOneStepThree": "3 Acces la toate testele cu verificare automată și evaluare prin IA.",
+    "questOneStepFour": "4 Sarcini audio și exerciții de vorbire pentru antrenarea exprimării orale.",
+    "questOneStepFive": "5 Materiale și exerciții exclusive, care nu sunt de nivel gratuit.",
+    "questOneStepSix": "6 Suport para dezvoltatori — acest lucru ne ajută să dezvoltăm proiectul, să lansăm sarcini noi și să îmbunătățim funcționalitățile pentru toți elevii. Scopul nostru este să facem învățarea limbii germane accesibilă și, mai ales, captivantă. Creăm o atmosferă interactivă, plină de jocuri și competiții, astfel încât studiul să fie o aventură în care vrei să te întorci în fiecare zi!",
+    "questTwo": "Cum se anulează Plus?",
     "questTwoStepOne": "Conectează-te la contul tău.",
-    "questTwoStepTwo": "Mergi la secțiunea „Cabinet”.",
-    "questTwoStepThree": "Deschide subsecțiunea „Gestionarea contului”.",
-    "questTwoStepFour": "Apasă pe „Anulează abonamentul”.",
-    "note": "După aceasta, accesul va rămâne activ până la sfârșitul perioadei achitate.",
-    "questThree": "Există rambursare pentru zilele rămase?",
-    "answerThree": "În prezent, nu este prevăzută rambursarea pentru zilele rămase."
+    "questTwoStepTwo": "Mergi la secțiunea „Panou”.",
+    "questTwoStepThree": "Mergi la secțiunea „Setări”.",
+    "questTwoStepFour": "Deschide subsecțiunea „Gestionarea contului”.",
+    "questTwoStepFive": "Apasă pe „Anulare abonament”.",
+    "note": "După anulare, accesul se va păstra până la sfârșitul perioadei achitate. Important: abonamentul trebuie anulat pe aceeași platformă unde a fost plătit (în aplicația de pe iOS, Android sau pe site).",
+    "questThree": "Se pot restitui banii pentru zilele rămase?",
+    "answerThree": "Nu este prevăzută restituirea banilor pentru zilele rămase."
   },
   "daily": {
     "first": "Învață 5 cuvinte în toate modurile: Practica articolelor",
@@ -8292,7 +8297,8 @@
     "guessed": "Cuvântul misterios a fost:",
     "tryAgain": "Încearcă din nou",
     "btnToMain": "Spre pagina principală",
-    "placeholder": "Introdu cuvântul întreg"
+    "placeholder": "Introdu cuvântul întreg",
+    "wrong": "Incorect! Corect:"
   },
   "preposition": {
     "title": "Totul despre prepozițiile germane",
@@ -10221,7 +10227,18 @@
     "oil_change": "Schimb de ulei",
     "car_buying": "Cumpărarea unei mașini",
     "police_control": "Depășirea vitezei",
-    "gas_station": "Benzinărie"
+    "gas_station": "Benzinărie",
+    "buying_fruit": "Cumpărarea fructelor",
+    "bakery": "Brutărie",
+    "complaint": "Reclamație la restaurant",
+    "bus_stop": "Stație de autobuz",
+    "buying_glasses": "Optică",
+    "emergency_call": "Apel de urgență",
+    "first_day": "Ziua de inițiere / Prima zi",
+    "client_talk": "Discuție cu un client",
+    "car_rental": "Închiriere auto",
+    "ask_road": "Întrebarea despre drum",
+    "hotel_issue": "Problemă la hotel"
   },
   "speakIndexPage": {
     "title": "Practică de vorbire",
@@ -10333,17 +10350,6 @@
   "guessArticle": {
     "correct": "Corect",
     "incorrect": "Incorect, corect este"
-  },
-  "payPage": {
-    "featureOne": "Învățare fără frontiere",
-    "featureTwo": "Funcții viitoare",
-    "featureThree": "Suport pentru dezvoltatori",
-    "featureFour": "Fără reclame",
-    "sale5": "3% reducere",
-    "sale10": "6% reducere",
-    "sale15": "15% reducere",
-    "finalePrice": "TOTAL:",
-    "yourSale": "Reducerea ta"
   },
   "stripeCancel": {
     "cancelSub": "Anulare abonament",
@@ -10518,5 +10524,56 @@
     "days": "z",
     "hours": "h",
     "mins": "min"
+  },
+  "headUp": {
+    "audioTasks": "En az bir cevap seçeneği seçmelisiniz",
+    "speakTasks": "Se pot folosi doar opțiunile sugerate."
+  },
+  "helpCenter": {
+    "privacy": "Politica de confidențialitate",
+    "faq": "Întrebări frecvente (FAQ)",
+    "terms": "Termeni și condiții"
+  },
+  "rankAvatars": {
+    "locked_easy_1": "Acest avatar se oferă pentru locul 1 în Maratonul Articolelor (modul ușor).",
+    "locked_easy_2": "Acest avatar se oferă pentru locul 2 în Maratonul Articolelor (modul ușor).",
+    "locked_easy_3": "Acest avatar se oferă pentru locul 3 în Maratonul Articolelor (modul ușor).",
+    "locked_normal_1": "Acest avatar se oferă pentru locul 1 în Maratonul Articolelor (modul normal).",
+    "locked_normal_2": "Acest avatar se oferă pentru locul 2 în Maratonul Articolelor (modul normal).",
+    "locked_normal_3": "Acest avatar se oferă pentru locul 3 în Maratonul Articolelor (modul normal).",
+    "locked_hard_1": "Acest avatar se oferă pentru locul 1 în Maratonul Articolelor (modul dificil).",
+    "locked_hard_2": "Acest avatar se oferă pentru locul 2 în Maratonul Articolelor (modul dificil).",
+    "locked_hard_3": "Acest avatar se oferă pentru locul 3 în Maratonul Articolelor (modul dificil)."
+  },
+  "typeOfAvatars": {
+    "usual": "Obișnuite",
+    "ranked": "Premii"
+  },
+  "marathonEasy": {
+    "title": "Maratonul Articolelor Nivel Ușor",
+    "easyOneName": "Practicant Triumfător",
+    "easyOneDescription": "Ocupă primul loc în clasamentul maratonului de articole (Modul ușor)",
+    "easyTwoName": "Pretendent Demn",
+    "easyTwoDescription": "Ocupă locul doi în clasamentul maratonului de articole (Modul ușor)",
+    "easyThreeName": "Stagiar al Articolelor",
+    "easyThreeDescription": "Ocupă locul trei în clasamentul maratonului de articole (Modul ușor)"
+  },
+  "marathonNormal": {
+    "title": "Maratonul Articolelor Nivel Mediu",
+    "normalOneName": "Magistru al Articolelor",
+    "normalOneDescription": "Ocupă primul loc în clasamentul maratonului de articole (Modul mediu)",
+    "normalTwoName": "Cuceritorul Maratonului",
+    "normalTwoDescription": "Ocupă locul doi în clasamentul maratonului de articole (Modul mediu)",
+    "normalThreeName": "Cunoscător de Cuvinte",
+    "normalThreeDescription": "Ocupă locul trei în clasamentul maratonului de articole (Modul mediu)"
+  },
+  "marathonHard": {
+    "title": "Maratonul Articolelor Nivel Dificil",
+    "normalOneName": "Împărat al Articolelor",
+    "normalOneDescription": "Ocupă primul loc în clasamentul maratonului de articole (Modul dificil)",
+    "normalTwoName": "Legenda Maratonului",
+    "normalTwoDescription": "Ocupă locul doi în clasamentul maratonului de articole (Modul dificil)",
+    "normalThreeName": "Adept al Maratonului",
+    "normalThreeDescription": "Ocupă locul trei în clasamentul maratonului de articole (Modul dificil)"
   }
 }

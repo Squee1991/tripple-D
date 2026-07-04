@@ -3948,23 +3948,23 @@
     "text": "Masquer"
   },
   "payPage": {
-    "title": "Profite au maximum de la plateforme",
-    "description": "Apprentissage, récompenses, missions, progression et bien plus encore !",
-    "compareLabelOne": "Fonctions",
+    "sale5": "3% de réduction",
+    "sale10": "6% de réduction",
+    "sale15": "15% de réduction",
+    "finalePrice": "TOTAL :",
+    "yourSale": "Votre réduction",
+    "title": "Tirez le meilleur parti de la plateforme",
+    "description": "Apprentissage, récompenses, tâches, progression et bien plus encore !",
+    "compareLabelOne": "Fonctionnalités",
     "compareLabelTwo": "Gratuit",
     "compareLabelThree": "Abonnement",
-    "getPremiumBtn": "S'abonner",
+    "getPremiumBtn": "Obtenir",
     "month": "mois",
-    "featureOne": "Matériel pédagogique",
-    "featureTwo": "Sauvegarde de la progression",
-    "featureThree": "Succès",
-    "featureFour": "Missions quotidiennes",
-    "featureFive": "Événements saisonniers",
-    "featureSix": "Obtention de récompenses",
-    "featureSeven": "Tests avec vérification IA",
-    "featureEight": "Audio (voix off)",
-    "featureNine": "Duels et classement",
-    "featureTen": "Futures fonctionnalités"
+    "featureOne": "Apprentissage sans limites",
+    "featureTwo": "Futures fonctionnalités",
+    "featureThree": "Soutien aux développeurs",
+    "featureFour": "Sans publicité",
+    "withoutDiscount": "Sans réduction"
   },
   "useHeadApp": {
     "title": "Skillupgerman — Apprendre l'allemand facilement et par le jeu",
@@ -4107,25 +4107,29 @@
     "send": "Envoyer le message"
   },
   "howToUse": {
-    "title": "Mode d'emploi",
-    "questOne": "Comment commencer ?",
-    "answerOne": "Pour commencer à pratiquer, il suffit de s'inscrire et de créer un compte. Sans cela, l'accès aux missions sera restreint.",
+    "title": "Comment utiliser",
+    "questOne": "Comment commencer l'apprentissage ?",
+    "answerOne": "Pour commencer à pratiquer l'allemand, il vous suffit de vous inscrire et de créer un compte. Sans cela, l'accès aux exercices restera verrouillé.",
     "questTwo": "Que sont les événements saisonniers ?",
-    "answerTwo": "Ce sont des événements temporaires liés aux fêtes. Ils proposent des quêtes spéciales, des missions thématiques et des récompenses uniques disponibles uniquement pendant une durée limitée.",
+    "answerTwo": "Les événements saisonniers sont des activités temporaires organisées à l'occasion des fêtes. Ils proposent des quêtes spéciales, des tâches thématiques et des récompenses uniques qui ne sont disponibles que pour une durée limitée.",
     "questThree": "Qu'est-ce qu'un succès ?",
-    "answerThree": "Un succès est une distinction pour une activité accomplie (progression, bonnes réponses, missions quotidiennes, etc.).",
+    "answerThree": "Un succès est une marque récompensant une activité accomplie (progression, bonnes réponses, tâches quotidiennes, etc.).",
     "questFour": "Que sont les récompenses ?",
-    "answerFour": "Les récompenses sont attribuées pour certains succès et s'affichent dans votre espace personnel.",
+    "answerFour": "Les récompenses sont attribuées lorsque vous validez certains succès et s'affichent dans votre espace personnel.",
     "questFive": "Où voir ma progression sur les articles ?",
-    "answerFive": "Sur la page d'accueil, dans le « Panneau du membre », choisissez « Statistiques », puis la catégorie souhaitée. Important : si vous n'avez pas de thèmes actifs sur les articles, les statistiques ne s'afficheront pas.",
-    "questSix": "Qu'est-ce qu'un Articlyus ?",
-    "answerSix": "L'Articlyus est la monnaie interne. On en gagne pour les bonnes réponses dans « Pratique des articles » et les « Terres linguistiques ». On peut les dépenser pour obtenir des essais supplémentaires.",
-    "questSeven": "Comment apparaître dans le classement ?",
-    "answerSeven": "Vous devez atteindre au moins le niveau 2 en jouant au mode « Pratique des articles » ou « Terres linguistiques ». Le tableau de classement sera alors accessible.",
-    "questEight": "Que sont les missions quotidiennes ?",
-    "answerEight": "Ce sont des missions thématiques réalisables une fois par jour. Vous pouvez en faire 3 par jour. Elles sont disponibles sur la page d'accueil.",
+    "answerFive": "Sur la page d'accueil, dans le « Tableau de bord du membre », sélectionnez « Statistiques », puis la progression de la catégorie qui vous intéresse. Attention : si vous n'avez pas de thèmes actifs sur les articles, les statistiques ne s'afficheront pas.",
+    "questSix": "Qu'est-ce que l'Articlus ?",
+    "answerSix": "L'Articlus est la monnaie interne de la plateforme. Il est attribué pour les bonnes réponses dans l'exercice « Pratique des articles » et pour l'accomplissement des tâches dans les Terres Linguistiques. Vous pouvez le dépenser pour obtenir des tentatives supplémentaires.",
+    "questSeven": "Comment figurer dans le classement ?",
+    "answerSeven": "Le classement du marathon des articles est mis à jour une fois toutes les deux semaines. Pendant deux semaines, vous affrontez les autres participants. À la fin du marathon, les trois premières places reçoivent des succès et des récompenses !",
+    "questEight": "Que sont les tâches quotidiennes ?",
+    "answerEight": "Ce sont des exercices thématiques que vous pouvez effectuer une fois par jour. Vous pouvez accomplir 3 tâches par jour. Elles sont accessibles sur la page d'accueil.",
     "questNine": "Que sont les événements ?",
-    "answerNine": "Des événements temporaires qui ont lieu une fois par an. Pendant la période active, des missions et récompenses thématiques sont ouvertes. Les dates sont consultables dans le « Calendrier des événements »."
+    "answerNine": "Des événements temporaires qui ont lieu une fois par an. Pendant la période d'activité, des tâches et des récompenses thématiques s'ouvrent. En dehors de ces dates, la section n'est pas accessible. Vous pouvez consulter les dates dans le « Calendrier des événements » sur le Tableau de bord.",
+    "questTen": "Que sont les mortiers ?",
+    "answerTen": "Les mortiers sont des toques universitaires décernées lorsque vous accomplissez les tâches quotidiennes. Ils permettent d'obtenir des bonus de titre et des réductions sur l'apprentissage. Le non-respect des tâches quotidiennes entraîne une pénalité.",
+    "questEleven": "Y a-t-il une pénalité sur les mortiers ?",
+    "answerEleven": "Oui, le non-accomplissement des tâches quotidiennes entraîne une pénalité (3 mortiers). Effectuez au moins une tâche quotidienne pour éviter la pénalité. En cas d'absence, vous pouvez acheter un gel du temps dans la boutique interne, ce qui empêchera la pénalité de déduire vos toques !"
   },
   "accountManagement": {
     "title": "Gestion du compte",
@@ -4137,22 +4141,23 @@
     "answerThree": "Sur la page de connexion, cliquez sur « Mot de passe oublié ? » et suivez les instructions. Un lien de réinitialisation sera envoyé à votre adresse e-mail. Important : utilisez un e-mail réel lors de l'inscription."
   },
   "subscribe": {
-    "title": "Abonnement (Premium)",
-    "questOne": "Qu'apporte l'abonnement Premium ?",
-    "questOneStepOne": "1 Audio pour tous les mots et phrases — entraînez votre écoute.",
-    "questOneStepTwo": "2 Apprentissage illimité — parcourez autant de matériel que vous voulez par jour.",
-    "questOneStepThree": "3 Accès à tous les tests avec correction et évaluation par IA.",
+    "title": "Abonnement (Plus)",
+    "questOne": "Que permet l'abonnement Plus ?",
+    "questOneStepOne": "1 Audio pour tous les mots et phrases — entraînez votre compréhension orale.",
+    "questOneStepTwo": "2 Apprentissage illimité — parcourez autant de contenu que vous le souhaitez par jour.",
+    "questOneStepThree": "3 Accès à tous les tests avec vérification automatique et évaluation par IA.",
     "questOneStepFour": "4 Exercices audio et de diction pour pratiquer l'expression orale.",
-    "questOneStepFive": "5 Contenus et exercices exclusifs non disponibles dans la version gratuite.",
-    "questOneStepSix": "6 Soutien aux développeurs — le premium nous aide à développer le projet, créer de nouvelles missions et améliorer les fonctionnalités. Notre but est de rendre l'allemand accessible et captivant !",
-    "questTwo": "Comment résilier le Premium ?",
+    "questOneStepFive": "5 Contenus et exercices exclusifs, non disponibles dans la version gratuite.",
+    "questOneStepSix": "6 Soutien aux développeurs — cela nous aide à développer le projet, à publier de nouveaux exercices et à améliorer les fonctionnalités pour tous les apprenants. Notre but est de rendre l'apprentissage de l'allemand accessible et, surtout, passionnant. Nous créons une atmosphère d'interaction, de jeux et de compétitions pour que l'étude devienne une aventure dans laquelle on a envie de se replonger chaque jour !",
+    "questTwo": "Comment annuler l'abonnement Plus ?",
     "questTwoStepOne": "Connectez-vous à votre compte.",
-    "questTwoStepTwo": "Allez dans l'espace « Cabinet ».",
-    "questTwoStepThree": "Ouvrez « Gestion du compte ».",
-    "questTwoStepFour": "Cliquez sur « Annuler l'abonnement ».",
-    "note": "L'accès restera actif jusqu'à la fin de la période déjà payée.",
+    "questTwoStepTwo": "Allez dans la section « Espace personnel ».",
+    "questTwoStepThree": "Allez dans la section « Paramètres ».",
+    "questTwoStepFour": "Ouvrez la sous-section « Gestion du compte ».",
+    "questTwoStepFive": "Cliquez sur « Annuler l'abonnement ».",
+    "note": "Après l'annulation, votre accès reste actif jusqu'à la fin de la période payée. Important : l'abonnement doit être annulé sur la même plateforme où il a été payé (dans l'application sur iOS, Android ou sur le site web).",
     "questThree": "Y a-t-il un remboursement pour les jours restants ?",
-    "answerThree": "Non, le remboursement des jours restants n'est pas prévu pour le moment."
+    "answerThree": "Aucun remboursement pour les jours restants n'est prévu."
   },
   "daily": {
     "first": "Apprends 5 mots dans tous les modes : Pratique des articles",
@@ -8288,7 +8293,8 @@
     "guessed": "Le mot était :",
     "tryAgain": "Réessayer",
     "btnToMain": "Accueil",
-    "placeholder": "Entrez le mot complet"
+    "placeholder": "Entrez le mot complet",
+    "wrong": "Incorrect ! Correct :"
   },
   "preposition": {
     "title": "Tout sur les prépositions allemandes",
@@ -10217,7 +10223,18 @@
     "oil_change": "Vidange d'huile",
     "car_buying": "Achat d'une voiture",
     "police_control": "Excès de vitesse",
-    "gas_station": "Station-service"
+    "gas_station": "Station-service",
+    "buying_fruit": "Acheter des fruits",
+    "bakery": "Boulangerie",
+    "complaint": "Réclamation au restaurant",
+    "bus_stop": "Arrêt de bus",
+    "buying_glasses": "Opticien",
+    "emergency_call": "Appel d'urgence",
+    "first_day": "Journée d'intégration / Premier jour",
+    "client_talk": "Discussion avec un client",
+    "car_rental": "Location de voiture",
+    "ask_road": "Demander son chemin",
+    "hotel_issue": "Problème à l'hôtel"
   },
   "speakIndexPage": {
     "title": "Pratique orale",
@@ -10329,17 +10346,6 @@
   "guessArticle": {
     "correct": "Correct",
     "incorrect": "Incorrect, la réponse correcte est"
-  },
-  "payPage": {
-    "featureOne": "Apprentissage sans frontières",
-    "featureTwo": "Futures fonctionnalités",
-    "featureThree": "Soutien aux développeurs",
-    "featureFour": "Sans publicité",
-    "sale5": "3% de réduction",
-    "sale10": "6% de réduction",
-    "sale15": "15% de réduction",
-    "finalePrice": "TOTAL :",
-    "yourSale": "Votre réduction"
   },
   "stripeCancel": {
     "cancelSub": "Résilier l'abonnement",
@@ -10514,5 +10520,56 @@
     "days": "j",
     "hours": "h",
     "mins": "min"
+  },
+  "headUp": {
+    "audioTasks": "Debes seleccionar al menos una opción de respuesta",
+    "speakTasks": "Seules les options proposées peuvent être utilisées."
+  },
+  "helpCenter": {
+    "privacy": "Politique de confidentialité",
+    "faq": "Foire aux questions",
+    "terms": "Conditions d'utilisation"
+  },
+  "rankAvatars": {
+    "locked_easy_1": "Cet avatar est attribué pour la 1re place au Marathon des Articles (mode facile).",
+    "locked_easy_2": "Cet avatar est attribué pour la 2e place au Marathon des Articles (mode facile).",
+    "locked_easy_3": "Cet avatar est attribué pour la 3e place au Marathon des Articles (mode facile).",
+    "locked_normal_1": "Cet avatar est attribué pour la 1re place au Marathon des Articles (mode normal).",
+    "locked_normal_2": "Cet avatar est attribué pour la 2e place au Marathon des Articles (mode normal).",
+    "locked_normal_3": "Cet avatar est attribué pour la 3e place au Marathon des Articles (mode normal).",
+    "locked_hard_1": "Cet avatar est attribué pour la 1re place au Marathon des Articles (mode difficile).",
+    "locked_hard_2": "Cet avatar est attribué pour la 2e place au Marathon des Articles (mode difficile).",
+    "locked_hard_3": "Cet avatar est attribué pour la 3e place au Marathon des Articles (mode difficile)."
+  },
+  "typeOfAvatars": {
+    "usual": "Classiques",
+    "ranked": "Récompenses"
+  },
+  "marathonEasy": {
+    "title": "Marathon des Articles Niveau Facile",
+    "easyOneName": "Stagiaire Triomphant",
+    "easyOneDescription": "Prenez la première place du classement du marathon des articles (Mode facile)",
+    "easyTwoName": "Digne Prétendant",
+    "easyTwoDescription": "Prenez la deuxième place du classement du marathon des articles (Mode facile)",
+    "easyThreeName": "Apprenti des Articles",
+    "easyThreeDescription": "Prenez la troisième place du classement du marathon des articles (Mode facile)"
+  },
+  "marathonNormal": {
+    "title": "Marathon des Articles Niveau Moyen",
+    "normalOneName": "Maître des Articles",
+    "normalOneDescription": "Prenez la première place du classement du marathon des articles (Mode normal)",
+    "normalTwoName": "Conquérant du Marathon",
+    "normalTwoDescription": "Prenez la deuxième place du classement du marathon des articles (Mode normal)",
+    "normalThreeName": "Connaisseur des Mots",
+    "normalThreeDescription": "Prenez la troisième place du classement du marathon des articles (Mode normal)"
+  },
+  "marathonHard": {
+    "title": "Marathon des Articles Niveau Difficile",
+    "normalOneName": "Empereur des Articles",
+    "normalOneDescription": "Prenez la première place du classement du marathon des articles (Mode difficile)",
+    "normalTwoName": "Légende du Marathon",
+    "normalTwoDescription": "Prenez la deuxième place du classement du marathon des articles (Mode difficile)",
+    "normalThreeName": "Adepte du Marathon",
+    "normalThreeDescription": "Prenez la troisième place du classement du marathon des articles (Mode difficile)"
   }
 }

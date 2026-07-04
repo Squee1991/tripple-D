@@ -3950,23 +3950,23 @@
     "text": "Yashirish"
   },
   "payPage": {
-    "title": "Platformadan maksimal foyda oling",
-    "description": "O‘qish, mukofotlar, topshiriqlar, progress va yana ko‘p narsalar!",
-    "compareLabelOne": "Xususiyatlar",
+    "sale5": "3% chegirma",
+    "sale10": "6% chegirma",
+    "sale15": "15% chegirma",
+    "finalePrice": "JAMI:",
+    "yourSale": "Sizning chegirmangiz",
+    "title": "Platformadan maksimal darajada foydalaning",
+    "description": "Ta'lim, mukofotlar, topshiriqlar, progress va ko'plab boshqa narsalar!",
+    "compareLabelOne": "Funksiyalar",
     "compareLabelTwo": "Bepul",
     "compareLabelThree": "Obuna",
-    "getPremiumBtn": "Obuna sotib olish",
+    "getPremiumBtn": "Olish",
     "month": "oy",
-    "featureOne": "O‘quv materiallari",
-    "featureTwo": "Progressni saqlash",
-    "featureThree": "Yutuqlar",
-    "featureFour": "Kundalik topshiriqlar",
-    "featureFive": "Mavsumiy tadbirlar",
-    "featureSix": "Mukofotlarni olish",
-    "featureSeven": "AI tekshirgan testlar",
-    "featureEight": "Ovozli o‘qish",
-    "featureNine": "Duellar va reyting",
-    "featureTen": "Kelajakdagi funksiyalar"
+    "featureOne": "Chegarasiz ta'lim",
+    "featureTwo": "Kelgusi funksiyalar",
+    "featureThree": "Dasturchilarni qo'llab-quvvatlash",
+    "featureFour": "Reklamasiz",
+    "withoutDiscount": "Chegirmasiz"
   },
   "useHeadApp": {
     "title": "Skillupgerman — Nemis tilini o‘rganish oson va qiziqarli",
@@ -4109,25 +4109,29 @@
     "send": "Xabar yuborish"
   },
   "howToUse": {
-    "title": "Qanday foydalanish",
-    "questOne": "Qanday qilib o‘qishni boshlash mumkin?",
-    "answerOne": "Nemis tilini mashq qilishni boshlash uchun ro‘yxatdan o‘tib, akkaunt yaratish kifoya. Bunsiz topshiriqlarga kirish yopiladi.",
-    "questTwo": "Mavsumiy voqealar nima?",
-    "answerTwo": "Mavsumiy voqealar — bu bayramlarga bag‘ishlangan vaqtinchalik tadbirlar. Ularda maxsus kvestlar, mavzuli topshiriqlar va faqat cheklangan muddat davomida mavjud bo‘lgan mukofotlar paydo bo‘ladi.",
-    "questThree": "Yutuq nima?",
-    "answerThree": "Yutuq — bu bajarilgan faoliyat (progress, to‘g‘ri javoblar, kunlik topshiriqlar va hokazo) uchun beriladigan belgidir.",
+    "title": "Qanday foydalaniladi",
+    "questOne": "O'rganishni qanday boshlash kerak?",
+    "answerOne": "Nemis tili amaliyotini boshlash uchun ro'yxatdan o'tish va profil yaratish kifoya. Busiz topshiriqlarga kirish imkoniyati yopiq bo'ladi.",
+    "questTwo": "Mavsumiy iventlar nima?",
+    "answerTwo": "Mavsumiy iventlar — bu bayramlarga bag'ishlangan vaqtinchalik tadbirlardir. Ularda faqat cheklangan vaqt davomida amal qiladigan maxsus kvestlar, mavzuli topshiriqlar va noyob mukofotlar paydo bo'ladi.",
+    "questThree": "Yutuq (достижение) nima?",
+    "answerThree": "Yutuq — bu bajarilgan faollik (progress, to'g'ri javoblar, kundalik vazifalar va h.k.) uchun beriladigan belgi.",
     "questFour": "Mukofotlar nima?",
-    "answerFour": "Mukofotlar ma’lum yutuqlarni bajarish uchun beriladi va shaxsiy kabinetingizda ko‘rsatiladi.",
-    "questFive": "Artikllar bo‘yicha progressni qayerdan ko‘rish mumkin?",
-    "answerFive": "Bosh sahifada «Ishtirokchi paneli»ni tanlab «Statistika»ni oching, so‘ng kerakli kategoriya progressini ko‘ring. Muhim: agar sizda faol artikl mavzulari bo‘lmasa, statistika ko‘rsatilmaydi.",
+    "answerFour": "Mukofotlar muayyan yutuqlarni bajarganlik uchun beriladi va sizning shaxsiy kabinetingizda aks etadi.",
+    "questFive": "Artikllar bo'yicha progressni qayerdan ko'rish mumkin?",
+    "answerFive": "Asosiy sahifadagi „Ishtirokchi paneli“ bo'limidan „Statistika“ni, so'ngra o'zingizni qiziqtirgan kategoriya progressini tanlang. Muhim: agar sizda artikllar bo'yicha faol mavzular bo'lmasa, statistika ko'rsatilmaydi.",
     "questSix": "Artiklyus nima?",
-    "answerSix": "Artiklyus — bu ichki valyuta. U «Artikl mashqlari» topshiriqlarida to‘g‘ri javoblar va «Til mamlakatlari»dagi topshiriqlarni bajarish uchun beriladi. Uni qayta urinishlarga sarflash mumkin.",
+    "answerSix": "Artiklyus — bu ichki valyuta. U „Artikllar amaliyoti“ topshirig'idagi to'g'ri javoblar va Til Yerlaridagi topshiriqlarni bajarganlik uchun beriladi. Uni qo'shimcha urinishlarga sarflash mumkin.",
     "questSeven": "Reytingga qanday kirish mumkin?",
-    "answerSeven": "«Artikl mashqlari» yoki «Til mamlakatlari» rejimida o‘ynab, kamida 2-darajaga erishish kerak. Shundan keyin reyting jadvali ochiladi.",
-    "questEight": "Kunlik topshiriqlar nima?",
-    "answerEight": "Bu mavzularga oid topshiriqlar bo‘lib, ularni kuniga faqat bir marta bajarish mumkin. Kuniga 3 ta topshiriq bajarish mumkin. Ular bosh sahifada mavjud.",
-    "questNine": "Voqealar nima?",
-    "answerNine": "Bular yiliga bir marta oʻtkaziladigan vaqtinchalik voqealardir. Faol davrda mavzuli topshiriqlar va mukofotlar ochiladi. Sana oraligʻidan tashqarida boʻlim mavjud emas. Voqealar sanasini Ishtirokchi Panelidagi «Voqealar taqvimi»dan koʻrish mumkin."
+    "answerSeven": "Artikllar marafoni reytingi har ikki haftada bir marta o'tkaziladi. Ikki hafta davomida siz boshqa ishtirokchilar bilan bellashasiz. Marafon yakunlangach, dastlabki uchta o'rinni egallaganlar yutuq va mukofotlarga ega bo'lishadi!",
+    "questEight": "Kundalik topshiriqlar nima?",
+    "answerEight": "Bular kuniga bir marta bajarish mumkin bo'lgan mavzuli topshiriqlardir. Bir kunda 3 ta topshiriq bajarish mumkin. Ulardan asosiy sahifada foydalanish mumkin.",
+    "questNine": "Tadbirlar (события) nima?",
+    "answerNine": "Yilda bir marta o'tkaziladigan vaqtinchalik iventlar. Faol davrda mavzuli topshiriqlar va mukofotlar ochiladi. Ko'rsatilgan sanalardan tashqari vaqtda bu bo'lim ishlamaydi. O'tkazilish sanalarini Ishtirokchi panelidagi „Tadbirlar taqvimi“dan ko'rish mumkin.",
+    "questTen": "Konfederatkachalar nima?",
+    "answerTen": "Konfederatkachalar — bu kundalik topshiriqlarni bajarganlik uchun beriladigan akademik shlyapalar (to'rtburchak qalpoqlar). Ular evaziga unvon bonuslari va o'qish uchun chegirmalar olinadi. Kundalik topshiriqlarni bajarmaslik esa jarimaga sabab bo'ladi.",
+    "questEleven": "Konfederatkachalarga jarima bormi?",
+    "answerEleven": "Ha, kundalik topshiriqlarni bajarmaganlik uchun jarima (3 ta konfederatkacha) ko'zda tutilgan. Kamida bitta kundalik topshiriqni bajaring va jarima qo'llanilmaydi. Agar vaqtingiz bo'lmasa, ichki do'kondan „vaqtni to'xtatish“ funksiyasini sotib olishingiz mumkin, u jarima sabab qalpoqchalaringiz hisobdan chiqib ketishining oldini oladi!"
   },
   "accountManagement": {
     "title": "Akkauntni boshqarish",
@@ -4139,22 +4143,23 @@
     "answerThree": "Kirish formasida «Parolni unutdingizmi?» tugmasini bosing va ko‘rsatmalarga amal qiling. Ro‘yxatdan o‘tishda ko‘rsatilgan email manzilingizga tiklash havolasi yuboriladi. Muhim: ro‘yxatdan o‘tayotganda haqiqiy emaildan foydalaning."
   },
   "subscribe": {
-    "title": "Obuna (Premium)",
-    "questOne": "Premium obuna nima beradi?",
-    "questOneStepOne": "1 Barcha so‘zlar va gaplarning ovozli talaffuzi — tinglab tushunishni mashq qiling.",
-    "questOneStepTwo": "2 Cheklovsiz ta’lim — kuniga istalgancha materialdan o‘ting.",
-    "questOneStepThree": "3 Sun’iy intellekt tomonidan tekshiriladigan barcha testlarga kirish.",
-    "questOneStepFour": "4 Tinglab yozish va gapirish topshiriqlari orqali og‘zaki nutqni mashq qiling.",
-    "questOneStepFive": "5 Faqat Premium foydalanuvchilariga mavjud eksklyuziv materiallar va mashqlar.",
-    "questOneStepSix": "6 Dasturchilarni qo‘llab-quvvatlash — Premium bizga loyiha ustida ishlash, yangi topshiriqlar chiqarish va barcha o‘quvchilar uchun funksiyalarni yaxshilashga yordam beradi. Maqsadimiz — nemis tilini o‘rganishni qulay va qiziqarli qilish. Biz interaktiv, o‘yin va musobaqalar muhitini yaratamiz, shunda o‘qish sarguzashtga aylanadi va har kuni unga qaytgingiz keladi!",
-    "questTwo": "Premiumni qanday o‘chirish mumkin?",
-    "questTwoStepOne": "Akkauntingizga kiring.",
-    "questTwoStepTwo": "«Kabinet» bo‘limiga o‘ting.",
-    "questTwoStepThree": "«Akkauntni boshqarish» bo‘limini oching.",
-    "questTwoStepFour": "«Obunani bekor qilish» tugmasini bosing.",
-    "note": "Shundan so‘ng, Premium to‘lov muddati tugaguncha saqlanib qoladi.",
+    "title": "Obuna (Plus)",
+    "questOne": "Plus obuna nimalar beradi?",
+    "questOneStepOne": "1 Barcha so'z va gaplarning ovozli talaffuzi — tinglab tushunishni mashq qiling.",
+    "questOneStepTwo": "2 Cheklovlarsiz ta'lim — kuniga istalgancha materialni o'zlashtiring.",
+    "questOneStepThree": "3 Sun'iy intellekt tomonidan baholanadigan va avtomatik tekshiriladigan barcha testlarga kirish imkoniyati.",
+    "questOneStepFour": "4 Og'zaki nutqni rivojlantirish uchun audio va gapirish topshiriqlari.",
+    "questOneStepFive": "5 Bepul versiyada mavjud bo'lmagan eksklyuziv materiallar va mashqlar.",
+    "questOneStepSix": "6 Dasturchilarni qo'llab-quvvatlash — bu bizga loyihani rivojlantirishga, yangi topshiriqlar yaratishga va barcha o'quvchilar uchun funksiyalarni yaxshilashga yordam beradi. Maqsadimiz — nemis tilini o'rganishni hamyonbop va eng muhimi qiziqarli qilish. Biz ta'lim har kuni qaytishni xohlaydigan sarguzashtga aylanishi uchun interaktiv, o'yin va musobaqa muhitini yaratamiz!",
+    "questTwo": "Plus obunani qanday bekor qilish mumkin?",
+    "questTwoStepOne": "Profilingizga kiring.",
+    "questTwoStepTwo": "„Kabinet“ bo'limiga o'ting.",
+    "questTwoStepThree": "„Sozlamalar“ bo'limiga o'ting.",
+    "questTwoStepFour": "„Profilni boshqarish“ bo'limchasini oching.",
+    "questTwoStepFive": "„Obunani bekor qilish“ tugmasini bosing.",
+    "note": "Bekor qilingandan so'ng, pullik muddat tugaguncha xizmatlardan foydalanish imkoniyati saqlanib qoladi. Muhim: obuna qaysi platformada rasmiylashtirilgan bo'lsa, o'sha yerning o'zida bekor qilinishi kerak (iOS, Android ilovasida yoki saytda).",
     "questThree": "Qolgan kunlar uchun pul qaytariladimi?",
-    "answerThree": "Hozircha qolgan kunlar uchun pul qaytarish nazarda tutilmagan."
+    "answerThree": "Qolgan kunlar uchun pulni qaytarish ko'zda tutilmagan."
   },
   "daily": {
     "first": "Barcha rejimlarda 5 ta so'z o'rgan: Artikllar amaliyoti",
@@ -8287,7 +8292,8 @@
     "guessed": "Topilgan so‘z bu edi:",
     "tryAgain": "Qaytadan urinib ko‘r",
     "btnToMain": "Bosh sahifaga",
-    "placeholder": "So‘zni to‘liq kiriting"
+    "placeholder": "So‘zni to‘liq kiriting",
+    "wrong": "Noto'g'ri! To'g'risi:"
   },
   "preposition": {
     "title": "Nemis predloglari haqida hamma narsa",
@@ -10216,7 +10222,18 @@
     "oil_change": "Moy almashtirish",
     "car_buying": "Avto sotib olish",
     "police_control": "Tezlikni oshirish",
-    "gas_station": "Yoqilg'i quyish shoxobchasi"
+    "gas_station": "Yoqilg'i quyish shoxobchasi",
+    "buying_fruit": "Meva sotib olish",
+    "bakery": "Novvoyxona",
+    "complaint": "Restorandagi shikoyat",
+    "bus_stop": "Bekat",
+    "buying_glasses": "Optika",
+    "emergency_call": "Favqulodda chaqiruv",
+    "first_day": "Kirish kuni / Birinchi kun",
+    "client_talk": "Mijoz bilan suhbat",
+    "car_rental": "Avto ijara",
+    "ask_road": "Yo'l so'rash",
+    "hotel_issue": "Mehmonxonadagi muammo"
   },
   "speakIndexPage": {
     "title": "Gaplashish amaliyoti",
@@ -10328,17 +10345,6 @@
   "guessArticle": {
     "correct": "To'g'ri",
     "incorrect": "Noto'g'ri, to'g'risi"
-  },
-  "payPage": {
-    "featureOne": "Chegarasiz ta'lim",
-    "featureTwo": "Kelgusi funksiyalar",
-    "featureThree": "Dasturchilarni qo'llab-quvvatlash",
-    "featureFour": "Reklamasiz",
-    "sale5": "3% chegirma",
-    "sale10": "6% chegirma",
-    "sale15": "15% chegirma",
-    "finalePrice": "JAMI:",
-    "yourSale": "Sizning chegirmangiz"
   },
   "stripeCancel": {
     "cancelSub": "Obunani bekor qilish",
@@ -10513,5 +10519,56 @@
     "days": "k",
     "hours": "soat",
     "mins": "daqiqa"
+  },
+  "headUp": {
+    "audioTasks": "En az bir cevap seçeneği seçmelisiniz",
+    "speakTasks": "Faqat taklif qilingan variantlardan foydalanish mumkin."
+  },
+  "helpCenter": {
+    "privacy": "Maxfiylik siyosati",
+    "faq": "Ko'p beriladigan savollar (FAQ)",
+    "terms": "Foydalanish shartlari"
+  },
+  "rankAvatars": {
+    "locked_easy_1": "Ushbu avatar Artikllar marafonida (oson rejim) 1-o'rinni egallaganlik uchun beriladi.",
+    "locked_easy_2": "Ushbu avatar Artikllar marafonida (oson rejim) 2-o'rinni egallaganlik uchun beriladi.",
+    "locked_easy_3": "Ushbu avatar Artikllar marafonida (oson rejim) 3-o'rinni egallaganlik uchun beriladi.",
+    "locked_normal_1": "Ushbu avatar Artikllar marafonida (o'rta rejim) 1-o'rinni egallaganlik uchun beriladi.",
+    "locked_normal_2": "Ushbu avatar Artikllar marafonida (o'rta rejim) 2-o'rinni egallaganlik uchun beriladi.",
+    "locked_normal_3": "Ushbu avatar Artikllar marafonida (o'rta rejim) 3-o'rinni egallaganlik uchun beriladi.",
+    "locked_hard_1": "Ushbu avatar Artikllar marafonida (qiyin rejim) 1-o'rinni egallaganlik uchun beriladi.",
+    "locked_hard_2": "Ushbu avatar Artikllar marafonida (qiyin rejim) 2-o'rinni egallaganlik uchun beriladi.",
+    "locked_hard_3": "Ushbu avatar Artikllar marafonida (qiyin rejim) 3-o'rinni egallaganlik uchun beriladi."
+  },
+  "typeOfAvatars": {
+    "usual": "Oddiy",
+    "ranked": "Yutuqli"
+  },
+  "marathonEasy": {
+    "title": "Artikllar marafoni oson daraja",
+    "easyOneName": "G'olib amaliyotchi",
+    "easyOneDescription": "Artikllar marafoni reytingida birinchi o'rinni egallang (Oson rejim)",
+    "easyTwoName": "Munosib da'vogar",
+    "easyTwoDescription": "Artikllar marafoni reytingida ikkinchi o'rinni egallang (Oson rejim)",
+    "easyThreeName": "Artikllar stajyori",
+    "easyThreeDescription": "Artikllar marafoni reytingida uchinchi o'rinni egallang (Oson rejim)"
+  },
+  "marathonNormal": {
+    "title": "Artikllar marafoni o'rta daraja",
+    "normalOneName": "Artikllar magistri",
+    "normalOneDescription": "Artikllar marafoni reytingida birinchi o'rinni egallang (O'rta rejim)",
+    "normalTwoName": "Marafon fatihi",
+    "normalTwoDescription": "Artikllar marafoni reytingida ikkinchi o'rinni egallang (O'rta rejim)",
+    "normalThreeName": "So'z bilimdoni",
+    "normalThreeDescription": "Artikllar marafoni reytingida uchinchi o'rinni egallang (O'rta rejim)"
+  },
+  "marathonHard": {
+    "title": "Artikllar marafoni qiyin daraja",
+    "normalOneName": "Artikllar imperatori",
+    "normalOneDescription": "Artikllar marafoni reytingida birinchi o'rinni egallang (Qiyin rejim)",
+    "normalTwoName": "Marafon afsonasi",
+    "normalTwoDescription": "Artikllar marafoni reytingida ikkinchi o'rinni egallang (Qiyin rejim)",
+    "normalThreeName": "Marafon adepti",
+    "normalThreeDescription": "Artikllar marafoni reytingida uchinchi o'rinni egallang (Qiyin rejim)"
   }
 }

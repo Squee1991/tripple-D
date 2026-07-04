@@ -1,0 +1,533 @@
+{
+  "start": {
+    "botText": "Entschuldigung! Könnten Sie mir bitte kurz helfen?",
+    "botTranslation": {
+      "ru-RU": "Извините! Вы не могли бы мне на секунду помочь?",
+      "en-US": "Excuse me! Could you please help me for a second?",
+      "ar-SA": "المعذرة! هل يمكنك مساعدتي للحظة من فضلك؟",
+      "es-ES": "¡Disculpe! ¿Podría ayudarme un momento, por favor?",
+      "fr-FR": "Excusez-moi ! Pourriez-vous m'aider un instant, s'il vous plaît ?",
+      "hi-IN": "क्षमा करें! क्या आप कृपया एक पल के लिए मेरी मदद कर सकते हैं?",
+      "pl-PL": "Przepraszam! Czy mógłby mi Pan/Pani chwilę pomóc?",
+      "ro-RO": "Scuzați-mă! M-ați putea ajuta puțin, vă rog?",
+      "tr-TR": "Afedersiniz! Lütfen bana kısaca yardımcı olabilir misiniz?",
+      "uk-UA": "Вибачте! Ви не могли б мені на секунду допомогти?",
+      "uz-UZ": "Kechirasiz! Menga bir oz yordam bera olasizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Haltestelle",
+        "translation": {
+          "ru-RU": "остановка",
+          "en-US": "bus stop",
+          "ar-SA": "موقف الباص",
+          "es-ES": "parada",
+          "fr-FR": "arrêt",
+          "hi-IN": "स्टॉप",
+          "pl-PL": "przystanek",
+          "ro-RO": "stație",
+          "tr-TR": "durak",
+          "uk-UA": "зупинка",
+          "uz-UZ": "bekat"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, gerne. Was kann ich für Sie tun?",
+        "translation": {
+          "ru-RU": "Да, конечно. Чем могу помочь?",
+          "en-US": "Yes, gladly. What can I do for you?",
+          "ar-SA": "نعم، بكل سرور. ماذا يمكنني أن أفعل لك؟",
+          "es-ES": "Sí, con gusto. ¿Qué puedo hacer por usted?",
+          "fr-FR": "Oui, volontiers. Que puis-je faire pour vous ?",
+          "hi-IN": "हाँ, खुशी से। मैं आपके लिए क्या कर सकता हूँ?",
+          "pl-PL": "Tak, chętnie. Co mogę dla Pana/Pani zrobić?",
+          "ro-RO": "Da, cu plăcere. Ce pot face pentru dumneavoastră?",
+          "tr-TR": "Evet, memnuniyetle. Sizin için ne yapabilirim?",
+          "uk-UA": "Так, звісно. Чим можу допомогти?",
+          "uz-UZ": "Ha, bajonidil. Siz uchun nima qila olaman?"
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo! Ja, natürlich. Was haben Sie für eine Frage?",
+        "translation": {
+          "ru-RU": "Здравствуйте! Да, конечно. Какой у вас вопрос?",
+          "en-US": "Hello! Yes, of course. What is your question?",
+          "ar-SA": "مرحباً! نعم بالطبع. ما هو سؤالك؟",
+          "es-ES": "¡Hola! Sí, por supuesto. ¿Qué pregunta tiene?",
+          "fr-FR": "Bonjour ! Oui, bien sûr. Quelle est votre question ?",
+          "hi-IN": "नमस्ते! हाँ, बिल्कुल। आपका क्या सवाल है?",
+          "pl-PL": "Dzień dobry! Tak, oczywiście. Jakie ma Pan/Pani pytanie?",
+          "ro-RO": "Bună! Da, desigur. Ce întrebare aveți?",
+          "tr-TR": "Merhaba! Evet, elbette. Sorunuz nedir?",
+          "uk-UA": "Добрий день! Так, звісно. Яке у вас питання?",
+          "uz-UZ": "Salom! Ha, albatta. Qanday savolingiz bor?"
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Ich muss zur Hauptstraße. Welcher Bus fährt dorthin?",
+    "botTranslation": {
+      "ru-RU": "Мне нужно на Хауптштрассе. Какой автобус едет туда?",
+      "en-US": "I need to go to Hauptstraße. Which bus goes there?",
+      "ar-SA": "أحتاج للذهاب إلى شارع هاوبت شتراسه. أي حافلة تذهب إلى هناك؟",
+      "es-ES": "Tengo que ir a Hauptstraße. ¿Qué autobús va allí?",
+      "fr-FR": "Je dois aller à la Hauptstraße. Quel bus y va ?",
+      "hi-IN": "मुझे हॉन्टस्ट्रासे जाना है। कौन सी बस वहां जाती है?",
+      "pl-PL": "Muszę jechać na Hauptstraße. Który autobus tam jedzie?",
+      "ro-RO": "Trebuie să ajung pe Hauptstraße. Care autobuz merge acolo?",
+      "tr-TR": "Hauptstraße'ye gitmem lazım. Oraya hangi otobüs gidiyor?",
+      "uk-UA": "Мені потрібно на Хауптштрассе. Який автобус їде туди?",
+      "uz-UZ": "Men Hauptshtrassa ko'chasiga borishim kerak. U yerga qaysi avtobus boradi?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Bus",
+        "translation": {
+          "ru-RU": "автобус",
+          "en-US": "bus",
+          "ar-SA": "حافلة",
+          "es-ES": "autobús",
+          "fr-FR": "bus",
+          "hi-IN": "बस",
+          "pl-PL": "autobus",
+          "ro-RO": "autobuz",
+          "tr-TR": "otobüs",
+          "uk-UA": "автобус",
+          "uz-UZ": "avtobus"
+        }
+      },
+      {
+        "german": "die Linie",
+        "translation": {
+          "ru-RU": "линия / маршрут",
+          "en-US": "line / route",
+          "ar-SA": "خط",
+          "es-ES": "línea",
+          "fr-FR": "ligne",
+          "hi-IN": "लाइन / मार्ग",
+          "pl-PL": "linia",
+          "ro-RO": "linie",
+          "tr-TR": "hat",
+          "uk-UA": "лінія / маршрут",
+          "uz-UZ": "liniya / yo'nalish"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Die Linie 403 fährt direkt dorthin. Sie müssen drei Haltestellen fahren.",
+        "translation": {
+          "ru-RU": "Линия 403 едет прямо туда. Вам нужно проехать три остановки.",
+          "en-US": "Line 403 goes directly there. You need to ride for three stops.",
+          "ar-SA": "الخط 403 يذهب مباشرة إلى هناك. يجب أن تركب لثلاث محطات.",
+          "es-ES": "La línea 403 va directamente allí. Tiene que ir tres paradas.",
+          "fr-FR": "La ligne 403 y va directement. Vous devez faire trois arrêts.",
+          "hi-IN": "लाइन 403 सीधे वहां जाती है। आपको तीन स्टॉप की यात्रा करनी होगी।",
+          "pl-PL": "Linia 403 jedzie bezpośrednio tam. Musi Pan/Pani przejechać trzy przystanki.",
+          "ro-RO": "Linia 403 merge direct acolo. Trebuie să mergeți trei stații.",
+          "tr-TR": "403 numaralı hat doğrudan oraya gider. Üç durak gitmeniz gerekiyor.",
+          "uk-UA": "Лінія 403 їде прямо туди. Вам потрібно проїхати три зупинки.",
+          "uz-UZ": "403-liniya to'g'ridan-to'g'ri o'sha yerga boradi. Siz uch bekat yurishingiz kerak."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Nehmen Sie am besten den Bus Nummer 403. Der fährt da durch.",
+        "translation": {
+          "ru-RU": "Лучше всего возьмите автобус номер 403. Он там проезжает.",
+          "en-US": "It's best to take bus number 403. It goes through there.",
+          "ar-SA": "من الأفضل أن تأخذ الحافلة رقم 403. إنها تمر من هناك.",
+          "es-ES": "Lo mejor es tomar el autobús número 403. Pasa por ahí.",
+          "fr-FR": "Le mieux est de prendre le bus numéro 403. Il passe par là.",
+          "hi-IN": "बस नंबर 403 लेना सबसे अच्छा है। वह वहाँ से गुजरती है।",
+          "pl-PL": "Najlepiej pojechać autobusem numer 403. On tamtędy przejeżdża.",
+          "ro-RO": "Cel mai bine luați autobuzul numărul 403. Trece pe acolo.",
+          "tr-TR": "En iyisi 403 numaralı otobüse binin. Oradan geçiyor.",
+          "uk-UA": "Найкраще сідайте на автобус номер 403. Він там проїжджає.",
+          "uz-UZ": "Yaxshisi 403-raqamli avtobusga chiqing. U o'sha yerdan o'tadi."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Ach so, danke. Also muss ich hier auf die Nummer 403 warten?",
+    "botTranslation": {
+      "ru-RU": "Ах вот как, спасибо. Значит, мне нужно здесь ждать номер 403?",
+      "en-US": "Oh I see, thanks. So I just have to wait here for number 403?",
+      "ar-SA": "آه هكذا إذن، شكراً. إذاً يجب أن أنتظر هنا الرقم 403؟",
+      "es-ES": "Ah ya, gracias. ¿Entonces tengo que esperar aquí al número 403?",
+      "fr-FR": "Ah d'accord, merci. Je dois donc attendre le numéro 403 ici ?",
+      "hi-IN": "अरे ऐसा है, धन्यवाद। तो क्या मुझे यहाँ नंबर 403 का इंतज़ार करना होगा?",
+      "pl-PL": "Aha, dziękuję. Czyli muszę tu poczekać na numer 403?",
+      "ro-RO": "Aha, mulțumesc. Deci trebuie să aștept aici numărul 403?",
+      "tr-TR": "Anlıyorum, teşekkürler. Yani burada 403 numarayı mı beklemeliyim?",
+      "uk-UA": "А, он як, дякую. Значить, мені потрібно тут чекати номер 403?",
+      "uz-UZ": "Ha shundaymi, rahmat. Demak men shu yerda 403-raqamni kutishim kerakmi?"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Genau. Er kommt ungefähr alle zehn Minuten.",
+        "translation": {
+          "ru-RU": "Точно. Он ходит примерно каждые десять минут.",
+          "en-US": "Exactly. It comes about every ten minutes.",
+          "ar-SA": "بالضبط. إنها تأتي حوالي كل عشر دقائق.",
+          "es-ES": "Exacto. Viene aproximadamente cada diez minutos.",
+          "fr-FR": "Exactement. Il passe environ toutes les dix minutes.",
+          "hi-IN": "बिल्कुल। यह लगभग हर दस मिनट में आती है।",
+          "pl-PL": "Dokładnie. Przyjeżdża mniej więcej co dziesięć minut.",
+          "ro-RO": "Exact. Vine cam la fiecare zece minute.",
+          "tr-TR": "Aynen. Yaklaşık her on dakikada bir geliyor.",
+          "uk-UA": "Точно. Він ходить приблизно кожні десять хвилин.",
+          "uz-UZ": "Xuddi shunday. U taxminan har o'n daqiqada keladi."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Ja, richtig. Der Bus müsste gleich da sein.",
+        "translation": {
+          "ru-RU": "Да, правильно. Автобус должен быть с минуты на минуту.",
+          "en-US": "Yes, that's right. The bus should be here any minute.",
+          "ar-SA": "نعم، صحيح. يجب أن تكون الحافلة هنا في أي لحظة.",
+          "es-ES": "Sí, correcto. El autobús debería llegar enseguida.",
+          "fr-FR": "Oui, c'est ça. Le bus devrait arriver d'une minute à l'autre.",
+          "hi-IN": "हाँ, सही है। बस को अभी आ जाना चाहिए।",
+          "pl-PL": "Tak, zgadza się. Autobus powinien zaraz być.",
+          "ro-RO": "Da, corect. Autobuzul ar trebui să ajungă imediat.",
+          "tr-TR": "Evet, doğru. Otobüs hemen hemen gelmek üzere.",
+          "uk-UA": "Так, правильно. Автобус має бути з хвилини на хвилину.",
+          "uz-UZ": "Ha, to'g'ri. Avtobus hozir kelib qolishi kerak."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Super, danke. Und muss ich für die kurze Strecke ein extra Ticket kaufen?",
+    "botTranslation": {
+      "ru-RU": "Супер, спасибо. А мне нужно покупать отдельный билет на такую короткую поездку?",
+      "en-US": "Super, thanks. And do I need to buy an extra ticket for the short trip?",
+      "ar-SA": "ممتاز، شكراً. وهل يجب أن أشتري تذكرة إضافية لهذه المسافة القصيرة؟",
+      "es-ES": "Súper, gracias. ¿Y tengo que comprar un billete aparte para un trayecto tan corto?",
+      "fr-FR": "Super, merci. Et dois-je acheter un billet supplémentaire pour ce court trajet ?",
+      "hi-IN": "बढ़िया, धन्यवाद। और क्या मुझे छोटी यात्रा के लिए एक अतिरिक्त टिकट खरीदना होगा?",
+      "pl-PL": "Super, dziękuję. A czy na tak krótką trasę muszę kupować osobny bilet?",
+      "ro-RO": "Super, mulțumesc. Și trebuie să cumpăr un bilet separat pentru această distanță scurtă?",
+      "tr-TR": "Süper, teşekkürler. Peki bu kısa mesafe için ekstra bir bilet almam gerekiyor mu?",
+      "uk-UA": "Супер, дякую. А мені потрібно купувати окремий квиток на таку коротку поїздку?",
+      "uz-UZ": "Ajoyib, rahmat. Bunday qisqa masofaga qo'shimcha chipta sotib olishim kerakmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Ticket",
+        "translation": {
+          "ru-RU": "билет",
+          "en-US": "ticket",
+          "ar-SA": "تذكرة",
+          "es-ES": "billete",
+          "fr-FR": "billet",
+          "hi-IN": "टिकट",
+          "pl-PL": "bilet",
+          "ro-RO": "bilet",
+          "tr-TR": "bilet",
+          "uk-UA": "квиток",
+          "uz-UZ": "chipta"
+        }
+      },
+      {
+        "german": "die Kurzstrecke",
+        "translation": {
+          "ru-RU": "короткая поездка",
+          "en-US": "short trip",
+          "ar-SA": "مسافة قصيرة",
+          "es-ES": "trayecto corto",
+          "fr-FR": "trajet court",
+          "hi-IN": "छोटी यात्रा",
+          "pl-PL": "krótka trasa",
+          "ro-RO": "distanță scurtă",
+          "tr-TR": "kısa mesafe",
+          "uk-UA": "коротка поїздка",
+          "uz-UZ": "qisqa masofa"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, Sie brauchen eine Kurzstrecke. Sie können sie direkt im Bus kaufen.",
+        "translation": {
+          "ru-RU": "Да, Вам нужен билет на короткую поездку. Вы можете купить его прямо в автобусе.",
+          "en-US": "Yes, you need a short trip ticket. You can buy it directly on the bus.",
+          "ar-SA": "نعم، تحتاج إلى تذكرة مسافة قصيرة. يمكنك شراؤها مباشرة من الحافلة.",
+          "es-ES": "Sí, necesita un billete de trayecto corto. Puede comprarlo directamente en el autobús.",
+          "fr-FR": "Oui, vous avez besoin d'un billet trajet court. Vous pouvez l'acheter directement dans le bus.",
+          "hi-IN": "हाँ, आपको छोटी यात्रा के टिकट की आवश्यकता है। आप इसे सीधे बस में खरीद सकते हैं।",
+          "pl-PL": "Tak, potrzebuje Pan/Pani biletu na krótką trasę. Można go kupić bezpośrednio w autobusie.",
+          "ro-RO": "Da, aveți nevoie de un bilet pentru distanță scurtă. Îl puteți cumpăra direct din autobuz.",
+          "tr-TR": "Evet, kısa mesafe bileti almanız gerekiyor. Doğrudan otobüste satın alabilirsiniz.",
+          "uk-UA": "Так, Вам потрібен квиток на коротку поїздку. Ви можете купити його прямо в автобусі.",
+          "uz-UZ": "Ha, sizga qisqa masofa uchun chipta kerak. Uni to'g'ridan-to'g'ri avtobusda sotib olishingiz mumkin."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Nein, wenn Sie eine Tageskarte haben, gilt sie auch.",
+        "translation": {
+          "ru-RU": "Нет, если у Вас есть проездной на день, он тоже действует.",
+          "en-US": "No, if you have a day pass, it is also valid.",
+          "ar-SA": "لا، إذا كان لديك تذكرة يومية، فهي صالحة أيضاً.",
+          "es-ES": "No, si tiene un billete de un día, también es válido.",
+          "fr-FR": "Non, si vous avez une carte journalière, elle est également valable.",
+          "hi-IN": "नहीं, यदि आपके पास दैनिक पास है, तो वह भी मान्य है।",
+          "pl-PL": "Nie, jeśli ma Pan/Pani bilet całodniowy, on również jest ważny.",
+          "ro-RO": "Nu, dacă aveți un abonament de o zi, este de asemenea valabil.",
+          "tr-TR": "Hayır, eğer günlük biletiniz varsa o da geçerlidir.",
+          "uk-UA": "Ні, якщо у Вас є проїзний на день, він теж діє.",
+          "uz-UZ": "Yo'q, agar sizda kunlik chipta bo'lsa, u ham o'tadi."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Verstanden. Kann man beim Busfahrer auch mit Karte zahlen?",
+    "botTranslation": {
+      "ru-RU": "Понятно. А у водителя автобуса можно картой оплатить?",
+      "en-US": "Understood. Can I also pay by card with the bus driver?",
+      "ar-SA": "مفهوم. هل يمكن الدفع بالبطاقة لدى سائق الحافلة؟",
+      "es-ES": "Entendido. ¿También se puede pagar con tarjeta al conductor del autobús?",
+      "fr-FR": "Compris. Peut-on aussi payer par carte auprès du chauffeur de bus ?",
+      "hi-IN": "समझ गया। क्या मैं बस ड्राइवर को कार्ड से भी भुगतान कर सकता हूँ?",
+      "pl-PL": "Rozumiem. Czy u kierowcy autobusu można płacić kartą?",
+      "ro-RO": "Am înțeles. Se poate plăti și cu cardul la șoferul de autobuz?",
+      "tr-TR": "Anladım. Otobüs şoförüne kartla da ödeme yapılabiliyor mu?",
+      "uk-UA": "Зрозуміло. А у водія автобуса можна карткою оплатити?",
+      "uz-UZ": "Tushunarli. Avtobus haydovchisida karta bilan ham to'lasa bo'ladimi?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Busfahrer",
+        "translation": {
+          "ru-RU": "водителя автобуса",
+          "en-US": "bus driver",
+          "ar-SA": "سائق الحافلة",
+          "es-ES": "conductor del autobús",
+          "fr-FR": "chauffeur de bus",
+          "hi-IN": "बस चालक",
+          "pl-PL": "kierowca autobusu",
+          "ro-RO": "șofer de autobuz",
+          "tr-TR": "otobüs şoförü",
+          "uk-UA": "водій автобуса",
+          "uz-UZ": "avtobus haydovchisi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, lieber Bargeld bereithalten. Sie haben oft kein Terminal.",
+        "translation": {
+          "ru-RU": "Нет, лучше приготовить наличные. У них часто нет терминала.",
+          "en-US": "No, it's better to have cash ready. They often don't have a terminal.",
+          "ar-SA": "لا، من الأفضل أن تجهز النقود. غالباً لا يوجد لديهم جهاز دفع.",
+          "es-ES": "No, mejor tener dinero en efectivo preparado. A menudo no tienen terminal.",
+          "fr-FR": "Non, il vaut mieux prévoir des espèces. Ils n'ont souvent pas de terminal.",
+          "hi-IN": "नहीं, नकद तैयार रखना बेहतर है। उनके पास अक्सर टर्मिनल नहीं होता है।",
+          "pl-PL": "Nie, lepiej przygotować gotówkę. Często nie mają terminala.",
+          "ro-RO": "Nu, mai bine aveți numerar pregătit. Deseori nu au terminal.",
+          "tr-TR": "Hayır, yanınızda nakit bulundurmak daha iyi. Genelde terminalleri olmuyor.",
+          "uk-UA": "Ні, краще приготувати готівку. У них часто немає терміналу.",
+          "uz-UZ": "Yo'q, naqd pul tayyorlab qo'yganingiz ma'qul. Ularda ko'pincha terminal bo'lmaydi."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Ja, bei den neuen Bussen geht das problemlos.",
+        "translation": {
+          "ru-RU": "Да, в новых автобусах это можно сделать без проблем.",
+          "en-US": "Yes, with the new buses that works without any problems.",
+          "ar-SA": "نعم، في الحافلات الجديدة هذا ممكن بدون مشاكل.",
+          "es-ES": "Sí, en los autobuses nuevos funciona sin problemas.",
+          "fr-FR": "Oui, dans les nouveaux bus ça marche sans problème.",
+          "hi-IN": "हाँ, नई बसों में यह बिना किसी समस्या के हो जाता है।",
+          "pl-PL": "Tak, w nowych autobusach nie ma z tym problemu.",
+          "ro-RO": "Da, la noile autobuze acest lucru merge fără probleme.",
+          "tr-TR": "Evet, yeni otobüslerde bu sorunsuz bir şekilde yapılabiliyor.",
+          "uk-UA": "Так, у нових автобусах це можна зробити без проблем.",
+          "uz-UZ": "Ha, yangi avtobuslarda bu muammosiz amalga oshadi."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Gut, ich habe etwas Kleingeld dabei. Da kommt ja auch schon die Linie 403!",
+    "botTranslation": {
+      "ru-RU": "Хорошо, у меня есть с собой немного мелочи. О, а вот как раз и 403-й идет!",
+      "en-US": "Good, I have some change with me. Ah, and there comes line 403 now!",
+      "ar-SA": "جيد، لدي بعض العملات المعدنية. وها هو الخط 403 قادم!",
+      "es-ES": "Bien, llevo algo de suelto. ¡Ah, y ahí viene ya la línea 403!",
+      "fr-FR": "Bien, j'ai de la monnaie sur moi. Ah, et voilà justement la ligne 403 qui arrive !",
+      "hi-IN": "अच्छा, मेरे पास कुछ खुल्ले पैसे हैं। अरे, लाइन 403 आ भी गई!",
+      "pl-PL": "Dobrze, mam przy sobie trochę drobnych. O, a właśnie nadjeżdża linia 403!",
+      "ro-RO": "Bine, am niște mărunțiș la mine. O, uite că și vine linia 403!",
+      "tr-TR": "Güzel, yanımda biraz bozuk para var. Ah, işte 403 numaralı hat da geliyor!",
+      "uk-UA": "Добре, у мене є з собою трохи дріб'язку. О, а ось якраз і 403-й їде!",
+      "uz-UZ": "Yaxshi, menda bir oz mayda pul bor. Ana, 403-liniya ham kelyapti!"
+    },
+    "vocabulary": [
+      {
+        "german": "das Kleingeld",
+        "translation": {
+          "ru-RU": "мелочь (монеты)",
+          "en-US": "change / coins",
+          "ar-SA": "فكة / عملات معدنية",
+          "es-ES": "cambio / dinero suelto",
+          "fr-FR": "monnaie",
+          "hi-IN": "खुल्ले पैसे / सिक्के",
+          "pl-PL": "drobne",
+          "ro-RO": "mărunțiș",
+          "tr-TR": "bozuk para",
+          "uk-UA": "дріб'язок (монети)",
+          "uz-UZ": "mayda pul / tangalar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Perfekt, das passt ja genau. Gute Fahrt!",
+        "translation": {
+          "ru-RU": "Идеально, как раз вовремя. Счастливого пути!",
+          "en-US": "Perfect, that's right on time. Have a good trip!",
+          "ar-SA": "ممتاز، في الوقت المناسب تماماً. رحلة سعيدة!",
+          "es-ES": "Perfecto, justo a tiempo. ¡Buen viaje!",
+          "fr-FR": "Parfait, ça tombe bien. Bon voyage !",
+          "hi-IN": "बिल्कुल सही, यह एकदम सही समय है। आपकी यात्रा शुभ हो!",
+          "pl-PL": "Idealnie, w samą porę. Dobrej podróży!",
+          "ro-RO": "Perfect, exact la fix. Călătorie plăcută!",
+          "tr-TR": "Mükemmel, tam zamanında. İyi yolculuklar!",
+          "uk-UA": "Ідеально, якраз вчасно. Щасливої дороги!",
+          "uz-UZ": "Ajoyib, ayni muddao bo'ldi. Oq yo'l!"
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Klasse, dann beeilen Sie sich. Alles Gute!",
+        "translation": {
+          "ru-RU": "Класс, тогда поторопитесь. Всего доброго!",
+          "en-US": "Great, then hurry up. All the best!",
+          "ar-SA": "عظيم، إذن أسرع. كل التوفيق!",
+          "es-ES": "Genial, entonces dese prisa. ¡Todo lo mejor!",
+          "fr-FR": "Génial, alors dépêchez-vous. Bonne continuation !",
+          "hi-IN": "बढ़िया, फिर जल्दी करें। शुभकामनाएँ!",
+          "pl-PL": "Świetnie, to niech się Pan/Pani pospieszy. Wszystkiego dobrego!",
+          "ro-RO": "Super, atunci grăbiți-vă. Toate cele bune!",
+          "tr-TR": "Harika, o halde acele edin. Her şey gönlünüzce olsun!",
+          "uk-UA": "Клас, тоді покваптеся. На все добре!",
+          "uz-UZ": "Zo'r, unda shoshiling. Barcha yaxshiliklarni tilayman!"
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Vielen Dank für Ihre schnelle Hilfe! Einen schönen Tag noch.",
+    "botTranslation": {
+      "ru-RU": "Большое спасибо за Вашу быструю помощь! Хорошего Вам дня.",
+      "en-US": "Thank you very much for your quick help! Have a nice day.",
+      "ar-SA": "شكراً جزيلاً على مساعدتك السريعة! أتمنى لك يوماً سعيداً.",
+      "es-ES": "¡Muchas gracias por su rápida ayuda! Que tenga un buen día.",
+      "fr-FR": "Merci beaucoup pour votre aide rapide ! Bonne journée.",
+      "hi-IN": "आपकी त्वरित मदद के लिए बहुत-बहुत धन्यवाद! आपका दिन शुभ हो।",
+      "pl-PL": "Bardzo dziękuję za szybką pomoc! Miłego dnia.",
+      "ro-RO": "Vă mulțumesc mult pentru ajutorul rapid! O zi frumoasă în continuare.",
+      "tr-TR": "Hızlı yardımınız için çok teşekkür ederim! İyi günler dilerim.",
+      "uk-UA": "Велике дякую за Вашу швидку допомогу! Гарного Вам дня.",
+      "uz-UZ": "Tezkor yordamingiz uchun katta rahmat! Kuningiz xayrli o'tsin."
+    },
+    "vocabulary": [
+      {
+        "german": "Gute Fahrt",
+        "translation": {
+          "ru-RU": "счастливого пути / хорошей поездки",
+          "en-US": "have a good trip / have a safe journey",
+          "ar-SA": "رحلة سعيدة",
+          "es-ES": "buen viaje",
+          "fr-FR": "bon voyage / bonne route",
+          "hi-IN": "आपकी यात्रा शुभ हो",
+          "pl-PL": "szerokiej drogi",
+          "ro-RO": "călătorie plăcută",
+          "tr-TR": "iyi yolculuklar",
+          "uk-UA": "щасливої дороги",
+          "uz-UZ": "oq yo'l / yaxshi yetib oling"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke, gleichfalls! Tschüss.",
+        "translation": {
+          "ru-RU": "Спасибо, взаимно! Пока.",
+          "en-US": "Thanks, you too! Bye.",
+          "ar-SA": "شكراً، ولك أيضاً! وداعاً.",
+          "es-ES": "¡Gracias, igualmente! Adiós.",
+          "fr-FR": "Merci, à vous aussi ! Salut.",
+          "hi-IN": "धन्यवाद, आपको भी! अलविदा।",
+          "pl-PL": "Dziękuję, nawzajem! Cześć.",
+          "ro-RO": "Mulțumesc, la fel! Pa.",
+          "tr-TR": "Teşekkürler, size de! Hoşça kalın.",
+          "uk-UA": "Дякую, навзаєм! Бувай.",
+          "uz-UZ": "Rahmat, sizga ham! Xayr."
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Danke, Ihnen auch! Auf Wiedersehen.",
+        "translation": {
+          "ru-RU": "Спасибо, и Вам! До свидания.",
+          "en-US": "Thanks, to you as well! Goodbye.",
+          "ar-SA": "شكراً، ولك أيضاً! إلى اللقاء.",
+          "es-ES": "¡Gracias, a usted también! Hasta luego.",
+          "fr-FR": "Merci, à vous de même ! Au revoir.",
+          "hi-IN": "धन्यवाद, आपको भी! फिर मिलेंगे।",
+          "pl-PL": "Dziękuję, Panu/Pani również! Do widzenia.",
+          "ro-RO": "Mulțumesc, și dumneavoastră! La revedere.",
+          "tr-TR": "Teşekkürler, size de! Görüşmek üzere.",
+          "uk-UA": "Дякую, і Вам! До побачення.",
+          "uz-UZ": "Rahmat, sizga ham! Ko'rishguncha."
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Tschüss! Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Пока! Разговор окончен.",
+      "en-US": "Bye! The conversation is over.",
+      "ar-SA": "وداعاً! انتهت المحادثة.",
+      "es-ES": "¡Adiós! La conversación ha terminado.",
+      "fr-FR": "Salut ! La conversation est terminée.",
+      "hi-IN": "अलविदा! बातचीत खत्म हो गई है।",
+      "pl-PL": "Cześć! Rozmowa zakończona.",
+      "ro-RO": "Pa! Conversația s-a încheiat.",
+      "tr-TR": "Hoşça kalın! Konuşma sona erdi.",
+      "uk-UA": "Бувай! Розмова закінчена.",
+      "uz-UZ": "Xayr! Suhbat yakunlandi."
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

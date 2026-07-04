@@ -13,9 +13,7 @@
           />
         </div>
         <transition name="toast-fade">
-          <div v-if="showChalkMessage" class="toast-message">
-            {{ chalkMessage }}
-          </div>
+          <VHeadsUp v-if="showChalkMessage" :text="chalkMessage"/>
         </transition>
         <div class="themes-scroll">
           <div class="themes-container">
@@ -106,6 +104,7 @@ import Clock from '../../assets/images/clock.svg'
 import {useHead, useSeoMeta} from '#imports'
 import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
 import VBanner from "~/src/components/V-banner.vue";
+import VHeadsUp from '~/src/components/V-headsUp.vue'
 import Banner from '../../assets/images/thematicSticker.svg'
 import VTransition from "~/src/components/V-transition.vue";
 import { showInterstitial } from '../../utils/admob.js'
@@ -515,12 +514,11 @@ watch(topic, loadThemeData)
   top: calc(env(safe-area-inset-top));
   left: 0;
   width: 100%;
-  background: #6b21a8;
+  background: #d97706;
   box-shadow: 0 4px 12px rgba(107, 33, 168, 0.4);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 0 0 16px 16px;
   color: #ffffff;
-  padding: 5px 10px 15px 10px;
+  padding: 15px 10px 20px 10px;
   font-weight: 800;
   font-size: 18px;
   z-index: 100;
@@ -535,7 +533,7 @@ watch(topic, loadThemeData)
   height: 60px;
   left: 0;
   bottom: 100%;
-  background: #6b21a8;
+  background: #d97706;
   z-index: 1;
 }
 

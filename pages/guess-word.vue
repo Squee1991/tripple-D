@@ -168,7 +168,7 @@ function handleRestart() {
 function checkArticle(selectedArticle) {
   if (!store.currentWordObj) return
   const correct = selectedArticle === store.currentWordObj.article.toLowerCase()
-  articleResult.value = correct ? 'Верно!' : `Неверно! Правильно: ${store.currentWordObj.article}`
+  articleResult.value = correct ? t('eventSessionPage.correct') : `${t('guessWord.wrong')} ${store.currentWordObj.article}`
 }
 
 function closeArticleModal() {
@@ -491,7 +491,7 @@ watch(() => store.lose, (isLose) => {
   background: #007AFF;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 50px;
   padding: 16px 32px;
   font-size: 18px;
   font-weight: 700;

@@ -32,13 +32,11 @@
           </div>
         </div>
       </header>
-
       <main class="game-content">
         <div v-if="gameStore.currentWord" class="game-area">
           <div class="word-display" :class="feedbackClass">
             <h1>{{ gameStore.currentWord.de }}</h1>
           </div>
-
           <div class="actions" :class="{ 'disabled': isChecking || !gameStore.gameActive }">
             <button @click="handleArticleChoice('der')" class="article-btn der">
               <span class="article-text">der</span>
@@ -52,7 +50,6 @@
           </div>
         </div>
       </main>
-
       <Transition name="bottom-sheet">
         <div v-if="!gameStore.gameActive" class="game-over-overlay">
           <div class="overlay-backdrop"></div>
@@ -191,7 +188,7 @@ onMounted(() => {
 }
 
 .top-bar {
-  padding: 25px 15px;
+  padding: 5px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -207,7 +204,7 @@ onMounted(() => {
 .hearts-container {
   display: flex;
   gap: 4px;
-  font-size: 25px;
+  font-size: 28px;
   line-height: 1;
 }
 
@@ -238,18 +235,18 @@ onMounted(() => {
 .stat-widget {
   flex: 1;
   background: #ffffff;
-  border: 3px solid #1e1e1e;
-  border-radius: 16px;
-  padding: 8px 12px;
+  border: 3px solid var(--tabsSlideBorderColor);
+  border-radius: 26px;
+  padding: 6px 12px;
   text-align: center;
-  box-shadow: 0 4px 0 #1e1e1e;
+  box-shadow: 0 14px 0 var(--boxShadowMobile);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .widget-label {
-  font-size: 0.85rem;
+  font-size:  16px;
   font-weight: 800;
   color: #6b7280;
   text-transform: uppercase;
@@ -257,10 +254,11 @@ onMounted(() => {
 }
 
 .widget-value {
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: #1e1e1e;
+  font-size: 36px;
+  color: #888484;
   line-height: 1;
+  font-family: Lilita One, sans-serif;
+
 }
 
 .stat-widget.record .widget-value {
@@ -361,10 +359,9 @@ onMounted(() => {
 
 .article-btn {
   flex: 1;
-  padding: 20px 10px;
-  border-radius: 20px;
-  border: 4px solid #1e1e1e;
-  box-shadow: 0 6px 0 #1e1e1e;
+  padding: 16px 10px;
+  border-radius: 58px;
+  border: none;
   cursor: pointer;
   transition: all 0.1s cubic-bezier(0.34, 1.56, 0.64, 1);
   display: flex;
@@ -387,14 +384,17 @@ onMounted(() => {
 
 .article-btn.der {
   background-color: #60a5fa;
+  box-shadow: 0 6px 0 #3774be;
 }
 
 .article-btn.die {
   background-color: #f87171;
+  box-shadow: 0 6px 0 #c74a4a;
 }
 
 .article-btn.das {
   background-color: #fca13a;
+  box-shadow: 0 6px 0 #bb701a;
 }
 
 .game-over-overlay {
@@ -623,20 +623,11 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .word-display h1 {
-    font-size: 30px;
+    font-size: 32px;
   }
-
   .game-area {
     gap: 30px;
   }
-
-  .article-btn {
-    padding: 16px 4px;
-    border-radius: 16px;
-    border-width: 3px;
-    box-shadow: 0 4px 0 #1e1e1e;
-  }
-
   .article-text {
     font-size: 24px;
   }

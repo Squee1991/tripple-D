@@ -350,23 +350,17 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			updateCollectionCount()
 			eggStore.loadEggs()
 			detachDailyAggListener()
-
 			if (!uid) {
 				isBooting.value = false
 				resetAllProgress()
 				return
 			}
-
 			attachDailyAggListener()
 			setTimeout(() => {
 				finishBootAndReplay()
-
 				recomputeAllCasesMeta()
 				recomputeAllAdjectivesMeta()
 				recomputeAllVerbsMeta()
-
-				// Задержка 1.5 секунды, чтобы страница успела полностью загрузиться,
-				// и только потом эффектно показываем ачивку и награду за регистрацию
 				setTimeout(() => {
 					if (!completedSet.has('registerAchievement')) {
 						updateProgress('registerAchievement', 1)
@@ -564,19 +558,77 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		watch(() => langStore.articlesSpentForAchievement, spent => updateProgress('Articlus', Number(spent) || 0), { immediate: true })
 		watch(() => gameStore.onTheEdgeProgress, v => updateProgress('Impuls', v), { immediate: true })
 
-		;(async function checkLeaderboard() {
-			if (!authStore.uid) return
-			const levels = [1, 2, 3]
-			const prefixes = ['leaderboardEasy', 'leaderboardNormal', 'leaderboardHard']
+		let localMonitorInterval = null;
+		let wasOpen = null;
 
-			for (let i = 0; i < 3; i++) {
-				const lb = await gameStore.loadMarathonLeaderboard(levels[i])
-				const rankIndex = lb.findIndex(user => user.id === authStore.uid)
-				if (rankIndex === 0) updateProgress(`${prefixes[i]}-1`, 1)
-				if (rankIndex === 1) updateProgress(`${prefixes[i]}-2`, 1)
-				if (rankIndex === 2) updateProgress(`${prefixes[i]}-3`, 1)
+		const checkRankAndAward = async (seasonId) => {
+			if (!authStore.uid || !seasonId) return;
+
+			const levelData = [
+				{ levelId: 1, prefix: 'easy', achPrefix: 'leaderboardEasy' },
+				{ levelId: 2, prefix: 'normal', achPrefix: 'leaderboardNormal' },
+				{ levelId: 3, prefix: 'hard', achPrefix: 'leaderboardHard' }
+			]
+
+			for (const data of levelData) {
+				const rank = await gameStore.getPreviousSeasonRank(data.levelId, seasonId)
+				if (rank >= 1 && rank <= 3) {
+					for (let r = 3; r >= rank; r--) {
+						await authStore.unlockMarathonAchievement(data.prefix, r);
+						updateProgress(`${data.achPrefix}-${r}`, 1);
+					}
+				}
 			}
-		})()
+		}
+
+		const startZeroCostMonitor = () => {
+			if (localMonitorInterval) clearInterval(localMonitorInterval);
+			const initialState = gameStore.getSeasonState();
+			wasOpen = initialState.isOpen;
+			localMonitorInterval = setInterval(() => {
+				if (!authStore.uid) return;
+
+				const { isOpen, currentSeasonId } = gameStore.getSeasonState();
+				if (wasOpen === true && isOpen === false) {
+					wasOpen = isOpen;
+					setTimeout(() => {
+						checkRankAndAward(currentSeasonId);
+					}, 5000);
+				}
+				else if (wasOpen === false && isOpen === true) {
+					wasOpen = isOpen;
+				}
+			}, 1000);
+		}
+
+		watch(() => authStore.uid, (uid) => {
+			if (uid) {
+				const { isOpen, currentSeasonId, previousSeasonId } = gameStore.getSeasonState();
+				const seasonToCheck = isOpen ? previousSeasonId : currentSeasonId;
+				checkRankAndAward(seasonToCheck);
+
+				startZeroCostMonitor();
+			} else {
+				if (localMonitorInterval) clearInterval(localMonitorInterval);
+			}
+		}, { immediate: true })
+
+		watch(() => authStore.achievements?.marathon, (marathonStats) => {
+			if (!marathonStats) return;
+
+			if (marathonStats.easy_1) updateProgress('leaderboardEasy-1', 1)
+			if (marathonStats.easy_2) updateProgress('leaderboardEasy-2', 1)
+			if (marathonStats.easy_3) updateProgress('leaderboardEasy-3', 1)
+
+			if (marathonStats.normal_1) updateProgress('leaderboardNormal-1', 1)
+			if (marathonStats.normal_2) updateProgress('leaderboardNormal-2', 1)
+			if (marathonStats.normal_3) updateProgress('leaderboardNormal-3', 1)
+
+			if (marathonStats.hard_1) updateProgress('leaderboardHard-1', 1)
+			if (marathonStats.hard_2) updateProgress('leaderboardHard-2', 1)
+			if (marathonStats.hard_3) updateProgress('leaderboardHard-3', 1)
+
+		}, { immediate: true, deep: true })
 
 		watch(() => authStore.registeredAt, date => {
 			if (!date) return

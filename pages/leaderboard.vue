@@ -15,8 +15,8 @@ const router = useRouter()
 const authStore = userAuthStore()
 const guessStore = useGuessWordStore()
 const gameStore = useGameStore()
-
-const activeDiscipline = ref('guess')
+const currentSeasonId = ref('')
+const activeDiscipline = ref('marathon')
 const guessRating = ref([])
 const isGuessLoading = ref(true)
 const marathonRating = ref([])
@@ -29,7 +29,7 @@ const timeLeftToOpen = ref({ d: 0, h: 0, m: 0 })
 let timerInterval = null
 
 const disciplines = ref([
-  { id: 'guess', label: 'ranked.guessTab' },
+  // { id: 'guess', label: 'ranked.guessTab' },
   { id: 'marathon', label: 'ranked.marathonTab' }
 ])
 
@@ -80,6 +80,14 @@ function updateTimer() {
   const state = gameStore.getSeasonState()
   isLeaderboardOpen.value = state.isOpen
   timeLeftToOpen.value = state.timeLeft
+  if (currentSeasonId.value && currentSeasonId.value !== state.currentSeasonId) {
+    if (activeDiscipline.value === 'marathon') {
+      marathonRating.value = []
+      gameStore.personalBests = { 1: 0, 2: 0, 3: 0 }
+    }
+  }
+
+  currentSeasonId.value = state.currentSeasonId
 }
 
 async function loadGuessStatistics() {
@@ -144,7 +152,6 @@ onMounted(async () => {
     await gameStore.fetchRecord()
   }
   updateTimer()
-  // Обновляем таймер каждую 1 секунду (1000 мс) вместо 60000
   timerInterval = setInterval(updateTimer, 1000)
 })
 
@@ -172,13 +179,13 @@ onUnmounted(() => {
       </div>
       <div class="control-card">
         <nav class="toggle-nav" role="tablist">
-          <div
-              class="sliding-bg"
-              :style="{ width: 'calc(50% - 4px)', transform: `translateX(${getTransformX(activeDisciplineIndex, disciplines.length)}%)` }">
-          </div>
+<!--          <div-->
+<!--              class="sliding-bg"-->
+<!--              :style="{ width: 'calc(50% - 4px)', transform: `translateX(${getTransformX(activeDisciplineIndex, disciplines.length)}%)` }">-->
+<!--          </div>-->
           <button
               v-for="tab in disciplines" :key="tab.id"
-              class="toggle-btn"
+              class="toggle-btn tab__title"
               :class="{ 'toggle-btn--active': activeDiscipline === tab.id }"
               role="tab"
               @click="activeDiscipline = tab.id"
@@ -248,6 +255,7 @@ onUnmounted(() => {
                   {{ timeLeftToOpen.d }} {{ t('i18nDays.days') }}
                   {{ timeLeftToOpen.h }} {{ t('i18nDays.hours') }}
                   {{ timeLeftToOpen.m }} {{ t('i18nDays.mins') }}
+                  {{ timeLeftToOpen.s }} сек
                 </div>
                 <!--                <img class="leaderboard__icon" src="../assets/images/leadership.svg" alt="locked" style="opacity: 0.5;">-->
               </div>
@@ -350,6 +358,7 @@ onUnmounted(() => {
   font-size: 18px;
   color: var(--titleColor);
   margin-bottom: 6px;
+  display: none;
 }
 
 .toggle-nav {
@@ -543,4 +552,5 @@ onUnmounted(() => {
     padding: 6px;
   }
 }
+
 </style>

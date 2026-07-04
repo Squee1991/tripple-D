@@ -117,12 +117,37 @@ export const userAuthStore = defineStore('auth', () => {
         isWebView.value = isIOSWebView || isAndroidWebView;
     };
 
+    const unlockMarathonAchievement = async (levelPrefix, rank) => {
+        const user = auth.currentUser;
+        if (!user) return;
+        const fieldName = `${levelPrefix}_${rank}`;
+        if (!achievements.value) {
+            achievements.value = { marathon: {} };
+        } else if (!achievements.value.marathon) {
+            achievements.value.marathon = {};
+        }
+        if (achievements.value.marathon[fieldName]) return;
+        achievements.value.marathon[fieldName] = true;
+        try {
+            await updateDoc(doc(db, 'users', user.uid), {
+                [`achievements.marathon.${fieldName}`]: true
+            });
+        } catch (e) {
+            console.error('Ошибка при записи ачивки марафона в БД:', e);
+        }
+    };
+
     const createInitialAchievementsObject = () => ({
         achievements: {
             A1: { wins: 0, streaks: 0, cleanSweeps: 0 },
             A2: { wins: 0, streaks: 0, cleanSweeps: 0 },
             B1: { wins: 0, streaks: 0, cleanSweeps: 0 },
-            B2: { wins: 0, streaks: 0, cleanSweeps: 0 }
+            B2: { wins: 0, streaks: 0, cleanSweeps: 0 },
+            marathon: {
+                easy_1: false, easy_2: false, easy_3: false,
+                normal_1: false, normal_2: false, normal_3: false,
+                hard_1: false, hard_2: false, hard_3: false
+            }
         }
     });
 
@@ -284,7 +309,7 @@ export const userAuthStore = defineStore('auth', () => {
             const isUnlocked = ach && ach.currentProgress >= (ach.targetProgress || 1)
 
             if (!isUnlocked) {
-                return config.error // Возвращаем конкретный статус блокировки
+                return config.error
             }
         }
 
@@ -293,12 +318,10 @@ export const userAuthStore = defineStore('auth', () => {
             return 'insufficient'
         }
 
-        // Списание валюты
         langStore.points -= 50
         langStore.articlesSpentForAchievement += 50
         await langStore.saveToFirebase()
 
-        // Добавление аватара в купленные
         ownedAvatars.value.push(fileName)
         const userDocRef = doc(db, 'users', uid.value)
         await updateDoc(userDocRef, {ownedAvatars: ownedAvatars.value})
@@ -703,7 +726,6 @@ export const userAuthStore = defineStore('auth', () => {
             localStorage.removeItem('cached_premium');
         }
 
-        // 3. Выходим из RevenueCat
         if (Capacitor.isNativePlatform()) {
             try {
                 await Purchases.logOut();
@@ -712,10 +734,8 @@ export const userAuthStore = defineStore('auth', () => {
             }
         }
 
-        // 4. Очищаем локальные переменные
         setUserData({});
 
-        // 5. И только теперь спокойно выходим из Firebase
         const auth = getAuth()
         await signOut(auth)
     }
@@ -783,7 +803,8 @@ export const userAuthStore = defineStore('auth', () => {
         cancelFreeze,
         claimedBonuses,
         loginWithApple,
-        addClaimedBonus
+        addClaimedBonus,
+        unlockMarathonAchievement
     };
 });
 

@@ -9,17 +9,16 @@
             <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
         </button>
-        <div class="privacy__title">Privacy Policy</div>
+        <div class="privacy__title"> {{ t('helpCenter.privacy')}}</div>
       </div>
       <div class="privacy_section-inner">
         <section v-for="(section, index) in sections" :key="index" class="section">
           <h2>{{ section.heading }}</h2>
           <p v-for="(paragraph, j) in section.paragraphs" :key="j">{{ paragraph }}</p>
         </section>
+        <p class="last-updated">
+          Last updated: {{ lastUpdated }}</p>
       </div>
-      <p class="last-updated">
-        Last updated: {{ lastUpdated }}
-      </p>
     </div>
   </div>
 </template>
@@ -30,11 +29,11 @@ import { useRouter } from "vue-router"
 import VBanner from "~/src/components/V-banner.vue";
 import Privacy from "~/pages/privacy.vue";
 const router = useRouter()
-const PROJECT = "skillupgerman"
+const PROJECT = "Skillupgerman"
 const EMAIL = "skillupgerman@gmail.com"
 const COUNTRY = "Poland"
-
-const lastUpdated = ref("Januar 4, 2026")
+const { t } = useI18n();
+const lastUpdated = ref("Juny 29, 2026")
 const sections = ref([
   {
     heading: "1. Introduction",
@@ -194,8 +193,9 @@ h1 {
 
 .last-updated {
   margin: 0 0 22px;
-  font-size: 15px;
+  font-size: 13px;
   opacity: 0.9;
+  text-align: center;
 }
 
 .section {
@@ -206,6 +206,7 @@ h1 {
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding-bottom: 80px;
   overflow-y: auto ;
 }
 
