@@ -895,7 +895,7 @@ onMounted(async () => {
   max-height: calc(100vh - 200px);
   overflow-y: auto;
   padding-right: 3px;
-  padding-bottom: 122px;
+  padding-bottom: 135px;
 }
 
 .account-tab-body::-webkit-scrollbar {
@@ -933,6 +933,7 @@ onMounted(async () => {
   gap: 12px;
   justify-content: center;
   margin-top: 25px;
+  margin-bottom: 14px;
 }
 
 .btn {
@@ -972,7 +973,8 @@ onMounted(async () => {
 
 .avatar-modal-content {
   background: var(--tabBg);
-  padding: 20px 12px;
+  padding: 16px 10px;
+  padding-bottom: env(safe-area-inset-bottom);
   border-radius: 24px 24px 0 0;
   width: 100%;
   max-width: 600px;

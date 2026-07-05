@@ -190,10 +190,20 @@ export default defineNuxtConfig({
 				'@capacitor/filesystem',
 				'capacitor-blob-writer'
 			],
+			exclude: ['ios', 'android']
 
 		}
 	},
+	ignore: [
+		'ios/**',
+		'android/**',
+		'android-app/**' // на всякий случай
+	],
 	nitro: {
-		preset: 'static'
+		preset: 'static',
+		ignore: [
+			'ios/**',
+			'android/**'
+		]
 	},
 })

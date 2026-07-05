@@ -23,6 +23,7 @@ import {
     fetchSignInMethodsForEmail
 } from 'firebase/auth';
 import { GoogleSignIn } from '@capawesome/capacitor-google-sign-in';
+import { AppleSignIn} from "@capawesome/capacitor-apple-sign-in";
 import { doc, setDoc, getDoc, getFirestore, updateDoc, serverTimestamp, writeBatch } from 'firebase/firestore';
 import { userlangStore } from "./learningStore.js";
 let authStateUnsubscribe = null;

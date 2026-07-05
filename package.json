@@ -15,7 +15,7 @@
     "admin:remove": "node admin/setAdmin.js remove"
   },
   "dependencies": {
-    "@capacitor-community/apple-sign-in": "^7.1.0",
+    "@capacitor-community/admob": "^8.0.0",
     "@capacitor/android": "8.3.0",
     "@capacitor/app": "8.1.0",
     "@capacitor/cli": "8.3.0",
@@ -23,6 +23,7 @@
     "@capacitor/filesystem": "8.1.2",
     "@capacitor/ios": "8.3.3",
     "@capacitor/keyboard": "8.0.3",
+    "@capacitor/network": "^8.0.1",
     "@capacitor/splash-screen": "8.0.1",
     "@capacitor/status-bar": "8.0.2",
     "@capawesome/capacitor-apple-sign-in": "^0.1.0",
@@ -50,6 +51,7 @@
     "lottie-web": "5.13.0",
     "nuxt-vuefire": "1.0.5",
     "phaser": "3.90.0",
+    "resend": "^6.17.1",
     "simplebar": "6.3.1",
     "socket.io": "4.8.1",
     "socket.io-client": "4.8.1",
