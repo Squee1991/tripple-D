@@ -21,11 +21,10 @@
           <div class="grid-area-wrapper">
             <div class="theme__grid-container">
               <div class="banner-wrapper">
-                <VBanner :text="t('bannerTitles.article')" :icon="BannerIcon"/>
+                <VBanner :icon="BannerIcon" :text="t('bannerTitles.article')"/>
               </div>
               <div class="topics-list-container">
                 <div v-for="group in categorizedTopics" :key="group.id" class="category-group">
-
                   <div class="category-header">
                     <h3 class="category-title">{{ t(group.title) }}</h3>
                     <div class="category-progress-inline">
@@ -46,24 +45,23 @@
                       </div>
                     </div>
                   </div>
-
                   <div class="category-grid">
                     <div
                         v-for="(key, index) in group.keys"
                         :key="key"
                         class="topic-list-item"
                         :class="{ active: selectedTopic === key }"
-                        @click="selectTopic(key, index)"
+                        @click="selectTopic(key)"
                     >
                       <div class="topic-main-row">
                         <div class="topic-item-content">
                           <div class="topic-icon-box">
-                            <img class="theme__cards-icon-item"
-                                 :src="`/images/article-themes-images/${iconMap[key] || 'default.svg'}`" :alt="key"/>
+                            <span class="theme__cards-icon-item">{{ iconMap[key] || '✨' }}</span>
                           </div>
                           <span class="topic-label">{{ t(nameMap[key]) }}</span>
                         </div>
-                        <VArrowNav v-if="(group.id === 'nature' && index === 0) || authStore.isPremium"/>
+                        <!-- Проверяем доступность темы через новую функцию -->
+                        <VArrowNav v-if="isTopicUnlocked(key)"/>
                         <div v-else class="topic-arrow topic-arrow--locked">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -72,7 +70,6 @@
                           </svg>
                         </div>
                       </div>
-
                       <div class="topic-progress-wrapper">
                         <div class="progress-bar-container">
                           <div class="progress-bar-fill"
@@ -91,7 +88,7 @@
           </div>
         </div>
       </VTransition>
-      <Transition name="slide-right" appear>
+      <Transition appear name="slide-right">
         <div v-if="showModesBlock" class="learning-modes-block">
           <div class="learning__modes-wrapper">
             <div class="modes-header-container">
@@ -137,7 +134,7 @@ import {ref, computed, onMounted, nextTick, onUnmounted} from 'vue'
 import {useRouter} from 'vue-router'
 import {userlangStore} from '../../store/learningStore.js'
 import {userAuthStore} from '../../store/authStore.js'
-import {nameMap} from '../../utils/nameMap.js'
+import {nameMap, categories, iconMap, topicColors, baseModes} from '../../utils/nameMap.js'
 import VLoginPreloader from "../../src/components/V-loginPreloader.vue"
 import VBanner from "~/src/components/V-banner.vue"
 import BannerIcon from '../../assets/images/articleBannerIcon.svg'
@@ -145,68 +142,9 @@ import VArrowNav from "~/src/components/V-arrowNav.vue"
 import VTransition from "~/src/components/V-transition.vue"
 import VPremiumModal from "~/src/components/V-premiumModal.vue"
 
-const categories = [
-  {id: 'nature', title: 'Природа', topics: ['Nature', 'Weather', 'Landscape']},
-  {id: 'animals', title: 'Животные', topics: ['Animals', 'Birds', 'SeaAnimals', 'Insects', 'Savanna']},
-  {id: 'food', title: 'Еда', topics: ['Food', 'MilkEat', 'SweetEat', 'Vegetables', 'Fruits', 'Drinks']},
-  {id: 'people', title: 'Человек', topics: ['Body',  'Emotions']},
-  {id: 'family', title: 'Семья', topics: ['CoreFamily', 'ExtendedFamily', 'Relationships', 'StepAndInLaws']},
-  {id: 'home', title: 'Быт', topics: [ 'Kitchen', 'BathroomItems', 'Kosmetik', 'CommonItems', 'Toys']},
-  {id: 'home', title: 'Дом', topics: ['DwellingTypes', 'Rooms', 'ConstructionAndDetails']},
-  {id: 'City', title: 'Город', topics: ['CityInfrastructure', 'CityBuildings', 'CityTransport']},
-  {id: 'School', title: 'Школа', topics: ['School', 'Colors']},
-  {id: 'Work', title: 'Профессии', topics: ['JobOffice', 'JobTech', 'JobMed', 'JobEdu', 'JobService' ]},
-  {id: 'Building', title: 'Строительство', topics: ['HandTools', 'PowerTools', 'ConsumablesAndSafety']},
-  {id: 'lifestyle', title: 'Одежда', topics: ['Clothes', 'Shoes']},
-  {id: 'holidays', title: 'Праздники', topics: ['WinterHolidays', 'FamilyAndReligious', 'PersonalCelebrations', 'FestivalsAndDecor']},
-  {id: 'Sport', title: 'Cпорт', topics: ['SportBasic', 'SportCombatWinter', 'SportEvents', 'SportLife', 'SportEquipment']},
-  {id: 'Music', title: 'Музыка', topics: ['Musik', 'MusicInstruments']},
-  {id: 'travel', title: 'Путешествия', topics: ['Travel', 'TravelDocuments', 'Tourism', 'TravelTransport']},
-  {id: 'informatics', title: 'Информатика', topics: ['Hardware', 'Software', 'Internet']},
-  {id: 'informatik', title: 'Абстрактные темы', topics: ['Zeit', 'DaysAndMonths', 'Amount']}
-]
-
-const iconMap = {
-  Furniture: 'chair.svg', Animals: 'animals.svg', Birds: 'Birds.svg', SeaAnimals: 'SeaAnimals.svg',
-  Insects: 'Insects.svg', Savanna: 'Savanna.svg', Clothes: 'hemd.svg', Shoes: 'Shoes.svg',
-  Food: 'meal.svg', MilkEat: 'MilkEat.svg', SweetEat: 'SweetEat.svg', Vegetables: 'vegetables.svg',
-  Fruits: 'Fruits.svg', Drinks: 'Drinks.svg ', Body: 'body.svg', Professions: 'profession.svg',
-  Colors: 'colors.svg', Nature: 'nature.svg', Weather: 'Weather.svg',
-  Landscape: 'Landscape.svg', Home: 'home.svg', Zeit: 'time.svg', CityInfrastructure: 'CityInfrastructure.svg',
-  CityBuildings: 'CityBuildings.svg', School: 'school.svg', DaysAndMonths: 'calendar.svg',
-  Toys: 'toys.svg', CommonItems: 'Informatik.svg', BathroomItems: 'bath-room.svg',
-  Kosmetik: 'makeup.svg', Familie: 'family.svg', Emotions: 'emotions.svg', Werkzeuge: 'instruments.svg',
-  Kitchen: 'kitchen.svg', Health: 'health.svg', SportBasic: 'sport.svg', SportEquipment: 'fitness.svg',
-  SportCombatWinter: 'SportCombatWinter.svg', SportEvents: 'SportEvents.svg', SportLife: 'SportLife.svg',
-  TravelDocuments: 'TravelDocuments.svg', Tourism: 'Tourism.svg', Travel: 'travel.svg',
-  MusicInstruments: 'MusicInstruments.svg', Musik: 'Music.svg', Amount: 'Amount.svg',
-  Hardware: 'Hardwares.svg', Software: 'Software.svg', Internet: 'Internet.svg',
-  WinterHolidays: 'WinterHolidays.svg',
-  FamilyAndReligious: 'FamilyAndReligious.svg',
-  PersonalCelebrations: 'PersonalCelebration.svg',
-  FestivalsAndDecor: 'FestivalsAndDecor.svg',
-  DwellingTypes: 'Home.svg',
-  Rooms: 'Room.svg',
-  ConstructionAndDetails: 'door.svg',
-  CoreFamily: 'CoreFamily.svg',
-  Relationships: 'Relationships.svg',
-  ExtendedFamily: 'ExtendedFamily.svg',
-  HandTools: 'wrench.svg',
-  PowerTools: 'Saw.svg',
-  ConsumablesAndSafety: 'roller-paint.svg',
-  JobOffice: 'office.svg',
-  JobTech: 'buildingsJob.svg',
-  JobMed: 'healthJob.svg',
-  JobEdu: 'educationJob.svg',
-  JobService: 'serviceJob.svg',
-  CityTransport: 'transport.svg',
-  TravelTransport: 'airplane.svg',
-}
-
-const topicColors = ['#FFEB7F', '#9DFFBB', '#FFAFF3', '#88B5FF', '#FF9F7F', '#AFAFFF', '#7FFFDF', '#FFD1AF']
 const getTopicColor = (index) => topicColors[index % topicColors.length]
 
-const {t} = useI18n()
+const { t, locale } = useI18n()
 const showModesBlock = ref(false)
 const router = useRouter()
 const store = userlangStore()
@@ -226,14 +164,9 @@ const categorizedTopics = computed(() => {
   }).filter(group => group.keys.length > 0);
 })
 
-const baseModes = [
-  {key: 'wordTranslate', label: 'modes.wordTranslate'},
-  {key: 'article', label: 'modes.article'},
-  {key: 'letters', label: 'modes.letters'},
-  {key: 'wordArticle', label: 'modes.articleWord'},
-  {key: 'plural', label: 'modes.plural'},
-  {key: 'audio', label: 'modes.audio'}
-]
+const flatTopics = computed(() => {
+  return categorizedTopics.value.flatMap(group => group.keys)
+})
 
 function hasAnyPlural(wordsArray) {
   const list = Array.isArray(wordsArray) ? wordsArray : []
@@ -276,9 +209,18 @@ const getCategoryStatus = (group) => {
   }
 }
 
+const isTopicUnlocked = (key) => {
+  if (authStore.isPremium) return true
+  const allKeys = flatTopics.value
+  const index = allKeys.indexOf(key)
+  if (index === 0) return true
+  const prevKey = allKeys[index - 1]
+  const prevProgress = themeProgress.value[prevKey]
+  return prevProgress && prevProgress.total > 0 && prevProgress.learned === prevProgress.total
+}
+
 const selectTopic = (key) => {
-  const isNatureFirst = categories[0].topics[0] === key
-  if (isNatureFirst || authStore.isPremium) {
+  if (isTopicUnlocked(key)) {
     window.history.pushState({isModesOpen: true}, '')
     selectedTopic.value = key
     selectedModes.value = []
@@ -291,25 +233,35 @@ const selectTopic = (key) => {
 const startLearning = async () => {
   if (!selectedModes.value.length || isLoading.value) return
   isLoading.value = true
+
   try {
     const sortedSelectedModes = baseModes.filter(m => selectedModes.value.includes(m.key)).map(m => m.key)
+    const currentLangKey = locale.value || 'en'
+
     const topicWordsLocal = (themeList.value[selectedTopic.value] || [])
         .filter(word => {
           const globalWord = store.words.find(w => w.de === word.de && w.topic === selectedTopic.value)
           return sortedSelectedModes.some(mode => !(globalWord?.progress?.[mode] === true))
         })
-        .map(w => ({...w, topic: selectedTopic.value}))
+        .map(w => ({
+          de: w.de,
+          article: w.article,
+          plural: w.plural || '',
+          topic: selectedTopic.value,
+          [currentLangKey]: w[currentLangKey]
+        }))
+
     await store.addWordsToGlobal(topicWordsLocal)
     await store.setSelectedWords(topicWordsLocal)
     await store.setSelectedTopics([selectedTopic.value])
     await store.saveToFirebase()
+
     await nextTick()
     await router.push(localePath({
       path: '/articles/articles-session',
       query: {topic: selectedTopic.value, mode: sortedSelectedModes}
     }))
   } catch (e) {
-    console.error(e)
     isLoading.value = false
   }
 }
@@ -330,10 +282,15 @@ const clearSelectedTopic = () => {
   if (showModesBlock.value) window.history.back()
 }
 
+onMounted(()=> {
+  setTimeout(() => {
+    isPageLoaded.value = true
+  }, 100)
+})
+
 onMounted(async () => {
   const res = await fetch('/words.json')
   themeList.value = await res.json()
-  isPageLoaded.value = true
   window.addEventListener('popstate', handlePopState)
 })
 
@@ -472,19 +429,16 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
 }
 
 .topic-icon-box {
-  font-size: 32px;
-  width: 45px;
-  height: 45px;
+  font-size: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .theme__cards-icon-item {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.15));
+  display: inline-block;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
 }
 
 .topic-label {
@@ -748,12 +702,7 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
 
 @media (max-width: 400px) {
   .topic-label {
-    font-size: 15px;
-  }
-
-  .topic-icon-box {
-    width: 50px;
-    height: 50px;
+    font-size: 14px;
   }
 }
 
@@ -832,7 +781,7 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
 }
 
 .topic-list-item {
-  flex: 0 0 100%;
+  flex: 0 0 85%;
   scroll-snap-align: start;
   border-radius: 20px;
   padding: 16px;

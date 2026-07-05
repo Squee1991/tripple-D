@@ -2,8 +2,7 @@
   <footer v-if="authStore.uid" class="footer" role="contentinfo">
     <div class="footer__container">
       <nav class="nav">
-        <div class="sliding-bg"
-             :style="{ transform: `translateX(${activeIndex * 100}%)`,  opacity: activeIndex === -1 ? 0 : 1 }">
+        <div class="sliding-bg" :style="{ transform: `translateX(${getTransformX(activeIndex)}%)`,   opacity: activeIndex === -1 ? 0 : 1 }">
         </div>
         <NuxtLink
             v-for="(item, index) in footerNav"
@@ -13,6 +12,7 @@
             :class="{ 'is-active': activeIndex === index }"
         >
           <img class="nav__icon" :src="item.icon" :alt="item.alt">
+          <span class="nav__label">{{ item.label }}</span>
         </NuxtLink>
       </nav>
     </div>
@@ -23,21 +23,30 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { userAuthStore } from "../../store/authStore.js";
-
+const { t , locale } = useI18n();
 import Home from '../../assets/images/app-nav-icons/home.svg'
 import Events from '../../assets/images/app-nav-icons/events.svg'
 import Game from '../../assets/images/app-nav-icons/game.svg'
 import Cabinet from '../../assets/images/app-nav-icons/cabinet.svg'
 import Study from '../../assets/images/app-nav-icons/study.svg'
 
+
+const getTransformX = (index) => {
+  if (index === -1) return 0;
+  if (locale.value === 'ar') {
+    return (footerNav.length - 1 - index) * 100;
+  }
+  return index * 100;
+};
+
 const authStore = userAuthStore()
 const route = useRoute()
 const footerNav = [
-  { id: 'study', path: '/study', icon: Study, alt: 'Study' },
-  { id: 'game', path: '/play', icon: Game, alt: 'Game' },
-  { id: 'home', path: '/', icon: Home, alt: 'Home' },
-  { id: 'events', path: '/events', icon: Events, alt: 'Events' },
-  { id: 'exams', path: '/cabinet', icon: Cabinet, alt: 'Exams' },
+  { id: 'study', path: '/study', label: t('footerNavLabel.learn'), icon: Study, alt: 'Study' },
+  { id: 'game', path: '/play', label: t('footerNavLabel.games'), icon: Game, alt: 'Game' },
+  { id: 'home', path: '/', label: t('footerNavLabel.home'), icon: Home, alt: 'Home' },
+  { id: 'events', path: '/events', label: t('footerNavLabel.events'), icon: Events, alt: 'Events' },
+  { id: 'exams', path: '/cabinet', label: t('footerNavLabel.cabinet'), icon: Cabinet, alt: 'Exams' },
 ]
 const activeIndex = computed(() => {
   return footerNav.findIndex(item => {
@@ -52,11 +61,13 @@ const activeIndex = computed(() => {
 
 .footer {
   position: fixed;
-  bottom: 21px;
+  max-width: 1240px;
+  margin: 0 auto;
+  bottom: 27px;
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 20px);
-  z-index: 100;
+  z-index: 1;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -120,8 +131,18 @@ const activeIndex = computed(() => {
   will-change: transform;
 }
 
-.nav__item.is-active .nav__icon {
-  transform: translateY(-1px) scale(1.02);
+.nav__label{
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .nav__label {
+    display: block;
+    color: var(--title);
+    font-weight: 600;
+    margin-left: 8px;
+    font-size: 15px;
+  }
 }
 
 </style>

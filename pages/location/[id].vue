@@ -74,11 +74,11 @@
         :required-tasks="0"
         :wallet="wallet"
         :can-buy-life="canBuyLife"
-        :remaining-ads="remainingAds"
+        :remaining-ads="showRewardBtn ? remainingAds : null"
         @purchase="purchaseLife"
         @watchAd="watchAdForLife"
         @back="closeModal"
-        cancel-text="Закрыть"
+        :cancel-text="t('themeModal.close')"
     />
   </div>
 </template>
@@ -93,8 +93,9 @@ import { useSeoMeta } from '#imports';
 import VHearts from '../../src/components/V-hearts.vue';
 import VBackBtn from "~/src/components/V-back-btn.vue";
 import VReviveModal from "~/src/components/V-reviveModal.vue";
-/*import { showInterstitial, showRewarded } from '~/utils/admob.js';*/
+import { showRewarded } from '~/utils/admob.js';
 import VTransition from "~/src/components/V-transition.vue";
+import { Capacitor } from "@capacitor/core";
 
 const route = useRoute();
 const router = useRouter();
@@ -105,20 +106,26 @@ const langStore = userlangStore();
 const questList = ref([]);
 const isLoading = ref(true);
 const errorMessage = ref("");
-
+const showRewardBtn = ref(false);
 const showNoLivesModal = ref(false);
 const isAdLoading = ref(false);
 const pendingQuest = ref(null);
 const PRICE = 10;
 const MAX_ADS = 5;
 const remainingAds = ref(MAX_ADS);
-
+const mobile = Capacitor.isNativePlatform();
 const wallet = computed(() => Number(langStore.points || 0));
 const canBuyLife = computed(() => wallet.value >= PRICE);
 
 useSeoMeta({
   robots: 'noindex, nofollow'
 });
+
+const isApplication = () => {
+  if (mobile) {
+    showRewardBtn.value = true;
+  }
+}
 
 const currentRegionKey = computed(() => String(route.query.region || route.params.id || ""));
 const currentRegion = computed(() => {
@@ -211,31 +218,23 @@ const processedQuests = computed(() => {
   });
 });
 
-/*function proceedToQuest(quest, skipAd = false) {
-  const navigateToQuest = () => {
-    router.push({
-      path: `/location/quest-${quest.questId}`,
-      query: { region: currentRegionKey.value }
-    });
-  };
-  if (skipAd) {
-
-    navigateToQuest();
-  } else {
-    showInterstitial(navigateToQuest);
-  }
-}*/
+function proceedToQuest(quest) {
+  router.push({
+    path: `/location/quest-${quest.questId}`,
+    query: { region: currentRegionKey.value }
+  });
+}
 
 function handleStartQuest(quest) {
   if (!quest?.questId) return;
-
+  isApplication();
   if (chainStore.lives <= 0) {
     pendingQuest.value = quest;
     showNoLivesModal.value = true;
     return;
   }
 
-  proceedToQuest(quest, false);
+  proceedToQuest(quest);
 }
 
 async function trySpendLocal(amount) {
@@ -262,12 +261,12 @@ async function purchaseLife() {
   showNoLivesModal.value = false;
 
   if (pendingQuest.value) {
-    proceedToQuest(pendingQuest.value, false);
+    proceedToQuest(pendingQuest.value);
     pendingQuest.value = null;
   }
 }
 
-/*function watchAdForLife() {
+function watchAdForLife() {
   isAdLoading.value = true;
   showRewarded(
       async () => {
@@ -276,7 +275,7 @@ async function purchaseLife() {
         showNoLivesModal.value = false;
 
         if (pendingQuest.value) {
-          proceedToQuest(pendingQuest.value, true);
+          proceedToQuest(pendingQuest.value);
           pendingQuest.value = null;
         }
       },
@@ -287,7 +286,7 @@ async function purchaseLife() {
         }
       }
   );
-}*/
+}
 
 function closeModal() {
   showNoLivesModal.value = false;
@@ -540,9 +539,9 @@ onMounted(async () => {
 .btn {
   position: relative;
   z-index: 2;
-  padding: 15px 22px;
+  padding: 12px 22px;
   margin-top: 12px;
-  border-radius: 24px;
+  border-radius: 34px;
   font-size: 17px;
   font-weight: 900;
   letter-spacing: .02em;
@@ -597,10 +596,6 @@ onMounted(async () => {
 
   .quest__description, .error, .empty {
     font-size: 15px;
-  }
-
-  .region__title-name {
-    font-size: 20px;
   }
 
   .quest-meta .rewards-container {

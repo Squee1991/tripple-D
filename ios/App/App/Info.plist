@@ -6,6 +6,10 @@
 	<string>$(CAPACITOR_DEBUG)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-3940256099942544~1458002511</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>CFBundleDisplayName</key>
 	<string>skillupgerman</string>
 	<key>CFBundleExecutable</key>
@@ -27,14 +31,14 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.516504654997-g3nt0plc6adh4jrvp55rn4p000t3qr09</string>
+				<string>com.googleusercontent.apps.21366957409-rhn8m4j8j92el85p3aso254sedh5h79n</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>GIDClientID</key>
-	<string>516504654997-g3nt0plc6adh4jrvp55rn4p000t3qr09.apps.googleusercontent.com</string>
+	<string>21366957409-rhn8m4j8j92el85p3aso254sedh5h79n.apps.googleusercontent.com</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

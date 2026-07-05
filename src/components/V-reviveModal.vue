@@ -1,6 +1,6 @@
 <template>
-  <div v-if="show" class="modal">
-    <div class="modal__overlay"></div>
+  <div v-if="show" class="modal" >
+    <div @click="emit('back')" class="modal__overlay"></div>
     <div class="modal__window">
       <div class="modal__title">{{ t('questCompletedModals.lives') }}</div>
       <div class="modal__text">
@@ -44,7 +44,6 @@ const props = defineProps({
     type: Number,
     default: 0
   },
-  // ДОБАВЛЯЕМ НОВЫЙ ПРОП
   cancelText: {
     type: String,
     default: ''
@@ -83,8 +82,6 @@ const actionButtons = computed(() => {
     style: ''
   })
 
-  // МЕНЯЕМ ЛОГИКУ ТЕКСТА ТУТ
-  // Если передали cancelText, используем его. Иначе старый дефолтный текст.
   buttons.push({
     text: props.cancelText ? props.cancelText : t('questCompletedModals.back'),
     action: () => emit('back'),
@@ -178,7 +175,7 @@ const actionButtons = computed(() => {
   border: 2px solid #58CC02;
   border-bottom-width: 4px;
   border-bottom-color: #58A700;
-  border-radius: 16px;
+  border-radius: 50px;
   background: #58CC02;
   cursor: pointer;
   font-size: 1.1rem;

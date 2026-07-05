@@ -1,0 +1,552 @@
+{
+  "start": {
+    "botText": "Guten Tag! Wohin möchten Sie fahren?",
+    "botTranslation": {
+      "ar-SA": "طاب يومك! إلى أين تود الذهاب؟",
+      "en-US": "Good day! Where would you like to travel?",
+      "es-ES": "¡Buen día! ¿Adónde le gustaría viajar?",
+      "fr-FR": "Bonjour ! Où souhaitez-vous aller ?",
+      "hi-IN": "शुभ दिन! आप कहाँ जाना चाहेंगे?",
+      "pl-PL": "Dzień dobry! Dokąd chce pan/pani pojechać?",
+      "ro-RO": "Bună ziua! Încotro ați dori să călătoriți?",
+      "ru-RU": "Добрый день! Куда Вы хотите поехать?",
+      "tr-TR": "İyi günler! Nereye seyahat etmek istersiniz?",
+      "uk-UA": "Добрий день! Куди Ви хочете поїхати?",
+      "uz-UZ": "Xayrli kun! Qayerga sayohat qilishni xohlaysiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "wohin",
+        "translation": {
+          "ru-RU": "куда",
+          "en-US": "where to",
+          "ar-SA": "إلى أين",
+          "es-ES": "adónde",
+          "fr-FR": "où",
+          "hi-IN": "कहाँ",
+          "pl-PL": "dokąd",
+          "ro-RO": "încotro",
+          "tr-TR": "nereye",
+          "uk-UA": "куди",
+          "uz-UZ": "qayerga"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich möchte nach Berlin fahren.",
+        "translation": {
+          "ar-SA": "أريد الذهاب إلى برلين.",
+          "en-US": "I would like to go to Berlin.",
+          "es-ES": "Me gustaría ir a Berlín.",
+          "fr-FR": "Je voudrais aller à Berlin.",
+          "hi-IN": "मैं बर्लिन जाना चाहूँगा।",
+          "pl-PL": "Chciałbym pojechać do Berlina.",
+          "ro-RO": "Aș dori să merg la Berlin.",
+          "ru-RU": "Я хотел бы поехать в Берлин.",
+          "tr-TR": "Berlin'e gitmek istiyorum.",
+          "uk-UA": "Я хотів би поїхати до Берліна.",
+          "uz-UZ": "Men Berlinga borishni xohlayman."
+        },
+        "nextStep": "ask_time"
+      },
+      {
+        "text": "Ich möchte nach München fahren.",
+        "translation": {
+          "ar-SA": "أريد الذهاب إلى ميونخ.",
+          "en-US": "I would like to go to Munich.",
+          "es-ES": "Me gustaría ir a Múnich.",
+          "fr-FR": "Je voudrais aller à Munich.",
+          "hi-IN": "मैं म्यूनिख जाना चाहूँगा।",
+          "pl-PL": "Chciałbym pojechać do Monachium.",
+          "ro-RO": "Aș dori să merg la München.",
+          "ru-RU": "Я хотел бы поехать в Мюнхен.",
+          "tr-TR": "Münih'e gitmek istiyorum.",
+          "uk-UA": "Я хотів би поїхати до Мюнхена.",
+          "uz-UZ": "Men Myunxenga borishni xohlayman."
+        },
+        "nextStep": "ask_time"
+      }
+    ],
+    "defaultNext": "ask_time"
+  },
+  "ask_time": {
+    "botText": "Wann möchten Sie fahren?",
+    "botTranslation": {
+      "ar-SA": "متى تود الذهاب؟",
+      "en-US": "When would you like to go?",
+      "es-ES": "¿Cuándo le gustaría ir?",
+      "fr-FR": "Quand souhaitez-vous partir ?",
+      "hi-IN": "आप कब जाना चाहेंगे?",
+      "pl-PL": "Kiedy chce pan/pani pojechać?",
+      "ro-RO": "Când ați dori să plecați?",
+      "ru-RU": "Когда Вы хотите поехать?",
+      "tr-TR": "Ne zaman gitmek istersiniz?",
+      "uk-UA": "Коли Ви хочете поїхати?",
+      "uz-UZ": "Qachon jo'nab ketishni xohlaysiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "nach",
+        "translation": {
+          "ru-RU": "в / до (направление)",
+          "en-US": "to (direction)",
+          "ar-SA": "إلى",
+          "es-ES": "a (dirección)",
+          "fr-FR": "à / en",
+          "hi-IN": "की ओर",
+          "pl-PL": "do",
+          "ro-RO": "spre / la",
+          "tr-TR": "-e / -a",
+          "uk-UA": "до / в (напрямок)",
+          "uz-UZ": "ga"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Um 8 Uhr, bitte.",
+        "translation": {
+          "ar-SA": "في الساعة الثامنة، من فضلك.",
+          "en-US": "At 8 o'clock, please.",
+          "es-ES": "A las 8, por favor.",
+          "fr-FR": "À 8 heures, s'il vous plaît.",
+          "hi-IN": "8 बजे, कृपया।",
+          "pl-PL": "O 8:00, poproszę.",
+          "ro-RO": "La ora 8, vă rog.",
+          "ru-RU": "В 8 часов, пожалуйста.",
+          "tr-TR": "Saat 8'de, lütfen.",
+          "uk-UA": "О 8 годині, будь ласка.",
+          "uz-UZ": "Soat 8 da, iltimos."
+        },
+        "nextStep": "price"
+      },
+      {
+        "text": "Um 10 Uhr, bitte.",
+        "translation": {
+          "ar-SA": "في الساعة العاشرة، من فضلك.",
+          "en-US": "At 10 o'clock, please.",
+          "es-ES": "A las 10, por favor.",
+          "fr-FR": "À 10 heures, s'il vous plaît.",
+          "hi-IN": "10 बजे, कृपया।",
+          "pl-PL": "O 10:00, poproszę.",
+          "ro-RO": "La ora 10, vă rog.",
+          "ru-RU": "В 10 часов, пожалуйста.",
+          "tr-TR": "Saat 10'da, lütfen.",
+          "uk-UA": "О 10 годині, будь ласка.",
+          "uz-UZ": "Soat 10 da, iltimos."
+        },
+        "nextStep": "price"
+      }
+    ],
+    "defaultNext": "price"
+  },
+  "price": {
+    "botText": "Das macht 15 Euro.",
+    "botTranslation": {
+      "ar-SA": "التكلفة 15 يورو.",
+      "en-US": "That is 15 Euros.",
+      "es-ES": "Eso son 15 euros.",
+      "fr-FR": "Cela fait 15 euros.",
+      "hi-IN": "यह 15 यूरो हुआ।",
+      "pl-PL": "To będzie 15 euro.",
+      "ro-RO": "Asta face 15 euro.",
+      "ru-RU": "С Вас 15 евро.",
+      "tr-TR": "Bu 15 Euro tutuyor.",
+      "uk-UA": "З Вас 15 євро.",
+      "uz-UZ": "Jami 15 yevro bo'ladi."
+    },
+    "vocabulary": [
+      {
+        "german": "um",
+        "translation": {
+          "ru-RU": "в (о времени)",
+          "en-US": "at (time)",
+          "ar-SA": "في تمام",
+          "es-ES": "a las",
+          "fr-FR": "à (heure)",
+          "hi-IN": "बजे",
+          "pl-PL": "o (czas)",
+          "ro-RO": "la ora",
+          "tr-TR": "saat ...'te",
+          "uk-UA": "о (про час)",
+          "uz-UZ": "soat ... da"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hier, bitte.",
+        "translation": {
+          "ar-SA": "تفضل.",
+          "en-US": "Here, please.",
+          "es-ES": "Aquí tiene, por favor.",
+          "fr-FR": "Voici, s'il vous plaît.",
+          "hi-IN": "यहाँ, कृपया।",
+          "pl-PL": "Proszę bardzo.",
+          "ro-RO": "Iată, vă rog.",
+          "ru-RU": "Вот, пожалуйста. (Наличными)",
+          "tr-TR": "Buyurun, lütfen.",
+          "uk-UA": "Ось, будь ласка.",
+          "uz-UZ": "Mana, marhamat."
+        },
+        "nextStep": "platform"
+      },
+      {
+        "text": "Mit Karte, bitte.",
+        "translation": {
+          "ar-SA": "بالبطاقة من فضلك.",
+          "en-US": "With card, please.",
+          "es-ES": "Con tarjeta, por favor.",
+          "fr-FR": "Par carte, s'il vous plaît.",
+          "hi-IN": "कार्ड से, कृपया।",
+          "pl-PL": "Kartą poproszę.",
+          "ro-RO": "Cu cardul, vă rog.",
+          "ru-RU": "Картой, пожалуйста.",
+          "tr-TR": "Kartla lütfen.",
+          "uk-UA": "Карткою, будь ласка.",
+          "uz-UZ": "Karta orqali, iltimos."
+        },
+        "nextStep": "platform"
+      }
+    ],
+    "defaultNext": "platform"
+  },
+  "platform": {
+    "botText": "Danke. Der Zug fährt von Gleis 2.",
+    "botTranslation": {
+      "ar-SA": "شكراً. يغادر القطار من الرصيف رقم 2.",
+      "en-US": "Thanks. The train leaves from platform 2.",
+      "es-ES": "Gracias. El tren sale del andén 2.",
+      "fr-FR": "Merci. Le train part de la voie 2.",
+      "hi-IN": "धन्यवाद। ट्रेन प्लेटफॉर्म 2 से निकलती है।",
+      "pl-PL": "Dziękuję. Pociąg odjeżdża z peronu 2.",
+      "ro-RO": "Mulțumesc. Trenul pleacă de la peronul 2.",
+      "ru-RU": "Спасибо. Поезд отправляется с перрона 2.",
+      "tr-TR": "Teşekkürler. Tren 2. perondan kalkıyor.",
+      "uk-UA": "Дякую. Поїзд відправляється з перону 2.",
+      "uz-UZ": "Rahmat. Poyezd 2-platformadan jo'naydi."
+    },
+    "vocabulary": [
+      {
+        "german": "das Gleis",
+        "translation": {
+          "ru-RU": "путь / перрон",
+          "en-US": "platform / track",
+          "ar-SA": "الرصيف",
+          "es-ES": "vía / andén",
+          "fr-FR": "voie / quai",
+          "hi-IN": "प्लेटफॉर्म / ट्रैक",
+          "pl-PL": "peron / tor",
+          "ro-RO": "linie / peron",
+          "tr-TR": "peron / ray",
+          "uk-UA": "колія / перон",
+          "uz-UZ": "platforma / yo'l"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Wo ist Gleis 2?",
+        "translation": {
+          "ar-SA": "أين الرصيف رقم 2؟",
+          "en-US": "Where is platform 2?",
+          "es-ES": "¿Dónde está el andén 2?",
+          "fr-FR": "Où est la voie 2 ?",
+          "hi-IN": "प्लेटफॉर्म 2 कहाँ है?",
+          "pl-PL": "Gdzie jest peron 2?",
+          "ro-RO": "Unde este peronul 2?",
+          "ru-RU": "Где находится перрон 2?",
+          "tr-TR": "2. peron nerede?",
+          "uk-UA": "Де знаходиться перон 2?",
+          "uz-UZ": "2-platforma qayerda?"
+        },
+        "nextStep": "directions"
+      },
+      {
+        "text": "Ist Gleis 2 links?",
+        "translation": {
+          "ar-SA": "هل الرصيف 2 على اليسار؟",
+          "en-US": "Is platform 2 on the left?",
+          "es-ES": "¿El andén 2 está a la izquierda?",
+          "fr-FR": "La voie 2 est-elle à gauche ?",
+          "hi-IN": "क्या प्लेटफॉर्म 2 बाईं ओर है?",
+          "pl-PL": "Czy peron 2 jest po lewej stronie?",
+          "ro-RO": "Peronul 2 este la stânga?",
+          "ru-RU": "Перрон 2 находится слева?",
+          "tr-TR": "2. peron solda mı?",
+          "uk-UA": "Перон 2 знаходиться зліва?",
+          "uz-UZ": "2-platforma chapdami?"
+        },
+        "nextStep": "directions"
+      }
+    ],
+    "defaultNext": "directions"
+  },
+  "directions": {
+    "botText": "Gehen Sie geradeaus und dann rechts.",
+    "botTranslation": {
+      "ar-SA": "اذهب بشكل مستقيم ثم إلى اليمين.",
+      "en-US": "Go straight ahead and then right.",
+      "es-ES": "Vaya todo recto y luego a la derecha.",
+      "fr-FR": "Allez tout droit puis à droite.",
+      "hi-IN": "सीधे आगे जाएँ और फिर दाएँ।",
+      "pl-PL": "Proszę iść prosto, a potem w prawo.",
+      "ro-RO": "Mergeți drept înainte și apoi la dreapta.",
+      "ru-RU": "Идите прямо и затем направо.",
+      "tr-TR": "Dümdüz gidin ve sonra sağa dönün.",
+      "uk-UA": "Йдіть прямо, а потім направо.",
+      "uz-UZ": "To'g'riga boring va keyin o'ngga."
+    },
+    "vocabulary": [
+      {
+        "german": "wo",
+        "translation": {
+          "ru-RU": "где",
+          "en-US": "where",
+          "ar-SA": "أين",
+          "es-ES": "dónde",
+          "fr-FR": "où",
+          "hi-IN": "कहाँ",
+          "pl-PL": "gdzie",
+          "ro-RO": "unde",
+          "tr-TR": "nerede",
+          "uk-UA": "де",
+          "uz-UZ": "qayerda"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ist das weit?",
+        "translation": {
+          "ar-SA": "هل هذا بعيد؟",
+          "en-US": "Is that far?",
+          "es-ES": "¿Está lejos?",
+          "fr-FR": "Est-ce loin ?",
+          "hi-IN": "क्या यह दूर है?",
+          "pl-PL": "Czy to daleko?",
+          "ro-RO": "E departe?",
+          "ru-RU": "Это далеко?",
+          "tr-TR": "Orası uzak mı?",
+          "uk-UA": "Це далеко?",
+          "uz-UZ": "Bu uzoqmi?"
+        },
+        "nextStep": "distance"
+      },
+      {
+        "text": "Wie viele Minuten sind das?",
+        "translation": {
+          "ar-SA": "كم دقيقة يستغرق ذلك؟",
+          "en-US": "How many minutes is that?",
+          "es-ES": "¿Cuántos minutos son?",
+          "fr-FR": "Combien de minutes cela prend-il ?",
+          "hi-IN": "इसमें कितने मिनट लगते हैं?",
+          "pl-PL": "Ile to minut?",
+          "ro-RO": "Câte minute sunt?",
+          "ru-RU": "Сколько это займет в минутах?",
+          "tr-TR": "Bu kaç dakika sürer?",
+          "uk-UA": "Скільки це хвилин?",
+          "uz-UZ": "Bu necha daqiqa oladi?"
+        },
+        "nextStep": "distance"
+      }
+    ],
+    "defaultNext": "distance"
+  },
+  "distance": {
+    "botText": "Nein, nur 2 Minuten zu Fuß.",
+    "botTranslation": {
+      "ar-SA": "لا، فقط دقيقتين مشياً على الأقدام.",
+      "en-US": "No, only 2 minutes on foot.",
+      "es-ES": "No, solo 2 minutos a pie.",
+      "fr-FR": "Non, seulement 2 minutes à pied.",
+      "hi-IN": "नहीं, पैदल सिर्फ 2 मिनट।",
+      "pl-PL": "Nie, tylko 2 minuty na piechotę.",
+      "ro-RO": "Nu, doar 2 minute pe jos.",
+      "ru-RU": "Нет, всего 2 минуты пешком.",
+      "tr-TR": "Hayır, yürüyerek sadece 2 dakika.",
+      "uk-UA": "Ні, всього 2 хвилини пішки.",
+      "uz-UZ": "Yo'q, piyoda atigi 2 daqiqa."
+    },
+    "vocabulary": [
+      {
+        "german": "zu Fuß",
+        "translation": {
+          "ru-RU": "пешком",
+          "en-US": "on foot",
+          "ar-SA": "مشياً على الأقدام",
+          "es-ES": "a pie",
+          "fr-FR": "à pied",
+          "hi-IN": "पैदल",
+          "pl-PL": "na piechotę",
+          "ro-RO": "pe jos",
+          "tr-TR": "yürüyerek",
+          "uk-UA": "пішки",
+          "uz-UZ": "piyoda"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Vielen Dank für Ihre Hilfe!",
+        "translation": {
+          "ar-SA": "شكراً جزيلاً لمساعدتك!",
+          "en-US": "Thank you very much for your help!",
+          "es-ES": "¡Muchas gracias por su ayuda!",
+          "fr-FR": "Merci beaucoup pour votre aide !",
+          "hi-IN": "आपकी मदद के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję za pomoc!",
+          "ro-RO": "Vă mulțumesc mult pentru ajutor!",
+          "ru-RU": "Большое спасибо за Вашу помощь!",
+          "tr-TR": "Yardımınız için çok teşekkür ederim!",
+          "uk-UA": "Дуже дякую за Вашу допомогу!",
+          "uz-UZ": "Yordamingiz uchun katta rahmat!"
+        },
+        "nextStep": "thank_you"
+      },
+      {
+        "text": "Super, danke schön!",
+        "translation": {
+          "ar-SA": "رائع، شكراً جزيلاً!",
+          "en-US": "Super, thank you!",
+          "es-ES": "¡Súper, muchas gracias!",
+          "fr-FR": "Super, merci beaucoup !",
+          "hi-IN": "सुपर, बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Super, dziękuję bardzo!",
+          "ro-RO": "Super, mulțumesc frumos!",
+          "ru-RU": "Супер, большое спасибо!",
+          "tr-TR": "Süper, çok teşekkürler!",
+          "uk-UA": "Супер, дуже дякую!",
+          "uz-UZ": "Super, katta rahmat!"
+        },
+        "nextStep": "thank_you"
+      }
+    ],
+    "defaultNext": "thank_you"
+  },
+  "thank_you": {
+    "botText": "Gerne! Einen schönen Tag noch!",
+    "botTranslation": {
+      "ar-SA": "بكل سرور! أتمنى لك يوماً سعيداً!",
+      "en-US": "You are welcome! Have a nice day!",
+      "es-ES": "¡De nada! ¡Que tenga un buen día!",
+      "fr-FR": "Avec plaisir ! Bonne journée !",
+      "hi-IN": "आपका स्वागत है! आपका दिन शुभ हो!",
+      "pl-PL": "Proszę bardzo! Miłego dnia!",
+      "ro-RO": "Cu plăcere! O zi frumoasă în continuare!",
+      "ru-RU": "Пожалуйста! Хорошего Вам дня!",
+      "tr-TR": "Rica ederim! İyi günler dilerim!",
+      "uk-UA": "Будь ласка! Гарного Вам дня!",
+      "uz-UZ": "Arzimaydi! Yaxshi kun tilayman!"
+    },
+    "options": [
+      {
+        "text": "Danke, gleichfalls!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً!",
+          "en-US": "Thanks, same to you!",
+          "es-ES": "¡Gracias, igualmente!",
+          "fr-FR": "Merci, pareillement !",
+          "hi-IN": "धन्यवाद, आपको भी!",
+          "pl-PL": "Dziękuję, nawzajem!",
+          "ro-RO": "Mulțumesc, la fel!",
+          "ru-RU": "Спасибо, взаимно!",
+          "tr-TR": "Teşekkürler, size de!",
+          "uk-UA": "Дякую, навзаєм!",
+          "uz-UZ": "Rahmat, sizga ham!"
+        },
+        "nextStep": "goodbye"
+      },
+      {
+        "text": "Danke, Ihnen auch!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً!",
+          "en-US": "Thanks, you too!",
+          "es-ES": "¡Gracias, a usted también!",
+          "fr-FR": "Merci, à vous aussi !",
+          "hi-IN": "धन्यवाद, आपको भी!",
+          "pl-PL": "Dziękuję, panu/pani również!",
+          "ro-RO": "Mulțumesc, și dumneavoastră la fel!",
+          "ru-RU": "Спасибо, Вам тоже!",
+          "tr-TR": "Teşekkürler, size de!",
+          "uk-UA": "Дякую, Вам теж!",
+          "uz-UZ": "Rahmat, sizga ham!"
+        },
+        "nextStep": "goodbye"
+      }
+    ],
+    "defaultNext": "goodbye"
+  },
+  "goodbye": {
+    "botText": "Auf Wiedersehen! Gute Reise!",
+    "botTranslation": {
+      "ar-SA": "إلى اللقاء! رحلة سعيدة!",
+      "en-US": "Goodbye! Have a good trip!",
+      "es-ES": "¡Adiós! ¡Buen viaje!",
+      "fr-FR": "Au revoir ! Bon voyage !",
+      "hi-IN": "अलविदा! आपकी यात्रा मंगलमय हो!",
+      "pl-PL": "Do widzenia! Szczęśliwej podróży!",
+      "ro-RO": "La revedere! Drum bun!",
+      "ru-RU": "До свидания! Счастливого пути!",
+      "tr-TR": "Hoşça kalın! İyi yolculuklar!",
+      "uk-UA": "До побачення! Щасливої дороги!",
+      "uz-UZ": "Xayr! Oq yo'l!"
+    },
+    "options": [
+      {
+        "text": "Auf Wiedersehen!",
+        "translation": {
+          "ar-SA": "إلى اللقاء!",
+          "en-US": "Goodbye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Do widzenia!",
+          "ro-RO": "La revedere!",
+          "ru-RU": "До свидания!",
+          "tr-TR": "Hoşça kalın!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Ko'rishguncha!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Tschüss!",
+        "translation": {
+          "ar-SA": "وداعاً!",
+          "en-US": "Bye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Salut !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Cześć!",
+          "ro-RO": "Pa!",
+          "ru-RU": "Пока!",
+          "tr-TR": "Görüşürüz!",
+          "uk-UA": "Бувай!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Die Lektion ist beendet.",
+    "botTranslation": {
+      "ar-SA": "انتهى الدرس.",
+      "en-US": "The lesson is finished.",
+      "es-ES": "La lección ha terminado.",
+      "fr-FR": "La leçon est terminée.",
+      "hi-IN": "पाठ समाप्त हो गया है。",
+      "pl-PL": "Lekcja jest zakończona.",
+      "ro-RO": "Lecția s-a terminat.",
+      "ru-RU": "Урок окончен.",
+      "tr-TR": "Ders bitti.",
+      "uk-UA": "Урок закінчено.",
+      "uz-UZ": "Dars tugadi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

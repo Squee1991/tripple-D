@@ -4,9 +4,9 @@ import {useRoute, useRouter} from 'vue-router'
 import {useGalaxyStore} from '../../store/galaxyStore.js'
 import Meteor from '../../assets/images/meteor.svg'
 import MeteorInFire from '../../assets/images/meteorinFire.svg'
-import { useCombatEngine } from '../../composables/useCombatEngine.js'
+import {useCombatEngine} from '../../composables/useCombatEngine.js'
 
-const { t } = useI18n()
+const {t} = useI18n()
 const route = useRoute()
 const router = useRouter()
 const store = useGalaxyStore()
@@ -75,8 +75,7 @@ const initGame = () => {
 }
 
 const goHome = () => {
-  const currentLocale = route.params.locale || 'ru'
-  router.push(`/german-universe`)
+  router.push('/german-universe')
 }
 
 const goToPay = () => {
@@ -94,6 +93,14 @@ onMounted(() => {
     })
   }
 })
+
+onBeforeRouteLeave((to, from, next) => {
+  if (to.path.includes('undefined') || to.matched.length === 0) {
+    next('/german-universe')
+  } else {
+    next()
+  }
+})
 </script>
 
 <template>
@@ -102,13 +109,14 @@ onMounted(() => {
       <h1>⚠️ {{ t('galaxyMenu.errorTitle') }}</h1>
       <p>{{ errorMessage }}</p>
       <div class="error-actions">
-        <button v-if="errorMessage.includes('PLUS')" class="btn-plus" @click="goToPay">{{ t('galaxySelector.getPlusBtn')}}</button>
-        <button class="btn-go" @click="goHome">{{ t('galaxyMenu.errorBtn')}}</button>
+        <button v-if="errorMessage.includes('PLUS')" class="btn-plus" @click="goToPay">
+          {{ t('galaxySelector.getPlusBtn') }}
+        </button>
+        <button class="btn-go" @click="goHome">{{ t('galaxyMenu.errorBtn') }}</button>
       </div>
     </div>
     <div v-else class="sky" ref="skyRef">
       <div class="star-layer"></div>
-
       <div class="score-board">
         <span class="score-label"> {{ t('galaxyMenu.points') }} </span>
         <span class="score-value">{{ score }}</span>
@@ -152,12 +160,21 @@ onMounted(() => {
               <img class="astronaut" src="../../assets/images/galaxy-images/astronautFail.svg" alt="astronautFail">
               <div class="score__wrapper">
                 <span class="score-text">{{ t('galaxySession.check') }}</span>
-                <span class="fs-val">{{ score }}</span>
+                <div class="score__inner">
+                  <img class="score-coin" src="../../assets/images/galaxy-images/Artics.svg" alt="">
+                  <span class="fs-val">{{ score }}</span>
+                </div>
               </div>
             </div>
             <div class="modal-actions">
-              <button class="action-btn restart-btn toon-btn-blue" @click="initGame">{{ t('galaxySession.again') }}</button>
-              <button class="action-btn home-btn toon-btn-red" @click="goHome">{{ t('galaxySession.constellations') }}</button>
+              <button class="action-btn restart-btn toon-btn-blue" @click="initGame">{{
+                  t('galaxySession.again')
+                }}
+              </button>
+              <button class="action-btn home-btn toon-btn-red" @click="goHome">{{
+                  t('galaxySession.constellations')
+                }}
+              </button>
             </div>
           </div>
         </div>
@@ -184,7 +201,8 @@ onMounted(() => {
 
 <style scoped>
 .game-universe {
-  height: 100%;
+  position: fixed;
+  inset: 0;
   background: linear-gradient(180deg, #020111 0%, #0d0a2b 50%, #1a0b2e 100%);
   overflow: hidden;
   font-family: Nunito, sans-serif;
@@ -193,7 +211,7 @@ onMounted(() => {
 
 .battery-ui {
   position: absolute;
-  top: 20px;
+  top: calc(5px + env(safe-area-inset-top, 0px));
   right: 20px;
   display: flex;
   gap: 4px;
@@ -204,6 +222,15 @@ onMounted(() => {
   z-index: 100;
 }
 
+.score__inner {
+  display: flex;
+  align-items: center;
+}
+
+.score__coin {
+  width: 44px;
+}
+
 .battery-segment {
   width: 14px;
   height: 24px;
@@ -212,19 +239,29 @@ onMounted(() => {
   transition: background 0.3s ease;
 }
 
-.segment-red.active { background: #ff4b2b; box-shadow: 0 0 8px #ff4b2b; }
-.segment-yellow.active { background: #ffeb3b; box-shadow: 0 0 8px #ffeb3b; }
-.segment-green.active { background: #00e676; box-shadow: 0 0 8px #00e676; }
+.segment-red.active {
+  background: #ff4b2b;
+  box-shadow: 0 0 8px #ff4b2b;
+}
+
+.segment-yellow.active {
+  background: #ffeb3b;
+  box-shadow: 0 0 8px #ffeb3b;
+}
+
+.segment-green.active {
+  background: #00e676;
+  box-shadow: 0 0 8px #00e676;
+}
 
 .star-layer {
   position: absolute;
   width: 100%;
   height: 200%;
   top: -100%;
-  background-image:
-      radial-gradient(1px 1px at 20px 30px, #ffffff, transparent),
-      radial-gradient(2px 2px at 50px 80px, #e2f0ff, transparent),
-      radial-gradient(2px 2px at 150px 180px, #eeddff, transparent);
+  background-image: radial-gradient(1px 1px at 20px 30px, #ffffff, transparent),
+  radial-gradient(2px 2px at 50px 80px, #e2f0ff, transparent),
+  radial-gradient(2px 2px at 150px 180px, #eeddff, transparent);
   background-size: 250px 250px;
   animation: starsScroll 6s linear infinite;
   opacity: 0.85;
@@ -250,8 +287,12 @@ onMounted(() => {
 }
 
 @keyframes starsScroll {
-  from { transform: translateY(0); }
-  to { transform: translateY(50%); }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50%);
+  }
 }
 
 .ammo-selector {
@@ -261,16 +302,17 @@ onMounted(() => {
   gap: 5px;
 }
 
-.score__wrapper{
+.score__wrapper {
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 6px;
-  margin: 10px 0;
+  margin-left: 20px;
 }
 
 .sector-info {
   position: absolute;
-  top: 20px;
+  top: calc(5px + env(safe-area-inset-top, 0px));
   right: 20px;
   text-align: right;
   z-index: 100;
@@ -292,15 +334,20 @@ onMounted(() => {
 
 .score-board {
   position: absolute;
-  top: 20px;
+  top: calc(5px + env(safe-area-inset-top, 0px));
   left: 20px;
   color: #00d2ff;
   z-index: 100;
 }
 
+.score-label {
+  font-size: 18px;
+}
+
 .score-value {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 26px;
+  font-family: Lilita One, sans-serif;
+  font-weight: 400;
   margin-left: 10px;
   color: #fff;
 }
@@ -327,10 +374,10 @@ onMounted(() => {
 }
 
 .mob-bubble {
-  background: rgba(0, 0, 0, 0.8);
+  background: none;
+  font-size: 19px;
   color: #fff;
   padding: 5px 15px;
-  border: 2px solid #00d2ff;
   text-align: center;
   border-radius: 5px;
 }
@@ -358,7 +405,7 @@ onMounted(() => {
 
 .cannon-station {
   position: absolute;
-  bottom: 30px;
+  bottom: calc(10px + env(safe-area-inset-bottom, 0px));
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -392,7 +439,7 @@ onMounted(() => {
 
 .death-title {
   color: #ff5252;
-  font-size:23px;
+  font-size: 23px;
   font-weight: 900;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -400,18 +447,19 @@ onMounted(() => {
 }
 
 .score-display {
-  margin-bottom: 15px;
+  margin-bottom: 28px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-around;
   gap: 5px;
 }
 
 .fs-val {
-  font-size: 24px;
+  margin-left: 5px;
+  font-size: 36px;
+  font-family: Lilita One, sans-serif;
   color: #3498db;
-  font-weight: 900;
+  font-weight: 400;
   line-height: 1;
   text-shadow: 1px 1px 0px #3498db;
 }
@@ -428,9 +476,13 @@ onMounted(() => {
   font-size: 1.2rem;
   font-weight: 900;
   border: 3px solid #000;
-  border-radius: 15px;
+  border-radius: 50px;
   cursor: pointer;
   transition: 0.1s;
+}
+
+.score-coin {
+  width: 45px;
 }
 
 .toon-btn-blue {
@@ -453,23 +505,29 @@ onMounted(() => {
 }
 
 .astronaut {
-  width: 160px;
+  width: 120px;
 }
 
 .ground-impact-explosion {
   position: absolute;
-  bottom: 50px;
+  bottom: calc(160px + env(safe-area-inset-bottom, 0px));
   left: 50%;
   transform: translateX(-50%);
   z-index: 2000;
   text-align: center;
 }
 
-.big-boom-emoji { font-size: 10rem; }
+.big-boom-emoji {
+  font-size: 11rem;
+}
 
 @keyframes fall {
-  from { top: -150px; }
-  to { top: calc(100% - 170px); }
+  from {
+    top: -150px;
+  }
+  to {
+    top: calc(100% - 250px);
+  }
 }
 
 .error-screen {
@@ -550,7 +608,7 @@ onMounted(() => {
 
 .score-text {
   color: #a0aec0;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 900;
 }
 

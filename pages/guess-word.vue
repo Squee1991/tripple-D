@@ -1,8 +1,9 @@
 <template>
   <main class="ios-trainer-page">
     <div class="ios-app-container">
-      <header class="ios-header">
+      <header class="ios-header" :class="{ 'not__started' : !isStarted }">
         <VBackBtn/>
+        <span v-if="!isStarted" class="title">{{ t('sub.guess')}}</span>
         <div v-if="isStarted && !store.win && !store.lose" class="ios-stats">
           <div class="stat-pill">
             <img class="guess__icon-header" src="../assets/images/dailyIcons/timer.svg" alt="">
@@ -22,7 +23,7 @@
       </header>
       <div v-if="!isStarted" class="screen-start">
         <div class="mascot-emoji">
-          <img class="guess__icon" src="../assets/images/guessWord.svg" alt="">
+          <img class="guess__icon" src="../assets/images/GuessIcon.svg" alt="">
         </div>
         <p class="subtitle">{{ t('guessWord.subtitle') }}</p>
         <button class="ios-btn-primary btn-bounce" @click="startGame">
@@ -167,7 +168,7 @@ function handleRestart() {
 function checkArticle(selectedArticle) {
   if (!store.currentWordObj) return
   const correct = selectedArticle === store.currentWordObj.article.toLowerCase()
-  articleResult.value = correct ? 'Верно!' : `Неверно! Правильно: ${store.currentWordObj.article}`
+  articleResult.value = correct ? t('eventSessionPage.correct') : `${t('guessWord.wrong')} ${store.currentWordObj.article}`
 }
 
 function closeArticleModal() {
@@ -254,6 +255,14 @@ watch(() => store.lose, (isLose) => {
   overflow: hidden;
 }
 
+.title {
+  color: var(--title);
+  font-size: 23px;
+  font-weight: 600;
+  margin-left: 15px;
+  text-shadow: 1px 1px var(--title);
+}
+
 .guess__icon-header {
   width: 34px;
 }
@@ -266,6 +275,10 @@ watch(() => store.lose, (isLose) => {
   height: 60px;
   background: transparent;
   z-index: 10;
+}
+
+.not__started {
+  justify-content: start;
 }
 
 .ios-btn-back {
@@ -344,7 +357,6 @@ watch(() => store.lose, (isLose) => {
 .mascot-emoji {
   font-size: 80px;
   margin-bottom: 20px;
-  animation: float 3s ease-in-out infinite;
 }
 
 .title-main {
@@ -479,7 +491,7 @@ watch(() => store.lose, (isLose) => {
   background: #007AFF;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 50px;
   padding: 16px 32px;
   font-size: 18px;
   font-weight: 700;
@@ -487,6 +499,7 @@ watch(() => store.lose, (isLose) => {
   cursor: pointer;
   transition: all 0.1s;
   width: 100%;
+  max-width: 360px;
 }
 
 .ios-btn-primary:active:not(:disabled) {
@@ -633,15 +646,6 @@ watch(() => store.lose, (isLose) => {
 .feedback-badge.error {
   background: #ffebe9;
   color: #FF3B30;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
 }
 
 .bounce-in {

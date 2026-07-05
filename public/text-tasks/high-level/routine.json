@@ -6,7 +6,8 @@
     {
       "id": "routine_b1_1",
       "title": "Der frühe Morgen",
-      "translation": "Раннее утро",
+      "translation": "themeTextTitleRoutine_B1.routineOne",
+      "icon": "\uD83C\uDF05",
       "wordsPool": ["wachte", "hatte", "deshalb", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Heute Morgen " },
@@ -27,7 +28,8 @@
     {
       "id": "routine_b1_2",
       "title": "Frühstück und Arbeitsweg",
-      "translation": "Завтрак и путь на работу",
+      "translation": "themeTextTitleRoutine_B1.routineTwo",
+      "icon": "\uD83D\uDEB2",
       "wordsPool": ["frühstückte", "hatte", "trotzdem", "sonst", "dann", "Außerdem"],
       "textElements": [
         { "type": "text", "content": "Gestern " },
@@ -48,7 +50,8 @@
     {
       "id": "routine_b1_3",
       "title": "Der Vormittag im Büro",
-      "translation": "Первая половина дня в офисе",
+      "translation": "themeTextTitleRoutine_B1.routineThree",
+      "icon": "\uD83D\uDDA5\uFE0F",
       "wordsPool": ["arbeitete", "hatte", "deshalb", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Früher " },
@@ -69,7 +72,8 @@
     {
       "id": "routine_b1_4",
       "title": "Die Mittagspause",
-      "translation": "Обеденный перерыв",
+      "translation": "themeTextTitleRoutine_B1.routineFour",
+      "icon": "\uD83E\uDD57",
       "wordsPool": ["machte", "hatte", "trotzdem", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Letzte Woche " },
@@ -90,7 +94,8 @@
     {
       "id": "routine_b1_5",
       "title": "Der Feierabend",
-      "translation": "Конец рабочего дня",
+      "translation": "themeTextTitleRoutine_B1.routineFive",
+      "icon": "\uD83D\uDE87",
       "wordsPool": ["verließ", "hatte", "deshalb", "sonst", "dann", "außerdem"],
       "textElements": [
         { "type": "text", "content": "Gestern " },
@@ -111,7 +116,8 @@
     {
       "id": "routine_b1_6",
       "title": "Sport nach der Arbeit",
-      "translation": "Спорт после работы",
+      "translation": "themeTextTitleRoutine_B1.routineSix",
+      "icon": "\uD83C\uDFCB\uFE0F\u200D♂\uFE0F",
       "wordsPool": ["trainierte", "hatte", "trotzdem", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Als Student " },
@@ -132,7 +138,8 @@
     {
       "id": "routine_b1_7",
       "title": "Abendessen und Entspannung",
-      "translation": "Ужин и отдых",
+      "translation": "themeTextTitleRoutine_B1.routineSeven",
+      "icon": "\uD83D\uDCFA",
       "wordsPool": ["kochte", "hatten", "deshalb", "sonst", "dann", "Außerdem"],
       "textElements": [
         { "type": "text", "content": "Früher " },
@@ -153,7 +160,8 @@
     {
       "id": "routine_b1_8",
       "title": "Die Vorbereitung auf das Bett",
-      "translation": "Подготовка ко сну",
+      "translation": "themeTextTitleRoutine_B1.routineEight",
+      "icon": "\uD83D\uDECC",
       "wordsPool": ["las", "hatte", "trotzdem", "sonst", "dann", "nämlich"],
       "textElements": [
         { "type": "text", "content": "Gestern Abend " },
@@ -169,6 +177,50 @@
         { "type": "text", "content": " stelle ich den Wecker für den nächsten Tag. — Guter Schlaf ist " },
         { "type": "blank", "id": 6, "correct": "nämlich" },
         { "type": "text", "content": " extrem wichtig für die körperliche und geistige Gesundheit." }
+      ]
+    },
+    {
+      "id": "routine_b1_9",
+      "title": "Der Abendspaziergang",
+      "translation": "themeTextTitleRoutine_B1.routineNine",
+      "icon": "🚶",
+      "wordsPool": ["machte", "hatte", "deshalb", "sonst", "dann", "nämlich"],
+      "textElements": [
+        { "type": "text", "content": "Letzten Dienstag " },
+        { "type": "blank", "id": 1, "correct": "machte" },
+        { "type": "text", "content": " ich einen kurzen Spaziergang im Viertel. — Ich " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " den ganzen Tag im Büro gesessen, bevor ich endlich an die frische Luft ging. — Die Luft war ziemlich kühl, " },
+        { "type": "blank", "id": 3, "correct": "deshalb" },
+        { "type": "text", "content": " zog ich meine dicke Jacke an. — Man muss regelmäßig rausgehen, " },
+        { "type": "blank", "id": 4, "correct": "sonst" },
+        { "type": "text", "content": " bekommt man abends leicht Kopfschmerzen. — Zuerst gehe ich eine große Runde um den See, " },
+        { "type": "blank", "id": 5, "correct": "dann" },
+        { "type": "text", "content": " kehre ich entspannt zurück. — Diese Gewohnheit hilft mir " },
+        { "type": "blank", "id": 6, "correct": "nämlich" },
+        { "type": "text", "content": " sehr beim Einschlafen." }
+      ]
+    },
+    {
+      "id": "routine_b1_10",
+      "title": "Der Haushaltsputz",
+      "translation": "themeTextTitleRoutine_B1.routineTen",
+      "icon": "🧹",
+      "wordsPool": ["räumte", "hatte", "trotzdem", "sonst", "dann", "außerdem"],
+      "textElements": [
+        { "type": "text", "content": "Am Wochenende " },
+        { "type": "blank", "id": 1, "correct": "räumte" },
+        { "type": "text", "content": " ich meine gesamte Wohnung gründlich auf. — Ich " },
+        { "type": "blank", "id": 2, "correct": "hatte" },
+        { "type": "text", "content": " unter der Woche keine Zeit dafür gefunden, bevor das Chaos zu groß wurde. — Ich war eigentlich ziemlich müde, " },
+        { "type": "blank", "id": 3, "correct": "trotzdem" },
+        { "type": "text", "content": " putzte ich fleißig das Badezimmer. — Man muss den Müll regelmäßig wegbringen, " },
+        { "type": "blank", "id": 4, "correct": "sonst" },
+        { "type": "text", "content": " riecht es in की Küche unangenehm. — Zuerst staubsauge ich im Wohnzimmer, " },
+        { "type": "blank", "id": 5, "correct": "dann" },
+        { "type": "text", "content": " wische ich den Boden in der Küche. — Ich höre beim Putzen " },
+        { "type": "blank", "id": 6, "correct": "außerdem" },
+        { "type": "text", "content": " immer meine Lieblingsmusik über Kopfhörer." }
       ]
     }
   ]

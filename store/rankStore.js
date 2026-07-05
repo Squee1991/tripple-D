@@ -29,21 +29,21 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 			],
 			levels: [
 				{ hats: 60, bonus: 5 },
-				{ hats: 70, bonus: 10 },
-				{ hats: 90, bonus: 'v-rank.sale5' }
+				{ hats: 70, bonus: 5 },
+				{ hats: 90, bonus: 5 }
 			]
 		},
 		{
 			title: 'v-rank.rank_3',
 			icons: [
 				{ icon: '/images/rank-icons/level-3/SilverPank.png' },
-				{ icon: '/images/rank-icons/level-3/SilverPank.png' },
-				{ icon: '/images/rank-icons/level-3/SilverPank.png' }
+				{ icon: '/images/rank-icons/level-3/BronzePank.png' },
+				{ icon: '/images/rank-icons/level-3/GoldPank.png' }
 			],
 			levels: [
-				{ hats: 110, bonus: 10 },
-				{ hats: 130, bonus: 10 },
-				{ hats: 150, bonus: 10 }
+				{ hats: 110, bonus: 5 },
+				{ hats: 130, bonus: 5 },
+				{ hats: 150, bonus: 5 }
 			]
 		},
 		{
@@ -54,9 +54,9 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 				{ icon: '/images/rank-icons/level-4/Level4Gold.png' }
 			],
 			levels: [
-				{ hats: 170, bonus: 10 },
-				{ hats: 190, bonus: 15 },
-				{ hats: 210, bonus: 'v-rank.sale10' }
+				{ hats: 170, bonus: 5 },
+				{ hats: 190, bonus: 10 },
+				{ hats: 210, bonus: 'v-rank.sale3' }
 			]
 		},
 		{
@@ -67,9 +67,9 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 				{ icon: '/images/rank-icons/level-5/Level5Gold.png' }
 			],
 			levels: [
-				{ hats: 230, bonus: 15 },
-				{ hats: 270, bonus: 15 },
-				{ hats: 300, bonus: 15 }
+				{ hats: 230, bonus: 10 },
+				{ hats: 270, bonus: 10 },
+				{ hats: 300, bonus: 10 }
 			]
 		},
 		{
@@ -80,9 +80,9 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 				{ icon: '/images/rank-icons/level-6/Level6Gold.png' }
 			],
 			levels: [
-				{ hats: 330, bonus: 20 },
-				{ hats: 360, bonus: 20 },
-				{ hats: 400, bonus: 'v-rank.sale15' }
+				{ hats: 330, bonus: 10 },
+				{ hats: 360, bonus: 10 },
+				{ hats: 400, bonus: 10 }
 			]
 		},
 		{
@@ -93,9 +93,9 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 				{ icon: '/images/rank-icons/level-7/Level7Gold.png' }
 			],
 			levels: [
-				{ hats: 420, bonus: 20 },
-				{ hats: 450, bonus: 20 },
-				{ hats: 500, bonus: '' }
+				{ hats: 420, bonus: 10 },
+				{ hats: 450, bonus: 15 },
+				{ hats: 500, bonus: 'v-rank.sale6' }
 			]
 		}
 	]

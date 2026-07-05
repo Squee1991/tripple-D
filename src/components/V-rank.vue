@@ -5,15 +5,6 @@
           :text="t('v-rank.desc')"
           :icon="EducationHut"
       />
-<!--      <div class="hats-badge" aria-hidden="true">-->
-<!--        <img :src="currentRankIcon" :alt="currentRankTitle"/>-->
-<!--      </div>-->
-<!--      <div class="hats-meta">-->
-<!--        <div class="hats-rank">{{ currentRankTitle }}</div>-->
-<!--        <div class="hats-hatsline">-->
-<!--          <span class="hat-value">{{ authStore.totalHats }}</span>-->
-<!--        </div>-->
-<!--      </div>-->
     </div>
     <div v-for="rank in store.ranksData" :key="rank.title" class="rank-league">
       <div class="league-line">
@@ -39,6 +30,7 @@
           <div class="card-inner">
             <div class="card-icon">
               <img
+                  class="card__rank-icon"
                   :src="rank.icons ? rank.icons[idx].icon : rank.icon"
                   :alt="rank.title"
                   :class="{ 'icon-grayscale': authStore.totalHats < lvl.hats }"
@@ -76,6 +68,7 @@ import {userAuthStore} from '~/store/authStore.js'
 import {useSeoMeta} from "#imports"
 import EducationHut from '../../assets/images/graduate-hat.svg'
 import VBanner from "~/src/components/V-banner.vue";
+
 
 const { t } = useI18n()
 const store = useRankUserStore()
@@ -210,10 +203,10 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 
 .card-stars {
   color: #e0e0e0;
-  font-size: 21px;
+  font-size: 22px;
   position: absolute;
   left: 50%;
-  top: -3px;
+  top: -6px;
   transform: translateX(-50%);
 }
 
@@ -227,18 +220,21 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .card-icon {
-  padding-top: 10px;
-  width: 76px;
-  height: 76px;
+  padding-top: 22px;
+  width: 86px;
+  margin-bottom: 5px;
 }
 
 .icon-grayscale {
   filter: grayscale(1);
 }
 
+
+
 .card-label {
   font-weight: 700;
   color: var(--titleColor);
+  display: none;
 }
 
 
@@ -412,7 +408,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 @media (max-width: 1023px) {
   .grid {
     display: flex;
-    gap: 16px;
+
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;

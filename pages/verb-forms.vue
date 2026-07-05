@@ -37,7 +37,8 @@
             <div class="inf-left-side">
               <SoundBtn :text="verb.infinitive" class="large-sound" />
               <h2 class="inf-main">
-               <span class="verb__infinitive"> {{ verb.infinitive }}</span> - {{ verb.translations?.[locale] || verb.translations?.['en'] || '...' }}
+               <span class="verb__infinitive"> {{ verb.infinitive }}</span>
+                <span class="verb__infinitive-translate"> - {{ verb.translations?.[locale] || verb.translations?.['en'] || '...' }}</span>
               </h2>
             </div>
           </div>
@@ -157,10 +158,6 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 
 <style scoped>
 
-*{
-  color: var(--titleColor);
-}
-
 .verbs-container {
   height: 100%;
   max-width: 1300px;
@@ -179,10 +176,10 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 .cartoon-title {
   font-family: "Nunito", sans-serif;
   font-weight: 900;
-  font-size: 1.4rem;
-  text-align: center;
-  flex: 1;
-  color: white;
+  font-size: 23px;
+  color: var(--title);
+  margin-left: 15px;
+  text-shadow: 1px 1px var(--title);
 }
 
 .counter {
@@ -193,6 +190,7 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 }
 
 .page-counter{
+  color: var(--title);
   width: 65px;
   display: flex;
   align-items: center;
@@ -251,6 +249,10 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 
 .verb__infinitive {
   color: #4299e1;
+}
+
+.verb__infinitive-translate {
+  color: var(--titleColor);
 }
 
 .verb-card {
@@ -370,6 +372,7 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 .v-form {
   font-size: 0.95rem;
   font-weight: 700;
+  color: var(--titleColor);
 }
 
 .mini-sound {
@@ -420,7 +423,6 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   gap: 30px;
   padding: 15px;
   border-radius: 20px;
-  border-top: 3px solid #e2e8f0;
 }
 
 

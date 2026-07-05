@@ -31,7 +31,7 @@
           </NuxtLink>
         </li>
       </ul>
-      <AccountManagement/>
+
     </section>
     <div v-if="showFreezeModal" class="modal-overlay" @click.self="showFreezeModal = false">
       <div class="modal-content">
@@ -84,7 +84,7 @@ const formattedFreezeDate = computed(() => {
 })
 
 const sections = ref([
-  // {id: "stats", icon: Graph, alt: 'Graph', title: t('accountPanel.stats'), route: "/statistics"},
+  {id: "stats", icon: Graph, alt: 'Graph', title: t('accountPanel.stats'), route: "/statistics"},
   {id: "achievement", icon: AchPanelIcon, alt: 'AchPanel', title: t('accountPanel.achievement'), route: "/achievements"},
   {id: "ranked", icon: RankedIcon, alt: 'Ranked', title: t('accountPanel.ranked'), route: "/leaderboard"},
   {id: "calendar", icon: Calendar, alt: 'Ranked', title: t('accountPanel.eventCalendar'), route: "/calendar"},
@@ -117,6 +117,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  padding-bottom: 22px;
 }
 
 .points_header-title {
@@ -155,7 +156,6 @@ onMounted(() => {
 }
 
 .action-menu__icon-bg {
-  background: var(--tabBg);
   border-radius: 12px;
   width: 45px;
   height: 45px;

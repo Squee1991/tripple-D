@@ -1,5 +1,4 @@
 {
-
   "definiteIndefiniteQuestOne": {
     "title": "Qo'shimchalar uchun jang",
     "description": "Aralash amaliyot: gaplarda noaniq va aniq artikllar.",
@@ -525,10 +524,6 @@
     "questFifteen": "To'g'ri variantni tanlang: Bu ajoyib kun edi",
     "questFifteenTip": "Noaniq artikl (birinchi marta). Muzakkur jins (der). 'ein' artikli bo'sh, shuning uchun sifat 'der' artiklidan -er qo'shimchasini oladi."
   },
-
-
-
-
   "secretLandsQuestOne": {
     "title": "Natija",
     "description": "Aralash mashg'ulot: Perfekt va Futur 1'da noaniq artikl bilan ishlash. Mavzular: hayot, shahar, transport, ovqat.",
@@ -1054,9 +1049,6 @@
     "questFifteen": "Gapni yig'ing: Biz qiziqarli ko'rgazmani ko'ramiz",
     "questFifteenTip": "Ko'rgazma — muannas jins (die). 'eine' artikli -e bilan tugaydi, shuning uchun sifat artikldan -e qo'shimchasini oladi."
   },
-
-
-
   "edgeImagesQuestOne": {
     "title": "Start",
     "description": "Der, die, das dan keyin sifat qo'shimchalarini to'g'ri qo'llashni mashq qilamiz.",
@@ -1582,11 +1574,6 @@
     "questFifteen": "Shaklni yozing (lecker): Men pitsa yeyman.",
     "questFifteenTip": "Akkusativ (muannas): 'die' asosiy artikl, sifat artikldan -e qo'shimchasini oladi."
   },
-
-
-
-
-
   "timeGageQuestOne": {
     "title": "Tanishuv va muloqot",
     "description": "Muloqot vaziyatlarida gramatikani mashq qilamiz: uchrashuv rejalaridan tortib o'tmish haqidagi hikoyalargacha.",
@@ -3612,7 +3599,9 @@
     "streak": "G‘alabalar seriyasi",
     "clearWins": "Toza g‘alabalar",
     "start": "O‘yinni boshlash",
-    "info": "Statistikani ko‘rish uchun darajani bosing."
+    "info": "Statistikani ko‘rish uchun darajani bosing.",
+    "answer-placeholder": "Gapni tuzing...",
+    "pending": "Kutilmoqda..."
   },
   "eventSessionPage": {
     "loading": "Yuklanmoqda…",
@@ -3961,23 +3950,23 @@
     "text": "Yashirish"
   },
   "payPage": {
-    "title": "Platformadan maksimal foyda oling",
-    "description": "O‘qish, mukofotlar, topshiriqlar, progress va yana ko‘p narsalar!",
-    "compareLabelOne": "Xususiyatlar",
+    "sale5": "3% chegirma",
+    "sale10": "6% chegirma",
+    "sale15": "15% chegirma",
+    "finalePrice": "JAMI:",
+    "yourSale": "Sizning chegirmangiz",
+    "title": "Platformadan maksimal darajada foydalaning",
+    "description": "Ta'lim, mukofotlar, topshiriqlar, progress va ko'plab boshqa narsalar!",
+    "compareLabelOne": "Funksiyalar",
     "compareLabelTwo": "Bepul",
     "compareLabelThree": "Obuna",
-    "getPremiumBtn": "Obuna sotib olish",
+    "getPremiumBtn": "Olish",
     "month": "oy",
-    "featureOne": "O‘quv materiallari",
-    "featureTwo": "Progressni saqlash",
-    "featureThree": "Yutuqlar",
-    "featureFour": "Kundalik topshiriqlar",
-    "featureFive": "Mavsumiy tadbirlar",
-    "featureSix": "Mukofotlarni olish",
-    "featureSeven": "AI tekshirgan testlar",
-    "featureEight": "Ovozli o‘qish",
-    "featureNine": "Duellar va reyting",
-    "featureTen": "Kelajakdagi funksiyalar"
+    "featureOne": "Chegarasiz ta'lim",
+    "featureTwo": "Kelgusi funksiyalar",
+    "featureThree": "Dasturchilarni qo'llab-quvvatlash",
+    "featureFour": "Reklamasiz",
+    "withoutDiscount": "Chegirmasiz"
   },
   "useHeadApp": {
     "title": "Skillupgerman — Nemis tilini o‘rganish oson va qiziqarli",
@@ -4120,25 +4109,29 @@
     "send": "Xabar yuborish"
   },
   "howToUse": {
-    "title": "Qanday foydalanish",
-    "questOne": "Qanday qilib o‘qishni boshlash mumkin?",
-    "answerOne": "Nemis tilini mashq qilishni boshlash uchun ro‘yxatdan o‘tib, akkaunt yaratish kifoya. Bunsiz topshiriqlarga kirish yopiladi.",
-    "questTwo": "Mavsumiy voqealar nima?",
-    "answerTwo": "Mavsumiy voqealar — bu bayramlarga bag‘ishlangan vaqtinchalik tadbirlar. Ularda maxsus kvestlar, mavzuli topshiriqlar va faqat cheklangan muddat davomida mavjud bo‘lgan mukofotlar paydo bo‘ladi.",
-    "questThree": "Yutuq nima?",
-    "answerThree": "Yutuq — bu bajarilgan faoliyat (progress, to‘g‘ri javoblar, kunlik topshiriqlar va hokazo) uchun beriladigan belgidir.",
+    "title": "Qanday foydalaniladi",
+    "questOne": "O'rganishni qanday boshlash kerak?",
+    "answerOne": "Nemis tili amaliyotini boshlash uchun ro'yxatdan o'tish va profil yaratish kifoya. Busiz topshiriqlarga kirish imkoniyati yopiq bo'ladi.",
+    "questTwo": "Mavsumiy iventlar nima?",
+    "answerTwo": "Mavsumiy iventlar — bu bayramlarga bag'ishlangan vaqtinchalik tadbirlardir. Ularda faqat cheklangan vaqt davomida amal qiladigan maxsus kvestlar, mavzuli topshiriqlar va noyob mukofotlar paydo bo'ladi.",
+    "questThree": "Yutuq (достижение) nima?",
+    "answerThree": "Yutuq — bu bajarilgan faollik (progress, to'g'ri javoblar, kundalik vazifalar va h.k.) uchun beriladigan belgi.",
     "questFour": "Mukofotlar nima?",
-    "answerFour": "Mukofotlar ma’lum yutuqlarni bajarish uchun beriladi va shaxsiy kabinetingizda ko‘rsatiladi.",
-    "questFive": "Artikllar bo‘yicha progressni qayerdan ko‘rish mumkin?",
-    "answerFive": "Bosh sahifada «Ishtirokchi paneli»ni tanlab «Statistika»ni oching, so‘ng kerakli kategoriya progressini ko‘ring. Muhim: agar sizda faol artikl mavzulari bo‘lmasa, statistika ko‘rsatilmaydi.",
+    "answerFour": "Mukofotlar muayyan yutuqlarni bajarganlik uchun beriladi va sizning shaxsiy kabinetingizda aks etadi.",
+    "questFive": "Artikllar bo'yicha progressni qayerdan ko'rish mumkin?",
+    "answerFive": "Asosiy sahifadagi „Ishtirokchi paneli“ bo'limidan „Statistika“ni, so'ngra o'zingizni qiziqtirgan kategoriya progressini tanlang. Muhim: agar sizda artikllar bo'yicha faol mavzular bo'lmasa, statistika ko'rsatilmaydi.",
     "questSix": "Artiklyus nima?",
-    "answerSix": "Artiklyus — bu ichki valyuta. U «Artikl mashqlari» topshiriqlarida to‘g‘ri javoblar va «Til mamlakatlari»dagi topshiriqlarni bajarish uchun beriladi. Uni qayta urinishlarga sarflash mumkin.",
+    "answerSix": "Artiklyus — bu ichki valyuta. U „Artikllar amaliyoti“ topshirig'idagi to'g'ri javoblar va Til Yerlaridagi topshiriqlarni bajarganlik uchun beriladi. Uni qo'shimcha urinishlarga sarflash mumkin.",
     "questSeven": "Reytingga qanday kirish mumkin?",
-    "answerSeven": "«Artikl mashqlari» yoki «Til mamlakatlari» rejimida o‘ynab, kamida 2-darajaga erishish kerak. Shundan keyin reyting jadvali ochiladi.",
-    "questEight": "Kunlik topshiriqlar nima?",
-    "answerEight": "Bu mavzularga oid topshiriqlar bo‘lib, ularni kuniga faqat bir marta bajarish mumkin. Kuniga 3 ta topshiriq bajarish mumkin. Ular bosh sahifada mavjud.",
-    "questNine": "Voqealar nima?",
-    "answerNine": "Bular yiliga bir marta oʻtkaziladigan vaqtinchalik voqealardir. Faol davrda mavzuli topshiriqlar va mukofotlar ochiladi. Sana oraligʻidan tashqarida boʻlim mavjud emas. Voqealar sanasini Ishtirokchi Panelidagi «Voqealar taqvimi»dan koʻrish mumkin."
+    "answerSeven": "Artikllar marafoni reytingi har ikki haftada bir marta o'tkaziladi. Ikki hafta davomida siz boshqa ishtirokchilar bilan bellashasiz. Marafon yakunlangach, dastlabki uchta o'rinni egallaganlar yutuq va mukofotlarga ega bo'lishadi!",
+    "questEight": "Kundalik topshiriqlar nima?",
+    "answerEight": "Bular kuniga bir marta bajarish mumkin bo'lgan mavzuli topshiriqlardir. Bir kunda 3 ta topshiriq bajarish mumkin. Ulardan asosiy sahifada foydalanish mumkin.",
+    "questNine": "Tadbirlar (события) nima?",
+    "answerNine": "Yilda bir marta o'tkaziladigan vaqtinchalik iventlar. Faol davrda mavzuli topshiriqlar va mukofotlar ochiladi. Ko'rsatilgan sanalardan tashqari vaqtda bu bo'lim ishlamaydi. O'tkazilish sanalarini Ishtirokchi panelidagi „Tadbirlar taqvimi“dan ko'rish mumkin.",
+    "questTen": "Konfederatkachalar nima?",
+    "answerTen": "Konfederatkachalar — bu kundalik topshiriqlarni bajarganlik uchun beriladigan akademik shlyapalar (to'rtburchak qalpoqlar). Ular evaziga unvon bonuslari va o'qish uchun chegirmalar olinadi. Kundalik topshiriqlarni bajarmaslik esa jarimaga sabab bo'ladi.",
+    "questEleven": "Konfederatkachalarga jarima bormi?",
+    "answerEleven": "Ha, kundalik topshiriqlarni bajarmaganlik uchun jarima (3 ta konfederatkacha) ko'zda tutilgan. Kamida bitta kundalik topshiriqni bajaring va jarima qo'llanilmaydi. Agar vaqtingiz bo'lmasa, ichki do'kondan „vaqtni to'xtatish“ funksiyasini sotib olishingiz mumkin, u jarima sabab qalpoqchalaringiz hisobdan chiqib ketishining oldini oladi!"
   },
   "accountManagement": {
     "title": "Akkauntni boshqarish",
@@ -4150,22 +4143,23 @@
     "answerThree": "Kirish formasida «Parolni unutdingizmi?» tugmasini bosing va ko‘rsatmalarga amal qiling. Ro‘yxatdan o‘tishda ko‘rsatilgan email manzilingizga tiklash havolasi yuboriladi. Muhim: ro‘yxatdan o‘tayotganda haqiqiy emaildan foydalaning."
   },
   "subscribe": {
-    "title": "Obuna (Premium)",
-    "questOne": "Premium obuna nima beradi?",
-    "questOneStepOne": "1 Barcha so‘zlar va gaplarning ovozli talaffuzi — tinglab tushunishni mashq qiling.",
-    "questOneStepTwo": "2 Cheklovsiz ta’lim — kuniga istalgancha materialdan o‘ting.",
-    "questOneStepThree": "3 Sun’iy intellekt tomonidan tekshiriladigan barcha testlarga kirish.",
-    "questOneStepFour": "4 Tinglab yozish va gapirish topshiriqlari orqali og‘zaki nutqni mashq qiling.",
-    "questOneStepFive": "5 Faqat Premium foydalanuvchilariga mavjud eksklyuziv materiallar va mashqlar.",
-    "questOneStepSix": "6 Dasturchilarni qo‘llab-quvvatlash — Premium bizga loyiha ustida ishlash, yangi topshiriqlar chiqarish va barcha o‘quvchilar uchun funksiyalarni yaxshilashga yordam beradi. Maqsadimiz — nemis tilini o‘rganishni qulay va qiziqarli qilish. Biz interaktiv, o‘yin va musobaqalar muhitini yaratamiz, shunda o‘qish sarguzashtga aylanadi va har kuni unga qaytgingiz keladi!",
-    "questTwo": "Premiumni qanday o‘chirish mumkin?",
-    "questTwoStepOne": "Akkauntingizga kiring.",
-    "questTwoStepTwo": "«Kabinet» bo‘limiga o‘ting.",
-    "questTwoStepThree": "«Akkauntni boshqarish» bo‘limini oching.",
-    "questTwoStepFour": "«Obunani bekor qilish» tugmasini bosing.",
-    "note": "Shundan so‘ng, Premium to‘lov muddati tugaguncha saqlanib qoladi.",
+    "title": "Obuna (Plus)",
+    "questOne": "Plus obuna nimalar beradi?",
+    "questOneStepOne": "1 Barcha so'z va gaplarning ovozli talaffuzi — tinglab tushunishni mashq qiling.",
+    "questOneStepTwo": "2 Cheklovlarsiz ta'lim — kuniga istalgancha materialni o'zlashtiring.",
+    "questOneStepThree": "3 Sun'iy intellekt tomonidan baholanadigan va avtomatik tekshiriladigan barcha testlarga kirish imkoniyati.",
+    "questOneStepFour": "4 Og'zaki nutqni rivojlantirish uchun audio va gapirish topshiriqlari.",
+    "questOneStepFive": "5 Bepul versiyada mavjud bo'lmagan eksklyuziv materiallar va mashqlar.",
+    "questOneStepSix": "6 Dasturchilarni qo'llab-quvvatlash — bu bizga loyihani rivojlantirishga, yangi topshiriqlar yaratishga va barcha o'quvchilar uchun funksiyalarni yaxshilashga yordam beradi. Maqsadimiz — nemis tilini o'rganishni hamyonbop va eng muhimi qiziqarli qilish. Biz ta'lim har kuni qaytishni xohlaydigan sarguzashtga aylanishi uchun interaktiv, o'yin va musobaqa muhitini yaratamiz!",
+    "questTwo": "Plus obunani qanday bekor qilish mumkin?",
+    "questTwoStepOne": "Profilingizga kiring.",
+    "questTwoStepTwo": "„Kabinet“ bo'limiga o'ting.",
+    "questTwoStepThree": "„Sozlamalar“ bo'limiga o'ting.",
+    "questTwoStepFour": "„Profilni boshqarish“ bo'limchasini oching.",
+    "questTwoStepFive": "„Obunani bekor qilish“ tugmasini bosing.",
+    "note": "Bekor qilingandan so'ng, pullik muddat tugaguncha xizmatlardan foydalanish imkoniyati saqlanib qoladi. Muhim: obuna qaysi platformada rasmiylashtirilgan bo'lsa, o'sha yerning o'zida bekor qilinishi kerak (iOS, Android ilovasida yoki saytda).",
     "questThree": "Qolgan kunlar uchun pul qaytariladimi?",
-    "answerThree": "Hozircha qolgan kunlar uchun pul qaytarish nazarda tutilmagan."
+    "answerThree": "Qolgan kunlar uchun pulni qaytarish ko'zda tutilmagan."
   },
   "daily": {
     "first": "Barcha rejimlarda 5 ta so'z o'rgan: Artikllar amaliyoti",
@@ -8039,9 +8033,11 @@
     "description": "Qalpoqlaringizni jarimalardan himoya qiladi"
   },
   "cardSales": {
-    "title5": "5% Chegirma",
-    "title10": "10% Chegirma",
-    "title15": "15% Chegirma"
+    "title3": "3% chegirma",
+    "title5": "5% chegirma",
+    "title6": "6% chegirma",
+    "title10": "10% chegirma",
+    "title15": "15% chegirma"
   },
   "cardsShop": {
     "full": "To'liq",
@@ -8088,8 +8084,8 @@
     "exam": "Do'stlar"
   },
   "cabinetSidebar": {
-    "valueOne": "Hisob parametrlari",
-    "valueTwo": "Imtihonlar arxivi",
+    "valueOne": "Hisob",
+    "valueTwo": "Imtihonlar",
     "valueThree": "Do'kon",
     "valueFour": "Sozlamalar"
   },
@@ -8109,9 +8105,11 @@
     "ach": "Yutuqlar haqida bildirishnoma",
     "themeBtn": "Mavzu",
     "snowFall": "Qor yog'ishi",
-    "language": "Interfeys tili"
+    "language": "Interfeys tili",
+    "profileData": "Profil ma'lumotlari"
   },
   "cabinet": {
+    "plusCanceled": "PLUS bekor qilindi",
     "important": "MUHIM!!!",
     "importantText": "Hisobni o‘chirganingizda obuna avtomatik bekor qilinmaydi. Avval obunani bekor qiling.",
     "cancelPremium": "Obunani bekor qilasizmi?",
@@ -8294,7 +8292,8 @@
     "guessed": "Topilgan so‘z bu edi:",
     "tryAgain": "Qaytadan urinib ko‘r",
     "btnToMain": "Bosh sahifaga",
-    "placeholder": "So‘zni to‘liq kiriting"
+    "placeholder": "So‘zni to‘liq kiriting",
+    "wrong": "Noto'g'ri! To'g'risi:"
   },
   "preposition": {
     "title": "Nemis predloglari haqida hamma narsa",
@@ -9219,12 +9218,13 @@
     "themen": "Mavzuli darajalar",
     "idioms": "Frazeologizmlar",
     "wordDuel": "So'zlar dueli",
-    "describePicture": "Describe Picture",
     "quests": "Kvest jurnali",
     "languagesLands": "Til diyorlari",
     "describePicture": "Rasmlar tavsifi",
     "fight": "Nemis tili koinoti",
-    "audio": "Audio topshiriqlar"
+    "audio": "Audio topshiriqlar",
+    "textTask": "Matnlar",
+    "speak": "Gaplashish amaliyoti"
   },
   "underSub": {
     "prev": "Kirish",
@@ -9453,33 +9453,97 @@
   "nameMap": {
     "Furniture": "Mebel",
     "Animals": "Hayvonlar",
+    "Birds": "Qushlar",
+    "SeaAnimals": "Dengiz hayvonlari",
+    "Insects": "Hasharotlar",
+    "Savanna": "Savanna",
     "Clothes": "Kiyimlar",
+    "Shoes": "Poyabzal",
     "Food": "Oziq-ovqat",
-    "Body": "Tana qismlari",
+    "SweetEat": "Shirinliklar",
+    "MilkEat": "Sut mahsulotlari",
+    "Vegetables": "Sabzavotlar",
+    "Fruits": "Mevalar",
+    "Drinks": "Ichimliklar",
+    "Body": "Tana",
     "Professions": "Kasblar",
     "Transport": "Transport",
     "Colors": "Ranglar",
     "Nature": "Tabiat",
+    "Weather": "Ob-havo",
+    "Landscape": "Manzara",
     "Home": "Uy",
     "Zeit": "Vaqt",
-    "City": "Shahar",
+    "CityBuildings": "Shahar binolari",
+    "CityInfrastructure": "Shahar infratuzilmasi",
     "School": "Maktab",
     "DaysAndMonths": "Kunlar va oylar",
-    "Toys": "O‘yinchoqlar",
-    "CommonItems": "Umumiy narsalar",
-    "BathroomItems": "Hammom buyumlari",
+    "Toys": "O'yinchoqlar",
+    "CommonItems": "Kundalik buyumlar",
+    "BathroomItems": "Banyoda ishlatiladigan narsalar",
     "Kosmetik": "Kosmetika",
     "Familie": "Oila",
     "Emotions": "Hissiyotlar",
-    "Werkzeuge": "Asboblar",
     "Kitchen": "Oshxona",
-    "Health": "Sog‘liq",
-    "Sport": "Sport",
-    "SportEquipment": "Fitness jihozlari",
-    "Travel": "Sayohatlar",
+    "Health": "Sog'liq",
+    "SportBasic": "Asosiy sport turlari",
+    "SportCombatWinter": "Qishki va jang san'ati",
+    "SportEvents": "Sport tadbirlari",
+    "SportLife": "Sport hayoti",
+    "SportEquipment": "Sport jihozlari",
+    "TravelDocuments": "Sayohat hujjatlari",
+    "Tourism": "Turizm",
+    "Travel": "Sayohat",
+    "MusicInstruments": "Musiqa asboblari",
     "Musik": "Musiqa",
-    "Amount": "Miqdor",
-    "Informatik": "Informatika"
+    "Amount": "Miqdor va o'lchovlar",
+    "Hardware": "Kompyuter uskunalari",
+    "Software": "Dasturiy ta'minot",
+    "Internet": "Internet",
+    "WinterHolidays": "Qishki bayramlar",
+    "FamilyAndReligious": "Oilaviy va diniy bayramlar",
+    "PersonalCelebrations": "Shaxsiy bayramlar",
+    "FestivalsAndDecor": "Festivallar va bezaklar",
+    "DwellingTypes": "Uy-joy turlari",
+    "Rooms": "Xonalar",
+    "ConstructionAndDetails": "Qurilish va tafsilotlar",
+    "CoreFamily": "Yaqin oila",
+    "ExtendedFamily": "Kengaytirilgan oila",
+    "Relationships": "Munosabatlar",
+    "HandTools": "Qo'l asboblari",
+    "PowerTools": "Elektr asboblari",
+    "ConsumablesAndSafety": "Iste'mol materiallari va xavfsizlik",
+    "JobOffice": "Ofis ishlari",
+    "JobTech": "Texnik kasblar",
+    "JobMed": "Tibbiy kasblar",
+    "JobEdu": "Ta'lim",
+    "JobService": "Xizmat ko'rsatish",
+    "CityTransport": "Shahar transporti",
+    "TravelTransport": "Sayohat transporti",
+    "usualClothes": "Kundalik kiyimlar",
+    "winterClothes": "Qishki kiyimlar",
+    "emotionsPositive": "Hissiyotlar",
+    "emotionsNegative": "Hissiyotlar 2"
+  },
+  "categoryWords": {
+    "nature": "Tabiat",
+    "animals": "Hayvonlar",
+    "food": "Oziq-ovqat",
+    "people": "Inson",
+    "family": "Oila",
+    "dailyRoutine": "Kundalik hayot",
+    "house": "Uy",
+    "city": "Shahar",
+    "school": "Maktab",
+    "professions": "Kasblar",
+    "construction": "Qurilish",
+    "clothes": "Kiyimlar",
+    "holidays": "Bayramlar",
+    "sport": "Sport",
+    "music": "Musiqa",
+    "travel": "Sayohat",
+    "informatics": "Informatika",
+    "abstract": "Mavhum mavzular"
   },
   "modes": {
     "themeTitle": "Artikllarni o'rganish mavzulari",
@@ -9691,7 +9755,9 @@
     "rank_5": "Kapitan",
     "rank_6": "Qo'riqchi",
     "rank_7": "Afsona",
+    "sale3": "3% chegirma",
     "sale5": "5% chegirma",
+    "sale6": "6% chegirma",
     "sale10": "10% chegirma",
     "sale15": "15% chegirma"
   },
@@ -9802,7 +9868,8 @@
     "audio": "Audio topshiriqlarni bajarib, nemis tilini eshitib tushunishni rivojlantiring",
     "images": "Rasmlarni tasvirlash qobiliyatingizni rivojlantiring! Boshlash uchun mavzu tanlang",
     "settings": "Hisob sozlamalari",
-    "achievements": "Sening progressiyang uchun olingan barcha yutuqlar va mukofotlarning kolleksiyasi"
+    "achievements": "Sening progressiyang uchun olingan barcha yutuqlar va mukofotlarning kolleksiyasi",
+    "textTask": "Matnlardagi bo'shliqlarni to'ldir va nemis tilingni rivojlantir"
   },
   "imageDescription": {
     "listen": "Dialogni tinglang!",
@@ -9846,5 +9913,662 @@
     "check": "HISOB:",
     "again": "Qayta parvoz",
     "constellations": "Yulduz turkumini tark etish"
+  },
+  "textTasksTip": {
+    "title": "Matnli topshiriqlar",
+    "description": "Topshiriqni bajarish uchun so'zni bo'sh joyga sudrab o'tkazing yoki so'z ustiga bosib, keyin uni qo'shmoqchi bo'lgan maydonni bosing."
+  },
+  "textThemes": {
+    "basic": "Tanishuv",
+    "routine": "Kun tartibi",
+    "shopping": "Xaridlar",
+    "work": "Ish va o'qish",
+    "hobby": "Xobbi",
+    "objects": "Buyumlar va narsalar",
+    "travel": "Sayohatlar"
+  },
+  "themeTextTitleBasic_A1": {
+    "basicOne": "Rasmiy tanishuv",
+    "basicTwo": "Norasmiy tanishuv",
+    "basicThree": "Kunlik rejalar",
+    "basicFour": "Kechki rejalar",
+    "basicFive": "Dam olish kunlarida",
+    "basicSix": "Sport bilan shug'ullanish",
+    "basicSeven": "Birgalikda ovqat pishirish",
+    "basicEight": "Shaharga sayohat",
+    "basicNine": "Birgalikda o'qish",
+    "basicTen": "Musiqa bilan shug'ullanish"
+  },
+  "themeTextTitleHobby_A1": {
+    "hobbyOne": "Futbol o'ynash",
+    "hobbyTwo": "Fotosurat",
+    "hobbyThree": "Gitara chalish",
+    "hobbyFour": "Suzish",
+    "hobbyFive": "Pazandalik",
+    "hobbySix": "Sayohatlar",
+    "hobbySeven": "Mutolaa",
+    "hobbyEight": "Bog'dorchilik",
+    "hobbyNine": "Raqs",
+    "hobbyTen": "Tillar o'rganish"
+  },
+  "themeTextTitleRoutine_A1": {
+    "routineOne": "Kunlik rejalar",
+    "routineTwo": "Kechki rejalar",
+    "routineThree": "Dam olish kunlarida",
+    "routineFour": "Sport bilan shug'ullanish",
+    "routineFive": "Birgalikda ovqat pishirish",
+    "routineSix": "Shaharga sayohat",
+    "routineSeven": "Birgalikda o'qish",
+    "routineEight": "Musiqa bilan shug'ullanish",
+    "routineNine": "Kofe ichish",
+    "routineTen": "Parkda"
+  },
+  "themeTextTitleShopping_A1": {
+    "shoppingOne": "Supermarketda",
+    "shoppingTwo": "Kiyim qidirish",
+    "shoppingThree": "Nonvoyxonada",
+    "shoppingFour": "Onlayn xaridlar",
+    "shoppingFive": "Bozorda",
+    "shoppingSix": "Oyoq kiyim do'konida",
+    "shoppingSeven": "Mebel sotib olish",
+    "shoppingEight": "Eski-tuski bozorida",
+    "shoppingNine": "Kechki ovqat",
+    "shoppingTen": "Kitob do'konida"
+  },
+  "themeTextTitleTravel_A1": {
+    "travelOne": "Chamadon yig'ish",
+    "travelTwo": "Vokzalda",
+    "travelThree": "Mehmonxonada",
+    "travelFour": "Dengizda ta'til",
+    "travelFive": "Shaharni aylanish",
+    "travelSix": "Restoranda",
+    "travelSeven": "Aeroportda",
+    "travelEight": "Tog'larda",
+    "travelNine": "Suvenirlar sotib olish",
+    "travelTen": "Uyga qaytish"
+  },
+  "themeTextTitleWork_A1": {
+    "workOne": "Mening ish kunim",
+    "workTwo": "Hujjat qidirish",
+    "workThree": "Universitetda",
+    "workFour": "Mening ishim",
+    "workFive": "Uy vazifasi",
+    "workSix": "Qurilishdagi ishim",
+    "workSeven": "Uydan turib ishlash",
+    "workEight": "Ombordagi ish",
+    "workNine": "Majlis",
+    "workTen": "Tushlik tanaffusi"
+  },
+  "themeTextTitleBasic_A2": {
+    "basicOne": "Nemis tili kursida",
+    "basicTwo": "Tandem-sherik",
+    "basicThree": "Universitetda",
+    "basicFour": "Kutubxonada",
+    "basicFive": "Guruh loyihasi",
+    "basicSix": "Til o'rganish sayohati",
+    "basicSeven": "Yangi o'quvchi",
+    "basicEight": "Onlayn kurs",
+    "basicNine": "O'quv guruhi",
+    "basicTen": "Imtihon sherigi"
+  },
+  "themeTextTitleHobby_A2": {
+    "hobbyOne": "Tog'ga sayr",
+    "hobbyTwo": "Fotosurat",
+    "hobbyThree": "Rasm chizish",
+    "hobbyFour": "Raqs",
+    "hobbyFive": "Futbol",
+    "hobbySix": "Suzish",
+    "hobbySeven": "Stol o'yinlari",
+    "hobbyEight": "Stol o'yinlari va mantiq",
+    "hobbyNine": "Shaxmat",
+    "hobbyTen": "Filmlar"
+  },
+  "themeTextTitleRoutine_A2": {
+    "routineOne": "Yangi qo'shni",
+    "routineTwo": "Kafeda uchrashuv",
+    "routineThree": "Kechada",
+    "routineFour": "Yangi hamkasblar",
+    "routineFive": "Sport klubida",
+    "routineSix": "Poyezdda uchrashuv",
+    "routineSeven": "Parkta it bilan",
+    "routineEight": "Sherik qidirish",
+    "routineNine": "Konsertda",
+    "routineTen": "Yangi xonadosh"
+  },
+  "themeTextTitleShopping_A2": {
+    "shoppingOne": "Supermarketda",
+    "shoppingTwo": "Kiyim sotib olish",
+    "shoppingThree": "Bozorda",
+    "shoppingFour": "Onlayn xaridlar",
+    "shoppingFive": "Mebel do'konida",
+    "shoppingSix": "Nonvoyxonada",
+    "shoppingSeven": "Oyoq kiyim sotib olish",
+    "shoppingEight": "Sovg'a",
+    "shoppingNine": "Elektronika do'konida",
+    "shoppingTen": "Katta xarid"
+  },
+  "themeTextTitleTravel_A2": {
+    "travelOne": "Safarga tayyorgarlik",
+    "travelTwo": "Aeroportda",
+    "travelThree": "Mehmonxonaga yetib kelish",
+    "travelFour": "Plyajda",
+    "travelFive": "Ekskursiya",
+    "travelSix": "Restoranda",
+    "travelSeven": "Yo'l so'rash",
+    "travelEight": "Ta'tildagi muammolar",
+    "travelNine": "Sovg'alar sotib olish",
+    "travelTen": "Uyga qaytish"
+  },
+  "themeTextTitleWork_A2": {
+    "workOne": "Ish suhbati",
+    "workTwo": "Uy vazifasi",
+    "workThree": "Birinchi ish kuni",
+    "workFour": "Taqdimot",
+    "workFive": "Malaka oshirish",
+    "workSix": "Uy ofisida",
+    "workSeven": "Stajirovka",
+    "workEight": "Imtihon",
+    "workNine": "Til kursi",
+    "workTen": "Birinchi mijoz"
+  },
+  "themeTextTitleBasic_B1": {
+    "basicOne": "Kechada",
+    "basicTwo": "Birinchi uchrashuv",
+    "basicThree": "Til tandemi",
+    "basicFour": "Poyezdda uchrashuv",
+    "basicFive": "Yangi hamkasb",
+    "basicSix": "Seminarda",
+    "basicSeven": "It bilan sayrda",
+    "basicEight": "Yangi qo'shnilar",
+    "basicNine": "Sport klubida",
+    "basicTen": "Xostelda"
+  },
+  "themeTextTitleHobby_B1": {
+    "hobbyOne": "Tungi fotosurat",
+    "hobbyTwo": "Alpinizm",
+    "hobbyThree": "Piano chalish",
+    "hobbyFour": "O'yinlar yaratish",
+    "hobbyFive": "Vindserfing",
+    "hobbySix": "Teatrda o'ynash",
+    "hobbySeven": "Kamondan otish",
+    "hobbyEight": "Mototsikllarni ta'mirlash",
+    "hobbyNine": "Pishiriqlar pishirish",
+    "hobbyTen": "Geokashing"
+  },
+  "themeTextTitleRoutine_B1": {
+    "routineOne": "Erta tong",
+    "routineTwo": "Nonushta va ishga yo'l",
+    "routineThree": "Ofisda",
+    "routineFour": "Tushlik tanaffusi",
+    "routineFive": "Ish kunining oxiri",
+    "routineSix": "Ishdan keyingi sport",
+    "routineSeven": "Kechki ovqat va dam olish",
+    "routineEight": "Uxlashga tayyorgarlik",
+    "routineNine": "Kechki sayr",
+    "routineTen": "Uy tozalash"
+  },
+  "themeTextTitleShopping_B1": {
+    "shoppingOne": "Kiyim sotib olish",
+    "shoppingTwo": "Supermarketda",
+    "shoppingThree": "Onlayn texnika sotib olish",
+    "shoppingFour": "Eski-tuski bozorida",
+    "shoppingFive": "Sovg'a qidirish",
+    "shoppingSix": "Tovarni qaytarish",
+    "shoppingSeven": "Qurilish do'konida",
+    "shoppingEight": "Dorixonada",
+    "shoppingNine": "Zoodo'konda",
+    "shoppingTen": "Sekond-xendda"
+  },
+  "themeTextTitleTravel_B1": {
+    "travelOne": "Shaharga sayohat",
+    "travelTwo": "Plyajda dam olish",
+    "travelThree": "Tog'ga sayr",
+    "travelFour": "Avtosayohat",
+    "travelFive": "Osiyo bo'ylab sayohat",
+    "travelSix": "Kruiz",
+    "travelSeven": "Kemping",
+    "travelEight": "Qishki ta'til",
+    "travelNine": "Til o'rganish sayohati",
+    "travelTen": "Safari"
+  },
+  "themeTextTitleWork_B1": {
+    "workOne": "Ish suhbati",
+    "workTwo": "Loyihani boshqarish",
+    "workThree": "Chet elda semestr",
+    "workFour": "Ofisda taqdimot",
+    "workFive": "Imtihonlarga tayyorgarlik",
+    "workSix": "Mijozlarga xizmat ko'rsatish",
+    "workSeven": "Magistrlik dissertatsiyasi",
+    "workEight": "Xizmat safari",
+    "workNine": "Stajirovka",
+    "workTen": "Kurslar"
+  },
+  "textTaskSession": {
+    "allUsed": "Barcha so'zlar ishlatib bo'lindi!",
+    "errorText": "Matn tanlanmagan",
+    "back": "Ro'yxatga qaytish"
+  },
+  "exitSessionModal": {
+    "text": "Yarim yo'lda to'xtash achinarli! Agar hozir varaqni yopsangiz, qilgan harakatlaringiz saqlanib qolmaydi.",
+    "continueLesson": "Darsni davom ettirish",
+    "cancelLesson": "Chiqish"
+  },
+  "premiumBannerText": {
+    "text": "Platformadan maksimal darajada foydalan, o'rganishingni tezlashtir."
+  },
+  "rulesModal": {
+    "text": "Grammatika bo'yicha maslahat javobdan so'ng mavjud bo'ladi!"
+  },
+  "footerNavLabel": {
+    "learn": "O'rganish",
+    "games": "O'yinlar",
+    "home": "Asosiy",
+    "events": "Tadbirlar",
+    "cabinet": "Hisob"
+  },
+  "speakTopics": {
+    "speak": "Tanishuv va muloqot",
+    "food": "Ovqat va xaridlar",
+    "transport": "Sayohat va transport",
+    "city": "Shahar xizmatlari va kundalik hayot",
+    "health": "Sog'liq",
+    "work": "Ish va martaba",
+    "auto": "Avtomobil va yo'l"
+  },
+  "speakThemes": {
+    "firstmeet": "Tanishuv",
+    "acquaintance": "Tanishuv 2",
+    "secondmeet": "Uchrashuv",
+    "family_talk": "Suhbat",
+    "weekend_plans": "Rejalar",
+    "friend_call": "Qo'ng'iroq",
+    "hobby_talk": "Xobbi",
+    "party_talk": "Kechalik",
+    "cafe_order": "Kofe buyurtma qilish",
+    "restaurant_dinner": "Restoran",
+    "store_checkout": "Kassada",
+    "order_eat": "Ovqat buyurtma qilish",
+    "consultation_talk": "Maslahatlashuv",
+    "train_station": "Vokzalda",
+    "train_ticket": "Chiptani tekshirish",
+    "taxi_berlin": "Taksi",
+    "bus_talk": "Avtobusda",
+    "hotel_checkin": "Mehmonxona",
+    "border_check": "Chegara",
+    "airport_talk": "Aeroport",
+    "info_talk": "Ma'lumot markazi",
+    "bank_account": "Bank",
+    "apartment_rent": "Ijaraga olish",
+    "clothes_shopping": "Xaridlar",
+    "shopping": "Xaridlar 2",
+    "post_office": "Pochta",
+    "police_talk": "Politsiya",
+    "barbershop": "Sartaroshxona",
+    "doctor_visit": "Shifokorga yozilish",
+    "pharmacy_vitamins": "Dorixona",
+    "insurance": "Sug'urta",
+    "at_doctor": "Shifokor huzurida",
+    "dentist": "Stomatolog",
+    "veterinary": "Veterinar",
+    "job_looking": "Ish qidirish",
+    "job_interview": "Suhbat",
+    "bos_talk": "Rahbar bilan suhbat",
+    "vacation": "Ta'til",
+    "salary_talk": "Maosh",
+    "dismissal_talk": "Ishdan bo'shatish",
+    "library": "Kutubxona",
+    "refusal_invite": "Taklifni rad etish",
+    "road_assistance": "Mashina buzilishi",
+    "oil_change": "Moy almashtirish",
+    "car_buying": "Avto sotib olish",
+    "police_control": "Tezlikni oshirish",
+    "gas_station": "Yoqilg'i quyish shoxobchasi",
+    "buying_fruit": "Meva sotib olish",
+    "bakery": "Novvoyxona",
+    "complaint": "Restorandagi shikoyat",
+    "bus_stop": "Bekat",
+    "buying_glasses": "Optika",
+    "emergency_call": "Favqulodda chaqiruv",
+    "first_day": "Kirish kuni / Birinchi kun",
+    "client_talk": "Mijoz bilan suhbat",
+    "car_rental": "Avto ijara",
+    "ask_road": "Yo'l so'rash",
+    "hotel_issue": "Mehmonxonadagi muammo"
+  },
+  "speakIndexPage": {
+    "title": "Gaplashish amaliyoti",
+    "bannerText": "Haqiqiy misollar yordamida nutq ko'nikmalaringizni rivojlantiring",
+    "modalTitle": "Gaplashish amaliyoti",
+    "modalText": "Haqiqiy dialoglar orqali muloqot qobiliyatlaringizni rivojlantiring! Taklif etilgan tayyor javob variantlaridan birini tanlashingiz, uni klaviatura yordamida kiritishingiz yoki shunchaki mikrofon tugmasini bosib, ovoz chiqarib aytishingiz mumkin."
+  },
+  "rankModal": {
+    "title": "YANGI DARAJA",
+    "rankedLabel": "Daraja",
+    "accept": "QABUL QILISH"
+  },
+  "premiumBanner": {
+    "textBanner": "Platformadan maksimal darajada foydalan, o'rganishingni tezlashtir."
+  },
+  "netWork": {
+    "successTitle": "Tarmoq tiklandi!",
+    "notSuccessTitle": "Voy! Internet yo'q",
+    "successText": "Ishga qaytamiz...",
+    "notSuccessText": "Tarmoqqa ulanish kutilmoqda..."
+  },
+  "termsBlock": {
+    "first": "Ro'yxatdan o'tish orqali siz quyidagilarni qabul qilasiz:",
+    "second": "Foydalanish shartlari",
+    "third": "va",
+    "fourth": "Maxfiylik siyosati"
+  },
+  "languagePage": {
+    "title": "Ilova tili",
+    "placeholder": "Tilni qidirish...",
+    "notfound": "Hech narsa topilmadi",
+    "further": "Davom etish"
+  },
+  "statistics": {
+    "title": "So'zlarni o'rganish va tematik bosqichlarni yakunlash bo'yicha statistikangiz va taraqqiyotingiz"
+  },
+  "restoreComputed": {
+    "restoring": "Tiklanmoqda...",
+    "restore": "Xaridlarni tiklash."
+  },
+  "submitComputed": {
+    "sync": "Sinxronizatsiya...",
+    "getPlus": "PLUS-ni xarid qilish"
+  },
+  "pay": {
+    "banner": "Ilovaning barcha funksiyalariga to'liq kirish",
+    "sales": "Faollik uchun berilgan chegirmalarni qo'llash",
+    "triggerToastSuccess": "Xarid tiklandi!",
+    "triggerToastNotFound": "Faol obunalar topilmadi",
+    "triggerToastError": "Tiklashda xatolik yuz berdi",
+    "triggerToastIsPlus": "Sizda PLUS allaqachon faol!"
+  },
+  "examSession": {
+    "ready": "Testga tayyormisiz?",
+    "cardTextOne": "Sizni",
+    "cardTextTwo": "bosqich va",
+    "cardTextThree": "topshiriq kutmoqda.",
+    "begin": "Testni boshlash",
+    "listen": "Audioni tinglang:",
+    "check": "Tekshirilmoqda...",
+    "send": "Javobni yuborish",
+    "record": "Yozib olish",
+    "great": "Tabriklaymiz!",
+    "result": "Ushbu daraja uchun natijangiz:",
+    "save": "Yutuqlar saqlanmoqda...",
+    "correctly": "To'g'ri:",
+    "back": "Orqaga qaytish",
+    "interrupt": "Testni to'xtatish?",
+    "modalText": "Ushbu urinishdagi natijalar yo'qoladi. Ishonchingiz komilmi?",
+    "continue": "Davom etish",
+    "leave": "Chiqish",
+    "placeHolder": "Javobingizni bu yerga yozing...",
+    "say": "Ayting:"
+  },
+  "speakSession": {
+    "title": "Muloqot amaliyoti",
+    "words": "So'zlar",
+    "wordsText": "Muloqotni boshlashdan oldin so'zlarni o'rganing yoki takrorlang. Bu sizga o'zingizga ishonch hosil qilishingizga yordam beradi!",
+    "learn": "Boshlash",
+    "dialogue": "Dialog",
+    "dialogueText": "Talaffuz va nutqni mashq qiling, suhbatdoshingizni tinglang va interaktiv formatda javoblarni tanlang.",
+    "back": "Orqaga",
+    "goodJob": "Ajoyib ish!",
+    "goodJobTitle": "Siz ushbu dialogni yakunladingiz. Shunday davom eting!",
+    "list": "Orqaga qaytish",
+    "repeat": "Takrorlash",
+    "start": "O'rganishni boshlash",
+    "choice": "Javobni tanlang:",
+    "placeHolder": "Javobni yozing yoki ayting...",
+    "hoverVoice": "Ovozli aytish",
+    "end": "Yakunlash",
+    "further": "Keyingi"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "Yana urinib ko'rasizmi?",
+    "textPartOne": "Siz to'g'ri javob berdingiz",
+    "textPartTwo": "Davom etish uchun urinish sotib oling.",
+    "price": "Narxi:",
+    "youHave": "Sizda bor:",
+    "showADS": "Reklama ko'rish",
+    "buyBy": "Sotib olish",
+    "toThemes": "Mavzularga",
+    "repeat": "Takrorlash"
+  },
+  "freezeStatus": {
+    "active": "Vaqtni muzlatish faol",
+    "inactive": "Vaqtni muzlatish faol emas"
+  },
+  "guessArticle": {
+    "correct": "To'g'ri",
+    "incorrect": "Noto'g'ri, to'g'risi"
+  },
+  "stripeCancel": {
+    "cancelSub": "Obunani bekor qilish",
+    "cancelPayment": "To'lov bekor qilindi",
+    "errorAuth": "Avtorizatsiya xatoligi",
+    "pleaseAuth": "Ushbu amalni bajarish uchun tizimga kiring.",
+    "canceling": "Obuna bekor qilinmoqda...",
+    "canceledSub": "Obuna bekor qilindi",
+    "errorCancelSub": "Bekor qilishda xatolik",
+    "errorCancelResponse": "Obunani bekor qilib bo'lmadi.",
+    "serverError": "Server xatoligi",
+    "serverOffline": "Server bilan aloqa uzildi. Keyinroq qayta urinib ko'ring.",
+    "processInterrupted": "To'lov jarayoni to'xtatildi. Kartangizdan mablag' yechilmadi.",
+    "tryAgain": "Qayta urinish",
+    "backToMain": "Asosiyga",
+    "extensionCanceled": "Avtomatik uzaytirish o'chiriladi. Kirish imkoniyati to'langan davr oxirigacha saqlanib qoladi.",
+    "extensionCanceledCanBack": "Obunangiz endi uzaytirilmaydi. Istalgan vaqtda qaytishingiz mumkin!",
+    "confirmCancel": "Ha, bekor qilinsin",
+    "notConfirmCancel": "Bekor qilinmasin",
+    "backToMainPage": "Asosiy sahifaga qaytish"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "Tranzaksiya tasdiqlanmoqda...",
+    "sessionNotFound": "To'lov sessiyasi topilmadi",
+    "authPlease": "Yakunlash uchun tizimga kiring",
+    "isPremium": "Premium kirish faollashtirildi",
+    "errorActivation": "Faollashtirish xatoligi",
+    "errorServer": "Server bilan aloqa xatoligi",
+    "success": "Endi xizmatning barcha funksiyalari sizga tayyor.",
+    "unsuccess": "Ishlov berish jarayonida texnik nosozlik yuz berdi.",
+    "toMain": " Asosiy sahifaga",
+    "redirectSuccess": "Bir necha soniyadan so'ng qayta yo'naltiriladi..."
+  },
+  "installApp": {
+    "stayInBrowser": "Brauzerda davom etish",
+    "promoSubTitle": " Skillupgerman ilovasi bilan nemis tilini o'rganish ancha qulayroq."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Dialoglarni bajaring. Tinglang, javob variantlarini tanlang va talaffuzni mashq qiling",
+    "words": "Dialogdagi har bir gapni oson tushunish uchun kalit so'z va iboralarni o'rganing"
+  },
+  "newsTitleBanner": {
+    "title": "Nemis tilining xususiyatlari haqida maqolalar, mavzular tahlili va darajangizni oshirish uchun foydali bilimlar.",
+    "badgeArticle": "Skillupgerman dunyosida"
+  },
+  "newsArticleOne": {
+    "first": "Stress yoki xafalik paytida shokolad yeysizmi? Bu der Kummerspeck deyiladi.",
+    "second": "Bu tashvishlar tufayli qaysarlik bilan paydo bo'ladigan o'sha ortiqcha vazndir. To'g'ridan-to'g'ri ma'nosi - 'g'am bekoni'.",
+    "third": "U der Kummer (g'am) va der Speck (bekon) so'zlaridan tashkil topgan. Kutilganidek, ushbu 'bekon' o'z jinsini oxirgi otning artiklidan oladi.",
+    "cta": "Tan oling, sizda hech Kummerspeck bo'lganmi?"
+  },
+  "newsArticleTwo": {
+    "first": "Ish kuni nihoyat tugaganda paydo bo'ladigan o'sha ajoyib hisni bilasizmi? Bu der Feierabend.",
+    "second": "To'g'ridan-to'g'ri ma'nosi - 'bayram oqshomi'. Ish haqida o'ylash ham taqiqlangan alohida hordiq vaqti.",
+    "third": "U die Feier (bayram) va der Abend (oqshom) so'zlaridan tuzilgan. Ushbu yoqimli vaqt o'z jinsini oxirgi otning artiklidan oladi — der Abend.",
+    "cta": "Ishda har doim Feierabend bo'lishini kutasizmi?"
+  },
+  "newsArticleThree": {
+    "first": "Nemis tili — dunyodagi yagona yirik til bo'lib, unda mutloq barcha otlar gapdagi o'rnidan qat'i nazar, bosh harf bilan yoziladi.",
+    "second": "Inson, kuchuk, oddiy stul yoki mavhum fikr haqida gap ketyotganining farqi yo'q — birinchi harf har doim bosh harf bo'ladi. Bu o'rganish jarayonida yangi boshlovchilarni ko'pincha chalg'itadi.",
+    "third": "Lekin bu qoidaning juda katta plyusi bor: nemischa matnni o'qiyotganda, gapda aynan qaysi so'z narsa-buyum ekanini har doim aniq va bir qarashda bilib olishingiz mumkin.",
+    "cta": "Qulay qoidami?"
+  },
+  "newsArticleFour": {
+    "first": "Nemis tilini o'rganishda miyani eng ko'p chalg'itadigan narsalardan biri — bu sanashdir. Nemislar ikki xonali sonlarni oxiridan boshlab talaffuz qilishadi.",
+    "second": "Masalan, yigirma bir sonini ular 'bir va yigirma' deb aytishadi. Shu sababli, nemischa nutqni eshitganda, sonlarni xayolan boshda teskari aylantirishga to'g'ri keladi.",
+    "third": "Ushbu lingvistik usul yangi boshlovchilarning o'rgangan qoliplarini buzadi, ayniqsa, birovning telefon raqamini yoki do'kondagi narxni eshitib, tezda yozib olish kerak bo'lganda.",
+    "cta": "Bunday sanashga tez ko'nikdingizmi yoki hali ham chalkashyapsizmi?"
+  },
+  "newsArticleFive": {
+    "first": "Nemis tilida gapdagi so'zlar tartibining qat'iy qoidasi bor, bu sizni suhbatdoshingizni eng oxirgi so'zigacha tinglashga majbur qiladi.",
+    "second": "Ma'lum bir gap turlarida harakatni anglatuvchi eng asosiy fe'l eng, eng oxirga borib tushadi.",
+    "third": "Siz uzun gap tuzishingiz, ko'plab tafsilotlarni sanashingiz mumkin, ammo tinglovchingiz siz yakuniy so'zni aytmaguningizcha, o'sha narsani sotib oldingizmi, sotdingizmi, sindirdingizmi yoki yo'qotdingizmi — buni bilolmaydi.",
+    "cta": "Bunday so'z tartibiga fikrlashni moslashtirish qiyinmi?"
+  },
+  "newsArticleSix": {
+    "first": "Nemis tilini o'rganishda ertami-kechmi ba'zi so'zlarning uzunligidan vahimaga tushishingiz aniq. Sir shundaki, nemis tilida otlarning uzunligiga rasman cheklov yo'q.",
+    "second": "Faqatgina bitta narsani tasvirlash uchun so'zlarni bir-biriga cheksiz yopishtirib, harflardan iborat ulkan parovozlarni yaratishingiz mumkin.",
+    "third": "Lekin bu yerda asosiy qutqaruvchi qoida mavjud: bu maxluqning uzunligi qanchalik aqlbovar qilmas bo'lmasin, yakuniy jinsni (rodni) u har doim eng oxirgi so'zning artiklidan oladi.",
+    "cta": "Shunday uzun parovoz-so'zlar sizni qo'rqitadimi?"
+  },
+  "newsArticleSeven": {
+    "first": "Muhim bir voqea oldidan yoki uxlashdan oldin xayolingizda uydurma ssenariylar va butun boshli filmlarni barcha tafsilotlari bilan aylantirishni boshlaysizmi? Bu holatni nemislar bosh ichidagi shaxsiy kinoteatr deb ta'riflashadi.",
+    "second": "Bu sizning tasavvuringiz yoki xavotiringiz shunchalik kuchayib ketgandaki, siz tom ma'noda o'z fikrlaringizni rejissyorlik qilish va tomosha qilishga g'arq bo'lasiz.",
+    "third": "U der Kopf (bosh) va das Kino (kinoteatr) so'zlaridan birlashgan. Ushbu hayoliy kinoteatr o'zining yakuniy o'rta jinsini itoatkorlik bilan oxirgi otning artiklidan oladi.",
+    "cta": "Sizda ham uxlashdan oldin shunday Kopfkino tez-tez yoqiladimi?"
+  },
+  "newsArticleEight": {
+    "first": "Nemis tili qomat haqida gap ketganda o'z-o'zini piching (prikol) qilishga boy til. Agar bellaringizda bir oz ortiqcha vazn to'plangan bo'lsa, nemislar yog' qatlamlari haqida gapirishmaydi, buni boksadagi oltin deb hisoblashadi.",
+    "second": "To'g'ridan-to'g'ri ma'nosi 'boksa oltini' bo'ladi. Mazali nemis sosiskalari, bulochkalari yoki pivosidan keyin yumaloq bo'lib qolgan bellar uchun shunday muloyim va qimmatbaho ta'rif.",
+    "third": "So'z die Hüfte (boksa/tos) va das Gold (oltin) so'zlaridan iborat. Kutilganidek, ushbu qiziqarli so'z o'zining yaltiroq o'rta jinsini oxirgi otning artiklidan oladi.",
+    "cta": "Bunday she'riy nom sizga qanday yoqdi?"
+  },
+  "newsArticleNine": {
+    "first": "Uyni sog'inish nimaligini hamma biladi, ammo nemislarda buning mutlaqo teskarisi bo'lgan tuyg'u uchun noyob so'z bor. Bu olis o'lkalar va sayohatlarni qumsashdir.",
+    "second": "To'g'ridan-to'g'ri ma'nosi 'olislik azobi' deb tarjima qilinadi. Bu uyda o'tirib, o'zingiz hech qachon bo'lmagan joylarga borishni juda ham qattiq xohlaganingizdagi o'sha o'rtovchi tuyg'udir.",
+    "third": "So'z die Ferne (olislik) va das Weh (og'riq/azob) so'zlaridan yasalgan. Ushbu romantik sog'inch o'zining yakuniy o'rta jinsini oxirgi so'zning artiklidan oladi.",
+    "cta": "Sizda ham ba'zan shunday Fernweh uyg'onib turadimi?"
+  },
+  "newsArticleTen": {
+    "first": "Oddiy elektr lampochkasiga qarang. U sizga qaysi shaklni eslatadi? Nemislar unda nur sochuvchi mevani ko'rishgan.",
+    "second": "Bu so'zning so'zma-so'z tarjimasi — 'nur sochuvchi nok'. Biz uchun odatiy bo'lgan ushbu buyumga juda ham yoqimli, oddiy va issiq uyona ta'rif.",
+    "third": "U glühen (nur sochish/porlash) fe'li va die Birne (nok) otidan hosil bo'lgan. Lampochkamiz o'zining ayol jinsini oxirgi so'zning artiklidan oladi — die Birne.",
+    "cta": "Lampochka nokka o'xshashmi?"
+  },
+  "newsArticleEleven": {
+    "first": "Muhabbatingiz javobsiz qolgandagi o'sha og'ir ruhiy azoblarni qanday nomlash mumkin? Nemislar bu tuyg'ularni bitta lo'nda tushunchaga birlashtirganlar.",
+    "second": "To'g'ridan-to'g'ri ma'nosi 'sevgi g'ami' deb tarjima qilinadi. Bu tom ma'noda qalbni vayron qiladigan o'sha sog'inch va g'amning juda aniq ta'rifidir.",
+    "third": "So'z die Liebe (sevgi) va der Kummer (g'am/g'ussa) so'zlaridan yopishgan. Ushbu yarador qalb o'zining erkak jinsini itoatkorlik bilan eng oxirgi so'zning artiklidan oladi — der Kummer.",
+    "cta": "Tanish tuyg'umi?"
+  },
+  "newsArticleTwelve": {
+    "first": "Yomg'irdan keyin o'rmonda sayr qilib, uychasiz oddiy shilliq qurtni ko'rib qoldingizmi? Nemis tili uni maksimal darajada yalang'och tasvirlaydi.",
+    "second": "Ushbu qiziqarli so'zning so'zma-so'z tarjimasi — 'yalang'och shilliq qurt (shilliqqurt)'. Haqiqatan ham, agar u shunchaki uysiz qolgan shilliq qurt bo'lsa, yangi nom o'ylab topishning nima keragi bor.",
+    "third": "U nackt (yalang'och) sifati va die Schnecke (shilliq qurt/shilliqqurt) otidan hosil bo'lgan. Ushbu o'rmon rezidenti o'z jinsini oxirgi so'zning artiklidan oladi.",
+    "cta": "Bunday nom sizni kuldirdimi?"
+  },
+  "newsArticleThirteen": {
+    "first": "Agar siz qachondir ingliz tilini o'rgangan bo'lsangiz, siz uchun ajoyib yangiligimiz bor. Nemischa so'zlarning bir qismini, hatto ularni hech qachon maxsus o'rganmagan bo'lsangiz ham, allaqachon avtomatik ravishda bilasiz.",
+    "second": "Gap shundaki, ingliz va nemis tillari bitta german guruhiga mansub yaqin qarindosh tillardir. Aka/uka, opa/singil, suv, yashil yoki olma kabi so'zlar nihoyatda o'xshash yoziladi va eshitiladi.",
+    "third": "Aynan shu sababli ingliz tili bazasidan keyin nemischa so'zlarni o'rganish ancha tezroq kechadi — miyangiz ongsiz ravishda tanish qoliplarni taniy boshlaydi.",
+    "cta": "Ingliz va nemis tillari o'rtasidagi o'xshashlikni sezganmidingiz?"
+  },
+  "newsArticleFourteen": {
+    "first": "Katta B harfiga o'xshash yoziladigan nemischa eszett (ß) harfi nemis alfabesining o'ziga xos tashrif qog'ozidir. Ammo tilni o'rganishda ko'pchilik bu harfdan hamma nemiszabon hududlarda ham foydalanilavermasligini bilmaydi.",
+    "second": "Shveysariya va Lixtenshteynda o'tgan asrdayoq ushbu harfdan rasman va butunlay voz kechilgan. Shveysariya maktablari, gazetalari va rasmiy hujjatlarida uning o'rniga hamma joyda odatiy ikkita 'ss' harflari yoziladi.",
+    "third": "Bu yozuv mashinkalarining ommaviy joriy etilishi sababli yuz bergan, chunki shveysariyaliklarda klaviaturada nemis va fransuz belgilari uchun bir vaqtning o'zida joy yetishmagan. Shuning uchun, agar shveysarcha matnlarni o'qisangiz, u yerda bu harfni topolmaysiz.",
+    "cta": "Nemis alifbosining Shveysariyaga oid siri haqida bilarmidingiz?"
+  },
+  "newsArticleFifteen": {
+    "first": "Nemis tilida mutlaqo bir xil yoziladigan, ammo urg'uga qarab ma'nosi tubdan o'zgaradigan ajoyib 'alvasti-fe'llar' mavjud. Bu fakt ko'pincha yangi boshlovchilarni hayratda qoldiradi.",
+    "second": "Yorqin misol — umfahren fe'li. Agar urg'uni so'zning birinchi qismiga qo'ysangiz, bu to'siqni urib yuborish, bosib ketish yoki mashina bilan ustidan o'tishni anglatadi. Ammo urg'uni ikkinchi qismga ko'chirsangiz, so'z zudlik bilan teskari ma'noga o'zgaradi — to'siqni chetlab o'tish.",
+    "third": "Aynan shu sababli, bunday fe'llarni o'rganayotganda urg'u qayerga tushayotganini eshitish juda muhim, aks holda Germaniyadagi amaliy haydash darsida bilmasdan instruktoringizni qo'rqitib yuborishingiz mumkin.",
+    "cta": "Ikki xil ma'noga ega shunday ayyor fe'llar haqida bilarmidingiz?"
+  },
+  "newsArticleSixteen": {
+    "first": "Chet elliklar gap nima haqida ketayotganini tushunishmasa, odatda bu men uchun 'xitoycha savod' deyishadi. Nemislarda esa bunday vaziyatda sof temir yo'l logikasi ishga tushadi.",
+    "second": "Agar nemis suhbatdoshini mutlaqo tushunmasa yoki uni eshitishni xohlamasa, u shunday deydi: 'Ich verstehe nur Bahnhof' (Men faqat vokzalni tushunyapman).",
+    "third": "Vaqt o'tishi bilan bu ibora mashhur idiomaga aylandi. Endi, agar kimdir sizga yo'lni juda chalkash tushuntirsa yoki murakkab mavzu bilan miyangizni chalg'itsa, ushbu iborani bemalol ishlatishingiz mumkin.",
+    "cta": "Vokzal haqidagi ushbu qiziqarli iborani eshitganmidingiz?"
+  },
+  "newsArticleSeventeen": {
+    "first": "der, die, das artikllarini o'rganish — nemis tilini o'rganuvchilar uchun abadiy bosh og'rig'i. Ammo xavotir olmang, ba'zida to'g'ri artikl tanlashda hatto til egalarining (nemislar) o'zlari ham ishonch hosil qilisholmaydi.",
+    "second": "Germaniyadagi eng haqiqiy va cheksiz lingvistik urush har tong nonushta paytida mashhur Nutella shokolad pastasi atrofida sodir bo'ladi. Nemislar o'n yilliklar davomida uning qaysi jinsga (rodga) tegishli ekanligi ustida bahslashishadi.",
+    "third": "Ba'zilar bu pasta bo'lgani uchun 'die' deyishadi, boshqalari esa xorijiy mahsulot nomlari uchun o'rta jins to'g'ri keladi deb 'das' deb hisoblashadi. Bahs shu darajaga yetdiki, hatto rasmiy Duden lug'ati ham taslim bo'ldi va Nutellaning umuman qat'iy artikli yo'qligini, har qanday variantni ishlatish mumkinligini tan oldi.",
+    "cta": "Siz esa Nutellaga qaysi artiklni bergan bo'lardingiz?"
+  },
+  "newsArticleEighteen": {
+    "first": "Agar biror kishi burnining tagida sodir bo'layotgan yaqqol narsalarni qaysarlik bilan payqamasa, nemislar uni e'tiborsiz deyishmaydi. Uning yuzidan sabzavot topishadi.",
+    "second": "Ushbu mashhur idomaning so'zma-so'z tarjimasi — 'ko'zida pomidor bo'lish'. Bu qizil chiroqni ko'rmayotgan haydovchi yoki siz berayotgan ishoralarni sira sezmayotgan do'st haqida aytiladi.",
+    "third": "Iboraning ildizlari qadimgi sudlarga borib taqaladi, u yerda aybdorlarni sharmandalik belgisi sifatida ko'zlarini bog'lashga majbur qilishgan, ba'zan esa ko'zlariga haqiqiy sabzavotlarni bog'lab qo'yishgan. Bugungi kunda esa bu shunchaki suhbatdoshga ko'zini ochish vaqti kelganini aytishning quvnoq usulidir.",
+    "cta": "Pomidorlar haqidagi ushbu iborani eshitganmidingiz?"
+  },
+  "newsArticleNineteen": {
+    "first": "Nemis tili darsliklarida bizga kunning vaqtiga qarab salomlashishni o'rgatishadi: xayrli tong, xayrli kun yoki xayrli kech. Ammo Germaniyaning shimolida bu tizim ustidan shunchaki kulishadi.",
+    "second": "U yerda hamma birdek bitta mashhur so'zdan foydalanadi — Moin. Eng qizig'i shundaki, uni mutloq har doim aytish mumkin: ertalab soat sakkizda boshliqqa, kunduzi soat uchda sotuvchiga yoki tunda bardagi do'stlarga. Bu shunchaki 'salom' deganini bildiradi.",
+    "third": "Leki ehtiyot bo'ling: agar siz salomni kuchaytirmoqchi bo'lib 'Moin Moin' desangiz, mahalliy aholi sizni darhol o'ta vaysoqqa chiqaradi. Shimolda qisqalikni qadrlashadi, shuning uchun bitta so'zning o'zi yetib ortadi.",
+    "cta": "Germaniya aholisidan shunday salomlashishni eshitganmisiz?"
+  },
+  "newsTitle": {
+    "article_3": "Barcha otlar bosh harfda!",
+    "article_4": "Sonlar teskari sanaladi!",
+    "article_5": "Fe'l gapning eng oxirida!",
+    "article_6": "Cheksiz so'zlar!",
+    "article_13": "Siz allaqachon ko'plab nemischa so'zlarni bilasiz!",
+    "article_14": "Butun bir mamlakat voz kechgan harf!",
+    "article_15": "Bitta fe'l - ikkita teskari ma'no!",
+    "article_17": "Nutella artikli uchun jang!",
+    "article_19": "Moin har doim mos keladi!"
+  },
+  "i18nDays": {
+    "days": "k",
+    "hours": "soat",
+    "mins": "daqiqa"
+  },
+  "headUp": {
+    "audioTasks": "En az bir cevap seçeneği seçmelisiniz",
+    "speakTasks": "Faqat taklif qilingan variantlardan foydalanish mumkin."
+  },
+  "helpCenter": {
+    "privacy": "Maxfiylik siyosati",
+    "faq": "Ko'p beriladigan savollar (FAQ)",
+    "terms": "Foydalanish shartlari"
+  },
+  "rankAvatars": {
+    "locked_easy_1": "Ushbu avatar Artikllar marafonida (oson rejim) 1-o'rinni egallaganlik uchun beriladi.",
+    "locked_easy_2": "Ushbu avatar Artikllar marafonida (oson rejim) 2-o'rinni egallaganlik uchun beriladi.",
+    "locked_easy_3": "Ushbu avatar Artikllar marafonida (oson rejim) 3-o'rinni egallaganlik uchun beriladi.",
+    "locked_normal_1": "Ushbu avatar Artikllar marafonida (o'rta rejim) 1-o'rinni egallaganlik uchun beriladi.",
+    "locked_normal_2": "Ushbu avatar Artikllar marafonida (o'rta rejim) 2-o'rinni egallaganlik uchun beriladi.",
+    "locked_normal_3": "Ushbu avatar Artikllar marafonida (o'rta rejim) 3-o'rinni egallaganlik uchun beriladi.",
+    "locked_hard_1": "Ushbu avatar Artikllar marafonida (qiyin rejim) 1-o'rinni egallaganlik uchun beriladi.",
+    "locked_hard_2": "Ushbu avatar Artikllar marafonida (qiyin rejim) 2-o'rinni egallaganlik uchun beriladi.",
+    "locked_hard_3": "Ushbu avatar Artikllar marafonida (qiyin rejim) 3-o'rinni egallaganlik uchun beriladi."
+  },
+  "typeOfAvatars": {
+    "usual": "Oddiy",
+    "ranked": "Yutuqli"
+  },
+  "marathonEasy": {
+    "title": "Artikllar marafoni oson daraja",
+    "easyOneName": "G'olib amaliyotchi",
+    "easyOneDescription": "Artikllar marafoni reytingida birinchi o'rinni egallang (Oson rejim)",
+    "easyTwoName": "Munosib da'vogar",
+    "easyTwoDescription": "Artikllar marafoni reytingida ikkinchi o'rinni egallang (Oson rejim)",
+    "easyThreeName": "Artikllar stajyori",
+    "easyThreeDescription": "Artikllar marafoni reytingida uchinchi o'rinni egallang (Oson rejim)"
+  },
+  "marathonNormal": {
+    "title": "Artikllar marafoni o'rta daraja",
+    "normalOneName": "Artikllar magistri",
+    "normalOneDescription": "Artikllar marafoni reytingida birinchi o'rinni egallang (O'rta rejim)",
+    "normalTwoName": "Marafon fatihi",
+    "normalTwoDescription": "Artikllar marafoni reytingida ikkinchi o'rinni egallang (O'rta rejim)",
+    "normalThreeName": "So'z bilimdoni",
+    "normalThreeDescription": "Artikllar marafoni reytingida uchinchi o'rinni egallang (O'rta rejim)"
+  },
+  "marathonHard": {
+    "title": "Artikllar marafoni qiyin daraja",
+    "normalOneName": "Artikllar imperatori",
+    "normalOneDescription": "Artikllar marafoni reytingida birinchi o'rinni egallang (Qiyin rejim)",
+    "normalTwoName": "Marafon afsonasi",
+    "normalTwoDescription": "Artikllar marafoni reytingida ikkinchi o'rinni egallang (Qiyin rejim)",
+    "normalThreeName": "Marafon adepti",
+    "normalThreeDescription": "Artikllar marafoni reytingida uchinchi o'rinni egallang (Qiyin rejim)"
   }
 }

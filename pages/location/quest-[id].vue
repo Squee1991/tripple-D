@@ -1,18 +1,24 @@
 <template>
-  <div>
+  <div
+      @touchstart="handleTouchStart"
+      @touchmove="handleTouchMove"
+      @touchend="handleTouchEnd"
+  >
     <div v-if="isAdLoading" class="ad-overlay">
       <div class="ad-spinner"></div>
     </div>
     <div class="quest">
       <VLoginPreloader v-if="questStore.loading"/>
-      <div v-if="questStore.finished && questStore.success && !questStore.hasMistakes" class="quest__stamp quest__stamp--ok">{{ t('locationQuests.done')}}</div>
+      <div v-if="questStore.finished && questStore.success && !questStore.hasMistakes"
+           class="quest__stamp quest__stamp--ok">{{ t('locationQuests.done') }}
+      </div>
       <div v-if="questStore.loading" class="quest__panel quest__panel--loading"></div>
       <div v-else-if="questStore.error" class="quest__panel quest__panel--error">
         <div>Error: {{ questStore.error }}</div>
         <button class="btn" @click="goThemes">back</button>
       </div>
       <div v-else-if="questStore.task" class="quest__card">
-        <VHelpModal :open="showHint" @close="showHint=false" />
+        <VHelpModal :open="showHint" @close="showHint=false"/>
         <div class="quest__top">
           <button class="quest__back-btn" @click="openLeave('back')">×</button>
           <div class="quest__stat">
@@ -56,7 +62,8 @@
               </div>
               <ul class="quest__options" :class="{ 'quest__options--locked': questStore.showResult }">
                 <li v-for="option in questStore.task.options" :key="option">
-                  <button class="quest__option-btn" :class="optionClass(option, questStore)"
+                  <button class="quest__option-btn"
+                          :class="optionClass(option, questStore)"
                           @click="handleOptionClick(option)"
                   >
                     {{ t(option) }}
@@ -117,7 +124,8 @@
             </template>
             <template v-else-if="questStore.task.type === 'reorder'">
               <div class="quest__reorder">
-                <div class="quest__reorder-selection" :class="{ 'quest__reorder-selection--empty': questStore.reorderSelection.length === 0 }">
+                <div class="quest__reorder-selection"
+                     :class="{ 'quest__reorder-selection--empty': questStore.reorderSelection.length === 0 }">
                   <button
                       v-for="(word, index) in questStore.reorderSelection"
                       :key="`${word}-${index}`"
@@ -140,30 +148,40 @@
               </div>
             </template>
           </div>
-          <div v-if="questStore.showResult" :class="statusClassComputed" class="quest__feedback">
-            <img class="quest__feedback-icon" :src="questStore.isCorrect ? RightIcon : WrongIcon" alt="answer_icons">
-            <div class="quest__feedback-text">
-              <div v-if="questStore.isCorrect">{{ t('questCompletedModals.correct')}}</div>
-              <div class="quest__correct-answer-block" v-else>
-                <div>{{ t('questCompletedModals.correctAnswer')}}</div>
-                <div> {{ t(questStore.correctAnswer) }}</div>
+        </div>
+
+        <div class="actions-wrapper" :class="feedbackClass">
+          <div class="actions-container">
+            <div v-if="questStore.showResult" class="feedback-text">
+              <div v-if="questStore.isCorrect" class="feedback correct slide-up">
+                <img class="quest__feedback-icon" :src="RightIcon" alt="correct_icon">
+                {{ t('questCompletedModals.correct') }}
+              </div>
+              <div v-else class="feedback incorrect shake quest__correct-answer-block">
+                <div class="feedback-wrong-header">
+                  <img class="quest__feedback-icon" :src="WrongIcon" alt="wrong_icon">
+                   {{ t('questCompletedModals.correctAnswer') }}
+                </div>
+                <div class="correct-answer-text">{{ t(questStore.correctAnswer) }}</div>
               </div>
             </div>
+            <button v-if="!questStore.showResult" class="btn btn-check" :disabled="questStore.isConfirmDisabled"
+                    @click="handleClick">
+              {{ t('questCompletedModals.check') }}
+            </button>
+            <button v-if="questStore.showResult" class="btn slide-up"
+                    :class="questStore.isCorrect ? 'btn-next' : 'btn-wrong'" @click="handleClick">
+              {{ t('questCompletedModals.further') }}
+            </button>
           </div>
-        </div>
-        <div class="quest__controls">
-          <button class="btn" :disabled="!questStore.showResult && questStore.isConfirmDisabled"
-                  @click="handleClick">
-            {{ questStore.showResult ? t('questCompletedModals.further') : t('questCompletedModals.check') }}
-          </button>
         </div>
       </div>
       <div v-else-if="questStore.finished && questStore.success && !questStore.hasMistakes && questStore.justAwarded"
            class="quest-complete quest-complete--solo">
-        <div class="quest-complete__title">{{ t('questCompletedModals.completed')}}</div>
-        <div class="quest-complete__subtitle">{{ t('questCompletedModals.reward')}}</div>
+        <div class="quest-complete__title">{{ t('questCompletedModals.completed') }}</div>
+        <div class="quest-complete__subtitle">{{ t('questCompletedModals.reward') }}</div>
         <div class="quest-complete__actions quest-complete__actions--one">
-          <button class="btn btn--primary" @click="goThemes">{{ t('questCompletedModals.back')}}</button>
+          <button class="btn btn--primary" @click="goThemes">{{ t('questCompletedModals.back') }}</button>
         </div>
       </div>
       <div v-else class="modal">
@@ -177,7 +195,7 @@
               {{ t('questCompletedModals.completedWithMistakes') }}
             </template>
             <template v-else>
-              {{ t('questCompletedModals.notCompleted')}}
+              {{ t('questCompletedModals.notCompleted') }}
             </template>
           </div>
           <div class="modal__actions">
@@ -203,10 +221,11 @@
         @watchAd="watchAdForLife"
         @back="goThemes"
     />
-    <VLeaveModal
+    <VStopSessionModal
         :show="showLeaveModal"
-        @leave="confirmLeave"
-        @continue="stayHere"
+        @update:show="showLeaveModal = $event"
+        @confirm="confirmLeave"
+        @cancel="stayHere"
     />
     <VRulesModal
         :show="showTipModal"
@@ -224,19 +243,21 @@ import {userChainStore} from '~/store/chainStore.js'
 import {userlangStore} from '~/store/learningStore.js'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '~/utils/soundManager.js'
-/*import { showRewarded } from '~/utils/admob.js';*/
+import {showRewarded, showInterstitial} from '~/utils/admob.js';
 import RightIcon from '~/assets/images/location-icons/accept.svg'
 import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 import {useSeoMeta} from '#imports'
 import VHelpModal from "~/src/components/V-help-modal.vue";
 import VHearts from '../../src/components/V-hearts.vue'
-import VLeaveModal from "~/src/components/V-leaveModal.vue";
 import VRulesModal from "~/src/components/V-rulesModal.vue";
 import VReviveModal from "~/src/components/V-reviveModal.vue";
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
+import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
+import {useSwipeBack} from '~/composables/useSwipeBack.js'
+
 useSeoMeta({robots: 'noindex, nofollow'})
 
-const { getDotClass,  optionClass } = useClasses()
+const {getDotClass, optionClass} = useClasses()
 const {t, locale} = useI18n()
 const route = useRoute()
 const router = useRouter()
@@ -248,6 +269,18 @@ const isAdLoading = ref(false)
 const MAX_ADS = 5;
 const remainingAds = ref(MAX_ADS);
 const PRICE = 10
+
+const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
+  openLeave()
+}, {
+  ignoreSelector: '.quest__input, .german__letters-item, .quest__option-btn, .quest__word-btn, .btn'
+})
+
+const feedbackClass = computed(() => {
+  if (!questStore.showResult) return ''
+  return questStore.isCorrect ? 'correct' : 'incorrect'
+})
+
 const questId = computed(() => {
   const rawId = String(route.params.id || route.params.questId || '')
   return rawId.replace('quest-', '')
@@ -312,7 +345,8 @@ onBeforeUnmount(() => {
 })
 
 const footerButtons = computed(() => [
-  {text: questStore.success && questStore.hasMistakes
+  {
+    text: questStore.success && questStore.hasMistakes
         ? t('locationQuests.repeatMistakes')
         : t('questCompletedModals.again'),
     action: questStore.success && questStore.hasMistakes
@@ -428,10 +462,11 @@ function goThemes() {
 }
 
 function restart() {
-  questStore.restart(previouslyCleared.value)
-  questStore.loadQuest(questId.value, regionKey.value)
+  showInterstitial(() => {
+    questStore.restart(previouslyCleared.value)
+    questStore.loadQuest(questId.value, regionKey.value)
+  })
 }
-
 
 function handleClick() {
   unlockAudioByUserGesture()
@@ -441,8 +476,6 @@ function handleClick() {
     questStore.nextTask(previouslyCleared.value)
   }
 }
-
-const statusClassComputed = computed(() => (questStore.isCorrect ? 'is-green' : 'is-red'))
 
 const showLeaveModal = ref(false)
 const pendingRoute = ref(null)
@@ -518,7 +551,7 @@ async function trySpendLocal(amount) {
   return true
 }
 
-/*function watchAdForLife() {
+function watchAdForLife() {
   isAdLoading.value = true;
   showRewarded(
       async () => {
@@ -535,7 +568,7 @@ async function trySpendLocal(amount) {
         }
       }
   );
-}*/
+}
 
 async function purchaseLife() {
   if (!canBuyLife.value) return
@@ -563,7 +596,8 @@ watch([questId, regionKey], () => {
       questStore.reorderSelection = []
       questStore.reorderBank = []
       showHint.value = false
-      ;(async () => {
+
+      showInterstitial(async () => {
         await questStore.loadProgressFromFirebase?.()
         await questStore.loadQuest(questId.value, regionKey.value)
         const hasAccept = questStore.quest?.tasks?.some(t => t.accept?.length)
@@ -572,9 +606,9 @@ watch([questId, regionKey], () => {
         }
         await nextTick()
         forceRevive.value = showRevive.value
-      })()
+      })
     },
-    { immediate: true, flush: 'sync' }
+    {immediate: true, flush: 'sync'}
 )
 
 onBeforeUnmount(() => {
@@ -590,7 +624,6 @@ onMounted(() => {
 watchEffect(() => {
   forceRevive.value = showRevive.value
 })
-
 </script>
 
 <style scoped>
@@ -608,12 +641,6 @@ watchEffect(() => {
   padding: 20px;
   border-radius: 12px;
   text-align: center;
-}
-
-.quest__correct-answer-block {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
 }
 
 .quest__back-btn {
@@ -639,6 +666,8 @@ watchEffect(() => {
 .quest__card {
   width: 100%;
   margin: 0 auto;
+  position: relative;
+  padding-bottom: 150px;
 }
 
 .quest__top {
@@ -790,9 +819,8 @@ watchEffect(() => {
   font-size: 18px;
   background: #fff;
   color: #1e1e1e;
-  border: 3px solid #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
   border-radius: 16px;
-  box-shadow: 4px 4px 0 #1e1e1e;
 }
 
 .quest__speech {
@@ -830,54 +858,15 @@ watchEffect(() => {
   gap: 10px;
 }
 
-.quest__feedback {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 30px 15px;
-}
-
-.quest__feedback.is-green {
-  color: #3fa65b;
-  font-size: 2rem;
-  font-weight: 600;
-  background: #b9f5c4;
-}
-
-.quest__feedback.is-red {
-  color: #d9534f;
-  font-size: 2rem;
-  font-weight: 600;
-  font-style: italic;
-  background: #ffd0cc;
-}
-
-.quest__feedback-icon {
-  margin-right: 8px;
-  width: 50px;
-}
-
-.quest__controls {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: .25rem;
-}
-
 .quest__stamp {
   position: fixed;
   right: 24px;
   top: 18px;
   z-index: 50;
   font-weight: 900;
-  border: 4px solid #1e1e1e;
+  border: 3px solid #1e1e1e;
   padding: 6px 12px;
   border-radius: 10px;
-  box-shadow: 6px 6px 0 #1e1e1e;
   transform: rotate(-6deg);
 }
 
@@ -920,23 +909,164 @@ watchEffect(() => {
   margin: 0 auto;
 }
 
+.actions-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  transition: background-color 0.3s ease;
+  z-index: 100;
+}
+
+.actions-wrapper.correct {
+  background-color: #d4edda;
+  border-top: 3px solid #2E7D32;
+}
+
+.actions-wrapper.incorrect {
+  background-color: #f8d7da;
+  border-top: 2px solid #C62828;
+}
+
+.actions-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 15px 20px;
+  padding-bottom: calc(15px + env(safe-area-inset-bottom));
+}
+
+.feedback-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.feedback {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feedback.correct {
+  color: #2E7D32;
+}
+
+.feedback.incorrect {
+  color: #C62828;
+}
+
+.quest__correct-answer-block {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.feedback-wrong-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.correct-answer-text {
+  font-weight: 800;
+  margin-top: 5px;
+}
+
+.quest__feedback-icon {
+  width: 32px;
+}
+
 .btn {
-  height: 56px;
-  padding: 0 26px;
-  border-radius: 16px;
-  font-family: "Nunito", sans-serif;
-  font-weight: 900;
-  font-size: 22px;
-  border: 2px solid #1e1e1e;
-  color: #1e1e1e;
-  background: #9dceff;
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 50px;
+  border: none;
   cursor: pointer;
-  box-shadow: 2px 2px 0 #1e1e1e;
-  transition: all .1s ease-in-out;
+  color: #ffffff;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-check {
+  background-color: #3b82f6;
+  box-shadow: 0 5px 0 #2563eb;
+}
+
+.btn-check:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.actions-wrapper.incorrect .btn-check {
+  background-color: #ef4444;
+  box-shadow: 0 5px 0 #dc2626;
+}
+
+.btn-next {
+  background-color: #4ade80;
+  box-shadow: 0 5px 0 #12a647;
+}
+
+.btn-wrong {
+  background-color: #ef4444;
+  box-shadow: 0 5px 0 #dc2626;
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(2px);
 }
 
 .btn--primary {
   background: #a7ecb8;
+  color: #111;
+  box-shadow: 0px 6px 0 #258640;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.slide-up-enter-to,
+.slide-up-leave-from {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+.shake {
+  animation: shake 0.4s ease-in-out;
 }
 
 .modal {
@@ -974,8 +1104,8 @@ watchEffect(() => {
 }
 
 .german__letters-item:active {
-  box-shadow: 0 0 0 ;
-  transform: translate(1px , 1px);
+  box-shadow: 0 0 0;
+  transform: translate(1px, 1px);
 }
 
 .modal__window {
@@ -984,7 +1114,6 @@ watchEffect(() => {
   background: #fff;
   border: 3px solid #111;
   border-radius: 18px;
-  box-shadow: 4px 4px 0 #1e1e1e;
   padding: 20px 35px;
   text-align: center;
   z-index: 1;
@@ -1040,12 +1169,14 @@ watchEffect(() => {
     padding: 5px;
     margin: 0 auto .7rem;
   }
+
   .quest__stat-value {
     width: 4.3rem;
     height: 2.3rem;
     font-size: 1rem;
     border: none;
   }
+
   .quest__top {
     position: relative;
     display: flex;
@@ -1056,6 +1187,7 @@ watchEffect(() => {
     box-shadow: none;
     border: none;
   }
+
   .quest__stat {
     order: 2;
     text-align: center;
@@ -1064,9 +1196,11 @@ watchEffect(() => {
     padding: .3rem .7rem;
     margin-top: 2.5rem;
   }
+
   .quest__word-btn {
     font-size: 14px;
   }
+
   .quest__lives {
     order: 1;
     position: absolute;
@@ -1079,9 +1213,9 @@ watchEffect(() => {
 
   .quest__question {
     font-size: 1.1rem;
-    border-bottom: 2px solid #9dceff;
     border-radius: 15px;
   }
+
   .quest__option-btn {
     height: 40px;
     font-size: 14px;
@@ -1089,26 +1223,15 @@ watchEffect(() => {
     box-shadow: var(--boxShadowMobile);
     padding: 3px;
   }
-  .btn {
-    height: 45px;
-    padding: 0 28px;
-    font-size: 20px;
-    max-width: 100%;
-  }
-  .quest__feedback.is-red {
-    font-size: 1.5rem;
-  }
-  .quest__feedback {
-    padding: 19px 8px;
-  }
 }
 
 @media (max-width: 479px) {
-  .quest__feedback.is-red {
-    font-size: 1rem;
-  }
   .quest__feedback-icon {
-    width: 34px;
+    width: 24px;
+  }
+
+  .feedback {
+    font-size: 1.2rem;
   }
 }
 
@@ -1162,10 +1285,9 @@ watchEffect(() => {
   font-weight: 800;
   font-size: 16px;
   color: #1e1e1e;
-  background: #fffbe9;
-  border: 2px solid #1e1e1e;
+  background: #ffffff;
+  border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 12px;
-  box-shadow: 3px 3px 0 #1e1e1e;
   cursor: pointer;
   transition: all .1s ease-in-out;
 }
@@ -1181,13 +1303,21 @@ watchEffect(() => {
 }
 
 @keyframes slideUp {
-  from { transform: translateY(100%); }
-  to { transform: translateY(0); }
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideDown {
-  from { transform: translateY(0); }
-  to { transform: translateY(100%); }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
 }
 
 .ad-overlay {
@@ -1212,8 +1342,10 @@ watchEffect(() => {
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 </style>

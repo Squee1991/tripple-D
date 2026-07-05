@@ -1,0 +1,716 @@
+{
+  "start": {
+    "botText": "Guten Tag! Kann ich Ihnen helfen?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Могу я Вам помочь?",
+      "en-US": "Good day! Can I help you?",
+      "ar-SA": "طاب يومك! هل يمكنني مساعدتك؟",
+      "es-ES": "¡Buen día! ¿Puedo ayudarle?",
+      "fr-FR": "Bonjour ! Puis-je vous aider ?",
+      "hi-IN": "शुभ दिन! क्या मैं आपकी मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! W czym mogę pomóc?",
+      "ro-RO": "Bună ziua! Vă pot ajuta?",
+      "tr-TR": "İyi günler! Size yardım edebilir miyim?",
+      "uk-UA": "Добрий день! Можу я Вам допомогти?",
+      "uz-UZ": "Xayrli kun! Sizga yordam bera olamanmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "helfen",
+        "translation": {
+          "ru-RU": "помогать",
+          "en-US": "to help",
+          "ar-SA": "يساعد",
+          "es-ES": "ayudar",
+          "fr-FR": "aider",
+          "hi-IN": "मदद करना",
+          "pl-PL": "pomagać",
+          "ro-RO": "a ajuta",
+          "tr-TR": "yardım etmek",
+          "uk-UA": "допомагати",
+          "uz-UZ": "yordam bermoq"
+        }
+      },
+      {
+        "german": "der Fernseher",
+        "translation": {
+          "ru-RU": "телевизор",
+          "en-US": "TV",
+          "ar-SA": "تلفاز",
+          "es-ES": "televisor",
+          "fr-FR": "télévision",
+          "hi-IN": "टीवी",
+          "pl-PL": "telewizor",
+          "ro-RO": "televizor",
+          "tr-TR": "televizyon",
+          "uk-UA": "телевізор",
+          "uz-UZ": "televizor"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, ich suche einen neuen Fernseher.",
+        "translation": {
+          "ru-RU": "Да, я ищу новый телевизор.",
+          "en-US": "Yes, I am looking for a new TV.",
+          "ar-SA": "نعم، أبحث عن تلفاز جديد.",
+          "es-ES": "Sí, estoy buscando un televisor nuevo.",
+          "fr-FR": "Oui, je cherche une nouvelle télévision.",
+          "hi-IN": "हाँ, मैं एक नया टीवी ढूंढ रहा हूँ।",
+          "pl-PL": "Tak, szukam nowego telewizora.",
+          "ro-RO": "Da, caut un televizor nou.",
+          "tr-TR": "Evet, yeni bir televizyon arıyorum.",
+          "uk-UA": "Так, я шукаю новий телевізор.",
+          "uz-UZ": "Ha, men yangi televizor qidiryapman."
+        },
+        "nextStep": "groesse"
+      },
+      {
+        "text": "Guten Tag, ich brauche eine Beratung für einen Fernseher.",
+        "translation": {
+          "ru-RU": "Добрый день, мне нужна консультация по телевизору.",
+          "en-US": "Good day, I need a consultation for a TV.",
+          "ar-SA": "طاب يومك، أحتاج إلى استشارة بخصوص تلفاز.",
+          "es-ES": "Buen día, necesito asesoramiento para un televisor.",
+          "fr-FR": "Bonjour, j'ai besoin de conseils pour une télévision.",
+          "hi-IN": "शुभ दिन, मुझे टीवी के लिए सलाह चाहिए।",
+          "pl-PL": "Dzień dobry, potrzebuję porady w sprawie telewizora.",
+          "ro-RO": "Bună ziua, am nevoie de consultanță pentru un televizor.",
+          "tr-TR": "İyi günler, bir televizyon için danışmanlığa ihtiyacım var.",
+          "uk-UA": "Добрий день, мені потрібна консультація щодо телевізора.",
+          "uz-UZ": "Xayrli kun, televizor bo'yicha maslahat kerak edi."
+        },
+        "nextStep": "groesse"
+      }
+    ],
+    "defaultNext": "groesse"
+  },
+  "groesse": {
+    "botText": "Sehr gerne. Welche Größe suchen Sie denn?",
+    "botTranslation": {
+      "ru-RU": "С удовольствием. Какой размер Вы ищете?",
+      "en-US": "With pleasure. Which size are you looking for?",
+      "ar-SA": "بكل سرور. ما هو الحجم الذي تبحث عنه؟",
+      "es-ES": "Con mucho gusto. ¿Qué tamaño busca?",
+      "fr-FR": "Volontiers. Quelle taille cherchez-vous ?",
+      "hi-IN": "बड़ी खुशी से। आप किस आकार की तलाश में हैं?",
+      "pl-PL": "Z przyjemnością. Jakiego rozmiaru pani szuka?",
+      "ro-RO": "Cu plăcere. Ce mărime căutați?",
+      "tr-TR": "Memnuniyetle. Hangi boyutu arıyorsunuz?",
+      "uk-UA": "З задоволенням. Який розмір Ви шукаєте?",
+      "uz-UZ": "Bajonidil. Qanday o'lcham qidiryapsiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Größe",
+        "translation": {
+          "ru-RU": "размер",
+          "en-US": "size",
+          "ar-SA": "مقاس",
+          "es-ES": "tamaño",
+          "fr-FR": "taille",
+          "hi-IN": "आकार",
+          "pl-PL": "rozmiar",
+          "ro-RO": "mărime",
+          "tr-TR": "boyut",
+          "uk-UA": "розмір",
+          "uz-UZ": "o'lcham"
+        }
+      },
+      {
+        "german": "suchen",
+        "translation": {
+          "ru-RU": "искать",
+          "en-US": "to search",
+          "ar-SA": "يبحث",
+          "es-ES": "buscar",
+          "fr-FR": "chercher",
+          "hi-IN": "खोजना",
+          "pl-PL": "szukać",
+          "ro-RO": "a căuta",
+          "tr-TR": "aramak",
+          "uk-UA": "шукати",
+          "uz-UZ": "qidirmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich möchte ein Modell mit 55 Zoll.",
+        "translation": {
+          "ru-RU": "Я бы хотел модель на 55 дюймов.",
+          "en-US": "I would like a 55-inch model.",
+          "ar-SA": "أود نموذجاً بحجم 55 بوصة.",
+          "es-ES": "Me gustaría un modelo de 55 pulgadas.",
+          "fr-FR": "Je voudrais un modèle de 55 pouces.",
+          "hi-IN": "मैं 55 इंच का मॉडल चाहूंगी।",
+          "pl-PL": "Chciałabym model 55-calowy.",
+          "ro-RO": "Aș dori un model de 55 de inchi.",
+          "tr-TR": "55 inçlik bir model istiyorum.",
+          "uk-UA": "Я б хотіла модель на 55 дюймів.",
+          "uz-UZ": "Menga 55 dyuymli model kerak."
+        },
+        "nextStep": "qualitaet"
+      },
+      {
+        "text": "Haben Sie etwas in einer mittleren Größe?",
+        "translation": {
+          "ru-RU": "У Вас есть что-то среднего размера?",
+          "en-US": "Do you have anything in a medium size?",
+          "ar-SA": "هل لديك شيء بحجم متوسط؟",
+          "es-ES": "¿Tiene algo en un tamaño mediano?",
+          "fr-FR": "Avez-vous quelque chose de taille moyenne ?",
+          "hi-IN": "क्या आपके पास मध्यम आकार में कुछ है?",
+          "pl-PL": "Czy ma pan coś w średnim rozmiarze?",
+          "ro-RO": "Aveți ceva de mărime medie?",
+          "tr-TR": "Orta boyutta bir şeyiniz var mı?",
+          "uk-UA": "У Вас є щось середнього розміру?",
+          "uz-UZ": "Sizda o'rtacha o'lchamdagi biror narsa bormi?"
+        },
+        "nextStep": "qualitaet"
+      }
+    ],
+    "defaultNext": "qualitaet"
+  },
+  "qualitaet": {
+    "botText": "Wir haben hier tolle Modelle mit 4K-Auflösung.",
+    "botTranslation": {
+      "ru-RU": "У нас здесь отличные модели с разрешением 4K.",
+      "en-US": "We have great models here with 4K resolution.",
+      "ar-SA": "لدينا هنا نماذج رائعة بدقة 4K.",
+      "es-ES": "Aquí tenemos modelos fantásticos con resolución 4K.",
+      "fr-FR": "Nous avons ici de superbes modèles avec une résolution 4K.",
+      "hi-IN": "हमारे पास यहाँ 4K रिज़ॉल्यूशन वाले शानदार मॉडल हैं।",
+      "pl-PL": "Mamy tu świetne modele o rozdzielczości 4K.",
+      "ro-RO": "Avem aici modele grozave cu rezoluție 4K.",
+      "tr-TR": "Burada 4K çözünürlüklü harika modellerimiz var.",
+      "uk-UA": "У нас тут чудові моделі з роздільною здатністю 4K.",
+      "uz-UZ": "Bu yerda bizda 4K o'lchamli ajoyib modellar bor."
+    },
+    "vocabulary": [
+      {
+        "german": "die Bildqualität",
+        "translation": {
+          "ru-RU": "качество картинки",
+          "en-US": "picture quality",
+          "ar-SA": "جودة الصورة",
+          "es-ES": "calidad de imagen",
+          "fr-FR": "qualité d'image",
+          "hi-IN": "चित्र गुणवत्ता",
+          "pl-PL": "jakość obrazu",
+          "ro-RO": "calitatea imaginii",
+          "tr-TR": "görüntü kalitesi",
+          "uk-UA": "якість картинки",
+          "uz-UZ": "rasm sifati"
+        }
+      },
+      {
+        "german": "das Gerät",
+        "translation": {
+          "ru-RU": "устройство",
+          "en-US": "device",
+          "ar-SA": "جهاز",
+          "es-ES": "dispositivo",
+          "fr-FR": "appareil",
+          "hi-IN": "उपकरण",
+          "pl-PL": "urządzenie",
+          "ro-RO": "dispozitiv",
+          "tr-TR": "cihaz",
+          "uk-UA": "пристрій",
+          "uz-UZ": "qurilma"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das klingt gut. Ist die Bildqualität scharf?",
+        "translation": {
+          "ru-RU": "Звучит хорошо. Качество картинки четкое?",
+          "en-US": "That sounds good. Is the picture quality sharp?",
+          "ar-SA": "هذا يبدو جيداً. هل جودة الصورة واضحة؟",
+          "es-ES": "Suena bien. ¿La calidad de la imagen es nítida?",
+          "fr-FR": "Ça a l'air bien. La qualité d'image est-elle nette ?",
+          "hi-IN": "यह अच्छा लग रहा है। क्या तस्वीर की गुणवत्ता तेज है?",
+          "pl-PL": "Brzmi dobrze. Czy jakość obrazu jest ostra?",
+          "ro-RO": "Sună bine. Calitatea imaginii este clară?",
+          "tr-TR": "Kulağa hoş geliyor. Görüntü kalitesi net mi?",
+          "uk-UA": "Звучить добре. Якість картинки чітка?",
+          "uz-UZ": "Yaxshi eshitilyapti. Rasm sifati aniqmi?"
+        },
+        "nextStep": "smart_tv"
+      },
+      {
+        "text": "Hat das Gerät auch Smart-TV?",
+        "translation": {
+          "ru-RU": "У устройства есть также Smart-TV?",
+          "en-US": "Does the device also have Smart-TV?",
+          "ar-SA": "هل يحتوي الجهاز أيضاً على تلفاز ذكي؟",
+          "es-ES": "¿El dispositivo también tiene Smart-TV?",
+          "fr-FR": "L'appareil a-t-il aussi une Smart-TV ?",
+          "hi-IN": "क्या डिवाइस में स्मार्ट-टीवी भी है?",
+          "pl-PL": "Czy urządzenie ma również Smart-TV?",
+          "ro-RO": "Aparatul are și Smart-TV?",
+          "tr-TR": "Cihazın Smart-TV'si de var mı?",
+          "uk-UA": "Пристрій також має Smart-TV?",
+          "uz-UZ": "Qurilmada Smart-TV ham bormi?"
+        },
+        "nextStep": "smart_tv"
+      }
+    ],
+    "defaultNext": "smart_tv"
+  },
+  "smart_tv": {
+    "botText": "Ja, es ist ein Smart-TV mit allen Apps und sehr guter Bildqualität.",
+    "botTranslation": {
+      "ru-RU": "Да, это Smart-TV со всеми приложениями и очень хорошим качеством картинки.",
+      "en-US": "Yes, it is a Smart-TV with all apps and very good picture quality.",
+      "ar-SA": "نعم، إنه تلفاز ذكي يحتوي على جميع التطبيقات وجودة صورة جيدة جداً.",
+      "es-ES": "Sí, es un Smart-TV con todas las aplicaciones y muy buena calidad de imagen.",
+      "fr-FR": "Oui, c'est une Smart-TV avec toutes les applications et une très bonne qualité d'image.",
+      "hi-IN": "हाँ, यह सभी ऐप्स और बहुत अच्छी तस्वीर गुणवत्ता वाला एक स्मार्ट-टीवी है।",
+      "pl-PL": "Tak, to Smart-TV ze wszystkimi aplikacjami i bardzo dobrą jakością obrazu.",
+      "ro-RO": "Da, este un Smart-TV cu toate aplicațiile și o calitate a imaginii foarte bună.",
+      "tr-TR": "Evet, tüm uygulamalara ve çok iyi görüntü kalitesine sahip bir Smart-TV'dir.",
+      "uk-UA": "Так, це Smart-TV з усіма додатками та дуже хорошою якістю картинки.",
+      "uz-UZ": "Ha, bu barcha ilovalar va juda yaxshi rasm sifatiga ega Smart-TV."
+    },
+    "vocabulary": [
+      {
+        "german": "der Preis",
+        "translation": {
+          "ru-RU": "цена",
+          "en-US": "price",
+          "ar-SA": "السعر",
+          "es-ES": "precio",
+          "fr-FR": "prix",
+          "hi-IN": "कीमत",
+          "pl-PL": "cena",
+          "ro-RO": "prețul",
+          "tr-TR": "fiyat",
+          "uk-UA": "ціна",
+          "uz-UZ": "narx"
+        }
+      },
+      {
+        "german": "das Angebot",
+        "translation": {
+          "ru-RU": "предложение",
+          "en-US": "offer",
+          "ar-SA": "عرض",
+          "es-ES": "oferta",
+          "fr-FR": "offre",
+          "hi-IN": "प्रस्ताव",
+          "pl-PL": "oferta",
+          "ro-RO": "ofertă",
+          "tr-TR": "teklif",
+          "uk-UA": "пропозиція",
+          "uz-UZ": "taklif"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Wie hoch ist der Preis für dieses Gerät?",
+        "translation": {
+          "ru-RU": "Какова цена этого устройства?",
+          "en-US": "How high is the price for this device?",
+          "ar-SA": "كم سعر هذا الجهاز؟",
+          "es-ES": "¿Cuál es el precio de este dispositivo?",
+          "fr-FR": "Quel est le prix de cet appareil ?",
+          "hi-IN": "इस डिवाइस की कीमत क्या है?",
+          "pl-PL": "Jaka jest cena tego urządzenia?",
+          "ro-RO": "Care este prețul acestui aparat?",
+          "tr-TR": "Bu cihazın fiyatı nedir?",
+          "uk-UA": "Яка ціна цього пристрою?",
+          "uz-UZ": "Bu qurilmaning narxi qancha?"
+        },
+        "nextStep": "preis"
+      },
+      {
+        "text": "Gibt es für dieses Modell gerade ein Angebot?",
+        "translation": {
+          "ru-RU": "Есть ли на эту модель сейчас акция/скидка?",
+          "en-US": "Is there currently an offer for this model?",
+          "ar-SA": "هل يوجد عرض على هذا النموذج حالياً؟",
+          "es-ES": "¿Hay alguna oferta en este momento para este modelo?",
+          "fr-FR": "Y a-t-il une offre actuellement pour ce modèle ?",
+          "hi-IN": "क्या इस मॉडल के लिए अभी कोई ऑफर है?",
+          "pl-PL": "Czy na ten model jest teraz jakaś promocja?",
+          "ro-RO": "Există vreo ofertă pentru acest model în prezent?",
+          "tr-TR": "Şu anda bu model için bir kampanya var mı?",
+          "uk-UA": "Чи є на цю модель зараз акція?",
+          "uz-UZ": "Hozir bu model uchun biror chegirma bormi?"
+        },
+        "nextStep": "preis"
+      }
+    ],
+    "defaultNext": "preis"
+  },
+  "preis": {
+    "botText": "Dieses Gerät kostet aktuell 799 Euro.",
+    "botTranslation": {
+      "ru-RU": "Это устройство в данный момент стоит 799 евро.",
+      "en-US": "This device currently costs 799 euros.",
+      "ar-SA": "سعر هذا الجهاز حالياً 799 يورو.",
+      "es-ES": "Este dispositivo cuesta actualmente 799 euros.",
+      "fr-FR": "Cet appareil coûte actuellement 799 euros.",
+      "hi-IN": "इस डिवाइस की कीमत अभी 799 यूरो है।",
+      "pl-PL": "To urządzenie kosztuje obecnie 799 euro.",
+      "ro-RO": "Acest aparat costă în prezent 799 euro.",
+      "tr-TR": "Bu cihazın şu anki fiyatı 799 Euro.",
+      "uk-UA": "Цей пристрій наразі коштує 799 євро.",
+      "uz-UZ": "Bu qurilma hozir 799 yevro turadi."
+    },
+    "vocabulary": [
+      {
+        "german": "kosten",
+        "translation": {
+          "ru-RU": "стоить",
+          "en-US": "to cost",
+          "ar-SA": "يكلف",
+          "es-ES": "costar",
+          "fr-FR": "coûter",
+          "hi-IN": "कीमत होना",
+          "pl-PL": "kosztować",
+          "ro-RO": "a costa",
+          "tr-TR": "mal olmak",
+          "uk-UA": "коштувати",
+          "uz-UZ": "turmoq"
+        }
+      },
+      {
+        "german": "kaufen",
+        "translation": {
+          "ru-RU": "покупать",
+          "en-US": "to buy",
+          "ar-SA": "يشتري",
+          "es-ES": "comprar",
+          "fr-FR": "acheter",
+          "hi-IN": "खरीदना",
+          "pl-PL": "kupować",
+          "ro-RO": "a cumpăra",
+          "tr-TR": "satın almak",
+          "uk-UA": "купувати",
+          "uz-UZ": "sotib olmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das passt mir, ich nehme es.",
+        "translation": {
+          "ru-RU": "Это мне подходит, я беру его.",
+          "en-US": "That suits me, I'll take it.",
+          "ar-SA": "هذا يناسبني، سآخذه.",
+          "es-ES": "Me viene bien, me lo llevo.",
+          "fr-FR": "Ça me convient, je le prends.",
+          "hi-IN": "यह मेरे लिए उपयुक्त है, मैं इसे लूंगी।",
+          "pl-PL": "Odpowiada mi to, wezmę to.",
+          "ro-RO": "Îmi convine, îl iau.",
+          "tr-TR": "Bu bana uyar, onu alıyorum.",
+          "uk-UA": "Це мені підходить, я беру його.",
+          "uz-UZ": "Bu menga mos, men buni olaman."
+        },
+        "nextStep": "garantie"
+      },
+      {
+        "text": "Das ist ein guter Preis, ich kaufe es.",
+        "translation": {
+          "ru-RU": "Это хорошая цена, я покупаю его.",
+          "en-US": "That is a good price, I'll buy it.",
+          "ar-SA": "هذا سعر جيد، سأشتريه.",
+          "es-ES": "Es un buen precio, lo compro.",
+          "fr-FR": "C'est un bon prix, je l'achète.",
+          "hi-IN": "यह एक अच्छी कीमत है, मैं इसे खरीदूंगी।",
+          "pl-PL": "To dobra cena, kupuję.",
+          "ro-RO": "Este un preț bun, îl cumpăr.",
+          "tr-TR": "Bu iyi bir fiyat, onu satın alıyorum.",
+          "uk-UA": "Це хороша ціна, я купую його.",
+          "uz-UZ": "Bu yaxshi narx, men buni sotib olaman."
+        },
+        "nextStep": "garantie"
+      }
+    ],
+    "defaultNext": "garantie"
+  },
+  "garantie": {
+    "botText": "Sehr gute Wahl! Möchten Sie auch eine Garantieverlängerung dazu?",
+    "botTranslation": {
+      "ru-RU": "Отличный выбор! Хотите также продление гарантии к этому?",
+      "en-US": "Very good choice! Would you also like an extended warranty with that?",
+      "ar-SA": "خيار جيد جداً! هل تودين أيضاً تمديد الضمان؟",
+      "es-ES": "¡Muy buena elección! ¿Desea también una extensión de garantía?",
+      "fr-FR": "Très bon choix ! Souhaitez-vous également une extension de garantie avec cela ?",
+      "hi-IN": "बहुत अच्छा विकल्प! क्या आप इसके साथ विस्तारित वारंटी भी चाहेंगी?",
+      "pl-PL": "Bardzo dobry wybór! Czy chciałaby pani do tego również przedłużenie gwarancji?",
+      "ro-RO": "Alegere foarte bună! Doriți și o extensie de garanție?",
+      "tr-TR": "Çok iyi bir seçim! Yanında garanti uzatması da ister misiniz?",
+      "uk-UA": "Відмінний вибір! Хочете також подовження гарантії?",
+      "uz-UZ": "Juda yaxshi tanlov! Bunga qo'shimcha kafolatni uzaytirishni xohlaysizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Wahl",
+        "translation": {
+          "ru-RU": "выбор",
+          "en-US": "choice",
+          "ar-SA": "اختيار",
+          "es-ES": "elección",
+          "fr-FR": "choix",
+          "hi-IN": "विकल्प",
+          "pl-PL": "wybór",
+          "ro-RO": "alegere",
+          "tr-TR": "seçim",
+          "uk-UA": "вибір",
+          "uz-UZ": "tanlov"
+        }
+      },
+      {
+        "german": "die Sicherheit",
+        "translation": {
+          "ru-RU": "безопасность",
+          "en-US": "security",
+          "ar-SA": "أمان",
+          "es-ES": "seguridad",
+          "fr-FR": "sécurité",
+          "hi-IN": "सुरक्षा",
+          "pl-PL": "bezpieczeństwo",
+          "ro-RO": "siguranță",
+          "tr-TR": "güvenlik",
+          "uk-UA": "безпека",
+          "uz-UZ": "xavfsizlik"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, bitte. Sicherheit ist wichtig.",
+        "translation": {
+          "ru-RU": "Да, пожалуйста. Надежность важна.",
+          "en-US": "Yes, please. Security is important.",
+          "ar-SA": "نعم، من فضلك. الأمان مهم.",
+          "es-ES": "Sí, por favor. La seguridad es importante.",
+          "fr-FR": "Oui, s'il vous plaît. La sécurité est importante.",
+          "hi-IN": "हाँ, कृपया। सुरक्षा महत्वपूर्ण है।",
+          "pl-PL": "Tak, proszę. Bezpieczeństwo jest ważne.",
+          "ro-RO": "Da, vă rog. Siguranța este importantă.",
+          "tr-TR": "Evet, lütfen. Güvenlik önemlidir.",
+          "uk-UA": "Так, будь ласка. Безпека важлива.",
+          "uz-UZ": "Ha, iltimos. Xavfsizlik muhim."
+        },
+        "nextStep": "kasse"
+      },
+      {
+        "text": "Nein danke, das ist nicht nötig.",
+        "translation": {
+          "ru-RU": "Нет, спасибо, это не нужно.",
+          "en-US": "No thanks, that is not necessary.",
+          "ar-SA": "لا شكراً، ليس هناك حاجة لذلك.",
+          "es-ES": "No gracias, no es necesario.",
+          "fr-FR": "Non merci, ce n'est pas nécessaire.",
+          "hi-IN": "नहीं धन्यवाद, यह आवश्यक नहीं है।",
+          "pl-PL": "Nie, dziękuję, nie ma takiej potrzeby.",
+          "ro-RO": "Nu, mulțumesc, nu este necesar.",
+          "tr-TR": "Hayır teşekkürler, buna gerek yok.",
+          "uk-UA": "Ні, дякую, це не потрібно.",
+          "uz-UZ": "Yo'q, rahmat, buning keragi yo'q."
+        },
+        "nextStep": "kasse"
+      }
+    ],
+    "defaultNext": "kasse"
+  },
+  "kasse": {
+    "botText": "Alles klar. Dann gehen wir zur Kasse.",
+    "botTranslation": {
+      "ru-RU": "Все понятно. Тогда идем на кассу.",
+      "en-US": "Alright. Then let's go to the cash register.",
+      "ar-SA": "حسناً. دعنا نذهب إلى أمين الصندوق إذن.",
+      "es-ES": "De acuerdo. Entonces vamos a la caja.",
+      "fr-FR": "Très bien. Alors allons à la caisse.",
+      "hi-IN": "ठीक है। तो चलिए कैश रजिस्टर की ओर चलते हैं।",
+      "pl-PL": "Wszystko jasne. W takim razie idziemy do kasy.",
+      "ro-RO": "În regulă. Atunci mergem la casă.",
+      "tr-TR": "Pekala. O zaman kasaya gidelim.",
+      "uk-UA": "Все ясно. Тоді йдемо на касу.",
+      "uz-UZ": "Tushunarli. Unda kassaga boramiz."
+    },
+    "vocabulary": [
+      {
+        "german": "die Kasse",
+        "translation": {
+          "ru-RU": "касса",
+          "en-US": "cash register",
+          "ar-SA": "الخزينة",
+          "es-ES": "caja",
+          "fr-FR": "caisse",
+          "hi-IN": "कैश रजिस्टर",
+          "pl-PL": "kasa",
+          "ro-RO": "casa de marcat",
+          "tr-TR": "kasa",
+          "uk-UA": "каса",
+          "uz-UZ": "kassa"
+        }
+      },
+      {
+        "german": "die Beratung",
+        "translation": {
+          "ru-RU": "консультация",
+          "en-US": "consultation",
+          "ar-SA": "استشارة",
+          "es-ES": "asesoramiento",
+          "fr-FR": "conseil",
+          "hi-IN": "परामर्श",
+          "pl-PL": "doradztwo",
+          "ro-RO": "consultanță",
+          "tr-TR": "danışmanlık",
+          "uk-UA": "консультація",
+          "uz-UZ": "maslahat"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Vielen Dank für die Beratung!",
+        "translation": {
+          "ru-RU": "Большое спасибо за консультацию!",
+          "en-US": "Thank you very much for the consultation!",
+          "ar-SA": "شكراً جزيلاً على الاستشارة!",
+          "es-ES": "¡Muchas gracias por el asesoramiento!",
+          "fr-FR": "Merci beaucoup pour vos conseils !",
+          "hi-IN": "परामर्श के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję za doradztwo!",
+          "ro-RO": "Vă mulțumesc mult pentru consultanță!",
+          "tr-TR": "Danışmanlık için çok teşekkürler!",
+          "uk-UA": "Велике дякую за консультацію!",
+          "uz-UZ": "Maslahat uchun katta rahmat!"
+        },
+        "nextStep": "abschied"
+      },
+      {
+        "text": "Super, danke für die Hilfe!",
+        "translation": {
+          "ru-RU": "Супер, спасибо за помощь!",
+          "en-US": "Super, thanks for the help!",
+          "ar-SA": "ممتاز، شكراً على المساعدة!",
+          "es-ES": "¡Genial, gracias por la ayuda!",
+          "fr-FR": "Super, merci pour l'aide !",
+          "hi-IN": "बढ़िया, मदद के लिए धन्यवाद!",
+          "pl-PL": "Super, dzięki za pomoc!",
+          "ro-RO": "Super, mulțumesc pentru ajutor!",
+          "tr-TR": "Süper, yardım için teşekkürler!",
+          "uk-UA": "Супер, дякую за допомогу!",
+          "uz-UZ": "Ajoyib, yordam uchun rahmat!"
+        },
+        "nextStep": "abschied"
+      }
+    ],
+    "defaultNext": "abschied"
+  },
+  "abschied": {
+    "botText": "Sehr gerne. Auf Wiedersehen!",
+    "botTranslation": {
+      "ru-RU": "С удовольствием. До свидания!",
+      "en-US": "With pleasure. Goodbye!",
+      "ar-SA": "بكل سرور. وداعاً!",
+      "es-ES": "Con mucho gusto. ¡Adiós!",
+      "fr-FR": "Avec plaisir. Au revoir !",
+      "hi-IN": "बड़ी खुशी से। अलविदा!",
+      "pl-PL": "Z przyjemnością. Do widzenia!",
+      "ro-RO": "Cu plăcere. La revedere!",
+      "tr-TR": "Memnuniyetle. Hoşça kalın!",
+      "uk-UA": "З задоволенням. До побачення!",
+      "uz-UZ": "Bajonidil. Xayr!"
+    },
+    "vocabulary": [
+      {
+        "german": "sehr gerne",
+        "translation": {
+          "ru-RU": "с удовольствием",
+          "en-US": "with pleasure",
+          "ar-SA": "بكل سرور",
+          "es-ES": "con gusto",
+          "fr-FR": "avec plaisir",
+          "hi-IN": "खुशी से",
+          "pl-PL": "z przyjemnością",
+          "ro-RO": "cu plăcere",
+          "tr-TR": "memnuniyetle",
+          "uk-UA": "із задоволенням",
+          "uz-UZ": "bajonidil"
+        }
+      },
+      {
+        "german": "schönen Tag",
+        "translation": {
+          "ru-RU": "хорошего дня",
+          "en-US": "nice day",
+          "ar-SA": "يوم جميل",
+          "es-ES": "buen día",
+          "fr-FR": "bonne journée",
+          "hi-IN": "अच्छा दिन",
+          "pl-PL": "miłego dnia",
+          "ro-RO": "o zi frumoasă",
+          "tr-TR": "iyi günler",
+          "uk-UA": "гарного дня",
+          "uz-UZ": "yaxshi kun"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Auf Wiedersehen!",
+        "translation": {
+          "ru-RU": "До свидания!",
+          "en-US": "Goodbye!",
+          "ar-SA": "وداعاً!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Do widzenia!",
+          "ro-RO": "La revedere!",
+          "tr-TR": "Hoşça kalın!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Tschüss, schönen Tag noch!",
+        "translation": {
+          "ru-RU": "Пока, хорошего дня!",
+          "en-US": "Bye, have a nice day!",
+          "ar-SA": "وداعاً، طاب يومك!",
+          "es-ES": "¡Adiós, que tenga un buen día!",
+          "fr-FR": "Au revoir, bonne journée !",
+          "hi-IN": "अलविदा, आपका दिन शुभ हो!",
+          "pl-PL": "Cześć, miłego dnia!",
+          "ro-RO": "Pa, o zi frumoasă în continuare!",
+          "tr-TR": "Hoşça kalın, iyi günler!",
+          "uk-UA": "Бувай, гарного дня!",
+          "uz-UZ": "Xayr, kuningiz yaxshi o'tsin!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

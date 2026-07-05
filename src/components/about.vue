@@ -260,7 +260,7 @@ onMounted(() => {
   padding: 10px;
   height: 190px;
   border-radius: 10px;
-  border: 2px solid black;
+  border: 1px solid black;
   transition: bottom 0.5s ease-out, opacity 0.4s ease-out;
 
 }
@@ -281,9 +281,8 @@ onMounted(() => {
   left: 0;
   background: #f3a20f;
   width: 100%;
-  border-top: 3px solid black;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top: 2px solid black;
+  border-radius: 10px;
   z-index: 2;
   font-family: "Nunito", sans-serif;
   font-weight: bold;

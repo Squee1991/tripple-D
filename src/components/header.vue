@@ -578,7 +578,7 @@ onBeforeUnmount(() => {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 5px 15px 5px 15px;
+  padding: 5px 10px 5px 10px;
 }
 
 .header-left, .header-right {
@@ -1048,6 +1048,12 @@ onBeforeUnmount(() => {
     box-shadow: 0 0 0 ;
   }
 
+}
+
+@media  (min-width: 1024px) {
+  .header {
+    padding: 12px 0 ;
+  }
 }
 
 </style>

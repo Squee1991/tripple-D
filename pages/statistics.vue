@@ -13,7 +13,7 @@
     </header>
     <div class="banner">
        <VBanner
-           text="Ваша статистика и прогресс в изучении слов и прохождении тематических уровней"
+           :text="t('statistics.title')"
            :icon="StatsIcon"
        />
     </div>
@@ -80,7 +80,7 @@
         </div>
         <div v-else class="empty-state">
           <img class="empty-icon" :src="NodataIcon" alt="">
-          <h3 class="empty-title">{{ t('articlesStatistics.notTopics') }}</h3>
+          <h3 class="empty-title-statistics">{{ t('articlesStatistics.notTopics') }}</h3>
           <button @click="articleSessionPath" class="btn-primary">{{ t('practiceArticleBtn.btn') }}</button>
         </div>
       </section>
@@ -170,7 +170,7 @@ onMounted(async () => {
 .mobile-page {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height:100%;
   font-family: "Nunito", sans-serif;
   overflow: hidden;
 }
@@ -475,9 +475,10 @@ transform: rotate(180deg);
   margin-bottom: 20px;
 }
 
-.empty-title {
+.empty-title-statistics {
   color: #6B7280;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .btn-primary {
@@ -485,12 +486,12 @@ transform: rotate(180deg);
   color: white;
   border: none;
   padding: 14px 24px;
-  border-radius: 16px;
+  border-radius: 50px;
   font-size: 1rem;
   font-weight: 700;
   width: 100%;
   max-width: 250px;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 6px 0 #2f6bcc;
 }
 
 .bg--article {

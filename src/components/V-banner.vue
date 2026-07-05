@@ -30,6 +30,7 @@ const bannerStyle = computed(() => {
 
 <style scoped>
 .v-banner {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;

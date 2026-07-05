@@ -1,0 +1,532 @@
+{
+  "start": {
+    "botText": "Hallo! Hast du am Samstag schon etwas vor?",
+    "botTranslation": {
+      "ru-RU": "Привет! У тебя есть планы на субботу?",
+      "en-US": "Hello! Do you have any plans for Saturday?",
+      "ar-SA": "مرحباً! هل لديك أي خطط ليوم السبت؟",
+      "es-ES": "¡Hola! ¿Tienes algún plan para el sábado?",
+      "fr-FR": "Salut ! Tu as déjà prévu quelque chose pour samedi ?",
+      "hi-IN": "नमस्ते! क्या आपके पास शनिवार के लिए कोई योजना है?",
+      "pl-PL": "Cześć! Masz już jakieś plany na sobotę?",
+      "ro-RO": "Bună! Ai ceva planificat pentru sâmbătă?",
+      "tr-TR": "Merhaba! Cumartesi için bir planın var mı?",
+      "uk-UA": "Привіт! У тебе є плани на суботу?",
+      "uz-UZ": "Salom! Shanba kuniga rejalaring bormi?"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Hallo! Nein, ich habe noch nichts vor.",
+        "translation": {
+          "ru-RU": "Привет! Нет, пока ничего.",
+          "en-US": "Hello! No, I have no plans yet.",
+          "ar-SA": "مرحباً! لا، ليس لدي خطط بعد.",
+          "es-ES": "¡Hola! No, todavía no tengo planes.",
+          "fr-FR": "Salut ! Non, je n'ai encore rien de prévu.",
+          "hi-IN": "नमस्ते! नहीं, मेरी अभी कोई योजना नहीं है। क्यों?",
+          "pl-PL": "Cześć! Nie, jeszcze nie mam planów.",
+          "ro-RO": "Bună! Nu, încă nu am planuri.",
+          "tr-TR": "Merhaba! Hayır, henüz bir planım yok.",
+          "uk-UA": "Привіт! Ні, поки нічого.",
+          "uz-UZ": "Salom! Yo'q, hozircha hech qanday rejam yo'q."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hi! Eigentlich nicht. Hast du eine Idee?",
+        "translation": {
+          "ru-RU": "Привет! Вообще-то нет. У тебя есть идея?",
+          "en-US": "Hi! Not really. Do you have an idea?",
+          "ar-SA": "أهلاً! ليس حقاً. هل لديك فكرة؟",
+          "es-ES": "¡Hola! La verdad es que no. ¿Tienes alguna idea?",
+          "fr-FR": "Salut ! Pas vraiment. Tu as une idée ?",
+          "hi-IN": "नमस्ते! असल में नहीं। क्या आपके पास कोई विचार है?",
+          "pl-PL": "Cześć! Właściwie to nie. Masz jakiś pomysł?",
+          "ro-RO": "Bună! Sincer, nu. Ai vreo idee?",
+          "tr-TR": "Selam! Aslında hayır. Bir fikrin mi var?",
+          "uk-UA": "Привіт! Взагалі-то ні. У тебе є ідея?",
+          "uz-UZ": "Salom! Aslida yo'q. Biror fikring bormi?"
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Ich mache am Samstag eine kleine Party bei mir zu Hause. Hast du Lust zu kommen?",
+    "botTranslation": {
+      "ru-RU": "Я устраиваю в субботу небольшую вечеринку у себя дома. Хочешь прийти?",
+      "en-US": "I'm having a small party at my place on Saturday. Do you want to come?",
+      "ar-SA": "سأقيم حفلة صغيرة في منزلي يوم السبت. هل ترغب في المجيء؟",
+      "es-ES": "Voy a dar una pequeña fiesta en mi casa el sábado. ¿Te apetece venir?",
+      "fr-FR": "J'organise une petite fête chez moi samedi. Tu as envie de venir ?",
+      "hi-IN": "मैं शनिवार को अपने घर पर एक छोटी सी पार्टी कर रहा हूँ। क्या तुम आना चाहते हो?",
+      "pl-PL": "Robię w sobotę małą imprezę u siebie w domu. Masz ochotę przyjść?",
+      "ro-RO": "Dau o mică petrecere la mine acasă sâmbătă. Ai chef să vii?",
+      "tr-TR": "Cumartesi günü evimde küçük bir parti veriyorum. Gelmek ister misin?",
+      "uk-UA": "Я влаштовую в суботу невелику вечірку у себе вдома. Хочеш прийти?",
+      "uz-UZ": "Shanba kuni uyimda kichik ziyofat uyushtiryapman. Kelishni xohlaysanmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Party",
+        "translation": {
+          "ru-RU": "вечеринка",
+          "en-US": "party",
+          "ar-SA": "حفلة",
+          "es-ES": "fiesta",
+          "fr-FR": "fête / soirée",
+          "hi-IN": "पार्टी",
+          "pl-PL": "impreza",
+          "ro-RO": "petrecere",
+          "tr-TR": "parti",
+          "uk-UA": "вечірка",
+          "uz-UZ": "ziyofat / kecha"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das klingt super! Gerne, ich komme.",
+        "translation": {
+          "ru-RU": "Звучит супер! С удовольствием, я приду.",
+          "en-US": "That sounds great! I'd love to, I'll come.",
+          "ar-SA": "هذا يبدو رائعاً! بكل سرور، سآتي.",
+          "es-ES": "¡Suena genial! Con gusto, iré.",
+          "fr-FR": "Ça a l'air super ! Volontiers, je viens.",
+          "hi-IN": "यह बहुत अच्छा लग रहा है! खुशी से, मैं आऊंगा।",
+          "pl-PL": "Brzmi super! Chętnie przyjdę.",
+          "ro-RO": "Sună super! Cu plăcere, voi veni.",
+          "tr-TR": "Kulağa harika geliyor! Memnuniyetle gelirim.",
+          "uk-UA": "Звучить супер! Із задоволенням, я прийду.",
+          "uz-UZ": "Juda zo'r eshitilyapti! Bajonidil boraman."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Tolle Idee! Um wie viel Uhr beginnt die Party?",
+        "translation": {
+          "ru-RU": "Отличная идея! Во сколько начинается вечеринка?",
+          "en-US": "Great idea! At what time does the party start?",
+          "ar-SA": "فكرة رائعة! في أي وقت تبدأ الحفلة؟",
+          "es-ES": "¡Gran idea! ¿A qué hora empieza la fiesta?",
+          "fr-FR": "Super idée ! À quelle heure commence la fête ?",
+          "hi-IN": "बढ़िया विचार! पार्टी कितने बजे शुरू होगी?",
+          "pl-PL": "Świetny pomysł! O której godzinie zaczyna się impreza?",
+          "ro-RO": "Idee grozavă! La ce oră începe petrecerea?",
+          "tr-TR": "Harika fikir! Parti saat kaçta başlıyor?",
+          "uk-UA": "Чудова ідея! О котрій починається вечірка?",
+          "uz-UZ": "Ajoyib fikr! Ziyofat soat nechada boshlanadi?"
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Wir fangen gegen 19 Uhr an. Möchtest du etwas mitbringen?",
+    "botTranslation": {
+      "ru-RU": "Мы начинаем около 19:00. Хочешь что-нибудь принести с собой?",
+      "en-US": "We will start around 7 PM. Would you like to bring something?",
+      "ar-SA": "سنبدأ حوالي الساعة 7 مساءً. هل ترغب في إحضار شيء معك؟",
+      "es-ES": "Empezamos sobre las 19:00. ¿Quieres traer algo?",
+      "fr-FR": "On commence vers 19h. Tu veux apporter quelque chose ?",
+      "hi-IN": "हम लगभग 7 बजे शुरू करेंगे। क्या तुम कुछ साथ लाना चाहोगे?",
+      "pl-PL": "Zaczynamy około 19:00. Chcesz coś ze sobą przynieść?",
+      "ro-RO": "Începem în jur de ora 19. Ai vrea să aduci ceva?",
+      "tr-TR": "Saat 19:00 civarı başlıyoruz. Yanında bir şeyler getirmek ister misin?",
+      "uk-UA": "Ми починаємо близько 19:00. Хочеш щось принести з собою?",
+      "uz-UZ": "Biz soat 19:00 atrofida boshlaymiz. O'zing bilan biror narsa olib kelmoqchimisan?"
+    },
+    "vocabulary": [
+      {
+        "german": "mitbringen",
+        "translation": {
+          "ru-RU": "приносить (с собой)",
+          "en-US": "to bring along",
+          "ar-SA": "يُحضر معه",
+          "es-ES": "traer consigo",
+          "fr-FR": "apporter",
+          "hi-IN": "साथ लाना",
+          "pl-PL": "przynieść (ze sobą)",
+          "ro-RO": "a aduce cu sine",
+          "tr-TR": "yanında getirmek",
+          "uk-UA": "приносити (з собою)",
+          "uz-UZ": "o'zi bilan olib kelmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, klar! Soll ich etwas zu Essen oder Getränke mitbringen?",
+        "translation": {
+          "ru-RU": "Да, конечно! Мне принести что-то из еды или напитки?",
+          "en-US": "Yes, of course! Should I bring some food or drinks?",
+          "ar-SA": "نعم بالطبع! هل أحضر بعض الطعام أو المشروبات؟",
+          "es-ES": "¡Sí, claro! ¿Debería traer algo de comida o bebidas?",
+          "fr-FR": "Oui, bien sûr ! Dois-je apporter à manger ou des boissons ?",
+          "hi-IN": "हाँ, बिल्कुल! क्या मुझे कुछ खाने या पीने के लिए लाना चाहिए?",
+          "pl-PL": "Tak, jasne! Mam przynieść coś do jedzenia czy napoje?",
+          "ro-RO": "Da, desigur! Să aduc ceva de mâncare sau băuturi?",
+          "tr-TR": "Evet, tabii! Yiyecek ya da içecek bir şeyler getireyim mi?",
+          "uk-UA": "Так, звісно! Мені принести щось з їжі чи напої?",
+          "uz-UZ": "Ha, albatta! Ovqat yoki ichimlik olib kelaymi?"
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Ich kann einen Salat machen und etwas Getränke mitbringen.",
+        "translation": {
+          "ru-RU": "Я могу сделать салат и принести напитки.",
+          "en-US": "I can make a salad and bring some drinks.",
+          "ar-SA": "يمكنني إعداد سلطة وإحضار بعض المشروبات.",
+          "es-ES": "Puedo hacer una ensalada y traer algunas bebidas.",
+          "fr-FR": "Je peux faire une salade et apporter quelques boissons.",
+          "hi-IN": "मैं एक सलाद बना सकता हूँ और कुछ पेय ला सकता हूँ।",
+          "pl-PL": "Mogę zrobić sałatkę i przynieść trochę napojów.",
+          "ro-RO": "Pot face o salată și să aduc câteva băuturi.",
+          "tr-TR": "Bir salata yapabilir ve biraz içecek getirebilirim.",
+          "uk-UA": "Я можу зробити салат і принести напої.",
+          "uz-UZ": "Men salat tayyorlab, bir oz ichimliklar olib kelishim mumkin."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Das wäre sehr nett! Ein paar Chips und Cola wären auch gut.",
+    "botTranslation": {
+      "ru-RU": "Было бы очень мило! Еще было бы хорошо немного чипсов и колы.",
+      "en-US": "That would be very nice! A few chips and cola would also be good.",
+      "ar-SA": "سيكون هذا لطيفاً جداً! بعض الرقائق والكولا ستكون جيدة أيضاً.",
+      "es-ES": "¡Sería muy amable! Unas patatas fritas y cola también estarían bien.",
+      "fr-FR": "Ce serait très gentil ! Des chips et du coca seraient bien aussi.",
+      "hi-IN": "यह बहुत अच्छा होगा! कुछ चिप्स और कोला भी अच्छे रहेंगे।",
+      "pl-PL": "Byłoby bardzo miło! Trochę chipsów i cola też by się przydały.",
+      "ro-RO": "Ar fi foarte drăguț! Câteva chipsuri și cola ar fi de asemenea bune.",
+      "tr-TR": "Çok ince olur! Biraz cips ve kola da iyi olur.",
+      "uk-UA": "Було б дуже мило! Ще було б добре трохи чипсів та коли.",
+      "uz-UZ": "Bu juda yaxshi bo'lardi! Bir oz chips va kola ham yaxshi bo'lardi."
+    },
+    "vocabulary": [
+      {
+        "german": "das Essen",
+        "translation": {
+          "ru-RU": "еда",
+          "en-US": "food",
+          "ar-SA": "طعام",
+          "es-ES": "comida",
+          "fr-FR": "nourriture",
+          "hi-IN": "खाना",
+          "pl-PL": "jedzenie",
+          "ro-RO": "mâncare",
+          "tr-TR": "yiyecek / yemek",
+          "uk-UA": "їжа",
+          "uz-UZ": "ovqat / yegulik"
+        }
+      },
+      {
+        "german": "die Getränke",
+        "translation": {
+          "ru-RU": "напитки",
+          "en-US": "drinks / beverages",
+          "ar-SA": "مشروبات",
+          "es-ES": "bebidas",
+          "fr-FR": "boissons",
+          "hi-IN": "पेय",
+          "pl-PL": "napoje",
+          "ro-RO": "băuturi",
+          "tr-TR": "içecekler",
+          "uk-UA": "напої",
+          "uz-UZ": "ichimliklar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, ich bringe alles mit.",
+        "translation": {
+          "ru-RU": "Всё понятно, я всё принесу.",
+          "en-US": "All right, I'll bring everything.",
+          "ar-SA": "حسناً، سأحضر كل شيء.",
+          "es-ES": "Entendido, lo traeré todo.",
+          "fr-FR": "D'accord, j'apporte tout.",
+          "hi-IN": "ठीक है, मैं सब कुछ लाऊँगा।",
+          "pl-PL": "Wszystko jasne, przyniosę to wszystko.",
+          "ro-RO": "Am înțeles, aduc totul.",
+          "tr-TR": "Anlaşıldı, hepsini getireceğim.",
+          "uk-UA": "Все зрозуміло, я все принесу.",
+          "uz-UZ": "Tushunarli, hammasini olib kelaman."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Kein Problem, ich kaufe das am Freitag ein.",
+        "translation": {
+          "ru-RU": "Без проблем, я куплю это в пятницу.",
+          "en-US": "No problem, I will buy that on Friday.",
+          "ar-SA": "لا مشكلة، سأشتري هذا يوم الجمعة.",
+          "es-ES": "Ningún problema, lo compraré el viernes.",
+          "fr-FR": "Pas de problème, j'achète ça vendredi.",
+          "hi-IN": "कोई बात नहीं, मैं इसे शुक्रवार को खरीद लूँगा।",
+          "pl-PL": "Żaden problem, kupię to w piątek.",
+          "ro-RO": "Nicio problemă, voi cumpăra asta vineri.",
+          "tr-TR": "Sorun değil, bunu cuma günü satın alırım.",
+          "uk-UA": "Без проблем, я куплю це в п'ятницю.",
+          "uz-UZ": "Muammo yo'q, men buni juma kuni sotib olaman."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Super, danke! Übrigens, Anna und Thomas kommen auch.",
+    "botTranslation": {
+      "ru-RU": "Супер, спасибо! Кстати, Анна и Томас тоже придут.",
+      "en-US": "Super, thanks! By the way, Anna and Thomas are coming too.",
+      "ar-SA": "ممتاز، شكراً! بالمناسبة، آنا وتوماس قادمان أيضاً.",
+      "es-ES": "¡Súper, gracias! Por cierto, Anna y Thomas también vienen.",
+      "fr-FR": "Super, merci ! Au fait, Anna et Thomas viennent aussi.",
+      "hi-IN": "बढ़िया, धन्यवाद! वैसे, अन्ना और थॉमस भी आ रहे हैं।",
+      "pl-PL": "Super, dzięki! A tak przy okazji, Anna i Thomas też przyjdą.",
+      "ro-RO": "Super, mulțumesc! Apropo, Anna și Thomas vin și ei.",
+      "tr-TR": "Süper, teşekkürler! Bu arada, Anna ve Thomas da geliyor.",
+      "uk-UA": "Супер, дякую! До речі, Анна і Томас теж прийдуть.",
+      "uz-UZ": "Zo'r, rahmat! Darvoqe, Anna va Tomas ham kelishadi."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Oh, toll! Ich habe sie lange nicht gesehen.",
+        "translation": {
+          "ru-RU": "О, здорово! Я их давно не видел.",
+          "en-US": "Oh, great! I haven't seen them in a long time.",
+          "ar-SA": "أوه، رائع! لم أرهم منذ فترة طويلة.",
+          "es-ES": "¡Oh, genial! Hace mucho que no los veo.",
+          "fr-FR": "Oh, génial ! Ça fait longtemps que je ne les ai pas vus.",
+          "hi-IN": "ओह, बढ़िया! मैंने उन्हें काफी समय से नहीं देखा है।",
+          "pl-PL": "O, wspaniale! Dawno ich nie widziałem/am.",
+          "ro-RO": "Oh, grozav! Nu i-am văzut de mult timp.",
+          "tr-TR": "Oh, harika! Onları uzun zamandır görmemiştim.",
+          "uk-UA": "О, чудово! Я їх давно не бачив.",
+          "uz-UZ": "Oh, ajoyib! Men ularni ancha vaqtdan beri ko'rmadim."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Klasse! Wird es viele Gäste geben?",
+        "translation": {
+          "ru-RU": "Класс! Будет много гостей?",
+          "en-US": "Great! Will there be many guests?",
+          "ar-SA": "رائع! هل سيكون هناك العديد من الضيوف؟",
+          "es-ES": "¡Genial! ¿Habrá muchos invitados?",
+          "fr-FR": "Super ! Y aura-t-il beaucoup d'invités ?",
+          "hi-IN": "शानदार! क्या कई मेहमान होंगे?",
+          "pl-PL": "Ekstra! Będzie dużo gości?",
+          "ro-RO": "Grozav! Vor fi mulți oaspeți?",
+          "tr-TR": "Harika! Çok misafir olacak mı?",
+          "uk-UA": "Клас! Буде багато гостей?",
+          "uz-UZ": "Ajoyib! Mehmonlar ko'p bo'ladimi?"
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Nein, nur ein paar gute Freunde. Wir wollen Pizza essen und Musik hören.",
+    "botTranslation": {
+      "ru-RU": "Нет, только несколько хороших друзей. Мы хотим поесть пиццу и послушать музыку.",
+      "en-US": "No, just a few good friends. We want to eat pizza and listen to music.",
+      "ar-SA": "لا، فقط بعض الأصدقاء الجيدين. نريد أن نأكل البيتزا ونستمع إلى الموسيقى.",
+      "es-ES": "No, solo algunos buenos amigos. Queremos comer pizza y escuchar música.",
+      "fr-FR": "Non, juste quelques bons amis. On veut manger de la pizza et écouter de la musique.",
+      "hi-IN": "नहीं, बस कुछ अच्छे दोस्त। हम पिज्जा खाना और संगीत सुनना चाहते हैं।",
+      "pl-PL": "Nie, tylko kilkoro dobrych znajomych. Chcemy zjeść pizzę i posłuchać muzyki.",
+      "ro-RO": "Nu, doar câțiva prieteni buni. Vrem să mâncăm pizza și să ascultăm muzică.",
+      "tr-TR": "Hayır, sadece birkaç iyi arkadaş. Pizza yiyip müzik dinlemek istiyoruz.",
+      "uk-UA": "Ні, тільки кілька хороших друзів. Ми хочемо поїсти піцу і послухати музику.",
+      "uz-UZ": "Yo'q, faqat bir nechta yaqin do'stlar. Biz pitssa yeb, musiqa eshitmoqchimiz."
+    },
+    "vocabulary": [
+      {
+        "german": "die Gäste",
+        "translation": {
+          "ru-RU": "гости",
+          "en-US": "guests",
+          "ar-SA": "ضيوف",
+          "es-ES": "invitados",
+          "fr-FR": "invités",
+          "hi-IN": "मेहमान",
+          "pl-PL": "goście",
+          "ro-RO": "oaspeți / invitați",
+          "tr-TR": "misafirler",
+          "uk-UA": "гості",
+          "uz-UZ": "mehmonlar"
+        }
+      },
+      {
+        "german": "die Musik",
+        "translation": {
+          "ru-RU": "музыка",
+          "en-US": "music",
+          "ar-SA": "موسيقى",
+          "es-ES": "música",
+          "fr-FR": "musique",
+          "hi-IN": "संगीत",
+          "pl-PL": "muzyka",
+          "ro-RO": "muzică",
+          "tr-TR": "müzik",
+          "uk-UA": "музика",
+          "uz-UZ": "musiqa"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das klingt nach einem perfekten Abend.",
+        "translation": {
+          "ru-RU": "Звучит как идеальный вечер.",
+          "en-US": "That sounds like a perfect evening.",
+          "ar-SA": "هذا يبدو وكأنه أمسية مثالية.",
+          "es-ES": "Suena a una velada perfecta.",
+          "fr-FR": "Ça ressemble à une soirée parfaite.",
+          "hi-IN": "यह एक आदर्श शाम की तरह लगता है।",
+          "pl-PL": "Brzmi jak idealny wieczór.",
+          "ro-RO": "Sună ca o seară perfectă.",
+          "tr-TR": "Kulağa mükemmel bir akşam gibi geliyor.",
+          "uk-UA": "Звучить як ідеальний вечір.",
+          "uz-UZ": "Bu ajoyib oqshomga o'xshaydi."
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Das ist schön. Ich mag kleine Partys.",
+        "translation": {
+          "ru-RU": "Это здорово. Я люблю маленькие вечеринки.",
+          "en-US": "That's nice. I like small parties.",
+          "ar-SA": "هذا جميل. أنا أحب الحفلات الصغيرة.",
+          "es-ES": "Qué bien. Me gustan las fiestas pequeñas.",
+          "fr-FR": "C'est sympa. J'aime bien les petites fêtes.",
+          "hi-IN": "यह अच्छा है। मुझे छोटी पार्टियां पसंद हैं।",
+          "pl-PL": "To fajnie. Lubię małe imprezy.",
+          "ro-RO": "Este frumos. Îmi plac petrecerile mici.",
+          "tr-TR": "Bu güzel. Küçük partileri severim.",
+          "uk-UA": "Це чудово. Я люблю маленькі вечірки.",
+          "uz-UZ": "Bu yaxshi. Menga kichik ziyofatlar yoqadi."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Ich freue mich schon. Brauchst du noch meine Adresse?",
+    "botTranslation": {
+      "ru-RU": "Я уже в предвкушении. Тебе еще нужен мой адрес?",
+      "en-US": "I'm looking forward to it. Do you still need my address?",
+      "ar-SA": "أنا أتطلع إلى ذلك. هل لا تزال بحاجة إلى عنواني؟",
+      "es-ES": "Me hace mucha ilusión. ¿Todavía necesitas mi dirección?",
+      "fr-FR": "J'ai hâte. As-tu encore besoin de mon adresse ?",
+      "hi-IN": "मैं इसका इंतज़ार कर रहा हूँ। क्या तुम्हें अभी भी मेरे पते की आवश्यकता है?",
+      "pl-PL": "Już się nie mogę doczekać. Potrzebujesz jeszcze mojego adresu?",
+      "ro-RO": "Abia aștept. Mai ai nevoie de adresa mea?",
+      "tr-TR": "Şimdiden sabırsızlanıyorum. Adresime hala ihtiyacın var mı?",
+      "uk-UA": "Я вже в передчутті. Тобі ще потрібна моя адреса?",
+      "uz-UZ": "Men buni intiqlik bilan kutyapman. Senga hali ham manzilim kerakmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "sich freuen",
+        "translation": {
+          "ru-RU": "радоваться / предвкушать",
+          "en-US": "to be looking forward to / to be happy",
+          "ar-SA": "يتطلع إلى / يفرح",
+          "es-ES": "alegrarse / esperar con ilusión",
+          "fr-FR": "se réjouir / avoir hâte",
+          "hi-IN": "प्रसन्न होना / उत्सुक होना",
+          "pl-PL": "cieszyć się",
+          "ro-RO": "a se bucura",
+          "tr-TR": "sevinmek / dört gözle beklemek",
+          "uk-UA": "радіти / передчувати",
+          "uz-UZ": "xursand bo'lmoq / intizorlik bilan kutmoq"
+        }
+      },
+      {
+        "german": "die Adresse",
+        "translation": {
+          "ru-RU": "адрес",
+          "en-US": "address",
+          "ar-SA": "عنوان",
+          "es-ES": "dirección",
+          "fr-FR": "adresse",
+          "hi-IN": "पता",
+          "pl-PL": "adres",
+          "ro-RO": "adresă",
+          "tr-TR": "adres",
+          "uk-UA": "адреса",
+          "uz-UZ": "manzil"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, bitte schicke mir den Standort per WhatsApp.",
+        "translation": {
+          "ru-RU": "Да, пожалуйста, пришли мне локацию в WhatsApp.",
+          "en-US": "Yes, please send me the location via WhatsApp.",
+          "ar-SA": "نعم، من فضلك أرسل لي الموقع عبر واتساب.",
+          "es-ES": "Sí, por favor, envíame la ubicación por WhatsApp.",
+          "fr-FR": "Oui, s'il te plaît, envoie-moi la position par WhatsApp.",
+          "hi-IN": "हाँ, कृपया मुझे व्हाट्सएप पर स्थान भेजें।",
+          "pl-PL": "Tak, proszę wyślij mi lokalizację na WhatsAppie.",
+          "ro-RO": "Da, te rog trimite-mi locația pe WhatsApp.",
+          "tr-TR": "Evet, lütfen bana konumu WhatsApp'tan gönder.",
+          "uk-UA": "Так, будь ласка, надішли мені локацію у WhatsApp.",
+          "uz-UZ": "Ha, iltimos, menga joylashuvni WhatsApp orqali yubor."
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Nein, ich kenne den Weg. Bis Samstag!",
+        "translation": {
+          "ru-RU": "Нет, я знаю дорогу. До субботы!",
+          "en-US": "No, I know the way. See you on Saturday!",
+          "ar-SA": "لا، أنا أعرف الطريق. أراك يوم السبت!",
+          "es-ES": "No, conozco el camino. ¡Hasta el sábado!",
+          "fr-FR": "Non, je connais le chemin. À samedi !",
+          "hi-IN": "नहीं, मुझे रास्ता पता है। शनिवार को मिलते हैं!",
+          "pl-PL": "Nie, znam drogę. Do soboty!",
+          "ro-RO": "Nu, știu drumul. Ne vedem sâmbătă!",
+          "tr-TR": "Hayır, yolu biliyorum. Cumartesi görüşürüz!",
+          "uk-UA": "Ні, я знаю дорогу. До суботи!",
+          "uz-UZ": "Yo'q, men yo'lni bilaman. Shanbagacha!"
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Alles klar. Wir sehen uns am Samstag! Tschüss.",
+    "botTranslation": {
+      "ru-RU": "Договорились. Увидимся в субботу! Пока.",
+      "en-US": "All right. See you on Saturday! Bye.",
+      "ar-SA": "حسناً. أراك يوم السبت! وداعاً.",
+      "es-ES": "De acuerdo. ¡Nos vemos el sábado! Adiós.",
+      "fr-FR": "Entendu. On se voit samedi ! Salut.",
+      "hi-IN": "ठीक है। शनिवार को मिलते हैं! अलविदा।",
+      "pl-PL": "W porządku. Widzimy się w sobotę! Cześć.",
+      "ro-RO": "În regulă. Ne vedem sâmbătă! Pa.",
+      "tr-TR": "Tamamdır. Cumartesi görüşürüz! Hoşça kal.",
+      "uk-UA": "Домовилися. Побачимося в суботу! Бувай.",
+      "uz-UZ": "Kelishdik. Shanba kuni ko'rishamiz! Xayr."
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

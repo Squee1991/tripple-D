@@ -42,9 +42,7 @@ import { guessAchievment } from '../src/achieveGroup/guessAchieve/guessAchievmen
 import { useQuizStore } from '../store/adjectiveStore.js'
 import { useEventSessionStore } from '../store/eventsStore.js'
 import { useEasterEggsStore } from '../store/easterEggsStore.js'
-
 export const useAchievementStore = defineStore('achievementStore', () => {
-
 	const rawGroups = [
 		...valentineAchievements.map(g => ({category: 'valentine' , ...g})),
 		...eventWinterAchievements.map(g => ({category: 'winter' , ...g})),
@@ -72,7 +70,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		...assembleWordGroupAchievement.map(g => ({ category: 'letters', ...g })),
 		...cpecialGroupAchievment.map(g => ({ category: 'special', ...g }))
 	]
-
 	const groups = ref(
 		rawGroups.map(group => ({
 			...group,
@@ -83,7 +80,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			}))
 		}))
 	)
-
 	const lastUnlockedAward = ref(null)
 	const lastUnlockedAchievement = ref(null)
 	const popupQueue = ref([])
@@ -103,12 +99,10 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	const duelStore = useDuelStore()
 	const eventStore = useEventSessionStore()
 	const eggStore = useEasterEggsStore()
-
 	const isBooting = ref(true)
 	const suppressReplaysUntil = ref(0)
 	const bootUnlocked = []
 	const bootAwards = []
-
 	let eventUnsubs = []
 	const dailyAggUnsub = ref(null)
 	const prevMap = new Map()
@@ -118,10 +112,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		'Rote Bete','Radieschen','Bohne','Mais','Pilz','Knoblauch'
 	]);
 	const hasAllModes = (word) => required.every(m => word?.progress?.[m])
-
 	const awardsKey = () => `awards_shown_v1_${authStore?.uid}`
 	const completedKey = () => `achievements_completed_v1_${authStore?.uid}`
-
 	function loadShown() {
 		if (!process.client) return new Set()
 		try { return new Set(JSON.parse(localStorage.getItem(awardsKey()) || '[]')) }
@@ -140,12 +132,10 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		if (!process.client) return
 		try { localStorage.setItem(completedKey(), JSON.stringify([...set])) } catch {}
 	}
-
 	let shownSet = loadShown()
 	let completedSet = loadCompleted()
 	const winterRank1BoughtCount = ref(0)
 	const valentineRank1BoughtCount = ref(0)
-
 	function findById(id) {
 		for (const g of groups.value) {
 			const ach = g.achievements.find(a => a.id === id)
@@ -158,12 +148,18 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		if (!showPopup.value && popupQueue.value.length) {
 			popupAchievement.value = popupQueue.value.shift()
 			showPopup.value = true
+
+			setTimeout(() => {
+				if (showPopup.value) closePopup()
+			}, 5000)
 		}
 	}
 
 	function closePopup() {
 		showPopup.value = false
-		showNextPopup()
+		setTimeout(() => {
+			showNextPopup()
+		}, 300)
 	}
 
 	function resetAllProgress(options = {}) {
@@ -209,40 +205,32 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		const next     = isBooting.value ? incoming : Math.max(prev, incoming)
 		ach.currentProgress = Math.min(next, target)
 		const justCompleted = ach.currentProgress >= target && !completedSet.has(id)
+
 		if (justCompleted) {
 			completedSet.add(id)
 			saveCompleted(completedSet)
 			const mapVal = achievementToAwardMap[id]
+
 			if (isBooting.value) {
+				if (mapVal && !shownSet.has(mapVal)) {
+					shownSet.add(mapVal)
+					saveShown(shownSet)
+				}
 				if (id === 'registerAchievement') {
-					popupQueue.value.push(ach)
-					showNextPopup()
-					lastUnlockedAchievement.value = { id: ach.id, title: ach.title, groupTitle: ach.groupTitle || null, ts: Date.now() }
-					if (mapVal && !shownSet.has(mapVal)) {
-						shownSet.add(mapVal)
-						saveShown(shownSet)
-						lastUnlockedAward.value = { titleKey: mapVal, achId: id, ts: Date.now() }
-						// updateProgress('Collection', shownSet.size)
-						updateCollectionCount()
-					}
-				} else {
-					bootUnlocked.push(ach.id)
-					if (mapVal && !shownSet.has(mapVal)) {
-						bootAwards.push({ titleKey: mapVal, achId: id })
-					}
+					updateCollectionCount()
 				}
 			} else {
-				if (Date.now() >= suppressReplaysUntil.value) {
+				if (Date.now() >= suppressReplaysUntil.value || id === 'registerAchievement') {
 					popupQueue.value.push(ach)
 					showNextPopup()
 					lastUnlockedAchievement.value = { id: ach.id, title: ach.title, groupTitle: ach.groupTitle || null, ts: Date.now() }
-					setTimeout(() => { if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null }, 0)
+					setTimeout(() => { if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null }, 500)
+
 					if (mapVal && !shownSet.has(mapVal)) {
 						shownSet.add(mapVal)
 						saveShown(shownSet)
 						lastUnlockedAward.value = { titleKey: mapVal, achId: id, ts: Date.now() }
-						setTimeout(() => { if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null }, 0)
-						// updateProgress('Collection', shownSet.size)
+						setTimeout(() => { if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null }, 500)
 						updateCollectionCount()
 					}
 				}
@@ -332,20 +320,17 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 	function finishBootAndReplay() {
 		isBooting.value = false
-		if (bootUnlocked.length) {
-			bootUnlocked.map(findById).filter(Boolean).forEach(a => popupQueue.value.push(a))
-			showNextPopup()
-		}
+
 		if (bootAwards.length) {
-			bootAwards.forEach(({ titleKey, achId }) => {
+			bootAwards.forEach(({ titleKey }) => {
 				if (!shownSet.has(titleKey)) {
 					shownSet.add(titleKey)
 					saveShown(shownSet)
-					lastUnlockedAward.value = { titleKey, achId, ts: Date.now() }
 				}
 			})
 			updateProgress('Collection', shownSet.size)
 		}
+
 		bootUnlocked.length = 0
 		bootAwards.length = 0
 	}
@@ -353,7 +338,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	if (process.client) {
 		watch(() => authStore.uid, (uid) => {
 			isBooting.value = true
-			suppressReplaysUntil.value = Date.now() + 2000
+			suppressReplaysUntil.value = Date.now() + 4000
 			shownSet = loadShown()
 			completedSet = loadCompleted()
 
@@ -365,22 +350,23 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			updateCollectionCount()
 			eggStore.loadEggs()
 			detachDailyAggListener()
-
 			if (!uid) {
 				isBooting.value = false
 				resetAllProgress()
 				return
 			}
-
 			attachDailyAggListener()
-			setTimeout(() => {
-				if (!completedSet.has('registerAchievement')) updateProgress('registerAchievement', 1)
-			}, 0)
 			setTimeout(() => {
 				finishBootAndReplay()
 				recomputeAllCasesMeta()
 				recomputeAllAdjectivesMeta()
 				recomputeAllVerbsMeta()
+				setTimeout(() => {
+					if (!completedSet.has('registerAchievement')) {
+						updateProgress('registerAchievement', 1)
+					}
+				}, 1500)
+
 			}, 0)
 		}, { immediate: true })
 	}
@@ -523,7 +509,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				if (g.category === 'wordArticle') g.achievements.forEach(a => updateProgress(a.id, wordArticleCnt));
 
 				if (g.category === 'write') {
-					const title = g.title.toLowerCase();
+					const title = (g.title || '').toLowerCase();
 					if (title.includes('der')) g.achievements.forEach(a => updateProgress(a.id, derCnt));
 					if (title.includes('die')) g.achievements.forEach(a => updateProgress(a.id, dieCnt));
 					if (title.includes('das')) g.achievements.forEach(a => updateProgress(a.id, dasCnt));
@@ -572,14 +558,77 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		watch(() => langStore.articlesSpentForAchievement, spent => updateProgress('Articlus', Number(spent) || 0), { immediate: true })
 		watch(() => gameStore.onTheEdgeProgress, v => updateProgress('Impuls', v), { immediate: true })
 
-		;(async function checkLeaderboard() {
-			if (!authStore.uid) return
-			const levels = [1, 2, 3], ids = ['leaderboardEasy', 'leaderboardNormal', 'leaderboardHard']
-			for (let i = 0; i < 3; i++) {
-				const lb = await gameStore.loadMarathonLeaderboard(levels[i])
-				updateProgress(ids[i], lb.length > 0 && lb[0].id === authStore.uid ? 1 : 0)
+		let localMonitorInterval = null;
+		let wasOpen = null;
+
+		const checkRankAndAward = async (seasonId) => {
+			if (!authStore.uid || !seasonId) return;
+
+			const levelData = [
+				{ levelId: 1, prefix: 'easy', achPrefix: 'leaderboardEasy' },
+				{ levelId: 2, prefix: 'normal', achPrefix: 'leaderboardNormal' },
+				{ levelId: 3, prefix: 'hard', achPrefix: 'leaderboardHard' }
+			]
+
+			for (const data of levelData) {
+				const rank = await gameStore.getPreviousSeasonRank(data.levelId, seasonId)
+				if (rank >= 1 && rank <= 3) {
+					for (let r = 3; r >= rank; r--) {
+						await authStore.unlockMarathonAchievement(data.prefix, r);
+						updateProgress(`${data.achPrefix}-${r}`, 1);
+					}
+				}
 			}
-		})()
+		}
+
+		const startZeroCostMonitor = () => {
+			if (localMonitorInterval) clearInterval(localMonitorInterval);
+			const initialState = gameStore.getSeasonState();
+			wasOpen = initialState.isOpen;
+			localMonitorInterval = setInterval(() => {
+				if (!authStore.uid) return;
+
+				const { isOpen, currentSeasonId } = gameStore.getSeasonState();
+				if (wasOpen === true && isOpen === false) {
+					wasOpen = isOpen;
+					setTimeout(() => {
+						checkRankAndAward(currentSeasonId);
+					}, 5000);
+				}
+				else if (wasOpen === false && isOpen === true) {
+					wasOpen = isOpen;
+				}
+			}, 1000);
+		}
+
+		watch(() => authStore.uid, (uid) => {
+			if (uid) {
+				const { isOpen, currentSeasonId, previousSeasonId } = gameStore.getSeasonState();
+				const seasonToCheck = isOpen ? previousSeasonId : currentSeasonId;
+				checkRankAndAward(seasonToCheck);
+
+				startZeroCostMonitor();
+			} else {
+				if (localMonitorInterval) clearInterval(localMonitorInterval);
+			}
+		}, { immediate: true })
+
+		watch(() => authStore.achievements?.marathon, (marathonStats) => {
+			if (!marathonStats) return;
+
+			if (marathonStats.easy_1) updateProgress('leaderboardEasy-1', 1)
+			if (marathonStats.easy_2) updateProgress('leaderboardEasy-2', 1)
+			if (marathonStats.easy_3) updateProgress('leaderboardEasy-3', 1)
+
+			if (marathonStats.normal_1) updateProgress('leaderboardNormal-1', 1)
+			if (marathonStats.normal_2) updateProgress('leaderboardNormal-2', 1)
+			if (marathonStats.normal_3) updateProgress('leaderboardNormal-3', 1)
+
+			if (marathonStats.hard_1) updateProgress('leaderboardHard-1', 1)
+			if (marathonStats.hard_2) updateProgress('leaderboardHard-2', 1)
+			if (marathonStats.hard_3) updateProgress('leaderboardHard-3', 1)
+
+		}, { immediate: true, deep: true })
 
 		watch(() => authStore.registeredAt, date => {
 			if (!date) return
@@ -621,7 +670,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const questsProgress = eventData.quests || {}
 				const shopItems = eventData.shopItems || {}
 				winterRank1BoughtCount.value = ['santaHat', 'christmasBall', 'christmasWreath'].reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
-				// updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
 				updateCollectionCount()
 				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
 				updateProgress('firstQuest', completedQuestsCount > 0 ? 1 : 0)
@@ -635,7 +683,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 				const metaChildrenIds = ['firstQuest', 'santaLexicon', 'everyQuest', 'snowFall', 'santaHat', 'winterHonor', 'christmasBall', 'christmasWreath'];
 				updateProgress('metaChristmas', metaChildrenIds.filter(id => completedSet.has(id)).length);
-				// updateProgress('Collection', shownSet.size)
 			})
 			eventUnsubs.push(unsubWinter)
 			const valentineEventRef = doc(db, 'users', uid, 'eventSessions', 'valentine')
@@ -644,7 +691,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const questsProgress = eventData.quests || {}
 				const shopItems = eventData.shopItems || {}
 				valentineRank1BoughtCount.value = ['teddy', 'cupidArrow'].reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
-				// updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
 				updateCollectionCount()
 				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
 				updateProgress('valentineWords', questsProgress['quest-1']?.score || 0)
@@ -661,7 +707,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		}, { immediate: true })
 	}
 	watch(lastUnlockedAward, (award) => {
-		// if (award) updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
 		if (award) updateCollectionCount()
 	})
 

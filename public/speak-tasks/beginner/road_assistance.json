@@ -1,0 +1,531 @@
+{
+  "start": {
+    "botText": "Hallo! Brauchst du Hilfe mit deinem Auto?",
+    "botTranslation": {
+      "ru-RU": "Привет! Тебе нужна помощь с машиной?",
+      "en-US": "Hello! Do you need help with your car?",
+      "ar-SA": "مرحباً! هل تحتاج إلى مساعدة في سيارتك؟",
+      "es-ES": "¡Hola! ¿Necesitas ayuda con tu coche?",
+      "fr-FR": "Salut ! As-tu besoin d'aide avec ta voiture ?",
+      "hi-IN": "नमस्ते! क्या आपको अपनी कार के साथ मदद की ज़रूरत है?",
+      "pl-PL": "Cześć! Potrzebujesz pomocy z samochodem?",
+      "ro-RO": "Salut! Ai nevoie de ajutor cu mașina ta?",
+      "tr-TR": "Merhaba! Arabanla ilgili yardıma ihtiyacın var mı?",
+      "uk-UA": "Привіт! Тобі потрібна допомога з машиною?",
+      "uz-UZ": "Salom! Mashinangiz bilan yordam kerakmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Auto",
+        "translation": {
+          "ru-RU": "автомобиль",
+          "en-US": "the car",
+          "ar-SA": "السيارة",
+          "es-ES": "el coche",
+          "fr-FR": "la voiture",
+          "hi-IN": "कार",
+          "pl-PL": "samochód",
+          "ro-RO": "mașina",
+          "tr-TR": "araba",
+          "uk-UA": "автомобіль",
+          "uz-UZ": "avtomobil"
+        }
+      },
+      {
+        "german": "die Hilfe",
+        "translation": {
+          "ru-RU": "помощь",
+          "en-US": "the help",
+          "ar-SA": "المساعدة",
+          "es-ES": "la ayuda",
+          "fr-FR": "l'aide",
+          "hi-IN": "मदद",
+          "pl-PL": "pomoc",
+          "ro-RO": "ajutorul",
+          "tr-TR": "yardım",
+          "uk-UA": "допомога",
+          "uz-UZ": "yordam"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hallo! Mein Motor ist leider kaputt.",
+        "translation": {
+          "ru-RU": "Привет! Мой мотор, к сожалению, сломан.",
+          "en-US": "Hello! Unfortunately my engine is broken.",
+          "ar-SA": "مرحباً! محرك سيارتي معطل للأسف.",
+          "es-ES": "¡Hola! Lamentablemente mi motor está roto.",
+          "fr-FR": "Salut ! Mon moteur est malheureusement cassé.",
+          "hi-IN": "नमस्ते! दुर्भाग्य से मेरा इंजन खराब हो गया है।",
+          "pl-PL": "Cześć! Mój silnik jest niestety zepsuty.",
+          "ro-RO": "Salut! Din păcate motorul meu este stricat.",
+          "tr-TR": "Merhaba! Motorum maalesef bozuk.",
+          "uk-UA": "Привіт! Мій мотор, на жаль, зламаний.",
+          "uz-UZ": "Salom! Afsuski, dvigatelim buzilgan."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hi! Ich habe ein Problem mit dem Reifen.",
+        "translation": {
+          "ru-RU": "Привет! У меня проблема с колесом.",
+          "en-US": "Hi! I have a problem with the tire.",
+          "ar-SA": "أهلاً! لدي مشكلة في الإطار.",
+          "es-ES": "¡Hola! Tengo un problema con el neumático.",
+          "fr-FR": "Salut ! J'ai un problème avec le pneu.",
+          "hi-IN": "हाय! मुझे टायर के साथ समस्या है।",
+          "pl-PL": "Hej! Mam problem z oponą.",
+          "ro-RO": "Salut! Am o problemă cu anvelopa.",
+          "tr-TR": "Selam! Lastikle ilgili bir sorunum var.",
+          "uk-UA": "Привіт! У мене проблема з колесом.",
+          "uz-UZ": "Salom! Shina bilan muammom bor."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Das ist schlecht. Kennst du eine Autowerkstatt in der Nähe?",
+    "botTranslation": {
+      "ru-RU": "Это плохо. Ты знаешь автомастерскую поблизости?",
+      "en-US": "That is bad. Do you know a car repair shop nearby?",
+      "ar-SA": "هذا سيء. هل تعرف ورشة سيارات قريبة؟",
+      "es-ES": "Eso es malo. ¿Conoces algún taller de coches cerca?",
+      "fr-FR": "C'est mauvais. Connais-tu un garage automobile à proximité ?",
+      "hi-IN": "यह बुरा है। क्या आप पास में कोई कार मरम्मत की दुकान जानते हैं?",
+      "pl-PL": "To źle. Znasz w pobliżu jakiś warsztat samochodowy?",
+      "ro-RO": "Asta e rău. Cunoști un service auto în apropiere?",
+      "tr-TR": "Bu kötü. Yakınlarda bir tamirhane biliyor musun?",
+      "uk-UA": "Це погано. Ти знаєш автомайстерню поблизу?",
+      "uz-UZ": "Bu yomon. Yaqin atrofda avtoservisni bilasizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "kaputt",
+        "translation": {
+          "ru-RU": "сломанный",
+          "en-US": "broken",
+          "ar-SA": "معطل",
+          "es-ES": "roto",
+          "fr-FR": "cassé",
+          "hi-IN": "खराब",
+          "pl-PL": "zepsuty",
+          "ro-RO": "stricat",
+          "tr-TR": "bozuk",
+          "uk-UA": "зламаний",
+          "uz-UZ": "buzilgan"
+        }
+      },
+      {
+        "german": "der Reifen",
+        "translation": {
+          "ru-RU": "шина / колесо",
+          "en-US": "the tire",
+          "ar-SA": "الإطار",
+          "es-ES": "el neumático",
+          "fr-FR": "le pneu",
+          "hi-IN": "टायर",
+          "pl-PL": "opona",
+          "ro-RO": "anvelopa",
+          "tr-TR": "lastik",
+          "uk-UA": "шина / колесо",
+          "uz-UZ": "shina"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, wo finde ich die Werkstatt?",
+        "translation": {
+          "ru-RU": "Нет, где мне найти мастерскую?",
+          "en-US": "No, where do I find the repair shop?",
+          "ar-SA": "لا، أين يمكنني العثور على الورشة؟",
+          "es-ES": "No, ¿dónde encuentro el taller?",
+          "fr-FR": "Non, où puis-je trouver le garage ?",
+          "hi-IN": "नहीं, मुझे मरम्मत की दुकान कहाँ मिलेगी?",
+          "pl-PL": "Nie, gdzie znajdę warsztat?",
+          "ro-RO": "Nu, unde găsesc atelierul?",
+          "tr-TR": "Hayır, tamirhaneyi nerede bulabilirim?",
+          "uk-UA": "Ні, де мені знайти майстерню?",
+          "uz-UZ": "Yo'q, ustaxonani qayerdan topaman?"
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Nein, gibt es hier eine Werkstatt?",
+        "translation": {
+          "ru-RU": "Нет, здесь есть мастерская?",
+          "en-US": "No, is there a repair shop here?",
+          "ar-SA": "لا، هل توجد ورشة هنا؟",
+          "es-ES": "No, ¿hay un taller aquí?",
+          "fr-FR": "Non, y a-t-il un garage ici ?",
+          "hi-IN": "नहीं, क्या यहाँ कोई मरम्मत की दुकान है?",
+          "pl-PL": "Nie, czy jest tu jakiś warsztat?",
+          "ro-RO": "Nu, există un atelier aici?",
+          "tr-TR": "Hayır, burada bir tamirhane var mı?",
+          "uk-UA": "Ні, тут є майстерня?",
+          "uz-UZ": "Yo'q, bu yerda ustaxona bormi?"
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Die nächste Werkstatt ist hier in der Hauptstraße.",
+    "botTranslation": {
+      "ru-RU": "Ближайшая мастерская здесь на Главной улице.",
+      "en-US": "The nearest repair shop is here on the main street.",
+      "ar-SA": "أقرب ورشة موجودة هنا في الشارع الرئيسي.",
+      "es-ES": "El taller más cercano está aquí en la calle principal.",
+      "fr-FR": "Le garage le plus proche est ici, dans la rue principale.",
+      "hi-IN": "निकटतम मरम्मत की दुकान यहाँ मुख्य सड़क पर है।",
+      "pl-PL": "Najbliższy warsztat jest tutaj na głównej ulicy.",
+      "ro-RO": "Cel mai apropiat atelier este aici, pe strada principală.",
+      "tr-TR": "En yakın tamirhane burada ana caddede.",
+      "uk-UA": "Найближча майстерня тут на Головній вулиці.",
+      "uz-UZ": "Eng yaqin ustaxona shu yerda, asosiy ko'chada."
+    },
+    "vocabulary": [
+      {
+        "german": "die Werkstatt",
+        "translation": {
+          "ru-RU": "мастерская (СТО)",
+          "en-US": "the repair shop",
+          "ar-SA": "الورشة",
+          "es-ES": "el taller",
+          "fr-FR": "le garage",
+          "hi-IN": "मरम्मत की दुकान",
+          "pl-PL": "warsztat",
+          "ro-RO": "atelierul / service-ul",
+          "tr-TR": "tamirhane",
+          "uk-UA": "майстерня",
+          "uz-UZ": "ustaxona"
+        }
+      },
+      {
+        "german": "die Straße",
+        "translation": {
+          "ru-RU": "улица / дорога",
+          "en-US": "the street / road",
+          "ar-SA": "الشارع",
+          "es-ES": "la calle",
+          "fr-FR": "la rue",
+          "hi-IN": "सड़क",
+          "pl-PL": "ulica",
+          "ro-RO": "strada",
+          "tr-TR": "cadde / sokak",
+          "uk-UA": "вулиця / дорога",
+          "uz-UZ": "ko'cha"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich kann da nicht hin, das Auto startet nicht.",
+        "translation": {
+          "ru-RU": "Я не могу туда попасть, машина не заводится.",
+          "en-US": "I can't go there, the car won't start.",
+          "ar-SA": "لا أستطيع الذهاب إلى هناك، السيارة لا تعمل.",
+          "es-ES": "No puedo ir allí, el coche no arranca.",
+          "fr-FR": "Je ne peux pas y aller, la voiture ne démarre pas.",
+          "hi-IN": "मैं वहाँ नहीं जा सकती, कार शुरू नहीं हो रही है।",
+          "pl-PL": "Nie mogę tam pojechać, samochód nie odpala.",
+          "ro-RO": "Nu pot ajunge acolo, mașina nu pornește.",
+          "tr-TR": "Oraya gidemem, araba çalışmıyor.",
+          "uk-UA": "Я не можу туди поїхати, машина не заводиться.",
+          "uz-UZ": "U yerga bora olmayman, mashina o't olmayapti."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Mein Wagen fährt leider gar nicht mehr.",
+        "translation": {
+          "ru-RU": "Моя машина, к сожалению, вообще больше не едет.",
+          "en-US": "My car unfortunately doesn't drive at all anymore.",
+          "ar-SA": "سيارتي للأسف لا تتحرك على الإطلاق بعد الآن.",
+          "es-ES": "Lamentablemente mi coche ya no funciona en absoluto.",
+          "fr-FR": "Malheureusement, ma voiture ne roule plus du tout.",
+          "hi-IN": "मेरी कार दुर्भाग्य से अब बिल्कुल नहीं चल रही है।",
+          "pl-PL": "Mój samochód niestety w ogóle już nie jedzie.",
+          "ro-RO": "Din păcate, mașina mea nu mai merge deloc.",
+          "tr-TR": "Arabam maalesef artık hiç gitmiyor.",
+          "uk-UA": "Моя машина, на жаль, взагалі більше не їде.",
+          "uz-UZ": "Mashinam afsuski umuman yurmayapti."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Oh nein! Dann müssen wir den Abschleppdienst anrufen.",
+    "botTranslation": {
+      "ru-RU": "О нет! Тогда нам нужно позвонить в службу эвакуации.",
+      "en-US": "Oh no! Then we have to call the towing service.",
+      "ar-SA": "أوه لا! إذن علينا الاتصال بخدمة سحب السيارات.",
+      "es-ES": "¡Oh no! Entonces tenemos que llamar al servicio de grúa.",
+      "fr-FR": "Oh non ! Alors nous devons appeler la dépanneuse.",
+      "hi-IN": "ओह नहीं! तब हमें टोइंग सेवा को कॉल करना होगा।",
+      "pl-PL": "O nie! W takim razie musimy zadzwonić po lawetę.",
+      "ro-RO": "Oh nu! Atunci trebuie să sunăm la serviciul de tractări.",
+      "tr-TR": "Oh hayır! O zaman çekiciyi aramalıyız.",
+      "uk-UA": "О ні! Тоді нам потрібно зателефонувати в службу евакуації.",
+      "uz-UZ": "Oh yo'q! Unda evakuator xizmatiga qo'ng'iroq qilishimiz kerak."
+    },
+    "vocabulary": [
+      {
+        "german": "der Abschleppdienst",
+        "translation": {
+          "ru-RU": "эвакуатор",
+          "en-US": "the towing service",
+          "ar-SA": "خدمة السحب",
+          "es-ES": "el servicio de grúa",
+          "fr-FR": "le service de dépannage",
+          "hi-IN": "टोइंग सेवा",
+          "pl-PL": "pomoc drogowa / laweta",
+          "ro-RO": "serviciul de tractări",
+          "tr-TR": "çekici",
+          "uk-UA": "евакуатор",
+          "uz-UZ": "evakuator xizmati"
+        }
+      },
+      {
+        "german": "anrufen",
+        "translation": {
+          "ru-RU": "звонить",
+          "en-US": "to call",
+          "ar-SA": "يتصل",
+          "es-ES": "llamar",
+          "fr-FR": "appeler",
+          "hi-IN": "कॉल करना",
+          "pl-PL": "dzwonić",
+          "ro-RO": "a suna",
+          "tr-TR": "aramak",
+          "uk-UA": "дзвонити",
+          "uz-UZ": "qo'ng'iroq qilmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Kannst du mir bitte bei dem Anruf helfen?",
+        "translation": {
+          "ru-RU": "Можешь, пожалуйста, помочь мне со звонком?",
+          "en-US": "Can you please help me with the call?",
+          "ar-SA": "هل يمكنك مساعدتي في الاتصال من فضلك؟",
+          "es-ES": "¿Puedes ayudarme con la llamada, por favor?",
+          "fr-FR": "Peux-tu m'aider avec l'appel s'il te plaît ?",
+          "hi-IN": "क्या आप कृपया कॉल करने में मेरी मदद कर सकते हैं?",
+          "pl-PL": "Czy możesz mi pomóc z telefonem?",
+          "ro-RO": "Mă poți ajuta cu apelul, te rog?",
+          "tr-TR": "Aramada bana yardım edebilir misin lütfen?",
+          "uk-UA": "Можеш, будь ласка, допомогти мені з дзвінком?",
+          "uz-UZ": "Iltimos, qo'ng'iroq qilishda yordam bera olasizmi?"
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Gute Idee, hast du die Telefonnummer?",
+        "translation": {
+          "ru-RU": "Хорошая идея, у тебя есть номер телефона?",
+          "en-US": "Good idea, do you have the phone number?",
+          "ar-SA": "فكرة جيدة، هل لديك رقم الهاتف؟",
+          "es-ES": "Buena idea, ¿tienes el número de teléfono?",
+          "fr-FR": "Bonne idée, as-tu le numéro de téléphone ?",
+          "hi-IN": "अच्छा विचार है, क्या आपके पास फोन नंबर है?",
+          "pl-PL": "Dobry pomysł, masz numer telefonu?",
+          "ro-RO": "Bună idee, ai numărul de telefon?",
+          "tr-TR": "İyi fikir, telefon numarası sende var mı?",
+          "uk-UA": "Гарна ідея, у тебе є номер телефону?",
+          "uz-UZ": "Yaxshi fikr, telefon raqami bormi?"
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Ja, natürlich. Das mache ich sofort.",
+    "botTranslation": {
+      "ru-RU": "Да, конечно. Я сделаю это прямо сейчас.",
+      "en-US": "Yes, of course. I'll do that right away.",
+      "ar-SA": "نعم، بالطبع. سأفعل ذلك فوراً.",
+      "es-ES": "Sí, por supuesto. Lo haré de inmediato.",
+      "fr-FR": "Oui, bien sûr. Je le fais tout de suite.",
+      "hi-IN": "हाँ, बिल्कुल। मैं यह अभी करता हूँ।",
+      "pl-PL": "Tak, oczywiście. Zrobię to natychmiast.",
+      "ro-RO": "Da, desigur. Fac asta imediat.",
+      "tr-TR": "Evet, tabii ki. Bunu hemen yapacağım.",
+      "uk-UA": "Так, звісно. Я зроблю це прямо зараз.",
+      "uz-UZ": "Ha, albatta. Buni hozir qilaman."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Super, danke! Das ist sehr nett.",
+        "translation": {
+          "ru-RU": "Супер, спасибо! Это очень мило.",
+          "en-US": "Super, thank you! That is very nice.",
+          "ar-SA": "رائع، شكراً! هذا لطيف جداً.",
+          "es-ES": "Súper, ¡gracias! Es muy amable.",
+          "fr-FR": "Super, merci ! C'est très gentil.",
+          "hi-IN": "सुपर, धन्यवाद! यह बहुत अच्छा है।",
+          "pl-PL": "Super, dzięki! To bardzo miłe.",
+          "ro-RO": "Super, mulțumesc! Este foarte drăguț.",
+          "tr-TR": "Harika, teşekkürler! Bu çok nazikçe.",
+          "uk-UA": "Супер, дякую! Це дуже мило.",
+          "uz-UZ": "Zo'r, rahmat! Bu juda yoqimli."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Perfekt, du hilfst mir wirklich sehr.",
+        "translation": {
+          "ru-RU": "Идеально, ты мне действительно очень помогаешь.",
+          "en-US": "Perfect, you're really helping me a lot.",
+          "ar-SA": "ممتاز، أنت حقاً تساعدني كثيراً.",
+          "es-ES": "Perfecto, me estás ayudando mucho de verdad.",
+          "fr-FR": "Parfait, tu m'aides vraiment beaucoup.",
+          "hi-IN": "परफेक्ट, आप वास्तव में मेरी बहुत मदद कर रहे हैं।",
+          "pl-PL": "Idealnie, naprawdę bardzo mi pomagasz.",
+          "ro-RO": "Perfect, chiar mă ajuți mult.",
+          "tr-TR": "Mükemmel, bana gerçekten çok yardım ediyorsun.",
+          "uk-UA": "Ідеально, ти мені дійсно дуже допомагаєш.",
+          "uz-UZ": "Ajoyib, menga rostdan ham juda yordam beryapsiz."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Alles klar. Der Abschleppdienst kommt in 20 Minuten.",
+    "botTranslation": {
+      "ru-RU": "Всё ясно. Эвакуатор приедет через 20 минут.",
+      "en-US": "All right. The towing service will be here in 20 minutes.",
+      "ar-SA": "حسناً. خدمة السحب ستصل خلال 20 دقيقة.",
+      "es-ES": "De acuerdo. El servicio de grúa llegará en 20 minutos.",
+      "fr-FR": "C'est d'accord. La dépanneuse arrive dans 20 minutes.",
+      "hi-IN": "ठीक है। टोइंग सेवा 20 मिनट में आ जाएगी।",
+      "pl-PL": "Wszystko jasne. Laweta przyjedzie za 20 minut.",
+      "ro-RO": "În regulă. Serviciul de tractări ajunge în 20 de minute.",
+      "tr-TR": "Tamam. Çekici 20 dakika içinde gelecek.",
+      "uk-UA": "Усе ясно. Евакуатор приїде через 20 хвилин.",
+      "uz-UZ": "Tushunarli. Evakuator 20 daqiqada keladi."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Vielen Dank für deine Hilfe!",
+        "translation": {
+          "ru-RU": "Большое спасибо за твою помощь!",
+          "en-US": "Thank you very much for your help!",
+          "ar-SA": "شكراً جزيلاً على مساعدتك!",
+          "es-ES": "¡Muchas gracias por tu ayuda!",
+          "fr-FR": "Merci beaucoup pour ton aide !",
+          "hi-IN": "आपकी मदद के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję za pomoc!",
+          "ro-RO": "Mulțumesc mult pentru ajutorul tău!",
+          "tr-TR": "Yardımın için çok teşekkür ederim!",
+          "uk-UA": "Дуже дякую за твою допомогу!",
+          "uz-UZ": "Yordamingiz uchun katta rahmat!"
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Danke dir, das ist eine große Hilfe!",
+        "translation": {
+          "ru-RU": "Спасибо тебе, это большая помощь!",
+          "en-US": "Thank you, that is a big help!",
+          "ar-SA": "شكراً لك، هذه مساعدة كبيرة!",
+          "es-ES": "¡Gracias, esto es una gran ayuda!",
+          "fr-FR": "Merci, c'est une grande aide !",
+          "hi-IN": "धन्यवाद, यह एक बड़ी मदद है!",
+          "pl-PL": "Dziękuję, to wielka pomoc!",
+          "ro-RO": "Îți mulțumesc, este un mare ajutor!",
+          "tr-TR": "Teşekkür ederim, bu büyük bir yardım!",
+          "uk-UA": "Дякую тобі, це велика допомога!",
+          "uz-UZ": "Rahmat sizga, bu katta yordam!"
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Gerne! Ich muss jetzt weiter. Viel Erfolg mit dem Auto!",
+    "botTranslation": {
+      "ru-RU": "Не за что! Мне пора идти. Удачи с машиной!",
+      "en-US": "You're welcome! I have to go now. Good luck with the car!",
+      "ar-SA": "على الرحب والسعة! يجب أن أذهب الآن. حظاً موفقاً مع السيارة!",
+      "es-ES": "¡De nada! Me tengo que ir. ¡Mucha suerte con el coche!",
+      "fr-FR": "Avec plaisir ! Je dois y aller maintenant. Bonne chance avec la voiture !",
+      "hi-IN": "आपका स्वागत है! मुझे अब जाना होगा। कार के साथ शुभकामनाएँ!",
+      "pl-PL": "Nie ma za co! Muszę już iść. Powodzenia z samochodem!",
+      "ro-RO": "Cu plăcere! Trebuie să plec acum. Succes cu mașina!",
+      "tr-TR": "Rica ederim! Şimdi gitmeliyim. Arabayla kolay gelsin!",
+      "uk-UA": "Нема за що! Мені вже час йти. Успіхів з машиною!",
+      "uz-UZ": "Arzimaydi! Men endi ketishim kerak. Mashinaga omad!"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Danke, mach's gut! Tschüss!",
+        "translation": {
+          "ru-RU": "Спасибо, счастливо! Пока!",
+          "en-US": "Thanks, take care! Bye!",
+          "ar-SA": "شكراً، اعتن بنفسك! وداعاً!",
+          "es-ES": "¡Gracias, cuídate! ¡Adiós!",
+          "fr-FR": "Merci, prends soin de toi ! Salut !",
+          "hi-IN": "धन्यवाद, अपना ख्याल रखना! बाय!",
+          "pl-PL": "Dzięki, trzymaj się! Cześć!",
+          "ro-RO": "Mulțumesc, numai bine! Pa!",
+          "tr-TR": "Teşekkürler, kendine iyi bak! Hoşça kal!",
+          "uk-UA": "Дякую, щасти! Бувай!",
+          "uz-UZ": "Rahmat, yaxshi qol! Xayr!"
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Bis bald! Ciao!",
+        "translation": {
+          "ru-RU": "До скорого! Чао!",
+          "en-US": "See you soon! Ciao!",
+          "ar-SA": "أراك قريباً! تشاو!",
+          "es-ES": "¡Hasta pronto! ¡Ciao!",
+          "fr-FR": "À bientôt ! Ciao !",
+          "hi-IN": "जल्द ही मिलते हैं! चाओ!",
+          "pl-PL": "Do zobaczenia! Ciao!",
+          "ro-RO": "Pe curând! Ciao!",
+          "tr-TR": "Yakında görüşürüz! Çav!",
+          "uk-UA": "До скорої зустрічі! Чао!",
+          "uz-UZ": "Tez orada ko'rishguncha! Chao!"
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор окончен.",
+      "en-US": "The conversation is over.",
+      "ar-SA": "المحادثة انتهت.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत खत्म हो गई है।",
+      "pl-PL": "Rozmowa zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмова закінчена.",
+      "uz-UZ": "Suhbat tugadi."
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

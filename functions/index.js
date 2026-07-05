@@ -2,9 +2,14 @@ const { onSchedule } = require("firebase-functions/v2/scheduler");
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
 const { defineSecret } = require("firebase-functions/params");
 const admin = require("firebase-admin");
-
+const { onRequest } = require("firebase-functions/v2/https");
+const axios = require('axios');
+const FormData = require('form-data');
 if (admin.apps.length === 0) admin.initializeApp();
-
+const fs = require('fs');
+const path = require('path');
+const os = require('os');
+const Groq = require("groq-sdk");
 const CYCLE_MS = 24 * 60 * 60 * 1000;
 const IMMUNITY_RANK_HATS = 500;
 const GROQ_API_KEY = defineSecret("GROQ_API_KEY");
@@ -17,18 +22,14 @@ exports.takeFromArticlePenalty = onSchedule({
 }, async (event) => {
 	const db = admin.firestore();
 	const now = Date.now();
-
 	const snapshot = await db.collectionGroup('daily')
 		.where('expiresAtMs', '<=', now)
 		.where('penaltyProcessed', '==', false)
 		.get();
-
 	if (snapshot.empty) return null;
-
 	let batch = db.batch();
 	let count = 0;
 	const promises = [];
-
 	for (const doc of snapshot.docs) {
 		if (doc.id !== 'currentDailyQuests') continue;
 
@@ -62,7 +63,6 @@ exports.takeFromArticlePenalty = onSchedule({
 			count = 0;
 		}
 	}
-
 	if (count > 0) promises.push(batch.commit());
 	await Promise.all(promises);
 	return null;
@@ -70,53 +70,55 @@ exports.takeFromArticlePenalty = onSchedule({
 
 exports.whisperTranscribe = onCall({
 	secrets: [GROQ_API_KEY],
-	memory: "256Mi"
+	memory: "512Mi"
 }, async (request) => {
-	const { audioContent, lang } = request.data;
-	if (!audioContent) throw new HttpsError("invalid-argument", "Нет аудио");
-
+	const tempFilePath = path.join(os.tmpdir(), `audio_${Date.now()}.mp3`);
 	try {
+		const dataIn = request.data || {};
+		const audioContent = dataIn.audioContent;
+		const lang = dataIn.lang;
+
+		if (!audioContent) return { error: "Нет аудио" };
+
 		const base64Data = audioContent.includes(",") ? audioContent.split(",")[1] : audioContent;
 		const buffer = Buffer.from(base64Data, "base64");
 
-		const formData = new FormData();
-		const blob = new Blob([buffer], { type: "audio/m4a" });
-		formData.append("file", blob, "recording.m4a");
-		formData.append("model", "whisper-large-v3-turbo");
-		if (lang) formData.append("language", lang.substring(0, 2));
+		// Пишем как mp3
+		fs.writeFileSync(tempFilePath, buffer);
 
-		const response = await fetch("https://api.groq.com/openai/v1/audio/transcriptions", {
-			method: "POST",
-			headers: { "Authorization": `Bearer ${GROQ_API_KEY.value()}` },
-			body: formData
+		const groq = new Groq({ apiKey: GROQ_API_KEY.value() });
+
+		// Отправляем как mp3
+		const transcription = await groq.audio.transcriptions.create({
+			file: fs.createReadStream(tempFilePath),
+			model: "whisper-large-v3-turbo",
+			language: lang ? lang.substring(0, 2) : undefined,
+			response_format: "json"
 		});
 
-		const data = await response.json();
-		if (!response.ok) throw new Error(JSON.stringify(data));
-		return { text: data.text || "" };
+		if (fs.existsSync(tempFilePath)) fs.unlinkSync(tempFilePath);
+
+		return { text: transcription.text || "" };
+
 	} catch (error) {
-		console.error("Whisper Error:", error);
-		throw new HttpsError("internal", error.message);
+		if (fs.existsSync(tempFilePath)) fs.unlinkSync(tempFilePath);
+		const groqError = error.error?.message || error.message || String(error);
+		return { error: `GROQ SDK: ${groqError}` };
 	}
 });
 
 exports.visionAnalyze = onCall({
 	secrets: [GROQ_API_KEY],
-	memory: "512Mi",
+	memory: "256Mi",
 	timeoutSeconds: 60
 }, async (request) => {
-	const { userLevel, userMessage, userLocale, imageUrl, referenceDescription } = request.data;
-
 	try {
-		let finalImageUrl = imageUrl;
-		if (imageUrl.startsWith('http') && !imageUrl.includes('localhost')) {
-			const imgResponse = await fetch(imageUrl);
-			if (imgResponse.ok) {
-				const buffer = await imgResponse.arrayBuffer();
-				const base64 = Buffer.from(buffer).toString('base64');
-				finalImageUrl = `data:${imgResponse.headers.get('content-type') || 'image/png'};base64,${base64}`;
-			}
-		}
+		const dataIn = request.data || {};
+		const userLevel = dataIn.userLevel;
+		const userMessage = dataIn.userMessage;
+		const userLocale = dataIn.userLocale;
+		const imageUrl = dataIn.imageUrl;
+		const referenceDescription = dataIn.referenceDescription;
 
 		const modelId = 'meta-llama/llama-4-scout-17b-16e-instruct';
 		const feedbackLang = String(userLocale || 'ru').split('-')[0].trim();
@@ -130,47 +132,25 @@ INPUTS:
 3. **User Answer:** "${userMessage}"
 4. **Reference Template:** "${referenceDescription || 'None'}" 
 
-GRAMMAR BOUNDARIES BY LEVEL:
-- **A1 Grammar:** Präsens, Perfekt (basics), modal verbs. Basic Nominativ/Akkusativ/Dativ. Note: When the question is "Where?" (Wo?), use Dativ and put the noun's article in Dativ; apply the same rule for Akkusativ. NO subordinate clauses.
+GRAMMAR BOUNDARIES BY LEVEL & RULES:
+- **A1 Grammar:** Präsens, Perfekt. Nominativ/Akkusativ/Dativ. When the question is "Where?" (Wo?), use Dativ and put the noun's article in Dativ. Apply the same rule for Akkusativ. When explaining grammar endings, always use the phrase "берет у артикля" to clarify how the word gets its ending. NO subordinate clauses.
 - **A2 Grammar:** Präteritum, Wechselpräpositionen, Nebensätze, Adjektivdeklination.
 - **B1 Grammar:** Plusquamperfekt, Passiv, complexe Nebensätze, Relativsätze.
 
-CRITICAL EVALUATION RULES - ASYMMETRIC SCORING & NO NITPICKING:
+CRITICAL EVALUATION RULES:
+0. FATAL ERROR: If the user writes in any language other than German, SCORE IS 1/10. Feedback MUST say in ${feedbackLang}: "Пожалуйста, опишите картинку на немецком языке."
+1. OVER-PERFORMING: If lower-level user writes complex answer, SCORE 10/10. NO nitpicking.
+2. DYNAMIC SUGGESTED ANSWER: 
+   - Score 9-10: Set 'suggestedAnswer' to the User's exact answer. 
+   - Score <=8: Set 'suggestedAnswer' to the Reference Template.
 
-0. **FATAL ERROR - WRONG LANGUAGE (CRITICAL RULE):**
-   - The "User Answer" MUST be written in German.
-   - If the user writes the description in Russian, English, Spanish, or ANY language other than German, YOU MUST GIVE A SCORE OF 1/10.
-   - In this case, the feedback MUST explicitly say in ${feedbackLang}: "Пожалуйста, опишите картинку на немецком языке." (or the equivalent in the selected feedback language). Do not evaluate the grammar or visual details if the language is wrong.
-
-1. **OVER-PERFORMING (REWARD & NO NITPICKING):**
-   - If the user is at a lower level (e.g., A1) but writes a complex, accurate answer (e.g., A2 or B1), YOU MUST GIVE THEM 10/10.
-   - **CRITICAL FEEDBACK RULE:** Explicitly state: "Отличная работа! Вы использовали грамматику и словарный запас, которые значительно превышают уровень ${userLevel}."
-   - **NO NITPICKING BAN:** If they wrote an advanced/complex sentence, DO NOT deduct points for "missing visual details" (like ski poles, trees, or lifts). NEVER tell them to "add more details for level ${userLevel}" because they already exceeded it!
-
-2. **UNDER-PERFORMING (PENALIZE):**
-   - If the user is at a higher level (e.g., B1) but writes a very basic, short answer (like A1), you MUST deduct points (Score 5-7). Tell them to add more complex structures.
-
-3. **THE GOLDEN STANDARD (Matching the Level):**
-   - If the answer matches the length and detail of the "Reference Template", give 10/10. 
-   - NEVER ask to describe background objects (poles, trees) if they are not explicitly mentioned in the Reference Template for that level.
-
-4. **DYNAMIC SUGGESTED ANSWER RULE:**
-   - **IF SCORE IS 9 OR 10 (Perfect/Excellent):** DO NOT use the basic Reference Template. Set the 'suggestedAnswer' to the User's exact answer (you may fix minor typos). Validate their success by showing their own text!
-   - **IF SCORE IS 8 OR BELOW (Mistakes or too short):** Set the 'suggestedAnswer' to the official Reference Template for the ${userLevel} level.
-
-YOUR TASK: GENERATE JSON RESPONSE.
-1. **Score (1-10):** Rate strictly based on the Asymmetric Scoring rules above. (Score 1 if wrong language).
-2. **Feedback (Language: ${feedbackLang}):** Write EXCLUSIVELY in ${feedbackLang}. 
-3. **Suggested Answer:** Follow the Dynamic Suggested Answer Rule.
-4. **Key Corrections:** List specific fixes in ${feedbackLang} or say "No corrections needed".
-
-OUTPUT JSON FORMAT:
+YOUR TASK: OUTPUT A RAW JSON OBJECT EXCLUSIVELY. Do NOT wrap in markdown.
 {
   "score": 0,
-  "feedback": "WRITE EXCLUSIVELY IN ${feedbackLang}...",
+  "feedback": "...",
   "suggestedAnswer": "...",
   "keyCorrections": []
-}`
+}`;
 
 		const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
 			method: 'POST',
@@ -186,22 +166,78 @@ OUTPUT JSON FORMAT:
 						role: 'user',
 						content: [
 							{ type: "text", text: `Level ${userLevel}. Answer: ${userMessage}. Reference: ${referenceDescription}` },
-							{ type: "image_url", image_url: { url: finalImageUrl } }
+							{ type: "image_url", image_url: { url: imageUrl } }
 						]
 					}
 				],
-				response_format: { type: "json_object" },
 				temperature: 0.2
 			})
 		});
 
-		const resJson = await response.json();
-		if (!response.ok) throw new Error(JSON.stringify(resJson));
+		const resText = await response.text();
+		if (!response.ok) return { error: `GROQ API ERROR ${response.status}: ${resText}` };
 
-		const content = resJson.choices[0].message.content;
+		const resJson = JSON.parse(resText);
+		if (!resJson.choices || !resJson.choices[0]) return { error: `GROQ EMPTY CHOICES: ${resText}` };
+
+		let content = resJson.choices[0].message.content;
+		content = content.replace(/```json/g, '').replace(/```/g, '').trim();
+
 		return { data: JSON.parse(content) };
 	} catch (err) {
-		console.error("Vision Error:", err);
-		throw new HttpsError("internal", err.message);
+		return { error: String(err.message || err) };
 	}
+});
+
+
+
+exports.handleRevenueCatWebhook = onRequest(async (req, res) => {
+	const eventData = req.body.event;
+	if (!eventData || !eventData.app_user_id) {
+		return res.status(200).send("No data");
+
+	}
+	const userId = eventData.app_user_id;
+	const eventType = eventData.type;
+	const db = admin.firestore();
+	try {
+		switch (eventType) {
+			case "INITIAL_PURCHASE":
+			case "RENEWAL":
+				await db.collection("users").doc(userId).update({
+					isPremium: true,
+					subscriptionCancelled: false
+				});
+				break;
+			case "EXPIRATION":
+				await db.collection("users").doc(userId).update({
+					isPremium: false,
+					subscriptionCancelled: true
+				});
+				break;
+			case "CANCELLATION":
+				await db.collection("users").doc(userId).update({
+					subscriptionCancelled: true
+				});
+				break;
+
+			case "TRANSFER":
+				if (eventData.transferred_from) {
+					for (const oldUid of eventData.transferred_from) {
+						await db.collection("users").doc(oldUid).update({ isPremium: false });
+					}
+				}
+				if (eventData.transferred_to) {
+					for (const newUid of eventData.transferred_to) {
+						await db.collection("users").doc(newUid).update({ isPremium: true });
+					}
+				}
+				break;
+		}
+		res.status(200).send("OK");
+	} catch (error) {
+		res.status(500).send("Error");
+
+	}
+
 });

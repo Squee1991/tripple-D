@@ -1,0 +1,629 @@
+{
+  "start": {
+    "botText": "Guten Tag, Krankenkasse. Wie kann ich Ihnen helfen?",
+    "botTranslation": {
+      "ru-RU": "Добрый день, больничная касса. Чем я могу Вам помочь?",
+      "en-US": "Good day, health insurance. How can I help you?",
+      "ar-SA": "طاب يومك، التأمين الصحي. كيف يمكنني مساعدتك؟",
+      "es-ES": "Buen día, seguro médico. ¿Cómo puedo ayudarle?",
+      "fr-FR": "Bonjour, assurance maladie. Comment puis-je vous aider ?",
+      "hi-IN": "शुभ दिन, स्वास्थ्य बीमा। मैं आपकी कैसे मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry, kasa chorych. W czym mogę pomóc?",
+      "ro-RO": "Bună ziua, casa de asigurări de sănătate. Cu ce vă pot ajuta?",
+      "tr-TR": "İyi günler, sağlık sigortası. Size nasıl yardımcı olabilirim?",
+      "uk-UA": "Добрий день, лікарняна каса. Чим я можу Вам допомогти?",
+      "uz-UZ": "Xayrli kun, tibbiy sug'urta. Sizga qanday yordam bera olaman?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Krankenkasse",
+        "translation": {
+          "ru-RU": "больничная касса",
+          "en-US": "health insurance",
+          "ar-SA": "تأمين صحي",
+          "es-ES": "seguro médico",
+          "fr-FR": "assurance maladie",
+          "hi-IN": "स्वास्थ्य बीमा",
+          "pl-PL": "kasa chorych",
+          "ro-RO": "casa de asigurări",
+          "tr-TR": "sağlık sigortası",
+          "uk-UA": "лікарняна каса",
+          "uz-UZ": "tibbiy sug'urta"
+        }
+      },
+      {
+        "german": "helfen",
+        "translation": {
+          "ru-RU": "помогать",
+          "en-US": "to help",
+          "ar-SA": "يساعد",
+          "es-ES": "ayudar",
+          "fr-FR": "aider",
+          "hi-IN": "मदद करना",
+          "pl-PL": "pomagać",
+          "ro-RO": "a ajuta",
+          "tr-TR": "yardım etmek",
+          "uk-UA": "допомагати",
+          "uz-UZ": "yordam bermoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag. Ich brauche eine neue Gesundheitskarte.",
+        "translation": {
+          "ru-RU": "Добрый день. Мне нужна новая медицинская карта.",
+          "en-US": "Good day. I need a new health card.",
+          "ar-SA": "طاب يومك. أحتاج إلى بطاقة صحية جديدة.",
+          "es-ES": "Buen día. Necesito una nueva tarjeta sanitaria.",
+          "fr-FR": "Bonjour. J'ai besoin d'une nouvelle carte d'assurance maladie.",
+          "hi-IN": "शुभ दिन। मुझे एक नए स्वास्थ्य कार्ड की आवश्यकता है।",
+          "pl-PL": "Dzień dobry. Potrzebuję nowej karty zdrowia.",
+          "ro-RO": "Bună ziua. Am nevoie de o nouă card de sănătate.",
+          "tr-TR": "İyi günler. Yeni bir sağlık kartına ihtiyacım var.",
+          "uk-UA": "Добрий день. Мені потрібна нова медична картка.",
+          "uz-UZ": "Xayrli kun. Menga yangi tibbiy karta kerak."
+        },
+        "nextStep": "number_ask"
+      },
+      {
+        "text": "Hallo, meine Gesundheitskarte ist verloren. Was muss ich tun?",
+        "translation": {
+          "ru-RU": "Здравствуйте, моя медицинская карта утеряна. Что я должна сделать?",
+          "en-US": "Hello, my health card is lost. What must I do?",
+          "ar-SA": "مرحباً، لقد فُقدت بطاقتي الصحية. ماذا يجب أن أفعل؟",
+          "es-ES": "Hola, mi tarjeta sanitaria se ha perdido. ¿Qué debo hacer?",
+          "fr-FR": "Bonjour, ma carte d'assurance maladie est perdue. Que dois-je faire ?",
+          "hi-IN": "नमस्ते, मेरा स्वास्थ्य कार्ड खो गया है। मुझे क्या करना चाहिए?",
+          "pl-PL": "Dzień dobry, zgubiłam moją kartę zdrowia. Co muszę zrobić?",
+          "ro-RO": "Bună, cardul meu de sănătate este pierdut. Ce trebuie să fac?",
+          "tr-TR": "Merhaba, sağlık kartım kayboldu. Ne yapmalıyım?",
+          "uk-UA": "Вітаю, моя медична картка втрачена. Що я повинна зробити?",
+          "uz-UZ": "Salom, mening tibbiy kartam yo'qolgan. Nima qilishim kerak?"
+        },
+        "nextStep": "number_ask"
+      }
+    ],
+    "defaultNext": "number_ask"
+  },
+  "number_ask": {
+    "botText": "Ich verstehe. Können Sie mir bitte Ihre Versichertennummer sagen?",
+    "botTranslation": {
+      "ru-RU": "Я понимаю. Можете ли Вы, пожалуйста, назвать свой страховой номер?",
+      "en-US": "I understand. Can you please tell me your insurance number?",
+      "ar-SA": "أفهم ذلك. هل يمكنك من فضلك إخباري برقم التأمين الخاص بك؟",
+      "es-ES": "Entiendo. ¿Puede decirme su número de seguro, por favor?",
+      "fr-FR": "Je comprends. Pouvez-vous s'il vous plaît me donner votre numéro d'assurance ?",
+      "hi-IN": "मैं समझता हूँ। क्या आप कृपया मुझे अपना बीमा नंबर बता सकते हैं?",
+      "pl-PL": "Rozumiem. Czy może mi pani podać swój numer ubezpieczenia?",
+      "ro-RO": "Înțeleg. Puteți să-mi spuneți, vă rog, numărul dumneavoastră de asigurat?",
+      "tr-TR": "Anlıyorum. Lütfen bana sigorta numaranızı söyleyebilir misiniz?",
+      "uk-UA": "Я розумію. Чи можете Ви, будь ласка, назвати свій страховий номер?",
+      "uz-UZ": "Tushunaman. Iltimos, sug'urta raqamingizni ayta olasizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "verstehe",
+        "translation": {
+          "ru-RU": "понимаю",
+          "en-US": "understand",
+          "ar-SA": "أفهم",
+          "es-ES": "entiendo",
+          "fr-FR": "comprends",
+          "hi-IN": "समझता हूँ",
+          "pl-PL": "rozumiem",
+          "ro-RO": "înțeleg",
+          "tr-TR": "anlıyorum",
+          "uk-UA": "розумію",
+          "uz-UZ": "tushunaman"
+        }
+      },
+      {
+        "german": "die Nummer",
+        "translation": {
+          "ru-RU": "номер",
+          "en-US": "number",
+          "ar-SA": "رقم",
+          "es-ES": "número",
+          "fr-FR": "numéro",
+          "hi-IN": "संख्या",
+          "pl-PL": "numer",
+          "ro-RO": "numărul",
+          "tr-TR": "numara",
+          "uk-UA": "номер",
+          "uz-UZ": "raqam"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, einen Moment. Die Nummer ist 123456789.",
+        "translation": {
+          "ru-RU": "Да, один момент. Номер 123456789.",
+          "en-US": "Yes, one moment. The number is 123456789.",
+          "ar-SA": "نعم، لحظة واحدة. الرقم هو 123456789.",
+          "es-ES": "Sí, un momento. El número es 123456789.",
+          "fr-FR": "Oui, un instant. Le numéro est 123456789.",
+          "hi-IN": "हाँ, एक पल। नंबर 123456789 है।",
+          "pl-PL": "Tak, chwileczkę. Numer to 123456789.",
+          "ro-RO": "Da, un moment. Numărul este 123456789.",
+          "tr-TR": "Evet, bir saniye. Numara 123456789.",
+          "uk-UA": "Так, один момент. Номер 123456789.",
+          "uz-UZ": "Ha, bir soniya. Raqam 123456789."
+        },
+        "nextStep": "details_ask"
+      },
+      {
+        "text": "Einen Augenblick, hier ist meine Nummer: 123456789.",
+        "translation": {
+          "ru-RU": "Одно мгновение, вот мой номер: 123456789.",
+          "en-US": "One moment, here is my number: 123456789.",
+          "ar-SA": "لحظة من فضلك، هذا هو رقمي: 123456789.",
+          "es-ES": "Un instante, aquí está mi número: 123456789.",
+          "fr-FR": "Un instant, voici mon numéro : 123456789.",
+          "hi-IN": "एक पल, यहाँ मेरा नंबर है: 123456789.",
+          "pl-PL": "Momencik, oto mój numer: 123456789.",
+          "ro-RO": "O clipă, iată numărul meu: 123456789.",
+          "tr-TR": "Bir saniye, işte numaram: 123456789.",
+          "uk-UA": "Одну мить, ось мій номер: 123456789.",
+          "uz-UZ": "Bir lahza, mana mening raqamim: 123456789."
+        },
+        "nextStep": "details_ask"
+      }
+    ],
+    "defaultNext": "details_ask"
+  },
+  "details_ask": {
+    "botText": "Danke. Und wie ist Ihr Name und Ihr Geburtsdatum?",
+    "botTranslation": {
+      "ru-RU": "Спасибо. И Ваше имя и дата рождения?",
+      "en-US": "Thank you. And what is your name and date of birth?",
+      "ar-SA": "شكراً. وما هو اسمك وتاريخ ميلادك؟",
+      "es-ES": "Gracias. ¿Y cuál es su nombre y fecha de nacimiento?",
+      "fr-FR": "Merci. Et quel est votre nom et votre date de naissance ?",
+      "hi-IN": "धन्यवाद। और आपका नाम और जन्म तिथि क्या है?",
+      "pl-PL": "Dziękuję. A jak się pani nazywa i jaka jest data urodzenia?",
+      "ro-RO": "Mulțumesc. Și care este numele și data dumneavoastră de naștere?",
+      "tr-TR": "Teşekkürler. Peki adınız ve doğum tarihiniz nedir?",
+      "uk-UA": "Дякую. І Ваше ім'я та дата народження?",
+      "uz-UZ": "Rahmat. Ismingiz va tug'ilgan sanangiz nima?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Name",
+        "translation": {
+          "ru-RU": "имя",
+          "en-US": "name",
+          "ar-SA": "الاسم",
+          "es-ES": "nombre",
+          "fr-FR": "nom",
+          "hi-IN": "नाम",
+          "pl-PL": "imię",
+          "ro-RO": "numele",
+          "tr-TR": "isim",
+          "uk-UA": "ім'я",
+          "uz-UZ": "ism"
+        }
+      },
+      {
+        "german": "das Geburtsdatum",
+        "translation": {
+          "ru-RU": "дата рождения",
+          "en-US": "date of birth",
+          "ar-SA": "تاريخ الميلاد",
+          "es-ES": "fecha de nacimiento",
+          "fr-FR": "date de naissance",
+          "hi-IN": "जन्म तिथि",
+          "pl-PL": "data urodzenia",
+          "ro-RO": "data nașterii",
+          "tr-TR": "doğum tarihi",
+          "uk-UA": "дата народження",
+          "uz-UZ": "tug'ilgan sana"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich heiße Anna Schmidt, geboren am 10. Mai 1995.",
+        "translation": {
+          "ru-RU": "Меня зовут Анна Шмидт, родилась 10 мая 1995 года.",
+          "en-US": "My name is Anna Schmidt, born on May 10, 1995.",
+          "ar-SA": "اسمي آنا شميدت، ولدت في 10 مايو 1995.",
+          "es-ES": "Me llamo Anna Schmidt, nací el 10 de mayo de 1995.",
+          "fr-FR": "Je m'appelle Anna Schmidt, née le 10 mai 1995.",
+          "hi-IN": "मेरा नाम अन्ना श्मिट है, मेरा जन्म 10 मई 1995 को हुआ था।",
+          "pl-PL": "Nazywam się Anna Schmidt, urodzona 10 maja 1995 roku.",
+          "ro-RO": "Mă numesc Anna Schmidt, născută pe 10 mai 1995.",
+          "tr-TR": "Adım Anna Schmidt, 10 Mayıs 1995 doğumluyum.",
+          "uk-UA": "Мене звати Анна Шмідт, народилася 10 травня 1995 року.",
+          "uz-UZ": "Mening ismim Anna Shmidt, 1995 yil 10 mayda tug'ilganman."
+        },
+        "nextStep": "card_confirm"
+      },
+      {
+        "text": "Mein Name ist Anna Schmidt. Ich bin am 10.05.1995 geboren.",
+        "translation": {
+          "ru-RU": "Мое имя Анна Шмидт. Я родилась 10.05.1995.",
+          "en-US": "My name is Anna Schmidt. I was born on 10.05.1995.",
+          "ar-SA": "اسمي آنا شميدت. ولدت في 10.05.1995.",
+          "es-ES": "Mi nombre es Anna Schmidt. Nací el 10.05.1995.",
+          "fr-FR": "Mon nom est Anna Schmidt. Je suis née le 10.05.1995.",
+          "hi-IN": "मेरा नाम अन्ना श्मिट है। मेरा जन्म 10.05.1995 को हुआ था।",
+          "pl-PL": "Nazywam się Anna Schmidt. Urodziłam się 10.05.1995.",
+          "ro-RO": "Numele meu este Anna Schmidt. Sunt născută pe 10.05.1995.",
+          "tr-TR": "Benim adım Anna Schmidt. 10.05.1995'te doğdum.",
+          "uk-UA": "Моє ім'я Анна Шмідт. Я народилася 10.05.1995.",
+          "uz-UZ": "Mening ismim Anna Shmidt. Men 10.05.1995 da tug'ilganman."
+        },
+        "nextStep": "card_confirm"
+      }
+    ],
+    "defaultNext": "card_confirm"
+  },
+  "card_confirm": {
+    "botText": "Alles korrekt. Brauchen Sie eine neue Karte für sich selbst?",
+    "botTranslation": {
+      "ru-RU": "Всё верно. Вам нужна новая карта для себя?",
+      "en-US": "Everything is correct. Do you need a new card for yourself?",
+      "ar-SA": "كل شيء صحيح. هل تحتاجين إلى بطاقة جديدة لنفسك؟",
+      "es-ES": "Todo es correcto. ¿Necesita una tarjeta nueva para usted misma?",
+      "fr-FR": "Tout est correct. Avez-vous besoin d'une nouvelle carte pour vous-même ?",
+      "hi-IN": "सब कुछ सही है। क्या आपको अपने लिए एक नए कार्ड की आवश्यकता है?",
+      "pl-PL": "Wszystko się zgadza. Czy potrzebuje pani nowej karty dla siebie?",
+      "ro-RO": "Totul este corect. Aveți nevoie de un card nou pentru dumneavoastră?",
+      "tr-TR": "Her şey doğru. Kendiniz için yeni bir karta mı ihtiyacınız var?",
+      "uk-UA": "Все вірно. Вам потрібна нова картка для себе?",
+      "uz-UZ": "Hammasi to'g'ri. O'zingiz uchun yangi karta kerakmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "korrekt",
+        "translation": {
+          "ru-RU": "верно",
+          "en-US": "correct",
+          "ar-SA": "صحيح",
+          "es-ES": "correcto",
+          "fr-FR": "correct",
+          "hi-IN": "सही",
+          "pl-PL": "poprawne",
+          "ro-RO": "corect",
+          "tr-TR": "doğru",
+          "uk-UA": "вірно",
+          "uz-UZ": "to'g'ri"
+        }
+      },
+      {
+        "german": "neue Karte",
+        "translation": {
+          "ru-RU": "новая карта",
+          "en-US": "new card",
+          "ar-SA": "بطاقة جديدة",
+          "es-ES": "nueva tarjeta",
+          "fr-FR": "nouvelle carte",
+          "hi-IN": "नया कार्ड",
+          "pl-PL": "nowa karta",
+          "ro-RO": "card nou",
+          "tr-TR": "yeni kart",
+          "uk-UA": "нова картка",
+          "uz-UZ": "yangi karta"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, genau. Bitte senden Sie mir eine neue Karte.",
+        "translation": {
+          "ru-RU": "Да, именно. Пожалуйста, пришлите мне новую карту.",
+          "en-US": "Yes, exactly. Please send me a new card.",
+          "ar-SA": "نعم، بالضبط. يرجى إرسال بطاقة جديدة لي.",
+          "es-ES": "Sí, exacto. Por favor envíeme una tarjeta nueva.",
+          "fr-FR": "Oui, exactement. Veuillez m'envoyer une nouvelle carte.",
+          "hi-IN": "हाँ बिल्कुल। कृपया मुझे एक नया कार्ड भेजें।",
+          "pl-PL": "Tak, dokładnie. Proszę przysłać mi nową kartę.",
+          "ro-RO": "Da, exact. Vă rog să-mi trimiteți un card nou.",
+          "tr-TR": "Evet, aynen. Lütfen bana yeni bir kart gönderin.",
+          "uk-UA": "Так, саме так. Будь ласка, надішліть мені нову картку.",
+          "uz-UZ": "Ha, xuddi shunday. Iltimos, menga yangi karta yuboring."
+        },
+        "nextStep": "photo_req"
+      },
+      {
+        "text": "Ja, bitte. Ich brauche dringend eine neue Karte.",
+        "translation": {
+          "ru-RU": "Да, пожалуйста. Мне срочно нужна новая карта.",
+          "en-US": "Yes, please. I urgently need a new card.",
+          "ar-SA": "نعم، من فضلك. أنا بحاجة ماسة لبطاقة جديدة.",
+          "es-ES": "Sí, por favor. Necesito urgentemente una tarjeta nueva.",
+          "fr-FR": "Oui, s'il vous plaît. J'ai un besoin urgent d'une nouvelle carte.",
+          "hi-IN": "हाँ कृपया। मुझे तत्काल एक नए कार्ड की आवश्यकता है।",
+          "pl-PL": "Tak, proszę. Pilnie potrzebuję nowej karty.",
+          "ro-RO": "Da, vă rog. Am nevoie urgent de un card nou.",
+          "tr-TR": "Evet, lütfen. Acil yeni bir karta ihtiyacım var.",
+          "uk-UA": "Так, будь ласка. Мені терміново потрібна нова картка.",
+          "uz-UZ": "Ha, iltimos. Menga zudlik bilan yangi karta kerak."
+        },
+        "nextStep": "photo_req"
+      }
+    ],
+    "defaultNext": "photo_req"
+  },
+  "photo_req": {
+    "botText": "Das mache ich. Senden Sie uns bitte ein aktuelles Passbild per App.",
+    "botTranslation": {
+      "ru-RU": "Сделаю. Пришлите нам, пожалуйста, актуальное фото через приложение.",
+      "en-US": "I will do that. Please send us a current passport photo via the app.",
+      "ar-SA": "سأفعل ذلك. يرجى إرسال صورة شخصية حديثة لنا عبر التطبيق.",
+      "es-ES": "Lo haré. Envíenos una foto de pasaporte actual a través de la aplicación.",
+      "fr-FR": "Je vais le faire. Veuillez nous envoyer une photo d'identité récente via l'application.",
+      "hi-IN": "मैं वह करूँगा। कृपया हमें ऐप के माध्यम से एक वर्तमान पासपोर्ट फोटो भेजें।",
+      "pl-PL": "Zrobię to. Proszę przesłać nam aktualne zdjęcie paszportowe przez aplikację.",
+      "ro-RO": "Voi face asta. Vă rugăm să ne trimiteți o fotografie de pașaport actuală prin aplicație.",
+      "tr-TR": "Bunu yapacağım. Lütfen uygulama üzerinden bize güncel bir vesikalık fotoğraf gönderin.",
+      "uk-UA": "Зроблю. Надішліть нам, будь ласка, актуальне фото через додаток.",
+      "uz-UZ": "Buni qilaman. Iltimos, ilova orqali bizga joriy pasport rasmini yuboring."
+    },
+    "vocabulary": [
+      {
+        "german": "das Passbild",
+        "translation": {
+          "ru-RU": "фото на паспорт",
+          "en-US": "passport photo",
+          "ar-SA": "صورة جواز السفر",
+          "es-ES": "foto de carnet",
+          "fr-FR": "photo d'identité",
+          "hi-IN": "पासपोर्ट फोटो",
+          "pl-PL": "zdjęcie paszportowe",
+          "ro-RO": "poză de pașaport",
+          "tr-TR": "vesikalık fotoğraf",
+          "uk-UA": "фото на паспорт",
+          "uz-UZ": "pasport rasmi"
+        }
+      },
+      {
+        "german": "per App",
+        "translation": {
+          "ru-RU": "через приложение",
+          "en-US": "via app",
+          "ar-SA": "عبر التطبيق",
+          "es-ES": "por la app",
+          "fr-FR": "via l'application",
+          "hi-IN": "ऐप के जरिए",
+          "pl-PL": "przez aplikację",
+          "ro-RO": "prin aplicație",
+          "tr-TR": "uygulama üzerinden",
+          "uk-UA": "через додаток",
+          "uz-UZ": "ilova orqali"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Geht das auch per E-Mail?",
+        "translation": {
+          "ru-RU": "Можно ли это сделать и по e-mail?",
+          "en-US": "Is that also possible via e-mail?",
+          "ar-SA": "هل يمكن ذلك عبر البريد الإلكتروني أيضاً؟",
+          "es-ES": "¿También es posible por correo electrónico?",
+          "fr-FR": "Est-ce aussi possible par e-mail ?",
+          "hi-IN": "क्या यह ईमेल के माध्यम से भी संभव है?",
+          "pl-PL": "Czy można to zrobić również mailem?",
+          "ro-RO": "Se poate și prin e-mail?",
+          "tr-TR": "Bu e-posta ile de mümkün mü?",
+          "uk-UA": "Чи можна це зробити також по e-mail?",
+          "uz-UZ": "Buni elektron pochta orqali ham qilsa bo'ladimi?"
+        },
+        "nextStep": "app_confirm"
+      },
+      {
+        "text": "Alles klar. Muss ich das Foto direkt in der App hochladen?",
+        "translation": {
+          "ru-RU": "Ясно. Должна ли я загрузить фото прямо в приложении?",
+          "en-US": "Alright. Do I have to upload the photo directly in the app?",
+          "ar-SA": "حسناً. هل يجب علي تحميل الصورة مباشرة في التطبيق؟",
+          "es-ES": "De acuerdo. ¿Tengo que subir la foto directamente en la aplicación?",
+          "fr-FR": "D'accord. Dois-je télécharger la photo directement dans l'application ?",
+          "hi-IN": "ठीक है। क्या मुझे फोटो सीधे ऐप में अपलोड करना होगा?",
+          "pl-PL": "Jasne. Czy muszę przesłać zdjęcie bezpośrednio w aplikacji?",
+          "ro-RO": "În regulă. Trebuie să încarc fotografia direct în aplicație?",
+          "tr-TR": "Tamam. Fotoğrafı doğrudan uygulamaya mı yüklemem gerekiyor?",
+          "uk-UA": "Ясно. Чи повинна я завантажити фото прямо в додатку?",
+          "uz-UZ": "Tushunarli. Rasmni to'g'ridan-to'g'ri ilovaga yuklashim kerakmi?"
+        },
+        "nextStep": "app_confirm"
+      }
+    ],
+    "defaultNext": "app_confirm"
+  },
+  "app_confirm": {
+    "botText": "Ja, am besten über die App. Das geht am schnellsten.",
+    "botTranslation": {
+      "ru-RU": "Да, лучше всего через приложение. Это быстрее всего.",
+      "en-US": "Yes, best via the app. That is the fastest way.",
+      "ar-SA": "نعم، الأفضل عبر التطبيق. هذه هي أسرع طريقة.",
+      "es-ES": "Sí, mejor a través de la aplicación. Es lo más rápido.",
+      "fr-FR": "Oui, de préférence via l'application. C'est le plus rapide.",
+      "hi-IN": "हाँ, ऐप के माध्यम से सबसे अच्छा। वह सबसे तेज़ तरीका है।",
+      "pl-PL": "Tak, najlepiej przez aplikację. Tak jest najszybciej.",
+      "ro-RO": "Da, cel mai bine prin aplicație. Este cel mai rapid.",
+      "tr-TR": "Evet, en iyisi uygulama üzerinden. En hızlısı bu.",
+      "uk-UA": "Так, найкраще через додаток. Це найшвидше.",
+      "uz-UZ": "Ha, eng yaxshisi ilova orqali. Bu eng tezi."
+    },
+    "vocabulary": [
+      {
+        "german": "am besten",
+        "translation": {
+          "ru-RU": "лучше всего",
+          "en-US": "best",
+          "ar-SA": "من الأفضل",
+          "es-ES": "lo mejor",
+          "fr-FR": "le mieux",
+          "hi-IN": "सबसे अच्छा",
+          "pl-PL": "najlepiej",
+          "ro-RO": "cel mai bine",
+          "tr-TR": "en iyisi",
+          "uk-UA": "найкраще",
+          "uz-UZ": "eng yaxshisi"
+        }
+      },
+      {
+        "german": "schnellsten",
+        "translation": {
+          "ru-RU": "быстрее всего",
+          "en-US": "fastest",
+          "ar-SA": "الأسرع",
+          "es-ES": "lo más rápido",
+          "fr-FR": "le plus rapide",
+          "hi-IN": "सबसे तेज़",
+          "pl-PL": "najszybciej",
+          "ro-RO": "cel mai rapid",
+          "tr-TR": "en hızlı",
+          "uk-UA": "найшвидше",
+          "uz-UZ": "eng tez"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Gut, ich lade das Foto heute noch hoch.",
+        "translation": {
+          "ru-RU": "Хорошо, я загружу фото еще сегодня.",
+          "en-US": "Good, I will upload the photo today.",
+          "ar-SA": "حسناً، سأقوم بتحميل الصورة اليوم.",
+          "es-ES": "Bien, subiré la foto hoy mismo.",
+          "fr-FR": "Bien, je télécharge la photo aujourd'hui.",
+          "hi-IN": "अच्छा, मैं आज फोटो अपलोड कर दूँगा।",
+          "pl-PL": "Dobrze, prześlę zdjęcie jeszcze dzisiaj.",
+          "ro-RO": "Bine, voi încărca fotografia chiar astăzi.",
+          "tr-TR": "Güzel, fotoğrafı bugün yükleyeceğim.",
+          "uk-UA": "Добре, я завантажу фото ще сьогодні.",
+          "uz-UZ": "Yaxshi, men rasmni bugun yuklayman."
+        },
+        "nextStep": "final_offer"
+      },
+      {
+        "text": "Verstanden. Ich mache das gleich.",
+        "translation": {
+          "ru-RU": "Понятно. Я сделаю это сейчас (сразу).",
+          "en-US": "Understood. I will do that right away.",
+          "ar-SA": "مفهوم. سأفعل ذلك فوراً.",
+          "es-ES": "Entendido. Lo haré de inmediato.",
+          "fr-FR": "Compris. Je le fais tout de suite.",
+          "hi-IN": "समझ गया। मैं उसे अभी करूँगा।",
+          "pl-PL": "Zrozumiałam. Zrobię to zaraz.",
+          "ro-RO": "Am înțeles. Voi face asta imediat.",
+          "tr-TR": "Anlaşıldı. Bunu hemen yapacağım.",
+          "uk-UA": "Зрозуміло. Я зроблю це зараз (одразу).",
+          "uz-UZ": "Tushunarli. Men buni hoziroq qilaman."
+        },
+        "nextStep": "final_offer"
+      }
+    ],
+    "defaultNext": "final_offer"
+  },
+  "final_offer": {
+    "botText": "Prima. Die Karte kommt in etwa zwei Wochen. Brauchen Sie sonst noch Hilfe?",
+    "botTranslation": {
+      "ru-RU": "Отлично. Карта придет примерно через две недели. Вам нужна еще какая-нибудь помощь?",
+      "en-US": "Great. The card will arrive in about two weeks. Do you need any other help?",
+      "ar-SA": "ممتاز. ستصل البطاقة خلال حوالي أسبوعين. هل تحتاجين إلى أي مساعدة أخرى؟",
+      "es-ES": "Estupendo. La tarjeta llegará en unas dos semanas. ¿Necesita alguna otra ayuda?",
+      "fr-FR": "Super. La carte arrivera dans environ deux semaines. Avez-vous besoin d'autre chose ?",
+      "hi-IN": "बहुत बढ़िया। कार्ड लगभग दो सप्ताह में आ जाएगा। क्या आपको कोई अन्य सहायता चाहिए?",
+      "pl-PL": "Świetnie. Karta przyjdzie za około dwa tygodnie. Czy potrzebuje pani jeszcze jakiejś pomocy?",
+      "ro-RO": "Grozav. Cardul va sosi în aproximativ două săptămâni. Mai aveți nevoie de ajutor?",
+      "tr-TR": "Harika. Kart yaklaşık iki hafta içinde gelecek. Başka bir yardıma ihtiyacınız var mı?",
+      "uk-UA": "Відмінно. Картка прийде приблизно через два тижні. Вам потрібна ще якась допомога?",
+      "uz-UZ": "Ajoyib. Karta taxminan ikki haftadan keyin keladi. Yana yordam kerakmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "zwei Wochen",
+        "translation": {
+          "ru-RU": "две недели",
+          "en-US": "two weeks",
+          "ar-SA": "أسبوعين",
+          "es-ES": "dos semanas",
+          "fr-FR": "deux semaines",
+          "hi-IN": "दो सप्ताह",
+          "pl-PL": "dwa tygodnie",
+          "ro-RO": "două săptămâni",
+          "tr-TR": "iki hafta",
+          "uk-UA": "два тижні",
+          "uz-UZ": "ikki hafta"
+        }
+      },
+      {
+        "german": "die Hilfe",
+        "translation": {
+          "ru-RU": "помощь",
+          "en-US": "help",
+          "ar-SA": "مساعدة",
+          "es-ES": "ayuda",
+          "fr-FR": "aide",
+          "hi-IN": "सहायता",
+          "pl-PL": "pomoc",
+          "ro-RO": "ajutor",
+          "tr-TR": "yardım",
+          "uk-UA": "допомога",
+          "uz-UZ": "yordam"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, das war alles. Vielen Dank!",
+        "translation": {
+          "ru-RU": "Нет, это всё. Большое спасибо!",
+          "en-US": "No, that was all. Thank you very much!",
+          "ar-SA": "لا، هذا كل شيء. شكراً جزيلاً!",
+          "es-ES": "No, eso es todo. ¡Muchas gracias!",
+          "fr-FR": "Non, c'était tout. Merci beaucoup !",
+          "hi-IN": "नहीं, बस इतना ही था। बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Nie, to wszystko. Bardzo dziękuję!",
+          "ro-RO": "Nu, asta a fost tot. Vă mulțumesc mult!",
+          "tr-TR": "Hayır, hepsi buydu. Çok teşekkürler!",
+          "uk-UA": "Ні, це все. Велике дякую!",
+          "uz-UZ": "Yo'q, hammasi shu edi. Katta rahmat!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Nein, danke für die Hilfe. Auf Wiedersehen!",
+        "translation": {
+          "ru-RU": "Нет, спасибо за помощь. До свидания!",
+          "en-US": "No, thank you for the help. Goodbye!",
+          "ar-SA": "لا، شكراً على المساعدة. وداعاً!",
+          "es-ES": "No, gracias por la ayuda. ¡Adiós!",
+          "fr-FR": "Non, merci pour l'aide. Au revoir !",
+          "hi-IN": "नहीं, मदद के लिए धन्यवाद। अलविदा!",
+          "pl-PL": "Nie, dziękuję za pomoc. Do widzenia!",
+          "ro-RO": "Nu, mulțumesc pentru ajutor. La revedere!",
+          "tr-TR": "Hayır, yardımınız için teşekkürler. Hoşça kalın!",
+          "uk-UA": "Ні, дякую за допомогу. До побачення!",
+          "uz-UZ": "Yo'q, yordam uchun rahmat. Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

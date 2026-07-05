@@ -1,20 +1,15 @@
 <template>
-  <main class="session-page">
-    <transition name="bounce-fade">
-      <div v-if="showExitModal" class="modal-overlay">
-        <div class="modal-content">
-          <div class="modal-icon">
-            <img class="modal-icon-item" src="../../assets/images/Sadlyhedgehog.png" alt="">
-          </div>
-          <h3 class="modal-title">{{ t('trainerPage.sure') }}</h3>
-          <p class="modal-text">{{ t('trainerPage.warning') }}</p>
-          <div class="modal-actions">
-            <button class="btn-gummy btn-gummy--secondary" @click="cancelExit">{{ t('trainerPage.continue') }}</button>
-            <button class="btn-gummy btn-gummy--danger" @click="confirmExit">{{ t('trainerPage.exit') }}</button>
-          </div>
-        </div>
-      </div>
-    </transition>
+  <main class="session-page"
+        @touchstart="handleTouchStart"
+        @touchmove="handleTouchMove"
+        @touchend="handleTouchEnd"
+  >
+    <ExitSessionModal
+        :show="showExitModal"
+        @update:show="val => showExitModal = val"
+        @cancel="cancelExit"
+        @confirm="confirmExit"
+    />
     <div class="session-container">
       <section v-if="loading" class="view-state view-state--loading">
         <div class="bouncy-loader">
@@ -25,7 +20,7 @@
       <section v-else-if="thematic.selectedModule" class="view-state view-state--content">
         <div v-if="!finished" class="top-nav">
           <div class="nav-actions">
-            <VStopSessionBtn @close="exit" />
+            <VStopSessionBtn @close="exit"/>
           </div>
           <div class="progress-wrapper">
             <div class="progress-bar">
@@ -63,7 +58,8 @@
           </div>
         </div>
         <transition name="slide-up-bouncy">
-          <div v-if="isChecked && !finished" class="bottom-sheet" :class="feedback.isCorrect ? 'sheet--success' : 'sheet--error'">
+          <div v-if="isChecked && !finished" class="bottom-sheet"
+               :class="feedback.isCorrect ? 'sheet--success' : 'sheet--error'">
             <div class="feedback-message">
               <div v-if="feedback.isCorrect" class="feedback-content">
                 <span class="feedback-text">{{ t('trainerPage.right') }}</span>
@@ -72,7 +68,8 @@
                 <span class="feedback-text">{{ t('trainerPage.false') }} <br/><b>{{ tasks[current].answer }}</b></span>
               </div>
             </div>
-            <button class="btn-gummy" :class="feedback.isCorrect ? 'btn-gummy--success' : 'btn-gummy--error'" @click="next">
+            <button class="btn-gummy" :class="feedback.isCorrect ? 'btn-gummy--success' : 'btn-gummy--error'"
+                    @click="next">
               {{ t('trainerPage.further') }}
             </button>
           </div>
@@ -87,7 +84,9 @@
           <div class="finish-card" v-else>
             <div class="result-emoji">💪</div>
             <h3 class="result-title">{{ t('trainerPage.morePractice') }}</h3>
-            <p class="result-subtitle">{{ t('trainerPage.result') }} <span>{{ correctAnswers }} / {{ tasks.length }}</span></p>
+            <p class="result-subtitle">{{ t('trainerPage.result') }} <span>{{ correctAnswers }} / {{
+                tasks.length
+              }}</span></p>
             <div class="result-actions">
               <button class="btn-gummy btn-gummy--primary" @click="restartModule">{{ t('trainerPage.repeat') }}</button>
               <button class="btn-gummy btn-gummy--secondary" @click="exit">{{ t('trainerPage.toMain') }}</button>
@@ -109,10 +108,12 @@ import {useTrainerStore} from '../../store/themenProgressStore.js'
 import {useRouter} from 'vue-router'
 import {ref, onMounted, onUnmounted, computed} from 'vue'
 import SoundBtn from "../../src/components/soundBtn.vue";
-import { useSeoMeta } from '#imports'
+import {useSeoMeta} from '#imports'
 import VBackBtn from "~/src/components/V-back-btn.vue";
 import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue";
-import Hedgehog from '../../assets/images/hedgehog-sadly.svg'
+import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
+import SadHedgehogIcon from '../../assets/images/Sadlyhedgehog.png'
+import {useSwipeBack} from '~/composables/useSwipeBack.js'
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -131,7 +132,11 @@ const finished = ref(false)
 const isChecked = ref(false)
 const showExitModal = ref(false)
 const sessionMistakes = ref([])
-
+const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
+  exit()
+}, {
+  ignoreSelector: '.options-grid, .option-pill, .bottom-sheet, .btn-gummy'
+})
 
 const tasks = computed(() => {
   const allTasks = thematic.selectedModule?.tasks || []
@@ -139,11 +144,11 @@ const tasks = computed(() => {
 
   if (progress && !progress.completed && progress.mistakes?.length > 0) {
     return allTasks
-        .map((task, index) => ({ ...task, originalIndex: index }))
+        .map((task, index) => ({...task, originalIndex: index}))
         .filter(task => progress.mistakes.includes(task.originalIndex))
   }
 
-  return allTasks.map((task, index) => ({ ...task, originalIndex: index }))
+  return allTasks.map((task, index) => ({...task, originalIndex: index}))
 })
 
 const progressPercent = computed(() => {
@@ -200,7 +205,6 @@ const check = (selectedAnswer) => {
   if (isCorrect) {
     correctAnswers.value += 1
   } else {
-    // Сохраняем оригинальный индекс, чтобы потом отфильтровать из всего массива
     sessionMistakes.value.push(task.originalIndex)
   }
 }
@@ -211,7 +215,6 @@ const next = async () => {
     setupCurrentQuestion();
   } else {
     finished.value = true
-    // Сохраняем прогресс только в конце!
     await thematic.saveModuleAttempt(thematic.selectedLevel.level, thematic.selectedModule.id, sessionMistakes.value)
   }
 }
@@ -260,6 +263,7 @@ onMounted(async () => {
 onUnmounted(() => {
   window.removeEventListener('beforeunload', handleBeforeUnload);
 })
+
 </script>
 
 <style scoped>
@@ -294,59 +298,6 @@ onUnmounted(() => {
   text-align: center;
 }
 
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(15, 23, 42, 0.5);
-  backdrop-filter: blur(3px);
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16px;
-}
-
-.modal-content {
-  background: #ffffff;
-  padding: 24px;
-  border-radius: 20px;
-  border: none;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  width: 90%;
-  max-width: 380px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-.modal-icon-item {
-   width: 170px;
-}
-
-.modal-title {
-  font-size: 22px;
-  font-weight: 900;
-  color: #4c1d95;
-  margin: 0 0 8px 0;
-}
-
-.modal-text {
-  font-size: 16px;
-  font-weight: 700;
-  color: #6b7280;
-  margin: 0 0 20px 0;
-  line-height: 1.3;
-}
-
-.modal-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-}
-
 .top-nav {
   display: flex;
   align-items: center;
@@ -374,7 +325,7 @@ onUnmounted(() => {
   border: none;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .progress-fill {
@@ -536,7 +487,7 @@ onUnmounted(() => {
   flex-direction: column;
   gap: 16px;
   z-index: 10;
-  box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .sheet--success {
@@ -587,7 +538,7 @@ onUnmounted(() => {
   border-radius: 24px;
   border: none;
   padding: 32px 20px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -639,7 +590,7 @@ onUnmounted(() => {
   font-family: "Nunito", sans-serif;
   font-size: 18px;
   font-weight: 900;
-  border-radius: 16px;
+  border-radius: 40px;
   border: none;
   cursor: pointer;
   transition: transform 0.1s ease, box-shadow 0.1s ease;
@@ -670,15 +621,14 @@ onUnmounted(() => {
 }
 
 .btn-gummy--secondary {
-  background: #fde047;
-  color: #854d0e;
-  box-shadow: 0 5px 0 #ca8a04;
+  background: #36c95d;
+  color: white;
+  box-shadow: 0 5px 0 #6dd98b;
 }
 
 .btn-gummy--danger {
-  background: #fca5a5;
+  background: none;
   color: #7f1d1d;
-  box-shadow: 0 5px 0 #dc2626;
 }
 
 .bouncy-loader {
@@ -713,32 +663,36 @@ onUnmounted(() => {
 }
 
 @keyframes bounce {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-15px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
 }
 
 @keyframes bounceIn {
-  0% { transform: scale(0.5); opacity: 0; }
-  70% { transform: scale(1.1); }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-.bounce-fade-enter-active {
-  animation: bounceIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-.bounce-fade-leave-active {
-  transition: opacity 0.2s;
-}
-.bounce-fade-leave-to {
-  opacity: 0;
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .slide-up-bouncy-enter-active {
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+
 .slide-up-bouncy-leave-active {
   transition: transform 0.2s ease-in;
 }
+
 .slide-up-bouncy-enter-from, .slide-up-bouncy-leave-to {
   transform: translateY(100%);
 }

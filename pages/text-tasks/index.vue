@@ -10,7 +10,7 @@
           </svg>
         </button>
         <div class="page-title">
-          {{ selectedTheme ? selectedTheme.title : 'Темы текстов' }}
+          {{ t('sub.textTask') }}
         </div>
         <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
@@ -24,11 +24,11 @@
       <VTransition>
         <div class="content__wrapper" v-if="isMounted">
           <VBanner
-              text="Заполни пропуски в тексте. Прокачай свой немецкий лучше"
+              :text="t('bannerTitles.textTask')"
               :icon="TextBooks"
           />
-          <nav class="mobile-nav" role="tablist" v-if="!selectedTheme">
-            <div class="sliding-bg" :style="{ transform: `translateX(${activeIndex * 100}%)` }"></div>
+          <nav class="mobile-nav" role="tablist">
+            <div class="sliding-bg" :style="{ transform: `translateX(${getTransformX(activeIndex)}%)` }"></div>
             <button
                 v-for="level in levels"
                 :key="level.id"
@@ -40,43 +40,39 @@
               <span class="tab-label">{{ level.label }}</span>
             </button>
           </nav>
-          <div class="content-area" v-if="!selectedTheme">
+          <div class="content-area">
             <div class="themes-list">
-              <div
-                  v-for="theme in displayedThemes"
+              <button
+                  v-for="(theme, index) in displayedThemes"
                   :key="theme.id"
                   class="theme-card"
-                  @click="selectTheme(theme)"
+                  @click="selectTheme(theme, index)"
+                  :disabled="isLoading"
               >
-                <div class="theme-icon-box">{{ theme.icon }}</div>
-                <div class="theme-info">
-                  <div class="theme-name">{{ theme.title }}</div>
+                <div class="theme-card-top">
+                  <div class="theme-icon-box">{{ theme.icon }}</div>
+                  <div class="theme-info">
+                    <div class="theme-name">{{ theme.title }}</div>
+                  </div>
+                  <div class="theme-arrow" :class="{ 'theme-arrow--locked': index !== 0 && !authStore.isPremium }">
+                    <VArrowNav v-if="index === 0 || authStore.isPremium"/>
+                    <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                  </div>
                 </div>
-                <VArrowNav/>
-              </div>
-              <div v-if="displayedThemes.length === 0" class="empty-state">
-                В этом разделе пока нет тем
-              </div>
+                <div class="theme-card-bottom">
+                  <div class="progress-track">
+                    <div class="progress-fill" :style="{ width: `${getStats(theme.id).total > 0 ? (getStats(theme.id).completed / getStats(theme.id).total) * 100 : 0}%` }"></div>
+                  </div>
+                  <span class="progress-text">{{ getStats(theme.id).completed }}/{{ getStats(theme.id).total }}</span>
+                </div>
+              </button>
+              <div v-if="displayedThemes.length === 0" class="empty-state">Empty</div>
             </div>
           </div>
-          <VTransition>
-            <div class="content-area" v-if="themeData && !isLoading">
-              <div class="tasks-list">
-                <div
-                    v-for="(task, index) in themeData.tasks"
-                    :key="task.id"
-                    class="task-card"
-                    @click="startTask(task, index)"
-                >
-                  <div class="task-number">{{ index + 1 }}</div>
-                  <div class="task-info">
-                    <div class="task-translation">{{ task.translation }}</div>
-                  </div>
-                  <VArrowNav/>
-                </div>
-              </div>
-            </div>
-          </VTransition>
+
         </div>
       </VTransition>
       <Modal
@@ -86,52 +82,68 @@
           :img="TextBooks"
           :text="overlayData.text"
       />
+      <VPremiumModal v-model:show="showPremiumModal" />
     </div>
   </div>
 </template>
 
 <script setup>
-import {ref, computed, onMounted} from 'vue'
+import {ref, computed, onMounted, watch} from 'vue'
 import {useRouter} from 'vue-router'
-import {useTextTasksStore} from '../../store/textTasksStore.js'
+import {useTextTasksStore} from '/store/textTasksStore.js'
+import {userAuthStore} from '../../store/authStore.js'
 import VBanner from "~/src/components/V-banner.vue"
 import TextBooks from "../../assets/images/TextBook.svg"
 import VTransition from "~/src/components/V-transition.vue"
-import VArrowNav from "~/src/components/V-arrowNav.vue";
-import HeadPhones from "assets/images/headphones.svg";
-import Modal from "~/src/components/modal.vue";
+import VArrowNav from "~/src/components/V-arrowNav.vue"
+import Modal from "~/src/components/modal.vue"
+import VPremiumModal from "~/src/components/V-premiumModal.vue"
+import { showInterstitial } from '../../utils/admob.js'
+
 const showDevModal = ref(false)
+const showPremiumModal = ref(false)
 const router = useRouter()
 const store = useTextTasksStore()
+const authStore = userAuthStore()
 const isMounted = ref(false)
-const { t} = useI18n()
+const { t , locale} = useI18n()
+
 const levels = [
   {id: 'low-level', label: 'A1'},
   {id: 'middle-level', label: 'A2'},
   {id: 'high-level', label: 'B1'}
 ]
 
+const getTransformX = (index) => {
+  if (index === -1) return 0;
+  if (locale.value === 'ar') {
+    return (levels.length - 1 - index) * 100;
+  }
+
+  return index * 100;
+};
+
 const currentLevel = ref('low-level')
-const selectedTheme = ref(null)
-const themeData = ref(null)
 const isLoading = ref(false)
+const themesStats = ref({})
 
 const activeIndex = computed(() => levels.findIndex(level => level.id === currentLevel.value))
 
 const overlayData = {
-  title: t('Текстовые задания'),
-  text: t('Для выполения задания нужно перетащив слово в пустые места и нажать на текст и поле куда хотите добавить текст'),
+  title: t('textTasksTip.title'),
+  text: t('textTasksTip.description'),
 }
 
 const allThemesMeta = {
-  basic: {id: 'basic', file: 'basic.json', title: 'Знакомство', icon: '👋'},
-  routine: {id: 'routine', file: 'routine.json', title: 'Распорядок дня', icon: '⏰'},
-  shopping: {id: 'shopping', file: 'shopping.json', title: 'Покупки', icon: '🛒'},
-  work: {id: 'work', file: 'work.json', title: 'Работа и учеба', icon: '💼'},
-  hobby: {id: 'hobby', file: 'hobby.json', title: 'Хобби', icon: '🎨'},
-  objects: {id: 'objects', file: 'objects.json', title: 'Предметы и вещи', icon: '🎒'},
-  travel: {id: 'travel', file: 'travel.json', title: 'Путешествия', icon: '✈️'},
+  basic: {id: 'basic', file: 'basic.json', title: t('textThemes.basic'), icon: '👋'},
+  routine: {id: 'routine', file: 'routine.json', title: t('textThemes.routine'), icon: '⏰'},
+  shopping: {id: 'shopping', file: 'shopping.json', title: t('textThemes.shopping'), icon: '🛒'},
+  work: {id: 'work', file: 'work.json', title: t('textThemes.work'), icon: '💼'},
+  hobby: {id: 'hobby', file: 'hobby.json', title: t('textThemes.hobby'), icon: '🎨'},
+  objects: {id: 'objects', file: 'objects.json', title: t('textThemes.objects'), icon: '🎒'},
+  travel: {id: 'travel', file: 'travel.json', title: t('textThemes.travel'), icon: '✈️'},
 }
+
 const themesByLevel = {
   'low-level': ['basic', 'hobby', 'work', 'routine', 'shopping', 'travel'],
   'middle-level': ['basic', 'hobby', 'work', 'routine', 'shopping', 'travel'],
@@ -143,40 +155,87 @@ const displayedThemes = computed(() => {
   return activeLevelThemes.map(themeKey => allThemesMeta[themeKey])
 })
 
-const selectTheme = async (theme) => {
-  selectedTheme.value = theme
-  isLoading.value = true
-  try {
-    const res = await fetch(`/text-tasks/${currentLevel.value}/${theme.file}`)
-    if (!res.ok) throw new Error('Network response was not ok')
-    themeData.value = await res.json()
-  } catch (e) {
-    console.error(e)
-    selectedTheme.value = null
-  } finally {
-    isLoading.value = false
+const getStats = (themeId) => {
+  const key = `${currentLevel.value}-${themeId}`
+  const stats = themesStats.value[key] || { total: 0, completed: 0 }
+  let completedTasks = 0
+  if (store.userProgress && store.userProgress[themeId]) {
+    completedTasks = Object.keys(store.userProgress[themeId]).length
+  }
+  return {
+    total: stats.total,
+    completed: completedTasks
+  }
+}
+
+const loadLevelStats = async (level) => {
+  const themes = themesByLevel[level] || []
+  const fetchPromises = themes.map(async (themeId) => {
+    const key = `${level}-${themeId}`
+    if (!themesStats.value[key]) {
+      try {
+        const themeMeta = allThemesMeta[themeId]
+        const res = await fetch(`/text-tasks/${level}/${themeMeta.file}`)
+        if (res.ok) {
+          const data = await res.json()
+          themesStats.value[key] = {
+            total: data.tasks ? data.tasks.length : 0,
+            completed: 0
+          }
+        }
+      } catch (e) {
+        console.error(e)
+      }
+    }
+  })
+  await Promise.all(fetchPromises)
+}
+
+watch(currentLevel, (newLevel) => {
+  loadLevelStats(newLevel)
+})
+
+const selectTheme = async (theme, index) => {
+  if (index === 0 || authStore.isPremium) {
+    isLoading.value = true
+    try {
+      const res = await fetch(`/text-tasks/${currentLevel.value}/${theme.file}`)
+      if (!res.ok) throw new Error('Network response was not ok')
+      const data = await res.json()
+      if (data.tasks && data.tasks.length > 0) {
+        const completedTaskIds = store.userProgress && store.userProgress[theme.id] ? Object.keys(store.userProgress[theme.id]) : []
+        let tasksToPlay = data.tasks
+        if (completedTaskIds.length > 0 && completedTaskIds.length < data.tasks.length) {
+          tasksToPlay = data.tasks.filter(task => !completedTaskIds.includes(task.id))
+        }
+        if (tasksToPlay.length > 0) {
+          store.initTask(tasksToPlay[0], tasksToPlay, 0, theme.id)
+          router.push('/text-tasks/session')
+        }
+      }
+    } catch (e) {
+      console.error(e)
+    } finally {
+      isLoading.value = false
+    }
+  } else {
+    showPremiumModal.value = true
   }
 }
 
 const goBack = () => {
-  if (selectedTheme.value) {
-    selectedTheme.value = null
-    themeData.value = null
-  } else {
-    router.push('/')
-  }
+  router.push('/')
 }
 
-const startTask = (task, index) => {
-  store.initTask(task, themeData.value.tasks, index)
-  router.push('/text-tasks/session')
-}
-
-onMounted(() => {
+onMounted(async () => {
   setTimeout(() => {
     isMounted.value = true
   }, 120)
+  await store.loadUserProgress()
+
+  loadLevelStats(currentLevel.value)
 })
+
 </script>
 
 <style scoped>
@@ -190,7 +249,7 @@ onMounted(() => {
 
 .page-container {
   width: 100%;
-  max-width: 768px;
+  max-width: 1240px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -317,10 +376,10 @@ onMounted(() => {
   border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border-radius: 16px;
-  padding: 8px 10px;
+  padding: 12px 14px;
   display: flex;
-  align-items: center;
-  gap: 15px;
+  flex-direction: column;
+  gap: 14px;
   cursor: pointer;
   transition: transform 0.1s;
 }
@@ -328,6 +387,12 @@ onMounted(() => {
 .theme-card:active {
   transform: translateY(4px);
   box-shadow: 0 0 0 #e2e8f0;
+}
+
+.theme-card-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .theme-icon-box {
@@ -341,13 +406,54 @@ onMounted(() => {
 .theme-name {
   font-weight: 800;
   color: var(--titleColor);
-  font-size: 15px;
+  font-size: 17px;
+}
+
+.theme-card-bottom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-track {
+  flex-grow: 1;
+  height: 8px;
+  background: var(--tabsSlideBorderColor);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #5c6bc0;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--titleColor);
+  min-width: 35px;
+  text-align: right;
 }
 
 .theme-arrow {
   color: #a0aec0;
   display: flex;
   align-items: center;
+}
+
+.theme-arrow--locked {
+  background-color: #a0aec0;
+  box-shadow: 0 3px 0px #718096;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
 }
 
 .empty-state {
@@ -360,7 +466,7 @@ onMounted(() => {
 .tasks-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .task-card {
@@ -368,7 +474,6 @@ onMounted(() => {
   padding: 10px 16px;
   display: flex;
   align-items: center;
-  gap: 5px;
   background: var(--menuItemsBg);
   border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
@@ -382,21 +487,12 @@ onMounted(() => {
 }
 
 .task-number {
-  width: 40px;
-  height: 40px;
-  background: #ebf8ff;
-  color: #3182ce;
-  font-weight: 800;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  flex-shrink: 0;
+  font-size: 30px;
 }
 
 .task-info {
   flex-grow: 1;
+  margin-left: 10px;
 }
 
 .task-translation {

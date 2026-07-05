@@ -1,5 +1,4 @@
 {
-
   "definiteIndefiniteQuestOne": {
     "title": "Bitwa o końcówki",
     "description": "Praktyka mieszana: rodzajniki nieokreślone i określone w zdaniach.",
@@ -525,12 +524,6 @@
     "questFifteen": "Wybierz poprawny wariant: To był piękny dzień",
     "questFifteenTip": "Rodzajnik nieokreślony (po raz pierwszy). Rodzaj męski (der). Rodzajnik 'ein' jest pusty, więc przymiotnik bierze od rodzajnika 'der' końcówkę -er."
   },
-
-
-
-
-
-
   "secretLandsQuestOne": {
     "title": "Podsumowanie",
     "description": "Trening mieszany: praca z rodzajnikiem nieokreślonym w Perfekt i Futur 1. Tematy: życie codzienne, miasto, transport, jedzenie.",
@@ -1056,9 +1049,6 @@
     "questFifteen": "Ułóż zdanie: Zobaczymy interesującą wystawę",
     "questFifteenTip": "Wystawa — rodzaj żeński (die). Rodzajnik 'eine' kończy się na -e, więc przymiotnik bierze od rodzajnika końcówkę -e."
   },
-
-
-
   "edgeImagesQuestOne": {
     "title": "Start",
     "description": "Trenujemy poprawną odmianę przymiotników po der, die, das.",
@@ -1584,10 +1574,6 @@
     "questFifteen": "Wpisz formę (lecker): Ich werde die ___ Pizza essen.",
     "questFifteenTip": "Akkusativ (r. żeński): rodzajnik 'die' jest podstawowy, przymiotnik bierze od rodzajnika końcówkę -e."
   },
-
-
-
-
   "timeGageQuestOne": {
     "title": "Poznawanie się i komunikacja",
     "description": "Ćwiczymy gramatykę w sytuacjach komunikacyjnych: od planów na spotkanie po opowieści o przeszłości.",
@@ -2092,8 +2078,6 @@
     "questFifteen": "Kupię bilet, jeśli będę mieć czas.",
     "questFifteenTip": "'Wenn' stawia czasownik na końcu."
   },
-
-
   "pastValleyQuestOne": {
     "title": "Podstawy Perfekt",
     "description": "Co zrobiłeś? Poznajemy czas przeszły: 'Kupiłem', 'Zrobiliśmy'.",
@@ -2431,7 +2415,6 @@
     "questFourteenTip": "singen — czasownik mocny. Dodajemy ge-, -en zostaje. Zmiana samogłoski (i na u).",
     "questFifteen": "Wybierz: Uprawiałem sport."
   },
-
   "actionValleyQuestOne": {
     "title": "Mnie, tobie, jemu",
     "description": "Ćwiczymy Dativ z zaimkami osobowymi. Komu pomagamy i komu dajemy prezenty?",
@@ -2798,7 +2781,6 @@
     "questFifteen": "Wybierz: Z kim rozmawiasz?",
     "questFifteenTip": "Dla osób używamy przyimek + pytanie (Mit wem?)."
   },
-
   "pluralLandQuestOne": {
     "title": "Podróż",
     "description": "Planujemy podróż, używając czasu Futur I. Uczymy się łączyć czas, miejsce i czynność.",
@@ -3100,8 +3082,6 @@
     "questFourteen": "Ułóż: Nie zapomnimy o święcie.",
     "questFifteen": "Wybierz poprawny wariant"
   },
-
-
   "orderValleyQuestOne": {
     "title": "Czasownik na koniec!",
     "description": "Ćwiczymy szyk wyrazów w zdaniach podrzędnych. Główna zasada: czasownik wędruje na sam koniec.",
@@ -3521,8 +3501,6 @@
     "questFifteen": "Posłuchaj i napisz zdanie",
     "questFifteenTip": "Przeczenie w 'es gibt' to 'kein'. Po 'dass' czasownik 'gibt' ucieka na sam koniec."
   },
-
-
   "pwa": {
     "title": "Zainstaluj Skillupgerman",
     "sub": "Dodaj aplikację do ekranu głównego, aby mieć szybki i wygodny dostęp!",
@@ -3639,7 +3617,9 @@
     "streak": "Seria zwycięstw",
     "clearWins": "Czyste zwycięstwa",
     "start": "Rozpocznij grę",
-    "info": "Kliknij poziom, aby zobaczyć jego statystyki."
+    "info": "Kliknij poziom, aby zobaczyć jego statystyki.",
+    "answer-placeholder": "Ułóż zdanie...",
+    "pending": "Oczekiwanie..."
   },
   "eventSessionPage": {
     "loading": "Ładowanie…",
@@ -3988,23 +3968,23 @@
     "text": "Ukryj"
   },
   "payPage": {
-    "title": "Wykorzystaj platformę w pełni",
+    "sale5": "Zniżka 3%",
+    "sale10": "Zniżka 6%",
+    "sale15": "Zniżka 15%",
+    "finalePrice": "RAZEM:",
+    "yourSale": "Twoja zniżka",
+    "title": "Wyciągnij maksimum z platformy",
     "description": "Nauka, nagrody, zadania, postępy i wiele więcej!",
     "compareLabelOne": "Funkcje",
-    "compareLabelTwo": "Darmowe",
+    "compareLabelTwo": "Bezpłatnie",
     "compareLabelThree": "Subskrypcja",
-    "getPremiumBtn": "Kup subskrypcję",
+    "getPremiumBtn": "Zdobądź",
     "month": "mies.",
-    "featureOne": "Materiał dydaktyczny",
-    "featureTwo": "Zapisywanie postępów",
-    "featureThree": "Osiągnięcia",
-    "featureFour": "Codzienne zadania",
-    "featureFive": "Wydarzenia sezonowe",
-    "featureSix": "Odbieranie nagród",
-    "featureSeven": "Testy sprawdzane przez AI",
-    "featureEight": "Lektor / nagranie głosowe",
-    "featureNine": "Pojedynki i ranking",
-    "featureTen": "Przyszłe funkcje"
+    "featureOne": "Nauka bez granic",
+    "featureTwo": "Przyszłe funkcje",
+    "featureThree": "Wsparcie twórców",
+    "featureFour": "Brak reklam",
+    "withoutDiscount": "Bez zniżki"
   },
   "useHeadApp": {
     "title": "Skillupgerman — Ucz się niemieckiego łatwo i ciekawie w formie gry",
@@ -4148,24 +4128,28 @@
   },
   "howToUse": {
     "title": "Jak korzystać",
-    "questOne": "Jak rozpocząć naukę?",
-    "answerOne": "Aby rozpocząć naukę niemieckiego, wystarczy się zarejestrować i utworzyć konto. Bez tego dostęp do zadań będzie zablokowany.",
+    "questOne": "Jak zacząć naukę?",
+    "answerOne": "Aby rozpocząć naukę niemieckiego, wystarczy się zarejestrować i założyć konto. Bez tego dostęp do zadań będzie zablokowany.",
     "questTwo": "Czym są wydarzenia sezonowe?",
-    "answerTwo": "Wydarzenia sezonowe to czasowe aktywności związane ze świętami. Zawierają specjalne zadania, tematyczne wyzwania i unikalne nagrody dostępne tylko przez ograniczony czas.",
-    "questThree": "Czym jest osiągnięcie?",
-    "answerThree": "Osiągnięcie to odznaka za wykonaną aktywność (postęp, poprawne odpowiedzi, zadania dzienne itp.).",
-    "questFour": "Czym są nagrody?",
-    "answerFour": "Nagrody są przyznawane za wykonanie określonych osiągnięć i wyświetlane w twoim profilu.",
-    "questFive": "Gdzie sprawdzić postęp w artykułach?",
-    "answerFive": "Na stronie głównej w 'Panelu uczestnika' wybierz 'Statystyka', a następnie postęp wybranej kategorii. Ważne: jeśli nie masz aktywnych tematów artykułów, statystyki nie będą widoczne.",
-    "questSix": "Czym jest Artiklus?",
-    "answerSix": "Artiklus to wewnętrzna waluta. Zdobywa się ją za poprawne odpowiedzi w zadaniu 'Praktyka artykułów' i za wykonywanie zadań w Językowych krainach. Można ją wydawać na dodatkowe próby.",
-    "questSeven": "Jak dostać się do rankingu?",
-    "answerSeven": "Trzeba zdobyć co najmniej poziom 2, grając w 'Praktykę artykułów' lub 'Językowe krainy'. Potem tabela rankingowa staje się dostępna.",
-    "questEight": "Czym są zadania codzienne?",
-    "answerEight": "To zadania tematyczne, które można wykonać raz dziennie. Można wykonać 3 zadania dziennie. Są dostępne na stronie głównej.",
-    "questNine": "Czym są wydarzenia?",
-    "answerNine": "To są tymczasowe wydarzenia, które odbywają się raz w roku. W aktywnym okresie dostępne są tematyczne zadania i nagrody. Poza zakresem dat sekcja jest niedostępna. Terminy wydarzeń można sprawdzić w „Kalendarzu wydarzeń” w Panelu uczestnika."
+    "answerTwo": "Wydarzenia sezonowe to ograniczone czasowo eventy powiązane ze świętami. Pojawiają się w nich specjalne misje, zadania tematyczne i unikalne nagrody, które są dostępne tylko przez określony czas.",
+    "questThree": "Co to jest osiągnięcie?",
+    "answerThree": "Osiągnięcie to wyróżnienie za wykonaną aktywność (postępy, prawidłowe odpowiedzi, zadania codzienne itp.).",
+    "questFour": "Co to są nagrody?",
+    "answerFour": "Nagrody są przyznawane za zdobycie określonych osiągnięć i są wyświetlane w Twoim panelu użytkownika.",
+    "questFive": "Gdzie mogę sprawdzić swoje postępy w rodzajnikach?",
+    "answerFive": "Na stronie głównej w „Panelu użytkownika” wybierz „Statystyki”, a następnie postęp w interesującej Cię kategorii. Ważne: jeśli nie masz aktywnych tematów związanych z rodzajnikami, statystyki nie będą wyświetlane.",
+    "questSix": "Co to jest Articlus?",
+    "answerSix": "Articlus to wewnętrzna waluta. Jest przyznawana za prawidłowe odpowiedzi w zadaniu „Praktyka rodzajników” oraz za wykonywanie zadań w Krainach Językowych. Można ją wydawać na kolejne próby.",
+    "questSeven": "Jak trafić do rankingu?",
+    "answerSeven": "Ranking maratonu rodzajników jest prowadzony raz na dwa tygodnie. Przez dwa tygodnie rywalizujesz z innymi uczestnikami. Po zakończeniu maratonu pierwsze trzy miejsca otrzymują osiągnięcia i nagrody!",
+    "questEight": "Co to są zadania codzienne?",
+    "answerEight": "Są to zadania tematyczne, które można wykonywać raz dziennie. W ciągu dnia można ukończyć maksymalnie 3 zadania. Są one dostępne na stronie głównej.",
+    "questNine": "Co to są wydarzenia?",
+    "answerNine": "Ograniczone czasowo wydarzenia, które odbywają się raz w roku. W okresie aktywności otwierają się zadania tematyczne i nagrody. Poza wyznaczonymi dniami sekcja jest niedostępna. Daty wydarzeń można sprawdzić w „Kalendarzu wydarzeń” w Panelu użytkownika.",
+    "questTen": "Co to są bakałararki?",
+    "answerTen": "Bakałarki to czapki studenckie (konfederatki) przyznawane za wykonywanie zadań codziennych. Dają one bonusy do rang oraz zniżki na naukę. Za niewykonanie zadań codziennych przewidziana jest kara.",
+    "questEleven": "Czy istnieje kara utraty czapek?",
+    "answerEleven": "Tak, za niewykonanie zadań codziennych przewidziana jest kara (3 czapki). Wykonaj przynajmniej jedno zadanie codzienne, a unikniesz kary. W przypadku nieobecności możesz kupić zatrzymanie czasu w wewnętrznym sklepie — zapobiegnie ono odebraniu Twoich czapek przez system kar!"
   },
   "accountManagement": {
     "title": "Zarządzanie kontem",
@@ -4177,22 +4161,23 @@
     "answerThree": "Na formularzu logowania wybierz 'Zapomniałeś hasła?' i postępuj zgodnie z instrukcjami. E-mail z linkiem do odzyskania hasła zostanie wysłany na adres podany przy rejestracji. Ważne: używaj prawdziwego adresu e-mail przy rejestracji."
   },
   "subscribe": {
-    "title": "Subskrypcja (Premium)",
-    "questOne": "Co daje Premium?",
-    "questOneStepOne": "1 Nagrania wszystkich słów i zdań — ćwicz rozumienie ze słuchu.",
-    "questOneStepTwo": "2 Nauka bez ograniczeń — ucz się dowolną ilość materiału dziennie.",
-    "questOneStepThree": "3 Dostęp do wszystkich testów z automatyczną oceną przez AI.",
-    "questOneStepFour": "4 Zadania audio i mówione do ćwiczenia mowy.",
-    "questOneStepFive": "5 Ekskluzywne materiały i ćwiczenia niedostępne w wersji darmowej.",
-    "questOneStepSix": "6 Wsparcie twórców — Premium pomaga rozwijać projekt, dodawać nowe zadania i ulepszać funkcje. Naszym celem jest uczynić naukę niemieckiego dostępną i przyjemną. Tworzymy atmosferę interakcji, gier i rywalizacji, aby nauka była przygodą, do której chce się wracać każdego dnia!",
-    "questTwo": "Jak anulować Premium?",
+    "title": "Subskrypcja (Plus)",
+    "questOne": "Co daje subskrypcja Plus?",
+    "questOneStepOne": "1 Nagrania audio dla wszystkich słów i zdań — ćwicz rozumienie ze słuchu.",
+    "questOneStepTwo": "2 Nauka bez ograniczeń — przerabiaj dowolną ilość materiału każdego dnia.",
+    "questOneStepThree": "3 Dostęp do wszystkich testów z automatycznym sprawdzaniem i oceną przez AI.",
+    "questOneStepFour": "4 Zadania audio i mówione do trenowania mowy potocznej.",
+    "questOneStepFive": "5 Ekskluzywne materiały i ćwiczenia niedostępne w wersji bezpłatnej.",
+    "questOneStepSix": "6 Wsparcie twórców — pomaga nam to rozwijać projekt, tworzyć nowe zadania i ulepszać funkcjonalności dla wszystkich uczniów. Naszym celem jest sprawienie, by nauka niemieckiego była przystępna, a co najważniejsze — wciągająca. Tworzymy atmosferę interakcji, gier i rywalizacji, aby nauka była przygodą, do której chce się wracać każdego dnia!",
+    "questTwo": "Jak anulować Plus?",
     "questTwoStepOne": "Zaloguj się na swoje konto.",
-    "questTwoStepTwo": "Przejdź do 'Profilu'.",
-    "questTwoStepThree": "Otwórz 'Zarządzanie kontem'.",
-    "questTwoStepFour": "Kliknij 'Anuluj subskrypcję'.",
-    "note": "Dostęp pozostanie do końca opłaconego okresu.",
-    "questThree": "Czy jest zwrot za niewykorzystane dni?",
-    "answerThree": "Obecnie zwrot za niewykorzystane dni nie jest dostępny."
+    "questTwoStepTwo": "Przejdź do sekcji „Panel użytkownika”.",
+    "questTwoStepThree": "Przejdź do sekcji „Ustawienia”.",
+    "questTwoStepFour": "Otwórz podsekcję „Zarządzanie kontem”.",
+    "questTwoStepFive": "Kliknij „Anuluj subskrypcję”.",
+    "note": "Po anulowaniu subskrypcji dostęp pozostanie aktywny do końca opłaconego okresu. Ważne: subskrypcję należy anulować na tej samej platformie, na której została opłacona (w aplikacji na iOS, Androidzie lub na stronie internetowej).",
+    "questThree": "Czy przysługuje zwrot pieniędzy za pozostałe dni?",
+    "answerThree": "Zwrot pieniędzy za pozostałe dni nie jest przewidziany."
   },
   "daily": {
     "first": "Naucz się 5 słów we wszystkich trybach: Praktyka rodzajników",
@@ -4949,7 +4934,10 @@
     "start": "Początek:",
     "middle": "Średni wynik:",
     "share": "Udostępnij",
+    "cancel": "Anuluj",
     "delete": "Usuń",
+    "deleteResultTitle": "Usunąć wynik?",
+    "textModal": "Czy na pewno chcesz usunąć ten egzamin? Tej operacji не można cofnąć.",
     "sent": "Test wysłany",
     "sended": "Już wysłałeś ten test",
     "error": "Nie udało się udostępnić egzaminu"
@@ -8066,7 +8054,9 @@
     "description": "Chroni Twoje birety przed karami"
   },
   "cardSales": {
+    "title3": "Zniżka 3%",
     "title5": "Zniżka 5%",
+    "title6": "Zniżka 6%",
     "title10": "Zniżka 10%",
     "title15": "Zniżka 15%"
   },
@@ -8115,8 +8105,8 @@
     "exam": "Znajomi"
   },
   "cabinetSidebar": {
-    "valueOne": "Parametry konta",
-    "valueTwo": "Archiwum egzaminów",
+    "valueOne": "Konto",
+    "valueTwo": "Egzaminy",
     "valueThree": "Sklep",
     "valueFour": "Ustawienia"
   },
@@ -8136,9 +8126,11 @@
     "ach": "Powiadomienia o osiągnięciach",
     "themeBtn": "Motyw",
     "snowFall": "Opady śniegu",
-    "language": "Język interfejsu"
+    "language": "Język interfejsu",
+    "profileData": "Dane profilu"
   },
   "cabinet": {
+    "plusCanceled": "PLUS anulowany",
     "important": "WAŻNE!!!",
     "importantText": "Podczas usuwania konta subskrypcja nie zostaje anulowana. Przed usunięciem anuluj subskrypcję.",
     "cancelPremium": "Anulować subskrypcję?",
@@ -8321,7 +8313,8 @@
     "guessed": "Zagadnione słowo to:",
     "tryAgain": "Spróbuj ponownie",
     "btnToMain": "Do głównej",
-    "placeholder": "Wpisz całe słowo"
+    "placeholder": "Wpisz całe słowo",
+    "wrong": "Niepoprawnie! Prawidłowo:"
   },
   "preposition": {
     "title": "Wszystko o niemieckich przyimkach",
@@ -9249,7 +9242,9 @@
     "languagesLands": "Krainy Językowe",
     "describePicture": "Opis Obrazków",
     "fight": "Wszechświat Niemieckiego",
-    "audio": "Zadania Audio"
+    "audio": "Zadania Audio",
+    "textTask": "Teksty",
+    "speak": "Ćwiczenia konwersacyjne"
   },
   "underSub": {
     "prev": "Wprowadzenie",
@@ -9479,33 +9474,97 @@
   "nameMap": {
     "Furniture": "Meble",
     "Animals": "Zwierzęta",
+    "Birds": "Ptaki",
+    "SeaAnimals": "Zwierzęta morskie",
+    "Insects": "Owady",
+    "Savanna": "Sawanna",
     "Clothes": "Ubrania",
+    "Shoes": "Buty",
     "Food": "Jedzenie",
-    "Body": "Części ciała",
+    "SweetEat": "Słodycze",
+    "MilkEat": "Produkty mleczne",
+    "Vegetables": "Warzywa",
+    "Fruits": "Owoce",
+    "Drinks": "Napoje",
+    "Body": "Ciało",
     "Professions": "Zawody",
     "Transport": "Transport",
     "Colors": "Kolory",
     "Nature": "Natura",
+    "Weather": "Pogoda",
+    "Landscape": "Krajobraz",
     "Home": "Dom",
     "Zeit": "Czas",
-    "City": "Miasto",
+    "CityBuildings": "Budynki miejskie",
+    "CityInfrastructure": "Infrastruktura miejska",
     "School": "Szkoła",
     "DaysAndMonths": "Dni i miesiące",
     "Toys": "Zabawki",
-    "CommonItems": "Powszechne przedmioty",
-    "BathroomItems": "Przedmioty łazienkowe",
+    "CommonItems": "Przedmioty codzienne",
+    "BathroomItems": "Artykuły łazienkowe",
     "Kosmetik": "Kosmetyki",
     "Familie": "Rodzina",
     "Emotions": "Emocje",
-    "Werkzeuge": "Narzędzia",
     "Kitchen": "Kuchnia",
     "Health": "Zdrowie",
-    "Sport": "Sport",
-    "SportEquipment": "Sprzęt fitness",
+    "SportBasic": "Sporty podstawowe",
+    "SportCombatWinter": "Sporty zimowe i walki",
+    "SportEvents": "Wydarzenia sportowe",
+    "SportLife": "Życie sportowe",
+    "SportEquipment": "Sprzęt sportowy",
+    "TravelDocuments": "Dokumenty podróżne",
+    "Tourism": "Turystyka",
     "Travel": "Podróże",
+    "MusicInstruments": "Instrumenty muzyczne",
     "Musik": "Muzyka",
-    "Amount": "Ilość",
-    "Informatik": "Informatyka"
+    "Amount": "Ilość i miary",
+    "Hardware": "Sprzęt komputerowy",
+    "Software": "Oprogramowanie",
+    "Internet": "Internet",
+    "WinterHolidays": "Święta zimowe",
+    "FamilyAndReligious": "Święta rodzinne i religijne",
+    "PersonalCelebrations": "Uroczystości osobiste",
+    "FestivalsAndDecor": "Festiwale i dekoracje",
+    "DwellingTypes": "Rodzaje mieszkań",
+    "Rooms": "Pokoje",
+    "ConstructionAndDetails": "Budownictwo i detale",
+    "CoreFamily": "Najbliższa rodzina",
+    "ExtendedFamily": "Dalsza rodzina",
+    "Relationships": "Relacje",
+    "HandTools": "Narzędzia ręczne",
+    "PowerTools": "Elektronarzędzia",
+    "ConsumablesAndSafety": "Materiały eksploatacyjne i BHP",
+    "JobOffice": "Praca w biurze",
+    "JobTech": "Zawody techniczne",
+    "JobMed": "Zawody medyczne",
+    "JobEdu": "Edukacja",
+    "JobService": "Usługi",
+    "CityTransport": "Transport miejski",
+    "TravelTransport": "Transport podróżny",
+    "usualClothes": "Ubrania codzienne",
+    "winterClothes": "Ubrania zimowe",
+    "emotionsPositive": "Emocje",
+    "emotionsNegative": "Emocje 2"
+  },
+  "categoryWords": {
+    "nature": "Przyroda",
+    "animals": "Zwierzęta",
+    "food": "Jedzenie",
+    "people": "Człowiek",
+    "family": "Rodzina",
+    "dailyRoutine": "Życie codzienne",
+    "house": "Dom",
+    "city": "Miasto",
+    "school": "Szkoła",
+    "professions": "Zawody",
+    "construction": "Budownictwo",
+    "clothes": "Odzież",
+    "holidays": "Święta",
+    "sport": "Sport",
+    "music": "Muzyka",
+    "travel": "Podróże",
+    "informatics": "Informatyka",
+    "abstract": "Tematy abstrakcyjne"
   },
   "modes": {
     "themeTitle": "Tematy nauki rodzajników",
@@ -9717,7 +9776,9 @@
     "rank_5": "Kapitan",
     "rank_6": "Strażnik",
     "rank_7": "Legenda",
+    "sale3": "Zniżka 3%",
     "sale5": "Zniżka 5%",
+    "sale6": "Zniżka 6%",
     "sale10": "Zniżka 10%",
     "sale15": "Zniżka 15%"
   },
@@ -9828,7 +9889,8 @@
     "audio": "Popraw swoje rozumienie ze słuchu в języku niemieckim, wykonując zadania audio",
     "images": "Podszkol umiejętność opisywania obrazków! Wybierz temat, aby zacząć",
     "settings": "Ustawienia konta",
-    "achievements": "Twoja kolekcja wszystkich zdobytych osiągnięć i nagród za Twoje postępy"
+    "achievements": "Twoja kolekcja wszystkich zdobytych osiągnięć i nagród za Twoje postępy",
+    "textTask": "Uzupełniaj luki w tekstach i poprawiaj swój niemiecki"
   },
   "imageDescription": {
     "listen": "Posłuchaj dialogu!",
@@ -9872,5 +9934,662 @@
     "check": "WYNIK:",
     "again": "Ponowny wylot",
     "constellations": "Opuść gwiazdozbiór"
+  },
+  "textTasksTip": {
+    "title": "Zadania tekstowe",
+    "description": "Aby wykonać zadanie, przeciągnij słowo w puste miejsce lub kliknij słowo, a następnie pole, w którym chcesz je dodać."
+  },
+  "textThemes": {
+    "basic": "Zapoznanie",
+    "routine": "Codzienna rutyna",
+    "shopping": "Zakupy",
+    "work": "Praca i nauka",
+    "hobby": "Hobby",
+    "objects": "Przedmioty i rzeczy",
+    "travel": "Podróże"
+  },
+  "themeTextTitleBasic_A1": {
+    "basicOne": "Formalne zapoznanie",
+    "basicTwo": "Nieformalne zapoznanie",
+    "basicThree": "Plany na dzień",
+    "basicFour": "Plany na wieczór",
+    "basicFive": "W weekend",
+    "basicSix": "Uprawianie sportu",
+    "basicSeven": "Wspólne gotowanie",
+    "basicEight": "Wyjazd do miasta",
+    "basicNine": "Wspólna nauka",
+    "basicTen": "Zajęcia muzyczne"
+  },
+  "themeTextTitleHobby_A1": {
+    "hobbyOne": "Gra w piłkę nożną",
+    "hobbyTwo": "Fotografia",
+    "hobbyThree": "Gra na gitarze",
+    "hobbyFour": "Pływanie",
+    "hobbyFive": "Gotowanie",
+    "hobbySix": "Podróże",
+    "hobbySeven": "Czytanie",
+    "hobbyEight": "Ogrodnictwo",
+    "hobbyNine": "Taniec",
+    "hobbyTen": "Nauka języków"
+  },
+  "themeTextTitleRoutine_A1": {
+    "routineOne": "Plany na dzień",
+    "routineTwo": "Plany na wieczór",
+    "routineThree": "W weekend",
+    "routineFour": "Uprawianie sportu",
+    "routineFive": "Wspólne gotowanie",
+    "routineSix": "Wyjazd do miasta",
+    "routineSeven": "Wspólna nauka",
+    "routineEight": "Zajęcia muzyczne",
+    "routineNine": "Picie kawy",
+    "routineTen": "W parku"
+  },
+  "themeTextTitleShopping_A1": {
+    "shoppingOne": "W supermarkecie",
+    "shoppingTwo": "Szukanie ubrań",
+    "shoppingThree": "W piekarni",
+    "shoppingFour": "Zakupy online",
+    "shoppingFive": "Na targu",
+    "shoppingSix": "W sklepie obuwniczym",
+    "shoppingSeven": "Kupowanie mebli",
+    "shoppingEight": "Na pchlim targu",
+    "shoppingNine": "Jedzenie na wieczór",
+    "shoppingTen": "W księgarni"
+  },
+  "themeTextTitleTravel_A1": {
+    "travelOne": "Pakowanie walizki",
+    "travelTwo": "W dworcu",
+    "travelThree": "W hotelu",
+    "travelFour": "Wakacje nad morzem",
+    "travelFive": "Zwiedzanie miasta",
+    "travelSix": "W restauracji",
+    "travelSeven": "Na lotnisku",
+    "travelEight": "W górach",
+    "travelNine": "Kupowanie pamiątek",
+    "travelTen": "Powrót do domu"
+  },
+  "themeTextTitleWork_A1": {
+    "workOne": "Mój dzień pracy",
+    "workTwo": "Szukanie dokumentu",
+    "workThree": "W uniwersytecie",
+    "workFour": "Moja praca",
+    "workFive": "Zadanie domowe",
+    "workSix": "Moja praca na budowie",
+    "workSeven": "Praca z domu",
+    "workEight": "Praca w magazynie",
+    "workNine": "Spotkanie",
+    "workTen": "Przerwa obiadowa"
+  },
+  "themeTextTitleBasic_A2": {
+    "basicOne": "Na kursie niemieckiego",
+    "basicTwo": "Partner tandemowy",
+    "basicThree": "Na uniwersytecie",
+    "basicFour": "W bibliotece",
+    "basicFive": "Projekt grupowy",
+    "basicSix": "Wyjazd językowy",
+    "basicSeven": "Nowy uczeń",
+    "basicEight": "Kurs online",
+    "basicNine": "Grupa studyjna",
+    "basicTen": "Partner do egzaminu"
+  },
+  "themeTextTitleHobby_A2": {
+    "hobbyOne": "Wędrówka w góry",
+    "hobbyTwo": "Fotografia",
+    "hobbyThree": "Rysowanie",
+    "hobbyFour": "Taniec",
+    "hobbyFive": "Piłka nożna",
+    "hobbySix": "Pływanie",
+    "hobbySeven": "Gry planszowe",
+    "hobbyEight": "Gry planszowe i logika",
+    "hobbyNine": "Szachy",
+    "hobbyTen": "Filmy"
+  },
+  "themeTextTitleRoutine_A2": {
+    "routineOne": "Nowa sąsiadka",
+    "routineTwo": "Spotkanie w kawiarni",
+    "routineThree": "Na imprezie",
+    "routineFour": "Nowi koledzy",
+    "routineFive": "W klubie sportowym",
+    "routineSix": "Spotkanie w pociągu",
+    "routineSeven": "W parku z psem",
+    "routineEight": "Szukanie partnera",
+    "routineNine": "Na koncercie",
+    "routineTen": "Nowa współlokatorka"
+  },
+  "themeTextTitleShopping_A2": {
+    "shoppingOne": "W supermarkecie",
+    "shoppingTwo": "Kupowanie ubrań",
+    "shoppingThree": "Na targu",
+    "shoppingFour": "Zakupy online",
+    "shoppingFive": "W sklepie meblowym",
+    "shoppingSix": "W piekarni",
+    "shoppingSeven": "Kupowanie obuwia",
+    "shoppingEight": "Prezent",
+    "shoppingNine": "W sklepie elektronicznym",
+    "shoppingTen": "Duże zakupy"
+  },
+  "themeTextTitleTravel_A2": {
+    "travelOne": "Przygotowanie do podróży",
+    "travelTwo": "Na lotnisku",
+    "travelThree": "Przyjazd do hotelu",
+    "travelFour": "Na plaży",
+    "travelFive": "Wycieczka",
+    "travelSix": "W restauracji",
+    "travelSeven": "Pytanie o drogę",
+    "travelEight": "Problemy na urlopie",
+    "travelNine": "Kupowanie prezentów",
+    "travelTen": "Powrót do domu"
+  },
+  "themeTextTitleWork_A2": {
+    "workOne": "Rozmowa kwalifikacyjna",
+    "workTwo": "Zadanie domowe",
+    "workThree": "Pierwszy dzień pracy",
+    "workFour": "Prezentacja",
+    "workFive": "Podnoszenie kwalifikacji",
+    "workSix": "W domowym biurze",
+    "workSeven": "Staż",
+    "workEight": "Egzamin",
+    "workNine": "Kurs językowy",
+    "workTen": "Pierwszy klient"
+  },
+  "themeTextTitleBasic_B1": {
+    "basicOne": "Na imprezie",
+    "basicTwo": "Pierwsza randka",
+    "basicThree": "Tandem językowy",
+    "basicFour": "Spotkanie w pociągu",
+    "basicFive": "Nowy kolega",
+    "basicSix": "Na seminarium",
+    "basicSeven": "Na spacerze z psem",
+    "basicEight": "Nowi sąsiedzi",
+    "basicNine": "W klubie sportowym",
+    "basicTen": "W hostelu"
+  },
+  "themeTextTitleHobby_B1": {
+    "hobbyOne": "Nocna fotografia",
+    "hobbyTwo": "Alpinizm",
+    "hobbyThree": "Gra na pianinie",
+    "hobbyFour": "Tworzenie gier",
+    "hobbyFive": "Windsurfing",
+    "hobbySix": "Gra w teatrze",
+    "hobbySeven": "Łucznictwo",
+    "hobbyEight": "Renowacja motocykli",
+    "hobbyNine": "Pieczenie",
+    "hobbyTen": "Geocaching"
+  },
+  "themeTextTitleRoutine_B1": {
+    "routineOne": "Wczesny poranek",
+    "routineTwo": "Śniadanie i droga do pracy",
+    "routineThree": "W biurze",
+    "routineFour": "Przerwa obiadowa",
+    "routineFive": "Koniec dnia pracy",
+    "routineSix": "Sport po pracy",
+    "routineSeven": "Kolacja i odpoczynek",
+    "routineEight": "Przygotowanie do snu",
+    "routineNine": "Wieczorny spacer",
+    "routineTen": "Sprzątanie domu"
+  },
+  "themeTextTitleShopping_B1": {
+    "shoppingOne": "Kupowanie ubrań",
+    "shoppingTwo": "W supermarkecie",
+    "shoppingThree": "Kupowanie sprzętu online",
+    "shoppingFour": "Na pchlim targu",
+    "shoppingFive": "Szukanie prezentu",
+    "shoppingSix": "Zwrot towaru",
+    "shoppingSeven": "W sklepie budowlanym",
+    "shoppingEight": "W aptece",
+    "shoppingNine": "W sklepie zoologicznym",
+    "shoppingTen": "W second-handzie"
+  },
+  "themeTextTitleTravel_B1": {
+    "travelOne": "Wyjazd do miasta",
+    "travelTwo": "Urlop na plaży",
+    "travelThree": "Wędrówka w góry",
+    "travelFour": "Road trip",
+    "travelFive": "Podróż po Azji",
+    "travelSix": "Rejs",
+    "travelSeven": "Camping",
+    "travelEight": "Zimowy urlop",
+    "travelNine": "Wyjazd językowy",
+    "travelTen": "Safari"
+  },
+  "themeTextTitleWork_B1": {
+    "workOne": "Rozmowa o pracę",
+    "workTwo": "Zarządzanie projektem",
+    "workThree": "Semestr za granicą",
+    "workFour": "Prezentacja w biurze",
+    "workFive": "Przygotowanie do egzaminów",
+    "workSix": "Obsługa klienta",
+    "workSeven": "Praca magisterska",
+    "workEight": "Podróż służbowa",
+    "workNine": "Staż",
+    "workTen": "Kursy"
+  },
+  "textTaskSession": {
+    "allUsed": "Wszystkie słowa zostały użyte!",
+    "errorText": "Tekst nie został wybrany",
+    "back": "Powrót do listy"
+  },
+  "exitSessionModal": {
+    "text": "Szkoda zatrzymywać się w połowie drogi! Jeśli zamkniesz teraz kartę, Twoje postępy nie zostaną zapisane.",
+    "continueLesson": "Kontynuuj lekcję",
+    "cancelLesson": "Wyjdź"
+  },
+  "premiumBannerText": {
+    "text": "Wykorzystaj w pełni platformę, przyspiesz swoją naukę."
+  },
+  "rulesModal": {
+    "text": "Wskazówka gramatyczna jest dostępna po udzieleniu odpowiedzi!"
+  },
+  "footerNavLabel": {
+    "learn": "Nauka",
+    "games": "Gry",
+    "home": "Główna",
+    "events": "Wydarzenia",
+    "cabinet": "Konto"
+  },
+  "speakTopics": {
+    "speak": "Zapoznanie i komunikacja",
+    "food": "Jedzenie i zakupy",
+    "transport": "Wyjazdy i transport",
+    "city": "Usługi miejskie i życie codzienne",
+    "health": "Zdrowie",
+    "work": "Praca i kariera",
+    "auto": "Samochód i droga"
+  },
+  "speakThemes": {
+    "firstmeet": "Zapoznanie",
+    "acquaintance": "Zapoznanie 2",
+    "secondmeet": "Spotkanie",
+    "family_talk": "Rozmowa",
+    "weekend_plans": "Plany",
+    "friend_call": "Telefon",
+    "hobby_talk": "Hobby",
+    "party_talk": "Impreza",
+    "cafe_order": "Zamawianie kawy",
+    "restaurant_dinner": "Restauracja",
+    "store_checkout": "Przy kasie",
+    "order_eat": "Zamawianie jedzenia",
+    "consultation_talk": "Konsultacja",
+    "train_station": "Na dworcu",
+    "train_ticket": "Kontrola biletu",
+    "taxi_berlin": "Taxi",
+    "bus_talk": "W autobusie",
+    "hotel_checkin": "Hotel",
+    "border_check": "Granica",
+    "airport_talk": "Lotnisko",
+    "info_talk": "Punkt informacyjny",
+    "bank_account": "Bank",
+    "apartment_rent": "Wynajem",
+    "clothes_shopping": "Zakupy",
+    "shopping": "Zakupy 2",
+    "post_office": "Poczta",
+    "police_talk": "Policja",
+    "barbershop": "Fryzjer",
+    "doctor_visit": "Wizyta u lekarza",
+    "pharmacy_vitamins": "Apteka",
+    "insurance": "Ubezpieczenie",
+    "at_doctor": "U lekarza",
+    "dentist": "Dentysta",
+    "veterinary": "Weterynarz",
+    "job_looking": "Szukanie pracy",
+    "job_interview": "Rozmowa kwalifikacyjna",
+    "bos_talk": "Rozmowa z szefem",
+    "vacation": "Urlop",
+    "salary_talk": "Wynagrodzenie",
+    "dismissal_talk": "Zwolnienie",
+    "library": "Biblioteka",
+    "refusal_invite": "Odrzucenie zaproszenia",
+    "road_assistance": "Awaria samochodu",
+    "oil_change": "Wymiana oleju",
+    "car_buying": "Zakup samochodu",
+    "police_control": "Przekroczenie prędkości",
+    "gas_station": "Stacja benzynowa",
+    "buying_fruit": "Kupowanie owoców",
+    "bakery": "Piekarnia",
+    "complaint": "Reklamacja w restauracji",
+    "bus_stop": "Przystanek autobusowy",
+    "buying_glasses": "Optyk",
+    "emergency_call": "Połączenie alarmowe",
+    "first_day": "Dzień orientacyjny / Pierwszy dzień",
+    "client_talk": "Rozmowa z klientem",
+    "car_rental": "Wynajem samochodu",
+    "ask_road": "Pytanie o drogę",
+    "hotel_issue": "Problem w hotelu"
+  },
+  "speakIndexPage": {
+    "title": "Ćwiczenia konwersacyjne",
+    "bannerText": "Ćwicz umiejętności mówienia na prawdziwych przykładach",
+    "modalTitle": "Ćwiczenia konwersacyjne",
+    "modalText": "Rozwijaj umiejętności komunikacyjne w prawdziwych dialogach! Możesz wybrać gotową odpowiedź z proponowanych, wpisać ją ręcznie z klawiatury lub po prostu powiedzieć na głos, naciskając przycisk mikrofonu."
+  },
+  "rankModal": {
+    "title": "NOWA RANDA",
+    "rankedLabel": "Ranga",
+    "accept": "AKCEPTUJ"
+  },
+  "premiumBanner": {
+    "textBanner": "Wykorzystaj w pełni platformę, przyspiesz swoją naukę."
+  },
+  "netWork": {
+    "successTitle": "Połączenie przywrócone!",
+    "notSuccessTitle": "Ups! Brak internetu",
+    "successText": "Wracamy do pracy...",
+    "notSuccessText": "Oczekiwanie na połączenie z siecią..."
+  },
+  "termsBlock": {
+    "first": "Rejestrując się, akceptujesz",
+    "second": "Regulamin",
+    "third": "oraz",
+    "fourth": "Politykę prywatności"
+  },
+  "languagePage": {
+    "title": "Język aplikacji",
+    "placeholder": "Szukaj języka...",
+    "notfound": "Nic nie znaleziono",
+    "further": "Kontynuuj"
+  },
+  "statistics": {
+    "title": "Twoje statystyki i postępy w nauce słówek oraz przechodzeniu poziomów tematycznych"
+  },
+  "restoreComputed": {
+    "restoring": "Przywracanie...",
+    "restore": "Przywróć zakupy."
+  },
+  "submitComputed": {
+    "sync": "Synchronizacja...",
+    "getPlus": "Kup PLUS"
+  },
+  "pay": {
+    "banner": "Pełen dostęp do wszystkich funkcji aplikacji",
+    "sales": "Zastosuj zniżki zdobyte za aktywność",
+    "triggerToastSuccess": "Zakup został przywrócony!",
+    "triggerToastNotFound": "Nie znaleziono aktywnych subskrypcji",
+    "triggerToastError": "Błąd podczas przywracania",
+    "triggerToastIsPlus": "Masz już aktywny profil PLUS!"
+  },
+  "examSession": {
+    "ready": "Gotowy na test?",
+    "cardTextOne": "Czeka Cię",
+    "cardTextTwo": "etapów i",
+    "cardTextThree": "zadań.",
+    "begin": "Rozpocznij test",
+    "listen": "Posłuchaj nagrania:",
+    "check": "Sprawdzanie...",
+    "send": "Wyślij odpowiedź",
+    "record": "Nagrywanie",
+    "great": "Gratulacje!",
+    "result": "Twój wynik dla poziomu",
+    "save": "Zapisywanie postępu...",
+    "correctly": "Poprawnie:",
+    "back": "Wróć",
+    "interrupt": "Przerwać test?",
+    "modalText": "Postęp tej próby zostanie utracony. Czy na pewno chcesz kontynuować?",
+    "continue": "Kontynuuj",
+    "leave": "Wyjdź",
+    "placeHolder": "Napisz swoją odpowiedź tutaj...",
+    "say": "Powiedz:"
+  },
+  "speakSession": {
+    "title": "Praktyka rozmawiania",
+    "words": "Słowa",
+    "wordsText": "Naucz się lub powtórz słówka przed rozpoczęciem rozmowy. To pomoże Ci poczuć się pewniej!",
+    "learn": "Rozpocznij",
+    "dialogue": "Dialog",
+    "dialogueText": "Ćwicz wymowę i mówienie, słuchaj rozmówcy i wybieraj odpowiedzi w interaktywnym formacie.",
+    "back": "Wstecz",
+    "goodJob": "Dobra robota!",
+    "goodJobTitle": "Ukończyłeś ten dialog. Tak trzymać!",
+    "list": "Wróć",
+    "repeat": "Powtórz",
+    "start": "Rozpocznij naukę",
+    "choice": "Wybierz odpowiedź:",
+    "placeHolder": "Napisz lub powiedz odpowiedź...",
+    "hoverVoice": "Powiedz na głos",
+    "end": "Zakończ",
+    "further": "Dalej"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "Spróbować ponownie?",
+    "textPartOne": "Odpowiedziałeś poprawnie",
+    "textPartTwo": "Kup próbę, aby kontynuować.",
+    "price": "Cena:",
+    "youHave": "Masz:",
+    "showADS": "Oglądaj reklamę",
+    "buyBy": "Kup za",
+    "toThemes": "Do tematów",
+    "repeat": "Powtórz"
+  },
+  "freezeStatus": {
+    "active": "Zamrożenie czasu jest aktywne",
+    "inactive": "Zamrożenie czasu jest nieaktywne"
+  },
+  "guessArticle": {
+    "correct": "Prawidłowo",
+    "incorrect": "Nieprawidłowo, prawidłowo to"
+  },
+  "stripeCancel": {
+    "cancelSub": "Anulowanie subskrypcji",
+    "cancelPayment": "Płatność anulowana",
+    "errorAuth": "Błąd autoryzacji",
+    "pleaseAuth": "Zaloguj się, aby wykonać tę operację.",
+    "canceling": "Anulowanie subskrypcji...",
+    "canceledSub": "Subskrypcja anulowana",
+    "errorCancelSub": "Błąd podczas anulowania",
+    "errorCancelResponse": "Nie udało się anulować subskrypcji.",
+    "serverError": "Błąd serwera",
+    "serverOffline": "Utracono połączenie z serwerem. Spróbuj ponownie później.",
+    "processInterrupted": "Proces płatności został przerwany. Twoja karta nie została obciążona.",
+    "tryAgain": "Spróbuj ponownie",
+    "backToMain": "Na główną",
+    "extensionCanceled": "Automatyczne odnawianie zostanie wyłączone. Dostęp pozostanie aktywny do końca opłaconego okresu.",
+    "extensionCanceledCanBack": "Twoja subskrypcja nie będzie już odnawiana. Możesz wrócić w dowolnym momencie!",
+    "confirmCancel": "Tak, anuluj",
+    "notConfirmCancel": "Nie anuluj",
+    "backToMainPage": "Wróć do strony głównej"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "Potwierdzanie transakcji...",
+    "sessionNotFound": "Nie znaleziono sesji płatności",
+    "authPlease": "Zaloguj się, aby ukończyć",
+    "isPremium": "Dostęp Premium został aktywowany",
+    "errorActivation": "Błąd aktywacji",
+    "errorServer": "Błąd połączenia z serwerem",
+    "success": "Teraz masz dostęp do wszystkich funkcji serwisu.",
+    "unsuccess": "Wystąpił problem techniczny podczas przetwarzania.",
+    "toMain": " Na główną",
+    "redirectSuccess": "Przekierowanie za kilka sekund..."
+  },
+  "installApp": {
+    "stayInBrowser": "Kontynuuj w przeglądarce",
+    "promoSubTitle": " Z aplikacją Skillupgerman nauka niemieckiego jest o wiele wygodniejsza."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Przechodź dialogi. Słuchaj, wybieraj opcje odpowiedzi i ćwicz wymowę",
+    "words": "Naucz się kluczowych słów i zwrotów, aby z łatwością zrozumieć każdą kwestię w dialogu"
+  },
+  "newsTitleBanner": {
+    "title": "Artykuły o specyfice języka niemieckiego, analizy tematów i przydatna wiedza do podnoszenia poziomu.",
+    "badgeArticle": "W świecie Skillupgerman"
+  },
+  "newsArticleOne": {
+    "first": "Zajadasz stres lub smutek czekoladą? Łap der Kummerspeck.",
+    "second": "To te same dodatkowe kilogramy, które natrętnie pojawiają się z powodu zmartwień. Dosłownie – „bekon smutku”.",
+    "third": "Składa się z der Kummer (smutek) i der Speck (bekon). Zgodnie z oczekiwaniami, ten „bekon” przyjmuje swój rodzaj od rodzajnika ostatniego rzeczownika.",
+    "cta": "Przyznaj się, miałeś kiedyś Kummerspeck?"
+  },
+  "newsArticleTwo": {
+    "first": "Znasz ten święty spokój, kiedy dzień pracy wreszcie dobiega końca? To der Feierabend.",
+    "second": "Dosłownie – „świąteczny wieczór”. Wyjątkowy czas odpoczynku, w którym myślenie o pracy jest wręcz zabronione.",
+    "third": "Składa się z die Feier (święto) i der Abend (wieczór). Rodzaj tego przyjemnego czasu pochodzi od rodzajnika ostatniego rzeczownika — der Abend.",
+    "cta": "Czy w pracy zawsze czekasz na Feierabend?"
+  },
+  "newsArticleThree": {
+    "first": "Język niemiecki to jedyny duży język na świecie, w którym absolutnie wszystkie rzeczowniki pisze się wielką literą, niezależnie od ich miejsca w zdaniu.",
+    "second": "Nieważne, czy mowa o człowieku, psie, zwykłym krześle czy abstrakcyjnej myśli — pierwsza litera zawsze będzie wielka. Początkujących podczas nauki często to dezorientuje.",
+    "third": "Z drugiej strony ta zasada ma ogromny plus: czytając niemiecki tekst, zawsze bezbłędnie i na pierwszy rzut oka możesz określić, gdzie dokładnie w zdaniu ukrył się przedmiot.",
+    "cta": "Wygodna zasada?"
+  },
+  "newsArticleFour": {
+    "first": "Jedną z najbardziej zaskakujących rzeczy podczas nauki niemieckiego jest liczenie. Niemcy wymawiają liczby dwucyfrowe od końca.",
+    "second": "Na przykład liczbę dwadzieścia jeden wymawiają jako 'jeden i dwadzieścia'. Z tego powodu słuchając niemieckiej mowy, trzeba w myślach odwracać cyfry w głowie.",
+    "third": "Ta lingwistyczna sztuczka często burzy schematy początkującym, zwłaszcza gdy trzeba szybko zapisać ze słuchu czyjś numer telefonu lub cenę w sklepie.",
+    "cta": "Szybko przyzwyczaiłeś się do takiego liczenia, czy wciąż się mylisz?"
+  },
+  "newsArticleFive": {
+    "first": "W języku niemieckim istnieje surowa zasada dotycząca szyku wyrazów, która zmusza Cię do wysłuchania rozmówcy do samego ostatniego słowa.",
+    "second": "W określonych typach zdań najważniejszy czasownik, który wyraża czynność, wędruje na sam, samiutki koniec.",
+    "third": "Możesz zbudować długie zdanie, wymienić mnóstwo szczegółów, ale Twój słuchacz nie dowie się, czy kupiłeś, sprzedałeś, popsułeś czy zgubiłeś daną rzecz, dopóki nie wypowiesz finałowego słowa.",
+    "cta": "Czy ciężko jest przestawić swoje myślenie na taki szyk wyrazów?"
+  },
+  "newsArticleSix": {
+    "first": "Podczas nauki niemieckiego prędzej czy później na pewno ogarnie Cię panika na widok długości niektórych słów. Sekret tkwi w tym, że w niemieckim oficjalnie nie ma limitu długości rzeczownika.",
+    "second": "Możesz bez końca sklejać słowa ze sobą, tworząc ogromne pociągi z liter tylko po to, by opisać jeden przedmiot.",
+    "third": "Działa tu jednak kluczowa, ratunkowa zasada: nieważne, jak szaloną długość ma ten potwór, jego ostateczny rodzaj zawsze twardo zależy od rodzajnika ostatniego słowa.",
+    "cta": "Przerażają Cię takie długie słowa-pociągi?"
+  },
+  "newsArticleSeven": {
+    "first": "Czy zdarza Ci się, że przed ważnym wydarzeniem lub snem zaczynasz odtwarzać w głowie fikcyjne scenariusze i całe filmy z wszystkimi szczegółami? Niemcy opisują ten stan jako własne kino w głowie.",
+    "second": "To moment, kiedy Twoja wyobraźnia lub lęk rozkręcają się tak bardzo, że dosłownie zawieszasz się na reżyserowaniu i oglądaniu własnych myśli.",
+    "third": "Słowo to powstało z połączenia der Kopf (głowa) i das Kino (kino). To mentalne kino posłusznie przyjmuje swój ostateczny rodzaj nijaki od rodzajnika ostatniego rzeczownika.",
+    "cta": "Czy przed snem często włącza Ci się takie Kopfkino?"
+  },
+  "newsArticleEight": {
+    "first": "Język niemiecki jest pełen autoironii, gdy mowa o sylwetce. Jeśli przybyło Ci trochę ciałka po bokach, Niemcy nie będą mówić o fałdkach tłuszczu – nazwą to złotem na biodrach.",
+    "second": "Dosłownie wychodzi 'złoto bioder'. To niezwykle delikatny i cenny opis boczków, które zaokrągliły się po pysznych niemieckich kiełbaskach, bułeczkach czy piwie.",
+    "third": "Słowo składa się z die Hüfte (biodro) i das Gold (złoto). Ten zabawny zwrot oczekiwanie przyjmuje swój lśniący rodzaj nijaki od rodzajnika ostatniego rzeczownika.",
+    "cta": "Jak Podoba Ci się taka poetycka nazwa?"
+  },
+  "newsArticleNine": {
+    "first": "Everyone knows what homesickness is, but Germans have a unique word for the exact opposite feeling. It is a longing for distant countries and travel.",
+    "second": "Literally, it translates as 'distance-pain'. This is that exact aching feeling when you are sitting at home and unbearably want to go somewhere you have never been.",
+    "third": "The word is assembled from die Ferne (distance) and das Weh (pain/woe). This romantic longing takes its final neuter gender from the article of the last word.",
+    "cta": "Do you ever experience this kind of Fernweh?"
+  },
+  "newsArticleTen": {
+    "first": "Look at a regular electric light bulb. What shape does it remind you of? Germans saw a glowing fruit in it.",
+    "second": "The literal translation of this word is 'glowing pear'. A very cozy, simple, and warm domestic description for a device we are so used to.",
+    "third": "It comes from the verb glühen (to glow) and the noun die Birne (pear). Our light bulb takes its feminine gender from the article of the last word — die Birne.",
+    "cta": "Does a light bulb look like a pear to you?"
+  },
+  "newsArticleEleven": {
+    "first": "Jak nazwać to ciężkie duchowe cierpienie, gdy Twoja miłość okaże się nieodwzajemniona? Niemcy połączyli te uczucia в jedno pojemne pojęcie.",
+    "second": "Dosłownie tłumaczy się to jako 'smutek miłości'. To bardzo dokładny opis tęsknoty i żalu, które dosłownie złamią serce.",
+    "third": "Słowo to zlepiło się z die Liebe (miłość) i der Kummer (smutek/żal). To złamane serce posłusznie przyjmuje swój rodzaj męski od rodzajnika ostatniego słowa — der Kummer.",
+    "cta": "Znajome uczucie?"
+  },
+  "newsArticleTwelve": {
+    "first": "Spacerujesz po lesie po deszczu i widzisz zwykłego ślimaka bez muszli? Język niemiecki opisuje go w maksymalnie roznegliżowany sposób.",
+    "second": "Dosłowne tłumaczenie tego zabawnego słowa to 'nagi ślimak'. Rzeczywiście, po co wymyślać nową nazwę, skoro to po prostu ślimak, który został bez domku.",
+    "third": "Powstało z przymiotnika nackt (nagi) i rzeczownika die Schnecke (ślimak). Ten leśny mieszkaniec przyjmuje swój rodzaj od rodzajnika ostatniego słowa.",
+    "cta": "Rozbawiła Cię ta nazwa?"
+  },
+  "newsArticleThirteen": {
+    "first": "Jeśli kiedykolwiek uczyłeś się angielskiego, mamy dla Ciebie świetną wiadomość. Już automatycznie znasz część niemieckiego słownictwa, nawet jeśli nigdy celowo się go nie uczyłeś.",
+    "second": "Rzecz w tym, że angielski i niemiecki to bliscy krewni językowi z tej samej grupy germańskiej. Słowa takie jak brat, siostra, woda, zielony czy jabłko pisze się i brzmią niesamowicie podobnie.",
+    "third": "Właśnie dlatego nauka niemieckich słówek mając angielskie podstawy idzie znacznie szybciej — Twój mózg podświadomie rozpoznaje znajome schematy.",
+    "cta": "Zauważyłeś podobieństwo między angielskim a niemieckim?"
+  },
+  "newsArticleFourteen": {
+    "first": "Niemiecka litera eszett, pisana jak wielkie B, to unikalna wizytówka niemieckiego alfabetu. Jednak podczas nauki języka mało kto wie, że nie we wszystkich regionach niemieckojęzycznych jest ona używana.",
+    "second": "W Szwajcarii i Liechtensteinie z tej litery oficjalnie i całkowicie zrezygnowano już w ubiegłym wieku. W szwajcarskich szkołach, gazetach i oficjalnych dokumentach zamiast niej wszędzie pisze się zwykłe podwójne 'ss'.",
+    "third": "Stało się tak z powodu masowego wprowadzania maszyn do pisania, na których układzie Szwajcarom po prostu brakowało miejsca na jednoczesne umieszczenie znaków niemieckich i francuskich. Dlatego czytając szwajcarskie teksty, nie znajdziesz tam tej litery.",
+    "cta": "Wiedziałeś o szwajcarskim sekrecie niemieckiego alfabetu?"
+  },
+  "newsArticleFifteen": {
+    "first": "W języku niemieckim istnieją niesamowite czasowniki-kameleony, które pisze się absolutnie tak samo, ale ich znaczenie zmienia się diametralnie w zależności od akcentu. Ten fakt często szokuje początkujących.",
+    "second": "Doskonałym przykładem jest czasownik umfahren. Jeśli postawisz akcent na pierwszą część słowa, oznacza to potrącić, najechać lub przejechać przeszkodę. Wystarczy jednak przenieść akcent na drugą część, aby słowo natychmiast zmieniło sens na przeciwny — ominąć lub objechać przeszkodę.",
+    "third": "Właśnie dlatego podczas nauki takich czasowników kluczowe jest słuchanie, gdzie pada akcent. W przeciwnym razie na lekcji jazdy w Niemczech można przypadkowo przerazić swojego instruktora.",
+    "cta": "Wiedziałeś o takich podstępnych czasownikach o podwójnym znaczeniu?"
+  },
+  "newsArticleSixteen": {
+    "first": "Kiedy obcokrajowcy czegoś nie rozumieją, zazwyczaj mówią, że to dla nich 'chińszczyzna'. U Niemców w takiej sytuacji włącza się czysto kolejowa logika.",
+    "second": "Jeśli Niemiec absolutnie nie rozumie rozmówcy lub nie chce go słuchać, powie: 'Ich verstehe nur Bahnhof' (Rozumiem tylko dworzec).",
+    "third": "Z czasem to zdanie przekształciło się w popularny idiom. Teraz, jeśli ktoś tłumaczy Ci drogę w zbyt zagmatwany sposób lub zarzuca Cię skomplikowanym tematem, możesz śmiało użyć tego wyrażenia.",
+    "cta": "Słyszałeś już to zabawne powiedzenie o dworcu?"
+  },
+  "newsArticleSeventeen": {
+    "first": "Nauka rodzajników der, die, das to odwieczny koszmar każdego, kto uczy się niemieckiego. Nie martw się jednak — czasem nawet sami rodowici Niemcy nie są pewni właściwego wyboru.",
+    "second": "Prawdziwa i niekończąca się wojna lingwistyczna w Niemczech rozwija się każdego ranka przy śniadaniu wokół słynnego kremu czekoladowego Nutella. Niemcy od dziesięcioleci kłócą się, jakiego jest rodzaju.",
+    "third": "Jedni mówią die, bo to pasta/krem, inni uważają, że das, ponieważ to rodzaj nijaki dla zagranicznych nazw produktów. Spór zaszedł tak daleko, że nawet oficjalny słownik Duden poddał się i uznał, że Nutella w ogóle nie ma przypisanego stałego rodzajnika i można używać każdej wersji.",
+    "cta": "A Ty jaki rodzajnik dałbyś Nutelli?"
+  },
+  "newsArticleEighteen": {
+    "first": "Jeśli ktoś uporczywie nie zauważa oczywistych rzeczy dziejących się tuż pod jego nosem, Niemcy nie powiedzą, że jest nieuważny. Znajdą na jego twarzy warzywa.",
+    "second": "Dosłowne tłumaczenie tego kultowego idiomu to 'mieć pomidory na oczach'. Tak mówi się o kierowcy, który nie widzi czerwonego światła, lub o przyjacielu, który zupełnie nie dostrzega Twoich wskazówek.",
+    "third": "Korzenie tego sformułowania sięgają dawnych sądów, gdzie winnych zmuszano do noszenia opasek na znak hańby, a czasem przywiązywano im do oczu prawdziwe warzywa. Dziś to po prostu zabawny sposób, by powiedzieć komuś, że czas przejrzeć na oczy.",
+    "cta": "Słyszałeś już to powiedzenie o pomidorach?"
+  },
+  "newsArticleNineteen": {
+    "first": "Podręczniki do niemieckiego uczą nas witać się w zależności od pory dnia: dzień dobry rano, po południu czy wieczorem. Jednak na północy Niemiec po prostu się z tego systemu śmieją.",
+    "second": "Tam wszyscy jak jeden mąż używają jednego kultowego słowa: Moin. Co najciekawsze, można je mówić absolutnie zawsze: o ósmej rano do szefa, o trzeciej po południu do sprzedawcy czy w środku nocy do znajomych w barze. Oznacza ono po prostu 'cześć'.",
+    "third": "Bądź jednak ostrożny: jeśli postanowisz wzmocnić powitanie i powiesz 'Moin Moin', lokalni mieszkańcy od razu uznają Cię za strasznego gadułę. Na północy ceni się zwięzłość, więc jedno słowo w zupełności wystarczy.",
+    "cta": "Słyszałeś już takie powitanie od mieszkańców Niemiec?"
+  },
+  "newsTitle": {
+    "article_3": "Wszystkie rzeczowniki wielką literą!",
+    "article_4": "Liczby od końca!",
+    "article_5": "Czasownik na samym końcu zdania!",
+    "article_6": "Nieskończone słowa!",
+    "article_13": "Znasz już wiele niemieckich słów!",
+    "article_14": "Litera, którą stracił cały kraj!",
+    "article_15": "Jedno słowo - dwa przeciwstawne znaczenia!",
+    "article_17": "Bitwa o rodzajnik Nutelli!",
+    "article_19": "Uniwersalne Moin!"
+  },
+  "i18nDays": {
+    "days": "dn.",
+    "hours": "g.",
+    "mins": "min"
+  },
+  "headUp": {
+    "audioTasks": "Musisz wybrać co najmniej jedną opcję odpowiedzi",
+    "speakTasks": "Można użyć tylko zaproponowanych opcji."
+  },
+  "helpCenter": {
+    "privacy": "Polityka prywatności",
+    "faq": "Najczęściej zadawane pytania",
+    "terms": "Regulamin świadczenia usług"
+  },
+  "rankAvatars": {
+    "locked_easy_1": "Ten awatar jest przyznawany za 1. miejsce w Maratonie Rodzajników (tryb łatwy).",
+    "locked_easy_2": "Ten awatar jest przyznawany za 2. miejsce w Maratonie Rodzajników (tryb łatwy).",
+    "locked_easy_3": "Ten awatar jest przyznawany za 3. miejsce w Maratonie Rodzajników (tryb łatwy).",
+    "locked_normal_1": "Ten awatar jest przyznawany za 1. miejsce w Maratonie Rodzajników (tryb średni).",
+    "locked_normal_2": "Ten awatar jest przyznawany za 2. miejsce w Maratonie Rodzajników (tryb średni).",
+    "locked_normal_3": "Ten awatar jest przyznawany za 3. miejsce w Maratonie Rodzajników (tryb średni).",
+    "locked_hard_1": "Ten awatar jest przyznawany za 1. miejsce w Maratonie Rodzajników (tryb trudny).",
+    "locked_hard_2": "Ten awatar jest przyznawany za 2. miejsce w Maratonie Rodzajników (tryb trudny).",
+    "locked_hard_3": "Ten awatar jest przyznawany za 3. miejsce w Maratonie Rodzajników (tryb trudny)."
+  },
+  "typeOfAvatars": {
+    "usual": "Zwykłe",
+    "ranked": "Nagrody"
+  },
+  "marathonEasy": {
+    "title": "Maraton Rodzajników poziom łatwy",
+    "easyOneName": "Triumfujący Praktykant",
+    "easyOneDescription": "Zajmij 1. miejsce w rankingu maratonu rodzajników (Tryb łatwy)",
+    "easyTwoName": "Godny Pretendent",
+    "easyTwoDescription": "Zajmij 2. miejsce w rankingu maratonu rodzajników (Tryb łatwy)",
+    "easyThreeName": "Stażysta Rodzajników",
+    "easyThreeDescription": "Zajmij 3. miejsce w rankingu maratonu rodzajników (Tryb łatwy)"
+  },
+  "marathonNormal": {
+    "title": "Maraton Rodzajników poziom średni",
+    "normalOneName": "Magister Rodzajników",
+    "normalOneDescription": "Zajmij 1. miejsce w rankingu maratonu rodzajników (Tryb średni)",
+    "normalTwoName": "Zdobywca Maratonu",
+    "normalTwoDescription": "Zajmij 2. miejsce w rankingu maratonu rodzajników (Tryb średni)",
+    "normalThreeName": "Znawca Słów",
+    "normalThreeDescription": "Zajmij 3. miejsce w rankingu maratonu rodzajników (Tryb średni)"
+  },
+  "marathonHard": {
+    "title": "Maraton Rodzajników poziom trudny",
+    "normalOneName": "Cesarz Rodzajników",
+    "normalOneDescription": "Zajmij 1. miejsce w rankingu maratonu rodzajników (Tryb trudny)",
+    "normalTwoName": "Legenda Maratonu",
+    "normalTwoDescription": "Zajmij 2. miejsce w rankingu maratonu rodzajników (Tryb trudny)",
+    "normalThreeName": "Adept Maratonu",
+    "normalThreeDescription": "Zajmij 3. miejsce w rankingu maratonu rodzajników (Tryb trudny)"
   }
 }

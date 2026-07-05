@@ -1,0 +1,532 @@
+{
+  "start": {
+    "botText": "Notruf, guten Tag.",
+    "botTranslation": {
+      "ru-RU": "Служба спасения, добрый день.",
+      "en-US": "Emergency services, good day.",
+      "ar-SA": "خدمة الطوارئ، طاب يومك.",
+      "es-ES": "Servicios de emergencia, buenos días.",
+      "fr-FR": "Urgences, bonjour.",
+      "hi-IN": "आपातकालीन सेवा, शुभ दिन।",
+      "pl-PL": "Pogotowie ratunkowe, dzień dobry.",
+      "ro-RO": "Serviciul de urgență, bună ziua.",
+      "tr-TR": "Acil servis, iyi günler.",
+      "uk-UA": "Служба порятунку, добрий день.",
+      "uz-UZ": "Tezkor yordam xizmati, xayrli kun."
+    },
+    "vocabulary": [
+      {
+        "german": "der Notruf",
+        "translation": {
+          "ru-RU": "экстренный вызов",
+          "en-US": "emergency call",
+          "ar-SA": "اتصال طوارئ",
+          "es-ES": "llamada de emergencia",
+          "fr-FR": "appel d'urgence",
+          "hi-IN": "आपातकालीन कॉल",
+          "pl-PL": "wezwanie ratunkowe",
+          "ro-RO": "apel de urgență",
+          "tr-TR": "acil çağrı",
+          "uk-UA": "екстрений виклик",
+          "uz-UZ": "tezkor chaqiruv"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hallo! Einem Mann auf der Straße ist heiß. Ich glaube, er hat einen Sonnenstich.",
+        "translation": {
+          "ru-RU": "Здравствуйте! Мужчине на улице жарко. Я думаю, у него солнечный удар.",
+          "en-US": "Hello! A man on the street is hot. I think he has sunstroke.",
+          "ar-SA": "مرحباً! هناك رجل في الشارع يشعر بالحر. أعتقد أنه مصاب بضربة شمس.",
+          "es-ES": "¡Hola! Un hombre en la calle tiene calor. Creo que tiene una insolación.",
+          "fr-FR": "Bonjour ! Un homme a chaud dans la rue. Je crois qu'il a une insolation.",
+          "hi-IN": "नमस्ते! सड़क पर एक आदमी को गर्मी लग रही है। मुझे लगता है कि उसे लू लग गई है।",
+          "pl-PL": "Witam! Jakiemuś mężczyźnie na ulicy jest gorąco. Myślę, że ma udar słoneczny.",
+          "ro-RO": "Bună ziua! Unui bărbat de pe stradă îi este cald. Cred că are insolație.",
+          "tr-TR": "Merhaba! Caddede bir adam çok bunalmış. Sanırım güneş çarpması geçiriyor.",
+          "uk-UA": "Вітаю! Чоловікові на вулиці жарко. Я думаю, у нього сонячний удар.",
+          "uz-UZ": "Salom! Ko'chadagi bir kishiga issiq bup ketdi. Menimcha, uni quyosh urgan."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Guten Tag! Hier geht es jemandem schlecht. Ich glaube, er hat einen Sonnenstich.",
+        "translation": {
+          "ru-RU": "Добрый день! Здесь человеку плохо. Я думаю, у него солнечный удар.",
+          "en-US": "Good day! Someone is feeling bad here. I think he has sunstroke.",
+          "ar-SA": "طاب يومك! هناك شخص يشعر بالتعب هنا. أعتقد أنه مصاب بضربة شمس.",
+          "es-ES": "¡Buenos días! Alguien se siente mal aquí. Creo que tiene una insolación.",
+          "fr-FR": "Bonjour ! Quelqu'un se sent mal ici. Je crois qu'il a une insolation.",
+          "hi-IN": "शुभ दिन! यहाँ किसी की तबीयत खराब है। मुझे लगता है कि उसे लू लग गई है।",
+          "pl-PL": "Dzień dobry! Ktoś się tu źle czuje. Myślę, że ma udar słoneczny.",
+          "ro-RO": "Bună ziua! Cuiva îi este rău aici. Cred că are insolație.",
+          "tr-TR": "İyi günler! Burada biri fenalaştı. Sanırım güneş çarpması geçiriyor.",
+          "uk-UA": "Добрий день! Тут людині погано. Я думаю, у нього сонячний удар.",
+          "uz-UZ": "Xayrli kun! Bu yerda kimdir o'zini yomon his qilyapti. Menimcha, uni quyosh urgan."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Gut, dass Sie anrufen. Wo genau ist der Unfallort?",
+    "botTranslation": {
+      "ru-RU": "Хорошо, что вы звоните. Где конкретно место происшествия?",
+      "en-US": "Good that you are calling. Where exactly is the location of the accident?",
+      "ar-SA": "جيد أنك تتصل. أين هو مكان الحادث بالضبط؟",
+      "es-ES": "Menos mal que llama. ¿Dónde está exactamente el lugar del accidente?",
+      "fr-FR": "C'est bien que vous appeliez. Où se trouve exactement le lieu de l'accident ?",
+      "hi-IN": "अच्छा हुआ कि आपने कॉल किया। दुर्घटना का स्थान वास्तव में कहाँ है?",
+      "pl-PL": "Dobrze, że Pan/Pani dzwoni. Gdzie dokładnie jest miejsce zdarzenia?",
+      "ro-RO": "Bine că sunați. Unde este mai exact locul accidentului?",
+      "tr-TR": "Aradığınız iyi oldu. Olay yeri tam olarak neresi?",
+      "uk-UA": "Добре, що ви дзвоните. Де конкретно місце події?",
+      "uz-UZ": "Qo'ng'iroq qilganingiz yaxshi bo'ldi. Hodisa joyi aniq qayerda?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Sonnenstich",
+        "translation": {
+          "ru-RU": "солнечный удар",
+          "en-US": "sunstroke",
+          "ar-SA": "ضربة شمس",
+          "es-ES": "insolación",
+          "fr-FR": "insolation",
+          "hi-IN": "लू लगना",
+          "pl-PL": "udar słoneczny",
+          "ro-RO": "insolație",
+          "tr-TR": "güneş çarpması",
+          "uk-UA": "сонячний удар",
+          "uz-UZ": "quyosh urishi"
+        }
+      },
+      {
+        "german": "der Unfallort",
+        "translation": {
+          "ru-RU": "место происшествия",
+          "en-US": "accident location",
+          "ar-SA": "مكان الحادث",
+          "es-ES": "lugar del accidente",
+          "fr-FR": "lieu de l'accident",
+          "hi-IN": "दुर्घटना का स्थान",
+          "pl-PL": "miejsce wypadku / zdarzenia",
+          "ro-RO": "locul accidentului",
+          "tr-TR": "olay yeri",
+          "uk-UA": "місце події",
+          "uz-UZ": "hodisa joyi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich bin in der Hauptstraße, direkt vor der Post.",
+        "translation": {
+          "ru-RU": "Я на Главной улице, прямо перед почтой.",
+          "en-US": "I am on Hauptstraße, right in front of the post office.",
+          "ar-SA": "أنا في شارع هاوبت شتراسه، أمام البريد مباشرة.",
+          "es-ES": "Estoy en la calle Hauptstraße, justo enfrente de correos.",
+          "fr-FR": "Je suis dans la Hauptstraße, juste devant la poste.",
+          "hi-IN": "मैं हॉन्टस्ट्रासे में हूँ, ठीक पोस्ट ऑफिस के सामने।",
+          "pl-PL": "Jestem na ulicy Hauptstraße, tuż przed pocztą.",
+          "ro-RO": "Sunt pe strada Hauptstraße, chiar în fața poștei.",
+          "tr-TR": "Hauptstraße'deyim, tam postanenin önünde.",
+          "uk-UA": "Я на Головній вулиці, прямо перед поштою.",
+          "uz-UZ": "Men Hauptshtrassa ko'chasidaman, to'g'ridan-to'g'ri pochtaning qarshisida."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Wir sind am Marktplatz, vor dem großen Café.",
+        "translation": {
+          "ru-RU": "Мы на Рыночной площади, перед большим кафе.",
+          "en-US": "We are at the marketplace, in front of the big cafe.",
+          "ar-SA": "نحن في ساحة السوق، أمام المقهى الكبير.",
+          "es-ES": "Estamos en la plaza del mercado, enfrente de la cafetería grande.",
+          "fr-FR": "Nous sommes sur la place du marché, devant le grand café.",
+          "hi-IN": "हम मार्केटप्लेस पर हैं, बड़े कैफे के सामने।",
+          "pl-PL": "Jesteśmy na rynku, przed dużą kawiarnią.",
+          "ro-RO": "Suntem în piața agroalimentară, în fața cafenelei mari.",
+          "tr-TR": "Pazar meydanındayız, büyük kafenin önünde.",
+          "uk-UA": "Ми на Ринковій площі, перед великим кафе.",
+          "uz-UZ": "Biz bozor maydonidamiz, katta kafening qarshisida."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Sitzt der Mann im Schatten? Was hat er für Symptome?",
+    "botTranslation": {
+      "ru-RU": "Мужчина сидит в тени? Какие у него симптомы?",
+      "en-US": "Is the man sitting in the shade? What symptoms does he have?",
+      "ar-SA": "هل يجلس الرجل في الظل؟ ما هي الأعراض التي لديه؟",
+      "es-ES": "¿Está el hombre sentado a la sombra? ¿Qué síntomas tiene?",
+      "fr-FR": "L'homme est-il assis à l'ombre ? Quels sont ses symptômes ?",
+      "hi-IN": "क्या वह आदमी छाया में बैठा है? उसके क्या लक्षण हैं?",
+      "pl-PL": "Czy ten mężczyzna siedzi w cieniu? Jakie ma objawy?",
+      "ro-RO": "Bărbatul stă la umbră? Ce simptome are?",
+      "tr-TR": "Adam gölgede mi oturuyor? Belirtileri neler?",
+      "uk-UA": "Чоловік сидить у тіні? Які у нього симптоми?",
+      "uz-UZ": "U kishi soyada o'tiribdimi? Unda qanday alomatlar bor?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Kopfschmerzen",
+        "translation": {
+          "ru-RU": "головная боль",
+          "en-US": "headache",
+          "ar-SA": "صداع",
+          "es-ES": "dolor de cabeza",
+          "fr-FR": "maux de tête",
+          "hi-IN": "सिरदर्द",
+          "pl-PL": "ból głowy",
+          "ro-RO": "durere de cap",
+          "tr-TR": "baş ağrısı",
+          "uk-UA": "головний біль",
+          "uz-UZ": "bosh og'rig'i"
+        }
+      },
+      {
+        "german": "schwindelig",
+        "translation": {
+          "ru-RU": "чувствующий головокружение",
+          "en-US": "dizzy",
+          "ar-SA": "دوار",
+          "es-ES": "mareado",
+          "fr-FR": "pris de vertige",
+          "hi-IN": "चक्कर आना",
+          "pl-PL": "mający zawroty głowy",
+          "ro-RO": "amețit",
+          "tr-TR": "başı dönen",
+          "uk-UA": "відчуваючий запаморочення",
+          "uz-UZ": "boshi aylanayotgan"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, er sitzt auf einer Bank. Aber er hat starke Kopfschmerzen.",
+        "translation": {
+          "ru-RU": "Да, он сидит на скамейке. Но у него сильно болит голова.",
+          "en-US": "Yes, he is sitting on a bench. But he has a severe headache.",
+          "ar-SA": "نعم، إنه يجلس على مقعد. لكن لديه صداع شديد.",
+          "es-ES": "Sí, está sentado en un banco. Pero tiene un fuerte dolor de cabeza.",
+          "fr-FR": "Oui, il est assis sur un banc. Mais il a de forts maux de tête.",
+          "hi-IN": "हाँ, वह एक बेंच पर बैठा है। लेकिन उसे तेज सिरदर्द है।",
+          "pl-PL": "Tak, siedzi na ławce. Ale bardzo boli go głowa.",
+          "ro-RO": "Da, stă pe o bancă. Dar are o durere de cap puternică.",
+          "tr-TR": "Evet, bir bankta oturuyor. Ama şiddetli baş ağrısı var.",
+          "uk-UA": "Так, він сидить на лавці. Але у нього сильно болить голова.",
+          "uz-UZ": "Ha, u o'rindiqda o'tiribdi. Lekin uning boshi qattiq og'riyapti."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Ja, er trinkt Wasser. Ihm ist schwindelig.",
+        "translation": {
+          "ru-RU": "Да, он пьет воду. У него кружится голова.",
+          "en-US": "Yes, he is drinking water. He is dizzy.",
+          "ar-SA": "نعم، إنه يشرب الماء. يشعر بالدوار.",
+          "es-ES": "Sí, está bebiendo agua. Está mareado.",
+          "fr-FR": "Oui, il boit de l'eau. Il a des vertiges.",
+          "hi-IN": "हाँ, वह पानी पी रहा है। उसे चक्कर आ रहा है।",
+          "pl-PL": "Tak, pije wodę. Kręci mu się w głowie.",
+          "ro-RO": "Da, bea apă. Îi este amețeală.",
+          "tr-TR": "Evet, su içiyor. Başı dönüyor.",
+          "uk-UA": "Так, він п'є воду. У нього паморочиться голова.",
+          "uz-UZ": "Ha, u suv ichyapti. Uning boshi aylanyapti."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Kann der Mann normal sprechen? Ist er bei Bewusstsein?",
+    "botTranslation": {
+      "ru-RU": "Мужчина может нормально говорить? Он в сознании?",
+      "en-US": "Can the man speak normally? Is he conscious?",
+      "ar-SA": "هل يمكن للرجل التحدث بشكل طبيعي؟ هل هو في وعيه؟",
+      "es-ES": "¿Puede hablar el hombre con normalidad? ¿Está consciente?",
+      "fr-FR": "L'homme peut-il parler normalement ? Est-il conscient ?",
+      "hi-IN": "क्या वह आदमी सामान्य रूप से बात कर सकता है? क्या वह होश में है?",
+      "pl-PL": "Czy ten mężczyzna może normalnie mówić? Czy jest przytomny?",
+      "ro-RO": "Poate bărbatul vorbi normal? Este conștient?",
+      "tr-TR": "Adam normal konuşabiliyor mu? Bilinci yerinde mi?",
+      "uk-UA": "Чоловік може нормально говорити? Він у свідомості?",
+      "uz-UZ": "U kishi normal gapira olyaptimi? U xushidami?"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Ja, er spricht normal. Er ist nur sehr müde.",
+        "translation": {
+          "ru-RU": "Да, он говорит нормально. Он просто очень устал.",
+          "en-US": "Yes, he speaks normally. He is just very tired.",
+          "ar-SA": "نعم، إنه يتحدث بشكل طبيعي. إنه متعب جداً فقط.",
+          "es-ES": "Sí, habla con normalidad. Solo está muy cansado.",
+          "fr-FR": "Oui, il parle normalement. Il est juste très fatigué.",
+          "hi-IN": "हाँ, वह सामान्य रूप से बात कर रहा है। वह बस बहुत थका हुआ है।",
+          "pl-PL": "Tak, mówi normalnie. Jest tylko bardzo zmęczony.",
+          "ro-RO": "Da, vorbește normal. Este doar foarte obosit.",
+          "tr-TR": "Evet, normal konuşuyor. Sadece çok yorgun.",
+          "uk-UA": "Так, він говорить нормально. Він просто дуже втомився.",
+          "uz-UZ": "Ha, u normal gapiryapti. Faqat juda charchagan."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Ja, er versteht alles. Er braucht nur eine Pause.",
+        "translation": {
+          "ru-RU": "Да, он всё понимает. Ему просто нужен перерыв.",
+          "en-US": "Yes, he understands everything. He just needs a break.",
+          "ar-SA": "نعم، إنه يفهم كل شيء. يحتاج فقط إلى استراحة.",
+          "es-ES": "Sí, lo entiende todo. Solo necesita un descanso.",
+          "fr-FR": "Oui, il comprend tout. Il a juste besoin d'une pause.",
+          "hi-IN": "हाँ, वह सब कुछ समझ रहा है। उसे बस एक ब्रेक की जरूरत है।",
+          "pl-PL": "Tak, wszystko rozumie. Potrzebuje tylko przerwy.",
+          "ro-RO": "Da, înțelege totul. Are nevoie doar de o pauză.",
+          "tr-TR": "Evet, her şeyi anlıyor. Sadece bir molaya ihtiyacı var.",
+          "uk-UA": "Так, він все розуміє. Йому просто потрібна перерва.",
+          "uz-UZ": "Ha, u hamma narsani tushunyapti. Unga faqat tanaffus kerak."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Wie alt ist der Mann ungefähr?",
+    "botTranslation": {
+      "ru-RU": "Сколько примерно лет мужчине?",
+      "en-US": "About how old is the man?",
+      "ar-SA": "كم عمر الرجل تقريباً؟",
+      "es-ES": "¿Qué edad tiene el hombre aproximadamente?",
+      "fr-FR": "Quel âge a l'homme environ ?",
+      "hi-IN": "वह आदमी लगभग कितनी उम्र का है?",
+      "pl-PL": "Ile mniej więcej lat ma ten mężczyzna?",
+      "ro-RO": "Câți ani are bărbatul cu aproximație?",
+      "tr-TR": "Adam yaklaşık kaç yaşında?",
+      "uk-UA": "Скільки приблизно років чоловікові?",
+      "uz-UZ": "U kishi taxminan necha yoshda?"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Er ist ungefähr sechzig Jahre alt.",
+        "translation": {
+          "ru-RU": "Ему примерно шестьдесят лет.",
+          "en-US": "He is about sixty years old.",
+          "ar-SA": "عمره حوالي ستين عاماً.",
+          "es-ES": "Tiene unos sesenta años.",
+          "fr-FR": "Il a environ soixante ans.",
+          "hi-IN": "वह लगभग साठ साल का है।",
+          "pl-PL": "Ma około sześćdziesięciu lat.",
+          "ro-RO": "Are în jur de șaizeci de ani.",
+          "tr-TR": "Yaklaşık altmış yaşında.",
+          "uk-UA": "Йому приблизно шістдесят років.",
+          "uz-UZ": "U taxminan oltmish yoshda."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Er ist noch jung, vielleicht dreißig Jahre alt.",
+        "translation": {
+          "ru-RU": "Он еще молодой, может быть, лет тридцать.",
+          "en-US": "He is still young, maybe thirty years old.",
+          "ar-SA": "لا يزال شاباً، ربما في الثلاثين من عمره.",
+          "es-ES": "Aún es joven, tal vez de unos treinta años.",
+          "fr-FR": "Il est encore jeune, peut-être trente ans.",
+          "hi-IN": "वह अभी छोटा है, शायद तीस साल का।",
+          "pl-PL": "Jest jeszcze młody, ma może trzydzieści lat.",
+          "ro-RO": "Este încă tânăr, poate are treizeci de ani.",
+          "tr-TR": "Henüz genç, belki otuz yaşlarında.",
+          "uk-UA": "Він ще молодий, можливо, років тридцять.",
+          "uz-UZ": "U hali yosh, balki o'ttiz yoshlardadir."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Alles klar. Wir schicken einen Krankenwagen.",
+    "botTranslation": {
+      "ru-RU": "Все ясно. Мы отправляем скорую помощь.",
+      "en-US": "All right. We are sending an ambulance.",
+      "ar-SA": "توضحت الصورة. نحن نرسل سيارة إسعاف.",
+      "es-ES": "De acuerdo. Enviamos una ambulancia.",
+      "fr-FR": "D'accord. Nous envoyons une ambulance.",
+      "hi-IN": "सब साफ़ है। हम एक एम्बुलेंस भेज रहे हैं।",
+      "pl-PL": "Wszystko jasne. Wysyłamy karetkę.",
+      "ro-RO": "Am înțeles. Trimitem o ambulanță.",
+      "tr-TR": "Anlaşıldı. Bir ambulans gönderiyoruz.",
+      "uk-UA": "Все ясно. Ми відправляємо швидку допомогу.",
+      "uz-UZ": "Tushunarli. Biz tez yordam jo'natyapmiz."
+    },
+    "vocabulary": [
+      {
+        "german": "die Hilfe",
+        "translation": {
+          "ru-RU": "помощь",
+          "en-US": "help / assistance",
+          "ar-SA": "مساعدة",
+          "es-ES": "ayuda",
+          "fr-FR": "aide",
+          "hi-IN": "मदद",
+          "pl-PL": "pomoc",
+          "ro-RO": "ajutor",
+          "tr-TR": "yardım",
+          "uk-UA": "допомога",
+          "uz-UZ": "yordam"
+        }
+      },
+      {
+        "german": "der Krankenwagen",
+        "translation": {
+          "ru-RU": "машина скорой помощи",
+          "en-US": "ambulance",
+          "ar-SA": "سيارة إسعاف",
+          "es-ES": "ambulancia",
+          "fr-FR": "ambulance",
+          "hi-IN": "एम्बुलेंस",
+          "pl-PL": "karetka pogotowia / ambulans",
+          "ro-RO": "ambulanță",
+          "tr-TR": "ambulans",
+          "uk-UA": "машина швидкої допомоги",
+          "uz-UZ": "tez yordam mashinasi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke. Wie lange dauert das ungefähr?",
+        "translation": {
+          "ru-RU": "Спасибо. Сколько времени это примерно займет?",
+          "en-US": "Thanks. About how long will that take?",
+          "ar-SA": "شكراً. كم سيستغرق ذلك من الوقت تقريباً؟",
+          "es-ES": "Gracias. ¿Cuánto tardará más o menos?",
+          "fr-FR": "Merci. Combien de temps cela va-t-il prendre environ ?",
+          "hi-IN": "धन्यवाद। इसमें लगभग कितना समय लगेगा?",
+          "pl-PL": "Dziękuję. Ile to mniej więcej potrwa?",
+          "ro-RO": "Mulțumesc. Cât durează asta cu aproximație?",
+          "tr-TR": "Teşekkürler. Yaklaşık ne kadar sürer?",
+          "uk-UA": "Дякую. Скільки часу це приблизно займе?",
+          "uz-UZ": "Rahmat. Bunga taxminan qancha vaqt ketadi?"
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Vielen Dank für die schnelle Hilfe!",
+        "translation": {
+          "ru-RU": "Большое спасибо за быструю помощь!",
+          "en-US": "Thank you very much for the quick help!",
+          "ar-SA": "شكراً جزيلاً على المساعدة السريعة!",
+          "es-ES": "¡Muchas gracias por la rápida ayuda!",
+          "fr-FR": "Merci beaucoup pour l'aide rapide !",
+          "hi-IN": "त्वरित मदद के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję za szybką pomoc!",
+          "ro-RO": "Vă mulțumesc mult pentru ajutorul rapid!",
+          "tr-TR": "Hızlı yardımınız için çok teşekkürler!",
+          "uk-UA": "Дуже дякую за швидку допомогу!",
+          "uz-UZ": "Tezkor yordam uchun katta rahmat!"
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Der Krankenwagen ist in fünf Minuten da. Bitte warten Sie dort.",
+    "botTranslation": {
+      "ru-RU": "Скорая помощь будет через пять минут. Пожалуйста, ждите там.",
+      "en-US": "The ambulance will be there in five minutes. Please wait there.",
+      "ar-SA": "سيارة الإسعاف ستكون هناك خلال خمس دقائق. من فضلك انتظر هناك.",
+      "es-ES": "La ambulancia llegará en cinco minutos. Por favor, espere allí.",
+      "fr-FR": "L'ambulance sera là dans cinq minutes. Veuillez attendre là-bas.",
+      "hi-IN": "एम्बुलेंस पांच मिनट में वहां पहुंच जाएगी। कृपया वहीं प्रतीक्षा करें।",
+      "pl-PL": "Karetka będzie na miejscu za pięć minut. Proszę tam czekać.",
+      "ro-RO": "Ambulanța ajunge în cinci minute. Vă rog să așteptați acolo.",
+      "tr-TR": "Ambulans beş dakika içinde orada olur. Lütfen orada bekleyin.",
+      "uk-UA": "Швидка допомога буде за п'ять хвилин. Будь ласка, чекайте там.",
+      "uz-UZ": "Tez yordam besh daqiqada yetib boradi. Iltimos o'sha yerda kuting."
+    },
+    "vocabulary": [
+      {
+        "german": "warten",
+        "translation": {
+          "ru-RU": "ждать",
+          "en-US": "to wait",
+          "ar-SA": "ينتظر",
+          "es-ES": "esperar",
+          "fr-FR": "attendre",
+          "hi-IN": "प्रतीक्षा करना",
+          "pl-PL": "czekać",
+          "ro-RO": "a aștepta",
+          "tr-TR": "beklemek",
+          "uk-UA": "чекати",
+          "uz-UZ": "kutmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Okay, ich warte hier.",
+        "translation": {
+          "ru-RU": "Хорошо, я подожду здесь.",
+          "en-US": "Okay, I will wait here.",
+          "ar-SA": "حسناً، سأنتظر هنا.",
+          "es-ES": "Vale, esperaré aquí.",
+          "fr-FR": "D'accord, j'attends ici.",
+          "hi-IN": "ठीक है, मैं यहीं प्रतीक्षा करूँगा।",
+          "pl-PL": "Dobrze, poczekam tutaj.",
+          "ro-RO": "OK, aștept aici.",
+          "tr-TR": "Tamam, burada bekliyorum.",
+          "uk-UA": "Добре, я почекаю тут.",
+          "uz-UZ": "Xo'p, men shu yerda kutaman."
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Gut, ich warte an der Straße.",
+        "translation": {
+          "ru-RU": "Хорошо, я подожду у дороги.",
+          "en-US": "Good, I will wait by the road.",
+          "ar-SA": "جيد، سأنتظر بجانب الطريق.",
+          "es-ES": "Bien, esperaré en la calle.",
+          "fr-FR": "Bien, j'attends au bord de la rue.",
+          "hi-IN": "अच्छा, मैं सड़क के पास प्रतीक्षा करूँगा।",
+          "pl-PL": "Dobrze, poczekam przy ulicy.",
+          "ro-RO": "Bine, aștept la stradă.",
+          "tr-TR": "Güzel, yolun kenarında bekliyorum.",
+          "uk-UA": "Добре, я почекаю біля дороги.",
+          "uz-UZ": "Yaxshi, men yo'l bo'yida kutaman."
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Auf Wiedersehen. Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "До свидания. Разговор окончен.",
+      "en-US": "Goodbye. The conversation is over.",
+      "ar-SA": "إلى اللقاء. انتهت المحادثة.",
+      "es-ES": "Adiós. La conversación ha terminado.",
+      "fr-FR": "Au revoir. La conversation est terminée.",
+      "hi-IN": "अलविदा। बातचीत खत्म हो गई है।",
+      "pl-PL": "Do widzenia. Rozmowa zakończona.",
+      "ro-RO": "La revedere. Conversația s-a încheiat.",
+      "tr-TR": "Hoşça kalın. Konuşma sona erdi.",
+      "uk-UA": "До побачення. Розмова закінчена.",
+      "uz-UZ": "Xayr. Suhbat yakunlandi."
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

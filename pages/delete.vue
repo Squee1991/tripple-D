@@ -56,15 +56,16 @@
             <div class="account-cleanup__modal">
               <div class="modal-drag-pill"></div>
               <h3 class="account-cleanup__modal-title">{{t('deletePage.modalTitle')}}</h3>
-              <img class="cleanup__icon-modal" src="../assets/images/Sadlyhedgehog.png" alt="Грустный ежик">
+              <img class="cleanup__icon-modal" src="../assets/images/DeleteAccountIcon.svg" alt="Грустный ежик">
               <div class="account-cleanup__auth-zone">
                 <div v-if="isGoogleUser" class="account-cleanup__google-status">
                   {{t('deletePage.cleanUpGoogle')}} <strong>Google</strong>. <br>
                   {{t('deletePage.cleanUpGoogleTwo')}}
                 </div>
                 <div v-else class="account-cleanup__password-zone">
-                  <label class="account-cleanup__field-label">{{t('deletePage.cleanUpPassword')}}</label>
+                  <label for="delete-password" class="account-cleanup__field-label"></label>
                   <input
+                      id="delete-password"
                       v-model="passwordField.value"
                       type="password"
                       :class="['account-cleanup__field-input', { 'account-cleanup__field-input--error': passwordField.error }]"
@@ -179,6 +180,8 @@ async function processAccountCleanup() {
 
 .account-cleanup__google-status {
   text-align: center;
+  padding: 10px;
+  color: var(--titleColor);
 }
 
 .account-cleanup__header {
@@ -203,11 +206,17 @@ async function processAccountCleanup() {
 }
 
 .account-cleanup__title {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 900;
   margin-left: 15px;
-  color: var(--titleColor);
-  text-shadow: 0 1px var(--titleColor);
+  color: var(--title);
+  text-shadow: 0 1px var(--title);
+}
+
+.account-cleanup__password-zone {
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .header-spacer {
@@ -231,7 +240,7 @@ async function processAccountCleanup() {
 }
 
 .account-cleanup__section {
-  background: #FFFFFF;
+  background: var(--settingsSectionBg);
   border-radius: 28px;
   padding: 24px;
   margin-bottom: 15px;
@@ -240,20 +249,20 @@ async function processAccountCleanup() {
 }
 
 .account-cleanup__section--danger {
-  background: #ffffff;
+  background: var(--settingsSectionBg);
 }
 
 .account-cleanup__icon-box {
   width: 40px;
   height: 40px;
-  background: #FF4B4B;
+  background: #d56363;
   border-radius: 12px;
   color: #FFF;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 24px;
   flex-shrink: 0;
 }
 
@@ -269,18 +278,19 @@ async function processAccountCleanup() {
   margin: 0;
   font-size: 15px;
   line-height: 1.4;
+  color: var(--title);
 }
 
 .account-cleanup__heading {
   font-size: 1.4rem;
   font-weight: 900;
   margin-bottom: 12px;
-  color: #000;
+  color: var(--titleColor);
 }
 
 .account-cleanup__info-text {
   font-weight: 700;
-  color: #666;
+  color: var(--title);
   margin-bottom: 24px;
 }
 
@@ -295,8 +305,8 @@ async function processAccountCleanup() {
   flex-direction: column;
   gap: 12px;
   padding: 16px;
-  background: #F9FBFF;
-  border: 2px solid #EEE;
+  border: var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 20px;
 }
 
@@ -310,19 +320,20 @@ async function processAccountCleanup() {
   font-size: 1.1rem;
   font-weight: 900;
   margin: 0;
+  color: var(--titleColor);
 }
 
 .account-cleanup__card-desc {
   font-weight: 700;
   font-size: 14px;
-  color: #444;
+  color: var(--title);
   margin: 0 0 8px 0;
 }
 
 .account-cleanup__card-hint {
   background: #FFF;
   border: 2px solid #e1dfdf;
-  border-radius: 12px;
+  border-radius: 18px;
   padding: 12px;
   font-size: 13px;
   font-weight: 800;
@@ -334,7 +345,7 @@ async function processAccountCleanup() {
 
 .account-cleanup__btn-main {
   width: 100%;
-  background: #FFF;
+  background: none;
   color: #9f9696;
   border-radius: 24px;
   padding: 10px;
@@ -361,7 +372,7 @@ async function processAccountCleanup() {
 .account-cleanup__modal {
   width: 100%;
   max-width: 600px;
-  background: #FFF;
+  background: var(--tabBg);
   border-top: 3px solid var(--tabsSlideBorderColor);
   border-bottom: none;
   border-radius: 32px 32px 0 0;
@@ -388,17 +399,19 @@ async function processAccountCleanup() {
 .account-cleanup__modal-title {
   font-size: 24px;
   font-weight: 900;
+  color: var(--title);
   margin: 15px 0;
 }
 
 .account-cleanup__auth-zone {
   width: 100%;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+  padding-top: 18px;
 }
 
 .account-cleanup__field-input {
   width: 100%;
-  padding: 16px;
+  padding: 10px;
   border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 16px;
   font-size: 16px;
@@ -408,8 +421,8 @@ async function processAccountCleanup() {
 
 .modal-btn {
   width: 100%;
-  padding: 15px;
-  border-radius: 20px;
+  padding: 12px;
+  border-radius: 50px;
   font-size: 18px;
   font-weight: 900;
   cursor: pointer;
@@ -431,7 +444,7 @@ async function processAccountCleanup() {
   background: #3b82f6;
   color: white;
   border: #2964c4;
-  border-bottom: 5px solid #2964c4;
+  border-bottom: 6px solid #2964c4;
 }
 
 .account-cleanup__field-error {

@@ -2,39 +2,38 @@
   <div class="privacy_wrapper">
     <div class="privacy">
       <div class="privacy_header">
-        <VBackBtn/>
-        <div class="privacy__title">Privacy Policy</div>
+        <button @click="router.back()" class="btn-icon-back">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+               stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </button>
+        <div class="privacy__title"> {{ t('helpCenter.privacy')}}</div>
       </div>
       <div class="privacy_section-inner">
-        <div class="privacy__banner">
-          <VBanner
-              text="Privacy Policy"
-          />
-        </div>
         <section v-for="(section, index) in sections" :key="index" class="section">
           <h2>{{ section.heading }}</h2>
           <p v-for="(paragraph, j) in section.paragraphs" :key="j">{{ paragraph }}</p>
         </section>
+        <p class="last-updated">
+          Last updated: {{ lastUpdated }}</p>
       </div>
-      <p class="last-updated">
-        Last updated: {{ lastUpdated }}
-      </p>
     </div>
   </div>
 </template>
 
 <script setup>
-import VBackBtn from '../src/components/V-back-btn.vue'
 import { ref } from "vue"
 import { useRouter } from "vue-router"
 import VBanner from "~/src/components/V-banner.vue";
 import Privacy from "~/pages/privacy.vue";
 const router = useRouter()
-const PROJECT = "skillupgerman"
+const PROJECT = "Skillupgerman"
 const EMAIL = "skillupgerman@gmail.com"
 const COUNTRY = "Poland"
-
-const lastUpdated = ref("Januar 4, 2026")
+const { t } = useI18n();
+const lastUpdated = ref("Juny 29, 2026")
 const sections = ref([
   {
     heading: "1. Introduction",
@@ -141,6 +140,25 @@ const sections = ref([
   margin-left: 15px;
 }
 
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-icon-back:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
+}
+
 .privacy_wrapper{
   height: 100vh;
   overflow: hidden;
@@ -175,8 +193,9 @@ h1 {
 
 .last-updated {
   margin: 0 0 22px;
-  font-size: 15px;
+  font-size: 13px;
   opacity: 0.9;
+  text-align: center;
 }
 
 .section {
@@ -187,6 +206,7 @@ h1 {
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding-bottom: 80px;
   overflow-y: auto ;
 }
 

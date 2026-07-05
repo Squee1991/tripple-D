@@ -1,0 +1,568 @@
+{
+  "start": {
+    "botText": "Hallo! Was machst du heute in deiner Freizeit?",
+    "botTranslation": {
+      "ru-RU": "Привет! Что ты делаешь сегодня в свободное время?",
+      "en-US": "Hello! What are you doing today in your free time?",
+      "ar-SA": "مرحباً! ماذا تفعل اليوم في وقت فراغك؟",
+      "es-ES": "¡Hola! ¿Qué haces hoy en tu tiempo libre?",
+      "fr-FR": "Salut ! Que fais-tu aujourd'hui pendant ton temps libre ?",
+      "hi-IN": "नमस्ते! तुम आज अपने खाली समय में क्या कर रहे हो?",
+      "pl-PL": "Cześć! Co robisz dzisiaj w swoim wolnym czasie?",
+      "ro-RO": "Bună! Ce faci astăzi în timpul tău liber?",
+      "tr-TR": "Merhaba! Bugün boş zamanında ne yapıyorsun?",
+      "uk-UA": "Привіт! Що ти робиш сьогодні у вільний час?",
+      "uz-UZ": "Salom! Bugun bo'sh vaqtingda nima qilyapsan?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Freizeit",
+        "translation": {
+          "ru-RU": "свободное время",
+          "en-US": "free time",
+          "ar-SA": "وقت الفراغ",
+          "es-ES": "tiempo libre",
+          "fr-FR": "temps libre",
+          "hi-IN": "खाली समय",
+          "pl-PL": "czas wolny",
+          "ro-RO": "timp liber",
+          "tr-TR": "boş zaman",
+          "uk-UA": "вільний час",
+          "uz-UZ": "bo'sh vaqt"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hallo! Ich habe heute frei. Ich möchte ein bisschen Sport machen.",
+        "translation": {
+          "ru-RU": "Привет! У меня сегодня выходной. Я хочу немного заняться спортом.",
+          "en-US": "Hello! I have the day off today. I want to do a little sports.",
+          "ar-SA": "مرحباً! لدي يوم عطلة اليوم. أريد أن أمارس القليل من الرياضة.",
+          "es-ES": "¡Hola! Hoy tengo el día libre. Quiero hacer un poco de deporte.",
+          "fr-FR": "Salut ! Je suis en congé aujourd'hui. Je veux faire un peu de sport.",
+          "hi-IN": "नमस्ते! आज मेरी छुट्टी है। मैं थोड़ा खेलकूद करना चाहता हूँ।",
+          "pl-PL": "Cześć! Mam dzisiaj wolne. Chcę trochę poćwiczyć.",
+          "ro-RO": "Bună! Astăzi sunt liber. Vreau să fac puțin sport.",
+          "tr-TR": "Merhaba! Bugün boşum. Biraz spor yapmak istiyorum.",
+          "uk-UA": "Привіт! У мене сьогодні вихідний. Я хочу трохи зайнятися спортом.",
+          "uz-UZ": "Salom! Bugun men bo'shman. Bir oz sport bilan shug'ullanmoqchiman."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hi! Ich bleibe zu Hause. Ich möchte ein gutes Buch lesen.",
+        "translation": {
+          "ru-RU": "Привет! Я остаюсь дома. Я хочу почитать хорошую книгу.",
+          "en-US": "Hi! I am staying at home. I want to read a good book.",
+          "ar-SA": "أهلاً! سأبقى في المنزل. أريد قراءة كتاب جيد.",
+          "es-ES": "¡Hola! Me quedo en casa. Quiero leer un buen libro.",
+          "fr-FR": "Salut ! Je reste à la maison. Je veux lire un bon livre.",
+          "hi-IN": "नमस्ते! मैं घर पर रह रहा हूँ। मैं एक अच्छी किताब पढ़ना चाहता हूँ।",
+          "pl-PL": "Cześć! Zostaję w domu. Chcę poczytać dobrą książkę.",
+          "ro-RO": "Bună! Rămân acasă. Vreau să citesc o carte bună.",
+          "tr-TR": "Selam! Evde kalıyorum. İyi bir kitap okumak istiyorum.",
+          "uk-UA": "Привіт! Я залишаюся вдома. Я хочу почитати хорошу книгу.",
+          "uz-UZ": "Salom! Men uyda qolaman. Yaxshi bir kitob o'qimoqchiman."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Das klingt gut. Was hast du denn noch für Hobbys?",
+    "botTranslation": {
+      "ru-RU": "Звучит хорошо. Какие еще у тебя есть хобби?",
+      "en-US": "That sounds good. What other hobbies do you have?",
+      "ar-SA": "هذا يبدو جيداً. ما هي الهوايات الأخرى لديك؟",
+      "es-ES": "Suena bien. ¿Qué otras aficiones tienes?",
+      "fr-FR": "Ça a l'air bien. Quels autres passe-temps as-tu ?",
+      "hi-IN": "यह अच्छा लग रहा है। तुम्हारे और क्या शौक हैं?",
+      "pl-PL": "Brzmi dobrze. Jakie masz jeszcze hobby?",
+      "ro-RO": "Sună bine. Ce alte hobby-uri mai ai?",
+      "tr-TR": "Kulağa hoş geliyor. Başka ne tür hobilerin var?",
+      "uk-UA": "Звучить добре. Які ще у тебе є хобі?",
+      "uz-UZ": "Bu yaxshi eshitilyapti. Yana qanday hobbilaring bor?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Sport",
+        "translation": {
+          "ru-RU": "спорт",
+          "en-US": "sports",
+          "ar-SA": "رياضة",
+          "es-ES": "deporte",
+          "fr-FR": "sport",
+          "hi-IN": "खेल",
+          "pl-PL": "sport",
+          "ro-RO": "sport",
+          "tr-TR": "spor",
+          "uk-UA": "спорт",
+          "uz-UZ": "sport"
+        }
+      },
+      {
+        "german": "lesen",
+        "translation": {
+          "ru-RU": "читать",
+          "en-US": "to read",
+          "ar-SA": "يقرأ",
+          "es-ES": "leer",
+          "fr-FR": "lire",
+          "hi-IN": "पढ़ना",
+          "pl-PL": "czytać",
+          "ro-RO": "a citi",
+          "tr-TR": "okumak",
+          "uk-UA": "читати",
+          "uz-UZ": "o'qimoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich spiele sehr gerne Fußball und gehe oft im Park joggen. Und du?",
+        "translation": {
+          "ru-RU": "Я очень люблю играть в футбол и часто бегаю в парке. А ты?",
+          "en-US": "I really like playing football and often go jogging in the park. And you?",
+          "ar-SA": "أنا أحب لعب كرة القدم كثيراً وأذهب للركض غالباً في الحديقة. وأنت؟",
+          "es-ES": "Me gusta mucho jugar al fútbol y a menudo salgo a correr por el parque. ¿Y tú?",
+          "fr-FR": "J'aime beaucoup jouer au football et je vais souvent courir dans le parc. Et toi ?",
+          "hi-IN": "मुझे फुटबॉल खेलना बहुत पसंद है और मैं अक्सर पार्क में टहलने जाता हूँ। और तुम?",
+          "pl-PL": "Bardzo lubię grać w piłkę nożną i często biegam w parku. A ty?",
+          "ro-RO": "Îmi place foarte mult să joc fotbal și merg des să alerg în parc. Și tu?",
+          "tr-TR": "Futbol oynamayı çok seviyorum ve sık sık parkta koşuya çıkıyorum. Ya sen?",
+          "uk-UA": "Я дуже люблю грати у футбол і часто бігаю в парку. А ти?",
+          "uz-UZ": "Men futbol o'ynashni juda yaxshi ko'raman va tez-tez parkda yugurib turaman. Sen-chi?"
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Mein Hobby ist Musik. Ich spiele Gitarre und höre gerne Popmusik. Und was machst du?",
+        "translation": {
+          "ru-RU": "Мое хобби — музыка. Я играю на гитаре и люблю слушать поп-музыку. А что делаешь ты?",
+          "en-US": "My hobby is music. I play the guitar and like listening to pop music. And what do you do?",
+          "ar-SA": "هوايتي هي الموسيقى. أنا أعزف على الجيتار وأحب الاستماع إلى موسيقى البوب. وماذا تفعل أنت؟",
+          "es-ES": "Mi afición es la música. Toco la guitarra y me gusta escuchar música pop. ¿Y qué haces tú?",
+          "fr-FR": "Mon hobby est la musique. Je joue de la guitare et j'aime écouter de la musique pop. Et que fais-tu ?",
+          "hi-IN": "मेरा शौक संगीत है। मैं गिटार बजाता हूँ और पॉप संगीत सुनना पसंद करता हूँ। और तुम क्या करते हो?",
+          "pl-PL": "Moim hobby jest muzyka. Gram na gitarze i chętnie słucham muzyki pop. A ty co robisz?",
+          "ro-RO": "Hobby-ul meu este muzica. Cânt la chitară și îmi place să ascult muzică pop. Și tu ce faci?",
+          "tr-TR": "Benim hobim müzik. Gitar çalıyorum ve pop müzik dinlemeyi seviyorum. Peki sen ne yapıyorsun?",
+          "uk-UA": "Моє хобі — музика. Я граю на гітарі і люблю слухати поп-музику. А що робиш ти?",
+          "uz-UZ": "Mening hobim - musiqa. Men gitara chalishni va pop musiqasini eshitishni yaxshi ko'raman. Sen nima qilasan?"
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Ich koche sehr gerne und am Wochenende gehe ich oft ins Kino. Trifft man dich am Wochenende auch oft draußen mit Freunden?",
+    "botTranslation": {
+      "ru-RU": "Я очень люблю готовить, а по выходным часто хожу в кино. Тебя на выходных тоже часто можно встретить на улице с друзьями?",
+      "en-US": "I really like to cook, and on weekends I often go to the cinema. Are you also often out with friends on the weekend?",
+      "ar-SA": "أنا أحب الطبخ كثيراً وفي عطلة نهاية الأسبوع أذهب غالباً إلى السينما. هل تخرج غالباً مع الأصدقاء في عطلة نهاية الأسبوع أيضاً؟",
+      "es-ES": "Me gusta mucho cocinar y los fines de semana a menudo voy al cine. ¿También se te ve a menudo fuera con amigos los fines de semana?",
+      "fr-FR": "J'aime beaucoup cuisiner et le week-end, je vais souvent au cinéma. Est-ce qu'on te voit aussi souvent dehors avec des amis le week-end ?",
+      "hi-IN": "मुझे खाना पकाना बहुत पसंद है और सप्ताहांत में मैं अक्सर सिनेमा जाता हूँ। क्या तुम भी सप्ताहांत में अक्सर दोस्तों के साथ बाहर जाते हो?",
+      "pl-PL": "Bardzo lubię gotować, a w weekendy często chodzę do kina. Czy ciebie też często można spotkać w weekendy na zewnątrz z przyjaciółmi?",
+      "ro-RO": "Îmi place foarte mult să gătesc, iar în weekend merg des la cinema. Te pot întâlni și pe tine des pe afară cu prietenii în weekend?",
+      "tr-TR": "Yemek yapmayı çok severim ve hafta sonları sık sık sinemaya giderim. Seni de hafta sonları sık sık dışarıda arkadaşlarınla görebilir miyiz?",
+      "uk-UA": "Я дуже люблю готувати, а на вихідних часто ходжу в кіно. Тебе на вихідних теж часто можна зустріти надворі з друзями?",
+      "uz-UZ": "Men ovqat pishirishni juda yaxshi ko'raman va dam olish kunlari tez-tez kinoga boraman. Seni ham dam olish kunlari tez-tez ko'chada do'stlaring bilan uchratish mumkinmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Hobby",
+        "translation": {
+          "ru-RU": "хобби",
+          "en-US": "hobby",
+          "ar-SA": "هواية",
+          "es-ES": "afición / hobby",
+          "fr-FR": "passe-temps / hobby",
+          "hi-IN": "शौक",
+          "pl-PL": "hobby",
+          "ro-RO": "hobby",
+          "tr-TR": "hobi",
+          "uk-UA": "хобі",
+          "uz-UZ": "hobbi"
+        }
+      },
+      {
+        "german": "der Fußball",
+        "translation": {
+          "ru-RU": "футбол",
+          "en-US": "football / soccer",
+          "ar-SA": "كرة القدم",
+          "es-ES": "fútbol",
+          "fr-FR": "football",
+          "hi-IN": "फुटबॉल",
+          "pl-PL": "piłka nożna",
+          "ro-RO": "fotbal",
+          "tr-TR": "futbol",
+          "uk-UA": "футбол",
+          "uz-UZ": "futbol"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, fast jedes Wochenende. Wir gehen zusammen ins Café oder spazieren.",
+        "translation": {
+          "ru-RU": "Да, почти каждые выходные. Мы ходим вместе в кафе или гуляем.",
+          "en-US": "Yes, almost every weekend. We go to a cafe together or take a walk.",
+          "ar-SA": "نعم، تقريباً كل عطلة نهاية أسبوع. نذهب معاً إلى المقهى أو نتمشى.",
+          "es-ES": "Sí, casi todos los fines de semana. Vamos juntos a la cafetería o paseamos.",
+          "fr-FR": "Oui, presque chaque week-end. Nous allons ensemble au café ou nous promenons.",
+          "hi-IN": "हाँ, लगभग हर सप्ताहांत। हम साथ में कैफे जाते हैं या टहलते हैं।",
+          "pl-PL": "Tak, prawie w każdy weekend. Chodzimy razem do kawiarni albo spacerujemy.",
+          "ro-RO": "Da, aproape în fiecare weekend. Mergem împreună la cafenea sau ne plimbăm.",
+          "tr-TR": "Evet, neredeyse her hafta sonu. Birlikte kafeye gideriz veya yürüyüşe çıkarız.",
+          "uk-UA": "Так, майже кожні вихідні. Ми ходимо разом у кафе або гуляємо.",
+          "uz-UZ": "Ha, deyarli har dam olish kuni. Biz birga kafega boramiz yoki sayr qilamiz."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Nein, ich bin am Wochenende oft müde und bleibe lieber zu Hause auf dem Sofa.",
+        "translation": {
+          "ru-RU": "Нет, на выходных я часто устаю и предпочитаю оставаться дома на диване.",
+          "en-US": "No, I am often tired on the weekend and prefer to stay at home on the sofa.",
+          "ar-SA": "لا، أنا غالباً ما أكون متعباً في عطلة نهاية الأسبوع وأفضل البقاء في المنزل على الأريكة.",
+          "es-ES": "No, los fines de semana a menudo estoy cansado y prefiero quedarme en casa en el sofá.",
+          "fr-FR": "Non, je suis souvent fatigué le week-end et je préfère rester à la maison sur le canapé.",
+          "hi-IN": "नहीं, मैं अक्सर सप्ताहांत में थक जाता हूँ और घर पर सोफे पर रहना पसंद करता हूँ।",
+          "pl-PL": "Nie, w weekendy często jestem zmęczony i wolę zostać w domu na kanapie.",
+          "ro-RO": "Nu, în weekend sunt des obosit și prefer să rămân acasă pe canapea.",
+          "tr-TR": "Hayır, hafta sonları sık sık yorgun olurum ve evde kanepede kalmayı tercih ederim.",
+          "uk-UA": "Ні, на вихідних я часто втомлююсь і віддаю перевагу залишатися вдома на дивані.",
+          "uz-UZ": "Yo'q, men dam olish kunlari ko'pincha charchagan bo'laman va uyda divanda qolishni afzal ko'raman."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Das verstehe ich. Sag mal, hast du neben deinen Hobbys eigentlich auch Haustiere?",
+    "botTranslation": {
+      "ru-RU": "Я понимаю это. Скажи, а помимо хобби у тебя есть домашние животные?",
+      "en-US": "I understand that. Tell me, do you also have pets besides your hobbies?",
+      "ar-SA": "أنا أفهم ذلك. أخبرني، هل لديك أيضاً حيوانات أليفة بجانب هواياتك؟",
+      "es-ES": "Lo entiendo. Dime, además de tus aficiones, ¿tienes mascotas?",
+      "fr-FR": "Je comprends. Dis-moi, à part tes loisirs, as-tu aussi des animaux de compagnie ?",
+      "hi-IN": "मैं यह समझता हूँ। मुझे बताओ, क्या तुम्हारे शौक के अलावा कोई पालतू जानवर भी हैं?",
+      "pl-PL": "Rozumiem to. Powiedz mi, czy oprócz swoich hobby masz też zwierzęta domowe?",
+      "ro-RO": "Înțeleg asta. Spune-mi, pe lângă hobby-urile tale, ai și animale de companie?",
+      "tr-TR": "Bunu anlıyorum. Söylesene, hobilerinin dışında evcil hayvanların da var mı?",
+      "uk-UA": "Я розумію це. Скажи, а крім хобі у тебе є домашні тварини?",
+      "uz-UZ": "Buni tushunaman. Ayt-chi, hobbilaringdan tashqari uy hayvonlaring ham bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Musik",
+        "translation": {
+          "ru-RU": "музыка",
+          "en-US": "music",
+          "ar-SA": "موسيقى",
+          "es-ES": "música",
+          "fr-FR": "musique",
+          "hi-IN": "संगीत",
+          "pl-PL": "muzyka",
+          "ro-RO": "muzică",
+          "tr-TR": "müzik",
+          "uk-UA": "музика",
+          "uz-UZ": "musiqa"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, ich habe einen Hund. Ich muss jeden Tag mit ihm rausgehen.",
+        "translation": {
+          "ru-RU": "Да, у меня есть собака. Мне нужно каждый день выходить с ней на улицу.",
+          "en-US": "Yes, I have a dog. I have to go out with him every day.",
+          "ar-SA": "نعم، لدي كلب. يجب أن أخرج معه كل يوم.",
+          "es-ES": "Sí, tengo un perro. Tengo que salir con él todos los días.",
+          "fr-FR": "Oui, j'ai un chien. Je dois sortir avec lui tous les jours.",
+          "hi-IN": "हाँ, मेरे पास एक कुत्ता है। मुझे हर दिन उसके साथ बाहर जाना पड़ता है।",
+          "pl-PL": "Tak, mam psa. Muszę z nim codziennie wychodzić.",
+          "ro-RO": "Da, am un câine. Trebuie să ies cu el în fiecare zi.",
+          "tr-TR": "Evet, bir köpeğim var. Her gün onunla dışarı çıkmak zorundayım.",
+          "uk-UA": "Так, у мене є собака. Мені потрібно щодня виходити з нею на вулицю.",
+          "uz-UZ": "Ha, menda it bor. Men har kuni u bilan ko'chaga chiqishim kerak."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Nein, ich habe keine Haustiere. Aber ich mag Katzen sehr gerne.",
+        "translation": {
+          "ru-RU": "Нет, у меня нет домашних животных. Но мне очень нравятся кошки.",
+          "en-US": "No, I have no pets. But I really like cats.",
+          "ar-SA": "لا، ليس لدي حيوانات أليفة. لكنني أحب القطط كثيراً.",
+          "es-ES": "No, no tengo mascotas. Pero me gustan mucho los gatos.",
+          "fr-FR": "Non, je n'ai pas d'animaux de compagnie. Mais j'aime beaucoup les chats.",
+          "hi-IN": "नहीं, मेरे पास कोई पालतू जानवर नहीं है। लेकिन मुझे बिल्लियाँ बहुत पसंद हैं।",
+          "pl-PL": "Nie, nie mam zwierząt domowych. Ale bardzo lubię koty.",
+          "ro-RO": "Nu, nu am animale de companie. Dar îmi plac foarte mult pisicile.",
+          "tr-TR": "Hayır, evcil hayvanım yok. Ama kedileri çok severim.",
+          "uk-UA": "Ні, у мене немає домашніх тварин. Але мені дуже подобаються кішки.",
+          "uz-UZ": "Yo'q, uy hayvonlarim yo'q. Lekin men mushuklarni juda yaxshi ko'raman."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Schön! Ich finde Tiere toll. Machst du im Urlaub eigentlich auch gerne Ausflüge oder reist du viel?",
+    "botTranslation": {
+      "ru-RU": "Здорово! Я считаю, что животные — это прекрасно. А в отпуске ты тоже любишь ездить на экскурсии или много путешествуешь?",
+      "en-US": "Nice! I think animals are great. Do you actually also like to go on excursions on vacation or do you travel a lot?",
+      "ar-SA": "جميل! أعتقد أن الحيوانات رائعة. هل تحب أيضاً القيام برحلات في الإجازة أو هل تسافر كثيراً؟",
+      "es-ES": "¡Qué bien! Creo que los animales son geniales. Por cierto, en vacaciones ¿te gusta hacer excursiones o viajas mucho?",
+      "fr-FR": "Super ! Je trouve que les animaux, c'est génial. Aimes-tu aussi faire des excursions pendant les vacances ou voyages-tu beaucoup ?",
+      "hi-IN": "बढ़िया! मुझे जानवर बहुत पसंद हैं। क्या तुम छुट्टियों में सैर-सपाटे पर जाना पसंद करते हो या बहुत यात्रा करते हो?",
+      "pl-PL": "Fajnie! Uważam, że zwierzęta są super. A czy na wakacjach też chętnie robisz wycieczki lub dużo podróżujesz?",
+      "ro-RO": "Frumos! Cred că animalele sunt grozave. De fapt, îți place să faci excursii în vacanță sau călătorești mult?",
+      "tr-TR": "Güzel! Hayvanların harika olduğunu düşünüyorum. Tatilde gezilere çıkmayı da sever misin veya çok seyahat eder misin?",
+      "uk-UA": "Чудово! Я вважаю, що тварини — це прекрасно. А у відпустці ти теж любиш їздити на екскурсії чи багато подорожуєш?",
+      "uz-UZ": "Ajoyib! Menimcha, hayvonlar juda zo'r. Ta'tilda ham sayohat qilishni yaxshi ko'rasanmi yoki ko'p sayohat qilasanmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Kino",
+        "translation": {
+          "ru-RU": "кинотеатр",
+          "en-US": "cinema",
+          "ar-SA": "السينما",
+          "es-ES": "cine",
+          "fr-FR": "cinéma",
+          "hi-IN": "सिनेमा",
+          "pl-PL": "kino",
+          "ro-RO": "cinema",
+          "tr-TR": "sinema",
+          "uk-UA": "кінотеатр",
+          "uz-UZ": "kinoteatr"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, ich reise sehr gerne in andere Länder und lerne neue Städte kennen.",
+        "translation": {
+          "ru-RU": "Да, я очень люблю путешествовать в другие страны и знакомиться с новыми городами.",
+          "en-US": "Yes, I really like traveling to other countries and getting to know new cities.",
+          "ar-SA": "نعم، أنا أحب السفر إلى بلدان أخرى والتعرف على مدن جديدة كثيراً.",
+          "es-ES": "Sí, me gusta mucho viajar a otros países y conocer nuevas ciudades.",
+          "fr-FR": "Oui, j'aime beaucoup voyager dans d'autres pays et découvrir de nouvelles villes.",
+          "hi-IN": "हाँ, मुझे अन्य देशों की यात्रा करना और नए शहरों को जानना बहुत पसंद है।",
+          "pl-PL": "Tak, bardzo lubię podróżować do innych krajów i poznawać nowe miasta.",
+          "ro-RO": "Da, îmi place foarte mult să călătoresc în alte țări și să cunosc orașe noi.",
+          "tr-TR": "Evet, başka ülkelere seyahat etmeyi ve yeni şehirler tanımayı çok seviyorum.",
+          "uk-UA": "Так, я дуже люблю подорожувати в інші країни і знайомитися з новими містами.",
+          "uz-UZ": "Ha, men boshqa davlatlarga sayohat qilishni va yangi shaharlarni o'rganishni juda yaxshi ko'raman."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Ich bleibe im Urlaub lieber in Deutschland und mache kleine Fahrradtouren.",
+        "translation": {
+          "ru-RU": "В отпуске я предпочитаю оставаться в Германии и совершаю небольшие велосипедные прогулки.",
+          "en-US": "I prefer to stay in Germany on vacation and go on small bike tours.",
+          "ar-SA": "أفضل البقاء في ألمانيا في إجازتي والقيام بجولات صغيرة بالدراجة.",
+          "es-ES": "Prefiero quedarme en Alemania en mis vacaciones y hacer pequeños recorridos en bicicleta.",
+          "fr-FR": "Je préfère rester en Allemagne pendant les vacances et faire de petites balades à vélo.",
+          "hi-IN": "मैं छुट्टियों में जर्मनी में ही रहना पसंद करता हूँ और छोटी साइकिल यात्राएं करता हूँ।",
+          "pl-PL": "Na urlopie wolę zostać w Niemczech i robić małe wycieczki rowerowe.",
+          "ro-RO": "Prefer să rămân în Germania în vacanță și să fac mici plimbări cu bicicleta.",
+          "tr-TR": "Tatilde Almanya'da kalmayı ve küçük bisiklet turları yapmayı tercih ediyorum.",
+          "uk-UA": "У відпустці я віддаю перевагу залишатися в Німеччині і здійснюю невеликі велосипедні прогулянки.",
+          "uz-UZ": "Men ta'tilda Germaniyada qolishni va kichik velosiped turlarini qilishni afzal ko'raman."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Reisen und Ausflüge machen einfach super viel Spaß! Hast du nächste Woche Zeit für ein Treffen?",
+    "botTranslation": {
+      "ru-RU": "Путешествия и экскурсии — это просто огромное удовольствие! У тебя есть время для встречи на следующей неделе?",
+      "en-US": "Traveling and excursions are just super fun! Do you have time to meet next week?",
+      "ar-SA": "السفر والرحلات ممتعة للغاية! هل لديك وقت للقاء الأسبوع المقبل؟",
+      "es-ES": "¡Viajar y las excursiones son súper divertidos! ¿Tienes tiempo para quedar la próxima semana?",
+      "fr-FR": "Les voyages et les excursions sont tout simplement super amusants ! As-tu du temps pour qu'on se voie la semaine prochaine ?",
+      "hi-IN": "यात्रा करना और भ्रमण बहुत मज़ेदार होते हैं! क्या तुम्हारे पास अगले हफ्ते मिलने का समय है?",
+      "pl-PL": "Podróże i wycieczki to po prostu super zabawa! Masz czas na spotkanie w przyszłym tygodniu?",
+      "ro-RO": "Călătoriile și excursiile sunt pur și simplu super distractive! Ai timp pentru o întâlnire săptămâna viitoare?",
+      "tr-TR": "Seyahatler ve geziler gerçekten çok eğlenceli! Gelecek hafta buluşmak için vaktin var mı?",
+      "uk-UA": "Подорожі та екскурсії — це просто величезне задоволення! У тебе є час для зустрічі наступного тижня?",
+      "uz-UZ": "Sayohat va ekskursiyalar shunchaki ajoyib! Kelasi hafta uchrashish uchun vaqting bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "reisen",
+        "translation": {
+          "ru-RU": "путешествовать",
+          "en-US": "to travel",
+          "ar-SA": "يسافر",
+          "es-ES": "viajar",
+          "fr-FR": "voyager",
+          "hi-IN": "यात्रा करना",
+          "pl-PL": "podróżować",
+          "ro-RO": "a călători",
+          "tr-TR": "seyahat etmek",
+          "uk-UA": "подорожувати",
+          "uz-UZ": "sayohat qilmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, am Donnerstagabend habe ich Zeit. Passt dir das?",
+        "translation": {
+          "ru-RU": "Да, в четверг вечером у меня есть время. Тебе это подходит?",
+          "en-US": "Yes, I have time on Thursday evening. Does that suit you?",
+          "ar-SA": "نعم، لدي وقت مساء الخميس. هل يناسبك ذلك؟",
+          "es-ES": "Sí, tengo tiempo el jueves por la noche. ¿Te viene bien?",
+          "fr-FR": "Oui, j'ai du temps jeudi soir. Ça te convient ?",
+          "hi-IN": "हाँ, गुरुवार शाम को मेरे पास समय है। क्या यह तुम्हें अनुकूल है?",
+          "pl-PL": "Tak, w czwartek wieczorem mam czas. Pasuje ci?",
+          "ro-RO": "Da, joi seara am timp. Îți convine?",
+          "tr-TR": "Evet, perşembe akşamı vaktim var. Sana uyar mı?",
+          "uk-UA": "Так, у четвер ввечері у мене є час. Тобі це підходить?",
+          "uz-UZ": "Ha, payshanba kuni kechqurun vaqtim bor. Senga to'g'ri keladimi?"
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Am Samstag habe ich frei. Da können wir uns gerne treffen.",
+        "translation": {
+          "ru-RU": "В субботу я свободен. Тогда мы можем с удовольствием встретиться.",
+          "en-US": "I'm off on Saturday. We can gladly meet then.",
+          "ar-SA": "أنا متفرغ يوم السبت. يمكننا أن نلتقي حينها.",
+          "es-ES": "El sábado estoy libre. Entonces podemos quedar con gusto.",
+          "fr-FR": "Je suis libre samedi. Nous pourrions nous voir à ce moment-là.",
+          "hi-IN": "शनिवार को मेरी छुट्टी है। तब हम खुशी से मिल सकते हैं।",
+          "pl-PL": "W sobotę mam wolne. Wtedy możemy się chętnie spotkać.",
+          "ro-RO": "Sâmbătă sunt liber. Atunci ne putem întâlni cu plăcere.",
+          "tr-TR": "Cumartesi günü boşum. O zaman seve seve buluşabiliriz.",
+          "uk-UA": "У суботу я вільний. Тоді ми можемо із задоволенням зустрітися.",
+          "uz-UZ": "Shanba kuni bo'shman. O'shanda bemalol uchrashishimiz mumkin."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Donnerstag oder Samstag klingt super. Was wollen wir denn zusammen machen?",
+    "botTranslation": {
+      "ru-RU": "Четверг или суббота — звучит отлично. А что мы будем делать вместе?",
+      "en-US": "Thursday or Saturday sounds great. What do we want to do together then?",
+      "ar-SA": "الخميس أو السبت يبدو رائعاً. ماذا نريد أن نفعل معاً إذن؟",
+      "es-ES": "Jueves o sábado suena genial. ¿Qué queremos hacer juntos entonces?",
+      "fr-FR": "Jeudi ou samedi, c'est super. Qu'allons-nous faire ensemble alors ?",
+      "hi-IN": "गुरुवार या शनिवार बहुत अच्छा लग रहा है। तो हम साथ में क्या करना चाहते हैं?",
+      "pl-PL": "Czwartek lub sobota brzmi super. A co będziemy razem robić?",
+      "ro-RO": "Joi sau sâmbătă sună super. Ce vrem să facem împreună atunci?",
+      "tr-TR": "Perşembe veya Cumartesi harika geliyor. Peki birlikte ne yapmak istiyoruz?",
+      "uk-UA": "Четвер або субота — звучить чудово. А що ми будемо робити разом?",
+      "uz-UZ": "Payshanba yoki shanba ajoyib eshitilyapti. Birgalikda nima qilmoqchimiz?"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Wir können zusammen ein Eis essen gehen und ein bisschen quatschen.",
+        "translation": {
+          "ru-RU": "Мы можем вместе пойти поесть мороженое и немного поболтать.",
+          "en-US": "We can go eat some ice cream together and chat a bit.",
+          "ar-SA": "يمكننا أن نذهب لتناول الآيس كريم معاً وندردش قليلاً.",
+          "es-ES": "Podemos ir juntos a tomar un helado y charlar un poco.",
+          "fr-FR": "On peut aller manger une glace ensemble et discuter un peu.",
+          "hi-IN": "हम साथ में आइसक्रीम खाने जा सकते हैं और थोड़ी बातचीत कर सकते हैं।",
+          "pl-PL": "Możemy pójść razem na lody i trochę pogadać.",
+          "ro-RO": "Putem merge împreună să mâncăm o înghețată și să povestim puțin.",
+          "tr-TR": "Birlikte dondurma yemeye gidebilir ve biraz sohbet edebiliriz.",
+          "uk-UA": "Ми можемо разом піти поїсти морозиво і трохи потеревенити.",
+          "uz-UZ": "Biz birga muzqaymoq yeb, bir oz suhbatlashishimiz mumkin."
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Vielleicht können wir zusammen ins Kino gehen?",
+        "translation": {
+          "ru-RU": "Может быть, мы сможем вместе пойти в кино?",
+          "en-US": "Maybe we can go to the cinema together?",
+          "ar-SA": "ربما يمكننا الذهاب إلى السينما معاً؟",
+          "es-ES": "¿Quizás podamos ir juntos al cine?",
+          "fr-FR": "Peut-être qu'on pourrait aller au cinéma ensemble ?",
+          "hi-IN": "शायद हम साथ में सिनेमा जा सकते हैं?",
+          "pl-PL": "Może moglibyśmy pójść razem do kina?",
+          "ro-RO": "Poate putem merge împreună la cinema?",
+          "tr-TR": "Belki birlikte sinemaya gidebiliriz?",
+          "uk-UA": "Можливо, ми зможемо разом піти в кіно?",
+          "uz-UZ": "Balki birgalikda kinoga borarmiz?"
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Perfekt, das machen wir! Ich schreibe dir dann noch mal wegen der Uhrzeit. Bis dann!",
+    "botTranslation": {
+      "ru-RU": "Отлично, так и сделаем! Я тогда напишу тебе еще раз насчет времени. До скорого!",
+      "en-US": "Perfect, let's do that! I'll text you again about the time. See you then!",
+      "ar-SA": "ممتاز، سنفعل ذلك! سأكتب لك مرة أخرى بخصوص الوقت. أراك لاحقاً!",
+      "es-ES": "¡Perfecto, hagamos eso! Te escribiré de nuevo sobre la hora. ¡Hasta entonces!",
+      "fr-FR": "Parfait, on fait ça ! Je t'écrirai à nouveau concernant l'heure. À plus tard !",
+      "hi-IN": "बिल्कुल सही, हम यही करेंगे! मैं तुम्हें समय के बारे में फिर से लिखूँगा। फिर मिलते हैं!",
+      "pl-PL": "Super, tak zrobimy! Napiszę ci jeszcze odnośnie godziny. Do zobaczenia!",
+      "ro-RO": "Perfect, așa facem! Îți voi scrie din nou în legătură cu ora. Pe curând!",
+      "tr-TR": "Mükemmel, öyle yapalım! Saat için sana tekrar yazacağım. Görüşmek üzere!",
+      "uk-UA": "Відмінно, так і зробимо! Я тоді напишу тобі ще раз щодо часу. До зустрічі!",
+      "uz-UZ": "Ajoyib, shunday qilamiz! Vaqt haqida senga yana yozaman. Ko'rishguncha!"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Alles klar, bis bald! Tschüss!",
+        "translation": {
+          "ru-RU": "Все ясно, до скорого! Пока!",
+          "en-US": "All right, see you soon! Bye!",
+          "ar-SA": "حسناً، أراك قريباً! وداعاً!",
+          "es-ES": "¡Entendido, hasta pronto! ¡Adiós!",
+          "fr-FR": "C'est noté, à bientôt ! Salut !",
+          "hi-IN": "ठीक है, जल्द ही मिलते हैं! अलविदा!",
+          "pl-PL": "Wszystko jasne, do zobaczenia wkrótce! Cześć!",
+          "ro-RO": "Am înțeles, pe curând! Pa!",
+          "tr-TR": "Tamamdır, yakında görüşürüz! Hoşça kal!",
+          "uk-UA": "Все ясно, до зустрічі! Бувай!",
+          "uz-UZ": "Tushunarli, tez orada ko'rishguncha! Xayr!"
+        },
+        "nextStep": null
+      },
+      {
+        "text": "Super, ich freue mich. Mach's gut!",
+        "translation": {
+          "ru-RU": "Супер, я буду рад(а). Счастливо!",
+          "en-US": "Super, I'm looking forward to it. Take care!",
+          "ar-SA": "رائع، أنا أتطلع لذلك. اعتنِ بنفسك!",
+          "es-ES": "Súper, me hace ilusión. ¡Cuídate!",
+          "fr-FR": "Super, j'ai hâte. Prends soin de toi !",
+          "hi-IN": "सुपर, मुझे इसका इंतज़ार है। अपना ख्याल रखना!",
+          "pl-PL": "Super, bardzo się cieszę. Trzymaj się!",
+          "ro-RO": "Super, abia aștept. Ai grijă de tine!",
+          "tr-TR": "Süper, sabırsızlanıyorum. Kendine iyi bak!",
+          "uk-UA": "Супер, я буду радий(рада). Бувай!",
+          "uz-UZ": "Zo'r, men xursandman. O'zingni ehtiyot qil!"
+        },
+        "nextStep": null
+      }
+    ],
+    "defaultNext": null
+  }
+}

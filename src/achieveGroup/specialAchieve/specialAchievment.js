@@ -1,28 +1,86 @@
 export const cpecialGroupAchievment = [
 	{
-		title: 'specialCategory.specialLabel',
+		title: 'marathonEasy.title',
 		achievements: [
 			{
-				id: "leaderboardEasy",
-				name: "specialCategory.specialFirstLabel",
-				description: "specialCategory.specialFirstText",
+				id: "leaderboardEasy-1",
+				name: "marathonEasy.easyOneName",
+				description: "marathonEasy.easyOneDescription",
 				icon: "🥇",
 				currentProgress: 0,
 				targetProgress: 1
 			},
 			{
-				id: "leaderboardNormal",
-				name: "specialCategory.specialSecondLabel",
-				description: "specialCategory.specialSecondText",
+				id: "leaderboardEasy-2",
+				name: "marathonEasy.easyTwoName",
+				description: "marathonEasy.easyTwoDescription",
 				icon: "🥈",
 				currentProgress: 0,
 				targetProgress: 1
 			},
 			{
-				id: "leaderboardHard",
-				name: "specialCategory.specialThirdLabel",
-				description: "specialCategory.specialThirdText",
+				id: "leaderboardEasy-3",
+				name: "marathonEasy.easyThreeName",
+				description: "marathonEasy.easyThreeDescription",
+				icon: "🥉",
+				currentProgress: 0,
+				targetProgress: 1
+			}
+		]
+	},
+	{
+		title: 'marathonNormal.title',
+		achievements: [
+			{
+				id: "leaderboardNormal-1",
+				name: "marathonNormal.normalOneName",
+				description: "marathonNormal.normalOneDescription",
 				icon: "🏆",
+				currentProgress: 0,
+				targetProgress: 1
+			},
+			{
+				id: "leaderboardNormal-2",
+				name: "marathonNormal.normalTwoName",
+				description: "marathonNormal.normalTwoDescription",
+				icon: "🥈",
+				currentProgress: 0,
+				targetProgress: 1
+			},
+			{
+				id: "leaderboardNormal-3",
+				name: "marathonNormal.normalThreeName",
+				description: "marathonNormal.normalThreeDescription",
+				icon: "🥉",
+				currentProgress: 0,
+				targetProgress: 1
+			}
+		]
+	},
+	{
+		title: 'marathonHard.title',
+		achievements: [
+			{
+				id: "leaderboardHard-1",
+				name: "marathonHard.normalOneName",
+				description: "marathonHard.normalOneDescription",
+				icon: "👑",
+				currentProgress: 0,
+				targetProgress: 1
+			},
+			{
+				id: "leaderboardHard-2",
+				name: "marathonHard.normalTwoName",
+				description: "marathonHard.normalTwoDescription",
+				icon: "🥈",
+				currentProgress: 0,
+				targetProgress: 1
+			},
+			{
+				id: "leaderboardHard-3",
+				name: "marathonHard.normalThreeName",
+				description: "marathonHard.normalThreeDescription",
+				icon: "🥉",
 				currentProgress: 0,
 				targetProgress: 1
 			}

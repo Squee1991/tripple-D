@@ -7,25 +7,24 @@
         'is-cancelled': authStore.isPremium && authStore.subscriptionCancelled
       }"
     >
-      <div class="premium-content">
-        <h4 v-if="authStore.isPremium && !authStore.subscriptionCancelled">
-          💎 {{ t('cabinet.active') }} PLUS
-        </h4>
-        <h4 v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-          ⚠️ Подписка отменена
-        </h4>
-        <h4 v-else>
-          👑 SKILLUP PLUS
-        </h4>
-        <p v-if="authStore.isPremium && !authStore.subscriptionCancelled">
-          📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}
-        </p>
-        <p v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-          📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}
-        </p>
-        <p v-else>
-          Получи максимум от платформы, ускорь свое обучение.
-        </p>
+      <div class="premium-top">
+        <div class="premium-text">
+          <p v-if="authStore.isPremium && !authStore.subscriptionCancelled">
+            📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}
+          </p>
+          <p v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
+            📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}
+          </p>
+          <p v-else>
+            {{ t('premiumBanner.textBanner')}}
+          </p>
+        </div>
+        <img
+            :src="PlusIcon"
+            alt="Plus Logo"
+            class="premium-logo"
+            :class="{ 'grayscale-logo': !authStore.isPremium }"
+        />
       </div>
       <div class="premium-actions">
         <button
@@ -48,12 +47,14 @@
 </template>
 
 <script setup>
-import {computed} from 'vue'
-import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
-import {userAuthStore} from '../../store/authStore.js'
+import { computed } from 'vue'
+import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+import { userAuthStore } from '../../store/authStore.js'
+import PlusIcon from '../../assets/images/PlusLogo.png'
+
 const emit = defineEmits(['open'])
-const {t, locale} = useI18n()
+const { t, locale } = useI18n()
 const router = useRouter()
 const authStore = userAuthStore()
 
@@ -73,19 +74,14 @@ const openCancelModal = () => {
 </script>
 
 <style scoped>
-.account-tab-body {
-  padding: 15px 0;
-}
-
 .premium-banner {
   margin-top: 5px;
-  background: linear-gradient(135deg, #8b5cf6, #ec4899);
-  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.25);
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
   border-radius: 24px;
   padding: 15px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
   color: #ffffff;
   position: relative;
   overflow: hidden;
@@ -105,33 +101,51 @@ const openCancelModal = () => {
 }
 
 .premium-banner.is-active {
-  background: linear-gradient(135deg, #10b981, #059669);
-  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+  box-shadow: 0 8px 20px rgba(72, 206, 236, 0.25);
 }
-
 
 .premium-banner.is-cancelled {
   background: linear-gradient(135deg, #f59e0b, #d97706);
   box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25);
 }
 
-.premium-content h4 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 900;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+.premium-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+  z-index: 1;
 }
 
-.premium-content p {
-  margin: 6px 0 0 0;
+.premium-text {
+  flex: 1;
+}
+
+.premium-logo {
+  height: 84px;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.grayscale-logo {
+  filter: grayscale(1);
+}
+
+.premium-text p {
+  margin: 0;
   font-size: 14px;
   font-weight: 700;
   opacity: 0.95;
+  line-height: 1.3;
 }
 
 .premium-actions {
   z-index: 1;
-  flex-shrink: 0;
+  display: flex;
+  width: 100%;
 }
 
 .premium-action-btn {
@@ -146,14 +160,13 @@ const openCancelModal = () => {
   cursor: pointer;
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.1s ease;
-  white-space: nowrap;
+  width: 100%;
 }
 
 .premium-action-btn:active {
   transform: translateY(4px);
   box-shadow: 0 0 0 transparent;
 }
-
 
 .premium-banner.is-active .premium-action-btn {
   color: #059669;
@@ -180,19 +193,8 @@ const openCancelModal = () => {
 }
 
 @media (max-width: 480px) {
-  .premium-banner {
-    flex-direction: column;
-    text-align: center;
-    align-items: stretch;
-  }
-
-  .premium-actions {
-    display: flex;
-    justify-content: center;
-  }
-
-  .premium-action-btn {
-    width: 100%;
+  .premium-logo {
+    height: 70px;
   }
 }
 </style>

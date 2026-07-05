@@ -7,9 +7,9 @@ import {userAuthStore} from '../../store/authStore.js'
 import Modal from "../../src/components/modal.vue"
 import VBanner from "~/src/components/V-banner.vue"
 import HeadPhones from '../../assets/images/headphones.svg'
-/*import { showInterstitial } from '../../utils/admob.js'*/
 import VTransition from "~/src/components/V-transition.vue"
 import VPremiumModal from "~/src/components/V-premiumModal.vue"
+import VArrowNav from "~/src/components/V-arrowNav.vue";
 
 const router = useRouter()
 const store = useAudioTaskStore()
@@ -65,16 +65,14 @@ const selectLevel = (level) => {
   screen.value = 'topics'
 }
 
-/*const selectTopic = (topic, index) => {
+const selectTopic = (topic, index) => {
   if (index === 0 || authStore.isPremium) {
-    showInterstitial(()=> {
       store.setCurrentTopicId(topic.id)
       router.push('/audio-tasks/session')
-    })
   } else {
     showPremiumModal.value = true
   }
-}*/
+}
 
 onMounted(async () => {
   setTimeout(()=> {
@@ -145,11 +143,7 @@ onUnmounted(() => {
                       <span style="font-size: 28px; font-weight: 900;">{{ level }}</span>
                     </div>
                   </div>
-                  <div class="topic-arrow">
-                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                      <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                  </div>
+                  <VArrowNav/>
                 </div>
               </div>
             </template>
@@ -173,9 +167,7 @@ onUnmounted(() => {
                       <span class="topic-label">{{ t(topic.title) }}</span>
                     </div>
                     <div class="topic-arrow" :class="{ 'topic-arrow--locked': index !== 0 && !authStore.isPremium }">
-                      <svg v-if="index === 0 || authStore.isPremium" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                      </svg>
+                      <VArrowNav v-if="index === 0 || authStore.isPremium"/>
                       <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                         <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
@@ -239,10 +231,9 @@ onUnmounted(() => {
 }
 
 .quiz__title {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 900;
   color: var(--title);
-  text-transform: uppercase;
   margin: 0;
   -webkit-text-stroke: 1px var(--title);
 }
@@ -295,6 +286,17 @@ onUnmounted(() => {
   display: none;
 }
 
+.topic-arrow--locked {
+  background-color: #a0aec0;
+  box-shadow: 0 3px 0px #718096;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%
+}
+
 .banner-wrapper {
   margin-bottom: 20px;
 }
@@ -307,7 +309,7 @@ onUnmounted(() => {
 
 .topic-list-item {
   border-radius: 20px;
-  padding: 10px 16px;
+  padding: 4px 16px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -356,24 +358,6 @@ onUnmounted(() => {
   font-size: 18px;
   font-weight: 800;
   font-family: "Nunito", sans-serif;
-}
-
-.topic-arrow {
-  background-color: #3b82f6;
-  color: #ffffff;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 0px #2563eb;
-  flex-shrink: 0;
-}
-
-.topic-arrow--locked {
-  background-color: #a0aec0;
-  box-shadow: 0 3px 0px #718096;
 }
 
 .topic-progress-wrapper {

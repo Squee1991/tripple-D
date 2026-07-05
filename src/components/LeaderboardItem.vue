@@ -4,7 +4,8 @@ import {userAuthStore} from '../../store/authStore.js'
 import GoldMedal from '../../assets/images/ranked-medals/GoldMedal.svg'
 import SilverMedal from '../../assets/images/ranked-medals/SilverMedal.svg'
 import BronzeMedal from '../../assets/images/ranked-medals/BronzeMedal.svg'
-
+import VTransition from "~/src/components/V-transition.vue";
+const isMounted = ref(false);
 const props = defineProps({
   player: {type: Object, required: true},
   rank: {type: Number, required: true},
@@ -31,38 +32,66 @@ const rankClass = computed(() => {
   if (props.rank === 3) return 'rank--bronze'
   return 'rank--default'
 })
+
+onMounted(() => {
+  setTimeout(()=> {
+    isMounted.value = true
+  }, 90)
+})
+
 </script>
 
 <template>
-  <li class="leaderboard-item" :class="{ 'leaderboard-item--current': isCurrentUser }">
-    <div class="leaderboard-player-info">
-      <div class="leaderboard-player-rank" :class="rankClass">
-        <img v-if="medal" :src="medal.src" :alt="medal.alt" class="rank-medal"/>
-        <span v-else>#{{ rank }}</span>
+  <div v-if="player.isSeparated" class="leaderboard-separator">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+    <li class="leaderboard-item" :class="{ 'leaderboard-item--current': isCurrentUser }">
+      <div class="leaderboard-player-info">
+        <div class="leaderboard-player-rank" :class="rankClass">
+          <img v-if="medal" :src="medal.src" :alt="medal.alt" class="rank-medal"/>
+          <span v-else>#{{ rank }}</span>
+        </div>
+        <img class="leaderboard-player-avatar"
+             :src="isCurrentUser ? authStore.avatarUrl : authStore.getAvatarUrl(player.avatar)"
+             alt="avatar"
+        />
+        <span class="leaderboard-player-name">{{ player.name }}</span>
       </div>
-      <img class="leaderboard-player-avatar"
-           :src="isCurrentUser ? authStore.avatarUrl : authStore.getAvatarUrl(player.avatar)"
-           alt="avatar"
-      />
-      <span class="leaderboard-player-name">{{ player.name }}</span>
-    </div>
-    <div class="leaderboard-score-wrapper">
+      <div class="leaderboard-score-wrapper">
       <span class="leaderboard-player-score">
         {{ playerScore }} {{ scoreUnit }}
       </span>
-    </div>
-  </li>
+      </div>
+    </li>
 </template>
 
 <style scoped>
+
+.leaderboard-separator {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.leaderboard-separator .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #1e1e1e;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
 .leaderboard-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  padding: 5px;
+  padding: 8px;
   margin-bottom: 10px;
-  background: #fff7b8;
+  background: var(--menuItemsBg);
   border: 3px solid #1e1e1e;
   border-radius: 18px;
   box-shadow: 2px 2px 0 #1e1e1e;
@@ -70,31 +99,24 @@ const rankClass = computed(() => {
 }
 
 .leaderboard-item--current {
-  background: #c9ffbf;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  border: 2px solid #197596;
 }
 
 .leaderboard-player-info {
   display: flex;
   align-items: center;
-  gap: 5px;
 }
 
 .leaderboard-player-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #fff;
-  border: 3px solid #1e1e1e;
-  box-shadow: 1px 1px 0 #1e1e1e;
+  width: 42px;
+  height: 42px;
 }
 
 .leaderboard-player-name {
   font-size: .9rem;
   font-weight: 800;
-  color: #1e1e1e;
-  letter-spacing: 0.3px;
+  color: var(--titleColor);
+  margin-left: 5px;
 }
 
 .leaderboard-player-rank {
@@ -106,16 +128,14 @@ const rankClass = computed(() => {
 }
 
 .rank--default {
-  color: #000000;
+  color: var(--titleColor);
 }
 
 .leaderboard-score-wrapper {
-  min-width: 52px;
-  padding: 1px 10px;
-  background: #ffd6a5;
-  border: 2px solid #1e1e1e;
+  width: 40px;
+  padding: 4px 10px;
+  background: #6b72d1;
   border-radius: 22px;
-  box-shadow: 2px 2px 0 #1e1e1e;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,36 +149,25 @@ const rankClass = computed(() => {
 }
 
 @media (max-width: 767px) {
-
-
   .leaderboard-player-name {
-    font-size: 1.1rem;
+    font-size: 16px;
   }
 
   .leaderboard-player-rank {
     min-width: 40px;
-    font-size: 1.4rem;
-  }
-
-  .rank--gold {
-    font-size: 1.7rem;
-  }
-
-  .rank--silver {
-    font-size: 1.6rem;
-  }
-
-  .rank--bronze {
-    font-size: 1.5rem;
+    font-size: 16px;
   }
 
   .leaderboard-score-wrapper {
-    padding: 3px 0;
+    padding: 6px 0;
   }
 
   .leaderboard-player-score {
-    font-size: 1rem;
+    font-size: 20px;
+    color: white;
     text-align: center;
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 400;
   }
 }
 

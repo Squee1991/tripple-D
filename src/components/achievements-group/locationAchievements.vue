@@ -124,7 +124,7 @@ onMounted(() => {
   padding: 1rem;
   gap: 8px;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: var(--menuItemsBg);
   border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile);
   text-align: left;
@@ -157,7 +157,7 @@ onMounted(() => {
 
 .achievement-title-overall {
   font-size: 20px;
-  color: #1e1e1e;
+  color: var(--titleColor);
   font-weight: 400;
   margin: 0 0 5px 0;
 }
@@ -194,7 +194,7 @@ onMounted(() => {
 
 .achievement-description-overall {
   font-size: 13px;
-  color: #555;
+  color: var(--titleColor);
   font-family: "Nunito", sans-serif;
   font-weight: 500;
   margin: 0;

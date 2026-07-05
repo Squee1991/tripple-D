@@ -9,7 +9,7 @@
             {{ t(currentTip) }}
           </template>
           <template v-else>
-            Подсказка по грамматике доступна после ответа!
+            {{ t('rulesModal.text')}}
           </template>
         </div>
         <div class="modal__actions">
@@ -23,7 +23,6 @@
 </template>
 
 <script setup>
-import {useI18n} from 'vue-i18n'
 
 const {t} = useI18n()
 
@@ -43,6 +42,7 @@ defineProps({
 })
 
 defineEmits(['close'])
+
 </script>
 
 <style scoped>
@@ -65,11 +65,10 @@ defineEmits(['close'])
 .modal__window {
   position: relative;
   width: min(440px, 92%);
-  background: #fff;
-  border: 3px solid #111;
+  background: var(--menuItemsBg);
+  border: 3px solid var(--tabsSlideBorderColor);
   border-radius: 18px;
-  box-shadow: 4px 4px 0 #1e1e1e;
-  padding: 20px 35px;
+  padding: 20px 10px;
   text-align: center;
   z-index: 1;
 }
@@ -85,27 +84,30 @@ defineEmits(['close'])
   font-weight: 600;
   line-height: 1.4;
   padding: 15px 5px;
-  color: #333;
+  color: var(--title);
 }
 
 .modal__actions {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .btn {
-  height: 56px;
-  padding: 0 26px;
-  border-radius: 16px;
+
+  padding: 12px 26px;
+  border-radius: 36px;
   font-weight: 900;
   font-size: 22px;
-  border: 2px solid #1e1e1e;
   cursor: pointer;
 }
 
 .btn--primary {
-  background: #a7ecb8;
+  background: #3b82f6;
+  box-shadow: 0 5px 0 #1d4ed8;
+  border: none;
+  color: #fff;
+  width: 100%;
 }
 
 .modal-slide-enter-active, .modal-slide-leave-active {
@@ -149,35 +151,19 @@ defineEmits(['close'])
   }
 
   .modal__window--bottom {
-    width: 100%;
-    border-radius: 30px 30px 0 0;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.05);
-    margin: 0;
-    padding: 30px 24px calc(20px + env(safe-area-inset-bottom, 0px));
+    border-radius: 35px;
   }
 
   .modal--tip .modal__title {
     display: flex;
     justify-content: center;
-    font-size: 22px;
-    margin-bottom: 20px;
+    font-size: 42px;
   }
 
   .modal--tip .quest__tip-text {
     font-size: 17px;
     line-height: 1.6;
     text-align: center;
-    padding-bottom: 30px;
-  }
-
-  .modal--tip .modal__actions .btn--primary {
-    width: 100%;
-    height: 54px;
-    border: none;
-    background: #a7ecb8;
-    color: #1a532a;
-    box-shadow: 0 4px 15px rgba(167, 236, 184, 0.3);
   }
 }
 </style>

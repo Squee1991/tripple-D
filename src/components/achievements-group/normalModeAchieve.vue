@@ -123,7 +123,7 @@ const getCompletedCount = group =>
   text-align: left;
   width: 650px;
   transition: all 0.2s ease;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .achievement-icon-wrapper.medium-mode {
@@ -150,7 +150,7 @@ const getCompletedCount = group =>
 
 .achievement-title {
   font-size: 20px;
-  color: #1e1e1e;
+  color: var(--titleColor);
   font-weight: 400;
   margin: 0 0 5px 0;
 }
@@ -187,7 +187,7 @@ const getCompletedCount = group =>
 
 .achievement-description {
   font-size: 13px;
-  color: #555;
+  color: var(--titleColor);
   font-family: "Nunito", sans-serif;
   font-weight: 500;
   margin: 0;

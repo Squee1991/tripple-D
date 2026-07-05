@@ -1,5 +1,4 @@
 {
-
   "definiteIndefiniteQuestOne": {
     "title": "Battle for Endings",
     "description": "Mixed practice: indefinite and definite articles in sentences.",
@@ -525,10 +524,6 @@
     "questFifteen": "Choose the correct option: It was a beautiful day",
     "questFifteenTip": "Indefinite article (first time). Masculine (der). The article 'ein' is empty, so the adjective takes the -er ending from the article 'der'."
   },
-
-
-
-
   "secretLandsQuestOne": {
     "title": "Result",
     "description": "Mixed training: working with the indefinite article in Perfekt and Futur 1. Topics: daily life, city, transport, food.",
@@ -1054,8 +1049,6 @@
     "questFifteen": "Assemble the sentence: We will see an interesting exhibition",
     "questFifteenTip": "Exhibition — feminine (die). The article 'eine' ends in -e, so the adjective takes the -e ending from the article."
   },
-
-
   "edgeImagesQuestOne": {
     "title": "Start",
     "description": "Practicing the correct declension of adjectives after der, die, das.",
@@ -1581,11 +1574,6 @@
     "questFifteen": "Enter the form (lecker): Ich werde die ___ Pizza essen.",
     "questFifteenTip": "Akkusativ (feminine): 'die' is the basic article, the adjective takes the -e ending from the article."
   },
-
-
-
-
-
   "timeGageQuestOne": {
     "title": "Meeting and Communication",
     "description": "Practicing grammar in communication situations: from meeting plans to stories about the past.",
@@ -3636,7 +3624,9 @@
     "streak": "Win streak",
     "clearWins": "Clean wins",
     "start": "Start game",
-    "info": "Click on a level to see its statistics."
+    "info": "Click on a level to see its statistics.",
+    "answer-placeholder": "Assemble the sentence...",
+    "pending": "Pending..."
   },
   "eventSessionPage": {
     "loading": "Loading…",
@@ -3985,23 +3975,23 @@
     "text": "Hide"
   },
   "payPage": {
+    "sale5": "3% discount",
+    "sale10": "6% discount",
+    "sale15": "15% discount",
+    "finalePrice": "TOTAL:",
+    "yourSale": "Your discount",
     "title": "Get the most out of the platform",
-    "description": "Learning, rewards, quests, progress and much more!",
+    "description": "Learning, rewards, tasks, progress, and much more!",
     "compareLabelOne": "Features",
     "compareLabelTwo": "Free",
     "compareLabelThree": "Subscription",
-    "getPremiumBtn": "Get subscription",
+    "getPremiumBtn": "Get Premium",
     "month": "mo.",
-    "featureOne": "Learning material",
-    "featureTwo": "Progress saving",
-    "featureThree": "Achievements",
-    "featureFour": "Daily quests",
-    "featureFive": "Seasonal events",
-    "featureSix": "Reward collection",
-    "featureSeven": "AI-checked tests",
-    "featureEight": "Voice-over",
-    "featureNine": "Duels and ranking",
-    "featureTen": "Upcoming features"
+    "featureOne": "Limitless learning",
+    "featureTwo": "Future features",
+    "featureThree": "Developer support",
+    "featureFour": "No ads",
+    "withoutDiscount": "Without discount"
   },
   "useHeadApp": {
     "title": "Skillupgerman — Learn German easily and interestingly through games",
@@ -4146,23 +4136,27 @@
   "howToUse": {
     "title": "How to use",
     "questOne": "How to start learning?",
-    "answerOne": "To start practicing German, simply register and create an account. Without this, access to tasks will be closed.",
+    "answerOne": "To start practicing German, simply register and create an account. Without this, access to tasks will be locked.",
     "questTwo": "What are seasonal events?",
-    "answerTwo": "Seasonal events are temporary activities tied to holidays. They include special quests, themed tasks, and unique rewards available only for a limited time.",
+    "answerTwo": "Seasonal events are temporary events tied to holidays. They feature special quests, themed tasks, and unique rewards that are only available for a limited time.",
     "questThree": "What is an achievement?",
-    "answerThree": "An achievement is a mark for a completed activity (progress, correct answers, daily tasks, etc.).",
+    "answerThree": "An achievement is a badge or marker for completed activity (progress, correct answers, daily tasks, etc.).",
     "questFour": "What are rewards?",
-    "answerFour": "Rewards are given for completing certain achievements and are displayed in your profile.",
-    "questFive": "Where to check progress on articles?",
-    "answerFive": "On the main page in the 'Participant Panel' select 'Statistics', then — the progress of the desired category. Important: if you don’t have active topics on articles, statistics will not be displayed.",
-    "questSix": "What is Artiklus?",
-    "answerSix": "Artiklus is the internal currency. It is earned for correct answers in the 'Article Practice' task and for completing tasks in Language Lands. It can be spent on extra attempts.",
-    "questSeven": "How to get into the ranking?",
-    "answerSeven": "You need to reach at least level 2 by playing 'Article Practice' or 'Language Lands'. After that, the ranking table becomes available.",
+    "answerFour": "Rewards are granted for completing specific achievements and are displayed in your personal account dashboard.",
+    "questFive": "Where can I view my progress on articles?",
+    "answerFive": "On the main page under 'Member Dashboard', select 'Statistics', then choose the progress of the category you are interested in. Note: if you have no active article topics, the statistics will not be displayed.",
+    "questSix": "What is Articlus?",
+    "answerSix": "Articlus is the internal currency. It is awarded for correct answers in the 'Article Practice' task and for completing tasks in Language Lands. It can be spent on extra retries.",
+    "questSeven": "How do I enter the leaderboard?",
+    "answerSeven": "The article marathon leaderboard is held once every two weeks. For two weeks, you compete with other participants. Once the marathon ends, the top three places receive achievements and rewards!",
     "questEight": "What are daily tasks?",
-    "answerEight": "These are tasks by topic that can be completed once a day. You can complete 3 tasks per day. They are available on the main page.",
+    "answerEight": "These are topic-based tasks that can be completed once a day. You can complete 3 tasks per day. They are available on the main page.",
     "questNine": "What are events?",
-    "answerNine": "These are temporary events that take place once a year. During the active period, themed quests and rewards are available. Outside the date range, the section is inaccessible. The event dates can be found in the 'Event Calendar' in the Participant Panel."
+    "answerNine": "Temporary events that take place once a year. During the active period, themed tasks and rewards become available. Outside of these dates, the section is unavailable. You can check the dates in the 'Event Calendar' on the Member Dashboard.",
+    "questTen": "What are mortarboards?",
+    "answerTen": "Mortarboards are student hats awarded for completing daily tasks. They grant title bonuses and discounts on learning. There is a penalty system for failing to complete daily tasks.",
+    "questEleven": "Is there a penalty on mortarboards?",
+    "answerEleven": "Yes, failing to complete daily tasks results in a penalty (3 mortarboards). Complete at least one daily task to avoid the penalty. If you are away, you can buy a time freeze in the internal shop to prevent the penalty from deducting your hats!"
   },
   "accountManagement": {
     "title": "Account Management",
@@ -4174,22 +4168,23 @@
     "answerThree": "On the login form select 'Forgot password?' and follow the instructions. A recovery email will be sent to the address provided during registration. Important: use a real email address when registering."
   },
   "subscribe": {
-    "title": "Subscription (Premium)",
-    "questOne": "What does Premium give?",
-    "questOneStepOne": "1 Audio for all words and sentences — practice listening comprehension.",
-    "questOneStepTwo": "2 Unlimited learning — go through as much material as you want per day.",
-    "questOneStepThree": "3 Access to all tests with auto-check and AI evaluation.",
-    "questOneStepFour": "4 Audio tasks and speaking tasks for oral practice.",
-    "questOneStepFive": "5 Exclusive materials and exercises not available in the free version.",
-    "questOneStepSix": "6 Support developers — Premium helps us improve the project, release new tasks and enhance features for all students. Our goal is to make learning German accessible and fun. We create an atmosphere of interactivity, games and competition so that studying feels like an adventure you want to return to every day!",
-    "questTwo": "How to cancel Premium?",
+    "title": "Subscription (Plus)",
+    "questOne": "What does a Plus subscription provide?",
+    "questOneStepOne": "1 Audio for all words and sentences — practice your listening skills.",
+    "questOneStepTwo": "2 Unlimited learning — go through any amount of material per day.",
+    "questOneStepThree": "3 Access to all tests with auto-check and AI grading.",
+    "questOneStepFour": "4 Audio and speaking exercises to practice oral speech.",
+    "questOneStepFive": "5 Exclusive materials and exercises unavailable in the free version.",
+    "questOneStepSix": "6 Developer support — this helps us develop the project, release new tasks, and improve features for all students. Our goal is to make learning German accessible and, most importantly, exciting. We create an atmosphere of interaction, games, and competition so that studying feels like an adventure you want to return to every day!",
+    "questTwo": "How to cancel Plus?",
     "questTwoStepOne": "Log in to your account.",
-    "questTwoStepTwo": "Go to 'Profile'.",
-    "questTwoStepThree": "Open 'Account management'.",
-    "questTwoStepFour": "Click 'Cancel subscription'.",
-    "note": "After this, access remains until the end of the paid period.",
-    "questThree": "Is there a refund for unused days?",
-    "answerThree": "Currently refunds for unused days are not available."
+    "questTwoStepTwo": "Go to the 'Dashboard' section.",
+    "questTwoStepThree": "Go to the 'Settings' section.",
+    "questTwoStepFour": "Open the 'Account Management' subsection.",
+    "questTwoStepFive": "Click 'Cancel Subscription'.",
+    "note": "After cancellation, your access will remain active until the end of the paid billing period. Important: the subscription must be canceled on the same platform where it was originally purchased (in the iOS app, Android app, or on the website).",
+    "questThree": "Is there a refund for the remaining days?",
+    "answerThree": "Refunds for remaining days are not provided."
   },
   "daily": {
     "first": "Learn 5 words in all modes: Article Practice",
@@ -4946,7 +4941,10 @@
     "start": "Start:",
     "middle": "Average score:",
     "share": "Share",
+    "cancel": "Cancel",
     "delete": "Delete",
+    "deleteResultTitle": "Delete result?",
+    "textModal": "Are you sure you want to delete this exam? This action cannot be undone.",
     "sent": "Test submitted",
     "sended": "You have already submitted this test",
     "error": "Failed to share the exam"
@@ -8063,9 +8061,11 @@
     "description": "Protects your mortarboards from penalties"
   },
   "cardSales": {
-    "title5": "5% Discount",
-    "title10": "10% Discount",
-    "title15": "15% Discount"
+    "title3": "3% discount",
+    "title5": "5% discount",
+    "title6": "6% discount",
+    "title10": "10% discount",
+    "title15": "15% discount"
   },
   "cardsShop": {
     "full": "Full",
@@ -8112,8 +8112,8 @@
     "exam": "Friends"
   },
   "cabinetSidebar": {
-    "valueOne": "Account Parameters",
-    "valueTwo": "Exam Archive",
+    "valueOne": "Account",
+    "valueTwo": "Exams",
     "valueThree": "Shop",
     "valueFour": "Settings"
   },
@@ -8133,9 +8133,11 @@
     "ach": "Achievement notifications",
     "themeBtn": "Theme",
     "snowFall": "Snowfall",
-    "language": "Interface language"
+    "language": "Interface language",
+    "profileData": "Profile data"
   },
   "cabinet": {
+    "plusCanceled": "PLUS canceled",
     "important": "IMPORTANT!!!",
     "importantText": "When deleting your account, the subscription is not canceled. Please cancel your subscription before deleting.",
     "cancelPremium": "Cancel subscription?",
@@ -8318,7 +8320,8 @@
     "guessed": "The word was:",
     "tryAgain": "Try again",
     "btnToMain": "To Main",
-    "placeholder": "Enter the full word"
+    "placeholder": "Enter the full word",
+    "wrong": "Incorrect! Correct:"
   },
   "preposition": {
     "title": "All About German Prepositions",
@@ -9247,7 +9250,9 @@
     "languagesLands": "Language Lands",
     "describePicture": "Picture Description",
     "fight": "German Universe",
-    "audio": "Audio Tasks"
+    "audio": "Audio Tasks",
+    "textTask": "Texts",
+    "speak": "Speaking practice"
   },
   "underSub": {
     "prev": "Introduction",
@@ -9476,33 +9481,97 @@
   "nameMap": {
     "Furniture": "Furniture",
     "Animals": "Animals",
+    "Birds": "Birds",
+    "SeaAnimals": "Sea animals",
+    "Insects": "Insects",
+    "Savanna": "Savanna",
     "Clothes": "Clothes",
+    "Shoes": "Shoes",
     "Food": "Food",
-    "Body": "Body Parts",
+    "SweetEat": "Sweets",
+    "MilkEat": "Dairy products",
+    "Vegetables": "Vegetables",
+    "Fruits": "Fruits",
+    "Drinks": "Drinks",
+    "Body": "Body",
     "Professions": "Professions",
     "Transport": "Transport",
     "Colors": "Colors",
     "Nature": "Nature",
+    "Weather": "Weather",
+    "Landscape": "Landscape",
     "Home": "Home",
     "Zeit": "Time",
-    "City": "City",
+    "CityBuildings": "City buildings",
+    "CityInfrastructure": "City infrastructure",
     "School": "School",
-    "DaysAndMonths": "Days and Months",
+    "DaysAndMonths": "Days and months",
     "Toys": "Toys",
-    "CommonItems": "Common Items",
-    "BathroomItems": "Bathroom Items",
+    "CommonItems": "Everyday items",
+    "BathroomItems": "Bathroom items",
     "Kosmetik": "Cosmetics",
     "Familie": "Family",
     "Emotions": "Emotions",
-    "Werkzeuge": "Tools",
     "Kitchen": "Kitchen",
     "Health": "Health",
-    "Sport": "Sport",
-    "SportEquipment": "Fitness Equipment",
+    "SportBasic": "Basic sports",
+    "SportCombatWinter": "Winter and combat sports",
+    "SportEvents": "Sporting events",
+    "SportLife": "Sports lifestyle",
+    "SportEquipment": "Sports equipment",
+    "TravelDocuments": "Travel documents",
+    "Tourism": "Tourism",
     "Travel": "Travel",
+    "MusicInstruments": "Musical instruments",
     "Musik": "Music",
-    "Amount": "Amount",
-    "Informatik": "Computer Science"
+    "Amount": "Amount and measures",
+    "Hardware": "Hardware",
+    "Software": "Software",
+    "Internet": "Internet",
+    "WinterHolidays": "Winter holidays",
+    "FamilyAndReligious": "Family and religious holidays",
+    "PersonalCelebrations": "Personal celebrations",
+    "FestivalsAndDecor": "Festivals and decor",
+    "DwellingTypes": "Types of housing",
+    "Rooms": "Rooms",
+    "ConstructionAndDetails": "Construction and details",
+    "CoreFamily": "Immediate family",
+    "ExtendedFamily": "Extended family",
+    "Relationships": "Relationships",
+    "HandTools": "Hand tools",
+    "PowerTools": "Power tools",
+    "ConsumablesAndSafety": "Consumables and safety",
+    "JobOffice": "Office jobs",
+    "JobTech": "Technical jobs",
+    "JobMed": "Medical jobs",
+    "JobEdu": "Education jobs",
+    "JobService": "Service jobs",
+    "CityTransport": "City transport",
+    "TravelTransport": "Travel transport",
+    "usualClothes": "Casual clothes",
+    "winterClothes": "Winter clothes",
+    "emotionsPositive": "Emotions",
+    "emotionsNegative": "Emotions 2"
+  },
+  "categoryWords": {
+    "nature": "Nature",
+    "animals": "Animals",
+    "food": "Food",
+    "people": "People",
+    "family": "Family",
+    "dailyRoutine": "Daily routine",
+    "house": "House",
+    "city": "City",
+    "school": "School",
+    "professions": "Professions",
+    "construction": "Construction",
+    "clothes": "Clothes",
+    "holidays": "Holidays",
+    "sport": "Sport",
+    "music": "Music",
+    "travel": "Travel",
+    "informatics": "Informatics",
+    "abstract": "Abstract topics"
   },
   "modes": {
     "themeTitle": "Article study topics",
@@ -9714,9 +9783,11 @@
     "rank_5": "Captain",
     "rank_6": "Guardian",
     "rank_7": "Legend",
-    "sale5": "5% Discount",
-    "sale10": "10% Discount",
-    "sale15": "15% Discount"
+    "sale3": "3% discount",
+    "sale5": "5% discount",
+    "sale6": "6% discount",
+    "sale10": "10% discount",
+    "sale15": "15% discount"
   },
   "audioTasksTitles": {
     "meeting": "Meeting",
@@ -9825,7 +9896,8 @@
     "audio": "Improve your German listening comprehension by completing audio tasks",
     "images": "Level up your image description skills! Choose a topic to start",
     "settings": "Account settings",
-    "achievements": "Your collection of all earned achievements and rewards for your progress"
+    "achievements": "Your collection of all earned achievements and rewards for your progress",
+    "textTask": "Fill in the blanks in the texts and improve your German"
   },
   "imageDescription": {
     "listen": "Listen to the dialogue!",
@@ -9869,5 +9941,663 @@
     "check": "SCORE:",
     "again": "Fly again",
     "constellations": "Leave constellation"
+  },
+  "textTasksTip": {
+    "title": "Text tasks",
+    "description": "To complete the task, drag the word into the empty space or click on the word and then on the field where you want to add it."
+  },
+  "textThemes": {
+    "basic": "Introduction",
+    "routine": "Daily routine",
+    "shopping": "Shopping",
+    "work": "Work and study",
+    "hobby": "Hobbies",
+    "objects": "Objects and things",
+    "travel": "Travel"
+  },
+  "themeTextTitleBasic_A1": {
+    "basicOne": "Formal introduction",
+    "basicTwo": "Informal introduction",
+    "basicThree": "Plans for the day",
+    "basicFour": "Plans for the evening",
+    "basicFive": "On the weekend",
+    "basicSix": "Doing sports",
+    "basicSeven": "Cooking together",
+    "basicEight": "Trip to the city",
+    "basicNine": "Studying together",
+    "basicTen": "Practicing music"
+  },
+  "themeTextTitleHobby_A1": {
+    "hobbyOne": "Playing football",
+    "hobbyTwo": "Photography",
+    "hobbyThree": "Playing the guitar",
+    "hobbyFour": "Swimming",
+    "hobbyFive": "Cooking",
+    "hobbySix": "Traveling",
+    "hobbySeven": "Reading",
+    "hobbyEight": "Gardening",
+    "hobbyNine": "Dancing",
+    "hobbyTen": "Learning languages"
+  },
+  "themeTextTitleRoutine_A1": {
+    "routineOne": "Plans for the day",
+    "routineTwo": "Plans for the evening",
+    "routineThree": "On the weekend",
+    "routineFour": "Doing sports",
+    "routineFive": "Cooking together",
+    "routineSix": "Trip to the city",
+    "routineSeven": "Studying together",
+    "routineEight": "Practicing music",
+    "routineNine": "Drinking coffee",
+    "routineTen": "In the park"
+  },
+  "themeTextTitleShopping_A1": {
+    "shoppingOne": "At the supermarket",
+    "shoppingTwo": "Looking for clothes",
+    "shoppingThree": "At the bakery",
+    "shoppingFour": "Online shopping",
+    "shoppingFive": "At the market",
+    "shoppingSix": "At the shoe store",
+    "shoppingSeven": "Furniture shopping",
+    "shoppingEight": "At the flea market",
+    "shoppingNine": "Food for the evening",
+    "shoppingTen": "At the bookstore"
+  },
+  "themeTextTitleTravel_A1": {
+    "travelOne": "Packing a suitcase",
+    "travelTwo": "At the train station",
+    "travelThree": "At the hotel",
+    "travelFour": "Vacation by the sea",
+    "travelFive": "City sightseeing",
+    "travelSix": "At the restaurant",
+    "travelSeven": "At the airport",
+    "travelEight": "In the mountains",
+    "travelNine": "Buying souvenirs",
+    "travelTen": "Returning home"
+  },
+  "themeTextTitleWork_A1": {
+    "workOne": "My workday",
+    "workTwo": "Looking for a document",
+    "workThree": "At the university",
+    "workFour": "My job",
+    "workFive": "Homework",
+    "workSix": "My job at the construction site",
+    "workSeven": "Working from home",
+    "workEight": "Working in a warehouse",
+    "workNine": "Meeting",
+    "workTen": "Lunch break"
+  },
+  "themeTextTitleBasic_A2": {
+    "basicOne": "At the German course",
+    "basicTwo": "Tandem partner",
+    "basicThree": "At the university",
+    "basicFour": "In the library",
+    "basicFive": "Group project",
+    "basicSix": "Language trip",
+    "basicSeven": "New student",
+    "basicEight": "Online course",
+    "basicNine": "Study group",
+    "basicTen": "Exam partner"
+  },
+  "themeTextTitleHobby_A2": {
+    "hobbyOne": "Hiking in the mountains",
+    "hobbyTwo": "Photography",
+    "hobbyThree": "Drawing",
+    "hobbyFour": "Dancing",
+    "hobbyFive": "Football",
+    "hobbySix": "Swimming",
+    "hobbySeven": "Board games",
+    "hobbyEight": "Board games and logic",
+    "hobbyNine": "Chess",
+    "hobbyTen": "Movies"
+  },
+  "themeTextTitleRoutine_A2": {
+    "routineOne": "New neighbor",
+    "routineTwo": "Meeting in a cafe",
+    "routineThree": "At a party",
+    "routineFour": "New colleagues",
+    "routineFive": "At the sports club",
+    "routineSix": "Meeting on a train",
+    "routineSeven": "In the park with a dog",
+    "routineEight": "Finding a partner",
+    "routineNine": "At a concert",
+    "routineTen": "New flatmate"
+  },
+  "themeTextTitleShopping_A2": {
+    "shoppingOne": "At the supermarket",
+    "shoppingTwo": "Buying clothes",
+    "shoppingThree": "At the market",
+    "shoppingFour": "Online shopping",
+    "shoppingFive": "At the furniture store",
+    "shoppingSix": "At the bakery",
+    "shoppingSeven": "Buying shoes",
+    "shoppingEight": "A gift",
+    "shoppingNine": "At the electronics store",
+    "shoppingTen": "Big shopping haul"
+  },
+  "themeTextTitleTravel_A2": {
+    "travelOne": "Preparing for a trip",
+    "travelTwo": "At the airport",
+    "travelThree": "Arriving at the hotel",
+    "travelFour": "On the beach",
+    "travelFive": "Excursion",
+    "travelSix": "At the restaurant",
+    "travelSeven": "Asking for directions",
+    "travelEight": "Problems on vacation",
+    "travelNine": "Buying gifts",
+    "travelTen": "Returning home"
+  },
+  "themeTextTitleWork_A2": {
+    "workOne": "Job interview",
+    "workTwo": "Homework",
+    "workThree": "First workday",
+    "workFour": "Presentation",
+    "workFive": "Further training",
+    "workSix": "In the home office",
+    "workSeven": "Internship",
+    "workEight": "Exam",
+    "workNine": "Language course",
+    "workTen": "First client"
+  },
+  "themeTextTitleBasic_B1": {
+    "basicOne": "At a party",
+    "basicTwo": "First date",
+    "basicThree": "Language tandem",
+    "basicFour": "Meeting on a train",
+    "basicFive": "New colleague",
+    "basicSix": "At a seminar",
+    "basicSeven": "Walking the dog",
+    "basicEight": "New neighbors",
+    "basicNine": "At the sports club",
+    "basicTen": "At a hostel"
+  },
+  "themeTextTitleHobby_B1": {
+    "hobbyOne": "Night photography",
+    "hobbyTwo": "Mountaineering",
+    "hobbyThree": "Playing the piano",
+    "hobbyFour": "Game development",
+    "hobbyFive": "Windsurfing",
+    "hobbySix": "Acting in theater",
+    "hobbySeven": "Archery",
+    "hobbyEight": "Motorcycle restoration",
+    "hobbyNine": "Baking",
+    "hobbyTen": "Geocaching"
+  },
+  "themeTextTitleRoutine_B1": {
+    "routineOne": "Early morning",
+    "routineTwo": "Breakfast and commute",
+    "routineThree": "In the office",
+    "routineFour": "Lunch break",
+    "routineFive": "End of the workday",
+    "routineSix": "Sports after work",
+    "routineSeven": "Dinner and relaxation",
+    "routineEight": "Preparing for bed",
+    "routineNine": "Evening walk",
+    "routineTen": "House cleaning"
+  },
+  "themeTextTitleShopping_B1": {
+    "shoppingOne": "Buying clothes",
+    "shoppingTwo": "At the supermarket",
+    "shoppingThree": "Buying tech online",
+    "shoppingFour": "At the flea market",
+    "shoppingFive": "Finding a gift",
+    "shoppingSix": "Product return",
+    "shoppingSeven": "At the hardware store",
+    "shoppingEight": "At the pharmacy",
+    "shoppingNine": "At the pet store",
+    "shoppingTen": "At a second-hand store"
+  },
+  "themeTextTitleTravel_B1": {
+    "travelOne": "City trip",
+    "travelTwo": "Beach vacation",
+    "travelThree": "Hiking in the mountains",
+    "travelFour": "Road trip",
+    "travelFive": "Traveling through Asia",
+    "travelSix": "Cruise",
+    "travelSeven": "Camping",
+    "travelEight": "Winter vacation",
+    "travelNine": "Language trip",
+    "travelTen": "Safari"
+  },
+  "themeTextTitleWork_B1": {
+    "workOne": "Job interview",
+    "workTwo": "Project management",
+    "workThree": "Semester abroad",
+    "workFour": "Office presentation",
+    "workFive": "Exam preparation",
+    "workSix": "Customer service",
+    "workSeven": "Master's thesis",
+    "workEight": "Business trip",
+    "workNine": "Internship",
+    "workTen": "Courses"
+  },
+  "textTaskSession": {
+    "allUsed": "All words have been used!",
+    "errorText": "No text selected",
+    "back": "Back to the list"
+  },
+  "exitSessionModal": {
+    "text": "It's a shame to stop halfway! If you close the tab now, your progress will not be saved.",
+    "continueLesson": "Continue lesson",
+    "cancelLesson": "Leave"
+  },
+  "premiumBannerText": {
+    "text": "Get the most out of the platform, accelerate your learning."
+  },
+  "rulesModal": {
+    "text": "The grammar hint is available after answering!"
+  },
+  "footerNavLabel": {
+    "learn": "Learn",
+    "games": "Games",
+    "home": "Home",
+    "events": "Events",
+    "cabinet": "Account"
+  },
+  "speakTopics": {
+    "speak": "Introduction and socializing",
+    "food": "Food and shopping",
+    "transport": "Trips and transport",
+    "city": "City services and everyday life",
+    "health": "Health",
+    "work": "Work and career",
+    "auto": "Car and road"
+
+  },
+  "speakThemes": {
+    "firstmeet": "Introduction",
+    "acquaintance": "Acquaintance 2",
+    "secondmeet": "Meeting",
+    "family_talk": "Conversation",
+    "weekend_plans": "Plans",
+    "friend_call": "Phone call",
+    "hobby_talk": "Hobbies",
+    "party_talk": "Party",
+    "cafe_order": "Ordering coffee",
+    "restaurant_dinner": "Restaurant",
+    "store_checkout": "At the checkout",
+    "order_eat": "Ordering food",
+    "consultation_talk": "Consultation",
+    "train_station": "At the station",
+    "train_ticket": "Ticket inspection",
+    "taxi_berlin": "Taxi",
+    "bus_talk": "On the bus",
+    "hotel_checkin": "Hotel",
+    "border_check": "Border",
+    "airport_talk": "Airport",
+    "info_talk": "Info center",
+    "bank_account": "Bank",
+    "apartment_rent": "Rent",
+    "clothes_shopping": "Shopping",
+    "shopping": "Shopping 2",
+    "post_office": "Post office",
+    "police_talk": "Police",
+    "barbershop": "Barbershop",
+    "doctor_visit": "Booking an appointment",
+    "pharmacy_vitamins": "Pharmacy",
+    "insurance": "Insurance",
+    "at_doctor": "At the doctor",
+    "dentist": "Dentist",
+    "veterinary": "Vet",
+    "job_looking": "Job search",
+    "job_interview": "Interview",
+    "bos_talk": "Talk with manager",
+    "vacation": "Vacation",
+    "salary_talk": "Salary",
+    "dismissal_talk": "Dismissal",
+    "library": "Library",
+    "refusal_invite": "Declining an invitation",
+    "road_assistance": "Car breakdown",
+    "oil_change": "Oil change",
+    "car_buying": "Buying a car",
+    "police_control": "Speeding ticket",
+    "gas_station": "Gas station",
+    "buying_fruit": "Покупка фрукты",
+    "bakery": "Пекарня",
+    "complaint": "Жалоба в ресторане",
+    "bus_stop": "Остановка",
+    "buying_glasses": "Оптика",
+    "emergency_call": "Экстренный вызов",
+    "first_day": "Вводный день",
+    "client_talk": "Разговор с клиентом",
+    "car_rental": "Аренда авто",
+    "ask_road": "Спросить дорогу",
+    "hotel_issue": "Проблема в отеле"
+  },
+  "speakIndexPage": {
+    "title": "Speaking practice",
+    "bannerText": "Practice your speaking skills with real-life examples",
+    "modalTitle": "Speaking practice",
+    "modalText": "Develop your communication skills with real-life dialogues! You can choose a suggested answer, type it manually, or simply say it aloud by tapping the microphone button."
+  },
+  "rankModal": {
+    "title": "NEW RANK",
+    "rankedLabel": "Rank",
+    "accept": "ACCEPT"
+  },
+  "premiumBanner": {
+    "textBanner": "Get the most out of the platform, accelerate your learning."
+  },
+  "netWork": {
+    "successTitle": "Connection restored!",
+    "notSuccessTitle": "Oops! No internet",
+    "successText": "Back to work...",
+    "notSuccessText": "Waiting for network connection..."
+  },
+  "termsBlock": {
+    "first": "By registering, you accept the",
+    "second": "Terms of Use",
+    "third": "and",
+    "fourth": "Privacy Policy"
+  },
+  "languagePage": {
+    "title": "App language",
+    "placeholder": "Search language...",
+    "notfound": "Nothing found",
+    "further": "Continue"
+  },
+  "statistics": {
+    "title": "Your statistics and progress in learning words and completing thematic levels"
+  },
+  "restoreComputed": {
+    "restoring": "Restoring...",
+    "restore": "Restore purchases."
+  },
+  "submitComputed": {
+    "sync": "Syncing...",
+    "getPlus": "Get PLUS"
+  },
+  "pay": {
+    "banner": "Full access to all app features",
+    "sales": "Apply discounts earned from activity",
+    "triggerToastSuccess": "Purchase restored!",
+    "triggerToastNotFound": "No active subscriptions found",
+    "triggerToastError": "Error during restoration",
+    "triggerToastIsPlus": "You already have an active PLUS subscription!"
+  },
+  "examSession": {
+    "ready": "Ready for the test?",
+    "cardTextOne": "You will face",
+    "cardTextTwo": "stages and",
+    "cardTextThree": "tasks.",
+    "begin": "Start test",
+    "listen": "Listen to the audio:",
+    "check": "Checking...",
+    "send": "Submit answer",
+    "record": "Record",
+    "great": "Congratulations!",
+    "result": "Your result for level",
+    "save": "Saving progress...",
+    "correctly": "Correct:",
+    "back": "Go back",
+    "interrupt": "Interrupt the test?",
+    "modalText": "The progress of this attempt will be lost. Are you sure?",
+    "continue": "Continue",
+    "leave": "Exit",
+    "placeHolder": "Write your answer here...",
+    "say": "Say:"
+  },
+  "speakSession": {
+    "title": "Speaking practice",
+    "words": "Words",
+    "wordsText": "Learn or review the words before you start talking. This will help you feel more confident!",
+    "learn": "Start",
+    "dialogue": "Dialogue",
+    "dialogueText": "Practice pronunciation and speaking, listen to your conversation partner, and choose answers interactively.",
+    "back": "Back",
+    "goodJob": "Great job!",
+    "goodJobTitle": "You have completed this dialogue. Keep it up!",
+    "list": "Go back",
+    "repeat": "Repeat",
+    "start": "Start learning",
+    "choice": "Choose an answer:",
+    "placeHolder": "Type or say the answer...",
+    "hoverVoice": "Speak",
+    "end": "Finish",
+    "further": "Next"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "Try again?",
+    "textPartOne": "You answered correctly",
+    "textPartTwo": "Buy an attempt to continue.",
+    "price": "Price:",
+    "youHave": "You have:",
+    "showADS": "Watch ad",
+    "buyBy": "Buy for",
+    "toThemes": "To topics",
+    "repeat": "Repeat"
+  },
+  "freezeStatus": {
+    "active": "Time freeze is active",
+    "inactive": "Time freeze is inactive"
+  },
+  "guessArticle": {
+    "correct": "Correct",
+    "incorrect": "Incorrect, correct is"
+  },
+  "stripeCancel": {
+    "cancelSub": "Cancel subscription",
+    "cancelPayment": "Payment canceled",
+    "errorAuth": "Authentication error",
+    "pleaseAuth": "Please log in to perform this action.",
+    "canceling": "Canceling subscription...",
+    "canceledSub": "Subscription canceled",
+    "errorCancelSub": "Error during cancellation",
+    "errorCancelResponse": "Failed to cancel subscription.",
+    "serverError": "Server error",
+    "serverOffline": "Connection to the server lost. Please try again later.",
+    "processInterrupted": "The checkout process was interrupted. No charges were made to your card.",
+    "tryAgain": "Try again",
+    "backToMain": "To main",
+    "extensionCanceled": "Auto-renewal will be disabled. Access will remain until the end of the paid period.",
+    "extensionCanceledCanBack": "Your subscription will no longer renew. You can come back at any time!",
+    "confirmCancel": "Yes, cancel",
+    "notConfirmCancel": "Keep subscription",
+    "backToMainPage": "Back to main page"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "Confirming transaction...",
+    "sessionNotFound": "Payment session not found",
+    "authPlease": "Please log in to complete",
+    "isPremium": "Premium access activated",
+    "errorActivation": "Activation error",
+    "errorServer": "Server connection error",
+    "success": "All features of the service are now available to you.",
+    "unsuccess": "A technical glitch occurred during processing.",
+    "toMain": " To main page",
+    "redirectSuccess": "Redirecting in a few seconds..."
+  },
+  "installApp": {
+    "stayInBrowser": "Continue in browser",
+    "promoSubTitle": " Learning German is much more convenient with the Skillupgerman app."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Go through dialogues. Listen, choose answer options, and practice your pronunciation",
+    "words": "Learn key words and phrases to easily understand every line in the dialogue"
+  },
+  "newsTitleBanner": {
+    "title": "Articles about the features of the German language, topic breakdowns, and useful knowledge to boost your level.",
+    "badgeArticle": "In the world of Skillupgerman"
+  },
+  "newsArticleOne": {
+    "first": "Do you eat chocolate when stressed or sad? Meet der Kummerspeck.",
+    "second": "These are those exact extra pounds that persistently appear from worrying. Literally - 'bacon of grief'.",
+    "third": "It consists of der Kummer (grief) and der Speck (bacon). As expected, this 'bacon' takes its gender from the article of the last noun.",
+    "cta": "Admit it, have you ever had Kummerspeck?"
+  },
+  "newsArticleTwo": {
+    "first": "Know that sacred bliss when the workday is finally over? That's der Feierabend.",
+    "second": "Literally - 'celebration evening'. A special time of rest when even thinking about work is forbidden.",
+    "third": "It is made up of die Feier (celebration) and der Abend (evening). This pleasant time takes its gender from the article of the last noun — der Abend.",
+    "cta": "Do you always look forward to Feierabend at work?"
+  },
+  "newsArticleThree": {
+    "first": "German is the only major language in the world where absolutely all nouns are capitalized, regardless of their position in the sentence.",
+    "second": "It doesn't matter if you're talking about a person, a dog, a regular chair, or an abstract thought — the first letter will always be uppercase. This often confuses beginners when learning.",
+    "third": "However, this rule has a huge plus: when reading a German text, you can always accurately and at first glance identify exactly where an object is hidden in the sentence.",
+    "cta": "Is it a convenient rule?"
+  },
+  "newsArticleFour": {
+    "first": "One of the most mind-blowing things about learning German is counting. Germans pronounce two-digit numbers from the end.",
+    "second": "For example, they say the number twenty-one as 'one and twenty'. Because of this, when listening to spoken German, you have to mentally flip the digits in your head.",
+    "third": "This linguistic trick often breaks the pattern for beginners, especially when they need to quickly write down a phone number or a price in a store by ear.",
+    "cta": "Did you get used to this counting quickly, or do you still get confused?"
+  },
+  "newsArticleFive": {
+    "first": "In German, there is a strict word order rule that forces you to listen to your conversation partner until the very last word.",
+    "second": "In certain types of sentences, the most important verb that indicates the action flies off to the very, very end.",
+    "third": "You can build a long phrase and list a bunch of details, but your listener won't know if you bought, sold, broke, or lost the item until you utter the final word.",
+    "cta": "Is it hard to rewire your thinking for this kind of word order?"
+  },
+  "newsArticleSix": {
+    "first": "When learning German, you will definitely panic sooner or later at the length of some words. The secret is that in German, there is officially no limit to the length of a noun.",
+    "second": "You can endlessly glue words together, creating huge locomotives of letters just to describe a single object.",
+    "third": "But the ultimate saving rule applies here: no matter how crazy the length of this monster is, it always takes its final grammatical gender from the article of the very last word.",
+    "cta": "Do these long locomotive-words scare you?"
+  },
+  "newsArticleSeven": {
+    "first": "Does it ever happen that before an important event or sleep, you start playing out fictional scenarios and entire movies in your head in full detail? Germans describe this state as having your own cinema in your head.",
+    "second": "This is when your imagination or anxiety runs so wild that you literally get sucked into directing and watching your own thoughts.",
+    "third": "It is merged from der Kopf (head) and das Kino (cinema). This mental cinema obediently takes its final neuter gender from the article of the last noun.",
+    "cta": "Does this Kopfkino often turn on before you go to sleep?"
+  },
+  "newsArticleEight": {
+    "first": "The German language is full of self-irony when it comes to body shape. If you've gained a little extra weight on your sides, Germans won't talk about fat rolls; they will call it gold on the hips.",
+    "second": "Literally, it translates to 'hip gold'. Such a delicate and precious description for love handles that got a bit rounder after delicious German sausages, buns, or beer.",
+    "third": "The word consists of die Hüfte (hip) and das Gold (gold). Quite expectedly, this funny word takes its shiny neuter gender from the article of the last noun.",
+    "cta": "How do you like such a poetic name?"
+  },
+  "newsArticleNine": {
+    "first": "Everyone knows what homesickness is, but Germans have a unique word for the exact opposite feeling. It is a longing for distant countries and travel.",
+    "second": "Literally, it translates as 'distance-pain'. This is that exact aching feeling when you are sitting at home and unbearably want to go somewhere you have never been.",
+    "third": "The word is assembled from die Ferne (distance) and das Weh (pain/woe). This romantic longing takes its final neuter gender from the article of the last word.",
+    "cta": "Do you ever experience this kind of Fernweh?"
+  },
+  "newsArticleTen": {
+    "first": "Look at a regular electric light bulb. What shape does it remind you of? Germans saw a glowing fruit in it.",
+    "second": "The literal translation of this word is 'glowing pear'. A very cozy, simple, and warm domestic description for a device we are so used to.",
+    "third": "It comes from the verb glühen (to glow) and the noun die Birne (pear). Our light bulb takes its feminine gender from the article of the last word — die Birne.",
+    "cta": "Does a light bulb look like a pear to you?"
+  },
+  "newsArticleEleven": {
+    "first": "How do you name that exact heavy emotional suffering when your love turns out to be unrequited? Germans combined these feelings into one expressive concept.",
+    "second": "Literally, it translates as 'love-grief'. This is a very accurate description for that longing and sadness that literally break your heart.",
+    "third": "The word is glued together from die Liebe (love) and der Kummer (grief). This broken heart obediently takes its masculine gender from the article of the very last word — der Kummer.",
+    "cta": "Is this feeling familiar to you?"
+  },
+  "newsArticleTwelve": {
+    "first": "Are you walking through the forest after the rain and notice a regular slug without a shell? The German language describes it in a highly stripped-down way.",
+    "second": "The literal translation of this funny word is 'naked snail'. Indeed, why invent a new name if it's just a snail left without a house.",
+    "third": "It is formed from the adjective nackt (naked) and the noun die Schnecke (snail). This forest dweller takes its feminine gender from the article of the last word.",
+    "cta": "Did this name make you smile?"
+  },
+  "newsArticleThirteen": {
+    "first": "If you have ever learned English, we have great news for you. You already automatically know part of the German vocabulary, even if you have never specially studied it.",
+    "second": "The thing is, English and German are close linguistic relatives from the same Germanic family. Words like brother, sister, water, green, or apple are written and sound incredibly similar.",
+    "third": "This is precisely why learning German words with an English background is much faster — your brain subconsciously recognizes familiar patterns.",
+    "cta": "Have you noticed the similarity between English and German?"
+  },
+  "newsArticleFourteen": {
+    "first": "The German letter eszett, which is written like a capital B, is a unique hallmark of the German alphabet. But when learning the language, few people know that by no means all German-speaking regions use it.",
+    "second": "In Switzerland and Liechtenstein, this letter was officially and completely abandoned in the last century. In Swiss schools, newspapers, and official documents, they write the usual double 'ss' everywhere instead.",
+    "third": "This happened due to the mass adoption of typewriters, where the Swiss simply didn't have enough space on the layout for both German and French characters simultaneously. Therefore, if you read Swiss texts, you won't find this letter there.",
+    "cta": "Did you know about the Swiss secret of the German alphabet?"
+  },
+  "newsArticleFifteen": {
+    "first": "In German, there are amazing shape-shifter verbs that are spelled absolutely identically, but their meaning changes drastically depending on the stress. This fact often shocks beginners.",
+    "second": "A prime example is the verb umfahren. If you stress the first part of the word, it means to knock over, hit, or run over an obstacle. But if you shift the stress to the second part, the word instantly changes to the opposite meaning — to drive around or bypass an obstacle.",
+    "third": "This is precisely why, when learning such verbs, it is critically important to listen to where the stress falls; otherwise, during a practical driving lesson in Germany, you might accidentally terrify your instructor.",
+    "cta": "Did you know about these tricky double-meaning verbs?"
+  },
+  "newsArticleSixteen": {
+    "first": "When foreigners don't understand what is being discussed, they usually say 'it's Greek to me.' Germans, however, apply pure railway logic in such a situation.",
+    "second": "If a German completely fails to understand the speaker or doesn't want to listen to them, they will say: 'Ich verstehe nur Bahnhof' (I only understand train station).",
+    "third": "Over time, the phrase turned into a popular idiom. Now, if someone is explaining directions too confusingly or overwhelming you with a complex topic, you can safely use this expression.",
+    "cta": "Have you already heard this funny expression about the train station?"
+  },
+  "newsArticleSeventeen": {
+    "first": "Learning the articles der, die, das is an eternal headache for everyone learning German. But don't worry — sometimes even native speakers aren't sure about the correct choice of article.",
+    "second": "The realest and never-ending linguistic war in Germany unfolds every morning at breakfast around the famous Nutella chocolate spread. Germans have been arguing for decades about its grammatical gender.",
+    "third": "Some say die because it's a spread (creme), others think it's das since it's the neuter gender for foreign product names. The dispute escalated to such an extent that even the official Duden dictionary gave up and admitted that Nutella has no fixed article at all and any option can be used.",
+    "cta": "And which article would you give to Nutella?"
+  },
+  "newsArticleEighteen": {
+    "first": "If a person persistently fails to notice obvious things happening right under their nose, Germans won't say they are inattentive. They will find vegetables on their face.",
+    "second": "The literal translation of this iconic idiom is 'to have tomatoes on one's eyes.' This is said about a driver who doesn't see a red light, or a friend who completely misses your hints.",
+    "third": "The origins of the phrase date back to ancient courts, where the guilty were forced to wear blindfolds as a sign of shame, and sometimes real vegetables were tied to their eyes. Today, it's just a fun way to tell someone it's time to open their eyes.",
+    "cta": "Have you already heard this phrase about tomatoes?"
+  },
+  "newsArticleNineteen": {
+    "first": "German textbooks teach us to greet people depending on the time of day: good morning, good afternoon, or good evening. But in northern Germany, they simply laugh at this system.",
+    "second": "There, absolutely everyone uses one iconic word: Moin. The most interesting part is that you can say it absolutely anytime: at 8 AM to your boss, at 3 PM to a shop assistant, or late at night to friends at a bar. It simply means hello.",
+    "third": "But be careful: if you decide to double the greeting and say 'Moin Moin,' the locals will immediately consider you a terrible chatterbox. In the north, they value brevity, so one word is more than enough.",
+    "cta": "Have you already heard this greeting from people in Germany?"
+  },
+  "newsTitle": {
+    "article_3": "All nouns are capitalized!",
+    "article_4": "Numbers are backward!",
+    "article_5": "The verb is at the very end of the sentence!",
+    "article_6": "Endless words!",
+    "article_13": "You already know many German words!",
+    "article_14": "The letter an entire country lost!",
+    "article_15": "One verb - two opposite meanings!",
+    "article_17": "The battle for Nutella's article!",
+    "article_19": "Moin is universal!"
+  },
+  "i18nDays": {
+    "days": "d",
+    "hours": "h",
+    "mins": "m"
+  },
+  "headUp": {
+    "audioTasks": "You must select at least one answer option",
+    "speakTasks": "Only the provided options can be used."
+  },
+  "helpCenter": {
+    "privacy": "Privacy Policy",
+    "faq": "FAQ",
+    "terms": "Terms of service"
+  },
+  "rankAvatars": {
+    "locked_easy_1": "This avatar is awarded for 1st place in the Article Marathon (Easy mode).",
+    "locked_easy_2": "This avatar is awarded for 2nd place in the Article Marathon (Easy mode).",
+    "locked_easy_3": "This avatar is awarded for 3rd place in the Article Marathon (Easy mode).",
+    "locked_normal_1": "This avatar is awarded for 1st place in the Article Marathon (Normal mode).",
+    "locked_normal_2": "This avatar is awarded for 2nd place in the Article Marathon (Normal mode).",
+    "locked_normal_3": "This avatar is awarded for 3rd place in the Article Marathon (Normal mode).",
+    "locked_hard_1": "This avatar is awarded for 1st place in the Article Marathon (Hard mode).",
+    "locked_hard_2": "This avatar is awarded for 2nd place in the Article Marathon (Hard mode).",
+    "locked_hard_3": "This avatar is awarded for 3rd place in the Article Marathon (Hard mode)."
+  },
+  "typeOfAvatars": {
+    "usual": "Regular",
+    "ranked": "Prize"
+  },
+  "marathonEasy": {
+    "title": "Article Marathon Easy Level",
+    "easyOneName": "Triumphant Intern",
+    "easyOneDescription": "Take 1st place in the Article Marathon leaderboard (Easy mode)",
+    "easyTwoName": "Worthy Contender",
+    "easyTwoDescription": "Take 2nd place in the Article Marathon leaderboard (Easy mode)",
+    "easyThreeName": "Article Trainee",
+    "easyThreeDescription": "Take 3rd place in the Article Marathon leaderboard (Easy mode)"
+  },
+  "marathonNormal": {
+    "title": "Article Marathon Normal Level",
+    "normalOneName": "Master of Articles",
+    "normalOneDescription": "Take 1st place in the Article Marathon leaderboard (Normal mode)",
+    "normalTwoName": "Marathon Conqueror",
+    "normalTwoDescription": "Take 2nd place in the Article Marathon leaderboard (Normal mode)",
+    "normalThreeName": "Word Connoisseur",
+    "normalThreeDescription": "Take 3rd place in the Article Marathon leaderboard (Normal mode)"
+  },
+  "marathonHard": {
+    "title": "Article Marathon Hard Level",
+    "normalOneName": "Emperor of Articles",
+    "normalOneDescription": "Take 1st place in the Article Marathon leaderboard (Hard mode)",
+    "normalTwoName": "Marathon Legend",
+    "normalTwoDescription": "Take 2nd place in the Article Marathon leaderboard (Hard mode)",
+    "normalThreeName": "Marathon Adept",
+    "normalThreeDescription": "Take 3rd place in the Article Marathon leaderboard (Hard mode)"
   }
 }

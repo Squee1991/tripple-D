@@ -1,9 +1,11 @@
-/*
-
+import { AdMob, InterstitialAdPluginEvents, RewardAdPluginEvents } from '@capacitor-community/admob';
 import { Capacitor } from '@capacitor/core';
+import { userAuthStore } from '../store/authStore.js';
 
 let isAdProcessing = false;
+let lastInterstitialTime = 0;
 const AD_LIMIT_PER_DAY = 5;
+const INTERSTITIAL_COOLDOWN = 3 * 60 * 1000;
 
 function getTodayKey() {
 	const today = new Date();
@@ -35,9 +37,19 @@ function recordSuccessfulView() {
 }
 
 export async function showInterstitial(nextStep) {
+	const authStore = userAuthStore();
+	if (authStore.isPremium) {
+		return nextStep();
+	}
 	if (!Capacitor.isNativePlatform()) {
 		return nextStep();
 	}
+
+	const now = Date.now();
+	if (now - lastInterstitialTime < INTERSTITIAL_COOLDOWN) {
+		return nextStep();
+	}
+
 	if (isAdProcessing) return;
 	isAdProcessing = true;
 	let hasTransitioned = false;
@@ -49,21 +61,19 @@ export async function showInterstitial(nextStep) {
 			nextStep();
 		}
 	};
-	// Слушатель закрытия рекламы
+
 	const listener = await AdMob.addListener(InterstitialAdPluginEvents.Dismissed, () => {
 		console.log('Реклама закрыта, начинаем задание!');
 		listener.remove();
-		goNext(); // запускаем переход тут!
+		goNext();
 	});
+
 	try {
-		// Подготавливаем (качаем по сети)
 		await AdMob.prepareInterstitial({
 			adId: 'ca-app-pub-3940256099942544/1033173712',
 		});
-
-		// Показываем
 		await AdMob.showInterstitial();
-
+		lastInterstitialTime = Date.now();
 	} catch (e) {
 		console.log("Ошибка рекламы, просто идем дальше", e);
 		listener.remove();
@@ -72,6 +82,11 @@ export async function showInterstitial(nextStep) {
 }
 
 export async function showRewarded(onReward, onComplete, onLimitReached) {
+	const authStore = userAuthStore();
+	if (authStore.isPremium) {
+		onReward();
+		return onComplete(true);
+	}
 	if (!Capacitor.isNativePlatform()) {
 		onReward();
 		return onComplete(true);
@@ -88,7 +103,7 @@ export async function showRewarded(onReward, onComplete, onLimitReached) {
 
 	const rewardListener = await AdMob.addListener(RewardAdPluginEvents.Rewarded, () => {
 		rewardReceived = true;
-		recordSuccessfulView(); // Записываем просмотр в localStorage
+		recordSuccessfulView();
 		onReward();
 	});
 
@@ -112,4 +127,3 @@ export async function showRewarded(onReward, onComplete, onLimitReached) {
 		onComplete(false);
 	}
 }
-*/

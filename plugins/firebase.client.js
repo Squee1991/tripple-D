@@ -4,6 +4,9 @@ import { onAuthStateChanged } from 'firebase/auth'
 export default defineNuxtPlugin(async (to) => {
     function waitForAuthReady() {
         const auth = useFirebaseAuth()
+        if(!auth) {
+            return Promise.resolve(null)
+        }
         if (auth.currentUser !== null) return Promise.resolve(auth.currentUser)
         return new Promise((resolve) => {
             const off = onAuthStateChanged(auth, (u) => {

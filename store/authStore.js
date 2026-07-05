@@ -25,7 +25,6 @@ import {
 import { GoogleSignIn } from '@capawesome/capacitor-google-sign-in';
 import { doc, setDoc, getDoc, getFirestore, updateDoc, serverTimestamp, writeBatch } from 'firebase/firestore';
 import { userlangStore } from "./learningStore.js";
-import { AppleSignIn, SignInScope } from '@capawesome/capacitor-apple-sign-in';
 let authStateUnsubscribe = null;
 
 const isUserCancelledAuth = (error) => {
@@ -65,14 +64,25 @@ export const userAuthStore = defineStore('auth', () => {
     const notEnoughArticle = ref(false);
     const gotPremiumBonus = ref(false);
     const IMMUNITY_RANK_HATS = 500;
-    const availableAvatars = ref(['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '12.png', '7.png', '8.png', '9.png', '10.png', '11.png', '13.png', '14.png']);
+    const availableAvatars = ref([
+        '1.png', '2.png', '3.png', '4.png', '5.png', '6.png',
+        '12.png', '7.png', '8.png', '9.png', '10.png', '11.png',
+        '13.png', '14.png', '15.png', '16.png', '17.png', '18.png',
+        '19.png', '20.png', '21.png', '22.png', '23.png', '24.png'
+    ]);
     const ownedAvatars = ref(['1.png', '2.png']);
 
     const isPremium = ref(false);
     const subscriptionEndsAt = ref(null);
     const subscriptionCancelled = ref(false);
     const paymentSource = ref(null);
-    const premiumDiscount = ref({ sale_5: false, sale_10: false, sale_15: false });
+    const premiumDiscount = ref({ sale_3: false, sale_5: false, sale_6: false, sale_10: false, sale_15: false });
+
+    watch(isPremium, (newValue) => {
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('cached_premium', newValue ? 'true' : 'false')
+        }
+    })
 
     const isWebView = ref(false);
     const shouldShowFeedbackSurvey = ref(false);
@@ -108,12 +118,37 @@ export const userAuthStore = defineStore('auth', () => {
         isWebView.value = isIOSWebView || isAndroidWebView;
     };
 
+    const unlockMarathonAchievement = async (levelPrefix, rank) => {
+        const user = auth.currentUser;
+        if (!user) return;
+        const fieldName = `${levelPrefix}_${rank}`;
+        if (!achievements.value) {
+            achievements.value = { marathon: {} };
+        } else if (!achievements.value.marathon) {
+            achievements.value.marathon = {};
+        }
+        if (achievements.value.marathon[fieldName]) return;
+        achievements.value.marathon[fieldName] = true;
+        try {
+            await updateDoc(doc(db, 'users', user.uid), {
+                [`achievements.marathon.${fieldName}`]: true
+            });
+        } catch (e) {
+            console.error('Ошибка при записи ачивки марафона в БД:', e);
+        }
+    };
+
     const createInitialAchievementsObject = () => ({
         achievements: {
             A1: { wins: 0, streaks: 0, cleanSweeps: 0 },
             A2: { wins: 0, streaks: 0, cleanSweeps: 0 },
             B1: { wins: 0, streaks: 0, cleanSweeps: 0 },
-            B2: { wins: 0, streaks: 0, cleanSweeps: 0 }
+            B2: { wins: 0, streaks: 0, cleanSweeps: 0 },
+            marathon: {
+                easy_1: false, easy_2: false, easy_3: false,
+                normal_1: false, normal_2: false, normal_3: false,
+                hard_1: false, hard_2: false, hard_3: false
+            }
         }
     });
 
@@ -139,9 +174,15 @@ export const userAuthStore = defineStore('auth', () => {
         if (data.points !== undefined) langStore.points = data.points;
         if (data.exp !== undefined) langStore.exp = data.exp;
         if (data.totalEarnedPoints !== undefined) langStore.totalEarnedPoints = data.totalEarnedPoints;
-
+        if (data.isLeveling !== undefined) langStore.isLeveling = data.isLeveling;
+        if (langStore.isLeveling === 0 && langStore.totalEarnedPoints >= 100) {
+            langStore.isLeveling = Math.floor(langStore.totalEarnedPoints / 100);
+            langStore.exp = langStore.totalEarnedPoints % 100;
+        }
         premiumDiscount.value = {
+            sale_3: data.sale_3 || false,
             sale_5: data.sale_5 || false,
+            sale_6: data.sale_6 || false,
             sale_10: data.sale_10 || false,
             sale_15: data.sale_15 || false
         };
@@ -226,7 +267,7 @@ export const userAuthStore = defineStore('auth', () => {
     const purchase = async (cost, discountId) => {
         const user = auth.currentUser;
         if (!user) return { success: false, reason: 'no-user' };
-        if (!['sale_5', 'sale_10', 'sale_15'].includes(discountId)) return { success: false, reason: 'invalid-item' };
+        if (!['sale_3', 'sale_5', 'sale_6', 'sale_10', 'sale_15'].includes(discountId)) return { success: false, reason: 'invalid-item' };
         if (totalHats.value < cost) return { success: false, reason: 'insufficient' };
         if (premiumDiscount.value[discountId] === true) return { success: false, reason: 'already-owned' };
 
@@ -246,19 +287,48 @@ export const userAuthStore = defineStore('auth', () => {
     };
 
     const purchaseAvatar = async (fileName) => {
-        notEnoughArticle.value = false;
-        if (ownedAvatars.value.includes(fileName)) return 'owned';
-        if (langStore.points < 50) {
-            notEnoughArticle.value = true;
-            return 'insufficient';
+        notEnoughArticle.value = false
+        if (ownedAvatars.value.includes(fileName)) return 'owned'
+        const specialAvatars = {
+            '16.png': { ach: 'leaderboardEasy-1', error: 'locked_easy_1' },
+            '17.png': { ach: 'leaderboardEasy-2', error: 'locked_easy_2' },
+            '18.png': { ach: 'leaderboardEasy-3', error: 'locked_easy_3' },
+
+            '19.png': { ach: 'leaderboardNormal-1', error: 'locked_normal_1' },
+            '20.png': { ach: 'leaderboardNormal-2', error: 'locked_normal_2' },
+            '21.png': { ach: 'leaderboardNormal-3', error: 'locked_normal_3' },
+
+            '22.png': { ach: 'leaderboardHard-1', error: 'locked_hard_1' },
+            '23.png': { ach: 'leaderboardHard-2', error: 'locked_hard_2' },
+            '24.png': { ach: 'leaderboardHard-3', error: 'locked_hard_3' }
         }
-        langStore.points -= 50;
-        langStore.articlesSpentForAchievement += 50;
-        await langStore.saveToFirebase();
-        ownedAvatars.value.push(fileName);
-        await updateDoc(doc(db, 'users', uid.value), { ownedAvatars: ownedAvatars.value });
-        return 'success';
-    };
+
+        if (specialAvatars[fileName]) {
+            const achievementStore = useAchievementStore()
+            const config = specialAvatars[fileName]
+            const ach = achievementStore.findById(config.ach)
+            const isUnlocked = ach && ach.currentProgress >= (ach.targetProgress || 1)
+
+            if (!isUnlocked) {
+                return config.error
+            }
+        }
+
+        if (langStore.points < 50) {
+            notEnoughArticle.value = true
+            return 'insufficient'
+        }
+
+        langStore.points -= 50
+        langStore.articlesSpentForAchievement += 50
+        await langStore.saveToFirebase()
+
+        ownedAvatars.value.push(fileName)
+        const userDocRef = doc(db, 'users', uid.value)
+        await updateDoc(userDocRef, {ownedAvatars: ownedAvatars.value})
+
+        return 'success'
+    }
 
     const updateUserAvatar = async (newAvatarFilename) => {
         const user = auth.currentUser;
@@ -311,7 +381,6 @@ export const userAuthStore = defineStore('auth', () => {
                 const result = await AppleSignIn.signIn({
                     scopes: [SignInScope.Email, SignInScope.FullName],
                 });
-
                 // ИСПРАВЛЕНО: у Capawesome токен берется напрямую из result.idToken
                 const idToken = result.idToken;
 
@@ -350,7 +419,9 @@ export const userAuthStore = defineStore('auth', () => {
                     totalHats: 0,
                     points: 0,
                     claimedBonuses: [],
+                    sale_3: false,
                     sale_5: false,
+                    sale_6: false,
                     sale_10: false,
                     sale_15: false,
                     ...createInitialAchievementsObject()
@@ -386,10 +457,10 @@ export const userAuthStore = defineStore('auth', () => {
             let idToken = null;
             if (isNative) {
                 await GoogleSignIn.initialize({
-                    clientId: '516504654997-15ujeh34o8jc7hkbempel0t60qp0e43g.apps.googleusercontent.com',
+                    clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
                 });
                 const result = await GoogleSignIn.signIn({
-                    clientId: '516504654997-15ujeh34o8jc7hkbempel0t60qp0e43g.apps.googleusercontent.com',
+                    clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
                 });
                 idToken = result.idToken;
             } else {
@@ -428,7 +499,9 @@ export const userAuthStore = defineStore('auth', () => {
                     totalHats: 0,
                     points: 0,
                     claimedBonuses: [],
+                    sale_3: false,
                     sale_5: false,
+                    sale_6: false,
                     sale_10: false,
                     sale_15: false,
                     ...createInitialAchievementsObject()
@@ -478,7 +551,9 @@ export const userAuthStore = defineStore('auth', () => {
             totalHats: 0,
             points: 0,
             claimedBonuses: [],
+            sale_3: false,
             sale_5: false,
+            sale_6: false,
             sale_10: false,
             sale_15: false,
             ...createInitialAchievementsObject()
@@ -643,13 +718,28 @@ export const userAuthStore = defineStore('auth', () => {
     };
 
     const logOut = async () => {
-        await signOut(auth);
-        setUserData({});
         if (authStateUnsubscribe) {
             authStateUnsubscribe();
             authStateUnsubscribe = null;
         }
-    };
+
+        if (typeof window !== 'undefined') {
+            localStorage.removeItem('cached_premium');
+        }
+
+        if (Capacitor.isNativePlatform()) {
+            try {
+                await Purchases.logOut();
+            } catch (e) {
+                console.error("RC Logout Error:", e);
+            }
+        }
+
+        setUserData({});
+
+        const auth = getAuth()
+        await signOut(auth)
+    }
 
     const activatePremium = (premiumData) => {
         isPremium.value = true;
@@ -714,7 +804,8 @@ export const userAuthStore = defineStore('auth', () => {
         cancelFreeze,
         claimedBonuses,
         loginWithApple,
-        addClaimedBonus
+        addClaimedBonus,
+        unlockMarathonAchievement
     };
 });
 

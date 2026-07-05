@@ -9,7 +9,6 @@
           />
         </div>
       </header>
-
       <div class="shop__cards">
         <article
             v-for="card in shopCards"
@@ -66,7 +65,6 @@
         </article>
       </div>
     </div>
-
     <div v-if="showModal" class="modal-overlay" @click.self="closeModal">
       <div class="modal-content" :class="{'modal-content--success': isSuccessState}">
         <div class="modal-header">
@@ -149,11 +147,11 @@ const rankStore = useRankUserStore()
 const PRICES = {
   HEART: 10,
   FREEZE_DAY: 10,
-  SALE_5: 30,
-  SALE_10: 50,
-  SALE_15: 70
+  SALE_3: 100,
+  SALE_6: 150,
+  // SALE_15: 70
 }
-const DISCOUNT_REQ_HATS = {5: 90, 10: 210, 15: 400}
+const DISCOUNT_REQ_HATS = {3: 210, 6: 500}
 
 const showModal = ref(false)
 const modalType = ref('freeze')
@@ -185,35 +183,35 @@ const shopCards = computed(() => {
       type: 'consumable'
     },
     {
-      id: "sale_5",
-      title: t('cardSales.title5'),
+      id: "sale_3",
+      title: t('cardSales.title3'),
       description: "",
       hotIcon: HotDeal,
       icon: Sale,
-      price: PRICES.SALE_5,
-      requiredHats: DISCOUNT_REQ_HATS[5],
+      price: PRICES.SALE_3,
+      requiredHats: DISCOUNT_REQ_HATS[3],
       type: 'permanent'
     },
     {
-      id: "sale_10",
-      title: t('cardSales.title10'),
+      id: "sale_6",
+      title: t('cardSales.title6'),
       description: "",
       hotIcon: HotDeal,
       icon: Sale10,
-      price: PRICES.SALE_10,
-      requiredHats: DISCOUNT_REQ_HATS[10],
+      price: PRICES.SALE_6,
+      requiredHats: DISCOUNT_REQ_HATS[6],
       type: 'permanent'
     },
-    {
-      id: "sale_15",
-      title:  t('cardSales.title15'),
-      description: "",
-      hotIcon: HotDeal,
-      icon: Sale15,
-      price: PRICES.SALE_15,
-      requiredHats: DISCOUNT_REQ_HATS[15],
-      type: 'permanent'
-    },
+    // {
+    //   id: "sale_15",
+    //   title:  t('cardSales.title15'),
+    //   description: "",
+    //   hotIcon: HotDeal,
+    //   icon: Sale15,
+    //   price: PRICES.SALE_15,
+    //   requiredHats: DISCOUNT_REQ_HATS[15],
+    //   type: 'permanent'
+    // },
   ]
 
   return cardsData.map(card => {
@@ -251,7 +249,7 @@ const shopCards = computed(() => {
     const isLevelClaimed = authStore.claimedBonuses?.includes(card.requiredHats)
     if (isLevelClaimed && card.type !== 'consumable') {
       isOwned = true
-      btnLabel = "Бонус получен"
+      btnLabel = "got bonus"
       isDisabled = true
     }
     const classes = {
@@ -743,7 +741,7 @@ const confirmPurchase = async () => {
 .modal-btn, .modal-close-btn {
   flex: 1;
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 50px;
   border: none;
   font-weight: 700;
   font-size: 15px;
@@ -765,7 +763,7 @@ const confirmPurchase = async () => {
 
 .modal-btn.confirm:disabled {
   background: #363d4a;
-  color: #555;
+  color: #ffffff;
   box-shadow: none;
   cursor: not-allowed;
 }

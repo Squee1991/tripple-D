@@ -1,5 +1,10 @@
 <template>
-  <div class="drag-page">
+  <div
+      class="drag-page"
+      @touchstart="handleTouchStart"
+      @touchmove="handleTouchMove"
+      @touchend="handleTouchEnd"
+  >
     <div class="drag-page-container" v-if="store.currentTask">
       <div class="header-wrapper">
         <button class="btn-icon-back" @click="handleBackClick">
@@ -33,9 +38,7 @@
               {{ word }}
             </div>
           </transition-group>
-          <div v-if="store.availableWords.length === 0" class="empty-pool-msg">
-            Все слова использованы!
-          </div>
+          <div v-if="store.availableWords.length === 0" class="empty-pool-msg">{{ t('textTaskSession.allUsed')}}</div>
         </div>
         <div class="text-card">
           <div class="text-content">
@@ -62,36 +65,47 @@
       <div class="footer-area">
         <button
             class="btn-check"
-            :class="{ 'btn-success': isSuccess }"
+            :class="{ 'btn-success': isSuccess && store.isChecking }"
             :disabled="!store.isAllFilled && !store.isChecking"
             @click="handleMainAction"
         >
-          {{ isSuccess ? 'Далее' : (store.isChecking ? 'Повторить' : 'Проверить') }}
+          {{ store.isChecking ? t('questCompletedModals.further') : t('questCompletedModals.check') }}
         </button>
       </div>
     </div>
     <div v-else class="error-state">
-      <p>Задача не выбрана.</p>
-      <button @click="$router.push('/text-tasks')">Вернуться к списку</button>
+      <p>{{ t('textTaskSession.errorText')}}</p>
+      <button @click="$router.push('/text-tasks')">{{ t('textTaskSession.back')}}</button>
     </div>
-    <div v-if="showExitModal" class="modal-overlay" @click.self="cancelExit">
-      <div class="modal-content">
-        <h3 class="modal-title">Прервать задание?</h3>
-        <p class="modal-text">Текущий прогресс в этом тексте не будет сохранен. Вы уверены, что хотите выйти?</p>
-        <div class="modal-actions">
-          <button class="btn-cancel" @click="cancelExit">Отмена</button>
-          <button class="btn-confirm" @click="confirmExit">Выйти</button>
+
+    <ExitSessionModal
+        :show="showExitModal"
+        @update:show="val => showExitModal = val"
+        @cancel="cancelExit"
+        @confirm="confirmExit"
+    />
+    <transition name="slide-up">
+      <div v-if="showFinishModal" class="bottom-modal-overlay">
+        <div class="bottom-modal-content">
+          <img class="modal__image" src="../../assets/images/CorrectAnswerIcon.svg" alt="">
+          <p class="bottom-modal-text">
+            {{ t('questCompletedModals.count')}} <span>{{ correctAnswersCount }}</span> /  <span>{{ totalTasks }}</span>
+          </p>
+          <button class="btn-check btn-success finish-btn" @click="finishQuest">{{ t('speakSession.end')}}</button>
         </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
-import { useRouter, onBeforeRouteLeave } from 'vue-router'
-import { useTextTasksStore } from '../../store/textTasksStore.js'
+import {ref, computed, onMounted} from 'vue'
+import {useRouter, onBeforeRouteLeave} from 'vue-router'
+import {useTextTasksStore} from '../../store/textTasksStore.js'
+import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
+import { useSwipeBack } from '~/composables/useSwipeBack.js'
 
+const {t} = useI18n()
 const router = useRouter()
 const store = useTextTasksStore()
 
@@ -100,6 +114,15 @@ const selectedWordForTap = ref(null)
 const showExitModal = ref(false)
 const isConfirmedExit = ref(false)
 let pendingRoute = null
+
+const showFinishModal = ref(false)
+const correctAnswersCount = ref(0)
+
+const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipeBack(() => {
+  handleBackClick()
+}, {
+  ignoreSelector: '.text-card, .word-pool-card'
+})
 
 onMounted(() => {
   if (!store.currentTask) {
@@ -146,7 +169,9 @@ const totalTasks = computed(() => {
 })
 
 const progressPercentage = computed(() => {
-  return (currentTaskNumber.value / totalTasks.value) * 100
+  if (store.currentTaskIndex < 0) return 0;
+  const visuallyCompleted = store.currentTaskIndex + (store.isChecking && isSuccess.value ? 1 : 0);
+  return (visuallyCompleted / totalTasks.value) * 100;
 })
 
 const isSuccess = computed(() => {
@@ -157,21 +182,26 @@ const isSuccess = computed(() => {
 })
 
 const handleMainAction = async () => {
-  if (isSuccess.value) {
-    // Сохраняем прогресс перед переходом
-    await store.saveTaskProgress()
-
-    const hasNext = store.nextTask()
-    if (!hasNext) {
-      isConfirmedExit.value = true // Если тексты закончились, выходим без вопросов
-      router.push('/text-tasks')
+  if (!store.isChecking) {
+    store.toggleCheck()
+    if (isSuccess.value) {
+      correctAnswersCount.value++
+      await store.saveTaskProgress()
     }
   } else {
-    store.toggleCheck()
+    const hasNext = store.nextTask()
+    if (!hasNext) {
+      showFinishModal.value = true
+    }
   }
 }
 
-// === Логика Тапов (Клик по слову -> Клик по пропуску) ===
+const finishQuest = () => {
+  showFinishModal.value = false
+  isConfirmedExit.value = true
+  router.push('/text-tasks')
+}
+
 const selectWordForTap = (word) => {
   if (store.isChecking) return
   selectedWordForTap.value = selectedWordForTap.value === word ? null : word
@@ -179,14 +209,10 @@ const selectWordForTap = (word) => {
 
 const handleBlankClick = (blankId) => {
   if (store.isChecking) return
-
-  // Если в пропуске уже есть слово, возвращаем его
   if (store.blanksState[blankId]) {
     store.returnWord(blankId)
     return
   }
-
-  // Если слово выбрано и пропуск пустой, ставим слово
   if (selectedWordForTap.value && !store.blanksState[blankId]) {
     store.placeWord(blankId, selectedWordForTap.value)
     selectedWordForTap.value = null
@@ -201,6 +227,7 @@ const handleBlankClick = (blankId) => {
   display: flex;
   justify-content: center;
   overflow: hidden;
+  touch-action: none;
 }
 
 .drag-page-container {
@@ -209,6 +236,11 @@ const handleBlankClick = (blankId) => {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.modal__image {
+  width: 140px;
+  margin: 0 auto;
 }
 
 .header-wrapper {
@@ -281,7 +313,7 @@ const handleBlankClick = (blankId) => {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  padding: 5px 15px;
+  padding: 5px 10px;
   overflow: hidden;
 }
 
@@ -290,7 +322,7 @@ const handleBlankClick = (blankId) => {
   padding: 10px;
   border: 2px solid #e2e8f0;
   box-shadow: 0 3px 0 #e2e8f0;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   flex-shrink: 0;
 }
 
@@ -344,6 +376,7 @@ const handleBlankClick = (blankId) => {
   box-shadow: 0 4px 0 #e2e8f0;
   overflow-y: auto;
   scrollbar-width: none;
+  touch-action: pan-y;
 }
 
 .text-card::-webkit-scrollbar {
@@ -387,7 +420,6 @@ const handleBlankClick = (blankId) => {
 .drop-zone.has-word {
   background: #ebf8ff;
   border: 2px solid #3182ce;
-  border-bottom-width: 4px;
   color: #2b6cb0;
 }
 
@@ -415,7 +447,7 @@ const handleBlankClick = (blankId) => {
 }
 
 .footer-area {
-  padding: 15px 20px 25px;
+  padding: 10px 10px 20px 10px;
   flex-shrink: 0;
 }
 
@@ -428,15 +460,15 @@ const handleBlankClick = (blankId) => {
   color: white;
   background-color: #4facfe;
   border: none;
-  border-radius: 24px;
+  border-radius: 50px;
   box-shadow: 0 6px 0 #0088ff;
   cursor: pointer;
   transition: transform 0.1s, background-color 0.2s;
 }
 
 .btn-check.btn-success {
-  background-color: #38a169;
-  box-shadow: 0 6px 0 #276749;
+  background-color: #2b6be2;
+  box-shadow: 0 6px 0 #2959b0;
 }
 
 .btn-check:disabled {
@@ -464,9 +496,15 @@ const handleBlankClick = (blankId) => {
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(79, 172, 254, 0.4); }
-  70% { box-shadow: 0 0 0 6px rgba(79, 172, 254, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(79, 172, 254, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(79, 172, 254, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(79, 172, 254, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(79, 172, 254, 0);
+  }
 }
 
 .error-state {
@@ -489,86 +527,71 @@ const handleBlankClick = (blankId) => {
   font-weight: bold;
 }
 
-.modal-overlay {
+.bottom-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.93);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  z-index: 9999;
-  backdrop-filter: blur(3px);
-  padding: 20px;
+  z-index: 100;
 }
 
-.modal-content {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 24px;
+.bottom-modal-content {
+  background: var(--bgModal);
   width: 100%;
-  max-width: 320px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  border-radius: 24px 24px 0 0;
+  padding: 30px 20px 40px;
   text-align: center;
-  animation: slideIn 0.2s ease-out;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes slideIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+.bottom-modal-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
 }
 
-.modal-title {
-  color: #2d3748;
-  margin: 0 0 12px 0;
-  font-size: 20px;
-  font-weight: 800;
+.bottom-modal-title {
+  font-size: 26px;
+  font-weight: 900;
+  color: #38a169;
+  margin-bottom: 15px;
 }
 
-.modal-text {
-  color: #718096;
-  font-size: 15px;
-  line-height: 1.5;
-  margin-bottom: 24px;
-}
-
-.modal-actions {
-  display: flex;
-  gap: 12px;
-}
-
-.btn-cancel, .btn-confirm {
-  flex: 1;
-  padding: 12px;
-  border: none;
-  border-radius: 12px;
+.bottom-modal-text {
+  font-size: 18px;
   font-weight: 700;
-  font-size: 16px;
-  cursor: pointer;
-  transition: transform 0.1s;
+  color: var(--title);
+  margin: 32px 0;
 }
 
-.btn-cancel {
-  background: #edf2f7;
-  color: #4a5568;
-  box-shadow: 0 4px 0 #cbd5e0;
+.bottom-modal-text span {
+  color: #38a169;
+  font-size: 20px;
 }
 
-.btn-cancel:active {
-  transform: translateY(4px);
-  box-shadow: none;
+.finish-btn {
+  margin-top: 10px;
 }
 
-.btn-confirm {
-  background: #e53e3e;
-  color: white;
-  box-shadow: 0 4px 0 #c53030;
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: transform 0.4s cubic-bezier(0.34, 1.35, 0.64, 1), opacity 0.4s ease;
 }
 
-.btn-confirm:active {
-  transform: translateY(4px);
-  box-shadow: none;
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.slide-up-enter-to,
+.slide-up-leave-from {
+  transform: translateY(0);
+  opacity: 1;
 }
 </style>

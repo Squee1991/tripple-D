@@ -1,55 +1,41 @@
 <template>
   <div class="dialogue-scene-wrapper">
-    <!-- Оверлей загрузки рекламы -->
     <div v-if="isAdLoading" class="ad-overlay">
       <div class="ad-spinner"></div>
     </div>
-
-    <!-- ТОЧНАЯ КОПИЯ МОДАЛКИ (VReviveModal style) -->
     <div v-if="showReviveModal" class="revive-overlay" @click.self="showReviveModal = false">
       <div class="revive-modal">
-        <h2 class="revive-title">Повторить попытку?</h2>
-
+        <h2 class="revive-title">{{t('recipeIndexArticleAnswer.modalTitle')}}</h2>
         <p class="revive-subtitle">
-          Вы ответили верно {{ correctAnswers }} / {{ recipe?.ingredients?.length || 0 }}.<br>
-          Купите попытку, чтобы продолжить.
+          {{t('recipeIndexArticleAnswer.textPartOne')}} {{ correctAnswers }} / {{ recipe?.ingredients?.length || 0 }}.<br>
+          {{t('recipeIndexArticleAnswer.textPartTwo')}}
         </p>
-
         <div class="revive-wallet-box">
           <div class="revive-wallet-row">
-            <span>Цена</span>
-            <span>10 Артиклюсов</span>
+            <span class="coin__price-text">{{t('recipeIndexArticleAnswer.price')}}</span>
+            <div class="coin__wrapper">
+              <span class="coin__value">10</span>
+              <img class="revive__coin" src="../../../assets/images/article.svg" alt="">
+            </div>
           </div>
           <div class="revive-wallet-row">
-            <span>У вас:</span>
-            <span>{{ learningStore.points }} Артиклюсов</span>
+            <span class="coin__price-text">{{t('recipeIndexArticleAnswer.youHave')}}</span>
+            <div class="coin__wrapper">
+              <span class="coin__value">{{ learningStore.points }}</span>
+              <img class="revive__coin" src="../../../assets/images/article.svg" alt="">
+            </div>
           </div>
         </div>
-
         <div class="revive-actions">
-          <button class="revive-btn revive-btn--ad">
-            Смотреть рекламу
-          </button>
-
-          <button
-              class="revive-btn revive-btn--buy"
-              :disabled="learningStore.points < 10"
-              @click="buyRetry"
-          >
-            Купить за 10
-          </button>
-
-          <button class="revive-btn revive-btn--back" @click="goBack">
-            К темам
-          </button>
+          <button class="revive-btn revive-btn--ad" @click="watchAdRetry">{{t('recipeIndexArticleAnswer.showADS')}}</button>
+          <button class="revive-btn revive-btn--buy" :disabled="learningStore.points < 10" @click="buyRetry">{{t('recipeIndexArticleAnswer.buyBy')}} 10</button>
+          <button class="revive-btn revive-btn--back" @click="goBack">{{t('recipeIndexArticleAnswer.toThemes')}}</button>
         </div>
       </div>
     </div>
-
-    <!-- Основной интерфейс (не трогаем) -->
     <div class="dialogue-scene">
       <div class="dialogue-scene__chef-container">
-        <img :src="chefImage" alt="Шеф-повар Артикль" class="dialogue-scene__chef-img"/>
+        <img :src="chefImage" alt="Chef" class="dialogue-scene__chef-img"/>
       </div>
       <div class="dialogue-scene__main-content">
         <div class="dialogue__header">
@@ -65,7 +51,7 @@
           >
             <div class="message-bubble__avatar">
               <template v-if="message.speaker === 'chef'">
-                <img :src="chefImage" alt="Шеф"/>
+                <img :src="chefImage" alt="Chef"/>
               </template>
               <template v-else>
                 <img v-if="authStore.avatarUrl" :src="authStore.avatarUrl" alt="Я"/>
@@ -130,7 +116,7 @@
                 @click="retryTest"
                 class="start-button"
             >
-              Повторить
+              {{ t('recipeIndexArticleAnswer.repeat')}}
             </button>
           </div>
         </div>
@@ -145,6 +131,7 @@ import {useRoute, useRouter} from 'vue-router';
 import {useQuestStore} from '../../../store/questStore.js';
 import {userlangStore} from '../../../store/learningStore.js';
 import {userAuthStore} from '../../../store/authStore.js';
+import {showRewarded} from '~/utils/admob.js';
 
 import ChefHi from '../../../assets/images/chefHi.svg';
 import ChefOk from '../../../assets/images/ok.svg';
@@ -181,7 +168,6 @@ const lastAnswer = ref({choice: null, status: null});
 const chefImage = ref('');
 const chefImages = ref({hi: '', ok: '', no: ''});
 
-// Стэйт модалки и рекламы
 const showReviveModal = ref(false);
 const isAdLoading = ref(false);
 
@@ -215,7 +201,7 @@ const buyRetry = async () => {
   }
 };
 
-/*const watchAdRetry = () => {
+const watchAdRetry = () => {
   isAdLoading.value = true;
   showRewarded(
       async () => {
@@ -229,7 +215,7 @@ const buyRetry = async () => {
         }
       }
   );
-};*/
+};
 
 const goBack = () => {
   showReviveModal.value = false;
@@ -392,7 +378,25 @@ watch(displayedMessages, () => {
   font-family: Nunito, sans-serif;
 }
 
-/* Оверлей рекламы */
+.revive__coin {
+  width: 30px;
+}
+
+.coin__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.coin__value {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.coin__price-text {
+  font-size: 18px;
+}
+
 .ad-overlay {
   position: fixed;
   top: 0;
@@ -422,10 +426,6 @@ watch(displayedMessages, () => {
   }
 }
 
-/* =========================================
-   НОВЫЕ ТОЧНЫЕ СТИЛИ ИЗ ВТОРОГО СКРИНШОТА
-========================================= */
-
 .revive-overlay {
   position: fixed;
   inset: 0;
@@ -440,7 +440,7 @@ watch(displayedMessages, () => {
 .revive-modal {
   background: #ffffff;
   width: 100%;
-  max-width: 500px;
+  max-width: 768px;
   border-radius: 24px 24px 0 0;
   padding: 30px 24px 40px;
   text-align: center;
@@ -494,7 +494,7 @@ watch(displayedMessages, () => {
   justify-content: center;
   width: 100%;
   height: 56px;
-  border-radius: 14px;
+  border-radius: 50px;
   font-family: "Nunito", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -515,23 +515,21 @@ watch(displayedMessages, () => {
   transform: none !important;
 }
 
-/* Оранжевая кнопка */
+
 .revive-btn--ad {
   background-color: #f59e0b;
-  box-shadow: 0 4px 0 #d97706;
+  box-shadow: 0 5px 0 #d97706;
 }
 
-/* Зеленая кнопка */
 .revive-btn--buy {
   background-color: #65a30d;
-  box-shadow: 0 4px 0 #4d7c0f;
+  box-shadow: 0 5px 0 #4d7c0f;
 }
 
 .revive-btn--buy:disabled {
-  box-shadow: 0 4px 0 #4d7c0f;
+  box-shadow: 0 5px 0 #4d7c0f;
 }
 
-/* Голубая кнопка */
 .revive-btn--back {
   background-color: #60a5fa;
   box-shadow: 0 4px 0 #3b82f6;
@@ -752,10 +750,11 @@ watch(displayedMessages, () => {
   padding: 1rem 2.5rem;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
-  border-radius: 16px;
+  border-radius: 50px;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
 }
+
 
 .choice-buttons {
   display: flex;

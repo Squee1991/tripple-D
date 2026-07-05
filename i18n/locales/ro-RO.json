@@ -1,5 +1,4 @@
 {
-
   "definiteIndefiniteQuestOne": {
     "title": "Bătălia pentru terminații",
     "description": "Practică mixtă: articole nehotărâte și hotărâte în propoziții.",
@@ -525,13 +524,6 @@
     "questFifteen": "Alegeți varianta corectă: A fost o zi minunată",
     "questFifteenTip": "Articol nehotărât (prima dată). Gen masculin (der). Articolul 'ein' este gol, deci adjectivul ia de la articolul 'der' terminația -er."
   },
-
-
-
-
-
-
-
   "secretLandsQuestOne": {
     "title": "Rezultat",
     "description": "Antrenament mixt: lucrul cu articolul nehotărât în Perfekt și Futur 1. Teme: viața de zi cu zi, oraș, transport, mâncare.",
@@ -1057,9 +1049,6 @@
     "questFifteen": "Asamblează propoziția: Vom vedea o expoziție interesantă",
     "questFifteenTip": "Expoziție — genul feminin (die). Articolul 'eine' se termină în -e, deci adjectivul ia de la articol terminația -e."
   },
-
-
-
   "edgeImagesQuestOne": {
     "title": "Start",
     "description": "Exersăm declinarea corectă a adjectivelor după der, die, das.",
@@ -1585,12 +1574,6 @@
     "questFifteen": "Inserați forma (lecker): Voi mânca noua ___ Pizza.",
     "questFifteenTip": "Akkusativ (feminin): articolul 'die' este de bază, adjectivul ia de la articol terminația -e."
   },
-
-
-
-
-
-
   "timeGageQuestOne": {
     "title": "Cunoștință și comunicare",
     "description": "Exersăm gramatica în situații de comunicare: de la planuri de întâlnire până la povești despre trecut.",
@@ -2095,8 +2078,6 @@
     "questFifteen": "Voi cumpăra bilet dacă voi avea timp.",
     "questFifteenTip": "'Wenn' pune verbul la sfârșit."
   },
-
-
   "pastValleyQuestOne": {
     "title": "Bazele Perfekt",
     "description": "Ce ai făcut? Facem cunoștință cu timpul trecut: 'Am cumpărat', 'Am făcut'.",
@@ -2434,7 +2415,6 @@
     "questFourteenTip": "singen — strong verb. ge- is added, and the -en ending is kept. A vowel change occurs (i to u).",
     "questFifteen": "Select: I did sports."
   },
-
   "actionValleyQuestOne": {
     "title": "Mie, ție, lui",
     "description": "Exersăm Dativul cu pronumele personale. Pe cine ajutăm și cui îi dăm cadouri?",
@@ -2801,7 +2781,6 @@
     "questFifteen": "Alege: Cu cine vorbești?",
     "questFifteenTip": "Pentru persoane folosim prepoziție + întrebare (Mit wem?)."
   },
-
   "pluralLandQuestOne": {
     "title": "Călătorie",
     "description": "Planificăm o călătorie folosind Futur I. Învățăm să conectăm timpul, locul și acțiunea.",
@@ -3103,8 +3082,6 @@
     "questFourteen": "Asamblați: Nu vom uita sărbătoarea.",
     "questFifteen": "Alegeți varianta corectă"
   },
-
-
   "orderValleyQuestOne": {
     "title": "Verbul la sfârșit!",
     "description": "Exersăm ordinea cuvintelor în propozițiile subordonate. Regula principală: verbul merge la bun sfârșit.",
@@ -3508,7 +3485,6 @@
     "questFifteen": "Ascultați și scrieți propoziția",
     "questFifteenTip": "Negația în 'es gibt' este 'kein'. După 'dass', verbul 'gibt' fuge la bun sfârșit."
   },
-
   "pwa": {
     "title": "Instalează Skillupgerman",
     "sub": "Adaugă aplicația pe ecranul principal pentru acces rapid și confort!",
@@ -3625,7 +3601,9 @@
     "streak": "Serie de victorii",
     "clearWins": "Victorii clare",
     "start": "Începe jocul",
-    "info": "Apasă pe nivel pentru a vedea statisticile acestuia."
+    "info": "Apasă pe nivel pentru a vedea statisticile acestuia.",
+    "answer-placeholder": "Formează propoziția...",
+    "pending": "În așteptare..."
   },
   "eventSessionPage": {
     "loading": "Se încarcă...",
@@ -3974,23 +3952,23 @@
     "text": "Ascunde"
   },
   "payPage": {
+    "sale5": "3% reducere",
+    "sale10": "6% reducere",
+    "sale15": "15% reducere",
+    "finalePrice": "TOTAL:",
+    "yourSale": "Reducerea ta",
     "title": "Obține maximum de la platformă",
     "description": "Învățare, recompense, sarcini, progres și multe altele!",
     "compareLabelOne": "Funcții",
     "compareLabelTwo": "Gratuit",
     "compareLabelThree": "Abonament",
-    "getPremiumBtn": "Achiziționează abonament",
-    "month": "lun.",
-    "featureOne": "Material de studiu",
-    "featureTwo": "Salvarea progresului",
-    "featureThree": "Realizări",
-    "featureFour": "Sarcini zilnice",
-    "featureFive": "Evenimente sezoniere",
-    "featureSix": "Obținerea recompenselor",
-    "featureSeven": "Teste cu verificare prin IA",
-    "featureEight": "Pronunție audio",
-    "featureNine": "Dueluri și clasament",
-    "featureTen": "Funcții viitoare"
+    "getPremiumBtn": "Obține",
+    "month": "luni",
+    "featureOne": "Învățare fără limite",
+    "featureTwo": "Funcții viitoare",
+    "featureThree": "Suport pentru dezvoltatori",
+    "featureFour": "Fără reclame",
+    "withoutDiscount": "Fără reducere"
   },
   "useHeadApp": {
     "title": "Skillupgerman — Învață germana ușor și interesant prin joc",
@@ -4133,25 +4111,29 @@
     "send": "Trimite mesaj"
   },
   "howToUse": {
-    "title": "Cum se utilizează",
+    "title": "Cum se folosește",
     "questOne": "Cum încep învățarea?",
-    "answerOne": "Pentru a începe practica limbii germane, este suficient să te înregistrezi și să îți creezi un cont. Fără acesta, accesul la sarcini va fi restricționat.",
+    "answerOne": "Pentru a începe să practici germana, este suficient să te înregistrezi și să îți creezi un cont. Fără acesta, accesul la sarcini va fi blocat.",
     "questTwo": "Ce sunt evenimentele sezoniere?",
-    "answerTwo": "Evenimentele sezoniere sunt evenimente temporare organizate cu ocazia sărbătorilor. În cadrul acestora apar misiuni speciale, sarcini tematice și recompense unice, disponibile doar pentru o perioadă limitată.",
+    "answerTwo": "Evenimentele sezoniere sunt activități temporare dedicate sărbătorilor. În cadrul acestora apar quest-uri speciale, sarcini tematice și recompense unice, disponibile doar pentru o perioadă limitată de timp.",
     "questThree": "Ce este o realizare?",
-    "answerThree": "O realizare este un marcaj pentru o activitate finalizată (progres, răspunsuri corecte, sarcini zilnice etc.).",
+    "answerThree": "O realizare (achievement) este un marcaj primit pentru o activitate îndeplinită (progres, răspunsuri corecte, sarcini zilnice etc.).",
     "questFour": "Ce sunt recompensele?",
-    "answerFour": "Recompensele sunt acordate pentru îndeplinirea anumitor realizări și sunt afișate în cabinetul tău personal.",
-    "questFive": "Unde pot vedea progresul la articole?",
-    "answerFive": "Pe pagina principală, în „Panoul participantului”, alege „Statistici”, apoi progresul categoriei care te interesează. Important: dacă nu ai teme active la articole, statisticile nu vor fi afișate.",
-    "questSix": "Ce este un Articluș?",
-    "answerSix": "Articlușul este moneda internă. Se acordă pentru răspunsurile corecte în sarcina „Practica articolelor” și pentru finalizarea sarcinilor în Ținuturile Lingvistice. Poate fi cheltuit pe încercări suplimentare.",
+    "answerFour": "Recompensele sunt acordate pentru îndeplinirea anumitor realizări și sunt afișate în panoul contului tău personal.",
+    "questFive": "Unde pot vedea progresul pentru articole?",
+    "answerFive": "Pe pagina principală, în „Panoul de membru”, selectează „Statistici”, apoi progresul categoriei care te interesează. Important: dacă nu ai teme active la articole, statisticile nu se vor afișa.",
+    "questSix": "Ce este Articlus?",
+    "answerSix": "Articlus este moneda internă a platformei. Se acordă pentru răspunsurile corecte din cadrul exercițiului „Practica articolelor” și pentru îndeplinirea sarcinilor în Ținuturile Lingvistice. Poate fi cheltuită pe încercări suplimentare.",
     "questSeven": "Cum ajung în clasament?",
-    "answerSeven": "Trebuie să obții cel puțin nivelul 2 jucând în modul „Practica articolelor” sau „Ținuturi lingvistice”. După aceea, tabelul de clasament va deveni disponibil.",
+    "answerSeven": "Clasamentul maratonului de articole se actualizează o dată la două săptămâni. Timp de două săptămâni concurezi cu ceilalți participanți. După finalizarea maratonului, primele trei locuri primesc realizări și recompense!",
     "questEight": "Ce sunt sarcinile zilnice?",
-    "answerEight": "Acestea sunt sarcini tematice care pot fi efectuate o dată pe zi. Se pot finaliza 3 sarcini pe zi. Sunt disponibile pe pagina principală.",
+    "answerEight": "Acestea sunt sarcini pe teme specifice care pot fi efectuate o singură dată pe zi. Se pot finaliza 3 sarcini pe zi. Ele sunt accesibile pe pagina principală.",
     "questNine": "Ce sunt evenimentele?",
-    "answerNine": "Evenimente temporare care au loc o dată pe an. În perioada activă, se deschid sarcini și recompense tematice. În afara acestui interval, secțiunea este indisponibilă. Datele de desfășurare pot fi consultate în „Calendarul evenimentelor” din Panoul participantului."
+    "answerNine": "Evenimente temporare care au loc o singură dată pe an. În perioada activă se deschid sarcini și recompense tematice. În afara intervalului de date, secțiunea este inaccesibilă. Datele de desfășurare pot fi consultate în „Calendarul de evenimente” din Panoul de membru.",
+    "questTen": "Ce sunt tocile (pălăriile de absolvent)?",
+    "answerTen": "Tocile sunt pălării academice care se oferă pentru îndeplinirea sarcinilor zilnice. Datorită lor se obțin bonusuri de rang și reduceri la cursuri. Neîndeplinirea sarcinilor zilnice atrage o penalizare.",
+    "questEleven": "Există penalizări la pălării?",
+    "answerEleven": "Da, pentru neîndeplinirea sarcinilor zilnice este prevăzută o penalizare (3 pălării). Efectuează cel puțin o sarcină zilnică și penalizarea nu se va aplica. În caz de absență, poți cumpăra o „înghețare a timpului” din magazinul intern; aceasta va împiedica sistemul de penalizări să îți scadă pălăriile!"
   },
   "accountManagement": {
     "title": "Gestionarea contului",
@@ -4163,22 +4145,23 @@
     "answerThree": "În formularul de autentificare, selectează „Ai uitat parola?” și urmează instrucțiunile. Un e-mail cu un link de recuperare va fi trimis la adresa indicată la înregistrare. Important: folosește o adresă de e-mail reală la înregistrare."
   },
   "subscribe": {
-    "title": "Abonament (Premium)",
-    "questOne": "Ce oferă abonamentul Premium?",
-    "questOneStepOne": "1 Pronunție audio pentru toate cuvintele și propozițiile — exersează percepția auditivă.",
+    "title": "Abonament (Plus)",
+    "questOne": "Ce oferă abonamentul Plus?",
+    "questOneStepOne": "1 Audio pentru toate cuvintele și propozițiile — antrenează-ți înțelegerea după auz.",
     "questOneStepTwo": "2 Învățare fără limite — parcurge orice cantitate de material pe zi.",
-    "questOneStepThree": "3 Acces la toate testele cu auto-verificare și evaluare prin IA.",
-    "questOneStepFour": "4 Sarcini audio și de vorbire pentru exersarea limbajului oral.",
-    "questOneStepFive": "5 Materiale și exerciții exclusive, indisponibile în versiunea gratuită.",
-    "questOneStepSix": "6 Susținerea dezvoltatorilor — premium ne ajută să dezvoltăm proiectul, să lansăm noi sarcini și să îmbunătățim funcționalitățile pentru toți elevii. Scopul nostru este să facem studiul germanei accesibil și captivant. Creăm o atmosferă interactivă, de joc și competiție, astfel încât studiul să fie o aventură în care să vrei să te întorci în fiecare zi!",
-    "questTwo": "Cum dezactivez Premium?",
+    "questOneStepThree": "3 Acces la toate testele cu verificare automată și evaluare prin IA.",
+    "questOneStepFour": "4 Sarcini audio și exerciții de vorbire pentru antrenarea exprimării orale.",
+    "questOneStepFive": "5 Materiale și exerciții exclusive, care nu sunt de nivel gratuit.",
+    "questOneStepSix": "6 Suport para dezvoltatori — acest lucru ne ajută să dezvoltăm proiectul, să lansăm sarcini noi și să îmbunătățim funcționalitățile pentru toți elevii. Scopul nostru este să facem învățarea limbii germane accesibilă și, mai ales, captivantă. Creăm o atmosferă interactivă, plină de jocuri și competiții, astfel încât studiul să fie o aventură în care vrei să te întorci în fiecare zi!",
+    "questTwo": "Cum se anulează Plus?",
     "questTwoStepOne": "Conectează-te la contul tău.",
-    "questTwoStepTwo": "Mergi la secțiunea „Cabinet”.",
-    "questTwoStepThree": "Deschide subsecțiunea „Gestionarea contului”.",
-    "questTwoStepFour": "Apasă pe „Anulează abonamentul”.",
-    "note": "După aceasta, accesul va rămâne activ până la sfârșitul perioadei achitate.",
-    "questThree": "Există rambursare pentru zilele rămase?",
-    "answerThree": "În prezent, nu este prevăzută rambursarea pentru zilele rămase."
+    "questTwoStepTwo": "Mergi la secțiunea „Panou”.",
+    "questTwoStepThree": "Mergi la secțiunea „Setări”.",
+    "questTwoStepFour": "Deschide subsecțiunea „Gestionarea contului”.",
+    "questTwoStepFive": "Apasă pe „Anulare abonament”.",
+    "note": "După anulare, accesul se va păstra până la sfârșitul perioadei achitate. Important: abonamentul trebuie anulat pe aceeași platformă unde a fost plătit (în aplicația de pe iOS, Android sau pe site).",
+    "questThree": "Se pot restitui banii pentru zilele rămase?",
+    "answerThree": "Nu este prevăzută restituirea banilor pentru zilele rămase."
   },
   "daily": {
     "first": "Învață 5 cuvinte în toate modurile: Practica articolelor",
@@ -4935,7 +4918,10 @@
     "start": "Început:",
     "middle": "Nota medie:",
     "share": "Trimite",
+    "cancel": "Anulează",
     "delete": "Șterge",
+    "deleteResultTitle": "Ștergi rezultatul?",
+    "textModal": "Sigur dorești să ștergi acest examen? Această acțiune este ireversibilă.",
     "sent": "Test trimis",
     "sended": "Ai trimis deja acest test",
     "error": "Trimiterea examenului a eșuat"
@@ -8052,7 +8038,9 @@
     "description": "Protejează tocile tale de penalizări"
   },
   "cardSales": {
+    "title3": "Reducere 3%",
     "title5": "Reducere 5%",
+    "title6": "Reducere 6%",
     "title10": "Reducere 10%",
     "title15": "Reducere 15%"
   },
@@ -8101,8 +8089,8 @@
     "exam": "Prieteni"
   },
   "cabinetSidebar": {
-    "valueOne": "Parametrii contului",
-    "valueTwo": "Arhiva examenelor",
+    "valueOne": "Cont",
+    "valueTwo": "Examene",
     "valueThree": "Magazin",
     "valueFour": "Setări"
   },
@@ -8122,9 +8110,11 @@
     "ach": "Notificări realizări",
     "themeBtn": "Temă",
     "snowFall": "Ninsoare",
-    "language": "Limba interfeței"
+    "language": "Limba interfeței",
+    "profileData": "Datele profilului"
   },
   "cabinet": {
+    "plusCanceled": "PLUS anulat",
     "important": "IMPORTANT!!!",
     "importantText": "La ștergerea contului, abonamentul nu se anulează automat. Înainte de ștergere, anulează abonamentul.",
     "cancelPremium": "Anulezi abonamentul?",
@@ -8307,7 +8297,8 @@
     "guessed": "Cuvântul misterios a fost:",
     "tryAgain": "Încearcă din nou",
     "btnToMain": "Spre pagina principală",
-    "placeholder": "Introdu cuvântul întreg"
+    "placeholder": "Introdu cuvântul întreg",
+    "wrong": "Incorect! Corect:"
   },
   "preposition": {
     "title": "Totul despre prepozițiile germane",
@@ -9236,7 +9227,9 @@
     "languagesLands": "Ținuturi lingvistice",
     "describePicture": "Descrierea Imaginilor",
     "fight": "Universul Germanei",
-    "audio": "Sarcini Audio"
+    "audio": "Sarcini Audio",
+    "textTask": "Texte",
+    "speak": "Practică de vorbire"
   },
   "underSub": {
     "prev": "Introducere",
@@ -9463,35 +9456,99 @@
     "topic": "Tema"
   },
   "nameMap": {
-    "Furniture": "Mobilă",
+    "Furniture": "Mobilier",
     "Animals": "Animale",
+    "Birds": "Păsări",
+    "SeaAnimals": "Animale marine",
+    "Insects": "Insecte",
+    "Savanna": "Savană",
     "Clothes": "Haine",
+    "Shoes": "Încălțăminte",
     "Food": "Mâncare",
-    "Body": "Părțile corpului",
+    "SweetEat": "Dulciuri",
+    "MilkEat": "Produse lactate",
+    "Vegetables": "Legume",
+    "Fruits": "Fructe",
+    "Drinks": "Băuturi",
+    "Body": "Corp",
     "Professions": "Profesii",
     "Transport": "Transport",
     "Colors": "Culori",
     "Nature": "Natură",
+    "Weather": "Vreme",
+    "Landscape": "Peisaj",
     "Home": "Casă",
     "Zeit": "Timp",
-    "City": "Oraș",
+    "CityBuildings": "Clădiri ale orașului",
+    "CityInfrastructure": "Infrastructura orașului",
     "School": "Școală",
     "DaysAndMonths": "Zile și luni",
     "Toys": "Jucării",
-    "CommonItems": "Obiecte comune",
-    "BathroomItems": "Obiecte de baie",
-    "Kosmetik": "Cosmetică",
+    "CommonItems": "Articole de zi cu zi",
+    "BathroomItems": "Articole de baie",
+    "Kosmetik": "Cosmetice",
     "Familie": "Familie",
     "Emotions": "Emoții",
-    "Werkzeuge": "Unelte",
     "Kitchen": "Bucătărie",
     "Health": "Sănătate",
-    "Sport": "Sport",
-    "SportEquipment": "Echipament fitness",
+    "SportBasic": "Sporturi de bază",
+    "SportCombatWinter": "Sporturi de iarnă și de luptă",
+    "SportEvents": "Evenimente sportive",
+    "SportLife": "Viața sportivă",
+    "SportEquipment": "Echipament sportiv",
+    "TravelDocuments": "Documente de călătorie",
+    "Tourism": "Turism",
     "Travel": "Călătorii",
+    "MusicInstruments": "Instrumente muzicale",
     "Musik": "Muzică",
-    "Amount": "Cantitate",
-    "Informatik": "Informatică"
+    "Amount": "Cantitate și măsuri",
+    "Hardware": "Hardware",
+    "Software": "Software",
+    "Internet": "Internet",
+    "WinterHolidays": "Sărbători de iarnă",
+    "FamilyAndReligious": "Sărbători de familie și religioase",
+    "PersonalCelebrations": "Sărbători personale",
+    "FestivalsAndDecor": "Festivaluri și decor",
+    "DwellingTypes": "Tipuri de locuințe",
+    "Rooms": "Camere",
+    "ConstructionAndDetails": "Construcții și detalii",
+    "CoreFamily": "Familia restrânsă",
+    "ExtendedFamily": "Familia extinsă",
+    "Relationships": "Relații",
+    "HandTools": "Scule manuale",
+    "PowerTools": "Scule electrice",
+    "ConsumablesAndSafety": "Consumabile și siguranță",
+    "JobOffice": "Muncă de birou",
+    "JobTech": "Muncă tehnică",
+    "JobMed": "Muncă medicală",
+    "JobEdu": "Educație",
+    "JobService": "Servicii",
+    "CityTransport": "Transport urban",
+    "TravelTransport": "Transport de călătorie",
+    "usualClothes": "Haine casual",
+    "winterClothes": "Haine de iarnă",
+    "emotionsPositive": "Emoții",
+    "emotionsNegative": "Emoții 2"
+  },
+  "categoryWords": {
+    "nature": "Natură",
+    "animals": "Animale",
+    "food": "Mâncare",
+    "people": "Oameni",
+    "family": "Familie",
+    "dailyRoutine": "Viața cotidiană",
+    "house": "Casă",
+    "city": "Oraș",
+    "school": "Școală",
+    "professions": "Profesii",
+    "construction": "Construcții",
+    "clothes": "Haine",
+    "holidays": "Sărbători",
+    "sport": "Sport",
+    "music": "Muzică",
+    "travel": "Călătorii",
+    "informatics": "Informatică",
+    "abstract": "Teme abstracte"
   },
   "modes": {
     "themeTitle": "Teme de studiu ale articolelor",
@@ -9703,7 +9760,9 @@
     "rank_5": "Căpitan",
     "rank_6": "Gardian",
     "rank_7": "Legendă",
+    "sale3": "Reducere 3%",
     "sale5": "Reducere 5%",
+    "sale6": "Reducere 6%",
     "sale10": "Reducere 10%",
     "sale15": "Reducere 15%"
   },
@@ -9814,7 +9873,8 @@
     "audio": "Îmbunătățește-ți înțelegerea limbii germane vorbite prin exerciții audio",
     "images": "Îmbunătățește-ți abilitatea de a descrie imagini! Alege o temă pentru a începe",
     "settings": "Setările contului",
-    "achievements": "Colecția ta de toate realizările și recompensele obținute pentru progresul tău"
+    "achievements": "Colecția ta de toate realizările și recompensele obținute pentru progresul tău",
+    "textTask": "Completează spațiile libere din texte și îmbunătățește-ți germana"
   },
   "imageDescription": {
     "listen": "Ascultă dialogul!",
@@ -9858,5 +9918,662 @@
     "check": "SCOR:",
     "again": "Zbor nou",
     "constellations": "Părăsește constelația"
+  },
+  "textTasksTip": {
+    "title": "Sarcini de text",
+    "description": "Pentru a finaliza sarcina, trage cuvântul în spațiul gol sau dă clic pe cuvânt și apoi pe câmpul în care dorești să îl adaugi."
+  },
+  "textThemes": {
+    "basic": "Introducere",
+    "routine": "Rutina zilnică",
+    "shopping": "Cumpărături",
+    "work": "Muncă și studii",
+    "hobby": "Hobby-uri",
+    "objects": "Obiecte și lucruri",
+    "travel": "Călătorii"
+  },
+  "themeTextTitleBasic_A1": {
+    "basicOne": "Prezentare formală",
+    "basicTwo": "Prezentare informală",
+    "basicThree": "Planuri pentru zi",
+    "basicFour": "Planuri pentru seară",
+    "basicFive": "În weekend",
+    "basicSix": "Activități sportive",
+    "basicSeven": "Gătim împreună",
+    "basicEight": "O călătorie în oraș",
+    "basicNine": "Învățăm împreună",
+    "basicTen": "Activități muzicale"
+  },
+  "themeTextTitleHobby_A1": {
+    "hobbyOne": "Jocul de fotbal",
+    "hobbyTwo": "Fotografie",
+    "hobbyThree": "Cântatul la chitară",
+    "hobbyFour": "Înot",
+    "hobbyFive": "Culinărie",
+    "hobbySix": "Călătorii",
+    "hobbySeven": "Lectură",
+    "hobbyEight": "Grădinărit",
+    "hobbyNine": "Dans",
+    "hobbyTen": "Învățarea limbilor străine"
+  },
+  "themeTextTitleRoutine_A1": {
+    "routineOne": "Planuri pentru zi",
+    "routineTwo": "Planuri pentru seară",
+    "routineThree": "În weekend",
+    "routineFour": "Activități sportive",
+    "routineFive": "Gătim împreună",
+    "routineSix": "O călătorie în oraș",
+    "routineSeven": "Învățăm împreună",
+    "routineEight": "Activități muzicale",
+    "routineNine": "Bem cafea",
+    "routineTen": "În parc"
+  },
+  "themeTextTitleShopping_A1": {
+    "shoppingOne": "La supermarket",
+    "shoppingTwo": "Căutarea hainelor",
+    "shoppingThree": "La brutărie",
+    "shoppingFour": "Cumpărături online",
+    "shoppingFive": "La piață",
+    "shoppingSix": "La magazinul de încălțăminte",
+    "shoppingSeven": "Cumpărarea mobilei",
+    "shoppingEight": "La piața de vechituri",
+    "shoppingNine": "Mâncare pentru seară",
+    "shoppingTen": "La librărie"
+  },
+  "themeTextTitleTravel_A1": {
+    "travelOne": "Împachetarea valizei",
+    "travelTwo": "La gară",
+    "travelThree": "La hotel",
+    "travelFour": "Vacanță la mare",
+    "travelFive": "Vizitarea orașului",
+    "travelSix": "La restaurant",
+    "travelSeven": "La aeroport",
+    "travelEight": "În munți",
+    "travelNine": "Cumpărarea de suveniruri",
+    "travelTen": "Întoarcerea acasă"
+  },
+  "themeTextTitleWork_A1": {
+    "workOne": "Ziua mea de muncă",
+    "workTwo": "Căutarea unui document",
+    "workThree": "La universitate",
+    "workFour": "Munca mea",
+    "workFive": "Temă pentru acasă",
+    "workSix": "Munca mea pe șantier",
+    "workSeven": "Lucrul de acasă",
+    "workEight": "Lucrul în depozit",
+    "workNine": "Ședință",
+    "workTen": "Pauza de masă"
+  },
+  "themeTextTitleBasic_A2": {
+    "basicOne": "La cursurile de germană",
+    "basicTwo": "Partener de tandem",
+    "basicThree": "La universitate",
+    "basicFour": "La bibliotecă",
+    "basicFive": "Proiect de grup",
+    "basicSix": "Călătorie lingvistică",
+    "basicSeven": "Elev nou",
+    "basicEight": "Curs online",
+    "basicNine": "Grup de studiu",
+    "basicTen": "Partener de examen"
+  },
+  "themeTextTitleHobby_A2": {
+    "hobbyOne": "Drumeție la munte",
+    "hobbyTwo": "Fotografie",
+    "hobbyThree": "Desen",
+    "hobbyFour": "Dans",
+    "hobbyFive": "Fotbal",
+    "hobbySix": "Înot",
+    "hobbySeven": "Jocuri de societate",
+    "hobbyEight": "Jocuri de societate și logică",
+    "hobbyNine": "Șah",
+    "hobbyTen": "Filme"
+  },
+  "themeTextTitleRoutine_A2": {
+    "routineOne": "Vecină nouă",
+    "routineTwo": "Întâlnire la cafenea",
+    "routineThree": "La o petrecere",
+    "routineFour": "Colegi noi",
+    "routineFive": "În clubul sportiv",
+    "routineSix": "Întâlnire în tren",
+    "routineSeven": "În parc cu câinele",
+    "routineEight": "Căutarea unui partener",
+    "routineNine": "La un concert",
+    "routineTen": "Nouă colegă de apartament"
+  },
+  "themeTextTitleShopping_A2": {
+    "shoppingOne": "La supermarket",
+    "shoppingTwo": "Cumpărarea hainelor",
+    "shoppingThree": "La piață",
+    "shoppingFour": "Cumpărături online",
+    "shoppingFive": "În magazinul de mobilă",
+    "shoppingSix": "La brutărie",
+    "shoppingSeven": "Cumpărarea încălțămintei",
+    "shoppingEight": "Cadou",
+    "shoppingNine": "În magazinul de electronice",
+    "shoppingTen": "Cumpărături mari"
+  },
+  "themeTextTitleTravel_A2": {
+    "travelOne": "Pregătirea călătoriei",
+    "travelTwo": "La aeroport",
+    "travelThree": "Sosirea la hotel",
+    "travelFour": "Pe plajă",
+    "travelFive": "Excursie",
+    "travelSix": "La restaurant",
+    "travelSeven": "Întrebând de drum",
+    "travelEight": "Probleme în vacanță",
+    "travelNine": "Cumpărarea de cadouri",
+    "travelTen": "Întoarcerea acasă"
+  },
+  "themeTextTitleWork_A2": {
+    "workOne": "Interviu de angajare",
+    "workTwo": "Temă pentru acasă",
+    "workThree": "Prima zi de muncă",
+    "workFour": "Prezentare",
+    "workFive": "Perfecționare profesională",
+    "workSix": "În biroul de acasă",
+    "workSeven": "Stagiu de practică",
+    "workEight": "Examen",
+    "workNine": "Curs de limbă",
+    "workTen": "Primul client"
+  },
+  "themeTextTitleBasic_B1": {
+    "basicOne": "La o petrecere",
+    "basicTwo": "Prima întâlnire",
+    "basicThree": "Tandem lingvistic",
+    "basicFour": "Întâlnire în tren",
+    "basicFive": "Un nou coleg",
+    "basicSix": "La un seminar",
+    "basicSeven": "La plimbare cu câinele",
+    "basicEight": "Vecini noi",
+    "basicNine": "În clubul sportiv",
+    "basicTen": "La hostel"
+  },
+  "themeTextTitleHobby_B1": {
+    "hobbyOne": "Fotografie nocturnă",
+    "hobbyTwo": "Alpinism",
+    "hobbyThree": "Cântatul la pian",
+    "hobbyFour": "Dezvoltare de jocuri",
+    "hobbyFive": "Windsurfing",
+    "hobbySix": "Jocul de teatru",
+    "hobbySeven": "Tir cu arcul",
+    "hobbyEight": "Restaurarea motocicletelor",
+    "hobbyNine": "Copt",
+    "hobbyTen": "Geocaching"
+  },
+  "themeTextTitleRoutine_B1": {
+    "routineOne": "Dimineața devreme",
+    "routineTwo": "Micul dejun și drumul spre muncă",
+    "routineThree": "În birou",
+    "routineFour": "Pauza de masă",
+    "routineFive": "Sfârșitul zilei de muncă",
+    "routineSix": "Sport după muncă",
+    "routineSeven": "Cina și relaxarea",
+    "routineEight": "Pregătirea de somn",
+    "routineNine": "Plimbarea de seară",
+    "routineTen": "Curățenia casei"
+  },
+  "themeTextTitleShopping_B1": {
+    "shoppingOne": "Cumpărarea hainelor",
+    "shoppingTwo": "La supermarket",
+    "shoppingThree": "Cumpărarea de tehnologie online",
+    "shoppingFour": "La piața de vechituri",
+    "shoppingFive": "Căutarea unui cadou",
+    "shoppingSix": "Returul produsului",
+    "shoppingSeven": "În magazinul de bricolaj",
+    "shoppingEight": "La farmacie",
+    "shoppingNine": "La pet shop",
+    "shoppingTen": "La second-hand"
+  },
+  "themeTextTitleTravel_B1": {
+    "travelOne": "O călătorie în oraș",
+    "travelTwo": "Vacanță la plajă",
+    "travelThree": "Drumeție la munte",
+    "travelFour": "Călătorie cu mașina",
+    "travelFive": "Călătorie în Asia",
+    "travelSix": "Croazieră",
+    "travelSeven": "Camping",
+    "travelEight": "Vacanță de iarnă",
+    "travelNine": "Călătorie lingvistică",
+    "travelTen": "Safari"
+  },
+  "themeTextTitleWork_B1": {
+    "workOne": "Interviu de angajare",
+    "workTwo": "Management de proiect",
+    "workThree": "Semestru în străinătate",
+    "workFour": "Prezentare la birou",
+    "workFive": "Pregătirea pentru examene",
+    "workSix": "Serviciu clienți",
+    "workSeven": "Teză de master",
+    "workEight": "Călătorie de afaceri",
+    "workNine": "Stagiu de practică",
+    "workTen": "Cursuri"
+  },
+  "textTaskSession": {
+    "allUsed": "Toate cuvintele au fost folosite!",
+    "errorText": "Niciun text selectat",
+    "back": "Înapoi la listă"
+  },
+  "exitSessionModal": {
+    "text": "E păcat să te oprești la jumătatea drumului! Dacă închizi fila acum, eforturile tale nu vor fi salvate.",
+    "continueLesson": "Continuă lecția",
+    "cancelLesson": "Ieșire"
+  },
+  "premiumBannerText": {
+    "text": "Obține maximum de la platformă, accelerează-ți învățarea."
+  },
+  "rulesModal": {
+    "text": "Indiciul de gramatică este disponibil după răspuns!"
+  },
+  "footerNavLabel": {
+    "learn": "Învață",
+    "games": "Jocuri",
+    "home": "Acasă",
+    "events": "Evenimente",
+    "cabinet": "Cont"
+  },
+  "speakTopics": {
+    "speak": "Prezentare și socializare",
+    "food": "Mâncare și cumpărături",
+    "transport": "Călătorii și transport",
+    "city": "Servicii urbane și viața cotidiană",
+    "health": "Sănătate",
+    "work": "Muncă și carieră",
+    "auto": "Mașina și drumul"
+  },
+  "speakThemes": {
+    "firstmeet": "Prezentare",
+    "acquaintance": "Prezentare 2",
+    "secondmeet": "Întâlnire",
+    "family_talk": "Conversație",
+    "weekend_plans": "Planuri",
+    "friend_call": "Apel",
+    "hobby_talk": "Hobby-uri",
+    "party_talk": "Petrecere",
+    "cafe_order": "Comandă cafea",
+    "restaurant_dinner": "Restaurant",
+    "store_checkout": "La casă",
+    "order_eat": "Comandă mâncare",
+    "consultation_talk": "Consultație",
+    "train_station": "La gară",
+    "train_ticket": "Control bilet",
+    "taxi_berlin": "Taxi",
+    "bus_talk": "În autobuz",
+    "hotel_checkin": "Hotel",
+    "border_check": "Graniță",
+    "airport_talk": "Aeroport",
+    "info_talk": "Centru de informații",
+    "bank_account": "Bancă",
+    "apartment_rent": "Chirie",
+    "clothes_shopping": "Cumpărături",
+    "shopping": "Cumpărături 2",
+    "post_office": "Poștă",
+    "police_talk": "Poliție",
+    "barbershop": "Frizerie",
+    "doctor_visit": "Programare la medic",
+    "pharmacy_vitamins": "Farmacie",
+    "insurance": "Asigurare",
+    "at_doctor": "La medic",
+    "dentist": "Stomatolog",
+    "veterinary": "Veterinar",
+    "job_looking": "Căutare de job",
+    "job_interview": "Interviu",
+    "bos_talk": "Discuție cu șeful",
+    "vacation": "Vacanță",
+    "salary_talk": "Salariu",
+    "dismissal_talk": "Concediere",
+    "library": "Bibliotecă",
+    "refusal_invite": "Refuzarea unei invitații",
+    "road_assistance": "Pană de mașină",
+    "oil_change": "Schimb de ulei",
+    "car_buying": "Cumpărarea unei mașini",
+    "police_control": "Depășirea vitezei",
+    "gas_station": "Benzinărie",
+    "buying_fruit": "Cumpărarea fructelor",
+    "bakery": "Brutărie",
+    "complaint": "Reclamație la restaurant",
+    "bus_stop": "Stație de autobuz",
+    "buying_glasses": "Optică",
+    "emergency_call": "Apel de urgență",
+    "first_day": "Ziua de inițiere / Prima zi",
+    "client_talk": "Discuție cu un client",
+    "car_rental": "Închiriere auto",
+    "ask_road": "Întrebarea despre drum",
+    "hotel_issue": "Problemă la hotel"
+  },
+  "speakIndexPage": {
+    "title": "Practică de vorbire",
+    "bannerText": "Exersează-ți abilitățile de vorbire cu exemple din viața reală",
+    "modalTitle": "Practică de vorbire",
+    "modalText": "Dezvoltă-ți abilitățile de comunicare în dialoguri reale! Poți alege un răspuns gata pregătit din cele sugerate, să îl introduci manual de la tastatură sau pur și simplu să îl spui cu voce tare apăsând butonul microfonului."
+  },
+  "rankModal": {
+    "title": "RANG NOU",
+    "rankedLabel": "Rang",
+    "accept": "ACCEPTĂ"
+  },
+  "premiumBanner": {
+    "textBanner": "Obține maximum de la platformă, accelerează-ți învățarea."
+  },
+  "netWork": {
+    "successTitle": "Conexiune restabilită!",
+    "notSuccessTitle": "Hopa! Nu există internet",
+    "successText": "Revenim la lucru...",
+    "notSuccessText": "Așteptăm conexiunea la rețea..."
+  },
+  "termsBlock": {
+    "first": "Prin înregistrare, accepți",
+    "second": "Termenii de utilizare",
+    "third": "și",
+    "fourth": "Politica de confidențialitate"
+  },
+  "languagePage": {
+    "title": "Limba aplicației",
+    "placeholder": "Caută limba...",
+    "notfound": "Nu s-a găsit nimic",
+    "further": "Continuă"
+  },
+  "statistics": {
+    "title": "Statisticile și progresul tău în învățarea cuvintelor și finalizarea nivelurilor tematice"
+  },
+  "restoreComputed": {
+    "restoring": "Restaurare...",
+    "restore": "Restaurează achizițiile."
+  },
+  "submitComputed": {
+    "sync": "Sincronizare...",
+    "getPlus": "Achiziționează PLUS"
+  },
+  "pay": {
+    "banner": "Acces complet la toate funcțiile aplicației",
+    "sales": "Aplică reducerile obținute din activitate",
+    "triggerToastSuccess": "Achiziție restaurată!",
+    "triggerToastNotFound": "Nu s-au găsit abonamente active",
+    "triggerToastError": "Eroare la restaurare",
+    "triggerToastIsPlus": "Aveți deja un abonament PLUS activ!"
+  },
+  "examSession": {
+    "ready": "Ești gata pentru test?",
+    "cardTextOne": "Te așteaptă",
+    "cardTextTwo": "etape și",
+    "cardTextThree": "sarcini.",
+    "begin": "Începe testul",
+    "listen": "Ascultă audio:",
+    "check": "Verificare...",
+    "send": "Trimite răspunsul",
+    "record": "Înregistrare",
+    "great": "Felicitări!",
+    "result": "Rezultatul tău pentru nivelul",
+    "save": "Se salvează progresul...",
+    "correctly": "Corect:",
+    "back": "Înapoi",
+    "interrupt": "Întrerupi testul?",
+    "modalText": "Progresul acestei încercări va fi pierdut. Ești sigur?",
+    "continue": "Continuă",
+    "leave": "Ieși",
+    "placeHolder": "Scrie răspunsul tău aici...",
+    "say": "Spune:"
+  },
+  "speakSession": {
+    "title": "Practică de vorbire",
+    "words": "Cuvinte",
+    "wordsText": "Învață sau repetă cuvintele înainte de a începe conversația. Acest lucru te va ajuta să ai mai multă încredere!",
+    "learn": "Începe",
+    "dialogue": "Dialog",
+    "dialogueText": "Exersează pronunția și vorbirea, ascultă interlocutorul și alege răspunsurile într-un format interactiv.",
+    "back": "Înapoi",
+    "goodJob": "O treabă excelentă!",
+    "goodJobTitle": "Ai finalizat acest dialog. Ține-o tot așa!",
+    "list": "Înapoi",
+    "repeat": "Repetă",
+    "start": "Începe învățarea",
+    "choice": "Alege un răspuns:",
+    "placeHolder": "Scrie sau spune răspunsul...",
+    "hoverVoice": "Spune prin voce",
+    "end": "Finalizează",
+    "further": "Mai departe"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "Reîncerci?",
+    "textPartOne": "Ai răspuns corect",
+    "textPartTwo": "Cumpără o încercare pentru a continua.",
+    "price": "Preț:",
+    "youHave": "Ai:",
+    "showADS": "Vezi reclama",
+    "buyBy": "Cumpără cu",
+    "toThemes": "La teme",
+    "repeat": "Repetă"
+  },
+  "freezeStatus": {
+    "active": "Înghețarea timpului este activă",
+    "inactive": "Înghețarea timpului este inactivă"
+  },
+  "guessArticle": {
+    "correct": "Corect",
+    "incorrect": "Incorect, corect este"
+  },
+  "stripeCancel": {
+    "cancelSub": "Anulare abonament",
+    "cancelPayment": "Plată anulată",
+    "errorAuth": "Eroare de autentificare",
+    "pleaseAuth": "Te rugăm să te autentifici pentru a efectua această acțiune.",
+    "canceling": "Se anulează abonamentul...",
+    "canceledSub": "Abonament anulat",
+    "errorCancelSub": "Eroare la anulare",
+    "errorCancelResponse": "Nu s-a putut anula abonamentul.",
+    "serverError": "Eroare de server",
+    "serverOffline": "Conexiune pierdută cu serverul. Încearcă mai târziu.",
+    "processInterrupted": "Procesul de plată a fost întrerupt. Nu au fost debitați bani de pe cardul tău.",
+    "tryAgain": "Încearcă din nou",
+    "backToMain": "Spre principală",
+    "extensionCanceled": "Prelungirea automată va fi dezactivată. Accesul va fi păstrat până la sfârșitul perioadei achitate.",
+    "extensionCanceledCanBack": "Abonamentul tău nu se va mai prelungi. Te poți întoarce în orice moment!",
+    "confirmCancel": "Da, anulează",
+    "notConfirmCancel": "Nu anula",
+    "backToMainPage": "Înapoi la pagina principală"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "Se confirmă tranzacția..." ,
+    "sessionNotFound": "Sesiunea de plată nu a fost găsită",
+    "authPlease": "Te rugăm să te autentifici pentru a finaliza",
+    "isPremium": "Accesul Premium a fost activat",
+    "errorActivation": "Eroare de activare",
+    "errorServer": "Eroare de conexiune cu serverul",
+    "success": "Acum ai acces la toate funcțiile serviciului.",
+    "unsuccess": "A apărut o problemă tehnică în timpul procesării.",
+    "toMain": " Spre pagina principală",
+    "redirectSuccess": "Redirecționare în câteva secunde..."
+  },
+  "installApp": {
+    "stayInBrowser": "Continuă în browser",
+    "promoSubTitle": " Cu aplicația Skillupgerman, învățarea limbii germane este mult mai practică."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Parcurge dialogurile. Ascultă, alege opțiunile de răspuns și exersează pronunția",
+    "words": "Învață cuvintele și expresiile cheie pentru a înțelege cu ușurință fiecare replică din dialog"
+  },
+  "newsTitleBanner": {
+    "title": "Articole despre particularitățile limbii germane, analize de teme și cunoștințe utile pentru a-ți îmbunătăți nivelul.",
+    "badgeArticle": "În lumea Skillupgerman"
+  },
+  "newsArticleOne": {
+    "first": "Mănânci ciocolată când ești stresat sau trist? Îți prezint der Kummerspeck.",
+    "second": "Sunt exact acele kilograme în plus care apar cu încăpățânare din cauza grijilor. Literalmente - 'baconul suferinței'.",
+    "third": "Este compus din der Kummer (suferință) și der Speck (bacon). Așa cum era de așteptat, acest 'bacon' își ia genul de la articolul ultimului substantiv.",
+    "cta": "Recunoaște, ai avut vreodată Kummerspeck?"
+  },
+  "newsArticleTwo": {
+    "first": "Știi acea relaxare sacră când ziua de muncă s-a terminat în sfârșit? Aceasta este der Feierabend.",
+    "second": "Literalmente - 'seara de sărbătoare'. Un moment special de odihnă în care este interzis chiar și să te gândești la muncă.",
+    "third": "Este compus din die Feier (sărbătoare) și der Abend (seară). Genul acestui moment plăcut provine de la articolul ultimului substantiv — der Abend.",
+    "cta": "Aștepți mereu Feierabend când ești la muncă?"
+  },
+  "newsArticleThree": {
+    "first": "Limba germană este singura limbă majoră din lume în care absolut toate substantivele se scriu cu majusculă, indiferent de locul lor în propoziție.",
+    "second": "Nu contează dacă este vorba despre o persoană, un câine, un scaun obișnuit sau un gând abstract — prima literă va fi întotdeauna majusculă. Acest lucru îi induce adesea în eroare pe începători atunci când învață.",
+    "third": "Totuși, această regulă are un mare avantaj: citind un text în germană, poți identifica întotdeauna fără greșeală și de la prima vedere unde anume în propoziție s-a ascuns obiectul.",
+    "cta": "O regulă utilă?"
+  },
+  "newsArticleFour": {
+    "first": "Unul dintre cele mai uimitoare lucruri când înveți germana este numărătoarea. Germanii pronunță numerele din două cifre de la sfârșit.",
+    "second": "De exemplu, numărul douăzeci și unu îl spun ca 'unu și douăzeci'. Din această cauză, când asculți limba germană vorbită, trebuie să inversezi mental cifrele în minte.",
+    "third": "Acest truc lingvistic le dă adesea bătăi de cap începătorilor, mai ales atunci când trebuie să noteze rapid, după auz, numărul de telefon al cuiva sau un preț dintr-un magazin.",
+    "cta": "Te-ai obișnuit repede cu acest mod de numărare sau încă te mai încurci?"
+  },
+  "newsArticleFive": {
+    "first": "În limba germană există o regulă strictă privind ordinea cuvintelor, care te obligă să îți asculți interlocutorul până la ultimul cuvânt.",
+    "second": "În anumite tipuri de propoziții, cel mai important verb, cel care exprimă acțiunea, zboară la cel mai îndepărtat sfârșit.",
+    "third": "Poți construi o frază lungă, poți enumera o grămadă de detalii, dar cel yang te ascultă nu va afla dacă ai cumpărat lucrul, l-ai vândut, l-ai spart sau l-ai pierdut, până când nu vei pronunța cuvântul final.",
+    "cta": "Este greu să-ți reconfigurezi gândirea pentru o astfel de ordine a cuvintelor?"
+  },
+  "newsArticleSix": {
+    "first": "Când înveți germana, mai devreme sau mai târziu te va cuprinde cu siguranță panica din cauza lungimii unor cuvinte. Secretul este că în limba germană nu există oficial o limită pentru lungimea unui substantiv.",
+    "second": "Poți lipi cuvintele între ele la nesfârșit, creând locomotive uriașe de litere doar pentru a descrie un singur obiect.",
+    "third": "Însă aici funcționează o regulă salvatoare de bază: oricât de nebunească ar fi lungimea acestui monstru, genul final este preluat întotdeauna, fără excepție, de la articolul ultimului cuvânt.",
+    "cta": "Te sperie aceste cuvinte-tren atât de lungi?"
+  },
+  "newsArticleSeven": {
+    "first": "Se întâmplă uneori ca, înaintea unui eveniment important sau înainte de culcare, să începi să rulezi în minte scenarii fictive și filme întregi în toate detaliile? Nemții descriu această stare ca fiind propriul cinematograf din cap.",
+    "second": "Este momentul în care imaginația sau anxietatea ta se dezlănțuie atât de tare, încât devii literalmente captivat de regia și vizionarea propriilor gânduri.",
+    "third": "Cuvântul s-a format din der Kopf (cap) și das Kino (cinematograf). Acest cinematograf mental își ia cu supunere genul neutru final de la articolul ultimului substantiv.",
+    "cta": "Ți se aprinde des un astfel de Kopfkino înainte de culcare?"
+  },
+  "newsArticleEight": {
+    "first": "Limba germană este plină de autoironie când vine vorba despre siluetă. Dacă ai pus puțină greutate în plus pe lateral, nemții nu vor vorbi despre colăcei de grăsime, ci vor numi asta aur pe șolduri.",
+    "second": "Literalmente înseamnă 'aurul șoldurilor'. O descriere atât de delicată și prețioasă pentru aripioarele care s-au rotunjit după cârnați nemțești delicioși, chifle sau bere.",
+    "third": "Cuvântul este compus din die Hüfte (șold) și das Gold (aur). Așa cum era de așteptat, acest cuvânt amuzant își ia genul neutru strălucitor de la articolul ultimului substantiv.",
+    "cta": "Cum ți se pare această denumire atât de poetică?"
+  },
+  "newsArticleNine": {
+    "first": "Toată lumea știe ce este dorul de casă, dar germanii au un cuvânt unic pentru sentimentul opus. Acesta este dorul de țări îndepărtate și călătorii.",
+    "second": "Se traduce literal prin 'durerea depărtării'. Este acel sentiment profund de nostalgie când stai acasă și îți dorești cu ardoare să pleci undeva unde nu ai mai fost niciodată.",
+    "third": "Cuvântul este compus din die Ferne (depărtare) și das Weh (durere/suferință). Acest dor romantic își ia genul neutru final de la articolul ultimului cuvânt.",
+    "cta": "Ți se declanșează uneori un astfel de Fernweh?"
+  },
+  "newsArticleTen": {
+    "first": "Uită-te la un bec electric obișnuit. Cu ce formă seamănă? Germanii au văzut în el un fruct luminos.",
+    "second": "Traducerea literală a acestui cuvânt este 'pară luminoasă'. O descriere casnică foarte confortabilă, simplă și caldă pentru un obiect atât de familiar nouă.",
+    "third": "Acesta s-a format din verbul glühen (a lumina/a fi incandescent) și substantivul die Birne (pară). Becul nostru își ia genul feminin de la articolul ultimului cuvânt — die Birne.",
+    "cta": "Seamănă becul cu o pară?"
+  },
+  "newsArticleEleven": {
+    "first": "Cum să numeşti acea suferință sufletească grea, când iubirea ta s-a dovedit a fi neîmpărtășită? Germanii au unit aceste sentimente într-un singur concept cuprinzător.",
+    "second": "Se traduce literal prin 'chagrinul iubirii'. Este o descriere foarte exactă pentru acea nostalgie și tristețe care, la propriu, zdrobesc inima.",
+    "third": "Cuvântul s-a lipit din die Liebe (iubire) și der Kummer (chagrin/suferință). Această inimă frântă își ia cu supunere genul masculin de la articolul ultimului cuvânt — der Kummer.",
+    "cta": "Un sentiment cunoscut?"
+  },
+  "newsArticleTwelve": {
+    "first": "Te plimbi prin pădure după ploaie și vezi un melc gol-goluț, fără cochilie? Limba germană îl descrie în cel mai dezbrăcat mod posibil.",
+    "second": "Traducerea literală a acestui cuvânt amuzant este 'melc golaș'. Într-adevăr, de ce să mai inventezi o nouă denumire, dacă este doar un melc rămas fără căsuță.",
+    "third": "Este format din adjectivul nackt (golaș/dezbrăcat) și substantivul die Schnecke (melc). Acest locuitor al pădurii își ia genul de la articolul ultimului cuvânt.",
+    "cta": "Ți-a smuls un zâmbet această denumire?"
+  },
+  "newsArticleThirteen": {
+    "first": "Dacă ai învățat vreodată limba engleză, avem vești grozave pentru tine. Cunoști deja automat o parte din vocabularul german, chiar dacă nu l-ai studiat niciodată în mod special.",
+    "second": "Ideea este că engleza și germana sunt rude lingvistice apropiate din aceeași familie germanică. Cuvinte precum frate, soră, apă, verde sau măr se scriu și sună incredibil de asemănător.",
+    "third": "Tocmai de aceea, învățarea cuvintelor germane având o bază de engleză este mult mai rapidă — creierul tău recunoaște subconștient tipare familiare.",
+    "cta": "Ai observat asemănarea dintre engleză și germană?"
+  },
+  "newsArticleFourteen": {
+    "first": "Litera germană eszett, care se scrie ca o literă B majusculă, este o carte de vizită unică a alfabetului german. Însă, când înveți limba, puțini știu că nu este folosită chiar în toate regiunile vorbitoare de germană.",
+    "second": "În Elveția și Liechtenstein s-a renunțat oficial și complet la această literă încă din secolul trecut. În școlile, ziarele și documentele oficiale elvețiene se scrie peste tot dublul 'ss' obișnuit în locul ei.",
+    "third": "Acest lucru s-a întâmplat din cauza introducerii în masă a mașinilor de scris, unde elvețienii pur și simplu nu aveau destul spațiu pe tastatură pentru caracterele germane și franceze în același timp. Prin urmare, dacă vei citi texte elvețiene, nu vei găsi această literă acolo.",
+    "cta": "Știai despre secretul elvețian al alfabetului german?"
+  },
+  "newsArticleFifteen": {
+    "first": "În limba germană există verbe-cameleon uimitoare, care se scriu absolut identic, dar sensul lor se schimbă radical în funcție de accent. Acest fapt îi șochează adesea pe începători.",
+    "second": "Un exemplu clar este verbul umfahren. Dacă pui accentul pe prima parte a cuvântului, înseamnă a lovi, a călca sau a trece peste un obstacol cu mașina. Dar dacă muți accentul pe partea a doua, cuvântul își schimbă instantaneu sensul în opusul său — a ocoli un obstacol.",
+    "third": "Tocmai de aceea, când înveți astfel de verbe, este extrem de important să asculți unde cade accentul, altfel, la o lecție practică de conducere în Germania, îți poți speria accidental instructorul.",
+    "cta": "Știai despre aceste verbe viclene cu dublu sens?"
+  },
+  "newsArticleSixteen": {
+    "first": "Când străinii nu înțeleg despre ce este vorba, de obicei spun că pentru ei este 'găinărie' (sau 'păsărească'). La nemți însă, într-o astfel de situație se activează o logică pur feroviară.",
+    "second": "Dacă un german nu își înțelege absolut deloc interlocutorul sau nu vrea să îl asculte, va spune: 'Ich verstehe nur Bahnhof' (Înțeleg doar gara).",
+    "third": "Cu timpul, fraza s-a transformat într-o expresie idiomatică populară. Acum, dacă cineva îți explică drumul prea încâlcit sau te încarcă cu o temă complexă, poți folosi cu încredere această expresie.",
+    "cta": "Ai auzit deja această expresie amuzantă despre gară?"
+  },
+  "newsArticleSeventeen": {
+    "first": "Învățarea articolelor der, die, das este o veșnică durere de cap pentru toți cei care studiază germana. Dar nu-ți face griji, uneori nici chiar vorbitorii nativi nu sunt siguri de alegerea corectă a articolului.",
+    "second": "Un adevărat și nesfârșit război lingvistic se desfășoară în Germania în fiecare dimineață la micul dejun în jurul celebrei paste de ciocolată Nutella. Germanii se ceartă de decenii de ce gen este aceasta.",
+    "third": "Unii spun die, pentru că este o pastă (creme), alții consideră că das, deoarece este genul neutru pentru denumirile străine de produse. Disputa a ajuns în asemenea punct încât chiar și dicționarul oficial Duden a cedat și a recunoscut că Nutella nu are un articol fix și se poate folosi orice variantă.",
+    "cta": "Tu ce articol i-ai da Nutellei?"
+  },
+  "newsArticleEighteen": {
+    "first": "Dacă o persoană refuză cu încăpățânare să observe lucruri evidente care se petrec chiar sub nasul ei, nemții nu vor spune că este neatentă. Îi vor găsi legume pe față.",
+    "second": "Traducerea literală a acestei expresii culte este 'a avea roșii pe ochi'. Așa se spune despre un șofer care nu vede culoarea roșie a semaforului, sau despre un prieten care ignoră complet indiciile tale.",
+    "third": "Originile frazei trimit la vechile tribunale, unde cei vinovați erau obligați să poarte legături la ochi în semn de rușine, iar uneori le erau legate legume adevărate la ochi. Astăzi, este doar un mod amuzant de a-i spune interlocutorului că e timpul să deschidă ochii.",
+    "cta": "Ai auzit deja această expresie despre roșii?"
+  },
+  "newsArticleNineteen": {
+    "first": "În manualele de germană suntem învățați să salutăm în funcție de momentul zilei: bună dimineața, bună ziua sau bună seara. Însă în nordul Germaniei se râde pur și simplu de acest sistem.",
+    "second": "Acolo toată lumea folosește un singur cuvânt cult: Moin. Cel mai interesant este că îl poți spune absolut oricând: la opt dimineața șefului, la trei după-amiaza vânzătorului sau târziu în noapte prietenilor din bar. Înseamnă pur și simplu 'salut'.",
+    "third": "Dar fii atent: dacă decizi să accentuezi salutul și spui 'Moin Moin', localnicii te vor considera imediat o moară stricată (foarte guraliv). În nord se apreciază concizia, așa că un singur cuvânt este mai mult decât suficient.",
+    "cta": "Ai auzit deja acest salut de la locuitorii Germaniei?"
+  },
+  "newsTitle": {
+    "article_3": "Toate substantivele cu majusculă!",
+    "article_4": "Numerele inversate!",
+    "article_5": "Verbul la cel mai îndepărtat sfârșit al propoziției!",
+    "article_6": "Cuvinte nesfârșite!",
+    "article_13": "Cunoști deja multe cuvinte germane!",
+    "article_14": "Litera de care s-a lipsit o țară întreagă!",
+    "article_15": "Un singur verb - două sensuri opuse!",
+    "article_17": "Bătălia pentru articolul Nutellei!",
+    "article_19": "Moin este universal!"
+  },
+  "i18nDays": {
+    "days": "z",
+    "hours": "h",
+    "mins": "min"
+  },
+  "headUp": {
+    "audioTasks": "En az bir cevap seçeneği seçmelisiniz",
+    "speakTasks": "Se pot folosi doar opțiunile sugerate."
+  },
+  "helpCenter": {
+    "privacy": "Politica de confidențialitate",
+    "faq": "Întrebări frecvente (FAQ)",
+    "terms": "Termeni și condiții"
+  },
+  "rankAvatars": {
+    "locked_easy_1": "Acest avatar se oferă pentru locul 1 în Maratonul Articolelor (modul ușor).",
+    "locked_easy_2": "Acest avatar se oferă pentru locul 2 în Maratonul Articolelor (modul ușor).",
+    "locked_easy_3": "Acest avatar se oferă pentru locul 3 în Maratonul Articolelor (modul ușor).",
+    "locked_normal_1": "Acest avatar se oferă pentru locul 1 în Maratonul Articolelor (modul normal).",
+    "locked_normal_2": "Acest avatar se oferă pentru locul 2 în Maratonul Articolelor (modul normal).",
+    "locked_normal_3": "Acest avatar se oferă pentru locul 3 în Maratonul Articolelor (modul normal).",
+    "locked_hard_1": "Acest avatar se oferă pentru locul 1 în Maratonul Articolelor (modul dificil).",
+    "locked_hard_2": "Acest avatar se oferă pentru locul 2 în Maratonul Articolelor (modul dificil).",
+    "locked_hard_3": "Acest avatar se oferă pentru locul 3 în Maratonul Articolelor (modul dificil)."
+  },
+  "typeOfAvatars": {
+    "usual": "Obișnuite",
+    "ranked": "Premii"
+  },
+  "marathonEasy": {
+    "title": "Maratonul Articolelor Nivel Ușor",
+    "easyOneName": "Practicant Triumfător",
+    "easyOneDescription": "Ocupă primul loc în clasamentul maratonului de articole (Modul ușor)",
+    "easyTwoName": "Pretendent Demn",
+    "easyTwoDescription": "Ocupă locul doi în clasamentul maratonului de articole (Modul ușor)",
+    "easyThreeName": "Stagiar al Articolelor",
+    "easyThreeDescription": "Ocupă locul trei în clasamentul maratonului de articole (Modul ușor)"
+  },
+  "marathonNormal": {
+    "title": "Maratonul Articolelor Nivel Mediu",
+    "normalOneName": "Magistru al Articolelor",
+    "normalOneDescription": "Ocupă primul loc în clasamentul maratonului de articole (Modul mediu)",
+    "normalTwoName": "Cuceritorul Maratonului",
+    "normalTwoDescription": "Ocupă locul doi în clasamentul maratonului de articole (Modul mediu)",
+    "normalThreeName": "Cunoscător de Cuvinte",
+    "normalThreeDescription": "Ocupă locul trei în clasamentul maratonului de articole (Modul mediu)"
+  },
+  "marathonHard": {
+    "title": "Maratonul Articolelor Nivel Dificil",
+    "normalOneName": "Împărat al Articolelor",
+    "normalOneDescription": "Ocupă primul loc în clasamentul maratonului de articole (Modul dificil)",
+    "normalTwoName": "Legenda Maratonului",
+    "normalTwoDescription": "Ocupă locul doi în clasamentul maratonului de articole (Modul dificil)",
+    "normalThreeName": "Adept al Maratonului",
+    "normalThreeDescription": "Ocupă locul trei în clasamentul maratonului de articole (Modul dificil)"
   }
 }

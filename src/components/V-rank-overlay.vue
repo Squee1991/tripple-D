@@ -13,8 +13,8 @@
     </div>
     <transition name="bounce-center" appear>
       <div class="modal-content">
-        <h1 class="top-title">НОВЫЙ РАНГ!</h1>
-        <h2 class="sub-title">{{ store.currentReward.title }}</h2>
+        <h1 class="top-title">{{ t('rankModal.title')}}</h1>
+        <h2 class="sub-title">{{ t(store.currentReward.title) }}</h2>
         <div class="card-black">
           <div class="stars-epic">
             <span
@@ -26,9 +26,9 @@
             <span v-else class="star placeholder">★</span>
           </div>
           <img class="icon-big" :src="store.currentReward.icon" alt="">
-          <div class="rank-name">Ранг {{ store.currentReward.levelIndex + 1 }}</div>
+          <div class="rank-name">{{ t('rankModal.rankedLabel')}} {{ store.currentReward.levelIndex + 1 }}</div>
         </div>
-        <button @click="store.isOverlayVisible = false" class="btn-claim">ПРИНЯТЬ</button>
+        <button @click="store.isOverlayVisible = false" class="btn-claim">{{ t('rankModal.accept')}}</button>
       </div>
     </transition>
   </div>
@@ -36,7 +36,7 @@
 
 <script setup>
 import { useRankUserStore } from '../../store/rankStore.js'
-
+const { t } = useI18n()
 const store = useRankUserStore()
 const totalParticlesCount = 200
 const dotStyle = (particleIndex) => {
@@ -140,11 +140,11 @@ const dotStyle = (particleIndex) => {
 }
 
 .top-title {
-  font-size: 54px;
+  font-size: 40px;
+  margin-bottom: 25px;
   font-weight: 900;
   color: white;
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-  margin: 0;
   background: linear-gradient(#fff, #ffe066);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -155,7 +155,7 @@ const dotStyle = (particleIndex) => {
   color: #ffd700;
   font-size: 32px;
   font-weight: 800;
-  margin-bottom: 25px;
+  margin-bottom: 8px;
   text-transform: uppercase;
 }
 
@@ -225,9 +225,9 @@ const dotStyle = (particleIndex) => {
   border-radius: 50px;
   font-weight: 900;
   font-size: 24px;
-  color: #222;
+  color: white;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 10px 10px rgba(255, 215, 0, 0.4);
   transition: 0.2s;
   text-transform: uppercase;
 }

@@ -4,6 +4,13 @@
         :text="t('bannerTitles.settings')"
         :icon="SettingIcon"
     />
+    <div class="settings-section account-actions">
+      <div class="section-title"> {{ t('settingsGroup.account')}}</div>
+      <button @click="router.push('/profile')" class="account-buttons">
+        <a class="link-row">{{ t('cabinetToggle.profileData')}}</a>
+        <VArrowNav/>
+      </button>
+    </div>
     <div v-if="isThemeModalOpen" class="modal-overlay" @click.self="isThemeModalOpen = false">
       <div class="modal-card">
         <div class="theme-grid">
@@ -29,7 +36,6 @@
             </div>
           </label>
         </div>
-
         <div class="modal-actions">
           <button class="btn btn-game btn-success" @click="isThemeModalOpen = false">
             {{ t('themeModal.close') }}
@@ -85,21 +91,8 @@
             :to="item.path"
         >
           {{ item.label }}
-          <span class="link-arrow">
-            <img src="../../assets/images/next.svg" alt="">
-          </span>
+          <VArrowNav/>
         </NuxtLink>
-      </div>
-    </div>
-    <div class="settings-section account-actions">
-      <div class="section-title"> {{ t('settingsGroup.account')}}</div>
-      <div class="account-buttons">
-        <button class="btn btn-logout w-full btn-m" @click="authStore.logOut()">
-          {{ t('auth.logOut') }}
-        </button>
-        <button class="btn btn-danger w-full btn-m" @click.stop="openDeleteModal">
-          {{ t('cabinet.deleteAcc') }}
-        </button>
       </div>
     </div>
     <div v-if="isLockedModalOpen" class="modal-overlay locked-priority" @click.self="isLockedModalOpen = false">
@@ -128,6 +121,7 @@ import {userAuthStore} from "../../store/authStore.js";
 import LangSwitcher from "~/src/components/langSwitcher.vue";
 import VBanner from "~/src/components/V-banner.vue";
 import SettingIcon from "../../assets/images/settings.svg";
+import VArrowNav from "~/src/components/V-arrowNav.vue";
 const router = useRouter();
 const authStore = userAuthStore()
 const props = defineProps({
@@ -155,6 +149,13 @@ const lockedModalContent = ref({title: '', text: ''})
 const toggleForceUpdateKey = ref(0)
 const soundEnabled = ref(false)
 
+
+const servicePaths = computed(()=> [
+  {id: 'Privacy', label: t('helpCenter.privacy'), path: '/privacy'},
+  {id: 'FAQ', label: t('helpCenter.faq'), path: '/faq'},
+  {id: 'terms', label: t('helpCenter.terms'), path: '/terms'}
+])
+
 const THEMES = computed(() => {
   return {
     light: t('themeModal.light'),
@@ -167,10 +168,6 @@ const isValentineThemeUnlocked = computed(() => {
   const ach = achievementStore.findById('valentineTheme')
   return ach ? ach.currentProgress >= 1 : false
 })
-
-const  openDeleteModal = () => {
-  router.push('/delete')
-}
 
 const isSnowUnlocked = computed(() => {
   const ach = achievementStore.findById('snowFall')
@@ -228,12 +225,6 @@ const handleThemeSelection = (key) => {
   }
   colorMode.preference = key
 }
-
-const servicePaths = [
-  {id: 'Privacy', label: 'Privacy Policy', path: '/privacy'},
-  {id: 'FAQ', label: 'FAQ', path: '/faq'},
-  {id: 'terms', label: 'Terms of Service', path: '/terms'}
-]
 
 const getSettingValue = (key) => {
   if (key === 'sound') return soundEnabled.value
@@ -333,13 +324,6 @@ onMounted(async () => {
   font-size: 13px;
 }
 
-.link-arrow {
-  color: #64748b;
-  font-size: 20px;
-  font-weight: 400;
-  width: 12px;
-}
-
 .toggle__wrapper {
   font-weight: 900;
   font-size: 13px;
@@ -369,35 +353,18 @@ onMounted(async () => {
 
 .account-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: space-between;
   align-items: center;
   background: var(--settingsSectionBg);
   padding: 20px;
   border-radius: 16px;
+  border: none;
+  width: 100%;
 }
 
 .btn-m {
   width: 100%;
   max-width: 320px;
-}
-
-.btn-logout {
-  background: #f3f4f6;
-  color: #000;
-  border: 2px solid #000;
-  border-radius: 10px;
-  padding: 14px 24px;
-  font-weight: 800;
-}
-
-.btn-danger {
-  background: none;
-  color: var(--titleColor);
-  border: none;
-  border-radius: 10px;
-  padding: 14px 24px;
-  font-weight: 800;
 }
 
 .locked-setting {
@@ -554,8 +521,8 @@ onMounted(async () => {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 12px;
-  border-radius: 20px;
+  padding: 10px;
+  border-radius: 50px;
   cursor: pointer;
   transition: all 0.1s ease;
   color: #ffffff;
@@ -563,7 +530,7 @@ onMounted(async () => {
 
 .btn-success {
   background: #22c55e;
-  border: 3px solid #16a34a;
+  border: none;
   box-shadow: 0 6px 0 #15803d;
 }
 
@@ -574,7 +541,7 @@ onMounted(async () => {
 
 .btn-primary {
   background: #3b82f6;
-  border: 3px solid #2563eb;
+  border: none;
   box-shadow: 0 6px 0 #1d4ed8;
 }
 
