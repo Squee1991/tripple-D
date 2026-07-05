@@ -78,6 +78,7 @@ export const userAuthStore = defineStore('auth', () => {
     const shouldShowFeedbackSurvey = ref(false);
     let initPromise = null;
 
+
     const isGoogleUser = computed(() => providerId.value === 'google.com');
     const avatarUrl = computed(() => avatar.value ? `/images/avatars/${avatar.value}` : '');
     const isFreezeActive = computed(() => freezeEndsAt.value ? Date.now() < freezeEndsAt.value : false);
