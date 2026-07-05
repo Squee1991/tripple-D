@@ -563,7 +563,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 		const checkRankAndAward = async (seasonId) => {
 			if (!authStore.uid || !seasonId) return;
-
 			const levelData = [
 				{ levelId: 1, prefix: 'easy', achPrefix: 'leaderboardEasy' },
 				{ levelId: 2, prefix: 'normal', achPrefix: 'leaderboardNormal' },

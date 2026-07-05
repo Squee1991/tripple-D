@@ -153,6 +153,7 @@ export const userAuthStore = defineStore('auth', () => {
         }
     });
 
+    
     const setUserData = (data) => {
         uid.value = data.uid || null;
         name.value = data.name || null;
