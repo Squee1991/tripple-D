@@ -80,6 +80,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			}))
 		}))
 	)
+	let test = null
 	const lastUnlockedAward = ref(null)
 	const lastUnlockedAchievement = ref(null)
 	const popupQueue = ref([])
@@ -582,6 +583,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 		const startZeroCostMonitor = () => {
 			if (localMonitorInterval) clearInterval(localMonitorInterval);
+
 			const initialState = gameStore.getSeasonState();
 			wasOpen = initialState.isOpen;
 			localMonitorInterval = setInterval(() => {
