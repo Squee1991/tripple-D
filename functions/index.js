@@ -190,52 +190,96 @@ YOUR TASK: OUTPUT A RAW JSON OBJECT EXCLUSIVELY. Do NOT wrap in markdown.
 });
 
 
-exports.handleRevenueCatWebhook = onRequest(async (req, res) => {
+exports.handleRevenueCatWebhook = functions.https.onRequest(async (req, res) => {
+	const authHeader = req.headers.authorization;
+	const WEBHOOK_SECRET = "Bearer ТВОЙ_СЕКРЕТНЫЙ_ТОКЕН_ИЗ_REVENUECAT";
+
+	if (!authHeader || authHeader !== WEBHOOK_SECRET) {
+		console.warn("Попытка несанкционированного доступа к вебхуку!");
+		return res.status(401).send("Unauthorized");
+	}
 	const eventData = req.body.event;
 	if (!eventData || !eventData.app_user_id) {
 		return res.status(200).send("No data");
 	}
-
 	const userId = eventData.app_user_id;
 	const eventType = eventData.type;
 	const db = admin.firestore();
-
 	try {
 		switch (eventType) {
 			case "INITIAL_PURCHASE":
 			case "RENEWAL":
-				await db.collection("users").doc(userId).update({
-					isPremium: true,
-					subscriptionCancelled: false
-				});
+				if (!userId.startsWith("$RCAnonymousID")) {
+					await db.collection("users").doc(userId).update({
+						isPremium: true,
+						paymentSource: "apple", // или динамически на основе eventData.store
+						subscriptionCancelled: false
+					}).catch(e => console.log(`Документ пользователя ${userId} не найден в базе.`));
+				}
 				break;
+
 			case "EXPIRATION":
-				await db.collection("users").doc(userId).update({
-					isPremium: false,
-					subscriptionCancelled: true
-				});
+				if (!userId.startsWith("$RCAnonymousID")) {
+					await db.collection("users").doc(userId).update({
+						isPremium: false,
+						subscriptionCancelled: true
+					}).catch(e => console.log(`Документ пользователя ${userId} не найден в базе.`));
+				}
 				break;
 
 			case "CANCELLATION":
-				await db.collection("users").doc(userId).update({
-					subscriptionCancelled: true
-				});
+				if (!userId.startsWith("$RCAnonymousID")) {
+					await db.collection("users").doc(userId).update({
+						subscriptionCancelled: true
+					}).catch(e => console.log(`Документ пользователя ${userId} не найден в базе.`));
+				}
 				break;
+
 			case "TRANSFER":
 				if (eventData.transferred_from) {
 					for (const oldUid of eventData.transferred_from) {
-						await db.collection("users").doc(oldUid).update({ isPremium: false });
+						if (oldUid.startsWith("$RCAnonymousID")) continue;
+
+						try {
+							await db.collection("users").doc(oldUid).update({
+								isPremium: false,
+								debug_last_action: "TRANSFERRED_AWAY_" + Date.now()
+							});
+						} catch (err) {
+
+							console.warn(`Не удалось забрать премиум у ${oldUid} (возможно, удален):`, err.message);
+						}
 					}
 				}
+
 				if (eventData.transferred_to) {
 					for (const newUid of eventData.transferred_to) {
-						await db.collection("users").doc(newUid).update({ isPremium: true });
+						if (newUid.startsWith("$RCAnonymousID")) continue;
+
+						try {
+							await db.collection("users").doc(newUid).update({
+								isPremium: true,
+								paymentSource: "apple",
+								subscriptionCancelled: false,
+								debug_last_action: "TRANSFERRED_HERE_" + Date.now()
+							});
+						} catch (err) {
+							console.error(`Ошибка при выдаче премиума новому UID ${newUid}:`, err.message);
+						}
 					}
 				}
 				break;
+
+			default:
+				console.log(`Пропущено необрабатываемое событие: ${eventType}`);
+				break;
 		}
-		res.status(200).send("OK");
+
+		return res.status(200).send("OK");
+
 	} catch (error) {
-		res.status(500).send("Error");
+
+		console.error("Критическая ошибка вебхука RevenueCat:", error);
+		return res.status(500).send("Internal Server Error");
 	}
 });

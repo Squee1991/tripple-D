@@ -300,21 +300,22 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+
 .toast-notification {
   position: absolute;
-  width: 100%;
   top: calc(env(safe-area-inset-top));
   left: 0;
+  width: 100%;
   background: #10b981;
-  color: #fff;
-  padding: 18px 24px;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  color: #ffffff;
+  padding: 5px 10px 15px 10px;
   font-weight: 800;
   font-size: 16px;
-  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
   z-index: 1000;
   text-align: center;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
 }
 
 .toast-notification:before {
@@ -336,7 +337,7 @@ onUnmounted(() => {
 .toast-fade-enter-from,
 .toast-fade-leave-to {
   opacity: 0;
-  transform: translateY(-100%)
+  transform: translateY(-100%);
 }
 
 .btn-restore {
@@ -357,7 +358,7 @@ onUnmounted(() => {
 .flow__banner-pay {
   display: flex;
   align-items: center;
-  padding: 18px;
+  padding: 16px 16px 14px 16px;
   border-radius: 24px;
   background: linear-gradient(145deg, rgb(0, 194, 255), rgb(0, 168, 219)) rgb(0, 194, 255);
   box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3), inset 0 -2px 4px rgba(0, 0, 0, 0.1), 0 6px 0 rgb(0, 160, 220);
@@ -384,7 +385,7 @@ onUnmounted(() => {
 
 
 .pro-vault {
-  height: 100vh;
+  height: 100%;
   max-width: 1024px;
   margin: 0 auto;
   background: var(--bg);
@@ -450,7 +451,7 @@ onUnmounted(() => {
 .perks-grid {
   display: grid;
   gap: 12px;
-  margin-top: 30px;
+  margin-top: 16px;
 }
 
 .perk-card {
@@ -554,7 +555,7 @@ onUnmounted(() => {
 }
 
 .billing-summary {
-  margin-top: 15px;
+  margin-top: 12px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 24px;
@@ -576,8 +577,8 @@ onUnmounted(() => {
 .bill-total {
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
-  padding-top: 15px;
+  margin-top: 10px;
+  padding-top: 10px;
   border-top: 1px dashed rgba(255, 255, 255, 0.1);
 }
 
@@ -593,8 +594,8 @@ onUnmounted(() => {
 }
 
 .footer-action {
-  margin-top: 20px;
-  padding: 20px 0;
+  margin-top: 18px;
+  padding: 18px 0;
   position: relative;
 }
 
@@ -619,7 +620,7 @@ onUnmounted(() => {
 
 .btn-buy-neon {
   width: 100%;
-  padding: 16px 20px;
+  padding: 14px 20px;
   border-radius: 22px;
   border: none;
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
