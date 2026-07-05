@@ -168,6 +168,16 @@ export default defineNuxtConfig({
 	},
 
 	vite: {
+		server: {
+			watch: {
+				ignored: [
+					'**/ios/**',
+					'**/android/**',
+					'**/node_modules/**',
+					'**/.git/**'
+				]
+			}
+		},
 		build: {
 			minify: 'esbuild',
 		},
