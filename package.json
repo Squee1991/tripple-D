@@ -38,7 +38,6 @@
     "@pinia/nuxt": "0.10.1",
     "@revenuecat/purchases-capacitor": "13.1.0",
     "@revenuecat/purchases-capacitor-ui": "13.1.0",
-    "@sentry/nuxt": "10.53.1",
     "@stripe/stripe-js": "7.7.0",
     "@vueuse/firebase": "13.1.0",
     "capacitor-voice-recorder": "7.0.6",
