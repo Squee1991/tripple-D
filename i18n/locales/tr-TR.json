@@ -5189,6 +5189,8 @@
   },
   "awards": {
     "title": "Ödül Listesi",
+    "wasPlusUser": "Articlus Kesesi",
+    "wasPlusUserDescription": "Genel kategorisindeki 'PLUS Sahibi' başarımı tamamlandığında verilen ödül",
     "articlus": "Kanatlı Para Birimi",
     "articlusDescription": "Genel kategorisindeki 'Kaynakları Tüket' başarımı için verilir",
     "registerAchievement": "Katılımcı Rozeti",
@@ -9805,6 +9807,7 @@
   "descriptionThemes": {
     "winter": "Kış ve Aktiviteler",
     "transport": "Toplu Taşıma",
+    "work": "İş",
     "cafe": "Kafeterya",
     "supermarket": "Süpermarket",
     "home": "Ev ve Günlük Yaşam",
@@ -10323,6 +10326,8 @@
     "say": "Söyleyin:"
   },
   "speakSession": {
+    "wordList": "Diyalog kelimeleri",
+    "practiceWords": "Kelimeleri çalış",
     "title": "Konuşma pratiği",
     "words": "Kelimeler",
     "wordsText": "Konuşmaya başlamadan önce kelimeleri öğrenin veya tekrarlayın. Bu, kendinizi daha güvende hissetmenize yardımcı olur!",
@@ -10542,7 +10547,8 @@
   "helpCenter": {
     "privacy": "Gizlilik politikası",
     "faq": "Sıkça sorulan sorular",
-    "terms": "Kullanım şartları"
+    "terms": "Kullanım şartları",
+    "attributions": "Atıflar"
   },
   "rankAvatars": {
     "locked_easy_1": "Bu profil resmi, Artikel Maratonu'nda (Kolay mod) 1.lik ödülüdür.",
@@ -10585,5 +10591,23 @@
     "normalTwoDescription": "Artikel maratonu sıralamasında ikinci olun (Zor mod)",
     "normalThreeName": "Maraton Müptelası",
     "normalThreeDescription": "Artikel maratonu sıralamasında üçüncü olun (Zor mod)"
+  },
+  "activePlus": {
+    "title": "Plus Aktif!",
+    "description": "Tüm özelliklerin kilidi zaten açıldı"
+  },
+  "newsBannerText": {
+    "text": "Merhaba! Skillupgerman her gün burada Almanca hakkında ilginç haberler yayınlıyor. Keyifle öğrenin!"
+  },
+  "marathonLeaderBoard": {
+    "stateHint": "Yarış yakında başlayacak! Yeni sezona hazır olun.",
+    "seasonEndsIn": "Maratonun bitmesine:",
+    "seasonStartsIn": "Maratonun başlamasına:"
+  },
+  "errorPage": {
+    "game-title": "Ups, bir şeyler ters gitti...",
+    "game-desc": "Madem buradayız, biraz ısınma hareketi yapalım. Doğru artikeli seçin:",
+    "win-screen": "Harika iş çıkardın!",
+    "win-desc": "Artık derslerine geri dönebilirsin."
   }
 }

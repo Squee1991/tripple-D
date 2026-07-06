@@ -15,7 +15,7 @@ const router = useRouter()
 const store = useAudioTaskStore()
 const authStore = userAuthStore()
 const {allTasks, currentLevel, userProgress} = storeToRefs(store)
-const {t } = useI18n()
+const {t} = useI18n()
 const screen = ref('levels')
 const showDevModal = ref(false)
 const isMounted = ref(false)
@@ -59,23 +59,36 @@ const getTopicProgressPercent = (topic) => {
   return total === 0 ? 0 : (getTopicCompleted(topic) / total) * 100
 }
 
+const isTopicUnlocked = (index) => {
+  if (authStore.isPremium) return true;
+  if (index === 0 || index === 1) return true;
+  const prevTopic = availableTopics.value[index - 1];
+  if (prevTopic) {
+    const totalTasks = prevTopic.tasks?.length || 0;
+    const completedTasks = getTopicCompleted(prevTopic);
+    return totalTasks > 0 && completedTasks >= totalTasks;
+  }
+
+  return false;
+};
+
 const selectLevel = (level) => {
-  window.history.pushState({ isAudioTopics: true }, '')
+  window.history.pushState({isAudioTopics: true}, '')
   store.setLevel(level)
   screen.value = 'topics'
 }
 
 const selectTopic = (topic, index) => {
-  if (index === 0 || authStore.isPremium) {
-      store.setCurrentTopicId(topic.id)
-      router.push('/audio-tasks/session')
+  if (isTopicUnlocked(index)) {
+    store.setCurrentTopicId(topic.id)
+    router.push('/audio-tasks/session')
   } else {
     showPremiumModal.value = true
   }
 }
 
 onMounted(async () => {
-  setTimeout(()=> {
+  setTimeout(() => {
     isMounted.value = true
   }, 100)
   await store.fetchTasks()
@@ -166,9 +179,11 @@ onUnmounted(() => {
                       <div class="topic-icon-box">{{ topic.icon }}</div>
                       <span class="topic-label">{{ t(topic.title) }}</span>
                     </div>
-                    <div class="topic-arrow" :class="{ 'topic-arrow--locked': index !== 0 && !authStore.isPremium }">
-                      <VArrowNav v-if="index === 0 || authStore.isPremium"/>
-                      <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <div class="topic-arrow" :class="{ 'topic-arrow--locked': !isTopicUnlocked(index) }">
+                      <VArrowNav v-if="isTopicUnlocked(index)"/>
+                      <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                           fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                           stroke-linejoin="round">
                         <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                         <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                       </svg>
@@ -194,12 +209,13 @@ onUnmounted(() => {
           </div>
         </VTransition>
       </div>
-      <VPremiumModal v-model:show="showPremiumModal" />
+      <VPremiumModal v-model:show="showPremiumModal"/>
     </div>
   </div>
 </template>
 
 <style scoped>
+/* СТИЛИ ОСТАЮТСЯ БЕЗ ИЗМЕНЕНИЙ, ТЫ МОЖЕШЬ ПРОСТО ОСТАВИТЬ СВОИ */
 .quiz {
   height: 100%;
   display: flex;
@@ -374,7 +390,7 @@ onUnmounted(() => {
   background-color: #1e272e;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .progress-bar-fill {
@@ -395,13 +411,16 @@ onUnmounted(() => {
 .quiz-pop-enter-active {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 .quiz-pop-leave-active {
   transition: all 0.2s ease-in;
 }
+
 .quiz-pop-enter-from {
   opacity: 0;
   transform: scale(0.95);
 }
+
 .quiz-pop-leave-to {
   opacity: 0;
   transform: scale(1.02);

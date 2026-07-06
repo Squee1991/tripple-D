@@ -2,22 +2,30 @@
   <div class="privacy_wrapper">
     <div class="privacy">
       <div class="privacy_header">
-        <button @click="router.back()" class="btn-icon-back">
+        <button @click="router.back()" class="btn-icon-back" aria-label="Go back">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"></line>
             <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
         </button>
-        <div class="privacy__title"> {{ t('helpCenter.privacy')}}</div>
+        <div class="privacy__title">{{ t('helpCenter.privacy') }}</div>
       </div>
       <div class="privacy_section-inner">
         <section v-for="(section, index) in sections" :key="index" class="section">
           <h2>{{ section.heading }}</h2>
-          <p v-for="(paragraph, j) in section.paragraphs" :key="j">{{ paragraph }}</p>
+          <p v-for="(paragraph, j) in section.paragraphs" :key="'p-' + j">
+            {{ paragraph }}
+          </p>
+          <ul v-if="section.listItems && section.listItems.length" class="privacy-list">
+            <li v-for="(item, k) in section.listItems" :key="'li-' + k">
+              {{ item }}
+            </li>
+          </ul>
         </section>
         <p class="last-updated">
-          Last updated: {{ lastUpdated }}</p>
+          Last updated: {{ lastUpdated }}
+        </p>
       </div>
     </div>
   </div>
@@ -26,52 +34,55 @@
 <script setup>
 import { ref } from "vue"
 import { useRouter } from "vue-router"
-import VBanner from "~/src/components/V-banner.vue";
-import Privacy from "~/pages/privacy.vue";
+
 const router = useRouter()
-const PROJECT = "Skillupgerman"
+const { t } = useI18n()
+
+const PROJECT = "SkillUpGerman"
 const EMAIL = "skillupgerman@gmail.com"
 const COUNTRY = "Poland"
-const { t } = useI18n();
-const lastUpdated = ref("Juny 29, 2026")
+const lastUpdated = ref("June 29, 2026")
+
 const sections = ref([
   {
     heading: "1. Introduction",
     paragraphs: [
-      `This Privacy Policy describes how skillupgerman ("we", "Service") collects, uses, and protects users' personal data. The data controller is the administrator of skillupgerman, located in ${COUNTRY}.`,
-      `By using the Service, you agree to the terms of this Policy.`
+      `This Privacy Policy describes how ${PROJECT} ("we", "Service") collects, uses, and protects users' personal data. The data controller is the administrator of ${PROJECT}, located in ${COUNTRY}.`,
+      "By using the Service, you agree to the terms of this Policy."
     ]
   },
   {
     heading: "2. What data we collect",
-    paragraphs: [
-      "— Account data: name (nickname), email address, encrypted password (stored in Firebase). The name may be a pseudonym.",
-      "— Usage data: learning progress (learned words, completed tasks), test results, in-game activity.",
-      "— Technical data: certain information (e.g., IP address or device identifiers) is automatically processed by our providers (Firebase) for security and service operation. We do not use this information to identify you personally.",
-      "— Payment data: transaction information when subscribing (processed by payment systems such as Stripe; we do not store credit card details)."
+    listItems: [
+      "Account data: name (nickname), email address, encrypted password (stored in Firebase). The name may be a pseudonym.",
+      "Usage data: learning progress (learned words, completed tasks), test results, in-game activity.",
+      "Technical data: certain information (e.g., IP address or device identifiers) is automatically processed by our providers (Firebase) for security and service operation. We do not use this information to identify you personally.",
+      "Payment data: transaction information when subscribing (processed by payment systems such as Stripe; we do not store credit card details)."
     ]
   },
   {
     heading: "3. How we use the data",
-    paragraphs: [
-      "— To provide access to the Service and its features.",
-      "— To save and display your learning progress.",
-      "— To process subscriptions and payments.",
-      "— To improve the quality and personalization of the Service.",
-      "— To send notifications and messages about important updates."
+    listItems: [
+      "To provide access to the Service and its features.",
+      "To save and display your learning progress.",
+      "To process subscriptions and payments.",
+      "To improve the quality and personalization of the Service.",
+      "To send notifications and messages about important updates."
     ]
   },
   {
     heading: "4. Data sharing with third parties",
     paragraphs: [
-      "We do not sell your personal data. Data sharing is only possible in the following cases:",
-      "— When necessary for the operation of the Service (e.g., to data processing providers such as Firebase/Google).",
-      "— When required by law (e.g., by court order or governmental request)."
+      "We do not sell your personal data. Data sharing is only possible in the following cases:"
+    ],
+    listItems: [
+      "When necessary for the operation of the Service (e.g., to data processing providers such as Firebase/Google).",
+      "When required by law (e.g., by court order or governmental request)."
     ]
   },
   {
     heading: "5. Data storage and protection",
-    paragraphs: [
+    listItems: [
       "We take reasonable technical and organizational measures to protect data from unauthorized access, alteration, or destruction.",
       "Data transmission is performed over HTTPS; database access is restricted by security rules (e.g., Firestore Security Rules).",
       "Data is stored on secure servers of our providers (e.g., Google Firebase).",
@@ -89,13 +100,17 @@ const sections = ref([
   {
     heading: "7. User rights",
     paragraphs: [
-      "You have the right to:",
-      "— Request a copy of your personal data.",
-      "— Correct inaccurate or outdated data.",
-      "— Delete your account and associated data.",
-      "— Restrict or object to data processing.",
-      `To exercise your rights, please contact us at: ${EMAIL}.`
-    ]
+      "You have the right to:"
+    ],
+    listItems: [
+      "Request a copy of your personal data.",
+      "Correct inaccurate or outdated data.",
+      "Delete your account and associated data.",
+      "Restrict or object to data processing."
+    ],
+    get paragraphsAfter() {
+      return [`To exercise your rights, please contact us at: ${EMAIL}.`]
+    }
   },
   {
     heading: "8. International data transfer",
@@ -127,11 +142,11 @@ const sections = ref([
   }
 ])
 
+sections.value[6].paragraphs.push(`To exercise your rights, please contact us at: ${EMAIL}.`);
 </script>
 
 <style scoped>
-
-.privacy__title{
+.privacy__title {
   font-size: 23px;
   font-weight: 600;
   font-family: Nunito, sans-serif;
@@ -159,14 +174,9 @@ const sections = ref([
   box-shadow: 0px 0px 0px #2b2b2b;
 }
 
-.privacy_wrapper{
+.privacy_wrapper {
   height: 100vh;
   overflow: hidden;
-}
-
-.privacy__banner {
-  padding: 15px;
-  margin-bottom: 10px;
 }
 
 .privacy_header {
@@ -184,39 +194,43 @@ const sections = ref([
   color: var(--titleColor);
 }
 
-h1 {
-  font-size: 32px;
-  font-weight: 800;
-  margin: 0 0 12px;
-  text-align: center;
-}
-
 .last-updated {
-  margin: 0 0 22px;
+  margin: 20px 0 22px;
   font-size: 13px;
-  opacity: 0.9;
+  opacity: 0.7;
   text-align: center;
 }
 
 .section {
   padding: 0 15px;
+  margin-bottom: 25px;
 }
 
-.privacy_section-inner{
+.privacy_section-inner {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  padding-bottom: 80px;
-  overflow-y: auto ;
+  height: calc(100% - 70px);
+  padding-bottom: 40px;
+  overflow-y: auto;
 }
 
 .section h2 {
   font-size: 20px;
   font-weight: 800;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 }
 
 .section p {
   margin: 8px 0;
+}
+
+.privacy-list {
+  margin: 8px 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.privacy-list li {
+  margin-bottom: 6px;
 }
 </style>

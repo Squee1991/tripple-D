@@ -108,14 +108,6 @@ export const cpecialGroupAchievment = [
 				currentProgress: 0,
 				targetProgress: 4,
 			},
-			// {
-			// 	id: "training_daily_streak_150",
-			// 	name: "Мастер обучения",
-			// 	description: "Удерживайте стрик 150 дней, выполняя все 3 обучающих задания ежедневно.",
-			// 	icon: "🎯",
-			// 	currentProgress: 0,
-			// 	targetProgress: 150
-			// },
 			{
 				id: "totalArticles1000",
 				name: "specialCategory.generalFirstLabel",
@@ -131,7 +123,7 @@ export const cpecialGroupAchievment = [
 				description: "specialCategory.specialCollectionLabel",
 				icon: "🧰",
 				currentProgress: 0,
-				targetProgress: 24
+				targetProgress: 25
 			},
 			{
 				id: 'Hunderd',

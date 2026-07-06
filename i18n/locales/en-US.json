@@ -5203,6 +5203,8 @@
   },
   "awards": {
     "title": "Award List",
+    "wasPlusUser": "Articlus Sack",
+    "wasPlusUserDescription": "Awarded for completing the 'PLUS Owner' achievement in the General category",
     "articlus": "Winged Currency",
     "articlusDescription": "Awarded for completing the achievement in the General category: 'Drain the Reserves'",
     "registerAchievement": "Participant Badge",
@@ -9819,6 +9821,7 @@
   "descriptionThemes": {
     "winter": "Winter and Activities",
     "transport": "Public Transport",
+    "work": "Work",
     "cafe": "Cafeteria",
     "supermarket": "Supermarket",
     "home": "Home and Daily Life",
@@ -10338,6 +10341,8 @@
     "say": "Say:"
   },
   "speakSession": {
+    "wordList": "Words for the dialogue",
+    "practiceWords": "Practice words",
     "title": "Speaking practice",
     "words": "Words",
     "wordsText": "Learn or review the words before you start talking. This will help you feel more confident!",
@@ -10556,7 +10561,8 @@
   "helpCenter": {
     "privacy": "Privacy Policy",
     "faq": "FAQ",
-    "terms": "Terms of service"
+    "terms": "Terms of service",
+    "attributions": "Атрибуции"
   },
   "rankAvatars": {
     "locked_easy_1": "This avatar is awarded for 1st place in the Article Marathon (Easy mode).",
@@ -10599,5 +10605,23 @@
     "normalTwoDescription": "Take 2nd place in the Article Marathon leaderboard (Hard mode)",
     "normalThreeName": "Marathon Adept",
     "normalThreeDescription": "Take 3rd place in the Article Marathon leaderboard (Hard mode)"
+  },
+  "activePlus": {
+    "title": "Plus Активен!",
+    "description": "Все функции уже разблокированы"
+  },
+  "newsBannerText": {
+    "text": "Hello! Every day, Skillupgerman publishes interesting news about the German language here. Enjoy learning!"
+  },
+  "marathonLeaderBoard": {
+    "stateHint": "The race will start soon! Get ready for the new season.",
+    "seasonEndsIn": "Marathon ends in:",
+    "seasonStartsIn": "Marathon starts in:"
+  },
+  "errorPage": {
+    "game-title": "Oops, something went wrong...",
+    "game-desc": "While we're here, let's warm up. Choose the correct article:",
+    "win-screen": "Great job!",
+    "win-desc": "Now you can get back to your lessons."
   }
 }

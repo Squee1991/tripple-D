@@ -5196,6 +5196,8 @@
   },
   "awards": {
     "title": "Lista nagród",
+    "wasPlusUser": "Articlus Sack",
+    "wasPlusUserDescription": "Awarded for completing the 'PLUS Owner' achievement in the General category",
     "articlus": "Skrzydlata waluta",
     "articlusDescription": "Nagroda za osiągnięcie w kategorii Ogólne: „Wyczerpać zapasy”",
     "registerAchievement": "Odznaka uczestnika",
@@ -9812,6 +9814,7 @@
   "descriptionThemes": {
     "winter": "Zima i aktywności",
     "transport": "Transport publiczny",
+    "work": "Praca",
     "cafe": "Kawiarnia",
     "supermarket": "Supermarket",
     "home": "Dom i życie codzienne",
@@ -10330,6 +10333,8 @@
     "say": "Powiedz:"
   },
   "speakSession": {
+    "wordList": "Słowa do dialogu",
+    "practiceWords": "Ćwicz słowa",
     "title": "Praktyka rozmawiania",
     "words": "Słowa",
     "wordsText": "Naucz się lub powtórz słówka przed rozpoczęciem rozmowy. To pomoże Ci poczuć się pewniej!",
@@ -10548,7 +10553,8 @@
   "helpCenter": {
     "privacy": "Polityka prywatności",
     "faq": "Najczęściej zadawane pytania",
-    "terms": "Regulamin świadczenia usług"
+    "terms": "Regulamin świadczenia usług",
+    "attributions": "Atrybucje"
   },
   "rankAvatars": {
     "locked_easy_1": "Ten awatar jest przyznawany za 1. miejsce w Maratonie Rodzajników (tryb łatwy).",
@@ -10591,5 +10597,23 @@
     "normalTwoDescription": "Zajmij 2. miejsce w rankingu maratonu rodzajników (Tryb trudny)",
     "normalThreeName": "Adept Maratonu",
     "normalThreeDescription": "Zajmij 3. miejsce w rankingu maratonu rodzajników (Tryb trudny)"
+  },
+  "activePlus": {
+    "title": "Plus jest aktywny!",
+    "description": "Wszystkie funkcje zostały już odblokowane"
+  },
+  "newsBannerText": {
+    "text": "Cześć! Każdego dnia Skillupgerman publikuje tutaj ciekawe wiadomości o języku niemieckim. Ucz się z przyjemnością!"
+  },
+  "marathonLeaderBoard": {
+    "stateHint": "Wyścig wkrótce się rozpocznie! Przygotuj się na nowy sezon.",
+    "seasonEndsIn": "Do końca maratonu:",
+    "seasonStartsIn": "Do rozpoczęcia maratonu:"
+  },
+  "errorPage": {
+    "game-title": "Ups, coś poszło nie tak...",
+    "game-desc": "Skoro już tu jesteśmy, rozgrzejmy się. Wybierz poprawny rodzajnik:",
+    "win-screen": "Świetna robota!",
+    "win-desc": "Teraz możesz wrócić do lekcji."
   }
 }

@@ -5180,6 +5180,8 @@
   },
   "awards": {
     "title": "Lista premiilor",
+    "wasPlusUser": "Săculeț de Articlus",
+    "wasPlusUserDescription": "Recompensă primită pentru îndeplinirea realizării „Posesor PLUS” din categoria General",
     "articlus": "Valută înaripată",
     "articlusDescription": "Premiu obținut pentru realizarea din categoria Generale: „Epuizarea rezervelor”",
     "registerAchievement": "Insigna de participant",
@@ -9796,6 +9798,7 @@
   "descriptionThemes": {
     "winter": "Iarna și activități",
     "transport": "Transport public",
+    "work": "Muncă",
     "cafe": "Cafenea",
     "supermarket": "Supermarket",
     "home": "Casă și viața de zi cu zi",
@@ -10314,6 +10317,8 @@
     "say": "Spune:"
   },
   "speakSession": {
+    "wordList": "Cuvinte pentru dialog",
+    "practiceWords": "Exersează cuvintele",
     "title": "Practică de vorbire",
     "words": "Cuvinte",
     "wordsText": "Învață sau repetă cuvintele înainte de a începe conversația. Acest lucru te va ajuta să ai mai multă încredere!",
@@ -10532,7 +10537,8 @@
   "helpCenter": {
     "privacy": "Politica de confidențialitate",
     "faq": "Întrebări frecvente (FAQ)",
-    "terms": "Termeni și condiții"
+    "terms": "Termeni și condiții",
+    "attributions": "Atribuiri"
   },
   "rankAvatars": {
     "locked_easy_1": "Acest avatar se oferă pentru locul 1 în Maratonul Articolelor (modul ușor).",
@@ -10575,5 +10581,23 @@
     "normalTwoDescription": "Ocupă locul doi în clasamentul maratonului de articole (Modul dificil)",
     "normalThreeName": "Adept al Maratonului",
     "normalThreeDescription": "Ocupă locul trei în clasamentul maratonului de articole (Modul dificil)"
+  },
+  "activePlus": {
+    "title": "Plus este activ!",
+    "description": "Toate funcțiile sunt deja deblocate"
+  },
+  "newsBannerText": {
+    "text": "Bună! În fiecare zi, Skillupgerman publică aici știri interesante despre limba germană. Învață cu plăcere!"
+  },
+  "marathonLeaderBoard": {
+    "stateHint": "Cursa va începe în curând! Pregătește-te pentru noul sezon.",
+    "seasonEndsIn": "Până la finalul maratonului:",
+    "seasonStartsIn": "Până la începutul maratonului:"
+  },
+  "errorPage": {
+    "game-title": "Ups, ceva nu a mers bine...",
+    "game-desc": "Dacă tot suntem aici, hai să facem puțină încălzire. Alege articolul corect:",
+    "win-screen": "Treabă excelentă!",
+    "win-desc": "Acum te poți întoarce la lecții."
   }
 }

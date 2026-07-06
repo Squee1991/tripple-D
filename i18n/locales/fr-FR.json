@@ -5176,6 +5176,8 @@
   },
   "awards": {
     "title": "Liste des récompenses",
+    "wasPlusUser": "Sac d'Articlus",
+    "wasPlusUserDescription": "Récompense obtenue en validant le succès 'Possesseur PLUS' dans la catégorie Général",
     "articlus": "Monnaie ailée",
     "articlusDescription": "Récompense pour le succès dans la catégorie Général : « Épuiser les réserves »",
     "registerAchievement": "Badge de participant",
@@ -9792,6 +9794,7 @@
   "descriptionThemes": {
     "winter": "Hiver et activités",
     "transport": "Transports en commun",
+    "work": "Travail",
     "cafe": "Cafétéria",
     "supermarket": "Supermarché",
     "home": "Maison et vie quotidienne",
@@ -10310,6 +10313,8 @@
     "say": "Dites :"
   },
   "speakSession": {
+    "wordList": "Mots pour le dialogue",
+    "practiceWords": "Pratiquer les mots",
     "title": "Pratique de la conversation",
     "words": "Mots",
     "wordsText": "Apprenez ou révisez les mots avant de commencer à parler. Cela vous aidera à vous sentir plus confiant !",
@@ -10528,7 +10533,8 @@
   "helpCenter": {
     "privacy": "Politique de confidentialité",
     "faq": "Foire aux questions",
-    "terms": "Conditions d'utilisation"
+    "terms": "Conditions d'utilisation",
+    "attributions": "Attributions"
   },
   "rankAvatars": {
     "locked_easy_1": "Cet avatar est attribué pour la 1re place au Marathon des Articles (mode facile).",
@@ -10571,5 +10577,23 @@
     "normalTwoDescription": "Prenez la deuxième place du classement du marathon des articles (Mode difficile)",
     "normalThreeName": "Adepte du Marathon",
     "normalThreeDescription": "Prenez la troisième place du classement du marathon des articles (Mode difficile)"
+  },
+  "activePlus": {
+    "title": "Plus est actif !",
+    "description": "Toutes les fonctionnalités sont déjà débloquées"
+  },
+  "newsBannerText": {
+    "text": "Salut ! Chaque jour, Skillupgerman publie ici des nouvelles intéressantes sur la langue allemande. Apprenez avec plaisir !"
+  },
+  "marathonLeaderBoard": {
+    "stateHint": "La course va bientôt commencer ! Préparez-vous pour la nouvelle saison.",
+    "seasonEndsIn": "Fin du marathon dans :",
+    "seasonStartsIn": "Début du marathon dans :"
+  },
+  "errorPage": {
+    "game-title": "Oups, quelque chose a mal tourné...",
+    "game-desc": "Puisque nous sommes là, échauffons-nous. Choisissez l'article correct :",
+    "win-screen": "Excellent travail !",
+    "win-desc": "Vous pouvez maintenant retourner à vos leçons."
   }
 }

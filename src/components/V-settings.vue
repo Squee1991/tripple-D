@@ -151,8 +151,9 @@ const soundEnabled = ref(false)
 
 
 const servicePaths = computed(()=> [
-  {id: 'Privacy', label: t('helpCenter.privacy'), path: '/privacy'},
+  {id: 'attributions', label: t('helpCenter.attributions'), path: '/attributions'},
   {id: 'FAQ', label: t('helpCenter.faq'), path: '/faq'},
+  {id: 'Privacy', label: t('helpCenter.privacy'), path: '/privacy'},
   {id: 'terms', label: t('helpCenter.terms'), path: '/terms'}
 ])
 
