@@ -5180,6 +5180,8 @@
   },
   "awards": {
     "title": "Lista de premios",
+    "wasPlusUser": "Saco de Artíclus",
+    "wasPlusUserDescription": "Recompensa otorgada por completar el logro 'Propietario PLUS' en la categoría General",
     "articlus": "Moneda alada",
     "articlusDescription": "Premio por completar el logro en la categoría General: «Agotar las reservas»",
     "registerAchievement": "Insignia de participante",
@@ -9796,6 +9798,7 @@
   "descriptionThemes": {
     "winter": "Invierno y actividades",
     "transport": "Transporte público",
+    "work": "Trabajo",
     "cafe": "Cafetería",
     "supermarket": "Supermercado",
     "home": "Hogar y vida cotidiana",
@@ -10314,6 +10317,8 @@
     "say": "Di:"
   },
   "speakSession": {
+    "wordList": "Palabras para el diálogo",
+    "practiceWords": "Practicar palabras",
     "title": "Práctica de conversación",
     "words": "Palabras",
     "wordsText": "Aprende o repasa las palabras antes de empezar a hablar. ¡Esto te ayudará a tener más confianza!",
@@ -10532,7 +10537,8 @@
   "helpCenter": {
     "privacy": "Política de privacidad",
     "faq": "Preguntas frecuentes",
-    "terms": "Condiciones del servicio"
+    "terms": "Condiciones del servicio",
+    "attributions": "Atribuciones"
   },
   "rankAvatars": {
     "locked_easy_1": "Este avatar se otorga por el 1.er puesto en el Maratón de Artículos (modo fácil).",
@@ -10575,5 +10581,23 @@
     "normalTwoDescription": "Consigue el segundo puesto en el ranking del maratón de artículos (Modo difícil)",
     "normalThreeName": "Adepto del Maratón",
     "normalThreeDescription": "Consigue el tercer puesto en el ranking del maratón de artículos (Modo difícil)"
+  },
+  "activePlus": {
+    "title": "¡Plus está activo!",
+    "description": "Todas las funciones ya están desbloqueadas"
+  },
+  "newsBannerText": {
+    "text": "¡Hola! Todos los días, Skillupgerman publica aquí noticias interesantes sobre el idioma alemán. ¡Aprende con gusto!"
+  },
+  "marathonLeaderBoard": {
+    "stateHint": "¡La carrera comenzará pronto! Prepárate para la nueva temporada.",
+    "seasonEndsIn": "El maratón termina en:",
+    "seasonStartsIn": "El maratón comienza en:"
+  },
+  "errorPage": {
+    "game-title": "Ups, algo salió mal...",
+    "game-desc": "Ya que estamos aquí, vamos a calentar. Elige el artículo correcto:",
+    "win-screen": "¡Excelente trabajo!",
+    "win-desc": "Ahora puedes volver a tus lecciones."
   }
 }

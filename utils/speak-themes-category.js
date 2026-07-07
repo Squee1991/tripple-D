@@ -76,7 +76,7 @@ export const categoriesSpeak = [
 		title: 'speakTopics.auto',
 		themes: [
 			{ id: 'taxi_berlin', icon: '🚖', title: 'speakThemes.taxi_berlin' },
-			{ id: 'bus_talk', icon: '🚖', title: 'speakThemes.bus_talk' },
+			{ id: 'bus_talk', icon: '🚌', title: 'speakThemes.bus_talk' },
 			{ id: 'road_assistance', icon: '🦺', title: 'speakThemes.road_assistance' },
 			{ id: 'oil_change', icon: '🛢️', title: 'speakThemes.oil_change' },
 			{ id: 'car_buying', icon: '🚗', title: 'speakThemes.car_buying' },

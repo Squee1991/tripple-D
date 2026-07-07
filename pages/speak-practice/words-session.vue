@@ -5,70 +5,98 @@
       @touchmove="handleTouchMove"
       @touchend="handleTouchEnd"
   >
-    <header class="vocab-header" v-if="currentWord">
-      <button class="btn-icon-back" @click="handleBackClick">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-             stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="19" y1="12" x2="5" y2="12"></line>
-          <polyline points="12 19 5 12 12 5"></polyline>
-        </svg>
-      </button>
-      <div class="progress_exp-bar">
-        <div class="progress__bar" :style="{ width: `${progressPercentage}%` }">
-          <div class="glare"></div>
-        </div>
-      </div>
-    </header>
-    <main class="vocab-main" v-if="currentWord">
-      <div class="flashcard" :class="{'audio-only': currentWord.displayType === 'audio'}">
-        <SoundBtn :text="currentWord.german" class="btn-sound-custom"/>
-        <h2 v-if="currentWord.displayType === 'visual'" class="word-german">{{ currentWord.german }}</h2>
-      </div>
-      <div class="options-container">
-        <button
-            v-for="(option, index) in options"
-            :key="index"
-            class="option-btn"
-            :class="{
-            'correct': selectedAnswer && option === currentWord.correctTranslation,
-            'incorrect': selectedAnswer === option && option !== currentWord.correctTranslation
-          }"
-            :disabled="selectedAnswer !== null"
-            @click="checkAnswer(option)"
-        >
-          {{ option }}
+    <template v-if="viewMode === 'list'">
+      <header class="vocab-header list-header">
+        <button class="btn-icon-back" @click="handleBackClick">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+               stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
         </button>
-      </div>
-    </main>
-    <Transition name="slide-up">
-      <div v-if="currentStep >= totalSteps && totalSteps > 0" class="completion-overlay">
-        <div class="completion-modal">
-          <h2>{{ t('speakSession.goodJob') || 'Отличная работа!' }}</h2>
-          <div class="completion-stats">
-            <div class="stat correct">
-              <span class="stat-icon">✅</span>
-              <span class="stat-value">{{ correctAnswers }}</span>
-            </div>
-            <div class="stat incorrect">
-              <span class="stat-icon">❌</span>
-              <span class="stat-value">{{ incorrectAnswers }}</span>
-            </div>
-          </div>
-          <div class="completion-overlay_icon">
-            <img src="../../assets/images/GoodJobIcon.svg" alt="success_icon">
-          </div>
-          <div class="completion-actions">
-            <button class="btn-primary" @click="finishLearning">{{ t('speakSession.list') }}</button>
-            <button class="btn-secondary" @click="restartLearning">{{ t('speakSession.repeat') }}</button>
+        <h2 class="list-title">{{ t('speakSession.wordList') }}</h2>
+      </header>
+      <main class="vocab-main word-list-main">
+        <div v-for="(word, index) in wordList" :key="index" class="word-list-item">
+          <SoundBtn :text="word.german" class="list-sound-btn"/>
+          <div class="word-details">
+            <span class="word-german-list">{{ word.german }}</span>
+            <span class="word-translation-list">{{ word.correctTranslation }}</span>
           </div>
         </div>
-      </div>
-    </Transition>
-    <footer class="vocab-footer" v-if="selectedAnswer && currentWord">
-      <button class="btn-primary" @click="nextStep">
-        {{ currentStep < totalSteps - 1 ? t('speakSession.further') : t('speakSession.end') }}
-      </button>
-    </footer>
+      </main>
+      <footer class="vocab-footer">
+        <button class="btn-primary" @click="startPractice">
+          {{ t('speakSession.practiceWords') }}
+        </button>
+      </footer>
+    </template>
+    <template v-else-if="viewMode === 'practice'">
+      <header class="vocab-header" v-if="currentWord">
+        <button class="btn-icon-back" @click="handleBackClick">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+               stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </button>
+        <div class="progress_exp-bar">
+          <div class="progress__bar" :style="{ width: `${progressPercentage}%` }">
+            <div class="glare"></div>
+          </div>
+        </div>
+      </header>
+      <main class="vocab-main" v-if="currentWord">
+        <div class="flashcard" :class="{'audio-only': currentWord.displayType === 'audio'}">
+          <SoundBtn :text="currentWord.german" class="btn-sound-custom"/>
+          <h2 v-if="currentWord.displayType === 'visual'" class="word-german">{{ currentWord.german }}</h2>
+        </div>
+        <div class="options-container">
+          <button
+              v-for="(option, index) in options"
+              :key="index"
+              class="option-btn"
+              :class="{
+              'correct': selectedAnswer && option === currentWord.correctTranslation,
+              'incorrect': selectedAnswer === option && option !== currentWord.correctTranslation
+            }"
+              :disabled="selectedAnswer !== null"
+              @click="checkAnswer(option)"
+          >
+            {{ option }}
+          </button>
+        </div>
+      </main>
+      <Transition name="slide-up">
+        <div v-if="currentStep >= totalSteps && totalSteps > 0" class="completion-overlay">
+          <div class="completion-modal">
+            <h2>{{ t('speakSession.goodJob') }}</h2>
+            <div class="completion-stats">
+              <div class="stat correct">
+                <span class="stat-icon">✅</span>
+                <span class="stat-value">{{ correctAnswers }}</span>
+              </div>
+              <div class="stat incorrect">
+                <span class="stat-icon">❌</span>
+                <span class="stat-value">{{ incorrectAnswers }}</span>
+              </div>
+            </div>
+            <div class="completion-overlay_icon">
+              <img src="../../assets/images/GoodJobIcon.svg" alt="success_icon">
+            </div>
+            <div class="completion-actions">
+              <button class="btn-primary" @click="finishLearning">{{ t('speakSession.list') }}</button>
+              <button class="btn-secondary" @click="restartLearning">{{t('speakSession.repeat')}}</button>
+            </div>
+          </div>
+        </div>
+      </Transition>
+      <footer class="vocab-footer" v-if="selectedAnswer && currentWord">
+        <button class="btn-primary" @click="nextStep">
+          {{ currentStep < totalSteps - 1 ? t('speakSession.further') : t('speakSession.end') }}
+        </button>
+      </footer>
+    </template>
     <VStopSessionModal
         v-model:show="showExitModal"
         @confirm="confirmExit"
@@ -91,6 +119,8 @@ const router = useRouter();
 const route = useRoute();
 const store = useSpeakStore();
 const {locale, t} = useI18n();
+const viewMode = ref('list');
+const wordList = ref([]);
 
 const learningSequence = ref([]);
 const currentStep = ref(0);
@@ -170,8 +200,30 @@ const playSound = (text) => {
   }
 };
 
+const startPractice = () => {
+  viewMode.value = 'practice';
+
+  const allTranslations = wordList.value.map(w => w.correctTranslation);
+  allTranslationsRef.value = allTranslations;
+
+  const sequence = [];
+  wordList.value.forEach(word => {
+    sequence.push({...word, displayType: 'visual'});
+    sequence.push({...word, displayType: 'audio'});
+  });
+
+  learningSequence.value = sequence.sort(() => Math.random() - 0.5);
+
+  if (learningSequence.value.length > 0) {
+    generateOptions(allTranslations);
+    setTimeout(() => {
+      playSound(currentWord.value.german);
+    }, 300);
+  }
+};
+
 onBeforeRouteLeave((to, from, next) => {
-  if (isConfirmedExit.value || currentStep.value >= totalSteps.value) {
+  if (viewMode.value === 'list' || isConfirmedExit.value || (viewMode.value === 'practice' && currentStep.value >= totalSteps.value)) {
     next();
   } else {
     showExitModal.value = true;
@@ -181,6 +233,11 @@ onBeforeRouteLeave((to, from, next) => {
 });
 
 const handleBackClick = () => {
+  if (viewMode.value === 'list') {
+    router.push('/speak-practice');
+    return;
+  }
+
   if (currentStep.value >= totalSteps.value) {
     isConfirmedExit.value = true;
     router.push('/speak-practice');
@@ -241,25 +298,7 @@ onMounted(async () => {
       });
     }
   }
-
-  const baseWords = Array.from(uniqueWordsMap.values());
-  const allTranslations = baseWords.map(w => w.correctTranslation);
-  allTranslationsRef.value = allTranslations;
-  const sequence = [];
-
-  baseWords.forEach(word => {
-    sequence.push({...word, displayType: 'visual'});
-    sequence.push({...word, displayType: 'audio'});
-  });
-
-  learningSequence.value = sequence.sort(() => Math.random() - 0.5);
-
-  if (learningSequence.value.length > 0) {
-    generateOptions(allTranslations);
-    setTimeout(() => {
-      playSound(currentWord.value.german);
-    }, 300);
-  }
+  wordList.value = Array.from(uniqueWordsMap.values());
 });
 
 </script>
@@ -283,6 +322,20 @@ onMounted(async () => {
   padding: 5px 10px 15px 10px;
   gap: 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.list-header {
+  justify-content: space-between;
+}
+
+.list-title {
+  font-size: 23px;
+  font-weight: 800;
+  color: var(--title);
+  margin: 0;
+  flex: 1;
+  text-align: center;
+  padding-right: 40px;
 }
 
 .btn-icon-back {
@@ -337,6 +390,41 @@ onMounted(async () => {
   flex-direction: column;
   gap: 16px;
   overflow-y: auto;
+}
+
+.word-list-main {
+  gap: 12px;
+  padding: 20px 15px;
+}
+
+.word-list-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: white;
+  padding: 8px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  border: 2px solid #f1f5f9;
+  transition: transform 0.1s ease;
+}
+
+.word-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.word-german-list {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.word-translation-list {
+  font-size: 15px;
+  color: #64748b;
+  font-weight: 600;
 }
 
 .flashcard {

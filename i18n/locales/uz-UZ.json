@@ -5175,6 +5175,8 @@
   },
   "awards": {
     "title": "Mukofotlar ro'yxati",
+    "wasPlusUser": "Artiklyuslar qopi",
+    "wasPlusUserDescription": "Mukofot Umumiy toifadagi 'PLUS egasi' yutug'ini bajarganlik uchun beriladi",
     "articlus": "Qanotli valyuta",
     "articlusDescription": "Umumiy toifasidagi 'Zaxiralarni tugatish' yutug'i uchun beriladi",
     "registerAchievement": "Ishtirokchi nishoni",
@@ -9791,6 +9793,7 @@
   "descriptionThemes": {
     "winter": "Qish va tadbirlar",
     "transport": "Jamoat transporti",
+    "work": "Ish",
     "cafe": "Qahvaxona",
     "supermarket": "Supermarket",
     "home": "Uy va ro'zg'or",
@@ -10309,6 +10312,8 @@
     "say": "Ayting:"
   },
   "speakSession": {
+    "wordList": "Dialog uchun so'zlar",
+    "practiceWords": "So'zlarni mashq qilish",
     "title": "Muloqot amaliyoti",
     "words": "So'zlar",
     "wordsText": "Muloqotni boshlashdan oldin so'zlarni o'rganing yoki takrorlang. Bu sizga o'zingizga ishonch hosil qilishingizga yordam beradi!",
@@ -10527,7 +10532,8 @@
   "helpCenter": {
     "privacy": "Maxfiylik siyosati",
     "faq": "Ko'p beriladigan savollar (FAQ)",
-    "terms": "Foydalanish shartlari"
+    "terms": "Foydalanish shartlari",
+    "attributions": "Mualliflik huquqlari"
   },
   "rankAvatars": {
     "locked_easy_1": "Ushbu avatar Artikllar marafonida (oson rejim) 1-o'rinni egallaganlik uchun beriladi.",
@@ -10570,5 +10576,23 @@
     "normalTwoDescription": "Artikllar marafoni reytingida ikkinchi o'rinni egallang (Qiyin rejim)",
     "normalThreeName": "Marafon adepti",
     "normalThreeDescription": "Artikllar marafoni reytingida uchinchi o'rinni egallang (Qiyin rejim)"
+  },
+  "activePlus": {
+    "title": "Plus Faol!",
+    "description": "Barcha funksiyalar allaqachon ochilgan"
+  },
+  "newsBannerText": {
+    "text": "Salom! Har kuni Skillupgerman bu yerda nemis tili haqida qiziqarli yangiliklarni e'lon qiladi. Zavq bilan o'rganing!"
+  },
+  "marathonLeaderBoard": {
+    "stateHint": "Poyga tez orada boshlanadi! Yangi mavsumga tayyorgarlik ko'ring.",
+    "seasonEndsIn": "Marafon tugashiga:",
+    "seasonStartsIn": "Marafon boshlanishiga:"
+  },
+  "errorPage": {
+    "game-title": "Voy, nimadir xato ketdi...",
+    "game-desc": "Agar shu yerdamiz, keling biroz mashq qilamiz. To'g'ri artiklni tanlang:",
+    "win-screen": "Ajoyib ish!",
+    "win-desc": "Endi darslarga qaytishingiz mumkin."
   }
 }

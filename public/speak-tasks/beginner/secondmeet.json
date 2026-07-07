@@ -1,19 +1,37 @@
 {
   "start": {
-    "botText": "Hallo!",
+    "botText": "Hallo! Schön, dich zu sehen.",
     "botTranslation": {
-      "ar-SA": "مرحباً،",
-      "en-US": "Hello!",
-      "es-ES": "¡Hola!",
-      "fr-FR": "Bonjour!",
-      "hi-IN": "नमस्ते!",
-      "pl-PL": "Cześć!",
-      "ro-RO": "Salut!",
-      "ru-RU": "Привет!",
-      "tr-TR": "Merhaba!",
-      "uk-UA": "Привіт!",
-      "uz-UZ": "Salom!"
+      "ar-SA": "مرحباً! سعيد برؤيتك.",
+      "en-US": "Hello! Nice to see you.",
+      "es-ES": "¡Hola! Qué bueno verte.",
+      "fr-FR": "Bonjour ! Content de te voir.",
+      "hi-IN": "नमस्ते! तुम्हें देखकर अच्छा लगा।",
+      "pl-PL": "Cześć! Miło cię widzieć.",
+      "ro-RO": "Salut! Mă bucur să te văd.",
+      "ru-RU": "Привет! Рад тебя видеть.",
+      "tr-TR": "Merhaba! Seni görmek güzel.",
+      "uk-UA": "Привіт! Радий тебе бачити.",
+      "uz-UZ": "Salom! Seni ko'rganimdan xursandman."
     },
+    "vocabulary": [
+      {
+        "german": "sehen",
+        "translation": {
+          "ar-SA": "يرى",
+          "en-US": "to see",
+          "es-ES": "ver",
+          "fr-FR": "voir",
+          "hi-IN": "देखना",
+          "pl-PL": "widzieć",
+          "ro-RO": "a vedea",
+          "ru-RU": "видеть",
+          "tr-TR": "görmek",
+          "uk-UA": "бачити",
+          "uz-UZ": "ko'rmoq"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Hallo!",
@@ -67,6 +85,24 @@
       "uk-UA": "Як твої справи сьогодні?",
       "uz-UZ": "Bugun ahvoling qanday?"
     },
+    "vocabulary": [
+      {
+        "german": "heute",
+        "translation": {
+          "ar-SA": "اليوم",
+          "en-US": "today",
+          "es-ES": "hoy",
+          "fr-FR": "aujourd'hui",
+          "hi-IN": "आज",
+          "pl-PL": "dzisiaj",
+          "ro-RO": "astăzi",
+          "ru-RU": "сегодня",
+          "tr-TR": "bugün",
+          "uk-UA": "сьогодні",
+          "uz-UZ": "bugun"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke, sehr gut. Und dir?",
@@ -106,20 +142,38 @@
     "defaultNext": "ask_wohin"
   },
   "ask_wohin": {
-    "botText": "Gut, danke. Wohin gehst du jetzt?",
+    "botText": "Mir geht es auch gut, danke. Wohin gehst du gerade?",
     "botTranslation": {
       "ar-SA": "أنا أيضاً بخير، شكراً. إلى أين أنت ذاهب الآن؟",
-      "en-US": "Also good, thanks. Where are you going now?",
-      "es-ES": "También bien, gracias. ¿Adónde vas ahora?",
-      "fr-FR": "Bien aussi, merci. Où vas-tu maintenant ?",
-      "hi-IN": "मैं भी ठीक हूँ, धन्यवाद। तुम अब कहाँ जा रहे हो?",
-      "pl-PL": "Też dobrze, dziękuję. Dokąd teraz idziesz?",
-      "ro-RO": "Și eu sunt bine, mulțumesc. Încotro te duci acum?",
-      "ru-RU": "Тоже хорошо, спасибо. Куда ты сейчас идешь?",
-      "tr-TR": "Ben de iyiyim, teşekkürler. Şimdi nereye gidiyorsun?",
-      "uk-UA": "Теж добре, дякую. Куди ти зараз йдеш?",
+      "en-US": "I'm doing well too, thanks. Where are you heading right now?",
+      "es-ES": "Yo también estoy bien, gracias. ¿Adónde vas ahora mismo?",
+      "fr-FR": "Je vais bien aussi, merci. Où vas-tu en ce moment ?",
+      "hi-IN": "मैं भी ठीक हूँ, धन्यवाद। तुम अभी कहाँ जा रहे हो?",
+      "pl-PL": "Ja też mam się dobrze, dziękuję. Dokąd właśnie idziesz?",
+      "ro-RO": "Și eu sunt bine, mulțumesc. Încotro te îndrepți acum?",
+      "ru-RU": "У меня тоже все хорошо, спасибо. Куда ты сейчас направляешься?",
+      "tr-TR": "Ben de iyiyim, teşekkürler. Şu an nereye gidiyorsun?",
+      "uk-UA": "У мене теж все добре, дякую. Куди ти зараз прямуєш?",
       "uz-UZ": "Men ham yaxshiman, rahmat. Hozir qayerga ketyapsan?"
     },
+    "vocabulary": [
+      {
+        "german": "wohin",
+        "translation": {
+          "ar-SA": "إلى أين",
+          "en-US": "where to",
+          "es-ES": "adónde",
+          "fr-FR": "où (direction)",
+          "hi-IN": "कहाँ (दिशा)",
+          "pl-PL": "dokąd",
+          "ro-RO": "încotro",
+          "ru-RU": "куда",
+          "tr-TR": "nereye",
+          "uk-UA": "куди",
+          "uz-UZ": "qayerga"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ich gehe nach Hause.",
@@ -141,17 +195,17 @@
       {
         "text": "Ich gehe in den Park.",
         "translation": {
-          "ar-SA": "أنا ذاهب إلى الحديقة (Wohin? Akkusativ، يأخذ من الأداة).",
-          "en-US": "I am going to the park (Wohin? Akkusativ, takes from the article).",
-          "es-ES": "Voy al parque (Wohin? Akkusativ, toma del artículo).",
-          "fr-FR": "Je vais au parc (Wohin? Akkusativ, prend de l'article).",
-          "hi-IN": "मैं पार्क जा रहा हूँ (Wohin? Akkusativ, आर्टिकल से लेता है)।",
-          "pl-PL": "Idę do parku (Wohin? Akkusativ, bierze od przedimka).",
-          "ro-RO": "Mă duc în parc (Wohin? Akkusativ, ia de la articol).",
-          "ru-RU": "Я иду в парк (Wohin? Akkusativ, берет у артикля).",
-          "tr-TR": "Parka gidiyorum (Wohin? Akkusativ, artikelden alır).",
-          "uk-UA": "Я йду в парк (Wohin? Akkusativ, бере у артикля).",
-          "uz-UZ": "Men parkka ketyapman (Wohin? Akkusativ, artikldan oladi)."
+          "ar-SA": "أنا ذاهب إلى الحديقة.",
+          "en-US": "I am going to the park.",
+          "es-ES": "Voy al parque.",
+          "fr-FR": "Je vais au parc.",
+          "hi-IN": "मैं पार्क जा रहा हूँ।",
+          "pl-PL": "Idę do parku.",
+          "ro-RO": "Mă duc în parc.",
+          "ru-RU": "Я иду в парк.",
+          "tr-TR": "Parka gidiyorum.",
+          "uk-UA": "Я йду в парк.",
+          "uz-UZ": "Men parkka ketyapman."
         },
         "nextStep": "ask_transport"
       }
@@ -173,6 +227,24 @@
       "uk-UA": "Ти йдеш пішки?",
       "uz-UZ": "Piyoda ketyapsanmi?"
     },
+    "vocabulary": [
+      {
+        "german": "zu Fuß",
+        "translation": {
+          "ar-SA": "مشياً على الأقدام",
+          "en-US": "on foot",
+          "es-ES": "a pie",
+          "fr-FR": "à pied",
+          "hi-IN": "पैदल",
+          "pl-PL": "na piechotę",
+          "ro-RO": "pe jos",
+          "ru-RU": "пешком",
+          "tr-TR": "yürüyerek",
+          "uk-UA": "пішки",
+          "uz-UZ": "piyoda"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, ich gehe zu Fuß.",
@@ -212,20 +284,38 @@
     "defaultNext": "ask_weather"
   },
   "ask_weather": {
-    "botText": "Das Wetter ist heute schön, oder?",
+    "botText": "Das Wetter ist heute wirklich schön, oder?",
     "botTranslation": {
-      "ar-SA": "الطقس جميل اليوم، أليس كذلك؟",
-      "en-US": "The weather is nice today, isn't it?",
-      "es-ES": "El tiempo está agradable hoy, ¿verdad?",
-      "fr-FR": "Le temps est beau aujourd'hui, n'est-ce pas ?",
-      "hi-IN": "आज मौसम अच्छा है, है ना?",
-      "pl-PL": "Pogoda jest dzisiaj ładna, prawda?",
-      "ro-RO": "Vremea e frumoasă azi, nu-i așa?",
-      "ru-RU": "Погода сегодня хорошая, правда?",
-      "tr-TR": "Bugün hava güzel, değil mi?",
-      "uk-UA": "Погода сьогодні гарна, правда?",
-      "uz-UZ": "Bugun ob-havo yaxshi, shunday emasmi?"
+      "ar-SA": "الطقس جميل حقاً اليوم، أليس كذلك؟",
+      "en-US": "The weather is really nice today, isn't it?",
+      "es-ES": "El tiempo está realmente agradable hoy, ¿verdad?",
+      "fr-FR": "Le temps est vraiment beau aujourd'hui, n'est-ce pas ?",
+      "hi-IN": "आज मौसम सच में अच्छा है, है ना?",
+      "pl-PL": "Pogoda jest dzisiaj naprawdę ładna, prawda?",
+      "ro-RO": "Vremea e chiar frumoasă azi, nu-i așa?",
+      "ru-RU": "Погода сегодня и правда хорошая, да?",
+      "tr-TR": "Bugün hava gerçekten güzel, değil mi?",
+      "uk-UA": "Погода сьогодні і справді гарна, так?",
+      "uz-UZ": "Bugun ob-havo haqiqatan ham yaxshi, shunday emasmi?"
     },
+    "vocabulary": [
+      {
+        "german": "das Wetter",
+        "translation": {
+          "ar-SA": "الطقس",
+          "en-US": "weather",
+          "es-ES": "el tiempo / el clima",
+          "fr-FR": "le temps / la météo",
+          "hi-IN": "मौसम",
+          "pl-PL": "pogoda",
+          "ro-RO": "vremea",
+          "ru-RU": "погода",
+          "tr-TR": "hava durumu",
+          "uk-UA": "погода",
+          "uz-UZ": "ob-havo"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Ja, es ist sehr warm.",
@@ -265,20 +355,38 @@
     "defaultNext": "ask_time"
   },
   "ask_time": {
-    "botText": "Wie spät ist es jetzt?",
+    "botText": "Sag mal, weißt du, wie spät es ist?",
     "botTranslation": {
-      "ar-SA": "كم الساعة الآن؟",
-      "en-US": "What time is it now?",
-      "es-ES": "¿Qué hora es ahora?",
-      "fr-FR": "Quelle heure est-il maintenant ?",
-      "hi-IN": "अभी क्या समय हुआ है?",
-      "pl-PL": "Która jest teraz godzina?",
-      "ro-RO": "Cât este ceasul acum?",
-      "ru-RU": "Который сейчас час?",
-      "tr-TR": "Şimdi saat kaç?",
-      "uk-UA": "Котра зараз година?",
-      "uz-UZ": "Hozir soat necha?"
+      "ar-SA": "أخبرني، هل تعرف كم الساعة؟",
+      "en-US": "Tell me, do you know what time it is?",
+      "es-ES": "Dime, ¿sabes qué hora es?",
+      "fr-FR": "Dis-moi, sais-tu quelle heure il est ?",
+      "hi-IN": "बताओ, क्या तुम्हें पता है कि अभी क्या समय हुआ है?",
+      "pl-PL": "Powiedz mi, czy wiesz która jest godzina?",
+      "ro-RO": "Spune-mi, știi cât este ceasul?",
+      "ru-RU": "Скажи, ты не знаешь, который сейчас час?",
+      "tr-TR": "Söylesene, saat kaç biliyor musun?",
+      "uk-UA": "Скажи, ти не знаєш, котра зараз година?",
+      "uz-UZ": "Ayt-chi, soat necha bo'lganini bilasanmi?"
     },
+    "vocabulary": [
+      {
+        "german": "spät",
+        "translation": {
+          "ar-SA": "متأخر / وقت",
+          "en-US": "late",
+          "es-ES": "tarde",
+          "fr-FR": "tard",
+          "hi-IN": "देर",
+          "pl-PL": "późno",
+          "ro-RO": "târziu",
+          "ru-RU": "поздно",
+          "tr-TR": "geç",
+          "uk-UA": "пізно",
+          "uz-UZ": "kech"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Es ist fünf Uhr.",
@@ -318,20 +426,38 @@
     "defaultNext": "wish_evening"
   },
   "wish_evening": {
-    "botText": "Oh, ich muss gehen. Einen schönen Abend noch!",
+    "botText": "Oh, schon so spät! Ich muss gehen. Einen schönen Abend noch!",
     "botTranslation": {
-      "ar-SA": "أوه، يجب أن أذهب. أتمنى لك مساءً سعيداً!",
-      "en-US": "Oh, I have to go. Have a nice evening!",
-      "es-ES": "Oh, tengo que irme. ¡Que pases una buena tarde!",
-      "fr-FR": "Oh, je dois y aller. Bonne soirée !",
-      "hi-IN": "ओह, मुझे जाना होगा। आपकी शाम अच्छी हो!",
-      "pl-PL": "Och, muszę iść. Miłego wieczoru!",
-      "ro-RO": "Oh, trebuie să plec. O seară frumoasă în continuare!",
-      "ru-RU": "Ой, мне нужно идти. Хорошего вечера!",
-      "tr-TR": "Oh, gitmem gerek. İyi akşamlar!",
-      "uk-UA": "Ой, мені треба йти. Гарного вечора!",
-      "uz-UZ": "Oh, men ketishim kerak. Xayrli oqshom!"
+      "ar-SA": "أوه، لقد تأخر الوقت! يجب أن أذهب. أتمنى لك مساءً سعيداً!",
+      "en-US": "Oh, so late already! I have to go. Have a nice evening!",
+      "es-ES": "¡Oh, ya es tan tarde! Tengo que irme. ¡Que pases una buena tarde!",
+      "fr-FR": "Oh, déjà si tard ! Je dois y aller. Bonne soirée !",
+      "hi-IN": "ओह, इतनी देर हो गई! मुझे जाना होगा। आपकी शाम अच्छी हो!",
+      "pl-PL": "Och, już tak późno! Muszę iść. Miłego wieczoru!",
+      "ro-RO": "Oh, deja e atât de târziu! Trebuie să plec. O seară frumoasă în continuare!",
+      "ru-RU": "Ой, уже так поздно! Мне нужно идти. Хорошего вечера!",
+      "tr-TR": "Oh, çok geç olmuş! Gitmem gerek. İyi akşamlar!",
+      "uk-UA": "Ой, вже так пізно! Мені треба йти. Гарного вечора!",
+      "uz-UZ": "Oh, allaqachon kech bo'libdi! Men ketishim kerak. Xayrli oqshom!"
     },
+    "vocabulary": [
+      {
+        "german": "der Abend",
+        "translation": {
+          "ar-SA": "المساء",
+          "en-US": "evening",
+          "es-ES": "la tarde / la noche",
+          "fr-FR": "le soir",
+          "hi-IN": "शाम",
+          "pl-PL": "wieczór",
+          "ro-RO": "seara",
+          "ru-RU": "вечер",
+          "tr-TR": "akşam",
+          "uk-UA": "вечір",
+          "uz-UZ": "oqshom"
+        }
+      }
+    ],
     "options": [
       {
         "text": "Danke, gleichfalls!",
@@ -385,6 +511,24 @@
       "uk-UA": "Бувай! До зустрічі!",
       "uz-UZ": "Xayr! Tez orada ko'rishguncha!"
     },
+    "vocabulary": [
+      {
+        "german": "bis bald",
+        "translation": {
+          "ar-SA": "أراك قريباً",
+          "en-US": "see you soon",
+          "es-ES": "hasta pronto",
+          "fr-FR": "à bientôt",
+          "hi-IN": "जल्द मिलेंगे",
+          "pl-PL": "do zobaczenia wkrótce",
+          "ro-RO": "pe curând",
+          "ru-RU": "до скорого",
+          "tr-TR": "görüşmek üzere",
+          "uk-UA": "до зустрічі",
+          "uz-UZ": "tez orada ko'rishguncha"
+        }
+      }
+    ],
     "options": [],
     "defaultNext": null
   }

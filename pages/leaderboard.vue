@@ -1,16 +1,16 @@
 <script setup>
-import { ref, watch, computed, onMounted, onUnmounted } from 'vue'
-import { userAuthStore } from '../store/authStore.js'
-import { useGuessWordStore } from '../store/guesStore.js'
-import { useGameStore } from '../store/marafonStore.js'
-import { useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
+import {ref, watch, computed, onMounted, onUnmounted} from 'vue'
+import {userAuthStore} from '../store/authStore.js'
+import {useGuessWordStore} from '../store/guesStore.js'
+import {useGameStore} from '../store/marafonStore.js'
+import {useRouter} from 'vue-router'
+import {useI18n} from 'vue-i18n'
 import LeaderboardItem from '../src/components/LeaderboardItem.vue'
 import ModalOverlay from '../src/components/modalOverlay.vue'
 import CloseIcon from '../assets/images/close.svg'
 import VBackBtn from "~/src/components/V-back-btn.vue";
 
-const { t, locale } = useI18n()
+const {t, locale} = useI18n()
 const router = useRouter()
 const authStore = userAuthStore()
 const guessStore = useGuessWordStore()
@@ -23,30 +23,24 @@ const marathonRating = ref([])
 const isMarathonLoading = ref(true)
 const isModal = ref(false)
 const activeMarathonDifficulty = ref(1)
-
 const isLeaderboardOpen = ref(false)
-const timeLeftToOpen = ref({ d: 0, h: 0, m: 0 })
+const timeLeftToOpen = ref({d: 0, h: 0, m: 0})
 let timerInterval = null
 
-const disciplines = ref([
-  // { id: 'guess', label: 'ranked.guessTab' },
-  { id: 'marathon', label: 'ranked.marathonTab' }
-])
+const timerTextComputed = computed(() => {
+  return isLeaderboardOpen.value ? t('marathonLeaderBoard.seasonEndsIn') : t('marathonLeaderBoard.seasonStartsIn')
+})
 
 const difficultyOptions = ref([
-  { level: 1, label: 'ranked.easy' },
-  { level: 2, label: 'ranked.normal' },
-  { level: 3, label: 'ranked.hard' }
+  {level: 1, label: 'ranked.easy'},
+  {level: 2, label: 'ranked.normal'},
+  {level: 3, label: 'ranked.hard'}
 ])
 
 const modalValues = ref({
   text: "modal.textRanked",
   btn: "modal.textBtn"
 })
-
-const activeDisciplineIndex = computed(() =>
-    disciplines.value.findIndex(tab => tab.id === activeDiscipline.value)
-)
 
 const activeDifficultyIndex = computed(() =>
     difficultyOptions.value.findIndex(diff => diff.level === activeMarathonDifficulty.value)
@@ -83,7 +77,7 @@ function updateTimer() {
   if (currentSeasonId.value && currentSeasonId.value !== state.currentSeasonId) {
     if (activeDiscipline.value === 'marathon') {
       marathonRating.value = []
-      gameStore.personalBests = { 1: 0, 2: 0, 3: 0 }
+      gameStore.personalBests = {1: 0, 2: 0, 3: 0}
     }
   }
 
@@ -129,7 +123,7 @@ watch(activeDiscipline, (newDiscipline) => {
   } else if (newDiscipline === 'marathon') {
     loadMarathonStatistics()
   }
-}, { immediate: true })
+}, {immediate: true})
 
 watch(() => authStore.uid, () => {
   if (activeDiscipline.value === 'guess') {
@@ -137,15 +131,7 @@ watch(() => authStore.uid, () => {
   } else if (activeDiscipline.value === 'marathon') {
     loadMarathonStatistics()
   }
-}, { immediate: true })
-
-// onMounted(async () => {
-//   if (authStore.uid) {
-//     await gameStore.fetchRecord()
-//   }
-//   updateTimer()
-//   timerInterval = setInterval(updateTimer, 60000)
-// })
+}, {immediate: true})
 
 onMounted(async () => {
   if (authStore.uid) {
@@ -178,21 +164,30 @@ onUnmounted(() => {
         <h1 class="ranked-title">{{ t('ranked.label') }}</h1>
       </div>
       <div class="control-card">
-        <nav class="toggle-nav" role="tablist">
-<!--          <div-->
-<!--              class="sliding-bg"-->
-<!--              :style="{ width: 'calc(50% - 4px)', transform: `translateX(${getTransformX(activeDisciplineIndex, disciplines.length)}%)` }">-->
-<!--          </div>-->
-          <button
-              v-for="tab in disciplines" :key="tab.id"
-              class="toggle-btn tab__title"
-              :class="{ 'toggle-btn--active': activeDiscipline === tab.id }"
-              role="tab"
-              @click="activeDiscipline = tab.id"
-          >
-            {{ t(tab.label) }}
-          </button>
-        </nav>
+        <div class="marathon-timer-widget">
+          <p class="timer-widget__label">{{ timerTextComputed }}</p>
+          <div class="timer-widget__countdown" v-if="timeLeftToOpen">
+            <div class="timer-widget__item">
+              <span class="timer-widget__value">{{ timeLeftToOpen.d }}</span>
+              <span class="timer-widget__unit">{{ t('i18nDays.days') }}</span>
+            </div>
+            <span class="timer-widget__separator">:</span>
+            <div class="timer-widget__item">
+              <span class="timer-widget__value">{{ timeLeftToOpen.h }}</span>
+              <span class="timer-widget__unit">{{ t('i18nDays.hours') }}</span>
+            </div>
+            <span class="timer-widget__separator">:</span>
+            <div class="timer-widget__item">
+              <span class="timer-widget__value">{{ timeLeftToOpen.m }}</span>
+              <span class="timer-widget__unit">{{ t('i18nDays.mins') }}</span>
+            </div>
+            <span class="timer-widget__separator">:</span>
+            <div class="timer-widget__item">
+              <span class="timer-widget__value">{{ timeLeftToOpen.s }}</span>
+              <span class="timer-widget__unit">сек</span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="control-card" v-if="activeDiscipline === 'marathon'">
         <h3 class="control-card__title">{{ t('ranked.difficulty') }}</h3>
@@ -213,7 +208,8 @@ onUnmounted(() => {
           </button>
         </nav>
       </div>
-      <div class="control-card user-stats-card">
+      <div class="control-card user-stats-card"
+           v-if="activeDiscipline === 'guess' || (activeDiscipline === 'marathon' && isLeaderboardOpen)">
         <div v-if="authStore.uid">
           <p v-if="activeDiscipline === 'guess'" class="user-stats__item">
             {{ t('ranked.wordsGuessed') }} <span>{{ guessStore.guessedWords.length }}</span>
@@ -244,20 +240,14 @@ onUnmounted(() => {
                 </ul>
               </div>
               <div v-else class="blackboard__message">
-                <!--                <div class="black__board-title">{{ t('ranked.notData') }}</div>-->
-                <!--                <img src="../assets/images/leadership.svg" alt="">-->
               </div>
             </div>
             <div v-if="activeDiscipline === 'marathon'" class="discipline-container">
               <div v-if="!isLeaderboardOpen" class="blackboard__message timer-message">
-                <p class="timer-subtitle">До начала гонки:</p>
-                <div class="countdown-timer" v-if="timeLeftToOpen">
-                  {{ timeLeftToOpen.d }} {{ t('i18nDays.days') }}
-                  {{ timeLeftToOpen.h }} {{ t('i18nDays.hours') }}
-                  {{ timeLeftToOpen.m }} {{ t('i18nDays.mins') }}
-                  {{ timeLeftToOpen.s }} сек
-                </div>
-                <!--                <img class="leaderboard__icon" src="../assets/images/leadership.svg" alt="locked" style="opacity: 0.5;">-->
+                <img class="waiting_icon" src="../assets/images/waitingIcon.png" alt="waiting">
+                <p class="empty-state__hint">
+                  {{ t('marathonLeaderBoard.stateHint') }}
+                </p>
               </div>
               <div v-else-if="marathonRating.length" class="leaderboard-wrapper">
                 <h2 class="blackboard__title">
@@ -275,9 +265,9 @@ onUnmounted(() => {
                   </li>
                 </ul>
               </div>
-              <div v-else class="blackboard__message">
+              <div v-else class="blackboard__message empty-state">
+                <img class="waiting_icon" src="../assets/images/waitingIcon.png" alt="sad hedgehog">
                 <div class="black__board-title">{{ t('ranked.emptydifficult') }}</div>
-                <!--                <img class="leaderboard__icon" src="../assets/images/leadership.svg" alt="leadership">-->
               </div>
             </div>
           </div>
@@ -487,17 +477,33 @@ onUnmounted(() => {
 
 .blackboard__message {
   display: flex;
-  margin-top: 30px;
+  margin-top: 40px;
   align-items: center;
   flex-direction: column;
   height: 100%;
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: rgba(255, 255, 255, 0.7);
+}
+
+.empty-state {
+  gap: 15px;
+}
+
+.empty-state__hint {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  line-height: 1.4;
+  font-weight: 600;
+  max-width: 280px;
+  margin: 0 auto;
 }
 
 .timer-message {
   gap: 15px;
+}
+
+.waiting_icon {
+  width: 140px;
+  margin-bottom: 10px;
 }
 
 .timer-subtitle {
@@ -505,17 +511,6 @@ onUnmounted(() => {
   font-weight: 600;
   color: #d1c4e9;
   text-align: center;
-}
-
-.countdown-timer {
-  background: rgba(0, 0, 0, 0.3);
-  padding: 10px 20px;
-  border-radius: 15px;
-  font-size: 24px;
-  font-weight: 400;
-  font-family: 'Lilita One', sans-serif;
-  color: #00c2ff;
-  border: 2px solid #00c2ff;
 }
 
 .leaderboard__items-container {
@@ -540,6 +535,73 @@ onUnmounted(() => {
   border: 4px solid #d1c4e9;
 }
 
+.marathon-timer-widget {
+  background: var(--tabBg);
+  border: 3px solid var(--tabsSlideBorderColor);
+  border-radius: 20px;
+  padding: 12px 15px;
+  margin: 0 4px;
+  box-shadow: var(--boxShadowMobile);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.timer-widget__label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 0;
+}
+
+.timer-widget__countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-family: 'Lilita One', sans-serif;
+  width: 100%;
+}
+
+.timer-widget__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 194, 255, 0.15);
+  border: 2px solid #00c2ff;
+  border-radius: 12px;
+  min-width: 50px;
+  padding: 6px 4px;
+}
+
+.timer-widget__value {
+  font-size: 22px;
+  color: #00c2ff;
+  line-height: 1;
+  font-family: Lilita One, sans-serif;
+}
+
+.timer-widget__unit {
+  font-size: 10px;
+  color: #d1c4e9;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+.timer-widget__separator {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+  padding-bottom: 16px;
+}
+
 @media (max-width: 1023px) {
   .ranked-sidebar-corkboard {
     width: 100%;
@@ -552,5 +614,4 @@ onUnmounted(() => {
     padding: 6px;
   }
 }
-
 </style>

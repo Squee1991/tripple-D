@@ -54,9 +54,12 @@
                   <div class="theme-info">
                     <div class="theme-name">{{ theme.title }}</div>
                   </div>
-                  <div class="theme-arrow" :class="{ 'theme-arrow--locked': index !== 0 && !authStore.isPremium }">
-                    <VArrowNav v-if="index === 0 || authStore.isPremium"/>
-                    <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <!-- ИЗМЕНЕНО: теперь используем isThemeUnlocked -->
+                  <div class="theme-arrow" :class="{ 'theme-arrow--locked': !isThemeUnlocked(index) }">
+                    <VArrowNav v-if="isThemeUnlocked(index)"/>
+                    <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                         stroke-linejoin="round">
                       <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                       <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                     </svg>
@@ -64,7 +67,8 @@
                 </div>
                 <div class="theme-card-bottom">
                   <div class="progress-track">
-                    <div class="progress-fill" :style="{ width: `${getStats(theme.id).total > 0 ? (getStats(theme.id).completed / getStats(theme.id).total) * 100 : 0}%` }"></div>
+                    <div class="progress-fill"
+                         :style="{ width: `${getStats(theme.id).total > 0 ? (getStats(theme.id).completed / getStats(theme.id).total) * 100 : 0}%` }"></div>
                   </div>
                   <span class="progress-text">{{ getStats(theme.id).completed }}/{{ getStats(theme.id).total }}</span>
                 </div>
@@ -72,7 +76,6 @@
               <div v-if="displayedThemes.length === 0" class="empty-state">Empty</div>
             </div>
           </div>
-
         </div>
       </VTransition>
       <Modal
@@ -82,7 +85,7 @@
           :img="TextBooks"
           :text="overlayData.text"
       />
-      <VPremiumModal v-model:show="showPremiumModal" />
+      <VPremiumModal v-model:show="showPremiumModal"/>
     </div>
   </div>
 </template>
@@ -98,7 +101,7 @@ import VTransition from "~/src/components/V-transition.vue"
 import VArrowNav from "~/src/components/V-arrowNav.vue"
 import Modal from "~/src/components/modal.vue"
 import VPremiumModal from "~/src/components/V-premiumModal.vue"
-import { showInterstitial } from '../../utils/admob.js'
+import {showInterstitial} from '../../utils/admob.js'
 
 const showDevModal = ref(false)
 const showPremiumModal = ref(false)
@@ -106,7 +109,7 @@ const router = useRouter()
 const store = useTextTasksStore()
 const authStore = userAuthStore()
 const isMounted = ref(false)
-const { t , locale} = useI18n()
+const {t, locale} = useI18n()
 
 const levels = [
   {id: 'low-level', label: 'A1'},
@@ -119,7 +122,6 @@ const getTransformX = (index) => {
   if (locale.value === 'ar') {
     return (levels.length - 1 - index) * 100;
   }
-
   return index * 100;
 };
 
@@ -157,7 +159,7 @@ const displayedThemes = computed(() => {
 
 const getStats = (themeId) => {
   const key = `${currentLevel.value}-${themeId}`
-  const stats = themesStats.value[key] || { total: 0, completed: 0 }
+  const stats = themesStats.value[key] || {total: 0, completed: 0}
   let completedTasks = 0
   if (store.userProgress && store.userProgress[themeId]) {
     completedTasks = Object.keys(store.userProgress[themeId]).length
@@ -195,8 +197,22 @@ watch(currentLevel, (newLevel) => {
   loadLevelStats(newLevel)
 })
 
+// ИЗМЕНЕНО: Добавили новую функцию для разблокировки тем
+const isThemeUnlocked = (index) => {
+  if (authStore.isPremium) return true;
+  if (index === 0 || index === 1) return true;
+
+  const prevTheme = displayedThemes.value[index - 1];
+  if (prevTheme) {
+    const stats = getStats(prevTheme.id);
+    return stats.total > 0 && stats.completed >= stats.total;
+  }
+  return false;
+};
+
 const selectTheme = async (theme, index) => {
-  if (index === 0 || authStore.isPremium) {
+  // ИЗМЕНЕНО: используем новую функцию
+  if (isThemeUnlocked(index)) {
     isLoading.value = true
     try {
       const res = await fetch(`/text-tasks/${currentLevel.value}/${theme.file}`)
@@ -232,13 +248,12 @@ onMounted(async () => {
     isMounted.value = true
   }, 120)
   await store.loadUserProgress()
-
   loadLevelStats(currentLevel.value)
 })
-
 </script>
 
 <style scoped>
+/* Стили оставляй свои, они у тебя идеальные */
 .tasks-menu-page {
   font-family: "Nunito", sans-serif;
   height: 100%;
@@ -325,7 +340,7 @@ onMounted(async () => {
   left: 6px;
   width: calc(33.333% - 4px);
   background: var(--tabsSlideBg);
-  box-shadow: var(--tabSlideBoxShadow, 0 2px 0 rgba(0,0,0,0.1));
+  box-shadow: var(--tabSlideBoxShadow, 0 2px 0 rgba(0, 0, 0, 0.1));
   border-radius: 30px;
   transition: transform 0.4s cubic-bezier(0.34, 1.35, 0.64, 1);
   z-index: 1;
@@ -461,85 +476,5 @@ onMounted(async () => {
   color: #a0aec0;
   font-weight: 700;
   padding: 20px;
-}
-
-.tasks-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.task-card {
-  border-radius: 16px;
-  padding: 10px 16px;
-  display: flex;
-  align-items: center;
-  background: var(--menuItemsBg);
-  border: 2px solid var(--tabsSlideBorderColor);
-  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
-  cursor: pointer;
-  transition: transform 0.1s;
-}
-
-.task-card:active {
-  transform: translateY(4px);
-  box-shadow: 0 0 0 #e2e8f0;
-}
-
-.task-number {
-  font-size: 30px;
-}
-
-.task-info {
-  flex-grow: 1;
-  margin-left: 10px;
-}
-
-.task-translation {
-  font-weight: 600;
-  color: var(--titleColor);
-  font-size: 15px;
-}
-
-.play-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #4facfe;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 3px 0 #0088ff;
-}
-
-.loading-state {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 60px;
-  color: #a0aec0;
-  font-weight: 800;
-  font-size: 16px;
-  gap: 15px;
-}
-
-.loader-spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid #e2e8f0;
-  border-top: 4px solid #4facfe;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 </style>

@@ -56,11 +56,11 @@
                   <button
                       class="card__btn"
                       :class="{
-                        'card__btn--completed': speakStore.userProgress[theme.id] && ((catIndex === 0 && (themeIndex === 0 || themeIndex === 1)) || authStore.isPremium),
-                        'card__btn--locked': !((catIndex === 0 && (themeIndex === 0 || themeIndex === 1)) || authStore.isPremium)
+                        'card__btn--completed': speakStore.userProgress[theme.id],
+                        'card__btn--locked': !isThemeUnlocked(catIndex, themeIndex)
                       }"
                   >
-                    <template v-if="(catIndex === 0 && (themeIndex === 0 || themeIndex === 1)) || authStore.isPremium">
+                    <template v-if="isThemeUnlocked(catIndex, themeIndex)">
                       {{ speakStore.userProgress[theme.id] ? t('locationQuests.repeat') : t('locationQuests.start') }}
                     </template>
                     <template v-else>
@@ -91,20 +91,20 @@
 </template>
 
 <script setup>
-import {ref, onMounted} from 'vue';
-import {useRouter} from 'vue-router';
+import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 import VBackBtn from "~/src/components/V-back-btn.vue";
 import VBanner from "~/src/components/V-banner.vue";
 import SpeakIcon from "../../assets/images/speakingIcon.svg";
 import VTransition from "~/src/components/V-transition.vue";
-import {useSpeakStore} from '../../store/speakStore.js';
+import { useSpeakStore } from '../../store/speakStore.js';
 import Modal from '../../src/components/modal.vue';
 import SpeakingIcon from '../../assets/images/speakingIcon.svg';
-import { categoriesSpeak} from '../../utils/speak-themes-category.js';
-import {userAuthStore} from '../../store/authStore.js';
+import { categoriesSpeak } from '../../utils/speak-themes-category.js';
+import { userAuthStore } from '../../store/authStore.js';
 import VPremiumModal from "~/src/components/V-premiumModal.vue";
 
-const {t} = useI18n();
+const { t } = useI18n();
 const router = useRouter();
 const speakStore = useSpeakStore();
 const authStore = userAuthStore();
@@ -116,10 +116,40 @@ const getCompletedCount = (category) => {
   return category.themes.filter(theme => speakStore.userProgress[theme.id]).length;
 };
 
+// Новая функция проверки доступности темы
+const isThemeUnlocked = (catIndex, themeIndex) => {
+  // 1. Если есть премиум — открыто всё
+  if (authStore.isPremium) return true;
+
+  // 2. Первые две темы первой категории открыты всегда
+  if (catIndex === 0 && (themeIndex === 0 || themeIndex === 1)) return true;
+
+  // 3. Для остальных: ищем ID предыдущей темы
+  let prevThemeId = null;
+
+  if (themeIndex > 0) {
+    // Предыдущая тема находится в текущей категории
+    prevThemeId = categoriesSpeak[catIndex].themes[themeIndex - 1].id;
+  } else if (catIndex > 0) {
+    // Предыдущая тема — это последняя тема предыдущей категории
+    const prevCategory = categoriesSpeak[catIndex - 1];
+    prevThemeId = prevCategory.themes[prevCategory.themes.length - 1].id;
+  }
+
+  // 4. Если предыдущая тема найдена, проверяем пройдена ли она
+  if (prevThemeId) {
+    return !!speakStore.userProgress[prevThemeId];
+  }
+
+  return false;
+};
+
+// Обновленная функция перехода
 const goToSession = (theme, catIndex, themeIndex) => {
-  if ((catIndex === 0 && (themeIndex === 0 || themeIndex === 1)) || authStore.isPremium) {
-    router.push({path: '/speak-practice/session', query: {theme: theme.id}});
+  if (isThemeUnlocked(catIndex, themeIndex)) {
+    router.push({ path: '/speak-practice/session', query: { theme: theme.id } });
   } else {
+    // Если тема еще закрыта, показываем модалку премиума (апсейл)
     showPremiumModal.value = true;
   }
 };

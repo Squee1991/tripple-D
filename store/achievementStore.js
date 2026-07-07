@@ -221,7 +221,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 					updateCollectionCount()
 				}
 			} else {
-				if (Date.now() >= suppressReplaysUntil.value || id === 'registerAchievement') {
+
+				if (Date.now() >= suppressReplaysUntil.value || id === 'registerAchievement' || id === 'wasPlusUser') {
 					popupQueue.value.push(ach)
 					showNextPopup()
 					lastUnlockedAchievement.value = { id: ach.id, title: ach.title, groupTitle: ach.groupTitle || null, ts: Date.now() }
@@ -247,7 +248,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			'daily', 'guessedSafeWords', 'all_cases', 'all_adjectives', 'all_verbs',
 			'FiveHearts', 'daily42', 'iAmGroot',
 			'santaHat', 'christmasBall', 'christmasWreath',
-			'valentineBear', 'cupidArrow'
+			'valentineBear', 'cupidArrow', 'wasPlusUser'
 		];
 		let unlockedCount = 0;
 		awardAchievementIds.forEach(id => {
@@ -650,6 +651,12 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		}, { immediate: true, deep: true })
 
 		watch(() => authStore.voiceConsentGiven, isGiven => { if (isGiven) updateProgress('voiceActivated', 1) }, { immediate: true })
+		watch(() => authStore.isPremium, (hasPremium) => {
+			if (hasPremium) {
+				updateProgress('wasPlusUser', 1)
+			}
+		}, { immediate: true })
+
 		watch(() => authStore.uid, async uid => { if (uid) { try { await duelStore.loadUserAchievements() } catch {} } }, { immediate: true })
 		watchEffect(() => {
 			updateProgress('guessedFastWords', guessStore.guessedFastWords.length)

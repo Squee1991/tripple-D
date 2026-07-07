@@ -48,7 +48,7 @@
           <div class="sparkles"></div>
           <button class="ach-toast-close" @click="awardVisible = false" aria-label="Закрыть">×</button>
           <div class="ach-toast-icon">
-            <span class="ach-toast-icon-emoji">🎖️</span>
+            <span class="ach-toast-icon-emoji">🏆</span>
           </div>
           <div class="ach-toast-body">
             <div class="ach-toast-msg">

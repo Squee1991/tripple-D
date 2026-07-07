@@ -43,9 +43,15 @@ export const AWARDS = [
 		icon: WasteMoney
 	},
 	{
+		key: 'wasPlusUser',
+		title: 'awards.wasPlusUser',
+		description: 'awards.wasPlusUserDescription',
+		icon: WasteMoney
+	},
+	{
 		key: 'registerAchievement',
-		description: 'awards.registerAchievementDescription',
 		title: 'awards.registerAchievement',
+		description: 'awards.registerAchievementDescription',
 		icon: IdCard
 	},
 	{
