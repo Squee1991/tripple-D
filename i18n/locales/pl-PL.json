@@ -8056,9 +8056,9 @@
     "description": "Chroni Twoje birety przed karami"
   },
   "cardSales": {
-    "title3": "Zniżka 3%",
+    "title3": "Zniżka Plus-I",
     "title5": "Zniżka 5%",
-    "title6": "Zniżka 6%",
+    "title6": "Zniżka Plus-II",
     "title10": "Zniżka 10%",
     "title15": "Zniżka 15%"
   },
@@ -8876,6 +8876,9 @@
   },
   "generalCategory": {
     "generaLabel": "Ogólne osiągnięcia",
+    "wasPlusUserTitle": "Właściciel PLUS",
+    "wasPlusUserDescription": "Wykup subskrypcję PLUS i rozwijaj swój niemiecki w pełnym komforcie!",
+    "wasPlusUserAward": "Nagroda: Worek Articlusów",
     "dailyTitle": "Żelazna wola",
     "dailyText": "Wykonaj 50 ćwiczeń z Dziennika zadań",
     "dailyAward": "Nagroda: Klepsydra wieczności",
@@ -9778,9 +9781,9 @@
     "rank_5": "Kapitan",
     "rank_6": "Strażnik",
     "rank_7": "Legenda",
-    "sale3": "Zniżka 3%",
+    "sale3": "Zniżka Plus-1",
+    "sale6": "Zniżka Plus-2",
     "sale5": "Zniżka 5%",
-    "sale6": "Zniżka 6%",
     "sale10": "Zniżka 10%",
     "sale15": "Zniżka 15%"
   },

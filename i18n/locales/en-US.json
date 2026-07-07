@@ -8063,11 +8063,11 @@
     "description": "Protects your mortarboards from penalties"
   },
   "cardSales": {
-    "title3": "3% discount",
-    "title5": "5% discount",
-    "title6": "6% discount",
-    "title10": "10% discount",
-    "title15": "15% discount"
+    "title3": "Plus-I Discount",
+    "title5": "5% Discount",
+    "title6": "Plus-II Discount",
+    "title10": "10% Discount",
+    "title15": "15% Discount"
   },
   "cardsShop": {
     "full": "Full",
@@ -8883,6 +8883,9 @@
   },
   "generalCategory": {
     "generaLabel": "General Achievements",
+    "wasPlusUserTitle": "PLUS Owner",
+    "wasPlusUserDescription": "Get a PLUS subscription and level up your German in total comfort!",
+    "wasPlusUserAward": "Award: Articlus Sack",
     "dailyTitle": "Iron Will",
     "dailyText": "Complete 50 exercises from the Task Journal",
     "dailyAward": "Reward: Hourglass of Eternity",
@@ -9785,9 +9788,9 @@
     "rank_5": "Captain",
     "rank_6": "Guardian",
     "rank_7": "Legend",
-    "sale3": "3% discount",
+    "sale3": "Plus-1 Discount",
+    "sale6": "Plus-2 Discount",
     "sale5": "5% discount",
-    "sale6": "6% discount",
     "sale10": "10% discount",
     "sale15": "15% discount"
   },
@@ -10562,7 +10565,7 @@
     "privacy": "Privacy Policy",
     "faq": "FAQ",
     "terms": "Terms of service",
-    "attributions": "Атрибуции"
+    "attributions": "Attributions"
   },
   "rankAvatars": {
     "locked_easy_1": "This avatar is awarded for 1st place in the Article Marathon (Easy mode).",

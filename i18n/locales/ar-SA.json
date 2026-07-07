@@ -8058,9 +8058,9 @@
     "description": "يحمي قبعاتك من العقوبات"
   },
   "cardSales": {
-    "title3": "خصم 3%",
+    "title3": "خصم Plus-I",
     "title5": "خصم 5%",
-    "title6": "خصم 6%",
+    "title6": "خصم Plus-II",
     "title10": "خصم 10%",
     "title15": "خصم 15%"
   },
@@ -8878,6 +8878,9 @@
   },
   "generalCategory": {
     "generaLabel": "الإنجازات العامة",
+    "wasPlusUserTitle": "مالك PLUS",
+    "wasPlusUserDescription": "اشترك في باقة PLUS، وطور لغتك الألمانية بكل راحة!",
+    "wasPlusUserAward": "المكافأة: كيس آرتيكلوس",
     "dailyTitle": "إرادة حديدية",
     "dailyText": "أكمل تمارين «سجل المهام» 50 مرة.",
     "dailyAward": "الجائزة: ساعة رملية الأبدية",
@@ -9780,9 +9783,9 @@
     "rank_5": "كابتن",
     "rank_6": "حارس",
     "rank_7": "أسطورة",
-    "sale3": "خصم 3%",
+    "sale3": "خصم Plus-1",
+    "sale6": "خصم Plus-2",
     "sale5": "خصم 5%",
-    "sale6": "خصм 6%",
     "sale10": "خصم 10%",
     "sale15": "خصم 15%"
   },

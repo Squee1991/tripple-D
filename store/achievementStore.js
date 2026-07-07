@@ -112,6 +112,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		'Kartoffel','Karotte','Tomate','Gurke','Zwiebel','Kohl','Paprika',
 		'Rote Bete','Radieschen','Bohne','Mais','Pilz','Knoblauch'
 	]);
+
+	const ANIMAL_TOPICS = new Set(['Animals', 'Birds', 'SeaAnimals', 'Insects', 'Savanna']);
 	const hasAllModes = (word) => required.every(m => word?.progress?.[m])
 	const awardsKey = () => `awards_shown_v1_${authStore?.uid}`
 	const completedKey = () => `achievements_completed_v1_${authStore?.uid}`
@@ -495,7 +497,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 					hasVegan = true;
 					if (!allModes) isVegan = false;
 				}
-				if (w.topic === 'Animals') {
+				if (ANIMAL_TOPICS.has(w.topic)) {
 					hasZoo = true;
 					if (!allModes) isZoo = false;
 				}

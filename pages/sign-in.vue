@@ -199,12 +199,24 @@ const handleSubmit = async () => {
     submitLoading.value = true
 
     if (mode.value === 'reset') {
-      await authStore.resetPassword(values.email)
-      resetSent.value = true
-      setTimeout(() => {
-        mode.value = 'login'
-        resetSent.value = false
-      }, 2500)
+      try {
+        await $fetch('/api/reset-password', {
+          method: 'POST',
+          body: { email: values.email }
+        })
+
+        resetSent.value = true
+        setTimeout(() => {
+          mode.value = 'login'
+          resetSent.value = false
+        }, 2500)
+      } catch (error) {
+        // Обработка ошибки, если письмо не удалось отправить
+        console.error('Ошибка при восстановлении пароля:', error)
+        fields.value.find(f => f.name === 'email').error = 'errors.default' // или другой ключ ошибки для i18n
+      } finally {
+        submitLoading.value = false
+      }
       return
     }
 

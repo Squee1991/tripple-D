@@ -20,7 +20,20 @@ export default defineEventHandler(async (event) => {
 		throw createError({ statusCode: 400, statusMessage: 'Email обязателен' })
 	}
 	try {
-		const resetLink = await admin.auth().generatePasswordResetLink(email)
+		// 1. Получаем стандартную ссылку от Firebase
+		const firebaseResetLink = await admin.auth().generatePasswordResetLink(email)
+
+		// 2. Вытаскиваем из нее oobCode
+		const urlObj = new URL(firebaseResetLink)
+		const oobCode = urlObj.searchParams.get('oobCode')
+
+		// 3. Формируем твою кастомную ссылку
+		// Замени 'https://skillupgerman.com' на твой реальный боевой домен
+		const baseUrl = 'https://language-app-beta.vercel.app'
+
+		const customResetLink = `${baseUrl}/#/update-password?oobCode=${oobCode}`
+
+		// 4. Подставляем кастомную ссылку в шаблон
 		const htmlTemplate = `
     <!DOCTYPE html>
     <html>
@@ -44,7 +57,7 @@ export default defineEventHandler(async (event) => {
                   <table width="100%" cellpadding="0" cellspacing="0" style="margin:30px 0;">
                     <tr>
                       <td align="center">
-                        <a href="${resetLink}" style="background-color:#0056b3; color:#ffffff; text-decoration:none; padding:14px 28px; border-radius:6px; font-weight:bold; display:inline-block;">Reset Password</a>
+                        <a href="${customResetLink}" style="background-color:#0056b3; color:#ffffff; text-decoration:none; padding:14px 28px; border-radius:6px; font-weight:bold; display:inline-block;">Reset Password</a>
                       </td>
                     </tr>
                   </table>
