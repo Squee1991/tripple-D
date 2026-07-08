@@ -19,7 +19,7 @@ const cors = require("cors")({
 	origin: true
 });
 
-const resend = new Resend('re_MBmSQC4S_KiXdMB4cWTzNhxnq5Lj1yS9a');
+const RESEND_API_KEY = defineSecret("RESEND_API_KEY");
 
 exports.takeFromArticlePenalty = onSchedule({
 	schedule: "every 20 minutes",
@@ -197,7 +197,8 @@ YOUR TASK: OUTPUT A RAW JSON OBJECT EXCLUSIVELY. Do NOT wrap in markdown.
 });
 
 
-exports.sendResetEmail = onRequest({ cors: true }, async (req, res) => {
+
+exports.sendResetEmail = onRequest({ cors: true, secrets: [RESEND_API_KEY] }, async (req, res) => {
 	cors(req, res, async () => {
 		if (req.method !== "POST") {
 			return res.status(405).send("Method Not Allowed");
@@ -205,12 +206,13 @@ exports.sendResetEmail = onRequest({ cors: true }, async (req, res) => {
 
 		const { email } = req.body;
 		if (!email) {
-			return res.status(400).json({ error: "Email обязателен" });
+			return res.status(400).json({ error: "Email is required" });
 		}
-
+		const resend = new Resend(RESEND_API_KEY.value());
 		try {
 			const rawLink = await admin.auth().generatePasswordResetLink(email);
-			const actionLink = rawLink.replace('tripple-d-dev.firebaseapp.com', 'language-app-beta.vercel.app');
+			const actionLink = rawLink.replace('tripple-d-90bd2.firebaseapp.com', 'language-app-beta.vercel.app');
+
 			const htmlTemplate = `
             <!DOCTYPE html>
             <html>
@@ -229,16 +231,16 @@ exports.sendResetEmail = onRequest({ cors: true }, async (req, res) => {
                       </tr>
                       <tr>
                         <td style="padding:40px 30px; line-height:1.6; font-size:16px;">
-                          <p>Здравствуйте!</p>
-                          <p>Мы получили запрос на сброс пароля. Нажмите на кнопку ниже, чтобы установить новый:</p>
+                          <p>Hello!</p>
+                          <p>We received a request to reset your password. Click the button below to set up a new one:</p>
                           <table width="100%" cellpadding="0" cellspacing="0" style="margin:30px 0;">
                             <tr>
                               <td align="center">
-                                <a href="${actionLink}" style="background-color:#0056b3; color:#ffffff; text-decoration:none; padding:14px 28px; border-radius:6px; font-weight:bold; display:inline-block;">Сбросить пароль</a>
+                                <a href="${actionLink}" style="background-color:#0056b3; color:#ffffff; text-decoration:none; padding:14px 28px; border-radius:6px; font-weight:bold; display:inline-block;">Reset Password</a>
                               </td>
                             </tr>
                           </table>
-                          <p style="font-size:14px; color:#777777;">Если вы не запрашивали сброс пароля, просто проигнорируйте это письмо.</p>
+                          <p style="font-size:14px; color:#777777;">If you didn't request a password reset, you can safely ignore this email.</p>
                         </td>
                       </tr>
                     </table>
@@ -248,10 +250,11 @@ exports.sendResetEmail = onRequest({ cors: true }, async (req, res) => {
             </body>
             </html>
             `;
+
 			const data = await resend.emails.send({
 				from: 'Skillupgerman <support@skillupgerman.com>',
 				to: email,
-				subject: 'Восстановление пароля — Skillupgerman',
+				subject: 'Password Reset — Skillupgerman',
 				html: htmlTemplate
 			});
 
