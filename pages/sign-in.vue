@@ -197,29 +197,15 @@ const handleSubmit = async () => {
     if (!validateFields(values)) return
 
     submitLoading.value = true
-
     if (mode.value === 'reset') {
-      try {
-        await $fetch('/api/reset-password', {
-          method: 'POST',
-          body: { email: values.email }
-        })
-
-        resetSent.value = true
-        setTimeout(() => {
-          mode.value = 'login'
-          resetSent.value = false
-        }, 2500)
-      } catch (error) {
-        // Обработка ошибки, если письмо не удалось отправить
-        console.error('Ошибка при восстановлении пароля:', error)
-        fields.value.find(f => f.name === 'email').error = 'errors.default' // или другой ключ ошибки для i18n
-      } finally {
-        submitLoading.value = false
-      }
+      await authStore.resetPassword(values.email)
+      resetSent.value = true
+      setTimeout(() => {
+        mode.value = 'login'
+        resetSent.value = false
+      }, 2500)
       return
     }
-
     if (mode.value === 'register') {
       await authStore.registerUser({ name: values.name, email: values.email, password: values.password })
       emits('close-auth-form')
