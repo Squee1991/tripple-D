@@ -210,7 +210,7 @@ exports.sendResetEmail = onRequest({ cors: true }, async (req, res) => {
 
 		try {
 			const rawLink = await admin.auth().generatePasswordResetLink(email);
-			const actionLink = rawLink.replace('tripple-d-dev.firebaseapp.com', 'https://language-app-beta.vercel.app');
+			const actionLink = rawLink.replace('tripple-d-dev.firebaseapp.com', 'language-app-beta.vercel.app');
 			const htmlTemplate = `
             <!DOCTYPE html>
             <html>
@@ -249,7 +249,7 @@ exports.sendResetEmail = onRequest({ cors: true }, async (req, res) => {
             </html>
             `;
 			const data = await resend.emails.send({
-				from: 'Skillupgerman <noreply@skillupgerman.com>',
+				from: 'Skillupgerman <support@skillupgerman.com>',
 				to: email,
 				subject: 'Восстановление пароля — Skillupgerman',
 				html: htmlTemplate
