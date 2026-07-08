@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/__/auth/action",
-      "destination": "https://tripple-d-dev.firebaseapp.com/__/auth/action"
+      "source": "/__/:path*",
+      "destination": "https://tripple-d-dev.firebaseapp.com/__/:path*"
     }
   ]
 }
