@@ -46,6 +46,7 @@ const handleBack = () => {
 
 const isPremium = computed(() => {
   if (justBought.value) return true
+  if (!authStore.isPremium) return false
   const endDateStr = authStore.subscriptionEndsAt
   if (!endDateStr) return false
   return new Date(endDateStr) > new Date()

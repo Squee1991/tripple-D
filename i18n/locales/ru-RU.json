@@ -9550,8 +9550,8 @@
     "TravelTransport": "Транспорт",
     "usualClothes": "Повседневная",
     "winterClothes": "Зимняя",
-    "emotionsPositive": 'Эмоции',
-    "emotionsNegative": 'Эмоции 2'
+    "emotionsPositive": "Эмоции",
+    "emotionsNegative": "Эмоции 2"
   },
   "categoryWords": {
     "nature": "Природа",
@@ -10297,7 +10297,7 @@
     "further": "Продолжить"
   },
   "statistics": {
-    title: "Ваша статистика и прогресс в изучении слов и прохождении тематических уровней"
+    "title": "Ваша статистика и прогресс в изучении слов и прохождении тематических уровней"
   },
   "restoreComputed": {
     "restoring": "Восстановление...",
@@ -10547,9 +10547,9 @@
     "article_19": "Moin универсальный!"
   },
   "i18nDays": {
-    "days": 'д',
-    "hours": 'ч',
-    "mins": 'м'
+    "days": "д",
+    "hours": "ч",
+    "mins": "м"
   },
   "headUp": {
     "audioTasks": "Нужно выбрать хотя бы один вариант ответа",

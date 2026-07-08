@@ -190,7 +190,6 @@ export default defineNuxtConfig({
 				'@capacitor/filesystem',
 				'capacitor-blob-writer'
 			],
-			exclude: ['ios', 'android']
 
 		}
 	},
@@ -202,7 +201,6 @@ export default defineNuxtConfig({
 	nitro: {
 		preset: 'static',
 		ignore: [
-			'ios/**',
 			'android/**'
 		]
 	},

@@ -2,7 +2,6 @@ import { defineStore } from "pinia";
 import { ref, computed } from 'vue';
 import { Capacitor } from '@capacitor/core';
 import { Purchases } from '@revenuecat/purchases-capacitor';
-import { useBillingStore } from '../store/billingStore.js';
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -23,6 +22,7 @@ import {
     fetchSignInMethodsForEmail
 } from 'firebase/auth';
 import { GoogleSignIn } from '@capawesome/capacitor-google-sign-in';
+import { useBillingStore } from './billingStore.js'
 import { AppleSignIn} from "@capawesome/capacitor-apple-sign-in";
 import { doc, setDoc, getDoc, getFirestore, updateDoc, serverTimestamp, writeBatch } from 'firebase/firestore';
 import { userlangStore } from "./learningStore.js";
@@ -64,6 +64,7 @@ export const userAuthStore = defineStore('auth', () => {
     const achievements = ref(null);
     const notEnoughArticle = ref(false);
     const gotPremiumBonus = ref(false);
+    const billingStore = useBillingStore();
     const IMMUNITY_RANK_HATS = 500;
     const availableAvatars = ref([
         '1.png', '2.png', '3.png', '4.png', '5.png', '6.png',
@@ -728,6 +729,7 @@ export const userAuthStore = defineStore('auth', () => {
         if (typeof window !== 'undefined') {
             localStorage.removeItem('cached_premium');
         }
+        billingStore.reset()
 
         if (Capacitor.isNativePlatform()) {
             try {

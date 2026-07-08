@@ -3,13 +3,11 @@ const { onCall, HttpsError } = require("firebase-functions/v2/https");
 const { defineSecret } = require("firebase-functions/params");
 const admin = require("firebase-admin");
 const { onRequest } = require("firebase-functions/v2/https");
-const axios = require('axios');
 const FormData = require('form-data');
 if (admin.apps.length === 0) admin.initializeApp();
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
-const Groq = require("groq-sdk");
 const CYCLE_MS = 24 * 60 * 60 * 1000;
 const IMMUNITY_RANK_HATS = 500;
 const GROQ_API_KEY = defineSecret("GROQ_API_KEY");
@@ -224,12 +222,20 @@ exports.handleRevenueCatWebhook = onRequest(async (req, res) => {
 			case "TRANSFER":
 				if (eventData.transferred_from) {
 					for (const oldUid of eventData.transferred_from) {
-						await db.collection("users").doc(oldUid).update({ isPremium: false });
+						const docRef = db.collection("users").doc(oldUid);
+						const docSnap = await docRef.get();
+						if (docSnap.exists) {
+							await docRef.update({ isPremium: false });
+						} else {
+							console.log(`Пропуск: документ ${oldUid} не найден (вероятно, анонимный iOS ID)`);
+						}
 					}
 				}
 				if (eventData.transferred_to) {
 					for (const newUid of eventData.transferred_to) {
-						await db.collection("users").doc(newUid).update({ isPremium: true });
+						await db.collection("users").doc(newUid).set({
+							isPremium: true
+						}, { merge: true });
 					}
 				}
 				break;

@@ -10,14 +10,22 @@ export const useBillingStore = defineStore('billing', () => {
 	const db = getFirestore()
 	const offerings = ref([])
 	const activeDiscountId = ref(null)
-
+	const isInitialized = ref(false) // Добавляем флаг
 	const isMobile = computed(() => Capacitor.isNativePlatform())
 	const isPurchasing = ref(false)
 	const currentPlatform = Capacitor.getPlatform()
 	const paymentSource = currentPlatform === 'ios' ? 'apple' : 'google'
 
+
+	const reset = () => {
+		isInitialized.value = false
+		offerings.value = []
+		activeDiscountId.value = null
+	}
+
 	const initialize = async () => {
 		if (!isMobile.value) return
+		if (isInitialized.value) return
 		try {
 			if (!authStore.uid || authStore.uid === '') return
 			let apiKey = ''
@@ -35,6 +43,7 @@ export const useBillingStore = defineStore('billing', () => {
 			await loadOfferings()
 			const initialInfo = await Purchases.getCustomerInfo()
 			await handleSubscriptionStatus(initialInfo)
+			isInitialized.value = true
 		} catch (e) {
 			console.error('RC Init Error:', e)
 		}
@@ -63,19 +72,16 @@ export const useBillingStore = defineStore('billing', () => {
 					localStorage.setItem('cached_premium', 'true')
 				}
 			}
-		} else {
-			const pastPremium = info?.entitlements?.all?.['premium']
-			if (pastPremium && pastPremium.isActive === false) {
-				if (authStore.isPremium) {
-					authStore.isPremium = false
-					authStore.subscriptionCancelled = false
-					await updateDoc(doc(db, 'users', authStore.uid), {
-						isPremium: false,
-						subscriptionCancelled: false
-					})
-					if (typeof window !== 'undefined') {
-						localStorage.setItem('cached_premium', 'false')
-					}
+		} else if (info && info.entitlements) {
+			if (authStore.isPremium) {
+				authStore.isPremium = false
+				authStore.subscriptionCancelled = false
+				await updateDoc(doc(db, 'users', authStore.uid), {
+					isPremium: false,
+					subscriptionCancelled: false
+				})
+				if (typeof window !== 'undefined') {
+					localStorage.setItem('cached_premium', 'false')
 				}
 			}
 		}
@@ -162,6 +168,7 @@ export const useBillingStore = defineStore('billing', () => {
 		handleSubscriptionStatus,
 		loadOfferings,
 		buy,
-		restore
+		restore,
+		reset
 	}
 })
