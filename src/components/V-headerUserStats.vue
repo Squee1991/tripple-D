@@ -11,7 +11,6 @@
     >
       <button class="stat-btn"
               @click.stop="handleStatClick(item.id === 'plus' ? toPay() : item)">
-        <span class="item__label"> {{ item.title }}</span>
         <img
             v-if="item.id === 'rank' && userAuth.isFreezeActive"
             class="stat-icon freeze-icon"
@@ -26,6 +25,7 @@
               :src="item.icon"
               :alt="item.alt"
           >
+          <span class="item__label"> {{ item.title }}:</span>
         <span v-if="!userAuth.isPremium || item.id !== 'lives'" class="stat-value">{{ item.value }}</span>
         </span>
       </button>
@@ -114,7 +114,6 @@ const getIconClass = (item) => {
 const infoData = computed(() => [
   {
     id: 'plus',
-    title: 'Skillup+',
     icon: LogoPlus
   },
   {
@@ -234,6 +233,7 @@ onBeforeUnmount(() => {
   padding: 0 2px;
   height: 38px;
   cursor: pointer;
+  gap: 5px;
 }
 
 .stat-icon {

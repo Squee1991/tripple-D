@@ -250,7 +250,6 @@ exports.sendResetEmail = onRequest({ cors: true, secrets: [RESEND_API_KEY] }, as
             </body>
             </html>
             `;
-
 			const data = await resend.emails.send({
 				from: 'Skillupgerman <support@skillupgerman.com>',
 				to: email,

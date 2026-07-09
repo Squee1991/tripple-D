@@ -584,7 +584,7 @@ const handleCategoryClick = (category) => {
 <style scoped>
 .achievements-page-container {
   display: flex;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   padding: 10px;
   gap: 15px;

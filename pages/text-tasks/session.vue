@@ -223,7 +223,7 @@ const handleBlankClick = (blankId) => {
 <style scoped>
 .drag-page {
   font-family: "Nunito", sans-serif;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   overflow: hidden;
