@@ -8036,11 +8036,11 @@
     "description": "Protège vos toques des pénalités"
   },
   "cardSales": {
-    "title3": "3% de réduction",
-    "title5": "5% de réduction",
-    "title6": "6% de réduction",
-    "title10": "10% de réduction",
-    "title15": "15% de réduction"
+    "title3": "Réduction Plus-I",
+    "title5": "Réduction de 5%",
+    "title6": "Réduction Plus-II",
+    "title10": "Réduction de 10%",
+    "title15": "Réduction de 15%"
   },
   "cardsShop": {
     "full": "Plein",
@@ -8856,6 +8856,9 @@
   },
   "generalCategory": {
     "generaLabel": "Succès généraux",
+    "wasPlusUserTitle": "Possesseur PLUS",
+    "wasPlusUserDescription": "Obtenez un abonnement PLUS et améliorez votre allemand en tout confort !",
+    "wasPlusUserAward": "Récompense : Sac d'Articlus",
     "dailyTitle": "Volonté de fer",
     "dailyText": "Réalisez 50 exercices du journal de quêtes",
     "dailyAward": "Récompense : Sablier de l'éternité",
@@ -9758,9 +9761,9 @@
     "rank_5": "Capitaine",
     "rank_6": "Gardien",
     "rank_7": "Légende",
-    "sale3": "Remise 3%",
+    "sale3": "Réduction Plus-1",
+    "sale6": "Réduction Plus-2",
     "sale5": "Remise 5%",
-    "sale6": "Remise 6%",
     "sale10": "Remise 10%",
     "sale15": "Remise 15%"
   },

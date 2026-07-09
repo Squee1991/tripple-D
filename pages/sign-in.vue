@@ -197,7 +197,6 @@ const handleSubmit = async () => {
     if (!validateFields(values)) return
 
     submitLoading.value = true
-
     if (mode.value === 'reset') {
       await authStore.resetPassword(values.email)
       resetSent.value = true
@@ -207,7 +206,6 @@ const handleSubmit = async () => {
       }, 2500)
       return
     }
-
     if (mode.value === 'register') {
       await authStore.registerUser({ name: values.name, email: values.email, password: values.password })
       emits('close-auth-form')

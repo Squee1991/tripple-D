@@ -106,7 +106,7 @@ export const cpecialGroupAchievment = [
 				icon: "🌱",
 				awards: "specialCategory.specialGrotAward",
 				currentProgress: 0,
-				targetProgress: 4,
+				targetProgress: 3,
 			},
 			{
 				id: "totalArticles1000",

@@ -8035,9 +8035,9 @@
     "description": "Qalpoqlaringizni jarimalardan himoya qiladi"
   },
   "cardSales": {
-    "title3": "3% chegirma",
+    "title3": "Plus-I chegirmasi",
     "title5": "5% chegirma",
-    "title6": "6% chegirma",
+    "title6": "Plus-II chegirmasi",
     "title10": "10% chegirma",
     "title15": "15% chegirma"
   },
@@ -8855,6 +8855,9 @@
   },
   "generalCategory": {
     "generaLabel": "Umumiy yutuqlar",
+    "wasPlusUserTitle": "PLUS egasi",
+    "wasPlusUserDescription": "PLUS obunasini xarid qiling va nemis tilingizni to'liq qulaylik bilan rivojlantiring!",
+    "wasPlusUserAward": "Mukofot: Artiklyuslar qopi",
     "dailyTitle": "Temir iroda",
     "dailyText": "Topshiriqlar jurnalidan 50 marta mashqlarni bajaring",
     "dailyAward": "Mukofot: Abadiylik qum soati",
@@ -9757,9 +9760,9 @@
     "rank_5": "Kapitan",
     "rank_6": "Qo'riqchi",
     "rank_7": "Afsona",
-    "sale3": "3% chegirma",
+    "sale3": "Plus-1 chegirmasi",
+    "sale6": "Plus-2 chegirmasi",
     "sale5": "5% chegirma",
-    "sale6": "6% chegirma",
     "sale10": "10% chegirma",
     "sale15": "15% chegirma"
   },

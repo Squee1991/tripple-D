@@ -8049,11 +8049,11 @@
     "description": "Keplerinizi cezalara karşı korur"
   },
   "cardSales": {
-    "title3": "%3 indirim",
-    "title5": "%5 indirim",
-    "title6": "%6 indirim",
-    "title10": "%10 indirim",
-    "title15": "%15 indirim"
+    "title3": "Plus-I İndirimi",
+    "title5": "%5 İndirim",
+    "title6": "Plus-II İndirimi",
+    "title10": "%10 İndirim",
+    "title15": "%15 İndirim"
   },
   "cardsShop": {
     "full": "Tam",
@@ -8869,6 +8869,9 @@
   },
   "generalCategory": {
     "generaLabel": "Genel Başarılar",
+    "wasPlusUserTitle": "PLUS Sahibi",
+    "wasPlusUserDescription": "PLUS aboneliği alın ve Almancanızı tam bir konforla geliştirin!",
+    "wasPlusUserAward": "Ödül: Articlus Kesesi",
     "dailyTitle": "Demir İrade",
     "dailyText": "Görev Günlüğünden 50 alıştırma yap",
     "dailyAward": "Ödül: Sonsuzluk Kum Saati",
@@ -9771,9 +9774,9 @@
     "rank_5": "Kaptan",
     "rank_6": "Muhafız",
     "rank_7": "Efsane",
-    "sale3": "%3 indirim",
+    "sale3": "Plus-1 İndirimi",
+    "sale6": "Plus-2 İndirimi",
     "sale5": "%5 indirim",
-    "sale6": "%6 indirim",
     "sale10": "%10 indirim",
     "sale15": "%15 indirim"
   },

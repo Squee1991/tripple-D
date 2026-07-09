@@ -21,10 +21,10 @@ export const overAchievment = [
 			// },
 			{
 				id: "wasPlusUser",
-				name: "Обладатель PLUS",
-				description: "Приобрети подписку PLUS, и прокачивай свой немецкий в полном комфорте!",
-				icon: "🪙",
-				awards: "Награда: Мешок с артиклюсами",
+				name: "generalCategory.wasPlusUserTitle",
+				description: "generalCategory.wasPlusUserDescription",
+				icon: "💎",
+				awards: "generalCategory.wasPlusUserAward",
 				currentProgress: 0,
 				targetProgress: 1
 			},

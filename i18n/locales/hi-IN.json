@@ -8016,9 +8016,9 @@
     "description": "आपकी टोपियों को दंड से बचाता है"
   },
   "cardSales": {
-    "title3": "3% छूट",
+    "title3": "Plus-I छूट",
     "title5": "5% छूट",
-    "title6": "6% छूट",
+    "title6": "Plus-II छूट",
     "title10": "10% छूट",
     "title15": "15% छूट"
   },
@@ -8836,6 +8836,9 @@
   },
   "generalCategory": {
     "generaLabel": "सामान्य उपलब्धियाँ",
+    "wasPlusUserTitle": "PLUS ओनर",
+    "wasPlusUserDescription": "PLUS सब्सक्रिप्शन लें, और पूरी सुविधा के साथ अपनी जर्मन भाषा में सुधार करें!",
+    "wasPlusUserAward": "पुरस्कार: आर्टिक्लस की बोरी",
     "dailyTitle": "अटल संकल्प",
     "dailyText": "कार्य लॉग से 50 बार अभ्यास पूरा करें",
     "dailyAward": "पुरस्कार: अनंत काल की रेतघड़ी",
@@ -9738,9 +9741,9 @@
     "rank_5": "कप्तान",
     "rank_6": "संरक्षक",
     "rank_7": "दिग्गज",
-    "sale3": "3% छूट",
+    "sale3": "Plus-1 छूट",
+    "sale6": "Plus-2 छूट",
     "sale5": "5% छूट",
-    "sale6": "6% छूट",
     "sale10": "10% छूट",
     "sale15": "15% छूट"
   },
