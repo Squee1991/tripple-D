@@ -6,3 +6,12 @@
     }
   ]
 }
+
+//{
+//  "rewrites": [
+//    {
+//      "source": "/__/:path*",
+//      "destination": "https://tripple-d-90bd2.firebaseapp.com/__/:path*"
+//    }
+//  ]
+//}
