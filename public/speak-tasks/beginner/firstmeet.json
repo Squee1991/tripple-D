@@ -436,7 +436,7 @@
     "defaultNext": "encourage"
   },
   "encourage": {
-    "botText": "Das ist toll! Viel Erfolg und noch einen schönen Tag!",
+    "botText": "Das ist toll. Viel Erfolg und noch einen schönen Tag!",
     "botTranslation": {
       "ar-SA": "هذا رائع! حظاً موفقاً ويوم جميل لك!",
       "en-US": "That is great! Good luck and have a nice day!",

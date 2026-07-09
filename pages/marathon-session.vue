@@ -1,7 +1,7 @@
 <template>
   <div class="game-page-layout">
     <div class="top-bar">
-      <VStopSessionBtn @close="backTo" />
+      <VStopSessionBtn @close="backTo"/>
       <div class="lives-bar">
         <div class="hearts-container">
           <span v-for="life in 5" :key="life" class="heart" :class="{ 'lost': life > gameStore.lives }">❤️</span>
@@ -32,15 +32,12 @@
           </div>
         </div>
       </header>
-
       <main class="game-content">
-        <div v-if="gameStore.gameActive && gameStore.currentWord" class="game-area">
-
+        <div v-if="gameStore.currentWord" class="game-area">
           <div class="word-display" :class="feedbackClass">
             <h1>{{ gameStore.currentWord.de }}</h1>
           </div>
-
-          <div class="actions" :class="{ 'disabled': isChecking }">
+          <div class="actions" :class="{ 'disabled': isChecking || !gameStore.gameActive }">
             <button @click="handleArticleChoice('der')" class="article-btn der">
               <span class="article-text">der</span>
             </button>
@@ -52,9 +49,11 @@
             </button>
           </div>
         </div>
-
-        <div v-else class="game-over-wrapper">
-          <div class="game-over">
+      </main>
+      <Transition name="bottom-sheet">
+        <div v-if="!gameStore.gameActive" class="game-over-overlay">
+          <div class="overlay-backdrop"></div>
+          <div class="game-over-sheet">
             <h1 class="game-over__title">{{ t('marathonGame.end') }}</h1>
 
             <div class="score-card">
@@ -63,14 +62,14 @@
                 <span class="score-value">{{ gameStore?.sessionStreak }}</span>
               </p>
 
-              <div v-if="gameStore.sessionStreak > 0 && gameStore.sessionStreak >= currentDifficultyRecord" class="record-badge">
+              <div v-if="gameStore.sessionStreak > 0 && gameStore.sessionStreak >= currentDifficultyRecord"
+                   class="record-badge">
                 🎉 {{ t('marathonGame.newRecord') }} 🎉
               </div>
               <p v-else class="game-over__best-score">
                 {{ t('marathonGame.bestResult') }} {{ currentDifficultyRecord }}
               </p>
             </div>
-
             <div class="game-over__actions">
               <button @click="gameStore.retryGame()" class="btn-gummy btn-gummy--success">
                 {{ t('marathonGame.tryAgain') }}
@@ -79,12 +78,13 @@
                 {{ t('marathonGame.back') }}
               </button>
               <button @click="toMain" class="btn-gummy btn-gummy--secondary">
-                {{ t('marathonGame.main') }}
+                {{ t('eventSessionPage.leave') }}
               </button>
             </div>
           </div>
         </div>
-      </main>
+      </Transition>
+
     </template>
   </div>
 </template>
@@ -120,7 +120,7 @@ const feedbackClass = computed(() => {
 })
 
 function handleArticleChoice(chosenArticle) {
-  if (isChecking.value) return
+  if (isChecking.value || !gameStore.gameActive) return
   isChecking.value = true
 
   const isCorrect = chosenArticle === gameStore.currentWord.article
@@ -147,9 +147,7 @@ function toMain() {
   router.push('/')
 }
 
-watch(
-    () => gameStore.gameReady,
-    (isReady) => {
+watch(() => gameStore.gameReady, (isReady) => {
       if (!isReady) {
         setTimeout(() => {
           router.push('/article-marathon')
@@ -160,7 +158,7 @@ watch(
 )
 
 onMounted(() => {
-  const captureOpts = { capture: true };
+  const captureOpts = {capture: true};
   const unlockOnce = () => {
     unlockAudioByUserGesture();
     window.removeEventListener('pointerdown', unlockOnce, captureOpts);
@@ -190,7 +188,7 @@ onMounted(() => {
 }
 
 .top-bar {
-  padding: 25px 15px;
+  padding: 5px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -206,7 +204,7 @@ onMounted(() => {
 .hearts-container {
   display: flex;
   gap: 4px;
-  font-size: 25px;
+  font-size: 28px;
   line-height: 1;
 }
 
@@ -237,18 +235,18 @@ onMounted(() => {
 .stat-widget {
   flex: 1;
   background: #ffffff;
-  border: 3px solid #1e1e1e;
-  border-radius: 16px;
-  padding: 8px 12px;
+  border: 3px solid var(--tabsSlideBorderColor);
+  border-radius: 26px;
+  padding: 6px 12px;
   text-align: center;
-  box-shadow: 0 4px 0 #1e1e1e;
+  box-shadow: 0 14px 0 var(--boxShadowMobile);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .widget-label {
-  font-size: 0.85rem;
+  font-size:  16px;
   font-weight: 800;
   color: #6b7280;
   text-transform: uppercase;
@@ -256,10 +254,11 @@ onMounted(() => {
 }
 
 .widget-value {
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: #1e1e1e;
+  font-size: 36px;
+  color: #888484;
   line-height: 1;
+  font-family: Lilita One, sans-serif;
+
 }
 
 .stat-widget.record .widget-value {
@@ -272,9 +271,13 @@ onMounted(() => {
   box-shadow: 0 4px 0 #ef4444;
 }
 
-.stat-widget.timer .widget-label { color: #b91c1c; }
-.stat-widget.timer .widget-value { color: #ef4444; }
+.stat-widget.timer .widget-label {
+  color: #b91c1c;
+}
 
+.stat-widget.timer .widget-value {
+  color: #ef4444;
+}
 
 .game-content {
   flex: 1;
@@ -296,7 +299,6 @@ onMounted(() => {
   flex: 1;
 }
 
-
 .word-display {
   text-align: center;
   min-height: 150px;
@@ -316,17 +318,28 @@ onMounted(() => {
   transition: color 0.2s ease;
 }
 
-.feedback-correct h1 { color: #4ade80; }
-.feedback-incorrect h1 { color: #f87171; }
+.feedback-correct h1 {
+  color: #4ade80;
+}
+
+.feedback-incorrect h1 {
+  color: #f87171;
+}
 
 .feedback-incorrect {
   animation: gentle-shake 0.4s ease both;
 }
 
 @keyframes gentle-shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-4px); }
-  75% { transform: translateX(4px); }
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
 }
 
 .actions {
@@ -346,10 +359,9 @@ onMounted(() => {
 
 .article-btn {
   flex: 1;
-  padding: 20px 10px;
-  border-radius: 20px;
-  border: 4px solid #1e1e1e;
-  box-shadow: 0 6px 0 #1e1e1e;
+  padding: 16px 10px;
+  border-radius: 58px;
+  border: none;
   cursor: pointer;
   transition: all 0.1s cubic-bezier(0.34, 1.56, 0.64, 1);
   display: flex;
@@ -362,7 +374,6 @@ onMounted(() => {
   box-shadow: 0 0 0 #1e1e1e;
 }
 
-/* Текст внутри артиклей */
 .article-text {
   font-family: "Nunito", sans-serif;
   font-size: 32px;
@@ -371,51 +382,85 @@ onMounted(() => {
   text-transform: lowercase;
 }
 
-/* Цвета артиклей */
-.article-btn.der { background-color: #60a5fa; }
-.article-btn.die { background-color: #f87171; }
-.article-btn.das { background-color: #fca13a; }
-
-/* Экран конца игры */
-.game-over-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
+.article-btn.der {
+  background-color: #60a5fa;
+  box-shadow: 0 6px 0 #3774be;
 }
 
-.game-over {
-  background-color: #ffffff;
-  border: 4px solid #1e1e1e;
-  border-radius: 28px;
-  box-shadow: 0 8px 0 #1e1e1e;
-  padding: 32px 24px;
-  max-width: 400px;
+.article-btn.die {
+  background-color: #f87171;
+  box-shadow: 0 6px 0 #c74a4a;
+}
+
+.article-btn.das {
+  background-color: #fca13a;
+  box-shadow: 0 6px 0 #bb701a;
+}
+
+.game-over-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.overlay-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+}
+
+.game-over-sheet {
+  position: relative;
+  background-color: var(--bgModal);
+  border-top: 4px solid #1e1e1e;
+  border-left: 4px solid #1e1e1e;
+  border-right: 4px solid #1e1e1e;
+  border-radius: 32px 32px 0 0;
+  padding: 32px 24px calc(env(safe-area-inset-bottom) + 32px);
+  max-width: 600px;
   width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 -8px 0 rgba(30, 30, 30, 0.1);
+  z-index: 101;
 }
 
-.game-over__icon {
-  font-size: 64px;
-  margin-bottom: 12px;
-  animation: bounceIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+.bottom-sheet-enter-active,
+.bottom-sheet-leave-active {
+  transition: opacity 0.25s ease-out;
+}
+
+.bottom-sheet-enter-active .game-over-sheet,
+.bottom-sheet-leave-active .game-over-sheet {
+  transition: transform 0.25s ease-out;
+}
+
+.bottom-sheet-enter-from,
+.bottom-sheet-leave-to {
+  opacity: 0;
+}
+
+.bottom-sheet-enter-from .game-over-sheet,
+.bottom-sheet-leave-to .game-over-sheet {
+  transform: translateY(100%);
 }
 
 .game-over__title {
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 900;
-  color: #1e1e1e;
+  color: var(--titleColor);
   margin: 0 0 20px 0;
 }
 
 .score-card {
-  background: #f3f4f6;
-  border: 3px solid #e5e7eb;
+  background: var(--menuItemsBg);
   border-radius: 20px;
   padding: 20px;
   width: 100%;
@@ -462,18 +507,18 @@ onMounted(() => {
 .game-over__actions {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   width: 100%;
 }
 
 .btn-gummy {
   width: 100%;
-  padding: 16px;
+  padding: 12px;
   font-family: "Nunito", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 900;
-  border-radius: 16px;
-  border: 3px solid #1e1e1e;
+  border-radius: 50px;
+  border: none;
   cursor: pointer;
   transition: all 0.1s cubic-bezier(0.34, 1.56, 0.64, 1);
   text-transform: uppercase;
@@ -486,19 +531,19 @@ onMounted(() => {
 
 .btn-gummy--primary {
   background: #60a5fa;
-  color: #1e1e1e;
-  box-shadow: 0 5px 0 #1e1e1e;
+  color: white;
+  box-shadow: 0 5px 0 #4480c9;
 }
 
 .btn-gummy--success {
-  background: #4ade80;
-  color: #1e1e1e;
-  box-shadow: 0 5px 0 #1e1e1e;
+  background: #33aa5e;
+  color: white;
+  box-shadow: 0 5px 0 #2cad5b;
 }
 
 .btn-gummy--secondary {
-  background: #ffffff;
-  color: #1e1e1e;
+  background: none;
+  color: grey;
   box-shadow: 0 5px 0 #1e1e1e;
 }
 
@@ -506,7 +551,6 @@ onMounted(() => {
   box-shadow: 0 0 0 #1e1e1e;
 }
 
-/* Загрузка */
 .not-ready-container {
   flex: 1;
   display: flex;
@@ -543,21 +587,24 @@ onMounted(() => {
   border-radius: 50%;
   animation: bounce 0.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95);
 }
-.bouncy-loader span:nth-child(2) { animation-delay: 0.1s; }
-.bouncy-loader span:nth-child(3) { animation-delay: 0.2s; }
+
+.bouncy-loader span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.bouncy-loader span:nth-child(3) {
+  animation-delay: 0.2s;
+}
 
 @keyframes bounce {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-15px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
 }
 
-@keyframes bounceIn {
-  0% { transform: scale(0.5); opacity: 0; }
-  70% { transform: scale(1.1); }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-/* Адаптив под мобилки */
 @media (max-width: 1023px) {
   .game-header {
     flex-direction: column;
@@ -576,20 +623,11 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .word-display h1 {
-    font-size: 30px;
+    font-size: 32px;
   }
-
   .game-area {
     gap: 30px;
   }
-
-  .article-btn {
-    padding: 16px 4px;
-    border-radius: 16px;
-    border-width: 3px;
-    box-shadow: 0 4px 0 #1e1e1e;
-  }
-
   .article-text {
     font-size: 24px;
   }

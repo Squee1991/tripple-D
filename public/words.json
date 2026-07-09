@@ -218,9 +218,9 @@
 		{ "ru": "Стельки", "en": "Insoles", "tr": "Ayakkabı astarı", "pl": "Wkładki do butów", "uk": "Устілки", "es": "Plantillas", "uz": "Stelka", "ar": "فرشة الحذاء", "de": "Einlegesohlen", "fr": "Semelles", "hi": "धूप का चश्मा", "ro": "Branțuri", "article": "die", "plural": "Einlegesohlen", "pluralArticle": "die" }
 	],
 	"Food": [
-		{ "ru": "Салями", "en": "Salami", "tr": "Salam", "pl": "Salami", "uk": "Салямі", "es": "Salami", "uz": "Salami", "ar": "سلامي", "de": "Salami", "fr": "Salami", "hi": "सलामी", "ro": "Salam", "article": "die", "plural": "Salamis", "pluralArticle": "die" },
 		{ "ru": "Хлеб", "en": "Bread", "tr": "Ekmek", "pl": "Chleb", "uk": "Хліб", "es": "Pan", "uz": "Nonga", "ar": "خبز", "de": "Brot", "fr": "Pain", "hi": "ब्रेड", "ro": "Pâine", "article": "das", "plural": "Brote", "pluralArticle": "die" },
 		{ "ru": "Вода", "en": "Water", "tr": "Su", "pl": "Woda", "uk": "Вода", "es": "Agua", "uz": "Suv", "ar": "ماء", "de": "Wasser", "fr": "Eau", "hi": "पानी", "ro": "Apă", "article": "das", "plural": "Wässer", "pluralArticle": "die" },
+		{ "ru": "Салями", "en": "Salami", "tr": "Salam", "pl": "Salami", "uk": "Салямі", "es": "Salami", "uz": "Salami", "ar": "سلامي", "de": "Salami", "fr": "Salami", "hi": "सलामी", "ro": "Salam", "article": "die", "plural": "Salamis", "pluralArticle": "die" },
 		{ "ru": "Мясо", "en": "Meat", "tr": "Et", "pl": "Mięso", "uk": "М'ясо", "es": "Carne", "uz": "Go‘sht", "ar": "لحم", "de": "Fleisch", "fr": "Viande", "hi": "मांस", "ro": "Carne", "article": "das", "plural": "Fleischsorten", "pluralArticle": "die" },
 		{ "ru": "Яйцо", "en": "Egg", "tr": "Yumurta", "pl": "Jajko", "uk": "Яйце", "es": "Huevo", "uz": "Tuxum", "ar": "بيضة", "de": "Ei", "fr": "Œuf", "hi": "अंडा", "ro": "Ou", "article": "das", "plural": "Eier", "pluralArticle": "die" },
 		{ "ru": "Еда", "en": "Food", "tr": "Yemek", "pl": "Jedzenie", "uk": "Їжа", "es": "Comida", "uz": "Oziq-ovqat", "ar": "طعام", "de": "Essen", "fr": "Nourriture", "hi": "खाना", "ro": "Mâncare", "article": "das", "plural": "Essen", "pluralArticle": "die" },
@@ -908,7 +908,6 @@
 		{ "ru": "Крёстная мать", "en": "Godmother", "tr": "Vaftiz annesi", "pl": "Matka chrzestna", "uk": "Хрещена мати", "es": "Madrina", "uz": "Cho'qintirgan ona", "ar": "الأم الروحية", "de": "Patentante", "fr": "Marraine", "hi": "गॉडमदर", "ro": "Nașă", "article": "die", "plural": "Patentanten", "pluralArticle": "die" },
 		{ "ru": "Крёстник", "en": "Godchild", "tr": "Vaftiz çocuğu", "pl": "Chrześniak", "uk": "Похресник", "es": "Ahijado", "uz": "Cho'qintirilgan bola", "ar": "الابن الروحي", "de": "Patenkind", "fr": "Filleul", "hi": "धर्मपुत्र", "ro": "Fin", "article": "das", "plural": "Patenkinder", "pluralArticle": "die" }
 	],
-
 	"negativeEmotions": [
 		{ "ru": "Грусть", "en": "Sadness", "tr": "Üzüntü", "pl": "Smutek", "uk": "Смуток", "es": "Tristeza", "uz": "Ma'yuslik", "ar": "حزن", "de": "Traurigkeit", "fr": "Tristesse", "hi": "उदासी", "ro": "Tristețe", "article": "die", "plural": "Traurigkeiten", "pluralArticle": "die" },
 		{ "ru": "Злость", "en": "Anger", "tr": "Öfke", "pl": "Złość", "uk": "Злість", "es": "Ira", "uz": "G'azab", "ar": "غضب", "de": "Wut", "fr": "Colère", "hi": "गुस्सा", "ro": "Furie", "article": "die", "plural": "Wutanfälle", "pluralArticle": "die" },
@@ -951,7 +950,6 @@
 		{ "ru": "Расслабленность", "en": "Relaxation", "tr": "Gevşeme", "pl": "Odprężenie", "uk": "Розслабленість", "es": "Relajación", "uz": "Bo'shashish", "ar": "استرخاء", "de": "Entspannung", "fr": "Détente", "hi": "विश्राम", "ro": "Relaxare", "article": "die", "plural": "Entspannungen", "pluralArticle": "die" },
 		{ "ru": "Уверенность", "en": "Self-confidence", "tr": "Özgüven", "pl": "Pewność siebie", "uk": "Впевненість", "es": "Confianza en sí mismo", "uz": "O'ziga ishonch", "ar": "ثقة بالنفس", "de": "Selbstsicherheit", "fr": "Confiance en soi", "hi": "आत्मविश्वास", "ro": "Încredere în sine", "article": "die", "plural": "Selbstsicherheiten", "pluralArticle": "die" }
 	],
-
 	"Emotions": [
 		{ "ru": "Эмоция", "en": "Emotion", "tr": "Duygu", "pl": "Emocja", "uk": "Емоція", "es": "Emoción", "uz": "Hissiyot", "ar": "عاطفة", "de": "Emotion", "fr": "Émotion", "hi": "भावना", "ro": "Emoție", "article": "die", "plural": "Emotionen", "pluralArticle": "die" },
 		{ "ru": "Радость", "en": "Joy", "tr": "Sevinç", "pl": "Radość", "uk": "Радість", "es": "Alegría", "uz": "Shodlik", "ar": "فرح", "de": "Freude", "fr": "Joie", "hi": "खुशी", "ro": "Bucurie", "article": "die", "plural": "Freuden", "pluralArticle": "die" },
@@ -986,8 +984,6 @@
 		{ "ru": "Уверенность", "en": "Self-confidence", "tr": "Özgüven", "pl": "Pewność siebie", "uk": "Впевненість", "es": "Confianza en sí mismo", "uz": "O'ziga ishonch", "ar": "ثقة بالنفس", "de": "Selbstsicherheit", "fr": "Confiance en soi", "hi": "आत्मविश्वास", "ro": "Încredere în sine", "article": "die", "plural": "Selbstsicherheiten", "pluralArticle": "die" },
 		{ "ru": "Неуверенность", "en": "Insecurity", "tr": "Güvensizlik", "pl": "Niepewność", "uk": "Невпевненість", "es": "Inseguridad", "uz": "Ishonchsizlik", "ar": "عدم الأمان", "de": "Unsicherheit", "fr": "Insécurité", "hi": "असुरक्षा", "ro": "Insecuritate", "article": "die", "plural": "Unsicherheiten", "pluralArticle": "die" }
 	],
-
-
 	"HandTools": [
 		{ "ru": "Инструмент", "en": "Tool", "tr": "Alet", "pl": "Narzędzie", "uk": "Інструмент", "es": "Herramienta", "uz": "Asbob", "ar": "أداة", "de": "Werkzeug", "fr": "Outil", "hi": "उपकरण", "ro": "Unealtă", "article": "das", "plural": "Werkzeuge", "pluralArticle": "die" },
 		{ "ru": "Молоток", "en": "Hammer", "tr": "Çekiç", "pl": "Młotek", "uk": "Молоток", "es": "Martillo", "uz": "Bolg'a", "ar": "مطرقة", "de": "Hammer", "fr": "Marteau", "hi": "हथौड़ा", "ro": "Ciocan", "article": "der", "plural": "Hämmer", "pluralArticle": "die" },
@@ -1180,7 +1176,7 @@
 		{"ru": "Путёвка", "en": "Voucher", "tr": "Tatil kuponu", "pl": "Kupon podróżny", "uk": "Путівка", "es": "Vale de viaje", "uz": "Sayohat vaucheri", "ar": "قسيمة سفر", "de": "Reisegutschein", "fr": "Bon de voyage", "hi": "वाउचर", "ro": "Voucher", "article": "der", "plural": "Reisegutscheine", "pluralArticle": "die"},
 		{"ru": "Регистрация", "en": "Check-in", "tr": "Check-in", "pl": "Odprawa", "uk": "Реєстрація", "es": "Registro", "uz": "Ro‘yxatdan o‘tish", "ar": "تسجيل الوصول", "de": "Check-in", "fr": "Enregistrement", "hi": "चेк-ин", "ro": "Check-in", "article": "der", "plural": "Check-ins", "pluralArticle": "die"},
 		{"ru": "Стойка регистрации", "en": "Check-in desk", "tr": "Check-in masası", "pl": "Stanowisko odprawy", "uk": "Стійка реєстрації", "es": "Mostrador de facturación", "uz": "Ro‘yxatga olish joyi", "ar": "مكتب تسجيل الوصول", "de": "Check-in-Schalter", "fr": "Comptoir d'enregistrement", "hi": "चेк-ин डेस्क", "ro": "Ghișeu de check-in", "article": "der", "plural": "Check-in-Schalter", "pluralArticle": "die"},
-		{"ru": "Досмотр", "en": "Security check", "tr": "Güvenlik kontrolü", "pl": "Kontrola bezpieczeństwa", "uk": "Огляд", "es": "Control de seguridad", "uz": "Xavfsizlik tekshiruvi", "ar": "تفتيش أمني", "de": "Sicherheitsконтролле", "fr": "Contrôle de sécurité", "hi": "सुरक्षा जांच", "ro": "Control de securitate", "article": "die", "plural": "Sicherheitskontrollen", "pluralArticle": "die"},
+		{"ru": "проверка безопасности", "en": "Security check", "tr": "Güvenlik kontrolü", "pl": "Kontrola bezpieczeństwa", "uk": "Огляд", "es": "Control de seguridad", "uz": "Xavfsizlik tekshiruvi", "ar": "تفتيش أمني", "de": "Sicherheitskontrolle", "fr": "Contrôle de sécurité", "hi": "सुरक्षा जांच", "ro": "Control de securitate", "article": "die", "plural": "Sicherheitskontrollen", "pluralArticle": "die"},
 		{"ru": "Путевой лист", "en": "Travel plan", "tr": "Seyahat planı", "pl": "Plan podróży", "uk": "План поїздки", "es": "Itinerario", "uz": "Sayohat rejasi", "ar": "خطة السفر", "de": "Reiseplan", "fr": "Plan de voyage", "hi": "यात्रा योजना", "ro": "Plan de călătorie", "article": "der", "plural": "Reisepläne", "pluralArticle": "die"}
 	],
 	"Tourism": [

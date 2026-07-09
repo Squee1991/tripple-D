@@ -44,6 +44,14 @@ const handleBack = () => {
   router.back()
 }
 
+const isPremium = computed(() => {
+  if (justBought.value) return true
+  if (!authStore.isPremium) return false
+  const endDateStr = authStore.subscriptionEndsAt
+  if (!endDateStr) return false
+  return new Date(endDateStr) > new Date()
+})
+
 const restoreComputed = computed(() => {
   return restoreLoading.value ? t('restoreComputed.restoring') : t('restoreComputed.restore')
 })
@@ -77,12 +85,12 @@ const myAvailableCoupons = computed(() => {
         {
           id: null,
           percent: 0,
-          label: 'Без скидки'
+          label: t('payPage.withoutDiscount')
         })
   }
-  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_3', percent: 3, label: t('cardSales.title3')})
+  if (authStore.premiumDiscount.sale_3) list.push({id: 'sale_3', percent: 3, label: t('cardSales.title3')})
   if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_5', percent: 5, label: t('cardSales.title5')})
-  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_6', percent: 6, label: t('cardSales.title6')})
+  if (authStore.premiumDiscount.sale_6) list.push({id: 'sale_6', percent: 6, label: t('cardSales.title6')})
   if (authStore.premiumDiscount.sale_10) list.push({id: 'sale_10', percent: 10, label: t('cardSales.title10')})
   if (authStore.premiumDiscount.sale_15) list.push({id: 'sale_15', percent: 15, label: t('cardSales.title15')})
   return list
@@ -117,7 +125,7 @@ const triggerToast = (msg) => {
 
 async function handleRestore() {
   if (!billingStore.isMobile) return
-  if (justBought.value) {
+  if (isPremium.value) {
     triggerToast('pay.triggerToastIsPlus')
     return
   }
@@ -126,6 +134,7 @@ async function handleRestore() {
     const success = await billingStore.restore()
     if (success) {
       triggerToast('pay.triggerToastSuccess')
+      justBought.value = true
     } else {
       triggerToast('pay.triggerToastNotFound')
     }
@@ -172,17 +181,8 @@ async function pay() {
 }
 
 onMounted(async () => {
-  const endDateStr = authStore.subscriptionEndsAt
-  if (endDateStr) {
-    const endDate = new Date(endDateStr)
-    const now = new Date()
-    if (endDate > now) {
-      triggerToast('pay.triggerToastIsPlus')
-      // setTimeout(() => {
-      //   router.back()
-      // }, 5000)
-      return
-    }
+  if (isPremium.value) {
+    triggerToast('pay.triggerToastIsPlus')
   }
   try {
     const data = await $fetch('/api/stripe/get-price')
@@ -230,70 +230,90 @@ onUnmounted(() => {
     </div>
     <div class="main-flow">
       <div class="flow-step">
-        <div class="flow__banner-pay">
-          <span class="flow__banner-text"> {{ t('pay.banner') }}</span>
-          <img class="flow__banner-icon" :src="PremiumIcon" alt="PremiumIcon">
-        </div>
-        <div class="perks-grid">
-          <div v-for="(feat, index) in features" :key="index" class="perk-card">
-            <div class="perk-icon">
-              <img :src="feat.icon" alt="" class="icon-svg">
-            </div>
-            <div class="perk-meta">
-              <span class="perk-name">{{ feat.title }}</span>
+        <template v-if="!authStore.isPremium">
+          <div class="flow__banner-pay">
+            <span class="flow__banner-text"> {{ t('pay.banner') }}</span>
+            <img class="flow__banner-icon" :src="PremiumIcon" alt="PremiumIcon">
+          </div>
+          <div class="perks-grid">
+            <div v-for="(feat, index) in features" :key="index" class="perk-card">
+              <div class="perk-icon">
+                <img :src="feat.icon" alt="" class="icon-svg">
+              </div>
+              <div class="perk-meta">
+                <span class="perk-name">{{ feat.title }}</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="bonus-section" v-if="myAvailableCoupons.length > 1">
-          <div class="hero-zone bonus-hero">
-            <p class="hero-desc">{{ t('pay.sales') }}</p>
-          </div>
-          <div class="inventory-section">
-            <div class="inventory-list">
-              <div
-                  v-for="coupon in myAvailableCoupons"
-                  :key="coupon.id"
-                  class="loot-card"
-                  :class="{ 'loot-card--active': selectedDiscountId === coupon.id }"
-                  @click="selectDiscount(coupon.id)"
-              >
-                <div class="loot-glow"></div>
-                <div class="loot-content">
-                  <div v-if="coupon.label" class="loot-info">
-                    <span class="loot-title">{{ coupon.label }}</span>
-                    <span class="loot-sub">За твою активность</span>
+          <div class="bonus-section" v-if="myAvailableCoupons.length > 1">
+            <div class="hero-zone bonus-hero">
+              <p class="hero-desc">{{ t('pay.sales') }}</p>
+            </div>
+            <div class="inventory-section">
+              <div class="inventory-list">
+                <div
+                    v-for="coupon in myAvailableCoupons"
+                    :key="coupon.id"
+                    class="loot-card"
+                    :class="{ 'loot-card--active': selectedDiscountId === coupon.id }"
+                    @click="selectDiscount(coupon.id)"
+                >
+                  <div class="loot-glow"></div>
+                  <div class="loot-content">
+                    <div v-if="coupon.label" class="loot-info">
+                      <span class="loot-title">{{ coupon.label }}</span>
+                    </div>
+                    <div class="loot-val" v-if="coupon.percent > 0">{{ coupon.percent }}%</div>
                   </div>
-                  <div class="loot-val" v-if="coupon.percent > 0">{{ coupon.percent }}%</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="billing-summary">
-          <div class="bill-line discount" v-if="selectedDiscountId">
-            <span class="bill-text">Твоя скидка</span>
-            <span
-                class="bill-price-neg">-{{ myAvailableCoupons.find(c => c.id === selectedDiscountId).percent }}%</span>
+          <div class="billing-summary">
+            <div class="bill-line discount" v-if="selectedDiscountId">
+              <span class="bill-text">{{ t('payPage.yourSale') }}</span>
+              <span class="bill-price-neg">-{{
+                  myAvailableCoupons.find(c => c.id === selectedDiscountId).percent
+                }}%</span>
+            </div>
+            <div class="bill-total">
+              <span class="total-text">{{ t('payPage.finalePrice') }}</span>
+              <span class="total-price">{{ finalPrice }}{{ displayCurrency }}</span>
+            </div>
           </div>
-          <div class="bill-total">
-            <span class="total-text">ИТОГО:</span>
-            <span class="total-price">{{ finalPrice }}{{ displayCurrency }}</span>
+          <div class="footer-action-wrapper" ref="payButton">
+            <div class="footer-action">
+              <button @click="pay" class="btn-buy-neon" :disabled="submitLoading || restoreLoading">
+                {{ submitComputed }}
+              </button>
+              <button
+                  v-if="billingStore.isMobile"
+                  @click="handleRestore"
+                  class="btn-restore"
+                  :disabled="restoreLoading || submitLoading"
+              >
+                {{ restoreComputed }}
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="footer-action" ref="payButton">
-          <button @click="pay" class="btn-buy-neon" :disabled="submitLoading || restoreLoading">{{
-              submitComputed
-            }}
-          </button>
-          <button
-              v-if="billingStore.isMobile"
-              @click="handleRestore"
-              class="btn-restore"
-              :disabled="restoreLoading || submitLoading"
-          >
-            {{ restoreComputed }}
-          </button>
-        </div>
+        </template>
+        <template v-else>
+          <div class="premium-success-view">
+            <div class="success-decor">
+              <div class="glow-orb"></div>
+              <div class="glow-orb orb-2"></div>
+            </div>
+            <div class="premium-active-card">
+              <div class="premium-active-icon">
+                <img :src="PremiumIcon" alt="Premium" class="active-pulse-img">
+              </div>
+              <div class="premium-active-text">
+                <h3>{{ t('activePlus.title')}}</h3>
+                <p>{{ t('activePlus.description')}}</p>
+              </div>
+            </div>
+          </div>
+        </template>
       </div>
     </div>
   </div>
@@ -305,7 +325,7 @@ onUnmounted(() => {
   width: 100%;
   top: calc(env(safe-area-inset-top));
   left: 0;
-  background: #10b981;
+  background: #d97706;
   color: #fff;
   padding: 18px 24px;
   font-weight: 800;
@@ -324,7 +344,7 @@ onUnmounted(() => {
   height: 60px;
   left: 0;
   bottom: 100%;
-  background: #10b981;
+  background: #d97706;
   z-index: 1;
 }
 
@@ -382,9 +402,8 @@ onUnmounted(() => {
   cursor: not-allowed;
 }
 
-
 .pro-vault {
-  height: 100vh;
+  height: 100%;
   max-width: 1024px;
   margin: 0 auto;
   background: var(--bg);
@@ -415,28 +434,6 @@ onUnmounted(() => {
 
 .bonus-hero {
   margin-top: 30px;
-}
-
-.hero-title {
-  font-size: 32px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  color: var(--title);
-  text-shadow: 2px 2px var(--title);
-}
-
-.hero-title h2 {
-  font-size: 26px;
-}
-
-.neon-text {
-  font-size: 34px;
-  color: #6366f1;
-  text-shadow: 2px 2px #6366f1;
-}
-
-.bonus-hero .neon-text {
-  font-size: 28px;
 }
 
 .hero-desc {
@@ -535,6 +532,7 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   padding: 0 5px;
+  min-height: 100%;
 }
 
 .loot-glow {
@@ -592,10 +590,13 @@ onUnmounted(() => {
   color: #10b981;
 }
 
-.footer-action {
+.footer-action-wrapper {
   margin-top: 20px;
-  padding: 20px 0;
   position: relative;
+}
+
+.footer-action {
+  padding: 20px 0;
 }
 
 .btn-icon-back {
@@ -620,7 +621,7 @@ onUnmounted(() => {
 .btn-buy-neon {
   width: 100%;
   padding: 16px 20px;
-  border-radius: 22px;
+  border-radius: 50px;
   border: none;
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: #fff;
@@ -639,5 +640,133 @@ onUnmounted(() => {
   opacity: 0.7;
   cursor: not-allowed;
   transform: none;
+}
+
+
+.premium-success-view {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.success-decor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glow-orb {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: #10b981;
+  filter: blur(60px);
+  border-radius: 50%;
+  opacity: 0.4;
+  top: 20%;
+  left: 10%;
+  animation: orb-float 5s ease-in-out infinite alternate;
+}
+
+.glow-orb.orb-2 {
+  background: #0ea5e9;
+  width: 120px;
+  height: 120px;
+  top: auto;
+  bottom: 20%;
+  left: auto;
+  right: 10%;
+  animation-delay: -2s;
+}
+
+.premium-active-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 30px 20px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);
+  border: 2px solid rgba(16, 185, 129, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
+  animation: premium-glow 3s infinite alternate;
+}
+
+.premium-active-icon {
+  width: 180px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+.active-pulse-img {
+  width: 120px;
+  object-fit: contain;
+  animation: icon-float 6s ease-in-out infinite;
+}
+
+.premium-active-text {
+  text-align: center;
+}
+
+.premium-active-text h3 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #10b981;
+  margin: 0 0 8px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.premium-active-text p {
+  font-size: 16px;
+  color: #a1a1aa;
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+@keyframes premium-glow {
+  0% {
+    border-color: rgba(16, 185, 129, 0.3);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);
+  }
+  100% {
+    border-color: rgba(16, 185, 129, 0.8);
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.3);
+  }
+}
+
+@keyframes icon-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.05);
+  }
+}
+
+@keyframes orb-float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(20px, -20px) scale(1.1);
+  }
 }
 </style>

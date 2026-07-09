@@ -20,6 +20,15 @@ export const overAchievment = [
 			// 	targetProgress: 1
 			// },
 			{
+				id: "wasPlusUser",
+				name: "generalCategory.wasPlusUserTitle",
+				description: "generalCategory.wasPlusUserDescription",
+				icon: "💎",
+				awards: "generalCategory.wasPlusUserAward",
+				currentProgress: 0,
+				targetProgress: 1
+			},
+			{
 				id: "daily42",
 				name: "generalCategory.dailyQuestText",
 				description: "generalCategory.dailyQuestDescription",

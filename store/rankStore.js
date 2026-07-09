@@ -37,8 +37,8 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 			title: 'v-rank.rank_3',
 			icons: [
 				{ icon: '/images/rank-icons/level-3/SilverPank.png' },
-				{ icon: '/images/rank-icons/level-3/SilverPank.png' },
-				{ icon: '/images/rank-icons/level-3/SilverPank.png' }
+				{ icon: '/images/rank-icons/level-3/BronzePank.png' },
+				{ icon: '/images/rank-icons/level-3/GoldPank.png' }
 			],
 			levels: [
 				{ hats: 110, bonus: 5 },

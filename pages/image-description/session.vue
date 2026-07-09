@@ -6,9 +6,6 @@ import { useI18n } from 'vue-i18n'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import TipsModal from '../../src/components/V-tips.vue'
 import { topics } from '@/utils/descriptionImages.js'
-// import { VoiceRecorder } from 'capacitor-voice-recorder'
-// import { Capacitor } from '@capacitor/core'
-// import { Directory, Filesystem } from '@capacitor/filesystem'
 
 import { getFunctions, httpsCallable } from 'firebase/functions'
 import { showInterstitial } from '../../utils/admob.js'
@@ -379,25 +376,24 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 }
 
 .btn-primary-action {
-  background: var(--regionBtnBg);
+  background: #3b82f6;
   color: #fff;
   padding: 10px 40px;
   border-radius: 50px;
   font-size: 1.5rem;
-  border: 2px solid #2b2b2b;
+  border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
-  box-shadow: 3px 3px 0px #2b2b2b;
+  box-shadow: 0 5px 0 #1d4ed8;
   transition: transform 0.1s;
   width: 100%;
 }
 
 .btn-primary-action:active {
-  transform: translate(5px, 5px);
-  box-shadow: 0px 0px 0px #2b2b2b;
+  transform: translate(1px, 1px);
 }
 
 .active-game-layout {
@@ -602,6 +598,7 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   flex-direction: column;
   gap: 10px;
   flex-shrink: 0;
+  padding: 8px 0;
 }
 
 .modern-input {
@@ -641,8 +638,8 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 }
 
 .btn-send-round, .btn-mic {
-  border: 3px solid var(--tabsSlideBorderColor);
-  box-shadow: var(--boxShadowMobile);
+  border: none;
+  box-shadow: 0 5px 0 #c4973c;
   border-radius: 50px;
   cursor: pointer;
   display: flex;

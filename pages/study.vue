@@ -316,7 +316,7 @@ definePageMeta({
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 8px 0;
+  padding: 7px 0;
   cursor: pointer;
   position: relative;
   z-index: 2;

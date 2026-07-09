@@ -183,7 +183,7 @@ const shopCards = computed(() => {
       type: 'consumable'
     },
     {
-      id: "sale_5",
+      id: "sale_3",
       title: t('cardSales.title3'),
       description: "",
       hotIcon: HotDeal,
@@ -193,7 +193,7 @@ const shopCards = computed(() => {
       type: 'permanent'
     },
     {
-      id: "sale_10",
+      id: "sale_6",
       title: t('cardSales.title6'),
       description: "",
       hotIcon: HotDeal,

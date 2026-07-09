@@ -4,6 +4,9 @@
        @touchmove="handleTouchMove"
        @touchend="handleTouchEnd"
   >
+    <transition name="toast-fade">
+      <VHeadsUp v-if="showEmptyWarning" :text="t('headUp.audioTasks')"/>
+    </transition>
     <div class="quiz-app-container">
       <div v-if="loading" class="quiz-screen">
         <p class="loading-text">{{ t('dailyPanel.loading') }}</p>
@@ -76,7 +79,6 @@
             <footer class="quest-card-footer">
               <button v-if="!isTaskChecked"
                       @click="checkResult"
-                      :disabled="!hasUserSelected"
                       class="quiz-btn quiz-btn-primary"
               >{{ t('imageDescription.check') }}
               </button>
@@ -127,12 +129,13 @@ import SoundBtn from '../../src/components/soundBtn.vue'
 import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
 import {useSwipeBack} from '~/composables/useSwipeBack.js'
 import {showInterstitial} from '../../utils/admob.js'
+import VHeadsUp from "~/src/components/V-headsUp.vue";
 
 const {t} = useI18n()
 const router = useRouter()
 const store = useAudioTaskStore()
 const {allTasks, currentLevel, currentTopicId, loading, userProgress} = storeToRefs(store)
-
+const showEmptyWarning = ref(false)
 const currentTopic = ref(null)
 const sessionTasks = ref([])
 const currentIndex = ref(0)
@@ -151,6 +154,7 @@ const progressPercentage = computed(() => {
   if (isLastTask.value && isTaskChecked.value) return 100
   return (currentIndex.value / sessionTasks.value.length) * 100
 })
+
 
 const currentTask = computed(() => sessionTasks.value[currentIndex.value])
 const isTaskChecked = computed(() => taskResults.value[currentTask.value?.id]?.checked)
@@ -249,6 +253,11 @@ const getOptionClasses = (idx) => {
 }
 
 const checkResult = () => {
+  if (!hasUserSelected.value) {
+    showEmptyWarning.value = true
+    setTimeout(() => showEmptyWarning.value = false, 2000)
+    return
+  }
   const task = currentTask.value
   const sel = userSelections.value[task.id] || []
   const corr = task.correctIndices
@@ -321,7 +330,7 @@ watch(currentIndex, stopAllAudio)
 <style scoped>
 
 .quiz-app {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
@@ -362,6 +371,7 @@ watch(currentIndex, stopAllAudio)
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 8px;
   padding: 8px 0;
   flex-shrink: 0;
@@ -472,20 +482,16 @@ watch(currentIndex, stopAllAudio)
   font-weight: 900;
   font-size: 16px;
   color: #1e272e;
-  background: #ffffff;
   padding: 6px 12px;
-  border-radius: 12px;
-  border: 2px solid var(--tabsSlideBorderColor);
-  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
 }
 
 .quest-card-mega-play {
   background: #48dbfb !important;
-  width: 40px !important;
-  height: 40px !important;
-  border-radius: 34% !important;
-  border: 2px solid var(--tabsSlideBorderColor);
-  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+  width: 80px !important;
+  height: 64px !important;
+  border-radius: 35% !important;
+  border:none;
+  box-shadow: 0 6px 0 #2297b0;
 }
 
 .quest-card-options,
@@ -634,18 +640,16 @@ watch(currentIndex, stopAllAudio)
 
 .quiz-btn {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   border-radius: 50px;
   font-weight: 900;
-  font-size: 16px;
-  text-transform: uppercase;
+  font-size: 18px;
   cursor: pointer;
   transition: transform 0.1s, box-shadow 0.1s;
 }
 
 .quiz-btn:active:not(:disabled) {
-  transform: translate(3px, 4px);
-  box-shadow: 0px 0px 0px #1e272e;
+  transform: translateY(2px);
 }
 
 .quiz-btn-primary:disabled {
@@ -754,4 +758,16 @@ watch(currentIndex, stopAllAudio)
   font-size: 18px;
   margin-top: 40px;
 }
+
+.toast-fade-enter-active,
+.toast-fade-leave-active {
+  transition: all 0.2s ease-in-out;
+}
+
+.toast-fade-enter-from,
+.toast-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-100%)
+}
+
 </style>

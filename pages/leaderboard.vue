@@ -1,5 +1,5 @@
 <script setup>
-import {ref, watch, computed, onMounted} from 'vue'
+import {ref, watch, computed, onMounted, onUnmounted} from 'vue'
 import {userAuthStore} from '../store/authStore.js'
 import {useGuessWordStore} from '../store/guesStore.js'
 import {useGameStore} from '../store/marafonStore.js'
@@ -15,19 +15,21 @@ const router = useRouter()
 const authStore = userAuthStore()
 const guessStore = useGuessWordStore()
 const gameStore = useGameStore()
-
-const activeDiscipline = ref('guess')
+const currentSeasonId = ref('')
+const activeDiscipline = ref('marathon')
 const guessRating = ref([])
 const isGuessLoading = ref(true)
 const marathonRating = ref([])
 const isMarathonLoading = ref(true)
 const isModal = ref(false)
 const activeMarathonDifficulty = ref(1)
+const isLeaderboardOpen = ref(false)
+const timeLeftToOpen = ref({d: 0, h: 0, m: 0})
+let timerInterval = null
 
-const disciplines = ref([
-  {id: 'guess', label: 'ranked.guessTab'},
-  {id: 'marathon', label: 'ranked.marathonTab'}
-]);
+const timerTextComputed = computed(() => {
+  return isLeaderboardOpen.value ? t('marathonLeaderBoard.seasonEndsIn') : t('marathonLeaderBoard.seasonStartsIn')
+})
 
 const difficultyOptions = ref([
   {level: 1, label: 'ranked.easy'},
@@ -40,21 +42,17 @@ const modalValues = ref({
   btn: "modal.textBtn"
 })
 
-const activeDisciplineIndex = computed(() =>
-    disciplines.value.findIndex(tab => tab.id === activeDiscipline.value)
-);
-
 const activeDifficultyIndex = computed(() =>
     difficultyOptions.value.findIndex(diff => diff.level === activeMarathonDifficulty.value)
-);
+)
 
 const getTransformX = (index, length) => {
-  if (index === -1) return 0;
+  if (index === -1) return 0
   if (locale.value === 'ar') {
-    return (length - 1 - index) * 100;
+    return (length - 1 - index) * 100
   }
-  return index * 100;
-};
+  return index * 100
+}
 
 const backToMainPage = () => {
   router.push('/')
@@ -62,15 +60,29 @@ const backToMainPage = () => {
 
 const isInGuessLeaderboard = computed(() =>
     guessRating.value.some(r => r.name === authStore.name)
-);
+)
 
 const userMarathonRecord = computed(() => {
   if (!authStore.uid || !marathonRating.value || marathonRating.value.length === 0) {
-    return 0;
+    return 0
   }
-  const userRecord = marathonRating.value.find(player => player.id === authStore.uid);
-  return userRecord ? userRecord.streak : 0;
+  const userRecord = marathonRating.value.find(player => player.id === authStore.uid)
+  return userRecord ? userRecord.streak : 0
 })
+
+function updateTimer() {
+  const state = gameStore.getSeasonState()
+  isLeaderboardOpen.value = state.isOpen
+  timeLeftToOpen.value = state.timeLeft
+  if (currentSeasonId.value && currentSeasonId.value !== state.currentSeasonId) {
+    if (activeDiscipline.value === 'marathon') {
+      marathonRating.value = []
+      gameStore.personalBests = {1: 0, 2: 0, 3: 0}
+    }
+  }
+
+  currentSeasonId.value = state.currentSeasonId
+}
 
 async function loadGuessStatistics() {
   isGuessLoading.value = true
@@ -82,7 +94,7 @@ async function loadGuessStatistics() {
 }
 
 async function loadMarathonStatistics() {
-  isMarathonLoading.value = true;
+  isMarathonLoading.value = true
   marathonRating.value = await gameStore.loadMarathonLeaderboard(activeMarathonDifficulty.value)
   if (authStore.uid) {
     await gameStore.fetchRecord()
@@ -93,7 +105,7 @@ async function loadMarathonStatistics() {
 async function addToLeaderboard() {
   if (!Array.isArray(guessStore.guessedWords) || guessStore.guessedWords.length === 0) {
     isModal.value = true
-    return;
+    return
   }
   await guessStore.saveToLeaderboard(authStore.name, guessStore.guessedWords.length)
   guessRating.value = await guessStore.loadLeaderboard()
@@ -103,7 +115,7 @@ watch(activeMarathonDifficulty, () => {
   if (activeDiscipline.value === 'marathon') {
     loadMarathonStatistics()
   }
-});
+})
 
 watch(activeDiscipline, (newDiscipline) => {
   if (newDiscipline === 'guess') {
@@ -111,7 +123,7 @@ watch(activeDiscipline, (newDiscipline) => {
   } else if (newDiscipline === 'marathon') {
     loadMarathonStatistics()
   }
-}, {immediate: true});
+}, {immediate: true})
 
 watch(() => authStore.uid, () => {
   if (activeDiscipline.value === 'guess') {
@@ -119,12 +131,18 @@ watch(() => authStore.uid, () => {
   } else if (activeDiscipline.value === 'marathon') {
     loadMarathonStatistics()
   }
-}, {immediate: true});
+}, {immediate: true})
 
 onMounted(async () => {
   if (authStore.uid) {
     await gameStore.fetchRecord()
   }
+  updateTimer()
+  timerInterval = setInterval(updateTimer, 1000)
+})
+
+onUnmounted(() => {
+  if (timerInterval) clearInterval(timerInterval)
 })
 </script>
 
@@ -138,7 +156,6 @@ onMounted(async () => {
           :overlayBtn="t(modalValues.btn)"
       />
     </div>
-
     <div class="ranked-sidebar-corkboard">
       <div class="ranked__header">
         <div class="ranked__side-btnBack-wrapper">
@@ -146,28 +163,33 @@ onMounted(async () => {
         </div>
         <h1 class="ranked-title">{{ t('ranked.label') }}</h1>
       </div>
-
       <div class="control-card">
-        <div class="pin"></div>
-        <nav class="toggle-nav" role="tablist">
-          <div
-              class="sliding-bg"
-              :style="{ width: 'calc(50% - 4px)', transform: `translateX(${getTransformX(activeDisciplineIndex, disciplines.length)}%)` }">
+        <div class="marathon-timer-widget">
+          <p class="timer-widget__label">{{ timerTextComputed }}</p>
+          <div class="timer-widget__countdown" v-if="timeLeftToOpen">
+            <div class="timer-widget__item">
+              <span class="timer-widget__value">{{ timeLeftToOpen.d }}</span>
+              <span class="timer-widget__unit">{{ t('i18nDays.days') }}</span>
+            </div>
+            <span class="timer-widget__separator">:</span>
+            <div class="timer-widget__item">
+              <span class="timer-widget__value">{{ timeLeftToOpen.h }}</span>
+              <span class="timer-widget__unit">{{ t('i18nDays.hours') }}</span>
+            </div>
+            <span class="timer-widget__separator">:</span>
+            <div class="timer-widget__item">
+              <span class="timer-widget__value">{{ timeLeftToOpen.m }}</span>
+              <span class="timer-widget__unit">{{ t('i18nDays.mins') }}</span>
+            </div>
+            <span class="timer-widget__separator">:</span>
+            <div class="timer-widget__item">
+              <span class="timer-widget__value">{{ timeLeftToOpen.s }}</span>
+              <span class="timer-widget__unit">сек</span>
+            </div>
           </div>
-          <button
-              v-for="tab in disciplines" :key="tab.id"
-              class="toggle-btn"
-              :class="{ 'toggle-btn--active': activeDiscipline === tab.id }"
-              role="tab"
-              @click="activeDiscipline = tab.id"
-          >
-            {{ t(tab.label) }}
-          </button>
-        </nav>
+        </div>
       </div>
-
       <div class="control-card" v-if="activeDiscipline === 'marathon'">
-        <div class="pin"></div>
         <h3 class="control-card__title">{{ t('ranked.difficulty') }}</h3>
         <nav class="toggle-nav" role="tablist">
           <div
@@ -186,7 +208,8 @@ onMounted(async () => {
           </button>
         </nav>
       </div>
-      <div class="control-card user-stats-card">
+      <div class="control-card user-stats-card"
+           v-if="activeDiscipline === 'guess' || (activeDiscipline === 'marathon' && isLeaderboardOpen)">
         <div v-if="authStore.uid">
           <p v-if="activeDiscipline === 'guess'" class="user-stats__item">
             {{ t('ranked.wordsGuessed') }} <span>{{ guessStore.guessedWords.length }}</span>
@@ -203,8 +226,7 @@ onMounted(async () => {
         <div class="blackboard">
           <div class="blackboard__content">
             <div v-if="activeDiscipline === 'guess'" class="discipline-container">
-              <div v-if="isGuessLoading" class="blackboard__message">{{ t('ranked.loading') }}</div>
-              <div v-else-if="guessRating.length" class="leaderboard-wrapper">
+              <div v-if="guessRating.length" class="leaderboard-wrapper">
                 <h2 class="blackboard__title">{{ t('ranked.guesTabelelable') }}</h2>
                 <ul class="leaderboard__items-container">
                   <li v-for="(r, index) in guessRating" :key="r.name">
@@ -218,12 +240,15 @@ onMounted(async () => {
                 </ul>
               </div>
               <div v-else class="blackboard__message">
-                <div class="black__board-title">{{ t('ranked.notData') }}</div>
-                <img src="../assets/images/leadership.svg" alt="">
               </div>
             </div>
             <div v-if="activeDiscipline === 'marathon'" class="discipline-container">
-              <div v-if="isMarathonLoading" class="blackboard__message">{{ t('ranked.loading') }}</div>
+              <div v-if="!isLeaderboardOpen" class="blackboard__message timer-message">
+                <img class="waiting_icon" src="../assets/images/waitingIcon.png" alt="waiting">
+                <p class="empty-state__hint">
+                  {{ t('marathonLeaderBoard.stateHint') }}
+                </p>
+              </div>
               <div v-else-if="marathonRating.length" class="leaderboard-wrapper">
                 <h2 class="blackboard__title">
                   {{ t('ranked.guesMarathonlable') }}:
@@ -240,9 +265,9 @@ onMounted(async () => {
                   </li>
                 </ul>
               </div>
-              <div v-else class="blackboard__message">
+              <div v-else class="blackboard__message empty-state">
+                <img class="waiting_icon" src="../assets/images/waitingIcon.png" alt="sad hedgehog">
                 <div class="black__board-title">{{ t('ranked.emptydifficult') }}</div>
-                <img class="leaderboard__icon" src="../assets/images/leadership.svg" alt="leadership">
               </div>
             </div>
           </div>
@@ -257,6 +282,7 @@ onMounted(async () => {
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow: hidden;
   font-family: "Nunito", sans-serif;
 }
 
@@ -291,7 +317,8 @@ onMounted(async () => {
 .black__board-title {
   text-align: center;
   font-weight: 800;
-  font-size: 1.8rem;
+  font-size: 16px;
+  padding: 0 20px;
   color: #ffffff;
 }
 
@@ -321,8 +348,8 @@ onMounted(async () => {
   font-size: 18px;
   color: var(--titleColor);
   margin-bottom: 6px;
+  display: none;
 }
-
 
 .toggle-nav {
   display: flex;
@@ -405,8 +432,9 @@ onMounted(async () => {
   border-radius: 30px;
   display: flex;
   max-width: 100%;
+  height: 100vh;
+  overflow-y: auto;
   margin: 0 10px 10px 10px;
-
 }
 
 .blackboard-frame, .blackboard {
@@ -449,13 +477,40 @@ onMounted(async () => {
 
 .blackboard__message {
   display: flex;
-  justify-content: center;
+  margin-top: 40px;
   align-items: center;
   flex-direction: column;
   height: 100%;
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: rgba(255, 255, 255, 0.7);
+}
+
+.empty-state {
+  gap: 15px;
+}
+
+.empty-state__hint {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  line-height: 1.4;
+  font-weight: 600;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.timer-message {
+  gap: 15px;
+}
+
+.waiting_icon {
+  width: 140px;
+  margin-bottom: 10px;
+}
+
+.timer-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #d1c4e9;
+  text-align: center;
 }
 
 .leaderboard__items-container {
@@ -466,11 +521,11 @@ onMounted(async () => {
 }
 
 ::-webkit-scrollbar {
-  width: 16px;
+  width: 2px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #d1c4e9;
+  background: #2f2d31;
   border-radius: 10px;
 }
 
@@ -478,6 +533,73 @@ onMounted(async () => {
   background: #ffffff;
   border-radius: 10px;
   border: 4px solid #d1c4e9;
+}
+
+.marathon-timer-widget {
+  background: var(--tabBg);
+  border: 3px solid var(--tabsSlideBorderColor);
+  border-radius: 20px;
+  padding: 12px 15px;
+  margin: 0 4px;
+  box-shadow: var(--boxShadowMobile);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.timer-widget__label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 0;
+}
+
+.timer-widget__countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-family: 'Lilita One', sans-serif;
+  width: 100%;
+}
+
+.timer-widget__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 194, 255, 0.15);
+  border: 2px solid #00c2ff;
+  border-radius: 12px;
+  min-width: 50px;
+  padding: 6px 4px;
+}
+
+.timer-widget__value {
+  font-size: 22px;
+  color: #00c2ff;
+  line-height: 1;
+  font-family: Lilita One, sans-serif;
+}
+
+.timer-widget__unit {
+  font-size: 10px;
+  color: #d1c4e9;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+.timer-widget__separator {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+  padding-bottom: 16px;
 }
 
 @media (max-width: 1023px) {

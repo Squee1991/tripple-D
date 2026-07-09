@@ -184,7 +184,7 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
             [`currentRoundData.answers.${myUserId}`]: answerText
         };
 
-        if (answerText.toLowerCase().replace(/[.,!?;]/g, '').trim() !== correctSentence) {
+        if (answerText.replace(/[.,!?;]/g, '').trim() !== correctSentence) {
             updates[`players.${myUserId}.hasMadeError`] = true;
         }
 

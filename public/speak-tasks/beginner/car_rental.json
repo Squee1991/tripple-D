@@ -1,0 +1,534 @@
+{
+  "start": {
+    "botText": "Guten Tag! Wie kann ich Ihnen helfen?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Чем я могу Вам помочь?",
+      "en-US": "Good day! How can I help you?",
+      "ar-SA": "طاب يومك! كيف يمكنني مساعدتك؟",
+      "es-ES": "¡Buenos días! ¿En qué puedo ayudarle?",
+      "fr-FR": "Bonjour ! Comment puis-je vous aider ?",
+      "hi-IN": "शुभ दिन! मैं आपकी कैसे मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! W czym mogę pomóc?",
+      "ro-RO": "Bună ziua! Cu ce vă pot ajuta?",
+      "tr-TR": "İyi günler! Size nasıl yardımcı olabilirim?",
+      "uk-UA": "Добрий день! Чим я можу Вам допомогти?",
+      "uz-UZ": "Xayrli kun! Sizga qanday yordam bera olaman?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Autovermietung",
+        "translation": {
+          "ru-RU": "аренда автомобилей",
+          "en-US": "car rental",
+          "ar-SA": "تأجير السيارات",
+          "es-ES": "alquiler de coches",
+          "fr-FR": "location de voitures",
+          "hi-IN": "कार रेंटल",
+          "pl-PL": "wypożyczalnia samochodów",
+          "ro-RO": "închirieri auto",
+          "tr-TR": "araç kiralama",
+          "uk-UA": "оренда автомобілів",
+          "uz-UZ": "avtoulov ijarasi"
+        }
+      },
+      {
+        "german": "mieten",
+        "translation": {
+          "ru-RU": "арендовать",
+          "en-US": "to rent",
+          "ar-SA": "يستأجر",
+          "es-ES": "alquilar",
+          "fr-FR": "louer",
+          "hi-IN": "किराए पर लेना",
+          "pl-PL": "wynajmować",
+          "ro-RO": "a închiria",
+          "tr-TR": "kiralamak",
+          "uk-UA": "орендувати",
+          "uz-UZ": "ijaraga olmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag! Ich möchte bitte ein Auto mieten.",
+        "translation": {
+          "ru-RU": "Добрый день! Я хотел бы арендовать машину.",
+          "en-US": "Good day! I would like to rent a car, please.",
+          "ar-SA": "طاب يومك! أود استئجار سيارة من فضلك.",
+          "es-ES": "¡Buenos días! Me gustaría alquilar un coche, por favor.",
+          "fr-FR": "Bonjour ! Je voudrais louer une voiture, s'il vous plaît.",
+          "hi-IN": "शुभ दिन! मैं कृपया एक कार किराए पर लेना चाहूंगा।",
+          "pl-PL": "Dzień dobry! Chciałbym wynająć samochód.",
+          "ro-RO": "Bună ziua! Aș dori să închiriez o mașină, vă rog.",
+          "tr-TR": "İyi günler! Lütfen bir araba kiralamak istiyorum.",
+          "uk-UA": "Добрий день! Я хотів би орендувати машину.",
+          "uz-UZ": "Xayrli kun! Iltimos, men mashina ijaraga olmoqchiman."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo! Ich suche ein Auto für drei Tage. Haben Sie etwas frei?",
+        "translation": {
+          "ru-RU": "Здравствуйте! Я ищу машину на три дня. У вас есть что-нибудь свободное?",
+          "en-US": "Hello! I am looking for a car for three days. Do you have anything available?",
+          "ar-SA": "مرحباً! أبحث عن سيارة لمدة ثلاثة أيام. هل لديكم شيء متاح؟",
+          "es-ES": "¡Hola! Busco un coche para tres días. ¿Tienen algo disponible?",
+          "fr-FR": "Bonjour ! Je cherche une voiture pour trois jours. Avez-vous quelque chose de disponible ?",
+          "hi-IN": "नमस्ते! मैं तीन दिनों के लिए एक कार ढूंढ रहा हूँ। क्या आपके पास कुछ उपलब्ध है?",
+          "pl-PL": "Cześć! Szukam samochodu na trzy dni. Czy macie coś wolnego?",
+          "ro-RO": "Bună! Caut o mașină pentru trei zile. Aveți ceva liber?",
+          "tr-TR": "Merhaba! Üç günlüğüne bir araba arıyorum. Müsait bir aracınız var mı?",
+          "uk-UA": "Добрий день! Я шукаю машину на три дні. У вас є щось вільне?",
+          "uz-UZ": "Salom! Men uch kunga mashina qidiryapman. Bo'sh mashinangiz bormi?"
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Ja, natürlich. Möchten Sie ein kleines Auto oder einen Kombi?",
+    "botTranslation": {
+      "ru-RU": "Да, конечно. Вы хотите маленькую машину или универсал?",
+      "en-US": "Yes, of course. Would you like a small car or a station wagon?",
+      "ar-SA": "نعم بالطبع. هل تود سيارة صغيرة أم سيارة عائلية؟",
+      "es-ES": "Sí, por supuesto. ¿Desea un coche pequeño o un coche familiar?",
+      "fr-FR": "Oui, bien sûr. Souhaitez-vous une petite voiture ou un break ?",
+      "hi-IN": "हाँ, बिल्कुल। क्या आप एक छोटी कार या स्टेशन वैगन चाहेंगे?",
+      "pl-PL": "Tak, oczywiście. Chce Pan mały samochód czy kombi?",
+      "ro-RO": "Da, desigur. Doriți o mașină mică sau un break?",
+      "tr-TR": "Evet, elbette. Küçük bir araba mı yoksa station wagon mu istersiniz?",
+      "uk-UA": "Так, звісно. Ви хочете маленьку машину чи універсал?",
+      "uz-UZ": "Ha, albatta. Kichik mashina xohlaysizmi yoki universalmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Auto",
+        "translation": {
+          "ru-RU": "автомобиль",
+          "en-US": "car",
+          "ar-SA": "سيارة",
+          "es-ES": "coche",
+          "fr-FR": "voiture",
+          "hi-IN": "कार",
+          "pl-PL": "samochód",
+          "ro-RO": "mașină",
+          "tr-TR": "araba",
+          "uk-UA": "автомобіль",
+          "uz-UZ": "mashina"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ein kleines Auto reicht mir völlig, danke.",
+        "translation": {
+          "ru-RU": "Маленькой машины мне вполне достаточно, спасибо.",
+          "en-US": "A small car is totally enough for me, thanks.",
+          "ar-SA": "سيارة صغيرة تكفيني تماماً، شكراً.",
+          "es-ES": "Un coche pequeño es totalmente suficiente para mí, gracias.",
+          "fr-FR": "Une petite voiture me suffit amplement, merci.",
+          "hi-IN": "एक छोटी कार मेरे लिए काफी है, धन्यवाद।",
+          "pl-PL": "Mały samochód w zupełności mi wystarczy, dziękuję.",
+          "ro-RO": "O mașină mică îmi este absolut suficientă, mulțumesc.",
+          "tr-TR": "Küçük bir araba benim için tamamen yeterli, teşekkürler.",
+          "uk-UA": "Маленької машини мені цілком достатньо, дякую.",
+          "uz-UZ": "Kichik mashina menga to'liq yetadi, rahmat."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Ich nehme lieber ein großes Auto. Wir haben viel Gepäck.",
+        "translation": {
+          "ru-RU": "Я лучше возьму большую машину. У нас много багажа.",
+          "en-US": "I'd rather take a big car. We have a lot of luggage.",
+          "ar-SA": "أفضل أخذ سيارة كبيرة. لدينا الكثير من الأمتعة.",
+          "es-ES": "Prefiero coger un coche grande. Tenemos mucho equipaje.",
+          "fr-FR": "Je préfère prendre une grande voiture. Nous avons beaucoup de bagages.",
+          "hi-IN": "मैं एक बड़ी कार लेना पसंद करूंगा। हमारे पास बहुत सारा सामान है।",
+          "pl-PL": "Wolę wziąć duży samochód. Mamy dużo bagażu.",
+          "ro-RO": "Prefer să iau o mașină mare. Avem multe bagaje.",
+          "tr-TR": "Büyük bir araba almayı tercih ederim. Çok bagajımız var.",
+          "uk-UA": "Я краще візьму велику машину. У нас багато багажу.",
+          "uz-UZ": "Men kattaroq mashina olishni afzal ko'raman. Bizda yuk ko'p."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Alles klar. Ich brauche bitte Ihren Pass und Ihren Führerschein.",
+    "botTranslation": {
+      "ru-RU": "Хорошо. Мне нужны Ваш паспорт и Ваше водительское удостоверение.",
+      "en-US": "All right. I need your passport and your driver's license, please.",
+      "ar-SA": "حسناً. أحتاج إلى جواز سفرك ورخصة قيادتك من فضلك.",
+      "es-ES": "De acuerdo. Necesito su pasaporte y su carnet de conducir, por favor.",
+      "fr-FR": "Très bien. J'ai besoin de votre passeport et de votre permis de conduire, s'il vous plaît.",
+      "hi-IN": "ठीक है। मुझे कृपया आपका पासपोर्ट और आपका ड्राइविंग लाइसेंस चाहिए।",
+      "pl-PL": "Wszystko jasne. Poproszę Pana paszport i prawo jazdy.",
+      "ro-RO": "În regulă. Am nevoie de pașaportul și de permisul dumneavoastră de conducere, vă rog.",
+      "tr-TR": "Tamam. Lütfen pasaportunuza ve ehliyetinize ihtiyacım var.",
+      "uk-UA": "Добре. Мені потрібні Ваш паспорт та Ваше водійське посвідчення.",
+      "uz-UZ": "Tushunarli. Menga pasportingiz va haydovchilik guvohnomangiz kerak."
+    },
+    "vocabulary": [
+      {
+        "german": "der Führerschein",
+        "translation": {
+          "ru-RU": "водительские права",
+          "en-US": "driver's license",
+          "ar-SA": "رخصة القيادة",
+          "es-ES": "carnet de conducir",
+          "fr-FR": "permis de conduire",
+          "hi-IN": "ड्राइविंग लाइसेंस",
+          "pl-PL": "prawo jazdy",
+          "ro-RO": "permis de conducere",
+          "tr-TR": "ehliyet",
+          "uk-UA": "водійські права",
+          "uz-UZ": "haydovchilik guvohnomasi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hier bitte, das sind meine Dokumente.",
+        "translation": {
+          "ru-RU": "Пожалуйста, вот мои документы.",
+          "en-US": "Here you go, these are my documents.",
+          "ar-SA": "تفضل، هذه مستنداتي.",
+          "es-ES": "Aquí tiene, estos son mis documentos.",
+          "fr-FR": "Voici, ce sont mes documents.",
+          "hi-IN": "ये लीजिए, ये मेरे दस्तावेज़ हैं।",
+          "pl-PL": "Proszę, to moje dokumenty.",
+          "ro-RO": "Poftiți, acestea sunt documentele mele.",
+          "tr-TR": "Buyurun, bunlar belgelerim.",
+          "uk-UA": "Будь ласка, ось мої документи.",
+          "uz-UZ": "Marhamat, bu mening hujjatlarim."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Bitte schön. Der Führerschein ist hier.",
+        "translation": {
+          "ru-RU": "Пожалуйста. Водительские права здесь.",
+          "en-US": "Here you go. The driver's license is here.",
+          "ar-SA": "تفضل. رخصة القيادة هنا.",
+          "es-ES": "Aquí tiene. El carnet de conducir está aquí.",
+          "fr-FR": "Je vous en prie. Le permis de conduire est ici.",
+          "hi-IN": "ये लीजिए। ड्राइविंग लाइसेंस यहाँ है।",
+          "pl-PL": "Proszę bardzo. Prawo jazdy jest tutaj.",
+          "ro-RO": "Poftiți. Permisul de conducere este aici.",
+          "tr-TR": "Buyurun. Ehliyet burada.",
+          "uk-UA": "Будь ласка. Водійські права тут.",
+          "uz-UZ": "Marhamat. Haydovchilik guvohnomasi shu yerda."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Danke. Möchten Sie eine Versicherung ohne Selbstbeteiligung?",
+    "botTranslation": {
+      "ru-RU": "Спасибо. Желаете страховку без франшизы (полную)?",
+      "en-US": "Thank you. Would you like insurance without a deductible?",
+      "ar-SA": "شكراً. هل تود تأميناً بدون نسبة تحمل؟",
+      "es-ES": "Gracias. ¿Desea un seguro sin franquicia?",
+      "fr-FR": "Merci. Souhaitez-vous une assurance sans franchise ?",
+      "hi-IN": "धन्यवाद। क्या आप बिना कटौती के बीमा चाहेंगे?",
+      "pl-PL": "Dziękuję. Czy chce Pan ubezpieczenie bez wkładu własnego?",
+      "ro-RO": "Mulțumesc. Doriți o asigurare fără franciză?",
+      "tr-TR": "Teşekkürler. Muafiyetsiz sigorta ister misiniz?",
+      "uk-UA": "Дякую. Бажаєте страховку без франшизи (повну)?",
+      "uz-UZ": "Rahmat. Siz franşizasiz (to'liq) sug'urta xohlaysizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Versicherung",
+        "translation": {
+          "ru-RU": "страховка",
+          "en-US": "insurance",
+          "ar-SA": "تأمين",
+          "es-ES": "seguro",
+          "fr-FR": "assurance",
+          "hi-IN": "बीमा",
+          "pl-PL": "ubezpieczenie",
+          "ro-RO": "asigurare",
+          "tr-TR": "sigorta",
+          "uk-UA": "страховка",
+          "uz-UZ": "sug'urta"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, das ist sicherer. Ich nehme sie.",
+        "translation": {
+          "ru-RU": "Да, так безопаснее. Я возьму её.",
+          "en-US": "Yes, that is safer. I'll take it.",
+          "ar-SA": "نعم، هذا أكثر أماناً. سآخذه.",
+          "es-ES": "Sí, eso es más seguro. Lo tomaré.",
+          "fr-FR": "Oui, c'est plus sûr. Je la prends.",
+          "hi-IN": "हाँ, वह अधिक सुरक्षित है। मैं इसे लूँगा।",
+          "pl-PL": "Tak, to bezpieczniejsze. Wezmę je.",
+          "ro-RO": "Da, așa e mai sigur. O iau.",
+          "tr-TR": "Evet, bu daha güvenli. Onu alıyorum.",
+          "uk-UA": "Так, так безпечніше. Я візьму її.",
+          "uz-UZ": "Ha, bu xavfsizroq. Men uni olaman."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Nein, danke. Die Basisversicherung reicht mir.",
+        "translation": {
+          "ru-RU": "Нет, спасибо. Мне достаточно базовой страховки.",
+          "en-US": "No, thanks. The basic insurance is enough for me.",
+          "ar-SA": "لا، شكراً. التأمين الأساسي يكفيني.",
+          "es-ES": "No, gracias. El seguro básico es suficiente para mí.",
+          "fr-FR": "Non, merci. L'assurance de base me suffit.",
+          "hi-IN": "नहीं, धन्यवाद। बुनियादी बीमा मेरे लिए काफी है।",
+          "pl-PL": "Nie, dziękuję. Podstawowe ubezpieczenie mi wystarczy.",
+          "ro-RO": "Nu, mulțumesc. Asigurarea de bază îmi este suficientă.",
+          "tr-TR": "Hayır, teşekkürler. Temel sigorta benim için yeterli.",
+          "uk-UA": "Ні, дякую. Мені достатньо базової страховки.",
+          "uz-UZ": "Yo'q, rahmat. Menga asosiy sug'urta yetarli."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Gut. Das macht dann insgesamt 120 Euro.",
+    "botTranslation": {
+      "ru-RU": "Хорошо. Это составит вместе 120 евро.",
+      "en-US": "Good. That makes a total of 120 euros.",
+      "ar-SA": "جيد. إجمالي الحساب 120 يورو.",
+      "es-ES": "Bien. Eso hace un total de 120 euros.",
+      "fr-FR": "Bien. Cela fait un total de 120 euros.",
+      "hi-IN": "अच्छा। यह कुल 120 यूरो होता है।",
+      "pl-PL": "Dobrze. To będzie razem 120 euro.",
+      "ro-RO": "Bine. Asta face în total 120 de euro.",
+      "tr-TR": "Güzel. Bu toplam 120 Euro yapıyor.",
+      "uk-UA": "Добре. Це становить загалом 120 євро.",
+      "uz-UZ": "Yaxshi. Jami 120 yevro bo'ladi."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Kann ich mit Kreditkarte bezahlen?",
+        "translation": {
+          "ru-RU": "Могу ли я оплатить кредитной картой?",
+          "en-US": "Can I pay with a credit card?",
+          "ar-SA": "هل يمكنني الدفع ببطاقة الائتمان؟",
+          "es-ES": "¿Puedo pagar con tarjeta de crédito?",
+          "fr-FR": "Puis-je payer par carte de crédit ?",
+          "hi-IN": "क्या मैं क्रेडिट कार्ड से भुगतान कर सकता हूँ?",
+          "pl-PL": "Czy mogę zapłacić kartą kredytową?",
+          "ro-RO": "Pot plăti cu cardul de credit?",
+          "tr-TR": "Kredi kartıyla ödeyebilir miyim?",
+          "uk-UA": "Чи можу я оплатити кредитною карткою?",
+          "uz-UZ": "Kredit kartasi orqali to'lasam bo'ladimi?"
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Ich bezahle bar. Hier ist das Geld.",
+        "translation": {
+          "ru-RU": "Я плачу наличными. Вот деньги.",
+          "en-US": "I will pay in cash. Here is the money.",
+          "ar-SA": "سأدفع نقداً. ها هو المال.",
+          "es-ES": "Pago en efectivo. Aquí está el dinero.",
+          "fr-FR": "Je paie en espèces. Voici l'argent.",
+          "hi-IN": "मैं नकद भुगतान करूँगा। ये रहे पैसे।",
+          "pl-PL": "Płacę gotówką. Oto pieniądze.",
+          "ro-RO": "Plătesc cash. Iată banii.",
+          "tr-TR": "Nakit ödeyeceğim. İşte para.",
+          "uk-UA": "Я плачу готівкою. Ось гроші.",
+          "uz-UZ": "Men naqd to'layman. Mana pul."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Bitte schön. Hier ist Ihr Mietvertrag und der Schlüssel. Der Wagen steht auf Platz 5.",
+    "botTranslation": {
+      "ru-RU": "Пожалуйста. Вот ваш договор аренды и ключ. Машина стоит на месте 5.",
+      "en-US": "Here you go. Here is your rental agreement and the key. The car is at spot 5.",
+      "ar-SA": "تفضل. هذا هو عقد الإيجار والمفتاح الخاص بك. السيارة في الموقف 5.",
+      "es-ES": "Aquí tiene. Aquí está su contrato de alquiler y la llave. El coche está en la plaza 5.",
+      "fr-FR": "Voilà. Voici votre contrat de location et la clé. La voiture se trouve à la place 5.",
+      "hi-IN": "ये लीजिए। यह रहा आपका किराये का समझौता और चाबी। कार स्पॉट 5 पर है।",
+      "pl-PL": "Proszę bardzo. Oto umowa wynajmu i kluczyk. Samochód stoi na miejscu 5.",
+      "ro-RO": "Poftiți. Iată contractul de închiriere și cheia. Mașina este la locul 5.",
+      "tr-TR": "Buyurun. İşte kira sözleşmeniz ve anahtarınız. Araç 5 numaralı yerde.",
+      "uk-UA": "Будь ласка. Ось Ваш договір оренди та ключ. Машина стоїть на місці 5.",
+      "uz-UZ": "Marhamat. Mana ijaraga olish shartnomangiz va kalit. Mashina 5-joyda turibdi."
+    },
+    "vocabulary": [
+      {
+        "german": "der Schlüssel",
+        "translation": {
+          "ru-RU": "ключ",
+          "en-US": "key",
+          "ar-SA": "مفتاح",
+          "es-ES": "llave",
+          "fr-FR": "clé",
+          "hi-IN": "चाबी",
+          "pl-PL": "kluczyk",
+          "ro-RO": "cheie",
+          "tr-TR": "anahtar",
+          "uk-UA": "ключ",
+          "uz-UZ": "kalit"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Vielen Dank. Muss ich das Auto vollgetankt zurückbringen?",
+        "translation": {
+          "ru-RU": "Спасибо. Должен ли я вернуть машину с полным баком?",
+          "en-US": "Thank you very much. Do I have to return the car fully fueled?",
+          "ar-SA": "شكراً جزيلاً. هل يجب علي إرجاع السيارة بخزان ممتلئ؟",
+          "es-ES": "Muchas gracias. ¿Tengo que devolver el coche con el depósito lleno?",
+          "fr-FR": "Merci beaucoup. Dois-je rendre la voiture avec le plein ?",
+          "hi-IN": "बहुत-बहुत धन्यवाद। क्या मुझे कार का टैंक फुल करके वापस करनी होगी?",
+          "pl-PL": "Dziękuję bardzo. Czy muszę oddać samochód z pełnym bakiem?",
+          "ro-RO": "Vă mulțumesc mult. Trebuie să returnez mașina cu rezervorul plin?",
+          "tr-TR": "Çok teşekkürler. Arabayı tam dolu depoyla mı iade etmeliyim?",
+          "uk-UA": "Дуже дякую. Чи повинен я повернути машину з повним баком?",
+          "uz-UZ": "Katta rahmat. Mashinani to'liq bak bilan qaytarishim kerakmi?"
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Perfekt, danke. Gibt es schon Vorschäden am Auto?",
+        "translation": {
+          "ru-RU": "Идеально, спасибо. Есть ли уже на машине прошлые повреждения?",
+          "en-US": "Perfect, thanks. Are there any pre-existing damages to the car?",
+          "ar-SA": "ممتاز، شكراً. هل توجد أضرار سابقة بالسيارة؟",
+          "es-ES": "Perfecto, gracias. ¿Hay ya daños previos en el coche?",
+          "fr-FR": "Parfait, merci. Y a-t-il déjà des dommages sur la voiture ?",
+          "hi-IN": "बिल्कुल सही, धन्यवाद। क्या कार पर पहले से कोई नुकसान है?",
+          "pl-PL": "Idealnie, dziękuję. Czy są już jakieś uszkodzenia samochodu?",
+          "ro-RO": "Perfect, mulțumesc. Există deja daune anterioare la mașină?",
+          "tr-TR": "Mükemmel, teşekkürler. Arabada önceden hasar var mı?",
+          "uk-UA": "Ідеально, дякую. Чи є вже на машині минулі пошкодження?",
+          "uz-UZ": "Ajoyib, rahmat. Mashinada oldingi shikastlanishlar bormi?"
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Ja, bitte wieder vollgetankt zurückbringen. Alle Vorschäden stehen im Vertrag.",
+    "botTranslation": {
+      "ru-RU": "Да, пожалуйста, верните с полным баком. Все прошлые повреждения указаны в договоре.",
+      "en-US": "Yes, please return it fully fueled. All pre-existing damages are stated in the contract.",
+      "ar-SA": "نعم، يرجى إرجاعها بخزان ممتلئ. جميع الأضرار السابقة مذكورة في العقد.",
+      "es-ES": "Sí, por favor, devuélvalo con el depósito lleno. Todos los daños previos constan en el contrato.",
+      "fr-FR": "Oui, s'il vous plaît, rendez-la avec le plein. Tous les dommages antérieurs sont indiqués dans le contrat.",
+      "hi-IN": "हाँ, कृपया इसे पूरा भरकर वापस करें। सभी पिछले नुकसान अनुबंध में बताए गए हैं।",
+      "pl-PL": "Tak, proszę zwrócić z pełnym bakiem. Wszystkie wcześniejsze uszkodzenia są wpisane do umowy.",
+      "ro-RO": "Da, vă rog să o returnați cu plinul făcut. Toate daunele anterioare sunt trecute în contract.",
+      "tr-TR": "Evet, lütfen tam dolu depoyla iade edin. Tüm önceki hasarlar sözleşmede yazılıdır.",
+      "uk-UA": "Так, будь ласка, поверніть з повним баком. Всі минулі пошкодження вказані в договорі.",
+      "uz-UZ": "Ha, iltimos, to'liq bak bilan qaytaring. Barcha oldingi shikastlanishlar shartnomada yozilgan."
+    },
+    "vocabulary": [
+      {
+        "german": "vollgetankt",
+        "translation": {
+          "ru-RU": "с полным баком",
+          "en-US": "fully fueled",
+          "ar-SA": "ممتلئ بالوقود",
+          "es-ES": "con el depósito lleno",
+          "fr-FR": "avec le plein",
+          "hi-IN": "पूरा भरा हुआ टैंक",
+          "pl-PL": "zatankowany do pełna",
+          "ro-RO": "cu rezervorul plin",
+          "tr-TR": "tam dolu depo",
+          "uk-UA": "з повним баком",
+          "uz-UZ": "to'liq yonilg'i bilan"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, verstehe. Vielen Dank für Ihre Hilfe!",
+        "translation": {
+          "ru-RU": "Все ясно, понимаю. Большое спасибо за Вашу помощь!",
+          "en-US": "All right, I understand. Thank you very much for your help!",
+          "ar-SA": "حسناً، فهمت. شكراً جزيلاً على مساعدتك!",
+          "es-ES": "De acuerdo, entiendo. ¡Muchas gracias por su ayuda!",
+          "fr-FR": "Très bien, je comprends. Merci beaucoup pour votre aide !",
+          "hi-IN": "ठीक है, मैं समझ गया। आपकी मदद के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Wszystko jasne, rozumiem. Bardzo dziękuję za pomoc!",
+          "ro-RO": "Am înțeles. Vă mulțumesc mult pentru ajutor!",
+          "tr-TR": "Tamam, anladım. Yardımınız için çok teşekkürler!",
+          "uk-UA": "Все ясно, розумію. Велике дякую за Вашу допомогу!",
+          "uz-UZ": "Tushunarli. Yordamingiz uchun katta rahmat!"
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Super, danke schön. Auf Wiedersehen!",
+        "translation": {
+          "ru-RU": "Супер, большое спасибо. До свидания!",
+          "en-US": "Super, thank you very much. Goodbye!",
+          "ar-SA": "ممتاز، شكراً جزيلاً. وداعاً!",
+          "es-ES": "Genial, muchas gracias. ¡Adiós!",
+          "fr-FR": "Super, merci beaucoup. Au revoir !",
+          "hi-IN": "बढ़िया, बहुत-बहुत धन्यवाद। अलविदा!",
+          "pl-PL": "Super, bardzo dziękuję. Do widzenia!",
+          "ro-RO": "Super, mulțumesc frumos. La revedere!",
+          "tr-TR": "Harika, çok teşekkürler. Hoşça kalın!",
+          "uk-UA": "Супер, дуже дякую. До побачення!",
+          "uz-UZ": "Ajoyib, katta rahmat. Xayr!"
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Sehr gerne. Gute Fahrt! Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Не за что. Счастливого пути! Разговор окончен.",
+      "en-US": "You're very welcome. Have a good trip! The conversation is over.",
+      "ar-SA": "بكل سرور. رحلة سعيدة! انتهت المحادثة.",
+      "es-ES": "Con mucho gusto. ¡Buen viaje! La conversación ha terminado.",
+      "fr-FR": "Je vous en prie. Bonne route ! La conversation est terminée.",
+      "hi-IN": "आपका स्वागत है। आपकी यात्रा शुभ हो! बातचीत खत्म हो गई है।",
+      "pl-PL": "Bardzo proszę. Szerokiej drogi! Rozmowa zakończona.",
+      "ro-RO": "Cu mare plăcere. Drum bun! Conversația s-a încheiat.",
+      "tr-TR": "Rica ederim. İyi yolculuklar! Konuşma sona erdi.",
+      "uk-UA": "Нема за що. Щасливої дороги! Розмова закінчена.",
+      "uz-UZ": "Arzimaydi. Oq yo'l! Suhbat yakunlandi."
+    },
+    "vocabulary": [
+      {
+        "german": "Gute Fahrt",
+        "translation": {
+          "ru-RU": "счастливого пути",
+          "en-US": "have a good trip",
+          "ar-SA": "رحلة سعيدة",
+          "es-ES": "buen viaje",
+          "fr-FR": "bonne route",
+          "hi-IN": "आपकी यात्रा शुभ हो",
+          "pl-PL": "szerokiej drogi",
+          "ro-RO": "drum bun",
+          "tr-TR": "iyi yolculuklar",
+          "uk-UA": "щасливої дороги",
+          "uz-UZ": "oq yo'l"
+        }
+      }
+    ],
+    "options": [],
+    "defaultNext": null
+  }
+}

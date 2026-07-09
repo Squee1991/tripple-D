@@ -3961,23 +3961,23 @@
     "text": "Gizle"
   },
   "payPage": {
-    "title": "Platformdan en iyi şekilde yararlan",
-    "description": "Eğitim, ödüller, görevler, ilerleme ve çok daha fazlası!",
+    "sale5": "%3 indirim",
+    "sale10": "%6 indirim",
+    "sale15": "%15 indirim",
+    "finalePrice": "TOPLAM:",
+    "yourSale": "İndiriminiz",
+    "title": "Platformdan en iyi şekilde yararlanın",
+    "description": "Öğrenme, ödüller, görevler, ilerleme ve çok daha fazlası!",
     "compareLabelOne": "Özellikler",
     "compareLabelTwo": "Ücretsiz",
     "compareLabelThree": "Abonelik",
-    "getPremiumBtn": "Abonelik satın al",
+    "getPremiumBtn": "Satın Al",
     "month": "ay",
-    "featureOne": "Eğitim materyali",
-    "featureTwo": "İlerlemeyi kaydetme",
-    "featureThree": "Başarımlar",
-    "featureFour": "Günlük görevler",
-    "featureFive": "Sezonluk etkinlikler",
-    "featureSix": "Ödül kazanma",
-    "featureSeven": "Yapay zekâ kontrolü ile testler",
-    "featureEight": "Seslendirme",
-    "featureNine": "Düellolar ve sıralama",
-    "featureTen": "Gelecek özellikler"
+    "featureOne": "Sınırsız öğrenme",
+    "featureTwo": "Gelecekteki özellikler",
+    "featureThree": "Geliştirici desteği",
+    "featureFour": "Reklamsız",
+    "withoutDiscount": "İndirimsiz"
   },
   "useHeadApp": {
     "title": "Skillupgerman — Almancayı oyunlarla kolay ve eğlenceli şekilde öğren",
@@ -4120,25 +4120,29 @@
     "send": "Mesaj gönder"
   },
   "howToUse": {
-    "title": "Nasıl kullanılır",
-    "questOne": "Nasıl öğrenmeye başlanır?",
-    "answerOne": "Almanca pratiğine başlamak için kaydolup bir hesap oluşturmanız yeterlidir. Bunu yapmadan görevlere erişim kapalıdır.",
+    "title": "Nasıl Kullanılır",
+    "questOne": "Eğitime nasıl başlayabilirim?",
+    "answerOne": "Almanca pratiğine başlamak için kaydolup bir hesap oluşturmanız yeterlidir. Bu adımı tamamlamadan görevlere erişim sağlanamaz.",
     "questTwo": "Sezonluk etkinlikler nedir?",
-    "answerTwo": "Sezonluk etkinlikler tatillere bağlı geçici etkinliklerdir. Özel görevler, temalı alıştırmalar ve yalnızca sınırlı süre için mevcut olan benzersiz ödüller içerir.",
-    "questThree": "Başarı nedir?",
-    "answerThree": "Başarı, tamamlanan bir etkinlik için verilen işarettir (ilerleme, doğru cevaplar, günlük görevler vb.).",
+    "answerTwo": "Sezonluk etkinlikler, bayramlara ve özel günlere özel düzenlenen geçici etkinliklerdir. Bu dönemlerde sadece kısıtlı bir süre boyunca geçerli olan özel görevler, tematik aktiviteler ve benzersiz ödüller sunulur.",
+    "questThree": "Başarım nedir?",
+    "answerThree": "Başarım, tamamlanan bir aktivite (ilerleme, doğru cevaplar, günlük görevler vb.) karşılığında verilen bir dijital onay işaretidir.",
     "questFour": "Ödüller nedir?",
-    "answerFour": "Ödüller belirli başarıların tamamlanmasıyla verilir ve profilinizde görüntülenir.",
-    "questFive": "Artikel ilerlemesi nerede görülebilir?",
-    "answerFive": "Ana sayfada 'Katılımcı Paneli'nde 'İstatistik' seçin, ardından ilgili kategorinin ilerlemesini görüntüleyin. Önemli: aktif artikel konularınız yoksa istatistik gösterilmez.",
-    "questSix": "Artiklus nedir?",
-    "answerSix": "Artiklus, dahili para birimidir. 'Artikel pratiği' görevinde doğru cevaplar ve Dil Diyarı'ndaki görevler için kazanılır. Ek denemeler için harcanabilir.",
-    "questSeven": "Sıralamaya nasıl girilir?",
-    "answerSeven": "En az 2. seviyeye ulaşmanız gerekir. 'Artikel pratiği' veya 'Dil Diyarı' oynayarak. Bundan sonra sıralama tablosu açılır.",
+    "answerFour": "Ödüller, belirli başarımlar tamamlandığında verilir ve kullanıcı panelinizde görüntülenir.",
+    "questFive": "Artikellerdeki ilerlememi nereden görebilirim?",
+    "answerFive": "Ana sayfadaki \"Üye Paneli\" içinden \"İstatistikler\" sekmesini ve ardından ilgilendiğiniz kategorinin ilerlemesini seçin. Önemli: Artikellerle ilgili aktif bir konunuz yoksa istatistikler görüntülenmeyecektir.",
+    "questSix": "Articlus nedir?",
+    "answerSix": "Articlus, platform içi sanal para birimidir. \"Artikel Pratiği\" görevindeki doğru cevaplar ve Dil Diyarlarındaki görevlerin tamamlanması karşılığında kazanılır. Ek deneme hakları satın almak için harcanabilir.",
+    "questSeven": "Sıralamaya nasıl girebilirim?",
+    "answerSeven": "Artikel maratonu sıralaması iki haftada bir gerçekleştirilir. İki hafta boyunca diğer katılımcılarla yarışırsınız. Maraton sona erdiğinde, ilk üç dereceye girenler başarım ve ödüller kazanır!",
     "questEight": "Günlük görevler nedir?",
-    "answerEight": "Bunlar konuya göre görevlerdir ve günde bir kez yapılabilir. Günde 3 görev tamamlanabilir. Ana sayfada bulunur.",
+    "answerEight": "Bunlar günde bir kez yapılabilen tematik görevlerdir. Bir gün içinde en fazla 3 görev tamamlanabilir. Ana sayfadan erişilebilir durumdadırlar.",
     "questNine": "Etkinlikler nedir?",
-    "answerNine": "Bunlar yılda bir kez gerçekleşen geçici etkinliklerdir. Aktif dönemde temalı görevler ve ödüller açılır. Tarih aralığı dışında bölüm erişilemez. Etkinlik tarihlerini Katılımcı Paneli'ndeki 'Etkinlik Takvimi'nden görebilirsiniz."
+    "answerNine": "Yılda bir kez düzenlenen geçici etkinliklerdir. Aktif olduğu dönemde tematik görevler ve ödüller erişime açılır. Belirtilen tarih aralığının dışında bu bölüm kullanılamaz. Tarihleri Üye Panelindeki \"Etkinlik Takvimi\" üzerinden inceleyebilirsiniz.",
+    "questTen": "Mezuniyet kepleri nedir?",
+    "answerTen": "Kepler, günlük görevleri yerine getirdiğinizde verilen akademik şapkalardır. Bunlar sayesinde unvan bonusları ve eğitim indirimleri kazanılır. Günlük görevlerin yapılmaması durumunda ise bir ceza sistemi uygulanır.",
+    "questEleven": "Kepler için bir ceza var mı?",
+    "answerEleven": "Evet, günlük görevlerin yapılmaması durumunda bir ceza (3 kep düşüşü) uygulanır. Cezadan kaçınmak için günde en az bir günlük görev tamamlayın. Platformda olamayacağınız durumlarda, mağazadan \"zaman dondurma\" özelliğini satın alabilirsiniz; bu özellik cezaların keplerinizi eksiltmesini engeller!"
   },
   "accountManagement": {
     "title": "Hesap yönetimi",
@@ -4150,22 +4154,23 @@
     "answerThree": "Giriş formunda 'Şifreyi mi unuttunuz?' seçeneğini tıklayın ve talimatları izleyin. Kurtarma bağlantısı kayıt sırasında verilen e-posta adresinize gönderilecektir. Önemli: kayıt olurken gerçek bir e-posta adresi kullanın."
   },
   "subscribe": {
-    "title": "Abonelik (Premium)",
-    "questOne": "Premium ne sağlar?",
-    "questOneStepOne": "1 Tüm kelimelerin ve cümlelerin seslendirilmesi — dinleme becerisini geliştirin.",
-    "questOneStepTwo": "2 Sınırsız öğrenme — günde istediğiniz kadar materyal öğrenin.",
-    "questOneStepThree": "3 Tüm testlere otomatik kontrol ve AI değerlendirmesiyle erişim.",
-    "questOneStepFour": "4 Konuşma pratiği için sesli ve konuşma görevleri.",
+    "title": "Abonelik (Plus)",
+    "questOne": "Plus abonelik neler sunar?",
+    "questOneStepOne": "1 Tüm kelime ve cümlelerin seslendirilmesi — dinleme becerinizi geliştirin.",
+    "questOneStepTwo": "2 Sınırsız öğrenme — günde dilediğiniz kadar materyal tamamlayın.",
+    "questOneStepThree": "3 Yapay zeka değerlendirmeli ve otomatik kontrollü tüm testlere erişim.",
+    "questOneStepFour": "4 Konuşma pratiği için sesli görevler ve konuşma egzersizleri.",
     "questOneStepFive": "5 Ücretsiz sürümde bulunmayan özel materyaller ve alıştırmalar.",
-    "questOneStepSix": "6 Geliştiricilere destek — Premium, projeyi geliştirmemize, yeni görevler eklememize ve tüm öğrenciler için işlevleri iyileştirmemize yardımcı olur. Amacımız Almanca öğrenmeyi erişilebilir ve eğlenceli hale getirmektir. Etkileşim, oyun ve rekabet atmosferi yaratıyoruz, böylece öğrenmek her gün geri dönmek isteyeceğiniz bir macera olur!",
-    "questTwo": "Premium nasıl iptal edilir?",
+    "questOneStepSix": "6 Geliştirici desteği — bu durum projeyi büyütmemize, yeni görevler yayınlamamıza ve tüm öğrenciler için işlevselliği geliştirmemize yardımcı olur. Amacımız, Almanca öğrenmeyi erişilebilir ve en önemlisi eğlenceli hale getirmektir. Eğitimin her gün geri dönmek isteyeceğiniz bir maceraya dönüşmesi için etkileşimli, oyunlaştırılmış ve rekabetçi bir ortam yaratıyoruz!",
+    "questTwo": "Plus nasıl iptal edilir?",
     "questTwoStepOne": "Hesabınıza giriş yapın.",
-    "questTwoStepTwo": "'Profil' bölümüne gidin.",
-    "questTwoStepThree": "'Hesap yönetimi'ni açın.",
-    "questTwoStepFour": "'Aboneliği iptal et'i tıklayın.",
-    "note": "Bundan sonra erişim, ödenen dönemin sonuna kadar devam eder.",
-    "questThree": "Kalan günler için iade var mı?",
-    "answerThree": "Şu anda kalan günler için iade mevcut değildir."
+    "questTwoStepTwo": "\"Hesabım\" (Panel) bölümüne gidin.",
+    "questTwoStepThree": "\"Ayarlar\" bölümüne gidin.",
+    "questTwoStepFour": "\"Hesap Yönetimi\" alt başlığını açın.",
+    "questTwoStepFive": "\"Aboneliği İptal Et\" seçeneğine tıklayın.",
+    "note": "İptal işleminden sonra, erişim hakkınız ödemesi yapılmış dönemin sonuna kadar devam eder. Önemli: Abonelik, hangi platform üzerinden satın alındıysa yine orada iptal edilmelidir (iOS uygulaması, Android uygulaması veya web sitesi).",
+    "questThree": "Kalan günler için ücret iadesi var mı?",
+    "answerThree": "Kalan günler için ücret iadesi yapılmamaktadır."
   },
   "daily": {
     "first": "Tüm modlarda 5 kelime öğren: Artikel Pratiği",
@@ -5184,6 +5189,8 @@
   },
   "awards": {
     "title": "Ödül Listesi",
+    "wasPlusUser": "Articlus Kesesi",
+    "wasPlusUserDescription": "Genel kategorisindeki 'PLUS Sahibi' başarımı tamamlandığında verilen ödül",
     "articlus": "Kanatlı Para Birimi",
     "articlusDescription": "Genel kategorisindeki 'Kaynakları Tüket' başarımı için verilir",
     "registerAchievement": "Katılımcı Rozeti",
@@ -8042,11 +8049,11 @@
     "description": "Keplerinizi cezalara karşı korur"
   },
   "cardSales": {
-    "title3": "%3 indirim",
-    "title5": "%5 indirim",
-    "title6": "%6 indirim",
-    "title10": "%10 indirim",
-    "title15": "%15 indirim"
+    "title3": "Plus-I İndirimi",
+    "title5": "%5 İndirim",
+    "title6": "Plus-II İndirimi",
+    "title10": "%10 İndirim",
+    "title15": "%15 İndirim"
   },
   "cardsShop": {
     "full": "Tam",
@@ -8301,7 +8308,8 @@
     "guessed": "Kelime şuydu:",
     "tryAgain": "Tekrar dene",
     "btnToMain": "Ana Sayfa",
-    "placeholder": "Kelimenin tamamını girin"
+    "placeholder": "Kelimenin tamamını girin",
+    "wrong": "Yanlış! Doğrusu:"
   },
   "preposition": {
     "title": "Almanca edatlar hakkında her şey",
@@ -8861,6 +8869,9 @@
   },
   "generalCategory": {
     "generaLabel": "Genel Başarılar",
+    "wasPlusUserTitle": "PLUS Sahibi",
+    "wasPlusUserDescription": "PLUS aboneliği alın ve Almancanızı tam bir konforla geliştirin!",
+    "wasPlusUserAward": "Ödül: Articlus Kesesi",
     "dailyTitle": "Demir İrade",
     "dailyText": "Görev Günlüğünden 50 alıştırma yap",
     "dailyAward": "Ödül: Sonsuzluk Kum Saati",
@@ -9763,9 +9774,9 @@
     "rank_5": "Kaptan",
     "rank_6": "Muhafız",
     "rank_7": "Efsane",
-    "sale3": "%3 indirim",
+    "sale3": "Plus-1 İndirimi",
+    "sale6": "Plus-2 İndirimi",
     "sale5": "%5 indirim",
-    "sale6": "%6 indirim",
     "sale10": "%10 indirim",
     "sale15": "%15 indirim"
   },
@@ -9799,6 +9810,7 @@
   "descriptionThemes": {
     "winter": "Kış ve Aktiviteler",
     "transport": "Toplu Taşıma",
+    "work": "İş",
     "cafe": "Kafeterya",
     "supermarket": "Süpermarket",
     "home": "Ev ve Günlük Yaşam",
@@ -10230,7 +10242,18 @@
     "oil_change": "Yağ değişimi",
     "car_buying": "Araba satın alma",
     "police_control": "Hız ihlali",
-    "gas_station": "Akaryakıt istasyonu"
+    "gas_station": "Akaryakıt istasyonu",
+    "buying_fruit": "Meyve alışverişi",
+    "bakery": "Fırın",
+    "complaint": "Restoranda şikayet",
+    "bus_stop": "Otobüs durağı",
+    "buying_glasses": "Optik",
+    "emergency_call": "Acil durum araması",
+    "first_day": "Oryantasyon günü / İlk gün",
+    "client_talk": "Müşteri ile görüşme",
+    "car_rental": "Araç kiralama",
+    "ask_road": "Yol sorma",
+    "hotel_issue": "Otelde sorun"
   },
   "speakIndexPage": {
     "title": "Konuşma pratiği",
@@ -10306,6 +10329,8 @@
     "say": "Söyleyin:"
   },
   "speakSession": {
+    "wordList": "Diyalog kelimeleri",
+    "practiceWords": "Kelimeleri çalış",
     "title": "Konuşma pratiği",
     "words": "Kelimeler",
     "wordsText": "Konuşmaya başlamadan önce kelimeleri öğrenin veya tekrarlayın. Bu, kendinizi daha güvende hissetmenize yardımcı olur!",
@@ -10343,17 +10368,7 @@
     "correct": "Doğru",
     "incorrect": "Yanlış, doğrusu"
   },
-  "payPage": {
-    "featureOne": "Sınır tanımayan eğitim",
-    "featureTwo": "Gelecek özellikler",
-    "featureThree": "Geliştirici desteği",
-    "featureFour": "Reklamsız",
-    "sale5": "%3 indirim",
-    "sale10": "%6 indirim",
-    "sale15": "%15 indirim",
-    "finalePrice": "TOPLAM:",
-    "yourSale": "İndiriminiz"
-  },
+
   "stripeCancel": {
     "cancelSub": "Aboneliği iptal et",
     "cancelPayment": "Ödeme iptal edildi",
@@ -10522,5 +10537,80 @@
     "article_15": "Bir fiil - iki zıt anlam!",
     "article_17": "Nutella'nın artikeli savaşı!",
     "article_19": "Moin her duruma uyar!"
+  },
+  "i18nDays": {
+    "days": "g",
+    "hours": "sa",
+    "mins": "dk"
+  },
+  "headUp": {
+    "audioTasks": "يجب اختيار خيار إجابة واحد على الأقل",
+    "speakTasks": "Sadece sunulan seçenekler kullanılabilir."
+  },
+  "helpCenter": {
+    "privacy": "Gizlilik politikası",
+    "faq": "Sıkça sorulan sorular",
+    "terms": "Kullanım şartları",
+    "attributions": "Atıflar"
+  },
+  "rankAvatars": {
+    "locked_easy_1": "Bu profil resmi, Artikel Maratonu'nda (Kolay mod) 1.lik ödülüdür.",
+    "locked_easy_2": "Bu profil resmi, Artikel Maratonu'nda (Kolay mod) 2.lik ödülüdür.",
+    "locked_easy_3": "Bu profil resmi, Artikel Maratonu'nda (Kolay mod) 3.lük ödülüdür.",
+    "locked_normal_1": "Bu profil resmi, Artikel Maratonu'nda (Normal mod) 1.lik ödülüdür.",
+    "locked_normal_2": "Bu profil resmi, Artikel Maratonu'nda (Normal mod) 2.lik ödülüdür.",
+    "locked_normal_3": "Bu profil resmi, Artikel Maratonu'nda (Normal mod) 3.lük ödülüdür.",
+    "locked_hard_1": "Bu profil resmi, Artikel Maratonu'nda (Zor mod) 1.lik ödülüdür.",
+    "locked_hard_2": "Bu profil resmi, Artikel Maratonu'nda (Zor mod) 2.lik ödülüdür.",
+    "locked_hard_3": "Bu profil resmi, Artikel Maratonu'nda (Zor mod) 3.lük ödülüdür."
+  },
+  "typeOfAvatars": {
+    "usual": "Normal",
+    "ranked": "Ödüllü"
+  },
+  "marathonEasy": {
+    "title": "Artikel Maratonu Kolay Seviye",
+    "easyOneName": "Muzaffer Stajyer",
+    "easyOneDescription": "Artikel maratonu sıralamasında birinci olun (Kolay mod)",
+    "easyTwoName": "Layık Rakip",
+    "easyTwoDescription": "Artikel maratonu sıralamasında ikinci olun (Kolay mod)",
+    "easyThreeName": "Artikel Çırağı",
+    "easyThreeDescription": "Artikel maratonu sıralamasında üçüncü olun (Kolay mod)"
+  },
+  "marathonNormal": {
+    "title": "Artikel Maratonu Orta Seviye",
+    "normalOneName": "Artikel Ustası",
+    "normalOneDescription": "Artikel maratonu sıralamasında birinci olun (Orta mod)",
+    "normalTwoName": "Maraton Fatihi",
+    "normalTwoDescription": "Artikel maratonu sıralamasında ikinci olun (Orta mod)",
+    "normalThreeName": "Kelime Bilgesi",
+    "normalThreeDescription": "Artikel maratonu sıralamasında üçüncü olun (Orta mod)"
+  },
+  "marathonHard": {
+    "title": "Artikel Maratonu Zor Seviye",
+    "normalOneName": "Artikel İmparatoru",
+    "normalOneDescription": "Artikel maratonu sıralamasında birinci olun (Zor mod)",
+    "normalTwoName": "Maraton Efsanesi",
+    "normalTwoDescription": "Artikel maratonu sıralamasında ikinci olun (Zor mod)",
+    "normalThreeName": "Maraton Müptelası",
+    "normalThreeDescription": "Artikel maratonu sıralamasında üçüncü olun (Zor mod)"
+  },
+  "activePlus": {
+    "title": "Plus Aktif!",
+    "description": "Tüm özelliklerin kilidi zaten açıldı"
+  },
+  "newsBannerText": {
+    "text": "Merhaba! Skillupgerman her gün burada Almanca hakkında ilginç haberler yayınlıyor. Keyifle öğrenin!"
+  },
+  "marathonLeaderBoard": {
+    "stateHint": "Yarış yakında başlayacak! Yeni sezona hazır olun.",
+    "seasonEndsIn": "Maratonun bitmesine:",
+    "seasonStartsIn": "Maratonun başlamasına:"
+  },
+  "errorPage": {
+    "game-title": "Ups, bir şeyler ters gitti...",
+    "game-desc": "Madem buradayız, biraz ısınma hareketi yapalım. Doğru artikeli seçin:",
+    "win-screen": "Harika iş çıkardın!",
+    "win-desc": "Artık derslerine geri dönebilirsin."
   }
 }

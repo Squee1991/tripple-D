@@ -30,6 +30,7 @@
           <div class="card-inner">
             <div class="card-icon">
               <img
+                  class="card__rank-icon"
                   :src="rank.icons ? rank.icons[idx].icon : rank.icon"
                   :alt="rank.title"
                   :class="{ 'icon-grayscale': authStore.totalHats < lvl.hats }"
@@ -205,7 +206,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   font-size: 22px;
   position: absolute;
   left: 50%;
-  top: -3px;
+  top: -6px;
   transform: translateX(-50%);
 }
 
@@ -220,13 +221,15 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 
 .card-icon {
   padding-top: 22px;
-  width: 76px;
+  width: 86px;
   margin-bottom: 5px;
 }
 
 .icon-grayscale {
   filter: grayscale(1);
 }
+
+
 
 .card-label {
   font-weight: 700;
@@ -405,7 +408,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 @media (max-width: 1023px) {
   .grid {
     display: flex;
-    gap: 16px;
+
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;

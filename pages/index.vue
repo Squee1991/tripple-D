@@ -28,8 +28,18 @@ definePageMeta({
 
 onMounted(() => {
   hydrated.value = true
+  isLocallyLogged.value = localStorage.getItem('app_user_logged') === 'true'
 })
 
+watch(() => authStore.uid, (newUid) => {
+  if (newUid) {
+    localStorage.setItem('app_user_logged', 'true')
+    isLocallyLogged.value = true
+  } else if (authStore.initialized && !newUid) {
+    localStorage.removeItem('app_user_logged')
+    isLocallyLogged.value = false
+  }
+})
 </script>
 
 <template>

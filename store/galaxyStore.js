@@ -84,7 +84,7 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 			const snap = await getDoc(userDoc)
 			if (snap.exists()) {
 				const data = snap.data()
-				captainName.value = data.captainName || authStore.name || 'ПИЛОТ-01'
+				captainName.value = data.captainName || authStore.name || 'Pilot-01'
 				balance.value = data.balance || 0
 				highScores.value = data.highScores || {}
 				selectedTankId.value = data.selectedTankId || 1

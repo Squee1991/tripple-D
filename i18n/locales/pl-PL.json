@@ -3968,23 +3968,23 @@
     "text": "Ukryj"
   },
   "payPage": {
-    "title": "Wykorzystaj platformę w pełni",
+    "sale5": "Zniżka 3%",
+    "sale10": "Zniżka 6%",
+    "sale15": "Zniżka 15%",
+    "finalePrice": "RAZEM:",
+    "yourSale": "Twoja zniżka",
+    "title": "Wyciągnij maksimum z platformy",
     "description": "Nauka, nagrody, zadania, postępy i wiele więcej!",
     "compareLabelOne": "Funkcje",
-    "compareLabelTwo": "Darmowe",
+    "compareLabelTwo": "Bezpłatnie",
     "compareLabelThree": "Subskrypcja",
-    "getPremiumBtn": "Kup subskrypcję",
+    "getPremiumBtn": "Zdobądź",
     "month": "mies.",
-    "featureOne": "Materiał dydaktyczny",
-    "featureTwo": "Zapisywanie postępów",
-    "featureThree": "Osiągnięcia",
-    "featureFour": "Codzienne zadania",
-    "featureFive": "Wydarzenia sezonowe",
-    "featureSix": "Odbieranie nagród",
-    "featureSeven": "Testy sprawdzane przez AI",
-    "featureEight": "Lektor / nagranie głosowe",
-    "featureNine": "Pojedynki i ranking",
-    "featureTen": "Przyszłe funkcje"
+    "featureOne": "Nauka bez granic",
+    "featureTwo": "Przyszłe funkcje",
+    "featureThree": "Wsparcie twórców",
+    "featureFour": "Brak reklam",
+    "withoutDiscount": "Bez zniżki"
   },
   "useHeadApp": {
     "title": "Skillupgerman — Ucz się niemieckiego łatwo i ciekawie w formie gry",
@@ -4128,24 +4128,28 @@
   },
   "howToUse": {
     "title": "Jak korzystać",
-    "questOne": "Jak rozpocząć naukę?",
-    "answerOne": "Aby rozpocząć naukę niemieckiego, wystarczy się zarejestrować i utworzyć konto. Bez tego dostęp do zadań będzie zablokowany.",
+    "questOne": "Jak zacząć naukę?",
+    "answerOne": "Aby rozpocząć naukę niemieckiego, wystarczy się zarejestrować i założyć konto. Bez tego dostęp do zadań będzie zablokowany.",
     "questTwo": "Czym są wydarzenia sezonowe?",
-    "answerTwo": "Wydarzenia sezonowe to czasowe aktywności związane ze świętami. Zawierają specjalne zadania, tematyczne wyzwania i unikalne nagrody dostępne tylko przez ograniczony czas.",
-    "questThree": "Czym jest osiągnięcie?",
-    "answerThree": "Osiągnięcie to odznaka za wykonaną aktywność (postęp, poprawne odpowiedzi, zadania dzienne itp.).",
-    "questFour": "Czym są nagrody?",
-    "answerFour": "Nagrody są przyznawane za wykonanie określonych osiągnięć i wyświetlane w twoim profilu.",
-    "questFive": "Gdzie sprawdzić postęp w artykułach?",
-    "answerFive": "Na stronie głównej w 'Panelu uczestnika' wybierz 'Statystyka', a następnie postęp wybranej kategorii. Ważne: jeśli nie masz aktywnych tematów artykułów, statystyki nie będą widoczne.",
-    "questSix": "Czym jest Artiklus?",
-    "answerSix": "Artiklus to wewnętrzna waluta. Zdobywa się ją za poprawne odpowiedzi w zadaniu 'Praktyka artykułów' i za wykonywanie zadań w Językowych krainach. Można ją wydawać na dodatkowe próby.",
-    "questSeven": "Jak dostać się do rankingu?",
-    "answerSeven": "Trzeba zdobyć co najmniej poziom 2, grając w 'Praktykę artykułów' lub 'Językowe krainy'. Potem tabela rankingowa staje się dostępna.",
-    "questEight": "Czym są zadania codzienne?",
-    "answerEight": "To zadania tematyczne, które można wykonać raz dziennie. Można wykonać 3 zadania dziennie. Są dostępne na stronie głównej.",
-    "questNine": "Czym są wydarzenia?",
-    "answerNine": "To są tymczasowe wydarzenia, które odbywają się raz w roku. W aktywnym okresie dostępne są tematyczne zadania i nagrody. Poza zakresem dat sekcja jest niedostępna. Terminy wydarzeń można sprawdzić w „Kalendarzu wydarzeń” w Panelu uczestnika."
+    "answerTwo": "Wydarzenia sezonowe to ograniczone czasowo eventy powiązane ze świętami. Pojawiają się w nich specjalne misje, zadania tematyczne i unikalne nagrody, które są dostępne tylko przez określony czas.",
+    "questThree": "Co to jest osiągnięcie?",
+    "answerThree": "Osiągnięcie to wyróżnienie za wykonaną aktywność (postępy, prawidłowe odpowiedzi, zadania codzienne itp.).",
+    "questFour": "Co to są nagrody?",
+    "answerFour": "Nagrody są przyznawane za zdobycie określonych osiągnięć i są wyświetlane w Twoim panelu użytkownika.",
+    "questFive": "Gdzie mogę sprawdzić swoje postępy w rodzajnikach?",
+    "answerFive": "Na stronie głównej w „Panelu użytkownika” wybierz „Statystyki”, a następnie postęp w interesującej Cię kategorii. Ważne: jeśli nie masz aktywnych tematów związanych z rodzajnikami, statystyki nie będą wyświetlane.",
+    "questSix": "Co to jest Articlus?",
+    "answerSix": "Articlus to wewnętrzna waluta. Jest przyznawana za prawidłowe odpowiedzi w zadaniu „Praktyka rodzajników” oraz za wykonywanie zadań w Krainach Językowych. Można ją wydawać na kolejne próby.",
+    "questSeven": "Jak trafić do rankingu?",
+    "answerSeven": "Ranking maratonu rodzajników jest prowadzony raz na dwa tygodnie. Przez dwa tygodnie rywalizujesz z innymi uczestnikami. Po zakończeniu maratonu pierwsze trzy miejsca otrzymują osiągnięcia i nagrody!",
+    "questEight": "Co to są zadania codzienne?",
+    "answerEight": "Są to zadania tematyczne, które można wykonywać raz dziennie. W ciągu dnia można ukończyć maksymalnie 3 zadania. Są one dostępne na stronie głównej.",
+    "questNine": "Co to są wydarzenia?",
+    "answerNine": "Ograniczone czasowo wydarzenia, które odbywają się raz w roku. W okresie aktywności otwierają się zadania tematyczne i nagrody. Poza wyznaczonymi dniami sekcja jest niedostępna. Daty wydarzeń można sprawdzić w „Kalendarzu wydarzeń” w Panelu użytkownika.",
+    "questTen": "Co to są bakałararki?",
+    "answerTen": "Bakałarki to czapki studenckie (konfederatki) przyznawane za wykonywanie zadań codziennych. Dają one bonusy do rang oraz zniżki na naukę. Za niewykonanie zadań codziennych przewidziana jest kara.",
+    "questEleven": "Czy istnieje kara utraty czapek?",
+    "answerEleven": "Tak, za niewykonanie zadań codziennych przewidziana jest kara (3 czapki). Wykonaj przynajmniej jedno zadanie codzienne, a unikniesz kary. W przypadku nieobecności możesz kupić zatrzymanie czasu w wewnętrznym sklepie — zapobiegnie ono odebraniu Twoich czapek przez system kar!"
   },
   "accountManagement": {
     "title": "Zarządzanie kontem",
@@ -4157,22 +4161,23 @@
     "answerThree": "Na formularzu logowania wybierz 'Zapomniałeś hasła?' i postępuj zgodnie z instrukcjami. E-mail z linkiem do odzyskania hasła zostanie wysłany na adres podany przy rejestracji. Ważne: używaj prawdziwego adresu e-mail przy rejestracji."
   },
   "subscribe": {
-    "title": "Subskrypcja (Premium)",
-    "questOne": "Co daje Premium?",
-    "questOneStepOne": "1 Nagrania wszystkich słów i zdań — ćwicz rozumienie ze słuchu.",
-    "questOneStepTwo": "2 Nauka bez ograniczeń — ucz się dowolną ilość materiału dziennie.",
-    "questOneStepThree": "3 Dostęp do wszystkich testów z automatyczną oceną przez AI.",
-    "questOneStepFour": "4 Zadania audio i mówione do ćwiczenia mowy.",
-    "questOneStepFive": "5 Ekskluzywne materiały i ćwiczenia niedostępne w wersji darmowej.",
-    "questOneStepSix": "6 Wsparcie twórców — Premium pomaga rozwijać projekt, dodawać nowe zadania i ulepszać funkcje. Naszym celem jest uczynić naukę niemieckiego dostępną i przyjemną. Tworzymy atmosferę interakcji, gier i rywalizacji, aby nauka była przygodą, do której chce się wracać każdego dnia!",
-    "questTwo": "Jak anulować Premium?",
+    "title": "Subskrypcja (Plus)",
+    "questOne": "Co daje subskrypcja Plus?",
+    "questOneStepOne": "1 Nagrania audio dla wszystkich słów i zdań — ćwicz rozumienie ze słuchu.",
+    "questOneStepTwo": "2 Nauka bez ograniczeń — przerabiaj dowolną ilość materiału każdego dnia.",
+    "questOneStepThree": "3 Dostęp do wszystkich testów z automatycznym sprawdzaniem i oceną przez AI.",
+    "questOneStepFour": "4 Zadania audio i mówione do trenowania mowy potocznej.",
+    "questOneStepFive": "5 Ekskluzywne materiały i ćwiczenia niedostępne w wersji bezpłatnej.",
+    "questOneStepSix": "6 Wsparcie twórców — pomaga nam to rozwijać projekt, tworzyć nowe zadania i ulepszać funkcjonalności dla wszystkich uczniów. Naszym celem jest sprawienie, by nauka niemieckiego była przystępna, a co najważniejsze — wciągająca. Tworzymy atmosferę interakcji, gier i rywalizacji, aby nauka była przygodą, do której chce się wracać każdego dnia!",
+    "questTwo": "Jak anulować Plus?",
     "questTwoStepOne": "Zaloguj się na swoje konto.",
-    "questTwoStepTwo": "Przejdź do 'Profilu'.",
-    "questTwoStepThree": "Otwórz 'Zarządzanie kontem'.",
-    "questTwoStepFour": "Kliknij 'Anuluj subskrypcję'.",
-    "note": "Dostęp pozostanie do końca opłaconego okresu.",
-    "questThree": "Czy jest zwrot za niewykorzystane dni?",
-    "answerThree": "Obecnie zwrot za niewykorzystane dni nie jest dostępny."
+    "questTwoStepTwo": "Przejdź do sekcji „Panel użytkownika”.",
+    "questTwoStepThree": "Przejdź do sekcji „Ustawienia”.",
+    "questTwoStepFour": "Otwórz podsekcję „Zarządzanie kontem”.",
+    "questTwoStepFive": "Kliknij „Anuluj subskrypcję”.",
+    "note": "Po anulowaniu subskrypcji dostęp pozostanie aktywny do końca opłaconego okresu. Ważne: subskrypcję należy anulować na tej samej platformie, na której została opłacona (w aplikacji na iOS, Androidzie lub na stronie internetowej).",
+    "questThree": "Czy przysługuje zwrot pieniędzy za pozostałe dni?",
+    "answerThree": "Zwrot pieniędzy za pozostałe dni nie jest przewidziany."
   },
   "daily": {
     "first": "Naucz się 5 słów we wszystkich trybach: Praktyka rodzajników",
@@ -5191,6 +5196,8 @@
   },
   "awards": {
     "title": "Lista nagród",
+    "wasPlusUser": "Articlus Sack",
+    "wasPlusUserDescription": "Awarded for completing the 'PLUS Owner' achievement in the General category",
     "articlus": "Skrzydlata waluta",
     "articlusDescription": "Nagroda za osiągnięcie w kategorii Ogólne: „Wyczerpać zapasy”",
     "registerAchievement": "Odznaka uczestnika",
@@ -8049,9 +8056,9 @@
     "description": "Chroni Twoje birety przed karami"
   },
   "cardSales": {
-    "title3": "Zniżka 3%",
+    "title3": "Zniżka Plus-I",
     "title5": "Zniżka 5%",
-    "title6": "Zniżka 6%",
+    "title6": "Zniżka Plus-II",
     "title10": "Zniżka 10%",
     "title15": "Zniżka 15%"
   },
@@ -8308,7 +8315,8 @@
     "guessed": "Zagadnione słowo to:",
     "tryAgain": "Spróbuj ponownie",
     "btnToMain": "Do głównej",
-    "placeholder": "Wpisz całe słowo"
+    "placeholder": "Wpisz całe słowo",
+    "wrong": "Niepoprawnie! Prawidłowo:"
   },
   "preposition": {
     "title": "Wszystko o niemieckich przyimkach",
@@ -8868,6 +8876,9 @@
   },
   "generalCategory": {
     "generaLabel": "Ogólne osiągnięcia",
+    "wasPlusUserTitle": "Właściciel PLUS",
+    "wasPlusUserDescription": "Wykup subskrypcję PLUS i rozwijaj swój niemiecki w pełnym komforcie!",
+    "wasPlusUserAward": "Nagroda: Worek Articlusów",
     "dailyTitle": "Żelazna wola",
     "dailyText": "Wykonaj 50 ćwiczeń z Dziennika zadań",
     "dailyAward": "Nagroda: Klepsydra wieczności",
@@ -9770,9 +9781,9 @@
     "rank_5": "Kapitan",
     "rank_6": "Strażnik",
     "rank_7": "Legenda",
-    "sale3": "Zniżka 3%",
+    "sale3": "Zniżka Plus-1",
+    "sale6": "Zniżka Plus-2",
     "sale5": "Zniżka 5%",
-    "sale6": "Zniżka 6%",
     "sale10": "Zniżka 10%",
     "sale15": "Zniżka 15%"
   },
@@ -9806,6 +9817,7 @@
   "descriptionThemes": {
     "winter": "Zima i aktywności",
     "transport": "Transport publiczny",
+    "work": "Praca",
     "cafe": "Kawiarnia",
     "supermarket": "Supermarket",
     "home": "Dom i życie codzienne",
@@ -10237,7 +10249,18 @@
     "oil_change": "Wymiana oleju",
     "car_buying": "Zakup samochodu",
     "police_control": "Przekroczenie prędkości",
-    "gas_station": "Stacja benzynowa"
+    "gas_station": "Stacja benzynowa",
+    "buying_fruit": "Kupowanie owoców",
+    "bakery": "Piekarnia",
+    "complaint": "Reklamacja w restauracji",
+    "bus_stop": "Przystanek autobusowy",
+    "buying_glasses": "Optyk",
+    "emergency_call": "Połączenie alarmowe",
+    "first_day": "Dzień orientacyjny / Pierwszy dzień",
+    "client_talk": "Rozmowa z klientem",
+    "car_rental": "Wynajem samochodu",
+    "ask_road": "Pytanie o drogę",
+    "hotel_issue": "Problem w hotelu"
   },
   "speakIndexPage": {
     "title": "Ćwiczenia konwersacyjne",
@@ -10313,6 +10336,8 @@
     "say": "Powiedz:"
   },
   "speakSession": {
+    "wordList": "Słowa do dialogu",
+    "practiceWords": "Ćwicz słowa",
     "title": "Praktyka rozmawiania",
     "words": "Słowa",
     "wordsText": "Naucz się lub powtórz słówka przed rozpoczęciem rozmowy. To pomoże Ci poczuć się pewniej!",
@@ -10349,17 +10374,6 @@
   "guessArticle": {
     "correct": "Prawidłowo",
     "incorrect": "Nieprawidłowo, prawidłowo to"
-  },
-  "payPage": {
-    "featureOne": "Nauka bez granic",
-    "featureTwo": "Przyszłe funkcje",
-    "featureThree": "Wsparcie dla twórców",
-    "featureFour": "Brak reklam",
-    "sale5": "Zniżka 3%",
-    "sale10": "Zniżka 6%",
-    "sale15": "Zniżka 15%",
-    "finalePrice": "RAZEM:",
-    "yourSale": "Twoja zniżka"
   },
   "stripeCancel": {
     "cancelSub": "Anulowanie subskrypcji",
@@ -10529,5 +10543,80 @@
     "article_15": "Jedno słowo - dwa przeciwstawne znaczenia!",
     "article_17": "Bitwa o rodzajnik Nutelli!",
     "article_19": "Uniwersalne Moin!"
+  },
+  "i18nDays": {
+    "days": "dn.",
+    "hours": "g.",
+    "mins": "min"
+  },
+  "headUp": {
+    "audioTasks": "Musisz wybrać co najmniej jedną opcję odpowiedzi",
+    "speakTasks": "Można użyć tylko zaproponowanych opcji."
+  },
+  "helpCenter": {
+    "privacy": "Polityka prywatności",
+    "faq": "Najczęściej zadawane pytania",
+    "terms": "Regulamin świadczenia usług",
+    "attributions": "Atrybucje"
+  },
+  "rankAvatars": {
+    "locked_easy_1": "Ten awatar jest przyznawany za 1. miejsce w Maratonie Rodzajników (tryb łatwy).",
+    "locked_easy_2": "Ten awatar jest przyznawany za 2. miejsce w Maratonie Rodzajników (tryb łatwy).",
+    "locked_easy_3": "Ten awatar jest przyznawany za 3. miejsce w Maratonie Rodzajników (tryb łatwy).",
+    "locked_normal_1": "Ten awatar jest przyznawany za 1. miejsce w Maratonie Rodzajników (tryb średni).",
+    "locked_normal_2": "Ten awatar jest przyznawany za 2. miejsce w Maratonie Rodzajników (tryb średni).",
+    "locked_normal_3": "Ten awatar jest przyznawany za 3. miejsce w Maratonie Rodzajników (tryb średni).",
+    "locked_hard_1": "Ten awatar jest przyznawany za 1. miejsce w Maratonie Rodzajników (tryb trudny).",
+    "locked_hard_2": "Ten awatar jest przyznawany za 2. miejsce w Maratonie Rodzajników (tryb trudny).",
+    "locked_hard_3": "Ten awatar jest przyznawany za 3. miejsce w Maratonie Rodzajników (tryb trudny)."
+  },
+  "typeOfAvatars": {
+    "usual": "Zwykłe",
+    "ranked": "Nagrody"
+  },
+  "marathonEasy": {
+    "title": "Maraton Rodzajników poziom łatwy",
+    "easyOneName": "Triumfujący Praktykant",
+    "easyOneDescription": "Zajmij 1. miejsce w rankingu maratonu rodzajników (Tryb łatwy)",
+    "easyTwoName": "Godny Pretendent",
+    "easyTwoDescription": "Zajmij 2. miejsce w rankingu maratonu rodzajników (Tryb łatwy)",
+    "easyThreeName": "Stażysta Rodzajników",
+    "easyThreeDescription": "Zajmij 3. miejsce w rankingu maratonu rodzajników (Tryb łatwy)"
+  },
+  "marathonNormal": {
+    "title": "Maraton Rodzajników poziom średni",
+    "normalOneName": "Magister Rodzajników",
+    "normalOneDescription": "Zajmij 1. miejsce w rankingu maratonu rodzajników (Tryb średni)",
+    "normalTwoName": "Zdobywca Maratonu",
+    "normalTwoDescription": "Zajmij 2. miejsce w rankingu maratonu rodzajników (Tryb średni)",
+    "normalThreeName": "Znawca Słów",
+    "normalThreeDescription": "Zajmij 3. miejsce w rankingu maratonu rodzajników (Tryb średni)"
+  },
+  "marathonHard": {
+    "title": "Maraton Rodzajników poziom trudny",
+    "normalOneName": "Cesarz Rodzajników",
+    "normalOneDescription": "Zajmij 1. miejsce w rankingu maratonu rodzajników (Tryb trudny)",
+    "normalTwoName": "Legenda Maratonu",
+    "normalTwoDescription": "Zajmij 2. miejsce w rankingu maratonu rodzajników (Tryb trudny)",
+    "normalThreeName": "Adept Maratonu",
+    "normalThreeDescription": "Zajmij 3. miejsce w rankingu maratonu rodzajników (Tryb trudny)"
+  },
+  "activePlus": {
+    "title": "Plus jest aktywny!",
+    "description": "Wszystkie funkcje zostały już odblokowane"
+  },
+  "newsBannerText": {
+    "text": "Cześć! Każdego dnia Skillupgerman publikuje tutaj ciekawe wiadomości o języku niemieckim. Ucz się z przyjemnością!"
+  },
+  "marathonLeaderBoard": {
+    "stateHint": "Wyścig wkrótce się rozpocznie! Przygotuj się na nowy sezon.",
+    "seasonEndsIn": "Do końca maratonu:",
+    "seasonStartsIn": "Do rozpoczęcia maratonu:"
+  },
+  "errorPage": {
+    "game-title": "Ups, coś poszło nie tak...",
+    "game-desc": "Skoro już tu jesteśmy, rozgrzejmy się. Wybierz poprawny rodzajnik:",
+    "win-screen": "Świetna robota!",
+    "win-desc": "Teraz możesz wrócić do lekcji."
   }
 }

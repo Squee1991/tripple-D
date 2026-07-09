@@ -3975,23 +3975,23 @@
     "text": "Hide"
   },
   "payPage": {
+    "sale5": "3% discount",
+    "sale10": "6% discount",
+    "sale15": "15% discount",
+    "finalePrice": "TOTAL:",
+    "yourSale": "Your discount",
     "title": "Get the most out of the platform",
-    "description": "Learning, rewards, quests, progress and much more!",
+    "description": "Learning, rewards, tasks, progress, and much more!",
     "compareLabelOne": "Features",
     "compareLabelTwo": "Free",
     "compareLabelThree": "Subscription",
-    "getPremiumBtn": "Get subscription",
+    "getPremiumBtn": "Get Premium",
     "month": "mo.",
-    "featureOne": "Learning material",
-    "featureTwo": "Progress saving",
-    "featureThree": "Achievements",
-    "featureFour": "Daily quests",
-    "featureFive": "Seasonal events",
-    "featureSix": "Reward collection",
-    "featureSeven": "AI-checked tests",
-    "featureEight": "Voice-over",
-    "featureNine": "Duels and ranking",
-    "featureTen": "Upcoming features"
+    "featureOne": "Limitless learning",
+    "featureTwo": "Future features",
+    "featureThree": "Developer support",
+    "featureFour": "No ads",
+    "withoutDiscount": "Without discount"
   },
   "useHeadApp": {
     "title": "Skillupgerman — Learn German easily and interestingly through games",
@@ -4136,23 +4136,27 @@
   "howToUse": {
     "title": "How to use",
     "questOne": "How to start learning?",
-    "answerOne": "To start practicing German, simply register and create an account. Without this, access to tasks will be closed.",
+    "answerOne": "To start practicing German, simply register and create an account. Without this, access to tasks will be locked.",
     "questTwo": "What are seasonal events?",
-    "answerTwo": "Seasonal events are temporary activities tied to holidays. They include special quests, themed tasks, and unique rewards available only for a limited time.",
+    "answerTwo": "Seasonal events are temporary events tied to holidays. They feature special quests, themed tasks, and unique rewards that are only available for a limited time.",
     "questThree": "What is an achievement?",
-    "answerThree": "An achievement is a mark for a completed activity (progress, correct answers, daily tasks, etc.).",
+    "answerThree": "An achievement is a badge or marker for completed activity (progress, correct answers, daily tasks, etc.).",
     "questFour": "What are rewards?",
-    "answerFour": "Rewards are given for completing certain achievements and are displayed in your profile.",
-    "questFive": "Where to check progress on articles?",
-    "answerFive": "On the main page in the 'Participant Panel' select 'Statistics', then — the progress of the desired category. Important: if you don’t have active topics on articles, statistics will not be displayed.",
-    "questSix": "What is Artiklus?",
-    "answerSix": "Artiklus is the internal currency. It is earned for correct answers in the 'Article Practice' task and for completing tasks in Language Lands. It can be spent on extra attempts.",
-    "questSeven": "How to get into the ranking?",
-    "answerSeven": "You need to reach at least level 2 by playing 'Article Practice' or 'Language Lands'. After that, the ranking table becomes available.",
+    "answerFour": "Rewards are granted for completing specific achievements and are displayed in your personal account dashboard.",
+    "questFive": "Where can I view my progress on articles?",
+    "answerFive": "On the main page under 'Member Dashboard', select 'Statistics', then choose the progress of the category you are interested in. Note: if you have no active article topics, the statistics will not be displayed.",
+    "questSix": "What is Articlus?",
+    "answerSix": "Articlus is the internal currency. It is awarded for correct answers in the 'Article Practice' task and for completing tasks in Language Lands. It can be spent on extra retries.",
+    "questSeven": "How do I enter the leaderboard?",
+    "answerSeven": "The article marathon leaderboard is held once every two weeks. For two weeks, you compete with other participants. Once the marathon ends, the top three places receive achievements and rewards!",
     "questEight": "What are daily tasks?",
-    "answerEight": "These are tasks by topic that can be completed once a day. You can complete 3 tasks per day. They are available on the main page.",
+    "answerEight": "These are topic-based tasks that can be completed once a day. You can complete 3 tasks per day. They are available on the main page.",
     "questNine": "What are events?",
-    "answerNine": "These are temporary events that take place once a year. During the active period, themed quests and rewards are available. Outside the date range, the section is inaccessible. The event dates can be found in the 'Event Calendar' in the Participant Panel."
+    "answerNine": "Temporary events that take place once a year. During the active period, themed tasks and rewards become available. Outside of these dates, the section is unavailable. You can check the dates in the 'Event Calendar' on the Member Dashboard.",
+    "questTen": "What are mortarboards?",
+    "answerTen": "Mortarboards are student hats awarded for completing daily tasks. They grant title bonuses and discounts on learning. There is a penalty system for failing to complete daily tasks.",
+    "questEleven": "Is there a penalty on mortarboards?",
+    "answerEleven": "Yes, failing to complete daily tasks results in a penalty (3 mortarboards). Complete at least one daily task to avoid the penalty. If you are away, you can buy a time freeze in the internal shop to prevent the penalty from deducting your hats!"
   },
   "accountManagement": {
     "title": "Account Management",
@@ -4164,22 +4168,23 @@
     "answerThree": "On the login form select 'Forgot password?' and follow the instructions. A recovery email will be sent to the address provided during registration. Important: use a real email address when registering."
   },
   "subscribe": {
-    "title": "Subscription (Premium)",
-    "questOne": "What does Premium give?",
-    "questOneStepOne": "1 Audio for all words and sentences — practice listening comprehension.",
-    "questOneStepTwo": "2 Unlimited learning — go through as much material as you want per day.",
-    "questOneStepThree": "3 Access to all tests with auto-check and AI evaluation.",
-    "questOneStepFour": "4 Audio tasks and speaking tasks for oral practice.",
-    "questOneStepFive": "5 Exclusive materials and exercises not available in the free version.",
-    "questOneStepSix": "6 Support developers — Premium helps us improve the project, release new tasks and enhance features for all students. Our goal is to make learning German accessible and fun. We create an atmosphere of interactivity, games and competition so that studying feels like an adventure you want to return to every day!",
-    "questTwo": "How to cancel Premium?",
+    "title": "Subscription (Plus)",
+    "questOne": "What does a Plus subscription provide?",
+    "questOneStepOne": "1 Audio for all words and sentences — practice your listening skills.",
+    "questOneStepTwo": "2 Unlimited learning — go through any amount of material per day.",
+    "questOneStepThree": "3 Access to all tests with auto-check and AI grading.",
+    "questOneStepFour": "4 Audio and speaking exercises to practice oral speech.",
+    "questOneStepFive": "5 Exclusive materials and exercises unavailable in the free version.",
+    "questOneStepSix": "6 Developer support — this helps us develop the project, release new tasks, and improve features for all students. Our goal is to make learning German accessible and, most importantly, exciting. We create an atmosphere of interaction, games, and competition so that studying feels like an adventure you want to return to every day!",
+    "questTwo": "How to cancel Plus?",
     "questTwoStepOne": "Log in to your account.",
-    "questTwoStepTwo": "Go to 'Profile'.",
-    "questTwoStepThree": "Open 'Account management'.",
-    "questTwoStepFour": "Click 'Cancel subscription'.",
-    "note": "After this, access remains until the end of the paid period.",
-    "questThree": "Is there a refund for unused days?",
-    "answerThree": "Currently refunds for unused days are not available."
+    "questTwoStepTwo": "Go to the 'Dashboard' section.",
+    "questTwoStepThree": "Go to the 'Settings' section.",
+    "questTwoStepFour": "Open the 'Account Management' subsection.",
+    "questTwoStepFive": "Click 'Cancel Subscription'.",
+    "note": "After cancellation, your access will remain active until the end of the paid billing period. Important: the subscription must be canceled on the same platform where it was originally purchased (in the iOS app, Android app, or on the website).",
+    "questThree": "Is there a refund for the remaining days?",
+    "answerThree": "Refunds for remaining days are not provided."
   },
   "daily": {
     "first": "Learn 5 words in all modes: Article Practice",
@@ -5198,6 +5203,8 @@
   },
   "awards": {
     "title": "Award List",
+    "wasPlusUser": "Articlus Sack",
+    "wasPlusUserDescription": "Awarded for completing the 'PLUS Owner' achievement in the General category",
     "articlus": "Winged Currency",
     "articlusDescription": "Awarded for completing the achievement in the General category: 'Drain the Reserves'",
     "registerAchievement": "Participant Badge",
@@ -8056,11 +8063,11 @@
     "description": "Protects your mortarboards from penalties"
   },
   "cardSales": {
-    "title3": "3% discount",
-    "title5": "5% discount",
-    "title6": "6% discount",
-    "title10": "10% discount",
-    "title15": "15% discount"
+    "title3": "Plus-I Discount",
+    "title5": "5% Discount",
+    "title6": "Plus-II Discount",
+    "title10": "10% Discount",
+    "title15": "15% Discount"
   },
   "cardsShop": {
     "full": "Full",
@@ -8315,7 +8322,8 @@
     "guessed": "The word was:",
     "tryAgain": "Try again",
     "btnToMain": "To Main",
-    "placeholder": "Enter the full word"
+    "placeholder": "Enter the full word",
+    "wrong": "Incorrect! Correct:"
   },
   "preposition": {
     "title": "All About German Prepositions",
@@ -8875,6 +8883,9 @@
   },
   "generalCategory": {
     "generaLabel": "General Achievements",
+    "wasPlusUserTitle": "PLUS Owner",
+    "wasPlusUserDescription": "Get a PLUS subscription and level up your German in total comfort!",
+    "wasPlusUserAward": "Award: Articlus Sack",
     "dailyTitle": "Iron Will",
     "dailyText": "Complete 50 exercises from the Task Journal",
     "dailyAward": "Reward: Hourglass of Eternity",
@@ -9777,9 +9788,9 @@
     "rank_5": "Captain",
     "rank_6": "Guardian",
     "rank_7": "Legend",
-    "sale3": "3% discount",
+    "sale3": "Plus-1 Discount",
+    "sale6": "Plus-2 Discount",
     "sale5": "5% discount",
-    "sale6": "6% discount",
     "sale10": "10% discount",
     "sale15": "15% discount"
   },
@@ -9813,6 +9824,7 @@
   "descriptionThemes": {
     "winter": "Winter and Activities",
     "transport": "Public Transport",
+    "work": "Work",
     "cafe": "Cafeteria",
     "supermarket": "Supermarket",
     "home": "Home and Daily Life",
@@ -10245,7 +10257,18 @@
     "oil_change": "Oil change",
     "car_buying": "Buying a car",
     "police_control": "Speeding ticket",
-    "gas_station": "Gas station"
+    "gas_station": "Gas station",
+    "buying_fruit": "Покупка фрукты",
+    "bakery": "Пекарня",
+    "complaint": "Жалоба в ресторане",
+    "bus_stop": "Остановка",
+    "buying_glasses": "Оптика",
+    "emergency_call": "Экстренный вызов",
+    "first_day": "Вводный день",
+    "client_talk": "Разговор с клиентом",
+    "car_rental": "Аренда авто",
+    "ask_road": "Спросить дорогу",
+    "hotel_issue": "Проблема в отеле"
   },
   "speakIndexPage": {
     "title": "Speaking practice",
@@ -10321,6 +10344,8 @@
     "say": "Say:"
   },
   "speakSession": {
+    "wordList": "Words for the dialogue",
+    "practiceWords": "Practice words",
     "title": "Speaking practice",
     "words": "Words",
     "wordsText": "Learn or review the words before you start talking. This will help you feel more confident!",
@@ -10357,17 +10382,6 @@
   "guessArticle": {
     "correct": "Correct",
     "incorrect": "Incorrect, correct is"
-  },
-  "payPage": {
-    "featureOne": "Learning without borders",
-    "featureTwo": "Future features",
-    "featureThree": "Developer support",
-    "featureFour": "No ads",
-    "sale5": "3% discount",
-    "sale10": "6% discount",
-    "sale15": "15% discount",
-    "finalePrice": "TOTAL:",
-    "yourSale": "Your discount"
   },
   "stripeCancel": {
     "cancelSub": "Cancel subscription",
@@ -10537,5 +10551,80 @@
     "article_15": "One verb - two opposite meanings!",
     "article_17": "The battle for Nutella's article!",
     "article_19": "Moin is universal!"
+  },
+  "i18nDays": {
+    "days": "d",
+    "hours": "h",
+    "mins": "m"
+  },
+  "headUp": {
+    "audioTasks": "You must select at least one answer option",
+    "speakTasks": "Only the provided options can be used."
+  },
+  "helpCenter": {
+    "privacy": "Privacy Policy",
+    "faq": "FAQ",
+    "terms": "Terms of service",
+    "attributions": "Attributions"
+  },
+  "rankAvatars": {
+    "locked_easy_1": "This avatar is awarded for 1st place in the Article Marathon (Easy mode).",
+    "locked_easy_2": "This avatar is awarded for 2nd place in the Article Marathon (Easy mode).",
+    "locked_easy_3": "This avatar is awarded for 3rd place in the Article Marathon (Easy mode).",
+    "locked_normal_1": "This avatar is awarded for 1st place in the Article Marathon (Normal mode).",
+    "locked_normal_2": "This avatar is awarded for 2nd place in the Article Marathon (Normal mode).",
+    "locked_normal_3": "This avatar is awarded for 3rd place in the Article Marathon (Normal mode).",
+    "locked_hard_1": "This avatar is awarded for 1st place in the Article Marathon (Hard mode).",
+    "locked_hard_2": "This avatar is awarded for 2nd place in the Article Marathon (Hard mode).",
+    "locked_hard_3": "This avatar is awarded for 3rd place in the Article Marathon (Hard mode)."
+  },
+  "typeOfAvatars": {
+    "usual": "Regular",
+    "ranked": "Prize"
+  },
+  "marathonEasy": {
+    "title": "Article Marathon Easy Level",
+    "easyOneName": "Triumphant Intern",
+    "easyOneDescription": "Take 1st place in the Article Marathon leaderboard (Easy mode)",
+    "easyTwoName": "Worthy Contender",
+    "easyTwoDescription": "Take 2nd place in the Article Marathon leaderboard (Easy mode)",
+    "easyThreeName": "Article Trainee",
+    "easyThreeDescription": "Take 3rd place in the Article Marathon leaderboard (Easy mode)"
+  },
+  "marathonNormal": {
+    "title": "Article Marathon Normal Level",
+    "normalOneName": "Master of Articles",
+    "normalOneDescription": "Take 1st place in the Article Marathon leaderboard (Normal mode)",
+    "normalTwoName": "Marathon Conqueror",
+    "normalTwoDescription": "Take 2nd place in the Article Marathon leaderboard (Normal mode)",
+    "normalThreeName": "Word Connoisseur",
+    "normalThreeDescription": "Take 3rd place in the Article Marathon leaderboard (Normal mode)"
+  },
+  "marathonHard": {
+    "title": "Article Marathon Hard Level",
+    "normalOneName": "Emperor of Articles",
+    "normalOneDescription": "Take 1st place in the Article Marathon leaderboard (Hard mode)",
+    "normalTwoName": "Marathon Legend",
+    "normalTwoDescription": "Take 2nd place in the Article Marathon leaderboard (Hard mode)",
+    "normalThreeName": "Marathon Adept",
+    "normalThreeDescription": "Take 3rd place in the Article Marathon leaderboard (Hard mode)"
+  },
+  "activePlus": {
+    "title": "Plus Активен!",
+    "description": "Все функции уже разблокированы"
+  },
+  "newsBannerText": {
+    "text": "Hello! Every day, Skillupgerman publishes interesting news about the German language here. Enjoy learning!"
+  },
+  "marathonLeaderBoard": {
+    "stateHint": "The race will start soon! Get ready for the new season.",
+    "seasonEndsIn": "Marathon ends in:",
+    "seasonStartsIn": "Marathon starts in:"
+  },
+  "errorPage": {
+    "game-title": "Oops, something went wrong...",
+    "game-desc": "While we're here, let's warm up. Choose the correct article:",
+    "win-screen": "Great job!",
+    "win-desc": "Now you can get back to your lessons."
   }
 }

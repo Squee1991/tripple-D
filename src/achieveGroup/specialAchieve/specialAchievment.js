@@ -1,104 +1,91 @@
 export const cpecialGroupAchievment = [
 	{
-		title: 'Марафон артиклей легкий уровень',
+		title: 'marathonEasy.title',
 		achievements: [
 			{
 				id: "leaderboardEasy-1",
-				name: "specialCategory.specialFirstLabel",
-				description: "Займите первое место в рейтинге марафона артиклей Легкий режим",
+				name: "marathonEasy.easyOneName",
+				description: "marathonEasy.easyOneDescription",
 				icon: "🥇",
 				currentProgress: 0,
 				targetProgress: 1
 			},
 			{
 				id: "leaderboardEasy-2",
-				name: "specialCategory.specialSecondLabel",
-				description: "Займите второе место в рейтинге марафона артиклей Легкий режим",
+				name: "marathonEasy.easyTwoName",
+				description: "marathonEasy.easyTwoDescription",
 				icon: "🥈",
 				currentProgress: 0,
 				targetProgress: 1
 			},
 			{
 				id: "leaderboardEasy-3",
-				name: "specialCategory.specialThirdLabel",
-				description: "Займите третье место в рейтинге марафона артиклей Легкий режим",
-				icon: "🏆",
+				name: "marathonEasy.easyThreeName",
+				description: "marathonEasy.easyThreeDescription",
+				icon: "🥉",
 				currentProgress: 0,
 				targetProgress: 1
 			}
 		]
 	},
 	{
-		title: 'Марафон артиклей средний уровень',
+		title: 'marathonNormal.title',
 		achievements: [
 			{
 				id: "leaderboardNormal-1",
-				name: "specialCategory.specialFirstLabel",
-				description: "Займите первое место в рейтинге марафона артиклей Средний режим",
-				icon: "🥇",
+				name: "marathonNormal.normalOneName",
+				description: "marathonNormal.normalOneDescription",
+				icon: "🏆",
 				currentProgress: 0,
 				targetProgress: 1
 			},
 			{
 				id: "leaderboardNormal-2",
-				name: "specialCategory.specialSecondLabel",
-				description: "Займите второе место в рейтинге марафона артиклей Средний режим",
+				name: "marathonNormal.normalTwoName",
+				description: "marathonNormal.normalTwoDescription",
 				icon: "🥈",
 				currentProgress: 0,
 				targetProgress: 1
 			},
 			{
 				id: "leaderboardNormal-3",
-				name: "specialCategory.specialThirdLabel",
-				description: "Займите третье место в рейтинге марафона артиклей Средний режим",
-				icon: "🏆",
+				name: "marathonNormal.normalThreeName",
+				description: "marathonNormal.normalThreeDescription",
+				icon: "🥉",
 				currentProgress: 0,
 				targetProgress: 1
 			}
 		]
 	},
 	{
-		title: 'Марафон артиклей сложный уровень',
+		title: 'marathonHard.title',
 		achievements: [
 			{
 				id: "leaderboardHard-1",
-				name: "specialCategory.specialFirstLabel",
-				description: "Займите первое место в рейтинге марафона артиклей Сложный режим",
-				icon: "🥇",
+				name: "marathonHard.normalOneName",
+				description: "marathonHard.normalOneDescription",
+				icon: "👑",
 				currentProgress: 0,
 				targetProgress: 1
 			},
 			{
 				id: "leaderboardHard-2",
-				name: "specialCategory.specialSecondLabel",
-				description: "Займите второе место в рейтинге марафона артиклей Сложный режим",
+				name: "marathonHard.normalTwoName",
+				description: "marathonHard.normalTwoDescription",
 				icon: "🥈",
 				currentProgress: 0,
 				targetProgress: 1
 			},
 			{
 				id: "leaderboardHard-3",
-				name: "specialCategory.specialThirdLabel",
-				description: "Займите третье место в рейтинге марафона артиклей Сложный режим",
-				icon: "🏆",
+				name: "marathonHard.normalThreeName",
+				description: "marathonHard.normalThreeDescription",
+				icon: "🥉",
 				currentProgress: 0,
 				targetProgress: 1
 			}
 		]
 	},
-
-
-
-
-
-
-
-
-
-
-
-
-
 	{
 		title: 'specialCategory.generalLabel',
 		achievements: [
@@ -119,16 +106,8 @@ export const cpecialGroupAchievment = [
 				icon: "🌱",
 				awards: "specialCategory.specialGrotAward",
 				currentProgress: 0,
-				targetProgress: 4,
+				targetProgress: 3,
 			},
-			// {
-			// 	id: "training_daily_streak_150",
-			// 	name: "Мастер обучения",
-			// 	description: "Удерживайте стрик 150 дней, выполняя все 3 обучающих задания ежедневно.",
-			// 	icon: "🎯",
-			// 	currentProgress: 0,
-			// 	targetProgress: 150
-			// },
 			{
 				id: "totalArticles1000",
 				name: "specialCategory.generalFirstLabel",
@@ -144,7 +123,7 @@ export const cpecialGroupAchievment = [
 				description: "specialCategory.specialCollectionLabel",
 				icon: "🧰",
 				currentProgress: 0,
-				targetProgress: 24
+				targetProgress: 25
 			},
 			{
 				id: 'Hunderd',

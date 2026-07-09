@@ -40,47 +40,6 @@ export const useBillingStore = defineStore('billing', () => {
 		}
 	}
 
-	// const handleSubscriptionStatus = async (info) => {
-	// 	if (!authStore.uid) return
-	//
-	// 	const premiumEntitlement = info?.entitlements?.active?.['premium']
-	//
-	// 	if (premiumEntitlement) {
-	// 		const expDate = premiumEntitlement.expirationDate
-	// 		const isCancelled = !premiumEntitlement.willRenew
-	//
-	// 		if (!authStore.isPremium ||
-	// 			authStore.subscriptionEndsAt !== expDate ||
-	// 			authStore.subscriptionCancelled !== isCancelled) {
-	// 			authStore.isPremium = true
-	// 			authStore.subscriptionEndsAt = expDate
-	// 			authStore.subscriptionCancelled = isCancelled
-	//
-	// 			await updateDoc(doc(db, 'users', authStore.uid), {
-	// 				isPremium: true,
-	// 				paymentSource: paymentSource,
-	// 				subscriptionEndsAt: expDate,
-	// 				subscriptionCancelled: isCancelled,
-	// 				debug_last_action: "SYNC_UPDATED_PREMIUM_" + Date.now()
-	// 			})
-	// 		}
-	// 	} else {
-	// 		const pastPremium = info?.entitlements?.all?.['premium']
-	// 		if (pastPremium && pastPremium.isActive === false) {
-	// 			if (authStore.isPremium) {
-	// 				authStore.isPremium = false
-	// 				authStore.subscriptionCancelled = false
-	//
-	// 				await updateDoc(doc(db, 'users', authStore.uid), {
-	// 					isPremium: false,
-	// 					subscriptionCancelled: false,
-	// 					debug_last_action: "EXPLICITLY_EXPIRED_" + Date.now()
-	// 				})
-	// 			}
-	// 		}
-	// 	}
-	// }
-
 	const handleSubscriptionStatus = async (info) => {
 		if (!authStore.uid) return
 		const premiumEntitlement = info?.entitlements?.active?.['premium']
@@ -121,28 +80,6 @@ export const useBillingStore = defineStore('billing', () => {
 			}
 		}
 	}
-
-	// const restore = async () => {
-	// 	if (!isMobile.value) return false
-	// 	isPurchasing.value = true
-	// 	try {
-	// 		if (currentPlatform === 'android') {
-	// 			try {
-	// 				await Purchases.syncPurchases()
-	// 			} catch (syncErr) {
-	// 				console.log('Sync err:', syncErr)
-	// 			}
-	// 		}
-	// 		const customerInfo = await Purchases.restorePurchases()
-	// 		await handleSubscriptionStatus(customerInfo)
-	// 		return !!customerInfo?.entitlements?.active?.['premium']
-	// 	} catch (e) {
-	// 		console.error('Ошибка восстановления RC:', e.message)
-	// 		return false
-	// 	} finally {
-	// 		isPurchasing.value = false
-	// 	}
-	// }
 
 	const restore = async () => {
 		if (!isMobile.value) return false

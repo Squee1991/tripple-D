@@ -1,13 +1,15 @@
-import {defineStore} from "pinia";
-import {ref, computed, watch} from 'vue'
+import { defineStore } from "pinia";
+import { ref, computed } from 'vue';
 import { Capacitor } from '@capacitor/core';
-import { Purchases } from '@revenuecat/purchases-capacitor'
-import { useBillingStore } from '../store/billingStore.js'
+import { Purchases } from '@revenuecat/purchases-capacitor';
+import { useBillingStore } from '../store/billingStore.js';
 import {
     getAuth,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
-    EmailAuthProvider, reauthenticateWithCredential, OAuthProvider,
+    EmailAuthProvider,
+    reauthenticateWithCredential,
+    OAuthProvider,
     updateProfile,
     signOut,
     deleteUser,
@@ -16,19 +18,19 @@ import {
     signInWithCredential,
     sendEmailVerification,
     signInWithPopup,
-    reauthenticateWithPopup, GoogleAuthProvider, fetchSignInMethodsForEmail
+    reauthenticateWithPopup,
+    GoogleAuthProvider,
+    fetchSignInMethodsForEmail
 } from 'firebase/auth';
 import { GoogleSignIn } from '@capawesome/capacitor-google-sign-in';
-// import { SignInWithApple } from '@capacitor-community/apple-sign-in';
-import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp, writeBatch} from 'firebase/firestore';
-import {userlangStore} from "./learningStore.js";
-import { useAchievementStore } from '../store/achievementStore.js'
+import { doc, setDoc, getDoc, getFirestore, updateDoc, serverTimestamp, writeBatch } from 'firebase/firestore';
+import { userlangStore } from "./learningStore.js";
 let authStateUnsubscribe = null;
 
 const isUserCancelledAuth = (error) => {
-    if (!error) return false
-    const code = String(error.code || '').toLowerCase()
-    const msg = String(error.message || error.errorMessage || '').toLowerCase()
+    if (!error) return false;
+    const code = String(error.code || '').toLowerCase();
+    const msg = String(error.message || error.errorMessage || '').toLowerCase();
     if (
         code === 'sign_in_canceled' ||
         code === 'sign_in_cancelled' ||
@@ -36,29 +38,32 @@ const isUserCancelledAuth = (error) => {
         code === 'auth/cancelled-popup-request' ||
         code === 'auth/user-cancelled' ||
         code === '12501'
-    ) return true
-    return msg.includes('cancel')
-}
+    ) return true;
+    return msg.includes('cancel');
+};
 
 export const userAuthStore = defineStore('auth', () => {
-    const auth = getAuth()
+    const auth = getAuth();
     const langStore = userlangStore();
-    const LEADERBOARD_COLLECTION = 'marathon_leaderboard';
-    const LEADERBOARD_GUESS = 'leaderboard_guess'
-    const DAILY__COLLECTION = 'daily';
-    const LOCAL_STAT_COLLECTION = 'localStatGame';
-    const voiceConsentGiven = ref(false)
-    const name = ref(null)
-    const email = ref(null)
-    const registeredAt = ref(null)
     const db = getFirestore();
-    const providerId = ref('')
-    const avatar = ref(null)
-    const uid = ref(null)
-    const notEnoughArticle = ref(false)
-    const gotPremiumBonus = ref(false)
-    const subscriptionEndsAt = ref(null)
-    const subscriptionCancelled = ref(false)
+    const LEADERBOARD_COLLECTION = 'marathon_leaderboard';
+    const LEADERBOARD_GUESS = 'leaderboard_guess';
+    const uid = ref(null);
+    const name = ref(null);
+    const email = ref(null);
+    const registeredAt = ref(null);
+    const providerId = ref('');
+    const avatar = ref(null);
+    const voiceConsentGiven = ref(false);
+    const hasSeenOnboarding = ref(false);
+    const initialized = ref(false);
+    const totalHats = ref(0);
+    const freezeEndsAt = ref(null);
+    const claimedBonuses = ref([]);
+    const achievements = ref(null);
+    const notEnoughArticle = ref(false);
+    const gotPremiumBonus = ref(false);
+    const IMMUNITY_RANK_HATS = 500;
     const availableAvatars = ref([
         '1.png', '2.png', '3.png', '4.png', '5.png', '6.png',
         '12.png', '7.png', '8.png', '9.png', '10.png', '11.png',
@@ -66,25 +71,12 @@ export const userAuthStore = defineStore('auth', () => {
         '19.png', '20.png', '21.png', '22.png', '23.png', '24.png'
     ]);
     const ownedAvatars = ref(['1.png', '2.png']);
-    const isPremium = ref(typeof window !== 'undefined' ? localStorage.getItem('cached_premium') === 'true' : false)
-    const achievements = ref(null);
-    const isWebView = ref(false)
-    const hasSeenOnboarding = ref(false)
-    const initialized = ref(false)
-    const shouldShowFeedbackSurvey = ref(false)
-    const totalHats = ref(0)
-    const claimedBonuses = ref([])
-    const freezeEndsAt = ref(null)
-    const IMMUNITY_RANK_HATS = 500
-    const paymentSource = ref(null)
 
-    const premiumDiscount = ref({
-        sale_3: false,
-        sale_5: false,
-        sale_6: false,
-        sale_10: false,
-        sale_15: false
-    })
+    const isPremium = ref(false);
+    const subscriptionEndsAt = ref(null);
+    const subscriptionCancelled = ref(false);
+    const paymentSource = ref(null);
+    const premiumDiscount = ref({ sale_3: false, sale_5: false, sale_6: false, sale_10: false, sale_15: false });
 
     watch(isPremium, (newValue) => {
         if (typeof window !== 'undefined') {
@@ -92,130 +84,24 @@ export const userAuthStore = defineStore('auth', () => {
         }
     })
 
-    const addClaimedBonus = async (hatAmount) => {
-        const user = getAuth().currentUser
-        if (!user) return
-        if (!claimedBonuses.value.includes(hatAmount)) {
-            claimedBonuses.value.push(hatAmount)
-            const userDocRef = doc(db, 'users', user.uid)
-            try {
-                await updateDoc(userDocRef, {
-                    claimedBonuses: claimedBonuses.value
-                })
-            } catch (e) {
-                console.error('Ошибка при сохранении бонуса:', e)
-            }
-        }
-    }
-
-    const toMillis = (val) => {
-        if (!val) return null
-        if (typeof val === 'number') return val
-        if (typeof val?.toMillis === 'function') return val.toMillis()
-        if (val instanceof Date) return val.getTime()
-        const parsed = Date.parse(val)
-        return isNaN(parsed) ? null : parsed
-    }
-
-    const modifyHats = async (amount) => {
-        const authUser = getAuth().currentUser
-        if (!authUser) return
-        if (amount < 0) {
-            if (totalHats.value >= IMMUNITY_RANK_HATS) return
-            if (totalHats.value <= 0) return
-        }
-        let newTotal = totalHats.value + amount
-        if (newTotal < 0) newTotal = 0
-        totalHats.value = newTotal
-        const userDocRef = doc(db, 'users', authUser.uid)
-        try {
-            await updateDoc(userDocRef, {
-                totalHats: newTotal
-            })
-        } catch (e) {
-            console.error('Ошибка обновления шляп:', e)
-        }
-    }
-
-    const cancelFreeze = async () => {
-        if (!freezeEndsAt.value) return
-        console.log('Пользователь вернулся! Снимаем заморозку')
-        const authUser = getAuth().currentUser
-        freezeEndsAt.value = null
-        if (authUser) {
-            const userDocRef = doc(db, 'users', authUser.uid)
-            try {
-                await updateDoc(userDocRef, {
-                    freezeEndsAt: null
-                })
-            } catch (e) {
-                console.error('Ошибка при отмене заморозки:', e)
-            }
-        }
-    }
-
-    const activateDiscount = async (discountId) => {
-        const user = getAuth().currentUser
-        if (!user) return {success: false, reason: 'no-user'}
-
-        const allowed = ['sale_3', 'sale_5', 'sale_6', 'sale_10', 'sale_15']
-        if (!allowed.includes(discountId)) return {success: false, reason: 'invalid-item'}
-
-        if (premiumDiscount.value[discountId] === true) {
-            return {success: false, reason: 'already-owned'}
-        }
-        const userRef = doc(db, 'users', user.uid)
-        await updateDoc(userRef, {[discountId]: true})
-        premiumDiscount.value[discountId] = true
-        return {success: true}
-    }
-
-    let initPromise = null
-
-    const checkFeedbackSurveyEligibility = async () => {
-        shouldShowFeedbackSurvey.value = false
-        const authUser = getAuth().currentUser
-        const currentUid = uid.value || authUser?.uid
-        if (!currentUid) return
-        const userDocRef = doc(db, 'users', currentUid)
-        const snap = await getDoc(userDocRef)
-        if (!snap.exists()) return
-        const data = snap.data() || {}
-        const shownAt =
-            data.feedbackSurveyShownAt && typeof data.feedbackSurveyShownAt.toDate === 'function'
-                ? data.feedbackSurveyShownAt.toDate()
-                : null
-
-        if (shownAt) return
-        const regDateFromAuth = authUser?.metadata?.creationTime ? new Date(authUser.metadata.creationTime) : null
-        const regDateFromDb = data.registeredAt && typeof data.registeredAt.toDate === 'function' ? data.registeredAt.toDate() : null
-        const regDate = regDateFromDb || regDateFromAuth
-        if (!regDate) return
-        const threeDaysMs = 0
-        if (Date.now() - regDate.getTime() < threeDaysMs) return
-        shouldShowFeedbackSurvey.value = true
-    }
-
-    const markFeedbackSurveyShown = async () => {
-        const authUser = getAuth().currentUser
-        const currentUid = uid.value || authUser?.uid
-        if (!currentUid) return
-        const userDocRef = doc(db, 'users', currentUid)
-        await updateDoc(userDocRef, {feedbackSurveyShownAt: serverTimestamp()})
-        shouldShowFeedbackSurvey.value = false
-    }
+    const isWebView = ref(false);
+    const shouldShowFeedbackSurvey = ref(false);
+    let initPromise = null;
 
     const isGoogleUser = computed(() => providerId.value === 'google.com');
-    const getAvatarUrl = (fileName) => {
-        if (!fileName) return '';
-        return `/images/avatars/${fileName}`;
-    }
-    const detectWebView = () => {
-        const ua = navigator.userAgent || ''
-        const isIOSWebView = /iPhone|iPod|iPad/i.test(ua) && !/Safari/i.test(ua)
-        const isAndroidWebView = /wv/.test(ua)
-        isWebView.value = isIOSWebView || isAndroidWebView
-    }
+    const avatarUrl = computed(() => avatar.value ? `/images/avatars/${avatar.value}` : '');
+    const isFreezeActive = computed(() => freezeEndsAt.value ? Date.now() < freezeEndsAt.value : false);
+
+    const getAvatarUrl = (fileName) => fileName ? `/images/avatars/${fileName}` : '';
+
+    const toMillis = (val) => {
+        if (!val) return null;
+        if (typeof val === 'number') return val;
+        if (typeof val?.toMillis === 'function') return val.toMillis();
+        if (val instanceof Date) return val.getTime();
+        const parsed = Date.parse(val);
+        return isNaN(parsed) ? null : parsed;
+    };
 
     const normalizeDate = (value) => {
         if (!value) return null;
@@ -224,404 +110,179 @@ export const userAuthStore = defineStore('auth', () => {
         return isNaN(date.getTime()) ? null : date.toISOString();
     };
 
-    const avatarUrl = computed(() => {
-        return avatar.value ? `/images/avatars/${avatar.value}` : '';
-    });
-
-    const createInitialAchievementsObject = () => {
-        return {
-            achievements: {
-                A1: {wins: 0, streaks: 0, cleanSweeps: 0},
-                A2: {wins: 0, streaks: 0, cleanSweeps: 0},
-                B1: {wins: 0, streaks: 0, cleanSweeps: 0},
-                B2: {wins: 0, streaks: 0, cleanSweeps: 0}
-            }
-        };
+    const detectWebView = () => {
+        const ua = navigator.userAgent || '';
+        const isIOSWebView = /iPhone|iPod|iPad/i.test(ua) && !/Safari/i.test(ua);
+        const isAndroidWebView = /wv/.test(ua);
+        isWebView.value = isIOSWebView || isAndroidWebView;
     };
 
-    const grantPremiumBonusPoints = async () => {
-        const auth = getAuth();
+    const unlockMarathonAchievement = async (levelPrefix, rank) => {
         const user = auth.currentUser;
         if (!user) return;
-        const userDocRef = doc(db, 'users', user.uid);
-        const snap = await getDoc(userDocRef);
-        const alreadyGranted = snap.exists() && snap.data().gotPremiumBonus === true;
-        if (alreadyGranted) return;
-        langStore.points += 50;
-        langStore.totalEarnedPoints += 50;
-        langStore.gotPremiumBonus = true;
-        await langStore.saveToFirebase();
-        await updateDoc(userDocRef, {gotPremiumBonus: true});
+        const fieldName = `${levelPrefix}_${rank}`;
+        if (!achievements.value) {
+            achievements.value = { marathon: {} };
+        } else if (!achievements.value.marathon) {
+            achievements.value.marathon = {};
+        }
+        if (achievements.value.marathon[fieldName]) return;
+        achievements.value.marathon[fieldName] = true;
+        try {
+            await updateDoc(doc(db, 'users', user.uid), {
+                [`achievements.marathon.${fieldName}`]: true
+            });
+        } catch (e) {
+            console.error('Ошибка при записи ачивки марафона в БД:', e);
+        }
     };
 
+    const createInitialAchievementsObject = () => ({
+        achievements: {
+            A1: { wins: 0, streaks: 0, cleanSweeps: 0 },
+            A2: { wins: 0, streaks: 0, cleanSweeps: 0 },
+            B1: { wins: 0, streaks: 0, cleanSweeps: 0 },
+            B2: { wins: 0, streaks: 0, cleanSweeps: 0 },
+            marathon: {
+                easy_1: false, easy_2: false, easy_3: false,
+                normal_1: false, normal_2: false, normal_3: false,
+                hard_1: false, hard_2: false, hard_3: false
+            }
+        }
+    });
+
+    
     const setUserData = (data) => {
-        name.value = data.name || null
-        email.value = data.email || null
-        registeredAt.value = normalizeDate(data.registeredAt)
-        uid.value = data.uid || null
-        avatar.value = data.avatar || null
-        paymentSource.value = data.paymentSource || null
-        isPremium.value = data.isPremium === true
-        subscriptionEndsAt.value = data.subscriptionEndsAt || null
-        subscriptionCancelled.value = isPremium.value && data.subscriptionCancelled === true
-        providerId.value = data.providerId || ''
-        ownedAvatars.value = data.ownedAvatars || ['1.png', '2.png']
-        achievements.value = data.achievements || null
-        voiceConsentGiven.value = data.voiceConsentGiven === true
-        hasSeenOnboarding.value = data.hasSeenOnboarding === true
-        totalHats.value = data.totalHats || 0
-        freezeEndsAt.value = toMillis(data.freezeEndsAt)
-        claimedBonuses.value = data.claimedBonuses || []
+        uid.value = data.uid || null;
+        name.value = data.name || null;
+        email.value = data.email || null;
+        registeredAt.value = normalizeDate(data.registeredAt);
+        avatar.value = data.avatar || null;
+        paymentSource.value = data.paymentSource || null;
+        isPremium.value = data.isPremium === true;
+        subscriptionEndsAt.value = data.subscriptionEndsAt || null;
+        subscriptionCancelled.value = isPremium.value && data.subscriptionCancelled === true;
+        providerId.value = data.providerId || '';
+        ownedAvatars.value = data.ownedAvatars || ['1.png', '2.png'];
+        achievements.value = data.achievements || null;
+        voiceConsentGiven.value = data.voiceConsentGiven === true;
+        hasSeenOnboarding.value = data.hasSeenOnboarding === true;
+        totalHats.value = data.totalHats || 0;
+        freezeEndsAt.value = toMillis(data.freezeEndsAt);
+        claimedBonuses.value = data.claimedBonuses || [];
+
         if (data.points !== undefined) langStore.points = data.points;
         if (data.exp !== undefined) langStore.exp = data.exp;
         if (data.totalEarnedPoints !== undefined) langStore.totalEarnedPoints = data.totalEarnedPoints;
+        if (data.isLeveling !== undefined) langStore.isLeveling = data.isLeveling;
+        if (langStore.isLeveling === 0 && langStore.totalEarnedPoints >= 100) {
+            langStore.isLeveling = Math.floor(langStore.totalEarnedPoints / 100);
+            langStore.exp = langStore.totalEarnedPoints % 100;
+        }
         premiumDiscount.value = {
             sale_3: data.sale_3 || false,
             sale_5: data.sale_5 || false,
             sale_6: data.sale_6 || false,
             sale_10: data.sale_10 || false,
             sale_15: data.sale_15 || false
-        }
-        if (data.isPremium && !data.gotPremiumBonus) grantPremiumBonusPoints()
-    }
+        };
 
-    const purchase = async (cost, discountId) => {
-        const user = getAuth().currentUser
-        if (!user) return {success: false, reason: 'no-user'}
-        const allowed = ['sale_3', 'sale_5', 'sale_6', 'sale_10', 'sale_15']
-        if (!allowed.includes(discountId)) return {success: false, reason: 'invalid-item'}
-        if (totalHats.value < cost) return {success: false, reason: 'insufficient'}
-        if (premiumDiscount.value[discountId] === true) return {success: false, reason: 'already-owned'}
-        try {
-            const newTotal = totalHats.value - cost
-            const userRef = doc(db, 'users', user.uid)
-            await updateDoc(userRef, {
-                totalHats: newTotal,
-                [discountId]: true,
-            })
-            totalHats.value = newTotal
-            premiumDiscount.value[discountId] = true
-            return {success: true}
-        } catch (error) {
-            console.error('purchase error', error)
-            return {success: false, reason: 'error'}
-        }
-    }
+        if (data.isPremium && !data.gotPremiumBonus) grantPremiumBonusPoints();
+    };
 
-    const updateUserAvatar = async (newAvatarFilename) => {
-        const user = getAuth().currentUser;
+    const grantPremiumBonusPoints = async () => {
+        const user = auth.currentUser;
         if (!user) return;
         const userDocRef = doc(db, 'users', user.uid);
         try {
-            await updateDoc(userDocRef, {
-                avatar: newAvatarFilename
-            });
-            avatar.value = newAvatarFilename;
-        } catch (error) {
-            throw error;
+            const snap = await getDoc(userDocRef);
+            if (snap.exists() && snap.data().gotPremiumBonus === true) return;
+
+            langStore.points += 50;
+            langStore.totalEarnedPoints += 50;
+            langStore.gotPremiumBonus = true;
+            await langStore.saveToFirebase();
+            await updateDoc(userDocRef, { gotPremiumBonus: true });
+        } catch (e) {
+            console.error('Ошибка начисления премиум бонуса:', e);
         }
     };
 
-    const isFreezeActive = computed(() => {
-        if (!freezeEndsAt.value) return false
-        return Date.now() < freezeEndsAt.value
-    })
-
-    const activateFreeze = async (days) => {
-        const authUser = getAuth().currentUser
-        if (!authUser) return
-        const msToAdd = days * 24 * 60 * 60 * 1000
-        let newDate
-        if (isFreezeActive.value && typeof freezeEndsAt.value === 'number') {
-            newDate = freezeEndsAt.value + msToAdd
-        } else {
-            newDate = Date.now() + msToAdd
+    const modifyHats = async (amount) => {
+        const authUser = auth.currentUser;
+        if (!authUser) return;
+        if (amount < 0) {
+            if (totalHats.value >= IMMUNITY_RANK_HATS || totalHats.value <= 0) return;
         }
-        freezeEndsAt.value = newDate
-        const userDocRef = doc(db, 'users', authUser.uid)
-        await updateDoc(userDocRef, {
-            freezeEndsAt: newDate
-        })
-    }
-
-    const loginWithApple = async () => {
+        let newTotal = Math.max(0, totalHats.value + amount);
+        totalHats.value = newTotal;
         try {
-            const isNative = Capacitor.isNativePlatform();
-            let user;
-            if (isNative) {
-                const result = await SignInWithApple.authorize({
-                    clientId: 'com.skillupgerman',
-                    scopes: 'email name',
-                });
-                if (!result || !result.response || !result.response.identityToken) return;
-                const provider = new OAuthProvider('apple.com');
-                const credential = provider.credential({
-                    idToken: result.response.identityToken,
-                });
-                const authResult = await signInWithCredential(auth, credential);
-                user = authResult.user;
-            } else {
-                const provider = new OAuthProvider('apple.com');
-                provider.addScope('email');
-                provider.addScope('name');
-                const authResult = await signInWithPopup(auth, provider);
-                user = authResult.user;
-            }
-            const userDocRef = doc(db, 'users', user.uid);
-            const userDoc = await getDoc(userDocRef);
-            const defaultName = user.displayName || '';
-            const defaultEmail = user.email || '';
-            if (!userDoc.exists()) {
-                await setDoc(userDocRef, {
-                    ownedAvatars: ['1.png', '2.png'],
-                    name: defaultName,
-                    email: defaultEmail,
-                    registeredAt: serverTimestamp(),
-                    feedbackSurveyShownAt: null,
-                    avatar: '1.png',
-                    subscriptionEndsAt: null,
-                    subscriptionCancelled: false,
-                    gotPremiumBonus: false,
-                    voiceConsentGiven: false,
-                    hasSeenOnboarding: false,
-                    isPremium: false,
-                    totalHats: 0,
-                    points: 0,
-                    claimedBonuses: [],
-                    sale_3: false,
-                    sale_5: false,
-                    sale_6: false,
-                    sale_10: false,
-                    sale_15: false,
-                    ...createInitialAchievementsObject()
-                });
-            }
-            const finalDoc = await getDoc(userDocRef);
-            const userDataFromDb = finalDoc.data() || {};
-            setUserData({
-                name: defaultName,
-                email: defaultEmail,
-                registeredAt: user.metadata.creationTime,
-                uid: user.uid,
-                providerId: user.providerData[0]?.providerId || '',
-                ...userDataFromDb
-            });
-            await checkFeedbackSurveyEligibility();
-        } catch (error) {
-            if (isUserCancelledAuth(error)) return;
-            const errorDetail = JSON.stringify(error, Object.getOwnPropertyNames(error), 2);
-            alert(`❌ ОШИБКА ВХОДА APPLE:\n\n${errorDetail}`);
-        }
-    }
-    const loginWithGoogle = async () => {
-        try {
-            const isNative = Capacitor.isNativePlatform();
-            let idToken = null;
-            if (isNative) {
-                await GoogleSignIn.initialize({
-                    clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
-                });
-                const result = await GoogleSignIn.signIn({
-                    clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
-                });
-                idToken = result.idToken;
-            } else {
-                const provider = new GoogleAuthProvider();
-                const result = await signInWithPopup(auth, provider);
-                const credential = GoogleAuthProvider.credentialFromResult(result);
-                idToken = credential.idToken;
-            }
-            if (!idToken) {
-                console.error('Артикль не вернул токен');
-                return;
-            }
-            const credential = GoogleAuthProvider.credential(idToken);
-            const authResult = await signInWithCredential(auth, credential);
-            const user = authResult.user;
-            const userDocRef = doc(db, 'users', user.uid);
-            const userDoc = await getDoc(userDocRef);
-            if (!userDoc.exists()) {
-                await setDoc(userDocRef, {
-                    ownedAvatars: ['1.png', '2.png'],
-                    name: user.displayName,
-                    email: user.email,
-                    registeredAt: serverTimestamp(),
-                    feedbackSurveyShownAt: null,
-                    avatar: '1.png',
-                    subscriptionEndsAt: null,
-                    subscriptionCancelled: false,
-                    gotPremiumBonus: false,
-                    voiceConsentGiven: false,
-                    hasSeenOnboarding: false,
-                    isPremium: false,
-                    totalHats: 0,
-                    points: 0,
-                    claimedBonuses: [],
-                    sale_3: false,
-                    sale_5: false,
-                    sale_6: false,
-                    sale_10: false,
-                    sale_15: false,
-                    ...createInitialAchievementsObject()
-                });
-            }
-            const finalDoc = await getDoc(userDocRef);
-            const userDataFromDb = finalDoc.data() || {};
-            setUserData({
-                name: user.displayName,
-                email: user.email,
-                registeredAt: user.metadata.creationTime,
-                uid: user.uid,
-                providerId: user.providerData[0]?.providerId || '',
-                ...userDataFromDb
-            });
-
-            await checkFeedbackSurveyEligibility();
-        } catch (error) {
-            if (isUserCancelledAuth(error)) return;
-            const errorDetail = JSON.stringify(error, Object.getOwnPropertyNames(error), 2);
-            alert(`❌ ОШИБКА ВХОДА:\n\n${errorDetail}`);
-        }
-    }
-
-    const registerUser = async (userData) => {
-        const authInstance = getAuth()
-        const methods = await fetchSignInMethodsForEmail(authInstance, userData.email)
-        if (methods.length > 0) {
-            throw {code: 'auth/email-already-in-use'}
-        }
-        const userCredential = await createUserWithEmailAndPassword(
-            authInstance,
-            userData.email,
-            userData.password
-        )
-        const user = userCredential.user
-        await updateProfile(user, {displayName: userData.name})
-        await sendEmailVerification(user)
-        const userDocRef = doc(db, 'users', user.uid)
-        await setDoc(userDocRef, {
-            name: userData.name,
-            email: userData.email,
-            registeredAt: serverTimestamp(),
-            feedbackSurveyShownAt: null,
-            avatar: '1.png',
-            ownedAvatars: ['1.png', '2.png'],
-            isPremium: false,
-            subscriptionEndsAt: null,
-            gotPremiumBonus: false,
-            voiceConsentGiven: false,
-            hasSeenOnboarding: false,
-            totalHats: 0,
-            points: 0,
-            claimedBonuses: [],
-            sale_3: false,
-            sale_5: false,
-            sale_6: false,
-            sale_10: false,
-            sale_15: false,
-            ...createInitialAchievementsObject()
-        })
-        const finalDoc = await getDoc(userDocRef)
-        const data = finalDoc.data() || {}
-
-        setUserData({
-            name: data.name ?? userData.name,
-            email: data.email ?? userData.email,
-            registeredAt: user.metadata.creationTime,
-            uid: user.uid,
-            providerId: user.providerData[0]?.providerId || '',
-            ...data,
-        })
-        await checkFeedbackSurveyEligibility()
-    }
-
-    const setHasSeenOnboarding = async (value = true) => {
-        const authInstance = getAuth()
-        const user = authInstance.currentUser
-        hasSeenOnboarding.value = !!value
-        if (uid.value) {
-            localStorage.setItem(`onboardingPassed_${uid.value}`, value ? 'true' : 'false')
-        }
-        if (!user) return
-        const userDocRef = doc(db, 'users', user.uid)
-        try {
-            await updateDoc(userDocRef, {
-                hasSeenOnboarding: !!value
-            })
+            await updateDoc(doc(db, 'users', authUser.uid), { totalHats: newTotal });
         } catch (e) {
-            console.error('Ошибка при обновлении hasSeenOnboarding:', e)
+            console.error('Ошибка обновления шляп:', e);
         }
-    }
+    };
 
     const incrementHats = async () => {
-        const authUser = getAuth().currentUser
-        if (!authUser) return
-        totalHats.value++
-        const userDocRef = doc(db, 'users', authUser.uid)
-        await updateDoc(userDocRef, {
-            totalHats: totalHats.value
-        })
-    }
-
-    const loginUser = async ({email, password}) => {
-        const auth = getAuth()
-        const userCredential = await signInWithEmailAndPassword(auth, email, password)
-        const userDocRef = doc(db, 'users', userCredential.user.uid);
-        const userDoc = await getDoc(userDocRef);
-        const userDataFromDb = userDoc.exists() ? userDoc.data() : {};
-        setUserData({
-            name: userCredential.user.displayName,
-            email: userCredential.user.email,
-            registeredAt: userCredential.user.metadata.creationTime,
-            uid: userCredential.user.uid,
-            ...userDataFromDb
-        })
-        await checkFeedbackSurveyEligibility()
-    }
-
-    const resetPassword = async (email) => {
-        const auth = getAuth()
-        await sendPasswordResetEmail(auth, email)
-    }
-
-    const setVoiceConsent = async (value = true) => {
-        const auth = getAuth();
-        const user = auth.currentUser;
-        if (!user) return;
-        const userDocRef = doc(db, 'users', user.uid);
-        await updateDoc(userDocRef, {voiceConsentGiven: !!value});
-        voiceConsentGiven.value = !!value;
+        await modifyHats(1);
     };
 
-    const deleteAccount = async (password = null) => {
-        const auth = getAuth();
+    const addClaimedBonus = async (hatAmount) => {
         const user = auth.currentUser;
-        if (!user) throw {code: 'auth/no-current-user'};
-        try {
-            const usesGoogle = user.providerData.some(p => p.providerId === 'google.com');
-            if (usesGoogle) {
-                const provider = new GoogleAuthProvider();
-                await reauthenticateWithPopup(user, provider);
-            } else {
-                if (!user.email) throw {code: 'auth/missing-email'};
-                if (!password) throw {code: 'auth/missing-password'};
-                const cred = EmailAuthProvider.credential(user.email, password);
-                await reauthenticateWithCredential(user, cred);
-            }
+        if (!user || claimedBonuses.value.includes(hatAmount)) return;
 
-            const batch = writeBatch(db);
-            batch.delete(doc(db, 'users', user.uid));
-            batch.delete(doc(db, LEADERBOARD_COLLECTION, user.uid));
-            batch.delete(doc(db, LEADERBOARD_GUESS, user.uid));
-            await batch.commit();
-            await deleteUser(user);
-            setUserData({});
-        } catch (err) {
-            if (err && err.code) throw err;
-            const msg = String(err?.message || '');
-            if (msg.includes('requires-recent-login')) throw {code: 'auth/requires-recent-login'};
-            if (msg.includes('popup-closed')) throw {code: 'auth/popup-closed-by-user'};
-            throw {code: 'auth/unknown'};
+        claimedBonuses.value.push(hatAmount);
+        try {
+            await updateDoc(doc(db, 'users', user.uid), { claimedBonuses: claimedBonuses.value });
+        } catch (e) {
+            console.error('Ошибка при сохранении бонуса:', e);
+        }
+    };
+
+    const activateFreeze = async (days) => {
+        const authUser = auth.currentUser;
+        if (!authUser) return;
+        const msToAdd = days * 24 * 60 * 60 * 1000;
+        const newDate = (isFreezeActive.value && typeof freezeEndsAt.value === 'number')
+            ? freezeEndsAt.value + msToAdd
+            : Date.now() + msToAdd;
+
+        freezeEndsAt.value = newDate;
+        await updateDoc(doc(db, 'users', authUser.uid), { freezeEndsAt: newDate });
+    };
+
+    const cancelFreeze = async () => {
+        if (!freezeEndsAt.value) return;
+        const authUser = auth.currentUser;
+        freezeEndsAt.value = null;
+        if (authUser) {
+            try {
+                await updateDoc(doc(db, 'users', authUser.uid), { freezeEndsAt: null });
+            } catch (e) {
+                console.error('Ошибка при отмене заморозки:', e);
+            }
+        }
+    };
+
+    const purchase = async (cost, discountId) => {
+        const user = auth.currentUser;
+        if (!user) return { success: false, reason: 'no-user' };
+        if (!['sale_3', 'sale_5', 'sale_6', 'sale_10', 'sale_15'].includes(discountId)) return { success: false, reason: 'invalid-item' };
+        if (totalHats.value < cost) return { success: false, reason: 'insufficient' };
+        if (premiumDiscount.value[discountId] === true) return { success: false, reason: 'already-owned' };
+
+        try {
+            const newTotal = totalHats.value - cost;
+            await updateDoc(doc(db, 'users', user.uid), {
+                totalHats: newTotal,
+                [discountId]: true,
+            });
+            totalHats.value = newTotal;
+            premiumDiscount.value[discountId] = true;
+            return { success: true };
+        } catch (error) {
+            console.error('purchase error', error);
+            return { success: false, reason: 'error' };
         }
     };
 
@@ -649,7 +310,7 @@ export const userAuthStore = defineStore('auth', () => {
             const isUnlocked = ach && ach.currentProgress >= (ach.targetProgress || 1)
 
             if (!isUnlocked) {
-                return config.error // Возвращаем конкретный статус блокировки
+                return config.error
             }
         }
 
@@ -658,12 +319,10 @@ export const userAuthStore = defineStore('auth', () => {
             return 'insufficient'
         }
 
-        // Списание валюты
         langStore.points -= 50
         langStore.articlesSpentForAchievement += 50
         await langStore.saveToFirebase()
 
-        // Добавление аватара в купленные
         ownedAvatars.value.push(fileName)
         const userDocRef = doc(db, 'users', uid.value)
         await updateDoc(userDocRef, {ownedAvatars: ownedAvatars.value})
@@ -671,18 +330,421 @@ export const userAuthStore = defineStore('auth', () => {
         return 'success'
     }
 
-    const clearNotEnoughArticle = () => {
-        notEnoughArticle.value = false
-    }
+    const updateUserAvatar = async (newAvatarFilename) => {
+        const user = auth.currentUser;
+        if (!user) return;
+        try {
+            await updateDoc(doc(db, 'users', user.uid), { avatar: newAvatarFilename });
+            avatar.value = newAvatarFilename;
+        } catch (error) {
+            throw error;
+        }
+    };
+
+    const clearNotEnoughArticle = () => { notEnoughArticle.value = false; };
+
+    const checkFeedbackSurveyEligibility = async () => {
+        shouldShowFeedbackSurvey.value = false;
+        const authUser = auth.currentUser;
+        const currentUid = uid.value || authUser?.uid;
+        if (!currentUid) return;
+
+        const snap = await getDoc(doc(db, 'users', currentUid));
+        if (!snap.exists()) return;
+        const data = snap.data() || {};
+        if (data.feedbackSurveyShownAt) return;
+
+        const regDateFromAuth = authUser?.metadata?.creationTime ? new Date(authUser.metadata.creationTime) : null;
+        const regDateFromDb = data.registeredAt && typeof data.registeredAt.toDate === 'function' ? data.registeredAt.toDate() : null;
+        const regDate = regDateFromDb || regDateFromAuth;
+        if (!regDate) return;
+
+        if (Date.now() - regDate.getTime() < 3 * 24 * 60 * 60 * 1000) return; // Поменял 0 на честные 3 дня, раз переменная называется "threeDaysMs"
+        shouldShowFeedbackSurvey.value = true;
+    };
+
+    const markFeedbackSurveyShown = async () => {
+        const authUser = auth.currentUser;
+        const currentUid = uid.value || authUser?.uid;
+        if (!currentUid) return;
+        await updateDoc(doc(db, 'users', currentUid), { feedbackSurveyShownAt: serverTimestamp() });
+        shouldShowFeedbackSurvey.value = false;
+    };
+
+    const loginWithApple = async () => {
+        try {
+            const provider = new OAuthProvider('apple.com');
+            const isNative = Capacitor.isNativePlatform();
+            let authResult;
+
+            if (isNative) {
+                const result = await AppleSignIn.signIn({
+                    scopes: [SignInScope.Email, SignInScope.FullName],
+                });
+                // ИСПРАВЛЕНО: у Capawesome токен берется напрямую из result.idToken
+                const idToken = result.idToken;
+
+                if (!idToken) {
+                    throw new Error('Apple берет у артикля не вернул токен');
+                }
+
+                const credential = provider.credential({
+                    idToken: idToken,
+                });
+                authResult = await signInWithCredential(auth, credential);
+            } else {
+                provider.addScope('email');
+                provider.addScope('name');
+                authResult = await signInWithPopup(auth, provider);
+            }
+
+            const user = authResult.user;
+            const userDocRef = doc(db, 'users', user.uid);
+            const userDoc = await getDoc(userDocRef);
+
+            if (!userDoc.exists()) {
+                await setDoc(userDocRef, {
+                    ownedAvatars: ['1.png', '2.png'],
+                    name: user.displayName || 'Apple User',
+                    email: user.email,
+                    registeredAt: serverTimestamp(),
+                    feedbackSurveyShownAt: null,
+                    avatar: '1.png',
+                    subscriptionEndsAt: null,
+                    subscriptionCancelled: false,
+                    gotPremiumBonus: false,
+                    voiceConsentGiven: false,
+                    hasSeenOnboarding: false,
+                    isPremium: false,
+                    totalHats: 0,
+                    points: 0,
+                    claimedBonuses: [],
+                    sale_3: false,
+                    sale_5: false,
+                    sale_6: false,
+                    sale_10: false,
+                    sale_15: false,
+                    ...createInitialAchievementsObject()
+                });
+            }
+            const finalDoc = await getDoc(userDocRef);
+
+            setUserData({
+                uid: user.uid,
+                name: user.displayName,
+                email: user.email,
+                registeredAt: user.metadata.creationTime,
+                providerId: 'apple.com',
+                ...(finalDoc.data() || {})
+            });
+
+            await checkFeedbackSurveyEligibility();
+
+            return authResult;
+
+        } catch (error) {
+            if (isUserCancelledAuth(error)) return;
+            console.error(error);
+            const errorMessage = error.message || error.code || String(error);
+            alert('Ошибка входа: ' + errorMessage);
+            throw error;
+        }
+    };
+
+    const loginWithGoogle = async () => {
+        try {
+            const isNative = Capacitor.isNativePlatform();
+            let idToken = null;
+            if (isNative) {
+                await GoogleSignIn.initialize({
+                    clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
+                });
+                const result = await GoogleSignIn.signIn({
+                    clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
+                });
+                idToken = result.idToken;
+            } else {
+                const provider = new GoogleAuthProvider();
+                const result = await signInWithPopup(auth, provider);
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                idToken = credential?.idToken;
+            }
+
+            if (!idToken) {
+                console.error('Берет у артикля не вернул токен');
+                return;
+            }
+
+            const credential = GoogleAuthProvider.credential(idToken);
+            const authResult = await signInWithCredential(auth, credential);
+            const user = authResult.user;
+
+            const userDocRef = doc(db, 'users', user.uid);
+            const userDoc = await getDoc(userDocRef);
+
+            if (!userDoc.exists()) {
+                await setDoc(userDocRef, {
+                    ownedAvatars: ['1.png', '2.png'],
+                    name: user.displayName || 'Google User',
+                    email: user.email,
+                    registeredAt: serverTimestamp(),
+                    feedbackSurveyShownAt: null,
+                    avatar: '1.png',
+                    subscriptionEndsAt: null,
+                    subscriptionCancelled: false,
+                    gotPremiumBonus: false,
+                    voiceConsentGiven: false,
+                    hasSeenOnboarding: false,
+                    isPremium: false,
+                    totalHats: 0,
+                    points: 0,
+                    claimedBonuses: [],
+                    sale_3: false,
+                    sale_5: false,
+                    sale_6: false,
+                    sale_10: false,
+                    sale_15: false,
+                    ...createInitialAchievementsObject()
+                });
+            }
+
+            const finalDoc = await getDoc(userDocRef);
+            setUserData({
+                uid: user.uid,
+                name: user.displayName,
+                email: user.email,
+                registeredAt: user.metadata.creationTime,
+                providerId: user.providerData[0]?.providerId || 'google.com',
+                ...(finalDoc.data() || {})
+            });
+
+            await checkFeedbackSurveyEligibility();
+        } catch (error) {
+            if (isUserCancelledAuth(error)) return;
+            alert(`❌ ОШИБКА ВХОДА GOOGLE:\n\n${JSON.stringify(error, Object.getOwnPropertyNames(error), 2)}`);
+        }
+    };
+
+    const registerUser = async (userData) => {
+        const methods = await fetchSignInMethodsForEmail(auth, userData.email);
+        if (methods.length > 0) {
+            throw { code: 'auth/email-already-in-use' };
+        }
+        const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password);
+        const user = userCredential.user;
+        await updateProfile(user, { displayName: userData.name });
+        await sendEmailVerification(user);
+
+        const userDocRef = doc(db, 'users', user.uid);
+        const initialPayload = {
+            name: userData.name,
+            email: userData.email,
+            registeredAt: serverTimestamp(),
+            feedbackSurveyShownAt: null,
+            avatar: '1.png',
+            ownedAvatars: ['1.png', '2.png'],
+            isPremium: false,
+            subscriptionEndsAt: null,
+            gotPremiumBonus: false,
+            voiceConsentGiven: false,
+            hasSeenOnboarding: false,
+            totalHats: 0,
+            points: 0,
+            claimedBonuses: [],
+            sale_3: false,
+            sale_5: false,
+            sale_6: false,
+            sale_10: false,
+            sale_15: false,
+            ...createInitialAchievementsObject()
+        };
+        await setDoc(userDocRef, initialPayload);
+
+        setUserData({
+            uid: user.uid,
+            providerId: user.providerData[0]?.providerId || '',
+            ...initialPayload,
+            registeredAt: user.metadata.creationTime
+        });
+        await checkFeedbackSurveyEligibility();
+    };
+
+    const loginUser = async ({ email, password }) => {
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        const userDoc = await getDoc(doc(db, 'users', userCredential.user.uid));
+        setUserData({
+            uid: userCredential.user.uid,
+            name: userCredential.user.displayName,
+            email: userCredential.user.email,
+            registeredAt: userCredential.user.metadata.creationTime,
+            ...(userDoc.exists() ? userDoc.data() : {})
+        });
+        await checkFeedbackSurveyEligibility();
+    };
+
+    const resetPassword = async (emailToReset) => {
+        try {
+            const functionUrl = 'https://us-central1-tripple-d-dev.cloudfunctions.net/sendResetEmail';
+
+            const response = await fetch(functionUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email: emailToReset })
+            });
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error || 'Ошибка сервера при отправке письма');
+            }
+            return await response.json();
+        } catch (error) {
+            console.error('Ошибка сброса пароля:', error);
+            throw error;
+        }
+    };
+
+    const fetchuser = () => {
+        if (authStateUnsubscribe) authStateUnsubscribe();
+        authStateUnsubscribe = onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                const userDoc = await getDoc(doc(db, 'users', user.uid));
+                if (userDoc.exists()) {
+                    const data = userDoc.data();
+                    setUserData({
+                        uid: user.uid,
+                        email: user.email,
+                        registeredAt: user.metadata.creationTime,
+                        providerId: user.providerData[0]?.providerId || '',
+                        ...data
+                    });
+                }
+                await checkFeedbackSurveyEligibility();
+            } else {
+                setUserData({});
+                if (Capacitor.isNativePlatform()) {
+                    await Purchases.logOut().catch(() => {});
+                }
+            }
+            initialized.value = true;
+        });
+    };
+
+    const initAuth = () => {
+        if (initialized.value) return Promise.resolve();
+        if (initPromise) return initPromise;
+
+        initPromise = new Promise((resolve) => {
+            if (typeof window === 'undefined') {
+                initialized.value = true;
+                resolve();
+                return;
+            }
+            if (authStateUnsubscribe) authStateUnsubscribe();
+            authStateUnsubscribe = onAuthStateChanged(auth, async (user) => {
+                if (user) {
+                    const userDoc = await getDoc(doc(db, 'users', user.uid));
+                    setUserData({
+                        uid: user.uid,
+                        name: user.displayName,
+                        email: user.email,
+                        registeredAt: user.metadata.creationTime,
+                        providerId: user.providerData[0]?.providerId || '',
+                        ...(userDoc.exists() ? userDoc.data() : {})
+                    });
+                    await checkFeedbackSurveyEligibility();
+                } else {
+                    setUserData({});
+                }
+                initialized.value = true;
+                resolve();
+            });
+        });
+        return initPromise;
+    };
+
+    const refreshUser = async () => {
+        const user = auth.currentUser;
+        if (!user) return;
+        try {
+            const snap = await getDoc(doc(db, 'users', user.uid));
+            if (snap.exists()) {
+                setUserData({
+                    uid: user.uid,
+                    email: user.email,
+                    registeredAt: user.metadata.creationTime,
+                    providerId: user.providerData[0]?.providerId || '',
+                    ...snap.data()
+                });
+            }
+        } catch (e) {
+            console.error(e);
+        }
+    };
+
+    const setHasSeenOnboarding = async (value = true) => {
+        hasSeenOnboarding.value = !!value;
+        if (uid.value) {
+            localStorage.setItem(`onboardingPassed_${uid.value}`, value ? 'true' : 'false');
+        }
+        const user = auth.currentUser;
+        if (!user) return;
+        try {
+            await updateDoc(doc(db, 'users', user.uid), { hasSeenOnboarding: !!value });
+        } catch (e) {
+            console.error('Ошибка при обновлении hasSeenOnboarding:', e);
+        }
+    };
+
+    const setVoiceConsent = async (value = true) => {
+        const user = auth.currentUser;
+        if (!user) return;
+        await updateDoc(doc(db, 'users', user.uid), { voiceConsentGiven: !!value });
+        voiceConsentGiven.value = !!value;
+    };
+
+    const deleteAccount = async (password = null) => {
+        const user = auth.currentUser;
+        if (!user) throw { code: 'auth/no-current-user' };
+        try {
+            const usesGoogle = user.providerData.some(p => p.providerId === 'google.com');
+            if (usesGoogle) {
+                const provider = new GoogleAuthProvider();
+                await reauthenticateWithPopup(user, provider);
+            } else {
+                if (!user.email) throw { code: 'auth/missing-email' };
+                if (!password) throw {code: 'auth/missing-password'};
+                const cred = EmailAuthProvider.credential(user.email, password);
+                await reauthenticateWithCredential(user, cred);
+            }
+
+            const batch = writeBatch(db);
+            batch.delete(doc(db, 'users', user.uid));
+            batch.delete(doc(db, LEADERBOARD_COLLECTION, user.uid));
+            batch.delete(doc(db, LEADERBOARD_GUESS, user.uid));
+            await batch.commit();
+
+            await deleteUser(user);
+            setUserData({});
+        } catch (err) {
+            if (err && err.code) throw err;
+            const msg = String(err?.message || '');
+            if (msg.includes('requires-recent-login')) throw { code: 'auth/requires-recent-login' };
+            if (msg.includes('popup-closed')) throw { code: 'auth/popup-closed-by-user' };
+            throw { code: 'auth/unknown' };
+        }
+    };
 
     const logOut = async () => {
         if (authStateUnsubscribe) {
             authStateUnsubscribe();
             authStateUnsubscribe = null;
         }
+
         if (typeof window !== 'undefined') {
             localStorage.removeItem('cached_premium');
         }
+
         if (Capacitor.isNativePlatform()) {
             try {
                 await Purchases.logOut();
@@ -690,125 +752,23 @@ export const userAuthStore = defineStore('auth', () => {
                 console.error("RC Logout Error:", e);
             }
         }
+
         setUserData({});
+
         const auth = getAuth()
         await signOut(auth)
     }
 
-    const fetchuser = () => {
-        const auth = getAuth()
-        if (authStateUnsubscribe) {
-            authStateUnsubscribe();
-        }
-        authStateUnsubscribe = onAuthStateChanged(auth, async (user) => {
-            if (user) {
-                const userDocRef = doc(db, 'users', user.uid);
-                const userDoc = await getDoc(userDocRef);
-                if (userDoc.exists()) {
-                    const userDataFromDb = userDoc.data();
-                    setUserData({
-                        name: userDataFromDb.name,
-                        email: user.email,
-                        registeredAt: user.metadata.creationTime,
-                        uid: user.uid,
-                        providerId: user.providerData[0]?.providerId || '',
-                        ...userDataFromDb
-                    })
-                }
-                if (Capacitor.isNativePlatform()) {
-                    try {
-                        await Purchases.logIn({ appUserID: user.uid })
-                    } catch (e) {
-                        console.error(e)
-                    }
-                }
-                await checkFeedbackSurveyEligibility()
-            } else {
-                setUserData({});
-                if (Capacitor.isNativePlatform()) {
-                    await Purchases.logOut()
-                }
-            }
-            initialized.value = true
-        })
-    }
-
-
-    const initAuth = () => {
-        if (initialized.value) return Promise.resolve()
-        if (initPromise) return initPromise
-        initPromise = new Promise((resolve) => {
-            if (typeof window === 'undefined') {
-                initialized.value = true
-                resolve()
-                return
-            }
-            const auth = getAuth()
-            if (authStateUnsubscribe) authStateUnsubscribe()
-            authStateUnsubscribe = onAuthStateChanged(auth, async (user) => {
-                if (user) {
-                    const userDocRef = doc(db, 'users', user.uid);
-                    const userDoc = await getDoc(userDocRef);
-                    const userDataFromDb = userDoc.exists() ? userDoc.data() : {};
-                    setUserData({
-                        name: userDataFromDb.name ?? user.displayName,
-                        email: user.email,
-                        registeredAt: user.metadata.creationTime,
-                        uid: user.uid,
-                        providerId: user.providerData[0]?.providerId || '',
-                        ...userDataFromDb
-                    })
-
-                    if (Capacitor.isNativePlatform()) {
-                        try {
-                            await Purchases.logIn({ appUserID: user.uid })
-                        } catch (e) {
-                            console.error(e)
-                        }
-                    }
-                    await checkFeedbackSurveyEligibility()
-                } else {
-                    setUserData({});
-                }
-                initialized.value = true
-                resolve()
-            })
-        })
-        return initPromise
-    }
-
-    const refreshUser = async () => {
-        const auth = getAuth()
-        const user = auth.currentUser
-        if (!user) return
-        const userDocRef = doc(db, 'users', user.uid)
-        try {
-            const snap = await getDoc(userDocRef)
-            if (snap.exists()) {
-                const data = snap.data()
-                setUserData({
-                    name: data.name,
-                    email: user.email,
-                    registeredAt: user.metadata.creationTime,
-                    uid: user.uid,
-                    providerId: user.providerData[0]?.providerId || '',
-                    ...data
-                })
-            }
-        } catch (e) {
-        }
-    }
-
     const activatePremium = (premiumData) => {
-        isPremium.value = true
-        subscriptionEndsAt.value = premiumData.subscriptionEndsAt
-        subscriptionCancelled.value = false
-    }
+        isPremium.value = true;
+        subscriptionEndsAt.value = premiumData.subscriptionEndsAt;
+        subscriptionCancelled.value = false;
+    };
 
     const markCancelledInDb = () => {
-        if (!isPremium.value) return
-        subscriptionCancelled.value = true
-    }
+        if (!isPremium.value) return;
+        subscriptionCancelled.value = true;
+    };
 
     return {
         refreshUser,
@@ -834,6 +794,7 @@ export const userAuthStore = defineStore('auth', () => {
         clearNotEnoughArticle,
         achievements,
         incrementHats,
+
         initAuth,
         fetchuser,
         registerUser,
@@ -853,15 +814,16 @@ export const userAuthStore = defineStore('auth', () => {
         markFeedbackSurveyShown,
         premiumDiscount,
         purchase,
-        activateDiscount,
         markCancelledInDb,
         modifyHats,
         freezeEndsAt,
         isFreezeActive,
         activateFreeze,
         cancelFreeze,
-        loginWithApple,
         claimedBonuses,
-        addClaimedBonus
-    }
-})
+        loginWithApple,
+        addClaimedBonus,
+        unlockMarathonAchievement
+    };
+});
+

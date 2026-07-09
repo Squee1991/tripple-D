@@ -44,6 +44,9 @@
             {{ char || '' }}
           </div>
         </div>
+        <div v-if="store.win" class="success-message bounce-in">
+          🎉 {{ t('guessWord.victory') }} 🎉
+        </div>
         <div class="game-keyboard">
           <button
               v-for="letter in store.alphabet"
@@ -82,7 +85,7 @@
             <button class="ios-btn-primary article-btn" @click="checkArticle('das')">das</button>
           </div>
           <div v-if="articleResult" class="feedback-badge bounce-in"
-               :class="{'success': articleResult === answers.correct, 'error': articleResult !== answers.correct}">
+               :class="{'success': articleResult === 'Верно!', 'error': articleResult !== 'Верно!'}">
             {{ articleResult }}
           </div>
           <button v-if="articleResult" class="ios-btn-text modal-close" @click="closeArticleModal">
@@ -162,15 +165,10 @@ function handleRestart() {
   startGame()
 }
 
-const answers = {
-  correct: t('guessArticle.correct'),
-  incorrect: t('guessArticle.incorrect')
-}
-
 function checkArticle(selectedArticle) {
   if (!store.currentWordObj) return
   const correct = selectedArticle === store.currentWordObj.article.toLowerCase()
-  articleResult.value = correct ? answers.correct : `${answers.incorrect}: ${store.currentWordObj.article}`
+  articleResult.value = correct ? t('eventSessionPage.correct') : `${t('guessWord.wrong')} ${store.currentWordObj.article}`
 }
 
 function closeArticleModal() {
@@ -249,7 +247,7 @@ watch(() => store.lose, (isLose) => {
   width: 100%;
   max-width: 768px;
   min-height: 100%;
-  height: 100vh;
+  height: 100%;
   background: var(--bg);
   position: relative;
   display: flex;
@@ -519,7 +517,7 @@ watch(() => store.lose, (isLose) => {
   background: #34C759;
   color: white;
   border: none;
-  border-radius: 50px;
+  border-radius: 16px;
   padding: 0 20px;
   font-size: 16px;
   font-weight: 700;

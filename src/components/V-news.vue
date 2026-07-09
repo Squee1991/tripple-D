@@ -14,11 +14,8 @@
             <span></span><span></span><span></span>
           </div>
         </div>
-
         <div class="speech-bubble">
-          <p class="bubble-text">
-            {{ t('news.welcomeMessage', 'Привет! Каждый день Skillupgerman публикует здесь  интересные новости о немецком языке. Учись с удовольствием!') }}
-          </p>
+          <p class="bubble-text">{{ t('newsBannerText.text') }}</p>
         </div>
       </div>
       <div v-for="article in articles" :key="article.id" class="article-card">
@@ -93,7 +90,7 @@ const articles = ref(articlesData.map(article => ({
 
 const reactionsStore = useReactionsStore()
 const authStore = userAuthStore()
-const emojiList = ['🔥', '🥳', '💯', '👍']
+const emojiList = ['🔥', '❤️'];
 const activePicker = ref(null)
 
 const togglePicker = (articleId) => {
@@ -123,7 +120,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-
 
 .theme-blue   { --title-bg: #4d61e3; --title-shadow: #4a5bc0; }
 .theme-pink   { --title-bg: #e34db1; --title-shadow: #a12a7b; }
@@ -162,7 +158,7 @@ onMounted(() => {
   color: white;
   border-radius: 18px;
   padding: 14px 18px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 800;
   line-height: 1.4;
   box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3), inset 0 -2px 4px rgba(0, 0, 0, 0.1), 0 6px 0 rgb(0, 160, 220);

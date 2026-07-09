@@ -69,6 +69,7 @@
                                 :src="authStore.avatarUrl"
                                 alt="image"
                                 class="avatar-current"
+                                :class="currentAvatarEffectClass"
                             />
                             <div v-else class="avatar-placeholder"></div>
                           </div>
@@ -82,7 +83,7 @@
                           </button>
                         </div>
                         <div class="user-info-container">
-                          <div class="user__name"> {{ authStore.name }}</div>
+                          <div class="user__name"> {{ authStore.name}}</div>
                           <div v-if="learningStore" class="top-panel-layout">
                             <div class="custom-progress">
                               <div class="progress_exp-bar">
@@ -146,11 +147,9 @@
         </ClientOnly>
       </section>
     </div>
-
     <div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
       <div class="avatar-modal-content">
         <h3>{{ t('cabinet.newAvatarTitle') }}</h3>
-
         <div class="account-tabs avatar-tabs">
           <div
               class="sliding-bg-account avatar-sliding-bg"
@@ -171,7 +170,6 @@
             <span class="tab__text">{{ tab.label }}</span>
           </button>
         </div>
-
         <div class="avatar-scroll-container">
           <transition name="fade" mode="out-in">
             <div class="avatar-grid" :key="activeAvatarTab">
@@ -197,7 +195,6 @@
             </div>
           </transition>
         </div>
-
         <div class="modal-actions">
           <button @click="isAvatarModalOpen = false" class="btn" type="button">
             {{ t('cabinet.avatarCancel') }}
@@ -213,7 +210,6 @@
         </div>
       </div>
     </div>
-
     <div v-if="isPurchaseModalOpen" class="modal-overlay" @click.self="isPurchaseModalOpen = false">
       <div class="modal-card">
         <template v-if="purchaseState === 'success'">
@@ -233,10 +229,10 @@
           </div>
         </template>
         <template v-else-if="isRankAvatarLocked">
-          <p class="modal-text" style="font-size: 18px; margin-top: 10px;">{{ rankAvatarsComputed }}</p>
+          <p class="modal__text--computed" style="font-size: 18px; margin-top: 10px;">{{ rankAvatarsComputed }}</p>
           <div class="modal-actions">
             <button class="btn" @click="closePurchaseOk" type="button">
-              Понятно
+              {{ t('cardsShop.accessibly')}}
             </button>
           </div>
         </template>
@@ -246,6 +242,7 @@
             <span class="modal-text">50</span>
             <img class="articles" src="../assets/images/article.svg" alt="artiles">
           </div>
+
           <div class="modal-actions">
             <button class="btn" @click="isPurchaseModalOpen = false" type="button">
               {{ t('cabinet.notBuyAvatarBtn') }}
@@ -276,18 +273,18 @@
 </template>
 
 <script setup>
-import {ref, computed, onMounted, onUnmounted, watch, watchEffect} from 'vue'
+import {ref, computed, onMounted, watch, watchEffect} from 'vue'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
+
 import AwardsList from '../src/components/AwardsList.vue'
 import VExampResulut from '../src/components/V-exampResulut.vue'
 import VNews from '../src/components/V-news.vue'
 import VFindFriends from '../src/components/V-findFriends.vue'
-import VTransition from "~/src/components/V-transition.vue";
-import VSettings from '../src/components/V-settings.vue'
 import VRank from '../src/components/V-rank.vue'
 import PersonalInfoRows from '../src/components/PersonalInfoRows.vue'
 import Shop from '../src/components/V-shop.vue'
+
 import {userAuthStore} from '../store/authStore.js'
 import {userlangStore} from '../store/learningStore.js'
 import {useAchievementStore} from '../store/achievementStore.js'
@@ -306,8 +303,10 @@ import Friends from '../assets/images/friend.svg'
 import Rewards from '../assets/images/rewards.svg'
 import IdCard from '../assets/images/monitor.svg'
 import ShoppingCart from '../assets/images/shopping-cart.svg'
+import VSettings from '../src/components/V-settings.vue'
 import RankAward from '../assets/images/rankaward.svg'
 import AccountIcon from '../assets/images/account.png'
+import VTransition from "~/src/components/V-transition.vue";
 
 definePageMeta({
   robots: {index: false, follow: false}
@@ -340,17 +339,29 @@ const isRankAvatarLocked = computed(() => {
   return purchaseState.value.startsWith('locked_')
 })
 
+
+const currentAvatarEffectClass = computed(() => {
+  const avatar = authStore.avatar;
+  if (!avatar) return '';
+  if (['16.png', '17.png', '18.png'].includes(avatar)) return 'effect-unicorn';
+  if (['19.png', '20.png', '21.png'].includes(avatar)) return 'effect-dragon';
+  if (['22.png', '23.png', '24.png'].includes(avatar)) return 'effect-griffin';
+
+  return '';
+});
+
+
 const rankAvatarsComputed = computed(() => {
   const texts = {
-    'locked_easy_1': "Эта аватарка доступна только за 1-е место в Лёгком марафоне!",
-    'locked_easy_2': "Эта аватарка доступна только за 2-е место в Лёгком марафоне!",
-    'locked_easy_3': "Эта аватарка доступна только за 3-е место в Лёгком марафоне!",
-    'locked_normal_1': "Эта аватарка доступна только за 1-е место в Среднем марафоне!",
-    'locked_normal_2': "Эта аватарка доступна только за 2-е место в Среднем марафоне!",
-    'locked_normal_3': "Эта аватарка доступна только за 3-е место в Среднем марафоне!",
-    'locked_hard_1': "Эта аватарка доступна только за 1-е место в Сложном марафоне!",
-    'locked_hard_2': "Эта аватарка доступна только за 2-е место в Сложном марафоне!",
-    'locked_hard_3': "Эта аватарка доступна только за 3-е место в Сложном марафоне!",
+    'locked_easy_1': t('rankAvatars.locked_easy_1'),
+    'locked_easy_2': t('rankAvatars.locked_easy_2'),
+    'locked_easy_3': t('rankAvatars.locked_easy_3'),
+    'locked_normal_1': t('rankAvatars.locked_normal_1'),
+    'locked_normal_2': t('rankAvatars.locked_normal_2'),
+    'locked_normal_3': t('rankAvatars.locked_normal_3'),
+    'locked_hard_1': t('rankAvatars.locked_hard_1'),
+    'locked_hard_2': t('rankAvatars.locked_hard_2'),
+    'locked_hard_3': t('rankAvatars.locked_hard_3'),
   }
   return texts[purchaseState.value] || ''
 })
@@ -365,7 +376,6 @@ const TAB_ITEMS = computed(() => {
   if (isMobile.value) {
     return [{key: 'home', label: t('cabinet.main'), alt: 'Home', icon: Home, url: '/'}, ...items]
   }
-
   return items
 })
 
@@ -382,25 +392,25 @@ const ACCOUNT_TABS = computed(() => [
   {key: 'rank', label: t('cabinetNav.rank'), icon: RankAward, alt: 'rank'}
 ])
 
-
 const activeAvatarTab = ref('regular')
+
 const AVATAR_TABS = computed(() => [
-  {key: 'regular', label: 'Обычные'},
-  {key: 'rank', label: 'Марафонскийе'}
+  {key: 'regular', label: t('typeOfAvatars.usual')},
+  {key: 'rank', label: t('typeOfAvatars.ranked')}
 ])
 
 const activeAvatarTabIndex = computed(() => {
-  return AVATAR_TABS.value.findIndex(t => t.key === activeAvatarTab.value)
+  return AVATAR_TABS.value.findIndex(tab => tab.key === activeAvatarTab.value)
 })
 
 const RANK_AVATAR_FILES = ['16.png', '17.png', '18.png', '19.png', '20.png', '21.png', '22.png', '23.png', '24.png']
 
 const regularAvatars = computed(() => {
-  return authStore.availableAvatars.filter(a => !RANK_AVATAR_FILES.includes(a))
+  return authStore.availableAvatars.filter(avatar => !RANK_AVATAR_FILES.includes(avatar))
 })
 
 const rankAvatars = computed(() => {
-  return authStore.availableAvatars.filter(a => RANK_AVATAR_FILES.includes(a))
+  return authStore.availableAvatars.filter(avatar => RANK_AVATAR_FILES.includes(avatar))
 })
 
 const currentViewAvatars = computed(() => {
@@ -419,6 +429,26 @@ const enableTransition = ref(false)
 const userNameSafe = computed(() => authStore.initialized && authStore.name ? authStore.name : '—')
 
 const iconDisplayComputed = computed(() => ({"iconHide": iconDisplay.value}))
+
+// const registrationDateText = computed(() => {
+//   const registeredAt = authStore.registeredAt
+//   if (!registeredAt) return '—'
+//
+//   let date
+//   if (typeof registeredAt.toDate === 'function') date = registeredAt.toDate()
+//   else date = new Date(registeredAt)
+//
+//   if (isNaN(date.getTime())) return '—'
+//   const options = {day: 'numeric', month: 'long', year: 'numeric'}
+//   let formatted = date.toLocaleDateString(locale.value, options)
+//   formatted = formatted.replace(/\s*г\.$/, '')
+//   const parts = formatted.split(' ')
+//   if (parts.length === 3) {
+//     parts[1] = parts[1].charAt(0).toUpperCase() + parts[1].slice(1)
+//     return parts.join(' ')
+//   }
+//   return formatted
+// })
 
 const tabs = {
   archive: VNews,
@@ -556,7 +586,6 @@ function selectAvatar(name) {
 
 async function confirmPurchase() {
   const status = await authStore.purchaseAvatar(purchaseAvatarName.value)
-
   if (status === 'success' || status === 'owned') {
     selectedAvatarName.value = purchaseAvatarName.value
     purchaseState.value = 'success'
@@ -586,19 +615,11 @@ function closePurchaseOk() {
 }
 
 watch(isAvatarModalOpen, opened => {
-  if (opened) {
-    selectedAvatarName.value = authStore.avatar
-    activeAvatarTab.value = 'regular'
-  }
+  if (opened) selectedAvatarName.value = authStore.avatar
 })
 
 const handleResize = () => {
   isMobile.value = window.innerWidth < 1024
-  if (!isMobile.value) {
-    document.body.style.overflow = 'hidden'
-  } else {
-    document.body.style.overflow = ''
-  }
 }
 
 onMounted(async () => {
@@ -611,34 +632,22 @@ onMounted(async () => {
   await eventStore.loadGlobalWinterSettings()
   friendsStore.loadFriends()
 })
-
-onUnmounted(() => {
-  window.removeEventListener('resize', handleResize)
-  document.body.style.overflow = ''
-})
 </script>
 
 <style scoped>
 .cabinet-wrapper {
-  box-sizing: border-box;
-  height: 100vh;
-  max-width: 1240px;
-  margin: 0 auto;
+  height: 100%;
   font-family: "Nunito", sans-serif;
   padding: 5px 10px 10px 10px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
 .layout__cabinet {
   display: flex;
-  flex: 1;
-  min-height: 0;
+  height: 100%;
   width: 100%;
   position: relative;
   gap: 20px;
-  overflow: hidden;
 }
 
 .layout__cabinet:after {
@@ -651,7 +660,6 @@ onUnmounted(() => {
   height: 50px;
   z-index: 1;
   background: var(--overlayAfter);
-  pointer-events: none;
 }
 
 .articles {
@@ -675,7 +683,7 @@ onUnmounted(() => {
   gap: 12px;
   width: 360px;
   height: 100%;
-  overflow-y: auto;
+  overflow: auto;
   flex: 0 0 auto;
 }
 
@@ -690,6 +698,11 @@ onUnmounted(() => {
   font-size: 19px;
 }
 
+
+.btn {
+  font-size: 18px;
+}
+
 .back-btn {
   width: 100%;
   display: flex;
@@ -697,11 +710,10 @@ onUnmounted(() => {
   justify-content: center;
   gap: 10px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.2rem;
   background: #ffd54f;
-  border-radius: 50px;
-  padding: 10px 14px;
-
+  border-radius: 16px;
+  padding: 12px 14px;
   cursor: pointer;
   border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
@@ -732,8 +744,8 @@ onUnmounted(() => {
 .modal-text {
   font-size: 28px;
   font-weight: 400;
+  font-family: 'Lilita One', sans-serif;
   color: var(--titleColor);
-  margin-bottom: 15px;
 }
 
 .nav-container {
@@ -748,10 +760,10 @@ onUnmounted(() => {
   position: absolute;
   top: 8px;
   left: 8px;
-  height: 60px;
+  height: 48px;
   width: calc(100% - 16px);
   background: var(--tabsSlideBg);
-  border-radius: 50px;
+  border-radius: 14px;
   transition: transform 0.4s cubic-bezier(0.34, 1.20, 0.64, 1), opacity 0.3s ease;
   z-index: 1;
   box-shadow: var(--tabSlideBoxShadow);
@@ -773,15 +785,15 @@ onUnmounted(() => {
 }
 
 .nav-icon {
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .nav-label {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 14px;
   font-family: "Nunito", sans-serif;
   color: var(--titleColor);
   margin-left: 10px;
@@ -796,21 +808,13 @@ onUnmounted(() => {
 
 .content-panel {
   border-radius: 28px;
-  border: 2px solid var(--tabBg);
+  border: var(--tabBg);
   box-shadow: var(--boxShadowMobile);
   flex: 1;
   display: flex;
   flex-direction: column;
   min-width: 0;
-  min-height: 0;
   height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-width: none;
-}
-
-.content-panel::-webkit-scrollbar {
-  display: none;
 }
 
 .content-body {
@@ -842,12 +846,6 @@ onUnmounted(() => {
   box-shadow: var(--boxShadowMobile);
   margin-bottom: 10px;
   max-width: 1024px;
-}
-
-.avatar-tabs {
-  margin: 0 auto 20px auto;
-  width: 100%;
-  max-width: 400px;
 }
 
 .sliding-bg-account {
@@ -894,7 +892,19 @@ onUnmounted(() => {
 
 .account-tab-body {
   margin-top: 4px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
   padding-right: 3px;
+  padding-bottom: 122px;
+}
+
+.account-tab-body::-webkit-scrollbar {
+  width: 2px;
+  display: none;
+}
+
+.account-tab-body::-webkit-scrollbar-thumb {
+  border-radius: 15px;
 }
 
 .modal-overlay {
@@ -922,14 +932,14 @@ onUnmounted(() => {
   display: flex;
   gap: 12px;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 .btn {
   border: none;
   box-shadow: 0 5px 0 #c0c2c9;
   border-radius: 50px;
-  padding: 14px 16px;
+  padding: 12px 16px;
   font-weight: 800;
   background: #f3f4f6;
   cursor: pointer;
@@ -982,7 +992,7 @@ onUnmounted(() => {
 
 .avatar-modal-content h3 {
   text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
   color: var(--titleColor);
   font-size: 20px;
 }
@@ -1007,7 +1017,6 @@ onUnmounted(() => {
 .avatar-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
 }
 
 .avatar-option {
@@ -1015,6 +1024,7 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  margin-bottom: 5px;
 }
 
 .avatar__image-wrapper {
@@ -1045,17 +1055,20 @@ onUnmounted(() => {
   filter: grayscale(1);
 }
 
+.tab__text {
+  padding: 5px 0;
+}
+
 .avatar-price {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  background: #f3f3f3;
-  color: #000;
+  color: var(--titleColor);
   border-radius: 10px;
   padding: 2px 8px;
   font-weight: 900;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .price-icon {
@@ -1070,25 +1083,6 @@ onUnmounted(() => {
 }
 
 @media (max-width: 1023px) {
-  .cabinet-wrapper {
-    height: auto;
-    min-height: 100vh;
-    overflow: visible;
-    padding-bottom: 100px;
-  }
-
-  .layout__cabinet {
-    overflow: visible;
-  }
-
-  .content-panel {
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-    overflow: visible;
-    height: auto;
-  }
-
   .sidebar-panel {
     position: fixed;
     left: 50%;
@@ -1138,6 +1132,17 @@ onUnmounted(() => {
     width: 35px;
     height: 35px;
   }
+
+  .content-panel {
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+.account-tab-body {
+  position: relative;
+  overflow-x: hidden;
 }
 
 .menu-appear-enter-active {
@@ -1169,12 +1174,11 @@ onUnmounted(() => {
 }
 
 .avatar-container {
-  width: 86px;
-  height: 86px;
+  width: 96px;
+  height: 96px;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .avatar-current,
@@ -1186,12 +1190,12 @@ onUnmounted(() => {
 
 .change-avatar-btn {
   position: absolute;
-  bottom: -5px;
-  right: -8px;
-  width: 32px;
-  height: 32px;
+  bottom: -8px;
+  right: -6px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  padding: 8px;
+  padding: 5px;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -1225,6 +1229,13 @@ onUnmounted(() => {
   white-space: nowrap;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 2;
+}
+
+.modal__text--computed {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--titleColor);
+  font-family: Nunito, sans-serif;
 }
 
 .user-info-container {
@@ -1322,4 +1333,36 @@ onUnmounted(() => {
   height: 4px;
   border-radius: 4px;
 }
+
+.effect-unicorn {
+  border-radius: 50%;
+  outline: 3px solid #da70d6;
+  animation: glow-in-gap-unicorn 1.5s infinite alternate ease-in-out;
+}
+@keyframes glow-in-gap-unicorn {
+  0% { box-shadow: 0 0 0 0px transparent; }
+  100% { box-shadow: 0 0 8px 3px rgba(218, 112, 214, 0.9); }
+}
+
+.effect-dragon {
+  border-radius: 50%;
+  outline: 3px solid #ff8c00;
+  animation: glow-in-gap-dragon 1.5s infinite alternate ease-in-out;
+}
+@keyframes glow-in-gap-dragon {
+  0% { box-shadow: 0 0 0 0px transparent; }
+  100% { box-shadow: 0 0 8px 3px rgba(255, 140, 0, 0.9); }
+}
+
+.effect-griffin {
+  border-radius: 50%;
+  outline: 3px solid #4169e1;
+
+  animation: glow-in-gap-griffin 1.5s infinite alternate ease-in-out;
+}
+@keyframes glow-in-gap-griffin {
+  0% { box-shadow: 0 0 0 0px transparent; }
+  100% { box-shadow: 0 0 8px 3px rgba(65, 105, 225, 0.9); }
+}
+
 </style>

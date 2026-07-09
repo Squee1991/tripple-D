@@ -126,7 +126,7 @@ onMounted(async () => {
   }
 
   tasks.value = gameStore.localTasks.map(sentence => {
-    const cleanSentence = sentence.original.toLowerCase().replace(/[.,!?;]/g, '')
+    const cleanSentence = sentence.original.replace(/[.,!?;]/g, '')
     return {
       question: cleanSentence,
       answer: cleanSentence
@@ -358,13 +358,13 @@ onMounted(async () => {
 .word-pool {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   justify-content: center;
 }
 
 .word-button {
-  padding: 10px;
-  font-size: 16px;
+  padding: 10px 14px;
+  font-size: 18px;
   font-weight: 700;
   border-radius: 12px;
   border: 2px solid var(--tabsSlideBorderColor);
@@ -372,11 +372,6 @@ onMounted(async () => {
   background-color: #fff;
   cursor: pointer;
   transition: all .1s ease-in-out;
-}
-
-.word-button:hover:not(:disabled) {
-  transform: translate(2px, 2px);
-  box-shadow: 0 0 0 #1e1e1e;
 }
 
 .word-button:disabled {

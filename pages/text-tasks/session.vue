@@ -85,7 +85,7 @@
         @confirm="confirmExit"
     />
     <transition name="slide-up">
-      <div v-if="!showFinishModal" class="bottom-modal-overlay">
+      <div v-if="showFinishModal" class="bottom-modal-overlay">
         <div class="bottom-modal-content">
           <img class="modal__image" src="../../assets/images/CorrectAnswerIcon.svg" alt="">
           <p class="bottom-modal-text">

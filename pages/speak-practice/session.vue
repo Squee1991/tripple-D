@@ -1,4 +1,7 @@
 <template>
+  <transition name="toast-fade">
+    <VHeadsUp v-if="showErrorToast" :text="t('headUp.speakTasks')" />
+  </transition>
   <div class="app-container"
        @touchstart="handleTouchStart"
        @touchmove="handleTouchMove"
@@ -22,6 +25,7 @@
         </svg>
       </button>
     </header>
+
     <Transition name="fade">
       <div class="banner" v-if="viewState === 'menu'">
         <VBanner
@@ -78,7 +82,9 @@
               {{ currentVocabIndex + 1 }} / {{ vocabList.length }}
             </div>
             <div class="flashcard">
-              <button class="btn-sound-large" @click="speakGerman(vocabList[currentVocabIndex].german)">🔊</button>
+              <button class="btn-sound-large" :disabled="isAudioPlaying" :style="{ opacity: isAudioPlaying ? 0.5 : 1 }"
+                      @click="speakGerman(vocabList[currentVocabIndex].german)">🔊
+              </button>
               <h2 class="vocab-german">{{ vocabList[currentVocabIndex].german }}</h2>
               <p class="vocab-russian">{{ getTranslation(vocabList[currentVocabIndex].translation) }}</p>
             </div>
@@ -92,7 +98,14 @@
           >
             <div class="message-bubble">
               <div class="message__icon">
-                <SoundBtn :text="msg.text"/>
+                <button class="msg-sound-btn" :disabled="isAudioPlaying" :style="{ opacity: isAudioPlaying ? 0.5 : 1 }"
+                        @click="playMessageAudio(msg)">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                  </svg>
+                </button>
               </div>
               <div class="message">
                 <p class="german-text">{{ msg.text }}</p>
@@ -132,9 +145,9 @@
             v-for="(option, index) in store.currentOptions"
             :key="index"
             class="option-btn"
-            :disabled="store.isOptionsDisabled || isTyping"
-            :style="{ opacity: (store.isOptionsDisabled || isTyping) ? 0.6 : 1, cursor: (store.isOptionsDisabled || isTyping) ? 'not-allowed' : 'pointer' }"
-            @click="handleOptionClick(option)"
+            :disabled="store.isOptionsDisabled || isTyping || isAudioPlaying"
+            :style="{ opacity: (store.isOptionsDisabled || isTyping || isAudioPlaying) ? 0.6 : 1, cursor: (store.isOptionsDisabled || isTyping || isAudioPlaying) ? 'not-allowed' : 'pointer' }"
+            @click="handleOptionClick(option, index)"
         >
           <span class="option-german">{{ option.text }}</span>
           <span class="option-russian">{{ getTranslation(option.translation) }}</span>
@@ -146,20 +159,31 @@
             :class="{ 'is-listening': isListening }"
             @click="toggleListening"
             :title="t('speakSession.hoverVoice')"
-            :disabled="isTyping"
+            :disabled="isTyping || isAudioPlaying"
         >
-          {{ isListening ? '🔴' : '🎙️' }}
+          <svg v-if="!isListening" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            <line x1="12" y1="19" x2="12" y2="23"></line>
+            <line x1="8" y1="23" x2="16" y2="23"></line>
+          </svg>
+          <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="6" width="12" height="12" rx="2" ry="2"></rect>
+          </svg>
         </button>
         <input
             ref="inputField"
             v-model="manualInput"
             type="text"
             class="text-input"
+            :class="{ 'input-error': manualInputError }"
             :placeholder="t('speakSession.placeHolder')"
             @keyup.enter="submitManualInput"
-            :disabled="isTyping"
+            :disabled="isTyping || isAudioPlaying"
         />
-        <button class="send-btn" @click="submitManualInput" :disabled="isTyping">➤</button>
+        <button class="send-btn" @click="submitManualInput" :disabled="isTyping || isAudioPlaying">➤</button>
       </div>
     </footer>
     <VStopSessionModal
@@ -180,7 +204,6 @@
 import {ref, computed, onMounted, onUnmounted, nextTick} from 'vue';
 import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router';
 import {useSpeakStore} from '../../store/speakStore.js';
-import SoundBtn from "~/src/components/soundBtn.vue";
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
 import Modal from '../../src/components/modal.vue';
 import SpeakingIcon from "assets/images/speakingIcon.svg";
@@ -190,6 +213,7 @@ import VBanner from "~/src/components/V-banner.vue";
 import {useSwipeBack} from '~/composables/useSwipeBack.js';
 import VTransition from "~/src/components/V-transition.vue";
 import {showInterstitial} from '../../utils/admob.js';
+import VHeadsUp from "~/src/components/V-headsUp.vue";
 
 const {locale, t} = useI18n();
 const route = useRoute();
@@ -200,6 +224,8 @@ const viewState = ref('menu');
 const chatContainer = ref(null);
 const inputField = ref(null);
 const manualInput = ref('');
+const manualInputError = ref(false);
+const showErrorToast = ref(false);
 const isListening = ref(false);
 const isTyping = ref(false);
 const dialogueCompleted = ref(false);
@@ -209,6 +235,9 @@ const isConfirmedExit = ref(false);
 const showDevModal = ref(false);
 const isVocabLearned = ref(false);
 const toggleState = ref('dialog');
+const currentStepId = ref('start');
+const isAudioPlaying = ref(false);
+let currentAudioInstance = null;
 let recognition = null;
 
 const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
@@ -309,23 +338,51 @@ const startVocabLearning = () => {
 
 const restartDialogue = async () => {
   showCompletionModal.value = false;
-  showInterstitial(async () => {
-    store.resetSession();
-    dialogueCompleted.value = false;
-    viewState.value = 'menu';
-    await loadDialogueData();
-  });
+
+  if (currentAudioInstance) {
+    currentAudioInstance.pause();
+    currentAudioInstance = null;
+  }
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+  }
+  isAudioPlaying.value = false;
+
+  store.resetSession();
+  dialogueCompleted.value = false;
+  await loadDialogueData();
+
+  await startDialogue();
 };
 
 const speakGerman = async (text) => {
   if (!text) return;
-  stopSpeech();
+  if (currentAudioInstance) {
+    currentAudioInstance.pause();
+    currentAudioInstance = null;
+  }
+  if (typeof stopSpeech === 'function') stopSpeech();
+
+  isAudioPlaying.value = true;
   const plainText = text
       .replace(/<[^>]*>/g, ' ')
       .replace(/→/g, ', ')
       .trim();
-  await getSpeechAudio(plainText, 'de-DE');
+
+  if (typeof getSpeechAudio === 'function') {
+    await getSpeechAudio(plainText, 'de-DE');
+  } else if ('speechSynthesis' in window) {
+    const utterance = new SpeechSynthesisUtterance(plainText);
+    utterance.lang = 'de-DE';
+    window.speechSynthesis.speak(utterance);
+  }
+
   return new Promise((resolve) => {
+    const finish = () => {
+      isAudioPlaying.value = false;
+      resolve();
+    };
+
     setTimeout(() => {
       const audios = document.getElementsByTagName('audio');
       let playingAudio = null;
@@ -339,21 +396,86 @@ const speakGerman = async (text) => {
 
       if (playingAudio) {
         playingAudio.addEventListener('ended', () => {
-          setTimeout(resolve, 200);
+          setTimeout(finish, 200);
         }, {once: true});
       } else if ('speechSynthesis' in window && window.speechSynthesis.speaking) {
         const checkInterval = setInterval(() => {
           if (!window.speechSynthesis.speaking) {
             clearInterval(checkInterval);
-            setTimeout(resolve, 200);
+            setTimeout(finish, 200);
           }
         }, 100);
       } else {
         const estimatedMs = plainText.length * 75;
-        setTimeout(resolve, estimatedMs + 200);
+        setTimeout(finish, estimatedMs + 200);
       }
     }, 150);
   });
+};
+
+const playLocalAudio = (audioName) => {
+  return new Promise((resolve) => {
+    if (currentAudioInstance) {
+      currentAudioInstance.pause();
+      currentAudioInstance = null;
+    }
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+
+    const level = route.query.level || 'beginner';
+    const theme = route.query.theme || 'firstmeet';
+    const audioUrl = `/audio/speak-tasks/${level}/${theme}/${audioName}.mp3`;
+
+    currentAudioInstance = new Audio(audioUrl);
+    isAudioPlaying.value = true;
+
+    currentAudioInstance.onended = () => {
+      isAudioPlaying.value = false;
+      currentAudioInstance = null;
+      resolve();
+    };
+
+    currentAudioInstance.onerror = () => {
+      isAudioPlaying.value = false;
+      currentAudioInstance = null;
+      speakGerman(audioName.includes('option') ? 'Выбранный вариант' : 'Текст отсутствует').then(resolve);
+    };
+
+    currentAudioInstance.play().catch(() => {
+      isAudioPlaying.value = false;
+      currentAudioInstance = null;
+      resolve();
+    });
+  });
+};
+
+const playMessageAudio = (msg) => {
+  if (isAudioPlaying.value) return;
+
+  let audioName = null;
+  for (const [key, step] of Object.entries(store.dialogueData)) {
+    if (msg.sender === 'bot' && step.botText === msg.text) {
+      audioName = key;
+      break;
+    }
+    if (msg.sender === 'user' && step.options) {
+      const optIdx = step.options.findIndex(o => {
+        const base = o.text.replace('...', '').trim();
+        return msg.text.includes(base) || base.includes(msg.text);
+      });
+      if (optIdx !== -1) {
+        audioName = `${key}_option_${optIdx}`;
+        break;
+      }
+    }
+  }
+
+  if (audioName) {
+    playLocalAudio(audioName);
+  } else {
+    speakGerman(msg.text);
+  }
 };
 
 const scrollToBottom = async () => {
@@ -378,71 +500,72 @@ const startDialogue = async () => {
     store.chatStarted = true;
     dialogueCompleted.value = false;
     store.setStep('start');
+    currentStepId.value = 'start';
     store.isOptionsDisabled = true;
     const step = store.currentStepData;
-    setTimeout(async () => {
-      await speakGerman(step.botText);
-    }, 300);
 
     isTyping.value = true;
     await scrollToBottom();
 
     setTimeout(async () => {
       isTyping.value = false;
-      store.addMessage(
-          'bot',
-          step.botText,
-          step.botTranslation
-      );
-
+      store.addMessage('bot', step.botText, step.botTranslation);
       await scrollToBottom();
       store.isOptionsDisabled = false;
+      await playLocalAudio('start');
       checkDialogueEnd(step);
     }, 900);
   });
 };
 
-const handleOptionClick = async (option) => {
-  if (store.isOptionsDisabled || isTyping.value) return;
-  store.isOptionsDisabled = true;
-  const textToSpeak = option.text.replace('...', '');
-  if (option.text.includes('...')) {
-    manualInput.value = option.text.replace('...', ' ');
-    await speakGerman(textToSpeak);
-    store.isOptionsDisabled = false;
-    nextTick(() => {
-      if (inputField.value) inputField.value.focus();
-    });
-  } else {
-    await speakGerman(textToSpeak);
-    await processUserAnswer(option.text, option.translation, option.nextStep);
-  }
+const handleOptionClick = async (option, index) => {
+  if (store.isOptionsDisabled || isTyping.value || isAudioPlaying.value) return;
+
+  const optionAudioName = `${currentStepId.value}_option_${index}`;
+  playLocalAudio(optionAudioName);
+
+  manualInput.value = option.text.replace('...', ' ').trim();
+  manualInputError.value = false;
+
+  nextTick(() => {
+    if (inputField.value) inputField.value.focus();
+  });
 };
 
 const submitManualInput = async () => {
-  if (!manualInput.value.trim() || store.isOptionsDisabled || isTyping.value) return;
+  if (!manualInput.value.trim() || store.isOptionsDisabled || isTyping.value || isAudioPlaying.value) return;
+
+  const userInput = manualInput.value.toLowerCase().replace(/[.,¡!¿?]/g, '').trim();
+
+  const matchedIndex = store.currentOptions.findIndex(opt => {
+    if (opt.text.includes('...')) {
+      const base = opt.text.replace('...', '').toLowerCase().replace(/[.,¡!¿?]/g, '').trim();
+      return userInput.startsWith(base) || userInput.includes(base);
+    }
+    return opt.text.toLowerCase().replace(/[.,¡!¿?]/g, '').trim() === userInput;
+  });
+
+  if (matchedIndex === -1) {
+    showErrorToast.value = true;
+    setTimeout(() => {
+      showErrorToast.value = false;
+    }, 3000);
+    manualInputError.value = true;
+    setTimeout(() => {
+      manualInputError.value = false;
+    }, 1000);
+    return;
+  }
+
   store.isOptionsDisabled = true;
+  manualInputError.value = false;
 
-  const currentStep = store.currentStepData;
-  const textToSpeak = manualInput.value;
-  const nextStepKey = currentStep.defaultNext;
-
+  const matchedOption = store.currentOptions[matchedIndex];
+  const nextStepKey = matchedOption.nextStep || store.currentStepData.defaultNext;
   const textToSave = manualInput.value;
   manualInput.value = '';
 
-  await speakGerman(textToSpeak);
-
-  if (nextStepKey) {
-    await processUserAnswer(textToSave, 'Свой ответ', nextStepKey);
-  } else {
-    store.addMessage('user', textToSave, 'Свой ответ');
-    store.isOptionsDisabled = false;
-    checkDialogueEnd(null);
-  }
-};
-
-const processUserAnswer = async (userText, userTranslation, nextStepKey) => {
-  store.addMessage('user', userText, userTranslation);
+  store.addMessage('user', textToSave, matchedOption.translation);
 
   if (!nextStepKey || nextStepKey === 'end') {
     await completeDialogue();
@@ -450,6 +573,7 @@ const processUserAnswer = async (userText, userTranslation, nextStepKey) => {
   }
 
   store.setStep(nextStepKey);
+  currentStepId.value = nextStepKey;
   await scrollToBottom();
 
   const nextStepData = store.currentStepData;
@@ -462,12 +586,10 @@ const processUserAnswer = async (userText, userTranslation, nextStepKey) => {
       isTyping.value = false;
       store.addMessage('bot', nextStepData.botText, nextStepData.botTranslation);
       await scrollToBottom();
-
-      await speakGerman(nextStepData.botText);
+      await playLocalAudio(nextStepKey);
       store.isOptionsDisabled = false;
-
       checkDialogueEnd(nextStepData);
-    }, 1500);
+    }, 1000);
   } else {
     store.isOptionsDisabled = false;
     await completeDialogue();
@@ -515,6 +637,10 @@ onMounted(async () => {
 onUnmounted(() => {
   store.resetSession();
   if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+  if (currentAudioInstance) {
+    currentAudioInstance.pause();
+    currentAudioInstance = null;
+  }
 });
 
 onBeforeRouteLeave((to, from, next) => {
@@ -730,7 +856,7 @@ onMounted(() => {
   transition: transform 0.2s;
 }
 
-.btn-sound-large:active {
+.btn-sound-large:active:not(:disabled) {
   transform: scale(0.9);
 }
 
@@ -790,13 +916,13 @@ onMounted(() => {
   font-weight: 700;
   cursor: pointer;
   width: 100%;
+  max-width: 340px;
   transition: background-color 0.2s, transform 0.1s;
 }
 
 .btn-primary:active {
   transform: scale(0.97);
 }
-
 
 .slide-up-enter-active,
 .slide-up-leave-active {
@@ -816,14 +942,16 @@ onMounted(() => {
 }
 
 .completion-overlay {
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
-  z-index: 50;
-  pointer-events: none;
+  align-items: flex-end;
+  z-index: 100;
 }
 
 .completion-modal {
@@ -833,7 +961,7 @@ onMounted(() => {
   width: 100%;
   max-width: 768px;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -922,9 +1050,9 @@ onMounted(() => {
 
 .message-bubble {
   display: flex;
-  gap: 5px;
+  gap: 7px;
   max-width: 80%;
-  padding: 8px 10px;
+  padding: 8px 8px 8px 4px;
   border-radius: 16px;
   background-color: #FFFFFF;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -932,6 +1060,33 @@ onMounted(() => {
 
 .message__icon {
   width: 28px;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+.msg-sound-btn {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.1s ease;
+}
+
+.msg-sound-btn:active:not(:disabled) {
+  transform: scale(0.9);
+}
+
+.bot-message .msg-sound-btn {
+  color: #3b82f6;
+}
+
+.user-message .msg-sound-btn {
+  color: #8b5cf6;
 }
 
 .bot-message .message-bubble {
@@ -997,7 +1152,6 @@ onMounted(() => {
   padding: 10px;
   border-radius: 15px 15px 0 0;
   border-top: 3px solid var(--tabsSlideBorderColor);
-
 }
 
 .options-title {
@@ -1101,18 +1255,48 @@ onMounted(() => {
   color: #9ca3af;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
-  }
+.input-error {
+  border-color: #ef4444 !important;
+  animation: shake 0.4s;
 }
+
+.error-toast {
+  position: absolute;
+  width: 100%;
+  top: calc(env(safe-area-inset-top));
+  left: 0;
+  background: #d97706;
+  color: #fff;
+  padding: 18px 24px;
+  font-weight: 800;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+  z-index: 1000;
+  text-align: center;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.error-toast:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  left: 0;
+  bottom: 100%;
+  background: #d97706;
+  z-index: 1;
+}
+
+.toast-fade-enter-active,
+.toast-fade-leave-active {
+  transition: all 0.2s ease-in-out;
+}
+
+.toast-fade-enter-from,
+.toast-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-100%)
+}
+
 </style>

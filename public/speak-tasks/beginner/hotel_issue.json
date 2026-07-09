@@ -1,0 +1,534 @@
+{
+  "start": {
+    "botText": "Guten Tag! Wie kann ich Ihnen helfen?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Чем я могу Вам помочь?",
+      "en-US": "Good day! How can I help you?",
+      "ar-SA": "طاب يومك! كيف يمكنني مساعدتك؟",
+      "es-ES": "¡Buenos días! ¿En qué puedo ayudarle?",
+      "fr-FR": "Bonjour ! Comment puis-je vous aider ?",
+      "hi-IN": "शुभ दिन! मैं आपकी कैसे मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! W czym mogę pomóc?",
+      "ro-RO": "Bună ziua! Cu ce vă pot ajuta?",
+      "tr-TR": "İyi günler! Size nasıl yardımcı olabilirim?",
+      "uk-UA": "Добрий день! Чим я можу Вам допомогти?",
+      "uz-UZ": "Xayrli kun! Sizga qanday yordam bera olaman?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Beschwerde",
+        "translation": {
+          "ru-RU": "жалоба",
+          "en-US": "complaint",
+          "ar-SA": "شكوى",
+          "es-ES": "queja",
+          "fr-FR": "réclamation",
+          "hi-IN": "शिकायत",
+          "pl-PL": "skarga / reklamacja",
+          "ro-RO": "plângere",
+          "tr-TR": "şikayet",
+          "uk-UA": "скарга",
+          "uz-UZ": "shikoyat"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag. Ich habe ein Problem in meinem Zimmer.",
+        "translation": {
+          "ru-RU": "Добрый день. У меня проблема в номере.",
+          "en-US": "Good day. I have a problem in my room.",
+          "ar-SA": "طاب يومك. لدي مشكلة في غرفتي.",
+          "es-ES": "Buenos días. Tengo un problema en mi habitación.",
+          "fr-FR": "Bonjour. J'ai un problème dans ma chambre.",
+          "hi-IN": "शुभ दिन। मेरे कमरे में एक समस्या है।",
+          "pl-PL": "Dzień dobry. Mam problem w moim pokoju.",
+          "ro-RO": "Bună ziua. Am o problemă în camera mea.",
+          "tr-TR": "İyi günler. Odamda bir problem var.",
+          "uk-UA": "Добрий день. У мене проблема в номері.",
+          "uz-UZ": "Xayrli kun. Xonamda bitta muammo bor."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo. In Zimmer 204 gibt es leider ein großes Problem.",
+        "translation": {
+          "ru-RU": "Здравствуйте. В номере 204, к сожалению, большая проблема.",
+          "en-US": "Hello. Unfortunately, there is a big problem in room 204.",
+          "ar-SA": "مرحباً. للأسف توجد مشكلة كبيرة في الغرفة 204.",
+          "es-ES": "Hola. Lamentablemente hay un gran problema en la habitación 204.",
+          "fr-FR": "Bonjour. Il y a malheureusement un gros problème dans la chambre 204.",
+          "hi-IN": "नमस्ते। दुर्भाग्य से कमरा 204 में एक बड़ी समस्या है।",
+          "pl-PL": "Cześć. W pokoju 204 jest niestety duży problem.",
+          "ro-RO": "Bună. Din păcate, este o mare problemă în camera 204.",
+          "tr-TR": "Merhaba. Maalesef 204 numaralı odada büyük bir sorun var.",
+          "uk-UA": "Добрий день. У номері 204, на жаль, велика проблема.",
+          "uz-UZ": "Salom. Afsuski, 204-xonada katta muammo bor."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Oh, was ist denn los? Stimmt etwas nicht?",
+    "botTranslation": {
+      "ru-RU": "О, а что случилось? Что-то не так?",
+      "en-US": "Oh, what's wrong? Is something not right?",
+      "ar-SA": "أوه، ما الأمر؟ هل هناك خطأ ما؟",
+      "es-ES": "Oh, ¿qué pasa? ¿Hay algo mal?",
+      "fr-FR": "Oh, que se passe-t-il ? Quelque chose ne va pas ?",
+      "hi-IN": "ओह, क्या बात है? क्या कुछ गलत है?",
+      "pl-PL": "Och, co się stało? Coś jest nie tak?",
+      "ro-RO": "Oh, ce s-a întâmplat? Ceva nu este în regulă?",
+      "tr-TR": "Oh, ne oldu? Ters giden bir şey mi var?",
+      "uk-UA": "О, а що сталось? Щось не так?",
+      "uz-UZ": "Oh, nima bo'ldi? Biror narsa joyida emasmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Klimaanlage",
+        "translation": {
+          "ru-RU": "кондиционер",
+          "en-US": "air conditioning",
+          "ar-SA": "مكيف الهواء",
+          "es-ES": "aire acondicionado",
+          "fr-FR": "climatisation",
+          "hi-IN": "एयर कंडीशनर",
+          "pl-PL": "klimatyzacja",
+          "ro-RO": "aer condiționat",
+          "tr-TR": "klima",
+          "uk-UA": "кондиціонер",
+          "uz-UZ": "konditsioner"
+        }
+      },
+      {
+        "german": "heiß",
+        "translation": {
+          "ru-RU": "горячий / жарко",
+          "en-US": "hot",
+          "ar-SA": "حار",
+          "es-ES": "caliente / hace calor",
+          "fr-FR": "chaud",
+          "hi-IN": "गर्म",
+          "pl-PL": "gorący / gorąco",
+          "ro-RO": "fierbinte / cald",
+          "tr-TR": "sıcak",
+          "uk-UA": "гарячий / жарко",
+          "uz-UZ": "issiq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Die Klimaanlage funktioniert überhaupt nicht.",
+        "translation": {
+          "ru-RU": "Кондиционер вообще не работает.",
+          "en-US": "The air conditioning is not working at all.",
+          "ar-SA": "مكيف الهواء لا يعمل على الإطلاق.",
+          "es-ES": "El aire acondicionado no funciona en absoluto.",
+          "fr-FR": "La climatisation ne fonctionne pas du tout.",
+          "hi-IN": "एयर कंडीशनर बिल्कुल काम नहीं कर रहा है।",
+          "pl-PL": "Klimatyzacja w ogóle nie działa.",
+          "ro-RO": "Aerul condiționat nu funcționează deloc.",
+          "tr-TR": "Klima hiç çalışmıyor.",
+          "uk-UA": "Кондиціонер взагалі не працює.",
+          "uz-UZ": "Konditsioner umuman ishlamayapti."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Es ist viel zu heiß im Zimmer. Die Klimaanlage geht nicht.",
+        "translation": {
+          "ru-RU": "В номере слишком жарко. Кондиционер не работает.",
+          "en-US": "It's way too hot in the room. The air conditioning doesn't work.",
+          "ar-SA": "الجو حار جداً في الغرفة. مكيف الهواء لا يعمل.",
+          "es-ES": "Hace demasiado calor en la habitación. El aire acondicionado no va.",
+          "fr-FR": "Il fait beaucoup trop chaud dans la chambre. La clim ne marche pas.",
+          "hi-IN": "कमरे में बहुत ज्यादा गर्मी है। एसी नहीं चल रहा है।",
+          "pl-PL": "W pokoju jest zdecydowanie za gorąco. Klimatyzacja nie działa.",
+          "ro-RO": "Este mult prea cald în cameră. Aerul condiționat nu merge.",
+          "tr-TR": "Odada hava çok sıcak. Klima çalışmıyor.",
+          "uk-UA": "У номері занадто жарко. Кондиціонер не працює.",
+          "uz-UZ": "Xonada juda issiq. Konditsioner ishlamayapti."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Oh je, das tut mir sehr leid. Haben Sie versucht, sie über die Fernbedienung einzuschalten?",
+    "botTranslation": {
+      "ru-RU": "О боже, мне очень жаль. Вы пробовали включить его через пульт?",
+      "en-US": "Oh dear, I am very sorry. Have you tried turning it on with the remote control?",
+      "ar-SA": "يا إلهي، أنا آسف جداً. هل حاولت تشغيله عبر جهاز التحكم عن بعد؟",
+      "es-ES": "Oh vaya, lo siento mucho. ¿Ha intentado encenderlo con el mando a distancia?",
+      "fr-FR": "Oh là là, je suis vraiment désolé. Avez-vous essayé de l'allumer avec la télécommande ?",
+      "hi-IN": "ओह, मुझे बहुत खेद है। क्या आपने इसे रिमोट से चालू करने की कोशिश की?",
+      "pl-PL": "Ojej, bardzo mi przykro. Próbował Pan włączyć ją pilotem?",
+      "ro-RO": "O, doamne, îmi pare foarte rău. Ați încercat să îl porniți din telecomandă?",
+      "tr-TR": "Aman Allahım, çok üzgünüm. Kumandadan açmayı denediniz mi?",
+      "uk-UA": "Ой, мені дуже шкода. Ви пробували увімкнути його через пульт?",
+      "uz-UZ": "Oh xudoyim, juda afsusdaman. Uni pult orqali yoqishga harakat qildingizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "funktionieren",
+        "translation": {
+          "ru-RU": "функционировать / работать",
+          "en-US": "to function / to work",
+          "ar-SA": "يعمل",
+          "es-ES": "funcionar",
+          "fr-FR": "fonctionner",
+          "hi-IN": "काम करना",
+          "pl-PL": "funkcjonować / działać",
+          "ro-RO": "a funcționa",
+          "tr-TR": "çalışmak (makine)",
+          "uk-UA": "функціонувати / працювати",
+          "uz-UZ": "ishlamoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, natürlich. Aber es kommt nur warme Luft.",
+        "translation": {
+          "ru-RU": "Да, конечно. Но идет только теплый воздух.",
+          "en-US": "Yes, of course. But only warm air comes out.",
+          "ar-SA": "نعم بالطبع. لكن يخرج هواء دافئ فقط.",
+          "es-ES": "Sí, por supuesto. Pero solo sale aire caliente.",
+          "fr-FR": "Oui, bien sûr. Mais il ne sort que de l'air chaud.",
+          "hi-IN": "हाँ, बिल्कुल। लेकिन केवल गर्म हवा आ रही है।",
+          "pl-PL": "Tak, oczywiście. Ale leci tylko ciepłe powietrze.",
+          "ro-RO": "Da, desigur. Dar iese doar aer cald.",
+          "tr-TR": "Evet, elbette. Ama sadece sıcak hava geliyor.",
+          "uk-UA": "Так, звісно. Але йде тільки тепле повітря.",
+          "uz-UZ": "Ha, albatta. Lekin faqat iliq havo chiqyapti."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Ja, alles ausprobiert. Das Gerät reagiert gar nicht.",
+        "translation": {
+          "ru-RU": "Да, все испробовал. Устройство вообще не реагирует.",
+          "en-US": "Yes, tried everything. The device doesn't react at all.",
+          "ar-SA": "نعم، جربت كل شيء. الجهاز لا يستجيب على الإطلاق.",
+          "es-ES": "Sí, lo he probado todo. El aparato no reacciona en absoluto.",
+          "fr-FR": "Oui, tout essayé. L'appareil ne réagit pas du tout.",
+          "hi-IN": "हाँ, सब कुछ आजमाया। डिवाइस बिल्कुल भी प्रतिक्रिया नहीं कर रहा है।",
+          "pl-PL": "Tak, próbowałem wszystkiego. Urządzenie w ogóle nie reaguje.",
+          "ro-RO": "Da, am încercat totul. Dispozitivul nu reacționează deloc.",
+          "tr-TR": "Evet, her şeyi denedim. Cihaz hiç tepki vermiyor.",
+          "uk-UA": "Так, все спробував. Пристрій взагалі не реагує.",
+          "uz-UZ": "Ha, hammasini sinab ko'rdim. Qurilma umuman ta'sir qilmayapti."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Verstanden. Bei 35 Grad draußen ist das unerträglich. Ich rufe sofort unseren Techniker.",
+    "botTranslation": {
+      "ru-RU": "Понятно. При 35 градусах на улице это невыносимо. Я сейчас же вызову нашего техника.",
+      "en-US": "Understood. At 35 degrees outside that is unbearable. I will call our technician immediately.",
+      "ar-SA": "مفهوم. مع 35 درجة في الخارج هذا لا يطاق. سأتصل بالفني فوراً.",
+      "es-ES": "Entendido. Con 35 grados fuera eso es insoportable. Llamaré a nuestro técnico inmediatamente.",
+      "fr-FR": "Compris. Avec 35 degrés dehors c'est insupportable. J'appelle notre technicien tout de suite.",
+      "hi-IN": "समझ गया। बाहर 35 डिग्री में यह असहनीय है। मैं तुरंत हमारे तकनीशियन को बुलाता हूँ।",
+      "pl-PL": "Rozumiem. Przy 35 stopniach na zewnątrz to nie do zniesienia. Natychmiast dzwonię po naszego technika.",
+      "ro-RO": "Am înțeles. La 35 de grade afară este insuportabil. Voi chema imediat tehnicianul nostru.",
+      "tr-TR": "Anlaşıldı. Dışarıda 35 derecede bu dayanılmaz. Hemen teknisyenimizi çağırıyorum.",
+      "uk-UA": "Зрозуміло. При 35 градусах на вулиці це нестерпно. Я зараз же викличу нашого техніка.",
+      "uz-UZ": "Tushunarli. Tashqarida 35 gradusda bunga chidab bo'lmaydi. Men darhol texnigimizni chaqiraman."
+    },
+    "vocabulary": [
+      {
+        "german": "der Techniker",
+        "translation": {
+          "ru-RU": "техник / мастер",
+          "en-US": "technician",
+          "ar-SA": "فني",
+          "es-ES": "técnico",
+          "fr-FR": "technicien",
+          "hi-IN": "तकनीशियन",
+          "pl-PL": "technik",
+          "ro-RO": "tehnician",
+          "tr-TR": "teknisyen",
+          "uk-UA": "технік / майстер",
+          "uz-UZ": "texnik"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Wie lange dauert das? Ich möchte mich eigentlich ausruhen.",
+        "translation": {
+          "ru-RU": "Сколько времени это займет? Я вообще-то хочу отдохнуть.",
+          "en-US": "How long will that take? I actually want to rest.",
+          "ar-SA": "كم سيستغرق ذلك من الوقت؟ أود حقاً أن أرتاح.",
+          "es-ES": "¿Cuánto tardará? La verdad es que me gustaría descansar.",
+          "fr-FR": "Combien de temps cela va-t-il prendre ? Je voudrais en fait me reposer.",
+          "hi-IN": "इसमें कितना समय लगेगा? मैं वास्तव में आराम करना चाहता हूँ।",
+          "pl-PL": "Ile to potrwa? Właściwie chciałbym odpocząć.",
+          "ro-RO": "Cât durează asta? Chiar aș vrea să mă odihnesc.",
+          "tr-TR": "Ne kadar sürer? Aslında dinlenmek istiyorum.",
+          "uk-UA": "Скільки часу це займе? Я взагалі-то хочу відпочити.",
+          "uz-UZ": "Bunga qancha vaqt ketadi? Aslida men dam olmoqchi edim."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Danke. Aber wenn er es nicht repariert, möchte ich ein anderes Zimmer.",
+        "translation": {
+          "ru-RU": "Спасибо. Но если он не починит, я хочу другой номер.",
+          "en-US": "Thanks. But if he doesn't repair it, I want another room.",
+          "ar-SA": "شكراً. لكن إذا لم يقم بإصلاحه، أريد غرفة أخرى.",
+          "es-ES": "Gracias. Pero si no lo repara, quiero otra habitación.",
+          "fr-FR": "Merci. Mais s'il ne le répare pas, je voudrais une autre chambre.",
+          "hi-IN": "धन्यवाद। लेकिन अगर वह इसे ठीक नहीं करता है, तो मुझे दूसरा कमरा चाहिए।",
+          "pl-PL": "Dziękuję. Ale jeśli tego nie naprawi, chcę inny pokój.",
+          "ro-RO": "Mulțumesc. Dar dacă nu îl repară, aș dori o altă cameră.",
+          "tr-TR": "Teşekkürler. Ama tamir edemezse başka bir oda istiyorum.",
+          "uk-UA": "Дякую. Але якщо він не полагодить, я хочу інший номер.",
+          "uz-UZ": "Rahmat. Lekin agar u ta'mirlamasa, men boshqa xonani xohlayman."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Der Techniker braucht etwa zwanzig Minuten. Wenn er es nicht schafft, bekommen Sie ein neues Zimmer.",
+    "botTranslation": {
+      "ru-RU": "Технику понадобится около 20 минут. Если он не справится, вы получите новый номер.",
+      "en-US": "The technician needs about twenty minutes. If he can't fix it, you will get a new room.",
+      "ar-SA": "يحتاج الفني إلى حوالي عشرين دقيقة. إذا لم ينجح، ستحصل على غرفة جديدة.",
+      "es-ES": "El técnico necesita unos veinte minutos. Si no puede arreglarlo, tendrá una habitación nueva.",
+      "fr-FR": "Le technicien a besoin d'environ vingt minutes. S'il n'y arrive pas, vous aurez une nouvelle chambre.",
+      "hi-IN": "तकनीशियन को लगभग बीस मिनट लगेंगे। यदि वह ऐसा नहीं कर पाता है, तो आपको नया कमरा मिलेगा।",
+      "pl-PL": "Technik potrzebuje około dwudziestu minut. Jeśli mu się nie uda, otrzyma Pan nowy pokój.",
+      "ro-RO": "Tehnicianul are nevoie de aproximativ douăzeci de minute. Dacă nu reușește, veți primi o cameră nouă.",
+      "tr-TR": "Teknisyenin yaklaşık yirmi dakikaya ihtiyacı var. Başaramazsa, yeni bir oda alacaksınız.",
+      "uk-UA": "Техніку знадобиться близько 20 хвилин. Якщо він не впорається, ви отримаєте новий номер.",
+      "uz-UZ": "Texnikka taxminan yigirma daqiqa kerak. Agar u uddalay olmasa, siz yangi xona olasiz."
+    },
+    "vocabulary": [
+      {
+        "german": "reparieren",
+        "translation": {
+          "ru-RU": "ремонтировать / чинить",
+          "en-US": "to repair / to fix",
+          "ar-SA": "إصلاح",
+          "es-ES": "reparar",
+          "fr-FR": "réparer",
+          "hi-IN": "मरम्मत करना",
+          "pl-PL": "naprawiać",
+          "ro-RO": "a repara",
+          "tr-TR": "tamir etmek",
+          "uk-UA": "ремонтувати / лагодити",
+          "uz-UZ": "ta'mirlamoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar. Ich warte so lange in der Lobby.",
+        "translation": {
+          "ru-RU": "Все ясно. Я подожду пока в лобби.",
+          "en-US": "All right. I will wait in the lobby in the meantime.",
+          "ar-SA": "حسناً. سأنتظر في بهو الفندق حتى ذلك الحين.",
+          "es-ES": "De acuerdo. Esperaré en el vestíbulo mientras tanto.",
+          "fr-FR": "D'accord. Je vais attendre dans le hall en attendant.",
+          "hi-IN": "ठीक है। मैं तब तक लॉबी में प्रतीक्षा करूँगा।",
+          "pl-PL": "Wszystko jasne. Poczekam w tym czasie w lobby.",
+          "ro-RO": "Am înțeles. Aștept în hol până atunci.",
+          "tr-TR": "Tamam. O zamana kadar lobide bekleyeceğim.",
+          "uk-UA": "Все ясно. Я почекаю поки що в лобі.",
+          "uz-UZ": "Tushunarli. Ungacha men lobbida kutib turaman."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Gut, das ist fair. Danke für die schnelle Hilfe.",
+        "translation": {
+          "ru-RU": "Хорошо, это справедливо. Спасибо за быструю помощь.",
+          "en-US": "Good, that's fair. Thanks for the quick help.",
+          "ar-SA": "جيد، هذا عادل. شكراً على المساعدة السريعة.",
+          "es-ES": "Bien, me parece justo. Gracias por la ayuda rápida.",
+          "fr-FR": "Bien, c'est juste. Merci pour l'aide rapide.",
+          "hi-IN": "ठीक है, यह उचित है। त्वरित मदद के लिए धन्यवाद।",
+          "pl-PL": "Dobrze, to sprawiedliwe. Dziękuję za szybką pomoc.",
+          "ro-RO": "Bine, e corect. Mulțumesc pentru ajutorul rapid.",
+          "tr-TR": "Güzel, bu adil. Hızlı yardım için teşekkürler.",
+          "uk-UA": "Добре, це справедливо. Дякую за швидку допомогу.",
+          "uz-UZ": "Yaxshi, bu adolatli. Tezkor yordam uchun rahmat."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Möchten Sie in der Zwischenzeit ein kaltes Getränk an unserer Bar? Das geht aufs Haus.",
+    "botTranslation": {
+      "ru-RU": "Хотите пока холодный напиток в нашем баре? За счет заведения.",
+      "en-US": "Would you like a cold drink at our bar in the meantime? It's on the house.",
+      "ar-SA": "هل تود مشروباً بارداً في البار في هذه الأثناء؟ إنه على حساب المحل.",
+      "es-ES": "¿Le gustaría una bebida fría en nuestro bar mientras tanto? Invita la casa.",
+      "fr-FR": "Souhaitez-vous une boisson fraîche à notre bar en attendant ? C'est offert par la maison.",
+      "hi-IN": "क्या आप इस बीच हमारे बार में कोई ठंडा पेय लेना चाहेंगे? यह हमारी तरफ से है।",
+      "pl-PL": "Czy w międzyczasie życzy Pan sobie zimny napój w naszym barze? Na koszt firmy.",
+      "ro-RO": "Doriți între timp o băutură rece la barul nostru? Este din partea casei.",
+      "tr-TR": "Bu arada barımızda soğuk bir içecek ister misiniz? Müesseseden.",
+      "uk-UA": "Хочете поки холодний напій у нашому барі? За рахунок закладу.",
+      "uz-UZ": "Ungacha barimizda sovuq ichimlik xohlaysizmi? Bu mehmonxona hisobidan."
+    },
+    "vocabulary": [
+      {
+        "german": "aufs Haus",
+        "translation": {
+          "ru-RU": "за счет заведения",
+          "en-US": "on the house",
+          "ar-SA": "على حساب المحل",
+          "es-ES": "invita la casa",
+          "fr-FR": "offert par la maison",
+          "hi-IN": "मुफ़्त / हाउस की तरफ से",
+          "pl-PL": "na koszt firmy",
+          "ro-RO": "din partea casei",
+          "tr-TR": "müesseseden",
+          "uk-UA": "за рахунок закладу",
+          "uz-UZ": "muassasa hisobidan"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, eine kalte Cola wäre jetzt super, danke.",
+        "translation": {
+          "ru-RU": "Да, холодная кола была бы сейчас супер, спасибо.",
+          "en-US": "Yes, a cold cola would be great right now, thanks.",
+          "ar-SA": "نعم، كولا باردة ستكون رائعة الآن، شكراً.",
+          "es-ES": "Sí, una cola fría estaría genial ahora, gracias.",
+          "fr-FR": "Oui, un cola bien frais serait super maintenant, merci.",
+          "hi-IN": "हाँ, ठंडी कोला अभी बहुत बढ़िया होगी, धन्यवाद।",
+          "pl-PL": "Tak, zimna cola byłaby teraz super, dziękuję.",
+          "ro-RO": "Da, o cola rece ar fi super acum, mulțumesc.",
+          "tr-TR": "Evet, soğuk bir kola şu an süper olurdu, teşekkürler.",
+          "uk-UA": "Так, холодна кола була б зараз супер, дякую.",
+          "uz-UZ": "Ha, sovuq kola hozir ajoyib bo'lardi, rahmat."
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Ein kaltes Wasser reicht mir, vielen Dank.",
+        "translation": {
+          "ru-RU": "Мне достаточно холодной воды, большое спасибо.",
+          "en-US": "A cold water is enough for me, thank you very much.",
+          "ar-SA": "الماء البارد يكفيني، شكراً جزيلاً.",
+          "es-ES": "Me basta con agua fría, muchas gracias.",
+          "fr-FR": "De l'eau fraîche me suffit, merci beaucoup.",
+          "hi-IN": "ठंडा पानी मेरे लिए काफी है, बहुत-बहुत धन्यवाद।",
+          "pl-PL": "Wystarczy mi zimna woda, bardzo dziękuję.",
+          "ro-RO": "Îmi ajunge o apă rece, vă mulțumesc mult.",
+          "tr-TR": "Soğuk bir su yeterli, çok teşekkürler.",
+          "uk-UA": "Мені достатньо холодної води, велике дякую.",
+          "uz-UZ": "Sovuq suv menga yetarli, katta rahmat."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Bitte schön, hier ist ein Gutschein für die Bar. Ich gebe Ihnen Bescheid, sobald der Techniker fertig ist.",
+    "botTranslation": {
+      "ru-RU": "Пожалуйста, вот купон в бар. Я дам Вам знать, как только техник закончит.",
+      "en-US": "Here you go, here is a voucher for the bar. I'll let you know as soon as the technician is finished.",
+      "ar-SA": "تفضل، هذه قسيمة للبار. سأعلمك بمجرد انتهاء الفني.",
+      "es-ES": "Aquí tiene, aquí tiene un vale para el bar. Le avisaré tan pronto como el técnico haya terminado.",
+      "fr-FR": "Voilà, voici un bon pour le bar. Je vous ferai signe dès que le technicien aura terminé.",
+      "hi-IN": "ये लीजिए, ये बार के लिए वाउचर है। जैसे ही तकनीशियन काम पूरा कर लेगा, मैं आपको बता दूँगा।",
+      "pl-PL": "Proszę bardzo, oto kupon do baru. Dam Panu znać, gdy tylko technik skończy.",
+      "ro-RO": "Poftiți, acesta este un voucher pentru bar. Vă anunț de îndată ce tehnicianul a terminat.",
+      "tr-TR": "Buyurun, işte bar için bir kupon. Teknisyen işini bitirir bitirmez size haber vereceğim.",
+      "uk-UA": "Будь ласка, ось купон в бар. Я дам Вам знати, як тільки технік закінчить.",
+      "uz-UZ": "Marhamat, mana bar uchun kupon. Texnik tugatishi bilan sizga xabar beraman."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Vielen Dank für Ihr Verständnis!",
+        "translation": {
+          "ru-RU": "Большое спасибо за Ваше понимание!",
+          "en-US": "Thank you very much for your understanding!",
+          "ar-SA": "شكراً جزيلاً على تفهمك!",
+          "es-ES": "¡Muchas gracias por su comprensión!",
+          "fr-FR": "Merci beaucoup pour votre compréhension !",
+          "hi-IN": "आपकी समझ के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję za zrozumienie!",
+          "ro-RO": "Vă mulțumesc mult pentru înțelegere!",
+          "tr-TR": "Anlayışınız için çok teşekkürler!",
+          "uk-UA": "Велике дякую за Ваше розуміння!",
+          "uz-UZ": "Tushunganingiz uchun katta rahmat!"
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Super, danke. Bis gleich.",
+        "translation": {
+          "ru-RU": "Супер, спасибо. До скорого.",
+          "en-US": "Super, thanks. See you soon.",
+          "ar-SA": "ممتاز، شكراً. أراك قريباً.",
+          "es-ES": "Genial, gracias. Hasta ahora.",
+          "fr-FR": "Super, merci. À tout de suite.",
+          "hi-IN": "बढ़िया, धन्यवाद। जल्द मिलते हैं।",
+          "pl-PL": "Super, dziękuję. Do zobaczenia zaraz.",
+          "ro-RO": "Super, mulțumesc. Pe curând.",
+          "tr-TR": "Harika, teşekkürler. Görüşmek üzere.",
+          "uk-UA": "Супер, дякую. До зустрічі.",
+          "uz-UZ": "Ajoyib, rahmat. Ko'rishguncha."
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Nichts zu danken. Entschuldigen Sie die Unannehmlichkeiten! Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Не за что. Извините за неудобства! Разговор окончен.",
+      "en-US": "Don't mention it. Apologies for the inconvenience! The conversation is over.",
+      "ar-SA": "لا شكر على واجب. نعتذر عن الإزعاج! انتهت المحادثة.",
+      "es-ES": "No hay de qué. ¡Disculpe las molestias! La conversación ha terminado.",
+      "fr-FR": "De rien. Veuillez nous excuser pour le désagrément ! La conversation est terminée.",
+      "hi-IN": "कोई बात नहीं। असुविधा के लिए खेद है! बातचीत खत्म हो गई है।",
+      "pl-PL": "Nie ma za co. Przepraszamy za niedogodności! Rozmowa zakończona.",
+      "ro-RO": "Pentru puțin. Ne cerem scuze pentru neplăceri! Conversația s-a încheiat.",
+      "tr-TR": "Rica ederim. Rahatsızlık için özür dileriz! Konuşma sona erdi.",
+      "uk-UA": "Нема за що. Вибачте за незручності! Розмова закінчена.",
+      "uz-UZ": "Arzimaydi. Noqulaylik uchun uzr so'raymiz! Suhbat yakunlandi."
+    },
+    "vocabulary": [
+      {
+        "german": "das Verständnis",
+        "translation": {
+          "ru-RU": "понимание",
+          "en-US": "understanding",
+          "ar-SA": "تفهم",
+          "es-ES": "comprensión",
+          "fr-FR": "compréhension",
+          "hi-IN": "समझ",
+          "pl-PL": "zrozumienie",
+          "ro-RO": "înțelegere",
+          "tr-TR": "anlayış",
+          "uk-UA": "розуміння",
+          "uz-UZ": "tushunish"
+        }
+      }
+    ],
+    "options": [],
+    "defaultNext": null
+  }
+}
