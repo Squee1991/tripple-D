@@ -34,7 +34,7 @@
                   :key="btn.id"
                   class="menu-btn-toon"
                   :class="btn.class"
-                  @click="btn.action ? btn.action() : toggleScreen(btn.target)"
+                  @click="btn.path ? router.push(btn.path) : toggleScreen(btn.target)"
               >
                 {{ t(btn.label) }}
               </button>
@@ -94,7 +94,7 @@ const menuButtons = [
   {id: 'profile', class: 'settings', label: 'galaxyMenu.profile', target: 'settings'},
   {id: 'shop', class: 'hangar', label: 'galaxyMenu.shop', target: 'shop'},
   {id: 'rank', class: 'rank-btn', label: 'galaxyMenu.rank', target: 'rank'},
-  {id: 'exit', class: 'exit', label: 'galaxyMenu.exit', action: () => handleExit()}
+  {id: 'exit', class: 'exit', label: 'galaxyMenu.exit', path: '/'}
 ]
 
 const getRandomPos = (n) => ({
@@ -130,8 +130,6 @@ const generateAstronauts = (count = 2) => {
   }
   astronauts.value = newAstronauts
 }
-
-const handleExit = () => router.push('/')
 
 const startMission = (sectorId) => {
   router.push({

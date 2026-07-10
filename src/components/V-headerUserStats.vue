@@ -114,7 +114,6 @@ const getIconClass = (item) => {
 const infoData = computed(() => [
   {
     id: 'plus',
-    title: 'Skillup+',
     icon: LogoPlus
   },
   {

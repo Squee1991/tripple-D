@@ -974,7 +974,8 @@ onMounted(async () => {
 
 .avatar-modal-content {
   background: var(--tabBg);
-  padding: 20px 12px;
+  padding: 16px 10px;
+  padding-bottom: env(safe-area-inset-bottom);
   border-radius: 24px 24px 0 0;
   width: 100%;
   max-width: 600px;
