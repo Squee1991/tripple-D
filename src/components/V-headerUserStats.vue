@@ -9,8 +9,7 @@
         class="stat-item-wrapper"
         :class="{'plus' : item.id === 'plus'}"
     >
-      <button class="stat-btn"
-              @click.stop="handleStatClick(item.id === 'plus' ? toPay() : item)">
+      <button class="stat-btn" @click.stop="handleStatClick(item)">
         <span class="item__label"> {{ item.title }}</span>
         <img
             v-if="item.id === 'rank' && userAuth.isFreezeActive"
@@ -71,8 +70,8 @@
 <script setup>
 import {ref, computed, onMounted, onBeforeUnmount} from 'vue'
 import {userlangStore} from "~/store/learningStore.js"
-import {userAuthStore} from '../../store/authStore.js'
-import {userChainStore} from '../../store/chainStore.js'
+import {userAuthStore} from '~/store/authStore.js'
+import {userChainStore} from '~/store/chainStore.js'
 import {useI18n} from 'vue-i18n'
 import FreezeShield from '../../assets/images/FreezeShield.svg'
 import Hats from '../../assets/images/Hats.svg'
@@ -114,7 +113,6 @@ const getIconClass = (item) => {
 const infoData = computed(() => [
   {
     id: 'plus',
-    title: 'Skillup+',
     icon: LogoPlus
   },
   {
@@ -157,7 +155,9 @@ const infoData = computed(() => [
 ])
 
 const handleStatClick = (item) => {
-  if (item.id === 'rank') {
+  if (item.id === 'plus') {
+    toPay()
+  } else if (item.id === 'rank') {
     isCalendarOpen.value = true
     activeTooltip.value = null
   } else {
@@ -233,6 +233,7 @@ onBeforeUnmount(() => {
   background: none;
   padding: 0 2px;
   height: 38px;
+  width: 100%;
   cursor: pointer;
 }
 

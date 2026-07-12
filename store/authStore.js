@@ -23,7 +23,7 @@ import {
 } from 'firebase/auth';
 import { GoogleSignIn } from '@capawesome/capacitor-google-sign-in';
 import { useBillingStore } from './billingStore.js'
-import { AppleSignIn} from "@capawesome/capacitor-apple-sign-in";
+import { AppleSignIn, SignInScope} from "@capawesome/capacitor-apple-sign-in";
 import { doc, setDoc, getDoc, getFirestore, updateDoc, serverTimestamp, writeBatch } from 'firebase/firestore';
 import { userlangStore } from "./learningStore.js";
 let authStateUnsubscribe = null;
@@ -709,9 +709,31 @@ export const userAuthStore = defineStore('auth', () => {
     const deleteAccount = async (password = null) => {
         const user = auth.currentUser;
         if (!user) throw { code: 'auth/no-current-user' };
+
         try {
             const usesGoogle = user.providerData.some(p => p.providerId === 'google.com');
-            if (usesGoogle) {
+            const usesApple = user.providerData.some(p => p.providerId === 'apple.com');
+            if (usesApple) {
+                const provider = new OAuthProvider('apple.com');
+                if (Capacitor.isNativePlatform()) {
+                    // Запрашиваем свежий токен через плагин
+                    const result = await AppleSignIn.signIn({
+                        scopes: [SignInScope.Email, SignInScope.FullName],
+                    });
+
+                    if (!result.idToken) {
+                        throw new Error('Не удалось получить токен Apple для удаления');
+                    }
+
+                    const credential = provider.credential({
+                        idToken: result.idToken,
+                    });
+                    await reauthenticateWithCredential(user, credential);
+                } else {
+                    // Для веба
+                    await reauthenticateWithPopup(user, provider);
+                }
+            } else if (usesGoogle) {
                 const provider = new GoogleAuthProvider();
                 await reauthenticateWithPopup(user, provider);
             } else {
@@ -720,21 +742,20 @@ export const userAuthStore = defineStore('auth', () => {
                 const cred = EmailAuthProvider.credential(user.email, password);
                 await reauthenticateWithCredential(user, cred);
             }
-
             const batch = writeBatch(db);
             batch.delete(doc(db, 'users', user.uid));
             batch.delete(doc(db, LEADERBOARD_COLLECTION, user.uid));
             batch.delete(doc(db, LEADERBOARD_GUESS, user.uid));
             await batch.commit();
-
             await deleteUser(user);
             setUserData({});
+
         } catch (err) {
             if (err && err.code) throw err;
             const msg = String(err?.message || '');
             if (msg.includes('requires-recent-login')) throw { code: 'auth/requires-recent-login' };
-            if (msg.includes('popup-closed')) throw { code: 'auth/popup-closed-by-user' };
-            throw { code: 'auth/unknown' };
+            if (msg.includes('popup-closed') || msg.includes('cancel')) throw { code: 'auth/user-cancelled' };
+            throw { code: 'auth/unknown', message: msg };
         }
     };
 

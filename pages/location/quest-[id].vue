@@ -31,7 +31,7 @@
               </template>
             </div>
           </div>
-          <div class="quest__lives" v-if="!previouslyCleared">
+          <div class="quest__lives" v-if="!previouslyCleared && authStore.isPremium">
             <VHearts
                 :lives="questStore.lives"
                 :max-lives="questStore.maxLives"
@@ -241,6 +241,7 @@ import {computed, onMounted, ref, watch, watchEffect, nextTick, onBeforeUnmount}
 import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
 import {userChainStore} from '~/store/chainStore.js'
 import {userlangStore} from '~/store/learningStore.js'
+import {userAuthStore} from '~/store/authStore.js'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '~/utils/soundManager.js'
 import {showRewarded, showInterstitial} from '~/utils/admob.js';
@@ -263,13 +264,14 @@ const route = useRoute()
 const router = useRouter()
 const questStore = userChainStore()
 const langStore = userlangStore()
+const authStore = userAuthStore()
 const forceRevive = ref(false)
 const showTipModal = ref(false)
 const isAdLoading = ref(false)
 const MAX_ADS = 5;
 const remainingAds = ref(MAX_ADS);
 const PRICE = 10
-
+const isPremium = computed(() => authStore.isPremium)
 const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   openLeave()
 }, {

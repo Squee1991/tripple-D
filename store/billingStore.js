@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref, computed, toRaw } from 'vue'
 import { Capacitor } from '@capacitor/core'
-import { Purchases } from '@revenuecat/purchases-capacitor'
+import { Purchases, LOG_LEVEL } from '@revenuecat/purchases-capacitor'
 import { doc, updateDoc, getFirestore } from 'firebase/firestore'
 import { userAuthStore } from '../store/authStore.js'
 
@@ -29,6 +29,7 @@ export const useBillingStore = defineStore('billing', () => {
 		try {
 			if (!authStore.uid || authStore.uid === '') return
 			let apiKey = ''
+			await Purchases.setLogLevel({ level: LOG_LEVEL.DEBUG });
 			if (currentPlatform === 'ios') {
 				apiKey = 'appl_AJSNvgOPCFscmWguFDVeIucVoRS'
 			} else if (currentPlatform === 'android') {
