@@ -9,8 +9,7 @@
         class="stat-item-wrapper"
         :class="{'plus' : item.id === 'plus'}"
     >
-      <button class="stat-btn"
-              @click.stop="handleStatClick(item.id === 'plus' ? toPay() : item)">
+      <button class="stat-btn" @click.stop="handleStatClick(item)">
         <img
             v-if="item.id === 'rank' && userAuth.isFreezeActive"
             class="stat-icon freeze-icon"
@@ -156,7 +155,9 @@ const infoData = computed(() => [
 ])
 
 const handleStatClick = (item) => {
-  if (item.id === 'rank') {
+  if (item.id === 'plus') {
+    toPay()
+  } else if (item.id === 'rank') {
     isCalendarOpen.value = true
     activeTooltip.value = null
   } else {
@@ -226,6 +227,7 @@ onBeforeUnmount(() => {
 
 .stat-btn {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
   border: none;

@@ -3,8 +3,9 @@ import { defineStore } from 'pinia'
 import { regions } from '~/utils/regions.js'
 import { doc, getDoc, getFirestore, runTransaction, increment, setDoc } from 'firebase/firestore'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
-import {dailyStore } from './dailyStore.js'
+import { dailyStore } from './dailyStore.js'
 import { userlangStore } from './learningStore.js'
+import { userAuthStore } from './authStore.js' // Подключаем стор авторизации
 
 const REGEN_INTERVAL_MS = 60 * 60 * 1000
 const MAX_LIVES = 5
@@ -36,8 +37,9 @@ export const userChainStore = defineStore('chain', () => {
 	const internalIndex = ref(0)
 	const taskResults = ref({})
 	const isRetryMode = ref(false)
-    const daily = dailyStore()
+	const daily = dailyStore()
 	const langStore = userlangStore()
+	const authStore = userAuthStore() // Инициализируем стор авторизации
 	let lifeTickerId = null
 
 	const totalQuestTasks = computed(() => quest.value?.conditions?.requiredTasks ?? quest.value?.tasks?.length ?? 0)
@@ -410,8 +412,10 @@ export const userChainStore = defineStore('chain', () => {
 		const originalIndex = currentTaskIndex.value
 		taskResults.value[originalIndex] = isCorrect.value
 		showResult.value = true
+
 		try {
-			if (!isCorrect.value && !skipLives && !lifeSpentThisStep.value) {
+			// ДОБАВЛЕНО: && !authStore.isPremium
+			if (!isCorrect.value && !skipLives && !lifeSpentThisStep.value && !authStore.isPremium) {
 				const before = lives.value
 				lives.value = Math.max(0, lives.value - 1)
 				lifeSpentThisStep.value = true
@@ -430,7 +434,8 @@ export const userChainStore = defineStore('chain', () => {
 		if (advancing.value) return
 		advancing.value = true
 		showResult.value = false
-		if (!skipLives && lives.value <= 0) {
+		// ДОБАВЛЕНО: блокируем завершение квеста из-за отсутствия жизней для премиум юзеров
+		if (!skipLives && lives.value <= 0 && !authStore.isPremium) {
 			finished.value = true
 			advancing.value = false
 			return

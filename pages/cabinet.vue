@@ -85,7 +85,7 @@
                           </button>
                         </div>
                         <div class="user-info-container">
-                          <div class="user__name"> {{ authStore.name}}</div>
+                          <div class="user__name"> {{ authStore.name }}</div>
                           <div v-if="learningStore" class="top-panel-layout">
                             <div class="custom-progress">
                               <div class="progress_exp-bar">
@@ -234,7 +234,7 @@
           <p class="modal__text--computed" style="font-size: 18px; margin-top: 10px;">{{ rankAvatarsComputed }}</p>
           <div class="modal-actions">
             <button class="btn" @click="closePurchaseOk" type="button">
-              {{ t('cardsShop.accessibly')}}
+              {{ t('cardsShop.accessibly') }}
             </button>
           </div>
         </template>
@@ -1341,9 +1341,14 @@ onMounted(async () => {
   outline: 3px solid #da70d6;
   animation: glow-in-gap-unicorn 1.5s infinite alternate ease-in-out;
 }
+
 @keyframes glow-in-gap-unicorn {
-  0% { box-shadow: 0 0 0 0px transparent; }
-  100% { box-shadow: 0 0 8px 3px rgba(218, 112, 214, 0.9); }
+  0% {
+    box-shadow: 0 0 0 0px transparent;
+  }
+  100% {
+    box-shadow: 0 0 8px 3px rgba(218, 112, 214, 0.9);
+  }
 }
 
 .effect-dragon {
@@ -1351,9 +1356,14 @@ onMounted(async () => {
   outline: 3px solid #ff8c00;
   animation: glow-in-gap-dragon 1.5s infinite alternate ease-in-out;
 }
+
 @keyframes glow-in-gap-dragon {
-  0% { box-shadow: 0 0 0 0px transparent; }
-  100% { box-shadow: 0 0 8px 3px rgba(255, 140, 0, 0.9); }
+  0% {
+    box-shadow: 0 0 0 0px transparent;
+  }
+  100% {
+    box-shadow: 0 0 8px 3px rgba(255, 140, 0, 0.9);
+  }
 }
 
 .effect-griffin {
@@ -1362,9 +1372,14 @@ onMounted(async () => {
 
   animation: glow-in-gap-griffin 1.5s infinite alternate ease-in-out;
 }
+
 @keyframes glow-in-gap-griffin {
-  0% { box-shadow: 0 0 0 0px transparent; }
-  100% { box-shadow: 0 0 8px 3px rgba(65, 105, 225, 0.9); }
+  0% {
+    box-shadow: 0 0 0 0px transparent;
+  }
+  100% {
+    box-shadow: 0 0 8px 3px rgba(65, 105, 225, 0.9);
+  }
 }
 
 </style>
