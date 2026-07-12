@@ -9,14 +9,18 @@
     </div>
     <div class="quest">
       <VLoginPreloader v-if="questStore.loading"/>
+
       <div v-if="questStore.finished && questStore.success && !questStore.hasMistakes"
            class="quest__stamp quest__stamp--ok">{{ t('locationQuests.done') }}
       </div>
+
       <div v-if="questStore.loading" class="quest__panel quest__panel--loading"></div>
+
       <div v-else-if="questStore.error" class="quest__panel quest__panel--error">
         <div>Error: {{ questStore.error }}</div>
         <button class="btn" @click="goThemes">back</button>
       </div>
+
       <div v-else-if="questStore.task" class="quest__card">
         <VHelpModal :open="showHint" @close="showHint=false"/>
         <div class="quest__top">
@@ -31,7 +35,7 @@
               </template>
             </div>
           </div>
-          <div class="quest__lives" v-if="!previouslyCleared && authStore.isPremium">
+          <div class="quest__lives" v-if="!previouslyCleared && !authStore.isPremium">
             <VHearts
                 :lives="questStore.lives"
                 :max-lives="questStore.maxLives"
@@ -40,6 +44,7 @@
             />
           </div>
         </div>
+
         <div class="quest__section">
           <div v-if="hasTip" class="quest__tip-container">
             <button class="quest__tip-btn" @click="showTipModal = true">💡</button>
@@ -54,6 +59,7 @@
               </template>
             </template>
           </div>
+
           <div class="quest__body">
             <template v-if="questStore.task.type === 'select' || questStore.task.type === 'readAndAnswer'">
               <div v-if="questStore.task.text" class="quest__read-text">{{
@@ -71,6 +77,7 @@
                 </li>
               </ul>
             </template>
+
             <template v-else-if="questStore.task.type === 'input'">
               <div class="quest__speech">
                 <input
@@ -96,6 +103,7 @@
                 </div>
               </div>
             </template>
+
             <template v-else-if="questStore.task.type === 'speechToText'">
               <div class="quest__speech">
                 <SoundBtn :text="questStore.task.text"/>
@@ -122,6 +130,7 @@
                 </div>
               </div>
             </template>
+
             <template v-else-if="questStore.task.type === 'reorder'">
               <div class="quest__reorder">
                 <div class="quest__reorder-selection"
@@ -160,7 +169,7 @@
               <div v-else class="feedback incorrect shake quest__correct-answer-block">
                 <div class="feedback-wrong-header">
                   <img class="quest__feedback-icon" :src="WrongIcon" alt="wrong_icon">
-                   {{ t('questCompletedModals.correctAnswer') }}
+                  {{ t('questCompletedModals.correctAnswer') }}
                 </div>
                 <div class="correct-answer-text">{{ t(questStore.correctAnswer) }}</div>
               </div>
@@ -176,39 +185,66 @@
           </div>
         </div>
       </div>
-      <div v-else-if="questStore.finished && questStore.success && !questStore.hasMistakes && questStore.justAwarded"
-           class="quest-complete quest-complete--solo">
-        <div class="quest-complete__title">{{ t('questCompletedModals.completed') }}</div>
-        <div class="quest-complete__subtitle">{{ t('questCompletedModals.reward') }}</div>
-        <div class="quest-complete__actions quest-complete__actions--one">
-          <button class="btn btn--primary" @click="goThemes">{{ t('questCompletedModals.back') }}</button>
-        </div>
-      </div>
-      <div v-else class="modal">
-        <div class="modal__overlay"></div>
-        <div class="modal__window">
-          <div class="modal__title">
-            <template v-if="questStore.success && !questStore.hasMistakes">
-              {{ t('questCompletedModals.completed') }}
-            </template>
-            <template v-else-if="questStore.success && questStore.hasMistakes">
-              {{ t('questCompletedModals.completedWithMistakes') }}
-            </template>
-            <template v-else>
-              {{ t('questCompletedModals.notCompleted') }}
-            </template>
+
+      <transition name="modal-fade">
+        <div v-if="questStore.finished" class="modal-overlay">
+          <div class="modal-content">
+            <!-- ТЕКСТ ТЕПЕРЬ СВЕРХУ -->
+            <p class="modal-text">
+              <template v-if="questStore.success && !questStore.hasMistakes">
+                {{ t('questCompletedModals.completed') }}
+              </template>
+              <template v-else-if="questStore.success && questStore.hasMistakes">
+                {{ t('questCompletedModals.completedWithMistakes') }}
+              </template>
+              <template v-else>
+                {{ t('questCompletedModals.notCompleted') }}
+              </template>
+            </p>
+
+            <p v-if="questStore.success && !questStore.hasMistakes && questStore.justAwarded" class="modal-subtitle">
+              {{ t('questCompletedModals.reward') }}
+            </p>
+
+            <!-- ИКОНКА В ЗАВИСИМОСТИ ОТ РЕЗУЛЬТАТА ТЕПЕРЬ ПОД ТЕКСТОМ -->
+            <div class="modal-icon">
+              <img v-if="questStore.success && !questStore.hasMistakes" :src="Great" class="modal-icon-item"
+                   alt="Great"/>
+              <img v-else :src="Support" class="modal-icon-item" alt="Support"/>
+            </div>
+
+            <div class="modal-actions">
+              <!-- Идеальное прохождение -->
+              <template v-if="questStore.success && !questStore.hasMistakes">
+                <button class="modal-btn modal-btn-primary" @click="goThemes">
+                  {{ t('questCompletedModals.back') }}
+                </button>
+              </template>
+
+              <!-- Прохождение с ошибками -->
+              <template v-else-if="questStore.success && questStore.hasMistakes">
+                <button class="modal-btn modal-btn-primary" @click="questStore.startRetryMistakes()">
+                  {{ t('locationQuests.repeatMistakes') }}
+                </button>
+                <button class="modal-btn modal-btn-secondary" @click="goThemes">
+                  {{ t('questCompletedModals.back') }}
+                </button>
+              </template>
+
+              <!-- Провал (нет жизней) -->
+              <template v-else>
+                <button class="modal-btn modal-btn-primary" @click="restart">
+                  {{ t('questCompletedModals.again') }}
+                </button>
+                <button class="modal-btn modal-btn-secondary" @click="goThemes">
+                  {{ t('questCompletedModals.back') }}
+                </button>
+              </template>
+            </div>
           </div>
-          <div class="modal__actions">
-            <button v-for="(btn, index) in footerButtons"
-                    :key="index" class="btn"
-                    :class="btn.style"
-                    @click="btn.action"
-            >
-              {{ btn.text }}
-            </button>
-          </div>
         </div>
-      </div>
+      </transition>
+
     </div>
     <VReviveModal
         :show="forceRevive || showRevive"
@@ -241,7 +277,7 @@ import {computed, onMounted, ref, watch, watchEffect, nextTick, onBeforeUnmount}
 import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
 import {userChainStore} from '~/store/chainStore.js'
 import {userlangStore} from '~/store/learningStore.js'
-import {userAuthStore} from '~/store/authStore.js'
+import {userAuthStore} from "~/store/authStore.js"
 import SoundBtn from '~/src/components/soundBtn.vue'
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '~/utils/soundManager.js'
 import {showRewarded, showInterstitial} from '~/utils/admob.js';
@@ -255,6 +291,8 @@ import VReviveModal from "~/src/components/V-reviveModal.vue";
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
 import {useSwipeBack} from '~/composables/useSwipeBack.js'
+import Support from '../../assets/images/Support.svg'
+import Great from '../../assets/images/Greatcon.svg'
 
 useSeoMeta({robots: 'noindex, nofollow'})
 
@@ -271,7 +309,7 @@ const isAdLoading = ref(false)
 const MAX_ADS = 5;
 const remainingAds = ref(MAX_ADS);
 const PRICE = 10
-const isPremium = computed(() => authStore.isPremium)
+
 const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   openLeave()
 }, {
@@ -346,23 +384,6 @@ onBeforeUnmount(() => {
   if (rafId) cancelAnimationFrame(rafId)
 })
 
-const footerButtons = computed(() => [
-  {
-    text: questStore.success && questStore.hasMistakes
-        ? t('locationQuests.repeatMistakes')
-        : t('questCompletedModals.again'),
-    action: questStore.success && questStore.hasMistakes
-        ? () => questStore.startRetryMistakes()
-        : restart,
-    style: ''
-  },
-  {
-    text: t('questCompletedModals.back'),
-    action: goThemes,
-    style: 'btn--primary'
-  }
-])
-
 const inputPlaceholders = {
   inputTypeSTT: t('locationsPlaceholder.inputType'),
   inputType: 'впишите правильный вариант'
@@ -433,6 +454,7 @@ function handleOptionClick(opt) {
 }
 
 const showRevive = computed(() =>
+    !authStore.isPremium &&
     !previouslyCleared.value &&
     questStore.requiredTasks > 0 &&
     questStore.lives <= 0 &&
@@ -464,10 +486,15 @@ function goThemes() {
 }
 
 function restart() {
-  showInterstitial(() => {
+  if (authStore.isPremium) {
     questStore.restart(previouslyCleared.value)
     questStore.loadQuest(questId.value, regionKey.value)
-  })
+  } else {
+    showInterstitial(() => {
+      questStore.restart(previouslyCleared.value)
+      questStore.loadQuest(questId.value, regionKey.value)
+    })
+  }
 }
 
 function handleClick() {
@@ -599,7 +626,7 @@ watch([questId, regionKey], () => {
       questStore.reorderBank = []
       showHint.value = false
 
-      showInterstitial(async () => {
+      const initQuest = async () => {
         await questStore.loadProgressFromFirebase?.()
         await questStore.loadQuest(questId.value, regionKey.value)
         const hasAccept = questStore.quest?.tasks?.some(t => t.accept?.length)
@@ -608,7 +635,13 @@ watch([questId, regionKey], () => {
         }
         await nextTick()
         forceRevive.value = showRevive.value
-      })
+      }
+
+      if (authStore.isPremium) {
+        initQuest()
+      } else {
+        showInterstitial(initQuest)
+      }
     },
     {immediate: true, flush: 'sync'}
 )
@@ -877,40 +910,6 @@ watchEffect(() => {
   color: #0f5132;
 }
 
-.quest-complete {
-  text-align: center;
-  padding-top: 60px;
-}
-
-.quest-complete__title {
-  font-size: 30px;
-  font-weight: 900;
-  margin-bottom: 10px;
-  color: #3fa65b;
-}
-
-.quest-complete__subtitle {
-  color: #333;
-  margin-bottom: 12px;
-}
-
-.quest-complete__actions {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  background: white;
-  padding: 2.5rem;
-  border-radius: 24px;
-  border: 4px solid #1e1e1e;
-  box-shadow: 8px 8px 0 #1e1e1e;
-  max-width: 500px;
-  width: 90%;
-  text-align: center;
-  margin: 0 auto;
-}
-
 .actions-wrapper {
   position: fixed;
   bottom: 0;
@@ -1029,12 +1028,6 @@ watchEffect(() => {
   transform: translateY(2px);
 }
 
-.btn--primary {
-  background: #a7ecb8;
-  color: #111;
-  box-shadow: 0px 6px 0 #258640;
-}
-
 .slide-up-enter-active,
 .slide-up-leave-active {
   transition: transform 0.3s ease-in-out;
@@ -1071,20 +1064,124 @@ watchEffect(() => {
   animation: shake 0.4s ease-in-out;
 }
 
-.modal {
+/* =========================================
+   СТАЙЛИНГ НОВОЙ МОДАЛКИ (END OF QUEST)
+   ========================================= */
+.modal-overlay {
   position: fixed;
   inset: 0;
+  background: rgba(30, 39, 46, 0.8);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   z-index: 1000;
-  display: grid;
-  place-items: center;
+  padding: 0;
 }
 
-.modal__overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, .35);
-  backdrop-filter: blur(2px);
+.modal-content {
+  background: #ffffff;
+  padding: 40px 24px 30px 24px;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  max-width: 768px;
+  text-align: center;
+  border: none;
+  box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 3px solid whitesmoke;
 }
+
+.modal-icon {
+  margin-top: 5px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-icon-item {
+  width: 140px;
+}
+
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  transition: opacity 0.3s ease-out;
+}
+
+.modal-fade-enter-from,
+.modal-fade-leave-to {
+  opacity: 0;
+}
+
+.modal-fade-enter-active .modal-content,
+.modal-fade-leave-active .modal-content {
+  transition: transform 0.3s ease-out;
+}
+
+.modal-fade-enter-from .modal-content,
+.modal-fade-leave-to .modal-content {
+  transform: translateY(100%);
+}
+
+.modal-text {
+  padding: 0 10px 10px 10px;
+  font-weight: 900;
+  font-size: 26px;
+  color: #111;
+  margin-bottom: 0px;
+}
+
+.modal-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.modal-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 36px;
+  border: none;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  text-transform: uppercase;
+}
+
+.modal-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 transparent !important;
+}
+
+.modal-btn-primary {
+  background: #2b6be2;
+  color: white;
+  box-shadow: 0 5px 0 #2959b0;
+}
+
+.modal-btn-secondary {
+  background: none;
+  color: #645e5e;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+/* =========================================
+   ПРОЧИЕ СТИЛИ
+   ========================================= */
 
 .german__letters {
   display: flex;
@@ -1108,54 +1205,6 @@ watchEffect(() => {
 .german__letters-item:active {
   box-shadow: 0 0 0;
   transform: translate(1px, 1px);
-}
-
-.modal__window {
-  position: relative;
-  width: min(440px, 92%);
-  background: #fff;
-  border: 3px solid #111;
-  border-radius: 18px;
-  padding: 20px 35px;
-  text-align: center;
-  z-index: 1;
-}
-
-.modal__title {
-  font-weight: 900;
-  font-size: 28px;
-  margin-bottom: 8px;
-  color: #111;
-}
-
-.modal__text {
-  padding: 10px;
-}
-
-.modal__actions {
-  display: flex;
-  justify-content: center;
-  flex-direction: column-reverse;
-  gap: 12px;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-.wallet {
-  margin: 8px auto 14px;
-  width: min(420px, 100%);
-}
-
-.wallet__row {
-  display: flex;
-  justify-content: center;
-  font-weight: 800;
-  margin: 4px 0;
-  gap: 10px;
-}
-
-.wallet__label {
-  opacity: .8;
 }
 
 @media (max-width: 1023px) {
@@ -1302,24 +1351,6 @@ watchEffect(() => {
 .quest__tip-btn:active {
   transform: translate(3px, 3px);
   box-shadow: 0 0 0 #1e1e1e;
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(100%);
-  }
 }
 
 .ad-overlay {

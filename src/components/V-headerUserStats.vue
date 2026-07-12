@@ -10,7 +10,6 @@
         :class="{'plus' : item.id === 'plus'}"
     >
       <button class="stat-btn" @click.stop="handleStatClick(item)">
-        <span class="item__label"> {{ item.title }}</span>
         <img
             v-if="item.id === 'rank' && userAuth.isFreezeActive"
             class="stat-icon freeze-icon"
@@ -25,6 +24,7 @@
               :src="item.icon"
               :alt="item.alt"
           >
+          <span class="item__label"> {{ item.title }}:</span>
         <span v-if="!userAuth.isPremium || item.id !== 'lives'" class="stat-value">{{ item.value }}</span>
         </span>
       </button>
@@ -70,8 +70,8 @@
 <script setup>
 import {ref, computed, onMounted, onBeforeUnmount} from 'vue'
 import {userlangStore} from "~/store/learningStore.js"
-import {userAuthStore} from '~/store/authStore.js'
-import {userChainStore} from '~/store/chainStore.js'
+import {userAuthStore} from '../../store/authStore.js'
+import {userChainStore} from '../../store/chainStore.js'
 import {useI18n} from 'vue-i18n'
 import FreezeShield from '../../assets/images/FreezeShield.svg'
 import Hats from '../../assets/images/Hats.svg'
@@ -227,14 +227,15 @@ onBeforeUnmount(() => {
 
 .stat-btn {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
   border: none;
   background: none;
   padding: 0 2px;
   height: 38px;
-  width: 100%;
   cursor: pointer;
+  gap: 5px;
 }
 
 .stat-icon {
