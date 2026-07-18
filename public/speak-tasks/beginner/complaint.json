@@ -489,7 +489,7 @@
           "uk-UA": "Щиро дякую!",
           "uz-UZ": "Katta rahmat!"
         },
-        "nextStep": "step_15"
+        "nextStep": null
       },
       {
         "text": "Vielen Dank.",
@@ -506,28 +506,9 @@
           "uk-UA": "Велике дякую.",
           "uz-UZ": "Ko'p rahmat."
         },
-        "nextStep": "step_15"
+        "nextStep": null
       }
     ],
-    "defaultNext": "step_15"
-  },
-  "step_15": {
-    "botText": "Das Gespräch ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Разговор окончен.",
-      "en-US": "The conversation is over.",
-      "ar-SA": "انتهت المحادثة.",
-      "es-ES": "La conversación ha terminado.",
-      "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत खत्म हो गई है।",
-      "pl-PL": "Rozmowa zakończona.",
-      "ro-RO": "Conversația s-a încheiat.",
-      "tr-TR": "Konuşma sona erdi.",
-      "uk-UA": "Розмова закінчена.",
-      "uz-UZ": "Suhbat yakunlandi."
-    },
-    "vocabulary": [],
-    "options": [],
     "defaultNext": null
   }
 }

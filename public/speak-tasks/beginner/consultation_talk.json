@@ -673,7 +673,7 @@
           "uk-UA": "До побачення!",
           "uz-UZ": "Xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       },
       {
         "text": "Tschüss, schönen Tag noch!",
@@ -690,27 +690,9 @@
           "uk-UA": "Бувай, гарного дня!",
           "uz-UZ": "Xayr, kuningiz yaxshi o'tsin!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Das Gespräch ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Разговор завершен.",
-      "en-US": "The conversation is ended.",
-      "ar-SA": "انتهت المحادثة.",
-      "es-ES": "La conversación ha terminado.",
-      "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत समाप्त हो गई है。",
-      "pl-PL": "Rozmowa została zakończona.",
-      "ro-RO": "Conversația s-a încheiat.",
-      "tr-TR": "Konuşma sona erdi.",
-      "uk-UA": "Розмову завершено.",
-      "uz-UZ": "Suhbat yakunlandi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

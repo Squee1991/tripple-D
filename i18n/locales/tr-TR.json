@@ -10187,13 +10187,13 @@
     "cabinet": "Hesap"
   },
   "speakTopics": {
-    "speak": "Tanışma ve sohbet",
-    "food": "Yiyecek ve alışveriş",
-    "transport": "Seyahat ve ulaşım",
+    "speak": "Tanışma ve iletişim",
+    "food": "Yemek ve alışveriş",
     "city": "Şehir hizmetleri ve günlük yaşam",
     "health": "Sağlık",
     "work": "İş ve kariyer",
-    "auto": "Araba ve yol"
+    "auto": "Araba ve yol",
+    "travel": "Seyahat"
   },
   "speakThemes": {
     "firstmeet": "Tanışma",
@@ -10600,7 +10600,7 @@
     "description": "Tüm özelliklerin kilidi zaten açıldı"
   },
   "newsBannerText": {
-    "text": "Merhaba! Skillupgerman her gün burada Almanca hakkında ilginç haberler yayınlıyor. Keyifle öğrenin!"
+    "text": "Merhaba! Skillupgerman burada Almanca hakkında ilginç haberler yayınlıyor. Keyifle öğrenin!"
   },
   "marathonLeaderBoard": {
     "stateHint": "Yarış yakında başlayacak! Yeni sezona hazır olun.",

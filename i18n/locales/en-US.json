@@ -10201,14 +10201,13 @@
     "cabinet": "Account"
   },
   "speakTopics": {
-    "speak": "Introduction and socializing",
+    "speak": "Introductions and communication",
     "food": "Food and shopping",
-    "transport": "Trips and transport",
     "city": "City services and everyday life",
     "health": "Health",
     "work": "Work and career",
-    "auto": "Car and road"
-
+    "auto": "Car and road",
+    "travel": "Travel"
   },
   "speakThemes": {
     "firstmeet": "Introduction",
@@ -10610,11 +10609,11 @@
     "normalThreeDescription": "Take 3rd place in the Article Marathon leaderboard (Hard mode)"
   },
   "activePlus": {
-    "title": "Plus Активен!",
-    "description": "Все функции уже разблокированы"
+    "title": "Plus is Active!",
+    "description": "All features are already unlocked"
   },
   "newsBannerText": {
-    "text": "Hello! Every day, Skillupgerman publishes interesting news about the German language here. Enjoy learning!"
+    "text": "Hello! Skillupgerman publishes interesting news about the German language here. Enjoy learning!"
   },
   "marathonLeaderBoard": {
     "stateHint": "The race will start soon! Get ready for the new season.",

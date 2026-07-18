@@ -103,7 +103,7 @@ const ALL_THEMES = [
 	'job_looking', 'library', 'oil_change', 'order_eat', 'pharmacy_vitamins',
 	'police_control', 'police_talk', 'post_office', 'restaurant_dinner', 'road_assistance',
 	'salary_talk', 'shopping', 'store_checkout', 'taxi_berlin', 'train_station',
-	'train_ticket', 'vacation', 'veterinary'
+	'train_ticket', 'vacation', 'veterinary', 'info_talk'
 ];
 
 async function generateElevenSpeech(text) {

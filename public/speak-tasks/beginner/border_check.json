@@ -139,7 +139,7 @@
       {
         "text": "Ich mache Urlaub.",
         "translation": {
-          "ru-RU": "Я в отпуске (на отдыхе).",
+          "ru-RU": "Я в отпуске.",
           "en-US": "I am on vacation.",
           "ar-SA": "أنا في إجازة.",
           "es-ES": "Estoy de vacaciones.",
@@ -586,7 +586,7 @@
           "uk-UA": "До побачення.",
           "uz-UZ": "Xayr."
         },
-        "nextStep": "end"
+        "nextStep": null
       },
       {
         "text": "Danke, auf Wiedersehen.",
@@ -603,27 +603,9 @@
           "uk-UA": "Дякую, до побачення.",
           "uz-UZ": "Rahmat, xayr."
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Die Grenzkontrolle ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Паспортный контроль завершен.",
-      "en-US": "Border control is finished.",
-      "ar-SA": "انتهت مراقبة الحدود.",
-      "es-ES": "El control fronterizo ha terminado.",
-      "fr-FR": "Le contrôle aux frontières est terminé.",
-      "hi-IN": "सीमा नियंत्रण समाप्त हो गया है।",
-      "pl-PL": "Kontrola graniczna została zakończona.",
-      "ro-RO": "Controlul de frontieră s-a încheiat.",
-      "tr-TR": "Sınır kontrolü tamamlandı.",
-      "uk-UA": "Паспортний контроль завершено.",
-      "uz-UZ": "Chegara nazorati yakunlandi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

@@ -261,19 +261,19 @@
     "defaultNext": "passt"
   },
   "passt": {
-    "botText": "(Nach der Anprobe) Passt es?",
+    "botText": "Passt es?",
     "botTranslation": {
-      "ru-RU": "(После примерки) Подходит?",
-      "en-US": "(After trying on) Does it fit?",
-      "ar-SA": "(بعد القياس) هل يناسبك؟",
-      "es-ES": "(Después de probarse) ¿Le queda bien?",
-      "fr-FR": "(Après l'essayage) Est-ce que ça va ?",
-      "hi-IN": "(पहनकर देखने के बाद) क्या यह फिट बैठता है?",
-      "pl-PL": "(Po przymiarce) Pasuje?",
-      "ro-RO": "(După probă) Vă vine bine?",
-      "tr-TR": "(Denedikten sonra) Oldu mu?",
-      "uk-UA": "(Після примірки) Підходить?",
-      "uz-UZ": "(Kiyib ko'rgandan keyin) Mos keldimi?"
+      "ru-RU": "Подходит?",
+      "en-US": "Does it fit?",
+      "ar-SA": " هل يناسبك؟",
+      "es-ES": " ¿Le queda bien?",
+      "fr-FR": " Est-ce que ça va ?",
+      "hi-IN": " क्या यह फिट बैठता है?",
+      "pl-PL": " Pasuje?",
+      "ro-RO": "Vă vine bine?",
+      "tr-TR": "Oldu mu?",
+      "uk-UA": " Підходить?",
+      "uz-UZ": "Mos keldimi?"
     },
     "vocabulary": [
       {
@@ -308,23 +308,6 @@
           "tr-TR": "Hayır, maalesef çok büyük. S bedeniniz var mı?",
           "uk-UA": "Ні, вона, на жаль, завелика. У вас є S?",
           "uz-UZ": "Yo'q, afsuski u juda katta. Sizda S bormi?"
-        },
-        "nextStep": "kasse_frage"
-      },
-      {
-        "text": "Ja, die Größe ist perfekt. Ich nehme es.",
-        "translation": {
-          "ru-RU": "Да, размер идеальный. Я беру это.",
-          "en-US": "Yes, the size is perfect. I'll take it.",
-          "ar-SA": "نعم، المقاس مثالي. سآخذه.",
-          "es-ES": "Sí, la talla es perfecta. Me lo llevo.",
-          "fr-FR": "Oui, la taille est parfaite. Je le prends.",
-          "hi-IN": "हाँ, आकार सही है। मैं इसे लूँगा।",
-          "pl-PL": "Tak, rozmiar jest idealny. Biorę to.",
-          "ro-RO": "Da, mărimea este perfectă. Îl iau.",
-          "tr-TR": "Evet, beden mükemmel. Bunu alıyorum.",
-          "uk-UA": "Так, розмір ідеальний. Я беру це.",
-          "uz-UZ": "Ha, o'lchami ideal. Men buni olaman."
         },
         "nextStep": "kasse_frage"
       }

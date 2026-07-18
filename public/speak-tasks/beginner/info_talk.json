@@ -1,0 +1,534 @@
+{
+  "start": {
+    "botText": "Guten Tag! Herzlich willkommen. Wie kann ich Ihnen helfen?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Добро пожаловать. Чем я могу вам помочь?",
+      "en-US": "Good day! Welcome. How can I help you?",
+      "ar-SA": "طاب يومك! أهلاً بك. كيف يمكنني مساعدتك؟",
+      "es-ES": "¡Buen día! Bienvenido. ¿En qué puedo ayudarle?",
+      "fr-FR": "Bonjour ! Bienvenue. Comment puis-je vous aider ?",
+      "hi-IN": "शुभ दिन! आपका स्वागत है। मैं आपकी कैसे मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! Witamy. W czym mogę pomóc?",
+      "ro-RO": "Bună ziua! Bine ați venit. Cu ce vă pot ajuta?",
+      "tr-TR": "İyi günler! Hoş geldiniz. Size nasıl yardımcı olabilirim?",
+      "uk-UA": "Добрий день! Ласкаво просимо. Чим я можу вам допомогти?",
+      "uz-UZ": "Xayrli kun! Xush kelibsiz. Sizga qanday yordam bera olaman?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Stadt",
+        "translation": {
+          "ru-RU": "город",
+          "en-US": "city",
+          "ar-SA": "المدينة",
+          "es-ES": "ciudad",
+          "fr-FR": "ville",
+          "hi-IN": "शहर",
+          "pl-PL": "miasto",
+          "ro-RO": "oraș",
+          "tr-TR": "şehir",
+          "uk-UA": "місто",
+          "uz-UZ": "shahar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag! Ich bin neu hier und möchte wissen, was man in einem Tag sehen kann.",
+        "translation": {
+          "ru-RU": "Добрый день! Я здесь впервые и хочу узнать, что можно посмотреть за один день.",
+          "en-US": "Good day! I am new here and would like to know what one can see in one day.",
+          "ar-SA": "طاب يومك! أنا جديد هنا وأود أن أعرف ما يمكن رؤيته في يوم واحد.",
+          "es-ES": "¡Buen día! Soy nuevo aquí y me gustaría saber qué se puede ver en un día.",
+          "fr-FR": "Bonjour ! Je suis nouveau ici et j'aimerais savoir ce qu'on peut voir en un jour.",
+          "hi-IN": "शुभ दिन! मैं यहाँ नया हूँ और जानना चाहता हूँ कि एक दिन में क्या देखा जा सकता है।",
+          "pl-PL": "Dzień dobry! Jestem tu nowy i chciałbym wiedzieć, co można zobaczyć w jeden dzień.",
+          "ro-RO": "Bună ziua! Sunt nou aici și aș vrea să știu ce se poate vedea într-o zi.",
+          "tr-TR": "İyi günler! Buralarda yeniyim ve bir günde neler görülebileceğini bilmek istiyorum.",
+          "uk-UA": "Добрий день! Я тут вперше і хочу дізнатися, що можна подивитися за один день.",
+          "uz-UZ": "Xayrli kun! Men bu yerda yangiman va bir kun ichida nimalarni ko'rish mumkinligini bilmoqchiman."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo! Ich habe nur einen Tag Zeit. Welche Orte sind am schönsten?",
+        "translation": {
+          "ru-RU": "Здравствуйте! У меня есть только один день. Какие места самые красивые?",
+          "en-US": "Hello! I only have one day. Which places are the most beautiful?",
+          "ar-SA": "مرحباً! لدي يوم واحد فقط. ما هي أجمل الأماكن؟",
+          "es-ES": "¡Hola! Solo tengo un día. ¿Qué lugares son los más bonitos?",
+          "fr-FR": "Bonjour ! Je n'ai qu'un jour. Quels sont les plus beaux endroits ?",
+          "hi-IN": "नमस्ते! मेरे पास सिर्फ एक दिन का समय है। कौन सी जगहें सबसे खूबसूरत हैं?",
+          "pl-PL": "Cześć! Mam tylko jeden dzień. Które miejsca są najpiękniejsze?",
+          "ro-RO": "Bună! Am doar o zi la dispoziție. Care locuri sunt cele mai frumoase?",
+          "tr-TR": "Merhaba! Sadece bir günüm var. En güzel yerler nereleri?",
+          "uk-UA": "Добридень! У мене є лише один день. Які місця найкрасивіші?",
+          "uz-UZ": "Salom! Menda faqat bir kun vaqt bor. Qaysi joylar eng chiroyli?"
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Das ist eine gute Frage! Wir haben ein historisches Museum im Zentrum und einen sehr großen Park am Fluss.",
+    "botTranslation": {
+      "ru-RU": "Это хороший вопрос! У нас есть исторический музей в центре и очень большой парк у реки.",
+      "en-US": "That is a good question! We have a historical museum in the center and a very large park by the river.",
+      "ar-SA": "هذا سؤال جيد! لدينا متحف تاريخي في المركز وحديقة كبيرة جداً على النهر.",
+      "es-ES": "¡Es una buena pregunta! Tenemos un museo histórico en el centro y un parque muy grande junto al río.",
+      "fr-FR": "C'est une bonne question ! Nous avons un musée historique au centre et un très grand parc près de la rivière.",
+      "hi-IN": "यह एक अच्छा सवाल है! हमारे केंद्र में एक ऐतिहासिक संग्रहालय है और नदी के पास एक बहुत बड़ा पार्क है।",
+      "pl-PL": "To dobre pytanie! Mamy historyczne muzeum w centrum i bardzo duży park nad rzeką.",
+      "ro-RO": "Asta este o întrebare bună! Avem un muzeu istoric în centru și un parc foarte mare la râu.",
+      "tr-TR": "Bu iyi bir soru! Merkezde tarihi bir müzemiz ve nehir kenarında çok büyük bir parkımız var.",
+      "uk-UA": "Це гарне питання! У нас є історичний музей у центрі та дуже великий парк біля річки.",
+      "uz-UZ": "Bu yaxshi savol! Markazda tarixiy muzeyimiz va daryo bo'yida juda katta parkimiz bor."
+    },
+    "vocabulary": [
+      {
+        "german": "das Museum",
+        "translation": {
+          "ru-RU": "музей",
+          "en-US": "museum",
+          "ar-SA": "المتحف",
+          "es-ES": "museo",
+          "fr-FR": "musée",
+          "hi-IN": "संग्रहालय",
+          "pl-PL": "muzeum",
+          "ro-RO": "muzeu",
+          "tr-TR": "müze",
+          "uk-UA": "музей",
+          "uz-UZ": "muzey"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das Museum klingt toll. Wo genau finde ich es?",
+        "translation": {
+          "ru-RU": "Музей звучит здорово. Где именно я могу его найти?",
+          "en-US": "The museum sounds great. Where exactly can I find it?",
+          "ar-SA": "المتحف يبدو رائعاً. أين أجده بالضبط؟",
+          "es-ES": "El museo suena genial. ¿Dónde lo encuentro exactamente?",
+          "fr-FR": "Le musée a l'air super. Où puis-je le trouver exactement ?",
+          "hi-IN": "संग्रहालय बहुत अच्छा लग रहा है। मुझे यह बिल्कुल कहाँ मिलेगा?",
+          "pl-PL": "Muzeum brzmi świetnie. Gdzie dokładnie je znajdę?",
+          "ro-RO": "Muzeul sună grozav. Unde mai exact îl găsesc?",
+          "tr-TR": "Müze kulağa harika geliyor. Tam olarak nerede bulabilirim?",
+          "uk-UA": "Музей звучить чудово. Де саме я можу його знайти?",
+          "uz-UZ": "Muzey juda qiziqarli ko'rinyapti. Uni aniq qayerdan topsam bo'ladi?"
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Der Park am Fluss klingt gut. Ist er weit von hier?",
+        "translation": {
+          "ru-RU": "Парк у реки звучит хорошо. Это далеко отсюда?",
+          "en-US": "The park by the river sounds good. Is it far from here?",
+          "ar-SA": "الحديقة التي على النهر تبدو جيدة. هل هي بعيدة من هنا؟",
+          "es-ES": "El parque junto al río suena bien. ¿Está lejos de aquí?",
+          "fr-FR": "Le parc près de la rivière a l'air bien. Est-ce loin d'ici ?",
+          "hi-IN": "नदी के पास का पार्क अच्छा लग रहा है। क्या वह यहाँ से दूर है?",
+          "pl-PL": "Park nad rzeką brzmi dobrze. Czy to daleko stąd?",
+          "ro-RO": "Parcul de la râu sună bine. E departe de aici?",
+          "tr-TR": "Nehir kenarındaki park kulağa iyi geliyor. Buradan uzak mı?",
+          "uk-UA": "Парк біля річки звучить добре. Це далеко звідси?",
+          "uz-UZ": "Daryo bo'yidagi park yaxshi eshitilyapti. Bu yerdan uzoqmi?"
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Beide Orte sind im Zentrum, direkt am Marktplatz. Es ist sehr leicht zu finden.",
+    "botTranslation": {
+      "ru-RU": "Оба места находятся в центре, прямо на рыночной площади. Их очень легко найти.",
+      "en-US": "Both places are in the center, right at the market square. It is very easy to find.",
+      "ar-SA": "كلا المكانين في المركز، مباشرة في ساحة السوق. من السهل جداً العثور عليهما.",
+      "es-ES": "Ambos lugares están en el centro, justo en la plaza del mercado. Es muy fácil de encontrar.",
+      "fr-FR": "Les deux endroits sont au centre, juste sur la place du marché. C'est très facile à trouver.",
+      "hi-IN": "दोनों जगहें केंद्र में हैं, बिल्कुल बाज़ार चौक पर। इसे खोजना बहुत आसान है।",
+      "pl-PL": "Oba miejsca są w centrum, tuż przy rynku. Bardzo łatwo je znaleźć.",
+      "ro-RO": "Ambele locuri sunt în centru, chiar în piața pieței. Este foarte ușor de găsit.",
+      "tr-TR": "Her iki yer de merkezde, hemen pazar meydanında. Bulması çok kolay.",
+      "uk-UA": "Обидва місця знаходяться в центрі, прямо на ринковій площі. Їх дуже легко знайти.",
+      "uz-UZ": "Ikkala joy ham markazda, to'g'ridan-to'g'ri bozor maydonida joylashgan. Topish juda oson."
+    },
+    "vocabulary": [
+      {
+        "german": "der Marktplatz",
+        "translation": {
+          "ru-RU": "рыночная площадь",
+          "en-US": "market square",
+          "ar-SA": "ساحة السوق",
+          "es-ES": "plaza del mercado",
+          "fr-FR": "place du marché",
+          "hi-IN": "बाज़ार का चौक",
+          "pl-PL": "rynek",
+          "ro-RO": "piața orașului",
+          "tr-TR": "pazar meydanı",
+          "uk-UA": "ринкова площа",
+          "uz-UZ": "bozor maydoni"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke. Wie komme ich am besten dorthin?",
+        "translation": {
+          "ru-RU": "Спасибо. Как мне лучше всего туда добраться?",
+          "en-US": "Thanks. How do I get there best?",
+          "ar-SA": "شكراً. ما هي أفضل طريقة للوصول إلى هناك؟",
+          "es-ES": "Gracias. ¿Cuál es la mejor manera de llegar allí?",
+          "fr-FR": "Merci. Quel est le meilleur moyen d'y aller ?",
+          "hi-IN": "धन्यवाद। वहाँ पहुँचने का सबसे अच्छा तरीका क्या है?",
+          "pl-PL": "Dziękuję. Jak najlepiej tam dotrzeć?",
+          "ro-RO": "Mulțumesc. Cum ajung cel mai bine acolo?",
+          "tr-TR": "Teşekkürler. Oraya en iyi nasıl giderim?",
+          "uk-UA": "Дякую. Як мені найкраще туди дістатися?",
+          "uz-UZ": "Rahmat. U yerga qanday qilib eng oson borsa bo'ladi?"
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Gut. Kann ich dort mit dem Bus fahren?",
+        "translation": {
+          "ru-RU": "Хорошо. Я могу доехать туда на автобусе?",
+          "en-US": "Good. Can I go there by bus?",
+          "ar-SA": "جيد. هل يمكنني الذهاب إلى هناك بالحافلة؟",
+          "es-ES": "Bien. ¿Puedo ir allí en autobús?",
+          "fr-FR": "Bien. Puis-je y aller en bus ?",
+          "hi-IN": "अच्छा। क्या मैं वहाँ बस से जा सकता हूँ?",
+          "pl-PL": "Dobrze. Czy mogę tam pojechać autobusem?",
+          "ro-RO": "Bine. Pot merge acolo cu autobuzul?",
+          "tr-TR": "Güzel. Oraya otobüsle gidebilir miyim?",
+          "uk-UA": "Добре. Чи можу я доїхати туди на автобусі?",
+          "uz-UZ": "Yaxshi. U yerga avtobusda borsa bo'ladimi?"
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Sie können zu Fuß gehen oder den Bus Nummer 5 nehmen. Beides ist sehr praktisch.",
+    "botTranslation": {
+      "ru-RU": "Вы можете пойти пешком или поехать на автобусе номер 5. И то, и другое очень удобно.",
+      "en-US": "You can go on foot or take bus number 5. Both are very convenient.",
+      "ar-SA": "يمكنك الذهاب سيراً على الأقدام أو أخذ الحافلة رقم 5. كلاهما عملي جداً.",
+      "es-ES": "Puede ir a pie o tomar el autobús número 5. Ambas opciones son muy prácticas.",
+      "fr-FR": "Vous pouvez y aller à pied ou prendre le bus numéro 5. Les deux sont très pratiques.",
+      "hi-IN": "आप पैदल जा सकते हैं या बस नंबर 5 ले सकते हैं। दोनों बहुत सुविधाजनक हैं।",
+      "pl-PL": "Może Pan/Pani iść na piechotę lub pojechać autobusem numer 5. Oba rozwiązania są bardzo praktyczne.",
+      "ro-RO": "Puteți merge pe jos sau puteți lua autobuzul numărul 5. Ambele sunt foarte practice.",
+      "tr-TR": "Yürüyerek gidebilir veya 5 numaralı otobüse binebilirsiniz. İkisi de çok pratik.",
+      "uk-UA": "Ви можете піти пішки або поїхати на автобусі номер 5. І те, і інше дуже зручно.",
+      "uz-UZ": "Piyoda borishingiz yoki 5-raqamli avtobusga chiqishingiz mumkin. Ikkalasi ham juda qulay."
+    },
+    "vocabulary": [
+      {
+        "german": "zu Fuß",
+        "translation": {
+          "ru-RU": "пешком",
+          "en-US": "on foot",
+          "ar-SA": "مشياً على الأقدام",
+          "es-ES": "a pie",
+          "fr-FR": "à pied",
+          "hi-IN": "पैदल",
+          "pl-PL": "na piechotę",
+          "ro-RO": "pe jos",
+          "tr-TR": "yürüyerek",
+          "uk-UA": "пішки",
+          "uz-UZ": "piyoda"
+        }
+      },
+      {
+        "german": "der Bus",
+        "translation": {
+          "ru-RU": "автобус",
+          "en-US": "bus",
+          "ar-SA": "الحافلة",
+          "es-ES": "autobús",
+          "fr-FR": "bus",
+          "hi-IN": "बस",
+          "pl-PL": "autobus",
+          "ro-RO": "autobuz",
+          "tr-TR": "otobüs",
+          "uk-UA": "автобус",
+          "uz-UZ": "avtobus"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Wie viel kostet ein Ticket für den Bus?",
+        "translation": {
+          "ru-RU": "Сколько стоит билет на автобус?",
+          "en-US": "How much does a ticket for the bus cost?",
+          "ar-SA": "كم سعر تذكرة الحافلة؟",
+          "es-ES": "¿Cuánto cuesta un billete para el autobús?",
+          "fr-FR": "Combien coûte un ticket pour le bus ?",
+          "hi-IN": "बस के टिकट की कीमत कितनी है?",
+          "pl-PL": "Ile kosztuje bilet na autobus?",
+          "ro-RO": "Cât costă un bilet pentru autobuz?",
+          "tr-TR": "Otobüs bileti ne kadar?",
+          "uk-UA": "Скільки коштує квиток на автобус?",
+          "uz-UZ": "Avtobus chiptasi qancha turadi?"
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Brauche ich eine Tageskarte oder reicht ein normales Ticket?",
+        "translation": {
+          "ru-RU": "Мне нужен дневной билет или достаточно обычного билета?",
+          "en-US": "Do I need a day pass or is a normal ticket enough?",
+          "ar-SA": "هل أحتاج إلى تذكرة يومية أم تذكرة عادية تكفي؟",
+          "es-ES": "¿Necesito un abono de un día o es suficiente un billete normal?",
+          "fr-FR": "Ai-je besoin d'une carte à la journée ou un ticket normal suffit-il ?",
+          "hi-IN": "क्या मुझे एक दिन का पास चाहिए या सामान्य टिकट काफी है?",
+          "pl-PL": "Czy potrzebuję biletu całodniowego, czy wystarczy zwykły bilet?",
+          "ro-RO": "Am nevoie de un abonament de o zi sau este de ajuns un bilet normal?",
+          "tr-TR": "Günlük bilet mi almalıyım yoksa normal bir bilet yeterli mi?",
+          "uk-UA": "Мені потрібен денний квиток чи достатньо звичайного квитка?",
+          "uz-UZ": "Menga kunlik chipta kerakmi yoki oddiy chipta yetadimi?"
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Ein Einzelticket kostet 2,50 Euro. Das reicht vollkommen aus.",
+    "botTranslation": {
+      "ru-RU": "Разовый билет стоит 2,50 евро. Этого вполне достаточно.",
+      "en-US": "A single ticket costs 2.50 euros. That is completely sufficient.",
+      "ar-SA": "تذكرة الرحلة الواحدة تكلف 2.50 يورو. هذا يكفي تماماً.",
+      "es-ES": "Un billete sencillo cuesta 2,50 euros. Con eso es completamente suficiente.",
+      "fr-FR": "Un ticket simple coûte 2,50 euros. C'est tout à fait suffisant.",
+      "hi-IN": "एक सिंगल टिकट की कीमत 2.50 यूरो है। यह पूरी तरह से पर्याप्त है।",
+      "pl-PL": "Bilet jednorazowy kosztuje 2,50 euro. To w zupełności wystarczy.",
+      "ro-RO": "Un bilet simplu costă 2,50 euro. Este absolut suficient.",
+      "tr-TR": "Tek kullanımlık bilet 2,50 Euro'dur. Bu tamamen yeterlidir.",
+      "uk-UA": "Разовий квиток коштує 2,50 євро. Цього цілком достатньо.",
+      "uz-UZ": "Bir martalik chipta 2,50 yevro turadi. Bu mutlaqo yetarli."
+    },
+    "vocabulary": [
+      {
+        "german": "das Ticket",
+        "translation": {
+          "ru-RU": "билет",
+          "en-US": "ticket",
+          "ar-SA": "التذكرة",
+          "es-ES": "billete / boleto",
+          "fr-FR": "ticket / billet",
+          "hi-IN": "टिकट",
+          "pl-PL": "bilet",
+          "ro-RO": "bilet",
+          "tr-TR": "bilet",
+          "uk-UA": "квиток",
+          "uz-UZ": "chipta"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Gibt es heute vielleicht auch eine Stadtführung?",
+        "translation": {
+          "ru-RU": "Есть ли сегодня экскурсия по городу?",
+          "en-US": "Is there perhaps also a city tour today?",
+          "ar-SA": "هل توجد جولة في المدينة اليوم ربما؟",
+          "es-ES": "¿Hay quizás también una visita guiada por la ciudad hoy?",
+          "fr-FR": "Y a-t-il peut-être aussi une visite guidée de la ville aujourd'hui ?",
+          "hi-IN": "क्या आज शहर का कोई गाइडेड टूर भी है?",
+          "pl-PL": "Czy jest dzisiaj może jakaś wycieczka z przewodnikiem po mieście?",
+          "ro-RO": "Există poate și un tur de oraș astăzi?",
+          "tr-TR": "Bugün belki bir şehir turu da var mı?",
+          "uk-UA": "Чи є сьогодні екскурсія по місту?",
+          "uz-UZ": "Bugun ehtimol shahar bo'ylab ekskursiya ham bordir?"
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Ich möchte gerne mehr über die Geschichte erfahren. Gibt es eine Führung?",
+        "translation": {
+          "ru-RU": "Я бы хотел узнать больше об истории. Есть ли экскурсия?",
+          "en-US": "I would like to learn more about the history. Is there a guided tour?",
+          "ar-SA": "أود أن أتعلم المزيد عن التاريخ. هل توجد جولة إرشادية؟",
+          "es-ES": "Me gustaría saber más sobre la historia. ¿Hay alguna visita guiada?",
+          "fr-FR": "J'aimerais en savoir plus sur l'histoire. Y a-t-il une visite guidée ?",
+          "hi-IN": "मैं इतिहास के बारे में और जानना चाहता हूँ। क्या कोई टूर है?",
+          "pl-PL": "Chciałbym dowiedzieć się więcej o historii. Czy jest jakaś wycieczka z przewodnikiem?",
+          "ro-RO": "Aș dori să aflu mai multe despre istorie. Există un tur ghidat?",
+          "tr-TR": "Tarih hakkında daha fazla şey öğrenmek istiyorum. Rehberli bir tur var mı?",
+          "uk-UA": "Я б хотів дізнатися більше про історію. Чи є екскурсія?",
+          "uz-UZ": "Men tarix haqida ko'proq bilmoqchi edim. Ekskursiya bormi?"
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Ja, um 14 Uhr startet eine Gruppe direkt vor diesem Gebäude.",
+    "botTranslation": {
+      "ru-RU": "Да, в 14 часов стартует группа прямо перед этим зданием.",
+      "en-US": "Yes, at 2 PM a group starts right in front of this building.",
+      "ar-SA": "نعم، في الساعة 14:00 تبدأ مجموعة مباشرة أمام هذا المبنى.",
+      "es-ES": "Sí, a las 14 en punto sale un grupo justo delante de este edificio.",
+      "fr-FR": "Oui, à 14h, un groupe part juste devant ce bâtiment.",
+      "hi-IN": "हाँ, दोपहर 2 बजे एक समूह ठीक इसी इमारत के सामने से शुरू होता है।",
+      "pl-PL": "Tak, o 14:00 rusza grupa tuż przed tym budynkiem.",
+      "ro-RO": "Da, la ora 14 pleacă un grup chiar din fața acestei clădiri.",
+      "tr-TR": "Evet, saat 14'te tam bu binanın önünden bir grup başlıyor.",
+      "uk-UA": "Так, о 14 годині стартує група прямо перед цією будівлею.",
+      "uz-UZ": "Ha, soat 14:00 da ushbu binoning oldidan guruh yo'lga chiqadi."
+    },
+    "vocabulary": [
+      {
+        "german": "die Stadtführung",
+        "translation": {
+          "ru-RU": "экскурсия по городу",
+          "en-US": "city tour",
+          "ar-SA": "جولة في المدينة",
+          "es-ES": "visita guiada de la ciudad",
+          "fr-FR": "visite guidée de la ville",
+          "hi-IN": "शहर का दौरा",
+          "pl-PL": "wycieczka po mieście",
+          "ro-RO": "tur de oraș",
+          "tr-TR": "şehir turu",
+          "uk-UA": "екскурсія по місту",
+          "uz-UZ": "shahar bo'ylab ekskursiya"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Muss ich mich für die Führung anmelden?",
+        "translation": {
+          "ru-RU": "Мне нужно записываться на экскурсию?",
+          "en-US": "Do I have to register for the tour?",
+          "ar-SA": "هل يجب علي التسجيل في الجولة؟",
+          "es-ES": "¿Tengo que registrarme para la visita?",
+          "fr-FR": "Dois-je m'inscrire pour la visite ?",
+          "hi-IN": "क्या मुझे टूर के लिए पंजीकरण करना होगा?",
+          "pl-PL": "Czy muszę się zapisywać na tę wycieczkę?",
+          "ro-RO": "Trebuie să mă înscriu pentru tur?",
+          "tr-TR": "Tur için kayıt yaptırmam gerekiyor mu?",
+          "uk-UA": "Мені потрібно записуватися на екскурсію?",
+          "uz-UZ": "Ekskursiya uchun ro'yxatdan o'tishim kerakmi?"
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Ist die Führung kostenlos oder muss ich bezahlen?",
+        "translation": {
+          "ru-RU": "Экскурсия бесплатная или мне нужно заплатить?",
+          "en-US": "Is the tour free or do I have to pay?",
+          "ar-SA": "هل الجولة مجانية أم يجب أن أدفع؟",
+          "es-ES": "¿La visita es gratuita o tengo que pagar?",
+          "fr-FR": "La visite est-elle gratuite ou dois-je payer ?",
+          "hi-IN": "क्या टूर मुफ्त है या मुझे भुगतान करना होगा?",
+          "pl-PL": "Czy wycieczka jest darmowa, czy muszę zapłacić?",
+          "ro-RO": "Turul este gratuit sau trebuie să plătesc?",
+          "tr-TR": "Tur ücretsiz mi yoksa ödeme yapmam gerekiyor mu?",
+          "uk-UA": "Екскурсія безкоштовна чи мені потрібно заплатити?",
+          "uz-UZ": "Ekskursiya bepulmi yoki pul to'lashim kerakmi?"
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Sie müssen sich nicht anmelden. Die Führung kostet nur 5 Euro und beginnt pünktlich.",
+    "botTranslation": {
+      "ru-RU": "Вам не нужно записываться. Экскурсия стоит всего 5 евро и начинается вовремя.",
+      "en-US": "You do not need to register. The tour costs only 5 euros and starts on time.",
+      "ar-SA": "لست بحاجة للتسجيل. تكلفة الجولة 5 يورو فقط وتبدأ في موعدها.",
+      "es-ES": "No es necesario registrarse. La visita cuesta solo 5 euros y empieza puntual.",
+      "fr-FR": "Vous n'avez pas besoin de vous inscrire. La visite ne coûte que 5 euros et commence à l'heure.",
+      "hi-IN": "आपको पंजीकरण करने की आवश्यकता नहीं है। टूर की कीमत केवल 5 यूरो है और यह समय पर शुरू होता है।",
+      "pl-PL": "Nie musi się Pan/Pani zapisywać. Wycieczka kosztuje tylko 5 euro i zaczyna się punktualnie.",
+      "ro-RO": "Nu trebuie să vă înscrieți. Turul costă doar 5 euro și începe la timp.",
+      "tr-TR": "Kayıt yaptırmanıza gerek yok. Tur sadece 5 Euro'dur ve tam zamanında başlar.",
+      "uk-UA": "Вам не потрібно записуватися. Екскурсія коштує всього 5 євро і починається вчасно.",
+      "uz-UZ": "Ro'yxatdan o'tishingiz shart emas. Ekskursiya faqat 5 yevro turadi va o'z vaqtida boshlanadi."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Vielen Dank für die Informationen!",
+        "translation": {
+          "ru-RU": "Большое спасибо за информацию!",
+          "en-US": "Thank you very much for the information!",
+          "ar-SA": "شكراً جزيلاً على المعلومات!",
+          "es-ES": "¡Muchas gracias por la información!",
+          "fr-FR": "Merci beaucoup pour les informations !",
+          "hi-IN": "जानकारी के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję za informacje!",
+          "ro-RO": "Vă mulțumesc mult pentru informații!",
+          "tr-TR": "Bilgiler için çok teşekkürler!",
+          "uk-UA": "Дуже дякую за інформацію!",
+          "uz-UZ": "Ma'lumotlar uchun katta rahmat!"
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Das klingt perfekt. Danke für Ihre Hilfe!",
+        "translation": {
+          "ru-RU": "Звучит идеально. Спасибо за вашу помощь!",
+          "en-US": "That sounds perfect. Thank you for your help!",
+          "ar-SA": "هذا يبدو مثالياً. شكراً لمساعدتك!",
+          "es-ES": "Suena perfecto. ¡Gracias por su ayuda!",
+          "fr-FR": "Cela semble parfait. Merci pour votre aide !",
+          "hi-IN": "यह एकदम सही लगता है। आपकी मदद के लिए धन्यवाद!",
+          "pl-PL": "To brzmi idealnie. Dziękuję za pomoc!",
+          "ro-RO": "Sună perfect. Mulțumesc pentru ajutor!",
+          "tr-TR": "Kulağa mükemmel geliyor. Yardımınız için teşekkürler!",
+          "uk-UA": "Звучить ідеально. Дякую за вашу допомогу!",
+          "uz-UZ": "Bu mukammal. Yordamingiz uchun rahmat!"
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Sehr gerne. Ich wünsche Ihnen einen schönen Tag in unserer Stadt. Bitte schön!",
+    "botTranslation": {
+      "ru-RU": "С удовольствием. Желаю вам хорошего дня в нашем городе. Пожалуйста!",
+      "en-US": "You are very welcome. I wish you a nice day in our city. Here you go!",
+      "ar-SA": "بكل سرور. أتمنى لك يوماً جميلاً في مدينتنا. على الرحب والسعة!",
+      "es-ES": "Con mucho gusto. Le deseo un buen día en nuestra ciudad. ¡De nada!",
+      "fr-FR": "Avec grand plaisir. Je vous souhaite une bonne journée dans notre ville. Je vous en prie !",
+      "hi-IN": "मुझे खुशी हुई। मैं आपके हमारे शहर में एक अच्छे दिन की कामना करता हूँ। आपका स्वागत है!",
+      "pl-PL": "Bardzo proszę. Życzę miłego dnia w naszym mieście. Proszę bardzo!",
+      "ro-RO": "Cu mare plăcere. Vă doresc o zi frumoasă în orașul nostru. Cu plăcere!",
+      "tr-TR": "Memnuniyetle. Şehrimizde güzel bir gün dilerim. Rica ederim!",
+      "uk-UA": "Із задоволенням. Бажаю вам гарного дня в нашому місті. Будь ласка!",
+      "uz-UZ": "Jonim bilan. Shahrimizda kuningiz xayrli o'tishini tilayman. Arzimaydi!"
+    },
+    "vocabulary": [
+      {
+        "german": "die Informationen",
+        "translation": {
+          "ru-RU": "информация",
+          "en-US": "information",
+          "ar-SA": "المعلومات",
+          "es-ES": "la información",
+          "fr-FR": "les informations",
+          "hi-IN": "जानकारी",
+          "pl-PL": "informacje",
+          "ro-RO": "informații",
+          "tr-TR": "bilgi",
+          "uk-UA": "інформація",
+          "uz-UZ": "ma'lumotlar"
+        }
+      }
+    ],
+    "options": [],
+    "defaultNext": null
+  }
+}
