@@ -424,7 +424,7 @@
           "hi-IN": "यह लीजिए।",
           "pl-PL": "Proszę bardzo.",
           "ro-RO": "Poftiți.",
-          "ru-RU": "Вот, пожалуйста (передавая карту).",
+          "ru-RU": "Вот, пожалуйста",
           "tr-TR": "Buyurun.",
           "uk-UA": "Ось, будь ласка.",
           "uz-UZ": "Marhamat."
@@ -618,7 +618,7 @@
       "hi-IN": "मैं आपके सुखद प्रवास की कामना करता हूँ!",
       "pl-PL": "Życzę panu/pani udanego pobytu!",
       "ro-RO": "Vă doresc o ședere plăcută!",
-      "ru-RU": "Желаю Вам хорошего пребывания (в отеле)!",
+      "ru-RU": "Желаю Вам хорошего пребывания",
       "tr-TR": "Size iyi bir konaklama dilerim!",
       "uk-UA": "Бажаю Вам гарного перебування!",
       "uz-UZ": "Sizga yoqimli dam olishingizni tilayman!"
@@ -744,7 +744,7 @@
           "uk-UA": "До побачення!",
           "uz-UZ": "Ko'rishguncha!"
         },
-        "nextStep": "end"
+        "nextStep": null
       },
       {
         "text": "Tschüss!",
@@ -761,27 +761,9 @@
           "uk-UA": "Бувай!",
           "uz-UZ": "Xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Der Check-in ist beendet.",
-    "botTranslation": {
-      "ar-SA": "انتهى تسجيل الدخول.",
-      "en-US": "The check-in is finished.",
-      "es-ES": "El registro ha terminado.",
-      "fr-FR": "L'enregistrement est terminé.",
-      "hi-IN": "चेक-इन समाप्त हो गया है।",
-      "pl-PL": "Zameldowanie zostało zakończone.",
-      "ro-RO": "Check-in-ul s-a încheiat.",
-      "ru-RU": "Заселение завершено.",
-      "tr-TR": "Giriş işlemi bitti.",
-      "uk-UA": "Реєстрацію завершено.",
-      "uz-UZ": "Ro'yxatdan o'tish tugadi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

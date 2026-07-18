@@ -181,11 +181,11 @@ onUnmounted(() => {
               <span class="timer-widget__value">{{ timeLeftToOpen.m }}</span>
               <span class="timer-widget__unit">{{ t('i18nDays.mins') }}</span>
             </div>
-            <span class="timer-widget__separator">:</span>
-            <div class="timer-widget__item">
-              <span class="timer-widget__value">{{ timeLeftToOpen.s }}</span>
-              <span class="timer-widget__unit">сек</span>
-            </div>
+<!--            <span class="timer-widget__separator">:</span>-->
+<!--            <div class="timer-widget__item">-->
+<!--              <span class="timer-widget__value">{{ timeLeftToOpen.s }}</span>-->
+<!--              <span class="timer-widget__unit">сек</span>-->
+<!--            </div>-->
           </div>
         </div>
       </div>
@@ -570,7 +570,6 @@ onUnmounted(() => {
 
 .timer-widget__item {
   display: flex;
-  flex-direction: column;
   align-items: center;
   background: rgba(0, 194, 255, 0.15);
   border: 2px solid #00c2ff;
@@ -587,8 +586,8 @@ onUnmounted(() => {
 }
 
 .timer-widget__unit {
-  font-size: 10px;
-  color: #d1c4e9;
+  font-size: 14px;
+  color: #00c2ff;
   font-family: "Nunito", sans-serif;
   text-transform: uppercase;
   margin-top: 4px;
@@ -597,9 +596,8 @@ onUnmounted(() => {
 
 .timer-widget__separator {
   font-size: 24px;
-  color: #ffffff;
+  color: #00c2ff;
   font-weight: bold;
-  padding-bottom: 16px;
 }
 
 @media (max-width: 1023px) {

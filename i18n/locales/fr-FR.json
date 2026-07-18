@@ -10174,13 +10174,13 @@
     "cabinet": "Compte"
   },
   "speakTopics": {
-    "speak": "Présentation et discussion",
-    "food": "Nourriture et shopping",
-    "transport": "Voyages et transports",
+    "speak": "Présentations et communication",
+    "food": "Nourriture et achats",
     "city": "Services urbains et vie quotidienne",
     "health": "Santé",
     "work": "Travail et carrière",
-    "auto": "La voiture et la route"
+    "auto": "Voiture et route",
+    "travel": "Voyages"
   },
   "speakThemes": {
     "firstmeet": "Présentation",
@@ -10586,7 +10586,7 @@
     "description": "Toutes les fonctionnalités sont déjà débloquées"
   },
   "newsBannerText": {
-    "text": "Salut ! Chaque jour, Skillupgerman publie ici des nouvelles intéressantes sur la langue allemande. Apprenez avec plaisir !"
+    "text": "Salut ! Skillupgerman publie ici des nouvelles intéressantes sur la langue allemande. Apprenez avec plaisir !"
   },
   "marathonLeaderBoard": {
     "stateHint": "La course va bientôt commencer ! Préparez-vous pour la nouvelle saison.",

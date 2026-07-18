@@ -6,13 +6,6 @@ const config: CapacitorConfig = {
   appName: 'skillupgerman',
   webDir: '.output/public',
   plugins: {
-    // CapacitorHttp: {
-    //   enabled: true,
-    // },
-    /*server: {
-      url: 'http://192.168.178.1:3000',
-      cleartext: true
-    },*/
     // StatusBar: {
     //   overlaysWebView: true,
     //   style: 'DARK',
@@ -24,8 +17,8 @@ const config: CapacitorConfig = {
       launchAutoHide: false
     },
     AdMob: {
-      androidAppId: 'ca-app-pub-3940256099942544~3347511713',
-      iosAppId: 'ca-app-pub-3940256099942544~1458002511',
+      androidAppId: 'ca-app-pub-7535671094319234~8726618547',
+      iosAppId: 'ca-app-pub-7535671094319234~6499324694',
     },
     Keyboard: {
       resize: KeyboardResize.Native,

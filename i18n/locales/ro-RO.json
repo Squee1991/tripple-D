@@ -10178,13 +10178,13 @@
     "cabinet": "Cont"
   },
   "speakTopics": {
-    "speak": "Prezentare și socializare",
+    "speak": "Cunoaștere și comunicare",
     "food": "Mâncare și cumpărături",
-    "transport": "Călătorii și transport",
-    "city": "Servicii urbane și viața cotidiană",
+    "city": "Servicii urbane și viața de zi cu zi",
     "health": "Sănătate",
     "work": "Muncă și carieră",
-    "auto": "Mașina și drumul"
+    "auto": "Mașină și drum",
+    "travel": "Călătorii"
   },
   "speakThemes": {
     "firstmeet": "Prezentare",
@@ -10590,7 +10590,7 @@
     "description": "Toate funcțiile sunt deja deblocate"
   },
   "newsBannerText": {
-    "text": "Bună! În fiecare zi, Skillupgerman publică aici știri interesante despre limba germană. Învață cu plăcere!"
+    "text": "Bună! Skillupgerman publică aici știri interesante despre limba germană. Învață cu plăcere!"
   },
   "marathonLeaderBoard": {
     "stateHint": "Cursa va începe în curând! Pregătește-te pentru noul sezon.",

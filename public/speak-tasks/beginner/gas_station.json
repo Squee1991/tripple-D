@@ -1,18 +1,18 @@
 {
   "start": {
-    "botText": "Hallo! Was bekommen Sie?",
+    "botText": "Hallo!",
     "botTranslation": {
-      "ru-RU": "Привет! Что у Вас?",
-      "en-US": "Hello! What can I get you?",
-      "ar-SA": "مرحباً! ماذا لديك؟",
-      "es-ES": "¡Hola! ¿Qué le pongo?",
-      "fr-FR": "Bonjour ! Que prenez-vous ?",
-      "hi-IN": "नमस्ते! आपको क्या चाहिए?",
-      "pl-PL": "Cześć! Co podać?",
-      "ro-RO": "Salut! Ce doriți?",
-      "tr-TR": "Merhaba! Ne alırdınız?",
-      "uk-UA": "Привіт! Що у Вас?",
-      "uz-UZ": "Salom! Sizga nima kerak?"
+      "ru-RU": "Привет!",
+      "en-US": "Hello!",
+      "ar-SA": "مرحباً!",
+      "es-ES": "¡Hola!",
+      "fr-FR": "Bonjour !",
+      "hi-IN": "नमस्ते!",
+      "pl-PL": "Cześć!",
+      "ro-RO": "Salut!",
+      "tr-TR": "Merhaba!",
+      "uk-UA": "Привіт!",
+      "uz-UZ": "Salom!"
     },
     "vocabulary": [
       {
@@ -487,7 +487,7 @@
           "uk-UA": "Дякую, Вам також! До побачення.",
           "uz-UZ": "Rahmat, sizga ham! Xayr."
         },
-        "nextStep": "step_15"
+        "nextStep": null
       },
       {
         "text": "Vielen Dank, gleichfalls! Tschüss.",
@@ -504,28 +504,9 @@
           "uk-UA": "Дуже дякую, навзаєм! Бувай.",
           "uz-UZ": "Katta rahmat, sizga ham! Xayr."
         },
-        "nextStep": "step_15"
+        "nextStep": null
       }
     ],
-    "defaultNext": "step_15"
-  },
-  "step_15": {
-    "botText": "Das Gespräch ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Разговор окончен.",
-      "en-US": "The conversation is over.",
-      "ar-SA": "انتهت المحادثة.",
-      "es-ES": "La conversación ha terminado.",
-      "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत खत्म हो गई है।",
-      "pl-PL": "Rozmowa zakończona.",
-      "ro-RO": "Conversația s-a încheiat.",
-      "tr-TR": "Konuşma sona erdi.",
-      "uk-UA": "Розмова закінчена.",
-      "uz-UZ": "Suhbat yakunlandi."
-    },
-    "vocabulary": [],
-    "options": [],
     "defaultNext": null
   }
 }

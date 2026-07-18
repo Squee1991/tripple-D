@@ -10174,12 +10174,12 @@
   },
   "speakTopics": {
     "speak": "Tanishuv va muloqot",
-    "food": "Ovqat va xaridlar",
-    "transport": "Sayohat va transport",
+    "food": "Oziq-ovqat va xaridlar",
     "city": "Shahar xizmatlari va kundalik hayot",
     "health": "Sog'liq",
-    "work": "Ish va martaba",
-    "auto": "Avtomobil va yo'l"
+    "work": "Ish va karyera",
+    "auto": "Avtomobil va yo'l",
+    "travel": "Sayohatlar"
   },
   "speakThemes": {
     "firstmeet": "Tanishuv",
@@ -10585,7 +10585,7 @@
     "description": "Barcha funksiyalar allaqachon ochilgan"
   },
   "newsBannerText": {
-    "text": "Salom! Har kuni Skillupgerman bu yerda nemis tili haqida qiziqarli yangiliklarni e'lon qiladi. Zavq bilan o'rganing!"
+    "text": "Salom! Skillupgerman bu yerda nemis tili haqida qiziqarli yangiliklarni e'lon qiladi. Zavq bilan o'rganing!"
   },
   "marathonLeaderBoard": {
     "stateHint": "Poyga tez orada boshlanadi! Yangi mavsumga tayyorgarlik ko'ring.",

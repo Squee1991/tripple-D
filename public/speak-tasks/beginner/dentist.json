@@ -176,7 +176,7 @@
   "historie": {
     "botText": "Waren Sie schon einmal bei uns in der Praxis?",
     "botTranslation": {
-      "ru-RU": "Вы уже были когда-нибудь у нас в праксисе (клинике)?",
+      "ru-RU": "Вы уже были когда-нибудь у нас в праксисе(клинике)?",
       "en-US": "Have you ever been to our practice before?",
       "ar-SA": "هل زرت عيادتنا من قبل؟",
       "es-ES": "¿Ha estado alguna vez en nuestra consulta?",
@@ -417,7 +417,7 @@
       {
         "text": "Super, das geht bei mir perfekt.",
         "translation": {
-          "ru-RU": "Супер, у меня это идеально получается (подходит).",
+          "ru-RU": "Супер, у меня это идеально получается(подходит).",
           "en-US": "Great, that works perfectly for me.",
           "ar-SA": "ممتاز، هذا يناسبني تماماً.",
           "es-ES": "Genial, me va perfecto.",
@@ -673,7 +673,7 @@
           "uk-UA": "До побачення!",
           "uz-UZ": "Xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       },
       {
         "text": "Danke, auf Wiederhören!",
@@ -690,27 +690,9 @@
           "uk-UA": "Дякую, до побачення!",
           "uz-UZ": "Rahmat, xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Das Gespräch ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Разговор завершен.",
-      "en-US": "The conversation is ended.",
-      "ar-SA": "انتهت المحادثة.",
-      "es-ES": "La conversación ha terminado.",
-      "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत समाप्त हो गई है。",
-      "pl-PL": "Rozmowa została zakończona.",
-      "ro-RO": "Conversația s-a încheiat.",
-      "tr-TR": "Konuşma sona erdi.",
-      "uk-UA": "Розмову завершено.",
-      "uz-UZ": "Suhbat yakunlandi."
-    },
-    "options": [],
     "defaultNext": null
-  }
+  },
 }

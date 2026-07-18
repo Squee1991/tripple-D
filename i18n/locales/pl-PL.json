@@ -10194,13 +10194,13 @@
     "cabinet": "Konto"
   },
   "speakTopics": {
-    "speak": "Zapoznanie i komunikacja",
+    "speak": "Poznawanie się i komunikacja",
     "food": "Jedzenie i zakupy",
-    "transport": "Wyjazdy i transport",
     "city": "Usługi miejskie i życie codzienne",
     "health": "Zdrowie",
     "work": "Praca i kariera",
-    "auto": "Samochód i droga"
+    "auto": "Samochód i droga",
+    "travel": "Podróże"
   },
   "speakThemes": {
     "firstmeet": "Zapoznanie",
@@ -10606,7 +10606,7 @@
     "description": "Wszystkie funkcje zostały już odblokowane"
   },
   "newsBannerText": {
-    "text": "Cześć! Każdego dnia Skillupgerman publikuje tutaj ciekawe wiadomości o języku niemieckim. Ucz się z przyjemnością!"
+    "text": "Cześć! Skillupgerman publikuje tutaj ciekawe wiadomości o języku niemieckim. Ucz się z przyjemnością!"
   },
   "marathonLeaderBoard": {
     "stateHint": "Wyścig wkrótce się rozpocznie! Przygotuj się na nowy sezon.",

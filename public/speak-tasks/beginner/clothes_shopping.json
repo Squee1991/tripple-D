@@ -673,7 +673,7 @@
           "uk-UA": "До побачення!",
           "uz-UZ": "Ko'rishguncha!"
         },
-        "nextStep": "end"
+        "nextStep": null
       },
       {
         "text": "Tschüss!",
@@ -690,27 +690,9 @@
           "uk-UA": "Бувай!",
           "uz-UZ": "Xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Der Einkauf ist beendet.",
-    "botTranslation": {
-      "ar-SA": "انتهى التسوق.",
-      "en-US": "The shopping is finished.",
-      "es-ES": "La compra ha terminado.",
-      "fr-FR": "L'achat est terminé.",
-      "hi-IN": "खरीदारी समाप्त हो गई है。",
-      "pl-PL": "Zakupy zostały zakończone.",
-      "ro-RO": "Cumpărăturile s-au încheiat.",
-      "ru-RU": "Покупка завершена.",
-      "tr-TR": "Alışveriş bitti.",
-      "uk-UA": "Покупку завершено.",
-      "uz-UZ": "Xarid qilish tugadi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

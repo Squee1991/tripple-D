@@ -1,10 +1,6 @@
 <template>
   <div class="articles-box">
     <div class="articles__wrapper">
-<!--      <VBanner-->
-<!--          :text="t('newsTitleBanner.title')"-->
-<!--          :icon="News"-->
-<!--      />-->
       <div class="welcome-character-block">
         <div class="character-avatar">
           <span class="avatar-emoji">
@@ -18,7 +14,7 @@
           <p class="bubble-text">{{ t('newsBannerText.text') }}</p>
         </div>
       </div>
-      <div v-for="article in articles" :key="article.id" class="article-card">
+      <div v-for="article in visibleArticles" :key="article.id" class="article-card">
         <div class="article-header">
           <span class="badge">{{ t(article.badge) }}</span>
         </div>
@@ -65,33 +61,46 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { articlesData } from '../../utils/articlesData.js'
-import { useReactionsStore } from '~/store/reactionsStore.js'
-import { userAuthStore } from '~/store/authStore.js'
+import {ref, onMounted, computed} from 'vue'
+import {useI18n} from 'vue-i18n'
+import {articlesData} from '../../utils/articlesData.js'
+import {useReactionsStore} from '~/store/reactionsStore.js'
+import {userAuthStore} from '~/store/authStore.js'
 import VBanner from "~/src/components/V-banner.vue"
 import News from "../../assets/images/news.svg"
 
-const { t } = useI18n()
+const {t} = useI18n()
 const colorClasses = ['theme-blue', 'theme-pink', 'theme-green', 'theme-orange', 'theme-red']
-
-const articles = ref(articlesData.map(article => ({
-  ...article,
-  colorClass: colorClasses[Math.floor(Math.random() * colorClasses.length)]
-})))
 
 const reactionsStore = useReactionsStore()
 const authStore = userAuthStore()
 const emojiList = ['🔥', '❤️'];
 const activePicker = ref(null)
+const LAUNCH_DATE = new Date('2026-07-25T12:00:00')
+
+const visibleArticles = computed(() => {
+  const userCreatedAt = authStore.createdAt ? new Date(authStore.createdAt) : new Date()
+  const timerStartDate = userCreatedAt < LAUNCH_DATE ? LAUNCH_DATE : userCreatedAt
+  const now = new Date()
+  const timeDiff = Math.max(0, now.getTime() - timerStartDate.getTime())
+  const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24))
+  const additionalArticles = Math.floor(daysPassed / 3)
+  const allowedCount = 3 + additionalArticles
+  return articlesData
+      .slice(0, allowedCount)
+      .map((article, index) => {
+        return {
+          ...article,
+          colorClass: colorClasses[index % colorClasses.length]
+        }
+      })
+})
 
 const togglePicker = (articleId) => {
   activePicker.value = activePicker.value === articleId ? null : articleId
@@ -121,11 +130,30 @@ onMounted(() => {
 
 <style scoped>
 
-.theme-blue   { --title-bg: #4d61e3; --title-shadow: #4a5bc0; }
-.theme-pink   { --title-bg: #e34db1; --title-shadow: #a12a7b; }
-.theme-green  { --title-bg: #00bfa5; --title-shadow: #007b6b; }
-.theme-orange { --title-bg: #ff9100; --title-shadow: #b26500; }
-.theme-red    { --title-bg: #f50057; --title-shadow: #ab003c; }
+.theme-blue {
+  --title-bg: #4d61e3;
+  --title-shadow: #4a5bc0;
+}
+
+.theme-pink {
+  --title-bg: #e34db1;
+  --title-shadow: #a12a7b;
+}
+
+.theme-green {
+  --title-bg: #00bfa5;
+  --title-shadow: #007b6b;
+}
+
+.theme-orange {
+  --title-bg: #ff9100;
+  --title-shadow: #b26500;
+}
+
+.theme-red {
+  --title-bg: #f50057;
+  --title-shadow: #ab003c;
+}
 
 .articles__wrapper {
   width: 100%;
@@ -377,17 +405,33 @@ onMounted(() => {
 }
 
 @keyframes bounce {
-  0%, 80%, 100% { transform: scale(0); }
-  40% { transform: scale(1.0); }
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.0);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes popIn {
-  from { opacity: 0; transform: scale(0.8) translateY(10px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 </style>

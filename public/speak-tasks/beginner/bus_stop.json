@@ -509,25 +509,6 @@
         "nextStep": "step_15"
       }
     ],
-    "defaultNext": "step_15"
-  },
-  "step_15": {
-    "botText": "Tschüss! Das Gespräch ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Пока! Разговор окончен.",
-      "en-US": "Bye! The conversation is over.",
-      "ar-SA": "وداعاً! انتهت المحادثة.",
-      "es-ES": "¡Adiós! La conversación ha terminado.",
-      "fr-FR": "Salut ! La conversation est terminée.",
-      "hi-IN": "अलविदा! बातचीत खत्म हो गई है।",
-      "pl-PL": "Cześć! Rozmowa zakończona.",
-      "ro-RO": "Pa! Conversația s-a încheiat.",
-      "tr-TR": "Hoşça kalın! Konuşma sona erdi.",
-      "uk-UA": "Бувай! Розмова закінчена.",
-      "uz-UZ": "Xayr! Suhbat yakunlandi."
-    },
-    "vocabulary": [],
-    "options": [],
     "defaultNext": null
   }
 }

@@ -65,23 +65,6 @@
           "uz-UZ": "Ha, bu to'g'ri yo'nalish."
         },
         "nextStep": "fahrkarten"
-      },
-      {
-        "text": "Nein, das ist die falsche Richtung.",
-        "translation": {
-          "ru-RU": "Нет, это неправильное направление.",
-          "en-US": "No, that is the wrong direction.",
-          "ar-SA": "لا، هذا هو الاتجاه الخاطئ.",
-          "es-ES": "No, esta es la dirección equivocada.",
-          "fr-FR": "Non, c'est la mauvaise direction.",
-          "hi-IN": "नहीं, यह गलत दिशा है।",
-          "pl-PL": "Nie, to jest zły kierunek.",
-          "ro-RO": "Nu, aceasta este direcția greșită.",
-          "tr-TR": "Hayır, bu yanlış yön.",
-          "uk-UA": "Ні, це неправильний напрямок.",
-          "uz-UZ": "Yo'q, bu noto'g'ri yo'nalish."
-        },
-        "nextStep": "fahrkarten"
       }
     ],
     "defaultNext": "fahrkarten"

@@ -14,7 +14,6 @@
         </div>
       </div>
     </div>
-
     <div class="layout__cabinet">
       <aside class="sidebar-panel">
         <button v-if="!isMobile" class="back-btn" @click="backToMain" aria-label="to main" type="button">

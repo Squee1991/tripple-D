@@ -570,7 +570,7 @@
           "uk-UA": "До побачення!",
           "uz-UZ": "Ko'rishguncha!"
         },
-        "nextStep": "end"
+        "nextStep": null
       },
       {
         "text": "Tschüss!",
@@ -587,27 +587,9 @@
           "uk-UA": "Бувай!",
           "uz-UZ": "Xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Die Fahrkartenkontrolle ist beendet.",
-    "botTranslation": {
-      "ar-SA": "انتهى فحص التذاكر.",
-      "en-US": "The ticket check is finished.",
-      "es-ES": "El control de billetes ha terminado.",
-      "fr-FR": "Le contrôle des billets est terminé.",
-      "hi-IN": "टिकट की जाँच समाप्त हो गई है।",
-      "pl-PL": "Kontrola biletów została zakończona.",
-      "ro-RO": "Controlul biletelor s-a încheiat.",
-      "ru-RU": "Проверка билетов окончена.",
-      "tr-TR": "Bilet kontrolü bitti.",
-      "uk-UA": "Перевірку квитків завершено.",
-      "uz-UZ": "Chiptalarni tekshirish tugadi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }
