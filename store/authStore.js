@@ -600,7 +600,7 @@ export const userAuthStore = defineStore('auth', () => {
 
             return await response.json();
         } catch (error) {
-            console.error('Ошибка сброса пароля:', error);
+            console.error('Ошибка ', error);
             throw error;
         }
     };
