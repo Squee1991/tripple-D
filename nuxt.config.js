@@ -3,6 +3,8 @@ import {loadEnv} from 'vite'
 
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 const env = loadEnv(mode, process.cwd(), '')
+const isProd = mode === 'production'
+
 const firebaseConfig = {
 	apiKey: process.env.FIREBASE_API_KEY || env.FIREBASE_API_KEY,
 	authDomain: process.env.FIREBASE_AUTH_DOMAIN || env.FIREBASE_AUTH_DOMAIN,
@@ -12,106 +14,49 @@ const firebaseConfig = {
 	appId: process.env.FIREBASE_APP_ID || env.FIREBASE_APP_ID,
 }
 
-const serviceAccountJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
-let admin
-try {
-	admin = serviceAccountJson ? {serviceAccount: JSON.parse(serviceAccountJson)} : undefined
-} catch {
-	admin = undefined
+let adminConfig = undefined
+const rawJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON || env.GOOGLE_APPLICATION_CREDENTIALS_JSON
+
+if (rawJson) {
+	try {
+		const parsed = typeof rawJson === 'string' ? JSON.parse(rawJson) : rawJson
+		if (parsed.private_key) {
+			parsed.private_key = parsed.private_key.replace(/\\n/g, '\n')
+		}
+		adminConfig = {serviceAccount: parsed}
+	} catch (error) {
+		console.error('Ошибка инициализации Firebase Admin:', error)
+	}
 }
 
-const siteUrl =
-	process.env.NUXT_SITE_URL ||
-	(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
+const siteUrl = process.env.NUXT_SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 
 export default defineNuxtConfig({
-	experimental: {payloadExtraction: false},
-	defaults: {
-		nuxtLink: {
-			prefetch: false,
-			noPrefetch: true
-		}
+	ssr: true,
+	experimental: {
+		payloadExtraction: true,
+		appManifest: false
 	},
-	router: {
-		options: {
-			prefetchLinks: false
-		}
+	defaults: {
+		nuxtLink: {prefetch: true, noPrefetch: false}
 	},
 	compatibilityDate: '2024-11-01',
-	devtools: {enabled: true},
+	devtools: {enabled: false},
 	modules: [
 		'@nuxt/image',
 		'@pinia/nuxt',
 		'nuxt-vuefire',
 		'@nuxtjs/google-fonts',
 		'@nuxtjs/i18n',
-		'@nuxtjs/color-mode',
-		'@nuxtjs/robots',
-		'@vite-pwa/nuxt',
+		'@nuxtjs/color-mode'
 	],
-	pwa: {
-		registerType: 'autoUpdate',
-		manifest: {
-			name: 'Skillupgerman',
-			short_name: 'Skillupgerman',
-			description: 'Learn german',
-			theme_color: '#0b1020',
-			background_color: '#0b1020',
-			display: 'standalone',
-			start_url: '/',
-			scope: '/',
-			icons: [
-				{ src: '/pwa-192x192.png', sizes: '192x192', type: 'image/png' },
-				{ src: '/pwa-512x512.png', sizes: '512x512', type: 'image/png' },
-				{ src: '/pwa-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }
-			]
-		},
-		workbox: {
-			navigateFallback: '/',
-			globPatterns: ['_nuxt/*.{js,css}', 'favicon.ico', 'pwa-*.png'],
-			globIgnores: ['quests/*.json', 'images/**/*', 'assets/**/*', 'levels/**/*'],
-			runtimeCaching: [
-				{
-					urlPattern: ({ request }) => request.mode === 'navigate',
-					handler: 'NetworkFirst',
-					options: { cacheName: 'pages-cache' },
-				},
-				{
-					urlPattern: ({ request }) => request.destination === 'image',
-					handler: 'StaleWhileRevalidate',
-					options: {
-						cacheName: 'images-cache',
-						expiration: {
-							maxEntries: 100,
-							maxAgeSeconds: 60 * 60 * 24 * 7,
-						},
-					},
-				},
-				{
-					urlPattern: ({ url }) => url.pathname.startsWith('/quests/'),
-					handler: 'StaleWhileRevalidate',
-					options: {
-						cacheName: 'quests-json-cache',
-						expiration: {
-							maxEntries: 50,
-							maxAgeSeconds: 60 * 60 * 24
-						},
-					},
-				},
-			],
-		},
-		devOptions: {
-			enabled: true,
-			type: 'module',
-		}
-	},
 	vuefire: {
 		config: firebaseConfig,
 		auth: true,
 		firestore: {
 			experimentalForceLongPolling: true,
 		},
-		...(admin ? {admin} : {}),
+		...(adminConfig ? {admin: adminConfig} : {}),
 	},
 	runtimeConfig: {
 		stripeSecret: process.env.STRIPE_SECRET_KEY || env.STRIPE_SECRET_KEY,
@@ -122,6 +67,7 @@ export default defineNuxtConfig({
 		public: {
 			stripePublishableKey: process.env.VITE_STRIPE_PUBLIC_KEY || env.VITE_STRIPE_PUBLIC_KEY,
 			firebaseApiKey: firebaseConfig.apiKey,
+			revenuecatGoogleApiKey: process.env.NUXT_PUBLIC_REVENUECAT_GOOGLE_API_KEY,
 			firebaseAuthDomain: firebaseConfig.authDomain,
 			firebaseProjectId: firebaseConfig.projectId,
 			firebaseStorageBucket: firebaseConfig.storageBucket,
@@ -131,70 +77,28 @@ export default defineNuxtConfig({
 		},
 	},
 	app: {
+		baseURL: '/',
 		head: {
-			link: [
-				{rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
-				{rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png'},
-				{rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png'},
-				{rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png'},
-				{ rel: 'manifest', href: '/manifest.webmanifest' }
-			],
 			meta: [
-				{property: 'og:image', content: 'https://www.skillupgerman.com/android-chrome-512x512.png'},
-				{property: 'og:image:type', content: 'image/png'},
-				{property: 'og:image:width', content: '512'},
-				{property: 'og:image:height', content: '512'},
-				{name: 'twitter:card', content: 'summary_large_image'},
-				{name: 'twitter:image', content: 'https://www.skillupgerman.com/android-chrome-512x512.png'},
-				{name: 'robots', content: 'max-image-preview:large'}
+				{name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover'}
 			]
 		}
 	},
-	// sitemap: {
-	// 	siteUrl,
-	// 	autoLastmod: true,
-	// 	exclude: [
-	// 		'/**/success',
-	// 		'/**/battle',
-	// 		'/**/cabinet',
-	// 		'/**/calendar',
-	// 		'/**/chat',
-	// 		'/**/statistics'
-	// 	],
-	// },
-	robots: {
-		rules: process.env.VERCEL_ENV === 'production'
-			? [
-				{userAgent: '*', allow: '/'},
-				{userAgent: '*', disallow: '/*success'},
-				{userAgent: '*', disallow: '/*battle'},
-				{userAgent: '*', disallow: '/*cabinet'},
-				{userAgent: '*', disallow: '/*calendar'},
-				{userAgent: '*', disallow: '/*chat'},
-				{userAgent: '*', disallow: '/*statistics'}
-			]
-			: [{userAgent: '*', disallow: '/'}],
-		// sitemap: `${siteUrl}/sitemap.xml`,
-	},
-
 	css: [
-		'simplebar/dist/simplebar.min.css',
-		'~/assets/styles/simplebar.css',
 		'~/assets/styles/reset.css',
 		'~/assets/styles/theme.css',
 	],
-
 	colorMode: {
-		preference: 'system',
-		fallback: 'light',
+		preference: 'dark',
+		fallback: 'dark',
 		globalName: '__NUXT_COLOR_MODE__',
 		classSuffix: '',
 		storage: 'localStorage',
 		storageKey: 'nuxt-color-mode',
 	},
-	sourcemap: mode !== 'production',
+	sourcemap: !isProd,
 	i18n: {
-		strategy: 'prefix',
+		strategy: 'no_prefix',
 		lazy: true,
 		langDir: 'locales',
 		defaultLocale: 'en',
@@ -220,51 +124,31 @@ export default defineNuxtConfig({
 		},
 		bundle: {optimizeTranslationDirective: false},
 	},
-
 	plugins: ['~/plugins/simplebar.client.js'],
-
 	googleFonts: {
-		families: {'Uncial Antiqua': true, Kurale: true, Fredoka: true, Nunito: true},
+		families: {
+			'Uncial Antiqua': true, Kurale: true, Fredoka: true, 'Lilita One': true, Nunito: true
+		},
 	},
-
 	vite: {
 		build: {
-			minify: 'esbuild',
+			minify: 'esbuild'
 		},
 		esbuild: {
-			drop: mode === 'production' ? ['console', 'debugger'] : [],
+			drop: isProd ? ['console', 'debugger'] : [],
 			legalComments: 'none',
 		},
 	},
-
 	nitro: {
-		preset: 'vercel',
-		prerender: {
-			crawlLinks: false,
-			routes: ['/'],
-			failOnError: false,
-		},
-		compressPublicAssets: false
+		compressPublicAssets: true
 	},
 	routeRules: {
-		'/': {
-			prerender: true,
-		},
-		'/**': {
-			ssr: false,
-			headers: { 'Cache-Control': 'public, max-age=0, must-revalidate' }
-		},
-		'/home': { redirect: { to: '/', statusCode: 301 } },
-		'/about': { redirect: { to: '/', statusCode: 301 } },
-		'/contact': { redirect: { to: '/', statusCode: 301 } },
-		'/admin/**': { status: 404 },
-		'/wp-login.php': { status: 404 },
-		'/_nuxt/**': { headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
-		'/sounds/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/sw.js': { headers: { 'Cache-Control': 'public, max-age=7200, must-revalidate' } },
-		'/images/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/*.png': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/*.ico': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/*.webmanifest': { headers: { 'Cache-Control': 'public, max-age=86400' } }
+		'/**': { ssr: false },
+		'/info-about': { ssr: true },
+		'/admin/**': {status: 404},
+		'/wp-login.php': {status: 404},
+		'/sounds/**': {headers: {'Cache-Control': 'no-cache, no-store, must-revalidate'}},
+		'/images/**': {headers: {'Cache-Control': 'no-cache, no-store, must-revalidate'}},
+		'/*.png': {headers: {'Cache-Control': 'no-cache, no-store, must-revalidate'}}
 	},
 })

@@ -1,0 +1,560 @@
+{
+  "start": {
+    "botText": "Guten Tag! Kann ich Ihnen helfen?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Могу я Вам помочь?",
+      "en-US": "Good day! Can I help you?",
+      "ar-SA": "طاب يومك! هل يمكنني مساعدتك؟",
+      "es-ES": "¡Buen día! ¿Puedo ayudarle?",
+      "fr-FR": "Bonjour ! Puis-je vous aider ?",
+      "hi-IN": "शुभ दिन! क्या मैं आपकी मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! W czym mogę pomóc?",
+      "ro-RO": "Bună ziua! Vă pot ajuta?",
+      "tr-TR": "İyi günler! Size yardım edebilir miyim?",
+      "uk-UA": "Добрий день! Можу я Вам допомогти?",
+      "uz-UZ": "Xayrli kun! Sizga yordam bera olamanmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "helfen",
+        "translation": {
+          "ru-RU": "помогать",
+          "en-US": "to help",
+          "ar-SA": "يساعد",
+          "es-ES": "ayudar",
+          "fr-FR": "aider",
+          "hi-IN": "मदद करना",
+          "pl-PL": "pomagać",
+          "ro-RO": "a ajuta",
+          "tr-TR": "yardım etmek",
+          "uk-UA": "допомагати",
+          "uz-UZ": "yordam bermoq"
+        }
+      },
+      {
+        "german": "Ihnen",
+        "translation": {
+          "ru-RU": "Вам",
+          "en-US": "you (formal)",
+          "ar-SA": "لك (رسمي)",
+          "es-ES": "a usted",
+          "fr-FR": "vous (formel)",
+          "hi-IN": "आपको (औपचारिक)",
+          "pl-PL": "panu/pani",
+          "ro-RO": "dumneavoastră",
+          "tr-TR": "size (resmi)",
+          "uk-UA": "Вам",
+          "uz-UZ": "sizga (rasmiy)"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, ich suche eine Jeans in Größe 38.",
+        "translation": {
+          "ru-RU": "Да, я ищу джинсы 38-го размера.",
+          "en-US": "Yes, I am looking for jeans in size 38.",
+          "ar-SA": "نعم، أبحث عن جينز مقاس 38.",
+          "es-ES": "Sí, busco unos vaqueros de la talla 38.",
+          "fr-FR": "Oui, je cherche un jean en taille 38.",
+          "hi-IN": "हाँ, मैं 38 नंबर की जींस ढूंढ रहा हूँ।",
+          "pl-PL": "Tak, szukam dżinsów w rozmiarze 38.",
+          "ro-RO": "Da, caut niște blugi mărimea 38.",
+          "tr-TR": "Evet, 38 beden bir kot pantolon arıyorum.",
+          "uk-UA": "Так, я шукаю джинси 38-го розміру.",
+          "uz-UZ": "Ha, men 38-o'lchamdagi jinsi qidiryapman."
+        },
+        "nextStep": "moment"
+      },
+      {
+        "text": "Ich suche dieses T-Shirt, haben Sie das in M?",
+        "translation": {
+          "ru-RU": "Я ищу эту футболку, есть ли она у вас в размере M?",
+          "en-US": "I'm looking for this T-shirt, do you have it in M?",
+          "ar-SA": "أبحث عن هذا التي شيرت، هل لديكم مقاس M؟",
+          "es-ES": "Busco esta camiseta, ¿la tienen en M?",
+          "fr-FR": "Je cherche ce t-shirt, l'avez-vous en M ?",
+          "hi-IN": "मैं यह टी-शर्ट ढूंढ रहा हूँ, क्या यह आपके पास एम (M) में है?",
+          "pl-PL": "Szukam tej koszulki, czy macie ją w rozmiarze M?",
+          "ro-RO": "Caut acest tricou, îl aveți mărimea M?",
+          "tr-TR": "Bu tişörtü arıyorum, M bedeni var mı?",
+          "uk-UA": "Я шукаю цю футболку, чи є вона у вас у розмірі M?",
+          "uz-UZ": "Men shu futbolkani qidiryapman, sizda M o'lchami bormi?"
+        },
+        "nextStep": "moment"
+      }
+    ],
+    "defaultNext": "moment"
+  },
+  "moment": {
+    "botText": "Einen Moment, ich schaue nach.",
+    "botTranslation": {
+      "ru-RU": "Минуточку, я посмотрю (проверю).",
+      "en-US": "One moment, I'll check.",
+      "ar-SA": "لحظة، سأتحقق من ذلك.",
+      "es-ES": "Un momento, lo comprobaré.",
+      "fr-FR": "Un instant, je vais vérifier.",
+      "hi-IN": "एक पल, मैं देखता हूँ।",
+      "pl-PL": "Chwileczkę, sprawdzę.",
+      "ro-RO": "Un moment, verific.",
+      "tr-TR": "Bir saniye, bakıyorum.",
+      "uk-UA": "Хвилиночку, я подивлюся.",
+      "uz-UZ": "Bir soniya, men tekshirib ko'raman."
+    },
+    "vocabulary": [
+      {
+        "german": "der Moment",
+        "translation": {
+          "ru-RU": "момент",
+          "en-US": "moment",
+          "ar-SA": "لحظة",
+          "es-ES": "momento",
+          "fr-FR": "instant",
+          "hi-IN": "पल",
+          "pl-PL": "moment",
+          "ro-RO": "moment",
+          "tr-TR": "saniye",
+          "uk-UA": "момент",
+          "uz-UZ": "lahza"
+        }
+      },
+      {
+        "german": "nachschauen",
+        "translation": {
+          "ru-RU": "посмотреть / проверить",
+          "en-US": "to check / look up",
+          "ar-SA": "يتحقق",
+          "es-ES": "comprobar",
+          "fr-FR": "vérifier",
+          "hi-IN": "देखना",
+          "pl-PL": "sprawdzić",
+          "ro-RO": "a verifica",
+          "tr-TR": "bakmak / kontrol etmek",
+          "uk-UA": "подивитися / перевірити",
+          "uz-UZ": "tekshirib ko'rmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke. Wo finde ich die Umkleidekabine?",
+        "translation": {
+          "ru-RU": "Спасибо. Где я могу найти примерочную?",
+          "en-US": "Thank you. Where can I find the fitting room?",
+          "ar-SA": "شكراً. أين يمكنني العثور على غرفة القياس؟",
+          "es-ES": "Gracias. ¿Dónde puedo encontrar el probador?",
+          "fr-FR": "Merci. Où puis-je trouver la cabine d'essayage ?",
+          "hi-IN": "धन्यवाद। मुझे फिटिंग रूम कहाँ मिलेगा?",
+          "pl-PL": "Dziękuję. Gdzie znajdę przymierzalnię?",
+          "ro-RO": "Mulțumesc. Unde găsesc cabina de probă?",
+          "tr-TR": "Teşekkürler. Deneme kabinini nerede bulabilirim?",
+          "uk-UA": "Дякую. Де я можу знайти примірювальну?",
+          "uz-UZ": "Rahmat. Kiyinish xonasini qayerdan topsam bo'ladi?"
+        },
+        "nextStep": "umkleide"
+      },
+      {
+        "text": "Danke. Gibt es hier auch eine Umkleide?",
+        "translation": {
+          "ru-RU": "Спасибо. Есть ли здесь примерочная?",
+          "en-US": "Thanks. Is there a fitting room here too?",
+          "ar-SA": "شكراً. هل توجد غرفة قياس هنا أيضاً؟",
+          "es-ES": "Gracias. ¿Hay también un probador aquí?",
+          "fr-FR": "Merci. Y a-t-il aussi une cabine d'essayage ici ?",
+          "hi-IN": "धन्यवाद। क्या यहाँ कोई फिटिंग रूम भी है?",
+          "pl-PL": "Dziękuję. Czy jest tu też przymierzalnia?",
+          "ro-RO": "Mulțumesc. Există și o cabină de probă aici?",
+          "tr-TR": "Teşekkürler. Burada deneme kabini de var mı?",
+          "uk-UA": "Дякую. Чи є тут примірювальна?",
+          "uz-UZ": "Rahmat. Bu yerda kiyinish xonasi ham bormi?"
+        },
+        "nextStep": "umkleide"
+      }
+    ],
+    "defaultNext": "umkleide"
+  },
+  "umkleide": {
+    "botText": "Ja, die Umkleide ist da hinten links.",
+    "botTranslation": {
+      "ru-RU": "Да, примерочная вон там сзади слева.",
+      "en-US": "Yes, the fitting room is back there on the left.",
+      "ar-SA": "نعم، غرفة القياس هناك في الخلف على اليسار.",
+      "es-ES": "Sí, el probador está ahí atrás a la izquierda.",
+      "fr-FR": "Oui, la cabine d'essayage est là-bas au fond à gauche.",
+      "hi-IN": "हाँ, फिटिंग रूम वहां पीछे बाईं ओर है।",
+      "pl-PL": "Tak, przymierzalnia jest tam z tyłu po lewej.",
+      "ro-RO": "Da, cabina de probă este acolo în spate, la stânga.",
+      "tr-TR": "Evet, deneme kabini şurada arka solda.",
+      "uk-UA": "Так, примірювальна он там ззаду ліворуч.",
+      "uz-UZ": "Ha, kiyinish xonasi anavi yerda orqa chap tomonda."
+    },
+    "vocabulary": [
+      {
+        "german": "die Umkleide",
+        "translation": {
+          "ru-RU": "примерочная",
+          "en-US": "fitting room",
+          "ar-SA": "غرفة القياس",
+          "es-ES": "probador",
+          "fr-FR": "cabine d'essayage",
+          "hi-IN": "फिटिंग रूम",
+          "pl-PL": "przymierzalnia",
+          "ro-RO": "cabină de probă",
+          "tr-TR": "deneme kabini",
+          "uk-UA": "примірювальна",
+          "uz-UZ": "kiyinish xonasi"
+        }
+      },
+      {
+        "german": "da hinten links",
+        "translation": {
+          "ru-RU": "вон там сзади слева",
+          "en-US": "back there on the left",
+          "ar-SA": "هناك في الخلف على اليسار",
+          "es-ES": "ahí atrás a la izquierda",
+          "fr-FR": "là-bas au fond à gauche",
+          "hi-IN": "वहां पीछे बाईं ओर",
+          "pl-PL": "tam z tyłu po lewej",
+          "ro-RO": "acolo în spate, la stânga",
+          "tr-TR": "şurada arka solda",
+          "uk-UA": "он там ззаду ліворуч",
+          "uz-UZ": "anavi yerda orqa chap tomonda"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Vielen Dank.",
+        "translation": {
+          "ru-RU": "Большое спасибо.",
+          "en-US": "Thank you very much.",
+          "ar-SA": "شكراً جزيلاً.",
+          "es-ES": "Muchas gracias.",
+          "fr-FR": "Merci beaucoup.",
+          "hi-IN": "बहुत-बहुत धन्यवाद।",
+          "pl-PL": "Bardzo dziękuję.",
+          "ro-RO": "Vă mulțumesc mult.",
+          "tr-TR": "Çok teşekkürler.",
+          "uk-UA": "Велике дякую.",
+          "uz-UZ": "Katta rahmat."
+        },
+        "nextStep": "passt"
+      },
+      {
+        "text": "Alles klar, danke!",
+        "translation": {
+          "ru-RU": "Всё ясно, спасибо!",
+          "en-US": "Alright, thanks!",
+          "ar-SA": "حسناً، شكراً!",
+          "es-ES": "De acuerdo, ¡gracias!",
+          "fr-FR": "Très bien, merci !",
+          "hi-IN": "ठीक है, धन्यवाद!",
+          "pl-PL": "W porządku, dzięki!",
+          "ro-RO": "În regulă, mersi!",
+          "tr-TR": "Pekala, teşekkürler!",
+          "uk-UA": "Все ясно, дякую!",
+          "uz-UZ": "Tushunarli, rahmat!"
+        },
+        "nextStep": "passt"
+      }
+    ],
+    "defaultNext": "passt"
+  },
+  "passt": {
+    "botText": "(Nach der Anprobe) Passt es?",
+    "botTranslation": {
+      "ru-RU": "(После примерки) Подходит?",
+      "en-US": "(After trying on) Does it fit?",
+      "ar-SA": "(بعد القياس) هل يناسبك؟",
+      "es-ES": "(Después de probarse) ¿Le queda bien?",
+      "fr-FR": "(Après l'essayage) Est-ce que ça va ?",
+      "hi-IN": "(पहनकर देखने के बाद) क्या यह फिट बैठता है?",
+      "pl-PL": "(Po przymiarce) Pasuje?",
+      "ro-RO": "(După probă) Vă vine bine?",
+      "tr-TR": "(Denedikten sonra) Oldu mu?",
+      "uk-UA": "(Після примірки) Підходить?",
+      "uz-UZ": "(Kiyib ko'rgandan keyin) Mos keldimi?"
+    },
+    "vocabulary": [
+      {
+        "german": "passen",
+        "translation": {
+          "ru-RU": "подходить (по размеру)",
+          "en-US": "to fit",
+          "ar-SA": "يناسب",
+          "es-ES": "quedar bien",
+          "fr-FR": "aller (taille)",
+          "hi-IN": "फिट बैठना",
+          "pl-PL": "pasować",
+          "ro-RO": "a veni bine",
+          "tr-TR": "uymak / olmak",
+          "uk-UA": "підходити",
+          "uz-UZ": "mos kelmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, es ist leider zu groß. Haben Sie S?",
+        "translation": {
+          "ru-RU": "Нет, она (вещь), к сожалению, слишком велика. У вас есть S?",
+          "en-US": "No, unfortunately it's too big. Do you have S?",
+          "ar-SA": "لا، للأسف إنه كبير جداً. هل لديكم مقاس S؟",
+          "es-ES": "No, lamentablemente es demasiado grande. ¿Tienen la S?",
+          "fr-FR": "Non, c'est malheureusement trop grand. Avez-vous du S ?",
+          "hi-IN": "नहीं, दुर्भाग्य से यह बहुत बड़ा है। क्या आपके पास S है?",
+          "pl-PL": "Nie, niestety jest za duża. Macie S?",
+          "ro-RO": "Nu, din păcate este prea mare. Aveți S?",
+          "tr-TR": "Hayır, maalesef çok büyük. S bedeniniz var mı?",
+          "uk-UA": "Ні, вона, на жаль, завелика. У вас є S?",
+          "uz-UZ": "Yo'q, afsuski u juda katta. Sizda S bormi?"
+        },
+        "nextStep": "kasse_frage"
+      },
+      {
+        "text": "Ja, die Größe ist perfekt. Ich nehme es.",
+        "translation": {
+          "ru-RU": "Да, размер идеальный. Я беру это.",
+          "en-US": "Yes, the size is perfect. I'll take it.",
+          "ar-SA": "نعم، المقاس مثالي. سآخذه.",
+          "es-ES": "Sí, la talla es perfecta. Me lo llevo.",
+          "fr-FR": "Oui, la taille est parfaite. Je le prends.",
+          "hi-IN": "हाँ, आकार सही है। मैं इसे लूँगा।",
+          "pl-PL": "Tak, rozmiar jest idealny. Biorę to.",
+          "ro-RO": "Da, mărimea este perfectă. Îl iau.",
+          "tr-TR": "Evet, beden mükemmel. Bunu alıyorum.",
+          "uk-UA": "Так, розмір ідеальний. Я беру це.",
+          "uz-UZ": "Ha, o'lchami ideal. Men buni olaman."
+        },
+        "nextStep": "kasse_frage"
+      }
+    ],
+    "defaultNext": "kasse_frage"
+  },
+  "kasse_frage": {
+    "botText": "Ja, hier ist eine andere Größe. Möchten Sie noch etwas?",
+    "botTranslation": {
+      "ru-RU": "Да, вот другой размер. Желаете ли Вы еще что-нибудь?",
+      "en-US": "Yes, here is another size. Would you like anything else?",
+      "ar-SA": "نعم، هذا مقاس آخر. هل ترغبين في أي شيء آخر؟",
+      "es-ES": "Sí, aquí hay otra talla. ¿Desea algo más?",
+      "fr-FR": "Oui, voici une autre taille. Désirez-vous autre chose ?",
+      "hi-IN": "हाँ, यहाँ एक और आकार है। क्या आप कुछ और चाहेंगे?",
+      "pl-PL": "Tak, oto inny rozmiar. Czy życzy pani sobie czegoś jeszcze?",
+      "ro-RO": "Da, iată o altă mărime. Mai doriți ceva?",
+      "tr-TR": "Evet, işte başka bir beden. Başka bir şey ister misiniz?",
+      "uk-UA": "Так, ось інший розмір. Бажаєте щось іще?",
+      "uz-UZ": "Ha, mana boshqa o'lcham. Yana biror narsa xohlaysizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Größe",
+        "translation": {
+          "ru-RU": "размер",
+          "en-US": "size",
+          "ar-SA": "مقاس",
+          "es-ES": "talla",
+          "fr-FR": "taille",
+          "hi-IN": "आकार",
+          "pl-PL": "rozmiar",
+          "ro-RO": "mărime",
+          "tr-TR": "beden",
+          "uk-UA": "розмір",
+          "uz-UZ": "o'lcham"
+        }
+      },
+      {
+        "german": "noch etwas",
+        "translation": {
+          "ru-RU": "еще что-нибудь",
+          "en-US": "anything else",
+          "ar-SA": "أي شيء آخر",
+          "es-ES": "algo más",
+          "fr-FR": "autre chose",
+          "hi-IN": "कुछ और",
+          "pl-PL": "coś jeszcze",
+          "ro-RO": "altceva",
+          "tr-TR": "başka bir şey",
+          "uk-UA": "ще щось",
+          "uz-UZ": "yana biror narsa"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, das ist alles. Wo ist die Kasse?",
+        "translation": {
+          "ru-RU": "Нет, это всё. Где касса?",
+          "en-US": "No, that's all. Where is the checkout?",
+          "ar-SA": "لا، هذا كل شيء. أين الخزينة؟",
+          "es-ES": "No, eso es todo. ¿Dónde está la caja?",
+          "fr-FR": "Non, c'est tout. Où est la caisse ?",
+          "hi-IN": "नहीं, बस इतना ही। चेकआउट कहाँ है?",
+          "pl-PL": "Nie, to wszystko. Gdzie jest kasa?",
+          "ro-RO": "Nu, asta-i tot. Unde este casa?",
+          "tr-TR": "Hayır, hepsi bu. Kasa nerede?",
+          "uk-UA": "Ні, це все. Де каса?",
+          "uz-UZ": "Yo'q, hammasi shu. Kassa qayerda?"
+        },
+        "nextStep": "ausgang"
+      },
+      {
+        "text": "Nein, danke. Das reicht mir.",
+        "translation": {
+          "ru-RU": "Нет, спасибо. Этого мне достаточно.",
+          "en-US": "No, thanks. That's enough for me.",
+          "ar-SA": "لا، شكراً. هذا يكفيني.",
+          "es-ES": "No, gracias. Con esto me basta.",
+          "fr-FR": "Non, merci. Ça me suffit.",
+          "hi-IN": "नहीं, धन्यवाद। मेरे लिए इतना काफी है।",
+          "pl-PL": "Nie, dziękuję. To mi wystarczy.",
+          "ro-RO": "Nu, mulțumesc. Îmi ajunge.",
+          "tr-TR": "Hayır, teşekkürler. Bu bana yeter.",
+          "uk-UA": "Ні, дякую. Цього мені достатньо.",
+          "uz-UZ": "Yo'q, rahmat. Bu menga yetadi."
+        },
+        "nextStep": "ausgang"
+      }
+    ],
+    "defaultNext": "ausgang"
+  },
+  "ausgang": {
+    "botText": "Die Kasse ist vorne am Ausgang.",
+    "botTranslation": {
+      "ru-RU": "Касса впереди на выходе.",
+      "en-US": "The checkout is at the front by the exit.",
+      "ar-SA": "الخزينة في الأمام عند المخرج.",
+      "es-ES": "La caja está delante, en la salida.",
+      "fr-FR": "La caisse est devant, à la sortie.",
+      "hi-IN": "चेकआउट सामने निकास के पास है।",
+      "pl-PL": "Kasa jest z przodu przy wyjściu.",
+      "ro-RO": "Casa este în față la ieșire.",
+      "tr-TR": "Kasa önde, çıkışta.",
+      "uk-UA": "Каса спереду на виході.",
+      "uz-UZ": "Kassa oldinda chiqish joyida."
+    },
+    "vocabulary": [
+      {
+        "german": "die Kasse",
+        "translation": {
+          "ru-RU": "касса",
+          "en-US": "checkout / cash register",
+          "ar-SA": "الخزينة",
+          "es-ES": "caja",
+          "fr-FR": "caisse",
+          "hi-IN": "चेकआउट",
+          "pl-PL": "kasa",
+          "ro-RO": "casa de marcat",
+          "tr-TR": "kasa",
+          "uk-UA": "каса",
+          "uz-UZ": "kassa"
+        }
+      },
+      {
+        "german": "der Ausgang",
+        "translation": {
+          "ru-RU": "выход",
+          "en-US": "exit",
+          "ar-SA": "مخرج",
+          "es-ES": "salida",
+          "fr-FR": "sortie",
+          "hi-IN": "निकास",
+          "pl-PL": "wyjście",
+          "ro-RO": "ieșire",
+          "tr-TR": "çıkış",
+          "uk-UA": "вихід",
+          "uz-UZ": "chiqish"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, danke.",
+        "translation": {
+          "ru-RU": "Всё ясно, спасибо.",
+          "en-US": "Alright, thanks.",
+          "ar-SA": "حسناً، شكراً.",
+          "es-ES": "De acuerdo, gracias.",
+          "fr-FR": "Très bien, merci.",
+          "hi-IN": "ठीक है, धन्यवाद।",
+          "pl-PL": "Jasne, dziękuję.",
+          "ro-RO": "În regulă, mersi.",
+          "tr-TR": "Tamam, teşekkürler.",
+          "uk-UA": "Все ясно, дякую.",
+          "uz-UZ": "Tushunarli, rahmat."
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Super, danke! Einen schönen Tag!",
+        "translation": {
+          "ru-RU": "Супер, спасибо! Хорошего дня!",
+          "en-US": "Super, thanks! Have a nice day!",
+          "ar-SA": "رائع، شكراً! أتمنى لك يوماً سعيداً!",
+          "es-ES": "¡Súper, gracias! ¡Que tenga un buen día!",
+          "fr-FR": "Super, merci ! Bonne journée !",
+          "hi-IN": "सुपर, धन्यवाद! आपका दिन शुभ हो!",
+          "pl-PL": "Super, dzięki! Miłego dnia!",
+          "ro-RO": "Super, mersi! O zi frumoasă!",
+          "tr-TR": "Süper, teşekkürler! İyi günler!",
+          "uk-UA": "Супер, дякую! Гарного дня!",
+          "uz-UZ": "Super, rahmat! Yaxshi kun tilayman!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Gleichfalls, auf Wiedersehen!",
+    "botTranslation": {
+      "ru-RU": "Взаимно, до свидания!",
+      "en-US": "Likewise, goodbye!",
+      "ar-SA": "ولك أيضاً، وداعاً!",
+      "es-ES": "¡Igualmente, adiós!",
+      "fr-FR": "Pareillement, au revoir !",
+      "hi-IN": "आपको भी, अलविदा!",
+      "pl-PL": "Wzajemnie, do widzenia!",
+      "ro-RO": "Asemenea, la revedere!",
+      "tr-TR": "Size de, hoşça kalın!",
+      "uk-UA": "Навзаєм, до побачення!",
+      "uz-UZ": "Sizga ham, xayr!"
+    },
+    "vocabulary": [
+      {
+        "german": "gleichfalls",
+        "translation": {
+          "ru-RU": "взаимно",
+          "en-US": "likewise / same to you",
+          "ar-SA": "وبالمثل",
+          "es-ES": "igualmente",
+          "fr-FR": "pareillement",
+          "hi-IN": "आपको भी",
+          "pl-PL": "wzajemnie",
+          "ro-RO": "asemenea",
+          "tr-TR": "size de / bilmukabele",
+          "uk-UA": "навзаєм",
+          "uz-UZ": "sizga ham"
+        }
+      },
+      {
+        "german": "auf Wiedersehen",
+        "translation": {
+          "ru-RU": "до свидания",
+          "en-US": "goodbye",
+          "ar-SA": "إلى اللقاء",
+          "es-ES": "adiós",
+          "fr-FR": "au revoir",
+          "hi-IN": "अलविदा",
+          "pl-PL": "do widzenia",
+          "ro-RO": "la revedere",
+          "tr-TR": "hoşça kalın",
+          "uk-UA": "до побачення",
+          "uz-UZ": "xayr"
+        }
+      }
+    ],
+    "options": [],
+    "defaultNext": null
+  }
+}

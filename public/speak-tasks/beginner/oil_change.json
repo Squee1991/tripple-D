@@ -1,0 +1,533 @@
+{
+  "start": {
+    "botText": "Guten Tag! Wie kann ich Ihnen helfen?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Чем я могу Вам помочь?",
+      "en-US": "Good afternoon! How can I help you?",
+      "ar-SA": "طاب يومك! كيف يمكنني مساعدتك؟",
+      "es-ES": "¡Buenas tardes! ¿En qué puedo ayudarle?",
+      "fr-FR": "Bonjour ! Comment puis-je vous aider ?",
+      "hi-IN": "शुभ दोपहर! मैं आपकी कैसे मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! W czym mogę pomóc?",
+      "ro-RO": "Bună ziua! Cu ce vă pot ajuta?",
+      "tr-TR": "İyi günler! Size nasıl yardımcı olabilirim?",
+      "uk-UA": "Добрий день! Чим я можу Вам допомогти?",
+      "uz-UZ": "Xayrli kun! Sizga qanday yordam bera olaman?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Ölwechsel",
+        "translation": {
+          "ru-RU": "замена масла",
+          "en-US": "oil change",
+          "ar-SA": "تغيير الزيت",
+          "es-ES": "cambio de aceite",
+          "fr-FR": "vidange",
+          "hi-IN": "तेल बदलना",
+          "pl-PL": "wymiana oleju",
+          "ro-RO": "schimbul de ulei",
+          "tr-TR": "yağ değişimi",
+          "uk-UA": "заміна мастила",
+          "uz-UZ": "moy almashtirish"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hallo! Ich möchte das Öl in meinem Auto wechseln.",
+        "translation": {
+          "ru-RU": "Здравствуйте! Я хочу поменять масло в моей машине.",
+          "en-US": "Hello! I would like to change the oil in my car.",
+          "ar-SA": "مرحباً! أود تغيير الزيت في سيارتي.",
+          "es-ES": "¡Hola! Me gustaría cambiar el aceite de mi coche.",
+          "fr-FR": "Bonjour ! Je voudrais changer l'huile de ma voiture.",
+          "hi-IN": "नमस्ते! मैं अपनी कार का तेल बदलना चाहता हूँ।",
+          "pl-PL": "Dzień dobry! Chciałbym wymienić olej w samochodzie.",
+          "ro-RO": "Bună! Aș dori să schimb uleiul la mașina mea.",
+          "tr-TR": "Merhaba! Arabamın yağını değiştirmek istiyorum.",
+          "uk-UA": "Добрий день! Я хочу поміняти мастило в моїй машині.",
+          "uz-UZ": "Salom! Mashinamdagi moyni almashtirmoqchiman."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Guten Tag! Ich brauche einen Ölwechsel für mein Auto.",
+        "translation": {
+          "ru-RU": "Добрый день! Мне нужна замена масла для моей машины.",
+          "en-US": "Good afternoon! I need an oil change for my car.",
+          "ar-SA": "طاب يومك! أحتاج إلى تغيير زيت سيارتي.",
+          "es-ES": "¡Buenas tardes! Necesito un cambio de aceite para mi coche.",
+          "fr-FR": "Bonjour ! J'ai besoin d'une vidange pour ma voiture.",
+          "hi-IN": "शुभ दोपहर! मुझे अपनी कार के लिए तेल बदलवाने की ज़रूरत है।",
+          "pl-PL": "Dzień dobry! Potrzebuję wymiany oleju w moim samochodzie.",
+          "ro-RO": "Bună ziua! Am nevoie de un schimb de ulei pentru mașina mea.",
+          "tr-TR": "İyi günler! Arabam için yağ değişimine ihtiyacım var.",
+          "uk-UA": "Добрий день! Мені потрібна заміна мастила для моєї машини.",
+          "uz-UZ": "Xayrli kun! Mashinam uchun moy almashtirish kerak."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Alles klar. Welches Auto haben Sie denn?",
+    "botTranslation": {
+      "ru-RU": "Все ясно. Какая у Вас машина?",
+      "en-US": "All right. Which car do you have?",
+      "ar-SA": "حسناً. ما هي السيارة التي لديك؟",
+      "es-ES": "De acuerdo. ¿Qué coche tiene?",
+      "fr-FR": "Très bien. Quelle voiture avez-vous ?",
+      "hi-IN": "ठीक है। आपके पास कौन सी कार है?",
+      "pl-PL": "Wszystko jasne. Jaki ma Pan samochód?",
+      "ro-RO": "Am înțeles. Ce mașină aveți?",
+      "tr-TR": "Tamam. Hangi arabanız var?",
+      "uk-UA": "Усе ясно. Яка у Вас машина?",
+      "uz-UZ": "Tushunarli. Qanday mashinangiz bor?"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Ich fahre einen VW Golf.",
+        "translation": {
+          "ru-RU": "Я вожу VW Golf.",
+          "en-US": "I drive a VW Golf.",
+          "ar-SA": "أنا أقود سيارة فولكس فاجن جولف.",
+          "es-ES": "Conduzco un VW Golf.",
+          "fr-FR": "Je conduis une VW Golf.",
+          "hi-IN": "मैं वीडब्ल्यू गोल्फ चलाता हूँ।",
+          "pl-PL": "Jeżdżę VW Golfem.",
+          "ro-RO": "Conduc un VW Golf.",
+          "tr-TR": "Bir VW Golf kullanıyorum.",
+          "uk-UA": "Я воджу VW Golf.",
+          "uz-UZ": "Men VW Golf haydayman."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Mein Wagen ist ein schwarzer BMW.",
+        "translation": {
+          "ru-RU": "Моя машина — черный BMW.",
+          "en-US": "My car is a black BMW.",
+          "ar-SA": "سيارتي هي سيارة بي إم دبليو سوداء.",
+          "es-ES": "Mi coche es un BMW negro.",
+          "fr-FR": "Ma voiture est une BMW noire.",
+          "hi-IN": "मेरी कार एक काली बीएमडब्ल्यू है।",
+          "pl-PL": "Mój samochód to czarne BMW.",
+          "ro-RO": "Mașina mea este un BMW negru.",
+          "tr-TR": "Arabam siyah bir BMW.",
+          "uk-UA": "Моя машина — чорний BMW.",
+          "uz-UZ": "Mashinam qora BMW."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Gut. Der Ölwechsel dauert ungefähr 30 Minuten.",
+    "botTranslation": {
+      "ru-RU": "Хорошо. Замена масла займет примерно 30 минут.",
+      "en-US": "Good. The oil change will take about 30 minutes.",
+      "ar-SA": "جيد. تغيير الزيت سيستغرق حوالي 30 دقيقة.",
+      "es-ES": "Bien. El cambio de aceite tardará unos 30 minutos.",
+      "fr-FR": "Bien. La vidange prend environ 30 minutes.",
+      "hi-IN": "अच्छा। तेल बदलने में लगभग 30 मिनट लगेंगे।",
+      "pl-PL": "Dobrze. Wymiana oleju potrwa około 30 minut.",
+      "ro-RO": "Bine. Schimbul de ulei durează aproximativ 30 de minute.",
+      "tr-TR": "Güzel. Yağ değişimi yaklaşık 30 dakika sürecek.",
+      "uk-UA": "Добре. Заміна мастила займе приблизно 30 хвилин.",
+      "uz-UZ": "Yaxshi. Moy almashtirish taxminan 30 daqiqa davom etadi."
+    },
+    "vocabulary": [
+      {
+        "german": "dauern",
+        "translation": {
+          "ru-RU": "длиться",
+          "en-US": "take",
+          "ar-SA": "يستغرق",
+          "es-ES": "tardar",
+          "fr-FR": "durer",
+          "hi-IN": "समय लगना",
+          "pl-PL": "trwać",
+          "ro-RO": "a dura",
+          "tr-TR": "sürmek",
+          "uk-UA": "тривати",
+          "uz-UZ": "davom etmoq"
+        }
+      },
+      {
+        "german": "ungefähr",
+        "translation": {
+          "ru-RU": "примерно",
+          "en-US": "about",
+          "ar-SA": "حوالي",
+          "es-ES": "aproximadamente",
+          "fr-FR": "environ",
+          "hi-IN": "लगभग",
+          "pl-PL": "około",
+          "ro-RO": "aproximativ",
+          "tr-TR": "yaklaşık",
+          "uk-UA": "приблизно",
+          "uz-UZ": "taxminan"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das ist perfekt! Dann warte ich gerne hier.",
+        "translation": {
+          "ru-RU": "Это идеально! Тогда я с удовольствием подожду здесь.",
+          "en-US": "That is perfect! Then I'll gladly wait here.",
+          "ar-SA": "هذا ممتاز! إذن سأنتظر هنا بكل سرور.",
+          "es-ES": "¡Eso es perfecto! Entonces esperaré aquí con gusto.",
+          "fr-FR": "C'est parfait ! Alors je vais attendre ici avec plaisir.",
+          "hi-IN": "यह एकदम सही है! तो मैं खुशी से यहाँ प्रतीक्षा करूँगा।",
+          "pl-PL": "To idealnie! Z przyjemnością tu poczekam.",
+          "ro-RO": "Asta este perfect! Atunci voi aștepta aici cu plăcere.",
+          "tr-TR": "Bu mükemmel! O zaman memnuniyetle burada beklerim.",
+          "uk-UA": "Це ідеально! Тоді я із задоволенням почекаю тут.",
+          "uz-UZ": "Bu ajoyib! Unda bajonidil shu yerda kutaman."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Wunderbar, 30 Minuten passen mir sehr gut.",
+        "translation": {
+          "ru-RU": "Замечательно, 30 минут мне очень подходят.",
+          "en-US": "Wonderful, 30 minutes suits me very well.",
+          "ar-SA": "رائع، 30 دقيقة تناسبني جداً.",
+          "es-ES": "Maravilloso, 30 minutos me vienen muy bien.",
+          "fr-FR": "Merveilleux, 30 minutes me conviennent très bien.",
+          "hi-IN": "शानदार, 30 मिनट मेरे लिए बहुत अनुकूल हैं।",
+          "pl-PL": "Wspaniale, 30 minut bardzo mi pasuje.",
+          "ro-RO": "Minunat, 30 de minute îmi convine foarte bine.",
+          "tr-TR": "Harika, 30 dakika bana çok uygun.",
+          "uk-UA": "Чудово, 30 хвилин мені дуже підходять.",
+          "uz-UZ": "Ajoyib, 30 daqiqa menga juda mos keladi."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Sollen wir auch Ihre Reifen kontrollieren?",
+    "botTranslation": {
+      "ru-RU": "Нам также проверить Ваши шины?",
+      "en-US": "Should we also check your tires?",
+      "ar-SA": "هل يجب أن نتحقق من إطارات سيارتك أيضاً؟",
+      "es-ES": "¿Deberíamos revisar también sus neumáticos?",
+      "fr-FR": "Devons-nous également vérifier vos pneus ?",
+      "hi-IN": "क्या हमें आपके टायर भी चेक करने चाहिए?",
+      "pl-PL": "Czy powinniśmy również sprawdzić Pana opony?",
+      "ro-RO": "Ar trebui să vă verificăm și anvelopele?",
+      "tr-TR": "Lastiklerinizi de kontrol edelim mi?",
+      "uk-UA": "Нам також перевірити Ваші шини?",
+      "uz-UZ": "Shinalaringizni ham tekshirib qo'yaylikmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Reifen",
+        "translation": {
+          "ru-RU": "шина",
+          "en-US": "tire",
+          "ar-SA": "إطار",
+          "es-ES": "neumático",
+          "fr-FR": "pneu",
+          "hi-IN": "टायर",
+          "pl-PL": "opona",
+          "ro-RO": "anvelopă",
+          "tr-TR": "lastik",
+          "uk-UA": "шина",
+          "uz-UZ": "shina"
+        }
+      },
+      {
+        "german": "kontrollieren",
+        "translation": {
+          "ru-RU": "проверять",
+          "en-US": "check",
+          "ar-SA": "يفحص",
+          "es-ES": "comprobar",
+          "fr-FR": "contrôler",
+          "hi-IN": "जांच करना",
+          "pl-PL": "sprawdzać",
+          "ro-RO": "a verifica",
+          "tr-TR": "kontrol etmek",
+          "uk-UA": "перевіряти",
+          "uz-UZ": "tekshirmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, bitte. Das ist eine gute Idee.",
+        "translation": {
+          "ru-RU": "Да, пожалуйста. Это хорошая идея.",
+          "en-US": "Yes, please. That's a good idea.",
+          "ar-SA": "نعم، من فضلك. هذه فكرة جيدة.",
+          "es-ES": "Sí, por favor. Es una buena idea.",
+          "fr-FR": "Oui, s'il vous plaît. C'est une bonne idée.",
+          "hi-IN": "हाँ, कृपया। यह एक अच्छा विचार है।",
+          "pl-PL": "Tak, poproszę. To dobry pomysł.",
+          "ro-RO": "Da, vă rog. Este o idee bună.",
+          "tr-TR": "Evet, lütfen. Bu iyi bir fikir.",
+          "uk-UA": "Так, будь ласка. Це гарна ідея.",
+          "uz-UZ": "Ha, iltimos. Bu yaxshi fikr."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Gerne, prüfen Sie bitte auch den Luftdruck.",
+        "translation": {
+          "ru-RU": "Охотно, проверьте, пожалуйста, также давление воздуха.",
+          "en-US": "Gladly, please also check the tire pressure.",
+          "ar-SA": "بكل سرور، يرجى التحقق من ضغط الهواء أيضاً.",
+          "es-ES": "Con gusto, por favor revise también la presión del aire.",
+          "fr-FR": "Volontiers, veuillez également vérifier la pression des pneus.",
+          "hi-IN": "खुशी से, कृपया हवा का दबाव भी जांचें।",
+          "pl-PL": "Chętnie, proszę sprawdzić również ciśnienie.",
+          "ro-RO": "Cu plăcere, vă rog să verificați și presiunea aerului.",
+          "tr-TR": "Memnuniyetle, lütfen hava basıncını da kontrol edin.",
+          "uk-UA": "Охоче, перевірте, будь ласка, також тиск повітря.",
+          "uz-UZ": "Bajonidil, havo bosimini ham tekshirib ko'ring."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Machen wir. Brauche ich noch Ihren Fahrzeugschein?",
+    "botTranslation": {
+      "ru-RU": "Сделаем. Мне еще нужен Ваш техпаспорт?",
+      "en-US": "We'll do that. Do I also need your vehicle registration certificate?",
+      "ar-SA": "سنفعل ذلك. هل أحتاج أيضاً إلى رخصة قيادتك؟",
+      "es-ES": "Lo haremos. ¿Necesito también su permiso de circulación?",
+      "fr-FR": "On s'en occupe. Ai-je encore besoin de votre carte grise ?",
+      "hi-IN": "हम करेंगे। क्या मुझे आपके वाहन पंजीकरण प्रमाण पत्र की भी आवश्यकता है?",
+      "pl-PL": "Zrobimy to. Czy potrzebuję jeszcze Pana dowodu rejestracyjnego?",
+      "ro-RO": "O vom face. Mai am nevoie de certificatul de înmatriculare?",
+      "tr-TR": "Yaparız. Araç ruhsatınıza da ihtiyacım var mı?",
+      "uk-UA": "Зробимо. Мені ще потрібен Ваш техпаспорт?",
+      "uz-UZ": "Qilamiz. Menga texnik pasportingiz ham kerakmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Fahrzeugschein",
+        "translation": {
+          "ru-RU": "техпаспорт",
+          "en-US": "vehicle registration certificate",
+          "ar-SA": "رخصة المركبة",
+          "es-ES": "permiso de circulación",
+          "fr-FR": "carte grise",
+          "hi-IN": "वाहन पंजीकरण",
+          "pl-PL": "dowód rejestracyjny",
+          "ro-RO": "certificat de înmatriculare",
+          "tr-TR": "ruhsat",
+          "uk-UA": "техпаспорт",
+          "uz-UZ": "texnik pasport"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, natürlich. Hier ist er.",
+        "translation": {
+          "ru-RU": "Да, конечно. Вот он.",
+          "en-US": "Yes, of course. Here it is.",
+          "ar-SA": "نعم، بالطبع. ها هو.",
+          "es-ES": "Sí, por supuesto. Aquí tiene.",
+          "fr-FR": "Oui, bien sûr. Le voici.",
+          "hi-IN": "हाँ, बिल्कुल। यह लीजिये।",
+          "pl-PL": "Tak, oczywiście. Proszę bardzo.",
+          "ro-RO": "Da, desigur. Iată-l.",
+          "tr-TR": "Evet, tabii ki. Buyurun.",
+          "uk-UA": "Так, звісно. Ось він.",
+          "uz-UZ": "Ha, albatta. Mana u."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Bitte schön, hier ist das Dokument.",
+        "translation": {
+          "ru-RU": "Пожалуйста, вот документ.",
+          "en-US": "Here you go, here is the document.",
+          "ar-SA": "تفضل، ها هي الوثيقة.",
+          "es-ES": "Aquí tiene, aquí está el documento.",
+          "fr-FR": "S'il vous plaît, voici le document.",
+          "hi-IN": "कृपया लीजिये, यह दस्तावेज़ है।",
+          "pl-PL": "Proszę, oto dokument.",
+          "ro-RO": "Vă rog, aici este documentul.",
+          "tr-TR": "Buyurun, belge burada.",
+          "uk-UA": "Будь ласка, ось документ.",
+          "uz-UZ": "Marhamat, mana hujjat."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Danke. Geben Sie mir bitte auch noch Ihren Autoschlüssel.",
+    "botTranslation": {
+      "ru-RU": "Спасибо. Дайте мне, пожалуйста, еще и Ваш ключ от машины.",
+      "en-US": "Thank you. Please also give me your car key.",
+      "ar-SA": "شكراً. يرجى إعطائي مفتاح سيارتك أيضاً.",
+      "es-ES": "Gracias. Deme también la llave de su coche, por favor.",
+      "fr-FR": "Merci. Donnez-moi aussi votre clé de voiture, s'il vous plaît.",
+      "hi-IN": "धन्यवाद। कृपया मुझे अपनी कार की चाबी भी दें।",
+      "pl-PL": "Dziękuję. Proszę mi jeszcze dać kluczyk do samochodu.",
+      "ro-RO": "Mulțumesc. Vă rog să-mi dați și cheia mașinii.",
+      "tr-TR": "Teşekkürler. Lütfen araba anahtarınızı da verin.",
+      "uk-UA": "Дякую. Дайте мені, будь ласка, ще й Ваш ключ від машини.",
+      "uz-UZ": "Rahmat. Iltimos, menga mashina kalitingizni ham bering."
+    },
+    "vocabulary": [
+      {
+        "german": "der Autoschlüssel",
+        "translation": {
+          "ru-RU": "ключ от машины",
+          "en-US": "car key",
+          "ar-SA": "مفتاح السيارة",
+          "es-ES": "llave del coche",
+          "fr-FR": "clé de voiture",
+          "hi-IN": "कार की चाबी",
+          "pl-PL": "kluczyk do samochodu",
+          "ro-RO": "cheia mașinii",
+          "tr-TR": "araba anahtarı",
+          "uk-UA": "ключ від машини",
+          "uz-UZ": "mashina kaliti"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hier ist der Schlüssel.",
+        "translation": {
+          "ru-RU": "Вот ключ.",
+          "en-US": "Here is the key.",
+          "ar-SA": "ها هو المفتاح.",
+          "es-ES": "Aquí está la llave.",
+          "fr-FR": "Voici la clé.",
+          "hi-IN": "यहाँ चाबी है।",
+          "pl-PL": "Oto kluczyk.",
+          "ro-RO": "Aici este cheia.",
+          "tr-TR": "İşte anahtar.",
+          "uk-UA": "Ось ключ.",
+          "uz-UZ": "Mana kalit."
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Kein Problem, bitte schön.",
+        "translation": {
+          "ru-RU": "Без проблем, пожалуйста.",
+          "en-US": "No problem, here you go.",
+          "ar-SA": "لا مشكلة، تفضل.",
+          "es-ES": "Ningún problema, aquí tiene.",
+          "fr-FR": "Pas de problème, s'il vous plaît.",
+          "hi-IN": "कोई समस्या नहीं, कृपया लीजिये।",
+          "pl-PL": "Nie ma problemu, proszę bardzo.",
+          "ro-RO": "Nicio problemă, poftiți.",
+          "tr-TR": "Sorun değil, buyurun.",
+          "uk-UA": "Без проблем, будь ласка.",
+          "uz-UZ": "Muammo yo'q, marhamat."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Alles klar, wir fangen sofort an. Bis gleich!",
+    "botTranslation": {
+      "ru-RU": "Все ясно, мы начинаем прямо сейчас. До скорого!",
+      "en-US": "All right, we'll start right away. See you soon!",
+      "ar-SA": "حسناً، سنبدأ فوراً. أراك قريباً!",
+      "es-ES": "De acuerdo, empezamos de inmediato. ¡Hasta ahora!",
+      "fr-FR": "Très bien, nous commençons tout de suite. À tout à l'heure !",
+      "hi-IN": "ठीक है, हम तुरंत शुरू करते हैं। जल्द ही मिलते हैं!",
+      "pl-PL": "Wszystko jasne, zaczynamy natychmiast. Do zobaczenia zaraz!",
+      "ro-RO": "Am înțeles, începem imediat. Pe curând!",
+      "tr-TR": "Tamam, hemen başlıyoruz. Görüşmek üzere!",
+      "uk-UA": "Усе ясно, ми починаємо прямо зараз. До скорої зустрічі!",
+      "uz-UZ": "Tushunarli, biz darhol boshlaymiz. Ko'rishguncha!"
+    },
+    "vocabulary": [
+      {
+        "german": "warten",
+        "translation": {
+          "ru-RU": "ждать",
+          "en-US": "wait",
+          "ar-SA": "ينتظر",
+          "es-ES": "esperar",
+          "fr-FR": "attendre",
+          "hi-IN": "प्रतीक्षा करना",
+          "pl-PL": "czekać",
+          "ro-RO": "a aștepta",
+          "tr-TR": "beklemek",
+          "uk-UA": "чекати",
+          "uz-UZ": "kutmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Vielen Dank für Ihre Hilfe! Bis gleich.",
+        "translation": {
+          "ru-RU": "Большое спасибо за Вашу помощь! До скорого.",
+          "en-US": "Thank you very much for your help! See you soon.",
+          "ar-SA": "شكراً جزيلاً على مساعدتك! أراك قريباً.",
+          "es-ES": "¡Muchas gracias por su ayuda! Hasta ahora.",
+          "fr-FR": "Merci beaucoup pour votre aide ! À tout à l'heure.",
+          "hi-IN": "आपकी मदद के लिए बहुत-बहुत धन्यवाद! जल्द ही मिलते हैं।",
+          "pl-PL": "Bardzo dziękuję za pomoc! Do zobaczenia.",
+          "ro-RO": "Vă mulțumesc mult pentru ajutor! Pe curând.",
+          "tr-TR": "Yardımınız için çok teşekkür ederim! Görüşmek üzere.",
+          "uk-UA": "Дуже дякую за Вашу допомогу! До скорої зустрічі.",
+          "uz-UZ": "Yordamingiz uchun katta rahmat! Ko'rishguncha."
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Super, danke Ihnen! Bis gleich.",
+        "translation": {
+          "ru-RU": "Супер, спасибо Вам! До скорого.",
+          "en-US": "Super, thank you! See you soon.",
+          "ar-SA": "رائع، شكراً لك! أراك قريباً.",
+          "es-ES": "Súper, ¡gracias! Hasta ahora.",
+          "fr-FR": "Super, merci ! À tout à l'heure.",
+          "hi-IN": "सुपर, धन्यवाद! जल्द ही मिलते हैं।",
+          "pl-PL": "Super, dziękuję! Do zobaczenia.",
+          "ro-RO": "Super, vă mulțumesc! Pe curând.",
+          "tr-TR": "Harika, teşekkürler! Görüşmek üzere.",
+          "uk-UA": "Супер, дякую Вам! До скорої зустрічі.",
+          "uz-UZ": "Zo'r, rahmat sizga! Ko'rishguncha."
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор окончен.",
+      "en-US": "The conversation is over.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत खत्म हो गई है।",
+      "pl-PL": "Rozmowa zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмова закінчена.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

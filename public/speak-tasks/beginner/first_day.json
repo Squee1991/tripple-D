@@ -1,0 +1,589 @@
+{
+  "start": {
+    "botText": "Guten Morgen! Herzlich willkommen in unserer Firma. Wie war dein Weg hierher?",
+    "botTranslation": {
+      "ru-RU": "Доброе утро! Добро пожаловать в нашу фирму. Как ты добрался?",
+      "en-US": "Good morning! Welcome to our company. How was your journey here?",
+      "ar-SA": "صباح الخير! مرحبًا بك في شركتنا. كيف كان طريقك إلى هنا؟",
+      "es-ES": "¡Buenos días! Bienvenido a nuestra empresa. ¿Qué tal el camino?",
+      "fr-FR": "Bonjour ! Bienvenue dans notre entreprise. Comment s'est passé ton trajet ?",
+      "hi-IN": "शुभ प्रभात! हमारी कंपनी में आपका स्वागत है। आपका यहाँ तक का रास्ता कैसा रहा?",
+      "pl-PL": "Dzień dobry! Witamy w naszej firmie. Jak minęła droga?",
+      "ro-RO": "Bună dimineața! Bun venit în compania noastră. Cum a fost drumul până aici?",
+      "tr-TR": "Günaydın! Şirketimize hoş geldiniz. Buraya yolculuğunuz nasıl geçti?",
+      "uk-UA": "Доброго ранку! Ласкаво просимо до нашої фірми. Як ти добрався?",
+      "uz-UZ": "Xayrli tong! Firmamizga xush kelibsiz. Bu yerga kelish qanday bo'ldi?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Arbeitstag",
+        "translation": {
+          "ru-RU": "рабочий день",
+          "en-US": "working day",
+          "ar-SA": "يوم عمل",
+          "es-ES": "día laborable",
+          "fr-FR": "jour de travail",
+          "hi-IN": "काम का दिन",
+          "pl-PL": "dzień roboczy",
+          "ro-RO": "zi de lucru",
+          "tr-TR": "iş günü",
+          "uk-UA": "робочий день",
+          "uz-UZ": "ish kuni"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Morgen! Vielen Dank. Der Weg war sehr einfach und kurz.",
+        "translation": {
+          "ru-RU": "Доброе утро! Большое спасибо. Дорога была очень простой и короткой.",
+          "en-US": "Good morning! Thank you very much. The way was very easy and short.",
+          "ar-SA": "صباح الخير! شكراً جزيلاً. الطريق كان سهلاً وقصيراً جداً.",
+          "es-ES": "¡Buenos días! Muchas gracias. El camino ha sido muy fácil y corto.",
+          "fr-FR": "Bonjour ! Merci beaucoup. Le trajet était très simple et court.",
+          "hi-IN": "शुभ प्रभात! बहुत-बहुत धन्यवाद। रास्ता बहुत आसान और छोटा था।",
+          "pl-PL": "Dzień dobry! Bardzo dziękuję. Droga była bardzo prosta i krótka.",
+          "ro-RO": "Bună dimineața! Mulțumesc mult. Drumul a fost foarte ușor și scurt.",
+          "tr-TR": "Günaydın! Çok teşekkürler. Yol çok kolay ve kısaydı.",
+          "uk-UA": "Доброго ранку! Дуже дякую. Дорога була дуже простою і короткою.",
+          "uz-UZ": "Xayrli tong! Katta rahmat. Yo'l juda oson va qisqa bo'ldi."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo! Danke schön. Ich bin mit dem Bus gekommen, das war ganz entspannt.",
+        "translation": {
+          "ru-RU": "Привет! Спасибо большое. Я приехал на автобусе, это было очень спокойно.",
+          "en-US": "Hello! Thank you. I came by bus, it was very relaxing.",
+          "ar-SA": "مرحباً! شكرًا لك. لقد أتيت بالحافلة، كان الأمر مريحاً للغاية.",
+          "es-ES": "¡Hola! Muchas gracias. He venido en autobús, ha sido muy relajado.",
+          "fr-FR": "Salut ! Merci bien. Je suis venu en bus, c'était très détendu.",
+          "hi-IN": "नमस्ते! धन्यवाद। मैं बस से आया हूँ, यात्रा काफी आरामदायक रही।",
+          "pl-PL": "Cześć! Dziękuję bardzo. Przyjechałem autobusem, było całkiem spokojnie.",
+          "ro-RO": "Bună! Mulțumesc. Am venit cu autobuzul, a fost foarte relaxant.",
+          "tr-TR": "Merhaba! Teşekkür ederim. Otobüsle geldim, oldukça rahat geçti.",
+          "uk-UA": "Привіт! Дуже дякую. Я приїхав автобусом, це було дуже спокійно.",
+          "uz-UZ": "Salom! Rahmat. Avtobusda keldim, hammasi tinch o'tdi."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Das freut mich. Wir machen jetzt einen Rundgang und ich erkläre die Regeln.",
+    "botTranslation": {
+      "ru-RU": "Это меня радует. Мы сейчас сделаем обход, и я объясню правила.",
+      "en-US": "I'm glad to hear that. We will do a tour now and I will explain the rules.",
+      "ar-SA": "هذا يسعدني. سنقوم بجولة الآن وسأشرح القوانين.",
+      "es-ES": "Me alegro. Ahora vamos a hacer un recorrido y te explicaré las normas.",
+      "fr-FR": "Ravi de l'entendre. Nous allons faire le tour maintenant et je vais t'expliquer les règles.",
+      "hi-IN": "मुझे खुशी हुई। अब हम एक चक्कर लगाएंगे और मैं नियमों को समझाऊंगा।",
+      "pl-PL": "Cieszy mnie to. Zrobimy teraz obchód, a ja wyjaśnię zasady.",
+      "ro-RO": "Mă bucur. Acum vom face un tur și voi explica regulile.",
+      "tr-TR": "Buna sevindim. Şimdi bir tur atacağız ve kuralları açıklayacağım.",
+      "uk-UA": "Це мене радує. Ми зараз зробимо обхід, і я поясню правила.",
+      "uz-UZ": "Bundan xursandman. Hozir aylanib chiqamiz va men qoidalarni tushuntiraman."
+    },
+    "vocabulary": [
+      {
+        "german": "die Regeln",
+        "translation": {
+          "ru-RU": "правила",
+          "en-US": "rules",
+          "ar-SA": "القوانين",
+          "es-ES": "normas / reglas",
+          "fr-FR": "règles",
+          "hi-IN": "नियम",
+          "pl-PL": "zasady",
+          "ro-RO": "reguli",
+          "tr-TR": "kurallar",
+          "uk-UA": "правила",
+          "uz-UZ": "qoidalar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar. Ich bin bereit.",
+        "translation": {
+          "ru-RU": "Всё понятно. Я готов.",
+          "en-US": "All right. I am ready.",
+          "ar-SA": "كل شيء واضح. أنا مستعد.",
+          "es-ES": "Entendido. Estoy listo.",
+          "fr-FR": "D'accord. Je suis prêt.",
+          "hi-IN": "ठीक है। मैं तैयार हूँ।",
+          "pl-PL": "Wszystko jasne. Jestem gotowy.",
+          "ro-RO": "Am înțeles. Sunt gata.",
+          "tr-TR": "Anlaşıldı. Hazırım.",
+          "uk-UA": "Все зрозуміло. Я готовий.",
+          "uz-UZ": "Tushunarli. Men tayyorman."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Okay, das machen wir. Ich möchte gerne alles sehen.",
+        "translation": {
+          "ru-RU": "Окей, мы так и сделаем. Я бы хотел всё посмотреть.",
+          "en-US": "Okay, let's do that. I would like to see everything.",
+          "ar-SA": "حسنًا، لنفعل ذلك. أود أن أرى كل شيء.",
+          "es-ES": "Vale, hagamos eso. Me gustaría verlo todo.",
+          "fr-FR": "D'accord, faisons comme ça. J'aimerais tout voir.",
+          "hi-IN": "ठीक है, हम यही करेंगे। मैं सब कुछ देखना चाहता हूँ।",
+          "pl-PL": "Dobrze, tak zrobimy. Chciałbym wszystko zobaczyć.",
+          "ro-RO": "OK, așa facem. Aș dori să văd totul.",
+          "tr-TR": "Tamam, öyle yapalım. Her şeyi görmek isterim.",
+          "uk-UA": "Окей, ми так і зробимо. Я б хотів все подивитися.",
+          "uz-UZ": "Xo'p, shunday qilamiz. Hamma narsani ko'rmoqchiman."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Hier rechts ist die Küche. Du kannst hier Kaffee kochen oder dein Essen lagern. Trinkst du gerne Kaffee?",
+    "botTranslation": {
+      "ru-RU": "Здесь справа кухня. Ты можешь варить здесь кофе или хранить свою еду. Ты любишь пить кофе?",
+      "en-US": "Here on the right is the kitchen. You can make coffee here or store your food. Do you like drinking coffee?",
+      "ar-SA": "هنا على اليمين يوجد المطبخ. يمكنك إعداد القهوة هنا أو تخزين طعامك. هل تحب شرب القهوة؟",
+      "es-ES": "Aquí a la derecha está la cocina. Puedes hacer café aquí o guardar tu comida. ¿Te gusta beber café?",
+      "fr-FR": "Ici à droite, c'est la cuisine. Tu peux y faire du café ou y garder ton repas. Tu aimes boire du café ?",
+      "hi-IN": "यहाँ दाईं ओर रसोई है। आप यहाँ कॉफी बना सकते हैं या अपना खाना रख सकते हैं। क्या आपको कॉफी पीना पसंद है?",
+      "pl-PL": "Tutaj po prawej jest kuchnia. Możesz tu zaparzyć kawę lub trzymać swoje jedzenie. Lubisz pić kawę?",
+      "ro-RO": "Aici în dreapta este bucătăria. Poți face cafea aici sau îți poți păstra mâncarea. Îți place să bei cafea?",
+      "tr-TR": "Burada sağ tarafta mutfak var. Burada kahve yapabilir veya yiyeceklerini saklayabilirsin. Kahve içmeyi sever misin?",
+      "uk-UA": "Тут праворуч кухня. Ти можеш варити тут каву або зберігати свою їжу. Ти любиш пити каву?",
+      "uz-UZ": "O'ng tomonda oshxona joylashgan. Bu yerda kofe qaynatishing yoki ovqatingni saqlashing mumkin. Kofe ichishni yaxshi ko'rasanmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Küche",
+        "translation": {
+          "ru-RU": "кухня",
+          "en-US": "kitchen",
+          "ar-SA": "المطبخ",
+          "es-ES": "cocina",
+          "fr-FR": "cuisine",
+          "hi-IN": "रसोई",
+          "pl-PL": "kuchnia",
+          "ro-RO": "bucătărie",
+          "tr-TR": "mutfak",
+          "uk-UA": "кухня",
+          "uz-UZ": "oshxona"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, ich trinke morgens immer eine Tasse Kaffee. Vielen Dank!",
+        "translation": {
+          "ru-RU": "Да, я всегда пью чашку кофе по утрам. Большое спасибо!",
+          "en-US": "Yes, I always drink a cup of coffee in the morning. Thank you very much!",
+          "ar-SA": "نعم، أنا أشرب دائماً فنجاناً من القهوة صباحاً. شكراً جزيلاً!",
+          "es-ES": "Sí, siempre tomo una taza de café por la mañana. ¡Muchas gracias!",
+          "fr-FR": "Oui, je bois toujours une tasse de café le matin. Merci beaucoup !",
+          "hi-IN": "हाँ, मैं सुबह हमेशा एक कप कॉफी पीता हूँ। बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Tak, rano zawsze piję filiżankę kawy. Bardzo dziękuję!",
+          "ro-RO": "Da, beau mereu o ceașcă de cafea dimineața. Mulțumesc mult!",
+          "tr-TR": "Evet, sabahları her zaman bir fincan kahve içerim. Çok teşekkürler!",
+          "uk-UA": "Так, я завжди п'ю чашку кави вранці. Дуже дякую!",
+          "uz-UZ": "Ha, men har doim ertalab bir finjon kofe ichaman. Katta rahmat!"
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Nein, ich trinke lieber Tee. Gibt es hier auch heißes Wasser?",
+        "translation": {
+          "ru-RU": "Нет, я предпочитаю пить чай. Здесь также есть горячая вода?",
+          "en-US": "No, I prefer drinking tea. Is there hot water here too?",
+          "ar-SA": "لا، أنا أفضّل شرب الشاي. هل هناك ماء ساخن هنا أيضاً؟",
+          "es-ES": "No, prefiero beber té. ¿Hay agua caliente aquí también?",
+          "fr-FR": "Non, je préfère boire du thé. Y a-t-il aussi de l'eau chaude ici ?",
+          "hi-IN": "नहीं, मैं चाय पीना पसंद करता हूँ। क्या यहाँ गर्म पानी भी उपलब्ध है?",
+          "pl-PL": "Nie, wolę pić herbatę. Czy jest tu też gorąca woda?",
+          "ro-RO": "Nu, prefer să beau ceai. Există și apă fierbinte aici?",
+          "tr-TR": "Hayır, çay içmeyi tercih ederim. Burada sıcak su da var mı?",
+          "uk-UA": "Ні, я віддаю перевагу пити чай. Тут також є гаряча вода?",
+          "uz-UZ": "Yo'q, men choy ichishni afzal ko'raman. Bu yerda issiq suv ham bormi?"
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Ja, natürlich, wir haben einen Wasserkocher. Und dort hinten links sind die Toiletten.",
+    "botTranslation": {
+      "ru-RU": "Да, конечно, у нас есть чайник. И вон там сзади слева находятся туалеты.",
+      "en-US": "Yes, of course, we have a kettle. And back there on the left are the toilets.",
+      "ar-SA": "نعم بالطبع، لدينا غلاية مياه. وهناك في الخلف على اليسار توجد المراحيض.",
+      "es-ES": "Sí, claro, tenemos un hervidor de agua. Y allí al fondo a la izquierda están los aseos.",
+      "fr-FR": "Oui, bien sûr, nous avons une bouilloire. Et là-bas au fond à gauche, ce sont les toilettes.",
+      "hi-IN": "हाँ, बिल्कुल, हमारे पास एक केतली है। और वहाँ पीछे बाईं ओर शौचालय हैं।",
+      "pl-PL": "Tak, oczywiście, mamy czajnik. A tam z tyłu po lewej są toalety.",
+      "ro-RO": "Da, desigur, avem un fierbător. Și acolo în spate, în stânga, sunt toaletele.",
+      "tr-TR": "Evet, tabii, bir su ısıtıcımız var. Ve orada arkada solda tuvaletler bulunuyor.",
+      "uk-UA": "Так, звісно, у нас є чайник. І он там ззаду ліворуч розташовані туалети.",
+      "uz-UZ": "Ha, albatta, bizda choynak bor. Va u yerda orqada chap tomonda hojatxonalar bor."
+    },
+    "vocabulary": [
+      {
+        "german": "die Toiletten",
+        "translation": {
+          "ru-RU": "туалеты",
+          "en-US": "toilets",
+          "ar-SA": "المراحيض",
+          "es-ES": "aseos / lavabos",
+          "fr-FR": "toilettes",
+          "hi-IN": "शौचालय",
+          "pl-PL": "toalety",
+          "ro-RO": "toalete",
+          "tr-TR": "tuvaletler",
+          "uk-UA": "туалети",
+          "uz-UZ": "hojatxonalar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Gut, ich habe die Schilder gesehen. Danke für die Information.",
+        "translation": {
+          "ru-RU": "Хорошо, я видел указатели. Спасибо за информацию.",
+          "en-US": "Good, I saw the signs. Thanks for the information.",
+          "ar-SA": "حسنًا، لقد رأيت اللافتات. شكرًا لك على المعلومات.",
+          "es-ES": "Bien, he visto los carteles. Gracias por la información.",
+          "fr-FR": "Bien, j'ai vu les panneaux. Merci pour l'information.",
+          "hi-IN": "अच्छा, मैंने संकेत देख लिए हैं। जानकारी के लिए धन्यवाद।",
+          "pl-PL": "Dobrze, widziałem znaki. Dzięki za informację.",
+          "ro-RO": "Bine, am văzut indicatoarele. Mulțumesc pentru informație.",
+          "tr-TR": "Güzel, tabelaları gördüm. Bilgi için teşekkürler.",
+          "uk-UA": "Добре, я бачив вказівники. Дякуємо за інформацію.",
+          "uz-UZ": "Yaxshi, men belgilarni ko'rdim. Ma'lumot uchun rahmat."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Alles klar, die Toiletten sind hinten links. Ich merke mir das.",
+        "translation": {
+          "ru-RU": "Всё понятно, туалеты сзади слева. Я запомню это.",
+          "en-US": "All right, the toilets are back on the left. I will remember that.",
+          "ar-SA": "كل شيء واضح، المراحيض في الخلف على اليسار. سأتذكر ذلك.",
+          "es-ES": "Entendido, los aseos están al fondo a la izquierda. Me lo apunto.",
+          "fr-FR": "D'accord, les toilettes sont au fond à gauche. Je retiens ça.",
+          "hi-IN": "ठीक है, शौचालय पीछे बाईं ओर हैं। मैं यह याद रखूँगा।",
+          "pl-PL": "Wszystko jasne, toalety są z tyłu po lewej. Zapamiętam to.",
+          "ro-RO": "Am înțeles, toaletele sunt în spate în stânga. Rețin asta.",
+          "tr-TR": "Anlaşıldı, tuvaletler arkada solda. Bunu aklımda tutacağım.",
+          "uk-UA": "Все зрозуміло, туалети ззаду ліворуч. Я запам'ятаю це.",
+          "uz-UZ": "Tushunarli, hojatxonalar orqada chapda. Buni eslab qolaman."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Sehr gut. Wenn du Stifte oder Papier brauchst, findest du alles im Schrank im Flur.",
+    "botTranslation": {
+      "ru-RU": "Очень хорошо. Если тебе нужны ручки или бумага, ты найдешь всё в шкафу в коридоре.",
+      "en-US": "Very good. If you need pens or paper, you will find everything in the closet in the hallway.",
+      "ar-SA": "جيد جداً. إذا كنت بحاجة إلى أقلام أو ورق، ستجد كل شيء في الخزانة في الممر.",
+      "es-ES": "Muy bien. Si necesitas bolígrafos o papel, lo encontrarás todo en el armario del pasillo.",
+      "fr-FR": "Très bien. Si tu as besoin de stylos ou de papier, tu trouveras tout dans l'armoire du couloir.",
+      "hi-IN": "बहुत अच्छा। यदि आपको पेन या कागज की आवश्यकता हो, तो आपको सब कुछ गलियारे में अलमारी में मिल जाएगा।",
+      "pl-PL": "Bardzo dobrze. Jeśli potrzebujesz długopisów lub papieru, wszystko znajdziesz w szafie w przedpokoju.",
+      "ro-RO": "Foarte bine. Dacă ai nevoie de pixuri sau hârtie, găsești totul în dulapul de pe hol.",
+      "tr-TR": "Çok iyi. Kalem veya kağıda ihtiyacın olursa, her şeyi koridordaki dolapta bulabilirsin.",
+      "uk-UA": "Дуже добре. Якщо тобі потрібні ручки або папір, ти знайдеш все в шафі в коридорі.",
+      "uz-UZ": "Juda yaxshi. Agar senga ruchka yoki qog'oz kerak bo'lsa, hammasini yo'lakdagi shkafdan topasan."
+    },
+    "vocabulary": [
+      {
+        "german": "der Schrank",
+        "translation": {
+          "ru-RU": "шкаф",
+          "en-US": "closet / cabinet",
+          "ar-SA": "الخزانة",
+          "es-ES": "armario",
+          "fr-FR": "armoire / placard",
+          "hi-IN": "अलमारी",
+          "pl-PL": "szafa",
+          "ro-RO": "dulap",
+          "tr-TR": "dolap",
+          "uk-UA": "шафа",
+          "uz-UZ": "shkaf"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Verstanden. Der Schrank im Flur ist für das Büromaterial.",
+        "translation": {
+          "ru-RU": "Понял. Шкаф в коридоре — для офисных материалов.",
+          "en-US": "Understood. The closet in the hallway is for office supplies.",
+          "ar-SA": "مفهوم. الخزانة في الممر هي للأدوات المكتبية.",
+          "es-ES": "Entendido. El armario del pasillo es para el material de oficina.",
+          "fr-FR": "Compris. L'armoire du couloir est pour les fournitures de bureau.",
+          "hi-IN": "समझ गया। गलियारे की अलमारी कार्यालय की सामग्रियों के लिए है।",
+          "pl-PL": "Zrozumiałem. Szafa w przedpokoju jest na materiały biurowe.",
+          "ro-RO": "Înțeles. Dulapul de pe hol este pentru materialele de birou.",
+          "tr-TR": "Anlaşıldı. Koridordaki dolap ofis malzemeleri için.",
+          "uk-UA": "Зрозумів. Шафа в коридорі — для офісних матеріалів.",
+          "uz-UZ": "Tushundim. Yo'lakdagi shkaf ofis mollari uchun."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Okay, das ist gut zu wissen. Ich brauche später sowieso ein Notizbuch.",
+        "translation": {
+          "ru-RU": "Окей, это хорошо знать. Позже мне всё равно понадобится блокнот.",
+          "en-US": "Okay, that's good to know. I will need a notebook later anyway.",
+          "ar-SA": "حسنًا، من الجيد معرفة ذلك. سأحتاج إلى دفتر ملاحظات لاحقاً على أي حال.",
+          "es-ES": "Vale, es bueno saberlo. De todas formas, más tarde necesitaré un cuaderno.",
+          "fr-FR": "D'accord, c'est bon à savoir. J'aurai de toute façon besoin d'un carnet plus tard.",
+          "hi-IN": "ठीक है, यह जानना अच्छा रहा। मुझे बाद में वैसे भी एक नोटबुक की आवश्यकता होगी।",
+          "pl-PL": "Dobrze, warto wiedzieć. Później i tak będę potrzebować notesu.",
+          "ro-RO": "OK, e bine de știut. Oricum voi avea nevoie de un carnețel mai târziu.",
+          "tr-TR": "Tamam, bunu bilmek iyi oldu. Sonra nasıl olsa bir deftere ihtiyacım olacak.",
+          "uk-UA": "Окей, це добре знати. Пізніше мені все одно знадобиться блокнот.",
+          "uz-UZ": "Xo'p, buni bilish yaxshi bo'ldi. Baribir keyinchalik menga daftarcha kerak bo'ladi."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Genau. Hier ist übrigens dein neuer Arbeitsplatz. Auf dem Tisch liegen dein Computer und das Telefon.",
+    "botTranslation": {
+      "ru-RU": "Точно. Кстати, здесь твое новое рабочее место. На столе лежат твой компьютер и телефон.",
+      "en-US": "Exactly. By the way, here is your new workplace. Your computer and phone are on the table.",
+      "ar-SA": "بالظبط. بالمناسبة، هذا هو مكان عملك الجديد. يوجد حاسوبك وهاتفك على الطاولة.",
+      "es-ES": "Exacto. Por cierto, aquí está tu nuevo puesto de trabajo. En la mesa están tu ordenador y el teléfono.",
+      "fr-FR": "Exactement. Voici d'ailleurs ton nouveau poste de travail. Sur le bureau se trouvent ton ordinateur et le téléphone.",
+      "hi-IN": "बिलकुल। वैसे यहाँ आपका नया कार्यस्थल है। मेज पर आपका कंप्यूटर और फोन रखा है।",
+      "pl-PL": "Dokładnie. A tak przy okazji, tutaj jest twoje nowe stanowisko pracy. Na stole leży twój komputer i telefon.",
+      "ro-RO": "Exact. Apropo, aici este noul tău loc de muncă. Pe masă se află computerul tău și telefonul.",
+      "tr-TR": "Kesinlikle. Bu arada, işte senin yeni çalışma alanın. Masanın üzerinde bilgisayarın ve telefonun duruyor.",
+      "uk-UA": "Точно. До речі, тут твоє нове робоче місце. На столі лежать твій комп'ютер і телефон.",
+      "uz-UZ": "Xuddi shunday. Darvoqe, mana bu sening yangi ish joying. Stol ustida kompyutering va telefoning turibdi."
+    },
+    "vocabulary": [
+      {
+        "german": "der Arbeitsplatz",
+        "translation": {
+          "ru-RU": "рабочее место",
+          "en-US": "workplace / workstation",
+          "ar-SA": "مكان العمل",
+          "es-ES": "puesto de trabajo / lugar de trabajo",
+          "fr-FR": "poste de travail / lieu de travail",
+          "hi-IN": "कार्यस्थल",
+          "pl-PL": "stanowisko pracy / miejsce pracy",
+          "ro-RO": "loc de muncă",
+          "tr-TR": "çalışma alanı / iş yeri",
+          "uk-UA": "робоче місце",
+          "uz-UZ": "ish joyi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Der Platz gefällt mir sehr gut. Das Fenster ist groß und hell.",
+        "translation": {
+          "ru-RU": "Это место мне очень нравится. Окно большое и светлое.",
+          "en-US": "I like the place very much. The window is big and bright.",
+          "ar-SA": "يعجبني هذا المكان كثيراً. النافذة كبيرة ومضيئة.",
+          "es-ES": "Me gusta mucho este sitio. La ventana es grande y luminosa.",
+          "fr-FR": "La place me plaît beaucoup. La fenêtre est grande et claire.",
+          "hi-IN": "मुझे यह जगह बहुत पसंद आई। खिड़की बड़ी और चमकदार है।",
+          "pl-PL": "Miejsce bardzo mi się podoba. Okno jest duże i jasne.",
+          "ro-RO": "Îmi place foarte mult locul. Fereastra este mare și luminoasă.",
+          "tr-TR": "Bu alanı çok beğendim. Pencere büyük ve aydınlık.",
+          "uk-UA": "Це місце мені дуже подобається. Вікно велике і світле.",
+          "uz-UZ": "Bu joy menga juda yoqdi. Deraza katta va yorug'."
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Das sieht toll aus. Ich setze mich gleich hin.",
+        "translation": {
+          "ru-RU": "Выглядит отлично. Я сразу сяду.",
+          "en-US": "That looks great. I will sit down right away.",
+          "ar-SA": "هذا يبدو رائعاً. سأجلس على الفور.",
+          "es-ES": "Tiene una pinta estupenda. Me siento ahora mismo.",
+          "fr-FR": "Ça a l'air super. Je m'assieds tout de suite.",
+          "hi-IN": "यह बहुत बढ़िया लग रहा है। मैं तुरंत बैठ जाता हूँ।",
+          "pl-PL": "To wygląda świetnie. Zaraz siadam.",
+          "ro-RO": "Arată grozav. Mă așez chiar acum.",
+          "tr-TR": "Harika görünüyor. Hemen oturuyorum.",
+          "uk-UA": "Виглядає чудово. Я відразу сяду.",
+          "uz-UZ": "Yaxshi ko'rinyapti. Men hoziroq o'tiraman."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Ja, nimm Platz. Dein Passwort für den Computer liegt hier in dem Brief auf dem Tisch. Du musst es nach dem ersten Login direkt ändern.",
+    "botTranslation": {
+      "ru-RU": "Да, садись. Твой пароль для компьютера лежит здесь, в письме на столе. Тебе нужно изменить его сразу после первого входа.",
+      "en-US": "Yes, take a seat. Your password for the computer is here in the letter on the table. You must change it directly after the first login.",
+      "ar-SA": "نعم، تفضل بالجلوس. كلمة المرور الخاصة بحاسوبك موجودة هنا في الرسالة على الطاولة. يجب عليك تغييرها مباشرة بعد تسجيل الدخول الأول.",
+      "es-ES": "Sí, toma asiento. Tu contraseña para el ordenador está aquí, en la carta sobre la mesa. Tienes que cambiarla directamente después del primer inicio de sesión.",
+      "fr-FR": "Oui, assieds-toi. Ton mot de passe pour l'ordinateur est ici dans la lettre sur le bureau. Tu dois le changer directement après la première connexion.",
+      "hi-IN": "हाँ, बैठिए। कंप्यूटर के लिए आपका पासवर्ड यहाँ मेज पर रखे पत्र में है। आपको पहले लॉगिन के तुरंत बाद इसे बदलना होगा।",
+      "pl-PL": "Tak, siadaj. Twoje hasło do komputera jest tutaj w liście na stole. Musisz je zmienić od razu po pierwszym zalogowaniu.",
+      "ro-RO": "Da, ia loc. Parola ta pentru computer se află aici, în scrisoarea de pe masă. Trebuie să o schimbi direct după prima autentificare.",
+      "tr-TR": "Evet, buyur otur. Bilgisayar şifren masanın üzerindeki şu mektupta yazıyor. İlk girişten sonra şifreni hemen değiştirmelisin.",
+      "uk-UA": "Так, сідай. Твій пароль для комп'ютера лежить тут, у листі на столі. Тобі потрібно змінити його відразу після першого входу.",
+      "uz-UZ": "Ha, o'tir. Kompyuter uchun paroling shu yerda, stol ustidagi xatda turibdi. Birinchi marta tizimga kirganingdan keyin uni darhol o'zgartirishing kerak."
+    },
+    "vocabulary": [
+      {
+        "german": "das Passwort",
+        "translation": {
+          "ru-RU": "пароль",
+          "en-US": "password",
+          "ar-SA": "كلمة المرور",
+          "es-ES": "contraseña",
+          "fr-FR": "mot de passe",
+          "hi-IN": "पासवर्ड",
+          "pl-PL": "hasło",
+          "ro-RO": "parolă",
+          "tr-TR": "şifre / parola",
+          "uk-UA": "пароль",
+          "uz-UZ": "parol"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Perfekt, das mache ich sofort.",
+        "translation": {
+          "ru-RU": "Отлично, я сделаю это немедленно.",
+          "en-US": "Perfect, I will do that right away.",
+          "ar-SA": "ممتاز، سأفعل ذلك فوراً.",
+          "es-ES": "Perfecto, lo hago de inmediato.",
+          "fr-FR": "Parfait, je fais ça tout de suite.",
+          "hi-IN": "बिल्कुल सही, मैं इसे तुरंत करूँगा।",
+          "pl-PL": "Doskonale, zrobię to natychmiast.",
+          "ro-RO": "Perfect, fac asta imediat.",
+          "tr-TR": "Mükemmel, bunu hemen yapıyorum.",
+          "uk-UA": "Чудово, я зроблю це негайно.",
+          "uz-UZ": "Zo'r, buni hoziroq bajaraman."
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Alles klar, ich schalte den Computer gleich ein.",
+        "translation": {
+          "ru-RU": "Всё ясно, я сейчас включу компьютер.",
+          "en-US": "All right, I'll turn on the computer right away.",
+          "ar-SA": "كل شيء واضح، سأشغل الحاسوب الآن.",
+          "es-ES": "Entendido, voy a encender el ordenador ahora mismo.",
+          "fr-FR": "D'accord, j'allume l'ordinateur tout de suite.",
+          "hi-IN": "ठीक है, मैं अभी कंप्यूटर चालू करता हूँ।",
+          "pl-PL": "Wszystko jasne, zaraz włączę komputer.",
+          "ro-RO": "Am înțeles, pornesc computerul imediat.",
+          "tr-TR": "Anlaşıldı, bilgisayarı hemen açıyorum.",
+          "uk-UA": "Все ясно, я зараз увімкну комп'ютер.",
+          "uz-UZ": "Tushunarli, hozir kompyuterni yoqaman."
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Gut. Um 12 Uhr machen wir alle zusammen Mittagspause in der Küche. Viel Erfolg für den Start!",
+    "botTranslation": {
+      "ru-RU": "Хорошо. В 12 часов мы все вместе делаем обеденный перерыв на кухне. Успехов на старте!",
+      "en-US": "Good. At 12 o'clock we all have a lunch break together in the kitchen. Good luck for the start!",
+      "ar-SA": "حسنًا. في الساعة 12 سنأخذ جميعاً استراحة الغداء معاً في المطبخ. نتمنى لك التوفيق في البداية!",
+      "es-ES": "Bien. A las 12 en punto hacemos todos juntos la pausa para comer en la cocina. ¡Mucho éxito en el comienzo!",
+      "fr-FR": "Bien. À 12 heures, nous faisons tous ensemble la pause déjeuner dans la cuisine. Bon succès pour tes débuts !",
+      "hi-IN": "अच्छा। 12 बजे हम सब मिलकर रसोई में दोपहर के भोजन का अवकाश लेंगे। शुरुआत के लिए शुभकामनाएँ!",
+      "pl-PL": "Dobrze. O 12:00 wszyscy razem robimy przerwę na obiad w kuchni. Powodzenia na start!",
+      "ro-RO": "Bine. La ora 12 facem toți împreună pauza de masă în bucătărie. Mult succes la început!",
+      "tr-TR": "Güzel. Saat 12'de hep birlikte mutfakta öğle arası vereceğiz. Başlangıç için bol şans!",
+      "uk-UA": "Добре. О 12 годині ми всі разом робимо обідню перерву на кухні. Успіхів на старті!",
+      "uz-UZ": "Yaxshi. Soat 12 da hammamiz birgalikda oshxonada tushlik qilamiz. Ishlaringga omad!"
+    },
+    "vocabulary": [
+      {
+        "german": "die Mittagspause",
+        "translation": {
+          "ru-RU": "обеденный перерыв",
+          "en-US": "lunch break",
+          "ar-SA": "استراحة الغداء",
+          "es-ES": "pausa para comer / descanso del almuerzo",
+          "fr-FR": "pause déjeuner",
+          "hi-IN": "दोपहर के भोजन का अवकाश",
+          "pl-PL": "przerwa na obiad",
+          "ro-RO": "pauză de masă",
+          "tr-TR": "öğle arası / öğle tatili",
+          "uk-UA": "обідня перерва",
+          "uz-UZ": "tushlik tanaffusi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Vielen Dank für die Hilfe!",
+        "translation": {
+          "ru-RU": "Большое спасибо за помощь!",
+          "en-US": "Thank you very much for the help!",
+          "ar-SA": "شكراً جزيلاً على المساعدة!",
+          "es-ES": "¡Muchas gracias por la ayuda!",
+          "fr-FR": "Merci beaucoup pour l'aide !",
+          "hi-IN": "मदद के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję za pomoc!",
+          "ro-RO": "Mulțumesc mult pentru ajutor!",
+          "tr-TR": "Yardımınız için çok teşekkürler!",
+          "uk-UA": "Велике спасибі за допомогу!",
+          "uz-UZ": "Yordam uchun katta rahmat!"
+        },
+        "nextStep": "step_17"
+      },
+      {
+        "text": "Super, danke! Ich freue mich auf die Arbeit.",
+        "translation": {
+          "ru-RU": "Супер, спасибо! Я с нетерпением жду работы.",
+          "en-US": "Super, thanks! I am looking forward to the work.",
+          "ar-SA": "رائع، شكراً! أنا أتطلع إلى العمل.",
+          "es-ES": "¡Súper, gracias! Tengo muchas ganas de trabajar.",
+          "fr-FR": "Super, merci ! Je me réjouis du travail.",
+          "hi-IN": "शानदार, धन्यवाद! मैं काम की प्रतीक्षा कर रहा हूँ।",
+          "pl-PL": "Super, dzięki! Cieszę się na tę pracę.",
+          "ro-RO": "Super, mulțumesc! Aștept cu nerăbdare munca.",
+          "tr-TR": "Süper, teşekkürler! İşi dört gözle bekliyorum.",
+          "uk-UA": "Супер, дякую! Я з нетерпінням чекаю роботи.",
+          "uz-UZ": "Zo'r, rahmat! Men ishni intiqlik bilan kutyapman."
+        },
+        "nextStep": "step_17"
+      }
+    ],
+    "defaultNext": "step_17"
+  },
+  "step_17": {
+    "botText": "Bitte schön!",
+    "botTranslation": {
+      "ru-RU": "Пожалуйста!",
+      "en-US": "You're welcome!",
+      "ar-SA": "عفواً!",
+      "es-ES": "¡De nada!",
+      "fr-FR": "De rien !",
+      "hi-IN": "आपका स्वागत है!",
+      "pl-PL": "Proszę bardzo!",
+      "ro-RO": "Cu plăcere!",
+      "tr-TR": "Rica ederim!",
+      "uk-UA": "Будь ласка!",
+      "uz-UZ": "Arzimaydi!"
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

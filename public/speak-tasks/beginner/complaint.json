@@ -1,0 +1,533 @@
+{
+  "start": {
+    "botText": "Hat es Ihnen geschmeckt?",
+    "botTranslation": {
+      "ru-RU": "Вам понравилось?",
+      "en-US": "Did you enjoy your meal?",
+      "ar-SA": "هل استمتعت بوجبتك؟",
+      "es-ES": "¿Le ha gustado?",
+      "fr-FR": "Cela vous a-t-il plu ?",
+      "hi-IN": "क्या आपको भोजन पसंद आया?",
+      "pl-PL": "Smakowało Państwu?",
+      "ro-RO": "V-a plăcut?",
+      "tr-TR": "Yemeğinizi beğendiniz mi?",
+      "uk-UA": "Вам сподобалось?",
+      "uz-UZ": "Ovqat yoqdimi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Beschwerde",
+        "translation": {
+          "ru-RU": "жалоба",
+          "en-US": "complaint",
+          "ar-SA": "شكوى",
+          "es-ES": "queja",
+          "fr-FR": "plainte",
+          "hi-IN": "शिकायत",
+          "pl-PL": "skarga",
+          "ro-RO": "plângere",
+          "tr-TR": "şikayet",
+          "uk-UA": "скарга",
+          "uz-UZ": "shikoyat"
+        }
+      },
+      {
+        "german": "die Suppe",
+        "translation": {
+          "ru-RU": "суп",
+          "en-US": "soup",
+          "ar-SA": "حساء",
+          "es-ES": "sopa",
+          "fr-FR": "soupe",
+          "hi-IN": "सूप",
+          "pl-PL": "zupa",
+          "ro-RO": "supă",
+          "tr-TR": "çorba",
+          "uk-UA": "суп",
+          "uz-UZ": "sho'rva"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Um ehrlich zu sein, die Suppe ist leider kalt.",
+        "translation": {
+          "ru-RU": "Честно говоря, суп, к сожалению, холодный.",
+          "en-US": "To be honest, the soup is unfortunately cold.",
+          "ar-SA": "لأكون صادقاً، الحساء للأسف بارد.",
+          "es-ES": "Para ser sincero, lamentablemente la sopa está fría.",
+          "fr-FR": "Pour être honnête, la soupe est malheureusement froide.",
+          "hi-IN": "सच कहूँ तो, सूप दुर्भाग्य से ठंडा है।",
+          "pl-PL": "Szczerze mówiąc, zupa jest niestety zimna.",
+          "ro-RO": "Sincer să fiu, supa este din păcate rece.",
+          "tr-TR": "Dürüst olmak gerekirse, çorba maalesef soğuk.",
+          "uk-UA": "Чесно кажучи, суп, на жаль, холодний.",
+          "uz-UZ": "Rostini aytsam, sho'rva afsuski sovuq."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Eigentlich nicht. Meine Suppe ist nicht heiß.",
+        "translation": {
+          "ru-RU": "На самом деле нет. Мой суп не горячий.",
+          "en-US": "Not really. My soup is not hot.",
+          "ar-SA": "ليس حقاً. حسائي ليس ساخناً.",
+          "es-ES": "La verdad es que no. Mi sopa no está caliente.",
+          "fr-FR": "Pas vraiment. Ma soupe n'est pas chaude.",
+          "hi-IN": "वास्तव में नहीं। मेरा सूप गर्म नहीं है।",
+          "pl-PL": "Właściwie to nie. Moja zupa nie jest gorąca.",
+          "ro-RO": "De fapt, nu. Supa mea nu este fierbinte.",
+          "tr-TR": "Aslında hayır. Çorbam sıcak değil.",
+          "uk-UA": "Насправді ні. Мій суп не гарячий.",
+          "uz-UZ": "Aslida yo'q. Mening sho'rvam issiq emas."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Oh, das tut mir leid. Das sollte nicht sein.",
+    "botTranslation": {
+      "ru-RU": "О, мне жаль. Такого быть не должно.",
+      "en-US": "Oh, I'm sorry. That shouldn't be.",
+      "ar-SA": "أوه، أنا آسف. لا ينبغي أن يكون هذا.",
+      "es-ES": "Oh, lo siento. Eso no debería pasar.",
+      "fr-FR": "Oh, je suis désolé. Cela ne devrait pas arriver.",
+      "hi-IN": "ओह, मुझे खेद है। ऐसा नहीं होना चाहिए।",
+      "pl-PL": "Och, przykro mi. Tak nie powinno być.",
+      "ro-RO": "Oh, îmi pare rău. Nu ar trebui să se întâmple asta.",
+      "tr-TR": "Oh, özür dilerim. Böyle olmamalıydı.",
+      "uk-UA": "О, мені шкода. Такого бути не повинно.",
+      "uz-UZ": "Oh, kechirasiz. Bunday bo'lmasligi kerak edi."
+    },
+    "vocabulary": [
+      {
+        "german": "kalt",
+        "translation": {
+          "ru-RU": "холодный",
+          "en-US": "cold",
+          "ar-SA": "بارد",
+          "es-ES": "frío",
+          "fr-FR": "froid",
+          "hi-IN": "ठंडा",
+          "pl-PL": "zimny",
+          "ro-RO": "rece",
+          "tr-TR": "soğuk",
+          "uk-UA": "холодний",
+          "uz-UZ": "sovuq"
+        }
+      },
+      {
+        "german": "heiß",
+        "translation": {
+          "ru-RU": "горячий",
+          "en-US": "hot",
+          "ar-SA": "ساخن",
+          "es-ES": "caliente",
+          "fr-FR": "chaud",
+          "hi-IN": "गर्म",
+          "pl-PL": "gorący",
+          "ro-RO": "fierbinte",
+          "tr-TR": "sıcak",
+          "uk-UA": "гарячий",
+          "uz-UZ": "issiq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich würde gerne eine neue Portion haben.",
+        "translation": {
+          "ru-RU": "Я хотел бы получить новую порцию.",
+          "en-US": "I would like to have a new portion.",
+          "ar-SA": "أود الحصول على حصة جديدة.",
+          "es-ES": "Me gustaría tener una porción nueva.",
+          "fr-FR": "J'aimerais avoir une nouvelle portion.",
+          "hi-IN": "मैं एक नया हिस्सा लेना चाहूंगा।",
+          "pl-PL": "Chciałbym dostać nową porcję.",
+          "ro-RO": "Aș dori o porție nouă.",
+          "tr-TR": "Yeni bir porsiyon rica ediyorum.",
+          "uk-UA": "Я хотів би отримати нову порцію.",
+          "uz-UZ": "Men yangi porsiya olishni xohlayman."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Könnten Sie mir bitte eine neue Suppe bringen?",
+        "translation": {
+          "ru-RU": "Не могли бы Вы принести мне новый суп?",
+          "en-US": "Could you please bring me a new soup?",
+          "ar-SA": "هل يمكنك إحضار حساء جديد لي من فضلك؟",
+          "es-ES": "¿Podría traerme una sopa nueva, por favor?",
+          "fr-FR": "Pourriez-vous m'apporter une nouvelle soupe, s'il vous plaît ?",
+          "hi-IN": "क्या आप कृपया मेरे लिए एक नया सूप ला सकते हैं?",
+          "pl-PL": "Czy mógłby mi Pan przynieść nową zupę?",
+          "ro-RO": "Ați putea, vă rog, să-mi aduceți o supă nouă?",
+          "tr-TR": "Bana yeni bir çorba getirebilir misiniz lütfen?",
+          "uk-UA": "Чи не могли б Ви принести мені новий суп?",
+          "uz-UZ": "Iltimos, menga yangi sho'rva keltira olasizmi?"
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Selbstverständlich. Ich bringe Ihnen sofort eine neue Portion.",
+    "botTranslation": {
+      "ru-RU": "Разумеется. Я немедленно принесу Вам новую порцию.",
+      "en-US": "Of course. I will bring you a new portion immediately.",
+      "ar-SA": "بالطبع. سأحضر لك حصة جديدة فوراً.",
+      "es-ES": "Por supuesto. Le traeré una porción nueva inmediatamente.",
+      "fr-FR": "Bien sûr. Je vous apporte immédiatement une nouvelle portion.",
+      "hi-IN": "बिल्कुल। मैं आपके लिए तुरंत एक नया हिस्सा लाऊँगा।",
+      "pl-PL": "Oczywiście. Natychmiast przyniosę nową porcję.",
+      "ro-RO": "Desigur. Vă aduc imediat o porție nouă.",
+      "tr-TR": "Elbette. Size hemen yeni bir porsiyon getireceğim.",
+      "uk-UA": "Зрозуміло. Я негайно принесу Вам нову порцію.",
+      "uz-UZ": "Albatta. Men darhol sizga yangi porsiya keltiraman."
+    },
+    "vocabulary": [
+      {
+        "german": "die Portion",
+        "translation": {
+          "ru-RU": "порция",
+          "en-US": "portion",
+          "ar-SA": "حصة",
+          "es-ES": "porción",
+          "fr-FR": "portion",
+          "hi-IN": "हिस्सा / परोसा",
+          "pl-PL": "porcja",
+          "ro-RO": "porție",
+          "tr-TR": "porsiyon",
+          "uk-UA": "порція",
+          "uz-UZ": "porsiya"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, bitte. Das wäre nett.",
+        "translation": {
+          "ru-RU": "Да, пожалуйста. Это было бы мило.",
+          "en-US": "Yes, please. That would be nice.",
+          "ar-SA": "نعم من فضلك. سيكون ذلك لطيفاً.",
+          "es-ES": "Sí, por favor. Sería amable de su parte.",
+          "fr-FR": "Oui, s'il vous plaît. Ce serait gentil.",
+          "hi-IN": "हाँ, कृपया। वह अच्छा होगा।",
+          "pl-PL": "Tak, proszę. Byłoby miło.",
+          "ro-RO": "Da, vă rog. Ar fi drăguț.",
+          "tr-TR": "Evet, lütfen. Bu nazikçe olur.",
+          "uk-UA": "Так, будь ласка. Це було б мило.",
+          "uz-UZ": "Ha, iltimos. Bu yaxshi bo'lardi."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Ja, das wäre besser. Danke.",
+        "translation": {
+          "ru-RU": "Да, так было бы лучше. Спасибо.",
+          "en-US": "Yes, that would be better. Thank you.",
+          "ar-SA": "نعم، سيكون ذلك أفضل. شكراً.",
+          "es-ES": "Sí, eso sería mejor. Gracias.",
+          "fr-FR": "Oui, ce serait mieux. Merci.",
+          "hi-IN": "हाँ, वह बेहतर होगा। धन्यवाद।",
+          "pl-PL": "Tak, tak będzie lepiej. Dziękuję.",
+          "ro-RO": "Da, așa ar fi mai bine. Mulțumesc.",
+          "tr-TR": "Evet, bu daha iyi olur. Teşekkürler.",
+          "uk-UA": "Так, так було б краще. Дякую.",
+          "uz-UZ": "Ha, shunday yaxshiroq bo'lardi. Rahmat."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Möchten Sie in der Zwischenzeit ein Getränk aufs Haus?",
+    "botTranslation": {
+      "ru-RU": "Хотите пока выпить что-нибудь за счет заведения?",
+      "en-US": "Would you like a drink on the house in the meantime?",
+      "ar-SA": "هل تود مشروباً على حساب المحل في هذه الأثناء؟",
+      "es-ES": "¿Desea una bebida invita la casa mientras tanto?",
+      "fr-FR": "Souhaitez-vous une boisson offerte par la maison en attendant ?",
+      "hi-IN": "क्या आप इस बीच हाउस की तरफ से एक ड्रिंक लेना चाहेंगे?",
+      "pl-PL": "Czy w międzyczasie życzy Pan sobie napój na koszt firmy?",
+      "ro-RO": "Doriți între timp o băutură din partea casei?",
+      "tr-TR": "Bu arada müesseseden bir içecek ister misiniz?",
+      "uk-UA": "Хочете поки випити що-небудь за рахунок закладу?",
+      "uz-UZ": "Bu orada muassasa hisobidan ichimlik xohlaysizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "aufs Haus",
+        "translation": {
+          "ru-RU": "за счет заведения",
+          "en-US": "on the house",
+          "ar-SA": "على حساب المحل",
+          "es-ES": "invita la casa",
+          "fr-FR": "offert par la maison",
+          "hi-IN": "हाउस की तरफ से",
+          "pl-PL": "na koszt firmy",
+          "ro-RO": "din partea casei",
+          "tr-TR": "müesseseden",
+          "uk-UA": "за рахунок закладу",
+          "uz-UZ": "muassasa hisobidan"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, danke. Ich warte einfach.",
+        "translation": {
+          "ru-RU": "Нет, спасибо. Я просто подожду.",
+          "en-US": "No, thanks. I will just wait.",
+          "ar-SA": "لا، شكراً. سأنتظر فقط.",
+          "es-ES": "No, gracias. Simplemente esperaré.",
+          "fr-FR": "Non, merci. Je vais juste attendre.",
+          "hi-IN": "नहीं, धन्यवाद। मैं बस इंतजार करूंगा।",
+          "pl-PL": "Nie, dziękuję. Po prostu poczekam.",
+          "ro-RO": "Nu, mulțumesc. Voi aștepta.",
+          "tr-TR": "Hayır, teşekkürler. Sadece bekleyeceğim.",
+          "uk-UA": "Ні, дякую. Я просто почекаю.",
+          "uz-UZ": "Yo'q, rahmat. Shunchaki kutaman."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Ein Wasser wäre gut, danke.",
+        "translation": {
+          "ru-RU": "Вода была бы кстати, спасибо.",
+          "en-US": "A water would be good, thanks.",
+          "ar-SA": "سيكون الماء جيداً، شكراً.",
+          "es-ES": "Agua estaría bien, gracias.",
+          "fr-FR": "Un verre d'eau serait bien, merci.",
+          "hi-IN": "पानी अच्छा रहेगा, धन्यवाद।",
+          "pl-PL": "Woda będzie w porządku, dziękuję.",
+          "ro-RO": "O apă ar fi bună, mulțumesc.",
+          "tr-TR": "Su iyi olurdu, teşekkürler.",
+          "uk-UA": "Вода була б доречною, дякую.",
+          "uz-UZ": "Suv yaxshi bo'lardi, rahmat."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Verstanden. Einen Moment bitte.",
+    "botTranslation": {
+      "ru-RU": "Понял. Одну минуту, пожалуйста.",
+      "en-US": "Understood. One moment please.",
+      "ar-SA": "فهمت. لحظة من فضلك.",
+      "es-ES": "Entendido. Un momento, por favor.",
+      "fr-FR": "Compris. Un instant, s'il vous plaît.",
+      "hi-IN": "समझ गया। कृपया एक पल रुकें।",
+      "pl-PL": "Zrozumiałem. Chwileczkę, proszę.",
+      "ro-RO": "Am înțeles. Un moment, vă rog.",
+      "tr-TR": "Anlaşıldı. Lütfen bir saniye.",
+      "uk-UA": "Зрозумів. Одну хвилину, будь ласка.",
+      "uz-UZ": "Tushunarli. Bir daqiqa, iltimos."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Vielen Dank für Ihr Verständnis.",
+        "translation": {
+          "ru-RU": "Большое спасибо за Ваше понимание.",
+          "en-US": "Thank you very much for your understanding.",
+          "ar-SA": "شكراً جزيلاً على تفهمك.",
+          "es-ES": "Muchas gracias por su comprensión.",
+          "fr-FR": "Merci beaucoup pour votre compréhension.",
+          "hi-IN": "आपकी समझ के लिए बहुत-बहुत धन्यवाद।",
+          "pl-PL": "Bardzo dziękuję za zrozumienie.",
+          "ro-RO": "Vă mulțumesc mult pentru înțelegere.",
+          "tr-TR": "Anlayışınız için çok teşekkür ederim.",
+          "uk-UA": "Велике дякую за Ваше розуміння.",
+          "uz-UZ": "Tushunganingiz uchun katta rahmat."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Alles klar, danke.",
+        "translation": {
+          "ru-RU": "Все ясно, спасибо.",
+          "en-US": "All right, thank you.",
+          "ar-SA": "حسناً، شكراً.",
+          "es-ES": "De acuerdo, gracias.",
+          "fr-FR": "Très bien, merci.",
+          "hi-IN": "ठीक है, धन्यवाद।",
+          "pl-PL": "Wszystko jasne, dziękuję.",
+          "ro-RO": "În regulă, mulțumesc.",
+          "tr-TR": "Tamam, teşekkürler.",
+          "uk-UA": "Все ясно, дякую.",
+          "uz-UZ": "Tushunarli, rahmat."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Hier ist die neue Suppe.",
+    "botTranslation": {
+      "ru-RU": "Вот новый суп.",
+      "en-US": "Here is the new soup.",
+      "ar-SA": "ها هو الحساء الجديد.",
+      "es-ES": "Aquí tiene la sopa nueva.",
+      "fr-FR": "Voici la nouvelle soupe.",
+      "hi-IN": "यह रहा नया सूप।",
+      "pl-PL": "Oto nowa zupa.",
+      "ro-RO": "Iată supa nouă.",
+      "tr-TR": "İşte yeni çorba.",
+      "uk-UA": "Ось новий суп.",
+      "uz-UZ": "Mana yangi sho'rva."
+    },
+    "vocabulary": [
+      {
+        "german": "das Verständnis",
+        "translation": {
+          "ru-RU": "понимание",
+          "en-US": "understanding",
+          "ar-SA": "تفهم",
+          "es-ES": "comprensión",
+          "fr-FR": "compréhension",
+          "hi-IN": "समझ / सहानुभूति",
+          "pl-PL": "zrozumienie",
+          "ro-RO": "înțelegere",
+          "tr-TR": "anlayış",
+          "uk-UA": "розуміння",
+          "uz-UZ": "tushunish"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, jetzt passt es. Danke.",
+        "translation": {
+          "ru-RU": "Да, теперь все в порядке. Спасибо.",
+          "en-US": "Yes, now it is fine. Thank you.",
+          "ar-SA": "نعم، الآن كل شيء على ما يرام. شكراً.",
+          "es-ES": "Sí, ahora está bien. Gracias.",
+          "fr-FR": "Oui, maintenant c'est parfait. Merci.",
+          "hi-IN": "हाँ, अब यह ठीक है। धन्यवाद।",
+          "pl-PL": "Tak, teraz jest w porządku. Dziękuję.",
+          "ro-RO": "Da, acum este în regulă. Mulțumesc.",
+          "tr-TR": "Evet, şimdi oldu. Teşekkürler.",
+          "uk-UA": "Так, тепер усе гаразд. Дякую.",
+          "uz-UZ": "Ha, endi hammasi joyida. Rahmat."
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Gut, danke für die Lösung.",
+        "translation": {
+          "ru-RU": "Хорошо, спасибо за решение (проблемы).",
+          "en-US": "Good, thank you for the solution.",
+          "ar-SA": "جيد، شكراً على الحل.",
+          "es-ES": "Bien, gracias por la solución.",
+          "fr-FR": "Bien, merci pour la solution.",
+          "hi-IN": "अच्छा, समाधान के लिए धन्यवाद।",
+          "pl-PL": "Dobrze, dziękuję za rozwiązanie sprawy.",
+          "ro-RO": "Bine, mulțumesc pentru soluționare.",
+          "tr-TR": "Güzel, çözüm için teşekkürler.",
+          "uk-UA": "Добре, дякую за вирішення (проблеми).",
+          "uz-UZ": "Yaxshi, yechim uchun rahmat."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Entschuldigen Sie bitte noch einmal. Guten Appetit!",
+    "botTranslation": {
+      "ru-RU": "Извините, пожалуйста, еще раз. Приятного аппетита!",
+      "en-US": "Please excuse us once again. Enjoy your meal!",
+      "ar-SA": "نعتذر مرة أخرى من فضلك. شهية طيبة!",
+      "es-ES": "Disculpe de nuevo, por favor. ¡Buen provecho!",
+      "fr-FR": "Veuillez nous excuser encore une fois. Bon appétit !",
+      "hi-IN": "कृपया एक बार फिर से क्षमा करें। अपने भोजन का आनंद लें!",
+      "pl-PL": "Proszę jeszcze raz wybaczyć. Smacznego!",
+      "ro-RO": "Vă rugăm să ne scuzați încă o dată. Poftă bună!",
+      "tr-TR": "Lütfen tekrar kusura bakmayın. Afiyet olsun!",
+      "uk-UA": "Вибачте, будь ласка, ще раз. Смачного!",
+      "uz-UZ": "Iltimos, yana bir bor kechirasiz. Yoqimli ishtaha!"
+    },
+    "vocabulary": [
+      {
+        "german": "Guten Appetit",
+        "translation": {
+          "ru-RU": "приятного аппетита",
+          "en-US": "enjoy your meal / bon appétit",
+          "ar-SA": "شهية طيبة",
+          "es-ES": "buen provecho",
+          "fr-FR": "bon appétit",
+          "hi-IN": "भोजन का आनंद लें",
+          "pl-PL": "smacznego",
+          "ro-RO": "poftă bună",
+          "tr-TR": "afiyet olsun",
+          "uk-UA": "смачного",
+          "uz-UZ": "yoqimli ishtaha"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke schön!",
+        "translation": {
+          "ru-RU": "Большое спасибо!",
+          "en-US": "Thank you very much!",
+          "ar-SA": "شكراً جزيلاً!",
+          "es-ES": "¡Muchas gracias!",
+          "fr-FR": "Merci beaucoup !",
+          "hi-IN": "बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję!",
+          "ro-RO": "Mulțumesc frumos!",
+          "tr-TR": "Çok teşekkürler!",
+          "uk-UA": "Щиро дякую!",
+          "uz-UZ": "Katta rahmat!"
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Vielen Dank.",
+        "translation": {
+          "ru-RU": "Огромное спасибо.",
+          "en-US": "Thank you very much.",
+          "ar-SA": "شكراً جزيلاً.",
+          "es-ES": "Muchas gracias.",
+          "fr-FR": "Merci beaucoup.",
+          "hi-IN": "आपका बहुत-बहुत धन्यवाद।",
+          "pl-PL": "Dziękuję bardzo.",
+          "ro-RO": "Vă mulțumesc mult.",
+          "tr-TR": "Çok teşekkür ederim.",
+          "uk-UA": "Велике дякую.",
+          "uz-UZ": "Ko'p rahmat."
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор окончен.",
+      "en-US": "The conversation is over.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत खत्म हो गई है।",
+      "pl-PL": "Rozmowa zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмова закінчена.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

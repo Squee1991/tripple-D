@@ -2,33 +2,29 @@ import {defineStore} from "pinia";
 import {ref, computed} from 'vue'
 
 export const userBattleStore = defineStore('battle', () => {
-	// --- Основные состояния игры ---
-	const userHp = ref(40) // Очки здоровья игрока
-	const enemyHp = ref(40) // Очки здоровья противника
-	const selectedTheme = ref(null) // Выбранная тема для боя (название темы)
-	// --- Руки, колоды и поля игроков ---
-	const userhand = ref([]) // Рука игрока (карты в руке)
-	const userDeck = ref([]) // Колода игрока (карты ещё не в руке)
-	const userField = ref([]) // Игровое поле игрока (разыгранные карты)
-	const enemyhand = ref([]) // Рука противника
-	const enemyDeck = ref([]) // Колода противника
-	const enemyField = ref([]) // Игровое поле противника
-	const stepNumber = ref(1) // Номер текущего хода
 
+	const userHp = ref(40)
+	const enemyHp = ref(40)
+	const selectedTheme = ref(null)
+	const userhand = ref([])
+	const userDeck = ref([])
+	const userField = ref([])
+	const enemyhand = ref([])
+	const enemyDeck = ref([])
+	const enemyField = ref([])
+	const stepNumber = ref(1)
 
-//  JSON-файл с немецкими словами (словарь по темам)
 	const loadWords = async () => {
 		const wordResponse = await fetch('/words.json')
 		return await wordResponse.json()
 	}
 
 
-// JSON-файл с описанием спеллов
 	const loadSpells = async () => {
 		const spellsResponse = await fetch('/spells.json')
 		return await spellsResponse.json()
 	}
-	// Тут мы Назначаем спеллы каждому слову по артиклю
+
 	const assignSpells = (words, spells, article) => {
 		const availableSpells = spells[article];
 		const spellCount = availableSpells.length;

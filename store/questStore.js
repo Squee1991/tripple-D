@@ -41,7 +41,8 @@ export const useQuestStore = defineStore('quest', () => {
                 ...item,
                 title: themenMap[index]?.title || '',
                 description: themenMap[index]?.description || '',
-                availableIds: item.recipeIds || []
+                // ИСПРАВЛЕНИЕ: Берем availableIds напрямую из вашего JSON
+                availableIds: item.availableIds || []
             }))
         } catch (err) {
             console.error('Ошибка загрузки тем:', err)
@@ -209,14 +210,13 @@ export const useQuestStore = defineStore('quest', () => {
         const { getDocs, collection } = fb
         const todayKey = getLocalDateKey()
 
-        // Получаем ВСЕ пройденные рецепты пользователя ОДНИМ запросом
+        // Получаем ВСЕ пройденные рецепты пользователя ОДНИМ запросо
         const snap = await getDocs(collection(db, 'users', user.uid, 'questProgress'))
         const completedMap = {}
         snap.forEach(doc => {
             completedMap[doc.id] = doc.data()
         })
 
-        // Теперь проверяем в памяти (это бесплатно)
         for (const id of theme.availableIds) {
             const data = completedMap[id]
             if (!data) return id

@@ -1,6 +1,6 @@
 <script setup>
-import {ref, onMounted, watch} from 'vue'
-import {userAuthStore} from "~/store/authStore.js"
+import { ref, onMounted, watch } from 'vue'
+import { userAuthStore } from "~/store/authStore.js"
 import Header from '../src/components/header.vue'
 import Banner from '../src/components/banner.vue'
 import Description from '../src/components/DescriptionBlock.vue'
@@ -12,100 +12,96 @@ import VEventAvailableModal from "../src/components/V-eventAvailableModal.vue";
 import VShowFall from "../src/components/V-showFall.vue";
 import Snow from "../assets/images/mery-christmas/Snow.svg";
 import HeartFall from "assets/images/mery-christmas/heartFall.svg";
-import {useEventSessionStore} from '../store/eventsStore.js'
-import {useHead, useSeoMeta} from '#imports'
+import { useEventSessionStore } from '../store/eventsStore.js'
+import VStartPage from "~/src/components/V-startPage.vue";
+import VAppBanner from "~/src/components/V-appBanner.vue";
 
-const {public: {siteUrl}} = useRuntimeConfig()
-const base = (siteUrl || '').replace(/\/$/, '')
-const {t} = useI18n()
-const canonical = useCanonical()
-const pageTitle = t('metaMainPage.title')
-const pageDesc = t('metaMainPage.description')
 
-useHead({
-  title: pageTitle,
-  link: [{rel: 'canonical', href: canonical}],
-  script: [{
-    type: 'application/ld+json',
-    children: JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      name: 'skillupgerman',
-      url: base + '/',
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: `${base}/search?q={search_term_string}`,
-        'query-input': 'required name=search_term_string'
-      }
-    })
-  }]
-})
-
-useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'website',
-  ogUrl: canonical,
-  ogImage: '/images/seo-main.png',
-  robots: 'index, follow'
-})
+const showLogin = ref(false)
 const eventStore = useEventSessionStore()
 const authStore = userAuthStore()
 const hydrated = ref(false)
+const isLocallyLogged = ref(false)
+
+definePageMeta({
+  layout: 'footerlayout'
+})
+
 onMounted(() => {
   hydrated.value = true
+  isLocallyLogged.value = localStorage.getItem('app_user_logged') === 'true'
+})
+
+watch(() => authStore.uid, (newUid) => {
+  if (newUid) {
+    localStorage.setItem('app_user_logged', 'true')
+    isLocallyLogged.value = true
+  } else if (authStore.initialized && !newUid) {
+    localStorage.removeItem('app_user_logged')
+    isLocallyLogged.value = false
+  }
 })
 </script>
 
 <template>
   <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
   <VShowFall v-if="eventStore.isSnowEnabled" :image="Snow"/>
-<!--  <VShowFall :image="HeartFall"/>-->
-  <div v-if="!hydrated || !authStore.initialized" class="loading"></div>
-  <div v-else class="container">
-    <Header/>
-    <div v-if="authStore.uid" class="stat">
-      <VUid/>
-    </div>
-    <div v-else>
+  <div class="container">
+    <ClientOnly>
+      <template v-if="authStore.uid">
+        <div class="stat">
+          <Header/>
+          <VUid/>
+          <Footer/>
+        </div>
+      </template>
+    </ClientOnly>
+    <template v-if="authStore.initialized && !authStore.uid">
+      <Header/>
       <Banner/>
       <Description/>
       <About/>
+      <VAppBanner/>
       <FeedBack/>
-    </div>
-    <Footer/>
+    </template>
   </div>
-
 </template>
 
 <style scoped>
 .container {
-  max-width: 1440px;
+  max-width: 1240px;
+  width: 100%;
+  min-height: 100dvh;
   margin: 0 auto;
   padding: 0 10px;
+
 }
 
 .stat {
   display: flex;
-  justify-content: center;
-  margin-top: 5px;
-  height: 100%;
   flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.stat::after{
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  background: var(--overlayAfter);
 }
 
 @media (max-width: 767px) {
   .stat {
+    /* flex-direction: column; - уже задано выше, можно не дублировать, но оставил как у тебя */
     flex-direction: column;
     justify-content: center;
   }
-}
-
-.loading {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 10px;
 }
 
 @media (max-width: 767px) {

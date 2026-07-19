@@ -1,123 +1,106 @@
-<template>
-  <div class="comic-wrapper">
-    <button @click="backToMain" class="back__btn">
-      <img class="btn__icon" src="../assets/images/close.svg" alt="">
-    </button>
-    <div class="comic__wrapper">
-      <div class="comic__header">
-        <h1 class="comic-description">{{ t('payPage.title') }}</h1>
-        <p class="sub__description">{{ t('payPage.description') }}</p>
-      </div>
-      <div class="subscription-box">
-        <div class="compare-header">
-          <span class="label">{{ t('payPage.compareLabelOne') }}</span>
-          <span class="label">{{ t('payPage.compareLabelTwo') }}</span>
-          <span class="label super-label">{{ t('payPage.compareLabelThree') }}</span>
-        </div>
-        <div class="compare-row" v-for="(feature, index) in features" :key="index">
-          <div class="compare__label">
-            <img class="compare__icon" :src="feature.icon" alt="">
-            <span class="compare__label-text">{{ feature.title }}</span>
-          </div>
-          <span>{{ feature.free ? '✔️' : '—' }}</span>
-          <span>{{ feature.premium ? '✔️' : '—' }}</span>
-        </div>
-        <div v-if="myAvailableCoupons.length > 0" class="discounts-container">
-          <p class="discounts-title">Твои скидочные купоны</p>
-          <div class="coupons-list">
-            <button
-                v-for="coupon in myAvailableCoupons"
-                :key="coupon.id"
-                class="coupon-selector-btn"
-                :class="{ 'is-active': selectedDiscountId === coupon.id }"
-                @click="selectDiscount(coupon.id)"
-            >
-              {{ coupon.label }}
-            </button>
-          </div>
-        </div>
-        <button
-            v-if="!authStore.isPremium"
-            class="pay-btn"
-            ref="payButton"
-            @click="pay"
-        >
-          <span class="btn-title">{{ t('payPage.getPremiumBtn') }}</span>
-          <span class="btn-price-wrapper">
-             <span v-if="selectedDiscountId" class="old-price-inline">{{ BASE_PRICE }} €</span>
-             <span class="new-price">{{ finalPrice }} € {{ t('payPage.month') }}</span>
-           </span>
-        </button>
-      </div>
-    </div>
-    <transition name="slide-up">
-      <div v-if="showStickyFooter && !authStore.isPremium" class="sticky-footer">
-        <button class="footer-btn" @click="pay">
-          <span class="btn-title">{{ t('payPage.getPremiumBtn') }}</span>
-          <span class="btn-price-wrapper">
-             <span v-if="selectedDiscountId" class="old-price-inline">{{ BASE_PRICE }} €</span>
-             <span class="new-price">{{ finalPrice }} € {{ t('payPage.month') }}</span>
-           </span>
-        </button>
-      </div>
-    </transition>
-  </div>
-</template>
-
 <script setup>
-import {ref, onMounted, onUnmounted} from 'vue'
+import {ref, onMounted, onUnmounted, computed} from 'vue'
 import {useRouter} from 'vue-router'
 import {userAuthStore} from '../store/authStore'
-import {getStripe} from '@/utils/stripe'
+import {useBillingStore} from '../store/billingStore'
+import {useI18n} from 'vue-i18n'
+import {useSeoMeta} from "#imports"
+
 import Books from '../assets/images/pay-images/books.svg'
-import Save from '../assets/images/pay-images/save.svg'
 import Ach from '../assets/images/pay-images/ach.svg'
 import Translate from '../assets/images/pay-images/translate.svg'
-import Award from '../assets/images/pay-images/award.svg'
 import Quests from '../assets/images/pay-images/Quests.svg'
 import Speaker from '../assets/images/pay-images/speaker.svg'
 import Exams from '../assets/images/pay-images/test.svg'
-import Competitions from '../assets/images/pay-images/competition.svg'
-import Future from '../assets/images/pay-images/future.svg'
-import {useSeoMeta} from "#imports";
+import Galaxy from '../assets/images/Galaxy.svg'
+import AudioTasks from '../assets/images/headphones.svg'
+import SupportCup from '../assets/images/cupheart.svg'
+import Ads from '../assets/images/ADS.svg'
+import Future from '../assets/images/FutureFunctions.svg'
+import StatsPlus from '../assets/images/StatsPlus.svg'
+import Forever from '../assets/images/forever.svg'
+import Description from '../assets/images/photo-frame.svg'
+import PremiumIcon from '../assets/images/PlusLogo.png'
+import VBanner from "~/src/components/V-banner.vue"
 
 const authStore = userAuthStore()
-const payButton = ref(null)
-const showStickyFooter = ref(false)
+const billingStore = useBillingStore()
 const router = useRouter()
 const {t} = useI18n()
-const backToMain = () => {
-  router.push('/')
+
+const displayPrice = ref('12.99')
+const displayCurrency = ref('€')
+
+const selectedDiscountId = ref(null)
+const submitLoading = ref(false)
+const restoreLoading = ref(false)
+const showToast = ref(false)
+const toastMessage = ref('')
+const payButton = ref(null)
+const showStickyFooter = ref(false)
+const justBought = ref(false)
+
+const handleBack = () => {
+  router.back()
 }
-const BASE_PRICE = 1
+
+const isPremium = computed(() => {
+  if (justBought.value) return true
+  if (!authStore.isPremium) return false
+  const endDateStr = authStore.subscriptionEndsAt
+  if (!endDateStr) return false
+  return new Date(endDateStr) > new Date()
+})
+
+const restoreComputed = computed(() => {
+  return restoreLoading.value ? t('restoreComputed.restoring') : t('restoreComputed.restore')
+})
+
+const submitComputed = computed(() => {
+  return submitLoading.value ? t('submitComputed.sync') : t('submitComputed.getPlus')
+})
 
 const finalPrice = computed(() => {
-  if (!selectedDiscountId.value) return BASE_PRICE.toFixed(2)
+  if (billingStore.isMobile && billingStore.offerings.length > 0) {
+    return billingStore.offerings[0].product.priceString
+  }
+
+  const base = parseFloat(displayPrice.value) || 12.99
+  if (!selectedDiscountId.value) return base.toFixed(2)
   const activeCoupon = myAvailableCoupons.value.find(c => c.id === selectedDiscountId.value)
   const percent = activeCoupon ? activeCoupon.percent : 0
-  const discounted = BASE_PRICE - (BASE_PRICE * (percent / 100))
+  const discounted = base - (base * (percent / 100))
   return discounted.toFixed(2)
 })
 
-const selectedDiscountId = ref(null)
-
 const myAvailableCoupons = computed(() => {
   const list = []
-  const hasAnyDiscount = authStore.premiumDiscount.sale_5 ||
+  const hasAnyDiscount = authStore.premiumDiscount.sale_3 ||
+      authStore.premiumDiscount.sale_5 ||
+      authStore.premiumDiscount.sale_6 ||
       authStore.premiumDiscount.sale_10 ||
       authStore.premiumDiscount.sale_15
   if (hasAnyDiscount) {
-    list.push({id: null, percent: 0, label: 'Без скидки'})
+    list.push(
+        {
+          id: null,
+          percent: 0,
+          label: t('payPage.withoutDiscount')
+        })
   }
-  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_5', percent: 5, label: 'Скидка 5%'})
-  if (authStore.premiumDiscount.sale_10) list.push({id: 'sale_10', percent: 10, label: 'Скидка 10%'})
-  if (authStore.premiumDiscount.sale_15) list.push({id: 'sale_15', percent: 15, label: 'Скидка 15%'})
-
+  if (authStore.premiumDiscount.sale_3) list.push({id: 'sale_3', percent: 3, label: t('cardSales.title3')})
+  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_5', percent: 5, label: t('cardSales.title5')})
+  if (authStore.premiumDiscount.sale_6) list.push({id: 'sale_6', percent: 6, label: t('cardSales.title6')})
+  if (authStore.premiumDiscount.sale_10) list.push({id: 'sale_10', percent: 10, label: t('cardSales.title10')})
+  if (authStore.premiumDiscount.sale_15) list.push({id: 'sale_15', percent: 15, label: t('cardSales.title15')})
   return list
 })
 
-const selectDiscount = (id) => {
+const selectDiscount = async (id) => {
   selectedDiscountId.value = (selectedDiscountId.value === id) ? null : id
+  if (billingStore.isMobile) {
+    await billingStore.loadOfferings(selectedDiscountId.value)
+  }
 }
 
 useSeoMeta({
@@ -126,18 +109,93 @@ useSeoMeta({
 
 let observer
 const features = [
-  {title: t('payPage.featureOne'), free: true, premium: true, icon: Books},
-  {title: t('payPage.featureTwo'), free: true, premium: true, icon: Save},
-  {title: t('payPage.featureThree'), free: true, premium: true, icon: Ach},
-  {title: t('payPage.featureFour'), free: true, premium: true, icon: Quests},
-  {title: t('payPage.featureFive'), free: false, premium: true, icon: Translate},
-  {title: t('payPage.featureSix'), free: false, premium: true, icon: Award},
-  {title: t('payPage.featureSeven'), free: false, premium: true, icon: Exams},
-  {title: t('payPage.featureEight'), free: false, premium: true, icon: Speaker},
-  {title: t('payPage.featureNine'), free: false, premium: true, icon: Competitions},
-  {title: t('payPage.featureTen'), free: false, premium: true, icon: Future},
+  {title: t('payPage.featureOne'), icon: Forever},
+  {title: t('payPage.featureTwo'), icon: Future},
+  {title: t('payPage.featureThree'), icon: SupportCup},
+  {title: t('payPage.featureFour'), icon: Ads},
 ]
-onMounted(() => {
+
+const triggerToast = (msg) => {
+  toastMessage.value = msg
+  showToast.value = true
+  setTimeout(() => {
+    showToast.value = false
+  }, 3200)
+}
+
+async function handleRestore() {
+  if (!billingStore.isMobile) return
+  if (isPremium.value) {
+    triggerToast('pay.triggerToastIsPlus')
+    return
+  }
+  restoreLoading.value = true
+  try {
+    const success = await billingStore.restore()
+    if (success) {
+      triggerToast('pay.triggerToastSuccess')
+      justBought.value = true
+    } else {
+      triggerToast('pay.triggerToastNotFound')
+    }
+  } catch (err) {
+    triggerToast('pay.triggerToastError')
+  } finally {
+    restoreLoading.value = false
+  }
+}
+
+async function pay() {
+  if (!authStore.uid || !authStore.email) return
+  if (billingStore.isMobile) {
+    if (billingStore.offerings.length > 0) {
+      const pkg = billingStore.offerings[0]
+      const success = await billingStore.buy(pkg)
+      if (success) {
+        justBought.value = true
+      }
+    }
+    return
+  }
+
+  submitLoading.value = true
+  try {
+    const response = await $fetch('/api/stripe/checkout', {
+      method: 'POST',
+      body: {
+        userId: authStore.uid,
+        email: authStore.email,
+        couponId: selectedDiscountId.value
+      },
+    })
+    if (response.url) {
+      window.location.href = response.url
+    } else if (response.error) {
+      console.log(response.error)
+    }
+  } catch (err) {
+    console.error(err)
+  } finally {
+    submitLoading.value = false
+  }
+}
+
+onMounted(async () => {
+  if (isPremium.value) {
+    triggerToast('pay.triggerToastIsPlus')
+  }
+  try {
+    const data = await $fetch('/api/stripe/get-price')
+    if (data) {
+      displayPrice.value = data.amount
+      displayCurrency.value = data.currency
+    }
+  } catch (err) {
+    console.error('Не удалось загрузить локальную цену:', err)
+  }
+  if (billingStore.isMobile) {
+    await billingStore.initialize()
+  }
   observer = new IntersectionObserver(
       ([entry]) => {
         showStickyFooter.value = !entry.isIntersecting
@@ -154,265 +212,561 @@ onUnmounted(() => {
     observer.unobserve(payButton.value)
   }
 })
-
-async function pay() {
-  if (!authStore.uid || !authStore.email) {
-    alert('Пожалуйста, войдите в аккаунт')
-    return
-  }
-  const priceId = 'price_1SvdnE24sKuPwF6cZoD2ZJn3'
-  try {
-    const response = await $fetch('/api/stripe/checkout', {
-      method: 'POST',
-      body: {
-        userId: authStore.uid,
-        email: authStore.email,
-        priceId,
-        couponId: selectedDiscountId.value
-      },
-    })
-    if (response.url) {
-      window.location.href = response.url
-    } else if (response.error) {
-      console.error('Ошибка сервера:', response.error)
-      alert('Ошибка: ' + response.error)
-    }
-  } catch (err) {
-    console.error('Ошибка сети:', err)
-    alert('Произошла ошибка соединения. Проверьте логи сервера.')
-  }
-}
 </script>
 
+<template>
+  <div class="pro-vault">
+    <transition name="toast-fade">
+      <div v-if="showToast" class="toast-notification">{{ t(toastMessage) }}</div>
+    </transition>
+    <div class="vault-nav">
+      <button @click="handleBack" class="btn-icon-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+    </div>
+    <div class="main-flow">
+      <div class="flow-step">
+        <template v-if="!authStore.isPremium">
+          <div class="flow__banner-pay">
+            <span class="flow__banner-text"> {{ t('pay.banner') }}</span>
+            <img class="flow__banner-icon" :src="PremiumIcon" alt="PremiumIcon">
+          </div>
+          <div class="perks-grid">
+            <div v-for="(feat, index) in features" :key="index" class="perk-card">
+              <div class="perk-icon">
+                <img :src="feat.icon" alt="" class="icon-svg">
+              </div>
+              <div class="perk-meta">
+                <span class="perk-name">{{ feat.title }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="bonus-section" v-if="myAvailableCoupons.length > 1">
+            <div class="hero-zone bonus-hero">
+              <p class="hero-desc">{{ t('pay.sales') }}</p>
+            </div>
+            <div class="inventory-section">
+              <div class="inventory-list">
+                <div
+                    v-for="coupon in myAvailableCoupons"
+                    :key="coupon.id"
+                    class="loot-card"
+                    :class="{ 'loot-card--active': selectedDiscountId === coupon.id }"
+                    @click="selectDiscount(coupon.id)"
+                >
+                  <div class="loot-glow"></div>
+                  <div class="loot-content">
+                    <div v-if="coupon.label" class="loot-info">
+                      <span class="loot-title">{{ coupon.label }}</span>
+                    </div>
+                    <div class="loot-val" v-if="coupon.percent > 0">{{ coupon.percent }}%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="billing-summary">
+            <div class="bill-line discount" v-if="selectedDiscountId">
+              <span class="bill-text">{{ t('payPage.yourSale') }}</span>
+              <span class="bill-price-neg">-{{
+                  myAvailableCoupons.find(c => c.id === selectedDiscountId).percent
+                }}%</span>
+            </div>
+            <div class="bill-total">
+              <span class="total-text">{{ t('payPage.finalePrice') }}</span>
+              <span class="total-price">{{ finalPrice }}{{ displayCurrency }}</span>
+            </div>
+          </div>
+          <div class="footer-action-wrapper" ref="payButton">
+            <div class="footer-action">
+              <button @click="pay" class="btn-buy-neon" :disabled="submitLoading || restoreLoading">
+                {{ submitComputed }}
+              </button>
+              <button
+                  v-if="billingStore.isMobile"
+                  @click="handleRestore"
+                  class="btn-restore"
+                  :disabled="restoreLoading || submitLoading"
+              >
+                {{ restoreComputed }}
+              </button>
+            </div>
+          </div>
+        </template>
+        <template v-else>
+          <div class="premium-success-view">
+            <div class="success-decor">
+              <div class="glow-orb"></div>
+              <div class="glow-orb orb-2"></div>
+            </div>
+            <div class="premium-active-card">
+              <div class="premium-active-icon">
+                <img :src="PremiumIcon" alt="Premium" class="active-pulse-img">
+              </div>
+              <div class="premium-active-text">
+                <h3>{{ t('activePlus.title')}}</h3>
+                <p>{{ t('activePlus.description')}}</p>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</template>
+
 <style scoped>
-.comic-wrapper {
-  background: linear-gradient(to bottom, #261d12, #22193f);
-}
-
-.comic__wrapper {
-  padding: 14px;
-  font-family: 'Nunito', sans-serif;
-  text-align: center;
+.toast-notification {
+  position: absolute;
+  width: 100%;
+  top: calc(env(safe-area-inset-top));
+  left: 0;
+  background: #d97706;
   color: #fff;
-  min-height: 100vh;
+  padding: 18px 24px;
+  font-weight: 800;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+  z-index: 1000;
+  text-align: center;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
-.old-price-inline {
+.toast-notification:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  left: 0;
+  bottom: 100%;
+  background: #d97706;
+  z-index: 1;
+}
+
+.toast-fade-enter-active,
+.toast-fade-leave-active {
+  transition: all 0.2s ease-in-out;
+}
+
+.toast-fade-enter-from,
+.toast-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-100%)
+}
+
+.btn-restore {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  background: transparent;
+  border: none;
+  color: #8e8e93;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+}
+
+.flow__banner-pay {
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgb(0, 194, 255), rgb(0, 168, 219)) rgb(0, 194, 255);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3), inset 0 -2px 4px rgba(0, 0, 0, 0.1), 0 6px 0 rgb(0, 160, 220);
+}
+
+.flow__banner-icon {
+  width: 150px;
+}
+
+.flow__banner-text {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.btn-restore:active {
+  color: #d1d1d6;
+  text-decoration-color: #d1d1d6;
+}
+
+.btn-restore:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pro-vault {
+  height: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  background: var(--bg);
+  color: var(--title);
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  overflow: hidden;
+  padding: 0 10px;
+  flex-direction: column;
+}
+
+.vault-nav {
+  padding: 5px 0 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.main-flow {
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.hero-zone {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.bonus-hero {
+  margin-top: 30px;
+}
+
+.hero-desc {
+  color: var(--title);
+  font-size: 15px;
+  margin-top: 6px;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.perks-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.perk-card {
+  border-bottom: 1px solid rgba(103, 101, 101, 0.24);
+  border-radius: 5px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.perk-icon {
+  width: 46px;
+  height: 46px;
+}
+
+.perk-meta {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.perk-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--title);
+}
+
+.inventory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loot-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 16px;
   position: relative;
-  display: inline-block;
-  opacity: 0.7;
-  margin-right: 5px;
-  font-size: 1.1rem;
-  font-weight: bold;
+  overflow: hidden;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
-.old-price-inline::after {
-  content: '';
+.loot-card--active {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.loot-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.loot-info {
+  text-align: left;
+}
+
+.loot-title {
+  font-size: 17px;
+  font-weight: 900;
+  display: block;
+}
+
+.loot-sub {
+  font-size: 12px;
+  color: #8e8e93;
+  font-weight: 700;
+}
+
+.loot-val {
+  font-size: 22px;
+  font-weight: 900;
+  color: #10b981;
+}
+
+.flow-step {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+  min-height: 100%;
+}
+
+.loot-glow {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #6366f1;
+  filter: blur(50px);
+  top: -50px;
+  right: -50px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.loot-card--active .loot-glow {
+  opacity: 0.2;
+}
+
+.billing-summary {
+  margin-top: 15px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 24px;
+}
+
+.bill-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #8e8e93;
+}
+
+.bill-price-neg {
+  color: #facc15;
+}
+
+.bill-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.total-text {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.total-price {
+  font-weight: 900;
+  font-size: 24px;
+  color: #10b981;
+}
+
+.footer-action-wrapper {
+  margin-top: 20px;
+  position: relative;
+}
+
+.footer-action {
+  padding: 20px 0;
+}
+
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-icon-back:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
+}
+
+.btn-buy-neon {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  box-shadow: 0 6px 0 #228b5f;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.btn-buy-neon:active {
+  transform: scale(0.98);
+}
+
+.btn-buy-neon:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+.premium-success-view {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.success-decor {
   position: absolute;
   top: 50%;
-  left: -5%;
-  width: 110%;
-  height: 3px;
-  background-color: #ff3333;
-  transform: translateY(-50%) rotate(-15deg);
-  border-radius: 2px;
-  box-shadow: 0 0 5px rgba(255, 51, 51, 0.5);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
   pointer-events: none;
 }
 
-.back__btn {
-  border: none;
-  background: none;
-  padding: 20px;
-  cursor: pointer;
+.glow-orb {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: #10b981;
+  filter: blur(60px);
+  border-radius: 50%;
+  opacity: 0.4;
+  top: 20%;
+  left: 10%;
+  animation: orb-float 5s ease-in-out infinite alternate;
 }
 
-.btn__icon {
-  width: 40px;
-}
-
-.discounts-container {
-  margin: 20px 0;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-}
-
-.coupon-selector-btn {
-  background: #333;
-  color: #fff;
-  border: 2px solid transparent;
-  padding: 8px 15px;
-  margin: 5px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.coupon-selector-btn.is-active {
-  border-color: #00e676;
-  background: rgba(0, 230, 118, 0.2);
-}
-
-.compare__label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 20px;
-  gap: 20px;
-}
-
-.compare__label-text {
-  width: 200px;
-  display: flex;
-  justify-content: start;
-}
-
-.comic-description {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.compare__icon {
-  width: 40px;
-}
-
-.comic__header {
-  margin-bottom: 10px;
-}
-
-.subscription-box {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid #fff;
-  border-radius: 20px;
-  padding: 30px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  backdrop-filter: blur(10px);
-}
-
-.compare-header, .compare-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 1.1rem;
-}
-
-.compare-header {
-  font-weight: bold;
-  border-bottom: 2px solid #fff;
-}
-
-.sub__description {
-  font-size: 0.8rem;
-}
-
-.super-label {
-  color: #fff;
-  background: linear-gradient(to right, #b04727, #ff9900);
-  border-radius: 25px;
-  font-weight: bold;
-}
-
-.label {
-  padding: 10px;
-}
-
-.pay-btn {
-  margin-top: 30px;
-  background: #3889a6;
-  color: white;
-  font-size: 17px;
-  font-weight: bold;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  box-shadow: 4px 4px 0 #000;
-  transition: background 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  gap: 5px;
-}
-
-.btn-price-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.pay-btn:hover {
-  background: #00c853;
-}
-
-.sticky-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+.glow-orb.orb-2 {
+  background: #0ea5e9;
+  width: 120px;
   height: 120px;
-  background: linear-gradient(90deg, #222 0%, #3b2f63 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-  border-top: 2px solid #fff2;
+  top: auto;
+  bottom: 20%;
+  left: auto;
+  right: 10%;
+  animation-delay: -2s;
 }
 
-.footer-btn {
-  background: #ffffff;
-  color: #111;
-  font-size: 17px;
+.premium-active-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 30px 20px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);
+  border: 2px solid rgba(16, 185, 129, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
+  animation: premium-glow 3s infinite alternate;
+}
+
+.premium-active-icon {
+  width: 180px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+.active-pulse-img {
+  width: 120px;
+  object-fit: contain;
+  animation: icon-float 6s ease-in-out infinite;
+}
+
+.premium-active-text {
+  text-align: center;
+}
+
+.premium-active-text h3 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #10b981;
+  margin: 0 0 8px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.premium-active-text p {
+  font-size: 16px;
+  color: #a1a1aa;
+  margin: 0;
   font-weight: 700;
-  padding: 18px 36px;
-  border-radius: 14px;
-  box-shadow: 0 4px #000;
-  border: none;
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+  line-height: 1.4;
 }
 
-.footer-btn:hover {
-  background: linear-gradient(to right, #b04727, #ff9900);
-  transform: translateY(-2px);
-  color: white;
-}
-
-.slide-up-enter-active,
-.slide-up-leave-active {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.slide-up-enter-from,
-.slide-up-leave-to {
-  transform: translateY(100%);
-  opacity: 0;
-}
-
-@media (max-width: 539px) {
-  .compare__label-text {
-    width: 130px;
-    text-align: start;
-    font-size: 0.9rem;
+@keyframes premium-glow {
+  0% {
+    border-color: rgba(16, 185, 129, 0.3);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);
   }
-
-  .compare__label {
-    margin-left: 1px;
+  100% {
+    border-color: rgba(16, 185, 129, 0.8);
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.3);
   }
+}
 
-  .subscription-box {
-    padding: 15px;
+@keyframes icon-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
   }
+  50% {
+    transform: translateY(-3px) scale(1.05);
+  }
+}
 
-  .compare-header {
-    font-size: 0.9rem;
+@keyframes orb-float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(20px, -20px) scale(1.1);
   }
 }
 </style>

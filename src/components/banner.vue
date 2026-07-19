@@ -1,7 +1,7 @@
 <template>
   <Overlay :visible="showAuth" @close="closeAuth"/>
   <transition name="slide">
-    <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
+    <SignIn v-if="showAuth" initial-mode="register" @close-auth-form="closeAuth"/>
   </transition>
   <div class="banner">
     <section ref="bannerRef" class="banner__section">
@@ -38,18 +38,18 @@ import Overlay from '../components/Uioverlay.vue'
 import {gsap} from 'gsap'
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import Snow from "../../assets/images/shovel.svg";
+import {onMounted, ref, watch} from 'vue'
+import {useRouter} from 'vue-router'
+import {userAuthStore} from '../../store/authStore.js'
+import {useI18n} from 'vue-i18n'
+
+gsap.registerPlugin(ScrollTrigger);
 
 const orbitWords = [
   {text: 'Der', type: 'der', class: 'banner__orbit-word--der'},
   {text: 'Die', type: 'die', class: 'banner__orbit-word--die'},
   {text: 'Das', type: 'das', class: 'banner__orbit-word--das'}
 ]
-
-gsap.registerPlugin(ScrollTrigger);
-import {onMounted} from 'vue'
-import {useRouter} from 'vue-router'
-import {userAuthStore} from '../../store/authStore.js'
-import {ref, watch} from "vue";
 
 const {t} = useI18n()
 const orbit = ref(null)
@@ -59,22 +59,23 @@ const router = useRouter()
 const glowType = ref(null)
 const fadingGlow = ref(null)
 const bannerRef = ref(null);
+
 const openAuth = () => {
   showAuth.value = true
 }
-
 
 const closeAuth = () => {
   showAuth.value = false
 }
 
 const startLearning = () => {
-  userAuth.name ? router.push('/articles') : openAuth()
+  openAuth()
 }
 
 watch(showAuth, (val) => {
   document.body.style.overflow = val ? 'hidden' : ''
 })
+
 onMounted(() => {
   if (!bannerRef.value || !orbit.value) {
     return;
@@ -93,8 +94,17 @@ onMounted(() => {
 });
 </script>
 
-
 <style scoped>
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(100%);
+}
 
 .banner {
   font-family: "Nunito", sans-serif;
@@ -147,7 +157,6 @@ onMounted(() => {
   top: -145%;
   left: 0;
   width: 100%;
-
 }
 
 .banner__orbit-word--der {
@@ -174,30 +183,24 @@ onMounted(() => {
 
 .banner__button {
   font-family: "Nunito", sans-serif;
-  padding: 1rem 2.5rem;
+  padding: 14px;
+  width: 100%;
+  max-width: 380px;
   font-size: 1.5rem;
   font-weight: 600;
-  border-radius: 12px;
+  border-radius: 50px;
   cursor: pointer;
-  border: 2px solid #1e1e1e;
+  border: none;
   transition: all 0.1s ease-in-out;
   background-color: #6368bb;
   color: #ffffff;
-  box-shadow: 2px 2px 0px #1e1e1e;
-
+  box-shadow: 0 6px 0 #4a4fa1;
 }
 
 @media (min-width: 1024px) {
   .banner__button:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 0px 0px 0px #1e1e1e;
+    transform: translateY(2px);
   }
-
-}
-
-.banner__button:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0px 0px 0px #1e1e1e;
 }
 
 .banner__mage-container {
@@ -216,18 +219,18 @@ onMounted(() => {
   background: none;
   padding: 20px;
   transform: rotate(-20deg);
+  border: none;
 }
 
 .banner__mage::before, .banner__mage::after {
   content: '';
   position: absolute;
-  border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0px #1e1e1e;
   transition: all 0.3s ease;
 }
 
 .banner__mage::before {
   background: #f1c40f;
+  box-shadow: 8px 8px 0px #c29e0b;
   width: 70%;
   height: 70%;
   border-radius: 24px;
@@ -240,6 +243,7 @@ onMounted(() => {
   width: 55%;
   height: 55%;
   background: #a855f7;
+  box-shadow: 8px 8px 0px #8a3bd5;
   border-radius: 24px;
   z-index: 2;
   bottom: 0;
@@ -284,25 +288,12 @@ onMounted(() => {
   }
 
   .banner__title {
-    font-size: 2rem;
+    font-size: 24px;
   }
 
   .banner__orbit-word {
     font-size: 1.5rem;
     padding: 0.6rem 1.5rem;
-  }
-
-  .banner__button {
-    width: 80%;
-    border-radius: 12px;
-    box-shadow: 2px 2px 0 #1e1e1e;
-  }
-}
-
-@media (max-width: 500px) {
-  .banner__button {
-    width: 90%;
-    padding: 10px;
   }
 }
 </style>

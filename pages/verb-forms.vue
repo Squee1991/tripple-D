@@ -1,17 +1,16 @@
 <template>
   <div class="verbs-container">
-    <div class="fixed-top">
-      <header class="header">
-        <div class="header__inner">
-          <div class="back__btn">
-            <VBackBtn/>
+    <div class="verbs__header">
+      <div class="fixed-top">
+        <header class="header">
+          <div class="header__inner">
+            <div class="back__btn">
+              <VBackBtn/>
+            </div>
+            <h1 class="cartoon-title">{{ t('verbFormPage.title') }}</h1>
           </div>
-<!--          <h1 class="cartoon-title">{{ t('verbFormPage.title') }}</h1>-->
-<!--          <div v-if="filteredVerbs.length" class="counter">-->
-<!--            {{ t('verbFormPage.found') }} <strong>{{ filteredVerbs.length }}</strong>-->
-<!--          </div>-->
-        </div>
-      </header>
+        </header>
+      </div>
       <div class="filters">
         <div class="search-box">
           <input
@@ -38,7 +37,8 @@
             <div class="inf-left-side">
               <SoundBtn :text="verb.infinitive" class="large-sound" />
               <h2 class="inf-main">
-               <span class="verb__infinitive"> {{ verb.infinitive }}</span> - {{ verb.translations?.[locale] || verb.translations?.['en'] || '...' }}
+               <span class="verb__infinitive"> {{ verb.infinitive }}</span>
+                <span class="verb__infinitive-translate"> - {{ verb.translations?.[locale] || verb.translations?.['en'] || '...' }}</span>
               </h2>
             </div>
           </div>
@@ -158,35 +158,28 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 
 <style scoped>
 
-*{
-  color: var(--titleColor);
-}
-
-
-
 .verbs-container {
-  height: 100vh;
+  height: 100%;
   max-width: 1300px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 10px;
   overflow: hidden;
 }
 
 .fixed-top {
   flex-shrink: 0;
-  border-radius: 20px;
-  padding: 15px;
+  border-radius: 15px;
   margin-bottom: 10px;
-  border: 3px solid #e2e8f0;
 }
 
 .cartoon-title {
   font-family: "Nunito", sans-serif;
   font-weight: 900;
-  font-size: 1.8rem;
-  text-align: center;
+  font-size: 23px;
+  color: var(--title);
+  margin-left: 15px;
+  text-shadow: 1px 1px var(--title);
 }
 
 .counter {
@@ -197,6 +190,7 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 }
 
 .page-counter{
+  color: var(--title);
   width: 65px;
   display: flex;
   align-items: center;
@@ -209,11 +203,13 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 0 10px;
 }
 
 .cartoon-input, .cartoon-select {
   padding: 12px;
+  width: 100%;
   border: 2px solid #cbd5e0;
   border-radius: 10px;
   font-weight: 600;
@@ -230,11 +226,12 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 .scroll-area {
   flex: 1;
   overflow-y: auto;
-  padding: 2px;
+  padding: 8px;
 }
 
 .scroll-area::-webkit-scrollbar {
   width: 5px;
+  display: none;
 }
 
 .scroll-area::-webkit-scrollbar-track {
@@ -254,12 +251,15 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   color: #4299e1;
 }
 
+.verb__infinitive-translate {
+  color: var(--titleColor);
+}
+
 .verb-card {
   border-radius: 25px;
   border: 4px solid #e2e8f0;
   padding: 15px;
   margin-bottom: 10px;
-  box-shadow: 0 8px 0 #e2e8f0;
 }
 
 .card-hero {
@@ -267,7 +267,6 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border-bottom: 2px dashed #e2e8f0;
   padding-bottom: 15px;
   margin-bottom: 20px;
 }
@@ -311,6 +310,15 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   margin-top: 5px;
 }
 
+.header__inner {
+  padding: 5px 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5px;
+
+}
+
 .type-tag.weak {
   background: #48bb78;
 }
@@ -352,9 +360,7 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   align-items: center;
   gap: 8px;
   margin-bottom: 8px;
-  padding: 2px 10px;
   border-radius: 12px;
-  border: 1px solid #edf2f7;
 }
 
 .p-label {
@@ -366,6 +372,7 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 .v-form {
   font-size: 0.95rem;
   font-weight: 700;
+  color: var(--titleColor);
 }
 
 .mini-sound {
@@ -377,7 +384,6 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border-bottom: 2px dashed #e2e8f0;
   padding-bottom: 15px;
   margin-bottom: 10px;
 }
@@ -417,14 +423,8 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   gap: 30px;
   padding: 15px;
   border-radius: 20px;
-  border-top: 3px solid #e2e8f0;
 }
 
-.back__btn {
-  max-width: 240px;
-  margin: 0 auto;
-
-}
 
 .nav-btn {
   background: #4299e1;
@@ -451,11 +451,6 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 @media (max-width: 1023px) {
   .tenses-layout {
     grid-template-columns: 1fr;
-  }
-
-  .verb-card {
-    border-width: 3px;
-    box-shadow: 0 6px 0 #e2e8f0;
   }
 }
 

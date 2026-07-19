@@ -1,0 +1,630 @@
+{
+  "start": {
+    "botText": "Guten Tag! Sammeln Sie Treuepunkte?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Вы собираете бонусные баллы?",
+      "en-US": "Good day! Do you collect loyalty points?",
+      "ar-SA": "طاب يومك! هل تجمعين نقاط الولاء؟",
+      "es-ES": "¡Buen día! ¿Acumula puntos de fidelidad?",
+      "fr-FR": "Bonjour ! Collectionnez-vous les points de fidélité ?",
+      "hi-IN": "शुभ दिन! क्या आप लॉयल्टी पॉइंट जमा करते हैं?",
+      "pl-PL": "Dzień dobry! Zbiera pani punkty lojalnościowe?",
+      "ro-RO": "Bună ziua! Colectați puncte de fidelitate?",
+      "tr-TR": "İyi günler! Sadakat puanı topluyor musunuz?",
+      "uk-UA": "Добрий день! Ви збираєте бонусні бали?",
+      "uz-UZ": "Xayrli kun! Sodliqlik ballarini yig'asizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "sammeln",
+        "translation": {
+          "ru-RU": "собирать",
+          "en-US": "to collect",
+          "ar-SA": "يجمع",
+          "es-ES": "coleccionar",
+          "fr-FR": "collectionner",
+          "hi-IN": "इकट्ठा करना",
+          "pl-PL": "zbierać",
+          "ro-RO": "a colecta",
+          "tr-TR": "toplamak",
+          "uk-UA": "збирати",
+          "uz-UZ": "yig'moq"
+        }
+      },
+      {
+        "german": "die Treuepunkte",
+        "translation": {
+          "ru-RU": "бонусные баллы",
+          "en-US": "loyalty points",
+          "ar-SA": "نقاط الولاء",
+          "es-ES": "puntos de fidelidad",
+          "fr-FR": "points de fidélité",
+          "hi-IN": "लॉयल्टी पॉइंट",
+          "pl-PL": "punkty lojalnościowe",
+          "ro-RO": "puncte de fidelitate",
+          "tr-TR": "sadakat puanları",
+          "uk-UA": "бонусні бали",
+          "uz-UZ": "sodiqlik ballari"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, danke.",
+        "translation": {
+          "ru-RU": "Нет, спасибо.",
+          "en-US": "No, thanks.",
+          "ar-SA": "لا، شكراً.",
+          "es-ES": "No, gracias.",
+          "fr-FR": "Non, merci.",
+          "hi-IN": "नहीं, धन्यवाद।",
+          "pl-PL": "Nie, dziękuję.",
+          "ro-RO": "Nu, mulțumesc.",
+          "tr-TR": "Hayır, teşekkürler.",
+          "uk-UA": "Ні, дякую.",
+          "uz-UZ": "Yo'q, rahmat."
+        },
+        "nextStep": "gefunden"
+      },
+      {
+        "text": "Ja, hier ist meine Karte.",
+        "translation": {
+          "ru-RU": "Да, вот моя карта.",
+          "en-US": "Yes, here is my card.",
+          "ar-SA": "نعم، هذه بطاقتي.",
+          "es-ES": "Sí, aquí está mi tarjeta.",
+          "fr-FR": "Oui, voici ma carte.",
+          "hi-IN": "हाँ, यह मेरा कार्ड है।",
+          "pl-PL": "Tak, oto moja karta.",
+          "ro-RO": "Da, iată cardul meu.",
+          "tr-TR": "Evet, işte kartım.",
+          "uk-UA": "Так, ось моя картка.",
+          "uz-UZ": "Ha, mana mening kartam."
+        },
+        "nextStep": "gefunden"
+      }
+    ],
+    "defaultNext": "gefunden"
+  },
+  "gefunden": {
+    "botText": "Haben Sie alles gefunden?",
+    "botTranslation": {
+      "ru-RU": "Вы всё нашли?",
+      "en-US": "Did you find everything?",
+      "ar-SA": "هل وجدت كل شيء؟",
+      "es-ES": "¿Ha encontrado todo?",
+      "fr-FR": "Avez-vous tout trouvé ?",
+      "hi-IN": "क्या आपको सब कुछ मिल गया?",
+      "pl-PL": "Czy znalazła pani wszystko?",
+      "ro-RO": "Ați găsit totul?",
+      "tr-TR": "Her şeyi buldunuz mu?",
+      "uk-UA": "Ви все знайшли?",
+      "uz-UZ": "Hamma narsani topdingizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "alles",
+        "translation": {
+          "ru-RU": "всё",
+          "en-US": "everything",
+          "ar-SA": "كل شيء",
+          "es-ES": "todo",
+          "fr-FR": "tout",
+          "hi-IN": "सब कुछ",
+          "pl-PL": "wszystko",
+          "ro-RO": "totul",
+          "tr-TR": "her şey",
+          "uk-UA": "все",
+          "uz-UZ": "hamma narsa"
+        }
+      },
+      {
+        "german": "finden",
+        "translation": {
+          "ru-RU": "находить",
+          "en-US": "to find",
+          "ar-SA": "يجد",
+          "es-ES": "encontrar",
+          "fr-FR": "trouver",
+          "hi-IN": "खोजना",
+          "pl-PL": "znaleźć",
+          "ro-RO": "a găsi",
+          "tr-TR": "bulmak",
+          "uk-UA": "знаходити",
+          "uz-UZ": "topmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, alles super, danke.",
+        "translation": {
+          "ru-RU": "Да, всё супер, спасибо.",
+          "en-US": "Yes, everything is great, thanks.",
+          "ar-SA": "نعم، كل شيء رائع، شكراً.",
+          "es-ES": "Sí, todo genial, gracias.",
+          "fr-FR": "Oui, tout est super, merci.",
+          "hi-IN": "हाँ, सब कुछ बहुत अच्छा है, धन्यवाद।",
+          "pl-PL": "Tak, wszystko super, dziękuję.",
+          "ro-RO": "Da, totul este super, mersi.",
+          "tr-TR": "Evet, her şey harika, teşekkürler.",
+          "uk-UA": "Так, все супер, дякую.",
+          "uz-UZ": "Ha, hammasi ajoyib, rahmat."
+        },
+        "nextStep": "tuete"
+      },
+      {
+        "text": "Ja, ich habe alles gefunden.",
+        "translation": {
+          "ru-RU": "Да, я всё нашла.",
+          "en-US": "Yes, I found everything.",
+          "ar-SA": "نعم، لقد وجدت كل شيء.",
+          "es-ES": "Sí, he encontrado todo.",
+          "fr-FR": "Oui, j'ai tout trouvé.",
+          "hi-IN": "हाँ, मुझे सब कुछ मिल गया।",
+          "pl-PL": "Tak, wszystko znalazłam.",
+          "ro-RO": "Da, am găsit totul.",
+          "tr-TR": "Evet, her şeyi buldum.",
+          "uk-UA": "Так, я все знайшла.",
+          "uz-UZ": "Ha, men hamma narsani topdim."
+        },
+        "nextStep": "tuete"
+      }
+    ],
+    "defaultNext": "tuete"
+  },
+  "tuete": {
+    "botText": "Brauchen Sie eine Tüte?",
+    "botTranslation": {
+      "ru-RU": "Вам нужен пакет?",
+      "en-US": "Do you need a bag?",
+      "ar-SA": "هل تحتاجين إلى كيس؟",
+      "es-ES": "¿Necesita una bolsa?",
+      "fr-FR": "Avez-vous besoin d'un sac ?",
+      "hi-IN": "क्या आपको एक बैग चाहिए?",
+      "pl-PL": "Potrzebuje pani reklamówki?",
+      "ro-RO": "Aveți nevoie de o pungă?",
+      "tr-TR": "Poşet ister misiniz?",
+      "uk-UA": "Вам потрібен пакет?",
+      "uz-UZ": "Sizga paket kerakmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "brauchen",
+        "translation": {
+          "ru-RU": "нуждаться",
+          "en-US": "to need",
+          "ar-SA": "يحتاج",
+          "es-ES": "necesitar",
+          "fr-FR": "avoir besoin",
+          "hi-IN": "आवश्यकता होना",
+          "pl-PL": "potrzebować",
+          "ro-RO": "a avea nevoie",
+          "tr-TR": "ihtiyacı olmak",
+          "uk-UA": "потребувати",
+          "uz-UZ": "kerak bo'lmoq"
+        }
+      },
+      {
+        "german": "die Tüte",
+        "translation": {
+          "ru-RU": "пакет",
+          "en-US": "bag",
+          "ar-SA": "كيس",
+          "es-ES": "bolsa",
+          "fr-FR": "sac",
+          "hi-IN": "थैला / बैग",
+          "pl-PL": "reklamówka / torba",
+          "ro-RO": "pungă",
+          "tr-TR": "poşet",
+          "uk-UA": "пакет",
+          "uz-UZ": "sumka / paket"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, ich habe eine Tasche dabei.",
+        "translation": {
+          "ru-RU": "Нет, у меня с собой сумка.",
+          "en-US": "No, I have a bag with me.",
+          "ar-SA": "لا، لدي حقيبة معي.",
+          "es-ES": "No, llevo una bolsa conmigo.",
+          "fr-FR": "Non, j'ai un sac avec moi.",
+          "hi-IN": "नहीं, मेरे पास एक बैग है।",
+          "pl-PL": "Nie, mam przy sobie torbę.",
+          "ro-RO": "Nu, am o sacoșă la mine.",
+          "tr-TR": "Hayır, yanımda bir çantam var.",
+          "uk-UA": "Ні, у мене з собою сумка.",
+          "uz-UZ": "Yo'q, yonimda sumkam bor."
+        },
+        "nextStep": "bezahlen"
+      },
+      {
+        "text": "Ja, bitte eine Papiertüte.",
+        "translation": {
+          "ru-RU": "Да, пожалуйста, бумажный пакет.",
+          "en-US": "Yes, a paper bag, please.",
+          "ar-SA": "نعم، كيس ورقي من فضلك.",
+          "es-ES": "Sí, una bolsa de papel, por favor.",
+          "fr-FR": "Oui, un sac en papier s'il vous plaît.",
+          "hi-IN": "हाँ, कृपया एक पेपर बैग।",
+          "pl-PL": "Tak, proszę o papierową torbę.",
+          "ro-RO": "Da, vă rog o pungă de hârtie.",
+          "tr-TR": "Evet, lütfen bir kese kağıdı.",
+          "uk-UA": "Так, будь ласка, паперовий пакет.",
+          "uz-UZ": "Ha, iltimos, qog'oz paket."
+        },
+        "nextStep": "bezahlen"
+      }
+    ],
+    "defaultNext": "bezahlen"
+  },
+  "bezahlen": {
+    "botText": "Das macht zusammen 12 Euro 50.",
+    "botTranslation": {
+      "ru-RU": "С Вас 12 евро 50.",
+      "en-US": "That will be 12 euros 50 together.",
+      "ar-SA": "الحساب الإجمالي هو 12 يورو و 50.",
+      "es-ES": "Eso hace un total de 12 euros con 50.",
+      "fr-FR": "Cela fait 12 euros 50 au total.",
+      "hi-IN": "कुल मिलाकर 12 यूरो 50 होंगे।",
+      "pl-PL": "Razem to 12 euro 50.",
+      "ro-RO": "Face în total 12 euro și 50.",
+      "tr-TR": "Toplam 12 Euro 50 ediyor.",
+      "uk-UA": "З Вас 12 євро 50.",
+      "uz-UZ": "Hammasi bo'lib 12 yevro 50 bo'ladi."
+    },
+    "vocabulary": [
+      {
+        "german": "zusammen",
+        "translation": {
+          "ru-RU": "вместе",
+          "en-US": "together",
+          "ar-SA": "معاً",
+          "es-ES": "juntos",
+          "fr-FR": "ensemble",
+          "hi-IN": "साथ में",
+          "pl-PL": "razem",
+          "ro-RO": "împreună",
+          "tr-TR": "birlikte",
+          "uk-UA": "разом",
+          "uz-UZ": "birga"
+        }
+      },
+      {
+        "german": "das macht",
+        "translation": {
+          "ru-RU": "итого / с вас",
+          "en-US": "that makes / total",
+          "ar-SA": "الحساب",
+          "es-ES": "en total / eso hace",
+          "fr-FR": "ça fait",
+          "hi-IN": "कुल हुआ",
+          "pl-PL": "to wynosi",
+          "ro-RO": "în total",
+          "tr-TR": "tutar",
+          "uk-UA": "разом / з вас",
+          "uz-UZ": "jami"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Kann ich mit Karte bezahlen?",
+        "translation": {
+          "ru-RU": "Могу ли я оплатить картой?",
+          "en-US": "Can I pay by card?",
+          "ar-SA": "هل يمكنني الدفع بالبطاقة؟",
+          "es-ES": "¿Puedo pagar con tarjeta?",
+          "fr-FR": "Puis-je payer par carte ?",
+          "hi-IN": "क्या मैं कार्ड से भुगतान कर सकता हूँ?",
+          "pl-PL": "Czy mogę zapłacić kartą?",
+          "ro-RO": "Pot plăti cu cardul?",
+          "ru-RU": "Могу я заплатить картой?",
+          "tr-TR": "Kartla ödeyebilir miyim?",
+          "uk-UA": "Чи можу я оплатити карткою?",
+          "uz-UZ": "Karta bilan to'lasam bo'ladimi?"
+        },
+        "nextStep": "kassenbon"
+      },
+      {
+        "text": "Ich möchte gerne bar bezahlen.",
+        "translation": {
+          "ru-RU": "Я бы хотела оплатить наличными.",
+          "en-US": "I would like to pay in cash.",
+          "ar-SA": "أود الدفع نقداً.",
+          "es-ES": "Me gustaría pagar en efectivo.",
+          "fr-FR": "Je voudrais payer en espèces.",
+          "hi-IN": "मैं नकद भुगतान करना चाहूंगा।",
+          "pl-PL": "Chciałabym zapłacić gotówką.",
+          "ro-RO": "Aș dori să plătesc numerar.",
+          "tr-TR": "Nakit ödemek istiyorum.",
+          "uk-UA": "Я б хотіла оплатити готівкою.",
+          "uz-UZ": "Men naqd pul to'lamoqchiman."
+        },
+        "nextStep": "kassenbon"
+      }
+    ],
+    "defaultNext": "kassenbon"
+  },
+  "kassenbon": {
+    "botText": "Natürlich. Brauchen Sie den Kassenbon?",
+    "botTranslation": {
+      "ru-RU": "Конечно. Вам нужен чек?",
+      "en-US": "Of course. Do you need the receipt?",
+      "ar-SA": "بالطبع. هل تحتاجين الإيصال؟",
+      "es-ES": "Por supuesto. ¿Necesita el recibo?",
+      "fr-FR": "Naturellement. Avez-vous besoin du ticket de caisse ?",
+      "hi-IN": "बिल्कुल। क्या आपको रसीद चाहिए?",
+      "pl-PL": "Oczywiście. Potrzebuje pani paragonu?",
+      "ro-RO": "Desigur. Aveți nevoie de bonul fiscal?",
+      "tr-TR": "Elbette. Fişi istiyor musunuz?",
+      "uk-UA": "Звісно. Вам потрібен чек?",
+      "uz-UZ": "Albatta. Sizga chek kerakmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "natürlich",
+        "translation": {
+          "ru-RU": "конечно",
+          "en-US": "of course",
+          "ar-SA": "بالطبع",
+          "es-ES": "por supuesto",
+          "fr-FR": "bien sûr",
+          "hi-IN": "बिल्कुल",
+          "pl-PL": "oczywiście",
+          "ro-RO": "desigur",
+          "tr-TR": "elbette",
+          "uk-UA": "звісно",
+          "uz-UZ": "albatta"
+        }
+      },
+      {
+        "german": "der Kassenbon",
+        "translation": {
+          "ru-RU": "чек",
+          "en-US": "receipt",
+          "ar-SA": "إيصال",
+          "es-ES": "recibo",
+          "fr-FR": "ticket de caisse",
+          "hi-IN": "रसीद",
+          "pl-PL": "paragon",
+          "ro-RO": "bon fiscal",
+          "tr-TR": "fiş",
+          "uk-UA": "чек",
+          "uz-UZ": "chek"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, bitte geben Sie mir den Bon.",
+        "translation": {
+          "ru-RU": "Да, пожалуйста, дайте мне чек.",
+          "en-US": "Yes, please give me the receipt.",
+          "ar-SA": "نعم، من فضلك أعطني الإيصال.",
+          "es-ES": "Sí, por favor deme el recibo.",
+          "fr-FR": "Oui, s'il vous plaît donnez-moi le ticket.",
+          "hi-IN": "हाँ, कृपया मुझे रसीद दें।",
+          "pl-PL": "Tak, proszę podać mi paragon.",
+          "ro-RO": "Da, vă rog să-mi dați bonul.",
+          "tr-TR": "Evet, lütfen bana fişi verin.",
+          "uk-UA": "Так, будь ласка, дайте мені чек.",
+          "uz-UZ": "Ha, iltimos, menga chekni bering."
+        },
+        "nextStep": "schoenen_tag"
+      },
+      {
+        "text": "Nein, danke. Ich brauche ihn nicht.",
+        "translation": {
+          "ru-RU": "Нет, спасибо. Он мне не нужен.",
+          "en-US": "No, thanks. I don't need it.",
+          "ar-SA": "لا، شكراً. لا أحتاجه.",
+          "es-ES": "No, gracias. No lo necesito.",
+          "fr-FR": "Non, merci. Je n'en ai pas besoin.",
+          "hi-IN": "नहीं, धन्यवाद। मुझे इसकी आवश्यकता नहीं है।",
+          "pl-PL": "Nie, dziękuję. Nie potrzebuję go.",
+          "ro-RO": "Nu, mulțumesc. Nu am nevoie de el.",
+          "tr-TR": "Hayır, teşekkürler. Ona ihtiyacım yok.",
+          "uk-UA": "Ні, дякую. Він мені не потрібен.",
+          "uz-UZ": "Yo'q, rahmat. U menga kerak emas."
+        },
+        "nextStep": "schoenen_tag"
+      }
+    ],
+    "defaultNext": "schoenen_tag"
+  },
+  "schoenen_tag": {
+    "botText": "Alles klar. Ich wünsche einen schönen Tag!",
+    "botTranslation": {
+      "ru-RU": "Все ясно. Я желаю хорошего дня!",
+      "en-US": "Alright. I wish you a nice day!",
+      "ar-SA": "حسناً. أتمنى لك يوماً سعيداً!",
+      "es-ES": "De acuerdo. ¡Le deseo un buen día!",
+      "fr-FR": "Très bien. Je vous souhaite une bonne journée !",
+      "hi-IN": "ठीक है। मैं आपके शुभ दिन की कामना करता हूँ!",
+      "pl-PL": "W porządku. Życzę miłego dnia!",
+      "ro-RO": "În regulă. Vă doresc o zi frumoasă!",
+      "tr-TR": "Pekala. İyi günler dilerim!",
+      "uk-UA": "Все ясно. Бажаю гарного дня!",
+      "uz-UZ": "Tushunarli. Yaxshi kun tilayman!"
+    },
+    "vocabulary": [
+      {
+        "german": "wünschen",
+        "translation": {
+          "ru-RU": "желать",
+          "en-US": "to wish",
+          "ar-SA": "يتمنى",
+          "es-ES": "desear",
+          "fr-FR": "souhaiter",
+          "hi-IN": "कामना करना",
+          "pl-PL": "życzyć",
+          "ro-RO": "a ura",
+          "tr-TR": "dilemek",
+          "uk-UA": "бажати",
+          "uz-UZ": "tilamoq"
+        }
+      },
+      {
+        "german": "einen schönen Tag",
+        "translation": {
+          "ru-RU": "хорошего дня",
+          "en-US": "a nice day",
+          "ar-SA": "يوم جميل",
+          "es-ES": "un buen día",
+          "fr-FR": "une bonne journée",
+          "hi-IN": "अच्छा दिन",
+          "pl-PL": "miłego dnia",
+          "ro-RO": "o zi frumoasă",
+          "tr-TR": "iyi günler",
+          "uk-UA": "гарного дня",
+          "uz-UZ": "yaxshi kun"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke, Ihnen auch einen schönen Tag!",
+        "translation": {
+          "ru-RU": "Спасибо, Вам тоже хорошего дня!",
+          "en-US": "Thanks, have a nice day too!",
+          "ar-SA": "شكراً، ولك أيضاً يوماً سعيداً!",
+          "es-ES": "Gracias, ¡que tenga un buen día también!",
+          "fr-FR": "Merci, à vous aussi une bonne journée !",
+          "hi-IN": "धन्यवाद, आपका दिन भी शुभ हो!",
+          "pl-PL": "Dziękuję, panu/pani również miłego dnia!",
+          "ro-RO": "Mulțumesc, o zi frumoasă și dumneavoastră!",
+          "tr-TR": "Teşekkürler, size de iyi günler!",
+          "uk-UA": "Дякую, Вам також гарного дня!",
+          "uz-UZ": "Rahmat, sizga ham yaxshi kun!"
+        },
+        "nextStep": "abschied"
+      },
+      {
+        "text": "Danke, gleichfalls! Auf Wiedersehen.",
+        "translation": {
+          "ru-RU": "Спасибо, взаимно! До свидания.",
+          "en-US": "Thanks, likewise! Goodbye.",
+          "ar-SA": "شكراً، وبالمثل! وداعاً.",
+          "es-ES": "Gracias, ¡igualmente! Adiós.",
+          "fr-FR": "Merci, pareillement ! Au revoir.",
+          "hi-IN": "धन्यवाद, आपको भी! अलविदा।",
+          "pl-PL": "Dziękuję, wzajemnie! Do widzenia.",
+          "ro-RO": "Mulțumesc, asemenea! La revedere.",
+          "tr-TR": "Teşekkürler, size de! Hoşça kalın.",
+          "uk-UA": "Дякую, навзаєм! До побачення.",
+          "uz-UZ": "Rahmat, sizga ham! Xayr."
+        },
+        "nextStep": "abschied"
+      }
+    ],
+    "defaultNext": "abschied"
+  },
+  "abschied": {
+    "botText": "Auf Wiedersehen und bis zum nächsten Mal!",
+    "botTranslation": {
+      "ru-RU": "До свидания и до следующего раза!",
+      "en-US": "Goodbye and see you next time!",
+      "ar-SA": "وداعاً ونراك في المرة القادمة!",
+      "es-ES": "¡Adiós y hasta la próxima!",
+      "fr-FR": "Au revoir et à la prochaine fois !",
+      "hi-IN": "अलविदा और अगली बार मिलते हैं!",
+      "pl-PL": "Do widzenia i do następnego razu!",
+      "ro-RO": "La revedere și pe data viitoare!",
+      "tr-TR": "Hoşça kalın ve bir dahaki sefere görüşmek üzere!",
+      "uk-UA": "До побачення і до наступного разу!",
+      "uz-UZ": "Xayr va keyingi safargacha!"
+    },
+    "vocabulary": [
+      {
+        "german": "auf Wiedersehen",
+        "translation": {
+          "ru-RU": "до свидания",
+          "en-US": "goodbye",
+          "ar-SA": "إلى اللقاء",
+          "es-ES": "adiós",
+          "fr-FR": "au revoir",
+          "hi-IN": "अलविदा",
+          "pl-PL": "do widzenia",
+          "ro-RO": "la revedere",
+          "tr-TR": "hoşça kalın",
+          "uk-UA": "до побачення",
+          "uz-UZ": "xayr"
+        }
+      },
+      {
+        "german": "bis zum nächsten Mal",
+        "translation": {
+          "ru-RU": "до следующего раза",
+          "en-US": "until next time",
+          "ar-SA": "حتى المرة القادمة",
+          "es-ES": "hasta la próxima",
+          "fr-FR": "à la prochaine fois",
+          "hi-IN": "अगली बार तक",
+          "pl-PL": "do następnego razu",
+          "ro-RO": "pe data viitoare",
+          "tr-TR": "bir dahaki sefere",
+          "uk-UA": "до наступного разу",
+          "uz-UZ": "keyingi safargacha"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Tschüss!",
+        "translation": {
+          "ru-RU": "Пока!",
+          "en-US": "Bye!",
+          "ar-SA": "وداعاً!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Salut !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Cześć!",
+          "ro-RO": "Pa!",
+          "tr-TR": "Güle güle!",
+          "uk-UA": "Бувай!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Machen Sie es gut!",
+        "translation": {
+          "ru-RU": "Всего хорошего!",
+          "en-US": "Take care!",
+          "ar-SA": "اعتن بنفسك!",
+          "es-ES": "¡Cuídese!",
+          "fr-FR": "Prenez soin de vous !",
+          "hi-IN": "अपना ख्याल रखना!",
+          "pl-PL": "Wszystkiego dobrego!",
+          "ro-RO": "Numai bine!",
+          "tr-TR": "Kendinize iyi bakın!",
+          "uk-UA": "Хай щастить!",
+          "uz-UZ": "O'zingizni ehtiyot qiling!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

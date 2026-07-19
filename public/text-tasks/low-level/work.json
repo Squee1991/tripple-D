@@ -1,0 +1,229 @@
+{
+  "themeId": "basics_a1",
+  "themeTitle": "Работа и учеба",
+  "level": "A1",
+  "tasks": [
+    {
+      "id": "work_A1_1",
+      "title": "Mein Arbeitstag",
+      "translation": "themeTextTitleWork_A1.workOne",
+      "icon": "\uD83D\uDCBC",
+      "wordsPool": ["Die", "ich", "eine", "einem", "das", "nicht"],
+      "textElements": [
+        { "type": "text", "content": " " },
+        { "type": "blank", "id": 1, "correct": "Die" },
+        { "type": "text", "content": " Arbeit beginnt früh. — Um neun Uhr bin " },
+        { "type": "blank", "id": 2, "correct": "ich" },
+        { "type": "text", "content": " im Büro. — Zuerst lese ich " },
+        { "type": "blank", "id": 3, "correct": "eine" },
+        { "type": "text", "content": " E-Mail. — Danach telefoniere ich mit " },
+        { "type": "blank", "id": 4, "correct": "einem" },
+        { "type": "text", "content": " Kunden. — Um zwölf Uhr ist " },
+        { "type": "blank", "id": 5, "correct": "das" },
+        { "type": "text", "content": " Essen. — Die Pause ist " },
+        { "type": "blank", "id": 6, "correct": "nicht" },
+        { "type": "text", "content": " lang. Um sechs Uhr gehe ich nach Hause." }
+      ]
+    },
+    {
+      "id": "work_A1_2",
+      "title": "Das Dokument suchen",
+      "translation": "themeTextTitleWork_A1.workTwo",
+      "icon": "\uD83D\uDD0D",
+      "wordsPool": ["Die", "ich", "ein", "kein", "Das", "nicht"],
+      "textElements": [
+        { "type": "text", "content": " " },
+        { "type": "blank", "id": 1, "correct": "Die" },
+        { "type": "text", "content": " Tür ist offen. — Jetzt gehe " },
+        { "type": "blank", "id": 2, "correct": "ich" },
+        { "type": "text", "content": " ins Büro. — Ich suche " },
+        { "type": "blank", "id": 3, "correct": "ein" },
+        { "type": "text", "content": " Formular für den Chef. — Ich finde aber " },
+        { "type": "blank", "id": 4, "correct": "kein" },
+        { "type": "text", "content": " Formular auf dem Tisch. — " },
+        { "type": "blank", "id": 5, "correct": "Das" },
+        { "type": "text", "content": " Formular liegt noch im Auto. — Das ist " },
+        { "type": "blank", "id": 6, "correct": "nicht" },
+        { "type": "text", "content": " gut. Ich hole das Formular jetzt schnell aus dem Auto." }
+      ]
+    },
+    {
+      "id": "work_A1_3",
+      "title": "Der Kurs",
+      "translation": "themeTextTitleWork_A1.workThree",
+      "icon": "\uD83C\uDF93",
+      "wordsPool": ["ich", "und", "kein", "aber", "oder", "nicht"],
+      "textElements": [
+        { "type": "text", "content": "Heute bin " },
+        { "type": "blank", "id": 1, "correct": "ich" },
+        { "type": "text", "content": " in der Universität. — Ich suche das Zimmer " },
+        { "type": "blank", "id": 2, "correct": "und" },
+        { "type": "text", "content": " den Professor. — Hier ist leider " },
+        { "type": "blank", "id": 3, "correct": "kein" },
+        { "type": "text", "content": " Licht im Flur. — Die Tür ist zu, " },
+        { "type": "blank", "id": 4, "correct": "aber" },
+        { "type": "text", "content": " wir brauchen den Raum. — Warten wir hier " },
+        { "type": "blank", "id": 5, "correct": "oder" },
+        { "type": "text", "content": " gehen wir zum Chef? — Das Zimmer ist " },
+        { "type": "blank", "id": 6, "correct": "nicht" },
+        { "type": "text", "content": " weit. Wir holen jetzt zusammen den Schlüssel." }
+      ]
+    },
+    {
+      "id": "work_A1_4",
+      "title": "Mein Job",
+      "translation": "themeTextTitleWork_A1.workFour",
+      "icon": "\uD83D\uDCBB",
+      "wordsPool": ["Ich", "bin", "habe", "und", "aber", "nicht"],
+      "textElements": [
+        { "type": "text", "content": "Heute " },
+        { "type": "blank", "id": 1, "correct": "bin" },
+        { "type": "text", "content": " ich im Büro. — " },
+        { "type": "blank", "id": 2, "correct": "Ich" },
+        { "type": "text", "content": " habe einen Tisch. — Der Tisch " },
+        { "type": "blank", "id": 3, "correct": "und" },
+        { "type": "text", "content": " der Computer sind neu. — Ich " },
+        { "type": "blank", "id": 4, "correct": "habe" },
+        { "type": "text", "content": " eine Pause, " },
+        { "type": "blank", "id": 5, "correct": "aber" },
+        { "type": "text", "content": " ich trinke keinen Kaffee. — Das ist " },
+        { "type": "blank", "id": 6, "correct": "nicht" },
+        { "type": "text", "content": " schwer. Alles ist super!" }
+      ]
+    },
+    {
+      "id": "work_A1_5",
+      "title": "Die Hausaufgaben",
+      "translation": "themeTextTitleWork_A1.workFive",
+      "icon": "\uD83D\uDCDD",
+      "wordsPool": ["ich", "bin", "und", "dem", "aber", "nicht"],
+      "textElements": [
+        { "type": "text", "content": "Die Schule ist zu Ende. Jetzt " },
+        { "type": "blank", "id": 1, "correct": "bin" },
+        { "type": "text", "content": " ich zu Hause. — " },
+        { "type": "blank", "id": 2, "correct": "Ich" },
+        { "type": "text", "content": " mache meine Hausaufgaben für Deutsch " },
+        { "type": "blank", "id": 3, "correct": "und" },
+        { "type": "text", "content": " Mathe. — Das Heft liegt auf " },
+        { "type": "blank", "id": 4, "correct": "dem" },
+        { "type": "text", "content": " Tisch. — Die Aufgabe ist schwer, " },
+        { "type": "blank", "id": 5, "correct": "aber" },
+        { "type": "text", "content": " ich lerne. — Heute spiele ich " },
+        { "type": "blank", "id": 6, "correct": "nicht" },
+        { "type": "text", "content": " am Computer." }
+      ]
+    },
+    {
+      "id": "work_A1_6",
+      "title": "Mein Job auf der Baustelle",
+      "translation": "themeTextTitleWork_A1.workSix",
+      "icon": "\uD83D\uDD28",
+      "wordsPool": ["ich", "bin", "habe", "und", "dem", "aber", "nicht"],
+      "textElements": [
+        { "type": "text", "content": "Heute " },
+        { "type": "blank", "id": 1, "correct": "bin" },
+        { "type": "text", "content": " ich auf der Baustelle. — " },
+        { "type": "blank", "id": 2, "correct": "Ich" },
+        { "type": "text", "content": " arbeite viel. — Ich " },
+        { "type": "blank", "id": 3, "correct": "habe" },
+        { "type": "text", "content": " einen Hammer " },
+        { "type": "blank", "id": 4, "correct": "und" },
+        { "type": "text", "content": " eine Säge. — Die Säge liegt auf " },
+        { "type": "blank", "id": 5, "correct": "dem" },
+        { "type": "text", "content": " Tisch. — Die Arbeit ist schwer, " },
+        { "type": "blank", "id": 6, "correct": "aber" },
+        { "type": "text", "content": " die Kollegen sind super. — Ich bin " },
+        { "type": "blank", "id": 7, "correct": "nicht" },
+        { "type": "text", "content": " müde." }
+      ]
+    },
+    {
+      "id": "work_A1_7",
+      "title": "Home-Office",
+      "translation": "themeTextTitleWork_A1.workSeven",
+      "icon": "\uD83C\uDFE0",
+      "wordsPool": ["bin", "muss", "mag", "dem", "will", "nicht"],
+      "textElements": [
+        { "type": "text", "content": "Heute " },
+        { "type": "blank", "id": 1, "correct": "bin" },
+        { "type": "text", "content": " ich im Home-Office. — Ich " },
+        { "type": "blank", "id": 2, "correct": "muss" },
+        { "type": "text", "content": " heute viel am Computer schreiben. — Ich " },
+        { "type": "blank", "id": 3, "correct": "mag" },
+        { "type": "text", "content": " mein Zimmer, es ist hell. — Der Laptop steht auf " },
+        { "type": "blank", "id": 4, "correct": "dem" },
+        { "type": "text", "content": " Tisch. — Ich " },
+        { "type": "blank", "id": 5, "correct": "will" },
+        { "type": "text", "content": " jetzt einen Kaffee trinken. — Die Pause ist " },
+        { "type": "blank", "id": 6, "correct": "nicht" },
+        { "type": "text", "content": " lang, ich arbeite weiter." }
+      ]
+    },
+    {
+      "id": "work_A1_8",
+      "title": "Im Lager arbeiten",
+      "translation": "themeTextTitleWork_A1.workEight",
+      "icon": "\uD83D\uDCE6",
+      "wordsPool": ["bin", "muss", "dem", "mag", "will", "nicht"],
+      "textElements": [
+        { "type": "text", "content": "Heute " },
+        { "type": "blank", "id": 1, "correct": "bin" },
+        { "type": "text", "content": " ich im Lager. — Ich " },
+        { "type": "blank", "id": 2, "correct": "muss" },
+        { "type": "text", "content": " viele Pakete sortieren. — Ein Paket liegt in " },
+        { "type": "blank", "id": 3, "correct": "dem" },
+        { "type": "text", "content": " Regal. — Ich " },
+        { "type": "blank", "id": 4, "correct": "mag" },
+        { "type": "text", "content": " die Arbeit hier. — Ich " },
+        { "type": "blank", "id": 5, "correct": "will" },
+        { "type": "text", "content": " heute schnell fertig sein. — Die Pakete sind " },
+        { "type": "blank", "id": 6, "correct": "nicht" },
+        { "type": "text", "content": " schwer." }
+      ]
+    },
+    {
+      "id": "work_A1_9",
+      "title": "Die Besprechung",
+      "translation": "themeTextTitleWork_A1.workNine",
+      "icon": "👥",
+      "wordsPool": ["haben", "Der", "über", "einen", "und", "nicht"],
+      "textElements": [
+        { "type": "text", "content": "Heute " },
+        { "type": "blank", "id": 1, "correct": "haben" },
+        { "type": "text", "content": " wir eine Besprechung. — " },
+        { "type": "blank", "id": 2, "correct": "Der" },
+        { "type": "text", "content": " Chef ist schon da. — Wir sprechen " },
+        { "type": "blank", "id": 3, "correct": "über" },
+        { "type": "text", "content": " das Projekt. — Ich brauche " },
+        { "type": "blank", "id": 4, "correct": "einen" },
+        { "type": "text", "content": " Stift " },
+        { "type": "blank", "id": 5, "correct": "und" },
+        { "type": "text", "content": " Papier. — Das Projekt ist " },
+        { "type": "blank", "id": 6, "correct": "nicht" },
+        { "type": "text", "content": " einfach." }
+      ]
+    },
+    {
+      "id": "work_A1_10",
+      "title": "Die Mittagspause",
+      "translation": "themeTextTitleWork_A1.workTen",
+      "icon": "🍽️",
+      "wordsPool": ["ist", "habe", "die", "einen", "und", "nicht"],
+      "textElements": [
+        { "type": "text", "content": "Es " },
+        { "type": "blank", "id": 1, "correct": "ist" },
+        { "type": "text", "content": " zwölf Uhr. — Ich " },
+        { "type": "blank", "id": 2, "correct": "habe" },
+        { "type": "text", "content": " Hunger. — Ich gehe jetzt in " },
+        { "type": "blank", "id": 3, "correct": "die" },
+        { "type": "text", "content": " Kantine. — Ich esse " },
+        { "type": "blank", "id": 4, "correct": "einen" },
+        { "type": "text", "content": " Salat " },
+        { "type": "blank", "id": 5, "correct": "und" },
+        { "type": "text", "content": " trinke Wasser. — Das Essen schmeckt gut, aber die Pause ist " },
+        { "type": "blank", "id": 6, "correct": "nicht" },
+        { "type": "text", "content": " lang." }
+      ]
+    }
+  ]
+}

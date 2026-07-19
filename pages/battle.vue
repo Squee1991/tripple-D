@@ -45,12 +45,17 @@ import {useRoute, useRouter} from 'vue-router'
 import {getAuth} from 'firebase/auth'
 import {getFirestore, doc, onSnapshot, getDoc} from 'firebase/firestore'
 import Card from '../src/components/deck.vue'
+import {useSeoMeta} from "#imports";
 
 definePageMeta({
   robots: {
     index: false,
     follow: false
   }
+})
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
 })
 
 const route = useRoute()

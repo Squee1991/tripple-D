@@ -1,0 +1,629 @@
+{
+  "start": {
+    "botText": "Guten Tag. Kommen Sie bitte rein und setzen Sie sich. Wir müssen sprechen.",
+    "botTranslation": {
+      "ru-RU": "Добрый день. Проходите, пожалуйста, и присаживайтесь. Нам нужно поговорить.",
+      "en-US": "Good day. Please come in and take a seat. We need to talk.",
+      "ar-SA": "طاب يومك. تفضل بالدخول واجلس من فضلك. يجب أن نتحدث.",
+      "es-ES": "Buenos días. Pase, por favor, y siéntese. Tenemos que hablar.",
+      "fr-FR": "Bonjour. Entrez s'il vous plaît et asseyez-vous. Nous devons parler.",
+      "hi-IN": "नमस्ते। कृपया अंदर आएं और बैठ जाएं। हमें बात करनी है।",
+      "pl-PL": "Dzień dobry. Proszę wejść i usiąść. Musimy porozmawiać.",
+      "ro-RO": "Bună ziua. Vă rog să intrați și să luați loc. Trebuie să vorbim.",
+      "tr-TR": "İyi günler. Lütfen içeri gelin ve oturun. Konuşmamız lazım.",
+      "uk-UA": "Добрий день. Проходьте, будь ласка, і сідайте. Нам потрібно поговорити.",
+      "uz-UZ": "Xayrli kun. Iltimos, kiring va o'tiring. Biz gaplashib olishimiz kerak."
+    },
+    "vocabulary": [
+      {
+        "german": "rein",
+        "translation": {
+          "ru-RU": "внутрь",
+          "en-US": "in",
+          "ar-SA": "إلى الداخل",
+          "es-ES": "dentro",
+          "fr-FR": "dedans",
+          "hi-IN": "अंदर",
+          "pl-PL": "do środka",
+          "ro-RO": "înauntru",
+          "tr-TR": "içeri",
+          "uk-UA": "всередину",
+          "uz-UZ": "ichkariga"
+        }
+      },
+      {
+        "german": "sprechen",
+        "translation": {
+          "ru-RU": "говорить",
+          "en-US": "to speak/talk",
+          "ar-SA": "يتحدث",
+          "es-ES": "hablar",
+          "fr-FR": "parler",
+          "hi-IN": "बात करना",
+          "pl-PL": "rozmawiać",
+          "ro-RO": "a vorbi",
+          "tr-TR": "konuşmak",
+          "uk-UA": "говорити",
+          "uz-UZ": "gaplashmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag. Gibt es ein Problem?",
+        "translation": {
+          "ru-RU": "Добрый день. Есть какая-то проблема?",
+          "en-US": "Good day. Is there a problem?",
+          "ar-SA": "طاب يومك. هل توجد مشكلة؟",
+          "es-ES": "Buenos días. ¿Hay algún problema?",
+          "fr-FR": "Bonjour. Y a-t-il un problème ?",
+          "hi-IN": "नमस्ते। क्या कोई समस्या है?",
+          "pl-PL": "Dzień dobry. Czy jest jakiś problem?",
+          "ro-RO": "Bună ziua. Este vreo problemă?",
+          "tr-TR": "İyi günler. Bir sorun mu var?",
+          "uk-UA": "Добрий день. Є якась проблема?",
+          "uz-UZ": "Xayrli kun. Biror muammo bormi?"
+        },
+        "nextStep": "sparen"
+      },
+      {
+        "text": "Hallo. Worüber möchten Sie sprechen?",
+        "translation": {
+          "ru-RU": "Здравствуйте. О чем вы хотели поговорить?",
+          "en-US": "Hello. What would you like to talk about?",
+          "ar-SA": "مرحباً. عم تريد أن تتحدث؟",
+          "es-ES": "Hola. ¿Sobre qué le gustaría hablar?",
+          "fr-FR": "Bonjour. De quoi aimeriez-vous parler ?",
+          "hi-IN": "नमस्ते। आप किस बारे में बात करना चाहते हैं?",
+          "pl-PL": "Dzień dobry. O czym chciałby pan/pani porozmawiać?",
+          "ro-RO": "Bună. Despre ce ați dori să vorbim?",
+          "tr-TR": "Merhaba. Ne hakkında konuşmak istiyorsunuz?",
+          "uk-UA": "Доброго дня. Про що ви хотіли поговорити?",
+          "uz-UZ": "Salom. Nima haqida gaplashmoqchi edingiz?"
+        },
+        "nextStep": "sparen"
+      }
+    ],
+    "defaultNext": "sparen"
+  },
+  "sparen": {
+    "botText": "Die Situation in unserer Firma ist im Moment leider sehr schwer. Wir müssen sparen.",
+    "botTranslation": {
+      "ru-RU": "Ситуация в нашей фирме сейчас, к сожалению, очень тяжелая. Мы должны экономить.",
+      "en-US": "The situation in our company is unfortunately very difficult at the moment. We have to save money.",
+      "ar-SA": "الوضع في شركتنا صعب جداً في الوقت الحالي للأسف. يجب أن نقتصد.",
+      "es-ES": "Por desgracia, la situación en nuestra empresa es muy difícil ahora mismo. Tenemos que ahorrar.",
+      "fr-FR": "La situation dans notre entreprise est malheureusement très difficile en ce moment. Nous devons faire des économies.",
+      "hi-IN": "हमारी कंपनी की स्थिति इस समय दुर्भाग्य से बहुत कठिन है। हमें पैसे बचाने होंगे।",
+      "pl-PL": "Sytuacja w naszej firmie jest obecnie niestety bardzo trudna. Musimy oszczędzać.",
+      "ro-RO": "Situația din firma noastră este din păcate foarte grea în acest moment. Trebuie să economisim.",
+      "tr-TR": "Şirketimizdeki durum şu anda maalesef çok zor. Tasarruf etmeliyiz.",
+      "uk-UA": "Ситуація в нашій фірмі зараз, на жаль, дуже важка. Ми повинні економити.",
+      "uz-UZ": "Kompaniyamizdagi vaziyat afsuski hozir juda og'ir. Biz tejashimiz kerak."
+    },
+    "vocabulary": [
+      {
+        "german": "die Firma",
+        "translation": {
+          "ru-RU": "фирма / компания",
+          "en-US": "company",
+          "ar-SA": "شركة",
+          "es-ES": "empresa",
+          "fr-FR": "entreprise",
+          "hi-IN": "कंपनी",
+          "pl-PL": "firma",
+          "ro-RO": "firmă",
+          "tr-TR": "şirket",
+          "uk-UA": "фірма",
+          "uz-UZ": "kompaniya"
+        }
+      },
+      {
+        "german": "sparen",
+        "translation": {
+          "ru-RU": "экономить",
+          "en-US": "to save",
+          "ar-SA": "يقتصد",
+          "es-ES": "ahorrar",
+          "fr-FR": "économiser",
+          "hi-IN": "बचाना",
+          "pl-PL": "oszczędzać",
+          "ro-RO": "a economisi",
+          "tr-TR": "tasarruf etmek",
+          "uk-UA": "економити",
+          "uz-UZ": "tejash"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Oh nein, das klingt gar nicht gut.",
+        "translation": {
+          "ru-RU": "О нет, это звучит совсем не хорошо.",
+          "en-US": "Oh no, that doesn't sound good at all.",
+          "ar-SA": "أوه لا، هذا لا يبدو جيداً على الإطلاق.",
+          "es-ES": "Oh no, eso no suena nada bien.",
+          "fr-FR": "Oh non, ça ne présage rien de bon.",
+          "hi-IN": "ओह नहीं, यह बिल्कुल भी अच्छा नहीं लग रहा है।",
+          "pl-PL": "O nie, to wcale nie brzmi dobrze.",
+          "ro-RO": "Oh nu, asta nu sună deloc bine.",
+          "tr-TR": "Oh hayır, bu kulağa hiç iyi gelmiyor.",
+          "uk-UA": "О ні, це звучить зовсім не добре.",
+          "uz-UZ": "Oh yo'q, bu umuman yaxshi eshitilmayapti."
+        },
+        "nextStep": "entlassen"
+      },
+      {
+        "text": "Was bedeutet das genau für mich?",
+        "translation": {
+          "ru-RU": "Что это значит конкретно для меня?",
+          "en-US": "What does that mean for me exactly?",
+          "ar-SA": "ماذا يعني ذلك بالنسبة لي بالضبط؟",
+          "es-ES": "¿Qué significa eso exactamente para mí?",
+          "fr-FR": "Qu'est-ce que cela signifie exactement pour moi ?",
+          "hi-IN": "मेरे लिए इसका वास्तव में क्या अर्थ है?",
+          "pl-PL": "Co to dokładnie oznacza dla mnie?",
+          "ro-RO": "Ce înseamnă asta mai exact pentru mine?",
+          "tr-TR": "Bu tam olarak benim için ne anlama geliyor?",
+          "uk-UA": "Що це означає конкретно для мене?",
+          "uz-UZ": "Bu aniq men uchun nimani anglatadi?"
+        },
+        "nextStep": "entlassen"
+      }
+    ],
+    "defaultNext": "entlassen"
+  },
+  "entlassen": {
+    "botText": "Es tut mir wirklich sehr leid, aber ich muss Sie leider entlassen.",
+    "botTranslation": {
+      "ru-RU": "Мне правда очень жаль, но я, к сожалению, вынужден вас уволить.",
+      "en-US": "I am truly very sorry, but unfortunately I have to let you go.",
+      "ar-SA": "أنا آسف جداً حقاً، ولكن للأسف يجب أن أقيلك.",
+      "es-ES": "De verdad que lo siento mucho, pero por desgracia tengo que despedirle.",
+      "fr-FR": "Je suis vraiment très désolé, mais je dois malheureusement vous licencier.",
+      "hi-IN": "मुझे वास्तव में बहुत खेद है, लेकिन दुर्भाग्य से मुझे आपको नौकरी से निकालना होगा।",
+      "pl-PL": "Naprawdę mi bardzo przykro, ale niestety muszę pana/panią zwolnić.",
+      "ro-RO": "Îmi pare cu adevărat foarte rău, dar din păcate trebuie să vă concediez.",
+      "tr-TR": "Gerçekten çok üzgünüm ama maalesef sizi işten çıkarmak zorundayım.",
+      "uk-UA": "Мені справді дуже шкода, але я, на жаль, змушений вас звільнити.",
+      "uz-UZ": "Haqiqatan ham juda afsusdaman, lekin afsuski sizni ishdan bo'shatishim kerak."
+    },
+    "vocabulary": [
+      {
+        "german": "entlassen",
+        "translation": {
+          "ru-RU": "увольнять",
+          "en-US": "to fire",
+          "ar-SA": "يقيل",
+          "es-ES": "despedir",
+          "fr-FR": "licencier",
+          "hi-IN": "निकालना",
+          "pl-PL": "zwolnić",
+          "ro-RO": "a concedia",
+          "tr-TR": "işten çıkarmak",
+          "uk-UA": "звільняти",
+          "uz-UZ": "ishdan bo'shatmoq"
+        }
+      },
+      {
+        "german": "tut leid",
+        "translation": {
+          "ru-RU": "жаль",
+          "en-US": "sorry",
+          "ar-SA": "آسف",
+          "es-ES": "lo siento",
+          "fr-FR": "désolé",
+          "hi-IN": "खेद है",
+          "pl-PL": "przykro",
+          "ro-RO": "îmi pare rău",
+          "tr-TR": "üzgünüm",
+          "uk-UA": "шкода",
+          "uz-UZ": "afsusdaman"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das ist ein Schock für mich! Warum ich?",
+        "translation": {
+          "ru-RU": "Для меня это шок! Почему я?",
+          "en-US": "This is a shock for me! Why me?",
+          "ar-SA": "هذه صدمة لي! لماذا أنا؟",
+          "es-ES": "¡Esto es un shock para mí! ¿Por qué yo?",
+          "fr-FR": "C'est un choc pour moi ! Pourquoi moi ?",
+          "hi-IN": "यह मेरे लिए एक झटका है! मैं ही क्यों?",
+          "pl-PL": "To dla mnie szok! Dlaczego ja?",
+          "ro-RO": "Acesta este un șoc pentru mine! De ce eu?",
+          "tr-TR": "Bu benim için bir şok! Neden ben?",
+          "uk-UA": "Для мене це шок! Чому я?",
+          "uz-UZ": "Bu men uchun shok! Nega men?"
+        },
+        "nextStep": "abteilung"
+      },
+      {
+        "text": "Das habe ich leider schon fast gedacht.",
+        "translation": {
+          "ru-RU": "К сожалению, я уже почти так и думал(а).",
+          "en-US": "Unfortunately, I almost thought so.",
+          "ar-SA": "للأسف، كنت أتوقع ذلك تقريباً.",
+          "es-ES": "Por desgracia, casi lo suponía.",
+          "fr-FR": "Malheureusement, je m'en doutais presque.",
+          "hi-IN": "दुर्भाग्य से, मैंने लगभग ऐसा ही सोचा था।",
+          "pl-PL": "Niestety, prawie tak myślałem/am.",
+          "ro-RO": "Din păcate, aproape că m-am gândit la asta.",
+          "tr-TR": "Maalesef bunu neredeyse tahmin etmiştim.",
+          "uk-UA": "На жаль, я вже майже так і думав(ла).",
+          "uz-UZ": "Afsuski, men buni deyarli taxmin qilgandim."
+        },
+        "nextStep": "abteilung"
+      }
+    ],
+    "defaultNext": "abteilung"
+  },
+  "abteilung": {
+    "botText": "Wir schließen Ihre Abteilung. Es liegt nicht an Ihrer Arbeit, Sie haben einen guten Job gemacht.",
+    "botTranslation": {
+      "ru-RU": "Мы закрываем ваш отдел. Дело не в вашей работе, вы хорошо делали свою работу.",
+      "en-US": "We are closing your department. It's not because of your work, you did a good job.",
+      "ar-SA": "نحن نغلق قسمك. الأمر ليس بسبب عملك، لقد قمت بعمل جيد.",
+      "es-ES": "Vamos a cerrar su departamento. No tiene que ver con su trabajo, usted hizo un buen trabajo.",
+      "fr-FR": "Nous fermons votre département. Ce n'est pas lié à votre travail, vous avez fait du bon travail.",
+      "hi-IN": "हम आपका विभाग बंद कर रहे हैं। यह आपके काम के कारण नहीं है, आपने अच्छा काम किया है।",
+      "pl-PL": "Zamykamy pana/pani dział. To nie wina pańskiej pracy, wykonywał/a pan/pani dobrą robotę.",
+      "ro-RO": "Vă închidem departamentul. Nu depinde de munca dumneavoastră, ați făcut o treabă bună.",
+      "tr-TR": "Departmanınızı kapatıyoruz. Sizin işinizle ilgisi yok, iyi bir iş çıkardınız.",
+      "uk-UA": "Ми закриваємо ваш відділ. Справа не у вашій роботі, ви добре виконували свою роботу.",
+      "uz-UZ": "Biz sizning bo'limingizni yopmoqdamiz. Bu sizning ishingizga bog'liq emas, siz yaxshi ish qildingiz."
+    },
+    "vocabulary": [
+      {
+        "german": "die Abteilung",
+        "translation": {
+          "ru-RU": "отдел",
+          "en-US": "department",
+          "ar-SA": "قسم",
+          "es-ES": "departamento",
+          "fr-FR": "département",
+          "hi-IN": "विभाग",
+          "pl-PL": "dział",
+          "ro-RO": "departament",
+          "tr-TR": "departman",
+          "uk-UA": "відділ",
+          "uz-UZ": "bo'lim"
+        }
+      },
+      {
+        "german": "gut gemacht",
+        "translation": {
+          "ru-RU": "хорошо сделано",
+          "en-US": "did well",
+          "ar-SA": "قام بعمل جيد",
+          "es-ES": "bien hecho",
+          "fr-FR": "bien fait",
+          "hi-IN": "अच्छा किया",
+          "pl-PL": "dobra robota",
+          "ro-RO": "treabă bună",
+          "tr-TR": "iyi iş",
+          "uk-UA": "добре зроблено",
+          "uz-UZ": "yaxshi bajarilgan"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Wie lange kann ich denn noch hier arbeiten?",
+        "translation": {
+          "ru-RU": "Как долго я еще могу здесь работать?",
+          "en-US": "How much longer can I work here then?",
+          "ar-SA": "كم من الوقت يمكنني العمل هنا بعد؟",
+          "es-ES": "Entonces, ¿cuánto tiempo más puedo trabajar aquí?",
+          "fr-FR": "Combien de temps puis-je encore travailler ici alors ?",
+          "hi-IN": "तो मैं यहाँ और कितने समय तक काम कर सकता हूँ?",
+          "pl-PL": "Jak długo mogę tu jeszcze pracować?",
+          "ro-RO": "Cât timp mai pot lucra aici atunci?",
+          "tr-TR": "Peki burada ne kadar süre daha çalışabilirim?",
+          "uk-UA": "Як довго я ще можу тут працювати?",
+          "uz-UZ": "U holda bu yerda yana qancha vaqt ishlashim mumkin?"
+        },
+        "nextStep": "vertrag"
+      },
+      {
+        "text": "Wann ist mein letzter Arbeitstag?",
+        "translation": {
+          "ru-RU": "Когда мой последний рабочий день?",
+          "en-US": "When is my last working day?",
+          "ar-SA": "متى هو آخر يوم عمل لي؟",
+          "es-ES": "¿Cuándo es mi último día de trabajo?",
+          "fr-FR": "Quand est mon dernier jour de travail ?",
+          "hi-IN": "मेरा आखिरी कार्य दिवस कब है?",
+          "pl-PL": "Kiedy jest mój ostatni dzień w pracy?",
+          "ro-RO": "Când este ultima mea zi de muncă?",
+          "tr-TR": "Son iş günüm ne zaman?",
+          "uk-UA": "Коли мій останній робочий день?",
+          "uz-UZ": "Mening oxirgi ish kunim qachon?"
+        },
+        "nextStep": "vertrag"
+      }
+    ],
+    "defaultNext": "vertrag"
+  },
+  "vertrag": {
+    "botText": "Ihr Vertrag läuft noch bis zum Ende des nächsten Monats.",
+    "botTranslation": {
+      "ru-RU": "Ваш договор действует (длится) еще до конца следующего месяца.",
+      "en-US": "Your contract runs until the end of next month.",
+      "ar-SA": "عقدك يمتد حتى نهاية الشهر القادم.",
+      "es-ES": "Su contrato dura hasta finales del mes que viene.",
+      "fr-FR": "Votre contrat court encore jusqu'à la fin du mois prochain.",
+      "hi-IN": "आपका अनुबंध अगले महीने के अंत तक चलेगा।",
+      "pl-PL": "Pana/pani umowa obowiązuje do końca następnego miesiąca.",
+      "ro-RO": "Contractul dumneavoastră mai este valabil până la sfârșitul lunii viitoare.",
+      "tr-TR": "Sözleşmeniz gelecek ayın sonuna kadar devam ediyor.",
+      "uk-UA": "Ваш договір діє ще до кінця наступного місяця.",
+      "uz-UZ": "Sizning shartnomangiz keyingi oyning oxirigacha amal qiladi."
+    },
+    "vocabulary": [
+      {
+        "german": "der Vertrag",
+        "translation": {
+          "ru-RU": "договор / контракт",
+          "en-US": "contract",
+          "ar-SA": "عقد",
+          "es-ES": "contrato",
+          "fr-FR": "contrat",
+          "hi-IN": "अनुबंध",
+          "pl-PL": "umowa",
+          "ro-RO": "contract",
+          "tr-TR": "sözleşme",
+          "uk-UA": "договір",
+          "uz-UZ": "shartnoma"
+        }
+      },
+      {
+        "german": "der Monat",
+        "translation": {
+          "ru-RU": "месяц",
+          "en-US": "month",
+          "ar-SA": "شهر",
+          "es-ES": "mes",
+          "fr-FR": "mois",
+          "hi-IN": "महीना",
+          "pl-PL": "miesiąc",
+          "ro-RO": "lună",
+          "tr-TR": "ay",
+          "uk-UA": "місяць",
+          "uz-UZ": "oy"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Gut, dann suche ich sofort eine neue Stelle.",
+        "translation": {
+          "ru-RU": "Хорошо, тогда я немедленно ищу новую должность (работу).",
+          "en-US": "Good, then I will look for a new position immediately.",
+          "ar-SA": "حسناً، إذن سأبحث عن وظيفة جديدة على الفور.",
+          "es-ES": "Bien, entonces buscaré un nuevo puesto inmediatamente.",
+          "fr-FR": "Bien, alors je vais chercher un nouveau poste immédiatement.",
+          "hi-IN": "ठीक है, फिर मैं तुरंत एक नई नौकरी की तलाश करूँगा।",
+          "pl-PL": "Dobrze, w takim razie od razu szukam nowej posady.",
+          "ro-RO": "Bine, atunci voi căuta imediat un nou post.",
+          "tr-TR": "Güzel, o zaman hemen yeni bir iş arayacağım.",
+          "uk-UA": "Добре, тоді я негайно шукатиму нове місце роботи.",
+          "uz-UZ": "Yaxshi, u holda darhol yangi ish qidiraman."
+        },
+        "nextStep": "zeugnis"
+      },
+      {
+        "text": "Bekomme ich auch ein Arbeitszeugnis von Ihnen?",
+        "translation": {
+          "ru-RU": "Я также получу от вас характеристику с места работы?",
+          "en-US": "Will I also get an employment reference from you?",
+          "ar-SA": "هل سأحصل أيضاً على شهادة عمل منكم؟",
+          "es-ES": "¿También recibiré una carta de recomendación de ustedes?",
+          "fr-FR": "Vais-je également recevoir un certificat de travail de votre part ?",
+          "hi-IN": "क्या मुझे आपसे कार्य प्रमाण पत्र भी मिलेगा?",
+          "pl-PL": "Czy otrzymam też od państwa świadectwo pracy?",
+          "ro-RO": "Voi primi și o recomandare de la dumneavoastră?",
+          "tr-TR": "Sizden bir çalışma belgesi de alacak mıyım?",
+          "uk-UA": "Чи отримаю я від вас також характеристику з місця роботи?",
+          "uz-UZ": "Sizdan ish tavsifnomasini ham olamanmi?"
+        },
+        "nextStep": "zeugnis"
+      }
+    ],
+    "defaultNext": "zeugnis"
+  },
+  "zeugnis": {
+    "botText": "Ja, natürlich. Ich schreibe Ihnen ein sehr gutes Arbeitszeugnis.",
+    "botTranslation": {
+      "ru-RU": "Да, конечно. Я напишу вам очень хорошую характеристику.",
+      "en-US": "Yes, of course. I will write you a very good employment reference.",
+      "ar-SA": "نعم، بالطبع. سأكتب لك شهادة عمل جيدة جداً.",
+      "es-ES": "Sí, por supuesto. Le escribiré una muy buena carta de recomendación.",
+      "fr-FR": "Oui, bien sûr. Je vous rédigerai un très bon certificat de travail.",
+      "hi-IN": "हाँ बिल्कुल। मैं आपको एक बहुत अच्छा कार्य प्रमाण पत्र लिखूंगा।",
+      "pl-PL": "Tak, oczywiście. Napiszę panu/pani bardzo dobre świadectwo pracy.",
+      "ro-RO": "Da, desigur. Vă voi scrie o recomandare foarte bună.",
+      "tr-TR": "Evet, elbette. Size çok iyi bir çalışma belgesi yazacağım.",
+      "uk-UA": "Так, звісно. Я напишу вам дуже хорошу характеристику.",
+      "uz-UZ": "Ha, albatta. Men sizga juda yaxshi ish tavsifnomasini yozib beraman."
+    },
+    "vocabulary": [
+      {
+        "german": "das Arbeitszeugnis",
+        "translation": {
+          "ru-RU": "характеристика с работы",
+          "en-US": "employment reference",
+          "ar-SA": "شهادة عمل",
+          "es-ES": "carta de recomendación",
+          "fr-FR": "certificat de travail",
+          "hi-IN": "कार्य प्रमाण पत्र",
+          "pl-PL": "świadectwo pracy",
+          "ro-RO": "recomandare",
+          "tr-TR": "çalışma belgesi",
+          "uk-UA": "характеристика з роботи",
+          "uz-UZ": "ish tavsifnomasi"
+        }
+      },
+      {
+        "german": "sehr gut",
+        "translation": {
+          "ru-RU": "очень хорошо",
+          "en-US": "very good",
+          "ar-SA": "جيد جداً",
+          "es-ES": "muy bueno",
+          "fr-FR": "très bon",
+          "hi-IN": "बहुत अच्छा",
+          "pl-PL": "bardzo dobry",
+          "ro-RO": "foarte bun",
+          "tr-TR": "çok iyi",
+          "uk-UA": "дуже добре",
+          "uz-UZ": "juda yaxshi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Vielen Dank, das hilft mir sehr bei der Jobsuche.",
+        "translation": {
+          "ru-RU": "Большое спасибо, это мне очень поможет при поиске работы.",
+          "en-US": "Thank you very much, that helps me a lot with the job search.",
+          "ar-SA": "شكراً جزيلاً، هذا يساعدني كثيراً في البحث عن وظيفة.",
+          "es-ES": "Muchas gracias, eso me ayuda mucho con la búsqueda de empleo.",
+          "fr-FR": "Merci beaucoup, cela m'aide beaucoup dans ma recherche d'emploi.",
+          "hi-IN": "बहुत-बहुत धन्यवाद, यह मुझे नौकरी खोजने में बहुत मदद करेगा।",
+          "pl-PL": "Bardzo dziękuję, to mi bardzo pomoże w szukaniu pracy.",
+          "ro-RO": "Vă mulțumesc mult, asta mă ajută foarte mult în căutarea unui loc de muncă.",
+          "tr-TR": "Çok teşekkürler, bu iş arayışımda bana çok yardımcı olacak.",
+          "uk-UA": "Велике дякую, це мені дуже допоможе при пошуку роботи.",
+          "uz-UZ": "Katta rahmat, bu ish qidirishda menga juda yordam beradi."
+        },
+        "nextStep": "erfolg"
+      },
+      {
+        "text": "Danke, das ist wenigstens eine gute Nachricht.",
+        "translation": {
+          "ru-RU": "Спасибо, это по крайней мере хорошая новость.",
+          "en-US": "Thank you, that is at least one piece of good news.",
+          "ar-SA": "شكراً، هذه على الأقل أخبار جيدة.",
+          "es-ES": "Gracias, al menos esa es una buena noticia.",
+          "fr-FR": "Merci, c'est au moins une bonne nouvelle.",
+          "hi-IN": "धन्यवाद, यह कम से कम एक अच्छी खबर है।",
+          "pl-PL": "Dziękuję, to przynajmniej dobra wiadomość.",
+          "ro-RO": "Mulțumesc, asta este cel puțin o veste bună.",
+          "tr-TR": "Teşekkürler, bu en azından iyi bir haber.",
+          "uk-UA": "Дякую, це принаймні хороша новина.",
+          "uz-UZ": "Rahmat, bu hech bo'lmaganda bitta yaxshi yangilik."
+        },
+        "nextStep": "erfolg"
+      }
+    ],
+    "defaultNext": "erfolg"
+  },
+  "erfolg": {
+    "botText": "Ich wünsche Ihnen viel Erfolg für Ihre Zukunft.",
+    "botTranslation": {
+      "ru-RU": "Я желаю вам больших успехов в будущем.",
+      "en-US": "I wish you much success for your future.",
+      "ar-SA": "أتمنى لك الكثير من النجاح في مستقبلك.",
+      "es-ES": "Le deseo mucho éxito en su futuro.",
+      "fr-FR": "Je vous souhaite beaucoup de succès pour votre avenir.",
+      "hi-IN": "मैं आपके भविष्य के लिए बहुत सफलता की कामना करता हूँ।",
+      "pl-PL": "Życzę panu/pani wielu sukcesów w przyszłości.",
+      "ro-RO": "Vă doresc mult succes în viitor.",
+      "tr-TR": "Geleceğiniz için size çok başarılar dilerim.",
+      "uk-UA": "Я бажаю вам великих успіхів у майбутньому.",
+      "uz-UZ": "Kelajagingizda sizga katta muvaffaqiyatlar tilayman."
+    },
+    "vocabulary": [
+      {
+        "german": "der Erfolg",
+        "translation": {
+          "ru-RU": "успех",
+          "en-US": "success",
+          "ar-SA": "نجاح",
+          "es-ES": "éxito",
+          "fr-FR": "succès",
+          "hi-IN": "सफलता",
+          "pl-PL": "sukces",
+          "ro-RO": "succes",
+          "tr-TR": "başarı",
+          "uk-UA": "успіх",
+          "uz-UZ": "muvaffaqiyat"
+        }
+      },
+      {
+        "german": "die Zukunft",
+        "translation": {
+          "ru-RU": "будущее",
+          "en-US": "future",
+          "ar-SA": "مستقبل",
+          "es-ES": "futuro",
+          "fr-FR": "avenir",
+          "hi-IN": "भविष्य",
+          "pl-PL": "przyszłość",
+          "ro-RO": "viitor",
+          "tr-TR": "gelecek",
+          "uk-UA": "майбутнє",
+          "uz-UZ": "kelajak"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke für die Zusammenarbeit. Auf Wiedersehen.",
+        "translation": {
+          "ru-RU": "Спасибо за сотрудничество. До свидания.",
+          "en-US": "Thank you for the cooperation. Goodbye.",
+          "ar-SA": "شكراً على التعاون. وداعاً.",
+          "es-ES": "Gracias por la colaboración. Adiós.",
+          "fr-FR": "Merci pour la collaboration. Au revoir.",
+          "hi-IN": "सहयोग के लिए धन्यवाद। अलविदा।",
+          "pl-PL": "Dziękuję za współpracę. Do widzenia.",
+          "ro-RO": "Mulțumesc pentru colaborare. La revedere.",
+          "tr-TR": "İşbirliğiniz için teşekkürler. Hoşça kalın.",
+          "uk-UA": "Дякую за співпрацю. До побачення.",
+          "uz-UZ": "Hamkorlik uchun rahmat. Xayr."
+        },
+        "nextStep": "abschied"
+      },
+      {
+        "text": "Vielen Dank. Auf Wiedersehen.",
+        "translation": {
+          "ru-RU": "Большое спасибо. До свидания.",
+          "en-US": "Thank you very much. Goodbye.",
+          "ar-SA": "شكراً جزيلاً. وداعاً.",
+          "es-ES": "Muchas gracias. Adiós.",
+          "fr-FR": "Merci beaucoup. Au revoir.",
+          "hi-IN": "बहुत-बहुत धन्यवाद। अलविदा।",
+          "pl-PL": "Bardzo dziękuję. Do widzenia.",
+          "ro-RO": "Vă mulțumesc mult. La revedere.",
+          "tr-TR": "Çok teşekkürler. Görüşmek üzere.",
+          "uk-UA": "Велике дякую. До побачення.",
+          "uz-UZ": "Katta rahmat. Xayr."
+        },
+        "nextStep": "abschied"
+      }
+    ],
+    "defaultNext": "abschied"
+  },
+  "abschied": {
+    "botText": "Auf Wiedersehen und alles Gute!",
+    "botTranslation": {
+      "ru-RU": "До свидания и всего хорошего!",
+      "en-US": "Goodbye and all the best!",
+      "ar-SA": "وداعاً وكل التوفيق!",
+      "es-ES": "¡Adiós y todo lo mejor!",
+      "fr-FR": "Au revoir et bonne continuation !",
+      "hi-IN": "अलविदा और शुभकामनाएँ!",
+      "pl-PL": "Do widzenia i wszystkiego dobrego!",
+      "ro-RO": "La revedere și toate cele bune!",
+      "tr-TR": "Hoşça kalın ve her şey gönlünüzce olsun!",
+      "uk-UA": "До побачення і всього найкращого!",
+      "uz-UZ": "Xayr va barcha yaxshiliklarni tilayman!"
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

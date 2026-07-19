@@ -1,0 +1,652 @@
+{
+  "start": {
+    "botText": "Guten Tag! Hier ist Ihr Tisch und die Speisekarte.",
+    "botTranslation": {
+      "ar-SA": "طاب يومك! هنا طاولتك وقائمة الطعام.",
+      "en-US": "Good day! Here is your table and the menu.",
+      "es-ES": "¡Buen día! Aquí tiene su mesa y el menú.",
+      "fr-FR": "Bonjour ! Voici votre table et le menu.",
+      "hi-IN": "शुभ दिन! यह आपकी मेज और मेनू है।",
+      "pl-PL": "Dzień dobry! Oto pana/pani stolik i menu.",
+      "ro-RO": "Bună ziua! Aici este masa și meniul dumneavoastră.",
+      "ru-RU": "Добрый день! Вот Ваш столик и меню.",
+      "tr-TR": "İyi günler! İşte masanız ve menü.",
+      "uk-UA": "Добрий день! Ось Ваш столик і меню.",
+      "uz-UZ": "Xayrli kun! Mana sizning stolingiz va menyu."
+    },
+    "vocabulary": [
+      {
+        "german": "der Tisch",
+        "translation": {
+          "ru-RU": "стол",
+          "en-US": "table",
+          "ar-SA": "طاولة",
+          "es-ES": "mesa",
+          "fr-FR": "table",
+          "hi-IN": "मेज",
+          "pl-PL": "stół / stolik",
+          "ro-RO": "masă",
+          "tr-TR": "masa",
+          "uk-UA": "стіл",
+          "uz-UZ": "stol"
+        }
+      },
+      {
+        "german": "die Speisekarte",
+        "translation": {
+          "ru-RU": "меню",
+          "en-US": "menu",
+          "ar-SA": "قائمة الطعام",
+          "es-ES": "menú",
+          "fr-FR": "menu",
+          "hi-IN": "मेनू",
+          "pl-PL": "karta dań",
+          "ro-RO": "meniu",
+          "tr-TR": "menü",
+          "uk-UA": "меню",
+          "uz-UZ": "menyu"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Vielen Dank.",
+        "translation": {
+          "ar-SA": "شكراً جزيلاً.",
+          "en-US": "Thank you very much.",
+          "es-ES": "Muchas gracias.",
+          "fr-FR": "Merci beaucoup.",
+          "hi-IN": "बहुत-बहुत धन्यवाद।",
+          "pl-PL": "Bardzo dziękuję.",
+          "ro-RO": "Vă mulțumesc mult.",
+          "ru-RU": "Большое спасибо.",
+          "tr-TR": "Çok teşekkür ederim.",
+          "uk-UA": "Велике дякую.",
+          "uz-UZ": "Katta rahmat."
+        },
+        "nextStep": "ask_order"
+      },
+      {
+        "text": "Danke schön.",
+        "translation": {
+          "ar-SA": "شكراً جزيلاً.",
+          "en-US": "Thank you.",
+          "es-ES": "Muchas gracias.",
+          "fr-FR": "Merci beaucoup.",
+          "hi-IN": "धन्यवाद।",
+          "pl-PL": "Dziękuję bardzo.",
+          "ro-RO": "Mulțumesc.",
+          "ru-RU": "Спасибо большое.",
+          "tr-TR": "Teşekkürler.",
+          "uk-UA": "Дуже дякую.",
+          "uz-UZ": "Rahmat."
+        },
+        "nextStep": "ask_order"
+      }
+    ],
+    "defaultNext": "ask_order"
+  },
+  "ask_order": {
+    "botText": "Was möchten Sie essen und trinken?",
+    "botTranslation": {
+      "ar-SA": "ماذا تود أن تأكل وتشرب؟",
+      "en-US": "What would you like to eat and drink?",
+      "es-ES": "¿Qué le gustaría comer y beber?",
+      "fr-FR": "Que souhaitez-vous manger et boire ?",
+      "hi-IN": "आप क्या खाना और पीना चाहेंगे?",
+      "pl-PL": "Co chciałby pan/pani zjeść i do picia?",
+      "ro-RO": "Ce ați dori să mâncați și să beți?",
+      "ru-RU": "Что Вы хотели бы съесть и выпить?",
+      "tr-TR": "Ne yemek ve içmek istersiniz?",
+      "uk-UA": "Що Ви хотіли б з'їсти та випити?",
+      "uz-UZ": "Nima yeyishni va ichishni xohlaysiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "essen",
+        "translation": {
+          "ru-RU": "есть / кушать",
+          "en-US": "to eat",
+          "ar-SA": "يأكل",
+          "es-ES": "comer",
+          "fr-FR": "manger",
+          "hi-IN": "खाना",
+          "pl-PL": "jeść",
+          "ro-RO": "a mânca",
+          "tr-TR": "yemek yemek",
+          "uk-UA": "їсти",
+          "uz-UZ": "yemoq"
+        }
+      },
+      {
+        "german": "trinken",
+        "translation": {
+          "ru-RU": "пить",
+          "en-US": "to drink",
+          "ar-SA": "يشرب",
+          "es-ES": "beber",
+          "fr-FR": "boire",
+          "hi-IN": "पीना",
+          "pl-PL": "pić",
+          "ro-RO": "a bea",
+          "tr-TR": "içmek",
+          "uk-UA": "пити",
+          "uz-UZ": "ichmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich möchte eine Pizza und ein Wasser, bitte.",
+        "translation": {
+          "ar-SA": "أريد بيتزا وماء، من فضلك.",
+          "en-US": "I would like a pizza and a water, please.",
+          "es-ES": "Quisiera una pizza y un agua, por favor.",
+          "fr-FR": "Je voudrais une pizza et de l'eau, s'il vous plaît.",
+          "hi-IN": "मुझे एक पिज्जा और एक पानी चाहिए, कृपया।",
+          "pl-PL": "Poproszę pizzę i wodę.",
+          "ro-RO": "Aș dori o pizza și o apă, vă rog.",
+          "ru-RU": "Я хотел бы пиццу и воду, пожалуйста.",
+          "tr-TR": "Bir pizza ve bir su istiyorum, lütfen.",
+          "uk-UA": "Я хотів би піцу та воду, будь ласка.",
+          "uz-UZ": "Men pitssa va suv xohlayman, iltimos."
+        },
+        "nextStep": "serve_food"
+      },
+      {
+        "text": "Einen Salat und einen Apfelsaft, bitte.",
+        "translation": {
+          "ar-SA": "سلطة وعصير تفاح، من فضلك.",
+          "en-US": "A salad and an apple juice, please.",
+          "es-ES": "Una ensalada y un jugo de manzana, por favor.",
+          "fr-FR": "Une salade et un jus de pomme, s'il vous plaît.",
+          "hi-IN": "एक सलाद और एक सेब का रस, कृपया।",
+          "pl-PL": "Poproszę sałatkę i sok jabłkowy.",
+          "ro-RO": "O salată și un suc de mere, vă rog.",
+          "ru-RU": "Салат и яблочный сок, пожалуйста.",
+          "tr-TR": "Bir salata ve bir elma suyu, lütfen.",
+          "uk-UA": "Салат і яблучний сік, будь ласка.",
+          "uz-UZ": "Salat va olma sharbati, iltimos."
+        },
+        "nextStep": "serve_food"
+      }
+    ],
+    "defaultNext": "serve_food"
+  },
+  "serve_food": {
+    "botText": "Hier ist Ihr Essen. Guten Appetit!",
+    "botTranslation": {
+      "ar-SA": "هنا طعامك. بالهناء والشفاء!",
+      "en-US": "Here is your food. Enjoy your meal!",
+      "es-ES": "Aquí está su comida. ¡Buen provecho!",
+      "fr-FR": "Voici votre repas. Bon appétit !",
+      "hi-IN": "यहाँ आपका भोजन है। भोजन का आनंद लें!",
+      "pl-PL": "Oto pana/pani jedzenie. Smacznego!",
+      "ro-RO": "Aici este mâncarea dumneavoastră. Poftă bună!",
+      "ru-RU": "Вот Ваша еда. Приятного аппетита!",
+      "tr-TR": "İşte yemeğiniz. Afiyet olsun!",
+      "uk-UA": "Ось Ваша їжа. Смачного!",
+      "uz-UZ": "Mana ovqatingiz. Yoqimli ishtaha!"
+    },
+    "vocabulary": [
+      {
+        "german": "das Essen",
+        "translation": {
+          "ru-RU": "еда",
+          "en-US": "food / meal",
+          "ar-SA": "طعام",
+          "es-ES": "comida",
+          "fr-FR": "repas / nourriture",
+          "hi-IN": "भोजन",
+          "pl-PL": "jedzenie",
+          "ro-RO": "mâncare",
+          "tr-TR": "yemek",
+          "uk-UA": "їжа",
+          "uz-UZ": "ovqat"
+        }
+      },
+      {
+        "german": "Guten Appetit",
+        "translation": {
+          "ru-RU": "приятного аппетита",
+          "en-US": "enjoy your meal",
+          "ar-SA": "بالهناء والشفاء",
+          "es-ES": "buen provecho",
+          "fr-FR": "bon appétit",
+          "hi-IN": "भोजन का आनंद लें",
+          "pl-PL": "smacznego",
+          "ro-RO": "poftă bună",
+          "tr-TR": "afiyet olsun",
+          "uk-UA": "смачного",
+          "uz-UZ": "yoqimli ishtaha"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke, das sieht sehr gut aus!",
+        "translation": {
+          "ar-SA": "شكراً، يبدو جيداً جداً!",
+          "en-US": "Thanks, that looks very good!",
+          "es-ES": "Gracias, ¡tiene muy buena pinta!",
+          "fr-FR": "Merci, ça a l'air très bon !",
+          "hi-IN": "धन्यवाद, यह बहुत अच्छा लग रहा है!",
+          "pl-PL": "Dziękuję, wygląda bardzo dobrze!",
+          "ro-RO": "Mulțumesc, arată foarte bine!",
+          "ru-RU": "Спасибо, выглядит очень хорошо!",
+          "tr-TR": "Teşekkürler, çok iyi görünüyor!",
+          "uk-UA": "Дякую, виглядає дуже добре!",
+          "uz-UZ": "Rahmat, juda yaxshi ko'rinyapti!"
+        },
+        "nextStep": "feedback"
+      },
+      {
+        "text": "Vielen Dank!",
+        "translation": {
+          "ar-SA": "شكراً جزيلاً!",
+          "en-US": "Thank you very much!",
+          "es-ES": "¡Muchas gracias!",
+          "fr-FR": "Merci beaucoup !",
+          "hi-IN": "बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Dziękuję bardzo!",
+          "ro-RO": "Vă mulțumesc mult!",
+          "ru-RU": "Большое спасибо!",
+          "tr-TR": "Çok teşekkür ederim!",
+          "uk-UA": "Велике дякую!",
+          "uz-UZ": "Katta rahmat!"
+        },
+        "nextStep": "feedback"
+      }
+    ],
+    "defaultNext": "feedback"
+  },
+  "feedback": {
+    "botText": "Hat es geschmeckt?",
+    "botTranslation": {
+      "ar-SA": "هل كان الطعام لذيذاً؟",
+      "en-US": "Was it tasty?",
+      "es-ES": "¿Estaba rico?",
+      "fr-FR": "Était-ce bon ?",
+      "hi-IN": "क्या यह स्वादिष्ट था?",
+      "pl-PL": "Czy smakowało?",
+      "ro-RO": "A fost gustos?",
+      "ru-RU": "Было вкусно?",
+      "tr-TR": "Lezzetli miydi?",
+      "uk-UA": "Було смачно?",
+      "uz-UZ": "Mazali bo'ldimi?"
+    },
+    "vocabulary": [
+      {
+        "german": "schmecken",
+        "translation": {
+          "ru-RU": "быть вкусным",
+          "en-US": "to taste (good)",
+          "ar-SA": "يتذوق",
+          "es-ES": "saber (bien)",
+          "fr-FR": "être bon (au goût)",
+          "hi-IN": "स्वादिष्ट होना",
+          "pl-PL": "smakować",
+          "ro-RO": "a avea gust",
+          "tr-TR": "tadı güzel olmak",
+          "uk-UA": "смакувати",
+          "uz-UZ": "maza qilmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, sehr gut. Ich möchte bitte zahlen.",
+        "translation": {
+          "ar-SA": "نعم، جيد جداً. أريد الدفع من فضلك.",
+          "en-US": "Yes, very good. I would like to pay, please.",
+          "es-ES": "Sí, muy rico. Quisiera pagar, por favor.",
+          "fr-FR": "Oui, très bon. Je voudrais payer, s'il vous plaît.",
+          "hi-IN": "हाँ, बहुत अच्छा। मैं भुगतान करना चाहूँगा, कृपया।",
+          "pl-PL": "Tak, bardzo dobre. Chciałbym zapłacić.",
+          "ro-RO": "Da, foarte bun. Aș dori să plătesc, vă rog.",
+          "ru-RU": "Да, очень. Я хотел бы расплатиться, пожалуйста.",
+          "tr-TR": "Evet, çok iyi. Ödemek istiyorum, lütfen.",
+          "uk-UA": "Так, дуже. Я хотів би розрахуватися, будь ласка.",
+          "uz-UZ": "Ha, juda yaxshi. Men to'lamoqchiman, iltimos."
+        },
+        "nextStep": "ask_method"
+      },
+      {
+        "text": "Ja, lecker. Die Rechnung, bitte.",
+        "translation": {
+          "ar-SA": "نعم، لذيذ. الفاتورة من فضلك.",
+          "en-US": "Yes, delicious. The bill, please.",
+          "es-ES": "Sí, delicioso. La cuenta, por favor.",
+          "fr-FR": "Oui, délicieux. L'addition, s'il vous plaît.",
+          "hi-IN": "हाँ, स्वादिष्ट। बिल, कृपया।",
+          "pl-PL": "Tak, pyszne. Rachunek, poproszę.",
+          "ro-RO": "Da, delicios. Nota de plată, vă rog.",
+          "ru-RU": "Да, вкусно. Счёт, пожалуйста.",
+          "tr-TR": "Evet, lezzetli. Hesap, lütfen.",
+          "uk-UA": "Так, смачно. Рахунок, будь ласка.",
+          "uz-UZ": "Ha, mazali. Hisob-kitob qiling, iltimos."
+        },
+        "nextStep": "ask_method"
+      }
+    ],
+    "defaultNext": "ask_method"
+  },
+  "ask_method": {
+    "botText": "Freut mich. Zahlen Sie bar oder mit Karte?",
+    "botTranslation": {
+      "ar-SA": "يسعدني ذلك. هل ستدفع نقداً أم بالبطاقة؟",
+      "en-US": "Glad to hear. Do you pay cash or with card?",
+      "es-ES": "Me alegro. ¿Paga en efectivo o con tarjeta?",
+      "fr-FR": "Ravi de l'entendre. Payez-vous en espèces ou par carte ?",
+      "hi-IN": "यह सुनकर खुशी हुई। क्या आप नकद या कार्ड से भुगतान करते हैं?",
+      "pl-PL": "Cieszę się. Płaci pan/pani gotówką czy kartą?",
+      "ro-RO": "Mă bucur. Plătiți cash sau cu cardul?",
+      "ru-RU": "Рад слышать. Вы платите наличными или картой?",
+      "tr-TR": "Buna sevindim. Nakit mi kartla mı ödüyorsunuz?",
+      "uk-UA": "Радий чути. Ви платите готівкою чи карткою?",
+      "uz-UZ": "Xursandman. Naqd to'laysizmi yoki karta bilanmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "bar",
+        "translation": {
+          "ru-RU": "наличными",
+          "en-US": "in cash",
+          "ar-SA": "نقداً",
+          "es-ES": "en efectivo",
+          "fr-FR": "en espèces",
+          "hi-IN": "नकद",
+          "pl-PL": "gotówką",
+          "ro-RO": "cash",
+          "tr-TR": "nakit",
+          "uk-UA": "готівкою",
+          "uz-UZ": "naqd pul bilan"
+        }
+      },
+      {
+        "german": "mit Karte",
+        "translation": {
+          "ru-RU": "картой",
+          "en-US": "by card",
+          "ar-SA": "بالبطاقة",
+          "es-ES": "con tarjeta",
+          "fr-FR": "par carte",
+          "hi-IN": "कार्ड से",
+          "pl-PL": "kartą",
+          "ro-RO": "cu cardul",
+          "tr-TR": "kartla",
+          "uk-UA": "карткою",
+          "uz-UZ": "karta bilan"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich zahle bar.",
+        "translation": {
+          "ar-SA": "سأدفع نقداً.",
+          "en-US": "I pay cash.",
+          "es-ES": "Pago en efectivo.",
+          "fr-FR": "Je paie en espèces.",
+          "hi-IN": "मैं नकद भुगतान करता हूँ।",
+          "pl-PL": "Płacę gotówką.",
+          "ro-RO": "Plătesc cash.",
+          "ru-RU": "Я плачу наличными.",
+          "tr-TR": "Nakit ödüyorum.",
+          "uk-UA": "Я плачу готівкою.",
+          "uz-UZ": "Men naqd to'layman."
+        },
+        "nextStep": "price"
+      },
+      {
+        "text": "Bar, bitte.",
+        "translation": {
+          "ar-SA": "نقداً من فضلك.",
+          "en-US": "Cash, please.",
+          "es-ES": "En efectivo, por favor.",
+          "fr-FR": "En espèces, s'il vous plaît.",
+          "hi-IN": "नकद, कृपया।",
+          "pl-PL": "Gotówką, poproszę.",
+          "ro-RO": "Cash, vă rog.",
+          "ru-RU": "Наличными, пожалуйста.",
+          "tr-TR": "Nakit, lütfen.",
+          "uk-UA": "Готівкою, будь ласка.",
+          "uz-UZ": "Naqd, iltimos."
+        },
+        "nextStep": "price"
+      }
+    ],
+    "defaultNext": "price"
+  },
+  "price": {
+    "botText": "Das macht 40 Euro, bitte.",
+    "botTranslation": {
+      "ar-SA": "الحساب 40 يورو من فضلك.",
+      "en-US": "That comes to 40 Euros, please.",
+      "es-ES": "Son 40 euros, por favor.",
+      "fr-FR": "Cela fait 40 euros, s'il vous plaît.",
+      "hi-IN": "यह 40 यूरो हुआ, कृपया।",
+      "pl-PL": "To będzie 40 euro.",
+      "ro-RO": "Asta face 40 de euro, vă rog.",
+      "ru-RU": "С Вас 40 евро, пожалуйста.",
+      "tr-TR": "Tutar 40 Euro, lütfen.",
+      "uk-UA": "З Вас 40 євро, будь ласка.",
+      "uz-UZ": "Jami 40 yevro bo'ldi, iltimos."
+    },
+    "vocabulary": [
+      {
+        "german": "das macht",
+        "translation": {
+          "ru-RU": "с вас / итого",
+          "en-US": "that comes to",
+          "ar-SA": "هذا يكلف",
+          "es-ES": "eso hace",
+          "fr-FR": "cela fait",
+          "hi-IN": "यह हुआ",
+          "pl-PL": "to wynosi",
+          "ro-RO": "asta face",
+          "tr-TR": "tutar",
+          "uk-UA": "з вас / разом",
+          "uz-UZ": "jami"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hier sind 50 Euro. Stimmt so.",
+        "translation": {
+          "ar-SA": "هنا 50 يورو. احتفظ بالباقي.",
+          "en-US": "Here are 50 Euros. Keep the change.",
+          "es-ES": "Aquí tiene 50 euros. Quédese con el cambio.",
+          "fr-FR": "Voici 50 euros. Gardez la monnaie.",
+          "hi-IN": "यहाँ 50 यूरो हैं। छुट्टे रख लें।",
+          "pl-PL": "Oto 50 euro. Reszty nie trzeba.",
+          "ro-RO": "Iată 50 de euro. Păstrați restul.",
+          "ru-RU": "Вот 50 евро. Сдачи не надо.",
+          "tr-TR": "İşte 50 Euro. Üstü kalsın.",
+          "uk-UA": "Ось 50 євро. Здачі не треба.",
+          "uz-UZ": "Mana 50 yevro. Qaytimi kerak emas."
+        },
+        "nextStep": "thanks_tip"
+      },
+      {
+        "text": "Hier sind 50 Euro. Der Rest ist für Sie.",
+        "translation": {
+          "ar-SA": "تفضل 50 يورو. الباقي لك.",
+          "en-US": "Here are 50 Euros. The rest is for you.",
+          "es-ES": "Aquí tiene 50 euros. El resto es para usted.",
+          "fr-FR": "Voici 50 euros. Le reste est pour vous.",
+          "hi-IN": "यहाँ 50 यूरो हैं। बाकी आपके लिए है।",
+          "pl-PL": "Oto 50 euro. Reszta dla pana/pani.",
+          "ro-RO": "Iată 50 de euro. Restul este pentru dumneavoastră.",
+          "ru-RU": "Вот 50 евро. Остаток (сдача) Вам.",
+          "tr-TR": "İşte 50 Euro. Üstü size.",
+          "uk-UA": "Ось 50 євро. Решта для Вас.",
+          "uz-UZ": "Mana 50 yevro. Qolgani sizga."
+        },
+        "nextStep": "thanks_tip"
+      }
+    ],
+    "defaultNext": "thanks_tip"
+  },
+  "thanks_tip": {
+    "botText": "Vielen Dank! Das ist sehr nett. Einen schönen Tag noch!",
+    "botTranslation": {
+      "ar-SA": "شكراً جزيلاً! هذا لطف كبير منك. يوماً سعيداً!",
+      "en-US": "Thank you very much! That is very kind. Have a nice day!",
+      "es-ES": "¡Muchas gracias! Es muy amable de su parte. ¡Que tenga un buen día!",
+      "fr-FR": "Merci beaucoup ! C'est très gentil. Bonne journée !",
+      "hi-IN": "बहुत-बहुत धन्यवाद! यह बहुत दयालु है। आपका दिन शुभ हो!",
+      "pl-PL": "Bardzo dziękuję! To bardzo miłe. Miłego dnia!",
+      "ro-RO": "Vă mulțumesc mult! Este foarte drăguț din partea dumneavoastră. O zi frumoasă în continuare!",
+      "ru-RU": "Большое спасибо! Это очень мило. Хорошего Вам дня!",
+      "tr-TR": "Çok teşekkürler! Bu çok nazikçe. İyi günler!",
+      "uk-UA": "Велике дякую! Це дуже мило. Гарного Вам дня!",
+      "uz-UZ": "Katta rahmat! Bu juda mehribonlik. Yaxshi kun tilayman!"
+    },
+    "vocabulary": [
+      {
+        "german": "sehr nett",
+        "translation": {
+          "ru-RU": "очень мило",
+          "en-US": "very kind",
+          "ar-SA": "لطيف جداً",
+          "es-ES": "muy amable",
+          "fr-FR": "très gentil",
+          "hi-IN": "बहुत दयालु",
+          "pl-PL": "bardzo miło",
+          "ro-RO": "foarte drăguț",
+          "tr-TR": "çok nazik",
+          "uk-UA": "дуже мило",
+          "uz-UZ": "juda mehribon"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke, Ihnen auch!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً!",
+          "en-US": "Thanks, you too!",
+          "es-ES": "¡Gracias, a usted también!",
+          "fr-FR": "Merci, à vous aussi !",
+          "hi-IN": "धन्यवाद, आपको भी!",
+          "pl-PL": "Dziękuję, panu/pani również!",
+          "ro-RO": "Mulțumesc, și dumneavoastră la fel!",
+          "ru-RU": "Спасибо, Вам тоже!",
+          "tr-TR": "Teşekkürler, size de!",
+          "uk-UA": "Дякую, Вам також!",
+          "uz-UZ": "Rahmat, sizga ham!"
+        },
+        "nextStep": "goodbye"
+      },
+      {
+        "text": "Danke, gleichfalls!",
+        "translation": {
+          "ar-SA": "شكراً، ولك أيضاً!",
+          "en-US": "Thanks, same to you!",
+          "es-ES": "¡Gracias, igualmente!",
+          "fr-FR": "Merci, pareillement !!",
+          "hi-IN": "धन्यवाद, आपको भी!",
+          "pl-PL": "Dziękuję, nawzajem!!",
+          "ro-RO": "Mulțumesc, la fel!",
+          "ru-RU": "Спасибо, взаимно!",
+          "tr-TR": "Teşekkürler, size de!",
+          "uk-UA": "Дякую, навзаєм!",
+          "uz-UZ": "Rahmat, sizga ham!"
+        },
+        "nextStep": "goodbye"
+      }
+    ],
+    "defaultNext": "goodbye"
+  },
+  "goodbye": {
+    "botText": "Auf Wiedersehen!",
+    "botTranslation": {
+      "ar-SA": "إلى اللقاء!",
+      "en-US": "Goodbye!",
+      "es-ES": "¡Adiós!",
+      "fr-FR": "Au revoir !",
+      "hi-IN": "अलविदा!",
+      "pl-PL": "Do widzenia!",
+      "ro-RO": "La revedere!",
+      "ru-RU": "До свидания!",
+      "tr-TR": "Hoşça kalın!",
+      "uk-UA": "До побачення!",
+      "uz-UZ": "Xayr!"
+    },
+    "vocabulary": [
+      {
+        "german": "auf Wiedersehen",
+        "translation": {
+          "ru-RU": "до свидания",
+          "en-US": "goodbye",
+          "ar-SA": "إلى اللقاء",
+          "es-ES": "adiós",
+          "fr-FR": "au revoir",
+          "hi-IN": "अलविदा",
+          "pl-PL": "do widzenia",
+          "ro-RO": "la revedere",
+          "tr-TR": "hoşça kalın",
+          "uk-UA": "до побачення",
+          "uz-UZ": "xayr"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Auf Wiedersehen!",
+        "translation": {
+          "ar-SA": "إلى اللقاء!",
+          "en-US": "Goodbye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Au revoir !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Do widzenia!",
+          "ro-RO": "La revedere!",
+          "ru-RU": "До свидания!",
+          "tr-TR": "Hoşça kalın!",
+          "uk-UA": "До побачення!",
+          "uz-UZ": "Ko'rishguncha!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Tschüss!",
+        "translation": {
+          "ar-SA": "وداعاً!",
+          "en-US": "Bye!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Salut !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Cześć!",
+          "ro-RO": "Pa!",
+          "ru-RU": "Пока!",
+          "tr-TR": "Görüşürüz!",
+          "uk-UA": "Бувай!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Der Restaurantbesuch ist beendet.",
+    "botTranslation": {
+      "ar-SA": "انتهت زيارة المطعم.",
+      "en-US": "The restaurant visit is finished.",
+      "es-ES": "La visita al restaurante ha terminado.",
+      "fr-FR": "La visite au restaurant est terminée.",
+      "hi-IN": "रेस्तरां का दौरा समाप्त हो गया है।",
+      "pl-PL": "Wizyta w restauracji została zakończona.",
+      "ro-RO": "Vizita la restaurant s-a încheiat.",
+      "ru-RU": "Посещение ресторана окончено.",
+      "tr-TR": "Restoran ziyareti bitti.",
+      "uk-UA": "Відвідування ресторану завершено.",
+      "uz-UZ": "Restoranga tashrif tugadi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

@@ -36,8 +36,11 @@ export const useTrainerStore = defineStore('thematic', () => {
 	const saveModuleAttempt = async (level, id, mistakes) => {
 		const key = `L${level}_M${id}`
 		const currentProgress = moduleProgress.value[key]
+
 		if (currentProgress && currentProgress.completed) return
+
 		const isCompleted = mistakes.length === 0
+
 		moduleProgress.value[key] = {
 			completed: isCompleted,
 			mistakes: mistakes

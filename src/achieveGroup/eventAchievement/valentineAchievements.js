@@ -1,6 +1,6 @@
 export const valentineAchievements = [
 	{
-		title: '',
+		title: 'valentineAchievements.valentineAchievementsTitle',
 		achievements: [
 			{
 				id: 'firstValentineQuest',

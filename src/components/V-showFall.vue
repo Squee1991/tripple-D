@@ -8,7 +8,7 @@ const props = defineProps({
   },
   count: {
     type: Number,
-    default: 75
+    default: 35
   }
 })
 
@@ -111,10 +111,8 @@ const snowflakes = computed(() => {
   display: block;
   width: var(--size);
   height: var(--size);
-  /* Важно: contain, чтобы картинка не деформировалась */
   object-fit: contain;
   will-change: transform;
-  /* alternate делает качание плавнее (туда-сюда) */
   animation: sway var(--sway) ease-in-out infinite alternate;
   animation-delay: var(--swayDelay);
 }

@@ -1,11 +1,119 @@
+<template>
+  <main class="session-page"
+        @touchstart="handleTouchStart"
+        @touchmove="handleTouchMove"
+        @touchend="handleTouchEnd"
+  >
+    <ExitSessionModal
+        :show="showExitModal"
+        @update:show="val => showExitModal = val"
+        @cancel="cancelExit"
+        @confirm="confirmExit"
+    />
+    <div class="session-container">
+      <section v-if="loading" class="view-state view-state--loading">
+        <div class="bouncy-loader">
+          <span></span><span></span><span></span>
+        </div>
+        <p class="loading-text">{{ t('trainerPage.loading') }}</p>
+      </section>
+      <section v-else-if="thematic.selectedModule" class="view-state view-state--content">
+        <div v-if="!finished" class="top-nav">
+          <div class="nav-actions">
+            <VStopSessionBtn @close="exit"/>
+          </div>
+          <div class="progress-wrapper">
+            <div class="progress-bar">
+              <div class="progress-fill" :style="{ width: progressPercent + '%' }">
+                <div class="progress-glare"></div>
+              </div>
+            </div>
+            <span class="progress-text">{{ current + 1 }} / {{ tasks.length }}</span>
+          </div>
+        </div>
+        <div v-if="!finished" class="quiz-content">
+          <div class="question-card">
+            <div class="question-inner">
+              <SoundBtn :text="cleanText(visibleSentence)"/>
+              <p class="question-text" :class="{ 'is-revealed': feedback && feedback.isCorrect }">
+                {{ visibleSentence }}
+              </p>
+            </div>
+          </div>
+          <div class="options-grid">
+            <button
+                v-for="option in answerOptions"
+                :key="option"
+                class="option-pill"
+                :class="{
+                  'is-correct': isChecked && option === tasks[current].answer,
+                  'is-wrong': isChecked && feedback && feedback.selected === option && !feedback.isCorrect,
+                  'is-disabled': isChecked && option !== tasks[current].answer && option !== feedback?.selected
+                }"
+                @click="check(option)"
+                :disabled="isChecked"
+            >
+              <span class="option-text">{{ option }}</span>
+            </button>
+          </div>
+        </div>
+        <transition name="slide-up-bouncy">
+          <div v-if="isChecked && !finished" class="bottom-sheet"
+               :class="feedback.isCorrect ? 'sheet--success' : 'sheet--error'">
+            <div class="feedback-message">
+              <div v-if="feedback.isCorrect" class="feedback-content">
+                <span class="feedback-text">{{ t('trainerPage.right') }}</span>
+              </div>
+              <div v-else class="feedback-content">
+                <span class="feedback-text">{{ t('trainerPage.false') }} <br/><b>{{ tasks[current].answer }}</b></span>
+              </div>
+            </div>
+            <button class="btn-gummy" :class="feedback.isCorrect ? 'btn-gummy--success' : 'btn-gummy--error'"
+                    @click="next">
+              {{ t('trainerPage.further') }}
+            </button>
+          </div>
+        </transition>
+        <div v-if="finished" class="view-state view-state--complete">
+          <div class="finish-card" v-if="correctAnswers === tasks.length">
+            <div class="result-emoji">🏆</div>
+            <h3 class="result-title">{{ t('trainerPage.end') }}</h3>
+            <p class="result-subtitle">{{ t('trainerPage.save') }}</p>
+            <button class="btn-gummy btn-gummy--primary" @click="exit">{{ t('trainerPage.backToTheme') }}</button>
+          </div>
+          <div class="finish-card" v-else>
+            <div class="result-emoji">💪</div>
+            <h3 class="result-title">{{ t('trainerPage.morePractice') }}</h3>
+            <p class="result-subtitle">{{ t('trainerPage.result') }} <span>{{ correctAnswers }} / {{
+                tasks.length
+              }}</span></p>
+            <div class="result-actions">
+              <button class="btn-gummy btn-gummy--primary" @click="restartModule">{{ t('trainerPage.repeat') }}</button>
+              <button class="btn-gummy btn-gummy--secondary" @click="exit">{{ t('trainerPage.toMain') }}</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section v-else class="view-state view-state--error">
+        <div class="result-emoji">Oops!</div>
+        <p class="error-text">{{ t('trainerPage.notFound') }}</p>
+        <button class="btn-gummy btn-gummy--primary" @click="exit">{{ t('trainerPage.toMain') }}</button>
+      </section>
+    </div>
+  </main>
+</template>
+
 <script setup>
 import {useTrainerStore} from '../../store/themenProgressStore.js'
 import {useRouter} from 'vue-router'
 import {ref, onMounted, onUnmounted, computed} from 'vue'
-import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue";
 import SoundBtn from "../../src/components/soundBtn.vue";
-import { useSeoMeta } from '#imports'
-import task from "~/pages/recipes/[id]/task.vue";
+import {useSeoMeta} from '#imports'
+import VBackBtn from "~/src/components/V-back-btn.vue";
+import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue";
+import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
+import SadHedgehogIcon from '../../assets/images/Sadlyhedgehog.png'
+import {useSwipeBack} from '~/composables/useSwipeBack.js'
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -24,11 +132,11 @@ const finished = ref(false)
 const isChecked = ref(false)
 const showExitModal = ref(false)
 const sessionMistakes = ref([])
-
-const hourRotation = ref(0);
-const minuteRotation = ref(0);
-const secondRotation = ref(0);
-let clockInterval = null;
+const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
+  exit()
+}, {
+  ignoreSelector: '.options-grid, .option-pill, .bottom-sheet, .btn-gummy'
+})
 
 const tasks = computed(() => {
   const allTasks = thematic.selectedModule?.tasks || []
@@ -36,11 +144,11 @@ const tasks = computed(() => {
 
   if (progress && !progress.completed && progress.mistakes?.length > 0) {
     return allTasks
-        .map((task, index) => ({ ...task, originalIndex: index }))
+        .map((task, index) => ({...task, originalIndex: index}))
         .filter(task => progress.mistakes.includes(task.originalIndex))
   }
 
-  return allTasks.map((task, index) => ({ ...task, originalIndex: index }))
+  return allTasks.map((task, index) => ({...task, originalIndex: index}))
 })
 
 const progressPercent = computed(() => {
@@ -51,7 +159,6 @@ const progressPercent = computed(() => {
 const visibleSentence = computed(() => {
   if (!tasks.value.length) return ''
   const task = tasks.value[current.value]
-
   if (isChecked.value && feedback.value?.isCorrect) {
     return task.question.replace('___', task.answer)
   }
@@ -98,7 +205,6 @@ const check = (selectedAnswer) => {
   if (isCorrect) {
     correctAnswers.value += 1
   } else {
-    // Сохраняем оригинальный индекс ошибки
     sessionMistakes.value.push(task.originalIndex)
   }
 }
@@ -139,16 +245,6 @@ const restartModule = () => {
   setupCurrentQuestion()
 }
 
-const updateClock = () => {
-  const now = new Date();
-  const seconds = now.getSeconds();
-  const minutes = now.getMinutes();
-  const hours = now.getHours();
-  secondRotation.value = seconds * 6;
-  minuteRotation.value = minutes * 6 + seconds * 0.1;
-  hourRotation.value = (hours % 12) * 30 + minutes * 0.5;
-};
-
 const handleBeforeUnload = (event) => {
   event.preventDefault();
 };
@@ -161,803 +257,447 @@ onMounted(async () => {
   if (tasks.value.length > 0) {
     setupCurrentQuestion();
   }
-  updateClock();
-  clockInterval = setInterval(updateClock, 1000);
   window.addEventListener('beforeunload', handleBeforeUnload);
 })
 
 onUnmounted(() => {
-  clearInterval(clockInterval);
   window.removeEventListener('beforeunload', handleBeforeUnload);
 })
+
 </script>
-<template>
-  <main class="trainer-page">
-    <div class="trainer-page__content">
-      <div v-if="showExitModal" class="modal-overlay">
-        <div class="modal-content">
-          <h3 class="modal-title">{{ t('trainerPage.sure') }}</h3>
-          <p class="modal-text">{{ t('trainerPage.warning') }}</p>
-          <div class="modal-actions">
-            <button class="btn" @click="cancelExit">{{ t('trainerPage.continue') }}</button>
-            <button class="btn btn--danger" @click="confirmExit">{{ t('trainerPage.exit') }}</button>
-          </div>
-        </div>
-      </div>
-      <div class="trainer-page__decorations">
-<!--        <button class="exit-sign" @click="exit">-->
-<!--          <img class="exit-sign-icon" src="../../assets/images/exit.svg" alt="">-->
-<!--          <span class="exit-sign-text">{{ t('trainerPage.exit') }}</span>-->
-<!--        </button>-->
-        <VStopSessionBtn
-            @close="exit"
-        />
-        <div class="scene-decoration scene-decoration--pencils">
-          <div class="pencil pencil--1"></div>
-          <div class="pencil pencil--2"></div>
-          <div class="pencil pencil--3"></div>
-        </div>
-        <div class="scene-decoration scene-decoration--bookshelf">
-          <div class="book book--red"></div>
-          <div class="book book--green"></div>
-          <div class="book book--blue"></div>
-          <div class="book book--yellow book--tilted"></div>
-        </div>
-        <div class="scene-decoration scene-decoration--picture">
-          <div class="picture-art-sun"></div>
-          <div class="picture-art"></div>
-        </div>
-        <div class="scene-decoration scene-decoration--clock">
-          <div class="clock-hand--numbers">
-            <div class="clock-hand--number-12">12</div>
-            <div class="clock-hand--number-3">3</div>
-            <div class="clock-hand--number-6">6</div>
-            <div class="clock-hand--number-9">9</div>
-          </div>
-          <div class="clock-hand clock-hand--hour" :style="{ transform: `rotate(${hourRotation}deg)` }"></div>
-          <div class="clock-hand clock-hand--minute"
-               :style="{ transform: `rotate(${minuteRotation}deg)` }"></div>
-          <div class="clock-hand clock-hand--second"
-               :style="{ transform: `rotate(${secondRotation}deg)` }"></div>
-        </div>
-      </div>
-
-      <div class="trainer-app">
-        <div class="trainer-app__board">
-          <section v-if="loading" class="trainer-app__view trainer-app__view--loading">
-            <p>{{ t('trainerPage.loading') }}</p>
-          </section>
-
-          <section v-else-if="thematic.selectedModule" class="trainer-app__view trainer-app__view--content">
-            <header v-if="!finished" class="trainer-app__header">
-              <h1 class="trainer-app__title">{{ thematic.selectedModule.title }}</h1>
-              <h2 class="trainer-app__subtitle">{{ t('trainerPage.quest') }} {{ current + 1 }} / {{
-                  tasks.length
-                }}</h2>
-            </header>
-            <div v-if="!finished" class="progress-bar">
-              <div class="progress-bar__fill" :style="{ width: progressPercent + '%' }"></div>
-            </div>
-            <div v-if="!finished" class="trainer-app__task">
-              <div class="app__question-inner">
-                <SoundBtn :text="cleanText(visibleSentence)"/>
-                <p class="trainer-app__question" :class="{ 'correct-reveal': feedback && feedback.isCorrect }">
-                  {{ visibleSentence }}
-                </p>
-              </div>
-              <div class="trainer-app__options-group">
-                <button
-                    v-for="option in answerOptions"
-                    :key="option"
-                    class="option-btn"
-                    :class="{
-                            'correct': isChecked && option === tasks[current].answer,
-                            'incorrect': isChecked && feedback && feedback.selected === option && !feedback.isCorrect,
-                            'disabled': isChecked && feedback && feedback.selected !== option
-                                    }"
-                    @click="check(option)"
-                    :disabled="isChecked"
-                >
-                  {{ option }}
-                </button>
-              </div>
-              <div class="trainer-app__footer">
-                <div v-if="isChecked && feedback" class="feedback-message">
-                  <span v-if="feedback.isCorrect" class="feedback-text--success">✔ {{ t('trainerPage.right') }}</span>
-                  <span v-else class="feedback-text--error">✖ {{ t('trainerPage.false') }} «{{ tasks[current].answer }}»</span>
-                </div>
-                <button v-if="isChecked" class="btn btn--next" @click="next">
-                  {{ t('trainerPage.further') }}
-                </button>
-              </div>
-            </div>
-            <div v-else class="trainer-app__view trainer-app__view--complete">
-              <div v-if="correctAnswers === tasks.length">
-                <div class="result-icon">🏆</div>
-                <h3 class="result-title">{{ t('trainerPage.end') }}</h3>
-                <p class="result-subtitle">{{ t('trainerPage.save') }}</p>
-                <button class="btn" @click="exit">{{ t('trainerPage.backToTheme') }}</button>
-              </div>
-              <div class="result__inner" v-else>
-                <div class="result-icon">🤔</div>
-                <h3 class="result-title">{{ t('trainerPage.morePractice') }}</h3>
-<!--                <p class="result-subtitle">{{ t('trainerPage.result') }} {{ correctAnswers }} / {{ tasks.length }}</p>-->
-                <div class="result-actions">
-                  <button class="btn btn--restart" @click="restartModule">{{ t('trainerPage.repeat') }}</button>
-                  <button class="btn btn--secondary" @click="exit">{{ t('trainerPage.toMain') }}</button>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section v-else class="trainer-app__view trainer-app__view--error">
-            <p class="error__text">{{ t('trainerPage.notFound') }}</p>
-            <button class="btn" @click="exit">{{ t('trainerPage.toMain') }}</button>
-          </section>
-        </div>
-        <div class="trainer-app__ledge">
-          <div class="duster"></div>
-          <div class="chalk"></div>
-        </div>
-      </div>
-    </div>
-    <div class="trainer-page__floor"></div>
-  </main>
-</template>
 
 <style scoped>
+.session-page {
+  font-family: "Nunito", sans-serif;
+  height: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+}
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+.session-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.view-state {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.view-state--loading, .view-state--error {
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 10px;
+  background: transparent;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.progress-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 28px;
+  background-color: #e5e7eb;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.progress-fill {
+  height: 100%;
+  background: #4ade80;
+  border-radius: 8px;
+  transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  border: none;
+}
+
+.progress-glare {
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+.progress-text {
+  font-weight: 900;
+  color: var(--titleColor);
+  font-size: 16px;
+}
+
+.quiz-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px calc(env(safe-area-inset-bottom) + 120px);
+  overflow-y: auto;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.theme-badge {
+  background: #fef3c7;
+  color: #d97706;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 900;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 0 #fde68a;
+  text-transform: uppercase;
+}
+
+.question-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: none;
+  padding: 24px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+}
+
+.question-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.question-text {
+  font-size: 24px;
+  font-weight: 900;
+  color: #4c1d95;
+  text-align: center;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.question-text.is-revealed {
+  color: #2563eb;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.option-pill {
+  width: 100%;
+  padding: 16px 8px;
+  background: #bfdbfe;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 0 #3b82f6;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option-pill:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 transparent;
+}
+
+.option-text {
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: #1e3a8a;
+}
+
+.option-pill.is-correct {
+  background: #bbf7d0;
+  box-shadow: 0 4px 0 #16a34a;
+}
+
+.option-pill.is-correct .option-text {
+  color: #064e3b;
+}
+
+.option-pill.is-wrong {
+  background: #fecaca;
+  box-shadow: 0 4px 0 #e11d48;
+}
+
+.option-pill.is-wrong .option-text {
+  color: #881337;
+}
+
+.option-pill.is-disabled {
+  opacity: 0.6;
+  background: #f3f4f6;
+  box-shadow: 0 4px 0 #9ca3af;
+  cursor: not-allowed;
+}
+
+.option-pill.is-disabled .option-text {
+  color: #6b7280;
+}
+
+.bottom-sheet {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 1024px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 16px calc(env(safe-area-inset-bottom) + 16px);
+  border-radius: 24px 24px 0 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 10;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sheet--success {
+  background: #d1fae5;
+}
+
+.sheet--error {
+  background: #ffe4e6;
+}
+
+.feedback-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.feedback-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feedback-emoji {
+  font-size: 32px;
+}
+
+.feedback-text {
+  font-size: 20px;
+  font-weight: 900;
+  color: #1f2937;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.sheet--error .feedback-text b {
+  color: #be123c;
+  display: block;
+}
+
+.view-state--complete {
+  padding: 20px;
+  justify-content: center;
+}
+
+.finish-card {
+  background: #ffffff;
+  border-radius: 24px;
+  border: none;
+  padding: 32px 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result-emoji {
+  font-size: 64px;
+  margin-bottom: 16px;
+  animation: bounceIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.result-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: #4c1d95;
+  margin: 0 0 12px 0;
+}
+
+.result-subtitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: #6b7280;
+  margin: 0 0 24px 0;
+}
+
+.result-subtitle span {
+  color: #1d4ed8;
+  font-weight: 900;
+  font-size: 22px;
+  background: #dbeafe;
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: none;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.result-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.btn-gummy {
+  width: 100%;
+  padding: 16px;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  text-transform: uppercase;
+}
+
+.btn-gummy:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 transparent !important;
+}
+
+.btn-gummy--primary {
+  background: #60a5fa;
+  color: #ffffff;
+  box-shadow: 0 5px 0 #2563eb;
+}
+
+.btn-gummy--success {
+  background: #4ade80;
+  color: #064e3b;
+  box-shadow: 0 5px 0 #16a34a;
+}
+
+.btn-gummy--error {
+  background: #f87171;
+  color: #ffffff;
+  box-shadow: 0 5px 0 #e11d48;
+}
+
+.btn-gummy--secondary {
+  background: #36c95d;
+  color: white;
+  box-shadow: 0 5px 0 #6dd98b;
+}
+
+.btn-gummy--danger {
+  background: none;
+  color: #7f1d1d;
+}
+
+.bouncy-loader {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.bouncy-loader span {
+  width: 18px;
+  height: 18px;
+  background: #60a5fa;
+  border: none;
+  border-radius: 50%;
+  animation: bounce 0.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95);
+}
+
+.bouncy-loader span:nth-child(2) {
+  background: #4ade80;
+  animation-delay: 0.1s;
+}
+
+.bouncy-loader span:nth-child(3) {
+  background: #fde047;
+  animation-delay: 0.2s;
+}
+
+.loading-text {
+  font-size: 20px;
+  font-weight: 900;
+  color: #4b5563;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
   }
-  to {
-    opacity: 1;
+  100% {
+    transform: translateY(-15px);
   }
 }
 
-@keyframes scaleIn {
-  from {
-    transform: scale(0.9);
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
     opacity: 0;
   }
-  to {
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
     transform: scale(1);
     opacity: 1;
   }
 }
 
-@keyframes fadeInScene {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.slide-up-bouncy-enter-active {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.app__question-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 18px;
+.slide-up-bouncy-leave-active {
+  transition: transform 0.2s ease-in;
 }
 
-.result__inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.trainer-app__view {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.modal-overlay {
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.69);
-  position: fixed;
-  z-index: 20;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.trainer-page {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-  font-family: 'Nunito', sans-serif;
-  background-color: #f0ebe5;
-  background-image: repeating-linear-gradient(90deg, #e9e2db, #e9e2db 20px, #f0ebe5 20px, #f0ebe5 40px);
-}
-
-.trainer-page__floor {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 55px;
-  z-index: 1;
-  background: #8B4513;
-  background-image: linear-gradient(to top, #8B4513 0%, #8B4513 83.33%, #6d4c41 83.33%, #6d4c41 100%);
-}
-
-.trainer-page__content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 1.5rem;
-}
-
-.trainer-page__decorations {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.scene-decoration {
-  position: absolute;
-  animation: fadeInScene 1s ease-out 0.5s backwards;
-}
-
-.scene-decoration--bookshelf {
-  bottom: 7%;
-  right: 3%;
-  width: 200px;
-  height: 20px;
-  background-color: #6d4c41;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.book {
-  position: absolute;
-  bottom: 20px;
-  width: 30px;
-  height: 100px;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.book--red {
-  left: 10px;
-  background-color: #c0392b;
-}
-
-.book--green {
-  left: 45px;
-  background-color: #27ae60;
-}
-
-.book--blue {
-  left: 80px;
-  background-color: #2980b9;
-}
-
-.book--yellow {
-  left: 115px;
-  background-color: #f1c40f;
-}
-
-.book--tilted {
-  transform: rotate(-11deg);
-  bottom: 22px;
-  left: 120px;
-}
-
-.scene-decoration--pencils {
-  left: 3%;
-  bottom: 55px;
-  width: 40px;
-  height: 35px;
-  background-color: #bdc3c7;
-  border-radius: 3px;
-}
-
-.pencil {
-  position: absolute;
-  bottom: 0;
-  width: 8px;
-  height: 60px;
-  border-radius: 2px 2px 0 0;
-}
-
-.pencil::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background-color: #34495e;
-  border-radius: 2px 2px 0 0;
-}
-
-.pencil--1 {
-  left: 5px;
-  background-color: #e74c3c;
-  transform: rotate(-5deg);
-}
-
-.pencil--2 {
-  left: 16px;
-  background-color: #3498db;
-  height: 65px;
-}
-
-.pencil--3 {
-  left: 27px;
-  background-color: #2ecc71;
-  transform: rotate(3deg);
-  height: 55px;
-}
-
-.scene-decoration--picture {
-  bottom: 40%;
-  left: 4%;
-  padding: 10px;
-  background-color: #6d4c41;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.picture-art {
-  width: 180px;
-  height: 120px;
-  background: linear-gradient(to bottom, #87CEEB 0%, #f5f5f5 70%, #228B22 70%);
-}
-
-.picture-art-sun {
-  width: 25px;
-  height: 25px;
-  background: gold;
-  border-radius: 50%;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  opacity: 50%;
-}
-
-.scene-decoration--clock {
-  top: 2vh;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 100px;
-  background-color: #f5deb3;
-  border-radius: 50%;
-  border: 6px solid #8B4513;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.clock-hand--numbers, .clock-hand, .clock-hand--hour, .clock-hand--minute, .clock-hand--second {
-
-}
-
-.clock-hand--numbers {
-  position: relative;
-  width: 100%;
-  height: 100%
-}
-
-.clock-hand--number-12 {
-  position: absolute;
-  left: 50%;
-  top: 2px;
-  font-size: 10px;
-  transform: translateX(-50%)
-}
-
-.clock-hand--number-3 {
-  position: absolute;
-  right: 2px;
-  top: 50%;
-  font-size: 10px;
-  transform: translateY(-50%)
-}
-
-.clock-hand--number-6 {
-  position: absolute;
-  left: 50%;
-  bottom: 2px;
-  font-size: 10px;
-  transform: translateX(-50%)
-}
-
-.clock-hand--number-9 {
-  position: absolute;
-  left: 2px;
-  top: 50%;
-  font-size: 10px;
-  transform: translateY(-50%)
-}
-
-.clock-hand {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform-origin: bottom center
-}
-
-.clock-hand--hour {
-  width: 6px;
-  height: 32px;
-  background-color: #333;
-  border-radius: 3px;
-  margin-left: -3px
-}
-
-.clock-hand--minute {
-  width: 4px;
-  height: 42px;
-  background-color: #333;
-  border-radius: 2px;
-  margin-left: -2px
-}
-
-.clock-hand--second {
-  width: 2px;
-  height: 40px;
-  background-color: #e74c3c;
-  border-radius: 1px;
-  margin-left: -1px
-}
-
-.modal-content {
-  background: #f0ebe5;
-  padding: 2rem 2.5rem;
-  border-radius: 12px;
-  border: 4px solid #d3c2b2;
-  color: #333;
-  max-width: 480px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  animation: scaleIn 0.3s ease-out;
-}
-
-.modal-title {
-  font-family: 'Nunito', sans-serif;
-  font-size: 2.5rem;
-  margin: 0 0 1rem 0;
-  color: #5D4037;
-}
-
-.modal-text {
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  color: #34495e;
-}
-
-.modal-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-
-.trainer-app {
-  background: #5D4037;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(0, 0, 0, 0.5);
-  width: 100%;
-  max-width: 700px;
-  position: relative;
-}
-
-.trainer-app__board {
-  background: #2c3e50;
-  border: 10px solid #34495e;
-  border-radius: 5px;
-  padding: 2rem 2.5rem;
-  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.7);
-  color: #ecf0f1;
-  min-height: 420px;
-  display: flex;
-  flex-direction: column;
-}
-
-.trainer-app__ledge {
-  position: absolute;
-  bottom: 10px;
-  left: 5%;
-  width: 90%;
-  height: 25px;
-  background-color: #6d4c41;
-  border-radius: 3px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-}
-
-.duster {
-  position: absolute;
-  left: 20px;
-  bottom: 5px;
-  width: 80px;
-  height: 40px;
-  background-color: #a1887f;
-  border-top: 10px solid #5d4037;
-  border-radius: 4px;
-}
-
-.chalk {
-  position: absolute;
-  right: 30px;
-  bottom: 8px;
-  width: 50px;
-  height: 10px;
-  background-color: #f1c40f;
-  border-radius: 2px;
-  transform: rotate(-5deg);
-}
-
-.trainer-app__header {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.trainer-app__title {
-  font-family: 'Nunito', sans-serif;
-  font-size: 3rem;
-  color: #ffffff;
-  margin: 0;
-}
-
-.trainer-app__subtitle {
-  font-size: 1.1rem;
-  color: #bdc3c7;
-  margin: 0;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 700;
-}
-
-.progress-bar {
-  width: 250px;
-  height: 14px;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
-  border: 2px solid #34495e;
-  overflow: hidden;
-  margin-bottom: 2rem;
-}
-
-.progress-bar__fill {
-  height: 100%;
-  background: #f1c40f;
-  border-radius: 6px;
-}
-
-.trainer-app__task {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.trainer-app__question {
-  font-size: 1.8rem;
-  line-height: 1.6;
-  text-align: center;
-  color: #fff;
-  transition: color 0.3s ease;
-  margin-left: 8px;
-}
-
-.trainer-app__question.correct-reveal {
-  color: #f1c40f;
-}
-
-.btn {
-  padding: 12px 24px;
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.5rem;
-  color: #f1c40f;
-  background-color: transparent;
-  border: 3px solid #f1c40f;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  white-space: nowrap;
-  width: 100%;
-}
-
-.btn:hover:not(:disabled) {
-  background-color: #f1c40f;
-  color: #2c3e50;
-}
-
-.btn--next {
-  border-color: #2ecc71;
-  color: #2ecc71;
-}
-
-.btn--next:hover:not(:disabled) {
-  background-color: #2ecc71;
-  color: #2c3e50;
-}
-
-.btn--restart {
-  border-color: #f1c40f;
-  color: #f1c40f;
-}
-
-.btn--restart:hover:not(:disabled) {
-  background-color: #f1c40f;
-  color: #2c3e50;
-}
-
-.btn--secondary {
-  border-color: #95a5a6;
-  color: #95a5a6;
-}
-
-.btn--secondary:hover:not(:disabled) {
-  background-color: #95a5a6;
-  color: #2c3e50;
-}
-
-.result-icon {
-  font-size: 4rem;
-  text-align: center;
-}
-
-.result-title {
-  font-family: 'Nunito', sans-serif;
-  font-size: 2rem;
-  text-align: center;
-}
-
-.result-subtitle {
-  font-size: 1.2rem;
-  color: #bdc3c7;
-  padding: 15px;
-}
-
-.result-actions {
-  display: flex;
-  gap: 1.5rem;
-}
-
-@media (max-width: 767px) {
-  .trainer-app__input-group {
-    flex-direction: column;
-  }
-
-  .scene-decoration--clock {
-    display: none;
-  }
-}
-
-@media (max-width: 1280px) {
-  .scene-decoration--picture {
-    display: none;
-  }
-}
-
-.trainer-app__options-group {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-}
-
-.option-btn {
-  font-family: 'Nunito', sans-serif;
-  font-size: 2rem;
-  color: #ecf0f1;
-  background: transparent;
-  border: 2px dashed rgba(236, 240, 241, 0.4);
-  border-radius: 12px;
-  padding: 0.5rem 2rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.option-btn:not(:disabled):hover {
-  background: rgba(236, 240, 241, 0.1);
-  border-style: solid;
-}
-
-.option-btn.correct {
-  background: #2ecc71;
-  border-color: #2ecc71;
-  color: #2c3e50;
-  transform: scale(1.05);
-}
-
-.option-btn.incorrect {
-  background: #e74c3c;
-  border-color: #e74c3c;
-  color: #2c3e50;
-  opacity: 1;
-}
-
-.option-btn.disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.trainer-app__footer {
-  height: auto;
-  min-height: 145px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.feedback-message {
-  min-height: 2.5rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  font-family: 'Nunito', sans-serif;
-  text-align: center;
-  margin-bottom: 1rem;
-  animation: fadeIn 0.5s ease;
-  height: 65px;
-}
-
-.feedback-text--success {
-  color: #2ecc71;
-}
-
-.feedback-text--error {
-  color: #e74c3c;
-}
-
-@media (max-width: 767px) {
-  .trainer-app__options-group {
-    gap: 10px;
-  }
-
-  .modal-content {
-    max-width: 400px;
-  }
-
-  .option-btn {
-    font-size: 1.4rem;
-    padding: 10px 15px;
-  }
-
-  .trainer-app__question,
-  .result-title {
-    font-size: 1.4rem;
-  }
-
-  .trainer-page__content {
-    padding: 0;
-  }
-
-  .trainer-app {
-    border-radius: 0;
-    box-shadow: none;
-    padding: 10px
-  }
-  .trainer-app__board {
-    height: calc(100dvh - 20px);
-    width: 100%;
-    align-items: center;
-    display: flex;
-  }
-}
-
-@media (max-width: 500px)  {
-  .result-actions {
-    flex-direction: column;
-    width: 100%;
-  }
+.slide-up-bouncy-enter-from, .slide-up-bouncy-leave-to {
+  transform: translateX(-50%) translateY(100%);
 }
 </style>

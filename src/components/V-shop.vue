@@ -1,12 +1,14 @@
 <template>
   <section class="shop">
-    <header class="shop__header">
-      <div class="shop__title-container">
-        <h2 class="shop__title">{{ t('shop.title') }}</h2>
-      </div>
-      <p class="shop__subtitle">{{ t('shop.subText') }}</p>
-    </header>
     <div class="shop__content">
+      <header class="shop__header">
+        <div class="shop__title-container">
+          <VBanner
+              :text="t('shop.title')"
+              :icon="ShopIcon"
+          />
+        </div>
+      </header>
       <div class="shop__cards">
         <article
             v-for="card in shopCards"
@@ -125,15 +127,17 @@ import {userlangStore} from '~/store/learningStore.js'
 import {userChainStore} from '~/store/chainStore.js'
 import {userAuthStore} from '~/store/authStore.js'
 import {useRankUserStore} from '~/store/rankStore.js'
-
+import ShopIcon from '../../assets/images/shopping-cart.svg'
 import Heart from '../../assets/images/life.svg'
 import ShieldFreeze from '../../assets/images/FreezeShield.svg'
-import Articlus from '../../assets/images/articlus.png'
+import Articlus from '../../assets/images/article.svg'
 import Sale from '../../assets/images/save5.svg'
 import Sale10 from '../../assets/images/rocket_10.svg'
 import Sale15 from '../../assets/images/hot-air-ballon15.svg'
 import GraduateHat from '../../assets/images/graduate-hat.svg'
 import HotDeal from '../../assets/images/hot-deal.svg'
+import VBanner from "~/src/components/V-banner.vue";
+
 const {t} = useI18n()
 const questStore = userChainStore()
 const langStore = userlangStore()
@@ -143,11 +147,11 @@ const rankStore = useRankUserStore()
 const PRICES = {
   HEART: 10,
   FREEZE_DAY: 10,
-  SALE_5: 30,
-  SALE_10: 50,
-  SALE_15: 70
+  SALE_3: 100,
+  SALE_6: 150,
+  // SALE_15: 70
 }
-const DISCOUNT_REQ_HATS = {5: 90, 10: 210, 15: 400}
+const DISCOUNT_REQ_HATS = {3: 210, 6: 500}
 
 const showModal = ref(false)
 const modalType = ref('freeze')
@@ -170,34 +174,34 @@ const shopCards = computed(() => {
       price: PRICES.HEART,
       type: 'consumable'
     },
-    // {
-    //   id: "time_freeze",
-    //   title: t('cardTime.title'),
-    //   description: t('cardTime.description'),
-    //   icon: ShieldFreeze,
-    //   price: PRICES.FREEZE_DAY,
-    //   type: 'consumable'
-    // },
-    // {
-    //   id: "sale_5",
-    //   title: t('cardSales.title5'),
-    //   description: "",
-    //   hotIcon: HotDeal,
-    //   icon: Sale,
-    //   price: PRICES.SALE_5,
-    //   requiredHats: DISCOUNT_REQ_HATS[5],
-    //   type: 'permanent'
-    // },
-    // {
-    //   id: "sale_10",
-    //   title: t('cardSales.title10'),
-    //   description: "",
-    //   hotIcon: HotDeal,
-    //   icon: Sale10,
-    //   price: PRICES.SALE_10,
-    //   requiredHats: DISCOUNT_REQ_HATS[10],
-    //   type: 'permanent'
-    // },
+    {
+      id: "time_freeze",
+      title: t('cardTime.title'),
+      description: t('cardTime.description'),
+      icon: ShieldFreeze,
+      price: PRICES.FREEZE_DAY,
+      type: 'consumable'
+    },
+    {
+      id: "sale_3",
+      title: t('cardSales.title3'),
+      description: "",
+      hotIcon: HotDeal,
+      icon: Sale,
+      price: PRICES.SALE_3,
+      requiredHats: DISCOUNT_REQ_HATS[3],
+      type: 'permanent'
+    },
+    {
+      id: "sale_6",
+      title: t('cardSales.title6'),
+      description: "",
+      hotIcon: HotDeal,
+      icon: Sale10,
+      price: PRICES.SALE_6,
+      requiredHats: DISCOUNT_REQ_HATS[6],
+      type: 'permanent'
+    },
     // {
     //   id: "sale_15",
     //   title:  t('cardSales.title15'),
@@ -207,7 +211,6 @@ const shopCards = computed(() => {
     //   price: PRICES.SALE_15,
     //   requiredHats: DISCOUNT_REQ_HATS[15],
     //   type: 'permanent'
-    //
     // },
   ]
 
@@ -246,7 +249,7 @@ const shopCards = computed(() => {
     const isLevelClaimed = authStore.claimedBonuses?.includes(card.requiredHats)
     if (isLevelClaimed && card.type !== 'consumable') {
       isOwned = true
-      btnLabel = "Бонус получен"
+      btnLabel = "got bonus"
       isDisabled = true
     }
     const classes = {
@@ -343,72 +346,62 @@ const confirmPurchase = async () => {
     modalType.value = 'success'
   }
 }
-
 </script>
 
 <style scoped>
 .shop {
-  min-height: 100vh;
-  padding: 10px;
   font-family: "Nunito", sans-serif;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 84px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-
 .shop__content {
-  overflow-y: auto;
-  max-height: calc(100vh - 235px);
+  padding-bottom: 10px;
 }
 
 .shop__content::-webkit-scrollbar {
-  width: 10px;
-}
-
-.shop__content::-webkit-scrollbar-thumb {
-  background: #1e1e1e;
-  border-radius: 10px;
-  border: 2px solid #fff;
+  width: 2px;
+  background: transparent;
 }
 
 .shop__content::-webkit-scrollbar-track {
   background: transparent;
 }
 
+.shop__content::after{
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  background: var(--overlayAfter);
+}
+
+.shop__header {
+  margin-bottom: 15px;
+}
+
 .shop__title-container {
-  background: #50a2d8;
-  border-radius: 12px;
-  padding: 15px 20px;
-  margin-bottom: 10px;
-  text-align: center;
-  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.shop__title {
-  color: white;
-  margin: 0;
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.shop__subtitle {
-  text-align: center;
-  color: var(--titleColor);
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-size: 40px;
 }
 
 .shop__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 2fr));
   gap: 10px;
 }
 
 .shop-card {
   background: var(--cardShopBg);
-  border: 2px solid #363d4a;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 2px 0 var(--tabsSlideBorderColor);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
@@ -420,7 +413,7 @@ const confirmPurchase = async () => {
 
 .card__deal-icon {
   width: 67px;
- position: absolute;
+  position: absolute;
   z-index: 11;
   right: -15px;
   top: -5px;
@@ -446,7 +439,6 @@ const confirmPurchase = async () => {
   align-items: center;
   justify-content: center;
   position: relative;
-  border-bottom: 2px solid #363d4a;
 }
 
 .shop-card__img {
@@ -502,6 +494,7 @@ const confirmPurchase = async () => {
 .shop-card__requirements {
   padding-top: 10px;
 }
+
 .shop-req-label {
   display: block;
   color: var(--cardShopDescColor);
@@ -553,7 +546,7 @@ const confirmPurchase = async () => {
   padding: 8px 3px;
   min-height: 39px;
   border: none;
-  border-radius: 12px;
+  border-radius: 24px;
   background: #f1c40f;
   color: var(--titleColor);
   font-weight: 800;
@@ -571,7 +564,7 @@ const confirmPurchase = async () => {
 .shop-card__action-btn:disabled {
   background: var(--cardShopBtnDisabledBg);
   color: #7f8fa4;
-  box-shadow: 0 4px 0 #252a33;
+  box-shadow: 0 4px 0 var(--cardShopBtnDisabledBg);
   cursor: not-allowed;
 }
 
@@ -583,6 +576,7 @@ const confirmPurchase = async () => {
 
 .btn-content {
   display: flex;
+  gap: 8px;
   align-items: center;
   justify-content: center;
 }
@@ -602,19 +596,20 @@ const confirmPurchase = async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 9000;
   backdrop-filter: blur(4px);
   padding: 20px;
 }
 
 .modal-content {
-  background: var(--cardShopBg);
-  border: 2px solid #50a2d8;
+  background:var(--menuItemsBg);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+  border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 20px;
   padding: 24px;
   width: 100%;
   max-width: 360px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+
   animation: slideUp 0.3s ease-out;
 }
 
@@ -639,7 +634,7 @@ const confirmPurchase = async () => {
 }
 
 .modal-title {
-  color: white;
+  color: var(--titleColor);
   margin: 0;
   font-size: 20px;
   font-weight: 800;
@@ -659,7 +654,7 @@ const confirmPurchase = async () => {
   justify-content: center;
   gap: 15px;
   margin-bottom: 24px;
-  background: #2a313e;
+  background: var(--tabBg);
   padding: 10px;
   border-radius: 12px;
 }
@@ -691,13 +686,13 @@ const confirmPurchase = async () => {
 }
 
 .day-count {
-  color: white;
+  color: var(--titleColor);
   font-size: 24px;
   font-weight: 800;
 }
 
 .day-label {
-  color: #a0a6b1;
+  color: var(--titleColor);
   font-size: 12px;
 }
 
@@ -705,18 +700,18 @@ const confirmPurchase = async () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #252a33;
+  background: var(--tabBg);
   padding: 12px 16px;
   border-radius: 12px;
   margin-bottom: 16px;
-  color: #a0a6b1;
+  color: var(--titleColor);
 }
 
 .price-value {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: white;
+  color: var(--titleColor);
   font-weight: 800;
   font-size: 18px;
 }
@@ -746,7 +741,7 @@ const confirmPurchase = async () => {
 .modal-btn, .modal-close-btn {
   flex: 1;
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 50px;
   border: none;
   font-weight: 700;
   font-size: 15px;
@@ -755,19 +750,20 @@ const confirmPurchase = async () => {
 
 .modal-btn.cancel {
   background: transparent;
-  border: 2px solid #363d4a;
+  border: 1px solid #363d4a;
   color: #a0a6b1;
+  box-shadow: 0 3px 0  #363d4a;
 }
 
 .modal-btn.confirm, .modal-close-btn {
   background: #f1c40f;
   color: #1c222d;
-  box-shadow: 0 4px 0 #c29d0b;
+  box-shadow: 0 3px 0 #c29d0b;
 }
 
 .modal-btn.confirm:disabled {
   background: #363d4a;
-  color: #555;
+  color: #ffffff;
   box-shadow: none;
   cursor: not-allowed;
 }

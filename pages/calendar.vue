@@ -1,11 +1,11 @@
 <template>
   <div class="page">
     <header class="topbar">
-      <button class="back-btn" @click="goBack" aria-label="back">←</button>
+      <VBackBtn/>
       <h1 class="page-title">{{ t('calendarInfo.eventsTitle')}}</h1>
       <div class="spacer"></div>
     </header>
-    <div class="layout">
+    <div class="calendar__layout">
       <div class="area__info">
         <div class="legend" aria-label="info">
           <div class="legend__wrapper">
@@ -76,6 +76,7 @@ import HalloweenIcon from '../../assets/images/calendar-icons/halloweenIcon.svg'
 import ChristmasIcon from '../../assets/images/calendar-icons/christmas-wreath.svg'
 import FoolDay from '../../assets/images/calendar-icons/FoolDay.svg'
 import Bees from '../../assets/images/calendar-icons/bees.svg'
+import VBackBtn from "~/src/components/V-back-btn.vue";
 
 definePageMeta({
   robots: {
@@ -293,14 +294,16 @@ function endOfDay(dateObj) {
 }
 
 .legend__wrapper {
-  padding:  0 15px 15px 15px ;
+  padding:  0 11px 15px 11px ;
 }
 
 .page {
-  min-height: 100dvh;
+  height: 100%;
   max-width: 1400px;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
-  padding: 15px;
+  overflow: hidden;
 }
 
 .topbar {
@@ -310,11 +313,9 @@ function endOfDay(dateObj) {
   display: grid;
   grid-template-columns: 56px 1fr 56px;
   align-items: center;
-  padding: 10px 12px;
-  background: #fff;
-  border-bottom: 3px solid var(--ink);
-  box-shadow: 0 6px 0 rgba(0, 0, 0, .06);
-  margin-bottom: 15px;
+  padding: 5px 10px 15px 10px;
+  margin-bottom: 5px;
+  background: var(--bg);
 }
 
 .back-btn {
@@ -340,24 +341,41 @@ function endOfDay(dateObj) {
 }
 
 .page-title {
-  text-align: center;
-  font-size: 28px;
-  font-weight: 1000;
-  color: var(--ink);
+  margin-left: 10px;
+  font-size: 23px;
+  font-weight: 600;
+  color: var(--title);
+  text-shadow: 1px 1px var(--title);
 }
 
 .spacer {
   width: 56px;
 }
 
-.layout {
+/* --- ИСПРАВЛЕНО: Базовый контейнер теперь имеет стандартное направление --- */
+.calendar__layout {
+  flex: 1;
   display: flex;
+  flex-direction: column; /* Скролл теперь будет правильно начинаться сверху */
   gap: 10px;
+  padding: 10px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 60px;
+}
+
+/* --- ИСПРАВЛЕНО: Меняем визуальный порядок блоков на мобильных --- */
+.main {
+  flex-grow: 1;
+  order: 1; /* Календарь будет сверху */
 }
 
 .area__info {
   background: #ffffff;
   border-radius: 15px;
+  order: 2; /* Легенда уйдет вниз */
 }
 
 .legend__item {
@@ -417,12 +435,9 @@ function endOfDay(dateObj) {
   font-weight: 800;
 }
 
-.main {
-  flex-grow: 1;
-}
-
 .calendar-card {
   border-radius: 22px;
+  margin-bottom: 15px;
   flex: 1;
 }
 
@@ -579,17 +594,24 @@ function endOfDay(dateObj) {
   background: #e3eeff;
 }
 
+/* --- ИСПРАВЛЕНО: Сетка для больших экранов (от 768px) --- */
+@media (min-width: 768px) {
+  .calendar__layout {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Легенда слева, календарь справа */
+    padding: 10px;
+    gap: 20px;
+  }
 
-@media (max-width: 767px) {
-  .layout {
-    grid-template-columns: 280px 1fr;
-    padding: 0;
+  /* Сбрасываем мобильный order, чтобы всё встало по порядку DOM */
+  .main, .area__info {
+    order: unset;
   }
 }
 
+/* --- ИСПРАВЛЕНО: Стили для мобильных экранов (до 767px) --- */
 @media (max-width: 767px) {
-  .layout {
-    flex-direction: column-reverse;
+  .calendar__layout {
     gap: 0;
     padding: 0 5px 20px 5px;
   }
@@ -598,56 +620,46 @@ function endOfDay(dateObj) {
     display: flex;
     flex-wrap: wrap;
   }
-  .calendar-card {
-    margin-bottom: 15px;
-  }
 
   .legend__item {
     width: 50%;
   }
 
-  .legend__wrappper {
+  .legend__wrapper { /* Исправлена опечатка legend__wrappper -> legend__wrapper */
     padding: 10px;
   }
-
 
   .legend__icon-wrap {
     width: 48px;
     height: 48px;
     margin-right: 8px;
   }
+
   .legend__name {
     font-size: 15px;
   }
-  .page {
-    padding: 5px;
-  }
+
   .calendar__cell {
     padding: 4px;
   }
+
   .calendar__badge {
     display: none;
   }
+
   .calendar__icon {
     width: 31px;
     height: 31px;
   }
+
   .calendar__icon-wrap {
     padding-top: 15px;
-  }
-  .page-title {
-    font-size: 25px;
   }
 }
 
 @media (max-width: 520px) {
   .topbar {
     grid-template-columns: 48px 1fr 48px;
-  }
-
-  .back-btn {
-    width: 40px;
-    height: 40px;
   }
 
   .calendar__header {

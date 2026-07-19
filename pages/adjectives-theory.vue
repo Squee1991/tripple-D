@@ -2,98 +2,104 @@
   <div class="adjs">
     <div class="adjs__inner">
       <header class="adjs__header">
-        <h1 class="adjs__title">{{ t('adjectiveTheory.title')}}</h1>
-        <p class="adjs__subtitle"> {{ t('adjectiveTheory.subTitle')}}</p>
+        <VBackBtnNav/>
+        <div class="adjs__header-title">{{ t('categoryAchievments.adjectives')}}</div>
       </header>
-      <section v-for="section in contentSections" :key="section.id" class="adjs__card" :class="section.customClass">
-        <h2 class="adjs__card-title">{{ section.title }}</h2>
-        <template v-for="(item, index) in section.content" :key="index">
-          <p v-if="item.type === 'paragraph'" class="adjs__paragraph" v-html="item.text"></p>
-          <div v-if="item.type === 'note'" class="adjs__note" v-html="item.text"></div>
-          <div v-if="item.type === 'tip'" class="adjs__tip" v-html="item.text"></div>
-          <ul v-if="item.type === 'list'" class="adjs__list">
-            <li v-for="(li, i) in item.items" :key="i" class="adjs__item">
-              <div class="adjs__example">
-                <img
-                    class="adjs__icon"
-                    :src="li.icon === 'Chat' ? Chat : Pin"
-                    :alt="li.icon === 'Chat' ? 'Example icon' : 'Note pin icon'"
-                >
-                <div class="adjs__example--wrapper">
-                  <p v-html="li.mainText"></p>
-                  <span v-if="li.translation" class="adjs__translation" v-html="li.translation"></span>
+      <div class="adjs__content-inner">
+        <div>
+          <h1 class="adjs__title">{{ t('adjectiveTheory.title')}}</h1>
+<!--          <p class="adjs__subtitle"> {{ t('adjectiveTheory.subTitle')}}</p>-->
+        </div>
+        <section v-for="section in contentSections" :key="section.id" class="adjs__card" :class="section.customClass">
+          <h2 class="adjs__card-title">{{ section.title }}</h2>
+          <template v-for="(item, index) in section.content" :key="index">
+            <p v-if="item.type === 'paragraph'" class="adjs__paragraph" v-html="item.text"></p>
+            <div v-if="item.type === 'note'" class="adjs__note" v-html="item.text"></div>
+            <div v-if="item.type === 'tip'" class="adjs__tip" v-html="item.text"></div>
+            <ul v-if="item.type === 'list'" class="adjs__list">
+              <li v-for="(li, i) in item.items" :key="i" class="adjs__item">
+                <div class="adjs__example">
+                  <img
+                      class="adjs__icon"
+                      :src="li.icon === 'Chat' ? Chat : Pin"
+                      :alt="li.icon === 'Chat' ? 'Example icon' : 'Note pin icon'"
+                  >
+                  <div class="adjs__example--wrapper">
+                    <p v-html="li.mainText"></p>
+                    <span v-if="li.translation" class="adjs__translation" v-html="li.translation"></span>
+                  </div>
                 </div>
-              </div>
-              <div v-if="li.subExample" class="adjs__example" style="margin-top: 8px;">
-                <img
-                    class="adjs__icon"
-                    :src="li.subExample.icon === 'Chat' ? Chat : Pin"
-                    :alt="li.subExample.icon === 'Chat' ? 'Example icon' : 'Note pin icon'"
-                >
-                <div class="adjs__example--wrapper">
-                  <p v-html="li.subExample.text"></p>
+                <div v-if="li.subExample" class="adjs__example" style="margin-top: 8px;">
+                  <img
+                      class="adjs__icon"
+                      :src="li.subExample.icon === 'Chat' ? Chat : Pin"
+                      :alt="li.subExample.icon === 'Chat' ? 'Example icon' : 'Note pin icon'"
+                  >
+                  <div class="adjs__example--wrapper">
+                    <p v-html="li.subExample.text"></p>
+                  </div>
                 </div>
+              </li>
+            </ul>
+            <ol v-if="item.type === 'ordered-list'" class="adjs__steps">
+              <li v-for="(li, i) in item.items" :key="i" v-html="li"></li>
+            </ol>
+            <template v-if="item.type === 'table'">
+              <h3 class="adjs__table-title">{{ item.title }}</h3>
+              <div class="adjs__table-wrap">
+                <table class="adjs__table">
+                  <thead>
+                  <tr>
+                    <th v-for="header in item.headers" :key="header">{{ header }}</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr v-for="(row, i) in item.rows" :key="i">
+                    <td v-for="(cell, j) in row" :key="j" v-html="cell"></td>
+                  </tr>
+                  </tbody>
+                </table>
               </div>
-            </li>
-          </ul>
-          <ol v-if="item.type === 'ordered-list'" class="adjs__steps">
-            <li v-for="(li, i) in item.items" :key="i" v-html="li"></li>
-          </ol>
-          <template v-if="item.type === 'table'">
-            <h3 class="adjs__table-title">{{ item.title }}</h3>
-            <div class="adjs__table-wrap">
-              <table class="adjs__table">
-                <thead>
-                <tr>
-                  <th v-for="header in item.headers" :key="header">{{ header }}</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr v-for="(row, i) in item.rows" :key="i">
-                  <td v-for="(cell, j) in row" :key="j" v-html="cell"></td>
-                </tr>
-                </tbody>
-              </table>
-            </div>
+            </template>
           </template>
-        </template>
-      </section>
-      <section class="adjs__card adjs__quiz">
-        <h2 class="adjs__card-title">{{ t('adjectiveTheory.quizTitle')}}</h2>
-        <div v-if="!quizFinished" class="adjs__quiz-body">
-          <p class="adjs__quiz-progress">{{ t('adjectiveTheory.question')}} {{ quizIndex + 1 }} / {{ quizQuestions.length }}</p>
-          <h3 class="adjs__quiz-question" v-html="quizQuestions[quizIndex].question"></h3>
-          <div class="adjs__quiz-options">
+        </section>
+        <section class="adjs__card adjs__quiz">
+          <h2 class="adjs__card-title">{{ t('adjectiveTheory.quizTitle')}}</h2>
+          <div v-if="!quizFinished" class="adjs__quiz-body">
+            <p class="adjs__quiz-progress">{{ t('adjectiveTheory.question')}} {{ quizIndex + 1 }} / {{ quizQuestions.length }}</p>
+            <h3 class="adjs__quiz-question" v-html="quizQuestions[quizIndex].question"></h3>
+            <div class="adjs__quiz-options">
+              <button
+                  v-for="option in quizQuestions[quizIndex].options"
+                  :key="option"
+                  @click="checkAnswer(option)"
+                  :disabled="selectedAnswer !== null"
+                  :class="['adjs__quiz-option', getOptionClass(option)]"
+              >
+                {{ option }}
+              </button>
+            </div>
+            <div class="adjs__quiz-feedback">
+              <p v-if="quizFeedback === 'correct'" class="adjs__feedback-text">✅ {{ t('adjectiveTheory.correct')}}</p>
+              <p v-if="quizFeedback === 'incorrect'" class="adjs__feedback-text">❌ {{ t('adjectiveTheory.wrong')}}
+                <b>{{ quizQuestions[quizIndex].answer }}</b>
+              </p>
+            </div>
             <button
-                v-for="option in quizQuestions[quizIndex].options"
-                :key="option"
-                @click="checkAnswer(option)"
-                :disabled="selectedAnswer !== null"
-                :class="['adjs__quiz-option', getOptionClass(option)]"
+                @click="nextQuestion"
+                :disabled="!selectedAnswer"
+                class="adjs__quiz-next"
             >
-              {{ option }}
+              {{ quizIndex === quizQuestions.length - 1 ? t('adjectiveTheory.showResult') : t('adjectiveTheory.next') }}
             </button>
           </div>
-          <div class="adjs__quiz-feedback">
-            <p v-if="quizFeedback === 'correct'" class="adjs__feedback-text">✅ {{ t('adjectiveTheory.correct')}}</p>
-            <p v-if="quizFeedback === 'incorrect'" class="adjs__feedback-text">❌ {{ t('adjectiveTheory.wrong')}}
-              <b>{{ quizQuestions[quizIndex].answer }}</b>
-            </p>
+          <div v-else class="adjs__quiz-results">
+            <h3 class="adjs__results-title">{{ t('adjectiveTheory.result')}}</h3>
+            <p class="adjs__results-score">{{t('adjectiveTheory.points')}} {{ quizScore }} / {{ quizQuestions.length }}</p>
+            <button @click="resetQuiz" class="adjs__quiz-next">{{t('adjectiveTheory.again')}}</button>
           </div>
-          <button
-              v-if="selectedAnswer"
-              @click="nextQuestion"
-              class="adjs__quiz-next"
-          >
-            {{ quizIndex === quizQuestions.length - 1 ? t('adjectiveTheory.showResult') : t('adjectiveTheory.next') }}
-          </button>
-        </div>
-        <div v-else class="adjs__quiz-results">
-          <h3 class="adjs__results-title">{{ t('adjectiveTheory.result')}}</h3>
-          <p class="adjs__results-score">{{t('adjectiveTheory.points')}} {{ quizScore }} / {{ quizQuestions.length }}</p>
-          <button @click="resetQuiz" class="adjs__quiz-next">{{t('adjectiveTheory.again')}}</button>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   </div>
 </template>
@@ -102,7 +108,8 @@
 import {ref} from 'vue'
 import Pin from '../assets/images/pin.svg'
 import Chat from '../assets/images/chat.svg'
-import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
+import {useSeoMeta} from "#imports";
 const { t } = useI18n()
 const contentSections = ref([
   {
@@ -173,7 +180,7 @@ const contentSections = ref([
           },
           {
             icon: 'Chat',
-            mainText: `${t('adjectiveTheoryThirdBlock.exampleTwoPartOne')} di<b>e</b> Lampe → ein<b>e</b> gut<b>e</b> Lampe`,
+            mainText: `${t('adjectiveTheoryThirdBlock.exampleTwoPartOne')} di<b>e</b> Lamпе → ein<b>e</b> gut<b>e</b> Lampe`,
             translation: `${t('adjectiveTheoryThirdBlock.exampleThreePartOne')} <b>-e</b>.`
           },
           {
@@ -193,8 +200,8 @@ const contentSections = ref([
         headers: [`${t('adjectiveTheoryThirdBlock.tableHeaderOne')}`, `${t('adjectiveTheoryThirdBlock.tableHeaderTwo')}`, `${t('adjectiveTheoryThirdBlock.tableHeaderThree')}`],
         rows: [
           ['Mask. (m)', 'Das ist <b>ein schöner</b> Tisch.', 'Ich kaufe <b>einen schönen</b> Tisch.'],
-          ['Fem. (f)', 'Das ist <b>eine schöne</b> Lampe.', 'Ich kaufe <b>eine schöne</b> Lampe.'],
-          ['Neut. (n)', 'Das ist <b>ein schönes</b> Bild.', 'Ich kaufe <b>ein schönes</b> Bild.']
+          ['Fem. (f)', 'Das ist <b>eine schöne</b> Lampe.', 'Ich kaufe <b>eine schöne</b> Lamпе.'],
+          ['Neut. (n)', 'Das ist <b>ein шönes</b> Bild.', 'Ich kauфе <b>ein шönes</b> Bild.']
         ]
       },
       {
@@ -342,17 +349,15 @@ const quizQuestions = ref([
   }
 ])
 
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
+
 const quizIndex = ref(0)
 const selectedAnswer = ref(null)
 const quizScore = ref(0)
 const quizFinished = ref(false)
 const quizFeedback = ref('')
-const route = useRoute()
-const runtime = useRuntimeConfig().public
-
-useSeoMeta({
-  robots: 'noindex, nofollow'
-})
 
 const checkAnswer = (option) => {
   selectedAnswer.value = option
@@ -388,25 +393,45 @@ const getOptionClass = (option) => {
   if (option === selectedAnswer.value) return 'incorrect'
   return ''
 }
-
-definePageMeta({
-  layout: 'footerlayout',
-})
-
 </script>
 
 <style scoped>
+.adjs {
+  height: 100%;
+}
+
 .adjs__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem;
   font-family: 'Nunito', sans-serif;
   color: #1f2937;
+  overflow: hidden;
 }
 
 .adjs__header {
-  text-align: center;
-  margin-bottom: 3rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px 15px 10px;
+  margin-bottom: 10px;
+}
+
+.adjs__header-title {
+  font-size: 23px;
+  margin-left: 15px;
+  font-weight: 600;
+  color: var(--titleColor);
+}
+
+.adjs__content-inner {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 10px 30px 10px;
 }
 
 .adjs__title {
@@ -415,31 +440,32 @@ definePageMeta({
   color: #fff;
   background: #60a5fa;
   padding: 1rem 2rem;
-  border: 3px solid #1f2937;
   border-radius: 16px;
   transform: rotate(-0.6deg);
-  box-shadow: 8px 8px 0px #1f2937;
   display: inline-block;
   margin-bottom: 1rem;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
 }
 
 .adjs__subtitle {
   font-size: 1.1rem;
   color: var(--titleColor);
+  margin-bottom: 1rem;
 }
 
 .adjs__card {
   background: #ffffff;
-  border: 3px solid #1f2937;
   border-radius: 16px;
-  box-shadow: 6px 6px 0px #0f172a;
-  padding: 2rem;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  padding: 24px 15px;
   margin-bottom: 2rem;
 }
 
 .adjs__card-title {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 21px;
   font-weight: 900;
   border-bottom: 3px solid #a3e635;
   padding-bottom: 0.5rem;
@@ -483,7 +509,7 @@ definePageMeta({
 }
 
 .adjs__icon {
-  width: 40px;
+  width: 34px;
   margin-right: 10px;
   align-self: flex-start;
   flex-shrink: 0;
@@ -533,11 +559,12 @@ definePageMeta({
 .adjs__table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.98rem;
+  font-size: 0.9rem;
+  border: 3px solid var(--tabsSlideBorderColor);
 }
 
 .adjs__table th, .adjs__table td {
-  border: 2px solid #1f2937;
+  border: 2px solid var(--tabsSlideBorderColor);
   padding: 0.5rem 0.6rem;
   text-align: left;
 }
@@ -574,12 +601,12 @@ definePageMeta({
   padding: 0.9rem 1rem;
   font-size: 1.1rem;
   font-weight: 800;
-  border: 3px solid #0f172a;
   border-radius: 12px;
   background-color: #fff;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 4px 4px 0 #0f172a;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
 }
 
 .adjs__quiz-option:disabled {
@@ -612,13 +639,21 @@ definePageMeta({
   padding: 0.9rem 1.6rem;
   font-size: 1.1rem;
   font-weight: 800;
-  background: #a3e635;
-  border: 3px solid #1f272a;
+  background: #e67335;
   border-radius: 12px;
   cursor: pointer;
-  box-shadow: 4px 4px 0 #1f2937;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   transition: all 0.2s;
-  color: #1f2937;
+  color: #ffffff;
+  width: 100%;
+}
+
+.adjs__quiz-next:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.7;
 }
 
 .adjs__results-title {
@@ -632,29 +667,9 @@ definePageMeta({
 }
 
 @media (max-width: 767px) {
-  .adjs__inner {
-    padding: 14px;
-  }
-
   .adjs__title {
-    font-size: 2.1rem;
+    font-size: 20px;
     padding: 14px;
-    box-shadow: 2px 2px 5px #1f2937;
-  }
-
-  .adjs__card {
-    box-shadow: 2px 2px 5px #1f2937;
-    padding: 1rem;
-  }
-
-  .adjs__card-title {
-    font-size: 1.45rem;
-  }
-
-  .adjs__icon {
-    width: 34px;
-    margin-right: 8px;
   }
 }
-
 </style>

@@ -1,0 +1,595 @@
+{
+  "start": {
+    "botText": "Guten Tag! Ihren Reisepass und Ihr Ticket, bitte.",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Ваш паспорт и билет, пожалуйста.",
+      "en-US": "Good day! Your passport and ticket, please.",
+      "ar-SA": "طاب يومك! جواز سفرك وتذكرتك من فضلك.",
+      "es-ES": "¡Buen día! Su pasaporte y su billete, por favor.",
+      "fr-FR": "Bonjour ! Votre passeport et votre billet, s'il vous plaît.",
+      "hi-IN": "शुभ दिन! कृपया अपना पासपोर्ट और टिकट दें।",
+      "pl-PL": "Dzień dobry! Poproszę paszport i bilet.",
+      "ro-RO": "Bună ziua! Pașaportul și biletul dumneavoastră, vă rog.",
+      "tr-TR": "İyi günler! Pasaportunuz ve biletiniz, lütfen.",
+      "uk-UA": "Добрий день! Ваш паспорт і квиток, будь ласка.",
+      "uz-UZ": "Xayrli kun! Pasportingiz va chiptangizni bering, iltimos."
+    },
+    "vocabulary": [
+      {
+        "german": "der Reisepass",
+        "translation": {
+          "ru-RU": "паспорт",
+          "en-US": "passport",
+          "ar-SA": "جواز سفر",
+          "es-ES": "pasaporte",
+          "fr-FR": "passeport",
+          "hi-IN": "पासपोर्ट",
+          "pl-PL": "paszport",
+          "ro-RO": "pașaport",
+          "tr-TR": "pasaport",
+          "uk-UA": "паспорт",
+          "uz-UZ": "pasport"
+        }
+      },
+      {
+        "german": "das Ticket",
+        "translation": {
+          "ru-RU": "билет",
+          "en-US": "ticket",
+          "ar-SA": "تذكرة",
+          "es-ES": "billete / boleto",
+          "fr-FR": "billet",
+          "hi-IN": "टिकट",
+          "pl-PL": "bilet",
+          "ro-RO": "bilet",
+          "tr-TR": "bilet",
+          "uk-UA": "квиток",
+          "uz-UZ": "chipta"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag. Hier sind sie.",
+        "translation": {
+          "ru-RU": "Добрый день. Вот они.",
+          "en-US": "Good day. Here they are.",
+          "ar-SA": "طاب يومك. ها هم.",
+          "es-ES": "Buen día. Aquí están.",
+          "fr-FR": "Bonjour. Les voici.",
+          "hi-IN": "शुभ दिन। ये रहे।",
+          "pl-PL": "Dzień dobry. Oto one.",
+          "ro-RO": "Bună ziua. Iată-le.",
+          "tr-TR": "İyi günler. Buyurun buradalar.",
+          "uk-UA": "Добрий день. Ось вони.",
+          "uz-UZ": "Xayrli kun. Mana ular."
+        },
+        "nextStep": "check_in"
+      },
+      {
+        "text": "Hier, bitte sehr.",
+        "translation": {
+          "ru-RU": "Вот, пожалуйста.",
+          "en-US": "Here, please.",
+          "ar-SA": "تفضل.",
+          "es-ES": "Aquí tiene, por favor.",
+          "fr-FR": "Voici, s'il vous plaît.",
+          "hi-IN": "यहाँ, कृपया।",
+          "pl-PL": "Proszę bardzo.",
+          "ro-RO": "Poftiți.",
+          "tr-TR": "Buyurun, lütfen.",
+          "uk-UA": "Ось, будь ласка.",
+          "uz-UZ": "Mana, marhamat."
+        },
+        "nextStep": "check_in"
+      }
+    ],
+    "defaultNext": "check_in"
+  },
+  "check_in": {
+    "botText": "Danke. Fliegen Sie nach München?",
+    "botTranslation": {
+      "ru-RU": "Спасибо. Вы летите в Мюнхен?",
+      "en-US": "Thank you. Are you flying to Munich?",
+      "ar-SA": "شكراً. هل تسافر إلى ميونخ؟",
+      "es-ES": "Gracias. ¿Vuela a Múnich?",
+      "fr-FR": "Merci. Prenez-vous un vol pour Munich ?",
+      "hi-IN": "धन्यवाद। क्या आप म्यूनिख जा रहे हैं?",
+      "pl-PL": "Dziękuję. Leci pan/pani do Monachium?",
+      "ro-RO": "Mulțumesc. Zburați la München?",
+      "tr-TR": "Teşekkürler. Münih'e mi uçuyorsunuz?",
+      "uk-UA": "Дякую. Ви летите до Мюнхена?",
+      "uz-UZ": "Rahmat. Siz Myunxenga uchasizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "fliegen",
+        "translation": {
+          "ru-RU": "лететь",
+          "en-US": "to fly",
+          "ar-SA": "يطير / يسافر",
+          "es-ES": "volar",
+          "fr-FR": "voler / prendre l'avion",
+          "hi-IN": "उड़ान भरना",
+          "pl-PL": "lecieć",
+          "ro-RO": "a zbura",
+          "tr-TR": "uçmak",
+          "uk-UA": "летіти",
+          "uz-UZ": "uchmoq"
+        }
+      },
+      {
+        "german": "nach",
+        "translation": {
+          "ru-RU": "в (страна/город)",
+          "en-US": "to (country/city)",
+          "ar-SA": "إلى (البلد/المدينة)",
+          "es-ES": "a (país/ciudad)",
+          "fr-FR": "à / en (pays/ville)",
+          "hi-IN": "की ओर",
+          "pl-PL": "do (kraj/miasto)",
+          "ro-RO": "la / în (țară/oraș)",
+          "tr-TR": "-e / -a (ülke/şehir)",
+          "uk-UA": "до (країна/місто)",
+          "uz-UZ": "ga (davlat/shahar)"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, das stimmt.",
+        "translation": {
+          "ru-RU": "Да, всё верно.",
+          "en-US": "Yes, that's right.",
+          "ar-SA": "نعم، هذا صحيح.",
+          "es-ES": "Sí, es correcto.",
+          "fr-FR": "Oui, c'est exact.",
+          "hi-IN": "हाँ, यह सही है।",
+          "pl-PL": "Tak, zgadza się.",
+          "ro-RO": "Da, așa este.",
+          "tr-TR": "Evet, doğru.",
+          "uk-UA": "Так, все вірно.",
+          "uz-UZ": "Ha, bu to'g'ri."
+        },
+        "nextStep": "luggage"
+      },
+      {
+        "text": "Ja, genau.",
+        "translation": {
+          "ru-RU": "Да, именно.",
+          "en-US": "Yes, exactly.",
+          "ar-SA": "نعم، بالضبط.",
+          "es-ES": "Sí, exacto.",
+          "fr-FR": "Oui, exactement.",
+          "hi-IN": "हाँ, बिल्कुल।",
+          "pl-PL": "Tak, dokładnie.",
+          "ro-RO": "Da, exact.",
+          "tr-TR": "Evet, kesinlikle.",
+          "uk-UA": "Так, точно.",
+          "uz-UZ": "Ha, xuddi shunday."
+        },
+        "nextStep": "luggage"
+      }
+    ],
+    "defaultNext": "luggage"
+  },
+  "luggage": {
+    "botText": "Haben Sie Gepäck aufzugeben?",
+    "botTranslation": {
+      "ru-RU": "У Вас есть багаж для сдачи?",
+      "en-US": "Do you have any luggage to check in?",
+      "ar-SA": "هل لديك أمتعة لتسجيلها؟",
+      "es-ES": "¿Tiene equipaje para facturar?",
+      "fr-FR": "Avez-vous des bagages à enregistrer ?",
+      "hi-IN": "क्या आपके पास चेक इन करने के लिए कोई सामान है?",
+      "pl-PL": "Czy ma pan/pani bagaż do nadania?",
+      "ro-RO": "Aveți bagaje de înregistrat?",
+      "tr-TR": "Teslim edeceğiniz bagajınız var mı?",
+      "uk-UA": "У Вас є багаж для реєстрації?",
+      "uz-UZ": "Topshiradigan bagajingiz bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Gepäck",
+        "translation": {
+          "ru-RU": "багаж",
+          "en-US": "luggage / baggage",
+          "ar-SA": "أمتعة",
+          "es-ES": "equipaje",
+          "fr-FR": "bagages",
+          "hi-IN": "सामान",
+          "pl-PL": "bagaż",
+          "ro-RO": "bagaj",
+          "tr-TR": "bagaj",
+          "uk-UA": "багаж",
+          "uz-UZ": "bagaj / yuk"
+        }
+      },
+      {
+        "german": "aufgeben",
+        "translation": {
+          "ru-RU": "сдавать (багаж)",
+          "en-US": "to check in (luggage)",
+          "ar-SA": "تسجيل (الأمتعة)",
+          "es-ES": "facturar (equipaje)",
+          "fr-FR": "enregistrer (bagages)",
+          "hi-IN": "चेक इन करना",
+          "pl-PL": "nadać (bagaż)",
+          "ro-RO": "a înregistra",
+          "tr-TR": "teslim etmek (bagaj)",
+          "uk-UA": "здавати (багаж)",
+          "uz-UZ": "topshirmoq (bagajni)"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, diesen Koffer.",
+        "translation": {
+          "ru-RU": "Да, этот чемодан.",
+          "en-US": "Yes, this suitcase.",
+          "ar-SA": "نعم، هذه الحقيبة.",
+          "es-ES": "Sí, esta maleta.",
+          "fr-FR": "Oui, cette valise.",
+          "hi-IN": "हाँ, यह सूटकेस।",
+          "pl-PL": "Tak, tę walizkę.",
+          "ro-RO": "Da, această valiză.",
+          "tr-TR": "Evet, bu bavul.",
+          "uk-UA": "Так, цей чемодан.",
+          "uz-UZ": "Ha, mana bu chamadonni."
+        },
+        "nextStep": "hand_luggage"
+      },
+      {
+        "text": "Nein, nur Handgepäck.",
+        "translation": {
+          "ru-RU": "Нет, только ручная кладь.",
+          "en-US": "No, only hand luggage.",
+          "ar-SA": "لا، فقط حقيبة يد.",
+          "es-ES": "No, solo equipaje de mano.",
+          "fr-FR": "Non, seulement un bagage à main.",
+          "hi-IN": "नहीं, केवल हैंड लगेज।",
+          "pl-PL": "Nie, tylko bagaż podręczny.",
+          "ro-RO": "Nu, doar bagaj de mână.",
+          "tr-TR": "Hayır, sadece el bagajı.",
+          "uk-UA": "Ні, тільки ручна поклажа.",
+          "uz-UZ": "Yo'q, faqat qo'l yuki."
+        },
+        "nextStep": "hand_luggage"
+      }
+    ],
+    "defaultNext": "hand_luggage"
+  },
+  "hand_luggage": {
+    "botText": "Bitte stellen Sie den Koffer auf das Band.",
+    "botTranslation": {
+      "ru-RU": "Пожалуйста, поставьте чемодан на ленту.",
+      "en-US": "Please place the suitcase on the belt.",
+      "ar-SA": "يرجى وضع الحقيبة على الحزام.",
+      "es-ES": "Por favor, ponga la maleta en la cinta.",
+      "fr-FR": "Veuillez placer la valise sur le tapis.",
+      "hi-IN": "कृपया सूटकेस को बेल्ट पर रखें।",
+      "pl-PL": "Proszę położyć walizkę na taśmie.",
+      "ro-RO": "Vă rog să puneți valiza pe bandă.",
+      "tr-TR": "Lütfen bavulu banda yerleştirin.",
+      "uk-UA": "Будь ласка, поставте чемодан на стрічку.",
+      "uz-UZ": "Iltimos, chamadonni lentaga qo'ying."
+    },
+    "vocabulary": [
+      {
+        "german": "der Koffer",
+        "translation": {
+          "ru-RU": "чемодан",
+          "en-US": "suitcase",
+          "ar-SA": "حقيبة سفر",
+          "es-ES": "maleta",
+          "fr-FR": "valise",
+          "hi-IN": "सूटकेस",
+          "pl-PL": "walizka",
+          "ro-RO": "valiză",
+          "tr-TR": "bavul",
+          "uk-UA": "чемодан",
+          "uz-UZ": "chamadon"
+        }
+      },
+      {
+        "german": "das Band",
+        "translation": {
+          "ru-RU": "лента (конвейер)",
+          "en-US": "belt (conveyor)",
+          "ar-SA": "حزام (النقل)",
+          "es-ES": "cinta (transportadora)",
+          "fr-FR": "tapis (roulant)",
+          "hi-IN": "बेल्ट (कन्वेयर)",
+          "pl-PL": "taśma",
+          "ro-RO": "bandă",
+          "tr-TR": "bant",
+          "uk-UA": "стрічка",
+          "uz-UZ": "lenta (konveyer)"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Gerne. Ist er zu schwer?",
+        "translation": {
+          "ru-RU": "Хорошо. Он слишком тяжелый?",
+          "en-US": "Sure. Is it too heavy?",
+          "ar-SA": "بالتأكيد. هل هو ثقيل جداً؟",
+          "es-ES": "Claro. ¿Es demasiado pesado?",
+          "fr-FR": "Bien sûr. Est-il trop lourd ?",
+          "hi-IN": "जरूर। क्या यह बहुत भारी है?",
+          "pl-PL": "Dobrze. Czy jest za ciężki?",
+          "ro-RO": "Sigur. Este prea greu?",
+          "tr-TR": "Tabii. Çok mu ağır?",
+          "uk-UA": "Добре. Він занадто важкий?",
+          "uz-UZ": "Mayli. U juda og'irmi?"
+        },
+        "nextStep": "weight_check"
+      },
+      {
+        "text": "Okay. Passt das so?",
+        "translation": {
+          "ru-RU": "Окей. Так нормально?",
+          "en-US": "Okay. Is this fine?",
+          "ar-SA": "حسناً. هل هذا جيد؟",
+          "es-ES": "Vale. ¿Está bien así?",
+          "fr-FR": "D'accord. C'est bon comme ça ?",
+          "hi-IN": "ठीक है। क्या यह ठीक है?",
+          "pl-PL": "Okej. Czy tak jest w porządku?",
+          "ro-RO": "Ok. Este în regulă așa?",
+          "tr-TR": "Tamam. Bu uygun mu?",
+          "uk-UA": "Окей. Так нормально?",
+          "uz-UZ": "Yaxshi. Shunday ma'qulmi?"
+        },
+        "nextStep": "weight_check"
+      }
+    ],
+    "defaultNext": "weight_check"
+  },
+  "weight_check": {
+    "botText": "Nein, das Gewicht ist perfekt. Hier ist Ihre Bordkarte.",
+    "botTranslation": {
+      "ru-RU": "Нет, вес идеальный. Вот Ваш посадочный талон.",
+      "en-US": "No, the weight is perfect. Here is your boarding pass.",
+      "ar-SA": "لا، الوزن مثالي. تفضل بطاقة صعودك.",
+      "es-ES": "No, el peso es perfecto. Aquí tiene su tarjeta de embarque.",
+      "fr-FR": "Non, le poids est parfait. Voici votre carte d'embarquement.",
+      "hi-IN": "नहीं, वजन एकदम सही है। यह आपका बोर्डिंग पास है।",
+      "pl-PL": "Nie, waga jest idealna. Oto pańska karta pokładowa.",
+      "ro-RO": "Nu, greutatea este perfectă. Iată cartea dumneavoastră de îmbarcare.",
+      "tr-TR": "Hayır, ağırlık mükemmel. İşte biniş kartınız.",
+      "uk-UA": "Ні, вага ідеальна. Ось Ваш посадковий талон.",
+      "uz-UZ": "Yo'q, og'irligi ideal. Mana sizning bortga chiqish taloniningiz."
+    },
+    "vocabulary": [
+      {
+        "german": "das Gewicht",
+        "translation": {
+          "ru-RU": "вес",
+          "en-US": "weight",
+          "ar-SA": "الوزن",
+          "es-ES": "peso",
+          "fr-FR": "poids",
+          "hi-IN": "वजन",
+          "pl-PL": "waga",
+          "ro-RO": "greutate",
+          "tr-TR": "ağırlık",
+          "uk-UA": "вага",
+          "uz-UZ": "og'irlik"
+        }
+      },
+      {
+        "german": "die Bordkarte",
+        "translation": {
+          "ru-RU": "посадочный талон",
+          "en-US": "boarding pass",
+          "ar-SA": "بطاقة صعود الطائرة",
+          "es-ES": "tarjeta de embarque",
+          "fr-FR": "carte d'embarquement",
+          "hi-IN": "बोर्डिंग पास",
+          "pl-PL": "karta pokładowa",
+          "ro-RO": "carte de îmbarcare",
+          "tr-TR": "biniş kartı",
+          "uk-UA": "посадковий талон",
+          "uz-UZ": "bortga chiqish taloni"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke. Welches Gate ist es?",
+        "translation": {
+          "ru-RU": "Спасибо. Какой это гейт?",
+          "en-US": "Thanks. Which gate is it?",
+          "ar-SA": "شكراً. أي بوابة هي؟",
+          "es-ES": "Gracias. ¿Qué puerta es?",
+          "fr-FR": "Merci. De quelle porte s'agit-il ?",
+          "hi-IN": "धन्यवाद। यह कौन सा गेट है?",
+          "pl-PL": "Dziękuję. Która to bramka?",
+          "ro-RO": "Mulțumesc. Ce poartă este?",
+          "tr-TR": "Teşekkürler. Hangi kapı?",
+          "uk-UA": "Дякую. Який це гейт?",
+          "uz-UZ": "Rahmat. Qaysi darvoza (gate)?"
+        },
+        "nextStep": "gate_info"
+      },
+      {
+        "text": "Vielen Dank. Wo ist das Gate?",
+        "translation": {
+          "ru-RU": "Большое спасибо. Где находится гейт?",
+          "en-US": "Thank you very much. Where is the gate?",
+          "ar-SA": "شكراً جزيلاً. أين البوابة؟",
+          "es-ES": "Muchas gracias. ¿Dónde está la puerta?",
+          "fr-FR": "Merci beaucoup. Où est la porte ?",
+          "hi-IN": "बहुत-बहुत धन्यवाद। गेट कहाँ है?",
+          "pl-PL": "Bardzo dziękuję. Gdzie jest bramka?",
+          "ro-RO": "Vă mulțumesc mult. Unde este poarta?",
+          "tr-TR": "Çok teşekkürler. Kapı nerede?",
+          "uk-UA": "Велике дякую. Де знаходиться гейт?",
+          "uz-UZ": "Katta rahmat. Darvoza qayerda?"
+        },
+        "nextStep": "gate_info"
+      }
+    ],
+    "defaultNext": "gate_info"
+  },
+  "gate_info": {
+    "botText": "Ihr Flug geht von Gate A12. Das Boarding beginnt in 30 Minuten.",
+    "botTranslation": {
+      "ru-RU": "Ваш рейс отправляется от гейта A12. Посадка начнется через 30 минут.",
+      "en-US": "Your flight departs from Gate A12. Boarding begins in 30 minutes.",
+      "ar-SA": "رحلتك تغادر من البوابة A12. يبدأ الصعود بعد 30 دقيقة.",
+      "es-ES": "Su vuelo sale de la Puerta A12. El embarque comienza en 30 minutos.",
+      "fr-FR": "Votre vol part de la porte A12. L'embarquement commence dans 30 minutes.",
+      "hi-IN": "आपकी उड़ान गेट A12 से प्रस्थान करेगी। बोर्डिंग 30 मिनट में शुरू होगी।",
+      "pl-PL": "Pana/pani lot odbywa się z bramki A12. Wejście na pokład rozpocznie się za 30 minut.",
+      "ro-RO": "Zborul dumneavoastră pleacă de la Poarta A12. Îmbarcarea începe în 30 de minute.",
+      "tr-TR": "Uçuşunuz A12 kapısından kalkıyor. Biniş 30 dakika içinde başlıyor.",
+      "uk-UA": "Ваш рейс відправляється від гейту A12. Посадка розпочнеться через 30 хвилин.",
+      "uz-UZ": "Sizning reysingiz A12 darvozasidan jo'naydi. Bortga chiqish 30 daqiqadan so'ng boshlanadi."
+    },
+    "vocabulary": [
+      {
+        "german": "der Flug",
+        "translation": {
+          "ru-RU": "рейс / полет",
+          "en-US": "flight",
+          "ar-SA": "رحلة طيران",
+          "es-ES": "vuelo",
+          "fr-FR": "vol",
+          "hi-IN": "उड़ान",
+          "pl-PL": "lot",
+          "ro-RO": "zbor",
+          "tr-TR": "uçuş",
+          "uk-UA": "рейс / політ",
+          "uz-UZ": "reys / parvoz"
+        }
+      },
+      {
+        "german": "beginnen",
+        "translation": {
+          "ru-RU": "начинаться",
+          "en-US": "to begin / start",
+          "ar-SA": "يبدأ",
+          "es-ES": "comenzar / empezar",
+          "fr-FR": "commencer",
+          "hi-IN": "शुरू होना",
+          "pl-PL": "rozpoczynać się",
+          "ro-RO": "a începe",
+          "tr-TR": "başlamak",
+          "uk-UA": "починатися",
+          "uz-UZ": "boshlanmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, vielen Dank!",
+        "translation": {
+          "ru-RU": "Все понятно, большое спасибо!",
+          "en-US": "Alright, thank you very much!",
+          "ar-SA": "حسناً، شكراً جزيلاً!",
+          "es-ES": "De acuerdo, ¡muchas gracias!",
+          "fr-FR": "Très bien, merci beaucoup !",
+          "hi-IN": "ठीक है, बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Wszystko jasne, bardzo dziękuję!",
+          "ro-RO": "Am înțeles, mulțumesc mult!",
+          "tr-TR": "Anlaşıldı, çok teşekkürler!",
+          "uk-UA": "Все зрозуміло, велике дякую!",
+          "uz-UZ": "Tushunarli, katta rahmat!"
+        },
+        "nextStep": "good_flight"
+      },
+      {
+        "text": "Perfekt. Einen schönen Tag!",
+        "translation": {
+          "ru-RU": "Отлично. Хорошего дня!",
+          "en-US": "Perfect. Have a nice day!",
+          "ar-SA": "ممتاز. يوماً سعيداً!",
+          "es-ES": "Perfecto. ¡Que tenga un buen día!",
+          "fr-FR": "Parfait. Bonne journée !",
+          "hi-IN": "एकदम सही। आपका दिन शुभ हो!",
+          "pl-PL": "Idealnie. Miłego dnia!",
+          "ro-RO": "Perfect. O zi frumoasă!",
+          "tr-TR": "Harika. İyi günler!",
+          "uk-UA": "Чудово. Гарного дня!",
+          "uz-UZ": "Ajoyib. Yaxshi kun!"
+        },
+        "nextStep": "good_flight"
+      }
+    ],
+    "defaultNext": "good_flight"
+  },
+  "good_flight": {
+    "botText": "Guten Flug!",
+    "botTranslation": {
+      "ru-RU": "Хорошего полета!",
+      "en-US": "Have a good flight!",
+      "ar-SA": "رحلة طيران سعيدة!",
+      "es-ES": "¡Buen vuelo!",
+      "fr-FR": "Bon vol !",
+      "hi-IN": "आपकी उड़ान मंगलमय हो!",
+      "pl-PL": "Dobrego lotu!",
+      "ro-RO": "Zbor plăcut!",
+      "tr-TR": "İyi uçuşlar!",
+      "uk-UA": "Гарного польоту!",
+      "uz-UZ": "Yaxshi parvoz!"
+    },
+    "options": [
+      {
+        "text": "Danke, auf Wiedersehen!",
+        "translation": {
+          "ru-RU": "Спасибо, до свидания!",
+          "en-US": "Thanks, goodbye!",
+          "ar-SA": "شكراً، وداعاً!",
+          "es-ES": "¡Gracias, adiós!",
+          "fr-FR": "Merci, au revoir !",
+          "hi-IN": "धन्यवाद, अलविदा!",
+          "pl-PL": "Dziękuję, do widzenia!",
+          "ro-RO": "Mulțumesc, la revedere!",
+          "tr-TR": "Teşekkürler, hoşça kalın!",
+          "uk-UA": "Дякую, до побачення!",
+          "uz-UZ": "Rahmat, xayr!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Tschüss!",
+        "translation": {
+          "ru-RU": "Пока!",
+          "en-US": "Bye!",
+          "ar-SA": "وداعاً!",
+          "es-ES": "¡Adiós!",
+          "fr-FR": "Salut !",
+          "hi-IN": "अलविदा!",
+          "pl-PL": "Cześć!",
+          "ro-RO": "Pa!",
+          "tr-TR": "Görüşürüz!",
+          "uk-UA": "Бувай!",
+          "uz-UZ": "Xayr!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Der Check-in ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Регистрация завершена.",
+      "en-US": "Check-in is finished.",
+      "ar-SA": "اكتمل تسجيل الدخول.",
+      "es-ES": "El registro ha terminado.",
+      "fr-FR": "L'enregistrement est terminé.",
+      "hi-IN": "चेक-इन समाप्त हो गया है।",
+      "pl-PL": "Odprawa zakończona.",
+      "ro-RO": "Înregistrarea este finalizată.",
+      "tr-TR": "Check-in işlemi tamamlandı.",
+      "uk-UA": "Реєстрацію завершено.",
+      "uz-UZ": "Ro'yxatdan o'tish tugadi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

@@ -3525,9 +3525,12 @@
   },
   "settingsGroup": {
     "notifications": "Bildirimler",
-    "appearance": "Görünüm"
+    "appearance": "Görünüm",
+    "language": "Dil",
+    "account": "Hesap yönetimi"
   },
   "valentineAchievements": {
+    "valentineAchievementsTitle": "Kalpler Festivali",
     "firstValentineQuestLabel": "İlk Randevu",
     "firstValentineQuesDescription": "İlk adımı atın! 'Kalpler Festivali' etkinliğindeki herhangi bir görevi tamamlayın ve ilk ödülünüzü alın.",
     "valentineWordsLabel": "Aşkın Dili",
@@ -3607,7 +3610,9 @@
     "streak": "Galibiyet serisi",
     "clearWins": "Net galibiyetler",
     "start": "Oyunu başlat",
-    "info": "İstatistiklerini görmek için bir seviyeye tıkla."
+    "info": "İstatistiklerini görmek için bir seviyeye tıkla.",
+    "answer-placeholder": "Cümleyi kurun...",
+    "pending": "Bekleniyor..."
   },
   "eventSessionPage": {
     "loading": "Yükleniyor…",
@@ -3740,6 +3745,7 @@
     "theme": "Romantik Tema"
   },
   "winterAchievements": {
+    "winterAchievementsTitle": "Kış fısıltısı",
     "firstQuestName": "İlk ağaç yıldızı",
     "firstQuestDescription": "Kış etkinliğindeki herhangi bir görevi tamamla ve ilk yıldızı yak.",
     "santaLexiconName": "Noel Baba Sözlüğü",
@@ -3955,23 +3961,23 @@
     "text": "Gizle"
   },
   "payPage": {
-    "title": "Platformdan en iyi şekilde yararlan",
-    "description": "Eğitim, ödüller, görevler, ilerleme ve çok daha fazlası!",
+    "sale5": "%3 indirim",
+    "sale10": "%6 indirim",
+    "sale15": "%15 indirim",
+    "finalePrice": "TOPLAM:",
+    "yourSale": "İndiriminiz",
+    "title": "Platformdan en iyi şekilde yararlanın",
+    "description": "Öğrenme, ödüller, görevler, ilerleme ve çok daha fazlası!",
     "compareLabelOne": "Özellikler",
     "compareLabelTwo": "Ücretsiz",
     "compareLabelThree": "Abonelik",
-    "getPremiumBtn": "Abonelik satın al",
+    "getPremiumBtn": "Satın Al",
     "month": "ay",
-    "featureOne": "Eğitim materyali",
-    "featureTwo": "İlerlemeyi kaydetme",
-    "featureThree": "Başarımlar",
-    "featureFour": "Günlük görevler",
-    "featureFive": "Sezonluk etkinlikler",
-    "featureSix": "Ödül kazanma",
-    "featureSeven": "Yapay zekâ kontrolü ile testler",
-    "featureEight": "Seslendirme",
-    "featureNine": "Düellolar ve sıralama",
-    "featureTen": "Gelecek özellikler"
+    "featureOne": "Sınırsız öğrenme",
+    "featureTwo": "Gelecekteki özellikler",
+    "featureThree": "Geliştirici desteği",
+    "featureFour": "Reklamsız",
+    "withoutDiscount": "İndirimsiz"
   },
   "useHeadApp": {
     "title": "Skillupgerman — Almancayı oyunlarla kolay ve eğlenceli şekilde öğren",
@@ -4114,25 +4120,29 @@
     "send": "Mesaj gönder"
   },
   "howToUse": {
-    "title": "Nasıl kullanılır",
-    "questOne": "Nasıl öğrenmeye başlanır?",
-    "answerOne": "Almanca pratiğine başlamak için kaydolup bir hesap oluşturmanız yeterlidir. Bunu yapmadan görevlere erişim kapalıdır.",
+    "title": "Nasıl Kullanılır",
+    "questOne": "Eğitime nasıl başlayabilirim?",
+    "answerOne": "Almanca pratiğine başlamak için kaydolup bir hesap oluşturmanız yeterlidir. Bu adımı tamamlamadan görevlere erişim sağlanamaz.",
     "questTwo": "Sezonluk etkinlikler nedir?",
-    "answerTwo": "Sezonluk etkinlikler tatillere bağlı geçici etkinliklerdir. Özel görevler, temalı alıştırmalar ve yalnızca sınırlı süre için mevcut olan benzersiz ödüller içerir.",
-    "questThree": "Başarı nedir?",
-    "answerThree": "Başarı, tamamlanan bir etkinlik için verilen işarettir (ilerleme, doğru cevaplar, günlük görevler vb.).",
+    "answerTwo": "Sezonluk etkinlikler, bayramlara ve özel günlere özel düzenlenen geçici etkinliklerdir. Bu dönemlerde sadece kısıtlı bir süre boyunca geçerli olan özel görevler, tematik aktiviteler ve benzersiz ödüller sunulur.",
+    "questThree": "Başarım nedir?",
+    "answerThree": "Başarım, tamamlanan bir aktivite (ilerleme, doğru cevaplar, günlük görevler vb.) karşılığında verilen bir dijital onay işaretidir.",
     "questFour": "Ödüller nedir?",
-    "answerFour": "Ödüller belirli başarıların tamamlanmasıyla verilir ve profilinizde görüntülenir.",
-    "questFive": "Artikel ilerlemesi nerede görülebilir?",
-    "answerFive": "Ana sayfada 'Katılımcı Paneli'nde 'İstatistik' seçin, ardından ilgili kategorinin ilerlemesini görüntüleyin. Önemli: aktif artikel konularınız yoksa istatistik gösterilmez.",
-    "questSix": "Artiklus nedir?",
-    "answerSix": "Artiklus, dahili para birimidir. 'Artikel pratiği' görevinde doğru cevaplar ve Dil Diyarı'ndaki görevler için kazanılır. Ek denemeler için harcanabilir.",
-    "questSeven": "Sıralamaya nasıl girilir?",
-    "answerSeven": "En az 2. seviyeye ulaşmanız gerekir. 'Artikel pratiği' veya 'Dil Diyarı' oynayarak. Bundan sonra sıralama tablosu açılır.",
+    "answerFour": "Ödüller, belirli başarımlar tamamlandığında verilir ve kullanıcı panelinizde görüntülenir.",
+    "questFive": "Artikellerdeki ilerlememi nereden görebilirim?",
+    "answerFive": "Ana sayfadaki \"Üye Paneli\" içinden \"İstatistikler\" sekmesini ve ardından ilgilendiğiniz kategorinin ilerlemesini seçin. Önemli: Artikellerle ilgili aktif bir konunuz yoksa istatistikler görüntülenmeyecektir.",
+    "questSix": "Articlus nedir?",
+    "answerSix": "Articlus, platform içi sanal para birimidir. \"Artikel Pratiği\" görevindeki doğru cevaplar ve Dil Diyarlarındaki görevlerin tamamlanması karşılığında kazanılır. Ek deneme hakları satın almak için harcanabilir.",
+    "questSeven": "Sıralamaya nasıl girebilirim?",
+    "answerSeven": "Artikel maratonu sıralaması iki haftada bir gerçekleştirilir. İki hafta boyunca diğer katılımcılarla yarışırsınız. Maraton sona erdiğinde, ilk üç dereceye girenler başarım ve ödüller kazanır!",
     "questEight": "Günlük görevler nedir?",
-    "answerEight": "Bunlar konuya göre görevlerdir ve günde bir kez yapılabilir. Günde 3 görev tamamlanabilir. Ana sayfada bulunur.",
+    "answerEight": "Bunlar günde bir kez yapılabilen tematik görevlerdir. Bir gün içinde en fazla 3 görev tamamlanabilir. Ana sayfadan erişilebilir durumdadırlar.",
     "questNine": "Etkinlikler nedir?",
-    "answerNine": "Bunlar yılda bir kez gerçekleşen geçici etkinliklerdir. Aktif dönemde temalı görevler ve ödüller açılır. Tarih aralığı dışında bölüm erişilemez. Etkinlik tarihlerini Katılımcı Paneli'ndeki 'Etkinlik Takvimi'nden görebilirsiniz."
+    "answerNine": "Yılda bir kez düzenlenen geçici etkinliklerdir. Aktif olduğu dönemde tematik görevler ve ödüller erişime açılır. Belirtilen tarih aralığının dışında bu bölüm kullanılamaz. Tarihleri Üye Panelindeki \"Etkinlik Takvimi\" üzerinden inceleyebilirsiniz.",
+    "questTen": "Mezuniyet kepleri nedir?",
+    "answerTen": "Kepler, günlük görevleri yerine getirdiğinizde verilen akademik şapkalardır. Bunlar sayesinde unvan bonusları ve eğitim indirimleri kazanılır. Günlük görevlerin yapılmaması durumunda ise bir ceza sistemi uygulanır.",
+    "questEleven": "Kepler için bir ceza var mı?",
+    "answerEleven": "Evet, günlük görevlerin yapılmaması durumunda bir ceza (3 kep düşüşü) uygulanır. Cezadan kaçınmak için günde en az bir günlük görev tamamlayın. Platformda olamayacağınız durumlarda, mağazadan \"zaman dondurma\" özelliğini satın alabilirsiniz; bu özellik cezaların keplerinizi eksiltmesini engeller!"
   },
   "accountManagement": {
     "title": "Hesap yönetimi",
@@ -4144,35 +4154,36 @@
     "answerThree": "Giriş formunda 'Şifreyi mi unuttunuz?' seçeneğini tıklayın ve talimatları izleyin. Kurtarma bağlantısı kayıt sırasında verilen e-posta adresinize gönderilecektir. Önemli: kayıt olurken gerçek bir e-posta adresi kullanın."
   },
   "subscribe": {
-    "title": "Abonelik (Premium)",
-    "questOne": "Premium ne sağlar?",
-    "questOneStepOne": "1 Tüm kelimelerin ve cümlelerin seslendirilmesi — dinleme becerisini geliştirin.",
-    "questOneStepTwo": "2 Sınırsız öğrenme — günde istediğiniz kadar materyal öğrenin.",
-    "questOneStepThree": "3 Tüm testlere otomatik kontrol ve AI değerlendirmesiyle erişim.",
-    "questOneStepFour": "4 Konuşma pratiği için sesli ve konuşma görevleri.",
+    "title": "Abonelik (Plus)",
+    "questOne": "Plus abonelik neler sunar?",
+    "questOneStepOne": "1 Tüm kelime ve cümlelerin seslendirilmesi — dinleme becerinizi geliştirin.",
+    "questOneStepTwo": "2 Sınırsız öğrenme — günde dilediğiniz kadar materyal tamamlayın.",
+    "questOneStepThree": "3 Yapay zeka değerlendirmeli ve otomatik kontrollü tüm testlere erişim.",
+    "questOneStepFour": "4 Konuşma pratiği için sesli görevler ve konuşma egzersizleri.",
     "questOneStepFive": "5 Ücretsiz sürümde bulunmayan özel materyaller ve alıştırmalar.",
-    "questOneStepSix": "6 Geliştiricilere destek — Premium, projeyi geliştirmemize, yeni görevler eklememize ve tüm öğrenciler için işlevleri iyileştirmemize yardımcı olur. Amacımız Almanca öğrenmeyi erişilebilir ve eğlenceli hale getirmektir. Etkileşim, oyun ve rekabet atmosferi yaratıyoruz, böylece öğrenmek her gün geri dönmek isteyeceğiniz bir macera olur!",
-    "questTwo": "Premium nasıl iptal edilir?",
+    "questOneStepSix": "6 Geliştirici desteği — bu durum projeyi büyütmemize, yeni görevler yayınlamamıza ve tüm öğrenciler için işlevselliği geliştirmemize yardımcı olur. Amacımız, Almanca öğrenmeyi erişilebilir ve en önemlisi eğlenceli hale getirmektir. Eğitimin her gün geri dönmek isteyeceğiniz bir maceraya dönüşmesi için etkileşimli, oyunlaştırılmış ve rekabetçi bir ortam yaratıyoruz!",
+    "questTwo": "Plus nasıl iptal edilir?",
     "questTwoStepOne": "Hesabınıza giriş yapın.",
-    "questTwoStepTwo": "'Profil' bölümüne gidin.",
-    "questTwoStepThree": "'Hesap yönetimi'ni açın.",
-    "questTwoStepFour": "'Aboneliği iptal et'i tıklayın.",
-    "note": "Bundan sonra erişim, ödenen dönemin sonuna kadar devam eder.",
-    "questThree": "Kalan günler için iade var mı?",
-    "answerThree": "Şu anda kalan günler için iade mevcut değildir."
+    "questTwoStepTwo": "\"Hesabım\" (Panel) bölümüne gidin.",
+    "questTwoStepThree": "\"Ayarlar\" bölümüne gidin.",
+    "questTwoStepFour": "\"Hesap Yönetimi\" alt başlığını açın.",
+    "questTwoStepFive": "\"Aboneliği İptal Et\" seçeneğine tıklayın.",
+    "note": "İptal işleminden sonra, erişim hakkınız ödemesi yapılmış dönemin sonuna kadar devam eder. Önemli: Abonelik, hangi platform üzerinden satın alındıysa yine orada iptal edilmelidir (iOS uygulaması, Android uygulaması veya web sitesi).",
+    "questThree": "Kalan günler için ücret iadesi var mı?",
+    "answerThree": "Kalan günler için ücret iadesi yapılmamaktadır."
   },
   "daily": {
-    "first": "Tüm modlarda 10 kelime öğren: Artikel Pratiği",
-    "second": "Artikel pratiğinde 10 Artikluso kazan",
-    "third": "Artikel maratonunda 10 kelimelik seri yap (kolay mod)",
-    "fourth": "Artikel Pratiğinde 15 deneyim puanı kazan",
-    "fifth": "«Kelimeyi Tahmin Et» modunda 10 kelime tahmin et",
-    "sixth": "Artikel maratonunda 10 kelimelik seri yap (orta mod)",
-    "seventh": "Artikel Pratiği modunda 10 çoğul kelime öğren",
-    "eighth": "Tüm modlarda 10 kelime öğren: Artikel Pratiği",
-    "ninth": "Ses modunda 10 kelime öğren: Artikel Pratiği",
-    "tenth": "Artikel maratonunda 10 kelimelik seri yap (zor mod)",
-    "eleventh": "Artikel Pratiğinde 10 deneyim puanı kazan",
+    "first": "Tüm modlarda 5 kelime öğren: Artikel Pratiği",
+    "second": "Artikel pratiğinde 5 Artikluso kazan",
+    "third": "Artikel maratonunda 5 kelimelik seri yap (kolay mod)",
+    "fourth": "Artikel Pratiğinde 5 deneyim puanı kazan",
+    "fifth": "«Kelimeyi Tahmin Et» modunda 5 kelime tahmin et",
+    "sixth": "Artikel maratonunda 5 kelimelik seri yap (orta mod)",
+    "seventh": "Artikel Pratiği modunda 5 çoğul kelime öğren",
+    "eighth": "Tüm modlarda 5 kelime öğren: Artikel Pratiği",
+    "ninth": "Ses modunda 5 kelime öğren: Artikel Pratiği",
+    "tenth": "Artikel maratonunda 5 kelimelik seri yap (zor mod)",
+    "eleventh": "Artikel Pratiğinde 5 deneyim puanı kazan",
     "twelve": "Tematik seviyelerde bir modülü tamamla",
     "thirteenth": "Dil diyarlarında bir görevi tamamla",
     "fourteenth": "«Kelimeyi Tahmin Et» modunda 5 kelime tahmin et"
@@ -4916,7 +4927,10 @@
     "start": "Başlangıç:",
     "middle": "Ortalama puan:",
     "share": "Paylaş",
+    "cancel": "İptal",
     "delete": "Sil",
+    "deleteResultTitle": "Sonuç silinsin mi?",
+    "textModal": "Bu sınavı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
     "sent": "Test gönderildi",
     "sended": "Bu testi zaten gönderdiniz",
     "error": "Sınav paylaşılamadı"
@@ -5175,6 +5189,8 @@
   },
   "awards": {
     "title": "Ödül Listesi",
+    "wasPlusUser": "Articlus Kesesi",
+    "wasPlusUserDescription": "Genel kategorisindeki 'PLUS Sahibi' başarımı tamamlandığında verilen ödül",
     "articlus": "Kanatlı Para Birimi",
     "articlusDescription": "Genel kategorisindeki 'Kaynakları Tüket' başarımı için verilir",
     "registerAchievement": "Katılımcı Rozeti",
@@ -6954,7 +6970,7 @@
     "questThird": "Cümle kur: beyaz pencere.",
     "questFour": "Seç: yeşil kanepe.",
     "questFive": "Dinle ve yaz",
-    "questSix": "Kur: das rote Buch.",
+    "questSix": "Topla: Kırmızı Kitap",
     "questSeven": "‘eine gelbe Blume’ ne demek?",
     "questSevenFirstOption": "Sarı çiçek.",
     "questSevenSecondOption": "Kırmızı kitap.",
@@ -8033,7 +8049,9 @@
     "description": "Keplerinizi cezalara karşı korur"
   },
   "cardSales": {
+    "title3": "Plus-I İndirimi",
     "title5": "%5 İndirim",
+    "title6": "Plus-II İndirimi",
     "title10": "%10 İndirim",
     "title15": "%15 İndirim"
   },
@@ -8082,8 +8100,8 @@
     "exam": "Arkadaşlar"
   },
   "cabinetSidebar": {
-    "valueOne": "Hesap Parametreleri",
-    "valueTwo": "Sınav Arşivi",
+    "valueOne": "Hesap",
+    "valueTwo": "Sınavlar",
     "valueThree": "Mağaza",
     "valueFour": "Ayarlar"
   },
@@ -8099,13 +8117,15 @@
     "registerDate": "Kayıt Tarihi"
   },
   "cabinetToggle": {
-    "sound": "Sesli Bildirimler",
-    "theme": "Karanlık Mod",
-    "ach": "Başarım Bildirimleri",
-    "snowFall": "Kar Yağışı",
-    "themeBtn": "Tema"
+    "sound": "Sesli bildirimler",
+    "ach": "Başarı bildirimleri",
+    "themeBtn": "Tema",
+    "snowFall": "Kar yağışı",
+    "language": "Arayüz dili",
+    "profileData": "Profil verileri"
   },
   "cabinet": {
+    "plusCanceled": "PLUS iptal edildi",
     "important": "ÖNEMLİ!!!",
     "importantText": "Hesabınızı silerken abonelik iptal edilmez. Lütfen silmeden önce aboneliğinizi iptal edin.",
     "cancelPremium": "Abonelik iptal edilsin mi?",
@@ -8159,7 +8179,10 @@
     "articleLabelTwo": "- Dil Diyarlarındaki tekrar denemeleri ve profildeki mağazada harcanır.",
     "levelTitle": "Seviye",
     "levelLabelOne": "- Görevleri tamamladıkça seviyen artar.",
-    "levelLabelTwo": "- Seviyen arttıkça Dil Diyarlarındaki yeni görevler açılır."
+    "levelLabelTwo": "- Seviyen arttıkça Dil Diyarlarındaki yeni görevler açılır.",
+    "livesTitle": "Canlar",
+    "livesLabelOne": "Dil diyarlarını tamamlamak için gereklidir",
+    "livesLabelTwo": "Dahili mağazadan veya eğitim sırasında Articlus'lar karşılığında satın alınır"
   },
   "idioms": {
     "title": "Deyimler ve Kalıplaşmış İfadeler",
@@ -8267,6 +8290,8 @@
     "answer": "Hataları görmezden gelir"
   },
   "guessWord": {
+    "subtitle": "Kelimeyi tahmin et ve Almancanı geliştir!",
+    "theme": "Tema:",
     "back": "Geri",
     "guessTitle": "Kelimeyi Tahmin Et",
     "startGame": "Oyuna Başla",
@@ -8283,7 +8308,8 @@
     "guessed": "Kelime şuydu:",
     "tryAgain": "Tekrar dene",
     "btnToMain": "Ana Sayfa",
-    "placeholder": "Kelimenin tamamını girin"
+    "placeholder": "Kelimenin tamamını girin",
+    "wrong": "Yanlış! Doğrusu:"
   },
   "preposition": {
     "title": "Almanca edatlar hakkında her şey",
@@ -8843,6 +8869,9 @@
   },
   "generalCategory": {
     "generaLabel": "Genel Başarılar",
+    "wasPlusUserTitle": "PLUS Sahibi",
+    "wasPlusUserDescription": "PLUS aboneliği alın ve Almancanızı tam bir konforla geliştirin!",
+    "wasPlusUserAward": "Ödül: Articlus Kesesi",
     "dailyTitle": "Demir İrade",
     "dailyText": "Görev Günlüğünden 50 alıştırma yap",
     "dailyAward": "Ödül: Sonsuzluk Kum Saati",
@@ -9050,7 +9079,7 @@
     "main": "Ana sayfaya git"
   },
   "rulesFirstBlock": {
-    "title": "Almanca artikellerin temel kuralları",
+    "title": "Tanımlık teorisi",
     "subTitle": "der, die, das'ı doğru kullanmak isteyen herkes için kısa ve anlaşılır bir kopya kağıdı!",
     "firstCardTitle": "Artikel cinse bağlıdır",
     "exampleSexM": " — eril cins",
@@ -9195,6 +9224,7 @@
     "confirm": "Onayla"
   },
   "sub": {
+    "words": "Kelimeler ve tanımlıklar",
     "sinonim": "Kelime Bilgisi",
     "articles": "Artikeller",
     "verbs": "Fiiller",
@@ -9211,7 +9241,9 @@
     "languagesLands": "Dil Diyarları",
     "describePicture": "Resim Açıklama",
     "fight": "Almanca Evreni",
-    "audio": "Sesli Görevler"
+    "audio": "Sesli Görevler",
+    "textTask": "Metinler",
+    "speak": "Konuşma pratiği"
   },
   "underSub": {
     "prev": "Giriş",
@@ -9440,35 +9472,100 @@
   "nameMap": {
     "Furniture": "Mobilya",
     "Animals": "Hayvanlar",
+    "Birds": "Kuşlar",
+    "SeaAnimals": "Deniz hayvanları",
+    "Insects": "Böcekler",
+    "Savanna": "Savana",
     "Clothes": "Kıyafetler",
+    "Shoes": "Ayakkabılar",
     "Food": "Yiyecek",
-    "Body": "Vücut Parçaları",
+    "SweetEat": "Tatlılar",
+    "MilkEat": "Süt ürünleri",
+    "Vegetables": "Sebzeler",
+    "Fruits": "Meyveler",
+    "Drinks": "İçecekler",
+    "Body": "Vücut",
     "Professions": "Meslekler",
     "Transport": "Ulaşım",
     "Colors": "Renkler",
     "Nature": "Doğa",
+    "Weather": "Hava durumu",
+    "Landscape": "Manzara",
     "Home": "Ev",
     "Zeit": "Zaman",
-    "City": "Şehir",
+    "CityBuildings": "Şehir binaları",
+    "CityInfrastructure": "Şehir altyapısı",
     "School": "Okul",
-    "DaysAndMonths": "Günler ve Aylar",
+    "DaysAndMonths": "Günler ve aylar",
     "Toys": "Oyuncaklar",
-    "CommonItems": "Yaygın Eşyalar",
-    "BathroomItems": "Banyo Eşyaları",
+    "CommonItems": "Günlük eşyalar",
+    "BathroomItems": "Banyo eşyaları",
     "Kosmetik": "Kozmetik",
     "Familie": "Aile",
     "Emotions": "Duygular",
-    "Werkzeuge": "Aletler",
     "Kitchen": "Mutfak",
     "Health": "Sağlık",
-    "Sport": "Spor",
-    "SportEquipment": "Fitness Ekipmanları",
+    "SportBasic": "Temel sporlar",
+    "SportCombatWinter": "Kış ve dövüş sporları",
+    "SportEvents": "Spor etkinlikleri",
+    "SportLife": "Spor yaşamı",
+    "SportEquipment": "Spor ekipmanları",
+    "TravelDocuments": "Seyahat belgeleri",
+    "Tourism": "Turizm",
     "Travel": "Seyahat",
+    "MusicInstruments": "Müzik aletleri",
     "Musik": "Müzik",
-    "Amount": "Miktar",
-    "Informatik": "Bilgisayar Bilimi"
+    "Amount": "Miktar ve ölçüler",
+    "Hardware": "Donanım",
+    "Software": "Yazılım",
+    "Internet": "İnternet",
+    "WinterHolidays": "Kış tatilleri",
+    "FamilyAndReligious": "Aile ve dini bayramlar",
+    "PersonalCelebrations": "Kişisel kutlamalar",
+    "FestivalsAndDecor": "Festivaller ve dekor",
+    "DwellingTypes": "Konut türleri",
+    "Rooms": "Odalar",
+    "ConstructionAndDetails": "İnşaat ve detaylar",
+    "CoreFamily": "Çekirdek aile",
+    "ExtendedFamily": "Geniş aile",
+    "Relationships": "İlişkiler",
+    "HandTools": "El aletleri",
+    "PowerTools": "Elektrikli aletler",
+    "ConsumablesAndSafety": "Sarf malzemeleri ve güvenlik",
+    "JobOffice": "Ofis işleri",
+    "JobTech": "Teknik işler",
+    "JobMed": "Tıbbi işler",
+    "JobEdu": "Eğitim",
+    "JobService": "Hizmet sektörü",
+    "CityTransport": "Şehir içi ulaşım",
+    "TravelTransport": "Seyahat ulaşımı",
+    "usualClothes": "Günlük kıyafetler",
+    "winterClothes": "Kışlık kıyafetler",
+    "emotionsPositive": "Duygular",
+    "emotionsNegative": "Duygular 2"
+  },
+  "categoryWords": {
+    "nature": "Doğa",
+    "animals": "Hayvanlar",
+    "food": "Yiyecek",
+    "people": "İnsan",
+    "family": "Aile",
+    "dailyRoutine": "Günlük yaşam",
+    "house": "Ev",
+    "city": "Şehir",
+    "school": "Okul",
+    "professions": "Meslekler",
+    "construction": "İnşaat",
+    "clothes": "Kıyafetler",
+    "holidays": "Bayramlar",
+    "sport": "Spor",
+    "music": "Müzik",
+    "travel": "Seyahat",
+    "informatics": "Bilişim",
+    "abstract": "Soyut konular"
   },
   "modes": {
+    "themeTitle": "Tanımlık (artel) çalışma konuları",
     "article": "Artikeli Girin",
     "letters": "Kelimeyi Heceleyin",
     "articleWord": "Kelimeyi ve Artikeli Girin",
@@ -9602,7 +9699,12 @@
     "profile": "Profil",
     "shop": "HANGAR",
     "rank": "Sıralama",
-    "exit": "ÇIKIŞ"
+    "exit": "ÇIKIŞ",
+    "start": "GÖREVE BAŞLA",
+    "findGalaxyTitle": "SEKTÖR TESPİT EDİLDİ",
+    "points": "PUAN",
+    "errorTitle": "SİSTEM ARIZASI",
+    "errorBtn": "KARARGAHA DÖN"
   },
   "galaxyCabinet": {
     "back": "GERİ",
@@ -9611,7 +9713,8 @@
     "money": "ARTİKS",
     "commonPoints": "TOPLAM PUAN",
     "rank": "Rütbe:",
-    "streak": "REKOR:"
+    "streak": "REKOR:",
+    "cabinet": "Seyir defteri"
   },
   "galaxyRank": {
     "none": "DÜNYALI",
@@ -9661,7 +9764,7 @@
     "prepositions": "Edatlar"
   },
   "v-rank": {
-    "desc": "Konfederatka şapkaları zirveye giden yolunuzdur! Günlük üç görevi de tamamlayarak onları biriktirin. Rütbenizi yükseltin ve kilidi açılmış bonusları satın alın!",
+    "desc": "Günün görevlerini tamamlayarak kepler biriktirin. Rütbenizi yükseltin ve bonuslar satın alın.",
     "rank": "Rütbe",
     "rank_0": "Acemi",
     "rank_1": "Çaylak",
@@ -9671,9 +9774,11 @@
     "rank_5": "Kaptan",
     "rank_6": "Muhafız",
     "rank_7": "Efsane",
-    "sale5": "%5 İndirim",
-    "sale10": "%10 İndirim",
-    "sale15": "%15 İndirim"
+    "sale3": "Plus-1 İndirimi",
+    "sale6": "Plus-2 İndirimi",
+    "sale5": "%5 indirim",
+    "sale10": "%10 indirim",
+    "sale15": "%15 indirim"
   },
   "audioTasksTitles": {
     "meeting": "Tanışma",
@@ -9705,6 +9810,7 @@
   "descriptionThemes": {
     "winter": "Kış ve Aktiviteler",
     "transport": "Toplu Taşıma",
+    "work": "İş",
     "cafe": "Kafeterya",
     "supermarket": "Süpermarket",
     "home": "Ev ve Günlük Yaşam",
@@ -9724,5 +9830,798 @@
   "lives": {
     "next": "Sonraki:",
     "full": "Canlar dolu"
+  },
+  "deletePage": {
+    "title": "Profili sil",
+    "bubbleText": "Ayrıldığın için üzgünüz! Lütfen silmeden önce önemli bilgileri kontrol et.",
+    "cleanUpTitle": "Abonelik yönetimi",
+    "cleanUpInfoText": "Hesabı silmek",
+    "cleanUpInfoTextTwo": "aboneliği iptal etmez!",
+    "cleanUpInfoTextThree": "Ödeme durumunu kontrol et.",
+    "deleteAccount": "Hesabı sil",
+    "modalTitle": "Silmek istediğine emin misin?",
+    "cleanUpGoogle": "İle giriş yap",
+    "cleanUpGoogleTwo": " Onaylamak için bir yetkilendirme penceresi açılacaktır.",
+    "cleanUpPassword": "Şifrenizi girin:",
+    "placeholder": "şifrenizi girin",
+    "modalLabelOne": "Vazgeçtim",
+    "modalLabelTwo": "Silme işlemini onayla"
+  },
+  "accountChanges": {
+    "first": "Profil verileri sonsuza dek kaybolacak.",
+    "two": "İlerleme ve test geçmişi sıfırlanacak.",
+    "three": "Tüm ödüller, unvanlar ve başarılar silinecek.",
+    "four": "Para birimi, seviye ve şapkalar geri alınacak."
+  },
+  "platformsInformation": {
+    "titleWeb": "Web sitesinde",
+    "descriptionWeb": "Web sitesinde kartla ödeme.",
+    "instructionWeb": "Kişisel Hesabınızdan otomatik yenilemeyi kapatın.",
+    "titleStore": "Uygulamada",
+    "descriptionStore": "Google Play veya App Store.",
+    "instructionStore": "Telefon ayarlarından aboneliği iptal edin."
+  },
+  "galaxyDescriptions": {
+    "alpha": "Üç büyük gücün hüküm sürdüğü sektör: Der, Die ve Das. Görevin, dilsel sensörlerini kalibre etmek ve her kelimenin cinsiyetini hatasız belirleyerek dilbilgisi sistemine düzen getirmektir.",
+    "beta": "Her şeyin çoğaldığı ve dönüştüğü anomalili bir bölge. Nesnelerin birden fazla olduğunda hangi formu alacağını anlamak için isimlerin dönüşüm yasalarını incele.",
+    "gamma": "İkiz kelimeler galaksisi. Aynı düşünceyi ifade etmenin yeni yollarını bularak kelime dağarcığını genişlet. Cephaneliğinde ne kadar çok eş anlamlı kelime varsa, derin uzayda konuşman o kadar parlar.",
+    "delta": "Sonsuz kontrast ve karşıtlık dünyası. Burada her şey karşılaştırmayla öğrenilir: 'hızlı'dan 'yavaş'a. Sistemde dengeyi korumak için zıtlıkları ustalıkla bulmayı öğren.",
+    "epsilon": "Geçmişin zaman döngüsü. Tamamlanan görevler hakkında raporlar yazmak ve diğer yıldız sistemlerindeki eski zaferlerini anlatmak için fiillerin karmaşık formunda ustalaş.",
+    "zeta": "Uzay ve zamanın navigasyon ağı. Dil yollarının 'nereye', 'nerede' ve 'nasıl' gittiğini keşfet. Doğru edatlar, dilin sonsuzluğundaki kesin koordinatlarındır."
+  },
+  "personalAccount": {
+    "statsAndAchievements": "İstatistikler ve başarılar",
+    "streakTitle": "Tanımlık maratonu serisi"
+  },
+  "studyNavAndBanner": {
+    "practice": "Pratik",
+    "grammar": "Dilbilgisi",
+    "bannerPractice": "Çeşitli pratik görevleri tamamlayarak Almanca seviyeni geliştir",
+    "bannerGrammar": "Kuralları öğren ve çeşitli dilbilgisi konularında Almanca seviyeni ilerlet"
+  },
+  "bannerTitles": {
+    "play": "Almancayı zevkle öğren! Uygun bir mod seç ve oynayarak dilini geliştir",
+    "events": "Sezonluk etkinliklere katıl ve görevleri tamamlayarak benzersiz ödüller kazan",
+    "article": "Farklı antrenman formatlarında konularına göre kelimeleri ve tanımlıkları öğrenin",
+    "awards": "Kazanılan başarılar ve tamamlanan görevler için ödüller",
+    "thematic": "Eğlenceli tematik seviyeleri geçerek Almancanı geliştir",
+    "audio": "Sesli görevleri tamamlayarak Almanca dinleme becerini geliştir",
+    "images": "Resim betimleme becerini geliştir! Başlamak için bir tema seç",
+    "settings": "Hesap ayarları",
+    "achievements": "İlerlemen için kazandığın tüm başarıların ve ödüllerin koleksiyonu",
+    "textTask": "Metinlerdeki boşlukları doldur ve Almancanı geliştir"
+  },
+  "imageDescription": {
+    "listen": "Diyaloğu dinleyin!",
+    "check": "Kontrol et",
+    "further": "İleri",
+    "finish": "Bitir",
+    "skip": "Geç",
+    "total": "Toplam görev:",
+    "perfect": "Kusursuz doğru:",
+    "notPerfect": "Kısmen doğru:",
+    "mistakes": "Hatalı:",
+    "value": "Doğruluk:",
+    "success": "✅ Görev doğru bir şekilde tamamlandı!",
+    "isWrong": "❌ Yanlış cevaplar var!",
+    "isWarning": "⚠️ Tüm doğru seçenekler seçilmedi!",
+    "modalTitleWarning": "Dikkat!",
+    "modalTextWarning": "Konu tamamen bitirilmedi, ilerleme kaydedilmeyecek!",
+    "leave": "Çık",
+    "continue": "Devam et",
+    "goodWork": "Harika iş!",
+    "needTraining": "Pratik yapman gerek!",
+    "themeSuccess": "Konu başarıyla tamamlandı!",
+    "themeNotSuccess": "Konu tamamlanmadı."
+  },
+  "galaxySelector": {
+    "constellations": "Takımyıldızlar",
+    "energy": "Gemi enerjisi",
+    "sectorBlock": "SEKTÖR ENGELLENDİ",
+    "admission": "PLUS izni gerekiyor",
+    "descriptionPlusOne": "Galaksi",
+    "descriptionPlusTwo": "derin uzayda bulunuyor! Alfa sektörünün ötesine hiper sıçrama yapmak için galaksiler arası abonelik gereklidir",
+    "descriptionPlusThree": "Tüm takımyıldızları açmak için satın alın!",
+    "getPlusBtn": "PLUS Al",
+    "errorDescription": "'İniş için hazırlanın! Bu bölgede yoğun Almanca aktivitesi gözlemleniyor. Sistemdeki düzeni sağlamak için sektörü temizleyin.'"
+  },
+  "galaxySession": {
+    "errorEnergy": "Batarya boşaldı. Yenilenmesini bekleyin veya PLUS satın alın.",
+    "errorID": "Sektör kimliği (ID) iletilmedi",
+    "errorData": "Galaksi verileri yüklenemedi",
+    "newRecord": "YENİ REKOR!",
+    "check": "PUAN:",
+    "again": "Yeniden havalan",
+    "constellations": "Takımyıldızdan ayrıl"
+  },
+  "textTasksTip": {
+    "title": "Metin görevleri",
+    "description": "Görevi tamamlamak için kelimeyi boş alana sürükleyin veya kelimeye tıklayıp ardından eklemek istediğiniz alana tıklayın."
+  },
+  "textThemes": {
+    "basic": "Tanışma",
+    "routine": "Günlük rutin",
+    "shopping": "Alışveriş",
+    "work": "İş ve eğitim",
+    "hobby": "Hobiler",
+    "objects": "Nesneler ve eşyalar",
+    "travel": "Seyahat"
+  },
+  "themeTextTitleBasic_A1": {
+    "basicOne": "Resmi tanışma",
+    "basicTwo": "Resmi olmayan tanışma",
+    "basicThree": "Günlük planlar",
+    "basicFour": "Akşam planları",
+    "basicFive": "Hafta sonu",
+    "basicSix": "Spor yapmak",
+    "basicSeven": "Birlikte yemek pişirmek",
+    "basicEight": "Şehir gezisi",
+    "basicNine": "Birlikte çalışmak",
+    "basicTen": "Müzikle ilgilenmek"
+  },
+  "themeTextTitleHobby_A1": {
+    "hobbyOne": "Futbol oynamak",
+    "hobbyTwo": "Fotoğrafçılık",
+    "hobbyThree": "Gitar çalmak",
+    "hobbyFour": "Yüzme",
+    "hobbyFive": "Yemek pişirme",
+    "hobbySix": "Seyahat",
+    "hobbySeven": "Kitap okuma",
+    "hobbyEight": "Bahçecilik",
+    "hobbyNine": "Dans",
+    "hobbyTen": "Dil öğrenimi"
+  },
+  "themeTextTitleRoutine_A1": {
+    "routineOne": "Günlük planlar",
+    "routineTwo": "Akşam planları",
+    "routineThree": "Hafta sonu",
+    "routineFour": "Spor yapmak",
+    "routineFive": "Birlikte yemek pişirmek",
+    "routineSix": "Şehir gezisi",
+    "routineSeven": "Birlikte çalışmak",
+    "routineEight": "Müzikle ilgilenmek",
+    "routineNine": "Kahve içmek",
+    "routineTen": "Parkta"
+  },
+  "themeTextTitleShopping_A1": {
+    "shoppingOne": "Süpermarkette",
+    "shoppingTwo": "Kıyafet aramak",
+    "shoppingThree": "Fırında",
+    "shoppingFour": "Online alışveriş",
+    "shoppingFive": "Pazarda",
+    "shoppingSix": "Ayakkabı mağazasında",
+    "shoppingSeven": "Mobilya alışverişi",
+    "shoppingEight": "Bitpazarında",
+    "shoppingNine": "Akşam yemeği",
+    "shoppingTen": "Kitapçıda"
+  },
+  "themeTextTitleTravel_A1": {
+    "travelOne": "Bavul hazırlamak",
+    "travelTwo": "İstasyonda",
+    "travelThree": "Otelde",
+    "travelFour": "Deniz tatili",
+    "travelFive": "Şehir turu",
+    "travelSix": "Restoranda",
+    "travelSeven": "Havalimanında",
+    "travelEight": "Dağlarda",
+    "travelNine": "Hediyelik eşya almak",
+    "travelTen": "Eve dönüş"
+  },
+  "themeTextTitleWork_A1": {
+    "workOne": "İş günüm",
+    "workTwo": "Belge aramak",
+    "workThree": "Üniversitede",
+    "workFour": "İşim",
+    "workFive": "Ödev",
+    "workSix": "Şantiyedeki işim",
+    "workSeven": "Evden çalışmak",
+    "workEight": "Depoda çalışmak",
+    "workNine": "Toplantı",
+    "workTen": "Öğle arası"
+  },
+  "themeTextTitleBasic_A2": {
+    "basicOne": "Almanca kursunda",
+    "basicTwo": "Tandem partneri",
+    "basicThree": "Üniversitede",
+    "basicFour": "Kütüphanede",
+    "basicFive": "Grup projesi",
+    "basicSix": "Dil gezisi",
+    "basicSeven": "Yeni öğrenci",
+    "basicEight": "Online kurs",
+    "basicNine": "Çalışma grubu",
+    "basicTen": "Sınav partneri"
+  },
+  "themeTextTitleHobby_A2": {
+    "hobbyOne": "Dağ yürüyüşü",
+    "hobbyTwo": "Fotoğrafçılık",
+    "hobbyThree": "Resim yapma",
+    "hobbyFour": "Dans",
+    "hobbyFive": "Futbol",
+    "hobbySix": "Yüzme",
+    "hobbySeven": "Masa oyunları",
+    "hobbyEight": "Masa oyunları ve mantık",
+    "hobbyNine": "Satranç",
+    "hobbyTen": "Filmler"
+  },
+  "themeTextTitleRoutine_A2": {
+    "routineOne": "Yeni komşu",
+    "routineTwo": "Kafede buluşma",
+    "routineThree": "Partide",
+    "routineFour": "Yeni meslektaşlar",
+    "routineFive": "Spor kulübünde",
+    "routineSix": "Trende karşılaşma",
+    "routineSeven": "Parkta köpekle",
+    "routineEight": "Partner arayışı",
+    "routineNine": "Konserde",
+    "routineTen": "Yeni ev arkadaşı"
+  },
+  "themeTextTitleShopping_A2": {
+    "shoppingOne": "Süpermarkette",
+    "shoppingTwo": "Kıyafet alışverişi",
+    "shoppingThree": "Pazarda",
+    "shoppingFour": "Online alışveriş",
+    "shoppingFive": "Mobilya mağazasında",
+    "shoppingSix": "Fırında",
+    "shoppingSeven": "Ayakkabı alışverişi",
+    "shoppingEight": "Hediye",
+    "shoppingNine": "Elektronik mağazasında",
+    "shoppingTen": "Büyük alışveriş"
+  },
+  "themeTextTitleTravel_A2": {
+    "travelOne": "Yolculuk hazırlığı",
+    "travelTwo": "Havalimanında",
+    "travelThree": "Otele varış",
+    "travelFour": "Plajda",
+    "travelFive": "Gezi",
+    "travelSix": "Restoranda",
+    "travelSeven": "Yol sorma",
+    "travelEight": "Tatilde sorunlar",
+    "travelNine": "Hediye alma",
+    "travelTen": "Eve dönüş"
+  },
+  "themeTextTitleWork_A2": {
+    "workOne": "İş görüşmesi",
+    "workTwo": "Ödev",
+    "workThree": "İlk iş günü",
+    "workFour": "Sunum",
+    "workFive": "Mesleki gelişim",
+    "workSix": "Ev-ofiste",
+    "workSeven": "Staj",
+    "workEight": "Sınav",
+    "workNine": "Dil kursu",
+    "workTen": "İlk müşteri"
+  },
+  "themeTextTitleBasic_B1": {
+    "basicOne": "Partide",
+    "basicTwo": "İlk randevu",
+    "basicThree": "Dil tandem ortaklığı",
+    "basicFour": "Trende karşılaşma",
+    "basicFive": "Yeni meslektaş",
+    "basicSix": "Seminerde",
+    "basicSeven": "Köpekle yürüyüşte",
+    "basicEight": "Yeni komşular",
+    "basicNine": "Spor kulübünde",
+    "basicTen": "Hostelde"
+  },
+  "themeTextTitleHobby_B1": {
+    "hobbyOne": "Gece fotoğrafçılığı",
+    "hobbyTwo": "Dağcılık",
+    "hobbyThree": "Piyano çalmak",
+    "hobbyFour": "Oyun geliştirme",
+    "hobbyFive": "Rüzgar sörfü",
+    "hobbySix": "Tiyatroda oynamak",
+    "hobbySeven": "Okçuluk",
+    "hobbyEight": "Motosiklet restorasyonu",
+    "hobbyNine": "Hamur işi pişirmek",
+    "hobbyTen": "Geocaching"
+  },
+  "themeTextTitleRoutine_B1": {
+    "routineOne": "Sabahın erken saatleri",
+    "routineTwo": "Kahvaltı ve işe gidiş",
+    "routineThree": "Ofiste",
+    "routineFour": "Öğle arası",
+    "routineFive": "Mesai bitimi",
+    "routineSix": "İş sonrası spor",
+    "routineSeven": "Akşam yemeği ve dinlenme",
+    "routineEight": "Yatağa hazırlık",
+    "routineNine": "Akşam yürüyüşü",
+    "routineTen": "Ev temizliği"
+  },
+  "themeTextTitleShopping_B1": {
+    "shoppingOne": "Kıyafet alışverişi",
+    "shoppingTwo": "Süpermarkette",
+    "shoppingThree": "Online teknoloji alışverişi",
+    "shoppingFour": "Bitpazarında",
+    "shoppingFive": "Hediye arayışı",
+    "shoppingSix": "Ürün iadesi",
+    "shoppingSeven": "Yapı marketinde",
+    "shoppingEight": "Eczanede",
+    "shoppingNine": "Pet shopta",
+    "shoppingTen": "İkinci el mağazasında"
+  },
+  "themeTextTitleTravel_B1": {
+    "travelOne": "Şehir gezisi",
+    "travelTwo": "Plaj tatili",
+    "travelThree": "Dağ yürüyüşü",
+    "travelFour": "Araba yolculuğu",
+    "travelFive": "Asya seyahati",
+    "travelSix": "Gemi turu",
+    "travelSeven": "Kamping",
+    "travelEight": "Kış tatili",
+    "travelNine": "Dil gezisi",
+    "travelTen": "Safari"
+  },
+  "themeTextTitleWork_B1": {
+    "workOne": "İş görüşmesi",
+    "workTwo": "Proje yönetimi",
+    "workThree": "Yurt dışı sömestri",
+    "workFour": "Ofiste sunum",
+    "workFive": "Sınavlara hazırlık",
+    "workSix": "Müşteri hizmetleri",
+    "workSeven": "Yüksek lisans tezi",
+    "workEight": "İş seyahati",
+    "workNine": "Staj",
+    "workTen": "Kurslar"
+  },
+  "textTaskSession": {
+    "allUsed": "Tüm kelimeler kullanıldı!",
+    "errorText": "Metin seçilmedi",
+    "back": "Listeye geri dön"
+  },
+  "exitSessionModal": {
+    "text": "Yarı yolda durmak çok yazık! Sekmeyi şimdi kapatırsanız emekleriniz kaydedilmeyecektir.",
+    "continueLesson": "Derse devam et",
+    "cancelLesson": "Çık"
+  },
+  "premiumBannerText": {
+    "text": "Platformdan en iyi şekilde yararlan, öğrenimini hızlandır."
+  },
+  "rulesModal": {
+    "text": "Dilbilgisi ipucu cevapladıktan sonra kullanılabilir!"
+  },
+  "footerNavLabel": {
+    "learn": "Öğren",
+    "games": "Oyunlar",
+    "home": "Ana Sayfa",
+    "events": "Etkinlikler",
+    "cabinet": "Hesap"
+  },
+  "speakTopics": {
+    "speak": "Tanışma ve sohbet",
+    "food": "Yiyecek ve alışveriş",
+    "transport": "Seyahat ve ulaşım",
+    "city": "Şehir hizmetleri ve günlük yaşam",
+    "health": "Sağlık",
+    "work": "İş ve kariyer",
+    "auto": "Araba ve yol"
+  },
+  "speakThemes": {
+    "firstmeet": "Tanışma",
+    "acquaintance": "Tanışma 2",
+    "secondmeet": "Buluşma",
+    "family_talk": "Sohbet",
+    "weekend_plans": "Planlar",
+    "friend_call": "Telefon görüşmesi",
+    "hobby_talk": "Hobiler",
+    "party_talk": "Parti",
+    "cafe_order": "Kahve siparişi",
+    "restaurant_dinner": "Restoran",
+    "store_checkout": "Kasada",
+    "order_eat": "Yemek siparişi",
+    "consultation_talk": "Danışma",
+    "train_station": "İstasyonda",
+    "train_ticket": "Bilet kontrolü",
+    "taxi_berlin": "Taksi",
+    "bus_talk": "Otobüste",
+    "hotel_checkin": "Otel",
+    "border_check": "Sınır",
+    "airport_talk": "Havalimanı",
+    "info_talk": "Danışma merkezi",
+    "bank_account": "Banka",
+    "apartment_rent": "Kira",
+    "clothes_shopping": "Alışveriş",
+    "shopping": "Alışveriş 2",
+    "post_office": "Postane",
+    "police_talk": "Polis",
+    "barbershop": "Kuaför",
+    "doctor_visit": "Doktor randevusu",
+    "pharmacy_vitamins": "Eczane",
+    "insurance": "Sigorta",
+    "at_doctor": "Doktorda",
+    "dentist": "Diş hekimi",
+    "veterinary": "Veteriner",
+    "job_looking": "İş arama",
+    "job_interview": "İş görüşmesi",
+    "bos_talk": "Yönetici ile konuşma",
+    "vacation": "Tatil",
+    "salary_talk": "Maaş",
+    "dismissal_talk": "İşten çıkarma",
+    "library": "Kütüphane",
+    "refusal_invite": "Daveti reddetme",
+    "road_assistance": "Araba arızası",
+    "oil_change": "Yağ değişimi",
+    "car_buying": "Araba satın alma",
+    "police_control": "Hız ihlali",
+    "gas_station": "Akaryakıt istasyonu",
+    "buying_fruit": "Meyve alışverişi",
+    "bakery": "Fırın",
+    "complaint": "Restoranda şikayet",
+    "bus_stop": "Otobüs durağı",
+    "buying_glasses": "Optik",
+    "emergency_call": "Acil durum araması",
+    "first_day": "Oryantasyon günü / İlk gün",
+    "client_talk": "Müşteri ile görüşme",
+    "car_rental": "Araç kiralama",
+    "ask_road": "Yol sorma",
+    "hotel_issue": "Otelde sorun"
+  },
+  "speakIndexPage": {
+    "title": "Konuşma pratiği",
+    "bannerText": "Gerçek örneklerle konuşma becerilerini geliştir",
+    "modalTitle": "Konuşma pratiği",
+    "modalText": "Gerçek diyaloglarla iletişim becerilerinizi geliştirin! Sunulan hazır cevaplardan birini seçebilir, klavyeden manuel olarak yazabilir veya sadece mikrofon düğmesine basarak sesli bir şekilde söyleyebilirsiniz."
+  },
+  "rankModal": {
+    "title": "YENİ RÜTBE",
+    "rankedLabel": "Rütbe",
+    "accept": "KABUL ET"
+  },
+  "premiumBanner": {
+    "textBanner": "Platformdan en iyi şekilde yararlan, öğrenimini hızlandır."
+  },
+  "netWork": {
+    "successTitle": "Bağlantı sağlandı!",
+    "notSuccessTitle": "Hata! İnternet yok",
+    "successText": "Çalışmaya devam ediyoruz...",
+    "notSuccessText": "Ağ bağlantısı bekleniyor..."
+  },
+  "termsBlock": {
+    "first": "Kaydolarak şunları kabul etmiş olursunuz:",
+    "second": "Kullanım Koşulları",
+    "third": "ve",
+    "fourth": "Gizlilik Politikası"
+  },
+  "languagePage": {
+    "title": "Uygulama dili",
+    "placeholder": "Dil ara...",
+    "notfound": "Hiçbir şey bulunamadı",
+    "further": "Devam et"
+  },
+  "statistics": {
+    "title": "Kelime öğrenme ve tematik seviyeleri tamamlama konusundaki istatistikleriniz ve ilerlemeniz"
+  },
+  "restoreComputed": {
+    "restoring": "Geri yükleniyor...",
+    "restore": "Satın almaları geri yükle."
+  },
+  "submitComputed": {
+    "sync": "Senkronize ediliyor...",
+    "getPlus": "PLUS Satın Al"
+  },
+  "pay": {
+    "banner": "Uygulamanın tüm özelliklerine tam erişim",
+    "sales": "Aktivitelerden kazanılan indirimleri uygula",
+    "triggerToastSuccess": "Satın alma geri yüklendi!",
+    "triggerToastNotFound": "Aktif abonelik bulunamadı",
+    "triggerToastError": "Geri yükleme sırasında hata oluştu",
+    "triggerToastIsPlus": "Zaten aktif bir PLUS aboneliğiniz var!"
+  },
+  "examSession": {
+    "ready": "Teste hazır mısınız?",
+    "cardTextOne": "Sizi",
+    "cardTextTwo": "aşama ve",
+    "cardTextThree": "görev bekliyor.",
+    "begin": "Testi başlat",
+    "listen": "Sesi dinleyin:",
+    "check": "Kontrol ediliyor...",
+    "send": "Cevabı gönder",
+    "record": "Kayıt",
+    "great": "Tebrikler!",
+    "result": "Şu seviye için sonucunuz:",
+    "save": "İlerleme kaydediliyor...",
+    "correctly": "Doğru:",
+    "back": "Geri dön",
+    "interrupt": "Testi yarıda kes?",
+    "modalText": "Bu denemedeki ilerlemeniz kaybolacak. Emin misiniz?",
+    "continue": "Devam et",
+    "leave": "Çıkış yap",
+    "placeHolder": "Cevabınızı buraya yazın...",
+    "say": "Söyleyin:"
+  },
+  "speakSession": {
+    "wordList": "Diyalog kelimeleri",
+    "practiceWords": "Kelimeleri çalış",
+    "title": "Konuşma pratiği",
+    "words": "Kelimeler",
+    "wordsText": "Konuşmaya başlamadan önce kelimeleri öğrenin veya tekrarlayın. Bu, kendinizi daha güvende hissetmenize yardımcı olur!",
+    "learn": "Başla",
+    "dialogue": "Diyalog",
+    "dialogueText": "Telaffuz ve konuşma pratiği yapın, karşınızdakini dinleyin ve etkileşimli formatta cevapları seçin.",
+    "back": "Geri",
+    "goodJob": "Harika iş!",
+    "goodJobTitle": "Bu diyaloğu tamamladınız. Aynen böyle devam!",
+    "list": "Geri dön",
+    "repeat": "Tekrar et",
+    "start": "Öğrenmeye başla",
+    "choice": "Cevap seçin:",
+    "placeHolder": "Cevabı yazın veya söyleyin...",
+    "hoverVoice": "Sesli söyle",
+    "end": "Bitir",
+    "further": "İleri"
+  },
+  "recipeIndexArticleAnswer": {
+    "modalTitle": "Tekrar dene?",
+    "textPartOne": "Doğru cevap verdiniz",
+    "textPartTwo": "Devam etmek için bir hak satın alın.",
+    "price": "Fiyat:",
+    "youHave": "Sahip olduğunuz:",
+    "showADS": "Reklam izle",
+    "buyBy": "Şunun için satın al",
+    "toThemes": "Konulara dön",
+    "repeat": "Tekrar et"
+  },
+  "freezeStatus": {
+    "active": "Zaman dondurma aktif",
+    "inactive": "Zaman dondurma aktif değil"
+  },
+  "guessArticle": {
+    "correct": "Doğru",
+    "incorrect": "Yanlış, doğrusu"
+  },
+
+  "stripeCancel": {
+    "cancelSub": "Aboneliği iptal et",
+    "cancelPayment": "Ödeme iptal edildi",
+    "errorAuth": "Kimlik doğrulama hatası",
+    "pleaseAuth": "Lütfen bu işlemi gerçekleştirmek için giriş yapın.",
+    "canceling": "Abonelik iptal ediliyor...",
+    "canceledSub": "Abonelik iptal edildi",
+    "errorCancelSub": "İptal sırasında hata oluştu",
+    "errorCancelResponse": "Abonelik iptal edilemedi.",
+    "serverError": "Sunucu hatası",
+    "serverOffline": "Sunucuyla bağlantı kesildi. Lütfen daha sonra tekrar deneyin.",
+    "processInterrupted": "Ödeme işlemi kesintiye uğradı. Kartınızdan herhangi bir ücret alınmadı.",
+    "tryAgain": "Tekrar dene",
+    "backToMain": "Ana sayfaya",
+    "extensionCanceled": "Otomatik yenileme devre dışı bırakılacak. Erişiminiz ödenen dönemin sonuna kadar devam edecektir.",
+    "extensionCanceledCanBack": "Aboneliğiniz artık yenilenmeyecek. İstediğiniz zaman geri dönebilirsiniz!",
+    "confirmCancel": "Evet, iptal et",
+    "notConfirmCancel": "İptal etme",
+    "backToMainPage": "Ana sayfaya geri dön"
+  },
+  "stripeSuccess": {
+    "acceptTransaction": "İşlem onaylanıyor...",
+    "sessionNotFound": "Ödeme oturumu bulunamadı",
+    "authPlease": "Tamamlamak için lütfen giriş yapın",
+    "isPremium": "Premium erişim aktif edildi",
+    "errorActivation": "Aktivasyon hatası",
+    "errorServer": "Sunucu bağlantı hatası",
+    "success": "Artık servisin tüm özelliklerine erişebilirsiniz.",
+    "unsuccess": "İşlem sırasında teknik bir aksaklık oluştu.",
+    "toMain": " Ana sayfaya",
+    "redirectSuccess": "Birkaç saniye içinde yönlendiriliyorsunuz..."
+  },
+  "installApp": {
+    "stayInBrowser": "Tarayıcıda devam et",
+    "promoSubTitle": " Skillupgerman uygulaması ile Almanca öğrenmek çok daha pratik."
+  },
+  "speakSessionsBanner": {
+    "dialog": "Diyalogları tamamlayın. Dinleyin, cevap seçeneklerini belirleyin ve telaffuz pratiği yapın",
+    "words": "Diyalogdaki her repliği kolayca anlamak için anahtar kelimeleri ve ifadeleri öğrenin"
+  },
+  "newsTitleBanner": {
+    "title": "Almanca dilinin özellikleri hakkında makaleler, konu analizleri ve seviyenizi yükseltecek faydalı bilgiler.",
+    "badgeArticle": "Skillupgerman dünyasında"
+  },
+  "newsArticleOne": {
+    "first": "Stresli veya üzgün olduğunda çikolataya mı sarılıyorsun? Karşılaş: der Kummerspeck.",
+    "second": "Bu, endişeler yüzünden ısrarla ortaya çıkan o fazla kilolardır. Kelime anlamıyla - 'keder pastırması'.",
+    "third": "der Kummer (keder) ve der Speck (pastırma/yağ) kelimelerinden oluşur. Tahmin edileceği gibi, bu 'pastırma' cinsiyetini son ismin artikeli olan 'der'den alır.",
+    "cta": "İtiraf et, sende hiç Kummerspeck oldu mu?"
+  },
+  "newsArticleTwo": {
+    "first": "İş gününün nihayet bittiği o kutsal huzur anını bilir misin? İşte o der Feierabend.",
+    "second": "Kelime anlamıyla - 'kutlama akşamı'. İş hakkında düşünmenin bile yasak olduğu, dinlenmeye ayrılan özel bir zaman dilimi.",
+    "third": "die Feier (kutlama) ve der Abend (akşam) kelimelerinden oluşur. Bu keyifli zamanın artikeli, son ismin artikelinden gelir — der Abend.",
+    "cta": "İş yerinde her zaman Feierabend'ı mı beklersin?"
+  },
+  "newsArticleThree": {
+    "first": "Almanca, cümledeki yerine bakılmaksızın kesinlikle tüm isimlerin büyük harfle yazıldığı dünyadaki tek büyük dildir.",
+    "second": "Bir insandan, bir köpekten, sıradan bir sandalyeden veya soyut bir düşünceden bahsedilmesi fark etmez; ilk harf her zaman büyük olur. Bu durum, öğrenme aşamasında yeni başlayanların kafasını sıkça karıştırır.",
+    "third": "Ancak bu kuralın çok büyük bir artısı vardır: Almanca bir metni okurken, nesnenin cümle içinde tam olarak nerede saklandığını her zaman hatasız ve ilk bakışta belirleyebilirsiniz.",
+    "cta": "Kullanışlı bir kural mı?"
+  },
+  "newsArticleFour": {
+    "first": "Almanca öğrenirken beyni en çok zorlayan şeylerden biri de sayılardır. Almanlar iki basamaklı sayıları sondan başlayarak söylerler.",
+    "second": "Örneğin, yirmi bir sayısını 'bir ve yirmi' şeklinde söylerler. Bu nedenle, Almanca bir konuşmayı dinlerken sayıları zihninizde tersine çevirmeniz gerekir.",
+    "third": "Bu dilsel tuhaflık, özellikle birinin telefon numarasını veya mağazadaki bir fiyatı duyarak hızlıca not etmek gerektiğinde, yeni başlayanların ezberini sıkça bozar.",
+    "cta": "Bu sayma şekline çabuk alıştınız mı yoksa hâlâ karıştırıyor musunuz?"
+  },
+  "newsArticleFive": {
+    "first": "Almancada, sizi karşınızdakini son kelimesine kadar dinlemeye zorlayan katı bir sözdizimi kuralı vardır.",
+    "second": "Belirli cümle türlerinde, eylemi belirten en önemli ana fiil cümlenin en oscillation en sonuna uçar.",
+    "third": "Uzun una bir cümle kurabilir, bir sürü detay sıralayabilirsiniz; fakat dinleyiciniz, siz son kelimeyi söyleyene kadar o şeyi satın mı aldığınızı, sattığınızı mı, kırdığınızı mı yoksa kaybettiğinizi mi asla bilemez.",
+    "cta": "Düşünce yapısını böyle bir kelime sırasına göre değiştirmek zor mu?"
+  },
+  "newsArticleSix": {
+    "first": "Almanca öğrenirken er ya da geç bazı kelimelerin uzunluğu yüzünden panikleyeceğiniz kesin. İşin sırrı şu ki, Almancada resmi olarak bir isim uzunluğu sınırı yoktur.",
+    "second": "Sırf tek bir nesneyi tarif etmek için kelimeleri birbirine sonsuza dek yapıştırabilir, harflerden devasa lokomotifler oluşturabilirsiniz.",
+    "third": "Ancak burada hayat kurtaran temel bir kural devreye girer: Bu canavarın uzunluğu ne kadar çılgınca olursa olsun, kelimenin nihai artikeli her zaman tereddütsüz bir şekilde en sondaki kelimeden gelir.",
+    "cta": "Böyle tren gibi upuzun kelimeler gözünüzü korkutuyor mu?"
+  },
+  "newsArticleSeven": {
+    "first": "Önemli bir olaydan önce veya uyumadan hemen önce, kafanızda kurgusal senaryoları ve koca bir filmi tüm canlılığıyla oynatmaya başladığınız olur mu? Almanlar bu durumu kafanın içindeki sinema salonu olarak tanımlar.",
+    "second": "Hayal gücünüzün veya kaygılarınızın o kadar çok canlandığı bir andır ki, kelimenin tam anlamıyla kendi düşüncelerinizin yönetmenliğine ve seyrine dalıp gidersiniz.",
+    "third": "Bu kelime der Kopf (kafa) ve das Kino (sinema) kelimelerinin birleşmesiyle oluşmuştur. Bu zihinsel sinema, nihai nötr cinsiyetini (das) uysalca son ismin artikelinden alır.",
+    "cta": "Uyumadan önce sizde de sık sık böyle bir Kopfkino açılır mı?"
+  },
+  "newsArticleEight": {
+    "first": "Konu dış görünüş ve kilo olduğunda Almanca kendiyle alay etmeyi çok iyi bilir. Eğer bel çevrenizde biraz fazla kilo oluştuysa, Almanlar yağ katmanlarından bahsetmezler; buna kalçalardaki altın derler.",
+    "second": "Kelime anlamıyla 'kalça altını' demektir. Lezzetli Alman sosisleri, çörekleri veya birasından sonra yuvarlaklaşan simit bölgeleri için son derece kibar ve değerli bir tanımlama.",
+    "third": "Kelime die Hüfte (kalça) ve das Gold (altın) kelimelerinden oluşur. Tahmin edileceği üzere bu eğlenceli kelime, parlak nötr cinsiyetini son ismin artikelinden alır.",
+    "cta": "Bu şiirsel ismi nasıl buldunuz?"
+  },
+  "newsArticleNine": {
+    "first": "Ev hasretinin ne olduğunu herkes bilir, ancak Almanların bunun tam tersi bir duygu için eşsiz bir kelimesi vardır. Bu, uzak ülkelere ve seyahate duyulan özlemdir.",
+    "second": "Kelime anlamıyla 'uzaklık acısı' olarak çevrilir. Evde otururken hiç gitmediğiniz yerlere gitmeyi dayanılmaz bir şekilde arzuladığınız o sızım sızım sızlayan duygudur.",
+    "third": "Kelime die Ferne (uzaklık) ve das Weh (acı/dert) kelimelerinden oluşur. Bu romantik özlem, nihai nötr cinsiyetini son kelimenin artikelinden alır.",
+    "cta": "Sizde de ara sıra böyle bir Fernweh baş gösterir mi?"
+  },
+  "newsArticleTen": {
+    "first": "Sıradan bir elektrik ampulüne bakın. Size hangi şekli hatırlatıyor? Almanlar onda parıldayan bir meyve gördüler.",
+    "second": "Bu kelimenin tam çevirisi 'parıldayan armut' şeklindedir. Alışık olduğumuz bu cihaz için çok samimi, basit ve sıcak bir evsel tanımlama.",
+    "third": "glühen (parıldamak/akor haline gelmek) fiili ile die Birne (armut) isminden türetilmiştir. Ampulümüz dişil cinsiyetini (die) en sondaki kelimenin artikelinden alır — die Birne.",
+    "cta": "Ampul sizce de armuda benziyor mu?"
+  },
+  "newsArticleEleven": {
+    "first": "Aşkınız karşılıksız kaldığında çektiğiniz o ağır ruhsal acıyı nasıl adlandırırsınız? Almanlar bu hisleri tek bir kapsayıcı kavramda birleştirdi.",
+    "second": "Kelime anlamıyla 'aşk kederi' olarak çevrilir. Kelimenin tam anlamıyla kalbi paramparça eden o özlem ve hüzün için çok isabetli bir tanımlama.",
+    "third": "Sözcük die Liebe (aşk) ve der Kummer (keder/dert) kelimelerinden türetilmiştir. Bu kırık kalp, eril cinsiyetini (der) uysalca en sondaki kelimenin artikelinden alır — der Kummer.",
+    "cta": "Tanıdık bir duygu mu?"
+  },
+  "newsArticleTwelve": {
+    "first": "Yağmurdan sonra ormanda yürürken kabuksuz sıradan bir sümüklüböcek gördünüz mü? Almanca onu olabildiğince çıplak bir şekilde tanımlıyor.",
+    "second": "Bu eğlenceli kelimenin tam çevirisi 'çıplak salyangoz' şeklindedir. Gerçekten de, evsiz kalmış bir salyangozdan ibaretse neden yeni bir isim uydurulsun ki?",
+    "third": "nackt (çıplak) sıfatı ve die Schnecke (salyangoz) isminden oluşmuştur. Bu orman sakini, cinsiyetini en sondaki kelimenin artikelinden alır.",
+    "cta": "Bu isim sizi gülümsetti mi?"
+  },
+  "newsArticleThirteen": {
+    "first": "Eğer daha önce İngilizce öğrendiyseniz, size harika bir haberimiz var. Hiç özel olarak çalışmamış olsanız bile, bazı Almanca kelimeleri zaten otomatik olarak biliyorsunuz.",
+    "second": "Mesele şu ki, İngilizce ve Almanca aynı Cermen dil ailesinden gelen yakın akrabalardır. Erkek kardeş, kız kardeş, su, yeşil veya elma gibi kelimeler yazılış ve okunuş olarak inanılmaz derecede benzerdir.",
+    "third": "İşte tam de bu yüzden, İngilizce altyapısı ile Almanca kelimeleri öğrenmek çok daha hızlı olur; beyniniz bilinçaltında tanıdık kalıpları hemen fark eder.",
+    "cta": "İngilizce ve Almanca arasındaki benzerliği fark etmiş miydiniz?"
+  },
+  "newsArticleFourteen": {
+    "first": "Büyük B harfi gibi yazılan Almanca eszett harfi, Almanca alfabesinin benzersiz bir kartvizitidir. Ancak dili öğrenirken, bu harfin Almanca konuşulan tüm bölgelerde kullanılmadığını çok az kişi bilir.",
+    "second": "İsviçre ve Lihtenştayn'da bu harf geçen yüzyılda resmi olarak ve tamamen kullanımdan kaldırıldı. İsviçre okullarında, gazetelerinde ve resmi belgelerinde bunun yerine her yerde alışık olduğumuz çift 'ss' harfleri yazılır.",
+    "third": "Bu durum, İsviçrelilerin klavye düzeninde aynı anda hem Almanca hem de Fransızca karakterler için yeterli alana sahip olamadığı daktiloların kitlesel olarak yaygınlaşması nedeniyle gerçekleşti. Dolayısıyla, İsviçre menşeili metinleri okursanız bu harfi orada bulamazsınız.",
+    "cta": "Almanca alfabesinin bu İsviçre sırrını biliyor muydunuz?"
+  },
+  "newsArticleFifteen": {
+    "first": "Almancada, kesinlikle aynı şekilde yazılan ancak vurguya bağlı olarak anlamı tamamen değişen inanılmaz 'şekil değiştiren' fiiller vardır. Bu durum yeni başlayanları genellikle şoka uğratır.",
+    "second": "Bunun en net örneği umfahren fiilidir. Eğer vurguyu kelimenin ilk kısmına koyarsanız, bu bir Engeleyi devirmek, çarpmak veya ezmek anlamına gelir. Ancak vurguyu ikinci kısma kaydırdığınız anda, kelime anında tamamen zıt bir anlama bürünür: bir engelin etrafından dolaşmak (kaçınmak).",
+    "third": "İşte bu yüzden, bu tarz fiilleri öğrenirken vurgunun nereye düştüğünü dinlemek kritik önem taşır; aksi takdirde Almanya'daki direksiyon dersinde yanlışlıkla eğitmeninize kalp krizi geçirtebilirsiniz.",
+    "cta": "İki anlama gelen bu sinsi fiillerden haberdar mıydınız?"
+  },
+  "newsArticleSixteen": {
+    "first": "Yabancılar bir konuyu anlamadıklarında genellikle 'Bu bana Fransız kaldı' derler. Almanlarda ise böyle durumlarda tamamen demiryolu mantığı devreye girer.",
+    "second": "Eğer bir Alman karşısındakini hiçbir şekilde anlamıyor ya da onu dinlemek istemiyorsa şöyle der: 'Ich verstehe nur Bahnhof' (Sadece tren istasyonu anlıyorum).",
+    "third": "Zamanla bu ifade popüler bir deyim haline geldi. Artık birisi size yolu çok karmaşık anlattığında veya kafanızı zor bir konuyla şişirdiğinde bu ifadeyi rahatlıkla kullanabilirsiniz.",
+    "cta": "Tren istasyonuyla ilgili bu eğlenceli deyimi daha önce duymuş muydunuz?"
+  },
+  "newsArticleSeventeen": {
+    "first": "der, die, das artikellerini öğrenmek, Almanca çalışan herkes için bitmek bilmeyen bir baş ağrısıdır. Ancak endişelenmeyin; bazen doğru artikel seçiminden anadili Almanca olanlar bile emin olamıyor.",
+    "second": "Almanya'daki en gerçek ve sonu gelmez dilbilimsel savaş, her sabah kahvaltıda ünlü çikolata kreması Nutella etrafında yaşanıyor. Almanlar onlarca yıldır Nutella'nın hangi cinsiyette olduğunu tartışıyor.",
+    "third": "Kimileri krema (creme) olduğu için 'die' diyor, kimileri ise yabancı ürün isimlerine uygulanan nötr cinsiyet olduğu için 'das' olması gerektiğini savunuyor. Tartışma öyle bir boyuta ulaştı ki, resmi Duden sözlüğü bile pes ederek Nutella'nın sabit bir artikeli olmadığını ve her iki seçeneğin de kullanılabileceğini kabul etti.",
+    "cta": "Peki siz Nutella'ya hangi artikeli verirdiniz?"
+  },
+  "newsArticleEighteen": {
+    "first": "Eğer bir kişi burnunun dibinde gerçekleşen bariz şeyleri inatla fark etmiyorsa, Almanlar onun dikkatsiz olduğunu söylemezler. Yüzünde sebze bulurlar.",
+    "second": "Bu ikonik deyimin tam çevirisi 'gözlerinde domates olmak' şeklindedir. Kırmızı ışığı görmeyen bir sürücü veya ipuçlarınızı ısrarla fark etmeyen bir arkadaş için bu söylenir.",
+    "third": "İfadenin kökenleri, suçluların bir utanç göstergesi olarak göz bağı takmaya zorlandığı ve bazen gözlerine gerçek sebzelerin bağlandığı eski mahkemelere kadar uzanır. Bugün ise bu, karşınızdakine gözünü açma vaktinin geldiğini söylemenin eğlenceli bir yoludur.",
+    "cta": "Domateslerle ilgili bu sözü daha önce duymuş muydunuz?"
+  },
+  "newsArticleNineteen": {
+    "first": "Almanca ders kitaplarında bize günün saatine göre selamlaşmayı öğretirler: günaydın, iyi günler veya iyi akşamlar. Ancak Almanya'nın kuzeyinde bu sistemle sadece dalga geçerler.",
+    "second": "Orada istisnasız herkes tek bir ikonik kelime kullanır: Moin. İşin en ilginç yanı, bunu kesinlikle her zaman söyleyebilmenizdir: sabah saat sekizde patronunuza, öğleden sonra saat üçte bir satıcıya veya gecenin bir yarısı bardaki arkadaşlarınıza. Sadece 'selam' anlamına gelir.",
+    "third": "Ancak dikkatli olun: Selamı pekiştirmek isteyip 'Moin Moin' derseniz, yerel halk sizi hemen çok geveze biri olarak görecektir. Kuzeyde sadelik ve kısa konuşma değer görür, bu yüzden tek bir kelime fazlasıyla yeterlidir.",
+    "cta": "Almanya'da yaşayanlardan böyle bir selamlaşmayı daha önce duymuş muydunuz?"
+  },
+  "newsTitle": {
+    "article_3": "Tüm isimler büyük harfle!",
+    "article_4": "Sayılar tersten okunuyor!",
+    "article_5": "Fiil cümlenin en sonunda!",
+    "article_6": "Ucu bucağı olmayan kelimeler!",
+    "article_13": "Zaten pek çok Almanca kelime biliyorsunuz!",
+    "article_14": "Koskoca bir ülkenin vazgeçtiği harf!",
+    "article_15": "Bir fiil - iki zıt anlam!",
+    "article_17": "Nutella'nın artikeli savaşı!",
+    "article_19": "Moin her duruma uyar!"
+  },
+  "i18nDays": {
+    "days": "g",
+    "hours": "sa",
+    "mins": "dk"
+  },
+  "headUp": {
+    "audioTasks": "يجب اختيار خيار إجابة واحد على الأقل",
+    "speakTasks": "Sadece sunulan seçenekler kullanılabilir."
+  },
+  "helpCenter": {
+    "privacy": "Gizlilik politikası",
+    "faq": "Sıkça sorulan sorular",
+    "terms": "Kullanım şartları",
+    "attributions": "Atıflar"
+  },
+  "rankAvatars": {
+    "locked_easy_1": "Bu profil resmi, Artikel Maratonu'nda (Kolay mod) 1.lik ödülüdür.",
+    "locked_easy_2": "Bu profil resmi, Artikel Maratonu'nda (Kolay mod) 2.lik ödülüdür.",
+    "locked_easy_3": "Bu profil resmi, Artikel Maratonu'nda (Kolay mod) 3.lük ödülüdür.",
+    "locked_normal_1": "Bu profil resmi, Artikel Maratonu'nda (Normal mod) 1.lik ödülüdür.",
+    "locked_normal_2": "Bu profil resmi, Artikel Maratonu'nda (Normal mod) 2.lik ödülüdür.",
+    "locked_normal_3": "Bu profil resmi, Artikel Maratonu'nda (Normal mod) 3.lük ödülüdür.",
+    "locked_hard_1": "Bu profil resmi, Artikel Maratonu'nda (Zor mod) 1.lik ödülüdür.",
+    "locked_hard_2": "Bu profil resmi, Artikel Maratonu'nda (Zor mod) 2.lik ödülüdür.",
+    "locked_hard_3": "Bu profil resmi, Artikel Maratonu'nda (Zor mod) 3.lük ödülüdür."
+  },
+  "typeOfAvatars": {
+    "usual": "Normal",
+    "ranked": "Ödüllü"
+  },
+  "marathonEasy": {
+    "title": "Artikel Maratonu Kolay Seviye",
+    "easyOneName": "Muzaffer Stajyer",
+    "easyOneDescription": "Artikel maratonu sıralamasında birinci olun (Kolay mod)",
+    "easyTwoName": "Layık Rakip",
+    "easyTwoDescription": "Artikel maratonu sıralamasında ikinci olun (Kolay mod)",
+    "easyThreeName": "Artikel Çırağı",
+    "easyThreeDescription": "Artikel maratonu sıralamasında üçüncü olun (Kolay mod)"
+  },
+  "marathonNormal": {
+    "title": "Artikel Maratonu Orta Seviye",
+    "normalOneName": "Artikel Ustası",
+    "normalOneDescription": "Artikel maratonu sıralamasında birinci olun (Orta mod)",
+    "normalTwoName": "Maraton Fatihi",
+    "normalTwoDescription": "Artikel maratonu sıralamasında ikinci olun (Orta mod)",
+    "normalThreeName": "Kelime Bilgesi",
+    "normalThreeDescription": "Artikel maratonu sıralamasında üçüncü olun (Orta mod)"
+  },
+  "marathonHard": {
+    "title": "Artikel Maratonu Zor Seviye",
+    "normalOneName": "Artikel İmparatoru",
+    "normalOneDescription": "Artikel maratonu sıralamasında birinci olun (Zor mod)",
+    "normalTwoName": "Maraton Efsanesi",
+    "normalTwoDescription": "Artikel maratonu sıralamasında ikinci olun (Zor mod)",
+    "normalThreeName": "Maraton Müptelası",
+    "normalThreeDescription": "Artikel maratonu sıralamasında üçüncü olun (Zor mod)"
+  },
+  "activePlus": {
+    "title": "Plus Aktif!",
+    "description": "Tüm özelliklerin kilidi zaten açıldı"
+  },
+  "newsBannerText": {
+    "text": "Merhaba! Skillupgerman her gün burada Almanca hakkında ilginç haberler yayınlıyor. Keyifle öğrenin!"
+  },
+  "marathonLeaderBoard": {
+    "stateHint": "Yarış yakında başlayacak! Yeni sezona hazır olun.",
+    "seasonEndsIn": "Maratonun bitmesine:",
+    "seasonStartsIn": "Maratonun başlamasına:"
+  },
+  "errorPage": {
+    "game-title": "Ups, bir şeyler ters gitti...",
+    "game-desc": "Madem buradayız, biraz ısınma hareketi yapalım. Doğru artikeli seçin:",
+    "win-screen": "Harika iş çıkardın!",
+    "win-desc": "Artık derslerine geri dönebilirsin."
+  },
+  "appBanner": {
+    "promo": "Almanca her zaman elinizin altında",
+    "promo_sub": "Yolda, molada veya uyumadan önce öğrenmeye devam edin!",
+    "subTextApple": "İndirin",
+    "subTextAriaApple": "App Store'dan indirin",
+    "subTextGoogle": "Şuradan ulaşın:",
+    "subTextAriaGoogle": "Google Play'de mevcut"
+  },
+  "public__copyright": {
+    "text": "Skillupgerman. Tüm hakları saklıdır."
   }
 }

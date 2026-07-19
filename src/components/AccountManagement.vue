@@ -1,56 +1,60 @@
 <template>
   <div class="account-tab-body">
-<!--    <div class="subscription-status-row">-->
-<!--      <div class="subscription-label">{{ t('cabinet.status') }}</div>-->
-<!--      <div class="subscription-status">-->
-<!--        <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">-->
-<!--          <span class="status-pill is-active">✅ {{ t('cabinet.active') }}</span>-->
-<!--        </template>-->
-<!--        <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">-->
-<!--          <span class="status-pill is-cancelled">⚠️ {{ t('cabinet.canceled') }}</span>-->
-<!--        </template>-->
-<!--        <template v-else>-->
-<!--          <div class="status-inline">-->
-<!--            <span class="status-pill is-free">❌</span>-->
-<!--            <button @click="routeToPay" class="premium__btn">-->
-<!--              {{ t('cabinet.buyPremium') }}-->
-<!--            </button>-->
-<!--          </div>-->
-<!--        </template>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">-->
-<!--      <div class="premium__status-wrapper">-->
-<!--        <p class="subtext">-->
-<!--          📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}-->
-<!--        </p>-->
-<!--        <button class="btn btn-outline-danger" @click.stop="openCancelModal">-->
-<!--          {{ t('cabinet.cancelBtn') }}-->
-<!--        </button>-->
-<!--      </div>-->
-<!--    </template>-->
-<!--    <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">-->
-<!--      <p class="access__text">-->
-<!--        📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}-->
-<!--      </p>-->
-<!--    </template>-->
-    <div class="account-actions">
-      <button @click.stop="openDeleteModal" class="btn btn-danger w-full">
-        {{ t('cabinet.deleteAcc') }}
-      </button>
+    <div
+        class="premium-banner"
+        :class="{
+        'is-active': authStore.isPremium && !authStore.subscriptionCancelled,
+        'is-cancelled': authStore.isPremium && authStore.subscriptionCancelled
+      }"
+    >
+      <div class="premium-top">
+        <div class="premium-text">
+          <p v-if="authStore.isPremium && !authStore.subscriptionCancelled">
+            📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}
+          </p>
+          <p v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
+            📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}
+          </p>
+          <p v-else>
+            {{ t('premiumBanner.textBanner')}}
+          </p>
+        </div>
+        <img
+            :src="PlusIcon"
+            alt="Plus Logo"
+            class="premium-logo"
+            :class="{ 'grayscale-logo': !authStore.isPremium }"
+        />
+      </div>
+      <div class="premium-actions">
+        <button
+            v-if="!authStore.isPremium"
+            @click="routeToPay"
+            class="premium-action-btn"
+        >
+          {{ t('cabinet.buyPremium') }}
+        </button>
+        <button
+            v-if="authStore.isPremium && !authStore.subscriptionCancelled && authStore.paymentSource === 'stripe'"
+            @click.stop="openCancelModal"
+            class="premium-action-btn btn-cancel"
+        >
+          {{ t('cabinet.cancelBtn') }}
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import {computed} from 'vue'
-import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
-import {userAuthStore} from '../../store/authStore.js'
+import { computed } from 'vue'
+import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+import { userAuthStore } from '../../store/authStore.js'
+import PlusIcon from '../../assets/images/PlusLogo.png'
 
 const emit = defineEmits(['open'])
-
-const {t, locale} = useI18n()
+const { t, locale } = useI18n()
 const router = useRouter()
 const authStore = userAuthStore()
 
@@ -64,177 +68,133 @@ const routeToPay = () => {
   router.push('/pay')
 }
 
-const openCancelModal =() => {
+const openCancelModal = () => {
   emit('open', 'cancelPremium')
-}
-
-const openDeleteModal = () => {
-  emit('open', 'deleteAccount')
 }
 </script>
 
 <style scoped>
-.account-tab-body {
-  padding: 6px 0;
+.premium-banner {
+  margin-top: 5px;
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+  border-radius: 24px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  gap: 15px;
 }
 
-.subscription-status-row {
+.premium-banner::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+.premium-banner.is-active {
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+  box-shadow: 0 8px 20px rgba(72, 206, 236, 0.25);
+}
+
+.premium-banner.is-cancelled {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25);
+}
+
+.premium-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 6px;
-  margin-top: 6px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  width: 100%;
+  gap: 15px;
+  z-index: 1;
 }
 
-.subscription-label {
-  font-weight: 800;
-  opacity: 0.85;
-  color: var(--titleColor);
-  white-space: nowrap;
+.premium-text {
+  flex: 1;
 }
 
-.subscription-status {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  min-width: 220px;
+.premium-logo {
+  height: 84px;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
-.status-inline {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.grayscale-logo {
+  filter: grayscale(1);
 }
 
-.status-pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 14px;
-  gap: 8px;
-  border-radius: 999px;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(231, 223, 223, 0.92);
-  backdrop-filter: blur(6px);
-}
-
-.status-pill.is-active {
-  border-color: rgba(34, 197, 94, 0.35);
-  background: rgba(34, 197, 94, 0.12);
-}
-
-.status-pill.is-cancelled {
-  border-color: rgba(245, 158, 11, 0.35);
-  background: rgba(245, 158, 11, 0.12);
-}
-
-.status-pill.is-free {
-  border-color: rgba(148, 163, 184, 0.35);
-  background: rgba(148, 163, 184, 0.10);
-  color: var(--titleColor);
-
-}
-
-.premium__btn {
-  padding: 8px 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(59, 130, 246, 0.18);
-  color: var(--titleColor);
-  font-weight: 800;
-  cursor: pointer;
-  box-shadow: none;
-  transition: transform 0.15s ease, background 0.15s ease;
-}
-
-@media (min-width: 1024px) {
-  .premium__btn:hover {
-    transform: translateY(-1px);
-    background: rgba(59, 130, 246, 0.24);
-  }
-}
-
-.premium__status-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 6px 0;
-  gap: 12px;
-}
-
-.subtext {
+.premium-text p {
   margin: 0;
-  font-weight: 800;
-  color: var(--titleColor);
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.95;
+  line-height: 1.3;
 }
 
-.access__text {
-  margin-top: 10px;
-  padding: 0 6px;
-  font-weight: 800;
-  color: var(--titleColor);
-}
-
-.btn {
-  border-radius: 16px;
-  padding: 10px 16px;
-  font-weight: 800;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--titleColor);
-}
-
-.btn-outline-danger {
-  background: transparent;
-  border: 1px solid rgba(239, 68, 68, 0.6);
-  margin-left: auto;
-}
-
-.btn-danger {
-  border: 1px solid rgba(0, 0, 0, 0.35);
-  color: #fff;
-}
-
-.account-actions {
+.premium-actions {
+  z-index: 1;
   display: flex;
-  justify-content: end;
-  margin-top: 16px;
-  padding: 0 2px;
+  width: 100%;
 }
 
-.w-full {
-  padding: 8px 14px;
-  color: var(--titleColor);
+.premium-action-btn {
+  background: #ffffff;
+  color: #db2777;
+  border: none;
+  border-radius: 24px;
+  padding: 14px 20px;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease;
+  width: 100%;
 }
 
+.premium-action-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 transparent;
+}
 
+.premium-banner.is-active .premium-action-btn {
+  color: #059669;
+}
 
-@media (max-width: 1023px) {
-  .subscription-status-row {
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-  }
+.premium-banner.is-cancelled .premium-action-btn {
+  color: #d97706;
+}
 
-  .subscription-status {
-    width: 100%;
-  }
+.premium-action-btn.btn-cancel {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  box-shadow: none;
+}
 
+.premium-action-btn.btn-cancel:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
 
-  .status-inline {
-    width: 100%;
-    justify-content: space-between;
-  }
+.premium-action-btn.btn-cancel:active {
+  transform: translateY(2px);
+  background: rgba(255, 255, 255, 0.3);
+}
 
-  .premium__status-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
+@media (max-width: 480px) {
+  .premium-logo {
+    height: 70px;
   }
 }
 </style>

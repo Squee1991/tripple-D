@@ -1,12 +1,14 @@
 <template>
-  <button @click="path" class="exit-sign">
-    <img class="close__icon" :src="CloseIcon" alt="">
-    <span class="exit__text">{{ t('trainerPage.exit') }} </span>
+  <button @click="path" class="btn-icon-back">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+         stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 19 5 12 12 5"></polyline>
+    </svg>
   </button>
 </template>
 
 <script setup>
-import CloseIcon from '../../assets/images/CloseIcon.svg'
 import { defineEmits } from "vue";
 
 const emit = defineEmits(['close'])
@@ -19,45 +21,23 @@ const path = () => {
 
 <style scoped>
 
-.exit-sign {
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  pointer-events: all;
-  position: absolute;
-  top: 10px;
-  left:12px;
-  z-index: 20;
-  background-color: #2E7D32;
-  color: rgba(255, 255, 255, 0.9);
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 8px 20px;
-  border: 4px solid #e0e0e0;
-  border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 15px rgba(46, 204, 113, 0.6), 0 0 25px rgba(46, 204, 113, 0.5);
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
-  transition: all 0.3s ease;
+  transition: transform 0.1s, box-shadow 0.1s;
 }
 
-.close__icon {
-  width: 18px;
-  margin-right: 10px;
-}
-
-@media  (max-width: 767px) {
-  .exit-sign {
-    box-shadow: none;
-    border: none;
-    background: none;
-
-  }
-  .exit__text {
-    display: none;
-  }
+.btn-icon-back:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
 }
 
 </style>

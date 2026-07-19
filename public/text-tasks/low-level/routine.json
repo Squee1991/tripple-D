@@ -1,0 +1,227 @@
+{
+  "themeId": "basics_a1",
+  "themeTitle": "Основы: Приветствия и Числа",
+  "level": "A1",
+  "tasks": [
+    {
+      "id": "basics_a1_1",
+      "title": "Ein Treffen planen",
+      "translation": "themeTextTitleRoutine_A1.routineOne",
+      "icon": "\uD83D\uDCC5",
+      "wordsPool": ["du", "heute", "ich", "wir", "um", "Uhr"],
+      "textElements": [
+        { "type": "text", "content": "Hallo Anna! — Hallo Max! Hast " },
+        { "type": "blank", "id": 1, "correct": "du" },
+        { "type": "text", "content": " " },
+        { "type": "blank", "id": 2, "correct": "heute" },
+        { "type": "text", "content": " Zeit? — Ja, " },
+        { "type": "blank", "id": 3, "correct": "ich" },
+        { "type": "text", "content": " habe frei. Gehen " },
+        { "type": "blank", "id": 4, "correct": "wir" },
+        { "type": "text", "content": " zusammen spazieren? — Sehr gerne. Wir treffen uns " },
+        { "type": "blank", "id": 5, "correct": "um" },
+        { "type": "text", "content": " sechs " },
+        { "type": "blank", "id": 6, "correct": "Uhr" },
+        { "type": "text", "content": ". Das Wetter ist super. — Alles klar, bis später!" }
+      ]
+    },
+    {
+      "id": "basics_a1_2",
+      "title": "Abendpläne",
+      "translation": "themeTextTitleRoutine_A1.routineTwo",
+      "icon": "\uD83C\uDFAC",
+      "wordsPool": ["du", "heute", "ich", "wir", "um", "Uhr"],
+      "textElements": [
+        { "type": "text", "content": "Hallo Lea! — Hallo Tim! Hast " },
+        { "type": "blank", "id": 1, "correct": "du" },
+        { "type": "text", "content": " " },
+        { "type": "blank", "id": 2, "correct": "heute" },
+        { "type": "text", "content": " Zeit? — Ja, " },
+        { "type": "blank", "id": 3, "correct": "ich" },
+        { "type": "text", "content": " habe Zeit. Gehen " },
+        { "type": "blank", "id": 4, "correct": "wir" },
+        { "type": "text", "content": " zusammen ins Kino? — Ja, gerne. Das Treffen ist " },
+        { "type": "blank", "id": 5, "correct": "um" },
+        { "type": "text", "content": " acht " },
+        { "type": "blank", "id": 6, "correct": "Uhr" },
+        { "type": "text", "content": ". — Super, bis dann!" }
+      ]
+    },
+    {
+      "id": "basics_a1_3",
+      "title": "Am Wochenende",
+      "translation": "themeTextTitleRoutine_A1.routineThree",
+      "icon": "\uD83C\uDF33",
+      "wordsPool": ["du", "Samstag", "ich", "wir", "um", "Uhr"],
+      "textElements": [
+        { "type": "text", "content": "Hallo Nina! — Hallo Paul! Hast " },
+        { "type": "blank", "id": 1, "correct": "du" },
+        { "type": "text", "content": " am " },
+        { "type": "blank", "id": 2, "correct": "Samstag" },
+        { "type": "text", "content": " Zeit? — Ja, " },
+        { "type": "blank", "id": 3, "correct": "ich" },
+        { "type": "text", "content": " habe frei. Gehen " },
+        { "type": "blank", "id": 4, "correct": "wir" },
+        { "type": "text", "content": " zusammen spazieren? — Sehr gerne. Wir treffen uns " },
+        { "type": "blank", "id": 5, "correct": "um" },
+        { "type": "text", "content": " vier " },
+        { "type": "blank", "id": 6, "correct": "Uhr" },
+        { "type": "text", "content": ". — Alles klar, bis dann!" }
+      ]
+    },
+    {
+      "id": "basics_a1_4",
+      "title": "Sport machen",
+      "translation": "themeTextTitleRoutine_A1.routineFour",
+      "icon": "\uD83E\uDDD8\u200D♀\uFE0F",
+      "wordsPool": ["du", "ich", "wir", "Dienstag", "Wann", "Uhr"],
+      "textElements": [
+        { "type": "text", "content": "Hallo Lena! — Hallo Marc! Machst " },
+        { "type": "blank", "id": 1, "correct": "du" },
+        { "type": "text", "content": " gern Sport? — Ja, " },
+        { "type": "blank", "id": 2, "correct": "ich" },
+        { "type": "text", "content": " mache Yoga. — Machen " },
+        { "type": "blank", "id": 3, "correct": "wir" },
+        { "type": "text", "content": " am " },
+        { "type": "blank", "id": 4, "correct": "Dienstag" },
+        { "type": "text", "content": " zusammen Sport? — Ja, das ist prima. " },
+        { "type": "blank", "id": 5, "correct": "Wann" },
+        { "type": "text", "content": "? — Um sieben " },
+        { "type": "blank", "id": 6, "correct": "Uhr" },
+        { "type": "text", "content": ". — Super, bis dann!" }
+      ]
+    },
+    {
+      "id": "basics_a1_5",
+      "title": "Zusammen kochen",
+      "translation": "themeTextTitleRoutine_A1.routineFive",
+      "icon": "\uD83C\uDF55",
+      "wordsPool": ["du", "ich", "wir", "Abend", "um", "Uhr"],
+      "textElements": [
+        { "type": "text", "content": "Hallo Kevin! — Hallo Lisa! Kochst " },
+        { "type": "blank", "id": 1, "correct": "du" },
+        { "type": "text", "content": " gern? — Ja, " },
+        { "type": "blank", "id": 2, "correct": "ich" },
+        { "type": "text", "content": " koche oft Pizza. — Kochen " },
+        { "type": "blank", "id": 3, "correct": "wir" },
+        { "type": "text", "content": " am " },
+        { "type": "blank", "id": 4, "correct": "Abend" },
+        { "type": "text", "content": " zusammen? — Ja, gute Idee! " },
+        { "type": "blank", "id": 5, "correct": "um" },
+        { "type": "text", "content": " wie viel " },
+        { "type": "blank", "id": 6, "correct": "Uhr" },
+        { "type": "text", "content": "? — Um sieben. — Das passt, bis dann!" }
+      ]
+    },
+    {
+      "id": "basics_a1_6",
+      "title": "In die Stadt gehen",
+      "translation": "themeTextTitleRoutine_A1.routineSix",
+      "icon": "\uD83C\uDFD9\uFE0F",
+      "wordsPool": ["heute", "ich", "wir", "Um", "Uhr", "jetzt"],
+      "textElements": [
+        { "type": "text", "content": "Elias, hast du " },
+        { "type": "blank", "id": 1, "correct": "heute" },
+        { "type": "text", "content": " Zeit? — Ja, " },
+        { "type": "blank", "id": 2, "correct": "ich" },
+        { "type": "text", "content": " habe frei. Warum? — " },
+        { "type": "blank", "id": 3, "correct": "wir" },
+        { "type": "text", "content": " gehen in die Stadt. Kommst du mit? — Ja, gerne! " },
+        { "type": "blank", "id": 4, "correct": "um" },
+        { "type": "text", "content": " wie viel " },
+        { "type": "blank", "id": 5, "correct": "Uhr" },
+        { "type": "text", "content": "? — Genau " },
+        { "type": "blank", "id": 6, "correct": "jetzt" },
+        { "type": "text", "content": ", um fünf. — Super, ich komme!" }
+      ]
+    },
+    {
+      "id": "basics_a1_7",
+      "title": "Zusammen lernen",
+      "translation": "themeTextTitleRoutine_A1.routineSeven",
+      "icon": "\uD83D\uDCDA",
+      "wordsPool": ["du", "ich", "wir", "Wann", "um", "Uhr"],
+      "textElements": [
+        { "type": "text", "content": "Marie, lernst " },
+        { "type": "blank", "id": 1, "correct": "du" },
+        { "type": "text", "content": " gerade? — Ja, " },
+        { "type": "blank", "id": 2, "correct": "ich" },
+        { "type": "text", "content": " lerne Deutsch. — Cool! Lernen " },
+        { "type": "blank", "id": 3, "correct": "wir" },
+        { "type": "text", "content": " heute zusammen? — Ja, das ist eine super Idee. " },
+        { "type": "blank", "id": 4, "correct": "Wann" },
+        { "type": "text", "content": " haben wir Zeit? — Vielleicht " },
+        { "type": "blank", "id": 5, "correct": "um" },
+        { "type": "text", "content": " acht " },
+        { "type": "blank", "id": 6, "correct": "Uhr" },
+        { "type": "text", "content": "? — Abgemacht, bis später!" }
+      ]
+    },
+    {
+      "id": "basics_a1_8",
+      "title": "Musik machen",
+      "translation": "themeTextTitleRoutine_A1.routineEight",
+      "icon": "\uD83C\uDFB5",
+      "wordsPool": ["du", "ich", "wir", "Wann", "um", "Uhr"],
+      "textElements": [
+        { "type": "text", "content": "Hallo Lukas! — Hallo Ben! Kommst " },
+        { "type": "blank", "id": 1, "correct": "du" },
+        { "type": "text", "content": " heute zu mir? — Ja, " },
+        { "type": "blank", "id": 2, "correct": "ich" },
+        { "type": "text", "content": " komme gern. Machen " },
+        { "type": "blank", "id": 3, "correct": "wir" },
+        { "type": "text", "content": " zusammen Musik? — Ja, klar! " },
+        { "type": "blank", "id": 4, "correct": "Wann" },
+        { "type": "text", "content": " bist du hier? — Vielleicht " },
+        { "type": "blank", "id": 5, "correct": "um" },
+        { "type": "text", "content": " шесть " },
+        { "type": "blank", "id": 6, "correct": "Uhr" },
+        { "type": "text", "content": "? — Perfekt, ich warte на тебя (auf dich)!" }
+      ]
+    },
+    {
+      "id": "basics_a1_9",
+      "title": "Kaffee trinken",
+      "translation": "themeTextTitleRoutine_A1.routineNine",
+      "icon": "☕",
+      "wordsPool": ["du", "ich", "wir", "Morgen", "Um", "Uhr"],
+      "textElements": [
+        { "type": "text", "content": "Hallo Sarah! — Hallo Tom! Trinkst " },
+        { "type": "blank", "id": 1, "correct": "du" },
+        { "type": "text", "content": " gern Kaffee? — Ja, " },
+        { "type": "blank", "id": 2, "correct": "ich" },
+        { "type": "text", "content": " liebe Kaffee! — Trinken " },
+        { "type": "blank", "id": 3, "correct": "wir" },
+        { "type": "text", "content": " am " },
+        { "type": "blank", "id": 4, "correct": "Morgen" },
+        { "type": "text", "content": " zusammen einen? — Ja, gerne. " },
+        { "type": "blank", "id": 5, "correct": "Um" },
+        { "type": "text", "content": " wie viel " },
+        { "type": "blank", "id": 6, "correct": "Uhr" },
+        { "type": "text", "content": "? — Um neun. — Bis dann!" }
+      ]
+    },
+    {
+      "id": "basics_a1_10",
+      "title": "Im Park",
+      "translation": "themeTextTitleRoutine_A1.routineTen",
+      "icon": "🌳",
+      "wordsPool": ["du", "ich", "wir", "Wann", "um", "Uhr"],
+      "textElements": [
+        { "type": "text", "content": "Hallo Alex! Gehst " },
+        { "type": "blank", "id": 1, "correct": "du" },
+        { "type": "text", "content": " heute in den Park? — Ja, " },
+        { "type": "blank", "id": 2, "correct": "ich" },
+        { "type": "text", "content": " gehe nachmittags dorthin. — Gehen " },
+        { "type": "blank", "id": 3, "correct": "wir" },
+        { "type": "text", "content": " zusammen? — Ja, tolle Idee! " },
+        { "type": "blank", "id": 4, "correct": "Wann" },
+        { "type": "text", "content": " treffen wir uns? — Vielleicht " },
+        { "type": "blank", "id": 5, "correct": "um" },
+        { "type": "text", "content": " drei " },
+        { "type": "blank", "id": 6, "correct": "Uhr" },
+        { "type": "text", "content": "? — Das ist perfekt, bis später!" }
+      ]
+    }
+  ]
+}

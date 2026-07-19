@@ -30,12 +30,16 @@
 </template>
 
 <script setup>
-import {ref} from 'vue'
-import  Recorder from '../../assets/images/microphone.svg'
+import { ref } from 'vue'
+import { VoiceRecorder } from 'capacitor-voice-recorder'
+import { Capacitor } from '@capacitor/core'
+import { Directory, Filesystem } from '@capacitor/filesystem'
+import Recorder from '../../assets/images/microphone.svg'
+
 const emit = defineEmits(['start', 'stop', 'audio', 'result', 'submit'])
 const props = defineProps({
-  languageCode: {type: String, default: 'de-DE'},
-  sttEndpoint: {type: String, default: '/api/whisper'},
+  languageCode: { type: String, default: 'de-DE' },
+  sttEndpoint: { type: String, default: '/api/whisper' },
 })
 
 const isBusy = ref(false)
@@ -44,86 +48,89 @@ const isRecorded = ref(false)
 const sending = ref(false)
 const transcript = ref('')
 
-let mediaRecorder = null
-let chunks = []
 let startedAt = 0
 
 const startRecording = async () => {
   if (isRecording.value || isBusy.value) return
   isBusy.value = true
   try {
-    const stream = await navigator.mediaDevices.getUserMedia({audio: true})
-    chunks = []
+    const hasPermission = await VoiceRecorder.hasAudioRecordingPermission()
+    if (!hasPermission.value) {
+      const request = await VoiceRecorder.requestAudioRecordingPermission()
+      if (!request.value) throw new Error('No permission')
+    }
+
     transcript.value = ''
     isRecorded.value = false
-    let mimeType = 'audio/webm'
-    if (typeof MediaRecorder.isTypeSupported === 'function') {
-      if (MediaRecorder.isTypeSupported('audio/webm;codecs=opus')) {
-        mimeType = 'audio/webm;codecs=opus'
-      } else if (!MediaRecorder.isTypeSupported('audio/webm')) {
-        mimeType = ''
-      }
-    }
 
-    mediaRecorder = new MediaRecorder(stream, mimeType ? {mimeType} : undefined)
-    mediaRecorder.ondataavailable = (e) => {
-      if (e.data && e.data.size > 0) chunks.push(e.data)
-    }
-    mediaRecorder.onstop = async () => {
-      try {
-        const blob = new Blob(chunks, {type: mimeType || 'audio/webm'})
-        const durationSec = Math.max(0, Math.round((Date.now() - startedAt) / 1000))
-        emit('audio', {blob, durationSec})
-        const base64 = await toBase64(blob)
-        const audioContent = stripDataUrlPrefix(base64)
-        const res = await fetch(props.sttEndpoint, {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({ audioContent, lang: 'de' }),
-        })
-        let text = ''
-        if (res.ok) {
-          const data = await res.json().catch(() => ({}))
-          text = data?.text ? String(data.text) : (data?.transcription || '')
-        } else {
-          console.warn('STT request failed:', res.status, await res.text().catch(() => ''))
-        }
-
-        transcript.value = text
-        isRecorded.value = true
-        emit('result', transcript.value)
-      } catch (err) {
-        console.error('onstop handler error:', err)
-        isRecorded.value = true
-      } finally {
-        isBusy.value = false
-      }
-    }
-
-    mediaRecorder.start()
+    await VoiceRecorder.startRecording({ directory: Directory.Data })
     startedAt = Date.now()
     isRecording.value = true
     emit('start')
   } catch (e) {
-    console.error('getUserMedia error:', e)
+    console.error('startRecording error:', e)
   } finally {
     if (isRecording.value) isBusy.value = false
   }
 }
 
-const stopRecording = () => {
+const stopRecording = async () => {
   if (isBusy.value) return
+  isBusy.value = true
   try {
-    if (mediaRecorder && mediaRecorder.state !== 'inactive') {
-      isBusy.value = true
-      mediaRecorder.stop()
-      mediaRecorder.stream?.getTracks?.().forEach(t => t.stop())
-      isRecording.value = false
-      emit('stop')
+    const result = await VoiceRecorder.stopRecording()
+    isRecording.value = false
+    emit('stop')
+
+    let finalBlob = null
+    let base64Data = null
+    const durationSec = result.value?.msDuration
+        ? Math.round(result.value.msDuration / 1000)
+        : Math.max(0, Math.round((Date.now() - startedAt) / 1000))
+
+    if (result.value?.path) {
+      const { uri } = await Filesystem.getUri({ directory: Directory.Data, path: result.value.path })
+      const fileUrl = Capacitor.convertFileSrc(uri)
+      const response = await fetch(fileUrl)
+      finalBlob = await response.blob()
+      const fullBase64 = await toBase64(finalBlob)
+      base64Data = stripDataUrlPrefix(fullBase64)
+    } else if (result.value?.recordDataBase64) {
+      base64Data = result.value.recordDataBase64
+      const byteCharacters = atob(base64Data)
+      const byteNumbers = new Array(byteCharacters.length)
+      for (let i = 0; i < byteCharacters.length; i++) {
+        byteNumbers[i] = byteCharacters.charCodeAt(i)
+      }
+      finalBlob = new Blob([new Uint8Array(byteNumbers)], { type: 'audio/aac' })
+    }
+
+    if (finalBlob) {
+      emit('audio', { blob: finalBlob, durationSec })
+    }
+
+    if (base64Data) {
+      const res = await fetch(props.sttEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ audioContent: base64Data, lang: 'de' }),
+      })
+      let text = ''
+      if (res.ok) {
+        const data = await res.json().catch(() => ({}))
+        text = data?.text ? String(data.text) : (data?.transcription || '')
+      } else {
+        console.warn('STT request failed:', res.status)
+      }
+
+      transcript.value = text
+      isRecorded.value = true
+      emit('result', transcript.value)
     }
   } catch (e) {
     console.error('stopRecording error:', e)
-    isRecording.value = false
+    isRecorded.value = true
+  } finally {
     isBusy.value = false
   }
 }
@@ -144,7 +151,6 @@ const reset = () => {
   transcript.value = ''
   isRecorded.value = false
   isRecording.value = false
-  chunks = []
   startedAt = 0
 }
 

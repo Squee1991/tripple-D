@@ -1,0 +1,613 @@
+{
+  "start": {
+    "botText": "Hallo Anna, worum geht es heute?",
+    "botTranslation": {
+      "ru-RU": "Привет, Анна, о чем пойдет речь сегодня?",
+      "en-US": "Hello Anna, what is it about today?",
+      "ar-SA": "مرحباً آنا، ما هو موضوع اليوم؟",
+      "es-ES": "Hola Anna, ¿de qué se trata hoy?",
+      "fr-FR": "Bonjour Anna, de quoi s'agit-il aujourd'hui ?",
+      "hi-IN": "नमस्ते अन्ना, आज किस बारे में बात करनी है?",
+      "pl-PL": "Cześć Anna, o czym dzisiaj porozmawiamy?",
+      "ro-RO": "Bună Anna, despre ce este vorba astăzi?",
+      "tr-TR": "Merhaba Anna, bugün konu nedir?",
+      "uk-UA": "Привіт, Анно, про що сьогодні піде мова?",
+      "uz-UZ": "Salom Anna, bugun gap nima haqida?"
+    },
+    "vocabulary": [
+      {
+        "german": "worum geht es",
+        "translation": {
+          "ru-RU": "о чем идет речь",
+          "en-US": "what is it about",
+          "ar-SA": "عن ماذا يدور الموضوع",
+          "es-ES": "de qué se trata",
+          "fr-FR": "de quoi s'agit-il",
+          "hi-IN": "यह किस बारे में है",
+          "pl-PL": "o co chodzi",
+          "ro-RO": "despre ce este vorba",
+          "tr-TR": "konu nedir",
+          "uk-UA": "про що йдеться",
+          "uz-UZ": "nima haqida gap ketyapti"
+        }
+      },
+      {
+        "german": "heute",
+        "translation": {
+          "ru-RU": "сегодня",
+          "en-US": "today",
+          "ar-SA": "اليوم",
+          "es-ES": "hoy",
+          "fr-FR": "aujourd'hui",
+          "hi-IN": "आज",
+          "pl-PL": "dzisiaj",
+          "ro-RO": "astăzi",
+          "tr-TR": "bugün",
+          "uk-UA": "сьогодні",
+          "uz-UZ": "bugun"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich möchte meinen Urlaub planen.",
+        "translation": {
+          "ru-RU": "Я хочу спланировать свой отпуск.",
+          "en-US": "I want to plan my vacation.",
+          "ar-SA": "أريد التخطيط لإجازتي.",
+          "es-ES": "Quiero planificar mis vacaciones.",
+          "fr-FR": "Je veux planifier mes vacances.",
+          "hi-IN": "मैं अपनी छुट्टियों की योजना बनाना चाहता हूँ।",
+          "pl-PL": "Chcę zaplanować mój urlop.",
+          "ro-RO": "Vreau să-mi planific concediul.",
+          "tr-TR": "Tatilimi planlamak istiyorum.",
+          "uk-UA": "Я хочу спланувати свою відпустку.",
+          "uz-UZ": "Men ta'tilimni rejalashtirmoqchiman."
+        },
+        "nextStep": "wann_urlaub"
+      },
+      {
+        "text": "Ich möchte Urlaub beantragen, bitte.",
+        "translation": {
+          "ru-RU": "Я хотела бы подать заявление на отпуск, пожалуйста.",
+          "en-US": "I would like to apply for vacation, please.",
+          "ar-SA": "أود التقدم بطلب للحصول على إجازة، من فضلك.",
+          "es-ES": "Me gustaría solicitar vacaciones, por favor.",
+          "fr-FR": "Je voudrais demander des vacances, s'il vous plaît.",
+          "hi-IN": "मैं छुट्टियों के लिए आवेदन करना चाहता हूँ, कृपया।",
+          "pl-PL": "Chciałabym złożyć wniosek o urlop.",
+          "ro-RO": "Aș dori să solicit concediu, vă rog.",
+          "tr-TR": "Tatil başvurusunda bulunmak istiyorum, lütfen.",
+          "uk-UA": "Я хотіла б подати заяву на відпустку, будь ласка.",
+          "uz-UZ": "Iltimos, ta'til uchun ariza bermoqchiman."
+        },
+        "nextStep": "wann_urlaub"
+      }
+    ],
+    "defaultNext": "wann_urlaub"
+  },
+  "wann_urlaub": {
+    "botText": "Wann möchtest du denn Urlaub nehmen?",
+    "botTranslation": {
+      "ru-RU": "Когда же ты хочешь взять отпуск?",
+      "en-US": "When would you like to take vacation then?",
+      "ar-SA": "متى تودين أخذ الإجازة إذاً؟",
+      "es-ES": "¿Cuándo quieres tomarte las vacaciones entonces?",
+      "fr-FR": "Quand aimerais-tu prendre tes vacances ?",
+      "hi-IN": "तो तुम कब छुट्टियां लेना चाहते हो?",
+      "pl-PL": "Kiedy więc chcesz wziąć urlop?",
+      "ro-RO": "Când ai vrea să-ți iei concediul?",
+      "tr-TR": "Peki ne zaman tatil yapmak istersin?",
+      "uk-UA": "Коли ж ти хочеш взяти відпустку?",
+      "uz-UZ": "Qachon ta'tilga chiqmoqchisiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "wann",
+        "translation": {
+          "ru-RU": "когда",
+          "en-US": "when",
+          "ar-SA": "متى",
+          "es-ES": "cuándo",
+          "fr-FR": "quand",
+          "hi-IN": "कब",
+          "pl-PL": "kiedy",
+          "ro-RO": "când",
+          "tr-TR": "ne zaman",
+          "uk-UA": "коли",
+          "uz-UZ": "qachon"
+        }
+      },
+      {
+        "german": "nehmen",
+        "translation": {
+          "ru-RU": "взять",
+          "en-US": "to take",
+          "ar-SA": "يأخذ",
+          "es-ES": "tomar",
+          "fr-FR": "prendre",
+          "hi-IN": "लेना",
+          "pl-PL": "wziąć",
+          "ro-RO": "a lua",
+          "tr-TR": "almak",
+          "uk-UA": "брати",
+          "uz-UZ": "olmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich möchte im Juli verreisen.",
+        "translation": {
+          "ru-RU": "Я хочу уехать (путешествовать) в июле.",
+          "en-US": "I want to travel in July.",
+          "ar-SA": "أريد السفر في شهر يوليو.",
+          "es-ES": "Quiero viajar en julio.",
+          "fr-FR": "Je veux partir en voyage en juillet.",
+          "hi-IN": "मैं जुलाई में यात्रा करना चाहता हूँ।",
+          "pl-PL": "Chcę wyjechać w lipcu.",
+          "ro-RO": "Vreau să călătoresc în iulie.",
+          "tr-TR": "Temmuz ayında seyahate çıkmak istiyorum.",
+          "uk-UA": "Я хочу поїхати (подорожувати) у липні.",
+          "uz-UZ": "Men iyul oyida sayohatga chiqmoqchiman."
+        },
+        "nextStep": "wochen_check"
+      },
+      {
+        "text": "Ich brauche Urlaub im August.",
+        "translation": {
+          "ru-RU": "Мне нужен отпуск в августе.",
+          "en-US": "I need vacation in August.",
+          "ar-SA": "أحتاج إلى إجازة في أغسطس.",
+          "es-ES": "Necesito vacaciones en agosto.",
+          "fr-FR": "J'ai besoin de vacances en août.",
+          "hi-IN": "मुझे अगस्त में छुट्टियां चाहिए।",
+          "pl-PL": "Potrzebuję urlopu w sierpniu.",
+          "ro-RO": "Am nevoie de concediu în august.",
+          "tr-TR": "Ağustos ayında tatile ihtiyacım var.",
+          "uk-UA": "Мені потрібна відпустка в серпні.",
+          "uz-UZ": "Menga avgust oyida ta'til kerak."
+        },
+        "nextStep": "wochen_check"
+      }
+    ],
+    "defaultNext": "wochen_check"
+  },
+  "wochen_check": {
+    "botText": "Sind zwei Wochen für dich okay?",
+    "botTranslation": {
+      "ru-RU": "Две недели для тебя — это окей?",
+      "en-US": "Are two weeks okay for you?",
+      "ar-SA": "هل أسبوعان مناسبان لكِ؟",
+      "es-ES": "¿Están bien dos semanas para ti?",
+      "fr-FR": "Est-ce que deux semaines te conviennent ?",
+      "hi-IN": "क्या तुम्हारे लिए दो सप्ताह ठीक हैं?",
+      "pl-PL": "Czy dwa tygodnie są dla ciebie okej?",
+      "ro-RO": "Sunt două săptămâni în regulă pentru tine?",
+      "tr-TR": "İki hafta senin için uygun mu?",
+      "uk-UA": "Два тижні для тебе — це нормально?",
+      "uz-UZ": "Ikki hafta siz uchun ma'qulmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "zwei Wochen",
+        "translation": {
+          "ru-RU": "две недели",
+          "en-US": "two weeks",
+          "ar-SA": "أسبوعان",
+          "es-ES": "dos semanas",
+          "fr-FR": "deux semaines",
+          "hi-IN": "दो सप्ताह",
+          "pl-PL": "dwa tygodnie",
+          "ro-RO": "două săptămâni",
+          "tr-TR": "iki hafta",
+          "uk-UA": "два тижні",
+          "uz-UZ": "ikki hafta"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, zwei Wochen passen mir gut.",
+        "translation": {
+          "ru-RU": "Да, две недели мне хорошо подходят.",
+          "en-US": "Yes, two weeks suit me well.",
+          "ar-SA": "نعم، أسبوعان يناسبانني جيداً.",
+          "es-ES": "Sí, dos semanas me vienen bien.",
+          "fr-FR": "Oui, deux semaines me conviennent bien.",
+          "hi-IN": "हाँ, दो सप्ताह मेरे लिए उपयुक्त हैं।",
+          "pl-PL": "Tak, dwa tygodnie mi pasują.",
+          "ro-RO": "Da, două săptămâni îmi convin.",
+          "tr-TR": "Evet, iki hafta bana uyar.",
+          "uk-UA": "Так, два тижні мені добре підходять.",
+          "uz-UZ": "Ha, ikki hafta menga yaxshi to'g'ri keladi."
+        },
+        "nextStep": "projekte_check"
+      },
+      {
+        "text": "Ja, das ist perfekt für mich.",
+        "translation": {
+          "ru-RU": "Да, это идеально для меня.",
+          "en-US": "Yes, that is perfect for me.",
+          "ar-SA": "نعم، هذا مثالي بالنسبة لي.",
+          "es-ES": "Sí, eso es perfecto para mí.",
+          "fr-FR": "Oui, c'est parfait pour moi.",
+          "hi-IN": "हाँ, यह मेरे लिए एकदम सही है।",
+          "pl-PL": "Tak, to dla mnie idealne.",
+          "ro-RO": "Da, este perfect pentru mine.",
+          "tr-TR": "Evet, bu benim için mükemmel.",
+          "uk-UA": "Так, це ідеально для мене.",
+          "uz-UZ": "Ha, bu men uchun ideal."
+        },
+        "nextStep": "projekte_check"
+      }
+    ],
+    "defaultNext": "projekte_check"
+  },
+  "projekte_check": {
+    "botText": "Gibt es da wichtige Projekte bei dir?",
+    "botTranslation": {
+      "ru-RU": "Есть ли там у тебя важные проекты?",
+      "en-US": "Are there any important projects for you there?",
+      "ar-SA": "هل هناك مشاريع مهمة لديك؟",
+      "es-ES": "¿Hay proyectos importantes por tu parte?",
+      "fr-FR": "As-tu des projets importants en cours ?",
+      "hi-IN": "क्या वहां तुम्हारे पास कोई महत्वपूर्ण प्रोजेक्ट हैं?",
+      "pl-PL": "Czy masz jakieś ważne projekty?",
+      "ro-RO": "Există proiecte importante la tine?",
+      "tr-TR": "Orada önemli projelerin var mı?",
+      "uk-UA": "Чи є там у тебе важливі проєкти?",
+      "uz-UZ": "U yerda muhim loyihalaringiz bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "gibt es",
+        "translation": {
+          "ru-RU": "есть ли / имеется ли",
+          "en-US": "is there / are there",
+          "ar-SA": "هل يوجد",
+          "es-ES": "¿hay?",
+          "fr-FR": "y a-t-il",
+          "hi-IN": "क्या वहाँ है",
+          "pl-PL": "czy są",
+          "ro-RO": "există",
+          "tr-TR": "var mı",
+          "uk-UA": "чи є",
+          "uz-UZ": "bormi"
+        }
+      },
+      {
+        "german": "wichtig",
+        "translation": {
+          "ru-RU": "важный",
+          "en-US": "important",
+          "ar-SA": "مهم",
+          "es-ES": "importante",
+          "fr-FR": "important",
+          "hi-IN": "महत्वपूर्ण",
+          "pl-PL": "ważny",
+          "ro-RO": "important",
+          "tr-TR": "önemli",
+          "uk-UA": "важливий",
+          "uz-UZ": "muhim"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, alle Aufgaben sind erledigt.",
+        "translation": {
+          "ru-RU": "Нет, все задачи выполнены.",
+          "en-US": "No, all tasks are completed.",
+          "ar-SA": "لا، جميع المهام منجزة.",
+          "es-ES": "No, todas las tareas están terminadas.",
+          "fr-FR": "Non, toutes les tâches sont accomplies.",
+          "hi-IN": "नहीं, सभी कार्य पूरे हो गए हैं।",
+          "pl-PL": "Nie, wszystkie zadania są wykonane.",
+          "ro-RO": "Nu, toate sarcinile sunt finalizate.",
+          "tr-TR": "Hayır, tüm görevler tamamlandı.",
+          "uk-UA": "Ні, всі завдання виконані.",
+          "uz-UZ": "Yo'q, hamma vazifalar bajarilgan."
+        },
+        "nextStep": "vertretung_check"
+      },
+      {
+        "text": "Meine Projekte sind alle fertig.",
+        "translation": {
+          "ru-RU": "Мои проекты все готовы.",
+          "en-US": "My projects are all finished.",
+          "ar-SA": "مشاريعي كلها جاهزة.",
+          "es-ES": "Mis proyectos están todos listos.",
+          "fr-FR": "Mes projets sont tous terminés.",
+          "hi-IN": "मेरे सभी प्रोजेक्ट तैयार हैं।",
+          "pl-PL": "Moje projekty są wszystkie gotowe.",
+          "ro-RO": "Proiectele mele sunt toate gata.",
+          "tr-TR": "Projelerimin hepsi bitti.",
+          "uk-UA": "Мої проєкти всі готові.",
+          "uz-UZ": "Loyihalarimning barchasi tayyor."
+        },
+        "nextStep": "vertretung_check"
+      }
+    ],
+    "defaultNext": "vertretung_check"
+  },
+  "vertretung_check": {
+    "botText": "Wer vertritt dich in dieser Zeit?",
+    "botTranslation": {
+      "ru-RU": "Кто подменит тебя в это время?",
+      "en-US": "Who will represent you during this time?",
+      "ar-SA": "من سينوب عنكِ في هذا الوقت؟",
+      "es-ES": "¿Quién te sustituirá en ese tiempo?",
+      "fr-FR": "Qui va te remplacer pendant cette période ?",
+      "hi-IN": "इस दौरान तुम्हारी जगह कौन काम करेगा?",
+      "pl-PL": "Kto cię zastąpi w tym czasie?",
+      "ro-RO": "Cine te va înlocui în această perioadă?",
+      "tr-TR": "Bu sürede yerine kim bakacak?",
+      "uk-UA": "Хто підмінить тебе в цей час?",
+      "uz-UZ": "Bu vaqt ichida o'rningizga kim qaraydi?"
+    },
+    "vocabulary": [
+      {
+        "german": "vertreten",
+        "translation": {
+          "ru-RU": "замещать / представлять",
+          "en-US": "to represent / substitute",
+          "ar-SA": "ينوب",
+          "es-ES": "sustituir",
+          "fr-FR": "remplacer",
+          "hi-IN": "प्रतिनिधित्व करना",
+          "pl-PL": "zastępować",
+          "ro-RO": "a înlocui",
+          "tr-TR": "yerine bakmak",
+          "uk-UA": "заміщати",
+          "uz-UZ": "o'rniga qaramoq"
+        }
+      },
+      {
+        "german": "in dieser Zeit",
+        "translation": {
+          "ru-RU": "в это время",
+          "en-US": "during this time",
+          "ar-SA": "في هذا الوقت",
+          "es-ES": "en ese tiempo",
+          "fr-FR": "pendant cette période",
+          "hi-IN": "इस समय के दौरान",
+          "pl-PL": "w tym czasie",
+          "ro-RO": "în acest timp",
+          "tr-TR": "bu sürede",
+          "uk-UA": "у цей час",
+          "uz-UZ": "bu vaqt ichida"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Mein Kollege übernimmt meine Aufgaben.",
+        "translation": {
+          "ru-RU": "Мой коллега берет на себя мои задачи.",
+          "en-US": "My colleague will take over my tasks.",
+          "ar-SA": "زميلي سيتولى مهامي.",
+          "es-ES": "Mi colega se encargará de mis tareas.",
+          "fr-FR": "Mon collègue reprend mes tâches.",
+          "hi-IN": "मेरा सहकर्मी मेरे कार्यभार को संभालेगा।",
+          "pl-PL": "Mój kolega przejmie moje zadania.",
+          "ro-RO": "Colegul meu preia sarcinile mele.",
+          "tr-TR": "İşlerimi meslektaşım üstlenecek.",
+          "uk-UA": "Мій колега бере на себе мої завдання.",
+          "uz-UZ": "Hamkasbim mening vazifalarimni o'z zimmasiga oladi."
+        },
+        "nextStep": "antrag_step"
+      },
+      {
+        "text": "Meine Kollegin macht meine Vertretung.",
+        "translation": {
+          "ru-RU": "Моя коллега будет моей заменой.",
+          "en-US": "My colleague will be my substitute.",
+          "ar-SA": "زميلتي ستقوم بالنيابة عني.",
+          "es-ES": "Mi colega hará mi sustitución.",
+          "fr-FR": "Ma collègue assure mon remplacement.",
+          "hi-IN": "मेरी सहकर्मी मेरी जगह काम करेगी।",
+          "pl-PL": "Moja koleżanka będzie mnie zastępować.",
+          "ro-RO": "Colega mea va fi înlocuitoarea mea.",
+          "tr-TR": "Meslektaşım yerime bakacak.",
+          "uk-UA": "Моя колега буде моєю заміною.",
+          "uz-UZ": "Hamkasbim mening o'rnimga qaraydi."
+        },
+        "nextStep": "antrag_step"
+      }
+    ],
+    "defaultNext": "antrag_step"
+  },
+  "antrag_step": {
+    "botText": "Das klingt sehr gut, Anna.",
+    "botTranslation": {
+      "ru-RU": "Это звучит очень хорошо, Анна.",
+      "en-US": "That sounds very good, Anna.",
+      "ar-SA": "هذا يبدو جيداً جداً يا آنا.",
+      "es-ES": "Eso suena muy bien, Anna.",
+      "fr-FR": "C'est très bien, Anna.",
+      "hi-IN": "यह बहुत अच्छा लग रहा है, अन्ना।",
+      "pl-PL": "To brzmi bardzo dobrze, Anna.",
+      "ro-RO": "Sună foarte bine, Anna.",
+      "tr-TR": "Bu kulağa çok iyi geliyor, Anna.",
+      "uk-UA": "Це звучить дуже добре, Анно.",
+      "uz-UZ": "Bu juda yaxshi eshitilyapti, Anna."
+    },
+    "vocabulary": [
+      {
+        "german": "klingen",
+        "translation": {
+          "ru-RU": "звучать",
+          "en-US": "to sound",
+          "ar-SA": "يبدو (للصوت)",
+          "es-ES": "sonar",
+          "fr-FR": "sonner",
+          "hi-IN": "ध्वनि होना",
+          "pl-PL": "brzmieć",
+          "ro-RO": "a suna",
+          "tr-TR": "kulağa gelmek",
+          "uk-UA": "звучати",
+          "uz-UZ": "eshitilmoq"
+        }
+      },
+      {
+        "german": "sehr gut",
+        "translation": {
+          "ru-RU": "очень хорошо",
+          "en-US": "very good",
+          "ar-SA": "جيد جداً",
+          "es-ES": "muy bien",
+          "fr-FR": "très bien",
+          "hi-IN": "बहुत अच्छा",
+          "pl-PL": "bardzo dobrze",
+          "ro-RO": "foarte bine",
+          "tr-TR": "çok iyi",
+          "uk-UA": "дуже добре",
+          "uz-UZ": "juda yaxshi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Soll ich den Antrag ausfüllen?",
+        "translation": {
+          "ru-RU": "Мне нужно заполнить заявление?",
+          "en-US": "Should I fill out the application?",
+          "ar-SA": "هل يجب علي ملء الطلب؟",
+          "es-ES": "¿Debo rellenar la solicitud?",
+          "fr-FR": "Dois-je remplir le formulaire ?",
+          "hi-IN": "क्या मुझे आवेदन पत्र भरना चाहिए?",
+          "pl-PL": "Czy powinnam wypełnić wniosek?",
+          "ro-RO": "Ar trebui să completez cererea?",
+          "tr-TR": "Başvuru formunu doldurmalı mıyım?",
+          "uk-UA": "Мені потрібно заповнити заяву?",
+          "uz-UZ": "Arizani to'ldirishim kerakmi?"
+        },
+        "nextStep": "abschied"
+      },
+      {
+        "text": "Kann ich den Antrag einreichen?",
+        "translation": {
+          "ru-RU": "Могу я подать заявление?",
+          "en-US": "Can I submit the application?",
+          "ar-SA": "هل يمكنني تقديم الطلب؟",
+          "es-ES": "¿Puedo entregar la solicitud?",
+          "fr-FR": "Puis-je soumettre la demande ?",
+          "hi-IN": "क्या मैं आवेदन जमा कर सकता हूँ?",
+          "pl-PL": "Czy mogę złożyć wniosek?",
+          "ro-RO": "Pot depune cererea?",
+          "tr-TR": "Başvuruyu teslim edebilir miyim?",
+          "uk-UA": "Можу я подати заяву?",
+          "uz-UZ": "Arizani topshirsam bo'ladimi?"
+        },
+        "nextStep": "abschied"
+      }
+    ],
+    "defaultNext": "abschied"
+  },
+  "abschied": {
+    "botText": "Ja, mach das bitte diese Woche.",
+    "botTranslation": {
+      "ru-RU": "Да, сделай это, пожалуйста, на этой неделе.",
+      "en-US": "Yes, please do that this week.",
+      "ar-SA": "نعم، افعلي ذلك هذا الأسبوع من فضلك.",
+      "es-ES": "Sí, hazlo esta semana por favor.",
+      "fr-FR": "Oui, fais-le cette semaine s'il te plaît.",
+      "hi-IN": "हाँ, कृपया इसे इसी सप्ताह करें।",
+      "pl-PL": "Tak, zrób to proszę w tym tygodniu.",
+      "ro-RO": "Da, fă asta săptămâna aceasta, te rog.",
+      "tr-TR": "Evet, lütfen bu hafta yap.",
+      "uk-UA": "Так, зроби це, будь ласка, на цьому тижні.",
+      "uz-UZ": "Ha, iltimos, buni shu hafta bajaring."
+    },
+    "vocabulary": [
+      {
+        "german": "machen",
+        "translation": {
+          "ru-RU": "делать",
+          "en-US": "to do",
+          "ar-SA": "يفعل",
+          "es-ES": "hacer",
+          "fr-FR": "faire",
+          "hi-IN": "करना",
+          "pl-PL": "zrobić",
+          "ro-RO": "a face",
+          "tr-TR": "yapmak",
+          "uk-UA": "робити",
+          "uz-UZ": "qilmoq"
+        }
+      },
+      {
+        "german": "diese Woche",
+        "translation": {
+          "ru-RU": "на этой неделе",
+          "en-US": "this week",
+          "ar-SA": "هذا الأسبوع",
+          "es-ES": "esta semana",
+          "fr-FR": "cette semaine",
+          "hi-IN": "इस सप्ताह",
+          "pl-PL": "w tym tygodniu",
+          "ro-RO": "săptămâna aceasta",
+          "tr-TR": "bu hafta",
+          "uk-UA": "на цьому тижні",
+          "uz-UZ": "shu hafta"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke, das mache ich sofort.",
+        "translation": {
+          "ru-RU": "Спасибо, я сделаю это немедленно.",
+          "en-US": "Thanks, I will do that immediately.",
+          "ar-SA": "شكراً، سأفعل ذلك فوراً.",
+          "es-ES": "Gracias, lo haré inmediatamente.",
+          "fr-FR": "Merci, je le fais tout de suite.",
+          "hi-IN": "धन्यवाद, मैं इसे तुरंत करूँगा।",
+          "pl-PL": "Dzięki, zrobię to natychmiast.",
+          "ro-RO": "Mulțumesc, voi face asta imediat.",
+          "tr-TR": "Teşekkürler, hemen yapacağım.",
+          "uk-UA": "Дякую, я зроблю це негайно.",
+          "uz-UZ": "Rahmat, buni hoziroq bajaraman."
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Vielen Dank für das Verständnis!",
+        "translation": {
+          "ru-RU": "Большое спасибо за понимание!",
+          "en-US": "Thank you very much for understanding!",
+          "ar-SA": "شكراً جزيلاً على تفهمك!",
+          "es-ES": "¡Muchas gracias por su comprensión!",
+          "fr-FR": "Merci beaucoup pour votre compréhension !",
+          "hi-IN": "समझने के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję za zrozumienie!",
+          "ro-RO": "Vă mulțumesc mult pentru înțelegere!",
+          "tr-TR": "Anlayışınız için çok teşekkürler!",
+          "uk-UA": "Велике дякую за розуміння!",
+          "uz-UZ": "Tushunganingiz uchun katta rahmat!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है।",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

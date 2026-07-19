@@ -1,0 +1,629 @@
+{
+  "start": {
+    "botText": "Hallo Anna, wie war dein Wochenende?",
+    "botTranslation": {
+      "ru-RU": "Привет Анна, как прошли твои выходные?",
+      "en-US": "Hello Anna, how was your weekend?",
+      "ar-SA": "مرحباً آنا، كيف كانت عطلة نهاية الأسبوع؟",
+      "es-ES": "Hola Anna, ¿qué tal tu fin de semana?",
+      "fr-FR": "Salut Anna, comment s'est passé ton week-end ?",
+      "hi-IN": "नमस्ते अन्ना, आपका सप्ताहांत कैसा रहा?",
+      "pl-PL": "Cześć Anna, jak ci minął weekend?",
+      "ro-RO": "Bună Anna, cum a fost weekendul tău?",
+      "tr-TR": "Merhaba Anna, hafta sonun nasıldı?",
+      "uk-UA": "Привіт Анна, як пройшли твої вихідні?",
+      "uz-UZ": "Salom Anna, dam olish kuningiz qanday o'tdi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Wochenende",
+        "translation": {
+          "ru-RU": "выходные",
+          "en-US": "the weekend",
+          "ar-SA": "عطلة نهاية الأسبوع",
+          "es-ES": "el fin de semana",
+          "fr-FR": "le week-end",
+          "hi-IN": "सप्ताहांत",
+          "pl-PL": "weekend",
+          "ro-RO": "weekendul",
+          "tr-TR": "hafta sonu",
+          "uk-UA": "вихідні",
+          "uz-UZ": "dam olish kuni"
+        }
+      },
+      {
+        "german": "wie war",
+        "translation": {
+          "ru-RU": "как прошли",
+          "en-US": "how was",
+          "ar-SA": "كيف كان",
+          "es-ES": "cómo estuvo",
+          "fr-FR": "comment c'était",
+          "hi-IN": "कैसा था",
+          "pl-PL": "jak minął",
+          "ro-RO": "cum a fost",
+          "tr-TR": "nasıldı",
+          "uk-UA": "як минув",
+          "uz-UZ": "qanday o'tdi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hallo! Es war toll. Ich habe einen Ausflug gemacht.",
+        "translation": {
+          "ru-RU": "Привет! Было здорово. Я ездила на экскурсию.",
+          "en-US": "Hello! It was great. I went on a trip.",
+          "ar-SA": "مرحباً! كان رائعاً. قمت برحلة.",
+          "es-ES": "¡Hola! Fue genial. Hice una excursión.",
+          "fr-FR": "Salut ! C'était super. J'ai fait une excursion.",
+          "hi-IN": "नमस्ते! यह बहुत अच्छा था। मैंने एक यात्रा की।",
+          "pl-PL": "Cześć! Było wspaniale. Pojechałam na wycieczkę.",
+          "ro-RO": "Bună! A fost grozav. Am făcut o excursie.",
+          "tr-TR": "Merhaba! Harikaydı. Bir geziye çıktım.",
+          "uk-UA": "Привіт! Було чудово. Я їздила на екскурсію.",
+          "uz-UZ": "Salom! Juda zo'r bo'ldi. Men sayohatga chiqdim."
+        },
+        "nextStep": "trip_ask"
+      },
+      {
+        "text": "Hi! War echt schön. Ich war wandern.",
+        "translation": {
+          "ru-RU": "Привет! Было действительно хорошо. Я ходила в поход.",
+          "en-US": "Hi! Was really nice. I went hiking.",
+          "ar-SA": "أهلاً! كان جميلاً حقاً. ذهبت للتنزه.",
+          "es-ES": "¡Hola! Fue muy bonito. Fui a caminar.",
+          "fr-FR": "Salut ! C'était vraiment bien. J'ai fait de la randonnée.",
+          "hi-IN": "नमस्ते! वास्तव में अच्छा था। मैं लंबी पैदल यात्रा पर गया था।",
+          "pl-PL": "Hej! Było naprawdę fajnie. Byłam na wędrówce.",
+          "ro-RO": "Salut! A fost chiar frumos. Am fost în drumeție.",
+          "tr-TR": "Selam! Gerçekten güzeldi. Yürüyüşe gittim.",
+          "uk-UA": "Привіт! Було дійсно гарно. Я ходила в похід.",
+          "uz-UZ": "Salom! Haqiqatan ham yaxshi edi. Men sayrga chiqdim."
+        },
+        "nextStep": "trip_ask"
+      }
+    ],
+    "defaultNext": "trip_ask"
+  },
+  "trip_ask": {
+    "botText": "Echt? Wohin bist du gefahren?",
+    "botTranslation": {
+      "ru-RU": "Правда? Куда ты ездила?",
+      "en-US": "Really? Where did you go?",
+      "ar-SA": "حقاً؟ إلى أين ذهبت؟",
+      "es-ES": "¿De verdad? ¿A dónde fuiste?",
+      "fr-FR": "Vraiment ? Où es-tu allée ?",
+      "hi-IN": "सच में? तुम कहाँ गए थे?",
+      "pl-PL": "Naprawdę? Dokąd pojechałaś?",
+      "ro-RO": "Pe bune? Unde ai fost?",
+      "tr-TR": "Gerçekten mi? Nereye gittin?",
+      "uk-UA": "Правда? Куди ти їздила?",
+      "uz-UZ": "Rostdanmi? Qayerga bording?"
+    },
+    "vocabulary": [
+      {
+        "german": "wohin",
+        "translation": {
+          "ru-RU": "куда",
+          "en-US": "where to",
+          "ar-SA": "إلى أين",
+          "es-ES": "a dónde",
+          "fr-FR": "où",
+          "hi-IN": "कहाँ",
+          "pl-PL": "dokąd",
+          "ro-RO": "încotro",
+          "tr-TR": "nereye",
+          "uk-UA": "куди",
+          "uz-UZ": "qayerga"
+        }
+      },
+      {
+        "german": "gefahren",
+        "translation": {
+          "ru-RU": "ездила",
+          "en-US": "went / drove",
+          "ar-SA": "ذهبت",
+          "es-ES": "fuiste",
+          "fr-FR": "allé",
+          "hi-IN": "गए",
+          "pl-PL": "pojechałaś",
+          "ro-RO": "ai mers",
+          "tr-TR": "gittin",
+          "uk-UA": "їздила",
+          "uz-UZ": "bording"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "In den Harz. Das Wetter war super.",
+        "translation": {
+          "ru-RU": "В Гарц. Погода была супер.",
+          "en-US": "To the Harz mountains. The weather was super.",
+          "ar-SA": "إلى جبال هارتس. كان الطقس رائعاً.",
+          "es-ES": "A las montañas de Harz. El tiempo estuvo súper.",
+          "fr-FR": "Dans le Harz. Le temps était super.",
+          "hi-IN": "हार्ज़ पहाड़ों में। मौसम बहुत बढ़िया था।",
+          "pl-PL": "W góry Harz. Pogoda była super.",
+          "ro-RO": "În munții Harz. Vremea a fost super.",
+          "tr-TR": "Harz dağlarına. Hava süperdi.",
+          "uk-UA": "У Гарц. Погода була супер.",
+          "uz-UZ": "Harz tog'lariga. Ob-havo super edi."
+        },
+        "nextStep": "photos_ask"
+      },
+      {
+        "text": "In den Harz. Es hat mir gefallen.",
+        "translation": {
+          "ru-RU": "В Гарц. Мне понравилось.",
+          "en-US": "To the Harz. I liked it.",
+          "ar-SA": "إلى جبال هارتس. لقد أعجبني.",
+          "es-ES": "A Harz. Me gustó.",
+          "fr-FR": "Dans le Harz. Ça m'a plu.",
+          "hi-IN": "हार्ज़ में। मुझे यह पसंद आया।",
+          "pl-PL": "W Harz. Podobało mi się.",
+          "ro-RO": "În Harz. Mi-a plăcut.",
+          "tr-TR": "Harz'a. Hoşuma gitti.",
+          "uk-UA": "У Гарц. Мені сподобалося.",
+          "uz-UZ": "Harzga. Menga yoqdi."
+        },
+        "nextStep": "photos_ask"
+      }
+    ],
+    "defaultNext": "photos_ask"
+  },
+  "photos_ask": {
+    "botText": "Das glaube ich! Hast du viele Fotos gemacht?",
+    "botTranslation": {
+      "ru-RU": "Верю (Охотно верю)! Ты сделала много фото?",
+      "en-US": "I believe that! Did you take a lot of photos?",
+      "ar-SA": "أصدق ذلك! هل التقطت الكثير من الصور؟",
+      "es-ES": "¡Me lo creo! ¿Hiciste muchas fotos?",
+      "fr-FR": "Je te crois ! As-tu pris beaucoup de photos ?",
+      "hi-IN": "मुझे विश्वास है! क्या आपने बहुत सारी तस्वीरें लीं?",
+      "pl-PL": "Wierzę! Zrobiłaś dużo zdjęć?",
+      "ro-RO": "Te cred! Ai făcut multe poze?",
+      "tr-TR": "İnanırım! Çok fotoğraf çektin mi?",
+      "uk-UA": "Вірю! Ти зробила багато фото?",
+      "uz-UZ": "Ishonaman! Ko'p rasmga oldingmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "glaube ich",
+        "translation": {
+          "ru-RU": "я верю",
+          "en-US": "I believe",
+          "ar-SA": "أصدق",
+          "es-ES": "lo creo",
+          "fr-FR": "je crois",
+          "hi-IN": "मुझे विश्वास है",
+          "pl-PL": "wierzę",
+          "ro-RO": "cred",
+          "tr-TR": "inanırım",
+          "uk-UA": "я вірю",
+          "uz-UZ": "ishonaman"
+        }
+      },
+      {
+        "german": "viele Fotos",
+        "translation": {
+          "ru-RU": "много фото",
+          "en-US": "many photos",
+          "ar-SA": "صور كثيرة",
+          "es-ES": "muchas fotos",
+          "fr-FR": "beaucoup de photos",
+          "hi-IN": "बहुत तस्वीरें",
+          "pl-PL": "dużo zdjęć",
+          "ro-RO": "multe poze",
+          "tr-TR": "çok fotoğraf",
+          "uk-UA": "багато фото",
+          "uz-UZ": "ko'p rasm"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, ich habe viele Fotos. Willst du sie sehen?",
+        "translation": {
+          "ru-RU": "Да, у меня много фото. Хочешь их посмотреть?",
+          "en-US": "Yes, I have many photos. Do you want to see them?",
+          "ar-SA": "نعم، لدي الكثير من الصور. هل تريد رؤيتها؟",
+          "es-ES": "Sí, tengo muchas fotos. ¿Quieres verlas?",
+          "fr-FR": "Oui, j'ai beaucoup de photos. Veux-tu les voir ?",
+          "hi-IN": "हाँ, मेरे पास बहुत सी तस्वीरें हैं। क्या आप उन्हें देखना चाहते हैं?",
+          "pl-PL": "Tak, mam dużo zdjęć. Chcesz je zobaczyć?",
+          "ro-RO": "Da, am multe poze. Vrei să le vezi?",
+          "tr-TR": "Evet, çok fotoğrafım var. Onları görmek ister misin?",
+          "uk-UA": "Так, у мене багато фото. Хочеш їх подивитися?",
+          "uz-UZ": "Ha, menda ko'p rasm bor. Ularni ko'rishni xohlaysanmi?"
+        },
+        "nextStep": "meetup_ask"
+      },
+      {
+        "text": "Ja, einige. Soll ich sie dir zeigen?",
+        "translation": {
+          "ru-RU": "Да, несколько. Мне тебе их показать?",
+          "en-US": "Yes, some. Should I show them to you?",
+          "ar-SA": "نعم، البعض. هل يجب أن أريك إياها؟",
+          "es-ES": "Sí, algunas. ¿Te las enseño?",
+          "fr-FR": "Oui, quelques-unes. Dois-je te les montrer ?",
+          "hi-IN": "हाँ, कुछ। क्या मुझे उन्हें आपको दिखाना चाहिए?",
+          "pl-PL": "Tak, kilka. Mam ci je pokazać?",
+          "ro-RO": "Da, câteva. Să ți le arăt?",
+          "tr-TR": "Evet, birkaç tane. Sana göstereyim mi?",
+          "uk-UA": "Так, декілька. Мені тобі їх показати?",
+          "uz-UZ": "Ha, bir nechta. Senga ko'rsataymi?"
+        },
+        "nextStep": "meetup_ask"
+      }
+    ],
+    "defaultNext": "meetup_ask"
+  },
+  "meetup_ask": {
+    "botText": "Sehr gerne! Sollen wir uns diese Woche treffen?",
+    "botTranslation": {
+      "ru-RU": "С удовольствием! Давай встретимся на этой неделе?",
+      "en-US": "Very gladly! Shall we meet this week?",
+      "ar-SA": "بكل سرور! هل نلتقي هذا الأسبوع؟",
+      "es-ES": "¡Con mucho gusto! ¿Nos vemos esta semana?",
+      "fr-FR": "Très volontiers ! Devrions-nous nous rencontrer cette semaine ?",
+      "hi-IN": "बहुत खुशी से! क्या हम इस सप्ताह मिलें?",
+      "pl-PL": "Bardzo chętnie! Spotkamy się w tym tygodniu?",
+      "ro-RO": "Cu mare drag! Să ne vedem săptămâna asta?",
+      "tr-TR": "Çok sevinirim! Bu hafta buluşalım mı?",
+      "uk-UA": "Із задоволенням! Давай зустрінемося цього тижня?",
+      "uz-UZ": "Bajonidil! Bu hafta uchrashamizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "diese Woche",
+        "translation": {
+          "ru-RU": "на этой неделе",
+          "en-US": "this week",
+          "ar-SA": "هذا الأسبوع",
+          "es-ES": "esta semana",
+          "fr-FR": "cette semaine",
+          "hi-IN": "इस सप्ताह",
+          "pl-PL": "w tym tygodniu",
+          "ro-RO": "săptămâna aceasta",
+          "tr-TR": "bu hafta",
+          "uk-UA": "цього тижня",
+          "uz-UZ": "bu hafta"
+        }
+      },
+      {
+        "german": "treffen",
+        "translation": {
+          "ru-RU": "встречаться",
+          "en-US": "to meet",
+          "ar-SA": "يلتقي",
+          "es-ES": "encontrarse",
+          "fr-FR": "se rencontrer",
+          "hi-IN": "मिलना",
+          "pl-PL": "spotkać się",
+          "ro-RO": "a se întâlni",
+          "tr-TR": "buluşmak",
+          "uk-UA": "зустрічатися",
+          "uz-UZ": "uchrashmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Gute Idee. Passt es dir Mittwoch?",
+        "translation": {
+          "ru-RU": "Хорошая идея. Тебе подходит в среду?",
+          "en-US": "Good idea. Does Wednesday suit you?",
+          "ar-SA": "فكرة جيدة. هل يناسبك يوم الأربعاء؟",
+          "es-ES": "Buena idea. ¿Te viene bien el miércoles?",
+          "fr-FR": "Bonne idée. Est-ce que mercredi te convient ?",
+          "hi-IN": "अच्छा विचार। क्या बुधवार आपके लिए ठीक है?",
+          "pl-PL": "Dobry pomysł. Pasuje ci w środę?",
+          "ro-RO": "Bună idee. Îți convine miercuri?",
+          "tr-TR": "İyi fikir. Çarşamba sana uyar mı?",
+          "uk-UA": "Хороша ідея. Тобі підходить середа?",
+          "uz-UZ": "Yaxshi fikr. Senga chorshanba to'g'ri keladimi?"
+        },
+        "nextStep": "reschedule_ask"
+      },
+      {
+        "text": "Gerne. Wie wäre es am Mittwoch?",
+        "translation": {
+          "ru-RU": "С удовольствием. Как насчет среды?",
+          "en-US": "Gladly. How about Wednesday?",
+          "ar-SA": "بكل سرور. ماذا عن يوم الأربعاء؟",
+          "es-ES": "Con gusto. ¿Qué tal el miércoles?",
+          "fr-FR": "Volontiers. Que dirais-tu de mercredi ?",
+          "hi-IN": "खुशी से। बुधवार के बारे में क्या?",
+          "pl-PL": "Chętnie. Co powiesz na środę?",
+          "ro-RO": "Cu plăcere. Ce zici de miercuri?",
+          "tr-TR": "Memnuniyetle. Çarşambaya ne dersin?",
+          "uk-UA": "Залюбки. Як щодо середи?",
+          "uz-UZ": "Bajonidil. Chorshanba kuniga nima deysan?"
+        },
+        "nextStep": "reschedule_ask"
+      }
+    ],
+    "defaultNext": "reschedule_ask"
+  },
+  "reschedule_ask": {
+    "botText": "Mittwoch muss ich lange arbeiten. Wie wäre es Donnerstag?",
+    "botTranslation": {
+      "ru-RU": "В среду я долго работаю. Как насчет четверга?",
+      "en-US": "I have to work late on Wednesday. How about Thursday?",
+      "ar-SA": "يجب أن أعمل لوقت متأخر يوم الأربعاء. ماذا عن يوم الخميس؟",
+      "es-ES": "El miércoles tengo que trabajar hasta tarde. ¿Qué tal el jueves?",
+      "fr-FR": "Je dois travailler tard mercredi. Que dirais-tu de jeudi ?",
+      "hi-IN": "मुझे बुधवार को देर तक काम करना है। गुरुवार के बारे में क्या?",
+      "pl-PL": "W środę muszę długo pracować. Co powiesz na czwartek?",
+      "ro-RO": "Miercuri trebuie să lucrez mult. Ce zici de joi?",
+      "tr-TR": "Çarşamba günü uzun süre çalışmam gerek. Perşembeye ne dersin?",
+      "uk-UA": "У середу я довго працюю. Як щодо четверга?",
+      "uz-UZ": "Chorshanba kuni men uzoq ishlashim kerak. Payshanba qanday?"
+    },
+    "vocabulary": [
+      {
+        "german": "lange arbeiten",
+        "translation": {
+          "ru-RU": "долго работать",
+          "en-US": "work late",
+          "ar-SA": "يعمل طويلاً",
+          "es-ES": "trabajar mucho",
+          "fr-FR": "travailler tard",
+          "hi-IN": "देर तक काम",
+          "pl-PL": "długo pracować",
+          "ro-RO": "lucra mult",
+          "tr-TR": "uzun çalışmak",
+          "uk-UA": "довго працювати",
+          "uz-UZ": "uzoq ishlash"
+        }
+      },
+      {
+        "german": "wie wäre",
+        "translation": {
+          "ru-RU": "как насчет",
+          "en-US": "how about",
+          "ar-SA": "ماذا عن",
+          "es-ES": "qué tal",
+          "fr-FR": "que dirais-tu",
+          "hi-IN": "कैसा रहेगा",
+          "pl-PL": "co powiesz na",
+          "ro-RO": "ce zici de",
+          "tr-TR": "ne dersin",
+          "uk-UA": "як щодо",
+          "uz-UZ": "nima deysan"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Donnerstag habe ich Zeit. Um wie viel Uhr?",
+        "translation": {
+          "ru-RU": "В четверг у меня есть время. Во сколько?",
+          "en-US": "I have time on Thursday. At what time?",
+          "ar-SA": "لدي وقت يوم الخميس. في أي ساعة؟",
+          "es-ES": "El jueves tengo tiempo. ¿A qué hora?",
+          "fr-FR": "J'ai du temps jeudi. À quelle heure ?",
+          "hi-IN": "गुरुवार को मेरे पास समय है। कितने बजे?",
+          "pl-PL": "W czwartek mam czas. O której godzinie?",
+          "ro-RO": "Joi am timp. La ce oră?",
+          "tr-TR": "Perşembe vaktim var. Saat kaçta?",
+          "uk-UA": "У четвер у мене є час. О котрій годині?",
+          "uz-UZ": "Payshanba kuni vaqtim bor. Soat nechada?"
+        },
+        "nextStep": "place_ask"
+      },
+      {
+        "text": "Donnerstag passt. Wann hast du Zeit?",
+        "translation": {
+          "ru-RU": "Четверг подходит. Когда у тебя есть время?",
+          "en-US": "Thursday works. When do you have time?",
+          "ar-SA": "يوم الخميس مناسب. متى يكون لديك وقت؟",
+          "es-ES": "El jueves me viene bien. ¿Cuándo tienes tiempo?",
+          "fr-FR": "Jeudi me convient. Quand as-tu du temps ?",
+          "hi-IN": "गुरुवार ठीक रहेगा। आपके पास कब समय है?",
+          "pl-PL": "Czwartek pasuje. Kiedy masz czas?",
+          "ro-RO": "Joi e bine. Când ai timp?",
+          "tr-TR": "Perşembe uyar. Senin ne zaman vaktin var?",
+          "uk-UA": "Четвер підходить. Коли у тебе є час?",
+          "uz-UZ": "Payshanba to'g'ri keladi. Qachon vaqting bor?"
+        },
+        "nextStep": "place_ask"
+      }
+    ],
+    "defaultNext": "place_ask"
+  },
+  "place_ask": {
+    "botText": "Um 19:00 Uhr in unserem Café?",
+    "botTranslation": {
+      "ru-RU": "В 19:00 в нашем кафе?",
+      "en-US": "At 19:00 in our café?",
+      "ar-SA": "الساعة 19:00 في مقهانا؟",
+      "es-ES": "¿A las 19:00 en nuestra cafetería?",
+      "fr-FR": "À 19h00 dans notre café ?",
+      "hi-IN": "19:00 बजे हमारे कैफे में?",
+      "pl-PL": "O 19:00 w naszej kawiarni?",
+      "ro-RO": "La ora 19:00 în cafeneaua noastră?",
+      "tr-TR": "Saat 19:00'da bizim kafede?",
+      "uk-UA": "О 19:00 у нашому кафе?",
+      "uz-UZ": "Soat 19:00 da bizning kafeda?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Café",
+        "translation": {
+          "ru-RU": "кафе",
+          "en-US": "the cafe",
+          "ar-SA": "المقهى",
+          "es-ES": "la cafetería",
+          "fr-FR": "le café",
+          "hi-IN": "कैफे",
+          "pl-PL": "kawiarnia",
+          "ro-RO": "cafeneaua",
+          "tr-TR": "kafe",
+          "uk-UA": "кафе",
+          "uz-UZ": "kafe"
+        }
+      },
+      {
+        "german": "um 19:00",
+        "translation": {
+          "ru-RU": "в 19:00",
+          "en-US": "at 19:00",
+          "ar-SA": "الساعة 19:00",
+          "es-ES": "a las 19:00",
+          "fr-FR": "à 19h00",
+          "hi-IN": "19:00 बजे",
+          "pl-PL": "o 19:00",
+          "ro-RO": "la 19:00",
+          "tr-TR": "saat 19:00'da",
+          "uk-UA": "о 19:00",
+          "uz-UZ": "soat 19:00 da"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Abgemacht! Ich freue mich.",
+        "translation": {
+          "ru-RU": "Договорились! Я жду (рада).",
+          "en-US": "Agreed! I look forward to it.",
+          "ar-SA": "اتفقنا! أنا أتطلع لذلك.",
+          "es-ES": "¡Trato hecho! Qué ilusión.",
+          "fr-FR": "Entendu ! J'ai hâte.",
+          "hi-IN": "सहमति! मैं इसका इंतज़ार कर रहा हूँ।",
+          "pl-PL": "Zgoda! Cieszę się.",
+          "ro-RO": "S-a făcut! Abia aștept.",
+          "tr-TR": "Anlaştık! Dört gözle bekliyorum.",
+          "uk-UA": "Домовилися! Я чекаю.",
+          "uz-UZ": "Kelishdik! Men kutyapman."
+        },
+        "nextStep": "goodbye_bot"
+      },
+      {
+        "text": "Perfekt! Freue mich schon.",
+        "translation": {
+          "ru-RU": "Идеально! Уже жду.",
+          "en-US": "Perfect! Looking forward to it already.",
+          "ar-SA": "ممتاز! أتطلع لذلك بالفعل.",
+          "es-ES": "¡Perfecto! Ya lo estoy esperando.",
+          "fr-FR": "Parfait ! J'ai déjà hâte.",
+          "hi-IN": "सही! पहले से ही इसका इंतज़ार है।",
+          "pl-PL": "Idealnie! Już się cieszę.",
+          "ro-RO": "Perfect! Mă bucur deja.",
+          "tr-TR": "Harika! Şimdiden sabırsızlanıyorum.",
+          "uk-UA": "Ідеально! Вже чекаю.",
+          "uz-UZ": "Ajoyib! Qutib qolaman."
+        },
+        "nextStep": "goodbye_bot"
+      }
+    ],
+    "defaultNext": "goodbye_bot"
+  },
+  "goodbye_bot": {
+    "botText": "Ich mich auch. Bis Donnerstag!",
+    "botTranslation": {
+      "ru-RU": "Я тоже. До четверга!",
+      "en-US": "Me too. See you Thursday!",
+      "ar-SA": "وأنا كذلك. أراك يوم الخميس!",
+      "es-ES": "Yo también. ¡Hasta el jueves!",
+      "fr-FR": "Moi aussi. À jeudi !",
+      "hi-IN": "मैं भी। गुरुवार को मिलते हैं!",
+      "pl-PL": "Ja też. Do czwartku!",
+      "ro-RO": "Și eu. Pe joi!",
+      "tr-TR": "Ben de. Perşembeye görüşürüz!",
+      "uk-UA": "Я також. До четверга!",
+      "uz-UZ": "Men ham. Payshanbagacha!"
+    },
+    "vocabulary": [
+      {
+        "german": "ich auch",
+        "translation": {
+          "ru-RU": "я тоже",
+          "en-US": "me too",
+          "ar-SA": "أنا أيضاً",
+          "es-ES": "yo también",
+          "fr-FR": "moi aussi",
+          "hi-IN": "मैं भी",
+          "pl-PL": "ja też",
+          "ro-RO": "și eu",
+          "tr-TR": "ben de",
+          "uk-UA": "я також",
+          "uz-UZ": "men ham"
+        }
+      },
+      {
+        "german": "bis Donnerstag",
+        "translation": {
+          "ru-RU": "до четверга",
+          "en-US": "until Thursday",
+          "ar-SA": "حتى الخميس",
+          "es-ES": "hasta el jueves",
+          "fr-FR": "à jeudi",
+          "hi-IN": "गुरुवार तक",
+          "pl-PL": "do czwartku",
+          "ro-RO": "pe joi",
+          "tr-TR": "perşembeye kadar",
+          "uk-UA": "до четверга",
+          "uz-UZ": "payshanbagacha"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Bis dann! Tschüss!",
+        "translation": {
+          "ru-RU": "До встречи! Пока!",
+          "en-US": "See you then! Bye!",
+          "ar-SA": "أراك حينها! وداعاً!",
+          "es-ES": "¡Hasta entonces! ¡Adiós!",
+          "fr-FR": "À plus ! Salut !",
+          "hi-IN": "फिर मिलते हैं! अलविदा!",
+          "pl-PL": "Do zobaczenia! Cześć!",
+          "ro-RO": "Pe atunci! Pa!",
+          "tr-TR": "Görüşmek üzere! Hoşça kal!",
+          "uk-UA": "До зустрічі! Бувай!",
+          "uz-UZ": "Ko'rishguncha! Xayr!"
+        },
+        "nextStep": "end"
+      },
+      {
+        "text": "Bis Donnerstag! Mach's gut!",
+        "translation": {
+          "ru-RU": "До четверга! Бывай (всего хорошего)!",
+          "en-US": "See you Thursday! Take care!",
+          "ar-SA": "أراك الخميس! اعتن بنفسك!",
+          "es-ES": "¡Hasta el jueves! ¡Cuídate!",
+          "fr-FR": "À jeudi ! Prends soin de toi !",
+          "hi-IN": "गुरुवार को मिलते हैं! अपना ख्याल रखना!",
+          "pl-PL": "Do czwartku! Trzymaj się!",
+          "ro-RO": "Pe joi! Numai bine!",
+          "tr-TR": "Perşembeye görüşürüz! Kendine iyi bak!",
+          "uk-UA": "До четверга! Бувай!",
+          "uz-UZ": "Payshanbagacha! Yaxshi qol!"
+        },
+        "nextStep": "end"
+      }
+    ],
+    "defaultNext": "end"
+  },
+  "end": {
+    "botText": "Das Gespräch ist beendet.",
+    "botTranslation": {
+      "ru-RU": "Разговор завершен.",
+      "en-US": "The conversation is ended.",
+      "ar-SA": "انتهت المحادثة.",
+      "es-ES": "La conversación ha terminado.",
+      "fr-FR": "La conversation est terminée.",
+      "hi-IN": "बातचीत समाप्त हो गई है。",
+      "pl-PL": "Rozmowa została zakończona.",
+      "ro-RO": "Conversația s-a încheiat.",
+      "tr-TR": "Konuşma sona erdi.",
+      "uk-UA": "Розмову завершено.",
+      "uz-UZ": "Suhbat yakunlandi."
+    },
+    "options": [],
+    "defaultNext": null
+  }
+}

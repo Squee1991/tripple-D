@@ -1,0 +1,587 @@
+{
+  "start": {
+    "botText": "Guten Tag! Herzlich willkommen an meinem Stand. Was darf es sein?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Добро пожаловать к моему прилавку. Что бы вы хотели?",
+      "en-US": "Good afternoon! Welcome to my stand. What would you like?",
+      "ar-SA": "طاب يومك! مرحباً بك في جناحي. ماذا تريد؟",
+      "es-ES": "¡Buenas tardes! Bienvenido a mi puesto. ¿Qué desea?",
+      "fr-FR": "Bonjour ! Bienvenue à mon stand. Que désirez-vous ?",
+      "hi-IN": "नमस्ते! मेरे स्टॉल पर आपका स्वागत है। आप क्या लेना चाहेंगे?",
+      "pl-PL": "Dzień dobry! Witamy na moim stoisku. W czym mogę pomóc?",
+      "ro-RO": "Bună ziua! Bine ați venit la tejgheaua mea. Ce doriți?",
+      "tr-TR": "İyi günler! Tezgahıma hoş geldiniz. Ne almak istersiniz?",
+      "uk-UA": "Добрий день! Ласкаво просимо до мого прилавку. Що б ви хотіли?",
+      "uz-UZ": "Xayrli kun! Peshtaxtamga xush kelibsiz. Nima olasiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Markt",
+        "translation": {
+          "ru-RU": "рынок",
+          "en-US": "market",
+          "ar-SA": "السوق",
+          "es-ES": "mercado",
+          "fr-FR": "marché",
+          "hi-IN": "बाज़ार",
+          "pl-PL": "targ / rynek",
+          "ro-RO": "piață",
+          "tr-TR": "pazar",
+          "uk-UA": "ринок",
+          "uz-UZ": "bozor"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag! Ich möchte bitte ein Kilo rote Äpfel. Sie sind so schön süß.",
+        "translation": {
+          "ru-RU": "Добрый день! Я бы хотел, пожалуйста, один килограмм красных яблок. Они такие приятные и сладкие.",
+          "en-US": "Good afternoon! I would like a kilo of red apples, please. They are so nice and sweet.",
+          "ar-SA": "طاب يومك! أريد من فضلك كيلوغراماً من التفاح الأحمر. إنه حلو وجميل جداً.",
+          "es-ES": "¡Buenas tardes! Quiero un kilo de manzanas rojas, por favor. Son muy dulces и ricas.",
+          "fr-FR": "Bonjour ! Je voudrais un kilo de pommes rouges, s'il vous plaît. Elles sont si bonnes et sucrées.",
+          "hi-IN": "नमस्ते! मुझे कृपया एक किलो लाल सेब चाहिए। वे बहुत सुंदर और मीठे हैं।",
+          "pl-PL": "Dzień dobry! Poproszę kilogram czerwonych jabłek. Są takie ładne i słodkie.",
+          "ro-RO": "Bună ziua! Aș dori un kilogram de mere roșii, vă rog. Sunt atât de frumoase și dulci.",
+          "tr-TR": "İyi günler! Lütfen bir kilo kırmızı elma istiyorum. Çok güzel ve tatlılar.",
+          "uk-UA": "Добрий день! Я б хотів, будь ласка, один кілограм червоних яблук. Вони такі приємні та солодкі.",
+          "uz-UZ": "Xayrli kun! Iltimos, bir kilo qizil olma bering. Ular juda chiroyli va shirin."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo! Ich nehme ein Kilo von den grünen Äpfeln. Ich mag es sauer.",
+        "translation": {
+          "ru-RU": "Здравствуйте! Я возьму килограмм зеленых яблок. Мне нравится кислый вкус.",
+          "en-US": "Hello! I'll take a kilo of the green apples. I like it sour.",
+          "ar-SA": "مرحباً! سآخذ كيلوغراماً من التفاح الأخضر. أنا أحبه حامضاً.",
+          "es-ES": "¡Hola! Me llevo un kilo de manzanas verdes. Me gusta lo ávido/ácido.",
+          "fr-FR": "Salut ! Je prends un kilo de pommes vertes. J'aime quand c'est acide.",
+          "hi-IN": "नमस्ते! मैं एक किलो हरे सेब लूँगा। мне खट्टा पसंद है।",
+          "pl-PL": "Cześć! Wezmę kilogram zielonych jabłek. Lubię kwaśne.",
+          "ro-RO": "Bună! Iau un kilogram de mere verzi. Îmi plac cele acrișoare.",
+          "tr-TR": "Merhaba! Bir kilo yeşil elma alayım. Ekşi severim.",
+          "uk-UA": "Добридень! Я візьму кілограм зелених яблук. Мені подобається кислий смак.",
+          "uz-UZ": "Salom! Bir kilo yashil olma olaman. Nordonni yaxshi ko'raman."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Sehr gerne. Ich lege die Äpfel auf die Waage. So, das sind jetzt 1100 Gramm. Ist das okay für Sie?",
+    "botTranslation": {
+      "ru-RU": "С удовольствием. Я положу яблоки на весы. Итак, сейчас здесь 1100 граммов. Это вам подходит?",
+      "en-US": "With pleasure. I'll put the apples on the scale. So, that's 1100 grams now. Is that okay for you?",
+      "ar-SA": "بكل سرور. سأضع التفاح على الميزان. حسناً، هذا يعادل 1100 غرام الآن. هل هذا مناسب لك؟",
+      "es-ES": "Con mucho gusto. Pongo las manzanas en la balanza. Bien, ahora son 1100 gramos. ¿Le parece bien?",
+      "fr-FR": "Volontiers. Je pose les pommes sur la balance. Voilà, cela fait 1100 grammes. Est-ce que cela vous convient ?",
+      "hi-IN": "बिल्कुल। मैं सेबों को तराजू पर रखता हूँ। तो, यह अब 1100 ग्राम है। क्या यह आपके लिए ठीक है?",
+      "pl-PL": "Bardzo chętnie. Położę jabłka na wagę. A więc to jest teraz 1100 gramów. Czy to Panu/Pani odpowiada?",
+      "ro-RO": "Cu mare plăcere. Pun merele pe cântar. Așa, acum sunt 1100 de grame. Este în regulă pentru dumneavoastră?",
+      "tr-TR": "Memnuniyetle. Elmaları tartıya koyuyorum. İşte, şu an 1100 gram geldi. Sizin için uygun mu?",
+      "uk-UA": "Із задоволенням. Я покладу яблука на ваги. Отже, зараз тут 1100 грамів. Це вам підходить?",
+      "uz-UZ": "Jonim bilan. Olmalarni taroziga qo'yaman. Mana, hozir 1100 gramm bo'ldi. Sizga to'g'ri keladimi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Äpfel",
+        "translation": {
+          "ru-RU": "яблоки",
+          "en-US": "apples",
+          "ar-SA": "التفاح",
+          "es-ES": "manzanas",
+          "fr-FR": "pommes",
+          "hi-IN": "सेब",
+          "pl-PL": "jabłka",
+          "ro-RO": "mere",
+          "tr-TR": "elmalar",
+          "uk-UA": "яблука",
+          "uz-UZ": "olmalar"
+        }
+      },
+      {
+        "german": "die Waage",
+        "translation": {
+          "ru-RU": "весы",
+          "en-US": "scale",
+          "ar-SA": "الميزان",
+          "es-ES": "balanza / báscula",
+          "fr-FR": "balance",
+          "hi-IN": "तराजू",
+          "pl-PL": "waga",
+          "ro-RO": "cântar",
+          "tr-TR": "tartı / terazi",
+          "uk-UA": "ваги",
+          "uz-UZ": "tarozi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, das ist völlig okay. Lassen Sie die Äpfel ruhig so.",
+        "translation": {
+          "ru-RU": "Да, это вполне нормально. Оставляйте яблоки спокойно так.",
+          "en-US": "Yes, that's completely okay. Feel free to leave the apples like that.",
+          "ar-SA": "نعم، هذا مقبول تماماً. اترك التفاح هكذا ولا تقلق.",
+          "es-ES": "Sí, está totalmente bien. Deje las manzanas así, no se preocupe.",
+          "fr-FR": "Oui, c'est tout à fait d'accord. Laissez les pommes comme ça.",
+          "hi-IN": "हाँ, यह पूरी तरह से ठीक है। सेबों को आराम से ऐसे ही रहने दें।",
+          "pl-PL": "Tak, to całkowicie w porządku. Proszę zostawić jabłka tak, jak są.",
+          "ro-RO": "Da, este complet în regulă. Lăsați merele liniștit așa.",
+          "tr-TR": "Evet, tamamen uygun. Elmaları rahatça böyle bırakabilirsiniz.",
+          "uk-UA": "Так, це цілком нормально. Залишайте яблука спокійно так.",
+          "uz-UZ": "Ha, mutlaqo o'rinli. Olmalarni shundayligicha qoldiravering."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Ja, kein Problem. Das passt schon so.",
+        "translation": {
+          "ru-RU": "Да, без проблем. Это уже подходит так.",
+          "en-US": "Yes, no problem. That's fine as it is.",
+          "ar-SA": "نعم، لا مشكلة. هذا مناسب تماماً هكذا.",
+          "es-ES": "Sí, ningún problema. Así ya está bien.",
+          "fr-FR": "Oui, pas de problème. Ça va comme ça.",
+          "hi-IN": "हाँ, कोई बात नहीं। यह ऐसे ही ठीक है।",
+          "pl-PL": "Tak, nie ma problemu. Tak już pasuje.",
+          "ro-RO": "Da, nicio problemă. Este bine așa.",
+          "tr-TR": "Evet, sorun değil. Böyle iyi.",
+          "uk-UA": "Так, без проблем. Це вже підходить так.",
+          "uz-UZ": "Ha, muammo yo'q. Shundog'am to'g'ri keladi."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Gut, ich packe sie in einen Beutel. Kommt noch etwas dazu?",
+    "botTranslation": {
+      "ru-RU": "Хорошо, я упакую их в пакет. Добавить что-нибудь еще?",
+      "en-US": "Good, I'll pack them in a bag. Will there be anything else added?",
+      "ar-SA": "حسناً، سأضعها في كيس. هل تضيف شيئاً آخر؟",
+      "es-ES": "Bien, las meto en una bolsa. ¿Añadimos algo más?",
+      "fr-FR": "Bien, je les mets dans un sachet. Est-ce qu'on ajoute autre chose ?",
+      "hi-IN": "अच्छा, मैं उन्हें एक बैग में पैक कर देता हूँ। क्या कुछ और भी जोड़ना है?",
+      "pl-PL": "Dobrze, zapakuję je do reklamówki. Czy dodać coś jeszcze?",
+      "ro-RO": "Bine, le pun într-o pungă. Mai adăugăm ceva?",
+      "tr-TR": "Güzel, onları bir poşete koyuyorum. Başka bir şey ekleyecek miyiz?",
+      "uk-UA": "Добре, я запакую їх у пакет. Додати що-небудь ще?",
+      "uz-UZ": "Yaxshi, ularni paketga joylayman. Yana biror narsa qo'shamizmi?"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Ja, ich brauche auch noch zwei Kilo Erdbeeren.",
+        "translation": {
+          "ru-RU": "Да, мне также нужны еще два килограмма клубники.",
+          "en-US": "Yes, I also need two kilos of strawberries.",
+          "ar-SA": "نعم، أنا بحاجة أيضاً إلى كيلوغرامين من الفراولة.",
+          "es-ES": "Sí, también necesito dos kilos de fresas.",
+          "fr-FR": "Oui, j'ai aussi besoin de deux kilos de fraises.",
+          "hi-IN": "हाँ, мне दो किलो स्ट्रॉबेरी भी चाहिए।",
+          "pl-PL": "Tak, potrzebuję jeszcze dwóch kilogramów truskawek.",
+          "ro-RO": "Da, am nevoie și de două kilograme de căpșuni.",
+          "tr-TR": "Evet, iki kilo da çileğe ihtiyacım var.",
+          "uk-UA": "Так, мені також потрібні ще два кілограми полуниці.",
+          "uz-UZ": "Ha, menga yana ikki kilo qulupnay ham kerak."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Ja, bitte. Ich nehme noch zwei Kilo von den frischen Erdbeeren.",
+        "translation": {
+          "ru-RU": "Да, пожалуйста. Я возьму еще два килограмма свежей клубники.",
+          "en-US": "Yes, please. I'll take another two kilos of the fresh strawberries.",
+          "ar-SA": "نعم، من فضلك. سآخذ كيلوغرامين آخرين من الفراولة الطازجة.",
+          "es-ES": "Sí, por favor. Me llevo otros dos kilos de fresas frescas.",
+          "fr-FR": "Oui, s'il vous plaît. Je prends encore deux kilos de fraises fraîches.",
+          "hi-IN": "हाँ, कृपया। मैं दो किलो ताज़ी स्ट्रॉबेरी और लूँगा।",
+          "pl-PL": "Tak, proszę. Wezmę jeszcze dwa kilogramy świeżich truskawek.",
+          "ro-RO": "Da, vă rog. Mai iau două kilograme de căpșuni proaspete.",
+          "tr-TR": "Evet, lütfen. Taze çileklerden iki kilo daha alayım.",
+          "uk-UA": "Так, будь ласка. Я візьму ще два кілограми свіжої полуниці.",
+          "uz-UZ": "Ha, iltimos. Yangi qulupnaydan yana ikki kilo olaman."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Perfekt. In einer Schale ist genau ein Kilo. Ich gebe Ihnen also zwei Schalen Erdbeeren. Sie sind heute sehr süß.",
+    "botTranslation": {
+      "ru-RU": "Прекрасно. В одном лотке ровно один килограмм. Таким образом, я даю вам два лотка клубники. Сегодня она очень сладкая.",
+      "en-US": "Perfect. In one bowl is exactly one kilo. So I give you two bowls of strawberries. They are very sweet today.",
+      "ar-SA": "ممتاز. في السلة الواحدة كيلوغرام واحد تماماً. لذا سأعطيك سلتين من الفراولة. إنها حلوة جداً اليوم.",
+      "es-ES": "Perfecto. En una tarrina hay exactamente un kilo. Así que le doy dos tarrinas de fresas. Hoy están muy dulces.",
+      "fr-FR": "Parfait. Dans une barquette, il y a exactement un kilo. Je vous donne donc deux barquettes de fraises. Elles sont très sucrées aujourd'hui.",
+      "hi-IN": "बिल्कुल सही। एक टोकरी में ठीक एक किलो है। इसलिए मैं आपको स्ट्रॉबेरी की दो टोकरियाँ देता हूँ। वे आज बहुत मीठी हैं।",
+      "pl-PL": "Doskonale. W jednej kobiałce jest dokładnie jeden kilogram. Dam więc Panu/Pani dwie kobiałki truskawek. Są dzisiaj bardzo słodkie.",
+      "ro-RO": "Perfect. Într-o caserolă este exact un kilogram. Deci vă dau două caserole de căpșuni. Sunt foarte dulci astăzi.",
+      "tr-TR": "Mükemmel. Bir pakette tam bir kilo var. O yüzden size iki paket çilek veriyorum. Bugün çok tatlılar.",
+      "uk-UA": "Прекрасно. В одному лотку рівно один кілограм. Таким чином, я даю вам два лотки полуниці. Сьогодні вона дуже солодка.",
+      "uz-UZ": "Ajoyib. Bir idishda aniq bir kilo bor. Shuning uchun senga ikkita idishda qulupnay beraman. Ular bugun juda shirin."
+    },
+    "vocabulary": [
+      {
+        "german": "die Erdbeeren",
+        "translation": {
+          "ru-RU": "клубника",
+          "en-US": "strawberries",
+          "ar-SA": "الفراولة",
+          "es-ES": "fresas",
+          "fr-FR": "fraises",
+          "hi-IN": "स्ट्रॉबेरी",
+          "pl-PL": "truskawki",
+          "ro-RO": "căpșuni",
+          "tr-TR": "çilekler",
+          "uk-UA": "полуниця",
+          "uz-UZ": "qulupnaylar"
+        }
+      },
+      {
+        "german": "die Schale",
+        "translation": {
+          "ru-RU": "лоток / коробочка для ягод",
+          "en-US": "punnet / bowl",
+          "ar-SA": "السلة الصغيرة / الوعاء",
+          "es-ES": "tarrina / cuenco",
+          "fr-FR": "barquette / coupelle",
+          "hi-IN": "टोकरी / कटोरा",
+          "pl-PL": "kobiałka / miseczka",
+          "ro-RO": "caserolă / bol",
+          "tr-TR": "paket / kap",
+          "uk-UA": "лоток / коробочка для ягід",
+          "uz-UZ": "idish / quti"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das ist super. Meine Kinder lieben Erdbeeren.",
+        "translation": {
+          "ru-RU": "Это супер. Мои дети любят клубнику.",
+          "en-US": "That's super. My children love strawberries.",
+          "ar-SA": "هذا رائع. أطفالي يحبون الفراولة.",
+          "es-ES": "Eso es genial. A mis hijos les encantan las fresas.",
+          "fr-FR": "C'est super. Mes enfants adorent les fraises.",
+          "hi-IN": "यह बहुत बढ़िया है। मेरे बच्चों को स्ट्रॉबेरी बहुत पसंद है।",
+          "pl-PL": "To świetnie. Moje dzieci uwielbiają truskawki.",
+          "ro-RO": "Asta este super. Copiii mei adoră căpșunile.",
+          "tr-TR": "Bu harika. Çocuklarım çileğe bayılır.",
+          "uk-UA": "Це супер. Мої діти люблять полуницю.",
+          "uz-UZ": "Bu juda yaxshi. Bolalarim qulupnayni yaxshi ko'rishadi."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Wunderbar. Frische Früchte sind immer gut.",
+        "translation": {
+          "ru-RU": "Замечательно. Свежие фрукты — это всегда хорошо.",
+          "en-US": "Wonderful. Fresh fruits are always good.",
+          "ar-SA": "رائع. الفواكه الطازجة جيدة دائماً.",
+          "es-ES": "Maravilloso. Las frutas frescas siempre vienen bien.",
+          "fr-FR": "Merveilleux. Les fruits frais, c'est toujours bon.",
+          "hi-IN": "अद्भुत। ताजे फल हमेशा अच्छे होते हैं।",
+          "pl-PL": "Wspaniale. Świeże owoce są zawsze dobre.",
+          "ro-RO": "Minunat. Fructele proaspete sunt mereu bune.",
+          "tr-TR": "Harika. Taze meyveler her zaman iyidir.",
+          "uk-UA": "Чудово. Свіжі фрукти — це завжди добре.",
+          "uz-UZ": "Ajoyib. Yangi mevalar har doim yaxshi."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Möchten Sie sonst noch etwas? Vielleicht noch ein paar Bananen oder Trauben?",
+    "botTranslation": {
+      "ru-RU": "Желаете что-нибудь еще? Может быть, еще немного бананов или винограда?",
+      "en-US": "Would you like anything else? Maybe a few bananas or grapes?",
+      "ar-SA": "هل تريد أي شيء آخر؟ ربما بعض الموز أو العنب أيضاً؟",
+      "es-ES": "¿Desea alguna otra cosa? ¿Quizás unos plátanos o uvas?",
+      "fr-FR": "Désirez-vous autre chose ? Peut-être encore quelques bananes ou du raisin ?",
+      "hi-IN": "क्या आप कुछ और लेना चाहेंगे? शायद कुछ केले या अंगूर?",
+      "pl-PL": "Czy chciałby Pan/Pani coś jeszcze? Może kilka bananów lub winogrona?",
+      "ro-RO": "Mai doriți altceva? Poate niște banane sau struguri?",
+      "tr-TR": "Başka bir şey ister misiniz? Belki biraz muz veya üzüm?",
+      "uk-UA": "Бажаєте що-небудь ще? Можливо, ще трохи бананів або винограду?",
+      "uz-UZ": "Yana biror narsa xohlaysizmi? Balki bir oz banan yoki uzumdir?"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Nein, danke. Das ist alles für heute.",
+        "translation": {
+          "ru-RU": "Нет, спасибо. Это всё на сегодня.",
+          "en-US": "No, thanks. That's all for today.",
+          "ar-SA": "لا، شكراً. هذا كل شيء اليوم.",
+          "es-ES": "No, gracias. Eso es todo por hoy.",
+          "fr-FR": "Non, merci. Ce sera tout pour aujourd'hui.",
+          "hi-IN": "नहीं, धन्यवाद। आज के लिए बस इतना ही।",
+          "pl-PL": "Nie, dziękuję. To wszystko na dzisiaj.",
+          "ro-RO": "Nu, mulțumesc. Asta este tot pentru azi.",
+          "tr-TR": "Hayır, teşekkürler. Bugünlük bu kadar.",
+          "uk-UA": "Ні, дякую. Це все на сьогодні.",
+          "uz-UZ": "Yo'q, rahmat. Bugunga shuning o'zi yetadi."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Nein, danke. Das reicht für mich.",
+        "translation": {
+          "ru-RU": "Нет, спасибо. Этого достаточно для меня.",
+          "en-US": "No, thanks. That's enough for me.",
+          "ar-SA": "لا، شكراً. هذا يكفيني.",
+          "es-ES": "No, gracias. Con eso мне basta.",
+          "fr-FR": "Non, merci. Ça me suffit.",
+          "hi-IN": "नहीं, धन्यवाद। मेरे लिए इतना काफी है।",
+          "pl-PL": "Nie, dziękuję. To mi wystarczy.",
+          "ro-RO": "Nu, mulțumesc. Este de ajuns pentru mine.",
+          "tr-TR": "Hayır, teşekkürler. Bu bana yeter.",
+          "uk-UA": "Ні, дякую. Цього достатньо для мене.",
+          "uz-UZ": "Yo'q, rahmat. Shu menga yetarli."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Alles klar. Ich packe das ganze Obst zusammen in eine große Tasche.",
+    "botTranslation": {
+      "ru-RU": "Хорошо. Я упакую все фрукты вместе в большую сумку.",
+      "en-US": "All right. I'll pack all the fruit together into a big bag.",
+      "ar-SA": "كل شيء واضح. سأضع كل الفواكه معاً في حقيبة كبيرة.",
+      "es-ES": "Entendido. Meto toda la fruta junta en una bolsa grande.",
+      "fr-FR": "D'accord. Je emballe tous les fruits ensemble dans un grand sac.",
+      "hi-IN": "ठीक है। मैं सारे फलों को एक बड़े थैले में पैक कर देता हूँ।",
+      "pl-PL": "Wszystko jasne. Spakuję wszystkie owoce razem do dużej torby.",
+      "ro-RO": "Am înțeles. Împachetez toate fructele împreună într-o plasă mare.",
+      "tr-TR": "Anlaşıldı. Bütün meyveleri büyük bir çantaya birlikte koyuyorum.",
+      "uk-UA": "Добре. Я запакую всі фрукти разом у велику сумку.",
+      "uz-UZ": "Tushunarli. Hamma mevalarni bitta katta xaltaga joylayman."
+    },
+    "vocabulary": [
+      {
+        "german": "das Obst",
+        "translation": {
+          "ru-RU": "фрукты",
+          "en-US": "fruit",
+          "ar-SA": "الفواكه",
+          "es-ES": "fruta",
+          "fr-FR": "fruits",
+          "hi-IN": "फल",
+          "pl-PL": "owoce",
+          "ro-RO": "fructe",
+          "tr-TR": "meyve",
+          "uk-UA": "фрукти",
+          "uz-UZ": "mevalar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Vielen Dank. Was macht das zusammen?",
+        "translation": {
+          "ru-RU": "Большое спасибо. Сколько это стоит вместе?",
+          "en-US": "Thank you very much. What does that come to altogether?",
+          "ar-SA": "شكراً جزيلاً. كم الحساب الإجمالي؟",
+          "es-ES": "Muchas gracias. ¿Cuánto es en total?",
+          "fr-FR": "Merci beaucoup. Combien ça fait en tout ?",
+          "hi-IN": "बहुत-बहुत धन्यवाद। सब मिलाकर कितना हुआ?",
+          "pl-PL": "Bardzo dziękuję. Ile to wynosi razem?",
+          "ro-RO": "Mulțumesc mult. Cât costă totul împreună?",
+          "tr-TR": "Çok teşekkürler. Hepsi birlikte ne kadar tutuyor?",
+          "uk-UA": "Дуже дякую. Скільки це коштує разом?",
+          "uz-UZ": "Katta rahmat. Hammasi bo'lib qancha bo'ldi?"
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Danke. Wie viel kostet das insgesamt?",
+        "translation": {
+          "ru-RU": "Спасибо. Сколько это стоит в общей сложности?",
+          "en-US": "Thanks. How much does that cost in total?",
+          "ar-SA": "شكراً. كم تكلفة هذا إجمالاً؟",
+          "es-ES": "Gracias. ¿Cuánto cuesta esto en total?",
+          "fr-FR": "Merci. Combien cela coûte-t-il au total ?",
+          "hi-IN": "धन्यवाद। कुल मिलाकर इसकी कीमत कितनी है?",
+          "pl-PL": "Dziękuję. Ile to kosztuje w sumie?",
+          "ro-RO": "Mulțumesc. Cât costă asta în total?",
+          "tr-TR": "Teşekkürler. Toplamda ne kadar ediyor?",
+          "uk-UA": "Дякую. Скільки це коштує в цілому?",
+          "uz-UZ": "Rahmat. Bu jami qancha turadi?"
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Das macht zusammen 12 Euro und 50 Cent. Wie möchten Sie bezahlen?",
+    "botTranslation": {
+      "ru-RU": "Это стоит вместе 12 евро и 50 центов. Как вы желаете оплатить?",
+      "en-US": "That comes to 12 euros and 50 cents altogether. How would you like to pay?",
+      "ar-SA": "المجموع هو 12 يورو و 50 سنتاً. كيف تود الدفع؟",
+      "es-ES": "Eso hace un total de 12 euros y 50 céntimos. ¿Cómo quiere pagar?",
+      "fr-FR": "Cela fait au total 12 euros et 50 centimes. Comment souhaitez-vous payer ?",
+      "hi-IN": "यह सब मिलाकर 12 यूरो और 50 सेंट हुआ। आप कैसे भुगतान करना चाहेंगे?",
+      "pl-PL": "To wynosi razem 12 euro i 50 centów. Jak chce Pan/Pani zapłacić?",
+      "ro-RO": "Asta face în total 12 euro și 50 de cenți. Cum doriți să plătiți?",
+      "tr-TR": "Hepsi birlikte 12 Euro 50 Cent ediyor. Nasıl ödemek istersiniz?",
+      "uk-UA": "Це коштує разом 12 євро і 50 центів. Як ви бажаєте оплатити?",
+      "uz-UZ": "Jami 12 yevro-yu 50 sent bo'ldi. Qanday to'lamoqchisiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Bargeld",
+        "translation": {
+          "ru-RU": "наличные деньги",
+          "en-US": "cash",
+          "ar-SA": "النقد / كاش",
+          "es-ES": "dinero en efectivo",
+          "fr-FR": "espèces / argent liquide",
+          "hi-IN": "नकद पैसे",
+          "pl-PL": "gotówka",
+          "ro-RO": "bani peșin / numerar",
+          "tr-TR": "nakit para",
+          "uk-UA": "готівка",
+          "uz-UZ": "naqd pul"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich bezahle bar. Hier ist ein 15 Euro Schein.",
+        "translation": {
+          "ru-RU": "Я оплачу наличными. Вот купюра 15 евро.",
+          "en-US": "I'll pay in cash. Here is a 15-euro note.",
+          "ar-SA": "سأدفع نقداً. تفضل، هذه ورقة نقود بقيمة 15 يورو.",
+          "es-ES": "Pago en efectivo. Aquí tiene un billete de 15 euros.",
+          "fr-FR": "Je paye en espèces. Voici un billet de 15 euros.",
+          "hi-IN": "मैं नकद भुगतान करूँगा। यह 15 यूरो का नोट है।",
+          "pl-PL": "Zapłacę gotówką. Proszę, oto banknot 15 euro.",
+          "ro-RO": "Plătesc cash. Poftim o bancnotă de 15 euro.",
+          "tr-TR": "Nakit ödüyorum. Buyurun, 15 Euro'luk bir banknot.",
+          "uk-UA": "Я оплачу готівкою. Ось купюра 15 євро.",
+          "uz-UZ": "Naqd to'layman. Mana 15 yevrolik kupyura."
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Ich bezahle bar. Hier ist ein 20 Euro Schein.",
+        "translation": {
+          "ru-RU": "Я оплачу наличными. Вот купюра 20 евро.",
+          "en-US": "I'll pay in cash. Here is a 20-euro note.",
+          "ar-SA": "سأدفع نقداً. تفضل، هذه ورقة نقود بقيمة 20 يورو.",
+          "es-ES": "Pago en efectivo. Aquí tiene un billete de 20 euros.",
+          "fr-FR": "Je paye en espèces. Voici un billet de 20 euros.",
+          "hi-IN": "मैं नकद भुगतान करूँगा। यह 20 यूरो का नोट है।",
+          "pl-PL": "Zapłacę gotówką. Proszę, oto banknot 20 euro.",
+          "ro-RO": "Plătesc cash. Poftim o bancnotă de 20 euro.",
+          "tr-TR": "Nakit ödüyorum. Buyurun, 20 Euro'luk bir banknot.",
+          "uk-UA": "Я оплачу готівкою. Ось купюра 20 євро.",
+          "uz-UZ": "Naqd to'layman. Mana 20 yevrolik kupyura."
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Danke schön. Ich rechne kurz. Hier ist Ihr Wechselgeld zurück.",
+    "botTranslation": {
+      "ru-RU": "Большое спасибо. Я сейчас посчитаю. Вот ваша сдача назад.",
+      "en-US": "Thank you very much. I'll calculate quickly. Here is your change back.",
+      "ar-SA": "شكراً جزيلاً. سأحسب الحساب سريعاً. تفضل، هذه بقية نقودك (الفكة).",
+      "es-ES": "Muchas gracias. Echo la cuenta rápido. Aquí tiene su cambio.",
+      "fr-FR": "Merci beaucoup. Je calcule rapidement. Voici votre monnaie en retour.",
+      "hi-IN": "बहुत-बहुत धन्यवाद। मैं जल्दी से गणना करता हूँ। यह आपके बचे हुए पैसे (छुट्टे) हैं।",
+      "pl-PL": "Bardzo dziękuję. Szybko przeliczę. Oto Pana/Pani reszta.",
+      "ro-RO": "Mulțumesc mult. Calculez rapid. Poftim restul dumneavoastră înapoi.",
+      "tr-TR": "Çok teşekkürler. Hemen hesaplıyorum. Buyurun, para üstünüz.",
+      "uk-UA": "Дуже дякую. Я зараз порахую. Ось ваша решта назад.",
+      "uz-UZ": "Katta rahmat. Hozir hisoblab beraman. Mana, qaytimingiz."
+    },
+    "vocabulary": [
+      {
+        "german": "das Wechselgeld",
+        "translation": {
+          "ru-RU": "сдача",
+          "en-US": "change",
+          "ar-SA": "الفكة / باقي النقود",
+          "es-ES": "cambio / vuelta",
+          "fr-FR": "monnaie",
+          "hi-IN": "छुट्टे पैसे (बाकी रकम)",
+          "pl-PL": "reszta",
+          "ro-RO": "rest",
+          "tr-TR": "para üstü",
+          "uk-UA": "решта",
+          "uz-UZ": "qaytim"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Vielen Dank für die Hilfe.",
+        "translation": {
+          "ru-RU": "Большое спасибо за помощь.",
+          "en-US": "Thank you very much for the help.",
+          "ar-SA": "شكراً جزيلاً على المساعدة.",
+          "es-ES": "Muchas gracias por la ayuda.",
+          "fr-FR": "Merci beaucoup pour l'aide.",
+          "hi-IN": "मदद के लिए बहुत-बहुत धन्यवाद।",
+          "pl-PL": "Bardzo dziękuję za pomoc.",
+          "ro-RO": "Mulțumesc mult pentru ajutor.",
+          "tr-TR": "Yardımınız için çok teşekkürler.",
+          "uk-UA": "Дуже дякую за допомогу.",
+          "uz-UZ": "Yordam uchun katta rahmat."
+        },
+        "nextStep": "step_17"
+      },
+      {
+        "text": "Danke schön.",
+        "translation": {
+          "ru-RU": "Большое спасибо.",
+          "en-US": "Thank you very much.",
+          "ar-SA": "شكراً جزيلاً.",
+          "es-ES": "Muchas gracias.",
+          "fr-FR": "Merci beaucoup.",
+          "hi-IN": "बहुत-बहुत धन्यवाद।",
+          "pl-PL": "Dziękuję bardzo.",
+          "ro-RO": "Mulțumesc frumos.",
+          "tr-TR": "Çok teşekkür ederim.",
+          "uk-UA": "Дуже дякую.",
+          "uz-UZ": "Katta rahmat."
+        },
+        "nextStep": "step_17"
+      }
+    ],
+    "defaultNext": "step_17"
+  },
+  "step_17": {
+    "botText": "Bitte schön!",
+    "botTranslation": {
+      "ru-RU": "Пожалуйста!",
+      "en-US": "You're welcome!",
+      "ar-SA": "على الرحب والسعة!",
+      "es-ES": "¡De nada!",
+      "fr-FR": "Je vous en prie !",
+      "hi-IN": "आपका स्वागत है!",
+      "pl-PL": "Proszę bardzo!",
+      "ro-RO": "Cu plăcere!",
+      "tr-TR": "Rica ederim!",
+      "uk-UA": "Будь ласка!",
+      "uz-UZ": "Arzimaydi!"
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

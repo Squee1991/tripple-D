@@ -10,7 +10,6 @@
         :visible="showAuthModal"
         @close="closeAuthModal"
         :title="authModalData.title"
-        :img="Login"
         :text="authModalData.text"
     />
     <div class="lobby-container">
@@ -19,17 +18,12 @@
           :title="t('adjectiveComparisonPage.tipTitle')"
           :tips="tipsData.tips"
       />
-      <div v-if="!isWaitingForOpponent && !isOpponentFound">
+      <div class="duel__wrapper" v-if="!isWaitingForOpponent && !isOpponentFound">
         <div class="duel__header">
-          <button @click="goBack" class="back-button-global" aria-label="Назад">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-            </svg>
-            <span>{{ t('wordDuel.btnBack') }}</span>
-          </button>
-          <!--                    <div class="header-section">-->
-          <!--                        <h1 class="page-title">{{ t('wordDuel.title') }}</h1>-->
-          <!--                    </div>-->
+          <div class="duel__header--left">
+            <VBackBtn/>
+            <div class="duel__header--title">{{ t('categoryAchievments.duel')}}</div>
+          </div>
           <div class="tiips__info-wrapper">
             <button class="btn__tips" @click="tipsModule">
               <img class="tipps__icon" src="../assets/images/Tipps.svg" alt="Tips Icon">
@@ -57,8 +51,6 @@
           </div>
           <div class="mode-toggle-slider" :style="{ transform: sliderTransform }"></div>
         </div>
-        <!--                <p class="page-subtitle">{{ t('wordDuel.subTitle') }}</p>-->
-
         <div class="main-content-wrapper">
           <div class="level-grid">
             <button
@@ -66,15 +58,18 @@
                 :key="level"
                 @click="selectLevel(level)" class="level-card"
                 :class="{ 'level-card--selected': selectedLevel === level }">
-              <h2 class="card-level-title">{{ level }}</h2>
-<!--              <h2 class="card-level-title">{{ t('wordDuel.level') }} {{ level }}</h2>-->
+              <span class="card-level-title">{{ level }}</span>
             </button>
           </div>
-
           <div v-if="authStore.uid" class="stats-block">
-            <h3>
-              {{ t('sentenceDuels.stats')}}<br> {{ t('sentenceDuels.statsPartTwo')}} <span>{{ selectedLevel }}</span>
-            </h3>
+            <div class="stats__block-info">
+              <h3>
+                {{ t('sentenceDuels.stats')}} {{ t('sentenceDuels.statsPartTwo')}}
+              </h3>
+              <div class="stats__block-level">
+                <span class="stats__level">{{ selectedLevel }}</span>
+              </div>
+            </div>
             <div class="stats-container">
               <div class="stat-item">
                 <span class="stat-label">{{ t('sentenceDuels.victories')}}</span>
@@ -94,15 +89,21 @@
                 class="start-game-button"
                 :disabled="(mode === 'online' && gameStore.isSearching) || isLoading"
             >
-              {{ t('sentenceDuels.start')}} ({{ selectedLevel }})
+              {{ t('sentenceDuels.start')}}
             </button>
-            <p class="stats-hint">{{ t('sentenceDuels.info')}}</p>
           </div>
         </div>
       </div>
       <div v-else class="status-overlay">
-        <div v-if="isWaitingForOpponent">
-          <p class="status-text">{{ t('wordDuel.searching') }}<span class="dots">...</span></p>
+        <div v-if="isWaitingForOpponent" class="search-container">
+          <div class="duel__icon-wrapper">
+            <div class="duel__icon">
+              <img src="../assets/images/DuelIcon.svg" alt="duel_icon">
+            </div>
+          </div>
+          <p class="status-text">
+            {{ t('wordDuel.searching') }}<span class="animated-dots"><span>.</span><span>.</span><span>.</span></span>
+          </p>
           <button @click="cancelSearch" class="cancel-button">{{ t('wordDuel.cancel') }}</button>
         </div>
         <div v-if="isOpponentFound">
@@ -115,7 +116,6 @@
 </template>
 
 <script setup>
-
 import {ref, computed, watch, onMounted, onUnmounted} from 'vue'
 import {useSentencesStore} from '../store/sentencesStore.js'
 import {useDuelStore} from '../store/sentenceDuelStore.js'
@@ -123,8 +123,8 @@ import {userAuthStore} from '../store/authStore.js'
 import {useRouter} from 'vue-router'
 import Modal from '../src/components/modal.vue'
 import TipsModal from '../src/components/V-tips.vue'
-import Login from '../assets/images/login.svg'
 import {useSeoMeta} from "#imports";
+import VBackBtn from "~/src/components/V-back-btn.vue";
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -267,26 +267,55 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 <style scoped>
 
 .mode-toggle-wrapper {
-  width: 320px;
   display: flex;
-  background: #fff;
-  border-radius: 16px;
+  background: var(--tabBg);
+  border-radius: 36px;
   position: relative;
   margin: 2rem auto;
-  box-shadow: 2px 2px 0px #1e1e1e;
-  border: 3px solid #1e1e1e;
+  border: 3px solid var(--menuBorder);
+  box-shadow: 2px 2px 0 var(--menuBorder);
   overflow: hidden;
   padding: 4px;
+  margin: 10px;
 }
 
 .tipps__icon {
-  width: 50px;
+  width: 36px;
+}
+
+.stats__block-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.duel__wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.stats__block-level {
+  font-size: 23px;
+  font-weight: 600;
+  color: white;
+  background: #674bff;
+  padding: 10px 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 0 #583ee1;
+}
+
+.duel__icon{
+  width: 200px;
+  margin: 0 auto;
+  padding: 30px;
 }
 
 .tiips__info-wrapper {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 19px;
 }
 
 .btn__tips {
@@ -295,15 +324,28 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   cursor: pointer;
 }
 
+.duel__header--title {
+  color: var(--title);
+  font-weight: 600;
+  font-size: 24px;
+  margin-left: 15px;
+  text-shadow: 0px 1px var(--title);
+}
+
+.duel__header--left {
+  display: flex;
+  align-items: center;
+}
+
 .mode-toggle-option {
   flex: 1;
   text-align: center;
-  padding: 10px 5px;
+  padding: 12px 5px;
   cursor: pointer;
-  color: #fff;
+  color: var(--titleColor);
   font-family: "Nunito", sans-serif;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 17px;
   position: relative;
   transition: color 0.4s cubic-bezier(.38, 1.32, .39, 1);
   user-select: none;
@@ -311,7 +353,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 }
 
 .mode-toggle-option--inactive {
-  color: #1e1e1e;
+  color: var(--titleColor);
 }
 
 .mode-toggle-slider {
@@ -321,8 +363,8 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   left: 4px;
   width: calc(50% - 4px);
   height: calc(100% - 8px);
-  background: #1e1e1e;
-  border-radius: 12px;
+  background: var(--tabsSlideBg);
+  border-radius: 42px;
   transition: transform 0.4s cubic-bezier(.38, 1.32, .39, 1);
   z-index: 0;
 }
@@ -335,7 +377,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 5px 10px 15px 10px;
   max-width: 1200px;
   margin: 0 auto;
   gap: 15px;
@@ -358,13 +400,8 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 }
 
 .duel__question-img {
-  width: 70px;
+  width: 40px;
   cursor: pointer;
-}
-
-.back-button-global:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 0px 0px 0px #1e1e1e;
 }
 
 .back-button-global svg {
@@ -374,18 +411,9 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 }
 
 .lobby-container {
-  padding: 40px;
   font-family: 'Nunito', sans-serif;
-  min-height: 100vh
+  height: 100%;
 }
-
-/*.page-title {*/
-/*    font-size: 2.3rem;*/
-/*    font-weight: 800;*/
-/*    color: var(--titleColor);*/
-/*    text-align: center;*/
-/*    max-width: 500px;*/
-/*}*/
 
 .page-subtitle {
   text-align: center;
@@ -397,17 +425,11 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 
 .level-grid {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.header-section {
-  padding: 12px;
+  gap: 10px;
 }
 
 .level-card {
-  background-color: white;
-  border: 2px solid #1e1e1e;
+  background-color: var(--tabBg);
   border-radius: 20px;
   padding: 15px;
   text-align: left;
@@ -416,35 +438,25 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  box-shadow: 2px 2px 0px #1e1e1e;
-}
-
-.level-card:hover:not(:disabled) {
-  background-color: #FFD24B;
-  transform: translate(2px , 2px);
-  box-shadow: 0px 0px 0 #1e1e1e;
+  border: 2px solid var(--menuBorder);
+  box-shadow: 2px 2px 0 var(--menuBorder);
+  color: var(--titleColor);
 }
 
 .level-card {
-  border-color: #1e1e1e;
+  width: 100%;
 }
 
 .level-card.level-card--selected {
-  background-color: #FFD24B;
-  transform: translateY(-2px) scale(1.01);
-  box-shadow: 2px 2px 0px #1e1e1e;
-  min-width: 120px;
+  background-color: #674bff;
+  color: white;
 }
 
 .card-level-title {
-  font-size: 2rem;
+  font-size: 24px;
   font-weight: 800;
   margin: 0;
-  color: #1e1e1e;
-}
-
-.level-card:hover:not(:disabled) .card-level-title {
-  color: #1e1e1e;
+  text-align: center;
 }
 
 .status-overlay {
@@ -452,12 +464,13 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 60vh;
+  min-height: 100vh;
 }
 
 .status-text {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 800;
+  color: var(--titleColor);
 }
 
 @keyframes pulse {
@@ -477,37 +490,34 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 }
 
 .cancel-button {
+  min-width: 180px;
   margin-top: 25px;
-  background-color: #f7f7f7;
-  border: 3px solid #E89C9C;
-  color: #a85252;
+  background-color: #da5252;
+  border: none;
+  box-shadow: 0 5px 0 #e36363;
+  color:white;
   font-weight: 600;
   font-size: 1rem;
-  padding: 10px 25px;
-  border-radius: 12px;
+  padding: 12px 16px;
+  border-radius: 40px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-.cancel-button:hover {
-  background-color: #E89C9C;
-  color: white;
-  transform: translateY(-2px);
-}
 
 .main-content-wrapper {
   display: flex;
+  flex-direction: column;
   gap: 20px;
-  max-width: 1200px;
-  margin: 40px auto 0;
+  padding: 15px;
 }
 
 .stats-block {
-  background-color: #fff;
-  border: 3px solid #1e1e1e;
+  background-color: var(--menuItemsBg);
+  border: 3px solid var(--menuBorder);
   border-radius: 20px;
-  padding: 10px;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  padding: 20px;
+  box-shadow: 0 4px 0 var(--menuBorder);
   top: 20px;
   width: 100%;
 }
@@ -518,8 +528,9 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   font-weight: 800;
   margin-top: 0;
   margin-bottom: 25px;
-  color: #1e1e1e;
+  color: var(--titleColor);
   line-height: 1.3;
+  text-shadow: 0px 1px var(--titleColor);
 }
 
 .stats-block h3 span {
@@ -527,7 +538,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   background-color: #FFD24B;
   color: #1e1e1e;
   padding: 2px 12px;
-  border-radius: 8px;
+  border-radius: 15px;
   margin-top: 8px;
   border: 2px solid #1e1e1e;
 }
@@ -536,6 +547,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-bottom: 15px;
 }
 
 .stat-item {
@@ -544,14 +556,9 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   align-items: center;
   background: #f7f7f7;
   padding: 12px 18px;
-  border-radius: 12px;
+  border-radius: 18px;
   border: 2px solid #e0e0e0;
   transition: all 0.2s ease;
-}
-
-.stat-item:hover {
-  transform: scale(1.01);
-  border-color: #1e1e1e;
 }
 
 .stat-label {
@@ -567,28 +574,21 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 }
 
 .start-game-button {
+  display: block;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid #1e1e1e;
-  padding: 10px 15px;
-  background: #4ade80;
-  border-radius: 12px;
-  cursor: pointer;
-  color: #1e1e1e;
-  font-size: 1.4rem;
+  text-decoration: none;
+  background: #3b82f6;
+  color: #ffffff;
+  padding: 14px;
+  border-radius: 54px;
+  font-size: 20px;
   font-weight: 800;
-  font-family: "Nunito", sans-serif;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  transition: all 0.1s ease-in-out;
-  margin:15px 0 0 0 ;
+  text-align: center;
+  border: none;
+  box-shadow: 0 6px 0 #1d4ed8;
+  transition: transform 0.1s;
 }
 
-.start-game-button:hover:not(:disabled) {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
-}
 
 .start-game-button:disabled {
   background-color: #ccc;
@@ -597,86 +597,62 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   opacity: 0.7;
 }
 
-.stats-hint {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #777;
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-
-@media (max-width: 1024px) {
-  .page-title {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  .duel__header {
-    padding: 0 10px;
-  }
-
-  .stats-block {
-    position: static;
-  }
-}
-
 @media (max-width: 767px) {
-  .back-button-global {
-    padding: 10px;
-    width: 100%;
-    justify-content: center;
-    font-size: 1.1rem;
-    font-family: "Nunito", sans-serif;
-    font-weight: 600;
-    box-shadow: 2px 2px 0 black;
-  }
-
-  .level-card.level-card--selected {
-    min-width: 100px;
-  }
-
-  .lobby-container {
-    padding: 20px;
-  }
-
-  .card-level-title {
-    text-align: center;
-    font-size: 1.4rem;
-  }
-
-  .duel__header {
-    flex-direction: column;
-    max-width: 400px;
-  }
-
   .level-grid {
     display: flex;
-    flex-direction: column;
   }
+}
 
-  .level-card {
-    box-shadow: 2px 2px 2px #1e1e1e;
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.duel__icon-wrapper {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.radar-pulse.p2 {
+  animation-delay: 1s;
+}
+
+.radar-pulse.p3 {
+  animation-delay: 2s;
+}
+
+.animated-dots span {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: var(--titleColor);
+  line-height: 0;
+  animation: dotJump 1.4s infinite both;
+}
+
+.animated-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.animated-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dotJump {
+  0%, 80%, 100% {
+    transform: translateY(0);
   }
-
-  .level-card.level-card--selected {
-    box-shadow: 2px 2px 0px #1e1e1e;
-    transform: none;
-  }
-
-  .level-card:hover:not(:disabled) {
-    box-shadow: 2px 2px 0px #1e1e1e;
-    transform: none;
-  }
-
-  .start-game-button {
-    font-size: 1.2rem;
-    padding: 10px;
-    box-shadow: 2px 2px 0px #1e1e1e;
-  }
-
-  .start-game-button:hover:not(:disabled) {
-    transform: none;
-    box-shadow: 2px 2px 0px #1e1e1e;
+  40% {
+    transform: translateY(-6px);
   }
 }
 

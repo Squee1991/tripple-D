@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.skillupgerman.app",
+      "sha256_cert_fingerprints": [
+        "A7:0D:FB:8A:E8:F8:73:9A:72:1F:AB:36:16:7A:AD:72:97:96:05:73:0F:04:8A:5D:33:68:F7:A6:5E:2B:64"
+      ]
+    }
+  }
+]
