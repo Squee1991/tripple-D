@@ -211,7 +211,7 @@ exports.sendResetEmail = onRequest({ cors: true, secrets: [RESEND_API_KEY] }, as
 		const resend = new Resend(RESEND_API_KEY.value());
 		try {
 			const rawLink = await admin.auth().generatePasswordResetLink(email);
-			const actionLink = rawLink.replace('tripple-d-90bd2.firebaseapp.com', 'language-app-beta.vercel.app');
+			const actionLink = rawLink.replace('tripple-d-90bd2.firebaseapp.com', 'skillupgerman.com');
 
 			const htmlTemplate = `
             <!DOCTYPE html>

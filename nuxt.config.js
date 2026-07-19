@@ -147,8 +147,8 @@ export default defineNuxtConfig({
 		'/info-about': { ssr: true },
 		'/admin/**': {status: 404},
 		'/wp-login.php': {status: 404},
-		'/sounds/**': {headers: {'Cache-Control': 'public, max-age=2592000'}},
-		'/images/**': {headers: {'Cache-Control': 'public, max-age=2592000'}},
-		'/*.png': {headers: {'Cache-Control': 'public, max-age=2592000'}}
+		'/sounds/**': {headers: {'Cache-Control': 'no-cache, no-store, must-revalidate'}},
+		'/images/**': {headers: {'Cache-Control': 'no-cache, no-store, must-revalidate'}},
+		'/*.png': {headers: {'Cache-Control': 'no-cache, no-store, must-revalidate'}}
 	},
 })
