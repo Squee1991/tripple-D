@@ -10618,5 +10618,16 @@
     "game-desc": "Skoro już tu jesteśmy, rozgrzejmy się. Wybierz poprawny rodzajnik:",
     "win-screen": "Świetna robota!",
     "win-desc": "Teraz możesz wrócić do lekcji."
+  },
+  "appBanner": {
+    "promo": "Niemiecki zawsze pod ręką",
+    "promo_sub": "Ucz się w drodze, podczas przerwy lub przed snem!",
+    "subTextApple": "Pobierz w",
+    "subTextAriaApple": "Pobierz w App Store",
+    "subTextGoogle": "Dostępne w",
+    "subTextAriaGoogle": "Dostępne w Google Play"
+  },
+  "public__copyright": {
+    "text": "Skillupgerman. Wszelkie prawa zastrzeżone."
   }
 }

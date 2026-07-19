@@ -24,7 +24,7 @@
               :src="item.icon"
               :alt="item.alt"
           >
-          <span class="item__label"> {{ item.title }}:</span>
+          <span class="item__label"> {{ item.title }}</span>
         <span v-if="!userAuth.isPremium || item.id !== 'lives'" class="stat-value">{{ item.value }}</span>
         </span>
       </button>
@@ -117,7 +117,7 @@ const infoData = computed(() => [
   },
   {
     id: "rank",
-    title: t('pavelOverlay.rankTitle'),
+    title: t('pavelOverlay.rankTitle') + ':',
     tips: [
       {label: t('pavelOverlay.rankLabelOne')},
       {label: t('pavelOverlay.rankLabelTwo')},
@@ -130,7 +130,7 @@ const infoData = computed(() => [
   },
   {
     id: "article",
-    title: t('pavelOverlay.articleTitle'),
+    title: t('pavelOverlay.articleTitle') + ':',
     tips: [
       {label: t('pavelOverlay.articleLabelOne')},
       {label: t('pavelOverlay.articleLabelTwo')}

@@ -10578,5 +10578,16 @@
     "game-desc": "चूंकि हम यहाँ हैं, तो चलिए थोड़ा अभ्यास कर लेते हैं। सही आर्टिकल चुनें:",
     "win-screen": "बहुत बढ़िया!",
     "win-desc": "अब आप अपने पाठों पर वापस जा सकते हैं।"
+  },
+  "appBanner": {
+    "promo": "जर्मन हमेशा आपके पास",
+    "promo_sub": "रास्ते में, ब्रेक के दौरान या सोने से पहले सीखना जारी रखें!",
+    "subTextApple": "डाउनलोड करें",
+    "subTextAriaApple": "App Store से डाउनलोड करें",
+    "subTextGoogle": "उपलब्ध है",
+    "subTextAriaGoogle": "Google Play पर उपलब्ध है"
+  },
+  "public__copyright": {
+    "text": "Skillupgerman. सर्वाधिकार सुरक्षित।"
   }
 }

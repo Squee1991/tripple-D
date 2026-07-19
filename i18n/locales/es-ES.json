@@ -10602,5 +10602,16 @@
     "game-desc": "Ya que estamos aquí, vamos a calentar. Elige el artículo correcto:",
     "win-screen": "¡Excelente trabajo!",
     "win-desc": "Ahora puedes volver a tus lecciones."
+  },
+  "appBanner": {
+    "promo": "Alemán siempre a mano",
+    "promo_sub": "¡Sigue aprendiendo en el camino, durante un descanso o antes de dormir!",
+    "subTextApple": "Descárgalo en la",
+    "subTextAriaApple": "Descargar en la App Store",
+    "subTextGoogle": "Disponible en",
+    "subTextAriaGoogle": "Disponible en Google Play"
+  },
+  "public__copyright": {
+    "text": "Skillupgerman. Todos los derechos reservados."
   }
 }

@@ -1,12 +1,18 @@
 <template>
   <section class="features">
     <div class="features__inner">
-      <div ref="titleRef" class="f__title">
+      <div class="f__title">
         <h1 class="features__title">{{ t('features.title') }}</h1>
       </div>
-      <div class="features__grid">
-        <div class="features__card" v-for="(item, index) in items" :key="index"
-             :ref="el => { if (el) cardsRef[index] = el }">
+      <div
+          class="features__slider"
+          ref="sliderRef"
+          @mousedown="startDrag"
+          @mouseleave="stopDrag"
+          @mouseup="stopDrag"
+          @mousemove="onDrag"
+      >
+        <div class="features__card" v-for="(item, index) in items" :key="index">
           <h2 class="features__card-title">{{ t(item.title) }}</h2>
           <div class="features__icon-wrapper">
             <img :src="item.src" :alt="item.alt" class="features__icon"/>
@@ -25,10 +31,8 @@
 </template>
 
 <script setup>
-import {ref, onMounted} from 'vue'
+import {ref} from 'vue'
 import {useI18n} from 'vue-i18n'
-import {gsap} from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
 import Book from '../../assets/images/DescBook.svg'
 import Brain from '../../assets/images/brain.svg'
 import Controller from '../../assets/images/video-game.svg'
@@ -38,11 +42,8 @@ import Exam from '../../assets/images/exam.svg'
 import Ranked from '../../assets/images/ranked.svg'
 import Cards from '../../assets/images/greeting-card.svg'
 
-gsap.registerPlugin(ScrollTrigger);
 const {t} = useI18n()
-const titleRef = ref(null);
-const cardsRef = ref([]);
-const cards = cardsRef.value;
+
 const items = [
   {
     src: Book, alt: 'Book', title: t('descriptionCardTheme.title'), description: [
@@ -108,34 +109,32 @@ const items = [
       {text: t('descriptionCardCards.textThree')},
       {text: t('descriptionCardCards.textFour')}
     ]
-  },
+  }
 ]
+const sliderRef = ref(null)
+let isDown = false
+let startX
+let scrollLeft
 
-onMounted(() => {
-  gsap.from(titleRef.value, {
-    scrollTrigger: {trigger: titleRef.value, start: "top 90%"},
-    y: 50,
-    opacity: 0,
-    duration: 0.3,
-    ease: "power3.out",
-  });
+const startDrag = (e) => {
+  isDown = true
+  sliderRef.value.classList.add('is-dragging')
+  startX = e.pageX - sliderRef.value.offsetLeft
+  scrollLeft = sliderRef.value.scrollLeft
+}
 
-  gsap.set(cards, {opacity: 0, y: 50});
-  gsap.to(cards, {
-    scrollTrigger: {
-      trigger: ".features__grid",
-      start: "top 85%",
-      toggleActions: "play none none none",
-    },
-    opacity: 1,
-    y: 0,
-    duration: 0.3,
-    stagger: 0.2,
-    ease: "power3.out",
-  });
-});
+const stopDrag = () => {
+  isDown = false
+  sliderRef.value.classList.remove('is-dragging')
+}
 
-
+const onDrag = (e) => {
+  if (!isDown) return
+  e.preventDefault()
+  const x = e.pageX - sliderRef.value.offsetLeft
+  const walk = (x - startX) * 1.5
+  sliderRef.value.scrollLeft = scrollLeft - walk
+}
 </script>
 
 <style scoped>
@@ -149,6 +148,11 @@ onMounted(() => {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+}
+
+.f__title {
+  display: flex;
+  justify-content: center;
 }
 
 .features__title {
@@ -167,43 +171,33 @@ onMounted(() => {
   border-radius: 10px;
 }
 
-.features__list-item::before {
-  content: "";
-  position: absolute;
-  left: .7rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #fff;
-}
-
-.features__list-item {
-  position: relative;
-  padding: 4px 4px 4px 1.5rem;
-  font-size: 13px;
-  text-align: start;
-  font-weight: 600;
-  color: #fff;
-  letter-spacing: .1px;
-  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
-}
-
-.f__title {
+.features__slider {
   display: flex;
-  justify-content: center;
+  gap: 2rem;
+  padding: 10px 10px 20px 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
 }
 
-.features__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  justify-content: center;
-  gap: 2rem;
-  padding: 10px;
+.features__slider::-webkit-scrollbar {
+  display: none;
+}
+
+.features__slider.is-dragging {
+  scroll-snap-type: none;
+  cursor: grabbing;
+}
+
+.features__slider.is-dragging .features__card {
+  cursor: grabbing;
 }
 
 .features__card {
+  flex: 0 0 calc(33.333% - 1.33rem);
+  scroll-snap-align: start;
   border-radius: 24px;
   border: none;
   box-shadow: 5px 5px 0px #1e1e1e;
@@ -212,8 +206,8 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  user-select: none;
 }
 
 .features__card:hover {
@@ -221,6 +215,7 @@ onMounted(() => {
   box-shadow: 4px 4px 0px #1e1e1e;
 }
 
+/* Цвета карточек */
 .features__card:nth-child(1) {
   background-color: #60a5fa;
   box-shadow: 5px 6px 0 #3079d2;
@@ -269,6 +264,7 @@ onMounted(() => {
   height: 86px;
   border-radius: 20px;
   margin-bottom: 5px;
+  pointer-events: none;
 }
 
 .features__icon {
@@ -283,14 +279,32 @@ onMounted(() => {
   color: #ffffff;
 }
 
-.features__card-desc {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.6;
-  color: #ffffff;
-  opacity: 0.9;
+.features__list-item::before {
+  content: "";
+  position: absolute;
+  left: .7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.features__list-item {
+  position: relative;
+  padding: 4px 4px 4px 1.5rem;
+  font-size: 13px;
   text-align: start;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: .1px;
+}
+
+@media (max-width: 1024px) {
+  .features__card {
+    flex: 0 0 calc(50% - 1rem);
+  }
 }
 
 @media (max-width: 768px) {
@@ -303,8 +317,12 @@ onMounted(() => {
     margin-bottom: 3rem;
   }
 
-  .features__grid {
-    gap: 2rem;
+  .features__slider {
+    gap: 26px;
+  }
+
+  .features__card {
+    flex: 0 0 60%;
   }
 }
 </style>

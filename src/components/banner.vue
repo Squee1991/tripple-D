@@ -1,7 +1,7 @@
 <template>
   <Overlay :visible="showAuth" @close="closeAuth"/>
   <transition name="slide">
-    <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
+    <SignIn v-if="showAuth" initial-mode="register" @close-auth-form="closeAuth"/>
   </transition>
   <div class="banner">
     <section ref="bannerRef" class="banner__section">
@@ -38,18 +38,18 @@ import Overlay from '../components/Uioverlay.vue'
 import {gsap} from 'gsap'
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import Snow from "../../assets/images/shovel.svg";
+import {onMounted, ref, watch} from 'vue'
+import {useRouter} from 'vue-router'
+import {userAuthStore} from '../../store/authStore.js'
+import {useI18n} from 'vue-i18n'
+
+gsap.registerPlugin(ScrollTrigger);
 
 const orbitWords = [
   {text: 'Der', type: 'der', class: 'banner__orbit-word--der'},
   {text: 'Die', type: 'die', class: 'banner__orbit-word--die'},
   {text: 'Das', type: 'das', class: 'banner__orbit-word--das'}
 ]
-
-gsap.registerPlugin(ScrollTrigger);
-import {onMounted} from 'vue'
-import {useRouter} from 'vue-router'
-import {userAuthStore} from '../../store/authStore.js'
-import {ref, watch} from "vue";
 
 const {t} = useI18n()
 const orbit = ref(null)
@@ -59,22 +59,23 @@ const router = useRouter()
 const glowType = ref(null)
 const fadingGlow = ref(null)
 const bannerRef = ref(null);
+
 const openAuth = () => {
   showAuth.value = true
 }
-
 
 const closeAuth = () => {
   showAuth.value = false
 }
 
 const startLearning = () => {
-  userAuth.name ? router.push('/articles') : openAuth()
+  openAuth()
 }
 
 watch(showAuth, (val) => {
   document.body.style.overflow = val ? 'hidden' : ''
 })
+
 onMounted(() => {
   if (!bannerRef.value || !orbit.value) {
     return;
@@ -93,8 +94,17 @@ onMounted(() => {
 });
 </script>
 
-
 <style scoped>
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(100%);
+}
 
 .banner {
   font-family: "Nunito", sans-serif;
@@ -276,13 +286,14 @@ onMounted(() => {
   .banner__section {
     padding: 3rem 1.5rem;
   }
+
   .banner__title {
     font-size: 24px;
   }
+
   .banner__orbit-word {
     font-size: 1.5rem;
     padding: 0.6rem 1.5rem;
   }
 }
-
 </style>

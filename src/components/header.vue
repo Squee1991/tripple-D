@@ -1,7 +1,7 @@
 <template>
   <header class="header" :class="{ 'mobile-menu-active': isMobileMenuOpen , 'is-rtl': isAr }">
     <div v-if="isMobileMenuOpen" class="mobile-nav-overlay" @click="isMobileMenuOpen = false"></div>
-<!--    <UiOverlay :visible="showAuth" @close="closeAuth"/>-->
+        <UiOverlay :visible="showAuth" @close="closeAuth"/>
     <transition name="slide">
       <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
     </transition>
@@ -25,79 +25,101 @@
             <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">
               {{ t(item.valueKey) }}
             </NuxtLink>
-<!--            <button v-else @click="handleMenuItemClick(item)" class="header-nav__link"-->
-<!--                    :class="{'is-active-parent': clickedMenu === item.id}">-->
-<!--              <span>{{ t(item.valueKey) }}</span>-->
-<!--              <img-->
-<!--                  v-if="item.children"-->
-<!--                  :class="['header-nav__arrow', { 'rotated': clickedMenu === item.id }]"-->
-<!--                  :src="Arrow"-->
-<!--                  alt="Arrow__icon"-->
-<!--              />-->
-<!--            </button>-->
-<!--            <ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">-->
-<!--              <li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">-->
-<!--                <NuxtLink v-if="child.url" :to="child.url" class="header-nav__submenu-link"-->
-<!--                          @click="closeAllMenus">-->
-<!--                  {{ t(child.valueKey) }}-->
-<!--                </NuxtLink>-->
-<!--                <button v-else class="header-nav__submenu-link"-->
-<!--                        @click.stop="handleSubmenuItemClick(child)">-->
-<!--                  <span>{{ t(child.valueKey) }}</span>-->
-<!--                  <img-->
-<!--                      v-if="child.subChildren"-->
-<!--                      :class="['header-nav__arrow', { 'rotated': clickedSubChild === child.id }]"-->
-<!--                      :src="Arrow"-->
-<!--                      alt="Arrow_icon"-->
-<!--                  />-->
-<!--                </button>-->
-<!--                <ul v-if="child.subChildren && clickedSubChild === child.id"-->
-<!--                    class="header-nav__submenu-sub">-->
-<!--                  <li v-for="sub in child.subChildren" :key="sub.id"-->
-<!--                      class="header-nav__submenu-sub-item">-->
-<!--                    <NuxtLink :to="sub.url" class="header-nav__submenu-link"-->
-<!--                              @click="closeAllMenus">-->
-<!--                      {{ t(sub.valueKey) }}-->
-<!--                    </NuxtLink>-->
-<!--                  </li>-->
-<!--                </ul>-->
-<!--              </li>-->
-<!--            </ul>-->
+            <!--            <button v-else @click="handleMenuItemClick(item)" class="header-nav__link"-->
+            <!--                    :class="{'is-active-parent': clickedMenu === item.id}">-->
+            <!--              <span>{{ t(item.valueKey) }}</span>-->
+            <!--              <img-->
+            <!--                  v-if="item.children"-->
+            <!--                  :class="['header-nav__arrow', { 'rotated': clickedMenu === item.id }]"-->
+            <!--                  :src="Arrow"-->
+            <!--                  alt="Arrow__icon"-->
+            <!--              />-->
+            <!--            </button>-->
+            <!--            <ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">-->
+            <!--              <li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">-->
+            <!--                <NuxtLink v-if="child.url" :to="child.url" class="header-nav__submenu-link"-->
+            <!--                          @click="closeAllMenus">-->
+            <!--                  {{ t(child.valueKey) }}-->
+            <!--                </NuxtLink>-->
+            <!--                <button v-else class="header-nav__submenu-link"-->
+            <!--                        @click.stop="handleSubmenuItemClick(child)">-->
+            <!--                  <span>{{ t(child.valueKey) }}</span>-->
+            <!--                  <img-->
+            <!--                      v-if="child.subChildren"-->
+            <!--                      :class="['header-nav__arrow', { 'rotated': clickedSubChild === child.id }]"-->
+            <!--                      :src="Arrow"-->
+            <!--                      alt="Arrow_icon"-->
+            <!--                  />-->
+            <!--                </button>-->
+            <!--                <ul v-if="child.subChildren && clickedSubChild === child.id"-->
+            <!--                    class="header-nav__submenu-sub">-->
+            <!--                  <li v-for="sub in child.subChildren" :key="sub.id"-->
+            <!--                      class="header-nav__submenu-sub-item">-->
+            <!--                    <NuxtLink :to="sub.url" class="header-nav__submenu-link"-->
+            <!--                              @click="closeAllMenus">-->
+            <!--                      {{ t(sub.valueKey) }}-->
+            <!--                    </NuxtLink>-->
+            <!--                  </li>-->
+            <!--                </ul>-->
+            <!--              </li>-->
+            <!--            </ul>-->
           </li>
         </ul>
       </nav>
       <div class="header-stats-wrapper">
-        <VHeaderUserStats v-if="userAuth.uid" />
+        <VHeaderUserStats v-if="userAuth.uid"/>
       </div>
       <div class="header-right">
-<!--        <div v-if="userAuth.name" class="header-user-wrapper">-->
-<!--          <button-->
-<!--              ref="userBtnRef"-->
-<!--              class="header-user"-->
-<!--              @click="router.push('cabinet')"-->
-<!--              aria-haspopup="true"-->
-<!--              :aria-expanded="menuOpen.toString()"-->
-<!--              aria-controls="user-menu-dropdown"-->
-<!--          >-->
-<!--            <img class="header-user__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>-->
-<!--          </button>-->
-<!--          <div-->
-<!--              ref="dropdownRef"-->
-<!--              v-if="menuOpen"-->
-<!--              class="header-user__dropdown"-->
-<!--              id="user-menu-dropdown"-->
-<!--          >-->
-<!--            <button-->
-<!--                v-for="item in menuActions"-->
-<!--                :key="item.id"-->
-<!--                class="header-user__dropdown-btn"-->
-<!--                @click.stop="item.action"-->
-<!--            >-->
-<!--              <img class="header-user__dropdown-icon" :src="item.icon" alt="Arrow_dropdown"/>-->
-<!--              <span class="header__drop-text">{{ t(item.label) }}</span>-->
-<!--            </button>-->
-<!--          </div>-->
-<!--        </div>-->
+        <!--        <div v-if="userAuth.name" class="header-user-wrapper">-->
+        <!--          <button-->
+        <!--              ref="userBtnRef"-->
+        <!--              class="header-user"-->
+        <!--              @click="router.push('cabinet')"-->
+        <!--              aria-haspopup="true"-->
+        <!--              :aria-expanded="menuOpen.toString()"-->
+        <!--              aria-controls="user-menu-dropdown"-->
+        <!--          >-->
+        <!--            <img class="header-user__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>-->
+        <!--          </button>-->
+        <!--          <div-->
+        <!--              ref="dropdownRef"-->
+        <!--              v-if="menuOpen"-->
+        <!--              class="header-user__dropdown"-->
+        <!--              id="user-menu-dropdown"-->
+        <!--          >-->
+        <!--            <button-->
+        <!--                v-for="item in menuActions"-->
+        <!--                :key="item.id"-->
+        <!--                class="header-user__dropdown-btn"-->
+        <!--                @click.stop="item.action"-->
+        <!--            >-->
+        <!--              <img class="header-user__dropdown-icon" :src="item.icon" alt="Arrow_dropdown"/>-->
+        <!--              <span class="header__drop-text">{{ t(item.label) }}</span>-->
+        <!--            </button>-->
+        <!--          </div>-->
+        <!--        </div>-->
+        <div class="header-lang" v-if="!userAuth.uid" ref="langDropdownRef">
+          <button class="header-lang__btn" @click="toggleLangDropdown" :aria-expanded="isLangDropdownOpen.toString()">
+            <span class="header-lang__code">{{ locale }}</span>
+            <svg class="header-lang__arrow" :class="{ 'is-open': isLangDropdownOpen }" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <transition name="fade">
+            <ul v-if="isLangDropdownOpen" class="header-lang__dropdown">
+              <li
+                  v-for="loc in locales"
+                  :key="loc.code"
+                  class="header-lang__item"
+                  :class="{ 'is-active': loc.code === locale }"
+                  @click="changeLanguage(loc.code)"
+              >
+                {{ loc.name }}
+              </li>
+            </ul>
+          </transition>
+        </div>
         <button v-if="!userAuth.uid" class="btn-login" @click="openAuth">{{ t('auth.logIn') }}</button>
         <BurgerMenu v-if="!userAuth.uid && !showAuth" class="burger-button" v-model="isMobileMenuOpen"/>
       </div>
@@ -108,12 +130,13 @@
 <script setup>
 import {VOnboardingWrapper, VOnboardingStep, useVOnboarding} from 'v-onboarding'
 import 'v-onboarding/dist/style.css'
-import {ref, computed, watch, onMounted, onBeforeUnmount} from 'vue'
+import {ref, computed, watch, onMounted, onBeforeUnmount, nextTick} from 'vue'
 import {useRouter} from 'vue-router'
 import {userAuthStore} from '../../store/authStore.js'
 import {useBreakPointsStore} from '../../store/breakPointsStore.js'
-import { useEasterEggsStore } from '../../store/easterEggsStore.js'
-import { useRankUserStore} from "../../store/rankStore.js";
+import {useEasterEggsStore} from '../../store/easterEggsStore.js'
+import {useRankUserStore} from "../../store/rankStore.js";
+
 const rankStore = useRankUserStore()
 import SignIn from '../components/logIn.vue'
 import LanguageSelector from '../components/langSwitcher.vue'
@@ -122,7 +145,6 @@ import BurgerMenu from '../components/burgerMenu.vue'
 import UiOverlay from '../components/Uioverlay.vue'
 import ModalDev from '../components/modal.vue'
 
-
 import Arrow from '../../assets/images/arrowNav.svg'
 import Dev from '../../assets/images/dev.svg'
 import User from '../../assets/images/account.svg'
@@ -130,16 +152,16 @@ import Logout from '../../assets/images/logout.svg'
 import PadLock from '../../assets/images/padlock.svg'
 import HD from '../../assets/images/HD.svg'
 import VHeaderUserStats from "~/src/components/V-headerUserStats.vue";
+
 const easterEggsStore = useEasterEggsStore()
 const router = useRouter()
-const {t, locale} = useI18n()
+const {t, locale, locales, setLocale} = useI18n()
 const bp = useBreakPointsStore()
 const userAuth = userAuthStore()
 
 // const click = () => {
 //   easterEggsStore.triggerTaps()
 // }
-
 
 const wrapperRef = ref(null)
 const showAuth = ref(false)
@@ -152,6 +174,21 @@ const modalType = ref(null)
 const userBtnRef = ref(null)
 const dropdownRef = ref(null)
 const dropdownRefNav = ref(null)
+
+// Логика кастомного дропдауна языков
+const isLangDropdownOpen = ref(false)
+const langDropdownRef = ref(null)
+
+const toggleLangDropdown = () => {
+  isLangDropdownOpen.value = !isLangDropdownOpen.value
+}
+
+const changeLanguage = (code) => {
+  setLocale(code)
+  isLangDropdownOpen.value = false
+}
+// ---
+
 const isAr = computed(() => locale.value === 'ar')
 const isMobile = computed(() => bp.isMobile)
 const modalConfig = computed(() => {
@@ -177,14 +214,14 @@ const modalConfig = computed(() => {
   }
 })
 
-const {start , finish} = useVOnboarding(wrapperRef)
+const {start, finish} = useVOnboarding(wrapperRef)
 
 const menuItems = computed(() => {
   const items = [
-          {id: 'about', valueKey: 'nav.about', url: '/info-about'},
-          {id: 'contact', valueKey: 'nav.contact', url: '/support-request'},
-          {id: 'faq', valueKey: 'nav.quest', url: '/faq'}
-        ]
+    {id: 'about', valueKey: 'nav.about', url: '/info-about'},
+    {id: 'contact', valueKey: 'nav.contact', url: '/support-request'},
+    {id: 'faq', valueKey: 'nav.quest', url: '/faq'}
+  ]
   if (userAuth.uid) {
     const allEvents = [
       {
@@ -253,7 +290,7 @@ watch(showOnboarding, async (canShow) => {
   } else {
     finish()
   }
-}, { immediate: true })
+}, {immediate: true})
 
 onMounted(() => {
   updateWidth()
@@ -292,7 +329,6 @@ const closeDevModal = () => {
 
 const closeAuth = () => (showAuth.value = false)
 const openAuth = () => (
-
     showAuth.value = true
 )
 
@@ -359,6 +395,10 @@ const handleClickOutside = (event) => {
   if (clickedMenu.value && dropdownRefNav.value && !dropdownRefNav.value.contains(event.target)) {
     closeAllMenus()
   }
+  // Закрываем языковой дропдаун при клике вне
+  if (isLangDropdownOpen.value && langDropdownRef.value && !langDropdownRef.value.contains(event.target)) {
+    isLangDropdownOpen.value = false
+  }
 }
 
 watch(showAuth, (val) => {
@@ -375,7 +415,6 @@ watch(isMobile, (isNowMobile) => {
 
 watch(isMobileMenuOpen, (newVal) => {
   document.body.style.overflow = newVal ? 'hidden' : ''
-
 })
 
 onMounted(() => {
@@ -388,8 +427,8 @@ onBeforeUnmount(() => {
   document.body.style.overflow = ''
 })
 </script>
-<style scoped>
 
+<style scoped>
 .hd {
   width: 80px;
 }
@@ -723,7 +762,6 @@ onBeforeUnmount(() => {
     display: none;
   }
 
-
   .header-nav__link {
     color: black;
   }
@@ -966,18 +1004,111 @@ onBeforeUnmount(() => {
 
   .btn-login:hover {
     transform: translate(2px, 2px);
-    box-shadow: 0 0 0 ;
+    box-shadow: 0 0 0;
   }
-
 }
-@media  (max-width: 1023px) {
+
+@media (max-width: 1023px) {
   .logo__img {
     width: 100px;
     height: 600px;
   }
+
   .header-container {
     padding: 10px;
   }
 }
 
+.header-lang {
+  position: relative;
+  font-family: "Nunito", sans-serif;
+}
+
+.header-lang__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 45px;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border: 2px solid #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 2px 2px 0px #1e1e1e;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  color: #1e1e1e;
+}
+
+.header-lang__code {
+  font-weight: 800;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.header-lang__arrow {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s ease;
+}
+
+.header-lang__arrow.is-open {
+  transform: rotate(180deg);
+}
+
+.header-lang__dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 150;
+  min-width: 130px;
+  background: #ffffff;
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 2px 2px 0px var(--border);
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.header-lang__item {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #1e1e1e;
+  transition: background 0.2s ease;
+  font-size: 15px;
+}
+
+.header-lang__item:hover {
+  background: #fef8e4;
+}
+
+.header-lang__item.is-active {
+  color: #3b82f6;
+  background: #eff6ff;
+}
+
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(100%);
+}
 </style>

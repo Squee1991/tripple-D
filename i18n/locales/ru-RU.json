@@ -10640,5 +10640,16 @@
     "expiredCode": "Срок действия кода истек или он уже был использован. Запросите новый.",
     "networkError": "Ошибка сети. Проверьте подключение к интернету.",
     "defaultError": "Произошла непредвиденная ошибка. Повторите попытку позже."
+  },
+  "appBanner": {
+    "promo": "Немецкий всегда под рукой",
+    "promo_sub": "Продолжай учиться в дороге, на перерыве или перед сном!",
+    "subTextApple": "Загрузите в",
+    "subTextAriaApple": "Скачать в App Store",
+    "subTextGoogle": "Доступно в",
+    "subTextAriaGoogle": "Доступно в Google Play"
+  },
+  "public__copyright": {
+    "text": "Skillupgerman. Все права защищены."
   }
 }

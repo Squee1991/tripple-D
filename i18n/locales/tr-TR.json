@@ -10612,5 +10612,16 @@
     "game-desc": "Madem buradayız, biraz ısınma hareketi yapalım. Doğru artikeli seçin:",
     "win-screen": "Harika iş çıkardın!",
     "win-desc": "Artık derslerine geri dönebilirsin."
+  },
+  "appBanner": {
+    "promo": "Almanca her zaman elinizin altında",
+    "promo_sub": "Yolda, molada veya uyumadan önce öğrenmeye devam edin!",
+    "subTextApple": "İndirin",
+    "subTextAriaApple": "App Store'dan indirin",
+    "subTextGoogle": "Şuradan ulaşın:",
+    "subTextAriaGoogle": "Google Play'de mevcut"
+  },
+  "public__copyright": {
+    "text": "Skillupgerman. Tüm hakları saklıdır."
   }
 }

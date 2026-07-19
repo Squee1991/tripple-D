@@ -10608,5 +10608,16 @@
     "game-desc": "Раз ми вже тут, давайте розімнемося. Виберіть правильний артикль:",
     "win-screen": "Відмінна робота!",
     "win-desc": "Тепер можна повертатися до уроків."
+  },
+  "appBanner": {
+    "promo": "Німецька завжди під рукою",
+    "promo_sub": "Продовжуй вчитися в дорозі, на перерві або перед сном!",
+    "subTextApple": "Завантажте в",
+    "subTextAriaApple": "Завантажити в App Store",
+    "subTextGoogle": "Доступно в",
+    "subTextAriaGoogle": "Доступно в Google Play"
+  },
+  "public__copyright": {
+    "text": "Skillupgerman. Усі права захищено."
   }
 }

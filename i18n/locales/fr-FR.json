@@ -10598,5 +10598,16 @@
     "game-desc": "Puisque nous sommes là, échauffons-nous. Choisissez l'article correct :",
     "win-screen": "Excellent travail !",
     "win-desc": "Vous pouvez maintenant retourner à vos leçons."
+  },
+  "appBanner": {
+    "promo": "L'allemand toujours à portée de main",
+    "promo_sub": "Continuez à apprendre sur la route, pendant une pause ou avant de dormir !",
+    "subTextApple": "Téléchargez sur l'",
+    "subTextAriaApple": "Télécharger sur l'App Store",
+    "subTextGoogle": "Disponible sur",
+    "subTextAriaGoogle": "Disponible sur Google Play"
+  },
+  "public__copyright": {
+    "text": "Skillupgerman. Tous droits réservés."
   }
 }

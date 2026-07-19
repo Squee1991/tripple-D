@@ -10597,5 +10597,16 @@
     "game-desc": "Agar shu yerdamiz, keling biroz mashq qilamiz. To'g'ri artiklni tanlang:",
     "win-screen": "Ajoyib ish!",
     "win-desc": "Endi darslarga qaytishingiz mumkin."
+  },
+  "appBanner": {
+    "promo": "Nemis tili doim qo'l ostida",
+    "promo_sub": "Yo'lda, tanaffusda yoki uyqudan oldin o'rganishni davom ettiring!",
+    "subTextApple": "Yuklab olish",
+    "subTextAriaApple": "App Store'dan yuklab olish",
+    "subTextGoogle": "Mavjud:",
+    "subTextAriaGoogle": "Google Play'da mavjud"
+  },
+  "public__copyright": {
+    "text": "Skillupgerman. Barcha huquqlar himoyalangan."
   }
 }

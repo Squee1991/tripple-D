@@ -10621,5 +10621,16 @@
     "game-desc": "بما أننا هنا، فلنقم ببعض الإحماء. اختر أداة التعريف الصحيحة:",
     "win-screen": "عمل رائع!",
     "win-desc": "الآن يمكنك العودة إلى دروسك."
+  },
+  "appBanner": {
+    "promo": "اللغة الألمانية دائماً في متناول يدك",
+    "promo_sub": "واصل التعلم أثناء التنقل، أو في استراحة، أو قبل النوم!",
+    "subTextApple": "حملها من",
+    "subTextAriaApple": "تحميل من App Store",
+    "subTextGoogle": "متاحة على",
+    "subTextAriaGoogle": "متاحة على Google Play"
+  },
+  "public__copyright": {
+    "text": "Skillupgerman. جميع الحقوق محفوظة."
   }
 }

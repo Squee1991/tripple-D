@@ -10602,5 +10602,16 @@
     "game-desc": "Dacă tot suntem aici, hai să facem puțină încălzire. Alege articolul corect:",
     "win-screen": "Treabă excelentă!",
     "win-desc": "Acum te poți întoarce la lecții."
+  },
+  "appBanner": {
+    "promo": "Germana mereu la îndemână",
+    "promo_sub": "Continuă să înveți pe drum, în pauză sau înainte de culcare!",
+    "subTextApple": "Descarcă din",
+    "subTextAriaApple": "Descarcă din App Store",
+    "subTextGoogle": "Disponibil pe",
+    "subTextAriaGoogle": "Disponibil pe Google Play"
+  },
+  "public__copyright": {
+    "text": "Skillupgerman. Toate drepturile rezervate."
   }
 }

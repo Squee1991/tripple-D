@@ -795,6 +795,7 @@ const handleCategoryClick = (category) => {
   justify-content: center;
   cursor: pointer;
   transition: transform 0.1s, box-shadow 0.1s;
+  display: none;
 }
 
 .content-close:active {
@@ -814,6 +815,27 @@ const handleCategoryClick = (category) => {
 .category-description {
   font-size: 18px;
   color: #1e1e1e;
+  overflow: auto;
+  height: 100vh;
+  padding-bottom: 80px;
+}
+
+.category-description::-webkit-scrollbar {
+  width: 5px;
+}
+
+.category-description::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.category-description::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 20px;
+  border: 0px solid transparent;
+}
+
+.category-description::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
 
 .achievements-list {

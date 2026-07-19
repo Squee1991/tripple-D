@@ -14,6 +14,7 @@ import Snow from "../assets/images/mery-christmas/Snow.svg";
 import HeartFall from "assets/images/mery-christmas/heartFall.svg";
 import { useEventSessionStore } from '../store/eventsStore.js'
 import VStartPage from "~/src/components/V-startPage.vue";
+import VAppBanner from "~/src/components/V-appBanner.vue";
 
 
 const showLogin = ref(false)
@@ -60,6 +61,7 @@ watch(() => authStore.uid, (newUid) => {
       <Banner/>
       <Description/>
       <About/>
+      <VAppBanner/>
       <FeedBack/>
     </template>
   </div>
