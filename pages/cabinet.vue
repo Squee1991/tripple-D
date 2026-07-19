@@ -14,7 +14,6 @@
         </div>
       </div>
     </div>
-
     <div class="layout__cabinet">
       <aside class="sidebar-panel">
         <button v-if="!isMobile" class="back-btn" @click="backToMain" aria-label="to main" type="button">
@@ -648,6 +647,8 @@ onMounted(async () => {
   display: flex;
   height: 100%;
   width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
   position: relative;
   gap: 20px;
 }

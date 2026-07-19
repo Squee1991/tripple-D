@@ -6,7 +6,7 @@
     <!--      <FeedBack/>-->
     <VLost/>
     <VRankOverlay/>
-    <VInstallApp/>
+<!--    <VInstallApp/>-->
   </NuxtLayout>
 </template>
 
