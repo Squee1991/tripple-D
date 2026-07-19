@@ -61,7 +61,7 @@ watch(() => authStore.uid, (newUid) => {
       <Banner/>
       <Description/>
       <About/>
-      <VAppBanner/>
+<!--      <VAppBanner/>-->
       <FeedBack/>
     </template>
   </div>
@@ -98,7 +98,6 @@ watch(() => authStore.uid, (newUid) => {
 
 @media (max-width: 767px) {
   .stat {
-    /* flex-direction: column; - уже задано выше, можно не дублировать, но оставил как у тебя */
     flex-direction: column;
     justify-content: center;
   }
