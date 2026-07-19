@@ -1,21 +1,21 @@
 <script setup>
-import { ref, computed, nextTick, onMounted } from 'vue'
-import { useSeoMeta, useState } from "#imports"
-import { useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
+import {ref, computed, nextTick, onMounted} from 'vue'
+import {useSeoMeta, useState} from "#imports"
+import {useRouter} from 'vue-router'
+import {useI18n} from 'vue-i18n'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import TipsModal from '../../src/components/V-tips.vue'
-import { topics } from '@/utils/descriptionImages.js'
+import {topics} from '@/utils/descriptionImages.js'
 
-import { getFunctions, httpsCallable } from 'firebase/functions'
-import { showInterstitial } from '../../utils/admob.js'
+import {getFunctions, httpsCallable} from 'firebase/functions'
+import {showInterstitial} from '../../utils/admob.js'
 
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
 
 const router = useRouter()
-const { t, locale } = useI18n()
+const {t, locale} = useI18n()
 
 const sessionConfig = useState('sessionConfig')
 const selectedTopic = computed(() => topics.find(t => t.id === sessionConfig.value?.topicId))
@@ -29,19 +29,12 @@ const isLoading = ref(false)
 const err = ref('')
 const isAnswered = ref(false)
 const showTips = ref(false)
+const isScreenLoading = ref(true)
 
 const isRecording = ref(false)
 const isProcessing = ref(false)
 
 const functions = getFunctions(undefined, 'us-central1')
-
-onMounted(() => {
-  if (!sessionConfig.value?.topicId || !selectedTopic.value) {
-    router.push('/image-description')
-  } else {
-    showInterstitial(() => {})
-  }
-})
 
 const tipsData = ref({
   tips: [
@@ -55,90 +48,39 @@ const currentImage = computed(() => {
   if (!activeTasks.value.length || currentTaskIndex.value >= activeTasks.value.length) return null
   return activeTasks.value[currentTaskIndex.value].image
 })
+
 const isFinished = computed(() => activeTasks.value.length > 0 && currentTaskIndex.value >= activeTasks.value.length)
 const progressPercentage = computed(() => (!activeTasks.value.length) ? 0 : ((currentTaskIndex.value) / activeTasks.value.length) * 100)
 
-// const blobToBase64 = (blob) => {
-//   return new Promise((resolve, reject) => {
-//     const reader = new FileReader()
-//     reader.onloadend = () => resolve(reader.result.split(',')[1])
-//     reader.onerror = reject
-//     reader.readAsDataURL(blob)
-//   })
-// }
+onMounted(() => {
+  if (!sessionConfig.value?.topicId || !selectedTopic.value) {
+    router.push('/image-description')
+    return
+  }
 
-// const startRecording = async () => {
-//   try {
-//     err.value = ''
-//     const hasPermission = await VoiceRecorder.hasAudioRecordingPermission()
-//     if (!hasPermission.value) {
-//       const request = await VoiceRecorder.requestAudioRecordingPermission()
-//       if (!request.value) {
-//         err.value = "Микрофон запрещен. Включите его в настройках."
-//         return
-//       }
-//     }
-//
-//     // 🔥 ГЛАВНАЯ МАГИЯ: Заставляем плагин сохранять звук физически в файл
-//     await VoiceRecorder.startRecording({ directory: Directory.Data })
-//     isRecording.value = true
-//   } catch (e) {
-//     err.value = "Ошибка микрофона: " + (e.message || String(e))
-//   }
-// }
-//
-// const stopRecording = async () => {
-//   if (!isRecording.value) return
-//   try {
-//     isProcessing.value = true
-//     isRecording.value = false
-//     err.value = ''
-//
-//     const result = await VoiceRecorder.stopRecording()
-//     let base64Data = null;
-//
-//     // 🔥 ЧИТАЕМ ФАЙЛ ЧЕРЕЗ BLOB, КАК В ДОКУМЕНТАЦИИ
-//     if (result.value && result.value.path) {
-//       const PATH = result.value.path
-//
-//       // Генерируем правильный URL для файловой системы
-//       const { uri } = await Filesystem.getUri({ directory: Directory.Data, path: PATH })
-//       const fileUrl = Capacitor.convertFileSrc(uri)
-//
-//       // Превращаем локальный файл в Blob
-//       const response = await fetch(fileUrl)
-//       const blob = await response.blob()
-//
-//       // Конвертируем системный Blob в Base64 для отправки
-//       base64Data = await blobToBase64(blob)
-//     } else if (result.value && result.value.recordDataBase64) {
-//       // Фолбэк: если плагин почему-то не вернул path
-//       base64Data = result.value.recordDataBase64
-//     }
-//
-//     if (base64Data) {
-//       const whisperTranscribe = httpsCallable(functions, 'whisperTranscribe')
-//       const res = await whisperTranscribe({ audioContent: base64Data, lang: 'de' })
-//
-//       if (res.data && res.data.error) {
-//         err.value = "Ошибка Whisper: " + res.data.error;
-//       } else if (res.data && res.data.text && res.data.text.trim()) {
-//         await sendMessage(res.data.text)
-//       } else {
-//         err.value = "Whisper вернул пустоту."
-//       }
-//     }
-//   } catch (e) {
-//     err.value = `ОШИБКА RECORD: [${e.code || 'no-code'}] ${e.message || String(e)}`
-//   } finally {
-//     isProcessing.value = false
-//   }
-// }
+  const minDelay = new Promise(resolve => setTimeout(resolve, 1500))
 
-const toggleRecording = () => {
-  if (isRecording.value) stopRecording()
-  else startRecording()
-}
+  const imgPromise = new Promise(resolve => {
+    if (!currentImage.value) {
+      resolve()
+      return
+    }
+    const img = new Image()
+    img.onload = resolve
+    img.onerror = resolve
+    img.src = currentImage.value
+  })
+
+  const adPromise = new Promise(resolve => {
+    showInterstitial(() => {
+      resolve()
+    })
+  })
+
+  Promise.all([minDelay, imgPromise, adPromise]).then(() => {
+    isScreenLoading.value = false
+  })
+})
 
 async function sendMessage(voiceText = null) {
   const textToSend = (typeof voiceText === 'string') ? voiceText : input.value
@@ -146,12 +88,12 @@ async function sendMessage(voiceText = null) {
 
   isLoading.value = true
   err.value = ''
-  messages.value.push({ role: 'user', content: textToSend })
+  messages.value.push({role: 'user', content: textToSend})
   input.value = ''
 
   await nextTick()
   const container = document.querySelector('.messages-scroll')
-  if (container) container.lastElementChild?.scrollIntoView({ behavior: "smooth" })
+  if (container) container.lastElementChild?.scrollIntoView({behavior: "smooth"})
 
   try {
     const task = activeTasks.value[currentTaskIndex.value]
@@ -172,8 +114,7 @@ async function sendMessage(voiceText = null) {
     if (res && res.error) {
       err.value = "ПОДРОБНАЯ ОШИБКА: " + res.error;
       messages.value.pop()
-    }
-    else if (res && res.data) {
+    } else if (res && res.data) {
       messages.value.push({
         role: 'assistant', isStructured: true,
         score: res.data.score || 0,
@@ -211,13 +152,17 @@ function goBack() {
   <div class="page-container">
     <div class="page__inner">
       <TipsModal v-model="showTips" :title="t('adjectiveComparisonPage.tipTitle')" :tips="tipsData.tips"/>
-      <div class="content-shell" v-if="selectedTopic">
+      <div v-if="isScreenLoading" class="screen-preloader">
+        <div class="bubble typing-indicator"><span>•</span><span>•</span><span>•</span></div>
+      </div>
+      <div class="content-shell" v-else-if="selectedTopic">
         <div class="game-view">
           <div v-if="isFinished" class="finish-state">
             <div class="finish-content card-style-box">
               <div class="medal-icon">🎉</div>
-              <h2>{{ t('descriptionSession.done')}}</h2>
-              <button @click="goBack" class="btn-primary-action full-width">{{ t('descriptionSession.newTheme')}}</button>
+              <h2>{{ t('descriptionSession.done') }}</h2>
+              <button @click="goBack" class="btn-primary-action full-width">{{ t('descriptionSession.newTheme') }}
+              </button>
             </div>
           </div>
           <div v-else class="active-game-layout">
@@ -241,7 +186,8 @@ function goBack() {
             </div>
             <div class="game-main card-style-box chat-panel">
               <div class="chat-container">
-                <div v-if="messages.length === 0" class="empty-state"><p>{{ t('describePicture.placeholder') }}</p></div>
+                <div v-if="messages.length === 0" class="empty-state"><p>{{ t('describePicture.placeholder') }}</p>
+                </div>
                 <div class="messages-scroll">
                   <transition-group name="list">
                     <div v-for="(m, i) in messages" :key="i" :class="['msg-row', m.role]">
@@ -249,14 +195,15 @@ function goBack() {
                         <div class="feedback-body">
                           <p class="main-feedback">{{ m.feedback }}</p>
                           <div class="suggestion-box">
-                            <div class="suggestion-header"><span class="icon">✨</span><span>{{ t('descriptionSession.answer')}}:</span></div>
+                            <div class="suggestion-header"><span
+                                class="icon">✨</span><span>{{ t('descriptionSession.answer') }}:</span></div>
                             <div class="suggestion-content">
                               <SoundBtn :text="m.suggestedAnswer" class="mini-sound"/>
                               <p class="suggestion-text">{{ m.suggestedAnswer }}</p>
                             </div>
                           </div>
                           <div v-if="m.keyCorrections?.length" class="corrections-box">
-                            <span class="correction-title">💡 {{ t('descriptionSession.better')}}</span>
+                            <span class="correction-title">💡 {{ t('descriptionSession.better') }}</span>
                             <ul class="correction-list">
                               <li v-for="(c, idx) in m.keyCorrections" :key="idx" class="correction-item">{{ c }}</li>
                             </ul>
@@ -279,10 +226,10 @@ function goBack() {
               <div v-if="err" class="error-toast">{{ err }}</div>
               <div class="input-dock">
                 <template v-if="!isAnswered">
-    <textarea v-model="input" @keydown.enter.prevent="() => sendMessage()"
-              :placeholder="t('describePicture.inputPlaceholder')"
-              :disabled="isLoading || isProcessing" class="modern-input card-style-box" rows="2"
-    ></textarea>
+                  <textarea v-model="input" @keydown.enter.prevent="() => sendMessage()"
+                            :placeholder="t('describePicture.inputPlaceholder')"
+                            :disabled="isLoading || isProcessing" class="modern-input card-style-box" rows="2"
+                  ></textarea>
                   <div class="btn__wrapper">
                     <button @click="() => sendMessage()" :disabled="isLoading || !input.trim()" class="btn-send-round">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -291,11 +238,11 @@ function goBack() {
                         <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                       </svg>
                     </button>
-
                   </div>
                 </template>
                 <template v-else>
-                  <button class="btn-primary-action full-width" @click="nextTask">{{t('describePicture.nextBtn')}}</button>
+                  <button class="btn-primary-action full-width" @click="nextTask">{{ t('describePicture.nextBtn') }}
+                  </button>
                 </template>
               </div>
             </div>
@@ -306,7 +253,16 @@ function goBack() {
   </div>
 </template>
 
+
 <style scoped>
+.screen-preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
 .page-container {
   font-family: "Nunito", sans-serif;
   display: flex;
@@ -692,15 +648,19 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
     display: flex;
     justify-content: center;
   }
+
   .btn-send-round, .btn-mic {
     width: 100%;
   }
+
   .input-dock {
     flex-direction: column;
   }
+
   .chat-panel {
     padding: 5px;
   }
+
   .btn__wrapper {
     flex-direction: row;
   }
