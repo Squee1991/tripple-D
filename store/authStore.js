@@ -584,8 +584,7 @@ export const userAuthStore = defineStore('auth', () => {
 
     const resetPassword = async (emailToReset) => {
         try {
-            const functionUrl = 'https://us-central1-tripple-d-dev.cloudfunctions.net/sendResetEmail';
-
+            const functionUrl = 'https://us-central1-tripple-d-90bd2.cloudfunctions.net/sendResetEmail';
             const response = await fetch(functionUrl, {
                 method: 'POST',
                 headers: {
@@ -593,10 +592,12 @@ export const userAuthStore = defineStore('auth', () => {
                 },
                 body: JSON.stringify({ email: emailToReset })
             });
+
             if (!response.ok) {
                 const errorData = await response.json();
                 throw new Error(errorData.error || 'Ошибка сервера при отправке письма');
             }
+
             return await response.json();
         } catch (error) {
             console.error('Ошибка сброса пароля:', error);
