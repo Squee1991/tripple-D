@@ -9,6 +9,7 @@ import { topics } from '@/utils/descriptionImages.js'
 
 import { getFunctions, httpsCallable } from 'firebase/functions'
 import { showInterstitial } from '../../utils/admob.js'
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -153,9 +154,7 @@ function goBack() {
   <div class="page-container">
     <div class="page__inner">
       <TipsModal v-model="showTips" :title="t('adjectiveComparisonPage.tipTitle')" :tips="tipsData.tips"/>
-      <div v-if="isScreenLoading" class="screen-preloader">
-        <div class="bubble typing-indicator"><span>•</span><span>•</span><span>•</span></div>
-      </div>
+      <VLoginPreloader v-if="isScreenLoading"/>
       <div class="content-shell" v-else-if="selectedTopic">
         <div class="game-view">
           <div v-if="isFinished" class="finish-state">

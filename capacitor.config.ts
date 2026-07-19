@@ -14,7 +14,8 @@ const config: CapacitorConfig = {
       clientId: '516504654997-g3nt0plc6adh4jrvp55rn4p000t3qr09.apps.googleusercontent.com',
     },
     SplashScreen: {
-      launchAutoHide: false
+      launchAutoHide: false,
+      backgroundColor: '#0F172A',
     },
     AdMob: {
       androidAppId: 'ca-app-pub-7535671094319234~8726618547',

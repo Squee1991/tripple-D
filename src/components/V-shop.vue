@@ -149,7 +149,6 @@ const PRICES = {
   FREEZE_DAY: 10,
   SALE_3: 100,
   SALE_6: 150,
-  // SALE_15: 70
 }
 const DISCOUNT_REQ_HATS = {3: 210, 6: 500}
 

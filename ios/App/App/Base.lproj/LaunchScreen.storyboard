@@ -16,12 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SplashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="QB0-b2-bGu">
-                                <rect key="frame" x="112" y="290" width="216" height="377"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="SplashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="QB0-b2-bGu">
+                                <rect key="frame" x="160" y="366" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="5Co-dT-axb"/>
+                                    <constraint firstAttribute="width" constant="120" id="kla-MC-Y8Y"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WQG-0m-txg"/>
+                        <constraints>
+                            <constraint firstItem="QB0-b2-bGu" firstAttribute="centerX" secondItem="GMM-Q7-1Rt" secondAttribute="centerX" id="boe-fp-1Ma"/>
+                            <constraint firstItem="QB0-b2-bGu" firstAttribute="centerY" secondItem="GMM-Q7-1Rt" secondAttribute="centerY" id="ed7-Id-gTD"/>
+                        </constraints>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="160" height="160"/>
                 </viewController>
@@ -31,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SplashScreen" width="565" height="377"/>
+        <image name="SplashScreen" width="500" height="500"/>
     </resources>
 </document>

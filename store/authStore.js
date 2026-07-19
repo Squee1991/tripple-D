@@ -113,6 +113,22 @@ export const userAuthStore = defineStore('auth', () => {
         return isNaN(date.getTime()) ? null : date.toISOString();
     };
 
+    const activateDiscount = async (discountId) => {
+        const user = auth.currentUser;
+        if (!user) return;
+        try {
+            if (premiumDiscount.value) {
+                premiumDiscount.value[discountId] = true;
+            }
+            await updateDoc(doc(db, 'users', user.uid), {
+                [discountId]: true
+            });
+
+        } catch (e) {
+            console.error('Ошибка при активации скидки в Firebase:', e);
+        }
+    };
+
     const detectWebView = () => {
         const ua = navigator.userAgent || '';
         const isIOSWebView = /iPhone|iPod|iPad/i.test(ua) && !/Safari/i.test(ua);
@@ -819,6 +835,7 @@ export const userAuthStore = defineStore('auth', () => {
         clearNotEnoughArticle,
         achievements,
         incrementHats,
+        activateDiscount,
 
         initAuth,
         fetchuser,
