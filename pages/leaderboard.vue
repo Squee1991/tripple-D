@@ -181,11 +181,11 @@ onUnmounted(() => {
               <span class="timer-widget__value">{{ timeLeftToOpen.m }}</span>
               <span class="timer-widget__unit">{{ t('i18nDays.mins') }}</span>
             </div>
-            <span class="timer-widget__separator">:</span>
-            <div class="timer-widget__item">
-              <span class="timer-widget__value">{{ timeLeftToOpen.s }}</span>
-              <span class="timer-widget__unit">сек</span>
-            </div>
+            <!--            <span class="timer-widget__separator">:</span>-->
+            <!--            <div class="timer-widget__item">-->
+            <!--              <span class="timer-widget__value">{{ timeLeftToOpen.s }}</span>-->
+            <!--              <span class="timer-widget__unit">сек</span>-->
+            <!--            </div>-->
           </div>
         </div>
       </div>
