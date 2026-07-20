@@ -10,6 +10,7 @@
 // }
 
 export const firebaseConfig = {
+
     apiKey: "AIzaSyDo4q7Lm8h2YDWjNqeif7gZgfCIBHfSk3s",
     authDomain: "login.skillupgerman.com",
     projectId: "tripple-d-90bd2",
