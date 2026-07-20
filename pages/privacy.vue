@@ -57,7 +57,8 @@ const sections = ref([
       "Account data: name (nickname), email address, encrypted password (stored in Firebase). The name may be a pseudonym.",
       "Usage data: learning progress (learned words, completed tasks), test results, in-game activity.",
       "Technical data: certain information (e.g., IP address or device identifiers) is automatically processed by our providers (Firebase) for security and service operation. We do not use this information to identify you personally.",
-      "Payment data: transaction information when subscribing (processed by payment systems such as Stripe; we do not store credit card details)."
+      "Payment data: transaction information when subscribing (processed by payment systems such as Stripe; we do not store credit card details).",
+      "Advertising data: third-party advertising networks may collect device identifiers (e.g., IDFA or Google Advertising ID) and usage data to serve advertisements."
     ]
   },
   {
@@ -67,7 +68,8 @@ const sections = ref([
       "To save and display your learning progress.",
       "To process subscriptions and payments.",
       "To improve the quality and personalization of the Service.",
-      "To send notifications and messages about important updates."
+      "To send notifications and messages about important updates.",
+      "To display advertisements provided by third-party ad networks."
     ]
   },
   {
@@ -77,6 +79,7 @@ const sections = ref([
     ],
     listItems: [
       "When necessary for the operation of the Service (e.g., to data processing providers such as Firebase/Google).",
+      "With third-party advertising partners (e.g., Google AdMob) to serve ads within the application.",
       "When required by law (e.g., by court order or governmental request)."
     ]
   },
@@ -90,13 +93,13 @@ const sections = ref([
     ]
   },
   {
-    heading: "6. Cookies and analytics",
+    heading: "6. Cookies, analytics, and advertising",
     paragraphs: [
-      "We use cookies only for authentication and the correct operation of the Service.",
-      "To improve the Service, we collect anonymized usage statistics (e.g., number of section visits, button clicks, time spent on pages). This data does not allow identification of a specific user and is not used for advertising.",
-      "If we connect third-party analytics services in the future (e.g., Google Analytics or Firebase Analytics), this Policy will be updated, and users will be notified."
+      "We use cookies and similar technologies for authentication and the correct operation of the Service.",
+      "To improve the Service, we use analytics tools (e.g., Firebase Analytics) to collect anonymized usage statistics (e.g., number of section visits, button clicks, time spent on pages).",
+      "We use third-party advertising networks that may collect device identifiers to serve personalized or non-personalized ads. You can manage personalized ad preferences in your device settings."
     ]
-  },
+  }
   {
     heading: "7. User rights",
     paragraphs: [
