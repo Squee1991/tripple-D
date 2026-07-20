@@ -99,7 +99,7 @@ const sections = ref([
       "To improve the Service, we use analytics tools (e.g., Firebase Analytics) to collect anonymized usage statistics (e.g., number of section visits, button clicks, time spent on pages).",
       "We use third-party advertising networks that may collect device identifiers to serve personalized or non-personalized ads. You can manage personalized ad preferences in your device settings."
     ]
-  }
+  },
   {
     heading: "7. User rights",
     paragraphs: [
