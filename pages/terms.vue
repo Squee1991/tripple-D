@@ -56,13 +56,13 @@ const sections = ref([
   {
     heading: "2. Definitions",
     paragraphs: [
-      "“User” means any individual who accesses or uses the Service in any way. “Account” means a User profile created to access certain features. “Content” means any materials of the Service (texts, exercises, tests, interfaces, images, audio, video, source code, and other objects). “User Content” means any data submitted, entered, or uploaded by the User (including test results, learning progress, comments, etc.). “Subscription” or “Premium” means paid access to additional Service features for a specified period."
+      "“User” means any individual who accesses or uses the Service in any way. “Account” means a User profile created to access certain features. “Content” means any materials of the Service (texts, exercises, tests, interfaces, images, audio, video, source code, and other objects). “User Content” means any data submitted, entered, or uploaded by the User (including test results, learning progress, etc.). “Subscription” or “Premium” means paid access to additional Service features for a specified period."
     ]
   },
   {
     heading: "3. Right to use and age restrictions",
     paragraphs: [
-      "By using the Service, you confirm that you have the legal capacity to enter into a binding agreement under applicable law and meet the minimum age required by law. If you are a minor, you represent that you have obtained consent from your legal guardian to use the Service and accept these Terms.",
+      "By using the Service, you confirm that you are at least 13 years old (or older, depending on the age of majority in your jurisdiction) and have the legal capacity to enter into a binding agreement. If you are a minor, you represent that you have obtained consent from your legal guardian to use the Service and accept these Terms.",
       "You are responsible for complying with all laws and regulations of your jurisdiction when accessing and using the Service."
     ]
   },

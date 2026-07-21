@@ -112,7 +112,7 @@ const sections = ref([
       "Restrict or object to data processing."
     ],
     get paragraphsAfter() {
-      return [`To exercise your rights, please contact us at: ${EMAIL}.`]
+      return [`To exercise your rights or to delete your account, you can use the account settings in the app, visit our website at skillupgerma.com/delete, or contact us at: ${EMAIL}.`]
     }
   },
   {
@@ -130,7 +130,14 @@ const sections = ref([
     ]
   },
   {
-    heading: "10. Changes to the Policy",
+    heading: "10. Children's Privacy",
+    paragraphs: [
+      "Our Service is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13.",
+      "If we become aware that a child under 13 has provided us with personal data, we will take steps to delete such information immediately."
+    ]
+  },
+  {
+    heading: "11. Changes to the Policy",
     paragraphs: [
       "We may periodically update this Privacy Policy.",
       "The current version is always available on the website; the date of the last update is shown at the bottom of the document.",
@@ -138,7 +145,7 @@ const sections = ref([
     ]
   },
   {
-    heading: "11. Contacts",
+    heading: "12. Contacts",
     paragraphs: [
       `For questions regarding data protection and privacy, please contact us at: ${EMAIL}.`
     ]
