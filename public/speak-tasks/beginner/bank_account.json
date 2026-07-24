@@ -628,27 +628,9 @@
           "uk-UA": "До побачення!",
           "uz-UZ": "Xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Der Vorgang ist abgeschlossen.",
-    "botTranslation": {
-      "ru-RU": "Процесс завершен.",
-      "en-US": "The process is completed.",
-      "ar-SA": "تم الانتهاء من العملية.",
-      "es-ES": "El proceso ha concluido.",
-      "fr-FR": "Le processus est terminé.",
-      "hi-IN": "प्रक्रिया पूरी हो गई है。",
-      "pl-PL": "Proces został zakończony.",
-      "ro-RO": "Procesul este finalizat.",
-      "tr-TR": "İşlem tamamlandı.",
-      "uk-UA": "Процес завершено.",
-      "uz-UZ": "Jarayon yakunlandi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

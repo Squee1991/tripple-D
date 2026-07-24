@@ -1,8 +1,8 @@
 <template>
   <div class="theme-page">
     <div class="page-header">
-      <VBackBtnNav />
-      <h1 class="page-title">{{ t('sub.themen')}}</h1>
+      <VBackBtnNav/>
+      <h1 class="page-title">{{ t('sub.themen') }}</h1>
     </div>
     <VTransition>
       <div v-if="isMouted">
@@ -13,9 +13,7 @@
           />
         </div>
         <transition name="toast-fade">
-          <div v-if="showChalkMessage" class="toast-message">
-            {{ chalkMessage }}
-          </div>
+          <VHeadsUp v-if="showChalkMessage" :text="chalkMessage"/>
         </transition>
         <div class="themes-scroll">
           <div class="themes-container">
@@ -27,7 +25,7 @@
                 @click="selectedTopic = theme.key"
             >
               <div class="theme-icon-wrapper">
-                <img :src="theme.img" :alt="t(theme.name)" class="theme-icon" />
+                <img :src="theme.img" :alt="t(theme.name)" class="theme-icon"/>
               </div>
               <span class="theme-name">{{ t(theme.name) }}</span>
             </button>
@@ -61,13 +59,15 @@
               <div class="module-title">{{ t('chooseTheme.module') }}</div>
               <div class="module-number">{{ mod.id }}</div>
               <div class="module-status-icon" v-if="!isModuleUnlocked(selectedLevelObj.level, mod.id)">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--titleColor)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.5;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--titleColor)"
+                     stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.5;">
                   <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                   <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                 </svg>
               </div>
               <div class="module-status-icon check-icon" v-else-if="isModuleCompleted(selectedLevelObj.level, mod.id)">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                     stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
               </div>
@@ -101,11 +101,14 @@ import Family from '../../assets/images/family.svg'
 import School from '../../assets/images/school.svg'
 import Travel from '../../assets/images/travel.svg'
 import Clock from '../../assets/images/clock.svg'
-import { useHead, useSeoMeta } from '#imports'
+import {useHead, useSeoMeta} from '#imports'
 import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
 import VBanner from "~/src/components/V-banner.vue";
+import VHeadsUp from '~/src/components/V-headsUp.vue'
 import Banner from '../../assets/images/thematicSticker.svg'
 import VTransition from "~/src/components/V-transition.vue";
+import { showInterstitial } from '../../utils/admob.js'
+
 const isMouted = ref(false)
 const {t} = useI18n()
 
@@ -131,9 +134,9 @@ const themes = [
 const selectedTopic = ref(themes[0].key)
 const jsonData = ref({
   levels: [
-    { level: 1, modules: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }] },
-    { level: 2, modules: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }] },
-    { level: 3, modules: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }] }
+    {level: 1, modules: [{id: 1}, {id: 2}, {id: 3}, {id: 4}, {id: 5}]},
+    {level: 2, modules: [{id: 1}, {id: 2}, {id: 3}, {id: 4}, {id: 5}]},
+    {level: 3, modules: [{id: 1}, {id: 2}, {id: 3}, {id: 4}, {id: 5}]}
   ]
 })
 
@@ -193,9 +196,11 @@ const handleModuleClick = (module) => {
   }
 }
 
-const goToExercise = async (level, module) => {
-  await trainer.setThemeAndModule(topic.value, level, module.id)
-  router.push('/thematic-learning/thematic-session')
+const goToExercise = (level, module) => {
+  showInterstitial(async () => {
+    await trainer.setThemeAndModule(topic.value, level, module.id)
+    router.push('/thematic-learning/thematic-session')
+  })
 }
 
 const startSelectedModule = () => {
@@ -282,7 +287,7 @@ watch(topic, loadThemeData)
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 115px;
+  width: 125px;
   height: 130px;
   background: var(--tabBg);
   border: 2px solid var(--tabsSlideBorderColor);
@@ -509,12 +514,11 @@ watch(topic, loadThemeData)
   top: calc(env(safe-area-inset-top));
   left: 0;
   width: 100%;
-  background: #6b21a8;
+  background: #d97706;
   box-shadow: 0 4px 12px rgba(107, 33, 168, 0.4);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 0 0 16px 16px;
   color: #ffffff;
-  padding: 5px 10px 15px 10px;
+  padding: 15px 10px 20px 10px;
   font-weight: 800;
   font-size: 18px;
   z-index: 100;
@@ -529,7 +533,7 @@ watch(topic, loadThemeData)
   height: 60px;
   left: 0;
   bottom: 100%;
-  background: #6b21a8;
+  background: #d97706;
   z-index: 1;
 }
 

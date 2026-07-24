@@ -173,9 +173,9 @@
     "defaultNext": "termin_frei"
   },
   "termin_frei": {
-    "botText": "Am Donnerstag habe ich um 10:00 Uhr einen Termin frei.",
+    "botText": "Am Donnerstag habe ich um 10 Uhr einen Termin frei.",
     "botTranslation": {
-      "ru-RU": "В четверг у меня есть свободное время в 10:00.",
+      "ru-RU": "В четверг у меня есть свободное время в 10 часов.",
       "en-US": "On Thursday I have an available appointment at 10:00 AM.",
       "ar-SA": "يوم الخميس لدي موعد متاح الساعة 10:00.",
       "es-ES": "El jueves tengo una cita libre a las 10:00.",
@@ -397,7 +397,7 @@
     ],
     "options": [
       {
-        "text": "Meine Nummer ist 0176 1234567.",
+        "text": "Meine Nummer ist 0 1 7 6 1 2 3 4 5 6 7.",
         "translation": {
           "ru-RU": "Мой номер 0176 1234567.",
           "en-US": "My number is 0176 1234567.",
@@ -414,7 +414,7 @@
         "nextStep": "service_ask"
       },
       {
-        "text": "Sie erreichen mich unter 0176 1234567.",
+        "text": "Sie erreichen mich unter 0 1 7 6 1 2 3 4 5 6 7.",
         "translation": {
           "ru-RU": "Вы можете связаться со мной по 0176 1234567.",
           "en-US": "You can reach me at 0176 1234567.",
@@ -537,9 +537,9 @@
     "defaultNext": "goodbye_bot"
   },
   "goodbye_bot": {
-    "botText": "Gut, notiert. Bis Donnerstag um 10:00 Uhr.",
+    "botText": "Gut, notiert. Bis Donnerstag um 10 Uhr.",
     "botTranslation": {
-      "ru-RU": "Хорошо, записано. До четверга в 10:00.",
+      "ru-RU": "Хорошо, записано. До четверга в 10 часов",
       "en-US": "Good, noted. See you Thursday at 10:00 AM.",
       "ar-SA": "جيد، سُجل. أراك يوم الخميس الساعة 10:00.",
       "es-ES": "Bien, anotado. Hasta el jueves a las 10:00.",

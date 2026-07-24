@@ -5,7 +5,7 @@
     "icon": "🍳",
     "description": "",
     "isActive": true,
-    "availableIds": ["food-day1", "food-day2", "food-day3", "food-day4", "food-day5", "food-day6", "food-day7"]
+    "availableIds": ["food-day1", "food-day2", "food-day3", "food-day4", "food-day5", "food-day6", "food-day7" , "food-day8"]
   },
   {
     "id": "transport",
@@ -13,7 +13,7 @@
     "icon": "🚗",
     "description": "",
     "isActive": true,
-    "availableIds": ["transport-day1", "transport-day2", "transport-day3", "transport-day4", "transport-day5", "transport-day6", "transport-day7"]
+    "availableIds": ["transport-day1", "transport-day2", "transport-day3", "transport-day4", "transport-day5", "transport-day6", "transport-day7", "transport-day8"]
   },
   {
     "id": "work",

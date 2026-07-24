@@ -7,7 +7,7 @@ const props = defineProps({
     default: false
   }
 })
-
+const { t } = useI18n()
 const emit = defineEmits(['update:show'])
 const router = useRouter()
 const close = () => {
@@ -27,15 +27,10 @@ const goToPay = () => {
         <div class="premium-sheet">
           <div class="premium-sheet__drag-pill" @click="close"></div>
           <div class="premium-sheet__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                 stroke="#FF9F7F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polygon
-                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-            </svg>
+            <img src="../../assets/images/PlusLogo.png" alt="">
           </div>
-          <h2 class="premium-sheet__title">Skillup PLUS</h2>
-          <p class="premium-sheet__text">Откройте доступ ко всем темам. Получайте максимум от обучения!</p>
-          <button class="premium-sheet__btn" @click="goToPay">Skillup PLUS</button>
+          <p class="premium-sheet__text">{{ t('premiumBannerText.text')}}</p>
+          <button class="premium-sheet__btn" @click="goToPay">{{ t('cabinet.buyPremium') }}</button>
         </div>
       </div>
     </transition>
@@ -57,10 +52,10 @@ const goToPay = () => {
 .premium-sheet {
   width: 100%;
   max-width: 500px;
-  background-color: #ffffff;
+  background-color: var(--tabBg);
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  padding: 12px 20px 30px 20px;
+  padding: 24px 20px 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,20 +70,16 @@ const goToPay = () => {
   height: 5px;
   background-color: #e5e7eb;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   cursor: pointer;
 }
 
 .premium-sheet__icon {
-  background: #f9fafb;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
+  width: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
-  border: 2px solid #f3f4f6;
+  margin-bottom: 18px;
 }
 
 .premium-sheet__title {
@@ -99,24 +90,24 @@ const goToPay = () => {
 }
 
 .premium-sheet__text {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
-  color: #4b5563;
+  color: var(--title);
   text-align: center;
-  margin: 0 0 20px 0;
+  margin: 0 0 26px 0;
   line-height: 1.3;
 }
 
 .premium-sheet__btn {
   width: 100%;
-  background-color: #FFEB7F;
-  color: #92400e;
+  background-color: #3b82f6;
+  color: white;
   font-size: 17px;
   font-weight: 800;
   padding: 14px;
-  border-radius: 18px;
+  border-radius: 50px;
   border: none;
-  border-bottom: 4px solid #f59e0b;
+  border-bottom: 5px solid #1d4ed8;
   cursor: pointer;
   font-family: inherit;
 }

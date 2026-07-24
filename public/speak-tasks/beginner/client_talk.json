@@ -1,0 +1,479 @@
+{
+  "start": {
+    "botText": "Guten Tag! Herzlich willkommen bei uns. Wie kann ich Ihnen helfen?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Добро пожаловать к нам. Чем я могу вам помочь?",
+      "en-US": "Good afternoon! Welcome to our company. How can I help you?",
+      "ar-SA": "طاب يومك! مرحباً بك لدينا. كيف يمكنني مساعدتك؟",
+      "es-ES": "¡Buenas tardes! Bienvenido a nuestra empresa. ¿En qué le puedo ayudar?",
+      "fr-FR": "Bonjour ! Bienvenue chez nous. Comment puis-je vous aider ?",
+      "hi-IN": "नमस्ते! हमारे यहाँ आपका स्वागत है। मैं आपकी क्या मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! Witamy u nas. W czym mogę pomóc?",
+      "ro-RO": "Bună ziua! Bine ați venit la noi. Cu ce vă pot ajuta?",
+      "tr-TR": "İyi günler! Bize hoş geldiniz. Size nasıl yardımcı olabilirim?",
+      "uk-UA": "Добрий день! Ласкаво просимо до нас. Чим я можу вам допомогти?",
+      "uz-UZ": "Xayrli kun! Bizga xush kelibsiz. Sizga qanday yordam bera olaman?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Firma",
+        "translation": {
+          "ru-RU": "фирма / компания",
+          "en-US": "company",
+          "ar-SA": "الشركة",
+          "es-ES": "empresa",
+          "fr-FR": "entreprise",
+          "hi-IN": "कंपनी",
+          "pl-PL": "firma",
+          "ro-RO": "firmă",
+          "tr-TR": "şirket",
+          "uk-UA": "фірма / компанія",
+          "uz-UZ": "firma / kompaniya"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag! Mein Name ist Maria Klein. Ich möchte wissen: Ist mein Auftrag schon fertig?",
+        "translation": {
+          "ru-RU": "Добрый день! Меня зовут Мария Кляйн. Я хочу знать: готов ли мой заказ?",
+          "en-US": "Good afternoon! My name is Maria Klein. I would like to know: is my order already finished?",
+          "ar-SA": "طاب يومك! اسمي ماريا كلاين. أود أن أعرف: هل طلبي جاهز؟",
+          "es-ES": "¡Buenas tardes! Me llamo Maria Klein. Me gustaría saber: ¿ya está listo mi pedido/encargo?",
+          "fr-FR": "Bonjour ! Je m'appelle Maria Klein. J'aimerais savoir : ma commande est-elle déjà prête ?",
+          "hi-IN": "नमस्ते! मेरा नाम मारिया क्लेन है। मैं जानना चाहती हूँ: क्या मेरा काम तैयार है?",
+          "pl-PL": "Dzień dobry! Nazywam się Maria Klein. Chciałabym wiedzieć, czy moje zlecenie jest już gotowe?",
+          "ro-RO": "Bună ziua! Numele meu este Maria Klein. Aș dori să știu: comanda mea este gata?",
+          "tr-TR": "İyi günler! Benim adım Maria Klein. Siparişim/İşim hazır mı öğrenmek istiyorum.",
+          "uk-UA": "Добрий день! Мене звати Марія Кляйн. Я хочу знати: чи готове моє замовлення?",
+          "uz-UZ": "Xayrli kun! Mening ismim Mariya Klayn. Bilmoqchi edim: buyurtmam tayyormi?"
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo! Ich möchte Informationen zu meinem Projekt.",
+        "translation": {
+          "ru-RU": "Здравствуйте! Я пришла узнать насчет моего проекта.",
+          "en-US": "Hello! I would like information about my project.",
+          "ar-SA": "مرحباً! أود الحصول على معلومات حول مشروعي.",
+          "es-ES": "¡Hola! Me gustaría tener información sobre mi proyecto.",
+          "fr-FR": "Bonjour ! J'aimerais des informations sur mon projet.",
+          "hi-IN": "नमस्ते! मुझे अपने प्रोजेक्ट के बारे में जानकारी चाहिए।",
+          "pl-PL": "Dzień dobry! Chciałabym uzyskać informacje o moim projekcie.",
+          "ro-RO": "Bună! Aș dori informații despre proiectul meu.",
+          "tr-TR": "Merhaba! Projem hakkında bilgi almak istiyorum.",
+          "uk-UA": "Добридень! Я прийшла дізнатися щодо мого проєкту.",
+          "uz-UZ": "Salom! Men loyiham haqida ma'lumot olmoqchi edim."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Ja, natürlich. Sagen Sie mir bitte Ihren Projektnamen oder Ihre Kundennummer.",
+    "botTranslation": {
+      "ru-RU": "Да, конечно. Назовите, пожалуйста, название вашего проекта или номер клиента.",
+      "en-US": "Yes, of course. Please tell me your project name or your customer number.",
+      "ar-SA": "نعم بالطبع. من فضلك أخبرني باسم مشروعك أو رقم العميل الخاص بك.",
+      "es-ES": "Sí, claro. Por favor, dígame el nombre de su proyecto o su número de cliente.",
+      "fr-FR": "Oui, bien sûr. Veuillez m'indiquer le nom de votre projet ou votre numéro de client.",
+      "hi-IN": "हाँ, बिल्कुल। कृपया मुझे अपने प्रोजेक्ट का नाम या अपना ग्राहक नंबर बताएं।",
+      "pl-PL": "Tak, oczywiście. Proszę podać nazwę projektu lub numer klienta.",
+      "ro-RO": "Da, desigur. Vă rog să-mi spuneți numele proiectului sau numărul de client.",
+      "tr-TR": "Evet, tabii. Lütfen bana proje adınızı veya müşteri numaranızı söyleyin.",
+      "uk-UA": "Так, звісно. Назвіть, будь ласка, назву вашого проєкту або номер клієнта.",
+      "uz-UZ": "Ha, albatta. Iltimos, loyihangiz nomini yoki mijoz raqamingizni ayting."
+    },
+    "vocabulary": [
+      {
+        "german": "der Auftrag",
+        "translation": {
+          "ru-RU": "заказ / поручение",
+          "en-US": "order / assignment",
+          "ar-SA": "الطلب / التكليف",
+          "es-ES": "encargo / pedido",
+          "fr-FR": "commande / mission",
+          "hi-IN": "आदेश / कार्य",
+          "pl-PL": "zlecenie / zamówienie",
+          "ro-RO": "comandă",
+          "tr-TR": "sipariş / görev",
+          "uk-UA": "замовлення / доручення",
+          "uz-UZ": "buyurtma / topshiriq"
+        }
+      },
+      {
+        "german": "das Projekt",
+        "translation": {
+          "ru-RU": "проект",
+          "en-US": "project",
+          "ar-SA": "المشروع",
+          "es-ES": "proyecto",
+          "fr-FR": "projet",
+          "hi-IN": "परियोजना (प्रोजेक्ट)",
+          "pl-PL": "projekt",
+          "ro-RO": "proiect",
+          "tr-TR": "proje",
+          "uk-UA": "проєкт",
+          "uz-UZ": "loyiha"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Meine Kundennummer ist 4 5 8 2.",
+        "translation": {
+          "ru-RU": "Мой номер клиента 4 5 8 2.",
+          "en-US": "My customer number is 4 5 8 2.",
+          "ar-SA": "رقم العميل الخاص بي هو 4 5 8 2.",
+          "es-ES": "Mi número de cliente es el 4 5 8 2.",
+          "fr-FR": "Mon numéro de client est le 4 5 8 2.",
+          "hi-IN": "मेरा ग्राहक नंबर 4 5 8 2 है।",
+          "pl-PL": "Mój numer klienta to 4 5 8 2.",
+          "ro-RO": "Numărul meu de client este 4 5 8 2.",
+          "tr-TR": "Müşteri numaram 4 5 8 2.",
+          "uk-UA": "Мій номер клієнта 4 5 8 2.",
+          "uz-UZ": "Mening mijoz raqamim 4 5 8 2."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Mein Name ist Maria Klein. Das Projekt ist für meine Wohnung.",
+        "translation": {
+          "ru-RU": "Меня зовут Мария Кляйн. Проект для моей квартиры.",
+          "en-US": "My name is Maria Klein. The project is for my apartment.",
+          "ar-SA": "اسمي ماريا كلاين. المشروع من أجل شقتي.",
+          "es-ES": "Me llamo Maria Klein. El proyecto es para mi apartamento.",
+          "fr-FR": "Je m'appelle Maria Klein. Le projet est pour mon appartement.",
+          "hi-IN": "मेरा नाम मारिया क्लेन है। यह प्रोजेक्ट मेरे अपार्टमेंट के लिए है।",
+          "pl-PL": "Nazywam się Maria Klein. Projekt dotyczy mojego mieszkania.",
+          "ro-RO": "Numele meu este Maria Klein. Proiectul este pentru apartamentul meu.",
+          "tr-TR": "Benim adım Maria Klein. Proje dairem için.",
+          "uk-UA": "Мене звати Марія Кляйн. Проєкт для моєї квартири.",
+          "uz-UZ": "Mening ismim Mariya Klayn. Loyiha kvartiram uchun."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Danke schön. Einen Moment bitte, ich prüfe den Status im Computer.",
+    "botTranslation": {
+      "ru-RU": "Большое спасибо. Один момент, пожалуйста, я проверю статус в компьютере.",
+      "en-US": "Thank you very much. One moment please, I will check the status in the computer.",
+      "ar-SA": "شكراً جزيلاً. لحظة من فضلك، سأتحقق من الحالة في الحاسوب.",
+      "es-ES": "Muchas gracias. Un momento, por favor, voy a comprobar el estado en el ordenador.",
+      "fr-FR": "Merci beaucoup. Un instant s'il vous plaît, je vérifie le statut dans l'ordinateur.",
+      "hi-IN": "बहुत-बहुत धन्यवाद। कृपया एक क्षण दें, मैं कंप्यूटर में स्थिति जांचता हूँ।",
+      "pl-PL": "Dziękuję bardzo. Chwileczkę, sprawdzę status w komputerze.",
+      "ro-RO": "Mulțumesc mult. Un moment, vă rog, verific stadiul în calculator.",
+      "tr-TR": "Çok teşekkürler. Bir saniye lütfen, durumu bilgisayardan kontrol ediyorum.",
+      "uk-UA": "Дуже дякую. Один момент, будь ласка, я перевірю статус у комп'ютері.",
+      "uz-UZ": "Katta rahmat. Bir soniya, kompyuterda holatni tekshirib ko'raman."
+    },
+    "vocabulary": [
+      {
+        "german": "der Status",
+        "translation": {
+          "ru-RU": "статус",
+          "en-US": "status",
+          "ar-SA": "الحالة",
+          "es-ES": "estado",
+          "fr-FR": "statut",
+          "hi-IN": "स्थिति (स्टेटस)",
+          "pl-PL": "status",
+          "ro-RO": "status",
+          "tr-TR": "durum",
+          "uk-UA": "статус",
+          "uz-UZ": "holat / status"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, ich warte.",
+        "translation": {
+          "ru-RU": "Всё понятно, я подожду.",
+          "en-US": "All right, I will wait.",
+          "ar-SA": "كل شيء واضح، سأنتظر.",
+          "es-ES": "Entendido, espero.",
+          "fr-FR": "D'accord, j'attends.",
+          "hi-IN": "ठीक है, मैं प्रतीक्षा करूँगी।",
+          "pl-PL": "Wszystko jasne, poczekam.",
+          "ro-RO": "Am înțeles, aștept.",
+          "tr-TR": "Anlaşıldı, bekliyorum.",
+          "uk-UA": "Все зрозуміло, я почекаю.",
+          "uz-UZ": "Tushunarli, kutaman."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Okay, kein Problem.",
+        "translation": {
+          "ru-RU": "Окей, без проблем.",
+          "en-US": "Okay, no problem.",
+          "ar-SA": "حسنًا، لا مشكلة.",
+          "es-ES": "Vale, no hay problema.",
+          "fr-FR": "D'accord, pas de problème.",
+          "hi-IN": "ठीक है, कोई समस्या नहीं।",
+          "pl-PL": "Dobrze, nie ma problemu.",
+          "ro-RO": "OK, nicio problemă.",
+          "tr-TR": "Tamam, sorun değil.",
+          "uk-UA": "Окей, без проблем.",
+          "uz-UZ": "Xo'p, muammo yo'q."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "So, ich habe es hier. Unsere Mitarbeiter sind fast fertig. Morgen ist alles komplett bereit.",
+    "botTranslation": {
+      "ru-RU": "Итак, я нашел это здесь. Наши сотрудники почти закончили. Завтра всё будет полностью готово.",
+      "en-US": "So, I have it here. Our employees are almost done. Tomorrow everything will be completely ready.",
+      "ar-SA": "حسناً، لقد وجدته هنا. موظفونا قاربوا على الانتهاء. غداً سيكون كل شيء جاهزاً تماماً.",
+      "es-ES": "Bien, ya lo tengo aquí. Nuestros empleados casi han terminado. Mañana estará todo completamente listo.",
+      "fr-FR": "Alors, j'ai ça ici. Nos employés ont presque terminé. Demain, tout sera complètement prêt.",
+      "hi-IN": "तो, मुझे यह मिल गया है। हमारे कर्मचारी लगभग काम पूरा कर चुके हैं। कल सब कुछ पूरी तरह से तैयार हो जाएगा।",
+      "pl-PL": "Więc, mam to tutaj. Nasi pracownicy prawie skończyli. Jutro wszystko będzie całkowicie gotowe.",
+      "ro-RO": "Așa, îl am aici. Angajații noștri aproape au terminat. Mâine totul va fi complet gata.",
+      "tr-TR": "İşte, burada buldum. Çalışanlarımız neredeyse bitirdi. Yarın her şey tamamen hazır olacak.",
+      "uk-UA": "Отже, я знайшов це тут. Наші співробітники майже закінчили. Завтра все буде повністю готове.",
+      "uz-UZ": "Xo'sh, uni topdim. Bizning xodimlarimiz deyarli tugatishdi. Ertaga hammasi to'liq tayyor bo'ladi."
+    },
+    "vocabulary": [
+      {
+        "german": "der Mitarbeiter",
+        "translation": {
+          "ru-RU": "сотрудник",
+          "en-US": "employee",
+          "ar-SA": "الموظف",
+          "es-ES": "empleado",
+          "fr-FR": "employé",
+          "hi-IN": "कर्मचारी",
+          "pl-PL": "pracownik",
+          "ro-RO": "angajat",
+          "tr-TR": "çalışan",
+          "uk-UA": "співробітник",
+          "uz-UZ": "xodim"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das ist eine sehr gute Nachricht! Kann ich die Dokumente morgen abholen?",
+        "translation": {
+          "ru-RU": "Это очень хорошая новость! Могу я завтра забрать документы?",
+          "en-US": "That is very good news! Can I pick up the documents tomorrow?",
+          "ar-SA": "هذه أخبار جيدة جداً! هل يمكنني استلام المستندات غداً؟",
+          "es-ES": "¡Es una muy buena noticia! ¿Puedo recoger los documentos mañana?",
+          "fr-FR": "C'est une très bonne nouvelle ! Puis-je récupérer les documents demain ?",
+          "hi-IN": "यह बहुत अच्छी खबर है! क्या मैं कल दस्तावेज़ ले सकती हूँ?",
+          "pl-PL": "To bardzo dobra wiadomość! Czy mogę jutro odebrać dokumenty?",
+          "ro-RO": "Aceasta este o veste foarte bună! Pot ridica documentele mâine?",
+          "tr-TR": "Bu çok iyi bir haber! Belgeleri yarın alabilir miyim?",
+          "uk-UA": "Це дуже хороша новина! Можу я завтра забрати документи?",
+          "uz-UZ": "Bu juda yaxshi yangilik! Hujjatlarni ertaga olib ketsam bo'ladimi?"
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Perfekt. Kann ich morgen um diese Zeit kommen?",
+        "translation": {
+          "ru-RU": "Прекрасно. Могу я прийти завтра в это же время?",
+          "en-US": "Perfect. Can I come tomorrow at this time?",
+          "ar-SA": "ممتاز. هل يمكنني المجيء غداً في هذا الوقت؟",
+          "es-ES": "Perfecto. ¿Puedo venir mañana a esta hora?",
+          "fr-FR": "Parfait. Puis-je venir demain à cette heure-ci ?",
+          "hi-IN": "बढ़िया। क्या मैं कल इसी समय आ सकती हूँ?",
+          "pl-PL": "Doskonale. Czy mogę przyjść jutro o tej samej porze?",
+          "ro-RO": "Perfect. Pot veni mâine la această oră?",
+          "tr-TR": "Harika. Yarın bu saatte gelebilir miyim?",
+          "uk-UA": "Прекрасно. Чи можу я прийти завтра в цей же час?",
+          "uz-UZ": "Zo'r. Ertaga xuddi shu vaqtda kelsam bo'ladimi?"
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Ja, das passt sehr gut. Der Termin morgen steht. Ich lege alles für Sie bereit.",
+    "botTranslation": {
+      "ru-RU": "Да, это отлично подходит. Встреча на завтра назначена. Я всё для вас подготовлю.",
+      "en-US": "Yes, that fits very well. The appointment tomorrow is set. I will have everything ready for you.",
+      "ar-SA": "نعم، هذا مناسب جداً. تم تحديد الموعد غداً. سأقوم بتجهيز كل شيء لك.",
+      "es-ES": "Sí, me viene muy bien. La cita de mañana está confirmada. Lo prepararé todo para usted.",
+      "fr-FR": "Oui, ça convient très bien. Le rendez-vous pour demain est fixé. Je prépare tout pour vous.",
+      "hi-IN": "हाँ, यह बिल्कुल ठीक रहेगा। कल की अपॉइंटमेंट तय है। मैं आपके लिए सब कुछ तैयार रखूँगा।",
+      "pl-PL": "Tak, to bardzo pasuje. Termin na jutro jest potwierdzony. Przygotuję wszystko dla Pani.",
+      "ro-RO": "Da, se potrivește foarte bine. Programarea de mâine este stabilită. Voi pregăti totul pentru dumneavoastră.",
+      "tr-TR": "Evet, bu çok uygun. Yarınki randevu ayarlandı. Her şeyi sizin için hazır edeceğim.",
+      "uk-UA": "Так, це чудово підходить. Зустріч на завтра призначена. Я все для вас підготую.",
+      "uz-UZ": "Ha, bu juda mos tushadi. Ertangi uchrashuv belgilandi. Men hamma narsani siz uchun tayyorlab qo'yaman."
+    },
+    "vocabulary": [
+      {
+        "german": "der Termin",
+        "translation": {
+          "ru-RU": "встреча / запись по времени",
+          "en-US": "appointment",
+          "ar-SA": "الموعد",
+          "es-ES": "cita",
+          "fr-FR": "rendez-vous",
+          "hi-IN": "अपॉइंटमेंट / बैठक का समय",
+          "pl-PL": "wizyta / spotkanie",
+          "ro-RO": "programare",
+          "tr-TR": "randevu",
+          "uk-UA": "зустріч / запис на час",
+          "uz-UZ": "uchrashuv / qabul vaqti"
+        }
+      },
+      {
+        "german": "die Dokumente",
+        "translation": {
+          "ru-RU": "документы",
+          "en-US": "documents",
+          "ar-SA": "المستندات / الوثائق",
+          "es-ES": "documentos",
+          "fr-FR": "documents",
+          "hi-IN": "दस्तावेज़",
+          "pl-PL": "dokumenty",
+          "ro-RO": "documente",
+          "tr-TR": "belgeler",
+          "uk-UA": "документи",
+          "uz-UZ": "hujjatlar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Wunderbar, das läuft ja super.",
+        "translation": {
+          "ru-RU": "Замечательно, всё идет просто супер.",
+          "en-US": "Wonderful, that's going great.",
+          "ar-SA": "رائع، كل شيء يسير على ما يرام.",
+          "es-ES": "Fantástico, todo va genial.",
+          "fr-FR": "Merveilleux, ça se passe super bien.",
+          "hi-IN": "अद्भुत, सब कुछ बहुत बढ़िया चल रहा है।",
+          "pl-PL": "Cudownie, wszystko idzie super.",
+          "ro-RO": "Minunat, totul merge super.",
+          "tr-TR": "Harika, işler tıkırında gidiyor.",
+          "uk-UA": "Чудово, все йде просто супер.",
+          "uz-UZ": "Ajoyib, hammasi zo'r ketyapti."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Sehr gut, dann bis morgen.",
+        "translation": {
+          "ru-RU": "Очень хорошо, тогда до завтра.",
+          "en-US": "Very good, then see you tomorrow.",
+          "ar-SA": "جيد جداً، أراك غداً إذاً.",
+          "es-ES": "Muy bien, entonces hasta mañana.",
+          "fr-FR": "Très bien, alors à demain.",
+          "hi-IN": "बहुत अच्छा, तो कल मिलते हैं।",
+          "pl-PL": "Bardzo dobrze, w takim razie do jutra.",
+          "ro-RO": "Foarte bine, atunci pe mâine.",
+          "tr-TR": "Çok iyi, o zaman yarına kadar görüşmek üzere.",
+          "uk-UA": "Дуже добре, тоді до завтра.",
+          "uz-UZ": "Juda yaxshi, unda ertagacha."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Kann ich Ihnen heute sonst noch helfen?",
+    "botTranslation": {
+      "ru-RU": "Могу ли я сегодня еще чем-то вам помочь?",
+      "en-US": "Can I help you with anything else today?",
+      "ar-SA": "هل يمكنني مساعدتك في أي شيء آخر اليوم؟",
+      "es-ES": "¿Le puedo ayudar en algo más hoy?",
+      "fr-FR": "Puis-je vous aider avec autre chose aujourd'hui ?",
+      "hi-IN": "क्या मैं आज आपकी किसी और चीज़ में मदद कर सकता हूँ?",
+      "pl-PL": "Czy w czymś jeszcze mogę Pani dzisiaj pomóc?",
+      "ro-RO": "Vă mai pot ajuta cu ceva astăzi?",
+      "tr-TR": "Bugün size başka bir konuda yardımcı olabilir miyim?",
+      "uk-UA": "Чи можу я сьогодні ще чимось вам допомогти?",
+      "uz-UZ": "Bugun sizga yana qandaydir yordam bera olamanmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Hilfe",
+        "translation": {
+          "ru-RU": "помощь",
+          "en-US": "help",
+          "ar-SA": "المساعدة",
+          "es-ES": "ayuda",
+          "fr-FR": "aide",
+          "hi-IN": "मदद",
+          "pl-PL": "pomoc",
+          "ro-RO": "ajutor",
+          "tr-TR": "yardım",
+          "uk-UA": "допомога",
+          "uz-UZ": "yordam"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, das ist alles. Vielen Dank für die schnelle Hilfe!",
+        "translation": {
+          "ru-RU": "Нет, это всё. Большое спасибо за быструю помощь!",
+          "en-US": "No, that is all. Thank you very much for the quick help!",
+          "ar-SA": "لا، هذا كل شيء. شكراً جزيلاً على المساعدة السريعة!",
+          "es-ES": "No, eso es todo. ¡Muchas gracias por la rápida ayuda!",
+          "fr-FR": "Non, c'est tout. Merci beaucoup pour l'aide rapide !",
+          "hi-IN": "नहीं, बस इतना ही। त्वरित मदद के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Nie, to wszystko. Bardzo dziękuję za szybką pomoc!",
+          "ro-RO": "Nu, asta e tot. Mulțumesc mult pentru ajutorul rapid!",
+          "tr-TR": "Hayır, hepsi bu. Hızlı yardımınız için çok teşekkürler!",
+          "uk-UA": "Ні, це все. Велике спасибі за швидку допомогу!",
+          "uz-UZ": "Yo'q, shuning o'zi. Tezkor yordam uchun katta rahmat!"
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Nein, danke. Sie haben mir sehr geholfen.",
+        "translation": {
+          "ru-RU": "Нет, спасибо. Вы мне очень помогли.",
+          "en-US": "No, thanks. You have helped me a lot.",
+          "ar-SA": "لا، شكراً. لقد ساعدتني كثيراً.",
+          "es-ES": "No, gracias. Me ha ayudado mucho.",
+          "fr-FR": "Non, merci. Vous m'avez beaucoup aidée.",
+          "hi-IN": "नहीं, धन्यवाद। आपने मेरी बहुत मदद की है।",
+          "pl-PL": "Nie, dziękuję. Bardzo mi Pan/Pani pomógł/pomogła.",
+          "ro-RO": "Nu, mulțumesc. M-ați ajutat foarte mult.",
+          "tr-TR": "Hayır, teşekkürler. Bana çok yardımcı oldunuz.",
+          "uk-UA": "Ні, дякую. Ви мені дуже допомогли.",
+          "uz-UZ": "Yo'q, rahmat. Siz menga juda yordam berdingiz."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Bitte schön!",
+    "botTranslation": {
+      "ru-RU": "Пожалуйста!",
+      "en-US": "You're welcome!",
+      "ar-SA": "على الرحب والسعة!",
+      "es-ES": "¡De nada!",
+      "fr-FR": "Je vous en prie !",
+      "hi-IN": "आपका स्वागत है!",
+      "pl-PL": "Proszę bardzo!",
+      "ro-RO": "Cu plăcere!",
+      "tr-TR": "Rica ederim!",
+      "uk-UA": "Будь ласка!",
+      "uz-UZ": "Arzimaydi!"
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

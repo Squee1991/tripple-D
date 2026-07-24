@@ -247,8 +247,6 @@ onUnmounted(() => {
 
 .form__content {
   flex: 1;
-  padding: 15px;
-  background: var(--menuItemsBg);
   border-radius: 24px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -413,15 +411,14 @@ onUnmounted(() => {
   font-family: "Nunito", sans-serif;
   font-weight: 800;
   padding: 1rem;
-  font-size: 1.1rem;
-  border-radius: 18px;
+  font-size: 18px;
+  border-radius: 50px;
   cursor: pointer;
   border: none;
   transition: transform 0.1s ease, box-shadow 0.1s ease;
   background-color: #2ECC71;
   color: #ffffff;
   text-transform: lowercase;
-  /* 3D тень снизу */
   box-shadow: 0 6px 0 #24A055;
 }
 

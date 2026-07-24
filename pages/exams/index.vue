@@ -122,7 +122,7 @@ onMounted(async () => {
           <div class="exam__subtitle-wrapper">
             <div class="exam__subtitle">
               <div class="exam__subtitle__left">
-                <span>{{ t('examIndexPage.choice') }}</span>
+                <span class="bannerText">{{ t('examIndexPage.choice') }}</span>
                 <span class="exam__accent">Lesen</span>
                 <span class="exam__accent">Hören</span>
                 <span class="exam__accent">Schreiben</span>
@@ -193,10 +193,10 @@ onMounted(async () => {
 .exam__title-badge {
   margin-left: 15px;
   border-radius: 20px;
-  color: var(--titleColor);
+  color: var(--title);
   font-weight: 900;
   font-size: 24px;
-  text-shadow: 0 1px var(--titleColor);
+  text-shadow: 0 1px var(--title);
 }
 
 .exam__scroll-area {
@@ -286,7 +286,7 @@ onMounted(async () => {
   border-radius: 24px;
   display: flex;
   flex-direction: column;
-  border: 3px solid var(--tabsSlideBorderColor);
+  border: 2px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile);
   overflow: hidden;
   flex: 0 0 80%;
@@ -310,6 +310,11 @@ onMounted(async () => {
   color: var(--titleColor);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+.bannerText {
+  font-size: 17px;
+  font-weight: 600;
 }
 
 .exam-card__body {
@@ -341,7 +346,7 @@ onMounted(async () => {
   border: none;
   background-color: #3b82f6;
   box-shadow: 0 4px 0 #000;
-  border-radius: 16px;
+  border-radius: 50px;
   padding: 14px;
   font-family: inherit;
   font-size: 16px;

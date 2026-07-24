@@ -3,7 +3,7 @@
     <div class="menu-bg-layer">
       <div class="nebula-cloud blue"></div>
       <div class="nebula-cloud purple"></div>
-      <div v-for="n in 8" :key="n" class="floating-toon-star" :style="getRandomPos(n)">
+      <div v-for="n in 6" :key="n" class="floating-toon-star" :style="getRandomPos(n)">
         {{ n % 2 === 0 ? '⭐' : '✨' }}
       </div>
       <img
@@ -11,13 +11,7 @@
           :key="'astro' + astro.id"
           :src="Astronaut"
           class="floating-astronaut"
-          :style="{
-        top: astro.top + '%',
-        left: astro.left + '%',
-        width: astro.size + 'px',
-        animationDuration: astro.duration + 's',
-        animationDelay: astro.delay + 's'
-      }"
+          :style="float(astro)"
           alt="astronaut"
       />
     </div>
@@ -40,7 +34,7 @@
                   :key="btn.id"
                   class="menu-btn-toon"
                   :class="btn.class"
-                  @click="btn.action ? btn.action() : toggleScreen(btn.target)"
+                  @click="btn.path ? router.push(btn.path) : toggleScreen(btn.target)"
               >
                 {{ t(btn.label) }}
               </button>
@@ -86,11 +80,21 @@ const componentViews = {
   rank: VRankGalaxy,
 }
 
+const float = (astro) => {
+  return {
+    top: astro.top + '%',
+    left: astro.left + '%',
+    width: astro.size + 'px',
+    animationDuration: astro.duration + 's',
+    animationDelay: astro.delay + 's'
+  }
+}
+
 const menuButtons = [
   {id: 'profile', class: 'settings', label: 'galaxyMenu.profile', target: 'settings'},
   {id: 'shop', class: 'hangar', label: 'galaxyMenu.shop', target: 'shop'},
   {id: 'rank', class: 'rank-btn', label: 'galaxyMenu.rank', target: 'rank'},
-  {id: 'exit', class: 'exit', label: 'galaxyMenu.exit', action: () => handleExit()}
+  {id: 'exit', class: 'exit', label: 'galaxyMenu.exit', path: '/'}
 ]
 
 const getRandomPos = (n) => ({
@@ -126,8 +130,6 @@ const generateAstronauts = (count = 2) => {
   }
   astronauts.value = newAstronauts
 }
-
-const handleExit = () => router.push('/')
 
 const startMission = (sectorId) => {
   router.push({
@@ -328,7 +330,7 @@ onUnmounted(() => {
   width: 100%;
   padding: 15px 20px;
   font-size: 1.8rem;
-  background: #4caf50;
+  background: rgba(76, 175, 80, 0.75);
   box-shadow: 0 6px 0 #1b5e20, 0 15px 30px rgba(0, 0, 0, 0.4);
   animation: pulsePlay 2s infinite;
 }
@@ -346,22 +348,22 @@ onUnmounted(() => {
 }
 
 .hangar {
-  background: #ff9800;
+  background: rgba(255, 152, 0, 0.71);
   box-shadow: 0 6px 0 #e65100;
 }
 
 .settings {
-  background: #2196f3;
-  box-shadow: 0 6px 0 #0d47a1;
+  background: rgba(33, 150, 243, 0.68);
+  box-shadow: 0 6px 0 rgba(13, 71, 161, 0.7);
 }
 
 .rank-btn {
-  background: #9c27b0;
+  background: rgba(156, 39, 176, 0.73);
   box-shadow: 0 6px 0 #9826c7;
 }
 
 .exit {
-  background: #f44336;
+  background: rgba(244, 67, 54, 0.69);
   box-shadow: 0 6px 0 #8e0000;
 }
 

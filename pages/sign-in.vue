@@ -40,6 +40,8 @@
                       :required="field.required"
                       :autocomplete="field.autocomplete"
                       :maxlength="field.maxlength || null"
+                      @focus="isKeyboardOpen = true"
+                      @blur="isKeyboardOpen = false"
                   />
                   <div
                       v-if="field.name === 'password' || field.name === 'confirm'"
@@ -73,16 +75,13 @@
             <img class="google__icon" src="../assets/images/google.svg" alt="google_icon">
             <span class="auth__text-method">GOOGLE</span>
           </button>
-          <button v-if="Capacitor.isNativePlatform() === 'ios'" class="apple__auth-wrapper" @click="handleSocialLogin('apple')" :disabled="submitLoading">
+          <button class="apple__auth-wrapper" @click="handleSocialLogin('apple')" :disabled="submitLoading">
             <img class="apple__icon" src="../assets/images/apple.svg" alt="apple_icon">
             <span class="auth__text-method">APPLE</span>
           </button>
-<!--          <button class="facebook__auth-wrapper" @click="handleSocialLogin('facebook')" :disabled="submitLoading">-->
-<!--            <img class="facebook__icon" src="../assets/images/facebook.svg" alt="facebook_icon">-->
-<!--          </button>-->
         </div>
       </div>
-      <div class="privacy__block">
+      <div v-show="!isKeyboardOpen" class="privacy__block">
         {{ t('termsBlock.first') }}
         <router-link class="links" to="/terms">{{ t('termsBlock.second') }}</router-link>
         {{ t('termsBlock.third') }}
@@ -102,7 +101,9 @@ import View from '../../assets/images/loginEyes/view.svg'
 import Hide from '../../assets/images/loginEyes/hide.svg'
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
 import { Capacitor } from '@capacitor/core'
+
 const forgot = ref(false);
+const isKeyboardOpen = ref(false);
 const {t, locale} = useI18n()
 const router = useRouter()
 const emits = defineEmits(['close-auth-form'])
@@ -196,7 +197,6 @@ const handleSubmit = async () => {
     if (!validateFields(values)) return
 
     submitLoading.value = true
-
     if (mode.value === 'reset') {
       await authStore.resetPassword(values.email)
       resetSent.value = true
@@ -206,7 +206,6 @@ const handleSubmit = async () => {
       }, 2500)
       return
     }
-
     if (mode.value === 'register') {
       await authStore.registerUser({ name: values.name, email: values.email, password: values.password })
       emits('close-auth-form')
@@ -245,7 +244,7 @@ onUnmounted(() => {
 </script>
 
 <style>
-
+/* Твои стили без изменений */
 
 .auth__title.left {
   justify-content: start;
@@ -367,6 +366,7 @@ onUnmounted(() => {
 }
 
 .auth__form {
+  max-width: 768px;
   width: 100%;
   border-radius: 0;
   padding: 15px 34px 30px 34px;
@@ -397,7 +397,7 @@ onUnmounted(() => {
 }
 
 .links{
- color: #3d5a98;
+  color: #3d5a98;
 }
 
 .auth__tabs {

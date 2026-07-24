@@ -63,8 +63,9 @@
                   {{t('deletePage.cleanUpGoogleTwo')}}
                 </div>
                 <div v-else class="account-cleanup__password-zone">
-                  <label class="account-cleanup__field-label">{{t('deletePage.cleanUpPassword')}}</label>
+                  <label for="delete-password" class="account-cleanup__field-label"></label>
                   <input
+                      id="delete-password"
                       v-model="passwordField.value"
                       type="password"
                       :class="['account-cleanup__field-input', { 'account-cleanup__field-input--error': passwordField.error }]"
@@ -210,6 +211,12 @@ async function processAccountCleanup() {
   margin-left: 15px;
   color: var(--title);
   text-shadow: 0 1px var(--title);
+}
+
+.account-cleanup__password-zone {
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .header-spacer {
@@ -398,13 +405,13 @@ async function processAccountCleanup() {
 
 .account-cleanup__auth-zone {
   width: 100%;
-  margin-bottom: 24px;
-  padding-top: 10px;
+  margin-bottom: 18px;
+  padding-top: 18px;
 }
 
 .account-cleanup__field-input {
   width: 100%;
-  padding: 16px;
+  padding: 10px;
   border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 16px;
   font-size: 16px;
@@ -414,8 +421,8 @@ async function processAccountCleanup() {
 
 .modal-btn {
   width: 100%;
-  padding: 15px;
-  border-radius: 20px;
+  padding: 12px;
+  border-radius: 50px;
   font-size: 18px;
   font-weight: 900;
   cursor: pointer;
@@ -437,7 +444,7 @@ async function processAccountCleanup() {
   background: #3b82f6;
   color: white;
   border: #2964c4;
-  border-bottom: 5px solid #2964c4;
+  border-bottom: 6px solid #2964c4;
 }
 
 .account-cleanup__field-error {

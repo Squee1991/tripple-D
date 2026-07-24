@@ -21,7 +21,7 @@
     </header>
     <main class="quiz-main-content">
       <div v-if="loading" class="loading">
-        <VPreloader/>
+        <VLoginPreloader/>
       </div>
       <div v-else-if="store.quizCompleted" class="finish-screen">
         <template v-if="isVictory">
@@ -111,7 +111,7 @@ import {userlangStore} from '../../store/learningStore.js'
 import {useQuizStore} from '../../../store/adjectiveStore.js'
 import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
-import VPreloader from "~/src/components/V-preloader.vue";
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
 
 useSeoMeta({robots: 'noindex, nofollow'})
 
@@ -217,7 +217,6 @@ watch(() => store.quizCompleted, async (done) => {
   padding: 5px 10px 15px 10px;
   gap: 20px;
   background: var(--bg);
-  border-bottom: 2px solid #e5e7eb;
   border-radius: 0 0 24px 24px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.03);
   flex-shrink: 0;

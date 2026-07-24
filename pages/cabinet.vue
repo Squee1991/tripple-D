@@ -5,19 +5,20 @@
         <div class="modal-title">{{ t('cabinet.cancelPremium') }}</div>
         <p class="modal-text">{{ t('cabinet.cancelPremiumText') }}</p>
         <div class="modal-actions">
-          <button class="btn btn-danger" @click="cancelSubscription" type="button">
-            {{ t('cabinet.accept') }}
-          </button>
           <button class="btn" @click="closeCancelModal" type="button">
             {{ t('cabinet.reject') }}
+          </button>
+          <button class="btn btn-danger" @click="cancelSubscription" type="button">
+            {{ t('cabinet.accept') }}
           </button>
         </div>
       </div>
     </div>
     <div class="layout__cabinet">
       <aside class="sidebar-panel">
-        <button v-if="!isMobile" class="back-btn" @click="backToMain" aria-label="На главную" type="button">
+        <button v-if="!isMobile" class="back-btn" @click="backToMain" aria-label="to main" type="button">
           <img class="back__btn-icon" :src="Home" alt="Home"/>
+
           <span class="back-label">{{ t('cabinet.main') }}</span>
         </button>
         <div class="sidebar-title">{{ t('cabinet.category') }}</div>
@@ -58,7 +59,7 @@
                       @open="handleSettingsAction"
                   />
                 </div>
-                <div v-else>
+                <div v-else class="settings-wrapper">
                   <Transition name="menu-appear" appear>
                     <div class="user__interface">
                       <div class="user-block">
@@ -69,6 +70,7 @@
                                 :src="authStore.avatarUrl"
                                 alt="image"
                                 class="avatar-current"
+                                :class="currentAvatarEffectClass"
                             />
                             <div v-else class="avatar-placeholder"></div>
                           </div>
@@ -82,9 +84,21 @@
                           </button>
                         </div>
                         <div class="user-info-container">
-                          <div class="user-name">{{ userNameSafe }}</div>
-                          <div class="user-reg-date">
-                            <div>{{ t('cabinetInfoRows.registerDate') }}: {{ registrationDateText }}</div>
+                          <div class="user__name"> {{ authStore.name}}</div>
+                          <div v-if="learningStore" class="top-panel-layout">
+                            <div class="custom-progress">
+                              <div class="progress_exp-bar">
+                                <div class="progress__bar" :style="{ width: `${(learningStore.exp / 100) * 100}%` }">
+                                  <div class="glare"></div>
+                                </div>
+                              </div>
+                              <div class="progress-circle">
+                                {{ learningStore.exp }} / 100
+                              </div>
+                            </div>
+                            <div class="level-display">
+                              <span class="level-value">{{ learningStore.isLeveling || '0' }}</span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -137,20 +151,50 @@
     <div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
       <div class="avatar-modal-content">
         <h3>{{ t('cabinet.newAvatarTitle') }}</h3>
-        <div class="avatar-grid">
+        <div class="account-tabs avatar-tabs">
           <div
-              v-for="avatarName in authStore.availableAvatars"
-              :key="avatarName"
-              class="avatar-option"
-              :class="{ selected: selectedAvatarName === avatarName }"
-              @click="authStore.ownedAvatars.includes(avatarName) ? selectAvatar(avatarName) : openPurchaseModal(avatarName)"
+              class="sliding-bg-account avatar-sliding-bg"
+              :class="{ 'no-transition': !enableTransition }"
+              :style="{
+                transform: `translateX(${getTransform(activeAvatarTabIndex, AVATAR_TABS.length)}%)`,
+                opacity: activeAvatarTabIndex === -1 ? 0 : 1
+              }"
+          ></div>
+          <button
+              v-for="tab in AVATAR_TABS"
+              :key="tab.key"
+              class="account-tab"
+              :class="{ active: activeAvatarTab === tab.key }"
+              @click="activeAvatarTab = tab.key"
+              type="button"
           >
-            <img :src="authStore.getAvatarUrl(avatarName)" :alt="avatarName"/>
-            <div v-if="!authStore.ownedAvatars.includes(avatarName)" class="avatar-price">
-              <span>50 </span>
-              <img src="../assets/images/article.svg" alt="">
+            <span class="tab__text">{{ tab.label }}</span>
+          </button>
+        </div>
+        <div class="avatar-scroll-container">
+          <transition name="fade" mode="out-in">
+            <div class="avatar-grid" :key="activeAvatarTab">
+              <div
+                  v-for="avatarName in currentViewAvatars"
+                  :key="avatarName"
+                  class="avatar-option"
+                  @click="authStore.ownedAvatars.includes(avatarName) ? selectAvatar(avatarName) : openPurchaseModal(avatarName)"
+              >
+                <div class="avatar__image-wrapper"
+                     :class="{
+                       selected: selectedAvatarName === avatarName,
+                       unowned: !authStore.ownedAvatars.includes(avatarName)
+                     }"
+                >
+                  <img class="avatar-img" :src="authStore.getAvatarUrl(avatarName)" :alt="avatarName"/>
+                </div>
+                <div v-if="!authStore.ownedAvatars.includes(avatarName)" class="avatar-price">
+                  <span>50</span>
+                  <img class="price-icon" src="../assets/images/article.svg" alt="">
+                </div>
+              </div>
             </div>
-          </div>
+          </transition>
         </div>
         <div class="modal-actions">
           <button @click="isAvatarModalOpen = false" class="btn" type="button">
@@ -185,17 +229,27 @@
             </button>
           </div>
         </template>
+        <template v-else-if="isRankAvatarLocked">
+          <p class="modal__text--computed" style="font-size: 18px; margin-top: 10px;">{{ rankAvatarsComputed }}</p>
+          <div class="modal-actions">
+            <button class="btn" @click="closePurchaseOk" type="button">
+              {{ t('cardsShop.accessibly')}}
+            </button>
+          </div>
+        </template>
         <template v-else>
           <div class="modal-title">{{ t('cabinet.buyAvatar') }}</div>
-          <p class="modal-text">
-            {{ t('cabinet.costs') }} <b>{{ t('cabinet.price') }}</b>
-          </p>
+          <div class="price__avatar-text">
+            <span class="modal-text">50</span>
+            <img class="articles" src="../assets/images/article.svg" alt="artiles">
+          </div>
+
           <div class="modal-actions">
-            <button class="btn btn-success" @click="confirmPurchase" type="button">
-              {{ t('cabinet.buyAvatarBtn') }}
-            </button>
             <button class="btn" @click="isPurchaseModalOpen = false" type="button">
               {{ t('cabinet.notBuyAvatarBtn') }}
+            </button>
+            <button class="btn btn-success" @click="confirmPurchase" type="button">
+              {{ t('cabinet.buyAvatarBtn') }}
             </button>
           </div>
         </template>
@@ -226,6 +280,7 @@ import {useI18n} from 'vue-i18n'
 
 import AwardsList from '../src/components/AwardsList.vue'
 import VExampResulut from '../src/components/V-exampResulut.vue'
+import VNews from '../src/components/V-news.vue'
 import VFindFriends from '../src/components/V-findFriends.vue'
 import VRank from '../src/components/V-rank.vue'
 import PersonalInfoRows from '../src/components/PersonalInfoRows.vue'
@@ -240,6 +295,7 @@ import {useEventSessionStore} from '../../store/eventsStore.js'
 
 import Home from '../assets/images/home.svg'
 import Folder from '../assets/images/folder.svg'
+import News from '../assets/images/news.svg'
 import UserAccIcon from '../assets/accountToggleIcons/user.svg'
 import SettingsIcon from '../assets/images/settings.svg'
 import FaqIcon from '../assets/accountToggleIcons/faq.svg'
@@ -279,18 +335,48 @@ const isMobile = ref(false)
 const activeTabKey = ref((typeof window !== 'undefined' && sessionStorage.getItem(MAIN_TAB_KEY)) || 'info')
 const accountTab = ref((typeof window !== 'undefined' && sessionStorage.getItem(ACC_TAB_KEY)) || 'common')
 
+
+const isRankAvatarLocked = computed(() => {
+  return purchaseState.value.startsWith('locked_')
+})
+
+
+const currentAvatarEffectClass = computed(() => {
+  const avatar = authStore.avatar;
+  if (!avatar) return '';
+  if (['16.png', '17.png', '18.png'].includes(avatar)) return 'effect-unicorn';
+  if (['19.png', '20.png', '21.png'].includes(avatar)) return 'effect-dragon';
+  if (['22.png', '23.png', '24.png'].includes(avatar)) return 'effect-griffin';
+
+  return '';
+});
+
+
+const rankAvatarsComputed = computed(() => {
+  const texts = {
+    'locked_easy_1': t('rankAvatars.locked_easy_1'),
+    'locked_easy_2': t('rankAvatars.locked_easy_2'),
+    'locked_easy_3': t('rankAvatars.locked_easy_3'),
+    'locked_normal_1': t('rankAvatars.locked_normal_1'),
+    'locked_normal_2': t('rankAvatars.locked_normal_2'),
+    'locked_normal_3': t('rankAvatars.locked_normal_3'),
+    'locked_hard_1': t('rankAvatars.locked_hard_1'),
+    'locked_hard_2': t('rankAvatars.locked_hard_2'),
+    'locked_hard_3': t('rankAvatars.locked_hard_3'),
+  }
+  return texts[purchaseState.value] || ''
+})
+
 const TAB_ITEMS = computed(() => {
   const items = [
     {key: 'info', label: t('cabinetSidebar.valueOne'), alt: 'infoIcon', icon: AccountIcon},
-    {key: 'archive', label: t('cabinetSidebar.valueTwo'), alt: 'archiveIcon', icon: Folder},
+    {key: 'archive', label: t('cabinetSidebar.valueTwo'), alt: 'archiveIcon', icon: News},
     {key: 'shop', label: t('cabinetSidebar.valueThree'), alt: 'shopIcon', icon: ShoppingCart},
     {key: 'settings', label: t('cabinetSidebar.valueFour'), alt: 'settingsIcon', icon: SettingsIcon}
   ]
-
   if (isMobile.value) {
     return [{key: 'home', label: t('cabinet.main'), alt: 'Home', icon: Home, url: '/'}, ...items]
   }
-
   return items
 })
 
@@ -307,6 +393,31 @@ const ACCOUNT_TABS = computed(() => [
   {key: 'rank', label: t('cabinetNav.rank'), icon: RankAward, alt: 'rank'}
 ])
 
+const activeAvatarTab = ref('regular')
+
+const AVATAR_TABS = computed(() => [
+  {key: 'regular', label: t('typeOfAvatars.usual')},
+  {key: 'rank', label: t('typeOfAvatars.ranked')}
+])
+
+const activeAvatarTabIndex = computed(() => {
+  return AVATAR_TABS.value.findIndex(tab => tab.key === activeAvatarTab.value)
+})
+
+const RANK_AVATAR_FILES = ['16.png', '17.png', '18.png', '19.png', '20.png', '21.png', '22.png', '23.png', '24.png']
+
+const regularAvatars = computed(() => {
+  return authStore.availableAvatars.filter(avatar => !RANK_AVATAR_FILES.includes(avatar))
+})
+
+const rankAvatars = computed(() => {
+  return authStore.availableAvatars.filter(avatar => RANK_AVATAR_FILES.includes(avatar))
+})
+
+const currentViewAvatars = computed(() => {
+  return activeAvatarTab.value === 'regular' ? regularAvatars.value : rankAvatars.value
+})
+
 const isSnowWarningModalOpen = ref(false)
 const isCancelModalOpen = ref(false)
 const purchaseState = ref('default')
@@ -320,28 +431,28 @@ const userNameSafe = computed(() => authStore.initialized && authStore.name ? au
 
 const iconDisplayComputed = computed(() => ({"iconHide": iconDisplay.value}))
 
-const registrationDateText = computed(() => {
-  const registeredAt = authStore.registeredAt
-  if (!registeredAt) return '—'
-
-  let date
-  if (typeof registeredAt.toDate === 'function') date = registeredAt.toDate()
-  else date = new Date(registeredAt)
-
-  if (isNaN(date.getTime())) return '—'
-  const options = {day: 'numeric', month: 'long', year: 'numeric'}
-  let formatted = date.toLocaleDateString(locale.value, options)
-  formatted = formatted.replace(/\s*г\.$/, '')
-  const parts = formatted.split(' ')
-  if (parts.length === 3) {
-    parts[1] = parts[1].charAt(0).toUpperCase() + parts[1].slice(1)
-    return parts.join(' ')
-  }
-  return formatted
-})
+// const registrationDateText = computed(() => {
+//   const registeredAt = authStore.registeredAt
+//   if (!registeredAt) return '—'
+//
+//   let date
+//   if (typeof registeredAt.toDate === 'function') date = registeredAt.toDate()
+//   else date = new Date(registeredAt)
+//
+//   if (isNaN(date.getTime())) return '—'
+//   const options = {day: 'numeric', month: 'long', year: 'numeric'}
+//   let formatted = date.toLocaleDateString(locale.value, options)
+//   formatted = formatted.replace(/\s*г\.$/, '')
+//   const parts = formatted.split(' ')
+//   if (parts.length === 3) {
+//     parts[1] = parts[1].charAt(0).toUpperCase() + parts[1].slice(1)
+//     return parts.join(' ')
+//   }
+//   return formatted
+// })
 
 const tabs = {
-  archive: VExampResulut,
+  archive: VNews,
   settings: VSettings,
   shop: Shop,
 }
@@ -457,7 +568,6 @@ async function cancelSubscription() {
       isCancelModalOpen.value = false
     }
   } catch (e) {
-    console.error(e)
   }
 }
 
@@ -482,6 +592,9 @@ async function confirmPurchase() {
     purchaseState.value = 'success'
   } else if (status === 'insufficient') {
     purchaseState.value = 'insufficient'
+    isPurchaseModalOpen.value = true
+  } else if (status && status.startsWith('locked_')) {
+    purchaseState.value = status
     isPurchaseModalOpen.value = true
   }
 }
@@ -526,7 +639,7 @@ onMounted(async () => {
 .cabinet-wrapper {
   height: 100%;
   font-family: "Nunito", sans-serif;
-  padding: 10px;
+  padding: 5px 10px 10px 10px;
   overflow: hidden;
 }
 
@@ -550,15 +663,22 @@ onMounted(async () => {
   background: var(--overlayAfter);
 }
 
-.tab__component-wrapper {
-  height: 100%;
+.articles {
+  width: 30px;
+}
+
+.price__avatar-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
 
 .sidebar-panel {
   padding: 16px;
   border-radius: 26px;
-  border: 3px solid #000;
-  box-shadow: 6px 6px 0 #000;
+  border: 2px solid var(--tabBg);
+  box-shadow: var(--boxShadowMobile);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -570,6 +690,18 @@ onMounted(async () => {
 
 .tab-icon {
   width: 28px;
+}
+
+.user__name {
+  color: var(--titleColor);
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 19px;
+}
+
+
+.btn {
+  font-size: 18px;
 }
 
 .back-btn {
@@ -604,13 +736,17 @@ onMounted(async () => {
 }
 
 .modal-title {
-  margin-bottom: 10px;
+  margin-bottom: 24px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 24px;
+  color: var(--titleColor);
 }
 
 .modal-text {
-  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 400;
+  font-family: 'Lilita One', sans-serif;
+  color: var(--titleColor);
 }
 
 .nav-container {
@@ -638,8 +774,7 @@ onMounted(async () => {
   flex: 1;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
+  padding: 10px 12px;
   position: relative;
   z-index: 2;
   border: none;
@@ -659,31 +794,36 @@ onMounted(async () => {
 
 .nav-label {
   font-weight: 700;
-  font-size: 17px;
+  font-size: 14px;
   font-family: "Nunito", sans-serif;
   color: var(--titleColor);
   margin-left: 10px;
 }
 
-.settings-wrapper {
+.settings-wrapper,
+.tab__component-wrapper {
+  flex: 1;
   height: 100%;
+  min-height: 0;
 }
 
 .content-panel {
   border-radius: 28px;
-  border: 3px solid #000;
-  box-shadow: 5px 5px 0 #000;
+  border: var(--tabBg);
+  box-shadow: var(--boxShadowMobile);
   flex: 1;
   display: flex;
   flex-direction: column;
   min-width: 0;
   height: 100%;
-  overflow: hidden;
 }
 
 .content-body {
   flex: 1;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .header-surface {
@@ -691,6 +831,10 @@ onMounted(async () => {
   border-radius: 20px;
   background: transparent;
   padding: 2px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .account-tabs {
@@ -716,6 +860,10 @@ onMounted(async () => {
   transition: transform 0.4s cubic-bezier(0.34, 1.20, 0.64, 1), opacity 0.3s ease;
   z-index: 1;
   box-shadow: 0 4px 12px rgba(99, 88, 172, 0.5);
+}
+
+.avatar-sliding-bg {
+  width: calc((100% - 16px) / 2);
 }
 
 .account-tab {
@@ -767,7 +915,7 @@ onMounted(async () => {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, .5);
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .modal-card {
@@ -785,13 +933,14 @@ onMounted(async () => {
   display: flex;
   gap: 12px;
   justify-content: center;
+  margin-top: 25px;
 }
 
 .btn {
   border: none;
-  box-shadow: 0 4px 0 #c0c2c9;
-  border-radius: 16px;
-  padding: 10px 16px;
+  box-shadow: 0 5px 0 #c0c2c9;
+  border-radius: 50px;
+  padding: 12px 16px;
   font-weight: 800;
   background: #f3f4f6;
   cursor: pointer;
@@ -799,8 +948,9 @@ onMounted(async () => {
 }
 
 .btn-success {
-  background: #4ade80;
-  box-shadow: 0 5px 0 #34be66;
+  background: #3b82f6;
+  box-shadow: 0 5px 0 #1d4ed8;
+  color: white;
 }
 
 .btn-danger {
@@ -810,61 +960,122 @@ onMounted(async () => {
 
 .avatar-modal-overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, .6);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .avatar-modal-content {
-  max-height: 90vh;
-  overflow: auto;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 24px;
-  width: 90%;
+  background: var(--tabBg);
+  padding: 16px 10px;
+  padding-bottom: env(safe-area-inset-bottom);
+  border-radius: 24px 24px 0 0;
+  width: 100%;
   max-width: 600px;
+  max-height: 85vh;
+  overflow-y: hidden;
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.avatar-modal-content h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--titleColor);
+  font-size: 20px;
+}
+
+.avatar-scroll-container {
+  height: 340px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.avatar-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.avatar-scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--tabsSlideBorderColor, #ccc);
+  border-radius: 10px;
 }
 
 .avatar-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .avatar-option {
-  border: 4px solid transparent;
-  border-radius: 24px;
-  overflow: hidden;
-  transition: .15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   cursor: pointer;
-  position: relative;
+  margin-bottom: 5px;
 }
 
-.avatar-option.selected {
+.avatar__image-wrapper {
+  border: 3px solid transparent;
+  border-radius: 24px;
+  padding: 1px;
+  transition: .15s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar__image-wrapper.selected {
   border-color: #fca13a;
-  transform: scale(1.03);
+  border-radius: 50%;
 }
 
-.avatar-option img {
-  width: 70px;
+.avatar-img {
+  width: 100%;
+  max-width: 70px;
+  height: auto;
   display: block;
 }
 
+.avatar__image-wrapper.unowned .avatar-img {
+  opacity: 0.6;
+  border-radius: 50%;
+  filter: grayscale(1);
+}
+
+.tab__text {
+  padding: 5px 0;
+}
+
 .avatar-price {
-  position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #f3f3f3;
-  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: var(--titleColor);
   border-radius: 10px;
-  padding: 4px 8px;
+  padding: 2px 8px;
   font-weight: 900;
+  font-size: 15px;
+}
+
+.price-icon {
+  width: 16px;
+  height: 16px;
 }
 
 @media (max-width: 767px) {
@@ -874,10 +1085,6 @@ onMounted(async () => {
 }
 
 @media (max-width: 1023px) {
-  .cabinet-wrapper {
-    overflow: hidden;
-  }
-
   .sidebar-panel {
     position: fixed;
     left: 50%;
@@ -956,7 +1163,7 @@ onMounted(async () => {
   background: var(--tabBg, #1f222b);
   border: 3px solid var(--tabsSlideBorderColor);
   border-radius: 24px;
-  padding: 14px 10px 12px 10px;
+  padding: 9px 25px 9px 10px;
   box-shadow: 0 6px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -965,20 +1172,15 @@ onMounted(async () => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 
 .avatar-container {
-  width: 86px;
-  height: 86px;
-  border-radius: 50%;
-  border: 4px solid var(--tabsSlideBorderColor, #2a2d39);
-  background: linear-gradient(135deg, #5b65e9, #8a93ff);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 96px;
+  height: 96px;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .avatar-current,
@@ -990,12 +1192,12 @@ onMounted(async () => {
 
 .change-avatar-btn {
   position: absolute;
-  bottom: -5px;
-  right: -8px;
-  width: 32px;
-  height: 32px;
+  bottom: -8px;
+  right: -6px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  padding: 8px;
+  padding: 5px;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -1031,25 +1233,19 @@ onMounted(async () => {
   z-index: 2;
 }
 
+.modal__text--computed {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--titleColor);
+  font-family: Nunito, sans-serif;
+}
+
 .user-info-container {
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin-left: 20px;
-}
-
-.user-name {
-  font-size: 22px;
-  font-weight: 900;
-  color: var(--titleColor);
-  letter-spacing: 0.5px;
-}
-
-.user-reg-date {
-  font-size: 13px;
-  color: var(--text-muted, #8b92a5);
-  font-weight: 800;
-  text-align: start;
+  flex: 1;
 }
 
 .no-transition {
@@ -1057,8 +1253,118 @@ onMounted(async () => {
 }
 
 @media (min-width: 1024px) {
-  .user__interface {
-    padding: 10px;
+  .user__interface,
+  .tab__component-wrapper {
+    padding: 16px;
   }
 }
+
+.top-panel-layout {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.custom-progress {
+  position: relative;
+  width: 100%;
+}
+
+.custom-progress .progress_exp-bar {
+  height: 27px;
+}
+
+.progress-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #313030;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.level-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.level-label {
+  color: var(--titleColor);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.level-value {
+  background: #8868db;
+  border: none;
+  border-radius: 10px;
+  padding: 4px 12px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.progress_exp-bar {
+  flex: 1;
+  height: 25px;
+  background: #e8eae5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress__bar {
+  height: 100%;
+  background-color: #10b981;
+  border-radius: 8px;
+  transition: width 0.4s ease-out;
+  position: relative;
+}
+
+.glare {
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  border-radius: 4px;
+}
+
+.effect-unicorn {
+  border-radius: 50%;
+  outline: 3px solid #da70d6;
+  animation: glow-in-gap-unicorn 1.5s infinite alternate ease-in-out;
+}
+@keyframes glow-in-gap-unicorn {
+  0% { box-shadow: 0 0 0 0px transparent; }
+  100% { box-shadow: 0 0 8px 3px rgba(218, 112, 214, 0.9); }
+}
+
+.effect-dragon {
+  border-radius: 50%;
+  outline: 3px solid #ff8c00;
+  animation: glow-in-gap-dragon 1.5s infinite alternate ease-in-out;
+}
+@keyframes glow-in-gap-dragon {
+  0% { box-shadow: 0 0 0 0px transparent; }
+  100% { box-shadow: 0 0 8px 3px rgba(255, 140, 0, 0.9); }
+}
+
+.effect-griffin {
+  border-radius: 50%;
+  outline: 3px solid #4169e1;
+
+  animation: glow-in-gap-griffin 1.5s infinite alternate ease-in-out;
+}
+@keyframes glow-in-gap-griffin {
+  0% { box-shadow: 0 0 0 0px transparent; }
+  100% { box-shadow: 0 0 8px 3px rgba(65, 105, 225, 0.9); }
+}
+
 </style>

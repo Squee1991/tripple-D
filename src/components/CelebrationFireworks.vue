@@ -3,31 +3,36 @@
       <div class="fireWorks__container" ref="container"></div>
       <div class="congrats" role="status" aria-live="polite">
         <div class="congrats__inner">
+<!--          `<transition name="fade-up" appear>-->
+<!--            <div class="congrats__title" style="transition-delay:.2s">-->
+<!--              <div class="congrats__title-item">Поздравляем!</div>-->
+<!--              <div v-if="shownLevel !== null" class="level-badge" aria-live="polite">-->
+<!--                <span class="level-badge__label">{{ t('level') || 'Уровень' }}</span>-->
+<!--                <div class="level__badge-container">-->
+<!--                  <span class="level-badge__value">{{ shownLevel }}</span>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </transition>-->
+<!--          <transition name="fade-up" appear>-->
+<!--            <p class="congrats__phrase" style="transition-delay:.3s">{{ randomPhrase }}</p>-->
+<!--          </transition>-->
           <transition name="fade-up" appear>
-            <div class="congrats__title" style="transition-delay:.2s">
-              <div class="congrats__title-item">Поздравляем!</div>
-              <div v-if="shownLevel !== null" class="level-badge" aria-live="polite">
-                <span class="level-badge__label">{{ t('level') || 'Уровень' }}</span>
-                <div class="level__badge-container">
-                  <span class="level-badge__value">{{ shownLevel }}</span>
+              <div>
+                <div>
+                  <img class="icon" :src="GoodJobIcon" alt="">
+                </div>
+                <div class="stats">
+                  <div class="stats__card">
+                    <div class="stats__label stats__label--exp">Очки опыта</div>
+                    <div class="stats__value">{{ shownExp }}</div>
+                  </div>
+                  <div class="stats__card">
+                    <div class="stats__label stats__label--points">Артиклюсы</div>
+                    <div class="stats__value">{{ shownPoints }}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </transition>
-          <transition name="fade-up" appear>
-            <p class="congrats__phrase" style="transition-delay:.3s">{{ randomPhrase }}</p>
-          </transition>
-          <transition name="fade-up" appear>
-            <div class="stats">
-              <div class="stats__card">
-                <div class="stats__label stats__label--exp">Очки опыта</div>
-                <div class="stats__value">{{ shownExp }}</div>
-              </div>
-              <div class="stats__card">
-                <div class="stats__label stats__label--points">Артиклюсы</div>
-                <div class="stats__value">{{ shownPoints }}</div>
-              </div>
-            </div>
           </transition>
         </div>
       </div>
@@ -46,7 +51,7 @@
   import Lottie from 'lottie-web'
   import FireWorks from '../../assets/animation/SuccessAnimation.json'
   import {useSfx} from '../../composables/useSfx.js'
-
+  import GoodJobIcon from '../../assets/images/GoodJobIcon.svg'
   const {t} = useI18n()
 
   const props = defineProps({
@@ -150,9 +155,15 @@
 
   <style scoped>
 
+  .icon {
+    width: 180px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
   .fireWorks {
     position: relative;
-    min-height: 100svh;
+    height: 100%;
     width: 100%;
     overflow: hidden;
     padding-top: 40px;
@@ -191,9 +202,9 @@
     justify-content: center;
     width: 100%;
     position: absolute;
-    bottom: 5px;
     left: 0;
-    padding: 25px;
+    bottom: env(safe-area-inset-top);
+    padding: 10px;
   }
 
   .fireWorks__container {
@@ -250,9 +261,8 @@
     padding: 6px 10px;
     font-size: 18px;
     line-height: 1.4;
-    color: #6a5b3a;
-    font-style: italic;
-    opacity: .95;
+    color: var(--title);
+    font-weight: 600;
     margin-top: 40px;
   }
 
@@ -304,16 +314,16 @@
 
   .btn {
     margin-top: auto;
-    border-radius: 12px;
-    border: 3px solid #000;
-    box-shadow: 3px 3px 0 #000;
+    border-radius: 42px;
+    border: none;
+    box-shadow: 0 6px 0 #1d4ed8;
+    background: #3b82f6;
     cursor: pointer;
     font-weight: 800;
-    padding: 10px 14px;
-    background: #4d524a;
+    padding: 14px 16px;
     color: white;
     width: 100%;
-    max-width: 340px;
+    max-width: 360px;
   }
 
   @media (max-width: 767px) {

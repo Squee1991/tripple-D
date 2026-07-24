@@ -10,7 +10,6 @@
         :visible="showAuthModal"
         @close="closeAuthModal"
         :title="authModalData.title"
-        :img="Login"
         :text="authModalData.text"
     />
     <div class="lobby-container">
@@ -124,7 +123,6 @@ import {userAuthStore} from '../store/authStore.js'
 import {useRouter} from 'vue-router'
 import Modal from '../src/components/modal.vue'
 import TipsModal from '../src/components/V-tips.vue'
-import Login from '../assets/images/login.svg'
 import {useSeoMeta} from "#imports";
 import VBackBtn from "~/src/components/V-back-btn.vue";
 
@@ -576,7 +574,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   text-decoration: none;
   background: #3b82f6;
   color: #ffffff;
-  padding: 15px;
+  padding: 14px;
   border-radius: 54px;
   font-size: 20px;
   font-weight: 800;

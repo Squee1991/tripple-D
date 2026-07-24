@@ -11,6 +11,7 @@ import ShareExamModal from '../../src/components/shareModal.vue';
 import { useI18n } from 'vue-i18n'
 import VBanner from "~/src/components/V-banner.vue";
 import Archive from "../../assets/images/folder.svg";
+
 const { t } = useI18n()
 const friendsStore = useFriendsStore()
 const router = useRouter()
@@ -54,7 +55,6 @@ async function handleAction(btn) {
     await friendsStore.loadFriends()
     shareMessage.value = ''
     showShareModal.value = true
-    console.log('Поделиться экзаменом', selectedExamId.value)
   }
 }
 
@@ -113,23 +113,27 @@ onMounted(() => {
         @close="() => { showShareModal = false; shareMessage = '' }"
         @share="handleShareWithFriend"
     />
-    <div v-if="showDeleteModal" class="modal-overlay" @click.self="cancelDelete">
-      <div class="modal-card">
-        <div class="modal-title">Удалить результат?</div>
-        <p class="modal-text">Вы уверены, что хотите удалить этот экзамен? Это действие нельзя отменить.</p>
-        <div class="modal-actions">
-          <button class="btn-app btn-cancel" @click="cancelDelete" type="button">
-            Отмена
-          </button>
-          <button class="btn-app btn-danger" @click="confirmDelete" type="button">
-            Удалить
-          </button>
+
+    <transition name="modal-fade">
+      <div v-if="showDeleteModal" class="modal-overlay" @click.self="cancelDelete">
+        <div class="modal-card">
+          <div class="modal-title"> {{ t('examResult.deleteResultTitle')}}</div>
+          <p class="modal-text">{{ t('examResult.textModal')}}</p>
+          <div class="modal-actions">
+            <button class="btn-app btn-cancel" @click="cancelDelete" type="button">
+              {{ t('examResult.cancel')}}
+            </button>
+            <button class="btn-app btn-danger" @click="confirmDelete" type="button">
+              {{ t('examResult.delete')}}
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </transition>
+
     <VBanner
-       :text="t('examResult.title')"
-       :icon="Archive"
+        :text="t('examResult.title')"
+        :icon="Archive"
     />
     <div v-if="examStore.archiveLoading" class="ec__box">{{ t('examResult.loading') }}</div>
     <div v-else-if="examStore.archiveError" class="ec__box ec__box--error">{{ examStore.archiveError }}</div>
@@ -171,7 +175,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-
 .exams-compact {
   width: 100%;
   font-family: "Nunito", sans-serif;
@@ -229,7 +232,6 @@ onMounted(() => {
   list-style: none;
 }
 
-
 .ec__item {
   display: flex;
   flex-direction: column;
@@ -239,7 +241,6 @@ onMounted(() => {
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border-radius: 20px;
   padding: 16px;
-
 }
 
 .ec__left__wrapper {
@@ -295,7 +296,6 @@ onMounted(() => {
   color: #3e91cd;
 }
 
-
 .ec__actions {
   display: flex;
   gap: 12px;
@@ -350,23 +350,48 @@ onMounted(() => {
 .modal-overlay {
   position: fixed;
   inset: 0;
+  background: rgba(30, 39, 46, 0.8);
+  backdrop-filter: blur(3px);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.7);
   z-index: 10000;
-  backdrop-filter: blur(5px);
+  padding: 0;
 }
 
 .modal-card {
   background: var(--menuItemsBg);
-  border-radius: 24px;
-  padding: 24px;
-  width: 90%;
-  max-width: 360px;
+  padding: 40px 24px 30px 24px;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  max-width: 700px;
   text-align: center;
-  box-shadow: 0 5px 0 rgba(224, 216, 216, 0.5);
-  animation: scaleIn 0.2s ease-out;
+  border: none;
+  box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 3px solid whitesmoke;
+}
+
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  transition: opacity 0.2s ease-out;
+}
+
+.modal-fade-enter-from,
+.modal-fade-leave-to {
+  opacity: 0;
+}
+
+.modal-fade-enter-active .modal-card,
+.modal-fade-leave-active .modal-card {
+  transition: transform 0.2s ease-out;
+}
+
+.modal-fade-enter-from .modal-card,
+.modal-fade-leave-to .modal-card {
+  transform: translateY(100%);
 }
 
 .modal-title {
@@ -386,37 +411,39 @@ onMounted(() => {
 .modal-actions {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  width: 100%;
 }
 
 .btn-app {
   width: 100%;
   padding: 14px;
-  border-radius: 24px;
+  border-radius: 36px;
   font-family: "Nunito", sans-serif;
-  font-weight: 800;
-  font-size: 1rem;
+  font-weight: 900;
+  font-size: 18px;
   border: none;
   cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  text-transform: uppercase;
 }
 
 .btn-app:active {
-  opacity: 0.8;
+  transform: translateY(4px);
+  box-shadow: 0 0 0 transparent !important;
 }
 
 .btn-danger {
   background: none;
-  color: var(--title);
+  color: #645e5e;
+  font-weight: 600;
+  box-shadow: none;
 }
 
 .btn-cancel {
   background: #2b6be2;
-  color: #fff;
-}
-
-@keyframes scaleIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  color: white;
+  box-shadow: 0 5px 0 #2959b0;
 }
 
 @media (min-width: 768px) {

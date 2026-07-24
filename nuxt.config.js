@@ -55,12 +55,29 @@ export default defineNuxtConfig({
 		'nuxt-vuefire',
 		'@nuxtjs/google-fonts',
 		'@nuxtjs/i18n',
-		'@nuxtjs/color-mode'
+		'@nuxtjs/color-mode',
+		/*'@sentry/nuxt/module'*/
 	],
+	sentry: {
+		sourceMapsUploadOptions: {
+			org: "skillup-cp",
+			project: "javascript-nuxt",
+		},
+	},
+
+	build: {
+		transpile: [
+			'@capacitor/filesystem',
+			'capacitor-blob-writer'
+		]
+	},
 
 	vuefire: {
 		config: firebaseConfig,
-		auth: true,
+		auth: {
+			enabled: true,
+			popupRedirectResolver: false
+		},
 		firestore: {
 			experimentalForceLongPolling: true,
 		},
@@ -148,7 +165,12 @@ export default defineNuxtConfig({
 	plugins: ['~/plugins/simplebar.client.js'],
 
 	googleFonts: {
-		families: {'Uncial Antiqua': true, Kurale: true, Fredoka: true, Nunito: true},
+		families: {
+			'Uncial Antiqua': true,
+			Kurale: true,
+			Fredoka: true,
+			'Lilita One': true,
+			Nunito: true},
 	},
 
 	vite: {
@@ -159,29 +181,15 @@ export default defineNuxtConfig({
 			drop: mode === 'production' ? ['console', 'debugger'] : [],
 			legalComments: 'none',
 		},
-	},
+		optimizeDeps: {
+			include: [
+				'@capacitor/filesystem',
+				'capacitor-blob-writer'
+			],
 
+		}
+	},
 	nitro: {
-		prerender: {
-			crawlLinks: true,
-			routes: ['/'],
-			failOnError: false,
-		},
-		compressPublicAssets: false
-	},
-
-	routeRules: {
-		'/': {
-			prerender: true,
-		},
-		'/**': {
-			ssr: false,
-			headers: { 'Cache-Control': 'public, max-age=0, must-revalidate' }
-		},
-		'/admin/**': { status: 404 },
-		'/wp-login.php': { status: 404 },
-		'/sounds/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/images/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/*.png': { headers: { 'Cache-Control': 'public, max-age=2592000' } }
+		preset: 'static'
 	},
 })

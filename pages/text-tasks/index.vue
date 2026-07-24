@@ -10,7 +10,7 @@
           </svg>
         </button>
         <div class="page-title">
-          {{ selectedTheme ? selectedTheme.title : t('sub.textTask') }}
+          {{ t('sub.textTask') }}
         </div>
         <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
@@ -27,7 +27,7 @@
               :text="t('bannerTitles.textTask')"
               :icon="TextBooks"
           />
-          <nav class="mobile-nav" role="tablist" v-if="!selectedTheme">
+          <nav class="mobile-nav" role="tablist">
             <div class="sliding-bg" :style="{ transform: `translateX(${getTransformX(activeIndex)}%)` }"></div>
             <button
                 v-for="level in levels"
@@ -40,51 +40,42 @@
               <span class="tab-label">{{ level.label }}</span>
             </button>
           </nav>
-          <div class="content-area" v-if="!selectedTheme">
+          <div class="content-area">
             <div class="themes-list">
-              <div
-                  v-for="theme in displayedThemes"
+              <button
+                  v-for="(theme, index) in displayedThemes"
                   :key="theme.id"
                   class="theme-card"
-                  @click="selectTheme(theme)"
+                  @click="selectTheme(theme, index)"
+                  :disabled="isLoading"
               >
                 <div class="theme-card-top">
                   <div class="theme-icon-box">{{ theme.icon }}</div>
                   <div class="theme-info">
                     <div class="theme-name">{{ theme.title }}</div>
                   </div>
-                  <VArrowNav/>
+                  <!-- ИЗМЕНЕНО: теперь используем isThemeUnlocked -->
+                  <div class="theme-arrow" :class="{ 'theme-arrow--locked': !isThemeUnlocked(index) }">
+                    <VArrowNav v-if="isThemeUnlocked(index)"/>
+                    <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                         stroke-linejoin="round">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                  </div>
                 </div>
                 <div class="theme-card-bottom">
                   <div class="progress-track">
-                    <div class="progress-fill" :style="{ width: `${getStats(theme.id).total > 0 ? (getStats(theme.id).completed / getStats(theme.id).total) * 100 : 0}%` }"></div>
+                    <div class="progress-fill"
+                         :style="{ width: `${getStats(theme.id).total > 0 ? (getStats(theme.id).completed / getStats(theme.id).total) * 100 : 0}%` }"></div>
                   </div>
                   <span class="progress-text">{{ getStats(theme.id).completed }}/{{ getStats(theme.id).total }}</span>
                 </div>
-              </div>
-              <div v-if="displayedThemes.length === 0" class="empty-state">
-                В этом разделе пока нет тем
-              </div>
+              </button>
+              <div v-if="displayedThemes.length === 0" class="empty-state">Empty</div>
             </div>
           </div>
-          <VTransition>
-            <div class="content-area" v-if="themeData && !isLoading">
-              <div class="tasks-list">
-                <div
-                    v-for="(task, index) in themeData.tasks"
-                    :key="task.id"
-                    class="task-card"
-                    @click="startTask(task, index)"
-                >
-                  <div v-if="task.icon" class="task-number">{{ task.icon }}</div>
-                  <div class="task-info">
-                    <div class="task-translation">{{ t(task.translation) }}</div>
-                  </div>
-                  <VArrowNav/>
-                </div>
-              </div>
-            </div>
-          </VTransition>
         </div>
       </VTransition>
       <Modal
@@ -94,6 +85,7 @@
           :img="TextBooks"
           :text="overlayData.text"
       />
+      <VPremiumModal v-model:show="showPremiumModal"/>
     </div>
   </div>
 </template>
@@ -102,18 +94,22 @@
 import {ref, computed, onMounted, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {useTextTasksStore} from '/store/textTasksStore.js'
+import {userAuthStore} from '../../store/authStore.js'
 import VBanner from "~/src/components/V-banner.vue"
 import TextBooks from "../../assets/images/TextBook.svg"
 import VTransition from "~/src/components/V-transition.vue"
 import VArrowNav from "~/src/components/V-arrowNav.vue"
-import HeadPhones from "assets/images/headphones.svg"
 import Modal from "~/src/components/modal.vue"
+import VPremiumModal from "~/src/components/V-premiumModal.vue"
+import {showInterstitial} from '../../utils/admob.js'
 
 const showDevModal = ref(false)
+const showPremiumModal = ref(false)
 const router = useRouter()
 const store = useTextTasksStore()
+const authStore = userAuthStore()
 const isMounted = ref(false)
-const { t , locale} = useI18n()
+const {t, locale} = useI18n()
 
 const levels = [
   {id: 'low-level', label: 'A1'},
@@ -126,13 +122,10 @@ const getTransformX = (index) => {
   if (locale.value === 'ar') {
     return (levels.length - 1 - index) * 100;
   }
-
   return index * 100;
 };
 
 const currentLevel = ref('low-level')
-const selectedTheme = ref(null)
-const themeData = ref(null)
 const isLoading = ref(false)
 const themesStats = ref({})
 
@@ -166,7 +159,15 @@ const displayedThemes = computed(() => {
 
 const getStats = (themeId) => {
   const key = `${currentLevel.value}-${themeId}`
-  return themesStats.value[key] || { total: 0, completed: 0 }
+  const stats = themesStats.value[key] || {total: 0, completed: 0}
+  let completedTasks = 0
+  if (store.userProgress && store.userProgress[themeId]) {
+    completedTasks = Object.keys(store.userProgress[themeId]).length
+  }
+  return {
+    total: stats.total,
+    completed: completedTasks
+  }
 }
 
 const loadLevelStats = async (level) => {
@@ -196,44 +197,63 @@ watch(currentLevel, (newLevel) => {
   loadLevelStats(newLevel)
 })
 
-const selectTheme = async (theme) => {
-  selectedTheme.value = theme
-  isLoading.value = true
-  try {
-    const res = await fetch(`/text-tasks/${currentLevel.value}/${theme.file}`)
-    if (!res.ok) throw new Error('Network response was not ok')
-    themeData.value = await res.json()
-  } catch (e) {
-    console.error(e)
-    selectedTheme.value = null
-  } finally {
-    isLoading.value = false
+// ИЗМЕНЕНО: Добавили новую функцию для разблокировки тем
+const isThemeUnlocked = (index) => {
+  if (authStore.isPremium) return true;
+  if (index === 0 || index === 1) return true;
+
+  const prevTheme = displayedThemes.value[index - 1];
+  if (prevTheme) {
+    const stats = getStats(prevTheme.id);
+    return stats.total > 0 && stats.completed >= stats.total;
+  }
+  return false;
+};
+
+const selectTheme = async (theme, index) => {
+  // ИЗМЕНЕНО: используем новую функцию
+  if (isThemeUnlocked(index)) {
+    isLoading.value = true
+    try {
+      const res = await fetch(`/text-tasks/${currentLevel.value}/${theme.file}`)
+      if (!res.ok) throw new Error('Network response was not ok')
+      const data = await res.json()
+      if (data.tasks && data.tasks.length > 0) {
+        const completedTaskIds = store.userProgress && store.userProgress[theme.id] ? Object.keys(store.userProgress[theme.id]) : []
+        let tasksToPlay = data.tasks
+        if (completedTaskIds.length > 0 && completedTaskIds.length < data.tasks.length) {
+          tasksToPlay = data.tasks.filter(task => !completedTaskIds.includes(task.id))
+        }
+        if (tasksToPlay.length > 0) {
+          store.initTask(tasksToPlay[0], tasksToPlay, 0, theme.id)
+          router.push('/text-tasks/session')
+        }
+      }
+    } catch (e) {
+      console.error(e)
+    } finally {
+      isLoading.value = false
+    }
+  } else {
+    showPremiumModal.value = true
   }
 }
 
 const goBack = () => {
-  if (selectedTheme.value) {
-    selectedTheme.value = null
-    themeData.value = null
-  } else {
-    router.push('/')
-  }
+  router.push('/')
 }
 
-const startTask = (task, index) => {
-  store.initTask(task, themeData.value.tasks, index)
-  router.push('/text-tasks/session')
-}
-
-onMounted(() => {
+onMounted(async () => {
   setTimeout(() => {
     isMounted.value = true
   }, 120)
+  await store.loadUserProgress()
   loadLevelStats(currentLevel.value)
 })
 </script>
 
 <style scoped>
+/* Стили оставляй свои, они у тебя идеальные */
 .tasks-menu-page {
   font-family: "Nunito", sans-serif;
   height: 100%;
@@ -244,7 +264,7 @@ onMounted(() => {
 
 .page-container {
   width: 100%;
-  max-width: 768px;
+  max-width: 1240px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -320,7 +340,7 @@ onMounted(() => {
   left: 6px;
   width: calc(33.333% - 4px);
   background: var(--tabsSlideBg);
-  box-shadow: var(--tabSlideBoxShadow, 0 2px 0 rgba(0,0,0,0.1));
+  box-shadow: var(--tabSlideBoxShadow, 0 2px 0 rgba(0, 0, 0, 0.1));
   border-radius: 30px;
   transition: transform 0.4s cubic-bezier(0.34, 1.35, 0.64, 1);
   z-index: 1;
@@ -413,7 +433,7 @@ onMounted(() => {
 .progress-track {
   flex-grow: 1;
   height: 8px;
-  background: var(--tabsSlideBorderColor, #2d3748);
+  background: var(--tabsSlideBorderColor);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -439,90 +459,22 @@ onMounted(() => {
   align-items: center;
 }
 
+.theme-arrow--locked {
+  background-color: #a0aec0;
+  box-shadow: 0 3px 0px #718096;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+}
+
 .empty-state {
   text-align: center;
   color: #a0aec0;
   font-weight: 700;
   padding: 20px;
-}
-
-.tasks-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.task-card {
-  border-radius: 16px;
-  padding: 10px 16px;
-  display: flex;
-  align-items: center;
-  background: var(--menuItemsBg);
-  border: 2px solid var(--tabsSlideBorderColor);
-  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
-  cursor: pointer;
-  transition: transform 0.1s;
-}
-
-.task-card:active {
-  transform: translateY(4px);
-  box-shadow: 0 0 0 #e2e8f0;
-}
-
-.task-number {
-  font-size: 30px;
-}
-
-.task-info {
-  flex-grow: 1;
-  margin-left: 10px;
-}
-
-.task-translation {
-  font-weight: 600;
-  color: var(--titleColor);
-  font-size: 15px;
-}
-
-.play-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #4facfe;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 3px 0 #0088ff;
-}
-
-.loading-state {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 60px;
-  color: #a0aec0;
-  font-weight: 800;
-  font-size: 16px;
-  gap: 15px;
-}
-
-.loader-spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid #e2e8f0;
-  border-top: 4px solid #4facfe;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 </style>

@@ -1,0 +1,589 @@
+{
+  "start": {
+    "botText": "Guten Morgen! Wie kann ich Ihnen helfen?",
+    "botTranslation": {
+      "ru-RU": "Доброе утро! Как я могу вам помочь?",
+      "en-US": "Good morning! How can I help you?",
+      "ar-SA": "صباح الخير! كيف يمكنني مساعدتك؟",
+      "es-ES": "¡Buenos días! ¿En qué puedo ayudarle?",
+      "fr-FR": "Bonjour ! Comment puis-je vous aider ?",
+      "hi-IN": "शुभ प्रभात! मैं आपकी क्या मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! W czym mogę pomóc?",
+      "ro-RO": "Bună dimineața! Cu ce vă pot ajuta?",
+      "tr-TR": "Günaydın! Size nasıl yardımcı olabilirim?",
+      "uk-UA": "Доброго ранку! Як я можу вам допомогти?",
+      "uz-UZ": "Xayrli tong! Sizga qanday yordam bera olaman?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Brille",
+        "translation": {
+          "ru-RU": "очки",
+          "en-US": "glasses",
+          "ar-SA": "نظارة",
+          "es-ES": "gafas",
+          "fr-FR": "lunettes",
+          "hi-IN": "चश्मा",
+          "pl-PL": "okulary",
+          "ro-RO": "ochelari",
+          "tr-TR": "gözlük",
+          "uk-UA": "окуляри",
+          "uz-UZ": "ko'zoynak"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Morgen! Ich brauche eine neue Brille. Ich kann nicht gut lesen.",
+        "translation": {
+          "ru-RU": "Доброе утро! Мне нужны новые очки. Я не могу хорошо читать.",
+          "en-US": "Good morning! I need new glasses. I cannot read well.",
+          "ar-SA": "صباح الخير! أنا بحاجة إلى نظارة جديدة. لا يمكنني القراءة بشكل جيد.",
+          "es-ES": "¡Buenos días! Necesito unas gafas nuevas. No puedo leer bien.",
+          "fr-FR": "Bonjour ! J'ai besoin de nouvelles lunettes. Je ne peux pas bien lire.",
+          "hi-IN": "शुभ प्रभात! मुझे एक नए चश्मे की ज़रूरत है। मैं ठीक से पढ़ नहीं पा रहा हूँ।",
+          "pl-PL": "Dzień dobry! Potrzebuję nowych okularów. Nie potrafię dobrze czytać.",
+          "ro-RO": "Bună dimineața! Am nevoie de ochelari noi. Nu pot citi bine.",
+          "tr-TR": "Günaydın! Yeni bir gözlüğe ihtiyacım var. İyi okuyamıyorum.",
+          "uk-UA": "Доброго ранку! Мені потрібні нові окуляри. Я не можу добре читати.",
+          "uz-UZ": "Xayrli tong! Menga yangi ko'zoynak kerak. Yaxshi o'qiy olmayapman."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo! Ich brauche eine Brille für die Arbeit am Computer.",
+        "translation": {
+          "ru-RU": "Здравствуйте! Мне нужны очки для работы за компьютером.",
+          "en-US": "Hello! I need glasses for working on the computer.",
+          "ar-SA": "مرحباً! أنا بحاجة إلى نظارة للعمل على الحاسوب.",
+          "es-ES": "¡Hola! Necesito unas gafas para trabajar en el ordenador.",
+          "fr-FR": "Salut ! J'ai besoin de lunettes pour le travail sur ordinateur.",
+          "hi-IN": "नमस्ते! मुझे कंप्यूटर पर काम करने के लिए चश्मे की ज़रूरत है।",
+          "pl-PL": "Cześć! Potrzebuję okularów do pracy przy komputerze.",
+          "ro-RO": "Bună! Am nevoie de ochelari pentru lucrul la calculator.",
+          "tr-TR": "Merhaba! Bilgisayarda çalışmak için bir gözlüğe ihtiyacım var.",
+          "uk-UA": "Добридень! Мені потрібні окуляри для роботи за комп'ютером.",
+          "uz-UZ": "Salom! Menga kompyuterda ishlash uchun ko'zoynak kerak."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Alles klar. Machen wir zuerst einen schnellen Sehtest. Bitte schauen Sie in den Computer auf den roten Punkt.",
+    "botTranslation": {
+      "ru-RU": "Всё понятно. Давайте сначала сделаем быстрый тест зрения. Пожалуйста, посмотрите в компьютер на красную точку.",
+      "en-US": "All right. Let's do a quick eye test first. Please look into the computer at the red dot.",
+      "ar-SA": "كل شيء واضح. فلنقم بفحص سريع للنظر أولاً. من فضلك انظر إلى الحاسوب في النقطة الحمراء.",
+      "es-ES": "Entendido. Hagamos primero una prueba de vista rápida. Por favor, mire al ordenador, al punto rojo.",
+      "fr-FR": "D'accord. Faisons d'abord un test de vue rapide. S'il vous plaît, regardez dans l'ordinateur le point rouge.",
+      "hi-IN": "ठीक है। पहले एक त्वरित आँख परीक्षण करते हैं। कृपया कंप्यूटर में लाल बिंदु पर देखें।",
+      "pl-PL": "Wszystko jasne. Zróbmy najpierw szybkie badanie wzroku. Proszę spojrzeć w komputer na czerwoną kropkę.",
+      "ro-RO": "Am înțeles. Să facem mai întâi un test de vedere rapid. Vă rog să priviți în calculator la punctul roșu.",
+      "tr-TR": "Anlaşıldı. Önce hızlı bir göz testi yapalım. Lütfen bilgisayardaki kırmızı noktaya bakın.",
+      "uk-UA": "Все зрозуміло. Давайте спочатку зробимо швидкий тест зору. Будь ласка, подивіться в комп'ютер на червону точку.",
+      "uz-UZ": "Tushunarli. Avval tezda ko'zni tekshiramiz. Iltimos, kompyuter ichidagi qizil nuqtaga qarang."
+    },
+    "vocabulary": [
+      {
+        "german": "der Sehtest",
+        "translation": {
+          "ru-RU": "тест зрения",
+          "en-US": "eye test",
+          "ar-SA": "فحص النظر",
+          "es-ES": "prueba de vista",
+          "fr-FR": "test de vue",
+          "hi-IN": "आँख परीक्षण",
+          "pl-PL": "badanie wzroku",
+          "ro-RO": "test de vedere",
+          "tr-TR": "göz testi",
+          "uk-UA": "тест зору",
+          "uz-UZ": "ko'zni tekshirish"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Okay, das mache ich. Ich bin bereit.",
+        "translation": {
+          "ru-RU": "Хорошо, я сделаю это. Я готов(а).",
+          "en-US": "Okay, I will do that. I am ready.",
+          "ar-SA": "حسنًا، سأفعل ذلك. أنا مستعد.",
+          "es-ES": "Vale, lo hago. Estoy listo.",
+          "fr-FR": "D'accord, je fais ça. Je suis prêt.",
+          "hi-IN": "ठीक है, मैं यह करता हूँ। मैं तैयार हूँ।",
+          "pl-PL": "Dobrze, zrobię to. Jestem gotowy/a.",
+          "ro-RO": "OK, fac asta. Sunt gata.",
+          "tr-TR": "Tamam, yapıyorum. Hazırım.",
+          "uk-UA": "Добре, я зроблю це. Я готовий(а).",
+          "uz-UZ": "Xo'p, shunday qilaman. Men tayyorman."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Gut. Ich schaue direkt hinein.",
+        "translation": {
+          "ru-RU": "Хорошо. Я смотрю прямо туда.",
+          "en-US": "Good. I am looking directly into it.",
+          "ar-SA": "جيد. أنا أنظر مباشرة فيه.",
+          "es-ES": "Bien. Miro directamente dentro.",
+          "fr-FR": "Bien. Je regarde directement dedans.",
+          "hi-IN": "अच्छा। मैं सीधे उसी में देख रहा हूँ।",
+          "pl-PL": "Dobrze. Patrzę prosto w to.",
+          "ro-RO": "Bine. Privesc direct în el.",
+          "tr-TR": "Güzel. Doğrudan içine bakıyorum.",
+          "uk-UA": "Добре. Я дивлюся прямо туди.",
+          "uz-UZ": "Yaxshi. To'g'ridan-to'g'ri ichiga qarayapman."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Perfekt, der Computer misst jetzt Ihre Augen. Bitte einen Moment ganz ruhig warten.",
+    "botTranslation": {
+      "ru-RU": "Отлично, теперь компьютер измеряет ваши глаза. Пожалуйста, подождите минуту спокойно.",
+      "en-US": "Perfect, the computer is measuring your eyes now. Please wait quietly for a moment.",
+      "ar-SA": "ممتاز، الحاسوب يقيس عينيك الآن. من فضلك انتظر بهدوء للحظة.",
+      "es-ES": "Perfecto, ahora el ordenador mide sus ojos. Por favor, espere un momento muy tranquilo.",
+      "fr-FR": "Parfait, l'ordinateur mesure vos yeux maintenant. S'il vous plaît, attendez un moment bien tranquillement.",
+      "hi-IN": "बिल्कुल सही, कंप्यूटर अब आपकी आँखों को माप रहा है। कृपया एक क्षण शांति से प्रतीक्षा करें।",
+      "pl-PL": "Doskonale, komputer mierzy teraz Pana/Pani oczy. Proszę chwilę poczekać w spokoju.",
+      "ro-RO": "Perfect, acum calculatorul vă măsoară ochii. Vă rog să așteptați un moment în liniște.",
+      "tr-TR": "Mükemmel, şimdi bilgisayar gözlerinizi ölçüyor. Lütfen bir an sakin bir şekilde bekleyin.",
+      "uk-UA": "Чудово, тепер комп'ютер вимірює ваші очі. Будь ласка, почекайте хвилинку спокійно.",
+      "uz-UZ": "Ajoyib, endi kompyuter ko'zlaringizni o'lchaydi. Iltimos, bir oz qimirlamay kutib turing."
+    },
+    "vocabulary": [
+      {
+        "german": "das Auge",
+        "translation": {
+          "ru-RU": "глаз",
+          "en-US": "eye",
+          "ar-SA": "العين",
+          "es-ES": "ojo",
+          "fr-FR": "œil",
+          "hi-IN": "आँख",
+          "pl-PL": "oko",
+          "ro-RO": "ochi",
+          "tr-TR": "göz",
+          "uk-UA": "око",
+          "uz-UZ": "ko'z"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, ich bewege mich nicht.",
+        "translation": {
+          "ru-RU": "Всё понятно, я не двигаюсь.",
+          "en-US": "All right, I am not moving.",
+          "ar-SA": "كل شيء واضح، أنا لا أتحرك.",
+          "es-ES": "Entendido, no me muevo.",
+          "fr-FR": "D'accord, je ne bouge pas.",
+          "hi-IN": "ठीक है, मैं हिल नहीं रहा हूँ।",
+          "pl-PL": "Wszystko jasne, nie ruszam się.",
+          "ro-RO": "Am înțeles, nu mă mișc.",
+          "tr-TR": "Anlaşıldı, hareket etmiyorum.",
+          "uk-UA": "Все зрозуміло, я не рухаюся.",
+          "uz-UZ": "Tushunarli, men qimirlamayapman."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Okay, ich schaue weiter auf den Punkt.",
+        "translation": {
+          "ru-RU": "Окей, я продолжаю смотреть на точку.",
+          "en-US": "Okay, I keep looking at the dot.",
+          "ar-SA": "حسنًا، سأستمر في النظر إلى النقطة.",
+          "es-ES": "Vale, sigo mirando al punto.",
+          "fr-FR": "D'accord, je continue à regarder le point.",
+          "hi-IN": "ठीक है, मैं बिंदु पर देखता रहूँगा।",
+          "pl-PL": "Dobrze, patrzę dalej na kropkę.",
+          "ro-RO": "OK, continui să privesc la punct.",
+          "tr-TR": "Tamam, noktaya bakmaya devam ediyorum.",
+          "uk-UA": "Окей, я продовжую дивитися на точку.",
+          "uz-UZ": "Xo'p, nuqtaga qarab turibman."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Fertig! Das ging schnell. Ihr linkes Auge braucht ein bisschen Hilfe. Sie brauchen Gläser mit Plus-Werten.",
+    "botTranslation": {
+      "ru-RU": "Готово! Это было быстро. Вашему левому глазу нужна небольшая помощь. Вам нужны стёкла с плюсовыми значениями.",
+      "en-US": "Done! That was fast. Your left eye needs a little help. You need lenses with plus values.",
+      "ar-SA": "جاهز! كان ذلك سريعاً. عينك اليسرى بحاجة إلى القليل من المساعدة. أنت بحاجة إلى عدسات بقيم موجبة.",
+      "es-ES": "¡Listo! Ha sido rápido. Su ojo izquierdo necesita un poco de ayuda. Necesita cristales con valores positivos.",
+      "fr-FR": "Terminé ! C'était rapide. Votre œil gauche a besoin d'un peu d'aide. Vous avez besoin de verres avec des valeurs positives.",
+      "hi-IN": "हो गया! यह बहुत तेज़ था। आपकी बाईं आँख को थोड़ी मदद की ज़रूरत है। आपको प्लस वैल्यू वाले लेंस की ज़रूरत है।",
+      "pl-PL": "Gotowe! To było szybkie. Pana/Pani lewe oko potrzebuje trochę pomocy. Potrzebuje Pan/Pani szkieł z wartościami dodatnimi.",
+      "ro-RO": "Gata! A mers repede. Ochiul dumneavoastră stâng are nevoie de puțin ajutor. Aveți nevoie de lentile cu valori cu plus.",
+      "tr-TR": "Bitti! Bu hızlıydı. Sol gözünüzün biraz yardıma ihtiyacı var. Artı değerli camlara ihtiyacınız var.",
+      "uk-UA": "Готово! Це було швидко. Вашому лівому оку потрібна невелика допомога. Вам потрібні стекла з плюсовими значеннями.",
+      "uz-UZ": "Tayyor! Bu tez bo'ldi. Chap ko'zingizga bir oz yordam kerak. Sizga plyus qiymatli oynalar kerak."
+    },
+    "vocabulary": [
+      {
+        "german": "die Lesebrille",
+        "translation": {
+          "ru-RU": "очки для чтения",
+          "en-US": "reading glasses",
+          "ar-SA": "نظارة القراءة",
+          "es-ES": "gafas de lectura",
+          "fr-FR": "lunettes de lecture",
+          "hi-IN": "पढ़ने का चश्मा",
+          "pl-PL": "okulary do czytania",
+          "ro-RO": "ochelari de citit",
+          "tr-TR": "okuma gözlüğü",
+          "uk-UA": "окуляри для читання",
+          "uz-UZ": "o'qish ko'zoynagi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ah, okay. Ist der Wert sehr hoch?",
+        "translation": {
+          "ru-RU": "А, окей. Значение очень высокое?",
+          "en-US": "Ah, okay. Is the value very high?",
+          "ar-SA": "آه، حسنًا. هل القيمة عالية جداً؟",
+          "es-ES": "Ah, vale. ¿Es el valor muy alto?",
+          "fr-FR": "Ah, d'accord. La valeur est-elle très élevée ?",
+          "hi-IN": "आह, ठीक है। क्या वैल्यू बहुत ज़्यादा है?",
+          "pl-PL": "Ah, dobrze. Czy wartość jest bardzo wysoka?",
+          "ro-RO": "Ah, OK. Este valoarea foarte mare?",
+          "tr-TR": "Ah, tamam. Değer çok mu yüksek?",
+          "uk-UA": "А, окей. Значення дуже високе?",
+          "uz-UZ": "Ah, xo'p. Qiymat juda balandmi?"
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Gut zu wissen. Dann brauche ich also eine Lesebrille.",
+        "translation": {
+          "ru-RU": "Полезно знать. Значит, мне нужны очки для чтения.",
+          "en-US": "Good to know. So I need reading glasses.",
+          "ar-SA": "من الجيد معرفة ذلك. إذاً أنا بحاجة إلى نظارة قراءة.",
+          "es-ES": "Es bueno saberlo. Así que necesito unas gafas de lectura.",
+          "fr-FR": "Bon à savoir. J'ai donc besoin de lunettes de lecture.",
+          "hi-IN": "जानकर अच्छा लगा। तो मुझे पढ़ने वाले चश्मे की ज़रूरत है।",
+          "pl-PL": "Warto wiedzieć. Czyli potrzebuję okularów do czytania.",
+          "ro-RO": "E bine de știut. Deci am nevoie de ochelari de citit.",
+          "tr-TR": "Bunu bilmek iyi oldu. O halde okuma gözlüğüne ihtiyacım var.",
+          "uk-UA": "Корисно знати. Значить, мені потрібні окуляри для читання.",
+          "uz-UZ": "Buni bilish yaxshi bo'ldi. Demak, menga o'qish ko'zoynagi kerak."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Nein, der Wert ist ganz normal. Suchen wir jetzt ein schönes Gestell für Ihre Brille aus. Welche Farbe mögen Sie?",
+    "botTranslation": {
+      "ru-RU": "Нет, значение абсолютно нормальное. Давайте теперь выберем красивую оправу для ваших очков. Какой цвет вам нравится?",
+      "en-US": "No, the value is completely normal. Let's choose a nice frame for your glasses now. What color do you like?",
+      "ar-SA": "لا، القيمة طبيعية تماماً. فلنختر الآن إطاراً جميلاً لنظارتك. ما هو اللون الذي تفضله؟",
+      "es-ES": "No, el valor es completamente normal. Vamos a elegir ahora una montura bonita para sus gafas. ¿Qué color le gusta?",
+      "fr-FR": "Non, la valeur est tout à fait normale. Choisissons maintenant une belle monture pour vos lunettes. Quelle couleur aimez-vous ?",
+      "hi-IN": "नहीं, वैल्यू बिल्कुल सामान्य है। आइए अब आपके चश्मे के लिए एक सुंदर फ्रेम चुनें। आपको कौन सा रंग पसंद है?",
+      "pl-PL": "Nie, wartość jest całkowicie normalna. Wybierzmy teraz ładną oprawkę do Pana/Pani okularów. Jaki kolor się Panu/Pani podoba?",
+      "ro-RO": "Nu, valoarea este complet normală. Să alegem acum o ramă frumoasă pentru ochelarii dumneavoastră. Ce culoare vă place?",
+      "tr-TR": "Hayır, değer tamamen normal. Şimdi gözlüğünüz için güzel bir çerçeve seçelim. Hangi rengi seversiniz?",
+      "uk-UA": "Ні, значення абсолютно нормальне. Давайте тепер виберемо красиву оправу для ваших окулярів. Який колір вам подобається?",
+      "uz-UZ": "Yo'q, qiymat mutlaqo normal. Keling, endi ko'zoynagingiz uchun chiroyli korpus tanlaymiz. Sizga qaysi rang yoqadi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Gestell",
+        "translation": {
+          "ru-RU": "оправа (очков)",
+          "en-US": "frame",
+          "ar-SA": "الإطار",
+          "es-ES": "montura",
+          "fr-FR": "monture",
+          "hi-IN": "फ्रेम",
+          "pl-PL": "oprawka",
+          "ro-RO": "ramă",
+          "tr-TR": "çerçeve",
+          "uk-UA": "оправа (окулярів)",
+          "uz-UZ": "korpus / karkas"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich mag Schwarz oder Dunkelblau. Das sieht klassisch aus.",
+        "translation": {
+          "ru-RU": "Мне нравится черный или темно-синий. Это выглядит классически.",
+          "en-US": "I like black or dark blue. That looks classic.",
+          "ar-SA": "أنا أحب الأسود أو الأزرق الداكن. هذا يبدو كلاسيكياً.",
+          "es-ES": "Me gusta el negro o el azul oscuro. Tiene un aspecto clásico.",
+          "fr-FR": "J'aime le noir ou le bleu foncé. Ça fait classique.",
+          "hi-IN": "मुझे काला या गहरा नीला पसंद है। यह क्लासिक दिखता है।",
+          "pl-PL": "Lubię czarny lub ciemnoniebieski. To wygląda klasycznie.",
+          "ro-RO": "Îmi place negru sau albastru închis. Arată clasic.",
+          "tr-TR": "Siyah veya koyu maviyi severim. Klasik duruyor.",
+          "uk-UA": "Мені подобається чорний або темно-синій. Це виглядає класично.",
+          "uz-UZ": "Menga qora yoki to'q ko'k rang yoqadi. Bu klassik ko'rinadi."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Ich finde Metallbrillen schön. Haben Sie silberne Modelle?",
+        "translation": {
+          "ru-RU": "Мне нравятся металлические очки. У вас есть серебряные модели?",
+          "en-US": "I think metal glasses are nice. Do you have silver models?",
+          "ar-SA": "أجد النظارات المعدنية جميلة. هل لديكم موديلات فضية؟",
+          "es-ES": "Me parecen bonitas las gafas de metal. ¿Tiene modelos plateados?",
+          "fr-FR": "Je trouve les lunettes en métal jolies. Avez-vous des modèles argentés ?",
+          "hi-IN": "मुझे धातु के चश्मे अच्छे लगते हैं। क्या आपके पास सिल्वर मॉडल हैं?",
+          "pl-PL": "Uważam, że metalowe okulary są ładne. Czy macie srebrne modele?",
+          "ro-RO": "Mi se par frumoși ochelarii din metal. Aveți modele argintii?",
+          "tr-TR": "Metal gözlükleri güzel buluyorum. Gümüş rengi modelleriniz var mı?",
+          "uk-UA": "Мені подобаються металеві окуляри. У вас є срібні моделі?",
+          "uz-UZ": "Menga metall ko'zoynaklar yoqadi. Sizda kumushrang modellari bormi?"
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Ja, natürlich. Probieren Sie mal diese zwei Modelle hier. Wie passen sie?",
+    "botTranslation": {
+      "ru-RU": "Да, конечно. Примерьте вот эти две модели. Как они сидят?",
+      "en-US": "Yes, of course. Try these two models here. How do they fit?",
+      "ar-SA": "نعم بالطبع. جرب هذين الموديلين هنا. كيف يبدوان في المقاس؟",
+      "es-ES": "Sí, claro. Pruébese estos dos modelos de aquí. ¿Qué tal le quedan?",
+      "fr-FR": "Oui, bien sûr. Essayez donc ces deux modèles-ci. Comment vont-ils ?",
+      "hi-IN": "हाँ, बिल्कुल। यहाँ इन दो मॉडलों को आज़माएँ। ये कैसे फिट बैठते हैं?",
+      "pl-PL": "Tak, oczywiście. Proszę przymierzyć te dwa modele tutaj. Jak pasują?",
+      "ro-RO": "Da, desigur. Probati aceste două modele de aici. Cum vi se potrivesc?",
+      "tr-TR": "Evet, tabii. Şuradaki iki modeli deneyin. Nasıl oldular?",
+      "uk-UA": "Так, звісно. Приміряйте ось ці дві моделі. Як вони сидять?",
+      "uz-UZ": "Ha, albatta. Mana bu ikkita modelni taqib ko'ring. Qanday tushyapti?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Modell",
+        "translation": {
+          "ru-RU": "модель",
+          "en-US": "model",
+          "ar-SA": "الموديل",
+          "es-ES": "modelo",
+          "fr-FR": "modèle",
+          "hi-IN": "मॉडल",
+          "pl-PL": "model",
+          "ro-RO": "model",
+          "tr-TR": "model",
+          "uk-UA": "модель",
+          "uz-UZ": "model"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Diese hier ist perfekt. Sie ist sehr leicht und drückt nicht.",
+        "translation": {
+          "ru-RU": "Вот эта идеальна. Она очень легкая и не давит.",
+          "en-US": "This one here is perfect. It is very light and does not press.",
+          "ar-SA": "هذه هنا مثالية. إنها خفيفة جداً ولا تضغط.",
+          "es-ES": "Esta de aquí es perfecta. Es muy ligera y no aprieta.",
+          "fr-FR": "Celle-ci est parfaite. Elle est très légère et ne serre pas.",
+          "hi-IN": "यह वाली बिल्कुल सही है। यह बहुत हल्की है और दबाती नहीं है।",
+          "pl-PL": "Ta tutaj jest idealna. Jest bardzo lekka i nie uciska.",
+          "ro-RO": "Aceasta de aici este perfectă. Este foarte ușoară și nu strânge.",
+          "tr-TR": "Şuradaki mükemmel. Çok hafif ve sıkmıyor.",
+          "uk-UA": "Ось ця ідеальна. Вона дуже легка і не тисне.",
+          "uz-UZ": "Mana bunisi ajoyib. U juda yengil va qismayapti."
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Das Modell gefällt mir gut. Sie rutscht nicht von der Nase.",
+        "translation": {
+          "ru-RU": "Эта модель мне нравится. Она не сползает с носа.",
+          "en-US": "I like this model. It does not slip off the nose.",
+          "ar-SA": "يعجبني هذا الموديل. إنه لا ينزلق عن الأنف.",
+          "es-ES": "Me gusta este modelo. No se resbala de la nariz.",
+          "fr-FR": "Ce modèle me plaît bien. Il ne glisse pas du nez.",
+          "hi-IN": "मुझे यह मॉडल पसंद आया। यह नाक से फिसलता नहीं है।",
+          "pl-PL": "Ten model mi się podoba. Nie zsuwa się z nosa.",
+          "ro-RO": "Îmi place acest model. Nu alunecă de pe nas.",
+          "tr-TR": "Bu modeli beğendim. Burundan kaymıyor.",
+          "uk-UA": "Ця модель мені подобається. Вона не сповзає з носа.",
+          "uz-UZ": "Bu model menga yoqdi. U burundan sirg'alib tushmayapti."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Die Brille steht Ihnen wirklich sehr gut! Die Gläser sind in zwei Tagen fertig.",
+    "botTranslation": {
+      "ru-RU": "Очки вам действительно очень идут! Стёкла будут готовы через два дня.",
+      "en-US": "The glasses really suit you very well! The lenses will be ready in two days.",
+      "ar-SA": "النظارة تليق بك حقاً بشكل رائع! العدسات ستكون جاهزة خلال يومين.",
+      "es-ES": "¡Las gafas le quedan realmente muy bien! Los cristales estarán listos en dos días.",
+      "fr-FR": "Les lunettes vous vont vraiment très bien ! Les verres seront prêts dans deux jours.",
+      "hi-IN": "चश्मा वास्तव में आप पर बहुत अच्छा लग रहा है! लेंस दो दिनों में तैयार हो जाएंगे।",
+      "pl-PL": "Okulary naprawdę bardzo dobrze Panu/Pani pasują! Szkła będą gotowe za dwa dni.",
+      "ro-RO": "Ochelarii vă stau cu adevărat foarte bine! Lentilele sunt gata în două zile.",
+      "tr-TR": "Gözlük size gerçekten çok yakıştı! Camlar iki gün içinde hazır olur.",
+      "uk-UA": "Окуляри вам дійсно дуже личать! Стекла будуть готові за два дні.",
+      "uz-UZ": "Ko'zoynak sizga juda yarashdi! Oynaklari ikki kunda tayyor bo'ladi."
+    },
+    "vocabulary": [
+      {
+        "german": "die Gläser",
+        "translation": {
+          "ru-RU": "стёкла / линзы для очков",
+          "en-US": "lenses / glasses",
+          "ar-SA": "العدسات",
+          "es-ES": "cristales / lentes",
+          "fr-FR": "verres",
+          "hi-IN": "लेंस / कांच",
+          "pl-PL": "szkła",
+          "ro-RO": "lentile",
+          "tr-TR": "gözlük camları",
+          "uk-UA": "стекла / лінзи для окулярів",
+          "uz-UZ": "oynaklar / linzalar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Super, danke! Kann ich die Brille dann hier abholen?",
+        "translation": {
+          "ru-RU": "Супер, спасибо! Я смогу потом забрать очки здесь?",
+          "en-US": "Super, thanks! Can I pick up the glasses here then?",
+          "ar-SA": "رائع، شكراً! هل يمكنني استلام النظارة من هنا حينها؟",
+          "es-ES": "¡Súper, gracias! ¿Puedo recoger las gafas aquí entonces?",
+          "fr-FR": "Super, merci ! Pourrai-je venir chercher les lunettes ici ?",
+          "hi-IN": "बहुत बढ़िया, धन्यवाद! क्या मैं तब चश्मा यहाँ से ले सकता हूँ?",
+          "pl-PL": "Super, dzięki! Czy mogę wtedy odebrać okulary tutaj?",
+          "ro-RO": "Super, mulțumesc! Pot ridica ochelarii de aici atunci?",
+          "tr-TR": "Harika, teşekkürler! O zaman gözlüğü buradan alabilir miyim?",
+          "uk-UA": "Супер, дякую! Я зможу потім забрати окуляри тут?",
+          "uz-UZ": "Zo'r, rahmat! Ko'zoynakni keyin shu yerdan olib ketsam bo'ladimi?"
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Das geht ja schnell. Bezahle ich jetzt oder später?",
+        "translation": {
+          "ru-RU": "Это действительно быстро. Я плачу сейчас или позже?",
+          "en-US": "That's fast. Do I pay now or later?",
+          "ar-SA": "هذا سريع حقاً. هل أدفع الآن أم لاحقاً؟",
+          "es-ES": "Qué rápido. ¿Pago ahora o más tarde?",
+          "fr-FR": "Ça va vite. Est-ce que je paye maintenant ou plus tard ?",
+          "hi-IN": "यह तो बहुत तेज़ है। मैं अभी भुगतान करूँ या बाद में?",
+          "pl-PL": "To szybko. Płacę teraz czy później?",
+          "ro-RO": "Asta merge repede. Plătesc acum sau mai târziu?",
+          "tr-TR": "Bu hızlıymış. Şimdi mi ödüyorum yoksa sonra mı?",
+          "uk-UA": "Це дійсно швидко. Я плачу зараз чи пізніше?",
+          "uz-UZ": "Bu juda tez bo'larkan. Hozir to'laymanmi yoki keyinroqmi?"
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Sie können bei der Abholung bar oder mit Karte bezahlen. Ich schicke Ihnen eine SMS, wenn alles fertig ist.",
+    "botTranslation": {
+      "ru-RU": "Вы можете заплатить при получении наличными или картой. Я отправлю вам СМС, когда всё будет готово.",
+      "en-US": "You can pay in cash or by card upon pickup. I will send you an SMS when everything is ready.",
+      "ar-SA": "يمكنك الدفع نقداً أو بالبطاقة عند الاستلام. سأرسل لك رسالة نصية قصيرة عندما يكون كل شيء جاهزاً.",
+      "es-ES": "Puede pagar en efectivo o con tarjeta al recogerlas. Le enviaré un SMS cuando todo esté listo.",
+      "fr-FR": "Vous pouvez payer en espèces ou par carte lors du retrait. Je vous envoie un SMS quand tout est prêt.",
+      "hi-IN": "आप लेते समय नकद या कार्ड से भुगतान कर सकते हैं। सब कुछ तैयार होने पर मैं आपको एक एसएमएस भेजूँगा।",
+      "pl-PL": "Może Pan/Pani zapłacić przy odbiorze gotówką lub kartą. Wyślę SMS-a, kiedy wszystko będzie gotowe.",
+      "ro-RO": "Puteți plăti în numerar sau cu cardul la ridicare. Vă voi trimite un SMS când totul este gata.",
+      "tr-TR": "Gözlüğü alırken nakit veya kartla ödeme yapabilirsiniz. Her şey hazır olduğunda size bir SMS göndereceğim.",
+      "uk-UA": "Ви можете заплатити при отриманні готівкою або карткою. Я надішлю вам СМС, коли все буде готово.",
+      "uz-UZ": "Olib ketayotganda naqd yoki karta orqali to'lashingiz mumkin. Hamma narsa tayyor bo'lsa, sizga SMS yuboraman."
+    },
+    "vocabulary": [
+      {
+        "german": "die Beratung",
+        "translation": {
+          "ru-RU": "консультация",
+          "en-US": "consultation / advice",
+          "ar-SA": "الاستشارة",
+          "es-ES": "asesoramiento / consulta",
+          "fr-FR": "conseil / consultation",
+          "hi-IN": "परामर्श / सलाह",
+          "pl-PL": "doradztwo / konsultacja",
+          "ro-RO": "consultanță",
+          "tr-TR": "danışmanlık",
+          "uk-UA": "консультація",
+          "uz-UZ": "konsultatsiya"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, vielen Dank für die gute Beratung!",
+        "translation": {
+          "ru-RU": "Всё понятно, большое спасибо за хорошую консультацию!",
+          "en-US": "All right, thank you very much for the good consultation!",
+          "ar-SA": "كل شيء واضح، شكراً جزيلاً على الاستشارة الجيدة!",
+          "es-ES": "¡Entendido, muchas gracias por el buen asesoramiento!",
+          "fr-FR": "D'accord, merci beaucoup pour les bons conseils !",
+          "hi-IN": "ठीक है, अच्छी सलाह के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Wszystko jasne, bardzo dziękuję za dobrą konsultację!",
+          "ro-RO": "Am înțeles, mulțumesc mult pentru consultanța bună!",
+          "tr-TR": "Anlaşıldı, iyi danışmanlık için çok teşekkürler!",
+          "uk-UA": "Все зрозуміло, велике спасибі за хорошу консультацію!",
+          "uz-UZ": "Tushunarli, yaxshi konsultatsiya uchun katta rahmat!"
+        },
+        "nextStep": "step_17"
+      },
+      {
+        "text": "Perfekt, danke für die Hilfe!",
+        "translation": {
+          "ru-RU": "Прекрасно, спасибо за помощь!",
+          "en-US": "Perfect, thanks for the help!",
+          "ar-SA": "ممتاز، شكراً على المساعدة!",
+          "es-ES": "Perfecto, ¡gracias por la ayuda!",
+          "fr-FR": "Parfait, merci pour l'aide !",
+          "hi-IN": "बढ़िया, मदद के लिए धन्यवाद!",
+          "pl-PL": "Doskonale, dzięki za pomoc!",
+          "ro-RO": "Perfect, mulțumesc pentru ajutor!",
+          "tr-TR": "Harika, yardımınız için teşekkürler!",
+          "uk-UA": "Прекрасно, дякую за допомогу!",
+          "uz-UZ": "Zo'r, yordam uchun rahmat!"
+        },
+        "nextStep": "step_17"
+      }
+    ],
+    "defaultNext": "step_17"
+  },
+  "step_17": {
+    "botText": "Bitte schön!",
+    "botTranslation": {
+      "ru-RU": "Пожалуйста!",
+      "en-US": "You're welcome!",
+      "ar-SA": "عفواً!",
+      "es-ES": "¡De nada!",
+      "fr-FR": "De rien !",
+      "hi-IN": "आपका स्वागत है!",
+      "pl-PL": "Proszę bardzo!",
+      "ro-RO": "Cu plăcere!",
+      "tr-TR": "Rica ederim!",
+      "uk-UA": "Будь ласка!",
+      "uz-UZ": "Arzimaydi!"
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

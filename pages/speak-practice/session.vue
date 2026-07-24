@@ -1,4 +1,7 @@
 <template>
+  <transition name="toast-fade">
+    <VHeadsUp v-if="showErrorToast" :text="t('headUp.speakTasks')" />
+  </transition>
   <div class="app-container"
        @touchstart="handleTouchStart"
        @touchmove="handleTouchMove"
@@ -12,7 +15,7 @@
           <polyline points="12 19 5 12 12 5"></polyline>
         </svg>
       </button>
-      <h1 class="title">Практика общения</h1>
+      <h1 class="title"> {{ t('speakSession.title') }} </h1>
       <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
              stroke="orange" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
@@ -22,98 +25,129 @@
         </svg>
       </button>
     </header>
-    <main class="chat-window" ref="chatContainer">
-      <Transition name="fade">
-        <div v-if="viewState === 'menu'" class="menu-block">
-          <div class="menu-card">
-            <div class="icon-circle vocab-icon">📚</div>
-            <div class="menu-card-content">
-              <h2>Слова к диалогу</h2>
-            </div>
-            <button class="btn-primary" @click="startVocabLearning">
-              {{ isVocabLearned ? 'Повторить' : 'Учить' }}
-            </button>
-          </div>
-          <div class="menu-card">
-            <div class="icon-circle start-icon">💬</div>
-            <div class="menu-card-content">
-              <h2>Диалог</h2>
-            </div>
-            <button class="btn-primary" @click="startDialogue">
-              {{ dialogueCompleted ? 'Повторить' : 'Начать' }}
-            </button>
-          </div>
-        </div>
-      </Transition>
-      <Transition name="fade">
-        <div v-if="viewState === 'vocab'" class="vocab-learning-block">
-          <div class="vocab-progress">
-            {{ currentVocabIndex + 1 }} / {{ vocabList.length }}
-          </div>
-          <div class="flashcard">
-            <button class="btn-sound-large" @click="speakGerman(vocabList[currentVocabIndex].german)">
-              🔊
-            </button>
-            <h2 class="vocab-german">{{ vocabList[currentVocabIndex].german }}</h2>
-            <p class="vocab-russian">{{ getTranslation(vocabList[currentVocabIndex].translation) }}</p>
-          </div>
-          <div class="vocab-actions">
-            <button class="btn-secondary" @click="prevVocab" :disabled="currentVocabIndex === 0">Назад</button>
-            <button class="btn-primary" @click="nextVocab">
-              {{ currentVocabIndex === vocabList.length - 1 ? 'Завершить' : 'Далее' }}
-            </button>
-          </div>
-        </div>
-      </Transition>
 
-      <template v-if="viewState === 'chat'">
-        <div
-            v-for="(msg, index) in store.chatHistory"
-            :key="index"
-            :class="['message-wrapper', msg.sender === 'bot' ? 'bot-message' : 'user-message']"
-        >
-          <div class="message-bubble">
-            <div class="message__icon">
-              <SoundBtn :text="msg.text"/>
+    <Transition name="fade">
+      <div class="banner" v-if="viewState === 'menu'">
+        <VBanner
+            :text="textComputed"
+            :icon="SpeakingIcon"
+        />
+      </div>
+    </Transition>
+    <VTransition>
+      <main v-if="isMounted" class="chat-window" ref="chatContainer">
+        <Transition name="fade">
+          <div v-if="viewState === 'menu'" class="menu-block">
+            <nav class="mobile-nav" role="tablist">
+              <div class="sliding-bg" :style="{ transform: `translateX(${getTransformX(activeIndex)}%)` }"></div>
+              <button
+                  v-for="(tab, index) in learnTabs"
+                  :key="tab.id"
+                  class="mobile-nav__btn"
+                  :class="{ 'mobile-nav__btn--active': toggleState === tab.id }"
+                  role="tab"
+                  @click="setTab(tab.id)"
+              >
+                <img :src="tab.icon" alt="" class="tab-icon"/>
+                <span class="tab-label">{{ tab.label }}</span>
+              </button>
+            </nav>
+            <Transition name="fade" mode="out-in">
+              <div v-if="toggleState === 'words'" class="menu-card" key="words">
+                <div class="icon-circle vocab-icon">📚</div>
+                <div class="menu-card-content">
+                  <h2>{{ t('speakSession.words') }}</h2>
+                  <p>{{ t('speakSession.wordsText') }}</p>
+                </div>
+                <button class="btn-primary" @click="startVocabLearning">
+                  {{ isVocabLearned ? t('speakSession.repeat') : t('speakSession.start') }}
+                </button>
+              </div>
+              <div v-else class="menu-card" key="dialog">
+                <div class="icon-circle start-icon">💬</div>
+                <div class="menu-card-content">
+                  <h2>{{ t('speakSession.dialogue') }}</h2>
+                  <p>{{ t('speakSession.dialogueText') }}</p>
+                </div>
+                <button class="btn-primary" @click="startDialogue">
+                  {{ dialogueCompleted ? t('speakSession.repeat') : t('speakSession.start') }}
+                </button>
+              </div>
+            </Transition>
+          </div>
+        </Transition>
+        <Transition name="fade">
+          <div v-if="viewState === 'vocab'" class="vocab-learning-block">
+            <div class="vocab-progress">
+              {{ currentVocabIndex + 1 }} / {{ vocabList.length }}
             </div>
-            <div class="message">
-              <p class="german-text">{{ msg.text }}</p>
-              <p v-if="msg.translation" class="russian-translation">{{ getTranslation(msg.translation) }}</p>
+            <div class="flashcard">
+              <button class="btn-sound-large" :disabled="isAudioPlaying" :style="{ opacity: isAudioPlaying ? 0.5 : 1 }"
+                      @click="speakGerman(vocabList[currentVocabIndex].german)">🔊
+              </button>
+              <h2 class="vocab-german">{{ vocabList[currentVocabIndex].german }}</h2>
+              <p class="vocab-russian">{{ getTranslation(vocabList[currentVocabIndex].translation) }}</p>
             </div>
           </div>
-        </div>
-        <div v-if="isTyping" class="message-wrapper bot-message">
-          <div class="message-bubble typing-bubble">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+        </Transition>
+        <template v-if="viewState === 'chat'">
+          <div
+              v-for="(msg, index) in store.chatHistory"
+              :key="index"
+              :class="['message-wrapper', msg.sender === 'bot' ? 'bot-message' : 'user-message']"
+          >
+            <div class="message-bubble">
+              <div class="message__icon">
+                <button class="msg-sound-btn" :disabled="isAudioPlaying" :style="{ opacity: isAudioPlaying ? 0.5 : 1 }"
+                        @click="playMessageAudio(msg)">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="message">
+                <p class="german-text">{{ msg.text }}</p>
+                <p v-if="msg.translation" class="russian-translation">{{ getTranslation(msg.translation) }}</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </template>
-    </main>
-    <Transition name="slide-bottom">
-      <div v-if="dialogueCompleted && viewState === 'chat'" class="bottom-sheet">
-        <div class="sheet-content">
-          <div class="icon-circle success-icon">🏆</div>
-          <h2>Отличная работа!</h2>
-          <p>Вы успешно завершили этот диалог.</p>
+          <div v-if="isTyping" class="message-wrapper bot-message">
+            <div class="message-bubble typing-bubble">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </template>
+      </main>
+    </VTransition>
+    <Transition name="slide-up">
+      <div v-if="showCompletionModal" class="completion-overlay">
+        <div class="completion-modal">
+          <h2>{{ t('speakSession.goodJob') }}</h2>
+          <p>{{ t('speakSession.goodJobTitle') }}</p>
+          <div class="completion-overlay_icon">
+            <img src="../../assets/images/GoodJobIcon.svg" alt="success_icon">
+          </div>
           <div class="completion-actions">
-            <button class="btn-secondary" @click="restartDialogue">Повторить</button>
-            <button class="btn-primary" @click="confirmExit">К списку</button>
+            <button class="btn-primary" @click="confirmExit">{{ t('speakSession.list') }}</button>
+            <button class="btn-secondary" @click="restartDialogue">{{ t('speakSession.repeat') }}</button>
           </div>
         </div>
       </div>
     </Transition>
     <footer class="options-panel" v-if="viewState === 'chat' && !dialogueCompleted">
-      <p class="options-title" v-if="store.currentOptions?.length > 0">Выберите ответ:</p>
+      <p class="options-title" v-if="store.currentOptions?.length > 0">{{ t('speakSession.choice') }}</p>
       <div class="options-list" v-if="store.currentOptions?.length > 0">
         <button
             v-for="(option, index) in store.currentOptions"
             :key="index"
             class="option-btn"
-            :disabled="store.isOptionsDisabled || isTyping"
-            :style="{ opacity: (store.isOptionsDisabled || isTyping) ? 0.6 : 1, cursor: (store.isOptionsDisabled || isTyping) ? 'not-allowed' : 'pointer' }"
-            @click="handleOptionClick(option)"
+            :disabled="store.isOptionsDisabled || isTyping || isAudioPlaying"
+            :style="{ opacity: (store.isOptionsDisabled || isTyping || isAudioPlaying) ? 0.6 : 1, cursor: (store.isOptionsDisabled || isTyping || isAudioPlaying) ? 'not-allowed' : 'pointer' }"
+            @click="handleOptionClick(option, index)"
         >
           <span class="option-german">{{ option.text }}</span>
           <span class="option-russian">{{ getTranslation(option.translation) }}</span>
@@ -124,21 +158,32 @@
             class="mic-btn"
             :class="{ 'is-listening': isListening }"
             @click="toggleListening"
-            title="Сказать голосом"
-            :disabled="isTyping"
+            :title="t('speakSession.hoverVoice')"
+            :disabled="isTyping || isAudioPlaying"
         >
-          {{ isListening ? '🔴' : '🎙️' }}
+          <svg v-if="!isListening" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            <line x1="12" y1="19" x2="12" y2="23"></line>
+            <line x1="8" y1="23" x2="16" y2="23"></line>
+          </svg>
+          <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="6" width="12" height="12" rx="2" ry="2"></rect>
+          </svg>
         </button>
         <input
             ref="inputField"
             v-model="manualInput"
             type="text"
             class="text-input"
-            placeholder="Напиши или скажи ответ..."
+            :class="{ 'input-error': manualInputError }"
+            :placeholder="t('speakSession.placeHolder')"
             @keyup.enter="submitManualInput"
-            :disabled="isTyping"
+            :disabled="isTyping || isAudioPlaying"
         />
-        <button class="send-btn" @click="submitManualInput" :disabled="isTyping">➤</button>
+        <button class="send-btn" @click="submitManualInput" :disabled="isTyping || isAudioPlaying">➤</button>
       </div>
     </footer>
     <VStopSessionModal
@@ -146,11 +191,11 @@
         @confirm="confirmExit"
     />
     <Modal
-     :visible="showDevModal"
-     @close="showDevModal = false"
-     :img="SpeakingIcon"
-     :title="t('speakIndexPage.modalTitle')"
-     :text="t('speakIndexPage.modalText')"
+        :visible="showDevModal"
+        @close="showDevModal = false"
+        :img="SpeakingIcon"
+        :title="t('speakIndexPage.modalTitle')"
+        :text="t('speakIndexPage.modalText')"
     />
   </div>
 </template>
@@ -159,36 +204,72 @@
 import {ref, computed, onMounted, onUnmounted, nextTick} from 'vue';
 import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router';
 import {useSpeakStore} from '../../store/speakStore.js';
-import SoundBtn from "~/src/components/soundBtn.vue";
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
 import Modal from '../../src/components/modal.vue';
 import SpeakingIcon from "assets/images/speakingIcon.svg";
-const {locale, t } = useI18n();
+import Dialog from '../../assets/images/dialog.svg'
+import Words from '../../assets/images/word.svg'
+import VBanner from "~/src/components/V-banner.vue";
+import {useSwipeBack} from '~/composables/useSwipeBack.js';
+import VTransition from "~/src/components/V-transition.vue";
+import {showInterstitial} from '../../utils/admob.js';
+import VHeadsUp from "~/src/components/V-headsUp.vue";
+
+const {locale, t} = useI18n();
 const route = useRoute();
 const router = useRouter();
 const store = useSpeakStore();
-import { useSwipeBack } from '~/composables/useSwipeBack.js';
+const isMounted = ref(false);
 const viewState = ref('menu');
 const chatContainer = ref(null);
 const inputField = ref(null);
 const manualInput = ref('');
+const manualInputError = ref(false);
+const showErrorToast = ref(false);
 const isListening = ref(false);
 const isTyping = ref(false);
 const dialogueCompleted = ref(false);
 const showExitModal = ref(false);
+const showCompletionModal = ref(false);
 const isConfirmedExit = ref(false);
 const showDevModal = ref(false);
 const isVocabLearned = ref(false);
-const currentVocabIndex = ref(0);
-
+const toggleState = ref('dialog');
+const currentStepId = ref('start');
+const isAudioPlaying = ref(false);
+let currentAudioInstance = null;
 let recognition = null;
 
-
-const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipeBack(() => {
+const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   goBack();
 }, {
   ignoreSelector: '.options-list, .vocab-actions, .text-input'
 });
+
+const textComputed = computed(() => {
+  return toggleState.value === 'dialog'
+      ? t('speakSessionsBanner.dialog')
+      : t('speakSessionsBanner.words')
+})
+
+const learnTabs = [
+  {id: 'dialog', label: t('speakSession.dialogue'), icon: Dialog},
+  {id: 'words', label: t('speakSession.words'), icon: Words},
+]
+
+const activeIndex = computed(() => learnTabs.findIndex(tab => tab.id === toggleState.value))
+
+const getTransformX = (index) => {
+  if (index === -1) return 0;
+  if (locale.value === 'ar') {
+    return (learnTabs.length - 1 - index) * 100;
+  }
+  return index * 100;
+};
+
+function setTab(id) {
+  toggleState.value = id
+}
 
 const vocabList = computed(() => {
   if (!store.dialogueData) return [];
@@ -228,30 +309,7 @@ const loadDialogueData = async () => {
   await store.loadDialogue(level, theme);
 };
 
-onMounted(async () => {
-  await store.loadUserProgress();
-  await loadDialogueData();
-});
-
-onUnmounted(() => {
-  store.resetSession();
-  if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-});
-
-onBeforeRouteLeave((to, from, next) => {
-  if (viewState.value === 'menu' || isConfirmedExit.value || (viewState.value === 'chat' && dialogueCompleted.value)) {
-    next();
-  } else {
-    showExitModal.value = true;
-    next(false);
-  }
-});
-
 const goBack = () => {
-  if (viewState.value === 'vocab') {
-    viewState.value = 'menu';
-    return;
-  }
   if (viewState.value === 'menu' || dialogueCompleted.value) {
     router.push('/speak-practice');
   } else {
@@ -262,55 +320,163 @@ const goBack = () => {
 const confirmExit = () => {
   isConfirmedExit.value = true;
   showExitModal.value = false;
+  showCompletionModal.value = false;
   router.push('/speak-practice');
 };
 
 const startVocabLearning = () => {
-  router.push({
-    path: '/speak-practice/words-session',
-    query: {
-      theme: route.query.theme,
-      level: route.query.level
-    }
+  showInterstitial(() => {
+    router.push({
+      path: '/speak-practice/words-session',
+      query: {
+        theme: route.query.theme,
+        level: route.query.level
+      }
+    });
   });
 };
 
-const nextVocab = async () => {
-  if (currentVocabIndex.value < vocabList.value.length - 1) {
-    currentVocabIndex.value++;
-    await speakGerman(vocabList.value[currentVocabIndex].german);
-  } else {
-    isVocabLearned.value = true;
-    viewState.value = 'menu';
-  }
-};
-
-const prevVocab = async () => {
-  if (currentVocabIndex.value > 0) {
-    currentVocabIndex.value--;
-    await speakGerman(vocabList.value[currentVocabIndex].german);
-  }
-};
-
 const restartDialogue = async () => {
+  showCompletionModal.value = false;
+
+  if (currentAudioInstance) {
+    currentAudioInstance.pause();
+    currentAudioInstance = null;
+  }
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+  }
+  isAudioPlaying.value = false;
+
   store.resetSession();
   dialogueCompleted.value = false;
-  viewState.value = 'menu';
   await loadDialogueData();
+
+  await startDialogue();
 };
 
 const speakGerman = async (text) => {
-  if (!text) return
+  if (!text) return;
+  if (currentAudioInstance) {
+    currentAudioInstance.pause();
+    currentAudioInstance = null;
+  }
+  if (typeof stopSpeech === 'function') stopSpeech();
 
-  stopSpeech()
-
+  isAudioPlaying.value = true;
   const plainText = text
       .replace(/<[^>]*>/g, ' ')
       .replace(/→/g, ', ')
-      .trim()
+      .trim();
 
-  await getSpeechAudio(plainText, 'de-DE')
-}
+  if (typeof getSpeechAudio === 'function') {
+    await getSpeechAudio(plainText, 'de-DE');
+  } else if ('speechSynthesis' in window) {
+    const utterance = new SpeechSynthesisUtterance(plainText);
+    utterance.lang = 'de-DE';
+    window.speechSynthesis.speak(utterance);
+  }
+
+  return new Promise((resolve) => {
+    const finish = () => {
+      isAudioPlaying.value = false;
+      resolve();
+    };
+
+    setTimeout(() => {
+      const audios = document.getElementsByTagName('audio');
+      let playingAudio = null;
+
+      for (let i = audios.length - 1; i >= 0; i--) {
+        if (!audios[i].paused && !audios[i].ended) {
+          playingAudio = audios[i];
+          break;
+        }
+      }
+
+      if (playingAudio) {
+        playingAudio.addEventListener('ended', () => {
+          setTimeout(finish, 200);
+        }, {once: true});
+      } else if ('speechSynthesis' in window && window.speechSynthesis.speaking) {
+        const checkInterval = setInterval(() => {
+          if (!window.speechSynthesis.speaking) {
+            clearInterval(checkInterval);
+            setTimeout(finish, 200);
+          }
+        }, 100);
+      } else {
+        const estimatedMs = plainText.length * 75;
+        setTimeout(finish, estimatedMs + 200);
+      }
+    }, 150);
+  });
+};
+
+const playLocalAudio = (audioName) => {
+  return new Promise((resolve) => {
+    if (currentAudioInstance) {
+      currentAudioInstance.pause();
+      currentAudioInstance = null;
+    }
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+
+    const level = route.query.level || 'beginner';
+    const theme = route.query.theme || 'firstmeet';
+    const audioUrl = `/audio/speak-tasks/${level}/${theme}/${audioName}.mp3`;
+
+    currentAudioInstance = new Audio(audioUrl);
+    isAudioPlaying.value = true;
+
+    currentAudioInstance.onended = () => {
+      isAudioPlaying.value = false;
+      currentAudioInstance = null;
+      resolve();
+    };
+
+    currentAudioInstance.onerror = () => {
+      isAudioPlaying.value = false;
+      currentAudioInstance = null;
+      speakGerman(audioName.includes('option') ? 'Выбранный вариант' : 'Текст отсутствует').then(resolve);
+    };
+
+    currentAudioInstance.play().catch(() => {
+      isAudioPlaying.value = false;
+      currentAudioInstance = null;
+      resolve();
+    });
+  });
+};
+
+const playMessageAudio = (msg) => {
+  if (isAudioPlaying.value) return;
+
+  let audioName = null;
+  for (const [key, step] of Object.entries(store.dialogueData)) {
+    if (msg.sender === 'bot' && step.botText === msg.text) {
+      audioName = key;
+      break;
+    }
+    if (msg.sender === 'user' && step.options) {
+      const optIdx = step.options.findIndex(o => {
+        const base = o.text.replace('...', '').trim();
+        return msg.text.includes(base) || base.includes(msg.text);
+      });
+      if (optIdx !== -1) {
+        audioName = `${key}_option_${optIdx}`;
+        break;
+      }
+    }
+  }
+
+  if (audioName) {
+    playLocalAudio(audioName);
+  } else {
+    speakGerman(msg.text);
+  }
+};
 
 const scrollToBottom = async () => {
   await nextTick();
@@ -321,6 +487,7 @@ const scrollToBottom = async () => {
 
 const completeDialogue = async () => {
   dialogueCompleted.value = true;
+  showCompletionModal.value = true;
   await scrollToBottom();
   const theme = route.query.theme || 'firstmeet';
   await store.saveDialogueCompletion(theme);
@@ -328,78 +495,77 @@ const completeDialogue = async () => {
 
 const startDialogue = async () => {
   if (!store.dialogueData || !store.dialogueData['start']) return;
+  showInterstitial(async () => {
+    viewState.value = 'chat';
+    store.chatStarted = true;
+    dialogueCompleted.value = false;
+    store.setStep('start');
+    currentStepId.value = 'start';
+    store.isOptionsDisabled = true;
+    const step = store.currentStepData;
 
-  viewState.value = 'chat';
-  store.chatStarted = true;
-  dialogueCompleted.value = false;
-
-  store.setStep('start');
-  store.isOptionsDisabled = true;
-
-  const step = store.currentStepData;
-
-  setTimeout(async () => {
-    await speakGerman(step.botText);
-  }, 300);
-
-  isTyping.value = true;
-  await scrollToBottom();
-
-  setTimeout(async () => {
-    isTyping.value = false;
-    store.addMessage(
-        'bot',
-        step.botText,
-        step.botTranslation
-    );
-
+    isTyping.value = true;
     await scrollToBottom();
-    store.isOptionsDisabled = false;
-    checkDialogueEnd(step);
-  }, 900);
+
+    setTimeout(async () => {
+      isTyping.value = false;
+      store.addMessage('bot', step.botText, step.botTranslation);
+      await scrollToBottom();
+      store.isOptionsDisabled = false;
+      await playLocalAudio('start');
+      checkDialogueEnd(step);
+    }, 900);
+  });
 };
 
-const handleOptionClick = async (option) => {
-  if (store.isOptionsDisabled || isTyping.value) return;
-  store.isOptionsDisabled = true;
-  const textToSpeak = option.text.replace('...', '');
-  if (option.text.includes('...')) {
-    manualInput.value = option.text.replace('...', ' ');
-    await speakGerman(textToSpeak);
-    store.isOptionsDisabled = false;
-    nextTick(() => {
-      if (inputField.value) inputField.value.focus();
-    });
-  } else {
-    await speakGerman(textToSpeak);
-    await processUserAnswer(option.text, option.translation, option.nextStep);
-  }
+const handleOptionClick = async (option, index) => {
+  if (store.isOptionsDisabled || isTyping.value || isAudioPlaying.value) return;
+
+  const optionAudioName = `${currentStepId.value}_option_${index}`;
+  playLocalAudio(optionAudioName);
+
+  manualInput.value = option.text.replace('...', ' ').trim();
+  manualInputError.value = false;
+
+  nextTick(() => {
+    if (inputField.value) inputField.value.focus();
+  });
 };
 
 const submitManualInput = async () => {
-  if (!manualInput.value.trim() || store.isOptionsDisabled || isTyping.value) return;
+  if (!manualInput.value.trim() || store.isOptionsDisabled || isTyping.value || isAudioPlaying.value) return;
+
+  const userInput = manualInput.value.toLowerCase().replace(/[.,¡!¿?]/g, '').trim();
+
+  const matchedIndex = store.currentOptions.findIndex(opt => {
+    if (opt.text.includes('...')) {
+      const base = opt.text.replace('...', '').toLowerCase().replace(/[.,¡!¿?]/g, '').trim();
+      return userInput.startsWith(base) || userInput.includes(base);
+    }
+    return opt.text.toLowerCase().replace(/[.,¡!¿?]/g, '').trim() === userInput;
+  });
+
+  if (matchedIndex === -1) {
+    showErrorToast.value = true;
+    setTimeout(() => {
+      showErrorToast.value = false;
+    }, 3000);
+    manualInputError.value = true;
+    setTimeout(() => {
+      manualInputError.value = false;
+    }, 1000);
+    return;
+  }
+
   store.isOptionsDisabled = true;
+  manualInputError.value = false;
 
-  const currentStep = store.currentStepData;
-  const textToSpeak = manualInput.value;
-  const nextStepKey = currentStep.defaultNext;
-
+  const matchedOption = store.currentOptions[matchedIndex];
+  const nextStepKey = matchedOption.nextStep || store.currentStepData.defaultNext;
   const textToSave = manualInput.value;
   manualInput.value = '';
 
-  await speakGerman(textToSpeak);
-
-  if (nextStepKey) {
-    await processUserAnswer(textToSave, 'Свой ответ', nextStepKey);
-  } else {
-    store.addMessage('user', textToSave, 'Свой ответ');
-    store.isOptionsDisabled = false;
-    checkDialogueEnd(null);
-  }
-};
-
-const processUserAnswer = async (userText, userTranslation, nextStepKey) => {
-  store.addMessage('user', userText, userTranslation);
+  store.addMessage('user', textToSave, matchedOption.translation);
 
   if (!nextStepKey || nextStepKey === 'end') {
     await completeDialogue();
@@ -407,6 +573,7 @@ const processUserAnswer = async (userText, userTranslation, nextStepKey) => {
   }
 
   store.setStep(nextStepKey);
+  currentStepId.value = nextStepKey;
   await scrollToBottom();
 
   const nextStepData = store.currentStepData;
@@ -419,12 +586,10 @@ const processUserAnswer = async (userText, userTranslation, nextStepKey) => {
       isTyping.value = false;
       store.addMessage('bot', nextStepData.botText, nextStepData.botTranslation);
       await scrollToBottom();
-
-      await speakGerman(nextStepData.botText);
+      await playLocalAudio(nextStepKey);
       store.isOptionsDisabled = false;
-
       checkDialogueEnd(nextStepData);
-    }, 1500);
+    }, 1000);
   } else {
     store.isOptionsDisabled = false;
     await completeDialogue();
@@ -449,7 +614,6 @@ const toggleListening = () => {
     recognition?.stop();
     return;
   }
-
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SpeechRecognition) return;
   recognition = new SpeechRecognition();
@@ -462,9 +626,38 @@ const toggleListening = () => {
     const transcript = event.results[0][0].transcript;
     manualInput.value += (manualInput.value ? ' ' : '') + transcript;
   };
-
   recognition.start();
 };
+
+onMounted(async () => {
+  await store.loadUserProgress();
+  await loadDialogueData();
+});
+
+onUnmounted(() => {
+  store.resetSession();
+  if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+  if (currentAudioInstance) {
+    currentAudioInstance.pause();
+    currentAudioInstance = null;
+  }
+});
+
+onBeforeRouteLeave((to, from, next) => {
+  if (viewState.value === 'menu' || isConfirmedExit.value || (viewState.value === 'chat' && dialogueCompleted.value)) {
+    next();
+  } else {
+    showExitModal.value = true;
+    next(false);
+  }
+});
+
+onMounted(() => {
+  setTimeout(() => {
+    isMounted.value = true
+  }, 70)
+})
+
 </script>
 
 <style scoped>
@@ -480,6 +673,10 @@ const toggleListening = () => {
   position: relative;
 }
 
+.banner {
+  padding: 0 15px;
+}
+
 .session__header {
   display: flex;
   align-items: center;
@@ -488,8 +685,13 @@ const toggleListening = () => {
   background: var(--bg);
 }
 
+.completion-overlay_icon {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
 .btn-icon-back,
-.quiz__btn--info{
+.quiz__btn--info {
   background: #fff;
   border: 3px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile);
@@ -515,41 +717,98 @@ const toggleListening = () => {
   text-shadow: 1px 1px var(--title);
 }
 
+.mobile-nav {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  background: var(--tabBg, var(--menuItemsBg));
+  border-radius: 40px;
+  padding: 6px;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile, 0 4px 0 var(--tabsSlideBorderColor));
+  z-index: 1;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.sliding-bg {
+  position: absolute;
+  top: 5px;
+  bottom: 6px;
+  left: 6px;
+  width: calc(50% - 6px);
+  background: var(--tabsSlideBg);
+  box-shadow: var(--tabSlideBoxShadow, 0 2px 0 rgba(0, 0, 0, 0.1));
+  border-radius: 30px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.35, 0.64, 1);
+  z-index: 1;
+}
+
+.mobile-nav__btn {
+  border: none;
+  background: none;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tab-icon {
+  width: 33px;
+  height: 33px;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.tab-label {
+  font-size: 15px;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+  color: var(--titleColor);
+  transition: transform 0.2s;
+}
+
 .menu-block {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: auto;
-  padding: 20px;
   gap: 20px;
   width: 100%;
-  max-width: 400px;
 }
 
 .menu-card {
   border-radius: 20px;
-  padding: 20px;
+  padding: 30px 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   gap: 15px;
+  background: var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
 }
 
 .menu-card-content h2 {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--titleColor);
-  font-weight: 600;
-  margin: 0 0 5px 0;
+  font-weight: 700;
+  margin: 0 0 10px 0;
 }
 
 .menu-card-content p {
   font-size: 14px;
-  color: #6b7280;
-  margin: 0;
+  color: var(--titleColor);
+  opacity: 0.8;
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+  max-width: 90%;
 }
 
 .vocab-learning-block {
@@ -597,7 +856,7 @@ const toggleListening = () => {
   transition: transform 0.2s;
 }
 
-.btn-sound-large:active {
+.btn-sound-large:active:not(:disabled) {
   transform: scale(0.9);
 }
 
@@ -631,26 +890,24 @@ const toggleListening = () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
+  font-size: 60px;
 }
 
 .start-icon {
-  background: #eef2ff;
   color: #6366f1;
 }
 
 .vocab-icon {
-  background: #fffbeb;
   color: #f59e0b;
 }
 
 .success-icon {
-  background: #fffbeb;
   color: #f59e0b;
 }
 
 .btn-primary {
-  background-color: #6B55A4;
+  background-color: #2b6be2;
+  box-shadow: 0 5px 0 #2959b0;
   color: #FFFFFF;
   border: none;
   padding: 14px 24px;
@@ -659,56 +916,77 @@ const toggleListening = () => {
   font-weight: 700;
   cursor: pointer;
   width: 100%;
+  max-width: 340px;
   transition: background-color 0.2s, transform 0.1s;
-}
-
-.btn-primary:hover {
-  background-color: #594689;
 }
 
 .btn-primary:active {
   transform: scale(0.97);
 }
 
-.bottom-sheet {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #ffffff;
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
-  z-index: 20;
-  padding: 30px 20px;
-  text-align: center;
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: transform 0.3s ease-in-out;
 }
 
-.sheet-content {
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.slide-up-enter-to,
+.slide-up-leave-from {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.completion-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 100;
+}
+
+.completion-modal {
+  background: var(--bgModal);
+  border-radius: 24px 24px 0 0;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 768px;
+  text-align: center;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  max-width: 400px;
-  margin: 0 auto;
+  gap: 15px;
+  border-top: 3px solid whitesmoke;
 }
 
-.sheet-content h2 {
-  font-size: 22px;
-  color: #1f2937;
+.completion-modal h2 {
+  font-size: 27px;
+  color: var(--titleColor);
+  font-weight: 700;
   margin: 0;
 }
 
-.sheet-content p {
+.completion-modal p {
   font-size: 15px;
   color: #6b7280;
   margin: 0 0 10px 0;
 }
 
 .completion-actions {
-  display: flex;
   width: 100%;
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .completion-actions .btn-primary,
@@ -722,7 +1000,7 @@ const toggleListening = () => {
   color: #374151;
   border: none;
   padding: 14px 24px;
-  border-radius: 12px;
+  border-radius: 42px;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
@@ -747,26 +1025,14 @@ const toggleListening = () => {
   opacity: 0;
 }
 
-.slide-bottom-enter-active,
-.slide-bottom-leave-active {
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-.slide-bottom-enter-from,
-.slide-bottom-leave-to {
-  transform: translateY(100%);
-  opacity: 0;
-}
-
 .chat-window {
   flex: 1;
-  padding: 20px;
+  padding: 0 14px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
   scroll-behavior: smooth;
-  padding-bottom: 40px;
 }
 
 .message-wrapper {
@@ -784,9 +1050,9 @@ const toggleListening = () => {
 
 .message-bubble {
   display: flex;
-  gap: 5px;
+  gap: 7px;
   max-width: 80%;
-  padding: 8px 10px;
+  padding: 8px 8px 8px 4px;
   border-radius: 16px;
   background-color: #FFFFFF;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -794,6 +1060,33 @@ const toggleListening = () => {
 
 .message__icon {
   width: 28px;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+.msg-sound-btn {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.1s ease;
+}
+
+.msg-sound-btn:active:not(:disabled) {
+  transform: scale(0.9);
+}
+
+.bot-message .msg-sound-btn {
+  color: #3b82f6;
+}
+
+.user-message .msg-sound-btn {
+  color: #8b5cf6;
 }
 
 .bot-message .message-bubble {
@@ -857,6 +1150,8 @@ const toggleListening = () => {
 .options-panel {
   background-color: var(--menuItemsBg);
   padding: 10px;
+  border-radius: 15px 15px 0 0;
+  border-top: 3px solid var(--tabsSlideBorderColor);
 }
 
 .options-title {
@@ -874,9 +1169,8 @@ const toggleListening = () => {
 }
 
 .option-btn {
-  background-color: #2d3042;
-  border-radius: 12px;
-  padding: 8px 20px;
+  background-color: var(--menuItemsBg);
+  padding: 8px 4px;
   text-align: left;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -885,6 +1179,7 @@ const toggleListening = () => {
   gap: 4px;
   font-family: inherit;
   border: 1px solid transparent;
+  border-bottom: 1px solid var(--tabsSlideBorderColor);
 }
 
 .option-btn:active:not(:disabled) {
@@ -894,12 +1189,12 @@ const toggleListening = () => {
 .option-german {
   font-size: 15px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--titleColor);
 }
 
 .option-russian {
   font-size: 13px;
-  color: #a1a1aa;
+  color: var(--titleColor);
 }
 
 .input-area {
@@ -910,13 +1205,13 @@ const toggleListening = () => {
 }
 
 .mic-btn, .send-btn {
-  background-color: #2d3042;
+  background-color: #3b82f6;
   color: #ffffff;
-  border: 2px solid #3f4257;
+  border: none;
   border-radius: 50%;
   width: 44px;
   height: 44px;
-  font-size: 18px;
+  font-size: 22px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -942,10 +1237,10 @@ const toggleListening = () => {
 .text-input {
   flex: 1;
   padding: 12px 20px;
-  border-radius: 12px;
-  border: 1px solid #3f4257;
-  background-color: #2d3042;
-  color: #ffffff;
+  border-radius: 40px;
+  border: 2px solid transparent;
+  background-color: var(--bg);
+  color: var(--titleColor);
   font-size: 15px;
   outline: none;
   font-family: inherit;
@@ -960,18 +1255,48 @@ const toggleListening = () => {
   color: #9ca3af;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
-  }
+.input-error {
+  border-color: #ef4444 !important;
+  animation: shake 0.4s;
 }
+
+.error-toast {
+  position: absolute;
+  width: 100%;
+  top: calc(env(safe-area-inset-top));
+  left: 0;
+  background: #d97706;
+  color: #fff;
+  padding: 18px 24px;
+  font-weight: 800;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+  z-index: 1000;
+  text-align: center;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.error-toast:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  left: 0;
+  bottom: 100%;
+  background: #d97706;
+  z-index: 1;
+}
+
+.toast-fade-enter-active,
+.toast-fade-leave-active {
+  transition: all 0.2s ease-in-out;
+}
+
+.toast-fade-enter-from,
+.toast-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-100%)
+}
+
 </style>

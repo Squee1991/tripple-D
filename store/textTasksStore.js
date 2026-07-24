@@ -10,8 +10,6 @@ export const useTextTasksStore = defineStore('textTasks', () => {
 	const isChecking = ref(false)
 	const tasksList = ref([])
 	const currentTaskIndex = ref(-1)
-
-	// Новые стейты для Firebase
 	const currentThemeId = ref(null)
 	const userProgress = ref({})
 
@@ -20,7 +18,6 @@ export const useTextTasksStore = defineStore('textTasks', () => {
 		return blanks.length > 0 && blanks.every(val => val !== null)
 	})
 
-	// Добавили themeId в параметры
 	const initTask = (task, list = [], index = -1, themeId = null) => {
 		currentTask.value = task
 
@@ -80,7 +77,6 @@ export const useTextTasksStore = defineStore('textTasks', () => {
 		return false
 	}
 
-	// Загрузка прогресса из Firebase
 	async function loadUserProgress() {
 		const auth = getAuth()
 		const db = getFirestore()
@@ -98,27 +94,18 @@ export const useTextTasksStore = defineStore('textTasks', () => {
 		}
 	}
 
-	// Сохранение прогресса конкретной задачи
 	async function saveTaskProgress() {
 		if (!currentThemeId.value || !currentTask.value) return
-
 		const themeId = currentThemeId.value
-		const taskId = currentTask.value.id // Предполагается, что в JSON у задачи есть "id"
-
+		const taskId = currentTask.value.id
 		if (!userProgress.value[themeId]) {
 			userProgress.value[themeId] = {}
 		}
-
-		// Если уже сохранено, лишний раз не дергаем базу
 		if (userProgress.value[themeId][taskId] === 'success') return
-
 		userProgress.value[themeId][taskId] = 'success'
-
 		const auth = getAuth()
 		const db = getFirestore()
-
 		if (!auth.currentUser) return
-
 		try {
 			const docRef = doc(db, 'users', auth.currentUser.uid, 'text_tasks', 'progress')
 			const pureData = JSON.parse(JSON.stringify(userProgress.value))

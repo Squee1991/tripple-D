@@ -88,12 +88,12 @@ const isMounted = ref(false)
 onMounted(() => {
   isMounted.value = true
 })
-
 const modalConfig = computed(() => {
   return {
     title: t('eventLocked.title'),
     text: t('eventLocked.text'),
-    button: { label: t('eventLocked.btn'), to: '/calendar' },
+    button: t('eventLocked.btn'),
+    to: '/calendar',
     img: PadLock
   }
 })
@@ -106,7 +106,7 @@ const closeDevModal = () => {
 }
 const onDevModalButton = () => {
   showDevModal.value = false
-  router.push(modalConfig.value.button.to)
+  router.push(modalConfig.value.to)
 }
 watch(showDevModal, (val) => {
   document.body.style.overflow = val ? 'hidden' : ''

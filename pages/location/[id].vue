@@ -9,7 +9,9 @@
         <VBackBtn/>
         <h1 class="region__title-name">{{ t(currentRegion?.name) }}</h1>
       </header>
-      <div class="lives-bar__content">
+
+      <!-- Скрываем блок с жизнями для премиум-пользователей -->
+      <div class="lives-bar__content" v-if="!authStore.isPremium">
         <VHearts
             :lives="chainStore.lives"
             :max-lives="chainStore.maxLives"
@@ -18,6 +20,7 @@
             show-timer
         />
       </div>
+
       <div class="quests">
         <div v-if="errorMessage" class="error">{{ t('locationQuests.error') }}</div>
         <VTransition v-else-if="processedQuests.length">
@@ -74,51 +77,60 @@
         :required-tasks="0"
         :wallet="wallet"
         :can-buy-life="canBuyLife"
-        :remaining-ads="remainingAds"
+        :remaining-ads="showRewardBtn ? remainingAds : null"
         @purchase="purchaseLife"
         @watchAd="watchAdForLife"
         @back="closeModal"
-        cancel-text="Закрыть"
+        :cancel-text="t('themeModal.close')"
     />
   </div>
 </template>
 
 <script setup>
-import { ref, computed, watch, onMounted } from "vue";
-import { useRoute, useRouter } from "vue-router";
-import { regions } from "~/utils/regions.js";
-import { userChainStore } from "~/store/chainStore.js";
-import { userlangStore } from '~/store/learningStore.js';
-import { useSeoMeta } from '#imports';
+import {ref, computed, watch, onMounted} from "vue";
+import {useRoute, useRouter} from "vue-router";
+import {regions} from "~/utils/regions.js";
+import {userChainStore} from "~/store/chainStore.js";
+import {userlangStore} from '~/store/learningStore.js';
+import {userAuthStore} from "~/store/authStore.js"; // Подключаем authStore
+import {useSeoMeta} from '#imports';
 import VHearts from '../../src/components/V-hearts.vue';
 import VBackBtn from "~/src/components/V-back-btn.vue";
 import VReviveModal from "~/src/components/V-reviveModal.vue";
-import { showInterstitial, showRewarded } from '~/utils/admob.js';
+import {showRewarded} from '~/utils/admob.js';
 import VTransition from "~/src/components/V-transition.vue";
+import {Capacitor} from "@capacitor/core";
 
 const route = useRoute();
 const router = useRouter();
-const { t, locale } = useI18n();
+const {t, locale} = useI18n();
 const chainStore = userChainStore();
 const langStore = userlangStore();
+const authStore = userAuthStore(); // Инициализируем authStore
 
 const questList = ref([]);
 const isLoading = ref(true);
 const errorMessage = ref("");
-
+const showRewardBtn = ref(false);
 const showNoLivesModal = ref(false);
 const isAdLoading = ref(false);
 const pendingQuest = ref(null);
 const PRICE = 10;
 const MAX_ADS = 5;
 const remainingAds = ref(MAX_ADS);
-
+const mobile = Capacitor.isNativePlatform();
 const wallet = computed(() => Number(langStore.points || 0));
 const canBuyLife = computed(() => wallet.value >= PRICE);
 
 useSeoMeta({
   robots: 'noindex, nofollow'
 });
+
+const isApplication = () => {
+  if (mobile) {
+    showRewardBtn.value = true;
+  }
+}
 
 const currentRegionKey = computed(() => String(route.query.region || route.params.id || ""));
 const currentRegion = computed(() => {
@@ -211,31 +223,26 @@ const processedQuests = computed(() => {
   });
 });
 
-function proceedToQuest(quest, skipAd = false) {
-  const navigateToQuest = () => {
-    router.push({
-      path: `/location/quest-${quest.questId}`,
-      query: { region: currentRegionKey.value }
-    });
-  };
-  if (skipAd) {
-
-    navigateToQuest();
-  } else {
-    showInterstitial(navigateToQuest);
-  }
+function proceedToQuest(quest) {
+  router.push({
+    path: `/location/quest-${quest.questId}`,
+    query: {region: currentRegionKey.value}
+  });
 }
 
 function handleStartQuest(quest) {
   if (!quest?.questId) return;
+  isApplication();
 
-  if (chainStore.lives <= 0) {
+  // Добавлена проверка !authStore.isPremium, чтобы премиум-пользователи
+  // могли начинать квест без проверки на жизни.
+  if (!authStore.isPremium && chainStore.lives <= 0) {
     pendingQuest.value = quest;
     showNoLivesModal.value = true;
     return;
   }
 
-  proceedToQuest(quest, false);
+  proceedToQuest(quest);
 }
 
 async function trySpendLocal(amount) {
@@ -248,7 +255,8 @@ async function trySpendLocal(amount) {
   if (typeof langStore.saveToFirebase === 'function') {
     try {
       await langStore.saveToFirebase();
-    } catch {}
+    } catch {
+    }
   }
   return true;
 }
@@ -262,7 +270,7 @@ async function purchaseLife() {
   showNoLivesModal.value = false;
 
   if (pendingQuest.value) {
-    proceedToQuest(pendingQuest.value, false);
+    proceedToQuest(pendingQuest.value);
     pendingQuest.value = null;
   }
 }
@@ -276,7 +284,7 @@ function watchAdForLife() {
         showNoLivesModal.value = false;
 
         if (pendingQuest.value) {
-          proceedToQuest(pendingQuest.value, true);
+          proceedToQuest(pendingQuest.value);
           pendingQuest.value = null;
         }
       },
@@ -294,7 +302,7 @@ function closeModal() {
   pendingQuest.value = null;
 }
 
-watch(currentRegionKey, fetchQuests, { immediate: true });
+watch(currentRegionKey, fetchQuests, {immediate: true});
 
 onMounted(async () => {
   await chainStore.loadProgressFromFirebase();
@@ -303,6 +311,7 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+/* Стили остались без изменений */
 .location-page {
   height: 100%;
   overflow-y: auto;

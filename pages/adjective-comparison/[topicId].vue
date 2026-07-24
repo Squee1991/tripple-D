@@ -217,7 +217,6 @@ watch(() => store.quizCompleted, async (done) => {
   padding: 5px 10px 15px 10px;
   gap: 20px;
   background-color: var(--bg, #ffffff);
-  border-bottom: 2px solid #e5e7eb;
   border-radius: 0 0 24px 24px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.03);
   flex-shrink: 0;

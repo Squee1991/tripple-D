@@ -23,7 +23,7 @@
         { "type": "blank", "id": 6, "correct": "mich" },
         { "type": "text", "content": ", Sie kennenzulernen. Wo " },
         { "type": "blank", "id": 7, "correct": "wohnen" },
-        { "type": "text", "content": " Sie? - Ich lebe in Berlin. Welche Sprachen " },
+        { "type": "text", "content": " Sie? - Ich wohne in Berlin. Welche Sprachen " },
         { "type": "blank", "id": 8, "correct": "sprechen" },
         { "type": "text", "content": " Sie? - Ich spreche Deutsch und Englisch." }
       ]

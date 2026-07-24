@@ -13,7 +13,7 @@
               <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
           </button>
-          <h2 class="toon-title">{{ t('galaxyRankTable.title')}}</h2>
+          <h2 class="toon-title">{{ t('galaxyRankTable.title') }}</h2>
         </div>
       </div>
       <div class="filter-bubble">
@@ -26,27 +26,27 @@
       <div class="leaderboard-scroll-area">
         <div v-if="isLoading" class="toon-loader">
           <div class="bouncing-ship">🚀</div>
-          <span>{{ t('galaxyRankTable.scan')}}</span>
+          <span>{{ t('galaxyRankTable.scan') }}</span>
         </div>
-        <div v-else-if="sortedLeaderboard.length === 0" class="empty-state">
+        <div v-else-if="playersData.length === 0" class="empty-state">
           <div class="sad-moon">🌑</div>
-          <p class="empty-text">{{ t('galaxyRankTable.empty')}}</p>
-          <span class="empty-subtext">{{ t('galaxyRankTable.empty')}}</span>
+          <p class="empty-text">{{ t('galaxyRankTable.empty') }}</p>
+          <span class="empty-subtext">{{ t('galaxyRankTable.empty') }}</span>
         </div>
         <div v-else class="players-grid">
           <div
-              v-for="(player, index) in paginatedLeaderboard"
+              v-for="(player, index) in playersData"
               :key="player.uid"
               class="player-card"
               :class="{
-              'gold': getGlobalIndex(index) === 0,
-              'silver': getGlobalIndex(index) === 1,
-              'bronze': getGlobalIndex(index) === 2
+              'gold': index === 0,
+              'silver': index === 1,
+              'bronze': index === 2
             }"
           >
             <div class="rank-badge">
-              <span v-if="getGlobalIndex(index) === 0">👑</span>
-              <span v-else>{{ getGlobalIndex(index) + 1 }}</span>
+              <span v-if="index === 0">👑</span>
+              <span v-else>{{ index + 1 }}</span>
             </div>
             <div class="ship-container">
               <img :src="player.shipImg" :alt="player.captainName" class="floating-ship"/>
@@ -60,124 +60,92 @@
           </div>
         </div>
       </div>
-      <div class="pagination-controls" v-if="!isLoading && totalPages > 1">
-        <button class="page-btn" @click="prevPage" :disabled="currentPage === 1">◀</button>
-        <div class="page-info">
-          {{ currentPage }} / {{ totalPages }}
-        </div>
-        <button class="page-btn" @click="nextPage" :disabled="currentPage === totalPages">▶</button>
-      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch } from 'vue'
-import { useGalaxyStore } from '../../store/galaxyStore.js'
-import { getFirestore, collectionGroup, getDocs } from 'firebase/firestore'
+import {ref, onMounted, watch} from 'vue'
+import {useGalaxyStore} from '~/store/galaxyStore.js'
+import {getFirestore, collectionGroup, getDocs, query, orderBy, limit} from 'firebase/firestore'
+import {useI18n} from 'vue-i18n'
+
 const emit = defineEmits(['close'])
 const store = useGalaxyStore()
 const db = getFirestore()
 
 const playersData = ref([])
-const selectedFilter = ref('total')
+const selectedFilter = ref('alpha')
 const isLoading = ref(true)
-const { t } = useI18n()
-const currentPage = ref(1)
-const itemsPerPage = 10
+const {t} = useI18n()
 
 const galaxyOptions = [
-  { id: 'total', label: t('galaxyList.all') },
-  { id: 'alpha', label: t('galaxyList.alpha') },
-  { id: 'beta', label: t('galaxyList.beta') },
-  { id: 'gamma', label: t('galaxyList.gamma') },
-  { id: 'delta', label: t('galaxyList.delta') },
-  { id: 'epsilon', label: t('galaxyList.epsilon') },
-  { id: 'zeta', label: t('galaxyList.zeta') }
+  // {id: 'total', label: t('galaxyList.all')},
+  {id: 'alpha', label: t('galaxyList.alpha')},
+  {id: 'beta', label: t('galaxyList.beta')},
+  {id: 'gamma', label: t('galaxyList.gamma')},
+  {id: 'delta', label: t('galaxyList.delta')},
+  {id: 'epsilon', label: t('galaxyList.epsilon')},
+  {id: 'zeta', label: t('galaxyList.zeta')}
 ]
 
 const fetchLeaderboard = async () => {
   isLoading.value = true
+  playersData.value = []
+
   try {
-    const querySnapshot = await getDocs(collectionGroup(db, 'game_data'))
+    const filter = selectedFilter.value
+    const orderField = filter === 'total' ? 'totalScore' : `highScores.${filter}`
+
+    const q = query(
+        collectionGroup(db, 'game_data'),
+        orderBy(orderField, 'desc'),
+        limit(10)
+    )
+
+    const querySnapshot = await getDocs(q)
     const tempPlayers = []
+
     querySnapshot.forEach((docSnapshot) => {
       const data = docSnapshot.data()
-      if (data.highScores) {
-        const scores = data.highScores
-        const totalScore = Object.values(scores).reduce((accumulator, current) => accumulator + current, 0)
-        const shipInfo = store.tankList.find(tank => tank.id === data.selectedTankId) || store.tankList[0]
+      const scores = data.highScores || {}
+      const total = data.totalScore || Object.values(scores).reduce((a, c) => a + c, 0)
+      const shipInfo = store.tankList.find(tank => tank.id === data.selectedTankId) || store.tankList[0]
+
+      if ((filter === 'total' && total > 0) || (filter !== 'total' && scores[filter] > 0)) {
         tempPlayers.push({
           uid: docSnapshot.ref.parent.parent.id,
           captainName: data.captainName || 'Anonymous',
           shipImg: shipInfo?.img || '',
           highScores: scores,
-          totalScore: totalScore
+          totalScore: total
         })
       }
     })
+
     playersData.value = tempPlayers
   } catch (error) {
-    console.error("Ошибка загрузки рейтинга:", error)
+    console.error(error)
   } finally {
     isLoading.value = false
   }
 }
 
-const sortedLeaderboard = computed(() => {
-  const filter = selectedFilter.value
-
-  const activePlayers = playersData.value.filter(player => {
-    const score = filter === 'total' ? player.totalScore : (player.highScores[filter] || 0)
-    return score > 0
-  })
-
-  return activePlayers.sort((playerA, playerB) => {
-    const scoreA = filter === 'total' ? playerA.totalScore : (playerA.highScores[filter] || 0)
-    const scoreB = filter === 'total' ? playerB.totalScore : (playerB.highScores[filter] || 0)
-    return scoreB - scoreA
-  })
-})
-
 watch(selectedFilter, () => {
-  currentPage.value = 1
+  fetchLeaderboard()
 })
-
-const totalPages = computed(() => {
-  return Math.max(1, Math.ceil(sortedLeaderboard.value.length / itemsPerPage))
-})
-
-const paginatedLeaderboard = computed(() => {
-  const start = (currentPage.value - 1) * itemsPerPage
-  const end = start + itemsPerPage
-  return sortedLeaderboard.value.slice(start, end)
-})
-
-const nextPage = () => {
-  if (currentPage.value < totalPages.value) currentPage.value++
-}
-
-const prevPage = () => {
-  if (currentPage.value > 1) currentPage.value--
-}
-
-const getGlobalIndex = (localIndex) => {
-  return (currentPage.value - 1) * itemsPerPage + localIndex
-}
-
-const getPlayerScore = (player) => {
-  if (selectedFilter.value === 'total') return player.totalScore
-  return player.highScores[selectedFilter.value] || 0
-}
 
 onMounted(() => {
   fetchLeaderboard()
 })
 
+const getPlayerScore = (player) => {
+  if (selectedFilter.value === 'total') return player.totalScore
+  return player.highScores[selectedFilter.value] || 0
+}
 </script>
 
 <style scoped>
-
 .leaderboard-fullscreen {
   position: absolute;
   top: 0;
@@ -274,7 +242,6 @@ onMounted(() => {
   cursor: pointer;
   outline: none;
 }
-
 
 .leaderboard-scroll-area {
   flex: 1;
@@ -395,8 +362,12 @@ onMounted(() => {
 }
 
 @keyframes bounce {
-  from { transform: translateY(0); }
-  to { transform: translateY(-20px); }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
 }
 
 .bouncing-ship {
@@ -405,73 +376,24 @@ onMounted(() => {
   margin-bottom: 10px;
 }
 
-.pagination-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  flex-shrink: 0;
-}
-
-.page-btn {
-  background: #ffeb3b;
-  border: 3px solid #000;
-  border-radius: 12px;
-  padding: 8px 16px;
-  font-size: 1.1rem;
-  font-weight: 900;
-  cursor: pointer;
-  box-shadow: 0 4px 0 #000;
-  transition: transform 0.1s, box-shadow 0.1s;
-}
-
-.page-btn:active:not(:disabled) {
-  transform: translateY(4px);
-  box-shadow: 0 0 0 #000;
-}
-
-.page-btn:disabled {
-  background: #ccc;
-  cursor: not-allowed;
-  box-shadow: 0 2px 0 #888;
-  transform: translateY(2px);
-}
-
-.page-info {
-  background: white;
-  border: 3px solid #000;
-  padding: 8px 16px;
-  border-radius: 12px;
-  font-weight: 900;
-  box-shadow: 0 4px 0 #000;
-}
-
 @media (max-width: 767px) {
-
   .player-card {
     padding: 6px 10px;
   }
+
   .rank-badge {
     width: 36px;
     height: 36px;
     font-size: 1rem;
   }
+
   .ship-container {
     width: 36px;
     height: 36px;
   }
+
   .name-tag {
     font-size: 13px;
-  }
-  .page-btn {
-    padding: 6px 14px;
-    font-size: 1rem;
-  }
-  .page-info {
-    padding: 6px 14px;
-    font-size: 0.9rem;
   }
 }
 </style>

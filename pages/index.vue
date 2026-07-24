@@ -14,9 +14,8 @@ import Snow from "../assets/images/mery-christmas/Snow.svg";
 import HeartFall from "assets/images/mery-christmas/heartFall.svg";
 import { useEventSessionStore } from '../store/eventsStore.js'
 import VStartPage from "~/src/components/V-startPage.vue";
+import { SplashScreen } from '@capacitor/splash-screen'
 
-
-const showLogin = ref(false)
 const eventStore = useEventSessionStore()
 const authStore = userAuthStore()
 const hydrated = ref(false)
@@ -29,6 +28,17 @@ definePageMeta({
 onMounted(() => {
   hydrated.value = true
   isLocallyLogged.value = localStorage.getItem('app_user_logged') === 'true'
+  if (authStore.initialized) {
+    SplashScreen.hide()
+  }
+})
+
+watch(() => authStore.initialized, (isInit) => {
+  if (isInit) {
+    requestAnimationFrame(() => {
+      SplashScreen.hide()
+    })
+  }
 })
 
 watch(() => authStore.uid, (newUid) => {

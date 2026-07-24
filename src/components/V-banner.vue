@@ -35,6 +35,7 @@ const bannerStyle = computed(() => {
   align-items: center;
   justify-content: space-between;
   gap: 15px;
+  min-height: 122px;
   padding: 20px 25px;
   border-radius: 24px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1),
@@ -60,7 +61,7 @@ const bannerStyle = computed(() => {
 }
 
 .v-banner__default-text {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 800;
   line-height: 1.2;
 }

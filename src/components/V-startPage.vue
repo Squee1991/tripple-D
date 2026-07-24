@@ -14,11 +14,6 @@
             <div class="skill-tag tag-amber">Schreiben</div>
           </div>
         </div>
-<!--        <p class="game-info">-->
-<!--          Твой интерактивный путь к свободному немецкому.-->
-<!--          Учи грамматику, пополняй словарный запас и-->
-<!--          начни говорить уже сегодня.-->
-<!--        </p>-->
       </div>
     </div>
     <div class="cta-block">
@@ -154,6 +149,7 @@ const router = useRouter()
 }
 
 .cta-block {
+  max-width: 560px;
   width: 100%;
   position: absolute;
   bottom: 10px;

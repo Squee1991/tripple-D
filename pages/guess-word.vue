@@ -117,7 +117,7 @@ import {useRouter} from 'vue-router'
 import {nameMap} from '../utils/nameMap.js'
 import {useSeoMeta} from "#imports"
 import VBackBtn from "~/src/components/V-back-btn.vue";
-import { showInterstitial } from '../utils/admob.js'
+/*import { showInterstitial } from '../utils/admob.js'*/
 const {t} = useI18n()
 const store = useGuessWordStore()
 const isSpinning = ref(false)
@@ -168,7 +168,7 @@ function handleRestart() {
 function checkArticle(selectedArticle) {
   if (!store.currentWordObj) return
   const correct = selectedArticle === store.currentWordObj.article.toLowerCase()
-  articleResult.value = correct ? 'Верно!' : `Неверно! Правильно: ${store.currentWordObj.article}`
+  articleResult.value = correct ? t('eventSessionPage.correct') : `${t('guessWord.wrong')} ${store.currentWordObj.article}`
 }
 
 function closeArticleModal() {
@@ -185,8 +185,8 @@ function stopTimer() {
 }
 
 function startGame() {
-  showInterstitial(async ()=> {
-    await store.startGame()
+  /*showInterstitial(async ()=> {*/
+    store.startGame()
     now.value = Date.now()
     isStarted.value = true
     guessInput.value = ''
@@ -194,7 +194,7 @@ function startGame() {
     showArticleModal.value = false
     showLoseModal.value = false
     startTimer()
-  })
+ /* })*/
 }
 
 function guessWord() {
@@ -491,7 +491,7 @@ watch(() => store.lose, (isLose) => {
   background: #007AFF;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 50px;
   padding: 16px 32px;
   font-size: 18px;
   font-weight: 700;

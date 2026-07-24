@@ -6,8 +6,9 @@ import { useI18n } from 'vue-i18n'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import TipsModal from '../../src/components/V-tips.vue'
 import { topics } from '@/utils/descriptionImages.js'
-import { VoiceRecorder } from 'capacitor-voice-recorder'
+
 import { getFunctions, httpsCallable } from 'firebase/functions'
+import { showInterstitial } from '../../utils/admob.js'
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -28,17 +29,12 @@ const isLoading = ref(false)
 const err = ref('')
 const isAnswered = ref(false)
 const showTips = ref(false)
+const isScreenLoading = ref(true)
 
 const isRecording = ref(false)
 const isProcessing = ref(false)
 
 const functions = getFunctions(undefined, 'us-central1')
-
-onMounted(() => {
-  if (!sessionConfig.value?.topicId || !selectedTopic.value) {
-    router.push('/image-description')
-  }
-})
 
 const tipsData = ref({
   tips: [
@@ -52,74 +48,39 @@ const currentImage = computed(() => {
   if (!activeTasks.value.length || currentTaskIndex.value >= activeTasks.value.length) return null
   return activeTasks.value[currentTaskIndex.value].image
 })
+
 const isFinished = computed(() => activeTasks.value.length > 0 && currentTaskIndex.value >= activeTasks.value.length)
 const progressPercentage = computed(() => (!activeTasks.value.length) ? 0 : ((currentTaskIndex.value) / activeTasks.value.length) * 100)
 
-const startRecording = async () => {
-  try {
-    err.value = ''
-    const hasPermission = await VoiceRecorder.hasAudioRecordingPermission()
-    if (!hasPermission.value) {
-      const request = await VoiceRecorder.requestAudioRecordingPermission()
-      if (!request.value) {
-        err.value = "Микрофон запрещен. Включите его в настройках."
-        return
-      }
-    }
-    await VoiceRecorder.startRecording()
-    isRecording.value = true
-  } catch (e) {
-    err.value = "Ошибка микрофона: " + e.message
+onMounted(() => {
+  if (!sessionConfig.value?.topicId || !selectedTopic.value) {
+    router.push('/image-description')
+    return
   }
-}
 
-const stopRecording = async () => {
-  if (!isRecording.value) return
-  try {
-    isProcessing.value = true
-    isRecording.value = false
-    err.value = ''
+  const minDelay = new Promise(resolve => setTimeout(resolve, 1500))
 
-    const result = await VoiceRecorder.stopRecording()
-    if (result.value && result.value.recordDataBase64) {
-      const mime = result.value.mimeType || 'audio/aac'
-      const base64String = `data:${mime};base64,${result.value.recordDataBase64}`
-
-      const whisperTranscribe = httpsCallable(functions, 'whisperTranscribe')
-      const res = await whisperTranscribe({ audioContent: base64String, lang: 'de' })
-
-      if (res.data && res.data.text && res.data.text.trim()) {
-        await sendMessage(res.data.text)
-      } else {
-        err.value = "Whisper вернул пустоту."
-      }
+  const imgPromise = new Promise(resolve => {
+    if (!currentImage.value) {
+      resolve()
+      return
     }
-  } catch (e) {
-    err.value = `ОШИБКА RECORD: [${e.code || 'no-code'}] ${e.message}`
-  } finally {
-    isProcessing.value = false
-  }
-}
+    const img = new Image()
+    img.onload = resolve
+    img.onerror = resolve
+    img.src = currentImage.value
+  })
 
-const toggleRecording = () => {
-  if (isRecording.value) stopRecording()
-  else startRecording()
-}
-
-async function urlToBase64(url) {
-  try {
-    const response = await fetch(url)
-    const blob = await response.blob()
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader()
-      reader.onloadend = () => resolve(reader.result)
-      reader.onerror = reject
-      reader.readAsDataURL(blob)
+  const adPromise = new Promise(resolve => {
+    showInterstitial(() => {
+      resolve()
     })
-  } catch (e) {
-    return null
-  }
-}
+  })
+
+  Promise.all([minDelay, imgPromise, adPromise]).then(() => {
+    isScreenLoading.value = false
+  })
+})
 
 async function sendMessage(voiceText = null) {
   const textToSend = (typeof voiceText === 'string') ? voiceText : input.value
@@ -137,11 +98,7 @@ async function sendMessage(voiceText = null) {
   try {
     const task = activeTasks.value[currentTaskIndex.value]
     const reference = task?.descriptions?.[selectedLevel.value] || ''
-    let finalImageUrl = task.image
-    if (finalImageUrl && (!finalImageUrl.startsWith('http') || finalImageUrl.includes('localhost'))) {
-      const base64 = await urlToBase64(finalImageUrl)
-      if (base64) finalImageUrl = base64
-    }
+    const finalImageUrl = task.image
 
     const visionAnalyze = httpsCallable(functions, 'visionAnalyze')
     const result = await visionAnalyze({
@@ -153,7 +110,12 @@ async function sendMessage(voiceText = null) {
     })
 
     const res = result.data
-    if (res && res.data) {
+
+    if (res && res.error) {
+      err.value = "ПОДРОБНАЯ ОШИБКА: " + res.error;
+      messages.value.pop()
+    }
+    else if (res && res.data) {
       messages.value.push({
         role: 'assistant', isStructured: true,
         score: res.data.score || 0,
@@ -163,10 +125,12 @@ async function sendMessage(voiceText = null) {
       })
       isAnswered.value = true
     } else {
-      err.value = "Ошибка анализа. Попробуйте еще раз."
+      err.value = "Ошибка анализа. Пустой ответ сервера."
+      messages.value.pop()
     }
   } catch (e) {
-    err.value = `ОШИБКА VISION: [${e.code || 'no-code'}] ${e.message}`
+    err.value = `СЕТЕВАЯ ОШИБКА: [${e.code || 'no-code'}] ${e.message || String(e)}`
+    messages.value.pop()
   } finally {
     isLoading.value = false
   }
@@ -180,12 +144,6 @@ function nextTask() {
   input.value = ''
 }
 
-function getScoreClass(score) {
-  if (score >= 8) return 'score-high';
-  if (score >= 5) return 'score-medium';
-  return 'score-low'
-}
-
 function goBack() {
   router.push('/image-description')
 }
@@ -195,7 +153,10 @@ function goBack() {
   <div class="page-container">
     <div class="page__inner">
       <TipsModal v-model="showTips" :title="t('adjectiveComparisonPage.tipTitle')" :tips="tipsData.tips"/>
-      <div class="content-shell" v-if="selectedTopic">
+      <div v-if="isScreenLoading" class="screen-preloader">
+        <div class="bubble typing-indicator"><span>•</span><span>•</span><span>•</span></div>
+      </div>
+      <div class="content-shell" v-else-if="selectedTopic">
         <div class="game-view">
           <div v-if="isFinished" class="finish-state">
             <div class="finish-content card-style-box">
@@ -230,7 +191,6 @@ function goBack() {
                   <transition-group name="list">
                     <div v-for="(m, i) in messages" :key="i" :class="['msg-row', m.role]">
                       <div v-if="m.isStructured" class="feedback-card">
-                        <div class="feedback-score-badge" :class="getScoreClass(m.score)">{{ m.score }}/10</div>
                         <div class="feedback-body">
                           <p class="main-feedback">{{ m.feedback }}</p>
                           <div class="suggestion-box">
@@ -264,10 +224,10 @@ function goBack() {
               <div v-if="err" class="error-toast">{{ err }}</div>
               <div class="input-dock">
                 <template v-if="!isAnswered">
-                <textarea v-model="input" @keydown.enter.prevent="() => sendMessage()"
-                          :placeholder="isRecording ? 'ИДЕТ ЗАПИСЬ...' : t('describePicture.inputPlaceholder')"
-                          :disabled="isLoading || isRecording || isProcessing" class="modern-input card-style-box" rows="2"
-                ></textarea>
+                  <textarea v-model="input" @keydown.enter.prevent="() => sendMessage()"
+                            :placeholder="t('describePicture.inputPlaceholder')"
+                            :disabled="isLoading || isProcessing" class="modern-input card-style-box" rows="2"
+                  ></textarea>
                   <div class="btn__wrapper">
                     <button @click="() => sendMessage()" :disabled="isLoading || !input.trim()" class="btn-send-round">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -276,29 +236,10 @@ function goBack() {
                         <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                       </svg>
                     </button>
-                    <button @click="toggleRecording" class="btn-mic"
-                            :class="{ 'recording': isRecording, 'processing': isProcessing }"
-                            :disabled="isLoading || isProcessing">
-                      <svg v-if="!isRecording && !isProcessing" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                           viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
-                           stroke-linejoin="round">
-                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
-                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-                        <line x1="12" y1="19" x2="12" y2="23"></line>
-                        <line x1="8" y1="23" x2="16" y2="23"></line>
-                      </svg>
-                      <svg v-else-if="isRecording" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                           viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
-                           stroke-linejoin="round">
-                        <rect x="6" y="6" width="12" height="12"></rect>
-                      </svg>
-                      <span v-else>⏳</span>
-                    </button>
                   </div>
                 </template>
                 <template v-else>
-                  <button class="btn-primary-action full-width" @click="nextTask">{{t('describePicture.nextBtn')}}
-                  </button>
+                  <button class="btn-primary-action full-width" @click="nextTask">{{t('describePicture.nextBtn')}}</button>
                 </template>
               </div>
             </div>
@@ -309,7 +250,16 @@ function goBack() {
   </div>
 </template>
 
+
+
 <style scoped>
+.screen-preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
 
 .page-container {
   font-family: "Nunito", sans-serif;
@@ -380,25 +330,24 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 }
 
 .btn-primary-action {
-  background: var(--regionBtnBg);
+  background: #3b82f6;
   color: #fff;
   padding: 10px 40px;
-  border-radius: 16px;
+  border-radius: 50px;
   font-size: 1.5rem;
-  border: 2px solid #2b2b2b;
+  border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
-  box-shadow: 3px 3px 0px #2b2b2b;
+  box-shadow: 0 5px 0 #1d4ed8;
   transition: transform 0.1s;
   width: 100%;
 }
 
 .btn-primary-action:active {
-  transform: translate(5px, 5px);
-  box-shadow: 0px 0px 0px #2b2b2b;
+  transform: translate(1px, 1px);
 }
 
 .active-game-layout {
@@ -436,7 +385,6 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 
 .image-card img {
   max-width: 100%;
-  max-height: 30vh;
   object-fit: cover;
 }
 
@@ -488,7 +436,6 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   width: 100%;
   display: flex;
   flex-direction: column;
-
 }
 
 .chat-container {
@@ -566,6 +513,7 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   font-weight: 900;
   font-size: 1.1rem;
   font-family: "Nunito", sans-serif;
+  z-index: 2;
 }
 
 .score-high {
@@ -601,13 +549,15 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 
 .input-dock {
   display: flex;
+  flex-direction: column;
   gap: 10px;
   flex-shrink: 0;
+  padding: 8px 0;
 }
 
 .modern-input {
   flex: 1;
-  padding: 5px;
+  padding: 8px;
   font-size: 14px;
   font-weight: 700;
   border: 3px solid var(--tabsSlideBorderColor);
@@ -618,6 +568,13 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   min-height: 150px;
   scrollbar-width: thin;
   scrollbar-color: #2b2b2b transparent;
+}
+
+.modern-input:disabled {
+  background-color: #f5f5f5;
+  color: #e26a4b;
+  opacity: 1;
+  -webkit-text-fill-color: #e26a4b;
 }
 
 .modern-input::-webkit-scrollbar {
@@ -635,9 +592,9 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 }
 
 .btn-send-round, .btn-mic {
-  border: 3px solid var(--tabsSlideBorderColor);
-  box-shadow: var(--boxShadowMobile);
-  border-radius: 16px;
+  border: none;
+  box-shadow: 0 5px 0 #c4973c;
+  border-radius: 50px;
   cursor: pointer;
   display: flex;
   align-items: center;

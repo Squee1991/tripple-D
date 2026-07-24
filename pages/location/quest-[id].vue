@@ -9,14 +9,20 @@
     </div>
     <div class="quest">
       <VLoginPreloader v-if="questStore.loading"/>
-      <div v-if="questStore.finished && questStore.success && !questStore.hasMistakes" class="quest__stamp quest__stamp--ok">{{ t('locationQuests.done')}}</div>
+
+      <div v-if="questStore.finished && questStore.success && !questStore.hasMistakes"
+           class="quest__stamp quest__stamp--ok">{{ t('locationQuests.done') }}
+      </div>
+
       <div v-if="questStore.loading" class="quest__panel quest__panel--loading"></div>
+
       <div v-else-if="questStore.error" class="quest__panel quest__panel--error">
         <div>Error: {{ questStore.error }}</div>
         <button class="btn" @click="goThemes">back</button>
       </div>
+
       <div v-else-if="questStore.task" class="quest__card">
-        <VHelpModal :open="showHint" @close="showHint=false" />
+        <VHelpModal :open="showHint" @close="showHint=false"/>
         <div class="quest__top">
           <button class="quest__back-btn" @click="openLeave('back')">×</button>
           <div class="quest__stat">
@@ -29,7 +35,7 @@
               </template>
             </div>
           </div>
-          <div class="quest__lives" v-if="!previouslyCleared">
+          <div class="quest__lives" v-if="!previouslyCleared && !authStore.isPremium">
             <VHearts
                 :lives="questStore.lives"
                 :max-lives="questStore.maxLives"
@@ -38,6 +44,7 @@
             />
           </div>
         </div>
+
         <div class="quest__section">
           <div v-if="hasTip" class="quest__tip-container">
             <button class="quest__tip-btn" @click="showTipModal = true">💡</button>
@@ -52,6 +59,7 @@
               </template>
             </template>
           </div>
+
           <div class="quest__body">
             <template v-if="questStore.task.type === 'select' || questStore.task.type === 'readAndAnswer'">
               <div v-if="questStore.task.text" class="quest__read-text">{{
@@ -69,6 +77,7 @@
                 </li>
               </ul>
             </template>
+
             <template v-else-if="questStore.task.type === 'input'">
               <div class="quest__speech">
                 <input
@@ -94,6 +103,7 @@
                 </div>
               </div>
             </template>
+
             <template v-else-if="questStore.task.type === 'speechToText'">
               <div class="quest__speech">
                 <SoundBtn :text="questStore.task.text"/>
@@ -120,9 +130,11 @@
                 </div>
               </div>
             </template>
+
             <template v-else-if="questStore.task.type === 'reorder'">
               <div class="quest__reorder">
-                <div class="quest__reorder-selection" :class="{ 'quest__reorder-selection--empty': questStore.reorderSelection.length === 0 }">
+                <div class="quest__reorder-selection"
+                     :class="{ 'quest__reorder-selection--empty': questStore.reorderSelection.length === 0 }">
                   <button
                       v-for="(word, index) in questStore.reorderSelection"
                       :key="`${word}-${index}`"
@@ -145,57 +157,94 @@
               </div>
             </template>
           </div>
-          <div v-if="questStore.showResult" :class="statusClassComputed" class="quest__feedback">
-            <img class="quest__feedback-icon" :src="questStore.isCorrect ? RightIcon : WrongIcon" alt="answer_icons">
-            <div class="quest__feedback-text">
-              <div v-if="questStore.isCorrect">{{ t('questCompletedModals.correct')}}</div>
-              <div class="quest__correct-answer-block" v-else>
-                <div>{{ t('questCompletedModals.correctAnswer')}}</div>
-                <div> {{ t(questStore.correctAnswer) }}</div>
+        </div>
+
+        <div class="actions-wrapper" :class="feedbackClass">
+          <div class="actions-container">
+            <div v-if="questStore.showResult" class="feedback-text">
+              <div v-if="questStore.isCorrect" class="feedback correct slide-up">
+                <img class="quest__feedback-icon" :src="RightIcon" alt="correct_icon">
+                {{ t('questCompletedModals.correct') }}
+              </div>
+              <div v-else class="feedback incorrect shake quest__correct-answer-block">
+                <div class="feedback-wrong-header">
+                  <img class="quest__feedback-icon" :src="WrongIcon" alt="wrong_icon">
+                  {{ t('questCompletedModals.correctAnswer') }}
+                </div>
+                <div class="correct-answer-text">{{ t(questStore.correctAnswer) }}</div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="quest__controls">
-          <button class="btn" :disabled="!questStore.showResult && questStore.isConfirmDisabled"
-                  @click="handleClick">
-            {{ questStore.showResult ? t('questCompletedModals.further') : t('questCompletedModals.check') }}
-          </button>
-        </div>
-      </div>
-      <div v-else-if="questStore.finished && questStore.success && !questStore.hasMistakes && questStore.justAwarded"
-           class="quest-complete quest-complete--solo">
-        <div class="quest-complete__title">{{ t('questCompletedModals.completed')}}</div>
-        <div class="quest-complete__subtitle">{{ t('questCompletedModals.reward')}}</div>
-        <div class="quest-complete__actions quest-complete__actions--one">
-          <button class="btn btn--primary" @click="goThemes">{{ t('questCompletedModals.back')}}</button>
-        </div>
-      </div>
-      <div v-else class="modal">
-        <div class="modal__overlay"></div>
-        <div class="modal__window">
-          <div class="modal__title">
-            <template v-if="questStore.success && !questStore.hasMistakes">
-              {{ t('questCompletedModals.completed') }}
-            </template>
-            <template v-else-if="questStore.success && questStore.hasMistakes">
-              {{ t('questCompletedModals.completedWithMistakes') }}
-            </template>
-            <template v-else>
-              {{ t('questCompletedModals.notCompleted')}}
-            </template>
-          </div>
-          <div class="modal__actions">
-            <button v-for="(btn, index) in footerButtons"
-                    :key="index" class="btn"
-                    :class="btn.style"
-                    @click="btn.action"
-            >
-              {{ btn.text }}
+            <button v-if="!questStore.showResult" class="btn btn-check" :disabled="questStore.isConfirmDisabled"
+                    @click="handleClick">
+              {{ t('questCompletedModals.check') }}
+            </button>
+            <button v-if="questStore.showResult" class="btn slide-up"
+                    :class="questStore.isCorrect ? 'btn-next' : 'btn-wrong'" @click="handleClick">
+              {{ t('questCompletedModals.further') }}
             </button>
           </div>
         </div>
       </div>
+
+      <transition name="modal-fade">
+        <div v-if="questStore.finished" class="modal-overlay">
+          <div class="modal-content">
+            <!-- ТЕКСТ ТЕПЕРЬ СВЕРХУ -->
+            <p class="modal-text">
+              <template v-if="questStore.success && !questStore.hasMistakes">
+                {{ t('questCompletedModals.completed') }}
+              </template>
+              <template v-else-if="questStore.success && questStore.hasMistakes">
+                {{ t('questCompletedModals.completedWithMistakes') }}
+              </template>
+              <template v-else>
+                {{ t('questCompletedModals.notCompleted') }}
+              </template>
+            </p>
+
+            <p v-if="questStore.success && !questStore.hasMistakes && questStore.justAwarded" class="modal-subtitle">
+              {{ t('questCompletedModals.reward') }}
+            </p>
+
+            <!-- ИКОНКА В ЗАВИСИМОСТИ ОТ РЕЗУЛЬТАТА ТЕПЕРЬ ПОД ТЕКСТОМ -->
+            <div class="modal-icon">
+              <img v-if="questStore.success && !questStore.hasMistakes" :src="Great" class="modal-icon-item"
+                   alt="Great"/>
+              <img v-else :src="Support" class="modal-icon-item" alt="Support"/>
+            </div>
+
+            <div class="modal-actions">
+              <!-- Идеальное прохождение -->
+              <template v-if="questStore.success && !questStore.hasMistakes">
+                <button class="modal-btn modal-btn-primary" @click="goThemes">
+                  {{ t('questCompletedModals.back') }}
+                </button>
+              </template>
+
+              <!-- Прохождение с ошибками -->
+              <template v-else-if="questStore.success && questStore.hasMistakes">
+                <button class="modal-btn modal-btn-primary" @click="questStore.startRetryMistakes()">
+                  {{ t('locationQuests.repeatMistakes') }}
+                </button>
+                <button class="modal-btn modal-btn-secondary" @click="goThemes">
+                  {{ t('questCompletedModals.back') }}
+                </button>
+              </template>
+
+              <!-- Провал (нет жизней) -->
+              <template v-else>
+                <button class="modal-btn modal-btn-primary" @click="restart">
+                  {{ t('questCompletedModals.again') }}
+                </button>
+                <button class="modal-btn modal-btn-secondary" @click="goThemes">
+                  {{ t('questCompletedModals.back') }}
+                </button>
+              </template>
+            </div>
+          </div>
+        </div>
+      </transition>
+
     </div>
     <VReviveModal
         :show="forceRevive || showRevive"
@@ -228,9 +277,10 @@ import {computed, onMounted, ref, watch, watchEffect, nextTick, onBeforeUnmount}
 import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
 import {userChainStore} from '~/store/chainStore.js'
 import {userlangStore} from '~/store/learningStore.js'
+import {userAuthStore} from "~/store/authStore.js"
 import SoundBtn from '~/src/components/soundBtn.vue'
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '~/utils/soundManager.js'
-import { showRewarded } from '~/utils/admob.js';
+import {showRewarded, showInterstitial} from '~/utils/admob.js';
 import RightIcon from '~/assets/images/location-icons/accept.svg'
 import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 import {useSeoMeta} from '#imports'
@@ -240,16 +290,19 @@ import VRulesModal from "~/src/components/V-rulesModal.vue";
 import VReviveModal from "~/src/components/V-reviveModal.vue";
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
-import { useSwipeBack } from '~/composables/useSwipeBack.js'
+import {useSwipeBack} from '~/composables/useSwipeBack.js'
+import Support from '../../assets/images/Support.svg'
+import Great from '../../assets/images/Greatcon.svg'
 
 useSeoMeta({robots: 'noindex, nofollow'})
 
-const { getDotClass,  optionClass } = useClasses()
+const {getDotClass, optionClass} = useClasses()
 const {t, locale} = useI18n()
 const route = useRoute()
 const router = useRouter()
 const questStore = userChainStore()
 const langStore = userlangStore()
+const authStore = userAuthStore()
 const forceRevive = ref(false)
 const showTipModal = ref(false)
 const isAdLoading = ref(false)
@@ -257,10 +310,15 @@ const MAX_ADS = 5;
 const remainingAds = ref(MAX_ADS);
 const PRICE = 10
 
-const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipeBack(() => {
+const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   openLeave()
 }, {
   ignoreSelector: '.quest__input, .german__letters-item, .quest__option-btn, .quest__word-btn, .btn'
+})
+
+const feedbackClass = computed(() => {
+  if (!questStore.showResult) return ''
+  return questStore.isCorrect ? 'correct' : 'incorrect'
 })
 
 const questId = computed(() => {
@@ -325,22 +383,6 @@ function updateRemainingAds() {
 onBeforeUnmount(() => {
   if (rafId) cancelAnimationFrame(rafId)
 })
-
-const footerButtons = computed(() => [
-  {text: questStore.success && questStore.hasMistakes
-        ? t('locationQuests.repeatMistakes')
-        : t('questCompletedModals.again'),
-    action: questStore.success && questStore.hasMistakes
-        ? () => questStore.startRetryMistakes()
-        : restart,
-    style: ''
-  },
-  {
-    text: t('questCompletedModals.back'),
-    action: goThemes,
-    style: 'btn--primary'
-  }
-])
 
 const inputPlaceholders = {
   inputTypeSTT: t('locationsPlaceholder.inputType'),
@@ -412,6 +454,7 @@ function handleOptionClick(opt) {
 }
 
 const showRevive = computed(() =>
+    !authStore.isPremium &&
     !previouslyCleared.value &&
     questStore.requiredTasks > 0 &&
     questStore.lives <= 0 &&
@@ -443,8 +486,15 @@ function goThemes() {
 }
 
 function restart() {
-  questStore.restart(previouslyCleared.value)
-  questStore.loadQuest(questId.value, regionKey.value)
+  if (authStore.isPremium) {
+    questStore.restart(previouslyCleared.value)
+    questStore.loadQuest(questId.value, regionKey.value)
+  } else {
+    showInterstitial(() => {
+      questStore.restart(previouslyCleared.value)
+      questStore.loadQuest(questId.value, regionKey.value)
+    })
+  }
 }
 
 function handleClick() {
@@ -455,8 +505,6 @@ function handleClick() {
     questStore.nextTask(previouslyCleared.value)
   }
 }
-
-const statusClassComputed = computed(() => (questStore.isCorrect ? 'is-green' : 'is-red'))
 
 const showLeaveModal = ref(false)
 const pendingRoute = ref(null)
@@ -577,7 +625,8 @@ watch([questId, regionKey], () => {
       questStore.reorderSelection = []
       questStore.reorderBank = []
       showHint.value = false
-      ;(async () => {
+
+      const initQuest = async () => {
         await questStore.loadProgressFromFirebase?.()
         await questStore.loadQuest(questId.value, regionKey.value)
         const hasAccept = questStore.quest?.tasks?.some(t => t.accept?.length)
@@ -586,9 +635,15 @@ watch([questId, regionKey], () => {
         }
         await nextTick()
         forceRevive.value = showRevive.value
-      })()
+      }
+
+      if (authStore.isPremium) {
+        initQuest()
+      } else {
+        showInterstitial(initQuest)
+      }
     },
-    { immediate: true, flush: 'sync' }
+    {immediate: true, flush: 'sync'}
 )
 
 onBeforeUnmount(() => {
@@ -623,12 +678,6 @@ watchEffect(() => {
   text-align: center;
 }
 
-.quest__correct-answer-block {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-
 .quest__back-btn {
   position: absolute;
   left: 0;
@@ -652,6 +701,8 @@ watchEffect(() => {
 .quest__card {
   width: 100%;
   margin: 0 auto;
+  position: relative;
+  padding-bottom: 150px;
 }
 
 .quest__top {
@@ -842,44 +893,6 @@ watchEffect(() => {
   gap: 10px;
 }
 
-.quest__feedback {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 30px 15px;
-}
-
-.quest__feedback.is-green {
-  color: #3fa65b;
-  font-size: 2rem;
-  font-weight: 600;
-  background: #b9f5c4;
-}
-
-.quest__feedback.is-red {
-  color: #d9534f;
-  font-size: 2rem;
-  font-weight: 600;
-  font-style: italic;
-  background: #ffd0cc;
-}
-
-.quest__feedback-icon {
-  margin-right: 8px;
-  width: 50px;
-}
-
-.quest__controls {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: .25rem;
-}
-
 .quest__stamp {
   position: fixed;
   right: 24px;
@@ -897,74 +910,278 @@ watchEffect(() => {
   color: #0f5132;
 }
 
-.quest-complete {
-  text-align: center;
-  padding-top: 60px;
-}
-
-.quest-complete__title {
-  font-size: 30px;
-  font-weight: 900;
-  margin-bottom: 10px;
-  color: #3fa65b;
-}
-
-.quest-complete__subtitle {
-  color: #333;
-  margin-bottom: 12px;
-}
-
-.quest-complete__actions {
+.actions-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  gap: 16px;
   justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  background: white;
-  padding: 2.5rem;
-  border-radius: 24px;
-  border: 4px solid #1e1e1e;
-  box-shadow: 8px 8px 0 #1e1e1e;
-  max-width: 500px;
-  width: 90%;
-  text-align: center;
-  margin: 0 auto;
+  background: transparent;
+  transition: background-color 0.3s ease;
+  z-index: 100;
+}
+
+.actions-wrapper.correct {
+  background-color: #d4edda;
+  border-top: 3px solid #2E7D32;
+}
+
+.actions-wrapper.incorrect {
+  background-color: #f8d7da;
+  border-top: 2px solid #C62828;
+}
+
+.actions-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 15px 20px;
+  padding-bottom: calc(15px + env(safe-area-inset-bottom));
+}
+
+.feedback-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.feedback {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feedback.correct {
+  color: #2E7D32;
+}
+
+.feedback.incorrect {
+  color: #C62828;
+}
+
+.quest__correct-answer-block {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.feedback-wrong-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.correct-answer-text {
+  font-weight: 800;
+  margin-top: 5px;
+}
+
+.quest__feedback-icon {
+  width: 32px;
 }
 
 .btn {
-  width: 80%;
-  max-width: 440px;
-  padding: 14px;
-  border-radius: 36px;
-  font-family: "Nunito", sans-serif;
-  font-weight: 900;
-  font-size: 22px;
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 50px;
   border: none;
-  color: white;
-  background: #3b82f6;
   cursor: pointer;
-  box-shadow: 0px 5px 0 #2261c7;
-  transition: all .1s ease-in-out;
+  color: #ffffff;
+  transition: transform 0.1s, box-shadow 0.1s;
 }
 
-.btn--primary {
-  background: #a7ecb8;
+.btn-check {
+  background-color: #3b82f6;
+  box-shadow: 0 5px 0 #2563eb;
 }
 
-.modal {
+.btn-check:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.actions-wrapper.incorrect .btn-check {
+  background-color: #ef4444;
+  box-shadow: 0 5px 0 #dc2626;
+}
+
+.btn-next {
+  background-color: #4ade80;
+  box-shadow: 0 5px 0 #12a647;
+}
+
+.btn-wrong {
+  background-color: #ef4444;
+  box-shadow: 0 5px 0 #dc2626;
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(2px);
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.slide-up-enter-to,
+.slide-up-leave-from {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+.shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+/* =========================================
+   СТАЙЛИНГ НОВОЙ МОДАЛКИ (END OF QUEST)
+   ========================================= */
+.modal-overlay {
   position: fixed;
   inset: 0;
+  background: rgba(30, 39, 46, 0.8);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   z-index: 1000;
-  display: grid;
-  place-items: center;
+  padding: 0;
 }
 
-.modal__overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, .35);
-  backdrop-filter: blur(2px);
+.modal-content {
+  background: #ffffff;
+  padding: 40px 24px 30px 24px;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  max-width: 768px;
+  text-align: center;
+  border: none;
+  box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 3px solid whitesmoke;
 }
+
+.modal-icon {
+  margin-top: 5px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-icon-item {
+  width: 140px;
+}
+
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  transition: opacity 0.3s ease-out;
+}
+
+.modal-fade-enter-from,
+.modal-fade-leave-to {
+  opacity: 0;
+}
+
+.modal-fade-enter-active .modal-content,
+.modal-fade-leave-active .modal-content {
+  transition: transform 0.3s ease-out;
+}
+
+.modal-fade-enter-from .modal-content,
+.modal-fade-leave-to .modal-content {
+  transform: translateY(100%);
+}
+
+.modal-text {
+  padding: 0 10px 10px 10px;
+  font-weight: 900;
+  font-size: 26px;
+  color: #111;
+  margin-bottom: 0px;
+}
+
+.modal-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.modal-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 36px;
+  border: none;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  text-transform: uppercase;
+}
+
+.modal-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 transparent !important;
+}
+
+.modal-btn-primary {
+  background: #2b6be2;
+  color: white;
+  box-shadow: 0 5px 0 #2959b0;
+}
+
+.modal-btn-secondary {
+  background: none;
+  color: #645e5e;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+/* =========================================
+   ПРОЧИЕ СТИЛИ
+   ========================================= */
 
 .german__letters {
   display: flex;
@@ -986,56 +1203,8 @@ watchEffect(() => {
 }
 
 .german__letters-item:active {
-  box-shadow: 0 0 0 ;
-  transform: translate(1px , 1px);
-}
-
-.modal__window {
-  position: relative;
-  width: min(440px, 92%);
-  background: #fff;
-  border: 3px solid #111;
-  border-radius: 18px;
-  padding: 20px 35px;
-  text-align: center;
-  z-index: 1;
-}
-
-.modal__title {
-  font-weight: 900;
-  font-size: 28px;
-  margin-bottom: 8px;
-  color: #111;
-}
-
-.modal__text {
-  padding: 10px;
-}
-
-.modal__actions {
-  display: flex;
-  justify-content: center;
-  flex-direction: column-reverse;
-  gap: 12px;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-.wallet {
-  margin: 8px auto 14px;
-  width: min(420px, 100%);
-}
-
-.wallet__row {
-  display: flex;
-  justify-content: center;
-  font-weight: 800;
-  margin: 4px 0;
-  gap: 10px;
-}
-
-.wallet__label {
-  opacity: .8;
+  box-shadow: 0 0 0;
+  transform: translate(1px, 1px);
 }
 
 @media (max-width: 1023px) {
@@ -1051,12 +1220,14 @@ watchEffect(() => {
     padding: 5px;
     margin: 0 auto .7rem;
   }
+
   .quest__stat-value {
     width: 4.3rem;
     height: 2.3rem;
     font-size: 1rem;
     border: none;
   }
+
   .quest__top {
     position: relative;
     display: flex;
@@ -1067,6 +1238,7 @@ watchEffect(() => {
     box-shadow: none;
     border: none;
   }
+
   .quest__stat {
     order: 2;
     text-align: center;
@@ -1075,9 +1247,11 @@ watchEffect(() => {
     padding: .3rem .7rem;
     margin-top: 2.5rem;
   }
+
   .quest__word-btn {
     font-size: 14px;
   }
+
   .quest__lives {
     order: 1;
     position: absolute;
@@ -1092,6 +1266,7 @@ watchEffect(() => {
     font-size: 1.1rem;
     border-radius: 15px;
   }
+
   .quest__option-btn {
     height: 40px;
     font-size: 14px;
@@ -1099,20 +1274,15 @@ watchEffect(() => {
     box-shadow: var(--boxShadowMobile);
     padding: 3px;
   }
-  .quest__feedback.is-red {
-    font-size: 1.5rem;
-  }
-  .quest__feedback {
-    padding: 19px 8px;
-  }
 }
 
 @media (max-width: 479px) {
-  .quest__feedback.is-red {
-    font-size: 1rem;
-  }
   .quest__feedback-icon {
-    width: 34px;
+    width: 24px;
+  }
+
+  .feedback {
+    font-size: 1.2rem;
   }
 }
 
@@ -1183,16 +1353,6 @@ watchEffect(() => {
   box-shadow: 0 0 0 #1e1e1e;
 }
 
-@keyframes slideUp {
-  from { transform: translateY(100%); }
-  to { transform: translateY(0); }
-}
-
-@keyframes slideDown {
-  from { transform: translateY(0); }
-  to { transform: translateY(100%); }
-}
-
 .ad-overlay {
   position: fixed;
   top: 0;
@@ -1215,7 +1375,10 @@ watchEffect(() => {
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
+
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>

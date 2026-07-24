@@ -7,9 +7,9 @@
         v-for="item in infoData"
         :key="item.id"
         class="stat-item-wrapper"
+        :class="{'plus' : item.id === 'plus'}"
     >
       <button class="stat-btn" @click.stop="handleStatClick(item)">
-        <span  class="item__label"> {{ item.title }}</span>
         <img
             v-if="item.id === 'rank' && userAuth.isFreezeActive"
             class="stat-icon freeze-icon"
@@ -19,16 +19,18 @@
         >
         <span class="stat__items-wrapper">
           <img
-              :class="{'heart': item.id === 'lives'}"
+              :class="getIconClass(item)"
               class="stat-icon"
               :src="item.icon"
               :alt="item.alt"
           >
+          <span class="item__label"> {{ item.title }}:</span>
         <span v-if="!userAuth.isPremium || item.id !== 'lives'" class="stat-value">{{ item.value }}</span>
         </span>
       </button>
       <transition name="fade">
-        <div v-if="activeTooltip === item.id" class="tooltip-box" :class="'tooltip-' + item.id" @click="activeTooltip = false">
+        <div v-if="activeTooltip === item.id" class="tooltip-box" :class="'tooltip-' + item.id"
+             @click="activeTooltip = false">
           <div class="tooltip-header">
             <img :src="item.icon" class="tooltip-title-icon" :alt="item.alt">
             <div class="tooltip-title">{{ item.title }}</div>
@@ -60,6 +62,8 @@
         </div>
       </div>
     </transition>
+
+    <VCalendarStreak v-model="isCalendarOpen"/>
   </div>
 </template>
 
@@ -67,21 +71,25 @@
 import {ref, computed, onMounted, onBeforeUnmount} from 'vue'
 import {userlangStore} from "~/store/learningStore.js"
 import {userAuthStore} from '../../store/authStore.js'
-import { userChainStore } from '../../store/chainStore.js'
-import { useI18n } from 'vue-i18n'
+import {userChainStore} from '../../store/chainStore.js'
+import {useI18n} from 'vue-i18n'
 import FreezeShield from '../../assets/images/FreezeShield.svg'
-import Hats from '../../assets/images/hatsNAv.svg'
+import Hats from '../../assets/images/Hats.svg'
 import Articlus from '../../assets/images/article.svg'
 import Heart from '../../assets/images/heartInfo.svg'
 import Forever from '../../assets/images/forever.svg'
+import VCalendarStreak from "~/src/components/V-calendarStreak.vue"
+import LogoPlus from '../../assets/images/PlusLogo.png'
 
 const {t} = useI18n()
 const langStore = userlangStore()
 const userAuth = userAuthStore()
 const chainStore = userChainStore()
-
+const router = useRouter()
 const activeTooltip = ref(null)
 const showFreezeModal = ref(false)
+const isCalendarOpen = ref(false)
+
 
 const formattedFreezeDate = computed(() => {
   if (!userAuth.freezeEndsAt) return ''
@@ -89,7 +97,24 @@ const formattedFreezeDate = computed(() => {
   return date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})
 })
 
+const toPay = () => {
+  router.push('/pay')
+}
+
+const getIconClass = (item) => {
+  return {
+    'heart': item.id === 'lives',
+    'plus': item.id === 'plus',
+    'grayscale': item.id === 'plus' && !userAuth.isPremium,
+
+  }
+}
+
 const infoData = computed(() => [
+  {
+    id: 'plus',
+    icon: LogoPlus
+  },
   {
     id: "rank",
     title: t('pavelOverlay.rankTitle'),
@@ -130,7 +155,14 @@ const infoData = computed(() => [
 ])
 
 const handleStatClick = (item) => {
-  activeTooltip.value = activeTooltip.value === item.id ? null : item.id
+  if (item.id === 'plus') {
+    toPay()
+  } else if (item.id === 'rank') {
+    isCalendarOpen.value = true
+    activeTooltip.value = null
+  } else {
+    activeTooltip.value = activeTooltip.value === item.id ? null : item.id
+  }
 }
 
 const openFreezeModal = () => {
@@ -152,7 +184,6 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-
 .global-overlay {
   position: fixed;
   top: 0;
@@ -168,37 +199,56 @@ onBeforeUnmount(() => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: 12px;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 0 8px 0;
   position: relative;
 }
 
 .stat-item-wrapper {
   display: flex;
+  width: 100%;
+  background: var(--tabBg);
+  justify-content: center;
+  padding: 8px 4px;
+  border-radius: 14px;
+  box-shadow: var(--boxShadowMobile);
+}
+
+.stat-item-wrapper.plus {
+  border: none;
+  box-shadow: none;
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);;
+}
+
+.grayscale {
+  filter: grayscale(1);
 }
 
 .stat-btn {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  gap: 4px;
   border: none;
   background: none;
   padding: 0 2px;
   height: 38px;
   cursor: pointer;
+  gap: 5px;
 }
 
 .stat-icon {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
 }
 
-.stat-icon.heart {
-  height: 33px;
-  width: 33px;
+.stat-icon.plus {
+  width: 84px;
+  min-width: 100%;
+  height: 60px;
+  margin-right: 10px;
 }
 
 .freeze-icon {
@@ -207,7 +257,7 @@ onBeforeUnmount(() => {
 }
 
 .stat-value {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 800;
   color: var(--titleColor);
   font-family: "Nunito", sans-serif;
@@ -275,7 +325,7 @@ onBeforeUnmount(() => {
 .stat__items-wrapper {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 3px;
 }
 
 .tooltip-title-icon {
@@ -438,17 +488,13 @@ onBeforeUnmount(() => {
   transform: translateY(4px);
 }
 
-@media  (min-width: 1024px) {
+@media (min-width: 1024px) {
   .item__label {
     display: block;
     font-size: 20px;
   }
 
   .stat__items-wrapper {
-    border: 2px solid var(--tabsSlideBorderColor);
-    padding: 4px 14px;
-    background: var(--menuItemsBg);
-    border-radius: 10px;
   }
 }
 </style>

@@ -578,7 +578,7 @@ onBeforeUnmount(() => {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 5px 15px 5px 15px;
+  padding: 5px 10px 5px 10px;
 }
 
 .header-left, .header-right {

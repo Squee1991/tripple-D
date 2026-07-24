@@ -352,10 +352,11 @@ function endOfDay(dateObj) {
   width: 56px;
 }
 
+/* --- ИСПРАВЛЕНО: Базовый контейнер теперь имеет стандартное направление --- */
 .calendar__layout {
   flex: 1;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column; /* Скролл теперь будет правильно начинаться сверху */
   gap: 10px;
   padding: 10px;
   overflow-y: auto;
@@ -365,9 +366,16 @@ function endOfDay(dateObj) {
   padding-bottom: 60px;
 }
 
+/* --- ИСПРАВЛЕНО: Меняем визуальный порядок блоков на мобильных --- */
+.main {
+  flex-grow: 1;
+  order: 1; /* Календарь будет сверху */
+}
+
 .area__info {
   background: #ffffff;
   border-radius: 15px;
+  order: 2; /* Легенда уйдет вниз */
 }
 
 .legend__item {
@@ -425,10 +433,6 @@ function endOfDay(dateObj) {
   border-radius: 12px;
   background: #fff;
   font-weight: 800;
-}
-
-.main {
-  flex-grow: 1;
 }
 
 .calendar-card {
@@ -590,17 +594,24 @@ function endOfDay(dateObj) {
   background: #e3eeff;
 }
 
+/* --- ИСПРАВЛЕНО: Сетка для больших экранов (от 768px) --- */
+@media (min-width: 768px) {
+  .calendar__layout {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Легенда слева, календарь справа */
+    padding: 10px;
+    gap: 20px;
+  }
 
-@media (max-width: 767px) {
-  .layout {
-    grid-template-columns: 280px 1fr;
-    padding: 0;
+  /* Сбрасываем мобильный order, чтобы всё встало по порядку DOM */
+  .main, .area__info {
+    order: unset;
   }
 }
 
+/* --- ИСПРАВЛЕНО: Стили для мобильных экранов (до 767px) --- */
 @media (max-width: 767px) {
-  .layout {
-    flex-direction: column-reverse;
+  .calendar__layout {
     gap: 0;
     padding: 0 5px 20px 5px;
   }
@@ -614,7 +625,7 @@ function endOfDay(dateObj) {
     width: 50%;
   }
 
-  .legend__wrappper {
+  .legend__wrapper { /* Исправлена опечатка legend__wrappper -> legend__wrapper */
     padding: 10px;
   }
 
@@ -623,19 +634,24 @@ function endOfDay(dateObj) {
     height: 48px;
     margin-right: 8px;
   }
+
   .legend__name {
     font-size: 15px;
   }
+
   .calendar__cell {
     padding: 4px;
   }
+
   .calendar__badge {
     display: none;
   }
+
   .calendar__icon {
     width: 31px;
     height: 31px;
   }
+
   .calendar__icon-wrap {
     padding-top: 15px;
   }

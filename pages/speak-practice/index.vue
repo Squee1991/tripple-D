@@ -2,7 +2,7 @@
   <div class="speak__container">
     <header class="header">
       <VBackBtn/>
-      <h1 class="header__title">{{ t('speakIndexPage.title')}}</h1>
+      <h1 class="header__title">{{ t('speakIndexPage.title') }}</h1>
       <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
              stroke="orange" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
@@ -22,41 +22,55 @@
         </div>
         <main class="categories-container">
           <div
-              v-for="category in categories"
+              v-for="(category, catIndex) in categoriesSpeak"
               :key="category.id"
               class="category-group"
           >
             <div class="category-group__header">
-              <h2 class="category-group__title">{{ category.title }}</h2>
+              <h2 class="category-group__title">{{ t(category.title) }}</h2>
               <span class="category-group__counter">
-                0/{{ category.themes.length }} <span class="check-icon"></span>
+                {{ getCompletedCount(category) }}/{{ category.themes.length }} <span class="check-icon"></span>
               </span>
             </div>
             <div class="themes-slider">
               <div
-                  v-for="theme in category.themes"
+                  v-for="(theme, themeIndex) in category.themes"
                   :key="theme.id"
                   class="theme-card"
-                  @click="goToSession(theme.id)"
+                  @click="goToSession(theme, catIndex, themeIndex)"
               >
                 <div v-if="speakStore.userProgress[theme.id]" class="card__check">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </div>
                 <div class="card__content">
                   <span class="card__icon">{{ theme.icon }}</span>
-                  <span class="card__title">{{ theme.title }}</span>
+                  <span class="card__title">{{ t(theme.title) }}</span>
                 </div>
                 <div class="card__action">
-                  <div v-if="!speakStore.userProgress[theme.id]" class="card__progress-bar">
+                  <div class="card__progress-bar">
                     <div class="card__progress-fill" :style="{ width: '0%' }"></div>
                   </div>
                   <button
                       class="card__btn"
-                      :class="{ 'card__btn--completed': speakStore.userProgress[theme.id] }"
+                      :class="{
+                        'card__btn--completed': speakStore.userProgress[theme.id],
+                        'card__btn--locked': !isThemeUnlocked(catIndex, themeIndex)
+                      }"
                   >
-                    {{ speakStore.userProgress[theme.id] ? t('locationQuests.repeat') : t('locationQuests.start') }}
+                    <template v-if="isThemeUnlocked(catIndex, themeIndex)">
+                      {{ speakStore.userProgress[theme.id] ? t('locationQuests.repeat') : t('locationQuests.start') }}
+                    </template>
+                    <template v-else>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                           style="margin-bottom: -3px;">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                    </template>
                   </button>
                 </div>
               </div>
@@ -72,6 +86,7 @@
         :img="SpeakingIcon"
         :text="t('speakIndexPage.modalText')"
     />
+    <VPremiumModal v-model:show="showPremiumModal"/>
   </div>
 </template>
 
@@ -83,94 +98,60 @@ import VBanner from "~/src/components/V-banner.vue";
 import SpeakIcon from "../../assets/images/speakingIcon.svg";
 import VTransition from "~/src/components/V-transition.vue";
 import { useSpeakStore } from '../../store/speakStore.js';
-import Modal from '../../src/components/modal.vue'
-import SpeakingIcon from '../../assets/images/speakingIcon.svg'
+import Modal from '../../src/components/modal.vue';
+import SpeakingIcon from '../../assets/images/speakingIcon.svg';
+import { categoriesSpeak } from '../../utils/speak-themes-category.js';
+import { userAuthStore } from '../../store/authStore.js';
+import VPremiumModal from "~/src/components/V-premiumModal.vue";
+
 const { t } = useI18n();
 const router = useRouter();
 const speakStore = useSpeakStore();
+const authStore = userAuthStore();
 const isMounted = ref(false);
 const showDevModal = ref(false);
-const categories = [
-  {
-    id: 'society_lifestyle',
-    title: t('speakTopics.speak'),
-    themes: [
-      { id: 'firstmeet', icon: '👋', title: t('speakThemes.firstmeet') },
-      { id: 'acquaintance', icon: '👥', title: t('speakThemes.acquaintance') },
-      { id: 'secondmeet', icon: '🤝', title: t('speakThemes.secondmeet') },
-      { id: 'family_talk', icon: '👨‍👩‍👧‍👦', title: t('speakThemes.family_talk') },
-      { id: 'weekend_plans', icon: '🗓️', title: t('speakThemes.weekend_plans') },
-      { id: 'friend_call', icon: '📞', title: t('speakThemes.friend_call') },
-      { id: 'hobby_talk', icon: '🎨', title: t('speakThemes.hobby_talk') },
-      { id: 'party_talk', icon: '🥳', title: t('speakThemes.party_talk') },
-    ]
-  },
-  {
-    id: 'food_services',
-    title: t('speakTopics.food'),
-    themes: [
-      { id: 'cafe_order', icon: '☕', title: t('speakThemes.cafe_order') },
-      { id: 'restaurant_dinner', icon: '🍽️', title: t('speakThemes.restaurant_dinner') },
-      { id: 'store_checkout', icon: '🛒', title: t('speakThemes.store_checkout') },
-      { id: 'order_eat', icon: '🛵', title: t('speakThemes.order_eat') },
-      { id: 'consultation_talk', icon: '💬', title: t('speakThemes.consultation_talk') }
-    ]
-  },
-  {
-    id: 'travel_transport',
-    title: t('speakTopics.transport'),
-    themes: [
-      { id: 'train_station', icon: '🚉', title: t('speakThemes.train_station') },
-      { id: 'train_ticket', icon: '🎫', title: t('speakThemes.train_ticket') },
-      { id: 'taxi_berlin', icon: '🚖', title: t('speakThemes.taxi_berlin') },
-      { id: 'bus_talk', icon: '🚖', title: t('speakThemes.bus_talk') },
-      { id: 'hotel_checkin', icon: '🏨', title: t('speakThemes.hotel_checkin') },
-      { id: 'border_check', icon: '🛂', title: t('speakThemes.border_check') },
-      { id: 'airport_talk', icon: '✈️', title: t('speakThemes.airport_talk') },
-      { id: 'info_talk', icon: 'ℹ️', title: t('speakThemes.info_talk') }
-    ]
-  },
-  {
-    id: 'city_life',
-    title: t('speakTopics.city'),
-    themes: [
-      { id: 'bank_account', icon: '💳', title: t('speakThemes.bank_account') },
-      { id: 'apartment_rent', icon: '🏠', title: t('speakThemes.apartment_rent') },
-      { id: 'clothes_shopping', icon: '🛍️', title: t('speakThemes.clothes_shopping') },
-      { id: 'shopping', icon: '📦', title: t('speakThemes.shopping') },
-      { id: 'post_office', icon: '📮', title: t('speakThemes.post_office') },
-      { id: 'police_talk', icon: '👮', title: t('speakThemes.police_talk') },
-      { id: 'barbershop', icon: '💈', title: t('speakThemes.barbershop') }
-    ]
-  },
-  {
-    id: 'health',
-    title: t('speakTopics.health'),
-    themes: [
-      { id: 'doctor_visit', icon: '🩺', title: t('speakThemes.doctor_visit') },
-      { id: 'pharmacy_vitamins', icon: '💊', title: t('speakThemes.pharmacy_vitamins') },
-      { id: 'insurance', icon: '📄', title: t('speakThemes.insurance') },
-      { id: 'at_doctor', icon: '🏥', title: t('speakThemes.at_doctor') },
-      { id: 'dentist', icon: '🦷', title: t('speakThemes.dentist') },
-      { id: 'veterinary', icon: '🐾', title: t('speakThemes.veterinary') }
-    ]
-  },
-  {
-    id: 'work_career',
-    title: t('speakTopics.work'),
-    themes: [
-      { id: 'job_looking', icon: '🔍', title: t('speakThemes.job_looking') },
-      { id: 'job_interview', icon: '📋', title: t('speakThemes.job_interview') },
-      { id: 'bos_talk', icon: '💼', title: t('speakThemes.bos_talk') },
-      { id: 'vacation', icon: '🏖️', title: t('speakThemes.vacation') },
-      { id: 'salary_talk', icon: '💰', title: t('speakThemes.salary_talk') },
-      { id: 'dismissal_talk', icon: '🚪', title: t('speakThemes.dismissal_talk') },
-    ]
-  }
-];
+const showPremiumModal = ref(false);
 
-const goToSession = (themeId) => {
-  router.push({ path: '/speak-practice/session', query: { theme: themeId } });
+const getCompletedCount = (category) => {
+  return category.themes.filter(theme => speakStore.userProgress[theme.id]).length;
+};
+
+// Новая функция проверки доступности темы
+const isThemeUnlocked = (catIndex, themeIndex) => {
+  // 1. Если есть премиум — открыто всё
+  if (authStore.isPremium) return true;
+
+  // 2. Первые две темы первой категории открыты всегда
+  if (catIndex === 0 && (themeIndex === 0 || themeIndex === 1)) return true;
+
+  // 3. Для остальных: ищем ID предыдущей темы
+  let prevThemeId = null;
+
+  if (themeIndex > 0) {
+    // Предыдущая тема находится в текущей категории
+    prevThemeId = categoriesSpeak[catIndex].themes[themeIndex - 1].id;
+  } else if (catIndex > 0) {
+    // Предыдущая тема — это последняя тема предыдущей категории
+    const prevCategory = categoriesSpeak[catIndex - 1];
+    prevThemeId = prevCategory.themes[prevCategory.themes.length - 1].id;
+  }
+
+  // 4. Если предыдущая тема найдена, проверяем пройдена ли она
+  if (prevThemeId) {
+    return !!speakStore.userProgress[prevThemeId];
+  }
+
+  return false;
+};
+
+// Обновленная функция перехода
+const goToSession = (theme, catIndex, themeIndex) => {
+  if (isThemeUnlocked(catIndex, themeIndex)) {
+    router.push({ path: '/speak-practice/session', query: { theme: theme.id } });
+  } else {
+    // Если тема еще закрыта, показываем модалку премиума (апсейл)
+    showPremiumModal.value = true;
+  }
 };
 
 onMounted(() => {
@@ -179,7 +160,6 @@ onMounted(() => {
     isMounted.value = true;
   }, 90);
 });
-
 </script>
 
 <style scoped>
@@ -236,6 +216,12 @@ onMounted(() => {
   height: 100%;
   overflow-y: auto;
   padding-bottom: 100px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.speak__content-inner::-webkit-scrollbar {
+  display: none;
 }
 
 .categories-container {
@@ -243,7 +229,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .category-group {
@@ -257,7 +243,7 @@ onMounted(() => {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 
 .category-group__title {
@@ -287,14 +273,62 @@ onMounted(() => {
   padding: 5px 20px 15px 20px;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .themes-slider::-webkit-scrollbar {
   display: none;
 }
-.themes-slider {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+
+@media (hover: hover) and (pointer: fine) {
+  .themes-slider {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
+
+  .themes-slider::-webkit-scrollbar {
+    display: block;
+    height: 6px;
+  }
+
+  .themes-slider::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  .themes-slider::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 10px;
+  }
+
+  .themes-slider::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8;
+  }
+
+  .speak__content-inner {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
+
+  .speak__content-inner::-webkit-scrollbar {
+    display: block;
+    width: 6px;
+  }
+
+  .speak__content-inner::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  .speak__content-inner::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 10px;
+  }
+
+  .speak__content-inner::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8;
+  }
 }
 
 .theme-card {
@@ -317,6 +351,7 @@ onMounted(() => {
   transform: translateY(4px);
   box-shadow: 0 2px 0 var(--tabsSlideBorderColor);
 }
+
 .theme-card:active .card__btn {
   transform: translateY(2px);
   box-shadow: 0 2px 0 transparent;
@@ -334,7 +369,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .card__content {
@@ -383,14 +418,14 @@ onMounted(() => {
 .card__btn {
   width: 100%;
   padding: 8px 0;
-  border-radius: 12px;
+  border-radius: 42px;
   border: none;
   font-weight: bold;
   font-size: 13px;
   cursor: pointer;
   color: #fff;
   background-color: #58cc02;
-  box-shadow: 0 4px 0 #58a700;
+  box-shadow: 0 5px 0 #58a700;
   transition: all 0.2s ease;
   pointer-events: none;
 }
@@ -398,5 +433,10 @@ onMounted(() => {
 .card__btn--completed {
   background-color: #1cb0f6;
   box-shadow: 0 4px 0 #1899d6;
+}
+
+.card__btn--locked {
+  background-color: #a0aec0;
+  box-shadow: 0 4px 0 #718096;
 }
 </style>

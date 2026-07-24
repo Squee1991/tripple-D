@@ -1,5 +1,6 @@
 export const achievementToAwardMap = {
     explorer: 'awards.explorer',
+    adventures: 'awards.adventures',
     Articlus: 'awards.articlus',
     registerAchievement: 'awards.registerAchievement',
     level10: 'awards.level10',
@@ -15,7 +16,12 @@ export const achievementToAwardMap = {
     all_adjectives: 'awards.allAdjectives',
     all_verbs: 'awards.allVerbs',
     FiveHearts: 'awards.fiveHearts',
-    daily42:"awards.daily42",
-    iAmGroot:"awards.iAmGroot",
-    adventures: 'awards.adventures',
+    daily42: 'awards.daily42',
+    iAmGroot: 'awards.iAmGroot',
+    wasPlusUser: 'awards.wasPlusUser',
+    santaHat: 'awards.santaHat',
+    christmasBall: 'awards.christmasBall',
+    christmasWreath: 'awards.christmasWreath',
+    valentineBear: 'awards.valentineBear',
+    cupidArrow: 'awards.cupidArrow'
 }
