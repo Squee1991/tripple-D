@@ -398,7 +398,7 @@
     ],
     "options": [
       {
-        "text": "Meine Nummer ist 0176 123 456 78.",
+        "text": "Meine Nummer ist 0 1 7 6 1 2 3 4 5 6 7 8.",
         "translation": {
           "ru-RU": "Мой номер 0176 123 456 78.",
           "en-US": "My number is 0176 123 456 78.",
@@ -415,7 +415,7 @@
         "nextStep": "dauer"
       },
       {
-        "text": "Sie erreichen mich unter der 0176 123 456 78.",
+        "text": "Sie erreichen mich unter der 0 1 7 6 1 2 3 4 5 6 7 8.",
         "translation": {
           "ru-RU": "Вы можете связаться со мной по номеру 0176 123 456 78.",
           "en-US": "You can reach me at 0176 123 456 78.",

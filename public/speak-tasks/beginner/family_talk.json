@@ -522,7 +522,7 @@
           "uk-UA": "До зустрічі!",
           "uz-UZ": "Ko'rishguncha!"
         },
-        "nextStep": "end"
+        "nextStep": null
       },
       {
         "text": "Bis gleich! Tschüss!",
@@ -539,27 +539,9 @@
           "uk-UA": "До зустрічі! Бувай!",
           "uz-UZ": "Ko'rishguncha! Xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Das Gespräch ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Разговор завершен.",
-      "en-US": "The conversation is ended.",
-      "ar-SA": "انتهت المحادثة.",
-      "es-ES": "La conversación ha terminado.",
-      "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत समाप्त हो गई है。",
-      "pl-PL": "Rozmowa została zakończona.",
-      "ro-RO": "Conversația s-a încheiat.",
-      "tr-TR": "Konuşma sona erdi.",
-      "uk-UA": "Розмову завершено.",
-      "uz-UZ": "Suhbat yakunlandi."
-    },
-    "options": [],
     "defaultNext": null
-  }
+  },
 }

@@ -218,9 +218,9 @@
 		{ "ru": "Стельки", "en": "Insoles", "tr": "Ayakkabı astarı", "pl": "Wkładki do butów", "uk": "Устілки", "es": "Plantillas", "uz": "Stelka", "ar": "فرشة الحذاء", "de": "Einlegesohlen", "fr": "Semelles", "hi": "धूप का चश्मा", "ro": "Branțuri", "article": "die", "plural": "Einlegesohlen", "pluralArticle": "die" }
 	],
 	"Food": [
-		{ "ru": "Салями", "en": "Salami", "tr": "Salam", "pl": "Salami", "uk": "Салямі", "es": "Salami", "uz": "Salami", "ar": "سلامي", "de": "Salami", "fr": "Salami", "hi": "सलामी", "ro": "Salam", "article": "die", "plural": "Salamis", "pluralArticle": "die" },
 		{ "ru": "Хлеб", "en": "Bread", "tr": "Ekmek", "pl": "Chleb", "uk": "Хліб", "es": "Pan", "uz": "Nonga", "ar": "خبز", "de": "Brot", "fr": "Pain", "hi": "ब्रेड", "ro": "Pâine", "article": "das", "plural": "Brote", "pluralArticle": "die" },
 		{ "ru": "Вода", "en": "Water", "tr": "Su", "pl": "Woda", "uk": "Вода", "es": "Agua", "uz": "Suv", "ar": "ماء", "de": "Wasser", "fr": "Eau", "hi": "पानी", "ro": "Apă", "article": "das", "plural": "Wässer", "pluralArticle": "die" },
+		{ "ru": "Салями", "en": "Salami", "tr": "Salam", "pl": "Salami", "uk": "Салямі", "es": "Salami", "uz": "Salami", "ar": "سلامي", "de": "Salami", "fr": "Salami", "hi": "सलामी", "ro": "Salam", "article": "die", "plural": "Salamis", "pluralArticle": "die" },
 		{ "ru": "Мясо", "en": "Meat", "tr": "Et", "pl": "Mięso", "uk": "М'ясо", "es": "Carne", "uz": "Go‘sht", "ar": "لحم", "de": "Fleisch", "fr": "Viande", "hi": "मांस", "ro": "Carne", "article": "das", "plural": "Fleischsorten", "pluralArticle": "die" },
 		{ "ru": "Яйцо", "en": "Egg", "tr": "Yumurta", "pl": "Jajko", "uk": "Яйце", "es": "Huevo", "uz": "Tuxum", "ar": "بيضة", "de": "Ei", "fr": "Œuf", "hi": "अंडा", "ro": "Ou", "article": "das", "plural": "Eier", "pluralArticle": "die" },
 		{ "ru": "Еда", "en": "Food", "tr": "Yemek", "pl": "Jedzenie", "uk": "Їжа", "es": "Comida", "uz": "Oziq-ovqat", "ar": "طعام", "de": "Essen", "fr": "Nourriture", "hi": "खाना", "ro": "Mâncare", "article": "das", "plural": "Essen", "pluralArticle": "die" },

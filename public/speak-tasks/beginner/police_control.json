@@ -488,7 +488,7 @@
           "uk-UA": "Дякую, Вам теж гарного дня. До побачення.",
           "uz-UZ": "Rahmat, sizga ham xayrli kun. Xayr."
         },
-        "nextStep": "step_15"
+        "nextStep": null
       },
       {
         "text": "Auf Wiedersehen!",
@@ -505,28 +505,9 @@
           "uk-UA": "До побачення!",
           "uz-UZ": "Xayr!"
         },
-        "nextStep": "step_15"
+        "nextStep": null
       }
     ],
-    "defaultNext": "step_15"
-  },
-  "step_15": {
-    "botText": "Das Gespräch ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Разговор окончен.",
-      "en-US": "The conversation is over.",
-      "ar-SA": "انتهت المحادثة.",
-      "es-ES": "La conversación ha terminado.",
-      "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत खत्म हो गई है.",
-      "pl-PL": "Rozmowa zakończona.",
-      "ro-RO": "Conversația s-a încheiat.",
-      "tr-TR": "Konuşma sona erdi.",
-      "uk-UA": "Розмова закінчена.",
-      "uz-UZ": "Suhbat yakunlandi."
-    },
-    "vocabulary": [],
-    "options": [],
     "defaultNext": null
   }
 }

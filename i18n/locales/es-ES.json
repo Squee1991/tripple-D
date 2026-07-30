@@ -8040,11 +8040,11 @@
     "description": "Protege tus birretes de penalizaciones"
   },
   "cardSales": {
-    "title3": "3% de descuento",
-    "title5": "5% de descuento",
-    "title6": "6% de descuento",
-    "title10": "10% de descuento",
-    "title15": "15% de descuento"
+    "title3": "Descuento Plus-I",
+    "title5": "Descuento del 5%",
+    "title6": "Descuento Plus-II",
+    "title10": "Descuento del 10%",
+    "title15": "Descuento del 15%"
   },
   "cardsShop": {
     "full": "Lleno",
@@ -8860,6 +8860,9 @@
   },
   "generalCategory": {
     "generaLabel": "Logros generales",
+    "wasPlusUserTitle": "Propietario de PLUS",
+    "wasPlusUserDescription": "¡Obtén una suscripción PLUS y mejora tu alemán con total comodidad!",
+    "wasPlusUserAward": "Recompensa: Saco de Artíclus",
     "dailyTitle": "Voluntad de hierro",
     "dailyText": "Completa 50 veces ejercicios del Diario de misiones",
     "dailyAward": "Premio: Reloj de arena de la eternidad",
@@ -9762,9 +9765,9 @@
     "rank_5": "Capitán",
     "rank_6": "Guardián",
     "rank_7": "Leyenda",
-    "sale3": "Descuento 3%",
+    "sale3": "Descuento Plus-1",
+    "sale6": "Descuento Plus-2",
     "sale5": "Descuento 5%",
-    "sale6": "Descuento 6%",
     "sale10": "Descuento 10%",
     "sale15": "Descuento 15%"
   },
@@ -10175,13 +10178,13 @@
     "cabinet": "Cuenta"
   },
   "speakTopics": {
-    "speak": "Presentación y conversación",
+    "speak": "Presentaciones y comunicación",
     "food": "Comida y compras",
-    "transport": "Viajes y transporte",
     "city": "Servicios urbanos y vida cotidiana",
     "health": "Salud",
     "work": "Trabajo y carrera",
-    "auto": "El coche y la carretera"
+    "auto": "Coche y carretera",
+    "travel": "Viajes"
   },
   "speakThemes": {
     "firstmeet": "Presentación",
@@ -10587,7 +10590,7 @@
     "description": "Todas las funciones ya están desbloqueadas"
   },
   "newsBannerText": {
-    "text": "¡Hola! Todos los días, Skillupgerman publica aquí noticias interesantes sobre el idioma alemán. ¡Aprende con gusto!"
+    "text": "¡Hola! Skillupgerman publica aquí noticias interesantes sobre el idioma alemán. ¡Aprende con gusto!"
   },
   "marathonLeaderBoard": {
     "stateHint": "¡La carrera comenzará pronto! Prepárate para la nueva temporada.",

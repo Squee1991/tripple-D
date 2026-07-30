@@ -18,6 +18,7 @@
       <aside class="sidebar-panel">
         <button v-if="!isMobile" class="back-btn" @click="backToMain" aria-label="to main" type="button">
           <img class="back__btn-icon" :src="Home" alt="Home"/>
+
           <span class="back-label">{{ t('cabinet.main') }}</span>
         </button>
         <div class="sidebar-title">{{ t('cabinet.category') }}</div>

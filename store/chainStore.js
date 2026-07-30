@@ -1,10 +1,11 @@
-import { ref, computed, watch } from 'vue'
-import { defineStore } from 'pinia'
-import { regions } from '~/utils/regions.js'
-import { doc, getDoc, getFirestore, runTransaction, increment, setDoc } from 'firebase/firestore'
-import { getAuth, onAuthStateChanged } from 'firebase/auth'
-import {dailyStore } from './dailyStore.js'
-import { userlangStore } from './learningStore.js'
+import {ref, computed, watch} from 'vue'
+import {defineStore} from 'pinia'
+import {regions} from '~/utils/regions.js'
+import {doc, getDoc, getFirestore, runTransaction, increment, setDoc} from 'firebase/firestore'
+import {getAuth, onAuthStateChanged} from 'firebase/auth'
+import {dailyStore} from './dailyStore.js'
+import {userlangStore} from './learningStore.js'
+import {userAuthStore} from './authStore.js' // Подключаем стор авторизации
 
 const REGEN_INTERVAL_MS = 60 * 60 * 1000
 const MAX_LIVES = 5
@@ -36,8 +37,9 @@ export const userChainStore = defineStore('chain', () => {
 	const internalIndex = ref(0)
 	const taskResults = ref({})
 	const isRetryMode = ref(false)
-    const daily = dailyStore()
+	const daily = dailyStore()
 	const langStore = userlangStore()
+	const authStore = userAuthStore() // Инициализируем стор авторизации
 	let lifeTickerId = null
 
 	const totalQuestTasks = computed(() => quest.value?.conditions?.requiredTasks ?? quest.value?.tasks?.length ?? 0)
@@ -73,7 +75,7 @@ export const userChainStore = defineStore('chain', () => {
 		for (let i = 0; i < requiredTasks.value; i++) {
 			const originalIndex = activeQueue.value[i]
 			if (taskResults.value[originalIndex] !== undefined) {
-				result.push({ correct: taskResults.value[originalIndex] })
+				result.push({correct: taskResults.value[originalIndex]})
 			}
 		}
 		return result
@@ -173,7 +175,7 @@ export const userChainStore = defineStore('chain', () => {
 	async function saveLivesToRoot() {
 		const userRef = await getUserRef()
 		if (!userRef) return
-		await setDoc(userRef, { lives: lives.value, lastLifeAtMs: lastLifeAtMs.value }, { merge: true })
+		await setDoc(userRef, {lives: lives.value, lastLifeAtMs: lastLifeAtMs.value}, {merge: true})
 	}
 
 	function startLifeTicker() {
@@ -211,7 +213,7 @@ export const userChainStore = defineStore('chain', () => {
 			lives.value = maxLives
 			lastLifeAtMs.value = 0
 			questProgress.value = {}
-			await setDoc(userRef, { lives: maxLives, lastLifeAtMs: 0, questProgress: {} }, { merge: true })
+			await setDoc(userRef, {lives: maxLives, lastLifeAtMs: 0, questProgress: {}}, {merge: true})
 		}
 		const changed = applyLifeRegenIfNeeded()
 		if (changed) await saveLivesToRoot()
@@ -245,7 +247,7 @@ export const userChainStore = defineStore('chain', () => {
 			const prev = qp[currentQuestId.value] || {}
 			const isSuccessNow = success.value
 			if (prev.success && (!prev.wrongIndices || prev.wrongIndices.length === 0) && (prev.correctCount === prev.requiredTasks) && !isRetryMode.value) {
-				questProgress.value = { ...questProgress.value, [currentQuestId.value]: prev }
+				questProgress.value = {...questProgress.value, [currentQuestId.value]: prev}
 				return
 			}
 			const finalCorrectCount = currentWrongIndices.length === 0 ? totalQuestTasks.value : correctCount.value
@@ -271,7 +273,7 @@ export const userChainStore = defineStore('chain', () => {
 					points: increment(10),
 					exp: currentExp,
 					isLeveling: currentLevel
-				}, { merge: true });
+				}, {merge: true});
 				reward = true;
 				awardedNow = true;
 				langStore.points = Number(langStore.points || 0) + 10;
@@ -294,8 +296,8 @@ export const userChainStore = defineStore('chain', () => {
 				wrongIndices: currentWrongIndices
 			}
 
-			tx.set(userRef, { questProgress: { [currentQuestId.value]: p } }, { merge: true })
-			questProgress.value = { ...questProgress.value, [currentQuestId.value]: p }
+			tx.set(userRef, {questProgress: {[currentQuestId.value]: p}}, {merge: true})
+			questProgress.value = {...questProgress.value, [currentQuestId.value]: p}
 			justAwarded.value = awardedNow
 		})
 	}
@@ -343,7 +345,7 @@ export const userChainStore = defineStore('chain', () => {
 	}
 
 	function initializeTaskQueue(length) {
-		activeQueue.value = Array.from({ length }, (_, i) => i)
+		activeQueue.value = Array.from({length}, (_, i) => i)
 		taskResults.value = {}
 		internalIndex.value = 0
 		isRetryMode.value = false
@@ -410,8 +412,10 @@ export const userChainStore = defineStore('chain', () => {
 		const originalIndex = currentTaskIndex.value
 		taskResults.value[originalIndex] = isCorrect.value
 		showResult.value = true
+
 		try {
-			if (!isCorrect.value && !skipLives && !lifeSpentThisStep.value) {
+			// ДОБАВЛЕНО: && !authStore.isPremium
+			if (!isCorrect.value && !skipLives && !lifeSpentThisStep.value && !authStore.isPremium) {
 				const before = lives.value
 				lives.value = Math.max(0, lives.value - 1)
 				lifeSpentThisStep.value = true
@@ -430,7 +434,8 @@ export const userChainStore = defineStore('chain', () => {
 		if (advancing.value) return
 		advancing.value = true
 		showResult.value = false
-		if (!skipLives && lives.value <= 0) {
+		// ДОБАВЛЕНО: блокируем завершение квеста из-за отсутствия жизней для премиум юзеров
+		if (!skipLives && lives.value <= 0 && !authStore.isPremium) {
 			finished.value = true
 			advancing.value = false
 			return
@@ -501,7 +506,7 @@ export const userChainStore = defineStore('chain', () => {
 			const snap = await tx.get(userRef)
 			if (!snap.exists()) return
 			const data = snap.data() || {}
-			const qp = { ...(data.questProgress || {}) }
+			const qp = {...(data.questProgress || {})}
 			if (qp[newId]) return
 			const found = questData.aliases
 				.map(id => qp[id])
@@ -515,7 +520,7 @@ export const userChainStore = defineStore('chain', () => {
 			if (!found) return
 			qp[newId] = found
 			questData.aliases.forEach(id => delete qp[id])
-			tx.set(userRef, { questProgress: qp }, { merge: true })
+			tx.set(userRef, {questProgress: qp}, {merge: true})
 		})
 		const local = questData.aliases
 			.map(id => questProgress.value[id])
@@ -552,7 +557,8 @@ export const userChainStore = defineStore('chain', () => {
 		if (v) {
 			try {
 				await saveFinalProgress()
-			} catch {}
+			} catch {
+			}
 		}
 	})
 

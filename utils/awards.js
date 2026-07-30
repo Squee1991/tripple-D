@@ -22,6 +22,7 @@ import ChristmasBall from '../assets/images/event-rewards/winter-event/winter-re
 import ChristmasWreath from '../assets/images/event-rewards/winter-event/winter-rewards/christmas-wreath.svg'
 import TeddyGift from '../assets/images/event-rewards/valentine-event/valentine-rewards/teddy-bear.svg'
 import CupidArrow from '../assets/images/event-rewards/valentine-event/valentine-rewards/cupidonArrow.svg'
+import Sack from '../assets/images/Sack.svg'
 
 export const AWARDS = [
 	{
@@ -46,7 +47,7 @@ export const AWARDS = [
 		key: 'wasPlusUser',
 		title: 'awards.wasPlusUser',
 		description: 'awards.wasPlusUserDescription',
-		icon: WasteMoney
+		icon: Sack
 	},
 	{
 		key: 'registerAchievement',

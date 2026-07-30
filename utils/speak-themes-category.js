@@ -87,7 +87,7 @@ export const categoriesSpeak = [
 	},
 	{
 		id: 'travel',
-		title: 'Путешествия',
+		title: 'speakTopics.travel',
 		themes: [
 			{ id: 'train_ticket', icon: '🎫', title: 'speakThemes.train_ticket' },
 			{ id: 'train_station', icon: '🚉', title: 'speakThemes.train_station' },
@@ -98,5 +98,5 @@ export const categoriesSpeak = [
 			{ id: 'airport_talk', icon: '✈️', title: 'speakThemes.airport_talk' },
 			{ id: 'info_talk', icon: 'ℹ️', title: 'speakThemes.info_talk' }
 		]
-	},
-];
+	}
+]

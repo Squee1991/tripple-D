@@ -245,7 +245,7 @@
     "defaultNext": "step_7"
   },
   "step_7": {
-    "botText": "Alles klar. Das macht zusammen 5 Euro und 80 Cent.",
+    "botText": "Alles klar. Das macht zusammen 5 Euro 80 ",
     "botTranslation": {
       "ru-RU": "Хорошо. Это составляет вместе 5 евро и 80 центов.",
       "en-US": "All right. That makes a total of 5 euros and 80 cents.",
@@ -509,25 +509,6 @@
         "nextStep": "step_15"
       }
     ],
-    "defaultNext": "step_15"
-  },
-  "step_15": {
-    "botText": "Das Gespräch ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Разговор окончен.",
-      "en-US": "The conversation is over.",
-      "ar-SA": "انتهت المحادثة.",
-      "es-ES": "La conversación ha terminado.",
-      "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत खत्म हो गई है।",
-      "pl-PL": "Rozmowa zakończona.",
-      "ro-RO": "Conversația s-a încheiat.",
-      "tr-TR": "Konuşma sona erdi.",
-      "uk-UA": "Розмова закінчена.",
-      "uz-UZ": "Suhbat yakunlandi."
-    },
-    "vocabulary": [],
-    "options": [],
-    "defaultNext": null
+    "defaultNext": "null"
   }
 }

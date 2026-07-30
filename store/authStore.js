@@ -23,7 +23,7 @@ import {
 } from 'firebase/auth';
 import { GoogleSignIn } from '@capawesome/capacitor-google-sign-in';
 import { useBillingStore } from './billingStore.js'
-import { AppleSignIn} from "@capawesome/capacitor-apple-sign-in";
+import { AppleSignIn, SignInScope} from "@capawesome/capacitor-apple-sign-in";
 import { doc, setDoc, getDoc, getFirestore, updateDoc, serverTimestamp, writeBatch } from 'firebase/firestore';
 import { userlangStore } from "./learningStore.js";
 let authStateUnsubscribe = null;
@@ -111,6 +111,22 @@ export const userAuthStore = defineStore('auth', () => {
         if (typeof value?.toDate === 'function') return value.toDate().toISOString();
         const date = new Date(value);
         return isNaN(date.getTime()) ? null : date.toISOString();
+    };
+
+    const activateDiscount = async (discountId) => {
+        const user = auth.currentUser;
+        if (!user) return;
+        try {
+            if (premiumDiscount.value) {
+                premiumDiscount.value[discountId] = true;
+            }
+            await updateDoc(doc(db, 'users', user.uid), {
+                [discountId]: true
+            });
+
+        } catch (e) {
+            console.error('Ошибка при активации скидки в Firebase:', e);
+        }
     };
 
     const detectWebView = () => {
@@ -585,8 +601,27 @@ export const userAuthStore = defineStore('auth', () => {
         await checkFeedbackSurveyEligibility();
     };
 
-    const resetPassword = async (email) => {
-        await sendPasswordResetEmail(auth, email);
+    const resetPassword = async (emailToReset) => {
+        try {
+            const functionUrl = 'https://us-central1-tripple-d-90bd2.cloudfunctions.net/sendResetEmail';
+            const response = await fetch(functionUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email: emailToReset })
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error || 'Ошибка сервера при отправке письма');
+            }
+
+            return await response.json();
+        } catch (error) {
+            console.error('Ошибка ', error);
+            throw error;
+        }
     };
 
     const fetchuser = () => {
@@ -691,9 +726,31 @@ export const userAuthStore = defineStore('auth', () => {
     const deleteAccount = async (password = null) => {
         const user = auth.currentUser;
         if (!user) throw { code: 'auth/no-current-user' };
+
         try {
             const usesGoogle = user.providerData.some(p => p.providerId === 'google.com');
-            if (usesGoogle) {
+            const usesApple = user.providerData.some(p => p.providerId === 'apple.com');
+            if (usesApple) {
+                const provider = new OAuthProvider('apple.com');
+                if (Capacitor.isNativePlatform()) {
+                    // Запрашиваем свежий токен через плагин
+                    const result = await AppleSignIn.signIn({
+                        scopes: [SignInScope.Email, SignInScope.FullName],
+                    });
+
+                    if (!result.idToken) {
+                        throw new Error('Не удалось получить токен Apple для удаления');
+                    }
+
+                    const credential = provider.credential({
+                        idToken: result.idToken,
+                    });
+                    await reauthenticateWithCredential(user, credential);
+                } else {
+                    // Для веба
+                    await reauthenticateWithPopup(user, provider);
+                }
+            } else if (usesGoogle) {
                 const provider = new GoogleAuthProvider();
                 await reauthenticateWithPopup(user, provider);
             } else {
@@ -702,21 +759,20 @@ export const userAuthStore = defineStore('auth', () => {
                 const cred = EmailAuthProvider.credential(user.email, password);
                 await reauthenticateWithCredential(user, cred);
             }
-
             const batch = writeBatch(db);
             batch.delete(doc(db, 'users', user.uid));
             batch.delete(doc(db, LEADERBOARD_COLLECTION, user.uid));
             batch.delete(doc(db, LEADERBOARD_GUESS, user.uid));
             await batch.commit();
-
             await deleteUser(user);
             setUserData({});
+
         } catch (err) {
             if (err && err.code) throw err;
             const msg = String(err?.message || '');
             if (msg.includes('requires-recent-login')) throw { code: 'auth/requires-recent-login' };
-            if (msg.includes('popup-closed')) throw { code: 'auth/popup-closed-by-user' };
-            throw { code: 'auth/unknown' };
+            if (msg.includes('popup-closed') || msg.includes('cancel')) throw { code: 'auth/user-cancelled' };
+            throw { code: 'auth/unknown', message: msg };
         }
     };
 
@@ -780,6 +836,7 @@ export const userAuthStore = defineStore('auth', () => {
         clearNotEnoughArticle,
         achievements,
         incrementHats,
+        activateDiscount,
 
         initAuth,
         fetchuser,

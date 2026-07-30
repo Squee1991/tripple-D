@@ -69,7 +69,7 @@
       {
         "text": "Ich möchte mein Gehalt neu verhandeln.",
         "translation": {
-          "ru-RU": "Я хочу пересмотреть (заново обсудить) свою зарплату.",
+          "ru-RU": "Я хочу пересмотреть свою зарплату.",
           "en-US": "I would like to renegotiate my salary.",
           "ar-SA": "أريد إعادة التفاوض على راتبي.",
           "es-ES": "Me gustaría renegociar mi salario.",
@@ -330,7 +330,7 @@
       {
         "text": "Ich wünsche mir sieben Prozent mehr.",
         "translation": {
-          "ru-RU": "Я хочу (желаю себе) на семь процентов больше.",
+          "ru-RU": "Я хочу на семь процентов больше.",
           "en-US": "I would like seven percent more.",
           "ar-SA": "أتمنى زيادة بنسبة سبعة بالمائة.",
           "es-ES": "Deseo un siete por ciento más.",
@@ -437,7 +437,7 @@
   "sechs_ok": {
     "botText": "Okay, sechs Prozent sind in Ordnung.",
     "botTranslation": {
-      "ru-RU": "Хорошо, шесть процентов устраивают (в порядке).",
+      "ru-RU": "Хорошо, шесть процентов устраивают.",
       "en-US": "Okay, six percent is fine.",
       "ar-SA": "حسناً، ستة بالمائة لا بأس بها.",
       "es-ES": "Vale, un seis por ciento está bien.",
@@ -586,7 +586,7 @@
           "uk-UA": "До зустрічі, гарного дня!",
           "uz-UZ": "Keyinroq ko'rishamiz, yaxshi kun!"
         },
-        "nextStep": "end"
+        "nextStep": null
       },
       {
         "text": "Danke, bis dann. Tschüss!",
@@ -603,27 +603,9 @@
           "uk-UA": "Дякую, до зустрічі. Бувай!",
           "uz-UZ": "Rahmat, ko'rishguncha. Xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Das Gespräch ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Разговор завершен.",
-      "en-US": "The conversation is ended.",
-      "ar-SA": "انتهت المحادثة.",
-      "es-ES": "La conversación ha terminado.",
-      "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत समाप्त हो गई है。",
-      "pl-PL": "Rozmowa została zakończona.",
-      "ro-RO": "Conversația s-a încheiat.",
-      "tr-TR": "Konuşma sona erdi.",
-      "uk-UA": "Розмову завершено.",
-      "uz-UZ": "Suhbat yakunlandi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

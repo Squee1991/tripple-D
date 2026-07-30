@@ -295,23 +295,6 @@
         "nextStep": "ask_activity"
       },
       {
-        "text": "Ich bin auf der Arbeit",
-        "translation": {
-          "ar-SA": "أنا في العمل",
-          "en-US": "I am at work",
-          "es-ES": "Estoy en el trabajo",
-          "fr-FR": "Je suis au travail",
-          "hi-IN": "मैं काम पर हूँ",
-          "pl-PL": "Jestem w pracy",
-          "ro-RO": "Sunt la muncă",
-          "ru-RU": "Я на работе",
-          "tr-TR": "İşteyim",
-          "uk-UA": "Я на роботі",
-          "uz-UZ": "Men ishdaman"
-        },
-        "nextStep": "ask_activity"
-      },
-      {
         "text": "Ich bin zu Hause",
         "translation": {
           "ar-SA": "أنا في المنزل",
@@ -382,53 +365,19 @@
     ],
     "options": [
       {
-        "text": "Ich lerne Deutsch",
+        "text": "Ich lerne Deutsch mit Skillupgerman",
         "translation": {
-          "ar-SA": "أنا أتعلم الألمانية",
-          "en-US": "I am learning German",
-          "es-ES": "Estoy aprendiendo alemán",
-          "fr-FR": "J'apprends l'allemand",
-          "hi-IN": "मैं जर्मन सीख रहा हूँ",
-          "pl-PL": "Uczę się niemieckiego",
-          "ro-RO": "Învăț germană",
-          "ru-RU": "Я учу немецкий",
-          "tr-TR": "Almanca öğreniyorum",
-          "uk-UA": "Я вчу німецьку",
-          "uz-UZ": "Men nemis tilini o'rganyapman"
-        },
-        "nextStep": "encourage"
-      },
-      {
-        "text": "Ich arbeite",
-        "translation": {
-          "ar-SA": "أنا أعمل",
-          "en-US": "I am working",
-          "es-ES": "Estoy trabajando",
-          "fr-FR": "Je travaille",
-          "hi-IN": "मैं काम कर रहा हूँ",
-          "pl-PL": "Pracuję",
-          "ro-RO": "Muncesc",
-          "ru-RU": "Я работаю",
-          "tr-TR": "Çalışıyorum",
-          "uk-UA": "Я працюю",
-          "uz-UZ": "Men ishlayapman"
-        },
-        "nextStep": "encourage"
-      },
-      {
-        "text": "Ich trinke Kaffee",
-        "translation": {
-          "ar-SA": "أنا أشرب القهوة",
-          "en-US": "I am drinking coffee",
-          "es-ES": "Estoy bebiendo café",
-          "fr-FR": "Je bois du café",
-          "hi-IN": "मैं कॉफी पी रहा हूँ",
-          "pl-PL": "Piję kawę",
-          "ro-RO": "Beau cafea",
-          "ru-RU": "Я пью кофе",
-          "tr-TR": "Kahve içiyorum",
-          "uk-UA": "Я п'ю каву",
-          "uz-UZ": "Men qahva ichyapman"
+          "ar-SA": "أنا أتعلم الألمانية مع Skillupgerman",
+          "en-US": "I am learning German with Skillupgerman",
+          "es-ES": "Estoy aprendiendo alemán con Skillupgerman",
+          "fr-FR": "J'apprends l'allemand avec Skillupgerman",
+          "hi-IN": "मैं Skillupgerman के साथ जर्मन सीख रहा हूँ",
+          "pl-PL": "Uczę się niemieckiego ze Skillupgerman",
+          "ro-RO": "Învăț limba germană cu Skillupgerman",
+          "ru-RU": "Я учу немецкий со Skillupgerman",
+          "tr-TR": "Skillupgerman ile Almanca öğreniyorum",
+          "uk-UA": "Я вчу німецьку зі Skillupgerman",
+          "uz-UZ": "Men Skillupgerman bilan nemis tilini o'rganyapman"
         },
         "nextStep": "encourage"
       }

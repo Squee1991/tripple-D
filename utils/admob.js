@@ -6,6 +6,7 @@ let isAdProcessing = false;
 let lastInterstitialTime = 0;
 const AD_LIMIT_PER_DAY = 5;
 const INTERSTITIAL_COOLDOWN = 2 * 60 * 1000;
+const platform = Capacitor.getPlatform();
 
 function getTodayKey() {
 	const today = new Date();
@@ -68,9 +69,20 @@ export async function showInterstitial(nextStep) {
 		goNext();
 	});
 
+	let currentAdId = '';
+
+	if (platform === 'android') {
+		currentAdId = 'ca-app-pub-7535671094319234/9879918114';
+	} else if (platform === 'ios') {
+		currentAdId = 'ca-app-pub-7535671094319234/9780662374';
+	} else {
+		listener.remove();
+		return goNext();
+	}
+
 	try {
 		await AdMob.prepareInterstitial({
-			adId: 'ca-app-pub-3940256099942544/1033173712',
+			adId: currentAdId,
 		});
 		await AdMob.showInterstitial();
 		lastInterstitialTime = Date.now();
@@ -114,9 +126,22 @@ export async function showRewarded(onReward, onComplete, onLimitReached) {
 		onComplete(rewardReceived);
 	});
 
+	let currentAdId = '';
+	if (platform === 'android') {
+		currentAdId = 'ca-app-pub-7535671094319234/9972234061';
+	} else if (platform === 'ios') {
+		currentAdId = 'ca-app-pub-7535671094319234/3051034273';
+	} else {
+
+		rewardListener.remove();
+		dismissListener.remove();
+		isAdProcessing = false;
+		return onComplete(false);
+	}
+
 	try {
 		await AdMob.prepareRewardVideoAd({
-			adId: 'ca-app-pub-3940256099942544/5224354917',
+			adId: currentAdId,
 		});
 		await AdMob.showRewardVideoAd();
 	} catch (e) {

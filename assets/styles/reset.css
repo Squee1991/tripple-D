@@ -1,11 +1,12 @@
-* {
+*, *::before, *::after {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+
 	-webkit-user-select: none;
 	user-select: none;
+	-webkit-touch-callout: none;
 	-webkit-tap-highlight-color: transparent;
-
 }
 
 a {
@@ -20,24 +21,18 @@ img {
 	max-width: 100%;
 	height: auto;
 	display: block;
+	-webkit-user-drag: none;
 }
 
-button,
-a,
-div,
 input,
-textarea {
-	-webkit-tap-highlight-color: transparent;
-	-webkit-focus-ring-color: transparent;
+textarea,
+[contenteditable="true"] {
 	-webkit-user-select: text;
 	user-select: text;
 	outline: none;
 }
 
-
 input {
 	autocorrect: off;
 	autocapitalize: none;
 }
-
-

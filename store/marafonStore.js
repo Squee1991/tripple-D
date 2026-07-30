@@ -51,57 +51,57 @@ export const useGameStore = defineStore('game', () => {
 		};
 		return settings[difficulty.value];
 	});
-	function getSeasonState() {
-		const now = new Date();
-		const anchor = Date.UTC(2024, 0, 1);
-		const msSinceAnchor = now.getTime() - anchor;
-		const cycleLengthMs = 4 * 60 * 1000;
-		const halfCycleMs = 2 * 60 * 1000;
-
-		const cycle = Math.floor(msSinceAnchor / cycleLengthMs);
-		const msOfCycle = msSinceAnchor % cycleLengthMs;
-		const isOpen = msOfCycle < halfCycleMs;
-		const currentSeasonId = `Season_${cycle}`;
-		const previousSeasonId = `Season_${cycle - 1}`;
-		const msLeft = isOpen ? (halfCycleMs - msOfCycle) : (cycleLengthMs - msOfCycle);
-
-		const d = Math.floor(msLeft / (1000 * 60 * 60 * 24));
-		const h = Math.floor((msLeft / (1000 * 60 * 60)) % 24);
-		const m = Math.floor((msLeft / (1000 * 60)) % 60);
-		const s = Math.floor((msLeft / 1000) % 60);
-
-		return {
-			isOpen,
-			currentSeasonId,
-			previousSeasonId,
-			timeLeft: { d, h, m, s }
-		};
-	}
 	// function getSeasonState() {
 	// 	const now = new Date();
 	// 	const anchor = Date.UTC(2024, 0, 1);
 	// 	const msSinceAnchor = now.getTime() - anchor;
-	// 	const msPerDay = 1000 * 60 * 60 * 24;
-	// 	const daysSince = Math.floor(msSinceAnchor / msPerDay);
-	// 	const cycleLength = 28;
-	// 	const cycle = Math.floor(daysSince / cycleLength);
-	// 	const dayOfCycle = daysSince % cycleLength;
-	// 	const isOpen = dayOfCycle >= 14;
+	// 	const cycleLengthMs = 4 * 60 * 1000;
+	// 	const halfCycleMs = 2 * 60 * 1000;
+	//
+	// 	const cycle = Math.floor(msSinceAnchor / cycleLengthMs);
+	// 	const msOfCycle = msSinceAnchor % cycleLengthMs;
+	// 	const isOpen = msOfCycle < halfCycleMs;
 	// 	const currentSeasonId = `Season_${cycle}`;
 	// 	const previousSeasonId = `Season_${cycle - 1}`;
-	// 	const nextPhaseDate = new Date(anchor + (cycle * cycleLength + (isOpen ? 28 : 14)) * msPerDay);
-	// 	const msLeft = nextPhaseDate.getTime() - now.getTime();
-	// 	const d = Math.floor(msLeft / msPerDay);
+	// 	const msLeft = isOpen ? (halfCycleMs - msOfCycle) : (cycleLengthMs - msOfCycle);
+	//
+	// 	const d = Math.floor(msLeft / (1000 * 60 * 60 * 24));
 	// 	const h = Math.floor((msLeft / (1000 * 60 * 60)) % 24);
-	// 	const m = Math.floor((msLeft / 1000 / 60) % 60);
+	// 	const m = Math.floor((msLeft / (1000 * 60)) % 60);
+	// 	const s = Math.floor((msLeft / 1000) % 60);
 	//
 	// 	return {
 	// 		isOpen,
 	// 		currentSeasonId,
 	// 		previousSeasonId,
-	// 		timeLeft: { d, h, m }
+	// 		timeLeft: { d, h, m, s }
 	// 	};
 	// }
+	function getSeasonState() {
+		const now = new Date();
+		const anchor = Date.UTC(2024, 0, 1);
+		const msSinceAnchor = now.getTime() - anchor;
+		const msPerDay = 1000 * 60 * 60 * 24;
+		const daysSince = Math.floor(msSinceAnchor / msPerDay);
+		const cycleLength = 28;
+		const cycle = Math.floor(daysSince / cycleLength);
+		const dayOfCycle = daysSince % cycleLength;
+		const isOpen = dayOfCycle >= 14;
+		const currentSeasonId = `Season_${cycle}`;
+		const previousSeasonId = `Season_${cycle - 1}`;
+		const nextPhaseDate = new Date(anchor + (cycle * cycleLength + (isOpen ? 28 : 14)) * msPerDay);
+		const msLeft = nextPhaseDate.getTime() - now.getTime();
+		const d = Math.floor(msLeft / msPerDay);
+		const h = Math.floor((msLeft / (1000 * 60 * 60)) % 24);
+		const m = Math.floor((msLeft / 1000 / 60) % 60);
+
+		return {
+			isOpen,
+			currentSeasonId,
+			previousSeasonId,
+			timeLeft: { d, h, m }
+		};
+	}
 
 	function resetGameState() {
 		sessionStreak.value = 0;
