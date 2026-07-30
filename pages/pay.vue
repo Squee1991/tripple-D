@@ -294,6 +294,12 @@ onUnmounted(() => {
               >
                 {{ restoreComputed }}
               </button>
+              <div class="legal-footer">
+                {{ t('termsBlock.first') }}
+                <router-link to="/terms" class="legal-link">Terms of Use (EULA)</router-link>
+                {{ t('termsBlock.third') }}
+                <router-link to="/privacy" class="legal-link">Privacy Policy</router-link>.
+              </div>
             </div>
           </div>
         </template>
@@ -739,6 +745,26 @@ onUnmounted(() => {
   margin: 0;
   font-weight: 700;
   line-height: 1.4;
+}
+
+.legal-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 11px;
+  color: #8e8e93;
+  line-height: 1.5;
+  padding: 0 15px;
+}
+
+.legal-link {
+  color: #a1a1aa;
+  text-decoration: underline;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.legal-link:active {
+  color: #ffffff;
 }
 
 @keyframes premium-glow {
