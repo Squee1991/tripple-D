@@ -316,6 +316,12 @@ onUnmounted(() => {
         </template>
       </div>
     </div>
+    <div v-show="!isKeyboardOpen" class="privacy__block">
+      {{ t('termsBlock.first') }}
+      <router-link class="links" to="/terms">{{ t('termsBlock.second') }}</router-link>
+      {{ t('termsBlock.third') }}
+      <router-link class="links" to="/privacy">{{ t('termsBlock.fourth') }}</router-link>.
+    </div>
   </div>
 </template>
 
@@ -769,4 +775,17 @@ onUnmounted(() => {
     transform: translate(20px, -20px) scale(1.1);
   }
 }
+
+.privacy__block {
+  position: absolute;
+  display: flex;justify-content: center;
+  bottom: 0;
+  color: var(--titleColor);
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 0 15px;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
 </style>

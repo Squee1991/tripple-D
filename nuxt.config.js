@@ -189,7 +189,15 @@ export default defineNuxtConfig({
 
 		}
 	},
+	ignore: [
+		'ios/**',
+		'android/**',
+		'android-app/**'
+	],
 	nitro: {
-		preset: 'static'
+		preset: 'static',
+		ignore: [
+			'android/**'
+		]
 	},
 })
