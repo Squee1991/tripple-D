@@ -10602,5 +10602,9 @@
     "game-desc": "Dacă tot suntem aici, hai să facem puțină încălzire. Alege articolul corect:",
     "win-screen": "Treabă excelentă!",
     "win-desc": "Acum te poți întoarce la lecții."
+  },
+  "eulaText": {
+    "text": "Prin achiziționare, ești de acord cu",
+    "month": "lună"
   }
 }

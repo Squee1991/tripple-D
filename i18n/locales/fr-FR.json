@@ -10598,5 +10598,9 @@
     "game-desc": "Puisque nous sommes là, échauffons-nous. Choisissez l'article correct :",
     "win-screen": "Excellent travail !",
     "win-desc": "Vous pouvez maintenant retourner à vos leçons."
+  },
+  "eulaText": {
+    "text": "En achetant, vous acceptez",
+    "month": "mois"
   }
 }

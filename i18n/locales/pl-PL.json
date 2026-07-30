@@ -10618,5 +10618,9 @@
     "game-desc": "Skoro już tu jesteśmy, rozgrzejmy się. Wybierz poprawny rodzajnik:",
     "win-screen": "Świetna robota!",
     "win-desc": "Teraz możesz wrócić do lekcji."
+  },
+  "eulaText": {
+    "text": "Dokonując zakupu, wyrażasz zgodę na",
+    "month": "mies."
   }
 }

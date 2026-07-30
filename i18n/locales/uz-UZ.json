@@ -10597,5 +10597,9 @@
     "game-desc": "Agar shu yerdamiz, keling biroz mashq qilamiz. To'g'ri artiklni tanlang:",
     "win-screen": "Ajoyib ish!",
     "win-desc": "Endi darslarga qaytishingiz mumkin."
+  },
+  "eulaText": {
+    "text": "Sotib olish orqali siz quyidagilarga rozilik bildirasiz",
+    "month": "oy"
   }
 }

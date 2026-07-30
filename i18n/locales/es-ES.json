@@ -10602,5 +10602,9 @@
     "game-desc": "Ya que estamos aquí, vamos a calentar. Elige el artículo correcto:",
     "win-screen": "¡Excelente trabajo!",
     "win-desc": "Ahora puedes volver a tus lecciones."
+  },
+  "eulaText": {
+    "text": "Al realizar la compra, aceptas",
+    "month": "mes"
   }
 }

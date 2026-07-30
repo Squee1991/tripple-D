@@ -86,7 +86,7 @@ const sections = ref([
     paragraphs: [
       "The Service offers paid subscription plans (Premium). All fees are billed in advance on a recurring cycle (e.g., monthly or annually) and are non-refundable, except as expressly required by applicable law or specific app store policies.",
       `In-App Purchases (Apple App Store & Google Play): If you purchase a Subscription through a mobile platform, your payment, billing, and any refund requests are handled exclusively by Apple or Google in accordance with their respective terms and conditions. ${PROJECT} does not process these payments directly and cannot issue refunds for in-app purchases.`,
-      'Apple Standard EULA: For purchases made via the Apple App Store, the standard Apple Licensed Application End User License Agreement (EULA) applies in addition to these Terms. You can review it at <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple Standard EULA</a>.',
+      'Apple Standard EULA: For purchases made via the Apple App Store, the standard Apple Licensed Application End User License Agreement (EULA) applies in addition to these Terms. You can review it at <a class="eula" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple Standard EULA</a>.',
       "No-Refund Policy & EU Waiver: For purchases made directly through our website, you expressly agree that Premium access is provided immediately upon purchase. By accessing the Premium content, you acknowledge and agree that you lose your statutory 14-day right of withdrawal under EU consumer law, and ALL SALES ARE FINAL. No refunds or credits will be provided for partially used subscription periods.",
       "Cancellation: You can cancel your subscription auto-renewal at any time through your Account settings or your Apple/Google subscription management menu. To avoid being charged for the next period, you must cancel at least 24 hours before your current billing cycle ends."
     ]
@@ -187,6 +187,11 @@ const sections = ref([
   line-height: 1.75;
   font-family: "Nunito", sans-serif;
   color: var(--titleColor);
+}
+
+:deep(.eula) {
+  color: #3b82f6;
+  text-decoration: underline;
 }
 
 .terms__content {

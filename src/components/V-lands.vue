@@ -702,7 +702,7 @@ onBeforeUnmount(() => {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-bottom: 6px;
+  margin-bottom: 16px;
 }
 
 .map-pagination-arrows {

@@ -10612,5 +10612,9 @@
     "game-desc": "Madem buradayız, biraz ısınma hareketi yapalım. Doğru artikeli seçin:",
     "win-screen": "Harika iş çıkardın!",
     "win-desc": "Artık derslerine geri dönebilirsin."
+  },
+  "eulaText": {
+    "text": "Satın alarak şunları kabul etmiş olursunuz:",
+    "month": "ay"
   }
 }

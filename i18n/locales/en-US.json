@@ -10625,5 +10625,9 @@
     "game-desc": "While we're here, let's warm up. Choose the correct article:",
     "win-screen": "Great job!",
     "win-desc": "Now you can get back to your lessons."
+  },
+  "eulaText": {
+    "text": "By purchasing you agree to",
+    "month": "mo."
   }
 }

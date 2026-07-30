@@ -40,6 +40,12 @@ const payButton = ref(null)
 const showStickyFooter = ref(false)
 const justBought = ref(false)
 
+const formattedSubscriptionEndDate = computed(() => {
+  if (!authStore.subscriptionEndsAt) return '-'
+  const date = new Date(authStore.subscriptionEndsAt)
+  return date.toLocaleDateString(locale.value, { year: 'numeric', month: 'long', day: 'numeric' })
+})
+
 const handleBack = () => {
   router.back()
 }
@@ -278,7 +284,7 @@ onUnmounted(() => {
             </div>
             <div class="bill-total">
               <span class="total-text">{{ t('payPage.finalePrice') }}</span>
-              <span class="total-price">{{ finalPrice }}{{ displayCurrency }}</span>
+              <span class="total-price">{{ finalPrice }}{{ displayCurrency }} / {{ t('eulaText.month')}}</span>
             </div>
           </div>
           <div class="footer-action-wrapper" ref="payButton">
@@ -287,7 +293,7 @@ onUnmounted(() => {
                 {{ submitComputed }}
               </button>
               <button
-                  v-if="billingStore.isMobile"
+                  v-if="!billingStore.isMobile"
                   @click="handleRestore"
                   class="btn-restore"
                   :disabled="restoreLoading || submitLoading"
@@ -295,8 +301,8 @@ onUnmounted(() => {
                 {{ restoreComputed }}
               </button>
               <div class="legal-footer">
-                {{ t('termsBlock.first') }}
-                <router-link to="/terms" class="legal-link">Terms of Use (EULA)</router-link>
+                {{ t('eulaText.text') }}
+                <router-link to="/terms" class="legal-link">Terms of Use</router-link>
                 {{ t('termsBlock.third') }}
                 <router-link to="/privacy" class="legal-link">Privacy Policy</router-link>.
               </div>
@@ -314,8 +320,13 @@ onUnmounted(() => {
                 <img :src="PremiumIcon" alt="Premium" class="active-pulse-img">
               </div>
               <div class="premium-active-text">
-                <h3>{{ t('activePlus.title')}}</h3>
-                <p>{{ t('activePlus.description')}}</p>
+                <h3>{{ t('activePlus.title') }}</h3>
+                <p>{{ t('activePlus.description') }}</p>
+                <div class="subscription-date-badge" v-if="authStore.subscriptionEndsAt">
+                  <span class="date-icon">📅</span>
+                  <span>{{ authStore.subscriptionCancelled ? t('cabinet.access') : t('cabinet.nextPayment') }}<strong>{{ formattedSubscriptionEndDate }}</strong>
+          </span>
+                </div>
               </div>
             </div>
           </div>
@@ -369,11 +380,11 @@ onUnmounted(() => {
 .btn-restore {
   display: block;
   width: 100%;
-  margin-top: 16px;
+  margin-top: 20px;
   background: transparent;
   border: none;
   color: #8e8e93;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
   transition: color 0.2s;
@@ -587,6 +598,8 @@ onUnmounted(() => {
 }
 
 .total-text {
+  display: flex;
+  align-items: center;
   font-weight: 900;
   font-size: 18px;
 }
@@ -701,14 +714,10 @@ onUnmounted(() => {
   width: 100%;
   padding: 30px 20px;
   border-radius: 28px;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);
-  border: 2px solid rgba(16, 185, 129, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
-  animation: premium-glow 3s infinite alternate;
 }
 
 .premium-active-icon {
@@ -749,7 +758,7 @@ onUnmounted(() => {
 }
 
 .legal-footer {
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
   font-size: 11px;
   color: #8e8e93;
@@ -768,16 +777,6 @@ onUnmounted(() => {
   color: #ffffff;
 }
 
-@keyframes premium-glow {
-  0% {
-    border-color: rgba(16, 185, 129, 0.3);
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);
-  }
-  100% {
-    border-color: rgba(16, 185, 129, 0.8);
-    box-shadow: 0 0 40px rgba(16, 185, 129, 0.3);
-  }
-}
 
 @keyframes icon-float {
   0%, 100% {

@@ -24,7 +24,7 @@
               :src="item.icon"
               :alt="item.alt"
           >
-          <span class="item__label"> {{ item.title }}:</span>
+          <span v-if="item.title" class="item__label"> {{ item.title }}:</span>
         <span v-if="!userAuth.isPremium || item.id !== 'lives'" class="stat-value">{{ item.value }}</span>
         </span>
       </button>
