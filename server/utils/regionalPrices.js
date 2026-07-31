@@ -3,11 +3,11 @@ const TIER_EUR_9_99  = { id: "price_1Tj2UC24sKuPwF6c5jQsdDMj", amount: "9.99", c
 const TIER_EUR_6_99  = { id: "price_1Tj2UW24sKuPwF6cgqda1LUB", amount: "6.99", currency: "€" };
 const TIER_EUR_4_99  = { id: "price_1Tj2VC24sKuPwF6cJXwso1Yo", amount: "4.99", currency: "€" };
 
-const TIER_USD_13_99 = { id: "price_ВСТАВЬ_ID_ОМАНА", amount: "13.99", currency: "$" };
+const TIER_USD_13_99 = { id: "price_╨Т╨б╨в╨Р╨Т╨м_ID_╨Ю╨Ь╨Р╨Э╨Р", amount: "13.99", currency: "$" };
 const TIER_USD_12_99 = { id: "price_1Tj2Vl24sKuPwF6cNXFrOaoc", amount: "12.99", currency: "$" };
-const TIER_USD_11_99 = { id: "price_ВСТАВЬ_ID_ДЛЯ_USD_11_99", amount: "11.99", currency: "$" };
-const TIER_USD_7_99  = { id: "price_ВСТАВЬ_ID_ПАНАМЫ", amount: "7.99", currency: "$" };
-const TIER_USD_5_99  = { id: "price_ВСТАВЬ_ID_ДЛЯ_USD_5_99", amount: "5.99", currency: "$" };
+const TIER_USD_11_99 = { id: "price_╨Т╨б╨в╨Р╨Т╨м_ID_╨Ф╨Ы╨п_USD_11_99", amount: "11.99", currency: "$" };
+const TIER_USD_7_99  = { id: "price_╨Т╨б╨в╨Р╨Т╨м_ID_╨Я╨Р╨Э╨Р╨Ь╨л", amount: "7.99", currency: "$" };
+const TIER_USD_5_99  = { id: "price_╨Т╨б╨в╨Р╨Т╨м_ID_╨Ф╨Ы╨п_USD_5_99", amount: "5.99", currency: "$" };
 
 const TIER_AUD_22_99 = { id: "price_1Tj2Xz24sKuPwF6cQKq1YeXG", amount: "22.99", currency: "AUD" };
 const TIER_AED_57_99 = { id: "price_1Tj3Dx24sKuPwF6cryS2P2lr", amount: "57.99", currency: "AED" };
@@ -16,29 +16,29 @@ const TIER_BOB_79_99 = { id: "price_1Tj2Zq24sKuPwF6c3mZZkY25", amount: "79.99", 
 const TIER_BRL_28_99 = { id: "price_1Tj2aC24sKuPwF6cXl5dy9Kk", amount: "28.99", currency: "R$" };
 const TIER_CAD_20_99 = { id: "price_1Tj2lB24sKuPwF6cw1EkkefV", amount: "20.99", currency: "CAD" };
 const TIER_CHF_12_00 = { id: "price_1Tj3Wv24sKuPwF6cgDxQj41J", amount: "12.00", currency: "CHF" };
-const TIER_CHF_10_00 = { id: "price_ЛИХТЕНШТЕЙН", amount: "10.00", currency: "CHF" };
+const TIER_CHF_10_00 = { id: "price_╨Ы╨Ш╨е╨в╨Х╨Э╨и╨в╨Х╨Щ╨Э", amount: "10.00", currency: "CHF" };
 const TIER_CLP_8600  = { id: "price_1Tj3WY24sKuPwF6cgYhNM1Qw", amount: "8600.00", currency: "CLP" };
 const TIER_COP_20000 = { id: "price_1Tj2uC24sKuPwF6c7TrGJUmb", amount: "20000.00", currency: "COP" };
-const TIER_CRC_3700  = { id: "price_КОСТА_РИКА", amount: "3700.00", currency: "CRC" };
-const TIER_CZK_289   = { id: "price_1Tj3W824sKuPwF6cGV7YUTMK", amount: "289.99", currency: "Kč" };
+const TIER_CRC_3700  = { id: "price_╨Ъ╨Ю╨б╨в╨Р_╨а╨Ш╨Ъ╨Р", amount: "3700.00", currency: "CRC" };
+const TIER_CZK_289   = { id: "price_1Tj3W824sKuPwF6cGV7YUTMK", amount: "289.99", currency: "K─Н" };
 const TIER_DKK_119   = { id: "price_1Tj2fP24sKuPwF6cDy3P5BiL", amount: "119.00", currency: "DKK" };
 const TIER_DZD_775   = { id: "price_1Tj2YU24sKuPwF6cqpX2t9ey", amount: "775.00", currency: "DZD" };
 const TIER_EGP_339   = { id: "price_1Tj2gI24sKuPwF6cqciksmNr", amount: "339.99", currency: "EGP" };
-const TIER_GBP_13_49 = { id: "price_1Tj2ak24sKuPwF6cYYdq14jq", amount: "13.49", currency: "£" };
-const TIER_GBP_8_49  = { id: "price_ГИБРАЛТАР", amount: "8.49", currency: "£" };
-const TIER_GEL_19    = { id: "price_1Tj2ez24sKuPwF6cvqZSEDOY", amount: "19.00", currency: "₾" };
-const TIER_GHS_150   = { id: "price_ГАНА", amount: "150.00", currency: "GHS" };
+const TIER_GBP_13_49 = { id: "price_1Tj2ak24sKuPwF6cYYdq14jq", amount: "13.49", currency: "┬г" };
+const TIER_GBP_8_49  = { id: "price_╨У╨Ш╨С╨а╨Р╨Ы╨в╨Р╨а", amount: "8.49", currency: "┬г" };
+const TIER_GEL_19    = { id: "price_1Tj2ez24sKuPwF6cvqZSEDOY", amount: "19.00", currency: "тВ╛" };
+const TIER_GHS_150   = { id: "price_╨У╨Р╨Э╨Р", amount: "150.00", currency: "GHS" };
 const TIER_HKD_90_90 = { id: "price_1Tj2eO24sKuPwF6coW6XyJ9O", amount: "90.90", currency: "HKD" };
 const TIER_HUF_3099  = { id: "price_1Tj2b924sKuPwF6cwBXbYpRJ", amount: "3099.00", currency: "Ft" };
 const TIER_IDR_99000 = { id: "price_1Tj2hx24sKuPwF6cbIxdrvnw", amount: "99000.00", currency: "IDR" };
-const TIER_ILS_43_90 = { id: "price_1Tj2gs24sKuPwF6cfVNsp5ya", amount: "43.90", currency: "₪" };
-const TIER_INR_1300  = { id: "price_1Tj2hI24sKuPwF6ceKADhVcf", amount: "1300.00", currency: "₹" };
-const TIER_IQD_15300 = { id: "price_ИРАК", amount: "15300.00", currency: "IQD" };
-const TIER_JOD_8_3   = { id: "price_ИОРДАНИЯ", amount: "8.30", currency: "JOD" };
-const TIER_JPY_2650  = { id: "price_1Tj3Z624sKuPwF6ceZ6JIpTl", amount: "2650.00", currency: "¥" };
+const TIER_ILS_43_90 = { id: "price_1Tj2gs24sKuPwF6cfVNsp5ya", amount: "43.90", currency: "тВк" };
+const TIER_INR_1300  = { id: "price_1Tj2hI24sKuPwF6ceKADhVcf", amount: "1300.00", currency: "тВ╣" };
+const TIER_IQD_15300 = { id: "price_╨Ш╨а╨Р╨Ъ", amount: "15300.00", currency: "IQD" };
+const TIER_JOD_8_3   = { id: "price_╨Ш╨Ю╨а╨Ф╨Р╨Э╨Ш╨п", amount: "8.30", currency: "JOD" };
+const TIER_JPY_2650  = { id: "price_1Tj3Z624sKuPwF6ceZ6JIpTl", amount: "2650.00", currency: "┬е" };
 const TIER_KES_1800  = { id: "price_1Tj2tf24sKuPwF6cReICrwNY", amount: "1800.00", currency: "KES" };
-const TIER_KRW_25000 = { id: "price_1Tj3GY24sKuPwF6c8UvNSGeO", amount: "25000.00", currency: "₩" };
-const TIER_KZT_4590  = { id: "price_1Tj2k824sKuPwF6cfYYYVwhR", amount: "4590.00", currency: "₸" };
+const TIER_KRW_25000 = { id: "price_1Tj3GY24sKuPwF6c8UvNSGeO", amount: "25000.00", currency: "тВй" };
+const TIER_KZT_4590  = { id: "price_1Tj2k824sKuPwF6cfYYYVwhR", amount: "4590.00", currency: "тВ╕" };
 const TIER_LKR_3675  = { id: "price_1Tj3Xv24sKuPwF6ctEXviVzN", amount: "3675.00", currency: "LKR" };
 const TIER_MAD_63_99 = { id: "price_1Tj32B24sKuPwF6cHUvgCf4i", amount: "63.99", currency: "MAD" };
 const TIER_MMK_25000 = { id: "price_1Tj35K24sKuPwF6cBIxoqO02", amount: "25000.00", currency: "MMK" };
@@ -52,35 +52,33 @@ const TIER_NZD_29_99 = { id: "price_1Tj36X24sKuPwF6cNsdARQjI", amount: "29.99", 
 const TIER_PEN_19_99 = { id: "price_1Tj3Fw24sKuPwF6cR5whWffs", amount: "19.99", currency: "PEN" };
 const TIER_PHP_395   = { id: "price_1Tj3Vg24sKuPwF6cPgk717R6", amount: "395.00", currency: "PHP" };
 const TIER_PKR_3250  = { id: "price_1Tj3F424sKuPwF6cBnqWAiEj", amount: "3250.00", currency: "PKR" };
-const TIER_PLN_49_99 = { id: "price_1Tj2Q924sKuPwF6cgx7q0XAG", amount: "49.99", currency: "zł" };
+const TIER_PLN_49_99 = { id: "price_1Tj2Q924sKuPwF6cgx7q0XAG", amount: "49.99", currency: "z┼В" };
 const TIER_PYG_40000 = { id: "price_1Tj3FX24sKuPwF6coZERf3EJ", amount: "40000.00", currency: "PYG" };
 const TIER_QA_55     = { id: "price_1Tj2t824sKuPwF6cSklFjrRo", amount: "55.00", currency: "QAR" };
 const TIER_RON_43_99 = { id: "price_1Tj3IS24sKuPwF6cUsTRlaGx", amount: "43.99", currency: "RON" };
 const TIER_RSD_999   = { id: "price_1Tj3RU24sKuPwF6cLMHG1l22", amount: "999.00", currency: "RSD" };
-const TIER_RUB_890   = { id: "price_1Tj3HX24sKuPwF6cDSwDRfzy", amount: "890.00", currency: "₽" };
+const TIER_RUB_890   = { id: "price_1Tj3HX24sKuPwF6cDSwDRfzy", amount: "890.00", currency: "тВ╜" };
 const TIER_SA_49_99  = { id: "price_1Tj3J524sKuPwF6ckuCSJdVb", amount: "49.99", currency: "SAR" };
 const TIER_SEK_179   = { id: "price_1Tj3XI24sKuPwF6ctn8K2uR7", amount: "179.00", currency: "SEK" };
 const TIER_SGD_20_99 = { id: "price_1Tj3S324sKuPwF6ckvdNW9Pt", amount: "20.99", currency: "SGD" };
-const TIER_THB_275   = { id: "price_1Tj3Sb24sKuPwF6c4mSnMjkS", amount: "275.00", currency: "฿" };
-const TIER_TR_449    = { id: "price_1Tj3U024sKuPwF6ccYD4lCOD", amount: "449.99", currency: "₺" };
+const TIER_THB_275   = { id: "price_1Tj3Sb24sKuPwF6c4mSnMjkS", amount: "275.00", currency: "р╕┐" };
+const TIER_TR_449    = { id: "price_1Tj3U024sKuPwF6ccYD4lCOD", amount: "449.99", currency: "тВ║" };
 const TIER_TWD_380   = { id: "price_1Tj3T224sKuPwF6cFo1ejL3p", amount: "380.00", currency: "TWD" };
 const TIER_TZS_30000 = { id: "price_1Tj3TX24sKuPwF6cDAeiLXs1", amount: "30000.00", currency: "TZS" };
-const TIER_UAH_309   = { id: "price_1Tj3VC24sKuPwF6cGhze8rcR", amount: "309.99", currency: "₴" };
-const TIER_VND_152K  = { id: "price_1Tj2cX24sKuPwF6cn29hnr4S", amount: "152000.00", currency: "₫" };
+const TIER_UAH_309   = { id: "price_1Tj3VC24sKuPwF6cGhze8rcR", amount: "309.99", currency: "тВ┤" };
+const TIER_VND_152K  = { id: "price_1Tj2cX24sKuPwF6cn29hnr4S", amount: "152000.00", currency: "тВл" };
 const TIER_XAF_7800  = { id: "price_1Tj2kk24sKuPwF6c1uBAoHp7", amount: "7800.00", currency: "XAF" };
 const TIER_XOF_7700  = { id: "price_1Tj2vP24sKuPwF6cR9wsyfC7", amount: "7700.00", currency: "XOF" };
 const TIER_ZA_129_99 = { id: "price_1Tj3YR24sKuPwF6cvkVDTOC4", amount: "129.99", currency: "ZAR" };
 
 export const stripePrices = {};
 
-// --- Группы ЕВРО ---
 ['AT', 'BE', 'DE', 'MC', 'IE', 'ES', 'IT', 'LU', 'NL', 'FI', 'FR', 'IS'].forEach(c => stripePrices[c] = TIER_EUR_12_99);
 ['VA', 'GR', 'CY', 'LV', 'LT', 'PT', 'SM', 'SK', 'SI', 'HR', 'EE'].forEach(c => stripePrices[c] = TIER_EUR_9_99);
 ['BJ', 'BF', 'GA', 'GW', 'ML', 'MT', 'NE', 'TG', 'CF'].forEach(c => stripePrices[c] = TIER_EUR_4_99);
 
 stripePrices['BG'] = TIER_EUR_6_99;
 
-// --- Группы ДОЛЛАРЫ США ---
 ['US', 'BH'].forEach(c => stripePrices[c] = TIER_USD_12_99);
 ['BM', 'VG', 'KH', 'KW', 'SV', 'TC', 'FM', 'KY'].forEach(c => stripePrices[c] = TIER_USD_11_99);
 ['AZ', 'AL', 'AO', 'AG', 'AR', 'AM', 'AW', 'BS', 'BZ', 'BA', 'BW', 'VU', 'VE', 'HT', 'GM', 'GT', 'GN', 'HN', 'GD', 'DJ', 'DM', 'DO', 'ZM', 'ZW', 'YE', 'CV', 'KG', 'KM', 'CG', 'CD', 'LA', 'LR', 'LB', 'LY', 'MU', 'MV', 'MZ', 'MD', 'NA', 'NP', 'NI', 'PG', 'RW', 'WS', 'MK', 'SC', 'KN', 'LC', 'SB', 'SO', 'SR', 'SL', 'TJ', 'TO', 'TT', 'TN', 'TM', 'UG', 'UZ', 'UY', 'FJ', 'TD', 'ER', 'JM', 'EC'].forEach(c => stripePrices[c] = TIER_USD_5_99);

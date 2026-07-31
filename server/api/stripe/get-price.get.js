@@ -1,4 +1,5 @@
 import { defineEventHandler, getRequestHeaders } from 'h3'
+import {getPriceDataForUser} from "~/server/utils/regionalPrices.js";
 
 export default defineEventHandler((event) => {
 	const headers = getRequestHeaders(event)

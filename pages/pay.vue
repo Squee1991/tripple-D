@@ -263,7 +263,7 @@ onUnmounted(() => {
                     <div v-if="coupon.label" class="loot-info">
                       <span class="loot-title">{{ coupon.label }}</span>
                     </div>
-                    <div class="loot-val" v-if="coupon.percent > 0">{{ coupon.percent }}%</div>
+<!--                    <div class="loot-val" v-if="coupon.percent > 0">{{ coupon.percent }}%</div>-->
                   </div>
                 </div>
               </div>
@@ -272,13 +272,13 @@ onUnmounted(() => {
           <div class="billing-summary">
             <div class="bill-line discount" v-if="selectedDiscountId">
               <span class="bill-text">{{ t('payPage.yourSale') }}</span>
-              <span class="bill-price-neg">-{{
-                  myAvailableCoupons.find(c => c.id === selectedDiscountId).percent
-                }}%</span>
+              <span class="bill-price-neg">
+                {{ myAvailableCoupons.find(c => c.id === selectedDiscountId)?.label }}
+              </span>
             </div>
             <div class="bill-total">
               <span class="total-text">{{ t('payPage.finalePrice') }}</span>
-              <span class="total-price">{{ finalPrice }}{{ displayCurrency }}</span>
+              <span class="total-price">{{ finalPrice }}{{ displayCurrency }} / {{ t('eulaText.month')}}</span>
             </div>
           </div>
           <div class="footer-action-wrapper" ref="payButton">

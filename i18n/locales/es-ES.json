@@ -10613,5 +10613,9 @@
   },
   "public__copyright": {
     "text": "Skillupgerman. Todos los derechos reservados."
+  },
+  "eulaText": {
+    "text": "Al realizar la compra, aceptas",
+    "month": "mes"
   }
 }

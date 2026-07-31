@@ -2,7 +2,8 @@ import Stripe from 'stripe'
 import { readBody, defineEventHandler, setResponseStatus, getHeaders } from 'h3'
 import { getFirestore } from 'firebase-admin/firestore'
 import { initializeApp, getApps, cert } from 'firebase-admin/app'
-// import { getPriceForUser } from '../utils/regionalPrices.js'
+import { getPriceDataForUser } from '../../utils/regionalPrices.js'
+
 const COUPON_MAP = {
 	sale_3: 'sale_3',
 	sale_5: 'sale_5',
@@ -109,14 +110,16 @@ export default defineEventHandler(async (event) => {
 			setResponseStatus(event, 409)
 			return { error: 'У пользователя уже есть активная подписка', alreadySubscribed: true }
 		}
+
+		// ИСПРАВЛЕНИЕ 1: ЗАКРЫВАЕМ СТАРУЮ СЕССИЮ ВМЕСТО ЕЁ ВОЗВРАТА
 		const openSessions = await stripe.checkout.sessions.list({
 			customer: stripeCustomerId,
 			status: 'open',
 			limit: 1
 		})
 		if (openSessions.data.length > 0) {
-			console.log('🔄 Возвращаем старую ссылку на оплату')
-			return { sessionId: openSessions.data[0].id, url: openSessions.data[0].url }
+			await stripe.checkout.sessions.expire(openSessions.data[0].id)
+			console.log('🔄 Закрыли старую сессию, создаем новую с актуальным купоном')
 		}
 
 		const sessionOptions = {
@@ -136,10 +139,13 @@ export default defineEventHandler(async (event) => {
 				}
 			}
 		}
-		if (couponId && userData && userData[couponId] === true) {
+
+		const hasDiscountInDB = userData[couponId] === true || userData.premiumDiscount?.[couponId] === true;
+		if (couponId && userData && hasDiscountInDB) {
 			const realStripeCouponId = COUPON_MAP[couponId]
 			if (realStripeCouponId) {
 				sessionOptions.discounts = [{ coupon: realStripeCouponId }]
+				console.log(`✅ Применяем скидку: ${realStripeCouponId}`)
 			}
 		} else {
 			sessionOptions.allow_promotion_codes = true
