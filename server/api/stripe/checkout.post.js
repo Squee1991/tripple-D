@@ -140,14 +140,24 @@ export default defineEventHandler(async (event) => {
 			}
 		}
 
-		const hasDiscountInDB = userData[couponId] === true || userData.premiumDiscount?.[couponId] === true;
+		const hasDiscountInDB = userData[couponId] || userData.premiumDiscount?.[couponId];
+
+		console.log('--- ПРОВЕРКА СКИДКИ НА БЭКЕНДЕ ---');
+		console.log('1. Пришел купон с фронта:', couponId);
+		console.log('2. Скидки юзера в БД:', userData.premiumDiscount);
+		console.log('3. Итог проверки (hasDiscountInDB):', !!hasDiscountInDB);
+
 		if (couponId && userData && hasDiscountInDB) {
 			const realStripeCouponId = COUPON_MAP[couponId]
 			if (realStripeCouponId) {
 				sessionOptions.discounts = [{ coupon: realStripeCouponId }]
-				console.log(`✅ Применяем скидку: ${realStripeCouponId}`)
+				console.log(`✅ Применяем скидку в Stripe: ${realStripeCouponId}`)
+			} else {
+				console.log(`❌ Купон ${couponId} не найден в словаре COUPON_MAP`)
+				sessionOptions.allow_promotion_codes = true
 			}
 		} else {
+			console.log('❌ Бэкенд отклонил скидку, включаем ручной ввод промокода')
 			sessionOptions.allow_promotion_codes = true
 		}
 
