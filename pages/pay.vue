@@ -278,7 +278,7 @@ onUnmounted(() => {
             </div>
             <div class="bill-total">
               <span class="total-text">{{ t('payPage.finalePrice') }}</span>
-              <span class="total-price">{{ finalPrice }}{{ displayCurrency }} / mo.</span>
+              <span class="total-price">{{ finalPrice }}{{ displayCurrency }} / {{ t('eulaText.month')}}</span>
             </div>
           </div>
           <div class="footer-action-wrapper" ref="payButton">

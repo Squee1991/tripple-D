@@ -10623,5 +10623,9 @@
   },
   "public__copyright": {
     "text": "Skillupgerman. Tüm hakları saklıdır."
+  },
+  "eulaText": {
+    "text": "Satın alarak şunları kabul etmiş olursunuz:",
+    "month": "ay"
   }
 }
