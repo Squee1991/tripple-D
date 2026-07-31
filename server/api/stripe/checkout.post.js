@@ -2,7 +2,7 @@ import Stripe from 'stripe'
 import { readBody, defineEventHandler, setResponseStatus, getHeaders } from 'h3'
 import { getFirestore } from 'firebase-admin/firestore'
 import { initializeApp, getApps, cert } from 'firebase-admin/app'
-// import { getPriceForUser } from '../utils/regionalPrices.js'
+import { getPriceForUser } from '../utils/regionalPrices.js'
 const COUPON_MAP = {
 	sale_3: 'sale_3',
 	sale_5: 'sale_5',
