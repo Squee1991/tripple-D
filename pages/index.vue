@@ -1,57 +1,3 @@
-<script setup>
-import { ref, onMounted, watch } from 'vue'
-import { userAuthStore } from "~/store/authStore.js"
-import Header from '../src/components/header.vue'
-import Banner from '../src/components/banner.vue'
-import Description from '../src/components/DescriptionBlock.vue'
-import About from '../src/components/about.vue'
-import FeedBack from '../src/components/feedBack.vue'
-import Footer from '../src/components/footer.vue'
-import VUid from '../src/components/V-uid.vue'
-import VEventAvailableModal from "../src/components/V-eventAvailableModal.vue";
-import VShowFall from "../src/components/V-showFall.vue";
-import Snow from "../assets/images/mery-christmas/Snow.svg";
-import HeartFall from "assets/images/mery-christmas/heartFall.svg";
-import { useEventSessionStore } from '../store/eventsStore.js'
-import VStartPage from "~/src/components/V-startPage.vue";
-import { SplashScreen } from '@capacitor/splash-screen'
-
-const eventStore = useEventSessionStore()
-const authStore = userAuthStore()
-const hydrated = ref(false)
-const isLocallyLogged = ref(false)
-
-definePageMeta({
-  layout: 'footerlayout'
-})
-
-onMounted(() => {
-  hydrated.value = true
-  isLocallyLogged.value = localStorage.getItem('app_user_logged') === 'true'
-  if (authStore.initialized) {
-    SplashScreen.hide()
-  }
-})
-
-watch(() => authStore.initialized, (isInit) => {
-  if (isInit) {
-    requestAnimationFrame(() => {
-      SplashScreen.hide()
-    })
-  }
-})
-
-watch(() => authStore.uid, (newUid) => {
-  if (newUid) {
-    localStorage.setItem('app_user_logged', 'true')
-    isLocallyLogged.value = true
-  } else if (authStore.initialized && !newUid) {
-    localStorage.removeItem('app_user_logged')
-    isLocallyLogged.value = false
-  }
-})
-</script>
-
 <template>
   <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
   <VShowFall v-if="eventStore.isSnowEnabled" :image="Snow"/>
@@ -67,6 +13,60 @@ watch(() => authStore.uid, (newUid) => {
     </template>
   </div>
 </template>
+
+<script setup>
+import { ref, onMounted, watch } from 'vue'
+import { userAuthStore } from "~/store/authStore.js"
+import { dailyStore } from '~/store/dailyStore.js'
+import Header from '../src/components/header.vue'
+import VUid from '../src/components/V-uid.vue'
+import VEventAvailableModal from "../src/components/V-eventAvailableModal.vue"
+import VShowFall from "../src/components/V-showFall.vue"
+import Snow from "../assets/images/mery-christmas/Snow.svg"
+import { useEventSessionStore } from '../store/eventsStore.js'
+import VStartPage from "~/src/components/V-startPage.vue"
+import { SplashScreen } from '@capacitor/splash-screen'
+
+const eventStore = useEventSessionStore()
+const authStore = userAuthStore()
+const daily = dailyStore()
+const hydrated = ref(false)
+const isLocallyLogged = ref(false)
+
+definePageMeta({
+  layout: 'footerlayout'
+})
+
+onMounted(() => {
+  hydrated.value = true
+  isLocallyLogged.value = localStorage.getItem('app_user_logged') === 'true'
+})
+
+watch(
+    [() => authStore.initialized, () => daily.cloudReady],
+    ([isInit, isDailyReady]) => {
+      const isReadyToHide = isInit && (!authStore.uid || isDailyReady)
+
+      if (isReadyToHide) {
+        requestAnimationFrame(() => {
+          SplashScreen.hide()
+        })
+      }
+    },
+    { immediate: true }
+)
+
+watch(() => authStore.uid, (newUid) => {
+  if (newUid) {
+    localStorage.setItem('app_user_logged', 'true')
+    isLocallyLogged.value = true
+    daily.init()
+  } else if (authStore.initialized && !newUid) {
+    localStorage.removeItem('app_user_logged')
+    isLocallyLogged.value = false
+  }
+}, { immediate: true })
+</script>
 
 <style scoped>
 .container {

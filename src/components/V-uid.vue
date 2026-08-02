@@ -44,7 +44,7 @@ import Daily from '../../assets/images/daily.svg'
 import Card from '../../assets/images/card.svg'
 import VTransition from "~/src/components/V-transition.vue";
 
-const {t , locale} = useI18n();
+const {t, locale} = useI18n();
 const tabs = [
   {id: 'locations', icon: Location, alt: 'achIcon', label: t('tabsMobile.locations'), component: VLands},
   {id: 'daily', icon: Daily, alt: 'daily icon', label: t('tabsMobile.daily'), component: VDaily},
@@ -88,11 +88,9 @@ onBeforeUnmount(() => {
   if (mql.removeEventListener) mql.removeEventListener('change', updateIsMobile)
   else mql.removeListener(updateIsMobile)
 })
-
 </script>
 
 <style scoped>
-
 * {
   box-sizing: border-box;
 }
@@ -254,7 +252,4 @@ onBeforeUnmount(() => {
     padding-bottom: 165px;
   }
 }
-
-
-
 </style>
