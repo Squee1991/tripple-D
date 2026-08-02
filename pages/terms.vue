@@ -11,19 +11,15 @@
         </button>
         <div class="terms__title">{{ t('helpCenter.terms') }}</div>
       </div>
-
       <div class="terms__content">
         <h1>Terms of Service</h1>
         <p class="last-updated">
           Please note that these Terms of Service were last reviewed on {{ lastUpdated }}.
         </p>
-
         <blockquote class="legal-note">
           PLEASE NOTE THAT SOME SECTIONS OF THESE TERMS CONTAIN IMPORTANT PROVISIONS
           REGARDING LIMITATIONS OF LIABILITY, CONTENT RIGHTS, AND DISPUTE RESOLUTION PROCEDURES.
-          PLEASE READ THEM CAREFULLY.
         </blockquote>
-
         <section v-for="(section, index) in sections" :key="index" class="section">
           <h2 class="section__title">{{ section.heading }}</h2>
           <p class="section__paragraph" v-for="(paragraph, j) in section.paragraphs" :key="j" v-html="paragraph"></p>
