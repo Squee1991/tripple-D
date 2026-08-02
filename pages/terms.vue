@@ -11,19 +11,15 @@
         </button>
         <div class="terms__title">{{ t('helpCenter.terms') }}</div>
       </div>
-
       <div class="terms__content">
         <h1>Terms of Service</h1>
         <p class="last-updated">
           Please note that these Terms of Service were last reviewed on {{ lastUpdated }}.
         </p>
-
         <blockquote class="legal-note">
           PLEASE NOTE THAT SOME SECTIONS OF THESE TERMS CONTAIN IMPORTANT PROVISIONS
           REGARDING LIMITATIONS OF LIABILITY, CONTENT RIGHTS, AND DISPUTE RESOLUTION PROCEDURES.
-          PLEASE READ THEM CAREFULLY.
         </blockquote>
-
         <section v-for="(section, index) in sections" :key="index" class="section">
           <h2 class="section__title">{{ section.heading }}</h2>
           <p class="section__paragraph" v-for="(paragraph, j) in section.paragraphs" :key="j" v-html="paragraph"></p>
@@ -43,7 +39,7 @@ const {t} = useI18n()
 const PROJECT = "SkillUpGerman"
 const EMAIL = "skillupgerman@gmail.com"
 const COUNTRY = "Poland"
-const lastUpdated = ref("January 1, 2026")
+const lastUpdated = ref("July 30, 2026")
 
 const sections = ref([
   {
@@ -56,13 +52,13 @@ const sections = ref([
   {
     heading: "2. Definitions",
     paragraphs: [
-      "“User” means any individual who accesses or uses the Service in any way. “Account” means a User profile created to access certain features. “Content” means any materials of the Service (texts, exercises, tests, interfaces, images, audio, video, source code, and other objects). “User Content” means any data submitted, entered, or uploaded by the User (including test results, learning progress, etc.). “Subscription” or “Premium” means paid access to additional Service features for a specified period."
+      "“User” means any individual who accesses or uses the Service in any way. “Account” means a User profile created to access certain features. “Content” means any materials of the Service (texts, exercises, tests, interfaces, images, audio, video, source code, and other objects). “User Content” means any data submitted, entered, or uploaded by the User (including test results, learning progress, comments, etc.). “Subscription” or “Premium” means paid access to additional Service features for a specified period."
     ]
   },
   {
     heading: "3. Right to use and age restrictions",
     paragraphs: [
-      "By using the Service, you confirm that you are at least 13 years old (or older, depending on the age of majority in your jurisdiction) and have the legal capacity to enter into a binding agreement. If you are a minor, you represent that you have obtained consent from your legal guardian to use the Service and accept these Terms.",
+      "By using the Service, you confirm that you have the legal capacity to enter into a binding agreement under applicable law and meet the minimum age required by law. If you are a minor, you represent that you have obtained consent from your legal guardian to use the Service and accept these Terms.",
       "You are responsible for complying with all laws and regulations of your jurisdiction when accessing and using the Service."
     ]
   },
@@ -86,6 +82,7 @@ const sections = ref([
     paragraphs: [
       "The Service offers paid subscription plans (Premium). All fees are billed in advance on a recurring cycle (e.g., monthly or annually) and are non-refundable, except as expressly required by applicable law or specific app store policies.",
       `In-App Purchases (Apple App Store & Google Play): If you purchase a Subscription through a mobile platform, your payment, billing, and any refund requests are handled exclusively by Apple or Google in accordance with their respective terms and conditions. ${PROJECT} does not process these payments directly and cannot issue refunds for in-app purchases.`,
+      'Platform Standard Terms: For purchases made via the Apple App Store, the standard <a class="eula" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple Licensed Application EULA</a> applies in addition to these Terms. For purchases made via Google Play, the standard Google Play Terms of Service apply.',
       "No-Refund Policy & EU Waiver: For purchases made directly through our website, you expressly agree that Premium access is provided immediately upon purchase. By accessing the Premium content, you acknowledge and agree that you lose your statutory 14-day right of withdrawal under EU consumer law, and ALL SALES ARE FINAL. No refunds or credits will be provided for partially used subscription periods.",
       "Cancellation: You can cancel your subscription auto-renewal at any time through your Account settings or your Apple/Google subscription management menu. To avoid being charged for the next period, you must cancel at least 24 hours before your current billing cycle ends."
     ]
@@ -167,7 +164,24 @@ const sections = ref([
   {
     heading: "18. Contacts",
     paragraphs: [
-      `For any questions related to these Terms or the Service, you can contact us at: ${EMAIL}. We strive to respond promptly.`
+      `For any questions, complaints, or claims related to the Service, you can contact us at:`,
+      `Email: <a class="eula" href="mailto:${EMAIL}">${EMAIL}</a>`,
+      `Address: Szczecin, ${COUNTRY}`,
+      `We strive to respond promptly.`
+    ]
+  },
+  {
+    heading: "19. Apple App Store Additional Terms",
+    paragraphs: [
+      `If you downloaded the Service from the Apple App Store, the following additional terms apply. You acknowledge that these Terms are concluded between you and ${PROJECT} only, and not with Apple. ${PROJECT}, not Apple, is solely responsible for the Service and its content.`,
+      "The license granted to you for the Service is limited to a non-transferable license to use the Service on any Apple-branded Products that you own or control and as permitted by the Usage Rules set forth in the Apple Media Services Terms and Conditions.",
+      `${PROJECT} is solely responsible for providing any maintenance and support services with respect to the Service. You acknowledge that Apple has no obligation whatsoever to furnish any maintenance and support services.`,
+      "In the event of any failure of the Service to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price for the Service to you. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the Service.",
+      `${PROJECT}, not Apple, is responsible for addressing any claims by you or any third party relating to the Service or your possession and/or use of the Service, including product liability claims, failure to conform to legal or regulatory requirements, and claims arising under consumer protection or similar legislation.`,
+      `In the event of any third-party claim that the Service or your possession and use of the Service infringes that third party’s intellectual property rights, ${PROJECT}, not Apple, will be solely responsible for the investigation, defense, settlement, and discharge of any such intellectual property infringement claim.`,
+      "You represent and warrant that (i) you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a “terrorist supporting” country; and (ii) you are not listed on any U.S. Government list of prohibited or restricted parties.",
+      "You must comply with applicable third-party terms of agreement when using the Service.",
+      `You and ${PROJECT} acknowledge and agree that Apple, and Apple’s subsidiaries, are third-party beneficiaries of these Terms, and that, upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary thereof.`
     ]
   }
 ])
@@ -186,6 +200,11 @@ const sections = ref([
   line-height: 1.75;
   font-family: "Nunito", sans-serif;
   color: var(--titleColor);
+}
+
+:deep(.eula) {
+  color: #3b82f6;
+  text-decoration: underline;
 }
 
 .terms__content {
