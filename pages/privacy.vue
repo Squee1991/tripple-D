@@ -14,15 +14,22 @@
       <div class="privacy_section-inner">
         <section v-for="(section, index) in sections" :key="index" class="section">
           <h2>{{ section.heading }}</h2>
-          <p v-for="(paragraph, j) in section.paragraphs" :key="'p-' + j">
+
+          <p v-if="section.paragraphs" v-for="(paragraph, j) in section.paragraphs" :key="'p-' + j">
             {{ paragraph }}
           </p>
+
           <ul v-if="section.listItems && section.listItems.length" class="privacy-list">
             <li v-for="(item, k) in section.listItems" :key="'li-' + k">
               {{ item }}
             </li>
           </ul>
+
+          <p v-if="section.postParagraphs" v-for="(postParagraph, l) in section.postParagraphs" :key="'pp-' + l">
+            {{ postParagraph }}
+          </p>
         </section>
+
         <p class="last-updated">
           Last updated: {{ lastUpdated }}
         </p>
@@ -41,13 +48,14 @@ const { t } = useI18n()
 const PROJECT = "SkillUpGerman"
 const EMAIL = "skillupgerman@gmail.com"
 const COUNTRY = "Poland"
-const lastUpdated = ref("June 29, 2026")
+const CITY = "Szczecin"
+const lastUpdated = ref("July 30, 2026")
 
 const sections = ref([
   {
     heading: "1. Introduction",
     paragraphs: [
-      `This Privacy Policy describes how ${PROJECT} ("we", "Service") collects, uses, and protects users' personal data. The data controller is the administrator of ${PROJECT}, located in ${COUNTRY}.`,
+      `This Privacy Policy describes how ${PROJECT} ("we", "Service") collects, uses, and protects users' personal data. The data controller is the administrator of ${PROJECT}, located in ${CITY}, ${COUNTRY}.`,
       "By using the Service, you agree to the terms of this Policy."
     ]
   },
@@ -57,8 +65,7 @@ const sections = ref([
       "Account data: name (nickname), email address, encrypted password (stored in Firebase). The name may be a pseudonym.",
       "Usage data: learning progress (learned words, completed tasks), test results, in-game activity.",
       "Technical data: certain information (e.g., IP address or device identifiers) is automatically processed by our providers (Firebase) for security and service operation. We do not use this information to identify you personally.",
-      "Payment data: transaction information when subscribing (processed by payment systems such as Stripe; we do not store credit card details).",
-      "Advertising data: third-party advertising networks may collect device identifiers (e.g., IDFA or Google Advertising ID) and usage data to serve advertisements."
+      "Payment data: transaction information when subscribing (processed by payment systems such as Stripe; we do not store credit card details)."
     ]
   },
   {
@@ -68,8 +75,7 @@ const sections = ref([
       "To save and display your learning progress.",
       "To process subscriptions and payments.",
       "To improve the quality and personalization of the Service.",
-      "To send notifications and messages about important updates.",
-      "To display advertisements provided by third-party ad networks."
+      "To send notifications and messages about important updates."
     ]
   },
   {
@@ -79,7 +85,6 @@ const sections = ref([
     ],
     listItems: [
       "When necessary for the operation of the Service (e.g., to data processing providers such as Firebase/Google).",
-      "With third-party advertising partners (e.g., Google AdMob) to serve ads within the application.",
       "When required by law (e.g., by court order or governmental request)."
     ]
   },
@@ -93,11 +98,11 @@ const sections = ref([
     ]
   },
   {
-    heading: "6. Cookies, analytics, and advertising",
+    heading: "6. Cookies and analytics",
     paragraphs: [
-      "We use cookies and similar technologies for authentication and the correct operation of the Service.",
-      "To improve the Service, we use analytics tools (e.g., Firebase Analytics) to collect anonymized usage statistics (e.g., number of section visits, button clicks, time spent on pages).",
-      "We use third-party advertising networks that may collect device identifiers to serve personalized or non-personalized ads. You can manage personalized ad preferences in your device settings."
+      "We use cookies only for authentication and the correct operation of the Service.",
+      "To improve the Service, we collect anonymized usage statistics (e.g., number of section visits, button clicks, time spent on pages). This data does not allow identification of a specific user and is not used for advertising.",
+      "If we connect third-party analytics services in the future (e.g., Google Analytics or Firebase Analytics), this Policy will be updated, and users will be notified."
     ]
   },
   {
@@ -111,9 +116,9 @@ const sections = ref([
       "Delete your account and associated data.",
       "Restrict or object to data processing."
     ],
-    get paragraphsAfter() {
-      return [`To exercise your rights or to delete your account, you can use the account settings in the app, visit our website at skillupgerma.com/delete, or contact us at: ${EMAIL}.`]
-    }
+    postParagraphs: [
+      `To exercise your rights, please contact us at: ${EMAIL}.`
+    ]
   },
   {
     heading: "8. International data transfer",
@@ -130,14 +135,7 @@ const sections = ref([
     ]
   },
   {
-    heading: "10. Children's Privacy",
-    paragraphs: [
-      "Our Service is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13.",
-      "If we become aware that a child under 13 has provided us with personal data, we will take steps to delete such information immediately."
-    ]
-  },
-  {
-    heading: "11. Changes to the Policy",
+    heading: "10. Changes to the Policy",
     paragraphs: [
       "We may periodically update this Privacy Policy.",
       "The current version is always available on the website; the date of the last update is shown at the bottom of the document.",
@@ -145,21 +143,20 @@ const sections = ref([
     ]
   },
   {
-    heading: "12. Contacts",
+    heading: "11. Contacts",
     paragraphs: [
-      `For questions regarding data protection and privacy, please contact us at: ${EMAIL}.`
+      `For questions regarding data protection and privacy, please contact us at: ${EMAIL}.`,
+      `Address: ${CITY}, ${COUNTRY}`
     ]
   }
 ])
-
-sections.value[6].paragraphs.push(`To exercise your rights, please contact us at: ${EMAIL}.`);
 </script>
 
 <style scoped>
 .privacy__title {
   font-size: 23px;
   font-weight: 600;
-  font-family: Nunito, sans-serif;
+  font-family: "Nunito", sans-serif;
   color: var(--title);
   text-shadow: 1px 1px var(--title);
   margin-left: 15px;
@@ -202,6 +199,7 @@ sections.value[6].paragraphs.push(`To exercise your rights, please contact us at
   height: 100%;
   line-height: 1.75;
   color: var(--titleColor);
+  font-family: "Nunito", sans-serif;
 }
 
 .last-updated {
@@ -232,12 +230,14 @@ sections.value[6].paragraphs.push(`To exercise your rights, please contact us at
 
 .section p {
   margin: 8px 0;
+  font-size: 15px;
 }
 
 .privacy-list {
   margin: 8px 0;
   padding-left: 20px;
   list-style-type: disc;
+  font-size: 15px;
 }
 
 .privacy-list li {
