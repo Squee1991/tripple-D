@@ -10369,7 +10369,8 @@
   },
   "installApp": {
     "stayInBrowser": "ब्राउज़र में जारी रखें",
-    "promoSubTitle": " Skillupgerman ऐप के साथ जर्मन सीखना बहुत अधिक सुविधाजनक है।"
+    "promoSubTitle": " Skillupgerman ऐप के साथ जर्मन सीखना बहुत अधिक सुविधाजनक है।",
+    "soon": "जल्द आ रहा है"
   },
   "speakSessionsBanner": {
     "dialog": "संवादों को पूरा करें। सुनें, उत्तर के विकल्प चुनें और उच्चारण का अभ्यास करें",

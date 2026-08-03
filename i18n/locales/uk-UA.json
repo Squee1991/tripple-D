@@ -10399,7 +10399,8 @@
   },
   "installApp": {
     "stayInBrowser": "Продовжити в браузері",
-    "promoSubTitle": " З додатком Skillupgerman вчити німецьку набагато зручніше."
+    "promoSubTitle": " З додатком Skillupgerman вчити німецьку набагато зручніше.",
+    "soon": "Скоро буде"
   },
   "speakSessionsBanner": {
     "dialog": "Проходь діалоги. Слухай, обирай варіанти відповідей та тренуй вимову",

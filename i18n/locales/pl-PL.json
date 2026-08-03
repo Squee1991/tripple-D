@@ -10409,7 +10409,8 @@
   },
   "installApp": {
     "stayInBrowser": "Kontynuuj w przeglądarce",
-    "promoSubTitle": " Z aplikacją Skillupgerman nauka niemieckiego jest o wiele wygodniejsza."
+    "promoSubTitle": " Z aplikacją Skillupgerman nauka niemieckiego jest o wiele wygodniejsza.",
+    "soon": "Wkrótce"
   },
   "speakSessionsBanner": {
     "dialog": "Przechodź dialogi. Słuchaj, wybieraj opcje odpowiedzi i ćwicz wymowę",

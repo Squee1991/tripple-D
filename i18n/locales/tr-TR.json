@@ -10403,7 +10403,8 @@
   },
   "installApp": {
     "stayInBrowser": "Tarayıcıda devam et",
-    "promoSubTitle": " Skillupgerman uygulaması ile Almanca öğrenmek çok daha pratik."
+    "promoSubTitle": " Skillupgerman uygulaması ile Almanca öğrenmek çok daha pratik.",
+    "soon": "Yakında"
   },
   "speakSessionsBanner": {
     "dialog": "Diyalogları tamamlayın. Dinleyin, cevap seçeneklerini belirleyin ve telaffuz pratiği yapın",
