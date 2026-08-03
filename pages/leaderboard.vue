@@ -282,6 +282,8 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   height: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
   overflow: hidden;
   font-family: "Nunito", sans-serif;
 }
@@ -292,7 +294,6 @@ onUnmounted(() => {
 }
 
 .ranked-sidebar-corkboard {
-  max-width: 400px;
   display: flex;
   flex-direction: column;
   gap: 14px;

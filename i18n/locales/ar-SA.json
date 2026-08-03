@@ -10412,7 +10412,8 @@
   },
   "installApp": {
     "stayInBrowser": "المتابعة في المتصفح",
-    "promoSubTitle": " مع تطبيق Skillupgerman، تعلم اللغة الألمانية أكثر ملاءمة بكثير."
+    "promoSubTitle": " مع تطبيق Skillupgerman، تعلم اللغة الألمانية أكثر ملاءمة بكثير.",
+    "soon": "قريباً"
   },
   "speakSessionsBanner": {
     "dialog": "خض الحوارات. استمع، واختر خيارات الإجابة، وتدرب على النطق",

@@ -10393,7 +10393,8 @@
   },
   "installApp": {
     "stayInBrowser": "Continuă în browser",
-    "promoSubTitle": " Cu aplicația Skillupgerman, învățarea limbii germane este mult mai practică."
+    "promoSubTitle": " Cu aplicația Skillupgerman, învățarea limbii germane este mult mai practică.",
+    "soon": "În curând"
   },
   "speakSessionsBanner": {
     "dialog": "Parcurge dialogurile. Ascultă, alege opțiunile de răspuns și exersează pronunția",

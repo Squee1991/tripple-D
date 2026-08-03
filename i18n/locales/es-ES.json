@@ -10393,7 +10393,8 @@
   },
   "installApp": {
     "stayInBrowser": "Continuar en el navegador",
-    "promoSubTitle": " Con la aplicación Skillupgerman, aprender alemán es mucho más cómodo."
+    "promoSubTitle": " Con la aplicación Skillupgerman, aprender alemán es mucho más cómodo.",
+    "soon": "Próximamente"
   },
   "speakSessionsBanner": {
     "dialog": "Completa los diálogos. Escucha, elige las opciones de respuesta y practica la pronunciación",
