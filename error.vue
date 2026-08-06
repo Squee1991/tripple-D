@@ -44,6 +44,12 @@
 <script setup>
 import {ref, computed} from 'vue'
 import VNetwork from "~/src/components/V-network.vue";
+import {useSeoMeta} from "#imports";
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
+
 const { t } = useI18n();
 const props = defineProps({
   error: Object

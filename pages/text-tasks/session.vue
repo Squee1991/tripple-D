@@ -6,72 +6,75 @@
       @touchend="handleTouchEnd"
   >
     <div class="drag-page-container" v-if="store.currentTask">
-      <div class="header-wrapper">
-        <button class="btn-icon-back" @click="handleBackClick">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-               stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="19" y1="12" x2="5" y2="12"></line>
-            <polyline points="12 19 5 12 12 5"></polyline>
-          </svg>
-        </button>
-        <div class="custom-progress">
-          <div class="progress_exp-bar">
-            <div class="progress__bar" :style="{ width: `${progressPercentage}%` }">
-              <div class="glare"></div>
+      <VLoginPreloader v-if="loading" />
+      <template v-else>
+        <div class="header-wrapper">
+          <button class="btn-icon-back" @click="handleBackClick">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                 stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          <div class="custom-progress">
+            <div class="progress_exp-bar">
+              <div class="progress__bar" :style="{ width: `${progressPercentage}%` }">
+                <div class="glare"></div>
+              </div>
             </div>
           </div>
+          <div class="task-counter">
+            {{ currentTaskNumber }} / {{ totalTasks }}
+          </div>
         </div>
-        <div class="task-counter">
-          {{ currentTaskNumber }} / {{ totalTasks }}
-        </div>
-      </div>
-      <div class="content-area">
-        <div class="word-pool-card">
-          <transition-group name="list" tag="div" class="word-pool">
-            <div
-                v-for="word in store.availableWords"
-                :key="word"
-                class="draggable-word"
-                :class="{ 'is-selected': selectedWordForTap === word }"
-                @click="selectWordForTap(word)"
-            >
-              {{ word }}
-            </div>
-          </transition-group>
-          <div v-if="store.availableWords.length === 0" class="empty-pool-msg">{{ t('textTaskSession.allUsed')}}</div>
-        </div>
-        <div class="text-card">
-          <div class="text-content">
-            <template v-for="(part, index) in store.currentTask.textElements" :key="index">
-              <span v-if="part.type === 'text'" class="static-text">{{ part.content }}</span>
-              <span
-                  v-else-if="part.type === 'blank'"
-                  class="drop-zone"
-                  :class="{
-                  'has-word': store.blanksState[part.id],
-                  'is-correct': store.isChecking && store.blanksState[part.id] === part.correct,
-                  'is-wrong': store.isChecking && store.blanksState[part.id] && store.blanksState[part.id] !== part.correct,
-                  'is-highlighted': selectedWordForTap && !store.blanksState[part.id]
-                }"
-                  @click="handleBlankClick(part.id)"
+        <div class="content-area">
+          <div class="word-pool-card">
+            <transition-group name="list" tag="div" class="word-pool">
+              <div
+                  v-for="word in store.availableWords"
+                  :key="word"
+                  class="draggable-word"
+                  :class="{ 'is-selected': selectedWordForTap === word }"
+                  @click="selectWordForTap(word)"
               >
-                <span v-if="store.blanksState[part.id]">{{ store.blanksState[part.id] }}</span>
-                <span v-else class="drop-placeholder">...</span>
-              </span>
-            </template>
+                {{ word }}
+              </div>
+            </transition-group>
+            <div v-if="store.availableWords.length === 0" class="empty-pool-msg">{{ t('textTaskSession.allUsed')}}</div>
+          </div>
+          <div class="text-card">
+            <div class="text-content">
+              <template v-for="(part, index) in store.currentTask.textElements" :key="index">
+                <span v-if="part.type === 'text'" class="static-text">{{ part.content }}</span>
+                <span
+                    v-else-if="part.type === 'blank'"
+                    class="drop-zone"
+                    :class="{
+                    'has-word': store.blanksState[part.id],
+                    'is-correct': store.isChecking && store.blanksState[part.id] === part.correct,
+                    'is-wrong': store.isChecking && store.blanksState[part.id] && store.blanksState[part.id] !== part.correct,
+                    'is-highlighted': selectedWordForTap && !store.blanksState[part.id]
+                  }"
+                    @click="handleBlankClick(part.id)"
+                >
+                  <span v-if="store.blanksState[part.id]">{{ store.blanksState[part.id] }}</span>
+                  <span v-else class="drop-placeholder">...</span>
+                </span>
+              </template>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="footer-area">
-        <button
-            class="btn-check"
-            :class="{ 'btn-success': isSuccess && store.isChecking }"
-            :disabled="!store.isAllFilled && !store.isChecking"
-            @click="handleMainAction"
-        >
-          {{ store.isChecking ? t('questCompletedModals.further') : t('questCompletedModals.check') }}
-        </button>
-      </div>
+        <div class="footer-area">
+          <button
+              class="btn-check"
+              :class="{ 'btn-success': isSuccess && store.isChecking }"
+              :disabled="!store.isAllFilled && !store.isChecking"
+              @click="handleMainAction"
+          >
+            {{ store.isChecking ? t('questCompletedModals.further') : t('questCompletedModals.check') }}
+          </button>
+        </div>
+      </template>
     </div>
     <div v-else class="error-state">
       <p>{{ t('textTaskSession.errorText')}}</p>
@@ -104,11 +107,16 @@ import {useRouter, onBeforeRouteLeave} from 'vue-router'
 import {useTextTasksStore} from '../../store/textTasksStore.js'
 import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
 import { useSwipeBack } from '~/composables/useSwipeBack.js'
+import { showInterstitial } from '../../utils/admob.js'
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue"
+import { userAuthStore } from "~/store/authStore.js"
 
 const {t} = useI18n()
 const router = useRouter()
 const store = useTextTasksStore()
+const authStore = userAuthStore()
 
+const loading = ref(true)
 const selectedWordForTap = ref(null)
 
 const showExitModal = ref(false)
@@ -128,7 +136,22 @@ onMounted(() => {
   if (!store.currentTask) {
     isConfirmedExit.value = true
     router.push('/text-tasks')
+    return
   }
+  const minDelay = new Promise(resolve => setTimeout(resolve, 1500))
+  const adPromise = new Promise(resolve => {
+    if (!authStore.isPremium) {
+      showInterstitial(() => {
+        resolve()
+      })
+    } else {
+      resolve()
+    }
+  })
+
+  Promise.all([minDelay, adPromise]).then(() => {
+    loading.value = false
+  })
 })
 
 onBeforeRouteLeave((to, from, next) => {
@@ -221,6 +244,7 @@ const handleBlankClick = (blankId) => {
 </script>
 
 <style scoped>
+/* Стили остались без изменений */
 .drag-page {
   font-family: "Nunito", sans-serif;
   height: 100%;

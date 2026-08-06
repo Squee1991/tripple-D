@@ -27,7 +27,7 @@
             <p class="shop-card__desc">
               {{ card.description }}
               <span v-if="card.isActive" class="freeze-date">
-                <br>{{t('cardsShop.till')}} {{ formatFreezeDate }}
+<!--                <br>{{t('cardsShop.till')}} {{ formatFreezeDate }}-->
               </span>
             </p>
             <div v-if="card.requiredHats && !card.isOwned" class="shop-card__requirements">
@@ -44,7 +44,8 @@
           <div class="shop-card__footer">
             <button
                 class="shop-card__action-btn"
-                :disabled="card.disabled"
+                :class="{ 'is-disabled': card.disabled }"
+                :disabled="card.disabled && card.type !== 'permanent'"
                 @click="onCardAction(card)"
             >
               <span v-if="card.isOwned || card.isMaxLimit">
@@ -68,19 +69,52 @@
     <div v-if="showModal" class="modal-overlay" @click.self="closeModal">
       <div class="modal-content" :class="{'modal-content--success': isSuccessState}">
         <div class="modal-header">
-          <h3 class="modal-title">
-            <span v-if="isSuccessState">{{ t('cardsShop.ready')}}</span>
-            <span v-else-if="modalType === 'lives'">{{ t('cardsShop.buyLives')}}</span>
-            <span v-else>{{ t('cardsShop.stopTime')}}</span>
-          </h3>
+          <h3 class="modal-title">{{ modalTitle }}</h3>
         </div>
         <div class="modal-body">
-          <template v-if="isSuccessState">
+          <template v-if="modalType === 'success'">
             <p class="modal-desc">
               {{t('cardsShopModal.modal-desc-first')}}<br><br>
               {{t('cardsShopModal.modal-desc-Second')}} <b>{{t('cardsShopModal.modal-desc-Third')}}</b>{{t('cardsShopModal.modal-desc-Four')}}
             </p>
             <img :src="ShieldFreeze" alt="Success" class="success-icon"/>
+          </template>
+          <template v-else-if="modalType === 'coupon_buy'">
+            <p class="modal-desc">Приобрести купон <b>{{ selectedCard.title }}</b>?</p>
+            <div class="modal-price-summary">
+              <span>К оплате:</span>
+              <div class="price-value">
+                <img :src="Articlus" alt="Articlus" class="price-icon-small"/>
+                <span>{{ selectedCard.price }}</span>
+              </div>
+            </div>
+          </template>
+          <template v-else-if="modalType === 'coupon_error'">
+            <div class="modal-desc">
+              <div class="modal__sub">Для покупки <b>{{ selectedCard.title }}</b> необходимо:<br><br></div>
+              <div class="error-requirements">
+                <div v-if="langStore.points < selectedCard.price" class="error-req-row">
+                  <div class="error-req-title">
+                     <img :src="Articlus" alt="Articlus" class="price-icon-small"/> {{ selectedCard.price }}
+                  </div>
+                  <span class="error-req-hint">(не хватает {{ selectedCard.price - langStore.points }})</span>
+                </div>
+                <div v-if="authStore.totalHats < selectedCard.requiredHats" class="error-req-row">
+                  <div class="error-req-title">
+                     <img :src="GraduateHat" alt="Hat" class="price-icon-small"/> {{ selectedCard.requiredHats }}
+                  </div>
+                  <span class="error-req-hint">(не хватает {{ selectedCard.requiredHats - authStore.totalHats }})</span>
+                </div>
+              </div>
+            </div>
+          </template>
+          <template v-else-if="modalType === 'coupon_success' || modalType === 'coupon_owned'">
+            <p class="modal-desc">
+              <span v-if="modalType === 'coupon_success'"><b>Купон успешно активирован!</b></span>
+<!--              <span v-if="modalType === 'coupon_owned'"><b>Купон уже куплен.</b></span>-->
+              <span>Использовать его можно на экране покупки PLUS.</span>
+            </p>
+            <img :src="selectedCard.icon" alt="Success" class="success-icon"/>
           </template>
           <template v-else>
             <p class="modal-desc">
@@ -110,11 +144,16 @@
           </template>
         </div>
         <div class="modal-actions">
-          <button v-if="isSuccessState" class="modal-close-btn" @click="closeModal">{{t('cardsShop.accessibly')}}</button>
-          <template v-else>
-            <button class="modal-btn cancel" @click="closeModal">{{t('cardsShop.cancel')}}</button>
-            <button class="modal-btn confirm" :disabled="!canAfford" @click="confirmPurchase">{{t('cardsShop.buy')}}</button>
-          </template>
+          <button
+              v-for="btn in modalButtons"
+              :key="btn.id"
+              class="modal-btn"
+              :class="btn.class"
+              :disabled="btn.disabled"
+              @click="btn.action"
+          >
+            {{ btn.label }}
+          </button>
         </div>
       </div>
     </div>
@@ -122,23 +161,24 @@
 </template>
 
 <script setup>
-import {computed, ref} from 'vue'
-import {userlangStore} from '~/store/learningStore.js'
-import {userChainStore} from '~/store/chainStore.js'
-import {userAuthStore} from '~/store/authStore.js'
-import {useRankUserStore} from '~/store/rankStore.js'
+import { computed, ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { userlangStore } from '~/store/learningStore.js'
+import { userChainStore } from '~/store/chainStore.js'
+import { userAuthStore } from '~/store/authStore.js'
+import { useRankUserStore } from '~/store/rankStore.js'
 import ShopIcon from '../../assets/images/shopping-cart.svg'
 import Heart from '../../assets/images/life.svg'
 import ShieldFreeze from '../../assets/images/FreezeShield.svg'
 import Articlus from '../../assets/images/article.svg'
 import Sale from '../../assets/images/save5.svg'
 import Sale10 from '../../assets/images/rocket_10.svg'
-import Sale15 from '../../assets/images/hot-air-ballon15.svg'
 import GraduateHat from '../../assets/images/graduate-hat.svg'
 import HotDeal from '../../assets/images/hot-deal.svg'
-import VBanner from "~/src/components/V-banner.vue";
+import VBanner from "~/src/components/V-banner.vue"
 
-const {t} = useI18n()
+const { t } = useI18n()
+const router = useRouter()
 const questStore = userChainStore()
 const langStore = userlangStore()
 const authStore = userAuthStore()
@@ -149,13 +189,13 @@ const PRICES = {
   FREEZE_DAY: 10,
   SALE_3: 100,
   SALE_6: 150,
-  // SALE_15: 70
 }
-const DISCOUNT_REQ_HATS = {3: 210, 6: 500}
+const DISCOUNT_REQ_HATS = { 3: 210, 6: 500 }
 
 const showModal = ref(false)
 const modalType = ref('freeze')
 const quantityToBuy = ref(1)
+const selectedCard = ref(null)
 
 const isMaxHearts = computed(() => Number(questStore.lives) >= Number(questStore.maxLives))
 const isFreezeActive = computed(() => authStore.isFreezeActive)
@@ -202,16 +242,6 @@ const shopCards = computed(() => {
       requiredHats: DISCOUNT_REQ_HATS[6],
       type: 'permanent'
     },
-    // {
-    //   id: "sale_15",
-    //   title:  t('cardSales.title15'),
-    //   description: "",
-    //   hotIcon: HotDeal,
-    //   icon: Sale15,
-    //   price: PRICES.SALE_15,
-    //   requiredHats: DISCOUNT_REQ_HATS[15],
-    //   type: 'permanent'
-    // },
   ]
 
   return cardsData.map(card => {
@@ -221,9 +251,11 @@ const shopCards = computed(() => {
     let btnLabel = t('cardsShop.buy')
     let isMaxLimit = false
     let rankTitle = ''
+
     if (card.requiredHats) {
       rankTitle = rankStore.getRankTitleByHats(card.requiredHats)
     }
+
     if (card.id === 'lives') {
       isMaxLimit = isMaxHearts.value
       isDisabled = isMaxLimit
@@ -236,22 +268,25 @@ const shopCards = computed(() => {
     else if (card.type === 'permanent') {
       isOwned = authStore.premiumDiscount?.[card.id] === true
       const hasEnoughHats = authStore.totalHats >= (card.requiredHats || 0)
-      const canAfford = langStore.points >= card.price
+      const canAffordPoints = langStore.points >= card.price
+
       if (isOwned) {
         btnLabel = t('shop.bought')
         isDisabled = true
         isActive = hasEnoughHats
       } else {
-        isDisabled = !hasEnoughHats || !canAfford
+        isDisabled = !hasEnoughHats || !canAffordPoints
         btnLabel = t('cardsShop.buy')
       }
     }
+
     const isLevelClaimed = authStore.claimedBonuses?.includes(card.requiredHats)
     if (isLevelClaimed && card.type !== 'consumable') {
       isOwned = true
       btnLabel = "got bonus"
       isDisabled = true
     }
+
     const classes = {
       'shop-card--owned': isOwned,
       'shop-card--active': isActive,
@@ -273,28 +308,38 @@ const shopCards = computed(() => {
 })
 
 const onCardAction = async (card) => {
-  if (card.disabled && !card.isActive) return
-  if (card.id === 'lives' || card.id === 'time_freeze') {
-    modalType.value = card.id === 'lives' ? 'lives' : 'freeze'
-    quantityToBuy.value = 1
+  selectedCard.value = card
+
+  if (card.type === 'permanent') {
+    if (card.isOwned) {
+      modalType.value = 'coupon_owned'
+    } else if (card.disabled) {
+      modalType.value = 'coupon_error'
+    } else {
+      modalType.value = 'coupon_buy'
+    }
     showModal.value = true
     return
   }
 
-  if (card.type === 'permanent') {
-    langStore.points -= card.price
-    langStore.articlesSpentForAchievement += card.price
-    await langStore.saveToFirebase()
-    await authStore.activateDiscount(card.id)
+  if (card.disabled && !card.isActive) return
+
+  if (card.id === 'lives' || card.id === 'time_freeze') {
+    modalType.value = card.id === 'lives' ? 'lives' : 'freeze'
+    quantityToBuy.value = 1
+    showModal.value = true
   }
 }
-const isSuccessState = computed(() => modalType.value === 'success')
+
+const isSuccessState = computed(() => modalType.value === 'success' || modalType.value === 'coupon_success')
+
 const maxQuantity = computed(() => {
   if (modalType.value === 'lives') return Math.max(0, Number(questStore.maxLives) - Number(questStore.lives))
   return 30
 })
 
 const totalCost = computed(() => {
+  if (modalType.value === 'coupon_buy') return selectedCard.value?.price || 0
   const price = modalType.value === 'lives' ? PRICES.HEART : PRICES.FREEZE_DAY
   return quantityToBuy.value * price
 })
@@ -320,9 +365,46 @@ const quantityLabel = computed(() => {
   return t(key);
 });
 
+const modalTitle = computed(() => {
+  if (modalType.value === 'success') return t('cardsShop.ready')
+  if (modalType.value === 'lives') return t('cardsShop.buyLives')
+  if (modalType.value === 'freeze') return t('cardsShop.stopTime')
+  if (modalType.value === 'coupon_buy') return `Покупка купона`
+  if (modalType.value === 'coupon_error') return `Условия покупки`
+  if (modalType.value === 'coupon_success') return `Успешно!`
+  if (modalType.value === 'coupon_owned') return `Купон активен`
+  return ''
+})
+
 const closeModal = () => {
   showModal.value = false
 }
+
+const goToPay = () => {
+  closeModal()
+  router.push('/pay')
+}
+
+const modalButtons = computed(() => {
+  switch (modalType.value) {
+    case 'success':
+      return [{ id: 'ok', label: t('cardsShop.accessibly'), class: 'confirm', action: closeModal }]
+    case 'coupon_success':
+    case 'coupon_owned':
+      return [{ id: 'buy_plus', label: 'Приобрести PLUS', class: 'confirm', action: goToPay }]
+    case 'coupon_error':
+      return [{ id: 'ok', label: 'ОК', class: 'confirm', action: closeModal }]
+    case 'coupon_buy':
+    case 'lives':
+    case 'freeze':
+      return [
+        { id: 'cancel', label: t('cardsShop.cancel'), class: 'cancel', action: closeModal },
+        { id: 'confirm', label: t('cardsShop.buy'), class: 'confirm', action: confirmPurchase, disabled: !canAfford.value }
+      ]
+    default:
+      return []
+  }
+})
 
 const updateQuantity = (delta) => {
   const newValue = quantityToBuy.value + delta
@@ -333,6 +415,15 @@ const updateQuantity = (delta) => {
 
 const confirmPurchase = async () => {
   if (!canAfford.value) return
+
+  if (modalType.value === 'coupon_buy') {
+    langStore.points -= selectedCard.value.price
+    langStore.articlesSpentForAchievement += selectedCard.value.price
+    await langStore.saveToFirebase()
+    await authStore.activateDiscount(selectedCard.value.id)
+    modalType.value = 'coupon_success'
+    return
+  }
 
   langStore.points -= totalCost.value
   langStore.articlesSpentForAchievement += totalCost.value
@@ -371,6 +462,10 @@ const confirmPurchase = async () => {
 
 .shop__content::-webkit-scrollbar-track {
   background: transparent;
+}
+
+.modal__sub {
+  height: 34px;
 }
 
 .shop__content::after{
@@ -538,7 +633,9 @@ const confirmPurchase = async () => {
 }
 
 .modal-body {
-  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .shop-card__action-btn {
@@ -561,10 +658,14 @@ const confirmPurchase = async () => {
   transform: translateY(4px);
 }
 
-.shop-card__action-btn:disabled {
+.shop-card__action-btn:disabled, .shop-card__action-btn.is-disabled {
   background: var(--cardShopBtnDisabledBg);
   color: #7f8fa4;
   box-shadow: 0 4px 0 var(--cardShopBtnDisabledBg);
+  cursor: pointer;
+}
+
+.shop-card__action-btn:disabled {
   cursor: not-allowed;
 }
 
@@ -602,14 +703,13 @@ const confirmPurchase = async () => {
 }
 
 .modal-content {
-  background:var(--menuItemsBg);
+  background: var(--menuItemsBg);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 20px;
   padding: 24px;
   width: 100%;
   max-width: 360px;
-
   animation: slideUp 0.3s ease-out;
 }
 
@@ -636,16 +736,49 @@ const confirmPurchase = async () => {
 .modal-title {
   color: var(--titleColor);
   margin: 0;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 800;
 }
 
 .modal-desc {
   color: #a0a6b1;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   line-height: 1.5;
+}
+
+.error-requirements {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  background: var(--tabBg);
+  padding: 28px 12px;
+  border-radius: 12px;
+}
+
+.error-req-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.error-req-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 400;
+  color: var(--titleColor);
+  font-family: Lilita One, sans-serif;
+  font-size: 24px;
+}
+
+.error-req-hint {
+  font-size: 13px;
+  color: #ef5350;
+  display: flex;
 }
 
 .freeze-selector {
@@ -717,8 +850,8 @@ const confirmPurchase = async () => {
 }
 
 .price-icon-small {
-  width: 20px;
-  height: 20px;
+  width: 42px;
+  height: 42px;
 }
 
 .text-red {
@@ -738,37 +871,38 @@ const confirmPurchase = async () => {
   gap: 12px;
 }
 
-.modal-btn, .modal-close-btn {
+.modal-btn {
   flex: 1;
-  padding: 12px;
+  padding: 14px;
   border-radius: 50px;
   border: none;
   font-weight: 700;
   font-size: 15px;
   cursor: pointer;
+  transition: all 0.1s;
 }
 
 .modal-btn.cancel {
   background: transparent;
   border: 1px solid #363d4a;
   color: #a0a6b1;
-  box-shadow: 0 3px 0  #363d4a;
+  box-shadow: 0 6px 0  #363d4a;
 }
 
-.modal-btn.confirm, .modal-close-btn {
+.modal-btn.confirm {
   background: #f1c40f;
   color: #1c222d;
-  box-shadow: 0 3px 0 #c29d0b;
+  box-shadow: 0 6px 0 #c29d0b;
 }
 
 .modal-btn.confirm:disabled {
-  background: #363d4a;
+  background: #365ea8;
+  box-shadow: 0 6px 0 #2f559a;
   color: #ffffff;
-  box-shadow: none;
   cursor: not-allowed;
 }
 
-.modal-btn.confirm:active, .modal-close-btn:active {
+.modal-btn:active {
   box-shadow: none;
   transform: translateY(2px);
 }
@@ -776,7 +910,7 @@ const confirmPurchase = async () => {
 .success-icon {
   width: 80px;
   height: 80px;
-  margin: 0 auto 15px;
+  margin: 0 auto 25px;
   display: block;
 }
 </style>
