@@ -58,7 +58,7 @@
                 <template v-else>
                   <img :src="Articlus" alt="price" class="btn-price-icon"/>
                   <span>{{ card.price }}</span>
-                  <span v-if="card.id === 'lives'"> / шт</span>
+                  <span v-if="card.id === 'lives'"> / {{t('shopInfoModal.pcs')}}</span>
                 </template>
               </div>
             </button>
@@ -80,9 +80,9 @@
             <img :src="ShieldFreeze" alt="Success" class="success-icon"/>
           </template>
           <template v-else-if="modalType === 'coupon_buy'">
-            <p class="modal-desc">Приобрести купон <b>{{ selectedCard.title }}</b>?</p>
+            <p class="modal-desc">{{ t('shopInfoModal.buyDiscount')}} <b>{{ selectedCard.title }}</b>?</p>
             <div class="modal-price-summary">
-              <span>К оплате:</span>
+              <span>{{ t('shopInfoModal.suma')}}</span>
               <div class="price-value">
                 <img :src="Articlus" alt="Articlus" class="price-icon-small"/>
                 <span>{{ selectedCard.price }}</span>
@@ -91,28 +91,29 @@
           </template>
           <template v-else-if="modalType === 'coupon_error'">
             <div class="modal-desc">
-              <div class="modal__sub">Для покупки <b>{{ selectedCard.title }}</b> необходимо:<br><br></div>
+              <div class="modal__sub">{{ t('shopInfoModal.forBuyingPartOne')}}
+                <b>{{ selectedCard.title }}</b> {{ t('shopInfoModal.forBuyingPartTwo')}}<br><br></div>
               <div class="error-requirements">
                 <div v-if="langStore.points < selectedCard.price" class="error-req-row">
                   <div class="error-req-title">
                      <img :src="Articlus" alt="Articlus" class="price-icon-small"/> {{ selectedCard.price }}
                   </div>
-                  <span class="error-req-hint">(не хватает {{ selectedCard.price - langStore.points }})</span>
+                  <span class="error-req-hint">( {{ selectedCard.price - langStore.points }})</span>
                 </div>
                 <div v-if="authStore.totalHats < selectedCard.requiredHats" class="error-req-row">
                   <div class="error-req-title">
                      <img :src="GraduateHat" alt="Hat" class="price-icon-small"/> {{ selectedCard.requiredHats }}
                   </div>
-                  <span class="error-req-hint">(не хватает {{ selectedCard.requiredHats - authStore.totalHats }})</span>
+                  <span class="error-req-hint">({{ t('shopInfoModal.notEnough')}} {{ selectedCard.requiredHats - authStore.totalHats }})</span>
                 </div>
               </div>
             </div>
           </template>
           <template v-else-if="modalType === 'coupon_success' || modalType === 'coupon_owned'">
             <p class="modal-desc">
-              <span v-if="modalType === 'coupon_success'"><b>Купон успешно активирован!</b></span>
+              <span v-if="modalType === 'coupon_success'"><b>{{ t('shopInfoModal.successBuy')}}</b></span>
 <!--              <span v-if="modalType === 'coupon_owned'"><b>Купон уже куплен.</b></span>-->
-              <span>Использовать его можно на экране покупки PLUS.</span>
+              <span>{{ t('shopInfoModal.howToUse')}}</span>
             </p>
             <img :src="selectedCard.icon" alt="Success" class="success-icon"/>
           </template>
@@ -369,10 +370,10 @@ const modalTitle = computed(() => {
   if (modalType.value === 'success') return t('cardsShop.ready')
   if (modalType.value === 'lives') return t('cardsShop.buyLives')
   if (modalType.value === 'freeze') return t('cardsShop.stopTime')
-  if (modalType.value === 'coupon_buy') return `Покупка купона`
-  if (modalType.value === 'coupon_error') return `Условия покупки`
-  if (modalType.value === 'coupon_success') return `Успешно!`
-  if (modalType.value === 'coupon_owned') return `Купон активен`
+  if (modalType.value === 'coupon_buy') return t('cardsShop.coupon_buy')
+  if (modalType.value === 'coupon_error') return t('cardsShop.coupon_error')
+  if (modalType.value === 'coupon_success') return t('cardsShop.coupon_success')
+  if (modalType.value === 'coupon_owned') return t('cardsShop.coupon_owned')
   return ''
 })
 
@@ -391,7 +392,7 @@ const modalButtons = computed(() => {
       return [{ id: 'ok', label: t('cardsShop.accessibly'), class: 'confirm', action: closeModal }]
     case 'coupon_success':
     case 'coupon_owned':
-      return [{ id: 'buy_plus', label: 'Приобрести PLUS', class: 'confirm', action: goToPay }]
+      return [{ id: 'buy_plus', label: t('cardsShop.buyingPlus'), class: 'confirm', action: goToPay }]
     case 'coupon_error':
       return [{ id: 'ok', label: 'ОК', class: 'confirm', action: closeModal }]
     case 'coupon_buy':

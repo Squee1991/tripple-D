@@ -8081,7 +8081,12 @@
     "selectDaysPeriod": "Выберите количество дней. В этот период ваши шляпы не сгорят.",
     "maximum": "Максимум",
     "cancel": "Отмена",
-    "accessibly": "Понятно"
+    "accessibly": "Понятно",
+    "coupon_buy": "Покупка купона",
+    "coupon_error": "Условия покупки",
+    "coupon_success": "Успешно!",
+    "coupon_owned": "Купон активен",
+    "buyingPlus": "Приобрести PLUS"
   },
   "shopDaysRaw": {
     "dayFirst": "день",
@@ -10205,7 +10210,7 @@
     "health": "Здоровье",
     "work": "Работа и карьера",
     "auto": "Автомобиль и дорога",
-    "travel": "Путешествия",
+    "travel": "Путешествия"
   },
   "speakThemes": {
     "firstmeet": "Знакомство",
@@ -10644,5 +10649,15 @@
   "eulaText": {
     "text": "Покупая вы соглашаетесь с",
     "month": "мес."
+  },
+  "shopInfoModal": {
+    "buyDiscount": "Приобрести купон",
+    "suma": "К оплате:",
+    "forBuyingPartOne": "Для покупки",
+    "forBuyingPartTwo": "необходимо:",
+    "notEnough": "не хватает",
+    "successBuy": "Купон успешно активирован!",
+    "howToUse": "Использовать его можно на экране покупки Plus.",
+    "pcs": "шт",
   }
 }

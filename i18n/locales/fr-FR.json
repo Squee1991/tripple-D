@@ -8060,7 +8060,12 @@
     "selectDaysPeriod": "Choisissez le nombre de jours. Pendant cette période, vos toques ne seront pas perdues.",
     "maximum": "Maximum",
     "cancel": "Annuler",
-    "accessibly": "C'est compris"
+    "accessibly": "Compris",
+    "coupon_buy": "Acheter le coupon",
+    "coupon_error": "Conditions d'achat",
+    "coupon_success": "Succès !",
+    "coupon_owned": "Coupon actif",
+    "buyingPlus": "Obtenir PLUS"
   },
   "shopDaysRaw": {
     "dayFirst": "jour",
@@ -10598,5 +10603,36 @@
     "game-desc": "Puisque nous sommes là, échauffons-nous. Choisissez l'article correct :",
     "win-screen": "Excellent travail !",
     "win-desc": "Vous pouvez maintenant retourner à vos leçons."
+  },
+  "updatePassword": {
+    "title": "Créer un nouveau mot de passe",
+    "newPasswordLabel": "Nouveau mot de passe",
+    "newPasswordPlaceholder": "Minimum 6 caractères",
+    "confirmPasswordLabel": "Confirmer le mot de passe",
+    "confirmPasswordPlaceholder": "Répétez le nouveau mot de passe",
+    "savingBtn": "Enregistrement...",
+    "saveBtn": "Enregistrer le mot de passe",
+    "invalidLinkLoad": "Le lien de récupération a expiré ou est invalide. Veuillez demander une nouvelle réinitialisation.",
+    "invalidLinkSubmit": "Le code a expiré ou a déjà été utilisé. Demandez une nouvelle réinitialisation.",
+    "minLength": "Le mot de passe doit contenir au moins 6 caractères.",
+    "mismatch": "Les mots de passe ne correspondent pas. Réessayez.",
+    "success": "Mot de passe mis à jour avec succès ! Redirection...",
+    "expiredCode": "Le code a expiré ou a déjà été utilisé. Demandez-en un nouveau.",
+    "networkError": "Erreur réseau. Vérifiez votre connexion Internet.",
+    "defaultError": "Une erreur inattendue s'est produite. Veuillez réessayer plus tard."
+  },
+  "eulaText": {
+    "text": "En achetant, vous acceptez",
+    "month": "mois"
+  },
+  "shopInfoModal": {
+    "buyDiscount": "Acheter le coupon",
+    "suma": "À payer :",
+    "forBuyingPartOne": "Pour acheter,",
+    "forBuyingPartTwo": "vous avez besoin de :",
+    "notEnough": "insuffisant",
+    "successBuy": "Coupon activé avec succès !",
+    "howToUse": "Vous pouvez l'utiliser sur l'écran d'achat de Plus.",
+    "pcs": "pcs"
   }
 }
