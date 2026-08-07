@@ -17,7 +17,7 @@ const openStore = (platform) => {
     closeModal()
   }
   if (platform === 'ios') {
-    window.open('https://apps.apple.com/ru/app/skillupgerman/id6762300276', '_blank')
+    window.open('https://apps.apple.com/app/id6762300276', '_blank')
     closeModal()
   }
 }
