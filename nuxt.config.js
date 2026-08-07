@@ -151,13 +151,14 @@ export default defineNuxtConfig({
 			{code: 'uz', iso: 'uz-UZ', name: 'Oʻzbekcha', file: 'uz-UZ.json'},
 			{code: 'ar', iso: 'ar-SA', name: 'العربية', file: 'ar-SA.json'},
 		],
-		detectBrowserLanguage: {
+		/*detectBrowserLanguage: {
 			useCookie: true,
 			cookieKey: 'i18n_redirected',
 			alwaysRedirect: false,
 			redirectOn: 'root',
 			fallbackLocale: 'en',
-		},
+		},*/
+		detectBrowserLanguage: false,
 		bundle: {optimizeTranslationDirective: false},
 	},
 

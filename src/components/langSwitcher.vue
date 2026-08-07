@@ -5,7 +5,8 @@ const emit = defineEmits(['close'])
 const {locales, locale, setLocale} = useI18n()
 const pendingLocale = ref(null)
 const localeCode = computed(() => pendingLocale.value || locale.value)
-
+import { Preferences } from '@capacitor/preferences'
+import { Capacitor } from '@capacitor/core'
 const searchQuery = ref('')
 const filteredLocales = computed(() => {
   if (!searchQuery.value) return locales.value || []
@@ -23,6 +24,12 @@ const selectLanguage = async (code) => {
   pendingLocale.value = code
   try {
     await setLocale(code)
+    if (Capacitor.isNativePlatform()) {
+      await Preferences.set({ key: 'user_locale', value: code })
+    } else {
+      localStorage.setItem('user_locale', code)
+    }
+
   } finally {
     pendingLocale.value = null
     closeModal()

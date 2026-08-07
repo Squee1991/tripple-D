@@ -67,17 +67,14 @@ const submitComputed = computed(() => {
 })
 
 const finalPrice = computed(() => {
-  // 1. ЖЕСТКАЯ ПРИВЯЗКА ДЛЯ МОБИЛОК (Apple / Google)
   if (billingStore.isMobile) {
     if (billingStore.offerings && billingStore.offerings.length > 0) {
       const pkg = billingStore.offerings[0]
       return pkg?.product?.priceString || '...'
     }
-    // Пока AppStore грузит цены, показываем загрузку, чтобы не мелькало Евро
     return '...'
   }
 
-  // 2. ЛОГИКА ДЛЯ WEB (Stripe)
   const base = parseFloat(displayPrice.value) || 12.99
   if (!selectedDiscountId.value) return `${base.toFixed(2)}${displayCurrency.value}`
 
