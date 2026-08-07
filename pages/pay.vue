@@ -3,25 +3,13 @@ import {ref, onMounted, onUnmounted, computed} from 'vue'
 import {useRouter} from 'vue-router'
 import {userAuthStore} from '../store/authStore'
 import {useBillingStore} from '../store/billingStore'
-import {useI18n} from 'vue-i18n'
 import {useSeoMeta} from "#imports"
 
-import Books from '../assets/images/pay-images/books.svg'
-import Ach from '../assets/images/pay-images/ach.svg'
-import Translate from '../assets/images/pay-images/translate.svg'
-import Quests from '../assets/images/pay-images/Quests.svg'
-import Speaker from '../assets/images/pay-images/speaker.svg'
-import Exams from '../assets/images/pay-images/test.svg'
-import Galaxy from '../assets/images/Galaxy.svg'
-import AudioTasks from '../assets/images/headphones.svg'
 import SupportCup from '../assets/images/cupheart.svg'
 import Ads from '../assets/images/ADS.svg'
 import Future from '../assets/images/FutureFunctions.svg'
-import StatsPlus from '../assets/images/StatsPlus.svg'
 import Forever from '../assets/images/forever.svg'
-import Description from '../assets/images/photo-frame.svg'
 import PremiumIcon from '../assets/images/PlusLogo.png'
-import VBanner from "~/src/components/V-banner.vue"
 
 const authStore = userAuthStore()
 const billingStore = useBillingStore()
@@ -355,7 +343,6 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-/* Стили остались полностью твои, без изменений, чтобы ничего не сломать */
 .toast-notification {
   position: absolute;
   width: 100%;
