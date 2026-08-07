@@ -228,7 +228,7 @@ export const userlangStore = defineStore('learning', () => {
 
 						if (totalRecoveredExp > 0) {
 							data.exp = (data.exp || 0) + totalRecoveredExp;
-							await updateDoc(userDoc, {  // Убедись, что тут правильное имя ссылки на документ
+							await updateDoc(userDoc, {
 								exp: data.exp,
 								expRecovered: true
 							});

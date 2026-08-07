@@ -8064,7 +8064,12 @@
     "selectDaysPeriod": "Elige el número de días. Durante este periodo, tus birretes no se perderán.",
     "maximum": "Máximo",
     "cancel": "Cancelar",
-    "accessibly": "Entendido"
+    "accessibly": "Entendido",
+    "coupon_buy": "Comprar cupón",
+    "coupon_error": "Términos de compra",
+    "coupon_success": "¡Éxito!",
+    "coupon_owned": "Cupón activo",
+    "buyingPlus": "Adquirir PLUS"
   },
   "shopDaysRaw": {
     "dayFirst": "día",
@@ -10602,5 +10607,36 @@
     "game-desc": "Ya que estamos aquí, vamos a calentar. Elige el artículo correcto:",
     "win-screen": "¡Excelente trabajo!",
     "win-desc": "Ahora puedes volver a tus lecciones."
+  },
+  "updatePassword": {
+    "title": "Crear una nueva contraseña",
+    "newPasswordLabel": "Nueva contraseña",
+    "newPasswordPlaceholder": "Mínimo 6 caracteres",
+    "confirmPasswordLabel": "Confirmar contraseña",
+    "confirmPasswordPlaceholder": "Repite la nueva contraseña",
+    "savingBtn": "Guardando...",
+    "saveBtn": "Guardar contraseña",
+    "invalidLinkLoad": "El enlace de recuperación ha caducado o no es válido. Solicita el restablecimiento nuevamente.",
+    "invalidLinkSubmit": "El código ha caducado o ya ha sido utilizado. Solicita el restablecimiento nuevamente.",
+    "minLength": "La contraseña debe tener al menos 6 caracteres.",
+    "mismatch": "Las contraseñas no coinciden. Inténtalo de nuevo.",
+    "success": "¡Contraseña actualizada con éxito! Redirigiendo...",
+    "expiredCode": "El código ha caducado o ya ha sido utilizado. Solicita uno nuevo.",
+    "networkError": "Error de red. Comprueba tu conexión a internet.",
+    "defaultError": "Ocurrió un error inesperado. Inténtalo de nuevo más tarde."
+  },
+  "eulaText": {
+    "text": "Al realizar la compra, aceptas",
+    "month": "mes"
+  },
+  "shopInfoModal": {
+    "buyDiscount": "Comprar cupón",
+    "suma": "A pagar:",
+    "forBuyingPartOne": "Para comprar,",
+    "forBuyingPartTwo": "necesitas:",
+    "notEnough": "falta",
+    "successBuy": "¡Cupón activado con éxito!",
+    "howToUse": "Puedes usarlo en la pantalla de compra de Plus.",
+    "pcs": "udds"
   }
 }

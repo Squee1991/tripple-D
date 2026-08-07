@@ -11,12 +11,7 @@
         @confirm="confirmExit"
     />
     <div class="session-container">
-      <section v-if="loading" class="view-state view-state--loading">
-        <div class="bouncy-loader">
-          <span></span><span></span><span></span>
-        </div>
-        <p class="loading-text">{{ t('trainerPage.loading') }}</p>
-      </section>
+      <VLoginPreloader v-if="loading"/>
       <section v-else-if="thematic.selectedModule" class="view-state view-state--content">
         <div v-if="!finished" class="top-nav">
           <div class="nav-actions">
@@ -114,11 +109,14 @@ import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue";
 import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
 import SadHedgehogIcon from '../../assets/images/Sadlyhedgehog.png'
 import {useSwipeBack} from '~/composables/useSwipeBack.js'
+import {showInterstitial} from '../../utils/admob.js';
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
+import { userAuthStore} from "~/store/authStore.js";
 
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
-
+const authStore = userAuthStore()
 const router = useRouter()
 const {t} = useI18n()
 const thematic = useTrainerStore()
@@ -253,10 +251,22 @@ onMounted(async () => {
   if (!thematic.selectedModule) {
     await thematic.loadProgress()
   }
-  loading.value = false;
-  if (tasks.value.length > 0) {
-    setupCurrentQuestion();
-  }
+  const minDelay = new Promise(resolve => setTimeout(resolve, 1500))
+  const adPromise = new Promise(resolve => {
+    if (!authStore.isPremium) {
+      showInterstitial(() => {
+        resolve()
+      })
+    } else {
+      resolve()
+    }
+  })
+  Promise.all([minDelay, adPromise]).then(() => {
+    loading.value = false;
+    if (tasks.value.length > 0) {
+      setupCurrentQuestion();
+    }
+  })
   window.addEventListener('beforeunload', handleBeforeUnload);
 })
 
@@ -291,7 +301,7 @@ onUnmounted(() => {
   width: 100%;
 }
 
-.view-state--loading, .view-state--error {
+.view-state--error {
   justify-content: center;
   align-items: center;
   padding: 24px;
@@ -629,46 +639,6 @@ onUnmounted(() => {
 .btn-gummy--danger {
   background: none;
   color: #7f1d1d;
-}
-
-.bouncy-loader {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.bouncy-loader span {
-  width: 18px;
-  height: 18px;
-  background: #60a5fa;
-  border: none;
-  border-radius: 50%;
-  animation: bounce 0.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95);
-}
-
-.bouncy-loader span:nth-child(2) {
-  background: #4ade80;
-  animation-delay: 0.1s;
-}
-
-.bouncy-loader span:nth-child(3) {
-  background: #fde047;
-  animation-delay: 0.2s;
-}
-
-.loading-text {
-  font-size: 20px;
-  font-weight: 900;
-  color: #4b5563;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-15px);
-  }
 }
 
 @keyframes bounceIn {

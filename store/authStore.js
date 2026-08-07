@@ -103,6 +103,22 @@ export const userAuthStore = defineStore('auth', () => {
         return isNaN(parsed) ? null : parsed;
     };
 
+    const activateDiscount = async (discountId) => {
+        const user = auth.currentUser;
+        if (!user) return;
+        try {
+            if (premiumDiscount.value) {
+                premiumDiscount.value[discountId] = true;
+            }
+            await updateDoc(doc(db, 'users', user.uid), {
+                [discountId]: true
+            });
+
+        } catch (e) {
+            console.error('Ошибка при активации скидки в Firebase:', e);
+        }
+    };
+
     const normalizeDate = (value) => {
         if (!value) return null;
         if (typeof value?.toDate === 'function') return value.toDate().toISOString();
@@ -710,8 +726,20 @@ export const userAuthStore = defineStore('auth', () => {
         try {
             const usesGoogle = user.providerData.some(p => p.providerId === 'google.com');
             if (usesGoogle) {
-                const provider = new GoogleAuthProvider();
-                await reauthenticateWithPopup(user, provider);
+                const isNative = Capacitor.isNativePlatform();
+                if (isNative) {
+                    const result = await GoogleSignIn.signIn({
+                        clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
+                    });
+
+                    const idToken = result.idToken;
+                    if (!idToken) throw new Error('Не удалось получить токен Google');
+                    const credential = GoogleAuthProvider.credential(idToken);
+                    await reauthenticateWithCredential(user, credential);
+                } else {
+                    const provider = new GoogleAuthProvider();
+                    await reauthenticateWithPopup(user, provider);
+                }
             } else {
                 if (!user.email) throw { code: 'auth/missing-email' };
                 if (!password) throw {code: 'auth/missing-password'};
@@ -724,14 +752,16 @@ export const userAuthStore = defineStore('auth', () => {
             batch.delete(doc(db, LEADERBOARD_COLLECTION, user.uid));
             batch.delete(doc(db, LEADERBOARD_GUESS, user.uid));
             await batch.commit();
-
             await deleteUser(user);
             setUserData({});
+
         } catch (err) {
             if (err && err.code) throw err;
             const msg = String(err?.message || '');
             if (msg.includes('requires-recent-login')) throw { code: 'auth/requires-recent-login' };
-            if (msg.includes('popup-closed')) throw { code: 'auth/popup-closed-by-user' };
+            if (msg.includes('popup-closed') || msg.toLowerCase().includes('cancel') || msg.includes('12501')) {
+                throw { code: 'auth/popup-closed-by-user' };
+            }
             throw { code: 'auth/unknown' };
         }
     };
@@ -824,6 +854,7 @@ export const userAuthStore = defineStore('auth', () => {
         claimedBonuses,
         loginWithApple,
         addClaimedBonus,
+        activateDiscount,
         unlockMarathonAchievement
     };
 });

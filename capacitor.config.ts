@@ -6,10 +6,6 @@ const config: CapacitorConfig = {
   appName: 'skillupgerman',
   webDir: '.output/public',
   plugins: {
-    // StatusBar: {
-    //   overlaysWebView: true,
-    //   style: 'DARK',
-    // },
     GoogleSignIn: {
       clientId: '516504654997-g3nt0plc6adh4jrvp55rn4p000t3qr09.apps.googleusercontent.com',
     },

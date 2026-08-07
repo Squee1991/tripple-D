@@ -386,7 +386,6 @@ const speakGerman = async (text) => {
     setTimeout(() => {
       const audios = document.getElementsByTagName('audio');
       let playingAudio = null;
-
       for (let i = audios.length - 1; i >= 0; i--) {
         if (!audios[i].paused && !audios[i].ended) {
           playingAudio = audios[i];

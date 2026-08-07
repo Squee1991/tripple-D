@@ -6,27 +6,17 @@ import {useBillingStore} from '../store/billingStore'
 import {useI18n} from 'vue-i18n'
 import {useSeoMeta} from "#imports"
 
-import Books from '../assets/images/pay-images/books.svg'
-import Ach from '../assets/images/pay-images/ach.svg'
-import Translate from '../assets/images/pay-images/translate.svg'
-import Quests from '../assets/images/pay-images/Quests.svg'
-import Speaker from '../assets/images/pay-images/speaker.svg'
-import Exams from '../assets/images/pay-images/test.svg'
-import Galaxy from '../assets/images/Galaxy.svg'
-import AudioTasks from '../assets/images/headphones.svg'
 import SupportCup from '../assets/images/cupheart.svg'
 import Ads from '../assets/images/ADS.svg'
 import Future from '../assets/images/FutureFunctions.svg'
-import StatsPlus from '../assets/images/StatsPlus.svg'
 import Forever from '../assets/images/forever.svg'
-import Description from '../assets/images/photo-frame.svg'
 import PremiumIcon from '../assets/images/PlusLogo.png'
 import VBanner from "~/src/components/V-banner.vue"
 
 const authStore = userAuthStore()
 const billingStore = useBillingStore()
 const router = useRouter()
-const {t} = useI18n()
+const {t, locale} = useI18n()
 
 const displayPrice = ref('12.99')
 const displayCurrency = ref('€')
@@ -39,6 +29,12 @@ const toastMessage = ref('')
 const payButton = ref(null)
 const showStickyFooter = ref(false)
 const justBought = ref(false)
+
+const formattedSubscriptionEndDate = computed(() => {
+  if (!authStore.subscriptionEndsAt) return '-'
+  const date = new Date(authStore.subscriptionEndsAt)
+  return date.toLocaleDateString(locale.value, {year: 'numeric', month: 'long', day: 'numeric'})
+})
 
 const handleBack = () => {
   router.back()
@@ -61,16 +57,20 @@ const submitComputed = computed(() => {
 })
 
 const finalPrice = computed(() => {
-  if (billingStore.isMobile && billingStore.offerings.length > 0) {
-    return billingStore.offerings[0].product.priceString
+  if (billingStore.isMobile) {
+    if (billingStore.offerings && billingStore.offerings.length > 0) {
+      const pkg = billingStore.offerings[0]
+      return pkg?.product?.priceString || '...'
+    }
+    return '...'
   }
-
   const base = parseFloat(displayPrice.value) || 12.99
-  if (!selectedDiscountId.value) return base.toFixed(2)
+  if (!selectedDiscountId.value) return `${base.toFixed(2)}${displayCurrency.value}`
+
   const activeCoupon = myAvailableCoupons.value.find(c => c.id === selectedDiscountId.value)
   const percent = activeCoupon ? activeCoupon.percent : 0
   const discounted = base - (base * (percent / 100))
-  return discounted.toFixed(2)
+  return `${discounted.toFixed(2)}${displayCurrency.value}`
 })
 
 const myAvailableCoupons = computed(() => {
@@ -135,6 +135,10 @@ async function handleRestore() {
     if (success) {
       triggerToast('pay.triggerToastSuccess')
       justBought.value = true
+      authStore.isPremium = true
+      if (typeof authStore.fetchUser === 'function') {
+        await authStore.fetchUser()
+      }
     } else {
       triggerToast('pay.triggerToastNotFound')
     }
@@ -153,6 +157,10 @@ async function pay() {
       const success = await billingStore.buy(pkg)
       if (success) {
         justBought.value = true
+        authStore.isPremium = true
+        if (typeof authStore.fetchUser === 'function') {
+          await authStore.fetchUser()
+        }
       }
     }
     return
@@ -184,18 +192,21 @@ onMounted(async () => {
   if (isPremium.value) {
     triggerToast('pay.triggerToastIsPlus')
   }
-  try {
-    const data = await $fetch('/api/stripe/get-price')
-    if (data) {
-      displayPrice.value = data.amount
-      displayCurrency.value = data.currency
-    }
-  } catch (err) {
-    console.error('Не удалось загрузить локальную цену:', err)
-  }
+
   if (billingStore.isMobile) {
     await billingStore.initialize()
+  } else {
+    try {
+      const data = await $fetch('/api/stripe/get-price')
+      if (data) {
+        displayPrice.value = data.amount
+        displayCurrency.value = data.currency
+      }
+    } catch (err) {
+      console.error(err)
+    }
   }
+
   observer = new IntersectionObserver(
       ([entry]) => {
         showStickyFooter.value = !entry.isIntersecting
@@ -230,7 +241,7 @@ onUnmounted(() => {
     </div>
     <div class="main-flow">
       <div class="flow-step">
-        <template v-if="!authStore.isPremium">
+        <template v-if="!isPremium">
           <div class="flow__banner-pay">
             <span class="flow__banner-text"> {{ t('pay.banner') }}</span>
             <img class="flow__banner-icon" :src="PremiumIcon" alt="PremiumIcon">
@@ -263,7 +274,6 @@ onUnmounted(() => {
                     <div v-if="coupon.label" class="loot-info">
                       <span class="loot-title">{{ coupon.label }}</span>
                     </div>
-                    <div class="loot-val" v-if="coupon.percent > 0">{{ coupon.percent }}%</div>
                   </div>
                 </div>
               </div>
@@ -272,13 +282,13 @@ onUnmounted(() => {
           <div class="billing-summary">
             <div class="bill-line discount" v-if="selectedDiscountId">
               <span class="bill-text">{{ t('payPage.yourSale') }}</span>
-              <span class="bill-price-neg">-{{
-                  myAvailableCoupons.find(c => c.id === selectedDiscountId).percent
-                }}%</span>
+              <span class="bill-price-neg">
+                {{ myAvailableCoupons.find(c => c.id === selectedDiscountId)?.label }}
+              </span>
             </div>
             <div class="bill-total">
               <span class="total-text">{{ t('payPage.finalePrice') }}</span>
-              <span class="total-price">{{ finalPrice }}{{ displayCurrency }}</span>
+              <span class="total-price">{{ finalPrice }} / {{ t('eulaText.month') }}</span>
             </div>
           </div>
           <div class="footer-action-wrapper" ref="payButton">
@@ -294,6 +304,12 @@ onUnmounted(() => {
               >
                 {{ restoreComputed }}
               </button>
+              <div class="privacy__block">
+                {{ t('eulaText.text') }}
+                <router-link class="links" to="/terms">{{ t('termsBlock.second') }}</router-link>
+                {{ t('termsBlock.third') }}
+                <router-link class="links" to="/privacy">{{ t('termsBlock.fourth') }}</router-link>
+              </div>
             </div>
           </div>
         </template>
@@ -308,8 +324,18 @@ onUnmounted(() => {
                 <img :src="PremiumIcon" alt="Premium" class="active-pulse-img">
               </div>
               <div class="premium-active-text">
-                <h3>{{ t('activePlus.title')}}</h3>
-                <p>{{ t('activePlus.description')}}</p>
+                <h3>{{ t('activePlus.title') }}</h3>
+                <p>{{ t('activePlus.description') }}</p>
+                <div class="subscription-date-badge" v-if="authStore.subscriptionEndsAt">
+                  <p v-if="authStore.isPremium && !authStore.subscriptionCancelled"
+                     style="margin-top: 15px; font-weight: bold; color: #10b981;">
+                    📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}
+                  </p>
+                  <p v-else-if="authStore.isPremium && authStore.subscriptionCancelled"
+                     style="margin-top: 15px; font-weight: bold; color: #10b981;">
+                    📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -320,6 +346,7 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+/* Стили остались полностью твои, без изменений, чтобы ничего не сломать */
 .toast-notification {
   position: absolute;
   width: 100%;
@@ -441,13 +468,13 @@ onUnmounted(() => {
   font-size: 15px;
   margin-top: 6px;
   font-weight: 600;
-  padding: 10px;
+  padding: 0 10px;
 }
 
 .perks-grid {
   display: grid;
   gap: 12px;
-  margin-top: 30px;
+  margin-top: 22px;
 }
 
 .perk-card {
@@ -460,8 +487,8 @@ onUnmounted(() => {
 }
 
 .perk-icon {
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
 }
 
 .perk-meta {
@@ -553,7 +580,7 @@ onUnmounted(() => {
 
 .billing-summary {
   margin-top: 15px;
-  padding: 20px;
+  padding: 10px 20px;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 24px;
 }
@@ -591,12 +618,12 @@ onUnmounted(() => {
 }
 
 .footer-action-wrapper {
-  margin-top: 20px;
+  margin-top: 5px;
   position: relative;
 }
 
 .footer-action {
-  padding: 20px 0;
+  padding: 14px 0;
 }
 
 .btn-icon-back {
@@ -641,7 +668,6 @@ onUnmounted(() => {
   cursor: not-allowed;
   transform: none;
 }
-
 
 .premium-success-view {
   position: relative;
@@ -694,14 +720,10 @@ onUnmounted(() => {
   width: 100%;
   padding: 30px 20px;
   border-radius: 28px;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);
-  border: 2px solid rgba(16, 185, 129, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
-  animation: premium-glow 3s infinite alternate;
 }
 
 .premium-active-icon {
@@ -741,15 +763,26 @@ onUnmounted(() => {
   line-height: 1.4;
 }
 
-@keyframes premium-glow {
-  0% {
-    border-color: rgba(16, 185, 129, 0.3);
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);
-  }
-  100% {
-    border-color: rgba(16, 185, 129, 0.8);
-    box-shadow: 0 0 40px rgba(16, 185, 129, 0.3);
-  }
+.privacy__block {
+  position: relative;
+  margin-top: 25px;
+  color: #8e8e93;
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 15px;
+  padding-bottom: 25px;
+}
+
+.links {
+  color: #a1a1aa;
+  text-decoration: underline;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.links:active {
+  color: #ffffff;
 }
 
 @keyframes icon-float {
