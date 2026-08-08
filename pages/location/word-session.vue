@@ -8,57 +8,44 @@
           <polyline points="12 19 5 12 12 5"></polyline>
         </svg>
       </button>
-      <h2 class="list-title">{{ t('Словарь к заданию') }}</h2>
+      <h2 class="list-title">{{ t('landWordsSession.words') }}</h2>
     </header>
-
     <main class="vocab-main word-list-main">
       <div v-if="isLoading" class="loading-state">
         <div class="spinner"></div>
       </div>
-
       <div v-else-if="errorMessage" class="error-state">
         {{ errorMessage }}
       </div>
-
       <template v-else-if="vocabulary.length">
         <div v-for="(item, index) in vocabulary" :key="index" class="word-list-item">
           <SoundBtn :text="item.word" class="list-sound-btn"/>
-
           <div class="word-details">
             <span class="word-german-list">{{ item.word }}</span>
             <span class="word-translation-list">
               {{ item[`translation-${locale.split('-')[0]}`] || item['translation-en'] }}
             </span>
+            <button v-if="item.isVerb" class="btn-verb-forms" @click="goToVerbForms(item.verbKey || item.word)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+              {{ t('landWordsSession.verbs') }}
+            </button>
           </div>
-
-          <!-- Лампочка появляется, если есть tip ИЛИ если это глагол (isVerb) -->
-          <button
-              v-if="getTip(item) || item.isVerb"
-              class="btn-tip"
-              @click="openTipModal(item)"
-          >
-            💡
-          </button>
-        </div>
+          <button v-if="getTip(item)" class="btn-tip" @click="openTipModal(getTip(item))">💡</button></div>
       </template>
-
-      <div v-else class="empty-state">
-        Слова для этого задания не найдены.
-      </div>
+      <div v-else class="empty-state">{{ t('landWordsSession.error') }}</div>
     </main>
-
     <footer class="vocab-footer" v-if="vocabulary.length">
-      <button class="btn-primary" @click="startQuest">
-        Погнали к заданиям 🚀
-      </button>
+      <button class="btn-primary" @click="startQuest">{{ t('landWordsSession.toQuest') }}</button>
     </footer>
-
-    <!-- Модалка для подсказки и глаголов -->
     <Transition name="fade">
       <div v-if="isTipModalOpen" class="modal-overlay" @click.self="closeTipModal">
         <div class="tip-modal">
           <div class="tip-modal-header">
-            <h3>Грамматика</h3>
+            <h3>{{ t('landWordsSession.grammar') }}</h3>
             <button class="close-btn" @click="closeTipModal">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -66,31 +53,10 @@
               </svg>
             </button>
           </div>
-
-          <div class="tip-modal-body" v-if="currentItem">
-            <!-- Текст подсказки, если он есть -->
-            <p v-if="getTip(currentItem)">{{ getTip(currentItem) }}</p>
-            <!-- Если подсказки нет, но это глагол — выводим дефолтный текст -->
-            <p v-else-if="currentItem.isVerb">Для этого слова доступна таблица форм глагола.</p>
+          <div class="tip-modal-body">
+            <p>{{ currentTipText }}</p>
           </div>
-
-          <div class="tip-modal-actions">
-            <!-- Кнопка перехода к формам (внутри модалки!) -->
-            <button
-                v-if="currentItem && currentItem.isVerb"
-                class="btn-verb-forms-modal"
-                @click="goToVerbForms(currentItem.verbKey || currentItem.word)"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="3" y1="9" x2="21" y2="9"></line>
-                <line x1="9" y1="21" x2="9" y2="9"></line>
-              </svg>
-              Таблица форм глагола
-            </button>
-
-            <button class="btn-primary modal-ok-btn" @click="closeTipModal">Понятно!</button>
-          </div>
+          <button class="btn-primary modal-ok-btn" @click="closeTipModal">{{ t('landWordsSession.got') }}</button>
         </div>
       </div>
     </Transition>
@@ -114,17 +80,15 @@ const vocabulary = ref([])
 const isLoading = ref(true)
 const errorMessage = ref("")
 
-// Состояние модалки
 const isTipModalOpen = ref(false)
-const currentItem = ref(null)
+const currentTipText = ref("")
 
 onMounted(async () => {
   if (!regionKey || !questId) {
-    errorMessage.value = "Ошибка: не хватает параметров."
+    errorMessage.value = ""
     isLoading.value = false
     return
   }
-
   try {
     const response = await fetch(`/quests/quests-${regionKey}.json`)
     if (!response.ok) {
@@ -160,26 +124,23 @@ function startQuest() {
   })
 }
 
-// Функции для подсказок
 function getTip(item) {
-  if (!item) return null
   const currentLang = locale.value.split('-')[0]
   return item[`tip-${currentLang}`] || item['tip-ru'] || item['tip-en'] || null
 }
 
-function openTipModal(item) {
-  currentItem.value = item
+function openTipModal(text) {
+  currentTipText.value = text
   isTipModalOpen.value = true
 }
 
 function closeTipModal() {
   isTipModalOpen.value = false
   setTimeout(() => {
-    currentItem.value = null
-  }, 200) // очищаем после анимации
+    currentTipText.value = ""
+  }, 200)
 }
 
-// Функция перехода к таблице глаголов
 function goToVerbForms(verbName) {
   router.push({
     path: '/verb-forms',
@@ -199,7 +160,7 @@ function goToVerbForms(verbName) {
   touch-action: pan-y;
   position: relative;
   overflow: hidden;
-  background-color: var(--bg-color, #f7f9fb);
+  background-color: var(--bg);
 }
 
 .vocab-header {
@@ -208,7 +169,7 @@ function goToVerbForms(verbName) {
   padding: 5px 10px 15px 10px;
   gap: 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  background: var(--bg-color, #ffffff);
+  background: var(--bg);
   z-index: 10;
 }
 
@@ -219,7 +180,7 @@ function goToVerbForms(verbName) {
 .list-title {
   font-size: 23px;
   font-weight: 800;
-  color: var(--title, #1e1e1e);
+  color: var(--title);
   margin: 0;
   flex: 1;
   text-align: center;
@@ -228,7 +189,7 @@ function goToVerbForms(verbName) {
 
 .btn-icon-back {
   background: #fff;
-  border: 3px solid var(--tabsSlideBorderColor, #e0dcdc);
+  border: 3px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile, 0 4px 0 rgba(0,0,0,0.05));
   border-radius: 12px;
   width: 40px;
@@ -269,10 +230,10 @@ function goToVerbForms(verbName) {
 
 .word-list-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
   background: white;
-  padding: 8px 12px 8px 8px;
+  padding: 12px 12px 12px 10px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
   border: 2px solid #f1f5f9;
@@ -282,6 +243,7 @@ function goToVerbForms(verbName) {
 .word-details {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 4px;
   flex-grow: 1;
 }
@@ -296,9 +258,31 @@ function goToVerbForms(verbName) {
   font-size: 15px;
   color: #64748b;
   font-weight: 600;
+  margin-bottom: 2px;
 }
 
-/* Кнопка подсказки (Лампочка) */
+.btn-verb-forms {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #eff6ff;
+  color: #3b82f6;
+  border: 1px solid #bfdbfe;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.1s ease, transform 0.1s ease;
+  margin-top: 4px;
+}
+
+.btn-verb-forms:active {
+  transform: scale(0.96);
+  background: #dbeafe;
+}
+
+/* Кнопка подсказки */
 .btn-tip {
   flex-shrink: 0;
   width: 42px;
@@ -314,6 +298,7 @@ function goToVerbForms(verbName) {
   transition: transform 0.1s ease, box-shadow 0.1s ease;
   box-shadow: 0 3px 0 #fb923c;
   margin-left: auto;
+  align-self: center;
 }
 
 .btn-tip:active {
@@ -323,7 +308,7 @@ function goToVerbForms(verbName) {
 
 .vocab-footer {
   padding: 24px;
-  background: var(--bg-color, #f7f9fb);
+  background: var(--bg);
 }
 
 .btn-primary {
@@ -345,7 +330,7 @@ function goToVerbForms(verbName) {
   box-shadow: 0 0 0 transparent;
 }
 
-/* --- Стили Модалки --- */
+/* Стили Модалки */
 .modal-overlay {
   position: absolute;
   top: 0;
@@ -410,37 +395,8 @@ function goToVerbForms(verbName) {
   font-weight: 600;
 }
 
-.tip-modal-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 8px;
-}
-
-/* Кнопка "Таблица форм" ВНУТРИ модалки */
-.btn-verb-forms-modal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  background: #eff6ff;
-  color: #3b82f6;
-  border: 2px solid #bfdbfe;
-  padding: 12px;
-  border-radius: 46px;
-  font-size: 16px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: all 0.1s ease;
-}
-
-.btn-verb-forms-modal:active {
-  transform: scale(0.98);
-  background: #dbeafe;
-}
-
 .modal-ok-btn {
+  margin-top: 8px;
   background: #3b82f6;
   box-shadow: 0 5px 0 #2563eb;
 }
