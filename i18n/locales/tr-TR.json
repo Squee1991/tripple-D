@@ -8073,7 +8073,12 @@
     "selectDaysPeriod": "Gün sayısını seçin. Bu süre zarfında kepleriniz silinmeyecektir.",
     "maximum": "Maksimum",
     "cancel": "İptal",
-    "accessibly": "Anlaşıldı"
+    "accessibly": "Anladım",
+    "coupon_buy": "Kupon satın al",
+    "coupon_error": "Satın alma koşulları",
+    "coupon_success": "Başarılı!",
+    "coupon_owned": "Kupon aktif",
+    "buyingPlus": "PLUS Satın Al"
   },
   "shopDaysRaw": {
     "dayFirst": "gün",
@@ -10613,8 +10618,35 @@
     "win-screen": "Harika iş çıkardın!",
     "win-desc": "Artık derslerine geri dönebilirsin."
   },
+  "updatePassword": {
+    "title": "Yeni şifre oluştur",
+    "newPasswordLabel": "Yeni şifre",
+    "newPasswordPlaceholder": "En az 6 karakter",
+    "confirmPasswordLabel": "Şifreyi onayla",
+    "confirmPasswordPlaceholder": "Yeni şifreyi tekrar girin",
+    "savingBtn": "Kaydediliyor...",
+    "saveBtn": "Şifreyi kaydet",
+    "invalidLinkLoad": "Kurtarma bağlantısının süresi dolmuş veya geçersiz. Lütfen tekrar sıfırlama isteyin.",
+    "invalidLinkSubmit": "Kodun süresi dolmuş veya zaten kullanılmış. Tekrar sıfırlama isteyin.",
+    "minLength": "Şifre en az 6 karakter uzunluğunda olmalıdır.",
+    "mismatch": "Şifreler eşleşmiyor. Tekrar deneyin.",
+    "success": "Şifre başarıyla güncellendi! Yönlendiriliyor...",
+    "expiredCode": "Kodun süresi doldu veya zaten kullanıldı. Yeni bir tane isteyin.",
+    "networkError": "Ağ hatası. İnternet bağlantınızı kontrol edin.",
+    "defaultError": "Beklenmeyen bir hata oluştu. Lütfen daha sonra tekrar deneyin."
+  },
   "eulaText": {
     "text": "Satın alarak şunları kabul etmiş olursunuz:",
     "month": "ay"
+  },
+  "shopInfoModal": {
+    "buyDiscount": "Kupon satın al",
+    "suma": "Ödenecek tutar:",
+    "forBuyingPartOne": "Satın almak için",
+    "forBuyingPartTwo": "gereken:",
+    "notEnough": "yetersiz",
+    "successBuy": "Kupon başarıyla etkinleştirildi!",
+    "howToUse": "Bunu Plus satın alma ekranında kullanabilirsiniz.",
+    "pcs": "adet"
   }
 }

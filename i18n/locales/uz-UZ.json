@@ -8059,7 +8059,12 @@
     "selectDaysPeriod": "Kunlar sonini tanlang. Bu davrda qalpoqlaringiz yo'qolmaydi.",
     "maximum": "Maksimum",
     "cancel": "Bekor qilish",
-    "accessibly": "Tushunarli"
+    "accessibly": "Tushunarli",
+    "coupon_buy": "Kuponni sotib olish",
+    "coupon_error": "Sotib olish shartlari",
+    "coupon_success": "Muvaffaqiyatli!",
+    "coupon_owned": "Kupon faol",
+    "buyingPlus": "PLUS sotib olish"
   },
   "shopDaysRaw": {
     "dayFirst": "kun",
@@ -10598,8 +10603,35 @@
     "win-screen": "Ajoyib ish!",
     "win-desc": "Endi darslarga qaytishingiz mumkin."
   },
+  "updatePassword": {
+    "title": "Yangi parol yaratish",
+    "newPasswordLabel": "Yangi parol",
+    "newPasswordPlaceholder": "Kamida 6 ta belgi",
+    "confirmPasswordLabel": "Parolni tasdiqlash",
+    "confirmPasswordPlaceholder": "Yangi parolni takrorlang",
+    "savingBtn": "Saqlanmoqda...",
+    "saveBtn": "Parolni saqlash",
+    "invalidLinkLoad": "Tiklash havolasining muddati tugagan yoki yaroqsiz. Iltimos, qaytadan tiklashni so'rang.",
+    "invalidLinkSubmit": "Kodning muddati tugagan yoki allaqachon ishlatilgan. Qaytadan tiklashni so'rang.",
+    "minLength": "Parol kamida 6 ta belgidan iborat bo'lishi kerak.",
+    "mismatch": "Parollar mos kelmadi. Qaytadan urinib ko'ring.",
+    "success": "Parol muvaffaqiyatli yangilandi! Yo'naltirilmoqda...",
+    "expiredCode": "Kodning amal qilish muddati tugagan yoki u allaqachon ishlatilgan. Yangisini so'rang.",
+    "networkError": "Tarmoq xatosi. Internet aloqasini tekshiring.",
+    "defaultError": "Kutilmagan xatolik yuz berdi. Iltimos, keyinroq qayta urinib ko'ring."
+  },
   "eulaText": {
     "text": "Sotib olish orqali siz quyidagilarga rozilik bildirasiz",
     "month": "oy"
+  },
+  "shopInfoModal": {
+    "buyDiscount": "Kuponni sotib olish",
+    "suma": "Jami:",
+    "forBuyingPartOne": "Sotib olish uchun",
+    "forBuyingPartTwo": "kerak:",
+    "notEnough": "yetarli emas",
+    "successBuy": "Kupon muvaffaqiyatli faollashtirildi!",
+    "howToUse": "Uni Plus xarid qilish ekranida ishlatishingiz mumkin.",
+    "pcs": "dona"
   }
 }

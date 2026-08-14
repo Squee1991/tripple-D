@@ -8064,7 +8064,12 @@
     "selectDaysPeriod": "Alege numărul de zile. În această perioadă, tocile tale nu vor fi pierdute.",
     "maximum": "Maxim",
     "cancel": "Anulează",
-    "accessibly": "Am înțeles"
+    "accessibly": "Am înțeles",
+    "coupon_buy": "Cumpără cuponul",
+    "coupon_error": "Condiții de cumpărare",
+    "coupon_success": "Succes!",
+    "coupon_owned": "Cupon activ",
+    "buyingPlus": "Achiziționează PLUS"
   },
   "shopDaysRaw": {
     "dayFirst": "zi",
@@ -10603,8 +10608,35 @@
     "win-screen": "Treabă excelentă!",
     "win-desc": "Acum te poți întoarce la lecții."
   },
+  "updatePassword": {
+    "title": "Creează o parolă nouă",
+    "newPasswordLabel": "Parolă nouă",
+    "newPasswordPlaceholder": "Minimum 6 caractere",
+    "confirmPasswordLabel": "Confirmă parola",
+    "confirmPasswordPlaceholder": "Repetă noua parolă",
+    "savingBtn": "Se salvează...",
+    "saveBtn": "Salvează parola",
+    "invalidLinkLoad": "Linkul de recuperare a expirat sau este nevalid. Te rugăm să soliciți o nouă resetare.",
+    "invalidLinkSubmit": "Codul a expirat sau a fost deja folosit. Solicită resetarea din nou.",
+    "minLength": "Parola trebuie să conțină cel puțin 6 caractere.",
+    "mismatch": "Parolele nu se potrivesc. Încearcă din nou.",
+    "success": "Parolă actualizată cu succes! Se redirecționează...",
+    "expiredCode": "Codul a expirat sau a fost deja utilizat. Solicită unul nou.",
+    "networkError": "Eroare de rețea. Verifică-ți conexiunea la internet.",
+    "defaultError": "A apărut o eroare neașteptată. Încearcă din nou mai târziu."
+  },
   "eulaText": {
     "text": "Prin achiziționare, ești de acord cu",
     "month": "lună"
+  },
+  "shopInfoModal": {
+    "buyDiscount": "Cumpără cuponul",
+    "suma": "De plată:",
+    "forBuyingPartOne": "Pentru cumpărare,",
+    "forBuyingPartTwo": "ai nevoie de:",
+    "notEnough": "nu este suficient",
+    "successBuy": "Cupon activat cu succes!",
+    "howToUse": "Îl poți folosi pe ecranul de achiziție Plus.",
+    "pcs": "buc"
   }
 }

@@ -8087,7 +8087,12 @@
     "selectDaysPeriod": "Select the number of days. During this period, your mortarboards will not expire.",
     "maximum": "Maximum",
     "cancel": "Cancel",
-    "accessibly": "Got it"
+    "accessibly": "Got it",
+    "coupon_buy": "Buy coupon",
+    "coupon_error": "Purchase terms",
+    "coupon_success": "Success!",
+    "coupon_owned": "Coupon is active",
+    "buyingPlus": "Get PLUS"
   },
   "shopDaysRaw": {
     "dayFirst": "day",
@@ -10626,8 +10631,35 @@
     "win-screen": "Great job!",
     "win-desc": "Now you can get back to your lessons."
   },
+  "updatePassword": {
+    "title": "Create a new password",
+    "newPasswordLabel": "New password",
+    "newPasswordPlaceholder": "Minimum 6 characters",
+    "confirmPasswordLabel": "Confirm password",
+    "confirmPasswordPlaceholder": "Repeat new password",
+    "savingBtn": "Saving...",
+    "saveBtn": "Save password",
+    "invalidLinkLoad": "The recovery link has expired or is invalid. Please request a reset again.",
+    "invalidLinkSubmit": "The code has expired or has already been used. Request a reset again.",
+    "minLength": "Password must be at least 6 characters long.",
+    "mismatch": "Passwords do not match. Try again.",
+    "success": "Password successfully updated! Redirecting...",
+    "expiredCode": "The code has expired or has already been used. Request a new one.",
+    "networkError": "Network error. Check your internet connection.",
+    "defaultError": "An unexpected error occurred. Please try again later."
+  },
   "eulaText": {
     "text": "By purchasing you agree to",
     "month": "mo."
+  },
+  "shopInfoModal": {
+    "buyDiscount": "Buy coupon",
+    "suma": "Total:",
+    "forBuyingPartOne": "To buy,",
+    "forBuyingPartTwo": "you need:",
+    "notEnough": "not enough",
+    "successBuy": "Coupon successfully activated!",
+    "howToUse": "You can use it on the Plus purchase screen.",
+    "pcs": "pcs"
   }
 }

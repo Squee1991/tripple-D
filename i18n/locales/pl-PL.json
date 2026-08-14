@@ -8080,7 +8080,12 @@
     "selectDaysPeriod": "Wybierz liczbę dni. W tym okresie Twoje birety nie przepadną.",
     "maximum": "Maksimum",
     "cancel": "Anuluj",
-    "accessibly": "Rozumiem"
+    "accessibly": "Rozumiem",
+    "coupon_buy": "Kup kupon",
+    "coupon_error": "Warunki zakupu",
+    "coupon_success": "Sukces!",
+    "coupon_owned": "Kupon jest aktywny",
+    "buyingPlus": "Kup PLUS"
   },
   "shopDaysRaw": {
     "dayFirst": "dzień",
@@ -10619,8 +10624,35 @@
     "win-screen": "Świetna robota!",
     "win-desc": "Teraz możesz wrócić do lekcji."
   },
+  "updatePassword": {
+    "title": "Utwórz nowe hasło",
+    "newPasswordLabel": "Nowe hasło",
+    "newPasswordPlaceholder": "Minimum 6 znaków",
+    "confirmPasswordLabel": "Potwierdź hasło",
+    "confirmPasswordPlaceholder": "Powtórz nowe hasło",
+    "savingBtn": "Zapisywanie...",
+    "saveBtn": "Zapisz hasło",
+    "invalidLinkLoad": "Link odzyskiwania wygasł lub jest nieprawidłowy. Poproś o reset ponownie.",
+    "invalidLinkSubmit": "Kod wygasł lub został już użyty. Poproś o reset ponownie.",
+    "minLength": "Hasło musi mieć co najmniej 6 znaków.",
+    "mismatch": "Hasła nie pasują do siebie. Spróbuj ponownie.",
+    "success": "Hasło zostało pomyślnie zaktualizowane! Trwa przekierowanie...",
+    "expiredCode": "Kod wygasł lub został już użyty. Poproś o nowy.",
+    "networkError": "Błąd sieci. Sprawdź połączenie z internetem.",
+    "defaultError": "Wystąpił nieoczekiwany błąd. Spróbuj ponownie później."
+  },
   "eulaText": {
     "text": "Dokonując zakupu, wyrażasz zgodę na",
     "month": "mies."
+  },
+  "shopInfoModal": {
+    "buyDiscount": "Kup kupon",
+    "suma": "Do zapłaty:",
+    "forBuyingPartOne": "Aby kupić,",
+    "forBuyingPartTwo": "potrzebujesz:",
+    "notEnough": "brakuje",
+    "successBuy": "Kupon został pomyślnie aktywowany!",
+    "howToUse": "Możesz go użyć na ekranie zakupu Plus.",
+    "pcs": "szt."
   }
 }

@@ -86,7 +86,7 @@
                 <div class="region-card__footer">
                   <span class="region-card__title">{{ t(region.name) }}</span>
                   <div class="region-card-badge-wrapper">
-                  <span v-if="clampedLevel < region.level" class="region-card__badge">
+                  <span v-if="!authStore.isPremium && clampedLevel < region.level" class="region-card__badge">
                     {{ region.level }}
                   </span>
                   </div>
@@ -112,9 +112,11 @@ import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {regions} from '@/utils/regions.js'
 import {userlangStore} from '../../store/learningStore.js'
+import { userAuthStore} from "~/store/authStore.js";
 
 const {t, locale} = useI18n()
 const langStore = userlangStore()
+const authStore = userAuthStore()
 const router = useRouter()
 const categoryKeys = computed(() => Object.keys(regions))
 const activeCategory = ref(categoryKeys.value[0] || 'beginner')
@@ -153,7 +155,12 @@ function handleResize() {
 }
 
 const clampedLevel = computed(() => Math.min(Math.max(langStore.isLeveling, 0), 20))
-const isUnlocked = computed(() => active.value ? clampedLevel.value >= active.value.level : false)
+
+const isUnlocked = computed(() => {
+  if (!active.value) return false
+  if (authStore.isPremium) return true
+  return clampedLevel.value >= active.value.level
+})
 
 function themeOf(obj) {
   return (obj && (obj.theme || obj.pathTo)) ? (obj.theme || obj.pathTo) : 'default'
@@ -179,8 +186,9 @@ const handlePopState = () => {
   }
 }
 
+
 function go(region) {
-  if (clampedLevel.value >= region.level) {
+  if (authStore.isPremium || clampedLevel.value >= region.level) {
     router.push(`/location/${region.pathTo}`)
   }
 }
