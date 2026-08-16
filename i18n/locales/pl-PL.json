@@ -10654,5 +10654,12 @@
     "successBuy": "Kupon został pomyślnie aktywowany!",
     "howToUse": "Możesz go użyć na ekranie zakupu Plus.",
     "pcs": "szt."
+  },
+  "freeTrial": {
+    "free-text": "Okres próbny",
+    "free-days": "dni za darmo",
+    "then": "następnie",
+    "trial-text-part-one": "Po zakończeniu okresu próbnego zostanie automatycznie pobrana opłata za subskrypcję w wysokości",
+    "trial-text-part-two": "Subskrypcja odnawia się automatycznie, chyba że anulujesz ją w ustawieniach konta Apple ID (w App Store) co najmniej 24 godziny przed końcem bieżącego okresu."
   }
 }

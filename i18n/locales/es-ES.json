@@ -10638,5 +10638,12 @@
     "successBuy": "¡Cupón activado con éxito!",
     "howToUse": "Puedes usarlo en la pantalla de compra de Plus.",
     "pcs": "udds"
+  },
+  "freeTrial": {
+    "free-text": "Período de prueba",
+    "free-days": "días gratis",
+    "then": "luego",
+    "trial-text-part-one": "Una vez finalizado el período de prueba, se le cobrará automáticamente una cuota de suscripción de",
+    "trial-text-part-two": "La suscripción se renueva automáticamente a menos que la cancele en la configuración de su cuenta de Apple ID (en la App Store) al menos 24 horas antes de que finalice el período actual."
   }
 }

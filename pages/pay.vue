@@ -50,11 +50,29 @@ const restoreComputed = computed(() => {
   return restoreLoading.value ? t('restoreComputed.restoring') : t('restoreComputed.restore')
 })
 
-const submitComputed = computed(() => {
-  return submitLoading.value ? t('submitComputed.sync') : t('submitComputed.getPlus')
+const trialInfo = computed(() => {
+  if (!billingStore.isMobile) return null
+  if (billingStore.offerings && billingStore.offerings.length > 0) {
+    const product = billingStore.offerings[0].product
+    if (product.introPrice && product.introPrice.price === 0) {
+      return {
+        days: 7
+      }
+    }
+  }
+  return null
 })
 
-const finalPrice = computed(() => {
+const submitComputed = computed(() => {
+  if (submitLoading.value) return t('submitComputed.sync')
+  if (trialInfo.value) {
+    // Возвращаем оригинальный ключ для кнопки: "7 дней бесплатно"
+    return `Plus ${trialInfo.value.days} ${t('freeTrial.free-days')}`
+  }
+  return t('submitComputed.getPlus')
+})
+
+const postTrialPrice = computed(() => {
   if (billingStore.isMobile) {
     if (billingStore.offerings && billingStore.offerings.length > 0) {
       const pkg = billingStore.offerings[0]
@@ -64,12 +82,19 @@ const finalPrice = computed(() => {
   }
 
   const base = parseFloat(displayPrice.value) || 12.99
-  if (!selectedDiscountId.value) return `${base.toFixed(2)}${displayCurrency.value}`
+  if (!selectedDiscountId.value) return `${base.toFixed(2)} ${displayCurrency.value}`
 
   const activeCoupon = myAvailableCoupons.value.find(c => c.id === selectedDiscountId.value)
   const percent = activeCoupon ? activeCoupon.percent : 0
   const discounted = base - (base * (percent / 100))
-  return `${discounted.toFixed(2)}${displayCurrency.value}`
+  return `${discounted.toFixed(2)} ${displayCurrency.value}`
+})
+
+const finalPrice = computed(() => {
+  if (trialInfo.value) {
+    return `0.00 ${displayCurrency.value}`
+  }
+  return postTrialPrice.value
 })
 
 const myAvailableCoupons = computed(() => {
@@ -285,9 +310,26 @@ onUnmounted(() => {
                 {{ myAvailableCoupons.find(c => c.id === selectedDiscountId)?.label }}
               </span>
             </div>
+            <div class="bill-line trial-line" v-if="trialInfo">
+              <span class="bill-text">{{ t('freeTrial.free-text') }}</span>
+              <span class="bill-price">{{ trialInfo.days }} {{ t('freeTrial.free-days') }}</span>
+            </div>
+
+            <div v-if="trialInfo" class="trial-disclaimer">
+               {{ t('freeTrial.trial-text-part-one')}}<strong style="color: #fff;">{{ postTrialPrice }} / {{ t('eulaText.month') }}</strong>.{{ t('freeTrial.trial-text-part-two')}}
+            </div>
+
             <div class="bill-total">
               <span class="total-text">{{ t('payPage.finalePrice') }}</span>
-              <span class="total-price">{{ finalPrice }} / {{ t('eulaText.month')}}</span>
+
+              <!-- Здесь оставляем запрошенный ключ для "0.00 / 7 дней" -->
+              <span class="total-price" v-if="trialInfo">
+                {{ finalPrice }} / {{ trialInfo.days }} {{ t('shopDaysRaw.dayThird') }}
+              </span>
+              <span class="total-price" v-else>
+                {{ finalPrice }} / {{ t('eulaText.month') }}
+              </span>
+
             </div>
           </div>
           <div class="footer-action-wrapper" ref="payButton">
@@ -326,10 +368,10 @@ onUnmounted(() => {
                 <h3>{{ t('activePlus.title') }}</h3>
                 <p>{{ t('activePlus.description') }}</p>
                 <div class="subscription-date-badge" v-if="authStore.subscriptionEndsAt">
-                  <p v-if="authStore.isPremium && !authStore.subscriptionCancelled" style="margin-top: 15px; font-weight: bold; color: #10b981;">
+                  <p v-if="authStore.isPremium && !authStore.subscriptionCancelled" class="subscription-date-text">
                     📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}
                   </p>
-                  <p v-else-if="authStore.isPremium && authStore.subscriptionCancelled" style="margin-top: 15px; font-weight: bold; color: #10b981;">
+                  <p v-else-if="authStore.isPremium && authStore.subscriptionCancelled" class="subscription-date-text">
                     📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}
                   </p>
                 </div>
@@ -385,11 +427,11 @@ onUnmounted(() => {
 .btn-restore {
   display: block;
   width: 100%;
-  margin-top: 16px;
+  margin-top: 20px;
   background: transparent;
   border: none;
   color: #8e8e93;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
   transition: color 0.2s;
@@ -590,6 +632,10 @@ onUnmounted(() => {
   color: #8e8e93;
 }
 
+.trial-line {
+  color: #10b981;
+}
+
 .bill-price-neg {
   color: #facc15;
 }
@@ -611,6 +657,11 @@ onUnmounted(() => {
   font-weight: 900;
   font-size: 24px;
   color: #10b981;
+}
+
+.total-price-hint {
+  font-size: 14px;
+  color: #8e8e93;
 }
 
 .footer-action-wrapper {
@@ -757,6 +808,23 @@ onUnmounted(() => {
   margin: 0;
   font-weight: 700;
   line-height: 1.4;
+}
+
+.subscription-date-text {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #10b981;
+}
+
+.trial-disclaimer {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 5px 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #9ca3af;
+  text-align: center;
+  font-weight: 600;
 }
 
 .privacy__block {
