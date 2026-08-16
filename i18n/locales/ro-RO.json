@@ -10638,5 +10638,12 @@
     "successBuy": "Cupon activat cu succes!",
     "howToUse": "Îl poți folosi pe ecranul de achiziție Plus.",
     "pcs": "buc"
+  },
+  "freeTrial": {
+    "free-text": "Perioadă de probă",
+    "free-days": "zile gratuit",
+    "then": "apoi",
+    "trial-text-part-one": "După încheierea perioadei de probă, veți fi taxat automat cu o taxă de abonament în valoare de",
+    "trial-text-part-two": "Abonamentul se reînnoiește automat, cu excepția cazului în care îl anulați din setările contului Apple ID (în App Store) cu cel puțin 24 de ore înainte de sfârșitul perioadei curente."
   }
 }

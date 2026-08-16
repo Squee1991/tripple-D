@@ -10661,5 +10661,12 @@
     "successBuy": "Coupon successfully activated!",
     "howToUse": "You can use it on the Plus purchase screen.",
     "pcs": "pcs"
+  },
+  "freeTrial": {
+    "free-text": "Trial period",
+    "free-days": "days for free",
+    "then": "then",
+    "trial-text-part-one": "After the trial period ends, you will automatically be charged a subscription fee of",
+    "trial-text-part-two": "The subscription renews automatically unless you cancel it in your Apple ID account settings (in the App Store) at least 24 hours before the end of the current period."
   }
 }
