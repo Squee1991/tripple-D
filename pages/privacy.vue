@@ -39,7 +39,7 @@ const router = useRouter()
 const { t } = useI18n()
 
 const PROJECT = "SkillUpGerman"
-const EMAIL = "skillupgerman@gmail.com"
+const EMAIL = "skillupgerman.com@gmail.com"
 const COUNTRY = "Poland"
 const lastUpdated = ref("June 29, 2026")
 
