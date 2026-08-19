@@ -12,12 +12,14 @@ const closeModal = () => {
 }
 
 const openStore = (platform) => {
-  if (platform === 'ios') {
-    window.open('https://apps.apple.com/app/твой-id', '_blank')
-  } else {
-    window.open('https://play.google.com/store/apps/details?id=твой.id', '_blank')
+  if (platform === 'android') {
+    window.open('https://play.google.com/store/apps/details?id=com.skillupgerman.app', '_blank')
+    closeModal()
   }
-  closeModal()
+  if (platform === 'ios') {
+    window.open('https://apps.apple.com/app/id6762300276', '_blank')
+    closeModal()
+  }
 }
 
 onMounted(() => {
@@ -27,7 +29,7 @@ onMounted(() => {
   if (!localStorage.getItem('app_promo_seen')) {
     setTimeout(() => {
       isVisible.value = true
-    }, 5200)
+    }, 5000)
   }
 })
 </script>

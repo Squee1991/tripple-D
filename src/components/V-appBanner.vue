@@ -44,7 +44,7 @@ const stores = [
   {
     subText: t('appBanner.subTextGoogle'),
     mainText: 'Google Play',
-    url: '#',
+    url: 'https://play.google.com/store/apps/details?id=com.skillupgerman.app',
     aria: t('appBanner.subTextAriaGoogle  '),
     class: 'store-btn--yellow',
     viewBox: '0 0 512 512',

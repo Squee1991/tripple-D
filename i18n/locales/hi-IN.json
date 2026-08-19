@@ -8068,7 +8068,7 @@
   },
   "cabinetSidebar": {
     "valueOne": "खाता",
-    "valueTwo": "परीक्षाएं",
+    "valueTwo": "आर्टिकल",
     "valueThree": "स्टोर",
     "valueFour": "सेटिंग्स"
   } ,
@@ -10369,7 +10369,8 @@
   },
   "installApp": {
     "stayInBrowser": "ब्राउज़र में जारी रखें",
-    "promoSubTitle": " Skillupgerman ऐप के साथ जर्मन सीखना बहुत अधिक सुविधाजनक है।"
+    "promoSubTitle": " Skillupgerman ऐप के साथ जर्मन सीखना बहुत अधिक सुविधाजनक है।",
+    "soon": "जल्द आ रहा है"
   },
   "speakSessionsBanner": {
     "dialog": "संवादों को पूरा करें। सुनें, उत्तर के विकल्प चुनें और उच्चारण का अभ्यास करें",
@@ -10589,5 +10590,9 @@
   },
   "public__copyright": {
     "text": "Skillupgerman. सर्वाधिकार सुरक्षित।"
+  },
+  "eulaText": {
+    "text": "खरीदकर आप सहमत होते हैं",
+    "month": "महीना"
   }
 }

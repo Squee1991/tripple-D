@@ -8101,7 +8101,7 @@
   },
   "cabinetSidebar": {
     "valueOne": "Hesap",
-    "valueTwo": "Sınavlar",
+    "valueTwo": "Artikeller",
     "valueThree": "Mağaza",
     "valueFour": "Ayarlar"
   },
@@ -10403,7 +10403,8 @@
   },
   "installApp": {
     "stayInBrowser": "Tarayıcıda devam et",
-    "promoSubTitle": " Skillupgerman uygulaması ile Almanca öğrenmek çok daha pratik."
+    "promoSubTitle": " Skillupgerman uygulaması ile Almanca öğrenmek çok daha pratik.",
+    "soon": "Yakında"
   },
   "speakSessionsBanner": {
     "dialog": "Diyalogları tamamlayın. Dinleyin, cevap seçeneklerini belirleyin ve telaffuz pratiği yapın",
@@ -10623,5 +10624,9 @@
   },
   "public__copyright": {
     "text": "Skillupgerman. Tüm hakları saklıdır."
+  },
+  "eulaText": {
+    "text": "Satın alarak şunları kabul etmiş olursunuz:",
+    "month": "ay"
   }
 }

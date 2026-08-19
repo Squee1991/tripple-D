@@ -8108,7 +8108,7 @@
   },
   "cabinetSidebar": {
     "valueOne": "Konto",
-    "valueTwo": "Egzaminy",
+    "valueTwo": "Artykuły",
     "valueThree": "Sklep",
     "valueFour": "Ustawienia"
   },
@@ -10409,7 +10409,8 @@
   },
   "installApp": {
     "stayInBrowser": "Kontynuuj w przeglądarce",
-    "promoSubTitle": " Z aplikacją Skillupgerman nauka niemieckiego jest o wiele wygodniejsza."
+    "promoSubTitle": " Z aplikacją Skillupgerman nauka niemieckiego jest o wiele wygodniejsza.",
+    "soon": "Wkrótce"
   },
   "speakSessionsBanner": {
     "dialog": "Przechodź dialogi. Słuchaj, wybieraj opcje odpowiedzi i ćwicz wymowę",
@@ -10629,5 +10630,9 @@
   },
   "public__copyright": {
     "text": "Skillupgerman. Wszelkie prawa zastrzeżone."
+  },
+  "eulaText": {
+    "text": "Dokonując zakupu, wyrażasz zgodę na",
+    "month": "mies."
   }
 }

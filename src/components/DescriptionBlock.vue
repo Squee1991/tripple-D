@@ -44,73 +44,74 @@ import Cards from '../../assets/images/greeting-card.svg'
 
 const {t} = useI18n()
 
-const items = [
-  {
-    src: Book, alt: 'Book', title: t('descriptionCardTheme.title'), description: [
-      {text: t('descriptionCardTheme.textOne')},
-      {text: t('descriptionCardTheme.textTwo')},
-      {text: t('descriptionCardTheme.textThree')},
-      {text: t('descriptionCardTheme.textFour')}
+const items = computed(() => [
+      {
+        src: Book, alt: 'Book', title: t('descriptionCardTheme.title'), description: [
+          {text: t('descriptionCardTheme.textOne')},
+          {text: t('descriptionCardTheme.textTwo')},
+          {text: t('descriptionCardTheme.textThree')},
+          {text: t('descriptionCardTheme.textFour')}
+        ]
+      },
+      {
+        src: Brain, alt: 'Brain', title: t('descriptionCardArticle.title'), description: [
+          {text: t('descriptionCardArticle.textOne')},
+          {text: t('descriptionCardArticle.textTwo')},
+          {text: t('descriptionCardArticle.textThree')},
+          {text: t('descriptionCardArticle.textFour')},
+        ]
+      },
+      {
+        src: Controller, alt: 'Controller', title: t('descriptionCardGame.title'), description: [
+          {text: t('descriptionCardGame.textOne')},
+          {text: t('descriptionCardGame.textTwo')},
+          {text: t('descriptionCardGame.textThree')},
+          {text: t('descriptionCardGame.textFour')}
+        ]
+      },
+      {
+        src: AchCup, alt: 'Achievement icon', title: t('descriptionCardRewards.title'), description: [
+          {text: t('descriptionCardRewards.textOne')},
+          {text: t('descriptionCardRewards.textTwo')},
+          {text: t('descriptionCardRewards.textThree')},
+          {text: t('descriptionCardRewards.textFour')}
+        ]
+      },
+      {
+        src: Ranked, alt: 'Ranked', title: t('descriptionCardRanked.title'), description: [
+          {text: t('descriptionCardRanked.textOne')},
+          {text: t('descriptionCardRanked.textTwo')},
+          {text: t('descriptionCardRanked.textThree')},
+          {text: t('descriptionCardRanked.textFour')},
+        ]
+      },
+      {
+        src: Exam, alt: 'Exam', title: t('descriptionCardExam.title'), description: [
+          {text: t('descriptionCardExam.textOne')},
+          {text: t('descriptionCardExam.textTwo')},
+          {text: t('descriptionCardExam.textThree')},
+          {text: t('descriptionCardExam.textFour')},
+          {text: t('descriptionCardExam.textFive')},
+        ]
+      },
+      {
+        src: Dictionary, alt: 'Dictionary', title: t('descriptionCardEvents.title'), description: [
+          {text: t('descriptionCardEvents.textOne')},
+          {text: t('descriptionCardEvents.textTwo')},
+          {text: t('descriptionCardEvents.textThree')},
+          {text: t('descriptionCardEvents.textFour')}
+        ]
+      },
+      {
+        src: Cards, alt: 'Cup', title: t('descriptionCardCards.title'), description: [
+          {text: t('descriptionCardCards.textOne')},
+          {text: t('descriptionCardCards.textTwo')},
+          {text: t('descriptionCardCards.textThree')},
+          {text: t('descriptionCardCards.textFour')}
+        ]
+      }
     ]
-  },
-  {
-    src: Brain, alt: 'Brain', title: t('descriptionCardArticle.title'), description: [
-      {text: t('descriptionCardArticle.textOne')},
-      {text: t('descriptionCardArticle.textTwo')},
-      {text: t('descriptionCardArticle.textThree')},
-      {text: t('descriptionCardArticle.textFour')},
-    ]
-  },
-  {
-    src: Controller, alt: 'Controller', title: t('descriptionCardGame.title'), description: [
-      {text: t('descriptionCardGame.textOne')},
-      {text: t('descriptionCardGame.textTwo')},
-      {text: t('descriptionCardGame.textThree')},
-      {text: t('descriptionCardGame.textFour')}
-    ]
-  },
-  {
-    src: AchCup, alt: 'Achievement icon', title: t('descriptionCardRewards.title'), description: [
-      {text: t('descriptionCardRewards.textOne')},
-      {text: t('descriptionCardRewards.textTwo')},
-      {text: t('descriptionCardRewards.textThree')},
-      {text: t('descriptionCardRewards.textFour')}
-    ]
-  },
-  {
-    src: Ranked, alt: 'Ranked', title: t('descriptionCardRanked.title'), description: [
-      {text: t('descriptionCardRanked.textOne')},
-      {text: t('descriptionCardRanked.textTwo')},
-      {text: t('descriptionCardRanked.textThree')},
-      {text: t('descriptionCardRanked.textFour')},
-    ]
-  },
-  {
-    src: Exam, alt: 'Exam', title: t('descriptionCardExam.title'), description: [
-      {text: t('descriptionCardExam.textOne')},
-      {text: t('descriptionCardExam.textTwo')},
-      {text: t('descriptionCardExam.textThree')},
-      {text: t('descriptionCardExam.textFour')},
-      {text: t('descriptionCardExam.textFive')},
-    ]
-  },
-  {
-    src: Dictionary, alt: 'Dictionary', title: t('descriptionCardEvents.title'), description: [
-      {text: t('descriptionCardEvents.textOne')},
-      {text: t('descriptionCardEvents.textTwo')},
-      {text: t('descriptionCardEvents.textThree')},
-      {text: t('descriptionCardEvents.textFour')}
-    ]
-  },
-  {
-    src: Cards, alt: 'Cup', title: t('descriptionCardCards.title'), description: [
-      {text: t('descriptionCardCards.textOne')},
-      {text: t('descriptionCardCards.textTwo')},
-      {text: t('descriptionCardCards.textThree')},
-      {text: t('descriptionCardCards.textFour')}
-    ]
-  }
-]
+)
 const sliderRef = ref(null)
 let isDown = false
 let startX

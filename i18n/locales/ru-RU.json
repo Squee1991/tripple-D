@@ -7234,6 +7234,7 @@
     "questFourteen": "Собери: новая лопата",
     "questFifteen": "Прослушай и напиши"
   },
+
   "questsStormCoastsFirstQuests": {
     "title": "Праздники — приглашение и время",
     "description": "Вас приглашают на местный праздник. Вы учитесь понимать приглашение, узнавать адрес, дату.",
@@ -8109,7 +8110,7 @@
   },
   "cabinetSidebar": {
     "valueOne": "Аккаунт",
-    "valueTwo": "Экзамены",
+    "valueTwo": "Статьи",
     "valueThree": "Магазин",
     "valueFour": "Настройки"
   },
@@ -10414,7 +10415,8 @@
   },
   "installApp": {
     "stayInBrowser": "Продолжить в браузере",
-    "promoSubTitle": " С приложением Skillupgerman учить немецкий гораздо удобнее."
+    "promoSubTitle": " С приложением Skillupgerman учить немецкий гораздо удобнее.",
+    "soon": "Скоро будет"
   },
   "speakSessionsBanner": {
     "dialog": "Проходи диалоги. Cлушай, выбирай варианты ответов и тренируй произношение",
@@ -10651,5 +10653,17 @@
   },
   "public__copyright": {
     "text": "Skillupgerman. Все права защищены."
+  },
+  "eulaText": {
+    "text": "Покупая вы соглашаетесь с",
+    "month": "мес."
+  },
+  "landWordsSession": {
+    "grammar": "Грамматика",
+    "words": "Слова к заданию",
+    "verbs": "Таблица форм глаголов",
+    "error": "Слова для этого задания не найдены.",
+    "toQuest": "Перейти к заданию",
+    "got": "Понятно"
   }
 }

@@ -181,11 +181,11 @@ onUnmounted(() => {
               <span class="timer-widget__value">{{ timeLeftToOpen.m }}</span>
               <span class="timer-widget__unit">{{ t('i18nDays.mins') }}</span>
             </div>
-            <span class="timer-widget__separator">:</span>
-            <div class="timer-widget__item">
-              <span class="timer-widget__value">{{ timeLeftToOpen.s }}</span>
-              <span class="timer-widget__unit">сек</span>
-            </div>
+            <!--            <span class="timer-widget__separator">:</span>-->
+            <!--            <div class="timer-widget__item">-->
+            <!--              <span class="timer-widget__value">{{ timeLeftToOpen.s }}</span>-->
+            <!--              <span class="timer-widget__unit">сек</span>-->
+            <!--            </div>-->
           </div>
         </div>
       </div>
@@ -282,6 +282,8 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   height: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
   overflow: hidden;
   font-family: "Nunito", sans-serif;
 }
@@ -292,7 +294,6 @@ onUnmounted(() => {
 }
 
 .ranked-sidebar-corkboard {
-  max-width: 400px;
   display: flex;
   flex-direction: column;
   gap: 14px;

@@ -8087,7 +8087,7 @@
   },
   "cabinetSidebar": {
     "valueOne": "Hisob",
-    "valueTwo": "Imtihonlar",
+    "valueTwo": "Artikllar",
     "valueThree": "Do'kon",
     "valueFour": "Sozlamalar"
   },
@@ -10388,7 +10388,8 @@
   },
   "installApp": {
     "stayInBrowser": "Brauzerda davom etish",
-    "promoSubTitle": " Skillupgerman ilovasi bilan nemis tilini o'rganish ancha qulayroq."
+    "promoSubTitle": " Skillupgerman ilovasi bilan nemis tilini o'rganish ancha qulayroq.",
+    "soon": "Tez kunda"
   },
   "speakSessionsBanner": {
     "dialog": "Dialoglarni bajaring. Tinglang, javob variantlarini tanlang va talaffuzni mashq qiling",
@@ -10608,5 +10609,9 @@
   },
   "public__copyright": {
     "text": "Skillupgerman. Barcha huquqlar himoyalangan."
+  },
+  "eulaText": {
+    "text": "Sotib olish orqali siz quyidagilarga rozilik bildirasiz",
+    "month": "oy"
   }
 }

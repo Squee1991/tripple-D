@@ -39,7 +39,7 @@ export const userChainStore = defineStore('chain', () => {
 	const isRetryMode = ref(false)
 	const daily = dailyStore()
 	const langStore = userlangStore()
-	const authStore = userAuthStore() // Инициализируем стор авторизации
+	const authStore = userAuthStore()
 	let lifeTickerId = null
 
 	const totalQuestTasks = computed(() => quest.value?.conditions?.requiredTasks ?? quest.value?.tasks?.length ?? 0)

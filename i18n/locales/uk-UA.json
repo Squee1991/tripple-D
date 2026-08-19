@@ -8098,7 +8098,7 @@
   },
   "cabinetSidebar": {
     "valueOne": "Акаунт",
-    "valueTwo": "Іспити",
+    "valueTwo": "Статті",
     "valueThree": "Магазин",
     "valueFour": "Налаштування"
   },
@@ -10399,7 +10399,8 @@
   },
   "installApp": {
     "stayInBrowser": "Продовжити в браузері",
-    "promoSubTitle": " З додатком Skillupgerman вчити німецьку набагато зручніше."
+    "promoSubTitle": " З додатком Skillupgerman вчити німецьку набагато зручніше.",
+    "soon": "Скоро буде"
   },
   "speakSessionsBanner": {
     "dialog": "Проходь діалоги. Слухай, обирай варіанти відповідей та тренуй вимову",
@@ -10619,5 +10620,9 @@
   },
   "public__copyright": {
     "text": "Skillupgerman. Усі права захищено."
+  },
+  "eulaText": {
+    "text": "Здійснюючи покупку, ви погоджуєтеся з",
+    "month": "міс."
   }
 }

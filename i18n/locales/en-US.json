@@ -8115,7 +8115,7 @@
   },
   "cabinetSidebar": {
     "valueOne": "Account",
-    "valueTwo": "Exams",
+    "valueTwo": "Articles",
     "valueThree": "Shop",
     "valueFour": "Settings"
   },
@@ -10417,7 +10417,8 @@
   },
   "installApp": {
     "stayInBrowser": "Continue in browser",
-    "promoSubTitle": " Learning German is much more convenient with the Skillupgerman app."
+    "promoSubTitle": " Learning German is much more convenient with the Skillupgerman app.",
+    "soon": "Coming soon"
   },
   "speakSessionsBanner": {
     "dialog": "Go through dialogues. Listen, choose answer options, and practice your pronunciation",
@@ -10637,5 +10638,9 @@
   },
   "public__copyright": {
     "text": "Skillupgerman. All rights reserved."
+  },
+  "eulaText": {
+    "text": "By purchasing you agree to",
+    "month": "mo."
   }
 }
