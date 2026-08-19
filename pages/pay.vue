@@ -66,7 +66,6 @@ const trialInfo = computed(() => {
 const submitComputed = computed(() => {
   if (submitLoading.value) return t('submitComputed.sync')
   if (trialInfo.value) {
-    // Возвращаем оригинальный ключ для кнопки: "7 дней бесплатно"
     return `Plus ${trialInfo.value.days} ${t('freeTrial.free-days')}`
   }
   return t('submitComputed.getPlus')

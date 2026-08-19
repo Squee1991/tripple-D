@@ -114,6 +114,7 @@ exports.whisperTranscribe = onCall({
 	}
 });
 
+
 exports.visionAnalyze = onCall({
 	secrets: [GROQ_API_KEY],
 	memory: "256Mi",
@@ -127,7 +128,7 @@ exports.visionAnalyze = onCall({
 		const imageUrl = dataIn.imageUrl;
 		const referenceDescription = dataIn.referenceDescription;
 
-		const modelId = 'meta-llama/llama-4-scout-17b-16e-instruct';
+		const modelId = 'qwen/qwen3.6-27b';
 		const feedbackLang = String(userLocale || 'ru').split('-')[0].trim();
 
 		const systemPrompt = `You are a strict but supportive German language tutor evaluating an image description exercise.
@@ -151,7 +152,7 @@ CRITICAL EVALUATION RULES:
    - Score 9-10: Set 'suggestedAnswer' to the User's exact answer. 
    - Score <=8: Set 'suggestedAnswer' to the Reference Template.
 
-YOUR TASK: OUTPUT A RAW JSON OBJECT EXCLUSIVELY. Do NOT wrap in markdown.
+YOUR TASK: AFTER YOUR THINKING PROCESS, OUTPUT A VALID JSON OBJECT AND NOTHING ELSE.
 {
   "score": 0,
   "feedback": "...",
@@ -177,7 +178,8 @@ YOUR TASK: OUTPUT A RAW JSON OBJECT EXCLUSIVELY. Do NOT wrap in markdown.
 						]
 					}
 				],
-				temperature: 0.2
+				temperature: 0.1,
+				max_tokens: 4096
 			})
 		});
 
@@ -187,10 +189,55 @@ YOUR TASK: OUTPUT A RAW JSON OBJECT EXCLUSIVELY. Do NOT wrap in markdown.
 		const resJson = JSON.parse(resText);
 		if (!resJson.choices || !resJson.choices[0]) return { error: `GROQ EMPTY CHOICES: ${resText}` };
 
-		let content = resJson.choices[0].message.content;
-		content = content.replace(/```json/g, '').replace(/```/g, '').trim();
+		let rawContent = resJson.choices[0].message.content || '';
 
-		return { data: JSON.parse(content) };
+		// 1. Очистка от тегов рассуждений и маркдауна
+		let content = rawContent.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
+		content = content.replace(/```json/gi, '').replace(/```/gi, '').trim();
+
+		// 2. Умный поиск JSON: вырезает ровно один валидный объект, игнорируя мусор до и после
+		function extractJSON(str) {
+			const start = str.indexOf('{');
+			if (start === -1) return null;
+
+			let count = 0;
+			let inString = false;
+			let escape = false;
+
+			for (let i = start; i < str.length; i++) {
+				const char = str[i];
+				if (!inString) {
+					if (char === '{') count++;
+					else if (char === '}') count--;
+					else if (char === '"') inString = true;
+				} else {
+					if (char === '\\' && !escape) escape = true;
+					else {
+						if (char === '"' && !escape) inString = false;
+						escape = false;
+					}
+				}
+				if (count === 0 && !inString) {
+					return str.substring(start, i + 1); // Возвращаем чистый кусок JSON
+				}
+			}
+			return null;
+		}
+
+		const cleanJsonText = extractJSON(content);
+
+		if (!cleanJsonText) {
+			console.error("Groq не вернул JSON. Сырой текст:", rawContent);
+			return { error: `Нейросеть не вернула JSON. Текст: ${rawContent.substring(0, 300)}...` };
+		}
+
+		try {
+			return { data: JSON.parse(cleanJsonText) };
+		} catch (parseErr) {
+			console.error("Ошибка парсинга JSON:", parseErr.message, "Извлеченный текст:", cleanJsonText);
+			return { error: `Ошибка парсинга ответа: ${parseErr.message}` };
+		}
+
 	} catch (err) {
 		return { error: String(err.message || err) };
 	}

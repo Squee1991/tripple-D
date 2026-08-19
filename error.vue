@@ -139,6 +139,7 @@ const handleError = () => {
   padding: 20px;
   width: 100%;
   max-width: 400px;
+  margin: 0 auto;
   position: relative;
 }
 

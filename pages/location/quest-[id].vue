@@ -9,18 +9,14 @@
     </div>
     <div class="quest">
       <VLoginPreloader v-if="questStore.loading"/>
-
       <div v-if="questStore.finished && questStore.success && !questStore.hasMistakes"
            class="quest__stamp quest__stamp--ok">{{ t('locationQuests.done') }}
       </div>
-
       <div v-if="questStore.loading" class="quest__panel quest__panel--loading"></div>
-
       <div v-else-if="questStore.error" class="quest__panel quest__panel--error">
         <div>Error: {{ questStore.error }}</div>
         <button class="btn" @click="goThemes">back</button>
       </div>
-
       <div v-else-if="questStore.task" class="quest__card">
         <VHelpModal :open="showHint" @close="showHint=false"/>
         <div class="quest__top">

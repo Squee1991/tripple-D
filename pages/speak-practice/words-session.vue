@@ -112,7 +112,7 @@ import {useSpeakStore} from '../../store/speakStore.js';
 import {useI18n} from 'vue-i18n';
 import SoundBtn from '../../src/components/soundBtn.vue';
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
-
+import {showInterstitial} from '../../utils/admob.js';
 import {useSwipeBack} from '~/composables/useSwipeBack.js';
 
 const router = useRouter();
