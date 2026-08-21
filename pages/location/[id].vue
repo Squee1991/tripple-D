@@ -46,7 +46,6 @@
                   {{ t('locationQuests.gotAward') }} <span style="font-size:18px;">✅</span>
                 </span>
               </div>
-              <!-- Замени блок с кнопкой <button class="btn"...> на этот: -->
               <div class="quest-actions">
                 <button
                     v-if="quest.vocabulary && quest.vocabulary.length"
