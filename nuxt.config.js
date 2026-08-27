@@ -171,6 +171,8 @@ export default defineNuxtConfig({
 	vite: {
 		server: {
 			watch: {
+				usePolling: true,
+				interval: 500,
 				ignored: [
 					'**/ios/**',
 					'**/android/**',
