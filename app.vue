@@ -36,9 +36,11 @@ import { useHead } from '#imports'
 import { Capacitor } from '@capacitor/core'
 import { AdMob } from '@capacitor-community/admob';
 import VNetwork from "./src/components/V-network.vue";
+import { initAdmob } from "./utils/admob.js";
 const chainStore = userChainStore()
 const { locale, t } = useI18n()
 const billingStore = useBillingStore()
+
 
 useHead(() => ({
   htmlAttrs: { lang: locale.value, dir: locale.value === 'ar' ? 'rtl' : "ltr" },
@@ -80,6 +82,7 @@ const onToastFinished = () => {
 }
 
 onMounted(async () => {
+  initAdmob()
   achStore.initializeProgressTracking()
   if (Capacitor.isNativePlatform()) {
     try {

@@ -33,3 +33,4 @@ public/audio/B1
 android/app/release/app-release.zip
 # Admin tools
 admin/
+upload.mjs

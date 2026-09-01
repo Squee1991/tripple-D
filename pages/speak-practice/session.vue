@@ -414,6 +414,7 @@ const speakGerman = async (text) => {
 
 const playLocalAudio = (audioName) => {
   return new Promise((resolve) => {
+    // 1. Очистка старого аудио (ты случайно удалил этот блок)
     if (currentAudioInstance) {
       currentAudioInstance.pause();
       currentAudioInstance = null;
@@ -422,26 +423,48 @@ const playLocalAudio = (audioName) => {
       window.speechSynthesis.cancel();
     }
 
+    // 2. Объявление переменных (без них локальный путь не соберется)
     const level = route.query.level || 'beginner';
     const theme = route.query.theme || 'firstmeet';
-    const audioUrl = `/audio/speak-tasks/${level}/${theme}/${audioName}.mp3`;
+    const BUCKET = 'tripple-d-dev.firebasestorage.app';
+
+    // 3. Формирование ссылки
+    const localPath = `audio/speak-tasks/${level}/${theme}/${audioName}.mp3`;
+    const audioUrl = `https://firebasestorage.googleapis.com/v0/b/${BUCKET}/o/${encodeURIComponent(localPath)}?alt=media`;
 
     currentAudioInstance = new Audio(audioUrl);
     isAudioPlaying.value = true;
 
+    // 4. Таймаут для слабого интернета
+    const timeoutId = setTimeout(() => {
+      if (currentAudioInstance) {
+        currentAudioInstance.src = '';
+        isAudioPlaying.value = false;
+        currentAudioInstance = null;
+        resolve();
+      }
+    }, 2500);
+
+    currentAudioInstance.oncanplaythrough = () => {
+      clearTimeout(timeoutId);
+    };
+
     currentAudioInstance.onended = () => {
+      clearTimeout(timeoutId);
       isAudioPlaying.value = false;
       currentAudioInstance = null;
       resolve();
     };
 
     currentAudioInstance.onerror = () => {
+      clearTimeout(timeoutId);
       isAudioPlaying.value = false;
       currentAudioInstance = null;
-      speakGerman(audioName.includes('option') ? 'Выбранный вариант' : 'Текст отсутствует').then(resolve);
+      resolve();
     };
 
     currentAudioInstance.play().catch(() => {
+      clearTimeout(timeoutId);
       isAudioPlaying.value = false;
       currentAudioInstance = null;
       resolve();

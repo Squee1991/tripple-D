@@ -34,7 +34,11 @@
         </provider>
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"
+            android:value="ca-app-pub-7535671094319234~8726618547"
+        />
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="IRNGsxJABA4oIhrlX0nHc49BTyPesVHUQRzLlor54bgpqiDJV7qbp99bqhVQCGR3EppZRrQHei1xJzqUIi_vVC"
         />
     </application>
 
