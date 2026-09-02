@@ -38,7 +38,7 @@
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-7535671094319234~6499324694</string>
 	<key>NSUserTrackingUsageDescription</key>
-	<string></string>
+	<string>Мы используем эти данные, чтобы показывать вам более подходящую рекламу.</string>
 	<key>GIDClientID</key>
 	<string>21366957409-rhn8m4j8j92el85p3aso254sedh5h79n.apps.googleusercontent.com</string>
 	<key>LSApplicationCategoryType</key>
