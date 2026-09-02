@@ -584,26 +584,44 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			}
 		}
 
-		const startZeroCostMonitor = () => {
-			if (localMonitorInterval) clearInterval(localMonitorInterval);
+		// const startZeroCostMonitor = () => {
+		// 	if (localMonitorInterval) clearInterval(localMonitorInterval);
+		//
+		// 	const initialState = gameStore.getSeasonState();
+		// 	wasOpen = initialState.isOpen;
+		// 	localMonitorInterval = setInterval(() => {
+		// 		if (!authStore.uid) return;
+		//
+		// 		const { isOpen, currentSeasonId } = gameStore.getSeasonState();
+		// 		if (wasOpen === true && isOpen === false) {
+		// 			wasOpen = isOpen;
+		// 			setTimeout(() => {
+		// 				checkRankAndAward(currentSeasonId);
+		// 			}, 5000);
+		// 		}
+		// 		else if (wasOpen === false && isOpen === true) {
+		// 			wasOpen = isOpen;
+		// 		}
+		// 	}, 1000);
+		// }
 
-			const initialState = gameStore.getSeasonState();
-			wasOpen = initialState.isOpen;
-			localMonitorInterval = setInterval(() => {
-				if (!authStore.uid) return;
+		watch(() => gameStore.getSeasonState()?.isOpen, (newIsOpen, oldIsOpen) => {
+			if (!authStore.uid) return;
+			if (oldIsOpen === true && newIsOpen === false) {
+				const { currentSeasonId } = gameStore.getSeasonState();
+				setTimeout(() => {
+					checkRankAndAward(currentSeasonId);
+				}, 5000);
+			}
+		});
 
-				const { isOpen, currentSeasonId } = gameStore.getSeasonState();
-				if (wasOpen === true && isOpen === false) {
-					wasOpen = isOpen;
-					setTimeout(() => {
-						checkRankAndAward(currentSeasonId);
-					}, 5000);
-				}
-				else if (wasOpen === false && isOpen === true) {
-					wasOpen = isOpen;
-				}
-			}, 1000);
-		}
+		watch(() => authStore.uid, (uid) => {
+			if (uid) {
+				const { isOpen, currentSeasonId, previousSeasonId } = gameStore.getSeasonState();
+				const seasonToCheck = isOpen ? previousSeasonId : currentSeasonId;
+				checkRankAndAward(seasonToCheck);
+			}
+		}, { immediate: true });
 
 		watch(() => authStore.uid, (uid) => {
 			if (uid) {

@@ -55,21 +55,21 @@ const props = defineProps({
 const uniqueId = useId().replace(/:/g, '-')
 
 const now = ref(Date.now())
-let rafId = null
+let timerInterval = null
 
-function updateTimer() {
-  now.value = Date.now()
-  rafId = requestAnimationFrame(updateTimer)
-}
 
 function startTimer() {
-  if (!rafId) updateTimer()
+  if (timerInterval) return
+  now.value = Date.now()
+  timerInterval = setInterval(() => {
+    now.value = Date.now()
+  }, 1000)
 }
 
 function stopTimer() {
-  if (rafId) {
-    cancelAnimationFrame(rafId)
-    rafId = null
+  if (timerInterval) {
+    clearInterval(timerInterval)
+    timerInterval = null
   }
 }
 
@@ -83,27 +83,29 @@ const recoveryTimerText = computed(() => {
   const lastLife = props.lastLifeAtMs || now.value
   const elapsed = now.value - lastLife
   const nextTickIn = props.regenIntervalMs - (elapsed % props.regenIntervalMs)
-  const totalSeconds = Math.floor(nextTickIn / 1000)
+  const totalSeconds = Math.max(0, Math.floor(nextTickIn / 1000))
   const mins = Math.floor(totalSeconds / 60)
   const secs = totalSeconds % 60
   return `${mins}:${secs.toString().padStart(2, '0')}`
 })
 
-
 function getWaterGroupStyle(i) {
   if (i < props.lives) {
-    return { transform: 'translateY(-6px)', transition: 'transform 0.3s ease-in-out' }
+    return { transform: 'translateY(-6px)', transition: 'transform 0.4s ease' }
   }
+
   if (i === props.lives && props.lives < props.maxLives && props.lastLifeAtMs > 0 && props.regenIntervalMs > 0) {
     const elapsed = Math.max(0, now.value - props.lastLifeAtMs)
     const progress = Math.min(100, (elapsed / props.regenIntervalMs) * 100)
     const yPos = 30 - (progress / 100) * 36;
+
     return {
       transform: `translateY(${yPos}px)`,
-      transition: 'none'
+      transition: 'transform 1s linear'
     }
   }
-  return { transform: 'translateY(30px)', transition: 'transform 0.3s ease-in-out' }
+
+  return { transform: 'translateY(30px)', transition: 'transform 0.4s ease' }
 }
 </script>
 
