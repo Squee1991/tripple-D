@@ -1,5 +1,5 @@
 {
-  "originHash" : "2289d2cfc3dba99375f718de5b5b531dcc5329eeee7fc6726307c50f9285f29a",
+  "originHash" : "85966124eb9fd0b88c1c27fc8484f5429417d02dc938ed26f29eb6e1f07958f8",
   "pins" : [
     {
       "identity" : "app-check",
@@ -20,21 +20,12 @@
       }
     },
     {
-      "identity" : "applovin-max-swift-package",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git",
-      "state" : {
-        "revision" : "02544c3400d228cce5718e22f71f8d02787ba91e",
-        "version" : "13.6.4"
-      }
-    },
-    {
       "identity" : "capacitor-swift-pm",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ionic-team/capacitor-swift-pm.git",
       "state" : {
-        "revision" : "6afa7424fd2fcd8ca1e577478e8a00af284b7e82",
-        "version" : "8.5.1"
+        "revision" : "4f71d0b979f2f957326f04353eca7604ee937e1e",
+        "version" : "8.5.0"
       }
     },
     {

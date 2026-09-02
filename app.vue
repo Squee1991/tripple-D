@@ -62,7 +62,9 @@ const onToastFinished = () => {
 }
 
 onMounted(async () => {
-  initAdmob()
+  setTimeout(() => {
+    initAdmob()
+  },6000)
   achStore.initializeProgressTracking()
   if (Capacitor.isNativePlatform()) {
     try {
