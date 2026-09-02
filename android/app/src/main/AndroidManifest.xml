@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -40,9 +43,11 @@
             android:name="applovin.sdk.key"
             android:value="IRNGsxJABA4oIhrlX0nHc49BTyPesVHUQRzLlor54bgpqiDJV7qbp99bqhVQCGR3EppZRrQHei1xJzqUIi_vVC"
         />
+        <activity
+                android:name="com.applovin.adview.AppLovinFullscreenActivity"
+                android:screenOrientation="fullSensor"
+                android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize"
+                tools:replace="android:screenOrientation,android:configChanges" />
     </application>
 
-    <!-- Permissions -->
-
-    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
