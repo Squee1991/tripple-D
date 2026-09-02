@@ -16,8 +16,8 @@
 		504EC3121FED79650016851F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 504EC3101FED79650016851F /* LaunchScreen.storyboard */; };
 		50B271D11FEDC1A000F3C39B /* public in Resources */ = {isa = PBXBuildFile; fileRef = 50B271D01FEDC1A000F3C39B /* public */; };
 		7882299D2FD84F370033248B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7882299C2FD84F370033248B /* GoogleService-Info.plist */; };
-		78AE9BBF304080CC004C7E03 /* AppLovinAdapter.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AE9BBE304080CC004C7E03 /* AppLovinAdapter.xcframework */; };
-		78AE9BC0304080CC004C7E03 /* AppLovinAdapter.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78AE9BBE304080CC004C7E03 /* AppLovinAdapter.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		78E0978A3048768D0029EDF5 /* AppLovinAdapterTarget in Frameworks */ = {isa = PBXBuildFile; productRef = 78E097893048768D0029EDF5 /* AppLovinAdapterTarget */; };
+		78E0978D3048770D0029EDF5 /* UnityAdapterTarget in Frameworks */ = {isa = PBXBuildFile; productRef = 78E0978C3048770D0029EDF5 /* UnityAdapterTarget */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,7 +27,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				78AE9BC0304080CC004C7E03 /* AppLovinAdapter.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,7 +67,6 @@
 		788229972FCF60070033248B /* StoreKitCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreKitCertificate.cer; sourceTree = "<group>"; };
 		7882299C2FD84F370033248B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78A34BED2FB9C57E000D4395 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
-		78AE9BBE304080CC004C7E03 /* AppLovinAdapter.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AppLovinAdapter.xcframework; path = "../../../../Downloads/AppLovinAdapter-13.0.1.0/AppLovinAdapter.xcframework"; sourceTree = "<group>"; };
 		958DCC722DB07C7200EA8C5F /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = debug.xcconfig; path = ../debug.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -77,8 +75,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78AE9BBF304080CC004C7E03 /* AppLovinAdapter.xcframework in Frameworks */,
 				4D22ABE92AF431CB00220026 /* CapApp-SPM in Frameworks */,
+				78E0978A3048768D0029EDF5 /* AppLovinAdapterTarget in Frameworks */,
+				78E0978D3048770D0029EDF5 /* UnityAdapterTarget in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +91,6 @@
 				788229972FCF60070033248B /* StoreKitCertificate.cer */,
 				958DCC722DB07C7200EA8C5F /* debug.xcconfig */,
 				504EC3061FED79650016851F /* App */,
-				78AE9BBD304080CC004C7E03 /* Frameworks */,
 				504EC3051FED79650016851F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,14 +120,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		78AE9BBD304080CC004C7E03 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				78AE9BBE304080CC004C7E03 /* AppLovinAdapter.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +139,8 @@
 			name = App;
 			packageProductDependencies = (
 				4D22ABE82AF431CB00220026 /* CapApp-SPM */,
+				78E097893048768D0029EDF5 /* AppLovinAdapterTarget */,
+				78E0978C3048770D0029EDF5 /* UnityAdapterTarget */,
 			);
 			productName = App;
 			productReference = 504EC3041FED79650016851F /* App.app */;
@@ -191,6 +183,8 @@
 			mainGroup = 504EC2FB1FED79650016851F;
 			packageReferences = (
 				D4C12C0A2AAA248700AAC8A2 /* XCLocalSwiftPackageReference "CapApp-SPM" */,
+				78E097883048768D0029EDF5 /* XCRemoteSwiftPackageReference "googleads-mobile-ios-mediation-applovin" */,
+				78E0978B3048770D0029EDF5 /* XCRemoteSwiftPackageReference "googleads-mobile-ios-mediation-unity" */,
 			);
 			productRefGroup = 504EC3051FED79650016851F /* Products */;
 			projectDirPath = "";
@@ -464,11 +458,40 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		78E097883048768D0029EDF5 /* XCRemoteSwiftPackageReference "googleads-mobile-ios-mediation-applovin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/googleads-mobile-ios-mediation-applovin";
+			requirement = {
+				kind = exactVersion;
+				version = 13.4.0;
+			};
+		};
+		78E0978B3048770D0029EDF5 /* XCRemoteSwiftPackageReference "googleads-mobile-ios-mediation-unity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/googleads-mobile-ios-mediation-unity";
+			requirement = {
+				kind = exactVersion;
+				version = 4.16.500;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		4D22ABE82AF431CB00220026 /* CapApp-SPM */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D4C12C0A2AAA248700AAC8A2 /* XCLocalSwiftPackageReference "CapApp-SPM" */;
 			productName = "CapApp-SPM";
+		};
+		78E097893048768D0029EDF5 /* AppLovinAdapterTarget */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78E097883048768D0029EDF5 /* XCRemoteSwiftPackageReference "googleads-mobile-ios-mediation-applovin" */;
+			productName = AppLovinAdapterTarget;
+		};
+		78E0978C3048770D0029EDF5 /* UnityAdapterTarget */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78E0978B3048770D0029EDF5 /* XCRemoteSwiftPackageReference "googleads-mobile-ios-mediation-unity" */;
+			productName = UnityAdapterTarget;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

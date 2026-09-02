@@ -1,5 +1,5 @@
 {
-  "originHash" : "85966124eb9fd0b88c1c27fc8484f5429417d02dc938ed26f29eb6e1f07958f8",
+  "originHash" : "1d2d0d944bb1610d7b3f3f63774ec8e2bbd31b5beed03eefe10a1212e50ea50b",
   "pins" : [
     {
       "identity" : "app-check",
@@ -20,12 +20,39 @@
       }
     },
     {
+      "identity" : "applovin-max-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git",
+      "state" : {
+        "revision" : "7d1f730673c437b83fba3eec2dee2dcc6ed46c8a",
+        "version" : "13.4.0"
+      }
+    },
+    {
       "identity" : "capacitor-swift-pm",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ionic-team/capacitor-swift-pm.git",
       "state" : {
         "revision" : "4f71d0b979f2f957326f04353eca7604ee937e1e",
         "version" : "8.5.0"
+      }
+    },
+    {
+      "identity" : "googleads-mobile-ios-mediation-applovin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/googleads-mobile-ios-mediation-applovin",
+      "state" : {
+        "revision" : "e5d09d8442c31827f88d2fb49f236aec3e0e0791",
+        "version" : "13.4.0"
+      }
+    },
+    {
+      "identity" : "googleads-mobile-ios-mediation-unity",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/googleads-mobile-ios-mediation-unity",
+      "state" : {
+        "revision" : "db9fb7939107998acf605dcdefbf5814ab6bbb94",
+        "version" : "4.16.500"
       }
     },
     {
