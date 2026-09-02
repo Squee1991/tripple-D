@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>AppLovinSdkKey</key>
+	<key>AppLovinSdkKey</key>
 	<string>IRNGsxJABA4oIhrlX0nHc49BTyPesVHUQRzLlor54bgpqiDJV7qbp99bqhVQCGR3EppZRrQHei1xJzqUIi_vVC</string>
 	<key>CAPACITOR_DEBUG</key>
 	<string>$(CAPACITOR_DEBUG)</string>
@@ -36,7 +36,9 @@
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-3940256099942544~1458002511</string>
+	<string>ca-app-pub-7535671094319234~6499324694</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string></string>
 	<key>GIDClientID</key>
 	<string>21366957409-rhn8m4j8j92el85p3aso254sedh5h79n.apps.googleusercontent.com</string>
 	<key>LSApplicationCategoryType</key>
