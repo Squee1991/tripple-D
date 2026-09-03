@@ -73,7 +73,6 @@
                 </li>
               </ul>
             </template>
-
             <template v-else-if="questStore.task.type === 'input'">
               <div class="quest__speech">
                 <input
@@ -126,7 +125,6 @@
                 </div>
               </div>
             </template>
-
             <template v-else-if="questStore.task.type === 'reorder'">
               <div class="quest__reorder">
                 <div class="quest__reorder-selection"
@@ -154,7 +152,6 @@
             </template>
           </div>
         </div>
-
         <div class="actions-wrapper" :class="feedbackClass">
           <div class="actions-container">
             <div v-if="questStore.showResult" class="feedback-text">
@@ -185,7 +182,6 @@
       <transition name="modal-fade">
         <div v-if="questStore.finished" class="modal-overlay">
           <div class="modal-content">
-            <!-- ТЕКСТ ТЕПЕРЬ СВЕРХУ -->
             <p class="modal-text">
               <template v-if="questStore.success && !questStore.hasMistakes">
                 {{ t('questCompletedModals.completed') }}
@@ -201,8 +197,6 @@
             <p v-if="questStore.success && !questStore.hasMistakes && questStore.justAwarded" class="modal-subtitle">
               {{ t('questCompletedModals.reward') }}
             </p>
-
-            <!-- ИКОНКА В ЗАВИСИМОСТИ ОТ РЕЗУЛЬТАТА ТЕПЕРЬ ПОД ТЕКСТОМ -->
             <div class="modal-icon">
               <img v-if="questStore.success && !questStore.hasMistakes" :src="Great" class="modal-icon-item"
                    alt="Great"/>
@@ -210,14 +204,11 @@
             </div>
 
             <div class="modal-actions">
-              <!-- Идеальное прохождение -->
               <template v-if="questStore.success && !questStore.hasMistakes">
                 <button class="modal-btn modal-btn-primary" @click="goThemes">
                   {{ t('questCompletedModals.back') }}
                 </button>
               </template>
-
-              <!-- Прохождение с ошибками -->
               <template v-else-if="questStore.success && questStore.hasMistakes">
                 <button class="modal-btn modal-btn-primary" @click="questStore.startRetryMistakes()">
                   {{ t('locationQuests.repeatMistakes') }}
@@ -226,8 +217,6 @@
                   {{ t('questCompletedModals.back') }}
                 </button>
               </template>
-
-              <!-- Провал (нет жизней) -->
               <template v-else>
                 <button class="modal-btn modal-btn-primary" @click="restart">
                   {{ t('questCompletedModals.again') }}
