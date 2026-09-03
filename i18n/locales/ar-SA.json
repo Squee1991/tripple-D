@@ -10637,5 +10637,23 @@
   "eulaText": {
     "text": "بالشراء، أنت توافق على",
     "month": "شهر"
+  },
+  "landWordsSession": {
+    "grammar": "القواعد",
+    "words": "كلمات المهمة",
+    "verbs": "جدول تصريف الأفعال",
+    "error": "لم يتم العثور على كلمات لهذه المهمة.",
+    "toQuest": "الانتقال إلى المهمة",
+    "got": "فهمت"
+  },
+  "locationWordSession": {
+    "begin": "ابدأ المهمة",
+    "repeat": "مراجعة المادة",
+    "further": "التالي",
+    "finish": "إنهاء",
+    "excellent": "ممتاز",
+    "variation": "الخيار",
+    "stuff": "مادة المهمة",
+    "learnWords": "تعلم الكلمات"
   }
 }

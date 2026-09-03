@@ -10634,5 +10634,23 @@
   "eulaText": {
     "text": "Dokonując zakupu, wyrażasz zgodę na",
     "month": "mies."
+  },
+  "landWordsSession": {
+    "grammar": "Gramatyka",
+    "words": "Słowa do zadania",
+    "verbs": "Tabela form czasowników",
+    "error": "Nie znaleziono słów do tego zadania.",
+    "toQuest": "Przejdź do zadania",
+    "got": "Rozumiem"
+  },
+  "locationWordSession": {
+    "begin": "Rozpocznij zadanie",
+    "repeat": "Powtórz materiał",
+    "further": "Dalej",
+    "finish": "Zakończ",
+    "excellent": "Doskonale",
+    "variation": "Wariant",
+    "stuff": "Materiały do zadania",
+    "learnWords": "Ucz się słów"
   }
 }

@@ -31,7 +31,7 @@ export const regions = {
 				pathTo: "stone-reach",
 				theme: "stone",
 				name: "locationNames.stone-reach",
-				level: 0,
+				level: 1,
 				desc: "regions.descriptionStoneReach",
 				icon: StoneReach
 			},

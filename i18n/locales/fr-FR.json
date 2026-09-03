@@ -10614,5 +10614,23 @@
   "eulaText": {
     "text": "En achetant, vous acceptez",
     "month": "mois"
+  },
+  "landWordsSession": {
+    "grammar": "Grammaire",
+    "words": "Mots pour l'exercice",
+    "verbs": "Tableau des formes verbales",
+    "error": "Aucun mot trouvé pour cet exercice.",
+    "toQuest": "Aller à l'exercice",
+    "got": "Compris"
+  },
+  "locationWordSession": {
+    "begin": "Commencer l'exercice",
+    "repeat": "Réviser le matériel",
+    "further": "Suivant",
+    "finish": "Terminer",
+    "excellent": "Excellent",
+    "variation": "Variante",
+    "stuff": "Matériel de l'exercice",
+    "learnWords": "Apprendre les mots"
   }
 }

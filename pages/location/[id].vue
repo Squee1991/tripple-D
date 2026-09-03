@@ -52,7 +52,7 @@
                     class="btn btn--secondary"
                     @click="handleLearnWords(quest)"
                 >
-                  📚 Материал
+                  📚 {{ t('locationWordSession.stuff')}}
                 </button>
                 <button
                     class="btn"

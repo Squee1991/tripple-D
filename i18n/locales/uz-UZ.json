@@ -10613,5 +10613,23 @@
   "eulaText": {
     "text": "Sotib olish orqali siz quyidagilarga rozilik bildirasiz",
     "month": "oy"
+  },
+  "landWordsSession": {
+    "grammar": "Grammatika",
+    "words": "Vazifa uchun so'zlar",
+    "verbs": "Fe'l shakllari jadvali",
+    "error": "Bu vazifa uchun so'zlar topilmadi.",
+    "toQuest": "Vazifaga o'tish",
+    "got": "Tushunarli"
+  },
+  "locationWordSession": {
+    "begin": "Vazifani boshlash",
+    "repeat": "Materialni takrorlash",
+    "further": "Keyingi",
+    "finish": "Tugatish",
+    "excellent": "Ajoyib",
+    "variation": "Variant",
+    "stuff": "Vazifa materiallari",
+    "learnWords": "So'zlarni o'rganish"
   }
 }

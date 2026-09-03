@@ -10618,5 +10618,23 @@
   "eulaText": {
     "text": "Al realizar la compra, aceptas",
     "month": "mes"
+  },
+  "landWordsSession": {
+    "grammar": "Gramática",
+    "words": "Palabras para la tarea",
+    "verbs": "Tabla de formas verbales",
+    "error": "No se encontraron palabras para esta tarea.",
+    "toQuest": "Ir a la tarea",
+    "got": "Entendido"
+  },
+  "locationWordSession": {
+    "begin": "Comenzar tarea",
+    "repeat": "Repasar material",
+    "further": "Siguiente",
+    "finish": "Finalizar",
+    "excellent": "Excelente",
+    "variation": "Variante",
+    "stuff": "Material de la tarea",
+    "learnWords": "Aprender palabras"
   }
 }

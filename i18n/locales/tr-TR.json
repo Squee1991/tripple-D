@@ -10628,5 +10628,23 @@
   "eulaText": {
     "text": "Satın alarak şunları kabul etmiş olursunuz:",
     "month": "ay"
+  },
+  "landWordsSession": {
+    "grammar": "Gramer",
+    "words": "Görev için kelimeler",
+    "verbs": "Fiil çekim tablosu",
+    "error": "Bu görev için kelime bulunamadı.",
+    "toQuest": "Görere git",
+    "got": "Anladım"
+  },
+  "locationWordSession": {
+    "begin": "Görevi başlat",
+    "repeat": "Materyali tekrarla",
+    "further": "İleri",
+    "finish": "Bitir",
+    "excellent": "Mükemmel",
+    "variation": "Varyant",
+    "stuff": "Görev materyali",
+    "learnWords": "Kelime öğren"
   }
 }

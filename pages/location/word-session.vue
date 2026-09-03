@@ -46,7 +46,7 @@
         <div v-else class="empty-state">{{ t('landWordsSession.error') }}</div>
       </main>
       <footer class="vocab-footer" v-if="vocabulary.length">
-        <button class="btn-primary" @click="startPractice">{{ t('Учить слова') }}</button>
+        <button class="btn-primary" @click="startPractice">{{ t('locationWordSession.learnWords') }}</button>
         <button class="btn-secondary" style="margin-top: 12px;" @click="startQuest">{{ t('landWordsSession.toQuest') }}</button>
       </footer>
     </template>
@@ -86,40 +86,40 @@
           </button>
         </div>
       </main>
-
-      <Transition name="slide-up">
-        <div v-if="currentStep >= totalSteps && totalSteps > 0" class="completion-overlay">
-          <div class="completion-modal">
-            <h2>{{ t('landWordsSession.goodJob') || 'Отлично!' }}</h2>
-            <div class="completion-stats">
-              <div class="stat correct">
-                <span class="stat-icon">✅</span>
-                <span class="stat-value">{{ correctAnswers }}</span>
+      <Teleport to="body">
+        <Transition name="slide-up">
+          <div v-if="currentStep >= totalSteps && totalSteps > 0" class="completion-overlay">
+            <div class="completion-modal">
+              <h2>{{ t('locationWordSession.excellent') }}</h2>
+              <div class="completion-stats">
+                <div class="stat correct">
+                  <span class="stat-icon">✅</span>
+                  <span class="stat-value">{{ correctAnswers }}</span>
+                </div>
+                <div class="stat incorrect">
+                  <span class="stat-icon">❌</span>
+                  <span class="stat-value">{{ incorrectAnswers }}</span>
+                </div>
               </div>
-              <div class="stat incorrect">
-                <span class="stat-icon">❌</span>
-                <span class="stat-value">{{ incorrectAnswers }}</span>
+              <div class="completion-overlay_icon">
+                <img src="../../assets/images/GoodJobIcon.svg" alt="success_icon" @error="$event.target.style.display='none'">
               </div>
-            </div>
-            <div class="completion-overlay_icon">
-              <img src="../../assets/images/GoodJobIcon.svg" alt="success_icon" @error="$event.target.style.display='none'">
-            </div>
-            <div class="completion-actions">
-              <button class="btn-primary" @click="startQuest">{{ t('Начать задание') }}</button>
-              <button class="btn-secondary" @click="restartLearning">{{ t('Повторить') }}</button>
+              <div class="completion-actions">
+                <button class="btn-primary" @click="startQuest">{{ t('locationWordSession.begin') }}</button>
+                <button class="btn-secondary" @click="restartLearning">{{ t('locationWordSession.repeat') }}</button>
+              </div>
             </div>
           </div>
-        </div>
-      </Transition>
-
+        </Transition>
+      </Teleport>
       <footer class="vocab-footer" v-if="selectedAnswer && currentWord">
         <button class="btn-primary" @click="nextStep">
-          {{ currentStep < totalSteps - 1 ? t('Дальше') : t('Завершить') }}
+          {{ currentStep < totalSteps - 1 ? t('locationWordSession.further') : t('locationWordSession.finish') }}
         </button>
       </footer>
     </template>
     <Transition name="fade">
-      <div v-if="isTipModalOpen" class="modal-overlay" @click.self="closeTipModal">
+      <div v-if="isTipModalOpen" class="tip-overlay" @click.self="closeTipModal">
         <div class="tip-modal">
           <div class="tip-modal-header">
             <h3>{{ t('landWordsSession.grammar') }}</h3>
@@ -137,12 +137,14 @@
         </div>
       </div>
     </Transition>
-    <VStopSessionModal
-        v-if="viewMode === 'practice'"
-        v-model:show="showExitModal"
-        @confirm="confirmExit"
-        @cancel="cancelExit"
-    />
+
+    <Teleport to="body">
+      <VStopSessionModal
+          v-model:show="showExitModal"
+          @confirm="confirmExit"
+          @cancel="cancelExit"
+      />
+    </Teleport>
   </div>
 </template>
 
@@ -169,7 +171,6 @@ const errorMessage = ref("")
 const isTipModalOpen = ref(false)
 const currentTipText = ref("")
 
-// Состояния для практики
 const learningSequence = ref([])
 const currentStep = ref(0)
 const options = ref([])
@@ -192,7 +193,11 @@ const progressPercentage = computed(() => {
   if (totalSteps.value === 0) return 0
   return (currentStep.value / totalSteps.value) * 100
 })
-const currentWord = computed(() => learningSequence.value[currentStep.value])
+const currentWord = computed(() => {
+  if (totalSteps.value === 0) return null
+  const index = Math.min(currentStep.value, totalSteps.value - 1)
+  return learningSequence.value[index]
+})
 
 onMounted(async () => {
   if (!regionKey || !questId) {
@@ -203,7 +208,7 @@ onMounted(async () => {
   try {
     const response = await fetch(`/quests/quests-${regionKey}.json`)
     if (!response.ok) {
-      throw new Error("Не удалось загрузить данные.")
+      throw new Error("Error data.")
     }
     const data = await response.json()
     const quests = Array.isArray(data) ? data : (data.quests || [data])
@@ -226,7 +231,6 @@ function getTranslation(item) {
   return item[`translation-${currentLang}`] || item['translation-en'] || ''
 }
 
-// Функционал списка слов
 function goBack() {
   if (regionKey) {
     router.push(`/location/${regionKey}`)
@@ -267,7 +271,6 @@ function goToVerbForms(verbName) {
   })
 }
 
-// Функционал практики
 function startPractice() {
   viewMode.value = 'practice'
 
@@ -301,7 +304,7 @@ function generateOptions(allTranslations) {
   const randomIncorrect = incorrectOptions.sort(() => Math.random() - 0.5).slice(0, 2)
 
   while (randomIncorrect.length < 2) {
-    randomIncorrect.push("Вариант " + Math.random().toString(36).substring(7))
+    randomIncorrect.push(t('locationWordSession.variation') + Math.random().toString(36).substring(7))
   }
 
   options.value = [correct, ...randomIncorrect].sort(() => Math.random() - 0.5)
@@ -680,7 +683,7 @@ onBeforeRouteLeave((to, from, next) => {
 }
 
 /* Модалка с подсказкой */
-.modal-overlay {
+.tip-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -755,13 +758,16 @@ onBeforeRouteLeave((to, from, next) => {
 }
 
 .completion-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  justify-content: center;
-  z-index: 50;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
 }
 
 .completion-modal {

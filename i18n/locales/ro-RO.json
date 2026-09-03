@@ -10618,5 +10618,23 @@
   "eulaText": {
     "text": "Prin achiziționare, ești de acord cu",
     "month": "lună"
+  },
+  "landWordsSession": {
+    "grammar": "Gramatică",
+    "words": "Cuvinte pentru sarcină",
+    "verbs": "Tabelul formelor verbale",
+    "error": "Nu s-au găsit cuvinte pentru această sarcină.",
+    "toQuest": "Mergi la sarcină",
+    "got": "Am înțeles"
+  },
+  "locationWordSession": {
+    "begin": "Începe sarcina",
+    "repeat": "Revedeți materialul",
+    "further": "În continuare",
+    "finish": "Finalizează",
+    "excellent": "Excelent",
+    "variation": "Variantă",
+    "stuff": "Material pentru sarcină",
+    "learnWords": "Învață cuvintele"
   }
 }
