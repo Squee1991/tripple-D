@@ -622,18 +622,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			}
 		}, { immediate: true });
 
-		watch(() => authStore.uid, (uid) => {
-			if (uid) {
-				const { isOpen, currentSeasonId, previousSeasonId } = gameStore.getSeasonState();
-				const seasonToCheck = isOpen ? previousSeasonId : currentSeasonId;
-				checkRankAndAward(seasonToCheck);
-
-				startZeroCostMonitor();
-			} else {
-				if (localMonitorInterval) clearInterval(localMonitorInterval);
-			}
-		}, { immediate: true })
-
 		watch(() => authStore.achievements?.marathon, (marathonStats) => {
 			if (!marathonStats) return;
 
