@@ -10645,5 +10645,23 @@
     "then": "apoi",
     "trial-text-part-one": "După încheierea perioadei de probă, veți fi taxat automat cu o taxă de abonament în valoare de",
     "trial-text-part-two": "Abonamentul se reînnoiește automat, cu excepția cazului în care îl anulați din setările contului Google (în Google Play) cu cel puțin 24 de ore înainte de sfârșitul perioadei curente."
+  },
+  "landWordsSession": {
+    "grammar": "Gramatică",
+    "words": "Cuvinte pentru sarcină",
+    "verbs": "Tabelul formelor verbale",
+    "error": "Nu s-au găsit cuvinte pentru această sarcină.",
+    "toQuest": "Mergi la sarcină",
+    "got": "Am înțeles"
+  },
+  "locationWordSession": {
+    "begin": "Începe sarcina",
+    "repeat": "Revedeți materialul",
+    "further": "În continuare",
+    "finish": "Finalizează",
+    "excellent": "Excelent",
+    "variation": "Variantă",
+    "stuff": "Material pentru sarcină",
+    "learnWords": "Învață cuvintele"
   }
 }

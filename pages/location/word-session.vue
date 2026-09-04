@@ -5,6 +5,7 @@
       @touchmove="handleTouchMove"
       @touchend="handleTouchEnd"
   >
+    <VLoginPreloader v-if="isAdLoading"/>
     <template v-if="viewMode === 'list'">
       <header class="vocab-header list-header">
         <button class="btn-icon-back" @click="goBack">
@@ -32,7 +33,8 @@
                 {{ getTranslation(item) }}
               </span>
               <button v-if="item.isVerb" class="btn-verb-forms" @click="goToVerbForms(item.verbKey || item.word)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
                   <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                   <line x1="3" y1="9" x2="21" y2="9"></line>
                   <line x1="9" y1="21" x2="9" y2="9"></line>
@@ -47,7 +49,10 @@
       </main>
       <footer class="vocab-footer" v-if="vocabulary.length">
         <button class="btn-primary" @click="startPractice">{{ t('locationWordSession.learnWords') }}</button>
-        <button class="btn-secondary" style="margin-top: 12px;" @click="startQuest">{{ t('landWordsSession.toQuest') }}</button>
+        <button class="btn-secondary" style="margin-top: 12px;" @click="startQuest">{{
+            t('landWordsSession.toQuest')
+          }}
+        </button>
       </footer>
     </template>
     <template v-else-if="viewMode === 'practice'">
@@ -102,7 +107,8 @@
                 </div>
               </div>
               <div class="completion-overlay_icon">
-                <img src="../../assets/images/GoodJobIcon.svg" alt="success_icon" @error="$event.target.style.display='none'">
+                <img src="../../assets/images/GoodJobIcon.svg" alt="success_icon"
+                     @error="$event.target.style.display='none'">
               </div>
               <div class="completion-actions">
                 <button class="btn-primary" @click="startQuest">{{ t('locationWordSession.begin') }}</button>
@@ -124,7 +130,8 @@
           <div class="tip-modal-header">
             <h3>{{ t('landWordsSession.grammar') }}</h3>
             <button class="close-btn" @click="closeTipModal">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
@@ -137,7 +144,6 @@
         </div>
       </div>
     </Transition>
-
     <Teleport to="body">
       <VStopSessionModal
           v-model:show="showExitModal"
@@ -149,16 +155,17 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
-import { useRoute, useRouter, onBeforeRouteLeave } from 'vue-router'
-import { useI18n } from 'vue-i18n'
+import {ref, computed, onMounted} from 'vue'
+import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue"
-import { useSwipeBack } from '~/composables/useSwipeBack.js'
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue"
+import {showInterstitial} from '~/utils/admob.js'
+import {useSwipeBack} from '~/composables/useSwipeBack.js'
 
 const route = useRoute()
 const router = useRouter()
-const { t, locale } = useI18n()
+const {t, locale} = useI18n()
 
 const regionKey = route.query.region
 const questId = route.query.questId
@@ -167,6 +174,7 @@ const viewMode = ref('list')
 const vocabulary = ref([])
 const isLoading = ref(true)
 const errorMessage = ref("")
+const isAdLoading = ref(false) // ПЕРЕМЕННАЯ ДЛЯ ПРЕЛОАДЕРА
 
 const isTipModalOpen = ref(false)
 const currentTipText = ref("")
@@ -184,7 +192,7 @@ const showExitModal = ref(false)
 const isConfirmedExit = ref(false)
 let pendingRoute = null
 
-const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipeBack(() => {
+const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   handleBackClick()
 })
 
@@ -243,7 +251,7 @@ function startQuest() {
   isConfirmedExit.value = true
   router.replace({
     path: `/location/quest-${questId}`,
-    query: { region: regionKey }
+    query: {region: regionKey}
   })
 }
 
@@ -267,34 +275,37 @@ function closeTipModal() {
 function goToVerbForms(verbName) {
   router.push({
     path: '/verb-forms',
-    query: { verb: verbName }
+    query: {verb: verbName}
   })
 }
 
 function startPractice() {
-  viewMode.value = 'practice'
+  isAdLoading.value = true
+  showInterstitial(() => {
+    isAdLoading.value = false
+    viewMode.value = 'practice'
+    const allTranslations = vocabulary.value.map(v => getTranslation(v))
+    allTranslationsRef.value = allTranslations
 
-  const allTranslations = vocabulary.value.map(v => getTranslation(v))
-  allTranslationsRef.value = allTranslations
+    const sequence = []
+    vocabulary.value.forEach(v => {
+      sequence.push({...v, displayType: 'visual', correctTranslation: getTranslation(v)})
+      sequence.push({...v, displayType: 'audio', correctTranslation: getTranslation(v)})
+    })
 
-  const sequence = []
-  vocabulary.value.forEach(v => {
-    sequence.push({ ...v, displayType: 'visual', correctTranslation: getTranslation(v) })
-    sequence.push({ ...v, displayType: 'audio', correctTranslation: getTranslation(v) })
+    learningSequence.value = sequence.sort(() => Math.random() - 0.5)
+    currentStep.value = 0
+    correctAnswers.value = 0
+    incorrectAnswers.value = 0
+    selectedAnswer.value = null
+
+    if (learningSequence.value.length > 0) {
+      generateOptions(allTranslations)
+      setTimeout(() => {
+        playSound(currentWord.value.word)
+      }, 300)
+    }
   })
-
-  learningSequence.value = sequence.sort(() => Math.random() - 0.5)
-  currentStep.value = 0
-  correctAnswers.value = 0
-  incorrectAnswers.value = 0
-  selectedAnswer.value = null
-
-  if (learningSequence.value.length > 0) {
-    generateOptions(allTranslations)
-    setTimeout(() => {
-      playSound(currentWord.value.word)
-    }, 300)
-  }
 }
 
 function generateOptions(allTranslations) {
@@ -429,7 +440,7 @@ onBeforeRouteLeave((to, from, next) => {
 .btn-icon-back {
   background: #fff;
   border: 3px solid var(--tabsSlideBorderColor);
-  box-shadow: var(--boxShadowMobile, 0 4px 0 rgba(0,0,0,0.05));
+  box-shadow: var(--boxShadowMobile, 0 4px 0 rgba(0, 0, 0, 0.05));
   border-radius: 12px;
   width: 40px;
   height: 40px;
@@ -636,7 +647,6 @@ onBeforeRouteLeave((to, from, next) => {
   color: #991b1b;
 }
 
-/* Футер и кнопки */
 .vocab-footer {
   padding: 24px;
   background: var(--bg);
@@ -663,26 +673,23 @@ onBeforeRouteLeave((to, from, next) => {
 
 .btn-secondary {
   width: 100%;
-  background-color: #f3f4f6;
-  color: #374151;
+  background-color: #7f82d9;
+  box-shadow: 0 5px 0 #5759aa;
+  color: white;
   border: none;
   padding: 14px 24px;
   border-radius: 42px;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 900;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.1s;
 }
 
-.btn-secondary:hover {
-  background-color: #e5e7eb;
-}
 
 .btn-secondary:active {
   transform: scale(0.97);
 }
 
-/* Модалка с подсказкой */
 .tip-overlay {
   position: absolute;
   top: 0;
@@ -771,7 +778,7 @@ onBeforeRouteLeave((to, from, next) => {
 }
 
 .completion-modal {
-  background: var(--bgModal, #ffffff);
+  background: var(--bgModal);
   border-radius: 24px 24px 0 0;
   padding: 30px 20px;
   width: 100%;
@@ -787,7 +794,7 @@ onBeforeRouteLeave((to, from, next) => {
 
 .completion-modal h2 {
   font-size: 27px;
-  color: var(--titleColor, #1f2937);
+  color: var(--titleColor);
   font-weight: 700;
   margin: 0;
 }
@@ -888,6 +895,8 @@ onBeforeRouteLeave((to, from, next) => {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>

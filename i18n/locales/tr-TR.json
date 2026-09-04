@@ -10655,5 +10655,23 @@
     "then": "ardından",
     "trial-text-part-one": "Deneme süresi sona erdiğinde, abonelik ücreti otomatik olarak çekilecektir:",
     "trial-text-part-two": "Abonelik, mevcut dönemin bitiminden en az 24 saat önce Google hesap ayarlarınızdan (Google Play) iptal etmediğiniz sürece otomatik olarak yenilenir."
+  },
+  "landWordsSession": {
+    "grammar": "Gramer",
+    "words": "Görev için kelimeler",
+    "verbs": "Fiil çekim tablosu",
+    "error": "Bu görev için kelime bulunamadı.",
+    "toQuest": "Görere git",
+    "got": "Anladım"
+  },
+  "locationWordSession": {
+    "begin": "Görevi başlat",
+    "repeat": "Materyali tekrarla",
+    "further": "İleri",
+    "finish": "Bitir",
+    "excellent": "Mükemmel",
+    "variation": "Varyant",
+    "stuff": "Görev materyali",
+    "learnWords": "Kelime öğren"
   }
 }

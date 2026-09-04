@@ -3,14 +3,11 @@
     <div v-if="isAdLoading" class="ad-overlay">
       <div class="ad-spinner"></div>
     </div>
-
     <div class="location__wrapper">
       <header class="location-header" :class="{ 'rtl-locale': locale === 'ar' }">
         <VBackBtn/>
         <h1 class="region__title-name">{{ t(currentRegion?.name) }}</h1>
       </header>
-
-      <!-- Скрываем блок с жизнями для премиум-пользователей -->
       <div class="lives-bar__content" v-if="!authStore.isPremium">
         <VHearts
             :lives="chainStore.lives"
@@ -20,7 +17,6 @@
             show-timer
         />
       </div>
-
       <div class="quests">
         <div v-if="errorMessage" class="error">{{ t('locationQuests.error') }}</div>
         <VTransition v-else-if="processedQuests.length">
@@ -50,21 +46,30 @@
                   {{ t('locationQuests.gotAward') }} <span style="font-size:18px;">✅</span>
                 </span>
               </div>
-              <button
-                  class="btn"
-                  :style="quest.btnStyle"
-                  @click="handleStartQuest(quest)"
-              >
-                <template v-if="quest.hasMistakes">
-                  {{ t('locationQuests.repeatMistakes') }}
-                </template>
-                <template v-else-if="quest.isPerfect">
-                  {{ t('locationQuests.repeat') }}
-                </template>
-                <template v-else>
-                  {{ t('locationQuests.start') }}
-                </template>
-              </button>
+              <div class="quest-actions">
+                <button
+                    v-if="quest.vocabulary && quest.vocabulary.length"
+                    class="btn btn--secondary"
+                    @click="handleLearnWords(quest)"
+                >
+                  📚 {{ t('locationWordSession.stuff')}}
+                </button>
+                <button
+                    class="btn"
+                    :style="quest.btnStyle"
+                    @click="handleStartQuest(quest)"
+                >
+                  <template v-if="quest.hasMistakes">
+                    {{ t('locationQuests.repeatMistakes') }}
+                  </template>
+                  <template v-else-if="quest.isPerfect">
+                    {{ t('locationQuests.repeat') }}
+                  </template>
+                  <template v-else>
+                    {{ t('locationQuests.start') }}
+                  </template>
+                </button>
+              </div>
             </li>
           </ul>
         </VTransition>
@@ -92,7 +97,7 @@ import {useRoute, useRouter} from "vue-router";
 import {regions} from "~/utils/regions.js";
 import {userChainStore} from "~/store/chainStore.js";
 import {userlangStore} from '~/store/learningStore.js';
-import {userAuthStore} from "~/store/authStore.js"; // Подключаем authStore
+import {userAuthStore} from "~/store/authStore.js";
 import {useSeoMeta} from '#imports';
 import VHearts from '../../src/components/V-hearts.vue';
 import VBackBtn from "~/src/components/V-back-btn.vue";
@@ -106,7 +111,7 @@ const router = useRouter();
 const {t, locale} = useI18n();
 const chainStore = userChainStore();
 const langStore = userlangStore();
-const authStore = userAuthStore(); // Инициализируем authStore
+const authStore = userAuthStore();
 
 const questList = ref([]);
 const isLoading = ref(true);
@@ -233,9 +238,6 @@ function proceedToQuest(quest) {
 function handleStartQuest(quest) {
   if (!quest?.questId) return;
   isApplication();
-
-  // Добавлена проверка !authStore.isPremium, чтобы премиум-пользователи
-  // могли начинать квест без проверки на жизни.
   if (!authStore.isPremium && chainStore.lives <= 0) {
     pendingQuest.value = quest;
     showNoLivesModal.value = true;
@@ -243,6 +245,14 @@ function handleStartQuest(quest) {
   }
 
   proceedToQuest(quest);
+}
+
+function handleLearnWords(quest) {
+  if (!quest?.questId) return;
+  router.push({
+    path: `/location/word-session`,
+    query: { questId: quest.questId, region: currentRegionKey.value }
+  });
 }
 
 async function trySpendLocal(amount) {
@@ -311,7 +321,7 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-/* Стили остались без изменений */
+
 .location-page {
   height: 100%;
   overflow-y: auto;
@@ -620,5 +630,29 @@ onMounted(async () => {
     left: 0;
     transform: rotate(-8deg);
   }
+}
+
+.quest-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.btn--secondary {
+  background: #7f82d9;
+  color: white;
+  box-shadow: 0 5px 0 #5759aa;
+  margin-top: 0;
+}
+
+.btn--secondary:active {
+  box-shadow: 0 0px 0 transparent;
+}
+
+.quest-actions .btn {
+  margin-top: 0;
 }
 </style>

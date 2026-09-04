@@ -10641,5 +10641,23 @@
     "then": "puis",
     "trial-text-part-one": "À la fin de la période d'essai, un montant d'abonnement vous sera automatiquement facturé à hauteur de",
     "trial-text-part-two": "L'abonnement se renouvelle automatiquement, sauf si vous l'annulez dans les paramètres de votre compte Google (Google Play) au moins 24 heures avant la fin de la période en cours."
+  },
+  "landWordsSession": {
+    "grammar": "Grammaire",
+    "words": "Mots pour l'exercice",
+    "verbs": "Tableau des formes verbales",
+    "error": "Aucun mot trouvé pour cet exercice.",
+    "toQuest": "Aller à l'exercice",
+    "got": "Compris"
+  },
+  "locationWordSession": {
+    "begin": "Commencer l'exercice",
+    "repeat": "Réviser le matériel",
+    "further": "Suivant",
+    "finish": "Terminer",
+    "excellent": "Excellent",
+    "variation": "Variante",
+    "stuff": "Matériel de l'exercice",
+    "learnWords": "Apprendre les mots"
   }
 }

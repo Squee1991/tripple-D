@@ -10668,5 +10668,23 @@
     "then": "then",
     "trial-text-part-one": "After the trial period ends, you will automatically be charged a subscription fee of",
     "trial-text-part-two": "The subscription renews automatically unless you cancel it in your Google account settings (in the Play Store) at least 24 hours before the end of the current period."
+  },
+  "landWordsSession": {
+    "grammar": "Grammar",
+    "words": "Words for the task",
+    "verbs": "Verb conjugation table",
+    "error": "No words found for this task.",
+    "toQuest": "Go to the task",
+    "got": "Got it"
+  },
+  "locationWordSession": {
+    "begin": "Start task",
+    "repeat": "Review material",
+    "further": "Next",
+    "finish": "Finish",
+    "excellent": "Excellent",
+    "variation": "Variation",
+    "stuff": "Task material",
+    "learnWords": "Learn words"
   }
 }
