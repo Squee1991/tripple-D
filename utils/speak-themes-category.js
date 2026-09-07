@@ -98,5 +98,21 @@ export const categoriesSpeak = [
 			{ id: 'airport_talk', icon: '✈️', title: 'speakThemes.airport_talk' },
 			{ id: 'info_talk', icon: 'ℹ️', title: 'speakThemes.info_talk' }
 		]
-	}
+	},
+	{
+		id: 'sport',
+		title: 'speakTopics.sport',
+		themes: [
+			{ id: 'begin_fitness', icon: '🏋️', title: 'speakThemes.begin_fitness' },
+			{ id: 'sport_footwear', icon: '👟', title: 'speakThemes.sport_footwear' },
+			{ id: 'soccer_training', icon: '⚽', title: 'speakThemes.soccer_training' },
+			{ id: 'pool_booking', icon: '🏊', title: 'speakThemes.pool_booking' },
+			{ id: 'tennis_club', icon: '🎾', title: 'speakThemes.tennis_club' },
+			{ id: 'bicycle_rental', icon: '🚲', title: 'speakThemes.bicycle_rental' },
+			{ id: 'sport_shake', icon: '🥤', title: 'speakThemes.sport_shake' },
+			{ id: 'climbing', icon: '🧗', title: 'speakThemes.climbing' },
+			{ id: 'jogging', icon: '🏃', title: 'speakThemes.jogging' },
+			{ id: 'ski_rental', icon: '🏂', title: 'speakThemes.ski_rental' }
+		]
+	},
 ]
