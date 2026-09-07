@@ -10245,7 +10245,17 @@
     "client_talk": "Discussion avec un client",
     "car_rental": "Location de voiture",
     "ask_road": "Demander son chemin",
-    "hotel_issue": "Problème à l'hôtel"
+    "hotel_issue": "Problème à l'hôtel",
+    "begin_fitness": "Club de fitness",
+    "sport_footwear": "Achat de baskets",
+    "soccer_training": "Football",
+    "pool_booking": "Réservation de piscine",
+    "tennis_club": "Club de tennis",
+    "bicycle_rental": "Location de vélo",
+    "sport_shake": "Bar fitness",
+    "climbing": "Mur d'escalade",
+    "jogging": "En footing",
+    "ski_rental": "Location de skis"
   },
   "speakIndexPage": {
     "title": "Pratique orale",
@@ -10641,5 +10651,9 @@
     "then": "puis",
     "trial-text-part-one": "À la fin de la période d'essai, un montant d'abonnement vous sera automatiquement facturé à hauteur de",
     "trial-text-part-two": "L'abonnement se renouvelle automatiquement, sauf si vous l'annulez dans les paramètres de votre compte Apple ID (dans l'App Store) au moins 24 heures avant la fin de la période en cours."
+  },
+  "recipe": {
+    "done": "Excellent ! La tâche du jour est terminée.",
+    "btn": "Retour"
   }
 }

@@ -104,7 +104,7 @@ const ALL_THEMES = [
 	'police_control', 'police_talk', 'post_office', 'restaurant_dinner', 'road_assistance',
 	'salary_talk', 'shopping', 'store_checkout', 'taxi_berlin', 'train_station',
 	'train_ticket', 'vacation', 'veterinary', 'info_talk', 'begin_fitness', 'sport_footwear', 'soccer_training',
-	'pool_booking', 'tennis_club', 'bicycle_rental', 'sport_shake', 'climbing'
+	'pool_booking', 'tennis_club', 'bicycle_rental', 'sport_shake', 'climbing', 'jogging', 'ski_rental'
 ];
 
 async function generateElevenSpeech(text) {

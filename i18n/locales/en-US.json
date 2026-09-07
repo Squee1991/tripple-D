@@ -10272,7 +10272,17 @@
     "client_talk": "Разговор с клиентом",
     "car_rental": "Аренда авто",
     "ask_road": "Спросить дорогу",
-    "hotel_issue": "Проблема в отеле"
+    "hotel_issue": "Проблема в отеле",
+    "begin_fitness": "Fitness club",
+    "sport_footwear": "Buying sneakers",
+    "soccer_training": "Football",
+    "pool_booking": "Pool booking",
+    "tennis_club": "Tennis club",
+    "bicycle_rental": "Bicycle rental",
+    "sport_shake": "Fitness bar",
+    "climbing": "Climbing gym",
+    "jogging": "On a run",
+    "ski_rental": "Ski rental"
   },
   "speakIndexPage": {
     "title": "Speaking practice",
@@ -10668,5 +10678,9 @@
     "then": "then",
     "trial-text-part-one": "After the trial period ends, you will automatically be charged a subscription fee of",
     "trial-text-part-two": "The subscription renews automatically unless you cancel it in your Apple ID account settings (in the App Store) at least 24 hours before the end of the current period."
+  },
+  "recipe": {
+    "done": "Great! Today's task is completed.",
+    "btn": "Back"
   }
 }

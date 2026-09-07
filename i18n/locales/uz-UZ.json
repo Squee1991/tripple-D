@@ -10244,7 +10244,17 @@
     "client_talk": "Mijoz bilan suhbat",
     "car_rental": "Avto ijara",
     "ask_road": "Yo'l so'rash",
-    "hotel_issue": "Mehmonxonadagi muammo"
+    "hotel_issue": "Mehmonxonadagi muammo",
+    "begin_fitness": "Fitnes klub",
+    "sport_footwear": "Krossovka xarid qilish",
+    "soccer_training": "Futbol",
+    "pool_booking": "Hovuzga yozilish",
+    "tennis_club": "Tennis klubi",
+    "bicycle_rental": "Velosiped ijarasi",
+    "sport_shake": "Fitnes-bar",
+    "climbing": "Skalodrom",
+    "jogging": "Yugurishda",
+    "ski_rental": "Changi ijarasi"
   },
   "speakIndexPage": {
     "title": "Gaplashish amaliyoti",
@@ -10640,5 +10650,9 @@
     "then": "so'ngra",
     "trial-text-part-one": "Sinov davri tugagach, sizdan avtomatik ravishda obuna to'lovi yechib olinadi:",
     "trial-text-part-two": "Joriy davr tugashidan kamida 24 soat oldin Apple ID hisobingiz sozlamalarida (App Store'da) bekor qilmasangiz, obuna avtomatik ravishda uzaytiriladi."
+  },
+  "recipe": {
+    "done": "Ajoyib! Bugungi topshiriq bajarildi.",
+    "btn": "Qaytish"
   }
 }

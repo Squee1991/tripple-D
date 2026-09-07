@@ -192,7 +192,7 @@
         "nextStep": "step_7"
       },
       {
-        "text": "Meine normale Größe ist 42.",
+        "text": "Meine normale Größe ist 42 .",
         "translation": {
           "ru-RU": "Мой обычный размер 42.",
           "en-US": "My regular size is 42.",

@@ -51,8 +51,8 @@
           </div>
         </div>
         <div v-if="isDayFinished" class="day-finished-message">
-          <p>Отлично! Задание на сегодня выполнено.</p>
-          <button @click="backToThemes" class="start-button">К другим темам</button>
+          <p>{{ t('recipe.done')}}</p>
+          <button @click="backToThemes" class="start-button">{{ t('recipe.btn')}}</button>
         </div>
       </div>
     </div>
@@ -71,7 +71,7 @@ import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
 const questStore = useQuestStore()
 const router = useRouter()
 const route = useRoute()
-
+const { t } = useI18n()
 const recipe = computed(() => questStore.currentRecipe)
 const dayData = computed(() => questStore.currentDay)
 const modalState = ref(false)

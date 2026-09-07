@@ -101,18 +101,18 @@ export const categoriesSpeak = [
 	},
 	{
 		id: 'sport',
-		title: 'Спорт',
+		title: 'speakTopics.sport',
 		themes: [
-			{ id: 'begin_fitness', icon: '🏋️', title: 'Фитнес-клуб' },
-			{ id: 'sport_footwear', icon: '👟', title: 'Покупка кроссовок' },
-			{ id: 'soccer_training', icon: '⚽', title: 'Футбол' },
-			{ id: 'pool_booking', icon: '🏊', title: 'Запись в бассейн' },
-			{ id: 'tennis_club', icon: '🎾', title: 'Теннисный клуб' },
-			{ id: 'bicycle_rental', icon: '🚲', title: 'Аренда велосипеда' },
-			{ id: 'sport_shake', icon: '🥤', title: 'Фитнес-бар' },
-			{ id: 'climbing', icon: '🧗', title: 'Скалодром' },
-			{ id: 'jogging', icon: '🏃', title: 'На пробежке' },
-			{ id: 'ski_rental', icon: '🏂', title: 'Аренда лыж' }
+			{ id: 'begin_fitness', icon: '🏋️', title: 'speakThemes.begin_fitness' },
+			{ id: 'sport_footwear', icon: '👟', title: 'speakThemes.sport_footwear' },
+			{ id: 'soccer_training', icon: '⚽', title: 'speakThemes.soccer_training' },
+			{ id: 'pool_booking', icon: '🏊', title: 'speakThemes.pool_booking' },
+			{ id: 'tennis_club', icon: '🎾', title: 'speakThemes.tennis_club' },
+			{ id: 'bicycle_rental', icon: '🚲', title: 'speakThemes.bicycle_rental' },
+			{ id: 'sport_shake', icon: '🥤', title: 'speakThemes.sport_shake' },
+			{ id: 'climbing', icon: '🧗', title: 'speakThemes.climbing' },
+			{ id: 'jogging', icon: '🏃', title: 'speakThemes.jogging' },
+			{ id: 'ski_rental', icon: '🏂', title: 'speakThemes.ski_rental' }
 		]
 	},
 ]

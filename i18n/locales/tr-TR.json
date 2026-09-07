@@ -10258,7 +10258,17 @@
     "client_talk": "Müşteri ile görüşme",
     "car_rental": "Araç kiralama",
     "ask_road": "Yol sorma",
-    "hotel_issue": "Otelde sorun"
+    "hotel_issue": "Otelde sorun",
+    "begin_fitness": "Fitness salonu",
+    "sport_footwear": "Spor ayakkabı alma",
+    "soccer_training": "Futbol",
+    "pool_booking": "Havuz kaydı",
+    "tennis_club": "Tenis kulübü",
+    "bicycle_rental": "Bisiklet kiralama",
+    "sport_shake": "Fitness barı",
+    "climbing": "Tırmanma duvarı",
+    "jogging": "Koşuda",
+    "ski_rental": "Kayak kiralama"
   },
   "speakIndexPage": {
     "title": "Konuşma pratiği",
@@ -10655,5 +10665,9 @@
     "then": "ardından",
     "trial-text-part-one": "Deneme süresi sona erdiğinde, abonelik ücreti otomatik olarak çekilecektir:",
     "trial-text-part-two": "Abonelik, mevcut dönemin bitiminden en az 24 saat önce Apple ID hesap ayarlarınızdan (App Store'da) iptal etmediğiniz sürece otomatik olarak yenilenir."
+  },
+  "recipe": {
+    "done": "Harika! Bugünün görevi tamamlandı.",
+    "btn": "Geri dön"
   }
 }
