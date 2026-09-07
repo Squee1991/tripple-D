@@ -481,6 +481,10 @@ export const userAuthStore = defineStore('auth', () => {
                 idToken = result.idToken;
             } else {
                 const provider = new GoogleAuthProvider();
+                
+                provider.setCustomParameters({
+                    prompt: 'select_account'
+                });
                 const result = await signInWithPopup(auth, provider);
                 const credential = GoogleAuthProvider.credentialFromResult(result);
                 idToken = credential?.idToken;
