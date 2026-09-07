@@ -26,3 +26,19 @@
 -dontwarn com.google.crypto.tink.**
 -dontwarn com.amazon.device.iap.**
 -dontwarn org.joda.time.**
+
+-keep public class com.getcapacitor.** { *; }
+-keep class * extends com.getcapacitor.Plugin { *; }
+-keepclassmembers class * extends com.getcapacitor.Plugin {
+    public <methods>;
+}
+-keepattributes JavascriptInterface
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface <methods>;
+}
+-keep class com.revenuecat.** { *; }
+-keep class com.google.android.gms.ads.** { *; }
+-keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod
+-dontwarn com.google.firebase.**
+-keep class com.google.firebase.** { *; }
+-keep class com.capawesome.** { *; }

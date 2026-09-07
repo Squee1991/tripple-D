@@ -5,14 +5,14 @@ const admin = require("firebase-admin");
 const { onRequest } = require("firebase-functions/v2/https");
 const axios = require('axios');
 const FormData = require('form-data');
-if (admin.apps.length === 0) admin.initializeApp();
+if (!admin.apps?.length) admin.initializeApp();
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
 const Groq = require("groq-sdk");
 const CYCLE_MS = 24 * 60 * 60 * 1000;
 const IMMUNITY_RANK_HATS = 500;
-const GROQ_API_KEY = defineSecret("GROQ_API_KEY");
+const GEMINI_API_KEY = defineSecret("GEMINI_API_KEY");
 
 const { Resend} = require("resend");
 const cors = require("cors")({
@@ -75,48 +75,49 @@ exports.takeFromArticlePenalty = onSchedule({
 	return null;
 });
 
-exports.whisperTranscribe = onCall({
-	secrets: [GROQ_API_KEY],
-	memory: "512Mi"
-}, async (request) => {
-	const tempFilePath = path.join(os.tmpdir(), `audio_${Date.now()}.mp3`);
-	try {
-		const dataIn = request.data || {};
-		const audioContent = dataIn.audioContent;
-		const lang = dataIn.lang;
+// exports.whisperTranscribe = onCall({
+// 	secrets: [GROQ_API_KEY],
+// 	memory: "512Mi"
+// }, async (request) => {
+// 	const tempFilePath = path.join(os.tmpdir(), `audio_${Date.now()}.mp3`);
+// 	try {
+// 		const dataIn = request.data || {};
+// 		const audioContent = dataIn.audioContent;
+// 		const lang = dataIn.lang;
+//
+// 		if (!audioContent) return { error: "Нет аудио" };
+//
+// 		const base64Data = audioContent.includes(",") ? audioContent.split(",")[1] : audioContent;
+// 		const buffer = Buffer.from(base64Data, "base64");
+//
+// 		// Пишем как mp3
+// 		fs.writeFileSync(tempFilePath, buffer);
+//
+// 		const groq = new Groq({ apiKey: GROQ_API_KEY.value() });
+//
+// 		// Отправляем как mp3
+// 		const transcription = await groq.audio.transcriptions.create({
+// 			file: fs.createReadStream(tempFilePath),
+// 			model: "whisper-large-v3-turbo",
+// 			language: lang ? lang.substring(0, 2) : undefined,
+// 			response_format: "json"
+// 		});
+//
+// 		if (fs.existsSync(tempFilePath)) fs.unlinkSync(tempFilePath);
+//
+// 		return { text: transcription.text || "" };
+//
+// 	} catch (error) {
+// 		if (fs.existsSync(tempFilePath)) fs.unlinkSync(tempFilePath);
+// 		const groqError = error.error?.message || error.message || String(error);
+// 		return { error: `GROQ SDK: ${groqError}` };
+// 	}
+// });
 
-		if (!audioContent) return { error: "Нет аудио" };
-
-		const base64Data = audioContent.includes(",") ? audioContent.split(",")[1] : audioContent;
-		const buffer = Buffer.from(base64Data, "base64");
-
-		// Пишем как mp3
-		fs.writeFileSync(tempFilePath, buffer);
-
-		const groq = new Groq({ apiKey: GROQ_API_KEY.value() });
-
-		// Отправляем как mp3
-		const transcription = await groq.audio.transcriptions.create({
-			file: fs.createReadStream(tempFilePath),
-			model: "whisper-large-v3-turbo",
-			language: lang ? lang.substring(0, 2) : undefined,
-			response_format: "json"
-		});
-
-		if (fs.existsSync(tempFilePath)) fs.unlinkSync(tempFilePath);
-
-		return { text: transcription.text || "" };
-
-	} catch (error) {
-		if (fs.existsSync(tempFilePath)) fs.unlinkSync(tempFilePath);
-		const groqError = error.error?.message || error.message || String(error);
-		return { error: `GROQ SDK: ${groqError}` };
-	}
-});
 
 
 exports.visionAnalyze = onCall({
-	secrets: [GROQ_API_KEY],
+	secrets: [GEMINI_API_KEY],
 	memory: "256Mi",
 	timeoutSeconds: 60
 }, async (request) => {
@@ -128,7 +129,7 @@ exports.visionAnalyze = onCall({
 		const imageUrl = dataIn.imageUrl;
 		const referenceDescription = dataIn.referenceDescription;
 
-		const modelId = 'qwen/qwen3.6-27b';
+		const modelId = 'gemini-3.5-flash-lite';
 		const feedbackLang = String(userLocale || 'ru').split('-')[0].trim();
 
 		const systemPrompt = `You are a strict but supportive German language tutor evaluating an image description exercise.
@@ -152,89 +153,65 @@ CRITICAL EVALUATION RULES:
    - Score 9-10: Set 'suggestedAnswer' to the User's exact answer. 
    - Score <=8: Set 'suggestedAnswer' to the Reference Template.
 
-YOUR TASK: AFTER YOUR THINKING PROCESS, OUTPUT A VALID JSON OBJECT AND NOTHING ELSE.
-{
-  "score": 0,
-  "feedback": "...",
-  "suggestedAnswer": "...",
-  "keyCorrections": []
-}`;
+YOUR TASK: OUTPUT A VALID JSON OBJECT AND NOTHING ELSE.`;
 
-		const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+		// 1. Скачиваем картинку по URL из Firebase и переводим в Base64
+		const imageFetch = await fetch(imageUrl);
+		if (!imageFetch.ok) {
+			return { error: `Не удалось скачать картинку из Firebase: ${imageFetch.status}` };
+		}
+		const imageBuffer = await imageFetch.arrayBuffer();
+		const base64Image = Buffer.from(imageBuffer).toString('base64');
+
+		// 2. Отправляем запрос к Gemini
+		const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent?key=${GEMINI_API_KEY.value()}`;
+
+		const response = await fetch(url, {
 			method: 'POST',
 			headers: {
-				'Authorization': `Bearer ${GROQ_API_KEY.value()}`,
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({
-				model: modelId,
-				messages: [
-					{ role: 'system', content: systemPrompt },
+				system_instruction: {
+					parts: [{ text: systemPrompt }]
+				},
+				contents: [
 					{
 						role: 'user',
-						content: [
-							{ type: "text", text: `Level ${userLevel}. Answer: ${userMessage}. Reference: ${referenceDescription}` },
-							{ type: "image_url", image_url: { url: imageUrl } }
+						parts: [
+							{ text: `Level: ${userLevel}. Answer: "${userMessage}". Reference: "${referenceDescription || 'None'}"` },
+							{
+								inline_data: {
+									mime_type: "image/jpeg",
+									data: base64Image
+								}
+							}
 						]
 					}
 				],
-				temperature: 0.1,
-				max_tokens: 4096
+				generationConfig: {
+					temperature: 0.1,
+					// Заставляем модель всегда возвращать чистый JSON
+					response_mime_type: "application/json"
+				}
 			})
 		});
 
 		const resText = await response.text();
-		if (!response.ok) return { error: `GROQ API ERROR ${response.status}: ${resText}` };
+		if (!response.ok) return { error: `GEMINI API ERROR ${response.status}: ${resText}` };
 
 		const resJson = JSON.parse(resText);
-		if (!resJson.choices || !resJson.choices[0]) return { error: `GROQ EMPTY CHOICES: ${resText}` };
+		const content = resJson.candidates?.[0]?.content?.parts?.[0]?.text;
 
-		let rawContent = resJson.choices[0].message.content || '';
-
-		// 1. Очистка от тегов рассуждений и маркдауна
-		let content = rawContent.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
-		content = content.replace(/```json/gi, '').replace(/```/gi, '').trim();
-
-		// 2. Умный поиск JSON: вырезает ровно один валидный объект, игнорируя мусор до и после
-		function extractJSON(str) {
-			const start = str.indexOf('{');
-			if (start === -1) return null;
-
-			let count = 0;
-			let inString = false;
-			let escape = false;
-
-			for (let i = start; i < str.length; i++) {
-				const char = str[i];
-				if (!inString) {
-					if (char === '{') count++;
-					else if (char === '}') count--;
-					else if (char === '"') inString = true;
-				} else {
-					if (char === '\\' && !escape) escape = true;
-					else {
-						if (char === '"' && !escape) inString = false;
-						escape = false;
-					}
-				}
-				if (count === 0 && !inString) {
-					return str.substring(start, i + 1); // Возвращаем чистый кусок JSON
-				}
-			}
-			return null;
+		if (!content) {
+			return { error: `Gemini не вернул ответ: ${resText.substring(0, 300)}` };
 		}
 
-		const cleanJsonText = extractJSON(content);
-
-		if (!cleanJsonText) {
-			console.error("Groq не вернул JSON. Сырой текст:", rawContent);
-			return { error: `Нейросеть не вернула JSON. Текст: ${rawContent.substring(0, 300)}...` };
-		}
-
+		// 3. Парсим чистый JSON (сложные регулярки больше не нужны)
 		try {
-			return { data: JSON.parse(cleanJsonText) };
+			return { data: JSON.parse(content) };
 		} catch (parseErr) {
-			console.error("Ошибка парсинга JSON:", parseErr.message, "Извлеченный текст:", cleanJsonText);
+			console.error("Ошибка парсинга JSON:", parseErr.message, "Извлеченный текст:", content);
 			return { error: `Ошибка парсинга ответа: ${parseErr.message}` };
 		}
 
