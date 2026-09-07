@@ -470,35 +470,35 @@ export const userAuthStore = defineStore('auth', () => {
     const loginWithGoogle = async () => {
         try {
             const isNative = Capacitor.isNativePlatform();
-            let idToken = null;
+            let user = null; // Общая переменная для записи пользователя
+
             if (isNative) {
+                // Логика только для iOS/Android
                 await GoogleSignIn.initialize({
                     clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
                 });
                 const result = await GoogleSignIn.signIn({
                     clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
                 });
-                idToken = result.idToken;
-            } else {
-                const provider = new GoogleAuthProvider();
                 
-                provider.setCustomParameters({
-                    prompt: 'select_account'
-                });
-                const result = await signInWithPopup(auth, provider);
-                const credential = GoogleAuthProvider.credentialFromResult(result);
-                idToken = credential?.idToken;
+                if (!result.idToken) {
+                    console.error('Берет у артикля не вернул токен');
+                    return;
+                }
+                const credential = GoogleAuthProvider.credential(result.idToken);
+                const authResult = await signInWithCredential(auth, credential);
+                user = authResult.user;
+            } else {
+                // Логика только для браузера (Web)
+                const provider = new GoogleAuthProvider();
+                provider.setCustomParameters({ prompt: 'select_account' });
+                
+                // signInWithPopup делает всю работу сам, второй шаг с токеном не нужен
+                const authResult = await signInWithPopup(auth, provider);
+                user = authResult.user;
             }
 
-            if (!idToken) {
-                console.error('Берет у артикля не вернул токен');
-                return;
-            }
-
-            const credential = GoogleAuthProvider.credential(idToken);
-            const authResult = await signInWithCredential(auth, credential);
-            const user = authResult.user;
-
+            // --- Общий код записи в Firestore ---
             const userDocRef = doc(db, 'users', user.uid);
             const userDoc = await getDoc(userDocRef);
 
