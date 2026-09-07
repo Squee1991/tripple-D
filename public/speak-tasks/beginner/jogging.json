@@ -1,0 +1,533 @@
+{
+  "start": {
+    "botText": "Hallo! Tolles Wetter heute für eine schnelle Runde im Park, oder?",
+    "botTranslation": {
+      "ru-RU": "Привет! Отличная погода сегодня для быстрой пробежки в парке, не так ли?",
+      "en-US": "Hello! Great weather today for a quick run in the park, isn't it?",
+      "ar-SA": "مرحباً! طقس رائع اليوم لجولة سريعة في الحديقة، أليس كذلك؟",
+      "es-ES": "¡Hola! Buen tiempo hoy para dar una vuelta rápida por el parque, ¿verdad?",
+      "fr-FR": "Salut ! Super temps aujourd'hui pour faire un petit tour rapide dans le parc, non ?",
+      "hi-IN": "नमस्ते! पार्क में तेज़ दौड़ के लिए आज का मौसम बहुत बढ़िया है, है ना?",
+      "pl-PL": "Cześć! Wspaniała pogoda dzisiaj na szybką rundkę w parku, prawda?",
+      "ro-RO": "Salut! Vreme grozavă astăzi pentru o tură rapidă în parc, nu-i așa?",
+      "tr-TR": "Merhaba! Parkta hızlı bir tur için bugün harika bir hava, değil mi?",
+      "uk-UA": "Привіт! Чудова погода сьогодні для швидкої пробіжки в парку, чи не так?",
+      "uz-UZ": "Salom! Bugun parkda tezkor yugurish uchun ajoyib ob-havo, shunday emasmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Lauf",
+        "translation": {
+          "ru-RU": "бег / пробежка",
+          "en-US": "run / running",
+          "ar-SA": "الركض / الجري",
+          "es-ES": "carrera / trote",
+          "fr-FR": "course",
+          "hi-IN": "दौड़",
+          "pl-PL": "bieg",
+          "ro-RO": "alergare",
+          "tr-TR": "koşu",
+          "uk-UA": "біг / пробіжка",
+          "uz-UZ": "yugurish"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hallo! Ja, die Sonne scheint perfekt für den Lauf.",
+        "translation": {
+          "ru-RU": "Привет! Да, солнце светит идеально для пробежки.",
+          "en-US": "Hello! Yes, the sun is shining perfectly for the run.",
+          "ar-SA": "مرحباً! نعم، الشمس تشرق بشكل مثالي للركض.",
+          "es-ES": "¡Hola! Sí, el sol brilla perfectamente para la carrera.",
+          "fr-FR": "Salut ! Oui, le soleil brille parfaitement pour la course.",
+          "hi-IN": "नमस्ते! हाँ, दौड़ के लिए धूप एकदम सही है।",
+          "pl-PL": "Cześć! Tak, słońce świeci idealnie na bieg.",
+          "ro-RO": "Salut! Da, soarele strălucește perfect pentru alergare.",
+          "tr-TR": "Merhaba! Evet, güneş koşu için mükemmel parlıyor.",
+          "uk-UA": "Привіт! Так, сонце світить ідеально для пробіжки.",
+          "uz-UZ": "Salom! Ha, quyosh yugurish uchun juda mos charaqlamoqda."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hi! Das stimmt, aber es ist heute ganz schön windig.",
+        "translation": {
+          "ru-RU": "Привет! Это верно, но сегодня довольно ветрено.",
+          "en-US": "Hi! That's true, but it's quite windy today.",
+          "ar-SA": "مرحباً! هذا صحيح، لكن الجو عاصف جداً اليوم.",
+          "es-ES": "¡Hola! Es cierto, pero hoy hace bastante viento.",
+          "fr-FR": "Salut ! C'est vrai, mais il y a pas mal de vent aujourd'hui.",
+          "hi-IN": "नमस्ते! यह सच है, लेकिन आज काफी हवा चल रही है।",
+          "pl-PL": "Cześć! Zgadza się, ale dzisiaj jest dość wietrznie.",
+          "ro-RO": "Salut! Așa este, dar este destul de vântos astăzi.",
+          "tr-TR": "Selam! Bu doğru ama bugün epey rüzgarlı.",
+          "uk-UA": "Привіт! Це правда, але сьогодні досить вітряно.",
+          "uz-UZ": "Salom! Bu to'g'ri, lekin bugun ancha shamol bo'lyapti."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Da hast du recht. Machst du heute ein langes Ausdauertraining?",
+    "botTranslation": {
+      "ru-RU": "Тут ты прав. Ты сегодня делаешь длинную тренировку на выносливость?",
+      "en-US": "You're right about that. Are you doing a long endurance training today?",
+      "ar-SA": "أنت محق في ذلك. هل تقوم بتدريب تحمل طويل اليوم؟",
+      "es-ES": "Tienes razón en eso. ¿Haces hoy un entrenamiento largo de resistencia?",
+      "fr-FR": "Tu as raison. Fais-tu un long entraînement d'endurance aujourd'hui ?",
+      "hi-IN": "आप सही कह रहे हैं। क्या आप आज लंबी सहनशक्ति ट्रेनिंग कर रहे हैं?",
+      "pl-PL": "Masz rację. Robisz dzisiaj długi trening wytrzymałościowy?",
+      "ro-RO": "Ai dreptate. Faci astăzi un antrenament lung de rezistență?",
+      "tr-TR": "Haklısın. Bugün uzun bir dayanıklılık antrenmanı mı yapıyorsun?",
+      "uk-UA": "Тут ти маєш рацію. Ти сьогодні робиш довге тренування на витривалість?",
+      "uz-UZ": "Bu borada haqsiz. Bugun chidamlilik uchun uzoq mashq qilyapsizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Ausdauertraining",
+        "translation": {
+          "ru-RU": "тренировка на выносливость",
+          "en-US": "endurance training",
+          "ar-SA": "تدريب التحمل",
+          "es-ES": "entrenamiento de resistencia",
+          "fr-FR": "entraînement d'endurance",
+          "hi-IN": "सहनशक्ति प्रशिक्षण",
+          "pl-PL": "trening wytrzymałościowy",
+          "ro-RO": "antrenament de rezistență",
+          "tr-TR": "dayanıklılık antrenmanı",
+          "uk-UA": "тренування на витривалість",
+          "uz-UZ": "chidamlilik mashg'uloti"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, ich laufe heute zehn Kilometer in gleichmäßigem Tempo.",
+        "translation": {
+          "ru-RU": "Да, я сегодня бегу десять километров в равномерном темпе.",
+          "en-US": "Yes, I am running ten kilometers at a steady pace today.",
+          "ar-SA": "نعم، سأركض عشرة كيلومترات بوتيرة ثابتة اليوم.",
+          "es-ES": "Sí, hoy corro diez kilómetros a un ritmo constante.",
+          "fr-FR": "Oui, je cours dix kilomètres à un rythme régulier aujourd'hui.",
+          "hi-IN": "हाँ, मैं आज एक समान गति से दस किलोमीटर दौड़ रहा हूँ।",
+          "pl-PL": "Tak, biegnę dzisiaj dziesięć kilometrów równym tempem.",
+          "ro-RO": "Da, alerg astăzi zece kilometri într-un ritm constant.",
+          "tr-TR": "Evet, bugün sabit bir tempoda on kilometre koşuyorum.",
+          "uk-UA": "Так, я сьогодні біжу десять кілометрів у рівномірному темпі.",
+          "uz-UZ": "Ha, bugun bir xil tempda o'n kilometr yuguraman."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Nein, heute mache ich nur einen kurzen Intervalllauf zur Fitness.",
+        "translation": {
+          "ru-RU": "Нет, сегодня я делаю только короткий интервальный бег для фитнеса.",
+          "en-US": "No, today I'm just doing a short interval run for fitness.",
+          "ar-SA": "لا، سأقوم اليوم بركض متقطع قصير للياقة فقط.",
+          "es-ES": "No, hoy solo hago una carrera de intervalos corta para mantener la forma.",
+          "fr-FR": "Non, aujourd'hui je fais juste une courte course fractionnée pour la forme.",
+          "hi-IN": "नहीं, आज मैं फिटनेस के लिए केवल एक छोटी इंटरवल दौड़ कर रहा हूँ।",
+          "pl-PL": "Nie, dzisiaj robię tylko krótki bieg interwałowy dla kondycji.",
+          "ro-RO": "Nu, astăzi fac doar o scurtă alergare pe intervale pentru fitness.",
+          "tr-TR": "Hayır, bugün formda kalmak için sadece kısa bir interval koşusu yapıyorum.",
+          "uk-UA": "Ні, сьогодні я роблю лише короткий інтервальний біг для фітнесу.",
+          "uz-UZ": "Yo'q, bugun men fitnes uchun faqat qisqa intervalli yugurish qilyapman."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Stark! Das ist ein tolles Training. Zeigen deine Sportuhr und dein Pulsmesser gute Werte an?",
+    "botTranslation": {
+      "ru-RU": "Сильно! Это отличная тренировка. Твои спортивные часы и пульсометр показывают хорошие значения?",
+      "en-US": "Strong! That's a great workout. Are your sports watch and heart rate monitor showing good values?",
+      "ar-SA": "قوي! هذا تدريب رائع. هل تظهر ساعتك الرياضية وجهاز قياس النبض قيماً جيدة؟",
+      "es-ES": "¡Fuerte! Es un entrenamiento genial. ¿Muestran tu reloj deportivo y tu pulsómetro buenos valores?",
+      "fr-FR": "Fort ! C'est un super entraînement. Ta montre de sport et ton cardiofréquencemètre affichent-ils de bonnes valeurs ?",
+      "hi-IN": "मज़बूत! यह एक बेहतरीन वर्कआउट है। क्या आपकी स्पोर्ट्स वॉच और पल्स मॉनिटर अच्छे मान दिखा रहे हैं?",
+      "pl-PL": "Mocno! To świetny trening. Czy twój zegarek sportowy i pulsometr pokazują dobre wartości?",
+      "ro-RO": "Puternic! Acesta este un antrenament grozav. Ceasul tău sport și pulsometrul arată valori bune?",
+      "tr-TR": "Güçlü! Bu harika bir antrenman. Spor saatin ve nabız ölçerin iyi değerler gösteriyor mu?",
+      "uk-UA": "Сильно! Це чудове тренування. Твої спортивні годинники та пульсометр показують хороші значення?",
+      "uz-UZ": "Kuchli! Bu ajoyib mashg'ulot. Sport soatingiz va puls o'lchagichingiz yaxshi qiymatlarni ko'rsatyaptimi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Tempo",
+        "translation": {
+          "ru-RU": "темп",
+          "en-US": "pace",
+          "ar-SA": "الوتيرة / السرعة",
+          "es-ES": "ritmo",
+          "fr-FR": "rythme",
+          "hi-IN": "रफ़्तार / गति",
+          "pl-PL": "tempo",
+          "ro-RO": "ritm",
+          "tr-TR": "tempo",
+          "uk-UA": "темп",
+          "uz-UZ": "temp"
+        }
+      },
+      {
+        "german": "die Sportuhr",
+        "translation": {
+          "ru-RU": "спортивные часы",
+          "en-US": "sports watch",
+          "ar-SA": "الساعة الرياضية",
+          "es-ES": "reloj deportivo",
+          "fr-FR": "montre de sport",
+          "hi-IN": "स्पोर्ट्स घड़ी",
+          "pl-PL": "zegarek sportowy",
+          "ro-RO": "ceas sport",
+          "tr-TR": "spor saati",
+          "uk-UA": "спортивний годинник",
+          "uz-UZ": "sport soati"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, alles läuft super. Mein Puls ist heute stabil.",
+        "translation": {
+          "ru-RU": "Да, всё идет супер. Мой пульс сегодня стабилен.",
+          "en-US": "Yes, everything is going great. My pulse is stable today.",
+          "ar-SA": "نعم، كل شيء يسير بشكل رائع. نبضي مستقر اليوم.",
+          "es-ES": "Sí, todo va genial. Mi pulso está estable hoy.",
+          "fr-FR": "Oui, tout va super bien. Mon pouls est stable aujourd'hui.",
+          "hi-IN": "हाँ, सब कुछ बढ़िया चल रहा है। आज मेरी पल्स स्थिर है।",
+          "pl-PL": "Tak, wszystko idzie super. Mój puls jest dzisiaj stabilny.",
+          "ro-RO": "Da, totul merge super. Pulsul meu este stabil astăzi.",
+          "tr-TR": "Evet, her şey harika gidiyor. Nabzım bugün stabil.",
+          "uk-UA": "Так, все йде супер. Мій пульс сьогодні стабільний.",
+          "uz-UZ": "Ha, hammasi zo'r ketyapti. Bugun pulsim barqaror."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Ziemlich gut, aber ich muss gleich ein bisschen trinken.",
+        "translation": {
+          "ru-RU": "Довольно хорошо, но мне нужно сейчас немного попить.",
+          "en-US": "Pretty good, but I need to drink a little bit in a moment.",
+          "ar-SA": "جيد جداً، لكن يجب أن أشرب القليل قريباً.",
+          "es-ES": "Bastante bien, pero tengo que beber un poco enseguida.",
+          "fr-FR": "Plutôt bien, mais je dois boire un peu tout à l'heure.",
+          "hi-IN": "काफी अच्छा, लेकिन मुझे जल्द ही थोड़ा पीना होगा।",
+          "pl-PL": "Całkiem dobrze, ale muszę zaraz trochę wypić.",
+          "ro-RO": "Destul de bine, dar trebuie să beau puțin imediat.",
+          "tr-TR": "Oldukça iyi, ama birazdan biraz su içmem lazım.",
+          "uk-UA": "Досить добре, але мені потрібно зараз трохи попити.",
+          "uz-UZ": "Ancha yaxshi, lekin hozir biroz suv ichishim kerak."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Sehr wichtig beim Sport! Hast du genug Wasser in deiner Trinkflasche dabei?",
+    "botTranslation": {
+      "ru-RU": "Очень важно во время занятий спортом! У тебя с собой достаточно воды в бутылке?",
+      "en-US": "Very important during sports! Do you have enough water in your drinking bottle with you?",
+      "ar-SA": "مهم جداً أثناء الرياضة! هل لديك ما يكفي من الماء في زجاجتك؟",
+      "es-ES": "¡Muy importante en el deporte! ¿Tienes suficiente agua en tu botella?",
+      "fr-FR": "Très important pendant le sport ! As-tu assez d'eau dans ta gourde avec toi ?",
+      "hi-IN": "खेल के दौरान बहुत महत्वपूर्ण! क्या आपके पास अपनी पानी की बोतल में पर्याप्त पानी है?",
+      "pl-PL": "Bardzo ważne podczas sportu! Masz ze sobą dość wody w bidonie?",
+      "ro-RO": "Foarte important la sport! Ai suficientă apă la tine în sticlă?",
+      "tr-TR": "Sporda çok önemli! Yanında su şişende yeterince su var mı?",
+      "uk-UA": "Дуже важливо під час занять спортом! У тебе з собою достатньо води в пляшці?",
+      "uz-UZ": "Sportda juda muhim! Yoningizdagi suv idishida yetarli suv bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Pulsmesser",
+        "translation": {
+          "ru-RU": "пульсометр",
+          "en-US": "heart rate monitor",
+          "ar-SA": "جهاز قياس النبض",
+          "es-ES": "pulsómetro",
+          "fr-FR": "cardiofréquencemètre",
+          "hi-IN": "पल्स मॉनिटर",
+          "pl-PL": "pulsometr",
+          "ro-RO": "pulsometru",
+          "tr-TR": "nabız ölçer",
+          "uk-UA": "пульсометр",
+          "uz-UZ": "puls o'lchagich"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, ich habe isotonisches Wasser in der Tasche.",
+        "translation": {
+          "ru-RU": "Да, у меня в сумке изотоническая вода.",
+          "en-US": "Yes, I have isotonic water in my bag.",
+          "ar-SA": "نعم، لدي مياه متساوية التوتر في الحقيبة.",
+          "es-ES": "Sí, tengo agua isotónica en la bolsa.",
+          "fr-FR": "Oui, j'ai de l'eau isotonique dans mon sac.",
+          "hi-IN": "हाँ, मेरे बैग में आइसोटोनिक पानी है।",
+          "pl-PL": "Tak, mam wodę izotoniczną w torbie.",
+          "ro-RO": "Da, am apă izotonică în geantă.",
+          "tr-TR": "Evet, çantamda izotonik su var.",
+          "uk-UA": "Так, у мене в сумці ізотонічна вода.",
+          "uz-UZ": "Ha, sumkamda izotonik suv bor."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Ja, ich trage einen kleinen Rucksack mit Getränken.",
+        "translation": {
+          "ru-RU": "Да, я ношу небольшой рюкзак с напитками.",
+          "en-US": "Yes, I'm wearing a small backpack with drinks.",
+          "ar-SA": "نعم، أحمل حقيبة ظهر صغيرة بها مشروبات.",
+          "es-ES": "Sí, llevo una pequeña mochila con bebidas.",
+          "fr-FR": "Oui, je porte un petit sac à dos avec des boissons.",
+          "hi-IN": "हाँ, मैं पेय पदार्थों के साथ एक छोटा बैकपैक ले जा रहा हूँ।",
+          "pl-PL": "Tak, niosę mały plecak z napojami.",
+          "ro-RO": "Da, port un rucsac mic cu băuturi.",
+          "tr-TR": "Evet, içeceklerin olduğu küçük bir sırt çantası taşıyorum.",
+          "uk-UA": "Так, я ношу невеликий рюкзак із напоями.",
+          "uz-UZ": "Ha, ichimliklar solingan kichkina ryukzak ko'tarib olganman."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Perfekt vorbereitet. Hast du vor dem Start eigentlich Dehnübungen gemacht?",
+    "botTranslation": {
+      "ru-RU": "Идеально подготовился. А ты делал упражнения на растяжку перед стартом?",
+      "en-US": "Perfectly prepared. Did you actually do stretching exercises before the start?",
+      "ar-SA": "مستعد تماماً. هل قمت بتمارين الإطالة قبل البدء؟",
+      "es-ES": "Perfectamente preparado. ¿Hiciste ejercicios de estiramiento antes de empezar?",
+      "fr-FR": "Parfaitement préparé. As-tu fait des exercices d'étirement avant de commencer ?",
+      "hi-IN": "पूरी तरह से तैयार। क्या आपने वास्तव में शुरू करने से पहले स्ट्रेचिंग व्यायाम किया था?",
+      "pl-PL": "Idealnie przygotowany. Czy robiłeś ćwiczenia rozciągające przed startem?",
+      "ro-RO": "Perfect pregătit. Ai făcut exerciții de întindere înainte de start?",
+      "tr-TR": "Mükemmel hazırlanmışsın. Başlamadan önce esneme hareketleri yaptın mı?",
+      "uk-UA": "Ідеально підготувався. А ти робив вправи на розтяжку перед стартом?",
+      "uz-UZ": "Mukammal tayyorgarlik. Boshlashdan oldin cho'zilish mashqlarini qildingizmi o'zi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Trinkflasche",
+        "translation": {
+          "ru-RU": "бутылка для питья",
+          "en-US": "drinking bottle / water bottle",
+          "ar-SA": "زجاجة الشرب",
+          "es-ES": "botella de agua",
+          "fr-FR": "gourde / bouteille d'eau",
+          "hi-IN": "पानी की बोतल",
+          "pl-PL": "bidon / butelka na wodę",
+          "ro-RO": "sticlă de apă",
+          "tr-TR": "su şişesi / matara",
+          "uk-UA": "пляшка для пиття",
+          "uz-UZ": "ichimlik idishi / baklajka"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Klar, eine kurze Erwärmung ist für die Gelenke Pflicht.",
+        "translation": {
+          "ru-RU": "Конечно, короткая разминка обязательна для суставов.",
+          "en-US": "Sure, a short warm-up is mandatory for the joints.",
+          "ar-SA": "بالطبع، الإحماء القصير إلزامي للمفاصل.",
+          "es-ES": "Claro, un breve calentamiento es obligatorio para las articulaciones.",
+          "fr-FR": "Bien sûr, un court échauffement est obligatoire pour les articulations.",
+          "hi-IN": "बिल्कुल, जोड़ों के लिए एक छोटा वार्म-अप अनिवार्य है।",
+          "pl-PL": "Jasne, krótka rozgrzewka to obowiązek dla stawów.",
+          "ro-RO": "Sigur, o scurtă încălzire este obligatorie pentru articulații.",
+          "tr-TR": "Elbette, eklemler için kısa bir ısınma şarttır.",
+          "uk-UA": "Звичайно, коротка розминка обов'язкова для суглобів.",
+          "uz-UZ": "Albatta, bo'g'imlar uchun qisqa chigal yozdi mashqlari shart."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Natürlich, ohne gutes Aufwärmen laufe ich nie los.",
+        "translation": {
+          "ru-RU": "Естественно, без хорошей разминки я никогда не начинаю бежать.",
+          "en-US": "Naturally, I never start running without a good warm-up.",
+          "ar-SA": "بالطبع، لا أبدأ الركض أبداً بدون إحماء جيد.",
+          "es-ES": "Naturalmente, nunca empiezo a correr sin un buen calentamiento.",
+          "fr-FR": "Naturellement, je ne pars jamais courir sans un bon échauffement.",
+          "hi-IN": "स्वाभाविक रूप से, मैं बिना अच्छे वार्म-अप के कभी दौड़ना शुरू नहीं करता।",
+          "pl-PL": "Oczywiście, nigdy nie zaczynam biec bez dobrej rozgrzewki.",
+          "ro-RO": "Bineînțeles, nu încep niciodată să alerg fără o bună încălzire.",
+          "tr-TR": "Tabii ki, iyi bir ısınma yapmadan asla koşmaya başlamam.",
+          "uk-UA": "Звісно, без хорошої розминки я ніколи не починаю бігти.",
+          "uz-UZ": "Tabiiyki, yaxshi qizib olmasdan men hech qachon yugurishni boshlamayman."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Vorbildlich! Dann wünsche ich dir noch viel Erfolg und verletzungsfreie Kilometer.",
+    "botTranslation": {
+      "ru-RU": "Примерно! Тогда желаю тебе дальнейших успехов и километров без травм.",
+      "en-US": "Exemplary! Then I wish you much success and injury-free kilometers.",
+      "ar-SA": "مثالي! إذن أتمنى لك الكثير من التوفيق وكيلومترات خالية من الإصابات.",
+      "es-ES": "¡Ejemplar! Entonces te deseo mucho éxito y kilómetros sin lesiones.",
+      "fr-FR": "Exemplaire ! Alors je te souhaite beaucoup de succès et des kilomètres sans blessure.",
+      "hi-IN": "अनुकरणीय! फिर मैं आपको बहुत सफलता और चोट-मुक्त किलोमीटर की कामना करता हूँ।",
+      "pl-PL": "Wzorowo! W takim razie życzę ci wielu sukcesów i kilometrów bez kontuzji.",
+      "ro-RO": "Exemplar! Atunci îți doresc mult succes și kilometri fără accidentări.",
+      "tr-TR": "Örnek niteliğinde! O zaman sana başarılar ve sakatlıksız kilometreler diliyorum.",
+      "uk-UA": "Зразково! Тоді бажаю тобі подальших успіхів і кілометрів без травм.",
+      "uz-UZ": "Ibratli! Unda senga ko'p muvaffaqiyat va jarohatsiz kilometrlar tilayman."
+    },
+    "vocabulary": [
+      {
+        "german": "die Erwärmung",
+        "translation": {
+          "ru-RU": "разминка",
+          "en-US": "warm-up",
+          "ar-SA": "الإحماء",
+          "es-ES": "calentamiento",
+          "fr-FR": "échauffement",
+          "hi-IN": "वार्म-अप / गर्माना",
+          "pl-PL": "rozgrzewka",
+          "ro-RO": "încălzire",
+          "tr-TR": "ısınma",
+          "uk-UA": "розминка",
+          "uz-UZ": "chigal yozdi (qizdirish)"
+        }
+      },
+      {
+        "german": "die Gelenke",
+        "translation": {
+          "ru-RU": "суставы",
+          "en-US": "joints",
+          "ar-SA": "المفاصل",
+          "es-ES": "articulaciones",
+          "fr-FR": "articulations",
+          "hi-IN": "जोड़ (हड्डियों के)",
+          "pl-PL": "stawy",
+          "ro-RO": "articulații",
+          "tr-TR": "eklemler",
+          "uk-UA": "суглоби",
+          "uz-UZ": "bo'g'imlar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke dir! Dir auch weiterhin viel Spaß beim Training.",
+        "translation": {
+          "ru-RU": "Спасибо тебе! Тебе тоже дальнейшего удовольствия от тренировки.",
+          "en-US": "Thank you! Have fun continuing your training too.",
+          "ar-SA": "شكراً لك! أتمنى لك أيضاً الاستمتاع بتدريبك.",
+          "es-ES": "¡Gracias! Que te diviertas también con el entrenamiento.",
+          "fr-FR": "Merci ! À toi aussi beaucoup de plaisir pour ton entraînement.",
+          "hi-IN": "धन्यवाद! आपको भी ट्रेनिंग का आनंद लेते रहने की शुभकामनाएँ।",
+          "pl-PL": "Dziękuję! Tobie również dalszej przyjemności z treningu.",
+          "ro-RO": "Mulțumesc! Distracție plăcută în continuare la antrenament și ție.",
+          "tr-TR": "Teşekkür ederim! Sana da antrenmanda iyi eğlenceler.",
+          "uk-UA": "Дякую тобі! Тобі також подальшого задоволення від тренування.",
+          "uz-UZ": "Senga rahmat! Senga ham mashg'ulotda yaxshi hordiq tilayman."
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Vielen Dank! Vielleicht sehen wir uns hier nächste Woche wieder.",
+        "translation": {
+          "ru-RU": "Большое спасибо! Возможно, мы снова увидимся здесь на следующей неделе.",
+          "en-US": "Thank you very much! Maybe we'll see each other here again next week.",
+          "ar-SA": "شكراً جزيلاً! ربما نرى بعضنا هنا مرة أخرى الأسبوع القادم.",
+          "es-ES": "¡Muchas gracias! Quizás nos veamos aquí de nuevo la semana que viene.",
+          "fr-FR": "Merci beaucoup ! Peut-être qu'on se reverra ici la semaine prochaine.",
+          "hi-IN": "बहुत-बहुत धन्यवाद! शायद हम अगले हफ्ते यहाँ फिर मिलेंगे।",
+          "pl-PL": "Bardzo dziękuję! Może zobaczymy się tu znowu w przyszłym tygodniu.",
+          "ro-RO": "Mulțumesc mult! Poate ne revedem aici săptămâna viitoare.",
+          "tr-TR": "Çok teşekkürler! Belki haftaya burada tekrar görüşürüz.",
+          "uk-UA": "Велике спасибі! Можливо, ми знову побачимося тут наступного тижня.",
+          "uz-UZ": "Katta rahmat! Balki kelasi hafta shu yerda yana ko'risharmiz."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Bestimmt! Ich laufe meistens dienstags und donnerstags hier.",
+    "botTranslation": {
+      "ru-RU": "Наверняка! Я бегаю здесь в основном по вторникам и четвергам.",
+      "en-US": "Definitely! I usually run here on Tuesdays and Thursdays.",
+      "ar-SA": "بالتأكيد! أنا أركض هنا في الغالب أيام الثلاثاء والخميس.",
+      "es-ES": "¡Seguro! Suelo correr aquí los martes y jueves.",
+      "fr-FR": "Certainement ! Je cours ici principalement le mardi et le jeudi.",
+      "hi-IN": "निश्चित रूप से! मैं आमतौर पर मंगलवार और गुरुवार को यहाँ दौड़ता हूँ।",
+      "pl-PL": "Na pewno! Biegam tu przeważnie we wtorki i czwartki.",
+      "ro-RO": "Cu siguranță! Alerg aici mai ales marțea și joia.",
+      "tr-TR": "Kesinlikle! Çoğunlukla salı ve perşembe günleri burada koşuyorum.",
+      "uk-UA": "Напевно! Я бігаю тут переважно по вівторках і четвергах.",
+      "uz-UZ": "Albatta! Men bu yerda asosan seshanba va payshanba kunlari yuguraman."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Gut zu wissen. Einen schönen Tag noch!",
+        "translation": {
+          "ru-RU": "Хорошо знать. Хорошего дня!",
+          "en-US": "Good to know. Have a nice day!",
+          "ar-SA": "من الجيد معرفة ذلك. طاب يومك!",
+          "es-ES": "Es bueno saberlo. ¡Que tengas un buen día!",
+          "fr-FR": "Bon à savoir. Bonne journée !",
+          "hi-IN": "यह जानकर अच्छा लगा। आपका दिन शुभ हो!",
+          "pl-PL": "Dobrze wiedzieć. Miłego dnia!",
+          "ro-RO": "Bine de știut. O zi frumoasă în continuare!",
+          "tr-TR": "Bunu bilmek güzel. İyi günler!",
+          "uk-UA": "Добре знати. Гарного дня!",
+          "uz-UZ": "Bilib qo'ygan yaxshi. Kuningiz xayrli o'tsin!"
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Super, bis zum nächsten Mal!",
+        "translation": {
+          "ru-RU": "Супер, до следующего раза!",
+          "en-US": "Super, see you next time!",
+          "ar-SA": "رائع، حتى المرة القادمة!",
+          "es-ES": "Súper, ¡hasta la próxima!",
+          "fr-FR": "Super, à la prochaine !",
+          "hi-IN": "सुपर, अगली बार मिलते हैं!",
+          "pl-PL": "Super, do następnego razu!",
+          "ro-RO": "Super, pe data viitoare!",
+          "tr-TR": "Süper, bir dahaki sefere görüşmek üzere!",
+          "uk-UA": "Супер, до наступного разу!",
+          "uz-UZ": "Zo'r, keyingi safargacha!"
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Tschüss und bleib fit! Bis dann!",
+    "botTranslation": {
+      "ru-RU": "Пока и оставайся в форме! До скорого!",
+      "en-US": "Bye and stay fit! See you then!",
+      "ar-SA": "وداعاً وحافظ على لياقتك! أراك لاحقاً!",
+      "es-ES": "¡Adiós y mantente en forma! ¡Hasta luego!",
+      "fr-FR": "Salut et reste en forme ! À plus !",
+      "hi-IN": "अलविदा और फिट रहें! फिर मिलते हैं!",
+      "pl-PL": "Cześć i bądź w formie! Do zobaczenia!",
+      "ro-RO": "Pa și rămâi în formă! Pe curând!",
+      "tr-TR": "Hoşça kal ve formda kal! Görüşürüz!",
+      "uk-UA": "Бувай і залишайся у формі! До зустрічі!",
+      "uz-UZ": "Xayr va formada qoling! Ko'rishguncha!"
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

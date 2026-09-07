@@ -103,7 +103,8 @@ const ALL_THEMES = [
 	'job_looking', 'library', 'oil_change', 'order_eat', 'pharmacy_vitamins',
 	'police_control', 'police_talk', 'post_office', 'restaurant_dinner', 'road_assistance',
 	'salary_talk', 'shopping', 'store_checkout', 'taxi_berlin', 'train_station',
-	'train_ticket', 'vacation', 'veterinary', 'info_talk'
+	'train_ticket', 'vacation', 'veterinary', 'info_talk', 'begin_fitness', 'sport_footwear', 'soccer_training',
+	'pool_booking', 'tennis_club', 'bicycle_rental', 'sport_shake', 'climbing'
 ];
 
 async function generateElevenSpeech(text) {
@@ -184,7 +185,7 @@ async function run() {
 				for (let i = 0; i < stepData.options.length; i++) {
 					const optionText = stepData.options[i].text;
 					if (!optionText) continue;
-					// Очищаем текст от троеточия перед озвучкой, если это поле для ручного ввода
+
 					const cleanText = optionText.replace('...', '').trim();
 					const optionFileName = `${stepKey}_option_${i}.mp3`;
 					const optionFilePath = path.join(outputDir, optionFileName);

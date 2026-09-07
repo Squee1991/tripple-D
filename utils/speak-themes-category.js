@@ -98,5 +98,21 @@ export const categoriesSpeak = [
 			{ id: 'airport_talk', icon: '✈️', title: 'speakThemes.airport_talk' },
 			{ id: 'info_talk', icon: 'ℹ️', title: 'speakThemes.info_talk' }
 		]
-	}
+	},
+	{
+		id: 'sport',
+		title: 'Спорт',
+		themes: [
+			{ id: 'begin_fitness', icon: '🏋️', title: 'Фитнес-клуб' },
+			{ id: 'sport_footwear', icon: '👟', title: 'Покупка кроссовок' },
+			{ id: 'soccer_training', icon: '⚽', title: 'Футбол' },
+			{ id: 'pool_booking', icon: '🏊', title: 'Запись в бассейн' },
+			{ id: 'tennis_club', icon: '🎾', title: 'Теннисный клуб' },
+			{ id: 'bicycle_rental', icon: '🚲', title: 'Аренда велосипеда' },
+			{ id: 'sport_shake', icon: '🥤', title: 'Фитнес-бар' },
+			{ id: 'climbing', icon: '🧗', title: 'Скалодром' },
+			{ id: 'jogging', icon: '🏃', title: 'На пробежке' },
+			{ id: 'ski_rental', icon: '🏂', title: 'Аренда лыж' }
+		]
+	},
 ]

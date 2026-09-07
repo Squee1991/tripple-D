@@ -5,7 +5,7 @@
         <div class="content">
           <h2 class="network__title">{{ isSuccessComputedTitle }}</h2>
           <div class="network__icon-wrapper" :class="{ 'success-bounce': isSuccessShowing }">
-            <img class="network__icon" src="/images/NetworkError.svg" alt="Статус сети">
+            <NuxtImg class="network__icon" src="/images/NetworkError.svg" alt="Статус сети" />
           </div>
           <div class="network__status-block" :class="{ 'status-success': isSuccessShowing }">
             <span class="pulse-dot"></span>

@@ -116,27 +116,18 @@ const getCompletedCount = (category) => {
   return category.themes.filter(theme => speakStore.userProgress[theme.id]).length;
 };
 
-// Новая функция проверки доступности темы
 const isThemeUnlocked = (catIndex, themeIndex) => {
-  // 1. Если есть премиум — открыто всё
   if (authStore.isPremium) return true;
-
-  // 2. Первые две темы первой категории открыты всегда
   if (catIndex === 0 && (themeIndex === 0 || themeIndex === 1)) return true;
-
-  // 3. Для остальных: ищем ID предыдущей темы
   let prevThemeId = null;
 
   if (themeIndex > 0) {
-    // Предыдущая тема находится в текущей категории
     prevThemeId = categoriesSpeak[catIndex].themes[themeIndex - 1].id;
   } else if (catIndex > 0) {
-    // Предыдущая тема — это последняя тема предыдущей категории
     const prevCategory = categoriesSpeak[catIndex - 1];
     prevThemeId = prevCategory.themes[prevCategory.themes.length - 1].id;
   }
 
-  // 4. Если предыдущая тема найдена, проверяем пройдена ли она
   if (prevThemeId) {
     return !!speakStore.userProgress[prevThemeId];
   }
@@ -144,12 +135,10 @@ const isThemeUnlocked = (catIndex, themeIndex) => {
   return false;
 };
 
-// Обновленная функция перехода
 const goToSession = (theme, catIndex, themeIndex) => {
   if (isThemeUnlocked(catIndex, themeIndex)) {
     router.push({ path: '/speak-practice/session', query: { theme: theme.id } });
   } else {
-    // Если тема еще закрыта, показываем модалку премиума (апсейл)
     showPremiumModal.value = true;
   }
 };

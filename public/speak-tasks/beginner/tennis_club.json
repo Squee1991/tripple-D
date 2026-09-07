@@ -1,0 +1,532 @@
+{
+  "start": {
+    "botText": "Guten Tag! Willkommen im Tennisclub. Wie kann ich Ihnen helfen?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Добро пожаловать в теннисный клуб. Чем я могу вам помочь?",
+      "en-US": "Good day! Welcome to the tennis club. How can I help you?",
+      "ar-SA": "طاب يومك! مرحباً بك في نادي التنس. كيف يمكنني مساعدتك؟",
+      "es-ES": "¡Buen día! Bienvenido al club de tenis. ¿En qué le puedo ayudar?",
+      "fr-FR": "Bonjour ! Bienvenue au club de tennis. Comment puis-je vous aider ?",
+      "hi-IN": "शुभ दिन! टेनिस क्लब में आपका स्वागत है। मैं आपकी कैसे मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! Witamy w klubie tenisowym. W czym mogę pomóc?",
+      "ro-RO": "Bună ziua! Bine ați venit la clubul de tenis. Cu ce vă pot ajuta?",
+      "tr-TR": "İyi günler! Tenis kulübüne hoş geldiniz. Size nasıl yardımcı olabilirim?",
+      "uk-UA": "Добрий день! Ласкаво просимо до тенісного клубу. Чим я можу вам допомогти?",
+      "uz-UZ": "Xayrli kun! Tennis klubiga xush kelibsiz. Sizga qanday yordam bera olaman?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Tennisclub",
+        "translation": {
+          "ru-RU": "теннисный клуб",
+          "en-US": "tennis club",
+          "ar-SA": "نادي التنس",
+          "es-ES": "club de tenis",
+          "fr-FR": "club de tennis",
+          "hi-IN": "टेनिस क्लब",
+          "pl-PL": "klub tenisowy",
+          "ro-RO": "club de tenis",
+          "tr-TR": "tenis kulübü",
+          "uk-UA": "тенісний клуб",
+          "uz-UZ": "tennis klubi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag! Ich möchte einen Tennisplatz für heute mieten.",
+        "translation": {
+          "ru-RU": "Добрый день! Я бы хотел арендовать теннисный корт на сегодня.",
+          "en-US": "Good day! I would like to rent a tennis court for today.",
+          "ar-SA": "طاب يومك! أود استئجار ملعب تنس لهذا اليوم.",
+          "es-ES": "¡Buen día! Me gustaría alquilar una pista de tenis para hoy.",
+          "fr-FR": "Bonjour ! Je voudrais louer un court de tennis pour aujourd'hui.",
+          "hi-IN": "शुभ दिन! मैं आज के लिए एक टेनिस कोर्ट किराए पर लेना चाहूँगा।",
+          "pl-PL": "Dzień dobry! Chciałbym wynająć kort tenisowy na dzisiaj.",
+          "ro-RO": "Bună ziua! Aș dori să închiriez un teren de tenis pentru astăzi.",
+          "tr-TR": "İyi günler! Bugün için bir tenis kortu kiralamak istiyorum.",
+          "uk-UA": "Добрий день! Я б хотів орендувати тенісний корт на сьогодні.",
+          "uz-UZ": "Xayrli kun! Men bugun uchun tennis kortini ijaraga olmoqchi edim."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo! Ich möchte gerne heute eine Stunde Tennis spielen.",
+        "translation": {
+          "ru-RU": "Здравствуйте! Я бы хотел сегодня поиграть в теннис один час.",
+          "en-US": "Hello! I would like to play tennis for an hour today.",
+          "ar-SA": "مرحباً! أود لعب التنس لمدة ساعة اليوم.",
+          "es-ES": "¡Hola! Me gustaría jugar al tenis una hora hoy.",
+          "fr-FR": "Bonjour ! J'aimerais jouer au tennis pendant une heure aujourd'hui.",
+          "hi-IN": "नमस्ते! मैं आज एक घंटे टेनिस खेलना चाहूँगा।",
+          "pl-PL": "Cześć! Chciałbym dzisiaj pograć w tenisa przez godzinę.",
+          "ro-RO": "Bună! Aș dori să joc tenis o oră astăzi.",
+          "tr-TR": "Merhaba! Bugün bir saat tenis oynamak istiyorum.",
+          "uk-UA": "Добридень! Я б хотів сьогодні пограти в теніс одну годину.",
+          "uz-UZ": "Salom! Men bugun bir soat tennis o'ynashni xohlardim."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Sehr gerne. Spielen Sie heute lieber drinnen in der Halle oder draußen?",
+    "botTranslation": {
+      "ru-RU": "С удовольствием. Вы предпочитаете играть сегодня внутри в зале или на улице?",
+      "en-US": "With pleasure. Would you rather play indoors in the hall or outdoors today?",
+      "ar-SA": "بكل سرور. هل تفضل اللعب في الداخل في الصالة أم في الخارج اليوم؟",
+      "es-ES": "Con mucho gusto. ¿Prefiere jugar hoy en el interior del pabellón o al aire libre?",
+      "fr-FR": "Avec grand plaisir. Préférez-vous jouer à l'intérieur dans la salle ou à l'extérieur aujourd'hui ?",
+      "hi-IN": "बिल्कुल। क्या आप आज अंदर हॉल में या बाहर खेलना पसंद करेंगे?",
+      "pl-PL": "Bardzo chętnie. Woli Pan/Pani grać dzisiaj wewnątrz w hali, czy na zewnątrz?",
+      "ro-RO": "Cu mare plăcere. Preferați să jucați înăuntru în sală sau afară astăzi?",
+      "tr-TR": "Memnuniyetle. Bugün içeride kapalı alanda mı yoksa dışarıda mı oynamayı tercih edersiniz?",
+      "uk-UA": "Із задоволенням. Ви віддаєте перевагу грати сьогодні всередині в залі чи на вулиці?",
+      "uz-UZ": "Bajonidil. Bugun ichkarida zalda o'ynashni afzal ko'rasizmi yoki tashqarida?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Tennisplatz",
+        "translation": {
+          "ru-RU": "теннисный корт",
+          "en-US": "tennis court",
+          "ar-SA": "ملعب التنس",
+          "es-ES": "pista de tenis",
+          "fr-FR": "court de tennis",
+          "hi-IN": "टेनिस कोर्ट",
+          "pl-PL": "kort tenisowy",
+          "ro-RO": "teren de tenis",
+          "tr-TR": "tenis kortu",
+          "uk-UA": "тенісний корт",
+          "uz-UZ": "tennis korti"
+        }
+      },
+      {
+        "german": "die Halle",
+        "translation": {
+          "ru-RU": "зал / крытый корт",
+          "en-US": "hall / indoor court",
+          "ar-SA": "الصالة المغطاة",
+          "es-ES": "pabellón / pista cubierta",
+          "fr-FR": "salle / court couvert",
+          "hi-IN": "हॉल / इनडोर कोर्ट",
+          "pl-PL": "hala",
+          "ro-RO": "sală",
+          "tr-TR": "salon / kapalı kort",
+          "uk-UA": "зал / критий корт",
+          "uz-UZ": "zal / yopiq kort"
+        }
+      },
+      {
+        "german": "draußen",
+        "translation": {
+          "ru-RU": "снаружи / на улице",
+          "en-US": "outdoors / outside",
+          "ar-SA": "في الخارج",
+          "es-ES": "fuera / al aire libre",
+          "fr-FR": "dehors / à l'extérieur",
+          "hi-IN": "बाहर",
+          "pl-PL": "na zewnątrz",
+          "ro-RO": "afară",
+          "tr-TR": "dışarıda",
+          "uk-UA": "зовні / на вулиці",
+          "uz-UZ": "tashqarida"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Wir möchten gerne draußen an der frischen Luft spielen.",
+        "translation": {
+          "ru-RU": "Мы бы хотели поиграть на улице на свежем воздухе.",
+          "en-US": "We would like to play outdoors in the fresh air.",
+          "ar-SA": "نود اللعب في الخارج في الهواء الطلق.",
+          "es-ES": "Nos gustaría jugar al aire libre.",
+          "fr-FR": "Nous aimerions jouer dehors à l'air frais.",
+          "hi-IN": "हम बाहर ताजी हवा में खेलना चाहेंगे।",
+          "pl-PL": "Chcielibyśmy pograć na zewnątrz na świeżym powietrzu.",
+          "ro-RO": "Am dori să jucăm afară la aer curat.",
+          "tr-TR": "Dışarıda temiz havada oynamak istiyoruz.",
+          "uk-UA": "Ми б хотіли пограти на вулиці на свіжому повітрі.",
+          "uz-UZ": "Biz tashqarida toza havoda o'ynashni xohlaymiz."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Lieber draußen, das Wetter ist heute so schön.",
+        "translation": {
+          "ru-RU": "Лучше на улице, погода сегодня такая хорошая.",
+          "en-US": "Preferably outdoors, the weather is so nice today.",
+          "ar-SA": "نفضل في الخارج، الطقس جميل جداً اليوم.",
+          "es-ES": "Mejor fuera, hace un tiempo precioso hoy.",
+          "fr-FR": "Plutôt dehors, il fait si beau aujourd'hui.",
+          "hi-IN": "बाहर बेहतर रहेगा, आज मौसम बहुत सुहाना है।",
+          "pl-PL": "Lepiej na zewnątrz, pogoda jest dzisiaj taka ładna.",
+          "ro-RO": "Mai degrabă afară, vremea este atât de frumoasă astăzi.",
+          "tr-TR": "Dışarıda tercih ederiz, bugün hava çok güzel.",
+          "uk-UA": "Краще на вулиці, погода сьогодні така гарна.",
+          "uz-UZ": "Yaxshisi tashqarida, bugun ob-havo shunday chiroyli."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Platz Nummer 3 ist draußen noch frei. Haben Sie eigene Schläger dabei?",
+    "botTranslation": {
+      "ru-RU": "Корт номер 3 на улице еще свободен. У вас с собой есть собственные ракетки?",
+      "en-US": "Court number 3 outdoors is still free. Do you have your own rackets with you?",
+      "ar-SA": "الملعب رقم 3 في الخارج لا يزال متاحاً. هل لديكم مضاربكم الخاصة؟",
+      "es-ES": "La pista número 3 al aire libre todavía está libre. ¿Tienen raquetas propias consigo?",
+      "fr-FR": "Le court numéro 3 à l'extérieur est encore libre. Avez-vous vos propres raquettes avec vous ?",
+      "hi-IN": "बाहर कोर्ट नंबर 3 अभी खाली है। क्या आपके पास अपने रैकेट हैं?",
+      "pl-PL": "Kort numer 3 na zewnątrz jest jeszcze wolny. Macie ze sobą własne rakiety?",
+      "ro-RO": "Terenul numărul 3 de afară este încă liber. Aveți rachetele proprii la voi?",
+      "tr-TR": "Dışarıdaki 3 numaralı kort henüz boş. Kendi raketleriniz yanınızda mı?",
+      "uk-UA": "Корт номер 3 на вулиці ще вільний. У вас з собою є власні ракетки?",
+      "uz-UZ": "Tashqaridagi 3-raqamli kort hali bo'sh. O'zingizning raketkalaringiz yoningizdami?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Schläger",
+        "translation": {
+          "ru-RU": "ракетка",
+          "en-US": "racket",
+          "ar-SA": "المضرب",
+          "es-ES": "raqueta",
+          "fr-FR": "raquette",
+          "hi-IN": "रैकेट",
+          "pl-PL": "rakieta",
+          "ro-RO": "rachetă",
+          "tr-TR": "raket",
+          "uk-UA": "ракетка",
+          "uz-UZ": "raketka"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, wir brauchen noch zwei Schläger und ein paar Bälle.",
+        "translation": {
+          "ru-RU": "Нет, нам нужны еще две ракетки и пара мячей.",
+          "en-US": "No, we still need two rackets and a few balls.",
+          "ar-SA": "لا، ما زلنا بحاجة إلى مضربين وبعض الكرات.",
+          "es-ES": "No, necesitamos todavía dos raquetas y algunas pelotas.",
+          "fr-FR": "Non, nous avons encore besoin de deux raquettes et de quelques balles.",
+          "hi-IN": "नहीं, हमें अभी दो रैकेट और कुछ गेंदों की आवश्यकता है।",
+          "pl-PL": "Nie, potrzebujemy jeszcze dwóch rakiet i kilku piłek.",
+          "ro-RO": "Nu, mai avem nevoie de două rachete și câteva mingi.",
+          "tr-TR": "Hayır, hala iki rakete ve birkaç topa ihtiyacımız var.",
+          "uk-UA": "Ні, нам потрібні ще дві ракетки і пара м'ячів.",
+          "uz-UZ": "Yo'q, bizga yana ikkita raketka va bir nechta to'p kerak."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Ich habe leider keine Schläger, kann ich die hier leihen?",
+        "translation": {
+          "ru-RU": "У меня, к сожалению, нет ракеток, я могу взять их здесь напрокат?",
+          "en-US": "Unfortunately I have no rackets, can I rent them here?",
+          "ar-SA": "للأسف ليس لدي أي مضارب، هل يمكنني استئجارها من هنا؟",
+          "es-ES": "Por desgracia no tengo raquetas, ¿puedo alquilarlas aquí?",
+          "fr-FR": "Malheureusement je n'ai pas de raquettes, puis-je les emprunter ici ?",
+          "hi-IN": "दुर्भाग्य से मेरे पास रैकेट नहीं हैं, क्या मैं उन्हें यहाँ किराए पर ले सकता हूँ?",
+          "pl-PL": "Niestety nie mam rakiet, czy mogę je tu wypożyczyć?",
+          "ro-RO": "Din păcate nu am rachete, le pot împrumuta de aici?",
+          "tr-TR": "Ne yazık ki raketim yok, onları buradan kiralayabilir miyim?",
+          "uk-UA": "У мене, на жаль, немає ракеток, я можу взяти їх тут напрокат?",
+          "uz-UZ": "Afsuski, menda raketkalar yo'q, ularni shu yerdan ijaraga olsam bo'ladimi?"
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Ja, natürlich. Sie können Schläger und Bälle hier leihen. Wie lange möchten Sie spielen?",
+    "botTranslation": {
+      "ru-RU": "Да, конечно. Вы можете взять ракетки и мячи здесь напрокат. Как долго вы хотите играть?",
+      "en-US": "Yes, of course. You can rent rackets and balls here. How long do you want to play?",
+      "ar-SA": "نعم، بالطبع. يمكنك استئجار المضارب والكرات من هنا. كم من الوقت تود اللعب؟",
+      "es-ES": "Sí, por supuesto. Pueden alquilar raquetas y pelotas aquí. ¿Cuánto tiempo quieren jugar?",
+      "fr-FR": "Oui, bien sûr. Vous pouvez emprunter des raquettes et des balles ici. Combien de temps souhaitez-vous jouer ?",
+      "hi-IN": "हाँ, बिल्कुल। आप यहाँ रैकेट और गेंदें किराए पर ले सकते हैं। आप कितनी देर खेलना चाहते हैं?",
+      "pl-PL": "Tak, oczywiście. Można u nas wypożyczyć rakiety i piłki. Jak długo chcą państwo grać?",
+      "ro-RO": "Da, desigur. Puteți împrumuta rachete și mingi de aici. Cât timp doriți să jucați?",
+      "tr-TR": "Evet, tabii ki. Raketleri ve topları buradan kiralayabilirsiniz. Ne kadar süre oynamak istiyorsunuz?",
+      "uk-UA": "Так, звісно. Ви можете взяти ракетки та м'ячі тут напрокат. Як довго ви хочете грати?",
+      "uz-UZ": "Ha, albatta. Raketka va to'plarni shu yerdan ijaraga olishingiz mumkin. Qancha vaqt o'ynamoqchisiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "leihen",
+        "translation": {
+          "ru-RU": "брать напрокат",
+          "en-US": "to rent / to borrow",
+          "ar-SA": "يستأجر / يستعير",
+          "es-ES": "alquilar / tomar prestado",
+          "fr-FR": "emprunter / louer",
+          "hi-IN": "किराए पर लेना / उधार लेना",
+          "pl-PL": "wypożyczać",
+          "ro-RO": "a împrumuta",
+          "tr-TR": "kiralamak / ödünç almak",
+          "uk-UA": "брати напрокат",
+          "uz-UZ": "ijaraga olmoq"
+        }
+      },
+      {
+        "german": "mieten",
+        "translation": {
+          "ru-RU": "арендовать",
+          "en-US": "to rent",
+          "ar-SA": "يستأجر",
+          "es-ES": "alquilar",
+          "fr-FR": "louer",
+          "hi-IN": "किराए पर लेना",
+          "pl-PL": "wynajmować",
+          "ro-RO": "a închiria",
+          "tr-TR": "kiralamak",
+          "uk-UA": "орендувати",
+          "uz-UZ": "ijaraga olmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Wir möchten genau eine Stunde spielen.",
+        "translation": {
+          "ru-RU": "Мы хотели бы играть ровно один час.",
+          "en-US": "We would like to play for exactly one hour.",
+          "ar-SA": "نود أن نلعب لمدة ساعة بالضبط.",
+          "es-ES": "Nos gustaría jugar exactamente una hora.",
+          "fr-FR": "Nous aimerions jouer exactement une heure.",
+          "hi-IN": "हम ठीक एक घंटे खेलना चाहेंगे।",
+          "pl-PL": "Chcielibyśmy pograć dokładnie godzinę.",
+          "ro-RO": "Am dori să jucăm exact o oră.",
+          "tr-TR": "Tam olarak bir saat oynamak istiyoruz.",
+          "uk-UA": "Ми хотіли б грати рівно одну годину.",
+          "uz-UZ": "Biz roppa-rosa bir soat o'ynamoqchimiz."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Eine Stunde reicht für uns am Anfang.",
+        "translation": {
+          "ru-RU": "Для начала нам хватит одного часа.",
+          "en-US": "One hour is enough for us at the beginning.",
+          "ar-SA": "ساعة واحدة تكفينا في البداية.",
+          "es-ES": "Una hora es suficiente para nosotros al principio.",
+          "fr-FR": "Une heure nous suffit pour commencer.",
+          "hi-IN": "शुरुआत में हमारे लिए एक घंटा काफी है।",
+          "pl-PL": "Na początek wystarczy nam godzina.",
+          "ro-RO": "O oră ne ajunge pentru început.",
+          "tr-TR": "Başlangıç için bir saat bize yeterli.",
+          "uk-UA": "Для початку нам вистачить однієї години.",
+          "uz-UZ": "Boshlanishiga bizga bir soat yetadi."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Alles klar. Eine Stunde spielen plus Material kostet zusammen 40 Euro.",
+    "botTranslation": {
+      "ru-RU": "Все понятно. Один час игры плюс инвентарь стоит вместе 40 евро.",
+      "en-US": "All right. Playing for an hour plus the equipment costs 40 euros in total.",
+      "ar-SA": "حسناً. اللعب لمدة ساعة زائد المعدات يكلف إجمالاً 40 يورو.",
+      "es-ES": "Entendido. Jugar una hora más el material cuesta 40 euros en total.",
+      "fr-FR": "D'accord. Jouer une heure plus le matériel coûte au total 40 euros.",
+      "hi-IN": "समझ गया। एक घंटे खेलना और उपकरण मिलाकर कुल 40 यूरो खर्च होते हैं।",
+      "pl-PL": "Wszystko jasne. Godzina gry plus sprzęt kosztuje łącznie 40 euro.",
+      "ro-RO": "Am înțeles. O oră de joc plus materialul costă în total 40 de euro.",
+      "tr-TR": "Anlaşıldı. Bir saatlik oyun artı malzeme toplamda 40 Euro tutuyor.",
+      "uk-UA": "Все зрозуміло. Одна година гри плюс інвентар коштує разом 40 євро.",
+      "uz-UZ": "Tushunarli. Bir soat o'ynash va jihozlar birgalikda 40 yevro turadi."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Das ist ein guter Preis. Ich bezahle direkt.",
+        "translation": {
+          "ru-RU": "Это хорошая цена. Я заплачу прямо сейчас.",
+          "en-US": "That is a good price. I'll pay straight away.",
+          "ar-SA": "هذا سعر جيد. سأدفع مباشرة.",
+          "es-ES": "Es un buen precio. Pago ahora mismo.",
+          "fr-FR": "C'est un bon prix. Je paie tout de suite.",
+          "hi-IN": "यह अच्छी कीमत है। मैं तुरंत भुगतान करता हूँ।",
+          "pl-PL": "To dobra cena. Zapłacę od razu.",
+          "ro-RO": "Este un preț bun. Plătesc direct.",
+          "tr-TR": "Bu iyi bir fiyat. Hemen ödüyorum.",
+          "uk-UA": "Це хороша ціна. Я заплачу прямо зараз.",
+          "uz-UZ": "Bu yaxshi narx. Men darhol to'layman."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Das klingt fair. Ich bezahle alles bar.",
+        "translation": {
+          "ru-RU": "Звучит справедливо. Я оплачу все наличными.",
+          "en-US": "That sounds fair. I will pay everything in cash.",
+          "ar-SA": "هذا يبدو عادلاً. سأدفع كل شيء نقداً.",
+          "es-ES": "Suena justo. Pago todo en efectivo.",
+          "fr-FR": "Cela semble juste. Je paie tout en espèces.",
+          "hi-IN": "यह उचित लगता है। मैं सब कुछ नकद भुगतान करूँगा।",
+          "pl-PL": "To brzmi uczciwie. Zapłacę za wszystko gotówką.",
+          "ro-RO": "Sună corect. Plătesc totul cash.",
+          "tr-TR": "Kulağa adil geliyor. Hepsini nakit ödeyeceğim.",
+          "uk-UA": "Звучить справедливо. Я оплачу все готівкою.",
+          "uz-UZ": "Bu adolatli eshitilyapti. Hammasini naqd to'layman."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Vielen Dank. Brauchen Sie vielleicht auch noch etwas zu trinken für das Spiel?",
+    "botTranslation": {
+      "ru-RU": "Большое спасибо. Возможно, вам также нужно что-нибудь попить на время игры?",
+      "en-US": "Thank you very much. Do you perhaps also need something to drink for the game?",
+      "ar-SA": "شكراً جزيلاً. هل تحتاج ربما أيضاً إلى شيء تشربه أثناء المباراة؟",
+      "es-ES": "Muchas gracias. ¿Quizás también necesitan algo de beber para el partido?",
+      "fr-FR": "Merci beaucoup. Avez-vous peut-être aussi besoin de quelque chose à boire pour le match ?",
+      "hi-IN": "बहुत-बहुत धन्यवाद। क्या आपको खेल के लिए कुछ पीने की भी आवश्यकता है?",
+      "pl-PL": "Dziękuję bardzo. Może potrzebujecie państwo również czegoś do picia na czas gry?",
+      "ro-RO": "Mulțumesc mult. Aveți nevoie poate și de ceva de băut pentru meci?",
+      "tr-TR": "Çok teşekkürler. Oyun için içecek bir şeylere de ihtiyacınız var mı?",
+      "uk-UA": "Велике спасибі. Можливо, вам також потрібно що-небудь попити на час гри?",
+      "uz-UZ": "Katta rahmat. Balki o'yin davomida ichishga ham biror narsa kerakdir?"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Ja, geben Sie mir bitte noch zwei Flaschen Wasser.",
+        "translation": {
+          "ru-RU": "Да, дайте мне, пожалуйста, еще две бутылки воды.",
+          "en-US": "Yes, please give me two bottles of water as well.",
+          "ar-SA": "نعم، أعطني زجاجتين من الماء من فضلك.",
+          "es-ES": "Sí, deme también dos botellas de agua, por favor.",
+          "fr-FR": "Oui, donnez-moi s'il vous plaît encore deux bouteilles d'eau.",
+          "hi-IN": "हाँ, कृपया मुझे पानी की दो बोतलें भी दें।",
+          "pl-PL": "Tak, proszę podać mi jeszcze dwie butelki wody.",
+          "ro-RO": "Da, vă rog să-mi dați încă două sticle de apă.",
+          "tr-TR": "Evet, lütfen bana iki şişe su daha verin.",
+          "uk-UA": "Так, дайте мені, будь ласка, ще дві пляшки води.",
+          "uz-UZ": "Ha, iltimos, yana ikkita idishda suv ham bering."
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Gerne, zwei kleine Flaschen Wasser wären toll.",
+        "translation": {
+          "ru-RU": "С удовольствием, две маленькие бутылки воды были бы кстати.",
+          "en-US": "Gladly, two small bottles of water would be great.",
+          "ar-SA": "بكل سرور، زجاجتان صغيرتان من الماء ستكونان رائعتين.",
+          "es-ES": "Con gusto, dos botellas de agua pequeñas estarían genial.",
+          "fr-FR": "Volontiers, deux petites bouteilles d'eau seraient super.",
+          "hi-IN": "खुशी से, पानी की दो छोटी बोतलें बढ़िया रहेंगी।",
+          "pl-PL": "Chętnie, dwie małe butelki wody byłyby super.",
+          "ro-RO": "Cu plăcere, două sticle mici de apă ar fi grozave.",
+          "tr-TR": "Memnuniyetle, iki küçük şişe su harika olurdu.",
+          "uk-UA": "Із задоволенням, дві маленькі пляшки води були б доречними.",
+          "uz-UZ": "Bajonidil, ikkita kichik idishdagi suv bo'lsa zo'r bo'lardi."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Hier ist Ihr Wasser und das Material. Platz 3 ist direkt da vorne rechts.",
+    "botTranslation": {
+      "ru-RU": "Вот ваша вода и инвентарь. Корт 3 находится прямо вон там впереди справа.",
+      "en-US": "Here is your water and the equipment. Court 3 is right up there on the right.",
+      "ar-SA": "إليك الماء والمعدات. الملعب 3 هناك في الأمام على اليمين مباشرة.",
+      "es-ES": "Aquí tienen su agua y el material. La pista 3 está justo ahí delante a la derecha.",
+      "fr-FR": "Voici votre eau et le matériel. Le court 3 est juste là devant à droite.",
+      "hi-IN": "यहाँ आपका पानी और उपकरण हैं। कोर्ट 3 ठीक सामने दाईं ओर है।",
+      "pl-PL": "Oto wasza woda i sprzęt. Kort 3 jest tuż z przodu po prawej stronie.",
+      "ro-RO": "Aici este apa și materialul. Terenul 3 este chiar în față, pe dreapta.",
+      "tr-TR": "İşte suyunuz ve malzemeleriniz. 3 numaralı kort hemen ileride sağda.",
+      "uk-UA": "Ось ваша вода та інвентар. Корт 3 знаходиться прямо он там попереду праворуч.",
+      "uz-UZ": "Mana sizning suvingiz va jihozlaringiz. 3-kort to'g'rida, o'ng tomonda joylashgan."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Perfekt, wir gehen sofort hin. Danke!",
+        "translation": {
+          "ru-RU": "Идеально, мы сейчас же идем туда. Спасибо!",
+          "en-US": "Perfect, we will head there immediately. Thanks!",
+          "ar-SA": "ممتاز، سنذهب إلى هناك فوراً. شكراً!",
+          "es-ES": "Perfecto, vamos para allá ahora mismo. ¡Gracias!",
+          "fr-FR": "Parfait, nous y allons tout de suite. Merci !",
+          "hi-IN": "बिल्कुल, हम तुरंत वहाँ जा रहे हैं। धन्यवाद!",
+          "pl-PL": "Idealnie, od razu tam idziemy. Dziękuję!",
+          "ro-RO": "Perfect, mergem imediat acolo. Mulțumesc!",
+          "tr-TR": "Mükemmel, hemen oraya gidiyoruz. Teşekkürler!",
+          "uk-UA": "Ідеально, ми зараз же йдемо туди. Дякую!",
+          "uz-UZ": "Ajoyib, biz hoziroq o'sha yerga boramiz. Rahmat!"
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Vielen Dank für die Hilfe, wir fangen dann an.",
+        "translation": {
+          "ru-RU": "Большое спасибо за помощь, мы тогда начинаем.",
+          "en-US": "Thank you very much for the help, we will start then.",
+          "ar-SA": "شكراً جزيلاً على المساعدة، سنبدأ إذن.",
+          "es-ES": "Muchas gracias por la ayuda, entonces empezamos.",
+          "fr-FR": "Merci beaucoup pour l'aide, on va commencer alors.",
+          "hi-IN": "मदद के लिए बहुत-बहुत धन्यवाद, तो अब हम शुरू करते हैं।",
+          "pl-PL": "Bardzo dziękuję za pomoc, w takim razie zaczynamy.",
+          "ro-RO": "Vă mulțumesc mult pentru ajutor, atunci începem.",
+          "tr-TR": "Yardımınız için çok teşekkürler, o zaman başlıyoruz.",
+          "uk-UA": "Велике спасибі за допомогу, ми тоді починаємо.",
+          "uz-UZ": "Yordam uchun katta rahmat, unda biz boshlaymiz."
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Sehr gerne! Viel Spaß beim Match. Bitte schön!",
+    "botTranslation": {
+      "ru-RU": "С удовольствием! Отличного вам матча. Пожалуйста!",
+      "en-US": "With pleasure! Have fun at the match. You're welcome!",
+      "ar-SA": "بكل سرور! استمتعوا بالمباراة. على الرحب والسعة!",
+      "es-ES": "¡Con mucho gusto! Que se diviertan en el partido. ¡De nada!",
+      "fr-FR": "Avec grand plaisir ! Bon match à vous. Je vous en prie !",
+      "hi-IN": "मुझे खुशी हुई! मैच का मज़ा लें। आपका स्वागत है!",
+      "pl-PL": "Bardzo proszę! Udanej gry w meczu. Proszę bardzo!",
+      "ro-RO": "Cu mare plăcere! Distracție plăcută la meci. Cu plăcere!",
+      "tr-TR": "Memnuniyetle! Maçta iyi eğlenceler. Rica ederim!",
+      "uk-UA": "Із задоволенням! Чудового вам матчу. Будь ласка!",
+      "uz-UZ": "Jonim bilan! O'yinda yaxshi hordiq chiqaring. Arzimaydi!"
+    },
+    "vocabulary": [
+      {
+        "german": "das Match",
+        "translation": {
+          "ru-RU": "матч / игра",
+          "en-US": "match / game",
+          "ar-SA": "المباراة",
+          "es-ES": "partido / encuentro",
+          "fr-FR": "match / partie",
+          "hi-IN": "मैच / खेल",
+          "pl-PL": "mecz",
+          "ro-RO": "meci",
+          "tr-TR": "maç / karşılaşma",
+          "uk-UA": "матч / гра",
+          "uz-UZ": "match / o'yin"
+        }
+      }
+    ],
+    "options": [],
+    "defaultNext": null
+  }
+}

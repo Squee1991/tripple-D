@@ -1,0 +1,533 @@
+{
+  "start": {
+    "botText": "Guten Tag! Suchen Sie etwas Bestimmtes bei uns?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Вы ищете у нас что-то конкретное?",
+      "en-US": "Good day! Are you looking for something specific here?",
+      "ar-SA": "طاب يومك! هل تبحث عن شيء محدد لدينا؟",
+      "es-ES": "¡Buen día! ¿Busca algo en particular aquí?",
+      "fr-FR": "Bonjour ! Cherchez-vous quelque chose de précis chez nous ?",
+      "hi-IN": "शुभ दिन! क्या आप हमारे यहाँ कुछ खास ढूंढ रहे हैं?",
+      "pl-PL": "Dzień dobry! Szuka Pan/Pani u nas czegoś konkretnego?",
+      "ro-RO": "Bună ziua! Căutați ceva anume la noi?",
+      "tr-TR": "İyi günler! Bizde belirli bir şey mi arıyorsunuz?",
+      "uk-UA": "Добрий день! Ви шукаєте у нас щось конкретне?",
+      "uz-UZ": "Xayrli kun! Bizdan biron bir maxsus narsa qidiryapsizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Sportgeschäft",
+        "translation": {
+          "ru-RU": "спортивный магазин",
+          "en-US": "sports store",
+          "ar-SA": "متجر الرياضة",
+          "es-ES": "tienda de deportes",
+          "fr-FR": "magasin de sport",
+          "hi-IN": "खेल का सामान मिलने की दुकान",
+          "pl-PL": "sklep sportowy",
+          "ro-RO": "magazin de sport",
+          "tr-TR": "spor mağazası",
+          "uk-UA": "спортивний магазин",
+          "uz-UZ": "sport do'koni"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag! Ich suche bequeme Laufschuhe für den Park.",
+        "translation": {
+          "ru-RU": "Добрый день! Я ищу удобные беговые кроссовки для парка.",
+          "en-US": "Good day! I am looking for comfortable running shoes for the park.",
+          "ar-SA": "طاب يومك! أبحث عن أحذية ركض مريحة للحديقة.",
+          "es-ES": "¡Buen día! Busco unas zapatillas de correr cómodas para el parque.",
+          "fr-FR": "Bonjour ! Je cherche des chaussures de course confortables pour le parc.",
+          "hi-IN": "शुभ दिन! मैं पार्क के लिए आरामदायक दौड़ने वाले जूते ढूंढ रहा हूँ।",
+          "pl-PL": "Dzień dobry! Szukam wygodnych butów do biegania po parku.",
+          "ro-RO": "Bună ziua! Caut adidași de alergat comozi pentru parc.",
+          "tr-TR": "İyi günler! Park için rahat koşu ayakkabıları arıyorum.",
+          "uk-UA": "Добрий день! Я шукаю зручні бігові кросівки для парку.",
+          "uz-UZ": "Xayrli kun! Men park uchun qulay yugurish krossovkalarini qidiryapman."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo! Ich brauche neue Sportschuhe für mein Training draußen.",
+        "translation": {
+          "ru-RU": "Здравствуйте! Мне нужны новые спортивные кроссовки для тренировок на улице.",
+          "en-US": "Hello! I need new sports shoes for my outdoor training.",
+          "ar-SA": "مرحباً! أحتاج إلى أحذية رياضية جديدة لتدريبي في الخارج.",
+          "es-ES": "¡Hola! Necesito zapatillas de deporte nuevas para mi entrenamiento al aire libre.",
+          "fr-FR": "Bonjour ! J'ai besoin de nouvelles chaussures de sport pour mon entraînement en extérieur.",
+          "hi-IN": "नमस्ते! मुझे बाहर अपनी ट्रेनिंग के लिए नए खेल के जूतों की आवश्यकता है।",
+          "pl-PL": "Cześć! Potrzebuję nowych butów sportowych na mój trening na zewnątrz.",
+          "ro-RO": "Bună! Am nevoie de pantofi sport noi pentru antrenamentul meu afară.",
+          "tr-TR": "Merhaba! Dışarıdaki antrenmanım için yeni spor ayakkabılarına ihtiyacım var.",
+          "uk-UA": "Добридень! Мені потрібні нові спортивні кросівки для тренувань на вулиці.",
+          "uz-UZ": "Salom! Menga ko'chadagi mashg'ulotim uchun yangi sport krossovkalari kerak."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Da sind Sie hier genau richtig. Welche Schuhgröße haben Sie denn?",
+    "botTranslation": {
+      "ru-RU": "Тогда вы обратились точно по адресу. А какой у вас размер обуви?",
+      "en-US": "Then you are exactly in the right place here. What shoe size do you have?",
+      "ar-SA": "إذن أنت في المكان الصحيح تماماً. ما هو مقاس حذائك؟",
+      "es-ES": "Entonces está en el lugar correcto. ¿Qué talla de zapatos tiene?",
+      "fr-FR": "Alors vous êtes exactement au bon endroit ici. Quelle pointure faites-vous ?",
+      "hi-IN": "तो आप बिल्कुल सही जगह पर हैं। आपके जूते का साइज़ क्या है?",
+      "pl-PL": "To jest Pan/Pani we właściwym miejscu. Jaki ma Pan/Pani rozmiar buta?",
+      "ro-RO": "Atunci ați ajuns exact unde trebuie. Ce mărime purtați la pantofi?",
+      "tr-TR": "O zaman tam doğru yerdesiniz. Ayakkabı numaranız kaç?",
+      "uk-UA": "Тоді ви звернулися точно за адресою. А який у вас розмір взуття?",
+      "uz-UZ": "Unda ayni kerakli joyga kelibsiz. Oyoq kiyimingiz o'lchami qanday?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Laufschuhe",
+        "translation": {
+          "ru-RU": "беговые кроссовки",
+          "en-US": "running shoes",
+          "ar-SA": "أحذية الركض",
+          "es-ES": "zapatillas de correr",
+          "fr-FR": "chaussures de course",
+          "hi-IN": "दौड़ने वाले जूते",
+          "pl-PL": "buty do biegania",
+          "ro-RO": "adidași de alergat",
+          "tr-TR": "koşu ayakkabıları",
+          "uk-UA": "бігові кросівки",
+          "uz-UZ": "yugurish krossovkalari"
+        }
+      },
+      {
+        "german": "die Schuhgröße",
+        "translation": {
+          "ru-RU": "размер обуви",
+          "en-US": "shoe size",
+          "ar-SA": "مقاس الحذاء",
+          "es-ES": "talla de zapatos",
+          "fr-FR": "pointure",
+          "hi-IN": "जूते का साइज़",
+          "pl-PL": "rozmiar buta",
+          "ro-RO": "mărimea la pantofi",
+          "tr-TR": "ayakkabı numarası",
+          "uk-UA": "розмір взуття",
+          "uz-UZ": "oyoq kiyim o'lchami"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Normalerweise trage ich Größe 42 .",
+        "translation": {
+          "ru-RU": "Обычно я ношу 42 размер.",
+          "en-US": "Normally I wear size 42.",
+          "ar-SA": "عادة أرتدي مقاس 42.",
+          "es-ES": "Normalmente llevo la talla 42.",
+          "fr-FR": "Normalement je fais du 42.",
+          "hi-IN": "आमतौर पर मैं 42 साइज़ पहनता हूँ।",
+          "pl-PL": "Zazwyczaj noszę rozmiar 42.",
+          "ro-RO": "În mod normal port mărimea 42.",
+          "tr-TR": "Normalde 42 numara giyiyorum.",
+          "uk-UA": "Зазвичай я ношу 42 розмір.",
+          "uz-UZ": "Odatda 42 o'lcham kiyaman."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Meine Größe ist 43. Manchmal brauche ich etwas mehr Platz.",
+        "translation": {
+          "ru-RU": "Мой размер 43. Иногда мне нужно немного больше места.",
+          "en-US": "My size is 43. Sometimes I need a little more space.",
+          "ar-SA": "مقاسي 43. أحياناً أحتاج إلى مساحة أكبر قليلاً.",
+          "es-ES": "Mi talla es 43. A veces necesito un poco más de espacio.",
+          "fr-FR": "Ma pointure est 43. Parfois j'ai besoin d'un peu plus de place.",
+          "hi-IN": "मेरा साइज़ 43 है। कभी-कभी मुझे थोड़ी अधिक जगह चाहिए होती है।",
+          "pl-PL": "Mój rozmiar to 43. Czasami potrzebuję trochę więcej miejsca.",
+          "ro-RO": "Mărimea mea este 43. Uneori am nevoie de puțin mai mult spațiu.",
+          "tr-TR": "Numaram 43. Bazen biraz daha fazla alana ihtiyacım oluyor.",
+          "uk-UA": "Мій розмір 43. Іноді мені потрібно трохи більше місця.",
+          "uz-UZ": "Mening o'lchamim 43. Ba'zan menga biroz ko'proq joy kerak bo'ladi."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Alles klar. Beim Laufen nimmt man oft eine halbe Nummer größer. Ich habe hier zwei sehr beliebte Modelle.",
+    "botTranslation": {
+      "ru-RU": "Всё понятно. Для бега часто берут на полразмера больше. У меня здесь есть две очень популярные модели.",
+      "en-US": "All right. When running, you often take half a size larger. I have two very popular models here.",
+      "ar-SA": "فهمت. عند الركض نأخذ غالباً مقاساً أكبر بنصف درجة. لدي هنا نموذجان مشهوران جداً.",
+      "es-ES": "Entendido. Al correr se suele tomar media talla más. Aquí tengo dos modelos muy populares.",
+      "fr-FR": "Très bien. Pour courir, on prend souvent une demi-pointure au-dessus. J'ai ici deux modèles très populaires.",
+      "hi-IN": "ठीक है। दौड़ते समय अक्सर आधा साइज़ बड़ा लेते हैं। मेरे पास यहाँ दो बहुत लोकप्रिय मॉडल हैं।",
+      "pl-PL": "Wszystko jasne. Do biegania często bierze się o pół numeru większe. Mam tu dwa bardzo popularne modele.",
+      "ro-RO": "Am înțeles. La alergat se ia adesea o jumătate de număr mai mare. Am aici două modele foarte populare.",
+      "tr-TR": "Anlaşıldı. Koşarken genellikle yarım numara büyük alınır. Burada çok popüler iki modelim var.",
+      "uk-UA": "Все зрозуміло. Для бігу часто беруть на пів розміру більше. У мене тут є дві дуже популярні моделі.",
+      "uz-UZ": "Tushunarli. Yugurishda ko'pincha yarim o'lcham katta olinadi. Menda bu yerda ikkita juda mashhur model bor."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Das schwarze Paar sieht toll aus. Ist die Sohle weich?",
+        "translation": {
+          "ru-RU": "Черная пара выглядит отлично. У них мягкая подошва?",
+          "en-US": "The black pair looks great. Is the sole soft?",
+          "ar-SA": "الزوج الأسود يبدو رائعاً. هل النعل ناعم؟",
+          "es-ES": "El par negro se ve genial. ¿La suela es blanda?",
+          "fr-FR": "La paire noire est superbe. La semelle est-elle souple ?",
+          "hi-IN": "काले रंग की जोड़ी बहुत अच्छी लग रही है। क्या सोल मुलायम है?",
+          "pl-PL": "Czarna para wygląda świetnie. Czy podeszwa jest miękka?",
+          "ro-RO": "Perechea neagră arată grozav. Talpa este moale?",
+          "tr-TR": "Siyah çift harika görünüyor. Tabanı yumuşak mı?",
+          "uk-UA": "Чорна пара виглядає чудово. У них м'яка підошва?",
+          "uz-UZ": "Qora juftlik ajoyib ko'rinyapti. Tagligi yumshoqmi?"
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Das blaue Paar gefällt mir. Gibt der Schuh guten Halt?",
+        "translation": {
+          "ru-RU": "Мне нравится синяя пара. Они хорошо держат ногу?",
+          "en-US": "I like the blue pair. Does the shoe provide good support?",
+          "ar-SA": "يعجبني الزوج الأزرق. هل الحذاء يوفر دعماً جيداً؟",
+          "es-ES": "Me gusta el par azul. ¿Da el zapato un buen soporte?",
+          "fr-FR": "J'aime bien la paire bleue. La chaussure offre-t-elle un bon maintien ?",
+          "hi-IN": "मुझे नीली जोड़ी पसंद है। क्या जूता अच्छी पकड़ देता है?",
+          "pl-PL": "Podoba mi się niebieska para. Czy but dobrze trzyma stopę?",
+          "ro-RO": "Îmi place perechea albastră. Oferă pantoful o susținere bună?",
+          "tr-TR": "Mavi çift hoşuma gitti. Ayakkabı iyi destek sağlıyor mu?",
+          "uk-UA": "Мені подобається синя пара. Вони добре тримають ногу?",
+          "uz-UZ": "Menga ko'k juftlik yoqdi. Krossovka oyoqni yaxshi ushlaydimi?"
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Ja, absolut! Dieses Modell hat eine weiche Sohle und eine sehr gute Dämpfung für die Gelenke. Sie können den Schuh gerne anprobieren.",
+    "botTranslation": {
+      "ru-RU": "Да, безусловно! У этой модели мягкая подошва и очень хорошая амортизация для суставов. Вы можете с удовольствием примерить этот кроссовок.",
+      "en-US": "Yes, absolutely! This model has a soft sole and very good cushioning for the joints. You are welcome to try the shoe on.",
+      "ar-SA": "نعم، بالتأكيد! يحتوي هذا النموذج على نعل ناعم وتخميد جيد جداً للمفاصل. تفضل بتجربة الحذاء.",
+      "es-ES": "¡Sí, por supuesto! Este modelo tiene una suela blanda y muy buena amortiguación para las articulaciones. Puede probarse el zapato con gusto.",
+      "fr-FR": "Oui, absolument ! Ce modèle a une semelle souple et un très bon amorti pour les articulations. Vous pouvez volontiers essayer la chaussure.",
+      "hi-IN": "हाँ, बिल्कुल! इस मॉडल में एक मुलायम सोल और जोड़ों के लिए बहुत अच्छी कुशनिंग है। आप खुशी से जूता आज़मा सकते हैं।",
+      "pl-PL": "Tak, absolutnie! Ten model ma miękką podeszwę i bardzo dobrą amortyzację dla stawów. Może Pan/Pani śmiało przymierzyć buta.",
+      "ro-RO": "Da, categoric! Acest model are o talpă moale și o amortizare foarte bună pentru articulații. Puteți proba pantoful cu plăcere.",
+      "tr-TR": "Evet, kesinlikle! Bu modelin yumuşak bir tabanı ve eklemler için çok iyi bir yastıklaması var. Ayakkabıyı memnuniyetle deneyebilirsiniz.",
+      "uk-UA": "Так, безумовно! Ця модель має м'яку підошву і дуже хорошу амортизацію для суглобів. Ви можете із задоволенням приміряти кросівок.",
+      "uz-UZ": "Ha, albatta! Bu model yumshoq taglikka va bo'g'imlar uchun juda yaxshi amortizatsiyaga ega. Bemalol kiyib ko'rishingiz mumkin."
+    },
+    "vocabulary": [
+      {
+        "german": "die Sohle",
+        "translation": {
+          "ru-RU": "подошва",
+          "en-US": "sole",
+          "ar-SA": "النعل",
+          "es-ES": "suela",
+          "fr-FR": "semelle",
+          "hi-IN": "सोल",
+          "pl-PL": "podeszwa",
+          "ro-RO": "talpă",
+          "tr-TR": "taban",
+          "uk-UA": "підошва",
+          "uz-UZ": "taglik"
+        }
+      },
+      {
+        "german": "die Dämpfung",
+        "translation": {
+          "ru-RU": "амортизация",
+          "en-US": "cushioning",
+          "ar-SA": "التخميد / امتصاص الصدمات",
+          "es-ES": "amortiguación",
+          "fr-FR": "amorti",
+          "hi-IN": "कुशनिंग / झटके सहना",
+          "pl-PL": "amortyzacja",
+          "ro-RO": "amortizare",
+          "tr-TR": "yastıklama",
+          "uk-UA": "амортизація",
+          "uz-UZ": "amortizatsiya"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke. Ich ziehe sie gleich mal an und laufe ein paar Schritte.",
+        "translation": {
+          "ru-RU": "Спасибо. Я сейчас же надену их и пройду пару шагов.",
+          "en-US": "Thanks. I'll put them on right away and walk a few steps.",
+          "ar-SA": "شكراً. سأرتديها الآن وأمشي بضع خطوات.",
+          "es-ES": "Gracias. Me los pongo ahora mismo y doy unos pasos.",
+          "fr-FR": "Merci. Je les mets tout de suite et je fais quelques pas.",
+          "hi-IN": "धन्यवाद। मैं अभी इन्हें पहनता हूँ और कुछ कदम चलता हूँ।",
+          "pl-PL": "Dziękuję. Od razu je założę i przejdę kilka kroków.",
+          "ro-RO": "Mulțumesc. Îi încalț chiar acum și fac câțiva pași.",
+          "tr-TR": "Teşekkürler. Hemen giyip birkaç adım yürüyeceğim.",
+          "uk-UA": "Дякую. Я зараз же одягну їх і пройду кілька кроків.",
+          "uz-UZ": "Rahmat. Ularni hoziroq kiyib ko'raman va bir necha qadam yuraman."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Super. Wo kann ich mich kurz hinsetzen zum Anziehen?",
+        "translation": {
+          "ru-RU": "Супер. Где я могу ненадолго присесть, чтобы обуться?",
+          "en-US": "Super. Where can I sit down briefly to put them on?",
+          "ar-SA": "ممتاز. أين يمكنني الجلوس لفترة وجيزة لارتدائها؟",
+          "es-ES": "Súper. ¿Dónde puedo sentarme un momento para ponérmelos?",
+          "fr-FR": "Super. Où puis-je m'asseoir brièvement pour les mettre ?",
+          "hi-IN": "बढ़िया। इन्हें पहनने के लिए मैं थोड़ी देर कहाँ बैठ सकता हूँ?",
+          "pl-PL": "Super. Gdzie mogę usiąść na chwilę, żeby je ubrać?",
+          "ro-RO": "Super. Unde mă pot așeza puțin pentru a mă încălța?",
+          "tr-TR": "Süper. Giymek için kısaca nereye oturabilirim?",
+          "uk-UA": "Супер. Де я можу ненадовго сісти, щоб взутися?",
+          "uz-UZ": "Ajoyib. Ularni kiyib olish uchun qayerga qisqacha o'tirsam bo'ladi?"
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Direkt dort auf der Bank. Wie fühlt sich das Modell am Fuß an?",
+    "botTranslation": {
+      "ru-RU": "Прямо там на скамейке. Как ощущается эта модель на ноге?",
+      "en-US": "Right there on the bench. How does the model feel on the foot?",
+      "ar-SA": "مباشرة هناك على المقعد. كيف يبدو هذا النموذج على القدم؟",
+      "es-ES": "Directamente allí en el banco. ¿Cómo se siente el modelo en el pie?",
+      "fr-FR": "Juste là sur le banc. Comment le modèle est-il ressenti au pied ?",
+      "hi-IN": "सीधे वहाँ बेंच पर। पैर में यह मॉडल कैसा महसूस हो रहा है?",
+      "pl-PL": "Prosto tam na ławce. Jak ten model leży na stopie?",
+      "ro-RO": "Chiar acolo pe bancă. Cum se simte modelul pe picior?",
+      "tr-TR": "Doğrudan oradaki bankta. Model ayakta nasıl hissettiriyor?",
+      "uk-UA": "Прямо там на лавці. Як відчувається ця модель на нозі?",
+      "uz-UZ": "Anavi yerdagi skameykada. Model oyoqda qanday turibdi?"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Sie passen perfekt und drücken überhaupt nicht.",
+        "translation": {
+          "ru-RU": "Они сидят идеально и совершенно не жмут.",
+          "en-US": "They fit perfectly and don't pinch at all.",
+          "ar-SA": "إنها تناسب تماماً ولا تضغط على الإطلاق.",
+          "es-ES": "Me quedan perfectos y no aprietan nada.",
+          "fr-FR": "Elles vont parfaitement et ne serrent pas du tout.",
+          "hi-IN": "ये बिल्कुल फिट हैं और बिल्कुल भी नहीं चुभते।",
+          "pl-PL": "Pasują idealnie i w ogóle nie uciskają.",
+          "ro-RO": "Se potrivesc perfect și nu strâng deloc.",
+          "tr-TR": "Mükemmel uyuyorlar ve hiç sıkmıyorlar.",
+          "uk-UA": "Вони сидять ідеально і зовсім не тиснуть.",
+          "uz-UZ": "Ular juda mos tushdi va umuman qismayapti."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Sehr bequem, die Dämpfung ist wirklich super.",
+        "translation": {
+          "ru-RU": "Очень удобно, амортизация действительно супер.",
+          "en-US": "Very comfortable, the cushioning is really super.",
+          "ar-SA": "مريحة جداً، التخميد رائع حقاً.",
+          "es-ES": "Muy cómodos, la amortiguación es realmente genial.",
+          "fr-FR": "Très confortables, l'amorti est vraiment super.",
+          "hi-IN": "बहुत आरामदायक, कुशनिंग सच में शानदार है।",
+          "pl-PL": "Bardzo wygodne, amortyzacja jest naprawdę super.",
+          "ro-RO": "Foarte comozi, amortizarea este cu adevărat super.",
+          "tr-TR": "Çok rahat, yastıklama gerçekten süper.",
+          "uk-UA": "Дуже зручно, амортизація дійсно супер.",
+          "uz-UZ": "Juda qulay, amortizatsiyasi chindan ham zo'r."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Das freut mich! Brauchen Sie vielleicht auch noch passende Sportsocken dazu?",
+    "botTranslation": {
+      "ru-RU": "Я рад это слышать! Возможно, вам также нужны подходящие спортивные носки к ним?",
+      "en-US": "I am glad to hear that! Do you perhaps also need matching sports socks to go with them?",
+      "ar-SA": "يسعدني ذلك! هل تحتاج ربما أيضاً إلى جوارب رياضية مطابقة معها؟",
+      "es-ES": "¡Me alegro! ¿Quizás también necesita calcetines deportivos a juego?",
+      "fr-FR": "J'en suis ravi ! Avez-vous peut-être aussi besoin de chaussettes de sport assorties ?",
+      "hi-IN": "यह सुनकर मुझे खुशी हुई! क्या आपको इनके साथ मैचिंग स्पोर्ट्स जुराबों की भी आवश्यकता है?",
+      "pl-PL": "Cieszę się! Może potrzebuje Pan/Pani również odpowiednich skarpet sportowych?",
+      "ro-RO": "Mă bucur! Aveți nevoie poate și de șosete sport asortate?",
+      "tr-TR": "Buna sevindim! Belki bunlara uygun spor çoraplarına da ihtiyacınız var mı?",
+      "uk-UA": "Я радий це чути! Можливо, вам також потрібні відповідні спортивні шкарпетки до них?",
+      "uz-UZ": "Bundan xursandman! Balki ularga mos keluvchi sport paypoqlari ham kerakdir?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Sportsocken",
+        "translation": {
+          "ru-RU": "спортивные носки",
+          "en-US": "sports socks",
+          "ar-SA": "الجوارب الرياضية",
+          "es-ES": "calcetines deportivos",
+          "fr-FR": "chaussettes de sport",
+          "hi-IN": "खेल की जुराबें",
+          "pl-PL": "skarpety sportowe",
+          "ro-RO": "șosete sport",
+          "tr-TR": "spor çorapları",
+          "uk-UA": "спортивні шкарпетки",
+          "uz-UZ": "sport paypoqlari"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, danke. Socken habe ich noch genug zu Hause.",
+        "translation": {
+          "ru-RU": "Нет, спасибо. Носков у меня дома еще достаточно.",
+          "en-US": "No, thanks. I still have enough socks at home.",
+          "ar-SA": "لا، شكراً. لدي ما يكفي من الجوارب في المنزل.",
+          "es-ES": "No, gracias. Todavía tengo suficientes calcetines en casa.",
+          "fr-FR": "Non, merci. J'ai encore assez de chaussettes à la maison.",
+          "hi-IN": "नहीं, धन्यवाद। मेरे घर पर अभी भी पर्याप्त मोज़े हैं।",
+          "pl-PL": "Nie, dziękuję. Mam jeszcze dość skarpet w domu.",
+          "ro-RO": "Nu, mulțumesc. Mai am destule șosete acasă.",
+          "tr-TR": "Hayır, teşekkürler. Evde hala yeterince çorabım var.",
+          "uk-UA": "Ні, дякую. Шкарпеток у мене вдома ще достатньо.",
+          "uz-UZ": "Yo'q, rahmat. Uyda paypoqlarim yetarlicha bor."
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Nein, danke. Ich nehme heute nur die Schuhe.",
+        "translation": {
+          "ru-RU": "Нет, спасибо. Я сегодня возьму только кроссовки.",
+          "en-US": "No, thanks. I'll just take the shoes today.",
+          "ar-SA": "لا، شكراً. سأكتفي بالأحذية اليوم.",
+          "es-ES": "No, gracias. Hoy solo me llevo las zapatillas.",
+          "fr-FR": "Non, merci. Je ne prends que les chaussures aujourd'hui.",
+          "hi-IN": "नहीं, धन्यवाद। मैं आज केवल जूते लूँगा।",
+          "pl-PL": "Nie, dziękuję. Dzisiaj wezmę tylko buty.",
+          "ro-RO": "Nu, mulțumesc. Iau doar pantofii azi.",
+          "tr-TR": "Hayır, teşekkürler. Bugün sadece ayakkabıları alıyorum.",
+          "uk-UA": "Ні, дякую. Я сьогодні візьму лише кросівки.",
+          "uz-UZ": "Yo'q, rahmat. Men bugun faqat krossovkalarni olaman."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "In Ordnung. Die Schuhe kosten 85 Euro. Kommen Sie bitte mit vor zur Kasse.",
+    "botTranslation": {
+      "ru-RU": "Хорошо. Кроссовки стоят 85 евро. Пожалуйста, пройдите со мной вперед к кассе.",
+      "en-US": "All right. The shoes cost 85 euros. Please come with me to the cash register.",
+      "ar-SA": "حسناً. تكلفة الأحذية 85 يورو. يرجى المجيء معي إلى الخزينة.",
+      "es-ES": "De acuerdo. Las zapatillas cuestan 85 euros. Venga conmigo a la caja, por favor.",
+      "fr-FR": "D'accord. Les chaussures coûtent 85 euros. Veuillez m'accompagner à la caisse.",
+      "hi-IN": "ठीक है। जूतों की कीमत 85 यूरो है। कृपया मेरे साथ कैश रजिस्टर तक आएं।",
+      "pl-PL": "W porządku. Buty kosztują 85 euro. Proszę podejść ze mną do kasy.",
+      "ro-RO": "În regulă. Pantofii costă 85 de euro. Vă rog să veniți cu mine la casă.",
+      "tr-TR": "Tamam. Ayakkabılar 85 Euro tutuyor. Lütfen benimle kasaya gelin.",
+      "uk-UA": "Добре. Кросівки коштують 85 євро. Будь ласка, пройдіть зі мною вперед до каси.",
+      "uz-UZ": "Yaxshi. Krossovkalar 85 yevro turadi. Iltimos, men bilan kassagacha yuring."
+    },
+    "vocabulary": [
+      {
+        "german": "die Kasse",
+        "translation": {
+          "ru-RU": "касса",
+          "en-US": "cash register / checkout",
+          "ar-SA": "الخزينة / الكاشير",
+          "es-ES": "caja",
+          "fr-FR": "caisse",
+          "hi-IN": "कैश रजिस्टर / नकद काउंटर",
+          "pl-PL": "kasa",
+          "ro-RO": "casă de marcat",
+          "tr-TR": "kasa",
+          "uk-UA": "каса",
+          "uz-UZ": "kassa"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar. Vielen Dank für die gute Hilfe!",
+        "translation": {
+          "ru-RU": "Понял. Большое спасибо за хорошую помощь!",
+          "en-US": "All right. Thank you very much for the good help!",
+          "ar-SA": "فهمت. شكراً جزيلاً على المساعدة الجيدة!",
+          "es-ES": "Entendido. ¡Muchas gracias por la buena ayuda!",
+          "fr-FR": "D'accord. Merci beaucoup pour cette aide précieuse !",
+          "hi-IN": "समझ गया। अच्छी मदद के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Jasne. Bardzo dziękuję za dobrą pomoc!",
+          "ro-RO": "Am înțeles. Mulțumesc mult pentru ajutorul bun!",
+          "tr-TR": "Anlaşıldı. İyi yardımınız için çok teşekkürler!",
+          "uk-UA": "Зрозумів. Велике спасибі за хорошу допомогу!",
+          "uz-UZ": "Tushunarli. Yaxshi yordamingiz uchun katta rahmat!"
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Sehr gerne. Danke für die tolle Beratung!",
+        "translation": {
+          "ru-RU": "С удовольствием. Спасибо за отличную консультацию!",
+          "en-US": "With pleasure. Thanks for the great advice!",
+          "ar-SA": "بكل سرور. شكراً على الاستشارة الرائعة!",
+          "es-ES": "Con gusto. ¡Gracias por el excelente asesoramiento!",
+          "fr-FR": "Avec plaisir. Merci pour les super conseils !",
+          "hi-IN": "खुशी से। बेहतरीन सलाह के लिए धन्यवाद!",
+          "pl-PL": "Z przyjemnością. Dziękuję za wspaniałe doradztwo!",
+          "ro-RO": "Cu plăcere. Mulțumesc pentru consultanța grozavă!",
+          "tr-TR": "Memnuniyetle. Harika tavsiyeleriniz için teşekkürler!",
+          "uk-UA": "Із задоволенням. Дякую за чудову консультацію!",
+          "uz-UZ": "Jonim bilan. Ajoyib maslahat uchun rahmat!"
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Sehr gerne! Viel Spaß beim Laufen. Bitte schön!",
+    "botTranslation": {
+      "ru-RU": "С удовольствием! Желаю приятных пробежек. Пожалуйста!",
+      "en-US": "With pleasure! Have fun running. You're welcome!",
+      "ar-SA": "بكل سرور! استمتع بالركض. على الرحب والسعة!",
+      "es-ES": "¡Con mucho gusto! Que disfrute corriendo. ¡De nada!",
+      "fr-FR": "Avec grand plaisir ! Bonne course. Je vous en prie !",
+      "hi-IN": "मुझे खुशी हुई! दौड़ने का आनंद लें। आपका स्वागत है!",
+      "pl-PL": "Bardzo proszę! Miłego biegania. Proszę bardzo!",
+      "ro-RO": "Cu mare plăcere! Alergare plăcută. Cu plăcere!",
+      "tr-TR": "Memnuniyetle! Koşarken iyi eğlenceler. Rica ederim!",
+      "uk-UA": "Із задоволенням! Бажаю приємних пробіжок. Будь ласка!",
+      "uz-UZ": "Jonim bilan! Yugurishda yaxshi hordiq chiqaring. Arzimaydi!"
+    },
+    "vocabulary": [
+      {
+        "german": "die Beratung",
+        "translation": {
+          "ru-RU": "консультация",
+          "en-US": "advice / consultation",
+          "ar-SA": "الاستشارة",
+          "es-ES": "asesoramiento",
+          "fr-FR": "conseil",
+          "hi-IN": "सलाह / परामर्श",
+          "pl-PL": "doradztwo / porada",
+          "ro-RO": "consultanță",
+          "tr-TR": "danışmanlık",
+          "uk-UA": "консультація",
+          "uz-UZ": "maslahat"
+        }
+      }
+    ],
+    "options": [],
+    "defaultNext": null
+  }
+}

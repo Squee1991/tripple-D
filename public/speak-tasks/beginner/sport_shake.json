@@ -1,0 +1,533 @@
+{
+  "start": {
+    "botText": "Hallo! Herzlich willkommen nach dem harten Training. Was darf ich dir bringen?",
+    "botTranslation": {
+      "ru-RU": "Привет! Добро пожаловать после тяжелой тренировки. Что я могу тебе принести?",
+      "en-US": "Hello! Welcome after the hard training. What can I get for you?",
+      "ar-SA": "مرحباً! أهلاً بك بعد التدريب الشاق. ماذا يمكنني أن أحضر لك؟",
+      "es-ES": "¡Hola! Bienvenido después del duro entrenamiento. ¿Qué te puedo traer?",
+      "fr-FR": "Salut ! Bienvenue après ce dur entraînement. Que puis-je t'apporter ?",
+      "hi-IN": "नमस्ते! कड़ी ट्रेनिंग के बाद स्वागत है। मैं आपके लिए क्या ला सकता हूँ?",
+      "pl-PL": "Cześć! Witamy po ciężkim treningu. Co mogę Ci przynieść?",
+      "ro-RO": "Salut! Bine ai venit după antrenamentul greu. Ce îți pot aduce?",
+      "tr-TR": "Merhaba! Zorlu antrenmandan sonra hoş geldin. Sana ne getirebilirim?",
+      "uk-UA": "Привіт! Ласкаво просимо після важкого тренування. Що я можу тобі принести?",
+      "uz-UZ": "Salom! Og'ir mashg'ulotdan so'ng xush kelibsiz. Sizga nima keltiray?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Sportcafé",
+        "translation": {
+          "ru-RU": "спортивное кафе / фитнес-бар",
+          "en-US": "sports cafe / fitness bar",
+          "ar-SA": "المقهى الرياضي / بار اللياقة",
+          "es-ES": "cafetería deportiva / bar de fitness",
+          "fr-FR": "café des sports / bar fitness",
+          "hi-IN": "स्पोर्ट्स कैफे / फिटनेस बार",
+          "pl-PL": "kawiarnia sportowa / fitness bar",
+          "ro-RO": "cafenea sportivă / bar de fitness",
+          "tr-TR": "spor kafesi / fitness barı",
+          "uk-UA": "спортивне кафе / фітнес-бар",
+          "uz-UZ": "sport kafesi / fitnes bar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hallo! Ich brauche jetzt unbedingt einen kalten Proteinshake für die Muskeln.",
+        "translation": {
+          "ru-RU": "Привет! Мне сейчас обязательно нужен холодный протеиновый коктейль для мышц.",
+          "en-US": "Hello! I absolutely need a cold protein shake for my muscles now.",
+          "ar-SA": "مرحباً! أحتاج الآن بشدة إلى مخفوق بروتين بارد للعضلات.",
+          "es-ES": "¡Hola! Ahora mismo necesito sin falta un batido de proteínas frío para los músculos.",
+          "fr-FR": "Salut ! J'ai absolument besoin d'un shaker protéiné froid pour les muscles maintenant.",
+          "hi-IN": "नमस्ते! मुझे अब अपनी मांसपेशियों के लिए एक ठंडे प्रोटीन शेक की सख्त जरूरत है।",
+          "pl-PL": "Cześć! Koniecznie potrzebuję teraz zimnego szejka białkowego na mięśnie.",
+          "ro-RO": "Salut! Am neapărată nevoie acum de un shake de proteine rece pentru mușchi.",
+          "tr-TR": "Merhaba! Şu an kaslarım için kesinlikle soğuk bir protein shake'ine ihtiyacım var.",
+          "uk-UA": "Привіт! Мені зараз обов'язково потрібен холодний протеїновий коктейль для м'язів.",
+          "uz-UZ": "Salom! Menga hozir muskullar uchun albatta sovuq protein kokteyli kerak."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Guten Tag! Haben Sie etwas Frisches zur Erholung nach dem Sport?",
+        "translation": {
+          "ru-RU": "Добрый день! У вас есть что-нибудь свежее для восстановления после спорта?",
+          "en-US": "Good day! Do you have something fresh for recovery after sports?",
+          "ar-SA": "طاب يومك! هل لديك شيء منعش للتعافي بعد الرياضة؟",
+          "es-ES": "¡Buen día! ¿Tienen algo fresco para la recuperación después del deporte?",
+          "fr-FR": "Bonjour ! Avez-vous quelque chose de frais pour la récupération après le sport ?",
+          "hi-IN": "शुभ दिन! क्या आपके पास खेल के बाद रिकवरी के लिए कुछ ताज़ा है?",
+          "pl-PL": "Dzień dobry! Macie coś świeżego na regenerację po sporcie?",
+          "ro-RO": "Bună ziua! Aveți ceva proaspăt pentru recuperare după sport?",
+          "tr-TR": "İyi günler! Spordan sonra toparlanmak için taze bir şeyleriniz var mı?",
+          "uk-UA": "Добрий день! У вас є що-небудь свіже для відновлення після спорту?",
+          "uz-UZ": "Xayrli kun! Sportdan keyin tiklanish uchun biror yangi/tazh narsangiz bormi?"
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Sehr gerne. Wir haben heute Schokolade, Vanille und frische Erdbeere im Angebot. Welchen Geschmack möchtest du?",
+    "botTranslation": {
+      "ru-RU": "С удовольствием. У нас сегодня в меню шоколад, ваниль и свежая клубника. Какой вкус ты хочешь?",
+      "en-US": "With pleasure. We have chocolate, vanilla, and fresh strawberry on offer today. Which flavor would you like?",
+      "ar-SA": "بكل سرور. لدينا اليوم الشوكولاتة والفانيليا والفراولة الطازجة. أي نكهة تود؟",
+      "es-ES": "Con mucho gusto. Hoy tenemos chocolate, vainilla y fresa fresca en oferta. ¿Qué sabor deseas?",
+      "fr-FR": "Très volontiers. Nous proposons aujourd'hui chocolat, vanille et fraise fraîche. Quel parfum souhaites-tu ?",
+      "hi-IN": "ज़रूर। आज हमारे पास चॉकलेट, वैनिला और ताज़ी स्ट्रॉबेरी उपलब्ध है। आपको कौन सा स्वाद चाहिए?",
+      "pl-PL": "Bardzo chętnie. Mamy dzisiaj w ofercie czekoladę, wanilię i świeżą truskawkę. Jaki smak wybierasz?",
+      "ro-RO": "Cu mare plăcere. Avem astăzi în ofertă ciocolată, vanilie și căpșuni proaspete. Ce aromă dorești?",
+      "tr-TR": "Memnuniyetle. Bugün çikolata, vanilya ve taze çilek seçeneklerimiz var. Hangi tadı istersin?",
+      "uk-UA": "Із задоволенням. У нас сьогодні в меню шоколад, ваніль і свіжа полуниця. Який смак ти хочеш?",
+      "uz-UZ": "Bajonidil. Bugun bizda shokolad, vanil va yangi qulupnay bor. Qaysi ta'mni xohlaysiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Proteinshake",
+        "translation": {
+          "ru-RU": "протеиновый коктейль",
+          "en-US": "protein shake",
+          "ar-SA": "مخفوق البروتين",
+          "es-ES": "batido de proteínas",
+          "fr-FR": "shaker protéiné",
+          "hi-IN": "प्रोटीन शेक",
+          "pl-PL": "szejk białkowy",
+          "ro-RO": "shake de proteine",
+          "tr-TR": "protein shake",
+          "uk-UA": "протеїновий коктейль",
+          "uz-UZ": "protein kokteyli"
+        }
+      },
+      {
+        "german": "die Erholung",
+        "translation": {
+          "ru-RU": "восстановление / отдых",
+          "en-US": "recovery / rest",
+          "ar-SA": "التعافي / الراحة",
+          "es-ES": "recuperación / descanso",
+          "fr-FR": "récupération / repos",
+          "hi-IN": "रिकवरी / आराम",
+          "pl-PL": "regeneracja / odpoczynek",
+          "ro-RO": "recuperare / odihnă",
+          "tr-TR": "toparlanma / dinlenme",
+          "uk-UA": "відновлення / відпочинок",
+          "uz-UZ": "tiklanish / dam olish"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich nehme am liebsten den klassischen Schokoladengeschmack.",
+        "translation": {
+          "ru-RU": "Я предпочту классический шоколадный вкус.",
+          "en-US": "I prefer taking the classic chocolate flavor.",
+          "ar-SA": "أفضل نكهة الشوكولاتة الكلاسيكية.",
+          "es-ES": "Prefiero tomar el clásico sabor a chocolate.",
+          "fr-FR": "Je préfère prendre le parfum classique au chocolat.",
+          "hi-IN": "मैं क्लासिक चॉकलेट स्वाद लेना पसंद करूँगा।",
+          "pl-PL": "Najchętniej wezmę klasyczny smak czekoladowy.",
+          "ro-RO": "Prefer să iau gustul clasic de ciocolată.",
+          "tr-TR": "Klasik çikolata tadını almayı tercih ederim.",
+          "uk-UA": "Я віддам перевагу класичному шоколадному смаку.",
+          "uz-UZ": "Men klassik shokolad ta'mini olishni afzal ko'raman."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Vanille klingt gut, das schmeckt immer lecker.",
+        "translation": {
+          "ru-RU": "Ваниль звучит отлично, это всегда вкусно.",
+          "en-US": "Vanilla sounds good, that always tastes delicious.",
+          "ar-SA": "الفانيليا تبدو جيدة، فهي دائماً لذيذة.",
+          "es-ES": "Vainilla suena bien, siempre sabe delicioso.",
+          "fr-FR": "Vanille ça a l'air bien, c'est toujours délicieux.",
+          "hi-IN": "वैनिला अच्छा लग रहा है, यह हमेशा स्वादिष्ट होता है।",
+          "pl-PL": "Wanilia brzmi dobrze, to zawsze pysznie smakuje.",
+          "ro-RO": "Vanilia sună bine, mereu este delicioasă.",
+          "tr-TR": "Vanilya kulağa hoş geliyor, her zaman lezzetli olur.",
+          "uk-UA": "Ваніль звучить чудово, це завжди смачно.",
+          "uz-UZ": "Vanil yaxshi eshitilyapti, u har doim mazali bo'ladi."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Hervorragend. Soll ich den Shake mit normaler Milch oder mit einem pflanzlichen Getränk mixen?",
+    "botTranslation": {
+      "ru-RU": "Превосходно. Мне смешать коктейль с обычным молоком или с растительным напитком?",
+      "en-US": "Excellent. Should I mix the shake with normal milk or with a plant-based drink?",
+      "ar-SA": "ممتاز. هل أقوم بخلط المخفوق بحليب عادي أم بمشروب نباتي؟",
+      "es-ES": "Excelente. ¿Debo mezclar el batido con leche normal o con una bebida vegetal?",
+      "fr-FR": "Excellent. Dois-je mixer le shaker avec du lait normal ou avec une boisson végétale ?",
+      "hi-IN": "बहुत बढ़िया। क्या मैं शेक को सामान्य दूध या पौधे-आधारित पेय के साथ मिलाऊँ?",
+      "pl-PL": "Znakomicie. Zmiksować szejka ze zwykłym mlekiem czy z napojem roślinnym?",
+      "ro-RO": "Excelent. Să amestec shake-ul cu lapte normal sau cu o băutură vegetală?",
+      "tr-TR": "Harika. Shake'i normal sütle mi yoksa bitkisel bir içecekle mi karıştırayım?",
+      "uk-UA": "Чудово. Мені змішати коктейль зі звичайним молоком чи з рослинним напоєм?",
+      "uz-UZ": "Juda yaxshi. Kokteylni oddiy sut bilanmi yoki o'simlikli ichimlik bilan aralashtiraymi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Getränk",
+        "translation": {
+          "ru-RU": "напиток",
+          "en-US": "drink / beverage",
+          "ar-SA": "المشروب",
+          "es-ES": "bebida",
+          "fr-FR": "boisson",
+          "hi-IN": "पेय",
+          "pl-PL": "napój",
+          "ro-RO": "băutură",
+          "tr-TR": "içecek",
+          "uk-UA": "напій",
+          "uz-UZ": "ichimlik"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Bitte mach den Shake mit normaler Milch.",
+        "translation": {
+          "ru-RU": "Пожалуйста, сделай коктейль с обычным молоком.",
+          "en-US": "Please make the shake with normal milk.",
+          "ar-SA": "من فضلك اصنع المخفوق بالحليب العادي.",
+          "es-ES": "Por favor, haz el batido con leche normal.",
+          "fr-FR": "S'il te plaît, fais le shaker avec du lait normal.",
+          "hi-IN": "कृपया सामान्य दूध के साथ शेक बनाएं।",
+          "pl-PL": "Proszę, zrób szejka ze zwykłym mlekiem.",
+          "ro-RO": "Te rog să faci shake-ul cu lapte normal.",
+          "tr-TR": "Lütfen shake'i normal sütle yap.",
+          "uk-UA": "Будь ласка, зроби коктейль зі звичайним молоком.",
+          "uz-UZ": "Iltimos, kokteylni oddiy sut bilan qiling."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Nimm am besten Hafermilch, das vertrage ich besser.",
+        "translation": {
+          "ru-RU": "Лучше возьми овсяное молоко, я его лучше переношу.",
+          "en-US": "It's best to use oat milk, I tolerate that better.",
+          "ar-SA": "من الأفضل استخدام حليب الشوفان، فأنا أتحمله بشكل أفضل.",
+          "es-ES": "Mejor usa leche de avena, la tolero mejor.",
+          "fr-FR": "Prends plutôt du lait d'avoine, je le tolère mieux.",
+          "hi-IN": "सबसे अच्छा है ओट मिल्क लें, मैं इसे बेहतर सहन कर सकता हूँ।",
+          "pl-PL": "Najlepiej weź mleko owsiane, lepiej je toleruję.",
+          "ro-RO": "Cel mai bine ia lapte de ovăz, îl tolerez mai bine.",
+          "tr-TR": "En iyisi yulaf sütü kullan, onu daha iyi tolere ediyorum.",
+          "uk-UA": "Краще візьми вівсяне молоко, я його краще переносю.",
+          "uz-UZ": "Yaxshisi jo'xori sutini oling, men buni yaxshiroq hazm qilaman."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Alles klar, wird gemacht! Möchtest du noch eine Portion Magnesium gegen Muskelkater dazu?",
+    "botTranslation": {
+      "ru-RU": "Всё понятно, будет сделано! Хочешь добавить еще порцию магния от мышечной боли (крепатуры)?",
+      "en-US": "All right, will do! Would you like a portion of magnesium against sore muscles with that?",
+      "ar-SA": "حسناً، سيتم ذلك! هل تود إضافة حصة من المغنيسيوم ضد ألم العضلات؟",
+      "es-ES": "¡De acuerdo, marchando! ¿Quieres añadir una porción de magnesio contra las agujetas?",
+      "fr-FR": "D'accord, c'est noté ! Veux-tu ajouter une portion de magnésium contre les courbatures ?",
+      "hi-IN": "ठीक है, हो जाएगा! क्या आप मांसपेशियों के दर्द के खिलाफ मैग्नीशियम का एक हिस्सा जोड़ना चाहेंगे?",
+      "pl-PL": "Wszystko jasne, robi się! Chcesz do tego jeszcze porcję magnezu na zakwasy?",
+      "ro-RO": "Am înțeles, se face! Dorești și o porție de magneziu împotriva febrei musculare?",
+      "tr-TR": "Anlaşıldı, hemen yapıyorum! Kas ağrısına karşı bir porsiyon magnezyum eklemek ister misin?",
+      "uk-UA": "Все зрозуміло, буде зроблено! Хочеш додати ще порцію магнію від болю у м'язах (крепатури)?",
+      "uz-UZ": "Tushunarli, tayyorlayman! Bunga qo'shimcha mushak og'rig'iga qarshi bir porsiya magniy xohlaysizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Magnesium",
+        "translation": {
+          "ru-RU": "магний",
+          "en-US": "magnesium",
+          "ar-SA": "المغنيسيوم",
+          "es-ES": "magnesio",
+          "fr-FR": "magnésium",
+          "hi-IN": "मैग्नीशियम",
+          "pl-PL": "magnez",
+          "ro-RO": "magneziu",
+          "tr-TR": "magnezyum",
+          "uk-UA": "магній",
+          "uz-UZ": "magniy"
+        }
+      },
+      {
+        "german": "der Muskelkater",
+        "translation": {
+          "ru-RU": "крепатура / боль в мышцах",
+          "en-US": "sore muscles",
+          "ar-SA": "ألم العضلات",
+          "es-ES": "agujetas",
+          "fr-FR": "courbatures",
+          "hi-IN": "मांसपेशियों में दर्द",
+          "pl-PL": "zakwasy",
+          "ro-RO": "febră musculară",
+          "tr-TR": "kas ağrısı",
+          "uk-UA": "крепатура / біль у м'язах",
+          "uz-UZ": "mushak og'rig'i"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Oh ja, das ist eine super Idee für meine Beine.",
+        "translation": {
+          "ru-RU": "О да, это супер идея для моих ног.",
+          "en-US": "Oh yes, that's a super idea for my legs.",
+          "ar-SA": "أوه نعم، هذه فكرة رائعة لساقي.",
+          "es-ES": "Oh sí, es una idea genial para mis piernas.",
+          "fr-FR": "Oh oui, c'est une super idée pour mes jambes.",
+          "hi-IN": "अरे हाँ, यह मेरे पैरों के लिए एक शानदार विचार है।",
+          "pl-PL": "O tak, to super pomysł dla moich nóg.",
+          "ro-RO": "Oh da, este o idee super pentru picioarele mele.",
+          "tr-TR": "Oh evet, bu bacaklarım için süper bir fikir.",
+          "uk-UA": "О так, це супер ідея для моїх ніг.",
+          "uz-UZ": "Oh ha, bu oyoqlarim uchun ajoyib g'oya."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Ja, bitte gib mir das Extra direkt mit rein.",
+        "translation": {
+          "ru-RU": "Да, пожалуйста, добавь это дополнение прямо внутрь.",
+          "en-US": "Yes, please put the extra right in there.",
+          "ar-SA": "نعم، من فضلك ضع هذه الإضافة مباشرة فيه.",
+          "es-ES": "Sí, por favor, añade ese extra directamente.",
+          "fr-FR": "Oui, s'il te plaît, mets cet extra directement dedans.",
+          "hi-IN": "हाँ, कृपया वह अतिरिक्त सीधे इसमें डाल दें।",
+          "pl-PL": "Tak, proszę, wrzuć ten dodatek prosto do środka.",
+          "ro-RO": "Da, te rog să pui extra-ul direct înăuntru.",
+          "tr-TR": "Evet, lütfen bu ekstrayı doğrudan içine kat.",
+          "uk-UA": "Так, будь ласка, додай це доповнення прямо всередину.",
+          "uz-UZ": "Ha, iltimos, bu qo'shimchani to'g'ridan-to'g'ri ichiga soling."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Ist notiert. Der Shake ist in zwei Minuten frisch für dich gemixt. Brauchst du noch einen Energieriegel?",
+    "botTranslation": {
+      "ru-RU": "Записал. Коктейль будет свежеприготовлен для тебя через две минуты. Тебе еще нужен энергетический батончик?",
+      "en-US": "Noted. The shake will be freshly mixed for you in two minutes. Do you also need an energy bar?",
+      "ar-SA": "سُجل. سيتم تحضير المخفوق طازجاً لك في غضون دقيقتين. هل تحتاج أيضاً إلى لوح طاقة؟",
+      "es-ES": "Anotado. El batido estará recién mezclado para ti en dos minutos. ¿Necesitas también una barrita energética?",
+      "fr-FR": "C'est noté. Le shaker sera fraîchement mixé pour toi dans deux minutes. As-tu encore besoin d'une barre énergétique ?",
+      "hi-IN": "नोट कर लिया। आपका शेक दो मिनट में ताज़ा बनकर तैयार हो जाएगा। क्या आपको एनर्जी बार भी चाहिए?",
+      "pl-PL": "Zanotowane. Szejk będzie dla Ciebie świeżo zmiksowany w dwie minuty. Potrzebujesz jeszcze batona energetycznego?",
+      "ro-RO": "Notat. Shake-ul va fi proaspăt mixat pentru tine în două minute. Mai ai nevoie de un baton energizant?",
+      "tr-TR": "Not aldım. Shake'in iki dakika içinde senin için taze olarak karışmış olacak. Bir enerji barı da ister misin?",
+      "uk-UA": "Записав. Коктейль буде свіжоприготований для тебе через дві хвилини. Тобі ще потрібен енергетичний батончик?",
+      "uz-UZ": "Qayd qildim. Kokteylingiz ikki daqiqada yangi tayyorlanadi. Sizga yana energiya batoni kerakmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Energieriegel",
+        "translation": {
+          "ru-RU": "энергетический батончик",
+          "en-US": "energy bar",
+          "ar-SA": "لوح الطاقة",
+          "es-ES": "barrita energética",
+          "fr-FR": "barre énergétique",
+          "hi-IN": "एनर्जी बार",
+          "pl-PL": "baton energetyczny",
+          "ro-RO": "baton energizant",
+          "tr-TR": "enerji barı",
+          "uk-UA": "енергетичний батончик",
+          "uz-UZ": "energetik baton (batonchik)"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, danke. Der Shake reicht mir heute vollkommen aus.",
+        "translation": {
+          "ru-RU": "Нет, спасибо. Коктейля мне сегодня вполне достаточно.",
+          "en-US": "No, thanks. The shake is completely enough for me today.",
+          "ar-SA": "لا، شكراً. المخفوق يكفيني تماماً اليوم.",
+          "es-ES": "No, gracias. El batido es más que suficiente para mí hoy.",
+          "fr-FR": "Non, merci. Le shaker me suffit amplement aujourd'hui.",
+          "hi-IN": "नहीं, धन्यवाद। शेक आज मेरे लिए बिल्कुल पर्याप्त है।",
+          "pl-PL": "Nie, dziękuję. Szejk w zupełności mi dzisiaj wystarczy.",
+          "ro-RO": "Nu, mulțumesc. Shake-ul îmi este complet suficient astăzi.",
+          "tr-TR": "Hayır, teşekkürler. Shake bugün benim için tamamen yeterli.",
+          "uk-UA": "Ні, дякую. Коктейлю мені сьогодні цілком достатньо.",
+          "uz-UZ": "Yo'q, rahmat. Kokteyl menga bugun mutlaqo yetarli."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Nein, danke. Ich habe keinen großen Hunger mehr.",
+        "translation": {
+          "ru-RU": "Нет, спасибо. Я больше не сильно голоден.",
+          "en-US": "No, thanks. I am not very hungry anymore.",
+          "ar-SA": "لا، شكراً. لم أعد أشعر بجوع كبير.",
+          "es-ES": "No, gracias. Ya no tengo mucha hambre.",
+          "fr-FR": "Non, merci. Je n'ai plus très faim.",
+          "hi-IN": "नहीं, धन्यवाद। मुझे अब ज्यादा भूख नहीं है।",
+          "pl-PL": "Nie, dziękuję. Nie jestem już zbyt głodny.",
+          "ro-RO": "Nu, mulțumesc. Nu prea mai am mare foame.",
+          "tr-TR": "Hayır, teşekkürler. Artık pek açlığım kalmadı.",
+          "uk-UA": "Ні, дякую. Я більше не дуже голодний.",
+          "uz-UZ": "Yo'q, rahmat. Menda endi katta ishtaha yo'q."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Gut. Das macht zusammen genau 5 Euro für den großen Shake inklusive Magnesium.",
+    "botTranslation": {
+      "ru-RU": "Хорошо. Это составляет ровно 5 евро за большой коктейль вместе с магнием.",
+      "en-US": "Good. That makes exactly 5 euros in total for the large shake including magnesium.",
+      "ar-SA": "جيد. الإجمالي هو 5 يورو بالضبط للمخفوق الكبير مع المغنيسيوم.",
+      "es-ES": "Bien. Eso hace un total de exactamente 5 euros por el batido grande con magnesio incluido.",
+      "fr-FR": "Bien. Cela fait exactement 5 euros au total pour le grand shaker incluant le magnésium.",
+      "hi-IN": "अच्छा। मैग्नीशियम सहित बड़े शेक के लिए कुल 5 यूरो होते हैं।",
+      "pl-PL": "Dobrze. To daje łącznie dokładnie 5 euro za dużego szejka z magnezem.",
+      "ro-RO": "Bun. Asta înseamnă exact 5 euro în total pentru shake-ul mare, inclusiv magneziul.",
+      "tr-TR": "Güzel. Magnezyum dahil büyük shake için toplam tam 5 Euro yapıyor.",
+      "uk-UA": "Добре. Це становить рівно 5 євро за великий коктейль разом із магнієм.",
+      "uz-UZ": "Yaxshi. Magniy qo'shilgan katta kokteyl uchun bu birgalikda roppa-rosa 5 yevro qiladi."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Das ist ein guter Preis. Ich zahle mit Karte.",
+        "translation": {
+          "ru-RU": "Это хорошая цена. Я плачу картой.",
+          "en-US": "That is a good price. I will pay by card.",
+          "ar-SA": "هذا سعر جيد. سأدفع بالبطاقة.",
+          "es-ES": "Es un buen precio. Pago con tarjeta.",
+          "fr-FR": "C'est un bon prix. Je paie par carte.",
+          "hi-IN": "यह एक अच्छी कीमत है। मैं कार्ड से भुगतान करूँगा।",
+          "pl-PL": "To dobra cena. Płacę kartą.",
+          "ro-RO": "Acesta este un preț bun. Plătesc cu cardul.",
+          "tr-TR": "Bu iyi bir fiyat. Kartla ödüyorum.",
+          "uk-UA": "Це хороша ціна. Я плачу карткою.",
+          "uz-UZ": "Bu yaxshi narx. Men karta orqali to'layman."
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Ich bezahle ganz bequem mit Karte.",
+        "translation": {
+          "ru-RU": "Я с комфортом расплачусь картой.",
+          "en-US": "I'll pay quite comfortably by card.",
+          "ar-SA": "سأدفع بكل راحة بالبطاقة.",
+          "es-ES": "Pago muy cómodamente con tarjeta.",
+          "fr-FR": "Je paie très confortablement par carte.",
+          "hi-IN": "मैं बड़ी आसानी से कार्ड से भुगतान करूँगा।",
+          "pl-PL": "Zapłacę bardzo wygodnie kartą.",
+          "ro-RO": "Plătesc foarte confortabil cu cardul.",
+          "tr-TR": "Çok rahat bir şekilde kartla ödüyorum.",
+          "uk-UA": "Я з комфортом розплачуся карткою.",
+          "uz-UZ": "Men qulay tarzda karta bilan to'layman."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Danke schön. Bitte halte die Karte kurz an das Terminal hier.",
+    "botTranslation": {
+      "ru-RU": "Спасибо. Пожалуйста, приложи ненадолго карту к этому терминалу.",
+      "en-US": "Thank you. Please hold the card briefly to the terminal here.",
+      "ar-SA": "شكراً لك. يرجى تمرير البطاقة لفترة وجيزة على هذا الجهاز هنا.",
+      "es-ES": "Gracias. Por favor, acerca brevemente la tarjeta a este terminal.",
+      "fr-FR": "Merci. S'il te plaît, approche brièvement la carte de ce terminal ici.",
+      "hi-IN": "धन्यवाद। कृपया यहाँ टर्मिनल पर कार्ड को कुछ देर के लिए रखें।",
+      "pl-PL": "Dziękuję. Proszę przyłóż na chwilę kartę do tego terminala.",
+      "ro-RO": "Mulțumesc. Te rog să apropii scurt cardul de terminalul acesta.",
+      "tr-TR": "Teşekkür ederim. Lütfen kartı kısaca buradaki terminale yaklaştır.",
+      "uk-UA": "Дякую. Будь ласка, приклади ненадовго картку до цього терміналу.",
+      "uz-UZ": "Rahmat. Iltimos, kartani shu yerdagi terminalga biroz yaqinlashtiring."
+    },
+    "vocabulary": [
+      {
+        "german": "das Terminal",
+        "translation": {
+          "ru-RU": "терминал (для оплаты)",
+          "en-US": "terminal (for payment)",
+          "ar-SA": "جهاز الدفع / الطرفية",
+          "es-ES": "terminal (de pago)",
+          "fr-FR": "terminal (de paiement)",
+          "hi-IN": "टर्मिनल (भुगतान के लिए)",
+          "pl-PL": "terminal (płatniczy)",
+          "ro-RO": "terminal (de plată)",
+          "tr-TR": "terminal (ödeme cihazı)",
+          "uk-UA": "термінал (для оплати)",
+          "uz-UZ": "terminal (to'lov uchun)"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Perfekt, hat geklappt. Vielen Dank!",
+        "translation": {
+          "ru-RU": "Идеально, всё получилось. Большое спасибо!",
+          "en-US": "Perfect, it worked. Thank you very much!",
+          "ar-SA": "ممتاز، لقد نجح الأمر. شكراً جزيلاً!",
+          "es-ES": "Perfecto, ha funcionado. ¡Muchas gracias!",
+          "fr-FR": "Parfait, ça a marché. Merci beaucoup !",
+          "hi-IN": "बिल्कुल, यह काम कर गया। बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Idealnie, udało się. Bardzo dziękuję!",
+          "ro-RO": "Perfect, a funcționat. Mulțumesc mult!",
+          "tr-TR": "Mükemmel, işe yaradı. Çok teşekkürler!",
+          "uk-UA": "Ідеально, все вийшло. Велике спасибі!",
+          "uz-UZ": "Ajoyib, o'tdi. Katta rahmat!"
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Super, danke dir für den schnellen Service!",
+        "translation": {
+          "ru-RU": "Супер, спасибо тебе за быстрое обслуживание!",
+          "en-US": "Super, thank you for the fast service!",
+          "ar-SA": "رائع، شكراً لك على الخدمة السريعة!",
+          "es-ES": "¡Súper, gracias por el servicio rápido!",
+          "fr-FR": "Super, merci pour ce service rapide !",
+          "hi-IN": "सुपर, तेज़ सेवा के लिए धन्यवाद!",
+          "pl-PL": "Super, dzięki za szybką obsługę!",
+          "ro-RO": "Super, mulțumesc pentru serviciul rapid!",
+          "tr-TR": "Süper, hızlı servis için sana teşekkür ederim!",
+          "uk-UA": "Супер, дякую тобі за швидке обслуговування!",
+          "uz-UZ": "Zo'r, tezkor xizmat uchun senga rahmat!"
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Sehr gerne! Genieß deinen Shake und erhol dich gut.",
+    "botTranslation": {
+      "ru-RU": "С удовольствием! Наслаждайся своим коктейлем и хорошо отдыхай.",
+      "en-US": "With pleasure! Enjoy your shake and have a good recovery.",
+      "ar-SA": "بكل سرور! استمتع بمخفوقك وتعافَ جيداً.",
+      "es-ES": "¡Con mucho gusto! Disfruta de tu batido y recupérate bien.",
+      "fr-FR": "Avec grand plaisir ! Profite de ton shaker et repose-toi bien.",
+      "hi-IN": "मुझे खुशी हुई! अपने शेक का आनंद लें और अच्छी तरह से ठीक हो जाएं। चीयर्स!",
+      "pl-PL": "Bardzo proszę! Ciesz się swoim szejkiem i dobrze odpocznij.",
+      "ro-RO": "Cu mare plăcere! Savurează shake-ul și recuperează-te bine.",
+      "tr-TR": "Memnuniyetle! Shake'inin tadını çıkar ve iyi dinlen. Şerefe!",
+      "uk-UA": "Із задоволенням! Насолоджуйся своїм коктейлем і добре відпочивай.",
+      "uz-UZ": "Jonim bilan! Kokteyldan rohatlaning va yaxshi dam oling."
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}
