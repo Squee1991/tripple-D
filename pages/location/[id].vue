@@ -48,6 +48,13 @@
               </div>
               <div class="quest-actions">
                 <button
+                    v-if="quest.vocabulary && quest.vocabulary.length"
+                    class="btn btn--secondary"
+                    @click="handleLearnWords(quest)"
+                >
+                  📚 {{ t('locationWordSession.stuff')}}
+                </button>
+                <button
                     class="btn"
                     :style="quest.btnStyle"
                     @click="handleStartQuest(quest)"

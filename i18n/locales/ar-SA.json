@@ -10262,7 +10262,17 @@
     "client_talk": "المحادثة مع عميل",
     "car_rental": "تأجير السيارات",
     "ask_road": "السؤال عن الطريق",
-    "hotel_issue": "مشكلة في الفندق"
+    "hotel_issue": "مشكلة في الفندق",
+    "begin_fitness": "نادي لياقة بدنية",
+    "sport_footwear": "شراء أحذية رياضية",
+    "soccer_training": "كرة قدم",
+    "pool_booking": "حجز مسبح",
+    "tennis_club": "نادي تنس",
+    "bicycle_rental": "تأجير دراجات هوائية",
+    "sport_shake": "بار اللياقة البدنية",
+    "climbing": "صالة تسلق",
+    "jogging": "أثناء الركض",
+    "ski_rental": "تأجير زلاجات"
   },
   "speakIndexPage": {
     "title": "ممارسة المحادثة",
@@ -10637,5 +10647,27 @@
   "eulaText": {
     "text": "بالشراء، أنت توافق على",
     "month": "شهر"
+  },
+  "landWordsSession": {
+    "grammar": "القواعد",
+    "words": "كلمات المهمة",
+    "verbs": "جدول تصريف الأفعال",
+    "error": "لم يتم العثور على كلمات لهذه المهمة.",
+    "toQuest": "الانتقال إلى المهمة",
+    "got": "فهمت"
+  },
+  "locationWordSession": {
+    "begin": "ابدأ المهمة",
+    "repeat": "مراجعة المادة",
+    "further": "التالي",
+    "finish": "إنهاء",
+    "excellent": "ممتاز",
+    "variation": "الخيار",
+    "stuff": "مادة المهمة",
+    "learnWords": "تعلم الكلمات"
+  },
+  "recipe": {
+    "done": "رائع! لقد تم إنجاز مهمة اليوم.",
+    "btn": "رجوع"
   }
 }

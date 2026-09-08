@@ -16,7 +16,11 @@ logs
 
 # Local env files
 .env.development
+.env.production
+env.development
+
 .env.*
+env.*
 !.env.example
 echo service-account.json
 echo service-account-dev.json

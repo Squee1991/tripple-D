@@ -10244,7 +10244,17 @@
     "client_talk": "Conversación con un cliente",
     "car_rental": "Alquiler de coches",
     "ask_road": "Preguntar por el camino",
-    "hotel_issue": "Problema en el hotel"
+    "hotel_issue": "Problema en el hotel",
+    "begin_fitness": "Gimnasio",
+    "sport_footwear": "Comprar zapatillas",
+    "soccer_training": "Fútbol",
+    "pool_booking": "Reserva de piscina",
+    "tennis_club": "Club de tenis",
+    "bicycle_rental": "Alquiler de bicicletas",
+    "sport_shake": "Bar de fitness",
+    "climbing": "Rocódromo",
+    "jogging": "De carrera",
+    "ski_rental": "Alquiler de esquís"
   },
   "speakIndexPage": {
     "title": "Práctica oral",
@@ -10618,5 +10628,27 @@
   "eulaText": {
     "text": "Al realizar la compra, aceptas",
     "month": "mes"
+  },
+  "landWordsSession": {
+    "grammar": "Gramática",
+    "words": "Palabras para la tarea",
+    "verbs": "Tabla de formas verbales",
+    "error": "No se encontraron palabras para esta tarea.",
+    "toQuest": "Ir a la tarea",
+    "got": "Entendido"
+  },
+  "locationWordSession": {
+    "begin": "Comenzar tarea",
+    "repeat": "Repasar material",
+    "further": "Siguiente",
+    "finish": "Finalizar",
+    "excellent": "Excelente",
+    "variation": "Variante",
+    "stuff": "Material de la tarea",
+    "learnWords": "Aprender palabras"
+  },
+  "recipe": {
+    "done": "¡Excelente! La tarea de hoy está completada.",
+    "btn": "Volver"
   }
 }
