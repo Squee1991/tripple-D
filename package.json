@@ -10,7 +10,6 @@
     "generate": "nuxt generate",
     "generate:dev": "cross-env NODE_ENV=development nuxt generate && npx cap sync android && npx cap open android",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
     "admin:add": "node admin/setAdmin.js add",
     "admin:remove": "node admin/setAdmin.js remove"
   },
