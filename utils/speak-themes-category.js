@@ -114,5 +114,5 @@ export const categoriesSpeak = [
 			{ id: 'jogging', icon: '🏃', title: 'speakThemes.jogging' },
 			{ id: 'ski_rental', icon: '🏂', title: 'speakThemes.ski_rental' }
 		]
-	},
+	}
 ]

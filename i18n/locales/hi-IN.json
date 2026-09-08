@@ -10220,7 +10220,17 @@
     "client_talk": "ग्राहक से बातचीत",
     "car_rental": "कार किराए पर लेना",
     "ask_road": "रास्ता पूछना",
-    "hotel_issue": "होटल में समस्या"
+    "hotel_issue": "होटल में समस्या",
+    "begin_fitness": "फिटनेस क्लब",
+    "sport_footwear": "जूते खरीदना",
+    "soccer_training": "फ़ुटबॉल",
+    "pool_booking": "पूल बुकिंग",
+    "tennis_club": "टेनिस क्लब",
+    "bicycle_rental": "साइकिल किराया",
+    "sport_shake": "फिटनेस बार",
+    "climbing": "क्लाइम्बिंग वॉल",
+    "jogging": "जॉगिंग पर",
+    "ski_rental": "स्की किराया"
   },
   "speakIndexPage": {
     "title": "बोलने का अभ्यास",
@@ -10612,5 +10622,9 @@
     "variation": "विकल्प",
     "stuff": "कार्य सामग्री",
     "learnWords": "शब्द सीखें"
+  },
+  "recipe": {
+    "done": "बहुत बढ़िया! आज का कार्य पूरा हुआ।",
+    "btn": "वापस जाएँ"
   }
 }

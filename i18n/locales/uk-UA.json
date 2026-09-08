@@ -10250,7 +10250,17 @@
     "client_talk": "Розмова з клієнтом",
     "car_rental": "Оренда авто",
     "ask_road": "Запитати дорогу",
-    "hotel_issue": "Проблема в готелі"
+    "hotel_issue": "Проблема в готелі",
+    "begin_fitness": "Фітнес-клуб",
+    "sport_footwear": "Купівля кросівок",
+    "soccer_training": "Футбол",
+    "pool_booking": "Запис у басейн",
+    "tennis_club": "Тенісний клуб",
+    "bicycle_rental": "Оренда велосипеда",
+    "sport_shake": "Фітнес-бар",
+    "climbing": "Скеледром",
+    "jogging": "На пробіжці",
+    "ski_rental": "Оренда лиж"
   },
   "speakIndexPage": {
     "title": "Розмовна практика",
@@ -10642,5 +10652,9 @@
     "variation": "Варіант",
     "stuff": "Матеріал до завдання",
     "learnWords": "Вчити слова"
+  },
+  "recipe": {
+    "done": "Чудово! Завдання на сьогодні виконано.",
+    "btn": "Повернутися"
   }
 }

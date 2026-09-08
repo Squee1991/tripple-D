@@ -10262,7 +10262,17 @@
     "client_talk": "المحادثة مع عميل",
     "car_rental": "تأجير السيارات",
     "ask_road": "السؤال عن الطريق",
-    "hotel_issue": "مشكلة في الفندق"
+    "hotel_issue": "مشكلة في الفندق",
+    "begin_fitness": "نادي لياقة بدنية",
+    "sport_footwear": "شراء أحذية رياضية",
+    "soccer_training": "كرة قدم",
+    "pool_booking": "حجز مسبح",
+    "tennis_club": "نادي تنس",
+    "bicycle_rental": "تأجير دراجات هوائية",
+    "sport_shake": "بار اللياقة البدنية",
+    "climbing": "صالة تسلق",
+    "jogging": "أثناء الركض",
+    "ski_rental": "تأجير زلاجات"
   },
   "speakIndexPage": {
     "title": "ممارسة المحادثة",
@@ -10655,5 +10665,9 @@
     "variation": "الخيار",
     "stuff": "مادة المهمة",
     "learnWords": "تعلم الكلمات"
+  },
+  "recipe": {
+    "done": "رائع! لقد تم إنجاز مهمة اليوم.",
+    "btn": "رجوع"
   }
 }

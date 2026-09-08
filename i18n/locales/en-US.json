@@ -10268,7 +10268,17 @@
     "client_talk": "Разговор с клиентом",
     "car_rental": "Аренда авто",
     "ask_road": "Спросить дорогу",
-    "hotel_issue": "Проблема в отеле"
+    "hotel_issue": "Проблема в отеле",
+    "begin_fitness": "Fitness club",
+    "sport_footwear": "Buying sneakers",
+    "soccer_training": "Football",
+    "pool_booking": "Pool booking",
+    "tennis_club": "Tennis club",
+    "bicycle_rental": "Bicycle rental",
+    "sport_shake": "Fitness bar",
+    "climbing": "Climbing gym",
+    "jogging": "On a run",
+    "ski_rental": "Ski rental"
   },
   "speakIndexPage": {
     "title": "Speaking practice",
@@ -10660,5 +10670,9 @@
     "variation": "Variation",
     "stuff": "Task material",
     "learnWords": "Learn words"
+  },
+  "recipe": {
+    "done": "Great! Today's task is completed.",
+    "btn": "Back"
   }
 }

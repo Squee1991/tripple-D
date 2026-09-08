@@ -10636,5 +10636,9 @@
     "variation": "Variantă",
     "stuff": "Material pentru sarcină",
     "learnWords": "Învață cuvintele"
+  },
+  "recipe": {
+    "done": "Excelent! Sarcina de astăzi a fost finalizată.",
+    "btn": "Înapoi"
   }
 }

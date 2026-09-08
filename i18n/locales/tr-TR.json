@@ -10253,7 +10253,17 @@
     "client_talk": "Müşteri ile görüşme",
     "car_rental": "Araç kiralama",
     "ask_road": "Yol sorma",
-    "hotel_issue": "Otelde sorun"
+    "hotel_issue": "Otelde sorun",
+    "begin_fitness": "Fitness salonu",
+    "sport_footwear": "Spor ayakkabı alma",
+    "soccer_training": "Futbol",
+    "pool_booking": "Havuz kaydı",
+    "tennis_club": "Tenis kulübü",
+    "bicycle_rental": "Bisiklet kiralama",
+    "sport_shake": "Fitness barı",
+    "climbing": "Tırmanma duvarı",
+    "jogging": "Koşuda",
+    "ski_rental": "Kayak kiralama"
   },
   "speakIndexPage": {
     "title": "Konuşma pratiği",
@@ -10646,5 +10656,10 @@
     "variation": "Varyant",
     "stuff": "Görev materyali",
     "learnWords": "Kelime öğren"
-  }
+  },
+  "recipe": {
+    "done": "Harika! Bugünün görevi tamamlandı.",
+    "btn": "Geri dön"
+  },
+
 }
