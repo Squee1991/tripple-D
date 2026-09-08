@@ -6,8 +6,7 @@
         @cancel="cancelExit"
     />
     <div class="dialogue-scene__chef-container">
-      <img :src="chefImage" alt="Chef"
-           class="dialogue-scene__chef-img"/>
+      <img :src="chefImage" alt="Chef" class="dialogue-scene__chef-img"/>
     </div>
     <div class="dialogue-scene__main-content">
       <div class="dialogue-scene__header">
