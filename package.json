@@ -24,7 +24,7 @@
     "@capacitor/filesystem": "^8.1.2",
     "@capacitor/keyboard": "8.0.3",
     "@capacitor/network": "8.0.1",
-    "@capacitor/preferences": "^8.0.1",
+    "@capacitor/preferences": "8.0.1",
     "@capacitor/splash-screen": "8.0.1",
     "@capacitor/status-bar": "8.0.2",
     "@capawesome/capacitor-apple-sign-in": "^0.1.0",
@@ -66,7 +66,7 @@
   },
   "devDependencies": {
     "@capacitor/assets": "^3.0.5",
-    "@capacitor/ios": "^8.3.4",
+    "@capacitor/ios": "8.3.4",
     "@nuxtjs/google-fonts": "3.2.0",
     "@vite-pwa/nuxt": " 1.1.1",
     "concurrently": "9.1.2",
