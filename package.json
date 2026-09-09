@@ -44,12 +44,13 @@
     "capacitor-voice-recorder": "7.0.6",
     "dotenv": "17.2.3",
     "firebase": "11.6.0",
-    "firebase-admin": "13.1.0",
+    "firebase-admin": "^13.2.0",
     "firebase-functions": "6.3.2",
     "flipbook-vue": "1.0.0-beta.4",
     "form-data": "^4.0.6",
     "groq-sdk": "^1.2.1",
     "gsap": "3.13.0",
+    "ipx": "^4.0.0-beta.1",
     "lottie-web": "5.13.0",
     "nuxt-vuefire": "1.0.5",
     "phaser": "3.90.0",
@@ -65,15 +66,14 @@
   "devDependencies": {
     "@capacitor/assets": "3.0.5",
     "@capacitor/ios": "8.3.0",
+    "@esbuild/win32-x64": "^0.28.2",
     "@nuxtjs/google-fonts": "3.2.0",
+    "@rollup/rollup-win32-x64-msvc": "^4.63.1",
     "@vite-pwa/nuxt": " 1.1.1",
     "concurrently": "9.1.2",
     "cross-env": "10.1.0",
     "emailjs-com": "3.2.0",
     "nuxt": "3.15.0",
     "pinia": "3.0.4"
-  },
-  "overrides": {
-    "rollup": "npm:@rollup/wasm-node"
   }
 }

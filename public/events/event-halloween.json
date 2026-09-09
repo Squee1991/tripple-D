@@ -1,10 +1,1863 @@
 {
   "quests": [
     {
-      "id": "q1",
-      "title": "Halloween слово",
+      "id": "quest-1",
+      "title": "Хэллоуин: основы и факты",
+      "rewardCoins": 10,
+      "rewardRep": 25,
       "steps": [
-        { "type": "word", "props": { "word": "Kürbis" } }
+        {
+          "type": "multiple-choice",
+          "id": "mcq-1",
+          "title": "Когда празднуют Хэллоуин?",
+          "question": "Wann feiert man Halloween?",
+          "options": [
+            "am 31. Oktober",
+            "am 1. November",
+            "am 11. November",
+            "am 24. Dezember"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-2",
+          "title": "Главный растительный символ",
+          "question": "Welches Gemüse wird an Halloween traditionell geschnitzt?",
+          "options": [
+            "die Karotte",
+            "der Kürbis",
+            "die Kartoffel",
+            "der Kohl"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-3",
+          "title": "Фраза для сбора сладостей",
+          "question": "Was rufen Kinder in Deutschland beim Umhergehen an Halloween?",
+          "options": [
+            "Guten Tag!",
+            "Süßes sonst gibt's Saures!",
+            "Frohes Fest!",
+            "Auf Wiedersehen!"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-4",
+          "title": "Светильник из тыквы",
+          "question": "Wie nennt man die ausgehöhlte Kürbislaterne auf Englisch und Deutsch?",
+          "options": [
+            "Jack O'Lantern",
+            "Knecht Ruprecht",
+            "Rübengeist",
+            "Schneemann"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-5",
+          "title": "Типичные цвета праздника",
+          "question": "Welche zwei Farben werden am meisten mit Halloween verbunden?",
+          "options": [
+            "Blau und Weiß",
+            "Schwarz und Orange",
+            "Grün und Rot",
+            "Gelb und Rosa"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-6",
+          "title": "Ночное животное праздника",
+          "question": "Welches Tier ist ein typisches Symbol für Gruselnacht und Hexen?",
+          "options": [
+            "die Fledermaus",
+            "das Schaf",
+            "das Pferd",
+            "die Kuh"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-7",
+          "title": "День после Хэллоуина",
+          "question": "Welcher Feiertag folgt in vielen Regionen direkt am 1. November?",
+          "options": [
+            "Allerheiligen",
+            "Ostern",
+            "Pfingsten",
+            "Silvester"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-8",
+          "title": "Что кладут внутрь тыквы?",
+          "question": "Was stellt man traditionell in den geschnitzten Kürbis?",
+          "options": [
+            "ein Buch",
+            "eine Kerze",
+            "einen Apfel",
+            "ein Glas Wasser"
+          ],
+          "correctOptionIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "quest-2",
+      "title": "Немецкие традиции и альтернативы",
+      "rewardCoins": 10,
+      "rewardRep": 25,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "mcq-9",
+          "title": "Традиция до тыкв",
+          "question": "Was schnitzten die Menschen im deutschsprachigen Raum früher vor dem Kürbis?",
+          "options": [
+            "Futterrüben",
+            "Wassermelonen",
+            "Brote",
+            "Gurken"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-10",
+          "title": "Замок Франкенштейна",
+          "question": "Auf welcher berühmten deutschen Burg findet seit den 1970er Jahren ein großes Halloween-Festival statt?",
+          "options": [
+            "Burg Frankenstein bei Darmstadt",
+            "Schloss Neuschwanstein",
+            "Wartburg",
+            "Burg Hohenzollern"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-11",
+          "title": "Протестантский праздник 31 октября",
+          "question": "Welcher wichtige kirchliche Feiertag wird in Deutschland ebenfalls am 31. Oktober gefeiert?",
+          "options": [
+            "Reformationstag",
+            "Dreikönigstag",
+            "Nikolaustag",
+            "Karfreitag"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-12",
+          "title": "Праздник фонариков в ноябре",
+          "question": "Bei welchem Fest im November ziehen Kinder mit selbstgebastelten Laternen durch die Straßen?",
+          "options": [
+            "Martinstag (Sankt Martin)",
+            "Erntedankfest",
+            "Silvester",
+            "Walpurgisnacht"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-13",
+          "title": "Рэбелихтлихт в Швейцарии",
+          "question": "In welchem Land schnitzt man im November traditionell Räben (Räbeliechtli)?",
+          "options": [
+            "in der Schweiz",
+            "in Spanien",
+            "in Schweden",
+            "in Italien"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-14",
+          "title": "Немецкое суеверие на Хэллоуин",
+          "question": "Warum verstecken manche Menschen in Deutschland in der Halloween-Nacht Messer?",
+          "options": [
+            "damit die Geister sich nicht verletzen",
+            "damit Kinder sie nicht finden",
+            "um sie zu schärfen",
+            "weil es Unglück beim Kochen bringt"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-15",
+          "title": "Вход в «тихие дни»",
+          "question": "Warum enden Halloween-Partys in manchen deutschen Bundesländern um Mitternacht?",
+          "options": [
+            "weil Allerheiligen ein stiller Feiertag ist",
+            "weil die Busse nicht mehr fahren",
+            "wegen der Polizeiordnung",
+            "weil Geister nur bis Mitternacht aktiv sind"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-16",
+          "title": "Что прячется в тыкве?",
+          "question": "Was macht man in Deutschland oft aus dem Fruchtfleisch des Kürbisses?",
+          "options": [
+            "Kürbissuppe",
+            "Eiscreme",
+            "Limonade",
+            "Bier"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-3",
+      "title": "Мистические существа и легенды",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "mcq-17",
+          "title": "Трансильванский граф",
+          "question": "Welche Gruselgestalt meidet Knoblauch und schläft in einem Sarg?",
+          "options": [
+            "der Vampir",
+            "der Zombie",
+            "die Mumie",
+            "das Gespenst"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-18",
+          "title": "Гора ведьм в Германии",
+          "question": "Auf welchem Berg im Harz versammeln sich laut deutscher Sage die Hexen?",
+          "options": [
+            "auf dem Brocken (Blocksberg)",
+            "auf der Zugspitze",
+            "auf dem Feldberg",
+            "auf dem Fichtelberg"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-19",
+          "title": "Оборотень в немецком фольклоре",
+          "question": "Wie nennt man einen Menschen, der sich bei Vollmond in einen Wolf verwandelt?",
+          "options": [
+            "Werwolf",
+            "Erlkönig",
+            "Rübezahl",
+            "Kobold"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-20",
+          "title": "Транспорт ведьмы",
+          "question": "Worauf fliegt eine Hexe der Sage nach durch die Luft?",
+          "options": [
+            "auf einem Besen",
+            "auf einem Teppich",
+            "auf einem Stuhl",
+            "auf einem Schirm"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-21",
+          "title": "Обитатель старых замков",
+          "question": "Welches Wesen spukt oft unsichtbar oder weiß gekleidet durch alte Gem Gemäuer?",
+          "options": [
+            "das Gespenst",
+            "der Zwerg",
+            "der Ritter",
+            "der Riese"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-22",
+          "title": "Спутник ведьмы",
+          "question": "Welches Haustier gilt im Aberglauben oft als Begleiter der Hexe?",
+          "options": [
+            "eine schwarze Katze",
+            "ein weißes Kaninchen",
+            "ein goldener Fisch",
+            "ein bunter Papagei"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-23",
+          "title": "Северные огни болот",
+          "question": "Wie heißen die geheimnisvollen Lichter in deutschen Mooren, die Wanderer in die Irre führen?",
+          "options": [
+            "Irrlichter",
+            "Laternen",
+            "Glühwürmchen",
+            "Kerzenfunken"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-24",
+          "title": "Живой мертвец",
+          "question": "Wie nennt man eine wiederauferstandene Gestalt, die langsam umherwandert?",
+          "options": [
+            "der Zombie",
+            "der Kobold",
+            "der Wichtel",
+            "die Fee"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-4",
+      "title": "Костюмы и осенняя ночь",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "mcq-25",
+          "title": "Маскировка на праздник",
+          "question": "Warum verkleiden sich die Menschen ursprünglich an Halloween?",
+          "options": [
+            "um böse Geister abzuschrecken oder zu täuschen",
+            "um warm zu bleiben",
+            "um Schokolade zu sparen",
+            "um Fotos zu machen"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-26",
+          "title": "Костяной наряд",
+          "question": "Welches Kostüm besteht nur aus weißen Knochen auf schwarzem Stoff?",
+          "options": [
+            "Skelett",
+            "Geist",
+            "Vampir",
+            "Pirat"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-27",
+          "title": "Атрибут вампира",
+          "question": "Was gehört neben einem schwarzen Umhang zwingend zu einem Vampirkostüm?",
+          "options": [
+            "spitze Eckzähne",
+            "eine Brille",
+            "ein Zauberstab",
+            "ein Bart"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-28",
+          "title": "Простой костюм привидения",
+          "question": "Was brauchte man früher für das einfachste Gespensterkostüm?",
+          "options": [
+            "ein altes weißes Bettlaken",
+            "einen großen Koffer",
+            "eine Zeitung",
+            "einen Regenschirm"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-29",
+          "title": "Популярный десерт осени",
+          "question": "Welche Frucht wird auf Herbstmärkten und Halloween-Festen oft mit rotem Zucker kandiert?",
+          "options": [
+            "der Apfel",
+            "die Birne",
+            "die Pflaume",
+            "die Banane"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-30",
+          "title": "Украшение дома",
+          "question": "Was hängt man an Halloween oft in die Ecken von Zimmern?",
+          "options": [
+            "künstliche Spinnweben",
+            "bunte Lametta",
+            "Ostereier",
+            "Tannenzweige"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-31",
+          "title": "Детские сладости",
+          "question": "Was bekommen Kinder in Deutschland am häufigsten an die Haustür gereicht?",
+          "options": [
+            "Bonbons und Schokolade",
+            "Brot und Käse",
+            "Geldmünzen",
+            "Gemüse"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-32",
+          "title": "Время выхода на охоту за сладостями",
+          "question": "Wann gehen die Kinder meistens von Haus zu Haus?",
+          "options": [
+            "am frühen Abend bei Einbruch der Dunkelheit",
+            "frühmorgens um 6 Uhr",
+            "am Mittag bei voller Sonne",
+            "erst um 3 Uhr nachts"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-5",
+      "title": "Символика и старинные обычаи",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "mcq-33",
+          "title": "Кельтские истоки",
+          "question": "Welches antike keltische Fest gilt als geschichtlicher Ursprung von Halloween?",
+          "options": [
+            "Samhain",
+            "Beltane",
+            "Imbolc",
+            "Yule"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-34",
+          "title": "Что означает «Saures»?",
+          "question": "Was drohen die Kinder im Spruch an, wenn sie keine Süßigkeiten bekommen?",
+          "options": [
+            "einen kleinen Streich",
+            "eine Rechnung",
+            "ein Lied",
+            "ein Geschenk"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-35",
+          "title": "Немецкая ярмарка тыкв",
+          "question": "In welcher Stadt bei Stuttgart findet jedes Jahr die weltweit größte Kürbisausstellung statt?",
+          "options": [
+            "Ludwigsburg",
+            "Heidelberg",
+            "Freiburg",
+            "Tübingen"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-36",
+          "title": "Осенний котёл ведьмы",
+          "question": "Worin kocht eine Hexe der Legende nach ihre Zaubertränke?",
+          "options": [
+            "in einem Kessel",
+            "in einer Pfanne",
+            "in einer Tasse",
+            "in einem Eimer"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-37",
+          "title": "Арахнофобия в октябре",
+          "question": "Welches achtbeinige Tier baut Netze und gehört fest zu Halloween?",
+          "options": [
+            "die Spinne",
+            "der Skorpion",
+            "die Biene",
+            "der Käfer"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-38",
+          "title": "Магический атрибут",
+          "question": "Womit verwandelt ein Zauberer oder eine Hexe Dinge?",
+          "options": [
+            "mit einem Zauberstab",
+            "mit einem Löffel",
+            "mit einem Bleistift",
+            "mit einem Hammer"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-39",
+          "title": "Тыквенные семечки",
+          "question": "Was macht man oft mit den Kernen, nachdem man den Kürbis aushöhlt?",
+          "options": [
+            "man röstet sie im Ofen",
+            "man wirft sie ins Wasser",
+            "man friert sie ungekocht ein",
+            "man malt sie an"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-40",
+          "title": "Осенний лес",
+          "question": "Warum ist der Wald Ende Oktober so atmosphärisch für Geistergeschichten?",
+          "options": [
+            "wegen Nebel und fallenden Blättern",
+            "weil es heiß ist",
+            "weil die Vögel nachts laut singen",
+            "weil Blumen blühen"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-6",
+      "title": "Halloween in Deutschland",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-1",
+          "title": "Der Kürbisabend",
+          "text": "Am 31. Oktober feiern auch viele Kinder in Deutschland Halloween. Am Nachmittag schnitzt Familie Müller einen großen Kürbis. Sie schneiden ein schauriges Gesicht mit Zähnen hinein. Am Abend stellen sie eine brennende Kerze hinein, damit der Kürbis im Dunkeln leuchtet.",
+          "questions": [
+            {
+              "question": "Wann schnitzt die Familie den Kürbis?",
+              "options": ["am Nachmittag", "mitten in der Nacht", "am nächsten Morgen", "im Sommer"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was für ein Gesicht schnitzen sie?",
+              "options": ["ein schauriges Gesicht", "ein trauriges Gesicht", "ein schlafendes Gesicht", "gar kein Gesicht"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was stellen sie in den Kürbis?",
+              "options": ["eine brennende Kerze", "eine Taschenlampe", "Bonbons", "Wasser"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Warum stellen sie eine Kerze hinein?",
+              "options": ["damit er im Dunkeln leuchtet", "damit er warm bleibt", "damit er besser riecht", "damit er weich wird"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie ist die Atmosphäre am Abend?",
+              "options": ["stimmungsvoll und dunkel", "sonnig und heiß", "langweilig", "sehr laut wie am Flughafen"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-2",
+          "title": "Auf Beutezug durch die Straße",
+          "text": "Sobald es dunkel wird, ziehen Lukas und Mia verkleidet durch ihr Wohnviertel. Lukas ist als Vampir mit schwarzem Umhang verkleidet, Mia als kleine Hexe mit spitzem Hut. Sie klingeln an Haustüren und rufen laut: 'Süßes, sonst gibt's Saures!' Die Nachbarn lachen und füllen ihre Taschen mit Schokolade.",
+          "questions": [
+            {
+              "question": "Wann ziehen die Kinder los?",
+              "options": ["sobald es dunkel wird", "am frühen Morgen", "um 12 Uhr mittags", "nur bei Regen"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Als was ist Lukas verkleidet?",
+              "options": ["als Vampir", "als Gespenst", "als Zauberer", "als Ritter"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was trägt Mia auf dem Kopf?",
+              "options": ["einen spitzen Hut", "eine Krone", "einen Helm", "ein Tuch"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was rufen die Kinder an den Haustüren?",
+              "options": ["Süßes, sonst gibt's Saures!", "Guten Abend allerseits!", "Frohes neues Jahr!", "Hilfe, ein Monster!"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was schenken die Nachbarn den Kindern?",
+              "options": ["Schokolade", "Obst und Gemüse", "Bücher", "Spielzeugautos"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-3",
+          "title": "Burg Frankenstein",
+          "text": "In der Nähe von Darmstadt liegt die Burg Frankenstein. Seit vielen Jahren ist die alte Burgruine im Oktober ein Treffpunkt für Gruselfans aus ganz Deutschland. Schauspieler verkleiden sich als Monster und erschrecken mutige Besucher im dichten Herbstnebel.",
+          "questions": [
+            {
+              "question": "Wo liegt die Burg Frankenstein?",
+              "options": ["in der Nähe von Darmstadt", "mitten in Berlin", "in den Alpen", "an der Nordsee"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was ist die Burg heute?",
+              "options": ["eine Burgruine", "ein modernes Hotel", "ein Kindergarten", "ein Bauernhof"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wer verkleidet sich dort?",
+              "options": ["Schauspieler", "Touristenführer", "Schulkinder", "Bauarbeiter"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was machen die Monster mit den Besuchern?",
+              "options": ["sie erschrecken sie", "sie füttern sie", "sie fotografieren sie", "sie schicken sie weg"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Welches Wetter herrscht oft um die Burg?",
+              "options": ["dichter Herbstnebel", "starker Schneesturm", "sommerliche Hitze", "Wüstenwind"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-4",
+          "title": "Zwischen Reformation und Grusel",
+          "text": "In Deutschland ist der 31. Oktober nicht nur Halloween. Für evangelische Christen ist es der Reformationstag, der an Martin Luther erinnert. In vielen Bundesländern ist dieser Tag ein gesetzlicher Feiertag. Während tagsüber Gottesdienste gefeiert werden, gehört der Abend oft den Gruselpartys der Jugend.",
+          "questions": [
+            {
+              "question": "An wen erinnert der Reformationstag?",
+              "options": ["an Martin Luther", "an Sankt Martin", "an Nikolaus", "an Johann Wolfgang von Goethe"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was für ein Tag ist der 31. Oktober in vielen Bundesländern?",
+              "options": ["ein gesetzlicher Feiertag", "ein normaler Arbeitstag ohne Schule", "ein Trauertag", "ein Sporttag"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was findet tagsüber oft statt?",
+              "options": ["Gottesdienste", "Schulprüfungen", "Kürbisrennen", "Laternenumzüge"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wem gehört oft der spätere Abend?",
+              "options": ["den Gruselpartys der Jugend", "den Chören", "den Schulklassen", "den Handwerkern"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Welche Konfession feiert die Reformation?",
+              "options": ["evangelische Christen", "orthodoxe Christen", "buddhistische Mönche", "nur Sportvereine"],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-7",
+      "title": "Herbstbräuche im deutschsprachigen Raum",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-1",
+          "title": "Der Rübengeist",
+          "text": "Bevor der amerikanische Kürbis nach Europa kam, schnitzten Kinder im Schwarzwald und in der Schweiz Futterrüben. Diese nannten sie 'Rübengeister'. Man stellte eine Kerze hinein und trug die leuchtende Rübe von Haus zu Haus, um die Ernte zu feiern und den Winter zu begrüßen.",
+          "questions": [
+            {
+              "question": "Was schnitzten die Kinder früher statt Kürbissen?",
+              "options": ["Futterrüben", "Äpfel", "Wassermelonen", "Holzscheite"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie nannte man diese geschnitzten Figuren?",
+              "options": ["Rübengeister", "Kürbisköpfe", "Holzmänner", "Nachtschwärmer"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wo war dieser Brauch besonders verbreitet?",
+              "options": ["im Schwarzwald und in der Schweiz", "nur an der Ostsee", "in Italien", "in den Niederlanden"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was steckte man in die ausgehöhlte Rübe?",
+              "options": ["eine Kerze", "eine Kartoffel", "Mehl", "Öl"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Welche Jahreszeit wurde damit begrüßt?",
+              "options": ["der Winter", "der Frühling", "der Sommer", "der Herbstbeginn"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-2",
+          "title": "Allerheiligen und der stille November",
+          "text": "Direkt nach Halloween folgt der 1. November: Allerheiligen. In katholisch geprägten Regionen wie Bayern oder Österreich ist dies ein stiller Feiertag. Die Familien gehen auf den Friedhof, stellen Lichter auf die Gräber ihrer Verwandten und gedenken der Verstorbenen in Ruhe.",
+          "questions": [
+            {
+              "question": "Welcher Feiertag ist am 1. November?",
+              "options": ["Allerheiligen", "Allerseelen", "Sankt Martin", "Erntedank"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was bedeutet ein 'stiller Feiertag'?",
+              "options": ["laute Musik und Tanzen sind verboten", "alle Geschäfte öffnen die ganze Nacht", "man darf nicht sprechen", "man bleibt nur im Bett"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wohin gehen viele Familien an diesem Tag?",
+              "options": ["auf den Friedhof", "in die Berge zum Skifahren", "ins Kino", "in die Schule"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was stellen die Menschen auf die Gräber?",
+              "options": ["Lichter und Blumen", "Kürbisse und Süßigkeiten", "Bücher", "Bäume"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "In welchen Ländern ist Allerheiligen besonders wichtig?",
+              "options": ["in Bayern und Österreich", "in Dänemark", "in England", "in Schweden"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-3",
+          "title": "Das Fest Sankt Martin",
+          "text": "Nur elf Tage nach Halloween, am 11. November, feiern die Kinder in Deutschland den Martinstag. Sie tragen bunte, selbstgemachte Papierlaternen durch die Straßen und singen traditionelle Martinslieder. Am Ende gibt es oft ein wärmendes Martinsfeuer und süßes Hefegebäck wie den Weckmann.",
+          "questions": [
+            {
+              "question": "Wann feiert man den Martinstag?",
+              "options": ["am 11. November", "am 31. Oktober", "am 6. Dezember", "am 1. November"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was tragen die Kinder beim Umzug?",
+              "options": ["bunte Papierlaternen", "Kürbisse", "Taschenlampen", "Glocken"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was singen die Kinder während des Umzugs?",
+              "options": ["traditionelle Martinslieder", "Halloween-Lieder", "Weihnachtslieder", "Geburtstagslieder"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was brennt oft am Ende des Umzugs?",
+              "options": ["ein großes Martinsfeuer", "nur eine Kerze", "ein Haus", "ein Ofen"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Welches Gebäck gibt es oft dazu?",
+              "options": ["einen Weckmann (Stutenkerl)", "einen Stollen", "eine Brezel", "ein Croissant"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-4",
+          "title": "Die Ludwigsburger Kürbisausstellung",
+          "text": "Jedes Jahr im Herbst verwandelt sich der Park des Schlosses Ludwigsburg in Baden-Württemberg in ein riesiges Kürbismeer. Hunderttausende Kürbisse werden zu gigantischen Skulpturen und Fabelwesen zusammengesteckt. Besucher aus ganz Europa probieren dort Kürbissuppe, Kürbis-Maultaschen und geröstete Kerne.",
+          "questions": [
+            {
+              "question": "Wo findet die berühmte Kürbisausstellung statt?",
+              "options": ["im Schloss Ludwigsburg", "im Schloss Sanssouci", "am Brandenburger Tor", "im Kölner Dom"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Woraus werden die riesigen Skulpturen gebaut?",
+              "options": ["aus Kürbissen", "aus Holz und Metall", "aus Eis und Schnee", "aus Plastik"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was kann man dort kulinarisch probieren?",
+              "options": ["Kürbissuppe und Kürbis-Maultaschen", "nur Schokolade", "Pommes mit Mayo", "Pizza Margherita"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie viele Kürbisse werden dort verwendet?",
+              "options": ["Hunderttausende", "etwa fünfzig Stück", "zehn Stück", "eine Million Kilo Äpfel"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "In welcher Jahreszeit findet die Ausstellung statt?",
+              "options": ["im Herbst", "im Frühling", "im Hochsommer", "mitten im Winter"],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-8",
+      "title": "Die Geisterstunde auf Burg Eltz",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-1",
+          "title": "Nebel im Tal",
+          "text": "Tief in einem engen Flusstal in Rheinland-Pfalz liegt die alte Burg Eltz. Es ist der 31. Oktober, und ein dichter, kalter Nebel zieht vom Fluss hinauf zu den Burgtoren. Die Turmuhr schlägt elf, und der Burgwächter kontrolliert die schweren Holzfenster. Ein sonderbares Knarren hallt durch den langen Rittersaal.",
+          "questions": [
+            {
+              "question": "Wo liegt die Burg Eltz?",
+              "options": ["in einem tiefen Flusstal in Rheinland-Pfalz", "auf einer Insel in der Ostsee", "in einer Großstadt", "in den bayerischen Alpen"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Welches Wetter herrscht am 31. Oktober?",
+              "options": ["dichter, kalter Nebel", "strahlender Sonnenschein", "starker Schneefall", "ein warmer Sommerabend"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Welche Uhrzeit schlägt die Turmuhr?",
+              "options": ["elf Uhr", "Mitternacht", "zwei Uhr", "sieben Uhr"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was kontrolliert der Burgwächter?",
+              "options": ["die schweren Holzfenster", "die Schatztruhe", "die Lampen im Garten", "die Pferde im Stall"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was hallt durch den Rittersaal?",
+              "options": ["ein sonderbares Knarren", "laute Rockmusik", "das Bellen eines Hundes", "ein Lachen"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-2",
+          "title": "Der weiße Schatten",
+          "text": "Um Punkt Mitternacht schlägt die alte Uhr zwölfmal. Die Geisterstunde beginnt! Plötzlich flackert das Licht der Öllampen an der Wand. Am Ende des Korridors erscheint die Gestalt einer weißen Dame. Sie schwebt leise über die kalten Steinplatten und hält einen goldenen Schlüsselbund in der Hand.",
+          "questions": [
+            {
+              "question": "Was beginnt um Punkt Mitternacht?",
+              "options": ["die Geisterstunde", "das Frühstück", "der Sonnenaufgang", "der Markt"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was passiert mit den Öllampen?",
+              "options": ["ihr Licht flackert", "sie explodieren", "sie leuchten hellblau", "sie fallen herunter"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wer erscheint am Ende des Korridors?",
+              "options": ["eine weiße Dame", "ein schwarzer Hund", "ein kleiner Zwerg", "ein alter Ritter mit Rüstung"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie bewegt sich die Gestalt fort?",
+              "options": ["sie schwebt leise über die Steinplatten", "sie rennt stampfend", "sie kriecht langsam", "sie reitet auf einem Pferd"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was hält sie in der Hand?",
+              "options": ["einen goldenen Schlüsselbund", "einen Kürbis", "ein altes Buch", "einen Kerzenständer"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-3",
+          "title": "Die Botschaft der Ahnen",
+          "text": "Der Wächter hält den Atem an, doch die weiße Dame bleibt ruhig stehen. Sie blickt ihn mit traurigen, aber friedlichen Augen an. 'Ich beschütze dieses Gemäuer seit Jahrhunderten', flüstert sie leise wie ein Herbstwind. 'Hab keine Angst in dieser Nacht. Ehre die Ahnen und hüte das Licht.'",
+          "questions": [
+            {
+              "question": "Wie reagiert der Wächter zuerst?",
+              "options": ["er hält den Atem an", "er rennt laut schreiend weg", "er lacht den Geist aus", "er greift zum Schwert"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie blickt die weiße Dame den Wächter an?",
+              "options": ["mit traurigen, aber friedlichen Augen", "mit zornigem Blick", "mit funkelnden roten Augen", "gar nicht, sie hat keine Augen"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was macht die weiße Dame seit Jahrhunderten?",
+              "options": ["sie beschützt das Gemäuer", "sie sucht einen Schatz", "sie vertreibt alle Menschen", "sie schläft im Turm"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie klingt ihre Stimme?",
+              "options": ["leise wie ein Herbstwind", "laut wie Donner", "hell wie eine Glocke", "schnell wie ein Bach"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was soll der Wächter hüten?",
+              "options": ["das Licht", "den Turmschlüssel", "das Burgtor", "das Gold"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-4",
+          "title": "Der Morgen danach",
+          "text": "Als der erste Glockenschlag von eins ertönt, löst sich die Gestalt im Morgennebel auf. Nur eine leichte Kühle bleibt im Raum zurück. Am nächsten Morgen, dem 1. November, geht die Sonne über den bunten Buchenwäldern auf. Auf dem Burgtisch liegt ein alter Schlüssel – ein Zeichen für den Wächter, dass die Burg wohlbehütet ist.",
+          "questions": [
+            {
+              "question": "Wann löst sich die Gestalt auf?",
+              "options": ["beim ersten Schlag um ein Uhr", "erst am nächsten Mittag", "nach zehn Minuten", "gar nicht mehr"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was bleibt im Raum spürbar zurück?",
+              "options": ["eine leichte Kühle", "dicker schwarzer Rauch", "der Geruch von Rosen", "warmes Wasser"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Welcher Tag bricht am nächsten Morgen an?",
+              "options": ["der 1. November (Allerheiligen)", "Heiligabend", "Silvester", "der 1. Mai"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was findet der Wächter am Morgen auf dem Tisch?",
+              "options": ["einen alten Schlüssel", "einen Goldtaler", "einen geschnitzten Kürbis", "einen Brief"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was bedeutet der Fund für den Wächter?",
+              "options": ["dass die Burg wohlbehütet ist", "dass er fliehen muss", "dass Diebe eingebrochen sind", "dass das Schloss brennt"],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-9",
+      "title": "Geheimnis im Schwarzwald",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-1",
+          "title": "Der dunkle Tann",
+          "text": "Im Schwarzwald stehen die Tannen so dicht, dass selbst am Tag kaum Sonnenlicht den Waldboden berührt. Am Vorabend von Allerheiligen erzählt man sich im Dorf die Geschichte vom Moorgeist. Niemand geht nach Sonnenuntergang allein auf die schmalen Waldpfade.",
+          "questions": [
+            {
+              "question": "Warum berührt kaum Licht den Waldboden?",
+              "options": ["weil die Tannen so dicht stehen", "weil es immer regnet", "weil der Wald unter der Erde liegt", "weil die Sonne nie scheint"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Welche Geschichte erzählt man sich im Dorf?",
+              "options": ["die Geschichte vom Moorgeist", "die Sage vom Weihnachtsmann", "ein Märchen von den Elfen", "eine Geschichte von Piraten"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "An welchem Tag spielt die Geschichte?",
+              "options": ["am Vorabend von Allerheiligen", "am Neujahrsmorgen", "an Ostern", "mitten im Juli"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was macht niemand nach Sonnenuntergang?",
+              "options": ["allein auf die Waldpfade gehen", "die Fenster öffnen", "Kerzen anzünden", "Brot backen"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie wirkt der Wald auf die Menschen?",
+              "options": ["geheimnisvoll und unheimlich", "fröhlich und sonnig", "trocken und warm", "laut und belebt"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-2",
+          "title": "Das Irrlicht",
+          "text": "Der junge Förster Jonas muss noch eine Hütte im Wald überprüfen. Als die Dunkelheit einbricht, sieht er plötzlich ein bläuliches Licht zwischen den alten Baumstämmen tanzen. Es hüpft auf und ab wie eine kleine Flamme. Jonas erinnert sich an die Warnung: Folge niemals einem Irrlicht ins Moor!",
+          "questions": [
+            {
+              "question": "Wer ist Jonas von Beruf?",
+              "options": ["Förster", "Bäcker", "Lehrer", "Arzt"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was muss Jonas im Wald überprüfen?",
+              "options": ["eine Hütte", "den Holzstapel", "einen Brunnen", "das Burgtor"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Welche Farbe hat das tanzende Licht?",
+              "options": ["bläulich", "tiefrot", "knallgelb", "pechschwarz"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie bewegt sich das Licht fort?",
+              "options": ["es hüpft auf und ab wie eine Flamme", "es rast wie ein Blitz", "es steht regungslos am Boden", "es kreist im Wasser"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Welche Warnung fällt Jonas rechtzeitig ein?",
+              "options": ["folge niemals einem Irrlicht ins Moor", "bleib stehen und schlafe", "wirf Steine nach dem Licht", "pfeife ein lautes Lied"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-3",
+          "title": "Der sichere Pfad",
+          "text": "Statt dem bläulichen Schein zu folgen, holt Jonas seine Laterne hervor und schaut auf den Boden. Auf den Steinen sieht er alte Wegmarkierungen aus weißer Farbe. Er wendet seinen Blick fest vom Moor ab und geht Schritt für Schritt den sicheren Hauptweg entlang.",
+          "questions": [
+            {
+              "question": "Was holt Jonas hervor?",
+              "options": ["seine Laterne", "sein Handy", "ein Seil", "ein Buch"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was entdeckt Jonas auf den Steinen?",
+              "options": ["alte weiße Wegmarkierungen", "Goldmünzen", "Fußspuren eines Bären", "alte Kürbisse"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wohin schaut Jonas bewusst nicht?",
+              "options": ["ins feuchte Moor", "auf die Steine", "auf seine Schuhe", "auf die Laterne"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie bewegt sich Jonas fort?",
+              "options": ["Schritt für Schritt auf dem Hauptweg", "er rennt ohne Licht durchs Gebüsch", "er bleibt zitternd sitzen", "er klettert auf eine Tanne"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was hilft Jonas, die Orientierung zu behalten?",
+              "options": ["die Wegzeichen und sein eigenes Licht", "der laute Ruf des Kuckucks", "die Hilfe anderer Wanderer", "das GPS auf der Karte"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-4",
+          "title": "Das warme Licht des Dorfes",
+          "text": "Nach einer Stunde lichtet sich der Wald. Jonas sieht die ersten Fachwerkhäuser des Dorfes, an deren Türen geschnitzte Kürbisse und Rüben warm leuchten. Der Wind lässt nach, und die Glocken der Dorfkirche läuten die Nachtruhe ein. Jonas betritt sicher sein warmes Haus.",
+          "questions": [
+            {
+              "question": "Wie lange dauert Jonas' Weg aus dem Wald?",
+              "options": ["eine Stunde", "fünf Minuten", "die ganze Nacht", "drei Tage"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was sieht Jonas am Waldrand?",
+              "options": ["die Fachwerkhäuser des Dorfes", "eine alte Ruine", "ein Zeltlager", "einen großen See"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was leuchtet vor den Türen der Häuser?",
+              "options": ["geschnitzte Kürbisse und Rüben", "elektrische Scheinwerfer", "bunte Lichterketten", "nur offene Lagerfeuer"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was läutet die Nachtruhe ein?",
+              "options": ["die Kirchenglocken", "das Heulen eines Wolfes", "der Dorfpolizist", "eine Sirene"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie endet die Nacht für Jonas?",
+              "options": ["sicher in seinem warmen Haus", "verirrt im kalten Moor", "auf einer großen Gruselparty", "im Turm der Kirche"],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-10",
+      "title": "Herbststimmung und Geisterbräuche",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-1",
+          "title": "Der goldene Oktober",
+          "text": "Der Oktober bringt goldene Blätter und kühlere Tage nach Deutschland. An den Wochenenden gehen Familien in die Wälder, um Kastanien und Eicheln zu sammeln. Aus den Waldfrüchten basteln die Kinder kleine Tierfiguren oder Gesichter, bevor die Gruseltage beginnen.",
+          "questions": [
+            {
+              "question": "Was bringt der Oktober nach Deutschland?",
+              "options": ["goldene Blätter und kühlere Tage", "Schneestürme und Eisregen", "sommerliche Strandtage", "starke Hitzewellen"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was sammeln die Familien an den Wochenenden?",
+              "options": ["Kastanien und Eicheln", "Erdbeeren und Kirschen", "Tannenbäume", "Ostereier"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was basteln die Kinder daraus?",
+              "options": ["kleine Tierfiguren oder Gesichter", "Möbelstücke", "Vogelhäuser aus Stein", "Masken aus Glas"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Welche Zeit beginnt kurz danach?",
+              "options": ["die Gruseltage um Halloween", "die Sommerferien", "der Frühjahrsputz", "das Osterfest"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wo verbringen viele Menschen ihre Freizeit?",
+              "options": ["in den herbstlichen Wäldern", "nur im Einkaufszentrum", "am Strand", "im Hallenbad"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-2",
+          "title": "Die Erntezeit geht zu Ende",
+          "text": "Mit dem Ende des Oktobers ist auch die Ernte auf den Feldern abgeschlossen. Die letzten Äpfel sind gepflückt und die Kürbisse vom Acker geholt. Die Landwirte bereiten ihre Scheunen auf den frostigen Winter vor, während in den Küchen warme Eintöpfe dampfen.",
+          "questions": [
+            {
+              "question": "Was ist Ende Oktober auf den Feldern abgeschlossen?",
+              "options": ["die Ernte", "die Aussaat für den Sommer", "die Bewässerung", "der Weizenbau"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Welche Früchte sind zuletzt gepflückt worden?",
+              "options": ["Äpfel und Kürbisse", "Wassermelonen", "Spargel", "Erdbeeren"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Worauf bereiten die Landwirte ihre Scheunen vor?",
+              "options": ["auf den frostigen Winter", "auf ein großes Frühlingsfest", "auf den Hochsommer", "auf Hochwasser"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was kocht man im Herbst gern in den Küchen?",
+              "options": ["warme Eintöpfe", "kalte Fruchtsuppen", "nur Speiseeis", "gegrilltes Fleisch wie im Juli"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie verändert sich die Natur um diese Zeit?",
+              "options": ["sie bereitet sich auf die Winterruhe vor", "sie beginnt frisch zu blühen", "sie wird grün und warm", "sie trocknet wie in der Wüste aus"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-3",
+          "title": "Gruselgeschichten am Kamin",
+          "text": "Wenn draußen der Herbststurm gegen die Fensterläden schlägt, setzen sich die Menschen gern drinnen zusammen. Beim Schein des Kaminfeuers liest der Großvater alte Schauerballaden vor, wie Goethes 'Erlkönig'. Die Kinder lauschen gebannt und schaudern wohlgefällig.",
+          "questions": [
+            {
+              "question": "Was schlägt draußen gegen die Fensterläden?",
+              "options": ["der Herbststurm", "Schneebälle", "Vögel", "das Flusswasser"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wo sitzen die Menschen zusammen?",
+              "options": ["beim Schein des Kaminfeuers", "draußen im Garten", "auf dem dunklen Dachboden", "im Keller ohne Licht"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Welche berühmte Ballade liest der Großvater vor?",
+              "options": ["Goethes 'Erlkönig'", "Schillers 'Glocke'", "ein Weihnachtslied", "ein Rezeptbuch"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie reagieren die Kinder auf die Geschichten?",
+              "options": ["sie lauschen gebannt und schaudern", "sie schlafen sofort ein", "sie laufen ängstlich auf die Straße", "sie streiten lautstark"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was erzeugt die gemütliche Gruselstimmung?",
+              "options": ["das Kaminfeuer und der Sturm draußen", "laute Popmusik", "elektrisches Deckenlicht", "ein Kinofilm"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-4",
+          "title": "Der Übergang zur stillen Zeit",
+          "text": "Mit dem Verglimmen der Halloween-Kürbisse am späten Abend kehrt Ruhe in die Städte ein. Der November gilt in Mitteleuropa traditionell als Monat des Nachdenkens und der Stille. Die bunten Farben weichen dem Grau, und die Menschen rücken drinnen näher zusammen.",
+          "questions": [
+            {
+              "question": "Was geschieht, wenn die Kürbislaternen verglimmen?",
+              "options": ["Ruhe kehrt in die Städte ein", "ein riesiges Feuerwerk beginnt", "die Schule fällt aus", "die Geschäfte öffnen wieder"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Als was gilt der November traditionell?",
+              "options": ["als Monat des Nachdenkens und der Stille", "als Fröhlichkeitsmonat", "als Bademonat", "als Reisemonat"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Welche Farben dominieren bald die Natur?",
+              "options": ["Grau und gedeckte Töne", "leuchtendes Gelb und Pink", "sattes Frühlingsgrün", "strahlendes Weiß"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was tun die Menschen in dieser kühleren Zeit?",
+              "options": ["sie rücken drinnen näher zusammen", "sie zelten draußen", "sie wandern Tag und Nacht", "sie fliegen alle nach Übersee"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was folgt direkt auf die lebhafte Gruselnacht?",
+              "options": ["eine ruhige, besinnliche Phase", "ein dreiwöchiger Karneval", "das Sommerfest", "der Schulanfang"],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-11",
+      "title": "Соедини хэллоуинские пары",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "matching",
+          "id": "match-1",
+          "instruction": "Соедини символ с его описанием",
+          "pairsLeft": [
+            { "id": "l1", "text": "Kürbis" },
+            { "id": "l2", "text": "Fledermaus" },
+            { "id": "l3", "text": "Spinnennetz" },
+            { "id": "l4", "text": "Hexenbesen" },
+            { "id": "l5", "text": "Grabstein" },
+            { "id": "l6", "text": "Vampirumhang" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "Wird ausgehöhlt und mit einer Fratze verziert" },
+            { "id": "r2", "text": "Fliegt lautlos durch die finstere Nacht" },
+            { "id": "r3", "text": "Klebriges Gewebe in staubigen Ecken" },
+            { "id": "r4", "text": "Dient der Hexe der Sage nach zum Fliegen" },
+            { "id": "r5", "text": "Steht auf dem Friedhof über einem Grab" },
+            { "id": "r6", "text": "Schwarzer Mantel mit rotem Kragen" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-2",
+          "instruction": "Соедини персонажа с его атрибутом или действием",
+          "pairsLeft": [
+            { "id": "l1", "text": "Vampir" },
+            { "id": "l2", "text": "Hexe" },
+            { "id": "l3", "text": "Gespenst" },
+            { "id": "l4", "text": "Skelett" },
+            { "id": "l5", "text": "Mumie" },
+            { "id": "l6", "text": "Werwolf" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "Schläft im Sarg und fürchtet Knoblauch" },
+            { "id": "r2", "text": "Braut Zaubertränke im großen Kessel" },
+            { "id": "r3", "text": "Rasselt mit Ketten im alten Schloss" },
+            { "id": "r4", "text": "Klappert nur mit Knochen ohne Muskeln" },
+            { "id": "r5", "text": "Ist von Kopf bis Fuß in weiße Binden gewickelt" },
+            { "id": "r6", "text": "Heult bei Vollmond im dichten Wald" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-3",
+          "instruction": "Соедини немецкое слово и русский перевод (тема: Хэллоуин)",
+          "pairsLeft": [
+            { "id": "l1", "text": "Kürbis" },
+            { "id": "l2", "text": "Gespenst" },
+            { "id": "l3", "text": "Fledermaus" },
+            { "id": "l4", "text": "Spinne" },
+            { "id": "l5", "text": "Skelett" },
+            { "id": "l6", "text": "Süßigkeiten" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "тыква" },
+            { "id": "r2", "text": "привидение" },
+            { "id": "r3", "text": "летучая мышь" },
+            { "id": "r4", "text": "паук" },
+            { "id": "r5", "text": "скелет" },
+            { "id": "r6", "text": "сладости" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-4",
+          "instruction": "Соедини осеннее событие и его дату",
+          "pairsLeft": [
+            { "id": "l1", "text": "Halloween" },
+            { "id": "l2", "text": "Reformationstag" },
+            { "id": "l3", "text": "Allerheiligen" },
+            { "id": "l4", "text": "Martinstag" },
+            { "id": "l5", "text": "Beginn der Geisterstunde" },
+            { "id": "l6", "text": "Karnevalserwachen" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "Abend des 31. Oktober" },
+            { "id": "r2", "text": "31. Oktober tagsüber" },
+            { "id": "r3", "text": "1. November" },
+            { "id": "r4", "text": "11. November (Laternenfest)" },
+            { "id": "r5", "text": "Mitternacht um 0:00 Uhr" },
+            { "id": "r6", "text": "11. November um 11:11 Uhr" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-12",
+      "title": "Соедини немецкие легенды и обычаи осени",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "matching",
+          "id": "match-1",
+          "instruction": "Соедини понятие с его определением",
+          "pairsLeft": [
+            { "id": "l1", "text": "Rübengeistern" },
+            { "id": "l2", "text": "Geisterstunde" },
+            { "id": "l3", "text": "Stiller Feiertag" },
+            { "id": "l4", "text": "Laternenumzug" },
+            { "id": "l5", "text": "Blocksberg" },
+            { "id": "l6", "text": "Erlkönig" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "Traditionelles Schnitzen von Futterrüben" },
+            { "id": "r2", "text": "Die unheimliche Zeit zwischen 0:00 und 1:00 Uhr" },
+            { "id": "r3", "text": "Tanz- und Musikverbot zu Allerheiligen" },
+            { "id": "r4", "text": "Kinder ziehen mit Lichtern zum Martinstag" },
+            { "id": "r5", "text": "Harzer Berg der Hexenversammlungen" },
+            { "id": "r6", "text": "Unheimliche Sagengestalt in Goethes Ballade" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-2",
+          "instruction": "Соедини предмет с его защитным или мистическим значением",
+          "pairsLeft": [
+            { "id": "l1", "text": "Knoblauch" },
+            { "id": "l2", "text": "Kerzenlicht" },
+            { "id": "l3", "text": "Salz" },
+            { "id": "l4", "text": "Maske" },
+            { "id": "l5", "text": "Silber" },
+            { "id": "l6", "text": "Hufeisen" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "Schutzmittel gegen Blutsauger" },
+            { "id": "r2", "text": "Vertreibt die Finsternis aus dem Kürbis" },
+            { "id": "r3", "text": "Altes Mittel gegen böse Geister an der Schwelle" },
+            { "id": "r4", "text": "Täuscht herumirrende Seelen" },
+            { "id": "r5", "text": "Einziges Metall gegen Werwölfe in Sagen" },
+            { "id": "r6", "text": "Schützt Haus und Hof vor Unheil" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-3",
+          "instruction": "Соедини немецкое слово и русский перевод (тема: мистика)",
+          "pairsLeft": [
+            { "id": "l1", "text": "Zaubertrank" },
+            { "id": "l2", "text": "Friedhof" },
+            { "id": "l3", "text": "Sarg" },
+            { "id": "l4", "text": "Schlossruine" },
+            { "id": "l5", "text": "Knochen" },
+            { "id": "l6", "text": "Nebel" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "зелье" },
+            { "id": "r2", "text": "кладбище" },
+            { "id": "r3", "text": "гроб" },
+            { "id": "r4", "text": "руины замка" },
+            { "id": "r5", "text": "кость" },
+            { "id": "r6", "text": "туман" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-4",
+          "instruction": "Соедини место в Германии и связанную с ним тему",
+          "pairsLeft": [
+            { "id": "l1", "text": "Burg Frankenstein" },
+            { "id": "l2", "text": "Brocken (Harz)" },
+            { "id": "l3", "text": "Ludwigsburg" },
+            { "id": "l4", "text": "Spreewald" },
+            { "id": "l5", "text": "Schwarzwald" },
+            { "id": "l6", "text": "Wittenberg" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "Großes Halloween-Festival bei Darmstadt" },
+            { "id": "r2", "text": "Hexensagen und Walpurgistradition" },
+            { "id": "r3", "text": "Größte Kürbisausstellung der Welt" },
+            { "id": "r4", "text": "Moor- und Irrlichterlegenden" },
+            { "id": "r5", "text": "Dichte Tannen und alte Rübengeister" },
+            { "id": "r6", "text": "Ursprung des Reformationstages am 31. Oktober" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-13",
+      "title": "Выбери правильное слово — Вечер Хэллоуина",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "choose-word",
+          "id": "cw-1",
+          "sentence": "Am 31. Oktober feiern viele Kinder und Jugendliche ___.",
+          "options": ["Ostern", "Halloween", "Pfingsten", "Weihnachten"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-2",
+          "sentence": "Vor der Haustür steht ein ausgehöhlter, leuchtender ___.",
+          "options": ["Schrank", "Kürbis", "Koffer", "Stuhl"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-3",
+          "sentence": "Die Kinder rufen laut: „Süßes, sonst gibt's ___!“",
+          "options": ["Saures", "Bitteres", "Salziges", "Heißes"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-4",
+          "sentence": "Der Vampir trägt spitze Zähne und einen schwarzen ___.",
+          "options": ["Schal", "Umhang", "Pullover", "Gürtel"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-5",
+          "sentence": "In den alten Zimmerecken hängen viele künstliche ___.",
+          "options": ["Spinnweben", "Vorhänge", "Schleifen", "Bücher"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-6",
+          "sentence": "Um Mitternacht beginnt im alten Schloss die ___.",
+          "options": ["Mittagspause", "Geisterstunde", "Schulstunde", "Sonnenzeit"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-7",
+          "sentence": "Draußen im Wald liegt dichter, kalter ___ auf den Wegen.",
+          "options": ["Sand", "Nebel", "Rauch", "Staub"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-8",
+          "sentence": "Die Nachbarn schenken den verkleideten Gästen viele bunte ___.",
+          "options": ["Süßigkeiten", "Kartoffeln", "Messer", "Steine"],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-14",
+      "title": "Выбери правильное слово — Немецкие осенние традиции",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "choose-word",
+          "id": "cw-1",
+          "sentence": "Am 31. Oktober gedenkt die evangelische Kirche der ___ durch Martin Luther.",
+          "options": ["Reformation", "Ernte", "Taufe", "Krönung"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-2",
+          "sentence": "Der 1. November heißt Allerheiligen und gilt in Bayern als ___ Feiertag.",
+          "options": ["lauter", "stiller", "bunter", "heißer"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-3",
+          "sentence": "Früher schnitzte man im Schwarzwald Gesichter aus Futter___.",
+          "options": ["rüben", "äpfeln", "kernen", "birnen"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-4",
+          "sentence": "Auf Burg Frankenstein gibt es jedes Jahr ein großes ___.",
+          "options": ["Festival", "Sportspiel", "Konzert", "Skirennen"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-5",
+          "sentence": "Am 11. November ziehen Kinder mit bunten ___ durch die Straßen.",
+          "options": ["Laternen", "Koffern", "Uhren", "Büchern"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-6",
+          "sentence": "Aus dem Fruchtfleisch des Kürbisses kocht man eine heiße ___.",
+          "options": ["Suppe", "Marmelade", "Limonade", "Torte"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-7",
+          "sentence": "Der Sage nach fliegen die Hexen im Harz auf den ___.",
+          "options": ["Brocken", "Feldberg", "Zugspitzgipfel", "Schauinsland"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-8",
+          "sentence": "Im Moor warnen alte Sagen die Wanderer vor tanzenden ___.",
+          "options": ["Irrlichtern", "Kerzenständern", "Glühbirnen", "Straßenlampen"],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-15",
+      "title": "Halloween: Bild → Wort (mit Artikel)",
+      "rewardCoins": 10,
+      "rewardRep": 70,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "img-1",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/bat.svg",
+          "options": [
+            "die Eule",
+            "die Fledermaus",
+            "die Katze"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-2",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/broom.svg",
+          "options": [
+            "der Löffel",
+            "der Besen",
+            "der Zauberstab"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-3",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/candle.svg",
+          "options": [
+            "die Lampe",
+            "die Kerze",
+            "die Fackel"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-4",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/candy.svg",
+          "options": [
+            "die Süßigkeiten",
+            "das Obst",
+            "das Brot"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-5",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/cat.svg",
+          "options": [
+            "der Hund",
+            "die schwarze Katze",
+            "der Wolf"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-6",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/dracula.svg",
+          "options": [
+            "der Wolf",
+            "der Ritter",
+            "der Vampir"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-7",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/ghost.svg",
+          "options": [
+            "das Gespenst",
+            "das Skelett",
+            "die Hexe"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-8",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/proud.svg",
+          "options": [
+            "der Geist",
+            "das Gespenst",
+            "die Hexe"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-9",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/pumpkin.svg",
+          "options": [
+            "der Kürbis",
+            "der Kessel",
+            "die Kerze"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-10",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/raven.svg",
+          "options": [
+            "der Rabe",
+            "der Spatz",
+            "das Huhn"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-11",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/skeleton.svg",
+          "options": [
+            "das Skelett",
+            "der Knochen",
+            "der Zombie"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-12",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/spell-book.svg",
+          "options": [
+            "das Zauberbuch",
+            "die Zeitung",
+            "der Brief"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-13",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/spider.svg",
+          "options": [
+            "der Käfer",
+            "die Spinne",
+            "die Fliege"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-14",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/stew.svg",
+          "options": [
+            "der Topf",
+            "die Pfanne",
+            "der Hexenkessel"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-15",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/stuff.svg",
+          "options": [
+            "der Zauberstab",
+            "der Stift",
+            "der Pfeil"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-16",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/witch-broom.svg",
+          "options": [
+            "die Hexe",
+            "der Besen",
+            "der Hexenbesen"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-17",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/witch-hat.svg",
+          "options": [
+            "der Hexenhut",
+            "der Helm",
+            "die Mütze"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-18",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/wizard.svg",
+          "options": [
+            "der Zauberer",
+            "der Vampir",
+            "der Ritter"
+          ],
+          "correctOptionIndex": 0
+        }
       ]
     }
   ]

@@ -22,6 +22,10 @@ import ChristmasBall from '../assets/images/event-rewards/winter-event/winter-re
 import ChristmasWreath from '../assets/images/event-rewards/winter-event/winter-rewards/christmas-wreath.svg'
 import TeddyGift from '../assets/images/event-rewards/valentine-event/valentine-rewards/teddy-bear.svg'
 import CupidArrow from '../assets/images/event-rewards/valentine-event/valentine-rewards/cupidonArrow.svg'
+import Ghost from '../assets/images/event-rewards/halloween-event/halloween-rewards/ghost.svg'
+import WitchBroom from '../assets/images/event-rewards/halloween-event/halloween-rewards/witch-broom.svg'
+import WitchHat from '../assets/images/event-rewards/halloween-event/halloween-rewards/witch-hat.svg'
+
 
 export const AWARDS = [
 	{
@@ -143,6 +147,18 @@ export const AWARDS = [
 		title: 'awards.iAmGroot',
 		description: 'awards.iAmGrootDescription',
 		icon: Groot
+	},
+	{
+		key: 'witchBroom',
+		title: 'Метла',
+		description: 'Награда получается за выполнение достижения в событии Фестиваль тыкв',
+		icon: WitchBroom
+	},
+	{
+		key: 'witchHat',
+		title: 'Шляпа мага',
+		description: 'Награда получается за выполнение достижения в событии Фестиваль тыкв',
+		icon: WitchHat
 	},
 	{
 		key: 'santaHat',

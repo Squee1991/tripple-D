@@ -23,5 +23,8 @@ export const achievementToAwardMap = {
     christmasBall: 'awards.christmasBall',
     christmasWreath: 'awards.christmasWreath',
     valentineBear: 'awards.valentineBear',
-    cupidArrow: 'awards.cupidArrow'
+    cupidArrow: 'awards.cupidArrow',
+    witchHat: 'awards.cupidArrow || Шляпа мага',
+    witchBroom: 'awards.cupidArrow || Метла',
+
 }

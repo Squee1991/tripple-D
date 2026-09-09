@@ -4,8 +4,9 @@ import {useRoute, useRouter} from 'vue-router'
 import {useLocalePath} from '#i18n'
 import {useEventSessionStore} from '../../../store/eventsStore.js'
 import SoundBtn from '~/src/components/soundBtn.vue'
-const { t} = useI18n()
-const allEventImages = import.meta.glob('@/assets/images/event-rewards/**/*.{svg,SVG}', {
+
+const {t} = useI18n()
+const allEventImages = import.meta.glob('@/assets/images/events/**/*.{svg,SVG}', {
   eager: true,
   query: '?url',
   import: 'default'
@@ -59,7 +60,6 @@ async function loadEventJson() {
     const jsonResponse = await $fetch(`/events/event-${eventId.value}.json`)
     eventData.value = (jsonResponse && Array.isArray(jsonResponse.quests)) ? jsonResponse : {quests: []}
   } catch (error) {
-    console.error('Failed to load event data', error)
     eventData.value = {quests: []}
   } finally {
     isLoading.value = false
@@ -84,7 +84,6 @@ onMounted(async () => {
     }
 
     const solved = eventStore.solvedSteps || []
-    // Если это не финиш (или это реплей, где мы сбросили финиш), ищем нерешенные
     if (!isFinished.value && solved.includes(eventStore.stepIndex)) {
       jumpToNextUnsolvedStep()
     }
@@ -129,7 +128,6 @@ function jumpToNextUnsolvedStep() {
 async function retryQuest() {
   isFinished.value = false
   checkStatus.value = null
-  // start сам определит isReplayMode = true, так как в базе квест завершен
   await eventStore.start(eventId.value, currentQuest.value.id)
   jumpToNextUnsolvedStep()
 }
@@ -152,8 +150,6 @@ function goToNextStep() {
 function finishQuest() {
   eventStore.finishQuest()
   isFinished.value = true
-
-  // Выдаем награду ТОЛЬКО если это не режим повтора
   if (!eventStore.isReplayMode && currentQuest.value && isQuestFullyCompleted.value) {
     const rewards = {
       coins: currentQuest.value.rewardCoins || 0,
@@ -327,61 +323,42 @@ function checkMatchingAnswers() {
   <div class="lesson">
     <div class="lesson__container">
       <header class="topbar">
-        <button class="topbar__back" @click="goBackHome">🏠</button>
-        <div class="topbar__score" v-if="!isFinished"> {{ eventStore.score }}</div>
+        <button class="btn-icon-back" @click="goBackHome">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+               stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </button>
+        <div class="topbar__progress" v-if="!isFinished && currentQuest">
+          <div class="progress_exp-bar">
+            <div class="progress__bar"
+                 :style="{ width: (totalSteps ? ((eventStore.stepIndex ) / totalSteps * 100) : 0) + '%' }">
+              <div class="glare"></div>
+            </div>
+          </div>
+          <div class="progress__text"> {{ eventStore.stepIndex + 1 }} / {{
+              totalSteps
+            }}
+          </div>
+        </div>
       </header>
+
       <div v-if="isLoading" class="lesson__state">
         <div class="loader"></div>
-        <div> {{ t('eventSessionPage.loading')}}</div>
-      </div>
-
-      <div v-else-if="isFinished" class="result-wrapper">
-
-        <div v-if="isQuestFullyCompleted" class="result card success-card">
-          <div class="result__icon">🎉</div>
-          <h2 class="result__title">{{ t('eventSessionPage.perfect')}}</h2>
-          <p class="result__text">{{ t('eventSessionPage.right')}} {{ totalPossibleScore }} {{ t('eventSessionPage.questions')}}</p>
-
-          <div class="rewards" v-if="currentQuest?.rewardCoins && !eventStore.isReplayMode">
-            <span>+{{ currentQuest.rewardCoins }} 💘</span>
-            <span>+{{ currentQuest.rewardRep }} 🏆</span>
-          </div>
-
-          <button class="btn btn--primary" @click="goBackHome">
-            {{ !eventStore.isReplayMode ? t('eventSessionPage.getReward') : t('eventSessionPage.leave') }}
-          </button>
-        </div>
-
-        <div v-else class="result card fail-card">
-          <div class="result__icon">😕</div>
-          <h2 class="result__title">{{ t('eventSessionPage.almost')}}</h2>
-          <p class="result__subtext">{{ t('eventSessionPage.noMistake')}}</p>
-          <div class="result__actions">
-            <button class="btn btn--primary" @click="retryQuest">{{ t('eventSessionPage.again')}}</button>
-            <button class="btn btn--ghost" @click="goBackHome">{{ t('eventSessionPage.leave')}}</button>
-          </div>
-        </div>
-
+        <div> {{ t('eventSessionPage.loading') }}</div>
       </div>
 
       <div v-else-if="!currentQuest" class="lesson__state">
-        <span>{{ t('eventSessionPage.notFound')}}</span>
-        <button class="btn btn--ghost" @click="goBackHome">{{ t('eventSessionPage.back')}}</button>
+        <span>{{ t('eventSessionPage.notFound') }}</span>
+        <button class="btn btn--ghost" @click="goBackHome">{{ t('eventSessionPage.back') }}</button>
       </div>
+
       <div v-else class="lesson__card">
-        <div class="progress">
-          <div class="progress__text">{{ t('eventSessionPage.quest')}} {{ eventStore.stepIndex + 1 }} / {{ totalSteps }}</div>
-          <div class="progress__bar">
-            <div
-                class="progress__fill"
-                :style="{ width: (totalSteps ? ((eventStore.stepIndex + 1) / totalSteps * 100) : 0) + '%' }"
-            ></div>
-          </div>
-        </div>
         <section v-if="currentStep?.type === 'reading'" class="section card">
           <div class="paper">
             <SoundBtn :text="currentStep.text"/>
-            <h3 class="section__title">{{ t('eventSessionPage.listen')}}</h3>
+            <h3 class="section__title">{{ t('eventSessionPage.listen') }}</h3>
           </div>
           <div v-if="currentStep.questions && currentStep.questions.length" class="reading">
             <div v-for="(questionItem, questionIndex) in currentStep.questions" :key="questionIndex"
@@ -413,14 +390,14 @@ function checkMatchingAnswers() {
                 {{ checkStatus === null ? t('eventSessionPage.check') : t('eventSessionPage.further') }}
               </button>
             </div>
-            <div v-if="checkStatus === 'correct'" class="hint hint--success">{{ t('eventSessionPage.correct')}}</div>
-            <div v-if="checkStatus === 'wrong'" class="hint hint--error">{{ t('eventSessionPage.mistakes')}}</div>
           </div>
           <div v-else class="actions">
-            <button class="btn btn--primary" @click="goToNextStep">{{ t('eventSessionPage.further')}}</button>
+            <button class="btn btn--primary" @click="goToNextStep">{{ t('eventSessionPage.further') }}</button>
           </div>
         </section>
-        <section v-else-if="currentStep?.type === 'mcq' || currentStep?.type === 'multiple-choice'" class="section card">
+
+        <section v-else-if="currentStep?.type === 'mcq' || currentStep?.type === 'multiple-choice'"
+                 class="section card">
           <p v-if="currentStep.question" class="question">{{ currentStep.question }}</p>
           <img class="question-image" v-if="currentStep.image" :src="getImageUrl(currentStep.image)" alt="Task image"/>
           <div class="choices">
@@ -444,9 +421,9 @@ function checkMatchingAnswers() {
               {{ checkStatus === null ? t('eventSessionPage.check') : t('eventSessionPage.further') }}
             </button>
           </div>
-          <div v-if="checkStatus === 'correct'" class="hint hint--success">{{ t('eventSessionPage.correct')}}</div>
-          <div v-if="checkStatus === 'wrong'" class="hint hint--error">{{ t('eventSessionPage.answerHighlighted')}}</div>
+          <div v-if="checkStatus === 'correct'" class="hint hint--success">{{ t('eventSessionPage.correct') }}</div>
         </section>
+
         <section v-else-if="currentStep?.type === 'choose-word'" class="section card">
           <p class="question" v-html="filledSentenceHtml"></p>
           <div class="choices">
@@ -470,11 +447,13 @@ function checkMatchingAnswers() {
               {{ checkStatus === null ? 'Проверить' : 'Далее' }}
             </button>
           </div>
-          <div v-if="checkStatus === 'correct'" class="hint hint--success">{{ t('eventSessionPage.correct')}}</div>
-          <div v-if="checkStatus === 'wrong'" class="hint hint--error">{{ t('eventSessionPage.answerHighlighted')}}</div>
+          <div v-if="checkStatus === 'correct'" class="hint hint--success">{{ t('eventSessionPage.correct') }}</div>
+          <div v-if="checkStatus === 'wrong'" class="hint hint--error">{{ t('eventSessionPage.answerHighlighted') }}
+          </div>
         </section>
+
         <section v-else-if="currentStep?.type === 'fill'" class="section card">
-          <h3 class="section__title">{{ t('eventSessionPage.fillAnswer')}}</h3>
+          <h3 class="section__title">{{ t('eventSessionPage.fillAnswer') }}</h3>
           <p class="question">{{ currentStep.prompt }}</p>
           <div class="field">
             <input
@@ -484,14 +463,16 @@ function checkMatchingAnswers() {
                 @keyup.enter="confirmTextInput"
                 :disabled="checkStatus !== null"
             />
-            <button class="btn" @click="confirmTextInput">
+            <button class="btn btn--primary" @click="confirmTextInput"
+                    :disabled="checkStatus === null && !userTextInput">
               {{ checkStatus === null ? t('eventSessionPage.check') : t('eventSessionPage.further') }}
             </button>
           </div>
-          <div v-if="checkStatus === 'correct'" class="hint hint--success">{{ t('eventSessionPage.correct')}}</div>
-          <div v-if="checkStatus === 'wrong'" class="hint hint--error">{{ t('eventSessionPage.rightAnswer')}}
+          <div v-if="checkStatus === 'correct'" class="hint hint--success">{{ t('eventSessionPage.correct') }}</div>
+          <div v-if="checkStatus === 'wrong'" class="hint hint--error">{{ t('eventSessionPage.rightAnswer') }}
             <b>{{ currentStep.answerText }}</b></div>
         </section>
+
         <section v-else-if="currentStep?.type === 'matching'" class="section card">
           <h3 class="section__title">{{ currentStep.instruction || t('eventSessionPage.connectPaar') }}</h3>
           <div class="match">
@@ -535,39 +516,111 @@ function checkMatchingAnswers() {
               </div>
             </div>
             <div class="actions">
-              <button class="btn btn--primary" @click="checkMatchingAnswers">
+              <button class="btn btn--primary" @click="checkMatchingAnswers"
+                      :disabled="checkStatus === null && matchingState.chosenPairs.length === 0">
                 {{ checkStatus === null ? t('eventSessionPage.check') : t('eventSessionPage.further') }}
               </button>
             </div>
-            <div v-if="checkStatus === 'correct'" class="hint hint--success">{{ t('eventSessionPage.excellentAnswers')}}</div>
-            <div v-if="checkStatus === 'wrong'" class="hint hint--error">{{ t('eventSessionPage.mistakes')}}</div>
+            <div v-if="checkStatus === 'correct'" class="hint hint--success">
+              {{ t('eventSessionPage.excellentAnswers') }}
+            </div>
+            <div v-if="checkStatus === 'wrong'" class="hint hint--error">{{ t('eventSessionPage.mistakes') }}</div>
           </div>
         </section>
+
         <section v-else class="section card">
           Error <code>{{ currentStep?.type }}</code>
           <button class="btn btn--ghost" @click="goToNextStep">skip</button>
         </section>
+      </div>
 
+      <div v-if="isFinished" class="result-modal-overlay" @click.self="goBackHome">
+        <div class="result-wrapper">
+          <div v-if="isQuestFullyCompleted" class="result card success-card">
+            <div class="result__icon">
+              <img class="result_icon" src="../../../assets/images/LeaveLesson.svg" alt="">
+            </div>
+            <h2 class="result__title">{{ t('eventSessionPage.perfect') }}</h2>
+            <p class="result__text">{{ t('eventSessionPage.right') }} {{ totalPossibleScore }}
+              {{ t('eventSessionPage.questions') }}</p>
+            <div class="rewards" v-if="currentQuest?.rewardCoins && !eventStore.isReplayMode">
+              <span>+{{ currentQuest.rewardCoins }} 🎃</span>
+              <span>+{{ currentQuest.rewardRep }} 🏆</span>
+            </div>
+            <div class="result__actions">
+              <button class="btn btn--primary" @click="goBackHome">
+                {{ !eventStore.isReplayMode ? t('eventSessionPage.getReward') : t('eventSessionPage.leave') }}
+              </button>
+            </div>
+          </div>
+          <div v-else class="result card fail-card">
+            <div class="result__icon">
+              <img class="result_icon" src="../../../assets/images/LeaveLesson.svg" alt="">
+            </div>
+<!--            <h2 class="result__title">{{ t('eventSessionPage.almost') }}</h2>-->
+            <p class="result__subtext">{{ t('eventSessionPage.noMistake') }}</p>
+            <div class="result__actions">
+              <button class="btn btn--primary" @click="retryQuest">{{ t('eventSessionPage.again') }}</button>
+              <button class="btn btn--ghost" @click="goBackHome">{{ t('eventSessionPage.leave') }}</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.result-wrapper {
+.result-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 26, 51, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
   display: flex;
+  align-items: flex-end;
   justify-content: center;
-  padding: 20px 0;
+  animation: fadeIn 0.3s ease forwards;
 }
 
-.fail-card {
-  border: 3px solid #f3b5b5;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.result-wrapper {
+  width: 100%;
+  max-width: 768px;
+  animation: slideUpModal 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUpModal {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.result.card {
+  background: var(--bgModal);
+  padding: 30px 20px;
+  border-radius: 24px 24px 0 0;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-top: 3px solid #f5f5f5;
 }
 
 .result {
   text-align: center;
   gap: 10px;
-  max-width: 400px;
 }
 
 .result__icon {
@@ -588,8 +641,9 @@ function checkMatchingAnswers() {
 
 .result__subtext {
   font-size: 16px;
-  color: #777;
+  color: var(--title);
   margin-bottom: 15px;
+  font-weight: 800;
 }
 
 .rewards {
@@ -598,8 +652,8 @@ function checkMatchingAnswers() {
   justify-content: center;
   font-size: 20px;
   font-weight: 900;
-  color: #F6A623;
-  margin: 10px 0;
+  color: #ff9c1a;
+  margin: 10px 0 20px 0;
 }
 
 .result__actions {
@@ -614,44 +668,87 @@ function checkMatchingAnswers() {
   padding: 20px 12px 32px;
   font-family: "Nunito", sans-serif;
   color: #1f2a44;
-  background: #fff8e6
 }
 
 .lesson__container {
   max-width: 880px;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 14px
+  margin-bottom: 20px;
+  gap: 15px;
 }
 
-.topbar__back {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: #fff;
-  cursor: pointer;
-  font-size: 20px;
-  box-shadow: 0 8px 20px rgba(26, 41, 66, .12);
-  border: none
+.result_icon {
+  width: 140px;
 }
 
-.topbar__back:active {
-  box-shadow: 0 4px 10px rgba(26, 41, 66, .18);
-  transform: translateY(1px)
+.topbar__progress {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.topbar__score {
-  opacity: 0;
-  background: #ffefc2;
-  border-radius: 14px;
-  padding: 6px 12px;
+.progress__text {
+  text-align: center;
+  font-size: 18px;
   font-weight: 900;
-  box-shadow: 0 8px 20px rgba(26, 41, 66, .12)
+  color: #5b647c;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.progress_exp-bar {
+  flex: 1;
+  height: 27px;
+  background: #eaf1ff;
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(20, 34, 58, .08);
+  width: 100%;
+}
+
+.progress__bar {
+  height: 100%;
+  background: linear-gradient(90deg, #ff9c1a, #ffcf4d);
+  border-radius: 8px;
+  transition: width .25s ease;
+  position: relative;
+}
+
+.glare {
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  border-radius: 4px;
+}
+
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid var(--tabsSlideBorderColor, #ccc);
+  box-shadow: var(--boxShadowMobile, 0 4px 0 #ccc);
+  border-radius: 12px;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-icon-back:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
 }
 
 .lesson__state {
@@ -713,36 +810,8 @@ function checkMatchingAnswers() {
 .question {
   font-size: 20px;
   font-weight: 800;
-  color: #203055;
+  color: var(--title);
   margin: 6px 0 12px
-}
-
-.progress {
-  width: 420px;
-  max-width: 86vw;
-  margin: 6px auto 6px
-}
-
-.progress__text {
-  text-align: center;
-  font-size: 13px;
-  font-weight: 900;
-  color: #5b647c;
-  margin-bottom: 6px
-}
-
-.progress__bar {
-  height: 25px;
-  background: #eaf1ff;
-  border-radius: 999px;
-  overflow: hidden;
-  box-shadow: inset 0 2px 4px rgba(20, 34, 58, .08)
-}
-
-.progress__fill {
-  height: 100%;
-  background: linear-gradient(90deg, #bcdcff, #869cb9);
-  transition: width .25s ease
 }
 
 .choices {
@@ -750,6 +819,7 @@ function checkMatchingAnswers() {
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
+  justify-content: center;
   margin: 10px 0 15px 0;
 }
 
@@ -823,27 +893,32 @@ function checkMatchingAnswers() {
 
 .btn {
   border: none;
-  border-radius: 14px;
-  padding: 12px 20px;
+  color: white;
+  border-radius: 50px;
+  padding: 14px;
   min-width: 300px;
   font-weight: 900;
   cursor: pointer;
   font-size: 18px;
   background: #fff;
-  box-shadow: 0 8px 20px rgba(26, 41, 66, .12)
+  text-transform: uppercase;
+  box-shadow: 0 5px transparent;
 }
 
 .btn--primary {
-  background: #e7f0ff
+  background: #2b6be2;
+  box-shadow: 0 5px #2959b0;
 }
 
 .btn--ghost {
-  background: #fff
+  background: none;
+  color: #645e5e;
 }
 
 .btn:disabled {
   opacity: .5;
-  cursor: not-allowed
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
 .btn:active {
@@ -976,7 +1051,7 @@ function checkMatchingAnswers() {
   }
 
   .topbar {
-    padding: 5px 10px
+    padding: 10px 10px 5px 10px;
   }
 }
 
@@ -986,7 +1061,7 @@ function checkMatchingAnswers() {
   }
 
   .option {
-    min-height: 66px;
+    min-height: 40px;
     font-size: 14px
   }
 }

@@ -30,7 +30,7 @@ import { ref, watch, computed, onMounted, onUnmounted } from "vue";
 import { userAuthStore } from '../../store/authStore.js'
 import VShowFall from "../components/V-showFall.vue";
 import Wreath from "../../assets/images/mery-christmas/santa-claus.svg";
-import Pumpkin from "../../assets/images/mery-christmas/halloween.svg";
+import Pumpkin from "assets/images/events/halloween/rewards/halloween.svg";
 import Valentine from "../../assets/images/mery-christmas/valentine.svg";
 import SnowFall from '../../assets/images/mery-christmas/Snow.svg'
 import HeartFall from '../../assets/images/mery-christmas/heartFall.svg'
