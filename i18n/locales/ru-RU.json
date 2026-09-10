@@ -10270,7 +10270,17 @@
     "client_talk": "Разговор с клиентом",
     "car_rental": "Аренда авто",
     "ask_road": "Спросить дорогу",
-    "hotel_issue": "Проблема в отеле"
+    "hotel_issue": "Проблема в отеле",
+    "begin_fitness": "Фитнес-клуб",
+    "sport_footwear": "Покупка кроссовок",
+    "soccer_training": "Футбол",
+    "pool_booking": "Запись в бассейн",
+    "tennis_club": "Теннисный клуб",
+    "bicycle_rental": "Аренда велосипеда",
+    "sport_shake": "Фитнес-бар",
+    "climbing": "Скалодром",
+    "jogging": "На пробежке",
+    "ski_rental": "Аренда лыж"
   },
   "speakIndexPage": {
     "title": "Разговорная практика",
@@ -10684,5 +10694,9 @@
     "variation": "Вариант",
     "stuff": "Материал к заданию",
     "learnWords": "Учить слова"
+  },
+  "recipe": {
+    "done": "Отлично! Задание на сегодня выполнено.",
+    "btn": "Вернуться",
   }
 }

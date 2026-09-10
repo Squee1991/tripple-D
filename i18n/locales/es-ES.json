@@ -10249,7 +10249,17 @@
     "client_talk": "Conversación con un cliente",
     "car_rental": "Alquiler de coches",
     "ask_road": "Preguntar por el camino",
-    "hotel_issue": "Problema en el hotel"
+    "hotel_issue": "Problema en el hotel",
+    "begin_fitness": "Gimnasio",
+    "sport_footwear": "Comprar zapatillas",
+    "soccer_training": "Fútbol",
+    "pool_booking": "Reserva de piscina",
+    "tennis_club": "Club de tenis",
+    "bicycle_rental": "Alquiler de bicicletas",
+    "sport_shake": "Bar de fitness",
+    "climbing": "Rocódromo",
+    "jogging": "De carrera",
+    "ski_rental": "Alquiler de esquís"
   },
   "speakIndexPage": {
     "title": "Práctica oral",
@@ -10663,5 +10673,9 @@
     "variation": "Variante",
     "stuff": "Material de la tarea",
     "learnWords": "Aprender palabras"
+  },
+  "recipe": {
+    "done": "¡Excelente! La tarea de hoy está completada.",
+    "btn": "Volver"
   }
 }

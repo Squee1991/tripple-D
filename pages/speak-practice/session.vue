@@ -25,7 +25,6 @@
         </svg>
       </button>
     </header>
-
     <Transition name="fade">
       <div class="banner" v-if="viewState === 'menu'">
         <VBanner
@@ -325,14 +324,12 @@ const confirmExit = () => {
 };
 
 const startVocabLearning = () => {
-  showInterstitial(() => {
-    router.push({
-      path: '/speak-practice/words-session',
-      query: {
-        theme: route.query.theme,
-        level: route.query.level
-      }
-    });
+  router.push({
+    path: '/speak-practice/words-session',
+    query: {
+      theme: route.query.theme,
+      level: route.query.level
+    }
   });
 };
 
