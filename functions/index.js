@@ -216,7 +216,7 @@ YOUR TASK: AFTER YOUR THINKING PROCESS, OUTPUT A VALID JSON OBJECT AND NOTHING E
 					}
 				}
 				if (count === 0 && !inString) {
-					return str.substring(start, i + 1); // Возвращаем чистый кусок JSON
+					return str.substring(start, i + 1);
 				}
 			}
 			return null;
