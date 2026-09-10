@@ -10249,7 +10249,17 @@
     "client_talk": "Discuție cu un client",
     "car_rental": "Închiriere auto",
     "ask_road": "Întrebarea despre drum",
-    "hotel_issue": "Problemă la hotel"
+    "hotel_issue": "Problemă la hotel",
+    "begin_fitness": "Club de fitness",
+    "sport_footwear": "Cumpărare adidași",
+    "soccer_training": "Fotbal",
+    "pool_booking": "Programare la piscină",
+    "tennis_club": "Club de tenis",
+    "bicycle_rental": "Închiriere biciclete",
+    "sport_shake": "Bar de fitness",
+    "climbing": "Sală de cățărare",
+    "jogging": "La alergat",
+    "ski_rental": "Închiriere schiuri"
   },
   "speakIndexPage": {
     "title": "Practică de vorbire",
@@ -10663,5 +10673,9 @@
     "variation": "Variantă",
     "stuff": "Material pentru sarcină",
     "learnWords": "Învață cuvintele"
+  },
+  "recipe": {
+    "done": "Excelent! Sarcina de astăzi a fost finalizată.",
+    "btn": "Înapoi"
   }
 }

@@ -10265,7 +10265,17 @@
     "client_talk": "Rozmowa z klientem",
     "car_rental": "Wynajem samochodu",
     "ask_road": "Pytanie o drogę",
-    "hotel_issue": "Problem w hotelu"
+    "hotel_issue": "Problem w hotelu",
+    "begin_fitness": "Klub fitness",
+    "sport_footwear": "Kupno butów sportowych",
+    "soccer_training": "Piłka nożna",
+    "pool_booking": "Zapisy na basen",
+    "tennis_club": "Klub tenisowy",
+    "bicycle_rental": "Wypożyczalnia rowerów",
+    "sport_shake": "Bar fitness",
+    "climbing": "Ścianka wspinaczkowa",
+    "jogging": "Na joggingu",
+    "ski_rental": "Wypożyczalnia nart"
   },
   "speakIndexPage": {
     "title": "Ćwiczenia konwersacyjne",
@@ -10679,5 +10689,9 @@
     "variation": "Wariant",
     "stuff": "Materiały do zadania",
     "learnWords": "Ucz się słów"
+  },
+  "recipe": {
+    "done": "Świetnie! Dzisiejsze zadanie zostało wykonane.",
+    "btn": "Wróć"
   }
 }
