@@ -1,11 +1,12 @@
 <script setup>
 import {ref, onMounted, computed, watch} from 'vue'
-import {useRoute, useRouter} from 'vue-router'
+import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
 import {useGalaxyStore} from '../../store/galaxyStore.js'
 import Meteor from '../../assets/images/meteor.svg'
 import MeteorInFire from '../../assets/images/meteorinFire.svg'
 import {useCombatEngine} from '../../composables/useCombatEngine.js'
-
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
+import { showInterstitial} from '../../utils/admob.js'
 const {t} = useI18n()
 const route = useRoute()
 const router = useRouter()
@@ -13,7 +14,7 @@ const store = useGalaxyStore()
 const errorMessage = ref('')
 const isNewRecord = ref(false)
 const earnedArtiks = ref(0)
-
+const isLoadingAd = ref(false)
 const currentGalaxy = computed(() => store.currentGalaxy || null)
 const currentQuestions = computed(() => {
   return (store.currentGalaxy && store.currentGalaxy.questions) ? store.currentGalaxy.questions : []
@@ -65,12 +66,17 @@ const initGame = () => {
     store.setMission(sectorId);
     isNewRecord.value = false;
     earnedArtiks.value = 0;
+    isLoadingAd.value = true;
+    showInterstitial(() => {
+      isLoadingAd.value = false;
+      setTimeout(() => {
+        startGame();
+      }, 50);
+    });
 
-    setTimeout(() => {
-      startGame()
-    }, 50);
   } catch (error) {
     errorMessage.value = "Ошибка: " + error.message;
+    isLoadingAd.value = false;
   }
 }
 
@@ -105,6 +111,7 @@ onBeforeRouteLeave((to, from, next) => {
 
 <template>
   <div class="game-universe">
+    <VLoginPreloader v-if="isLoadingAd"/>
     <div v-if="errorMessage" class="error-screen">
       <h1>⚠️ {{ t('galaxyMenu.errorTitle') }}</h1>
       <p>{{ errorMessage }}</p>
@@ -115,7 +122,7 @@ onBeforeRouteLeave((to, from, next) => {
         <button class="btn-go" @click="goHome">{{ t('galaxyMenu.errorBtn') }}</button>
       </div>
     </div>
-    <div v-else class="sky" ref="skyRef">
+    <div v-else-if="!isLoadingAd" class="sky" ref="skyRef">
       <div class="star-layer"></div>
       <div class="score-board">
         <span class="score-label"> {{ t('galaxyMenu.points') }} </span>

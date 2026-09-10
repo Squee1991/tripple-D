@@ -604,6 +604,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		// 		}
 		// 	}, 1000);
 		// }
+
 		watch(() => gameStore.getSeasonState()?.isOpen, (newIsOpen, oldIsOpen) => {
 			if (!authStore.uid) return;
 			if (oldIsOpen === true && newIsOpen === false) {

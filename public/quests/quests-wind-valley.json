@@ -13,6 +13,64 @@
       "points": 10,
       "xp": 10
     },
+    "vocabulary": [
+      {
+        "word": "die Straße",
+        "translation-ru": "Улица",
+        "translation-en": "Street",
+        "translation-uk": "Вулиця",
+        "translation-pl": "Ulica",
+        "translation-es": "Calle",
+        "translation-fr": "Rue",
+        "translation-ar": "شارع",
+        "translation-hi": "सड़क",
+        "translation-ro": "Stradă",
+        "translation-tr": "Cadde / Sokak",
+        "translation-uz": "Ko'cha"
+      },
+      {
+        "word": "der Park",
+        "translation-ru": "Парк",
+        "translation-en": "Park",
+        "translation-uk": "Парк",
+        "translation-pl": "Park",
+        "translation-es": "Parque",
+        "translation-fr": "Parc",
+        "translation-ar": "حديقة عامة / منتزه",
+        "translation-hi": "पार्क / बाग",
+        "translation-ro": "Parc",
+        "translation-tr": "Park",
+        "translation-uz": "Bog' / Park"
+      },
+      {
+        "word": "der Platz",
+        "translation-ru": "Площадь / Место",
+        "translation-en": "Square / Plaza / Place",
+        "translation-uk": "Площа / Місце",
+        "translation-pl": "Plac / Miejsce",
+        "translation-es": "Plaza / Lugar",
+        "translation-fr": "Place",
+        "translation-ar": "ميدان / ساحة",
+        "translation-hi": "चौक / मैदान",
+        "translation-ro": "Piață / Loc",
+        "translation-tr": "Meydan / Yer",
+        "translation-uz": "Maydon / Joy"
+      },
+      {
+        "word": "die Brücke",
+        "translation-ru": "Мост",
+        "translation-en": "Bridge",
+        "translation-uk": "Міст",
+        "translation-pl": "Most",
+        "translation-es": "Puente",
+        "translation-fr": "Pont",
+        "translation-ar": "جسر",
+        "translation-hi": "पुल",
+        "translation-ro": "Pod",
+        "translation-tr": "Köprü",
+        "translation-uz": "Ko'prik"
+      }
+    ],
     "tasks": [
       {
         "id": 1,
@@ -215,6 +273,64 @@
       "points": 10,
       "xp": 10
     },
+    "vocabulary": [
+      {
+        "word": "die U-Bahn",
+        "translation-ru": "Метро",
+        "translation-en": "Subway / Underground",
+        "translation-uk": "Метро",
+        "translation-pl": "Metro",
+        "translation-es": "Metro",
+        "translation-fr": "Métro",
+        "translation-ar": "مترو الأنفاق",
+        "translation-hi": "मेट्रो / भूमिगत रेल",
+        "translation-ro": "Metrou",
+        "translation-tr": "Metro",
+        "translation-uz": "Metro"
+      },
+      {
+        "word": "der Bus",
+        "translation-ru": "Автобус",
+        "translation-en": "Bus",
+        "translation-uk": "Автобус",
+        "translation-pl": "Autobus",
+        "translation-es": "Autobús",
+        "translation-fr": "Bus / Autobus",
+        "translation-ar": "حافلة / باص",
+        "translation-hi": "बस",
+        "translation-ro": "Autobuz",
+        "translation-tr": "Otobüs",
+        "translation-uz": "Avtobus"
+      },
+      {
+        "word": "der Bahnhof",
+        "translation-ru": "Вокзал / Станция",
+        "translation-en": "Train station / Railway station",
+        "translation-uk": "Вокзал / Залізнична станція",
+        "translation-pl": "Dworzec kolejowy / Stacja",
+        "translation-es": "Estación de tren",
+        "translation-fr": "Gare",
+        "translation-ar": "محطة قطار",
+        "translation-hi": "रेलवे स्टेशन",
+        "translation-ro": "Gară",
+        "translation-tr": "Tren garı / İstasyon",
+        "translation-uz": "Vokzal / Temir yo'l bekati"
+      },
+      {
+        "word": "das Ticket",
+        "translation-ru": "Билет",
+        "translation-en": "Ticket",
+        "translation-uk": "Квиток",
+        "translation-pl": "Bilet",
+        "translation-es": "Billete / Boleto",
+        "translation-fr": "Billet / Ticket",
+        "translation-ar": "تذكرة",
+        "translation-hi": "टिकट",
+        "translation-ro": "Bilet",
+        "translation-tr": "Bilet",
+        "translation-uz": "Chipta"
+      }
+    ],
     "tasks": [
       {
         "id": 1,
@@ -417,6 +533,64 @@
       "points": 10,
       "xp": 10
     },
+    "vocabulary": [
+      {
+        "word": "die Bäckerei",
+        "translation-ru": "Пекарня / Булочная",
+        "translation-en": "Bakery",
+        "translation-uk": "Пекарня / Булочна",
+        "translation-pl": "Piekarnia",
+        "translation-es": "Panadería",
+        "translation-fr": "Boulangerie",
+        "translation-ar": "مخبز",
+        "translation-hi": "बेकरी / नानबाई की दुकान",
+        "translation-ro": "Brutărie",
+        "translation-tr": "Fırın / Pastane",
+        "translation-uz": "Nonvoyxona"
+      },
+      {
+        "word": "die Apotheke",
+        "translation-ru": "Аптека",
+        "translation-en": "Pharmacy / Chemist's",
+        "translation-uk": "Аптека",
+        "translation-pl": "Apteka",
+        "translation-es": "Farmacia",
+        "translation-fr": "Pharmacie",
+        "translation-ar": "صيدلية",
+        "translation-hi": "दवाखाना / फ़ार्मेसी",
+        "translation-ro": "Farmacie",
+        "translation-tr": "Eczane",
+        "translation-uz": "Dorixona"
+      },
+      {
+        "word": "die Bank",
+        "translation-ru": "Банк",
+        "translation-en": "Bank",
+        "translation-uk": "Банк",
+        "translation-pl": "Bank",
+        "translation-es": "Banco",
+        "translation-fr": "Banque",
+        "translation-ar": "بنك / مصرف",
+        "translation-hi": "बैंक",
+        "translation-ro": "Bancă",
+        "translation-tr": "Banka",
+        "translation-uz": "Bank"
+      },
+      {
+        "word": "der Supermarkt",
+        "translation-ru": "Супермаркет",
+        "translation-en": "Supermarket",
+        "translation-uk": "Супермаркет",
+        "translation-pl": "Supermarket",
+        "translation-es": "Supermercado",
+        "translation-fr": "Supermarché",
+        "translation-ar": "سوبر ماركت",
+        "translation-hi": "सुपरमार्केट",
+        "translation-ro": "Supermarket",
+        "translation-tr": "Süpermarket",
+        "translation-uz": "Supermarket"
+      }
+    ],
     "tasks": [
       {
         "id": 1,
@@ -619,6 +793,64 @@
       "points": 10,
       "xp": 10
     },
+    "vocabulary": [
+      {
+        "word": "die Haltestelle",
+        "translation-ru": "Остановка",
+        "translation-en": "Stop / Station",
+        "translation-uk": "Зупинка",
+        "translation-pl": "Przystanek",
+        "translation-es": "Parada",
+        "translation-fr": "Arrêt",
+        "translation-ar": "موقف حافلات",
+        "translation-hi": "स्टॉप / पड़ाव",
+        "translation-ro": "Stație",
+        "translation-tr": "Durak",
+        "translation-uz": "Bekat"
+      },
+      {
+        "word": "die Kreuzung",
+        "translation-ru": "Перекрёсток",
+        "translation-en": "Intersection / Crossroads",
+        "translation-uk": "Перехрестя",
+        "translation-pl": "Skrzyżowanie",
+        "translation-es": "Intersección / Cruce",
+        "translation-fr": "Carrefour / Croisement",
+        "translation-ar": "تقاطع طرق",
+        "translation-hi": "चौराहा",
+        "translation-ro": "Intersecție",
+        "translation-tr": "Kavşak / Dört yol",
+        "translation-uz": "Chorraha"
+      },
+      {
+        "word": "die Ampel",
+        "translation-ru": "Светофор",
+        "translation-en": "Traffic light",
+        "translation-uk": "Світлофор",
+        "translation-pl": "Sygnalizacja świetlna",
+        "translation-es": "Semáforo",
+        "translation-fr": "Feu tricolore / Feu rouge",
+        "translation-ar": "إشارة مرور",
+        "translation-hi": "ट्रैफ़िक बत्ती",
+        "translation-ro": "Semafor",
+        "translation-tr": "Trafik ışığı",
+        "translation-uz": "Svetofor"
+      },
+      {
+        "word": "die Karte",
+        "translation-ru": "Карта",
+        "translation-en": "Map / Card",
+        "translation-uk": "Карта",
+        "translation-pl": "Mapa / Karta",
+        "translation-es": "Mapa / Tarjeta",
+        "translation-fr": "Carte",
+        "translation-ar": "خريطة / بطاقة",
+        "translation-hi": "नक्शा / कार्ड",
+        "translation-ro": "Hartă / Card",
+        "translation-tr": "Harita / Kart",
+        "translation-uz": "Xarita / Karta"
+      }
+    ],
     "tasks": [
       {
         "id": 1,
@@ -821,6 +1053,64 @@
       "points": 10,
       "xp": 10
     },
+    "vocabulary": [
+      {
+        "word": "das Restaurant",
+        "translation-ru": "Ресторан",
+        "translation-en": "Restaurant",
+        "translation-uk": "Ресторан",
+        "translation-pl": "Restauracja",
+        "translation-es": "Restaurante",
+        "translation-fr": "Restaurant",
+        "translation-ar": "مطعم",
+        "translation-hi": "रेस्तरां / भोजनालय",
+        "translation-ro": "Restaurant",
+        "translation-tr": "Restoran / Lokanta",
+        "translation-uz": "Restoran"
+      },
+      {
+        "word": "das Café",
+        "translation-ru": "Кафе",
+        "translation-en": "Café / Coffee shop",
+        "translation-uk": "Кав'ярня / Кафе",
+        "translation-pl": "Kawiarnia",
+        "translation-es": "Cafetería / Café",
+        "translation-fr": "Café",
+        "translation-ar": "مقهى",
+        "translation-hi": "कैफ़े",
+        "translation-ro": "Cafenea",
+        "translation-tr": "Kafe",
+        "translation-uz": "Kafe"
+      },
+      {
+        "word": "das Hotel",
+        "translation-ru": "Отель / Гостиница",
+        "translation-en": "Hotel",
+        "translation-uk": "Готель",
+        "translation-pl": "Hotel",
+        "translation-es": "Hotel",
+        "translation-fr": "Hôtel",
+        "translation-ar": "فندق",
+        "translation-hi": "होटल",
+        "translation-ro": "Hotel",
+        "translation-tr": "Otel",
+        "translation-uz": "Mehmonxona"
+      },
+      {
+        "word": "das Museum",
+        "translation-ru": "Музей",
+        "translation-en": "Museum",
+        "translation-uk": "Музей",
+        "translation-pl": "Muzeum",
+        "translation-es": "Museo",
+        "translation-fr": "Musée",
+        "translation-ar": "متحف",
+        "translation-hi": "संग्रहालय / म्यूज़ियम",
+        "translation-ro": "Muzeu",
+        "translation-tr": "Müze",
+        "translation-uz": "Muzey"
+      }
+    ],
     "tasks": [
       {
         "id": 1,
@@ -1015,6 +1305,106 @@
       "points": 10,
       "xp": 10
     },
+    "vocabulary": [
+      {
+        "word": "lang",
+        "translation-ru": "Длинный / Долгий",
+        "translation-en": "Long",
+        "translation-uk": "Довгий",
+        "translation-pl": "Długi",
+        "translation-es": "Largo",
+        "translation-fr": "Long",
+        "translation-ar": "طويل",
+        "translation-hi": "लंबा",
+        "translation-ro": "Lung",
+        "translation-tr": "Uzun",
+        "translation-uz": "Uzun"
+      },
+      {
+        "word": "schön",
+        "translation-ru": "Красивый",
+        "translation-en": "Beautiful / Nice",
+        "translation-uk": "Красивий / Гарний",
+        "translation-pl": "Piękny / Ładny",
+        "translation-es": "Bello / Hermoso",
+        "translation-fr": "Beau / Belle",
+        "translation-ar": "جميل",
+        "translation-hi": "सुंदर",
+        "translation-ro": "Frumos",
+        "translation-tr": "Güzel",
+        "translation-uz": "Chiroyli / Go'zal"
+      },
+      {
+        "word": "hier",
+        "translation-ru": "Здесь / Тут",
+        "translation-en": "Here",
+        "translation-uk": "Тут",
+        "translation-pl": "Tutaj / Tu",
+        "translation-es": "Aquí",
+        "translation-fr": "Ici",
+        "translation-ar": "هنا",
+        "translation-hi": "यहाँ",
+        "translation-ro": "Aici",
+        "translation-tr": "Burada / Burası",
+        "translation-uz": "Bu yerda / Bu yer"
+      },
+      {
+        "word": "dort",
+        "translation-ru": "Там",
+        "translation-en": "There",
+        "translation-uk": "Там",
+        "translation-pl": "Tam",
+        "translation-es": "Allí / Allá",
+        "translation-fr": "Là-bas / Là",
+        "translation-ar": "هناك",
+        "translation-hi": "वहाँ",
+        "translation-ro": "Acolo",
+        "translation-tr": "Orada / Orası",
+        "translation-uz": "U yerda / U yoqda"
+      },
+      {
+        "word": "geöffnet",
+        "translation-ru": "Открыто",
+        "translation-en": "Open / Opened",
+        "translation-uk": "Відчинено / Відкрито",
+        "translation-pl": "Otwarte",
+        "translation-es": "Abierto",
+        "translation-fr": "Ouvert",
+        "translation-ar": "مفتوح",
+        "translation-hi": "खुला हुआ",
+        "translation-ro": "Deschis",
+        "translation-tr": "Açık",
+        "translation-uz": "Ochiq"
+      },
+      {
+        "word": "kaufen",
+        "translation-ru": "Покупать",
+        "translation-en": "To buy",
+        "translation-uk": "Купувати",
+        "translation-pl": "Kupować",
+        "translation-es": "Comprar",
+        "translation-fr": "Acheter",
+        "translation-ar": "يشتري",
+        "translation-hi": "खरीदना",
+        "translation-ro": "A cumpăra",
+        "translation-tr": "Satın almak",
+        "translation-uz": "Sotib olmoq"
+      },
+      {
+        "word": "ich",
+        "translation-ru": "Я",
+        "translation-en": "I",
+        "translation-uk": "Я",
+        "translation-pl": "Ja",
+        "translation-es": "Yo",
+        "translation-fr": "Je / Moi",
+        "translation-ar": "أنا",
+        "translation-hi": "मैं",
+        "translation-ro": "Eu",
+        "translation-tr": "Ben",
+        "translation-uz": "Men"
+      }
+    ],
     "tasks": [
       {
         "id": 1,
@@ -1163,6 +1553,64 @@
       "points": 10,
       "xp": 10
     },
+    "vocabulary": [
+      {
+        "word": "links",
+        "translation-ru": "Слева / Налево",
+        "translation-en": "Left / To the left",
+        "translation-uk": "Ліворуч / Зліва",
+        "translation-pl": "W lewo / Po lewej",
+        "translation-es": "A la izquierda / A la siniestra",
+        "translation-fr": "À gauche",
+        "translation-ar": "يساراً / إلى اليسار",
+        "translation-hi": "बाएँ / बाईं ओर",
+        "translation-ro": "La stânga",
+        "translation-tr": "Solda / Sola",
+        "translation-uz": "Chapda / Chapga"
+      },
+      {
+        "word": "rechts",
+        "translation-ru": "Справа / Направо",
+        "translation-en": "Right / To the right",
+        "translation-uk": "Праворуч / Справа",
+        "translation-pl": "W prawo / Po prawej",
+        "translation-es": "A la derecha",
+        "translation-fr": "À droite",
+        "translation-ar": "يميناً / إلى اليمين",
+        "translation-hi": "दाएँ / दाईं ओर",
+        "translation-ro": "La dreapta",
+        "translation-tr": "Sağda / Sağa",
+        "translation-uz": "O'ngda / O'ngga"
+      },
+      {
+        "word": "geradeaus",
+        "translation-ru": "Прямо",
+        "translation-en": "Straight ahead",
+        "translation-uk": "Прямо",
+        "translation-pl": "Prosto",
+        "translation-es": "Todo recto / Recto",
+        "translation-fr": "Tout droit",
+        "translation-ar": "إلى الأمام مباشرة",
+        "translation-hi": "सीधे आगे",
+        "translation-ro": "Drept înainte",
+        "translation-tr": "Düz / Düz karşıya",
+        "translation-uz": "To'g'riga / To'g'ri"
+      },
+      {
+        "word": "gegenüber",
+        "translation-ru": "Напротив",
+        "translation-en": "Opposite / Across from",
+        "translation-uk": "Навпроти",
+        "translation-pl": "Naprzeciwko",
+        "translation-es": "Enfrente de / Frente a",
+        "translation-fr": "En face de",
+        "translation-ar": "مقابل / في الجهة المقابلة",
+        "translation-hi": "के सामने / के विपरीत",
+        "translation-ro": "Peste drum / Vizavi",
+        "translation-tr": "Karşısında / Karşı",
+        "translation-uz": "Ro'parasida / Qarshisida"
+      }
+    ],
     "tasks": [
       {
         "id": 1,
@@ -1359,6 +1807,64 @@
       "points": 10,
       "xp": 10
     },
+    "vocabulary": [
+      {
+        "word": "neben",
+        "translation-ru": "Около / Рядом с",
+        "translation-en": "Next to / Beside",
+        "translation-uk": "Поруч з / Біля",
+        "translation-pl": "Obok / Przy",
+        "translation-es": "Al lado de / Junto a",
+        "translation-fr": "À côté de",
+        "translation-ar": "بجانب / بجوار",
+        "translation-hi": "के पास / के बगल में",
+        "translation-ro": "Lângă / Alături de",
+        "translation-tr": "Yanında / Yanı başında",
+        "translation-uz": "Yonida / Yonboshida"
+      },
+      {
+        "word": "vor",
+        "translation-ru": "Перед",
+        "translation-en": "In front of / Before",
+        "translation-uk": "Перед",
+        "translation-pl": "Przed",
+        "translation-es": "Delante de / Frente a",
+        "translation-fr": "Devant",
+        "translation-ar": "أمام / قُدّام",
+        "translation-hi": "के सामने / के आगे",
+        "translation-ro": "În fața",
+        "translation-tr": "Önünde",
+        "translation-uz": "Oldida"
+      },
+      {
+        "word": "hinter",
+        "translation-ru": "Позади / За",
+        "translation-en": "Behind",
+        "translation-uk": "Позаду / За",
+        "translation-pl": "Za",
+        "translation-es": "Detrás de",
+        "translation-fr": "Derrière",
+        "translation-ar": "خلف / وراء",
+        "translation-hi": "के पीछे",
+        "translation-ro": "În spatele / În urmă",
+        "translation-tr": "Arkasında",
+        "translation-uz": "Orqasida"
+      },
+      {
+        "word": "zwischen",
+        "translation-ru": "Между",
+        "translation-en": "Between",
+        "translation-uk": "Між",
+        "translation-pl": "Pomiędzy / Między",
+        "translation-es": "Entre",
+        "translation-fr": "Entre",
+        "translation-ar": "بين",
+        "translation-hi": "के बीच में",
+        "translation-ro": "Între",
+        "translation-tr": "Arasında",
+        "translation-uz": "Orasida"
+      }
+    ],
     "tasks": [
       {
         "id": 1,
@@ -1577,6 +2083,92 @@
       "points": 10,
       "xp": 10
     },
+    "vocabulary": [
+      {
+        "word": "die Post",
+        "translation-ru": "Почта",
+        "translation-en": "Post office / Mail",
+        "translation-uk": "Пошта",
+        "translation-pl": "Poczta",
+        "translation-es": "Oficina de correos / Correos",
+        "translation-fr": "Poste",
+        "translation-ar": "بريد / مكتب بريد",
+        "translation-hi": "डाकघर / डाक",
+        "translation-ro": "Poștă",
+        "translation-tr": "Postane",
+        "translation-uz": "Pochta"
+      },
+      {
+        "word": "die Stadt",
+        "translation-ru": "Город",
+        "translation-en": "City / Town",
+        "translation-uk": "Місто",
+        "translation-pl": "Miasto",
+        "translation-es": "Ciudad",
+        "translation-fr": "Ville",
+        "translation-ar": "مدينة",
+        "translation-hi": "शहर",
+        "translation-ro": "Oraș",
+        "translation-tr": "Şehir / Kent",
+        "translation-uz": "Shahar"
+      },
+      {
+        "word": "die Polizei",
+        "translation-ru": "Полиция",
+        "translation-en": "Police",
+        "translation-uk": "Поліція",
+        "translation-pl": "Policja",
+        "translation-es": "Policía",
+        "translation-fr": "Police",
+        "translation-ar": "شرطة",
+        "translation-hi": "पुलिस",
+        "translation-ro": "Poliție",
+        "translation-tr": "Polis",
+        "translation-uz": "Politsiya"
+      },
+      {
+        "word": "das Krankenhaus",
+        "translation-ru": "Больница",
+        "translation-en": "Hospital",
+        "translation-uk": "Лікарня",
+        "translation-pl": "Szpital",
+        "translation-es": "Hospital",
+        "translation-fr": "Hôpital",
+        "translation-ar": "مستشفى",
+        "translation-hi": "अस्पताल",
+        "translation-ro": "Spital",
+        "translation-tr": "Hastane",
+        "translation-uz": "Shifoxona"
+      },
+      {
+        "word": "die Schule",
+        "translation-ru": "Школа",
+        "translation-en": "School",
+        "translation-uk": "Школа",
+        "translation-pl": "Szkoła",
+        "translation-es": "Escuela / Colegio",
+        "translation-fr": "École",
+        "translation-ar": "مدرسة",
+        "translation-hi": "स्कूल / विद्यालय",
+        "translation-ro": "Școală",
+        "translation-tr": "Okul",
+        "translation-uz": "Maktab"
+      },
+      {
+        "word": "in",
+        "translation-ru": "В",
+        "translation-en": "In / Into",
+        "translation-uk": "В / У",
+        "translation-pl": "W",
+        "translation-es": "En",
+        "translation-fr": "Dans / En",
+        "translation-ar": "في",
+        "translation-hi": "में",
+        "translation-ro": "În",
+        "translation-tr": "İçinde / -de / -da",
+        "translation-uz": "Ichida / -da"
+      }
+    ],
     "tasks": [
       {
         "id": 1,
@@ -1781,6 +2373,176 @@
       "points": 10,
       "xp": 10
     },
+    "vocabulary": [
+      {
+        "word": "links",
+        "translation-ru": "Слева / Налево",
+        "translation-en": "Left / To the left",
+        "translation-uk": "Ліворуч / Зліва",
+        "translation-pl": "W lewo / Po lewej",
+        "translation-es": "A la izquierda",
+        "translation-fr": "À gauche",
+        "translation-ar": "يساراً / إلى اليسار",
+        "translation-hi": "बाएँ / बाईं ओर",
+        "translation-ro": "La stânga",
+        "translation-tr": "Solda / Sola",
+        "translation-uz": "Chapda / Chapga"
+      },
+      {
+        "word": "rechts",
+        "translation-ru": "Справа / Направо",
+        "translation-en": "Right / To the right",
+        "translation-uk": "Праворуч / Справа",
+        "translation-pl": "W prawo / Po prawej",
+        "translation-es": "A la derecha",
+        "translation-fr": "À droite",
+        "translation-ar": "يميناً / إلى اليمين",
+        "translation-hi": "दाएँ / दाईं ओर",
+        "translation-ro": "La dreapta",
+        "translation-tr": "Sağda / Sağa",
+        "translation-uz": "O'ngda / O'ngga"
+      },
+      {
+        "word": "gegenüber",
+        "translation-ru": "Напротив",
+        "translation-en": "Opposite / Across from",
+        "translation-uk": "Навпроти",
+        "translation-pl": "Naprzeciwko",
+        "translation-es": "Enfrente de / Frente a",
+        "translation-fr": "En face de",
+        "translation-ar": "مقابل / في الجهة المقابلة",
+        "translation-hi": "के सामने / के विपरीत",
+        "translation-ro": "Peste drum / Vizavi",
+        "translation-tr": "Karşısında / Karşı",
+        "translation-uz": "Ro'parasida / Qarshisida"
+      },
+      {
+        "word": "vor",
+        "translation-ru": "Перед",
+        "translation-en": "In front of / Before",
+        "translation-uk": "Перед",
+        "translation-pl": "Przed",
+        "translation-es": "Delante de / Frente a",
+        "translation-fr": "Devant",
+        "translation-ar": "أمام / قُدّام",
+        "translation-hi": "के सामने / के आगे",
+        "translation-ro": "În fața",
+        "translation-tr": "Önünde",
+        "translation-uz": "Oldida"
+      },
+      {
+        "word": "hinter",
+        "translation-ru": "Позади / За",
+        "translation-en": "Behind",
+        "translation-uk": "Позаду / За",
+        "translation-pl": "Za",
+        "translation-es": "Detrás de",
+        "translation-fr": "Derrière",
+        "translation-ar": "خلف / وراء",
+        "translation-hi": "के पीछे",
+        "translation-ro": "În spatele / În urmă",
+        "translation-tr": "Arkasında",
+        "translation-uz": "Orqasida"
+      },
+      {
+        "word": "die Haltestelle",
+        "translation-ru": "Остановка",
+        "translation-en": "Stop / Station",
+        "translation-uk": "Зупинка",
+        "translation-pl": "Przystanek",
+        "translation-es": "Parada",
+        "translation-fr": "Arrêt",
+        "translation-ar": "موقف حافلات",
+        "translation-hi": "स्टॉप / पड़ाव",
+        "translation-ro": "Stație",
+        "translation-tr": "Durak",
+        "translation-uz": "Bekat"
+      },
+      {
+        "word": "der Bahnhof",
+        "translation-ru": "Вокзал / Станция",
+        "translation-en": "Train station / Railway station",
+        "translation-uk": "Вокзал / Залізнична станція",
+        "translation-pl": "Dworzec kolejowy / Stacja",
+        "translation-es": "Estación de tren",
+        "translation-fr": "Gare",
+        "translation-ar": "محطة قطار",
+        "translation-hi": "रेलवे स्टेशन",
+        "translation-ro": "Gară",
+        "translation-tr": "Tren garı / İstasyon",
+        "translation-uz": "Vokzal / Temir yo'l bekati"
+      },
+      {
+        "word": "das Café",
+        "translation-ru": "Кафе",
+        "translation-en": "Café / Coffee shop",
+        "translation-uk": "Кав'ярня / Кафе",
+        "translation-pl": "Kawiarnia",
+        "translation-es": "Cafetería / Café",
+        "translation-fr": "Café",
+        "translation-ar": "مقهى",
+        "translation-hi": "कैफ़े",
+        "translation-ro": "Cafenea",
+        "translation-tr": "Kafe",
+        "translation-uz": "Kafe"
+      },
+      {
+        "word": "das Hotel",
+        "translation-ru": "Отель / Гостиница",
+        "translation-en": "Hotel",
+        "translation-uk": "Готель",
+        "translation-pl": "Hotel",
+        "translation-es": "Hotel",
+        "translation-fr": "Hôtel",
+        "translation-ar": "فندق",
+        "translation-hi": "होटल",
+        "translation-ro": "Hotel",
+        "translation-tr": "Otel",
+        "translation-uz": "Mehmonxona"
+      },
+      {
+        "word": "die Apotheke",
+        "translation-ru": "Аптека",
+        "translation-en": "Pharmacy / Chemist's",
+        "translation-uk": "Аптека",
+        "translation-pl": "Apteka",
+        "translation-es": "Farmacia",
+        "translation-fr": "Pharmacie",
+        "translation-ar": "صيدلية",
+        "translation-hi": "दवाखाना / फ़ार्मेसी",
+        "translation-ro": "Farmacie",
+        "translation-tr": "Eczane",
+        "translation-uz": "Dorixona"
+      },
+      {
+        "word": "das Museum",
+        "translation-ru": "Музей",
+        "translation-en": "Museum",
+        "translation-uk": "Музей",
+        "translation-pl": "Muzeum",
+        "translation-es": "Museo",
+        "translation-fr": "Musée",
+        "translation-ar": "متحف",
+        "translation-hi": "संग्रहालय / म्यूज़ियम",
+        "translation-ro": "Muzeu",
+        "translation-tr": "Müze",
+        "translation-uz": "Muzey"
+      },
+      {
+        "word": "die U-Bahn",
+        "translation-ru": "Метро",
+        "translation-en": "Subway / Underground",
+        "translation-uk": "Метро",
+        "translation-pl": "Metro",
+        "translation-es": "Metro",
+        "translation-fr": "Métro",
+        "translation-ar": "مترو الأنفاق",
+        "translation-hi": "मेट्रो / भूमिगत रेल",
+        "translation-ro": "Metrou",
+        "translation-tr": "Metro",
+        "translation-uz": "Metro"
+      }
+    ],
     "tasks": [
       {
         "id": 1,
@@ -1985,6 +2747,36 @@
       "points": 10,
       "xp": 10
     },
+    "vocabulary": [
+      {
+        "word": "wo",
+        "translation-ru": "Где",
+        "translation-en": "Where",
+        "translation-uk": "Де",
+        "translation-pl": "Gdzie",
+        "translation-es": "Dónde",
+        "translation-fr": "Où",
+        "translation-ar": "أين",
+        "translation-hi": "कहाँ",
+        "translation-ro": "Unde",
+        "translation-tr": "Nerede",
+        "translation-uz": "Qayerda"
+      },
+      {
+        "word": "Entschuldigung",
+        "translation-ru": "Извините / Прошу прощения",
+        "translation-en": "Excuse me / Sorry",
+        "translation-uk": "Вибачте / Перепрошую",
+        "translation-pl": "Przepraszam",
+        "translation-es": "Disculpe / Perdón",
+        "translation-fr": "Excusez-moi / Pardon",
+        "translation-ar": "عذراً / المعذرة",
+        "translation-hi": "माफ़ कीजिए / क्षमा करें",
+        "translation-ro": "Scuzați-mă / Pardon",
+        "translation-tr": "Affedersiniz / Özür dilerim",
+        "translation-uz": "Kechirasiz / Uzr"
+      }
+    ],
     "tasks": [
       {
         "id": 1,
@@ -2187,6 +2979,64 @@
       "points": 10,
       "xp": 10
     },
+    "vocabulary": [
+      {
+        "word": "der Eingang",
+        "translation-ru": "Вход",
+        "translation-en": "Entrance",
+        "translation-uk": "Вхід",
+        "translation-pl": "Wejście",
+        "translation-es": "Entrada",
+        "translation-fr": "Entrée",
+        "translation-ar": "مدخل",
+        "translation-hi": "प्रवेश द्वार",
+        "translation-ro": "Intrare",
+        "translation-tr": "Giriş",
+        "translation-uz": "Kirish joyi"
+      },
+      {
+        "word": "der Ausgang",
+        "translation-ru": "Выход",
+        "translation-en": "Exit",
+        "translation-uk": "Вихід",
+        "translation-pl": "Wyjście",
+        "translation-es": "Salida",
+        "translation-fr": "Sortie",
+        "translation-ar": "مخرج",
+        "translation-hi": "निकास द्वार",
+        "translation-ro": "Ieșire",
+        "translation-tr": "Çıkış",
+        "translation-uz": "Chiqish joyi"
+      },
+      {
+        "word": "die Information",
+        "translation-ru": "Справочная / Информация",
+        "translation-en": "Information / Info desk",
+        "translation-uk": "Довідкова / Інформація",
+        "translation-pl": "Informacja / Punkt informacyjny",
+        "translation-es": "Información / Punto de información",
+        "translation-fr": "Information / Renseignements",
+        "translation-ar": "معلومات / مكتب استعلامات",
+        "translation-hi": "सूचना / पूछताछ केंद्र",
+        "translation-ro": "Informații / Punct de informare",
+        "translation-tr": "Danışma / Bilgi",
+        "translation-uz": "Ma'lumotlar bo'limi / Axborot"
+      },
+      {
+        "word": "der Aufzug",
+        "translation-ru": "Лифт",
+        "translation-en": "Elevator / Lift",
+        "translation-uk": "Ліфт",
+        "translation-pl": "Winda",
+        "translation-es": "Ascensor",
+        "translation-fr": "Ascenseur",
+        "translation-ar": "مصعد",
+        "translation-hi": "लिफ़्ट",
+        "translation-ro": "Lift / Ascensor",
+        "translation-tr": "Asansör",
+        "translation-uz": "Lift"
+      }
+    ],
     "tasks": [
       {
         "id": 1,
@@ -2389,6 +3239,64 @@
       "points": 10,
       "xp": 10
     },
+    "vocabulary": [
+      {
+        "word": "die Kirche",
+        "translation-ru": "Церковь",
+        "translation-en": "Church",
+        "translation-uk": "Церква",
+        "translation-pl": "Kościół",
+        "translation-es": "Iglesia",
+        "translation-fr": "Église",
+        "translation-ar": "كنيسة",
+        "translation-hi": "गिरजाघर / चर्च",
+        "translation-ro": "Biserică",
+        "translation-tr": "Kilise",
+        "translation-uz": "Cherkov"
+      },
+      {
+        "word": "das Rathaus",
+        "translation-ru": "Ратуша / Мэрия",
+        "translation-en": "Town hall / City hall",
+        "translation-uk": "Ратуша / Мерія",
+        "translation-pl": "Ratusz",
+        "translation-es": "Ayuntamiento",
+        "translation-fr": "Hôtel de ville / Mairie",
+        "translation-ar": "دار البلدية",
+        "translation-hi": "नगर निगम भवन / टाउन हॉल",
+        "translation-ro": "Primărie",
+        "translation-tr": "Belediye binası",
+        "translation-uz": "Shahar hokimiyati / Ratusha"
+      },
+      {
+        "word": "der Markt",
+        "translation-ru": "Рынок / Базар",
+        "translation-en": "Market / Marketplace",
+        "translation-uk": "Ринок / Базар",
+        "translation-pl": "Rynek / Targ",
+        "translation-es": "Mercado",
+        "translation-fr": "Marché",
+        "translation-ar": "سوق",
+        "translation-hi": "बाज़ार",
+        "translation-ro": "Piață",
+        "translation-tr": "Pazar / Çarşı",
+        "translation-uz": "Bozor"
+      },
+      {
+        "word": "der Turm",
+        "translation-ru": "Башня",
+        "translation-en": "Tower",
+        "translation-uk": "Вежа",
+        "translation-pl": "Wieża",
+        "translation-es": "Torre",
+        "translation-fr": "Tour",
+        "translation-ar": "برج",
+        "translation-hi": "मीनार / बुर्ज",
+        "translation-ro": "Turn",
+        "translation-tr": "Kule",
+        "translation-uz": "Minora"
+      }
+    ],
     "tasks": [
       {
         "id": 1,

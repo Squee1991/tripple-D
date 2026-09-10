@@ -1,90 +1,91 @@
 <template>
   <div class="game-page-layout">
-    <div class="top-bar">
-      <VStopSessionBtn @close="backTo"/>
-      <div class="lives-bar">
-        <div class="hearts-container">
-          <span v-for="life in 5" :key="life" class="heart" :class="{ 'lost': life > gameStore.lives }">❤️</span>
+    <VLoginPreloader v-if="isLoadingAd"/>
+    <template v-else-if="!isLoadingAd">
+      <div class="top-bar">
+        <VStopSessionBtn @close="backTo"/>
+        <div class="lives-bar">
+          <div class="hearts-container">
+            <span v-for="life in 5" :key="life" class="heart" :class="{ 'lost': life > gameStore.lives }">❤️</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div v-if="!gameStore.gameReady" class="not-ready-container">
-      <div class="bouncy-loader">
-        <span></span><span></span><span></span>
+      <div v-if="!gameStore.gameReady" class="not-ready-container">
+        <div class="bouncy-loader">
+          <span></span><span></span><span></span>
+        </div>
+        <h1>{{ t('marathonGame.notReadyTitle') }}</h1>
+        <p>{{ t('marathonGame.reboot') }}</p>
       </div>
-      <h1>{{ t('marathonGame.notReadyTitle') }}</h1>
-      <p>{{ t('marathonGame.reboot') }}</p>
-    </div>
-    <template v-else>
-      <header class="game-header">
-        <div class="stats-bar">
-          <div class="stat-widget streak">
-            <div class="widget-label">{{ t('marathonGame.streak') }}</div>
-            <div class="widget-value">{{ gameStore.sessionStreak }}</div>
+      <template v-else>
+        <header class="game-header">
+          <div class="stats-bar">
+            <div class="stat-widget streak">
+              <div class="widget-label">{{ t('marathonGame.streak') }}</div>
+              <div class="widget-value">{{ gameStore.sessionStreak }}</div>
+            </div>
+            <div class="stat-widget record">
+              <div class="widget-label">{{ t('marathonGame.record') }}</div>
+              <div class="widget-value">{{ currentDifficultyRecord }}</div>
+            </div>
+            <div v-if="gameStore.levelSettings.timer" class="stat-widget timer">
+              <div class="widget-label">{{ t('marathonGame.timer') }}</div>
+              <div class="widget-value">{{ gameStore.timer }}</div>
+            </div>
           </div>
-          <div class="stat-widget record">
-            <div class="widget-label">{{ t('marathonGame.record') }}</div>
-            <div class="widget-value">{{ currentDifficultyRecord }}</div>
+        </header>
+        <main class="game-content">
+          <div v-if="gameStore.currentWord" class="game-area">
+            <div class="word-display" :class="feedbackClass">
+              <h1>{{ gameStore.currentWord.de }}</h1>
+            </div>
+            <div class="actions" :class="{ 'disabled': isChecking || !gameStore.gameActive }">
+              <button @click="handleArticleChoice('der')" class="article-btn der">
+                <span class="article-text">der</span>
+              </button>
+              <button @click="handleArticleChoice('die')" class="article-btn die">
+                <span class="article-text">die</span>
+              </button>
+              <button @click="handleArticleChoice('das')" class="article-btn das">
+                <span class="article-text">das</span>
+              </button>
+            </div>
           </div>
-          <div v-if="gameStore.levelSettings.timer" class="stat-widget timer">
-            <div class="widget-label">{{ t('marathonGame.timer') }}</div>
-            <div class="widget-value">{{ gameStore.timer }}</div>
-          </div>
-        </div>
-      </header>
-      <main class="game-content">
-        <div v-if="gameStore.currentWord" class="game-area">
-          <div class="word-display" :class="feedbackClass">
-            <h1>{{ gameStore.currentWord.de }}</h1>
-          </div>
-          <div class="actions" :class="{ 'disabled': isChecking || !gameStore.gameActive }">
-            <button @click="handleArticleChoice('der')" class="article-btn der">
-              <span class="article-text">der</span>
-            </button>
-            <button @click="handleArticleChoice('die')" class="article-btn die">
-              <span class="article-text">die</span>
-            </button>
-            <button @click="handleArticleChoice('das')" class="article-btn das">
-              <span class="article-text">das</span>
-            </button>
-          </div>
-        </div>
-      </main>
-      <Transition name="bottom-sheet">
-        <div v-if="!gameStore.gameActive" class="game-over-overlay">
-          <div class="overlay-backdrop"></div>
-          <div class="game-over-sheet">
-            <h1 class="game-over__title">{{ t('marathonGame.end') }}</h1>
+        </main>
+        <Transition name="bottom-sheet">
+          <div v-if="!gameStore.gameActive" class="game-over-overlay">
+            <div class="overlay-backdrop"></div>
+            <div class="game-over-sheet">
+              <h1 class="game-over__title">{{ t('marathonGame.end') }}</h1>
 
-            <div class="score-card">
-              <p class="game-over__streak-info">
-                {{ t('marathonGame.urStreak') }}
-                <span class="score-value">{{ gameStore?.sessionStreak }}</span>
-              </p>
-
-              <div v-if="gameStore.sessionStreak > 0 && gameStore.sessionStreak >= currentDifficultyRecord"
-                   class="record-badge">
-                🎉 {{ t('marathonGame.newRecord') }} 🎉
+              <div class="score-card">
+                <p class="game-over__streak-info">
+                  {{ t('marathonGame.urStreak') }}
+                  <span class="score-value">{{ gameStore?.sessionStreak }}</span>
+                </p>
+                <div v-if="gameStore.sessionStreak > 0 && gameStore.sessionStreak >= currentDifficultyRecord"
+                     class="record-badge">
+                  🎉 {{ t('marathonGame.newRecord') }} 🎉
+                </div>
+                <p v-else class="game-over__best-score">
+                  {{ t('marathonGame.bestResult') }} {{ currentDifficultyRecord }}
+                </p>
               </div>
-              <p v-else class="game-over__best-score">
-                {{ t('marathonGame.bestResult') }} {{ currentDifficultyRecord }}
-              </p>
-            </div>
-            <div class="game-over__actions">
-              <button @click="gameStore.retryGame()" class="btn-gummy btn-gummy--success">
-                {{ t('marathonGame.tryAgain') }}
-              </button>
-              <button @click="goBackToPrepare" class="btn-gummy btn-gummy--primary">
-                {{ t('marathonGame.back') }}
-              </button>
-              <button @click="toMain" class="btn-gummy btn-gummy--secondary">
-                {{ t('eventSessionPage.leave') }}
-              </button>
+              <div class="game-over__actions">
+                <button @click="gameStore.retryGame()" class="btn-gummy btn-gummy--success">
+                  {{ t('marathonGame.tryAgain') }}
+                </button>
+                <button @click="goBackToPrepare" class="btn-gummy btn-gummy--primary">
+                  {{ t('marathonGame.back') }}
+                </button>
+                <button @click="toMain" class="btn-gummy btn-gummy--secondary">
+                  {{ t('eventSessionPage.leave') }}
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </Transition>
-
+        </Transition>
+      </template>
     </template>
   </div>
 </template>
@@ -95,13 +96,14 @@ import {useRouter} from 'vue-router'
 import {useGameStore} from '../store/marafonStore.js'
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '../utils/soundManager.js'
 import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue";
-
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
+import { showInterstitial } from '../utils/admob.js'
 const {t} = useI18n()
 const gameStore = useGameStore()
 const router = useRouter()
 const feedback = ref(null)
 const isChecking = ref(false)
-
+const isLoadingAd = ref(false)
 const currentDifficultyRecord = computed(() => {
   if (gameStore.personalBests && gameStore.difficulty) {
     return gameStore.personalBests[gameStore.difficulty] || 0
@@ -158,7 +160,7 @@ watch(() => gameStore.gameReady, (isReady) => {
 )
 
 onMounted(() => {
-  const captureOpts = {capture: true};
+  const captureOpts = { capture: true };
   const unlockOnce = () => {
     unlockAudioByUserGesture();
     window.removeEventListener('pointerdown', unlockOnce, captureOpts);
@@ -166,9 +168,12 @@ onMounted(() => {
   };
   window.addEventListener('pointerdown', unlockOnce, captureOpts);
   window.addEventListener('keydown', unlockOnce, captureOpts);
-
   if (gameStore.gameReady && !gameStore.gameActive) {
-    gameStore.startNewRound();
+    isLoadingAd.value = true;
+    showInterstitial(() => {
+      isLoadingAd.value = false;
+      gameStore.startNewRound();
+    });
   }
 });
 </script>

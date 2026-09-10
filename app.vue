@@ -11,6 +11,8 @@
 <script setup>
 import VRankOverlay from "./src/components/V-rank-overlay.vue";
 import { StatusBar, Style } from '@capacitor/status-bar';
+import FeedBack from './src/components/V-feedback.vue'
+import VStepHint from "./src/components/V-stephint.vue";
 import AchievementToast from './src/components/AchievementToast.vue'
 import VLost from './src/components/V-lost.vue'
 import { useRouter, useRoute } from 'vue-router'
@@ -30,12 +32,30 @@ import { Keyboard } from '@capacitor/keyboard';
 import { App } from '@capacitor/app'
 import { onMounted, onUnmounted, ref, watch, nextTick } from "vue";
 import { dailyStore } from './store/dailyStore'
+import { useHead } from '#imports'
 import { Capacitor } from '@capacitor/core'
 import { AdMob } from '@capacitor-community/admob';
 import VNetwork from "./src/components/V-network.vue";
-import { initAdmob } from './utils/admob.js';
+import { initAdmob } from "./utils/admob.js";
 const chainStore = userChainStore()
+const { locale, t } = useI18n()
 const billingStore = useBillingStore()
+
+
+useHead(() => ({
+  htmlAttrs: { lang: locale.value, dir: locale.value === 'ar' ? 'rtl' : "ltr" },
+  title: () => t('useHeadApp.title'),
+  meta: [
+    { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover' },
+    { name: 'description', content: t('useHeadApp.content') },
+    { property: 'og:title', content: t('useHeadApp.contentThree') },
+    { property: 'og:description', content: t('useHeadApp.contentFour') },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: '/images/' },
+    { name: 'google-site-verification', content: 'ZWWugYpS5LJWJG3qLMOgbVhKRPvOSta0G3TXE3HhSqI' }
+  ],
+  link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
+}))
 
 const achStore = useAchievementStore()
 const showStepHint = ref(false)
@@ -47,7 +67,7 @@ const authStore = userAuthStore()
 const router = useRouter()
 const route = useRoute()
 const user = useCurrentUser()
-
+const sentencesStore = useSentencesStore();
 const daily = dailyStore()
 const colorMode = useColorMode();
 
@@ -62,13 +82,16 @@ const onToastFinished = () => {
 }
 
 onMounted(async () => {
-  setTimeout(() => {
-    initAdmob()
-  },6000)
+  initAdmob()
   achStore.initializeProgressTracking()
   if (Capacitor.isNativePlatform()) {
     try {
       await SplashScreen.hide({ fadeOutDuration: 0 });
+    } catch (e) {
+      console.error(e);
+    }
+    try {
+      await AdMob.initialize({ initializeForTesting: true });
     } catch (e) {
       console.error(e);
     }
@@ -120,9 +143,7 @@ watch(() => authStore.uid, (newUid) => {
     questStore.loadDailyProgress();
     cardStore.loadCreatedCount();
     statsStore.loadLocalStats();
-    chainStore.loadProgressFromFirebase();
-    daily.init();
-    daily.start();
+    chainStore.loadProgressFromFirebase()
   }
 }, { immediate: true });
 

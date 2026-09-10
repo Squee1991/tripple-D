@@ -1,6 +1,7 @@
 <template>
   <main class="ios-trainer-page">
-    <div class="ios-app-container">
+    <VLoginPreloader v-if="isLoadingAd"/>
+    <div v-else-if="!isLoadingAd" class="ios-app-container">
       <header class="ios-header" :class="{ 'not__started' : !isStarted }">
         <VBackBtn/>
         <span v-if="!isStarted" class="title">{{ t('sub.guess')}}</span>
@@ -117,7 +118,8 @@ import {useRouter} from 'vue-router'
 import {nameMap} from '../utils/nameMap.js'
 import {useSeoMeta} from "#imports"
 import VBackBtn from "~/src/components/V-back-btn.vue";
-/*import { showInterstitial } from '../utils/admob.js'*/
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
+import { showInterstitial } from '../utils/admob.js'
 const {t} = useI18n()
 const store = useGuessWordStore()
 const isSpinning = ref(false)
@@ -126,6 +128,7 @@ const articleResult = ref(null)
 const isStarted = ref(false)
 const showArticleModal = ref(false)
 const showLoseModal = ref(false)
+const isLoadingAd = ref(false)
 const now = ref(Date.now())
 
 useSeoMeta({
@@ -185,16 +188,19 @@ function stopTimer() {
 }
 
 function startGame() {
-  /*showInterstitial(async ()=> {*/
+  showArticleModal.value = false
+  showLoseModal.value = false
+  stopTimer()
+  isLoadingAd.value = true
+  showInterstitial(() => {
+    isLoadingAd.value = false
     store.startGame()
     now.value = Date.now()
     isStarted.value = true
     guessInput.value = ''
     articleResult.value = null
-    showArticleModal.value = false
-    showLoseModal.value = false
     startTimer()
- /* })*/
+  })
 }
 
 function guessWord() {

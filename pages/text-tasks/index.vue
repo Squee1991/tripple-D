@@ -197,7 +197,6 @@ watch(currentLevel, (newLevel) => {
   loadLevelStats(newLevel)
 })
 
-// ИЗМЕНЕНО: Добавили новую функцию для разблокировки тем
 const isThemeUnlocked = (index) => {
   if (authStore.isPremium) return true;
   if (index === 0 || index === 1) return true;
@@ -211,7 +210,6 @@ const isThemeUnlocked = (index) => {
 };
 
 const selectTheme = async (theme, index) => {
-  // ИЗМЕНЕНО: используем новую функцию
   if (isThemeUnlocked(index)) {
     isLoading.value = true
     try {

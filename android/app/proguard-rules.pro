@@ -19,3 +19,10 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep class com.unity3d.ads.** { *; }
+-dontwarn com.unity3d.ads.**
+-dontwarn com.google.api.client.**
+-dontwarn com.google.crypto.tink.**
+-dontwarn com.amazon.device.iap.**
+-dontwarn org.joda.time.**
