@@ -66,9 +66,9 @@
   "devDependencies": {
     "@capacitor/assets": "3.0.5",
     "@capacitor/ios": "8.3.0",
-    "@esbuild/win32-x64": "^0.28.2",
+    "@esbuild/win32-x64": "0.28.2",
     "@nuxtjs/google-fonts": "3.2.0",
-    "@rollup/rollup-win32-x64-msvc": "^4.63.1",
+    "@rollup/rollup-win32-x64-msvc": "4.63.1",
     "@vite-pwa/nuxt": " 1.1.1",
     "concurrently": "9.1.2",
     "cross-env": "10.1.0",

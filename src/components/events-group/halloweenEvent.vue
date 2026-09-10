@@ -4,11 +4,19 @@ import {useRouter, useRoute} from 'vue-router'
 import VShowFall from "../V-showFall.vue"
 import PumpkinCoin from 'assets/images/event-rewards/halloween-event/halloween-assets/pumpkinCoin.svg'
 
+import BgCard from 'assets/images/test.png'
+import Words from 'assets/images/event-rewards/halloween-event/halloween-quests-icons/Words.jpg'
+
+import QuestsNavIcon from 'assets/images/event-rewards/halloween-event/halloween-assets/quests.svg'
+import ShopNavIcon from 'assets/images/event-rewards/halloween-event/halloween-assets/shop.svg'
+import BoneClose from 'assets/images/event-rewards/halloween-event/halloween-assets/bone.svg'
+
+
 import Ghost from 'assets/images/event-rewards/halloween-event/halloween-rewards/ghost.svg'
 import WitchBroom from 'assets/images/event-rewards/halloween-event/halloween-rewards/witch-broom.svg'
 import WitchHat from 'assets/images/event-rewards/halloween-event/halloween-rewards/witch-hat.svg'
 
-import {useEventSessionStore} from '../../../store/eventsStore.js'
+import {useEventSessionStore} from '~/store/eventsStore.js'
 import {useSeoMeta, useI18n, useLocalePath} from "#imports"
 
 useSeoMeta({robots: 'noindex, nofollow'})
@@ -40,8 +48,8 @@ const isEventOpen = computed(() => {
 })
 
 const navTabs = computed(() => ([
-  {id: 'quests', label: t('eventPanel.questions'), icon: '📜'},
-  {id: 'reputation', label: t('Магазин'), icon: '🦇'}
+  {id: 'quests', label: t('eventPanel.questions'), icon: QuestsNavIcon},
+  {id: 'reputation', label: t('Магазин'), icon: ShopNavIcon}
 ]))
 
 const activeIndex = computed(() => navTabs.value.findIndex(tab => tab.id === activeTab.value))
@@ -94,123 +102,123 @@ function setSelectedLevel(lvl) {
 const quests = ref([
   {
     id: 'quest-1',
-    title: t('halloweenEventQuests.quest-1', 'Основы и факты'),
+    title: t('halloweenEventQuests.quest-1', 'Картинка → Слово'),
     rewardCoins: 10,
-    rewardRep: 60,
+    rewardRep: 70,
     isDone: false,
-    icon: '🎃'
+    icon: Words
   },
   {
     id: 'quest-2',
-    title: t('halloweenEventQuests.quest-2', 'Немецкие традиции'),
+    title: t('halloweenEventQuests.quest-2', 'Основы и факты'),
     rewardCoins: 10,
     rewardRep: 60,
     isDone: false,
-    icon: '🦇'
+    icon: BgCard
   },
   {
     id: 'quest-3',
-    title: t('halloweenEventQuests.quest-3', 'Мистические существа'),
+    title: t('halloweenEventQuests.quest-3', 'Традиции и альтернативы'),
     rewardCoins: 10,
     rewardRep: 60,
     isDone: false,
-    icon: '🧛'
+    icon: Words
   },
   {
     id: 'quest-4',
-    title: t('halloweenEventQuests.quest-4', 'Костюмы и осенняя ночь'),
+    title: t('halloweenEventQuests.quest-4', 'Мистические существа и легенды'),
     rewardCoins: 10,
     rewardRep: 60,
     isDone: false,
-    icon: '👻'
+    icon: Words
   },
   {
     id: 'quest-5',
-    title: t('halloweenEventQuests.quest-5', 'Символика и старинные обычаи'),
+    title: t('halloweenEventQuests.quest-5', 'Костюмы и осенняя ночь'),
     rewardCoins: 10,
     rewardRep: 60,
     isDone: false,
-    icon: '🕸️'
+    icon: Words
   },
   {
     id: 'quest-6',
-    title: t('halloweenEventQuests.quest-6', 'Halloween in Deutschland'),
+    title: t('halloweenEventQuests.quest-6', 'Символика и обычаи'),
     rewardCoins: 10,
-    rewardRep: 70,
+    rewardRep: 60,
     isDone: false,
-    icon: '🏰'
+    icon: Words
   },
   {
     id: 'quest-7',
-    title: t('halloweenEventQuests.quest-7', 'Herbstbräuche'),
+    title: t('halloweenEventQuests.quest-7', 'Хэллоуин в Германии'),
     rewardCoins: 10,
     rewardRep: 70,
     isDone: false,
-    icon: '🍂'
+    icon: Words
   },
   {
     id: 'quest-8',
-    title: t('halloweenEventQuests.quest-8', 'Die Geisterstunde auf Burg Eltz'),
+    title: t('halloweenEventQuests.quest-8', 'Обычаи немецких регионов'),
     rewardCoins: 10,
     rewardRep: 70,
     isDone: false,
-    icon: '🕰️'
+    icon: Words
   },
   {
     id: 'quest-9',
-    title: t('halloweenEventQuests.quest-9', 'Geheimnis im Schwarzwald'),
+    title: t('halloweenEventQuests.quest-9', 'Тайна замка Эльц'),
     rewardCoins: 10,
     rewardRep: 70,
     isDone: false,
-    icon: '🌲'
+    icon: Words
   },
   {
     id: 'quest-10',
-    title: t('halloweenEventQuests.quest-10', 'Herbststimmung'),
+    title: t('halloweenEventQuests.quest-10', 'Легенды темного Шварцвальда'),
     rewardCoins: 10,
     rewardRep: 70,
     isDone: false,
-    icon: '🍁'
+    icon: Words
   },
   {
     id: 'quest-11',
-    title: t('halloweenEventQuests.quest-11', 'Соедини хэллоуинские пары'),
+    title: t('halloweenEventQuests.quest-11', 'Осенний вечер и домашний уют'),
     rewardCoins: 10,
     rewardRep: 70,
     isDone: false,
-    icon: '🔗'
+    icon: Words
   },
   {
     id: 'quest-12',
-    title: t('halloweenEventQuests.quest-12', 'Соедини легенды и обычаи'),
+    title: t('halloweenEventQuests.quest-12', 'Соедини пары: атрибуты Хэллоуина'),
     rewardCoins: 10,
     rewardRep: 70,
     isDone: false,
-    icon: '📜'
+    icon: Words
   },
   {
     id: 'quest-13',
-    title: t('halloweenEventQuests.quest-13', 'Выбери слово — Вечер Хэллоуина'),
+    title: t('halloweenEventQuests.quest-13', 'Соедини пары: немецкие предания'),
     rewardCoins: 10,
     rewardRep: 70,
     isDone: false,
-    icon: '🌙'
+    icon: Words
   },
   {
     id: 'quest-14',
-    title: t('halloweenEventQuests.quest-14', 'Выбери слово — Осенние традиции'),
+    title: t('halloweenEventQuests.quest-14', 'Выбери слово: атмосфера праздника'),
     rewardCoins: 10,
     rewardRep: 70,
     isDone: false,
-    icon: '🔮'
+    icon: Words
   },
   {
     id: 'quest-15',
-    title: t('halloweenEventQuests.quest-15', 'Halloween: Bild → Wort'),
+    title: t('halloweenEventQuests.quest-15', 'Выбери слово: немецкие обычаи'),
     rewardCoins: 10,
     rewardRep: 70,
     isDone: false,
-    icon: '🖼️'
+    icon: Words
   }
 ])
 
@@ -279,9 +287,9 @@ async function buyReward(level, rewardId) {
 function openRequirementsModal(level, item) {
   reqModalTitle.value = item.title
   if (isTopItem(item)) {
-    reqModalText.value = `${t('eventPanel.needForReward', 'Требуется:')} ${item.priceCoins} ${coinIcon}  ${t('eventPanel.and', 'и')} 1000 ${t('eventPanel.reputation', 'репутации')}`
+    reqModalText.value = `${t('eventPanel.needForReward')} ${item.priceCoins} ${coinIcon}  ${t('eventPanel.and')} 1000 ${t('eventPanel.reputation')}`
   } else {
-    reqModalText.value = `${t('eventPanel.needForReward', 'Требуется:')} ${item.priceCoins} ${coinIcon}`
+    reqModalText.value = `${t('eventPanel.needForReward')} ${item.priceCoins} ${coinIcon}`
   }
   isReqModalOpen.value = true
 }
@@ -343,8 +351,8 @@ onMounted(() => {
           </div>
           <div class="stat-item">
             <div class="stat-value">
-              <div class="coin__value">{{ coins }}</div>
               <img class="coin" :src="PumpkinCoin" alt="PumpkinCoin">
+              <div class="coin__value">{{ coins }}</div>
             </div>
           </div>
         </div>
@@ -360,39 +368,39 @@ onMounted(() => {
               role="tab"
               @click="setTab(tab.id)"
           >
-            <span class="tab-icon">{{ tab.icon }}</span>
+            <img class="coin" :src="tab.icon" alt="">
             <span class="tab-label">{{ tab.label }}</span>
           </button>
         </nav>
-        <section v-if="activeTab === 'reputation'">
-          <div class="section-head">
-            <div class="rank-switch">
-              <button
-                  v-for="rank in ranks"
-                  :key="rank.level"
-                  :class="['pill', { 'is-active': selectedLevel === rank.level }]"
-                  @click="setSelectedLevel(rank.level)"
-              >
-                {{ rank.title }}
-              </button>
-            </div>
-          </div>
-          <div class="cards">
-            <div
-                v-for="reward in shopByRank[selectedLevel]"
-                :key="reward.id"
-                class="prize-card achv-card"
-            >
-              <div class="prize-card__title">{{ reward.title }}</div>
-              <div class="prize-card__icon">
-                <img :src="reward.icon" alt="">
+        <div class="scroll_sections">
+          <section v-if="activeTab === 'reputation'">
+            <div class="section-head">
+              <div class="rank-switch">
+                <button
+                    v-for="rank in ranks"
+                    :key="rank.level"
+                    :class="['pill', { 'is-active': selectedLevel === rank.level }]"
+                    @click="setSelectedLevel(rank.level)"
+                >
+                  {{ rank.title }}
+                </button>
               </div>
-              <div class="prize-card__body">
-                <div class="prize-card__foot">
-                  <span class="price">
-                    <span>{{ reward.priceCoins }} </span>
-                    <span>  {{ coinIcon }}</span>
-                  </span>
+            </div>
+            <div class="cards">
+              <div
+                  v-for="reward in shopByRank[selectedLevel]"
+                  :key="reward.id"
+                  class="prize-card achv-card"
+              >
+                <div class="prize-card__icon">
+                  <img :src="reward.icon" alt="">
+                </div>
+                <div class="prize-card__title">{{ reward.title }}</div>
+                <div class="prize-card__body">
+                  <div class="price">
+                    <img class="coin" :src="PumpkinCoin" alt="PumpkinCoin">
+                    <span class="price__value">{{ reward.priceCoins }} </span>
+                  </div>
                   <button
                       class="btn btn--candy"
                       :disabled="reward.isOwned"
@@ -404,36 +412,40 @@ onMounted(() => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section v-if="activeTab === 'quests'">
-          <div class="quests">
-            <div v-for="quest in quests" :key="quest.id" class="quest achv-card">
-              <div class="quest__icon">{{ quest.icon }}</div>
-              <div class="quest__body">
-                <div class="quest__title clickable" @click="goToSession(quest.id)">{{ quest.title }}</div>
-                <div class="quest__meta">
-                  <div class="quest__inner">
-                    <span class="meta__pill">{{ quest.rewardRep }} {{ t('eventPanel.rep', 'реп.') }}</span>
-                    <span class="meta__pill">{{ quest.rewardCoins }} {{ coinIcon }}</span>
+          </section>
+          <section v-if="activeTab === 'quests'">
+            <div class="quests">
+              <div v-for="quest in quests" :key="quest.id" class="quest achv-card">
+                <div class="quest__icon">
+                  <img :src="quest.icon" alt="">
+                </div>
+                <div class="quest__body">
+                  <div class="quest__title clickable" @click="goToSession(quest.id)">{{ quest.title }}</div>
+                  <div class="quest__meta">
+                    <div class="quest__inner">
+                      <span class="meta__pill">{{ quest.rewardRep }} {{ t('eventPanel.rep', 'реп.') }}</span>
+                      <span class="meta__pill">{{ quest.rewardCoins }} {{ coinIcon }}</span>
+                    </div>
+                    <button
+                        :class="['btn', 'btn--candy', { 'btn--repeat': quest.isDone }]"
+                        @click="goToSession(quest.id)"
+                    >
+                      {{ quest.isDone ? t('eventPanel.repeat', 'Повторить') : t('eventPanel.execute', 'Начать задание') }}
+                    </button>
                   </div>
-                  <button
-                      :class="['btn', 'btn--candy', { 'btn--repeat': quest.isDone }]"
-                      @click="goToSession(quest.id)"
-                  >
-                    {{ quest.isDone ? t('eventPanel.repeat', 'Повторить') : t('eventPanel.execute', 'Выполнить') }}
-                  </button>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
       <div v-if="isReqModalOpen" class="req-modal" @click.self="closeRequirementsModal">
         <div class="req-modal__card achv-card">
           <div class="req-modal__head">
             <div class="req-modal__title">{{ reqModalTitle }}</div>
-            <button class="req-modal__close" type="button" @click="closeRequirementsModal">✕</button>
+            <button class="req-modal__close" type="button" @click="closeRequirementsModal">
+              <img :src="BoneClose" alt="">
+            </button>
           </div>
           <div class="req-modal__text">{{ reqModalText }}</div>
           <button class="btn btn--candy req-modal__btn" type="button" @click="closeRequirementsModal">
@@ -453,8 +465,8 @@ onMounted(() => {
 </template>
 
 <style scoped>
+
 .season-page {
-  font-family: "Nunito", sans-serif;
   height: 100vh;
   max-width: 1000px;
   margin: 0 auto;
@@ -462,6 +474,7 @@ onMounted(() => {
   flex-direction: column;
   overflow: hidden;
   position: relative;
+
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -470,7 +483,7 @@ onMounted(() => {
   inset: 0;
   background: #1a0f1f url('/images/HalooweenBackground3.webp') no-repeat center center;
   background-size: cover;
-  z-index: -1;
+  z-index: 1;
 }
 
 .season-container {
@@ -516,11 +529,10 @@ onMounted(() => {
 }
 
 .achv-card {
-  border: 2px solid #ffbb55;
-  border-radius: 18px;
+  border-radius: 22px;
   padding: 15px;
   backdrop-filter: blur(4px);
-  background: rgba(31, 14, 21, 0.85);
+  background: rgb(0 0 0 / 83%);
 }
 
 .stats-board {
@@ -528,7 +540,7 @@ onMounted(() => {
   align-items: center;
   justify-content: end;
   flex: 1;
-  padding: 8px 15px;
+  padding: 0 6px;
   margin: 0;
 }
 
@@ -536,32 +548,39 @@ onMounted(() => {
   display: flex;
   align-items: center;
   gap: 6px;
-  border: 2px solid #ffbb55;
+  background: #46a714bf;
   padding: 6px;
-  height: 48px;
   border-radius: 14px;
   margin-left: 10px;
 }
 
 .stat-value {
-  color: #ffcf4d;
-  font-weight: 900;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: Lilita One, sans-serif;
   font-size: 22px;
   display: flex;
-  align-items: flex-end;
   gap: 10px;
 }
 
 .scrollable-view {
-  flex: 1;
+  padding: 10px 20px 10px;
+  scrollbar-width: none;
+  height: 100%;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll_sections {
+  height: 100%;
   overflow-y: auto;
-  padding: 10px 20px 40px;
+  padding-bottom: 160px;
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
 }
 
-.scrollable-view::-webkit-scrollbar {
+.scroll_sections::-webkit-scrollbar {
   display: none;
 }
 
@@ -571,6 +590,7 @@ onMounted(() => {
 
 .coin__value {
   font-size: 22px;
+  font-family: Lilita One, sans-serif;
 }
 
 .mobile-nav {
@@ -580,8 +600,8 @@ onMounted(() => {
   background: rgba(31, 14, 21, 0.9);
   border-radius: 40px;
   padding: 6px;
-  border: 3px solid #ffbb5547;
-  margin: 0 0 20px 0;
+  border: 3px solid rgb(143 140 136 / 0.12);
+  margin: 0 0 5px 0;
   flex-shrink: 0;
 }
 
@@ -591,7 +611,7 @@ onMounted(() => {
   bottom: 6px;
   left: 6px;
   width: calc(50% - 6px);
-  background: #e0701d;
+  background: #bd2d2d;
   border-radius: 30px;
   transition: transform 0.4s cubic-bezier(0.34, 1.35, 0.64, 1);
   z-index: 1;
@@ -616,10 +636,11 @@ onMounted(() => {
 }
 
 .tab-label {
-  font-size: 16px;
-  font-weight: 900;
+  font-size: 18px;
+  font-weight: 400;
   color: #ffe6d1;
   transition: color 0.2s;
+  font-family: "Kablammo", system-ui;
 }
 
 .mobile-nav__btn--active .tab-label {
@@ -664,6 +685,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding: 0 15px;
 }
 
 .prize-card {
@@ -671,16 +693,20 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  padding: 15px;
+  padding: 15px 30px 30px 30px;
 }
 
 .prize-card__icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 100px;
+  width: 180px;
+  height: 180px;
   flex-shrink: 0;
+  border: 4px solid #51504d;
+  background: #251233;
+  padding: 18px;
+  border-radius: 30%;
 }
 
 .prize-card__body {
@@ -691,27 +717,19 @@ onMounted(() => {
 }
 
 .prize-card__title {
-  font-weight: 900;
-  font-size: 18px;
+  font-size: 22px;
   color: #ffcf4d;
-}
-
-.prize-card__foot {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
+  font-family: "Kablammo", system-ui;
 }
 
 .price {
   font-weight: 900;
   color: #1a0f1f;
-  background: #ffbb55;
-  border: 2px solid #7a4a20;
   display: flex;
+  justify-content: center;
   align-items: center;
   border-radius: 10px;
-  padding: 0 10px;
+  padding: 10px 10px;
   font-size: 16px;
 }
 
@@ -719,6 +737,9 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding: 0 15px;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .quest {
@@ -726,11 +747,16 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  padding: 15px;
+  padding: 15px 30px 30px 30px;
+  border: 3px solid #9f78c973;
 }
 
 .quest__icon {
   font-size: 45px;
+  overflow: hidden;
+  border-radius: 30%;
+  width: 190px;
+  border: 4px solid #51504d;
 }
 
 .quest__body {
@@ -741,10 +767,11 @@ onMounted(() => {
 }
 
 .quest__title {
-  font-weight: 900;
-  font-size: 18px;
-  color: #ffcf4d;
+  font-weight: 400;
+  font-size: 26px;
+  color: #FFFFFF;
   text-align: center;
+  font-family: "Kablammo", system-ui;
 }
 
 .quest__meta {
@@ -760,20 +787,21 @@ onMounted(() => {
 }
 
 .meta__pill {
-  background: #1f0e15;
   color: #ffcf4d;
+  background: #46a714bf;
   border-radius: 14px;
   padding: 6px 12px;
-  font-weight: 900;
+  font-weight: bold;
   font-size: 15px;
+  margin-bottom: 10px;
 }
 
 .btn {
-  border-radius: 50px;
+  border-radius: 31px 52% 35px;
   padding: 12px 20px;
-  font-weight: 900;
   cursor: pointer;
   width: 100%;
+  text-transform: uppercase;
   text-align: center;
   font-family: "Nunito", sans-serif;
   font-size: 18px;
@@ -787,7 +815,9 @@ onMounted(() => {
 
 .btn--candy {
   background: #ff9c1a;
-  color: #1a0f1f;
+  color: #2e2b37;
+  font-size: 20px;
+  font-family: "Kablammo", system-ui;
   border: none;
   box-shadow: 0 5px #b3530c;
 }
@@ -865,7 +895,7 @@ onMounted(() => {
   background: #2a1622;
   border: 2px solid #ffbb55;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
-  padding: 20px;
+  padding: 25px 15px 30px 15px;
 }
 
 .req-modal__head {
@@ -873,6 +903,14 @@ onMounted(() => {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 15px;
+}
+
+.price__value {
+  margin: 6px 0 0 6px ;
+  color: white;
+  font-weight: 900;
+  font-size: 18px;
+
 }
 
 .req-modal__title {
@@ -883,11 +921,10 @@ onMounted(() => {
 
 .req-modal__close {
   border: none;
-  background: #e0701d;
+  background: none;
   color: white;
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
+  width: 42px;
+  height: 42px;
   cursor: pointer;
   font-weight: 900;
   font-size: 18px;

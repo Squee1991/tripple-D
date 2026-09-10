@@ -57,11 +57,12 @@
               :key="index"
               class="option-btn"
               :class="{
-              'correct': selectedAnswer && option === currentWord.correctTranslation,
-              'incorrect': selectedAnswer === option && option !== currentWord.correctTranslation
-            }"
-              :disabled="selectedAnswer !== null"
-              @click="checkAnswer(option)"
+                'selected': selectedAnswer === option && !hasChecked,
+                'correct': hasChecked && option === currentWord.correctTranslation,
+                'incorrect': hasChecked && selectedAnswer === option && option !== currentWord.correctTranslation
+              }"
+              :disabled="hasChecked"
+              @click="selectAnswer(option)"
           >
             {{ option }}
           </button>
@@ -86,13 +87,21 @@
             </div>
             <div class="completion-actions">
               <button class="btn-primary" @click="finishLearning">{{ t('speakSession.list') }}</button>
-              <button class="btn-secondary" @click="restartLearning">{{t('speakSession.repeat')}}</button>
+              <button class="btn-secondary" @click="restartLearning">{{ t('speakSession.repeat') }}</button>
             </div>
           </div>
         </div>
       </Transition>
       <footer class="vocab-footer" v-if="selectedAnswer && currentWord">
-        <button class="btn-primary" @click="nextStep">
+        <button v-if="!hasChecked" class="btn-primary btn-check" @click="checkAnswer">
+          Проверить
+        </button>
+        <button
+            v-else
+            class="btn-primary"
+            :class="{'btn-incorrect': !isAnswerCorrect}"
+            @click="nextStep"
+        >
           {{ currentStep < totalSteps - 1 ? t('speakSession.further') : t('speakSession.end') }}
         </button>
       </footer>
@@ -130,6 +139,7 @@ const allTranslationsRef = ref([]);
 
 const correctAnswers = ref(0);
 const incorrectAnswers = ref(0);
+const hasChecked = ref(false);
 
 const showExitModal = ref(false);
 const isConfirmedExit = ref(false);
@@ -145,6 +155,11 @@ const progressPercentage = computed(() => {
   return (currentStep.value / totalSteps.value) * 100;
 });
 const currentWord = computed(() => learningSequence.value[currentStep.value]);
+
+const isAnswerCorrect = computed(() => {
+  if (!currentWord.value) return false;
+  return selectedAnswer.value === currentWord.value.correctTranslation;
+});
 
 const getTranslation = (translationData) => {
   if (!translationData) return '';
@@ -172,9 +187,16 @@ const generateOptions = (allTranslations) => {
   options.value = [correct, ...randomIncorrect].sort(() => Math.random() - 0.5);
 };
 
-const checkAnswer = (selected) => {
-  selectedAnswer.value = selected;
-  if (selected === currentWord.value.correctTranslation) {
+const selectAnswer = (option) => {
+  if (hasChecked.value) return;
+  selectedAnswer.value = option;
+};
+
+const checkAnswer = () => {
+  if (!selectedAnswer.value || hasChecked.value) return;
+  hasChecked.value = true;
+
+  if (selectedAnswer.value === currentWord.value.correctTranslation) {
     correctAnswers.value++;
   } else {
     incorrectAnswers.value++;
@@ -183,6 +205,7 @@ const checkAnswer = (selected) => {
 
 const nextStep = () => {
   selectedAnswer.value = null;
+  hasChecked.value = false;
   currentStep.value++;
 
   if (currentStep.value < totalSteps.value) {
@@ -213,6 +236,11 @@ const startPractice = () => {
   });
 
   learningSequence.value = sequence.sort(() => Math.random() - 0.5);
+  currentStep.value = 0;
+  correctAnswers.value = 0;
+  incorrectAnswers.value = 0;
+  selectedAnswer.value = null;
+  hasChecked.value = false;
 
   if (learningSequence.value.length > 0) {
     generateOptions(allTranslations);
@@ -271,6 +299,7 @@ const restartLearning = () => {
   correctAnswers.value = 0;
   incorrectAnswers.value = 0;
   selectedAnswer.value = null;
+  hasChecked.value = false;
   learningSequence.value = learningSequence.value.sort(() => Math.random() - 0.5);
   generateOptions(allTranslationsRef.value);
   setTimeout(() => {
@@ -490,6 +519,12 @@ onMounted(async () => {
   transition: all 0.2s;
 }
 
+.option-btn.selected {
+  background: #e0efff;
+  border-color: #3b82f6;
+  color: #1e3a8a;
+}
+
 .option-btn:active:not(:disabled) {
   transform: translateY(2px);
 }
@@ -524,9 +559,19 @@ onMounted(async () => {
   transition: transform 0.1s;
 }
 
-.btn-primary:active {
+.btn-check {
+  background: #3b82f6;
+  box-shadow: 0 5px 0 #2563eb;
+}
+
+.btn-incorrect {
+  background: #ef4444 !important;
+  box-shadow: 0 5px 0 #dc2626 !important;
+}
+
+.btn-primary:active, .btn-check:active, .btn-incorrect:active {
   transform: translateY(4px);
-  box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent !important;
 }
 
 .btn-secondary {

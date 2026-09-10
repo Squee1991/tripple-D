@@ -32,7 +32,8 @@
                 {{ getTranslation(item) }}
               </span>
               <button v-if="item.isVerb" class="btn-verb-forms" @click="goToVerbForms(item.verbKey || item.word)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
                   <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                   <line x1="3" y1="9" x2="21" y2="9"></line>
                   <line x1="9" y1="21" x2="9" y2="9"></line>
@@ -47,7 +48,10 @@
       </main>
       <footer class="vocab-footer" v-if="vocabulary.length">
         <button class="btn-primary" @click="startPractice">{{ t('locationWordSession.learnWords') }}</button>
-        <button class="btn-secondary" style="margin-top: 12px;" @click="startQuest">{{ t('landWordsSession.toQuest') }}</button>
+        <button class="btn-secondary" style="margin-top: 12px;" @click="startQuest">{{
+            t('landWordsSession.toQuest')
+          }}
+        </button>
       </footer>
     </template>
     <template v-else-if="viewMode === 'practice'">
@@ -76,11 +80,12 @@
               :key="index"
               class="option-btn"
               :class="{
-              'correct': selectedAnswer && option === currentWord.correctTranslation,
-              'incorrect': selectedAnswer === option && option !== currentWord.correctTranslation
-            }"
-              :disabled="selectedAnswer !== null"
-              @click="checkAnswer(option)"
+                'selected': selectedAnswer === option && !hasChecked,
+                'correct': hasChecked && option === currentWord.correctTranslation,
+                'incorrect': hasChecked && selectedAnswer === option && option !== currentWord.correctTranslation
+              }"
+              :disabled="hasChecked"
+              @click="selectAnswer(option)"
           >
             {{ option }}
           </button>
@@ -102,7 +107,8 @@
                 </div>
               </div>
               <div class="completion-overlay_icon">
-                <img src="../../assets/images/GoodJobIcon.svg" alt="success_icon" @error="$event.target.style.display='none'">
+                <img src="../../assets/images/GoodJobIcon.svg" alt="success_icon"
+                     @error="$event.target.style.display='none'">
               </div>
               <div class="completion-actions">
                 <button class="btn-primary" @click="startQuest">{{ t('locationWordSession.begin') }}</button>
@@ -113,7 +119,17 @@
         </Transition>
       </Teleport>
       <footer class="vocab-footer" v-if="selectedAnswer && currentWord">
-        <button class="btn-primary" @click="nextStep">
+        <!-- Кнопка проверки (Синяя) -->
+        <button v-if="!hasChecked" class="btn-primary btn-check" @click="checkAnswer">
+          Проверить
+        </button>
+        <!-- Кнопка далее (Зеленая если верно, Красная если неверно) -->
+        <button
+            v-else
+            class="btn-primary"
+            :class="{'btn-incorrect': !isAnswerCorrect}"
+            @click="nextStep"
+        >
           {{ currentStep < totalSteps - 1 ? t('locationWordSession.further') : t('locationWordSession.finish') }}
         </button>
       </footer>
@@ -124,7 +140,8 @@
           <div class="tip-modal-header">
             <h3>{{ t('landWordsSession.grammar') }}</h3>
             <button class="close-btn" @click="closeTipModal">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
@@ -149,16 +166,16 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
-import { useRoute, useRouter, onBeforeRouteLeave } from 'vue-router'
-import { useI18n } from 'vue-i18n'
+import {ref, computed, onMounted} from 'vue'
+import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
+import {useI18n} from 'vue-i18n'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue"
-import { useSwipeBack } from '~/composables/useSwipeBack.js'
+import {useSwipeBack} from '~/composables/useSwipeBack.js'
 
 const route = useRoute()
 const router = useRouter()
-const { t, locale } = useI18n()
+const {t, locale} = useI18n()
 
 const regionKey = route.query.region
 const questId = route.query.questId
@@ -179,24 +196,33 @@ const allTranslationsRef = ref([])
 
 const correctAnswers = ref(0)
 const incorrectAnswers = ref(0)
+const hasChecked = ref(false)
 
 const showExitModal = ref(false)
 const isConfirmedExit = ref(false)
 let pendingRoute = null
 
-const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipeBack(() => {
+const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   handleBackClick()
 })
 
 const totalSteps = computed(() => learningSequence.value.length)
+
 const progressPercentage = computed(() => {
   if (totalSteps.value === 0) return 0
   return (currentStep.value / totalSteps.value) * 100
 })
+
 const currentWord = computed(() => {
   if (totalSteps.value === 0) return null
   const index = Math.min(currentStep.value, totalSteps.value - 1)
   return learningSequence.value[index]
+})
+
+// Новое вычисляемое свойство для проверки правильности ответа
+const isAnswerCorrect = computed(() => {
+  if (!currentWord.value) return false
+  return selectedAnswer.value === currentWord.value.correctTranslation
 })
 
 onMounted(async () => {
@@ -243,7 +269,7 @@ function startQuest() {
   isConfirmedExit.value = true
   router.replace({
     path: `/location/quest-${questId}`,
-    query: { region: regionKey }
+    query: {region: regionKey}
   })
 }
 
@@ -267,7 +293,7 @@ function closeTipModal() {
 function goToVerbForms(verbName) {
   router.push({
     path: '/verb-forms',
-    query: { verb: verbName }
+    query: {verb: verbName}
   })
 }
 
@@ -279,8 +305,8 @@ function startPractice() {
 
   const sequence = []
   vocabulary.value.forEach(v => {
-    sequence.push({ ...v, displayType: 'visual', correctTranslation: getTranslation(v) })
-    sequence.push({ ...v, displayType: 'audio', correctTranslation: getTranslation(v) })
+    sequence.push({...v, displayType: 'visual', correctTranslation: getTranslation(v)})
+    sequence.push({...v, displayType: 'audio', correctTranslation: getTranslation(v)})
   })
 
   learningSequence.value = sequence.sort(() => Math.random() - 0.5)
@@ -310,9 +336,16 @@ function generateOptions(allTranslations) {
   options.value = [correct, ...randomIncorrect].sort(() => Math.random() - 0.5)
 }
 
-function checkAnswer(selected) {
-  selectedAnswer.value = selected
-  if (selected === currentWord.value.correctTranslation) {
+function selectAnswer(option) {
+  if (hasChecked.value) return
+  selectedAnswer.value = option
+}
+
+function checkAnswer() {
+  if (!selectedAnswer.value || hasChecked.value) return
+  hasChecked.value = true
+
+  if (selectedAnswer.value === currentWord.value.correctTranslation) {
     correctAnswers.value++
   } else {
     incorrectAnswers.value++
@@ -321,6 +354,7 @@ function checkAnswer(selected) {
 
 function nextStep() {
   selectedAnswer.value = null
+  hasChecked.value = false
   currentStep.value++
 
   if (currentStep.value < totalSteps.value) {
@@ -429,7 +463,7 @@ onBeforeRouteLeave((to, from, next) => {
 .btn-icon-back {
   background: #fff;
   border: 3px solid var(--tabsSlideBorderColor);
-  box-shadow: var(--boxShadowMobile, 0 4px 0 rgba(0,0,0,0.05));
+  box-shadow: var(--boxShadowMobile, 0 4px 0 rgba(0, 0, 0, 0.05));
   border-radius: 12px;
   width: 40px;
   height: 40px;
@@ -509,7 +543,6 @@ onBeforeRouteLeave((to, from, next) => {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
   flex-grow: 1;
 }
 
@@ -532,7 +565,7 @@ onBeforeRouteLeave((to, from, next) => {
   gap: 6px;
   background: #eff6ff;
   color: #3b82f6;
-  border: 1px solid #bfdbfe;
+  border: 3px solid #bfdbfe;
   padding: 4px 10px;
   border-radius: 12px;
   font-size: 13px;
@@ -540,6 +573,12 @@ onBeforeRouteLeave((to, from, next) => {
   cursor: pointer;
   transition: background 0.1s ease, transform 0.1s ease;
   margin-top: 4px;
+}
+
+.option-btn.selected {
+  background: #e0efff;
+  border-color: #3b82f6;
+  color: #1e3a8a;
 }
 
 .btn-verb-forms:active {
@@ -570,9 +609,8 @@ onBeforeRouteLeave((to, from, next) => {
   box-shadow: 0 0 0 transparent;
 }
 
-/* Стили карточек практики */
+
 .flashcard {
-  background: white;
   border-radius: 20px;
   padding: 20px;
   display: flex;
@@ -581,7 +619,7 @@ onBeforeRouteLeave((to, from, next) => {
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   gap: 16px;
-  min-height: 100px;
+  min-height: 140px;
 }
 
 .flashcard.audio-only :deep(.btn-sound) {
@@ -596,7 +634,7 @@ onBeforeRouteLeave((to, from, next) => {
 .word-german {
   font-size: 28px;
   font-weight: 800;
-  color: #1e293b;
+  color: var(--titleColor);
   margin: 0;
   text-align: center;
 }
@@ -636,7 +674,6 @@ onBeforeRouteLeave((to, from, next) => {
   color: #991b1b;
 }
 
-/* Футер и кнопки */
 .vocab-footer {
   padding: 24px;
   background: var(--bg);
@@ -656,9 +693,21 @@ onBeforeRouteLeave((to, from, next) => {
   transition: transform 0.1s;
 }
 
-.btn-primary:active {
+/* Состояние "Синей кнопки" для проверки */
+.btn-check {
+  background: #3b82f6;
+  box-shadow: 0 5px 0 #2563eb;
+}
+
+/* Состояние "Красной кнопки" для неверного ответа */
+.btn-incorrect {
+  background: #ef4444 !important;
+  box-shadow: 0 5px 0 #dc2626 !important;
+}
+
+.btn-primary:active, .btn-check:active, .btn-incorrect:active {
   transform: translateY(4px);
-  box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent !important;
 }
 
 .btn-secondary {
@@ -888,6 +937,8 @@ onBeforeRouteLeave((to, from, next) => {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>
