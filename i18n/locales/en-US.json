@@ -10212,7 +10212,8 @@
     "health": "Health",
     "work": "Work and career",
     "auto": "Car and road",
-    "travel": "Travel"
+    "travel": "Travel",
+    "sport": "Sports"
   },
   "speakThemes": {
     "firstmeet": "Introduction",
@@ -10273,16 +10274,16 @@
     "car_rental": "Аренда авто",
     "ask_road": "Спросить дорогу",
     "hotel_issue": "Проблема в отеле",
-    "begin_fitness": "Фитнес-клуб",
-    "sport_footwear": "Покупка кроссовок",
-    "soccer_training": "Футбол",
-    "pool_booking": "Запись в бассейн",
-    "tennis_club": "Теннисный клуб",
-    "bicycle_rental": "Аренда велосипеда",
-    "sport_shake": "Фитнес-бар",
-    "climbing": "Скалодром",
-    "jogging": "На пробежке",
-    "ski_rental": "Аренда лыж"
+    "begin_fitness": "Fitness club",
+    "sport_footwear": "Buying sneakers",
+    "soccer_training": "Football",
+    "pool_booking": "Pool booking",
+    "tennis_club": "Tennis club",
+    "bicycle_rental": "Bicycle rental",
+    "sport_shake": "Fitness bar",
+    "climbing": "Climbing gym",
+    "jogging": "On a run",
+    "ski_rental": "Ski rental"
   },
   "speakIndexPage": {
     "title": "Speaking practice",

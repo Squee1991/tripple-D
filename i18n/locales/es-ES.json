@@ -10189,7 +10189,8 @@
     "health": "Salud",
     "work": "Trabajo y carrera",
     "auto": "Coche y carretera",
-    "travel": "Viajes"
+    "travel": "Viajes",
+    "sport": "Deporte"
   },
   "speakThemes": {
     "firstmeet": "Presentación",

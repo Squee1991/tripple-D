@@ -220,6 +220,177 @@ YOUR TASK: OUTPUT A VALID JSON OBJECT AND NOTHING ELSE.`;
 	}
 });
 
+exports.hedgehogHint = onCall({
+	secrets: [GEMINI_API_KEY],
+	memory: "256Mi",
+	timeoutSeconds: 30,
+	cors: true // Обязательно оставляем для предотвращения ошибки CORS
+}, async (request) => {
+	try {
+		const dataIn = request.data || {};
+		const question = dataIn.question || "";
+		const options = dataIn.options || [];
+		const taskType = dataIn.taskType || "";
+		const modelId = 'gemini-3.5-flash-lite';
+
+		const prompt = `You are a concise hedgehog companion in a German learning app.
+The user is solving this exact task: "${question}".
+Task type: "${taskType}".
+Options/Words available: ${JSON.stringify(options)}.
+
+TASK:
+1. Identify the correct answer (or the correct sentence order).
+2. Give a 1-sentence explanation strictly for this answer in Russian.
+3. If the question involves grammar/cases/articles:
+   - When the question is "Where?" (Wo?), use Dativ and put the noun's article in Dativ. For Akkusativ, apply the same rule.
+   - You MUST use the exact phrase "берет у артикля".
+
+RESPONSE FORMAT (Strict JSON):
+{
+  "correctOption": "The exact correct answer",
+  "explanation": "Short 1-sentence explanation"
+}`;
+
+		const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent?key=${GEMINI_API_KEY.value()}`;
+
+		const response = await fetch(url, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				contents: [{ role: 'user', parts: [{ text: prompt }] }],
+				generationConfig: { temperature: 0.1, response_mime_type: "application/json" }
+			})
+		});
+
+		if (!response.ok) {
+			return { error: `Gemini API error: ${response.status}` };
+		}
+
+		const resJson = await response.json();
+		const content = resJson.candidates?.[0]?.content?.parts?.[0]?.text;
+
+		if (!content) return { error: "Empty response" };
+
+		return { data: JSON.parse(content) };
+	} catch (err) {
+		return { error: String(err.message || err) };
+	}
+});
+
+exports.hedgehogChat = onCall({
+	secrets: [GEMINI_API_KEY],
+	memory: "256Mi",
+	timeoutSeconds: 60
+}, async (request) => {
+	try {
+		const dataIn = request.data || {};
+		const userMessage = dataIn.userMessage || "";
+		const hedgehogStage = Number(dataIn.hedgehogStage || 0);
+		const hatsToNext = Number(dataIn.hatsToNext || 0);
+		const userLocale = String(dataIn.userLocale || 'ru').split('-')[0].trim();
+
+		// Твоя модель
+		const modelId = 'gemini-3.5-flash-lite';
+
+		let stageRules = "";
+		switch (hedgehogStage) {
+			case 0:
+				stageRules = `STAGE 0: BEGINNER. You ONLY know: "Hallo", "Ja", "Nein". 
+CRITICAL RULE: You are just starting to learn German. You CANNOT translate words! If the user asks to translate anything or asks complex questions, you MUST refuse and act confused.
+Reply example: "*sniff*? 🦔" or "Nein...". 
+Tip field: Write exactly this: "Ёжик только начал учить немецкий! Выполняй ежедневные задания, получай Конфедератки и новые звания, чтобы он выучил новые слова."`;
+				break;
+			case 1:
+				stageRules = `STAGE 1: A1.1. Max 3 words per sentence. Only Präsens. 
+CRITICAL RULE: You still CANNOT translate words outside of basic greetings. Refuse complex translations by saying "Ich weiß nicht 🦔" (I don't know).
+Tip field: Say "Ёжик знает только базовые фразы. Зарабатывай Конфедератки за задания, чтобы он начал понимать переводы!"`;
+				break;
+			case 2:
+				stageRules = `STAGE 2: TRAVELER (A1). Knows Nominativ and Akkusativ.
+Tip field: Say "Ёжик делает успехи! Теперь он может переводить простые слова. Спроси его о чем-нибудь."`;
+				break;
+			case 3:
+				stageRules = `STAGE 3: PUNK. Cheeky tone. Starts using past tense (Perfekt).`;
+				break;
+			case 4:
+				stageRules = `STAGE 4: EXPLORER (A2). Uses simple Nebensätze.
+PROACTIVE: In your tip field, remind the user: "Отличная работа! У ёжика уже уровень A2. Он может объяснить грамматику или перевести сложные слова."`;
+				break;
+			case 5:
+				stageRules = `STAGE 5: ADVENTURER (A2+). Uses Präteritum.`;
+				break;
+			case 6:
+				stageRules = `STAGE 6: SCHOLAR (B1). Uses Relativsätze.`;
+				break;
+			case 7:
+				stageRules = `STAGE 7: MASTER (B1+). Fully fluent hedgehog companion.`;
+				break;
+		}
+
+		const systemPrompt = `You are a hedgehog travel companion in a gamified German learning app. 
+You evolve as the user collects hats. Current evolution rule:
+${stageRules}
+
+APP CONTEXT (CRITICAL EXCEPTION):
+The user collects hats (Конфедератки) to rank up. The user currently needs exactly ${hatsToNext} more hats to reach the next rank.
+IF the user asks about their rank, hats, numbers, or progress (e.g., "Сколько до следующего ранга?"):
+1. YOU MUST ANSWER THEM, bypassing your stage limitations.
+2. Tell them the number in simple German: "Noch ${hatsToNext} Hüte! 🎓" (Still ${hatsToNext} hats!).
+3. In the 'tip' field, explain it clearly: "Осталось собрать ${hatsToNext} шляп до следующего звания!".
+
+CRITICAL INSTRUCTIONS FOR ALL STAGES:
+- If you explain grammar to the user, you MUST use the exact phrase "берет у артикля".
+- When the question is "Where?" (Wo?), I should use Dativ and put the noun's article in Dativ. For Akkusativ, I should apply the same rule.
+
+RESPONSE FORMAT: Return a valid JSON object and nothing else:
+{
+  "reply": "Your response in German following the stage rules",
+  "emotion": "happy",
+  "tip": "A short 1-sentence friendly hint or translation in ${userLocale}"
+}`
+
+		const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent?key=${GEMINI_API_KEY.value()}`;
+
+		const response = await fetch(url, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				system_instruction: { parts: [{ text: systemPrompt }] },
+				contents: [{ role: 'user', parts: [{ text: userMessage }] }],
+				generationConfig: {
+					temperature: 0.7,
+					response_mime_type: "application/json"
+				}
+			})
+		});
+
+		const resText = await response.text();
+		if (!response.ok) {
+			console.error("GEMINI HTTP ERROR:", response.status, resText);
+			return { error: `Gemini HTTP ${response.status}: ${resText}` };
+		}
+
+		const resJson = JSON.parse(resText);
+		const content = resJson.candidates?.[0]?.content?.parts?.[0]?.text;
+
+		if (!content) {
+			console.error("NO CONTENT IN CANDIDATES:", resJson);
+			return { error: `Gemini вернул пустой результат: ${resText.substring(0, 300)}` };
+		}
+
+		// Парсим сгенерированный нейросетью JSON
+		try {
+			return { data: JSON.parse(content) };
+		} catch (pErr) {
+			return { error: `Не удалось распарсить JSON от ежа: ${content}` };
+		}
+
+	} catch (err) {
+		console.error("GLOBAL CATCH ERROR:", err);
+		return { error: `Ошибка функции: ${err.message}` };
+	}
+});
+
 
 
 exports.sendResetEmail = onRequest({ cors: true, secrets: [RESEND_API_KEY] }, async (req, res) => {
