@@ -7,6 +7,7 @@
     <VLost/>
     <VRankOverlay/>
     <VInstallApp/>
+    <VHedgehogIntroModal/>
   </NuxtLayout>
 </template>
 
@@ -32,6 +33,7 @@ import {onMounted} from "vue";
 import {dailyStore} from './store/dailyStore'
 import {computed} from 'vue'
 import {useHead} from '#imports'
+import VHedgehogIntroModal from "~/src/components/V-HedgehogIntroModal.vue";
 
 const {locale, t} = useI18n()
 useHead(() => ({

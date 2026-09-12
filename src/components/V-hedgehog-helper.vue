@@ -24,8 +24,8 @@
           <div class="hh-msg hh-bot">
             <img class="hh-avatar" :src="HedgehogIcon" alt="HedgehogIcon">
             <div class="hh-bubble">
-              <span v-if="!hintData && !isLoading">Привет! Вижу, задание хитрое. Чем помочь?</span>
-              <span v-else-if="isLoading">Ищу правильный ответ...</span>
+              <span v-if="!hintData && !isLoading">Привет! Чем помочь?</span>
+              <span v-else-if="isLoading">...</span>
               <div v-else>
                 <strong>Ответ:</strong> <span class="hh-highlight">{{ hintData.correctOption }}</span>
                 <p class="hh-exp">{{ hintData.explanation }}</p>
@@ -34,7 +34,7 @@
           </div>
           <div v-if="!hintData && !isLoading" class="hh-user-actions">
             <button class="hh-action-btn primary" @click="requestHint">
-              Подскажи правильный ответ
+              Подскажи ответ с грамматикой
             </button>
             <button class="hh-action-btn secondary" @click="closeSheet">
               Я попробую сам!
@@ -61,7 +61,9 @@ const { t, locale } = useI18n()
 
 const props = defineProps({
   task: { type: Object, default: null },
-  lives: { type: Number, default: 5 }
+  lives: { type: Number, default: 5 },
+  actionType: { type: String, default: 'hint' },
+  selectedAnswer: { type: String, default: '' }
 })
 
 const isOpen = ref(false)
@@ -96,11 +98,11 @@ const requestHint = async () => {
     }
 
     const questionText = rawQuestion ? t(rawQuestion) : ''
-    const optionsList = rawOptions.map(opt => {
+    const optionsList = rawOptions.map(option => {
       try {
-        return t(opt)
+        return t(option)
       } catch {
-        return opt
+        return option
       }
     })
 
@@ -108,27 +110,31 @@ const requestHint = async () => {
     const currentLang = locale.value || 'ru'
 
     const res = await getHint({
+      action: props.actionType, // <-- Отправляем нужный сценарий
       question: questionText,
       options: optionsList,
       taskType: props.task.type,
-      audioText: audioText,
+      audioText: props.task.text || '',
       correctAnswer: correctAnswer,
-      userLocale: currentLang
+      sentence: questionText, // <-- Дублируем для сценария 'grammar'
+      answer: correctAnswer,  // <-- Дублируем для сценария 'grammar'
+      selectedAnswer: props.selectedAnswer, // <-- Передаем ошибку
+      userLocale: locale.value || 'ru'
     })
 
     if (res.data?.data) {
       hintData.value = res.data.data
     } else {
       hintData.value = {
-        correctOption: "Ошибка связи",
-        explanation: "Не удалось достучаться до сервера."
+        correctOption: "...",
+        explanation: t('hedgehogHleper.error')
       }
     }
   } catch (err) {
     console.error(err)
     hintData.value = {
-      correctOption: "Ошибка",
-      explanation: "Проверь интернет-соединение."
+      correctOption: "...",
+      explanation: t('hedgehogHleper.error')
     }
   } finally {
     isLoading.value = false

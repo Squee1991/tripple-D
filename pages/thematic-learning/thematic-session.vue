@@ -10,6 +10,12 @@
         @cancel="cancelExit"
         @confirm="confirmExit"
     />
+    <VHedgehogHelper
+        v-if="currentTaskForHelper && !finished"
+        :task="currentTaskForHelper"
+        :selected-answer="feedback?.selected"
+        action-type="grammar"
+    />
     <div class="session-container">
       <section v-if="loading" class="view-state view-state--loading">
         <div class="bouncy-loader">
@@ -114,6 +120,7 @@ import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue";
 import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
 import SadHedgehogIcon from '../../assets/images/Sadlyhedgehog.png'
 import {useSwipeBack} from '~/composables/useSwipeBack.js'
+import VHedgehogHelper from "~/src/components/V-hedgehog-helper.vue";
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -132,10 +139,11 @@ const finished = ref(false)
 const isChecked = ref(false)
 const showExitModal = ref(false)
 const sessionMistakes = ref([])
+
 const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   exit()
 }, {
-  ignoreSelector: '.options-grid, .option-pill, .bottom-sheet, .btn-gummy'
+  ignoreSelector: '.options-grid, .option-pill, .bottom-sheet, .btn-gummy, .hh-fab, .hh-overlay, .hh-bottom-sheet'
 })
 
 const tasks = computed(() => {
@@ -149,6 +157,19 @@ const tasks = computed(() => {
   }
 
   return allTasks.map((task, index) => ({...task, originalIndex: index}))
+})
+
+// Добавлено: передача задания в VHedgehogHelper
+const currentTaskForHelper = computed(() => {
+  if (!tasks.value.length || current.value >= tasks.value.length) return null
+  const currentTask = tasks.value[current.value]
+  return {
+    question: currentTask.question,
+    answer: currentTask.answer,
+    correctAnswer: currentTask.answer,
+    options: answerOptions.value,
+    type: 'grammar'
+  }
 })
 
 const progressPercent = computed(() => {

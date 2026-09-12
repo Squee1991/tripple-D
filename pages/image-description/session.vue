@@ -8,8 +8,9 @@ import TipsModal from '../../src/components/V-tips.vue'
 import {topics} from '@/utils/descriptionImages.js'
 
 import {getFunctions, httpsCallable} from 'firebase/functions'
-import {showInterstitial} from '../../utils/admob.js'
+import {showInterstitial} from '~/utils/admob.js'
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
+import VHedgehogImageHelper from "~/src/components/V-HedgehogImageHelper.vue";
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -43,6 +44,18 @@ const tipsData = ref({
     {id: '2', text: t('describePictureTips.tipTwo')},
     {id: '3', text: t('describePictureTips.tipThree')}
   ]
+})
+
+function retryTask() {
+  isAnswered.value = false
+  messages.value = []
+  input.value = ''
+  err.value = ''
+}
+
+const lastUserMessage = computed(() => {
+  const userMsgs = messages.value.filter(m => m.role === 'user')
+  return userMsgs.length ? userMsgs[userMsgs.length - 1].content : ''
 })
 
 const currentImage = computed(() => {
@@ -152,6 +165,13 @@ function goBack() {
 <template>
   <div class="page-container">
     <div class="page__inner">
+      <VHedgehogImageHelper
+          :image-url="currentImage"
+          :reference-description="activeTasks[currentTaskIndex]?.descriptions?.[selectedLevel] || ''"
+          :user-level="selectedLevel"
+          :is-answered="isAnswered"
+          :user-answer="lastUserMessage"
+      />
       <TipsModal v-model="showTips" :title="t('adjectiveComparisonPage.tipTitle')" :tips="tipsData.tips"/>
       <VLoginPreloader v-if="isScreenLoading"/>
       <div class="content-shell" v-else-if="selectedTopic">
@@ -194,8 +214,9 @@ function goBack() {
                         <div class="feedback-body">
                           <p class="main-feedback">{{ m.feedback }}</p>
                           <div class="suggestion-box">
-                            <div class="suggestion-header"><span
-                                class="icon">✨</span><span>{{ t('descriptionSession.answer') }}:</span></div>
+                            <div class="suggestion-header">
+                              <span class="suggestion-header-answer">{{ t('descriptionSession.answer') }}:</span>
+                            </div>
                             <div class="suggestion-content">
                               <SoundBtn :text="m.suggestedAnswer" class="mini-sound"/>
                               <p class="suggestion-text">{{ m.suggestedAnswer }}</p>
@@ -240,8 +261,14 @@ function goBack() {
                   </div>
                 </template>
                 <template v-else>
-                  <button class="btn-primary-action full-width" @click="nextTask">{{ t('describePicture.nextBtn') }}
-                  </button>
+                  <div class="answered-actions">
+                    <button class="btn-secondary-action" @click="retryTask">
+                      🔄 Ещё раз
+                    </button>
+                    <button class="btn-primary-action" @click="nextTask">
+                      {{ t('describePicture.nextBtn') }} ➔
+                    </button>
+                  </div>
                 </template>
               </div>
             </div>
@@ -326,9 +353,10 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 .btn-primary-action {
   background: #3b82f6;
   color: #fff;
+  font-weight: 900;
   padding: 10px 40px;
   border-radius: 50px;
-  font-size: 1.5rem;
+  font-size: 16px;
   border: none;
   cursor: pointer;
   display: flex;
@@ -407,6 +435,10 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+}
+
+.suggestion-header-answer {
+  font-weight: 900;
 }
 
 .glare {
@@ -528,7 +560,7 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 .suggestion-header {
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
-  margin-bottom: 5px;
+  margin: 5px 0;
 }
 
 .correction-title {
@@ -569,6 +601,10 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   color: #e26a4b;
   opacity: 1;
   -webkit-text-fill-color: #e26a4b;
+}
+
+.suggestion-text {
+  font-size: 15px;
 }
 
 .modern-input::-webkit-scrollbar {
@@ -632,6 +668,47 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 .medal-icon {
   font-size: 5rem;
   margin-bottom: 20px;
+}
+
+.answered-actions {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.answered-actions .btn-primary-action {
+  flex: 1;
+}
+
+.btn-secondary-action {
+  background: #ffffff;
+  color: #2b2b2b;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.1s, box-shadow 0.1s;
+  flex: 1;
+  text-transform: uppercase;
+}
+
+.btn-secondary-action:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
+}
+
+@media (max-width: 480px) {
+  .answered-actions {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 767px) {

@@ -58,7 +58,7 @@ const handleCancel = () => {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  z-index: 1000;
+  z-index: 1001;
   padding: 0;
 }
 
