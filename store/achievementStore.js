@@ -1,741 +1,807 @@
-import { defineStore } from 'pinia'
-import { ref, watch, watchEffect } from 'vue'
-import { getFirestore, doc, onSnapshot } from 'firebase/firestore'
-import { getAuth } from 'firebase/auth'
+import {defineStore} from 'pinia'
+import {ref, watch, watchEffect} from 'vue'
+import {getFirestore, doc, onSnapshot, collection} from 'firebase/firestore'
+import {getAuth} from 'firebase/auth'
 // --- 1) Импорты групп достижений ---
-import { overAchievment } from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
-import { wordAchievementsGroup } from '../src/achieveGroup/wordGroup/wordAchievements.js'
-import { groupedEasyModeAchievements } from '../src/achieveGroup/marathon/easyModeAchievment.js'
-import { groupedNormalModeAchievements } from '../src/achieveGroup/marathon/normalModeAchievement.js'
-import { groupedHardModeAchievements } from '../src/achieveGroup/marathon/hardModeAchievments.js'
-import { listenAchieveGroup } from '../src/achieveGroup/article/listen.js'
-import { pluraGroupAchievment } from '../src/achieveGroup/article/plural.js'
-import { writeArticleGroupAchievment } from '../src/achieveGroup/article/writeArticle.js'
-import { wordPlusArticleAchievment } from '../src/achieveGroup/article/wordPlusArticle.js'
-import { assembleWordGroupAchievement } from '../src/achieveGroup/article/wordsFromLetters.js'
-import { cpecialGroupAchievment } from '../src/achieveGroup/specialAchieve/specialAchievment.js'
-import { prepositionsNominativ } from '../src/achieveGroup/prepositions/prepNominativ.js'
-import { prepositionsAkkusativ } from '../src/achieveGroup/prepositions/prepAkkusativ.js'
-import { prepositionsGenitiv } from '../src/achieveGroup/prepositions/prepGenitiv.js'
-import { prepositionsDativ } from '../src/achieveGroup/prepositions/prepDativ.js'
-import { adjectiveBasic } from '../src/achieveGroup/adjective/adjectiveBasic.js'
-import { adjectiveDeclension } from '../src/achieveGroup/adjective/adjectiveDeclension.js'
-import { adjectiveComparison } from '../src/achieveGroup/adjective/adjectiveComparison.js'
-import { tensesVerbs } from '../src/achieveGroup/verbs/tensesVerbs.js'
-import { modalVerbs } from '../src/achieveGroup/verbs/modalVerbs.js'
-import { typeVerbs } from '../src/achieveGroup/verbs/typeVerbs.js'
-import { sentenceAchievement } from '../src/achieveGroup/sentenceDuel/sentenceAchievementsА1.js'
-import { eventWinterAchievements } from '../src/achieveGroup/eventAchievement/winterAchievements.js'
-import { valentineAchievements } from '../src/achieveGroup/eventAchievement/valentineAchievements.js'
+import {overAchievment} from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
+import {wordAchievementsGroup} from '../src/achieveGroup/wordGroup/wordAchievements.js'
+import {groupedEasyModeAchievements} from '../src/achieveGroup/marathon/easyModeAchievment.js'
+import {groupedNormalModeAchievements} from '../src/achieveGroup/marathon/normalModeAchievement.js'
+import {groupedHardModeAchievements} from '../src/achieveGroup/marathon/hardModeAchievments.js'
+import {listenAchieveGroup} from '../src/achieveGroup/article/listen.js'
+import {pluraGroupAchievment} from '../src/achieveGroup/article/plural.js'
+import {writeArticleGroupAchievment} from '../src/achieveGroup/article/writeArticle.js'
+import {wordPlusArticleAchievment} from '../src/achieveGroup/article/wordPlusArticle.js'
+import {assembleWordGroupAchievement} from '../src/achieveGroup/article/wordsFromLetters.js'
+import {cpecialGroupAchievment} from '../src/achieveGroup/specialAchieve/specialAchievment.js'
+import {prepositionsNominativ} from '../src/achieveGroup/prepositions/prepNominativ.js'
+import {prepositionsAkkusativ} from '../src/achieveGroup/prepositions/prepAkkusativ.js'
+import {prepositionsGenitiv} from '../src/achieveGroup/prepositions/prepGenitiv.js'
+import {prepositionsDativ} from '../src/achieveGroup/prepositions/prepDativ.js'
+import {adjectiveBasic} from '../src/achieveGroup/adjective/adjectiveBasic.js'
+import {adjectiveDeclension} from '../src/achieveGroup/adjective/adjectiveDeclension.js'
+import {adjectiveComparison} from '../src/achieveGroup/adjective/adjectiveComparison.js'
+import {tensesVerbs} from '../src/achieveGroup/verbs/tensesVerbs.js'
+import {modalVerbs} from '../src/achieveGroup/verbs/modalVerbs.js'
+import {typeVerbs} from '../src/achieveGroup/verbs/typeVerbs.js'
+import {sentenceAchievement} from '../src/achieveGroup/sentenceDuel/sentenceAchievementsА1.js'
+import {eventWinterAchievements} from '../src/achieveGroup/eventAchievement/winterAchievements.js'
+import {valentineAchievements} from '../src/achieveGroup/eventAchievement/valentineAchievements.js'
 // --- 2) Сторы-источники ---
-import { userChainStore } from '../store/chainStore.js'
-import { userAuthStore } from '../store/authStore.js'
-import { useQuestStore } from '../store/questStore.js'
-import { userlangStore } from '../store/learningStore.js'
-import { useLocalStatGameStore } from '../store/localSentenceStore.js'
-import { useCardsStore } from '../store/cardsStore.js'
-import { useGameStore } from '../store/marafonStore.js'
-import { useDuelStore } from '../store/sentenceDuelStore.js'
-import { useGuessWordStore } from '../store/guesStore.js'
-import { achievementToAwardMap } from '../src/awards/awardsMap.js'
-import { guessAchievment } from '../src/achieveGroup/guessAchieve/guessAchievments.js'
-import { useQuizStore } from '../store/adjectiveStore.js'
-import { useEventSessionStore } from '../store/eventsStore.js'
-import { useEasterEggsStore } from '../store/easterEggsStore.js'
+import {userChainStore} from '../store/chainStore.js'
+import {userAuthStore} from '../store/authStore.js'
+import {useQuestStore} from '../store/questStore.js'
+import {userlangStore} from '../store/learningStore.js'
+import {useLocalStatGameStore} from '../store/localSentenceStore.js'
+import {useCardsStore} from '../store/cardsStore.js'
+import {useGameStore} from '../store/marafonStore.js'
+import {useDuelStore} from '../store/sentenceDuelStore.js'
+import {useGuessWordStore} from '../store/guesStore.js'
+import {achievementToAwardMap} from '../src/awards/awardsMap.js'
+import {guessAchievment} from '../src/achieveGroup/guessAchieve/guessAchievments.js'
+import {useQuizStore} from '../store/adjectiveStore.js'
+import {useEventSessionStore} from '../store/eventsStore.js'
+import {useEasterEggsStore} from '../store/easterEggsStore.js'
+
 export const useAchievementStore = defineStore('achievementStore', () => {
-	const rawGroups = [
-		...valentineAchievements.map(g => ({category: 'valentine' , ...g})),
-		...eventWinterAchievements.map(g => ({category: 'winter' , ...g})),
-		...sentenceAchievement.map(g => ({ category: 'sentence', ...g })),
-		...typeVerbs.map(g => ({ category: 'typeVerbs', ...g })),
-		...modalVerbs.map(g => ({ category: 'modalVerbs', ...g })),
-		...tensesVerbs.map(g => ({ category: 'tensesVerbs', ...g })),
-		...adjectiveComparison.map(g => ({ category: 'adjectiveComparison', ...g })),
-		...adjectiveBasic.map(g => ({ category: 'basicAdjectives', ...g })),
-		...adjectiveDeclension.map(g => ({ category: 'adjectiveDeclension', ...g })),
-		...prepositionsDativ.map(g => ({ category: 'dativ', ...g })),
-		...prepositionsNominativ.map(g => ({ category: 'nominativ', ...g })),
-		...prepositionsGenitiv.map(g => ({ category: 'genitiv', ...g })),
-		...prepositionsAkkusativ.map(g => ({ category: 'akkusativ', ...g })),
-		...wordAchievementsGroup.map(g => ({ category: 'locations', ...g })),
-		...overAchievment.map(g => ({ category: 'over', ...g })),
-		...guessAchievment.map(g => ({ category: 'guess', ...g })),
-		...groupedEasyModeAchievements.map(g => ({ category: 'easy', ...g })),
-		...groupedNormalModeAchievements.map(g => ({ category: 'normal', ...g })),
-		...groupedHardModeAchievements.map(g => ({ category: 'hard', ...g })),
-		...listenAchieveGroup.map(g => ({ category: 'listen', ...g })),
-		...pluraGroupAchievment.map(g => ({ category: 'plural', ...g })),
-		...writeArticleGroupAchievment.map(g => ({ category: 'write', ...g })),
-		...wordPlusArticleAchievment.map(g => ({ category: 'wordArticle', ...g })),
-		...assembleWordGroupAchievement.map(g => ({ category: 'letters', ...g })),
-		...cpecialGroupAchievment.map(g => ({ category: 'special', ...g }))
-	]
-	const groups = ref(
-		rawGroups.map(group => ({
-			...group,
-			achievements: group.achievements.map(a => ({
-				...a,
-				title: a.title || a.name,
-				currentProgress: 0
-			}))
-		}))
-	)
-	let test = null
-	const lastUnlockedAward = ref(null)
-	const lastUnlockedAchievement = ref(null)
-	const popupQueue = ref([])
-	const showPopup = ref(false)
-	const popupAchievement = ref(null)
-	const db = getFirestore()
-	const auth = getAuth()
-	const authStore = userAuthStore()
-	const questStore = useQuestStore()
-	const langStore = userlangStore()
-	const statsStore = useLocalStatGameStore()
-	const cardStore = useCardsStore()
-	const gameStore = useGameStore()
-	const guessStore = useGuessWordStore()
-	const chainStore = userChainStore()
-	const quizStore = useQuizStore()
-	const duelStore = useDuelStore()
-	const eventStore = useEventSessionStore()
-	const eggStore = useEasterEggsStore()
-	const isBooting = ref(true)
-	const suppressReplaysUntil = ref(0)
-	const bootUnlocked = []
-	const bootAwards = []
-	let eventUnsubs = []
-	const dailyAggUnsub = ref(null)
-	const prevMap = new Map()
-	const required = ['article','letters','wordArticle','audio','plural']
-	const VEGETABLES_DE = new Set([
-		'Kartoffel','Karotte','Tomate','Gurke','Zwiebel','Kohl','Paprika',
-		'Rote Bete','Radieschen','Bohne','Mais','Pilz','Knoblauch'
-	]);
-
-	const ANIMAL_TOPICS = new Set(['Animals', 'Birds', 'SeaAnimals', 'Insects', 'Savanna']);
-	const hasAllModes = (word) => required.every(m => word?.progress?.[m])
-	const awardsKey = () => `awards_shown_v1_${authStore?.uid}`
-	const completedKey = () => `achievements_completed_v1_${authStore?.uid}`
-	function loadShown() {
-		if (!process.client) return new Set()
-		try { return new Set(JSON.parse(localStorage.getItem(awardsKey()) || '[]')) }
-		catch { return new Set() }
-	}
-	function saveShown(set) {
-		if (!process.client) return
-		try { localStorage.setItem(awardsKey(), JSON.stringify([...set])) } catch {}
-	}
-	function loadCompleted() {
-		if (!process.client) return new Set()
-		try { return new Set(JSON.parse(localStorage.getItem(completedKey()) || '[]')) }
-		catch { return new Set() }
-	}
-	function saveCompleted(set) {
-		if (!process.client) return
-		try { localStorage.setItem(completedKey(), JSON.stringify([...set])) } catch {}
-	}
-	let shownSet = loadShown()
-	let completedSet = loadCompleted()
-	const winterRank1BoughtCount = ref(0)
-	const valentineRank1BoughtCount = ref(0)
-	function findById(id) {
-		for (const g of groups.value) {
-			const ach = g.achievements.find(a => a.id === id)
-			if (ach) return ach
-		}
-		return null
-	}
-
-	function showNextPopup() {
-		if (!showPopup.value && popupQueue.value.length) {
-			popupAchievement.value = popupQueue.value.shift()
-			showPopup.value = true
-
-			setTimeout(() => {
-				if (showPopup.value) closePopup()
-			}, 5000)
-		}
-	}
-
-	function closePopup() {
-		showPopup.value = false
-		setTimeout(() => {
-			showNextPopup()
-		}, 300)
-	}
-
-	function resetAllProgress(options = {}) {
-		const { keepBoot = false } = options
-		groups.value.forEach(g => {
-			g.achievements.forEach(a => { a.currentProgress = 0 })
-		})
-		popupQueue.value.length = 0
-		showPopup.value = false
-		popupAchievement.value = null
-		lastUnlockedAward.value = null
-		lastUnlockedAchievement.value = null
-		if (!keepBoot) {
-			bootUnlocked.length = 0
-			bootAwards.length = 0
-		}
-	}
-
-	function detachDailyAggListener() {
-		if (dailyAggUnsub.value) {
-			try { dailyAggUnsub.value() } catch {}
-			dailyAggUnsub.value = null
-		}
-	}
-
-	function attachDailyAggListener() {
-		detachDailyAggListener()
-		const uid = authStore?.uid
-		if (!uid) return
-		const refDoc = doc(db, 'users', uid, 'dailyAgg', 'meta')
-		dailyAggUnsub.value = onSnapshot(refDoc, (snap) => {
-			const total = Number((snap.data() || {}).totalCompleted || 0)
-			updateProgress('daily42', total)
-		})
-	}
-
-	function updateProgress(id, val) {
-		const ach = findById(id)
-		if (!ach) return
-		const target = Number(ach.targetProgress ?? 0)
-		const prev   = Number(ach.currentProgress ?? 0)
-		const incoming = Number(val ?? 0)
-		const next     = isBooting.value ? incoming : Math.max(prev, incoming)
-		ach.currentProgress = Math.min(next, target)
-		const justCompleted = ach.currentProgress >= target && !completedSet.has(id)
-
-		if (justCompleted) {
-			completedSet.add(id)
-			saveCompleted(completedSet)
-			const mapVal = achievementToAwardMap[id]
-
-			if (isBooting.value) {
-				if (mapVal && !shownSet.has(mapVal)) {
-					shownSet.add(mapVal)
-					saveShown(shownSet)
-				}
-				if (id === 'registerAchievement') {
-					updateCollectionCount()
-				}
-			} else {
-
-				if (Date.now() >= suppressReplaysUntil.value || id === 'registerAchievement' || id === 'wasPlusUser') {
-					popupQueue.value.push(ach)
-					showNextPopup()
-					lastUnlockedAchievement.value = { id: ach.id, title: ach.title, groupTitle: ach.groupTitle || null, ts: Date.now() }
-					setTimeout(() => { if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null }, 500)
-
-					if (mapVal && !shownSet.has(mapVal)) {
-						shownSet.add(mapVal)
-						saveShown(shownSet)
-						lastUnlockedAward.value = { titleKey: mapVal, achId: id, ts: Date.now() }
-						setTimeout(() => { if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null }, 500)
-						updateCollectionCount()
-					}
-				}
-			}
-		}
-		prevMap.set(id, ach.currentProgress)
-	}
-
-	function updateCollectionCount() {
-		const awardAchievementIds = [
-			'explorer', 'adventures', 'Articlus', 'registerAchievement', 'level10', 'languageLands50',
-			'OneYearVeteran', 'wrong100Answers', 'LastChance', 'guessedFastWords', 'guessSixHundred',
-			'daily', 'guessedSafeWords', 'all_cases', 'all_adjectives', 'all_verbs',
-			'FiveHearts', 'daily42', 'iAmGroot',
-			'santaHat', 'christmasBall', 'christmasWreath',
-			'valentineBear', 'cupidArrow', 'wasPlusUser'
-		];
-		let unlockedCount = 0;
-		awardAchievementIds.forEach(id => {
-			if (completedSet.has(id)) {
-				unlockedCount++;
-			}
-		});
-		updateProgress('Collection', unlockedCount);
-	}
-
-	function getPrefixIds(prefix) {
-		const ids = []
-		for (const g of groups.value) {
-			for (const a of g.achievements) {
-				if (typeof a.id === 'string' && a.id.startsWith(prefix)) {
-					const n = Number(a.id.slice(prefix.length))
-					if (Number.isFinite(n)) ids.push({ id: a.id, n })
-				}
-			}
-		}
-		ids.sort((a, b) => a.n - b.n)
-		return ids.map(x => x.id)
-	}
-
-	const CASE_PREFIXES = ['nom', 'akk', 'dat', 'gen']
-	const ADJ_BUCKETS = {
-		basic:      ['col', 'emo', 'app', 'char', 'dim'],
-		comparison: ['creg', 'cuml', 'cspec'],
-		declension: ['def', 'indef', 'noart'],
-	}
-	const ADJ_ALL_PREFIXES = [...ADJ_BUCKETS.basic, ...ADJ_BUCKETS.comparison, ...ADJ_BUCKETS.declension]
-	const VERB_BUCKETS = {
-		tenses: ['pras', 'perf', 'fut', 'prat', 'plus'],
-		modal:  ['mod', 'neb'],
-		types:  ['irr', 'fix', 'ref', 'sep'],
-	}
-	const VERB_ALL_PREFIXES = [...VERB_BUCKETS.tenses, ...VERB_BUCKETS.modal, ...VERB_BUCKETS.types]
-
-	function areAllPrefixesCompleted(prefixes) {
-		return prefixes.every(isGroupMasterCompleted)
-	}
-
-	function recomputeAllVerbsMeta() {
-		let done = 0
-		if (areAllPrefixesCompleted(VERB_BUCKETS.tenses)) done++
-		if (areAllPrefixesCompleted(VERB_BUCKETS.modal))  done++
-		if (areAllPrefixesCompleted(VERB_BUCKETS.types))  done++
-		updateProgress('all_verbs', done)
-	}
-
-	function recomputeAllAdjectivesMeta() {
-		let done = 0
-		if (areAllPrefixesCompleted(ADJ_BUCKETS.basic))      done++
-		if (areAllPrefixesCompleted(ADJ_BUCKETS.comparison)) done++
-		if (areAllPrefixesCompleted(ADJ_BUCKETS.declension)) done++
-		updateProgress('all_adjectives', done)
-	}
-
-	function isGroupMasterCompleted(prefix) {
-		const ids = getPrefixIds(prefix)
-		if (!ids.length) return false
-		const masterId = ids[ids.length - 1]
-		const a = findById(masterId)
-		return a && Number(a.currentProgress ?? 0) >= Number(a.targetProgress ?? 1)
-	}
-
-	function recomputeAllCasesMeta() {
-		const done = CASE_PREFIXES.reduce((acc, p) => acc + (isGroupMasterCompleted(p) ? 1 : 0), 0)
-		updateProgress('all_cases', done)
-	}
-
-	function finishBootAndReplay() {
-		isBooting.value = false
-
-		if (bootAwards.length) {
-			bootAwards.forEach(({ titleKey }) => {
-				if (!shownSet.has(titleKey)) {
-					shownSet.add(titleKey)
-					saveShown(shownSet)
-				}
-			})
-			updateProgress('Collection', shownSet.size)
-		}
-
-		bootUnlocked.length = 0
-		bootAwards.length = 0
-	}
-
-	if (process.client) {
-		watch(() => authStore.uid, (uid) => {
-			isBooting.value = true
-			suppressReplaysUntil.value = Date.now() + 4000
-			shownSet = loadShown()
-			completedSet = loadCompleted()
-
-			groups.value.forEach(g => {
-				g.achievements.forEach(a => {
-					a.currentProgress = completedSet.has(a.id) ? a.targetProgress : 0
-				})
-			})
-			updateCollectionCount()
-			eggStore.loadEggs()
-			detachDailyAggListener()
-			if (!uid) {
-				isBooting.value = false
-				resetAllProgress()
-				return
-			}
-			attachDailyAggListener()
-			setTimeout(() => {
-				finishBootAndReplay()
-				recomputeAllCasesMeta()
-				recomputeAllAdjectivesMeta()
-				recomputeAllVerbsMeta()
-				setTimeout(() => {
-					if (!completedSet.has('registerAchievement')) {
-						updateProgress('registerAchievement', 1)
-					}
-				}, 1500)
-
-			}, 0)
-		}, { immediate: true })
-	}
-
-	function initializeProgressTracking() {
-		const prepositionsSetup = { dativ: 'dat', akkusativ: 'akk', genitiv: 'gen', nominativ: 'nom' }
-		let prepositionUnsubs = []
-
-		const applyPrepositionSnapshots = (prefix, agg) => {
-			const totalNow = Number(agg?.totalCorrect || 0)
-			updateProgress(`${prefix}1`, totalNow > 0 ? 1 : 0)
-			updateProgress(`${prefix}2`, totalNow)
-			updateProgress(`${prefix}3`, totalNow)
-			updateProgress(`${prefix}4`, Number(agg?.perfectSessionsCount || 0))
-			updateProgress(`${prefix}5`, Number(agg?.fastPerfectSessionsCount || 0))
-
-			const allIds = getPrefixIds(prefix)
-			if (allIds.length >= 2) {
-				const lastId = allIds[allIds.length - 1]
-				const allDone = allIds.slice(0, -1).every(id => {
-					const a = findById(id)
-					return a && Number(a.currentProgress ?? 0) >= Number(a.targetProgress ?? 1)
-				})
-				updateProgress(lastId, allDone ? 1 : 0)
-			}
-			if (CASE_PREFIXES.includes(prefix)) recomputeAllCasesMeta()
-		}
-
-		watch(() => authStore.uid, (uid) => {
-			prepositionUnsubs.forEach(fn => { try { fn && fn() } catch {} })
-			prepositionUnsubs = []
-			if (!uid) return
-
-			Object.entries(prepositionsSetup).forEach(([caseName, prefix]) => {
-				const docId = `prepositions_${caseName}`
-				const aggRef = doc(db, 'users', uid, 'quizTopics', docId)
-				prepositionUnsubs.push(onSnapshot(aggRef, s => applyPrepositionSnapshots(prefix, s.data() || {})))
-			})
-		}, { immediate: true })
-
-		const adjectivesSetup = {
-			'adjective-basics_colors': 'col', 'adjective-basics_feelings': 'emo', 'adjective-basics_appearance': 'app',
-			'adjective-basics_character': 'char', 'adjective-basics_dimensions': 'dim', 'adjective-comparison_regular-forms': 'creg',
-			'adjective-comparison_umlaut-forms': 'cuml', 'adjective-comparison_irregular-forms': 'cspec',
-			'adjective-declension_definite-article': 'def', 'adjective-declension_indefinite-article': 'indef',
-			'adjective-declension_no-article': 'noart', 'verb_presens': 'pras', 'verb_perfect': 'perf',
-			'verb_futurOne': 'fut', 'verb_prateritum': 'prat', 'verb_plusquamperfect': 'plus',
-			'modal-verbs_modal': 'mod', 'modal-verbs_nebensatze': 'neb', 'verb_irregular': 'irr',
-			'verb_prepositions': 'fix', 'verb_reflexive': 'ref', 'verb_separable': 'sep'
-		}
-
-		let adjectivesUnsubs = []
-		watch(() => authStore.uid, (uid) => {
-			adjectivesUnsubs.forEach(fn => { try { fn && fn() } catch {} })
-			adjectivesUnsubs = []
-			if (!uid) return
-
-			Object.entries(adjectivesSetup).forEach(([docId, prefix]) => {
-				const aggRef = doc(db, 'users', uid, 'quizTopics', docId)
-				adjectivesUnsubs.push(onSnapshot(aggRef, s => {
-					applyPrepositionSnapshots(prefix, s.data() || {})
-					if (ADJ_ALL_PREFIXES.includes(prefix)) recomputeAllAdjectivesMeta()
-					if (VERB_ALL_PREFIXES.includes(prefix)) recomputeAllVerbsMeta()
-				}))
-			})
-		}, { immediate: true })
-
-		const baseTrackers = [
-			{ id: 'firstAcademicCap', source: () => authStore.totalHats, compute: v => v || 0 },
-			{ id: 'daily', source: () => questStore.dailyQuestCount, compute: v => v || 0 },
-			{ id: 'levelUpExp', source: () => langStore.exp, compute: v => v || 0 },
-			{ id: 'grandmaster_sentences', source: () => statsStore.constructedSentences, compute: v => v || 0 },
-			{ id: 'learned10Words', source: () => langStore.learnedWords.length, compute: v => v },
-			{ id: 'learned100Words', source: () => langStore.learnedWords.length, compute: v => v },
-			{ id: 'wrong100Answers', source: () => langStore.wrongAnswers.length, compute: v => v },
-			{ id: 'SiteRegular', source: () => authStore.registeredAt, compute: d => d ? Math.max(0, Math.floor((Date.now() - new Date(d).getTime()) / 86400000)) : 0 },
-			{ id: 'createdCountCard', source: () => cardStore.createdCount, compute: v => v || 0 },
-			{ id: 'LastChance', source: () => gameStore.lastChanceProgress, compute: v => v || 0 },
-			{ id: 'MarginForError', source: () => gameStore.marginForErrorProgress, compute: v => v || 0 },
-			{ id: 'OnTheEdge', source: () => gameStore.onTheEdgeProgress, compute: v => v || 0 },
-			{ id: 'firstArticleAward', source: () => langStore.totalEarnedPoints, compute: v => v > 0 ? 1 : 0 },
-			{ id: 'guessFirst', source: () => guessStore.guessedWords.length, compute: v => v },
-			{ id: 'guessSecond', source: () => guessStore.guessedWords.length, compute: v => v },
-			{ id: 'guessThird', source: () => guessStore.guessedWords.length, compute: v => v },
-			{ id: 'guessFourth', source: () => guessStore.guessedWords.length, compute: v => v },
-			{ id: 'guessSixHundred', source: () => guessStore.guessedWords.length, compute: v => v }
-		]
-		baseTrackers.forEach(({ id, source, compute }) => {
-			watch(source, raw => updateProgress(id, compute(raw)), { immediate: true })
-		})
-
-		;[ { category: 'easy', idx: 1 }, { category: 'normal', idx: 2 }, { category: 'hard', idx: 3 } ].forEach(({ category, idx }) => {
-			watch(() => gameStore.totalCorrectAnswers?.[idx] || 0,
-				v => groups.value.filter(g => g.category === category).forEach(g => g.achievements.filter(a => a.type === 'total').forEach(a => updateProgress(a.id, v))),
-				{ immediate: true }
-			)
-			watch(() => gameStore.personalBests?.[idx] || 0,
-				v => groups.value.filter(g => g.category === category).forEach(g => g.achievements.filter(a => a.type === 'streak').forEach(a => updateProgress(a.id, v))),
-				{ immediate: true }
-			)
-		})
-		watch(() => langStore.words, (words = []) => {
-			let listenCnt = 0, pluralCnt = 0, lettersCnt = 0;
-			let derCnt = 0, dieCnt = 0, dasCnt = 0, wordArticleCnt = 0;
-			let isVegan = true, hasVegan = false;
-			let isZoo = true, hasZoo = false;
-			let salamiDone = false, katzeDone = false, hundDone = false;
-			let grootTopics = new Set();
-
-			for (let i = 0; i < words.length; i++) {
-				const w = words[i];
-				const p = w.progress || {};
-				const allModes = hasAllModes(w);
-				if (p.audio) listenCnt++;
-				if (p.plural) pluralCnt++;
-				if (p.letters) lettersCnt++;
-				if (p.wordArticle || p.wordPlusArticle) wordArticleCnt++;
-				if (p.article) {
-					if (w.article === 'der') derCnt++;
-					else if (w.article === 'die') dieCnt++;
-					else if (w.article === 'das') dasCnt++;
-				}
-				if (w.topic === 'Vegetables' && VEGETABLES_DE.has(w.de)) {
-					hasVegan = true;
-					if (!allModes) isVegan = false;
-				}
-				if (ANIMAL_TOPICS.has(w.topic)) {
-					hasZoo = true;
-					if (!allModes) isZoo = false;
-				}
-				if (w.de === 'Salami' && allModes) salamiDone = true;
-				if (w.de === 'Katze' && allModes) katzeDone = true;
-				if (w.de === 'Hund' && allModes) hundDone = true;
-				if (w.de === 'Baum' && allModes) grootTopics.add(w.topic ?? '__no_topic__');
-			}
-			groups.value.forEach(g => {
-				if (g.category === 'listen') g.achievements.forEach(a => updateProgress(a.id, listenCnt));
-				if (g.category === 'plural') g.achievements.forEach(a => updateProgress(a.id, pluralCnt));
-				if (g.category === 'letters') g.achievements.forEach(a => updateProgress(a.id, lettersCnt));
-				if (g.category === 'wordArticle') g.achievements.forEach(a => updateProgress(a.id, wordArticleCnt));
-
-				if (g.category === 'write') {
-					const title = (g.title || '').toLowerCase();
-					if (title.includes('der')) g.achievements.forEach(a => updateProgress(a.id, derCnt));
-					if (title.includes('die')) g.achievements.forEach(a => updateProgress(a.id, dieCnt));
-					if (title.includes('das')) g.achievements.forEach(a => updateProgress(a.id, dasCnt));
-				}
-			});
-
-			updateProgress('vegan', hasVegan && isVegan ? 1 : 0);
-			updateProgress('zoo', hasZoo && isZoo ? 1 : 0);
-			if (salamiDone) updateProgress('cowabungaSalami', 1);
-			updateProgress('catDog', [katzeDone, hundDone].filter(Boolean).length);
-			updateProgress('iAmGroot', grootTopics.size);
-
-		}, { immediate: true, deep: true })
-
-		watch(() => eggStore.answeredMap['lost_sequence'], isUnlocked => {
-			if (isUnlocked) updateProgress('the_hatch_quest', 1)
-		}, { immediate: true })
-		if (process.client) chainStore.loadProgressFromFirebase?.().catch(() => {})
-		watch(() => chainStore.questProgress, (qpRaw) => {
-			const qp = qpRaw || {}
-			const entries = Object.values(qp).filter(Boolean)
-			const isPerfect = p => Boolean(p?.success) && Number(p?.correctCount ?? 0) === Number(p?.requiredTasks ?? 0)
-			const countForId = id => entries.filter(p => isPerfect(p) && p.region === (id === 'eastPlain' ? 'east-plain' : id)).length
-
-			const locationGroup1Ids = groups.value.find(g => g.title === 'locationAchievementsCategory.title')?.achievements.map(a => a.id).filter(id => id !== 'explorer' && id !== 'FiveHearts') || []
-			const locationGroup2Ids = groups.value.find(g => g.title === 'locationAchievementsCategory2.title')?.achievements.map(a => a.id).filter(id => id !== 'adventures') || []
-
-			locationGroup1Ids.forEach(id => updateProgress(id, countForId(id)))
-			locationGroup2Ids.forEach(id => updateProgress(id, countForId(id)))
-
-			const completedLocations1 = locationGroup1Ids.reduce((acc, id) => acc + (countForId(id) >= (findById(id)?.targetProgress ?? 0) ? 1 : 0), 0)
-			updateProgress('explorer', completedLocations1)
-
-			const completedLocations2 = locationGroup2Ids.reduce((acc, id) => acc + (countForId(id) >= (findById(id)?.targetProgress ?? 0) ? 1 : 0), 0)
-			updateProgress('adventures', completedLocations2)
-			updateProgress('languageLands50', [...locationGroup1Ids, ...locationGroup2Ids].reduce((acc, id) => acc + countForId(id), 0))
-
-			const fiveHeartsCount = entries.filter(p => Boolean(p?.success) && Number(p?.requiredTasks ?? 0) >= 10 && Number(p?.correctCount ?? 0) === Number(p?.requiredTasks ?? 0) && Number(p?.livesAtFinish ?? 0) >= 5).length
-			updateProgress('FiveHearts', fiveHeartsCount)
-		}, { immediate: true, deep: true })
-
-		watch(() => { const t = gameStore.totalCorrectAnswers || []; return (t[1] || 0) + (t[2] || 0) + (t[3] || 0) }, total => updateProgress('totalArticles1000', total), { immediate: true })
-		watch(() => langStore.isLeveling, lvl => updateProgress('level10', lvl), { immediate: true })
-		watch(() => statsStore.constructedSentences, n => updateProgress('sentences-master', n), { immediate: true })
-		watch(() => langStore.totalEarnedPoints, pts => updateProgress('Hunderd', pts), { immediate: true })
-		watch(() => langStore.articlesSpentForAchievement, spent => updateProgress('Articlus', Number(spent) || 0), { immediate: true })
-		watch(() => gameStore.onTheEdgeProgress, v => updateProgress('Impuls', v), { immediate: true })
-
-		let localMonitorInterval = null;
-		let wasOpen = null;
-
-		const checkRankAndAward = async (seasonId) => {
-			if (!authStore.uid || !seasonId) return;
-			const levelData = [
-				{ levelId: 1, prefix: 'easy', achPrefix: 'leaderboardEasy' },
-				{ levelId: 2, prefix: 'normal', achPrefix: 'leaderboardNormal' },
-				{ levelId: 3, prefix: 'hard', achPrefix: 'leaderboardHard' }
-			]
-
-			for (const data of levelData) {
-				const rank = await gameStore.getPreviousSeasonRank(data.levelId, seasonId)
-				if (rank >= 1 && rank <= 3) {
-					for (let r = 3; r >= rank; r--) {
-						await authStore.unlockMarathonAchievement(data.prefix, r);
-						updateProgress(`${data.achPrefix}-${r}`, 1);
-					}
-				}
-			}
-		}
-
-		// const startZeroCostMonitor = () => {
-		// 	if (localMonitorInterval) clearInterval(localMonitorInterval);
-		//
-		// 	const initialState = gameStore.getSeasonState();
-		// 	wasOpen = initialState.isOpen;
-		// 	localMonitorInterval = setInterval(() => {
-		// 		if (!authStore.uid) return;
-		//
-		// 		const { isOpen, currentSeasonId } = gameStore.getSeasonState();
-		// 		if (wasOpen === true && isOpen === false) {
-		// 			wasOpen = isOpen;
-		// 			setTimeout(() => {
-		// 				checkRankAndAward(currentSeasonId);
-		// 			}, 5000);
-		// 		}
-		// 		else if (wasOpen === false && isOpen === true) {
-		// 			wasOpen = isOpen;
-		// 		}
-		// 	}, 1000);
-		// }
-
-		watch(() => gameStore.getSeasonState()?.isOpen, (newIsOpen, oldIsOpen) => {
-			if (!authStore.uid) return;
-			if (oldIsOpen === true && newIsOpen === false) {
-				const { currentSeasonId } = gameStore.getSeasonState();
-				setTimeout(() => {
-					checkRankAndAward(currentSeasonId);
-				}, 5000);
-			}
-		});
-
-		watch(() => authStore.uid, (uid) => {
-			if (uid) {
-				const { isOpen, currentSeasonId, previousSeasonId } = gameStore.getSeasonState();
-				const seasonToCheck = isOpen ? previousSeasonId : currentSeasonId;
-				checkRankAndAward(seasonToCheck);
-			}
-		}, { immediate: true });
-
-		watch(() => authStore.achievements?.marathon, (marathonStats) => {
-			if (!marathonStats) return;
-
-			if (marathonStats.easy_1) updateProgress('leaderboardEasy-1', 1)
-			if (marathonStats.easy_2) updateProgress('leaderboardEasy-2', 1)
-			if (marathonStats.easy_3) updateProgress('leaderboardEasy-3', 1)
-
-			if (marathonStats.normal_1) updateProgress('leaderboardNormal-1', 1)
-			if (marathonStats.normal_2) updateProgress('leaderboardNormal-2', 1)
-			if (marathonStats.normal_3) updateProgress('leaderboardNormal-3', 1)
-
-			if (marathonStats.hard_1) updateProgress('leaderboardHard-1', 1)
-			if (marathonStats.hard_2) updateProgress('leaderboardHard-2', 1)
-			if (marathonStats.hard_3) updateProgress('leaderboardHard-3', 1)
-
-		}, { immediate: true, deep: true })
-
-		watch(() => authStore.registeredAt, date => {
-			if (!date) return
-			const regTime = new Date(date).getTime()
-			if (isNaN(regTime) || regTime < 1672531200000) return
-			updateProgress('OneYearVeteran', Math.min(Math.max(0, Math.floor((Date.now() - regTime) / 86400000)), 365))
-		}, { immediate: true })
-
-		watch(duelStore.achievements, stats => {
-			if (!stats || Object.keys(stats).length === 0) return
-			groups.value.filter(g => g.category === 'sentence').forEach(group => {
-				group.achievements.forEach(ach => {
-					const parts = (ach.id || '').split('_')
-					if (parts.length < 2) return
-					updateProgress(ach.id, stats[parts[0].toUpperCase()]?.[parts[1]] ?? 0)
-				})
-			})
-		}, { immediate: true, deep: true })
-
-		watch(() => authStore.voiceConsentGiven, isGiven => { if (isGiven) updateProgress('voiceActivated', 1) }, { immediate: true })
-		watch(() => authStore.isPremium, (hasPremium) => {
-			if (hasPremium) {
-				updateProgress('wasPlusUser', 1)
-			}
-		}, { immediate: true })
-
-		watch(() => authStore.uid, async uid => { if (uid) { try { await duelStore.loadUserAchievements() } catch {} } }, { immediate: true })
-		watchEffect(() => {
-			updateProgress('guessedFastWords', guessStore.guessedFastWords.length)
-			updateProgress('guessedSafeWords', guessStore.guessedSafeWords.length)
-			updateProgress('guessedOnLastTryWords', guessStore.guessedOnLastTryWords.length)
-			updateProgress('guessedPerfectWords', guessStore.guessedPerfectWords.length)
-		})
-
-		updateCollectionCount()
-		setTimeout(() => finishBootAndReplay(), 0)
-		watch(() => authStore.uid, (uid) => {
-			eventUnsubs.forEach(unsub => { try { unsub && unsub() } catch {} })
-			eventUnsubs = []
-			if (!uid) return
-
-			const winterEventRef = doc(db, 'users', uid, 'eventSessions', 'winter')
-			const unsubWinter = onSnapshot(winterEventRef, (snap) => {
-				const eventData = snap.data() || {}
-				const questsProgress = eventData.quests || {}
-				const shopItems = eventData.shopItems || {}
-				winterRank1BoughtCount.value = ['santaHat', 'christmasBall', 'christmasWreath'].reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
-				updateCollectionCount()
-				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
-				updateProgress('firstQuest', completedQuestsCount > 0 ? 1 : 0)
-				updateProgress('santaLexicon', questsProgress['quest-21']?.score || 0)
-				updateProgress('everyQuest', completedQuestsCount)
-				updateProgress('winterHonor', eventData.reputationPoints || 0)
-				updateProgress('snowFall', shopItems['snowFall'] ? 1 : 0)
-				updateProgress('santaHat', shopItems['santaHat'] ? 1 : 0)
-				updateProgress('christmasBall', shopItems['christmasBall'] ? 1 : 0)
-				updateProgress('christmasWreath', shopItems['christmasWreath'] ? 1 : 0)
-
-				const metaChildrenIds = ['firstQuest', 'santaLexicon', 'everyQuest', 'snowFall', 'santaHat', 'winterHonor', 'christmasBall', 'christmasWreath'];
-				updateProgress('metaChristmas', metaChildrenIds.filter(id => completedSet.has(id)).length);
-			})
-			eventUnsubs.push(unsubWinter)
-			const valentineEventRef = doc(db, 'users', uid, 'eventSessions', 'valentine')
-			const unsubValentine = onSnapshot(valentineEventRef, (snap) => {
-				const eventData = snap.data() || {}
-				const questsProgress = eventData.quests || {}
-				const shopItems = eventData.shopItems || {}
-				valentineRank1BoughtCount.value = ['teddy', 'cupidArrow'].reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
-				updateCollectionCount()
-				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
-				updateProgress('valentineWords', questsProgress['quest-1']?.score || 0)
-				updateProgress('firstValentineQuest', completedQuestsCount > 0 ? 1 : 0)
-				updateProgress('valentineAllQuests', completedQuestsCount)
-				updateProgress('valentineBear', shopItems['teddy'] ? 1 : 0)
-				updateProgress('cupidArrow', shopItems['arrow'] ? 1 : 0)
-				updateProgress('valentineTheme', shopItems['theme'] ? 1 : 0)
-				updateProgress('ValentineReputation', eventData.reputationPoints || 0)
-				const metaChildrenIds = ['firstValentineQuest', 'valentineWords', 'valentineAllQuests', 'valentineBear', 'cupidArrow', 'valentineTheme', 'ValentineReputation'];
-				updateProgress('valentineAllAchievements', metaChildrenIds.filter(id => completedSet.has(id)).length);
-			})
-			eventUnsubs.push(unsubValentine)
-		}, { immediate: true })
-	}
-	watch(lastUnlockedAward, (award) => {
-		if (award) updateCollectionCount()
-	})
-
-	return {
-		groups,
-		showPopup,
-		popupAchievement,
-		lastUnlockedAward,
-		lastUnlockedAchievement,
-		closePopup,
-		initializeProgressTracking,
-		updateCollectionCount,
-		updateProgress,
-		findById
-	}
+    const rawGroups = [
+        ...valentineAchievements.map(g => ({category: 'valentine', ...g})),
+        ...eventWinterAchievements.map(g => ({category: 'winter', ...g})),
+        ...sentenceAchievement.map(g => ({category: 'sentence', ...g})),
+        ...typeVerbs.map(g => ({category: 'typeVerbs', ...g})),
+        ...modalVerbs.map(g => ({category: 'modalVerbs', ...g})),
+        ...tensesVerbs.map(g => ({category: 'tensesVerbs', ...g})),
+        ...adjectiveComparison.map(g => ({category: 'adjectiveComparison', ...g})),
+        ...adjectiveBasic.map(g => ({category: 'basicAdjectives', ...g})),
+        ...adjectiveDeclension.map(g => ({category: 'adjectiveDeclension', ...g})),
+        ...prepositionsDativ.map(g => ({category: 'dativ', ...g})),
+        ...prepositionsNominativ.map(g => ({category: 'nominativ', ...g})),
+        ...prepositionsGenitiv.map(g => ({category: 'genitiv', ...g})),
+        ...prepositionsAkkusativ.map(g => ({category: 'akkusativ', ...g})),
+        ...wordAchievementsGroup.map(g => ({category: 'locations', ...g})),
+        ...overAchievment.map(g => ({category: 'over', ...g})),
+        ...guessAchievment.map(g => ({category: 'guess', ...g})),
+        ...groupedEasyModeAchievements.map(g => ({category: 'easy', ...g})),
+        ...groupedNormalModeAchievements.map(g => ({category: 'normal', ...g})),
+        ...groupedHardModeAchievements.map(g => ({category: 'hard', ...g})),
+        ...listenAchieveGroup.map(g => ({category: 'listen', ...g})),
+        ...pluraGroupAchievment.map(g => ({category: 'plural', ...g})),
+        ...writeArticleGroupAchievment.map(g => ({category: 'write', ...g})),
+        ...wordPlusArticleAchievment.map(g => ({category: 'wordArticle', ...g})),
+        ...assembleWordGroupAchievement.map(g => ({category: 'letters', ...g})),
+        ...cpecialGroupAchievment.map(g => ({category: 'special', ...g}))
+    ]
+    const groups = ref(
+        rawGroups.map(group => ({
+            ...group,
+            achievements: group.achievements.map(a => ({
+                ...a,
+                title: a.title || a.name,
+                currentProgress: 0
+            }))
+        }))
+    )
+
+    let isTrackingInitialized = false // Флаг защиты от двойного старта
+    const lastUnlockedAward = ref(null)
+    const lastUnlockedAchievement = ref(null)
+    const popupQueue = ref([])
+    const showPopup = ref(false)
+    const popupAchievement = ref(null)
+    const db = getFirestore()
+    const auth = getAuth()
+    const authStore = userAuthStore()
+    const questStore = useQuestStore()
+    const langStore = userlangStore()
+    const statsStore = useLocalStatGameStore()
+    const cardStore = useCardsStore()
+    const gameStore = useGameStore()
+    const guessStore = useGuessWordStore()
+    const chainStore = userChainStore()
+    const quizStore = useQuizStore()
+    const duelStore = useDuelStore()
+    const eventStore = useEventSessionStore()
+    const eggStore = useEasterEggsStore()
+    const isBooting = ref(true)
+    const suppressReplaysUntil = ref(0)
+    const bootUnlocked = []
+    const bootAwards = []
+    let eventUnsubs = []
+    const dailyAggUnsub = ref(null)
+    const prevMap = new Map()
+    const required = ['article', 'letters', 'wordArticle', 'audio', 'plural']
+    const VEGETABLES_DE = new Set([
+        'Kartoffel', 'Karotte', 'Tomate', 'Gurke', 'Zwiebel', 'Kohl', 'Paprika',
+        'Rote Bete', 'Radieschen', 'Bohne', 'Mais', 'Pilz', 'Knoblauch'
+    ]);
+
+    const ANIMAL_TOPICS = new Set(['Animals', 'Birds', 'SeaAnimals', 'Insects', 'Savanna']);
+    const hasAllModes = (word) => required.every(m => word?.progress?.[m])
+    const awardsKey = () => `awards_shown_v1_${authStore?.uid}`
+    const completedKey = () => `achievements_completed_v1_${authStore?.uid}`
+
+    function loadShown() {
+        if (!process.client) return new Set()
+        try {
+            return new Set(JSON.parse(localStorage.getItem(awardsKey()) || '[]'))
+        } catch {
+            return new Set()
+        }
+    }
+
+    function saveShown(set) {
+        if (!process.client) return
+        try {
+            localStorage.setItem(awardsKey(), JSON.stringify([...set]))
+        } catch {
+        }
+    }
+
+    function loadCompleted() {
+        if (!process.client) return new Set()
+        try {
+            return new Set(JSON.parse(localStorage.getItem(completedKey()) || '[]'))
+        } catch {
+            return new Set()
+        }
+    }
+
+    function saveCompleted(set) {
+        if (!process.client) return
+        try {
+            localStorage.setItem(completedKey(), JSON.stringify([...set]))
+        } catch {
+        }
+    }
+
+    let shownSet = loadShown()
+    let completedSet = loadCompleted()
+    const winterRank1BoughtCount = ref(0)
+    const valentineRank1BoughtCount = ref(0)
+
+    function findById(id) {
+        for (const g of groups.value) {
+            const ach = g.achievements.find(a => a.id === id)
+            if (ach) return ach
+        }
+        return null
+    }
+
+    function showNextPopup() {
+        if (!showPopup.value && popupQueue.value.length) {
+            popupAchievement.value = popupQueue.value.shift()
+            showPopup.value = true
+
+            setTimeout(() => {
+                if (showPopup.value) closePopup()
+            }, 5000)
+        }
+    }
+
+    function closePopup() {
+        showPopup.value = false
+        setTimeout(() => {
+            showNextPopup()
+        }, 300)
+    }
+
+    function resetAllProgress(options = {}) {
+        const {keepBoot = false} = options
+        groups.value.forEach(g => {
+            g.achievements.forEach(a => {
+                a.currentProgress = 0
+            })
+        })
+        popupQueue.value.length = 0
+        showPopup.value = false
+        popupAchievement.value = null
+        lastUnlockedAward.value = null
+        lastUnlockedAchievement.value = null
+        if (!keepBoot) {
+            bootUnlocked.length = 0
+            bootAwards.length = 0
+        }
+    }
+
+    function detachDailyAggListener() {
+        if (dailyAggUnsub.value) {
+            try {
+                dailyAggUnsub.value()
+            } catch {
+            }
+            dailyAggUnsub.value = null
+        }
+    }
+
+    function attachDailyAggListener() {
+        detachDailyAggListener()
+        const uid = authStore?.uid
+        if (!uid) return
+        const refDoc = doc(db, 'users', uid, 'dailyAgg', 'meta')
+        dailyAggUnsub.value = onSnapshot(refDoc, (snap) => {
+            const total = Number((snap.data() || {}).totalCompleted || 0)
+            updateProgress('daily42', total)
+        })
+    }
+
+    function updateProgress(id, val) {
+        const ach = findById(id)
+        if (!ach) return
+        const target = Number(ach.targetProgress ?? 0)
+        const prev = Number(ach.currentProgress ?? 0)
+        const incoming = Number(val ?? 0)
+        const next = isBooting.value ? incoming : Math.max(prev, incoming)
+        ach.currentProgress = Math.min(next, target)
+        const justCompleted = ach.currentProgress >= target && !completedSet.has(id)
+
+        if (justCompleted) {
+            completedSet.add(id)
+            saveCompleted(completedSet)
+            const mapVal = achievementToAwardMap[id]
+
+            if (isBooting.value) {
+                if (mapVal && !shownSet.has(mapVal)) {
+                    shownSet.add(mapVal)
+                    saveShown(shownSet)
+                }
+                if (id === 'registerAchievement') {
+                    updateCollectionCount()
+                }
+            } else {
+
+                if (Date.now() >= suppressReplaysUntil.value || id === 'registerAchievement' || id === 'wasPlusUser') {
+                    popupQueue.value.push(ach)
+                    showNextPopup()
+                    lastUnlockedAchievement.value = {
+                        id: ach.id,
+                        title: ach.title,
+                        groupTitle: ach.groupTitle || null,
+                        ts: Date.now()
+                    }
+                    setTimeout(() => {
+                        if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null
+                    }, 500)
+
+                    if (mapVal && !shownSet.has(mapVal)) {
+                        shownSet.add(mapVal)
+                        saveShown(shownSet)
+                        lastUnlockedAward.value = {titleKey: mapVal, achId: id, ts: Date.now()}
+                        setTimeout(() => {
+                            if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null
+                        }, 500)
+                        updateCollectionCount()
+                    }
+                }
+            }
+        }
+        prevMap.set(id, ach.currentProgress)
+    }
+
+    function updateCollectionCount() {
+        const awardAchievementIds = [
+            'explorer', 'adventures', 'Articlus', 'registerAchievement', 'level10', 'languageLands50',
+            'OneYearVeteran', 'wrong100Answers', 'LastChance', 'guessedFastWords', 'guessSixHundred',
+            'daily', 'guessedSafeWords', 'all_cases', 'all_adjectives', 'all_verbs',
+            'FiveHearts', 'daily42', 'iAmGroot',
+            'santaHat', 'christmasBall', 'christmasWreath',
+            'valentineBear', 'cupidArrow', 'wasPlusUser'
+        ];
+        let unlockedCount = 0;
+        awardAchievementIds.forEach(id => {
+            if (completedSet.has(id)) {
+                unlockedCount++;
+            }
+        });
+        updateProgress('Collection', unlockedCount);
+    }
+
+    function getPrefixIds(prefix) {
+        const ids = []
+        for (const g of groups.value) {
+            for (const a of g.achievements) {
+                if (typeof a.id === 'string' && a.id.startsWith(prefix)) {
+                    const n = Number(a.id.slice(prefix.length))
+                    if (Number.isFinite(n)) ids.push({id: a.id, n})
+                }
+            }
+        }
+        ids.sort((a, b) => a.n - b.n)
+        return ids.map(x => x.id)
+    }
+
+    const CASE_PREFIXES = ['nom', 'akk', 'dat', 'gen']
+    const ADJ_BUCKETS = {
+        basic: ['col', 'emo', 'app', 'char', 'dim'],
+        comparison: ['creg', 'cuml', 'cspec'],
+        declension: ['def', 'indef', 'noart'],
+    }
+    const ADJ_ALL_PREFIXES = [...ADJ_BUCKETS.basic, ...ADJ_BUCKETS.comparison, ...ADJ_BUCKETS.declension]
+    const VERB_BUCKETS = {
+        tenses: ['pras', 'perf', 'fut', 'prat', 'plus'],
+        modal: ['mod', 'neb'],
+        types: ['irr', 'fix', 'ref', 'sep'],
+    }
+    const VERB_ALL_PREFIXES = [...VERB_BUCKETS.tenses, ...VERB_BUCKETS.modal, ...VERB_BUCKETS.types]
+
+    function areAllPrefixesCompleted(prefixes) {
+        return prefixes.every(isGroupMasterCompleted)
+    }
+
+    function recomputeAllVerbsMeta() {
+        let done = 0
+        if (areAllPrefixesCompleted(VERB_BUCKETS.tenses)) done++
+        if (areAllPrefixesCompleted(VERB_BUCKETS.modal)) done++
+        if (areAllPrefixesCompleted(VERB_BUCKETS.types)) done++
+        updateProgress('all_verbs', done)
+    }
+
+    function recomputeAllAdjectivesMeta() {
+        let done = 0
+        if (areAllPrefixesCompleted(ADJ_BUCKETS.basic)) done++
+        if (areAllPrefixesCompleted(ADJ_BUCKETS.comparison)) done++
+        if (areAllPrefixesCompleted(ADJ_BUCKETS.declension)) done++
+        updateProgress('all_adjectives', done)
+    }
+
+    function isGroupMasterCompleted(prefix) {
+        const ids = getPrefixIds(prefix)
+        if (!ids.length) return false
+        const masterId = ids[ids.length - 1]
+        const a = findById(masterId)
+        return a && Number(a.currentProgress ?? 0) >= Number(a.targetProgress ?? 1)
+    }
+
+    function recomputeAllCasesMeta() {
+        const done = CASE_PREFIXES.reduce((acc, p) => acc + (isGroupMasterCompleted(p) ? 1 : 0), 0)
+        updateProgress('all_cases', done)
+    }
+
+    function finishBootAndReplay() {
+        isBooting.value = false
+
+        if (bootAwards.length) {
+            bootAwards.forEach(({titleKey}) => {
+                if (!shownSet.has(titleKey)) {
+                    shownSet.add(titleKey)
+                    saveShown(shownSet)
+                }
+            })
+            updateProgress('Collection', shownSet.size)
+        }
+
+        bootUnlocked.length = 0
+        bootAwards.length = 0
+    }
+
+    if (process.client) {
+        watch(() => authStore.uid, (uid) => {
+            isBooting.value = true
+            suppressReplaysUntil.value = Date.now() + 4000
+            shownSet = loadShown()
+            completedSet = loadCompleted()
+
+            groups.value.forEach(g => {
+                g.achievements.forEach(a => {
+                    a.currentProgress = completedSet.has(a.id) ? a.targetProgress : 0
+                })
+            })
+            updateCollectionCount()
+            eggStore.loadEggs()
+            detachDailyAggListener()
+            if (!uid) {
+                isBooting.value = false
+                resetAllProgress()
+                return
+            }
+            attachDailyAggListener()
+            setTimeout(() => {
+                finishBootAndReplay()
+                recomputeAllCasesMeta()
+                recomputeAllAdjectivesMeta()
+                recomputeAllVerbsMeta()
+                setTimeout(() => {
+                    if (!completedSet.has('registerAchievement')) {
+                        updateProgress('registerAchievement', 1)
+                    }
+                }, 1500)
+
+            }, 0)
+        }, {immediate: true})
+    }
+
+    function initializeProgressTracking() {
+        if (isTrackingInitialized) return
+        isTrackingInitialized = true
+
+        // Объединяем конфигурации для одного глобального слушателя
+        const prepositionsSetup = {
+            'prepositions_dativ': 'dat',
+            'prepositions_akkusativ': 'akk',
+            'prepositions_genitiv': 'gen',
+            'prepositions_nominativ': 'nom'
+        }
+
+        const adjectivesSetup = {
+            'adjective-basics_colors': 'col',
+            'adjective-basics_feelings': 'emo',
+            'adjective-basics_appearance': 'app',
+            'adjective-basics_character': 'char',
+            'adjective-basics_dimensions': 'dim',
+            'adjective-comparison_regular-forms': 'creg',
+            'adjective-comparison_umlaut-forms': 'cuml',
+            'adjective-comparison_irregular-forms': 'cspec',
+            'adjective-declension_definite-article': 'def',
+            'adjective-declension_indefinite-article': 'indef',
+            'adjective-declension_no-article': 'noart',
+            'verb_presens': 'pras',
+            'verb_perfect': 'perf',
+            'verb_futurOne': 'fut',
+            'verb_prateritum': 'prat',
+            'verb_plusquamperfect': 'plus',
+            'modal-verbs_modal': 'mod',
+            'modal-verbs_nebensatze': 'neb',
+            'verb_irregular': 'irr',
+            'verb_prepositions': 'fix',
+            'verb_reflexive': 'ref',
+            'verb_separable': 'sep'
+        }
+
+        const applyPrepositionSnapshots = (prefix, agg) => {
+            const totalNow = Number(agg?.totalCorrect || 0)
+            updateProgress(`${prefix}1`, totalNow > 0 ? 1 : 0)
+            updateProgress(`${prefix}2`, totalNow)
+            updateProgress(`${prefix}3`, totalNow)
+            updateProgress(`${prefix}4`, Number(agg?.perfectSessionsCount || 0))
+            updateProgress(`${prefix}5`, Number(agg?.fastPerfectSessionsCount || 0))
+
+            const allIds = getPrefixIds(prefix)
+            if (allIds.length >= 2) {
+                const lastId = allIds[allIds.length - 1]
+                const allDone = allIds.slice(0, -1).every(id => {
+                    const a = findById(id)
+                    return a && Number(a.currentProgress ?? 0) >= Number(a.targetProgress ?? 1)
+                })
+                updateProgress(lastId, allDone ? 1 : 0)
+            }
+            if (CASE_PREFIXES.includes(prefix)) recomputeAllCasesMeta()
+        }
+
+        // ОПТИМИЗАЦИЯ: Один onSnapshot на всю коллекцию quizTopics (вместо 26 штук)
+        let topicsUnsub = null
+        watch(() => authStore.uid, (uid) => {
+            if (topicsUnsub) {
+                topicsUnsub();
+                topicsUnsub = null;
+            }
+            if (!uid) return
+
+            const topicsCol = collection(db, 'users', uid, 'quizTopics')
+            topicsUnsub = onSnapshot(topicsCol, (snapshot) => {
+                let adjMetaDirty = false
+                let verbMetaDirty = false
+
+                snapshot.forEach(docSnap => {
+                    const docId = docSnap.id
+                    const data = docSnap.data() || {}
+
+                    if (prepositionsSetup[docId]) {
+                        applyPrepositionSnapshots(prepositionsSetup[docId], data)
+                    } else if (adjectivesSetup[docId]) {
+                        const prefix = adjectivesSetup[docId]
+                        applyPrepositionSnapshots(prefix, data)
+
+                        if (ADJ_ALL_PREFIXES.includes(prefix)) adjMetaDirty = true
+                        if (VERB_ALL_PREFIXES.includes(prefix)) verbMetaDirty = true
+                    }
+                })
+
+                if (adjMetaDirty) recomputeAllAdjectivesMeta()
+                if (verbMetaDirty) recomputeAllVerbsMeta()
+            })
+        }, {immediate: true})
+
+        const baseTrackers = [
+            {id: 'firstAcademicCap', source: () => authStore.totalHats, compute: v => v || 0},
+            {id: 'daily', source: () => questStore.dailyQuestCount, compute: v => v || 0},
+            {id: 'levelUpExp', source: () => langStore.exp, compute: v => v || 0},
+            {id: 'grandmaster_sentences', source: () => statsStore.constructedSentences, compute: v => v || 0},
+            {id: 'learned10Words', source: () => langStore.learnedWords.length, compute: v => v},
+            {id: 'learned100Words', source: () => langStore.learnedWords.length, compute: v => v},
+            {id: 'wrong100Answers', source: () => langStore.wrongAnswers.length, compute: v => v},
+            {
+                id: 'SiteRegular',
+                source: () => authStore.registeredAt,
+                compute: d => d ? Math.max(0, Math.floor((Date.now() - new Date(d).getTime()) / 86400000)) : 0
+            },
+            {id: 'createdCountCard', source: () => cardStore.createdCount, compute: v => v || 0},
+            {id: 'LastChance', source: () => gameStore.lastChanceProgress, compute: v => v || 0},
+            {id: 'MarginForError', source: () => gameStore.marginForErrorProgress, compute: v => v || 0},
+            {id: 'OnTheEdge', source: () => gameStore.onTheEdgeProgress, compute: v => v || 0},
+            {id: 'firstArticleAward', source: () => langStore.totalEarnedPoints, compute: v => v > 0 ? 1 : 0},
+            {id: 'guessFirst', source: () => guessStore.guessedWords.length, compute: v => v},
+            {id: 'guessSecond', source: () => guessStore.guessedWords.length, compute: v => v},
+            {id: 'guessThird', source: () => guessStore.guessedWords.length, compute: v => v},
+            {id: 'guessFourth', source: () => guessStore.guessedWords.length, compute: v => v},
+            {id: 'guessSixHundred', source: () => guessStore.guessedWords.length, compute: v => v}
+        ]
+        baseTrackers.forEach(({id, source, compute}) => {
+            watch(source, raw => updateProgress(id, compute(raw)), {immediate: true})
+        })
+
+        ;[{category: 'easy', idx: 1}, {category: 'normal', idx: 2}, {category: 'hard', idx: 3}].forEach(({
+                                                                                                             category,
+                                                                                                             idx
+                                                                                                         }) => {
+            watch(() => gameStore.totalCorrectAnswers?.[idx] || 0,
+                v => groups.value.filter(g => g.category === category).forEach(g => g.achievements.filter(a => a.type === 'total').forEach(a => updateProgress(a.id, v))),
+                {immediate: true}
+            )
+            watch(() => gameStore.personalBests?.[idx] || 0,
+                v => groups.value.filter(g => g.category === category).forEach(g => g.achievements.filter(a => a.type === 'streak').forEach(a => updateProgress(a.id, v))),
+                {immediate: true}
+            )
+        })
+        watch(() => langStore.words, (words = []) => {
+            let listenCnt = 0, pluralCnt = 0, lettersCnt = 0;
+            let derCnt = 0, dieCnt = 0, dasCnt = 0, wordArticleCnt = 0;
+            let isVegan = true, hasVegan = false;
+            let isZoo = true, hasZoo = false;
+            let salamiDone = false, katzeDone = false, hundDone = false;
+            let grootTopics = new Set();
+
+            for (let i = 0; i < words.length; i++) {
+                const w = words[i];
+                const p = w.progress || {};
+                const allModes = hasAllModes(w);
+                if (p.audio) listenCnt++;
+                if (p.plural) pluralCnt++;
+                if (p.letters) lettersCnt++;
+                if (p.wordArticle || p.wordPlusArticle) wordArticleCnt++;
+                if (p.article) {
+                    if (w.article === 'der') derCnt++;
+                    else if (w.article === 'die') dieCnt++;
+                    else if (w.article === 'das') dasCnt++;
+                }
+                if (w.topic === 'Vegetables' && VEGETABLES_DE.has(w.de)) {
+                    hasVegan = true;
+                    if (!allModes) isVegan = false;
+                }
+                if (ANIMAL_TOPICS.has(w.topic)) {
+                    hasZoo = true;
+                    if (!allModes) isZoo = false;
+                }
+                if (w.de === 'Salami' && allModes) salamiDone = true;
+                if (w.de === 'Katze' && allModes) katzeDone = true;
+                if (w.de === 'Hund' && allModes) hundDone = true;
+                if (w.de === 'Baum' && allModes) grootTopics.add(w.topic ?? '__no_topic__');
+            }
+            groups.value.forEach(g => {
+                if (g.category === 'listen') g.achievements.forEach(a => updateProgress(a.id, listenCnt));
+                if (g.category === 'plural') g.achievements.forEach(a => updateProgress(a.id, pluralCnt));
+                if (g.category === 'letters') g.achievements.forEach(a => updateProgress(a.id, lettersCnt));
+                if (g.category === 'wordArticle') g.achievements.forEach(a => updateProgress(a.id, wordArticleCnt));
+
+                if (g.category === 'write') {
+                    const title = (g.title || '').toLowerCase();
+                    if (title.includes('der')) g.achievements.forEach(a => updateProgress(a.id, derCnt));
+                    if (title.includes('die')) g.achievements.forEach(a => updateProgress(a.id, dieCnt));
+                    if (title.includes('das')) g.achievements.forEach(a => updateProgress(a.id, dasCnt));
+                }
+            });
+
+            updateProgress('vegan', hasVegan && isVegan ? 1 : 0);
+            updateProgress('zoo', hasZoo && isZoo ? 1 : 0);
+            if (salamiDone) updateProgress('cowabungaSalami', 1);
+            updateProgress('catDog', [katzeDone, hundDone].filter(Boolean).length);
+            updateProgress('iAmGroot', grootTopics.size);
+
+        }, {immediate: true, deep: true})
+
+        watch(() => eggStore.answeredMap['lost_sequence'], isUnlocked => {
+            if (isUnlocked) updateProgress('the_hatch_quest', 1)
+        }, {immediate: true})
+        if (process.client) chainStore.loadProgressFromFirebase?.().catch(() => {
+        })
+        watch(() => chainStore.questProgress, (qpRaw) => {
+            const qp = qpRaw || {}
+            const entries = Object.values(qp).filter(Boolean)
+            const isPerfect = p => Boolean(p?.success) && Number(p?.correctCount ?? 0) === Number(p?.requiredTasks ?? 0)
+            const countForId = id => entries.filter(p => isPerfect(p) && p.region === (id === 'eastPlain' ? 'east-plain' : id)).length
+
+            const locationGroup1Ids = groups.value.find(g => g.title === 'locationAchievementsCategory.title')?.achievements.map(a => a.id).filter(id => id !== 'explorer' && id !== 'FiveHearts') || []
+            const locationGroup2Ids = groups.value.find(g => g.title === 'locationAchievementsCategory2.title')?.achievements.map(a => a.id).filter(id => id !== 'adventures') || []
+
+            locationGroup1Ids.forEach(id => updateProgress(id, countForId(id)))
+            locationGroup2Ids.forEach(id => updateProgress(id, countForId(id)))
+
+            const completedLocations1 = locationGroup1Ids.reduce((acc, id) => acc + (countForId(id) >= (findById(id)?.targetProgress ?? 0) ? 1 : 0), 0)
+            updateProgress('explorer', completedLocations1)
+
+            const completedLocations2 = locationGroup2Ids.reduce((acc, id) => acc + (countForId(id) >= (findById(id)?.targetProgress ?? 0) ? 1 : 0), 0)
+            updateProgress('adventures', completedLocations2)
+            updateProgress('languageLands50', [...locationGroup1Ids, ...locationGroup2Ids].reduce((acc, id) => acc + countForId(id), 0))
+
+            const fiveHeartsCount = entries.filter(p => Boolean(p?.success) && Number(p?.requiredTasks ?? 0) >= 10 && Number(p?.correctCount ?? 0) === Number(p?.requiredTasks ?? 0) && Number(p?.livesAtFinish ?? 0) >= 5).length
+            updateProgress('FiveHearts', fiveHeartsCount)
+        }, {immediate: true, deep: true})
+
+        watch(() => {
+            const t = gameStore.totalCorrectAnswers || [];
+            return (t[1] || 0) + (t[2] || 0) + (t[3] || 0)
+        }, total => updateProgress('totalArticles1000', total), {immediate: true})
+        watch(() => langStore.isLeveling, lvl => updateProgress('level10', lvl), {immediate: true})
+        watch(() => statsStore.constructedSentences, n => updateProgress('sentences-master', n), {immediate: true})
+        watch(() => langStore.totalEarnedPoints, pts => updateProgress('Hunderd', pts), {immediate: true})
+        watch(() => langStore.articlesSpentForAchievement, spent => updateProgress('Articlus', Number(spent) || 0), {immediate: true})
+        watch(() => gameStore.onTheEdgeProgress, v => updateProgress('Impuls', v), {immediate: true})
+
+        const checkRankAndAward = async (seasonId) => {
+            if (!authStore.uid || !seasonId) return;
+            const levelData = [
+                {levelId: 1, prefix: 'easy', achPrefix: 'leaderboardEasy'},
+                {levelId: 2, prefix: 'normal', achPrefix: 'leaderboardNormal'},
+                {levelId: 3, prefix: 'hard', achPrefix: 'leaderboardHard'}
+            ]
+
+            for (const data of levelData) {
+                const rank = await gameStore.getPreviousSeasonRank(data.levelId, seasonId)
+                if (rank >= 1 && rank <= 3) {
+                    for (let r = 3; r >= rank; r--) {
+                        await authStore.unlockMarathonAchievement(data.prefix, r);
+                        updateProgress(`${data.achPrefix}-${r}`, 1);
+                    }
+                }
+            }
+        }
+
+        watch(() => gameStore.getSeasonState()?.isOpen, (newIsOpen, oldIsOpen) => {
+            if (!authStore.uid) return;
+            if (oldIsOpen === true && newIsOpen === false) {
+                const {currentSeasonId} = gameStore.getSeasonState();
+                setTimeout(() => {
+                    checkRankAndAward(currentSeasonId);
+                }, 5000);
+            }
+        });
+
+        watch(() => authStore.uid, (uid) => {
+            if (uid) {
+                const {isOpen, currentSeasonId, previousSeasonId} = gameStore.getSeasonState();
+                const seasonToCheck = isOpen ? previousSeasonId : currentSeasonId;
+                checkRankAndAward(seasonToCheck);
+            }
+        }, {immediate: true});
+
+        watch(() => authStore.achievements?.marathon, (marathonStats) => {
+            if (!marathonStats) return;
+
+            if (marathonStats.easy_1) updateProgress('leaderboardEasy-1', 1)
+            if (marathonStats.easy_2) updateProgress('leaderboardEasy-2', 1)
+            if (marathonStats.easy_3) updateProgress('leaderboardEasy-3', 1)
+
+            if (marathonStats.normal_1) updateProgress('leaderboardNormal-1', 1)
+            if (marathonStats.normal_2) updateProgress('leaderboardNormal-2', 1)
+            if (marathonStats.normal_3) updateProgress('leaderboardNormal-3', 1)
+
+            if (marathonStats.hard_1) updateProgress('leaderboardHard-1', 1)
+            if (marathonStats.hard_2) updateProgress('leaderboardHard-2', 1)
+            if (marathonStats.hard_3) updateProgress('leaderboardHard-3', 1)
+
+        }, {immediate: true, deep: true})
+
+        watch(() => authStore.registeredAt, date => {
+            if (!date) return
+            const regTime = new Date(date).getTime()
+            if (isNaN(regTime) || regTime < 1672531200000) return
+            updateProgress('OneYearVeteran', Math.min(Math.max(0, Math.floor((Date.now() - regTime) / 86400000)), 365))
+        }, {immediate: true})
+
+        watch(duelStore.achievements, stats => {
+            if (!stats || Object.keys(stats).length === 0) return
+            groups.value.filter(g => g.category === 'sentence').forEach(group => {
+                group.achievements.forEach(ach => {
+                    const parts = (ach.id || '').split('_')
+                    if (parts.length < 2) return
+                    updateProgress(ach.id, stats[parts[0].toUpperCase()]?.[parts[1]] ?? 0)
+                })
+            })
+        }, {immediate: true, deep: true})
+
+        watch(() => authStore.voiceConsentGiven, isGiven => {
+            if (isGiven) updateProgress('voiceActivated', 1)
+        }, {immediate: true})
+        watch(() => authStore.isPremium, (hasPremium) => {
+            if (hasPremium) {
+                updateProgress('wasPlusUser', 1)
+            }
+        }, {immediate: true})
+
+        watch(() => authStore.uid, async uid => {
+            if (uid) {
+                try {
+                    await duelStore.loadUserAchievements()
+                } catch {
+                }
+            }
+        }, {immediate: true})
+        watchEffect(() => {
+            updateProgress('guessedFastWords', guessStore.guessedFastWords.length)
+            updateProgress('guessedSafeWords', guessStore.guessedSafeWords.length)
+            updateProgress('guessedOnLastTryWords', guessStore.guessedOnLastTryWords.length)
+            updateProgress('guessedPerfectWords', guessStore.guessedPerfectWords.length)
+        })
+
+        updateCollectionCount()
+        setTimeout(() => finishBootAndReplay(), 0)
+
+        watch(() => authStore.uid, (uid) => {
+            eventUnsubs.forEach(unsub => {
+                try {
+                    unsub && unsub()
+                } catch {
+                }
+            })
+            eventUnsubs = []
+            if (!uid) return
+
+            const winterEventRef = doc(db, 'users', uid, 'eventSessions', 'winter')
+            const unsubWinter = onSnapshot(winterEventRef, (snap) => {
+                const eventData = snap.data() || {}
+                const questsProgress = eventData.quests || {}
+                const shopItems = eventData.shopItems || {}
+                winterRank1BoughtCount.value = ['santaHat', 'christmasBall', 'christmasWreath'].reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
+                updateCollectionCount()
+                const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
+                updateProgress('firstQuest', completedQuestsCount > 0 ? 1 : 0)
+                updateProgress('santaLexicon', questsProgress['quest-21']?.score || 0)
+                updateProgress('everyQuest', completedQuestsCount)
+                updateProgress('winterHonor', eventData.reputationPoints || 0)
+                updateProgress('snowFall', shopItems['snowFall'] ? 1 : 0)
+                updateProgress('santaHat', shopItems['santaHat'] ? 1 : 0)
+                updateProgress('christmasBall', shopItems['christmasBall'] ? 1 : 0)
+                updateProgress('christmasWreath', shopItems['christmasWreath'] ? 1 : 0)
+
+                const metaChildrenIds = ['firstQuest', 'santaLexicon', 'everyQuest', 'snowFall', 'santaHat', 'winterHonor', 'christmasBall', 'christmasWreath'];
+                updateProgress('metaChristmas', metaChildrenIds.filter(id => completedSet.has(id)).length);
+            })
+            eventUnsubs.push(unsubWinter)
+
+            const valentineEventRef = doc(db, 'users', uid, 'eventSessions', 'valentine')
+            const unsubValentine = onSnapshot(valentineEventRef, (snap) => {
+                const eventData = snap.data() || {}
+                const questsProgress = eventData.quests || {}
+                const shopItems = eventData.shopItems || {}
+                valentineRank1BoughtCount.value = ['teddy', 'cupidArrow'].reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
+                updateCollectionCount()
+                const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
+                updateProgress('valentineWords', questsProgress['quest-1']?.score || 0)
+                updateProgress('firstValentineQuest', completedQuestsCount > 0 ? 1 : 0)
+                updateProgress('valentineAllQuests', completedQuestsCount)
+                updateProgress('valentineBear', shopItems['teddy'] ? 1 : 0)
+                updateProgress('cupidArrow', shopItems['arrow'] ? 1 : 0)
+                updateProgress('valentineTheme', shopItems['theme'] ? 1 : 0)
+                updateProgress('ValentineReputation', eventData.reputationPoints || 0)
+                const metaChildrenIds = ['firstValentineQuest', 'valentineWords', 'valentineAllQuests', 'valentineBear', 'cupidArrow', 'valentineTheme', 'ValentineReputation'];
+                updateProgress('valentineAllAchievements', metaChildrenIds.filter(id => completedSet.has(id)).length);
+            })
+            eventUnsubs.push(unsubValentine)
+        }, {immediate: true})
+    }
+
+    watch(lastUnlockedAward, (award) => {
+        if (award) updateCollectionCount()
+    })
+
+    return {
+        groups,
+        showPopup,
+        popupAchievement,
+        lastUnlockedAward,
+        lastUnlockedAchievement,
+        closePopup,
+        initializeProgressTracking,
+        updateCollectionCount,
+        updateProgress,
+        findById
+    }
 })

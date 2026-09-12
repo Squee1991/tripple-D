@@ -21,9 +21,7 @@ import { useCurrentUser } from "vuefire";
 import { userlangStore } from './store/learningStore.js'
 import { userAuthStore } from './store/authStore.js'
 import { useSentencesStore } from './store/sentencesStore.js';
-import { useTrainerStore } from './store/themenProgressStore.js'
 import { useQuestStore } from './store/questStore.js'
-import { useCardsStore } from './store/cardsStore.js'
 import { useLocalStatGameStore } from './store/localSentenceStore.js'
 import { useBillingStore } from './store/billingStore.js'
 import { userChainStore } from './store/chainStore.js'
@@ -59,7 +57,6 @@ useHead(() => ({
 
 const achStore = useAchievementStore()
 const showStepHint = ref(false)
-const cardStore = useCardsStore()
 const statsStore = useLocalStatGameStore()
 const questStore = useQuestStore()
 const learningStore = userlangStore()
@@ -67,7 +64,6 @@ const authStore = userAuthStore()
 const router = useRouter()
 const route = useRoute()
 const user = useCurrentUser()
-const sentencesStore = useSentencesStore();
 const daily = dailyStore()
 const colorMode = useColorMode();
 
@@ -141,7 +137,6 @@ watch(() => authStore.uid, (newUid) => {
   if (newUid) {
     billingStore.initialize();
     questStore.loadDailyProgress();
-    cardStore.loadCreatedCount();
     statsStore.loadLocalStats();
     chainStore.loadProgressFromFirebase()
   }
