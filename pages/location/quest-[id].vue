@@ -17,7 +17,6 @@
         <div>Error: {{ questStore.error }}</div>
         <button class="btn" @click="goThemes">back</button>
       </div>
-
       <div v-else-if="questStore.task" class="quest__card">
         <VHelpModal :open="showHint" @close="showHint=false"/>
         <div class="quest__top">
@@ -256,6 +255,11 @@
         :current-tip="currentTip"
         @close="showTipModal = false"
     />
+    <VHedgehogHelper
+        v-if="questStore.task && !questStore.showResult"
+        :task="questStore.task"
+        :lives="questStore.lives"
+    />
   </div>
 </template>
 
@@ -266,6 +270,7 @@ import {userChainStore} from '~/store/chainStore.js'
 import {userlangStore} from '~/store/learningStore.js'
 import {userAuthStore} from "~/store/authStore.js"
 import SoundBtn from '~/src/components/soundBtn.vue'
+import VHedgehogHelper from "~/src/components/V-hedgehog-helper.vue";
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '~/utils/soundManager.js'
 import {showRewarded, showInterstitial} from '~/utils/admob.js';
 import RightIcon from '~/assets/images/location-icons/accept.svg'

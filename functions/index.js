@@ -13,6 +13,7 @@ const Groq = require("groq-sdk");
 const CYCLE_MS = 24 * 60 * 60 * 1000;
 const IMMUNITY_RANK_HATS = 500;
 const GROQ_API_KEY = defineSecret("GROQ_API_KEY");
+const GEMINI_API_KEY = defineSecret("GEMINI_API_KEY");
 
 const { Resend} = require("resend");
 const cors = require("cors")({
@@ -196,6 +197,79 @@ YOUR TASK: OUTPUT A RAW JSON OBJECT EXCLUSIVELY. Do NOT wrap in markdown.
 	}
 });
 
+
+exports.hedgehogHint = onCall({
+	secrets: [GEMINI_API_KEY],
+	memory: "256Mi",
+	timeoutSeconds: 30,
+	cors: true
+}, async (request) => {
+	try {
+		const dataIn = request.data || {};
+		const question = dataIn.question || "";
+		const options = dataIn.options || [];
+		const taskType = dataIn.taskType || "";
+		const audioText = dataIn.audioText || "";
+		const correctAnswer = dataIn.correctAnswer || "";
+		const userLocale = String(dataIn.userLocale || 'ru').split('-')[0].trim();
+
+		const modelId = 'gemini-3.5-flash-lite';
+
+		const prompt = `You are a concise German language tutor in a learning app.
+TASK DETAILS:
+Task type: "${taskType}".
+Instruction: "${question}".
+Spoken Audio Text: "${audioText}".
+Known Answer: "${correctAnswer}".
+Available Words/Options: ${JSON.stringify(options)}.
+
+GOAL:
+1. Determine the exact correct answer to show the user based on the Task type:
+   - If task type is "reorder": You MUST combine and arrange ALL the provided "Available Words/Options" into a single, grammatically perfect German sentence. Set 'correctOption' to this full sentence (e.g., "Ich wohne in Berlin").
+   - If task type is "speechToText": The answer is the "Spoken Audio Text".
+   - For other tasks: Choose the exact correct word/phrase from the list.
+   Set 'correctOption' to the final correct German text.
+2. Provide a SHORT, CONCISE explanation (MAXIMUM 4-5 SENTENCES) in THIS exact language: ${userLocale}.
+   - First sentence: Translate the full correct sentence.
+   - Second/Third sentences: Briefly explain the core grammar rule (e.g., tense, case, or preposition) used in THIS specific sentence. DO NOT over-explain. No bullet points.
+
+CRITICAL GRAMMAR RULES TO APPLY ONLY IF RELEVANT TO THE CURRENT SENTENCE:
+   - If the sentence answers "Where?" (Wo?), explain it uses Dativ.
+   - If you explain endings of words/cases, you MUST use the exact phrase "берет у артикля".
+
+RESPONSE FORMAT (Strict JSON):
+{
+  "correctOption": "Exact correct German sentence or word",
+  "explanation": "Short 2-3 sentence translation and core grammar tip."
+}`;
+
+		const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent?key=${GEMINI_API_KEY.value()}`;
+
+		const response = await fetch(url, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				contents: [{ role: 'user', parts: [{ text: prompt }] }],
+				generationConfig: { temperature: 0.1, response_mime_type: "application/json" }
+			})
+		});
+
+		const resText = await response.text();
+		if (!response.ok) {
+			console.error("GEMINI API ERROR:", resText);
+			return { error: `Gemini error: ${response.status} - ${resText}` };
+		}
+
+		const resJson = JSON.parse(resText);
+		const content = resJson.candidates?.[0]?.content?.parts?.[0]?.text;
+
+		if (!content) return { error: "Empty response" };
+
+		return { data: JSON.parse(content) };
+	} catch (err) {
+		return { error: String(err.message || err) };
+	}
+});
 
 
 exports.sendResetEmail = onRequest({ cors: true, secrets: [RESEND_API_KEY] }, async (req, res) => {
