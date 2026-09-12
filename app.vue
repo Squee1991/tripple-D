@@ -4,11 +4,14 @@
     <AchievementToast @toast-finished="onToastFinished" />
     <VLost/>
     <VRankOverlay/>
+    <VHedgehogIntroModal/>
     <VNetwork/>
   </NuxtLayout>
 </template>
 
 <script setup>
+import VHedgehogIntroModal from "~/src/components/V-HedgehogIntroModal.vue";
+
 import VRankOverlay from "./src/components/V-rank-overlay.vue";
 import { StatusBar, Style } from '@capacitor/status-bar';
 import FeedBack from './src/components/V-feedback.vue'

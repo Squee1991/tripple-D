@@ -55,7 +55,6 @@
               </template>
             </template>
           </div>
-
           <div class="quest__body">
             <template v-if="questStore.task.type === 'select' || questStore.task.type === 'readAndAnswer'">
               <div v-if="questStore.task.text" class="quest__read-text">{{
@@ -264,6 +263,7 @@ import {userChainStore} from '~/store/chainStore.js'
 import {userlangStore} from '~/store/learningStore.js'
 import {userAuthStore} from "~/store/authStore.js"
 import SoundBtn from '~/src/components/soundBtn.vue'
+import VHedgehogHelper from '~/src/components/V-hedgehog-helper.vue'
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '~/utils/soundManager.js'
 import {showRewarded, showInterstitial} from '~/utils/admob.js';
 import RightIcon from '~/assets/images/location-icons/accept.svg'
