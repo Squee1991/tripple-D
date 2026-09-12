@@ -159,7 +159,7 @@ const requestHint = async () => {
 <style scoped>
 .hedgehog-helper-wrapper {
   position: relative;
-  z-index: 10005; /* Чтобы кнопка всегда была поверх любых штор и карточек */
+  z-index: 10005;
 }
 
 .hh-fab {
@@ -235,7 +235,7 @@ const requestHint = async () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 36px;
   position: relative;
 }
 

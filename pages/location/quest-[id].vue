@@ -253,6 +253,11 @@
         :current-tip="currentTip"
         @close="showTipModal = false"
     />
+    <VHedgehogHelper
+        v-if="questStore.task && !questStore.showResult"
+        :task="questStore.task"
+        :lives="questStore.lives"
+    />
   </div>
 </template>
 
