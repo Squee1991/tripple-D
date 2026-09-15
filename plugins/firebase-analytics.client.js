@@ -3,69 +3,79 @@ import { getAnalytics, isSupported, logEvent } from 'firebase/analytics'
 import { firebaseConfig } from '../config/firebaseConfig.js'
 
 export default defineNuxtPlugin(async (nuxtApp) => {
-	if (process.env.NODE_ENV !== 'production') return
+	if (process.env.NODE_ENV !== 'production') {
+		nuxtApp.provide('track', (name, params) => console.log(`[Dev Track] ${name}`, params))
+		return
+	}
+
 	const app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig)
 	if (!(await isSupported())) return
 	const analytics = getAnalytics(app)
-	nuxtApp.hook('page:finish', () => {
-		logEvent(analytics, 'page_view', {
-			page_title: document.title,
-			page_location: window.location.href,
-			page_path: window.location.pathname
+
+	let pageStartTime = Date.now()
+
+	//  Трекинг времени и переходов
+	const router = nuxtApp.$router
+	if (router) {
+		router.afterEach((to, from) => {
+			const timeSpentSec = Math.round((Date.now() - pageStartTime) / 1000)
+			if (from.path && timeSpentSec > 0) {
+				logEvent(analytics, 'screen_time_spent', {
+					screen_name: from.path,
+					duration_seconds: timeSpentSec
+				})
+			}
+			pageStartTime = Date.now()
+			logEvent(analytics, 'screen_view', {
+				firebase_screen: to.path,
+				page_title: document.title
+			})
 		})
-	})
+	}
+
 	if (process.client) {
-		window.addEventListener('appinstalled', () => {
-			if (!localStorage.getItem('pwa_tracked')) {
-				logEvent(analytics, 'pwa_installed', { os: 'android_or_pc' })
-				localStorage.setItem('pwa_tracked', 'true')
+		//  Трекинг закрытия/сворачивания приложения
+		window.addEventListener('visibilitychange', () => {
+			if (document.visibilityState === 'hidden') {
+				const timeSpentSec = Math.round((Date.now() - pageStartTime) / 1000)
+				logEvent(analytics, 'app_closed_or_backgrounded', {
+					screen_name: window.location.pathname,
+					duration_seconds: timeSpentSec
+				})
+			} else if (document.visibilityState === 'visible') {
+				pageStartTime = Date.now()
+				logEvent(analytics, 'app_returned_to_foreground', {
+					screen_name: window.location.pathname
+				})
 			}
 		})
 
-		const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true
-		if (isStandalone && !localStorage.getItem('pwa_tracked')) {
-			logEvent(analytics, 'pwa_installed', { os: 'ios_or_other' })
-			localStorage.setItem('pwa_tracked', 'true')
-		}
+		// 3. Глобальный перехватчик кликов
+		const globalClicks = [
+			{ selector: '.banner__button', event: 'banner_button_click' },
+			{ selector: '.btn-login', event: 'login_button_click' },
+			{ selector: '.map-btn', event: 'regions__button_click' },
+			{ selector: '#test', event: 'tests__button_click' },
+		]
 
 		document.body.addEventListener('click', (event) => {
-			const bannerBtn = event.target.closest('.banner__button')
-			const loginBtn = event.target.closest('.btn-login')
-			const coffeeBtn = event.target.closest('.coffee')
-			const regionsBtn = event.target.closest('.map-btn')
-			const testBtn = event.target.closest('#test')
-			const achievementBtn = event.target.closest('#achievement')
-			const calendarBtn = event.target.closest('#calendar')
-			const gameNavBtn = event.target.closest('#duel')
-			const learnNavBtn = event.target.closest('#learn')
-			if (learnNavBtn) {
-				logEvent(analytics , 'learnNav__button_click')
+			// Сначала ищем наш новый data-track атрибут
+			const trackedEl = event.target.closest('[data-track]')
+			if (trackedEl) {
+				const eventName = trackedEl.getAttribute('data-track')
+				logEvent(analytics, eventName, { page_path: window.location.pathname })
+				return // Если нашли, отправляем и выходим
 			}
-			if (gameNavBtn) {
-				logEvent(analytics , 'gameNav__button_click')
-			}
-			if (calendarBtn) {
-				logEvent(analytics , 'calendar__button_click')
-			}
-			if (achievementBtn) {
-				logEvent(analytics , 'achievement__button_click')
-			}
-			if (regionsBtn) {
-				logEvent(analytics, 'regions__button_click')
-			}
-			if (coffeeBtn) {
-				logEvent(analytics, 'coffee__button_click')
-			}
-			if (testBtn) {
-				logEvent(analytics, 'tests__button_click')
-			}
-			if (bannerBtn) {
-				logEvent(analytics, 'banner_button_click')
-			}
-			if (loginBtn) {
-				logEvent(analytics, 'login_button_click')
+			// Если не нашли, проверяем старые классы из массива
+			for (const item of globalClicks) {
+				if (event.target.closest(item.selector)) {
+					logEvent(analytics, item.event, { page_path: window.location.pathname })
+					break
+				}
 			}
 		})
 	}
-	nuxtApp.provide('logEvent', (name, params = {}) => logEvent(analytics, name, params))
+
+	// 4. Метод $track для логики в <script setup> (победы/поражения)
+	nuxtApp.provide('track', (name, params = {}) => logEvent(analytics, name, params))
 })

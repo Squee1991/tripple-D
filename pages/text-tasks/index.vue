@@ -2,7 +2,7 @@
   <div class="tasks-menu-page">
     <div class="page-container">
       <div class="header-wrapper">
-        <button class="btn-icon-back" @click="goBack">
+        <button class="btn-icon-back" data-track="text_tasks_menu_back_click" @click="goBack">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -54,7 +54,6 @@
                   <div class="theme-info">
                     <div class="theme-name">{{ theme.title }}</div>
                   </div>
-                  <!-- ИЗМЕНЕНО: теперь используем isThemeUnlocked -->
                   <div class="theme-arrow" :class="{ 'theme-arrow--locked': !isThemeUnlocked(index) }">
                     <VArrowNav v-if="isThemeUnlocked(index)"/>
                     <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
@@ -111,6 +110,8 @@ const authStore = userAuthStore()
 const isMounted = ref(false)
 const {t, locale} = useI18n()
 
+const { $track } = useNuxtApp()
+
 const levels = [
   {id: 'low-level', label: 'A1'},
   {id: 'middle-level', label: 'A2'},
@@ -161,9 +162,10 @@ const getStats = (themeId) => {
   const key = `${currentLevel.value}-${themeId}`
   const stats = themesStats.value[key] || {total: 0, completed: 0}
   let completedTasks = 0
-  if (store.userProgress && store.userProgress[themeId]) {
-    completedTasks = Object.keys(store.userProgress[themeId]).length
+  if (store.userProgress && store.userProgress[key]) {
+    completedTasks = Object.keys(store.userProgress[key]).length
   }
+
   return {
     total: stats.total,
     completed: completedTasks
@@ -211,19 +213,27 @@ const isThemeUnlocked = (index) => {
 
 const selectTheme = async (theme, index) => {
   if (isThemeUnlocked(index)) {
+    $track('text_tasks_theme_selected', {
+      theme_id: theme.id,
+      level: currentLevel.value
+    })
+
     isLoading.value = true
     try {
       const res = await fetch(`/text-tasks/${currentLevel.value}/${theme.file}`)
       if (!res.ok) throw new Error('Network response was not ok')
       const data = await res.json()
       if (data.tasks && data.tasks.length > 0) {
-        const completedTaskIds = store.userProgress && store.userProgress[theme.id] ? Object.keys(store.userProgress[theme.id]) : []
+        const themeKey = `${currentLevel.value}-${theme.id}`
+        const completedTaskIds = store.userProgress && store.userProgress[themeKey]
+            ? Object.keys(store.userProgress[themeKey])
+            : []
         let tasksToPlay = data.tasks
         if (completedTaskIds.length > 0 && completedTaskIds.length < data.tasks.length) {
           tasksToPlay = data.tasks.filter(task => !completedTaskIds.includes(task.id))
         }
         if (tasksToPlay.length > 0) {
-          store.initTask(tasksToPlay[0], tasksToPlay, 0, theme.id)
+          store.initTask(tasksToPlay[0], tasksToPlay, 0, themeKey)
           router.push('/text-tasks/session')
         }
       }
@@ -248,6 +258,12 @@ onMounted(async () => {
   await store.loadUserProgress()
   loadLevelStats(currentLevel.value)
 })
+
+watch(currentLevel, (newLevel) => {
+  $track('text_tasks_level_changed', { level: newLevel })
+  loadLevelStats(newLevel)
+})
+
 </script>
 
 <style scoped>

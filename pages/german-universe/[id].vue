@@ -6,7 +6,8 @@ import Meteor from '../../assets/images/meteor.svg'
 import MeteorInFire from '../../assets/images/meteorinFire.svg'
 import {useCombatEngine} from '../../composables/useCombatEngine.js'
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
-import { showInterstitial} from '../../utils/admob.js'
+import {showInterstitial} from '../../utils/admob.js'
+
 const {t} = useI18n()
 const route = useRoute()
 const router = useRouter()
@@ -15,6 +16,7 @@ const errorMessage = ref('')
 const isNewRecord = ref(false)
 const earnedArtiks = ref(0)
 const isLoadingAd = ref(false)
+const hasAdShown = ref(false)
 const currentGalaxy = computed(() => store.currentGalaxy || null)
 const currentQuestions = computed(() => {
   return (store.currentGalaxy && store.currentGalaxy.questions) ? store.currentGalaxy.questions : []
@@ -66,13 +68,19 @@ const initGame = () => {
     store.setMission(sectorId);
     isNewRecord.value = false;
     earnedArtiks.value = 0;
-    isLoadingAd.value = true;
-    showInterstitial(() => {
-      isLoadingAd.value = false;
-      setTimeout(() => {
-        startGame();
-      }, 50);
-    });
+
+    if (!hasAdShown.value) {
+      hasAdShown.value = true;
+      isLoadingAd.value = true;
+      showInterstitial(() => {
+        isLoadingAd.value = false;
+        setTimeout(() => {
+          startGame();
+        }, 50);
+      });
+    } else {
+      startGame();
+    }
 
   } catch (error) {
     errorMessage.value = "Ошибка: " + error.message;

@@ -8113,7 +8113,8 @@
     "themeBtn": "Mavzu",
     "snowFall": "Qor yog'ishi",
     "language": "Interfeys tili",
-    "profileData": "Profil ma'lumotlari"
+    "profileData": "Profil ma'lumotlari",
+    "hedgehogAssistent": "Kirpi-yordamchi"
   },
   "cabinet": {
     "plusCanceled": "PLUS bekor qilindi",
@@ -10673,5 +10674,52 @@
   "recipe": {
     "done": "Ajoyib! Bugungi topshiriq bajarildi.",
     "btn": "Qaytish"
+  },
+  "hedgehogImageHelper": {
+    "limit_text": "Bugungi maslahatlar limiti tugadi, ertaga qaytib keling",
+    "limit_return_text": "PLUS oling va cheklovlarsiz o'rganing",
+    "hintAnsweredTitle": "Salom! Nimaga e'tibor qaratish kerakligini aytib beray.",
+    "hintAnsweredMistakesTitle": "Javobingizni tahlil qilib, xatolarni tushuntirib berishimni xohlaysizmi?",
+    "mainHint": "Javob tahlili:",
+    "mainHint2": "Maslahat:",
+    "betterToSay": "Qanday qilib yaxshiroq aytish mumkin:",
+    "usefulWords": "Foydali so'zlar:",
+    "grammarHint": "Grammatika bo'yicha maslahat:",
+    "getPlus": "PLUS olish",
+    "getHint": "Maslahat olish",
+    "thanks": "Tushunarli, rahmat!",
+    "close": "Yopish",
+    "loading": "Yuklanmoqda...",
+    "errorText": "Tahlil qilishda xatolik yuz berdi...",
+    "errorTip": "Birozdan keyin qayta urinib ko'ring...",
+    "hintAds": " \uD83D\uDCFA Reklamani ko'rish (+1 maslahat)"
+  },
+  "hedgehogHleper": {
+    "greetings": "Halli Hallo! Qanday yordam bera olaman?",
+    "answer": "Javob:",
+    "hintBtn": " Maslahat ber",
+    "myself": " O'zim sinab ko'raman",
+    "plus": "PLUS sotib olish",
+    "thanks": "Tushunarli, rahmat!",
+    "tillTommorow": "Tushunarli, ertagacha",
+    "error": "Xatolik yuz berdi, keyinroq urinib ko'ring",
+    "cancel": "Bekor qilish",
+    "limitText": "Dumaloq bo'lib o'raldim - ertagacha dam olyapman.",
+    "limitText2": "Bugungi maslahatlar tugadi. Ertaga albatta keling - nemis tilingizni birgalikda yaxshilashda davom etamiz!"
+  },
+  "hedgehogModal": {
+    "ok": "Tushunarli",
+    "onInfo": "Uni yuqoridagi o'chirgich yordamida bu yerda yoki istalgan vaqtda profil sozlamalarida qayta yoqishingiz mumkin.",
+    "off": "Kirpi o'chirilgan",
+    "letsgo": "Sinab ko'ramiz!",
+    "title": "Yangi yordamchi",
+    "intro_title": "Sizning shaxsiy yordamchingiz",
+    "intro-subtitle": "Amaliyot davomida nemis tili va grammatikasini o'zlashtirishga yordam beradi.",
+    "titleImages": "Rasmlar tavsifi",
+    "descriptionImages": "Rasmni tahlil qiladi, tayyor gap qoliplarini va kerakli so'zlarni tavsiya etadi.",
+    "titleLands": "Til yerlari topshiriqlari",
+    "descriptionLands": "Audioda yordam beradi, chalg'ituvchi so'zlarni fosh qiladi va gapdagi to'g'ri tartibni ko'rsatadi.",
+    "titleThematic": "Mavzuli bosqichlar",
+    "descriptionThematic": "Ikkilanib qolsangiz, mashq davomida kelishiklar va artikllarni tushuntirib beradi."
   }
 }

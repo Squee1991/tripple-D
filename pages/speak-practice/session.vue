@@ -239,6 +239,9 @@ const isAudioPlaying = ref(false);
 let currentAudioInstance = null;
 let recognition = null;
 
+const { $track } = useNuxtApp();
+let sessionStartTime = Date.now();
+
 const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   goBack();
 }, {
@@ -324,6 +327,10 @@ const confirmExit = () => {
 };
 
 const startVocabLearning = () => {
+  $track('speak_words_started', {
+    theme: route.query.theme,
+    level: route.query.level
+  });
   router.push({
     path: '/speak-practice/words-session',
     query: {
@@ -411,7 +418,7 @@ const speakGerman = async (text) => {
 
 const playLocalAudio = (audioName) => {
   return new Promise((resolve) => {
-    // 1. Очистка старого аудио (ты случайно удалил этот блок)
+    //  Очистка старого аудио (ты случайно удалил этот блок)
     if (currentAudioInstance) {
       currentAudioInstance.pause();
       currentAudioInstance = null;
@@ -419,19 +426,14 @@ const playLocalAudio = (audioName) => {
     if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
-
-    // 2. Объявление переменных (без них локальный путь не соберется)
+    //  Объявление переменных (без них локальный путь не соберется)
     const level = route.query.level || 'beginner';
     const theme = route.query.theme || 'firstmeet';
     const BUCKET = 'tripple-d-dev.firebasestorage.app';
-
-    // 3. Формирование ссылки
     const localPath = `audio/speak-tasks/${level}/${theme}/${audioName}.mp3`;
     const audioUrl = `https://firebasestorage.googleapis.com/v0/b/${BUCKET}/o/${encodeURIComponent(localPath)}?alt=media`;
-
     currentAudioInstance = new Audio(audioUrl);
     isAudioPlaying.value = true;
-
     // 4. Таймаут для слабого интернета
     const timeoutId = setTimeout(() => {
       if (currentAudioInstance) {
@@ -505,6 +507,13 @@ const scrollToBottom = async () => {
 };
 
 const completeDialogue = async () => {
+  const durationSec = Math.round((Date.now() - sessionStartTime) / 1000);
+  $track('speak_dialogue_finished', {
+    theme: route.query.theme,
+    level: route.query.level,
+    duration_seconds: durationSec
+  });
+
   dialogueCompleted.value = true;
   showCompletionModal.value = true;
   await scrollToBottom();
@@ -515,6 +524,11 @@ const completeDialogue = async () => {
 const startDialogue = async () => {
   if (!store.dialogueData || !store.dialogueData['start']) return;
   showInterstitial(async () => {
+    $track('speak_dialogue_started', {
+      theme: route.query.theme,
+      level: route.query.level
+    });
+    sessionStartTime = Date.now();
     viewState.value = 'chat';
     store.chatStarted = true;
     dialogueCompleted.value = false;
@@ -525,7 +539,6 @@ const startDialogue = async () => {
 
     isTyping.value = true;
     await scrollToBottom();
-
     setTimeout(async () => {
       isTyping.value = false;
       store.addMessage('bot', step.botText, step.botTranslation);
@@ -565,6 +578,7 @@ const submitManualInput = async () => {
   });
 
   if (matchedIndex === -1) {
+    $track('speak_dialogue_input_error', { theme: route.query.theme });
     showErrorToast.value = true;
     setTimeout(() => {
       showErrorToast.value = false;

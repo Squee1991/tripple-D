@@ -59,7 +59,7 @@ function closeNumbersHintModal() {
 .hint-modal {
   position: fixed;
   inset: 0;
-  z-index: 3000;
+  z-index: 99999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -230,12 +230,14 @@ function closeNumbersHintModal() {
 .hint-btn {
   height: 56px;
   padding: 0 28px;
-  border-radius: 16px;
+  border-radius: 50px;
   font-weight: 900;
   font-size: 20px;
-  border: 2px solid #1e1e1e;
-  background: #a7ecb8;
-  box-shadow: 2px 2px 0 #1e1e1e;
+  color: white;
+  border:none;
+  width: 180px;
+  background: #37c159;
+  box-shadow: 0 6px 0 #2baf4c;
   cursor: pointer;
 }
 

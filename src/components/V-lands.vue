@@ -42,7 +42,11 @@
                   </p>
                 </div>
               </div>
-              <button class="map-btn" :disabled="!isUnlocked" @click="go(active)">
+              <button class="map-btn"
+                      :disabled="!isUnlocked"
+                      @click="go(active)"
+                      :data-track="'region_enter_clicked' + (active?.id || 'unknown')"
+              >
                 {{ t('locationsMenu.choose') }}
               </button>
             </div>
@@ -73,6 +77,7 @@
               <div
                   v-for="region in filteredRegions"
                   :key="region.id"
+                  :data-track="'region_card_clicked_' + region.id"
                   class="region-card"
                   :class="[
                   'theme--' + themeOf(region),

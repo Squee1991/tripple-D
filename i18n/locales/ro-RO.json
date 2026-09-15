@@ -8118,7 +8118,8 @@
     "themeBtn": "Temă",
     "snowFall": "Ninsoare",
     "language": "Limba interfeței",
-    "profileData": "Datele profilului"
+    "profileData": "Datele profilului",
+    "hedgehogAssistent": "Ariciul asistent"
   },
   "cabinet": {
     "plusCanceled": "PLUS anulat",
@@ -10678,5 +10679,52 @@
   "recipe": {
     "done": "Excelent! Sarcina de astăzi a fost finalizată.",
     "btn": "Înapoi"
+  },
+  "hedgehogImageHelper": {
+    "limit_text": "Limita de indicii pentru astăzi a fost atinsă, revino mâine",
+    "limit_return_text": "obține PLUS și învață fără limite",
+    "hintAnsweredTitle": "Salut! Lasă-mă să îți dau un indiciu la ce să fii atent.",
+    "hintAnsweredMistakesTitle": "Vrei să analizez răspunsul tău și să îți explic greșelile?",
+    "mainHint": "Analiza răspunsului:",
+    "mainHint2": "Indiciu:",
+    "betterToSay": "Cum se spune mai bine:",
+    "usefulWords": "Cuvinte utile:",
+    "grammarHint": "Sfat gramatical:",
+    "getPlus": "Obține PLUS",
+    "getHint": "Obține un indiciu",
+    "thanks": "Am înțeles, mulțumesc!",
+    "close": "Închide",
+    "loading": "Se încarcă...",
+    "errorText": "A apărut o eroare în timpul analizei...",
+    "errorTip": "Încearcă din nou puțin mai târziu...",
+    "hintAds": " \uD83D\uDCFA Vezi reclama (+1 indiciu)"
+  },
+  "hedgehogHleper": {
+    "greetings": "Halli hallo! Cu ce pot ajuta?",
+    "answer": "Răspuns:",
+    "hintBtn": " Dă-mi un indiciu",
+    "myself": " Voi încerca singur",
+    "plus": "Achiziționează PLUS",
+    "thanks": "Am înțeles, mulțumesc",
+    "tillTommorow": "Am înțeles, pe mâine",
+    "error": "A apărut o eroare, încearcă mai târziu",
+    "cancel": "Anulare",
+    "limitText": "M-am făcut ghem - mă odihnesc până mâine.",
+    "limitText2": "Indiciile pe ziua de azi s-au terminat. Treci neapărat pe aici mâine – și vom continua să ne îmbunătățim germana împreună!"
+  },
+  "hedgehogModal": {
+    "ok": "Am înțeles",
+    "onInfo": "Îl poți reactiva aici folosind comutatorul de sus sau oricând în setările profilului tău.",
+    "off": "Ariciul este dezactivat",
+    "letsgo": "Să încercăm",
+    "title": "Asistent nou",
+    "intro_title": "Asistentul tău personal",
+    "intro-subtitle": "Te va ajuta să stăpânești germana și gramatica direct în timpul practicii.",
+    "titleImages": "Descrierea imaginilor",
+    "descriptionImages": "Analizează imaginea, sugerează structuri de propoziții gata făcute și cuvintele necesare.",
+    "titleLands": "Sarcini din ținuturile limbii",
+    "descriptionLands": "Ajută la partea audio, dezvăluie capcanele de vocabular și indică ordinea corectă a frazelor.",
+    "titleThematic": "Niveluri tematice",
+    "descriptionThematic": "Explică cazurile și articolele direct în timpul exercițiului dacă ai nelămuriri."
   }
 }

@@ -43,6 +43,7 @@
         </div>
       </div>
     </div>
+
     <LangSwitcher v-if="isLangModalOpen" @close="isLangModalOpen = false"/>
     <div
         v-for="group in SETTINGS_GROUPS"
@@ -184,12 +185,14 @@ const SETTINGS_GROUPS = computed(() => [
       {key: 'ach', label: t('cabinetToggle.ach'), type: 'toggle'}
     ]
   },
+
   {
     id: 'appearance',
     title: t('settingsGroup.appearance'),
     items: [
       {key: 'theme', label: t('cabinetToggle.themeBtn'), type: 'button'},
-      {key: 'snowFall', label: t('cabinetToggle.snowFall'), type: 'toggle'}
+      {key: 'snowFall', label: t('cabinetToggle.snowFall'), type: 'toggle'},
+      {key: 'hedgehogHelper', label: t('cabinetToggle.hedgehogAssistent'), type: 'toggle'},
     ]
   },
   {
@@ -231,6 +234,7 @@ const getSettingValue = (key) => {
   if (key === 'sound') return soundEnabled.value
   if (key === 'ach') return uiSettings.achievementsNotifyEnabled
   if (key === 'snowFall') return eventStore.isSnowEnabled
+  if (key === 'hedgehogHelper') return uiSettings.hedgehogHelperEnabled
   return false
 }
 
@@ -242,6 +246,7 @@ const onSettingChange = (key, value) => {
     return
   }
   if (key === 'ach') return uiSettings.setAchievementsNotifyEnabled(value)
+  if (key === 'hedgehogHelper') return  uiSettings.setHedgehogHelperEnabled(value)
   if (key === 'snowFall') {
     if (!isSnowUnlocked.value) {
       showRestriction('snow')

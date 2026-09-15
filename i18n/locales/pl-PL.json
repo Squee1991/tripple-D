@@ -8134,7 +8134,8 @@
     "themeBtn": "Motyw",
     "snowFall": "Opady śniegu",
     "language": "Język interfejsu",
-    "profileData": "Dane profilu"
+    "profileData": "Dane profilu",
+    "hedgehogAssistent": "Jeżyk pomocnik"
   },
   "cabinet": {
     "plusCanceled": "PLUS anulowany",
@@ -10694,5 +10695,52 @@
   "recipe": {
     "done": "Świetnie! Dzisiejsze zadanie zostało wykonane.",
     "btn": "Wróć"
+  },
+  "hedgehogImageHelper": {
+    "limit_text": "Dzisiejszy limit podpowiedzi został wyczerpany, wróć jutro",
+    "limit_return_text": "wykup PLUS i ucz się bez ograniczeń",
+    "hintAnsweredTitle": "Cześć! Podpowiem Ci, na co warto zwrócić uwagę.",
+    "hintAnsweredMistakesTitle": "Chcesz, żebym przeanalizował Twoją odpowiedź i wyjaśnił błędy?",
+    "mainHint": "Analiza odpowiedzi:",
+    "mainHint2": "Podpowiedź:",
+    "betterToSay": "Jak powiedzieć lepiej:",
+    "usefulWords": "Przydatne słowa:",
+    "grammarHint": "Wskazówka gramatyczna:",
+    "getPlus": "Kup PLUS",
+    "getHint": "Uzyskaj podpowiedź",
+    "thanks": "Rozumiem, dzięki!",
+    "close": "Zamknij",
+    "loading": "Ładowanie...",
+    "errorText": "Wystąpił błąd podczas analizy...",
+    "errorTip": "Spróbuj ponownie nieco później...",
+    "hintAds": " \uD83D\uDCFA Obejrzyj reklamę (+1 podpowiedź)"
+  },
+  "hedgehogHleper": {
+    "greetings": "Halli hallo! W czym mogę pomóc?",
+    "answer": "Odpowiedź:",
+    "hintBtn": " Podpowiedz odpowiedź",
+    "myself": " Spróbuję sam",
+    "plus": "Kup PLUS",
+    "thanks": "Rozumiem, dzięki",
+    "tillTommorow": "Rozumiem, do jutra",
+    "error": "Wystąpił błąd, spróbuj ponownie później",
+    "cancel": "Anuluj",
+    "limitText": "Zwinałem się w kłębek - odpoczywam do jutra.",
+    "limitText2": "Skończyły Ci się podpowiedzi na dziś. Wpadnij koniecznie jutro, a będziemy kontynuować doskonalenie Twojego niemieckiego razem!"
+  },
+  "hedgehogModal": {
+    "ok": "Rozumiem",
+    "onInfo": "Możesz go włączyć z powrotem tutaj za pomocą przełącznika u góry lub w dowolnym momencie w ustawieniach profilu.",
+    "off": "Jeżyk jest wyłączony",
+    "letsgo": "Do dzieła",
+    "title": "Nowy asystent",
+    "intro_title": "Twój osobisty asystent",
+    "intro-subtitle": "Pomoże opanować niemiecki i gramatykę bezpośrednio podczas ćwiczeń.",
+    "titleImages": "Opis obrazków",
+    "descriptionImages": "Przeanalizuje obrazek, podpowie gotowe konstrukcje zdań i potrzebne słowa.",
+    "titleLands": "Zadania krain językowych",
+    "descriptionLands": "Pomoże w nagraniach audio, wskaże pułapki słowne i pokaże poprawny szyk zdań.",
+    "titleThematic": "Poziomy tematyczne",
+    "descriptionThematic": "Wyjaśni przypadki i rodzajniki bezpośrednio podczas ćwiczeń, jeśli masz wątpliwości."
   }
 }

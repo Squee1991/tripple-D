@@ -48,6 +48,7 @@
               </div>
               <div class="quest-actions">
                 <button
+                    :data-track="'region_wordsLearn_clicked_' + quest.questId"
                     v-if="quest.vocabulary && quest.vocabulary.length"
                     class="btn btn--secondary"
                     @click="handleLearnWords(quest)"
@@ -57,6 +58,7 @@
                 <button
                     class="btn"
                     :style="quest.btnStyle"
+                    :data-track="'region_startQuest_clicked_' + quest.questId"
                     @click="handleStartQuest(quest)"
                 >
                   <template v-if="quest.hasMistakes">
@@ -112,7 +114,7 @@ const {t, locale} = useI18n();
 const chainStore = userChainStore();
 const langStore = userlangStore();
 const authStore = userAuthStore();
-
+const { $track } = useNuxtApp()
 const questList = ref([]);
 const isLoading = ref(true);
 const errorMessage = ref("");
@@ -278,6 +280,10 @@ async function purchaseLife() {
 
   await chainStore.addLife(1);
   showNoLivesModal.value = false;
+  $track('life_purchased_with_points', {
+    price: PRICE,
+    region: currentRegionKey.value
+  });
 
   if (pendingQuest.value) {
     proceedToQuest(pendingQuest.value);
@@ -287,12 +293,15 @@ async function purchaseLife() {
 
 function watchAdForLife() {
   isAdLoading.value = true;
+
+  $track('rewarded_ad_requested', { region: currentRegionKey.value });
   showRewarded(
       async () => {
         await chainStore.addLife(1);
         updateRemainingAds();
         showNoLivesModal.value = false;
 
+        $track('rewarded_ad_completed', { region: currentRegionKey.value });
         if (pendingQuest.value) {
           proceedToQuest(pendingQuest.value);
           pendingQuest.value = null;
@@ -301,13 +310,14 @@ function watchAdForLife() {
       (gotReward) => {
         isAdLoading.value = false;
         if (!gotReward) {
-          console.log("Юзер закрыл рекламу раньше времени.");
+          $track('rewarded_ad_skipped', { region: currentRegionKey.value });
         }
       }
   );
 }
 
 function closeModal() {
+  $track('lives_modal_dismissed', { region: currentRegionKey.value });
   showNoLivesModal.value = false;
   pendingQuest.value = null;
 }

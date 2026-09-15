@@ -1,25 +1,19 @@
 const { onSchedule } = require("firebase-functions/v2/scheduler");
-const { onCall, HttpsError } = require("firebase-functions/v2/https");
+const { onCall, onRequest } = require("firebase-functions/v2/https");
 const { defineSecret } = require("firebase-functions/params");
 const admin = require("firebase-admin");
-const { onRequest } = require("firebase-functions/v2/https");
-const axios = require('axios');
-const FormData = require('form-data');
-if (!admin.apps?.length) admin.initializeApp();
-const fs = require('fs');
-const path = require('path');
-const os = require('os');
-const Groq = require("groq-sdk");
+
+if (admin.apps.length === 0) admin.initializeApp();
+
+const { Resend} = require("resend");
+const cors = require("cors")({origin: true});
+const db = admin.firestore();
+
 const CYCLE_MS = 24 * 60 * 60 * 1000;
 const IMMUNITY_RANK_HATS = 500;
 const GEMINI_API_KEY = defineSecret("GEMINI_API_KEY");
-
-const { Resend} = require("resend");
-const cors = require("cors")({
-	origin: true
-});
-
 const RESEND_API_KEY = defineSecret("RESEND_API_KEY");
+
 
 exports.takeFromArticlePenalty = onSchedule({
 	schedule: "every 20 minutes",
@@ -75,322 +69,151 @@ exports.takeFromArticlePenalty = onSchedule({
 	return null;
 });
 
-// exports.whisperTranscribe = onCall({
-// 	secrets: [GROQ_API_KEY],
-// 	memory: "512Mi"
-// }, async (request) => {
-// 	const tempFilePath = path.join(os.tmpdir(), `audio_${Date.now()}.mp3`);
-// 	try {
-// 		const dataIn = request.data || {};
-// 		const audioContent = dataIn.audioContent;
-// 		const lang = dataIn.lang;
-//
-// 		if (!audioContent) return { error: "Нет аудио" };
-//
-// 		const base64Data = audioContent.includes(",") ? audioContent.split(",")[1] : audioContent;
-// 		const buffer = Buffer.from(base64Data, "base64");
-//
-// 		// Пишем как mp3
-// 		fs.writeFileSync(tempFilePath, buffer);
-//
-// 		const groq = new Groq({ apiKey: GROQ_API_KEY.value() });
-//
-// 		// Отправляем как mp3
-// 		const transcription = await groq.audio.transcriptions.create({
-// 			file: fs.createReadStream(tempFilePath),
-// 			model: "whisper-large-v3-turbo",
-// 			language: lang ? lang.substring(0, 2) : undefined,
-// 			response_format: "json"
-// 		});
-//
-// 		if (fs.existsSync(tempFilePath)) fs.unlinkSync(tempFilePath);
-//
-// 		return { text: transcription.text || "" };
-//
-// 	} catch (error) {
-// 		if (fs.existsSync(tempFilePath)) fs.unlinkSync(tempFilePath);
-// 		const groqError = error.error?.message || error.message || String(error);
-// 		return { error: `GROQ SDK: ${groqError}` };
-// 	}
-// });
-
-
-
-exports.visionAnalyze = onCall({
-	secrets: [GEMINI_API_KEY],
-	memory: "256Mi",
-	timeoutSeconds: 60
-}, async (request) => {
-	try {
-		const dataIn = request.data || {};
-		const userLevel = dataIn.userLevel;
-		const userMessage = dataIn.userMessage;
-		const userLocale = dataIn.userLocale;
-		const imageUrl = dataIn.imageUrl;
-		const referenceDescription = dataIn.referenceDescription;
-
-		const modelId = 'gemini-3.5-flash-lite';
-		const feedbackLang = String(userLocale || 'ru').split('-')[0].trim();
-
-		const systemPrompt = `You are a strict but supportive German language tutor evaluating an image description exercise.
-**STRICT LANGUAGE RULE: YOU MUST WRITE ALL FEEDBACK AND CORRECTIONS IN THE LANGUAGE: "${feedbackLang}". NEVER USE GERMAN IN THE FEEDBACK FIELD.**
-
-INPUTS:
-1. **The Image:** Look at the visual image carefully.
-2. **Target Level:** ${userLevel} (A1, A2, or B1).
-3. **User Answer:** "${userMessage}"
-4. **Reference Template:** "${referenceDescription || 'None'}" 
-
-GRAMMAR BOUNDARIES BY LEVEL & RULES:
-- **A1 Grammar:** Präsens, Perfekt. Nominativ/Akkusativ/Dativ. When the question is "Where?" (Wo?), use Dativ and put the noun's article in Dativ. Apply the same rule for Akkusativ. When explaining grammar endings, always use the phrase "берет у артикля" to clarify how the word gets its ending. NO subordinate clauses.
-- **A2 Grammar:** Präteritum, Wechselpräpositionen, Nebensätze, Adjektivdeklination.
-- **B1 Grammar:** Plusquamperfekt, Passiv, complexe Nebensätze, Relativsätze.
-
-CRITICAL EVALUATION RULES:
-0. FATAL ERROR: If the user writes in any language other than German, SCORE IS 1/10. Feedback MUST say in ${feedbackLang}: "Пожалуйста, опишите картинку на немецком языке."
-1. OVER-PERFORMING: If lower-level user writes complex answer, SCORE 10/10. NO nitpicking.
-2. DYNAMIC SUGGESTED ANSWER: 
-   - Score 9-10: Set 'suggestedAnswer' to the User's exact answer. 
-   - Score <=8: Set 'suggestedAnswer' to the Reference Template.
-
-YOUR TASK: OUTPUT A VALID JSON OBJECT AND NOTHING ELSE.`;
-
-		// 1. Скачиваем картинку по URL из Firebase и переводим в Base64
-		const imageFetch = await fetch(imageUrl);
-		if (!imageFetch.ok) {
-			return { error: `Не удалось скачать картинку из Firebase: ${imageFetch.status}` };
-		}
-		const imageBuffer = await imageFetch.arrayBuffer();
-		const base64Image = Buffer.from(imageBuffer).toString('base64');
-
-		// 2. Отправляем запрос к Gemini
-		const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent?key=${GEMINI_API_KEY.value()}`;
-
-		const response = await fetch(url, {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify({
-				system_instruction: {
-					parts: [{ text: systemPrompt }]
-				},
-				contents: [
-					{
-						role: 'user',
-						parts: [
-							{ text: `Level: ${userLevel}. Answer: "${userMessage}". Reference: "${referenceDescription || 'None'}"` },
-							{
-								inline_data: {
-									mime_type: "image/jpeg",
-									data: base64Image
-								}
-							}
-						]
-					}
-				],
-				generationConfig: {
-					temperature: 0.1,
-					// Заставляем модель всегда возвращать чистый JSON
-					response_mime_type: "application/json"
-				}
-			})
-		});
-
-		const resText = await response.text();
-		if (!response.ok) return { error: `GEMINI API ERROR ${response.status}: ${resText}` };
-
-		const resJson = JSON.parse(resText);
-		const content = resJson.candidates?.[0]?.content?.parts?.[0]?.text;
-
-		if (!content) {
-			return { error: `Gemini не вернул ответ: ${resText.substring(0, 300)}` };
-		}
-
-		// 3. Парсим чистый JSON (сложные регулярки больше не нужны)
-		try {
-			return { data: JSON.parse(content) };
-		} catch (parseErr) {
-			console.error("Ошибка парсинга JSON:", parseErr.message, "Извлеченный текст:", content);
-			return { error: `Ошибка парсинга ответа: ${parseErr.message}` };
-		}
-
-	} catch (err) {
-		return { error: String(err.message || err) };
-	}
-});
-
-exports.hedgehogHint = onCall({
+exports.hedgehogAssistant = onCall({
 	secrets: [GEMINI_API_KEY],
 	memory: "256Mi",
 	timeoutSeconds: 30,
-	cors: true // Обязательно оставляем для предотвращения ошибки CORS
+	cors: true
 }, async (request) => {
-	try {
-		const dataIn = request.data || {};
-		const question = dataIn.question || "";
-		const options = dataIn.options || [];
-		const taskType = dataIn.taskType || "";
-		const modelId = 'gemini-3.5-flash-lite';
-
-		const prompt = `You are a concise hedgehog companion in a German learning app.
-The user is solving this exact task: "${question}".
-Task type: "${taskType}".
-Options/Words available: ${JSON.stringify(options)}.
-
-TASK:
-1. Identify the correct answer (or the correct sentence order).
-2. Give a 1-sentence explanation strictly for this answer in Russian.
-3. If the question involves grammar/cases/articles:
-   - When the question is "Where?" (Wo?), use Dativ and put the noun's article in Dativ. For Akkusativ, apply the same rule.
-   - You MUST use the exact phrase "берет у артикля".
-
-RESPONSE FORMAT (Strict JSON):
-{
-  "correctOption": "The exact correct answer",
-  "explanation": "Short 1-sentence explanation"
-}`;
-
-		const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent?key=${GEMINI_API_KEY.value()}`;
-
-		const response = await fetch(url, {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({
-				contents: [{ role: 'user', parts: [{ text: prompt }] }],
-				generationConfig: { temperature: 0.1, response_mime_type: "application/json" }
-			})
-		});
-
-		if (!response.ok) {
-			return { error: `Gemini API error: ${response.status}` };
-		}
-
-		const resJson = await response.json();
-		const content = resJson.candidates?.[0]?.content?.parts?.[0]?.text;
-
-		if (!content) return { error: "Empty response" };
-
-		return { data: JSON.parse(content) };
-	} catch (err) {
-		return { error: String(err.message || err) };
+	if (!request.auth || !request.auth.uid) {
+		return { error: "UNAUTHORIZED" };
 	}
-});
-
-exports.hedgehogChat = onCall({
-	secrets: [GEMINI_API_KEY],
-	memory: "256Mi",
-	timeoutSeconds: 60
-}, async (request) => {
+	const dataIn = request.data || {};
+	const action = dataIn.action || "hint";
+	const uid = request.auth.uid;
+	const today = new Date().toISOString().split('T')[0];
 	try {
-		const dataIn = request.data || {};
-		const userMessage = dataIn.userMessage || "";
-		const hedgehogStage = Number(dataIn.hedgehogStage || 0);
-		const hatsToNext = Number(dataIn.hatsToNext || 0);
-		const userLocale = String(dataIn.userLocale || 'ru').split('-')[0].trim();
+		const userDoc = await db.collection("users").doc(uid).get();
+		const userData = userDoc.exists ? userDoc.data() : {};
+		const isPremium = userData.isPremium === true;
+		const usageRef = db.collection("users").doc(uid).collection("usage").doc(today);
 
-		// Твоя модель
-		const modelId = 'gemini-3.5-flash-lite';
-
-		let stageRules = "";
-		switch (hedgehogStage) {
-			case 0:
-				stageRules = `STAGE 0: BEGINNER. You ONLY know: "Hallo", "Ja", "Nein". 
-CRITICAL RULE: You are just starting to learn German. You CANNOT translate words! If the user asks to translate anything or asks complex questions, you MUST refuse and act confused.
-Reply example: "*sniff*? 🦔" or "Nein...". 
-Tip field: Write exactly this: "Ёжик только начал учить немецкий! Выполняй ежедневные задания, получай Конфедератки и новые звания, чтобы он выучил новые слова."`;
-				break;
-			case 1:
-				stageRules = `STAGE 1: A1.1. Max 3 words per sentence. Only Präsens. 
-CRITICAL RULE: You still CANNOT translate words outside of basic greetings. Refuse complex translations by saying "Ich weiß nicht 🦔" (I don't know).
-Tip field: Say "Ёжик знает только базовые фразы. Зарабатывай Конфедератки за задания, чтобы он начал понимать переводы!"`;
-				break;
-			case 2:
-				stageRules = `STAGE 2: TRAVELER (A1). Knows Nominativ and Akkusativ.
-Tip field: Say "Ёжик делает успехи! Теперь он может переводить простые слова. Спроси его о чем-нибудь."`;
-				break;
-			case 3:
-				stageRules = `STAGE 3: PUNK. Cheeky tone. Starts using past tense (Perfekt).`;
-				break;
-			case 4:
-				stageRules = `STAGE 4: EXPLORER (A2). Uses simple Nebensätze.
-PROACTIVE: In your tip field, remind the user: "Отличная работа! У ёжика уже уровень A2. Он может объяснить грамматику или перевести сложные слова."`;
-				break;
-			case 5:
-				stageRules = `STAGE 5: ADVENTURER (A2+). Uses Präteritum.`;
-				break;
-			case 6:
-				stageRules = `STAGE 6: SCHOLAR (B1). Uses Relativsätze.`;
-				break;
-			case 7:
-				stageRules = `STAGE 7: MASTER (B1+). Fully fluent hedgehog companion.`;
-				break;
+		if (!isPremium) {
+			const usageSnap = await usageRef.get();
+			const currentUsage = usageSnap.exists ? (usageSnap.data().hintCount || 0) : 0;
+			if (currentUsage >= 6) {
+				return { error: "LIMIT_REACHED" };
+			}
 		}
 
-		const systemPrompt = `You are a hedgehog travel companion in a gamified German learning app. 
-You evolve as the user collects hats. Current evolution rule:
-${stageRules}
+		const userLocale = String(dataIn.userLocale || 'ru').split('-')[0].trim();
+		const modelId = 'gemini-3.5-flash-lite';
+		let systemPrompt = "";
 
-APP CONTEXT (CRITICAL EXCEPTION):
-The user collects hats (Конфедератки) to rank up. The user currently needs exactly ${hatsToNext} more hats to reach the next rank.
-IF the user asks about their rank, hats, numbers, or progress (e.g., "Сколько до следующего ранга?"):
-1. YOU MUST ANSWER THEM, bypassing your stage limitations.
-2. Tell them the number in simple German: "Noch ${hatsToNext} Hüte! 🎓" (Still ${hatsToNext} hats!).
-3. In the 'tip' field, explain it clearly: "Осталось собрать ${hatsToNext} шляп до следующего звания!".
+		if (action === "grammar") {
+			const sentence = dataIn.sentence || "";
+			const answer = dataIn.answer || "";
+			const selectedAnswer = dataIn.selectedAnswer || "";
 
-CRITICAL INSTRUCTIONS FOR ALL STAGES:
-- If you explain grammar to the user, you MUST use the exact phrase "берет у артикля".
-- When the question is "Where?" (Wo?), I should use Dativ and put the noun's article in Dativ. For Akkusativ, I should apply the same rule.
+			systemPrompt = `You are a friendly German language tutor.
+The user is practicing German grammar and needs to know why a specific article is correct.
+Sentence: "${sentence}"
+Correct article: "${answer}"
+User selected (if any): "${selectedAnswer}"
 
-RESPONSE FORMAT: Return a valid JSON object and nothing else:
+Explain in 1-2 short sentences (max 150 chars) why the article "${answer}" is needed in the blank for this sentence.
+If the user chose "${selectedAnswer}", briefly explain why it's wrong (mention gender, case, or preposition government).
+STRICT RULES:
+- When explaining grammar endings, always use the phrase "берет у артикля".
+- When the question is "Where?" (Wo?), use Dativ and put the noun's article in Dativ. For Akkusativ, apply the same rule.
+- Respond in THIS exact language: ${userLocale}.
+
+CRITICAL: Respond ONLY with valid JSON matching this schema:
+{ "explanation": "string" }`;
+
+		} else if (action === "imageHint") {
+			const referenceDescription = dataIn.referenceDescription || "";
+			const userLevel = dataIn.userLevel || "A1";
+
+			const taskInstruction = `The user needs ideas BEFORE writing a sentence about an image described as: "${referenceDescription}".
+
+STRICT RULES FOR HINT:
+1. "hintText":
+   - Exactly 1 ULTRA-SHORT sentence strictly in language: ${userLocale}.
+   - STRICT BAN ON FLUFF: NO greetings, NO filler words.
+   - Instruct the user in ${userLocale} to start their sentence with the main German subject from the description and use the clues below.
+   - The German subject itself must remain in German inside quotes «...», but the instruction text around it MUST be entirely in ${userLocale}.
+2. "vocabulary":
+   - Exactly 4 items.
+   - "de": ONLY the German words/phrase (e.g. "fährt Ski", "im Schnee"). NEVER put translations or dashes inside "de"!
+   - "tr": ONLY the short translation in ${userLocale} without dashes.
+3. "grammarTip":
+   - 1 short practical sentence on word order or endings strictly in ${userLocale}.
+   - If userLocale is "ru" and you explain adjective/noun endings taking cues from an article, use the phrasing "берет у артикля". For other languages, express this concept naturally in ${userLocale}.`;
+
+			systemPrompt = `You are "Hedgehog", an upbeat, friendly German language tutor.
+Target German level: ${userLevel}. User interface language: ${userLocale}.
+
+${taskInstruction}
+
+CRITICAL: Respond ONLY with valid JSON matching this schema:
 {
-  "reply": "Your response in German following the stage rules",
-  "emotion": "happy",
-  "tip": "A short 1-sentence friendly hint or translation in ${userLocale}"
-}`
+  "hintText": "string",
+  "vocabulary": [ { "de": "word", "tr": "translation" } ],
+  "grammarTip": "string"
+}`;
+		} else {
+			const question = dataIn.question || "";
+			const correctAnswer = dataIn.correctAnswer || dataIn.answer || "";
+			const options = Array.isArray(dataIn.options) ? dataIn.options.join(", ") : "";
+
+			systemPrompt = `You are a friendly German language tutor named Hedgehog.
+The user is solving a task and needs a clear, helpful hint.
+Task: "${question}"
+Options: "${options}"
+Correct answer: "${correctAnswer}"
+
+Give a brief explanation in 1-2 short sentences why "${correctAnswer}" is the right choice.
+STRICT RULES:
+- When explaining grammar endings taking cues from an article, use the phrasing "берет у артикля".
+- Respond in THIS exact language: ${userLocale}.
+
+CRITICAL: Respond ONLY with a valid JSON object matching this schema:
+{
+  "correctOption": "${correctAnswer}",
+  "explanation": "short explanation in ${userLocale}"
+}`;
+		}
 
 		const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent?key=${GEMINI_API_KEY.value()}`;
-
 		const response = await fetch(url, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
-				system_instruction: { parts: [{ text: systemPrompt }] },
-				contents: [{ role: 'user', parts: [{ text: userMessage }] }],
+				contents: [{ role: 'user', parts: [{ text: systemPrompt }] }],
 				generationConfig: {
-					temperature: 0.7,
+					temperature: 0.1,
 					response_mime_type: "application/json"
 				}
 			})
 		});
 
 		const resText = await response.text();
-		if (!response.ok) {
-			console.error("GEMINI HTTP ERROR:", response.status, resText);
-			return { error: `Gemini HTTP ${response.status}: ${resText}` };
-		}
+		if (!response.ok) return { error: `Gemini error: ${response.status}` };
 
 		const resJson = JSON.parse(resText);
 		const content = resJson.candidates?.[0]?.content?.parts?.[0]?.text;
+		if (!content) return { error: "Пустой ответ от Gemini" };
 
-		if (!content) {
-			console.error("NO CONTENT IN CANDIDATES:", resJson);
-			return { error: `Gemini вернул пустой результат: ${resText.substring(0, 300)}` };
+		let parsedContent = JSON.parse(content);
+		if (Array.isArray(parsedContent)) {
+			parsedContent = parsedContent[0] || {};
 		}
 
-		// Парсим сгенерированный нейросетью JSON
-		try {
-			return { data: JSON.parse(content) };
-		} catch (pErr) {
-			return { error: `Не удалось распарсить JSON от ежа: ${content}` };
+		if (!isPremium) {
+			await usageRef.set({
+				hintCount: admin.firestore.FieldValue.increment(1),
+				updatedAt: admin.firestore.FieldValue.serverTimestamp()
+			}, { merge: true });
 		}
+
+		return { data: parsedContent };
 
 	} catch (err) {
-		console.error("GLOBAL CATCH ERROR:", err);
-		return { error: `Ошибка функции: ${err.message}` };
+		console.error("FUNCTION ERROR:", err);
+		return { error: String(err.message || err) };
 	}
 });
-
 
 
 exports.sendResetEmail = onRequest({ cors: true, secrets: [RESEND_API_KEY] }, async (req, res) => {
@@ -460,7 +283,6 @@ exports.sendResetEmail = onRequest({ cors: true, secrets: [RESEND_API_KEY] }, as
 		}
 	});
 });
-
 exports.handleRevenueCatWebhook = onRequest(async (req, res) => {
 	const eventData = req.body.event;
 	if (!eventData || !eventData.app_user_id) {

@@ -8127,7 +8127,8 @@
     "themeBtn": "Tema",
     "snowFall": "Kar yağışı",
     "language": "Arayüz dili",
-    "profileData": "Profil verileri"
+    "profileData": "Profil verileri",
+    "hedgehogAssistent": "Kirpi Asistan"
   },
   "cabinet": {
     "plusCanceled": "PLUS iptal edildi",
@@ -10688,5 +10689,52 @@
   "recipe": {
     "done": "Harika! Bugünün görevi tamamlandı.",
     "btn": "Geri dön"
+  },
+  "hedgehogImageHelper": {
+    "limit_text": "Bugünlük ipucu sınırına ulaşıldı, yarın geri gel",
+    "limit_return_text": "PLUS al ve sınırsız öğren",
+    "hintAnsweredTitle": "Merhaba! Neye dikkat etmen gerektiği konusunda sana bir ipucu vereyim.",
+    "hintAnsweredMistakesTitle": "Cevabını analiz edip hatalarımı açıklamamı ister misin?",
+    "mainHint": "Cevap analizi:",
+    "mainHint2": "İpucu:",
+    "betterToSay": "Nasıl söylenir:",
+    "usefulWords": "Faydalı kelimeler:",
+    "grammarHint": "Gramer ipucu:",
+    "getPlus": "PLUS Al",
+    "getHint": "İpucu al",
+    "thanks": "Anladım, teşekkürler!",
+    "close": "Kapat",
+    "loading": "Yükleniyor...",
+    "errorText": "Analiz sırasında bir hata oluştu...",
+    "errorTip": "Biraz sonra tekrar dene...",
+    "hintAds": " \uD83D\uDCFA Reklam izle (+1 ipucu)"
+  },
+  "hedgehogHleper": {
+    "greetings": "Halli hallo! Nasıl yardımı olabilirim?",
+    "answer": "Cevap:",
+    "hintBtn": " İpucu ver",
+    "myself": " Kendim deneyeceğim",
+    "plus": "PLUS Satın Al",
+    "thanks": "Anladım, teşekkürler",
+    "tillTommorow": "Anladım, yarına kadar",
+    "error": "Bir hata oluştu, lütfen daha sonra tekrar deneyin",
+    "cancel": "İptal",
+    "limitText": "Top gibi kıvrıldım - yarına kadar dinleniyorum.",
+    "limitText2": "Bugünlük ipuçları bitti. Yarın mutlaka uğra - Almancanı birlikte geliştirmeye devam edelim!"
+  },
+  "hedgehogModal": {
+    "ok": "Anladım",
+    "onInfo": "Üst kısimdeki anahtarı kullanarak veya profil ayarlarınızdan istediğiniz zaman tekrar açabilirsiniz.",
+    "off": "Kirpi devre dışı bırakıldı",
+    "letsgo": "Hadi deneyelim",
+    "title": "Yeni asistan",
+    "intro_title": "Kişisel asistanınız",
+    "intro-subtitle": "Pratik yaparken Almancayı ve grameri ustalıkla öğrenmenize yardımcı olur.",
+    "titleImages": "Resim açıklamaları",
+    "descriptionImages": "Resmi inceler, hazır cümle kalıpları ve gereken kelimeleri önerir.",
+    "titleLands": "Dil diyarı görevleri",
+    "descriptionLands": "Ses kayıtlarında yardımcı olur, kelime tuzaklarını çözer ve doğru kelime dizilimini gösterir.",
+    "titleThematic": "Tematik seviyeler",
+    "descriptionThematic": "Tereddütte kaldığınızda doğrudan alıştırma sırasında artikelleri ve ismin hallerini açıklar."
   }
 }

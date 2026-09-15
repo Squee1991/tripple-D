@@ -206,65 +206,111 @@ export const userlangStore = defineStore('learning', () => {
 		currentModeIndex.value = 0
 		await saveToFirebase()
 	}
-
 	const loadFromFirebase = async () => {
 		const auth = getAuth()
+		const user = auth.currentUser
+		if (!user) return
 		const db = getFirestore()
-		return new Promise((resolve) => {
-			onAuthStateChanged(auth, async (user) => {
-				if (!user) return resolve()
-				const userDoc = doc(db, 'users', user.uid)
-				const docSnap = await getDoc(userDoc)
-				if (docSnap.exists()) {
-					const data = docSnap.data()
-					if (!data.expRecovered && data.questProgress) {
-						let totalRecoveredExp = 0;
-
-						for (const key in data.questProgress) {
-							if (data.questProgress[key].completed === true) {
-								totalRecoveredExp += 10;
-							}
-						}
-
-						if (totalRecoveredExp > 0) {
-							data.exp = (data.exp || 0) + totalRecoveredExp;
-							await updateDoc(userDoc, {
-								exp: data.exp,
-								expRecovered: true
-							});
-							console.log(`Начислено ${totalRecoveredExp} опыта за старые задания.`);
-						}
+		const userDoc = doc(db, 'users', user.uid)
+		const docSnap = await getDoc(userDoc)
+		if (docSnap.exists()) {
+			const data = docSnap.data()
+			if (!data.expRecovered && data.questProgress) {
+				let totalRecoveredExp = 0;
+				for (const key in data.questProgress) {
+					if (data.questProgress[key].completed === true) {
+						totalRecoveredExp += 10;
 					}
-					words.value = data.words || []
-					learnedWords.value = data.learnedWords || []
-					wrongAnswers.value = data.wrongAnswers || []
-					selectedTopics.value = data.selectedTopics || []
-					selectedWords.value = data.selectedWords || []
-					totalEarnedPoints.value = data.totalEarnedPoints || 0
-					articlesSpentForAchievement.value = data.articlesSpentForAchievement || 0
-					points.value = data.points || 0
-					exp.value = data.exp || 0
-					isLeveling.value = data.isLeveling ?? 0
-					currentIndex.value = data.currentIndex || 0
-					currentModeIndex.value = data.currentModeIndex || 0
-					gotPremiumBonus.value = data.gotPremiumBonus || false
-					learningLang.value = data.learningLang || 'de'
-					bestStreakAnyMode.value = data.bestStreakAnyMode || 0
-					bestStreakEasyArticle.value = data.bestStreakEasyArticle || 0
 				}
-
-				isLoaded.value = true
-				const prevExp = exp.value
-				const prevLvl = isLeveling.value
-				handleLeveling()
-				if (exp.value !== prevExp || isLeveling.value !== prevLvl) {
-					await saveToFirebase()
+				if (totalRecoveredExp > 0) {
+					data.exp = (data.exp || 0) + totalRecoveredExp;
+					await updateDoc(userDoc, { exp: data.exp, expRecovered: true });
 				}
+			}
+			words.value = data.words || []
+			learnedWords.value = data.learnedWords || []
+			wrongAnswers.value = data.wrongAnswers || []
+			selectedTopics.value = data.selectedTopics || []
+			selectedWords.value = data.selectedWords || []
+			totalEarnedPoints.value = data.totalEarnedPoints || 0
+			articlesSpentForAchievement.value = data.articlesSpentForAchievement || 0
+			points.value = data.points || 0
+			exp.value = data.exp || 0
+			isLeveling.value = data.isLeveling ?? 0
+			currentIndex.value = data.currentIndex || 0
+			currentModeIndex.value = data.currentModeIndex || 0
+			gotPremiumBonus.value = data.gotPremiumBonus || false
+			learningLang.value = data.learningLang || 'de'
+			bestStreakAnyMode.value = data.bestStreakAnyMode || 0
+			bestStreakEasyArticle.value = data.bestStreakEasyArticle || 0
+		}
 
-				resolve()
-			})
-		})
+		isLoaded.value = true
+		const prevExp = exp.value
+		const prevLvl = isLeveling.value
+		handleLeveling()
+		if (exp.value !== prevExp || isLeveling.value !== prevLvl) {
+			await saveToFirebase()
+		}
 	}
+	// const loadFromFirebase = async () => {
+	// 	const auth = getAuth()
+	// 	const db = getFirestore()
+	// 	return new Promise((resolve) => {
+	// 		onAuthStateChanged(auth, async (user) => {
+	// 			if (!user) return resolve()
+	// 			const userDoc = doc(db, 'users', user.uid)
+	// 			const docSnap = await getDoc(userDoc)
+	// 			if (docSnap.exists()) {
+	// 				const data = docSnap.data()
+	// 				if (!data.expRecovered && data.questProgress) {
+	// 					let totalRecoveredExp = 0;
+	//
+	// 					for (const key in data.questProgress) {
+	// 						if (data.questProgress[key].completed === true) {
+	// 							totalRecoveredExp += 10;
+	// 						}
+	// 					}
+	//
+	// 					if (totalRecoveredExp > 0) {
+	// 						data.exp = (data.exp || 0) + totalRecoveredExp;
+	// 						await updateDoc(userDoc, {
+	// 							exp: data.exp,
+	// 							expRecovered: true
+	// 						});
+	// 						console.log(`Начислено ${totalRecoveredExp} опыта за старые задания.`);
+	// 					}
+	// 				}
+	// 				words.value = data.words || []
+	// 				learnedWords.value = data.learnedWords || []
+	// 				wrongAnswers.value = data.wrongAnswers || []
+	// 				selectedTopics.value = data.selectedTopics || []
+	// 				selectedWords.value = data.selectedWords || []
+	// 				totalEarnedPoints.value = data.totalEarnedPoints || 0
+	// 				articlesSpentForAchievement.value = data.articlesSpentForAchievement || 0
+	// 				points.value = data.points || 0
+	// 				exp.value = data.exp || 0
+	// 				isLeveling.value = data.isLeveling ?? 0
+	// 				currentIndex.value = data.currentIndex || 0
+	// 				currentModeIndex.value = data.currentModeIndex || 0
+	// 				gotPremiumBonus.value = data.gotPremiumBonus || false
+	// 				learningLang.value = data.learningLang || 'de'
+	// 				bestStreakAnyMode.value = data.bestStreakAnyMode || 0
+	// 				bestStreakEasyArticle.value = data.bestStreakEasyArticle || 0
+	// 			}
+	//
+	// 			isLoaded.value = true
+	// 			const prevExp = exp.value
+	// 			const prevLvl = isLeveling.value
+	// 			handleLeveling()
+	// 			if (exp.value !== prevExp || isLeveling.value !== prevLvl) {
+	// 				await saveToFirebase()
+	// 			}
+	//
+	// 			resolve()
+	// 		})
+	// 	})
+	// }
 
 
 	const getUserDocRef = () => {

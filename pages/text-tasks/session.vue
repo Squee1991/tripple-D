@@ -123,6 +123,9 @@ const showExitModal = ref(false)
 const isConfirmedExit = ref(false)
 let pendingRoute = null
 
+const { $track } = useNuxtApp()
+let sessionStartTime = 0
+
 const showFinishModal = ref(false)
 const correctAnswersCount = ref(0)
 
@@ -151,6 +154,10 @@ onMounted(() => {
 
   Promise.all([minDelay, adPromise]).then(() => {
     loading.value = false
+
+    $track('text_task_session_started', {
+      total_tasks: totalTasks.value
+    })
   })
 })
 
@@ -169,6 +176,12 @@ const handleBackClick = () => {
 }
 
 const confirmExit = () => {
+  const durationSec = Math.round((Date.now() - sessionStartTime) / 1000)
+  $track('text_task_session_abandoned', {
+    duration_seconds: durationSec,
+    completed_tasks: store.currentTaskIndex,
+    total_tasks: totalTasks.value
+  })
   isConfirmedExit.value = true
   showExitModal.value = false
   if (pendingRoute) {
@@ -207,6 +220,12 @@ const isSuccess = computed(() => {
 const handleMainAction = async () => {
   if (!store.isChecking) {
     store.toggleCheck()
+
+    $track('text_task_submitted', {
+      task_index: store.currentTaskIndex,
+      is_success: isSuccess.value
+    })
+
     if (isSuccess.value) {
       correctAnswersCount.value++
       await store.saveTaskProgress()
@@ -214,6 +233,13 @@ const handleMainAction = async () => {
   } else {
     const hasNext = store.nextTask()
     if (!hasNext) {
+      const durationSec = Math.round((Date.now() - sessionStartTime) / 1000)
+      $track('text_task_session_finished', {
+        correct_count: correctAnswersCount.value,
+        total_tasks: totalTasks.value,
+        duration_seconds: durationSec
+      })
+
       showFinishModal.value = true
     }
   }
@@ -244,7 +270,7 @@ const handleBlankClick = (blankId) => {
 </script>
 
 <style scoped>
-/* Стили остались без изменений */
+
 .drag-page {
   font-family: "Nunito", sans-serif;
   height: 100%;

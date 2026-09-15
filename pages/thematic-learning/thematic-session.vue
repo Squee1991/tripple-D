@@ -10,8 +10,19 @@
         @cancel="cancelExit"
         @confirm="confirmExit"
     />
+    <VHedgehogHelper
+        v-if="currentTaskForHelper && !finished"
+        :task="currentTaskForHelper"
+        :selected-answer="feedback?.selected"
+        action-type="grammar"
+    />
     <div class="session-container">
-      <VLoginPreloader v-if="loading"/>
+      <section v-if="loading" class="view-state view-state--loading">
+        <div class="bouncy-loader">
+          <span></span><span></span><span></span>
+        </div>
+        <p class="loading-text">{{ t('trainerPage.loading') }}</p>
+      </section>
       <section v-else-if="thematic.selectedModule" class="view-state view-state--content">
         <div v-if="!finished" class="top-nav">
           <div class="nav-actions">
@@ -109,14 +120,12 @@ import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue";
 import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
 import SadHedgehogIcon from '../../assets/images/Sadlyhedgehog.png'
 import {useSwipeBack} from '~/composables/useSwipeBack.js'
-import {showInterstitial} from '../../utils/admob.js';
-import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
-import { userAuthStore} from "~/store/authStore.js";
+import VHedgehogHelper from "~/src/components/V-hedgehog-helper.vue";
 
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
-const authStore = userAuthStore()
+
 const router = useRouter()
 const {t} = useI18n()
 const thematic = useTrainerStore()
@@ -130,10 +139,11 @@ const finished = ref(false)
 const isChecked = ref(false)
 const showExitModal = ref(false)
 const sessionMistakes = ref([])
+
 const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   exit()
 }, {
-  ignoreSelector: '.options-grid, .option-pill, .bottom-sheet, .btn-gummy'
+  ignoreSelector: '.options-grid, .option-pill, .bottom-sheet, .btn-gummy, .hh-fab, .hh-overlay, .hh-bottom-sheet'
 })
 
 const tasks = computed(() => {
@@ -147,6 +157,19 @@ const tasks = computed(() => {
   }
 
   return allTasks.map((task, index) => ({...task, originalIndex: index}))
+})
+
+// Добавлено: передача задания в VHedgehogHelper
+const currentTaskForHelper = computed(() => {
+  if (!tasks.value.length || current.value >= tasks.value.length) return null
+  const currentTask = tasks.value[current.value]
+  return {
+    question: currentTask.question,
+    answer: currentTask.answer,
+    correctAnswer: currentTask.answer,
+    options: answerOptions.value,
+    type: 'grammar'
+  }
 })
 
 const progressPercent = computed(() => {
@@ -251,22 +274,10 @@ onMounted(async () => {
   if (!thematic.selectedModule) {
     await thematic.loadProgress()
   }
-  const minDelay = new Promise(resolve => setTimeout(resolve, 1500))
-  const adPromise = new Promise(resolve => {
-    if (!authStore.isPremium) {
-      showInterstitial(() => {
-        resolve()
-      })
-    } else {
-      resolve()
-    }
-  })
-  Promise.all([minDelay, adPromise]).then(() => {
-    loading.value = false;
-    if (tasks.value.length > 0) {
-      setupCurrentQuestion();
-    }
-  })
+  loading.value = false;
+  if (tasks.value.length > 0) {
+    setupCurrentQuestion();
+  }
   window.addEventListener('beforeunload', handleBeforeUnload);
 })
 
@@ -280,6 +291,8 @@ onUnmounted(() => {
 .session-page {
   font-family: "Nunito", sans-serif;
   height: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   background: transparent;
@@ -301,7 +314,7 @@ onUnmounted(() => {
   width: 100%;
 }
 
-.view-state--error {
+.view-state--loading, .view-state--error {
   justify-content: center;
   align-items: center;
   padding: 24px;
@@ -488,8 +501,10 @@ onUnmounted(() => {
 .bottom-sheet {
   position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
+  max-width: 1024px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 16px 16px calc(env(safe-area-inset-bottom) + 16px);
   border-radius: 24px 24px 0 0;
   border: none;
@@ -641,6 +656,46 @@ onUnmounted(() => {
   color: #7f1d1d;
 }
 
+.bouncy-loader {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.bouncy-loader span {
+  width: 18px;
+  height: 18px;
+  background: #60a5fa;
+  border: none;
+  border-radius: 50%;
+  animation: bounce 0.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95);
+}
+
+.bouncy-loader span:nth-child(2) {
+  background: #4ade80;
+  animation-delay: 0.1s;
+}
+
+.bouncy-loader span:nth-child(3) {
+  background: #fde047;
+  animation-delay: 0.2s;
+}
+
+.loading-text {
+  font-size: 20px;
+  font-weight: 900;
+  color: #4b5563;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
 @keyframes bounceIn {
   0% {
     transform: scale(0.5);
@@ -664,6 +719,6 @@ onUnmounted(() => {
 }
 
 .slide-up-bouncy-enter-from, .slide-up-bouncy-leave-to {
-  transform: translateY(100%);
+  transform: translateX(-50%) translateY(100%);
 }
 </style>

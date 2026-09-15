@@ -8141,7 +8141,8 @@
     "themeBtn": "Theme",
     "snowFall": "Snowfall",
     "language": "Interface language",
-    "profileData": "Profile data"
+    "profileData": "Profile data",
+    "hedgehogAssistent": "Hedgehog Assistant"
   },
   "cabinet": {
     "plusCanceled": "PLUS canceled",
@@ -10701,5 +10702,52 @@
   "recipe": {
     "done": "Great! Today's task is completed.",
     "btn": "Back"
+  },
+  "hedgehogImageHelper": {
+    "limit_text": "Today's hint limit has been reached, come back tomorrow",
+    "limit_return_text": "get PLUS and learn without limits",
+    "hintAnsweredTitle": "Hi! Let me give you a hint on what to focus on.",
+    "hintAnsweredMistakesTitle": "Want me to analyze your answer and explain the mistakes?",
+    "mainHint": "Answer breakdown:",
+    "mainHint2": "Hint:",
+    "betterToSay": "Better ways to say it:",
+    "usefulWords": "Useful words:",
+    "grammarHint": "Grammar tip:",
+    "getPlus": "Get PLUS",
+    "getHint": "Get a hint",
+    "thanks": "Got it, thanks!",
+    "close": "Close",
+    "loading": "Loading...",
+    "errorText": "An error occurred during analysis...",
+    "errorTip": "Please try again a bit later...",
+    "hintAds": " \uD83D\uDCFA Watch an ad (+1 hint)"
+  },
+  "hedgehogHleper": {
+    "greetings": "Halli hallo! How can I help?",
+    "answer": "Answer:",
+    "hintBtn": " Give me a hint",
+    "myself": " I'll try it myself",
+    "plus": "Get PLUS",
+    "thanks": "Got it, thanks",
+    "tillTommorow": "Understood, see you tomorrow",
+    "error": "An error occurred, please try again later",
+    "cancel": "Cancel",
+    "limitText": "Rolled up into a ball - resting until tomorrow.",
+    "limitText2": "You're out of hints for today. Be sure to drop by tomorrow and we'll keep improving your German together!"
+  },
+  "hedgehogModal": {
+    "ok": "Got it",
+    "onInfo": "You can turn it back on here using the toggle at the top or at any time in your profile settings.",
+    "off": "Hedgehog is disabled",
+    "letsgo": "Let's try it",
+    "title": "New assistant",
+    "intro_title": "Your personal assistant",
+    "intro-subtitle": "Will help you master German and grammar right during practice.",
+    "titleImages": "Picture description",
+    "descriptionImages": "Breaks down the picture, suggests sentence starters, and provides the right words.",
+    "titleLands": "Language Land tasks",
+    "descriptionLands": "Helps with audio, reveals word traps, and shows the correct sentence order.",
+    "titleThematic": "Thematic levels",
+    "descriptionThematic": "Explains cases and articles right during practice whenever you're in doubt."
   }
 }

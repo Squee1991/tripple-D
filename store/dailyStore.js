@@ -23,6 +23,7 @@ export const dailyStore = defineStore('dailyStore', () => {
     const unsubRef = ref(null)
     const syncing = ref(false)
     let isResettingCycle = false;
+    let isApplyingCloudUpdate = false; // Флаг для разрыва бесконечного цикла
     let tickTimer = null
     let syncTimer = null
     let visHandler = null
@@ -214,6 +215,9 @@ export const dailyStore = defineStore('dailyStore', () => {
             cloudReady.value = true
             if (!snap.exists()) return
 
+            // Блокируем реакцию на собственные записи
+            if (snap.metadata.hasPendingWrites) return
+
             const data = snap.data()
             if (!data) return
 
@@ -234,9 +238,12 @@ export const dailyStore = defineStore('dailyStore', () => {
                 }
             }
             if (preferCloud) {
+                isApplyingCloudUpdate = true
                 currentCycle.value = data
                 counters.value = { ...(data.counters || counters.value) }
                 saveLocal(data)
+
+                setTimeout(() => { isApplyingCloudUpdate = false }, 100)
             }
         }, () => {
             cloudReady.value = false
@@ -334,6 +341,8 @@ export const dailyStore = defineStore('dailyStore', () => {
     }
 
     async function recomputeAndPersist() {
+        if (isApplyingCloudUpdate) return // Защита от пинг-понга с Firebase
+
         if (online() && uid()) {
             try {
                 const ref = userDocRef()

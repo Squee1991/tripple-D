@@ -2,7 +2,9 @@
   <div class="learn-page">
     <div class="learn-container">
       <div class="page-header">
-        <VBackBtnNav @click="handleBack"/>
+        <VBackBtnNav
+            data-track="study_back_click"
+            @click="handleBack"/>
         <h1 class="page-title">
           {{ selectedCategory ? selectedCategory.title : t('nav.training') }}
         </h1>
@@ -20,6 +22,7 @@
             <button
                 v-for="(tab, index) in learnTabs"
                 :key="tab.id"
+                :data-track="'tab_clicked_' + tab.id"
                 class="mobile-nav__btn"
                 :class="{ 'mobile-nav__btn--active': activeTabId === tab.id }"
                 role="tab"
@@ -32,7 +35,12 @@
           <VTransition>
             <div v-if="activeTabId === 'practice'" key="practice" class="topics-list-container">
               <template v-for="category in practiceCategories" :key="category.id">
-                <NuxtLink v-if="category.url" :to="category.url" class="topic-list-item">
+                <NuxtLink
+                    v-if="category.url"
+                    :to="category.url"
+                    :data-track="'study_practice_clicked_' + category.id"
+                    class="topic-list-item"
+                >
                   <div class="topic-item-content">
                     <div class="topic-icon-box">
                       <img class="topic-img-icon" :src="category.icon" alt="">
@@ -45,7 +53,12 @@
             </div>
             <div v-else-if="activeTabId === 'grammar'" key="grammar" class="topics-list-container">
               <template v-for="category in grammarCategories" :key="category.id">
-                <NuxtLink v-if="category.url" :to="category.url" class="topic-list-item">
+                <NuxtLink
+                    v-if="category.url"
+                    :to="category.url"
+                    :data-track="'study_grammar_clicked_' + category.id"
+                    class="topic-list-item"
+                >
                   <div class="topic-item-content">
                     <div class="topic-icon-box">
                       <img class="topic-img-icon" :src="category.icon" alt="">
@@ -54,10 +67,15 @@
                   </div>
                   <VArrowNav/>
                 </NuxtLink>
-                <button v-else @click="openCategory(category)" class="topic-list-item">
+                <button
+                    v-else
+                    @click="openCategory(category)"
+                    class="topic-list-item"
+                    :data-track="'study_grammar_folder_' + category.id"
+                >
                   <div class="topic-item-content">
                     <div class="topic-icon-box">
-                      <img class="topic-img-icon" :src="Folder" alt="">
+                      <img class="topic-img-icon" :src="Folder" alt="Folder">
                     </div>
                     <span class="topic-label">{{ category.title }}</span>
                   </div>
@@ -73,6 +91,7 @@
                 v-for="link in selectedCategory.items"
                 :key="link.id"
                 :to="link.url"
+                :data-track="'grammar_sub_lesson_' + link.id"
                 class="topic-list-item sub-card"
             >
               <div class="topic-item-content">
@@ -143,8 +162,8 @@ const practiceCategories = computed(() => [
   { id: 'words', icon: BannerIcon, url: '/articles', title: t('sub.words') },
   { id: 'words', icon: SpeakingIcon, url: '/speak-practice', title: t('sub.speak') },
   { id: 'audio', icon: Sound, url: '/audio-tasks', title: t('sub.audio') },
-  { id: 'text', icon: TextBook, url: '/text-tasks', title: t('sub.textTask') },
   { id: 'description', icon: Photo, url: '/image-description', title: t('sub.describePicture') },
+  { id: 'text', icon: TextBook, url: '/text-tasks', title: t('sub.textTask') },
   { id: 'themen', icon: Thematic, url: '/thematic-learning', title: t('sub.themen') },
   // { id: 'exams', icon: Exam, url: '/exams', title: t('nav.tests') },
 ])

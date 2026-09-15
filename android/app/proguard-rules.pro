@@ -20,25 +20,28 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep class com.unity3d.ads.** { *; }
 -dontwarn com.unity3d.ads.**
 -dontwarn com.google.api.client.**
 -dontwarn com.google.crypto.tink.**
 -dontwarn com.amazon.device.iap.**
 -dontwarn org.joda.time.**
+-dontwarn com.google.firebase.**
 
+# Capacitor & Cordova (оставляем, это важно для гибридного аппа)
 -keep public class com.getcapacitor.** { *; }
 -keep class * extends com.getcapacitor.Plugin { *; }
 -keepclassmembers class * extends com.getcapacitor.Plugin {
     public <methods>;
 }
--keepattributes JavascriptInterface
+-keep @com.getcapacitor.annotation.CapacitorPlugin class * { *; }
 -keepclassmembers class * {
+    @com.getcapacitor.PluginMethod public *;
     @android.webkit.JavascriptInterface <methods>;
 }
--keep class com.revenuecat.** { *; }
--keep class com.google.android.gms.ads.** { *; }
+-keepattributes JavascriptInterface
 -keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod
--dontwarn com.google.firebase.**
--keep class com.google.firebase.** { *; }
+
+# Плагины
 -keep class com.capawesome.** { *; }
+-keep public class org.apache.cordova.** { *; }
+-keep class * extends org.apache.cordova.CordovaPlugin { *; }
