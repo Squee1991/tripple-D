@@ -40,10 +40,9 @@
             />
           </div>
         </div>
-
         <div class="quest__section">
           <div v-if="hasTip" class="quest__tip-container">
-            <button class="quest__tip-btn" @click="showTipModal = true">💡</button>
+            <button class="quest__tip-btn" data-track="quest_hint_rule_opened" @click="showTipModal = true">💡</button>
           </div>
           <div class="quest__question">
             <template v-if="questStore.task.type === 'input' && questStore.showResult">
@@ -300,6 +299,9 @@ const MAX_ADS = 5;
 const remainingAds = ref(MAX_ADS);
 const PRICE = 10
 
+const { $track } = useNuxtApp()
+let taskStartTime = Date.now()
+
 const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   openLeave()
 }, {
@@ -490,8 +492,14 @@ function restart() {
 function handleClick() {
   unlockAudioByUserGesture()
   if (!questStore.showResult) {
+    const durationSec = Math.round((Date.now() - taskStartTime) / 1000)
     questStore.confirm(previouslyCleared.value)
+    $track('quest_task_answered', {
+      quest_id: questId.value,
+      duration_seconds: durationSec
+    })
   } else {
+    taskStartTime = Date.now()
     questStore.nextTask(previouslyCleared.value)
   }
 }
@@ -529,14 +537,27 @@ const progressSteps = computed(() =>
 )
 
 onBeforeRouteLeave((to, from, next) => {
+  if (to.path === '/pay' || to.name === 'pay') {
+    next()
+    return
+  }
+
   if (!allowLeave && shouldBlockLeaving.value) {
     pendingRoute.value = () => router.push(to)
     showLeaveModal.value = true
     next(false)
-  } else next()
+  } else {
+    next()
+  }
 })
 
 function confirmLeave() {
+  const durationSec = Math.round((Date.now() - taskStartTime) / 1000)
+  $track('quest_abandoned', {
+    quest_id: questId.value,
+    duration_seconds: durationSec,
+    dropped_at_index: questStore.currentIndex
+  })
   allowLeave = true
   showLeaveModal.value = false
   if (pendingRoute.value) pendingRoute.value()
@@ -604,6 +625,19 @@ function beforeUnloadHandler(e) {
   e.preventDefault()
 }
 
+watch(() => questStore.finished, (isFinished) => {
+  if (isFinished) {
+    $track('quest_finished', {
+      quest_id: questId.value,
+      region: regionKey.value,
+      success: questStore.success,
+      has_mistakes: questStore.hasMistakes,
+      correct_count: questStore.correctCount,
+      required_tasks: questStore.requiredTasks
+    })
+  }
+})
+
 watch([questId, regionKey], () => {
       questStore.loading = true
       questStore.error = ''
@@ -619,6 +653,13 @@ watch([questId, regionKey], () => {
       const initQuest = async () => {
         await questStore.loadProgressFromFirebase?.()
         await questStore.loadQuest(questId.value, regionKey.value)
+        $track('quest_session_started', {
+          quest_id: questId.value,
+          region: regionKey.value,
+          total_tasks: questStore.requiredTasks,
+          lives_initial: questStore.lives
+        })
+        taskStartTime = Date.now()
         const hasAccept = questStore.quest?.tasks?.some(t => t.accept?.length)
         if (hasAccept && localStorage.getItem(NUMBERS_HINT_KEY) !== 'true') {
           showHint.value = true
@@ -1054,9 +1095,6 @@ watchEffect(() => {
   animation: shake 0.4s ease-in-out;
 }
 
-/* =========================================
-   СТАЙЛИНГ НОВОЙ МОДАЛКИ (END OF QUEST)
-   ========================================= */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -1065,7 +1103,7 @@ watchEffect(() => {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  z-index: 1000;
+  z-index: 99999;
   padding: 0;
 }
 

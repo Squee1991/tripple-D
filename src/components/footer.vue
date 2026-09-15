@@ -8,6 +8,7 @@
             v-for="(item, index) in footerNav"
             :key="item.id"
             :to="item.path"
+            :data-track="'footer_nav_clicked_' + item.id"
             class="nav__item"
             :class="{ 'is-active': activeIndex === index }"
         >

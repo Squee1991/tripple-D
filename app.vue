@@ -4,7 +4,7 @@
     <AchievementToast @toast-finished="onToastFinished" />
     <VLost/>
     <VRankOverlay/>
-    <VHedgehogIntroModal/>
+    <VHedgehogIntroModal v-if="showHedgehogModal" @close="showHedgehogModal = false"/>
     <VNetwork/>
   </NuxtLayout>
 </template>
@@ -14,8 +14,6 @@ import VHedgehogIntroModal from "~/src/components/V-HedgehogIntroModal.vue";
 
 import VRankOverlay from "./src/components/V-rank-overlay.vue";
 import { StatusBar, Style } from '@capacitor/status-bar';
-import FeedBack from './src/components/V-feedback.vue'
-import VStepHint from "./src/components/V-stephint.vue";
 import AchievementToast from './src/components/AchievementToast.vue'
 import VLost from './src/components/V-lost.vue'
 import { useRouter, useRoute } from 'vue-router'
@@ -23,7 +21,6 @@ import { useAchievementStore } from './store/achievementStore.js'
 import { useCurrentUser } from "vuefire";
 import { userlangStore } from './store/learningStore.js'
 import { userAuthStore } from './store/authStore.js'
-import { useSentencesStore } from './store/sentencesStore.js';
 import { useQuestStore } from './store/questStore.js'
 import { useLocalStatGameStore } from './store/localSentenceStore.js'
 import { useBillingStore } from './store/billingStore.js'
@@ -69,15 +66,16 @@ const route = useRoute()
 const user = useCurrentUser()
 const daily = dailyStore()
 const colorMode = useColorMode();
+const showHedgehogModal = ref(false)
+
+
+const triggerHedgehogModal = () => {
+  if (!authStore.uid || user.value?.isAnonymous) return
+  showHedgehogModal.value = true
+}
 
 const onToastFinished = () => {
-  if (authStore.uid) {
-    const key = `step_hint_seen_${authStore.uid}`
-    if (!localStorage.getItem(key)) {
-      showStepHint.value = true
-      localStorage.setItem(key, 'true')
-    }
-  }
+  triggerHedgehogModal()
 }
 
 onMounted(async () => {

@@ -8,7 +8,7 @@
     <VLoginPreloader v-if="isAdLoading"/>
     <template v-if="viewMode === 'list'">
       <header class="vocab-header list-header">
-        <button class="btn-icon-back" @click="handleBackClick">
+        <button class="btn-icon-back" data-track="speak_words_list_back_click" @click="handleBackClick">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -34,7 +34,7 @@
     </template>
     <template v-else-if="viewMode === 'practice'">
       <header class="vocab-header" v-if="currentWord">
-        <button class="btn-icon-back" @click="handleBackClick">
+        <button class="btn-icon-back" data-track="speak_words_practice_back_click" @click="handleBackClick">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -140,6 +140,9 @@ const options = ref([]);
 const selectedAnswer = ref(null);
 const allTranslationsRef = ref([]);
 
+const { $track } = useNuxtApp();
+let practiceStartTime = 0;
+
 const correctAnswers = ref(0);
 const incorrectAnswers = ref(0);
 const hasChecked = ref(false);
@@ -204,6 +207,15 @@ const checkAnswer = () => {
   } else {
     incorrectAnswers.value++;
   }
+
+  if (currentStep.value >= totalSteps.value - 1) {
+    const durationSec = Math.round((Date.now() - practiceStartTime) / 1000);
+    $track('vocab_practice_finished', {
+      theme: route.query.theme,
+      level: route.query.level,
+      duration_seconds: durationSec
+    });
+  }
 };
 
 const nextStep = () => {
@@ -231,6 +243,12 @@ const startPractice = () => {
   showInterstitial(() => {
     isAdLoading.value = false;
     viewMode.value = 'practice';
+    practiceStartTime = Date.now();
+    $track('vocab_practice_started', {
+      theme: route.query.theme,
+      level: route.query.level,
+      words_count: wordList.value.length
+    });
 
     const allTranslations = wordList.value.map(w => w.correctTranslation);
     allTranslationsRef.value = allTranslations;
@@ -282,6 +300,16 @@ const handleBackClick = () => {
 };
 
 const confirmExit = () => {
+  if (viewMode.value === 'practice' && currentStep.value < totalSteps.value) {
+    const durationSec = Math.round((Date.now() - practiceStartTime) / 1000);
+    $track('vocab_practice_abandoned', {
+      theme: route.query.theme,
+      level: route.query.level,
+      duration_seconds: durationSec,
+      completed_steps: currentStep.value,
+      total_steps: totalSteps.value
+    });
+  }
   isConfirmedExit.value = true;
   showExitModal.value = false;
   if (pendingRoute) {

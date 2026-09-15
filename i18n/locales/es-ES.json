@@ -8118,7 +8118,8 @@
     "themeBtn": "Tema",
     "snowFall": "Nevada",
     "language": "Idioma de la interfaz",
-    "profileData": "Datos del perfil"
+    "profileData": "Datos del perfil",
+    "hedgehogAssistent": "Erizito asistente"
   },
   "cabinet": {
     "plusCanceled": "PLUS cancelado",
@@ -10678,5 +10679,52 @@
   "recipe": {
     "done": "¡Excelente! La tarea de hoy está completada.",
     "btn": "Volver"
+  },
+  "hedgehogImageHelper": {
+    "limit_text": "El límite de pistas para hoy se ha agotado, vuelve mañana",
+    "limit_return_text": "consigue PLUS y aprende sin límites",
+    "hintAnsweredTitle": "¡Hola! Déjame darte una pista sobre en qué fijarte.",
+    "hintAnsweredMistakesTitle": "¿Quieres que analice tu respuesta y te explique los errores?",
+    "mainHint": "Desglose de la respuesta:",
+    "mainHint2": "Pista:",
+    "betterToSay": "Cómo decirlo mejor:",
+    "usefulWords": "Palabras útiles:",
+    "grammarHint": "Consejo de gramática:",
+    "getPlus": "Obtener PLUS",
+    "getHint": "Obtener pista",
+    "thanks": "¡Entendido, gracias!",
+    "close": "Cerrar",
+    "loading": "Cargando...",
+    "errorText": "Ocurrió un error durante el análisis...",
+    "errorTip": "Inténtalo de nuevo un poco más tarde...",
+    "hintAds": " \uD83D\uDCFA Ver anuncio (+1 pista)"
+  },
+  "hedgehogHleper": {
+    "greetings": "¡Halli hallo! ¿En qué puedo ayudar?",
+    "answer": "Respuesta:",
+    "hintBtn": " Dame una pista",
+    "myself": " Lo intentaré yo mismo",
+    "plus": "Adquirir PLUS",
+    "thanks": "¡Entendido, gracias",
+    "tillTommorow": "Entendido, hasta mañana",
+    "error": "Ocurrió un error, inténtalo más tarde",
+    "cancel": "Cancelar",
+    "limitText": "Enroscado en una bola - descansando hasta mañana.",
+    "limitText2": "Se te acabaron las pistas por hoy. ¡Asegúrate de pasar mañana y seguiremos mejorando tu alemán juntos!"
+  },
+  "hedgehogModal": {
+    "ok": "Entendido",
+    "onInfo": "Puedes volver a activarlo aquí usando el interruptor de la parte superior o en cualquier momento en la configuración de tu perfil.",
+    "off": "El erizo está desactivado",
+    "letsgo": "¡Vamos a probar",
+    "title": "Nuevo asistente",
+    "intro_title": "Tu asistente personal",
+    "intro-subtitle": "Te ayudará a dominar el alemán y la gramática directamente durante la práctica.",
+    "titleImages": "Descripción de imágenes",
+    "descriptionImages": "Analiza la imagen, sugiere estructuras para oraciones y las palabras necesarias.",
+    "titleLands": "Tareas de las tierras del idioma",
+    "descriptionLands": "Ayuda con el audio, revela trampas de vocabulario y muestra el orden correcto de las frases.",
+    "titleThematic": "Niveles temáticos",
+    "descriptionThematic": "Explica los casos y artículos en plena práctica si tienes dudas."
   }
 }

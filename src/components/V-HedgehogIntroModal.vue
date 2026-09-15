@@ -4,43 +4,33 @@
       <button class="hh-close-btn" aria-label="Закрыть" @click="closeModal">✕</button>
       <div class="hh-scroll-container">
         <div class="hh-hero-section">
-          <div class="hh-badge">Новый помощник</div>
+          <div class="hh-badge">{{ t('hedgehogModal.title')}}</div>
           <div class="hh-avatar-stage">
             <div class="hh-character-glow"></div>
             <img :src="Assistant" alt="Hedgehog Tutor" class="hh-character-img" />
             <div class="hh-character-pedestal"></div>
           </div>
-          <h2 class="hh-intro-title">Твой персональный ассистент</h2>
+          <h2 class="hh-intro-title">{{ t('hedgehogModal.intro_title')}}</h2>
           <p class="hh-intro-subtitle">
-            Поможет освоить немецкий прямо во время практики.
+            {{ t('hedgehogModal.intro-subtitle')}}
           </p>
         </div>
         <div class="hh-features-wrapper">
-          <div class="hh-feature-card">
-            <div class="hh-feature-icon">🖼️</div>
+          <div
+              v-for="(feature, index) in features"
+              :key="index"
+              class="hh-feature-card"
+          >
+            <div class="hh-feature-icon">{{ feature.icon }}</div>
             <div class="hh-feature-info">
-              <h4>Помощь с картинками</h4>
-              <p>Разберет сцену, подскажет нужные слова и как лучше начать предложение.</p>
-            </div>
-          </div>
-          <div class="hh-feature-card">
-            <div class="hh-feature-icon">💡</div>
-            <div class="hh-feature-info">
-              <h4>Грамматика</h4>
-              <p>Пояснит падежи, артикли и окончания прямо в процессе урока.</p>
-            </div>
-          </div>
-          <div class="hh-feature-card">
-            <div class="hh-feature-icon">🎯</div>
-            <div class="hh-feature-info">
-              <h4>Разбор твоих ответов</h4>
-              <p>Исправит ошибки, похвалит за удачные обороты и покажет эталонную формулировку.</p>
+              <h4>{{ t(feature.title) }}</h4>
+              <p>{{ t(feature.description) }}</p>
             </div>
           </div>
         </div>
       </div>
       <div class="hh-footer-action">
-        <button class="hh-btn-3d" @click="closeModal">Понятно</button>
+        <button class="hh-btn-3d" @click="closeModal">{{ t('hedgehogModal.letsgo')}}</button>
       </div>
     </div>
   </transition>
@@ -49,28 +39,44 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import Assistant from '~/assets/images/Assistent.png'
-
+const { t } = useI18n()
 const isVisible = ref(false)
 const STORAGE_KEY = 'hh_assistant_intro_seen'
 
+const features = [
+  {
+    icon: '🖼️',
+    title: 'hedgehogModal.titleImages',
+    description: 'hedgehogModal.descriptionImages'
+  },
+  {
+    icon: '🗺️',
+    title: 'hedgehogModal.titleLands',
+    description: 'hedgehogModal.descriptionLands'
+  },
+  {
+    icon: '💡',
+    title: 'hedgehogModal.titleThematic',
+    description: 'hedgehogModal.descriptionThematic'
+  }
+]
+
 onMounted(() => {
-  // Раскомментируй для продакшена:
-  // const isSeen = localStorage.getItem(STORAGE_KEY)
-  // if (!isSeen) {
-  setTimeout(() => {
-    isVisible.value = true
-  }, 300)
-  // }
+  const isSeen = localStorage.getItem(STORAGE_KEY)
+  if (!isSeen) {
+    setTimeout(() => {
+      isVisible.value = true
+    }, 300)
+  }
 })
 
 const closeModal = () => {
   isVisible.value = false
-  // localStorage.setItem(STORAGE_KEY, 'true')
+  localStorage.setItem(STORAGE_KEY, 'true')
 }
 </script>
 
 <style scoped>
-
 .hh-fullscreen-intro {
   position: fixed;
   inset: 0;
@@ -85,12 +91,12 @@ const closeModal = () => {
 .hh-close-btn {
   position: absolute;
   top: max(16px, env(safe-area-inset-top, 16px));
-  left:  18px;
+  left: 18px;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(8px);
   border: none;
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   color: #ffffff;
   font-size: 15px;
@@ -113,11 +119,23 @@ const closeModal = () => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 24px;
+  padding-bottom: 6px;
+}
+
+.hh-hero-section:before {
+  background: #0099e6;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 90px;
+  left: 0;
+  top: -100px;
+  z-index: 1;
 }
 
 .hh-hero-section {
   width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -175,7 +193,6 @@ const closeModal = () => {
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.3));
 }
 
-
 .hh-character-pedestal {
   width: 130px;
   height: 24px;
@@ -213,7 +230,7 @@ const closeModal = () => {
   max-width: 420px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
   padding: 8px 20px 0;
 }
 
@@ -248,7 +265,7 @@ const closeModal = () => {
 
 .hh-feature-info p {
   margin: 0;
-  font-size: 12px;
+  font-size: 13px;
   color: #8c97b2;
   line-height: 1.35;
 }

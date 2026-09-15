@@ -6,7 +6,7 @@
     <div class="theme-page-container">
       <div class="theme__title-wrapper">
         <div class="theme__header">
-          <button @click="goBack" class="btn-icon-back">
+          <button @click="goBack" class="btn-icon-back" data-track="articles_themen_back_click">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                  stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
               <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -92,7 +92,7 @@
         <div v-if="showModesBlock" class="learning-modes-block">
           <div class="learning__modes-wrapper">
             <div class="modes-header-container">
-              <button @click="clearSelectedTopic" class="close-modes-btn">
+              <button @click="clearSelectedTopic" class="close-modes-btn" data-track="article_modes_closed">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                      stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -143,7 +143,7 @@ import VTransition from "~/src/components/V-transition.vue"
 import VPremiumModal from "~/src/components/V-premiumModal.vue"
 
 const getTopicColor = (index) => topicColors[index % topicColors.length]
-
+const { $track } = useNuxtApp()
 const { t, locale } = useI18n()
 const showModesBlock = ref(false)
 const router = useRouter()
@@ -221,11 +221,18 @@ const isTopicUnlocked = (key) => {
 
 const selectTopic = (key) => {
   if (isTopicUnlocked(key)) {
+    $track('article_topic_selected', {
+      topic_id: key,
+      is_completed: themeProgress.value[key]?.learned === themeProgress.value[key]?.total
+    })
     window.history.pushState({isModesOpen: true}, '')
     selectedTopic.value = key
     selectedModes.value = []
     showModesBlock.value = true
   } else {
+    $track('article_topic_locked_clicked', {
+      topic_id: key
+    })
     showPremiumModal.value = true
   }
 }
@@ -233,11 +240,14 @@ const selectTopic = (key) => {
 const startLearning = async () => {
   if (!selectedModes.value.length || isLoading.value) return
   isLoading.value = true
-
+  const sortedSelectedModes = baseModes.filter(m => selectedModes.value.includes(m.key)).map(m => m.key)
+  $track('article_learning_started', {
+    topic_id: selectedTopic.value,
+    modes: sortedSelectedModes.join(','),
+    modes_count: sortedSelectedModes.length
+  })
   try {
-    const sortedSelectedModes = baseModes.filter(m => selectedModes.value.includes(m.key)).map(m => m.key)
     const currentLangKey = locale.value || 'en'
-
     const topicWordsLocal = (themeList.value[selectedTopic.value] || [])
         .filter(word => {
           const globalWord = store.words.find(w => w.de === word.de && w.topic === selectedTopic.value)

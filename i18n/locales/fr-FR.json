@@ -8114,7 +8114,8 @@
     "themeBtn": "Thème",
     "snowFall": "Chute de neige",
     "language": "Langue de l'interface",
-    "profileData": "Données du profil"
+    "profileData": "Données du profil",
+    "hedgehogAssistent": "Hérisson assistant"
   },
   "cabinet": {
     "plusCanceled": "PLUS annulé",
@@ -10674,5 +10675,52 @@
   "recipe": {
     "done": "Excellent ! La tâche du jour est terminée.",
     "btn": "Retour"
+  },
+  "hedgehogImageHelper": {
+    "limit_text": "La limite d'indices pour aujourd'hui est atteinte, revenez demain",
+    "limit_return_text": "obtenez PLUS et apprenez sans limites",
+    "hintAnsweredTitle": "Salut ! Laisse-moi te donner un indice sur ce qu'il faut surveiller.",
+    "hintAnsweredMistakesTitle": "Tu veux que j'analyse ta réponse et t'explique les erreurs ?",
+    "mainHint": "Analyse de la réponse :",
+    "mainHint2": "Indice :",
+    "betterToSay": "Comment le dire mieux :",
+    "usefulWords": "Mots utiles :",
+    "grammarHint": "Astuce de grammaire :",
+    "getPlus": "Obtenir PLUS",
+    "getHint": "Obtenir un indice",
+    "thanks": "Compris, merci !",
+    "close": "Fermer",
+    "loading": "Chargement...",
+    "errorText": "Une erreur s'est produite lors de l'analyse...",
+    "errorTip": "Réessaie un peu plus tard...",
+    "hintAds": " \uD83D\uDCFA Regarder une pub (+1 indice)"
+  },
+  "hedgehogHleper": {
+    "greetings": "Halli hallo ! Comment puis-je aider ?",
+    "answer": "Réponse :",
+    "hintBtn": " Donne-moi un indice",
+    "myself": " Je vais essayer moi-même",
+    "plus": "Obtenir PLUS",
+    "thanks": "Compris, merci",
+    "tillTommorow": "Compris, à demain",
+    "error": "Une erreur s'est produite, réessayez plus tard",
+    "cancel": "Annuler",
+    "limitText": "En boule - je me repose jusqu'à demain.",
+    "limitText2": "Tu n'as plus d'indices pour aujourd'hui. Repasse absolument demain et nous continuerons à améliorer ton allemand ensemble !"
+  },
+  "hedgehogModal": {
+    "ok": "Compris",
+    "onInfo": "Vous pouvez le réactiver ici à l'aide de l'interrupteur en haut ou à tout moment dans les paramètres de votre profil.",
+    "off": "Le hérisson est désactivé",
+    "letsgo": "C'est parti",
+    "title": "Nouvel assistant",
+    "intro_title": "Votre assistant personnel",
+    "intro-subtitle": "Vous aidera à maîtriser l'allemand et la grammaire directement pendant la pratique.",
+    "titleImages": "Description d'images",
+    "descriptionImages": "Analyse l'image, suggère des bases de phrases toutes prêtes et les mots adéquats.",
+    "titleLands": "Missions des terres linguistiques",
+    "descriptionLands": "Aide avec l'audio, déjoue les pièges de vocabulaire et indique l'ordre correct des phrases.",
+    "titleThematic": "Niveaux thématiques",
+    "descriptionThematic": "Explique les cas et les articles directement pendant la pratique en cas de doute."
   }
 }

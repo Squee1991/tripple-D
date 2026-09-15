@@ -23,7 +23,7 @@ const levels = ['A1', 'A2', 'B1']
 const levelColors = ['#49b36a', '#88B5FF', '#FF9F7F']
 const topicColors = ['#FFEB7F', '#9DFFBB', '#FFAFF3', '#88B5FF', '#FF9F7F', '#AFAFFF', '#7FFFDF', '#FFD1AF']
 const showPremiumModal = ref(false)
-
+const { $track } = useNuxtApp()
 const overlayData = {
   title: t('audioTasks.overlayDataTitle'),
   text: t('audioTasks.overlayDataText'),
@@ -35,8 +35,10 @@ const availableTopics = computed(() => allTasks.value[currentLevel.value] || [])
 
 const handleBackClick = () => {
   if (screen.value === 'topics') {
+    $track('audio_topics_back_click')
     window.history.back()
   } else {
+    $track('audio_levels_back_click')
     router.push('/')
   }
 }
@@ -73,6 +75,7 @@ const isTopicUnlocked = (index) => {
 };
 
 const selectLevel = (level) => {
+  $track('audio_level_selected', { level: level })
   window.history.pushState({isAudioTopics: true}, '')
   store.setLevel(level)
   screen.value = 'topics'
@@ -80,6 +83,13 @@ const selectLevel = (level) => {
 
 const selectTopic = (topic, index) => {
   if (isTopicUnlocked(index)) {
+    $track('audio_topic_started', {
+      topic_id: topic.id,
+      level: currentLevel.value,
+      completed_tasks: getTopicCompleted(topic),
+      total_tasks: topic.tasks?.length || 0
+    })
+
     store.setCurrentTopicId(topic.id)
     router.push('/audio-tasks/session')
   } else {

@@ -95,7 +95,7 @@ useSeoMeta({
 const router = useRouter()
 const {t} = useI18n()
 const authStore = userAuthStore()
-
+const { $track } = useNuxtApp()
 const levels = ['A1', 'A2', 'B1']
 const viewState = ref('topics')
 const selectedTopic = ref(null)
@@ -125,9 +125,15 @@ const closeModal = () => {
 
 function selectTopic(topic, index) {
   if (index === 0 || authStore.isPremium) {
+    $track('image_desc_topic_selected', {
+      topic_id: topic.id
+    })
     selectedTopic.value = topic
     viewState.value = 'level'
   } else {
+    $track('image_desc_topic_locked_clicked', {
+      topic_id: topic.id
+    })
     showPremiumModal.value = true
   }
 }
@@ -137,21 +143,29 @@ function selectLevel(level) {
 }
 
 function startGame() {
-    sessionConfig.value = {
-      topicId: selectedTopic.value.id,
-      level: selectedLevel.value
-    }
-    router.push('/image-description/session')
+  $track('image_desc_game_started', {
+    topic_id: selectedTopic.value?.id,
+    level: selectedLevel.value
+  })
+
+  sessionConfig.value = {
+    topicId: selectedTopic.value.id,
+    level: selectedLevel.value
+  }
+  router.push('/image-description/session')
 }
 
 function goBack() {
   if (viewState.value === 'level') {
+    $track('image_desc_level_back_click')
     selectedTopic.value = null
     viewState.value = 'topics'
   } else {
+    $track('image_desc_menu_back_click')
     router.push('/')
   }
 }
+
 </script>
 
 <style scoped>

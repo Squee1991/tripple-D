@@ -143,11 +143,17 @@ const userSelections = ref({})
 const taskResults = ref({})
 const activeModal = ref(null)
 const sessionStats = ref({correct: 0, partial: 0, wrong: 0, passed: false})
+
+const { $track } = useNuxtApp()
+let sessionStartTime = 0
+
 const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   handleExitTrigger()
 }, {
   ignoreSelector: '.chat-flow, .quest-option-button, .quiz-btn, .quest-option'
 })
+
+
 
 const progressPercentage = computed(() => {
   if (!sessionTasks.value.length) return 0
@@ -191,8 +197,16 @@ const modalData = computed(() => {
     confirmLabel: t('imageDescription.leave'),
     cancelLabel: t('imageDescription.continue'),
     onConfirm: () => {
+      const durationSec = Math.round((Date.now() - sessionStartTime) / 1000)
+      $track('audio_session_abandoned', {
+        topic_id: currentTopic.value?.id,
+        duration_seconds: durationSec,
+        completed_tasks: currentIndex.value,
+        total_tasks: sessionTasks.value.length
+      })
       stopAllAudio();
       router.push('/audio-tasks')
+
     },
     onCancel: () => activeModal.value = null
   }
@@ -263,6 +277,7 @@ const checkResult = () => {
   const corr = task.correctIndices
   const cCount = sel.filter(i => corr.includes(i)).length
   const wCount = sel.filter(i => !corr.includes(i)).length
+  const isSuccess = (cCount === corr.length && wCount === 0)
   taskResults.value[task.id] = {
     checked: true,
     status: (cCount === corr.length && wCount === 0) ? 'success' : 'wrong',
@@ -270,6 +285,13 @@ const checkResult = () => {
     correctCount: cCount,
     missedCount: corr.length - cCount
   }
+
+  $track('audio_task_answered', {
+    topic_id: currentTopic.value?.id,
+    task_id: task.id,
+    is_correct: isSuccess,
+    task_index: currentIndex.value
+  })
 }
 
 const goToNextTask = () => {
@@ -297,6 +319,13 @@ const finishAndSave = async () => {
   })
   sessionStats.value = {correct: c, partial: p, wrong: w, passed: c >= Math.ceil(sessionTasks.value.length * 0.8)}
   await store.saveTopicProgress(currentTopic.value.id, results)
+  const durationSec = Math.round((Date.now() - sessionStartTime) / 1000)
+  $track('audio_session_finished', {
+    topic_id: currentTopic.value?.id,
+    passed: sessionStats.value.passed,
+    correct_count: c,
+    duration_seconds: durationSec
+  })
   activeModal.value = 'finish'
 }
 
@@ -307,6 +336,14 @@ const initializeSession = () => {
   currentIndex.value = 0
   userSelections.value = {}
   taskResults.value = {}
+
+  sessionStartTime = Date.now()
+  $track('audio_session_started', {
+    topic_id: currentTopic.value.id,
+    level: currentLevel.value,
+    total_tasks: sessionTasks.value.length
+  })
+
   const prog = userProgress.value[currentTopic.value.id] || {}
   const tasks = currentTopic.value.tasks
   const toPlay = tasks.some(t => prog[t.id] !== 'success') ? tasks.filter(t => prog[t.id] !== 'success') : [...tasks]
@@ -664,21 +701,21 @@ watch(currentIndex, stopAllAudio)
   background-color: #58cc02 !important;
   color: #ffffff !important;
   border: none !important;
-  box-shadow: 0 4px 0 #46a302 !important;
+  box-shadow: 0 6px 0 #46a302 !important;
 }
 
 .quiz-btn-next {
   background-color: #1cb0f6 !important;
   color: #ffffff !important;
   border: none !important;
-  box-shadow: 0 4px 0 #1899d6 !important;
+  box-shadow: 0 6px 0 #1899d6 !important;
 }
 
 .quiz-btn-finish {
   background-color: #ffc800 !important;
   color: #ffffff !important;
   border: none !important;
-  box-shadow: 0 4px 0 #e5a400 !important;
+  box-shadow: 0 6px 0 #e5a400 !important;
 }
 
 .quiz-btn-skip {

@@ -37,7 +37,7 @@
           </div>
         </div>
       </transition>
-      <transition name="ach-toast">
+      <transition name="ach-toast" @after-leave="checkFinished">
         <div
             v-if="awardVisible"
             class="ach-toast-card ach-toast-card--award"
@@ -46,7 +46,7 @@
             @mouseleave="resumeAward()"
         >
           <div class="sparkles"></div>
-          <button class="ach-toast-close" @click="awardVisible = false" aria-label="Закрыть">×</button>
+          <button class="ach-toast-close" @click="closeAward()" aria-label="Закрыть">×</button>
           <div class="ach-toast-icon">
             <span class="ach-toast-icon-emoji">🏆</span>
           </div>
@@ -179,11 +179,15 @@ function awardTick(ts) {
   awardLastTick = ts
   awardRemaining.value -= d
   if (awardRemaining.value <= 0) {
-    awardVisible.value = false
-    clearAwardTimer()
+    closeAward()
   } else {
     awardRAF = requestAnimationFrame(awardTick)
   }
+}
+
+function closeAward() {
+  clearAwardTimer()
+  awardVisible.value = false
 }
 
 function pauseAward() {
@@ -217,10 +221,9 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
-  clearTimer();
+  clearTimer()
   clearAwardTimer()
 })
-
 </script>
 
 <style scoped>
@@ -252,7 +255,6 @@ onBeforeUnmount(() => {
   position: relative;
   overflow: hidden;
 }
-
 
 .ach-toast-card--award {
   background: linear-gradient(135deg, #8c6922, #604818);
