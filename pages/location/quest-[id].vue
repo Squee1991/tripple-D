@@ -639,6 +639,7 @@ watch(() => questStore.finished, (isFinished) => {
 })
 
 watch([questId, regionKey], () => {
+      if (!questId.value || !regionKey.value) return;
       questStore.loading = true
       questStore.error = ''
       questStore.quest = null
