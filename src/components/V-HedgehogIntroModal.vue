@@ -54,19 +54,19 @@ const isVisible = ref(false)
 const STORAGE_KEY = 'hh_assistant_intro_seen'
 
 onMounted(() => {
-  // Раскомментируй для продакшена:
-  // const isSeen = localStorage.getItem(STORAGE_KEY)
-  // if (!isSeen) {
+  const isSeen = localStorage.getItem(STORAGE_KEY)
+  if (!isSeen) {
   setTimeout(() => {
     isVisible.value = true
   }, 300)
-  // }
+   }
 })
 
 const closeModal = () => {
   isVisible.value = false
-  // localStorage.setItem(STORAGE_KEY, 'true')
+  localStorage.setItem(STORAGE_KEY, 'true')
 }
+
 </script>
 
 <style scoped>
