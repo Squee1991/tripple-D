@@ -114,7 +114,7 @@ User selected (if any): "${selectedAnswer}"
 Explain in 1-2 short sentences (max 150 chars) why the article "${answer}" is needed in the blank for this sentence.
 If the user chose "${selectedAnswer}", briefly explain why it's wrong (mention gender, case, or preposition government).
 STRICT RULES:
-- When explaining grammar endings, always use the phrase "берет у артикля".
+- When explaining adjective endings (declension), clearly explain how endings depend on or reflect the preceding article, writing strictly in ${userLocale}.
 - When the question is "Where?" (Wo?), use Dativ and put the noun's article in Dativ. For Akkusativ, apply the same rule.
 - Respond in THIS exact language: ${userLocale}.
 
@@ -139,7 +139,8 @@ STRICT RULES FOR HINT:
    - "tr": ONLY the short translation in ${userLocale} without dashes.
 3. "grammarTip":
    - 1 short practical sentence on word order or endings strictly in ${userLocale}.
-   - If userLocale is "ru" and you explain adjective/noun endings taking cues from an article, use the phrasing "берет у артикля". For other languages, express this concept naturally in ${userLocale}.`;
+   - Explain grammatical agreement and endings naturally and logically, highlighting how articles influence adjective endings when relevant, entirely in ${userLocale}.
+   `;
 
 			systemPrompt = `You are "Hedgehog", an upbeat, friendly German language tutor.
 Target German level: ${userLevel}. User interface language: ${userLocale}.
@@ -165,7 +166,7 @@ Correct answer: "${correctAnswer}"
 
 Give a brief explanation in 1-2 short sentences why "${correctAnswer}" is the right choice.
 STRICT RULES:
-- When explaining grammar endings taking cues from an article, use the phrasing "берет у артикля".
+- When explaining grammar endings taking cues from an article, clearly explain this relationship entirely in ${userLocale} without mixing languages.
 - Respond in THIS exact language: ${userLocale}.
 
 CRITICAL: Respond ONLY with a valid JSON object matching this schema:
