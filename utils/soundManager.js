@@ -14,11 +14,9 @@ export function initSound() {
 		const saved = localStorage.getItem('sound-enabled')
 		if (saved !== null) enabled = saved === 'true'
 	} catch {}
-
 	correctEl        = new Audio('/sounds/correct.wav')
 	wrongEl          = new Audio('/sounds/mistake.wav')
 	levelCompletedEl = new Audio('/sounds/level_completed.wav')
-
 	correctEl.preload        = 'auto'
 	wrongEl.preload          = 'auto'
 	levelCompletedEl.preload = 'auto'
