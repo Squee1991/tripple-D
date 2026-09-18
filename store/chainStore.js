@@ -5,10 +5,21 @@ import {doc, getDoc, getFirestore, runTransaction, increment, setDoc} from 'fire
 import {getAuth, onAuthStateChanged} from 'firebase/auth'
 import {dailyStore} from './dailyStore.js'
 import {userlangStore} from './learningStore.js'
-import {userAuthStore} from './authStore.js' // Подключаем стор авторизации
+import {userAuthStore} from './authStore.js'
 
-const REGEN_INTERVAL_MS = 60 * 60 * 1000
 const MAX_LIVES = 5
+
+function getRegenDurationForCurrentLives(currentLivesCount) {
+	const lostLives = MAX_LIVES - currentLivesCount
+	switch (lostLives) {
+		case 1: return 1 * 60 * 1000
+		case 2: return 2 * 60 * 1000
+		case 3: return 3 * 60 * 1000
+		case 4: return 4 * 60 * 1000
+		case 5: return 5 * 60 * 1000
+		default: return 1 * 60 * 1000
+	}
+}
 
 export const userChainStore = defineStore('chain', () => {
 	const db = getFirestore()
@@ -39,8 +50,12 @@ export const userChainStore = defineStore('chain', () => {
 	const isRetryMode = ref(false)
 	const daily = dailyStore()
 	const langStore = userlangStore()
-	const authStore = userAuthStore() // Инициализируем стор авторизации
+	const authStore = userAuthStore()
 	let lifeTickerId = null
+	const regionQuests = ref([])
+	const currentRegenIntervalMs = computed(() => {
+		return getRegenDurationForCurrentLives(lives.value)
+	})
 
 	const totalQuestTasks = computed(() => quest.value?.conditions?.requiredTasks ?? quest.value?.tasks?.length ?? 0)
 	const minCorrect = computed(() => quest.value?.conditions?.minCorrect ?? totalQuestTasks.value)
@@ -152,23 +167,43 @@ export const userChainStore = defineStore('chain', () => {
 		return doc(db, 'users', user.uid)
 	}
 
+	// Алгоритм с плавающими интервалами
 	function applyLifeRegenIfNeeded() {
-		if (lives.value >= maxLives) return false
-		if (!lastLifeAtMs.value) lastLifeAtMs.value = Date.now()
-		const now = Date.now()
-		const ticks = Math.floor((now - lastLifeAtMs.value) / REGEN_INTERVAL_MS)
-		if (ticks <= 0) return false
+		if (lives.value >= maxLives) {
+			if (lastLifeAtMs.value !== 0) lastLifeAtMs.value = 0
+			return false
+		}
 
-		const gained = Math.min(maxLives - lives.value, ticks)
-		if (gained > 0) {
-			lives.value += gained
-			lastLifeAtMs.value += gained * REGEN_INTERVAL_MS
+		const now = Date.now()
+		if (!lastLifeAtMs.value) {
+			lastLifeAtMs.value = now
+			return false
+		}
+
+		let gainedTotal = 0
+		let currentTimestamp = lastLifeAtMs.value
+
+		// Пошагово начисляем жизни по их индивидуальным таймерам
+		while (lives.value < maxLives) {
+			const stepInterval = getRegenDurationForCurrentLives(lives.value)
+			if (now - currentTimestamp >= stepInterval) {
+				currentTimestamp += stepInterval
+				lives.value += 1
+				gainedTotal += 1
+			} else {
+				break
+			}
+		}
+
+		if (gainedTotal > 0) {
 			if (lives.value >= maxLives) {
-				lives.value = maxLives
 				lastLifeAtMs.value = 0
+			} else {
+				lastLifeAtMs.value = currentTimestamp
 			}
 			return true
 		}
+
 		return false
 	}
 
@@ -321,6 +356,7 @@ export const userChainStore = defineStore('chain', () => {
 			const arr = Array.isArray(data) ? data : (data.quests || [data])
 			const found = arr.find(q => String(q.questId) === String(questId))
 			if (!found) throw new Error('Квест не найден в этом файле')
+			regionQuests.value = arr
 			quest.value = found
 			await loadProgressFromFirebase()
 			await migrateByAliases(quest.value)
@@ -400,7 +436,7 @@ export const userChainStore = defineStore('chain', () => {
 				break;
 			}
 			case 'reorder':
-				isCorrect.value = JSON.stringify(reorderSelection.value) === JSON.stringify(task.value.correctOrder || [])
+				isCorrect.value = reorderSelection.value.join(' ').trim() === (task.value.correctOrder || []).join(' ').trim()
 				break
 			case 'textToSpeech':
 				isCorrect.value = true
@@ -414,7 +450,6 @@ export const userChainStore = defineStore('chain', () => {
 		showResult.value = true
 
 		try {
-			// ДОБАВЛЕНО: && !authStore.isPremium
 			if (!isCorrect.value && !skipLives && !lifeSpentThisStep.value && !authStore.isPremium) {
 				const before = lives.value
 				lives.value = Math.max(0, lives.value - 1)
@@ -434,7 +469,7 @@ export const userChainStore = defineStore('chain', () => {
 		if (advancing.value) return
 		advancing.value = true
 		showResult.value = false
-		// ДОБАВЛЕНО: блокируем завершение квеста из-за отсутствия жизней для премиум юзеров
+
 		if (!skipLives && lives.value <= 0 && !authStore.isPremium) {
 			finished.value = true
 			advancing.value = false
@@ -550,6 +585,7 @@ export const userChainStore = defineStore('chain', () => {
 		activeQueue.value = []
 		isRetryMode.value = false
 		sessionStarted.value = false
+		regionQuests.value = []
 		resetInputs()
 	}
 
@@ -600,7 +636,7 @@ export const userChainStore = defineStore('chain', () => {
 		lives,
 		maxLives,
 		lastLifeAtMs,
-		REGEN_INTERVAL_MS,
+		currentRegenIntervalMs,
 
 		questProgress,
 		sessionStarted,
@@ -609,7 +645,7 @@ export const userChainStore = defineStore('chain', () => {
 		confirming,
 		advancing,
 		lifeSpentThisStep,
-
+		regionQuests,
 		addLife,
 		loadProgressFromFirebase,
 		loadQuest,

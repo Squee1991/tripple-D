@@ -191,7 +191,6 @@
         "question": "eastPlainFirstQuests.questOne",
         "options": [
           "Hallo",
-          "Guten Tag",
           "Danke"
         ],
         "answer": "Hallo"
@@ -202,7 +201,6 @@
         "question": "eastPlainFirstQuests.questTwo",
         "options": [
           "Danke",
-          "oder",
           "Hallo"
         ],
         "answer": "Danke"
@@ -213,7 +211,6 @@
         "question": "eastPlainFirstQuests.questFour",
         "options": [
           "Danke",
-          "Guten Tag",
           "Guten Abend"
         ],
         "answer": "Guten Abend"
@@ -224,10 +221,7 @@
         "question": "eastPlainFirstQuests.questFive",
         "options": [
           "Hallo!",
-          "Wie geht's",
-          "Danke",
-          "Guten Tag",
-          "oder"
+          "Wie geht's"
         ],
         "answer": "Wie geht's"
       },
@@ -237,7 +231,6 @@
         "question": "eastPlainFirstQuests.questSix",
         "words": [
           "Hallo",
-          "oder",
           "Danke",
           "wie geht's"
         ],
@@ -252,7 +245,6 @@
         "question": "eastPlainFirstQuests.questSeven",
         "options": [
           "Tschüss",
-          "Guten Tag!",
           "Danke"
         ],
         "answer": "Tschüss"
@@ -263,7 +255,6 @@
         "question": "eastPlainFirstQuests.questEight",
         "options": [
           "gut",
-          "Danke",
           "Hallo"
         ],
         "answer": "gut"
@@ -272,8 +263,8 @@
         "id": 8,
         "type": "speechToText",
         "question": "eastPlainFirstQuests.questNine",
-        "text": "Hallo! wie geht's?",
-        "answer": "Hallo! wie geht's?"
+        "text": "Danke",
+        "answer": "Danke"
       },
       {
         "id": 9,
@@ -281,15 +272,12 @@
         "question": "eastPlainFirstQuests.questTen",
         "words": [
           "Hallo",
-          "danke",
           "wie geht's",
           "gut"
         ],
         "correctOrder": [
           "Hallo",
-          "wie geht's",
-          "gut",
-          "danke"
+          "wie geht's"
         ]
       },
       {
@@ -298,9 +286,7 @@
         "question": "eastPlainFirstQuests.questEleven",
         "options": [
           "gut",
-          "schlecht",
-          "danke",
-          "sehr gut"
+          "schlecht"
         ],
         "answer": "schlecht"
       },
@@ -309,7 +295,6 @@
         "type": "select",
         "question": "eastPlainFirstQuests.questTwelve",
         "options": [
-          "gut",
           "sehr gut",
           "danke"
         ],
@@ -321,7 +306,6 @@
         "question": "eastPlainFirstQuests.questThirteen",
         "options": [
           "Auf Wiedersehen",
-          "danke",
           "Hallo",
           "wie geht's"
         ],
@@ -332,11 +316,9 @@
         "type": "reorder",
         "question": "eastPlainFirstQuests.questFourteen",
         "words": [
-          "gut",
           "sehr gut",
           "danke",
-          "Hallo",
-          "Tschüss"
+          "Hallo"
         ],
         "correctOrder": [
           "sehr gut",
@@ -347,8 +329,8 @@
         "id": 14,
         "type": "speechToText",
         "question": "eastPlainFirstQuests.questFifteen",
-        "text": "Hallo! wie geht's? sehr gut, danke",
-        "answer": "Hallo! wie geht's? sehr gut, danke"
+        "text": "Hallo! wie geht's?",
+        "answer": "Hallo! wie geht's?"
       }
     ]
   },
@@ -360,8 +342,8 @@
     "description": "eastPlainSecondQuests.description",
     "conditions": {
       "goal": "Lerne, über Herkunft und Sprache zu sprechen und höflich Fragen zu stellen",
-      "minCorrect": 13,
-      "requiredTasks": 13
+      "minCorrect": 14,
+      "requiredTasks": 14
     },
     "rewards": {
       "points": 10,
@@ -545,8 +527,7 @@
         "options": [
           "Bis morgen",
           "Guten Tag",
-          "Hallo",
-          "gut"
+          "Hallo"
         ],
         "answer": "Bis morgen"
       },
@@ -556,9 +537,7 @@
         "question": "eastPlainSecondQuests.questTwo",
         "options": [
           "Wir sehen uns",
-          "Guten Tag",
-          "Hallo",
-          "Danke sehr"
+          "Bis morgen"
         ],
         "answer": "Wir sehen uns"
       },
@@ -566,138 +545,135 @@
       {
         "id": 3,
         "type": "speechToText",
-        "question": "eastPlainSecondQuests.questFour",
+        "question": "eastPlainSecondQuests.questTree",
         "text": "Bis morgen",
         "answer": "Bis morgen"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "eastPlainSecondQuests.questFive",
+        "question": "eastPlainSecondQuests.questFour",
         "words": [
-          "Hallo",
-          "danke",
-          "und",
-          "Thomas",
-          "gut",
-          "wie geht's",
-          "gut",
-          "dir"
+          "Wir", "morgen", "uns", "sehen"
         ],
-        "correctOrder": [
-          "Hallo",
-          "Thomas",
-          "wie geht's",
-          "gut",
-          "und",
-          "dir",
-          "gut",
-          "danke"
+        "correctOrder": ["Wir", "sehen", "uns", "morgen"
         ]
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "eastPlainSecondQuests.questSix",
+        "question": "eastPlainSecondQuests.questFive",
         "words": [
-          "bei dir",
-          "Thomas",
           "Hallo",
-          "Guten Tag",
           "Bis bald"
         ],
         "correctOrder": [
-          "Bis bald",
-          "Thomas"
+          "Bis bald"
         ]
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "eastPlainSecondQuests.questSeven",
+        "question": "eastPlainSecondQuests.questSix",
         "words": [
+          "Woher?",
+          "Hallo"
+        ],
+        "correctOrder": [
+          "Woher?"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "eastPlainSecondQuests.questSeven",
+        "text": "Woher?",
+        "answer": "Woher?"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "eastPlainSecondQuests.questEight",
+        "options": [
+          "Woher kommst du?",
+          "Bis bald",
+          "Wir sehen uns"
+        ],
+        "answer": "Woher kommst du?"
+      },
+
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "eastPlainSecondQuests.questNine",
+        "words": [
+          "woher",
           "kommst",
-          "bis bald",
           "du",
-          "Hallo",
-          "Woher"
+          "Hallo"
         ],
         "correctOrder": [
           "Hallo",
-          "Woher",
+          "woher",
           "kommst",
           "du"
         ]
       },
       {
-        "id": 7,
-        "type": "reorder",
-        "question": "eastPlainSecondQuests.questEight",
-        "words": [
-          "ich",
-          "komme",
-          "aus",
-          "Woher",
-          "du",
-          "danke"
-        ],
-        "correctOrder": [
-          "ich",
-          "komme",
-          "aus"
-        ]
-      },
-      {
-        "id": 8,
-        "type": "speechToText",
-        "question": "eastPlainSecondQuests.questNine",
-        "text": "Hallo Thomas! Woher kommst du?",
-        "answer": "Hallo Thomas! Woher kommst du?"
-      },
-      {
-        "id": 9,
+        "id": 10,
         "type": "speechToText",
         "question": "eastPlainSecondQuests.questTen",
-        "text": "Hallo! ich komme aus Polen",
-        "answer": "Hallo! ich komme aus Polen"
+        "text": "Hallo! Woher kommst du",
+        "answer": "Hallo! Woher kommst du"
       },
 
       {
-        "id": 10,
-        "type": "select",
-        "question": "eastPlainSecondQuests.questTwelve",
-        "options": [
-          "Wie heißen Sie?",
-          "Woher kommst du?",
-          "Bis bald",
-          "Guten Tag"
-        ],
-        "answer": "Wie heißen Sie?"
-      },
-      {
         "id": 11,
-        "type": "input",
-        "question": "eastPlainSecondQuests.questThirteen",
-        "correctAnswer": "Hallo! ich heiße Thomas"
+        "type": "select",
+        "question": "eastPlainSecondQuests.questEleven",
+        "options": [
+          "heißen",
+          "Bis bald"
+        ],
+        "answer": "heißen"
       },
       {
         "id": 12,
         "type": "select",
-        "question": "eastPlainSecondQuests.questFourteen",
+        "question": "eastPlainSecondQuests.questTwelve",
         "options": [
           "Wie heißen Sie?",
-          "Woher kommst du?",
-          "Bis bald",
-          "Guten Tag"
+          "Bis bald"
         ],
         "answer": "Wie heißen Sie?"
       },
+
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "eastPlainSecondQuests.questFifteen",
-        "text": "Guten Tag! Woher kommst du? Ich komme aus Spanien, und du? Ich komme aus Deutschland.",
-        "answer": "Guten Tag! Woher kommst du? Ich komme aus Spanien, und du? Ich komme aus Deutschland."
+        "type": "reorder",
+        "question": "eastPlainSecondQuests.questThirteen",
+        "words": [
+          "Sie",
+          "?",
+          "heißen",
+          "Wie"
+        ],
+        "correctOrder": [
+          "Wie",
+          "heißen",
+          "Sie",
+          "?"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "eastPlainSecondQuests.questFourteen",
+        "options": [
+          "Wie heißt du?",
+          "Woher?"
+        ],
+        "answer": "Wie heißt du?"
       }
     ]
   },
@@ -907,8 +883,7 @@
         "question": "eastPlainThirdQuests.questOne",
         "options": [
           "der Laden",
-          "die Kasse",
-          "das Geld"
+          "die Kasse"
         ],
         "answer": "der Laden"
       },
@@ -917,96 +892,70 @@
         "type": "select",
         "question": "eastPlainThirdQuests.questTwo",
         "options": [
-          "Kaufen",
-          "gehen",
-          "oder",
-          "danke"
+          "kaufen",
+          "der Laden"
         ],
-        "answer": "Kaufen"
+        "answer": "kaufen"
       },
       {
         "id": 3,
-        "type": "reorder",
+        "type": "select",
         "question": "eastPlainThirdQuests.questTree",
-        "words": [
-          "ich",
-          "in",
-          "gut",
-          "den",
-          "gehe",
-          "danke",
-          "laden"
+        "options": [
+          "gehen",
+          "kaufen"
         ],
-        "correctOrder": [
-          "ich",
-          "gehe",
-          "in",
-          "den",
-          "laden"
-        ]
+        "answer": "gehen"
       },
       {
         "id": 4,
-        "type": "speechToText",
+        "type": "reorder",
         "question": "eastPlainThirdQuests.questFour",
-        "text": "Ich kaufe Brot",
-        "answer": "Ich kaufe Brot"
+        "words": [
+          "gehen",
+          "wir"
+        ],
+        "correctOrder": [
+          "wir",
+          "gehen"
+        ]
       },
       {
         "id": 5,
         "type": "reorder",
         "question": "eastPlainThirdQuests.questFive",
         "words": [
-          "Hallo",
-          "danke",
-          "Wohin",
-          "gehst",
-          "danke",
-          "du",
-          "den",
-          "in",
-          "Laden",
-          "ich",
-          "gehe"
+          "kaufen",
+          "Wir",
+          "Brot"
         ],
         "correctOrder": [
-          "Hallo",
-          "Wohin",
-          "gehst",
-          "du",
-          "ich",
-          "gehe",
-          "in",
-          "den",
-          "Laden"
+          "Wir",
+          "kaufen",
+          "Brot"
         ]
       },
       {
         "id": 6,
         "type": "speechToText",
         "question": "eastPlainThirdQuests.questSix",
-        "text": "ich gehe in den Laden",
-        "answer": "ich gehe in den Laden"
+        "text": "Wir kaufen Brot",
+        "answer": "Wir kaufen Brot"
       },
       {
         "id": 7,
         "type": "reorder",
         "question": "eastPlainThirdQuests.questSeven",
         "words": [
-          "danke",
-          "auch",
-          "gehe",
-          "du",
-          "den",
+          "gehen",
+          "Wir",
           "in",
-          "Laden",
-          "ich",
-          "gehe"
+          "den",
+          "Laden"
         ],
         "correctOrder": [
-          "ich",
-          "gehe",
-          "auch",
+          "Wir",
+          "gehen",
           "in",
           "den",
           "Laden"
@@ -1014,45 +963,51 @@
       },
       {
         "id": 8,
-        "type": "speechToText",
+        "type": "reorder",
         "question": "eastPlainThirdQuests.questEight",
-        "text": "Hallo Thomas! Wohin gehst du? ich gehe in den Laden",
-        "answer": "Hallo Thomas! Wohin gehst du? ich gehe in den Laden"
+        "words": [
+          "ich",
+          "in",
+          "gehe",
+          "den",
+          "Laden"
+        ],
+        "correctOrder": [
+          "ich",
+          "gehe",
+          "in",
+          "den",
+          "Laden"
+        ]
       },
       {
         "id": 9,
         "type": "select",
         "question": "eastPlainThirdQuests.questNine",
         "options": [
-          "Supermarkt",
-          "Laden",
-          "kaufen",
-          "Hallo"
+          "der Supermarkt",
+          "der Laden"
         ],
-        "answer": "Supermarkt"
+        "answer": "der Supermarkt"
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "eastPlainThirdQuests.questTen",
-        "text": "Ich gehe in den Supermarkt",
-        "answer": "Ich gehe in den Supermarkt"
+        "text": "der Supermarkt",
+        "answer": "der Supermarkt"
       },
       {
         "id": 11,
         "type": "reorder",
         "question": "eastPlainThirdQuests.questEleven",
         "words": [
-          "Supermarkt",
-          "Laden",
-          "kaufen",
-          "den",
+          "ich",
           "gehe",
-          "Laden",
+          "Supermarkt",
           "nicht",
           "in",
-          "ich",
-          "Brot"
+          "den"
         ],
         "correctOrder": [
           "ich",
@@ -1069,9 +1024,7 @@
         "question": "eastPlainThirdQuests.questTwelve",
         "options": [
           "die Kasse",
-          "der Supermarkt",
-          "oder",
-          "danke"
+          "der Supermarkt"
         ],
         "answer": "die Kasse"
       },
@@ -1080,11 +1033,8 @@
         "type": "select",
         "question": "eastPlainThirdQuests.questThirteen",
         "options": [
-          "die Kasse",
           "der Preis",
-          "Hallo",
-          "danke",
-          "bis bald"
+          "das Geld"
         ],
         "answer": "der Preis"
       },
@@ -1094,19 +1044,16 @@
         "question": "eastPlainThirdQuests.questFourteen",
         "options": [
           "die Rechnung",
-          "der Preis",
-          "Hallo",
-          "danke",
-          "nicht"
+          "der Preis"
         ],
         "answer": "die Rechnung"
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "eastPlainThirdQuests.questFourteen",
-        "text": "die Rechnung",
-        "answer": "die Rechnung"
+        "question": "eastPlainThirdQuests.questFifteen",
+        "text": "die Kasse",
+        "answer": "die Kasse"
       }
     ]
   },
@@ -1260,7 +1207,6 @@
         "question": "eastPlainFourthQuests.questOne",
         "options": [
           "die Schlange",
-          "der Korb",
           "der Preis"
         ],
         "answer": "die Schlange"
@@ -1271,7 +1217,6 @@
         "question": "eastPlainFourthQuests.questTwo",
         "options": [
           "die Kasse",
-          "der Korb",
           "das Geld"
         ],
         "answer": "die Kasse"
@@ -1285,9 +1230,7 @@
           "ich",
           "der",
           "stehe",
-          "schlange",
-          "Preis",
-          "Hallo"
+          "schlange"
         ],
         "correctOrder": [
           "ich",
@@ -1301,8 +1244,8 @@
         "id": 4,
         "type": "speechToText",
         "question": "eastPlainFourthQuests.questFour",
-        "text": "Ich stehe in der schlange",
-        "answer": "Ich stehe in der schlange"
+        "text": "die Schlange",
+        "answer": "die Schlange"
       },
       {
         "id": 5,
@@ -1310,8 +1253,7 @@
         "question": "eastPlainFourthQuests.questFive",
         "options": [
           "bezahlen",
-          "Hallo",
-          "Bis bald"
+          "die Schlange"
         ],
         "answer": "bezahlen"
       },
@@ -1328,8 +1270,6 @@
         "question": "eastPlainFourthQuests.questSeven",
         "options": [
           "das Geld",
-          "Hallo",
-          "nicht",
           "die Kasse"
         ],
         "answer": "das Geld"
@@ -1340,8 +1280,6 @@
         "question": "eastPlainFourthQuests.questEight",
         "options": [
           "das Bargeld",
-          "Hallo",
-          "nicht",
           "das Geld"
         ],
         "answer": "das Bargeld"
@@ -1359,9 +1297,7 @@
         "question": "eastPlainFourthQuests.questTen",
         "options": [
           "das Bargeld",
-          "Hallo",
-          "der Schein",
-          "das Geld"
+          "der Schein"
         ],
         "answer": "der Schein"
       },
@@ -1370,18 +1306,16 @@
         "type": "reorder",
         "question": "eastPlainFourthQuests.questEleven",
         "words": [
-          "hier",
-          "bezahlen",
-          "bitte",
+          "ich",
+          "bezahle",
           "Karte",
-          "mit",
-          "der"
+          "mit"
         ],
         "correctOrder": [
+          "ich",
+          "bezahle",
           "mit",
-          "der",
-          "Karte",
-          "bezahlen"
+          "Karte"
         ]
       },
       {
@@ -1393,10 +1327,14 @@
       },
       {
         "id": 13,
-        "type": "speechToText",
+        "type": "select",
         "question": "eastPlainFourthQuests.questThirteen",
-        "text": "Ich bezahle mit Karte oder bargeld",
-        "answer": "Ich bezahle mit Karte oder bargeld"
+        "options": [
+          "Ich bezahle bargeld",
+          "Ich bezahle mit Karte",
+          "Ich bezahle"
+        ],
+        "answer": "Ich bezahle bargeld"
       },
       {
         "id": 14,
@@ -1404,9 +1342,7 @@
         "question": "eastPlainFourthQuests.questFourteen",
         "options": [
           "das Bargeld",
-          "Hallo",
-          "die Münze",
-          "das Geld"
+          "die Münze"
         ],
         "answer": "die Münze"
       },
@@ -1611,7 +1547,6 @@
         "question": "eastPlainFifthQuests.questOne",
         "options": [
           "bitte",
-          "danke",
           "Hallo"
         ],
         "answer": "bitte"
@@ -1621,11 +1556,8 @@
         "type": "reorder",
         "question": "eastPlainFifthQuests.questTwo",
         "words": [
-          "Tee",
-          "Ich",
           "bitte",
-          "Danke",
-          "möchte"
+          "Tee"
         ],
         "correctOrder": [
           "Tee",
@@ -1638,9 +1570,7 @@
         "question": "eastPlainFifthQuests.questTree",
         "options": [
           "der Schein",
-          "Danke",
-          "Bis bald",
-          "der Preis"
+          "Danke"
         ],
         "answer": "der Schein"
       },
@@ -1648,21 +1578,19 @@
         "id": 4,
         "type": "speechToText",
         "question": "eastPlainFifthQuests.questFour",
-        "text": "Bezahlen Sie bar oder mit Karte?",
-        "answer": "Bezahlen Sie bar oder mit Karte?"
+        "text": "der Schein",
+        "answer": "der Schein"
       },
       {
         "id": 5,
         "type": "reorder",
         "question": "eastPlainFifthQuests.questFive",
         "words": [
-          "Kaffee",
           "Ich",
-          "mit",
-          "bitte",
-          "einen",
           "möchte",
-          "Tee"
+          "Kaffee",
+          "bitte",
+          "einen"
         ],
         "correctOrder": [
           "Ich",
@@ -1677,12 +1605,9 @@
         "type": "reorder",
         "question": "eastPlainFifthQuests.questSix",
         "words": [
-          "Wie",
-          "Tee",
-          "kostet",
           "viel",
-          "möchte",
-          "Tee"
+          "Wie",
+          "kostet"
         ],
         "correctOrder": [
           "Wie",
@@ -1699,36 +1624,33 @@
       {
         "id": 8,
         "type": "readAndAnswer",
-        "text": "Im Supermarkt kaufe ich Brot, Käse und zwei Flaschen Wasser.",
+        "text": "Im Supermarkt kaufe ich Brot, und Käse",
         "question": "eastPlainFifthQuests.questEight",
         "options": [
-          "das Brot, der Käse und der Käse ",
-          "das Brot, der Käse und das Wasser",
-          "die Milch , das Wasser und der Käse"
+          "das Brot, und das Wasser",
+          "das Brot, und der Käse",
+          "die Milch und das Wasser"
         ],
-        "answer": "das Brot, der Käse und das Wasser"
+        "answer": "das Brot, und der Käse"
       },
       {
         "id": 9,
         "type": "speechToText",
         "question": "eastPlainFifthQuests.questNine",
-        "text": "Ich kaufe Gemüse",
-        "answer": "Ich kaufe Gemüse"
+        "text": "Ich kaufe das Brot",
+        "answer": "Ich kaufe das Brot"
       },
       {
         "id": 10,
         "type": "reorder",
         "question": "eastPlainFifthQuests.questTen",
         "words": [
-          "Tee",
           "Flasche",
-          "die",
-          "Wasser",
-          "möchte",
-          "Tee"
+          "Die",
+          "Wasser"
         ],
         "correctOrder": [
-          "die",
+          "Die",
           "Flasche",
           "Wasser"
         ]
@@ -1738,17 +1660,16 @@
         "type": "select",
         "question": "eastPlainFifthQuests.questEleven",
         "options": [
-          "ich trinke gern Tee",
-          "ich kaufe brot",
-          "Tee Bitte"
+          "Wie viel",
+          "Wie"
         ],
-        "answer": "ich trinke gern Tee"
+        "answer": "Wie viel"
       },
       {
         "id": 12,
         "type": "input",
         "question": "eastPlainFifthQuests.questTwelve",
-        "correctAnswer": "wie"
+        "correctAnswer": "Wie"
       },
       {
         "id": 13,
@@ -1757,11 +1678,6 @@
         "words": [
           "Tee",
           "und",
-          "mit",
-          "oder",
-          "danke",
-          "der Preis",
-          "Butter",
           "bitte",
           "Brot"
         ],
@@ -1769,8 +1685,6 @@
           "Tee",
           "und",
           "Brot",
-          "mit",
-          "Butter",
           "bitte"
         ]
       },
@@ -1781,8 +1695,7 @@
         "question": "eastPlainFifthQuests.questFourteen",
         "options": [
           "der Kaffee",
-          "der Kaffee und der Kuchen",
-          "nur der Kuchen"
+          "der Tee "
         ],
         "answer": "der Kaffee"
       },
@@ -1790,11 +1703,12 @@
         "id": 15,
         "type": "speechToText",
         "question": "eastPlainFifthQuests.questFifteen",
-        "text": "Wie viel kostet eine Flasche Wasser?",
-        "answer": "Wie viel kostet eine Flasche Wasser?"
+        "text": "Wie viel kostet?",
+        "answer": "Wie viel kostet?"
       }
     ]
   },
+
   {
     "questId": "six",
     "aliases": ["menschen-a1-beruf"],
@@ -1987,7 +1901,6 @@
         "question": "eastPlainSixthQuests.questOne",
         "options": [
           "ich bin Lehrer",
-          "ich bin Lehrerin",
           "ich bin Student"
         ],
         "answer": "ich bin Lehrer"
@@ -2004,8 +1917,7 @@
         "question": "eastPlainSixthQuests.questTree",
         "options": [
           "der Kellner",
-          "der Fahrer",
-          "die Lehrerin"
+          "ich bin Student"
         ],
         "answer": "der Kellner"
       },
@@ -2013,8 +1925,8 @@
         "id": 4,
         "type": "speechToText",
         "question": "eastPlainSixthQuests.questFour",
-        "text": "Er arbeitet als Kellner",
-        "answer": "Er arbeitet als Kellner"
+        "text": "ich arbeite als Kellner",
+        "answer": "ich arbeite als Kellner"
       },
       {
         "id": 5,
@@ -2045,8 +1957,8 @@
         "id": 7,
         "type": "speechToText",
         "question": "eastPlainSixthQuests.questSeven",
-        "text": "Hallo ich bin Nina und ich arbeite als Lehrerin",
-        "answer": "Hallo ich bin Nina und ich arbeite als Lehrerin"
+        "text": "Hallo ich arbeite als Lehrerin",
+        "answer": "Hallo ich arbeite als Lehrerin"
       },
       {
         "id": 8,
@@ -3567,8 +3479,8 @@
         "id": 6,
         "type": "speechToText",
         "question": "eastPlainTenthQuests.questSix",
-        "text": "Ich komme aus Russland",
-        "answer": "Ich komme aus Russland"
+        "text": "Ich komme aus Polen",
+        "answer": "Ich komme aus Polen"
       },
       {
         "id": 7,
@@ -3614,9 +3526,7 @@
           "in",
           "wohnt",
           "Wohnung",
-          "einer",
-          "Stadt",
-          "Tag"
+          "einer"
         ],
         "correctOrder": [
           "Sie",

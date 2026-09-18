@@ -2,22 +2,26 @@ let unlocked = false
 let enabled = true
 let inited = false
 let audioCtx = null
-let correctEl, wrongEl
+let correctEl = null
+let wrongEl = null
+let levelCompletedEl = null
 
 function isClient() { return typeof window !== 'undefined' }
 
 export function initSound() {
-	if (inited) return
-	if (isClient()) {
-		try {
-			const saved = localStorage.getItem('sound-enabled')
-			if (saved !== null) enabled = saved === 'true'
-		} catch {}
-		correctEl = new Audio('/sounds/correctAnswer.wav')
-		wrongEl   = new Audio('/sounds/wrongAnswer.wav')
-		correctEl.preload = 'auto'
-		wrongEl.preload   = 'auto'
-	}
+	if (inited || !isClient()) return
+	try {
+		const saved = localStorage.getItem('sound-enabled')
+		if (saved !== null) enabled = saved === 'true'
+	} catch {}
+
+	correctEl        = new Audio('/sounds/correct.wav')
+	wrongEl          = new Audio('/sounds/mistake.wav')
+	levelCompletedEl = new Audio('/sounds/level_completed.wav')
+
+	correctEl.preload        = 'auto'
+	wrongEl.preload          = 'auto'
+	levelCompletedEl.preload = 'auto'
 	inited = true
 }
 
@@ -35,23 +39,43 @@ export async function unlockAudioByUserGesture() {
 		const AC = window.AudioContext || window.webkitAudioContext
 		audioCtx = audioCtx || new AC()
 		if (audioCtx.state === 'suspended') await audioCtx.resume()
-		const buffer = audioCtx.createBuffer(1, 1, 22050)
-		const src = audioCtx.createBufferSource()
-		src.buffer = buffer
-		src.connect(audioCtx.destination)
-		src.start(0)
+			[correctEl, wrongEl, levelCompletedEl].forEach(el => {
+			if (el) {
+				const p = el.play()
+				if (p && typeof p.then === 'function') {
+					p.then(() => {
+						el.pause()
+						el.currentTime = 0
+					}).catch(() => {})
+				}
+			}
+		})
 	} catch {}
 	unlocked = true
 }
 
 export function playCorrect() {
-	if (!isClient() || !unlocked || !enabled) return
+	if (!isClient() || !enabled) return
+	initSound()
+	if (!correctEl) return
 	correctEl.currentTime = 0
 	correctEl.play().catch(() => {})
 }
 
 export function playWrong() {
-	if (!isClient() || !unlocked || !enabled) return
+	if (!isClient() || !enabled) return
+	initSound()
+	if (!wrongEl) return
 	wrongEl.currentTime = 0
 	wrongEl.play().catch(() => {})
+}
+
+export function playLevelCompleted() {
+	if (!isClient() || !enabled) return
+	initSound()
+	if (!levelCompletedEl) return
+	levelCompletedEl.currentTime = 0
+	levelCompletedEl.play().catch((err) => {
+		console.error('Ошибка воспроизведения level_completed:', err)
+	})
 }

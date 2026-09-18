@@ -48,15 +48,13 @@ const props = defineProps({
   lives: { type: Number, required: true },
   maxLives: { type: Number, required: true },
   lastLifeAtMs: { type: Number, default: 0 },
-  regenIntervalMs: { type: Number, default: 0 },
+  regenIntervalMs: { type: Number, default: 60 * 1000 },
   showTimer: { type: Boolean, default: false }
 })
 
 const uniqueId = useId().replace(/:/g, '-')
-
 const now = ref(Date.now())
 let timerInterval = null
-
 
 function startTimer() {
   if (timerInterval) return
@@ -78,33 +76,44 @@ onBeforeUnmount(() => stopTimer())
 onActivated(() => startTimer())
 onDeactivated(() => stopTimer())
 
-const recoveryTimerText = computed(() => {
-  if (props.lives >= props.maxLives) return ""
+// Оставшееся время до восстановления следующего сердечка
+const nextTickRemainingMs = computed(() => {
+  if (props.lives >= props.maxLives || !props.regenIntervalMs) return 0
   const lastLife = props.lastLifeAtMs || now.value
-  const elapsed = now.value - lastLife
-  const nextTickIn = props.regenIntervalMs - (elapsed % props.regenIntervalMs)
-  const totalSeconds = Math.max(0, Math.floor(nextTickIn / 1000))
+  const elapsed = Math.max(0, now.value - lastLife)
+  const remaining = props.regenIntervalMs - elapsed
+  return Math.max(0, remaining)
+})
+
+// Форматирование MM:SS
+const recoveryTimerText = computed(() => {
+  if (props.lives >= props.maxLives) return ''
+  const totalSeconds = Math.floor(nextTickRemainingMs.value / 1000)
   const mins = Math.floor(totalSeconds / 60)
   const secs = totalSeconds % 60
   return `${mins}:${secs.toString().padStart(2, '0')}`
 })
 
 function getWaterGroupStyle(i) {
+  // Уже полные сердечки
   if (i < props.lives) {
     return { transform: 'translateY(-6px)', transition: 'transform 0.4s ease' }
   }
 
-  if (i === props.lives && props.lives < props.maxLives && props.lastLifeAtMs > 0 && props.regenIntervalMs > 0) {
-    const elapsed = Math.max(0, now.value - props.lastLifeAtMs)
+  // Сердечко, которое наполняется прямо сейчас
+  if (i === props.lives && props.lives < props.maxLives && props.regenIntervalMs > 0) {
+    const elapsed = Math.max(0, now.value - (props.lastLifeAtMs || now.value))
     const progress = Math.min(100, (elapsed / props.regenIntervalMs) * 100)
-    const yPos = 30 - (progress / 100) * 36;
+    // 30px (пустое) -> -6px (полное), амплитуда 36px
+    const yPos = 30 - (progress / 100) * 36
 
     return {
       transform: `translateY(${yPos}px)`,
-      transition: 'transform 1s linear'
+      transition: 'transform 0.5s ease-out'
     }
   }
 
+  // Пустые сердечки
   return { transform: 'translateY(30px)', transition: 'transform 0.4s ease' }
 }
 </script>
@@ -150,8 +159,9 @@ function getWaterGroupStyle(i) {
   animation: wave-action 1.5s linear infinite;
 }
 
-.timer-countdown{
+.timer-countdown {
   font-weight: 600;
+  font-variant-numeric: tabular-nums;
 }
 
 @keyframes wave-action {
