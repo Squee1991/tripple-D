@@ -560,7 +560,6 @@ onMounted(() => {
   filter: none;
 }
 
-/* СТИЛИ СЕГОДНЯШНЕГО ДНЯ */
 .day-cell.is-today {
   border-color: #3b82f6;
   box-shadow: inset 0 0 12px rgba(59, 130, 246, 0.2);

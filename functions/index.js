@@ -91,7 +91,7 @@ exports.hedgehogAssistant = onCall({
 		if (!isPremium) {
 			const usageSnap = await usageRef.get();
 			const currentUsage = usageSnap.exists ? (usageSnap.data().hintCount || 0) : 0;
-			if (currentUsage >= 6) {
+			if (currentUsage >= 12) {
 				return { error: "LIMIT_REACHED" };
 			}
 		}

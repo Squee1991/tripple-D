@@ -6,14 +6,14 @@
     <div class="location__wrapper">
       <header class="location-header" :class="{ 'rtl-locale': locale === 'ar' }">
         <VBackBtn/>
-        <h1 class="region__title-name">{{ t(currentRegion?.name) }}</h1>
+        <h1 class="region__title-name">{{ t(currentRegion?.name || '') }}</h1>
       </header>
       <div class="lives-bar__content" v-if="!authStore.isPremium">
         <VHearts
             :lives="chainStore.lives"
             :max-lives="chainStore.maxLives"
             :last-life-at-ms="chainStore.lastLifeAtMs"
-            :regen-interval-ms="chainStore.REGEN_INTERVAL_MS"
+            :regen-interval-ms="chainStore.currentRegenIntervalMs"
             show-timer
         />
       </div>
@@ -122,7 +122,7 @@ const showRewardBtn = ref(false);
 const showNoLivesModal = ref(false);
 const isAdLoading = ref(false);
 const pendingQuest = ref(null);
-const PRICE = 10;
+const PRICE = 5;
 const MAX_ADS = 5;
 const remainingAds = ref(MAX_ADS);
 const mobile = Capacitor.isNativePlatform();

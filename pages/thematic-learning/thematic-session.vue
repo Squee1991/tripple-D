@@ -139,6 +139,7 @@ const finished = ref(false)
 const isChecked = ref(false)
 const showExitModal = ref(false)
 const sessionMistakes = ref([])
+import { playCorrect, playWrong, unlockAudioByUserGesture } from '~/utils/soundManager.js'
 
 const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   exit()
@@ -159,7 +160,6 @@ const tasks = computed(() => {
   return allTasks.map((task, index) => ({...task, originalIndex: index}))
 })
 
-// Добавлено: передача задания в VHedgehogHelper
 const currentTaskForHelper = computed(() => {
   if (!tasks.value.length || current.value >= tasks.value.length) return null
   const currentTask = tasks.value[current.value]
@@ -217,15 +217,17 @@ const setupCurrentQuestion = () => {
 
 const check = (selectedAnswer) => {
   if (isChecked.value) return;
-
+  unlockAudioByUserGesture();
   const task = tasks.value[current.value]
   const isCorrect = selectedAnswer === task.answer
   feedback.value = {isCorrect, selected: selectedAnswer};
   isChecked.value = true
 
   if (isCorrect) {
+    playCorrect()
     correctAnswers.value += 1
   } else {
+    playWrong()
     sessionMistakes.value.push(task.originalIndex)
   }
 }
@@ -511,7 +513,7 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  z-index: 10;
+  z-index: 99999;
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
 }
 

@@ -6,23 +6,28 @@
 -dontwarn com.google.firebase.**
 
 # Мост Capacitor и JavaScriptInterface
--keep public class com.getcapacitor.** { *; }
--keep class * extends com.getcapacitor.Plugin { *; }
--keepclassmembers class * extends com.getcapacitor.Plugin {
-    public <methods>;
-}
 -keep @com.getcapacitor.annotation.CapacitorPlugin class * { *; }
--keepclassmembers class * {
+-keepclasseswithmembers class * {
     @com.getcapacitor.PluginMethod public *;
     @android.webkit.JavascriptInterface <methods>;
 }
+-keep class * extends com.getcapacitor.Plugin {
+    public <init>(...);
+}
+
 -keepattributes JavascriptInterface
 -keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod
 
 # Плагины авторизации и Cordova
--keep class com.capawesome.** { *; }
--keep public class org.apache.cordova.** { *; }
--keep class * extends org.apache.cordova.CordovaPlugin { *; }
+-keep class com.capawesome.** {
+    public protected *;
+}
+-keep public class org.apache.cordova.** {
+    public protected *;
+}
+-keep class * extends org.apache.cordova.CordovaPlugin {
+    public <init>(...);
+}
 
 # Правила сжатия и оптимизации для Google Play
 -repackageclasses ""
@@ -37,3 +42,8 @@
     public static int d(...);
     public static int e(...);
 }
+
+-printconfiguration full-r8-config.txt
+
+-dontwarn com.amazon.**
+-keep class com.amazon.** { *; }

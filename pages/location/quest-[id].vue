@@ -7,11 +7,20 @@
     <div v-if="isAdLoading" class="ad-overlay">
       <div class="ad-spinner"></div>
     </div>
+    <div class="mini-salute-container" v-if="miniConfettiParticles.length > 0">
+      <div v-for="p in miniConfettiParticles" :key="p.id" class="mini-confetti-piece"
+           :style="{
+             left: p.left + '%',
+             backgroundColor: p.color,
+             animationDelay: p.delay + 's',
+             animationDuration: p.duration + 's',
+             width: p.width + 'px',
+             height: p.height + 'px'
+           }">
+      </div>
+    </div>
     <div class="quest">
       <VLoginPreloader v-if="questStore.loading"/>
-      <div v-if="questStore.finished && questStore.success && !questStore.hasMistakes"
-           class="quest__stamp quest__stamp--ok">{{ t('locationQuests.done') }}
-      </div>
       <div v-if="questStore.loading" class="quest__panel quest__panel--loading"></div>
       <div v-else-if="questStore.error" class="quest__panel quest__panel--error">
         <div>Error: {{ questStore.error }}</div>
@@ -36,7 +45,7 @@
                 :lives="questStore.lives"
                 :max-lives="questStore.maxLives"
                 :last-life-at-ms="questStore.lastLifeAtMs"
-                :regen-interval-ms="questStore.REGEN_INTERVAL_MS"
+                :regen-interval-ms="questStore.currentRegenIntervalMs"
             />
           </div>
         </div>
@@ -96,7 +105,6 @@
                 </div>
               </div>
             </template>
-
             <template v-else-if="questStore.task.type === 'speechToText'">
               <div class="quest__speech">
                 <SoundBtn :text="questStore.task.text"/>
@@ -176,59 +184,21 @@
           </div>
         </div>
       </div>
-
-      <transition name="modal-fade">
-        <div v-if="questStore.finished" class="modal-overlay">
-          <div class="modal-content">
-            <p class="modal-text">
-              <template v-if="questStore.success && !questStore.hasMistakes">
-                {{ t('questCompletedModals.completed') }}
-              </template>
-              <template v-else-if="questStore.success && questStore.hasMistakes">
-                {{ t('questCompletedModals.completedWithMistakes') }}
-              </template>
-              <template v-else>
-                {{ t('questCompletedModals.notCompleted') }}
-              </template>
-            </p>
-
-            <p v-if="questStore.success && !questStore.hasMistakes && questStore.justAwarded" class="modal-subtitle">
-              {{ t('questCompletedModals.reward') }}
-            </p>
-            <div class="modal-icon">
-              <img v-if="questStore.success && !questStore.hasMistakes" :src="Great" class="modal-icon-item"
-                   alt="Great"/>
-              <img v-else :src="Support" class="modal-icon-item" alt="Support"/>
-            </div>
-
-            <div class="modal-actions">
-              <template v-if="questStore.success && !questStore.hasMistakes">
-                <button class="modal-btn modal-btn-primary" @click="goThemes">
-                  {{ t('questCompletedModals.back') }}
-                </button>
-              </template>
-              <template v-else-if="questStore.success && questStore.hasMistakes">
-                <button class="modal-btn modal-btn-primary" @click="questStore.startRetryMistakes()">
-                  {{ t('locationQuests.repeatMistakes') }}
-                </button>
-                <button class="modal-btn modal-btn-secondary" @click="goThemes">
-                  {{ t('questCompletedModals.back') }}
-                </button>
-              </template>
-              <template v-else>
-                <button class="modal-btn modal-btn-primary" @click="restart">
-                  {{ t('questCompletedModals.again') }}
-                </button>
-                <button class="modal-btn modal-btn-secondary" @click="goThemes">
-                  {{ t('questCompletedModals.back') }}
-                </button>
-              </template>
-            </div>
-          </div>
-        </div>
-      </transition>
-
+      <VQuestResultScreen
+          :finished="questStore.finished"
+          :has-mistakes="questStore.hasMistakes"
+          :previously-cleared="previouslyCleared"
+          :anim-step="animStep"
+          :display-xp="displayXp"
+          :display-coins="displayCoins"
+          :confetti-particles="confettiParticles"
+          :has-next-quest="hasNextQuest"
+          @next="goNextQuest"
+          @themes="goThemes"
+          @retry-mistakes="questStore.startRetryMistakes()"
+      />
     </div>
+
     <VReviveModal
         :show="forceRevive || showRevive"
         :correct-count="questStore.correctCount"
@@ -261,45 +231,72 @@
 </template>
 
 <script setup>
-import {computed, onMounted, ref, watch, watchEffect, nextTick, onBeforeUnmount} from 'vue'
+import {computed, ref, watch, watchEffect, nextTick, onBeforeUnmount, onMounted} from 'vue'
 import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
 import {userChainStore} from '~/store/chainStore.js'
 import {userlangStore} from '~/store/learningStore.js'
 import {userAuthStore} from "~/store/authStore.js"
 import SoundBtn from '~/src/components/soundBtn.vue'
 import VHedgehogHelper from '~/src/components/V-hedgehog-helper.vue'
-import {playCorrect, playWrong, unlockAudioByUserGesture} from '~/utils/soundManager.js'
-import {showRewarded, showInterstitial} from '~/utils/admob.js';
+import {playCorrect, playWrong, playLevelCompleted, unlockAudioByUserGesture} from '~/utils/soundManager.js'
+import {showInterstitial} from '~/utils/admob.js'
 import RightIcon from '~/assets/images/location-icons/accept.svg'
 import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 import {useSeoMeta} from '#imports'
-import VHelpModal from "~/src/components/V-help-modal.vue";
+import VHelpModal from "~/src/components/V-help-modal.vue"
 import VHearts from '../../src/components/V-hearts.vue'
-import VRulesModal from "~/src/components/V-rulesModal.vue";
-import VReviveModal from "~/src/components/V-reviveModal.vue";
-import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
-import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
+import VRulesModal from "~/src/components/V-rulesModal.vue"
+import VReviveModal from "~/src/components/V-reviveModal.vue"
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue"
+import VStopSessionModal from "~/src/components/V-stopSessionModal.vue"
 import {useSwipeBack} from '~/composables/useSwipeBack.js'
-import Support from '../../assets/images/Support.svg'
-import Great from '../../assets/images/Greatcon.svg'
+import VQuestResultScreen from '~/src/components/V-QuestResultScreen.vue'
+import {useQuestAnimations} from '~/composables/useQuestAnimations.js'
+import {useGermanKeyboard} from '~/composables/useGermanKeyboard.js'
+import {useQuestLives} from '~/composables/useQuestLives.js'
 
 useSeoMeta({robots: 'noindex, nofollow'})
 
 const {getDotClass, optionClass} = useClasses()
-const {t, locale} = useI18n()
+const {t} = useI18n()
 const route = useRoute()
 const router = useRouter()
 const questStore = userChainStore()
 const langStore = userlangStore()
 const authStore = userAuthStore()
-const forceRevive = ref(false)
 const showTipModal = ref(false)
-const isAdLoading = ref(false)
-const MAX_ADS = 5;
-const remainingAds = ref(MAX_ADS);
-const PRICE = 10
+const PRICE = 5
 
-const { $track } = useNuxtApp()
+const inputRef = ref(null)
+const speechInputRef = ref(null)
+const previouslyCleared = ref(false)
+const consecutiveCorrectCount = ref(0)
+
+const {
+  animStep,
+  displayCoins,
+  displayXp,
+  confettiParticles,
+  miniConfettiParticles,
+  spawnMiniConfetti,
+  resetAnimations
+} = useQuestAnimations(questStore, previouslyCleared)
+
+const {
+  germanLetters,
+  shouldShowGermanLetters,
+  addGermanLetter
+} = useGermanKeyboard(questStore, inputRef, speechInputRef)
+const {
+  isAdLoading,
+  remainingAds,
+  forceRevive,
+  updateRemainingAds,
+  watchAdForLife,
+  purchaseLife
+} = useQuestLives(questStore, langStore, PRICE)
+
+const {$track} = useNuxtApp()
 let taskStartTime = Date.now()
 
 const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
@@ -318,29 +315,43 @@ const questId = computed(() => {
   return rawId.replace('quest-', '')
 })
 
-const hasTip = computed(() => {
-  return !!(questStore.task && questStore.task.tip)
+const nextQuestId = computed(() => {
+  const list = questStore.regionQuests || []
+  if (!list.length) return null
+  const currentIndex = list.findIndex(q => String(q.questId || q.id) === String(questId.value))
+  if (currentIndex > -1 && currentIndex + 1 < list.length) {
+    const nextItem = list[currentIndex + 1]
+    return String(nextItem.questId || nextItem.id)
+  }
+  return null
 })
 
-const currentTip = computed(() => {
-  return questStore.task?.tip || ''
-})
+const hasNextQuest = computed(() => !!nextQuestId.value)
+
+function goNextQuest() {
+  if (!nextQuestId.value) {
+    goThemes()
+    return
+  }
+  router.push({
+    path: `/location/quest-${nextQuestId.value}`,
+    query: {region: regionKey.value}
+  })
+}
+
+const hasTip = computed(() => !!(questStore.task && questStore.task.tip))
+const currentTip = computed(() => questStore.task?.tip || '')
 
 watch(() => questStore.currentIndex, () => {
   showTipModal.value = false
 })
 
 const regionKey = computed(() => String(route.query.region || ''))
-const progressEntry = computed(() => questStore.questProgress?.[questId.value] || null)
-const previouslyCleared = computed(() => !!(progressEntry.value?.success || progressEntry.value?.rewardClaimed))
 const wallet = computed(() => Number(langStore.points || 0))
 const canBuyLife = computed(() => wallet.value >= PRICE)
 const isSpeaking = ref(false)
 const learningLanguage = computed(() => langStore.learningLang)
 const TARGET_LANG_CODE = 'de'
-const speechInputRef = ref(null)
-const germanLetters = ['ä', 'ö', 'ü', 'Ä', 'Ö', 'Ü', 'ß'];
-const inputRef = ref(null)
 const showHint = ref(false)
 const NUMBERS_HINT_KEY = 'hide_numbers_hint_modal'
 
@@ -352,26 +363,6 @@ function updateTimer() {
   rafId = requestAnimationFrame(updateTimer)
 }
 
-function updateRemainingAds() {
-  const today = new Date();
-  const todayKey = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
-  const statsStr = localStorage.getItem('adRewardStats');
-  if (!statsStr) {
-    remainingAds.value = MAX_ADS;
-    return;
-  }
-  try {
-    const stats = JSON.parse(statsStr);
-    if (stats.date !== todayKey) {
-      remainingAds.value = MAX_ADS;
-    } else {
-      remainingAds.value = Math.max(0, MAX_ADS - stats.count);
-    }
-  } catch (e) {
-    remainingAds.value = MAX_ADS;
-  }
-}
-
 onBeforeUnmount(() => {
   if (rafId) cancelAnimationFrame(rafId)
 })
@@ -381,67 +372,29 @@ const inputPlaceholders = {
   inputType: 'впишите правильный вариант'
 }
 
-const shouldShowGermanLetters = computed(() => {
-  if (!questStore.task) return false
-  if (!['speechToText', 'input'].includes(questStore.task.type)) return false
-
-  const source = String(
-      questStore.task.answer ||
-      questStore.task.correctAnswer ||
-      questStore.task.text ||
-      ''
-  )
-  return /[äöüÄÖÜß]/.test(source)
-})
-
-function addGermanLetter(letter) {
-  if (questStore.showResult) return
-  const inputEl = questStore.task?.type === 'input' ? inputRef.value : speechInputRef.value
-  const current = String(questStore.userInput || '')
-  if (!inputEl) {
-    questStore.userInput = current + letter
-    return
-  }
-  const start = inputEl.selectionStart ?? current.length
-  const end = inputEl.selectionEnd ?? current.length
-  questStore.userInput = current.slice(0, start) + letter + current.slice(end)
-  nextTick(() => {
-    inputEl.focus()
-    const pos = start + 1
-    inputEl.setSelectionRange(pos, pos)
-  })
-}
-
 async function speakText(text) {
-  if (isSpeaking.value || !text) return;
-
-  isSpeaking.value = true;
+  if (isSpeaking.value || !text) return
+  isSpeaking.value = true
   try {
-    await getSpeechAudio(text.trim());
+    await getSpeechAudio(text.trim())
   } catch (error) {
-    console.error(error);
+    console.error(error)
   } finally {
-    isSpeaking.value = false;
+    isSpeaking.value = false
   }
 }
 
 function handleWordBankClick(wordKey) {
-  if (learningLanguage.value === TARGET_LANG_CODE) {
-    const textToSpeakRaw = wordKey;
-    if (textToSpeakRaw.length > 0) {
-      speakText(textToSpeakRaw);
-    }
+  if (learningLanguage.value === TARGET_LANG_CODE && wordKey.length > 0) {
+    speakText(wordKey)
   }
-  questStore.handleReorderWord(wordKey, 'bank');
+  questStore.handleReorderWord(wordKey, 'bank')
 }
 
 function handleOptionClick(opt) {
-  questStore.choose(opt);
-  if (learningLanguage.value === TARGET_LANG_CODE) {
-    const textToSpeakRaw = opt;
-    if (textToSpeakRaw.length > 2 && !textToSpeakRaw.includes('.')) {
-      speakText(textToSpeakRaw);
-    }
+  questStore.choose(opt)
+  if (learningLanguage.value === TARGET_LANG_CODE && opt.length > 2 && !opt.includes('.')) {
+    speakText(opt)
   }
 }
 
@@ -455,13 +408,9 @@ const showRevive = computed(() =>
 )
 
 const highlightedQuestion = computed(() => {
-  if (!questStore.task || !questStore.task.question) {
-    return '';
-  }
+  if (!questStore.task || !questStore.task.question) return ''
   try {
-    if (questStore.task.type !== 'input') {
-      return t(questStore.task.question);
-    }
+    if (questStore.task.type !== 'input') return t(questStore.task.question)
   } catch (e) {
   }
 
@@ -478,15 +427,9 @@ function goThemes() {
 }
 
 function restart() {
-  if (authStore.isPremium) {
-    questStore.restart(previouslyCleared.value)
-    questStore.loadQuest(questId.value, regionKey.value)
-  } else {
-    showInterstitial(() => {
-      questStore.restart(previouslyCleared.value)
-      questStore.loadQuest(questId.value, regionKey.value)
-    })
-  }
+  consecutiveCorrectCount.value = 0
+  questStore.restart(previouslyCleared.value)
+  questStore.loadQuest(questId.value, regionKey.value)
 }
 
 function handleClick() {
@@ -571,55 +514,18 @@ function stayHere() {
 
 watch(() => questStore.showResult, (shown) => {
   if (!shown) return
-  if (questStore.isCorrect) playCorrect()
-  else playWrong()
-})
-
-async function trySpendLocal(amount) {
-  amount = Number(amount) || 0
-  if (amount <= 0) return true
-  if ((langStore.points ?? 0) < amount) return false
-
-  langStore.points -= amount
-  langStore.articlesSpentForAchievement = Number(langStore.articlesSpentForAchievement || 0) + amount
-  if (typeof langStore.saveToFirebase === 'function') {
-    try {
-      await langStore.saveToFirebase()
-    } catch {
+  if (questStore.isCorrect) {
+    playCorrect()
+    consecutiveCorrectCount.value++
+    if (consecutiveCorrectCount.value === 5) {
+      spawnMiniConfetti()
+      consecutiveCorrectCount.value = 0
     }
+  } else {
+    playWrong()
+    consecutiveCorrectCount.value = 0
   }
-  return true
-}
-
-function watchAdForLife() {
-  isAdLoading.value = true;
-  showRewarded(
-      async () => {
-        await questStore.addLife(1);
-        if (questStore.finished && !questStore.success) questStore.finished = false;
-        if (!questStore.sessionStarted) questStore.sessionStarted = true;
-        forceRevive.value = false;
-        updateRemainingAds();
-      },
-      (gotReward) => {
-        isAdLoading.value = false;
-        if (!gotReward) {
-          console.log("Юзер закрыл рекламу раньше времени. Жизнь не даем.");
-        }
-      }
-  );
-}
-
-async function purchaseLife() {
-  if (!canBuyLife.value) return
-  const ok = await trySpendLocal(PRICE)
-  if (!ok) return
-  await questStore.addLife(1)
-
-  if (questStore.finished && !questStore.success) questStore.finished = false
-  if (!questStore.sessionStarted) questStore.sessionStarted = true
-  forceRevive.value = false
-}
+})
 
 function beforeUnloadHandler(e) {
   e.preventDefault()
@@ -635,11 +541,17 @@ watch(() => questStore.finished, (isFinished) => {
       correct_count: questStore.correctCount,
       required_tasks: questStore.requiredTasks
     })
+
+    if (questStore.success) {
+      setTimeout(() => {
+        playLevelCompleted()
+      }, 200)
+    }
   }
 })
 
 watch([questId, regionKey], () => {
-      if (!questId.value || !regionKey.value) return;
+      if (!questId.value || !regionKey.value) return
       questStore.loading = true
       questStore.error = ''
       questStore.quest = null
@@ -650,9 +562,15 @@ watch([questId, regionKey], () => {
       questStore.reorderSelection = []
       questStore.reorderBank = []
       showHint.value = false
+      resetAnimations()
 
       const initQuest = async () => {
+        consecutiveCorrectCount.value = 0
         await questStore.loadProgressFromFirebase?.()
+
+        const prog = questStore.questProgress?.[questId.value]
+        previouslyCleared.value = !!(prog?.success || prog?.rewardClaimed)
+
         await questStore.loadQuest(questId.value, regionKey.value)
         $track('quest_session_started', {
           quest_id: questId.value,
@@ -666,7 +584,6 @@ watch([questId, regionKey], () => {
           showHint.value = true
         }
         await nextTick()
-        forceRevive.value = showRevive.value
       }
 
       if (authStore.isPremium) {
@@ -925,23 +842,6 @@ watchEffect(() => {
   gap: 10px;
 }
 
-.quest__stamp {
-  position: fixed;
-  right: 24px;
-  top: 18px;
-  z-index: 50;
-  font-weight: 900;
-  border: 3px solid #1e1e1e;
-  padding: 6px 12px;
-  border-radius: 10px;
-  transform: rotate(-6deg);
-}
-
-.quest__stamp--ok {
-  background: #b9f5c4;
-  color: #0f5132;
-}
-
 .actions-wrapper {
   position: fixed;
   bottom: 0;
@@ -1096,121 +996,33 @@ watchEffect(() => {
   animation: shake 0.4s ease-in-out;
 }
 
-.modal-overlay {
+.mini-salute-container {
   position: fixed;
   inset: 0;
-  background: rgba(30, 39, 46, 0.8);
-  backdrop-filter: blur(3px);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
   z-index: 99999;
-  padding: 0;
 }
 
-.modal-content {
-  background: #ffffff;
-  padding: 40px 24px 30px 24px;
-  border-radius: 20px 20px 0 0;
-  width: 100%;
-  max-width: 768px;
-  text-align: center;
-  border: none;
-  box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-top: 3px solid whitesmoke;
-}
-
-.modal-icon {
-  margin-top: 5px;
-  margin-bottom: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-icon-item {
-  width: 140px;
-}
-
-.modal-fade-enter-active,
-.modal-fade-leave-active {
-  transition: opacity 0.3s ease-out;
-}
-
-.modal-fade-enter-from,
-.modal-fade-leave-to {
+.mini-confetti-piece {
+  position: absolute;
+  top: -30px;
   opacity: 0;
+  border-radius: 3px;
+  animation: miniConfettiFall linear forwards;
+  will-change: transform, opacity;
 }
 
-.modal-fade-enter-active .modal-content,
-.modal-fade-leave-active .modal-content {
-  transition: transform 0.3s ease-out;
+@keyframes miniConfettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(720deg) scale(0.6);
+    opacity: 0;
+  }
 }
-
-.modal-fade-enter-from .modal-content,
-.modal-fade-leave-to .modal-content {
-  transform: translateY(100%);
-}
-
-.modal-text {
-  padding: 0 10px 10px 10px;
-  font-weight: 900;
-  font-size: 26px;
-  color: #111;
-  margin-bottom: 0px;
-}
-
-.modal-subtitle {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.modal-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-}
-
-.modal-btn {
-  width: 100%;
-  padding: 16px;
-  border-radius: 36px;
-  border: none;
-  font-family: "Nunito", sans-serif;
-  font-weight: 900;
-  font-size: 18px;
-  cursor: pointer;
-  transition: transform 0.1s, box-shadow 0.1s;
-  text-transform: uppercase;
-}
-
-.modal-btn:active {
-  transform: translateY(4px);
-  box-shadow: 0 0 0 transparent !important;
-}
-
-.modal-btn-primary {
-  background: #2b6be2;
-  color: white;
-  box-shadow: 0 5px 0 #2959b0;
-}
-
-.modal-btn-secondary {
-  background: none;
-  color: #645e5e;
-  font-weight: 700;
-  box-shadow: none;
-}
-
-/* =========================================
-   ПРОЧИЕ СТИЛИ
-   ========================================= */
 
 .german__letters {
   display: flex;
@@ -1297,11 +1109,11 @@ watchEffect(() => {
   }
 
   .quest__option-btn {
-    height: 40px;
+    height: 46px;
     font-size: 14px;
     border: 3px solid var(--tabsSlideBorderColor);
     box-shadow: var(--boxShadowMobile);
-    padding: 3px;
+    padding: 6px;
   }
 }
 
