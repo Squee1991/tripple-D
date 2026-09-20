@@ -8176,6 +8176,7 @@
   },
   "pavelOverlay": {
     "newbie": "Çaylak",
+    "streakTitle": "Seri",
     "rankTitle": "Mezuniyet Kepleri",
     "rankLabelOne": "- Mezuniyet Kepleri günlük görevleri tamamladıkça verilir.",
     "rankLabelTwo": "- Tüm günlük görevleri yaparak günde 3 adet alabilirsin. Ödülleri profilindeki 'Rütbe' bölümünden görebilirsin.",
@@ -10746,5 +10747,39 @@
     "succesCompleted": "BAJARILDI",
     "rewardGot": "Siz mukofot oldingiz:",
     "questCompletedAgain": "Vazifa qaytadan bajarildi:"
+  },
+  "calendarHints": {
+    "first": "Bu hafta harika bir tempo! Aynen böyle devam",
+    "second": "Bugün atılan küçük bir adım, yarın devasa bir sonuç demektir!",
+    "third": "Disiplin harikalar yaratır. Her geçen gün hedefine daha da yaklaşıyorsun!",
+    "fourth": "Ateş gittikçe daha parlak yanıyor! Hız kesme",
+    "fifth": "Tamamlanan her gün demir gibi bir alışkanlık oluşturuyor!",
+    "sixth": "Birçok kişinin vazgeçtiği şeyi başarıyorsun. Harika iş!",
+    "seventh": "Serin gün geçtikçe güçleniyor, böyle devam et!",
+    "eighth": "Günde sadece birkaç dakika ve Almanca şimdiden daha samimi gelmeye başladı!",
+    "ninth": "Harika iş! Önemli olan düzenli olmak, öndesin",
+    "tenth": "Her geçen gün özgüven katıyor. Yarın devam edeceğiz!"
+  },
+  "streakButtons": {
+    "first": "Yarın görüşürüz",
+    "second": "Yarın devam edelim",
+    "third": "Harika iş",
+    "fourth": "Adım tamam, yarına kadar",
+    "fifth": "Yarın pekiştirelim mi?",
+    "sixth": "Disiplin dorukta",
+    "seventh": "Yarına kadar",
+    "eighth": "Yarın tekrar edelim mi?",
+    "ninth": "Tempoyu düşürmüyoruz"
+  },
+  "hintText": {
+    "start": "Serin başladı. Kaybetmemek için her gün pratik yap!",
+    "first": "Haftanın sonu! Yarın yepyeni ve temiz bir serinin başlangıcı",
+    "second": "Bu haftayı bitirelim, sonrakinden itibaren tam seri başlayalım",
+    "aRow": "üst üste"
+  },
+  "guessWordHint": {
+    "hint-title": "İpucu",
+    "hint-desc": "Haklarından harcamadan rastgele 2 harf açar",
+    "hint-action-btn": "Kullan"
   }
 }

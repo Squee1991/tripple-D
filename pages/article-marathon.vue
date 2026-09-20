@@ -61,7 +61,6 @@
           </button>
         </div>
       </div>
-
     </Transition>
   </div>
 </template>
@@ -86,15 +85,17 @@ const authStore = userAuthStore()
 const router = useRouter()
 const selectedDifficulty = ref(1)
 const isMounted = ref(false)
+
 const currentRecord = computed(() => {
-  if (gameStore.personalBests) {
-    return gameStore.personalBests[selectedDifficulty.value] || 0
+  const bests = gameStore.allTimeBests || gameStore.personalBests
+  if (bests) {
+    return bests[selectedDifficulty.value] || 0
   }
   return 0
 })
 
 onMounted(() => {
-  setTimeout(()=>{
+  setTimeout(() => {
     isMounted.value = true
   }, 100)
   if (!gameStore.loadWords && typeof gameStore.loadWords !== 'function') return
@@ -131,14 +132,13 @@ const difficultyBase = ref([
 </script>
 
 <style scoped>
-
 .page-wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
   font-family: "Nunito", sans-serif;
-  background-color: var(--bg);
+  background-color: var(--bg, #0f111a);
   overflow: hidden;
   -webkit-tap-highlight-color: transparent;
 }
@@ -160,10 +160,10 @@ const difficultyBase = ref([
   flex: 1;
   font-size: 22px;
   font-weight: 900;
-  color: var(--titleColor);
+  color: #ffffff;
   letter-spacing: 0.5px;
   margin-left: 15px;
-  text-shadow: 0 1px var(--titleColor);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
 }
 
 .prepare-container {
@@ -179,18 +179,6 @@ const difficultyBase = ref([
   display: none;
 }
 
-.header {
-  text-align: center;
-}
-
-.subtitle {
-  font-size: 18px;
-  color: #6a7585;
-  padding: 16px 20px 0;
-  margin: 0;
-  font-weight: 800;
-}
-
 .panel__wrapper {
   padding: 16px 20px;
   width: 100%;
@@ -202,13 +190,13 @@ const difficultyBase = ref([
 }
 
 .user-greeting, .guest-greeting {
-  padding: 16px;
+  padding: 10px;
   border-radius: 20px;
   text-align: center;
 }
 
 .guest-greeting p {
-  color: #1e1e1e;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 800;
   margin: 0;
@@ -217,117 +205,166 @@ const difficultyBase = ref([
 .user-greeting .record {
   margin: 0;
   font-weight: 800;
-  color: var(--titleColor);
+  color: #ffffff;
   font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .record__value {
-  font-size: 23px;
+  font-size: 24px;
   font-weight: 900;
-  background: #fca13a;
-  color: white;
-  padding: 4px 16px;
-  border-radius: 12px;
+  background: #34C759;
+  color: #ffffff;
+  padding: 4px 18px;
+  border-radius: 14px;
+  box-shadow: 0 3px 0 #248a3d;
 }
 
 .settings-block h2 {
   font-size: 22px;
   text-align: center;
   margin: 0 0 16px 0;
-  color: var(--titleColor);
+  color: #ffffff;
   font-weight: 900;
 }
 
 .difficulty-options {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .difficulty-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 20px;
-  border-radius: 20px;
-  border: 2px solid var(--menuBorder);
-  box-shadow: 0 2px 0 var(--menuBorder);
+  padding: 12px 20px;
+  border-radius: 22px;
+  border: 2px solid transparent;
   cursor: pointer;
-  transition: all 0.1s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.1s ease, box-shadow 0.15s ease, background-color 0.2s ease;
   text-align: left;
-  background: #ffffff;
-  color: #1e1e1e;
+  background: #232738;
 }
 
+.difficulty-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+.difficulty-btn.easy {
+  border-color: #34C759;
+  box-shadow: 0 5px 0 rgba(52, 199, 89, 0.4);
+}
+.difficulty-btn.easy .btn-title {
+  color: #34C759;
+}
+.difficulty-btn.easy .btn-desc {
+  color: #a0a5b5;
+}
 .difficulty-btn.easy.active {
-  background-color: #2bd653;
-  color: white;
-
+  background: #34C759;
+  box-shadow: 0 6px 0 #248a3d;
+}
+.difficulty-btn.easy.active .btn-title,
+.difficulty-btn.easy.active .btn-desc {
+  color: #ffffff;
 }
 
+.difficulty-btn.normal {
+  border-color: #007AFF;
+  box-shadow: 0 5px 0 rgba(0, 122, 255, 0.4);
+}
+.difficulty-btn.normal .btn-title {
+  color: #007AFF;
+}
+.difficulty-btn.normal .btn-desc {
+  color: #a0a5b5;
+}
 .difficulty-btn.normal.active {
-  background-color: #edc838;
-  color: white;
+  background: #007AFF;
+  box-shadow: 0 6px 0 #005bb5;
+}
+.difficulty-btn.normal.active .btn-title,
+.difficulty-btn.normal.active .btn-desc {
+  color: #ffffff;
 }
 
+.difficulty-btn.hard {
+  border-color: #FF3B30;
+  box-shadow: 0 5px 0 rgba(255, 59, 48, 0.4);
+}
+.difficulty-btn.hard .btn-title {
+  color: #FF3B30;
+}
+.difficulty-btn.hard .btn-desc {
+  color: #a0a5b5;
+}
 .difficulty-btn.hard.active {
-  background-color: #e68f8f;
-  color: white;
+  background: #FF3B30;
+  box-shadow: 0 6px 0 #c22820;
+}
+.difficulty-btn.hard.active .btn-title,
+.difficulty-btn.hard.active .btn-desc {
+  color: #ffffff;
 }
 
 .button-content {
   display: flex;
   flex-direction: column;
-  gap: 4px;
 }
 
 .btn-title {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 900;
+  transition: color 0.2s ease;
 }
 
 .btn-desc {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
-  color: #4b5563;
+  transition: color 0.2s ease;
 }
 
 .difficulty-bars {
   display: flex;
   align-items: flex-end;
-  gap: 4px;
+  gap: 5px;
   height: 32px;
 }
 
 .bar {
   width: 8px;
-  background-color: #e5e7eb;
-  border-radius: 4px;
-  border: 2px solid #9ca3af;
-  transition: all 0.2s;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  transition: background-color 0.2s;
 }
 
-.bar-1 {
-  height: 14px;
+.bar-1 { height: 14px; }
+.bar-2 { height: 22px; }
+.bar-3 { height: 32px; }
+
+
+.difficulty-btn.easy:not(.active) .bar.bar-active {
+  background-color: #34C759;
+}
+.difficulty-btn.normal:not(.active) .bar.bar-active {
+  background-color: #007AFF;
+}
+.difficulty-btn.hard:not(.active) .bar.bar-active {
+  background-color: #FF3B30;
 }
 
-.bar-2 {
-  height: 22px;
+/* В выбранной активной карточке горят белым */
+.difficulty-btn.active .bar.bar-active {
+  background-color: #ffffff;
 }
-
-.bar-3 {
-  height: 32px;
+.difficulty-btn.active .bar:not(.bar-active) {
+  background-color: rgba(255, 255, 255, 0.35);
 }
-
-.bar.bar-active {
-  background-color: #ef4444;
-  border-color: #991b1b;
-}
-
 
 .loading {
   display: flex;
@@ -341,7 +378,7 @@ const difficultyBase = ref([
 .loading p {
   font-size: 18px;
   font-weight: 800;
-  color: #1e1e1e;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -353,43 +390,43 @@ const difficultyBase = ref([
 .bouncy-loader span {
   width: 16px;
   height: 16px;
-  background: #6358ac;
+  background: #007AFF;
   border-radius: 50%;
+  animation: bounce 0.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95);
 }
 
-.bouncy-loader span:nth-child(2) {
-  animation-delay: 0.1s;
-}
-
-.bouncy-loader span:nth-child(3) {
-  animation-delay: 0.2s;
-}
+.bouncy-loader span:nth-child(2) { animation-delay: 0.1s; }
+.bouncy-loader span:nth-child(3) { animation-delay: 0.2s; }
 
 .bottom-action {
-  padding: 25px 20px 28px 20px;
+  padding: 20px 20px 28px 20px;
   margin-top: auto;
 }
 
 .start-button {
-  background: #007AFF;
-  color: white;
+  background: #4F6AF6;
+  color: #ffffff;
   border: none;
-  border-radius: 50px;
-  padding: 16px 32px;
-  font-size: 18px;
-  font-weight: 700;
-  box-shadow: 0 6px 0 #005bb5;
+  border-radius: 54px;
+  padding: 16px 22px;
+  font-size: 19px;
+  font-weight: 900;
+  box-shadow: 0 6px 0 #3247c4;
   cursor: pointer;
   transition: all 0.1s;
   width: 100%;
 }
 
+.start-button:active:not(:disabled) {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #3247c4;
+}
+
 .start-button:disabled {
-  background: #f3f4f6;
-  color: #9ca3af;
-  border-color: #d1d5db;
+  background: #2a2e42;
+  color: #636882;
   cursor: not-allowed;
-  box-shadow: 0 5px 0 #d1d5db;
+  box-shadow: 0 5px 0 #1b1d2b;
 }
 
 @keyframes fadeIn {
@@ -401,5 +438,10 @@ const difficultyBase = ref([
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-15px); }
 }
 </style>

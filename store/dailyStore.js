@@ -23,7 +23,7 @@ export const dailyStore = defineStore('dailyStore', () => {
     const unsubRef = ref(null)
     const syncing = ref(false)
     let isResettingCycle = false;
-    let isApplyingCloudUpdate = false; // Флаг для разрыва бесконечного цикла
+    let isApplyingCloudUpdate = false;
     let tickTimer = null
     let syncTimer = null
     let visHandler = null
@@ -114,6 +114,7 @@ export const dailyStore = defineStore('dailyStore', () => {
             guessed: 0,
             pluralCnt: 0,
             wordArticleCnt: 0,
+            streakModalShown: false,
             duels: 0,
             marathonMediumBest: 0,
             hardStreakBest: 0,
@@ -131,6 +132,7 @@ export const dailyStore = defineStore('dailyStore', () => {
             cycleKey: key,
             quests: slice,
             penaltyProcessed: false,
+            streakCounted: false,
             counters: { ...counters.value },
             completedCount: 0,
             hatClaimed: false,
@@ -214,17 +216,12 @@ export const dailyStore = defineStore('dailyStore', () => {
         unsubRef.value = onSnapshot(ref, (snap) => {
             cloudReady.value = true
             if (!snap.exists()) return
-
-            // Блокируем реакцию на собственные записи
             if (snap.metadata.hasPendingWrites) return
-
             const data = snap.data()
             if (!data) return
-
             const local = currentCycle.value
             const cloudServerTs = typeof data.serverUpdatedAt?.toMillis === 'function' ? data.serverUpdatedAt.toMillis() : 0
             const localTs = Number(local?.lastUpdatedAtMs || 0)
-
             const cloudProgressScore = (data.quests || []).reduce((a, q) => a + (q.isCompleted ? 2 : 0) + Number(q.currentValue || 0), 0)
             const localProgressScore = (local?.quests || []).reduce((a, q) => a + (q.isCompleted ? 2 : 0) + Number(q.currentValue || 0), 0)
             let preferCloud = false
@@ -283,19 +280,31 @@ export const dailyStore = defineStore('dailyStore', () => {
 
             try {
                 if (exist && exist.owner === currentUid && isNewDay) {
-                    if (!exist.penaltyProcessed && (exist.completedCount || 0) === 0) {
+                    // 1. Проверяем, выполнил ли он квесты в прошлом сгенерированном дне
+                    const failedLastCycle = !exist.penaltyProcessed && (exist.completedCount || 0) === 0;
+
+                    // 2. Проверяем, не пропустил ли он вчерашний день ПОЛНОСТЬЮ (циклы не идут подряд)
+                    const missedYesterday = exist.cycleKey !== undefined && exist.cycleKey < key - 1;
+
+                    // Если он либо не доделал квесты, либо вообще не заходил вчера
+                    if (failedLastCycle || missedYesterday) {
                         const authStore = userAuthStore()
                         const freezeEndMs = authStore.freezeEndsAt || 0
-                        const previousCycleStartsAt = Number(exist.expiresAtMs || 0) - CYCLE_MS
+
+                        // Определяем начало того дня, за который нужно оштрафовать
+                        const targetCycleStart = missedYesterday
+                            ? startOfTodayLocalMs() - CYCLE_MS // начало вчерашнего дня
+                            : Number(exist.expiresAtMs || 0) - CYCLE_MS; // начало сохраненного цикла
 
                         let hadShield = false
-                        if (freezeEndMs && freezeEndMs > previousCycleStartsAt) {
+                        if (freezeEndMs && freezeEndMs > targetCycleStart) {
                             hadShield = true
                         }
 
                         if (!hadShield) {
                             exist.penaltyProcessed = true;
                             await authStore.modifyHats(-3)
+                            await authStore.resetStreak();
                         }
                     }
                 }
@@ -341,8 +350,7 @@ export const dailyStore = defineStore('dailyStore', () => {
     }
 
     async function recomputeAndPersist() {
-        if (isApplyingCloudUpdate) return // Защита от пинг-понга с Firebase
-
+        if (isApplyingCloudUpdate) return
         if (online() && uid()) {
             try {
                 const ref = userDocRef()
@@ -386,6 +394,10 @@ export const dailyStore = defineStore('dailyStore', () => {
                 rankStore.checkRewardUI()
                 rewardClaimed = true
                 changed = true
+                if (!local.streakCounted) {
+                    local.streakCounted = true
+                    authStore.incrementStreak()
+                }
             }
 
             if (val !== q.currentValue || now !== was) changed = true
@@ -479,6 +491,11 @@ export const dailyStore = defineStore('dailyStore', () => {
             const rankStore = useRankUserStore()
             await authStore.modifyHats(1)
 
+            if (!local.streakCounted) {
+                local.streakCounted = true
+                await authStore.incrementStreak()
+            }
+
             if (authStore.isFreezeActive) {
                 await authStore.cancelFreeze()
             }
@@ -554,6 +571,25 @@ export const dailyStore = defineStore('dailyStore', () => {
         })
     }
 
+    async function markStreakModalShown() {
+        if (!currentCycle.value) return;
+
+        currentCycle.value.streakModalShown = true;
+        saveLocal(currentCycle.value);
+
+        const ref = userDocRef();
+        if (ref && online()) {
+            try {
+                await setDoc(ref, {
+                    streakModalShown: true,
+                    serverUpdatedAt: serverTimestamp()
+                }, { merge: true });
+            } catch (e) {
+                console.error('Ошибка записи streakModalShown в Firestore:', e);
+            }
+        }
+    }
+
     watch(cycleKey, () => { ensureLocalCycle() })
 
     return {
@@ -567,6 +603,7 @@ export const dailyStore = defineStore('dailyStore', () => {
         startAutoSync,
         stopAutoSync,
         updateProgressFromCounters,
+        markStreakModalShown,
         markQuestCompleted,
         fetchMonthHistory,
         addLearned, addExp, addPoints, addWrong, addGuessed, addWordArticle, addDuels, noteHardStreak, addAudioArticle,

@@ -8190,6 +8190,7 @@
   },
   "pavelOverlay": {
     "newbie": "Newbie",
+    "streakTitle": "Streak",
     "rankTitle": "Mortarboards",
     "rankLabelOne": "Mortarboards are awarded for completing daily tasks.",
     "rankLabelTwo": "You can get 3 per day by completing all daily tasks. Rewards can be viewed in the 'Rank' section of your profile.",
@@ -10759,5 +10760,39 @@
     "succesCompleted": "COMPLETED",
     "rewardGot": "You received a reward:",
     "questCompletedAgain": "Quest completed again:"
+  },
+  "calendarHints": {
+    "first": "Great pace this week! Keep it up",
+    "second": "A small step today is a huge result tomorrow!",
+    "third": "Discipline works wonders. You're closer to your goal every day!",
+    "fourth": "The fire is burning brighter! Don't slow down",
+    "fifth": "Every completed day builds an iron-clad habit!",
+    "sixth": "You're doing what many give up on. Great job!",
+    "seventh": "Your streak grows stronger day by day, keep it up!",
+    "eighth": "Just a couple of minutes a day, and German is already starting to feel like home!",
+    "ninth": "Great job! Consistency is key, and you're ahead",
+    "tenth": "Every day adds confidence. We'll continue tomorrow!"
+  },
+  "streakButtons": {
+    "first": "See you tomorrow",
+    "second": "Let's continue tomorrow",
+    "third": "Great job",
+    "fourth": "Step made, see you tomorrow",
+    "fifth": "Shall we lock it in tomorrow?",
+    "sixth": "Discipline at its peak",
+    "seventh": "Until tomorrow",
+    "eighth": "Shall we review tomorrow?",
+    "ninth": "Don't slow the pace"
+  },
+  "hintText": {
+    "start": "Your streak has begun. Practice every day so you don't lose it!",
+    "first": "End of the week! Tomorrow marks the start of a fresh streak",
+    "second": "Let's finish this week, and start a full streak from the next one",
+    "aRow": "in a row"
+  },
+  "guessWordHint": {
+    "hint-title": "Hint",
+    "hint-desc": "Reveals 2 random letters without using up any attempts",
+    "hint-action-btn": "Use"
   }
 }

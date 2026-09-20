@@ -8167,6 +8167,7 @@
   },
   "pavelOverlay": {
     "newbie": "Începător",
+    "streakTitle": "Serie",
     "rankTitle": "Toci",
     "rankLabelOne": "- Tocile sunt acordate pentru îndeplinirea sarcinilor zilnice.",
     "rankLabelTwo": "- Poți obține 3 pe zi dacă le faci pe toate. Recompensele pot fi văzute la secțiunea „Rang” din profil.",
@@ -10734,5 +10735,39 @@
     "succesCompleted": "FINALIZAT",
     "rewardGot": "Ai primit o recompensă:",
     "questCompletedAgain": "Sarcină finalizată din nou:"
+  },
+  "calendarHints": {
+    "first": "Ritm excelent săptămâna aceasta! Ține-o tot așa",
+    "second": "Un mic pas astăzi - un rezultat uriaș mâine!",
+    "third": "Disciplina face minuni. Ești mai aproape de obiectiv în fiecare zi!",
+    "fourth": "Focul arde din ce în ce mai puternic! Nu reduce turația",
+    "fifth": "Fiecare zi parcursă formează un obicei de oțel!",
+    "sixth": "Faci ceea ce mulți renunță să facă. Treabă excelentă!",
+    "seventh": "Seria ta devine tot mai puternică zi de zi, ține-o tot așa!",
+    "eighth": "Doar câteva minute pe zi, iar germana începe deja să se simtă ca acasă!",
+    "ninth": "Treabă excelentă! Regularitatea este cheia și ești în față",
+    "tenth": "Fiecare zi adaugă încredere. Continuăm mâine!"
+  },
+  "streakButtons": {
+    "first": "Ne vedem mâine",
+    "second": "Continuăm mâine",
+    "third": "Treabă excelentă",
+    "fourth": "Pas făcut, pe mâine",
+    "fifth": "Consolidăm mâine?",
+    "sixth": "Disciplină la înălțime",
+    "seventh": "Pe mâine",
+    "eighth": "Repetăm mâine?",
+    "ninth": "Nu lăsăm garda jos"
+  },
+  "hintText": {
+    "start": "Seria a început. Exersează în fiecare zi ca să n-o pierzi!",
+    "first": "Final de săptămână! Mâine începe o nouă serie curată",
+    "second": "Terminăm săptămâna asta, iar din următoarea începem o serie completă",
+    "aRow": "la rând"
+  },
+  "guessWordHint": {
+    "hint-title": "Indiciu",
+    "hint-desc": "Va dezvălui 2 litere aleatorii fără a consuma încercări",
+    "hint-action-btn": "Folosește"
   }
 }

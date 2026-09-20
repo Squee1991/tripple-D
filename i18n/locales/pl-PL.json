@@ -8183,6 +8183,7 @@
   },
   "pavelOverlay": {
     "newbie": "Nowicjusz",
+    "streakTitle": "Seria",
     "rankTitle": "Birety",
     "rankLabelOne": "- Birety są przyznawane za wykonywanie codziennych zadań.",
     "rankLabelTwo": "- Możesz zdobyć 3 dziennie, wykonując wszystkie codzienne zadania. Nagrody można sprawdzić w sekcji „Ranga” w profilu.",
@@ -10752,5 +10753,39 @@
     "succesCompleted": "UKOŃCZONE",
     "rewardGot": "Otrzymałeś nagrodę:",
     "questCompletedAgain": "Zadanie ukończone ponownie:"
+  },
+  "calendarHints": {
+    "first": "Świetne tempo w tym tygodniu! Tak trzymać",
+    "second": "Mały krok dzisiaj to ogromny rezultat jutro!",
+    "third": "Dyscyplina czyni cuda. Z każdym dniem jesteś bliżej celu!",
+    "fourth": "Ogień płonie coraz mocniej! Nie zwalniaj tempa",
+    "fifth": "Każdy ukończony dzień buduje żelazny nawyk!",
+    "sixth": "Robisz to, na czym wielu się poddaje. Dobra robota!",
+    "seventh": "Twoja seria rośnie z dnia na dzień, tak trzymać!",
+    "eighth": "Zaledwie kilka minut dziennie, a niemiecki staje się coraz bliższy!",
+    "ninth": "Świetna robota! Kluczem jest regularność i jesteś do przodu",
+    "tenth": "Każdy dzień dodaje pewności siebie. Kontynuujemy jutro!"
+  },
+  "streakButtons": {
+    "first": "Do zobaczenia jutro",
+    "second": "Kontynuujemy jutro",
+    "third": "Dobra robota",
+    "fourth": "Krok zrobiony, do jutra",
+    "fifth": "Utrwalimy to jutro?",
+    "sixth": "Dyscyplina na najwyższym poziomie",
+    "seventh": "Do jutra",
+    "eighth": "Powtórzymy jutro?",
+    "ninth": "Nie zwalniamy tempa"
+  },
+  "hintText": {
+    "start": "Twoja seria się rozpoczęła. Ćwicz codziennie, aby jej nie stracić!",
+    "first": "Finał tygodnia! Jutro start nowej czystej serii",
+    "second": "Dobijmy ten tydzień, a od następnego zaczniemy pełną serię",
+    "aRow": "z rzędu"
+  },
+  "guessWordHint": {
+    "hint-title": "Podpowiedź",
+    "hint-desc": "Odsłoni 2 losowe litery bez zużywania prób",
+    "hint-action-btn": "Użyj"
   }
 }

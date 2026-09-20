@@ -1,6 +1,6 @@
 import { ref, watch } from 'vue'
 
-export function useQuestAnimations(questStore, previouslyCleared) {
+export function useQuestAnimations(questStore, previouslyCleared, shouldShowResultScreen) {
     const animStep = ref(0)
     const displayCoins = ref(0)
     const displayXp = ref(0)
@@ -76,8 +76,8 @@ export function useQuestAnimations(questStore, previouslyCleared) {
         miniConfettiParticles.value = []
     }
 
-    watch(() => questStore.finished, (isFinished) => {
-        if (!isFinished) return
+    watch(() => shouldShowResultScreen?.value, (isShown) => {
+        if (!isShown) return
 
         animStep.value = 0
         displayCoins.value = 0

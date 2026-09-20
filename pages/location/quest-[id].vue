@@ -185,7 +185,7 @@
         </div>
       </div>
       <VQuestResultScreen
-          :finished="questStore.finished"
+          :finished="shouldShowResultScreen"
           :has-mistakes="questStore.hasMistakes"
           :previously-cleared="previouslyCleared"
           :anim-step="animStep"
@@ -198,7 +198,6 @@
           @retry-mistakes="questStore.startRetryMistakes()"
       />
     </div>
-
     <VReviveModal
         :show="forceRevive || showRevive"
         :correct-count="questStore.correctCount"
@@ -227,6 +226,11 @@
         :task="questStore.task"
         :lives="questStore.lives"
     />
+    <VStreakModal
+        v-model="showStreakModal"
+        :streak="authStore.streakCount"
+        @close="handleStreakClosed"
+    />
   </div>
 </template>
 
@@ -254,9 +258,9 @@ import VQuestResultScreen from '~/src/components/V-QuestResultScreen.vue'
 import {useQuestAnimations} from '~/composables/useQuestAnimations.js'
 import {useGermanKeyboard} from '~/composables/useGermanKeyboard.js'
 import {useQuestLives} from '~/composables/useQuestLives.js'
-
+import VStreakModal from '~/src/components/V-streak.vue'
+import { dailyStore } from '~/store/dailyStore.js'
 useSeoMeta({robots: 'noindex, nofollow'})
-
 const {getDotClass, optionClass} = useClasses()
 const {t} = useI18n()
 const route = useRoute()
@@ -267,10 +271,22 @@ const authStore = userAuthStore()
 const showTipModal = ref(false)
 const PRICE = 5
 
+const daily = dailyStore()
+const isWaitingForStreakClose = ref(false)
+
+const showStreakModal = ref(false)
+const initialStreak = ref(0)
+const streakWasIncremented = ref(false)
+
 const inputRef = ref(null)
 const speechInputRef = ref(null)
 const previouslyCleared = ref(false)
 const consecutiveCorrectCount = ref(0)
+
+
+const shouldShowResultScreen = computed(() => {
+  return questStore.finished && !showStreakModal.value && !isWaitingForStreakClose.value
+})
 
 const {
   animStep,
@@ -280,7 +296,7 @@ const {
   miniConfettiParticles,
   spawnMiniConfetti,
   resetAnimations
-} = useQuestAnimations(questStore, previouslyCleared)
+} = useQuestAnimations(questStore, previouslyCleared, shouldShowResultScreen)
 
 const {
   germanLetters,
@@ -295,6 +311,15 @@ const {
   watchAdForLife,
   purchaseLife
 } = useQuestLives(questStore, langStore, PRICE)
+
+
+
+
+watch(() => authStore.streakCount, (newVal) => {
+  if (newVal > initialStreak.value) {
+    streakWasIncremented.value = true
+  }
+})
 
 const {$track} = useNuxtApp()
 let taskStartTime = Date.now()
@@ -346,6 +371,8 @@ watch(() => questStore.currentIndex, () => {
   showTipModal.value = false
 })
 
+
+
 const regionKey = computed(() => String(route.query.region || ''))
 const wallet = computed(() => Number(langStore.points || 0))
 const canBuyLife = computed(() => wallet.value >= PRICE)
@@ -382,6 +409,15 @@ async function speakText(text) {
   } finally {
     isSpeaking.value = false
   }
+}
+
+
+function handleStreakClosed() {
+  showStreakModal.value = false
+  isWaitingForStreakClose.value = false
+  setTimeout(() => {
+    playLevelCompleted()
+  }, 450)
 }
 
 function handleWordBankClick(wordKey) {
@@ -532,26 +568,42 @@ function beforeUnloadHandler(e) {
 }
 
 watch(() => questStore.finished, (isFinished) => {
-  if (isFinished) {
-    $track('quest_finished', {
-      quest_id: questId.value,
-      region: regionKey.value,
-      success: questStore.success,
-      has_mistakes: questStore.hasMistakes,
-      correct_count: questStore.correctCount,
-      required_tasks: questStore.requiredTasks
-    })
+  if (!isFinished) return
 
-    if (questStore.success) {
-      setTimeout(() => {
+  $track('quest_finished', {
+    quest_id: questId.value,
+    region: regionKey.value,
+    success: questStore.success,
+    has_mistakes: questStore.hasMistakes,
+    correct_count: questStore.correctCount,
+    required_tasks: questStore.requiredTasks
+  })
+
+  if (questStore.success) {
+    isWaitingForStreakClose.value = true
+    setTimeout(async () => {
+      const isStreakHigher = authStore.streakCount > initialStreak.value
+      const streakCountedToday = daily.currentCycle?.streakCounted || streakWasIncremented.value || isStreakHigher
+      const modalAlreadyShownToday = daily.currentCycle?.streakModalShown === true
+      if (streakCountedToday && !modalAlreadyShownToday) {
+        if (typeof daily.markStreakModalShown === 'function') {
+          await daily.markStreakModalShown()
+        }
+        showStreakModal.value = true
+      } else {
+        isWaitingForStreakClose.value = false
         playLevelCompleted()
-      }, 200)
-    }
+      }
+    }, 450)
   }
 })
 
 watch([questId, regionKey], () => {
       if (!questId.value || !regionKey.value) return
+      initialStreak.value = authStore.streakCount || 0
+      streakWasIncremented.value = false
+      showStreakModal.value = false
+      isWaitingForStreakClose.value = false
       questStore.loading = true
       questStore.error = ''
       questStore.quest = null
@@ -563,14 +615,11 @@ watch([questId, regionKey], () => {
       questStore.reorderBank = []
       showHint.value = false
       resetAnimations()
-
       const initQuest = async () => {
         consecutiveCorrectCount.value = 0
         await questStore.loadProgressFromFirebase?.()
-
         const prog = questStore.questProgress?.[questId.value]
         previouslyCleared.value = !!(prog?.success || prog?.rewardClaimed)
-
         await questStore.loadQuest(questId.value, regionKey.value)
         $track('quest_session_started', {
           quest_id: questId.value,

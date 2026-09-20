@@ -33,14 +33,12 @@ exports.takeFromArticlePenalty = onSchedule({
 	const promises = [];
 	for (const doc of snapshot.docs) {
 		if (doc.id !== 'currentDailyQuests') continue;
-
 		const data = doc.data();
 		const userId = data.owner;
 
 		if ((data.completedCount || 0) === 0) {
 			const userRef = db.collection('users').doc(userId);
 			const userSnap = await userRef.get();
-
 			if (userSnap.exists) {
 				const userData = userSnap.data();
 				const currentHats = userData.totalHats || 0;
@@ -48,13 +46,17 @@ exports.takeFromArticlePenalty = onSchedule({
 				const prevCycleStartsAt = (data.expiresAtMs || 0) - CYCLE_MS;
 				const hadShield = freezeEndMs && freezeEndMs > prevCycleStartsAt;
 				const hasImmunity = currentHats >= IMMUNITY_RANK_HATS;
-				if (!hadShield && !hasImmunity) {
-
-					batch.update(userRef, { totalHats: Math.max(0, currentHats - 3) });
+				if (!hadShield) {
+					const userUpdates = {
+						streakCount: 0
+					};
+					if (!hasImmunity) {
+						userUpdates.totalHats = Math.max(0, currentHats - 3);
+					}
+					batch.update(userRef, userUpdates);
 				}
 			}
 		}
-
 		batch.update(doc.ref, { penaltyProcessed: true });
 		count++;
 
@@ -330,7 +332,5 @@ exports.handleRevenueCatWebhook = onRequest(async (req, res) => {
 		res.status(200).send("OK");
 	} catch (error) {
 		res.status(500).send("Error");
-
 	}
-
 });

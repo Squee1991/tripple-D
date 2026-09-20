@@ -31,17 +31,17 @@
       </div>
       <div class="stat-card">
         <div class="stat-icon streak-icon">
-          <img src="../../assets/images/assurance.svg" alt="assurance">
+          <img src="../../assets/images/hatsNAv.svg" alt="assurance">
         </div>
         <div class="stat-info">
-          <span class="stat-value">{{ langStore.isLeveling }} </span>
-          <span class="stat-label">{{ t('stepHitLabels.levelTitle')}}</span>
+          <span class="stat-value">{{ authStore.totalHats }} </span>
+          <span class="stat-label">{{ t('Шляпы')}}</span>
         </div>
       </div>
     </div>
     <VBanner
         :text="t('personalAccount.streakTitle')"
-        :icon="Streakicon"
+        :icon="StreakIcon"
     />
     <div class="marathon-grid">
       <div class="stat-card marathon-card easy">
@@ -133,17 +133,17 @@
 
 <script setup>
 import { computed, ref, onMounted, watch } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { userAuthStore } from '../../store/authStore.js'
-import { useRankUserStore } from '../../store/rankStore.js'
-import { dailyStore } from '../../store/dailyStore.js'
-import { useGameStore } from '../../store/marafonStore.js'
-import { userlangStore } from '../../store/learningStore.js'
+
+import { userAuthStore } from '~/store/authStore.js'
+import { useRankUserStore } from '~/store/rankStore.js'
+import { dailyStore } from '~/store/dailyStore.js'
+import { useGameStore } from '~/store/marafonStore.js'
+import { userlangStore } from '~/store/learningStore.js'
 import { AWARDS } from '~/utils/awards'
-import EducationHut from '../../assets/images/graduate-hat.svg'
+import Unranked from '~/assets/images/Unranked.png'
 import VBanner from "~/src/components/V-banner.vue";
-import Streakicon from '../../assets/images/fire.svg'
-import PlusIcon from '../../assets/images/PlusLogo.png'
+import StreakIcon from '~/assets/images/fire.svg'
+import PlusIcon from '~/assets/images/PlusLogo.png'
 
 const { t, locale } = useI18n()
 const authStore = userAuthStore()
@@ -213,7 +213,7 @@ const currentRankInfo = computed(() => {
     rankTitle: 'v-rank.rank_0',
     lvlIndex: 0,
     hatsNeed: 0,
-    icon: EducationHut
+    icon: Unranked
   }
 
   for (const rank of rankStore.ranksData || []) {
@@ -222,7 +222,7 @@ const currentRankInfo = computed(() => {
       const need = lvl?.hats ?? 0
 
       if (hats >= need && need >= best.hatsNeed) {
-        const icon = rank.icons?.[idx]?.icon ?? rank.icon ?? EducationHut
+        const icon = rank.icons?.[idx]?.icon ?? rank.icon ?? Unranked
         best = { rankTitle: rank.title, lvlIndex: idx, hatsNeed: need, icon }
       }
     }

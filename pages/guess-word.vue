@@ -4,15 +4,15 @@
     <div v-else-if="!isLoadingAd" class="ios-app-container">
       <header class="ios-header" :class="{ 'not__started' : !isStarted }">
         <VBackBtn/>
-        <span v-if="!isStarted" class="title">{{ t('sub.guess')}}</span>
+        <span v-if="!isStarted" class="title">{{ t('sub.guess') }}</span>
         <div v-if="isStarted && !store.win && !store.lose" class="ios-stats">
           <div class="stat-pill">
             <img class="guess__icon-header" src="../assets/images/dailyIcons/timer.svg" alt="">
-            <span>{{ timePassed }}</span>
+            <span class="guest__header-point">{{ timePassed }}</span>
           </div>
           <div class="stat-pill">
             <img class="guess__icon-header" src="../assets/images/heartInfo.svg" alt="heart">
-            <span>{{ store.attempts }}</span>
+            <span class="guest__header-point">{{ store.attempts }}</span>
           </div>
           <button class="ios-btn-icon" @click="handleRestart" title="Начать заново">
             <img class="guess__icon-header -repeat"
@@ -27,7 +27,7 @@
           <img class="guess__icon" src="../assets/images/GuessIcon.svg" alt="">
         </div>
         <p class="subtitle">{{ t('guessWord.subtitle') }}</p>
-        <button class="ios-btn-primary btn-bounce" @click="startGame">
+        <button class="ios-btn-primary btn-bounce" @click="startGame(false)">
           {{ t('guessWord.startGame') }}
         </button>
       </div>
@@ -44,9 +44,6 @@
           >
             {{ char || '' }}
           </div>
-        </div>
-        <div v-if="store.win" class="success-message bounce-in">
-          🎉 {{ t('guessWord.victory') }} 🎉
         </div>
         <div class="game-keyboard">
           <button
@@ -69,59 +66,139 @@
               :placeholder="t('guessWord.placeholder')"
               autocomplete="off"
           />
-          <button class="ios-btn-secondary" @click="guessWord" :disabled="store.win || store.lose || !guessInput">
-            {{ t('guessWord.guess') }}
-          </button>
+          <div class="actions-wrapper">
+            <div
+                v-if="showHintButton"
+                class="hint-container"
+                :class="{ 'hint-container--expanded': isHintExpanded }"
+            >
+              <button
+                  v-if="!isHintExpanded"
+                  class="ios-btn-hint-square bounce-in"
+                  @click="isHintExpanded = true"
+                  title="Подсказка"
+              >
+                💡
+              </button>
+              <div v-else class="hint-popup bounce-in">
+                <button class="hint-close-btn" @click="isHintExpanded = false">✕</button>
+                <div class="hint-title">💡 {{ t('guessWordHint.hint-title') }}</div>
+                <div class="hint-desc">{{ t('guessWordHint.hint-desc') }}</div>
+                <button class="hint-action-btn" @click="confirmUseHint">{{ t('guessWordHint.hint-action-btn') }}</button>
+              </div>
+            </div>
+            <button
+                class="ios-btn-secondary"
+                @click="guessWord"
+                :disabled="store.win || store.lose || !guessInput"
+            >
+              {{ t('guessWord.guess') }}
+            </button>
+          </div>
         </div>
       </div>
     </div>
-    <Transition name="ios-modal">
-      <div v-if="showArticleModal" class="ios-modal-overlay" @click.self="closeArticleModal">
-        <div class="ios-modal-card">
-          <h3 class="modal-title">{{ t('guessWord.good') }}</h3>
-          <p class="modal-text">{{ t('guessWord.article') }} <span class="highlight-word">{{ store.answer }}</span></p>
-          <div v-if="!articleResult" class="article-buttons">
-            <button class="ios-btn-primary article-btn" @click="checkArticle('der')">der</button>
-            <button class="ios-btn-primary article-btn" @click="checkArticle('die')">die</button>
-            <button class="ios-btn-primary article-btn" @click="checkArticle('das')">das</button>
+    <Transition name="fade-scale">
+      <div v-if="shouldShowArticleModal" class="fullscreen-modal">
+        <div class="confetti-container" v-if="confettiParticles.length > 0">
+          <div
+              v-for="p in confettiParticles"
+              :key="p.id"
+              class="confetti-piece"
+              :style="{
+                left: p.left + '%',
+                backgroundColor: p.color,
+                animationDelay: p.delay + 's',
+                animationDuration: p.duration + 's',
+                width: p.width + 'px',
+                height: p.height + 'px'
+              }"
+          ></div>
+        </div>
+        <div class="fullscreen-content">
+          <div v-if="animStep >= 1" class="step-fade-in">
+            <h2 class="fs-title">{{ t('guessWord.good') }}</h2>
+            <p class="fs-text">
+              {{ t('guessWord.article') }} <br/>
+              <span class="highlight-word">{{ store.answer }}</span>
+            </p>
           </div>
-          <div v-if="articleResult" class="feedback-badge bounce-in"
-               :class="{'success': articleResult === 'Верно!', 'error': articleResult !== 'Верно!'}">
-            {{ articleResult }}
+          <div v-if="animStep >= 2" class="step-fade-in">
+            <img :src="articleError ? Support : Great" class="status-img bounce-in" alt="Status icon"/>
           </div>
-          <button v-if="articleResult" class="ios-btn-text modal-close" @click="closeArticleModal">
-            {{ t('guessWord.further') }} →
-          </button>
+          <div v-if="animStep >= 3" class="reward-pill bounce-in">
+            <img :src="Article" alt="Article" class="reward-icon">
+            <span class="reward-text">+{{ displayCoins }}</span>
+          </div>
+          <div v-if="animStep >= 4" class="step-fade-in full-width-block">
+            <div v-if="!articleResult" class="fs-buttons">
+              <button class="ios-btn-primary fs-btn der" @click="checkArticle('der')">der</button>
+              <button class="ios-btn-primary fs-btn die" @click="checkArticle('die')">die</button>
+              <button class="ios-btn-primary fs-btn das" @click="checkArticle('das')">das</button>
+            </div>
+            <div v-if="articleResult" class="feedback-badge bounce-in"
+                 :class="{'success': !articleError, 'error': articleError}">
+              {{ articleResult }}
+            </div>
+            <button v-if="articleResult" class="ios-btn-primary fs-next-btn bounce-in" @click="closeArticleModal">
+              {{ t('guessWord.further') }} →
+            </button>
+          </div>
         </div>
       </div>
     </Transition>
-    <Transition name="ios-modal">
-      <div v-if="showLoseModal" class="ios-modal-overlay" @click.self="closeLoseModal">
-        <div class="ios-modal-card error-card">
-          <div class="modal-emoji">💔</div>
-          <h3 class="modal-title">{{ t('guessWord.notToday') }}</h3>
-          <p class="modal-text">{{ t('guessWord.guessed') }} <span class="highlight-error">{{ store.answer }}</span></p>
-          <div class="modal-actions">
-            <button class="ios-btn-primary" @click="startGame">{{ t('guessWord.tryAgain') }}</button>
-            <NuxtLink to="/" class="ios-btn-secondary link-btn">{{ t('guessWord.btnToMain') }}</NuxtLink>
+    <Transition name="fade-scale">
+      <div v-if="showLoseModal" class="fullscreen-modal">
+        <div class="fullscreen-content">
+          <img :src="Support" class="status-img bounce-in" alt="Lose icon"/>
+          <h2 class="fs-title">{{ t('guessWord.notToday') }}</h2>
+          <p class="fs-text">
+            {{ t('guessWord.guessed') }} <br/>
+            <span class="highlight-error">{{ store.answer }}</span>
+          </p>
+          <div class="fs-actions">
+            <button class="ios-btn-primary fs-action-btn" @click="startGame(false)">
+              {{ t('guessWord.tryAgain') }}
+            </button>
+            <NuxtLink to="/" class="ios-btn-secondary fs-link-btn">{{ t('guessWord.btnToMain') }}</NuxtLink>
           </div>
         </div>
       </div>
     </Transition>
+    <VStreakModal
+        v-model="showStreakModal"
+        :streak="authStore.streakCount"
+        @close="handleStreakClosed"
+    />
   </main>
 </template>
 
 <script setup>
 import {ref, watch, onUnmounted, computed} from 'vue'
 import {useGuessWordStore} from '../store/guesStore.js'
+import {userlangStore} from '~/store/learningStore.js'
+import {userAuthStore} from '~/store/authStore.js'
+import {dailyStore} from '~/store/dailyStore.js'
 import {useRouter} from 'vue-router'
 import {nameMap} from '../utils/nameMap.js'
-import {useSeoMeta} from "#imports"
-import VBackBtn from "~/src/components/V-back-btn.vue";
-import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
-import { showInterstitial } from '../utils/admob.js'
+import {useSeoMeta} from '#imports'
+import VBackBtn from '~/src/components/V-back-btn.vue'
+import VLoginPreloader from '~/src/components/V-loginPreloader.vue'
+import VStreakModal from '~/src/components/V-streak.vue'
+import {useQuestAnimations} from '~/composables/useQuestAnimations.js'
+import {playLevelCompleted} from '~/utils/soundManager.js'
+import Article from '~/assets/images/article.svg'
+import Support from '~/assets/images/Support.svg'
+import Great from '~/assets/images/Greatcon.svg'
+
+import {showInterstitial} from '../utils/admob.js'
+
 const {t} = useI18n()
 const store = useGuessWordStore()
+const langStore = userlangStore()
+const authStore = userAuthStore()
+const daily = dailyStore()
+
 const isSpinning = ref(false)
 const guessInput = ref('')
 const articleResult = ref(null)
@@ -130,6 +207,42 @@ const showArticleModal = ref(false)
 const showLoseModal = ref(false)
 const isLoadingAd = ref(false)
 const now = ref(Date.now())
+
+const articleError = ref(false)
+const hintUsed = ref(false)
+const isHintExpanded = ref(false)
+
+const showStreakModal = ref(false)
+const isWaitingForStreakClose = ref(false)
+const initialStreak = ref(authStore.streakCount || 0)
+const streakWasIncremented = ref(false)
+
+watch(() => authStore.streakCount, (newVal) => {
+  if (newVal > initialStreak.value) {
+    streakWasIncremented.value = true
+  }
+})
+
+const shouldShowArticleModal = computed(() => {
+  return showArticleModal.value && !showStreakModal.value && !isWaitingForStreakClose.value
+})
+
+const questStoreAdapter = computed(() => ({
+  hasMistakes: false,
+  quest: {
+    rewards: {
+      xp: 0,
+      points: 1
+    }
+  }
+}))
+
+const {
+  animStep,
+  displayCoins,
+  confettiParticles,
+  resetAnimations
+} = useQuestAnimations(questStoreAdapter.value, false, shouldShowArticleModal)
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -153,6 +266,10 @@ const themeText = computed(() => {
   return key
 })
 
+const showHintButton = computed(() => {
+  return store.answer && store.answer.length > 6 && !hintUsed.value && !store.win && !store.lose
+})
+
 function startTimer() {
   if (intervalId) clearInterval(intervalId)
   intervalId = setInterval(() => {
@@ -160,46 +277,101 @@ function startTimer() {
   }, 1000)
 }
 
+function stopTimer() {
+  if (intervalId) clearInterval(intervalId)
+}
+
 function handleRestart() {
   isSpinning.value = true
   setTimeout(() => {
     isSpinning.value = false
   }, 500)
-  startGame()
+  startGame(true)
+}
+
+function confirmUseHint() {
+  isHintExpanded.value = false
+  useHint()
+}
+
+function useHint() {
+  if (!store.answer || hintUsed.value) return
+  hintUsed.value = true
+
+  const answerArr = store.answer.toUpperCase().split('')
+  const unrevealed = [...new Set(answerArr.filter(char => {
+    return !store.usedLetters.some(used => used.toUpperCase() === char)
+  }))]
+
+  const toReveal = unrevealed.sort(() => 0.5 - Math.random()).slice(0, 2)
+
+  toReveal.forEach(char => {
+    const alphabetChar = store.alphabet.find(a => a.toUpperCase() === char) || char
+    store.pickLetter(alphabetChar)
+  })
 }
 
 function checkArticle(selectedArticle) {
   if (!store.currentWordObj) return
   const correct = selectedArticle === store.currentWordObj.article.toLowerCase()
-  articleResult.value = correct ? t('eventSessionPage.correct') : `${t('guessWord.wrong')} ${store.currentWordObj.article}`
+
+  if (correct) {
+    articleResult.value = t('eventSessionPage.correct')
+    articleError.value = false
+  } else {
+    articleResult.value = `${t('guessWord.wrong')} ${store.currentWordObj.article}`
+    articleError.value = true
+  }
+}
+
+function handleStreakClosed() {
+  showStreakModal.value = false
+  isWaitingForStreakClose.value = false
+  showArticleModal.value = true
+  playLevelCompleted()
 }
 
 function closeArticleModal() {
   showArticleModal.value = false
-  startGame()
+  resetAnimations()
+  startGame(true)
 }
 
 function closeLoseModal() {
   showLoseModal.value = false
 }
 
-function stopTimer() {
-  if (intervalId) clearInterval(intervalId)
-}
-
-function startGame() {
+function startGame(skipAd = false) {
   showArticleModal.value = false
   showLoseModal.value = false
+  showStreakModal.value = false
+  isWaitingForStreakClose.value = false
+  hintUsed.value = false
+  isHintExpanded.value = false
+  articleError.value = false
+  initialStreak.value = authStore.streakCount || 0
+  streakWasIncremented.value = false
+  resetAnimations()
   stopTimer()
-  isLoadingAd.value = true
-  showInterstitial(() => {
-    isLoadingAd.value = false
+
+  const startSession = () => {
     store.startGame()
     now.value = Date.now()
     isStarted.value = true
     guessInput.value = ''
     articleResult.value = null
     startTimer()
+  }
+
+  if (skipAd) {
+    startSession()
+    return
+  }
+
+  isLoadingAd.value = true
+  showInterstitial(() => {
+    isLoadingAd.value = false
+    startSession()
   })
 }
 
@@ -223,9 +395,24 @@ onUnmounted(() => stopTimer())
 watch(() => store.win, (isWin) => {
   if (isWin) {
     stopTimer()
-    setTimeout(() => {
-      showArticleModal.value = true
-    }, 600);
+
+    isWaitingForStreakClose.value = true
+    setTimeout(async () => {
+      const isStreakHigher = authStore.streakCount > initialStreak.value
+      const streakCountedToday = daily.currentCycle?.streakCounted || streakWasIncremented.value || isStreakHigher
+      const modalAlreadyShownToday = daily.currentCycle?.streakModalShown === true
+
+      if (streakCountedToday && !modalAlreadyShownToday) {
+        if (typeof daily.markStreakModalShown === 'function') {
+          await daily.markStreakModalShown()
+        }
+        showStreakModal.value = true
+      } else {
+        isWaitingForStreakClose.value = false
+        showArticleModal.value = true
+        playLevelCompleted()
+      }
+    }, 500)
   }
 })
 
@@ -234,7 +421,7 @@ watch(() => store.lose, (isLose) => {
     stopTimer()
     setTimeout(() => {
       showLoseModal.value = true
-    }, 600);
+    }, 600)
   }
 })
 </script>
@@ -287,35 +474,15 @@ watch(() => store.lose, (isLose) => {
   justify-content: start;
 }
 
-.ios-btn-back {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  background: none;
-  border: none;
-  color: #007AFF;
-  font-size: 17px;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 8px 0;
-  transition: opacity 0.2s;
-}
-
-.ios-btn-back:active {
-  opacity: 0.5;
-}
-
 .ios-stats {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
 .stat-pill {
   display: flex;
   align-items: center;
-  padding: 4px 8px;
-  border-radius: 20px;
+  padding: 4px;
   font-size: 20px;
   font-weight: 600;
   color: var(--titleColor);
@@ -339,6 +506,11 @@ watch(() => store.lose, (isLose) => {
   transform: scale(0.95);
 }
 
+.reward-text {
+  font-size: 36px;
+  font-weight: 600;
+}
+
 .guess__icon {
   width: 150px;
 }
@@ -357,20 +529,13 @@ watch(() => store.lose, (isLose) => {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 40px 10px 10px 10px;
+  padding: 20px 15px 25px 15px;
 }
 
 .mascot-emoji {
   font-size: 80px;
   margin-bottom: 20px;
-}
-
-.title-main {
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--titleColor);
-  margin-bottom: 10px;
-  letter-spacing: -0.5px;
+  width: 140px;
 }
 
 .subtitle {
@@ -383,31 +548,32 @@ watch(() => store.lose, (isLose) => {
   align-self: center;
   background: rgba(0, 122, 255, 0.1);
   color: #007AFF;
-  padding: 8px 16px;
-  border-radius: 16px;
-  font-size: 18px;
-  margin-bottom: 30px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 17px;
+  margin-bottom: 25px;
+  font-weight: 600;
 }
 
 .word-board {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 4px;
-  margin-bottom: 40px;
+  gap: 6px;
+  margin-bottom: 30px;
   min-height: 64px;
 }
 
 .letter-box {
-  width: 30px;
-  height: 40px;
+  width: 34px;
+  height: 44px;
   background: #e5e5ea;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 800;
   color: #1c1c1e;
   text-transform: uppercase;
   box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.1);
@@ -426,17 +592,17 @@ watch(() => store.lose, (isLose) => {
   flex-wrap: wrap;
   justify-content: center;
   gap: 6px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .key-btn {
-  width: 40px;
-  height: 50px;
+  width: 38px;
+  height: 48px;
   background: #ffffff;
   border: none;
   border-radius: 8px;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 19px;
+  font-weight: 700;
   color: #1c1c1e;
   box-shadow: 0 4px 0 #d1d1d6;
   cursor: pointer;
@@ -467,30 +633,139 @@ watch(() => store.lose, (isLose) => {
 
 .input-section {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   margin-top: auto;
-  padding: 15px 0;
+  padding: 15px 0 20px 0;
+  align-items: flex-end;
+}
+
+.actions-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+  position: relative;
+}
+
+.hint-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+}
+
+.hint-popup {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  right: 0;
+  width: 220px;
+  background: #ffffff;
+  border: 2px solid #FF9500;
+  border-radius: 18px;
+  padding: 12px 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 50;
+  text-align: left;
+}
+
+.hint-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: #8e8e93;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px;
+  line-height: 1;
+}
+
+.hint-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1c1c1e;
+}
+
+.hint-desc {
+  font-size: 12px;
+  color: #636366;
+  line-height: 1.3;
+}
+
+.guest__header-point {
+  font-family: Lilita One, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin-left: 4px;
+  width: 40px;
+}
+
+.hint-action-btn {
+  margin-top: 4px;
+  background: linear-gradient(135deg, #FF9500, #FFCC00);
+  border: none;
+  color: #fff;
+  border-radius: 12px;
+  padding: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 0 #d67a00;
+  transition: all 0.1s;
+}
+
+.hint-action-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 #d67a00;
+}
+
+.ios-btn-hint-square {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #FF9500, #FFCC00);
+  border: none;
+  border-radius: 12px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 0 #d67a00;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.ios-btn-hint-square:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #d67a00;
 }
 
 .ios-input {
   flex: 1;
   background: #fff;
   border: 2px solid #e5e5ea;
-  border-radius: 16px;
-  padding: 10px 16px;
-  font-size: 17px;
+  border-radius: 18px;
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 600;
   color: #1c1c1e;
   outline: none;
-  transition: border-color 0.2s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
 }
 
 .ios-input:focus {
   border-color: #007AFF;
+  box-shadow: 0 4px 14px rgba(0, 122, 255, 0.15);
 }
 
 .ios-input:disabled {
   background: #f2f2f7;
   color: #aeaeb2;
+  border-color: #f2f2f7;
 }
 
 .ios-btn-primary {
@@ -523,13 +798,13 @@ watch(() => store.lose, (isLose) => {
   background: #34C759;
   color: white;
   border: none;
-  border-radius: 16px;
-  padding: 0 20px;
-  font-size: 16px;
+  border-radius: 50px;
+  padding: 14px;
+  font-size: 17px;
   font-weight: 700;
-  box-shadow: 0 4px 0 #248a3d;
   cursor: pointer;
   transition: all 0.1s;
+  white-space: nowrap;
 }
 
 .ios-btn-secondary:active:not(:disabled) {
@@ -537,121 +812,232 @@ watch(() => store.lose, (isLose) => {
   box-shadow: 0 0 0 #248a3d;
 }
 
-.ios-btn-text {
-  background: none;
-  border: none;
-  color: #007AFF;
-  font-size: 16px;
-  font-weight: 600;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-.ios-modal-overlay {
-  position: absolute;
+.fullscreen-modal {
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(5px);
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg, #f2f2f7);
+  z-index: 9999;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 100;
   padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.ios-modal-card {
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 32px 24px;
+.fullscreen-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  max-width: 340px;
+  max-width: 400px;
   text-align: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
 }
 
-.modal-emoji {
-  font-size: 64px;
-  margin-bottom: 16px;
+.full-width-block {
+  width: 100%;
 }
 
-.modal-title {
-  font-size: 24px;
+.step-fade-in {
+  animation: fadeInStep 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes fadeInStep {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.reward-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
   font-weight: 800;
-  color: #1c1c1e;
+  font-size: 22px;
+  color: #d67a00;
+}
+
+.reward-icon {
+  width: 40px;
+}
+
+.status-img {
+  width: 140px;
+  margin-bottom: 16px;
+  object-fit: contain;
+}
+
+.fs-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--titleColor, #1c1c1e);
   margin-bottom: 8px;
 }
 
-.modal-text {
-  font-size: 16px;
+.fs-text {
+  font-size: 20px;
   color: #8e8e93;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.fs-text .highlight-word {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 28px;
+}
+
+.fs-buttons {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.fs-btn {
+  width: 100%;
+  padding: 20px;
+  font-size: 22px;
+  border-radius: 20px;
+}
+
+.fs-btn.der {
+  background: #007AFF;
+  box-shadow: 0 6px 0 #005bb5;
+}
+
+.fs-btn.die {
+  background: #FF3B30;
+  box-shadow: 0 6px 0 #c22820;
+}
+
+.fs-btn.das {
+  background: #34C759;
+  box-shadow: 0 6px 0 #248a3d;
+}
+
+.fs-next-btn {
+  margin-top: 25px;
+  background: #2588f7;
+  box-shadow: 0 6px 0 #1970d3;
+  border-radius: 50px;
+}
+
+.fs-next-btn:active:not(:disabled) {
+  box-shadow: 0 0 0 #000;
+}
+
+.fs-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.fs-action-btn {
+  width: 100%;
+  padding: 18px;
+  font-size: 18px;
+  border-radius: 50px;
+}
+
+.fs-link-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: none;
+  color: #808085;
+  padding: 18px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.fs-link-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #d1d1d6;
 }
 
 .highlight-word {
   color: #34C759;
   font-weight: 800;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .highlight-error {
   color: #FF3B30;
   font-weight: 800;
-  font-size: 18px;
-}
-
-.article-buttons {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  width: 100%;
-}
-
-.article-btn {
-  padding: 12px;
-  font-size: 16px;
-  flex: 1;
-}
-
-.modal-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.link-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  background: #e5e5ea;
-  color: #1c1c1e;
-  box-shadow: 0 4px 0 #d1d1d6;
-  padding: 14px;
-}
-
-.link-btn:active {
-  background: #d1d1d6;
+  font-size: 26px;
+  display: inline-block;
+  margin-top: 8px;
 }
 
 .feedback-badge {
-  margin-top: 16px;
-  padding: 10px;
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 15px;
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
 }
 
 .feedback-badge.success {
-  background: #e8f8f0;
   color: #34C759;
 }
 
 .feedback-badge.error {
-  background: #ffebe9;
   color: #FF3B30;
+}
+
+.confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -20px;
+  border-radius: 3px;
+  animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) rotate(720deg);
+    opacity: 0;
+  }
 }
 
 .bounce-in {
@@ -682,17 +1068,14 @@ watch(() => store.lose, (isLose) => {
   }
 }
 
-.ios-modal-enter-active,
-.ios-modal-leave-active {
-  transition: opacity 0.3s ease;
+.fade-scale-enter-active,
+.fade-scale-leave-active {
+  transition: all 0.3s ease-out;
 }
 
-.ios-modal-enter-from,
-.ios-modal-leave-to {
+.fade-scale-enter-from,
+.fade-scale-leave-to {
   opacity: 0;
-}
-
-.ios-modal-enter-active .ios-modal-card {
-  animation: bounceIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: scale(0.95);
 }
 </style>

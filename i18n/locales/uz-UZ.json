@@ -8162,6 +8162,7 @@
   },
   "pavelOverlay": {
     "newbie": "Yangi o'yinchi",
+    "streakTitle": "Seriya",
     "rankTitle": "Akademik qalpoqlar",
     "rankLabelOne": "- Akademik qalpoqlar kundalik vazifalarni bajarganlik uchun beriladi.",
     "rankLabelTwo": "- Kuniga 3 ta olish mumkin. Mukofotlarni profilning 'Unvon' bo'limida ko'rish mumkin.",
@@ -10731,5 +10732,39 @@
     "succesCompleted": "BAJARILDI",
     "rewardGot": "Siz mukofot oldingiz:",
     "questCompletedAgain": "Vazifa qaytadan bajarildi:"
+  },
+  "calendarHints": {
+    "first": "Bu hafta zo'r sur'at! Shunday davom et",
+    "second": "Bugungi kichik qadam - ertangi ulkan natija!",
+    "third": "Intizom mo'jizalar yaratadi. Har kuni maqsadingizga yaqinlashyapsiz!",
+    "fourth": "Olov yanada yorqinroq yonmoqda! Sur'atni pasaytirma",
+    "fifth": "Bajarilgan har bir kun temir odatni shakllantiradi!",
+    "sixth": "Ko'pchilik taslim bo'ladigan ishni qilyapsiz. Ajoyib ish!",
+    "seventh": "Seriyangiz kundan-kunga kuchaymoqda, shunday davom eting!",
+    "eighth": "Kuniga atigi bir necha daqiqa va nemis tili allaqachon yaqinroq bo'lib qoldi!",
+    "ninth": "Ajoyib ish! Asosiysi - muntazamlik va siz oldindasiz",
+    "tenth": "Har bir kun o'ziga ishonch qo'shadi. Ertaga davom etamiz!"
+  },
+  "streakButtons": {
+    "first": "Ertagacha ko'rishamiz",
+    "second": "Ertaga davom etamiz",
+    "third": "Ajoyib ish",
+    "fourth": "Qadam tashlandi, ertagacha",
+    "fifth": "Ertaga mustahkamlaymizmi?",
+    "sixth": "Intizom yuqori darajada",
+    "seventh": "Ertagacha",
+    "eighth": "Ertaga takrorlaymizmi?",
+    "ninth": "Sur'atni pasaytirmaymiz"
+  },
+  "hintText": {
+    "start": "Seriyangiz boshlandi. Yo'qotib qo'ymaslik uchun har kuni shug'ullaning!",
+    "first": "Hafta finali! Ertaga yangi toza seriyaning boshlanishi",
+    "second": "Bu haftani yakunlaymiz, keyingisidan esa to'liq seriyani boshlaymiz",
+    "aRow": "qatorasiga"
+  },
+  "guessWordHint": {
+    "hint-title": "Maslahat",
+    "hint-desc": "Urinishlarni sarf qilmagan holda 2 ta tasodifiy harfni ochadi",
+    "hint-action-btn": "Ishlatish"
   }
 }

@@ -9,10 +9,10 @@ const router = useRouter()
 const auth = userAuthStore()
 const sessionId = route.query.session_id
 
-const status = ref('processing') // 'processing' | 'success' | 'error'
+const status = ref('processing')
 const statusMessage = ref('Подтверждаем транзакцию...')
 
-definePageMeta({layout: 'blank'}) // Если есть пустой лейаут
+definePageMeta({layout: 'blank'})
 
 onMounted(() => {
   if (!sessionId) {
@@ -39,7 +39,6 @@ onMounted(() => {
         await auth.activatePremium(response.data)
         status.value = 'success'
         statusMessage.value = 'Премиум доступ активирован'
-        // Быстрый редирект для успеха
         setTimeout(() => router.push('/'), 4000)
       } else {
         status.value = 'error'

@@ -8163,6 +8163,7 @@
   },
   "pavelOverlay": {
     "newbie": "Novice",
+    "streakTitle": "Série",
     "rankTitle": "Toques",
     "rankLabelOne": "- Les toques sont attribuées pour l'accomplissement des tâches quotidiennes.",
     "rankLabelTwo": "- Tu peux en obtenir 3 par jour en finissant tout. Voir les récompenses dans la section 'Rang' du profil.",
@@ -10732,5 +10733,39 @@
     "succesCompleted": "TERMINÉ",
     "rewardGot": "Vous avez reçu une récompense :",
     "questCompletedAgain": "Quête complétée à nouveau :"
+  },
+  "calendarHints": {
+    "first": "Super rythme cette semaine ! Continue comme ça",
+    "second": "Un petit pas aujourd'hui, un énorme résultat demain !",
+    "third": "La discipline fait des miracles. Tu te rapproches de ton objectif chaque jour !",
+    "fourth": "Le feu brûle de plus en plus fort ! Ne ralentis pas",
+    "fifth": "Chaque jour complété façonne une habitude en acier !",
+    "sixth": "Tu fais ce qui fait abandonner tant de gens. Du bon boulot !",
+    "seventh": "Ta série se renforce de jour en jour, continue ainsi !",
+    "eighth": "Juste deux minutes par jour et l'allemand devient déjà plus familier !",
+    "ninth": "Du bon boulot ! La régularité est la clé, et tu es en avance",
+    "tenth": "Chaque jour apporte plus de confiance. On continue demain !"
+  },
+  "streakButtons": {
+    "first": "À demain",
+    "second": "On continue demain",
+    "third": "Super travail",
+    "fourth": "Pas fait, à demain",
+    "fifth": "On consolide demain ?",
+    "sixth": "Discipline au top",
+    "seventh": "À demain",
+    "eighth": "On révise demain ?",
+    "ninth": "On ne baisse pas le rythme"
+  },
+  "hintText": {
+    "start": "Ta série a commencé. Pratique chaque jour pour ne pas la perdre !",
+    "first": "Fin de la semaine ! Demain, début d'une nouvelle série propre",
+    "second": "Terminons cette semaine, et dès la prochaine on commence une série complète",
+    "aRow": "d'affilée"
+  },
+  "guessWordHint": {
+    "hint-title": "Indice",
+    "hint-desc": "Dévoilera 2 lettres aléatoires sans dépenser d'essais",
+    "hint-action-btn": "Utiliser"
   }
 }

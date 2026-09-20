@@ -11,7 +11,6 @@
 
 <script setup>
 import VHedgehogIntroModal from "~/src/components/V-HedgehogIntroModal.vue";
-
 import VRankOverlay from "./src/components/V-rank-overlay.vue";
 import { StatusBar, Style } from '@capacitor/status-bar';
 import AchievementToast from './src/components/AchievementToast.vue'

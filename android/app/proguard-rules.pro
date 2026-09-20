@@ -1,9 +1,13 @@
+# Добавляем 5 проходов оптимизации для лучшего сжатия
+-optimizationpasses 5
+
 -dontwarn com.unity3d.ads.**
 -dontwarn com.google.api.client.**
 -dontwarn com.google.crypto.tink.**
 -dontwarn com.amazon.device.iap.**
 -dontwarn org.joda.time.**
 -dontwarn com.google.firebase.**
+-dontwarn com.amazon.**
 
 # Мост Capacitor и JavaScriptInterface
 -keep @com.getcapacitor.annotation.CapacitorPlugin class * { *; }
@@ -18,15 +22,13 @@
 -keepattributes JavascriptInterface
 -keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod
 
-# Плагины авторизации и Cordova
+# Плагины авторизации и Cordova (Суженные правила для повышения %)
 -keep class com.capawesome.** {
-    public protected *;
-}
--keep public class org.apache.cordova.** {
-    public protected *;
+    public <init>(...);
 }
 -keep class * extends org.apache.cordova.CordovaPlugin {
     public <init>(...);
+    public boolean execute(...);
 }
 
 # Правила сжатия и оптимизации для Google Play
@@ -44,6 +46,3 @@
 }
 
 -printconfiguration full-r8-config.txt
-
--dontwarn com.amazon.**
--keep class com.amazon.** { *; }

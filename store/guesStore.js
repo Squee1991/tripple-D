@@ -13,6 +13,7 @@ import {
 } from 'firebase/firestore'
 import { userAuthStore } from './authStore.js'
 import { dailyStore } from './dailyStore.js'
+import { userlangStore } from './learningStore.js'
 
 async function getUser() {
     const auth = getAuth()
@@ -32,6 +33,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
     const authStore = userAuthStore()
     const db = getFirestore()
     const daily = dailyStore()
+    const langStore = userlangStore()
 
     const answer = ref('')
     const masked = ref([])
@@ -79,6 +81,19 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         guessedOnLastTryWords.value = []
         guessedPerfectWords.value = []
         guessedSafeWords.value = []
+    }
+
+    async function addCoinReward() {
+        if (typeof langStore.addPoints === 'function') {
+            await langStore.addPoints(1)
+        } else {
+            langStore.points = Number(langStore.points || 0) + 1
+            langStore.totalEarnedPoints = Number(langStore.totalEarnedPoints || 0) + 1
+            try { daily.addPoints(1) } catch {}
+            if (typeof langStore.saveToFirebase === 'function') {
+                await langStore.saveToFirebase()
+            }
+        }
     }
 
     async function saveToLeaderboard(name, count) {
@@ -285,6 +300,10 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         daily.addGuessWord(1)
 
         try { daily.addGuessed(1) } catch {}
+
+        // Начисляем 1 монету за отгаданное слово
+        await addCoinReward()
+
         await saveGuessProgress()
         if (authStore.name) await saveToLeaderboard(authStore.name, guessedWords.value.length)
     })

@@ -34,7 +34,7 @@
                 <div class="progress-glare"></div>
               </div>
             </div>
-            <span class="progress-text">{{ current + 1 }} / {{ tasks.length }}</span>
+            <span class="progress-text">{{ current + 1 }} / {{ sessionTotalTasks }}</span>
           </div>
         </div>
         <div v-if="!finished" class="quiz-content">
@@ -80,25 +80,57 @@
             </button>
           </div>
         </transition>
-        <div v-if="finished" class="view-state view-state--complete">
-          <div class="finish-card" v-if="correctAnswers === tasks.length">
-            <div class="result-emoji">🏆</div>
-            <h3 class="result-title">{{ t('trainerPage.end') }}</h3>
-            <p class="result-subtitle">{{ t('trainerPage.save') }}</p>
-            <button class="btn-gummy btn-gummy--primary" @click="exit">{{ t('trainerPage.backToTheme') }}</button>
-          </div>
-          <div class="finish-card" v-else>
-            <div class="result-emoji">💪</div>
-            <h3 class="result-title">{{ t('trainerPage.morePractice') }}</h3>
-            <p class="result-subtitle">{{ t('trainerPage.result') }} <span>{{ correctAnswers }} / {{
-                tasks.length
-              }}</span></p>
-            <div class="result-actions">
-              <button class="btn-gummy btn-gummy--primary" @click="restartModule">{{ t('trainerPage.repeat') }}</button>
-              <button class="btn-gummy btn-gummy--secondary" @click="exit">{{ t('trainerPage.toMain') }}</button>
+        <Transition name="fade-scale">
+          <div v-if="shouldShowFinishModal" class="fullscreen-modal">
+            <div class="confetti-container" v-if="correctAnswers === sessionTotalTasks && confettiParticles.length > 0">
+              <div
+                  v-for="p in confettiParticles"
+                  :key="p.id"
+                  class="confetti-piece"
+                  :style="{
+                    left: p.left + '%',
+                    backgroundColor: p.color,
+                    animationDelay: p.delay + 's',
+                    animationDuration: p.duration + 's',
+                    width: p.width + 'px',
+                    height: p.height + 'px'
+                  }"
+              ></div>
+            </div>
+            <div class="fullscreen-content">
+              <div v-if="animStep >= 1" class="step-fade-in">
+                <img :src="correctAnswers === sessionTotalTasks ? Great : Support" class="status-img bounce-in"
+                     alt="Status icon"/>
+              </div>
+              <div v-if="animStep >= 2" class="step-fade-in">
+                <p class="fs-text" v-if="correctAnswers === sessionTotalTasks">
+                  {{ t('trainerPage.save') }}
+                </p>
+                <p class="fs-text" v-else>
+                  {{ t('trainerPage.result') }}
+                </p>
+                <div v-if="correctAnswers !== sessionTotalTasks" class="streak-number bounce-in">
+                  {{ correctAnswers }} / {{ sessionTotalTasks }}
+                </div>
+              </div>
+              <div v-if="animStep >= 3" class="step-fade-in full-width-block actions-spacing">
+                <div class="fs-actions" v-if="correctAnswers === sessionTotalTasks">
+                  <button class="ios-btn-primary fs-action-btn" @click="exit">
+                    {{ t('trainerPage.backToTheme') }}
+                  </button>
+                </div>
+                <div class="fs-actions" v-else>
+                  <button class="ios-btn-primary fs-action-btn" @click="restartModule">
+                    {{ t('trainerPage.repeat') }}
+                  </button>
+                  <button class="ios-btn-secondary fs-link-btn" @click="exit">
+                    {{ t('trainerPage.toMain') }}
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </Transition>
       </section>
       <section v-else class="view-state view-state--error">
         <div class="result-emoji">Oops!</div>
@@ -106,21 +138,33 @@
         <button class="btn-gummy btn-gummy--primary" @click="exit">{{ t('trainerPage.toMain') }}</button>
       </section>
     </div>
+    <VStreakModal
+        v-model="showStreakModal"
+        :streak="authStore.streakCount"
+        @close="handleStreakClosed"
+    />
   </main>
 </template>
 
 <script setup>
-import {useTrainerStore} from '../../store/themenProgressStore.js'
+import {useTrainerStore} from '~/store/themenProgressStore.js'
+import {userAuthStore} from '~/store/authStore.js'
+import {dailyStore} from '~/store/dailyStore.js'
 import {useRouter} from 'vue-router'
-import {ref, onMounted, onUnmounted, computed} from 'vue'
+import {ref, onMounted, onUnmounted, computed, watch} from 'vue'
 import SoundBtn from "../../src/components/soundBtn.vue";
 import {useSeoMeta} from '#imports'
 import VBackBtn from "~/src/components/V-back-btn.vue";
 import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue";
 import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
-import SadHedgehogIcon from '../../assets/images/Sadlyhedgehog.png'
 import {useSwipeBack} from '~/composables/useSwipeBack.js'
 import VHedgehogHelper from "~/src/components/V-hedgehog-helper.vue";
+import VStreakModal from '~/src/components/V-streak.vue'
+
+import Great from '~/assets/images/Greatcon.svg'
+import Support from '~/assets/images/Support.svg'
+
+import {playCorrect, playWrong, playLevelCompleted, unlockAudioByUserGesture} from '~/utils/soundManager.js'
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -129,6 +173,8 @@ useSeoMeta({
 const router = useRouter()
 const {t} = useI18n()
 const thematic = useTrainerStore()
+const authStore = userAuthStore()
+const daily = dailyStore()
 
 const correctAnswers = ref(0)
 const loading = ref(true)
@@ -139,7 +185,20 @@ const finished = ref(false)
 const isChecked = ref(false)
 const showExitModal = ref(false)
 const sessionMistakes = ref([])
-import { playCorrect, playWrong, unlockAudioByUserGesture } from '~/utils/soundManager.js'
+
+const sessionTotalTasks = ref(0) // Замороженное количество вопросов для текущей сессии
+const animStep = ref(0)
+const confettiParticles = ref([])
+
+// Стрик
+const showStreakModal = ref(false)
+const isWaitingForStreakClose = ref(false)
+const initialStreak = ref(authStore.streakCount || 0)
+const streakWasIncremented = ref(false)
+
+watch(() => authStore.streakCount, (newVal) => {
+  if (newVal > initialStreak.value) streakWasIncremented.value = true
+})
 
 const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   exit()
@@ -160,6 +219,10 @@ const tasks = computed(() => {
   return allTasks.map((task, index) => ({...task, originalIndex: index}))
 })
 
+const shouldShowFinishModal = computed(() => {
+  return finished.value && !showStreakModal.value && !isWaitingForStreakClose.value
+})
+
 const currentTaskForHelper = computed(() => {
   if (!tasks.value.length || current.value >= tasks.value.length) return null
   const currentTask = tasks.value[current.value]
@@ -173,8 +236,8 @@ const currentTaskForHelper = computed(() => {
 })
 
 const progressPercent = computed(() => {
-  if (!tasks.value.length) return 0;
-  return ((current.value + (finished.value ? 1 : 0)) / tasks.value.length) * 100
+  if (!sessionTotalTasks.value) return 0;
+  return ((current.value + (finished.value ? 1 : 0)) / sessionTotalTasks.value) * 100
 })
 
 const visibleSentence = computed(() => {
@@ -202,7 +265,6 @@ const generateAnswerOptions = (correctAnswer) => {
     const j = Math.floor(Math.random() * (i + 1));
     [options[i], options[j]] = [options[j], options[i]];
   }
-
   answerOptions.value = options;
 }
 
@@ -232,13 +294,72 @@ const check = (selectedAnswer) => {
   }
 }
 
+function spawnConfetti() {
+  const confettiColors = ['#ffb100', '#c982ff', '#4caf50', '#00c2ff', '#ff5252', '#ffffff']
+  const particles = []
+  for (let i = 0; i < 70; i++) {
+    particles.push({
+      id: i,
+      left: Math.random() * 100,
+      delay: Math.random() * 1.5,
+      color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
+      duration: 2.5 + Math.random() * 2,
+      width: 7 + Math.random() * 8,
+      height: 12 + Math.random() * 14
+    })
+  }
+  confettiParticles.value = particles
+}
+
+const triggerFinishAnimations = () => {
+  playLevelCompleted()
+  if (correctAnswers.value === sessionTotalTasks.value) {
+    spawnConfetti()
+  }
+  animStep.value = 0
+  setTimeout(() => {
+    animStep.value = 1
+  }, 100)
+  setTimeout(() => {
+    animStep.value = 2
+  }, 600)
+  setTimeout(() => {
+    animStep.value = 3
+  }, 1100)
+}
+
+const handleStreakClosed = () => {
+  showStreakModal.value = false
+  isWaitingForStreakClose.value = false
+  triggerFinishAnimations()
+}
+
 const next = async () => {
   if (current.value < tasks.value.length - 1) {
     current.value++
     setupCurrentQuestion();
   } else {
     finished.value = true
+    // Сохраняем попытку в базу
     await thematic.saveModuleAttempt(thematic.selectedLevel.level, thematic.selectedModule.id, sessionMistakes.value)
+
+    // Проверка стрика
+    isWaitingForStreakClose.value = true
+    setTimeout(async () => {
+      const isStreakHigher = authStore.streakCount > initialStreak.value
+      const streakCountedToday = daily.currentCycle?.streakCounted || streakWasIncremented.value || isStreakHigher
+      const modalAlreadyShownToday = daily.currentCycle?.streakModalShown === true
+
+      if (streakCountedToday && !modalAlreadyShownToday) {
+        if (typeof daily.markStreakModalShown === 'function') {
+          await daily.markStreakModalShown()
+        }
+        showStreakModal.value = true
+      } else {
+        isWaitingForStreakClose.value = false
+        triggerFinishAnimations()
+      }
+    }, 500)
   }
 }
 
@@ -265,6 +386,11 @@ const restartModule = () => {
   current.value = 0
   finished.value = false
   sessionMistakes.value = []
+  animStep.value = 0
+  confettiParticles.value = []
+
+  // Обновляем количество задач для нового прохождения (например, если идем повторять ошибки)
+  sessionTotalTasks.value = tasks.value.length
   setupCurrentQuestion()
 }
 
@@ -273,11 +399,13 @@ const handleBeforeUnload = (event) => {
 };
 
 onMounted(async () => {
+  initialStreak.value = authStore.streakCount || 0
   if (!thematic.selectedModule) {
     await thematic.loadProgress()
   }
   loading.value = false;
   if (tasks.value.length > 0) {
+    sessionTotalTasks.value = tasks.value.length
     setupCurrentQuestion();
   }
   window.addEventListener('beforeunload', handleBeforeUnload);
@@ -384,23 +512,6 @@ onUnmounted(() => {
   flex-direction: column;
   padding: 12px 16px calc(env(safe-area-inset-bottom) + 120px);
   overflow-y: auto;
-}
-
-.quiz-header {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 24px;
-}
-
-.theme-badge {
-  background: #fef3c7;
-  color: #d97706;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-weight: 900;
-  font-size: 1.1rem;
-  box-shadow: 0 4px 0 #fde68a;
-  text-transform: uppercase;
 }
 
 .question-card {
@@ -538,10 +649,6 @@ onUnmounted(() => {
   gap: 12px;
 }
 
-.feedback-emoji {
-  font-size: 32px;
-}
-
 .feedback-text {
   font-size: 20px;
   font-weight: 900;
@@ -553,62 +660,6 @@ onUnmounted(() => {
 .sheet--error .feedback-text b {
   color: #be123c;
   display: block;
-}
-
-.view-state--complete {
-  padding: 20px;
-  justify-content: center;
-}
-
-.finish-card {
-  background: #ffffff;
-  border-radius: 24px;
-  border: none;
-  padding: 32px 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.result-emoji {
-  font-size: 64px;
-  margin-bottom: 16px;
-  animation: bounceIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.result-title {
-  font-size: 28px;
-  font-weight: 900;
-  color: #4c1d95;
-  margin: 0 0 12px 0;
-}
-
-.result-subtitle {
-  font-size: 18px;
-  font-weight: 800;
-  color: #6b7280;
-  margin: 0 0 24px 0;
-}
-
-.result-subtitle span {
-  color: #1d4ed8;
-  font-weight: 900;
-  font-size: 22px;
-  background: #dbeafe;
-  padding: 4px 12px;
-  border-radius: 12px;
-  border: none;
-  display: inline-block;
-  margin-top: 8px;
-}
-
-.result-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
 }
 
 .btn-gummy {
@@ -647,17 +698,201 @@ onUnmounted(() => {
   box-shadow: 0 5px 0 #e11d48;
 }
 
-.btn-gummy--secondary {
-  background: #36c95d;
+/* --- Стили для полноэкранной модалки --- */
+.fullscreen-modal {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: var(--bg, #f2f2f7);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.fullscreen-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.full-width-block {
+  width: 100%;
+}
+
+.actions-spacing {
+  margin-top: 20px;
+}
+
+.step-fade-in {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInStep 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInStep {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.fs-title {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--titleColor, #1c1c1e);
+  margin-bottom: 6px;
+}
+
+.fs-text {
+  font-size: 19px;
+  font-weight: 600;
+  color: #8e8e93;
+  margin-bottom: 6px;
+}
+
+.streak-number {
+  font-size: 34px;
+  font-weight: 900;
+  color: #34C759;
+  line-height: 1;
+  margin-bottom: 24px;
+
+  padding: 8px 24px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.status-img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.fs-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.ios-btn-primary {
+  background: #007AFF;
   color: white;
-  box-shadow: 0 5px 0 #6dd98b;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 800;
+  box-shadow: 0 6px 0 #005bb5;
+  cursor: pointer;
+  transition: all 0.1s;
+  width: 100%;
 }
 
-.btn-gummy--danger {
+.ios-btn-primary:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #005bb5;
+}
+
+.ios-btn-secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   background: none;
-  color: #7f1d1d;
+  color: #89898e;
+  padding: 16px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 800;
+  width: 100%;
+  border: none;
+  cursor: pointer;
 }
 
+.ios-btn-secondary:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #d1d1d6;
+}
+
+.confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -20px;
+  border-radius: 3px;
+  animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.bounce-in {
+  animation: bounceIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fade-scale-enter-active,
+.fade-scale-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.fade-scale-enter-from,
+.fade-scale-leave-to {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+/* Лоадер */
 .bouncy-loader {
   display: flex;
   gap: 10px;
@@ -687,29 +922,6 @@ onUnmounted(() => {
   font-size: 20px;
   font-weight: 900;
   color: #4b5563;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-15px);
-  }
-}
-
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-  70% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 
 .slide-up-bouncy-enter-active {

@@ -8167,6 +8167,7 @@
   },
   "pavelOverlay": {
     "newbie": "Novato",
+    "streakTitle": "Racha",
     "rankTitle": "Birretes",
     "rankLabelOne": "- Los birretes se otorgan por completar tareas diarias.",
     "rankLabelTwo": "- Puedes obtener 3 al día completando todas las tareas. Las recompensas están en la sección 'Rango' de tu perfil.",
@@ -10734,5 +10735,39 @@
     "succesCompleted": "COMPLETADO",
     "rewardGot": "Has recibido una recompensa:",
     "questCompletedAgain": "Misión completada de nuevo:"
+  },
+  "calendarHints": {
+    "first": "¡Gran ritmo esta semana! Sigue así",
+    "second": "¡Un pequeño paso hoy es un gran resultado mañana!",
+    "third": "La disciplina hace maravillas. ¡Estás más cerca de tu meta cada día!",
+    "fourth": "¡El fuego arde cada vez más fuerte! No bajes el ritmo",
+    "fifth": "¡Cada día completado forma un hábito de hierro!",
+    "sixth": "Estás haciendo lo que muchos abandonan. ¡Buen trabajo!",
+    "seventh": "Tu racha se fortalece día a día, ¡así se hace!",
+    "eighth": "¡Solo un par de minutos al día y el alemán ya se siente más cercano!",
+    "ninth": "¡Gran trabajo! La constancia es la clave y vas adelante",
+    "tenth": "Cada día aporta más confianza. ¡Continuaremos mañana!"
+  },
+  "streakButtons": {
+    "first": "Nos vemos mañana",
+    "second": "Continuemos mañana",
+    "third": "Buen trabajo",
+    "fourth": "Paso dado, hasta mañana",
+    "fifth": "¿Lo afianzamos mañana?",
+    "sixth": "Disciplina a tope",
+    "seventh": "Hasta mañana",
+    "eighth": "¿Repetimos mañana?",
+    "ninth": "No bajamos el ritmo"
+  },
+  "hintText": {
+    "start": "Tu racha ha comenzado. ¡Practica todos los días para no perderla!",
+    "first": "¡Final de semana! Mañana empieza una nueva racha limpia",
+    "second": "Terminemos esta semana y desde la siguiente empezamos una racha completa",
+    "aRow": "seguidos"
+  },
+  "guessWordHint": {
+    "hint-title": "Pista",
+    "hint-desc": "Revelará 2 letras aleatorias sin gastar intentos",
+    "hint-action-btn": "Usar"
   }
 }
