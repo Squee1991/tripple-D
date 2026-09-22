@@ -27,7 +27,7 @@
 
 import { useRouter } from "vue-router";
 import { ref, watch, computed, onMounted, onUnmounted } from "vue";
-import { userAuthStore } from '../../store/authStore.js'
+import { userAuthStore } from '~/store/authStore.js'
 import VShowFall from "../components/V-showFall.vue";
 import Wreath from "../../assets/images/mery-christmas/santa-claus.svg";
 import Pumpkin from "../../assets/images/mery-christmas/halloween.svg";

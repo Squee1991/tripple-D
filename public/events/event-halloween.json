@@ -1,10 +1,2585 @@
 {
   "quests": [
     {
-      "id": "q1",
-      "title": "Halloween слово",
+      "id": "quest-1",
+      "title": "Хэллоуин: Картинка → Слово",
+      "rewardCoins": 10,
+      "rewardRep": 50,
       "steps": [
-        { "type": "word", "props": { "word": "Kürbis" } }
+        {
+          "type": "multiple-choice",
+          "id": "img-1",
+          "title": "Что на картинке?",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/bat.svg",
+          "options": [
+            "die Eule",
+            "die Fledermaus",
+            "die Katze"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-2",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/broom.svg",
+          "options": [
+            "der Löffel",
+            "der Besen",
+            "der Zauberstab"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-3",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/candle.svg",
+          "options": [
+            "die Lampe",
+            "die Kerze",
+            "die Fackel"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-4",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/candy.svg",
+          "options": [
+            "die Süßigkeiten",
+            "das Obst",
+            "das Brot"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-5",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/cat.svg",
+          "options": [
+            "der Hund",
+            "die Katze",
+            "der Wolf"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-6",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/dracula.svg",
+          "options": [
+            "der Wolf",
+            "der Ritter",
+            "der Vampir"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-7",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/ghost.svg",
+          "options": [
+            "das Gespenst",
+            "das Skelett",
+            "die Hexe"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-8",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/proud.svg",
+          "options": [
+            "der Geist",
+            "das Gespenst",
+            "die Hexe"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-9",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/pumpkin.svg",
+          "options": [
+            "der Kürbis",
+            "der Kessel",
+            "die Kerze"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-10",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/raven.svg",
+          "options": [
+            "der Rabe",
+            "der Spatz",
+            "das Huhn"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-11",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/skeleton.svg",
+          "options": [
+            "das Skelett",
+            "der Knochen",
+            "der Zombie"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-12",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/spell-book.svg",
+          "options": [
+            "das Zauberbuch",
+            "die Zeitung",
+            "der Brief"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-13",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/spider.svg",
+          "options": [
+            "der Käfer",
+            "die Spinne",
+            "die Fliege"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-14",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/stew.svg",
+          "options": [
+            "der Topf",
+            "die Pfanne",
+            "der Hexenkessel"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-15",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/stuff.svg",
+          "options": [
+            "der Zauberstab",
+            "der Stift",
+            "der Pfeil"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-16",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/witch-broom.svg",
+          "options": [
+            "die Hexe",
+            "der Besen",
+            "der Hexenbesen"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-17",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/witch-hat.svg",
+          "options": [
+            "der Hexenhut",
+            "der Helm",
+            "die Mütze"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-18",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/wizard.svg",
+          "options": [
+            "der Zauberer",
+            "der Vampir",
+            "der Ritter"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-2",
+      "title": "Основы и факты",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "mcq-1",
+          "title": "Дата праздника",
+          "question": "Когда празднуют Хэллоуин?",
+          "options": [
+            "am 31. Oktober",
+            "am 1. November",
+            "am 11. November",
+            "am 24. Dezember"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-2",
+          "title": "Главный символ",
+          "question": "Какой овощ традиционно вырезают на Хэллоуин?",
+          "options": [
+            "die Karotte",
+            "der Kürbis",
+            "die Kartoffel",
+            "der Kohl"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-3",
+          "title": "Фраза для сладостей",
+          "question": "Что кричат дети в Германии, когда просят сладости?",
+          "options": [
+            "Guten Tag!",
+            "Süßes sonst gibt's Saures!",
+            "Frohes Fest!",
+            "Auf Wiedersehen!"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-4",
+          "title": "Фонарь из тыквы",
+          "question": "Как называют знаменитый фонарь из тыквы?",
+          "options": [
+            "Jack O'Lantern",
+            "Knecht Ruprecht",
+            "Rübengeist",
+            "Schneemann"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-5",
+          "title": "Цвета праздника",
+          "question": "Какие два цвета больше всего связаны с Хэллоуином?",
+          "options": [
+            "Blau und Weiß",
+            "Schwarz und Orange",
+            "Grün und Rot",
+            "Gelb und Rosa"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-6",
+          "title": "Ночное животное",
+          "question": "Какое животное считается главным ночным символом праздника?",
+          "options": [
+            "die Fledermaus",
+            "das Schaf",
+            "das Pferd",
+            "die Kuh"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-7",
+          "title": "Следующий день",
+          "question": "Какой праздник идет сразу после Хэллоуина — 1 ноября?",
+          "options": [
+            "Allerheiligen",
+            "Ostern",
+            "Pfingsten",
+            "Silvester"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-8",
+          "title": "Огонек внутри",
+          "question": "Что традиционно ставят внутрь вырезанной тыквы?",
+          "options": [
+            "ein Buch",
+            "eine Kerze",
+            "einen Apfel",
+            "ein Glas Wasser"
+          ],
+          "correctOptionIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "quest-3",
+      "title": "Немецкие традиции",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "mcq-9",
+          "title": "Овощ предков",
+          "question": "Что вырезали в немецких землях до появления тыквы?",
+          "options": [
+            "Futterrüben",
+            "Wassermelonen",
+            "Brote",
+            "Gurken"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-10",
+          "title": "Замок Франкенштейна",
+          "question": "В каком немецком замке с 1970-х годов проходит крупный фестиваль на Хэллоуин?",
+          "options": [
+            "Burg Frankenstein bei Darmstadt",
+            "Schloss Neuschwanstein",
+            "Wartburg",
+            "Burg Hohenzollern"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-11",
+          "title": "Церковный праздник",
+          "question": "Какой важный праздник отмечает лютеранская церковь 31 октября?",
+          "options": [
+            "Reformationstag",
+            "Dreikönigstag",
+            "Nikolaustag",
+            "Karfreitag"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-12",
+          "title": "Праздник фонариков",
+          "question": "В какой праздник в ноябре дети идут по улицам с самодельными фонариками?",
+          "options": [
+            "Martinstag (Sankt Martin)",
+            "Erntedankfest",
+            "Silvester",
+            "Walpurgisnacht"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-13",
+          "title": "Фонарики из репы",
+          "question": "В какой стране в ноябре традиционно вырезают фонарики из репы (Räbeliechtli)?",
+          "options": [
+            "in der Schweiz",
+            "in Spanien",
+            "in Schweden",
+            "in Italien"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-14",
+          "title": "Поверье о ножах",
+          "question": "Зачем по старой немецкой примете в эту ночь прячут ножи на кухне?",
+          "options": [
+            "damit die Geister sich nicht verletzen",
+            "damit Kinder sie nicht finden",
+            "um sie zu schärfen",
+            "weil es Unglück beim Kochen bringt"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-15",
+          "title": "Тихий праздник",
+          "question": "Почему в некоторых землях Германии вечеринки должны стихать к полуночи?",
+          "options": [
+            "weil Allerheiligen ein stiller Feiertag ist",
+            "weil die Busse nicht mehr fahren",
+            "wegen der Polizeiordnung",
+            "weil Geister nur bis Mitternacht aktiv sind"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-16",
+          "title": "Осеннее блюдо",
+          "question": "Что в Германии чаще всего готовят из мякоти тыквы?",
+          "options": [
+            "Kürbissuppe",
+            "Eiscreme",
+            "Limonade",
+            "Bier"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-4",
+      "title": "Мистические существа и легенды",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "mcq-17",
+          "title": "Ночной гость",
+          "question": "Какое существо боится чеснока и спит днем в гробу?",
+          "options": [
+            "der Vampir",
+            "der Zombie",
+            "die Mumie",
+            "das Gespenst"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-18",
+          "title": "Гора ведьм",
+          "question": "На какой горе в горах Гарц по немецким преданиям собираются ведьмы?",
+          "options": [
+            "auf dem Brocken (Blocksberg)",
+            "auf der Zugspitze",
+            "auf dem Feldberg",
+            "auf dem Fichtelberg"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-19",
+          "title": "Человек-волк",
+          "question": "Как называют человека, который в полнолуние превращается в волка?",
+          "options": [
+            "Werwolf",
+            "Erlkönig",
+            "Rübezahl",
+            "Kobold"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-20",
+          "title": "Полет ведьмы",
+          "question": "На чем по легендам летает ведьма?",
+          "options": [
+            "auf einem Besen",
+            "auf einem Teppich",
+            "auf einem Stuhl",
+            "auf einem Schirm"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-21",
+          "title": "Обитатель замков",
+          "question": "Какое существо летает по старым замкам в белых одеждах?",
+          "options": [
+            "das Gespenst",
+            "der Zwerg",
+            "der Ritter",
+            "der Riese"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-22",
+          "title": "Питомец колдуньи",
+          "question": "Какое животное чаще всего сопровождает ведьму в поверьях?",
+          "options": [
+            "eine schwarze Katze",
+            "ein weißes Kaninchen",
+            "ein goldener Fisch",
+            "ein bunter Papagei"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-23",
+          "title": "Огоньки на болотах",
+          "question": "Как зовут блуждающие болотные огоньки, уводящие путников с дороги?",
+          "options": [
+            "Irrlichter",
+            "Laternen",
+            "Glühwürmchen",
+            "Kerzenfunken"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-24",
+          "title": "Ходячий мертвец",
+          "question": "Как называют ожившего медлительного мертвеца?",
+          "options": [
+            "der Zombie",
+            "der Kobold",
+            "der Wichtel",
+            "die Fee"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-5",
+      "title": "Костюмы и осенняя ночь",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "mcq-25",
+          "title": "Смысл масок",
+          "question": "Зачем люди изначально переодевались в страшные наряды?",
+          "options": [
+            "um böse Geister abzuschrecken oder zu täuschen",
+            "um warm zu bleiben",
+            "um Schokolade zu sparen",
+            "um Fotos zu machen"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-26",
+          "title": "Костяной наряд",
+          "question": "Какой костюм состоит из белых костей на темном фоне?",
+          "options": [
+            "Skelett",
+            "Geist",
+            "Vampir",
+            "Pirat"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-27",
+          "title": "Деталь вампира",
+          "question": "Что обязательно нужно надеть к черному плащу вампира?",
+          "options": [
+            "spitze Eckzähne",
+            "eine Brille",
+            "ein Zauberstab",
+            "ein Bart"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-28",
+          "title": "Быстрый костюм",
+          "question": "Что раньше брали за основу для самого простого костюма привидения?",
+          "options": [
+            "ein altes weißes Bettlaken",
+            "einen großen Koffer",
+            "eine Zeitung",
+            "einen Regenschirm"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-29",
+          "title": "Осеннее лакомство",
+          "question": "Какой фрукт на ярмарках часто покрывают красной сладкой глазурью?",
+          "options": [
+            "der Apfel",
+            "die Birne",
+            "die Pflaume",
+            "die Banane"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-30",
+          "title": "Декор для дома",
+          "question": "Что обычно вешают по углам комнат для создания жуткой атмосферы?",
+          "options": [
+            "künstliche Spinnweben",
+            "bunte Lametta",
+            "Ostereier",
+            "Tannenzweige"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-31",
+          "title": "Угощение у дверей",
+          "question": "Что чаще всего дарят детям в Германии в ответ на их стишок?",
+          "options": [
+            "Bonbons und Schokolade",
+            "Brot und Käse",
+            "Geldmünzen",
+            "Gemüse"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-32",
+          "title": "Время для сбора",
+          "question": "В какое время дети обычно идут по домам за конфетами?",
+          "options": [
+            "am frühen Abend bei Einbruch der Dunkelheit",
+            "frühmorgens um 6 Uhr",
+            "am Mittag bei voller Sonne",
+            "erst um 3 Uhr nachts"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-6",
+      "title": "Символика и старинные обычаи",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "mcq-33",
+          "title": "Кельтские корни",
+          "question": "Какой древний кельтский праздник считают историческим предком Хэллоуина?",
+          "options": [
+            "Samhain",
+            "Beltane",
+            "Imbolc",
+            "Yule"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-34",
+          "title": "Смысл фразы",
+          "question": "Чем шутливо грозят дети в фразе «...sonst gibt's Saures», если им не дадут сладостей?",
+          "options": [
+            "einen kleinen Streich",
+            "eine Rechnung",
+            "ein Lied",
+            "ein Geschenk"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-35",
+          "title": "Город тыкв",
+          "question": "В каком городе под Штутгартом ежегодно строят огромные фигуры из тыкв?",
+          "options": [
+            "Ludwigsburg",
+            "Heidelberg",
+            "Freiburg",
+            "Tübingen"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-36",
+          "title": "Котел ведьмы",
+          "question": "В чем ведьма по сказкам варит свои зелья?",
+          "options": [
+            "in einem Kessel",
+            "in einer Pfanne",
+            "in einer Tasse",
+            "in einem Eimer"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-37",
+          "title": "Ловушка паука",
+          "question": "Какое восьминогое существо плетет прочные ловчие сети?",
+          "options": [
+            "die Spinne",
+            "der Skorpion",
+            "die Biene",
+            "der Käfer"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-38",
+          "title": "Предмет магии",
+          "question": "С помощью чего колдуны и волшебники творят свои чары?",
+          "options": [
+            "mit einem Zauberstab",
+            "mit einem Löffel",
+            "mit einem Bleistift",
+            "mit einem Hammer"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-39",
+          "title": "Семена тыквы",
+          "question": "Что часто делают с тыквенными семечками после очистки тыквы?",
+          "options": [
+            "man röstet sie im Ofen",
+            "man wirft sie ins Wasser",
+            "man friert sie ungekocht ein",
+            "man malt sie an"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-40",
+          "title": "Атмосфера леса",
+          "question": "Почему осенний лес в конце октября отлично подходит для страшных сказок?",
+          "options": [
+            "wegen Nebel und fallenden Blättern",
+            "weil es heiß ist",
+            "weil die Vögel nachts laut singen",
+            "weil Blumen blühen"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-7",
+      "title": "Чтение: Вечер с тыквой",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-1",
+          "title": "Семейный вечер с тыквой",
+          "text": "Am 31. Oktober feiern auch viele Kinder in Deutschland Halloween. Am Nachmittag schnitzt Familie Müller einen großen Kürbis. Sie schneiden ein schauriges Gesicht mit Zähnen hinein. Am Abend stellen sie eine brennende Kerze hinein, damit der Kürbis im Dunkeln leuchtet.",
+          "questions": [
+            {
+              "question": "В какое время дня семья вырезает тыкву?",
+              "options": [
+                "am Nachmittag",
+                "mitten in der Nacht",
+                "am nächsten Morgen",
+                "im Sommer"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Какую мордочку они вырезают?",
+              "options": [
+                "ein schauriges Gesicht",
+                "ein trauriges Gesicht",
+                "ein schlafendes Gesicht",
+                "gar kein Gesicht"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Что они ставят внутрь тыквы?",
+              "options": [
+                "eine brennende Kerze",
+                "eine Taschenlampe",
+                "Bonbons",
+                "Wasser"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Зачем внутрь ставят свечу?",
+              "options": [
+                "damit er im Dunkeln leuchtet",
+                "damit er warm bleibt",
+                "damit er besser riecht",
+                "damit er weich wird"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Какая обстановка царит в этот вечер?",
+              "options": [
+                "stimmungsvoll und dunkel",
+                "sonnig und heiß",
+                "langweilig",
+                "sehr laut wie am Flughafen"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-8",
+      "title": "Чтение: Поход за сладостями",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-2",
+          "title": "Поход за сладостями",
+          "text": "Sobald es dunkel wird, ziehen Lukas und Mia verkleidet durch ihr Wohnviertel. Lukas ist als Vampir mit schwarzem Umhang verkleidet, Mia als kleine Hexe mit spitzem Hut. Sie klingeln an Haustüren und rufen laut: 'Süßes, sonst gibt's Saures!' Die Nachbarn lachen und füllen ihre Taschen mit Schokolade.",
+          "questions": [
+            {
+              "question": "Когда дети отправляются на прогулку?",
+              "options": [
+                "sobald es dunkel wird",
+                "am frühen Morgen",
+                "um 12 Uhr mittags",
+                "nur bei Regen"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "В кого нарядился Лукас?",
+              "options": [
+                "als Vampir",
+                "als Gespenst",
+                "als Zauberer",
+                "als Ritter"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Какой головной убор надет на Мие?",
+              "options": [
+                "einen spitzen Hut",
+                "eine Krone",
+                "einen Helm",
+                "ein Tuch"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Что громко кричат дети у входных дверей?",
+              "options": [
+                "Süßes, sonst gibt's Saures!",
+                "Guten Abend allerseits!",
+                "Frohes neues Jahr!",
+                "Hilfe, ein Monster!"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Чем соседи наполняют сумки детей?",
+              "options": [
+                "Schokolade",
+                "Obst und Gemüse",
+                "Bücher",
+                "Spielzeugautos"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-9",
+      "title": "Чтение: Замок Франкенштейна",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-3",
+          "title": "Замок Франкенштейна",
+          "text": "In der Nähe von Darmstadt liegt die Burg Frankenstein. Seit vielen Jahren ist die alte Burgruine im Oktober ein Treffpunkt für Gruselfans aus ganz Deutschland. Schauspieler verkleiden sich als Monster und erschrecken mutige Besucher im dichten Herbstnebel.",
+          "questions": [
+            {
+              "question": "Рядом с каким городом расположен замок?",
+              "options": [
+                "in der Nähe von Darmstadt",
+                "mitten in Berlin",
+                "in den Alpen",
+                "an der Nordsee"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "В каком виде сохранился замок до наших дней?",
+              "options": [
+                "eine Burgruine",
+                "ein modernes Hotel",
+                "ein Kindergarten",
+                "ein Bauernhof"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Кто наряжается чудовищами в замке?",
+              "options": [
+                "Schauspieler",
+                "Touristenführer",
+                "Schulkinder",
+                "Bauarbeiter"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Что актеры в костюмах делают с посетителями?",
+              "options": [
+                "sie erschrecken sie",
+                "sie füttern sie",
+                "sie fotografieren sie",
+                "sie schicken sie weg"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Какая погода обычно окружает этот замок осенью?",
+              "options": [
+                "dichter Herbstnebel",
+                "starker Schneesturm",
+                "sommerliche Hitze",
+                "Wüstenwind"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-10",
+      "title": "Чтение: Реформация и праздник",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-4",
+          "title": "Реформация и праздник масок",
+          "text": "In Deutschland ist der 31. Oktober nicht nur Halloween. Für evangelische Christen ist es der Reformationstag, der an Martin Luther erinnert. In vielen Bundesländern ist dieser Tag ein gesetzlicher Feiertag. Während tagsüber Gottesdienste gefeiert werden, gehört der Abend oft den Gruselpartys der Jugend.",
+          "questions": [
+            {
+              "question": "О ком вспоминают в День Реформации?",
+              "options": [
+                "an Martin Luther",
+                "an Sankt Martin",
+                "an Nikolaus",
+                "an Johann Wolfgang von Goethe"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Какой статус имеет 31 октября во многих землях Германии?",
+              "options": [
+                "ein gesetzlicher Feiertag",
+                "ein normaler Arbeitstag ohne Schule",
+                "ein Trauertag",
+                "ein Sporttag"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Что обычно проходит в церквях днем?",
+              "options": [
+                "Gottesdienste",
+                "Schulprüfungen",
+                "Kürbisrennen",
+                "Laternenumzüge"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Кому чаще всего принадлежит поздний вечер 31 октября?",
+              "options": [
+                "den Gruselpartys der Jugend",
+                "den Chören",
+                "den Schulklassen",
+                "den Handwerkern"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Какая конфессия отмечает День Реформации?",
+              "options": [
+                "evangelische Christen",
+                "orthodoxe Christen",
+                "buddhistische Mönche",
+                "nur Sportvereine"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-11",
+      "title": "Чтение: Старинный дух из репы",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-5",
+          "title": "Дух из репы",
+          "text": "Bevor der amerikanische Kürbis nach Europa kam, schnitzten Kinder im Schwarzwald und in der Schweiz Futterrüben. Diese nannten sie 'Rübengeister'. Man stellte eine Kerze hinein und trug die leuchtende Rübe von Haus zu Haus, um die Ernte zu feiern und den Winter zu begrüßen.",
+          "questions": [
+            {
+              "question": "Что вырезали дети до появления тыквы?",
+              "options": [
+                "Futterrüben",
+                "Äpfel",
+                "Wassermelonen",
+                "Holzscheite"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Как называли такие светящиеся фигурки?",
+              "options": [
+                "Rübengeister",
+                "Kürbisköpfe",
+                "Holzmänner",
+                "Nachtschwärmer"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "В каких краях был особенно популярен этот обычай?",
+              "options": [
+                "im Schwarzwald und in der Schweiz",
+                "nur an der Ostsee",
+                "in Italien",
+                "in den Niederlanden"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Что вставляли внутрь выдолбленной репы?",
+              "options": [
+                "eine Kerze",
+                "eine Kartoffel",
+                "Mehl",
+                "Öl"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Какое время года встречали этим обрядом?",
+              "options": [
+                "der Winter",
+                "der Frühling",
+                "der Sommer",
+                "der Herbstbeginn"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-12",
+      "title": "Чтение: День всех святых",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-6",
+          "title": "День всех святых",
+          "text": "Direkt nach Halloween folgt der 1. November: Allerheiligen. In katholisch geprägten Regionen wie Bayern oder Österreich ist dies ein stiller Feiertag. Die Familien gehen auf den Friedhof, stellen Lichter auf die Gräber ihrer Verwandten und gedenken der Verstorbenen in Ruhe.",
+          "questions": [
+            {
+              "question": "Какой праздник отмечают 1 ноября?",
+              "options": [
+                "Allerheiligen",
+                "Allerseelen",
+                "Sankt Martin",
+                "Erntedank"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Что означает статус «тихий праздник»?",
+              "options": [
+                "laute Musik und Tanzen sind verboten",
+                "alle Geschäfte öffnen die ganze Nacht",
+                "man darf nicht sprechen",
+                "man bleibt nur im Bett"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Куда идут многие семьи в этот день?",
+              "options": [
+                "auf den Friedhof",
+                "in die Berge zum Skifahren",
+                "ins Kino",
+                "in die Schule"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Что люди зажигают на могилах близких?",
+              "options": [
+                "Lichter und Blumen",
+                "Kürbisse und Süßigkeiten",
+                "Bücher",
+                "Bäume"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "В каких землях этот день особенно почитаем?",
+              "options": [
+                "in Bayern und Österreich",
+                "in Dänemark",
+                "in England",
+                "in Schweden"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-13",
+      "title": "Чтение: Праздник святого Мартина",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-7",
+          "title": "День святого Мартина",
+          "text": "Nur elf Tage nach Halloween, am 11. November, feiern die Kinder in Deutschland den Martinstag. Sie tragen bunte, selbstgemachte Papierlaternen durch die Straßen und singen traditionelle Martinslieder. Am Ende gibt es oft ein wärmendes Martinsfeuer und süßes Hefegebäck wie den Weckmann.",
+          "questions": [
+            {
+              "question": "Когда отмечают День святого Мартина?",
+              "options": [
+                "am 11. November",
+                "am 31. Oktober",
+                "am 6. Dezember",
+                "am 1. November"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Что несут дети во время шествия?",
+              "options": [
+                "bunte Papierlaternen",
+                "Kürbisse",
+                "Taschenlampen",
+                "Glocken"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Какие песни поют во время шествия?",
+              "options": [
+                "traditionelle Martinslieder",
+                "Halloween-Lieder",
+                "Weihnachtslieder",
+                "Geburtstagslieder"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Что разжигают в конце праздничного шествия?",
+              "options": [
+                "ein großes Martinsfeuer",
+                "nur eine Kerze",
+                "ein Haus",
+                "ein Ofen"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Какую традиционную выпечку раздают детям?",
+              "options": [
+                "einen Weckmann (Stutenkerl)",
+                "einen Stollen",
+                "eine Brezel",
+                "ein Croissant"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-14",
+      "title": "Чтение: Выставка тыкв в Людвигсбурге",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-8",
+          "title": "Выставка тыкв в Людвигсбурге",
+          "text": "Jedes Jahr im Herbst verwandelt sich der Park des Schlosses Ludwigsburg in Baden-Württemberg in ein riesiges Kürbismeer. Hunderttausende Kürbisse werden zu gigantischen Skulpturen und Fabelwesen zusammengesteckt. Besucher aus ganz Europa probieren dort Kürbissuppe, Kürbis-Maultaschen und geröstete Kerne.",
+          "questions": [
+            {
+              "question": "В каком парке проходит знаменитая выставка?",
+              "options": [
+                "im Schloss Ludwigsburg",
+                "im Schloss Sanssouci",
+                "am Brandenburger Tor",
+                "im Kölner Dom"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Из чего собирают огромные фигуры?",
+              "options": [
+                "aus Kürbissen",
+                "aus Holz und Metall",
+                "aus Eis und Schnee",
+                "aus Plastik"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Какие фирменные блюда пробуют гости выставки?",
+              "options": [
+                "Kürbissuppe und Kürbis-Maultaschen",
+                "nur Schokolade",
+                "Pommes mit Mayo",
+                "Pizza Margherita"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Сколько тыкв используют для оформления выставки?",
+              "options": [
+                "Hunderttausende",
+                "etwa fünfzig Stück",
+                "zehn Stück",
+                "eine Million Kilo Äpfel"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "В какое время года открыта эта выставка?",
+              "options": [
+                "im Herbst",
+                "im Frühling",
+                "im Hochsommer",
+                "mitten im Winter"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-15",
+      "title": "Чтение: Игры на вечеринке",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-9",
+          "title": "Ловля яблок без рук",
+          "text": "Auf der Halloweenparty spielen die Kinder ein lustiges Spiel: Apfeltauchen. Eine große Schüssel wird mit kaltem Wasser gefüllt, und rote Äpfel schwimmen an der Oberfläche. Die Kinder müssen die Hände hinter den Rücken legen und versuchen, einen Apfel nur mit den Zähnen aus dem Wasser zu holen.",
+          "questions": [
+            {
+              "question": "Как называется игра с яблоками в воде?",
+              "options": [
+                "Apfeltauchen",
+                "Kürbisrennen",
+                "Schokoladenspiel",
+                "Topfschlagen"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Чем наполняют большую миску?",
+              "options": [
+                "mit kaltem Wasser",
+                "mit heißer Suppe",
+                "mit Limonade",
+                "mit Mehl"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Что плавает на поверхности воды?",
+              "options": [
+                "rote Äpfel",
+                "kleine Bälle",
+                "süße Bonbons",
+                "Plastikspinnen"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Куда участники должны убрать руки?",
+              "options": [
+                "hinter den Rücken",
+                "in die Hosentaschen",
+                "auf den Kopf",
+                "unter den Tisch"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "С помощью чего нужно достать яблоко?",
+              "options": [
+                "nur mit den Zähnen",
+                "mit einem Löffel",
+                "mit einer Gabel",
+                "mit den Füßen"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-16",
+      "title": "Чтение: Веселая мумия",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-10",
+          "title": "Мумия из бумаги",
+          "text": "Das nächste Spiel bringt alle zum Lachen: Mumien wickeln! Zwei Teams treten gegeneinander an. Jedes Team wählt ein Kind aus, das zur Mumie wird. Mit vielen Rollen Toilettenpapier muss die Figur so schnell wie möglich von Kopf bis Fuß eingewickelt werden. Das schnellste Team gewinnt.",
+          "questions": [
+            {
+              "question": "Как называется следующее веселое состязание?",
+              "options": [
+                "Mumien wickeln",
+                "Geister fangen",
+                "Kürbisse wiegen",
+                "Versteckspiel"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Что делают между собой две команды?",
+              "options": [
+                "sie treten gegeneinander an",
+                "sie schlafen im Kreis",
+                "sie gehen nach Hause",
+                "sie lesen ein Buch"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Кого выбирает каждая команда?",
+              "options": [
+                "ein Kind als Mumie",
+                "einen Lehrer",
+                "eine Katze",
+                "einen Schiedsrichter"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Какой материал используют для обмотки?",
+              "options": [
+                "Rollen Toilettenpapier",
+                "dicke Decken",
+                "alte Zeitungen",
+                "Seile"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Какая команда побеждает в этой игре?",
+              "options": [
+                "das schnellste Team",
+                "das lauteste Team",
+                "das größte Team",
+                "das langsamste Team"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-17",
+      "title": "Соедини пары: Картинка и Слово",
+      "rewardCoins": 15,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "matching",
+          "id": "match-words-1",
+          "instruction": "Соедини немецкое слово с его переводом на русский",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "die Fledermaus"
+            },
+            {
+              "id": "l2",
+              "text": "der Besen"
+            },
+            {
+              "id": "l3",
+              "text": "die Kerze"
+            },
+            {
+              "id": "l4",
+              "text": "die Süßigkeiten"
+            },
+            {
+              "id": "l5",
+              "text": "die schwarze Katze"
+            },
+            {
+              "id": "l6",
+              "text": "der Vampir"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "летучая мышь"
+            },
+            {
+              "id": "r2",
+              "text": "метла"
+            },
+            {
+              "id": "r3",
+              "text": "свеча"
+            },
+            {
+              "id": "r4",
+              "text": "сладости"
+            },
+            {
+              "id": "r5",
+              "text": "черная кошка"
+            },
+            {
+              "id": "r6",
+              "text": "вампир"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-words-2",
+          "instruction": "Соедини немецкое слово с его переводом на русский",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "das Gespenst"
+            },
+            {
+              "id": "l2",
+              "text": "der Geist"
+            },
+            {
+              "id": "l3",
+              "text": "der Kürbis"
+            },
+            {
+              "id": "l4",
+              "text": "der Rabe"
+            },
+            {
+              "id": "l5",
+              "text": "das Skelett"
+            },
+            {
+              "id": "l6",
+              "text": "das Zauberbuch"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "привидение"
+            },
+            {
+              "id": "r2",
+              "text": "дух"
+            },
+            {
+              "id": "r3",
+              "text": "тыква"
+            },
+            {
+              "id": "r4",
+              "text": "ворон"
+            },
+            {
+              "id": "r5",
+              "text": "скелет"
+            },
+            {
+              "id": "r6",
+              "text": "волшебная книга"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-words-3",
+          "instruction": "Соедини немецкое слово с его переводом на русский",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "die Spinne"
+            },
+            {
+              "id": "l2",
+              "text": "der Hexenkessel"
+            },
+            {
+              "id": "l3",
+              "text": "der Zauberstab"
+            },
+            {
+              "id": "l4",
+              "text": "der Hexenbesen"
+            },
+            {
+              "id": "l5",
+              "text": "der Hexenhut"
+            },
+            {
+              "id": "l6",
+              "text": "der Zauberer"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "паук"
+            },
+            {
+              "id": "r2",
+              "text": "ведьмин котел"
+            },
+            {
+              "id": "r3",
+              "text": "волшебная палочка"
+            },
+            {
+              "id": "r4",
+              "text": "метла ведьмы"
+            },
+            {
+              "id": "r5",
+              "text": "ведьмина шляпа"
+            },
+            {
+              "id": "r6",
+              "text": "волшебник"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-18",
+      "title": "Соедини пары: Атрибуты праздника",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "matching",
+          "id": "match-1",
+          "instruction": "Соедини предмет с его кратким описанием",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Kürbis"
+            },
+            {
+              "id": "l2",
+              "text": "Fledermaus"
+            },
+            {
+              "id": "l3",
+              "text": "Spinnennetz"
+            },
+            {
+              "id": "l4",
+              "text": "Hexenbesen"
+            },
+            {
+              "id": "l5",
+              "text": "Grabstein"
+            },
+            {
+              "id": "l6",
+              "text": "Vampirumhang"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "фонарь с вырезанным лицом"
+            },
+            {
+              "id": "r2",
+              "text": "летает в ночной темноте"
+            },
+            {
+              "id": "r3",
+              "text": "паутина по углам комнат"
+            },
+            {
+              "id": "r4",
+              "text": "метла ведьмы для полетов"
+            },
+            {
+              "id": "r5",
+              "text": "старый камень на кладбище"
+            },
+            {
+              "id": "r6",
+              "text": "черный плащ с красным воротником"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-2",
+          "instruction": "Соедини персонажа с его характерным признаком",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Vampir"
+            },
+            {
+              "id": "l2",
+              "text": "Hexe"
+            },
+            {
+              "id": "l3",
+              "text": "Gespenst"
+            },
+            {
+              "id": "l4",
+              "text": "Skelett"
+            },
+            {
+              "id": "l5",
+              "text": "Mumie"
+            },
+            {
+              "id": "l6",
+              "text": "Werwolf"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "боится чеснока и спит в гробу"
+            },
+            {
+              "id": "r2",
+              "text": "варит зелья в чугунном котле"
+            },
+            {
+              "id": "r3",
+              "text": "гремит цепями в старом замке"
+            },
+            {
+              "id": "r4",
+              "text": "состоит только из белых костей"
+            },
+            {
+              "id": "r5",
+              "text": "с ног до головы в белых бинтах"
+            },
+            {
+              "id": "r6",
+              "text": "воет на луну в темном лесу"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-4",
+          "instruction": "Соедини праздник и его точную дату",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Halloween"
+            },
+            {
+              "id": "l2",
+              "text": "Reformationstag"
+            },
+            {
+              "id": "l3",
+              "text": "Allerheiligen"
+            },
+            {
+              "id": "l4",
+              "text": "Martinstag"
+            },
+            {
+              "id": "l5",
+              "text": "Geisterstunde"
+            },
+            {
+              "id": "l6",
+              "text": "Karneval"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "вечер 31 октября"
+            },
+            {
+              "id": "r2",
+              "text": "31 октября (днем)"
+            },
+            {
+              "id": "r3",
+              "text": "1 ноября"
+            },
+            {
+              "id": "r4",
+              "text": "11 ноября (фонарики)"
+            },
+            {
+              "id": "r5",
+              "text": "полночь (00:00)"
+            },
+            {
+              "id": "r6",
+              "text": "11 ноября в 11:11"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-19",
+      "title": "Соедини пары: Немецкие предания",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "matching",
+          "id": "match-trad-1",
+          "instruction": "Соедини термин с его значением",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Rübengeistern"
+            },
+            {
+              "id": "l2",
+              "text": "Geisterstunde"
+            },
+            {
+              "id": "l3",
+              "text": "Stiller Feiertag"
+            },
+            {
+              "id": "l4",
+              "text": "Laternenumzug"
+            },
+            {
+              "id": "l5",
+              "text": "Blocksberg"
+            },
+            {
+              "id": "l6",
+              "text": "Erlkönig"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "старинная резьба по кормовой репе"
+            },
+            {
+              "id": "r2",
+              "text": "время духов с полуночи до часа ночи"
+            },
+            {
+              "id": "r3",
+              "text": "день без шумных вечеринок и танцев"
+            },
+            {
+              "id": "r4",
+              "text": "шествие детей с фонариками в ноябре"
+            },
+            {
+              "id": "r5",
+              "text": "гора в Гарце, где собираются ведьмы"
+            },
+            {
+              "id": "r6",
+              "text": "мифический лесной царь из баллады Гёте"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-trad-2",
+          "instruction": "Соедини предмет с его защитным свойством",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Knoblauch"
+            },
+            {
+              "id": "l2",
+              "text": "Kerzenlicht"
+            },
+            {
+              "id": "l3",
+              "text": "Salz"
+            },
+            {
+              "id": "l4",
+              "text": "Maske"
+            },
+            {
+              "id": "l5",
+              "text": "Silber"
+            },
+            {
+              "id": "l6",
+              "text": "Hufeisen"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "защита от вампиров"
+            },
+            {
+              "id": "r2",
+              "text": "разгоняет тьму внутри тыквы"
+            },
+            {
+              "id": "r3",
+              "text": "оберег на пороге от злых сил"
+            },
+            {
+              "id": "r4",
+              "text": "обманывает блуждающих духов"
+            },
+            {
+              "id": "r5",
+              "text": "металл против оборотней в сказках"
+            },
+            {
+              "id": "r6",
+              "text": "подкова на удачу и защиту дома"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-trad-3",
+          "instruction": "Соедини немецкое слово с русским переводом",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Zaubertrank"
+            },
+            {
+              "id": "l2",
+              "text": "Friedhof"
+            },
+            {
+              "id": "l3",
+              "text": "Sarg"
+            },
+            {
+              "id": "l4",
+              "text": "Schlossruine"
+            },
+            {
+              "id": "l5",
+              "text": "Knochen"
+            },
+            {
+              "id": "l6",
+              "text": "Nebel"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "зелье"
+            },
+            {
+              "id": "r2",
+              "text": "кладбище"
+            },
+            {
+              "id": "r3",
+              "text": "гроб"
+            },
+            {
+              "id": "r4",
+              "text": "руины замка"
+            },
+            {
+              "id": "r5",
+              "text": "кость"
+            },
+            {
+              "id": "r6",
+              "text": "туман"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-20",
+      "title": "Рецепт осеннего пунша",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "matching",
+          "id": "match-punsch-1",
+          "instruction": "Соедини ингредиент или предмет с подходящим действием",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "der Apfelsaft"
+            },
+            {
+              "id": "l2",
+              "text": "die Orangenscheiben"
+            },
+            {
+              "id": "l3",
+              "text": "die Zimtstange"
+            },
+            {
+              "id": "l4",
+              "text": "der Honig"
+            },
+            {
+              "id": "l5",
+              "text": "der Kochtopf"
+            },
+            {
+              "id": "l6",
+              "text": "die Tasse"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "налить в кастрюлю как основу"
+            },
+            {
+              "id": "r2",
+              "text": "нарезать тонкими кружочками"
+            },
+            {
+              "id": "r3",
+              "text": "положить для пряного аромата"
+            },
+            {
+              "id": "r4",
+              "text": "добавить для сладкого вкуса"
+            },
+            {
+              "id": "r5",
+              "text": "поставить греться на плиту"
+            },
+            {
+              "id": "r6",
+              "text": "разлить горячий напиток друзьям"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
+          ]
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-punsch-1",
+          "sentence": "Zuerst stellen wir einen großen ___ auf den Herd.",
+          "options": [
+            "Topf",
+            "Koffer",
+            "Stuhl",
+            "Teller"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-punsch-2",
+          "sentence": "Wir gießen einen Liter süßen ___ in den Topf hinein.",
+          "options": [
+            "Apfelsaft",
+            "Essig",
+            "Kaffee",
+            "Ketchup"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-punsch-3",
+          "sentence": "Mit einem Messer schneiden wir die saftige Orange in feine ___.",
+          "options": [
+            "Scheiben",
+            "Bücher",
+            "Schuhe",
+            "Steine"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-punsch-4",
+          "sentence": "Für einen herrlichen Herbstduft geben wir eine braune ___ dazu.",
+          "options": [
+            "Zimtstange",
+            "Karotte",
+            "Blume",
+            "Gurke"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-punsch-5",
+          "sentence": "Damit der Punsch schön süß schmeckt, rühren wir einen Löffel ___ ein.",
+          "options": [
+            "Honig",
+            "Salz",
+            "Senf",
+            "Pfeffer"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-punsch-6",
+          "sentence": "Auf kleiner Flamme lassen wir das Getränk langsam ___.",
+          "options": [
+            "erwärmen",
+            "einfrieren",
+            "wegwerfen",
+            "schlafen"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-punsch-7",
+          "sentence": "Am kalten Abend schenken wir den dampfenden Punsch in bunte ___ ein.",
+          "options": [
+            "Tassen",
+            "Hüte",
+            "Taschen",
+            "Schachteln"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-21",
+      "title": "Найди лишнее слово",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "odd-1",
+          "title": "Ночные персонажи",
+          "question": "Какое животное лишнее в этой хэллоуинской компании?",
+          "options": [
+            "die Fledermaus (летучая мышь)",
+            "die Eule (сова)",
+            "die Kuh (корова)",
+            "die schwarze Katze (кошка)"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd-2",
+          "title": "Сладкие угощения",
+          "question": "Что явно лишнее среди сладостей в детской сумке?",
+          "options": [
+            "die Schokolade (шоколад)",
+            "der Stein (камень)",
+            "die Bonbons (конфеты)",
+            "der Keks (печенье)"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd-3",
+          "title": "Праздничные костюмы",
+          "question": "Какой персонаж обычно не относится к страшным костюмам?",
+          "options": [
+            "der Vampir (вампир)",
+            "die Hexe (ведьма)",
+            "das Skelett (скелет)",
+            "der Schneemann (снеговик)"
+          ],
+          "correctOptionIndex": 3
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd-4",
+          "title": "Источники света",
+          "question": "Что не дает свет в темную осеннюю ночь?",
+          "options": [
+            "die Kerze (свеча)",
+            "die Lampe (лампа)",
+            "das Buch (книга)",
+            "das Feuer (костер)"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd-5",
+          "title": "Осенние атрибуты",
+          "question": "Что из этого не связано с осенью и праздником?",
+          "options": [
+            "der Kürbis (тыква)",
+            "die Sonnenbrille (солнечные очки)",
+            "die bunte Laterne (фонарик)",
+            "das gelbe Herbstblatt (осенний лист)"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd-6",
+          "title": "Магические вещи",
+          "question": "Какой предмет не принадлежит волшебнику или ведьме?",
+          "options": [
+            "der Zauberstab (волшебная палочка)",
+            "der Zaubertrank (зелье)",
+            "der Hexenbesen (метла)",
+            "die Kaffeemaschine (кофемашина)"
+          ],
+          "correctOptionIndex": 3
+        }
+      ]
+    },
+    {
+      "id": "quest-22",
+      "title": "Найди лишнее слово: Часть 2",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "odd2-1",
+          "title": "Осенняя погода",
+          "question": "Какая погода совсем не подходит для хэллоуинского вечера?",
+          "options": [
+            "der Nebel (туман)",
+            "der Wind (ветер)",
+            "die heiße Strandsonne (жаркое пляжное солнце)",
+            "die Kälte (холод)"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd2-2",
+          "title": "Одежда для праздника",
+          "question": "Что не надевают как часть костюма на Хэллоуин?",
+          "options": [
+            "die Maske (маска)",
+            "der Umhang (плащ)",
+            "die Badehose (плавки для купания)",
+            "der Hut (шляпа)"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd2-3",
+          "title": "На кухне у ведьмы",
+          "question": "Какой предмет лишний среди колдовской посуды?",
+          "options": [
+            "der Hexenkessel (чугунный котел)",
+            "die Zauberflasche (колба для зелий)",
+            "der Kochlöffel (деревянная ложка)",
+            "der Tennisschläger (теннисная ракетка)"
+          ],
+          "correctOptionIndex": 3
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd2-4",
+          "title": "Атрибуты вампира",
+          "question": "Что совершенно не нужно вампиру?",
+          "options": [
+            "die spitzen Zähne (острые клыки)",
+            "der Sarg (гроб)",
+            "der Knoblauch (чеснок)",
+            "der schwarze Mantel (черное пальто)"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd2-5",
+          "title": "Жуткие обитатели",
+          "question": "Кто явно заблудился и не живет в старом заброшенном замке?",
+          "options": [
+            "die Spinne (паук)",
+            "das Gespenst (привидение)",
+            "die Fledermaus (летучая мышь)",
+            "das Hausschwein (домашняя свинка)"
+          ],
+          "correctOptionIndex": 3
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd2-6",
+          "title": "Напитки для вечеринки",
+          "question": "Какой напиток не пьют для согрева в холодную осеннюю пору?",
+          "options": [
+            "der warme Kinderpunsch (теплый детский пунш)",
+            "der heiße Tee (горячий чай)",
+            "die Kürbissuppe (тыквенный суп)",
+            "das eiskalte Cola-Eis (ледяное мороженое)"
+          ],
+          "correctOptionIndex": 3
+        }
+      ]
+    },
+    {
+      "id": "quest-23",
+      "title": "Соедини противоположности",
+      "rewardCoins": 10,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "matching",
+          "id": "match-opposites-1",
+          "instruction": "Соедини слова с противоположным значением (антонимы)",
+          "pairsLeft": [
+            { "id": "l1", "text": "dunkel (темный)" },
+            { "id": "l2", "text": "süß (сладкий)" },
+            { "id": "l3", "text": "kalt (холодный)" },
+            { "id": "l4", "text": "groß (большой)" },
+            { "id": "l5", "text": "laut (громкий)" },
+            { "id": "l6", "text": "alt (старый)" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "hell (светлый)" },
+            { "id": "r2", "text": "sauer (кислый)" },
+            { "id": "r3", "text": "warm (теплый)" },
+            { "id": "r4", "text": "klein (маленький)" },
+            { "id": "r5", "text": "leise (тихий)" },
+            { "id": "r6", "text": "neu (новый)" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        }
       ]
     }
   ]
