@@ -24,7 +24,9 @@ export const achievementToAwardMap = {
     christmasWreath: 'awards.christmasWreath',
     valentineBear: 'awards.valentineBear',
     cupidArrow: 'awards.cupidArrow',
-    witchHat: 'awards.cupidArrow || Шляпа мага',
-    witchBroom: 'awards.cupidArrow || Метла',
-
+    WitchBroom: 'Ведьмина метла',
+    witchHat: 'Шляпа волшебника',
+    pumpkin: 'Конфета или тыква',
+    spellBook: 'Гримуар Всадника',
+    punch: 'Тыквенный Пунш'
 }

@@ -132,7 +132,8 @@ export default defineNuxtConfig({
 			Fredoka: true,
 			'Lilita One': true,
 			Nunito: true,
-			Kablammo: true
+			Kablammo: true,
+			'Rubik Wet Paint': true
 
 		},
 	},

@@ -4,6 +4,9 @@ import {useRouter, useRoute} from 'vue-router'
 import VShowFall from "../V-showFall.vue"
 import PumpkinCoin from 'assets/images/event-rewards/halloween-event/halloween-assets/pumpkinCoin.svg'
 
+import HedgehogQuest from '~/assets/images/event-rewards/halloween-event/halloween-assets/HedhogQuests.svg'
+import HedgehogShop from '~/assets/images/event-rewards/halloween-event/halloween-assets/hedhogShop.svg'
+
 import BgCard from 'assets/images/test.png'
 import Words from 'assets/images/event-rewards/halloween-event/halloween-quests-icons/Words.jpg'
 
@@ -11,13 +14,16 @@ import QuestsNavIcon from 'assets/images/event-rewards/halloween-event/halloween
 import ShopNavIcon from 'assets/images/event-rewards/halloween-event/halloween-assets/shop.svg'
 import BoneClose from 'assets/images/event-rewards/halloween-event/halloween-assets/bone.svg'
 
-
 import Ghost from 'assets/images/event-rewards/halloween-event/halloween-rewards/ghost.svg'
 import WitchBroom from 'assets/images/event-rewards/halloween-event/halloween-rewards/witch-broom.svg'
 import WitchHat from 'assets/images/event-rewards/halloween-event/halloween-rewards/witch-hat.svg'
+import Pumpkin from 'assets/images/event-rewards/halloween-event/halloween-rewards/pumpkin.svg'
+import SpellBook from 'assets/images/event-rewards/halloween-event/halloween-rewards/spell-book.svg'
+import Punch from 'assets/images/event-rewards/halloween-event/halloween-rewards/punch.svg'
 
 import {useEventSessionStore} from '~/store/eventsStore.js'
 import {useSeoMeta, useI18n, useLocalePath} from "#imports"
+import VBanner from "~/src/components/V-banner.vue";
 
 useSeoMeta({robots: 'noindex, nofollow'})
 
@@ -34,7 +40,6 @@ const coins = ref(0)
 const coinIcon = '🎃'
 const activeTab = ref('quests')
 const reputationPoints = ref(0)
-const selectedLevel = ref(1)
 
 const eventId = computed(() => String(route.params.id || ''))
 const isEventOpen = computed(() => {
@@ -45,6 +50,19 @@ const isEventOpen = computed(() => {
   const end = event.end.slice(0, 5)
   if (start > end) return now >= start || now <= end
   return now >= start && now <= end
+})
+
+const bannerText = {
+  shop: 'Покупай эффекты подарки в лавке Ежакулы!',
+  quests: "Проходи задания, чтобы собирать тыквенную валюту!"
+}
+
+const bannerTextComputed = computed(() => {
+  return activeTab.value === 'quests' ? bannerText.quests : bannerText.shop
+})
+
+const bannerComputed = computed(() => {
+  return activeTab.value === 'quests' ? HedgehogQuest : HedgehogShop
 })
 
 const navTabs = computed(() => ([
@@ -95,10 +113,6 @@ const levelProgressText = computed(() => {
   return `${levelCurrent.value} / ${levelTotal.value}`
 })
 
-function setSelectedLevel(lvl) {
-  selectedLevel.value = lvl
-}
-
 const quests = ref([
   {
     id: 'quest-1',
@@ -112,23 +126,23 @@ const quests = ref([
     id: 'quest-2',
     title: t('halloweenEventQuests.quest-2', 'Основы и факты'),
     rewardCoins: 10,
-    rewardRep: 60,
+    rewardRep: 25,
     isDone: false,
     icon: BgCard
   },
   {
     id: 'quest-3',
-    title: t('halloweenEventQuests.quest-3', 'Традиции и альтернативы'),
+    title: t('halloweenEventQuests.quest-3', 'Немецкие традиции'),
     rewardCoins: 10,
-    rewardRep: 60,
+    rewardRep: 25,
     isDone: false,
     icon: Words
   },
   {
     id: 'quest-4',
-    title: t('halloweenEventQuests.quest-4', 'Мистические существа и легенды'),
+    title: t('halloweenEventQuests.quest-4', 'Существа и легенды'),
     rewardCoins: 10,
-    rewardRep: 60,
+    rewardRep: 50,
     isDone: false,
     icon: Words
   },
@@ -136,7 +150,7 @@ const quests = ref([
     id: 'quest-5',
     title: t('halloweenEventQuests.quest-5', 'Костюмы и осенняя ночь'),
     rewardCoins: 10,
-    rewardRep: 60,
+    rewardRep: 50,
     isDone: false,
     icon: Words
   },
@@ -144,79 +158,143 @@ const quests = ref([
     id: 'quest-6',
     title: t('halloweenEventQuests.quest-6', 'Символика и обычаи'),
     rewardCoins: 10,
-    rewardRep: 60,
+    rewardRep: 50,
     isDone: false,
     icon: Words
   },
   {
     id: 'quest-7',
-    title: t('halloweenEventQuests.quest-7', 'Хэллоуин в Германии'),
+    title: t('halloweenEventQuests.quest-7', 'Вечер с тыквой'),
     rewardCoins: 10,
-    rewardRep: 70,
+    rewardRep: 25,
     isDone: false,
     icon: Words
   },
   {
     id: 'quest-8',
-    title: t('halloweenEventQuests.quest-8', 'Обычаи немецких регионов'),
+    title: t('halloweenEventQuests.quest-8', 'Поход за сладостями'),
     rewardCoins: 10,
-    rewardRep: 70,
+    rewardRep: 25,
     isDone: false,
     icon: Words
   },
   {
     id: 'quest-9',
-    title: t('halloweenEventQuests.quest-9', 'Тайна замка Эльц'),
+    title: t('halloweenEventQuests.quest-9', 'Замок Франкенштейна'),
     rewardCoins: 10,
-    rewardRep: 70,
+    rewardRep: 25,
     isDone: false,
     icon: Words
   },
   {
     id: 'quest-10',
-    title: t('halloweenEventQuests.quest-10', 'Легенды темного Шварцвальда'),
+    title: t('halloweenEventQuests.quest-10', 'Реформация и праздник'),
     rewardCoins: 10,
-    rewardRep: 70,
+    rewardRep: 25,
     isDone: false,
     icon: Words
   },
   {
     id: 'quest-11',
-    title: t('halloweenEventQuests.quest-11', 'Осенний вечер и домашний уют'),
+    title: t('halloweenEventQuests.quest-11', 'Старинный дух из репы'),
     rewardCoins: 10,
-    rewardRep: 70,
+    rewardRep: 25,
     isDone: false,
     icon: Words
   },
   {
     id: 'quest-12',
-    title: t('halloweenEventQuests.quest-12', 'Соедини пары: атрибуты Хэллоуина'),
+    title: t('halloweenEventQuests.quest-12', 'День всех святых'),
     rewardCoins: 10,
-    rewardRep: 70,
+    rewardRep: 25,
     isDone: false,
     icon: Words
   },
   {
     id: 'quest-13',
-    title: t('halloweenEventQuests.quest-13', 'Соедини пары: немецкие предания'),
+    title: t('halloweenEventQuests.quest-13', 'Праздник святого Мартина'),
     rewardCoins: 10,
-    rewardRep: 70,
+    rewardRep: 25,
     isDone: false,
     icon: Words
   },
   {
     id: 'quest-14',
-    title: t('halloweenEventQuests.quest-14', 'Выбери слово: атмосфера праздника'),
+    title: t('halloweenEventQuests.quest-14', 'Выставка тыкв в Людвигсбурге'),
     rewardCoins: 10,
-    rewardRep: 70,
+    rewardRep: 25,
     isDone: false,
     icon: Words
   },
   {
     id: 'quest-15',
-    title: t('halloweenEventQuests.quest-15', 'Выбери слово: немецкие обычаи'),
+    title: t('halloweenEventQuests.quest-15', 'Игры на вечеринке'),
     rewardCoins: 10,
-    rewardRep: 70,
+    rewardRep: 25,
+    isDone: false,
+    icon: Words
+  },
+  {
+    id: 'quest-16',
+    title: t('halloweenEventQuests.quest-16', 'Веселая мумия'),
+    rewardCoins: 10,
+    rewardRep: 25,
+    isDone: false,
+    icon: Words
+  },
+  {
+    id: 'quest-17',
+    title: t('halloweenEventQuests.quest-17', 'Картинка и Слово'),
+    rewardCoins: 15,
+    rewardRep: 60,
+    isDone: false,
+    icon: Words
+  },
+  {
+    id: 'quest-18',
+    title: t('halloweenEventQuests.quest-18', 'Атрибуты праздника'),
+    rewardCoins: 10,
+    rewardRep: 50,
+    isDone: false,
+    icon: Words
+  },
+  {
+    id: 'quest-19',
+    title: t('halloweenEventQuests.quest-19', 'Немецкие предания'),
+    rewardCoins: 10,
+    rewardRep: 50,
+    isDone: false,
+    icon: Words
+  },
+  {
+    id: 'quest-20',
+    title: t('halloweenEventQuests.quest-20', 'Осенний пунш'),
+    rewardCoins: 10,
+    rewardRep: 50,
+    isDone: false,
+    icon: Words
+  },
+  {
+    id: 'quest-21',
+    title: t('halloweenEventQuests.quest-20', 'Найди лишнее слово'),
+    rewardCoins: 10,
+    rewardRep: 50,
+    isDone: false,
+    icon: Words
+  },
+  {
+    id: 'quest-22',
+    title: t('halloweenEventQuests.quest-20', 'Найди лишнее - погода'),
+    rewardCoins: 10,
+    rewardRep: 50,
+    isDone: false,
+    icon: Words
+  },
+  {
+    id: 'quest-23',
+    title: t('halloweenEventQuests.quest-20', 'Найди лишнее - погода'),
+    rewardCoins: 10,
+    rewardRep: 50,
     isDone: false,
     icon: Words
   }
@@ -228,50 +306,65 @@ async function goToSession(questId) {
   await router.push(to)
 }
 
-const shopByRank = ref({
-  1: [
-    {
-      id: 'witchBroom',
-      title: t('eventsShopItems.witchHat', 'Метла Ведьмы'),
-      priceCoins: 30,
-      isOwned: false,
-      icon: WitchBroom
-    },
-    {
-      id: 'witchHat',
-      title: t('eventsShopItems.spiderWeb', 'Шляпа Ведьмы'),
-      priceCoins: 30,
-      isOwned: false,
-      icon: WitchHat
-    },
-  ],
-  2: [
-    {
-      id: 'ghostEffect',
-      title: t('eventsShopItems.ghostEffect', 'Эффект хэллоуина'),
-      priceCoins: 120,
-      isOwned: false,
-      icon: Ghost
-    }
-  ]
-})
+const shopItemsList = ref([
+  {
+    id: 'witchBroom',
+    title: t('eventsShopItems.witchHat', 'Метла Ведьмы'),
+    priceCoins: 1,
+    isOwned: false,
+    icon: WitchBroom
+  },
+  {
+    id: 'witchHat',
+    title: t('eventsShopItems.spiderWeb', 'Шляпа Ведьмы'),
+    priceCoins: 1,
+    isOwned: false,
+    icon: WitchHat
+  },
+  {
+    id: 'pumpkin',
+    title: t('eventsShopItems.spiderWeb', 'Тыква'),
+    priceCoins: 1,
+    isOwned: false,
+    icon: Pumpkin
+  },
+  {
+    id: 'punch',
+    title: t('eventsShopItems.spiderWeb', 'Ведьмин пунш'),
+    priceCoins: 1,
+    isOwned: false,
+    icon: Punch
+  },
+  {
+    id: 'spellBook',
+    title: t('eventsShopItems.spiderWeb', 'Книга заклинаний'),
+    priceCoins: 1,
+    isOwned: false,
+    icon: SpellBook
+  },
+  {
+    id: 'ghostEffect',
+    title: t('eventsShopItems.ghostEffect', 'Эффект хэллоуина'),
+    priceCoins: 120,
+    isOwned: false,
+    icon: Ghost
+  }
+])
 
 function isTopItem(item) {
   return item?.id === 'ghostEffect'
 }
 
-function canBuyItem(level, item) {
+function canBuyItem(item) {
   if (!item) return false
   if (item.isOwned) return false
-  if (currentLevel.value < level) return false
   if (coins.value < item.priceCoins) return false
   if (isTopItem(item) && reputationPoints.value < 1000) return false
   return true
 }
 
-async function buyReward(level, rewardId) {
-  if (currentLevel.value < level) return
-  const item = shopByRank.value[level].find(i => i.id === rewardId)
+async function buyReward(rewardId) {
+  const item = shopItemsList.value.find(i => i.id === rewardId)
   if (!item || item.isOwned) return
   if (isTopItem(item) && reputationPoints.value < 1000) return
   if (coins.value < item.priceCoins) return
@@ -284,7 +377,7 @@ async function buyReward(level, rewardId) {
   })
 }
 
-function openRequirementsModal(level, item) {
+function openRequirementsModal(item) {
   reqModalTitle.value = item.title
   if (isTopItem(item)) {
     reqModalText.value = `${t('eventPanel.needForReward')} ${item.priceCoins} ${coinIcon}  ${t('eventPanel.and')} 1000 ${t('eventPanel.reputation')}`
@@ -298,11 +391,11 @@ function closeRequirementsModal() {
   isReqModalOpen.value = false
 }
 
-async function onRewardClick(level, item) {
-  if (canBuyItem(level, item)) {
-    await buyReward(level, item.id)
+async function onRewardClick(item) {
+  if (canBuyItem(item)) {
+    await buyReward(item.id)
   } else {
-    openRequirementsModal(level, item)
+    openRequirementsModal(item)
   }
 }
 
@@ -320,10 +413,8 @@ async function refreshProgressBadges() {
   }))
 
   const shopItems = progressData.shopItems || {}
-  Object.values(shopByRank.value).forEach(list => {
-    list.forEach(item => {
-      if (shopItems[item.id]) item.isOwned = true
-    })
+  shopItemsList.value.forEach(item => {
+    if (shopItems[item.id]) item.isOwned = true
   })
 }
 
@@ -340,7 +431,7 @@ onMounted(() => {
       <div class="compact-header">
         <button @click="pathToMain" type="button" class="btn-icon-back">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-               stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+               stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"></line>
             <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
@@ -358,6 +449,12 @@ onMounted(() => {
         </div>
       </div>
       <div class="scrollable-view">
+        <div class="banner__inner">
+          <div class="banner">
+            <div class="banner__text"> {{ bannerTextComputed }}</div>
+            <img :src="bannerComputed" alt="bannerIcon" class="banner__icon">
+          </div>
+        </div>
         <nav class="mobile-nav" role="tablist">
           <div class="sliding-bg" :style="{ transform: `translateX(${getTransformX(activeIndex)}%)` }"></div>
           <button
@@ -374,41 +471,31 @@ onMounted(() => {
         </nav>
         <div class="scroll_sections">
           <section v-if="activeTab === 'reputation'">
-            <div class="section-head">
-              <div class="rank-switch">
-                <button
-                    v-for="rank in ranks"
-                    :key="rank.level"
-                    :class="['pill', { 'is-active': selectedLevel === rank.level }]"
-                    @click="setSelectedLevel(rank.level)"
-                >
-                  {{ rank.title }}
-                </button>
-              </div>
-            </div>
             <div class="cards">
               <div
-                  v-for="reward in shopByRank[selectedLevel]"
+                  v-for="reward in shopItemsList"
                   :key="reward.id"
                   class="prize-card achv-card"
               >
                 <div class="prize-card__icon">
                   <img :src="reward.icon" alt="">
                 </div>
-                <div class="prize-card__title">{{ reward.title }}</div>
                 <div class="prize-card__body">
-                  <div class="price">
-                    <img class="coin" :src="PumpkinCoin" alt="PumpkinCoin">
-                    <span class="price__value">{{ reward.priceCoins }} </span>
+                  <div class="prize-card__title">{{ reward.title }}</div>
+                  <div class="prize-card__actions">
+                    <div class="price">
+                      <img class="coin" :src="PumpkinCoin" alt="PumpkinCoin">
+                      <span class="price__value">{{ reward.priceCoins }} </span>
+                    </div>
+                    <button
+                        class="btn btn--candy"
+                        :disabled="reward.isOwned"
+                        @click="onRewardClick(reward)"
+                    >
+                      <template v-if="reward.isOwned">{{ t('eventPanel.bought', 'Куплено') }}</template>
+                      <template v-else>{{ t('eventPanel.buy', 'Купить') }}</template>
+                    </button>
                   </div>
-                  <button
-                      class="btn btn--candy"
-                      :disabled="reward.isOwned"
-                      @click="onRewardClick(selectedLevel, reward)"
-                  >
-                    <template v-if="reward.isOwned">{{ t('eventPanel.bought', 'Куплено') }}</template>
-                    <template v-else>{{ t('eventPanel.buy', 'Купить') }}</template>
-                  </button>
                 </div>
               </div>
             </div>
@@ -430,7 +517,9 @@ onMounted(() => {
                         :class="['btn', 'btn--candy', { 'btn--repeat': quest.isDone }]"
                         @click="goToSession(quest.id)"
                     >
-                      {{ quest.isDone ? t('eventPanel.repeat', 'Повторить') : t('eventPanel.execute', 'Начать задание') }}
+                      {{
+                        quest.isDone ? t('eventPanel.repeat', 'Повторить') : t('eventPanel.execute', 'Начать задание')
+                      }}
                     </button>
                   </div>
                 </div>
@@ -465,7 +554,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-
 .season-page {
   height: 100vh;
   max-width: 1000px;
@@ -474,7 +562,6 @@ onMounted(() => {
   flex-direction: column;
   overflow: hidden;
   position: relative;
-
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -483,7 +570,7 @@ onMounted(() => {
   inset: 0;
   background: #1a0f1f url('/images/HalooweenBackground3.webp') no-repeat center center;
   background-size: cover;
-  z-index: 1;
+  z-index: -1;
 }
 
 .season-container {
@@ -506,13 +593,13 @@ onMounted(() => {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 5px 10px 15px 10px;
+  padding: 5px 10px 5px 10px;
   flex-shrink: 0;
   z-index: 10;
 }
 
 .btn-icon-back {
-  background: #fff;
+  background: #f69e00;
   border-radius: 12px;
   width: 40px;
   min-width: 40px;
@@ -529,8 +616,8 @@ onMounted(() => {
 }
 
 .achv-card {
-  border-radius: 22px;
-  padding: 15px;
+  border-radius: 16px;
+  padding: 10px 14px;
   backdrop-filter: blur(4px);
   background: rgb(0 0 0 / 83%);
 }
@@ -548,7 +635,6 @@ onMounted(() => {
   display: flex;
   align-items: center;
   gap: 6px;
-  background: #46a714bf;
   padding: 6px;
   border-radius: 14px;
   margin-left: 10px;
@@ -564,7 +650,7 @@ onMounted(() => {
 }
 
 .scrollable-view {
-  padding: 10px 20px 10px;
+  padding: 10px;
   scrollbar-width: none;
   height: 100%;
   -ms-overflow-style: none;
@@ -580,12 +666,35 @@ onMounted(() => {
   -webkit-overflow-scrolling: touch;
 }
 
+.banner {
+  background: linear-gradient(135deg, #2d124d 0%, #1a0b2e 100%);
+  box-shadow: 0 0 6px rgb(255 156 26 / 0.5);
+  border-radius: 24px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.banner__text {
+  color: #fff3cc;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "Rubik Wet Paint", system-ui;
+  font-style: italic;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  margin-right: 10px;
+  text-shadow: 0 2px 0 orange;
+}
+
 .scroll_sections::-webkit-scrollbar {
   display: none;
 }
 
 .coin {
-  width: 28px;
+  width: 22px;
 }
 
 .coin__value {
@@ -601,8 +710,12 @@ onMounted(() => {
   border-radius: 40px;
   padding: 6px;
   border: 3px solid rgb(143 140 136 / 0.12);
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
   flex-shrink: 0;
+}
+
+.banner__icon {
+  height: 96px;
 }
 
 .sliding-bg {
@@ -631,180 +744,171 @@ onMounted(() => {
   z-index: 2;
 }
 
-.tab-icon {
-  font-size: 22px;
-}
-
 .tab-label {
   font-size: 18px;
   font-weight: 400;
   color: #ffe6d1;
   transition: color 0.2s;
-  font-family: "Kablammo", system-ui;
+  font-family: "Rubik Wet Paint", system-ui;
 }
 
 .mobile-nav__btn--active .tab-label {
   color: #fff;
 }
 
-.section-head {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.rank-switch {
-  display: flex;
-  background: #1f0e15;
-  padding: 5px;
-  border-radius: 14px;
-  gap: 8px;
-  width: 100%;
-}
-
-.pill {
-  border: none;
-  color: #ffe6d1;
-  background: none;
-  border-radius: 14px;
-  padding: 10px 12px;
-  font-weight: 900;
-  font-size: 16px;
-  cursor: pointer;
-  flex: 1;
-  text-align: center;
-  transition: background 0.2s, color 0.2s;
-}
-
-.pill.is-active {
-  background: #ff9c1a;
-  color: #1a0f1f;
-}
-
 .cards {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 0 15px;
+  gap: 10px;
+  padding: 0 0 100px;
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
 }
 
 .prize-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 15px;
-  padding: 15px 30px 30px 30px;
+  gap: 12px;
 }
 
 .prize-card__icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 180px;
-  height: 180px;
+  width: 80px;
+  height: 80px;
   flex-shrink: 0;
-  border: 4px solid #51504d;
+  border: 3px solid #51504d;
   background: #251233;
-  padding: 18px;
-  border-radius: 30%;
+  padding: 8px;
+  border-radius: 20px;
+}
+
+.prize-card__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .prize-card__body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 
 .prize-card__title {
-  font-size: 22px;
+  font-size: 17px;
   color: #ffcf4d;
-  font-family: "Kablammo", system-ui;
+  font-family: "Rubik Wet Paint", system-ui;
+  text-align: left;
+}
+
+.prize-card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .price {
   font-weight: 900;
   color: #1a0f1f;
   display: flex;
-  justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  padding: 10px 10px;
-  font-size: 16px;
+  border-radius: 8px;
+  padding: 4px 6px;
+  font-size: 14px;
 }
 
 .quests {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 0 15px;
+  gap: 10px;
   flex: 1;
   overflow-y: auto;
+  padding-bottom: 100px;
 }
 
 .quest {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 15px;
-  padding: 15px 30px 30px 30px;
-  border: 3px solid #9f78c973;
+  gap: 12px;
+  border: 2px solid #9f78c973;
 }
 
 .quest__icon {
-  font-size: 45px;
+  flex-shrink: 0;
   overflow: hidden;
-  border-radius: 30%;
-  width: 190px;
-  border: 4px solid #51504d;
+  border-radius: 18px;
+  width: 62px;
+  border: 3px solid #51504d;
+}
+
+.quest__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .quest__body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 
 .quest__title {
   font-weight: 400;
-  font-size: 26px;
+  font-size: 17px;
   color: #FFFFFF;
-  text-align: center;
-  font-family: "Kablammo", system-ui;
+  text-align: left;
+  font-family: "Rubik Wet Paint", system-ui;
 }
 
 .quest__meta {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
 }
 
 .quest__inner {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 6px;
 }
 
 .meta__pill {
   color: #ffcf4d;
   background: #46a714bf;
-  border-radius: 14px;
-  padding: 6px 12px;
+  border-radius: 10px;
+  padding: 3px 8px;
   font-weight: bold;
-  font-size: 15px;
-  margin-bottom: 10px;
+  font-size: 12px;
+  margin-bottom: 0;
+  white-space: nowrap;
 }
 
 .btn {
-  border-radius: 31px 52% 35px;
-  padding: 12px 20px;
+  border-radius: 18px;
+  padding: 8px 14px;
   cursor: pointer;
-  width: 100%;
+  width: auto;
   text-transform: uppercase;
   text-align: center;
   font-family: "Nunito", sans-serif;
-  font-size: 18px;
+  font-size: 12px;
   transition: transform 0.1s, box-shadow 0.1s;
 }
 
@@ -816,10 +920,10 @@ onMounted(() => {
 .btn--candy {
   background: #ff9c1a;
   color: #2e2b37;
-  font-size: 20px;
-  font-family: "Kablammo", system-ui;
+  font-size: 14px;
+  font-family: "Rubik Wet Paint", system-ui;
   border: none;
-  box-shadow: 0 5px #b3530c;
+  box-shadow: 0 3px #b3530c;
 }
 
 .btn--candy:disabled {
@@ -833,7 +937,7 @@ onMounted(() => {
 .btn--repeat {
   background: #4CAF50;
   color: #fff;
-  box-shadow: 0 5px #388E3C;
+  box-shadow: 0 3px #388E3C;
 }
 
 .clickable {
@@ -906,11 +1010,10 @@ onMounted(() => {
 }
 
 .price__value {
-  margin: 6px 0 0 6px ;
+  margin: 0 0 0 4px;
   color: white;
   font-weight: 900;
-  font-size: 18px;
-
+  font-size: 15px;
 }
 
 .req-modal__title {
@@ -939,42 +1042,14 @@ onMounted(() => {
 }
 
 @media (min-width: 768px) {
-  .prize-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .prize-card__icon {
-    font-size: 80px;
-    width: 100px;
-    height: 100px;
-  }
-
   .cards {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .prize-card {
-    flex: 1;
-    min-width: 280px;
-  }
-
-  .quest {
-    flex-direction: row;
-    text-align: left;
-  }
-
-  .quest__title {
-    text-align: left;
-  }
-
-  .quest__meta {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .btn {
-    width: auto;
+  .quests {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

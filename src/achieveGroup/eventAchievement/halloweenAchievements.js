@@ -4,66 +4,90 @@ export const halloweenAchievements = [
         achievements: [
             {
                 id: 'firstHalloweenQuest',
-                name: 'Первая тыква',
-                description: 'Выполни любое задание события Праздник тыкв и получите первую награду',
+                name: 'Конфета или тыква',
+                description: 'Выполните успешно любое задание в событии Празник тыкв.',
                 currentProgress: 0,
                 targetProgress: 1,
-                icon: '💖'
+                icon: '🎃'
             },
             {
                 id: 'halloweenWords',
-                name: 'valentineAchievements.valentineWordsLabel',
-                description: 'valentineAchievements.valentineWordsDescription',
+                name: 'Зловещие сказания',
+                description: 'Изучите все тематические слова, связанные с событием Праздник тыкв.',
                 currentProgress: 0,
-                targetProgress: 14,
-                icon: '💌'
+                targetProgress: 18,
+                icon: '📖'
             },
             {
-                id: 'valentineAllQuests',
-                name: 'valentineAchievements.valentineAllQuestsLabel',
-                description: 'valentineAchievements.valentineAllQuestsDescription',
-                currentProgress: 0,
-                targetProgress: 6,
-                icon: '📜'
-            },
-            {
-                id: 'valentineBear',
-                name: 'valentineAchievements.valentineBearLabel',
-                description: 'valentineAchievements.valentineBearDescription',
+                id: 'witchBroom',
+                name: 'Молния? Нет, быстрее!',
+                description: 'Разгонитесь до предела - приобретите летающую метлу высшего класса в праздничной лавке.',
                 currentProgress: 0,
                 targetProgress: 1,
-                icon: '🧸'
+                icon: '🧹'
             },
             {
-                id: 'cupidArrow',
-                name: 'valentineAchievements.cupidArrowLabel',
-                description: 'valentineAchievements.cupidArrowDescription',
+                id: 'pumpkin',
+                name: 'У вас репа',
+                description: 'Приобретите зловещую тыкву в лавке праздника.',
                 currentProgress: 0,
                 targetProgress: 1,
-                icon: '🏹'
+                icon: '🕯️'
             },
             {
-                id: 'valentineTheme',
-                name: 'valentineAchievements.valentineThemeLabel',
-                description: 'valentineAchievements.valentineThemeDescription',
+                id: 'punch',
+                name: 'Тыквенный Пунш',
+                description: 'Приобретите ведьмин пунш в праздничной лавке.',
                 currentProgress: 0,
                 targetProgress: 1,
-                icon: '🎨'
+                icon: '🧪'
             },
             {
-                id: 'ValentineReputation',
-                name: 'valentineAchievements.valentineReputationLabel',
-                description: 'valentineAchievements.valentineReputationDescription',
+                id: 'witchHat',
+                name: 'Шляпа волшебника',
+                description: 'Приобретите Ведьмину шляпу в праздничной лавке.',
                 currentProgress: 0,
-                targetProgress: 300,
-                icon: '🌟'
+                targetProgress: 1,
+                icon: '🧪'
             },
             {
-                id: 'valentineAllAchievements',
-                name: 'valentineAchievements.valentineAllAchievementsLabel',
-                description: 'valentineAchievements.valentineAllAchievementsDescription',
+                id: 'spellBook',
+                name: 'Гримуар Всадника',
+                description: 'Приобретите древнюю книгу заклинаний в праздничной лавке.',
                 currentProgress: 0,
-                targetProgress: 7,
+                targetProgress: 1,
+                icon: '📕'
+            },
+            {
+                id: 'halloweenTheme',
+                name: 'Маскарад',
+                description: 'Приобретите призрачную тему оформления приложения в лавке события.',
+                currentProgress: 0,
+                targetProgress: 1,
+                icon: '👻'
+            },
+            {
+                id: 'halloweenAllQuests',
+                name: 'И грянет бал!',
+                description: 'Не оставьте нечисти ни единого шанса - завершите все праздничные задания.',
+                currentProgress: 0,
+                targetProgress: 23,
+                icon: '🔥'
+            },
+            {
+                id: 'halloweenReputation',
+                name: 'Кумир праздника',
+                description: 'Заработайте максимальный уровень репутации за выполнение поручений Тыквовина.',
+                currentProgress: 0,
+                targetProgress: 1000,
+                icon: '⭐'
+            },
+            {
+                id: 'halloweenAllAchievements',
+                name: 'Да пребудет с тобой Тыквовин!',
+                description: 'Получите все достижения Тыквовина и заслужите праздничное звание.',
+                currentProgress: 0,
+                targetProgress: 10,
                 icon: '🏆'
             }
         ]

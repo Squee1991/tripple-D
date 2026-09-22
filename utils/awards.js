@@ -25,6 +25,11 @@ import CupidArrow from '../assets/images/event-rewards/valentine-event/valentine
 import Ghost from '../assets/images/event-rewards/halloween-event/halloween-rewards/ghost.svg'
 import WitchBroom from '../assets/images/event-rewards/halloween-event/halloween-rewards/witch-broom.svg'
 import WitchHat from '../assets/images/event-rewards/halloween-event/halloween-rewards/witch-hat.svg'
+import Pumpkin from '../assets/images/event-rewards/halloween-event/halloween-rewards/pumpkin.svg'
+import SpellBook from '../assets/images/event-rewards/halloween-event/halloween-rewards/spell-book.svg'
+import Punch from '../assets/images/event-rewards/halloween-event/halloween-rewards/punch.svg'
+
+
 
 
 export const AWARDS = [
@@ -159,6 +164,24 @@ export const AWARDS = [
 		title: 'Шляпа мага',
 		description: 'Награда получается за выполнение достижения в событии Фестиваль тыкв',
 		icon: WitchHat
+	},
+	{
+		key: 'pumpkin',
+		title: 'Тыква',
+		description: 'Награда получается за выполнение достижения в событии Фестиваль тыкв',
+		icon: Pumpkin
+	},
+	{
+		key: 'spellBook',
+		title: 'Книга заклинаний',
+		description: 'Награда получается за выполнение достижения в событии Фестиваль тыкв',
+		icon: SpellBook
+	},
+	{
+		key: 'punch',
+		title: 'Тыквенный пунш',
+		description: 'Награда получается за выполнение достижения в событии Фестиваль тыкв',
+		icon: Punch
 	},
 	{
 		key: 'santaHat',

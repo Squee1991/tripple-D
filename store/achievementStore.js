@@ -27,6 +27,7 @@ import { typeVerbs } from '../src/achieveGroup/verbs/typeVerbs.js'
 import { sentenceAchievement } from '../src/achieveGroup/sentenceDuel/sentenceAchievementsА1.js'
 import { eventWinterAchievements } from '../src/achieveGroup/eventAchievement/winterAchievements.js'
 import { valentineAchievements } from '../src/achieveGroup/eventAchievement/valentineAchievements.js'
+import { halloweenAchievements } from '../src/achieveGroup/eventAchievement/halloweenAchievements.js'
 // --- 2) Сторы-источники ---
 import { userChainStore } from '../store/chainStore.js'
 import { userAuthStore } from '../store/authStore.js'
@@ -44,6 +45,7 @@ import { useEventSessionStore } from '../store/eventsStore.js'
 import { useEasterEggsStore } from '../store/easterEggsStore.js'
 export const useAchievementStore = defineStore('achievementStore', () => {
 	const rawGroups = [
+		...halloweenAchievements.map(g => ({category: 'halloween' , ...g})),
 		...valentineAchievements.map(g => ({category: 'valentine' , ...g})),
 		...eventWinterAchievements.map(g => ({category: 'winter' , ...g})),
 		...sentenceAchievement.map(g => ({ category: 'sentence', ...g })),
@@ -669,6 +671,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 		updateCollectionCount()
 		setTimeout(() => finishBootAndReplay(), 0)
+
 		watch(() => authStore.uid, (uid) => {
 			eventUnsubs.forEach(unsub => { try { unsub && unsub() } catch {} })
 			eventUnsubs = []
@@ -714,6 +717,43 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				updateProgress('valentineAllAchievements', metaChildrenIds.filter(id => completedSet.has(id)).length);
 			})
 			eventUnsubs.push(unsubValentine)
+
+
+			const halloweenEventRef = doc(db, 'users', uid, 'eventSessions', 'halloween')
+			const unsubHalloween = onSnapshot(halloweenEventRef, (snap) => {
+				const eventData = snap.data() || {}
+				const questsProgress = eventData.quests || {}
+				const shopItems = eventData.shopItems || {}
+
+				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
+				updateProgress('firstHalloweenQuest', completedQuestsCount > 0 ? 1 : 0)
+				updateProgress('halloweenWords', questsProgress['quest-1']?.score || 0)
+				updateProgress('halloweenAllQuests', completedQuestsCount)
+				updateProgress('witchBroom', shopItems['witchBroom'] ? 1 : 0)
+				updateProgress('witchHat', shopItems['witchHat'] ? 1 : 0)
+				updateProgress('pumpkin', shopItems['pumpkin'] ? 1 : 0)
+				updateProgress('punch', shopItems['punch'] ? 1 : 0)
+				updateProgress('spellBook', shopItems['spellBook'] ? 1 : 0)
+				updateProgress('halloweenTheme', shopItems['theme'] ? 1 : 0)
+				updateProgress('halloweenReputation', eventData.reputationPoints || 0)
+
+				const metaChildrenIds = [
+					'firstHalloweenQuest',
+					'halloweenWords',
+					'halloweenAllQuests',
+					'witchBroom',
+					'pumpkin',
+					'witchHat',
+					'punch',
+					'spellBook',
+					'halloweenTheme',
+					'halloweenReputation'
+				];
+				updateProgress('halloweenAllAchievements', metaChildrenIds.filter(id => completedSet.has(id)).length);
+			})
+			eventUnsubs.push(unsubHalloween)
+
+
 		}, { immediate: true })
 	}
 	watch(lastUnlockedAward, (award) => {
