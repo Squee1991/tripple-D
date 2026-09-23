@@ -171,6 +171,7 @@ export default defineNuxtConfig({
 			Fredoka: true,
 			'Lilita One': true,
 			Nunito: true},
+			'Rubik Wet Paint': true
 	},
 
 	vite: {
