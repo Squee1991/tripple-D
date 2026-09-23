@@ -31,8 +31,6 @@ import SpellBook from '../assets/images/event-rewards/halloween-event/halloween-
 import Punch from '../assets/images/event-rewards/halloween-event/halloween-rewards/punch.svg'
 
 
-
-
 export const AWARDS = [
 	{
 		key: 'explorer',
@@ -154,36 +152,41 @@ export const AWARDS = [
 		description: 'awards.iAmGrootDescription',
 		icon: Groot
 	},
+
+
 	{
 		key: 'witchBroom',
-		title: 'Метла',
+		title: 'Молния? Нет, быстрее!',
 		description: 'Награда получается за выполнение достижения в событии Фестиваль тыкв',
 		icon: WitchBroom
 	},
 	{
 		key: 'witchHat',
-		title: 'Шляпа мага',
+		title: 'Шляпа волшебника',
 		description: 'Награда получается за выполнение достижения в событии Фестиваль тыкв',
 		icon: WitchHat
 	},
 	{
 		key: 'pumpkin',
-		title: 'Тыква',
+		title: 'У вас репа',
 		description: 'Награда получается за выполнение достижения в событии Фестиваль тыкв',
 		icon: Pumpkin
 	},
 	{
 		key: 'spellBook',
-		title: 'Книга заклинаний',
+		title: 'Гримуар Всадника',
 		description: 'Награда получается за выполнение достижения в событии Фестиваль тыкв',
 		icon: SpellBook
 	},
 	{
 		key: 'punch',
-		title: 'Тыквенный пунш',
+		title: 'Тыквенный Пунш',
 		description: 'Награда получается за выполнение достижения в событии Фестиваль тыкв',
 		icon: Punch
 	},
+
+
+
 	{
 		key: 'santaHat',
 		title: 'awards.santaHat',

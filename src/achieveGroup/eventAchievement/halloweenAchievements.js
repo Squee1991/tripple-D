@@ -28,7 +28,7 @@ export const halloweenAchievements = [
             },
             {
                 id: 'pumpkin',
-                name: 'У вас репа',
+                name: 'Тыква на голове?',
                 description: 'Приобретите зловещую тыкву в лавке праздника.',
                 currentProgress: 0,
                 targetProgress: 1,
@@ -44,11 +44,11 @@ export const halloweenAchievements = [
             },
             {
                 id: 'witchHat',
-                name: 'Шляпа волшебника',
+                name: 'Выбор факультета?',
                 description: 'Приобретите Ведьмину шляпу в праздничной лавке.',
                 currentProgress: 0,
                 targetProgress: 1,
-                icon: '🧪'
+                icon: '🎩'
             },
             {
                 id: 'spellBook',
