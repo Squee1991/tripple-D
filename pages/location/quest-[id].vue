@@ -210,6 +210,7 @@
         @back="goThemes"
     />
     <VStopSessionModal
+        :animationData="hedgehogLeaveSession"
         :show="showLeaveModal"
         @update:show="showLeaveModal = $event"
         @confirm="confirmLeave"
@@ -260,6 +261,7 @@ import {useGermanKeyboard} from '~/composables/useGermanKeyboard.js'
 import {useQuestLives} from '~/composables/useQuestLives.js'
 import VStreakModal from '~/src/components/V-streak.vue'
 import { dailyStore } from '~/store/dailyStore.js'
+import hedgehogLeaveSession from 'assets/animation/hedgehog_leave_session.json'
 useSeoMeta({robots: 'noindex, nofollow'})
 const {getDotClass, optionClass} = useClasses()
 const {t} = useI18n()

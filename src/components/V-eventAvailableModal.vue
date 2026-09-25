@@ -13,11 +13,13 @@
       <div class="modal-icon">
         <img class="modal__icon-item" :src="activeEvent.icon" :alt="`${activeEvent.title} icon`"/>
       </div>
-      <h2 class="modal-title">{{ activeEvent.title }}</h2>
-      <p class="modal-text">{{ activeEvent.text }}</p>
-      <div class="modal-actions">
-        <button type="button" class="btn-start" @click="handleBeginClick">{{ t('locationQuests.start')}}</button>
-        <button type="button" class="btn-start --close" @click="handleCloseClick">{{ t('shareModal.close')}}</button>
+      <div class="modal__main">
+        <h2 class="modal-title">{{ activeEvent.title }}</h2>
+        <p class="modal-text">{{ activeEvent.text }}</p>
+        <div class="modal-actions">
+          <button type="button" class="btn-start" @click="handleBeginClick">{{ t('Собирать тыквы')}}</button>
+          <!--        <button type="button" class="btn-start &#45;&#45;close" @click="handleCloseClick">{{ t('shareModal.close')}}</button>-->
+        </div>
       </div>
     </div>
   </div>
@@ -30,7 +32,7 @@ import { ref, watch, computed, onMounted, onUnmounted } from "vue";
 import { userAuthStore } from '~/store/authStore.js'
 import VShowFall from "../components/V-showFall.vue";
 import Wreath from "../../assets/images/mery-christmas/santa-claus.svg";
-import Pumpkin from "../../assets/images/mery-christmas/halloween.svg";
+import Pumpkin from "~/assets/images/event-rewards/halloween-event/halloween-assets/HalloweenStart.png";
 import Valentine from "../../assets/images/mery-christmas/valentine.svg";
 import SnowFall from '../../assets/images/mery-christmas/Snow.svg'
 import HeartFall from '../../assets/images/mery-christmas/heartFall.svg'
@@ -63,7 +65,7 @@ const lastEventKey = ref(null);
 const defaultSchedule = computed(() => [
   {
     id: "halloween",
-    start: "10-28 00:00",
+    start: "8-28 00:00",
     end: "10-31 23:59",
     title: t('eventsModal.halloweenLabel'),
     text: t('eventsModal.halloweenText'),
@@ -118,17 +120,17 @@ function makeEventKey(entry) {
 }
 
 function getDismissed(key) {
-  try {
-    return localStorage.getItem(`eventModal.dismissed.${key}`) === "1";
-  } catch {
-    return false;
-  }
+  // try {
+  //   return localStorage.getItem(`eventModal.dismissed.${key}`) === "1";
+  // } catch {
+  //   return false;
+  // }
 }
 
 function setDismissed(key, v = true) {
-  try {
-    localStorage.setItem(`eventModal.dismissed.${key}`, v ? "1" : "0");
-  } catch {}
+  // try {
+  //   localStorage.setItem(`eventModal.dismissed.${key}`, v ? "1" : "0");
+  // } catch {}
 }
 
 const annualCandidatesSorted = computed(() => {
@@ -229,15 +231,20 @@ watch(() => [props.visible, isModalOpen.value, activeEvent.value, authStore.uid]
   backdrop-filter: blur(3px);
 }
 
+.modal__main {
+  background: #121212;
+  padding: 20px;
+}
+
 .modal-content {
   position: relative;
-  background: #2b2b2b;
-  padding: 24px 20px;
+  overflow: hidden;
   border-radius: 16px;
+  border: 4px solid #253059;
+  background: #121212;
   max-width: 360px;
   width: 90%;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), inset 0 0 12px rgba(255, 255, 255, 0.6);
   z-index: 1111111;
 }
 
@@ -254,27 +261,30 @@ watch(() => [props.visible, isModalOpen.value, activeEvent.value, authStore.uid]
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 12px;
-  animation: float 3s ease-in-out infinite;
-}
-
-.modal__icon-item {
-  width: 170px;
+  overflow: hidden;
 }
 
 .modal-title {
-  font-family: "Nunito", sans-serif;
-  font-size: 27px;
-  text-shadow: 1px 1px 0 wheat;
+  font-family: "Rubik Wet Paint", system-ui;
+  font-size: 30px;
   font-weight: 900;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
   color: wheat;
+  text-align: center;
+  -webkit-text-stroke: 0.5px #000000;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 2px 0 orange;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .modal-text {
-  font-size: 16px;
+  font-family: "Rubik Wet Paint", system-ui;
+  font-size: 14px;
   margin-bottom: 18px;
   color: wheat;
+  -webkit-text-stroke: 0.5px #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .modal-actions {
@@ -282,20 +292,24 @@ watch(() => [props.visible, isModalOpen.value, activeEvent.value, authStore.uid]
   gap: 15px;
   justify-content: center;
   padding: 10px;
+  -webkit-text-stroke: 0.5px #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .btn-start {
-  width: 80%;
-  background: linear-gradient(135deg, #34d399, #10b981);
+  width: 100%;
+  background: linear-gradient(135deg, #d39334, #ff9900);
   color: white;
   border: none;
   padding: 12px 22px;
-  border-radius: 10px;
-  font-size: 16px;
+  border-radius: 50px;
+  font-size: 18px;
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.2s, filter 0.2s;
-  box-shadow: 0 4px 0 #3cb288;
+  box-shadow: 0 6px 0 #d39334;
+  font-family: "Rubik Wet Paint", system-ui;
 }
 
 .btn-start.--close {

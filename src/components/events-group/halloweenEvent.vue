@@ -23,7 +23,6 @@ import Punch from 'assets/images/event-rewards/halloween-event/halloween-rewards
 
 import {useEventSessionStore} from '~/store/eventsStore.js'
 import {useSeoMeta, useI18n, useLocalePath} from "#imports"
-import VBanner from "~/src/components/V-banner.vue";
 
 useSeoMeta({robots: 'noindex, nofollow'})
 
@@ -53,7 +52,7 @@ const isEventOpen = computed(() => {
 })
 
 const bannerText = {
-  shop: 'Покупай эффекты подарки в лавке Ежакулы!',
+  shop: 'Покупай эффекты подарки в лавке события!',
   quests: "Проходи задания, чтобы собирать тыквенную валюту!"
 }
 
@@ -116,7 +115,7 @@ const levelProgressText = computed(() => {
 const quests = ref([
   {
     id: 'quest-1',
-    title: t('halloweenEventQuests.quest-1', 'Картинка → Слово'),
+    title: t('halloweenEventQuests.questOne'),
     rewardCoins: 10,
     rewardRep: 70,
     isDone: false,
@@ -124,7 +123,7 @@ const quests = ref([
   },
   {
     id: 'quest-2',
-    title: t('halloweenEventQuests.quest-2', 'Основы и факты'),
+    title: t('halloweenEventQuests.questTwo'),
     rewardCoins: 10,
     rewardRep: 25,
     isDone: false,
@@ -132,7 +131,7 @@ const quests = ref([
   },
   {
     id: 'quest-3',
-    title: t('halloweenEventQuests.quest-3', 'Немецкие традиции'),
+    title: t('halloweenEventQuests.questThree'),
     rewardCoins: 10,
     rewardRep: 25,
     isDone: false,
@@ -140,7 +139,7 @@ const quests = ref([
   },
   {
     id: 'quest-4',
-    title: t('halloweenEventQuests.quest-4', 'Существа и легенды'),
+    title: t('halloweenEventQuests.questFour'),
     rewardCoins: 10,
     rewardRep: 50,
     isDone: false,
@@ -148,7 +147,7 @@ const quests = ref([
   },
   {
     id: 'quest-5',
-    title: t('halloweenEventQuests.quest-5', 'Костюмы и осенняя ночь'),
+    title: t('halloweenEventQuests.questFive'),
     rewardCoins: 10,
     rewardRep: 50,
     isDone: false,
@@ -156,7 +155,7 @@ const quests = ref([
   },
   {
     id: 'quest-6',
-    title: t('halloweenEventQuests.quest-6', 'Символика и обычаи'),
+    title: t('halloweenEventQuests.questSix'),
     rewardCoins: 10,
     rewardRep: 50,
     isDone: false,
@@ -164,7 +163,7 @@ const quests = ref([
   },
   {
     id: 'quest-7',
-    title: t('halloweenEventQuests.quest-7', 'Вечер с тыквой'),
+    title: t('halloweenEventQuests.questSeven'),
     rewardCoins: 10,
     rewardRep: 25,
     isDone: false,
@@ -172,7 +171,7 @@ const quests = ref([
   },
   {
     id: 'quest-8',
-    title: t('halloweenEventQuests.quest-8', 'Поход за сладостями'),
+    title: t('halloweenEventQuests.questEight'),
     rewardCoins: 10,
     rewardRep: 25,
     isDone: false,
@@ -180,7 +179,7 @@ const quests = ref([
   },
   {
     id: 'quest-9',
-    title: t('halloweenEventQuests.quest-9', 'Замок Франкенштейна'),
+    title: t('halloweenEventQuests.questNine'),
     rewardCoins: 10,
     rewardRep: 25,
     isDone: false,
@@ -188,7 +187,7 @@ const quests = ref([
   },
   {
     id: 'quest-10',
-    title: t('halloweenEventQuests.quest-10', 'Реформация и праздник'),
+    title: t('halloweenEventQuests.questTen'),
     rewardCoins: 10,
     rewardRep: 25,
     isDone: false,
@@ -196,7 +195,7 @@ const quests = ref([
   },
   {
     id: 'quest-11',
-    title: t('halloweenEventQuests.quest-11', 'Старинный дух из репы'),
+    title: t('halloweenEventQuests.questEleven'),
     rewardCoins: 10,
     rewardRep: 25,
     isDone: false,
@@ -204,7 +203,7 @@ const quests = ref([
   },
   {
     id: 'quest-12',
-    title: t('halloweenEventQuests.quest-12', 'День всех святых'),
+    title: t('halloweenEventQuests.questTwelve'),
     rewardCoins: 10,
     rewardRep: 25,
     isDone: false,
@@ -212,7 +211,7 @@ const quests = ref([
   },
   {
     id: 'quest-13',
-    title: t('halloweenEventQuests.quest-13', 'Праздник святого Мартина'),
+    title: t('halloweenEventQuests.questThirteen'),
     rewardCoins: 10,
     rewardRep: 25,
     isDone: false,
@@ -220,7 +219,7 @@ const quests = ref([
   },
   {
     id: 'quest-14',
-    title: t('halloweenEventQuests.quest-14', 'Выставка тыкв в Людвигсбурге'),
+    title: t('halloweenEventQuests.questFourteen'),
     rewardCoins: 10,
     rewardRep: 25,
     isDone: false,
@@ -228,7 +227,7 @@ const quests = ref([
   },
   {
     id: 'quest-15',
-    title: t('halloweenEventQuests.quest-15', 'Игры на вечеринке'),
+    title: t('halloweenEventQuests.questFifteen'),
     rewardCoins: 10,
     rewardRep: 25,
     isDone: false,
@@ -236,7 +235,7 @@ const quests = ref([
   },
   {
     id: 'quest-16',
-    title: t('halloweenEventQuests.quest-16', 'Веселая мумия'),
+    title: t('halloweenEventQuests.questSixteen'),
     rewardCoins: 10,
     rewardRep: 25,
     isDone: false,
@@ -244,7 +243,7 @@ const quests = ref([
   },
   {
     id: 'quest-17',
-    title: t('halloweenEventQuests.quest-17', 'Картинка и Слово'),
+    title: t('halloweenEventQuests.questSeventeen'),
     rewardCoins: 15,
     rewardRep: 60,
     isDone: false,
@@ -252,7 +251,7 @@ const quests = ref([
   },
   {
     id: 'quest-18',
-    title: t('halloweenEventQuests.quest-18', 'Атрибуты праздника'),
+    title: t('halloweenEventQuests.questEighteen'),
     rewardCoins: 10,
     rewardRep: 50,
     isDone: false,
@@ -260,7 +259,7 @@ const quests = ref([
   },
   {
     id: 'quest-19',
-    title: t('halloweenEventQuests.quest-19', 'Немецкие предания'),
+    title: t('halloweenEventQuests.questNineteen'),
     rewardCoins: 10,
     rewardRep: 50,
     isDone: false,
@@ -268,7 +267,7 @@ const quests = ref([
   },
   {
     id: 'quest-20',
-    title: t('halloweenEventQuests.quest-20', 'Осенний пунш'),
+    title: t('halloweenEventQuests.questTwenty'),
     rewardCoins: 10,
     rewardRep: 50,
     isDone: false,
@@ -276,7 +275,7 @@ const quests = ref([
   },
   {
     id: 'quest-21',
-    title: t('halloweenEventQuests.quest-20', 'Найди лишнее слово'),
+    title: t('halloweenEventQuests.questTwentyOne'),
     rewardCoins: 10,
     rewardRep: 50,
     isDone: false,
@@ -284,7 +283,7 @@ const quests = ref([
   },
   {
     id: 'quest-22',
-    title: t('halloweenEventQuests.quest-20', 'Найди лишнее - погода'),
+    title: t('halloweenEventQuests.questTwentyTwo'),
     rewardCoins: 10,
     rewardRep: 50,
     isDone: false,
@@ -292,7 +291,7 @@ const quests = ref([
   },
   {
     id: 'quest-23',
-    title: t('halloweenEventQuests.quest-20', 'Найди лишнее - погода'),
+    title: t('halloweenEventQuests.questTwentyThree'),
     rewardCoins: 10,
     rewardRep: 50,
     isDone: false,
@@ -309,42 +308,42 @@ async function goToSession(questId) {
 const shopItemsList = ref([
   {
     id: 'witchBroom',
-    title: t('eventsShopItems.witchHat', 'Метла Ведьмы'),
+    title: t('eventsShopItemsHalloween.witchBroom'),
     priceCoins: 1,
     isOwned: false,
     icon: WitchBroom
   },
   {
     id: 'witchHat',
-    title: t('eventsShopItems.spiderWeb', 'Шляпа Ведьмы'),
+    title: t('eventsShopItemsHalloween.witchHat'),
     priceCoins: 1,
     isOwned: false,
     icon: WitchHat
   },
   {
     id: 'pumpkin',
-    title: t('eventsShopItems.spiderWeb', 'Тыква'),
+    title: t('eventsShopItemsHalloween.pumpkin'),
     priceCoins: 1,
     isOwned: false,
     icon: Pumpkin
   },
   {
     id: 'punch',
-    title: t('eventsShopItems.spiderWeb', 'Ведьмин пунш'),
+    title: t('eventsShopItemsHalloween.punch'),
     priceCoins: 1,
     isOwned: false,
     icon: Punch
   },
   {
     id: 'spellBook',
-    title: t('eventsShopItems.spiderWeb', 'Книга заклинаний'),
+    title: t('eventsShopItemsHalloween.spellBook'),
     priceCoins: 1,
     isOwned: false,
     icon: SpellBook
   },
   {
     id: 'ghostEffect',
-    title: t('eventsShopItems.ghostEffect', 'Эффект хэллоуина'),
+    title: t('eventsShopItemsHalloween.ghostEffect'),
     priceCoins: 120,
     isOwned: false,
     icon: Ghost
@@ -510,7 +509,7 @@ onMounted(() => {
                   <div class="quest__title clickable" @click="goToSession(quest.id)">{{ quest.title }}</div>
                   <div class="quest__meta">
                     <div class="quest__inner">
-                      <span class="meta__pill">{{ quest.rewardRep }} {{ t('eventPanel.rep', 'реп.') }}</span>
+                      <span class="meta__pill">{{ quest.rewardRep }} {{ t('eventPanel.rep') }}</span>
                       <span class="meta__pill">{{ quest.rewardCoins }} {{ coinIcon }}</span>
                     </div>
                     <button
@@ -518,7 +517,7 @@ onMounted(() => {
                         @click="goToSession(quest.id)"
                     >
                       {{
-                        quest.isDone ? t('eventPanel.repeat', 'Повторить') : t('eventPanel.execute', 'Начать задание')
+                        quest.isDone ? t('eventPanel.repeat') : t('eventPanel.execute')
                       }}
                     </button>
                   </div>
@@ -687,6 +686,9 @@ onMounted(() => {
   letter-spacing: 1px;
   margin-right: 10px;
   text-shadow: 0 2px 0 orange;
+  -webkit-text-stroke: 0.5px #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .scroll_sections::-webkit-scrollbar {
@@ -750,6 +752,9 @@ onMounted(() => {
   color: #ffe6d1;
   transition: color 0.2s;
   font-family: "Rubik Wet Paint", system-ui;
+  -webkit-text-stroke: 0.5px #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .mobile-nav__btn--active .tab-label {
@@ -872,8 +877,12 @@ onMounted(() => {
   font-weight: 400;
   font-size: 17px;
   color: #FFFFFF;
+  margin-bottom: 8px;
   text-align: left;
   font-family: "Rubik Wet Paint", system-ui;
+  -webkit-text-stroke: 0.5px #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .quest__meta {
@@ -902,9 +911,10 @@ onMounted(() => {
 
 .btn {
   border-radius: 18px;
-  padding: 8px 14px;
+  padding: 6px 14px;
   cursor: pointer;
   width: auto;
+  width: 120px;
   text-transform: uppercase;
   text-align: center;
   font-family: "Nunito", sans-serif;
@@ -920,7 +930,7 @@ onMounted(() => {
 .btn--candy {
   background: #ff9c1a;
   color: #2e2b37;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Rubik Wet Paint", system-ui;
   border: none;
   box-shadow: 0 3px #b3530c;
@@ -935,9 +945,10 @@ onMounted(() => {
 }
 
 .btn--repeat {
-  background: #4CAF50;
+  background: #4c5caf;
   color: #fff;
-  box-shadow: 0 3px #388E3C;
+  font-style: italic;
+  box-shadow: 0 4px #333f83;
 }
 
 .clickable {

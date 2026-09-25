@@ -9,7 +9,6 @@
         {
           "type": "multiple-choice",
           "id": "img-1",
-          "title": "Что на картинке?",
           "image": "/assets/images/event-rewards/halloween-event/halloween-words/bat.svg",
           "options": [
             "die Eule",
@@ -216,8 +215,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-1",
-          "title": "Дата праздника",
-          "question": "Когда празднуют Хэллоуин?",
+          "question": "hallowenQuestTwo.titleOne",
           "options": [
             "am 31. Oktober",
             "am 1. November",
@@ -229,86 +227,73 @@
         {
           "type": "multiple-choice",
           "id": "mcq-2",
-          "title": "Главный символ",
-          "question": "Какой овощ традиционно вырезают на Хэллоуин?",
+          "question": "hallowenQuestTwo.titleTwo",
           "options": [
             "die Karotte",
             "der Kürbis",
-            "die Kartoffel",
-            "der Kohl"
+            "die Kartoffel"
           ],
           "correctOptionIndex": 1
         },
         {
           "type": "multiple-choice",
           "id": "mcq-3",
-          "title": "Фраза для сладостей",
-          "question": "Что кричат дети в Германии, когда просят сладости?",
+          "question": "hallowenQuestTwo.titleThree",
           "options": [
             "Guten Tag!",
             "Süßes sonst gibt's Saures!",
-            "Frohes Fest!",
-            "Auf Wiedersehen!"
+            "Frohes Fest!"
           ],
           "correctOptionIndex": 1
         },
         {
           "type": "multiple-choice",
           "id": "mcq-4",
-          "title": "Фонарь из тыквы",
-          "question": "Как называют знаменитый фонарь из тыквы?",
+          "question": "hallowenQuestTwo.titleFour",
           "options": [
             "Jack O'Lantern",
             "Knecht Ruprecht",
-            "Rübengeist",
-            "Schneemann"
+            "Rübengeist"
           ],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
           "id": "mcq-5",
-          "title": "Цвета праздника",
-          "question": "Какие два цвета больше всего связаны с Хэллоуином?",
+          "question": "hallowenQuestTwo.titleFive",
           "options": [
             "Blau und Weiß",
             "Schwarz und Orange",
-            "Grün und Rot",
-            "Gelb und Rosa"
+            "Grün und Rot"
           ],
           "correctOptionIndex": 1
         },
         {
           "type": "multiple-choice",
           "id": "mcq-6",
-          "title": "Ночное животное",
-          "question": "Какое животное считается главным ночным символом праздника?",
+          "question": "hallowenQuestTwo.titleSix",
           "options": [
             "die Fledermaus",
             "das Schaf",
-            "das Pferd",
-            "die Kuh"
+            "das Pferd"
           ],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
           "id": "mcq-7",
-          "title": "Следующий день",
-          "question": "Какой праздник идет сразу после Хэллоуина — 1 ноября?",
+          "question": "hallowenQuestTwo.titleSeven",
           "options": [
             "Allerheiligen",
             "Ostern",
-            "Pfingsten",
-            "Silvester"
+            "Pfingsten"
           ],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
           "id": "mcq-8",
-          "title": "Огонек внутри",
-          "question": "Что традиционно ставят внутрь вырезанной тыквы?",
+          "question": "hallowenQuestTwo.titleEight",
           "options": [
             "ein Buch",
             "eine Kerze",
@@ -328,8 +313,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-9",
-          "title": "Овощ предков",
-          "question": "Что вырезали в немецких землях до появления тыквы?",
+          "question": "hallowenQuestThree.titleOne",
           "options": [
             "Futterrüben",
             "Wassermelonen",
@@ -341,8 +325,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-10",
-          "title": "Замок Франкенштейна",
-          "question": "В каком немецком замке с 1970-х годов проходит крупный фестиваль на Хэллоуин?",
+          "question": "hallowenQuestThree.titleTwo",
           "options": [
             "Burg Frankenstein bei Darmstadt",
             "Schloss Neuschwanstein",
@@ -354,12 +337,10 @@
         {
           "type": "multiple-choice",
           "id": "mcq-11",
-          "title": "Церковный праздник",
-          "question": "Какой важный праздник отмечает лютеранская церковь 31 октября?",
+          "question": "hallowenQuestThree.titleThree",
           "options": [
             "Reformationstag",
             "Dreikönigstag",
-            "Nikolaustag",
             "Karfreitag"
           ],
           "correctOptionIndex": 0
@@ -367,10 +348,9 @@
         {
           "type": "multiple-choice",
           "id": "mcq-12",
-          "title": "Праздник фонариков",
-          "question": "В какой праздник в ноябре дети идут по улицам с самодельными фонариками?",
+          "question": "hallowenQuestThree.titleFour",
           "options": [
-            "Martinstag (Sankt Martin)",
+            "Martinstag(Sankt Martin)",
             "Erntedankfest",
             "Silvester",
             "Walpurgisnacht"
@@ -380,8 +360,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-13",
-          "title": "Фонарики из репы",
-          "question": "В какой стране в ноябре традиционно вырезают фонарики из репы (Räbeliechtli)?",
+          "question": "hallowenQuestThree.titleFive",
           "options": [
             "in der Schweiz",
             "in Spanien",
@@ -393,12 +372,10 @@
         {
           "type": "multiple-choice",
           "id": "mcq-14",
-          "title": "Поверье о ножах",
-          "question": "Зачем по старой немецкой примете в эту ночь прячут ножи на кухне?",
+          "question": "hallowenQuestThree.titleSix",
           "options": [
             "damit die Geister sich nicht verletzen",
             "damit Kinder sie nicht finden",
-            "um sie zu schärfen",
             "weil es Unglück beim Kochen bringt"
           ],
           "correctOptionIndex": 0
@@ -406,12 +383,10 @@
         {
           "type": "multiple-choice",
           "id": "mcq-15",
-          "title": "Тихий праздник",
-          "question": "Почему в некоторых землях Германии вечеринки должны стихать к полуночи?",
+          "question": "hallowenQuestThree.titleSeven",
           "options": [
             "weil Allerheiligen ein stiller Feiertag ist",
             "weil die Busse nicht mehr fahren",
-            "wegen der Polizeiordnung",
             "weil Geister nur bis Mitternacht aktiv sind"
           ],
           "correctOptionIndex": 0
@@ -419,13 +394,11 @@
         {
           "type": "multiple-choice",
           "id": "mcq-16",
-          "title": "Осеннее блюдо",
-          "question": "Что в Германии чаще всего готовят из мякоти тыквы?",
+          "question": "hallowenQuestThree.titleEight",
           "options": [
             "Kürbissuppe",
             "Eiscreme",
-            "Limonade",
-            "Bier"
+            "Limonade"
           ],
           "correctOptionIndex": 0
         }
@@ -440,23 +413,20 @@
         {
           "type": "multiple-choice",
           "id": "mcq-17",
-          "title": "Ночной гость",
-          "question": "Какое существо боится чеснока и спит днем в гробу?",
+          "question": "hallowenQuestFour.titleOne",
           "options": [
             "der Vampir",
             "der Zombie",
-            "die Mumie",
-            "das Gespenst"
+            "die Mumie"
           ],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
           "id": "mcq-18",
-          "title": "Гора ведьм",
-          "question": "На какой горе в горах Гарц по немецким преданиям собираются ведьмы?",
+          "question": "hallowenQuestFour.titleTwo",
           "options": [
-            "auf dem Brocken (Blocksberg)",
+            "auf dem Brocken",
             "auf der Zugspitze",
             "auf dem Feldberg",
             "auf dem Fichtelberg"
@@ -466,21 +436,18 @@
         {
           "type": "multiple-choice",
           "id": "mcq-19",
-          "title": "Человек-волк",
-          "question": "Как называют человека, который в полнолуние превращается в волка?",
+          "question": "hallowenQuestFour.titleThree",
           "options": [
             "Werwolf",
             "Erlkönig",
-            "Rübezahl",
-            "Kobold"
+            "Rübezahl"
           ],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
           "id": "mcq-20",
-          "title": "Полет ведьмы",
-          "question": "На чем по легендам летает ведьма?",
+          "question": "hallowenQuestFour.titleFour",
           "options": [
             "auf einem Besen",
             "auf einem Teppich",
@@ -492,8 +459,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-21",
-          "title": "Обитатель замков",
-          "question": "Какое существо летает по старым замкам в белых одеждах?",
+          "question": "hallowenQuestFour.titleFive",
           "options": [
             "das Gespenst",
             "der Zwerg",
@@ -505,8 +471,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-22",
-          "title": "Питомец колдуньи",
-          "question": "Какое животное чаще всего сопровождает ведьму в поверьях?",
+          "question": "hallowenQuestFour.titleSex",
           "options": [
             "eine schwarze Katze",
             "ein weißes Kaninchen",
@@ -518,8 +483,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-23",
-          "title": "Огоньки на болотах",
-          "question": "Как зовут блуждающие болотные огоньки, уводящие путников с дороги?",
+          "question": "hallowenQuestFour.titleSeven",
           "options": [
             "Irrlichter",
             "Laternen",
@@ -531,8 +495,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-24",
-          "title": "Ходячий мертвец",
-          "question": "Как называют ожившего медлительного мертвеца?",
+          "question": "hallowenQuestFour.titleEight",
           "options": [
             "der Zombie",
             "der Kobold",
@@ -552,10 +515,9 @@
         {
           "type": "multiple-choice",
           "id": "mcq-25",
-          "title": "Смысл масок",
-          "question": "Зачем люди изначально переодевались в страшные наряды?",
+          "question": "hallowenQuestFive.titleOne",
           "options": [
-            "um böse Geister abzuschrecken oder zu täuschen",
+            "um böse Geister abzuschrecken",
             "um warm zu bleiben",
             "um Schokolade zu sparen",
             "um Fotos zu machen"
@@ -565,8 +527,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-26",
-          "title": "Костяной наряд",
-          "question": "Какой костюм состоит из белых костей на темном фоне?",
+          "question": "hallowenQuestFive.titleTwo",
           "options": [
             "Skelett",
             "Geist",
@@ -579,7 +540,7 @@
           "type": "multiple-choice",
           "id": "mcq-27",
           "title": "Деталь вампира",
-          "question": "Что обязательно нужно надеть к черному плащу вампира?",
+          "question": "hallowenQuestFive.titleThree",
           "options": [
             "spitze Eckzähne",
             "eine Brille",
@@ -591,8 +552,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-28",
-          "title": "Быстрый костюм",
-          "question": "Что раньше брали за основу для самого простого костюма привидения?",
+          "question": "hallowenQuestFive.titleFour",
           "options": [
             "ein altes weißes Bettlaken",
             "einen großen Koffer",
@@ -604,8 +564,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-29",
-          "title": "Осеннее лакомство",
-          "question": "Какой фрукт на ярмарках часто покрывают красной сладкой глазурью?",
+          "question": "hallowenQuestFive.titleFive",
           "options": [
             "der Apfel",
             "die Birne",
@@ -617,8 +576,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-30",
-          "title": "Декор для дома",
-          "question": "Что обычно вешают по углам комнат для создания жуткой атмосферы?",
+          "question": "hallowenQuestFive.titleSix",
           "options": [
             "künstliche Spinnweben",
             "bunte Lametta",
@@ -630,8 +588,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-31",
-          "title": "Угощение у дверей",
-          "question": "Что чаще всего дарят детям в Германии в ответ на их стишок?",
+          "question": "hallowenQuestFive.titleSeven",
           "options": [
             "Bonbons und Schokolade",
             "Brot und Käse",
@@ -643,8 +600,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-32",
-          "title": "Время для сбора",
-          "question": "В какое время дети обычно идут по домам за конфетами?",
+          "question": "hallowenQuestFive.titleEight",
           "options": [
             "am frühen Abend bei Einbruch der Dunkelheit",
             "frühmorgens um 6 Uhr",
@@ -664,8 +620,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-33",
-          "title": "Кельтские корни",
-          "question": "Какой древний кельтский праздник считают историческим предком Хэллоуина?",
+          "question": "hallowenQuestSix.titleOne",
           "options": [
             "Samhain",
             "Beltane",
@@ -677,8 +632,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-34",
-          "title": "Смысл фразы",
-          "question": "Чем шутливо грозят дети в фразе «...sonst gibt's Saures», если им не дадут сладостей?",
+          "question": "hallowenQuestSix.titleTwo",
           "options": [
             "einen kleinen Streich",
             "eine Rechnung",
@@ -690,8 +644,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-35",
-          "title": "Город тыкв",
-          "question": "В каком городе под Штутгартом ежегодно строят огромные фигуры из тыкв?",
+          "question": "hallowenQuestSix.titleThree",
           "options": [
             "Ludwigsburg",
             "Heidelberg",
@@ -703,8 +656,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-36",
-          "title": "Котел ведьмы",
-          "question": "В чем ведьма по сказкам варит свои зелья?",
+          "question": "hallowenQuestSix.titleFour",
           "options": [
             "in einem Kessel",
             "in einer Pfanne",
@@ -716,8 +668,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-37",
-          "title": "Ловушка паука",
-          "question": "Какое восьминогое существо плетет прочные ловчие сети?",
+          "question": "hallowenQuestSix.titleFive",
           "options": [
             "die Spinne",
             "der Skorpion",
@@ -729,8 +680,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-38",
-          "title": "Предмет магии",
-          "question": "С помощью чего колдуны и волшебники творят свои чары?",
+          "question": "hallowenQuestSix.titleSix",
           "options": [
             "mit einem Zauberstab",
             "mit einem Löffel",
@@ -742,8 +692,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-39",
-          "title": "Семена тыквы",
-          "question": "Что часто делают с тыквенными семечками после очистки тыквы?",
+          "question": "hallowenQuestSix.titleSeven",
           "options": [
             "man röstet sie im Ofen",
             "man wirft sie ins Wasser",
@@ -755,8 +704,7 @@
         {
           "type": "multiple-choice",
           "id": "mcq-40",
-          "title": "Атмосфера леса",
-          "question": "Почему осенний лес в конце октября отлично подходит для страшных сказок?",
+          "question": "hallowenQuestSix.titleEight",
           "options": [
             "wegen Nebel und fallenden Blättern",
             "weil es heiß ist",
@@ -776,11 +724,10 @@
         {
           "type": "reading",
           "id": "reading-1",
-          "title": "Семейный вечер с тыквой",
           "text": "Am 31. Oktober feiern auch viele Kinder in Deutschland Halloween. Am Nachmittag schnitzt Familie Müller einen großen Kürbis. Sie schneiden ein schauriges Gesicht mit Zähnen hinein. Am Abend stellen sie eine brennende Kerze hinein, damit der Kürbis im Dunkeln leuchtet.",
           "questions": [
             {
-              "question": "В какое время дня семья вырезает тыкву?",
+              "question": "hallowenQuestSeven.questOne",
               "options": [
                 "am Nachmittag",
                 "mitten in der Nacht",
@@ -790,7 +737,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Какую мордочку они вырезают?",
+              "question": "hallowenQuestSeven.questTwo",
               "options": [
                 "ein schauriges Gesicht",
                 "ein trauriges Gesicht",
@@ -800,7 +747,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Что они ставят внутрь тыквы?",
+              "question": "hallowenQuestSeven.questThree",
               "options": [
                 "eine brennende Kerze",
                 "eine Taschenlampe",
@@ -810,7 +757,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Зачем внутрь ставят свечу?",
+              "question": "hallowenQuestSeven.questFour",
               "options": [
                 "damit er im Dunkeln leuchtet",
                 "damit er warm bleibt",
@@ -820,7 +767,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Какая обстановка царит в этот вечер?",
+              "question": "hallowenQuestSeven.questFive",
               "options": [
                 "stimmungsvoll und dunkel",
                 "sonnig und heiß",
@@ -842,11 +789,10 @@
         {
           "type": "reading",
           "id": "reading-2",
-          "title": "Поход за сладостями",
           "text": "Sobald es dunkel wird, ziehen Lukas und Mia verkleidet durch ihr Wohnviertel. Lukas ist als Vampir mit schwarzem Umhang verkleidet, Mia als kleine Hexe mit spitzem Hut. Sie klingeln an Haustüren und rufen laut: 'Süßes, sonst gibt's Saures!' Die Nachbarn lachen und füllen ihre Taschen mit Schokolade.",
           "questions": [
             {
-              "question": "Когда дети отправляются на прогулку?",
+              "question": "hallowenQuestEight.questOne",
               "options": [
                 "sobald es dunkel wird",
                 "am frühen Morgen",
@@ -856,7 +802,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "В кого нарядился Лукас?",
+              "question": "hallowenQuestEight.questTwo",
               "options": [
                 "als Vampir",
                 "als Gespenst",
@@ -866,7 +812,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Какой головной убор надет на Мие?",
+              "question": "hallowenQuestEight.questThree",
               "options": [
                 "einen spitzen Hut",
                 "eine Krone",
@@ -876,7 +822,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Что громко кричат дети у входных дверей?",
+              "question": "hallowenQuestEight.questFour",
               "options": [
                 "Süßes, sonst gibt's Saures!",
                 "Guten Abend allerseits!",
@@ -886,7 +832,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Чем соседи наполняют сумки детей?",
+              "question": "hallowenQuestEight.questFive",
               "options": [
                 "Schokolade",
                 "Obst und Gemüse",
@@ -912,7 +858,7 @@
           "text": "In der Nähe von Darmstadt liegt die Burg Frankenstein. Seit vielen Jahren ist die alte Burgruine im Oktober ein Treffpunkt für Gruselfans aus ganz Deutschland. Schauspieler verkleiden sich als Monster und erschrecken mutige Besucher im dichten Herbstnebel.",
           "questions": [
             {
-              "question": "Рядом с каким городом расположен замок?",
+              "question": "hallowenQuestNine.questOne",
               "options": [
                 "in der Nähe von Darmstadt",
                 "mitten in Berlin",
@@ -922,7 +868,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "В каком виде сохранился замок до наших дней?",
+              "question": "hallowenQuestNine.questTwo",
               "options": [
                 "eine Burgruine",
                 "ein modernes Hotel",
@@ -932,7 +878,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Кто наряжается чудовищами в замке?",
+              "question": "hallowenQuestNine.questThree",
               "options": [
                 "Schauspieler",
                 "Touristenführer",
@@ -942,7 +888,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Что актеры в костюмах делают с посетителями?",
+              "question": "hallowenQuestNine.questFour",
               "options": [
                 "sie erschrecken sie",
                 "sie füttern sie",
@@ -952,7 +898,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Какая погода обычно окружает этот замок осенью?",
+              "question": "hallowenQuestNine.questFive",
               "options": [
                 "dichter Herbstnebel",
                 "starker Schneesturm",
@@ -978,7 +924,7 @@
           "text": "In Deutschland ist der 31. Oktober nicht nur Halloween. Für evangelische Christen ist es der Reformationstag, der an Martin Luther erinnert. In vielen Bundesländern ist dieser Tag ein gesetzlicher Feiertag. Während tagsüber Gottesdienste gefeiert werden, gehört der Abend oft den Gruselpartys der Jugend.",
           "questions": [
             {
-              "question": "О ком вспоминают в День Реформации?",
+              "question": "hallowenQuestTen.questOne",
               "options": [
                 "an Martin Luther",
                 "an Sankt Martin",
@@ -988,7 +934,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Какой статус имеет 31 октября во многих землях Германии?",
+              "question": "hallowenQuestTen.questTwo",
               "options": [
                 "ein gesetzlicher Feiertag",
                 "ein normaler Arbeitstag ohne Schule",
@@ -998,7 +944,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Что обычно проходит в церквях днем?",
+              "question": "hallowenQuestTen.questThree",
               "options": [
                 "Gottesdienste",
                 "Schulprüfungen",
@@ -1008,7 +954,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Кому чаще всего принадлежит поздний вечер 31 октября?",
+              "question": "hallowenQuestTen.questFour",
               "options": [
                 "den Gruselpartys der Jugend",
                 "den Chören",
@@ -1018,7 +964,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Какая конфессия отмечает День Реформации?",
+              "question": "hallowenQuestTen.questFive",
               "options": [
                 "evangelische Christen",
                 "orthodoxe Christen",
@@ -1044,7 +990,7 @@
           "text": "Bevor der amerikanische Kürbis nach Europa kam, schnitzten Kinder im Schwarzwald und in der Schweiz Futterrüben. Diese nannten sie 'Rübengeister'. Man stellte eine Kerze hinein und trug die leuchtende Rübe von Haus zu Haus, um die Ernte zu feiern und den Winter zu begrüßen.",
           "questions": [
             {
-              "question": "Что вырезали дети до появления тыквы?",
+              "question": "hallowenQuestEleven.questOne",
               "options": [
                 "Futterrüben",
                 "Äpfel",
@@ -1054,7 +1000,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Как называли такие светящиеся фигурки?",
+              "question": "hallowenQuestEleven.questTwo",
               "options": [
                 "Rübengeister",
                 "Kürbisköpfe",
@@ -1064,7 +1010,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "В каких краях был особенно популярен этот обычай?",
+              "question": "hallowenQuestEleven.questThree",
               "options": [
                 "im Schwarzwald und in der Schweiz",
                 "nur an der Ostsee",
@@ -1074,7 +1020,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Что вставляли внутрь выдолбленной репы?",
+              "question": "hallowenQuestEleven.questFour",
               "options": [
                 "eine Kerze",
                 "eine Kartoffel",
@@ -1084,7 +1030,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Какое время года встречали этим обрядом?",
+              "question": "hallowenQuestEleven.questFive",
               "options": [
                 "der Winter",
                 "der Frühling",
@@ -1110,7 +1056,7 @@
           "text": "Direkt nach Halloween folgt der 1. November: Allerheiligen. In katholisch geprägten Regionen wie Bayern oder Österreich ist dies ein stiller Feiertag. Die Familien gehen auf den Friedhof, stellen Lichter auf die Gräber ihrer Verwandten und gedenken der Verstorbenen in Ruhe.",
           "questions": [
             {
-              "question": "Какой праздник отмечают 1 ноября?",
+              "question": "hallowenQuestTwelve.questOne",
               "options": [
                 "Allerheiligen",
                 "Allerseelen",
@@ -1120,7 +1066,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Что означает статус «тихий праздник»?",
+              "question": "hallowenQuestTwelve.questTwo",
               "options": [
                 "laute Musik und Tanzen sind verboten",
                 "alle Geschäfte öffnen die ganze Nacht",
@@ -1130,7 +1076,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Куда идут многие семьи в этот день?",
+              "question": "hallowenQuestTwelve.questThree",
               "options": [
                 "auf den Friedhof",
                 "in die Berge zum Skifahren",
@@ -1140,7 +1086,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Что люди зажигают на могилах близких?",
+              "question": "hallowenQuestTwelve.questFour",
               "options": [
                 "Lichter und Blumen",
                 "Kürbisse und Süßigkeiten",
@@ -1150,7 +1096,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "В каких землях этот день особенно почитаем?",
+              "question": "hallowenQuestTwelve.questFive",
               "options": [
                 "in Bayern und Österreich",
                 "in Dänemark",
@@ -1176,7 +1122,7 @@
           "text": "Nur elf Tage nach Halloween, am 11. November, feiern die Kinder in Deutschland den Martinstag. Sie tragen bunte, selbstgemachte Papierlaternen durch die Straßen und singen traditionelle Martinslieder. Am Ende gibt es oft ein wärmendes Martinsfeuer und süßes Hefegebäck wie den Weckmann.",
           "questions": [
             {
-              "question": "Когда отмечают День святого Мартина?",
+              "question": "hallowenQuestThirteen.questOne",
               "options": [
                 "am 11. November",
                 "am 31. Oktober",
@@ -1186,7 +1132,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Что несут дети во время шествия?",
+              "question": "hallowenQuestThirteen.questTwo",
               "options": [
                 "bunte Papierlaternen",
                 "Kürbisse",
@@ -1196,7 +1142,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Какие песни поют во время шествия?",
+              "question": "hallowenQuestThirteen.questThree",
               "options": [
                 "traditionelle Martinslieder",
                 "Halloween-Lieder",
@@ -1206,7 +1152,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Что разжигают в конце праздничного шествия?",
+              "question": "hallowenQuestThirteen.questFour",
               "options": [
                 "ein großes Martinsfeuer",
                 "nur eine Kerze",
@@ -1216,7 +1162,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Какую традиционную выпечку раздают детям?",
+              "question": "hallowenQuestThirteen.questFive",
               "options": [
                 "einen Weckmann (Stutenkerl)",
                 "einen Stollen",
@@ -1242,7 +1188,7 @@
           "text": "Jedes Jahr im Herbst verwandelt sich der Park des Schlosses Ludwigsburg in Baden-Württemberg in ein riesiges Kürbismeer. Hunderttausende Kürbisse werden zu gigantischen Skulpturen und Fabelwesen zusammengesteckt. Besucher aus ganz Europa probieren dort Kürbissuppe, Kürbis-Maultaschen und geröstete Kerne.",
           "questions": [
             {
-              "question": "В каком парке проходит знаменитая выставка?",
+              "question": "hallowenQuestfourteen.questOne",
               "options": [
                 "im Schloss Ludwigsburg",
                 "im Schloss Sanssouci",
@@ -1252,7 +1198,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Из чего собирают огромные фигуры?",
+              "question": "hallowenQuestfourteen.questTwo",
               "options": [
                 "aus Kürbissen",
                 "aus Holz und Metall",
@@ -1262,7 +1208,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Какие фирменные блюда пробуют гости выставки?",
+              "question": "hallowenQuestfourteen.questThree",
               "options": [
                 "Kürbissuppe und Kürbis-Maultaschen",
                 "nur Schokolade",
@@ -1272,7 +1218,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Сколько тыкв используют для оформления выставки?",
+              "question": "hallowenQuestfourteen.questFour",
               "options": [
                 "Hunderttausende",
                 "etwa fünfzig Stück",
@@ -1282,7 +1228,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "В какое время года открыта эта выставка?",
+              "question": "hallowenQuestfourteen.questFive",
               "options": [
                 "im Herbst",
                 "im Frühling",
@@ -1308,7 +1254,7 @@
           "text": "Auf der Halloweenparty spielen die Kinder ein lustiges Spiel: Apfeltauchen. Eine große Schüssel wird mit kaltem Wasser gefüllt, und rote Äpfel schwimmen an der Oberfläche. Die Kinder müssen die Hände hinter den Rücken legen und versuchen, einen Apfel nur mit den Zähnen aus dem Wasser zu holen.",
           "questions": [
             {
-              "question": "Как называется игра с яблоками в воде?",
+              "question": "hallowenQuestfifteen.questOne",
               "options": [
                 "Apfeltauchen",
                 "Kürbisrennen",
@@ -1318,7 +1264,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Чем наполняют большую миску?",
+              "question": "hallowenQuestfifteen.questTwo",
               "options": [
                 "mit kaltem Wasser",
                 "mit heißer Suppe",
@@ -1328,7 +1274,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Что плавает на поверхности воды?",
+              "question": "hallowenQuestfifteen.questThree",
               "options": [
                 "rote Äpfel",
                 "kleine Bälle",
@@ -1338,7 +1284,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Куда участники должны убрать руки?",
+              "question": "hallowenQuestfifteen.questFour",
               "options": [
                 "hinter den Rücken",
                 "in die Hosentaschen",
@@ -1348,7 +1294,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "С помощью чего нужно достать яблоко?",
+              "question": "hallowenQuestfifteen.questFive",
               "options": [
                 "nur mit den Zähnen",
                 "mit einem Löffel",
@@ -1374,7 +1320,7 @@
           "text": "Das nächste Spiel bringt alle zum Lachen: Mumien wickeln! Zwei Teams treten gegeneinander an. Jedes Team wählt ein Kind aus, das zur Mumie wird. Mit vielen Rollen Toilettenpapier muss die Figur so schnell wie möglich von Kopf bis Fuß eingewickelt werden. Das schnellste Team gewinnt.",
           "questions": [
             {
-              "question": "Как называется следующее веселое состязание?",
+              "question": "hallowenQuestSixteen.questOne",
               "options": [
                 "Mumien wickeln",
                 "Geister fangen",
@@ -1384,7 +1330,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Что делают между собой две команды?",
+              "question": "hallowenQuestSixteen.questTwo",
               "options": [
                 "sie treten gegeneinander an",
                 "sie schlafen im Kreis",
@@ -1394,7 +1340,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Кого выбирает каждая команда?",
+              "question": "hallowenQuestSixteen.questThree",
               "options": [
                 "ein Kind als Mumie",
                 "einen Lehrer",
@@ -1404,7 +1350,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Какой материал используют для обмотки?",
+              "question": "hallowenQuestSixteen.questFour",
               "options": [
                 "Rollen Toilettenpapier",
                 "dicke Decken",
@@ -1414,7 +1360,7 @@
               "correctOptionIndex": 0
             },
             {
-              "question": "Какая команда побеждает в этой игре?",
+              "question": "hallowenQuestSixteen.questFive",
               "options": [
                 "das schnellste Team",
                 "das lauteste Team",
@@ -1436,7 +1382,7 @@
         {
           "type": "matching",
           "id": "match-words-1",
-          "instruction": "Соедини немецкое слово с его переводом на русский",
+          "instruction": "hallowenQuestSeventeen.title",
           "pairsLeft": [
             {
               "id": "l1",
@@ -1466,27 +1412,27 @@
           "pairsRight": [
             {
               "id": "r1",
-              "text": "летучая мышь"
+              "text": "hallowenQuestSeventeen.wordOne"
             },
             {
               "id": "r2",
-              "text": "метла"
+              "text": "hallowenQuestSeventeen.wordTwo"
             },
             {
               "id": "r3",
-              "text": "свеча"
+              "text": "hallowenQuestSeventeen.wordThree"
             },
             {
               "id": "r4",
-              "text": "сладости"
+              "text": "hallowenQuestSeventeen.wordFour"
             },
             {
               "id": "r5",
-              "text": "черная кошка"
+              "text": "hallowenQuestSeventeen.wordFive"
             },
             {
               "id": "r6",
-              "text": "вампир"
+              "text": "hallowenQuestSeventeen.wordSix"
             }
           ],
           "correctPairs": [
@@ -1519,7 +1465,7 @@
         {
           "type": "matching",
           "id": "match-words-2",
-          "instruction": "Соедини немецкое слово с его переводом на русский",
+          "instruction": "hallowenQuestSeventeen.title",
           "pairsLeft": [
             {
               "id": "l1",
@@ -1549,27 +1495,27 @@
           "pairsRight": [
             {
               "id": "r1",
-              "text": "привидение"
+              "text": "hallowenQuestSeventeen.wordSeven"
             },
             {
               "id": "r2",
-              "text": "дух"
+              "text": "hallowenQuestSeventeen.wordEight"
             },
             {
               "id": "r3",
-              "text": "тыква"
+              "text": "hallowenQuestSeventeen.wordNine"
             },
             {
               "id": "r4",
-              "text": "ворон"
+              "text": "hallowenQuestSeventeen.wordTen"
             },
             {
               "id": "r5",
-              "text": "скелет"
+              "text": "hallowenQuestSeventeen.wordEleven"
             },
             {
               "id": "r6",
-              "text": "волшебная книга"
+              "text": "hallowenQuestSeventeen.wordTwelve"
             }
           ],
           "correctPairs": [
@@ -1602,7 +1548,7 @@
         {
           "type": "matching",
           "id": "match-words-3",
-          "instruction": "Соедини немецкое слово с его переводом на русский",
+          "instruction": "hallowenQuestSeventeen.title",
           "pairsLeft": [
             {
               "id": "l1",
@@ -1632,27 +1578,27 @@
           "pairsRight": [
             {
               "id": "r1",
-              "text": "паук"
+              "text": "hallowenQuestSeventeen.wordThirteen"
             },
             {
               "id": "r2",
-              "text": "ведьмин котел"
+              "text": "hallowenQuestSeventeen.wordFourteen"
             },
             {
               "id": "r3",
-              "text": "волшебная палочка"
+              "text": "hallowenQuestSeventeen.wordFifteen"
             },
             {
               "id": "r4",
-              "text": "метла ведьмы"
+              "text": "hallowenQuestSeventeen.wordSixteen"
             },
             {
               "id": "r5",
-              "text": "ведьмина шляпа"
+              "text": "hallowenQuestSeventeen.wordSeventeen"
             },
             {
               "id": "r6",
-              "text": "волшебник"
+              "text": "hallowenQuestSeventeen.wordEighteen"
             }
           ],
           "correctPairs": [
@@ -1684,6 +1630,7 @@
         }
       ]
     },
+
     {
       "id": "quest-18",
       "title": "Соедини пары: Атрибуты праздника",
@@ -1941,6 +1888,7 @@
         }
       ]
     },
+
     {
       "id": "quest-19",
       "title": "Соедини пары: Немецкие предания",
@@ -1950,7 +1898,7 @@
         {
           "type": "matching",
           "id": "match-trad-1",
-          "instruction": "Соедини термин с его значением",
+          "instruction": "Соедини слово с его значением",
           "pairsLeft": [
             {
               "id": "l1",
@@ -1980,27 +1928,27 @@
           "pairsRight": [
             {
               "id": "r1",
-              "text": "старинная резьба по кормовой репе"
+              "text": "hallowenQuestNineteen.wordOne"
             },
             {
               "id": "r2",
-              "text": "время духов с полуночи до часа ночи"
+              "text": "hallowenQuestNineteen.wordTwo"
             },
             {
               "id": "r3",
-              "text": "день без шумных вечеринок и танцев"
+              "text": "hallowenQuestNineteen.wordThree"
             },
             {
               "id": "r4",
-              "text": "шествие детей с фонариками в ноябре"
+              "text": "hallowenQuestNineteen.wordFour"
             },
             {
               "id": "r5",
-              "text": "гора в Гарце, где собираются ведьмы"
+              "text": "hallowenQuestNineteen.wordFive"
             },
             {
               "id": "r6",
-              "text": "мифический лесной царь из баллады Гёте"
+              "text": "hallowenQuestNineteen.wordSix"
             }
           ],
           "correctPairs": [
@@ -2063,27 +2011,27 @@
           "pairsRight": [
             {
               "id": "r1",
-              "text": "защита от вампиров"
+              "text": "hallowenQuestNineteen.wordSeven"
             },
             {
               "id": "r2",
-              "text": "разгоняет тьму внутри тыквы"
+              "text": "hallowenQuestNineteen.wordEight"
             },
             {
               "id": "r3",
-              "text": "оберег на пороге от злых сил"
+              "text": "hallowenQuestNineteen.wordNine"
             },
             {
               "id": "r4",
-              "text": "обманывает блуждающих духов"
+              "text": "hallowenQuestNineteen.wordTen"
             },
             {
               "id": "r5",
-              "text": "металл против оборотней в сказках"
+              "text": "hallowenQuestNineteen.wordEleven"
             },
             {
               "id": "r6",
-              "text": "подкова на удачу и защиту дома"
+              "text": "hallowenQuestNineteen.wordTwelve"
             }
           ],
           "correctPairs": [
@@ -2116,7 +2064,7 @@
         {
           "type": "matching",
           "id": "match-trad-3",
-          "instruction": "Соедини немецкое слово с русским переводом",
+          "instruction": "hallowenQuestNineteen.title",
           "pairsLeft": [
             {
               "id": "l1",
@@ -2146,53 +2094,53 @@
           "pairsRight": [
             {
               "id": "r1",
-              "text": "зелье"
+              "text": "hallowenQuestNineteenю"
             },
             {
               "id": "r2",
-              "text": "кладбище"
+              "text": "туман"
             },
             {
               "id": "r3",
-              "text": "гроб"
+              "text": "зелье"
             },
             {
               "id": "r4",
-              "text": "руины замка"
-            },
-            {
-              "id": "r5",
               "text": "кость"
             },
             {
+              "id": "r5",
+              "text": "гроб"
+            },
+            {
               "id": "r6",
-              "text": "туман"
+              "text": "кладбище"
             }
           ],
           "correctPairs": [
             [
               "l1",
-              "r1"
-            ],
-            [
-              "l2",
-              "r2"
-            ],
-            [
-              "l3",
               "r3"
             ],
             [
-              "l4",
-              "r4"
+              "l2",
+              "r6"
             ],
             [
-              "l5",
+              "l3",
               "r5"
             ],
             [
+              "l4",
+              "r1"
+            ],
+            [
+              "l5",
+              "r4"
+            ],
+            [
               "l6",
-              "r6"
+              "r2"
             ]
           ]
         }

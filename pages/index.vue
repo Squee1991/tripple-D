@@ -21,6 +21,7 @@ definePageMeta({
 })
 
 onMounted(() => {
+
   hydrated.value = true
   isLocallyLogged.value = localStorage.getItem('app_user_logged') === 'true'
   if (authStore.initialized) {

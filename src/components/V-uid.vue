@@ -23,6 +23,18 @@
           <img class="tab__icon" :src="tab.icon" :alt="tab.alt">
         </button>
       </nav>
+      <div class="event">
+        <img class="web" src="~/assets/images/spider-web.svg" alt="" aria-hidden="true">
+        <div class="event__content">
+          <div class="event__icon-wrapper">
+            <img class="event__icon" :src="Pumpkin" alt="Ивент">
+          </div>
+          <div class="event__info">
+            <span class="event__badge">Праздник тыкв</span>
+            <span class="event__title">До события: <strong>18 дней</strong></span>
+          </div>
+        </div>
+      </div>
       <div class="mobile-panel" role="tabpanel">
         <VTransition>
           <div class="mobile-content" :key="currentTab.id">
@@ -43,7 +55,7 @@ import Location from '../../assets/images/location.svg'
 import Daily from '../../assets/images/daily.svg'
 import Card from '../../assets/images/card.svg'
 import VTransition from "~/src/components/V-transition.vue";
-
+import Pumpkin from '../../assets/images/halloweenEvent.svg'
 const {t , locale} = useI18n();
 const tabs = [
   {id: 'locations', icon: Location, alt: 'achIcon', label: t('tabsMobile.locations'), component: VLands},
@@ -123,6 +135,88 @@ onBeforeUnmount(() => {
 .lands-container > :deep(.map__wrapper) {
   width: 100%;
   flex: 1;
+}
+
+.event {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 6px 4px 10px;
+  padding: 6px 14px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #2b174d 0%, #171026 100%);
+  border: 2px solid rgb(227 162 82 / 0.35);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.web {
+  position: absolute;
+  width: 120px;
+  top: -10px;
+  right: -10px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.event__content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 1;
+}
+
+.event__icon-wrapper {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgba(255, 140, 0, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.event__icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(255, 140, 0, 0.45));
+}
+
+.event__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.event__badge {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #ff9d00;
+}
+
+.event__title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #f1f1f5;
+}
+
+.event__title strong {
+  color: #ffb834;
+  font-weight: 800;
+}
+
+.event__arrow {
+  font-size: 18px;
+  color: #ffa114;
+  font-weight: bold;
+  line-height: 1;
+  transform: translateY(-1px);
 }
 
 .stats__wrapper {

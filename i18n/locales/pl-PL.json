@@ -5245,7 +5245,17 @@
     "cupidArrow": "Łuk Kupidyna",
     "cupidArrowDescription": "Nagroda za osiągnięcie w kategorii Wydarzenia - Festiwal Serc: „Celny strzał”",
     "adventures": "Zwój Wędrówek",
-    "adventuresDescription": "Nagroda jest przyznawana za ukończenie osiągnięcia w kategorii Krainy Językowe: «Mistrz szlaków przygód»"
+    "adventuresDescription": "Nagroda jest przyznawana za ukończenie osiągnięcia w kategorii Krainy Językowe: «Mistrz szlaków przygód»",
+    "witchBroom": "Miotła czarownicy",
+    "witchBroomDescription": "Nagroda za wykonanie osiągnięcia «Błyskawica? Nie, szybciej!» w kategorii wydarzenia «Święto Dyń».",
+    "witchHat": "Kapelusz czarodzieja",
+    "witchHatDescription": "Nagroda za wykonanie osiągnięcia «Wybór domu» w kategorii wydarzenia «Święto Dyń».",
+    "pumpkin": "Dynia",
+    "pumpkinDescription": "Nagroda za wykonanie osiągnięcia «Dynia na głowie» w kategorii wydarzenia «Święto Dyń».",
+    "spellBook": "Księga zaklęć",
+    "spellBookDescription": "Nagroda za wykonanie osiągnięcia «Grimuar jeźdźca» w kategorii wydarzenia «Święto Dyń».",
+    "punch": "Kocioł z eliksirem",
+    "punchDescription": "Nagroda za wykonanie osiągnięcia «Magiczny poncz» w kategorii wydarzenia «Święto Dyń»."
   },
   "wildLandsFirstQuest": {
     "title": "Otoczenie",
@@ -10787,5 +10797,38 @@
     "hint-title": "Podpowiedź",
     "hint-desc": "Odsłoni 2 losowe litery bez zużywania prób",
     "hint-action-btn": "Użyj"
+  },
+  "halloweenEventQuests": {
+    "questOne": "Obrazek → Słowo",
+    "questTwo": "Podstawy i fakty",
+    "questThree": "Niemieckie tradycje",
+    "questFour": "Stworzenia i legendy",
+    "questFive": "Kostiumy i jesienna noc",
+    "questSix": "Symbole i zwyczaje",
+    "questSeven": "Wieczór z dynią",
+    "questEight": "Wyprawa po słodycze",
+    "questNine": "Zamek Frankensteina",
+    "questTen": "Reformacja i święto",
+    "questEleven": "Dawny duch z rzepy",
+    "questTwelve": "Dzień Wszystkich Świętych",
+    "questThirteen": "Dzień Świętego Marcina",
+    "questFourteen": "Wystawa dyń w Ludwigsburgu",
+    "questFifteen": "Gry imprezowe",
+    "questSixteen": "Wesoła mumia",
+    "questSeventeen": "Obrazek i słowo",
+    "questEighteen": "Atrybuty święta",
+    "questNineteen": "Niemieckie podania",
+    "questTwenty": "Jesienny poncz",
+    "questTwentyOne": "Znajdź niepasujące słowo",
+    "questTwentyTwo": "Niepasujące słowo - pogoda",
+    "questTwentyThree": "Niepasujące słowo - pogoda"
+  },
+  "eventsShopItemsHalloween": {
+    "witchBroom": "Miotła czarownicy",
+    "witchHat": "Kapelusz czarodzieja",
+    "pumpkin": "Dynia",
+    "punch": "Poncz wiedźmy",
+    "spellBook": "Księga zaklęć",
+    "ghostEffect": "Efekt halloweenowy"
   }
 }

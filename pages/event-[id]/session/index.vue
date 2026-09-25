@@ -159,7 +159,9 @@ function finishQuest() {
   eventStore.finishQuest()
   isFinished.value = true
   runSuccessAnimation(isQuestFullyCompleted.value, eventStore.isReplayMode, currentQuest.value?.rewardRep, currentQuest.value?.rewardCoins)
-  if (isQuestFullyCompleted.value) return playLevelCompleted()
+  if (isQuestFullyCompleted.value) {
+    playLevelCompleted()
+  }
   if (!eventStore.isReplayMode && currentQuest.value && isQuestFullyCompleted.value) {
     const rewards = {
       coins: currentQuest.value.rewardCoins || 0,
@@ -373,6 +375,7 @@ const errorMessage = computed(() => {
   if (type === 'matching') return t('eventSessionPage.mistakes')
   return ''
 })
+
 </script>
 
 <template>

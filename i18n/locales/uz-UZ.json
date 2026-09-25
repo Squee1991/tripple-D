@@ -5224,7 +5224,17 @@
     "cupidArrow": "Kupidon kamoni",
     "cupidArrowDescription": "Tadbirlar - Qalblar festivali: 'Aniq zarba' yutug'i uchun beriladi",
     "adventures": "Sayohatlar bitigi",
-    "adventuresDescription": "Mukofot Tillar o'lkalari toifasidagi yutuqni bajarganlik uchun beriladi: «Sarguzashtlar so'qmoqlari ustasi»"
+    "adventuresDescription": "Mukofot Tillar o'lkalari toifasidagi yutuqni bajarganlik uchun beriladi: «Sarguzashtlar so'qmoqlari ustasi»",
+    "witchBroom": "Yalmog'iz supurgisi",
+    "witchBroomDescription": "«Qovoq bayrami» tadbiri toifasidagi «Yashin? Yo'q, tezroq!» yutug'ini bajarganlik uchun mukofot.",
+    "witchHat": "Sehrgar shlyapasi",
+    "witchHatDescription": "«Qovoq bayrami» tadbiri toifasidagi «Fakultet tanlovi» yutug'ini bajarganlik uchun mukofot.",
+    "pumpkin": "Qovoq",
+    "pumpkinDescription": "«Qovoq bayrami» tadbiri toifasidagi «Boshdagi qovoq» yutug'ini bajarganlik uchun mukofot.",
+    "spellBook": "Afsunlar kitobi",
+    "spellBookDescription": "«Qovoq bayrami» tadbiri toifasidagi «Chavandoz grimuari» yutug'ini bajarganlik uchun mukofot.",
+    "punch": "Damlamali qozon",
+    "punchDescription": "«Qovoq bayrami» tadbiri toifasidagi «Sehrli punch» yutug'ini bajarganlik uchun mukofot."
   },
   "wildLandsFirstQuest": {
     "title": "Atrof-muhit",
@@ -10766,5 +10776,38 @@
     "hint-title": "Maslahat",
     "hint-desc": "Urinishlarni sarf qilmagan holda 2 ta tasodifiy harfni ochadi",
     "hint-action-btn": "Ishlatish"
+  },
+  "halloweenEventQuests": {
+    "questOne": "Rasm → So'z",
+    "questTwo": "Asoslar va faktlar",
+    "questThree": "Nemis an'analari",
+    "questFour": "Mavjudotlar va afsonalar",
+    "questFive": "Kiyimlar va kuzgi kecha",
+    "questSix": "Ramzlar va urf-odatlar",
+    "questSeven": "Qovoqli kecha",
+    "questEight": "Shirinliklar ortidan",
+    "questNine": "Frankenshteyn qal'asi",
+    "questTen": "Islohot va bayram",
+    "questEleven": "Sholg'omdagi qadimiy ruh",
+    "questTwelve": "Barcha azizlar kuni",
+    "questThirteen": "Avliyo Martin bayrami",
+    "questFourteen": "Lyudvigsburgdagi qovoq ko'rgazmasi",
+    "questFifteen": "Bazm o'yinlari",
+    "questSixteen": "Quvnoq mumiya",
+    "questSeventeen": "Rasm va so'z",
+    "questEighteen": "Bayram jihozlari",
+    "questNineteen": "Nemis rivoyatlari",
+    "questTwenty": "Kuzgi punch",
+    "questTwentyOne": "Ortiqcha so'zni top",
+    "questTwentyTwo": "Ortiqchasini top - ob-havo",
+    "questTwentyThree": "Ortiqchasini top - ob-havo"
+  },
+  "eventsShopItemsHalloween": {
+    "witchBroom": "Yalmog'iz supurgisi",
+    "witchHat": "Sehrgar shlyapasi",
+    "pumpkin": "Qovoq",
+    "punch": "Yalmog'iz punchi",
+    "spellBook": "Afsunlar kitobi",
+    "ghostEffect": "Hellouin effekti"
   }
 }

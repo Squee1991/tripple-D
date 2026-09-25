@@ -5225,7 +5225,17 @@
     "cupidArrow": "Arc de Cupidon",
     "cupidArrowDescription": "Récompense pour le succès dans la catégorie Événements - Festival des cœurs : « Tir précis »",
     "adventures": "Parchemin des Voyages",
-    "adventuresDescription": "La récompense est obtenue en accomplissant la réussite dans la catégorie Terres des Langues: «Maître des Sentiers de l'Aventure»"
+    "adventuresDescription": "La récompense est obtenue en accomplissant la réussite dans la catégorie Terres des Langues: «Maître des Sentiers de l'Aventure»",
+    "witchBroom": "Balai de sorcière",
+    "witchBroomDescription": "Récompense pour l'accomplissement du succès « L'éclair ? Non, plus rapide ! » dans la catégorie d'événement « Fête des citrouilles ».",
+    "witchHat": "Chapeau de sorcier",
+    "witchHatDescription": "Récompense pour l'accomplissement du succès « Choix de la maison » dans la catégorie d'événement « Fête des citrouilles ».",
+    "pumpkin": "Citrouille",
+    "pumpkinDescription": "Récompense pour l'accomplissement du succès « Tête de citrouille » dans la catégorie d'événement « Fête des citrouilles ».",
+    "spellBook": "Grimoire de sorts",
+    "spellBookDescription": "Récompense pour l'accomplissement du succès « Grimoire du cavalier » dans la catégorie d'événement « Fête des citrouilles ».",
+    "punch": "Chaudron de potion",
+    "punchDescription": "Récompense pour l'accomplissement du succès « Punch magique » dans la catégorie d'événement « Fête des citrouilles »."
   },
   "wildLandsFirstQuest": {
     "title": "Environnement",
@@ -10767,5 +10777,38 @@
     "hint-title": "Indice",
     "hint-desc": "Dévoilera 2 lettres aléatoires sans dépenser d'essais",
     "hint-action-btn": "Utiliser"
+  },
+  "halloweenEventQuests": {
+    "questOne": "Image → Mot",
+    "questTwo": "Bases et faits",
+    "questThree": "Traditions allemandes",
+    "questFour": "Créatures et légendes",
+    "questFive": "Costumes et nuit d'automne",
+    "questSix": "Symboles et coutumes",
+    "questSeven": "Soirée citrouille",
+    "questEight": "Chasse aux bonbons",
+    "questNine": "Château de Frankenstein",
+    "questTen": "Réforme et fête",
+    "questEleven": "L'ancien esprit du navet",
+    "questTwelve": "Toussaint",
+    "questThirteen": "Fête de la Saint-Martin",
+    "questFourteen": "Exposition de citrouilles à Louisbourg",
+    "questFifteen": "Jeux de fête",
+    "questSixteen": "Momie joyeuse",
+    "questSeventeen": "Image et mot",
+    "questEighteen": "Attributs de fête",
+    "questNineteen": "Légendes allemandes",
+    "questTwenty": "Punch d'automne",
+    "questTwentyOne": "Trouve l'intrus",
+    "questTwentyTwo": "Trouve l'intrus - météo",
+    "questTwentyThree": "Trouve l'intrus - météo"
+  },
+  "eventsShopItemsHalloween": {
+    "witchBroom": "Balai de sorcière",
+    "witchHat": "Chapeau de sorcier",
+    "pumpkin": "Citrouille",
+    "punch": "Punch de sorcière",
+    "spellBook": "Grimoire de sorts",
+    "ghostEffect": "Effet d'Halloween"
   }
 }

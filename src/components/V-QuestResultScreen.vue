@@ -30,8 +30,16 @@
           </template>
 
           <div class="success-mascot" :class="{'success-mascot--glow': !hasMistakes}" v-if="animStep >= 1">
-            <img v-if="!hasMistakes" :src="Great" class="success-hedgehog pop-in" alt="Great"/>
-            <img v-else :src="Support" class="success-hedgehog pop-in" alt="Support"/>
+              <div class="mascot-lottie-wrapper">
+                  <DotLottieVue
+                      :data="JSON.stringify(!hasMistakes ? Hedgehog : HedgehogSad)"
+                      :autoplay="true"
+                      :loop="true"
+                      class="success-lottie"
+                  />
+              </div>
+<!--            <img v-if="!hasMistakes" :src="Great" class="success-hedgehog pop-in" alt="Great"/>-->
+<!--            <img v-else :src="Support" class="success-hedgehog pop-in" alt="Support"/>-->
           </div>
 
           <div class="success-rewards" v-if="!hasMistakes && !previouslyCleared">
@@ -74,8 +82,12 @@
 </template>
 
 <script setup>
+
 import Support from 'assets/images/Support.svg'
 import Great from 'assets/images/Greatcon.svg'
+import Hedgehog from '~/assets/animation/hedgehog_thumbs_up.json'
+import HedgehogSad from '~/assets/animation/hedgehog_shrug_2.json'
+import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
 
 const {t} = useI18n()
 
@@ -112,11 +124,25 @@ defineEmits(['next', 'themes', 'retryMistakes'])
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 56px 10px 10px 10px;
   color: white;
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.mascot-lottie-wrapper {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px;
+  margin: 20px 0 ;
+}
+
+.success-lottie {
+  transform: scale(2);
 }
 
 .salute-container {
@@ -173,7 +199,7 @@ defineEmits(['next', 'themes', 'retryMistakes'])
 
 .success-mascot {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 38px;
   z-index: 2;
 }
 
@@ -277,6 +303,7 @@ defineEmits(['next', 'themes', 'retryMistakes'])
   width: 100%;
   max-width: 314px;
   opacity: 0;
+  z-index: 9;
   transform: translateY(20px) translateZ(0);
   transition: all 0.4s ease;
   will-change: transform, opacity;

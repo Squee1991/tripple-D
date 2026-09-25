@@ -5252,7 +5252,17 @@
     "cupidArrow": "Cupid's Bow",
     "cupidArrowDescription": "Awarded for completing the achievement in the Events - Festival of Hearts: 'Bullseye'",
     "adventures": "Scroll of Wanderings",
-    "adventuresDescription": "The reward is obtained for completing the achievement in the Language Lands category: «Master of the Adventure Trails»"
+    "adventuresDescription": "The reward is obtained for completing the achievement in the Language Lands category: «Master of the Adventure Trails»",
+    "witchBroom": "Witch's Broom",
+    "witchBroomDescription": "Reward for completing the achievement «Lightning? No, faster!» in the category of the event «Pumpkin Festival».",
+    "witchHat": "Wizard's Hat",
+    "witchHatDescription": "Reward for completing the achievement «House Choice» in the category of the event «Pumpkin Festival».",
+    "pumpkin": "Pumpkin",
+    "pumpkinDescription": "Reward for completing the achievement «Pumpkin on the Head» in the category of the event «Pumpkin Festival».",
+    "spellBook": "Spellbook",
+    "spellBookDescription": "Reward for completing the achievement «Rider's Grimoire» in the category of the event «Pumpkin Festival».",
+    "punch": "Cauldron with Potion",
+    "punchDescription": "Reward for completing the achievement «Magic Punch» in the category of the event «Pumpkin Festival»."
   },
   "wildLandsFirstQuest": {
     "title": "Surroundings",
@@ -10794,5 +10804,38 @@
     "hint-title": "Hint",
     "hint-desc": "Reveals 2 random letters without using up any attempts",
     "hint-action-btn": "Use"
+  },
+  "halloweenEventQuests": {
+    "questOne": "Image → Word",
+    "questTwo": "Basics & Facts",
+    "questThree": "German Traditions",
+    "questFour": "Creatures & Legends",
+    "questFive": "Costumes & Autumn Night",
+    "questSix": "Symbols & Customs",
+    "questSeven": "Pumpkin Evening",
+    "questEight": "Trick-or-Treating",
+    "questNine": "Frankenstein Castle",
+    "questTen": "Reformation & Holiday",
+    "questEleven": "Old Turnip Spirit",
+    "questTwelve": "All Saints' Day",
+    "questThirteen": "St. Martin's Day",
+    "questFourteen": "Ludwigsburg Pumpkin Exhibition",
+    "questFifteen": "Party Games",
+    "questSixteen": "Cheerful Mummy",
+    "questSeventeen": "Image and Word",
+    "questEighteen": "Holiday Attributes",
+    "questNineteen": "German Lore",
+    "questTwenty": "Autumn Punch",
+    "questTwentyOne": "Find the odd word out",
+    "questTwentyTwo": "Odd one out - weather",
+    "questTwentyThree": "Odd one out - weather"
+  },
+  "eventsShopItemsHalloween": {
+    "witchBroom": "Witch's Broom",
+    "witchHat": "Wizard's Hat",
+    "pumpkin": "Pumpkin",
+    "punch": "Witch's Punch",
+    "spellBook": "Spellbook",
+    "ghostEffect": "Halloween Effect"
   }
 }

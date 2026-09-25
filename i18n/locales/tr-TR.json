@@ -5238,7 +5238,17 @@
     "cupidArrow": "Eros'un Yayı",
     "cupidArrowDescription": "Etkinlikler - Kalpler Festivali: 'Tam İsabet' başarımı için verilir",
     "adventures": "Seyahat Parşömeni",
-    "adventuresDescription": "Ödül, Dil Toprakları kategorisindeki şu başarımı tamamlayarak elde edilir: «Macera Yolları Ustası»"
+    "adventuresDescription": "Ödül, Dil Toprakları kategorisindeki şu başarımı tamamlayarak elde edilir: «Macera Yolları Ustası»",
+    "witchBroom": "Cadı süpürgesi",
+    "witchBroomDescription": "«Balkabağı Şenliği» etkinlik kategorisindeki «Şimşek mi? Hayır, daha hızlı!» başarımını tamamlama ödülü.",
+    "witchHat": "Büyücü şapkası",
+    "witchHatDescription": "«Balkabağı Şenliği» etkinlik kategorisindeki «Bölüm seçimi» başarımını tamamlama ödülü.",
+    "pumpkin": "Balkabağı",
+    "pumpkinDescription": "«Balkabağı Şenliği» etkinlik kategorisindeki «Kafada balkabağı» başarımını tamamlama ödülü.",
+    "spellBook": "Büyü kitabı",
+    "spellBookDescription": "«Balkabağı Şenliği» etkinlik kategorisindeki «Süvarinin büyü kitabı» başarımını tamamlama ödülü.",
+    "punch": "İksir kazanı",
+    "punchDescription": "«Balkabağı Şenliği» etkinlik kategorisindeki «Sihirli panç» başarımını tamamlama ödülü."
   },
   "wildLandsFirstQuest": {
     "title": "Çevre",
@@ -10781,5 +10791,38 @@
     "hint-title": "İpucu",
     "hint-desc": "Haklarından harcamadan rastgele 2 harf açar",
     "hint-action-btn": "Kullan"
+  },
+  "halloweenEventQuests": {
+    "questOne": "Resim → Kelime",
+    "questTwo": "Temel bilgiler ve gerçekler",
+    "questThree": "Alman gelenekleri",
+    "questFour": "Yaratıklar ve efsaneler",
+    "questFive": "Kostümler ve sonbahar gecesi",
+    "questSix": "Semboller ve adetler",
+    "questSeven": "Balkabağı akşamı",
+    "questEight": "Şeker toplama turu",
+    "questNine": "Frankenstein Kalesi",
+    "questTen": "Reform ve bayram",
+    "questEleven": "Eski şalgam ruhu",
+    "questTwelve": "Tüm Azizler Günü",
+    "questThirteen": "Aziz Martin Günü",
+    "questFourteen": "Ludwigsburg Balkabağı Sergisi",
+    "questFifteen": "Parti oyunları",
+    "questSixteen": "Neşeli mumya",
+    "questSeventeen": "Resim ve kelime",
+    "questEighteen": "Kutlama ögeleri",
+    "questNineteen": "Alman efsaneleri",
+    "questTwenty": "Sonbahar pançı",
+    "questTwentyOne": "Farklı kelimeyi bul",
+    "questTwentyTwo": "Farklı olanı bul - hava durumu",
+    "questTwentyThree": "Farklı olanı bul - hava durumu"
+  },
+  "eventsShopItemsHalloween": {
+    "witchBroom": "Cadı süpürgesi",
+    "witchHat": "Büyücü şapkası",
+    "pumpkin": "Balkabağı",
+    "punch": "Cadı pançı",
+    "spellBook": "Büyü kitabı",
+    "ghostEffect": "Cadılar Bayramı efekti"
   }
 }

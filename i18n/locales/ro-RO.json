@@ -5229,7 +5229,17 @@
     "cupidArrow": "Arcul lui Cupidon",
     "cupidArrowDescription": "Premiu obținut pentru realizarea din categoria Evenimente - Festivalul inimilor: „Trăgător iscusit”",
     "adventures": "Pergamentul Călătoriilor",
-    "adventuresDescription": "Recompensa se obține pentru completarea realizării din categoria Tărâmurile Limbilor: «Maestrul Cărărilor Aventurii»"
+    "adventuresDescription": "Recompensa se obține pentru completarea realizării din categoria Tărâmurile Limbilor: «Maestrul Cărărilor Aventurii»",
+    "witchBroom": "Mătura vrăjitoarei",
+    "witchBroomDescription": "Recompensă pentru realizarea «Fulger? Nu, mai rapid!» din categoria evenimentului «Sărbătoarea Dovlecilor».",
+    "witchHat": "Pălăria vrăjitorului",
+    "witchHatDescription": "Recompensă pentru realizarea «Alegerea casei» din categoria evenimentului «Sărbătoarea Dovlecilor».",
+    "pumpkin": "Dovleac",
+    "pumpkinDescription": "Recompensă pentru realizarea «Dovleac pe cap» din categoria evenimentului «Sărbătoarea Dovlecilor».",
+    "spellBook": "Cartea de vrăji",
+    "spellBookDescription": "Recompensă pentru realizarea «Grimoarul călărețului» din categoria evenimentului «Sărbătoarea Dovlecilor».",
+    "punch": "Cazan cu licoare",
+    "punchDescription": "Recompensă pentru realizarea «Punch magic» din categoria evenimentului «Sărbătoarea Dovlecilor»."
   },
   "wildLandsFirstQuest": {
     "title": "Împrejurimi",
@@ -10769,5 +10779,38 @@
     "hint-title": "Indiciu",
     "hint-desc": "Va dezvălui 2 litere aleatorii fără a consuma încercări",
     "hint-action-btn": "Folosește"
+  },
+  "halloweenEventQuests": {
+    "questOne": "Imagine → Cuvânt",
+    "questTwo": "Noțiuni de bază și fapte",
+    "questThree": "Tradiții germane",
+    "questFour": "Creaturi și legende",
+    "questFive": "Costume și noapte de toamnă",
+    "questSix": "Simboluri și obiceiuri",
+    "questSeven": "Seară cu dovleac",
+    "questEight": "La colindat după dulciuri",
+    "questNine": "Castelul Frankenstein",
+    "questTen": "Reforma și sărbătoarea",
+    "questEleven": "Vechiul spirit din nap",
+    "questTwelve": "Ziua Tuturor Sfinților",
+    "questThirteen": "Sărbătoarea Sfântului Martin",
+    "questFourteen": "Expoziția de dovleci din Ludwigsburg",
+    "questFifteen": "Jocuri de petrecere",
+    "questSixteen": "Mumia veselă",
+    "questSeventeen": "Imagine și cuvânt",
+    "questEighteen": "Atributele sărbătorii",
+    "questNineteen": "Legende germane",
+    "questTwenty": "Punch de toamnă",
+    "questTwentyOne": "Găsește cuvântul nepotrivit",
+    "questTwentyTwo": "Găsește intrusul - vremea",
+    "questTwentyThree": "Găsește intrusul - vremea"
+  },
+  "eventsShopItemsHalloween": {
+    "witchBroom": "Mătura vrăjitoarei",
+    "witchHat": "Pălăria vrăjitorului",
+    "pumpkin": "Dovleac",
+    "punch": "Punch-ul vrăjitoarei",
+    "spellBook": "Cartea de vrăji",
+    "ghostEffect": "Efect de Halloween"
   }
 }

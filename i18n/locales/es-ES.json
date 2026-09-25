@@ -5229,7 +5229,17 @@
     "cupidArrow": "Arco de Cupido",
     "cupidArrowDescription": "Premio por completar el logro en la categoría Eventos - Festival de corazones: «Tiro certero»",
     "adventures": "Pergamino de los Viajes",
-    "adventuresDescription": "La recompensa se obtiene al completar el logro en la categoría Tierras de los Idiomas: «Maestro de los Senderos de Aventura»"
+    "adventuresDescription": "La recompensa se obtiene al completar el logro en la categoría Tierras de los Idiomas: «Maestro de los Senderos de Aventura»",
+    "witchBroom": "Escoba de bruja",
+    "witchBroomDescription": "Recompensa por completar el logro «¿Un rayo? ¡No, más rápido!» en la categoría del evento «Festival de la Calabaza».",
+    "witchHat": "Sombrero de mago",
+    "witchHatDescription": "Recompensa por completar el logro «Elección de casa» en la categoría del evento «Festival de la Calabaza».",
+    "pumpkin": "Calabaza",
+    "pumpkinDescription": "Recompensa por completar el logro «Calabaza en la cabeza» en la categoría del evento «Festival de la Calabaza».",
+    "spellBook": "Libro de hechizos",
+    "spellBookDescription": "Recompensa por completar el logro «Grimorio del jinete» en la categoría del evento «Festival de la Calabaza».",
+    "punch": "Caldero de poción",
+    "punchDescription": "Recompensa por completar el logro «Ponche mágico» en la categoría del evento «Festival de la Calabaza»."
   },
   "wildLandsFirstQuest": {
     "title": "Entorno",
@@ -10769,5 +10779,38 @@
     "hint-title": "Pista",
     "hint-desc": "Revelará 2 letras aleatorias sin gastar intentos",
     "hint-action-btn": "Usar"
+  },
+  "halloweenEventQuests": {
+    "questOne": "Imagen → Palabra",
+    "questTwo": "Conceptos básicos y datos",
+    "questThree": "Tradiciones alemanas",
+    "questFour": "Criaturas y leyendas",
+    "questFive": "Disfraces y noche de otoño",
+    "questSix": "Símbolos y costumbres",
+    "questSeven": "Noche de calabaza",
+    "questEight": "Truco o trato",
+    "questNine": "Castillo de Frankenstein",
+    "questTen": "La Reforma y la fiesta",
+    "questEleven": "El antiguo espíritu del nabo",
+    "questTwelve": "Día de Todos los Santos",
+    "questThirteen": "Fiesta de San Martín",
+    "questFourteen": "Exposición de calabazas en Ludwigsburg",
+    "questFifteen": "Juegos de fiesta",
+    "questSixteen": "Momia alegre",
+    "questSeventeen": "Imagen y palabra",
+    "questEighteen": "Atributos festivos",
+    "questNineteen": "Leyendas alemanas",
+    "questTwenty": "Ponche de otoño",
+    "questTwentyOne": "Encuentra la palabra intrusa",
+    "questTwentyTwo": "Palabra sobrante: clima",
+    "questTwentyThree": "Palabra sobrante: clima"
+  },
+  "eventsShopItemsHalloween": {
+    "witchBroom": "Escoba de bruja",
+    "witchHat": "Sombrero de mago",
+    "pumpkin": "Calabaza",
+    "punch": "Ponche de bruja",
+    "spellBook": "Libro de hechizos",
+    "ghostEffect": "Efecto de Halloween"
   }
 }

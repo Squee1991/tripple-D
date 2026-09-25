@@ -5247,7 +5247,17 @@
     "cupidArrow": "قوس كيوبيد",
     "cupidArrowDescription": "تُمنح لإكمال الإنجاز في فئة الفعاليات - مهرجان القلوب: \"رمية صائبة\"",
     "adventures": "لفيفة التجوال",
-    "adventuresDescription": "يتم الحصول على المكافأة عند إكمال الإنجاز في فئة أراضي اللغات: «سيد مسارات المغامرة»"
+    "adventuresDescription": "يتم الحصول على المكافأة عند إكمال الإنجاز في فئة أراضي اللغات: «سيد مسارات المغامرة»",
+    "witchBroom": "مكنسة الساحرة",
+    "witchBroomDescription": "مكافأة إنجاز «البرق؟ كلا، أسرع!» ضمن فئة فعالية «مهرجان اليقطين».",
+    "witchHat": "قبعة الساحر",
+    "witchHatDescription": "مكافأة إنجاز «اختيار المنهاج» ضمن فئة فعالية «مهرجان اليقطين».",
+    "pumpkin": "يقطينة",
+    "pumpkinDescription": "مكافأة إنجاز «يقطينة على الرأس» ضمن فئة فعالية «مهرجان اليقطين».",
+    "spellBook": "كتاب التعاويذ",
+    "spellBookDescription": "مكافأة إنجاز «كتاب الفارس السحري» ضمن فئة فعالية «مهرجان اليقطين».",
+    "punch": "مرجل الجرعة السحرية",
+    "punchDescription": "مكافأة إنجاز «المشروب السحري» ضمن فئة فعالية «مهرجان اليقطين»."
   },
   "wildLandsFirstQuest": {
     "title": "المحيط",
@@ -10790,5 +10800,38 @@
     "hint-title": "تلميح",
     "hint-desc": "سيفتح حرفين عشوائيين دون استهلاك المحاولات",
     "hint-action-btn": "استخدام"
+  },
+  "halloweenEventQuests": {
+    "questOne": "صورة ← كلمة",
+    "questTwo": "أساسيات وحقائق",
+    "questThree": "تقاليد ألمانية",
+    "questFour": "مخلوقات وأساطير",
+    "questFive": "أزياء تنكرية وليلة خريفية",
+    "questSix": "رموز وأعراف",
+    "questSeven": "أمسية اليقطين",
+    "questEight": "جولة جمع الحلوى",
+    "questNine": "قلعة فرانكنشتاين",
+    "questTen": "الإصلاح الديني والاحتفال",
+    "questEleven": "روح اللفت القديمة",
+    "questTwelve": "عيد جميع القديسين",
+    "questThirteen": "عيد القديس مارتن",
+    "questFourteen": "معرض اليقطين في لودفيغسبورغ",
+    "questFifteen": "ألعاب الحفلات",
+    "questSixteen": "المومياء المرحة",
+    "questSeventeen": "صورة وكلمة",
+    "questEighteen": "مقتنيات العيد",
+    "questNineteen": "أساطير ألمانية شعبية",
+    "questTwenty": "مشروب الخريف",
+    "questTwentyOne": "جد الكلمة الدخيلة",
+    "questTwentyTwo": "جد الكلمة الدخيلة - الطقس",
+    "questTwentyThree": "جد الكلمة الدخيلة - الطقس"
+  },
+  "eventsShopItemsHalloween": {
+    "witchBroom": "مكنسة الساحرة",
+    "witchHat": "قبعة الساحر",
+    "pumpkin": "يقطينة",
+    "punch": "مشروب الساحرة",
+    "spellBook": "كتاب التعاويذ",
+    "ghostEffect": "تأثير الهالوين"
   }
 }

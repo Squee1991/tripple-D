@@ -152,41 +152,36 @@ export const AWARDS = [
 		description: 'awards.iAmGrootDescription',
 		icon: Groot
 	},
-
-
 	{
 		key: 'witchBroom',
-		title: 'Молния? Нет, быстрее!',
-		description: 'Награда получается за выполнение достижения в событии Фестиваль тыкв',
+		title: 'awards.witchBroom',
+		description: 'awards.witchBroomDescription',
 		icon: WitchBroom
 	},
 	{
 		key: 'witchHat',
-		title: 'Шляпа волшебника',
-		description: 'Награда получается за выполнение достижения в событии Фестиваль тыкв',
+		title: 'awards.witchHat',
+		description: 'awards.witchHatDescription',
 		icon: WitchHat
 	},
 	{
 		key: 'pumpkin',
-		title: 'У вас репа',
-		description: 'Награда получается за выполнение достижения в событии Фестиваль тыкв',
+		title: 'awards.pumpkin',
+		description: 'awards.pumpkinDescription',
 		icon: Pumpkin
 	},
 	{
 		key: 'spellBook',
-		title: 'Гримуар Всадника',
-		description: 'Награда получается за выполнение достижения в событии Фестиваль тыкв',
+		title: 'awards.spellBook',
+		description: 'awards.spellBookDescription',
 		icon: SpellBook
 	},
 	{
 		key: 'punch',
-		title: 'Тыквенный Пунш',
-		description: 'Награда получается за выполнение достижения в событии Фестиваль тыкв',
+		title: 'awards.punch',
+		description: 'awards.punchDescription',
 		icon: Punch
 	},
-
-
-
 	{
 		key: 'santaHat',
 		title: 'awards.santaHat',

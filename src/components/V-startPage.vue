@@ -7,7 +7,14 @@
         </div>
         <div class="hero-wrap">
           <div class="hero-clay">
-            <img src="../../assets/images/AuthIcon.svg" alt="Logo" class="hero-img">
+            <ClientOnly>
+              <DotLottieVue
+                  style="width: 335px; height: 335px;"
+                  :data="JSON.stringify(Greetings)"
+                  :autoplay="true"
+                  :loop="true"
+              />
+            </ClientOnly>
             <div class="skill-tag tag-purple">Sprechen</div>
             <div class="skill-tag tag-cyan">Hören</div>
             <div class="skill-tag tag-pink">Lesen</div>
@@ -23,8 +30,10 @@
 </template>
 
 <script setup>
-const { t } = useI18n();
-import Bg from '../../assets/images/bg_1.webp'
+import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
+import Greetings from '~/assets/animation/Greetings.json'
+
+const { t } = useI18n()
 const router = useRouter()
 </script>
 
@@ -61,7 +70,7 @@ const router = useRouter()
 .hero-clay {
   width: 140px;
   height: 140px;
-  background: #2e9fff;
+  //background: #2e9fff;
   border-radius: 40px;
   margin: 0 auto;
   display: flex;
@@ -70,12 +79,6 @@ const router = useRouter()
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08),
   inset 0 -6px 0 rgba(0, 0, 0, 0.05);
   position: relative;
-}
-
-.hero-img {
-  width: 82%;
-  height: 82%;
-  object-fit: contain;
 }
 
 .skill-tag {
@@ -155,7 +158,6 @@ const router = useRouter()
   bottom: 10px;
   padding: 0 25px;
   padding-bottom: calc(env(safe-area-inset-bottom) + 15px);
-
 }
 
 .btn-emerald-3d {
