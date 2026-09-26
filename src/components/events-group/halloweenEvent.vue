@@ -1,7 +1,6 @@
 <script setup>
 import {ref, computed, onMounted} from 'vue'
 import {useRouter, useRoute} from 'vue-router'
-import VShowFall from "../V-showFall.vue"
 import PumpkinCoin from 'assets/images/event-rewards/halloween-event/halloween-assets/pumpkinCoin.svg'
 
 import HedgehogQuest from '~/assets/images/event-rewards/halloween-event/halloween-assets/HedhogQuests.svg'
@@ -52,8 +51,8 @@ const isEventOpen = computed(() => {
 })
 
 const bannerText = {
-  shop: 'Покупай эффекты подарки в лавке события!',
-  quests: "Проходи задания, чтобы собирать тыквенную валюту!"
+  shop: t('haloweenBanner.shop'),
+  quests: t('haloweenBanner.quests')
 }
 
 const bannerTextComputed = computed(() => {
@@ -66,7 +65,7 @@ const bannerComputed = computed(() => {
 
 const navTabs = computed(() => ([
   {id: 'quests', label: t('eventPanel.questions'), icon: QuestsNavIcon},
-  {id: 'reputation', label: t('Магазин'), icon: ShopNavIcon}
+  {id: 'reputation', label: t('eventPanel.shop'), icon: ShopNavIcon}
 ]))
 
 const activeIndex = computed(() => navTabs.value.findIndex(tab => tab.id === activeTab.value))
@@ -88,8 +87,8 @@ function setTab(tabId) {
 }
 
 const ranks = computed(() => ([
-  {level: 1, need: 0, title: t('eventPanel.firstReputationHalloween', 'Любопытный')},
-  {level: 2, need: 1000, title: t('eventPanel.secondReputationHalloween', 'Повелитель Тыкв')}
+  {level: 1, need: 0, title: t('eventPanel.firstReputationHalloween')},
+  {level: 2, need: 1000, title: t('eventPanel.secondReputationHalloween')}
 ]))
 
 const currentLevel = computed(() => {
@@ -117,184 +116,207 @@ const quests = ref([
     id: 'quest-1',
     title: t('halloweenEventQuests.questOne'),
     rewardCoins: 10,
-    rewardRep: 70,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-2',
     title: t('halloweenEventQuests.questTwo'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: BgCard
   },
   {
     id: 'quest-3',
     title: t('halloweenEventQuests.questThree'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-4',
     title: t('halloweenEventQuests.questFour'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-5',
     title: t('halloweenEventQuests.questFive'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-6',
     title: t('halloweenEventQuests.questSix'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-7',
     title: t('halloweenEventQuests.questSeven'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-8',
     title: t('halloweenEventQuests.questEight'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-9',
     title: t('halloweenEventQuests.questNine'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-10',
     title: t('halloweenEventQuests.questTen'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-11',
     title: t('halloweenEventQuests.questEleven'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-12',
     title: t('halloweenEventQuests.questTwelve'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-13',
     title: t('halloweenEventQuests.questThirteen'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-14',
     title: t('halloweenEventQuests.questFourteen'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-15',
     title: t('halloweenEventQuests.questFifteen'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-16',
     title: t('halloweenEventQuests.questSixteen'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-17',
     title: t('halloweenEventQuests.questSeventeen'),
     rewardCoins: 15,
-    rewardRep: 60,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-18',
     title: t('halloweenEventQuests.questEighteen'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-19',
     title: t('halloweenEventQuests.questNineteen'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-20',
     title: t('halloweenEventQuests.questTwenty'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 60,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-21',
     title: t('halloweenEventQuests.questTwentyOne'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 60,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-22',
     title: t('halloweenEventQuests.questTwentyTwo'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 60,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-23',
     title: t('halloweenEventQuests.questTwentyThree'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 60,
     isDone: false,
+    hasErrors: false,
     icon: Words
   }
 ])
@@ -309,42 +331,42 @@ const shopItemsList = ref([
   {
     id: 'witchBroom',
     title: t('eventsShopItemsHalloween.witchBroom'),
-    priceCoins: 1,
+    priceCoins: 60,
     isOwned: false,
     icon: WitchBroom
   },
   {
     id: 'witchHat',
     title: t('eventsShopItemsHalloween.witchHat'),
-    priceCoins: 1,
+    priceCoins: 60,
     isOwned: false,
     icon: WitchHat
   },
   {
     id: 'pumpkin',
     title: t('eventsShopItemsHalloween.pumpkin'),
-    priceCoins: 1,
+    priceCoins: 60,
     isOwned: false,
     icon: Pumpkin
   },
   {
     id: 'punch',
     title: t('eventsShopItemsHalloween.punch'),
-    priceCoins: 1,
+    priceCoins: 60,
     isOwned: false,
     icon: Punch
   },
   {
     id: 'spellBook',
     title: t('eventsShopItemsHalloween.spellBook'),
-    priceCoins: 1,
+    priceCoins: 60,
     isOwned: false,
     icon: SpellBook
   },
   {
     id: 'ghostEffect',
     title: t('eventsShopItemsHalloween.ghostEffect'),
-    priceCoins: 120,
+    priceCoins: 200,
     isOwned: false,
     icon: Ghost
   }
@@ -406,10 +428,17 @@ async function refreshProgressBadges() {
   reputationPoints.value = progressData.reputationPoints || 0
 
   const questsProgress = progressData.quests || {}
-  quests.value = quests.value.map(q => ({
-    ...q,
-    isDone: questsProgress[q.id] ? questsProgress[q.id].finished : false
-  }))
+  quests.value = quests.value.map(q => {
+    const qData = questsProgress[q.id]
+    const isDone = qData ? !!qData.finished : false
+    const hasErrors = !isDone && !!qData && Array.isArray(qData.solvedSteps) && qData.solvedSteps.length > 0
+
+    return {
+      ...q,
+      isDone,
+      hasErrors
+    }
+  })
 
   const shopItems = progressData.shopItems || {}
   shopItemsList.value.forEach(item => {
@@ -491,8 +520,8 @@ onMounted(() => {
                         :disabled="reward.isOwned"
                         @click="onRewardClick(reward)"
                     >
-                      <template v-if="reward.isOwned">{{ t('eventPanel.bought', 'Куплено') }}</template>
-                      <template v-else>{{ t('eventPanel.buy', 'Купить') }}</template>
+                      <template v-if="reward.isOwned">{{ t('eventPanel.bought') }}</template>
+                      <template v-else>{{ t('eventPanel.buy') }}</template>
                     </button>
                   </div>
                 </div>
@@ -513,11 +542,18 @@ onMounted(() => {
                       <span class="meta__pill">{{ quest.rewardCoins }} {{ coinIcon }}</span>
                     </div>
                     <button
-                        :class="['btn', 'btn--candy', { 'btn--repeat': quest.isDone }]"
+                        :class="[
+                          'btn',
+                          'btn--candy',
+                          {
+                            'btn--repeat': quest.isDone,
+                            'btn--errors': quest.hasErrors
+                          }
+                        ]"
                         @click="goToSession(quest.id)"
                     >
                       {{
-                        quest.isDone ? t('eventPanel.repeat') : t('eventPanel.execute')
+                        quest.isDone ? t('eventPanel.repeat') : (quest.hasErrors ? t('Ошибки') : t('eventPanel.execute'))
                       }}
                     </button>
                   </div>
@@ -875,7 +911,7 @@ onMounted(() => {
 
 .quest__title {
   font-weight: 400;
-  font-size: 17px;
+  font-size: 16px;
   color: #FFFFFF;
   margin-bottom: 8px;
   text-align: left;
@@ -914,7 +950,7 @@ onMounted(() => {
   padding: 6px 14px;
   cursor: pointer;
   width: auto;
-  width: 120px;
+  min-width: 120px;
   text-transform: uppercase;
   text-align: center;
   font-family: "Nunito", sans-serif;
@@ -949,6 +985,13 @@ onMounted(() => {
   color: #fff;
   font-style: italic;
   box-shadow: 0 4px #333f83;
+}
+
+.btn--errors {
+  background: #d32f2f;
+  color: #fff;
+  font-style: normal;
+  box-shadow: 0 4px #7f1d1d;
 }
 
 .clickable {

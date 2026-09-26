@@ -72,12 +72,12 @@
 <script setup>
 import {computed, ref} from 'vue'
 import {useRouter} from 'vue-router'
-import HalloweenIcon from '../../assets/images/calendar-icons/halloweenIcon.svg'
-import ChristmasIcon from '../../assets/images/calendar-icons/christmas-wreath.svg'
-import FoolDay from '../../assets/images/calendar-icons/FoolDay.svg'
-import Bees from '../../assets/images/calendar-icons/bees.svg'
+import HalloweenIcon from '~/assets/images/calendar-icons/halloweenIcon.svg'
+import ChristmasIcon from '~/assets/images/calendar-icons/christmas-wreath.svg'
+import FoolDay from '~/assets/images/calendar-icons/FoolDay.svg'
+import Bees from '~/assets/images/calendar-icons/bees.svg'
 import VBackBtn from "~/src/components/V-back-btn.vue";
-
+const { t} = useI18n()
 definePageMeta({
   robots: {
     index: false,
@@ -85,11 +85,6 @@ definePageMeta({
   }
 })
 
-const { t} = useI18n()
-const router = useRouter()
-const goBack = () => {
-  router.push('/')
-}
 const monthNames = [
   t('calendarMonths.january'),
   t('calendarMonths.february'),
@@ -122,7 +117,7 @@ const annualEvents = ref([
     title: t('eventsNavNames.winter'),
     typeId: 'winter',
     start: '12-18 00:00',
-    end: '01-02 23:59'
+    end: '01-03 23:59'
   },
   {
     id: 'valentine',
@@ -131,7 +126,7 @@ const annualEvents = ref([
     title: t('eventsNavNames.valentine'),
     typeId: 'valentine',
     start: '02-12 00:00',
-    end: '02-16 23:59'
+    end: '02-18 23:59'
   },
   {
     id: 'april',
@@ -148,8 +143,8 @@ const annualEvents = ref([
     alt: 'HalloweenIcon',
     title: t('eventsNavNames.halloween'),
     typeId: 'pumpkin',
-    start: '10-28 00:00',
-    end: '10-31 23:59'
+    start: '10-26 00:00',
+    end: '11-08 23:59'
   },
 ])
 
@@ -366,16 +361,16 @@ function endOfDay(dateObj) {
   padding-bottom: 60px;
 }
 
-/* --- ИСПРАВЛЕНО: Меняем визуальный порядок блоков на мобильных --- */
+
 .main {
   flex-grow: 1;
-  order: 1; /* Календарь будет сверху */
+  order: 1;
 }
 
 .area__info {
   background: #ffffff;
   border-radius: 15px;
-  order: 2; /* Легенда уйдет вниз */
+  order: 2;
 }
 
 .legend__item {
@@ -388,7 +383,6 @@ function endOfDay(dateObj) {
   border-radius: 18px;
   min-width: 320px;
   height: 100%;
-  box-shadow: 0 5px 0 #e6e6f0;;
 }
 
 .legend__title {

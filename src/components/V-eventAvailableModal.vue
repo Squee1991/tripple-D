@@ -11,14 +11,15 @@
           :image="activeEvent.effectImage"
       />
       <div class="modal-icon">
-        <img class="modal__icon-item" :src="activeEvent.icon" :alt="`${activeEvent.title} icon`"/>
+        <img class="modal__icon-item" :src="activeEvent.modalIcon" :alt="`${activeEvent.title} icon`"/>
       </div>
       <div class="modal__main">
         <h2 class="modal-title">{{ activeEvent.title }}</h2>
         <p class="modal-text">{{ activeEvent.text }}</p>
         <div class="modal-actions">
-          <button type="button" class="btn-start" @click="handleBeginClick">{{ t('Собирать тыквы')}}</button>
-          <!--        <button type="button" class="btn-start &#45;&#45;close" @click="handleCloseClick">{{ t('shareModal.close')}}</button>-->
+          <button type="button" class="btn-start" @click="handleBeginClick">
+            {{ activeEvent.btnText }}
+          </button>
         </div>
       </div>
     </div>
@@ -26,10 +27,11 @@
 </template>
 
 <script setup>
-
 import { useRouter } from "vue-router";
 import { ref, watch, computed, onMounted, onUnmounted } from "vue";
-import { userAuthStore } from '~/store/authStore.js'
+import { userAuthStore } from '~/store/authStore.js';
+import { useEventSessionStore } from '~/store/eventsStore.js';
+
 import VShowFall from "../components/V-showFall.vue";
 import Wreath from "../../assets/images/mery-christmas/santa-claus.svg";
 import Pumpkin from "~/assets/images/event-rewards/halloween-event/halloween-assets/HalloweenStart.png";
@@ -41,18 +43,15 @@ import FoolIcon from '../../assets/images/mery-christmas/fooldayFall.svg'
 import FoolIFall from '../../assets/images/mery-christmas/foolFall.svg'
 import Showing from '../../assets/images/shovel.svg'
 
-const { t } = useI18n()
+const { t } = useI18n();
 const authStore = userAuthStore();
+const eventStore = useEventSessionStore();
 const router = useRouter();
 
 const props = defineProps({
   visible: {
     type: Boolean,
     default: true
-  },
-  schedule: {
-    type: Array,
-    default: null
   },
   tickMs: { type: Number, default: 1000 }
 });
@@ -62,106 +61,86 @@ const isModalOpen = ref(true);
 const currentTime = ref(new Date());
 const lastEventKey = ref(null);
 
-const defaultSchedule = computed(() => [
-  {
-    id: "halloween",
-    start: "8-28 00:00",
-    end: "10-31 23:59",
-    title: t('eventsModal.halloweenLabel'),
-    text: t('eventsModal.halloweenText'),
-    icon: Pumpkin,
-    route: "/event-halloween",
-    effectImage: PumpkinFall,
-  },
-  {
-    id: "winter",
-    start: "12-18 00:00",
-    end: "01-02 23:59",
+const modalVisuals = computed(() => ({
+  'winter': {
     title: t('eventsModal.winterLabel'),
     text: t('eventsModal.winterText'),
-    icon: Wreath,
-    route: "/event-winter",
+    btnText: t('eventsModalButtons.winter'),
+    modalIcon: Wreath,
     effectImage: SnowFall,
   },
-  {
-    id: "valentine",
-    start: '02-12 00:00',
-    end: '02-16 23:59',
+  'valentine': {
     title: t('eventsModal.valentineLabel'),
     text: t('eventsModal.valentineText'),
-    icon: Valentine,
-    route: "/event-valentine",
+    btnText: t('eventsModalButtons.valentine'),
+    modalIcon: Valentine,
     effectImage: HeartFall,
   },
-  {
-    id: "joke",
-    start: '04-01 00:00',
-    end: '04-01 23:59',
+  'april': {
     title: t('eventsModal.jokeLabel'),
     text: t('eventsModal.jokeText'),
-    icon: FoolIcon,
-    route: "/event-joke",
+    btnText: t('eventsModalButtons.april'),
+    modalIcon: FoolIcon,
     effectImage: FoolIFall,
+  },
+  'pumpkin': {
+    title: t('eventsModal.halloweenLabel'),
+    text: t('eventsModal.halloweenText'),
+    btnText: t('eventsModalButtons.pumpkin'),
+    modalIcon: Pumpkin,
+    effectImage: PumpkinFall,
   }
-]);
+}));
 
-const effectiveSchedule = computed(() => props.schedule || defaultSchedule.value);
+function isEventActive(startStr, endStr, now) {
+  const currentYear = now.getFullYear();
 
-function parseAnnualDate(str) {
-  const [datePart, timePart] = str.split(" ");
-  const [month, day] = datePart.split("-").map(Number);
-  const [hours, minutes] = (timePart || "00:00").split(":").map(Number);
-  const y = new Date().getFullYear();
-  return new Date(y, month - 1, day, hours ?? 0, minutes ?? 0, 0, 0);
-}
+  const parse = (str, y) => {
+    const [datePart, timePart] = str.split(" ");
+    const [month, day] = datePart.split("-").map(Number);
+    const [hours, minutes] = (timePart || "00:00").split(":").map(Number);
+    return new Date(y, month - 1, day, hours ?? 0, minutes ?? 0, 0, 0);
+  };
 
-function makeEventKey(entry) {
-  return `${entry.id}|${entry.start}|${entry.end ?? ""}|${entry.startDate.getFullYear()}`;
-}
+  let startDate = parse(startStr, currentYear);
+  let endDate = parse(endStr, currentYear);
 
-function getDismissed(key) {
-  // try {
-  //   return localStorage.getItem(`eventModal.dismissed.${key}`) === "1";
-  // } catch {
-  //   return false;
-  // }
-}
-
-function setDismissed(key, v = true) {
-  // try {
-  //   localStorage.setItem(`eventModal.dismissed.${key}`, v ? "1" : "0");
-  // } catch {}
-}
-
-const annualCandidatesSorted = computed(() => {
-  const list = effectiveSchedule.value.map(entry => {
-    const startDate = parseAnnualDate(entry.start);
-    const endDate = entry.end ? parseAnnualDate(entry.end) :
-        new Date(startDate.getTime() + 24 * 60 * 60 * 1000);
-    return {
-      ...entry,
-      startDate,
-      endDate
-    };
-  });
-
-  for (const e of list) {
-    if (e.endDate <= e.startDate) {
-      const d = new Date(e.endDate);
-      d.setFullYear(d.getFullYear() + 1);
-      e.endDate = d;
+  if (startDate > endDate) {
+    if (now.getMonth() < startDate.getMonth()) {
+      startDate.setFullYear(currentYear - 1);
+    } else {
+      endDate.setFullYear(currentYear + 1);
     }
   }
-  return list.sort((a, b) => a.startDate - b.startDate);
-});
+  return now >= startDate && now <= endDate;
+}
+
 
 const activeEvent = computed(() => {
   const now = currentTime.value;
-  const list = annualCandidatesSorted.value;
-  const candidates = list.filter(e => e.startDate <= now && now < e.endDate);
-  if (!candidates.length) return null;
-  return candidates[candidates.length - 1];
+  const currentEvent = eventStore.events.find(e => isEventActive(e.start, e.end, now));
+  if (!currentEvent) return null;
+  const visuals = modalVisuals.value[currentEvent.id] || {};
+  return {
+    ...currentEvent,
+    ...visuals,
+    startYear: now.getFullYear()
+  };
 });
+
+function makeEventKey(entry) {
+  return `${entry.id}|${entry.start}|${entry.end}|${entry.startYear}`;
+}
+
+function getDismissed(key) {
+  try { return localStorage.getItem(`eventModal.dismissed.${key}`) === "1"; }
+  catch { return false; }
+}
+
+function setDismissed(key, v = true) {
+  try { localStorage.setItem(`eventModal.dismissed.${key}`, v ? "1" : "0"); }
+  catch {}
+}
 
 function dismissCurrentEvent() {
   if (!activeEvent.value) return;
@@ -171,7 +150,7 @@ function dismissCurrentEvent() {
 }
 
 function handleBeginClick() {
-  const to = activeEvent.value?.route || "/";
+  const to = activeEvent.value?.url || "/"; // url берется из стора
   dismissCurrentEvent();
   router.push(to);
   emit("close");
@@ -183,11 +162,8 @@ function handleCloseClick() {
 }
 
 let intervalId;
-
 onMounted(() => {
-  intervalId = setInterval(() => {
-    currentTime.value = new Date();
-  }, props.tickMs);
+  intervalId = setInterval(() => { currentTime.value = new Date(); }, props.tickMs);
 });
 
 onUnmounted(() => {
@@ -195,28 +171,24 @@ onUnmounted(() => {
   if (intervalId) clearInterval(intervalId);
 });
 
-watch(() => activeEvent.value,
-    (val) => {
-      const key = val ? makeEventKey(val) : null;
-      if (!key) {
-        isModalOpen.value = false;
-        return;
-      }
-      if (key !== lastEventKey.value) {
-        lastEventKey.value = key;
-        isModalOpen.value = !getDismissed(key);
-      }
-    }, {
-      immediate: true
-    }
-);
+watch(() => activeEvent.value, (val) => {
+  const key = val ? makeEventKey(val) : null;
+  if (!key) {
+    isModalOpen.value = false;
+    return;
+  }
+  if (key !== lastEventKey.value) {
+    lastEventKey.value = key;
+    isModalOpen.value = !getDismissed(key);
+  }
+}, { immediate: true });
 
 watch(() => [props.visible, isModalOpen.value, activeEvent.value, authStore.uid],
     ([isVisible, open, evt, uid]) => {
       document.body.style.overflow = (isVisible && open && !!evt && !!uid) ? "hidden" : "";
-    },
-    { immediate: true }
+    }, { immediate: true }
 );
+
 </script>
 
 <style scoped>

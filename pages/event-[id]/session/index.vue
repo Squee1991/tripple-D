@@ -6,7 +6,6 @@ import {useEventSessionStore} from '~/store/eventsStore.js'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import { playCorrect , playWrong , playLevelCompleted } from "~/utils/soundManager.js"
 
-
 import EventSuccessModal from '~/src/components/V-EventSuccessModal.vue'
 import { useEventSessionLogic } from '~/composables/useEventSessionLogic.js'
 
@@ -46,6 +45,26 @@ const currentQuest = computed(() => {
 
 const totalSteps = computed(() => currentQuest.value?.steps?.length || 0)
 const currentStep = computed(() => currentQuest.value?.steps?.[eventStore.stepIndex] || null)
+
+const stepsToPlay = ref([])
+
+function calculateStepsToPlay() {
+  const solved = eventStore.solvedSteps || []
+  const list = []
+  for (let i = 0; i < totalSteps.value; i++) {
+    if (!solved.includes(i)) {
+      list.push(i)
+    }
+  }
+  stepsToPlay.value = list.length ? list : Array.from({length: totalSteps.value}, (_, i) => i)
+}
+
+const totalSessionSteps = computed(() => stepsToPlay.value.length || totalSteps.value || 1)
+
+const currentSessionIndex = computed(() => {
+  const idx = stepsToPlay.value.indexOf(eventStore.stepIndex)
+  return idx >= 0 ? idx + 1 : 1
+})
 
 const isQuestFullyCompleted = computed(() => {
   const solved = eventStore.solvedSteps || []
@@ -100,6 +119,7 @@ onMounted(async () => {
   if (!currentQuest.value) {
     router.replace({name: 'event-id', params: {id: eventId.value}})
   } else {
+    calculateStepsToPlay()
     if (eventStore.finished) {
       isFinished.value = true
       runSuccessAnimation(isQuestFullyCompleted.value, eventStore.isReplayMode, currentQuest.value?.rewardRep, currentQuest.value?.rewardCoins)
@@ -139,17 +159,14 @@ async function retryQuest() {
   isFinished.value = false
   checkStatus.value = null
   await eventStore.start(eventId.value, currentQuest.value.id)
+  calculateStepsToPlay()
   jumpToNextUnsolvedStep()
 }
 
 function goToNextStep() {
-  let nextIndex = eventStore.stepIndex + 1
-  const solved = eventStore.solvedSteps || []
-  while (nextIndex < totalSteps.value && solved.includes(nextIndex)) {
-    nextIndex++
-  }
-  if (nextIndex < totalSteps.value) {
-    eventStore.setStepIndex(nextIndex)
+  const currentPos = stepsToPlay.value.indexOf(eventStore.stepIndex)
+  if (currentPos >= 0 && currentPos + 1 < stepsToPlay.value.length) {
+    eventStore.setStepIndex(stepsToPlay.value[currentPos + 1])
   } else {
     finishQuest()
   }
@@ -392,12 +409,12 @@ const errorMessage = computed(() => {
         <div class="topbar__progress" v-if="!isFinished && currentQuest">
           <div class="progress_exp-bar">
             <div class="progress__bar"
-                 :style="{ width: (totalSteps ? ((eventStore.stepIndex ) / totalSteps * 100) : 0) + '%' }">
+                 :style="{ width: (((currentSessionIndex - 1) / totalSessionSteps) * 100) + '%' }">
               <div class="glare"></div>
             </div>
           </div>
           <div class="progress__text">
-            {{ eventStore.stepIndex + 1 }} / {{ totalSteps }}
+            {{ currentSessionIndex }} / {{ totalSessionSteps }}
           </div>
         </div>
       </header>
@@ -419,7 +436,7 @@ const errorMessage = computed(() => {
             <div v-if="currentStep.questions && currentStep.questions.length" class="reading">
               <div v-for="(questionItem, questionIndex) in currentStep.questions" :key="questionIndex"
                    class="reading__item">
-                <p class="question">{{ questionIndex + 1 }}. {{ questionItem.question }}</p>
+                <p class="question">{{ questionIndex + 1 }}. {{ t(questionItem.question) }}</p>
                 <div class="choices">
                   <button
                       v-for="(optionText, optionIndex) in questionItem.options"
@@ -433,7 +450,7 @@ const errorMessage = computed(() => {
                     }"
                       @click="selectReadingOption(questionIndex, optionIndex)"
                   >
-                    <span class="option__text">{{ optionText }}</span>
+                    <span class="option__text">{{ t(optionText) }}</span>
                   </button>
                 </div>
               </div>
@@ -441,7 +458,7 @@ const errorMessage = computed(() => {
           </section>
           <section v-else-if="currentStep?.type === 'mcq' || currentStep?.type === 'multiple-choice'"
                    class="section card">
-            <p v-if="currentStep.question" class="question">{{ currentStep.question }}</p>
+            <p v-if="currentStep.question" class="question">{{ t(currentStep.question) }}</p>
             <img class="question-image" v-if="currentStep.image" :src="getImageUrl(currentStep.image)"
                  alt="Task image"/>
             <div class="choices">
@@ -456,7 +473,7 @@ const errorMessage = computed(() => {
                 }"
                   @click="selectOption(optionIndex)"
               >
-                <span class="option__text">{{ optionText }}</span>
+                <span class="option__text">{{ t(optionText) }}</span>
               </button>
             </div>
           </section>
@@ -474,7 +491,7 @@ const errorMessage = computed(() => {
                 }"
                   @click="selectOption(optionIndex)"
               >
-                <span class="option__text">{{ optionText }}</span>
+                <span class="option__text">{{ t(optionText) }}</span>
               </button>
             </div>
           </section>
@@ -503,7 +520,7 @@ const errorMessage = computed(() => {
                       :class="{ chosen: matchingState.leftItemId === leftItem.id }"
                       @click="pickLeftItem(leftItem.id)"
                   >
-                    {{ leftItem.text }}
+                    {{ t(leftItem.text) }}
                   </button>
                 </div>
                 <div class="match__col">
@@ -1018,8 +1035,8 @@ const errorMessage = computed(() => {
 }
 
 .question-image {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   display: block;
   padding: 8px;
 }

@@ -313,14 +313,11 @@ onUnmounted(() => {
               <span class="bill-text">{{ t('freeTrial.free-text') }}</span>
               <span class="bill-price">{{ trialInfo.days }} {{ t('freeTrial.free-days') }}</span>
             </div>
-
             <div v-if="trialInfo" class="trial-disclaimer">
               {{ t('freeTrial.trial-text-part-one')}}<strong style="color: #fff;">{{ postTrialPrice }} / {{ t('eulaText.month') }}</strong>.{{ t('freeTrial.trial-text-part-two')}}
             </div>
-
             <div class="bill-total">
               <span class="total-text">{{ t('payPage.finalePrice') }}</span>
-
               <!-- Здесь оставляем запрошенный ключ для "0.00 / 7 дней" -->
               <span class="total-price" v-if="trialInfo">
                 {{ finalPrice }} / {{ trialInfo.days }} {{ t('shopDaysRaw.dayThird') }}
@@ -328,7 +325,6 @@ onUnmounted(() => {
               <span class="total-price" v-else>
                 {{ finalPrice }} / {{ t('eulaText.month') }}
               </span>
-
             </div>
           </div>
           <div class="footer-action-wrapper" ref="payButton">
