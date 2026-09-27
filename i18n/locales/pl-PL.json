@@ -3717,6 +3717,7 @@
     "quest-6": "Wybierz odpowiedź"
   },
   "eventPanel": {
+    "errors": "Błędy",
     "pathMain": "Główna",
     "event": "Wydarzenie",
     "panel": "Panel wydarzenia",
@@ -5847,24 +5848,24 @@
     "questFifteen": "Posłuchaj i zapisz odpowiedź:"
   },
   "eastPlainThirdQuests": {
-    "title": "Co lubisz robić?",
-    "goal": "Naucz się mówić o hobby i wolnym czasie",
-    "description": "Nowi znajomi zapraszają cię, by spędzić razem czas, proponując pójście do sklepu lub supermarketu. Uczysz się mówić o swoich planach: dokąd idziesz i co zamierzasz robić.",
+    "title": "Wyjście do sklepu",
+    "goal": "Nauczyć się słownictwa związanego z zakupami i prostych zwrotów określających kierunek",
+    "description": "Uczymy się nazywać sklep, supermarket i mówić, dokąd idziemy.",
     "questOne": "Jak powiedzieć: Sklep",
-    "questTwo": "Jak powiedzieć: Kupić",
-    "questTree": "Jak powiedzieć: Idę do sklepu",
-    "questFour": "Posłuchaj i napisz",
-    "questFive": "Jak powiedzieć: Cześć! Dokąd idziesz? Idę do sklepu",
-    "questSix": "Posłuchaj i napisz",
-    "questSeven": "Jak powiedzieć: Ja też idę do sklepu",
-    "questEight": "Posłuchaj i napisz",
+    "questTwo": "Jak powiedzieć: Kupować",
+    "questTree": "Jak powiedzieć: Iść",
+    "questFour": "Ułóż: Idziemy",
+    "questFive": "Ułóż: Kupujemy chleb",
+    "questSix": "Posłuchaj i napisz: Kupujemy chleb",
+    "questSeven": "Ułóż: Idziemy do sklepu",
+    "questEight": "Ułóż: Idę do sklepu",
     "questNine": "Jak powiedzieć: Supermarket",
-    "questTen": "Posłuchaj i napisz",
-    "questEleven": "Jak powiedzieć: Nie idę do supermarketu",
+    "questTen": "Posłuchaj i napisz: Supermarket",
+    "questEleven": "Ułóż: Nie idę do supermarketu",
     "questTwelve": "Jak powiedzieć: Kasa",
     "questThirteen": "Jak powiedzieć: Cena",
     "questFourteen": "Jak powiedzieć: Paragon",
-    "questFifteen": "Posłuchaj i napisz"
+    "questFifteen": "Posłuchaj i napisz: Kasa"
   },
   "eastPlainFourthQuests": {
     "title": "Kontynuujemy zakupy?",

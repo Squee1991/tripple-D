@@ -553,7 +553,7 @@ onMounted(() => {
                         @click="goToSession(quest.id)"
                     >
                       {{
-                        quest.isDone ? t('eventPanel.repeat') : (quest.hasErrors ? t('Ошибки') : t('eventPanel.execute'))
+                        quest.isDone ? t('eventPanel.repeat') : (quest.hasErrors ? t('eventPanel.errors') : t('eventPanel.execute'))
                       }}
                     </button>
                   </div>
@@ -581,16 +581,16 @@ onMounted(() => {
   </div>
   <div v-else class="event-closed">
     <div class="closed-content">
-      <h1>🔒 {{ t('eventPanel.notAllowedTitle', 'Событие закрыто') }}</h1>
-      <p>{{ t('eventPanel.notAllowedText', 'В данный момент это событие недоступно.') }}</p>
-      <button @click="pathToMain" class="btn btn--home">{{ t('eventPanel.pathMain', 'На главную') }}</button>
+      <h1>🔒 {{ t('eventPanel.notAllowedTitle') }}</h1>
+      <p>{{ t('eventPanel.notAllowedText') }}</p>
+      <button @click="pathToMain" class="btn btn--home">{{ t('eventPanel.pathMain') }}</button>
     </div>
   </div>
 </template>
 
 <style scoped>
 .season-page {
-  height: 100vh;
+  height: 100%;
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
@@ -601,11 +601,11 @@ onMounted(() => {
 }
 
 .season__bg {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: #1a0f1f url('/images/HalooweenBackground3.webp') no-repeat center center;
   background-size: cover;
-  z-index: -1;
+  z-index: 1;
 }
 
 .season-container {

@@ -3701,6 +3701,7 @@
     "quest-6": "Alege un răspuns"
   },
   "eventPanel": {
+    "errors": "Greșeli",
     "pathMain": "Acasă",
     "event": "Eveniment",
     "panel": "Panou Eveniment",
@@ -5831,24 +5832,24 @@
     "questFifteen": "Ascultă și scrie răspunsul:"
   },
   "eastPlainThirdQuests": {
-    "title": "Ce îți place să faci?",
-    "goal": "Să înveți să vorbești despre hobby-uri și timpul liber",
-    "description": "Noii cunoscuți vă invită să petreceți timpul împreună, propunându-vă să mergeți la magazin sau la supermarket. Învățați să vorbiți despre intențiile voastre: unde mergeți și ce veți face.",
+    "title": "Mersul la magazin",
+    "goal": "Să înveți cuvinte legate de cumpărături și fraze simple de orientare",
+    "description": "Învățăm să numim magazinul, supermarketul și să spunem unde mergem.",
     "questOne": "Cum se spune: Magazin",
     "questTwo": "Cum se spune: A cumpăra",
-    "questTree": "Cum se spune: Merg la magazin",
-    "questFour": "Ascultă și scrie",
-    "questFive": "Cum se spune: Salut! Unde mergi? Merg la magazin",
-    "questSix": "Ascultă și scrie",
-    "questSeven": "Cum se spune: Și eu merg la magazin",
-    "questEight": "Ascultă și scrie",
+    "questTree": "Cum se spune: A merge",
+    "questFour": "Alcătuiește: Mergem",
+    "questFive": "Alcătuiește: Cumpărăm pâine",
+    "questSix": "Ascultă și scrie: Cumpărăm pâine",
+    "questSeven": "Alcătuiește: Mergem la magazin",
+    "questEight": "Alcătuiește: Merg la magazin",
     "questNine": "Cum se spune: Supermarket",
-    "questTen": "Ascultă și scrie",
-    "questEleven": "Cum se spune: Nu merg la supermarket",
-    "questTwelve": "Cum se spune: Casă (de marcat)",
+    "questTen": "Ascultă și scrie: Supermarket",
+    "questEleven": "Alcătuiește: Nu merg la supermarket",
+    "questTwelve": "Cum se spune: Casă de marcat",
     "questThirteen": "Cum se spune: Preț",
-    "questFourteen": "Cum se spune: Bon / Chitanță",
-    "questFifteen": "Ascultă și scrie"
+    "questFourteen": "Cum se spune: Bon fiscal",
+    "questFifteen": "Ascultă și scrie: Casă de marcat"
   },
   "eastPlainFourthQuests": {
     "title": "Continuăm cumpărăturile?",

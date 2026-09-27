@@ -138,11 +138,11 @@ defineEmits(['next', 'themes', 'retryMistakes'])
   align-items: center;
   justify-content: center;
   padding: 26px;
-  margin: 20px 0 ;
+  margin: 20px 0;
 }
 
 .success-lottie {
-  transform: scale(2);
+  width: 600px;
 }
 
 .salute-container {

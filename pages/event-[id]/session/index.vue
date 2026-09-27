@@ -599,8 +599,9 @@ const errorMessage = computed(() => {
 
 <style scoped>
 .lesson {
-  height: 100dvh;
+  height: 100%;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   font-family: "Kablammo", system-ui;
   color: #1f2a44;

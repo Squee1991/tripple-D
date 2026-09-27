@@ -31,7 +31,6 @@ const computedAnimationData = computed(() => {
 </script>
 
 <style scoped>
-
 .game-loader-overlay {
   position: fixed;
   top: 0;
@@ -49,7 +48,7 @@ const computedAnimationData = computed(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 60px;
 }
 
 .loader-lottie-wrapper {
@@ -68,6 +67,24 @@ const computedAnimationData = computed(() => {
 .preloader__icon {
   width: 140px;
   margin: 0 auto;
+}
+
+@media (max-width: 460px) {
+  .loader-lottie {
+    transform: scale(1.9);
+  }
+}
+
+@media (max-width: 360px) {
+  .loader-lottie {
+    transform: scale(1.8);
+  }
+}
+
+@media (max-width: 260px) {
+  .loader-lottie {
+    transform: scale(1.7);
+  }
 }
 
 .app-title {

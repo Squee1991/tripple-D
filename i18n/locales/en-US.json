@@ -3724,6 +3724,7 @@
     "quest-6": "Choose an Answer"
   },
   "eventPanel": {
+    "errors": "Mistakes",
     "pathMain": "Back",
     "event": "Event",
     "panel": "Event Panel",
@@ -5854,24 +5855,24 @@
     "questFifteen": "Listen and write down the answer:"
   },
   "eastPlainThirdQuests": {
-    "title": "What do you like to do?",
-    "goal": "Learn to talk about hobbies and free time",
-    "description": "New friends invite you to spend time together, suggesting going to the store or supermarket. You learn to talk about your intentions: where you are going and what you are doing.",
-    "questOne": "How to say: Shop",
-    "questTwo": "How to say: Buy",
-    "questTree": "How to say: I’m going to the shop",
-    "questFour": "Listen and write",
-    "questFive": "How to say: Hello! Where are you going? I’m going to the shop",
-    "questSix": "Listen and write",
-    "questSeven": "How to say: I’m also going to the shop",
-    "questEight": "Listen and write",
+    "title": "A Trip to the Store",
+    "goal": "Learn shopping-related vocabulary and simple direction phrases",
+    "description": "Learning how to say store, supermarket, and talk about where we are going.",
+    "questOne": "How to say: Store",
+    "questTwo": "How to say: To buy",
+    "questTree": "How to say: To go",
+    "questFour": "Assemble: We are going",
+    "questFive": "Assemble: We are buying bread",
+    "questSix": "Listen and write: We are buying bread",
+    "questSeven": "Assemble: We are going to the store",
+    "questEight": "Assemble: I am going to the store",
     "questNine": "How to say: Supermarket",
-    "questTen": "Listen and write",
-    "questEleven": "How to say: I’m not going to the supermarket",
-    "questTwelve": "How to say: Cash desk",
+    "questTen": "Listen and write: Supermarket",
+    "questEleven": "Assemble: I am not going to the supermarket",
+    "questTwelve": "How to say: Checkout counter",
     "questThirteen": "How to say: Price",
     "questFourteen": "How to say: Receipt",
-    "questFifteen": "Listen and write"
+    "questFifteen": "Listen and write: Checkout counter"
   },
   "eastPlainFourthQuests": {
     "title": "Shall we continue shopping?",

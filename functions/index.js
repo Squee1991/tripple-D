@@ -93,7 +93,7 @@ exports.hedgehogAssistant = onCall({
 		if (!isPremium) {
 			const usageSnap = await usageRef.get();
 			const currentUsage = usageSnap.exists ? (usageSnap.data().hintCount || 0) : 0;
-			if (currentUsage >= 12) {
+			if (currentUsage >= 1000) {
 				return { error: "LIMIT_REACHED" };
 			}
 		}
@@ -155,6 +155,66 @@ CRITICAL: Respond ONLY with valid JSON matching this schema:
   "vocabulary": [ { "de": "word", "tr": "translation" } ],
   "grammarTip": "string"
 }`;
+
+		} else if (action === "guidedProduction") {
+			const subAction = dataIn.subAction || "generate";
+			const topic = dataIn.topic || "Alltag";
+			const level = dataIn.level || "A2";
+
+			if (subAction === "generate") {
+				const randomSeed = dataIn.randomSeed || Date.now();
+				systemPrompt = `You are a strict and logical German tutor. Generate a UNIQUE, highly natural, and LOGICAL sentence starter for a student at the exact CEFR level: ${level} about the topic "${topic}".
+             
+STRICT CEFR LEVEL RULES:
+- If level is A1: Use ONLY simple main clauses. Allowed connectors: "und", "oder", "aber", "denn". DO NOT use subordinate clauses (verb at the end). NEVER use "weil", "dass", "obwohl", "wenn". Vocabulary must be basic A1.
+- If level is A2: You can use basic subordinate clauses with "weil", "dass", "wenn". DO NOT use B1 grammar like "obwohl", "damit", "trotzdem" or complex relative clauses.
+- If level is B1: You may use "obwohl", "damit", "um...zu", relative clauses, and more advanced B1 vocabulary.
+
+LOGIC AND REALISM RULES:
+- The situation MUST be extremely common, realistic, and logical for a normal human daily life.
+- Avoid contrived, confusing, or "stupid" scenarios (e.g., do not say "The waiter brings soup, although..."). Instead, use highly relatable prompts (e.g., "I am very hungry, but...", "I would like to pay, because...").
+- The starter must naturally provoke a realistic, easy-to-guess continuation.
+- Randomization seed to force uniqueness: ${randomSeed}. Do not repeat previous examples.
+
+CRITICAL: Respond ONLY with valid JSON:
+{ 
+  "sentenceStart": "German text ending with ...", 
+  "translation": "Translation in ${userLocale}" 
+}`;
+			} else if (subAction === "hint") {
+				const sentenceStart = dataIn.sentenceStart || "";
+				systemPrompt = `The user needs help finishing the German sentence: "${sentenceStart}".
+Provide 3 short, distinct, and natural ways to finish it at the ${level} level. 
+CRITICAL: Respond ONLY with valid JSON:
+{ 
+  "hints": [ 
+    { "de": "first option", "tr": "translation in ${userLocale}" },
+    { "de": "second option", "tr": "translation in ${userLocale}" },
+    { "de": "third option", "tr": "translation in ${userLocale}" }
+  ] 
+}`;
+			} else if (subAction === "evaluate") {
+				const sentenceStart = dataIn.sentenceStart || "";
+				const userEnding = dataIn.userEnding || "";
+
+				systemPrompt = `You are a friendly German tutor named Hedgehog.
+The user completed the sentence "${sentenceStart}" with the text "${userEnding}".
+Evaluate the grammatical correctness and naturalness of the complete sentence.
+
+STRICT RULES FOR EXPLANATION:
+- Write your feedback entirely in ${userLocale}.
+- If the user made a mistake with adjective declension, explain it using the exact phrase "берет у артикля" to describe how the adjective ending is determined.
+- If the user made a mistake with prepositions of location, explicitly state: "When the question is 'Where?' (Wo?), use Dativ and put the noun's article in Dativ. For Akkusativ, apply the same rule."
+- Keep the feedback supportive, short (1-3 sentences).
+
+CRITICAL: Respond ONLY with valid JSON:
+{
+  "isCorrect": boolean,
+  "feedback": "Your explanation in ${userLocale}",
+  "betterVersion": "How a native speaker would say the full sentence"
+}`;
+			}
+
 		} else {
 			const question = dataIn.question || "";
 			const correctAnswer = dataIn.correctAnswer || dataIn.answer || "";

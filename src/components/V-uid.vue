@@ -271,7 +271,7 @@ onBeforeUnmount(() => {
 }
 
 .event__speaker {
-  width: 66px;
+  width: 60px;
   height: auto;
   object-fit: contain;
   flex-shrink: 0;
@@ -355,7 +355,7 @@ onBeforeUnmount(() => {
 }
 
 .event__badge {
-  font-size: 16px;
+  font-size: 17px;
   font-family: "Rubik Wet Paint", system-ui;
   font-weight: 800;
   text-transform: uppercase;

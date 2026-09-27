@@ -4,7 +4,7 @@
     <AchievementToast @toast-finished="onToastFinished" />
     <VLost/>
     <VRankOverlay/>
-    <VHedgehogIntroModal v-if="showHedgehogModal" @close="showHedgehogModal = false"/>
+<!--    <VHedgehogIntroModal v-if="showHedgehogModal" @close="showHedgehogModal = false"/>-->
     <VNetwork/>
   </NuxtLayout>
 </template>

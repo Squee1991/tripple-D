@@ -11,26 +11,39 @@
           <template v-if="isQuestFullyCompleted">
             <h2 class="success-title slide-down" v-if="animStep >= 1">{{ t('questModals.succesCompleted') || t('eventSessionPage.perfect') }}</h2>
             <p class="success-subtitle slide-down" v-if="animStep >= 1 && !previouslyCleared">
-              {{ t('questModals.rewardGot') || 'Вы получили награду!' }}
+              {{ t('questModals.rewardGot') }}
             </p>
             <p class="success-subtitle slide-down" v-else-if="animStep >= 1 && previouslyCleared">
-              {{ t('Задание пройдено повторно') }}
+              {{ t('questModals.questCompletedAgain') }}
             </p>
           </template>
           <template v-else>
-            <h2 class="success-title slide-down" v-if="animStep >= 1">{{ t('questModals.areErrors') || 'Есть ошибки' }}</h2>
+            <h2 class="success-title slide-down" v-if="animStep >= 1">{{ t('questModals.areErrors') }}</h2>
             <p class="success-subtitle slide-down" v-if="animStep >= 1">{{ t('questModals.mistakes') || t('eventSessionPage.noMistake') }}</p>
           </template>
+
           <div class="success-mascot" :class="{'success-mascot--glow': isQuestFullyCompleted}" v-if="animStep >= 1">
-            <img :src="mascotSrc" class="success-hedgehog pop-in" alt="Result"/>
+            <div class="mascot-lottie-wrapper" v-if="!lottieError">
+              <DotLottieVue
+                  :data="JSON.stringify(isQuestFullyCompleted ? HedgehogSuccess : HedgehogNotSuccess)"
+                  :autoplay="true"
+                  :loop="true"
+                  class="success-lottie"
+                  @error="handleLottieError"
+                  @loadError="handleLottieError"
+              />
+            </div>
+            <img v-else :src="mascotSrc" class="success-hedgehog" alt="Result"/>
           </div>
+
           <div class="success-rewards" v-if="isQuestFullyCompleted && !previouslyCleared">
             <div class="reward-row --xp" :class="{ 'visible': animStep >= 2 }">
               <span class="xp-badge-3d reward-icon-xp">XP</span>
               <span class="reward-val text-xp">+{{ displayXp }}</span>
             </div>
             <div class="reward-row --coins" :class="{ 'visible': animStep >= 3 }">
-              <span class="reward-val text-coins">+{{ displayCoins }} 🎃</span>
+              <span class="xp-badge-3d">🎃</span>
+              <span class="reward-val text-coins">+{{ displayCoins }}</span>
             </div>
           </div>
           <div class="success-actions" :class="{ 'visible': animStep >= (isQuestFullyCompleted && !previouslyCleared ? 4 : 2) }">
@@ -55,8 +68,14 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { useI18n } from '#i18n'
+import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
+import HedgehogSuccess from '~/assets/animation/hedgehog_wolf_howl.json'
+import HedgehogNotSuccess from '~/assets/animation/hedgehog_pumpkin_oh.json'
+
 const { t } = useI18n()
+const lottieError = ref(false)
 
 defineProps({
   finished: Boolean,
@@ -70,6 +89,10 @@ defineProps({
 })
 
 defineEmits(['themes', 'retryMistakes'])
+
+const handleLottieError = () => {
+  lottieError.value = true
+}
 </script>
 
 <style scoped>
@@ -77,7 +100,6 @@ defineEmits(['themes', 'retryMistakes'])
   position: fixed;
   inset: 0;
   background: rgb(25 29 43);
-
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -157,29 +179,17 @@ defineEmits(['themes', 'retryMistakes'])
   z-index: 2;
 }
 
-.success-mascot--glow::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 260px;
-  height: 260px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  animation: pulseGlow 2s infinite alternate;
-  z-index: -1;
+.mascot-lottie-wrapper {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px;
+  margin: 36px 0;
 }
 
-@keyframes pulseGlow {
-  0% {
-    transform: translate(-50%, -50%) scale(0.8);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1.1);
-    opacity: 1;
-  }
+.success-lottie {
+  width: 400px;
 }
 
 .success-hedgehog {
@@ -195,7 +205,7 @@ defineEmits(['themes', 'retryMistakes'])
 }
 
 .reward-row {
-  width: 140px;
+  width: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,13 +223,13 @@ defineEmits(['themes', 'retryMistakes'])
 
 .reward-row.--coins {
   background: #9f874a;
-  padding: 10px;
+  padding: 10px 16px;
   border-radius: 20px;
 }
 
 .reward-row.--xp {
   background: #2b5891;
-  padding: 10px;
+  padding: 14px;
   border-radius: 20px;
 }
 
@@ -248,6 +258,7 @@ defineEmits(['themes', 'retryMistakes'])
   display: flex;
   flex-direction: column;
   gap: 18px;
+  z-index: 9999999999;
   width: 100%;
   max-width: 314px;
   opacity: 0;

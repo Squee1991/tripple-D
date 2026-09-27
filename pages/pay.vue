@@ -56,7 +56,7 @@ const trialInfo = computed(() => {
     const product = billingStore.offerings[0].product
     if (product.introPrice && product.introPrice.price === 0) {
       return {
-        days: 7
+        days: 3
       }
     }
   }

@@ -3701,6 +3701,7 @@
     "quest-6": "Elige una respuesta"
   },
   "eventPanel": {
+    "errors": "Errores",
     "pathMain": "Al inicio",
     "event": "Evento",
     "panel": "Panel del evento",
@@ -5831,24 +5832,24 @@
     "questFifteen": "Escucha y escribe la respuesta:"
   },
   "eastPlainThirdQuests": {
-    "title": "¿Qué te gusta hacer?",
-    "goal": "Aprender a hablar sobre pasatiempos y tiempo libre",
-    "description": "Los nuevos amigos te invitan a pasar tiempo juntos, proponiéndote ir de compras o al supermercado. Aprendes a hablar sobre tus intenciones: a dónde vas y qué vas a hacer.",
+    "title": "Ir a la tienda",
+    "goal": "Aprender vocabulario de compras y frases sencillas de dirección",
+    "description": "Aprendemos a nombrar la tienda, el supermercado y a decir adónde vamos.",
     "questOne": "Cómo decir: Tienda",
     "questTwo": "Cómo decir: Comprar",
-    "questTree": "Cómo decir: Voy a la tienda",
-    "questFour": "Escucha y escribe",
-    "questFive": "Cómo decir: ¡Hola! ¿A dónde vas? Voy a la tienda",
-    "questSix": "Escucha y escribe",
-    "questSeven": "Cómo decir: Yo también voy a la tienda",
-    "questEight": "Escucha y escribe",
+    "questTree": "Cómo decir: Ir",
+    "questFour": "Arma: Vamos",
+    "questFive": "Arma: Compramos pan",
+    "questSix": "Escucha y escribe: Compramos pan",
+    "questSeven": "Arma: Vamos a la tienda",
+    "questEight": "Arma: Voy a la tienda",
     "questNine": "Cómo decir: Supermercado",
-    "questTen": "Escucha y escribe",
-    "questEleven": "Cómo decir: No voy al supermercado",
+    "questTen": "Escucha y escribe: Supermercado",
+    "questEleven": "Arma: No voy al supermercado",
     "questTwelve": "Cómo decir: Caja",
     "questThirteen": "Cómo decir: Precio",
     "questFourteen": "Cómo decir: Recibo",
-    "questFifteen": "Escucha y escribe"
+    "questFifteen": "Escucha y escribe: Caja"
   },
   "eastPlainFourthQuests": {
     "title": "¿Continuamos las compras?",
