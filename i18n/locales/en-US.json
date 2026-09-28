@@ -3530,7 +3530,8 @@
     "close": "Close",
     "light": "Light",
     "dark": "Dark",
-    "pink": "Romantic"
+    "pink": "Romantic",
+    "halloween": "Halloween"
   },
   "pinkThemeModal": {
     "partOne": "This theme can only be unlocked during the",
@@ -10838,5 +10839,254 @@
     "punch": "Witch's Punch",
     "spellBook": "Spellbook",
     "ghostEffect": "Halloween Effect"
+  },
+  "hallowenQuestTwo": {
+    "titleOne": "When is Halloween celebrated?",
+    "titleTwo": "Which vegetable is traditionally carved for Halloween?",
+    "titleThree": "What do children in Germany shout when asking for sweets?",
+    "titleFour": "What is the famous pumpkin lantern called?",
+    "titleFive": "Which two colors are most closely associated with Halloween?",
+    "titleSix": "Which animal is considered the main nocturnal symbol of the holiday?",
+    "titleSeven": "Which holiday comes right after Halloween on November 1st?",
+    "titleEight": "What is traditionally placed inside a carved pumpkin?"
+  },
+  "hallowenQuestThree": {
+    "titleOne": "What was carved in the German lands before pumpkins became common?",
+    "titleTwo": "In which German castle has a major Halloween festival been held since the 1970s?",
+    "titleThree": "What important holiday does the Lutheran Church celebrate on October 31st?",
+    "titleFour": "During which November holiday do children march through the streets with homemade lanterns?",
+    "titleFive": "In which country are turnip lanterns (Räbeliechtli) traditionally carved in November?",
+    "titleSix": "Why do people hide knives in the kitchen on this night according to an old German belief?",
+    "titleSeven": "Why do parties in some German federal states have to quiet down by midnight?",
+    "titleEight": "What is most commonly cooked from pumpkin flesh in Germany?"
+  },
+  "hallowenQuestFour": {
+    "titleOne": "Which creature is afraid of garlic and sleeps in a coffin by day?",
+    "titleTwo": "On which mountain in the Harz range do witches gather according to German folklore?",
+    "titleThree": "What do you call a person who turns into a wolf during a full moon?",
+    "titleFour": "What does a witch fly on according to legends?",
+    "titleFive": "Which creature wanders through old castles dressed in white robes?",
+    "titleSex": "Which animal most often accompanies a witch in traditional folklore?",
+    "titleSeven": "What are the wandering marsh lights called that lead travelers astray?",
+    "titleEight": "What do you call a reanimated, slow-moving corpse?"
+  },
+  "hallowenQuestFive": {
+    "titleOne": "Why did people originally dress up in scary costumes?",
+    "titleTwo": "Which costume consists of white bones depicted on a dark background?",
+    "titleThree": "What must definitely be paired with a vampire's black cape?",
+    "titleFour": "What was traditionally used as the base for the simplest ghost costume?",
+    "titleFive": "Which fruit at autumn fairs is commonly coated in red candied glaze?",
+    "titleSix": "What is usually hung in the corners of rooms to create a spooky atmosphere?",
+    "titleSeven": "What is most often given to children in Germany in response to their rhyme?",
+    "titleEight": "At what time do children usually go trick-or-treating from house to house?"
+  },
+  "hallowenQuestSix": {
+    "titleOne": "Which ancient Celtic festival is considered the historical ancestor of Halloween?",
+    "titleTwo": "What do children playfully threaten with in the phrase «...sonst gibt's Saures» if they are not given sweets?",
+    "titleThree": "In which city near Stuttgart are giant figures made of pumpkins built every year?",
+    "titleFour": "What does a witch in fairy tales brew her potions in?",
+    "titleFive": "Which eight-legged creature weaves strong capture webs?",
+    "titleSix": "What do sorcerers and wizards use to work their magic?",
+    "titleSeven": "What is often done with pumpkin seeds after hollowing out a pumpkin?",
+    "titleEight": "Why is the autumn forest in late October perfect for spooky tales?"
+  },
+  "hallowenQuestSeven": {
+    "questOne": "At what time of day does the family carve the pumpkin?",
+    "questTwo": "What kind of face do they carve?",
+    "questThree": "What do they place inside the pumpkin?",
+    "questFour": "Why is a candle placed inside?",
+    "questFive": "What kind of atmosphere fills the room this evening?"
+  },
+  "hallowenQuestEight": {
+    "questOne": "When do the children set out on their walk?",
+    "questTwo": "Who did Lucas dress up as?",
+    "questThree": "What kind of headwear is Mia wearing?",
+    "questFour": "What do the children shout loudly at front doors?",
+    "questFive": "What do the neighbors fill the children's bags with?"
+  },
+  "hallowenQuestNine": {
+    "questOne": "Near which city is the castle located?",
+    "questTwo": "In what state has the castle survived to this day?",
+    "questThree": "Who dresses up as monsters in the castle?",
+    "questFour": "What do the costumed actors do to the visitors?",
+    "questFive": "What kind of weather usually surrounds this castle in autumn?"
+  },
+  "hallowenQuestTen": {
+    "questOne": "Who is commemorated on Reformation Day?",
+    "questTwo": "What status does October 31st hold in many German federal states?",
+    "questThree": "What usually takes place in churches during the day?",
+    "questFour": "Who does the late evening of October 31st most often belong to?",
+    "questFive": "Which denomination celebrates Reformation Day?"
+  },
+  "hallowenQuestEleven": {
+    "questOne": "What did children carve before pumpkins appeared?",
+    "questTwo": "What were such glowing lanterns called?",
+    "questThree": "In which regions was this custom especially popular?",
+    "questFour": "What was placed inside the hollowed-out turnip?",
+    "questFive": "Which season was welcomed with this ritual?"
+  },
+  "hallowenQuestTwelve": {
+    "questOne": "What holiday is celebrated on November 1st?",
+    "questTwo": "What does the status of a \"silent holiday\" mean?",
+    "questThree": "Where do many families go on this day?",
+    "questFour": "What do people light on the graves of their loved ones?",
+    "questFive": "In which federal states is this day especially revered?"
+  },
+  "hallowenQuestThirteen": {
+    "questOne": "When is St. Martin's Day celebrated?",
+    "questTwo": "What do children carry during the procession?",
+    "questThree": "What songs are sung during the procession?",
+    "questFour": "What is lit at the end of the festive procession?",
+    "questFive": "What traditional pastry is handed out to the children?"
+  },
+  "hallowenQuestfourteen": {
+    "questOne": "In which park does the famous exhibition take place?",
+    "questTwo": "What are the giant figures assembled from?",
+    "questThree": "What signature dishes do the exhibition guests taste?",
+    "questFour": "How many pumpkins are used to decorate the exhibition?",
+    "questFive": "At what time of year is this exhibition open?"
+  },
+  "hallowenQuestfifteen": {
+    "questOne": "What is the game with apples in water called?",
+    "questTwo": "What is the large bowl filled with?",
+    "questThree": "What floats on the surface of the water?",
+    "questFour": "Where must participants keep their hands?",
+    "questFive": "What must be used to retrieve the apple?"
+  },
+  "hallowenQuestSixteen": {
+    "questOne": "What is the next fun competition called?",
+    "questTwo": "What do the two teams do against each other?",
+    "questThree": "Who does each team choose?",
+    "questFour": "What material is used for wrapping?",
+    "questFive": "Which team wins this game?"
+  },
+  "hallowenQuestSeventeen": {
+    "title": "Match the word with its translation",
+    "wordOne": "Sweets",
+    "wordTwo": "Bat",
+    "wordThree": "Vampire",
+    "wordFour": "Candle",
+    "wordFive": "Broom",
+    "wordSix": "Black cat",
+    "wordSeven": "Pumpkin",
+    "wordEight": "Skeleton",
+    "wordNine": "Ghost",
+    "wordTen": "Magic book",
+    "wordEleven": "Spirit",
+    "wordTwelve": "Raven",
+    "wordThirteen": "Witch's hat",
+    "wordFourteen": "Wizard",
+    "wordFifteen": "Spider",
+    "wordSixteen": "Witch's broom",
+    "wordSeventeen": "Witch's cauldron",
+    "wordEighteen": "Magic wand"
+  },
+  "hallowenQuestEightteen": {
+    "title": "Match the item with its brief description",
+    "titleTwo": "Match the character with their distinctive trait",
+    "titleThree": "Match the holiday with its exact date",
+    "textOne": "Cobwebs in the corners",
+    "textTwo": "Cloak with a red collar",
+    "textThree": "Lantern with a face",
+    "textFour": "Stone in a cemetery",
+    "textFive": "Flies in the dark",
+    "textSix": "A witch flies on this",
+    "textSeven": "Consists only of white bones",
+    "textEight": "Fears garlic and sleeps in a coffin",
+    "textNine": "Howls at the moon in a dark forest",
+    "textTen": "Rattles chains in an old castle",
+    "textEleven": "Brews potions in a cast-iron cauldron",
+    "textTwelve": "Covered from head to toe in white bandages",
+    "textThirteen": "November 1st",
+    "textFourteen": "Midnight (00:00)",
+    "textFifteen": "Evening of October 31st",
+    "textSixteen": "November 11th at 11:11",
+    "textSeventeen": "October 31st (daytime)",
+    "textEighteen": "November 11th (lanterns)"
+  },
+  "hallowenQuestNineteen": {
+    "title": "Match the word with its meaning",
+    "wordOne": "Mountain in the Harz where witches gather",
+    "wordTwo": "Children's lantern procession in November",
+    "wordThree": "Witching hour from midnight to 1:00 AM",
+    "wordFour": "Mythical forest king from Goethe's ballad",
+    "wordFive": "Ancient fodder turnip carving",
+    "wordSix": "Day without noisy parties and dancing",
+    "wordSeven": "Dispels darkness inside the pumpkin",
+    "wordEight": "Horseshoe for good luck and home protection",
+    "wordNine": "Protection against vampires",
+    "wordTen": "Threshold amulet against evil forces",
+    "wordEleven": "Metal against werewolves in fairy tales",
+    "wordTwelve": "Deceives wandering spirits",
+    "wordThirteen": "Coffin",
+    "wordFourteen": "Potion",
+    "wordFifteen": "Castle ruins",
+    "wordSixteen": "Fog",
+    "wordSeventeen": "Cemetery",
+    "wordEighteen": "Bone"
+  },
+  "hallowenQuestTwenty": {
+    "title": "Match the word with its translation",
+    "wordOne": "Monster castle",
+    "wordTwo": "Werewolf",
+    "wordThree": "Haunted house",
+    "wordFour": "Cemetery",
+    "wordFive": "Mummy",
+    "wordSix": "Coffin",
+    "wordSeven": "Darkness / Gloom",
+    "wordEight": "Midnight",
+    "wordNine": "Scary mask",
+    "wordTen": "Scream",
+    "wordEleven": "Gravestone",
+    "wordTwelve": "Skeleton / Framework",
+    "wordThirteen": "Skull",
+    "wordFourteen": "Ghost ship",
+    "wordFifteen": "Curse",
+    "wordSixteen": "Spiderweb",
+    "wordSeventeen": "Labyrinth",
+    "wordEighteen": "Magic potion"
+  },
+  "hallowenQuestTwentyOne": {
+    "questOne": "Which animal does not belong in the Halloween company?",
+    "questTwo": "What is the odd one out among sweets in a child's bag?",
+    "questThree": "Which word is the odd one out by meaning?",
+    "questFour": "What does not glow in the dark at the festival?",
+    "questFive": "What is not associated with autumn and the holiday?",
+    "questSix": "Which item does not belong to a wizard or witch?"
+  },
+  "hallowenQuestTwentyTwo": {
+    "title": "Odd word out: Part 2",
+    "questOne": "What kind of weather is completely unsuitable for a Halloween evening?",
+    "questTwo": "What is not worn as part of a Halloween costume?",
+    "questThree": "Which item is the odd one out among witchy kitchenware?",
+    "questFour": "What does a vampire completely not need?",
+    "questFive": "Which bird or beast is the odd one out among creatures of the night?",
+    "questSix": "Which drink is the odd one out among warming autumn treats?"
+  },
+  "hallowenQuestTwentyThree": {
+    "title": "Match the words with opposite meanings"
+  },
+  "haloweenBanner": {
+    "shop": "Buy effects and gifts in the event shop!",
+    "quests": "Complete quests to collect pumpkin currency!"
+  },
+  "eventsModalButtons": {
+    "pumpkin": "Collect pumpkins",
+    "april": "Start the fun",
+    "valentine": "Give valentines",
+    "winter": "Into the winter fairy tale!"
+  },
+  "eventsNotification": {
+    "now": "Happening now!",
+    "left": "Time left:",
+    "untilEvent": " Until event:"
+  },
+  "steakInfo": {
+    "text": "Complete daily quests to keep your streak"
+  },
+  "halloweenThemeModal": {
+    "partOne": "This theme can only be unlocked during the event",
+    "partTwo": "«Pumpkin Festival»",
+    "partThree": "Get it in the event shop"
   }
 }

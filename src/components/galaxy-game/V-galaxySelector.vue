@@ -186,7 +186,7 @@ const updateTimer = () => {
   store.checkBatteryRegen()
 
   const now = Date.now()
-  const REGEN_MS = 60 * 60 * 1000
+  const REGEN_MS = 10 * 60 * 1000
   const nextRegen = store.currentBatteryRegen + REGEN_MS
   const diff = nextRegen - now
 

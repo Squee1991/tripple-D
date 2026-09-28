@@ -10,7 +10,7 @@ export const dailyStore = defineStore('dailyStore', () => {
     const CYCLE_MS = 24 * 60 * 60 * 1000
     const QUESTS_PER_CYCLE = 3
     const SYNC_MS = 30 * 1000
-    const LOCAL_KEY_BASE = 'daily_cycle_v3'
+    const LOCAL_KEY_BASE = 'daily_cycle_v4'
     const localKey = () => `${LOCAL_KEY_BASE}_${uid() || 'anon'}`
 
     const isClient = typeof window !== 'undefined'

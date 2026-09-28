@@ -55,7 +55,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 			id: 'pumpkin',
 			valueKey: 'eventsNavNames.halloween',
 			url: '/event-halloween',
-			start: '9-25 00:00',
+			start: '10-1 00:00',
 			end: '11-08 23:59',
 			icon: HalloweenNav,
 			alt: 'HalloweenNav'

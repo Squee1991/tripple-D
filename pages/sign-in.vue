@@ -93,10 +93,9 @@
 
 <script setup>
 import {ref, computed, watch, onMounted, onUnmounted} from 'vue'
-import {userAuthStore} from '../../store/authStore.js'
+import {userAuthStore} from '~/store/authStore.js'
 import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
-import {mapErrors} from '../utils/errorsHandler.js'
+import {mapErrors} from '~/utils/errorsHandler.js'
 import View from '../../assets/images/loginEyes/view.svg'
 import Hide from '../../assets/images/loginEyes/hide.svg'
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
@@ -244,7 +243,6 @@ onUnmounted(() => {
 </script>
 
 <style>
-/* Твои стили без изменений */
 
 .auth__title.left {
   justify-content: start;

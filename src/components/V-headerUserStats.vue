@@ -62,7 +62,6 @@
         </div>
       </div>
     </transition>
-
     <VCalendarStreak
         v-model="isCalendarOpen"
         :streak="userAuth.streakCount"
@@ -92,7 +91,6 @@ const router = useRouter()
 const activeTooltip = ref(null)
 const showFreezeModal = ref(false)
 const isCalendarOpen = ref(false)
-
 
 const formattedFreezeDate = computed(() => {
   if (!userAuth.freezeEndsAt) return ''
@@ -238,12 +236,11 @@ onBeforeUnmount(() => {
   padding: 0 2px;
   height: 38px;
   cursor: pointer;
-  gap: 5px;
 }
 
 .stat-icon {
-  width: 28px;
-  height: 28px;
+  width: 27px;
+  height: 27px;
   object-fit: contain;
 }
 
@@ -255,8 +252,8 @@ onBeforeUnmount(() => {
 }
 
 .freeze-icon {
-  width: 28px;
-  height: 28px;
+  width: 23px;
+  height: 23px;
 }
 
 .stat-value {
@@ -478,7 +475,7 @@ onBeforeUnmount(() => {
   padding: 12px;
   background: #f1c40f;
   border: none;
-  border-radius: 12px;
+  border-radius: 50px;
   color: #1c222d;
   font-weight: 700;
   font-size: 16px;

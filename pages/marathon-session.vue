@@ -251,7 +251,7 @@ function goBackToPrepare() {
 function toMain() {
   showGameOverModal.value = false
   confettiParticles.value = []
-  router.push('/')
+  router.push('//article-marathon')
 }
 
 watch(() => gameStore.gameActive, (isActive) => {

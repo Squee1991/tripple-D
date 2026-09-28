@@ -7,6 +7,13 @@ export const dailyQuests = [
 		url: '/thematic-learning'
 	},
 	{
+		id: 'perfectQuest',
+		name: 'daily.thirteenth',
+		currentValue: 0,
+		targetValue: 1,
+		url: '/study'
+	},
+	{
 		id: 'learnWordsArticle',
 		name: 'daily.first',
 		currentValue: 0,
@@ -32,18 +39,26 @@ export const dailyQuests = [
 		name: 'daily.third',
 		currentValue: 0,
 		targetValue: 5,
-		url: '/study'
+		url: '/article-marathon'
 	},
-	{
-		id: 'exp',
-		name: 'daily.fourth',
-		currentValue: 0,
-		targetValue: 5,
-		url: '/study'
-	},
+
+	// {
+	//     id: 'exp',
+	//     name: 'daily.fourth',
+	//     currentValue: 0,
+	//     targetValue: 5,
+	//     url: '/articles'
+	// },
 	{
 		id: 'thematicLearning',
 		name: 'daily.twelve',
+		currentValue: 0,
+		targetValue: 1,
+		url: '/thematic-learning'
+	},
+	{
+		id: 'perfectQuest',
+		name: 'daily.thirteenth',
 		currentValue: 0,
 		targetValue: 1,
 		url: '/study'
@@ -53,7 +68,14 @@ export const dailyQuests = [
 		name: 'daily.fifth',
 		currentValue: 0,
 		targetValue: 5,
-		url: '/study'
+		url: '/guess-word'
+	},
+	{
+		id: 'streakMedium',
+		name: 'daily.sixth',
+		currentValue: 0,
+		targetValue: 5,
+		url: '/article-marathon'
 	},
 	{
 		id: 'perfectQuest',
@@ -63,31 +85,24 @@ export const dailyQuests = [
 		url: '/study'
 	},
 	{
-		id: 'streakMedium',
-		name: 'daily.sixth',
-		currentValue: 0,
-		targetValue: 5,
-		url: '/study'
-	},
-	{
 		id: 'guessWord',
 		name: 'daily.fourteenth',
 		currentValue: 0,
 		targetValue: 5,
-		url: '/study'
+		url: '/guess-word'
 	},
 	{
 		id: 'thematicLearning',
 		name: 'daily.twelve',
 		currentValue: 0,
 		targetValue: 1,
-		url: '/study'
+		url: '/thematic-learning'
 	},
 	{
-		id: 'trainPlural',
-		name: 'daily.seventh',
+		id: 'perfectQuest',
+		name: 'daily.thirteenth',
 		currentValue: 0,
-		targetValue: 5,
+		targetValue: 1,
 		url: '/study'
 	},
 	{
@@ -95,62 +110,69 @@ export const dailyQuests = [
 		name: 'daily.eighth',
 		currentValue: 0,
 		targetValue: 5,
-		url: '/study'
+		url: '/articles'
 	},
-	{
-		id: 'thematicLearning',
-		name: 'daily.twelve',
-		currentValue: 0,
-		targetValue: 1,
-		url: '/study'
-	},
-	{
-		id: 'audioArticle',
-		name: 'daily.ninth',
-		currentValue: 0,
-		targetValue: 5,
-		url: '/study'
-	},
-	{
-		id: 'perfectQuest',
-		name: 'daily.thirteenth',
-		currentValue: 0,
-		targetValue: 1,
-		url: '/study'
-	},
-	{
-		id: 'guessWord',
-		name: 'daily.fourteenth',
-		currentValue: 0,
-		targetValue: 5,
-		url: '/study'
-	},
-	{
-		id: 'streakHard',
-		name: 'daily.tenth',
-		currentValue: 0,
-		targetValue: 5,
-		url: '/study'
-	},
-	{
-		id: 'perfectQuest',
-		name: 'daily.thirteenth',
-		currentValue: 0,
-		targetValue: 1,
-		url: '/study'
-	},
-	{
-		id: 'exp',
-		name: 'daily.eleventh',
-		currentValue: 0,
-		targetValue: 5,
-		url: '/study'
-	},
-	{
-		id: 'guessWord',
-		name: 'daily.fourteenth',
-		currentValue: 0,
-		targetValue: 5,
-		url: '/study'
-	},
-]
+	// {
+	//     id: 'trainPlural',
+	//     name: 'daily.seventh',
+	//     currentValue: 0,
+	//     targetValue: 5,
+	//     url: '/articles'
+	// },
+	// {
+	//     id: 'thematicLearning',
+	//     name: 'daily.twelve',
+	//     currentValue: 0,
+	//     targetValue: 1,
+	//     url: '/thematic-learning'
+	// },
+	// {
+	//     id: 'audioArticle',
+	//     name: 'daily.ninth',
+	//     currentValue: 0,
+	//     targetValue: 5,
+	//     url: '/articles'
+	// },
+	// {
+	//     id: 'perfectQuest',
+	//     name: 'daily.thirteenth',
+	//     currentValue: 0,
+	//     targetValue: 1,
+	//     url: '/study'
+	// },
+	// {
+	//     id: 'guessWord',
+	//     name: 'daily.fourteenth',
+	//     currentValue: 0,
+	//     targetValue: 5,
+	//     url: '/guess-word'
+	// },
+	// {
+	//     id: 'streakHard',
+	//     name: 'daily.tenth',
+	//     currentValue: 0,
+	//     targetValue: 5,
+	//     url: '/article-marathon'
+	// },
+	// {
+	//     id: 'perfectQuest',
+	//     name: 'daily.thirteenth',
+	//     currentValue: 0,
+	//     targetValue: 1,
+	//     url: '/study'
+	// },
+	// {
+	//     id: 'exp',
+	//     name: 'daily.eleventh',
+	//     currentValue: 0,
+	//     targetValue: 5,
+	//     url: '/articles'
+	// },
+	// {
+	//     id: 'guessWord',
+	//     name: 'daily.fourteenth',
+	//     currentValue: 0,
+	//     targetValue: 5,
+	//     url: '/guess-word'
+	// },
+];

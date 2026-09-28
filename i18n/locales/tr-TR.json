@@ -3516,7 +3516,8 @@
     "close": "Kapat",
     "light": "Açık",
     "dark": "Koyu",
-    "pink": "Romantik"
+    "pink": "Romantik",
+    "halloween": "Cadılar Bayramı"
   },
   "pinkThemeModal": {
     "partOne": "Bu temanın kilidi sadece",
@@ -10825,5 +10826,254 @@
     "punch": "Cadı pançı",
     "spellBook": "Büyü kitabı",
     "ghostEffect": "Cadılar Bayramı efekti"
+  },
+  "hallowenQuestTwo": {
+    "titleOne": "Cadılar Bayramı ne zaman kutlanır?",
+    "titleTwo": "Cadılar Bayramı'nda geleneksel olarak hangi sebze oyulur?",
+    "titleThree": "Almanya'da çocuklar şeker isterken ne diye bağırırlar?",
+    "titleFour": "Oyulmuş meşhur balkabağı fenerine ne ad verilir?",
+    "titleFive": "Cadılar Bayramı ile en çok özdeşleşen iki renk hangisidir?",
+    "titleSix": "Bayramın en önemli gece sembolü sayılan hayvan hangisidir?",
+    "titleSeven": "Cadılar Bayramı'nın hemen ardından, 1 Kasım'da hangi bayram gelir?",
+    "titleEight": "Oyulmuş balkabağının içine geleneksel olarak ne konur?"
+  },
+  "hallowenQuestThree": {
+    "titleOne": "Balkabağının gelişinden önce Alman topraklarında ne oyulurdu?",
+    "titleTwo": "1970'lerden bu yana hangi Alman kalesinde büyük bir Cadılar Bayramı festivali düzenlenmektedir?",
+    "titleThree": "Lüteriyen Kilisesi 31 Ekim'de hangi önemli bayramı kutlar?",
+    "titleFour": "Kasım ayındaki hangi bayramda çocuklar el yapımı fenerlerle sokaklarda yürür?",
+    "titleFive": "Kasım ayında şalgam fenerleri (Räbeliechtli) oyma geleneği hangi ülkeye aittir?",
+    "titleSix": "Eski bir Alman inanışına göre bu gece mutfaktaki bıçaklar neden saklanır?",
+    "titleSeven": "Almanya'nın bazı eyaletlerinde partilerin gece yarısına doğru sessizleşmesi neden gerekir?",
+    "titleEight": "Almanya'da balkabağının içinden en çok ne pişirilir?"
+  },
+  "hallowenQuestFour": {
+    "titleOne": "Sarımsaktan korkan ve gündüzleri tabutta uyuyan yaratık hangisidir?",
+    "titleTwo": "Alman efsanelerine göre cadılar Harz Dağları'ndaki hangi dağda toplanır?",
+    "titleThree": "Dolunayda kurda dönüşen kişiye ne ad verilir?",
+    "titleFour": "Efsanelere göre bir cadı neyin üzerinde uçar?",
+    "titleFive": "Eski kalelerde beyaz elbiseler içinde dolaşan varlık hangisidir?",
+    "titleSex": "Halk inanışlarında cadıya en sık eşlik eden hayvan hangisidir?",
+    "titleSeven": "Yolcuları patikadan saptıran bataklıktaki aldatıcı ışıklara ne ad verilir?",
+    "titleEight": "Yeniden canlanan yavaş hareketli ölüye ne denir?"
+  },
+  "hallowenQuestFive": {
+    "titleOne": "İnsanlar başlangıçta neden korkunç kılıklara girerlerdi?",
+    "titleTwo": "Karanlık bir zemin üzerindeki beyaz kemiklerden oluşan kostüm hangisidir?",
+    "titleThree": "Bir vampirin siyah pelerininin yanına mutlaka ne takılmalıdır?",
+    "titleFour": "Eskiden en basit hayalet kostümü için temel olarak ne kullanılırdı?",
+    "titleFive": "Panayırlarda genellikle parlak kırmızı şeker kaplamasıyla kaplanan meyve hangisidir?",
+    "titleSix": "Korkutucu bir atmosfer yaratmak için odaların köşelerine genellikle ne asılır?",
+    "titleSeven": "Almanya'da çocuklara söyledikleri tekerleme karşılığında en çok ne verilir?",
+    "titleEight": "Çocuklar şeker toplamak için evleri genellikle hangi saatte gezmeye başlarlar?"
+  },
+  "hallowenQuestSix": {
+    "titleOne": "Cadılar Bayramı'nın tarihi atası sayılan antik Kelt festivali hangisidir?",
+    "titleTwo": "Çocuklar «...sonst gibt's Saures» ifadesinde şeker verilmezse şakayla karışık neyle tehdit ederler?",
+    "titleThree": "Stuttgart yakınlarındaki hangi şehirde her yıl devasa balkabağı heykelleri inşa edilir?",
+    "titleFour": "Masallarda cadı iksirlerini neyin içinde kaynatır?",
+    "titleFive": "Sağlam av ağları ören sekiz bacaklı canlı hangisidir?",
+    "titleSix": "Büyücüler ve sihirbazlar büyülerini neyin yardımıyla yaparlar?",
+    "titleSeven": "Balkabağının içi temizlendikten sonra çekirdeklerine genellikle ne yapılır?",
+    "titleEight": "Ekim sonundaki sonbahar ormanı neden korku hikayeleri için son derece uygundur?"
+  },
+  "hallowenQuestSeven": {
+    "questOne": "Aile günün hangi saatinde balkabağını oyar?",
+    "questTwo": "Nasıl bir yüz ifadesi oyarlar?",
+    "questThree": "Balkabağının içine ne koyarlar?",
+    "questFour": "İçine neden mum yerleştirilir?",
+    "questFive": "Bu akşam nasıl bir atmosfer hakimdir?"
+  },
+  "hallowenQuestEight": {
+    "questOne": "Çocuklar yürüyüşe ne zaman çıkar?",
+    "questTwo": "Lukas kimin kılığına girdi?",
+    "questThree": "Mia başında ne tür bir başlık takıyor?",
+    "questFour": "Çocuklar sokak kapılarında ne diye bağırırlar?",
+    "questFive": "Komşular çocukların çantalarını neyle doldurur?"
+  },
+  "hallowenQuestNine": {
+    "questOne": "Kale hangi şehrin yakınında yer almaktadır?",
+    "questTwo": "Kale günümüze kadar ne şekilde korunarak gelmiştir?",
+    "questThree": "Kalede canavar kılığına kimler girer?",
+    "questFour": "Kostümlü oyuncular ziyaretçilere ne yapar?",
+    "questFive": "Sonbaharda bu kalenin çevresinde genellikle nasıl bir hava hakimdir?"
+  },
+  "hallowenQuestTen": {
+    "questOne": "Reform Günü'nde kim anılır?",
+    "questTwo": "Almanya'nın birçok eyaletinde 31 Ekim hangi resmi statüye sahiptir?",
+    "questThree": "Kiliselerde gündüzleri genellikle ne yapılır?",
+    "questFour": "31 Ekim'in geç saatleri çoğunlukla kime aittir?",
+    "questFive": "Reform Günü'nü hangi mezhep kutlar?"
+  },
+  "hallowenQuestEleven": {
+    "questOne": "Balkabağından önce çocuklar neyi oyardı?",
+    "questTwo": "Bu tür ışıldayan figürlere ne ad verilirdi?",
+    "questThree": "Bu gelenek özellikle hangi bölgelerde popülerdi?",
+    "questFour": "İçi oyulmuş şalgamın içine ne konurdu?",
+    "questFive": "Bu ritüelle yılın hangi mevsimi karşılanırdı?"
+  },
+  "hallowenQuestTwelve": {
+    "questOne": "1 Kasım'da hangi bayram kutlanır?",
+    "questTwo": "«Sessiz bayram» statüsü ne anlama gelir?",
+    "questThree": "Birçok aile bu günde nereye gider?",
+    "questFour": "İnsanlar yakınlarının mezarlarında ne yakarlar?",
+    "questFive": "Bu güne özellikle hangi eyaletlerde saygı gösterilir?"
+  },
+  "hallowenQuestThirteen": {
+    "questOne": "Aziz Martin Günü ne zaman kutlanır?",
+    "questTwo": "Yürüyüş sırasında çocuklar ne taşırlar?",
+    "questThree": "Yürüyüş esnasında hangi şarkılar söylenir?",
+    "questFour": "Kutlama yürüyüşünün sonunda ne yakılır?",
+    "questFive": "Çocuklara hangi geleneksel hamur işi dağıtılır?"
+  },
+  "hallowenQuestfourteen": {
+    "questOne": "Ünlü sergi hangi parkta düzenleniyor?",
+    "questTwo": "Devasa figürler nelerden inşa ediliyor?",
+    "questThree": "Sergi ziyaretçileri hangi özel lezzetleri tadıyor?",
+    "questFour": "Serginin dekorasyonu için kaç adet balkabağı kullanılıyor?",
+    "questFive": "Bu sergi yılın hangi mevsiminde açıktır?"
+  },
+  "hallowenQuestfifteen": {
+    "questOne": "Sudaki elma yakalama oyununun adı nedir?",
+    "questTwo": "Büyük kase ne ile doldurulur?",
+    "questThree": "Suyun yüzeyinde ne yüzer?",
+    "questFour": "Katılımcılar ellerini nereye saklamalıdır?",
+    "questFive": "Elma neyin yardımıyla çıkarılmalıdır?"
+  },
+  "hallowenQuestSixteen": {
+    "questOne": "Bir sonraki eğlenceli yarışmanın adı nedir?",
+    "questTwo": "İki takım kendi arasında ne yapar?",
+    "questThree": "Her takım kimi seçer?",
+    "questFour": "Sarmak için hangi malzeme kullanılır?",
+    "questFive": "Bu oyunda hangi takım kazanır?"
+  },
+  "hallowenQuestSeventeen": {
+    "title": "Kelimeyi çevirisiyle eşleştir",
+    "wordOne": "Tatlılar",
+    "wordTwo": "Yarasa",
+    "wordThree": "Vampir",
+    "wordFour": "Mum",
+    "wordFive": "Süpürge",
+    "wordSix": "Kara kedi",
+    "wordSeven": "Balkabağı",
+    "wordEight": "İskelet",
+    "wordNine": "Hayalet",
+    "wordTen": "Büyü kitabı",
+    "wordEleven": "Ruh",
+    "wordTwelve": "Kuzgun",
+    "wordThirteen": "Cadı şapkası",
+    "wordFourteen": "Büyücü",
+    "wordFifteen": "Örümcek",
+    "wordSixteen": "Cadı süpürgesi",
+    "wordSeventeen": "Cadı kazanı",
+    "wordEighteen": "Sihirli değnek"
+  },
+  "hallowenQuestEightteen": {
+    "title": "Nesneyi kısa açıklamasıyla eşleştir",
+    "titleTwo": "Karakteri belirgin özelliğiyle eşleştir",
+    "titleThree": "Bayramı kesin tarihiyle eşleştir",
+    "textOne": "Köşelerde örümcek ağları",
+    "textTwo": "Kırmızı yakalı pelerin",
+    "textThree": "Yüzü olan fener",
+    "textFour": "Mezarlıktaki taş",
+    "textFive": "Karanlıkta uçar",
+    "textSix": "Cadı bunun üzerinde uçar",
+    "textSeven": "Sadece beyaz kemiklerden oluşur",
+    "textEight": "Sarımsaktan korkar ve tabutta uyur",
+    "textNine": "Karanlık ormanda aya karşı ulur",
+    "textTen": "Eski kalede zincir şakırdatır",
+    "textEleven": "Döküm kazanda iksir kaynatır",
+    "textTwelve": "Tepeden tırnağa beyaz sargılar içinde",
+    "textThirteen": "1 Kasım",
+    "textFourteen": "Gece yarısı (00:00)",
+    "textFifteen": "31 Ekim akşamı",
+    "textSixteen": "11 Kasım saat 11:11",
+    "textSeventeen": "31 Ekim (gündüz)",
+    "textEighteen": "11 Kasım (fenerler)"
+  },
+  "hallowenQuestNineteen": {
+    "title": "Kelimeyi anlamıyla eşleştir",
+    "wordOne": "Cadıların toplandığı Harz Dağı",
+    "wordTwo": "Kasım ayında çocukların fener alayı",
+    "wordThree": "Gece yarısından saat bire kadar olan tekinsiz saat",
+    "wordFour": "Goethe'nin baladındaki efsanevi Orman Kralı",
+    "wordFive": "Yem şalgamına yapılan eski oyma işi",
+    "wordSix": "Gürültülü partilerin ve dansın olmadığı gün",
+    "wordSeven": "Balkabağının içindeki karanlığı dağıtır",
+    "wordEight": "Şans ve ev koruması için at nalı",
+    "wordNine": "Vampirlerden korunma",
+    "wordTen": "Kötü güçlere karşı eşikteki muska",
+    "wordEleven": "Masallarda kurt adamlara karşı kullanılan metal",
+    "wordTwelve": "Avare ruhları yanıltır",
+    "wordThirteen": "Tabut",
+    "wordFourteen": "İksir",
+    "wordFifteen": "Kale kalıntıları",
+    "wordSixteen": "Sis",
+    "wordSeventeen": "Mezarlık",
+    "wordEighteen": "Kemik"
+  },
+  "hallowenQuestTwenty": {
+    "title": "Kelimeyi çevirisiyle eşleştir",
+    "wordOne": "Canavarlar kalesi",
+    "wordTwo": "Kurt adam",
+    "wordThree": "Perili ev",
+    "wordFour": "Mezarlık",
+    "wordFive": "Mumya",
+    "wordSix": "Tabut",
+    "wordSeven": "Karanlık / Kasvet",
+    "wordEight": "Gece yarısı",
+    "wordNine": "Korkunç maske",
+    "wordTen": "Çığlık",
+    "wordEleven": "Mezar taşı",
+    "wordTwelve": "İskelet",
+    "wordThirteen": "Kafatası",
+    "wordFourteen": "Hayalet gemi",
+    "wordFifteen": "Lanet",
+    "wordSixteen": "Örümcek ağı",
+    "wordSeventeen": "Labirent",
+    "wordEighteen": "Sihirli iksir"
+  },
+  "hallowenQuestTwentyOne": {
+    "questOne": "Cadılar Bayramı grubunda hangi hayvan fazlalıktır?",
+    "questTwo": "Çocuğun çantasındaki tatlılar arasında hangisi fazlalıktır?",
+    "questThree": "Anlam bakımından hangi kelime fazlalıktır?",
+    "questFour": "Kutlamada karanlıkta parlamayan şey nedir?",
+    "questFive": "Sonbahar ve bayramla ilgisi olmayan şey nedir?",
+    "questSix": "Hangi eşya bir büyücüye veya cadıya ait değildir?"
+  },
+  "hallowenQuestTwentyTwo": {
+    "title": "Farklı olan kelimeyi bul: 2. Kısım",
+    "questOne": "Cadılar Bayramı akşamına hiç uymayan hava durumu hangisidir?",
+    "questTwo": "Cadılar Bayramı kostümünün bir parçası olarak giyilmeyen/takılmayan şey nedir?",
+    "questThree": "Cadılık kap kacağı arasında hangi eşya fazlalıktır?",
+    "questFour": "Bir vampirin kesinlikle ihtiyaç duymadığı şey nedir?",
+    "questFive": "Gece canlıları arasında hangi kuş veya hayvan fazlalıktır?",
+    "questSix": "İç ısıtan sonbahar ikramları arasında hangi içecek fazlalıktır?"
+  },
+  "hallowenQuestTwentyThree": {
+    "title": "Zıt anlamlı kelimeleri eşleştir"
+  },
+  "haloweenBanner": {
+    "shop": "Etkinlik dükkanından efektler ve hediyeler satın al!",
+    "quests": "Balkabağı parası toplamak için görevleri tamamla!"
+  },
+  "eventsModalButtons": {
+    "pumpkin": "Balkabaklarını topla",
+    "april": "Eğlenceyi başlat",
+    "valentine": "Sevgililer günü kartı ver",
+    "winter": "Kış masalına doğru!"
+  },
+  "eventsNotification": {
+    "now": "Şimdi devam ediyor!",
+    "left": "Kalan süre:",
+    "untilEvent": " Etkinliğe kalan süre:"
+  },
+  "steakInfo": {
+    "text": "Serini kaybetmemek için günlük görevleri tamamla"
+  },
+  "halloweenThemeModal": {
+    "partOne": "Bu temanın kilidi yalnızca şu etkinlikte açılabilir:",
+    "partTwo": "«Balkabağı Şenliği»",
+    "partThree": "Etkinlik mağazasından satın al"
   }
 }

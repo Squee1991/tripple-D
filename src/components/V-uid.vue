@@ -33,22 +33,25 @@
         </button>
       </nav>
       <div class="event-wrapper" v-if="displayEvent">
-        <img class="event__speaker" :src="HalloweenNotice" alt="Уведомление">
         <NuxtLink
             :to="displayEvent.isActive ? displayEvent.url : ''"
             class="event"
             :class="{ 'event--inactive': !displayEvent.isActive }"
             @click="handleEventClick"
         >
-          <img class="web" src="~/assets/images/spider-web.svg" alt="" aria-hidden="true">
+          <img class="bg" src="~/assets/images/EventNotificationBg.png" alt="" aria-hidden="true">
           <div class="event__content">
             <div class="event__info">
               <span class="event__badge">{{ t(displayEvent.valueKey) }}</span>
               <span class="event__title" v-if="displayEvent.isActive">
-                {{t('eventsNotification.now')}} <strong>{{t('eventsNotification.left')}} {{ displayEvent.daysNum }} {{ displayEvent.daysWord }}</strong>
+                 <strong>{{ t('eventsNotification.left') }} {{ displayEvent.daysNum }} {{
+                  displayEvent.daysWord
+                }}</strong>
               </span>
               <span class="event__title" v-else>
-                {{t('eventsNotification.untilEvent')}} <strong>{{ displayEvent.daysNum }} {{ displayEvent.daysWord }}</strong>
+                {{ t('eventsNotification.untilEvent') }} <strong>{{ displayEvent.daysNum }} {{
+                  displayEvent.daysWord
+                }}</strong>
               </span>
             </div>
           </div>
@@ -66,10 +69,9 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
-import { useRouter } from 'vue-router'
-import { useEventSessionStore } from '~/store/eventsStore.js'
-
+import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
+import {useRouter} from 'vue-router'
+import {useEventSessionStore} from '~/store/eventsStore.js'
 import VPoints from "~/src/components/V-points.vue";
 import VDaily from "~/src/components/Vdaily.vue";
 import VLands from "~/src/components/V-lands.vue";
@@ -81,7 +83,7 @@ import HalloweenNotice from '~/assets/images/halloweenNotice.svg'
 import PadLock from '~/assets/images/padlock.svg'
 import ModalDev from '~/src/components/modal.vue'
 
-const { t, locale } = useI18n();
+const {t, locale} = useI18n();
 const eventStore = useEventSessionStore();
 const router = useRouter();
 
@@ -151,7 +153,7 @@ const displayEvent = computed(() => {
       endDate.setFullYear(endDate.getFullYear() + 1);
     }
 
-    return { ...event, startDate, endDate };
+    return {...event, startDate, endDate};
   }).sort((a, b) => a.startDate - b.startDate);
 
   const nextEvent = upcomingEvents.find(e => e.endDate >= now);
@@ -168,7 +170,7 @@ const displayEvent = computed(() => {
     };
   } else {
     const daysUntil = Math.ceil((nextEvent.startDate - now) / msPerDay);
-    if (daysUntil <= 14) {
+    if (daysUntil <= 7) {
       return {
         ...nextEvent,
         isActive: false,
@@ -230,9 +232,6 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-* {
-  box-sizing: border-box;
-}
 
 .tab__icon {
   width: 35px;
@@ -267,7 +266,7 @@ onBeforeUnmount(() => {
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  margin: 6px 14px 4px 10px;
+  margin: 6px 6px 2px 6px;
 }
 
 .event__speaker {
@@ -284,99 +283,63 @@ onBeforeUnmount(() => {
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   flex: 1;
-  padding: 10px 12px;
-  border-radius: 5px 18px 16px 30px;
-  background: linear-gradient(135deg, #2b174d 0%, #171026 100%);
-  border: 2px solid rgb(227 162 82 / 0.35);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  padding: 12px 16px;
   cursor: pointer;
   text-decoration: none;
+}
+
+.event .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-position: left center;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .event--inactive {
   cursor: pointer;
 }
 
-.event::before {
-  content: "";
-  position: absolute;
-  left: -5px;
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-  width: 10px;
-  height: 10px;
-  background: #2b174d;
-  border-left: 2px solid rgb(227 162 82 / 0.35);
-  border-bottom: 2px solid rgb(227 162 82 / 0.35);
-  z-index: 0;
-}
-
-.web {
-  position: absolute;
-  width: 120px;
-  top: -10px;
-  right: -10px;
-  opacity: 0.18;
-  pointer-events: none;
-  z-index: 0;
-}
-
 .event__content {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: flex-end;
   z-index: 1;
-  width: 100%;
-}
-
-.event__icon-wrapper {
-  width: 44px;
-  height: 44px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: radial-gradient(circle, rgba(255, 140, 0, 0.3) 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-.event__icon {
-  width: 42px;
-  height: 42px;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 6px rgba(255, 140, 0, 0.45));
+  position: relative;
+  margin-left: auto;
 }
 
 .event__info {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
+  margin-right: 40px;
 }
 
 .event__badge {
-  font-size: 17px;
+  font-size: 16px;
   font-family: "Rubik Wet Paint", system-ui;
-  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
-  text-shadow: 0 1px 0 #fffefe;
-  -webkit-text-stroke: 0.8px #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #ff9d00;
-  margin-bottom: 6px;
+  color: #464242;
+  margin-bottom: 4px;
 }
 
 .event__title {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   color: #f1f1f5;
   line-height: 1.2;
 }
 
 .event__title strong {
-  color: #ffb834;
+  color: #ffffff;
   font-weight: 800;
 }
 

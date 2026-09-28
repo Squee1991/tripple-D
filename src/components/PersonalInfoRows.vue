@@ -2,40 +2,13 @@
   <div class="profile-wrapper">
     <h3 class="section-title">{{ t('personalAccount.statsAndAchievements') }}</h3>
     <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-icon xp-icon">
-          <img src="../../assets/images/daily.svg" alt="daily">
+      <div v-for="card in dataStats" class="stat-card">
+        <div class="stat-icon" :class="card.classIcon">
+          <img :src="card.icon" alt="daily">
         </div>
         <div class="stat-info">
-          <span class="stat-value">{{ completedDailyQuests }} / 3</span>
-          <span class="stat-label">{{t('dailyPanel.title')}}</span>
-        </div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon title-icon">
-          <img :src="currentRankIcon" alt="Rank" class="rank-icon-img" />
-        </div>
-        <div class="stat-info">
-          <span class="stat-value">{{ currentRankTitle }}</span>
-          <span class="stat-label">{{ t('galaxyCabinet.rank')}}</span>
-        </div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon achievement-icon">
-          <img src="../../assets/images/rewards.svg" alt="rewards">
-        </div>
-        <div class="stat-info">
-          <span class="stat-value">{{ unlockedAchievements }} / {{ totalAchievements }}</span>
-          <span class="stat-label">{{ t('awardModal.title')}}</span>
-        </div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon streak-icon">
-          <img src="../../assets/images/hatsNAv.svg" alt="assurance">
-        </div>
-        <div class="stat-info">
-          <span class="stat-value">{{ authStore.totalHats }} </span>
-          <span class="stat-label">{{ t('Шляпы')}}</span>
+          <span class="stat-value">{{ card.value }}</span>
+          <span class="stat-label">{{ card.label}}</span>
         </div>
       </div>
     </div>
@@ -133,7 +106,7 @@
 
 <script setup>
 import { computed, ref, onMounted, watch } from 'vue'
-
+import { useRouter} from "vue-router";
 import { userAuthStore } from '~/store/authStore.js'
 import { useRankUserStore } from '~/store/rankStore.js'
 import { dailyStore } from '~/store/dailyStore.js'
@@ -144,6 +117,10 @@ import Unranked from '~/assets/images/Unranked.png'
 import VBanner from "~/src/components/V-banner.vue";
 import StreakIcon from '~/assets/images/fire.svg'
 import PlusIcon from '~/assets/images/PlusLogo.png'
+
+import RewardIcon from '~/assets/images/rewards.svg'
+import DailyIcon from '~/assets/images/daily.svg'
+import HatsIcon from '~/assets/images/hatsNAv.svg'
 
 const { t, locale } = useI18n()
 const authStore = userAuthStore()
@@ -240,6 +217,19 @@ const currentRankTitle = computed(() => {
 })
 
 const currentRankIcon = computed(() => currentRankInfo.value.icon)
+
+const achievementsProgress = computed(() => {
+  return `${unlockedAchievements.value} / ${totalAchievements.value}`
+})
+
+
+const dataStats = ref([
+  {id: "daily" , icon: DailyIcon, classIcon: 'xp-icon',  value: `${completedDailyQuests.value} / 3` , label: t('dailyPanel.title')},
+  {id: "rank" , icon: currentRankIcon, classIcon: 'title-icon',  value: currentRankTitle , label: t('galaxyCabinet.rank')},
+  {id: "rewards" , icon: RewardIcon, classIcon: 'achievement-icon',  value: achievementsProgress , label:t('awardModal.title')},
+  {id: "hats" , icon: HatsIcon, classIcon: 'streak-icon',  value: authStore.totalHats , label:"Шляпы"}
+])
+
 </script>
 
 <style scoped>
@@ -280,6 +270,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   gap: 8px;
   border: 1px solid var(--tabsSlideBorderColor);
   transition: transform 0.2s ease;
+  box-shadow: var(--boxShadowMobile);
 }
 
 .stat-icon {
@@ -311,7 +302,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .stat-value {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
   color: var(--titleColor);
 }

@@ -1,11 +1,12 @@
 <template>
   <div class="cabinet-wrapper">
-    <div v-if="isCancelModalOpen" class="modal-overlay" @click.self="closeCancelModal">
+    <!-- Модалка отмены подписки -->
+    <div v-if="isCancelModalOpen" class="modal-overlay" @click.self="isCancelModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.cancelPremium') }}</div>
         <p class="modal-text">{{ t('cabinet.cancelPremiumText') }}</p>
         <div class="modal-actions">
-          <button class="btn" @click="closeCancelModal" type="button">
+          <button class="btn" @click="isCancelModalOpen = false" type="button">
             {{ t('cabinet.reject') }}
           </button>
           <button class="btn btn-danger" @click="cancelSubscription" type="button">
@@ -16,9 +17,8 @@
     </div>
     <div class="layout__cabinet">
       <aside class="sidebar-panel">
-        <button v-if="!isMobile" class="back-btn" @click="backToMain" aria-label="to main" type="button">
+        <button v-if="!isMobile" class="back-btn" @click="router.push('/')" aria-label="to main" type="button">
           <img class="back__btn-icon" :src="Home" alt="Home"/>
-
           <span class="back-label">{{ t('cabinet.main') }}</span>
         </button>
         <div class="sidebar-title">{{ t('cabinet.category') }}</div>
@@ -26,16 +26,19 @@
           <div
               class="sliding-bg"
               :class="{ 'no-transition': !enableTransition }"
-              :style="{  transform: isMobile   ? `translateX(${getTransform(activeIndex, TAB_ITEMS.length)}%)`  : `translateY(${getTransform(activeIndex, TAB_ITEMS.length, true)}%)`,
+              :style="{
+                transform: isMobile
+                  ? `translateX(${getTransform(activeIndex, tabItems.length)}%)`
+                  : `translateY(${getTransform(activeIndex, tabItems.length, true)}%)`,
                 opacity: activeIndex === -1 ? 0 : 1
-          }"
+              }"
           ></div>
           <button
-              v-for="tabItem in TAB_ITEMS"
+              v-for="tabItem in tabItems"
               :key="tabItem.key"
               class="nav-item"
               :class="{ 'is-active': activeTabKey === tabItem.key }"
-              @click="setActiveTab(tabItem.key)"
+              @click="setActiveTab(tabItem)"
               type="button"
           >
             <img class="nav-icon" :src="tabItem.icon" :alt="tabItem.alt"/>
@@ -62,13 +65,14 @@
                 <div v-else class="settings-wrapper">
                   <Transition name="menu-appear" appear>
                     <div class="user__interface">
+                      <!-- Блок пользователя -->
                       <div class="user-block">
                         <div class="avatar-wrapper">
                           <div class="avatar-container">
                             <img
                                 v-if="authStore.avatarUrl"
                                 :src="authStore.avatarUrl"
-                                alt="image"
+                                alt="avatar"
                                 class="avatar-current"
                                 :class="currentAvatarEffectClass"
                             />
@@ -80,15 +84,15 @@
                               title="Change avatar"
                               type="button"
                           >
-                            <img src="../assets/images/add.svg" alt="Сменить"/>
+                            <img src="../assets/images/add.svg" alt="add"/>
                           </button>
                         </div>
                         <div class="user-info-container">
-                          <div class="user__name"> {{ authStore.name}}</div>
+                          <div class="user__name">{{ authStore.name }}</div>
                           <div v-if="learningStore" class="top-panel-layout">
                             <div class="custom-progress">
                               <div class="progress_exp-bar">
-                                <div class="progress__bar" :style="{ width: `${(learningStore.exp / 100) * 100}%` }">
+                                <div class="progress__bar" :style="{ width: `${learningStore.exp}%` }">
                                   <div class="glare"></div>
                                 </div>
                               </div>
@@ -106,23 +110,24 @@
                         <div
                             class="sliding-bg-account"
                             :class="{ 'no-transition': !enableTransition }"
-                            :style="{  transform: `translateX(${getTransform(activeAccountIndex, ACCOUNT_TABS.length)}%)`,
+                            :style="{
+                              transform: `translateX(${getTransform(activeAccountIndex, accountTabs.length)}%)`,
                               opacity: activeAccountIndex === -1 ? 0 : 1
-                        }"
+                            }"
                         ></div>
                         <button
-                            v-for="tab in ACCOUNT_TABS"
+                            v-for="tab in accountTabs"
                             :key="tab.key"
                             class="account-tab"
                             :class="{ active: accountTab === tab.key }"
                             @click="accountTab = tab.key"
                             type="button"
                         >
-                          <img :class="iconDisplayComputed" class="tab-icon --horizontal" :src="tab.icon"
-                               :alt="tab.alt">
+                          <img class="tab-icon --horizontal" :src="tab.icon" :alt="tab.alt">
                           <span class="tab__text">{{ tab.label }}</span>
                         </button>
                       </div>
+
                       <div class="account-tab-body">
                         <transition name="fade" mode="out-in">
                           <div v-if="accountTab === 'common'" class="tab-surface" key="common">
@@ -141,7 +146,7 @@
                 </div>
               </div>
               <div v-else class="tab__component-wrapper" :key="activeTabKey">
-                <component :is="components" @open="handleSettingsAction"/>
+                <component :is="activeComponent" @open="handleSettingsAction"/>
               </div>
             </VTransition>
           </div>
@@ -156,12 +161,12 @@
               class="sliding-bg-account avatar-sliding-bg"
               :class="{ 'no-transition': !enableTransition }"
               :style="{
-                transform: `translateX(${getTransform(activeAvatarTabIndex, AVATAR_TABS.length)}%)`,
+                transform: `translateX(${getTransform(activeAvatarTabIndex, avatarTabs.length)}%)`,
                 opacity: activeAvatarTabIndex === -1 ? 0 : 1
               }"
           ></div>
           <button
-              v-for="tab in AVATAR_TABS"
+              v-for="tab in avatarTabs"
               :key="tab.key"
               class="account-tab"
               :class="{ active: activeAvatarTab === tab.key }"
@@ -180,17 +185,18 @@
                   class="avatar-option"
                   @click="authStore.ownedAvatars.includes(avatarName) ? selectAvatar(avatarName) : openPurchaseModal(avatarName)"
               >
-                <div class="avatar__image-wrapper"
-                     :class="{
-                       selected: selectedAvatarName === avatarName,
-                       unowned: !authStore.ownedAvatars.includes(avatarName)
-                     }"
+                <div
+                    class="avatar__image-wrapper"
+                    :class="{
+                      selected: selectedAvatarName === avatarName,
+                      unowned: !authStore.ownedAvatars.includes(avatarName)
+                    }"
                 >
                   <img class="avatar-img" :src="authStore.getAvatarUrl(avatarName)" :alt="avatarName"/>
                 </div>
                 <div v-if="!authStore.ownedAvatars.includes(avatarName)" class="avatar-price">
                   <span>50</span>
-                  <img class="price-icon" src="../assets/images/article.svg" alt="">
+                  <img class="price-icon" src="../assets/images/article.svg" alt="coins">
                 </div>
               </div>
             </div>
@@ -230,10 +236,12 @@
           </div>
         </template>
         <template v-else-if="isRankAvatarLocked">
-          <p class="modal__text--computed" style="font-size: 18px; margin-top: 10px;">{{ rankAvatarsComputed }}</p>
+          <p class="modal__text--computed" style="font-size: 18px; margin-top: 10px;">
+            {{ t(`rankAvatars.${purchaseState}`) }}
+          </p>
           <div class="modal-actions">
             <button class="btn" @click="closePurchaseOk" type="button">
-              {{ t('cardsShop.accessibly')}}
+              {{ t('cardsShop.accessibly') }}
             </button>
           </div>
         </template>
@@ -241,9 +249,8 @@
           <div class="modal-title">{{ t('cabinet.buyAvatar') }}</div>
           <div class="price__avatar-text">
             <span class="modal-text">50</span>
-            <img class="articles" src="../assets/images/article.svg" alt="artiles">
+            <img class="articles" src="../assets/images/article.svg" alt="articles">
           </div>
-
           <div class="modal-actions">
             <button class="btn" @click="isPurchaseModalOpen = false" type="button">
               {{ t('cabinet.notBuyAvatarBtn') }}
@@ -259,8 +266,7 @@
       <div class="modal-card">
         <div class="modal-title">❄️ {{ t('cabinet.notAllow') }}</div>
         <p class="modal-text">
-          {{ t('cabinet.modalNotAllowEffectFirst') }} <b>{{ t('cabinet.modalNotAllowEffectSecond') }}</b>.
-          <br/>
+          {{ t('cabinet.modalNotAllowEffectFirst') }} <b>{{ t('cabinet.modalNotAllowEffectSecond') }}</b>.<br/>
           {{ t('cabinet.modalNotAllowEffectThird') }}
         </p>
         <div class="modal-actions">
@@ -276,197 +282,118 @@
 <script setup>
 import {ref, computed, onMounted, watch, watchEffect} from 'vue'
 import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
 
-import AwardsList from '../src/components/AwardsList.vue'
-import VExampResulut from '../src/components/V-exampResulut.vue'
+import AwardsList from '~/src/components/AwardsList.vue'
 import VNews from '../src/components/V-news.vue'
-import VFindFriends from '../src/components/V-findFriends.vue'
 import VRank from '../src/components/V-rank.vue'
 import PersonalInfoRows from '../src/components/PersonalInfoRows.vue'
 import Shop from '../src/components/V-shop.vue'
+import VSettings from '../src/components/V-settings.vue'
+import VTransition from '~/src/components/V-transition.vue'
+
+import UserAccIcon from '../assets/accountToggleIcons/user.svg'
+import FaqIcon from '../assets/accountToggleIcons/faq.svg'
+import OptionIcon from '../assets/accountToggleIcons/option.svg'
+import Home from '../assets/images/home.svg'
 
 import {userAuthStore} from '../store/authStore.js'
 import {userlangStore} from '../store/learningStore.js'
 import {useAchievementStore} from '../store/achievementStore.js'
+import {useEventSessionStore} from '~/store/eventsStore.js'
 import {AWARDS} from '~/utils/awards'
-import {useFriendsStore} from '../../store/friendsStore.js'
-import {useEventSessionStore} from '../../store/eventsStore.js'
 
-import Home from '../assets/images/home.svg'
-import Folder from '../assets/images/folder.svg'
-import News from '../assets/images/news.svg'
-import UserAccIcon from '../assets/accountToggleIcons/user.svg'
-import SettingsIcon from '../assets/images/settings.svg'
-import FaqIcon from '../assets/accountToggleIcons/faq.svg'
-import OptionIcon from '../assets/accountToggleIcons/option.svg'
-import Friends from '../assets/images/friend.svg'
-import Rewards from '../assets/images/rewards.svg'
-import IdCard from '../assets/images/monitor.svg'
-import ShoppingCart from '../assets/images/shopping-cart.svg'
-import VSettings from '../src/components/V-settings.vue'
-import RankAward from '../assets/images/rankaward.svg'
-import AccountIcon from '../assets/images/account.png'
-import VTransition from "~/src/components/V-transition.vue";
+import {
+  MAIN_NAV_ITEMS,
+  HOME_NAV_ITEM,
+  ACCOUNT_TABS_CONFIG,
+  AVATAR_TABS_CONFIG
+} from '~/constants/cabinet.constants.js'
+import {useCabinetAvatars} from '~/composables/useCabinetAvatars.js'
 
-definePageMeta({
-  robots: {index: false, follow: false}
-})
-
-const getTransform = (index, arrayLength, isVertical = false) => {
-  if (index === -1) return 0;
-  if (locale.value === 'ar' && !isVertical) {
-    return (arrayLength - 1 - index) * 100;
-  }
-  return index * 100;
-};
+definePageMeta({robots: {index: false, follow: false}})
 
 const {t, locale} = useI18n()
 const router = useRouter()
 const authStore = userAuthStore()
 const learningStore = userlangStore()
 const achievementStore = useAchievementStore()
-const friendsStore = useFriendsStore()
 const eventStore = useEventSessionStore()
+
 const MAIN_TAB_KEY = 'cabinet_active_main_tab'
 const ACC_TAB_KEY = 'cabinet_active_acc_tab'
+
 const isSettingsOpen = ref(false)
 const isMobile = ref(false)
-const activeTabKey = ref((typeof window !== 'undefined' && sessionStorage.getItem(MAIN_TAB_KEY)) || 'info')
-const accountTab = ref((typeof window !== 'undefined' && sessionStorage.getItem(ACC_TAB_KEY)) || 'common')
+const enableTransition = ref(false)
+const isCancelModalOpen = ref(false)
+const isSnowWarningModalOpen = ref(false)
 
+const activeTabKey = ref((process.client && sessionStorage.getItem(MAIN_TAB_KEY)) || 'info')
+const accountTab = ref((process.client && sessionStorage.getItem(ACC_TAB_KEY)) || 'common')
 
-const isRankAvatarLocked = computed(() => {
-  return purchaseState.value.startsWith('locked_')
+const {
+  isAvatarModalOpen,
+  isPurchaseModalOpen,
+  selectedAvatarName,
+  purchaseState,
+  activeAvatarTab,
+  isRankAvatarLocked,
+  currentAvatarEffectClass,
+  currentViewAvatars,
+  openPurchaseModal,
+  selectAvatar,
+  confirmPurchase,
+  confirmAvatarChange,
+  closePurchaseOk
+} = useCabinetAvatars(authStore)
+
+watch(isAvatarModalOpen, (opened) => {
+  if (opened) selectedAvatarName.value = authStore.avatar
 })
 
-
-const currentAvatarEffectClass = computed(() => {
-  const avatar = authStore.avatar;
-  if (!avatar) return '';
-  if (['16.png', '17.png', '18.png'].includes(avatar)) return 'effect-unicorn';
-  if (['19.png', '20.png', '21.png'].includes(avatar)) return 'effect-dragon';
-  if (['22.png', '23.png', '24.png'].includes(avatar)) return 'effect-griffin';
-
-  return '';
-});
-
-
-const rankAvatarsComputed = computed(() => {
-  const texts = {
-    'locked_easy_1': t('rankAvatars.locked_easy_1'),
-    'locked_easy_2': t('rankAvatars.locked_easy_2'),
-    'locked_easy_3': t('rankAvatars.locked_easy_3'),
-    'locked_normal_1': t('rankAvatars.locked_normal_1'),
-    'locked_normal_2': t('rankAvatars.locked_normal_2'),
-    'locked_normal_3': t('rankAvatars.locked_normal_3'),
-    'locked_hard_1': t('rankAvatars.locked_hard_1'),
-    'locked_hard_2': t('rankAvatars.locked_hard_2'),
-    'locked_hard_3': t('rankAvatars.locked_hard_3'),
-  }
-  return texts[purchaseState.value] || ''
-})
-
-const TAB_ITEMS = computed(() => {
-  const items = [
-    {key: 'info', label: t('cabinetSidebar.valueOne'), alt: 'infoIcon', icon: AccountIcon},
-    {key: 'archive', label: t('cabinetSidebar.valueTwo'), alt: 'archiveIcon', icon: News},
-    {key: 'shop', label: t('cabinetSidebar.valueThree'), alt: 'shopIcon', icon: ShoppingCart},
-    {key: 'settings', label: t('cabinetSidebar.valueFour'), alt: 'settingsIcon', icon: SettingsIcon}
-  ]
+const tabItems = computed(() => {
+  const items = MAIN_NAV_ITEMS.map(i => ({...i, label: t(i.labelKey)}))
   if (isMobile.value) {
-    return [{key: 'home', label: t('cabinet.main'), alt: 'Home', icon: Home, url: '/'}, ...items]
+    return [{...HOME_NAV_ITEM, label: t(HOME_NAV_ITEM.labelKey)}, ...items]
   }
   return items
 })
 
-const activeIndex = computed(() => {
-  return TAB_ITEMS.value.findIndex(item => item.key === activeTabKey.value)
-})
-const activeAccountIndex = computed(() => {
-  return ACCOUNT_TABS.value.findIndex(tab => tab.key === accountTab.value)
-})
+const accountTabs = computed(() =>
+    ACCOUNT_TABS_CONFIG.map(tab => ({...tab, label: t(tab.labelKey)}))
+)
 
-const ACCOUNT_TABS = computed(() => [
-  {key: 'common', label: t('cabinetNav.common'), icon: IdCard, alt: 'IdCard'},
-  {key: 'awards', label: t('cabinetNav.awards'), icon: Rewards, alt: 'award'},
-  {key: 'rank', label: t('cabinetNav.rank'), icon: RankAward, alt: 'rank'}
-])
+const avatarTabs = computed(() =>
+    AVATAR_TABS_CONFIG.map(tab => ({...tab, label: t(tab.labelKey)}))
+)
 
-const activeAvatarTab = ref('regular')
+const activeIndex = computed(() => tabItems.value.findIndex(item => item.key === activeTabKey.value))
+const activeAccountIndex = computed(() => accountTabs.value.findIndex(tab => tab.key === accountTab.value))
+const activeAvatarTabIndex = computed(() => avatarTabs.value.findIndex(tab => tab.key === activeAvatarTab.value))
 
-const AVATAR_TABS = computed(() => [
-  {key: 'regular', label: t('typeOfAvatars.usual')},
-  {key: 'rank', label: t('typeOfAvatars.ranked')}
-])
-
-const activeAvatarTabIndex = computed(() => {
-  return AVATAR_TABS.value.findIndex(tab => tab.key === activeAvatarTab.value)
-})
-
-const RANK_AVATAR_FILES = ['16.png', '17.png', '18.png', '19.png', '20.png', '21.png', '22.png', '23.png', '24.png']
-
-const regularAvatars = computed(() => {
-  return authStore.availableAvatars.filter(avatar => !RANK_AVATAR_FILES.includes(avatar))
-})
-
-const rankAvatars = computed(() => {
-  return authStore.availableAvatars.filter(avatar => RANK_AVATAR_FILES.includes(avatar))
-})
-
-const currentViewAvatars = computed(() => {
-  return activeAvatarTab.value === 'regular' ? regularAvatars.value : rankAvatars.value
-})
-
-const isSnowWarningModalOpen = ref(false)
-const isCancelModalOpen = ref(false)
-const purchaseState = ref('default')
-const isAvatarModalOpen = ref(false)
-const selectedAvatarName = ref(null)
-const isPurchaseModalOpen = ref(false)
-const purchaseAvatarName = ref(null)
-const iconDisplay = ref(true)
-const enableTransition = ref(false)
-const userNameSafe = computed(() => authStore.initialized && authStore.name ? authStore.name : '—')
-
-const iconDisplayComputed = computed(() => ({"iconHide": iconDisplay.value}))
-
-// const registrationDateText = computed(() => {
-//   const registeredAt = authStore.registeredAt
-//   if (!registeredAt) return '—'
-//
-//   let date
-//   if (typeof registeredAt.toDate === 'function') date = registeredAt.toDate()
-//   else date = new Date(registeredAt)
-//
-//   if (isNaN(date.getTime())) return '—'
-//   const options = {day: 'numeric', month: 'long', year: 'numeric'}
-//   let formatted = date.toLocaleDateString(locale.value, options)
-//   formatted = formatted.replace(/\s*г\.$/, '')
-//   const parts = formatted.split(' ')
-//   if (parts.length === 3) {
-//     parts[1] = parts[1].charAt(0).toUpperCase() + parts[1].slice(1)
-//     return parts.join(' ')
-//   }
-//   return formatted
-// })
-
-const tabs = {
+const TAB_COMPONENTS = {
   archive: VNews,
   settings: VSettings,
-  shop: Shop,
+  shop: Shop
+}
+const activeComponent = computed(() => TAB_COMPONENTS[activeTabKey.value] || null)
+
+// Хелпер расчета слайдера
+const getTransform = (index, arrayLength, isVertical = false) => {
+  if (index === -1) return 0
+  if (locale.value === 'ar' && !isVertical) {
+    return (arrayLength - 1 - index) * 100
+  }
+  return index * 100
 }
 
-const components = computed(() => tabs[activeTabKey.value] || null)
-
-function setActiveTab(key) {
-  const selectedTab = TAB_ITEMS.value.find(tab => tab.key === key)
-  if (selectedTab && selectedTab.url) {
-    router.push(selectedTab.url)
-  } else {
-    activeTabKey.value = key
-    sessionStorage.setItem(MAIN_TAB_KEY, key)
+function setActiveTab(tab) {
+  if (tab.url) {
+    router.push(tab.url)
+    return
   }
+  activeTabKey.value = tab.key
+  sessionStorage.setItem(MAIN_TAB_KEY, tab.key)
 }
 
 watch(accountTab, (newTab) => {
@@ -474,30 +401,40 @@ watch(accountTab, (newTab) => {
 })
 
 function handleSettingsAction(action) {
-  if (action === 'cancelPremium') {
-    openCancelModal();
-    return;
+  const actions = {
+    cancelPremium: () => {
+      isCancelModalOpen.value = true
+    },
+    deleteAccount: () => router.push('/delete'),
+    snowWarning: () => {
+      isSnowWarningModalOpen.value = true
+    },
+    faq: () => router.push('/faq')
   }
-  if (action === 'deleteAccount') {
-    router.push('/delete');
-    return;
-  }
-  if (action === 'snowWarning') {
-    isSnowWarningModalOpen.value = true;
-    return;
-  }
-  if (action === 'faq') {
-    goToFaq();
-    return;
+  actions[action]?.()
+}
+
+const awardsStorageKey = computed(() => `awards_shown_v1_${authStore.uid || 'anon'}`)
+
+function loadShownAwards() {
+  if (!process.client) return new Set()
+  try {
+    const raw = localStorage.getItem(awardsStorageKey.value)
+    return new Set(raw ? JSON.parse(raw) : [])
+  } catch {
+    return new Set()
   }
 }
 
-function backToMain() {
-  router.push('/')
+function saveShownAwards(set) {
+  if (!process.client) return
+  try {
+    localStorage.setItem(awardsStorageKey.value, JSON.stringify([...set]))
+  } catch {
+  }
 }
 
 const shownAwardsSet = ref(loadShownAwards())
-const awardsStorageKey = computed(() => `awards_shown_v1_${authStore.uid || 'anon'}`)
 const awardList = ref(AWARDS.map(a => ({
   ...a,
   locked: a.key === 'registerAchievement' ? false : !shownAwardsSet.value.has(a.key)
@@ -507,24 +444,6 @@ watch(() => authStore.uid, () => {
   shownAwardsSet.value = loadShownAwards()
   awardList.value = AWARDS.map(a => ({...a, locked: !shownAwardsSet.value.has(a.key)}))
 })
-
-function loadShownAwards() {
-  try {
-    if (typeof window === 'undefined') return new Set()
-    const raw = localStorage.getItem(awardsStorageKey.value)
-    return new Set(raw ? JSON.parse(raw) : [])
-  } catch {
-    return new Set()
-  }
-}
-
-function saveShownAwards(set) {
-  try {
-    if (typeof window === 'undefined') return
-    localStorage.setItem(awardsStorageKey.value, JSON.stringify([...set]))
-  } catch {
-  }
-}
 
 const processed = new Set(shownAwardsSet.value)
 watchEffect(() => {
@@ -546,78 +465,20 @@ watchEffect(() => {
   }
 })
 
-function openCancelModal() {
-  isCancelModalOpen.value = true
-}
-
-function closeCancelModal() {
-  isCancelModalOpen.value = false
-}
-
 async function cancelSubscription() {
-  if (!authStore.uid || !authStore.email) {
-    return
-  }
+  if (!authStore.uid || !authStore.email) return
   try {
     const res = await $fetch('/api/stripe/cancel', {
       method: 'POST',
       body: {uid: authStore.uid, email: authStore.email}
     })
-    if (res.success) {
+    if (res?.success) {
       authStore.subscriptionCancelled = true
       isCancelModalOpen.value = false
     }
-  } catch (e) {
-  }
-}
-
-function goToFaq() {
-  router.push('/faq')
-}
-
-function openPurchaseModal(name) {
-  purchaseAvatarName.value = name
-  purchaseState.value = 'default'
-  isPurchaseModalOpen.value = true
-}
-
-function selectAvatar(name) {
-  selectedAvatarName.value = name
-}
-
-async function confirmPurchase() {
-  const status = await authStore.purchaseAvatar(purchaseAvatarName.value)
-  if (status === 'success' || status === 'owned') {
-    selectedAvatarName.value = purchaseAvatarName.value
-    purchaseState.value = 'success'
-  } else if (status === 'insufficient') {
-    purchaseState.value = 'insufficient'
-    isPurchaseModalOpen.value = true
-  } else if (status && status.startsWith('locked_')) {
-    purchaseState.value = status
-    isPurchaseModalOpen.value = true
-  }
-}
-
-async function confirmAvatarChange() {
-  if (!selectedAvatarName.value) return
-  try {
-    await authStore.updateUserAvatar(selectedAvatarName.value)
-    isAvatarModalOpen.value = false
   } catch {
   }
 }
-
-function closePurchaseOk() {
-  isPurchaseModalOpen.value = false
-  isAvatarModalOpen.value = false
-  purchaseState.value = 'default'
-  authStore.clearNotEnoughArticle?.()
-}
-
-watch(isAvatarModalOpen, opened => {
-  if (opened) selectedAvatarName.value = authStore.avatar
-})
 
 const handleResize = () => {
   isMobile.value = window.innerWidth < 1024
@@ -631,11 +492,11 @@ onMounted(async () => {
   }, 50)
   await learningStore.loadFromFirebase()
   await eventStore.loadGlobalWinterSettings()
-  friendsStore.loadFriends()
 })
 </script>
 
 <style scoped>
+
 .cabinet-wrapper {
   height: 100%;
   font-family: "Nunito", sans-serif;
@@ -698,7 +559,6 @@ onMounted(async () => {
   margin-bottom: 5px;
   font-size: 19px;
 }
-
 
 .btn {
   font-size: 18px;
@@ -897,15 +757,13 @@ onMounted(async () => {
   overflow-y: auto;
   padding-right: 3px;
   padding-bottom: 122px;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .account-tab-body::-webkit-scrollbar {
   width: 2px;
   display: none;
-}
-
-.account-tab-body::-webkit-scrollbar-thumb {
-  border-radius: 15px;
 }
 
 .modal-overlay {
@@ -1142,11 +1000,6 @@ onMounted(async () => {
   }
 }
 
-.account-tab-body {
-  position: relative;
-  overflow-x: hidden;
-}
-
 .menu-appear-enter-active {
   transition: opacity 0.4s ease, transform 0.4s ease-out;
 }
@@ -1218,21 +1071,6 @@ onMounted(async () => {
   filter: brightness(200%);
 }
 
-.level-badge {
-  position: absolute;
-  bottom: -20px;
-  background-color: #2a2d39;
-  border: 2px solid #fca13a;
-  color: #fff;
-  padding: 4px 14px;
-  border-radius: 14px;
-  font-size: 13px;
-  font-weight: 900;
-  white-space: nowrap;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  z-index: 2;
-}
-
 .modal__text--computed {
   font-size: 24px;
   font-weight: 600;
@@ -1294,12 +1132,6 @@ onMounted(async () => {
   gap: 10px;
 }
 
-.level-label {
-  color: var(--titleColor);
-  font-size: 18px;
-  font-weight: 800;
-}
-
 .level-value {
   background: #8868db;
   border: none;
@@ -1341,9 +1173,14 @@ onMounted(async () => {
   outline: 3px solid #da70d6;
   animation: glow-in-gap-unicorn 1.5s infinite alternate ease-in-out;
 }
+
 @keyframes glow-in-gap-unicorn {
-  0% { box-shadow: 0 0 0 0px transparent; }
-  100% { box-shadow: 0 0 8px 3px rgba(218, 112, 214, 0.9); }
+  0% {
+    box-shadow: 0 0 0 0px transparent;
+  }
+  100% {
+    box-shadow: 0 0 8px 3px rgba(218, 112, 214, 0.9);
+  }
 }
 
 .effect-dragon {
@@ -1351,20 +1188,28 @@ onMounted(async () => {
   outline: 3px solid #ff8c00;
   animation: glow-in-gap-dragon 1.5s infinite alternate ease-in-out;
 }
+
 @keyframes glow-in-gap-dragon {
-  0% { box-shadow: 0 0 0 0px transparent; }
-  100% { box-shadow: 0 0 8px 3px rgba(255, 140, 0, 0.9); }
+  0% {
+    box-shadow: 0 0 0 0px transparent;
+  }
+  100% {
+    box-shadow: 0 0 8px 3px rgba(255, 140, 0, 0.9);
+  }
 }
 
 .effect-griffin {
   border-radius: 50%;
   outline: 3px solid #4169e1;
-
   animation: glow-in-gap-griffin 1.5s infinite alternate ease-in-out;
 }
-@keyframes glow-in-gap-griffin {
-  0% { box-shadow: 0 0 0 0px transparent; }
-  100% { box-shadow: 0 0 8px 3px rgba(65, 105, 225, 0.9); }
-}
 
+@keyframes glow-in-gap-griffin {
+  0% {
+    box-shadow: 0 0 0 0px transparent;
+  }
+  100% {
+    box-shadow: 0 0 8px 3px rgba(65, 105, 225, 0.9);
+  }
+}
 </style>

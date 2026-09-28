@@ -3523,7 +3523,8 @@
     "close": "Zamknij",
     "light": "Jasny",
     "dark": "Ciemny",
-    "pink": "Romantyczny"
+    "pink": "Romantyczny",
+    "halloween": "Halloweenowa"
   },
   "pinkThemeModal": {
     "partOne": "Ten motyw można odblokować tylko podczas wydarzenia",
@@ -10831,5 +10832,254 @@
     "punch": "Poncz wiedźmy",
     "spellBook": "Księga zaklęć",
     "ghostEffect": "Efekt halloweenowy"
+  },
+  "hallowenQuestTwo": {
+    "titleOne": "Kiedy obchodzi się Halloween?",
+    "titleTwo": "Jakie warzywo tradycyjnie drąży się na Halloween?",
+    "titleThree": "Co krzyczą dzieci w Niemczech, prosząc o słodycze?",
+    "titleFour": "Jak nazywa się słynna latarnia z dyni?",
+    "titleFive": "Jakie dwa kolory są najbardziej kojarzone z Halloween?",
+    "titleSix": "Które zwierzę jest uważane za główny nocny symbol tego święta?",
+    "titleSeven": "Jakie święto przypada zaraz po Halloween — 1 listopada?",
+    "titleEight": "Co tradycyjnie wkłada się do środka wydrążonej dyni?"
+  },
+  "hallowenQuestThree": {
+    "titleOne": "Co wycinano na ziemiach niemieckich przed pojawieniem się dyni?",
+    "titleTwo": "W którym niemieckim zamku od lat 70. XX wieku odbywa się duży festiwal z okazji Halloween?",
+    "titleThree": "Jakie ważne święto kościół luterański obchodzi 31 października?",
+    "titleFour": "Podczas którego święta w listopadzie dzieci chodzą ulicami z własnoręcznie zrobionymi lampionami?",
+    "titleFive": "W którym kraju w listopadzie tradycyjnie drąży się lampiony z rzepy (Räbeliechtli)?",
+    "titleSix": "Dlaczego według dawnego niemieckiego przesądu tej nocy chowa się noże w kuchni?",
+    "titleSeven": "Dlaczego w niektórych krajach związkowych Niemiec imprezy muszą cichnąć przed północą?",
+    "titleEight": "Co w Niemczech najczęściej przyrządza się z miąższu dyni?"
+  },
+  "hallowenQuestFour": {
+    "titleOne": "Które stworzenie boi się czosnku i za dnia śpi w trumnie?",
+    "titleTwo": "Na której górze w paśmie Harz według niemieckich podań gromadzą się czarownice?",
+    "titleThree": "Jak nazywa się człowiek, który podczas pełni księżyca zamienia się w wilka?",
+    "titleFour": "Na czym według legend lata czarownica?",
+    "titleFive": "Które stworzenie unosi się po starych zamkach w białych szatach?",
+    "titleSex": "Jakie zwierzę najczęściej towarzyszy czarownicy w wierzeniach ludowych?",
+    "titleSeven": "Jak nazywają się błędne ogniki na bagnach, sprowadzające wędrowców ze ścieżki?",
+    "titleEight": "Jak nazywa się ożywionego, powolnego umarlaka?"
+  },
+  "hallowenQuestFive": {
+    "titleOne": "Dlaczego ludzie pierwotnie przebierali się w straszne stroje?",
+    "titleTwo": "Jaki kostium składa się z białych kości na ciemnym tle?",
+    "titleThree": "Co koniecznie trzeba założyć do czarnej peleryny wampira?",
+    "titleFour": "Co dawniej stanowiło podstawę najprostszego kostiumu ducha?",
+    "titleFive": "Jaki owoc na jarmarkach często pokrywa się czerwoną, słodką glazurą?",
+    "titleSix": "Co zazwyczaj wiesza się w rogach pokoju, aby stworzyć upiorną atmosferę?",
+    "titleSeven": "Co najczęściej dostają dzieci w Niemczech w zamian za swój wierszyk?",
+    "titleEight": "O jakiej porze dzieci zazwyczaj ruszają po domach po cukierki?"
+  },
+  "hallowenQuestSix": {
+    "titleOne": "Które starożytne święto celtyckie uważa się za historycznego przodka Halloween?",
+    "titleTwo": "Czym żartobliwie grożą dzieci w zwrocie «...sonst gibt's Saures», jeśli nie dostaną słodyczy?",
+    "titleThree": "W którym mieście niedaleko Stuttgartu co roku budowane są ogromne figury z dyń?",
+    "titleFour": "W czym według bajek wiedźma warzy swoje eliksiry?",
+    "titleFive": "Które ośmionożne stworzenie tka wytrzymałe sieci łowne?",
+    "titleSix": "Za pomocą czego czarnoksiężnicy i czarodzieje rzucają swoje zaklęcia?",
+    "titleSeven": "Co często robi się z pestkami dyni po jej wydrążeniu?",
+    "titleEight": "Dlaczego jesienny las pod koniec października idealnie nadaje się do strasznych opowieści?"
+  },
+  "hallowenQuestSeven": {
+    "questOne": "O jakiej porze dnia rodzina drąży dynię?",
+    "questTwo": "Jaki wyraz twarzy wycinają?",
+    "questThree": "Co wkładają do środka dyni?",
+    "questFour": "Po co do środka wkłada się świecę?",
+    "questFive": "Jaka atmosfera panuje tego wieczoru?"
+  },
+  "hallowenQuestEight": {
+    "questOne": "Kiedy dzieci wyruszają na spacer?",
+    "questTwo": "Za kogo przebrał się Lukas?",
+    "questThree": "Jakie nakrycie głowy ma na sobie Mia?",
+    "questFour": "Co dzieci głośno krzyczą pod drzwiami wejściowymi?",
+    "questFive": "Czym sąsiedzi napełniają torby dzieci?"
+  },
+  "hallowenQuestNine": {
+    "questOne": "W pobliżu jakiego miasta znajduje się zamek?",
+    "questTwo": "W jakim stanie zamek przetrwał do dziś?",
+    "questThree": "Kto przebiera się za potwory w zamku?",
+    "questFour": "Co przebrani aktorzy robią ze zwiedzającymi?",
+    "questFive": "Jaka pogoda zazwyczaj panuje wokół tego zamku jesienią?"
+  },
+  "hallowenQuestTen": {
+    "questOne": "Kogo wspomina się w Dniu Reformacji?",
+    "questTwo": "Jaki status ma 31 października w wielu krajach związkowych Niemiec?",
+    "questThree": "Co zazwyczaj odbywa się w kościołach w ciągu dnia?",
+    "questFour": "Do kogo najczęściej należy późny wieczór 31 października?",
+    "questFive": "Które wyznanie obchodzi Dzień Reformacji?"
+  },
+  "hallowenQuestEleven": {
+    "questOne": "Co drążyły dzieci przed pojawieniem się dyni?",
+    "questTwo": "Jak nazywano takie świecące figurki?",
+    "questThree": "W jakich rejonach ten zwyczaj był szczególnie popularny?",
+    "questFour": "Co wkładano do wnętrza wydrążonej rzepy?",
+    "questFive": "Jaką porę roku witano tym obrzędem?"
+  },
+  "hallowenQuestTwelve": {
+    "questOne": "Jakie święto obchodzi się 1 listopada?",
+    "questTwo": "Co oznacza status «cichego święta»?",
+    "questThree": "Dokąd udaje się wiele rodzin w tym dniu?",
+    "questFour": "Co ludzie zapalają na grobach bliskich?",
+    "questFive": "W których krajach związkowych ten dzień jest szczególnie szanowany?"
+  },
+  "hallowenQuestThirteen": {
+    "questOne": "Kiedy obchodzi się Dzień Świętego Marcina?",
+    "questTwo": "Co niosą dzieci podczas pochodu?",
+    "questThree": "Jakie pieśni śpiewa się podczas pochodu?",
+    "questFour": "Co rozpalane jest na zakończenie świątecznego pochodu?",
+    "questFive": "Jakie tradycyjne wypieki rozdaje się dzieciom?"
+  },
+  "hallowenQuestfourteen": {
+    "questOne": "W jakim parku odbywa się słynna wystawa?",
+    "questTwo": "Z czego powstają ogromne figury?",
+    "questThree": "Jakich popisowych dań próbują goście wystawy?",
+    "questFour": "Ile dyń wykorzystuje się do dekoracji wystawy?",
+    "questFive": "O jakiej porze roku otwarta jest ta wystawa?"
+  },
+  "hallowenQuestfifteen": {
+    "questOne": "Jak nazywa się gra z jabłkami w wodzie?",
+    "questTwo": "Czym napełnia się dużą miskę?",
+    "questThree": "Co unosi się na powierzchni wody?",
+    "questFour": "Gdzie uczestnicy muszą schować ręce?",
+    "questFive": "Za pomocą czego należy wyłowić jabłko?"
+  },
+  "hallowenQuestSixteen": {
+    "questOne": "Jak nazywa się kolejna wesoła konkurencja?",
+    "questTwo": "Co robią między sobą dwie drużyny?",
+    "questThree": "Kogo wybiera każda drużyna?",
+    "questFour": "Jaki materiał jest wykorzystywany do owijania?",
+    "questFive": "Która drużyna wygrywa w tej grze?"
+  },
+  "hallowenQuestSeventeen": {
+    "title": "Połącz słowo z jego tłumaczeniem",
+    "wordOne": "Słodycze",
+    "wordTwo": "Nietoperz",
+    "wordThree": "Wampir",
+    "wordFour": "Świeca",
+    "wordFive": "Miotła",
+    "wordSix": "Czarny kot",
+    "wordSeven": "Dynia",
+    "wordEight": "Szkielet",
+    "wordNine": "Duch",
+    "wordTen": "Magiczna księga",
+    "wordEleven": "Zjawa",
+    "wordTwelve": "Kruk",
+    "wordThirteen": "Kapelusz czarownicy",
+    "wordFourteen": "Czarodziej",
+    "wordFifteen": "Pająk",
+    "wordSixteen": "Miotła czarownicy",
+    "wordSeventeen": "Kocioł czarownicy",
+    "wordEighteen": "Magiczna różdżka"
+  },
+  "hallowenQuestEightteen": {
+    "title": "Połącz przedmiot z jego krótkim opisem",
+    "titleTwo": "Połącz postać z jej charakterystyczną cechą",
+    "titleThree": "Połącz święto z jego dokładną datą",
+    "textOne": "Pajęczyna w rogach",
+    "textTwo": "Peleryna z czerwonym kołnierzem",
+    "textThree": "Lampion z twarzą",
+    "textFour": "Nagrobek na cmentarzu",
+    "textFive": "Lata w ciemności",
+    "textSix": "Czarownica lata na tym",
+    "textSeven": "Składa się wyłącznie z białych kości",
+    "textEight": "Boi się czosnku i śpi w trumnie",
+    "textNine": "Wyje do księżyca w ciemnym lesie",
+    "textTen": "Brzęczy łańcuchami w starym zamku",
+    "textEleven": "Warzy eliksiry w żeliwnym kotle",
+    "textTwelve": "Od stóp do głów w białych bandażach",
+    "textThirteen": "1 listopada",
+    "textFourteen": "Północ (00:00)",
+    "textFifteen": "Wieczór 31 października",
+    "textSixteen": "11 listopada o 11:11",
+    "textSeventeen": "31 października (w ciągu dnia)",
+    "textEighteen": "11 listopada (lampiony)"
+  },
+  "hallowenQuestNineteen": {
+    "title": "Połącz słowo z jego znaczeniem",
+    "wordOne": "Góra w paśmie Harz, gdzie gromadzą się czarownice",
+    "wordTwo": "Pochód dzieci z lampionami w listopadzie",
+    "wordThree": "Godzina duchów od północy do pierwszej w nocy",
+    "wordFour": "Mityczny Król Olch z ballady Goethego",
+    "wordFive": "Dawne rzeźbienie w rzepie pastewnej",
+    "wordSix": "Dzień bez głośnych imprez i tańców",
+    "wordSeven": "Rozprasza mrok wewnątrz dyni",
+    "wordEight": "Podkowa na szczęście i ochronę domu",
+    "wordNine": "Ochrona przed wampirami",
+    "wordTen": "Amulet na progu przeciwko złym mocom",
+    "wordEleven": "Metal przeciwko wilkołakom w baśniach",
+    "wordTwelve": "Myli błąkające się duchy",
+    "wordThirteen": "Trumna",
+    "wordFourteen": "Eliksir",
+    "wordFifteen": "Ruiny zamku",
+    "wordSixteen": "Mgła",
+    "wordSeventeen": "Cmentarz",
+    "wordEighteen": "Kość"
+  },
+  "hallowenQuestTwenty": {
+    "title": "Połącz słowo z jego tłumaczeniem",
+    "wordOne": "Zamek potworów",
+    "wordTwo": "Wilkołak",
+    "wordThree": "Nawiedzony dom",
+    "wordFour": "Cmentarz",
+    "wordFive": "Mumia",
+    "wordSix": "Trumna",
+    "wordSeven": "Ciemność / Mrok",
+    "wordEight": "Północ",
+    "wordNine": "Straszna maska",
+    "wordTen": "Krzyk",
+    "wordEleven": "Płyta nagrobna",
+    "wordTwelve": "Szkielet",
+    "wordThirteen": "Czaszka",
+    "wordFourteen": "Statek widmo",
+    "wordFifteen": "Klątwa",
+    "wordSixteen": "Pajęczyna",
+    "wordSeventeen": "Labirynt",
+    "wordEighteen": "Magiczny eliksir"
+  },
+  "hallowenQuestTwentyOne": {
+    "questOne": "Które zwierzę nie pasuje do halloweenowego towarzystwa?",
+    "questTwo": "Co nie pasuje do słodyczy w torbie dziecka?",
+    "questThree": "Które słowo nie pasuje znaczeniowo?",
+    "questFour": "Co nie świeci w ciemności podczas święta?",
+    "questFive": "Co nie jest związane z jesienią i świętem?",
+    "questSix": "Który przedmiot nie należy do czarodzieja ani czarownicy?"
+  },
+  "hallowenQuestTwentyTwo": {
+    "title": "Znajdź niepasujące słowo: Część 2",
+    "questOne": "Jaka pogoda zupełnie nie pasuje do halloweenowego wieczoru?",
+    "questTwo": "Czego nie zakłada się jako elementu kostiumu na Halloween?",
+    "questThree": "Który przedmiot jest zbędny wśród naczyń czarownicy?",
+    "questFour": "Czego wampir zupełnie nie potrzebuje?",
+    "questFive": "Który ptak lub ssak nie pasuje do grona nocnych stworzeń?",
+    "questSix": "Który napój nie pasuje do rozgrzewających jesiennych przysmaków?"
+  },
+  "hallowenQuestTwentyThree": {
+    "title": "Połącz słowa o przeciwnym znaczeniu"
+  },
+  "haloweenBanner": {
+    "shop": "Kupuj efekty i prezenty w sklepie wydarzenia!",
+    "quests": "Wykonuj zadania, aby zbierać dyniową walutę!"
+  },
+  "eventsModalButtons": {
+    "pumpkin": "Zbieraj dynie",
+    "april": "Rozpocznij zabawę",
+    "valentine": "Rozdawaj walentynki",
+    "winter": "Do zimowej bajki!"
+  },
+  "eventsNotification": {
+    "now": "Trwa teraz!",
+    "left": "Pozostało:",
+    "untilEvent": " Do wydarzenia:"
+  },
+  "steakInfo": {
+    "text": "Wykonuj codzienne zadania, aby nie stracić serii"
+  },
+  "halloweenThemeModal": {
+    "partOne": "Ten motyw można odblokować tylko podczas wydarzenia",
+    "partTwo": "«Święto Dyń»",
+    "partThree": "Kup go w sklepie wydarzenia"
   }
 }

@@ -28,6 +28,7 @@
                   <div class="time__stop"> {{ freezeComputed }}</div>
                 </div>
               </div>
+              <div class="steak__info">{{ t('steakInfo.text')}}</div>
             </div>
           </div>
         </div>
@@ -260,6 +261,11 @@ onMounted(() => {
   cursor: pointer;
 }
 
+.steak__info {
+  font-weight: 600;
+  margin-left: 24px;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -372,7 +378,7 @@ onMounted(() => {
 }
 
 .hats__info-wrapper.open__info {
-  height: 70px;
+  height: 120px;
   opacity: 1;
 }
 

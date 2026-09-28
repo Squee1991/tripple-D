@@ -52,39 +52,21 @@ const computedAnimationData = computed(() => {
 }
 
 .loader-lottie-wrapper {
-  height: 160px;
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  padding: 20px;
+  padding: 26px;
+  margin: 36px 0;
 }
 
 .loader-lottie {
-  transform: scale(2);
+  width: 500px;
 }
 
 .preloader__icon {
   width: 140px;
   margin: 0 auto;
-}
-
-@media (max-width: 460px) {
-  .loader-lottie {
-    transform: scale(1.9);
-  }
-}
-
-@media (max-width: 360px) {
-  .loader-lottie {
-    transform: scale(1.8);
-  }
-}
-
-@media (max-width: 260px) {
-  .loader-lottie {
-    transform: scale(1.7);
-  }
 }
 
 .app-title {

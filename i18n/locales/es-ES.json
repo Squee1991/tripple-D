@@ -3507,7 +3507,8 @@
     "close": "Cerrar",
     "light": "Claro",
     "dark": "Oscuro",
-    "pink": "Romántico"
+    "pink": "Romántico",
+    "halloween": "De Halloween"
   },
   "pinkThemeModal": {
     "partOne": "Este tema solo se puede desbloquear en el evento",
@@ -10813,5 +10814,254 @@
     "punch": "Ponche de bruja",
     "spellBook": "Libro de hechizos",
     "ghostEffect": "Efecto de Halloween"
+  },
+  "hallowenQuestTwo": {
+    "titleOne": "¿Cuándo se celebra Halloween?",
+    "titleTwo": "¿Qué hortaliza se talla tradicionalmente en Halloween?",
+    "titleThree": "¿Qué gritan los niños en Alemania cuando piden dulces?",
+    "titleFour": "¿Cómo se llama la famosa linterna de calabaza?",
+    "titleFive": "¿Cuáles son los dos colores más asociados con Halloween?",
+    "titleSix": "¿Qué animal se considera el principal símbolo nocturno de la fiesta?",
+    "titleSeven": "¿Qué festividad tiene lugar justo después de Halloween, el 1 de noviembre?",
+    "titleEight": "¿Qué se coloca tradicionalmente dentro de una calabaza tallada?"
+  },
+  "hallowenQuestThree": {
+    "titleOne": "¿Qué se tallaba en tierras alemanas antes de la llegada de la calabaza?",
+    "titleTwo": "¿En qué castillo alemán se celebra un gran festival de Halloween desde los años 70?",
+    "titleThree": "¿Qué fiesta importante celebra la Iglesia luterana el 31 de octubre?",
+    "titleFour": "¿En qué festividad de noviembre los niños recorren las calles con farolillos caseros?",
+    "titleFive": "¿En qué país se tallan tradicionalmente en noviembre farolillos de nabo (Räbeliechtli)?",
+    "titleSix": "¿Por qué, según una vieja superstición alemana, se esconden los cuchillos de la cocina esa noche?",
+    "titleSeven": "¿Por qué en algunos estados federados de Alemania las fiestas deben terminar hacia la medianoche?",
+    "titleEight": "¿Qué es lo que más se suele preparar en Alemania con la pulpa de calabaza?"
+  },
+  "hallowenQuestFour": {
+    "titleOne": "¿Qué criatura teme al ajo y duerme en un ataúd durante el día?",
+    "titleTwo": "¿En qué montaña de la cordillera del Harz se reúnen las brujas según las leyendas alemanas?",
+    "titleThree": "¿Cómo se llama a la persona que se transforma en lobo durante la luna llena?",
+    "titleFour": "¿Sobre qué vuela una bruja según las leyendas?",
+    "titleFive": "¿Qué criatura vaga por los castillos antiguos vestida con ropas blancas?",
+    "titleSex": "¿Qué animal suele acompañar a las brujas en las creencias populares?",
+    "titleSeven": "¿Cómo se llaman las luces parpadeantes de pantano que desvían a los caminantes de su senda?",
+    "titleEight": "¿Cómo se llama a un cadáver reanimado y lento?"
+  },
+  "hallowenQuestFive": {
+    "titleOne": "¿Por qué la gente se disfrazaba originalmente con atuendos aterradores?",
+    "titleTwo": "¿Qué disfraz se compone de huesos blancos dibujados sobre un fondo oscuro?",
+    "titleThree": "¿Qué accesorio imprescindible debe acompañar a la capa negra de un vampiro?",
+    "titleFour": "¿Qué se utilizaba tradicionalmente como base para el disfraz de fantasma más sencillo?",
+    "titleFive": "¿Qué fruta suele cubrirse con un glaseado dulce de color rojo en las ferias?",
+    "titleSix": "¿Qué se suele colgar en los rincones de las habitaciones para crear un ambiente espeluznante?",
+    "titleSeven": "¿Qué es lo que más se les da a los niños en Alemania a cambio de su rima?",
+    "titleEight": "¿A qué hora suelen salir los niños a pedir dulces de puerta en puerta?"
+  },
+  "hallowenQuestSix": {
+    "titleOne": "¿Qué antigua fiesta celta se considera el antepasado histórico de Halloween?",
+    "titleTwo": "¿Con qué amenazan en broma los niños en la frase «...sonst gibt's Saures» si no les dan dulces?",
+    "titleThree": "¿En qué ciudad cerca de Stuttgart se construyen anualmente enormes figuras de calabazas?",
+    "titleFour": "¿En qué prepara la bruja sus pociones según los cuentos?",
+    "titleFive": "¿Qué criatura de ocho patas teje resistentes redes de captura?",
+    "titleSix": "¿Con qué hacen sus encantamientos los magos y hechiceros?",
+    "titleSeven": "¿Qué se suele hacer con las semillas de calabaza tras vaciarla?",
+    "titleEight": "¿Por qué el bosque otoñal a finales de octubre es ideal para los cuentos de miedo?"
+  },
+  "hallowenQuestSeven": {
+    "questOne": "¿A qué hora del día talla la familia la calabaza?",
+    "questTwo": "¿Qué tipo de cara le tallan?",
+    "questThree": "¿Qué colocan dentro de la calabaza?",
+    "questFour": "¿Para qué se coloca una vela en su interior?",
+    "questFive": "¿Qué ambiente reina en esta velada?"
+  },
+  "hallowenQuestEight": {
+    "questOne": "¿Cuándo salen los niños a pasear?",
+    "questTwo": "¿De qué se disfrazó Lucas?",
+    "questThree": "¿Qué lleva puesto Mia en la cabeza?",
+    "questFour": "¿Qué gritan con fuerza los niños ante las puertas de las casas?",
+    "questFive": "¿Con qué llenan los vecinos las bolsas de los niños?"
+  },
+  "hallowenQuestNine": {
+    "questOne": "¿Cerca de qué ciudad se encuentra el castillo?",
+    "questTwo": "¿En qué estado se conserva el castillo en la actualidad?",
+    "questThree": "¿Quiénes se disfrazan de monstruos en el castillo?",
+    "questFour": "¿Qué hacen los actores disfrazados a los visitantes?",
+    "questFive": "¿Qué tiempo suele rodear a este castillo en otoño?"
+  },
+  "hallowenQuestTen": {
+    "questOne": "¿A quién se recuerda en el Día de la Reforma?",
+    "questTwo": "¿Qué estatus tiene el 31 de octubre en muchos estados federados de Alemania?",
+    "questThree": "¿Qué suele celebrarse en las iglesias durante el día?",
+    "questFour": "¿A quién pertenece más a menudo la última hora de la tarde del 31 de octubre?",
+    "questFive": "¿Qué confesión celebra el Día de la Reforma?"
+  },
+  "hallowenQuestEleven": {
+    "questOne": "¿Qué tallaban los niños antes de la llegada de la calabaza?",
+    "questTwo": "¿Cómo se llamaban estas figuras brillantes?",
+    "questThree": "¿En qué regiones era especialmente popular esta costumbre?",
+    "questFour": "¿Qué colocaban dentro del nabo ahuecado?",
+    "questFive": "¿Qué estación se recibía con este ritual?"
+  },
+  "hallowenQuestTwelve": {
+    "questOne": "¿Qué festividad se celebra el 1 de noviembre?",
+    "questTwo": "¿Qué significa el estatus de «día festivo silencioso»?",
+    "questThree": "¿Adónde van muchas familias este día?",
+    "questFour": "¿Qué enciende la gente en las tumbas de sus seres queridos?",
+    "questFive": "¿En qué estados federados se honra especialmente este día?"
+  },
+  "hallowenQuestThirteen": {
+    "questOne": "¿Cuándo se celebra el Día de San Martín?",
+    "questTwo": "¿Qué llevan los niños durante la procesión?",
+    "questThree": "¿Qué canciones se cantan durante la procesión?",
+    "questFour": "¿Qué se enciende al final de la procesión festiva?",
+    "questFive": "¿Qué dulce tradicional se reparte a los niños?"
+  },
+  "hallowenQuestfourteen": {
+    "questOne": "¿En qué parque se celebra la famosa exposición?",
+    "questTwo": "¿De qué están hechas las enormes figuras?",
+    "questThree": "¿Qué platos típicos degustan los visitantes de la exposición?",
+    "questFour": "¿Cuántas calabazas se utilizan para decorar la exposición?",
+    "questFive": "¿En qué época del año abre esta exposición?"
+  },
+  "hallowenQuestfifteen": {
+    "questOne": "¿Cómo se llama el juego de atrapar manzanas en el agua?",
+    "questTwo": "¿Con qué se llena el cuenco grande?",
+    "questThree": "¿Qué flota en la superficie del agua?",
+    "questFour": "¿Dónde deben colocar las manos los participantes?",
+    "questFive": "¿Con qué se debe sacar la manzana?"
+  },
+  "hallowenQuestSixteen": {
+    "questOne": "¿Cómo se llama la siguiente y divertida competición?",
+    "questTwo": "¿Qué hacen entre sí los dos equipos?",
+    "questThree": "¿A quién elige cada equipo?",
+    "questFour": "¿Qué material se utiliza para envolver?",
+    "questFive": "¿Qué equipo gana en este juego?"
+  },
+  "hallowenQuestSeventeen": {
+    "title": "Une la palabra con su traducción",
+    "wordOne": "Dulces",
+    "wordTwo": "Murciélago",
+    "wordThree": "Vampiro",
+    "wordFour": "Vela",
+    "wordFive": "Escoba",
+    "wordSix": "Gato negro",
+    "wordSeven": "Calabaza",
+    "wordEight": "Esqueleto",
+    "wordNine": "Fantasma",
+    "wordTen": "Libro de magia",
+    "wordEleven": "Espíritu",
+    "wordTwelve": "Cuervo",
+    "wordThirteen": "Sombrero de bruja",
+    "wordFourteen": "Mago",
+    "wordFifteen": "Araña",
+    "wordSixteen": "Escoba de bruja",
+    "wordSeventeen": "Caldero de bruja",
+    "wordEighteen": "Varita mágica"
+  },
+  "hallowenQuestEightteen": {
+    "title": "Une el objeto con su breve descripción",
+    "titleTwo": "Une el personaje con su rasgo característico",
+    "titleThree": "Une la festividad con su fecha exacta",
+    "textOne": "Telarañas por los rincones",
+    "textTwo": "Capa con cuello rojo",
+    "textThree": "Linterna con rostro",
+    "textFour": "Piedra en un cementerio",
+    "textFive": "Vuela en la oscuridad",
+    "textSix": "La bruja vuela sobre esto",
+    "textSeven": "Formado únicamente por huesos blancos",
+    "textEight": "Teme al ajo y duerme en un ataúd",
+    "textNine": "Aúlla a la luna en el bosque oscuro",
+    "textTen": "Arrastra cadenas en un viejo castillo",
+    "textEleven": "Prepara pociones en un caldero de hierro fundido",
+    "textTwelve": "De pies a cabeza cubierto de vendas blancas",
+    "textThirteen": "1 de noviembre",
+    "textFourteen": "Medianoche (00:00)",
+    "textFifteen": "Noche del 31 de octubre",
+    "textSixteen": "11 de noviembre a las 11:11",
+    "textSeventeen": "31 de octubre (durante el día)",
+    "textEighteen": "11 de noviembre (farolillos)"
+  },
+  "hallowenQuestNineteen": {
+    "title": "Une la palabra con su significado",
+    "wordOne": "Montaña del Harz donde se reúnen las brujas",
+    "wordTwo": "Desfile infantil con farolillos en noviembre",
+    "wordThree": "Hora de los espíritus de medianoche a la una",
+    "wordFour": "Mítico rey de los elfos de la balada de Goethe",
+    "wordFive": "Antigua talla en nabo forrajero",
+    "wordSix": "Día sin fiestas ruidosas ni bailes",
+    "wordSeven": "Disipa la oscuridad dentro de la calabaza",
+    "wordEight": "Herradura para la buena suerte y protección del hogar",
+    "wordNine": "Protección contra vampiros",
+    "wordTen": "Amuleto en el umbral contra las fuerzas del mal",
+    "wordEleven": "Metal contra hombres lobo en los cuentos",
+    "wordTwelve": "Engaña a los espíritus errantes",
+    "wordThirteen": "Ataúd",
+    "wordFourteen": "Poción",
+    "wordFifteen": "Ruinas del castillo",
+    "wordSixteen": "Niebla",
+    "wordSeventeen": "Cementerio",
+    "wordEighteen": "Hueso"
+  },
+  "hallowenQuestTwenty": {
+    "title": "Une la palabra con su traducción",
+    "wordOne": "Castillo de los monstruos",
+    "wordTwo": "Hombre lobo",
+    "wordThree": "Casa embrujada",
+    "wordFour": "Cementerio",
+    "wordFive": "Momia",
+    "wordSix": "Ataúd",
+    "wordSeven": "Oscuridad / Tinieblas",
+    "wordEight": "Medianoche",
+    "wordNine": "Máscara aterradora",
+    "wordTen": "Grito",
+    "wordEleven": "Lápida",
+    "wordTwelve": "Esqueleto",
+    "wordThirteen": "Cráneo",
+    "wordFourteen": "Barco fantasma",
+    "wordFifteen": "Maldición",
+    "wordSixteen": "Telaraña",
+    "wordSeventeen": "Laberinto",
+    "wordEighteen": "Poción mágica"
+  },
+  "hallowenQuestTwentyOne": {
+    "questOne": "¿Qué animal sobra en el grupo de Halloween?",
+    "questTwo": "¿Qué sobra entre los dulces de la bolsa de un niño?",
+    "questThree": "¿Qué palabra sobra por su significado?",
+    "questFour": "¿Qué elemento no brilla en la oscuridad durante la fiesta?",
+    "questFive": "¿Qué elemento no guarda relación con el otoño ni con la fiesta?",
+    "questSix": "¿Qué objeto no pertenece a un mago ni a una bruja?"
+  },
+  "hallowenQuestTwentyTwo": {
+    "title": "Palabra intrusa: Parte 2",
+    "questOne": "¿Qué clima no pega en absoluto con una noche de Halloween?",
+    "questTwo": "¿Qué no se lleva puesto como parte de un disfraz de Halloween?",
+    "questThree": "¿Qué utensilio sobra entre los cacharros de brujería?",
+    "questFour": "¿Qué no necesita un vampiro bajo ningún concepto?",
+    "questFive": "¿Qué ave o bestia no encaja entre las criaturas de la noche?",
+    "questSix": "¿Qué bebida sobra entre los reconfortantes manjares de otoño?"
+  },
+  "hallowenQuestTwentyThree": {
+    "title": "Une las palabras con significado opuesto"
+  },
+  "haloweenBanner": {
+    "shop": "¡Compra efectos y regalos en la tienda del evento!",
+    "quests": "¡Supera misiones para conseguir monedas de calabaza!"
+  },
+  "eventsModalButtons": {
+    "pumpkin": "Recoger calabazas",
+    "april": "Empezar la diversión",
+    "valentine": "Repartir sanvalentines",
+    "winter": "¡Al cuento de invierno!"
+  },
+  "eventsNotification": {
+    "now": "¡En curso!",
+    "left": "Quedan:",
+    "untilEvent": " Para el evento:"
+  },
+  "steakInfo": {
+    "text": "Completa tareas diarias para no perder la racha"
+  },
+  "halloweenThemeModal": {
+    "partOne": "Este tema solo se puede desbloquear en el evento",
+    "partTwo": "«Festival de la Calabaza»",
+    "partThree": "Consíguelo en la tienda del evento"
   }
 }

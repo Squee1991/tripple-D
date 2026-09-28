@@ -3505,7 +3505,8 @@
     "close": "Yopish",
     "light": "Yorug'",
     "dark": "To'q",
-    "pink": "Romantik"
+    "pink": "Romantik",
+    "halloween": "Hellouinbop"
   },
   "pinkThemeModal": {
     "partOne": "Ushbu mavzuni faqat",
@@ -10810,5 +10811,254 @@
     "punch": "Yalmog'iz punchi",
     "spellBook": "Afsunlar kitobi",
     "ghostEffect": "Hellouin effekti"
+  },
+  "hallowenQuestTwo": {
+    "titleOne": "Hellouin qachon nishonlanadi?",
+    "titleTwo": "Hellouinda an'anaviy tarzda qaysi sabzavot o'yib yasaladi?",
+    "titleThree": "Germaniyada bolalar shirinlik so'raganda nima deb qichqirishadi?",
+    "titleFour": "Qovoqdan yasalgan mashhur chiroq nima deb ataladi?",
+    "titleFive": "Qaysi ikki rang Hellouin bilan eng ko'p bog'liq?",
+    "titleSix": "Qaysi jonivor bayramning asosiy tungi ramzi hisoblanadi?",
+    "titleSeven": "Hellouindan so'ng darhol, 1-noyabrda qaysi bayram keladi?",
+    "titleEight": "O'yilgan qovoq ichiga an'anaviy tarzda nima joylashtiriladi?"
+  },
+  "hallowenQuestThree": {
+    "titleOne": "Qovoq paydo bo'lishidan oldin nemis yerlarida nima o'yilgan?",
+    "titleTwo": "1970-yillardan beri qaysi nemis qasrida katta Hellouin festivali o'tkazib kelinadi?",
+    "titleThree": "31-oktabrda lyuteran cherkovi qanday muhim bayramni nishonlaydi?",
+    "titleFour": "Noyabr oyidagi qaysi bayramda bolalar qo'lda yasalgan chiroqlar bilan ko'chalarda yurishadi?",
+    "titleFive": "Qaysi mamlakatda noyabrda sholg'omdan fonarlar (Räbeliechtli) yasash an'anasi bor?",
+    "titleSix": "Qadimgi nemis irimiga ko'ra, nima sababdan bu kechada oshxonadagi pichoqlar yashirilgan?",
+    "titleSeven": "Germaniyaning ayrim federal yerlarida bazmlar nega yarim tungacha to'xtatilishi kerak?",
+    "titleEight": "Germaniyada qovoq mag'zidan eng ko'p nima tayyorlanadi?"
+  },
+  "hallowenQuestFour": {
+    "titleOne": "Qaysi maxluq sarimsoqdan qo'rqadi va kunduzi tobutda uxlaydi?",
+    "titleTwo": "Nemis rivoyatlariga ko'ra, jodugarlar Gars tog'larining qaysi cho'qqisida to'planishadi?",
+    "titleThree": "To'lin oy paytida bo'riga aylanadigan odam qanday ataladi?",
+    "titleFour": "Afsonalarga ko'ra jodugar nimada uchadi?",
+    "titleFive": "Qadimgi qasrlarda oq liboslarda kezib yuruvchi mavjudot nima?",
+    "titleSex": "E'tiqodlarga ko'ra jodugarga eng ko'p qaysi hayvon hamrohlik qiladi?",
+    "titleSeven": "Yo'lovchilarni yo'ldan adashtiruvchi botqoqlikdagi adashtiruvchi olovlar nima deb ataladi?",
+    "titleEight": "Qayta tirilgan, sekin harakatlanuvchi murda qanday ataladi?"
+  },
+  "hallowenQuestFive": {
+    "titleOne": "Odamlar dastlab nima sababdan qo'rqinchli kiyimlarga kiyinishgan?",
+    "titleTwo": "To'q fondagi oq suyaklardan iborat libos qaysi?",
+    "titleThree": "Vampirning qora plashiga qo'shimcha ravishda qaysi aksessuarni taqish shart?",
+    "titleFour": "Ilgari eng oddiy arvoh kiyimi uchun nima asos qilib olingan?",
+    "titleFive": "Sayillarda qaysi meva ko'pincha qizil shirin qiyom bilan qoplanadi?",
+    "titleSix": "Vahimali muhit yaratish uchun xonalar burchaklariga odatda nima osiladi?",
+    "titleSeven": "Germaniyada bolalarga aytgan she'rlari evaziga ko'pincha nima beriladi?",
+    "titleEight": "Bolalar shirinliklar yig'ish uchun odatda qaysi vaqtda uylarga yo'l olishadi?"
+  },
+  "hallowenQuestSix": {
+    "titleOne": "Qaysi qadimgi keltlar bayrami Hellouinning tarixiy ajdodi hisoblanadi?",
+    "titleTwo": "Bolalar «...sonst gibt's Saures» iborasida agar shirinlik berilmasa, hazillashib nima bilan po'pisa qilishadi?",
+    "titleThree": "Shtutgart yaqinidagi qaysi shaharda har yili qovoqlardan bahaybat haykallar yasaladi?",
+    "titleFour": "Ertaklarda jodugar o'z damlamalarini nimada qaynatadi?",
+    "titleFive": "Sakkiz oyoqli qaysi jonivor mustahkam ov to'rlarini to'qiydi?",
+    "titleSix": "Sehrgarlar va afsungarlar o'z afsunlarini nima yordamida amalga oshirishadi?",
+    "titleSeven": "Qovoq tozalangandan so'ng uning urug'lari bilan ko'pincha nima qilinadi?",
+    "titleEight": "Nega oktabr oxiridagi kuzgi o'rmon qo'rqinchli ertaklar uchun juda mos keladi?"
+  },
+  "hallowenQuestSeven": {
+    "questOne": "Oila kunning qaysi vaqtida qovoqni o'yadi?",
+    "questTwo": "Ular qanday basharani o'yib yasashadi?",
+    "questThree": "Ular qovoq ichiga nima qo'yishadi?",
+    "questFour": "Ichkariga nima maqsadda sham o'rnatiladi?",
+    "questFive": "Bu oqshomda qanday muhit hukmronlik qiladi?"
+  },
+  "hallowenQuestEight": {
+    "questOne": "Bolalar sayrga qachon yo'l olishadi?",
+    "questTwo": "Lukas kimning kiyimini kiyib oldi?",
+    "questThree": "Mianing boshiga qanday bosh kiyim kiyilgan?",
+    "questFour": "Bolalar kirish eshiklari oldida ovoz chiqarib nima deb qichqirishadi?",
+    "questFive": "Qo'shnilar bolalarning sumkalarini nima bilan to'ldirishadi?"
+  },
+  "hallowenQuestNine": {
+    "questOne": "Qasr qaysi shahar yaqinida joylashgan?",
+    "questTwo": "Qasr bugungi kungacha qanday holatda saqlanib qolgan?",
+    "questThree": "Qasrda kimlar maxluqlar qiyofasiga kirishadi?",
+    "questFour": "Kostyum kiygan aktyorlar tashrif buyuruvchilarga nima qilishadi?",
+    "questFive": "Kuzda bu qasr atrofida odatda qanday ob-havo hukm suradi?"
+  },
+  "hallowenQuestTen": {
+    "questOne": "Islohot kunida kim yodga olinadi?",
+    "questTwo": "Germaniyaning ko'plab federal yerlarida 31-oktabr qanday maqomga ega?",
+    "questThree": "Kunduzi cherkovlarda odatda nimalar bo'lib o'tadi?",
+    "questFour": "31-oktabrning kechki oqshomi ko'pincha kimlarga tegishli bo'ladi?",
+    "questFive": "Islohot kunini qaysi mazhab nishonlaydi?"
+  },
+  "hallowenQuestEleven": {
+    "questOne": "Qovoq paydo bo'lishidan oldin bolalar nimani o'yishgan?",
+    "questTwo": "Bunday yorug'lik taratuvchi shakllar qanday atalgan?",
+    "questThree": "Ushbu odat qaysi hududlarda ayniqsa mashhur bo'lgan?",
+    "questFour": "O'yilgan sholg'om ichiga nima joylashtirilgan?",
+    "questFive": "Ushbu marosim bilan yilning qaysi fasli kutib olingan?"
+  },
+  "hallowenQuestTwelve": {
+    "questOne": "1-noyabrda qanday bayram nishonlanadi?",
+    "questTwo": "«Sokin bayram» maqomi nimani anglatadi?",
+    "questThree": "Bu kunda ko'plab oilalar qayerga borishadi?",
+    "questFour": "Odamlar yaqinlarining qabrlari ustida nima yoqishadi?",
+    "questFive": "Ushbu kun qaysi o'lkalarda ayniqsa hurmat qilinadi?"
+  },
+  "hallowenQuestThirteen": {
+    "questOne": "Avliyo Martin kuni qachon nishonlanadi?",
+    "questTwo": "Yurish paytida bolalar qo'llarida nima ko'tarib yurishadi?",
+    "questThree": "Yurish davomida qanday qo'shiqlar kuylanadi?",
+    "questFour": "Bayram yurishi oxirida nima yoqiladi?",
+    "questFive": "Bolalarga qanday an'anaviy pishiriqlar tarqatiladi?"
+  },
+  "hallowenQuestfourteen": {
+    "questOne": "Mashhur ko'rgazma qaysi bog'da bo'lib o'tadi?",
+    "questTwo": "Bahaybat haykallar nimadan yasaladi?",
+    "questThree": "Ko'rgazma mehmonlari qanday o'ziga xos taomlarni tatib ko'rishadi?",
+    "questFour": "Ko'rgazmani bezash uchun qancha qovoq ishlatiladi?",
+    "questFive": "Bu ko'rgazma yilning qaysi faslida ochiq bo'ladi?"
+  },
+  "hallowenQuestfifteen": {
+    "questOne": "Suvdagi olmalar bilan o'ynaladigan o'yin nima deb ataladi?",
+    "questTwo": "Katta tog'ora nima bilan to'ldiriladi?",
+    "questThree": "Suv yuzasida nima suzib yuradi?",
+    "questFour": "Ishtirokchilar qo'llarini qayerga yashirishlari kerak?",
+    "questFive": "Olmani nima yordamida olib chiqish kerak?"
+  },
+  "hallowenQuestSixteen": {
+    "questOne": "Keyingi qiziqarli musobaqa qanday ataladi?",
+    "questTwo": "Ikki jamoa o'zaro nima qilishadi?",
+    "questThree": "Har bir jamoa kimni tanlaydi?",
+    "questFour": "O'rash uchun qanday material ishlatiladi?",
+    "questFive": "Bu o'yinda qaysi jamoa g'olib bo'ladi?"
+  },
+  "hallowenQuestSeventeen": {
+    "title": "So'zni uning tarjimasi bilan moslashtiring",
+    "wordOne": "Shirinliklar",
+    "wordTwo": "Ko'rshapalak",
+    "wordThree": "Vampir",
+    "wordFour": "Sham",
+    "wordFive": "Supurgi",
+    "wordSix": "Qora mushuk",
+    "wordSeven": "Qovoq",
+    "wordEight": "Skelet",
+    "wordNine": "Arvoh",
+    "wordTen": "Sehrli kitob",
+    "wordEleven": "Ruh",
+    "wordTwelve": "Qarg'a",
+    "wordThirteen": "Jodugar shlyapasi",
+    "wordFourteen": "Sehrgar",
+    "wordFifteen": "O'rgimchak",
+    "wordSixteen": "Yalmog'iz supurgisi",
+    "wordSeventeen": "Jodugar qozoni",
+    "wordEighteen": "Sehrli tayoqcha"
+  },
+  "hallowenQuestEightteen": {
+    "title": "Buyumni uning qisqacha tavsifi bilan moslashtiring",
+    "titleTwo": "Qahramonni unga xos xususiyat bilan moslashtiring",
+    "titleThree": "Bayramni uning aniq sanasi bilan moslashtiring",
+    "textOne": "Burchaklardagi o'rgimchak to'rlari",
+    "textTwo": "Qizil yoqali plash",
+    "textThree": "Yuz shaklidagi chiroq",
+    "textFour": "Qabristondagi tosh",
+    "textFive": "Zulmatda uchadi",
+    "textSix": "Jodugar buning ustida uchadi",
+    "textSeven": "Faqat oq suyaklardan iborat",
+    "textEight": "Sarimsoqdan qo'rqadi va tobutda uxlaydi",
+    "textNine": "Qorong'i o'rmonda oyga qarab uliydi",
+    "textTen": "Eski qasrda zanjirlarni jaranglatadi",
+    "textEleven": "Cho'yan qozonda damlamalar qaynatadi",
+    "textTwelve": "Boshidan oyog'igacha oq dokalar bilan o'ralgan",
+    "textThirteen": "1-noyabr",
+    "textFourteen": "Yarim tun (00:00)",
+    "textFifteen": "31-oktabr oqshomi",
+    "textSixteen": "11-noyabr soat 11:11 da",
+    "textSeventeen": "31-oktabr (kunduzi)",
+    "textEighteen": "11-noyabr (chiroqlar)"
+  },
+  "hallowenQuestNineteen": {
+    "title": "So'zni uning ma'nosi bilan moslashtiring",
+    "wordOne": "Harzdagi jodugarlar to'planadigan tog'",
+    "wordTwo": "Noyabrda bolalarning chiroqlar bilan yurishi",
+    "wordThree": "Yarim tundan soat birgacha bo'lgan sharpalar vaqti",
+    "wordFour": "Gyotening balladasidagi afsonaviy o'rmon shohi",
+    "wordFive": "Xashaki sholg'omga qadimiy naqsh o'yish",
+    "wordSix": "Shovqinli bazmlar va raqslarsiz kun",
+    "wordSeven": "Qovoq ichidagi zulmatni tarqatadi",
+    "wordEight": "Omad va uyni himoya qilish uchun taqa",
+    "wordNine": "Vampirlardan himoya",
+    "wordTen": "Yomon kuchlardan ostonadagi tumor",
+    "wordEleven": "Ertaklarda bo'rilar (oborotenlar)ga qarshi metall",
+    "wordTwelve": "Adashgan sharpalarni chalg'itadi",
+    "wordThirteen": "Tobut",
+    "wordFourteen": "Damlama",
+    "wordFifteen": "Qasr xarobalari",
+    "wordSixteen": "Tuman",
+    "wordSeventeen": "Qabriston",
+    "wordEighteen": "Suyak"
+  },
+  "hallowenQuestTwenty": {
+    "title": "So'zni uning tarjimasi bilan moslashtiring",
+    "wordOne": "Yirtqichlar qasri",
+    "wordTwo": "Bo'ri-odam (oboroten)",
+    "wordThree": "Arvohlar uyi",
+    "wordFour": "Qabriston",
+    "wordFive": "Mumiya",
+    "wordSix": "Tobut",
+    "wordSeven": "Zulmat / Qorong'ilik",
+    "wordEight": "Yarim tun",
+    "wordNine": "Qo'rqinchli niqob",
+    "wordTen": "Qichqiriq",
+    "wordEleven": "Qabr toshi",
+    "wordTwelve": "Skelet",
+    "wordThirteen": "Bosh suyagi",
+    "wordFourteen": "Arvoh kema",
+    "wordFifteen": "Qarg'ish",
+    "wordSixteen": "O'rgimchak to'ri",
+    "wordSeventeen": "Labirint",
+    "wordEighteen": "Sehrli damlama"
+  },
+  "hallowenQuestTwentyOne": {
+    "questOne": "Hellouin davrasida qaysi hayvon ortiqcha?",
+    "questTwo": "Bolaning sumkasidagi shirinliklar orasida nima ortiqcha?",
+    "questThree": "Ma'nosiga ko'ra qaysi so'z ortiqcha?",
+    "questFour": "Bayramda qorong'ida nima yorug'lik taratmaydi?",
+    "questFive": "Kuz va bayram bilan nima bog'liq emas?",
+    "questSix": "Qaysi buyum sehrgar yoki jodugarga tegishli emas?"
+  },
+  "hallowenQuestTwentyTwo": {
+    "title": "Ortiqcha so'zni top: 2-qism",
+    "questOne": "Hellouin oqshomiga qaysi ob-havo umuman to'g'ri kelmaydi?",
+    "questTwo": "Hellouin kostyumining bir qismi sifatida nima kiyilmaydi?",
+    "questThree": "Sehrgarlik idishlari orasida qaysi buyum ortiqcha?",
+    "questFour": "Vampirga nima mutlaqo kerak emas?",
+    "questFive": "Tungi jonivorlar orasida qaysi qush yoki hayvon ortiqcha?",
+    "questSix": "Kuzgi ilituvchi ne'matlar orasida qaysi ichimlik ortiqcha?"
+  },
+  "hallowenQuestTwentyThree": {
+    "title": "Qarama-qarshi ma'noli so'zlarni moslashtiring"
+  },
+  "haloweenBanner": {
+    "shop": "Tadbir do'konidan effektlar va sovg'alarni xarid qiling!",
+    "quests": "Qovoq valyutasini to'plash uchun topshiriqlarni bajaring!"
+  },
+  "eventsModalButtons": {
+    "pumpkin": "Qovoqlarni yig'ish",
+    "april": "Quvnoqlikni boshlash",
+    "valentine": "Valentinkalar ulashish",
+    "winter": "Qishki ertakka marhamat!"
+  },
+  "eventsNotification": {
+    "now": "Ayni paytda davom etmoqda!",
+    "left": "Qoldi:",
+    "untilEvent": " Tadbirgacha:"
+  },
+  "steakInfo": {
+    "text": "Seriyani boy bermaslik uchun kunlik vazifalarni bajaring"
+  },
+  "halloweenThemeModal": {
+    "partOne": "Bu mavzuni faqat ushbu tadbirda ochish mumkin:",
+    "partTwo": "«Qovoq bayrami»",
+    "partThree": "Uni tadbir do'konidan xarid qiling"
   }
 }
