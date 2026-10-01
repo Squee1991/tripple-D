@@ -152,32 +152,33 @@
 </template>
 
 <script setup>
-import {DotLottieVue} from '@lottiefiles/dotlottie-vue'
-import {useTrainerStore} from '~/store/themenProgressStore.js'
-import {userAuthStore} from '~/store/authStore.js'
-import {dailyStore} from '~/store/dailyStore.js'
-import {useRouter} from 'vue-router'
-import {ref, onMounted, onUnmounted, computed, watch} from 'vue'
+import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
+import { useTrainerStore } from '~/store/themenProgressStore.js'
+import { userAuthStore } from '~/store/authStore.js'
+import { dailyStore } from '~/store/dailyStore.js'
+import { useRouter, useRoute } from 'vue-router'
+import { ref, onMounted, onUnmounted, computed, watch } from 'vue'
 import SoundBtn from "../../src/components/soundBtn.vue";
 import hedgehogLeaveSession from 'assets/animation/hedgehog_leave_session.json'
 
 import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue";
 import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
-import {useSwipeBack} from '~/composables/useSwipeBack.js'
+import { useSwipeBack } from '~/composables/useSwipeBack.js'
 import VHedgehogHelper from "~/src/components/V-hedgehog-helper.vue";
 import VStreakModal from '~/src/components/V-streak.vue'
 
 import Great from '~/assets/images/Greatcon.svg'
 import Support from '~/assets/images/Support.svg'
 
-import {playCorrect, playWrong, playLevelCompleted, unlockAudioByUserGesture} from '~/utils/soundManager.js'
+import { playCorrect, playWrong, playLevelCompleted, unlockAudioByUserGesture } from '~/utils/soundManager.js'
 
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
 
 const router = useRouter()
-const {t} = useI18n()
+const route = useRoute()
+const { t } = useI18n()
 const thematic = useTrainerStore()
 const authStore = userAuthStore()
 const daily = dailyStore()
@@ -206,7 +207,7 @@ watch(() => authStore.streakCount, (newVal) => {
   if (newVal > initialStreak.value) streakWasIncremented.value = true
 })
 
-const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
+const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipeBack(() => {
   exit()
 }, {
   ignoreSelector: '.options-grid, .option-pill, .bottom-sheet, .btn-gummy, .hh-fab, .hh-overlay, .hh-bottom-sheet'
@@ -218,12 +219,19 @@ const tasks = computed(() => {
 
   if (progress && !progress.completed && progress.mistakes?.length > 0) {
     return allTasks
-        .map((task, index) => ({...task, originalIndex: index}))
+        .map((task, index) => ({ ...task, originalIndex: index }))
         .filter(task => progress.mistakes.includes(task.originalIndex))
   }
 
-  return allTasks.map((task, index) => ({...task, originalIndex: index}))
+  return allTasks.map((task, index) => ({ ...task, originalIndex: index }))
 })
+
+watch(tasks, (newTasks) => {
+  if (newTasks.length > 0 && sessionTotalTasks.value === 0 && !loading.value) {
+    sessionTotalTasks.value = newTasks.length
+    setupCurrentQuestion()
+  }
+}, { immediate: true })
 
 const shouldShowFinishModal = computed(() => {
   return finished.value && !showStreakModal.value && !isWaitingForStreakClose.value
@@ -303,7 +311,7 @@ const check = (selected) => {
   unlockAudioByUserGesture();
   const task = tasks.value[current.value]
   const isCorrect = selected === task.answer
-  feedback.value = {isCorrect, selected};
+  feedback.value = { isCorrect, selected };
   isChecked.value = true
 
   if (isCorrect) {
@@ -338,15 +346,9 @@ const triggerFinishAnimations = () => {
     spawnConfetti()
   }
   animStep.value = 0
-  setTimeout(() => {
-    animStep.value = 1
-  }, 100)
-  setTimeout(() => {
-    animStep.value = 2
-  }, 600)
-  setTimeout(() => {
-    animStep.value = 3
-  }, 1100)
+  setTimeout(() => { animStep.value = 1 }, 100)
+  setTimeout(() => { animStep.value = 2 }, 600)
+  setTimeout(() => { animStep.value = 3 }, 1100)
 }
 
 const handleStreakClosed = () => {
@@ -418,21 +420,35 @@ const handleBeforeUnload = (event) => {
 
 onMounted(async () => {
   initialStreak.value = authStore.streakCount || 0
+
+  await thematic.loadProgress()
   if (!thematic.selectedModule) {
-    await thematic.loadProgress()
+    const routeModuleId = route.params.id || route.params.moduleId || route.query.moduleId || route.query.id;
+    if (routeModuleId && thematic.levels) {
+
+      for (const level of thematic.levels) {
+        const foundModule = level.modules?.find(m => String(m.id) === String(routeModuleId));
+        if (foundModule) {
+          thematic.selectedLevel = level;
+          thematic.selectedModule = foundModule;
+          break;
+        }
+      }
+    }
   }
+
   loading.value = false;
   if (tasks.value.length > 0) {
     sessionTotalTasks.value = tasks.value.length
     setupCurrentQuestion();
   }
+
   window.addEventListener('beforeunload', handleBeforeUnload);
 })
 
 onUnmounted(() => {
   window.removeEventListener('beforeunload', handleBeforeUnload);
 })
-
 </script>
 
 <style scoped>
