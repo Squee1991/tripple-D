@@ -4,16 +4,32 @@ import {useRoute, useRouter} from 'vue-router'
 import {useLocalePath} from '#i18n'
 import {useEventSessionStore} from '~/store/eventsStore.js'
 import SoundBtn from '~/src/components/soundBtn.vue'
-import { playCorrect , playWrong , playLevelCompleted } from "~/utils/soundManager.js"
-
+import {playCorrect, playWrong, playLevelCompleted} from "~/utils/soundManager.js"
+import {getSpeechAudio} from '~/utils/googleTTS.js'
 import EventSuccessModal from '~/src/components/V-EventSuccessModal.vue'
-import { useEventSessionLogic } from '~/composables/useEventSessionLogic.js'
+import {useEventSessionLogic} from '~/composables/useEventSessionLogic.js'
+import {DotLottieVue} from '@lottiefiles/dotlottie-vue'
+
+const isSpeaking = ref(false)
+
+async function speakText(text) {
+  if (isSpeaking.value || !text) return
+  isSpeaking.value = true
+  try {
+    await getSpeechAudio(text.trim())
+  } catch (error) {
+    console.error(error)
+  } finally {
+    isSpeaking.value = false
+  }
+}
 
 const {t} = useI18n()
 
 const {
   getResultIcon,
-  getLeaveIcon,
+  getResultAnimation,
+  getLeaveAnimation,
   animStep,
   displayXp,
   displayCoins,
@@ -217,6 +233,10 @@ const filledSentenceHtml = computed(() => {
 function selectOption(index) {
   if (checkStatus.value !== null) return
   selectedOptionIndex.value = index
+  const chosenText = currentStep.value?.options?.[index]
+  if (chosenText) {
+    speakText(chosenText)
+  }
 }
 
 function confirmSingleChoice() {
@@ -261,6 +281,11 @@ function selectReadingOption(questionIndex, optionIndex) {
   if (checkStatus.value !== null) return
   if (currentStep.value?.questions?.[questionIndex]) {
     currentStep.value.questions[questionIndex].userAnswer = optionIndex
+
+    const optionText = currentStep.value.questions[questionIndex].options?.[optionIndex]
+    if (optionText) {
+      speakText(optionText)
+    }
   }
 }
 
@@ -307,13 +332,20 @@ const availableRightItems = computed(() => {
 function pickLeftItem(id) {
   if (checkStatus.value !== null) return
   matchingState.value.leftItemId = id
+  const item = currentStep.value?.pairsLeft?.find(i => i.id === id)
+  if (item?.text) {
+    speakText(item.text)
+  }
+
   if (matchingState.value.rightItemId) tryCommitPair()
 }
 
 function pickRightItem(id) {
   if (checkStatus.value !== null) return
   matchingState.value.rightItemId = id
-  if (matchingState.value.leftItemId) tryCommitPair()
+  if (matchingState.value.leftItemId) {
+    tryCommitPair()
+  }
 }
 
 function tryCommitPair() {
@@ -569,9 +601,15 @@ const errorMessage = computed(() => {
         <div class="result-wrapper">
           <div class="result card fail-card">
             <div class="result__icon">
-              <img class="result_icon" :src="getLeaveIcon()" alt="">
+              <DotLottieVue
+                  :data="JSON.stringify(getLeaveAnimation())"
+                  :loop="true"
+                  :autoplay="true"
+              />
             </div>
-            <p class="result__subtext">{{ t('Осталось совсем немного! Закончите задание чтобы сохранить прогресс') }}</p>
+            <p class="result__subtext">{{
+                t('Осталось совсем немного. Закончите задание чтобы сохранить прогресс')
+              }}</p>
             <div class="result__actions">
               <button class="btn btn--primary" @click="closeExitModal">{{ t('Продолжить') }}</button>
               <button class="btn btn--ghost" @click="goBackHome">{{ t('eventSessionPage.leave') }}</button>
@@ -579,7 +617,6 @@ const errorMessage = computed(() => {
           </div>
         </div>
       </div>
-
       <EventSuccessModal
           v-if="isFinished"
           :finished="isFinished"
@@ -590,6 +627,7 @@ const errorMessage = computed(() => {
           :display-coins="displayCoins"
           :confetti-particles="confettiParticles"
           :mascot-src="getResultIcon(isQuestFullyCompleted)"
+          :lottie-data="getResultAnimation(isQuestFullyCompleted)"
           @themes="goBackHome"
           @retryMistakes="retryQuest"
       />
@@ -659,8 +697,12 @@ const errorMessage = computed(() => {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .result-wrapper {
@@ -670,8 +712,14 @@ const errorMessage = computed(() => {
 }
 
 @keyframes slideUpModal {
-  from { transform: translateY(100%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .result.card {
@@ -795,7 +843,9 @@ const errorMessage = computed(() => {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .lesson__card {

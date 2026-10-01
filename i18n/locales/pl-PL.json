@@ -11081,5 +11081,8 @@
     "partOne": "Ten motyw można odblokować tylko podczas wydarzenia",
     "partTwo": "«Święto Dyń»",
     "partThree": "Kup go w sklepie wydarzenia"
+  },
+  "part": {
+    "text": "Część"
   }
 }

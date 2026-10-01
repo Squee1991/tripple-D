@@ -104,6 +104,18 @@
     linear-gradient(180deg, rgba(40, 46, 64, .88), rgba(16, 18, 28, .94));
 }
 
+.orange {
+    --bg: #0F172A;
+    --navBg: #131219;
+    --tabBg: #1e1e1e;
+    --titleColor: white;
+    --title: #FFFFFF;
+    --regionBtnColor: #FFFFFF;
+    --tabsSlideBg: #D97605;
+    --settingsSectionBg: rgb(126 18 18 / 0.93);
+    --tabsSlideBorderColor: #2a2a2a;
+}
+
 
 .pink {
     --timerbg: #ab1a1a;

@@ -34,6 +34,9 @@ const goToSignIn = () => {
 
 <template>
   <div class="lang-container">
+    <!-- Добавили фоновую картинку на весь экран -->
+    <img class="start__bg" src="~/assets/images/startBg.png" alt="startBg">
+
     <div class="lang-header">
       <h2 class="title">{{ t('languagePage.title')}}</h2>
       <div class="search-wrapper">
@@ -72,24 +75,45 @@ const goToSignIn = () => {
 </template>
 
 <style scoped>
-
 .lang-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   font-family: "Nunito", sans-serif;
   color: #fff;
   padding: 10px;
   max-width: 768px;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.start__bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+.lang-header,
+.scroll-area,
+.lang-footer {
+  position: relative;
+  z-index: 1;
 }
 
 .lang-header {
-  padding: 15px;
+  padding: 15px 10px;
 }
 
 .title {
-  font-size: 22px;
+  height: 34px;
+  font-size: 23px;
   font-weight: 800;
   margin-bottom: 15px;
   text-align: center;
@@ -99,8 +123,8 @@ const goToSignIn = () => {
 .search-input {
   width: 100%;
   padding: 12px 16px;
-  background: #d6d8d9;
-  border: 3px solid var(--tabsSlideBorderColor);
+  background: white;
+  border: 3px solid #15bec3;
   box-shadow: var(--boxShadowMobile);
   border-radius: 12px;
   color: #262525;
@@ -110,7 +134,7 @@ const goToSignIn = () => {
 }
 
 .search-input:focus {
-  border-color: #7d58ff;
+  border-color: #0ca0a5;
 }
 
 .scroll-area {
@@ -118,15 +142,15 @@ const goToSignIn = () => {
   overflow-y: auto;
   padding: 0 10px;
   scrollbar-width: thin;
-  scrollbar-color: #374151 transparent;
+  scrollbar-color: #0ca0a5 transparent;
 }
 
 .scroll-area::-webkit-scrollbar {
   width: 4px;
 }
 .scroll-area::-webkit-scrollbar-thumb {
-  background: #374151;
-  border-radius: 10px;
+  background: #0ca0a5;
+  border-radius: 20px;
 }
 
 .lang-list {
@@ -140,10 +164,10 @@ const goToSignIn = () => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 20px;
-  background: var(--bg);
-  border: 3px solid var(--tabsSlideBorderColor);
-  box-shadow: var(--boxShadowMobile);
+  padding: 13px 20px;
+  background: rgb(255 255 255 / 0.65);
+  border: 3px solid white;
+
   border-radius: 22px;
   cursor: pointer;
   transition: all 0.1s ease;
@@ -152,19 +176,18 @@ const goToSignIn = () => {
 }
 
 .lang-item:active {
-  transform: translateY(3px);
-  box-shadow: 0 3px 0 #111827;
+  transform: translateY(1px);
   color: white;
 }
 
 .lang-item.is-active {
-  border-color: #6366F1;
+  border-color: #0ca0a5;
 }
 
 .lang-item__name {
   font-weight: 700;
   font-size: 16px;
-  color: var(--titleColor);
+  color: #474545;
 }
 
 .lang-item__code {
@@ -176,15 +199,14 @@ const goToSignIn = () => {
 }
 
 .lang-item__indicator {
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  border: 2px solid #4b5563;
+  border: 3px solid #6abecd;
 }
 
 .is-active .lang-item__indicator {
-  background: black;
-  border-color: black;
+  background: #6abecd;
 }
 
 .lang-footer {
@@ -194,19 +216,20 @@ const goToSignIn = () => {
 .next-button {
   width: 100%;
   padding: 15px;
-  background: #10B981;
+  background: #15bec3;
   border: none;
   border-radius: 38px;
   color: #fff;
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 900;
   cursor: pointer;
-  box-shadow: 0 8px 0 #065f46;
+  box-shadow: 0 8px 0 #0ca0a5;
   transition: all 0.1s;
 }
 
 .next-button:active {
-  box-shadow: 0 2px 0 #3a8e68;
+  transform: translateY(4px);
+  box-shadow: 0 4px 0 #065f46;
 }
 
 .not-found {

@@ -11063,5 +11063,8 @@
     "partOne": "Este tema solo se puede desbloquear en el evento",
     "partTwo": "«Festival de la Calabaza»",
     "partThree": "Consíguelo en la tienda del evento"
+  },
+  "part": {
+    "text": "Parte"
   }
 }

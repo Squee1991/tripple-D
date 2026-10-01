@@ -38,6 +38,7 @@ import { useRouter } from 'vue-router'
 import LeaveLesson from '~/assets/images/LeaveLesson.svg'
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
 
+
 const { t } = useI18n()
 const props = defineProps({
   animationData: { type: [Object, String], default: null },

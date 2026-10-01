@@ -378,7 +378,6 @@ const TAB_COMPONENTS = {
 }
 const activeComponent = computed(() => TAB_COMPONENTS[activeTabKey.value] || null)
 
-// Хелпер расчета слайдера
 const getTransform = (index, arrayLength, isVertical = false) => {
   if (index === -1) return 0
   if (locale.value === 'ar' && !isVertical) {

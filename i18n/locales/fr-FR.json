@@ -11061,5 +11061,8 @@
     "partOne": "Ce thème ne peut être débloqué que pendant l'événement",
     "partTwo": "« Fête des citrouilles »",
     "partThree": "Obtiens-le dans la boutique de l'événement"
+  },
+  "part": {
+    "text": "Partie"
   }
 }

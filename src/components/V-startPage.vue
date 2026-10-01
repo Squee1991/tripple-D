@@ -1,24 +1,33 @@
 <template>
   <div class="welcome-container">
     <div class="ui-layout welcome-bg">
+      <img class="start__bg" src="~/assets/images/startBg.png" alt="startBg">
       <div class="text-content">
         <div class="game-title">
           <img src="../../assets/images/logoReview.webp" alt="logo">
         </div>
+
         <div class="hero-wrap">
-          <div class="hero-clay">
-            <ClientOnly>
-              <DotLottieVue
-                  style="width: 335px; height: 335px;"
-                  :data="JSON.stringify(Greetings)"
-                  :autoplay="true"
-                  :loop="true"
-              />
-            </ClientOnly>
-            <div class="skill-tag tag-purple">Sprechen</div>
-            <div class="skill-tag tag-cyan">Hören</div>
-            <div class="skill-tag tag-pink">Lesen</div>
-            <div class="skill-tag tag-amber">Schreiben</div>
+          <!-- Общий контейнер: ёжик и облако двигаются строго вместе -->
+          <div class="hero-cloud-wrapper floating-animation">
+
+            <!-- Ёжик сзади -->
+            <div class="hero-clay">
+              <ClientOnly>
+                <DotLottieVue
+                    style="width: 335px; height: 335px;"
+                    :data="JSON.stringify(Greetings)"
+                    :autoplay="true"
+                    :loop="true"
+                />
+              </ClientOnly>
+            </div>
+            <div class="cloud-platform">
+              <span class="middle-bump"></span>
+              <div class="cloud-text-wrap">
+                <span class="cloud-main-text">DEUTSCH MIT SPAß LERNEN</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -43,7 +52,18 @@ const router = useRouter()
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Nunito', sans-serif;
+  overflow: hidden;
+}
+
+.start__bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  right: 0;
 }
 
 .ui-layout {
@@ -54,6 +74,8 @@ const router = useRouter()
   justify-content: center;
   flex-grow: 1;
   padding: 10px;
+  position: relative;
+  z-index: 1;
 }
 
 .welcome-bg {
@@ -63,92 +85,148 @@ const router = useRouter()
   background-color: var(--bg);
 }
 
+.text-content {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-title {
+  position: relative;
+  z-index: 9;
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--titleColor);
+  line-height: 1.1;
+  margin-bottom: 15px;
+  text-align: center;
+  padding: 20px;
+}
+
 .hero-wrap {
   position: relative;
+  width: 100%;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.hero-cloud-wrapper {
+  position: relative;
+  width: 290px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.floating-animation {
+  animation: floatTogether 4s ease-in-out infinite;
+}
+
+@keyframes floatTogether {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 .hero-clay {
   width: 140px;
   height: 140px;
-  //background: #2e9fff;
-  border-radius: 40px;
-  margin: 0 auto;
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08),
-  inset 0 -6px 0 rgba(0, 0, 0, 0.05);
-  position: relative;
+  z-index: 1;
 }
 
-.skill-tag {
+.cloud-platform {
   position: absolute;
-  padding: 8px 16px;
-  border-radius: 18px;
-  font-size: 13px;
-  font-weight: 900;
+  bottom: 0;
+  width: 290px;
+  height: 70px;
+  background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  border-radius: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), inset 0 -4px 10px rgba(0, 0, 0, 0.04), inset 0 2px 5px rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.cloud-platform::before {
+  content: '';
+  position: absolute;
+  top: -32px;
+  left: 20px;
+  width: 85px;
+  height: 65px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.cloud-platform::after {
+  content: '';
+  position: absolute;
+  top: -16px;
+  right: 20px;
+  width: 75px;
+  height: 65px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.cloud-platform span.middle-bump {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 80px;
+  background: #ffffff;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.cloud-text-wrap {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  bottom: 16px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.cloud-main-text {
+  font-size: 16px;
   color: white;
   text-transform: uppercase;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  white-space: nowrap;
-}
-
-.tag-purple {
-  background: #8B5CF6;
-  top: -15px;
-  left: -35px;
-  transform: rotate(-12deg);
-}
-
-.tag-cyan {
-  background: #06B6D4;
-  top: -5px;
-  right: -35px;
-  transform: rotate(10deg);
-}
-
-.tag-pink {
-  background: #EC4899;
-  bottom: -8px;
-  left: -30px;
-  transform: rotate(10deg);
-}
-
-.tag-amber {
-  background: #F59E0B;
-  bottom: -10px;
-  right: -40px;
-  transform: rotate(-18deg);
-}
-
-.text-content {
-  margin-bottom: 3rem;
-}
-
-.game-title {
-  font-size: 26px;
-  font-weight: 900;
-  color: var(--titleColor);
-  line-height: 1.1;
-  margin-bottom: 24px;
-  text-align: center;
-  padding: 30px;
-}
-
-.brand-neon {
-  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 36px;
-}
-
-.game-info {
-  font-size: 15px;
-  color: #6B7280;
-  font-weight: 600;
-  line-height: 1.4;
-  padding: 0 10px;
-  text-align: center;
+  font-family: "Sniglet", system-ui;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 4px;
+  text-shadow:
+      1.5px 1.5px 0px #06B6D4,
+      -1.5px 1.5px 0px #06B6D4,
+      1.5px -1.5px 0px #06B6D4,
+      -1.5px -1.5px 0px #06B6D4,
+      0px 1.5px 0px #06B6D4,
+      0px -1.5px 0px #06B6D4,
+      1.5px 0px 0px #06B6D4,
+      -1.5px 0px 0px #06B6D4;
 }
 
 .cta-block {
@@ -156,23 +234,11 @@ const router = useRouter()
   width: 100%;
   position: absolute;
   bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 0 25px;
   padding-bottom: calc(env(safe-area-inset-bottom) + 15px);
-}
-
-.btn-emerald-3d {
-  width: 100%;
-  padding: 15px;
-  background: #10B981;
-  color: white;
-  font-size: 18px;
-  font-weight: 900;
-  border: none;
-  border-radius: 38px;
-  cursor: pointer;
-  box-shadow: 0 8px 0 #065f46;
-  transition: all 0.1s active;
-  -webkit-tap-highlight-color: transparent;
+  z-index: 10;
 }
 
 .btn-emerald-3d:active {
@@ -180,23 +246,18 @@ const router = useRouter()
   box-shadow: 0 4px 0 #065f46;
 }
 
-@media (max-height: 700px) {
-  .hero-wrap {
-    margin-bottom: 2.5rem;
-  }
-
-  .game-title {
-    font-size: 1.8rem;
-  }
-
-  .hero-clay {
-    width: 110px;
-    height: 110px;
-  }
-
-  .skill-tag {
-    font-size: 0.7rem;
-    padding: 6px 12px;
-  }
+.btn-emerald-3d {
+  width: 100%;
+  padding: 12px;
+  color: white;
+  font-size: 18px;
+  font-weight: 900;
+  border: none;
+  border-radius: 58px;
+  cursor: pointer;
+  background: #15bec3;
+  box-shadow: 0 8px 0 #0ca0a5;
+  transition: all 0.1s active;
+  -webkit-tap-highlight-color: transparent;
 }
 </style>

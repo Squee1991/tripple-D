@@ -9,7 +9,8 @@
         </div>
         <div class="success-content-wrapper">
           <template v-if="isQuestFullyCompleted">
-            <h2 class="success-title slide-down" v-if="animStep >= 1">{{ t('questModals.succesCompleted') || t('eventSessionPage.perfect') }}</h2>
+            <h2 class="success-title slide-down" v-if="animStep >= 1">
+              {{ t('questModals.succesCompleted') || t('eventSessionPage.perfect') }}</h2>
             <p class="success-subtitle slide-down" v-if="animStep >= 1 && !previouslyCleared">
               {{ t('questModals.rewardGot') }}
             </p>
@@ -19,13 +20,14 @@
           </template>
           <template v-else>
             <h2 class="success-title slide-down" v-if="animStep >= 1">{{ t('questModals.areErrors') }}</h2>
-            <p class="success-subtitle slide-down" v-if="animStep >= 1">{{ t('questModals.mistakes') || t('eventSessionPage.noMistake') }}</p>
+            <p class="success-subtitle slide-down" v-if="animStep >= 1">
+              {{ t('questModals.mistakes') || t('eventSessionPage.noMistake') }}</p>
           </template>
 
           <div class="success-mascot" :class="{'success-mascot--glow': isQuestFullyCompleted}" v-if="animStep >= 1">
             <div class="mascot-lottie-wrapper" v-if="!lottieError">
               <DotLottieVue
-                  :data="JSON.stringify(isQuestFullyCompleted ? HedgehogSuccess : HedgehogNotSuccess)"
+                  :data="JSON.stringify(lottieData)"
                   :autoplay="true"
                   :loop="true"
                   class="success-lottie"
@@ -35,7 +37,6 @@
             </div>
             <img v-else :src="mascotSrc" class="success-hedgehog" alt="Result"/>
           </div>
-
           <div class="success-rewards" v-if="isQuestFullyCompleted && !previouslyCleared">
             <div class="reward-row --xp" :class="{ 'visible': animStep >= 2 }">
               <span class="xp-badge-3d reward-icon-xp">XP</span>
@@ -46,14 +47,16 @@
               <span class="reward-val text-coins">+{{ displayCoins }}</span>
             </div>
           </div>
-          <div class="success-actions" :class="{ 'visible': animStep >= (isQuestFullyCompleted && !previouslyCleared ? 4 : 2) }">
+          <div class="success-actions"
+               :class="{ 'visible': animStep >= (isQuestFullyCompleted && !previouslyCleared ? 4 : 2) }">
             <template v-if="isQuestFullyCompleted">
               <button class="success-btn success-btn-primary" @click="$emit('themes')">
                 {{ t('questModals.back') || t('eventSessionPage.leave') }}
               </button>
             </template>
             <template v-else>
-              <button class="success-btn success-btn-primary" style="background: #ffb100; box-shadow: 0 6px 0 #e69c00;" @click="$emit('retryMistakes')">
+              <button class="success-btn success-btn-primary" style="background: #ffb100; box-shadow: 0 6px 0 #e69c00;"
+                      @click="$emit('retryMistakes')">
                 {{ t('questModals.repeat') || t('eventSessionPage.again') }}
               </button>
               <button class="success-btn success-btn-secondary" @click="$emit('themes')">
@@ -68,13 +71,11 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useI18n } from '#i18n'
-import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
-import HedgehogSuccess from '~/assets/animation/hedgehog_wolf_howl.json'
-import HedgehogNotSuccess from '~/assets/animation/hedgehog_pumpkin_oh.json'
+import {ref} from 'vue'
+import {useI18n} from '#i18n'
+import {DotLottieVue} from '@lottiefiles/dotlottie-vue'
 
-const { t } = useI18n()
+const {t} = useI18n()
 const lottieError = ref(false)
 
 defineProps({
@@ -85,7 +86,8 @@ defineProps({
   displayXp: Number,
   displayCoins: Number,
   confettiParticles: Array,
-  mascotSrc: String
+  mascotSrc: String,
+  lottieData: Object
 })
 
 defineEmits(['themes', 'retryMistakes'])
@@ -189,7 +191,7 @@ const handleLottieError = () => {
 }
 
 .success-lottie {
-  width: 400px;
+  width: 340px;
 }
 
 .success-hedgehog {
@@ -297,10 +299,9 @@ const handleLottieError = () => {
 }
 
 .success-btn-secondary {
-  background: rgba(255, 255, 255, 0.1);
+  background: none;
   color: #fff;
   box-shadow: none;
-  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .pop-in {
@@ -337,13 +338,11 @@ const handleLottieError = () => {
   }
 }
 
-.modal-fade-enter-active,
-.modal-fade-leave-active {
+.modal-fade-enter-active, .modal-fade-leave-active {
   transition: opacity 0.3s ease-out;
 }
 
-.modal-fade-enter-from,
-.modal-fade-leave-to {
+.modal-fade-enter-from, .modal-fade-leave-to {
   opacity: 0;
 }
 </style>

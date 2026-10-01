@@ -5,6 +5,7 @@
         @touchend="handleTouchEnd"
   >
     <ExitSessionModal
+        :animationData="hedgehogLeaveSession"
         :show="showExitModal"
         @update:show="val => showExitModal = val"
         @cancel="cancelExit"
@@ -13,7 +14,7 @@
     <VHedgehogHelper
         v-if="currentTaskForHelper && !finished"
         :task="currentTaskForHelper"
-        :selected-answer="feedback?.selected"
+        :selected-answer="selectedAnswer || feedback?.selected"
         action-type="grammar"
     />
     <div class="session-container">
@@ -52,34 +53,38 @@
                 :key="option"
                 class="option-pill"
                 :class="{
+                  'is-selected': !isChecked && selectedAnswer === option,
                   'is-correct': isChecked && option === tasks[current].answer,
                   'is-wrong': isChecked && feedback && feedback.selected === option && !feedback.isCorrect,
                   'is-disabled': isChecked && option !== tasks[current].answer && option !== feedback?.selected
                 }"
-                @click="check(option)"
+                @click="toggleOption(option)"
                 :disabled="isChecked"
             >
               <span class="option-text">{{ option }}</span>
             </button>
           </div>
         </div>
-        <transition name="slide-up-bouncy">
-          <div v-if="isChecked && !finished" class="bottom-sheet"
-               :class="feedback.isCorrect ? 'sheet--success' : 'sheet--error'">
-            <div class="feedback-message">
-              <div v-if="feedback.isCorrect" class="feedback-content">
-                <span class="feedback-text">{{ t('trainerPage.right') }}</span>
-              </div>
-              <div v-else class="feedback-content">
-                <span class="feedback-text">{{ t('trainerPage.false') }} <br/><b>{{ tasks[current].answer }}</b></span>
-              </div>
+        <div v-if="!isChecked && !finished" class="bottom-action-container">
+          <button class="btn-gummy btn-gummy--primary" :disabled="!selectedAnswer" @click="performCheck">
+            {{ t('questCompletedModals.check') || 'Проверить' }}
+          </button>
+        </div>
+        <div v-if="isChecked && !finished" class="bottom-sheet"
+             :class="feedback.isCorrect ? 'sheet--success' : 'sheet--error'">
+          <div class="feedback-message">
+            <div v-if="feedback.isCorrect" class="feedback-content">
+              <span class="feedback-text">{{ t('trainerPage.right') }}</span>
             </div>
-            <button class="btn-gummy" :class="feedback.isCorrect ? 'btn-gummy--success' : 'btn-gummy--error'"
-                    @click="next">
-              {{ t('trainerPage.further') }}
-            </button>
+            <div v-else class="feedback-content">
+              <span class="feedback-text">{{ t('trainerPage.false') }} {{ tasks[current].answer }}</span>
+            </div>
           </div>
-        </transition>
+          <button class="btn-gummy" :class="feedback.isCorrect ? 'btn-gummy--success' : 'btn-gummy--error'"
+                  @click="next">
+            {{ t('trainerPage.further') }}
+          </button>
+        </div>
         <Transition name="fade-scale">
           <div v-if="shouldShowFinishModal" class="fullscreen-modal">
             <div class="confetti-container" v-if="correctAnswers === sessionTotalTasks && confettiParticles.length > 0">
@@ -153,8 +158,8 @@ import {dailyStore} from '~/store/dailyStore.js'
 import {useRouter} from 'vue-router'
 import {ref, onMounted, onUnmounted, computed, watch} from 'vue'
 import SoundBtn from "../../src/components/soundBtn.vue";
-import {useSeoMeta} from '#imports'
-import VBackBtn from "~/src/components/V-back-btn.vue";
+import hedgehogLeaveSession from 'assets/animation/hedgehog_leave_session.json'
+
 import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue";
 import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
 import {useSwipeBack} from '~/composables/useSwipeBack.js'
@@ -180,17 +185,17 @@ const correctAnswers = ref(0)
 const loading = ref(true)
 const current = ref(0)
 const answerOptions = ref([])
+const selectedAnswer = ref(null)
 const feedback = ref(null)
 const finished = ref(false)
 const isChecked = ref(false)
 const showExitModal = ref(false)
 const sessionMistakes = ref([])
 
-const sessionTotalTasks = ref(0) // Замороженное количество вопросов для текущей сессии
+const sessionTotalTasks = ref(0)
 const animStep = ref(0)
 const confettiParticles = ref([])
 
-// Стрик
 const showStreakModal = ref(false)
 const isWaitingForStreakClose = ref(false)
 const initialStreak = ref(authStore.streakCount || 0)
@@ -271,18 +276,33 @@ const generateAnswerOptions = (correctAnswer) => {
 const setupCurrentQuestion = () => {
   feedback.value = null;
   isChecked.value = false;
+  selectedAnswer.value = null;
   if (tasks.value.length > 0) {
     const task = tasks.value[current.value];
     generateAnswerOptions(task.answer);
   }
 }
 
-const check = (selectedAnswer) => {
+const toggleOption = (option) => {
+  if (isChecked.value) return;
+  if (selectedAnswer.value === option) {
+    selectedAnswer.value = null;
+  } else {
+    selectedAnswer.value = option;
+  }
+}
+
+const performCheck = () => {
+  if (!selectedAnswer.value || isChecked.value) return;
+  check(selectedAnswer.value);
+}
+
+const check = (selected) => {
   if (isChecked.value) return;
   unlockAudioByUserGesture();
   const task = tasks.value[current.value]
-  const isCorrect = selectedAnswer === task.answer
-  feedback.value = {isCorrect, selected: selectedAnswer};
+  const isCorrect = selected === task.answer
+  feedback.value = {isCorrect, selected};
   isChecked.value = true
 
   if (isCorrect) {
@@ -340,10 +360,8 @@ const next = async () => {
     setupCurrentQuestion();
   } else {
     finished.value = true
-    // Сохраняем попытку в базу
     await thematic.saveModuleAttempt(thematic.selectedLevel.level, thematic.selectedModule.id, sessionMistakes.value)
 
-    // Проверка стрика
     isWaitingForStreakClose.value = true
     setTimeout(async () => {
       const isStreakHigher = authStore.streakCount > initialStreak.value
@@ -389,7 +407,6 @@ const restartModule = () => {
   animStep.value = 0
   confettiParticles.value = []
 
-  // Обновляем количество задач для нового прохождения (например, если идем повторять ошибки)
   sessionTotalTasks.value = tasks.value.length
   setupCurrentQuestion()
 }
@@ -560,7 +577,7 @@ onUnmounted(() => {
   width: 100%;
   padding: 16px 8px;
   background: #bfdbfe;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 16px;
   box-shadow: 0 4px 0 #3b82f6;
   cursor: pointer;
@@ -580,6 +597,12 @@ onUnmounted(() => {
   font-size: 18px;
   font-weight: 900;
   color: #1e3a8a;
+}
+
+.option-pill.is-selected {
+  background: #93c5fd;
+  border-color: #2563eb;
+  box-shadow: 0 4px 0 #1d4ed8;
 }
 
 .option-pill.is-correct {
@@ -611,6 +634,18 @@ onUnmounted(() => {
   color: #6b7280;
 }
 
+.bottom-action-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 1024px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 16px calc(env(safe-area-inset-bottom) + 16px);
+  background: transparent;
+  display: flex;
+}
+
 .bottom-sheet {
   position: fixed;
   bottom: 0;
@@ -619,21 +654,21 @@ onUnmounted(() => {
   left: 50%;
   transform: translateX(-50%);
   padding: 16px 16px calc(env(safe-area-inset-bottom) + 16px);
-  border-radius: 24px 24px 0 0;
   border: none;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  z-index: 99999;
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .sheet--success {
   background: #d1fae5;
+  border-top: 3px solid #2E7D32;;
 }
 
 .sheet--error {
   background: #ffe4e6;
+  border-top: 2px solid #C62828;;
 }
 
 .feedback-message {
@@ -675,7 +710,14 @@ onUnmounted(() => {
   text-transform: uppercase;
 }
 
-.btn-gummy:active {
+.btn-gummy:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: 0 5px 0 #9ca3af !important;
+  background: #d1d5db !important;
+}
+
+.btn-gummy:active:not(:disabled) {
   transform: translateY(4px);
   box-shadow: 0 0 0 transparent !important;
 }
@@ -922,17 +964,5 @@ onUnmounted(() => {
   font-size: 20px;
   font-weight: 900;
   color: #4b5563;
-}
-
-.slide-up-bouncy-enter-active {
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.slide-up-bouncy-leave-active {
-  transition: transform 0.2s ease-in;
-}
-
-.slide-up-bouncy-enter-from, .slide-up-bouncy-leave-to {
-  transform: translateX(-50%) translateY(100%);
 }
 </style>

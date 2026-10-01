@@ -11063,5 +11063,8 @@
     "partOne": "Această temă poate fi deblocată doar în cadrul evenimentului",
     "partTwo": "«Sărbătoarea Dovlecilor»",
     "partThree": "Achiziționeaz-o din magazinul evenimentului"
+  },
+  "part": {
+    "text": "Partea"
   }
 }

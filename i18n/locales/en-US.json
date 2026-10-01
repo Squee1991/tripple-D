@@ -11088,5 +11088,8 @@
     "partOne": "This theme can only be unlocked during the event",
     "partTwo": "«Pumpkin Festival»",
     "partThree": "Get it in the event shop"
+  },
+  "part": {
+    "text": "Part"
   }
 }

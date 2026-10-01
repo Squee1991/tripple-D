@@ -11075,5 +11075,8 @@
     "partOne": "Bu temanın kilidi yalnızca şu etkinlikte açılabilir:",
     "partTwo": "«Balkabağı Şenliği»",
     "partThree": "Etkinlik mağazasından satın al"
+  },
+  "part": {
+    "text": "Bölüm"
   }
 }

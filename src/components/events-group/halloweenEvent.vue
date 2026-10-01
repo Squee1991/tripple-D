@@ -713,7 +713,7 @@ onMounted(() => {
 }
 
 .banner__text {
-  color: #fff3cc;
+  color: white;
   font-weight: 400;
   font-size: 18px;
   font-family: "Rubik Wet Paint", system-ui;
@@ -762,7 +762,7 @@ onMounted(() => {
   bottom: 6px;
   left: 6px;
   width: calc(50% - 6px);
-  background: #bd2d2d;
+  background: #b64711;
   border-radius: 30px;
   transition: transform 0.4s cubic-bezier(0.34, 1.35, 0.64, 1);
   z-index: 1;
@@ -1011,9 +1011,6 @@ onMounted(() => {
 .closed-content {
   text-align: center;
   padding: 40px;
-  border: 2px solid #ffbb55;
-  border-radius: 20px;
-  background: rgba(40, 20, 30, 0.8);
   margin: 20px;
 }
 

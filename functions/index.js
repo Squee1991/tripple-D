@@ -13,6 +13,38 @@ const CYCLE_MS = 24 * 60 * 60 * 1000;
 const IMMUNITY_RANK_HATS = 500;
 const GEMINI_API_KEY = defineSecret("GEMINI_API_KEY");
 const RESEND_API_KEY = defineSecret("RESEND_API_KEY");
+let timeZone = 'ru-RU'
+exports.sendScheduledReminders = onSchedule('every 15 minutes', async (event) => {
+	const db = admin.firestore()
+	const snapshot = await db.collection('users')
+		.where('notificationsEnabled', '==', true)
+		.get()
+
+	const messages = []
+
+	snapshot.forEach((doc) => {
+		const data = doc.data()
+		if (!data.fcmToken || !data.reminderTime || !data.timezone) return
+		const userCurrentTime = new Intl.DateTimeFormat(timeZone, {
+			timeZone: data.timezone,
+			hour: '2-digit',
+			minute: '2-digit',
+			hour12: false
+		}).format(new Date())
+		if (userCurrentTime === data.reminderTime) {
+			messages.push({
+				token: data.fcmToken,
+				notification: {
+					title: 'Время для практики! 📚',
+					body: '5 минут занятий сегодня помогут закрепить результат.'
+				}
+			})
+		}
+	})
+	if (messages.length > 0) {
+		await admin.messaging().sendEach(messages)
+	}
+})
 
 
 exports.takeFromArticlePenalty = onSchedule({
@@ -141,7 +173,7 @@ STRICT RULES FOR HINT:
    - "tr": ONLY the short translation in ${userLocale} without dashes.
 3. "grammarTip":
    - 1 short practical sentence on word order or endings strictly in ${userLocale}.
-   - Explain grammatical agreement and endings naturally and logically, highlighting how articles influence adjective endings when relevant, entirely in ${userLocale}.
+   - Explain grammatical agreement and endings naturally and logically. If explaining adjective endings, use the phrase "берет у артикля", entirely in ${userLocale}.
    `;
 
 			systemPrompt = `You are "Hedgehog", an upbeat, friendly German language tutor.
@@ -203,7 +235,7 @@ Evaluate the grammatical correctness and naturalness of the complete sentence.
 
 STRICT RULES FOR EXPLANATION:
 - Write your feedback entirely in ${userLocale}.
-- If the user made a mistake with adjective declension, explain it using the exact phrase "берет у артикля" to describe how the adjective ending is determined.
+- If the user made a mistake with adjective declension, explain it using the exact phrase "берет у артикля".
 - If the user made a mistake with prepositions of location, explicitly state: "When the question is 'Where?' (Wo?), use Dativ and put the noun's article in Dativ. For Akkusativ, apply the same rule."
 - Keep the feedback supportive, short (1-3 sentences).
 
@@ -218,23 +250,28 @@ CRITICAL: Respond ONLY with valid JSON:
 		} else {
 			const question = dataIn.question || "";
 			const correctAnswer = dataIn.correctAnswer || dataIn.answer || "";
-			const options = Array.isArray(dataIn.options) ? dataIn.options.join(", ") : "";
 
-			systemPrompt = `You are a friendly German language tutor named Hedgehog.
-The user is solving a task and needs a clear, helpful hint.
-Task: "${question}"
-Options: "${options}"
+			systemPrompt = `You are a concise German tutor.
+Task / Sentence: "${question}"
 Correct answer: "${correctAnswer}"
 
-Give a brief explanation in 1-2 short sentences why "${correctAnswer}" is the right choice.
 STRICT RULES:
-- When explaining grammar endings taking cues from an article, clearly explain this relationship entirely in ${userLocale} without mixing languages.
-- Respond in THIS exact language: ${userLocale}.
+1. Write strictly in ${userLocale}.
+2. NO greetings, NO fluff ("Привет", "Я ёжик", "Давай разберем" etc).
+3. DO NOT mention or analyze incorrect options. Explain ONLY the correct answer.
+4. If explaining adjective declension endings, you MUST use the exact phrase "берет у артикля".
+5. If explaining prepositions of location, explicitly state: "When the question is 'Where?' (Wo?), use Dativ and put the noun's article in Dativ. For Akkusativ, apply the same rule."
+6. You MUST format the "explanation" string EXACTLY like the template below, using double line breaks (\\n\\n) to separate the translation and the rule.
 
-CRITICAL: Respond ONLY with a valid JSON object matching this schema:
+TEMPLATE FOR THE "explanation" STRING:
+Перевод: [Insert full translation of the sentence here]
+
+Правило: [Insert 1-2 sentences explaining the grammar/vocabulary of the correct answer]
+
+CRITICAL: Respond ONLY with a valid JSON object matching this schema. Include the formatting in the "explanation" string:
 {
   "correctOption": "${correctAnswer}",
-  "explanation": "short explanation in ${userLocale}"
+  "explanation": "Your structured explanation with \\n\\n"
 }`;
 		}
 

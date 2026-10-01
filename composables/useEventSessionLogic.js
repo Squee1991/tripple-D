@@ -4,6 +4,12 @@ import PumpkinAllCorrect from "~/assets/images/event-rewards/halloween-event/hal
 import PumpkinLeaveSession from "~/assets/images/event-rewards/halloween-event/halloween-assets/PumpkinWong.svg"
 import DefaultLeaveLesson from "~/assets/images/LeaveLesson.svg"
 
+import PumpkinLeave from '~/assets/animation/hedgehog_pumpkin_oh.json'
+import HalloweenSuccessAnim from '~/assets/animation/hedgehog_wolf_howl.json'
+import HalloweenFailAnim from '~/assets/animation/hedgehog_devil.json'
+import DefaultSuccessAnim from '~/assets/animation/hedgehog_wolf_howl.json'
+import DefaultFailAnim from '~/assets/animation/hedgehog_pumpkin_oh.json'
+
 export function useEventSessionLogic() {
     const currentMonth = new Date().getMonth()
 
@@ -22,9 +28,16 @@ export function useEventSessionLogic() {
         return DefaultLeaveLesson
     }
 
-    const getLeaveIcon = () => {
-        if (currentSeason.value === 'halloween') return PumpkinLeaveSession
-        return DefaultLeaveLesson
+    const getResultAnimation = (isFullyCompleted) => {
+        if (currentSeason.value === 'halloween') {
+            return isFullyCompleted ? HalloweenSuccessAnim : HalloweenFailAnim
+        }
+        return isFullyCompleted ? DefaultSuccessAnim : DefaultFailAnim
+    }
+
+    const getLeaveAnimation = () => {
+        if (currentSeason.value === 'halloween') return PumpkinLeave
+        return PumpkinLeave
     }
 
     const animStep = ref(0)
@@ -80,7 +93,8 @@ export function useEventSessionLogic() {
 
     return {
         getResultIcon,
-        getLeaveIcon,
+        getResultAnimation,
+        getLeaveAnimation,
         animStep,
         displayXp,
         displayCoins,

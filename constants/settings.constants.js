@@ -24,7 +24,8 @@ export const THEMES_CONFIG = [
     { key: 'light', labelKey: 'themeModal.light' },
     { key: 'dark', labelKey: 'themeModal.dark' },
     { key: 'pink', labelKey: 'themeModal.pink', requiredAch: 'valentineTheme', lockType: 'theme_pink' },
-    { key: 'orange', labelKey: 'themeModal.halloween', requiredAch: 'halloweenTheme', lockType: 'theme_orange' }
+    { key: 'orange', labelKey: 'themeModal.halloween' }
+    /* requiredAch: 'halloweenTheme', lockType: 'theme_orange' */
 ]
 
 export const SETTINGS_GROUPS_CONFIG = [

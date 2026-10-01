@@ -16,7 +16,10 @@ const store = useAudioTaskStore()
 const authStore = userAuthStore()
 const {allTasks, currentLevel, userProgress} = storeToRefs(store)
 const {t} = useI18n()
+
 const screen = ref('levels')
+const selectedTopic = ref(null)
+
 const showDevModal = ref(false)
 const isMounted = ref(false)
 const levels = ['A1', 'A2', 'B1']
@@ -24,27 +27,38 @@ const levelColors = ['#49b36a', '#88B5FF', '#FF9F7F']
 const topicColors = ['#FFEB7F', '#9DFFBB', '#FFAFF3', '#88B5FF', '#FF9F7F', '#AFAFFF', '#7FFFDF', '#FFD1AF']
 const showPremiumModal = ref(false)
 const { $track } = useNuxtApp()
+
+const CHUNK_SIZE = 10
+
 const overlayData = {
   title: t('audioTasks.overlayDataTitle'),
   text: t('audioTasks.overlayDataText'),
 }
 
-const headerTitle = computed(() => screen.value === 'levels' ? t('audioTasks.audioTheme') : `${currentLevel.value}`)
-const headerText = computed(() => screen.value === 'levels' ? t('audioTasks.takeComplexity') : t('audioTasks.takeTheme'))
+const headerTitle = computed(() => {
+  if (screen.value === 'levels') return t('audioTasks.audioTheme')
+  if (screen.value === 'topics') return `${currentLevel.value}`
+  if (screen.value === 'parts') return selectedTopic.value ? t(selectedTopic.value.title) : ''
+})
+
 const availableTopics = computed(() => allTasks.value[currentLevel.value] || [])
 
 const handleBackClick = () => {
-  if (screen.value === 'topics') {
+  if (screen.value === 'parts') {
+    $track('audio_parts_back_click')
+    screen.value = 'topics'
+  } else if (screen.value === 'topics') {
     $track('audio_topics_back_click')
-    window.history.back()
+    screen.value = 'levels'
   } else {
     $track('audio_levels_back_click')
     router.push('/')
   }
 }
-
 const handlePopState = () => {
-  if (screen.value === 'topics') {
+  if (screen.value === 'parts') {
+    screen.value = 'topics'
+  } else if (screen.value === 'topics') {
     screen.value = 'levels'
   }
 }
@@ -70,31 +84,66 @@ const isTopicUnlocked = (index) => {
     const completedTasks = getTopicCompleted(prevTopic);
     return totalTasks > 0 && completedTasks >= totalTasks;
   }
-
   return false;
 };
 
 const selectLevel = (level) => {
   $track('audio_level_selected', { level: level })
-  window.history.pushState({isAudioTopics: true}, '')
+  window.history.pushState({isAudioState: true}, '')
   store.setLevel(level)
   screen.value = 'topics'
 }
 
 const selectTopic = (topic, index) => {
   if (isTopicUnlocked(index)) {
-    $track('audio_topic_started', {
-      topic_id: topic.id,
-      level: currentLevel.value,
-      completed_tasks: getTopicCompleted(topic),
-      total_tasks: topic.tasks?.length || 0
-    })
-
-    store.setCurrentTopicId(topic.id)
-    router.push('/audio-tasks/session')
+    const tasksCount = topic.tasks?.length || 0
+    if (tasksCount > CHUNK_SIZE) {
+      selectedTopic.value = topic
+      screen.value = 'parts'
+      window.history.pushState({isAudioState: true}, '')
+    } else {
+      launchSession(topic.id, 1)
+    }
   } else {
     showPremiumModal.value = true
   }
+}
+
+const topicParts = computed(() => {
+  if (!selectedTopic.value) return []
+  const tasks = selectedTopic.value.tasks || []
+  const parts = []
+  const totalCompleted = getTopicCompleted(selectedTopic.value)
+
+  for (let i = 0; i < tasks.length; i += CHUNK_SIZE) {
+    const partIndex = i / CHUNK_SIZE
+    const partTasks = tasks.slice(i, i + CHUNK_SIZE)
+    const partCompleted = Math.max(0, Math.min(partTasks.length, totalCompleted - i))
+
+    parts.push({
+      index: partIndex,
+      total: partTasks.length,
+      completed: partCompleted
+    })
+  }
+  return parts
+})
+
+const isPartUnlocked = (partIndex) => {
+  return true;
+}
+
+const selectPart = (part) => {
+  if (isPartUnlocked(part.index)) {
+    launchSession(selectedTopic.value.id, part.index + 1)
+  } else {
+    showPremiumModal.value = true
+  }
+}
+
+const launchSession = (topicId, partNumber) => {
+  store.setCurrentTopicId(topicId)
+  router.push({ path: '/audio-tasks/session', query: { part: partNumber } })
 }
 
 onMounted(async () => {
@@ -109,6 +158,7 @@ onMounted(async () => {
 onUnmounted(() => {
   window.removeEventListener('popstate', handlePopState)
 })
+
 </script>
 
 <template>
@@ -148,18 +198,10 @@ onUnmounted(() => {
           <div v-if="isMounted" :key="screen" class="scrollable-view">
             <template v-if="screen === 'levels'">
               <div class="banner-wrapper">
-                <VBanner
-                    :text="t('bannerTitles.audio')"
-                    :icon="HeadPhones"
-                />
+                <VBanner :text="t('bannerTitles.audio')" :icon="HeadPhones" />
               </div>
               <div class="topics-list-container">
-                <div
-                    v-for="(level, index) in levels"
-                    :key="level"
-                    @click="selectLevel(level)"
-                    class="topic-list-item"
-                >
+                <div v-for="(level, index) in levels" :key="level" @click="selectLevel(level)" class="topic-list-item">
                   <div class="topic-item-content">
                     <span class="topic-label">{{ t('audioTasks.level') }}</span>
                     <div class="topic-icon-box" :style="{ color: levelColors[index] }">
@@ -170,20 +212,12 @@ onUnmounted(() => {
                 </div>
               </div>
             </template>
-            <template v-else>
+            <template v-else-if="screen === 'topics'">
               <div class="banner-wrapper">
-                <VBanner
-                    :text="t('bannerTitles.audio')"
-                    :icon="HeadPhones"
-                />
+                <VBanner :text="t('bannerTitles.audio')" :icon="HeadPhones" />
               </div>
               <div class="topics-list-container">
-                <div
-                    v-for="(topic, index) in availableTopics"
-                    :key="topic.id"
-                    @click="selectTopic(topic, index)"
-                    class="topic-list-item"
-                >
+                <div v-for="(topic, index) in availableTopics" :key="topic.id" @click="selectTopic(topic, index)" class="topic-list-item">
                   <div class="topic-main-row">
                     <div class="topic-item-content">
                       <div class="topic-icon-box">{{ topic.icon }}</div>
@@ -191,9 +225,7 @@ onUnmounted(() => {
                     </div>
                     <div class="topic-arrow" :class="{ 'topic-arrow--locked': !isTopicUnlocked(index) }">
                       <VArrowNav v-if="isTopicUnlocked(index)"/>
-                      <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                           fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
-                           stroke-linejoin="round">
+                      <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                         <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                       </svg>
@@ -201,17 +233,37 @@ onUnmounted(() => {
                   </div>
                   <div v-if="topic.tasks?.length" class="topic-progress-wrapper">
                     <div class="progress-bar-container">
-                      <div
-                          class="progress-bar-fill"
-                          :style="{
-                          width: `${getTopicProgressPercent(topic)}%`,
-                          backgroundColor: getTopicColor(index)
-                        }"
-                      ></div>
+                      <div class="progress-bar-fill" :style="{ width: `${getTopicProgressPercent(topic)}%`, backgroundColor: getTopicColor(index) }"></div>
                     </div>
-                    <div class="progress-text">
-                      {{ getTopicCompleted(topic) }}/{{ topic.tasks.length }}
+                    <div class="progress-text">{{ getTopicCompleted(topic) }}/{{ topic.tasks.length }}</div>
+                  </div>
+                </div>
+              </div>
+            </template>
+            <template v-else-if="screen === 'parts'">
+              <div class="banner-wrapper">
+                <VBanner :text="t('bannerTitles.audio')" :icon="HeadPhones" />
+              </div>
+              <div class="topics-list-container">
+                <div v-for="(part, index) in topicParts" :key="index" @click="selectPart(part)" class="topic-list-item">
+                  <div class="topic-main-row">
+                    <div class="topic-item-content">
+                      <div class="topic-icon-box">{{ selectedTopic?.icon }}</div>
+                      <span class="topic-label">{{ t('part.text')}} {{ part.index + 1 }}</span>
                     </div>
+                    <div class="topic-arrow" :class="{ 'topic-arrow--locked': !isPartUnlocked(part.index) }">
+                      <VArrowNav v-if="isPartUnlocked(part.index)"/>
+                      <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="topic-progress-wrapper">
+                    <div class="progress-bar-container">
+                      <div class="progress-bar-fill" :style="{ width: `${(part.completed / part.total) * 100}%`, backgroundColor: getTopicColor(index) }"></div>
+                    </div>
+                    <div class="progress-text">{{ part.completed }}/{{ part.total }}</div>
                   </div>
                 </div>
               </div>
@@ -225,7 +277,7 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-/* СТИЛИ ОСТАЮТСЯ БЕЗ ИЗМЕНЕНИЙ, ТЫ МОЖЕШЬ ПРОСТО ОСТАВИТЬ СВОИ */
+
 .quiz {
   height: 100%;
   display: flex;

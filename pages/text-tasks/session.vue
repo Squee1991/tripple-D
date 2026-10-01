@@ -82,6 +82,7 @@
     </div>
 
     <ExitSessionModal
+        :animation-data="HedgehogLeaveSession"
         :show="showExitModal"
         @update:show="val => showExitModal = val"
         @cancel="cancelExit"
@@ -104,11 +105,15 @@
 <script setup>
 import {ref, computed, onMounted} from 'vue'
 import {useRouter, onBeforeRouteLeave} from 'vue-router'
-import {useTextTasksStore} from '../../store/textTasksStore.js'
-import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
+
 import { useSwipeBack } from '~/composables/useSwipeBack.js'
-import { showInterstitial } from '../../utils/admob.js'
+import { showInterstitial } from '~/utils/admob.js'
+
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue"
+import ExitSessionModal from '~/src/components/V-stopSessionModal.vue'
+import HedgehogLeaveSession from 'assets/animation/hedgehog_leave_session.json'
+
+import {useTextTasksStore} from '~/store/textTasksStore.js'
 import { userAuthStore } from "~/store/authStore.js"
 
 const {t} = useI18n()

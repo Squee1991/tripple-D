@@ -252,7 +252,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			'daily', 'guessedSafeWords', 'all_cases', 'all_adjectives', 'all_verbs',
 			'FiveHearts', 'daily42', 'iAmGroot',
 			'santaHat', 'christmasBall', 'christmasWreath',
-			'valentineBear', 'cupidArrow', 'wasPlusUser'
+			'valentineBear', 'cupidArrow', 'wasPlusUser',
+			'witchBroom', 'witchHat', 'pumpkin', 'punch', 'spellBook'
 		];
 		let unlockedCount = 0;
 		awardAchievementIds.forEach(id => {
@@ -723,6 +724,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const eventData = snap.data() || {}
 				const questsProgress = eventData.quests || {}
 				const shopItems = eventData.shopItems || {}
+
+				updateCollectionCount()
 
 				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
 				updateProgress('firstHalloweenQuest', completedQuestsCount > 0 ? 1 : 0)

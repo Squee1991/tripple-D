@@ -28,20 +28,18 @@
             <h2 class="success-title slide-down" v-if="animStep >= 1">{{ t('questModals.areErrors') }}</h2>
             <p class="success-subtitle slide-down" v-if="animStep >= 1">{{ t('questModals.mistakes') }}</p>
           </template>
-
           <div class="success-mascot" :class="{'success-mascot--glow': !hasMistakes}" v-if="animStep >= 1">
-              <div class="mascot-lottie-wrapper">
-                  <DotLottieVue
-                      :data="JSON.stringify(!hasMistakes ? Hedgehog : HedgehogSad)"
-                      :autoplay="true"
-                      :loop="true"
-                      class="success-lottie"
-                  />
-              </div>
-<!--            <img v-if="!hasMistakes" :src="Great" class="success-hedgehog pop-in" alt="Great"/>-->
-<!--            <img v-else :src="Support" class="success-hedgehog pop-in" alt="Support"/>-->
+            <div class="mascot-lottie-wrapper">
+              <DotLottieVue
+                  :data="JSON.stringify(!hasMistakes ? Hedgehog : HedgehogSad)"
+                  :autoplay="true"
+                  :loop="true"
+                  class="success-lottie"
+              />
+            </div>
+            <!--            <img v-if="!hasMistakes" :src="Great" class="success-hedgehog pop-in" alt="Great"/>-->
+            <!--            <img v-else :src="Support" class="success-hedgehog pop-in" alt="Support"/>-->
           </div>
-
           <div class="success-rewards" v-if="!hasMistakes && !previouslyCleared">
             <div class="reward-row --xp" :class="{ 'visible': animStep >= 2 }">
               <span class="xp-badge-3d reward-icon-xp">XP</span>
@@ -54,10 +52,10 @@
           </div>
           <div class="success-actions" :class="{ 'visible': animStep >= (!hasMistakes && !previouslyCleared ? 4 : 2) }">
             <template v-if="!hasMistakes">
-              <button v-if="hasNextQuest" class="success-btn success-btn-primary" @click="$emit('next')">
+              <!-- <button v-if="hasNextQuest" class="success-btn success-btn-primary" @click="$emit('next')">
                 {{ t('questModals.next') }}
-              </button>
-              <button class="success-btn" :class="hasNextQuest ? 'success-btn-secondary' : 'success-btn-primary'"
+              </button> -->
+              <button class="success-btn success-btn-primary"
                       @click="$emit('themes')">
                 {{ t('questModals.back') }}
               </button>
@@ -67,10 +65,10 @@
                       @click="$emit('retryMistakes')">
                 {{ t('questModals.repeat') }}
               </button>
-              <button v-if="hasNextQuest" class="success-btn success-btn-secondary" @click="$emit('next')">
+              <!-- <button v-if="hasNextQuest" class="success-btn success-btn-secondary" @click="$emit('next')">
                 {{ t('questModals.next') }}
-              </button>
-              <button v-else class="success-btn success-btn-secondary" @click="$emit('themes')">
+              </button> -->
+              <button class="success-btn success-btn-secondary" @click="$emit('themes')">
                 {{ t('questModals.back') }}
               </button>
             </template>
@@ -256,7 +254,6 @@ defineEmits(['next', 'themes', 'retryMistakes'])
   opacity: 1;
   transform: translateY(0);
 }
-
 
 .reward-row.--coins {
   background: #9f874a;

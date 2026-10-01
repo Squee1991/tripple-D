@@ -11060,5 +11060,8 @@
     "partOne": "Bu mavzuni faqat ushbu tadbirda ochish mumkin:",
     "partTwo": "«Qovoq bayrami»",
     "partThree": "Uni tadbir do'konidan xarid qiling"
+  },
+  "part": {
+    "text": "Qism"
   }
 }
