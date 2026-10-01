@@ -3507,7 +3507,8 @@
     "close": "Fermer",
     "light": "Claire",
     "dark": "Sombre",
-    "pink": "Romantique"
+    "pink": "Romantique",
+    "halloween": "D'Halloween"
   },
   "pinkThemeModal": {
     "partOne": "Ce thème ne peut être débloqué que lors de l'événement",
@@ -3701,6 +3702,7 @@
     "quest-6": "Choisissez une réponse"
   },
   "eventPanel": {
+    "errors": "Erreurs",
     "pathMain": "Accueil",
     "event": "Événement",
     "panel": "Panneau d'événement",
@@ -5225,7 +5227,17 @@
     "cupidArrow": "Arc de Cupidon",
     "cupidArrowDescription": "Récompense pour le succès dans la catégorie Événements - Festival des cœurs : « Tir précis »",
     "adventures": "Parchemin des Voyages",
-    "adventuresDescription": "La récompense est obtenue en accomplissant la réussite dans la catégorie Terres des Langues: «Maître des Sentiers de l'Aventure»"
+    "adventuresDescription": "La récompense est obtenue en accomplissant la réussite dans la catégorie Terres des Langues: «Maître des Sentiers de l'Aventure»",
+    "witchBroom": "Balai de sorcière",
+    "witchBroomDescription": "Récompense pour l'accomplissement du succès « L'éclair ? Non, plus rapide ! » dans la catégorie d'événement « Fête des citrouilles ».",
+    "witchHat": "Chapeau de sorcier",
+    "witchHatDescription": "Récompense pour l'accomplissement du succès « Choix de la maison » dans la catégorie d'événement « Fête des citrouilles ».",
+    "pumpkin": "Citrouille",
+    "pumpkinDescription": "Récompense pour l'accomplissement du succès « Tête de citrouille » dans la catégorie d'événement « Fête des citrouilles ».",
+    "spellBook": "Grimoire de sorts",
+    "spellBookDescription": "Récompense pour l'accomplissement du succès « Grimoire du cavalier » dans la catégorie d'événement « Fête des citrouilles ».",
+    "punch": "Chaudron de potion",
+    "punchDescription": "Récompense pour l'accomplissement du succès « Punch magique » dans la catégorie d'événement « Fête des citrouilles »."
   },
   "wildLandsFirstQuest": {
     "title": "Environnement",
@@ -5817,24 +5829,24 @@
     "questFifteen": "Écoutez et écrivez la réponse :"
   },
   "eastPlainThirdQuests": {
-    "title": "Qu'est-ce que tu aimes faire ?",
-    "goal": "Apprendre à parler de ses loisirs et de son temps libre",
-    "description": "Vos nouveaux amis vous proposent d'aller faire des courses. Apprenez à dire où vous allez et ce que vous allez faire.",
-    "questOne": "Comment dit-on : Le magasin",
-    "questTwo": "Comment dit-on : Acheter",
-    "questTree": "Comment dit-on : Je vais au magasin",
-    "questFour": "Écoutez et écrivez",
-    "questFive": "Comment dit-on : Salut ! Où vas-tu ? Je vais au magasin",
-    "questSix": "Écoutez et écrivez",
-    "questSeven": "Comment dit-on : Je vais aussi au magasin",
-    "questEight": "Écoutez et écrivez",
-    "questNine": "Comment dit-on : Le supermarché",
-    "questTen": "Écoutez et écrivez",
-    "questEleven": "Comment dit-on : Je ne vais pas au supermarché",
-    "questTwelve": "Comment dit-on : La caisse",
-    "questThirteen": "Comment dit-on : Le prix",
-    "questFourteen": "Comment dit-on : Le ticket de caisse",
-    "questFifteen": "Écoutez et écrivez"
+    "title": "Aller au magasin",
+    "goal": "Apprendre le vocabulaire des courses et des phrases simples de direction",
+    "description": "Nous apprenons à nommer le magasin, le supermarché et à dire où nous allons.",
+    "questOne": "Comment dire : Magasin",
+    "questTwo": "Comment dire : Acheter",
+    "questTree": "Comment dire : Aller",
+    "questFour": "Assemblez : Nous allons",
+    "questFive": "Assemblez : Nous achetons du pain",
+    "questSix": "Écoutez et écrivez : Nous achetons du pain",
+    "questSeven": "Assemblez : Nous allons au magasin",
+    "questEight": "Assemblez : Je vais au magasin",
+    "questNine": "Comment dire : Supermarché",
+    "questTen": "Écoutez et écrivez : Supermarché",
+    "questEleven": "Assemblez : Je ne vais pas au supermarché",
+    "questTwelve": "Comment dire : Caisse",
+    "questThirteen": "Comment dire : Prix",
+    "questFourteen": "Comment dire : Ticket de caisse",
+    "questFifteen": "Écoutez et écrivez : Caisse"
   },
   "eastPlainFourthQuests": {
     "title": "Oncontinue les achats ?",
@@ -8033,7 +8045,7 @@
   },
   "cardTime": {
     "title": "Arrêt du temps",
-    "description": "Protège vos toques des pénalités"
+    "description": "Protège votre série et vos chapeaux contre les pénalités"
   },
   "cardSales": {
     "title3": "Réduction Plus-I",
@@ -8163,6 +8175,7 @@
   },
   "pavelOverlay": {
     "newbie": "Novice",
+    "streakTitle": "Série",
     "rankTitle": "Toques",
     "rankLabelOne": "- Les toques sont attribuées pour l'accomplissement des tâches quotidiennes.",
     "rankLabelTwo": "- Tu peux en obtenir 3 par jour en finissant tout. Voir les récompenses dans la section 'Rang' du profil.",
@@ -10732,5 +10745,349 @@
     "succesCompleted": "TERMINÉ",
     "rewardGot": "Vous avez reçu une récompense :",
     "questCompletedAgain": "Quête complétée à nouveau :"
+  },
+  "calendarHints": {
+    "first": "Super rythme cette semaine ! Continue comme ça",
+    "second": "Un petit pas aujourd'hui, un énorme résultat demain !",
+    "third": "La discipline fait des miracles. Tu te rapproches de ton objectif chaque jour !",
+    "fourth": "Le feu brûle de plus en plus fort ! Ne ralentis pas",
+    "fifth": "Chaque jour complété façonne une habitude en acier !",
+    "sixth": "Tu fais ce qui fait abandonner tant de gens. Du bon boulot !",
+    "seventh": "Ta série se renforce de jour en jour, continue ainsi !",
+    "eighth": "Juste deux minutes par jour et l'allemand devient déjà plus familier !",
+    "ninth": "Du bon boulot ! La régularité est la clé, et tu es en avance",
+    "tenth": "Chaque jour apporte plus de confiance. On continue demain !"
+  },
+  "streakButtons": {
+    "first": "À demain",
+    "second": "On continue demain",
+    "third": "Super travail",
+    "fourth": "Pas fait, à demain",
+    "fifth": "On consolide demain ?",
+    "sixth": "Discipline au top",
+    "seventh": "À demain",
+    "eighth": "On révise demain ?",
+    "ninth": "On ne baisse pas le rythme"
+  },
+  "hintText": {
+    "start": "Ta série a commencé. Pratique chaque jour pour ne pas la perdre !",
+    "first": "Fin de la semaine ! Demain, début d'une nouvelle série propre",
+    "second": "Terminons cette semaine, et dès la prochaine on commence une série complète",
+    "aRow": "d'affilée"
+  },
+  "guessWordHint": {
+    "hint-title": "Indice",
+    "hint-desc": "Dévoilera 2 lettres aléatoires sans dépenser d'essais",
+    "hint-action-btn": "Utiliser"
+  },
+  "halloweenEventQuests": {
+    "questOne": "Image → Mot",
+    "questTwo": "Bases et faits",
+    "questThree": "Traditions allemandes",
+    "questFour": "Créatures et légendes",
+    "questFive": "Costumes et nuit d'automne",
+    "questSix": "Symboles et coutumes",
+    "questSeven": "Soirée citrouille",
+    "questEight": "Chasse aux bonbons",
+    "questNine": "Château de Frankenstein",
+    "questTen": "Réforme et fête",
+    "questEleven": "L'ancien esprit du navet",
+    "questTwelve": "Toussaint",
+    "questThirteen": "Fête de la Saint-Martin",
+    "questFourteen": "Exposition de citrouilles à Louisbourg",
+    "questFifteen": "Jeux de fête",
+    "questSixteen": "Momie joyeuse",
+    "questSeventeen": "Image et mot",
+    "questEighteen": "Attributs de fête",
+    "questNineteen": "Légendes allemandes",
+    "questTwenty": "Punch d'automne",
+    "questTwentyOne": "Trouve l'intrus",
+    "questTwentyTwo": "Trouve l'intrus - météo",
+    "questTwentyThree": "Trouve l'intrus - météo"
+  },
+  "eventsShopItemsHalloween": {
+    "witchBroom": "Balai de sorcière",
+    "witchHat": "Chapeau de sorcier",
+    "pumpkin": "Citrouille",
+    "punch": "Punch de sorcière",
+    "spellBook": "Grimoire de sorts",
+    "ghostEffect": "Effet d'Halloween"
+  },
+  "hallowenQuestTwo": {
+    "titleOne": "Quand fête-t-on Halloween ?",
+    "titleTwo": "Quel légume sculpte-t-on traditionnellement pour Halloween ?",
+    "titleThree": "Que crient les enfants en Allemagne lorsqu'ils demandent des friandises ?",
+    "titleFour": "Comment s'appelle la célèbre lanterne sculptée dans une citrouille ?",
+    "titleFive": "Quelles sont les deux couleurs les plus associées à Halloween ?",
+    "titleSix": "Quel animal est considéré comme le symbole nocturne emblématique de la fête ?",
+    "titleSeven": "Quelle fête suit immédiatement Halloween, le 1er novembre ?",
+    "titleEight": "Que place-t-on traditionnellement à l'intérieur d'une citrouille évidée ?"
+  },
+  "hallowenQuestThree": {
+    "titleOne": "Que sculptait-on dans les contrées germaniques avant l'arrivée de la citrouille ?",
+    "titleTwo": "Dans quel château allemand un grand festival d'Halloween est-il organisé depuis les années 1970 ?",
+    "titleThree": "Quelle fête importante l'Église luthérienne célèbre-t-elle le 31 octobre ?",
+    "titleFour": "Lors de quelle fête de novembre les enfants défilent-ils dans la rue avec des lanternes artisanales ?",
+    "titleFive": "Dans quel pays sculpte-t-on traditionnellement en novembre des lanternes dans des navets (Räbeliechtli) ?",
+    "titleSix": "Pourquoi une vieille croyance allemande conseille-t-elle de cacher les couteaux de cuisine cette nuit-là ?",
+    "titleSeven": "Pourquoi les fêtes doivent-elles s'apaiser à minuit dans certains lands allemands ?",
+    "titleEight": "Que cuisine-t-on le plus souvent avec la chair de citrouille en Allemagne ?"
+  },
+  "hallowenQuestFour": {
+    "titleOne": "Quelle créature craint l'ail et dort dans un cercueil pendant la journée ?",
+    "titleTwo": "Sur quelle montagne du massif du Harz les sorcières se rassemblent-elles selon les légendes allemandes ?",
+    "titleThree": "Comment appelle-t-on une personne qui se transforme en loup les soirs de pleine lune ?",
+    "titleFour": "Sur quoi vole une sorcière selon les légendes ?",
+    "titleFive": "Quelle créature erre dans les vieux châteaux vêtue d'habits blancs ?",
+    "titleSex": "Quel animal accompagne le plus souvent la sorcière dans l'imaginaire populaire ?",
+    "titleSeven": "Comment appelle-t-on les feux follets des marais qui égarent les voyageurs ?",
+    "titleEight": "Comment appelle-t-on un mort revenu à la vie aux mouvements lents ?"
+  },
+  "hallowenQuestFive": {
+    "titleOne": "Pourquoi les gens se déguisaient-ils à l'origine avec des costumes effrayants ?",
+    "titleTwo": "Quel costume est composé d'ossements blancs sur un fond sombre ?",
+    "titleThree": "Que faut-il absolument porter avec la cape noire d'un vampire ?",
+    "titleFour": "Que prenait-on autrefois comme base pour réaliser le costume de fantôme le plus simple ?",
+    "titleFive": "Quel fruit des fêtes foraines est fréquemment nappé d'un glaçage rouge sucré ?",
+    "titleSix": "Qu'accroche-t-on d'ordinaire dans les coins des pièces pour instaurer une ambiance terrifiante ?",
+    "titleSeven": "Que donne-t-on le plus souvent aux enfants en Allemagne après leur récitation ?",
+    "titleEight": "À quel moment de la journée les enfants partent-ils faire du porte-à-porte pour récolter des bonbons ?"
+  },
+  "hallowenQuestSix": {
+    "titleOne": "Quelle ancienne fête celtique est considérée comme l'ancêtre historique d'Halloween ?",
+    "titleTwo": "De quoi les enfants menacent-ils gentiment avec la phrase «...sonst gibt's Saures» si on ne leur donne pas de bonbons ?",
+    "titleThree": "Dans quelle ville près de Stuttgart construit-on chaque année d'immenses sculptures de citrouilles ?",
+    "titleFour": "Dans quoi la sorcière prépare-t-elle ses potions dans les contes ?",
+    "titleFive": "Quelle créature à huit pattes tisse de solides toiles de capture ?",
+    "titleSix": "À l'aide de quoi les sorciers et magiciens jettent-ils leurs sorts ?",
+    "titleSeven": "Que fait-on souvent des graines de citrouille après l'avoir vidée ?",
+    "titleEight": "Pourquoi la forêt d'automne fin octobre est-elle idéale pour les contes qui font peur ?"
+  },
+  "hallowenQuestSeven": {
+    "questOne": "À quel moment de la journée la famille sculpte-t-elle la citrouille ?",
+    "questTwo": "Quel genre de visage sculptent-ils ?",
+    "questThree": "Que placent-ils à l'intérieur de la citrouille ?",
+    "questFour": "Pourquoi met-on une bougie à l'intérieur ?",
+    "questFive": "Quelle atmosphère règne ce soir-là ?"
+  },
+  "hallowenQuestEight": {
+    "questOne": "Quand les enfants partent-ils en balade ?",
+    "questTwo": "En quoi Lucas s'est-il déguisé ?",
+    "questThree": "Quel couvre-chef porte Mia ?",
+    "questFour": "Que crient fort les enfants devant les portes d'entrée ?",
+    "questFive": "De quoi les voisins remplissent-ils les sacs des enfants ?"
+  },
+  "hallowenQuestNine": {
+    "questOne": "Près de quelle ville le château est-il situé ?",
+    "questTwo": "Sous quelle forme le château a-t-il subsisté jusqu'à nos jours ?",
+    "questThree": "Qui se déguise en monstres dans le château ?",
+    "questFour": "Que font les acteurs costumés aux visiteurs ?",
+    "questFive": "Quel temps règne habituellement autour de ce château en automne ?"
+  },
+  "hallowenQuestTen": {
+    "questOne": "De qui se souvient-on lors du Jour de la Réformation ?",
+    "questTwo": "Quel statut le 31 octobre a-t-il dans de nombreux lands allemands ?",
+    "questThree": "Qu'organise-t-on généralement dans les églises pendant la journée ?",
+    "questFour": "À qui appartient le plus souvent la fin de soirée du 31 octobre ?",
+    "questFive": "Quelle confession célèbre le Jour de la Réformation ?"
+  },
+  "hallowenQuestEleven": {
+    "questOne": "Que sculptaient les enfants avant l'arrivée de la citrouille ?",
+    "questTwo": "Comment appelait-on ces petites figurines lumineuses ?",
+    "questThree": "Dans quelles contrées cette coutume était-elle particulièrement populaire ?",
+    "questFour": "Qu'insérait-on à l'intérieur du navet évidé ?",
+    "questFive": "Quelle saison accueillait-on par ce rituel ?"
+  },
+  "hallowenQuestTwelve": {
+    "questOne": "Quelle fête célèbre-t-on le 1er novembre ?",
+    "questTwo": "Que signifie le statut de « jour férié silencieux » ?",
+    "questThree": "Où se rendent de nombreuses familles ce jour-là ?",
+    "questFour": "Qu'allument les gens sur les tombes de leurs proches ?",
+    "questFive": "Dans quels lands ce jour est-il particulièrement respecté ?"
+  },
+  "hallowenQuestThirteen": {
+    "questOne": "Quand célèbre-t-on la fête de la Saint-Martin ?",
+    "questTwo": "Que portent les enfants pendant le défilé ?",
+    "questThree": "Quelles chansons sont entonnées pendant le défilé ?",
+    "questFour": "Qu'allume-t-on à la fin du défilé festif ?",
+    "questFive": "Quelle pâtisserie traditionnelle distribue-t-on aux enfants ?"
+  },
+  "hallowenQuestfourteen": {
+    "questOne": "Dans quel parc se tient la célèbre exposition ?",
+    "questTwo": "Avec quoi les gigantesques sculptures sont-elles créées ?",
+    "questThree": "Quels plats phares les visiteurs de l'exposition dégustent-ils ?",
+    "questFour": "Combien de citrouilles sont utilisées pour décorer l'exposition ?",
+    "questFive": "À quelle saison cette exposition est-elle ouverte ?"
+  },
+  "hallowenQuestfifteen": {
+    "questOne": "Comment s'appelle le jeu des pommes dans l'eau ?",
+    "questTwo": "De quoi remplit-on la grande bassine ?",
+    "questThree": "Qu'est-ce qui flotte à la surface de l'eau ?",
+    "questFour": "Où les participants doivent-ils placer leurs mains ?",
+    "questFive": "Avec quoi doit-on attraper la pomme ?"
+  },
+  "hallowenQuestSixteen": {
+    "questOne": "Comment s'appelle cette autre épreuve amusante ?",
+    "questTwo": "Que font les deux équipes en compétition ?",
+    "questThree": "Qui chaque équipe choisit-elle ?",
+    "questFour": "Quel matériel utilise-t-on pour envelopper ?",
+    "questFive": "Quelle équipe remporte la partie ?"
+  },
+  "hallowenQuestSeventeen": {
+    "title": "Relie le mot à sa traduction",
+    "wordOne": "Friandises",
+    "wordTwo": "Chauve-souris",
+    "wordThree": "Vampire",
+    "wordFour": "Bougie",
+    "wordFive": "Balai",
+    "wordSix": "Chat noir",
+    "wordSeven": "Citrouille",
+    "wordEight": "Squelette",
+    "wordNine": "Fantôme",
+    "wordTen": "Livre de magie",
+    "wordEleven": "Esprit",
+    "wordTwelve": "Corbeau",
+    "wordThirteen": "Chapeau de sorcière",
+    "wordFourteen": "Magicien",
+    "wordFifteen": "Araignée",
+    "wordSixteen": "Balai de sorcière",
+    "wordSeventeen": "Chaudron de sorcière",
+    "wordEighteen": "Baguette magique"
+  },
+  "hallowenQuestEightteen": {
+    "title": "Associe l'objet à sa brève description",
+    "titleTwo": "Associe le personnage à son trait caractéristique",
+    "titleThree": "Associe la fête à sa date exacte",
+    "textOne": "Toiles d'araignée dans les coins",
+    "textTwo": "Cape à col rouge",
+    "textThree": "Lanterne avec un visage",
+    "textFour": "Pierre dans un cimetière",
+    "textFive": "Vole dans l'obscurité",
+    "textSix": "La sorcière vole là-dessus",
+    "textSeven": "Constitué uniquement d'os blancs",
+    "textEight": "Craint l'ail et dort dans un cercueil",
+    "textNine": "Hurle à la lune dans la forêt sombre",
+    "textTen": "Fait tinter des chaînes dans un vieux château",
+    "textEleven": "Prépare des potions dans un chaudron en fonte",
+    "textTwelve": "De la tête aux pieds enveloppé de bandages blancs",
+    "textThirteen": "1er novembre",
+    "textFourteen": "Minuit (00h00)",
+    "textFifteen": "Soirée du 31 octobre",
+    "textSixteen": "11 novembre à 11h11",
+    "textSeventeen": "31 octobre (en journée)",
+    "textEighteen": "11 novembre (lanternes)"
+  },
+  "hallowenQuestNineteen": {
+    "title": "Associe le mot à sa signification",
+    "wordOne": "Montagne du Harz où se réunissent les sorcières",
+    "wordTwo": "Défilé d'enfants avec des lanternes en novembre",
+    "wordThree": "Heure des esprits de minuit à une heure du matin",
+    "wordFour": "Roi des aulnes mythique de la ballade de Goethe",
+    "wordFive": "Sculpture traditionnelle sur navet fourrager",
+    "wordSix": "Journée sans soirées bruyantes ni danses",
+    "wordSeven": "Chasse l'obscurité à l'intérieur de la citrouille",
+    "wordEight": "Fer à cheval pour la chance et la protection du foyer",
+    "wordNine": "Protection contre les vampires",
+    "wordTen": "Talisman sur le seuil contre les forces du mal",
+    "wordEleven": "Métal contre les loups-garous dans les contes",
+    "wordTwelve": "Trompe les esprits errants",
+    "wordThirteen": "Cercueil",
+    "wordFourteen": "Potion",
+    "wordFifteen": "Ruines du château",
+    "wordSixteen": "Brouillard",
+    "wordSeventeen": "Cimetière",
+    "wordEighteen": "Os"
+  },
+  "hallowenQuestTwenty": {
+    "title": "Associe le mot à sa traduction",
+    "wordOne": "Château des monstres",
+    "wordTwo": "Loup-garou",
+    "wordThree": "Maison hantée",
+    "wordFour": "Cimetière",
+    "wordFive": "Momie",
+    "wordSix": "Cercueil",
+    "wordSeven": "Obscurité / Ténèbres",
+    "wordEight": "Minuit",
+    "wordNine": "Masque effrayant",
+    "wordTen": "Cri",
+    "wordEleven": "Pierre tombale",
+    "wordTwelve": "Squelette / Ossature",
+    "wordThirteen": "Crâne",
+    "wordFourteen": "Vaisseau fantôme",
+    "wordFifteen": "Malédiction",
+    "wordSixteen": "Toile d'araignée",
+    "wordSeventeen": "Labyrinthe",
+    "wordEighteen": "Potion magique"
+  },
+  "hallowenQuestTwentyOne": {
+    "questOne": "Quel animal est un intrus dans la compagnie d'Halloween ?",
+    "questTwo": "Quel est l'intrus parmi les friandises du sac d'un enfant ?",
+    "questThree": "Quel mot est un intrus par le sens ?",
+    "questFour": "Qu'est-ce qui ne brille pas dans le noir pendant la fête ?",
+    "questFive": "Qu'est-ce qui n'est pas lié à l'automne ni à la fête ?",
+    "questSix": "Quel objet n'appartient ni à un magicien ni à une sorcière ?"
+  },
+  "hallowenQuestTwentyTwo": {
+    "title": "Trouve l'intrus : Partie 2",
+    "questOne": "Quel type de météo ne convient absolument pas à une soirée d'Halloween ?",
+    "questTwo": "Que ne porte-t-on pas comme élément de costume d'Halloween ?",
+    "questThree": "Quel ustensile fait tache parmi la vaisselle de sorcellerie ?",
+    "questFour": "De quoi un vampire n'a-t-il absolument pas besoin ?",
+    "questFive": "Quel oiseau ou mammifère détonne parmi les créatures de la nuit ?",
+    "questSix": "Quelle boisson est de trop parmi les douceurs réconfortantes de l'automne ?"
+  },
+  "hallowenQuestTwentyThree": {
+    "title": "Relie les mots ayant un sens opposé"
+  },
+  "haloweenBanner": {
+    "shop": "Achète des effets et des cadeaux dans la boutique de l'événement !",
+    "quests": "Accomplis des quêtes pour accumuler la monnaie citrouille !"
+  },
+  "eventsModalButtons": {
+    "pumpkin": "Récolter des citrouilles",
+    "april": "Lancer les festivités",
+    "valentine": "Offrir des mots doux",
+    "winter": "Vers le conte d'hiver !"
+  },
+  "eventsNotification": {
+    "now": "En cours !",
+    "left": "Temps restant :",
+    "untilEvent": " Avant l'événement :"
+  },
+  "steakInfo": {
+    "text": "Accomplis les quêtes quotidiennes pour garder ta série"
+  },
+  "halloweenThemeModal": {
+    "partOne": "Ce thème ne peut être débloqué que pendant l'événement",
+    "partTwo": "« Fête des citrouilles »",
+    "partThree": "Obtiens-le dans la boutique de l'événement"
+  },
+  "part": {
+    "text": "Partie"
+  },
+  "halloweenAchievements": {
+    "sectionTitle": "Fête des citrouilles",
+    "firstHalloweenQuestText": "Un bonbon ou une citrouille",
+    "firstHalloweenQuestDescription": "Accomplissez avec succès n'importe quelle quête de l'événement Fête des citrouilles.",
+    "halloweenWordsText": "Récits sinistres",
+    "halloweenWordsDescription": "Apprenez tous les mots thématiques associés à l'événement Fête des citrouilles.",
+    "witchBroomText": "L'éclair ? Non, plus rapide !",
+    "witchBroomDescription": "Accélérez au maximum : procurez-vous un balai volant haut de gamme dans la boutique festive.",
+    "pumpkinText": "Une citrouille sur la tête ?",
+    "pumpkinDescription": "Achetez une citrouille sinistre dans la boutique festive.",
+    "punchText": "Punch à la citrouille",
+    "punchDescription": "Achetez un punch de sorcière dans la boutique festive.",
+    "witchHatText": "Choix de la maison ?",
+    "witchHatDescription": "Achetez un chapeau de sorcière dans la boutique festive.",
+    "spellBookText": "Grimoire du cavalier",
+    "spellBookDescription": "Achetez un ancien livre de sorts dans la boutique festive.",
+    "halloweenThemeText": "Mascarade",
+    "halloweenThemeDescription": "Achetez le thème fantomatique de l'application dans la boutique de l'événement.",
+    "halloweenAllQuestsText": "Que le bal commence !",
+    "halloweenAllQuestsDescription": "Ne laissez aucune chance aux mauvais esprits : terminez toutes les quêtes festives.",
+    "halloweenReputationText": "Idole de la fête",
+    "halloweenReputationDescription": "Atteignez le niveau de réputation maximal en accomplissant les missions d'Halloween.",
+    "halloweenAllAchievementsText": "Que la force d'Halloween soit avec vous !",
+    "halloweenAllAchievementsDescription": "Débloquez tous les succès d'Halloween et remportez le titre festif."
   }
 }

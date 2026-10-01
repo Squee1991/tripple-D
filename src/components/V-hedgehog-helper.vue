@@ -251,8 +251,28 @@ const requestHint = async () => {
         correctAnswer = props.task.correctOrder.join(' ')
       }
 
+      // --- ДОБАВЛЕННЫЙ БЛОК: Перевод правильного ответа ---
+      try {
+        if (correctAnswer && typeof correctAnswer === 'string') {
+          correctAnswer = t(correctAnswer)
+        }
+      } catch {
+        // Оставляем оригинальное значение при ошибке
+      }
+
+      // --- ДОБАВЛЕННЫЙ БЛОК: Перевод выбранного ответа ---
+      let currentSelectedAnswer = props.selectedAnswer || ''
+      try {
+        if (currentSelectedAnswer && typeof currentSelectedAnswer === 'string') {
+          currentSelectedAnswer = t(currentSelectedAnswer)
+        }
+      } catch {
+        // Оставляем оригинальное значение при ошибке
+      }
+
       const rawQuestion = props.task?.question || ''
       let rawOptions = props.task?.options || props.task?.words || props.task?.reorderBank || []
+
       if (props.task?.type === 'reorder' && (!rawOptions || rawOptions.length === 0)) {
         if (correctAnswer) rawOptions = correctAnswer.trim().split(/\s+/)
       }
@@ -272,10 +292,10 @@ const requestHint = async () => {
         options: optionsList,
         taskType: props.task?.type || 'grammar',
         audioText: props.task?.text || '',
-        correctAnswer: correctAnswer,
+        correctAnswer: correctAnswer,       // Отправляем уже переведенный ответ
         sentence: questionText,
-        answer: correctAnswer,
-        selectedAnswer: props.selectedAnswer || ''
+        answer: correctAnswer,             // Отправляем уже переведенный ответ
+        selectedAnswer: currentSelectedAnswer // Отправляем переведенный выбор пользователя
       }
     }
 
@@ -304,6 +324,7 @@ const requestHint = async () => {
     isLoading.value = false
   }
 }
+
 </script>
 
 <style scoped>

@@ -7,7 +7,6 @@
           <h1 class="verbs__title">{{ t('verbsTheory.title')}}</h1>
         </div>
       </header>
-<!--        <p class="verbs__subtitle">{{ t('verbsTheory.subTitle')}}</p>-->
       <div class="verb__theory-section">
         <section v-for="section in contentSections" :key="section.id" class="verbs__card" :class="section.customClass">
 

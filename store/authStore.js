@@ -2,6 +2,7 @@ import { defineStore } from "pinia";
 import { ref, computed } from 'vue';
 import { Capacitor } from '@capacitor/core';
 import { Purchases } from '@revenuecat/purchases-capacitor';
+import { useBillingStore } from '../store/billingStore.js';
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -22,8 +23,6 @@ import {
     fetchSignInMethodsForEmail
 } from 'firebase/auth';
 import { GoogleSignIn } from '@capawesome/capacitor-google-sign-in';
-import { useBillingStore } from './billingStore.js'
-import { AppleSignIn, SignInScope} from "@capawesome/capacitor-apple-sign-in";
 import { doc, setDoc, getDoc, getFirestore, updateDoc, serverTimestamp, writeBatch } from 'firebase/firestore';
 import { userlangStore } from "./learningStore.js";
 let authStateUnsubscribe = null;
@@ -59,12 +58,12 @@ export const userAuthStore = defineStore('auth', () => {
     const hasSeenOnboarding = ref(false);
     const initialized = ref(false);
     const totalHats = ref(0);
+    const streakCount = ref(0);
     const freezeEndsAt = ref(null);
     const claimedBonuses = ref([]);
     const achievements = ref(null);
     const notEnoughArticle = ref(false);
     const gotPremiumBonus = ref(false);
-    const billingStore = useBillingStore();
     const IMMUNITY_RANK_HATS = 500;
     const availableAvatars = ref([
         '1.png', '2.png', '3.png', '4.png', '5.png', '6.png',
@@ -90,7 +89,6 @@ export const userAuthStore = defineStore('auth', () => {
     const shouldShowFeedbackSurvey = ref(false);
     let initPromise = null;
 
-
     const isGoogleUser = computed(() => providerId.value === 'google.com');
     const avatarUrl = computed(() => avatar.value ? `/images/avatars/${avatar.value}` : '');
     const isFreezeActive = computed(() => freezeEndsAt.value ? Date.now() < freezeEndsAt.value : false);
@@ -104,13 +102,6 @@ export const userAuthStore = defineStore('auth', () => {
         if (val instanceof Date) return val.getTime();
         const parsed = Date.parse(val);
         return isNaN(parsed) ? null : parsed;
-    };
-
-    const normalizeDate = (value) => {
-        if (!value) return null;
-        if (typeof value?.toDate === 'function') return value.toDate().toISOString();
-        const date = new Date(value);
-        return isNaN(date.getTime()) ? null : date.toISOString();
     };
 
     const activateDiscount = async (discountId) => {
@@ -127,6 +118,13 @@ export const userAuthStore = defineStore('auth', () => {
         } catch (e) {
             console.error('Ошибка при активации скидки в Firebase:', e);
         }
+    };
+
+    const normalizeDate = (value) => {
+        if (!value) return null;
+        if (typeof value?.toDate === 'function') return value.toDate().toISOString();
+        const date = new Date(value);
+        return isNaN(date.getTime()) ? null : date.toISOString();
     };
 
     const detectWebView = () => {
@@ -187,6 +185,7 @@ export const userAuthStore = defineStore('auth', () => {
         voiceConsentGiven.value = data.voiceConsentGiven === true;
         hasSeenOnboarding.value = data.hasSeenOnboarding === true;
         totalHats.value = data.totalHats || 0;
+        streakCount.value = data.streakCount || 0;
         freezeEndsAt.value = toMillis(data.freezeEndsAt);
         claimedBonuses.value = data.claimedBonuses || [];
 
@@ -207,6 +206,30 @@ export const userAuthStore = defineStore('auth', () => {
         };
 
         if (data.isPremium && !data.gotPremiumBonus) grantPremiumBonusPoints();
+    };
+
+
+    const incrementStreak = async () => {
+        const authUser = auth.currentUser;
+        if (!authUser) return;
+        const newStreak = (streakCount.value || 0) + 1;
+        streakCount.value = newStreak;
+        try {
+            await updateDoc(doc(db, 'users', authUser.uid), { streakCount: newStreak });
+        } catch (e) {
+            console.error('Ошибка обновления streakCount:', e);
+        }
+    };
+
+    const resetStreak = async () => {
+        const authUser = auth.currentUser;
+        if (!authUser) return;
+        streakCount.value = 0;
+        try {
+            await updateDoc(doc(db, 'users', authUser.uid), { streakCount: 0 });
+        } catch (e) {
+            console.error('Ошибка сброса streakCount:', e);
+        }
     };
 
     const grantPremiumBonusPoints = async () => {
@@ -436,6 +459,7 @@ export const userAuthStore = defineStore('auth', () => {
                     hasSeenOnboarding: false,
                     isPremium: false,
                     totalHats: 0,
+                    streakCount: 0,
                     points: 0,
                     claimedBonuses: [],
                     sale_3: false,
@@ -516,6 +540,7 @@ export const userAuthStore = defineStore('auth', () => {
                     hasSeenOnboarding: false,
                     isPremium: false,
                     totalHats: 0,
+                    streakCount: 0,
                     points: 0,
                     claimedBonuses: [],
                     sale_3: false,
@@ -544,6 +569,8 @@ export const userAuthStore = defineStore('auth', () => {
         }
     };
 
+
+
     const registerUser = async (userData) => {
         const methods = await fetchSignInMethodsForEmail(auth, userData.email);
         if (methods.length > 0) {
@@ -568,6 +595,7 @@ export const userAuthStore = defineStore('auth', () => {
             voiceConsentGiven: false,
             hasSeenOnboarding: false,
             totalHats: 0,
+            streakCount: 0,
             points: 0,
             claimedBonuses: [],
             sale_3: false,
@@ -726,39 +754,30 @@ export const userAuthStore = defineStore('auth', () => {
     const deleteAccount = async (password = null) => {
         const user = auth.currentUser;
         if (!user) throw { code: 'auth/no-current-user' };
-
         try {
             const usesGoogle = user.providerData.some(p => p.providerId === 'google.com');
-            const usesApple = user.providerData.some(p => p.providerId === 'apple.com');
-            if (usesApple) {
-                const provider = new OAuthProvider('apple.com');
-                if (Capacitor.isNativePlatform()) {
-                    // Запрашиваем свежий токен через плагин
-                    const result = await AppleSignIn.signIn({
-                        scopes: [SignInScope.Email, SignInScope.FullName],
+            if (usesGoogle) {
+                const isNative = Capacitor.isNativePlatform();
+                if (isNative) {
+                    const result = await GoogleSignIn.signIn({
+                        clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
                     });
 
-                    if (!result.idToken) {
-                        throw new Error('Не удалось получить токен Apple для удаления');
-                    }
-
-                    const credential = provider.credential({
-                        idToken: result.idToken,
-                    });
+                    const idToken = result.idToken;
+                    if (!idToken) throw new Error('Не удалось получить токен Google');
+                    const credential = GoogleAuthProvider.credential(idToken);
                     await reauthenticateWithCredential(user, credential);
                 } else {
-                    // Для веба
+                    const provider = new GoogleAuthProvider();
                     await reauthenticateWithPopup(user, provider);
                 }
-            } else if (usesGoogle) {
-                const provider = new GoogleAuthProvider();
-                await reauthenticateWithPopup(user, provider);
             } else {
                 if (!user.email) throw { code: 'auth/missing-email' };
                 if (!password) throw {code: 'auth/missing-password'};
                 const cred = EmailAuthProvider.credential(user.email, password);
                 await reauthenticateWithCredential(user, cred);
             }
+
             const batch = writeBatch(db);
             batch.delete(doc(db, 'users', user.uid));
             batch.delete(doc(db, LEADERBOARD_COLLECTION, user.uid));
@@ -771,8 +790,10 @@ export const userAuthStore = defineStore('auth', () => {
             if (err && err.code) throw err;
             const msg = String(err?.message || '');
             if (msg.includes('requires-recent-login')) throw { code: 'auth/requires-recent-login' };
-            if (msg.includes('popup-closed') || msg.includes('cancel')) throw { code: 'auth/user-cancelled' };
-            throw { code: 'auth/unknown', message: msg };
+            if (msg.includes('popup-closed') || msg.toLowerCase().includes('cancel') || msg.includes('12501')) {
+                throw { code: 'auth/popup-closed-by-user' };
+            }
+            throw { code: 'auth/unknown' };
         }
     };
 
@@ -785,7 +806,6 @@ export const userAuthStore = defineStore('auth', () => {
         if (typeof window !== 'undefined') {
             localStorage.removeItem('cached_premium');
         }
-        billingStore.reset()
 
         if (Capacitor.isNativePlatform()) {
             try {
@@ -832,11 +852,11 @@ export const userAuthStore = defineStore('auth', () => {
         notEnoughArticle,
         voiceConsentGiven,
         totalHats,
+        streakCount,
         setVoiceConsent,
         clearNotEnoughArticle,
         achievements,
         incrementHats,
-        activateDiscount,
 
         initAuth,
         fetchuser,
@@ -866,7 +886,10 @@ export const userAuthStore = defineStore('auth', () => {
         claimedBonuses,
         loginWithApple,
         addClaimedBonus,
-        unlockMarathonAchievement
+        activateDiscount,
+        unlockMarathonAchievement,
+        incrementStreak,
+        resetStreak
     };
 });
 

@@ -4,14 +4,13 @@
     <AchievementToast @toast-finished="onToastFinished" />
     <VLost/>
     <VRankOverlay/>
-    <VHedgehogIntroModal v-if="showHedgehogModal" @close="showHedgehogModal = false"/>
+<!--    <VHedgehogIntroModal v-if="showHedgehogModal" @close="showHedgehogModal = false"/>-->
     <VNetwork/>
   </NuxtLayout>
 </template>
 
 <script setup>
 import VHedgehogIntroModal from "~/src/components/V-HedgehogIntroModal.vue";
-
 import VRankOverlay from "./src/components/V-rank-overlay.vue";
 import { StatusBar, Style } from '@capacitor/status-bar';
 import AchievementToast from './src/components/AchievementToast.vue'
@@ -23,6 +22,7 @@ import { userlangStore } from './store/learningStore.js'
 import { userAuthStore } from './store/authStore.js'
 import { useQuestStore } from './store/questStore.js'
 import { useLocalStatGameStore } from './store/localSentenceStore.js'
+import { useRankUserStore } from '~/store/rankStore.js'
 import { useBillingStore } from './store/billingStore.js'
 import { userChainStore } from './store/chainStore.js'
 import { SplashScreen } from '@capacitor/splash-screen'
@@ -55,6 +55,7 @@ useHead(() => ({
   link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
 }))
 
+const rankStore = useRankUserStore()
 const achStore = useAchievementStore()
 const showStepHint = ref(false)
 const statsStore = useLocalStatGameStore()
@@ -79,6 +80,7 @@ const onToastFinished = () => {
 }
 
 onMounted(async () => {
+  rankStore.restorePendingReward()
   initAdmob()
   achStore.initializeProgressTracking()
   if (Capacitor.isNativePlatform()) {

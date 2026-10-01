@@ -1,7 +1,13 @@
-import {ref, computed} from 'vue'
-import {defineStore} from 'pinia'
-import {getFirestore, doc, getDoc, setDoc, increment} from 'firebase/firestore'
-import {getAuth} from 'firebase/auth'
+import { ref, computed } from 'vue'
+import { defineStore } from 'pinia'
+import { getFirestore, doc, getDoc, setDoc, increment } from 'firebase/firestore'
+import { getAuth } from 'firebase/auth'
+
+
+import ChristmasDayNav from '~/assets/images/christmas-wreathNav.svg'
+import ValentineNav from '~/assets/images/valentineIcon.svg'
+import FoolDayNav from '~/assets/images/fooldayNav.svg'
+import HalloweenNav from '~/assets/images/halloweenIconNav.svg'
 
 export const useEventSessionStore = defineStore('eventSession', () => {
 	const db = getFirestore()
@@ -17,14 +23,44 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 	const shopItems = ref({})
 	const solvedSteps = ref([])
 	const isReplayMode = ref(false)
-
 	const events = ref([
-		{id: 'winter', start: '12-17 00:00', end: '01-02 23:59'},
-		{id: 'valentine', start: '02-12 00:00', end: '02-16 23:59'},
-		{id: 'april', start: '04-01 00:00', end: '04-01 23:59'},
-		{id: 'pumpkin', start: '10-28 00:00', end: '10-31 23:59'},
+		{
+			id: 'winter',
+			valueKey: 'eventsNavNames.winter',
+			url: '/event-winter',
+			start: '12-18 00:00',
+			end: '01-03 23:59',
+			icon: ChristmasDayNav,
+			alt: 'ChristmasDayNav'
+		},
+		{
+			id: 'valentine',
+			valueKey: 'eventsNavNames.valentine',
+			url: '/event-valentine',
+			start: '02-12 00:00',
+			end: '02-16 23:59',
+			icon: ValentineNav,
+			alt: 'ValentineNav'
+		},
+		{
+			id: 'april',
+			valueKey: 'eventsNavNames.firstApril',
+			url: '/event-joke',
+			start: '04-01 00:00',
+			end: '04-01 23:59',
+			icon: FoolDayNav,
+			alt: 'FoolDayNav'
+		},
+		{
+			id: 'pumpkin',
+			valueKey: 'eventsNavNames.halloween',
+			url: '/event-halloween',
+			start: '10-26 00:00',
+			end: '11-08 23:59',
+			icon: HalloweenNav,
+			alt: 'HalloweenNav'
+		},
 	])
-
 	const uidOrThrow = () => {
 		const uid = auth.currentUser?.uid
 		if (!uid) throw new Error('EventStore: User not auth')
@@ -78,8 +114,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 			} else {
 				isSnowEnabled.value = false
 			}
-		} catch (e) {
-		}
+		} catch (e) {}
 	}
 
 	const setSnowFallEnabled = async (value) => {
@@ -89,9 +124,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 		if (!ref) return
 		try {
 			await setDoc(ref, { isSnowEnabled: value }, { merge: true })
-		} catch (error) {
-			console.error("Ошибка сохранения снега:", error)
-		}
+		} catch (error) {}
 	}
 
 	const loadEventProgress = async (id) => {
@@ -125,14 +158,14 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 		}
 		try {
 			await setDoc(eventDocRef, dataToSave, {merge: true})
-		} catch (error) {
-		}
+		} catch (error) {}
 	}
 
 	const start = async (id, qid) => {
 		isLoading.value = true
 		eventId.value = String(id || '')
 		questId.value = String(qid || '')
+
 		stepIndex.value = 0
 		score.value = 0
 		solvedSteps.value = []
@@ -145,23 +178,30 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 			isLoading.value = false;
 			return
 		}
+
 		const eventDocRef = getEventProgressDocRef()
 		if (eventDocRef) {
 			try {
 				const docSnap = await getDoc(eventDocRef)
 				if (docSnap.exists()) {
 					const questData = docSnap.data().quests?.[questId.value]
-					if (questData && questData.finished) {
-						isReplayMode.value = true
+
+					if (questData) {
+						if (questData.finished) {
+							isReplayMode.value = true
+							solvedSteps.value = []
+						} else {
+							isReplayMode.value = false
+							solvedSteps.value = Array.isArray(questData.solvedSteps) ? [...questData.solvedSteps] : []
+							score.value = questData.score || 0
+						}
 					}
 				}
-
 
 				if (!isReplayMode.value) {
 					await setDoc(eventDocRef, {lastActiveQuestId: questId.value}, {merge: true})
 				}
-			} catch (error) {
-			}
+			} catch (error) {}
 		}
 		isLoading.value = false
 	}
@@ -194,29 +234,25 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 			}
 
 			const questProgress = eventData.quests?.[lastQuestId]
-			if (questProgress && questProgress.finished) {
-
-				isReplayMode.value = true
-			} else {
-				isReplayMode.value = false
-			}
-
 			questId.value = lastQuestId;
 
-			if (questProgress) {
-				solvedSteps.value = Array.isArray(questProgress.solvedSteps) ? questProgress.solvedSteps : []
-				score.value = questProgress.score || 0;
-				finished.value = !!questProgress.finished
-
-				if (!questProgress.finished) {
-					stepIndex.value = questProgress.stepIndex || 0;
-				} else {
-					stepIndex.value = 0;
-				}
-			} else {
-				stepIndex.value = 0;
-				score.value = 0;
+			if (questProgress && questProgress.finished) {
+				isReplayMode.value = true
 				solvedSteps.value = []
+				score.value = 0
+				stepIndex.value = 0
+				finished.value = false
+			} else {
+				isReplayMode.value = false
+				if (questProgress) {
+					solvedSteps.value = Array.isArray(questProgress.solvedSteps) ? [...questProgress.solvedSteps] : []
+					score.value = questProgress.score || 0
+					stepIndex.value = questProgress.stepIndex || 0
+				} else {
+					solvedSteps.value = []
+					score.value = 0
+					stepIndex.value = 0
+				}
 				finished.value = false
 			}
 
@@ -243,8 +279,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 					}
 				}
 			}, {merge: true})
-		} catch (error) {
-		}
+		} catch (error) {}
 	}
 
 	const markStepAsSolved = async (index) => {
@@ -295,8 +330,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 					}
 				}
 			}, {merge: true})
-		} catch (error) {
-		}
+		} catch (error) {}
 	}
 
 	const resetAllForEvent = () => {
@@ -321,8 +355,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 				reputationPoints: 0,
 				shopItems: {}
 			}, {merge: false})
-		} catch (error) {
-		}
+		} catch (error) {}
 	}
 
 	return {

@@ -334,7 +334,7 @@ onMounted(async () => {
 
 .location-page {
   height: 100%;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -352,6 +352,9 @@ onMounted(async () => {
 
 .quests {
   padding: 0 15px;
+  overflow: auto;
+  height: 100vh;
+  padding-bottom: 160px;
 }
 
 .location-header {
@@ -360,7 +363,6 @@ onMounted(async () => {
   position: relative;
   padding: 5px 10px 15px 10px;
   border-radius: 22px;
-  margin-bottom: 18px;
   overflow: visible;
 }
 
@@ -376,7 +378,7 @@ onMounted(async () => {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  margin: 0 14px 17px 14px;
+  margin: 0 14px 10px 14px;
   border-radius: 15px;
   border: 3px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile);

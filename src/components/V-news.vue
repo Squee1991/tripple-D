@@ -91,7 +91,7 @@ const visibleArticles = computed(() => {
   const timeDiff = Math.max(0, now.getTime() - timerStartDate.getTime())
   const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24))
   const additionalArticles = Math.floor(daysPassed / 3)
-  const allowedCount = 3 + additionalArticles
+  const allowedCount = 7 + additionalArticles
   return articlesData
       .slice(0, allowedCount)
       .map((article, index) => {

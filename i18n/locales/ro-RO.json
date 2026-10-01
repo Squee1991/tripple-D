@@ -3507,7 +3507,8 @@
     "close": "Închide",
     "light": "Luminos",
     "dark": "Întunecat",
-    "pink": "Romantic"
+    "pink": "Romantic",
+    "halloween": "De Halloween"
   },
   "pinkThemeModal": {
     "partOne": "Această temă poate fi deblocată doar în cadrul evenimentului",
@@ -3701,6 +3702,7 @@
     "quest-6": "Alege un răspuns"
   },
   "eventPanel": {
+    "errors": "Greșeli",
     "pathMain": "Acasă",
     "event": "Eveniment",
     "panel": "Panou Eveniment",
@@ -5229,7 +5231,17 @@
     "cupidArrow": "Arcul lui Cupidon",
     "cupidArrowDescription": "Premiu obținut pentru realizarea din categoria Evenimente - Festivalul inimilor: „Trăgător iscusit”",
     "adventures": "Pergamentul Călătoriilor",
-    "adventuresDescription": "Recompensa se obține pentru completarea realizării din categoria Tărâmurile Limbilor: «Maestrul Cărărilor Aventurii»"
+    "adventuresDescription": "Recompensa se obține pentru completarea realizării din categoria Tărâmurile Limbilor: «Maestrul Cărărilor Aventurii»",
+    "witchBroom": "Mătura vrăjitoarei",
+    "witchBroomDescription": "Recompensă pentru realizarea «Fulger? Nu, mai rapid!» din categoria evenimentului «Sărbătoarea Dovlecilor».",
+    "witchHat": "Pălăria vrăjitorului",
+    "witchHatDescription": "Recompensă pentru realizarea «Alegerea casei» din categoria evenimentului «Sărbătoarea Dovlecilor».",
+    "pumpkin": "Dovleac",
+    "pumpkinDescription": "Recompensă pentru realizarea «Dovleac pe cap» din categoria evenimentului «Sărbătoarea Dovlecilor».",
+    "spellBook": "Cartea de vrăji",
+    "spellBookDescription": "Recompensă pentru realizarea «Grimoarul călărețului» din categoria evenimentului «Sărbătoarea Dovlecilor».",
+    "punch": "Cazan cu licoare",
+    "punchDescription": "Recompensă pentru realizarea «Punch magic» din categoria evenimentului «Sărbătoarea Dovlecilor»."
   },
   "wildLandsFirstQuest": {
     "title": "Împrejurimi",
@@ -5821,24 +5833,24 @@
     "questFifteen": "Ascultă și scrie răspunsul:"
   },
   "eastPlainThirdQuests": {
-    "title": "Ce îți place să faci?",
-    "goal": "Să înveți să vorbești despre hobby-uri și timpul liber",
-    "description": "Noii cunoscuți vă invită să petreceți timpul împreună, propunându-vă să mergeți la magazin sau la supermarket. Învățați să vorbiți despre intențiile voastre: unde mergeți și ce veți face.",
+    "title": "Mersul la magazin",
+    "goal": "Să înveți cuvinte legate de cumpărături și fraze simple de orientare",
+    "description": "Învățăm să numim magazinul, supermarketul și să spunem unde mergem.",
     "questOne": "Cum se spune: Magazin",
     "questTwo": "Cum se spune: A cumpăra",
-    "questTree": "Cum se spune: Merg la magazin",
-    "questFour": "Ascultă și scrie",
-    "questFive": "Cum se spune: Salut! Unde mergi? Merg la magazin",
-    "questSix": "Ascultă și scrie",
-    "questSeven": "Cum se spune: Și eu merg la magazin",
-    "questEight": "Ascultă și scrie",
+    "questTree": "Cum se spune: A merge",
+    "questFour": "Alcătuiește: Mergem",
+    "questFive": "Alcătuiește: Cumpărăm pâine",
+    "questSix": "Ascultă și scrie: Cumpărăm pâine",
+    "questSeven": "Alcătuiește: Mergem la magazin",
+    "questEight": "Alcătuiește: Merg la magazin",
     "questNine": "Cum se spune: Supermarket",
-    "questTen": "Ascultă și scrie",
-    "questEleven": "Cum se spune: Nu merg la supermarket",
-    "questTwelve": "Cum se spune: Casă (de marcat)",
+    "questTen": "Ascultă și scrie: Supermarket",
+    "questEleven": "Alcătuiește: Nu merg la supermarket",
+    "questTwelve": "Cum se spune: Casă de marcat",
     "questThirteen": "Cum se spune: Preț",
-    "questFourteen": "Cum se spune: Bon / Chitanță",
-    "questFifteen": "Ascultă și scrie"
+    "questFourteen": "Cum se spune: Bon fiscal",
+    "questFifteen": "Ascultă și scrie: Casă de marcat"
   },
   "eastPlainFourthQuests": {
     "title": "Continuăm cumpărăturile?",
@@ -8037,7 +8049,7 @@
   },
   "cardTime": {
     "title": "Oprirea timpului",
-    "description": "Protejează tocile tale de penalizări"
+    "description": "Îți protejează seria și pălăriile de penalizări"
   },
   "cardSales": {
     "title3": "Reducere Plus-I",
@@ -8167,6 +8179,7 @@
   },
   "pavelOverlay": {
     "newbie": "Începător",
+    "streakTitle": "Serie",
     "rankTitle": "Toci",
     "rankLabelOne": "- Tocile sunt acordate pentru îndeplinirea sarcinilor zilnice.",
     "rankLabelTwo": "- Poți obține 3 pe zi dacă le faci pe toate. Recompensele pot fi văzute la secțiunea „Rang” din profil.",
@@ -10734,5 +10747,349 @@
     "succesCompleted": "FINALIZAT",
     "rewardGot": "Ai primit o recompensă:",
     "questCompletedAgain": "Sarcină finalizată din nou:"
+  },
+  "calendarHints": {
+    "first": "Ritm excelent săptămâna aceasta! Ține-o tot așa",
+    "second": "Un mic pas astăzi - un rezultat uriaș mâine!",
+    "third": "Disciplina face minuni. Ești mai aproape de obiectiv în fiecare zi!",
+    "fourth": "Focul arde din ce în ce mai puternic! Nu reduce turația",
+    "fifth": "Fiecare zi parcursă formează un obicei de oțel!",
+    "sixth": "Faci ceea ce mulți renunță să facă. Treabă excelentă!",
+    "seventh": "Seria ta devine tot mai puternică zi de zi, ține-o tot așa!",
+    "eighth": "Doar câteva minute pe zi, iar germana începe deja să se simtă ca acasă!",
+    "ninth": "Treabă excelentă! Regularitatea este cheia și ești în față",
+    "tenth": "Fiecare zi adaugă încredere. Continuăm mâine!"
+  },
+  "streakButtons": {
+    "first": "Ne vedem mâine",
+    "second": "Continuăm mâine",
+    "third": "Treabă excelentă",
+    "fourth": "Pas făcut, pe mâine",
+    "fifth": "Consolidăm mâine?",
+    "sixth": "Disciplină la înălțime",
+    "seventh": "Pe mâine",
+    "eighth": "Repetăm mâine?",
+    "ninth": "Nu lăsăm garda jos"
+  },
+  "hintText": {
+    "start": "Seria a început. Exersează în fiecare zi ca să n-o pierzi!",
+    "first": "Final de săptămână! Mâine începe o nouă serie curată",
+    "second": "Terminăm săptămâna asta, iar din următoarea începem o serie completă",
+    "aRow": "la rând"
+  },
+  "guessWordHint": {
+    "hint-title": "Indiciu",
+    "hint-desc": "Va dezvălui 2 litere aleatorii fără a consuma încercări",
+    "hint-action-btn": "Folosește"
+  },
+  "halloweenEventQuests": {
+    "questOne": "Imagine → Cuvânt",
+    "questTwo": "Noțiuni de bază și fapte",
+    "questThree": "Tradiții germane",
+    "questFour": "Creaturi și legende",
+    "questFive": "Costume și noapte de toamnă",
+    "questSix": "Simboluri și obiceiuri",
+    "questSeven": "Seară cu dovleac",
+    "questEight": "La colindat după dulciuri",
+    "questNine": "Castelul Frankenstein",
+    "questTen": "Reforma și sărbătoarea",
+    "questEleven": "Vechiul spirit din nap",
+    "questTwelve": "Ziua Tuturor Sfinților",
+    "questThirteen": "Sărbătoarea Sfântului Martin",
+    "questFourteen": "Expoziția de dovleci din Ludwigsburg",
+    "questFifteen": "Jocuri de petrecere",
+    "questSixteen": "Mumia veselă",
+    "questSeventeen": "Imagine și cuvânt",
+    "questEighteen": "Atributele sărbătorii",
+    "questNineteen": "Legende germane",
+    "questTwenty": "Punch de toamnă",
+    "questTwentyOne": "Găsește cuvântul nepotrivit",
+    "questTwentyTwo": "Găsește intrusul - vremea",
+    "questTwentyThree": "Găsește intrusul - vremea"
+  },
+  "eventsShopItemsHalloween": {
+    "witchBroom": "Mătura vrăjitoarei",
+    "witchHat": "Pălăria vrăjitorului",
+    "pumpkin": "Dovleac",
+    "punch": "Punch-ul vrăjitoarei",
+    "spellBook": "Cartea de vrăji",
+    "ghostEffect": "Efect de Halloween"
+  },
+  "hallowenQuestTwo": {
+    "titleOne": "Când se sărbătorește Halloween-ul?",
+    "titleTwo": "Ce legumă se scobește în mod tradițional de Halloween?",
+    "titleThree": "Ce strigă copiii în Germania atunci când cer dulciuri?",
+    "titleFour": "Cum se numește faimosul felinar din dovleac?",
+    "titleFive": "Care sunt cele două culori cel mai strâns legate de Halloween?",
+    "titleSix": "Ce animal este considerat principalul simbol nocturn al sărbătorii?",
+    "titleSeven": "Ce sărbătoare urmează imediat după Halloween, pe 1 noiembrie?",
+    "titleEight": "Ce se așază în mod tradițional în interiorul dovleacului scobit?"
+  },
+  "hallowenQuestThree": {
+    "titleOne": "Ce se scobea pe ținuturile germane înainte de apariția dovleacului?",
+    "titleTwo": "În ce castel german se organizează un festival important de Halloween încă din anii 1970?",
+    "titleThree": "Ce sărbătoare importantă celebrează Biserica Luterană pe 31 octombrie?",
+    "titleFour": "La ce sărbătoare din noiembrie copiii merg pe străzi purtând felinare făcute manual?",
+    "titleFive": "În ce țară se scobesc în mod tradițional felinare din napi (Räbeliechtli) în noiembrie?",
+    "titleSix": "De ce, conform unei vechi superstiții germane, se ascund cuțitele din bucătărie în această noapte?",
+    "titleSeven": "De ce în unele landuri din Germania petrecerile trebuie să se domolească spre miezul nopții?",
+    "titleEight": "Ce se prepară cel mai des în Germania din pulpa de dovleac?"
+  },
+  "hallowenQuestFour": {
+    "titleOne": "Ce creatură se teme de usturoi și doarme ziua într-un sicriu?",
+    "titleTwo": "Pe ce munte din masivul Harz se adună vrăjitoarele conform legendelor germane?",
+    "titleThree": "Cum se numește omul care se transformă în lup la lună plină?",
+    "titleFour": "Pe ce zboară o vrăjitoare conform legendelor?",
+    "titleFive": "Ce creatură bântuie prin castelele vechi în veșminte albe?",
+    "titleSex": "Ce animal însoțește cel mai des o vrăjitoare în credințele populare?",
+    "titleSeven": "Cum se numesc focurile rătăcitoare de mlaștină care îi abat pe călători din drum?",
+    "titleEight": "Cum se numește un mort reanimat cu mișcări lente?"
+  },
+  "hallowenQuestFive": {
+    "titleOne": "De ce se costumau oamenii inițial în haine înfricoșătoare?",
+    "titleTwo": "Ce costum este compus din oase albe pe fundal întunecat?",
+    "titleThree": "Ce accesoriu este obligatoriu de purtat împreună cu pelerina neagră de vampir?",
+    "titleFour": "Ce se folosea în trecut ca bază pentru cel mai simplu costum de fantomă?",
+    "titleFive": "Ce fruct de la târguri este adesea acoperit cu o glazură roșie dulce?",
+    "titleSix": "Ce se agață de obicei prin colțurile camerelor pentru a crea o atmosferă înfricoșătoare?",
+    "titleSeven": "Ce primesc cel mai des copiii din Germania ca răsplată pentru poezia lor?",
+    "titleEight": "La ce oră merg de obicei copiii din casă în casă după dulciuri?"
+  },
+  "hallowenQuestSix": {
+    "titleOne": "Ce sărbătoare celtică antică este considerată strămoșul istoric al Halloween-ului?",
+    "titleTwo": "Cu ce amenință în glumă copiii prin fraza «...sonst gibt's Saures» dacă nu primesc dulciuri?",
+    "titleThree": "În ce oraș de lângă Stuttgart se construiesc anual figurine uriașe din dovleci?",
+    "titleFour": "În ce își fierbe vrăjitoarea poțiunile conform basmelor?",
+    "titleFive": "Ce creatură cu opt picioare țese pânze rezistente de prins prada?",
+    "titleSix": "Cu ajutorul cărui obiect fac vrăjitorii și magicienii farmecele?",
+    "titleSeven": "Ce se face adesea cu semințele de dovleac după curățarea acestuia?",
+    "titleEight": "De ce pădurea de toamnă de la sfârșitul lunii octombrie este ideală pentru poveștile de groază?"
+  },
+  "hallowenQuestSeven": {
+    "questOne": "În ce moment al zilei scobește familia dovleacul?",
+    "questTwo": "Ce fel de chip scobesc ei?",
+    "questThree": "Ce pun ei în interiorul dovleacului?",
+    "questFour": "De ce se pune o lumânare în interior?",
+    "questFive": "Ce atmosferă domnește în această seară?"
+  },
+  "hallowenQuestEight": {
+    "questOne": "Când pleacă copiii la plimbare?",
+    "questTwo": "În ce personaj s-a deghizat Lucas?",
+    "questThree": "Ce accesoriu poartă Mia pe cap?",
+    "questFour": "Ce strigă copiii cu voce tare la ușile de la intrare?",
+    "questFive": "Cu ce umplu vecinii pungile copiilor?"
+  },
+  "hallowenQuestNine": {
+    "questOne": "În apropierea cărui oraș este situat castelul?",
+    "questTwo": "În ce stare s-a păstrat castelul până în zilele noastre?",
+    "questThree": "Cine se costumează în monștri la castel?",
+    "questFour": "Ce le fac vizitatorilor actorii costumați?",
+    "questFive": "Cum este vremea de obicei în jurul acestui castel toamna?"
+  },
+  "hallowenQuestTen": {
+    "questOne": "Cine este comemorat de Ziua Reformei?",
+    "questTwo": "Ce statut are data de 31 octombrie în multe landuri din Germania?",
+    "questThree": "Ce are loc de obicei în biserici pe timpul zilei?",
+    "questFour": "Cui îi aparține cel mai des seara târzie de 31 octombrie?",
+    "questFive": "Ce confesiune sărbătorește Ziua Reformei?"
+  },
+  "hallowenQuestEleven": {
+    "questOne": "Ce scobeau copiii înainte de apariția dovleacului?",
+    "questTwo": "Cum se numeau aceste figurine luminoase?",
+    "questThree": "În ce ținuturi a fost deosebit de popular acest obicei?",
+    "questFour": "Ce introduceau în interiorul napului scobit?",
+    "questFive": "Ce anotimp era întâmpinat prin acest ritual?"
+  },
+  "hallowenQuestTwelve": {
+    "questOne": "Ce sărbătoare se celebrează pe 1 noiembrie?",
+    "questTwo": "Ce înseamnă statutul de «sărbătoare liniștită»?",
+    "questThree": "Unde merg multe familii în această zi?",
+    "questFour": "Ce aprind oamenii pe mormintele celor dragi?",
+    "questFive": "În ce landuri este deosebit de respectată această zi?"
+  },
+  "hallowenQuestThirteen": {
+    "questOne": "Când se sărbătorește Ziua Sfântului Martin?",
+    "questTwo": "Ce poartă copiii în timpul procesiunii?",
+    "questThree": "Ce cântece se cântă în timpul procesiunii?",
+    "questFour": "Ce se aprinde la finalul procesiunii de sărbătoare?",
+    "questFive": "Ce produse tradiționale de patiserie se împart copiilor?"
+  },
+  "hallowenQuestfourteen": {
+    "questOne": "În ce parc are loc celebra expoziție?",
+    "questTwo": "Din ce sunt asamblate figurinele gigantice?",
+    "questThree": "Ce mâncăruri specifice degustă oaspeții expoziției?",
+    "questFour": "Câți dovleci se folosesc pentru amenajarea expoziției?",
+    "questFive": "În ce perioadă a anului este deschisă această expoziție?"
+  },
+  "hallowenQuestfifteen": {
+    "questOne": "Cum se numește jocul cu mere în apă?",
+    "questTwo": "Cu ce se umple bolul mare?",
+    "questThree": "Ce plutește la suprafața apei?",
+    "questFour": "Unde trebuie să își țină mâinile participanții?",
+    "questFive": "Cu ajutorul a ce trebuie scos mărul?"
+  },
+  "hallowenQuestSixteen": {
+    "questOne": "Cum se numește următoarea competiție amuzantă?",
+    "questTwo": "Ce fac cele două echipe între ele?",
+    "questThree": "Pe cine alege fiecare echipă?",
+    "questFour": "Ce material este folosit pentru înfășurare?",
+    "questFive": "Care echipă câștigă în acest joc?"
+  },
+  "hallowenQuestSeventeen": {
+    "title": "Unește cuvântul cu traducerea sa",
+    "wordOne": "Dulciuri",
+    "wordTwo": "Liliac",
+    "wordThree": "Vampir",
+    "wordFour": "Lumânare",
+    "wordFive": "Mătură",
+    "wordSix": "Pisică neagră",
+    "wordSeven": "Dovleac",
+    "wordEight": "Schelet",
+    "wordNine": "Fantome",
+    "wordTen": "Carte magică",
+    "wordEleven": "Spirit",
+    "wordTwelve": "Corb",
+    "wordThirteen": "Pălărie de vrăjitoare",
+    "wordFourteen": "Vrăjitor",
+    "wordFifteen": "Păianjen",
+    "wordSixteen": "Mătura vrăjitoarei",
+    "wordSeventeen": "Cazanul vrăjitoarei",
+    "wordEighteen": "Baghetă magică"
+  },
+  "hallowenQuestEightteen": {
+    "title": "Unește obiectul cu scurta sa descriere",
+    "titleTwo": "Unește personajul cu trăsătura sa caracteristică",
+    "titleThree": "Unește sărbătoarea cu data sa exactă",
+    "textOne": "Pânză de păianjen prin colțuri",
+    "textTwo": "Pelerină cu guler roșu",
+    "textThree": "Felinar cu chip",
+    "textFour": "Piatră într-un cimitir",
+    "textFive": "Zboară în întuneric",
+    "textSix": "Vrăjitoarea zboară pe acest obiect",
+    "textSeven": "Format doar din oase albe",
+    "textEight": "Se teme de usturoi și doarme într-un sicriu",
+    "textNine": "Urlă la lună în pădurea întunecată",
+    "textTen": "Zdrăngăne lanțuri într-un castel vechi",
+    "textEleven": "Fierbe poțiuni într-un cazan de fontă",
+    "textTwelve": "Înfășurat din cap până în picioare în bandaje albe",
+    "textThirteen": "1 noiembrie",
+    "textFourteen": "Miezul nopții (00:00)",
+    "textFifteen": "Seara de 31 octombrie",
+    "textSixteen": "11 noiembrie la ora 11:11",
+    "textSeventeen": "31 octombrie (în timpul zilei)",
+    "textEighteen": "11 noiembrie (felinare)"
+  },
+  "hallowenQuestNineteen": {
+    "title": "Unește cuvântul cu semnificația sa",
+    "wordOne": "Muntele din masivul Harz unde se adună vrăjitoarele",
+    "wordTwo": "Procesiunea copiilor cu felinare în noiembrie",
+    "wordThree": "Ora spiritelor de la miezul nopții până la ora unu",
+    "wordFour": "Regele ielelor mitic din balada lui Goethe",
+    "wordFive": "Sculptură străveche în nap furajer",
+    "wordSix": "Zi fără petreceri zgomotoase și dansuri",
+    "wordSeven": "Alungă întunericul din interiorul dovleacului",
+    "wordEight": "Potcoavă pentru noroc și protecția casei",
+    "wordNine": "Protecție împotriva vampirilor",
+    "wordTen": "Talisman pe prag împotriva forțelor malefice",
+    "wordEleven": "Metal împotriva vârcolacilor în basme",
+    "wordTwelve": "Păcălește spiritele rătăcitoare",
+    "wordThirteen": "Sicriu",
+    "wordFourteen": "Poțiune",
+    "wordFifteen": "Ruinele castelului",
+    "wordSixteen": "Ceață",
+    "wordSeventeen": "Cimitir",
+    "wordEighteen": "Os"
+  },
+  "hallowenQuestTwenty": {
+    "title": "Unește cuvântul cu traducerea sa",
+    "wordOne": "Castelul monștrilor",
+    "wordTwo": "Vârcolac",
+    "wordThree": "Casă bântuită",
+    "wordFour": "Cimitir",
+    "wordFive": "Mumie",
+    "wordSix": "Sicriu",
+    "wordSeven": "Întuneric / Beznă",
+    "wordEight": "Miezul nopții",
+    "wordNine": "Mască înfricoșătoare",
+    "wordTen": "Țipăt",
+    "wordEleven": "Piatră funerară",
+    "wordTwelve": "Schelet",
+    "wordThirteen": "Craniu",
+    "wordFourteen": "Corabie-fantomă",
+    "wordFifteen": "Blestem",
+    "wordSixteen": "Pânză de păianjen",
+    "wordSeventeen": "Labirint",
+    "wordEighteen": "Poțiune magică"
+  },
+  "hallowenQuestTwentyOne": {
+    "questOne": "Ce animal este un intrus în compania de Halloween?",
+    "questTwo": "Ce este un intrus printre dulciurile din punga unui copil?",
+    "questThree": "Care cuvânt este un intrus după sens?",
+    "questFour": "Ce anume nu luminează în întuneric la sărbătoare?",
+    "questFive": "Ce nu este asociat cu toamna și sărbătoarea?",
+    "questSix": "Care obiect nu aparține unui vrăjitor sau unei vrăjitoare?"
+  },
+  "hallowenQuestTwentyTwo": {
+    "title": "Găsește cuvântul nepotrivit: Partea 2",
+    "questOne": "Ce vreme nu se potrivește deloc cu o seară de Halloween?",
+    "questTwo": "Ce anume nu se poartă ca parte dintr-un costum de Halloween?",
+    "questThree": "Ce obiect este un intrus printre vasele de vrăjitorie?",
+    "questFour": "De ce anume nu are nevoie un vampir sub nicio formă?",
+    "questFive": "Care dintre păsări și fiare nu își are locul printre creaturile nopții?",
+    "questSix": "Care băutură este nepotrivită printre răsfățurile calde de toamnă?"
+  },
+  "hallowenQuestTwentyThree": {
+    "title": "Unește cuvintele cu sens opus"
+  },
+  "haloweenBanner": {
+    "shop": "Cumpără efecte și cadouri din magazinul evenimentului!",
+    "quests": "Rezolvă misiuni pentru a aduna monede-dovleac!"
+  },
+  "eventsModalButtons": {
+    "pumpkin": "Adună dovleci",
+    "april": "Dă startul distracției",
+    "valentine": "Oferă felicitări",
+    "winter": "Spre povestea de iarnă!"
+  },
+  "eventsNotification": {
+    "now": "În desfășurare!",
+    "left": "Timp rămas:",
+    "untilEvent": " Până la eveniment:"
+  },
+  "steakInfo": {
+    "text": "Finalizează sarcinile zilnice pentru a nu-ți pierde seria"
+  },
+  "halloweenThemeModal": {
+    "partOne": "Această temă poate fi deblocată doar în cadrul evenimentului",
+    "partTwo": "«Sărbătoarea Dovlecilor»",
+    "partThree": "Achiziționeaz-o din magazinul evenimentului"
+  },
+  "part": {
+    "text": "Partea"
+  },
+  "halloweenAchievements": {
+    "sectionTitle": "Sărbătoarea Dovlecilor",
+    "firstHalloweenQuestText": "Bomboană sau dovleac",
+    "firstHalloweenQuestDescription": "Finalizează cu succes orice misiune din evenimentul Sărbătoarea Dovlecilor.",
+    "halloweenWordsText": "Povești sinistre",
+    "halloweenWordsDescription": "Învață toate cuvintele tematice legate de evenimentul Sărbătoarea Dovlecilor.",
+    "witchBroomText": "Fulger? Nu, mai rapid!",
+    "witchBroomDescription": "Prinde viteză maximă - cumpără o mătură zburătoare de primă clasă din magazinul festiv.",
+    "pumpkinText": "Dovleac pe cap?",
+    "pumpkinDescription": "Cumpără un dovleac sinistru din magazinul sărbătorii.",
+    "punchText": "Punch de dovleac",
+    "punchDescription": "Cumpără punch-ul vrăjitoarei din magazinul festiv.",
+    "witchHatText": "Alegerea casei?",
+    "witchHatDescription": "Cumpără pălăria de vrăjitoare din magazinul festiv.",
+    "spellBookText": "Grimoarul călărețului",
+    "spellBookDescription": "Cumpără o carte străveche de vrăji din magazinul festiv.",
+    "halloweenThemeText": "Mascaradă",
+    "halloweenThemeDescription": "Cumpără tema fantomatică pentru aplicație din magazinul evenimentului.",
+    "halloweenAllQuestsText": "Să înceapă balul!",
+    "halloweenAllQuestsDescription": "Nu lăsa forțelor malefice nicio șansă - finalizează toate misiunile festive.",
+    "halloweenReputationText": "Idolul sărbătorii",
+    "halloweenReputationDescription": "Obține nivelul maxim de reputație pentru îndeplinirea sarcinilor de Halloween.",
+    "halloweenAllAchievementsText": "Fie ca spiritul Halloween-ului să fie cu tine!",
+    "halloweenAllAchievementsDescription": "Obține toate realizările de Halloween și merită titlul festiv."
   }
 }

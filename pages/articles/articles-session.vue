@@ -13,9 +13,9 @@
                   </div>
                 </div>
               </div>
-              <div>
-              </div>
+              <span class="progress-text">{{ store.currentIndex + 1 }} / {{ totalWords }}</span>
             </div>
+
             <header class="session-header">
               <div class="session__theme">
                 <span class="session__theme-t">{{ t('sessionPage.theme') }}:</span>
@@ -27,6 +27,7 @@
                   }}</b> ({{ currentModeIndex + 1 }}/{{ selectedModes.length }})</span>
               </div>
             </header>
+
             <div class="word-block">
               <div class="mode-exercise">
                 <div v-if="currentMode === 'wordTranslate'" class="word-info-display">
@@ -39,6 +40,7 @@
                   <div class="word-divider">—</div>
                   <div class="translation-word">{{ currentWord[currentLangKey] }}</div>
                 </div>
+
                 <div v-if="currentMode === 'article'" class="article-mode-container">
                   <p class="question-text">{{ t('sessionLabels.articleFor') }} <span
                       class="highlight-word">{{ currentWord.de }}</span>:</p>
@@ -47,11 +49,14 @@
                         v-for="art in ['der', 'die', 'das']"
                         :key="art"
                         class="article-btn"
-                        :class="{
-                        'is-correct': result === 'correct' && userInput === art,
-                        'is-wrong': result === 'wrong' && userInput === art,
-                        'is-revealed': result === 'wrong' && currentWord.article === art
-                      }"
+                        :class="[
+                          art,
+                          {
+                            'is-correct': result === 'correct' && userInput === art,
+                            'is-wrong': result === 'wrong' && userInput === art,
+                            'is-revealed': result === 'wrong' && currentWord.article === art
+                          }
+                        ]"
                         :disabled="result !== ''"
                         @click="checkArticle(art)"
                     >
@@ -65,16 +70,31 @@
                     <p class="question-text">{{ t('sessionLabels.lettersFor') }} :</p>
                     <span class="highlight-word">{{ currentWord.ru }}</span>
                   </div>
+
+                  <div class="assembled-letters-box"
+                       :class="{ 'is-wrong-box': result === 'wrong', 'is-correct-box': result === 'correct' }">
+                    <span
+                        v-for="(charObj, i) in selectedLetterObjs"
+                        :key="'sel-'+i"
+                        class="assembled-char"
+                        @click="!result && removeLetter(i)"
+                    >
+                      {{ charObj.char === ' ' ? '␣' : charObj.char }}
+                    </span>
+                    <span v-if="selectedLetterObjs.length === 0" class="placeholder-text">...</span>
+                  </div>
+
                   <div class="letters">
-                    <button v-for="(letter, i) in shuffledLetters" :key="i" :disabled="usedLetters[i]"
-                            @click="addLetter(letter, i)">
+                    <button
+                        v-for="(letter, i) in shuffledLetters"
+                        :key="'shuf-'+i"
+                        :class="{'is-hidden': usedLetters[i]}"
+                        :disabled="usedLetters[i] || result !== ''"
+                        @click="addLetter(letter, i)"
+                    >
                       {{ letter === ' ' ? '␣' : letter }}
                     </button>
                   </div>
-                  <button v-if="userInput" class="letters-clear" @click="clearLetters" type="button">
-                    {{ t('wordDuelSession.clear') || 'clear' }}
-                  </button>
-                  <input v-model="userInput" class="trainer-app__input" readonly/>
                 </div>
 
                 <div v-if="currentMode === 'wordArticle'">
@@ -82,13 +102,13 @@
                     <p class="question-text"><b>{{ t('sessionLabels.word') }} :</b></p>
                     <span class="highlight-word">{{ uiWord }}</span>
                   </div>
-                  <input v-model="userInput" class="trainer-app__input" autofocus/>
+                  <input v-model="userInput" class="trainer-app__input" :disabled="result !== ''" autofocus/>
                 </div>
 
                 <div v-if="currentMode === 'plural'">
                   <p class="question-text">{{ t('sessionLabels.pluralFor') }}: <span
                       class="highlight-word">{{ currentWord.de }}</span></p>
-                  <input v-model="userInput" class="trainer-app__input" autofocus/>
+                  <input v-model="userInput" class="trainer-app__input" :disabled="result !== ''" autofocus/>
                 </div>
 
                 <div v-if="currentMode === 'audio'">
@@ -97,7 +117,7 @@
                     <img class="megaphones__icon" src="../../assets/images/megaphone.svg" alt="">
                     <span> {{ t('sessionLabels.listen') }}</span>
                   </button>
-                  <input v-model="userInput" class="trainer-app__input" autofocus/>
+                  <input v-model="userInput" class="trainer-app__input" :disabled="result !== ''" autofocus/>
                 </div>
               </div>
 
@@ -109,60 +129,107 @@
                     class="german__letters-item"
                     v-for="(letter, index) in germanLetters"
                     :key="index"
+                    :disabled="result !== ''"
                 >
                   {{ letter }}
                 </button>
               </div>
-
-              <div v-if="result" class="answer-result" :class="result">
-                <span class="result-icon" v-if="result === 'correct'">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline
-                      points="20 6 9 17 4 12"></polyline></svg>
-                </span>
-                <span class="result-icon" v-if="result === 'wrong'">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line
-                      x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                </span>
-                <span class="result-text" v-if="currentMode === 'article'">{{ t('result.correctAnswer') }}: <span
-                    class="highlight-word">{{ currentWord.article }}</span></span>
-                <span class="result-text"
-                      v-if="currentMode === 'letters' || currentMode === 'audio'">{{ t('result.correctAnswer') }}: <span
-                    class="highlight-word">{{ currentWord.de }}</span></span>
-                <span class="result-text" v-if="currentMode === 'wordArticle'">{{ t('result.correct') }}: <span
-                    class="highlight-word">{{ currentWord.article }} {{ currentWord.de }}</span> </span>
-                <span class="result-text" v-if="currentMode === 'plural'">{{ t('result.correct') }}: <span
-                    class="highlight-word">{{ currentWord.plural }}</span></span>
-              </div>
-            </div>
-            <div class="actions-wrapper">
-              <button
-                  v-if="currentMode !== 'article' || result"
-                  class="btn-primary"
-                  @click="!result ? checkAnswer() : nextStep()"
-                  :disabled="!result && (isChecking || (currentMode !== 'wordTranslate' && !userInput))"
-              >
-                {{
-                  currentMode === 'wordTranslate' ? t('trainerPage.further') : (!result ? t('sessionPage.btnCheck') : t('sessionPage.continue'))
-                }}
-              </button>
             </div>
           </div>
-          <div v-else class="finish-block">
-            <h2 class="finish-block__title">{{ t('sessionLabels.end') }}</h2>
-            <div class="finish-block__actions">
-              <button class="btn-primary" @click="restartAll">{{ t('sessionLabels.again') }}</button>
-              <button v-if="wrongWords.length" class="btn-secondary" :disabled="wrongWords.length === 0"
-                      @click="repeatMistakes">
-                {{ t('sessionLabels.mistakes') }} ({{ wrongWords.length }})
+
+          <div v-if="!finished && (currentMode !== 'article' || result)" class="actions-wrapper" :class="feedbackClass">
+            <div class="actions-container">
+              <div v-if="result" class="feedback-text">
+                <div v-if="result === 'correct'" class="feedback correct slide-up">
+                  {{ t('trainerPage.right') }}
+                </div>
+                <div v-else class="feedback incorrect shake">
+                  <div class="feedback-wrong-header">{{ t('trainerPage.false') }}</div>
+                  <div class="correct-answer-text">{{ correctTextForFeedback }}</div>
+                </div>
+              </div>
+              <button
+                  v-if="!result"
+                  class="btn btn-check"
+                  @click="currentMode === 'wordTranslate' ? nextStep() : checkAnswer()"
+                  :disabled="isChecking || (currentMode !== 'wordTranslate' && !userInput)"
+              >
+                {{ currentMode === 'wordTranslate' ? t('trainerPage.further') : t('sessionPage.btnCheck') }}
               </button>
-              <router-link class="btn-secondary" to="/articles">{{ t('sessionLabels.back') }}</router-link>
+              <button
+                  v-if="result"
+                  class="btn slide-up"
+                  :class="result === 'correct' ? 'btn-next' : 'btn-wrong'"
+                  @click="nextStep"
+              >
+                {{ t('trainerPage.further') }}
+              </button>
             </div>
           </div>
         </div>
       </div>
     </transition>
+
+    <Transition name="fade-scale">
+      <div v-if="shouldShowFinishModal" class="fullscreen-modal">
+        <div class="confetti-container" v-if="wrongWords.length === 0 && confettiParticles.length > 0">
+          <div
+              v-for="p in confettiParticles"
+              :key="p.id"
+              class="confetti-piece"
+              :style="{
+                left: p.left + '%',
+                backgroundColor: p.color,
+                animationDelay: p.delay + 's',
+                animationDuration: p.duration + 's',
+                width: p.width + 'px',
+                height: p.height + 'px'
+              }"
+          ></div>
+        </div>
+
+        <div class="fullscreen-content">
+          <div v-if="animStep >= 1" class="step-fade-in">
+            <img :src="wrongWords.length === 0 ? Great : Support" class="status-img bounce-in" alt="Status icon"/>
+          </div>
+          <div v-if="animStep >= 2" class="step-fade-in">
+            <p class="fs-text" v-if="wrongWords.length === 0">
+              {{ t('trainerPage.save') }}
+            </p>
+            <p class="fs-text" v-else>
+              {{ t('sessionLabels.mistakes') }}
+            </p>
+            <div v-if="wrongWords.length > 0" class="streak-number bounce-in">
+              {{ wrongWords.length }}
+            </div>
+          </div>
+          <div v-if="animStep >= 3" class="step-fade-in full-width-block actions-spacing">
+            <div class="fs-actions" v-if="wrongWords.length === 0">
+              <button class="ios-btn-primary fs-action-btn" @click="restartAll">
+                {{ t('sessionLabels.again') }}
+              </button>
+              <router-link to="/articles" class="ios-btn-secondary fs-link-btn">
+                {{ t('sessionLabels.back') }}
+              </router-link>
+            </div>
+            <div class="fs-actions" v-else>
+              <button class="ios-btn-primary fs-action-btn" @click="repeatMistakes">
+                {{ t('sessionLabels.mistakes') }} ({{ wrongWords.length }})
+              </button>
+              <router-link to="/articles" class="ios-btn-secondary fs-link-btn">
+                {{ t('sessionLabels.back') }}
+              </router-link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Transition>
+
+    <VStreakModal
+        v-model="showStreakModal"
+        :streak="authStore.streakCount"
+        @close="handleStreakClosed"
+    />
   </div>
 </template>
 
@@ -170,18 +237,26 @@
 import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
 import {useRoute, useRouter} from 'vue-router'
 import {userlangStore} from '../../store/learningStore.js'
+import {userAuthStore} from '~/store/authStore.js'
+import {dailyStore} from '~/store/dailyStore.js'
 import {getSpeechAudio} from '../../utils/googleTTS.js'
 import {nameMap, nameMode} from '../../utils/nameMap.js'
-import {playWrong, playCorrect, unlockAudioByUserGesture} from '../../utils/soundManager.js'
+import {playWrong, playCorrect, playLevelCompleted, unlockAudioByUserGesture} from '../../utils/soundManager.js'
 import {useSeoMeta} from '#imports'
 import SoundBtn from "~/src/components/soundBtn.vue";
 import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
+import VStreakModal from '~/src/components/V-streak.vue'
 import {showInterstitial} from '../../utils/admob.js';
+
+import Great from '~/assets/images/Greatcon.svg'
+import Support from '~/assets/images/Support.svg'
 
 useSeoMeta({robots: 'noindex, nofollow'})
 
 const {t, locale} = useI18n()
 const store = userlangStore()
+const authStore = userAuthStore()
+const daily = dailyStore()
 const route = useRoute()
 
 const wrongWords = ref([])
@@ -194,10 +269,34 @@ const finished = ref(false)
 const userInput = ref('')
 const result = ref('')
 const topicTitle = ref('')
+
+const selectedLetterObjs = ref([])
 const usedLetters = ref([])
+
 const isChecking = ref(false)
 const isSpeaking = ref(false)
 const germanLetters = ['ä', 'ö', 'ü', 'Ä', 'Ö', 'Ü', 'ß']
+
+const animStep = ref(0)
+const confettiParticles = ref([])
+
+const showStreakModal = ref(false)
+const isWaitingForStreakClose = ref(false)
+const initialStreak = ref(authStore.streakCount || 0)
+const streakWasIncremented = ref(false)
+
+watch(() => authStore.streakCount, (newVal) => {
+  if (newVal > initialStreak.value) streakWasIncremented.value = true
+})
+
+const shouldShowFinishModal = computed(() => {
+  return finished.value && !showStreakModal.value && !isWaitingForStreakClose.value
+})
+
+const feedbackClass = computed(() => {
+  if (!result.value) return ''
+  return result.value === 'correct' ? 'correct' : 'incorrect'
+})
 
 const shouldShowGermanLetters = computed(() => {
   if (!currentWord.value) return false;
@@ -213,7 +312,10 @@ const currentModeIndex = computed(() => store.currentModeIndex)
 const currentMode = computed(() => selectedModes.value[currentModeIndex.value])
 const currentWord = computed(() => store.selectedWords[store.currentIndex])
 const totalWords = computed(() => store.selectedWords.length)
-const currentLang = computed(() => locale.value)
+const currentLangKey = computed(() => {
+  const lc = String(locale.value || '').trim()
+  return lc.split('-')[0] || 'en'
+})
 const translatedTopic = computed(() => t(nameMap[topicTitle.value]))
 
 const progressPercentage = computed(() => {
@@ -221,34 +323,10 @@ const progressPercentage = computed(() => {
   return (store.currentIndex / totalWords.value) * 100;
 })
 
-const localeToKeyMap = {
-  ru: 'ru', 'ru-RU': 'ru',
-  en: 'en', 'en-US': 'en', 'en-GB': 'en',
-  tr: 'tr', 'tr-TR': 'tr',
-  pl: 'pl', 'pl-PL': 'pl',
-  uk: 'uk', 'uk-UA': 'uk',
-  es: 'es', 'es-ES': 'es',
-  ar: 'ar', 'ar-AR': 'ar',
-  uz: 'uz', 'uz-UZ': 'uz',
-  de: 'de',
-  hi: 'hi',
-  fr: 'fr',
-  ro: 'ro'
-}
-
-const currentLangKey = computed(() => {
-  const lc = String(locale.value || '').trim()
-  return localeToKeyMap[lc] || localeToKeyMap[lc.split('-')[0]] || 'en'
-})
-
 const uiWord = computed(() => {
   const w = currentWord.value || {}
   return w[currentLangKey.value] ?? w.en ?? w.ru ?? w.de ?? ''
 })
-
-function hasAnyPlural(wordsArray) {
-  return (Array.isArray(wordsArray) ? wordsArray : []).some(w => w.plural && String(w.plural).trim() !== '')
-}
 
 const modeLabel = (mode) => nameMode[mode] || mode
 
@@ -257,24 +335,58 @@ const shuffledLetters = computed(() => {
   return currentWord.value.de.split('').sort(() => Math.random() - 0.5)
 })
 
+const correctTextForFeedback = computed(() => {
+  if (!currentWord.value) return ''
+  switch (currentMode.value) {
+    case 'article':
+      return currentWord.value.article;
+    case 'letters':
+      return currentWord.value.de;
+    case 'wordArticle':
+      return `${currentWord.value.article} ${currentWord.value.de}`;
+    case 'plural':
+      return currentWord.value.plural;
+    case 'audio':
+      return currentWord.value.de;
+    default:
+      return '';
+  }
+})
+
 function addLetter(letter, idx) {
   if (usedLetters.value[idx]) return
-  userInput.value += letter
+  selectedLetterObjs.value.push({char: letter, origIdx: idx})
   usedLetters.value[idx] = true
+  userInput.value = selectedLetterObjs.value.map(x => x.char).join('')
 }
 
-const addGErmanLetters = (letter) => userInput.value += letter
+function removeLetter(indexInArray) {
+  const obj = selectedLetterObjs.value[indexInArray]
+  if (obj.origIdx !== -1) {
+    usedLetters.value[obj.origIdx] = false
+  }
+  selectedLetterObjs.value.splice(indexInArray, 1)
+  userInput.value = selectedLetterObjs.value.map(x => x.char).join('')
+}
+
+function clearLetters() {
+  selectedLetterObjs.value = []
+  usedLetters.value = []
+  userInput.value = ''
+}
+
+const addGErmanLetters = (letter) => {
+  userInput.value += letter
+  if (currentMode.value === 'letters') {
+    selectedLetterObjs.value.push({char: letter, origIdx: -1})
+  }
+}
 
 function speak(text) {
   if (isSpeaking.value) return
   isSpeaking.value = true
   getSpeechAudio(text)
   setTimeout(() => isSpeaking.value = false, 3000)
-}
-
-function clearLetters() {
-  userInput.value = ''
-  usedLetters.value = []
 }
 
 function normalize(text) {
@@ -290,17 +402,7 @@ async function checkArticle(art) {
 async function checkAnswer() {
   if (!currentWord.value || isChecking.value) return;
   isChecking.value = true;
-
-  if (currentMode.value === 'wordTranslate') {
-    if (!isReview.value) {
-      await store.markProgress(currentWord.value, currentMode.value, true);
-      await store.markAsLearned(currentWord.value);
-    }
-    playCorrect();
-    isChecking.value = false;
-    nextStep();
-    return;
-  }
+  unlockAudioByUserGesture();
 
   let correct = '';
   switch (currentMode.value) {
@@ -340,6 +442,67 @@ async function checkAnswer() {
   isChecking.value = false;
 }
 
+function spawnConfetti() {
+  const confettiColors = ['#ffb100', '#c982ff', '#4caf50', '#00c2ff', '#ff5252', '#ffffff']
+  const particles = []
+  for (let i = 0; i < 70; i++) {
+    particles.push({
+      id: i,
+      left: Math.random() * 100,
+      delay: Math.random() * 1.5,
+      color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
+      duration: 2.5 + Math.random() * 2,
+      width: 7 + Math.random() * 8,
+      height: 12 + Math.random() * 14
+    })
+  }
+  confettiParticles.value = particles
+}
+
+const triggerFinishAnimations = () => {
+  playLevelCompleted()
+  if (wrongWords.value.length === 0) {
+    spawnConfetti()
+  }
+  animStep.value = 0
+  setTimeout(() => {
+    animStep.value = 1
+  }, 100)
+  setTimeout(() => {
+    animStep.value = 2
+  }, 600)
+  setTimeout(() => {
+    animStep.value = 3
+  }, 1100)
+}
+
+function finishSession() {
+  finished.value = true
+  store.saveToFirebase()
+  isWaitingForStreakClose.value = true
+  setTimeout(async () => {
+    const isStreakHigher = authStore.streakCount > initialStreak.value
+    const streakCountedToday = daily.currentCycle?.streakCounted || streakWasIncremented.value || isStreakHigher
+    const modalAlreadyShownToday = daily.currentCycle?.streakModalShown === true
+
+    if (streakCountedToday && !modalAlreadyShownToday) {
+      if (typeof daily.markStreakModalShown === 'function') {
+        await daily.markStreakModalShown()
+      }
+      showStreakModal.value = true
+    } else {
+      isWaitingForStreakClose.value = false
+      triggerFinishAnimations()
+    }
+  }, 500)
+}
+
+const handleStreakClosed = () => {
+  showStreakModal.value = false
+  isWaitingForStreakClose.value = false
+  triggerFinishAnimations()
+}
+
 function nextStep() {
   if (currentModeIndex.value < selectedModes.value.length - 1) {
     store.currentModeIndex++
@@ -347,12 +510,17 @@ function nextStep() {
     store.currentModeIndex = 0
     store.currentIndex++
   }
-  userInput.value = ''
-  usedLetters.value = []
+
+  clearLetters()
   result.value = ''
+
   if (store.currentIndex >= store.selectedWords.length) {
-    finished.value = true
-    store.saveToFirebase()
+    finishSession()
+  } else if (currentMode.value === 'wordTranslate') {
+    if (!isReview.value && currentWord.value) {
+      store.markProgress(currentWord.value, currentMode.value, true);
+      store.markAsLearned(currentWord.value);
+    }
   }
 }
 
@@ -365,9 +533,11 @@ function restartAll() {
     store.currentIndex = 0
     store.currentModeIndex = 0
     finished.value = false
-    userInput.value = ''
+    clearLetters()
     result.value = ''
     wrongWords.value = []
+    animStep.value = 0
+    confettiParticles.value = []
   })
 }
 
@@ -378,14 +548,17 @@ function repeatMistakes() {
     store.currentIndex = 0
     store.currentModeIndex = 0
     finished.value = false
-    userInput.value = ''
+    clearLetters()
     result.value = ''
     wrongWords.value = []
+    animStep.value = 0
+    confettiParticles.value = []
   })
 }
 
 onMounted(async () => {
   isMounted.value = true;
+  initialStreak.value = authStore.streakCount || 0
   const unlockOnce = () => {
     unlockAudioByUserGesture()
     window.removeEventListener('pointerdown', unlockOnce, {capture: true})
@@ -404,7 +577,11 @@ onMounted(async () => {
   allWords.value = [...store.selectedWords]
   isReview.value = ['1', 'true', 'repeat', 'review'].includes(String(route.query.review || '').toLowerCase())
 
-  // ВЫЗОВ РЕКЛАМЫ ПЕРЕД НАЧАЛОМ СЕССИИ
+  if (currentMode.value === 'wordTranslate' && currentWord.value && !isReview.value) {
+    store.markProgress(currentWord.value, currentMode.value, true);
+    store.markAsLearned(currentWord.value);
+  }
+
   showInterstitial(() => {
     isReady.value = true
   })
@@ -418,15 +595,9 @@ onBeforeUnmount(() => {
   window.removeEventListener('beforeunload', saveProgressOnExit)
   store.saveToFirebase()
 })
-
-watch(userInput, (newVal, oldVal) => {
-  if (currentMode.value === 'letters' && newVal.length < oldVal.length) usedLetters.value = []
-})
-
 </script>
 
 <style scoped>
-
 .session-page {
   font-family: "Nunito", sans-serif;
   height: 100%;
@@ -448,7 +619,6 @@ watch(userInput, (newVal, oldVal) => {
 
 .trainer-app__board {
   flex: 1;
-  padding: 5px 10px 15px 10px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -459,6 +629,7 @@ watch(userInput, (newVal, oldVal) => {
   flex-direction: column;
   flex: 1;
   overflow: hidden;
+  padding: 5px 10px 10px 10px;
 }
 
 .question__content {
@@ -502,12 +673,18 @@ watch(userInput, (newVal, oldVal) => {
   left: 8px;
   right: 8px;
   height: 4px;
-  border-radius: 4px
+  border-radius: 4px;
 }
 
 .progress-fill[style*="width: 100%"] {
   border-radius: 8px;
   border-right: none;
+}
+
+.progress-text {
+  font-weight: 900;
+  color: var(--titleColor);
+  font-size: 16px;
 }
 
 .session-header {
@@ -558,19 +735,6 @@ watch(userInput, (newVal, oldVal) => {
 
 .word-block::-webkit-scrollbar {
   display: none;
-}
-
-.word-question {
-  font-size: 1.1rem;
-  color: var(--titleColor);
-  margin-bottom: 1rem;
-  text-align: center;
-  font-weight: 700;
-}
-
-.word-question b {
-  font-size: 1.3rem;
-  font-weight: 900;
 }
 
 .question-text {
@@ -626,81 +790,111 @@ watch(userInput, (newVal, oldVal) => {
 
 .article-options {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   width: 100%;
-  margin-top: 10px;
+  max-width: 390px;
+  margin-top: 28px;
   padding: 0 10px;
 }
 
 .article-btn {
   flex: 1;
-  padding: 16px 8px;
-  font-family: "Nunito", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 900;
-  background: #ffffff;
-  color: #1e1e1e;
-  border: 3px solid #1e1e1e;
-  border-radius: 14px;
+  padding: 12px 10px;
+  border-radius: 20px;
+  border: none;
   cursor: pointer;
-  box-shadow: 0 4px 0 #1e1e1e;
-  transition: all 0.1s ease;
-  text-transform: uppercase;
-}
-
-.article-btn.is-correct {
-  background: #10b981;
+  transition: all 0.1s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 28px;
+  font-weight: 900;
   color: #ffffff;
-  border-color: #064e3b;
-  box-shadow: 0 4px 0 #064e3b;
-}
-
-.article-btn.is-wrong {
-  background: #ef4444;
-  color: #ffffff;
-  border-color: #7f1d1d;
-  box-shadow: 0 4px 0 #7f1d1d;
-}
-
-.article-btn.is-revealed {
-  background: #ecfdf5;
-  color: #10b981;
-  border-color: #10b981;
-}
-
-.article-btn:disabled:not(.is-correct):not(.is-wrong):not(.is-revealed) {
-  opacity: 0.5;
-  cursor: default;
-  box-shadow: 0 4px 0 #1e1e1e;
+  text-transform: lowercase;
 }
 
 .article-btn:active:not(:disabled) {
-  transform: translateY(3px);
-  box-shadow: 0 1px 0 #1e1e1e;
+  transform: translateY(6px);
+}
+
+.article-btn.der {
+  background-color: #007AFF;
+  box-shadow: 0 6px 0 #005bb5;
+}
+
+.article-btn.der:active:not(:disabled) {
+  box-shadow: 0 0 0 #005bb5;
+}
+
+.article-btn.die {
+  background-color: #FF3B30;
+  box-shadow: 0 6px 0 #c22820;
+}
+
+.article-btn.die:active:not(:disabled) {
+  box-shadow: 0 0 0 #c22820;
+}
+
+.article-btn.das {
+  background-color: #34C759;
+  box-shadow: 0 6px 0 #248a3d;
+}
+
+.article-btn.das:active:not(:disabled) {
+  box-shadow: 0 0 0 #248a3d;
+}
+
+.article-btn.is-correct {
+  transform: scale(1.04);
+}
+
+.article-btn.is-wrong {
+  opacity: 0.5;
+  filter: grayscale(0.6);
+}
+
+.article-btn.is-revealed {
+  animation: pulse-correct 0.6s infinite alternate;
+}
+
+@keyframes pulse-correct {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.article-btn:disabled:not(.is-correct):not(.is-wrong):not(.is-revealed) {
+  opacity: 0.4;
+  cursor: default;
 }
 
 .trainer-app__input {
   width: 100%;
-  padding: 10px 15px;
+  padding: 14px 15px;
   font-family: "Nunito", sans-serif;
   font-size: 1.3rem;
   font-weight: 800;
-  border: 3px solid #1e1e1e;
+  border: 3px solid #e5e7eb;
   background: #ffffff;
   color: #1e1e1e;
-  border-radius: 14px;
-  transition: all 0.1s;
+  border-radius: 16px;
+  transition: all 0.2s;
   text-align: center;
-  box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  margin-bottom: 20px;
 }
 
 .trainer-app__input:focus {
   outline: none;
   border-color: #3b82f6;
-  box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.05), 0 0 0 3px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.15);
 }
 
-.trainer-app__input[readonly] {
+.trainer-app__input:disabled {
   cursor: default;
   background: #f3f4f6;
   color: #6b7280;
@@ -708,8 +902,73 @@ watch(userInput, (newVal, oldVal) => {
   box-shadow: none;
 }
 
+.assembled-letters-box {
+  width: 100%;
+  min-height: 58px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 3px solid #e5e7eb;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  transition: all 0.2s;
+}
+
+.assembled-letters-box.is-correct-box {
+  border-color: #10b981;
+  background: #ecfdf5;
+}
+
+.assembled-letters-box.is-wrong-box {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.assembled-char {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 42px;
+  background: #3b82f6;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 900;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #1e3a8a;
+  transition: transform 0.1s;
+}
+
+.assembled-char:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #1e3a8a;
+}
+
+.is-correct-box .assembled-char {
+  background: #10b981;
+  box-shadow: 0 3px 0 #064e3b;
+  cursor: default;
+}
+
+.is-wrong-box .assembled-char {
+  background: #ef4444;
+  box-shadow: 0 3px 0 #7f1d1d;
+  cursor: default;
+}
+
+.placeholder-text {
+  color: #9ca3af;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
 .letters {
-  margin: 1rem 0;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -720,8 +979,8 @@ watch(userInput, (newVal, oldVal) => {
   font-family: "Nunito", sans-serif;
   font-size: 1.4rem;
   font-weight: 900;
-  width: 40px;
-  height: 48px;
+  width: 44px;
+  height: 52px;
   background: #ffffff;
   color: #1e1e1e;
   border-radius: 12px;
@@ -732,38 +991,13 @@ watch(userInput, (newVal, oldVal) => {
 }
 
 .letters button:active:not(:disabled) {
-  transform: translateY(3px);
-  box-shadow: 0 1px 0 #e5e7eb;
+  transform: translateY(4px);
+  box-shadow: 0 0 0 transparent;
 }
 
-.letters button:disabled {
-  background: #f3f4f6;
-  border-color: #f3f4f6;
-  color: #d1d5db;
-  cursor: not-allowed;
-  box-shadow: 0 4px 0 #f3f4f6;
-}
-
-.letters-clear {
-  display: block;
-  margin: 0 auto 1.2rem;
-  padding: 8px 16px;
-  font-family: "Nunito", sans-serif;
-  font-size: 0.9rem;
-  font-weight: 800;
-  background: #ffffff;
-  color: #4b5563;
-  border: 3px solid #e5e7eb;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.1s;
-  text-transform: uppercase;
-  box-shadow: 0 3px 0 #e5e7eb;
-}
-
-.letters-clear:active {
-  transform: translateY(2px);
-  box-shadow: 0 1px 0 #e5e7eb;
+.letters button.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .german__letters {
@@ -774,26 +1008,26 @@ watch(userInput, (newVal, oldVal) => {
 }
 
 .german__letters-item {
-  padding: 8px 12px;
+  padding: 8px 14px;
   border: 3px solid #e5e7eb;
   background: #ffffff;
   color: #1e1e1e;
   font-size: 1.2rem;
   font-family: "Nunito", sans-serif;
   font-weight: 800;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.1s;
-  box-shadow: 0 3px 0 #e5e7eb;
+  box-shadow: 0 4px 0 #e5e7eb;
 }
 
-.german__letters-item:active {
-  transform: translateY(2px);
-  box-shadow: 0 1px 0 #e5e7eb;
+.german__letters-item:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 transparent;
 }
 
 .audio-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
@@ -806,7 +1040,7 @@ watch(userInput, (newVal, oldVal) => {
   font-weight: 800;
   cursor: pointer;
   transition: all 0.1s;
-  margin: 0 auto 1.2rem;
+  margin: 20px auto;
   box-shadow: 0 3px 0 #1e1e1e;
 }
 
@@ -819,126 +1053,336 @@ watch(userInput, (newVal, oldVal) => {
   width: 20px;
 }
 
-.answer-result {
+.actions-wrapper {
+  margin-top: auto;
+  padding: 15px 10px calc(env(safe-area-inset-bottom) + 15px) 10px;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.actions-wrapper.correct {
+  background: #dcfce7;
+}
+
+.actions-wrapper.incorrect {
+  background: #fee2e2;
+}
+
+.actions-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 1.1rem;
-  font-weight: 800;
-  margin-top: 1.5rem;
-  min-height: 2.5rem;
-  padding: 12px;
-  border-radius: 14px;
-  border: 3px solid transparent;
-}
-
-.answer-result.correct {
-  background: #ecfdf5;
-  color: #10b981;
-  border-color: #10b981;
-}
-
-.answer-result.wrong {
-  background: #fef2f2;
-  color: #ef4444;
-  border-color: #ef4444;
-}
-
-.result-icon {
-  display: flex;
-  align-items: center;
-}
-
-.btn-primary {
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
   width: 100%;
-  padding: 16px 20px;
-  font-family: "Nunito", sans-serif;
+}
+
+.feedback-text {
+  width: 100%;
+}
+
+.feedback {
   font-size: 20px;
   font-weight: 900;
-  color: #ffffff;
-  background-color: #3b82f6;
-  border: 3px solid #1e3a8a;
-  border-radius: 16px;
-  cursor: pointer;
-  transition: all 0.1s ease;
-  text-align: center;
-  box-shadow: 0 5px 0 #1e3a8a;
-  letter-spacing: 0.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.btn-primary:active:not(:disabled) {
+.feedback.correct {
+  color: #15803d;
+}
+
+.feedback.incorrect {
+  color: #b91c1c;
+}
+
+.feedback-wrong-header {
+  font-size: 16px;
+  font-weight: 800;
+  color: #991b1b;
+}
+
+.correct-answer-text {
+  font-size: 22px;
+  font-weight: 900;
+  color: #b91c1c;
+}
+
+.btn {
+  width: 100%;
+  padding: 16px;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  text-transform: uppercase;
+}
+
+.btn:active:not(:disabled) {
   transform: translateY(4px);
-  box-shadow: 0 1px 0 #1e3a8a;
 }
 
-.btn-primary:disabled {
-  background-color: #9ca3af;
-  border-color: #4b5563;
-  color: #4b5563;
+.btn-check {
+  background: #007AFF;
+  color: #ffffff;
+  box-shadow: 0 5px 0 #005bb5;
+}
+
+.btn-check:active:not(:disabled) {
+  box-shadow: 0 0 0 transparent;
+}
+
+.btn-check:disabled {
+  background: #d1d5db;
+  color: #9ca3af;
+  box-shadow: 0 5px 0 #9ca3af;
   cursor: not-allowed;
-  box-shadow: 0 5px 0 #4b5563;
 }
 
-.finish-block {
-  text-align: center;
-  padding: 2rem 0;
+.btn-next {
+  background: #22c55e;
+  color: #ffffff;
+  box-shadow: 0 5px 0 #15803d;
+}
+
+.btn-next:active {
+  box-shadow: 0 0 0 transparent;
+}
+
+.btn-wrong {
+  background: #ef4444;
+  color: #ffffff;
+  box-shadow: 0 5px 0 #b91c1c;
+}
+
+.btn-wrong:active {
+  box-shadow: 0 0 0 transparent;
+}
+
+.slide-up {
+  animation: slideUpAnim 0.3s ease-out forwards;
+}
+
+@keyframes slideUpAnim {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.shake {
+  animation: shakeAnim 0.4s ease-in-out;
+}
+
+@keyframes shakeAnim {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20%, 60% {
+    transform: translateX(-5px);
+  }
+  40%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+.fullscreen-modal {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: var(--bg, #f2f2f7);
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  align-items: center;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.finish-block__title {
-  font-size: 28px;
-  color: var(--titleColor);
-  font-weight: 900;
-  margin-bottom: 2rem;
-}
-
-.finish-block__actions {
+.fullscreen-content {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
-.btn-secondary {
-  display: block;
+.full-width-block {
   width: 100%;
-  padding: 14px 20px;
-  font-family: "Nunito", sans-serif;
-  font-size: 20px;
+}
+
+.actions-spacing {
+  margin-top: 20px;
+}
+
+.step-fade-in {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInStep 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInStep {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.fs-text {
+  font-size: 19px;
+  font-weight: 600;
+  color: #8e8e93;
+  margin-bottom: 6px;
+}
+
+.streak-number {
+  font-size: 34px;
+  font-weight: 900;
+  color: #34C759;
+  line-height: 1;
+  margin-bottom: 24px;
+  padding: 8px 24px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.status-img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.fs-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.ios-btn-primary {
+  background: #007AFF;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 32px;
+  font-size: 18px;
   font-weight: 800;
-  color: #1e1e1e;
-  background-color: #ffffff;
-  border-radius: 16px;
+  box-shadow: 0 6px 0 #005bb5;
   cursor: pointer;
-  transition: all 0.1s ease;
-  text-align: center;
+  transition: all 0.1s;
+  width: 100%;
+}
+
+.ios-btn-primary:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #005bb5;
+}
+
+.ios-btn-secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
-  border: 3px solid var(--tabsSlideBorderColor);
-  box-shadow: var(--boxShadowMobile);
+  background: none;
+  color: #89898e;
+  padding: 16px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 800;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.ios-btn-secondary:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #d1d1d6;
+}
+
+.confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -20px;
+  border-radius: 3px;
+  animation: confettiFall linear forwards;
 }
 
 .highlight-word {
-  color: #3b82f6;
-  font-weight: 900;
   font-size: 22px;
+  color: darkorange;
+  font-weight: 600;
 }
 
-.answer-result.wrong .highlight-word {
-  color: #ef4444;
-  text-decoration: underline;
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) rotate(720deg);
+    opacity: 0;
+  }
 }
 
-
-.answer-result.correct .highlight-word {
-  color: #10b981;
+.bounce-in {
+  animation: bounceIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.btn-secondary:active:not(:disabled) {
-  transform: translateY(4px);
-  box-shadow: 0 1px 0 #1e1e1e;
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fade-scale-enter-active,
+.fade-scale-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.fade-scale-enter-from,
+.fade-scale-leave-to {
+  opacity: 0;
+  transform: scale(0.95);
 }
 
 .fade-slide-enter-active,

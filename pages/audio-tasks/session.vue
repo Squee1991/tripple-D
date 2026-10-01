@@ -7,6 +7,18 @@
     <transition name="toast-fade">
       <VHeadsUp v-if="showEmptyWarning" :text="t('headUp.audioTasks')"/>
     </transition>
+    <div class="mini-salute-container" v-if="miniConfettiParticles.length > 0">
+      <div v-for="particle in miniConfettiParticles" :key="particle.id" class="mini-confetti-piece"
+           :style="{
+             left: particle.left + '%',
+             backgroundColor: particle.color,
+             animationDelay: particle.delay + 's',
+             animationDuration: particle.duration + 's',
+             width: particle.width + 'px',
+             height: particle.height + 'px'
+           }">
+      </div>
+    </div>
     <div class="quiz-app-container">
       <div v-if="loading" class="quiz-screen">
         <p class="loading-text">{{ t('dailyPanel.loading') }}</p>
@@ -46,26 +58,26 @@
               </div>
               <transition name="quiz-expand">
                 <div v-if="isTaskChecked" class="chat-flow">
-                  <div v-for="(line, idx) in currentTask.dialogue"
-                       :key="idx"
-                       :class="['chat-bubble', 'chat-bubble-' + line.gender.toLowerCase()]">
-                    <p class="chat-bubble-text">{{ line.text }}</p>
+                  <div v-for="(dialogueLine, index) in currentTask.dialogue"
+                       :key="index"
+                       :class="['chat-bubble', 'chat-bubble-' + dialogueLine.gender.toLowerCase()]">
+                    <p class="chat-bubble-text">{{ dialogueLine.text }}</p>
                   </div>
                 </div>
               </transition>
             </section>
             <div class="quest-card-options">
-              <div v-for="(optionText, index) in currentTask.options" :key="index" class="quest-option">
+              <div v-for="(optionText, optionIndex) in currentTask.options" :key="optionIndex" class="quest-option">
                 <SoundBtn :text="optionText" class="quest-option-audio"/>
-                <button @click="handleOptionSelection(index)"
+                <button @click="handleOptionSelection(optionIndex)"
                         :disabled="isTaskChecked"
-                        :class="getOptionClasses(index)">
+                        :class="getOptionClasses(optionIndex)">
                   <div class="quest-option-check">
-                    <template v-if="isOptionSelected(index)">
-                      <span v-if="isTaskChecked && !currentTask.correctIndices.includes(index)">✖</span>
+                    <template v-if="isOptionSelected(optionIndex)">
+                      <span v-if="isTaskChecked && !currentTask.correctIndices.includes(optionIndex)">✖</span>
                       <span v-else>✓</span>
                     </template>
-                    <template v-else-if="isTaskChecked && currentTask.correctIndices.includes(index)">
+                    <template v-else-if="isTaskChecked && currentTask.correctIndices.includes(optionIndex)">
                       <span>!</span>
                     </template>
                   </div>
@@ -90,7 +102,7 @@
                   {{ t('imageDescription.finish') }}
                 </button>
               </div>
-              <button v-if="!isTaskChecked && canSkip" @click="skipTask" class="quiz-btn quiz-btn-skip">
+              <button v-if="!isTaskChecked && canSkipTask" @click="skipCurrentTask" class="quiz-btn quiz-btn-skip">
                 {{ t('imageDescription.skip') }}
               </button>
             </footer>
@@ -98,43 +110,54 @@
         </main>
       </div>
       <ExitSessionModal
-          :show="!!activeModal"
-          @update:show="val => { if (!val) activeModal = null }"
+          :animation-data="HedgehogLeaveSession"
+          :show="activeModal === 'exit'"
+          @update:show="updateActiveModal"
           :text-class="modalData?.textClass"
           @cancel="modalData?.onCancel"
           @confirm="modalData?.onConfirm"
-      >
-        <div v-if="activeModal === 'finish'" class="stats-grid">
-          <div v-for="(val, key) in statsMap" :key="key" :class="['stat-item', 'stat-' + key]">
-            <span v-if="key === 'total'">{{ t('imageDescription.total') }}</span>
-            <span v-else-if="key === 'correct'">{{ t('imageDescription.perfect') }}</span>
-            <span v-else-if="key === 'partial'">{{ t('imageDescription.notPerfect') }}</span>
-            <span v-else-if="key === 'wrong'">{{ t('imageDescription.mistakes') }}</span>
-            <span v-else-if="key === 'accuracy'">{{ t('imageDescription.value') }}</span>
-            <b>{{ key === 'accuracy' ? val + '%' : val }}</b>
-          </div>
-        </div>
-      </ExitSessionModal>
+      />
+      <VQuestResultScreen
+          :finished="activeModal === 'finish'"
+          :has-mistakes="sessionStats.wrong > 0 || sessionStats.partial > 0"
+          :previously-cleared="previouslyCleared"
+          :anim-step="animStep"
+          :display-xp="displayXp"
+          :display-coins="displayCoins"
+          :confetti-particles="confettiParticles"
+          :has-next-quest="hasNextPart"
+          @next="goNextPart"
+          @themes="goThemes"
+          @retry-mistakes="retryMistakes"
+      />
     </div>
   </div>
 </template>
 
 <script setup>
-import {ref, computed, onMounted, onUnmounted, watch} from 'vue'
-import {useRouter} from 'vue-router'
+import {ref, reactive, computed, onMounted, onUnmounted, watch} from 'vue'
+import {useRouter, useRoute} from 'vue-router'
 import {storeToRefs} from 'pinia'
-import {useAudioTaskStore} from '../../store/audioTaskStore.js'
-import AudioButton from '../../src/components/AudioBtn.vue'
-import SoundBtn from '../../src/components/soundBtn.vue'
-import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
+import {useAudioTaskStore} from '~/store/audioTaskStore.js'
+import {userlangStore} from '~/store/learningStore.js'
+import AudioButton from '~/src/components/AudioBtn.vue'
+import SoundBtn from '~/src/components/soundBtn.vue'
+import ExitSessionModal from '~/src/components/V-stopSessionModal.vue'
+import VQuestResultScreen from '~/src/components/V-QuestResultScreen.vue'
 import {useSwipeBack} from '~/composables/useSwipeBack.js'
-import {showInterstitial} from '../../utils/admob.js'
-import VHeadsUp from "~/src/components/V-headsUp.vue";
-
+import {useQuestAnimations} from '~/composables/useQuestAnimations.js'
+import {playCorrect, playWrong, playLevelCompleted, unlockAudioByUserGesture} from '~/utils/soundManager.js'
+import {showInterstitial} from '~/utils/admob.js'
+import VHeadsUp from "~/src/components/V-headsUp.vue"
+import HedgehogLeaveSession from '~/assets/animation/hedgehog_leave_session.json'
 const {t} = useI18n()
 const router = useRouter()
+const route = useRoute()
 const store = useAudioTaskStore()
+const langStore = userlangStore()
+
 const {allTasks, currentLevel, currentTopicId, loading, userProgress} = storeToRefs(store)
+
 const showEmptyWarning = ref(false)
 const currentTopic = ref(null)
 const sessionTasks = ref([])
@@ -142,10 +165,40 @@ const currentIndex = ref(0)
 const userSelections = ref({})
 const taskResults = ref({})
 const activeModal = ref(null)
-const sessionStats = ref({correct: 0, partial: 0, wrong: 0, passed: false})
+const consecutiveCorrectCount = ref(0)
+const sessionStartTime = ref(0)
+const previouslyCleared = ref(false)
 
-const { $track } = useNuxtApp()
-let sessionStartTime = 0
+const sessionStats = ref({
+  correct: 0,
+  partial: 0,
+  wrong: 0,
+  passed: false
+})
+
+const animQuestStore = reactive({
+  hasMistakes: false,
+  quest: {
+    rewards: {
+      xp: 5,
+      points: 5
+    }
+  }
+})
+
+const shouldShowResultScreen = computed(() => activeModal.value === 'finish')
+
+const {
+  animStep,
+  displayCoins,
+  displayXp,
+  confettiParticles,
+  miniConfettiParticles,
+  spawnMiniConfetti,
+  resetAnimations
+} = useQuestAnimations(animQuestStore, previouslyCleared, shouldShowResultScreen)
+
+const {$track} = useNuxtApp()
 
 const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   handleExitTrigger()
@@ -153,14 +206,11 @@ const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   ignoreSelector: '.chat-flow, .quest-option-button, .quiz-btn, .quest-option'
 })
 
-
-
 const progressPercentage = computed(() => {
   if (!sessionTasks.value.length) return 0
   if (isLastTask.value && isTaskChecked.value) return 100
   return (currentIndex.value / sessionTasks.value.length) * 100
 })
-
 
 const currentTask = computed(() => sessionTasks.value[currentIndex.value])
 const isTaskChecked = computed(() => taskResults.value[currentTask.value?.id]?.checked)
@@ -168,204 +218,315 @@ const isLastTask = computed(() => currentIndex.value >= sessionTasks.value.lengt
 const totalTasksInTopic = computed(() => sessionTasks.value.length)
 const currentTaskNumber = computed(() => currentIndex.value + 1)
 const hasUserSelected = computed(() => (userSelections.value[currentTask.value?.id]?.length || 0) > 0)
-const canSkip = computed(() => userProgress.value[currentTopic.value?.id]?.[currentTask.value?.id] === 'success')
+const canSkipTask = computed(() => userProgress.value[currentTopic.value?.id]?.[currentTask.value?.id] === 'success')
+
+const hasNextPart = computed(() => {
+  if (!currentTopic.value?.tasks) return false
+  const currentPartNumber = Number(route.query.part) || 1
+  const chunkSize = 10
+  return currentTopic.value.tasks.length > currentPartNumber * chunkSize
+})
 
 const feedback = computed(() => {
-  const res = taskResults.value[currentTask.value?.id]
-  if (!res?.checked) return null
-  if (res.status === 'success') return {class: 'is-success', text: t('imageDescription.success')}
-  if (res.wrongCount > 0 || res.correctCount === 0) return {class: 'is-wrong', text: t('imageDescription.isWrong')}
+  const resultData = taskResults.value[currentTask.value?.id]
+  if (!resultData?.checked) return null
+  if (resultData.status === 'success') {
+    return {class: 'is-success', text: t('imageDescription.success')}
+  }
+  if (resultData.wrongCount > 0 || resultData.correctCount === 0) {
+    return {class: 'is-wrong', text: t('imageDescription.isWrong')}
+  }
   return {class: 'is-warning', text: t('imageDescription.isWarning')}
 })
 
-const statsMap = computed(() => {
-  const total = sessionTasks.value.length;
-  const acc = total > 0 ? Math.round((sessionStats.value.correct / total) * 100) : 0;
-  return {
-    total: total,
-    correct: sessionStats.value.correct,
-    partial: sessionStats.value.partial,
-    wrong: sessionStats.value.wrong,
-    accuracy: acc
-  }
-})
-
 const modalData = computed(() => {
-  if (activeModal.value === 'exit') return {
-    title: t('imageDescription.modalTitleWarning'),
-    text: t('imageDescription.modalTextWarning'),
-    confirmLabel: t('imageDescription.leave'),
-    cancelLabel: t('imageDescription.continue'),
-    onConfirm: () => {
-      const durationSec = Math.round((Date.now() - sessionStartTime) / 1000)
-      $track('audio_session_abandoned', {
-        topic_id: currentTopic.value?.id,
-        duration_seconds: durationSec,
-        completed_tasks: currentIndex.value,
-        total_tasks: sessionTasks.value.length
-      })
-      stopAllAudio();
-      router.push('/audio-tasks')
-
-    },
-    onCancel: () => activeModal.value = null
-  }
-  if (activeModal.value === 'finish') return {
-    title: sessionStats.value.passed ? t('imageDescription.goodWork') : t('imageDescription.needTraining'),
-    text: sessionStats.value.passed ? t('imageDescription.themeSuccess') : t('imageDescription.themeNotSuccess'),
-    textClass: sessionStats.value.passed ? 'success-text' : 'fail-text',
-    confirmLabel: t('trainerPage.repeat'),
-    cancelLabel: t('sessionNotSuccessModal.back'),
-    onConfirm: () => {
-      activeModal.value = null;
-      initializeSession()
-    },
-    onCancel: () => {
-      activeModal.value = null;
-      router.push('/audio-tasks')
+  if (activeModal.value === 'exit') {
+    return {
+      title: t('imageDescription.modalTitleWarning'),
+      text: t('imageDescription.modalTextWarning'),
+      confirmLabel: t('imageDescription.leave'),
+      cancelLabel: t('imageDescription.continue'),
+      onConfirm: () => {
+        const durationSeconds = Math.round((Date.now() - sessionStartTime.value) / 1000)
+        $track('audio_session_abandoned', {
+          topic_id: currentTopic.value?.id,
+          duration_seconds: durationSeconds,
+          completed_tasks: currentIndex.value,
+          total_tasks: sessionTasks.value.length
+        })
+        stopAllAudio()
+        router.push('/audio-tasks')
+      },
+      onCancel: () => {
+        activeModal.value = null
+      }
     }
   }
   return null
 })
 
+const updateActiveModal = (isModalActive) => {
+  if (!isModalActive) {
+    activeModal.value = null
+  }
+}
+
 const stopAllAudio = () => {
-  document.querySelectorAll('audio').forEach(a => {
-    a.pause();
-    a.currentTime = 0;
+  document.querySelectorAll('audio').forEach(audioElement => {
+    audioElement.pause()
+    audioElement.currentTime = 0
   })
   window.dispatchEvent(new Event('stop-all-audio'))
 }
 
 const handleExitTrigger = () => {
-  if (currentIndex.value > 0 || isTaskChecked.value) activeModal.value = 'exit'
-  else {
-    stopAllAudio();
+  if (currentIndex.value > 0 || isTaskChecked.value) {
+    activeModal.value = 'exit'
+  } else {
+    stopAllAudio()
     router.push('/audio-tasks')
   }
 }
 
-const handleOptionSelection = (idx) => {
-  const id = currentTask.value.id
-  if (!userSelections.value[id]) userSelections.value[id] = []
-  const current = userSelections.value[id]
-  userSelections.value[id] = current.includes(idx) ? current.filter(i => i !== idx) : [...current, idx]
+const handleOptionSelection = (optionIndex) => {
+  const taskId = currentTask.value.id
+  if (!userSelections.value[taskId]) {
+    userSelections.value[taskId] = []
+  }
+
+  const currentSelections = userSelections.value[taskId]
+  if (currentSelections.includes(optionIndex)) {
+    userSelections.value[taskId] = currentSelections.filter(index => index !== optionIndex)
+  } else {
+    userSelections.value[taskId] = [...currentSelections, optionIndex]
+  }
 }
 
-const isOptionSelected = (idx) => userSelections.value[currentTask.value?.id]?.includes(idx)
+const isOptionSelected = (optionIndex) => {
+  return userSelections.value[currentTask.value?.id]?.includes(optionIndex)
+}
 
-const getOptionClasses = (idx) => {
-  const isCorrect = currentTask.value.correctIndices.includes(idx)
-  const isSelected = isOptionSelected(idx)
-  let cls = 'quest-option-button'
-  if (isSelected) cls += ' is-selected'
-  if (isTaskChecked.value) {
-    if (isSelected && isCorrect) cls += ' is-correct'
-    else if (!isSelected && isCorrect) cls += ' is-missed'
-    else if (isSelected && !isCorrect) cls += ' is-wrong'
+const getOptionClasses = (optionIndex) => {
+  const isCorrectOption = currentTask.value.correctIndices.includes(optionIndex)
+  const isSelectedOption = isOptionSelected(optionIndex)
+
+  let baseClass = 'quest-option-button'
+
+  if (isSelectedOption) {
+    baseClass += ' is-selected'
   }
-  return cls
+
+  if (isTaskChecked.value) {
+    if (isSelectedOption && isCorrectOption) {
+      baseClass += ' is-correct'
+    } else if (!isSelectedOption && isCorrectOption) {
+      baseClass += ' is-missed'
+    } else if (isSelectedOption && !isCorrectOption) {
+      baseClass += ' is-wrong'
+    }
+  }
+
+  return baseClass
 }
 
 const checkResult = () => {
+  unlockAudioByUserGesture()
+
   if (!hasUserSelected.value) {
     showEmptyWarning.value = true
-    setTimeout(() => showEmptyWarning.value = false, 2000)
+    setTimeout(() => {
+      showEmptyWarning.value = false
+    }, 2000)
     return
   }
-  const task = currentTask.value
-  const sel = userSelections.value[task.id] || []
-  const corr = task.correctIndices
-  const cCount = sel.filter(i => corr.includes(i)).length
-  const wCount = sel.filter(i => !corr.includes(i)).length
-  const isSuccess = (cCount === corr.length && wCount === 0)
-  taskResults.value[task.id] = {
+
+  const activeTask = currentTask.value
+  const selectedOptions = userSelections.value[activeTask.id] || []
+  const correctOptions = activeTask.correctIndices
+
+  const correctSelectionsCount = selectedOptions.filter(index => correctOptions.includes(index)).length
+  const wrongSelectionsCount = selectedOptions.filter(index => !correctOptions.includes(index)).length
+  const isFullyCorrect = (correctSelectionsCount === correctOptions.length && wrongSelectionsCount === 0)
+
+  taskResults.value[activeTask.id] = {
     checked: true,
-    status: (cCount === corr.length && wCount === 0) ? 'success' : 'wrong',
-    wrongCount: wCount,
-    correctCount: cCount,
-    missedCount: corr.length - cCount
+    status: isFullyCorrect ? 'success' : 'wrong',
+    wrongCount: wrongSelectionsCount,
+    correctCount: correctSelectionsCount,
+    missedCount: correctOptions.length - correctSelectionsCount
+  }
+
+  if (isFullyCorrect) {
+    playCorrect()
+    consecutiveCorrectCount.value++
+    if (consecutiveCorrectCount.value === 5) {
+      spawnMiniConfetti()
+      consecutiveCorrectCount.value = 0
+    }
+  } else {
+    playWrong()
+    consecutiveCorrectCount.value = 0
   }
 
   $track('audio_task_answered', {
     topic_id: currentTopic.value?.id,
-    task_id: task.id,
-    is_correct: isSuccess,
+    task_id: activeTask.id,
+    is_correct: isFullyCorrect,
     task_index: currentIndex.value
   })
 }
 
 const goToNextTask = () => {
-  stopAllAudio();
+  stopAllAudio()
   currentIndex.value++
 }
-const skipTask = () => isLastTask.value ? finishAndSave() : goToNextTask()
+
+const skipCurrentTask = () => {
+  if (isLastTask.value) {
+    finishAndSave()
+  } else {
+    goToNextTask()
+  }
+}
 
 const finishAndSave = async () => {
   stopAllAudio()
-  let c = 0, p = 0, w = 0
-  const results = {}
-  sessionTasks.value.forEach(t => {
-    const r = taskResults.value[t.id]
-    if (r?.status === 'success') {
-      c++;
-      results[t.id] = 'success'
-    } else if (r?.wrongCount > 0 || r?.correctCount === 0) {
-      w++;
-      results[t.id] = 'wrong'
-    } else if (r?.missedCount > 0) {
-      p++;
-      results[t.id] = 'partial'
+
+  let correctAnswersCount = 0
+  let partialAnswersCount = 0
+  let wrongAnswersCount = 0
+  const finalTaskResults = {}
+
+  sessionTasks.value.forEach(task => {
+    const resultData = taskResults.value[task.id]
+
+    if (resultData?.status === 'success') {
+      correctAnswersCount++
+      finalTaskResults[task.id] = 'success'
+    } else if (resultData?.wrongCount > 0 || resultData?.correctCount === 0) {
+      wrongAnswersCount++
+      finalTaskResults[task.id] = 'wrong'
+    } else if (resultData?.missedCount > 0) {
+      partialAnswersCount++
+      finalTaskResults[task.id] = 'partial'
     }
   })
-  sessionStats.value = {correct: c, partial: p, wrong: w, passed: c >= Math.ceil(sessionTasks.value.length * 0.8)}
-  await store.saveTopicProgress(currentTopic.value.id, results)
-  const durationSec = Math.round((Date.now() - sessionStartTime) / 1000)
+
+  const requiredPassScore = Math.ceil(sessionTasks.value.length * 0.8)
+  const isSessionPassed = correctAnswersCount >= requiredPassScore
+
+  sessionStats.value = {
+    correct: correctAnswersCount,
+    partial: partialAnswersCount,
+    wrong: wrongAnswersCount,
+    passed: isSessionPassed
+  }
+
+  animQuestStore.hasMistakes = wrongAnswersCount > 0 || partialAnswersCount > 0
+
+  await store.saveTopicProgress(currentTopic.value.id, finalTaskResults)
+
+  if (isSessionPassed) {
+    langStore.exp += 5
+    langStore.handleLeveling()
+    await langStore.addPoints(5)
+    playLevelCompleted()
+  }
+
+  const durationSeconds = Math.round((Date.now() - sessionStartTime.value) / 1000)
+
   $track('audio_session_finished', {
     topic_id: currentTopic.value?.id,
-    passed: sessionStats.value.passed,
-    correct_count: c,
-    duration_seconds: durationSec
+    passed: isSessionPassed,
+    correct_count: correctAnswersCount,
+    duration_seconds: durationSeconds
   })
+
   activeModal.value = 'finish'
 }
 
+const goNextPart = () => {
+  activeModal.value = null
+  if (hasNextPart.value) {
+    const nextPartNumber = (Number(route.query.part) || 1) + 1
+    router.replace({path: '/audio-tasks/session', query: {part: nextPartNumber}}).then(() => {
+      initializeSession()
+    })
+  } else {
+    goThemes()
+  }
+}
+
+const goThemes = () => {
+  activeModal.value = null
+  router.push('/audio-tasks')
+}
+
+const retryMistakes = () => {
+  activeModal.value = null
+  initializeSession()
+}
+
 const initializeSession = () => {
-  const topics = allTasks.value[currentLevel.value] || []
-  currentTopic.value = topics.find(t => t.id === currentTopicId.value)
-  if (!currentTopic.value) return router.push('/audio-tasks')
+  const availableTopics = allTasks.value[currentLevel.value] || []
+  const foundTopic = availableTopics.find(topic => topic.id === currentTopicId.value)
+
+  if (!foundTopic) {
+    return router.push('/audio-tasks')
+  }
+  currentTopic.value = foundTopic
+
   currentIndex.value = 0
   userSelections.value = {}
   taskResults.value = {}
+  consecutiveCorrectCount.value = 0
+  resetAnimations()
 
-  sessionStartTime = Date.now()
+  const currentPartNumber = Number(route.query.part) || 1
+  const chunkSize = 10
+  const startIndex = (currentPartNumber - 1) * chunkSize
+
+  const allTopicTasks = currentTopic.value.tasks || []
+  const currentPartTasks = allTopicTasks.slice(startIndex, startIndex + chunkSize)
+
+  const userTopicProgress = userProgress.value[currentTopic.value.id] || {}
+  const hasUncompletedTasks = currentPartTasks.some(task => userTopicProgress[task.id] !== 'success')
+
+  let tasksToPlay = currentPartTasks
+  if (hasUncompletedTasks) {
+    tasksToPlay = currentPartTasks.filter(task => userTopicProgress[task.id] !== 'success')
+  }
+
+  sessionTasks.value = [...tasksToPlay].sort(() => Math.random() - 0.5)
+
+  sessionStartTime.value = Date.now()
+
   $track('audio_session_started', {
     topic_id: currentTopic.value.id,
     level: currentLevel.value,
+    part: currentPartNumber,
     total_tasks: sessionTasks.value.length
   })
-
-  const prog = userProgress.value[currentTopic.value.id] || {}
-  const tasks = currentTopic.value.tasks
-  const toPlay = tasks.some(t => prog[t.id] !== 'success') ? tasks.filter(t => prog[t.id] !== 'success') : [...tasks]
-  sessionTasks.value = toPlay.sort(() => Math.random() - 0.5)
 }
 
 onMounted(async () => {
-  if (!currentTopicId.value) return router.push('/audio-tasks')
-  await store.fetchTasks();
-  await store.loadUserProgress();
+  if (!currentTopicId.value) {
+    return router.push('/audio-tasks')
+  }
+
+  await store.fetchTasks()
+  await store.loadUserProgress()
 
   showInterstitial(() => {
-    initializeSession();
-  });
+    initializeSession()
+  })
 })
+
 onUnmounted(stopAllAudio)
 watch(currentIndex, stopAllAudio)
-
 </script>
 
 <style scoped>
-
 .quiz-app {
   height: 100%;
   width: 100%;
@@ -527,14 +688,8 @@ watch(currentIndex, stopAllAudio)
   width: 80px !important;
   height: 64px !important;
   border-radius: 35% !important;
-  border:none;
+  border: none;
   box-shadow: 0 6px 0 #2297b0;
-}
-
-.quest-card-options,
-.quest-feedback,
-.quest-card-footer {
-  flex-shrink: 0;
 }
 
 .quest-card-options {
@@ -735,43 +890,6 @@ watch(currentIndex, stopAllAudio)
   width: 100%;
 }
 
-.success-text {
-  color: #2ed573;
-}
-
-.fail-text {
-  color: #ff4757;
-}
-
-.stats-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 24px;
-  background: #f1f2f6;
-  padding: 16px;
-  border-radius: 16px;
-  border: 3px solid #1e272e;
-}
-
-.stat-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 900;
-  font-size: 14px;
-  border-bottom: 2px dashed #dcdde1;
-  padding-bottom: 4px;
-}
-
-.stat-item:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-  margin-top: 4px;
-  font-size: 16px;
-  color: #ff6b81;
-}
-
 .quiz-expand-enter-active {
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   opacity: 1;
@@ -807,4 +925,31 @@ watch(currentIndex, stopAllAudio)
   transform: translateY(-100%)
 }
 
+.mini-salute-container {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 99999;
+}
+
+.mini-confetti-piece {
+  position: absolute;
+  top: -30px;
+  opacity: 0;
+  border-radius: 3px;
+  animation: miniConfettiFall linear forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes miniConfettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(720deg) scale(0.6);
+    opacity: 0;
+  }
+}
 </style>

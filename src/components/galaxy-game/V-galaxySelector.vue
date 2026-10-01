@@ -60,7 +60,13 @@
           <button class="close-btn" @click="activeGalaxy = null">✖</button>
           <div class="visual-stage">
             <div class="astro-side">
-              <img src="../../../assets/images/galaxy-images/AstronauntWithMap.svg" alt="astronaut" class="astro-unit">
+              <DotLottieVue
+                  :loop="true"
+                  :autoplay="true"
+                  :data="JSON.stringify(AstronautGreen)"
+                  class="astronaut__green"
+              />
+<!--              <img src="../../../assets/images/galaxy-images/AstronauntWithMap.svg" alt="astronaut" class="astro-unit">-->
             </div>
             <div class="projection-side">
               <div class="hologram-platform"></div>
@@ -86,7 +92,12 @@
           <button class="close-btn" @click="showPlusModal = false">✖</button>
           <div class="visual-stage">
             <div class="astro-side">
-              <img :src="Astronaut" alt="astronaut" class="astro-unit">
+              <DotLottieVue
+                  :loop="true"
+                  :autoplay="true"
+                  :data="JSON.stringify(AstronautRed)"
+                  class="astronaut__green"
+              />
             </div>
             <div class="projection-side">
               <div class="hologram-platform plus-glow"></div>
@@ -113,10 +124,11 @@
 <script setup>
 import {ref, onMounted, onUnmounted, computed} from 'vue'
 import {useRouter} from 'vue-router'
-import {useGalaxyStore} from '../../../store/galaxyStore.js'
-import {userAuthStore} from '../../../store/authStore.js'
-
-import Astronaut from '../../../assets/images/galaxy-images/AstronauntWithMap.svg'
+import {useGalaxyStore} from '~/store/galaxyStore.js'
+import {userAuthStore} from '~/store/authStore.js'
+import AstronautGreen from '~/assets/animation/hedgehog_tablet_green.json'
+import AstronautRed from '~/assets/animation/hedgehog_tablet_broken.json'
+import Astronaut from '~/assets/images/galaxy-images/AstronauntWithMap.svg'
 import ConstellationOne from 'assets/images/constellation/constellation-1.svg'
 import ConstellationTwo from 'assets/images/constellation/constellation-2.svg'
 import ConstellationThree from 'assets/images/constellation/constellation-3.svg'
@@ -126,6 +138,8 @@ import ConstellationSix from 'assets/images/constellation/constellation-6.svg'
 import ConstellationSeven from 'assets/images/constellation/constellation-7.svg'
 import ConstellationEight from 'assets/images/constellation/constellation-8.svg'
 import VTransition from "~/src/components/V-transition.vue";
+import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
+
 
 const emit = defineEmits(['back', 'select-galaxy'])
 const store = useGalaxyStore()
@@ -172,7 +186,7 @@ const updateTimer = () => {
   store.checkBatteryRegen()
 
   const now = Date.now()
-  const REGEN_MS = 60 * 60 * 1000
+  const REGEN_MS = 10 * 60 * 1000
   const nextRegen = store.currentBatteryRegen + REGEN_MS
   const diff = nextRegen - now
 
@@ -244,6 +258,14 @@ const goToPay = () => {
   padding-top: env(safe-area-inset-top, 10px);
   padding-bottom: env(safe-area-inset-bottom, 20px);
   overflow: hidden;
+}
+
+.astro-side {
+  width: 160px;
+}
+
+.astronaut__green {
+  transform: scale(3.3);
 }
 
 .menu-bg-layer {
@@ -544,8 +566,8 @@ const goToPay = () => {
   position: absolute;
   top: 15px;
   right: 15px;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   background: #ff3e3e;
   border: none;
   border-radius: 50%;
@@ -557,7 +579,7 @@ const goToPay = () => {
 
 .visual-stage {
   display: flex;
-  padding: 30px 20px 0;
+  padding: 60px 20px 0;
   align-items: flex-end;
   justify-content: space-around;
   background: linear-gradient(to bottom, rgba(83, 75, 255, 0.1), transparent);
@@ -608,6 +630,7 @@ const goToPay = () => {
 .info-footer {
   padding: 20px 30px 30px;
   text-align: center;
+  margin-top: 36px;
 }
 
 .location-tag {

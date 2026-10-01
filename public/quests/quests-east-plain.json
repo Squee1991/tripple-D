@@ -1708,7 +1708,6 @@
       }
     ]
   },
-
   {
     "questId": "six",
     "aliases": ["menschen-a1-beruf"],
@@ -2252,9 +2251,8 @@
         "question": "eastPlainSeventhQuests.questFive",
         "options": [
           "Es ist Zehn Uhr",
-          "Heute ist Mittwoch ",
-          "Guten Abend",
-          "Tee Bitte"
+          "Heute ist Mittwoch",
+          "Guten Abend"
         ],
         "answer": "Es ist Zehn Uhr"
       },
@@ -2274,18 +2272,8 @@
         "id": 6,
         "type": "reorder",
         "question": "eastPlainSeventhQuests.questSeven",
-        "words": [
-          "Uhr",
-          "Es",
-          "acht",
-          "ist"
-        ],
-        "correctOrder": [
-          "Es",
-          "ist",
-          "acht",
-          "Uhr"
-        ]
+        "words": ["Uhr", "Es", "acht", "ist"],
+        "correctOrder": ["Es", "ist", "acht", "Uhr"]
       },
       {
         "id": 7,
@@ -2303,11 +2291,11 @@
         "id": 8,
         "type": "speechToText",
         "question": "eastPlainSeventhQuests.questNine",
-        "text": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser kostet zwei Euro",
-        "answer": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser kostet zwei Euro",
+        "text": "Wie viel kostet eine Flasche Wasser?",
+        "answer": "Wie viel kostet eine Flasche Wasser?",
         "accept": [
-          "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser kostet zwei Euro",
-          "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser kostet 2 Euro"
+          "Wie viel kostet eine Flasche Wasser?",
+          "Wie viel kostet eine Flasche Wasser?"
         ]
       },
       {
@@ -2317,8 +2305,7 @@
         "options": [
           "drei Mai",
           "der drei Mai",
-          "der dritte Mai",
-          "dritter Mai"
+          "der dritte Mai"
         ],
         "answer": "der dritte Mai"
       },
@@ -2340,7 +2327,6 @@
         "options": [
           "der zehn Oktober",
           "zehnter Oktober",
-          "der zehnte Oktober",
           "zehnte Oktober"
         ],
         "answer": "der zehnte Oktober"
@@ -2349,13 +2335,7 @@
         "id": 12,
         "type": "reorder",
         "question": "eastPlainSeventhQuests.questThirteen",
-        "words": [
-          "heute",
-          "Der",
-          "ist",
-          "März",
-          "12."
-        ],
+        "words": ["heute", "Der", "ist", "März", "12."],
         "correctOrder": [
           "Der",
           "12.",
@@ -2643,30 +2623,15 @@
         "id": 5,
         "type": "reorder",
         "question": "eastPlainEighthQuests.questFive",
-        "words": [
-          "mein",
-          "ist",
-          "Er",
-          "Onkel"
-        ],
-        "correctOrder": [
-          "Er",
-          "ist",
-          "mein",
-          "Onkel"
-        ]
+        "words": ["mein", "ist", "Er", "Onkel"],
+        "correctOrder": ["Er", "ist", "mein", "Onkel"]
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "eastPlainEighthQuests.questSix",
         "words": [
-          "heißt",
-          "Meine",
-          "Mutter",
-          "Anna",
-          "Schwester",
-          "Oma"
+          "heißt", "Meine", "Mutter", "Anna"
         ],
         "correctOrder": [
           "Meine",
@@ -2683,8 +2648,7 @@
         "options": [
           "Tom",
           "Tim",
-          "Ben",
-          "Berlin"
+          "Ben"
         ],
         "answer": "Tim"
       },
@@ -2718,11 +2682,9 @@
         "type": "reorder",
         "question": "eastPlainEighthQuests.questTwelve",
         "words": [
-          "Schwester",
           "ist",
           "meine",
           "Sie",
-          "Opa",
           "Mutter"
         ],
         "correctOrder": [
@@ -3006,9 +2968,7 @@
           "Morgens",
           "ich",
           "trinke",
-          "Wasser",
-          "Heute",
-          "Tee"
+          "Wasser"
         ],
         "correctOrder": [
           "Morgens",
@@ -3114,7 +3074,6 @@
         "question": "eastPlainNinthQuests.questThirteen",
         "words": [
           "Am",
-          "liest",
           "Abend",
           "lese",
           "gern",

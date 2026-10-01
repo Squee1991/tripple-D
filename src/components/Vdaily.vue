@@ -1,16 +1,14 @@
 <template>
   <div class="daily">
-    <section class="qd">
+    <section class="qd" v-if="ready && todayQuests.length">
       <header class="qd__header">
-        <h3 class="qd__title">{{ t('dailyPanel.title') }}</h3>
+        <h3 class="qd__title">{{ t('dailyPanel.title')}}</h3>
         <div class="qd__right">
           <img class="timer__icon" src="../../assets/images/dailyIcons/timer.svg" alt="Timer_daily"/>
-          <span class="qd__timer">{{ msLeft ? prettyMs(msLeft) : '--:--:--' }}</span>
+          <span class="qd__timer">{{ prettyMs(msLeft) }}</span>
         </div>
       </header>
-
-      <!-- Список квестов просто отрисовывается, когда они есть -->
-      <ul class="qd__list" v-if="todayQuests.length">
+      <ul class="qd__list">
         <li class="qd__item" v-for="(quest, index) in todayQuests" :key="index">
           <div class="qd__body">
             <h4 class="qd__name">{{ t(quest.title) }}</h4>
@@ -25,28 +23,40 @@
         </li>
       </ul>
     </section>
+    <section v-else class="qd">
+      <div class="qd__header">
+        <h3 class="qd__title">{{ t('dailyPanel.title')}}</h3>
+        <div class="qd__right">
+          <img class="timer__icon" src="../../assets/images/dailyIcons/timer.svg" alt="Timer_daily"/>
+          <span class="qd__timer">--:--:--</span>
+        </div>
+      </div>
+      <p class="loading">{{ t('dailyPanel.loading')}}</p>
+    </section>
   </div>
 </template>
 
 <script setup>
-import {onMounted, onUnmounted} from 'vue'
-import {storeToRefs} from 'pinia'
-import {useI18n} from 'vue-i18n'
-import {dailyStore} from '../../store/dailyStore.js'
-import NotCompleted from '../../assets/images/dailyIcons/dailyNotCompleted.svg'
-import Completed from '../../assets/images/dailyIcons/dailyCompleted.svg'
+import {ref, onMounted, onUnmounted} from 'vue'
+import {storeToRefs } from 'pinia'
+import {dailyStore} from '~/store/dailyStore.js'
+import NotCompleted from '~/assets/images/dailyIcons/dailyNotCompleted.svg'
+import Completed from '~/assets/images/dailyIcons/dailyCompleted.svg'
 
-const {t} = useI18n()
+const { t } = useI18n()
 const store = dailyStore()
 const {todayQuests, msLeft} = storeToRefs(store)
+const router = useRouter()
+const ready = ref(false)
 
-onMounted(() => {
+onMounted(async () => {
   store.start()
   store.startAutoSync()
+  ready.value = true
 })
 
 onUnmounted(() => {
-  store.stopAutoSync()
+  store.stopAutoSync();
   store.stop()
 })
 
@@ -63,6 +73,22 @@ function prettyMs(x) {
   const pad = n => String(n).padStart(2, '0')
   return `${pad(h)}:${pad(m)}:${pad(s)}`
 }
+
+// function openQuest(quest) {
+//   if (quest?.url) {
+//     router.push(quest.url)
+//   }
+// }
+
+onMounted(() => {
+  store.init()
+})
+
+onUnmounted(() => {
+  store.stopAutoSync()
+  store.stop()
+})
+
 </script>
 
 <style scoped>
@@ -89,7 +115,6 @@ function prettyMs(x) {
   color: var(--titleColor);
   box-shadow: var(--boxShadowMobile);
   margin-bottom: 10px;
-  min-height: 220px; /* ФИКСИРУЕМ МИНИМАЛЬНУЮ ВЫСОТУ, чтобы блок никогда не сжимался! */
 }
 
 .qd__header {
@@ -209,5 +234,10 @@ function prettyMs(x) {
   background: transparent;
   border: 0;
   cursor: pointer;
+}
+
+.loading {
+  color: #9aa6b2;
+  padding: 12px 0;
 }
 </style>

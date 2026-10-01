@@ -1,5 +1,5 @@
 <template>
-  <div v-if="store.isOverlayVisible" class="overlay">
+  <div v-if="isVisible" class="overlay">
     <div class="effects-container">
       <div class="rays"></div>
       <div class="sparkles">
@@ -28,16 +28,48 @@
           <img class="icon-big" :src="store.currentReward.icon" alt="">
           <div class="rank-name">{{ t('rankModal.rankedLabel')}} {{ store.currentReward.levelIndex + 1 }}</div>
         </div>
-        <button @click="store.isOverlayVisible = false" class="btn-claim">{{ t('rankModal.accept')}}</button>
+        <button @click="closeOverlay" class="btn-claim">{{ t('rankModal.accept')}}</button>
       </div>
     </transition>
   </div>
 </template>
 
 <script setup>
-import { useRankUserStore } from '../../store/rankStore.js'
+import { ref, computed, watch } from 'vue'
+import { useRoute } from 'vue-router'
+import { useRankUserStore } from '~/store/rankStore.js'
+
 const { t } = useI18n()
 const store = useRankUserStore()
+const route = useRoute()
+
+const isBlocked = computed(() => {
+  const gameRoutes = [ 'marathon-session', 'guess-word', '/location', '/thematic-learning']
+  return gameRoutes.some(keyword => route.path.includes(keyword))
+})
+
+const isVisible = ref(false)
+
+watch([() => store.isOverlayVisible, isBlocked], ([wantsToShow, blocked]) => {
+  if (wantsToShow) {
+    if (!blocked) {
+      setTimeout(() => {
+        isVisible.value = true
+      }, 400)
+    } else {
+      isVisible.value = false
+    }
+  } else {
+    isVisible.value = false
+  }
+}, { immediate: true })
+
+const closeOverlay = () => {
+  isVisible.value = false
+  store.isOverlayVisible = false
+  localStorage.removeItem('pendingRankReward')
+}
+
 const totalParticlesCount = 200
 const dotStyle = (particleIndex) => {
   const randomAngle = Math.random() * 360
@@ -48,6 +80,7 @@ const dotStyle = (particleIndex) => {
     animationDuration: `${2 + Math.random() * 2}s`
   }
 }
+
 </script>
 
 <style scoped>
@@ -170,9 +203,10 @@ const dotStyle = (particleIndex) => {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-size: 50px;
+  font-size: 42px;
   color: #ffd700;
   height: 30px;
+  margin-bottom: 10px;
 }
 
 .star-already-there {
@@ -221,7 +255,7 @@ const dotStyle = (particleIndex) => {
   margin-top: 30px;
   background: linear-gradient(#ffd700, #e6a800);
   border: none;
-  padding: 18px 60px;
+  padding: 14px 60px;
   border-radius: 50px;
   font-weight: 900;
   font-size: 24px;

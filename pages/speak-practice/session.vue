@@ -186,6 +186,7 @@
       </div>
     </footer>
     <VStopSessionModal
+        :animationData="hedgehogLeaveSession"
         v-model:show="showExitModal"
         @confirm="confirmExit"
     />
@@ -202,7 +203,7 @@
 <script setup>
 import {ref, computed, onMounted, onUnmounted, nextTick} from 'vue';
 import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router';
-import {useSpeakStore} from '../../store/speakStore.js';
+import {useSpeakStore} from '~/store/speakStore.js';
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
 import Modal from '../../src/components/modal.vue';
 import SpeakingIcon from "assets/images/speakingIcon.svg";
@@ -211,9 +212,9 @@ import Words from '../../assets/images/word.svg'
 import VBanner from "~/src/components/V-banner.vue";
 import {useSwipeBack} from '~/composables/useSwipeBack.js';
 import VTransition from "~/src/components/V-transition.vue";
-import {showInterstitial} from '../../utils/admob.js';
+import {showInterstitial} from '~/utils/admob.js';
 import VHeadsUp from "~/src/components/V-headsUp.vue";
-
+import hedgehogLeaveSession from 'assets/animation/hedgehog_leave_session.json'
 const {locale, t} = useI18n();
 const route = useRoute();
 const router = useRouter();
