@@ -112,7 +112,8 @@ defineEmits(['next', 'themes', 'retryMistakes'])
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 56px 10px 10px 10px;
+  justify-content: center;
+  padding: 10px 10px 10px 10px;
   color: white;
   text-align: center;
   position: relative;
@@ -203,7 +204,7 @@ defineEmits(['next', 'themes', 'retryMistakes'])
 }
 
 .success-hedgehog {
-  width: 160px;
+  width: 140px;
   filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
 }
 
