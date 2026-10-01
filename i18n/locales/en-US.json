@@ -11091,5 +11091,30 @@
   },
   "part": {
     "text": "Part"
+  },
+  "halloweenAchievements": {
+    "sectionTitle": "Pumpkin Festival",
+    "firstHalloweenQuestText": "Candy or Pumpkin",
+    "firstHalloweenQuestDescription": "Successfully complete any quest in the Pumpkin Festival event.",
+    "halloweenWordsText": "Sinister Tales",
+    "halloweenWordsDescription": "Learn all thematic words related to the Pumpkin Festival event.",
+    "witchBroomText": "Lightning? No, Faster!",
+    "witchBroomDescription": "Accelerate to the limit - purchase a top-class flying broom in the holiday shop.",
+    "pumpkinText": "Pumpkin on Your Head?",
+    "pumpkinDescription": "Purchase an eerie pumpkin in the holiday shop.",
+    "punchText": "Pumpkin Punch",
+    "punchDescription": "Purchase witch's punch in the holiday shop.",
+    "witchHatText": "Sorting Hat?",
+    "witchHatDescription": "Purchase a Witch's Hat in the holiday shop.",
+    "spellBookText": "Rider's Grimoire",
+    "spellBookDescription": "Purchase an ancient spellbook in the holiday shop.",
+    "halloweenThemeText": "Masquerade",
+    "halloweenThemeDescription": "Purchase the ghostly app theme in the event shop.",
+    "halloweenAllQuestsText": "Let the Ball Begin!",
+    "halloweenAllQuestsDescription": "Leave the evil spirits no chance - complete all holiday quests.",
+    "halloweenReputationText": "Festival Idol",
+    "halloweenReputationDescription": "Earn the maximum reputation level for completing Hallow's End tasks.",
+    "halloweenAllAchievementsText": "May Hallow's End Be With You!",
+    "halloweenAllAchievementsDescription": "Obtain all Hallow's End achievements and earn the festive title."
   }
 }

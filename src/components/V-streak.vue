@@ -76,7 +76,6 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue';
 import { getStreakTier, allNames, BUTTON_HINTS, CALENDAR_HINTS } from '~/utils/streakTiers.js';
-import StreakIcon from '~/assets/images/SteakEagle.svg';
 
 const props = defineProps({
   modelValue: {
@@ -572,21 +571,21 @@ onMounted(() => {
 
 .flow-btn {
   width: 100%;
+  max-width: 300px;
   padding: 12px;
   border: none;
   border-radius: 50px;
-  background: #4e99e9;
+  background: #FF5722;
   color: #fff;
   font-size: 18px;
   font-weight: 800;
   cursor: pointer;
-  box-shadow: 0 6px 0 #3b7fc6;
+  box-shadow: 0 6px 0 #e44b1b;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .flow-btn:active {
-  transform: translateY(3px);
-  box-shadow: 0 3px 0 #1f5dc6;
+  transform: translateY(2px);
 }
 
 .pop-btn {

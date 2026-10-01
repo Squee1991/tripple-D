@@ -170,7 +170,7 @@ const displayEvent = computed(() => {
     };
   } else {
     const daysUntil = Math.ceil((nextEvent.startDate - now) / msPerDay);
-    if (daysUntil <= 7) {
+    if (daysUntil <= 10) {
       return {
         ...nextEvent,
         isActive: false,

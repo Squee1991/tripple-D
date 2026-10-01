@@ -11063,5 +11063,30 @@
   },
   "part": {
     "text": "Qism"
+  },
+  "halloweenAchievements": {
+    "sectionTitle": "Qovoq bayrami",
+    "firstHalloweenQuestText": "Shirinlikmi yoki qovoq",
+    "firstHalloweenQuestDescription": "Qovoq bayrami tadbiridagi istalgan topshiriqni muvaffaqiyatli bajaring.",
+    "halloweenWordsText": "Mash'um ertaklar",
+    "halloweenWordsDescription": "Qovoq bayrami tadbiri bilan bog'liq barcha mavzuviy so'zlarni o'rganing.",
+    "witchBroomText": "Yashin? Yo'q, tezroq!",
+    "witchBroomDescription": "Tezlikni eng yuqori darajaga ko'taring - bayram do'konidan oliy toifadagi uchar supurgini xarid qiling.",
+    "pumpkinText": "Boshda qovoqmi?",
+    "pumpkinDescription": "Bayram rastasidan vahimali qovoqni sotib oling.",
+    "punchText": "Qovoqli punch",
+    "punchDescription": "Bayram do'konidan yalmog'iz punchini sotib oling.",
+    "witchHatText": "Fakultet tanlovimi?",
+    "witchHatDescription": "Bayram do'konidan Jodugar shlyapasini sotib oling.",
+    "spellBookText": "Chavandoz grimuari",
+    "spellBookDescription": "Bayram do'konidan qadimiy afsunlar kitobini sotib oling.",
+    "halloweenThemeText": "Niqobbozlik",
+    "halloweenThemeDescription": "Tadbir do'konidan ilovaning sharpali mavzusini xarid qiling.",
+    "halloweenAllQuestsText": "Bazm boshlansin!",
+    "halloweenAllQuestsDescription": "Yovuz ruhlarga biron imkoniyat qoldirmang - barcha bayram topshiriqlarini yakunlang.",
+    "halloweenReputationText": "Bayram kumiri",
+    "halloweenReputationDescription": "Qovoq bayrami topshiriqlarini bajarganlik uchun maksimal obro' darajasini to'plang.",
+    "halloweenAllAchievementsText": "Qovoq bayrami ruhi sen bilan bo'lsin!",
+    "halloweenAllAchievementsDescription": "Qovoq bayramining barcha yutuqlariga erishing va bayramona unvonga ega bo'ling."
   }
 }

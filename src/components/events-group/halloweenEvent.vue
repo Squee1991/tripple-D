@@ -452,7 +452,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div v-if="!isEventOpen" class="season-page">
+  <div v-if="isEventOpen" class="season-page">
     <div class="season__bg"></div>
     <div class="svg-snow" aria-hidden="true"></div>
     <div class="season-container">

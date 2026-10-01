@@ -11066,5 +11066,30 @@
   },
   "part": {
     "text": "Parte"
+  },
+  "halloweenAchievements": {
+    "sectionTitle": "Festival de la Calabaza",
+    "firstHalloweenQuestText": "Dulce o calabaza",
+    "firstHalloweenQuestDescription": "Completa con éxito cualquier misión del evento Festival de la Calabaza.",
+    "halloweenWordsText": "Relatos siniestros",
+    "halloweenWordsDescription": "Aprende todas las palabras temáticas relacionadas con el evento Festival de la Calabaza.",
+    "witchBroomText": "¿Un rayo? ¡No, más rápido!",
+    "witchBroomDescription": "Acelera al máximo: adquiere una escoba voladora de primera clase en la tienda festiva.",
+    "pumpkinText": "¿Calabaza en la cabeza?",
+    "pumpkinDescription": "Compra una calabaza siniestra en la tienda del festival.",
+    "punchText": "Ponche de calabaza",
+    "punchDescription": "Compra ponche de bruja en la tienda festiva.",
+    "witchHatText": "¿Elección de casa?",
+    "witchHatDescription": "Compra un sombrero de bruja en la tienda festiva.",
+    "spellBookText": "Grimorio del jinete",
+    "spellBookDescription": "Compra un antiguo libro de hechizos en la tienda festiva.",
+    "halloweenThemeText": "Mascarada",
+    "halloweenThemeDescription": "Consigue el tema fantasmal para la aplicación en la tienda del evento.",
+    "halloweenAllQuestsText": "¡Que empiece el baile!",
+    "halloweenAllQuestsDescription": "No dejes opciones a los malos espíritus: completa todas las misiones festivas.",
+    "halloweenReputationText": "Ídolo de la fiesta",
+    "halloweenReputationDescription": "Alcanza el nivel máximo de reputación cumpliendo encargos de Halloween.",
+    "halloweenAllAchievementsText": "¡Que Halloween te acompañe!",
+    "halloweenAllAchievementsDescription": "Consigue todos los logros de Halloween y gana el título festivo."
   }
 }

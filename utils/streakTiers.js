@@ -2,9 +2,6 @@ export const STREAK_TIERS = [
     {
         tier: 1,
         minDays: 1,
-        name: 'Импульс',
-        title: 'Пламя зажглось!',
-        subtitle: 'Первая искра положена. Не дай ей погаснуть завтра!',
         colors: {
             fireOuter: ['#ff1100', '#ff7b00', '#ffe600', '#ffffff'],
             fireInner: ['#ff6a00', '#ffffaa', '#ffffff'],
@@ -17,9 +14,6 @@ export const STREAK_TIERS = [
     {
         tier: 2,
         minDays: 7,
-        name: 'Аметистовое пламя',
-        title: 'Эволюция: Недельный разрыв!',
-        subtitle: 'Температура поднялась! Твой огонь стал фиолетово-неоновым.',
         colors: {
             fireOuter: ['#4a00e0', '#8e2de2', '#f093fb', '#ffffff'],
             fireInner: ['#b5179e', '#f72585', '#ffffff'],
@@ -32,9 +26,6 @@ export const STREAK_TIERS = [
     {
         tier: 3,
         minDays: 30,
-        name: 'Лазурная плазма',
-        title: 'Эволюция: Месяц дисциплины!',
-        subtitle: 'Голубая плазма — признак сверхвысоких температур и чистого фокуса.',
         colors: {
             fireOuter: ['#0052d4', '#4364f7', '#6fb1fc', '#ffffff'],
             fireInner: ['#00b4d8', '#90e0ef', '#ffffff'],
@@ -47,9 +38,6 @@ export const STREAK_TIERS = [
     {
         tier: 4,
         minDays: 60,
-        name: 'Изумрудный луч',
-        title: 'Эволюция: 2 месяца силы!',
-        subtitle: 'Зелёный криптоновый огонь. Ты входишь в элиту дисциплины.',
         colors: {
             fireOuter: ['#007965', '#00af91', '#52de97', '#ffffff'],
             fireInner: ['#10b981', '#6ee7b7', '#ffffff'],
@@ -62,9 +50,6 @@ export const STREAK_TIERS = [
     {
         tier: 5,
         minDays: 150,
-        name: 'Сверхновая звезда',
-        title: 'Абсолют: 5 месяцев триумфа!',
-        subtitle: 'Чистое солнечное сияние. Твоя привычка несокрушима!',
         colors: {
             fireOuter: ['#b45309', '#f59e0b', '#fef08a', '#ffffff'],
             fireInner: ['#fbbf24', '#fef9c3', '#ffffff'],
@@ -77,9 +62,6 @@ export const STREAK_TIERS = [
     {
         tier: 6,
         minDays: 365,
-        name: 'Сингулярность',
-        title: 'Легенда: 1 Год бесконечности!',
-        subtitle: 'Гравитационный космический огонь. Дисциплина сквозь пространство и время.',
         colors: {
             fireOuter: ['#0d0221', '#541388', '#00ebc7', '#ffffff'],
             fireInner: ['#00f0ff', '#e0e7ff', '#ffffff'],

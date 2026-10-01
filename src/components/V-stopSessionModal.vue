@@ -10,6 +10,7 @@
                   :autoplay="true"
                   :loop="true"
                   class="modal-lottie"
+                  style="width: 280px; height: 280px"
               />
             </ClientOnly>
           </div>
@@ -81,7 +82,7 @@ const handleCancel = () => {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  z-index: 99999;
+  z-index: 999999;
   padding: 0;
 }
 
@@ -109,9 +110,6 @@ const handleCancel = () => {
   padding: 20px;
 }
 
-.modal-lottie {
-  transform: scale(2);
-}
 
 .modal-icon-item {
   width: 140px;

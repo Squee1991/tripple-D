@@ -11078,5 +11078,30 @@
   },
   "part": {
     "text": "Bölüm"
+  },
+  "halloweenAchievements": {
+    "sectionTitle": "Balkabağı Şenliği",
+    "firstHalloweenQuestText": "Şeker mi, balkabağı mı",
+    "firstHalloweenQuestDescription": "Balkabağı Şenliği etkinliğindeki herhangi bir görevi başarıyla tamamla.",
+    "halloweenWordsText": "Uğursuz Masallar",
+    "halloweenWordsDescription": "Balkabağı Şenliği etkinliğiyle ilgili tüm tematik kelimeleri öğren.",
+    "witchBroomText": "Şimşek mi? Hayır, daha hızlı!",
+    "witchBroomDescription": "Hızını doruk noktasına çıkar - bayram dükkanından birinci sınıf bir uçan süpürge satın al.",
+    "pumpkinText": "Kafada balkabağı mı?",
+    "pumpkinDescription": "Kutlama dükkanından tekinsiz balkabağını satın al.",
+    "punchText": "Balkabağı Pançı",
+    "punchDescription": "Bayram dükkanından cadı pançını satın al.",
+    "witchHatText": "Bölüm seçimi mi?",
+    "witchHatDescription": "Bayram dükkanından Cadı Şapkasını satın al.",
+    "spellBookText": "Süvarinin Büyü Kitabı",
+    "spellBookDescription": "Bayram dükkanından antik büyü kitabını satın al.",
+    "halloweenThemeText": "Maskeli Balo",
+    "halloweenThemeDescription": "Etkinlik mağazasından hayaletli uygulama temasını satın al.",
+    "halloweenAllQuestsText": "Ve balo başlasın!",
+    "halloweenAllQuestsDescription": "Kötü ruhlara hiç fırsat verme - tüm kutlama görevlerini tamamla.",
+    "halloweenReputationText": "Şenliğin Yıldızı",
+    "halloweenReputationDescription": "Balkabağı bayramı görevlerini yerine getirerek maksimum itibar seviyesine ulaş.",
+    "halloweenAllAchievementsText": "Cadılar Bayramı seninle olsun!",
+    "halloweenAllAchievementsDescription": "Tüm bayram başarımlarını elde et ve kutlama unvanını kazan."
   }
 }

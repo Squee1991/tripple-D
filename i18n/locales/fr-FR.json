@@ -11064,5 +11064,30 @@
   },
   "part": {
     "text": "Partie"
+  },
+  "halloweenAchievements": {
+    "sectionTitle": "Fête des citrouilles",
+    "firstHalloweenQuestText": "Un bonbon ou une citrouille",
+    "firstHalloweenQuestDescription": "Accomplissez avec succès n'importe quelle quête de l'événement Fête des citrouilles.",
+    "halloweenWordsText": "Récits sinistres",
+    "halloweenWordsDescription": "Apprenez tous les mots thématiques associés à l'événement Fête des citrouilles.",
+    "witchBroomText": "L'éclair ? Non, plus rapide !",
+    "witchBroomDescription": "Accélérez au maximum : procurez-vous un balai volant haut de gamme dans la boutique festive.",
+    "pumpkinText": "Une citrouille sur la tête ?",
+    "pumpkinDescription": "Achetez une citrouille sinistre dans la boutique festive.",
+    "punchText": "Punch à la citrouille",
+    "punchDescription": "Achetez un punch de sorcière dans la boutique festive.",
+    "witchHatText": "Choix de la maison ?",
+    "witchHatDescription": "Achetez un chapeau de sorcière dans la boutique festive.",
+    "spellBookText": "Grimoire du cavalier",
+    "spellBookDescription": "Achetez un ancien livre de sorts dans la boutique festive.",
+    "halloweenThemeText": "Mascarade",
+    "halloweenThemeDescription": "Achetez le thème fantomatique de l'application dans la boutique de l'événement.",
+    "halloweenAllQuestsText": "Que le bal commence !",
+    "halloweenAllQuestsDescription": "Ne laissez aucune chance aux mauvais esprits : terminez toutes les quêtes festives.",
+    "halloweenReputationText": "Idole de la fête",
+    "halloweenReputationDescription": "Atteignez le niveau de réputation maximal en accomplissant les missions d'Halloween.",
+    "halloweenAllAchievementsText": "Que la force d'Halloween soit avec vous !",
+    "halloweenAllAchievementsDescription": "Débloquez tous les succès d'Halloween et remportez le titre festif."
   }
 }

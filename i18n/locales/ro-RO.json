@@ -11066,5 +11066,30 @@
   },
   "part": {
     "text": "Partea"
+  },
+  "halloweenAchievements": {
+    "sectionTitle": "Sărbătoarea Dovlecilor",
+    "firstHalloweenQuestText": "Bomboană sau dovleac",
+    "firstHalloweenQuestDescription": "Finalizează cu succes orice misiune din evenimentul Sărbătoarea Dovlecilor.",
+    "halloweenWordsText": "Povești sinistre",
+    "halloweenWordsDescription": "Învață toate cuvintele tematice legate de evenimentul Sărbătoarea Dovlecilor.",
+    "witchBroomText": "Fulger? Nu, mai rapid!",
+    "witchBroomDescription": "Prinde viteză maximă - cumpără o mătură zburătoare de primă clasă din magazinul festiv.",
+    "pumpkinText": "Dovleac pe cap?",
+    "pumpkinDescription": "Cumpără un dovleac sinistru din magazinul sărbătorii.",
+    "punchText": "Punch de dovleac",
+    "punchDescription": "Cumpără punch-ul vrăjitoarei din magazinul festiv.",
+    "witchHatText": "Alegerea casei?",
+    "witchHatDescription": "Cumpără pălăria de vrăjitoare din magazinul festiv.",
+    "spellBookText": "Grimoarul călărețului",
+    "spellBookDescription": "Cumpără o carte străveche de vrăji din magazinul festiv.",
+    "halloweenThemeText": "Mascaradă",
+    "halloweenThemeDescription": "Cumpără tema fantomatică pentru aplicație din magazinul evenimentului.",
+    "halloweenAllQuestsText": "Să înceapă balul!",
+    "halloweenAllQuestsDescription": "Nu lăsa forțelor malefice nicio șansă - finalizează toate misiunile festive.",
+    "halloweenReputationText": "Idolul sărbătorii",
+    "halloweenReputationDescription": "Obține nivelul maxim de reputație pentru îndeplinirea sarcinilor de Halloween.",
+    "halloweenAllAchievementsText": "Fie ca spiritul Halloween-ului să fie cu tine!",
+    "halloweenAllAchievementsDescription": "Obține toate realizările de Halloween și merită titlul festiv."
   }
 }

@@ -11084,5 +11084,30 @@
   },
   "part": {
     "text": "Część"
+  },
+  "halloweenAchievements": {
+    "sectionTitle": "Święto Dyń",
+    "firstHalloweenQuestText": "Cukierek albo dynia",
+    "firstHalloweenQuestDescription": "Ukończ pomyślnie dowolne zadanie w wydarzeniu Święto Dyń.",
+    "halloweenWordsText": "Złowrogie opowieści",
+    "halloweenWordsDescription": "Opanuj wszystkie tematyczne słówka związane z wydarzeniem Święto Dyń.",
+    "witchBroomText": "Błyskawica? Nie, szybciej!",
+    "witchBroomDescription": "Rozpędź się do granic — kup latającą miotłę najwyższej klasy w świątecznym sklepie.",
+    "pumpkinText": "Dynia na głowie?",
+    "pumpkinDescription": "Kup złowrogą dynię w świątecznym kramie.",
+    "punchText": "Dyniowy poncz",
+    "punchDescription": "Kup poncz wiedźmy w świątecznym sklepie.",
+    "witchHatText": "Wybór domu?",
+    "witchHatDescription": "Kup kapelusz czarownicy w świątecznym sklepie.",
+    "spellBookText": "Grimuar Jeźdźca",
+    "spellBookDescription": "Kup starożytną księgę zaklęć w świątecznym sklepie.",
+    "halloweenThemeText": "Maskarada",
+    "halloweenThemeDescription": "Kup upiorny motyw aplikacji w sklepie wydarzenia.",
+    "halloweenAllQuestsText": "Niech rozpocznie się bal!",
+    "halloweenAllQuestsDescription": "Nie daj złym mocom żadnych szans — ukończ wszystkie świąteczne zadania.",
+    "halloweenReputationText": "Idol święta",
+    "halloweenReputationDescription": "Zdobądź maksymalny poziom reputacji za wykonywanie zleceń Dyniowiny.",
+    "halloweenAllAchievementsText": "Niechaj Dyniowina będzie z tobą!",
+    "halloweenAllAchievementsDescription": "Zdobądź wszystkie osiągnięcia Dyniowiny i zasłuż na świąteczny tytuł."
   }
 }

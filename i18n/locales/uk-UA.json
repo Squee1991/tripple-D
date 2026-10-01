@@ -11075,5 +11075,30 @@
   },
   "part": {
     "text": "Частина"
+  },
+  "halloweenAchievements": {
+    "sectionTitle": "Свято гарбузів",
+    "firstHalloweenQuestText": "Цукерка або гарбуз",
+    "firstHalloweenQuestDescription": "Успішно виконайте будь-яке завдання в події Свято гарбузів.",
+    "halloweenWordsText": "Зловісні оповіді",
+    "halloweenWordsDescription": "Вивчіть усі тематичні слова, пов'язані з подією Свято гарбузів.",
+    "witchBroomText": "Блискавка? Ні, швидше!",
+    "witchBroomDescription": "Розіженіться до межі - придбайте літаючу мітлу вищого класу у святковій крамниці.",
+    "pumpkinText": "Гарбуз на голові?",
+    "pumpkinDescription": "Придбайте зловісний гарбуз у крамниці свята.",
+    "punchText": "Гарбузовий пунш",
+    "punchDescription": "Придбайте відьмин пунш у святковій крамниці.",
+    "witchHatText": "Вибір факультету?",
+    "witchHatDescription": "Придбайте капелюх відьми у святковій крамниці.",
+    "spellBookText": "Гримуар Вершника",
+    "spellBookDescription": "Придбайте стародавню книгу заклинань у святковій крамниці.",
+    "halloweenThemeText": "Маскарад",
+    "halloweenThemeDescription": "Придбайте примарну тему оформлення додатку в крамниці події.",
+    "halloweenAllQuestsText": "І гряне бал!",
+    "halloweenAllQuestsDescription": "Не залиште нечисті жодного шансу - завершіть усі святкові завдання.",
+    "halloweenReputationText": "Кумир свята",
+    "halloweenReputationDescription": "Отримайте максимальний рівень репутації за виконання доручень Гарбузовина.",
+    "halloweenAllAchievementsText": "Хай буде з тобою Гарбузовин!",
+    "halloweenAllAchievementsDescription": "Здобудьте всі досягнення Гарбузовина та залучіть святкове звання."
   }
 }

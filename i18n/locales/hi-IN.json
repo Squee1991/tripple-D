@@ -11044,5 +11044,30 @@
   },
   "part": {
     "text": "भाग"
+  },
+  "halloweenAchievements": {
+    "sectionTitle": "कद्दू उत्सव",
+    "firstHalloweenQuestText": "कैंडी या कद्दू",
+    "firstHalloweenQuestDescription": "कद्दू उत्सव इवेंट में किसी भी कार्य को सफलतापूर्वक पूरा करें।",
+    "halloweenWordsText": "डरावनी गाथाएँ",
+    "halloweenWordsDescription": "कद्दू उत्सव इवेंट से संबंधित सभी विषयगत शब्द सीखें।",
+    "witchBroomText": "बिजली? नहीं, उससे भी तेज़!",
+    "witchBroomDescription": "अपनी गति की सीमा बढ़ाएं - त्योहारी दुकान से एक उच्च श्रेणी की उड़ने वाली झाड़ू खरीदें।",
+    "pumpkinText": "सिर पर कद्दू?",
+    "pumpkinDescription": "उत्सव की दुकान से एक डरावना कद्दू खरीदें।",
+    "punchText": "कद्दू का पंच",
+    "punchDescription": "त्योहारी दुकान से डायन का पंच खरीदें।",
+    "witchHatText": "हाउस चयन?",
+    "witchHatDescription": "त्योहारी दुकान से डायन की टोपी खरीदें।",
+    "spellBookText": "सवार की जादुई किताब",
+    "spellBookDescription": "त्योहारी दुकान से प्राचीन जादू की किताब खरीदें।",
+    "halloweenThemeText": "मुखौटा नृत्य",
+    "halloweenThemeDescription": "इवेंट की दुकान से ऐप की भूतिया थीम खरीदें।",
+    "halloweenAllQuestsText": "समारोह शुरू हो!",
+    "halloweenAllQuestsDescription": "दुष्ट आत्माओं को कोई मौका न दें - सभी त्योहारी कार्य पूरे करें।",
+    "halloweenReputationText": "उत्सव का नायक",
+    "halloweenReputationDescription": "हैलोवीन कार्यों को पूरा करके प्रतिष्ठा का अधिकतम स्तर हासिल करें।",
+    "halloweenAllAchievementsText": "हैलोवीन आपके साथ रहे!",
+    "halloweenAllAchievementsDescription": "हैलोवीन की सभी उपलब्धियाँ प्राप्त करें और उत्सव की पदवी हासिल करें।"
   }
 }

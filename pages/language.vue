@@ -27,6 +27,8 @@ const selectLanguage = async (code) => {
   }
 }
 
+
+
 const goToSignIn = () => {
   router.push('/sign-in')
 }
@@ -34,13 +36,12 @@ const goToSignIn = () => {
 
 <template>
   <div class="lang-container">
-    <!-- Добавили фоновую картинку на весь экран -->
     <img class="start__bg" src="~/assets/images/startBg.png" alt="startBg">
-
     <div class="lang-header">
       <h2 class="title">{{ t('languagePage.title')}}</h2>
       <div class="search-wrapper">
         <input
+            :key="locale.value"
             v-model="searchQuery"
             type="text"
             :placeholder="t('languagePage.placeholder')"
@@ -78,7 +79,7 @@ const goToSignIn = () => {
 .lang-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   font-family: "Nunito", sans-serif;
   color: #fff;
   padding: 10px;

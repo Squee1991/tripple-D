@@ -152,6 +152,7 @@
 </template>
 
 <script setup>
+import {DotLottieVue} from '@lottiefiles/dotlottie-vue'
 import {useTrainerStore} from '~/store/themenProgressStore.js'
 import {userAuthStore} from '~/store/authStore.js'
 import {dailyStore} from '~/store/dailyStore.js'
@@ -649,6 +650,7 @@ onUnmounted(() => {
 .bottom-sheet {
   position: fixed;
   bottom: 0;
+  z-index: 99999;
   width: 100%;
   max-width: 1024px;
   left: 50%;

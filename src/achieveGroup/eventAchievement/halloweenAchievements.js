@@ -1,94 +1,94 @@
 export const halloweenAchievements = [
     {
-        title: 'Праздник тыкв',
+        title: 'halloweenAchievements.sectionTitle',
         achievements: [
             {
                 id: 'firstHalloweenQuest',
-                name: 'Конфета или тыква',
-                description: 'Выполните успешно любое задание в событии Празник тыкв.',
+                name: 'halloweenAchievements.firstHalloweenQuestText',
+                description: 'halloweenAchievements.firstHalloweenQuestDescription',
                 currentProgress: 0,
                 targetProgress: 1,
                 icon: '🎃'
             },
             {
                 id: 'halloweenWords',
-                name: 'Зловещие сказания',
-                description: 'Изучите все тематические слова, связанные с событием Праздник тыкв.',
+                name: 'halloweenAchievements.halloweenWordsText',
+                description: 'halloweenAchievements.halloweenWordsDescription',
                 currentProgress: 0,
                 targetProgress: 18,
                 icon: '📖'
             },
             {
                 id: 'witchBroom',
-                name: 'Молния? Нет, быстрее!',
-                description: 'Разгонитесь до предела - приобретите летающую метлу высшего класса в праздничной лавке.',
+                name: 'halloweenAchievements.witchBroomText',
+                description: 'halloweenAchievements.witchBroomDescription',
                 currentProgress: 0,
                 targetProgress: 1,
                 icon: '🧹'
             },
             {
                 id: 'pumpkin',
-                name: 'Тыква на голове?',
-                description: 'Приобретите зловещую тыкву в лавке праздника.',
+                name: 'halloweenAchievements.pumpkinText',
+                description: 'halloweenAchievements.pumpkinDescription',
                 currentProgress: 0,
                 targetProgress: 1,
                 icon: '🕯️'
             },
             {
                 id: 'punch',
-                name: 'Тыквенный Пунш',
-                description: 'Приобретите ведьмин пунш в праздничной лавке.',
+                name: 'halloweenAchievements.punchText',
+                description: 'halloweenAchievements.punchDescription',
                 currentProgress: 0,
                 targetProgress: 1,
                 icon: '🧪'
             },
             {
                 id: 'witchHat',
-                name: 'Выбор факультета?',
-                description: 'Приобретите Ведьмину шляпу в праздничной лавке.',
+                name: 'halloweenAchievements.witchHatText',
+                description: 'halloweenAchievements.witchHatDescription',
                 currentProgress: 0,
                 targetProgress: 1,
                 icon: '🎩'
             },
             {
                 id: 'spellBook',
-                name: 'Гримуар Всадника',
-                description: 'Приобретите древнюю книгу заклинаний в праздничной лавке.',
+                name: 'halloweenAchievements.spellBookText',
+                description: 'halloweenAchievements.spellBookDescription',
                 currentProgress: 0,
                 targetProgress: 1,
                 icon: '📕'
             },
             {
                 id: 'halloweenTheme',
-                name: 'Маскарад',
-                description: 'Приобретите призрачную тему оформления приложения в лавке события.',
+                name: 'halloweenAchievements.halloweenThemeText',
+                description: 'halloweenAchievements.halloweenThemeDescription',
                 currentProgress: 0,
                 targetProgress: 1,
                 icon: '👻'
             },
             {
                 id: 'halloweenAllQuests',
-                name: 'И грянет бал!',
-                description: 'Не оставьте нечисти ни единого шанса - завершите все праздничные задания.',
+                name: 'halloweenAchievements.halloweenAllQuestsText',
+                description: 'halloweenAchievements.halloweenAllQuestsDescription',
                 currentProgress: 0,
                 targetProgress: 23,
                 icon: '🔥'
             },
             {
                 id: 'halloweenReputation',
-                name: 'Кумир праздника',
-                description: 'Заработайте максимальный уровень репутации за выполнение поручений Тыквовина.',
+                name: 'halloweenAchievements.halloweenReputationText',
+                description: 'halloweenAchievements.halloweenReputationDescription',
                 currentProgress: 0,
                 targetProgress: 1000,
                 icon: '⭐'
             },
             {
                 id: 'halloweenAllAchievements',
-                name: 'Да пребудет с тобой Тыквовин!',
-                description: 'Получите все достижения Тыквовина и заслужите праздничное звание.',
+                name: 'halloweenAchievements.halloweenAllAchievementsText',
+                description: 'halloweenAchievements.halloweenAllAchievementsDescription',
                 currentProgress: 0,
                 targetProgress: 10,
-                icon: '🏆'
+                icon: '🦇'
             }
         ]
     }

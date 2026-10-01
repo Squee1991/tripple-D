@@ -11097,5 +11097,30 @@
   },
   "part": {
     "text": "Часть"
+  },
+  "halloweenAchievements": {
+    "sectionTitle": "Праздник тыкв",
+    "firstHalloweenQuestText": "Конфета или тыква",
+    "firstHalloweenQuestDescription": "Выполните успешно любое задание в событии Праздник тыкв.",
+    "halloweenWordsText": "Зловещие сказания",
+    "halloweenWordsDescription": "Изучите все тематические слова, связанные с событием Праздник тыкв.",
+    "witchBroomText": "Молния? Нет, быстрее!",
+    "witchBroomDescription": "Разгонитесь до предела - приобретите летающую метлу высшего класса в праздничной лавке.",
+    "pumpkinText": "Тыква на голове?",
+    "pumpkinDescription": "Приобретите зловещую тыкву в лавке праздника.",
+    "punchText": "Тыквенный Пунш",
+    "punchDescription": "Приобретите ведьмин пунш в праздничной лавке.",
+    "witchHatText": "Выбор факультета?",
+    "witchHatDescription": "Приобретите Ведьмину шляпу в праздничной лавке.",
+    "spellBookText": "Гримуар Всадника",
+    "spellBookDescription": "Приобретите древнюю книгу заклинаний в праздничной лавке.",
+    "halloweenThemeText": "Маскарад",
+    "halloweenThemeDescription": "Приобретите призрачную тему оформления приложения в лавке события.",
+    "halloweenAllQuestsText": "И грянет бал!",
+    "halloweenAllQuestsDescription": "Не оставьте нечисти ни единого шанса - завершите все праздничные задания.",
+    "halloweenReputationText": "Кумир праздника",
+    "halloweenReputationDescription": "Заработайте максимальный уровень репутации за выполнение поручений Тыквовина.",
+    "halloweenAllAchievementsText": "Да пребудет с тобой Тыквовин!",
+    "halloweenAllAchievementsDescription": "Получите все достижения Тыквовина и заслужите праздничное звание."
   }
 }

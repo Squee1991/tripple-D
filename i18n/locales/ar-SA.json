@@ -11087,5 +11087,30 @@
   },
   "part": {
     "text": "الجزء"
+  },
+  "halloweenAchievements": {
+    "sectionTitle": "مهرجان اليقطين",
+    "firstHalloweenQuestText": "حلوى أم يقطينة",
+    "firstHalloweenQuestDescription": "أكمل بنجاح أي مهمة ضمن فعالية مهرجان اليقطين.",
+    "halloweenWordsText": "حكايات مشؤومة",
+    "halloweenWordsDescription": "تعلّم جميع الكلمات المرتبطة بموضوع فعالية مهرجان اليقطين.",
+    "witchBroomText": "البرق؟ كلا، أسرع!",
+    "witchBroomDescription": "انطلق بأقصى سرعة - احصل على مكنسة طائرة فاخرة من متجر الاحتفال.",
+    "pumpkinText": "يقطينة على رأسك؟",
+    "pumpkinDescription": "اشترِ يقطينة مخيفة من متجر الاحتفال.",
+    "punchText": "مشروب اليقطين",
+    "punchDescription": "اشترِ مشروب الساحرة من متجر الاحتفال.",
+    "witchHatText": "اختيار المنهاج؟",
+    "witchHatDescription": "اشترِ قبعة الساحرة من متجر الاحتفال.",
+    "spellBookText": "كتاب الفارس السحري",
+    "spellBookDescription": "اشترِ كتاب التعاويذ القديم من متجر الاحتفال.",
+    "halloweenThemeText": "حفل تنكري",
+    "halloweenThemeDescription": "اشترِ مظهر التطبيق الشبحي من متجر الفعالية.",
+    "halloweenAllQuestsText": "وليبدأ الحفل!",
+    "halloweenAllQuestsDescription": "لا تدع فرصة للأرواح الشريرة - أكمل جميع المهام الاحتفالية.",
+    "halloweenReputationText": "نجم المهرجان",
+    "halloweenReputationDescription": "احصل على أعلى مستوى سمعة مقابل إنجاز مهام الهالوين.",
+    "halloweenAllAchievementsText": "لتكن قوة الهالوين معك!",
+    "halloweenAllAchievementsDescription": "احصل على جميع إنجازات الهالوين واستحق اللقب الاحتفالي."
   }
 }
