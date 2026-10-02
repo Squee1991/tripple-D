@@ -5,7 +5,7 @@ import { userAuthStore } from '../store/authStore.js';
 let isAdProcessing = false;
 let lastInterstitialTime = 0;
 const AD_LIMIT_PER_DAY = 10;
-const INTERSTITIAL_COOLDOWN = 50 * 1000;
+const INTERSTITIAL_COOLDOWN = 60 * 1000;
 const platform = Capacitor.getPlatform();
 
 function getTodayKey() {
@@ -47,7 +47,9 @@ export async function initAdmob() {
 
 export async function showInterstitial(nextStep) {
 	const authStore = userAuthStore();
-	if (authStore.isPremium || !Capacitor.isNativePlatform()) return nextStep();
+
+	if (!authStore.hasAds || !Capacitor.isNativePlatform()) return nextStep();
+
 	if (Date.now() - lastInterstitialTime < INTERSTITIAL_COOLDOWN) return nextStep();
 	if (isAdProcessing) return;
 
@@ -81,10 +83,12 @@ export async function showInterstitial(nextStep) {
 
 export async function showRewarded(onReward, onComplete, onLimitReached) {
 	const authStore = userAuthStore();
+
 	if (authStore.isPremium || !Capacitor.isNativePlatform()) {
 		onReward();
 		return onComplete(true);
 	}
+
 	if (!canShowRewardedAd()) {
 		if (onLimitReached) onLimitReached();
 		return;

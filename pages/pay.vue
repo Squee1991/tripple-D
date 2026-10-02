@@ -28,10 +28,28 @@ const payButton = ref(null)
 const showStickyFooter = ref(false)
 const justBought = ref(false)
 
+const selectedPlan = ref('plus')
+
+const selectedPackage = computed(() => {
+  if (!billingStore.offerings || billingStore.offerings.length === 0) return null
+  return billingStore.offerings[0]
+})
+
+const selectPlan = async (plan) => {
+  selectedPlan.value = plan
+  if (billingStore.isMobile) {
+    if (plan === 'basic') {
+      await billingStore.loadOfferings('basic_offering')
+    } else {
+      await billingStore.loadOfferings(selectedDiscountId.value || null)
+    }
+  }
+}
+
 const formattedSubscriptionEndDate = computed(() => {
   if (!authStore.subscriptionEndsAt) return '-'
   const date = new Date(authStore.subscriptionEndsAt)
-  return date.toLocaleDateString(locale.value, { year: 'numeric', month: 'long', day: 'numeric' })
+  return date.toLocaleDateString(locale.value, {year: 'numeric', month: 'long', day: 'numeric'})
 })
 
 const handleBack = () => {
@@ -52,12 +70,10 @@ const restoreComputed = computed(() => {
 
 const trialInfo = computed(() => {
   if (!billingStore.isMobile) return null
-  if (billingStore.offerings && billingStore.offerings.length > 0) {
-    const product = billingStore.offerings[0].product
+  if (selectedPackage.value) {
+    const product = selectedPackage.value.product
     if (product.introPrice && product.introPrice.price === 0) {
-      return {
-        days: 3
-      }
+      return {days: 3}
     }
   }
   return null
@@ -66,23 +82,17 @@ const trialInfo = computed(() => {
 const submitComputed = computed(() => {
   if (submitLoading.value) return t('submitComputed.sync')
   if (trialInfo.value) {
-    return `Plus ${trialInfo.value.days} ${t('freeTrial.free-days')}`
+    return `${selectedPlan.value === 'basic' ? 'Basic' : 'Plus'} ${trialInfo.value.days} ${t('freeTrial.free-days')}`
   }
-  return t('submitComputed.getPlus')
+  return selectedPlan.value === 'basic' ? t('submitComputed.getBasic') : t('submitComputed.getPlus')
 })
 
 const postTrialPrice = computed(() => {
   if (billingStore.isMobile) {
-    if (billingStore.offerings && billingStore.offerings.length > 0) {
-      const pkg = billingStore.offerings[0]
-      return pkg?.product?.priceString || '...'
-    }
-    return '...'
+    return selectedPackage.value?.product?.priceString || '...'
   }
-
-  const base = parseFloat(displayPrice.value) || 12.99
+  const base = selectedPlan.value === 'basic' ? 3.99 : (parseFloat(displayPrice.value) || 12.99)
   if (!selectedDiscountId.value) return `${base.toFixed(2)} ${displayCurrency.value}`
-
   const activeCoupon = myAvailableCoupons.value.find(c => c.id === selectedDiscountId.value)
   const percent = activeCoupon ? activeCoupon.percent : 0
   const discounted = base - (base * (percent / 100))
@@ -104,12 +114,7 @@ const myAvailableCoupons = computed(() => {
       authStore.premiumDiscount.sale_10 ||
       authStore.premiumDiscount.sale_15
   if (hasAnyDiscount) {
-    list.push(
-        {
-          id: null,
-          percent: 0,
-          label: t('payPage.withoutDiscount')
-        })
+    list.push({id: null, percent: 0, label: t('payPage.withoutDiscount')})
   }
   if (authStore.premiumDiscount.sale_3) list.push({id: 'sale_3', percent: 3, label: t('cardSales.title3')})
   if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_5', percent: 5, label: t('cardSales.title5')})
@@ -126,17 +131,21 @@ const selectDiscount = async (id) => {
   }
 }
 
-useSeoMeta({
-  robots: 'noindex, nofollow'
-})
+useSeoMeta({robots: 'noindex, nofollow'})
 
 let observer
-const features = [
-  {title: t('payPage.featureOne'), icon: Forever},
-  {title: t('payPage.featureTwo'), icon: Future},
-  {title: t('payPage.featureThree'), icon: SupportCup},
-  {title: t('payPage.featureFour'), icon: Ads},
-]
+const features = computed(() => {
+  return [
+    {title: t('payPage.featureOne'), icon: Forever},
+    {title: t('payPage.featureTwo'), icon: Future},
+    {title: t('payPage.featureThree'), icon: SupportCup},
+    {
+      title: selectedPlan.value === 'plus' ? t('payPage.featureFour') : t('submitComputed.withAds'),
+      icon: Ads,
+      isAds: true
+    }
+  ]
+})
 
 const triggerToast = (msg) => {
   toastMessage.value = msg
@@ -175,9 +184,8 @@ async function handleRestore() {
 async function pay() {
   if (!authStore.uid || !authStore.email) return
   if (billingStore.isMobile) {
-    if (billingStore.offerings.length > 0) {
-      const pkg = billingStore.offerings[0]
-      const success = await billingStore.buy(pkg)
+    if (selectedPackage.value) {
+      const success = await billingStore.buy(selectedPackage.value)
       if (success) {
         justBought.value = true
         authStore.isPremium = true
@@ -196,7 +204,8 @@ async function pay() {
       body: {
         userId: authStore.uid,
         email: authStore.email,
-        couponId: selectedDiscountId.value
+        couponId: selectedDiscountId.value,
+        plan: selectedPlan.value
       },
     })
     if (response.url) {
@@ -215,7 +224,6 @@ onMounted(async () => {
   if (isPremium.value) {
     triggerToast('pay.triggerToastIsPlus')
   }
-
   if (billingStore.isMobile) {
     await billingStore.initialize()
   } else {
@@ -269,17 +277,55 @@ onUnmounted(() => {
             <span class="flow__banner-text"> {{ t('pay.banner') }}</span>
             <img class="flow__banner-icon" :src="PremiumIcon" alt="PremiumIcon">
           </div>
-          <div class="perks-grid">
-            <div v-for="(feat, index) in features" :key="index" class="perk-card">
-              <div class="perk-icon">
-                <img :src="feat.icon" alt="" class="icon-svg">
+          <div class="plan-choice-container">
+            <div class="plans-selector">
+              <div
+                  class="plan-card"
+                  :class="{ 'plan-card--active': selectedPlan === 'basic' }"
+                  @click="selectPlan('basic')"
+              >
+                <div class="plan-radio">
+                  <span class="plan-radio-dot"></span>
+                </div>
+                <div class="plan-body">
+                  <div class="plan-header">
+                    <span class="plan-title">Basic</span>
+                  </div>
+                  <span class="plan-badge-ads">{{ t('submitComputed.withAds') }}</span>
+                </div>
               </div>
-              <div class="perk-meta">
-                <span class="perk-name">{{ feat.title }}</span>
+              <div
+                  class="plan-card plan-card--plus"
+                  :class="{ 'plan-card--active': selectedPlan === 'plus' }"
+                  @click="selectPlan('plus')"
+              >
+                <div class="plan-radio">
+                  <span class="plan-radio-dot"></span>
+                </div>
+                <div class="plan-body">
+                  <div class="plan-header">
+                    <span class="plan-title">Plus</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="bonus-section" v-if="myAvailableCoupons.length > 1">
+          <div class="perks-grid">
+            <div v-for="(feat, index) in features" :key="index" class="perk-card">
+              <div class="perk-icon" :class="{ 'perk-icon--muted': feat.isAds && selectedPlan === 'basic' }">
+                <img :src="feat.icon" alt="" class="icon-svg">
+              </div>
+              <div class="perk-meta">
+                <span
+                    class="perk-name"
+                    :class="{ 'perk-name--muted': feat.isAds && selectedPlan === 'basic' }"
+                >
+                  {{ feat.title }}
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="bonus-section" v-if="myAvailableCoupons.length > 1 && selectedPlan === 'plus'">
             <div class="hero-zone bonus-hero">
               <p class="hero-desc">{{ t('pay.sales') }}</p>
             </div>
@@ -303,7 +349,7 @@ onUnmounted(() => {
             </div>
           </div>
           <div class="billing-summary">
-            <div class="bill-line discount" v-if="selectedDiscountId">
+            <div class="bill-line discount" v-if="selectedDiscountId && selectedPlan === 'plus'">
               <span class="bill-text">{{ t('payPage.yourSale') }}</span>
               <span class="bill-price-neg">
                 {{ myAvailableCoupons.find(c => c.id === selectedDiscountId)?.label }}
@@ -314,11 +360,11 @@ onUnmounted(() => {
               <span class="bill-price">{{ trialInfo.days }} {{ t('freeTrial.free-days') }}</span>
             </div>
             <div v-if="trialInfo" class="trial-disclaimer">
-              {{ t('freeTrial.trial-text-part-one')}}<strong style="color: #fff;">{{ postTrialPrice }} / {{ t('eulaText.month') }}</strong>.{{ t('freeTrial.trial-text-part-two')}}
+              {{ t('freeTrial.trial-text-part-one') }}<strong style="color: #fff;">{{ postTrialPrice }} /
+              {{ t('eulaText.month') }}</strong>.{{ t('freeTrial.trial-text-part-two') }}
             </div>
             <div class="bill-total">
               <span class="total-text">{{ t('payPage.finalePrice') }}</span>
-              <!-- Здесь оставляем запрошенный ключ для "0.00 / 7 дней" -->
               <span class="total-price" v-if="trialInfo">
                 {{ finalPrice }} / {{ trialInfo.days }} {{ t('shopDaysRaw.dayThird') }}
               </span>
@@ -380,6 +426,158 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+
+.plan-choice-container {
+  margin: 22px 8px 0px 8px;
+}
+
+.plan-choice-label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  padding: 0 4px;
+  text-align: left;
+}
+
+.plan-choice-title {
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  color: var(--title);
+}
+
+.plan-choice-subtitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8e8e93;
+  margin-top: 2px;
+}
+
+.plans-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.plan-card {
+  position: relative;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 2px solid rgb(83 83 87 / 0.18);
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  user-select: none;
+}
+
+.plan-card--active {
+  border-color: #10b981;
+  background: linear-gradient(180deg, rgb(16 185 129 / 0.26) 0%, rgba(16, 185, 129, 0.04) 100%);
+  box-shadow: 0 8px 24px -6px rgba(16, 185, 129, 0.25);
+  transform: translateY(-1px);
+}
+
+.plan-card--plus.plan-card--active {
+  border-color: #00c2ff;
+  background: linear-gradient(180deg, rgb(0 194 255 / 0.28) 0%, rgba(0, 194, 255, 0.04) 100%);
+  box-shadow: 0 8px 24px -6px rgba(0, 194, 255, 0.3);
+}
+
+.plan-radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.plan-card--active .plan-radio {
+  border-color: #10b981;
+}
+
+.plan-card--plus.plan-card--active .plan-radio {
+  border-color: #00c2ff;
+}
+
+.plan-radio-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: transparent;
+  transition: all 0.2s;
+}
+
+.plan-card--active .plan-radio-dot {
+  background: #10b981;
+}
+
+.plan-card--plus.plan-card--active .plan-radio-dot {
+  background: #00c2ff;
+}
+
+.plan-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  width: 100%;
+}
+
+.plan-header {
+  display: flex;
+  align-items: center;
+}
+
+.plan-title {
+  font-weight: 900;
+  font-size: 19px;
+  letter-spacing: -0.3px;
+  color: var(--title);
+}
+
+.plan-badge-popular {
+  position: absolute;
+  top: -10px;
+  right: 12px;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00c2ff 0%, #0077ff 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 194, 255, 0.4);
+}
+
+.plan-badge-ads {
+  font-size: 11px;
+  font-weight: 800;
+  color: #d97706;
+  background: rgba(217, 119, 6, 0.12);
+  padding: 3px 8px;
+  border-radius: 8px;
+  line-height: 1.2;
+}
+
+.plan-badge-clean {
+  font-size: 11px;
+  font-weight: 800;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.14);
+  padding: 3px 8px;
+  border-radius: 8px;
+  line-height: 1.2;
+}
+
 .toast-notification {
   position: absolute;
   width: 100%;
@@ -437,7 +635,7 @@ onUnmounted(() => {
 .flow__banner-pay {
   display: flex;
   align-items: center;
-  padding: 18px;
+  padding: 15px;
   border-radius: 24px;
   background: linear-gradient(145deg, rgb(0, 194, 255), rgb(0, 168, 219)) rgb(0, 194, 255);
   box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3), inset 0 -2px 4px rgba(0, 0, 0, 0.1), 0 6px 0 rgb(0, 160, 220);
@@ -506,22 +704,23 @@ onUnmounted(() => {
 
 .perks-grid {
   display: grid;
-  gap: 12px;
-  margin-top: 22px;
+  gap: 9px;
+  margin-top: 10px;
 }
 
 .perk-card {
   border-bottom: 1px solid rgba(103, 101, 101, 0.24);
   border-radius: 5px;
-  padding: 12px 14px;
+  padding: 8px 14px;
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
 .perk-icon {
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
+  transition: opacity 0.2s;
 }
 
 .perk-meta {
@@ -534,6 +733,7 @@ onUnmounted(() => {
   font-size: 16px;
   font-weight: 800;
   color: var(--title);
+  transition: color 0.2s;
 }
 
 .inventory-list {
@@ -612,7 +812,7 @@ onUnmounted(() => {
 }
 
 .billing-summary {
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 10px 20px;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 24px;
@@ -638,6 +838,7 @@ onUnmounted(() => {
 .bill-total {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 15px;
   padding-top: 15px;
   border-top: 1px dashed rgba(255, 255, 255, 0.1);
@@ -660,12 +861,12 @@ onUnmounted(() => {
 }
 
 .footer-action-wrapper {
-  margin-top: 5px;
+  margin-top: 4px;
   position: relative;
 }
 
 .footer-action {
-  padding: 14px 0;
+  padding: 10px 0 14px 0;
 }
 
 .btn-icon-back {
@@ -689,7 +890,7 @@ onUnmounted(() => {
 
 .btn-buy-neon {
   width: 100%;
-  padding: 16px 20px;
+  padding: 14px 20px;
   border-radius: 50px;
   border: none;
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);

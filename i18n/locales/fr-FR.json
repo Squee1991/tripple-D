@@ -10313,7 +10313,10 @@
   },
   "submitComputed": {
     "sync": "Synchronisation...",
-    "getPlus": "Acheter PLUS"
+    "getPlus": "Obtenir PLUS",
+    "getBasic": "Obtenir Basic",
+    "withAds": "Avec publicités",
+    "withoutAds": "Sans publicités"
   },
   "pay": {
     "banner": "Accès complet à toutes les fonctionnalités de l'application",

@@ -10333,7 +10333,10 @@
   },
   "submitComputed": {
     "sync": "Synchronizacja...",
-    "getPlus": "Kup PLUS"
+    "getPlus": "Kup PLUS",
+    "getBasic": "Kup Basic",
+    "withAds": "Z reklamami",
+    "withoutAds": "Bez reklam"
   },
   "pay": {
     "banner": "Pełen dostęp do wszystkich funkcji aplikacji",

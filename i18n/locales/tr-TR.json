@@ -10325,8 +10325,11 @@
     "restore": "Satın almaları geri yükle."
   },
   "submitComputed": {
-    "sync": "Senkronize ediliyor...",
-    "getPlus": "PLUS Satın Al"
+    "sync": "Eşitleniyor...",
+    "getPlus": "PLUS Satın Al",
+    "getBasic": "Basic Satın Al",
+    "withAds": "Reklamlı",
+    "withoutAds": "Reklamsız"
   },
   "pay": {
     "banner": "Uygulamanın tüm özelliklerine tam erişim",

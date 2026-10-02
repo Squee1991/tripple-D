@@ -387,26 +387,37 @@ exports.handleRevenueCatWebhook = onRequest(async (req, res) => {
 	const eventData = req.body.event;
 	if (!eventData || !eventData.app_user_id) {
 		return res.status(200).send("No data");
-
 	}
+
 	const userId = eventData.app_user_id;
 	const eventType = eventData.type;
 	const db = admin.firestore();
+
+	const entitlements = eventData.entitlement_ids || [];
+	const isPremiumTier = entitlements.includes('premium');
+	const isBasicTier = entitlements.includes('basic');
+
+	const hasAds = !isPremiumTier && isBasicTier;
+
 	try {
 		switch (eventType) {
 			case "INITIAL_PURCHASE":
 			case "RENEWAL":
 				await db.collection("users").doc(userId).update({
 					isPremium: true,
+					hasAds: hasAds,
 					subscriptionCancelled: false
 				});
 				break;
+
 			case "EXPIRATION":
 				await db.collection("users").doc(userId).update({
 					isPremium: false,
+					hasAds: true,
 					subscriptionCancelled: true
 				});
 				break;
+
 			case "CANCELLATION":
 				await db.collection("users").doc(userId).update({
 					subscriptionCancelled: true
@@ -416,18 +427,25 @@ exports.handleRevenueCatWebhook = onRequest(async (req, res) => {
 			case "TRANSFER":
 				if (eventData.transferred_from) {
 					for (const oldUid of eventData.transferred_from) {
-						await db.collection("users").doc(oldUid).update({ isPremium: false });
+						await db.collection("users").doc(oldUid).update({
+							isPremium: false,
+							hasAds: true
+						});
 					}
 				}
 				if (eventData.transferred_to) {
 					for (const newUid of eventData.transferred_to) {
-						await db.collection("users").doc(newUid).update({ isPremium: true });
+						await db.collection("users").doc(newUid).update({
+							isPremium: true,
+							hasAds: hasAds
+						});
 					}
 				}
 				break;
 		}
 		res.status(200).send("OK");
 	} catch (error) {
+		console.error("RevenueCat Webhook Error:", error);
 		res.status(500).send("Error");
 	}
 });
