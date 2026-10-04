@@ -184,10 +184,11 @@ const updateTimer = () => {
   }
 
   store.checkBatteryRegen()
-
   const now = Date.now()
-  const REGEN_MS = 10 * 60 * 1000
-  const nextRegen = store.currentBatteryRegen + REGEN_MS
+  const REGEN_MS = 5 * 60 * 1000
+  const lastRegen = store.currentBatteryRegen || now
+
+  const nextRegen = lastRegen + REGEN_MS
   const diff = nextRegen - now
 
   if (diff <= 0) {
@@ -199,7 +200,11 @@ const updateTimer = () => {
 
   const m = Math.floor(diff / 1000 / 60)
   const s = Math.floor((diff / 1000) % 60)
-  timeToNext.value = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`
+  if (isNaN(m) || isNaN(s)) {
+    timeToNext.value = '00:00'
+  } else {
+    timeToNext.value = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`
+  }
 }
 
 onMounted(async () => {

@@ -403,6 +403,7 @@ exports.handleRevenueCatWebhook = onRequest(async (req, res) => {
 		switch (eventType) {
 			case "INITIAL_PURCHASE":
 			case "RENEWAL":
+			case "NON_RENEWING_PURCHASE":
 				await db.collection("users").doc(userId).update({
 					isPremium: true,
 					hasAds: hasAds,

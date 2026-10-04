@@ -41,12 +41,22 @@ const reputationPoints = ref(0)
 
 const eventId = computed(() => String(route.params.id || ''))
 const isEventOpen = computed(() => {
-  const event = eventStore.events.find(e => e.id === eventId.value)
-  if (!event) return false
-  const now = new Date().toLocaleDateString('fr-CA').slice(5)
+  const event = eventStore.events.find(e => e.id === eventId.value || e.url.includes(eventId.value))
+  if (!event) {
+    console.warn('Событие не найдено для ID:', eventId.value)
+    return false
+  }
+  const d = new Date()
+  const month = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+  const now = `${month}-${day}`
+
   const start = event.start.slice(0, 5)
   const end = event.end.slice(0, 5)
-  if (start > end) return now >= start || now <= end
+  if (start > end) {
+    return now >= start || now <= end
+  }
+
   return now >= start && now <= end
 })
 
@@ -695,7 +705,7 @@ onMounted(() => {
 .scroll_sections {
   height: 100%;
   overflow-y: auto;
-  padding-bottom: 160px;
+  padding-bottom: 220px;
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;

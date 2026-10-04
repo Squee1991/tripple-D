@@ -16,6 +16,7 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 	const score = ref(0)
 	const activeGalaxyId = ref(null)
 	const galaxies = ref([])
+	const REGEN_MS = 5 * 60 * 1000
 
 	const speedMultiplier = computed(() => {
 		let extra = 0
@@ -42,15 +43,12 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 	const checkBatteryRegen = () => {
 		if (authStore.isPremium) return
 		const now = Date.now()
-		const REGEN_MS = 60 * 60 * 1000
 		let needsSync = false
-
 		ownedTanks.value.forEach(tankId => {
 			if (!shipBatteries.value[tankId]) {
 				shipBatteries.value[tankId] = { lives: 3, lastRegen: now }
 				needsSync = true
 			}
-
 			const battery = shipBatteries.value[tankId]
 			if (battery.lives < 3) {
 				const timePassed = now - battery.lastRegen
@@ -69,7 +67,6 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 				battery.lastRegen = now
 			}
 		})
-
 		if (needsSync) {
 			sync({ shipBatteries: shipBatteries.value })
 		}
@@ -252,7 +249,7 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 	})
 
 	return {
-		captainName, balance, highScores, selectedTankId, ownedTanks,
+		captainName, balance, highScores, selectedTankId, ownedTanks, REGEN_MS,
 		score, galaxies, activeGalaxyId, tankList, shipBatteries,
 		speedMultiplier, fallDuration, activeShip, currentGalaxy, currentBattery, currentBatteryRegen,
 		initUser, setCaptainName, updateHighScore, buyShip, selectShip, fetchGalaxies, setMission, sync, addArtiks, consumeBattery, checkBatteryRegen

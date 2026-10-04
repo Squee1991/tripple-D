@@ -369,7 +369,7 @@ onUnmounted(() => {
                 {{ finalPrice }} / {{ trialInfo.days }} {{ t('shopDaysRaw.dayThird') }}
               </span>
               <span class="total-price" v-else>
-                {{ finalPrice }} / {{ t('eulaText.month') }}
+                {{ finalPrice  }} / {{ t('eulaText.month') }}
               </span>
             </div>
           </div>
