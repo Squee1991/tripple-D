@@ -78,6 +78,7 @@ import FoolDay from '~/assets/images/calendar-icons/FoolDay.svg'
 import Bees from '~/assets/images/calendar-icons/bees.svg'
 import VBackBtn from "~/src/components/V-back-btn.vue";
 const { t} = useI18n()
+
 definePageMeta({
   robots: {
     index: false,
@@ -143,8 +144,8 @@ const annualEvents = ref([
     alt: 'HalloweenIcon',
     title: t('eventsNavNames.halloween'),
     typeId: 'pumpkin',
-    start: '10-26 00:00',
-    end: '11-08 23:59'
+    start: '10-19 00:00',
+    end: '11-01 23:59'
   },
 ])
 

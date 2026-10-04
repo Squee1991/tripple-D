@@ -15,13 +15,11 @@ dependencies {
     implementation project(':capacitor-filesystem')
     implementation project(':capacitor-keyboard')
     implementation project(':capacitor-network')
-    implementation project(':capacitor-push-notifications')
     implementation project(':capacitor-splash-screen')
     implementation project(':capacitor-status-bar')
     implementation project(':capawesome-capacitor-apple-sign-in')
     implementation project(':capawesome-capacitor-google-sign-in')
     implementation project(':revenuecat-purchases-capacitor')
-    implementation project(':revenuecat-purchases-capacitor-ui')
     implementation project(':capacitor-voice-recorder')
 
 }

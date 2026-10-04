@@ -637,7 +637,7 @@ watch([questId, regionKey], () => {
         await nextTick()
       }
 
-      if (authStore.isPremium) {
+      if (!authStore.hasAds) {
         initQuest()
       } else {
         showInterstitial(initQuest)
