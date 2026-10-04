@@ -10340,7 +10340,10 @@
   },
   "submitComputed": {
     "sync": "Syncing...",
-    "getPlus": "Get PLUS"
+    "getPlus": "Get PLUS",
+    "getBasic": "Get Basic",
+    "withAds": "With ads",
+    "withoutAds": "Without ads"
   },
   "pay": {
     "banner": "Full access to all app features",

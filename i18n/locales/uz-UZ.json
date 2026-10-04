@@ -10311,8 +10311,11 @@
     "restore": "Xaridlarni tiklash."
   },
   "submitComputed": {
-    "sync": "Sinxronizatsiya...",
-    "getPlus": "PLUS-ni xarid qilish"
+    "sync": "Sinxronlanmoqda...",
+    "getPlus": "PLUS olish",
+    "getBasic": "Basic olish",
+    "withAds": "Reklama bilan",
+    "withoutAds": "Reklamasiz"
   },
   "pay": {
     "banner": "Ilovaning barcha funksiyalariga to'liq kirish",

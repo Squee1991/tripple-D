@@ -10317,7 +10317,10 @@
   },
   "submitComputed": {
     "sync": "Sincronizare...",
-    "getPlus": "Achiziționează PLUS"
+    "getPlus": "Obține PLUS",
+    "getBasic": "Obține Basic",
+    "withAds": "Cu reclame",
+    "withoutAds": "Fără reclame"
   },
   "pay": {
     "banner": "Acces complet la toate funcțiile aplicației",

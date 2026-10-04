@@ -10293,7 +10293,10 @@
   },
   "submitComputed": {
     "sync": "सिंक हो रहा है...",
-    "getPlus": "PLUS प्राप्त करें"
+    "getPlus": "PLUS प्राप्त करें",
+    "getBasic": "Basic प्राप्त करें",
+    "withAds": "विज्ञापनों के साथ",
+    "withoutAds": "बिना विज्ञापनों के"
   },
   "pay": {
     "banner": "ऐप की सभी सुविधाओं तक पूर्ण पहुंच",

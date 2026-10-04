@@ -10334,7 +10334,10 @@
   },
   "submitComputed": {
     "sync": "Синхронизация...",
-    "getPlus": "Приобрести PLUS"
+    "getPlus": "Приобрести PLUS",
+    "getBasic": "Приобрести Basic",
+    "withAds": "С рекламой",
+    "withoutAds": 'Без рекламы'
   },
   "pay": {
     "banner": "Полный доступ ко всем функциям приложения",

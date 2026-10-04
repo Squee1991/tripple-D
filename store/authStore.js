@@ -58,6 +58,7 @@ export const userAuthStore = defineStore('auth', () => {
     const hasSeenOnboarding = ref(false);
     const initialized = ref(false);
     const totalHats = ref(0);
+    const hasAds = ref(true);
     const streakCount = ref(0);
     const freezeEndsAt = ref(null);
     const claimedBonuses = ref([]);
@@ -185,6 +186,7 @@ export const userAuthStore = defineStore('auth', () => {
         voiceConsentGiven.value = data.voiceConsentGiven === true;
         hasSeenOnboarding.value = data.hasSeenOnboarding === true;
         totalHats.value = data.totalHats || 0;
+        hasAds.value = data.hasAds ?? true;
         streakCount.value = data.streakCount || 0;
         freezeEndsAt.value = toMillis(data.freezeEndsAt);
         claimedBonuses.value = data.claimedBonuses || [];
@@ -460,6 +462,7 @@ export const userAuthStore = defineStore('auth', () => {
                     isPremium: false,
                     totalHats: 0,
                     streakCount: 0,
+                    hasAds: true,
                     points: 0,
                     claimedBonuses: [],
                     sale_3: false,
@@ -541,6 +544,7 @@ export const userAuthStore = defineStore('auth', () => {
                     isPremium: false,
                     totalHats: 0,
                     streakCount: 0,
+                    hasAds: true,
                     points: 0,
                     claimedBonuses: [],
                     sale_3: false,
@@ -596,6 +600,7 @@ export const userAuthStore = defineStore('auth', () => {
             hasSeenOnboarding: false,
             totalHats: 0,
             streakCount: 0,
+            hasAds: true,
             points: 0,
             claimedBonuses: [],
             sale_3: false,
@@ -835,6 +840,7 @@ export const userAuthStore = defineStore('auth', () => {
     return {
         refreshUser,
         activatePremium,
+        hasAds,
         name,
         email,
         registeredAt,

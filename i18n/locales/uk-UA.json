@@ -10323,7 +10323,10 @@
   },
   "submitComputed": {
     "sync": "Синхронізація...",
-    "getPlus": "Придбати PLUS"
+    "getPlus": "Придбати PLUS",
+    "getBasic": "Придбати Basic",
+    "withAds": "З рекламою",
+    "withoutAds": "Без реклами"
   },
   "pay": {
     "banner": "Повний доступ до всіх функцій додатка",
