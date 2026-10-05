@@ -1,16 +1,11 @@
-# 1. Игнорируем предупреждения от сторонних SDK (чтобы сборка не падала)
--dontwarn com.unity3d.ads.**
--dontwarn com.unity3d.services.banners.**
--dontwarn com.google.api.client.**
--dontwarn com.google.crypto.tink.**
--dontwarn com.amazon.device.iap.**
--dontwarn org.joda.time.**
--dontwarn com.google.firebase.**
--dontwarn com.amazon.**
+# 1. перепаковка
 -dontwarn **
+-repackageclasses ""
+-allowaccessmodification
+-mergeinterfacesaggressively
 
-# 2. Мост Capacitor (Железная бронь ядра, чтобы JS общался с нативом)
--keep @com.getcapacitor.annotation.CapacitorPlugin class *
+# 2. Мост Capacitor (JS <-> Native)
+-keep @com.getcapacitor.annotation.CapacitorPlugin class * { *; }
 -keepclassmembers class * {
     @com.getcapacitor.PluginMethod public *;
     @android.webkit.JavascriptInterface <methods>;
@@ -18,22 +13,38 @@
 -keep class * extends com.getcapacitor.Plugin {
     public <init>(...);
 }
+-keepattributes JavascriptInterface,*Annotation*,Signature,InnerClasses,EnclosingMethod
 
--keepattributes JavascriptInterface
--keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod
 
-# 3. Плагины авторизации (Железная бронь для входа через Google и Firebase)
--keep class com.capawesome.** { *; }
+# Unity Ads -keep public class *
+-keep class com.unity3d.ads.** { *; }
+-keep class com.unity3d.services.** { *; }
+-keep public class gatewayprotocol.v1.** { *; }
+-keep public class com.google.protobuf.** { *; }
+-keep class com.google.ads.mediation.unity.** { *; }
+
+# 3. АВТОРИЗАЦИЯ GOOGLE
+-keep class com.capawesome.capacitorjs.plugins.googlesignin.** { *; }
+-keep class com.capawesome.capacitorjs.plugins.googleauth.** { *; }
 -keep class com.google.android.gms.auth.api.signin.** { *; }
 -keep class com.google.firebase.auth.** { *; }
+-keep class com.google.firebase.FirebaseApp { *; }
+-keep class com.google.firebase.FirebaseOptions { *; }
 
-# 4. Cordova (Бронь для старых плагинов)
+# 4. Cordova
 -keep class * extends org.apache.cordova.CordovaPlugin {
     public <init>(...);
     public boolean execute(java.lang.String, org.json.JSONArray, org.apache.cordova.CallbackContext);
 }
 
-# 5. Вырезание логов (Безопасно очищает мусор из консоли, не ломая код)
+# 5. Оптимизация
+-keep class com.getcapacitor.community.tts.TextToSpeech { public *; }
+-keepclassmembers class * implements android.speech.tts.TextToSpeech$OnInitListener { public void onInit(int); }
+-keepclassmembers class * extends android.speech.tts.UtteranceProgressListener { <methods>; }
+-keep class com.tchvu3.cancanster.VoiceRecorder { public *; }
+-keep class com.tchvu3.cancanster.models.** { <fields>; }
+
+# 6. Очистка неиспользуемых логов
 -assumenosideeffects class android.util.Log {
     public static boolean isLoggable(java.lang.String, int);
     public static int v(...);
