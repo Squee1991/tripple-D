@@ -744,7 +744,7 @@
           "uk-UA": "До побачення!",
           "uz-UZ": "Ko'rishguncha!"
         },
-        "nextStep": "end"
+        "nextStep": null
       },
       {
         "text": "Tschüss!",
@@ -761,27 +761,9 @@
           "uk-UA": "Бувай!",
           "uz-UZ": "Xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Der Vorgang ist beendet.",
-    "botTranslation": {
-      "ar-SA": "انتهت العملية.",
-      "en-US": "The process is finished.",
-      "es-ES": "El proceso ha terminado.",
-      "fr-FR": "L'opération est terminée.",
-      "hi-IN": "प्रक्रिया समाप्त हो गई है।",
-      "pl-PL": "Proces został zakończony.",
-      "ro-RO": "Procesul s-a încheiat.",
-      "ru-RU": "Операция завершена.",
-      "tr-TR": "İşlem bitti.",
-      "uk-UA": "Операція завершена.",
-      "uz-UZ": "Jarayon tugadi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

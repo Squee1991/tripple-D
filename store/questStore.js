@@ -41,44 +41,13 @@ export const useQuestStore = defineStore('quest', () => {
                 ...item,
                 title: themenMap[index]?.title || '',
                 description: themenMap[index]?.description || '',
-                // ИСПРАВЛЕНИЕ: Берем availableIds напрямую из вашего JSON
+
                 availableIds: item.availableIds || []
             }))
         } catch (err) {
             console.error('Ошибка загрузки тем:', err)
         }
     }
-    // async function loadThemesAndRecipes() {
-    //     if (!isClient) return
-    //     try {
-    //         const response = await fetch('/quest-themen/themen.json')
-    //         const data = await response.json()
-    //         const allRecipes = []
-    //
-    //         for (const item of data) {
-    //             try {
-    //                 const res = await fetch(`/quest-themen/recipes-${item.id}.json`)
-    //                 const json = await res.json()
-    //                 allRecipes.push(...json)
-    //             } catch {
-    //                 console.warn(`Не удалось загрузить рецепты для темы "${item.id}"`)
-    //             }
-    //         }
-    //         themes.value = data.map((item, index) => {
-    //             const availableIds = allRecipes
-    //                 .filter(r => r.theme === item.id && r.title)
-    //                 .map(r => r.id)
-    //             return {
-    //                 ...item,
-    //                 title: themenMap[index]?.title || '',
-    //                 description: themenMap[index]?.description || '',
-    //                 availableIds
-    //             }
-    //         })
-    //     } catch (err) {
-    //         console.error('Ошибка загрузки тем:', err)
-    //     }
-    // }
 
     async function loadDailyProgress() {
         if (!await initFirebase()) return

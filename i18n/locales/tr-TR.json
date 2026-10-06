@@ -3516,7 +3516,8 @@
     "close": "Kapat",
     "light": "Açık",
     "dark": "Koyu",
-    "pink": "Romantik"
+    "pink": "Romantik",
+    "halloween": "Cadılar Bayramı"
   },
   "pinkThemeModal": {
     "partOne": "Bu temanın kilidi sadece",
@@ -3584,10 +3585,10 @@
     "again": "Tekrar",
     "buyLive": "Devam etmek için ekstra bir can satın alın.",
     "prise": "Fiyat",
-    "priseValue": "10 Articlus",
+    "priseValue": "5 Articlus",
     "balance": "Sahipsiniz:",
     "points": "Articlus",
-    "buy": "10 karşılığında can satın al",
+    "buy": "5 karşılığında can satın al",
     "notEnough": "Yetersiz",
     "questNotCompleted": "Görevi tamamlamadınız",
     "warning": "Şimdi çıkarsanız ilerleme kaydedilmeyecek.",
@@ -3710,12 +3711,13 @@
     "quest-6": "Bir Cevap Seç"
   },
   "eventPanel": {
+    "errors": "Hatalar",
     "pathMain": "Ana Sayfa",
     "event": "Etkinlik",
     "panel": "Etkinlik Paneli",
     "reputation": "İtibar",
     "currency": "Para Birimi",
-    "shop": "İtibar Mağazası",
+    "shop": "Mağaza",
     "bought": "Satın Alındı",
     "notAllowed": "Erişilemez",
     "notEnough": "Yetersiz",
@@ -5238,7 +5240,17 @@
     "cupidArrow": "Eros'un Yayı",
     "cupidArrowDescription": "Etkinlikler - Kalpler Festivali: 'Tam İsabet' başarımı için verilir",
     "adventures": "Seyahat Parşömeni",
-    "adventuresDescription": "Ödül, Dil Toprakları kategorisindeki şu başarımı tamamlayarak elde edilir: «Macera Yolları Ustası»"
+    "adventuresDescription": "Ödül, Dil Toprakları kategorisindeki şu başarımı tamamlayarak elde edilir: «Macera Yolları Ustası»",
+    "witchBroom": "Cadı süpürgesi",
+    "witchBroomDescription": "«Balkabağı Şenliği» etkinlik kategorisindeki «Şimşek mi? Hayır, daha hızlı!» başarımını tamamlama ödülü.",
+    "witchHat": "Büyücü şapkası",
+    "witchHatDescription": "«Balkabağı Şenliği» etkinlik kategorisindeki «Bölüm seçimi» başarımını tamamlama ödülü.",
+    "pumpkin": "Balkabağı",
+    "pumpkinDescription": "«Balkabağı Şenliği» etkinlik kategorisindeki «Kafada balkabağı» başarımını tamamlama ödülü.",
+    "spellBook": "Büyü kitabı",
+    "spellBookDescription": "«Balkabağı Şenliği» etkinlik kategorisindeki «Süvarinin büyü kitabı» başarımını tamamlama ödülü.",
+    "punch": "İksir kazanı",
+    "punchDescription": "«Balkabağı Şenliği» etkinlik kategorisindeki «Sihirli panç» başarımını tamamlama ödülü."
   },
   "wildLandsFirstQuest": {
     "title": "Çevre",
@@ -5792,102 +5804,102 @@
     "questFifteen": "Dinleyin ve cümleyi yazın"
   },
   "eastPlainFirstQuests": {
-    "title": "İlk Buluşma",
-    "description": "Yeni bir kıtaya vardınız. İlk olarak, yerel halkı selamlamayı ve teşekkür etmeyi öğrenmelisiniz, böylece ilk tanışmanızı kurabilirsiniz.",
-    "goal": "İlk adımı atın. Selamlama ve teşekkür etme kelimelerini öğrenin.",
-    "questOne": "'Merhaba' nasıl denir",
-    "questTwo": "'Teşekkür ederim' nasıl denir",
-    "questFour": "'İyi akşamlar' nasıl denir",
-    "questFive": "Söyleyin: 'Nasılsın?'",
-    "questSix": "Kurun: 'Merhaba! Nasılsın?'",
-    "questSeven": "'Hoşça kal' nasıl denir",
-    "questEight": "'İyi' nasıl denir",
-    "questNine": "Dinleyin ve yazın",
-    "questTen": "Cümle kurun: Merhaba! Nasılsın? İyiyim, teşekkürler!",
-    "questEleven": "'Kötü' nasıl denir",
-    "questTwelve": "'Çok iyi' nasıl denir?",
-    "questThirteen": "'Güle güle' nasıl denir",
-    "questFourteen": "'Çok iyi, teşekkürler' nasıl denir",
-    "questFifteen": "Dinleyin ve cümleyi yazın:"
+    "title": "İlk Karşılaşma",
+    "description": "Bilinmeyen bir kıtaya yeni vardınız. İlk olarak, yerlilerle selamlaşmayı ve ilk tanışmayı başlatmak için teşekkür etmeyi öğrenmeniz gerekiyor.",
+    "goal": "İlk adımı at. Selamlama ve teşekkür kelimelerini öğren",
+    "questOne": "Nasıl denir: Merhaba",
+    "questTwo": "Nasıl denir: Teşekkür ederim",
+    "questFour": "Nasıl denir: İyi akşamlar",
+    "questFive": "Söyle: Nasılsın",
+    "questSix": "Oluştur: Merhaba! Nasılsın?",
+    "questSeven": "Nasıl denir: Hoşça kal",
+    "questEight": "Nasıl denir: İyi",
+    "questNine": "Dinle ve yaz",
+    "questTen": "Cümleyi oluştur: Merhaba! Nasılsın?",
+    "questEleven": "Nasıl denir: Kötü",
+    "questTwelve": "Nasıl denir: Çok iyi",
+    "questThirteen": "Nasıl denir: Güle güle",
+    "questFourteen": "Nasıl denir: Çok iyi, teşekkür ederim",
+    "questFifteen": "Dinle ve yaz: Merhaba! Nasılsın?"
   },
   "eastPlainSecondQuests": {
     "title": "İkinci Gün",
-    "description": "İlk tanışmadan sonra konuşmaya devam ediyorsunuz. Yerel halk kendini tanıtıyor: nereli olduklarını ve adlarını söylüyorlar. Siz de kibar sorular sormayı öğreniyorsunuz.",
-    "questOne": "'Yarın görüşürüz' nasıl denir",
-    "questTwo": "'Görüşürüz' nasıl denir",
-    "questTree": "Söyleyin: Bis Morgen",
-    "questFour": "Dinleyin ve cevabı yazın",
-    "questFive": "Cümle kurun: 'Merhaba Thomas! Nasılsın? İyiyim, ya sen? İyiyim, teşekkürler!'",
-    "questSix": "Cümle kurun: 'Yakında görüşürüz Thomas'",
-    "questSeven": "Cümle kurun: 'Merhaba! Nerelisin?'",
-    "questEight": "'Ben ...liyim' nasıl denir",
-    "questNine": "Dinleyin ve cevabı yazın",
-    "questTen": "Dinleyin ve cevabı yazın",
-    "questEleven": "Söyleyin: Merhaba! Nasılsın?",
-    "questTwelve": "'Adınız nedir?' nasıl denir",
-    "questThirteen": "Yazın: Merhaba! Benim adım Thomas",
-    "questFourteen": "'Sizin adınız nedir?' nasıl denir",
-    "questFifteen": "Dinleyin ve cevabı yazın:"
+    "description": "İlk buluşmadan sonra iletişime devam ediyorsunuz. Yerliler kendileri hakkında bilgi paylaşıyor: nereli oldukları ve isimleri. Kibar sorular sormayı öğreniyorsun.",
+    "questOne": "Nasıl denir: Yarına kadar",
+    "questTwo": "Nasıl denir: Görüşürüz",
+    "questTree": "Dinle ve yaz: Yarına kadar",
+    "questFour": "Cümleyi oluştur: Yarın görüşürüz",
+    "questFive": "Nasıl denir: Yakında görüşürüz",
+    "questSix": "Nasıl sorulur: Nereli / Nereden?",
+    "questSeven": "Dinle ve yaz: Nereden?",
+    "questEight": "Dinle ve yaz: Nerelisin?",
+    "questNine": "Cümleyi oluştur: Merhaba, nerelisin?",
+    "questTen": "Dinle ve yaz: Merhaba, nerelisin?",
+    "questEleven": "Seçeneği seç: Adı olmak / Çağırmak",
+    "questTwelve": "Nasıl denir: Adınız nedir? (resmi/kibar)",
+    "questThirteen": "Cümleyi oluştur: Adınız nedir? (resmi/kibar)",
+    "questFourteen": "Nasıl denir: Adın ne?",
+    "questFifteen": "Dinle ve cevabı yaz:"
   },
   "eastPlainThirdQuests": {
-    "title": "Ne yapmayı seversin?",
-    "goal": "Hobiler ve boş zaman hakkında konuşmayı öğrenmek",
-    "description": "Yeni arkadaşlarınız sizi birlikte vakit geçirmeye davet ediyor, mağazaya veya süpermarkete gitmeyi öneriyorlar. Siz de nereye gittiğinizi ve ne yapacağınızı söylemeyi öğreniyorsunuz.",
-    "questOne": "'Mağaza' nasıl denir",
-    "questTwo": "'Satın almak' nasıl denir",
-    "questTree": "'Mağazaya gidiyorum' nasıl denir",
-    "questFour": "Dinleyin ve yazın",
-    "questFive": "'Merhaba! Nereye gidiyorsun? Mağazaya gidiyorum' nasıl denir",
-    "questSix": "Dinleyin ve yazın",
-    "questSeven": "'Ben de mağazaya gidiyorum' nasıl denir",
-    "questEight": "Dinleyin ve yazın",
-    "questNine": "'Süpermarket' nasıl denir",
-    "questTen": "Dinleyin ve yazın",
-    "questEleven": "'Süpermarkete gitmiyorum' nasıl denir",
-    "questTwelve": "'Kasa' nasıl denir",
-    "questThirteen": "'Fiyat' nasıl denir",
-    "questFourteen": "'Fiş' nasıl denir",
-    "questFifteen": "Dinleyin ve yazın"
+    "title": "Mağazaya gidiş",
+    "goal": "Alışverişle ilgili kelimeleri ve basit yön ifadelerini öğrenmek",
+    "description": "Mağaza ve süpermarketi adlandırmayı, nereye gittiğimizi söylemeyi öğreniyoruz.",
+    "questOne": "Nasıl denir: Mağaza",
+    "questTwo": "Nasıl denir: Satın almak",
+    "questTree": "Nasıl denir: Gitmek",
+    "questFour": "Oluştur: Gidiyoruz",
+    "questFive": "Oluştur: Ekmek alıyoruz",
+    "questSix": "Dinle ve yaz: Ekmek alıyoruz",
+    "questSeven": "Oluştur: Mağazaya gidiyoruz",
+    "questEight": "Oluştur: Mağazaya gidiyorum",
+    "questNine": "Nasıl denir: Süpermarket",
+    "questTen": "Dinle ve yaz: Süpermarket",
+    "questEleven": "Oluştur: Süpermarkete gitmiyorum",
+    "questTwelve": "Nasıl denir: Kasa",
+    "questThirteen": "Nasıl denir: Fiyat",
+    "questFourteen": "Nasıl denir: Fiş",
+    "questFifteen": "Dinle ve yaz: Kasa"
   },
   "eastPlainFourthQuests": {
     "title": "Alışverişe devam edelim mi?",
-    "description": "Mağazada kasaya geldiniz. Kuyruk, fiyat ve ödeme yöntemleri (nakit, kart) gibi kavramları kullanmayı öğreniyorsunuz.",
-    "goal": "Kuyruk, fiyat ve ödeme kavramlarını öğrenin.",
-    "questOne": "'Kuyruk' nasıl denir",
-    "questTwo": "'Kasa' nasıl denir",
-    "questTree": "Kurun: Kuyrukta bekliyorum",
-    "questFour": "Dinleyin ve yazın:",
-    "questFive": "'Ödemek' nasıl denir?",
-    "questSix": "Dinleyin ve yazın:",
-    "questSeven": "'Para' nasıl denir?",
-    "questEight": "'Nakit' nasıl denir?",
-    "questNine": "Dinleyin ve yazın:",
-    "questTen": "'Banknot' nasıl denir?",
-    "questEleven": "Kurun: Kartla ödemek",
-    "questTwelve": "Dinleyin ve yazın:",
-    "questThirteen": "Dinleyin ve yazın:",
-    "questFourteen": "'Bozuk para' nasıl denir",
-    "questFifteen": "Dinleyin ve yazın:"
+    "description": "Mağazaya vardığınızda kasaya ulaşırsınız. Kuyruk, fiyat ve ödeme yöntemleri (nakit, kart) kavramlarını yönetmeyi öğreniyorsunuz.",
+    "goal": "Kuyruk, fiyat ve ödeme yöntemleri kavramlarını yönetmeyi öğrenmek",
+    "questOne": "Nasıl denir: Kuyruk",
+    "questTwo": "Nasıl denir: Kasa",
+    "questTree": "Oluştur: Kuyrukta bekliyorum",
+    "questFour": "Dinle ve yaz: Kuyruk",
+    "questFive": "Nasıl denir: Ödemek",
+    "questSix": "Dinle ve yaz: Ödüyorum",
+    "questSeven": "Nasıl denir: Para?",
+    "questEight": "Nasıl denir: Nakit?",
+    "questNine": "Dinle ve yaz: Nakit ödüyorum",
+    "questTen": "Nasıl denir: Kağıt para / Banknot?",
+    "questEleven": "Oluştur: Kartla ödüyorum",
+    "questTwelve": "Dinle ve yaz: Kartla ödüyorum",
+    "questThirteen": "Dinle ve yaz: Nakit ödüyorum",
+    "questFourteen": "Nasıl denir: Madeni para",
+    "questFifteen": "Dinle ve yaz: Madeni para"
   },
   "eastPlainFifthQuests": {
     "title": "Ne yiyorsun?",
-    "description": "Alışverişten sonra bir kafede atıştırmaya karar veriyorsun. Yemek ve içecek (çay, kahve, su) siparişi vermeyi, kibarca istemeyi ve fiyat sormayı öğreniyorsun.",
-    "goal": "Yemek hakkında konuşmayı, satın almayı ve sipariş vermeyi öğrenin",
-    "questOne": "'Lütfen' nasıl denir",
-    "questTwo": "'Çay, lütfen' nasıl denir",
-    "questTree": "'Banknot' nasıl denir",
-    "questFour": "Dinle ve yaz:",
-    "questFive": "Cümle kur: Kahve istiyorum, lütfen",
-    "questSix": "'Ne kadar?' nasıl sorulur",
+    "description": "Alışverişten sonra bir kafede atıştırmaya karar veriyorsunuz. Yiyecek ve içecek (çay, kahve, su) sipariş etmeyi, kibarca istemeyi ve yemeklerin fiyatını sormayı öğreniyorsunuz.",
+    "goal": "Yemek hakkında konuşmayı, satın almayı ve sipariş vermeyi öğrenmek",
+    "questOne": "Nasıl denir: Lütfen",
+    "questTwo": "Nasıl denir: Çay, lütfen",
+    "questTree": "Nasıl denir: Kağıt para / Banknot",
+    "questFour": "Dinle ve yaz: Kağıt para",
+    "questFive": "Cümleyi oluştur: Bir kahve istiyorum lütfen",
+    "questSix": "Nasıl sorulur: Ne kadar?",
     "questSeven": "Boşluğu doldur: Wie ___ kostet das Getränk?",
-    "questEight": "Müşteri ne almak istiyor?",
-    "questNine": "Dinle ve cümleyi yaz",
-    "questTen": "'Bir şişe su' nasıl denir",
-    "questEleven": "'Çay içmeyi severim' nasıl denir",
+    "questEight": "Müşteri ne satın almak istiyor?",
+    "questNine": "Dinle ve yaz: Ekmek alıyorum",
+    "questTen": "Nasıl denir: Bir şişe su",
+    "questEleven": "Nasıl denir: Ne kadar?",
     "questTwelve": "Boşluğu doldur: ___ viel kostet Wasser?",
-    "questThirteen": "Cümle kur: Çay ve tereyağlı ekmek, lütfen",
+    "questThirteen": "Cümleyi oluştur: Çay ve ekmek, lütfen",
     "questFourteen": "Kişi ne sipariş etti?",
-    "questFifteen": "Dinle ve cümleyi yaz"
+    "questFifteen": "Dinle ve yaz: Ne kadar?"
   },
   "eastPlainSixthQuests": {
     "title": "Ne iş yapıyorsun?",
@@ -8046,7 +8058,7 @@
   },
   "cardTime": {
     "title": "Zamanı Durdurma",
-    "description": "Keplerinizi cezalara karşı korur"
+    "description": "Serinizi ve şapkalarınızı cezalardan korur"
   },
   "cardSales": {
     "title3": "Plus-I İndirimi",
@@ -8073,7 +8085,12 @@
     "selectDaysPeriod": "Gün sayısını seçin. Bu süre zarfında kepleriniz silinmeyecektir.",
     "maximum": "Maksimum",
     "cancel": "İptal",
-    "accessibly": "Anlaşıldı"
+    "accessibly": "Anladım",
+    "coupon_buy": "Kupon satın al",
+    "coupon_error": "Satın alma koşulları",
+    "coupon_success": "Başarılı!",
+    "coupon_owned": "Kupon aktif",
+    "buyingPlus": "PLUS Satın Al"
   },
   "shopDaysRaw": {
     "dayFirst": "gün",
@@ -8101,7 +8118,7 @@
   },
   "cabinetSidebar": {
     "valueOne": "Hesap",
-    "valueTwo": "Artikeller",
+    "valueTwo": "Sınavlar",
     "valueThree": "Mağaza",
     "valueFour": "Ayarlar"
   },
@@ -8122,7 +8139,8 @@
     "themeBtn": "Tema",
     "snowFall": "Kar yağışı",
     "language": "Arayüz dili",
-    "profileData": "Profil verileri"
+    "profileData": "Profil verileri",
+    "hedgehogAssistent": "Kirpi Asistan"
   },
   "cabinet": {
     "plusCanceled": "PLUS iptal edildi",
@@ -8170,6 +8188,7 @@
   },
   "pavelOverlay": {
     "newbie": "Çaylak",
+    "streakTitle": "Seri",
     "rankTitle": "Mezuniyet Kepleri",
     "rankLabelOne": "- Mezuniyet Kepleri günlük görevleri tamamladıkça verilir.",
     "rankLabelTwo": "- Tüm günlük görevleri yaparak günde 3 adet alabilirsin. Ödülleri profilindeki 'Rütbe' bölümünden görebilirsin.",
@@ -10187,13 +10206,14 @@
     "cabinet": "Hesap"
   },
   "speakTopics": {
-    "speak": "Tanışma ve sohbet",
-    "food": "Yiyecek ve alışveriş",
-    "transport": "Seyahat ve ulaşım",
+    "speak": "Tanışma ve iletişim",
+    "food": "Yemek ve alışveriş",
     "city": "Şehir hizmetleri ve günlük yaşam",
     "health": "Sağlık",
     "work": "İş ve kariyer",
-    "auto": "Araba ve yol"
+    "auto": "Araba ve yol",
+    "travel": "Seyahat",
+    "sport": "Spor"
   },
   "speakThemes": {
     "firstmeet": "Tanışma",
@@ -10305,8 +10325,11 @@
     "restore": "Satın almaları geri yükle."
   },
   "submitComputed": {
-    "sync": "Senkronize ediliyor...",
-    "getPlus": "PLUS Satın Al"
+    "sync": "Eşitleniyor...",
+    "getPlus": "PLUS Satın Al",
+    "getBasic": "Basic Satın Al",
+    "withAds": "Reklamlı",
+    "withoutAds": "Reklamsız"
   },
   "pay": {
     "banner": "Uygulamanın tüm özelliklerine tam erişim",
@@ -10413,8 +10436,7 @@
   },
   "installApp": {
     "stayInBrowser": "Tarayıcıda devam et",
-    "promoSubTitle": " Skillupgerman uygulaması ile Almanca öğrenmek çok daha pratik.",
-    "soon": "Yakında"
+    "promoSubTitle": " Skillupgerman uygulaması ile Almanca öğrenmek çok daha pratik."
   },
   "speakSessionsBanner": {
     "dialog": "Diyalogları tamamlayın. Dinleyin, cevap seçeneklerini belirleyin ve telaffuz pratiği yapın",
@@ -10611,7 +10633,7 @@
     "description": "Tüm özelliklerin kilidi zaten açıldı"
   },
   "newsBannerText": {
-    "text": "Merhaba! Skillupgerman her gün burada Almanca hakkında ilginç haberler yayınlıyor. Keyifle öğrenin!"
+    "text": "Merhaba! Skillupgerman burada Almanca hakkında ilginç haberler yayınlıyor. Keyifle öğrenin!"
   },
   "marathonLeaderBoard": {
     "stateHint": "Yarış yakında başlayacak! Yeni sezona hazır olun.",
@@ -10624,20 +10646,43 @@
     "win-screen": "Harika iş çıkardın!",
     "win-desc": "Artık derslerine geri dönebilirsin."
   },
-  "appBanner": {
-    "promo": "Almanca her zaman elinizin altında",
-    "promo_sub": "Yolda, molada veya uyumadan önce öğrenmeye devam edin!",
-    "subTextApple": "İndirin",
-    "subTextAriaApple": "App Store'dan indirin",
-    "subTextGoogle": "Şuradan ulaşın:",
-    "subTextAriaGoogle": "Google Play'de mevcut"
-  },
-  "public__copyright": {
-    "text": "Skillupgerman. Tüm hakları saklıdır."
+  "updatePassword": {
+    "title": "Yeni şifre oluştur",
+    "newPasswordLabel": "Yeni şifre",
+    "newPasswordPlaceholder": "En az 6 karakter",
+    "confirmPasswordLabel": "Şifreyi onayla",
+    "confirmPasswordPlaceholder": "Yeni şifreyi tekrar girin",
+    "savingBtn": "Kaydediliyor...",
+    "saveBtn": "Şifreyi kaydet",
+    "invalidLinkLoad": "Kurtarma bağlantısının süresi dolmuş veya geçersiz. Lütfen tekrar sıfırlama isteyin.",
+    "invalidLinkSubmit": "Kodun süresi dolmuş veya zaten kullanılmış. Tekrar sıfırlama isteyin.",
+    "minLength": "Şifre en az 6 karakter uzunluğunda olmalıdır.",
+    "mismatch": "Şifreler eşleşmiyor. Tekrar deneyin.",
+    "success": "Şifre başarıyla güncellendi! Yönlendiriliyor...",
+    "expiredCode": "Kodun süresi doldu veya zaten kullanıldı. Yeni bir tane isteyin.",
+    "networkError": "Ağ hatası. İnternet bağlantınızı kontrol edin.",
+    "defaultError": "Beklenmeyen bir hata oluştu. Lütfen daha sonra tekrar deneyin."
   },
   "eulaText": {
     "text": "Satın alarak şunları kabul etmiş olursunuz:",
     "month": "ay"
+  },
+  "shopInfoModal": {
+    "buyDiscount": "Kupon satın al",
+    "suma": "Ödenecek tutar:",
+    "forBuyingPartOne": "Satın almak için",
+    "forBuyingPartTwo": "gereken:",
+    "notEnough": "yetersiz",
+    "successBuy": "Kupon başarıyla etkinleştirildi!",
+    "howToUse": "Bunu Plus satın alma ekranında kullanabilirsiniz.",
+    "pcs": "adet"
+  },
+  "freeTrial": {
+    "free-text": "Deneme süresi",
+    "free-days": "gün ücretsiz",
+    "then": "ardından",
+    "trial-text-part-one": "Deneme süresi sona erdiğinde, abonelik ücreti otomatik olarak çekilecektir:",
+    "trial-text-part-two": "Abonelik, mevcut dönemin bitiminden en az 24 saat önce Google hesap ayarlarınızdan (Google Play) iptal etmediğiniz sürece otomatik olarak yenilenir."
   },
   "landWordsSession": {
     "grammar": "Gramer",
@@ -10661,5 +10706,405 @@
     "done": "Harika! Bugünün görevi tamamlandı.",
     "btn": "Geri dön"
   },
-
+  "hedgehogImageHelper": {
+    "limit_text": "Bugünlük ipucu sınırına ulaşıldı, yarın geri gel",
+    "limit_return_text": "PLUS al ve sınırsız öğren",
+    "hintAnsweredTitle": "Merhaba! Neye dikkat etmen gerektiği konusunda sana bir ipucu vereyim.",
+    "hintAnsweredMistakesTitle": "Cevabını analiz edip hatalarımı açıklamamı ister misin?",
+    "mainHint": "Cevap analizi:",
+    "mainHint2": "İpucu:",
+    "betterToSay": "Nasıl söylenir:",
+    "usefulWords": "Faydalı kelimeler:",
+    "grammarHint": "Gramer ipucu:",
+    "getPlus": "PLUS Al",
+    "getHint": "İpucu al",
+    "thanks": "Anladım, teşekkürler!",
+    "close": "Kapat",
+    "loading": "Yükleniyor...",
+    "errorText": "Analiz sırasında bir hata oluştu...",
+    "errorTip": "Biraz sonra tekrar dene...",
+    "hintAds": " \uD83D\uDCFA Reklam izle (+1 ipucu)"
+  },
+  "hedgehogHleper": {
+    "greetings": "Halli hallo! Nasıl yardımı olabilirim?",
+    "answer": "Cevap:",
+    "hintBtn": " İpucu ver",
+    "myself": " Kendim deneyeceğim",
+    "plus": "PLUS Satın Al",
+    "thanks": "Anladım, teşekkürler",
+    "tillTommorow": "Anladım, yarına kadar",
+    "error": "Bir hata oluştu, lütfen daha sonra tekrar deneyin",
+    "cancel": "İptal",
+    "limitText": "Top gibi kıvrıldım - yarına kadar dinleniyorum.",
+    "limitText2": "Bugünlük ipuçları bitti. Yarın mutlaka uğra - Almancanı birlikte geliştirmeye devam edelim!"
+  },
+  "hedgehogModal": {
+    "ok": "Anladım",
+    "onInfo": "Üst kısimdeki anahtarı kullanarak veya profil ayarlarınızdan istediğiniz zaman tekrar açabilirsiniz.",
+    "off": "Kirpi devre dışı bırakıldı",
+    "letsgo": "Hadi deneyelim",
+    "title": "Yeni asistan",
+    "intro_title": "Kişisel asistanınız",
+    "intro-subtitle": "Pratik yaparken Almancayı ve grameri ustalıkla öğrenmenize yardımcı olur.",
+    "titleImages": "Resim açıklamaları",
+    "descriptionImages": "Resmi inceler, hazır cümle kalıpları ve gereken kelimeleri önerir.",
+    "titleLands": "Dil diyarı görevleri",
+    "descriptionLands": "Ses kayıtlarında yardımcı olur, kelime tuzaklarını çözer ve doğru kelime dizilimini gösterir.",
+    "titleThematic": "Tematik seviyeler",
+    "descriptionThematic": "Tereddütte kaldığınızda doğrudan alıştırma sırasında artikelleri ve ismin hallerini açıklar."
+  },
+  "questModals": {
+    "repeat": "Xatolarni takrorlash",
+    "next": "Keyingi vazifa ➔",
+    "back": "Mavzularga",
+    "mistakes": "Mukofot olinmadi",
+    "areErrors": "XATOLAR BOR",
+    "succesCompleted": "BAJARILDI",
+    "rewardGot": "Siz mukofot oldingiz:",
+    "questCompletedAgain": "Vazifa qaytadan bajarildi:"
+  },
+  "calendarHints": {
+    "first": "Bu hafta harika bir tempo! Aynen böyle devam",
+    "second": "Bugün atılan küçük bir adım, yarın devasa bir sonuç demektir!",
+    "third": "Disiplin harikalar yaratır. Her geçen gün hedefine daha da yaklaşıyorsun!",
+    "fourth": "Ateş gittikçe daha parlak yanıyor! Hız kesme",
+    "fifth": "Tamamlanan her gün demir gibi bir alışkanlık oluşturuyor!",
+    "sixth": "Birçok kişinin vazgeçtiği şeyi başarıyorsun. Harika iş!",
+    "seventh": "Serin gün geçtikçe güçleniyor, böyle devam et!",
+    "eighth": "Günde sadece birkaç dakika ve Almanca şimdiden daha samimi gelmeye başladı!",
+    "ninth": "Harika iş! Önemli olan düzenli olmak, öndesin",
+    "tenth": "Her geçen gün özgüven katıyor. Yarın devam edeceğiz!"
+  },
+  "streakButtons": {
+    "first": "Yarın görüşürüz",
+    "second": "Yarın devam edelim",
+    "third": "Harika iş",
+    "fourth": "Adım tamam, yarına kadar",
+    "fifth": "Yarın pekiştirelim mi?",
+    "sixth": "Disiplin dorukta",
+    "seventh": "Yarına kadar",
+    "eighth": "Yarın tekrar edelim mi?",
+    "ninth": "Tempoyu düşürmüyoruz"
+  },
+  "hintText": {
+    "start": "Serin başladı. Kaybetmemek için her gün pratik yap!",
+    "first": "Haftanın sonu! Yarın yepyeni ve temiz bir serinin başlangıcı",
+    "second": "Bu haftayı bitirelim, sonrakinden itibaren tam seri başlayalım",
+    "aRow": "üst üste"
+  },
+  "guessWordHint": {
+    "hint-title": "İpucu",
+    "hint-desc": "Haklarından harcamadan rastgele 2 harf açar",
+    "hint-action-btn": "Kullan"
+  },
+  "halloweenEventQuests": {
+    "questOne": "Resim → Kelime",
+    "questTwo": "Temel bilgiler ve gerçekler",
+    "questThree": "Alman gelenekleri",
+    "questFour": "Yaratıklar ve efsaneler",
+    "questFive": "Kostümler ve sonbahar gecesi",
+    "questSix": "Semboller ve adetler",
+    "questSeven": "Balkabağı akşamı",
+    "questEight": "Şeker toplama turu",
+    "questNine": "Frankenstein Kalesi",
+    "questTen": "Reform ve bayram",
+    "questEleven": "Eski şalgam ruhu",
+    "questTwelve": "Tüm Azizler Günü",
+    "questThirteen": "Aziz Martin Günü",
+    "questFourteen": "Ludwigsburg Balkabağı Sergisi",
+    "questFifteen": "Parti oyunları",
+    "questSixteen": "Neşeli mumya",
+    "questSeventeen": "Resim ve kelime",
+    "questEighteen": "Kutlama ögeleri",
+    "questNineteen": "Alman efsaneleri",
+    "questTwenty": "Sonbahar pançı",
+    "questTwentyOne": "Farklı kelimeyi bul",
+    "questTwentyTwo": "Farklı olanı bul - hava durumu",
+    "questTwentyThree": "Farklı olanı bul - hava durumu"
+  },
+  "eventsShopItemsHalloween": {
+    "witchBroom": "Cadı süpürgesi",
+    "witchHat": "Büyücü şapkası",
+    "pumpkin": "Balkabağı",
+    "punch": "Cadı pançı",
+    "spellBook": "Büyü kitabı",
+    "ghostEffect": "Cadılar Bayramı efekti"
+  },
+  "hallowenQuestTwo": {
+    "titleOne": "Cadılar Bayramı ne zaman kutlanır?",
+    "titleTwo": "Cadılar Bayramı'nda geleneksel olarak hangi sebze oyulur?",
+    "titleThree": "Almanya'da çocuklar şeker isterken ne diye bağırırlar?",
+    "titleFour": "Oyulmuş meşhur balkabağı fenerine ne ad verilir?",
+    "titleFive": "Cadılar Bayramı ile en çok özdeşleşen iki renk hangisidir?",
+    "titleSix": "Bayramın en önemli gece sembolü sayılan hayvan hangisidir?",
+    "titleSeven": "Cadılar Bayramı'nın hemen ardından, 1 Kasım'da hangi bayram gelir?",
+    "titleEight": "Oyulmuş balkabağının içine geleneksel olarak ne konur?"
+  },
+  "hallowenQuestThree": {
+    "titleOne": "Balkabağının gelişinden önce Alman topraklarında ne oyulurdu?",
+    "titleTwo": "1970'lerden bu yana hangi Alman kalesinde büyük bir Cadılar Bayramı festivali düzenlenmektedir?",
+    "titleThree": "Lüteriyen Kilisesi 31 Ekim'de hangi önemli bayramı kutlar?",
+    "titleFour": "Kasım ayındaki hangi bayramda çocuklar el yapımı fenerlerle sokaklarda yürür?",
+    "titleFive": "Kasım ayında şalgam fenerleri (Räbeliechtli) oyma geleneği hangi ülkeye aittir?",
+    "titleSix": "Eski bir Alman inanışına göre bu gece mutfaktaki bıçaklar neden saklanır?",
+    "titleSeven": "Almanya'nın bazı eyaletlerinde partilerin gece yarısına doğru sessizleşmesi neden gerekir?",
+    "titleEight": "Almanya'da balkabağının içinden en çok ne pişirilir?"
+  },
+  "hallowenQuestFour": {
+    "titleOne": "Sarımsaktan korkan ve gündüzleri tabutta uyuyan yaratık hangisidir?",
+    "titleTwo": "Alman efsanelerine göre cadılar Harz Dağları'ndaki hangi dağda toplanır?",
+    "titleThree": "Dolunayda kurda dönüşen kişiye ne ad verilir?",
+    "titleFour": "Efsanelere göre bir cadı neyin üzerinde uçar?",
+    "titleFive": "Eski kalelerde beyaz elbiseler içinde dolaşan varlık hangisidir?",
+    "titleSex": "Halk inanışlarında cadıya en sık eşlik eden hayvan hangisidir?",
+    "titleSeven": "Yolcuları patikadan saptıran bataklıktaki aldatıcı ışıklara ne ad verilir?",
+    "titleEight": "Yeniden canlanan yavaş hareketli ölüye ne denir?"
+  },
+  "hallowenQuestFive": {
+    "titleOne": "İnsanlar başlangıçta neden korkunç kılıklara girerlerdi?",
+    "titleTwo": "Karanlık bir zemin üzerindeki beyaz kemiklerden oluşan kostüm hangisidir?",
+    "titleThree": "Bir vampirin siyah pelerininin yanına mutlaka ne takılmalıdır?",
+    "titleFour": "Eskiden en basit hayalet kostümü için temel olarak ne kullanılırdı?",
+    "titleFive": "Panayırlarda genellikle parlak kırmızı şeker kaplamasıyla kaplanan meyve hangisidir?",
+    "titleSix": "Korkutucu bir atmosfer yaratmak için odaların köşelerine genellikle ne asılır?",
+    "titleSeven": "Almanya'da çocuklara söyledikleri tekerleme karşılığında en çok ne verilir?",
+    "titleEight": "Çocuklar şeker toplamak için evleri genellikle hangi saatte gezmeye başlarlar?"
+  },
+  "hallowenQuestSix": {
+    "titleOne": "Cadılar Bayramı'nın tarihi atası sayılan antik Kelt festivali hangisidir?",
+    "titleTwo": "Çocuklar «...sonst gibt's Saures» ifadesinde şeker verilmezse şakayla karışık neyle tehdit ederler?",
+    "titleThree": "Stuttgart yakınlarındaki hangi şehirde her yıl devasa balkabağı heykelleri inşa edilir?",
+    "titleFour": "Masallarda cadı iksirlerini neyin içinde kaynatır?",
+    "titleFive": "Sağlam av ağları ören sekiz bacaklı canlı hangisidir?",
+    "titleSix": "Büyücüler ve sihirbazlar büyülerini neyin yardımıyla yaparlar?",
+    "titleSeven": "Balkabağının içi temizlendikten sonra çekirdeklerine genellikle ne yapılır?",
+    "titleEight": "Ekim sonundaki sonbahar ormanı neden korku hikayeleri için son derece uygundur?"
+  },
+  "hallowenQuestSeven": {
+    "questOne": "Aile günün hangi saatinde balkabağını oyar?",
+    "questTwo": "Nasıl bir yüz ifadesi oyarlar?",
+    "questThree": "Balkabağının içine ne koyarlar?",
+    "questFour": "İçine neden mum yerleştirilir?",
+    "questFive": "Bu akşam nasıl bir atmosfer hakimdir?"
+  },
+  "hallowenQuestEight": {
+    "questOne": "Çocuklar yürüyüşe ne zaman çıkar?",
+    "questTwo": "Lukas kimin kılığına girdi?",
+    "questThree": "Mia başında ne tür bir başlık takıyor?",
+    "questFour": "Çocuklar sokak kapılarında ne diye bağırırlar?",
+    "questFive": "Komşular çocukların çantalarını neyle doldurur?"
+  },
+  "hallowenQuestNine": {
+    "questOne": "Kale hangi şehrin yakınında yer almaktadır?",
+    "questTwo": "Kale günümüze kadar ne şekilde korunarak gelmiştir?",
+    "questThree": "Kalede canavar kılığına kimler girer?",
+    "questFour": "Kostümlü oyuncular ziyaretçilere ne yapar?",
+    "questFive": "Sonbaharda bu kalenin çevresinde genellikle nasıl bir hava hakimdir?"
+  },
+  "hallowenQuestTen": {
+    "questOne": "Reform Günü'nde kim anılır?",
+    "questTwo": "Almanya'nın birçok eyaletinde 31 Ekim hangi resmi statüye sahiptir?",
+    "questThree": "Kiliselerde gündüzleri genellikle ne yapılır?",
+    "questFour": "31 Ekim'in geç saatleri çoğunlukla kime aittir?",
+    "questFive": "Reform Günü'nü hangi mezhep kutlar?"
+  },
+  "hallowenQuestEleven": {
+    "questOne": "Balkabağından önce çocuklar neyi oyardı?",
+    "questTwo": "Bu tür ışıldayan figürlere ne ad verilirdi?",
+    "questThree": "Bu gelenek özellikle hangi bölgelerde popülerdi?",
+    "questFour": "İçi oyulmuş şalgamın içine ne konurdu?",
+    "questFive": "Bu ritüelle yılın hangi mevsimi karşılanırdı?"
+  },
+  "hallowenQuestTwelve": {
+    "questOne": "1 Kasım'da hangi bayram kutlanır?",
+    "questTwo": "«Sessiz bayram» statüsü ne anlama gelir?",
+    "questThree": "Birçok aile bu günde nereye gider?",
+    "questFour": "İnsanlar yakınlarının mezarlarında ne yakarlar?",
+    "questFive": "Bu güne özellikle hangi eyaletlerde saygı gösterilir?"
+  },
+  "hallowenQuestThirteen": {
+    "questOne": "Aziz Martin Günü ne zaman kutlanır?",
+    "questTwo": "Yürüyüş sırasında çocuklar ne taşırlar?",
+    "questThree": "Yürüyüş esnasında hangi şarkılar söylenir?",
+    "questFour": "Kutlama yürüyüşünün sonunda ne yakılır?",
+    "questFive": "Çocuklara hangi geleneksel hamur işi dağıtılır?"
+  },
+  "hallowenQuestfourteen": {
+    "questOne": "Ünlü sergi hangi parkta düzenleniyor?",
+    "questTwo": "Devasa figürler nelerden inşa ediliyor?",
+    "questThree": "Sergi ziyaretçileri hangi özel lezzetleri tadıyor?",
+    "questFour": "Serginin dekorasyonu için kaç adet balkabağı kullanılıyor?",
+    "questFive": "Bu sergi yılın hangi mevsiminde açıktır?"
+  },
+  "hallowenQuestfifteen": {
+    "questOne": "Sudaki elma yakalama oyununun adı nedir?",
+    "questTwo": "Büyük kase ne ile doldurulur?",
+    "questThree": "Suyun yüzeyinde ne yüzer?",
+    "questFour": "Katılımcılar ellerini nereye saklamalıdır?",
+    "questFive": "Elma neyin yardımıyla çıkarılmalıdır?"
+  },
+  "hallowenQuestSixteen": {
+    "questOne": "Bir sonraki eğlenceli yarışmanın adı nedir?",
+    "questTwo": "İki takım kendi arasında ne yapar?",
+    "questThree": "Her takım kimi seçer?",
+    "questFour": "Sarmak için hangi malzeme kullanılır?",
+    "questFive": "Bu oyunda hangi takım kazanır?"
+  },
+  "hallowenQuestSeventeen": {
+    "title": "Kelimeyi çevirisiyle eşleştir",
+    "wordOne": "Tatlılar",
+    "wordTwo": "Yarasa",
+    "wordThree": "Vampir",
+    "wordFour": "Mum",
+    "wordFive": "Süpürge",
+    "wordSix": "Kara kedi",
+    "wordSeven": "Balkabağı",
+    "wordEight": "İskelet",
+    "wordNine": "Hayalet",
+    "wordTen": "Büyü kitabı",
+    "wordEleven": "Ruh",
+    "wordTwelve": "Kuzgun",
+    "wordThirteen": "Cadı şapkası",
+    "wordFourteen": "Büyücü",
+    "wordFifteen": "Örümcek",
+    "wordSixteen": "Cadı süpürgesi",
+    "wordSeventeen": "Cadı kazanı",
+    "wordEighteen": "Sihirli değnek"
+  },
+  "hallowenQuestEightteen": {
+    "title": "Nesneyi kısa açıklamasıyla eşleştir",
+    "titleTwo": "Karakteri belirgin özelliğiyle eşleştir",
+    "titleThree": "Bayramı kesin tarihiyle eşleştir",
+    "textOne": "Köşelerde örümcek ağları",
+    "textTwo": "Kırmızı yakalı pelerin",
+    "textThree": "Yüzü olan fener",
+    "textFour": "Mezarlıktaki taş",
+    "textFive": "Karanlıkta uçar",
+    "textSix": "Cadı bunun üzerinde uçar",
+    "textSeven": "Sadece beyaz kemiklerden oluşur",
+    "textEight": "Sarımsaktan korkar ve tabutta uyur",
+    "textNine": "Karanlık ormanda aya karşı ulur",
+    "textTen": "Eski kalede zincir şakırdatır",
+    "textEleven": "Döküm kazanda iksir kaynatır",
+    "textTwelve": "Tepeden tırnağa beyaz sargılar içinde",
+    "textThirteen": "1 Kasım",
+    "textFourteen": "Gece yarısı (00:00)",
+    "textFifteen": "31 Ekim akşamı",
+    "textSixteen": "11 Kasım saat 11:11",
+    "textSeventeen": "31 Ekim (gündüz)",
+    "textEighteen": "11 Kasım (fenerler)"
+  },
+  "hallowenQuestNineteen": {
+    "title": "Kelimeyi anlamıyla eşleştir",
+    "wordOne": "Cadıların toplandığı Harz Dağı",
+    "wordTwo": "Kasım ayında çocukların fener alayı",
+    "wordThree": "Gece yarısından saat bire kadar olan tekinsiz saat",
+    "wordFour": "Goethe'nin baladındaki efsanevi Orman Kralı",
+    "wordFive": "Yem şalgamına yapılan eski oyma işi",
+    "wordSix": "Gürültülü partilerin ve dansın olmadığı gün",
+    "wordSeven": "Balkabağının içindeki karanlığı dağıtır",
+    "wordEight": "Şans ve ev koruması için at nalı",
+    "wordNine": "Vampirlerden korunma",
+    "wordTen": "Kötü güçlere karşı eşikteki muska",
+    "wordEleven": "Masallarda kurt adamlara karşı kullanılan metal",
+    "wordTwelve": "Avare ruhları yanıltır",
+    "wordThirteen": "Tabut",
+    "wordFourteen": "İksir",
+    "wordFifteen": "Kale kalıntıları",
+    "wordSixteen": "Sis",
+    "wordSeventeen": "Mezarlık",
+    "wordEighteen": "Kemik"
+  },
+  "hallowenQuestTwenty": {
+    "title": "Kelimeyi çevirisiyle eşleştir",
+    "wordOne": "Canavarlar kalesi",
+    "wordTwo": "Kurt adam",
+    "wordThree": "Perili ev",
+    "wordFour": "Mezarlık",
+    "wordFive": "Mumya",
+    "wordSix": "Tabut",
+    "wordSeven": "Karanlık / Kasvet",
+    "wordEight": "Gece yarısı",
+    "wordNine": "Korkunç maske",
+    "wordTen": "Çığlık",
+    "wordEleven": "Mezar taşı",
+    "wordTwelve": "İskelet",
+    "wordThirteen": "Kafatası",
+    "wordFourteen": "Hayalet gemi",
+    "wordFifteen": "Lanet",
+    "wordSixteen": "Örümcek ağı",
+    "wordSeventeen": "Labirent",
+    "wordEighteen": "Sihirli iksir"
+  },
+  "hallowenQuestTwentyOne": {
+    "questOne": "Cadılar Bayramı grubunda hangi hayvan fazlalıktır?",
+    "questTwo": "Çocuğun çantasındaki tatlılar arasında hangisi fazlalıktır?",
+    "questThree": "Anlam bakımından hangi kelime fazlalıktır?",
+    "questFour": "Kutlamada karanlıkta parlamayan şey nedir?",
+    "questFive": "Sonbahar ve bayramla ilgisi olmayan şey nedir?",
+    "questSix": "Hangi eşya bir büyücüye veya cadıya ait değildir?"
+  },
+  "hallowenQuestTwentyTwo": {
+    "title": "Farklı olan kelimeyi bul: 2. Kısım",
+    "questOne": "Cadılar Bayramı akşamına hiç uymayan hava durumu hangisidir?",
+    "questTwo": "Cadılar Bayramı kostümünün bir parçası olarak giyilmeyen/takılmayan şey nedir?",
+    "questThree": "Cadılık kap kacağı arasında hangi eşya fazlalıktır?",
+    "questFour": "Bir vampirin kesinlikle ihtiyaç duymadığı şey nedir?",
+    "questFive": "Gece canlıları arasında hangi kuş veya hayvan fazlalıktır?",
+    "questSix": "İç ısıtan sonbahar ikramları arasında hangi içecek fazlalıktır?"
+  },
+  "hallowenQuestTwentyThree": {
+    "title": "Zıt anlamlı kelimeleri eşleştir"
+  },
+  "haloweenBanner": {
+    "shop": "Etkinlik dükkanından efektler ve hediyeler satın al!",
+    "quests": "Balkabağı parası toplamak için görevleri tamamla!"
+  },
+  "eventsModalButtons": {
+    "pumpkin": "Balkabaklarını topla",
+    "april": "Eğlenceyi başlat",
+    "valentine": "Sevgililer günü kartı ver",
+    "winter": "Kış masalına doğru!"
+  },
+  "eventsNotification": {
+    "now": "Şimdi devam ediyor!",
+    "left": "Kalan süre:",
+    "untilEvent": " Etkinliğe kalan süre:"
+  },
+  "steakInfo": {
+    "text": "Serini kaybetmemek için günlük görevleri tamamla"
+  },
+  "halloweenThemeModal": {
+    "partOne": "Bu temanın kilidi yalnızca şu etkinlikte açılabilir:",
+    "partTwo": "«Balkabağı Şenliği»",
+    "partThree": "Etkinlik mağazasından satın al"
+  },
+  "part": {
+    "text": "Bölüm"
+  },
+  "halloweenAchievements": {
+    "sectionTitle": "Balkabağı Şenliği",
+    "firstHalloweenQuestText": "Şeker mi, balkabağı mı",
+    "firstHalloweenQuestDescription": "Balkabağı Şenliği etkinliğindeki herhangi bir görevi başarıyla tamamla.",
+    "halloweenWordsText": "Uğursuz Masallar",
+    "halloweenWordsDescription": "Balkabağı Şenliği etkinliğiyle ilgili tüm tematik kelimeleri öğren.",
+    "witchBroomText": "Şimşek mi? Hayır, daha hızlı!",
+    "witchBroomDescription": "Hızını doruk noktasına çıkar - bayram dükkanından birinci sınıf bir uçan süpürge satın al.",
+    "pumpkinText": "Kafada balkabağı mı?",
+    "pumpkinDescription": "Kutlama dükkanından tekinsiz balkabağını satın al.",
+    "punchText": "Balkabağı Pançı",
+    "punchDescription": "Bayram dükkanından cadı pançını satın al.",
+    "witchHatText": "Bölüm seçimi mi?",
+    "witchHatDescription": "Bayram dükkanından Cadı Şapkasını satın al.",
+    "spellBookText": "Süvarinin Büyü Kitabı",
+    "spellBookDescription": "Bayram dükkanından antik büyü kitabını satın al.",
+    "halloweenThemeText": "Maskeli Balo",
+    "halloweenThemeDescription": "Etkinlik mağazasından hayaletli uygulama temasını satın al.",
+    "halloweenAllQuestsText": "Ve balo başlasın!",
+    "halloweenAllQuestsDescription": "Kötü ruhlara hiç fırsat verme - tüm kutlama görevlerini tamamla.",
+    "halloweenReputationText": "Şenliğin Yıldızı",
+    "halloweenReputationDescription": "Balkabağı bayramı görevlerini yerine getirerek maksimum itibar seviyesine ulaş.",
+    "halloweenAllAchievementsText": "Cadılar Bayramı seninle olsun!",
+    "halloweenAllAchievementsDescription": "Tüm bayram başarımlarını elde et ve kutlama unvanını kazan."
+  }
 }

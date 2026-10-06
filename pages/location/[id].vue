@@ -6,7 +6,7 @@
     <div class="location__wrapper">
       <header class="location-header" :class="{ 'rtl-locale': locale === 'ar' }">
         <VBackBtn/>
-        <h1 class="region__title-name">{{ t(currentRegion?.name) }}</h1>
+        <h1 class="region__title-name">{{ currentRegion?.name ? t(currentRegion.name) : '' }}</h1>
       </header>
       <div class="lives-bar__content" v-if="!authStore.isPremium">
         <VHearts

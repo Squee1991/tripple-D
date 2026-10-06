@@ -261,7 +261,7 @@
     "defaultNext": "price"
   },
   "price": {
-    "botText": "Alles klar. Das macht 15 Euro und 10 Cent, bitte.",
+    "botText": "Alles klar. Das macht 15,10 Euro bitte.",
     "botTranslation": {
       "ar-SA": "حسناً. الحساب 15 يورو و 10 سنتات، من فضلك.",
       "en-US": "Alright. That makes 15 Euros and 10 cents, please.",
@@ -570,7 +570,7 @@
           "uk-UA": "До побачення!",
           "uz-UZ": "Ko'rishguncha!"
         },
-        "nextStep": "end"
+        "nextStep": null
       },
       {
         "text": "Tschüss!",
@@ -587,27 +587,9 @@
           "uk-UA": "Бувай!",
           "uz-UZ": "Xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Der Apothekenbesuch ist beendet.",
-    "botTranslation": {
-      "ar-SA": "انتهت زيارة الصيدلية.",
-      "en-US": "The pharmacy visit is finished.",
-      "es-ES": "La visita a la farmacia ha terminado.",
-      "fr-FR": "La visite à la pharmacie est terminée.",
-      "hi-IN": "फार्मेसी का दौरा समाप्त हो गया है।",
-      "pl-PL": "Wizyta w aptece została zakończona.",
-      "ro-RO": "Vizita la farmacie s-a încheiat.",
-      "ru-RU": "Посещение аптеки окончено.",
-      "tr-TR": "Eczane ziyareti bitti.",
-      "uk-UA": "Відвідування аптеки завершено.",
-      "uz-UZ": "Dorixonaga tashrif tugadi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

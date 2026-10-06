@@ -38,7 +38,7 @@
         "id": 4,
         "type": "reorder",
         "question": "edgeImagesQuestOne.questFour",
-        "words": ["gehe", "mit", "dem", "netten", "Freund", "Ich", "nette", "den", "der"],
+        "words": ["gehe", "mit", "dem", "netten", "Freund", "Ich"],
         "correctOrder": ["Ich", "gehe", "mit", "dem", "netten", "Freund"],
         "tip": "edgeImagesQuestOne.questFourTip"
       },
@@ -62,7 +62,7 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestOne.questSeven",
-        "words": ["liest", "das", "interessante", "Buch", "Sie", "interessanten", "die"],
+        "words": ["liest", "das", "interessante", "Buch", "Sie"],
         "correctOrder": ["Sie", "liest", "das", "interessante", "Buch"],
         "tip": "edgeImagesQuestOne.questSevenTip"
       },
@@ -94,7 +94,7 @@
         "id": 11,
         "type": "reorder",
         "question": "edgeImagesQuestOne.questEleven",
-        "words": ["ist", "die", "lange", "Straße", "Wo", "langen", "der", "den"],
+        "words": ["ist", "die", "lange", "Straße", "Wo", "langen"],
         "correctOrder": ["Wo", "ist", "die", "lange", "Straße"],
         "tip": "edgeImagesQuestOne.questElevenTip"
       },
@@ -272,7 +272,7 @@
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestThree.questOne",
-        "words": ["Ich", "liebe", "den", "grünen", "Tee", "grüne"],
+        "words": ["liebe", "Ich", "grünen", "den", "Tee"],
         "correctOrder": ["Ich", "liebe", "den", "grünen", "Tee"],
         "tip": "edgeImagesQuestThree.questOneTip"
       },
@@ -316,7 +316,7 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestThree.questSeven",
-        "words": ["Sie", "sieht", "das", "schöne", "Bild", "schönen"],
+        "words": ["Sie", "das", "schöne", "sieht", "Bild"],
         "correctOrder": ["Sie", "sieht", "das", "schöne", "Bild"],
         "tip": "edgeImagesQuestThree.questSevenTip"
       },
@@ -346,7 +346,7 @@
         "id": 11,
         "type": "reorder",
         "question": "edgeImagesQuestThree.questEleven",
-        "words": ["Wir", "wohnen", "in", "dem", "großen", "Haus", "große"],
+        "words": ["Wir", "in", "dem", "wohnen", "großen", "Haus"],
         "correctOrder": ["Wir", "wohnen", "in", "dem", "großen", "Haus"],
         "tip": "edgeImagesQuestThree.questElevenTip"
       },
@@ -397,7 +397,7 @@
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestFour.questOne",
-        "words": ["Ich", "habe", "das", "alte", "Auto", "verkauft", "alten"],
+        "words": ["Ich", "habe", "verkauft", "das", "alte", "Auto"],
         "correctOrder": ["Ich", "habe", "das", "alte", "Auto", "verkauft"],
         "tip": "edgeImagesQuestFour.questOneTip"
       },
@@ -442,7 +442,7 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestFour.questSeven",
-        "words": ["Du", "hast", "die", "rote", "Jacke", "getragen", "roten"],
+        "words": ["Du", "die", "rote", "Jacke", "hast", "getragen"],
         "correctOrder": ["Du", "hast", "die", "rote", "Jacke", "getragen"],
         "tip": "edgeImagesQuestFour.questSevenTip"
       },
@@ -1480,7 +1480,7 @@
         "id": 11,
         "type": "reorder",
         "question": "edgeImagesQuestTwelve.questEleven",
-        "words": ["Der", "bekannte", "Arzt", "wird", "uns", "helfen", "bekannten"],
+        "words": ["bekannte", "Der", "Arzt", "wird", "helfen", "uns"],
         "correctOrder": ["Der", "bekannte", "Arzt", "wird", "uns", "helfen"],
         "tip": "edgeImagesQuestTwelve.questElevenTip"
       },
@@ -1576,7 +1576,7 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestThirteen.questSeven",
-        "words": ["Wir", "werden", "den", "schönen", "Garten", "sehen", "schöne"],
+        "words": ["Wir", "werden", "schönen", "Garten", "den", "sehen"],
         "correctOrder": ["Wir", "werden", "den", "schönen", "Garten", "sehen"],
         "tip": "edgeImagesQuestThirteen.questSevenTip"
       },
@@ -1606,7 +1606,7 @@
         "id": 11,
         "type": "reorder",
         "question": "edgeImagesQuestThirteen.questEleven",
-        "words": ["Der", "kleine", "Junge", "hat", "den", "Schlüssel", "gefunden", "kleinen"],
+        "words": ["Der", "Junge", "kleine", "hat", "Schlüssel", "den", "gefunden"],
         "correctOrder": ["Der", "kleine", "Junge", "hat", "den", "Schlüssel", "gefunden"],
         "tip": "edgeImagesQuestThirteen.questElevenTip"
       },
@@ -1657,7 +1657,7 @@
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestFourteen.questOne",
-        "words": ["Wir", "werden", "das", "teure", "Hotel", "buchen", "teuren"],
+        "words": ["Wir", "werden", "das", "teure", "buchen", "Hotel"],
         "correctOrder": ["Wir", "werden", "das", "teure", "Hotel", "buchen"],
         "tip": "edgeImagesQuestFourteen.questOneTip"
       },
@@ -1702,7 +1702,7 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestFourteen.questSeven",
-        "words": ["Sie", "wird", "den", "heißen", "Tee", "trinken", "heiße"],
+        "words": ["Sie", "den", "wird", "heißen", "Tee", "trinken"],
         "correctOrder": ["Sie", "wird", "den", "heißen", "Tee", "trinken"],
         "tip": "edgeImagesQuestFourteen.questSevenTip"
       },
@@ -1732,7 +1732,7 @@
         "id": 11,
         "type": "reorder",
         "question": "edgeImagesQuestFourteen.questEleven",
-        "words": ["Die", "schwere", "Prüfung", "wird", "beendet", "sein", "schweren"],
+        "words": ["Die", "schwere", "sein", "Prüfung", "wird", "beendet"],
         "correctOrder": ["Die", "schwere", "Prüfung", "wird", "beendet", "sein"],
         "tip": "edgeImagesQuestFourteen.questElevenTip"
       },

@@ -30,6 +30,7 @@
     "@daily-co/daily-js": "0.87.0",
     "@firebase/app-types": "0.9.3",
     "@inworld/nodejs-sdk": "1.17.0",
+    "@lottiefiles/dotlottie-vue": "^0.11.28",
     "@nuxt/image": "1.11.0",
     "@nuxtjs/color-mode": "3.5.2",
     "@nuxtjs/i18n": "9.5.5",
@@ -44,12 +45,13 @@
     "capacitor-voice-recorder": "7.0.6",
     "dotenv": "17.2.3",
     "firebase": "11.6.0",
-    "firebase-admin": "13.1.0",
+    "firebase-admin": "^13.2.0",
     "firebase-functions": "6.3.2",
     "flipbook-vue": "1.0.0-beta.4",
     "form-data": "^4.0.6",
     "groq-sdk": "^1.2.1",
     "gsap": "3.13.0",
+    "ipx": "^4.0.0-beta.1",
     "lottie-web": "5.13.0",
     "nuxt-vuefire": "1.0.5",
     "phaser": "3.90.0",
@@ -72,8 +74,5 @@
     "emailjs-com": "3.2.0",
     "nuxt": "3.15.0",
     "pinia": "3.0.4"
-  },
-  "overrides": {
-    "rollup": "npm:@rollup/wasm-node"
   }
 }

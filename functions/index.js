@@ -1,25 +1,51 @@
 const { onSchedule } = require("firebase-functions/v2/scheduler");
-const { onCall, HttpsError } = require("firebase-functions/v2/https");
+const { onCall, onRequest } = require("firebase-functions/v2/https");
 const { defineSecret } = require("firebase-functions/params");
 const admin = require("firebase-admin");
-const { onRequest } = require("firebase-functions/v2/https");
-const axios = require('axios');
-const FormData = require('form-data');
+
 if (admin.apps.length === 0) admin.initializeApp();
-const fs = require('fs');
-const path = require('path');
-const os = require('os');
-const Groq = require("groq-sdk");
-const CYCLE_MS = 24 * 60 * 60 * 1000;
-const IMMUNITY_RANK_HATS = 500;
-const GROQ_API_KEY = defineSecret("GROQ_API_KEY");
 
 const { Resend} = require("resend");
-const cors = require("cors")({
-	origin: true
-});
+const cors = require("cors")({origin: true});
+const db = admin.firestore();
 
+const CYCLE_MS = 24 * 60 * 60 * 1000;
+const IMMUNITY_RANK_HATS = 500;
+const GEMINI_API_KEY = defineSecret("GEMINI_API_KEY");
 const RESEND_API_KEY = defineSecret("RESEND_API_KEY");
+let timeZone = 'ru-RU'
+exports.sendScheduledReminders = onSchedule('every 15 minutes', async (event) => {
+	const db = admin.firestore()
+	const snapshot = await db.collection('users')
+		.where('notificationsEnabled', '==', true)
+		.get()
+
+	const messages = []
+
+	snapshot.forEach((doc) => {
+		const data = doc.data()
+		if (!data.fcmToken || !data.reminderTime || !data.timezone) return
+		const userCurrentTime = new Intl.DateTimeFormat(timeZone, {
+			timeZone: data.timezone,
+			hour: '2-digit',
+			minute: '2-digit',
+			hour12: false
+		}).format(new Date())
+		if (userCurrentTime === data.reminderTime) {
+			messages.push({
+				token: data.fcmToken,
+				notification: {
+					title: 'Время для практики! 📚',
+					body: '5 минут занятий сегодня помогут закрепить результат.'
+				}
+			})
+		}
+	})
+	if (messages.length > 0) {
+		await admin.messaging().sendEach(messages)
+	}
+})
+
 
 exports.takeFromArticlePenalty = onSchedule({
 	schedule: "every 20 minutes",
@@ -39,14 +65,12 @@ exports.takeFromArticlePenalty = onSchedule({
 	const promises = [];
 	for (const doc of snapshot.docs) {
 		if (doc.id !== 'currentDailyQuests') continue;
-
 		const data = doc.data();
 		const userId = data.owner;
 
 		if ((data.completedCount || 0) === 0) {
 			const userRef = db.collection('users').doc(userId);
 			const userSnap = await userRef.get();
-
 			if (userSnap.exists) {
 				const userData = userSnap.data();
 				const currentHats = userData.totalHats || 0;
@@ -54,13 +78,17 @@ exports.takeFromArticlePenalty = onSchedule({
 				const prevCycleStartsAt = (data.expiresAtMs || 0) - CYCLE_MS;
 				const hadShield = freezeEndMs && freezeEndMs > prevCycleStartsAt;
 				const hasImmunity = currentHats >= IMMUNITY_RANK_HATS;
-				if (!hadShield && !hasImmunity) {
-
-					batch.update(userRef, { totalHats: Math.max(0, currentHats - 3) });
+				if (!hadShield) {
+					const userUpdates = {
+						streakCount: 0
+					};
+					if (!hasImmunity) {
+						userUpdates.totalHats = Math.max(0, currentHats - 3);
+					}
+					batch.update(userRef, userUpdates);
 				}
 			}
 		}
-
 		batch.update(doc.ref, { penaltyProcessed: true });
 		count++;
 
@@ -75,127 +103,217 @@ exports.takeFromArticlePenalty = onSchedule({
 	return null;
 });
 
-exports.whisperTranscribe = onCall({
-	secrets: [GROQ_API_KEY],
-	memory: "512Mi"
-}, async (request) => {
-	const tempFilePath = path.join(os.tmpdir(), `audio_${Date.now()}.mp3`);
-	try {
-		const dataIn = request.data || {};
-		const audioContent = dataIn.audioContent;
-		const lang = dataIn.lang;
-
-		if (!audioContent) return { error: "Нет аудио" };
-
-		const base64Data = audioContent.includes(",") ? audioContent.split(",")[1] : audioContent;
-		const buffer = Buffer.from(base64Data, "base64");
-
-		// Пишем как mp3
-		fs.writeFileSync(tempFilePath, buffer);
-
-		const groq = new Groq({ apiKey: GROQ_API_KEY.value() });
-
-		// Отправляем как mp3
-		const transcription = await groq.audio.transcriptions.create({
-			file: fs.createReadStream(tempFilePath),
-			model: "whisper-large-v3-turbo",
-			language: lang ? lang.substring(0, 2) : undefined,
-			response_format: "json"
-		});
-
-		if (fs.existsSync(tempFilePath)) fs.unlinkSync(tempFilePath);
-
-		return { text: transcription.text || "" };
-
-	} catch (error) {
-		if (fs.existsSync(tempFilePath)) fs.unlinkSync(tempFilePath);
-		const groqError = error.error?.message || error.message || String(error);
-		return { error: `GROQ SDK: ${groqError}` };
-	}
-});
-
-exports.visionAnalyze = onCall({
-	secrets: [GROQ_API_KEY],
+exports.hedgehogAssistant = onCall({
+	secrets: [GEMINI_API_KEY],
 	memory: "256Mi",
-	timeoutSeconds: 60
+	timeoutSeconds: 30,
+	cors: true
 }, async (request) => {
+	if (!request.auth || !request.auth.uid) {
+		return { error: "UNAUTHORIZED" };
+	}
+	const dataIn = request.data || {};
+	const action = dataIn.action || "hint";
+	const uid = request.auth.uid;
+	const today = new Date().toISOString().split('T')[0];
 	try {
-		const dataIn = request.data || {};
-		const userLevel = dataIn.userLevel;
-		const userMessage = dataIn.userMessage;
-		const userLocale = dataIn.userLocale;
-		const imageUrl = dataIn.imageUrl;
-		const referenceDescription = dataIn.referenceDescription;
+		const userDoc = await db.collection("users").doc(uid).get();
+		const userData = userDoc.exists ? userDoc.data() : {};
+		const isPremium = userData.isPremium === true;
+		const usageRef = db.collection("users").doc(uid).collection("usage").doc(today);
 
-		const modelId = 'meta-llama/llama-4-scout-17b-16e-instruct';
-		const feedbackLang = String(userLocale || 'ru').split('-')[0].trim();
+		if (!isPremium) {
+			const usageSnap = await usageRef.get();
+			const currentUsage = usageSnap.exists ? (usageSnap.data().hintCount || 0) : 0;
+			if (currentUsage >= 1000) {
+				return { error: "LIMIT_REACHED" };
+			}
+		}
 
-		const systemPrompt = `You are a strict but supportive German language tutor evaluating an image description exercise.
-**STRICT LANGUAGE RULE: YOU MUST WRITE ALL FEEDBACK AND CORRECTIONS IN THE LANGUAGE: "${feedbackLang}". NEVER USE GERMAN IN THE FEEDBACK FIELD.**
+		const userLocale = String(dataIn.userLocale || 'ru').split('-')[0].trim();
+		const modelId = 'gemini-3.5-flash-lite';
+		let systemPrompt = "";
 
-INPUTS:
-1. **The Image:** Look at the visual image carefully.
-2. **Target Level:** ${userLevel} (A1, A2, or B1).
-3. **User Answer:** "${userMessage}"
-4. **Reference Template:** "${referenceDescription || 'None'}" 
+		if (action === "grammar") {
+			const sentence = dataIn.sentence || "";
+			const answer = dataIn.answer || "";
+			const selectedAnswer = dataIn.selectedAnswer || "";
 
-GRAMMAR BOUNDARIES BY LEVEL & RULES:
-- **A1 Grammar:** Präsens, Perfekt. Nominativ/Akkusativ/Dativ. When the question is "Where?" (Wo?), use Dativ and put the noun's article in Dativ. Apply the same rule for Akkusativ. When explaining grammar endings, always use the phrase "берет у артикля" to clarify how the word gets its ending. NO subordinate clauses.
-- **A2 Grammar:** Präteritum, Wechselpräpositionen, Nebensätze, Adjektivdeklination.
-- **B1 Grammar:** Plusquamperfekt, Passiv, complexe Nebensätze, Relativsätze.
+			systemPrompt = `You are a friendly German language tutor.
+The user is practicing German grammar and needs to know why a specific article is correct.
+Sentence: "${sentence}"
+Correct article: "${answer}"
+User selected (if any): "${selectedAnswer}"
 
-CRITICAL EVALUATION RULES:
-0. FATAL ERROR: If the user writes in any language other than German, SCORE IS 1/10. Feedback MUST say in ${feedbackLang}: "Пожалуйста, опишите картинку на немецком языке."
-1. OVER-PERFORMING: If lower-level user writes complex answer, SCORE 10/10. NO nitpicking.
-2. DYNAMIC SUGGESTED ANSWER: 
-   - Score 9-10: Set 'suggestedAnswer' to the User's exact answer. 
-   - Score <=8: Set 'suggestedAnswer' to the Reference Template.
+Explain in 1-2 short sentences (max 150 chars) why the article "${answer}" is needed in the blank for this sentence.
+If the user chose "${selectedAnswer}", briefly explain why it's wrong (mention gender, case, or preposition government).
+STRICT RULES:
+- When explaining adjective endings (declension), clearly explain how endings depend on or reflect the preceding article, writing strictly in ${userLocale}.
+- When the question is "Where?" (Wo?), use Dativ and put the noun's article in Dativ. For Akkusativ, apply the same rule.
+- Respond in THIS exact language: ${userLocale}.
 
-YOUR TASK: OUTPUT A RAW JSON OBJECT EXCLUSIVELY. Do NOT wrap in markdown.
+CRITICAL: Respond ONLY with valid JSON matching this schema:
+{ "explanation": "string" }`;
+
+		} else if (action === "imageHint") {
+			const referenceDescription = dataIn.referenceDescription || "";
+			const userLevel = dataIn.userLevel || "A1";
+
+			const taskInstruction = `The user needs ideas BEFORE writing a sentence about an image described as: "${referenceDescription}".
+
+STRICT RULES FOR HINT:
+1. "hintText":
+   - Exactly 1 ULTRA-SHORT sentence strictly in language: ${userLocale}.
+   - STRICT BAN ON FLUFF: NO greetings, NO filler words.
+   - Instruct the user in ${userLocale} to start their sentence with the main German subject from the description and use the clues below.
+   - The German subject itself must remain in German inside quotes «...», but the instruction text around it MUST be entirely in ${userLocale}.
+2. "vocabulary":
+   - Exactly 4 items.
+   - "de": ONLY the German words/phrase (e.g. "fährt Ski", "im Schnee"). NEVER put translations or dashes inside "de"!
+   - "tr": ONLY the short translation in ${userLocale} without dashes.
+3. "grammarTip":
+   - 1 short practical sentence on word order or endings strictly in ${userLocale}.
+   - Explain grammatical agreement and endings naturally and logically. If explaining adjective endings, use the phrase "берет у артикля", entirely in ${userLocale}.
+   `;
+
+			systemPrompt = `You are "Hedgehog", an upbeat, friendly German language tutor.
+Target German level: ${userLevel}. User interface language: ${userLocale}.
+
+${taskInstruction}
+
+CRITICAL: Respond ONLY with valid JSON matching this schema:
 {
-  "score": 0,
-  "feedback": "...",
-  "suggestedAnswer": "...",
-  "keyCorrections": []
+  "hintText": "string",
+  "vocabulary": [ { "de": "word", "tr": "translation" } ],
+  "grammarTip": "string"
 }`;
 
-		const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+		} else if (action === "guidedProduction") {
+			const subAction = dataIn.subAction || "generate";
+			const topic = dataIn.topic || "Alltag";
+			const level = dataIn.level || "A2";
+
+			if (subAction === "generate") {
+				const randomSeed = dataIn.randomSeed || Date.now();
+				systemPrompt = `You are a strict and logical German tutor. Generate a UNIQUE, highly natural, and LOGICAL sentence starter for a student at the exact CEFR level: ${level} about the topic "${topic}".
+             
+STRICT CEFR LEVEL RULES:
+- If level is A1: Use ONLY simple main clauses. Allowed connectors: "und", "oder", "aber", "denn". DO NOT use subordinate clauses (verb at the end). NEVER use "weil", "dass", "obwohl", "wenn". Vocabulary must be basic A1.
+- If level is A2: You can use basic subordinate clauses with "weil", "dass", "wenn". DO NOT use B1 grammar like "obwohl", "damit", "trotzdem" or complex relative clauses.
+- If level is B1: You may use "obwohl", "damit", "um...zu", relative clauses, and more advanced B1 vocabulary.
+
+LOGIC AND REALISM RULES:
+- The situation MUST be extremely common, realistic, and logical for a normal human daily life.
+- Avoid contrived, confusing, or "stupid" scenarios (e.g., do not say "The waiter brings soup, although..."). Instead, use highly relatable prompts (e.g., "I am very hungry, but...", "I would like to pay, because...").
+- The starter must naturally provoke a realistic, easy-to-guess continuation.
+- Randomization seed to force uniqueness: ${randomSeed}. Do not repeat previous examples.
+
+CRITICAL: Respond ONLY with valid JSON:
+{ 
+  "sentenceStart": "German text ending with ...", 
+  "translation": "Translation in ${userLocale}" 
+}`;
+			} else if (subAction === "hint") {
+				const sentenceStart = dataIn.sentenceStart || "";
+				systemPrompt = `The user needs help finishing the German sentence: "${sentenceStart}".
+Provide 3 short, distinct, and natural ways to finish it at the ${level} level. 
+CRITICAL: Respond ONLY with valid JSON:
+{ 
+  "hints": [ 
+    { "de": "first option", "tr": "translation in ${userLocale}" },
+    { "de": "second option", "tr": "translation in ${userLocale}" },
+    { "de": "third option", "tr": "translation in ${userLocale}" }
+  ] 
+}`;
+			} else if (subAction === "evaluate") {
+				const sentenceStart = dataIn.sentenceStart || "";
+				const userEnding = dataIn.userEnding || "";
+
+				systemPrompt = `You are a friendly German tutor named Hedgehog.
+The user completed the sentence "${sentenceStart}" with the text "${userEnding}".
+Evaluate the grammatical correctness and naturalness of the complete sentence.
+
+STRICT RULES FOR EXPLANATION:
+- Write your feedback entirely in ${userLocale}.
+- If the user made a mistake with adjective declension, explain it using the exact phrase "берет у артикля".
+- If the user made a mistake with prepositions of location, explicitly state: "When the question is 'Where?' (Wo?), use Dativ and put the noun's article in Dativ. For Akkusativ, apply the same rule."
+- Keep the feedback supportive, short (1-3 sentences).
+
+CRITICAL: Respond ONLY with valid JSON:
+{
+  "isCorrect": boolean,
+  "feedback": "Your explanation in ${userLocale}",
+  "betterVersion": "How a native speaker would say the full sentence"
+}`;
+			}
+
+		} else {
+			const question = dataIn.question || "";
+			const correctAnswer = dataIn.correctAnswer || dataIn.answer || "";
+
+			systemPrompt = `You are a concise German tutor.
+Task / Sentence: "${question}"
+Correct answer: "${correctAnswer}"
+
+STRICT RULES:
+1. Write strictly in ${userLocale}.
+2. NO greetings, NO fluff ("Привет", "Я ёжик", "Давай разберем" etc).
+3. DO NOT mention or analyze incorrect options. Explain ONLY the correct answer.
+4. If explaining adjective declension endings, you MUST use the exact phrase "берет у артикля".
+5. If explaining prepositions of location, explicitly state: "When the question is 'Where?' (Wo?), use Dativ and put the noun's article in Dativ. For Akkusativ, apply the same rule."
+6. You MUST format the "explanation" string EXACTLY like the template below, using double line breaks (\\n\\n) to separate the translation and the rule.
+
+TEMPLATE FOR THE "explanation" STRING:
+Перевод: [Insert full translation of the sentence here]
+
+Правило: [Insert 1-2 sentences explaining the grammar/vocabulary of the correct answer]
+
+CRITICAL: Respond ONLY with a valid JSON object matching this schema. Include the formatting in the "explanation" string:
+{
+  "correctOption": "${correctAnswer}",
+  "explanation": "Your structured explanation with \\n\\n"
+}`;
+		}
+
+		const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent?key=${GEMINI_API_KEY.value()}`;
+		const response = await fetch(url, {
 			method: 'POST',
-			headers: {
-				'Authorization': `Bearer ${GROQ_API_KEY.value()}`,
-				'Content-Type': 'application/json'
-			},
+			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
-				model: modelId,
-				messages: [
-					{ role: 'system', content: systemPrompt },
-					{
-						role: 'user',
-						content: [
-							{ type: "text", text: `Level ${userLevel}. Answer: ${userMessage}. Reference: ${referenceDescription}` },
-							{ type: "image_url", image_url: { url: imageUrl } }
-						]
-					}
-				],
-				temperature: 0.2
+				contents: [{ role: 'user', parts: [{ text: systemPrompt }] }],
+				generationConfig: {
+					temperature: 0.1,
+					response_mime_type: "application/json"
+				}
 			})
 		});
 
 		const resText = await response.text();
-		if (!response.ok) return { error: `GROQ API ERROR ${response.status}: ${resText}` };
+		if (!response.ok) return { error: `Gemini error: ${response.status}` };
 
 		const resJson = JSON.parse(resText);
-		if (!resJson.choices || !resJson.choices[0]) return { error: `GROQ EMPTY CHOICES: ${resText}` };
+		const content = resJson.candidates?.[0]?.content?.parts?.[0]?.text;
+		if (!content) return { error: "Пустой ответ от Gemini" };
 
-		let content = resJson.choices[0].message.content;
-		content = content.replace(/```json/g, '').replace(/```/g, '').trim();
+		let parsedContent = JSON.parse(content);
+		if (Array.isArray(parsedContent)) {
+			parsedContent = parsedContent[0] || {};
+		}
 
-		return { data: JSON.parse(content) };
+		if (!isPremium) {
+			await usageRef.set({
+				hintCount: admin.firestore.FieldValue.increment(1),
+				updatedAt: admin.firestore.FieldValue.serverTimestamp()
+			}, { merge: true });
+		}
+
+		return { data: parsedContent };
+
 	} catch (err) {
+		console.error("FUNCTION ERROR:", err);
 		return { error: String(err.message || err) };
 	}
 });
-
 
 
 exports.sendResetEmail = onRequest({ cors: true, secrets: [RESEND_API_KEY] }, async (req, res) => {
@@ -265,31 +383,42 @@ exports.sendResetEmail = onRequest({ cors: true, secrets: [RESEND_API_KEY] }, as
 		}
 	});
 });
-
 exports.handleRevenueCatWebhook = onRequest(async (req, res) => {
 	const eventData = req.body.event;
 	if (!eventData || !eventData.app_user_id) {
 		return res.status(200).send("No data");
-
 	}
+
 	const userId = eventData.app_user_id;
 	const eventType = eventData.type;
 	const db = admin.firestore();
+
+	const entitlements = eventData.entitlement_ids || [];
+	const isPremiumTier = entitlements.includes('premium');
+	const isBasicTier = entitlements.includes('basic');
+
+	const hasAds = !isPremiumTier && isBasicTier;
+
 	try {
 		switch (eventType) {
 			case "INITIAL_PURCHASE":
 			case "RENEWAL":
+			case "NON_RENEWING_PURCHASE":
 				await db.collection("users").doc(userId).update({
 					isPremium: true,
+					hasAds: hasAds,
 					subscriptionCancelled: false
 				});
 				break;
+
 			case "EXPIRATION":
 				await db.collection("users").doc(userId).update({
 					isPremium: false,
+					hasAds: true,
 					subscriptionCancelled: true
 				});
 				break;
+
 			case "CANCELLATION":
 				await db.collection("users").doc(userId).update({
 					subscriptionCancelled: true
@@ -299,20 +428,25 @@ exports.handleRevenueCatWebhook = onRequest(async (req, res) => {
 			case "TRANSFER":
 				if (eventData.transferred_from) {
 					for (const oldUid of eventData.transferred_from) {
-						await db.collection("users").doc(oldUid).update({ isPremium: false });
+						await db.collection("users").doc(oldUid).update({
+							isPremium: false,
+							hasAds: true
+						});
 					}
 				}
 				if (eventData.transferred_to) {
 					for (const newUid of eventData.transferred_to) {
-						await db.collection("users").doc(newUid).update({ isPremium: true });
+						await db.collection("users").doc(newUid).update({
+							isPremium: true,
+							hasAds: hasAds
+						});
 					}
 				}
 				break;
 		}
 		res.status(200).send("OK");
 	} catch (error) {
+		console.error("RevenueCat Webhook Error:", error);
 		res.status(500).send("Error");
-
 	}
-
 });

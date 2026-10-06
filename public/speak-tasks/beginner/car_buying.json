@@ -487,7 +487,7 @@
           "uk-UA": "Ідеально, дуже дякую за Вашу допомогу! До скорої зустрічі.",
           "uz-UZ": "Ajoyib, yordamingiz uchun katta rahmat! Ko'rishguncha."
         },
-        "nextStep": "step_15"
+        "nextStep": null
       },
       {
         "text": "Super, danke Ihnen! Ich fahre dann mal los. Bis gleich.",
@@ -504,28 +504,9 @@
           "uk-UA": "Супер, дякую Вам! Тоді я поїхав. До скорої зустрічі.",
           "uz-UZ": "Zo'r, rahmat sizga! Unda men yo'lga chiqdim. Ko'rishguncha."
         },
-        "nextStep": "step_15"
+        "nextStep": null
       }
     ],
-    "defaultNext": "step_15"
-  },
-  "step_15": {
-    "botText": "Das Gespräch ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Разговор окончен.",
-      "en-US": "The conversation is over.",
-      "ar-SA": "انتهت المحادثة.",
-      "es-ES": "La conversación ha terminado.",
-      "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत खत्म हो गई है।",
-      "pl-PL": "Rozmowa zakończona.",
-      "ro-RO": "Conversația s-a încheiat.",
-      "tr-TR": "Konuşma sona erdi.",
-      "uk-UA": "Розмова закінчена.",
-      "uz-UZ": "Suhbat yakunlandi."
-    },
-    "vocabulary": [],
-    "options": [],
     "defaultNext": null
   }
 }

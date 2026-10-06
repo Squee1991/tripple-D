@@ -34,7 +34,7 @@
           </div>
           <div class="auth__toggle" :style="{ transform: toggleTransform }"></div>
         </div>
-        <form class="auth-form">
+        <form class="auth-form" @submit.prevent="handleSubmit">
           <div class="auth__fields">
             <div v-for="field in visibleFields" :key="field.id" class="auth__field">
               <label class="auth__label">
@@ -65,7 +65,7 @@
             </div>
 
             <div class="auth__actions">
-              <button @click.prevent="handleSubmit" class="auth__submit" :disabled="submitLoading">
+              <button type="submit" class="auth__submit" :disabled="submitLoading">
                 {{
                   mode === 'login' ? t('auth.logIn') : mode === 'register' ? t('auth.regs') :
                       t('auth.resetBtn')
@@ -236,9 +236,10 @@ function validateFields(values) {
 
 const handleSubmit = async () => {
   if (submitLoading.value) return
+  const values = Object.fromEntries(fields.value.map(field => [field.name, field.value]))
+  if (!validateFields(values)) return
+
   try {
-    const values = Object.fromEntries(fields.value.map(field => [field.name, field.value]))
-    if (!validateFields(values)) return
     submitLoading.value = true
     if (mode.value === 'reset') {
       await authStore.resetPassword(values.email)
@@ -252,13 +253,11 @@ const handleSubmit = async () => {
 
     if (mode.value === 'register') {
       await authStore.registerUser({name: values.name, email: values.email, password: values.password})
-      router.push('/')
-      fields.value.forEach(f => f.value = '')
+      await router.push('/')
       return
     }
     await authStore.loginUser({email: values.email, password: values.password})
-    router.push('/')
-    fields.value.forEach(f => f.value = '')
+    await router.push('/')
   } catch (e) {
     fields.value.forEach(f => f.error = '')
     mapErrors(fields.value, e.code)
@@ -610,10 +609,10 @@ onUnmounted(() => {
   display: block;
 }
 
-/* Медиа-запрос для экранов < 768px */
+
 @media (max-width: 767px) {
   .auth {
-    max-width: 100%; /* На мобилке на весь экран */
+    max-width: 100%;
   }
 }
 

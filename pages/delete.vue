@@ -56,7 +56,15 @@
             <div class="account-cleanup__modal">
               <div class="modal-drag-pill"></div>
               <h3 class="account-cleanup__modal-title">{{t('deletePage.modalTitle')}}</h3>
-              <img class="cleanup__icon-modal" src="../assets/images/DeleteAccountIcon.svg" alt="Грустный ежик">
+<!--              <img class="cleanup__icon-modal" src="../assets/images/DeleteAccountIcon.svg" alt="Грустный ежик">-->
+              <ClientOnly>
+                <DotLottieVue
+                    :data="JSON.stringify(DeleteAnimation)"
+                    :autoplay="true"
+                    :loop="true"
+                    class="canva"
+                />
+              </ClientOnly>
               <div class="account-cleanup__auth-zone">
                 <div v-if="isGoogleUser" class="account-cleanup__google-status">
                   {{t('deletePage.cleanUpGoogle')}} <strong>Google</strong>. <br>
@@ -100,7 +108,8 @@ import {ref, computed} from 'vue'
 import {useRouter} from 'vue-router'
 import {userAuthStore} from '../store/authStore.js'
 import {mapErrors} from '../utils/errorsHandler.js'
-
+import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
+import DeleteAnimation from '~/assets/animation/hedgehog_delete.json'
 const {t} = useI18n()
 const router = useRouter()
 const authStore = userAuthStore()
@@ -400,7 +409,7 @@ async function processAccountCleanup() {
   font-size: 24px;
   font-weight: 900;
   color: var(--title);
-  margin: 15px 0;
+  margin: 30px 0;
 }
 
 .account-cleanup__auth-zone {
@@ -453,6 +462,10 @@ async function processAccountCleanup() {
   font-size: 14px;
   margin-top: 5px;
   text-align: center;
+}
+
+.canva {
+  transform: scale(1.4);
 }
 
 .fade-enter-active, .fade-leave-active {

@@ -552,7 +552,7 @@
           "uk-UA": "Дякую, до побачення!",
           "uz-UZ": "Rahmat, xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       },
       {
         "text": "Tschüss!",
@@ -569,27 +569,9 @@
           "uk-UA": "Бувай!",
           "uz-UZ": "Xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Der Check-in ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Регистрация завершена.",
-      "en-US": "Check-in is finished.",
-      "ar-SA": "اكتمل تسجيل الدخول.",
-      "es-ES": "El registro ha terminado.",
-      "fr-FR": "L'enregistrement est terminé.",
-      "hi-IN": "चेक-इन समाप्त हो गया है।",
-      "pl-PL": "Odprawa zakończona.",
-      "ro-RO": "Înregistrarea este finalizată.",
-      "tr-TR": "Check-in işlemi tamamlandı.",
-      "uk-UA": "Реєстрацію завершено.",
-      "uz-UZ": "Ro'yxatdan o'tish tugadi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

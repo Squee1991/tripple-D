@@ -2,7 +2,20 @@
   <transition name="modal-fade">
     <div v-if="show" class="modal-overlay" @click.self="handleCancel">
       <div class="modal-content">
-        <div v-if="icon" class="modal-icon">
+        <ClientOnly v-if="animationData">
+          <div class="modal-animation-wrapper">
+            <ClientOnly>
+              <DotLottieVue
+                  :data="computedAnimationData"
+                  :autoplay="true"
+                  :loop="true"
+                  class="modal-lottie"
+                  style="width: 280px; height: 280px"
+              />
+            </ClientOnly>
+          </div>
+        </ClientOnly>
+        <div v-else class="modal-icon">
           <img :src="icon" class="modal-icon-item" alt=""/>
         </div>
         <p class="modal-text" :class="textClass">{{ t('exitSessionModal.text') }}</p>
@@ -21,19 +34,30 @@
 </template>
 
 <script setup>
-import {useRouter} from 'vue-router'
-import LeaveLesson from '../../assets/images/LeaveLesson.svg'
+import { computed } from 'vue'
+import { useRouter } from 'vue-router'
+import LeaveLesson from '~/assets/images/LeaveLesson.svg'
+import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
 
-const {t} = useI18n()
+
+const { t } = useI18n()
 const props = defineProps({
-  show: {type: Boolean, required: true},
-  textClass: {type: String, default: ''},
-  icon: {type: String, default: LeaveLesson},
-  returnRoute: {type: String, default: null}
+  animationData: { type: [Object, String], default: null },
+  show: { type: Boolean, required: true },
+  textClass: { type: String, default: '' },
+  icon: { type: String, default: LeaveLesson },
+  returnRoute: { type: String, default: null }
 })
 
 const emit = defineEmits(['update:show', 'confirm', 'cancel'])
 const router = useRouter()
+
+const computedAnimationData = computed(() => {
+  if (!props.animationData) return null
+  return typeof props.animationData === 'object'
+      ? JSON.stringify(props.animationData)
+      : props.animationData
+})
 
 const handleConfirm = () => {
   emit('confirm')
@@ -58,13 +82,13 @@ const handleCancel = () => {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  z-index: 1000;
+  z-index: 999999;
   padding: 0;
 }
 
 .modal-content {
   background: var(--bgModal);
-  padding: 40px 24px 30px 24px;
+  padding: 60px 24px 30px 24px;
   border-radius: 20px 20px 0 0;
   width: 100%;
   max-width: 768px;
@@ -76,6 +100,16 @@ const handleCancel = () => {
   align-items: center;
   border-top: 3px solid whitesmoke;
 }
+
+.modal-animation-wrapper {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 20px;
+}
+
 
 .modal-icon-item {
   width: 140px;

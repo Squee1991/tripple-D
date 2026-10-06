@@ -30,6 +30,7 @@ export const useGameStore = defineStore('game', () => {
 	const lives = ref(0);
 	const gameActive = ref(false);
 	const sessionStreak = ref(0);
+	const lastCompletedStreak = ref(0); // Фиксирует стрик при поражении, чтобы он не пропадал в модалке
 	const timer = ref(0);
 	const timerId = ref(null);
 	const lastChanceProgress = ref(0);
@@ -37,8 +38,8 @@ export const useGameStore = defineStore('game', () => {
 	const onTheEdgeProgress = ref(0);
 	const fastAnswerStreak = ref(0);
 
-	const personalBests = ref({ 1: 0, 2: 0, 3: 0 });
-	const allTimeBests = ref({ 1: 0, 2: 0, 3: 0 });
+	const personalBests = ref({ 1: 0, 2: 0, 3: 0 }); // Сезонный лидерборд
+	const allTimeBests = ref({ 1: 0, 2: 0, 3: 0 });   // Личный рекорд навсегда
 	const totalCorrectAnswers = ref({ 1: 0, 2: 0, 3: 0 });
 	const isRecordUpdated = ref(false);
 
@@ -49,34 +50,9 @@ export const useGameStore = defineStore('game', () => {
 			2: { lives: 5, timer: 10 },
 			3: { lives: 1, timer: 5 },
 		};
-		return settings[difficulty.value];
+		return settings[difficulty.value] || settings[1];
 	});
-	// function getSeasonState() {
-	// 	const now = new Date();
-	// 	const anchor = Date.UTC(2024, 0, 1);
-	// 	const msSinceAnchor = now.getTime() - anchor;
-	// 	const cycleLengthMs = 4 * 60 * 1000;
-	// 	const halfCycleMs = 2 * 60 * 1000;
-	//
-	// 	const cycle = Math.floor(msSinceAnchor / cycleLengthMs);
-	// 	const msOfCycle = msSinceAnchor % cycleLengthMs;
-	// 	const isOpen = msOfCycle < halfCycleMs;
-	// 	const currentSeasonId = `Season_${cycle}`;
-	// 	const previousSeasonId = `Season_${cycle - 1}`;
-	// 	const msLeft = isOpen ? (halfCycleMs - msOfCycle) : (cycleLengthMs - msOfCycle);
-	//
-	// 	const d = Math.floor(msLeft / (1000 * 60 * 60 * 24));
-	// 	const h = Math.floor((msLeft / (1000 * 60 * 60)) % 24);
-	// 	const m = Math.floor((msLeft / (1000 * 60)) % 60);
-	// 	const s = Math.floor((msLeft / 1000) % 60);
-	//
-	// 	return {
-	// 		isOpen,
-	// 		currentSeasonId,
-	// 		previousSeasonId,
-	// 		timeLeft: { d, h, m, s }
-	// 	};
-	// }
+
 	function getSeasonState() {
 		const now = new Date();
 		const anchor = Date.UTC(2024, 0, 1);
@@ -105,6 +81,7 @@ export const useGameStore = defineStore('game', () => {
 
 	function resetGameState() {
 		sessionStreak.value = 0;
+		lastCompletedStreak.value = 0;
 		currentWord.value = null;
 		gameReady.value = false;
 		isRecordUpdated.value = false;
@@ -133,74 +110,75 @@ export const useGameStore = defineStore('game', () => {
 			return;
 		}
 
-		const userLeaderboardDocRef = doc(db, LEADERBOARD_COLLECTION, userId.value);
-		const docSnap = await getDoc(userLeaderboardDocRef);
+		try {
+			const userLeaderboardDocRef = doc(db, LEADERBOARD_COLLECTION, userId.value);
+			const docSnap = await getDoc(userLeaderboardDocRef);
 
-		if (docSnap.exists()) {
-			const data = docSnap.data();
-			const { currentSeasonId } = getSeasonState();
+			if (docSnap.exists()) {
+				const data = docSnap.data();
+				const { currentSeasonId } = getSeasonState();
 
-			if (data.streaks) {
-				allTimeBests.value = {
-					1: data.streaks['1'] || 0,
-					2: data.streaks['2'] || 0,
-					3: data.streaks['3'] || 0,
-				};
+				if (data.streaks) {
+					allTimeBests.value = {
+						1: data.streaks['1'] || 0,
+						2: data.streaks['2'] || 0,
+						3: data.streaks['3'] || 0,
+					};
+				}
+
+				if (data.currentSeasonId === currentSeasonId && data.currentSeasonStreaks) {
+					personalBests.value = {
+						1: data.currentSeasonStreaks['1'] || 0,
+						2: data.currentSeasonStreaks['2'] || 0,
+						3: data.currentSeasonStreaks['3'] || 0,
+					};
+				} else {
+					personalBests.value = { 1: 0, 2: 0, 3: 0 };
+				}
+
+				if (data.totalCorrect) {
+					totalCorrectAnswers.value = {
+						1: data.totalCorrect['1'] || 0,
+						2: data.totalCorrect['2'] || 0,
+						3: data.totalCorrect['3'] || 0,
+					};
+				}
+				lastChanceProgress.value = data.lastChanceProgress || 0;
+				marginForErrorProgress.value = data.marginForErrorProgress || 0;
+				onTheEdgeProgress.value = data.onTheEdgeProgress || 0;
 			}
-
-			if (data.currentSeasonId === currentSeasonId && data.currentSeasonStreaks) {
-				personalBests.value = {
-					1: data.currentSeasonStreaks['1'] || 0,
-					2: data.currentSeasonStreaks['2'] || 0,
-					3: data.currentSeasonStreaks['3'] || 0,
-				};
-			} else {
-				personalBests.value = { 1: 0, 2: 0, 3: 0 };
-			}
-
-			if (data.totalCorrect) {
-				totalCorrectAnswers.value = {
-					1: data.totalCorrect['1'] || 0,
-					2: data.totalCorrect['2'] || 0,
-					3: data.totalCorrect['3'] || 0,
-				};
-			}
-			lastChanceProgress.value = data.lastChanceProgress || 0;
-			marginForErrorProgress.value = data.marginForErrorProgress || 0;
-			onTheEdgeProgress.value = data.onTheEdgeProgress || 0;
-		} else {
-			personalBests.value = { 1: 0, 2: 0, 3: 0 };
-			allTimeBests.value = { 1: 0, 2: 0, 3: 0 };
-			totalCorrectAnswers.value = { 1: 0, 2: 0, 3: 0 };
-			lastChanceProgress.value = 0;
-			marginForErrorProgress.value = 0;
-			onTheEdgeProgress.value = 0;
+		} catch (e) {
+			console.error('Error fetching marathon records:', e);
 		}
 	}
 
 	async function saveRecord() {
-		if (!userId.value || !authStore.name) return;
+		if (!userId.value) return;
 
-		const userLeaderboardDocRef = doc(db, LEADERBOARD_COLLECTION, userId.value);
-		const { currentSeasonId } = getSeasonState();
+		try {
+			const userLeaderboardDocRef = doc(db, LEADERBOARD_COLLECTION, userId.value);
+			const { currentSeasonId } = getSeasonState();
 
-		await setDoc(
-			userLeaderboardDocRef,
-			{
-				name: authStore.name,
-				avatar: authStore.avatar || '1.png',
-				streaks: allTimeBests.value,
-				totalCorrect: totalCorrectAnswers.value,
-				lastChanceProgress: lastChanceProgress.value,
-				marginForErrorProgress: marginForErrorProgress.value,
-				onTheEdgeProgress: onTheEdgeProgress.value,
-				currentSeasonId: currentSeasonId,
-				currentSeasonStreaks: personalBests.value
-			},
-			{ merge: true },
-		);
+			await setDoc(
+				userLeaderboardDocRef,
+				{
+					name: authStore.name || 'User',
+					avatar: authStore.avatar || '1.png',
+					streaks: allTimeBests.value, // Всегда сохраняем личный стрик
+					totalCorrect: totalCorrectAnswers.value,
+					lastChanceProgress: lastChanceProgress.value,
+					marginForErrorProgress: marginForErrorProgress.value,
+					onTheEdgeProgress: onTheEdgeProgress.value,
+					currentSeasonId: currentSeasonId,
+					currentSeasonStreaks: personalBests.value
+				},
+				{ merge: true },
+			);
 
-		isRecordUpdated.value = false;
+			isRecordUpdated.value = false;
+		} catch (e) {
+			console.error('Error saving marathon record:', e);
+		}
 	}
 
 	async function loadMarathonLeaderboard(level) {
@@ -298,6 +276,7 @@ export const useGameStore = defineStore('game', () => {
 		difficulty.value = level;
 		lives.value = levelSettings.value.lives;
 		sessionStreak.value = 0;
+		lastCompletedStreak.value = 0;
 		fastAnswerStreak.value = 0;
 		gameReady.value = true;
 	}
@@ -325,6 +304,7 @@ export const useGameStore = defineStore('game', () => {
 	function retryGame() {
 		lives.value = levelSettings.value.lives;
 		sessionStreak.value = 0;
+		lastCompletedStreak.value = 0;
 		startNewRound();
 	}
 
@@ -334,41 +314,51 @@ export const useGameStore = defineStore('game', () => {
 
 		if (isCorrect) {
 			sessionStreak.value++;
-			totalCorrectAnswers.value[difficulty.value]++;
+			lastCompletedStreak.value = sessionStreak.value;
+			totalCorrectAnswers.value[difficulty.value] = (totalCorrectAnswers.value[difficulty.value] || 0) + 1;
 
 			let updateTriggered = false;
 			const { isOpen } = getSeasonState();
 
-			if (isOpen && sessionStreak.value > (personalBests.value[difficulty.value] || 0)) {
-				personalBests.value[difficulty.value] = sessionStreak.value;
-				updateTriggered = true;
-			}
+			// 1. ЛИЧНЫЙ СТРИК: обновляется ВСЕГДА в любое время независимо от сезона!
 			if (sessionStreak.value > (allTimeBests.value[difficulty.value] || 0)) {
 				allTimeBests.value[difficulty.value] = sessionStreak.value;
 				updateTriggered = true;
 			}
 
+			// 2. СЕЗОННЫЙ СТРИК: для таблицы лидеров
+			if (isOpen && sessionStreak.value > (personalBests.value[difficulty.value] || 0)) {
+				personalBests.value[difficulty.value] = sessionStreak.value;
+				updateTriggered = true;
+			}
+
 			if (updateTriggered) {
 				isRecordUpdated.value = true;
+				saveRecord(); // Сразу фиксируем в базе
 			}
 		} else {
+			// Фиксируем финальный результат перед вычетом жизни
+			lastCompletedStreak.value = sessionStreak.value;
 			lives.value--;
 			sessionStreak.value = 0;
 			fastAnswerStreak.value = 0;
 		}
 
+		// Ежедневные задания (передаем актуальный результат)
+		const streakToReport = isCorrect ? sessionStreak.value : lastCompletedStreak.value;
 		if (difficulty.value === 2) {
-			try { daily.noteMarathonMediumStreak(sessionStreak.value); } catch {}
+			try { daily.noteMarathonMediumStreak(streakToReport); } catch {}
 		}
 		if (difficulty.value === 1) {
-			try { daily.noteEasyStreak(sessionStreak.value); } catch {}
+			try { daily.noteEasyStreak(streakToReport); } catch {}
 		}
 		if (difficulty.value === 3) {
-			try { daily.noteHardStreak(sessionStreak.value); } catch {}
+			try { daily.noteHardStreak(streakToReport); } catch {}
 		}
 		if (!isCorrect) {
 			try { daily.addWrong(1); } catch {}
 		}
+
 		if (difficulty.value === 1 && lives.value === 1) {
 			if (sessionStreak.value > lastChanceProgress.value) {
 				lastChanceProgress.value = Math.min(sessionStreak.value, 20);
@@ -381,11 +371,6 @@ export const useGameStore = defineStore('game', () => {
 		}
 		if (isCorrect && difficulty.value === 3 && timeLeft >= 2) {
 			fastAnswerStreak.value++;
-		} else {
-			if (!isCorrect) {
-				sessionStreak.value = 0;
-				fastAnswerStreak.value = 0;
-			}
 		}
 		if (fastAnswerStreak.value > onTheEdgeProgress.value) {
 			onTheEdgeProgress.value = Math.min(fastAnswerStreak.value, 20);
@@ -433,6 +418,7 @@ export const useGameStore = defineStore('game', () => {
 		personalBests,
 		allTimeBests,
 		sessionStreak,
+		lastCompletedStreak,
 		timer,
 		levelSettings,
 		userId,

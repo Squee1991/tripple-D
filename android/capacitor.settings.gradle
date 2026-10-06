@@ -35,8 +35,5 @@ project(':capawesome-capacitor-google-sign-in').projectDir = new File('../node_m
 include ':revenuecat-purchases-capacitor'
 project(':revenuecat-purchases-capacitor').projectDir = new File('../node_modules/@revenuecat/purchases-capacitor/android')
 
-include ':revenuecat-purchases-capacitor-ui'
-project(':revenuecat-purchases-capacitor-ui').projectDir = new File('../node_modules/@revenuecat/purchases-capacitor-ui/android')
-
 include ':capacitor-voice-recorder'
 project(':capacitor-voice-recorder').projectDir = new File('../node_modules/capacitor-voice-recorder/android')

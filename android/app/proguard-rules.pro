@@ -1,21 +1,55 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+# 1. перепаковка
+-dontwarn **
+-repackageclasses ""
+-allowaccessmodification
+-mergeinterfacesaggressively
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# 2. Мост Capacitor (JS <-> Native)
+-keep @com.getcapacitor.annotation.CapacitorPlugin class * { *; }
+-keepclassmembers class * {
+    @com.getcapacitor.PluginMethod public *;
+    @android.webkit.JavascriptInterface <methods>;
+}
+-keep class * extends com.getcapacitor.Plugin {
+    public <init>(...);
+}
+-keepattributes JavascriptInterface,*Annotation*,Signature,InnerClasses,EnclosingMethod
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# Unity Ads -keep public class *
+-keep class com.unity3d.ads.** { *; }
+-keep class com.unity3d.services.** { *; }
+-keep public class gatewayprotocol.v1.** { *; }
+-keep public class com.google.protobuf.** { *; }
+-keep class com.google.ads.mediation.unity.** { *; }
+
+# 3. АВТОРИЗАЦИЯ GOOGLE
+-keep class com.capawesome.capacitorjs.plugins.googlesignin.** { *; }
+-keep class com.capawesome.capacitorjs.plugins.googleauth.** { *; }
+-keep class com.google.android.gms.auth.api.signin.** { *; }
+-keep class com.google.firebase.auth.** { *; }
+-keep class com.google.firebase.FirebaseApp { *; }
+-keep class com.google.firebase.FirebaseOptions { *; }
+
+# 4. Cordova
+-keep class * extends org.apache.cordova.CordovaPlugin {
+    public <init>(...);
+    public boolean execute(java.lang.String, org.json.JSONArray, org.apache.cordova.CallbackContext);
+}
+
+# 5. Оптимизация
+-keep class com.getcapacitor.community.tts.TextToSpeech { public *; }
+-keepclassmembers class * implements android.speech.tts.TextToSpeech$OnInitListener { public void onInit(int); }
+-keepclassmembers class * extends android.speech.tts.UtteranceProgressListener { <methods>; }
+-keep class com.tchvu3.cancanster.VoiceRecorder { public *; }
+-keep class com.tchvu3.cancanster.models.** { <fields>; }
+
+# 6. Очистка неиспользуемых логов
+-assumenosideeffects class android.util.Log {
+    public static boolean isLoggable(java.lang.String, int);
+    public static int v(...);
+    public static int i(...);
+    public static int w(...);
+    public static int d(...);
+    public static int e(...);
+}

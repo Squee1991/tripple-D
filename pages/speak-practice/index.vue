@@ -1,7 +1,7 @@
 <template>
   <div class="speak__container">
     <header class="header">
-      <VBackBtn/>
+      <VBackBtn data-track="speak_practice_menu_back_click"/>
       <h1 class="header__title">{{ t('speakIndexPage.title') }}</h1>
       <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
@@ -112,31 +112,25 @@ const isMounted = ref(false);
 const showDevModal = ref(false);
 const showPremiumModal = ref(false);
 
+const { $track } = useNuxtApp();
+
 const getCompletedCount = (category) => {
   return category.themes.filter(theme => speakStore.userProgress[theme.id]).length;
 };
 
-// Новая функция проверки доступности темы
-const isThemeUnlocked = (catIndex, themeIndex) => {
-  // 1. Если есть премиум — открыто всё
-  if (authStore.isPremium) return true;
 
-  // 2. Первые две темы первой категории открыты всегда
+const isThemeUnlocked = (catIndex, themeIndex) => {
+  if (authStore.isPremium) return true;
   if (catIndex === 0 && (themeIndex === 0 || themeIndex === 1)) return true;
 
-  // 3. Для остальных: ищем ID предыдущей темы
   let prevThemeId = null;
 
   if (themeIndex > 0) {
-    // Предыдущая тема находится в текущей категории
     prevThemeId = categoriesSpeak[catIndex].themes[themeIndex - 1].id;
   } else if (catIndex > 0) {
-    // Предыдущая тема — это последняя тема предыдущей категории
     const prevCategory = categoriesSpeak[catIndex - 1];
     prevThemeId = prevCategory.themes[prevCategory.themes.length - 1].id;
   }
-
-  // 4. Если предыдущая тема найдена, проверяем пройдена ли она
   if (prevThemeId) {
     return !!speakStore.userProgress[prevThemeId];
   }
@@ -144,12 +138,21 @@ const isThemeUnlocked = (catIndex, themeIndex) => {
   return false;
 };
 
-// Обновленная функция перехода
 const goToSession = (theme, catIndex, themeIndex) => {
-  if (isThemeUnlocked(catIndex, themeIndex)) {
+  const isUnlocked = isThemeUnlocked(catIndex, themeIndex);
+
+  if (isUnlocked) {
+    $track('speak_theme_started', {
+      theme_id: theme.id,
+      category_id: categoriesSpeak[catIndex].id,
+      is_repeat: !!speakStore.userProgress[theme.id]
+    });
     router.push({ path: '/speak-practice/session', query: { theme: theme.id } });
   } else {
-    // Если тема еще закрыта, показываем модалку премиума (апсейл)
+    $track('speak_theme_locked_clicked', {
+      theme_id: theme.id,
+      category_id: categoriesSpeak[catIndex].id
+    });
     showPremiumModal.value = true;
   }
 };

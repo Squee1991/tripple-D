@@ -38,9 +38,7 @@
             </div>
             <div class="card-label">{{ t('v-rank.rank') }} {{ idx + 1 }}</div>
             <div class="card-bottom-info">
-              <div class="card-cost">
-                🎓 {{ lvl.hats }}
-              </div>
+              <div class="card-cost">🎓 {{ lvl.hats }}</div>
               <div v-if="lvl.bonus"
                    class="card-bonus"
                    :class="{
