@@ -67,19 +67,19 @@
         "nextStep": "trip_ask"
       },
       {
-        "text": "Hi! War echt schön. Ich war wandern.",
+        "text": "Hi. War echt schön. Ich war wandern.",
         "translation": {
-          "ru-RU": "Привет! Было действительно хорошо. Я ходила в поход.",
-          "en-US": "Hi! Was really nice. I went hiking.",
+          "ru-RU": "Привет. Было действительно хорошо. Я ходила в поход.",
+          "en-US": "Hi. Was really nice. I went hiking.",
           "ar-SA": "أهلاً! كان جميلاً حقاً. ذهبت للتنزه.",
-          "es-ES": "¡Hola! Fue muy bonito. Fui a caminar.",
-          "fr-FR": "Salut ! C'était vraiment bien. J'ai fait de la randonnée.",
-          "hi-IN": "नमस्ते! वास्तव में अच्छा था। मैं लंबी पैदल यात्रा पर गया था।",
-          "pl-PL": "Hej! Było naprawdę fajnie. Byłam na wędrówce.",
-          "ro-RO": "Salut! A fost chiar frumos. Am fost în drumeție.",
-          "tr-TR": "Selam! Gerçekten güzeldi. Yürüyüşe gittim.",
-          "uk-UA": "Привіт! Було дійсно гарно. Я ходила в похід.",
-          "uz-UZ": "Salom! Haqiqatan ham yaxshi edi. Men sayrga chiqdim."
+          "es-ES": "¡Hola. Fue muy bonito. Fui a caminar.",
+          "fr-FR": "Salut . C'était vraiment bien. J'ai fait de la randonnée.",
+          "hi-IN": "नमस्ते. वास्तव में अच्छा था। मैं लंबी पैदल यात्रा पर गया था।",
+          "pl-PL": "Hej. Było naprawdę fajnie. Byłam na wędrówce.",
+          "ro-RO": "Salut. A fost chiar frumos. Am fost în drumeție.",
+          "tr-TR": "Selam. Gerçekten güzeldi. Yürüyüşe gittim.",
+          "uk-UA": "Привіт. Було дійсно гарно. Я ходила в похід.",
+          "uz-UZ": "Salom. Haqiqatan ham yaxshi edi. Men sayrga chiqdim."
         },
         "nextStep": "trip_ask"
       }
@@ -174,19 +174,19 @@
     "defaultNext": "photos_ask"
   },
   "photos_ask": {
-    "botText": "Das glaube ich! Hast du viele Fotos gemacht?",
+    "botText": "Das glaube ich. Hast du viele Fotos gemacht?",
     "botTranslation": {
-      "ru-RU": "Верю (Охотно верю)! Ты сделала много фото?",
-      "en-US": "I believe that! Did you take a lot of photos?",
+      "ru-RU": "Верю. Ты сделала много фото?",
+      "en-US": "I believe that. Did you take a lot of photos?",
       "ar-SA": "أصدق ذلك! هل التقطت الكثير من الصور؟",
-      "es-ES": "¡Me lo creo! ¿Hiciste muchas fotos?",
-      "fr-FR": "Je te crois ! As-tu pris beaucoup de photos ?",
-      "hi-IN": "मुझे विश्वास है! क्या आपने बहुत सारी तस्वीरें लीं?",
-      "pl-PL": "Wierzę! Zrobiłaś dużo zdjęć?",
-      "ro-RO": "Te cred! Ai făcut multe poze?",
-      "tr-TR": "İnanırım! Çok fotoğraf çektin mi?",
-      "uk-UA": "Вірю! Ти зробила багато фото?",
-      "uz-UZ": "Ishonaman! Ko'p rasmga oldingmi?"
+      "es-ES": "¡Me lo creo. ¿Hiciste muchas fotos?",
+      "fr-FR": "Je te crois . As-tu pris beaucoup de photos ?",
+      "hi-IN": "मुझे विश्वास है. क्या आपने बहुत सारी तस्वीरें लीं?",
+      "pl-PL": "Wierzę. Zrobiłaś dużo zdjęć?",
+      "ro-RO": "Te cred. Ai făcut multe poze?",
+      "tr-TR": "İnanırım. Çok fotoğraf çektin mi?",
+      "uk-UA": "Вірю. Ти зробила багато фото?",
+      "uz-UZ": "Ishonaman. Ko'p rasmga oldingmi?"
     },
     "vocabulary": [
       {

@@ -263,7 +263,7 @@ onUnmounted(() => {
                     <div v-if="coupon.label" class="loot-info">
                       <span class="loot-title">{{ coupon.label }}</span>
                     </div>
-<!--                    <div class="loot-val" v-if="coupon.percent > 0">{{ coupon.percent }}%</div>-->
+                    <!--                    <div class="loot-val" v-if="coupon.percent > 0">{{ coupon.percent }}%</div>-->
                   </div>
                 </div>
               </div>

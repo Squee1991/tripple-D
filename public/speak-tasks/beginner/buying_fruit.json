@@ -424,7 +424,7 @@
     "defaultNext": "step_13"
   },
   "step_13": {
-    "botText": "Das macht zusammen 12 Euro und 50 Cent. Wie möchten Sie bezahlen?",
+    "botText": "Das macht zusammen 12,50 Euro  Wie möchten Sie bezahlen?",
     "botTranslation": {
       "ru-RU": "Это стоит вместе 12 евро и 50 центов. Как вы желаете оплатить?",
       "en-US": "That comes to 12 euros and 50 cents altogether. How would you like to pay?",

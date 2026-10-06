@@ -4,8 +4,98 @@ import {useRoute, useRouter} from 'vue-router'
 import {useLocalePath} from '#i18n'
 import {useEventSessionStore} from '~/store/eventsStore.js'
 import SoundBtn from '~/src/components/soundBtn.vue'
+import {playCorrect, playWrong, playLevelCompleted} from "~/utils/soundManager.js"
+import {getSpeechAudio} from '~/utils/googleTTS.js'
+import EventSuccessModal from '~/src/components/V-EventSuccessModal.vue'
+import {useEventSessionLogic} from '~/composables/useEventSessionLogic.js'
+import {DotLottieVue} from '@lottiefiles/dotlottie-vue'
+
+const isSpeaking = ref(false)
+
+async function speakText(text) {
+  if (isSpeaking.value || !text) return
+  isSpeaking.value = true
+  try {
+    await getSpeechAudio(text.trim())
+  } catch (error) {
+    console.error(error)
+  } finally {
+    isSpeaking.value = false
+  }
+}
 
 const {t} = useI18n()
+
+const {
+  getResultIcon,
+  getResultAnimation,
+  getLeaveAnimation,
+  animStep,
+  displayXp,
+  displayCoins,
+  confettiParticles,
+  runSuccessAnimation
+} = useEventSessionLogic()
+
+const route = useRoute()
+const router = useRouter()
+const localePath = useLocalePath()
+const eventStore = useEventSessionStore()
+
+const eventId = computed(() => String(route.params.id || ''))
+const eventData = ref({quests: []})
+const isLoading = ref(true)
+const isFinished = ref(false)
+const showExitModal = ref(false)
+
+const selectedOptionIndex = ref(null)
+const userTextInput = ref('')
+const checkStatus = ref(null)
+const matchingState = ref({leftItemId: null, rightItemId: null, chosenPairs: []})
+const wrongPairIndices = ref(new Set())
+
+const currentQuest = computed(() => {
+  if (!eventStore.questId) return null
+  return eventData.value.quests.find(quest => quest.id === eventStore.questId) || null
+})
+
+const totalSteps = computed(() => currentQuest.value?.steps?.length || 0)
+const currentStep = computed(() => currentQuest.value?.steps?.[eventStore.stepIndex] || null)
+
+const stepsToPlay = ref([])
+
+function calculateStepsToPlay() {
+  const solved = eventStore.solvedSteps || []
+  const list = []
+  for (let i = 0; i < totalSteps.value; i++) {
+    if (!solved.includes(i)) {
+      list.push(i)
+    }
+  }
+  stepsToPlay.value = list.length ? list : Array.from({length: totalSteps.value}, (_, i) => i)
+}
+
+const totalSessionSteps = computed(() => stepsToPlay.value.length || totalSteps.value || 1)
+
+const currentSessionIndex = computed(() => {
+  const idx = stepsToPlay.value.indexOf(eventStore.stepIndex)
+  return idx >= 0 ? idx + 1 : 1
+})
+
+const isQuestFullyCompleted = computed(() => {
+  const solved = eventStore.solvedSteps || []
+  return solved.length >= totalSteps.value
+})
+
+const totalPossibleScore = computed(() => {
+  const steps = currentQuest.value?.steps || []
+  return steps.reduce((sum, step) => {
+    if (step.type === 'reading') return sum + (step.questions?.length || 0)
+    if (step.type === 'matching') return sum + (step.correctPairs?.length || 0)
+    return sum + 1
+  }, 0)
+})
+
 const allEventImages = import.meta.glob('@/assets/images/event-rewards/**/*.{svg,SVG}', {
   eager: true,
   query: '?url',
@@ -21,38 +111,6 @@ const getImageUrl = (imagePathFromJson) => {
   }
   return ''
 }
-
-const route = useRoute()
-const router = useRouter()
-const localePath = useLocalePath()
-const eventStore = useEventSessionStore()
-
-const eventId = computed(() => String(route.params.id || ''))
-const eventData = ref({quests: []})
-const isLoading = ref(true)
-const isFinished = ref(false)
-
-const currentQuest = computed(() => {
-  if (!eventStore.questId) return null
-  return eventData.value.quests.find(quest => quest.id === eventStore.questId) || null
-})
-
-const totalSteps = computed(() => currentQuest.value?.steps?.length || 0)
-const currentStep = computed(() => currentQuest.value?.steps?.[eventStore.stepIndex] || null)
-
-const isQuestFullyCompleted = computed(() => {
-  const solved = eventStore.solvedSteps || []
-  return solved.length >= totalSteps.value
-})
-
-const totalPossibleScore = computed(() => {
-  const steps = currentQuest.value?.steps || []
-  return steps.reduce((sum, step) => {
-    if (step.type === 'reading') return sum + (step.questions?.length || 0)
-    if (step.type === 'matching') return sum + (step.correctPairs?.length || 0)
-    return sum + 1
-  }, 0)
-})
 
 async function loadEventJson() {
   isLoading.value = true
@@ -77,8 +135,10 @@ onMounted(async () => {
   if (!currentQuest.value) {
     router.replace({name: 'event-id', params: {id: eventId.value}})
   } else {
+    calculateStepsToPlay()
     if (eventStore.finished) {
       isFinished.value = true
+      runSuccessAnimation(isQuestFullyCompleted.value, eventStore.isReplayMode, currentQuest.value?.rewardRep, currentQuest.value?.rewardCoins)
     }
     const solved = eventStore.solvedSteps || []
     if (!isFinished.value && solved.includes(eventStore.stepIndex)) {
@@ -86,12 +146,6 @@ onMounted(async () => {
     }
   }
 })
-
-const selectedOptionIndex = ref(null)
-const userTextInput = ref('')
-const checkStatus = ref(null)
-const matchingState = ref({leftItemId: null, rightItemId: null, chosenPairs: []})
-const wrongPairIndices = ref(new Set())
 
 watch(currentStep, () => {
   selectedOptionIndex.value = null
@@ -121,17 +175,14 @@ async function retryQuest() {
   isFinished.value = false
   checkStatus.value = null
   await eventStore.start(eventId.value, currentQuest.value.id)
+  calculateStepsToPlay()
   jumpToNextUnsolvedStep()
 }
 
 function goToNextStep() {
-  let nextIndex = eventStore.stepIndex + 1
-  const solved = eventStore.solvedSteps || []
-  while (nextIndex < totalSteps.value && solved.includes(nextIndex)) {
-    nextIndex++
-  }
-  if (nextIndex < totalSteps.value) {
-    eventStore.setStepIndex(nextIndex)
+  const currentPos = stepsToPlay.value.indexOf(eventStore.stepIndex)
+  if (currentPos >= 0 && currentPos + 1 < stepsToPlay.value.length) {
+    eventStore.setStepIndex(stepsToPlay.value[currentPos + 1])
   } else {
     finishQuest()
   }
@@ -140,6 +191,10 @@ function goToNextStep() {
 function finishQuest() {
   eventStore.finishQuest()
   isFinished.value = true
+  runSuccessAnimation(isQuestFullyCompleted.value, eventStore.isReplayMode, currentQuest.value?.rewardRep, currentQuest.value?.rewardCoins)
+  if (isQuestFullyCompleted.value) {
+    playLevelCompleted()
+  }
   if (!eventStore.isReplayMode && currentQuest.value && isQuestFullyCompleted.value) {
     const rewards = {
       coins: currentQuest.value.rewardCoins || 0,
@@ -147,6 +202,18 @@ function finishQuest() {
     }
     eventStore.awardQuestCompletion(eventStore.questId, rewards)
   }
+}
+
+function requestExit() {
+  if (isFinished.value) {
+    goBackHome()
+    return
+  }
+  showExitModal.value = true
+}
+
+function closeExitModal() {
+  showExitModal.value = false
 }
 
 function goBackHome() {
@@ -166,6 +233,10 @@ const filledSentenceHtml = computed(() => {
 function selectOption(index) {
   if (checkStatus.value !== null) return
   selectedOptionIndex.value = index
+  const chosenText = currentStep.value?.options?.[index]
+  if (chosenText) {
+    speakText(chosenText)
+  }
 }
 
 function confirmSingleChoice() {
@@ -176,9 +247,11 @@ function confirmSingleChoice() {
   if (selectedOptionIndex.value === currentStep.value.correctOptionIndex) {
     checkStatus.value = 'correct'
     eventStore.addScore(1)
+    playCorrect()
     if (eventStore.markStepAsSolved) eventStore.markStepAsSolved(eventStore.stepIndex)
   } else {
     checkStatus.value = 'wrong'
+    playWrong()
   }
 }
 
@@ -196,9 +269,11 @@ function confirmTextInput() {
   if (isCorrect) {
     checkStatus.value = 'correct'
     eventStore.addScore(1)
+    playCorrect()
     if (eventStore.markStepAsSolved) eventStore.markStepAsSolved(eventStore.stepIndex)
   } else {
     checkStatus.value = 'wrong'
+    playWrong()
   }
 }
 
@@ -206,6 +281,11 @@ function selectReadingOption(questionIndex, optionIndex) {
   if (checkStatus.value !== null) return
   if (currentStep.value?.questions?.[questionIndex]) {
     currentStep.value.questions[questionIndex].userAnswer = optionIndex
+
+    const optionText = currentStep.value.questions[questionIndex].options?.[optionIndex]
+    if (optionText) {
+      speakText(optionText)
+    }
   }
 }
 
@@ -230,9 +310,11 @@ function checkReadingAnswers() {
   if (isAllCorrect) {
     checkStatus.value = 'correct'
     eventStore.addScore(questions.length)
+    playCorrect()
     if (eventStore.markStepAsSolved) eventStore.markStepAsSolved(eventStore.stepIndex)
   } else {
     checkStatus.value = 'wrong'
+    playWrong()
   }
 }
 
@@ -250,13 +332,20 @@ const availableRightItems = computed(() => {
 function pickLeftItem(id) {
   if (checkStatus.value !== null) return
   matchingState.value.leftItemId = id
+  const item = currentStep.value?.pairsLeft?.find(i => i.id === id)
+  if (item?.text) {
+    speakText(item.text)
+  }
+
   if (matchingState.value.rightItemId) tryCommitPair()
 }
 
 function pickRightItem(id) {
   if (checkStatus.value !== null) return
   matchingState.value.rightItemId = id
-  if (matchingState.value.leftItemId) tryCommitPair()
+  if (matchingState.value.leftItemId) {
+    tryCommitPair()
+  }
 }
 
 function tryCommitPair() {
@@ -294,9 +383,11 @@ function checkMatchingAnswers() {
   if (isCountCorrect && hasNoErrors) {
     checkStatus.value = 'correct'
     eventStore.addScore(correctPairs.length)
+    playCorrect()
     if (eventStore.markStepAsSolved) eventStore.markStepAsSolved(eventStore.stepIndex)
   } else {
     checkStatus.value = 'wrong'
+    playWrong()
   }
 }
 
@@ -333,14 +424,14 @@ const errorMessage = computed(() => {
   if (type === 'matching') return t('eventSessionPage.mistakes')
   return ''
 })
+
 </script>
 
 <template>
   <div class="lesson">
     <div class="lesson__container">
-
       <header class="topbar">
-        <button class="btn-icon-back" @click="goBackHome">
+        <button class="btn-icon-back" @click="requestExit">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -350,27 +441,24 @@ const errorMessage = computed(() => {
         <div class="topbar__progress" v-if="!isFinished && currentQuest">
           <div class="progress_exp-bar">
             <div class="progress__bar"
-                 :style="{ width: (totalSteps ? ((eventStore.stepIndex ) / totalSteps * 100) : 0) + '%' }">
+                 :style="{ width: (((currentSessionIndex - 1) / totalSessionSteps) * 100) + '%' }">
               <div class="glare"></div>
             </div>
           </div>
           <div class="progress__text">
-            {{ eventStore.stepIndex + 1 }} / {{ totalSteps }}
+            {{ currentSessionIndex }} / {{ totalSessionSteps }}
           </div>
         </div>
       </header>
-
       <div class="lesson__content">
         <div v-if="isLoading" class="lesson__state">
           <div class="loader"></div>
           <div>{{ t('eventSessionPage.loading') }}</div>
         </div>
-
         <div v-else-if="!currentQuest" class="lesson__state">
           <span>{{ t('eventSessionPage.notFound') }}</span>
           <button class="btn btn--ghost" @click="goBackHome">{{ t('eventSessionPage.back') }}</button>
         </div>
-
         <div v-else class="lesson__card">
           <section v-if="currentStep?.type === 'reading'" class="section card">
             <div class="paper">
@@ -380,7 +468,7 @@ const errorMessage = computed(() => {
             <div v-if="currentStep.questions && currentStep.questions.length" class="reading">
               <div v-for="(questionItem, questionIndex) in currentStep.questions" :key="questionIndex"
                    class="reading__item">
-                <p class="question">{{ questionIndex + 1 }}. {{ questionItem.question }}</p>
+                <p class="question">{{ questionIndex + 1 }}. {{ t(questionItem.question) }}</p>
                 <div class="choices">
                   <button
                       v-for="(optionText, optionIndex) in questionItem.options"
@@ -394,16 +482,15 @@ const errorMessage = computed(() => {
                     }"
                       @click="selectReadingOption(questionIndex, optionIndex)"
                   >
-                    <span class="option__text">{{ optionText }}</span>
+                    <span class="option__text">{{ t(optionText) }}</span>
                   </button>
                 </div>
               </div>
             </div>
           </section>
-
           <section v-else-if="currentStep?.type === 'mcq' || currentStep?.type === 'multiple-choice'"
                    class="section card">
-            <p v-if="currentStep.question" class="question">{{ currentStep.question }}</p>
+            <p v-if="currentStep.question" class="question">{{ t(currentStep.question) }}</p>
             <img class="question-image" v-if="currentStep.image" :src="getImageUrl(currentStep.image)"
                  alt="Task image"/>
             <div class="choices">
@@ -418,11 +505,10 @@ const errorMessage = computed(() => {
                 }"
                   @click="selectOption(optionIndex)"
               >
-                <span class="option__text">{{ optionText }}</span>
+                <span class="option__text">{{ t(optionText) }}</span>
               </button>
             </div>
           </section>
-
           <section v-else-if="currentStep?.type === 'choose-word'" class="section card">
             <p class="question" v-html="filledSentenceHtml"></p>
             <div class="choices">
@@ -437,11 +523,10 @@ const errorMessage = computed(() => {
                 }"
                   @click="selectOption(optionIndex)"
               >
-                <span class="option__text">{{ optionText }}</span>
+                <span class="option__text">{{ t(optionText) }}</span>
               </button>
             </div>
           </section>
-
           <section v-else-if="currentStep?.type === 'fill'" class="section card">
             <h3 class="section__title">{{ t('eventSessionPage.fillAnswer') }}</h3>
             <p class="question">{{ currentStep.prompt }}</p>
@@ -455,7 +540,6 @@ const errorMessage = computed(() => {
               />
             </div>
           </section>
-
           <section v-else-if="currentStep?.type === 'matching'" class="section card">
             <h3 class="section__title">{{ currentStep.instruction || t('eventSessionPage.connectPaar') }}</h3>
             <div class="match">
@@ -468,7 +552,7 @@ const errorMessage = computed(() => {
                       :class="{ chosen: matchingState.leftItemId === leftItem.id }"
                       @click="pickLeftItem(leftItem.id)"
                   >
-                    {{ leftItem.text }}
+                    {{ t(leftItem.text) }}
                   </button>
                 </div>
                 <div class="match__col">
@@ -500,13 +584,11 @@ const errorMessage = computed(() => {
               </div>
             </div>
           </section>
-
           <section v-else class="section card">
             Error <code>{{ currentStep?.type }}</code>
           </section>
         </div>
       </div>
-
       <div class="lesson__footer" v-if="!isLoading && currentQuest && !isFinished">
         <div v-if="checkStatus === 'correct'" class="hint hint--success">{{ successMessage }}</div>
         <div v-if="checkStatus === 'wrong' && errorMessage" class="hint hint--error" v-html="errorMessage"></div>
@@ -515,49 +597,49 @@ const errorMessage = computed(() => {
         </button>
       </div>
 
-      <div v-if="isFinished" class="result-modal-overlay" @click.self="goBackHome">
+      <div v-if="showExitModal" class="result-modal-overlay" @click.self="closeExitModal">
         <div class="result-wrapper">
-          <div v-if="isQuestFullyCompleted" class="result card success-card">
+          <div class="result card fail-card">
             <div class="result__icon">
-              <img class="result_icon" src="../../../assets/images/LeaveLesson.svg" alt="">
+              <DotLottieVue
+                  :data="JSON.stringify(getLeaveAnimation())"
+                  :loop="true"
+                  :autoplay="true"
+              />
             </div>
-            <h2 class="result__title">{{ t('eventSessionPage.perfect') }}</h2>
-            <p class="result__text">{{ t('eventSessionPage.right') }} {{ totalPossibleScore }}
-              {{ t('eventSessionPage.questions') }}</p>
-            <div class="rewards" v-if="currentQuest?.rewardCoins && !eventStore.isReplayMode">
-              <span class="rewards__icon">+{{ currentQuest.rewardCoins }} 🎃</span>
-              <span class="xp-badge-3d">
-                <span>+{{ currentQuest.rewardRep }}
-                </span>
-                <span class="reward_xp"> XP</span>
-              </span>
-            </div>
+            <p class="result__subtext">{{
+                t('Осталось совсем немного. Закончите задание чтобы сохранить прогресс')
+              }}</p>
             <div class="result__actions">
-              <button class="btn btn--primary" @click="goBackHome">
-                {{ !eventStore.isReplayMode ? t('eventSessionPage.getReward') : t('eventSessionPage.leave') }}
-              </button>
-            </div>
-          </div>
-          <div v-else class="result card fail-card">
-            <div class="result__icon">
-              <img class="result_icon" src="../../../assets/images/LeaveLesson.svg" alt="">
-            </div>
-            <p class="result__subtext">{{ t('eventSessionPage.noMistake') }}</p>
-            <div class="result__actions">
-              <button class="btn btn--primary" @click="retryQuest">{{ t('eventSessionPage.again') }}</button>
+              <button class="btn btn--primary" @click="closeExitModal">{{ t('Продолжить') }}</button>
               <button class="btn btn--ghost" @click="goBackHome">{{ t('eventSessionPage.leave') }}</button>
             </div>
           </div>
         </div>
       </div>
+      <EventSuccessModal
+          v-if="isFinished"
+          :finished="isFinished"
+          :is-quest-fully-completed="isQuestFullyCompleted"
+          :previously-cleared="eventStore.isReplayMode"
+          :anim-step="animStep"
+          :display-xp="displayXp"
+          :display-coins="displayCoins"
+          :confetti-particles="confettiParticles"
+          :mascot-src="getResultIcon(isQuestFullyCompleted)"
+          :lottie-data="getResultAnimation(isQuestFullyCompleted)"
+          @themes="goBackHome"
+          @retryMistakes="retryQuest"
+      />
     </div>
   </div>
 </template>
 
 <style scoped>
 .lesson {
-  height: 100dvh;
+  height: 100%;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   font-family: "Kablammo", system-ui;
   color: #1f2a44;
@@ -662,34 +744,11 @@ const errorMessage = computed(() => {
   width: 140px;
 }
 
-.result__title {
-  font-size: 26px;
-  font-weight: 900;
-  margin-bottom: 5px;
-  color: var(--title);
-}
-
-.result__text {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--titleColor);
-}
-
 .result__subtext {
   font-size: 16px;
   color: var(--title);
   margin-bottom: 15px;
   font-weight: 800;
-}
-
-.rewards {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: 900;
-  color: #ff9c1a;
-  margin: 10px 0 20px 0;
 }
 
 .result__actions {
@@ -771,15 +830,6 @@ const errorMessage = computed(() => {
   flex-direction: column;
   gap: 10px;
   padding: 24px 0;
-}
-
-.reward_xp {
-
-}
-
-.xp-badge-3d{
-  display: flex;
-  align-items: center;
 }
 
 .loader {
@@ -1036,8 +1086,8 @@ const errorMessage = computed(() => {
 }
 
 .question-image {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   display: block;
   padding: 8px;
 }
@@ -1068,7 +1118,7 @@ const errorMessage = computed(() => {
 @media (max-width: 767px) {
   .option {
     min-height: 40px;
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 

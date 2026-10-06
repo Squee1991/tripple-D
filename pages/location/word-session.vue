@@ -5,6 +5,7 @@
       @touchmove="handleTouchMove"
       @touchend="handleTouchEnd"
   >
+    <VLoginPreloader v-if="isAdLoading"/>
     <template v-if="viewMode === 'list'">
       <header class="vocab-header list-header">
         <button class="btn-icon-back" @click="goBack">
@@ -119,11 +120,9 @@
         </Transition>
       </Teleport>
       <footer class="vocab-footer" v-if="selectedAnswer && currentWord">
-        <!-- Кнопка проверки (Синяя) -->
         <button v-if="!hasChecked" class="btn-primary btn-check" @click="checkAnswer">
-          Проверить
+          {{ t('questCompletedModals.check')}}
         </button>
-        <!-- Кнопка далее (Зеленая если верно, Красная если неверно) -->
         <button
             v-else
             class="btn-primary"
@@ -154,7 +153,6 @@
         </div>
       </div>
     </Transition>
-
     <Teleport to="body">
       <VStopSessionModal
           v-model:show="showExitModal"
@@ -168,9 +166,10 @@
 <script setup>
 import {ref, computed, onMounted} from 'vue'
 import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
-import {useI18n} from 'vue-i18n'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue"
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue"
+import {showInterstitial} from '~/utils/admob.js'
 import {useSwipeBack} from '~/composables/useSwipeBack.js'
 
 const route = useRoute()
@@ -184,6 +183,7 @@ const viewMode = ref('list')
 const vocabulary = ref([])
 const isLoading = ref(true)
 const errorMessage = ref("")
+const isAdLoading = ref(false)
 
 const isTipModalOpen = ref(false)
 const currentTipText = ref("")
@@ -207,19 +207,16 @@ const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
 })
 
 const totalSteps = computed(() => learningSequence.value.length)
-
 const progressPercentage = computed(() => {
   if (totalSteps.value === 0) return 0
   return (currentStep.value / totalSteps.value) * 100
 })
-
 const currentWord = computed(() => {
   if (totalSteps.value === 0) return null
   const index = Math.min(currentStep.value, totalSteps.value - 1)
   return learningSequence.value[index]
 })
 
-// Новое вычисляемое свойство для проверки правильности ответа
 const isAnswerCorrect = computed(() => {
   if (!currentWord.value) return false
   return selectedAnswer.value === currentWord.value.correctTranslation
@@ -298,29 +295,33 @@ function goToVerbForms(verbName) {
 }
 
 function startPractice() {
-  viewMode.value = 'practice'
+  isAdLoading.value = true
+  showInterstitial(() => {
+    isAdLoading.value = false
+    viewMode.value = 'practice'
+    const allTranslations = vocabulary.value.map(v => getTranslation(v))
+    allTranslationsRef.value = allTranslations
 
-  const allTranslations = vocabulary.value.map(v => getTranslation(v))
-  allTranslationsRef.value = allTranslations
+    const sequence = []
+    vocabulary.value.forEach(v => {
+      sequence.push({...v, displayType: 'visual', correctTranslation: getTranslation(v)})
+      sequence.push({...v, displayType: 'audio', correctTranslation: getTranslation(v)})
+    })
 
-  const sequence = []
-  vocabulary.value.forEach(v => {
-    sequence.push({...v, displayType: 'visual', correctTranslation: getTranslation(v)})
-    sequence.push({...v, displayType: 'audio', correctTranslation: getTranslation(v)})
+    learningSequence.value = sequence.sort(() => Math.random() - 0.5)
+    currentStep.value = 0
+    correctAnswers.value = 0
+    incorrectAnswers.value = 0
+    selectedAnswer.value = null
+    hasChecked.value = false
+
+    if (learningSequence.value.length > 0) {
+      generateOptions(allTranslations)
+      setTimeout(() => {
+        playSound(currentWord.value.word)
+      }, 300)
+    }
   })
-
-  learningSequence.value = sequence.sort(() => Math.random() - 0.5)
-  currentStep.value = 0
-  correctAnswers.value = 0
-  incorrectAnswers.value = 0
-  selectedAnswer.value = null
-
-  if (learningSequence.value.length > 0) {
-    generateOptions(allTranslations)
-    setTimeout(() => {
-      playSound(currentWord.value.word)
-    }, 300)
-  }
 }
 
 function generateOptions(allTranslations) {
@@ -377,6 +378,7 @@ function restartLearning() {
   correctAnswers.value = 0
   incorrectAnswers.value = 0
   selectedAnswer.value = null
+  hasChecked.value = false
   learningSequence.value = learningSequence.value.sort(() => Math.random() - 0.5)
   generateOptions(allTranslationsRef.value)
   setTimeout(() => {
@@ -543,6 +545,7 @@ onBeforeRouteLeave((to, from, next) => {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 4px;
   flex-grow: 1;
 }
 
@@ -565,7 +568,7 @@ onBeforeRouteLeave((to, from, next) => {
   gap: 6px;
   background: #eff6ff;
   color: #3b82f6;
-  border: 3px solid #bfdbfe;
+  border: 1px solid #bfdbfe;
   padding: 4px 10px;
   border-radius: 12px;
   font-size: 13px;
@@ -573,12 +576,6 @@ onBeforeRouteLeave((to, from, next) => {
   cursor: pointer;
   transition: background 0.1s ease, transform 0.1s ease;
   margin-top: 4px;
-}
-
-.option-btn.selected {
-  background: #e0efff;
-  border-color: #3b82f6;
-  color: #1e3a8a;
 }
 
 .btn-verb-forms:active {
@@ -609,8 +606,9 @@ onBeforeRouteLeave((to, from, next) => {
   box-shadow: 0 0 0 transparent;
 }
 
-
+/* Стили карточек практики */
 .flashcard {
+  background: white;
   border-radius: 20px;
   padding: 20px;
   display: flex;
@@ -619,7 +617,7 @@ onBeforeRouteLeave((to, from, next) => {
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   gap: 16px;
-  min-height: 140px;
+  min-height: 100px;
 }
 
 .flashcard.audio-only :deep(.btn-sound) {
@@ -634,7 +632,7 @@ onBeforeRouteLeave((to, from, next) => {
 .word-german {
   font-size: 28px;
   font-weight: 800;
-  color: var(--titleColor);
+  color: #1e293b;
   margin: 0;
   text-align: center;
 }
@@ -656,6 +654,12 @@ onBeforeRouteLeave((to, from, next) => {
   color: #334155;
   cursor: pointer;
   transition: all 0.2s;
+}
+
+.option-btn.selected {
+  background: #e0efff;
+  border-color: #3b82f6;
+  color: #1e3a8a;
 }
 
 .option-btn:active:not(:disabled) {
@@ -693,13 +697,11 @@ onBeforeRouteLeave((to, from, next) => {
   transition: transform 0.1s;
 }
 
-/* Состояние "Синей кнопки" для проверки */
 .btn-check {
   background: #3b82f6;
   box-shadow: 0 5px 0 #2563eb;
 }
 
-/* Состояние "Красной кнопки" для неверного ответа */
 .btn-incorrect {
   background: #ef4444 !important;
   box-shadow: 0 5px 0 #dc2626 !important;
@@ -712,26 +714,23 @@ onBeforeRouteLeave((to, from, next) => {
 
 .btn-secondary {
   width: 100%;
-  background-color: #f3f4f6;
-  color: #374151;
+  background-color: #7f82d9;
+  box-shadow: 0 5px 0 #5759aa;
+  color: white;
   border: none;
   padding: 14px 24px;
   border-radius: 42px;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 900;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.1s;
 }
 
-.btn-secondary:hover {
-  background-color: #e5e7eb;
-}
 
 .btn-secondary:active {
   transform: scale(0.97);
 }
 
-/* Модалка с подсказкой */
 .tip-overlay {
   position: absolute;
   top: 0;
@@ -820,7 +819,7 @@ onBeforeRouteLeave((to, from, next) => {
 }
 
 .completion-modal {
-  background: var(--bgModal, #ffffff);
+  background: var(--bgModal);
   border-radius: 24px 24px 0 0;
   padding: 30px 20px;
   width: 100%;
@@ -836,7 +835,7 @@ onBeforeRouteLeave((to, from, next) => {
 
 .completion-modal h2 {
   font-size: 27px;
-  color: var(--titleColor, #1f2937);
+  color: var(--titleColor);
   font-weight: 700;
   margin: 0;
 }

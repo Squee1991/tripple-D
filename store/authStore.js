@@ -1,8 +1,8 @@
 import { defineStore } from "pinia";
-import { ref, computed } from 'vue';
+import { ref, computed, watch } from 'vue';
 import { Capacitor } from '@capacitor/core';
 import { Purchases } from '@revenuecat/purchases-capacitor';
-import { useBillingStore } from '../store/billingStore.js';
+import { useBillingStore } from '~/store/billingStore.js';
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -23,8 +23,12 @@ import {
     fetchSignInMethodsForEmail
 } from 'firebase/auth';
 import { GoogleSignIn } from '@capawesome/capacitor-google-sign-in';
+// Если используете Apple на нативе, убедитесь что импорт есть:
+// import { SignIn as AppleSignIn } from '@capacitor-community/apple-sign-in';
 import { doc, setDoc, getDoc, getFirestore, updateDoc, serverTimestamp, writeBatch } from 'firebase/firestore';
 import { userlangStore } from "./learningStore.js";
+import { useAchievementStore } from "./achievementStore.js"; // Добавлен импорт, так как используется в purchaseAvatar
+
 let authStateUnsubscribe = null;
 
 const isUserCancelledAuth = (error) => {
@@ -58,6 +62,8 @@ export const userAuthStore = defineStore('auth', () => {
     const hasSeenOnboarding = ref(false);
     const initialized = ref(false);
     const totalHats = ref(0);
+    const hasAds = ref(true);
+    const streakCount = ref(0);
     const freezeEndsAt = ref(null);
     const claimedBonuses = ref([]);
     const achievements = ref(null);
@@ -82,7 +88,7 @@ export const userAuthStore = defineStore('auth', () => {
         if (typeof window !== 'undefined') {
             localStorage.setItem('cached_premium', newValue ? 'true' : 'false')
         }
-    })
+    });
 
     const isWebView = ref(false);
     const shouldShowFeedbackSurvey = ref(false);
@@ -167,7 +173,6 @@ export const userAuthStore = defineStore('auth', () => {
         }
     });
 
-    
     const setUserData = (data) => {
         uid.value = data.uid || null;
         name.value = data.name || null;
@@ -184,6 +189,8 @@ export const userAuthStore = defineStore('auth', () => {
         voiceConsentGiven.value = data.voiceConsentGiven === true;
         hasSeenOnboarding.value = data.hasSeenOnboarding === true;
         totalHats.value = data.totalHats || 0;
+        hasAds.value = data.hasAds ?? true;
+        streakCount.value = data.streakCount || 0;
         freezeEndsAt.value = toMillis(data.freezeEndsAt);
         claimedBonuses.value = data.claimedBonuses || [];
 
@@ -204,6 +211,29 @@ export const userAuthStore = defineStore('auth', () => {
         };
 
         if (data.isPremium && !data.gotPremiumBonus) grantPremiumBonusPoints();
+    };
+
+    const incrementStreak = async () => {
+        const authUser = auth.currentUser;
+        if (!authUser) return;
+        const newStreak = (streakCount.value || 0) + 1;
+        streakCount.value = newStreak;
+        try {
+            await updateDoc(doc(db, 'users', authUser.uid), { streakCount: newStreak });
+        } catch (e) {
+            console.error('Ошибка обновления streakCount:', e);
+        }
+    };
+
+    const resetStreak = async () => {
+        const authUser = auth.currentUser;
+        if (!authUser) return;
+        streakCount.value = 0;
+        try {
+            await updateDoc(doc(db, 'users', authUser.uid), { streakCount: 0 });
+        } catch (e) {
+            console.error('Ошибка сброса streakCount:', e);
+        }
     };
 
     const grantPremiumBonusPoints = async () => {
@@ -309,11 +339,9 @@ export const userAuthStore = defineStore('auth', () => {
             '16.png': { ach: 'leaderboardEasy-1', error: 'locked_easy_1' },
             '17.png': { ach: 'leaderboardEasy-2', error: 'locked_easy_2' },
             '18.png': { ach: 'leaderboardEasy-3', error: 'locked_easy_3' },
-
             '19.png': { ach: 'leaderboardNormal-1', error: 'locked_normal_1' },
             '20.png': { ach: 'leaderboardNormal-2', error: 'locked_normal_2' },
             '21.png': { ach: 'leaderboardNormal-3', error: 'locked_normal_3' },
-
             '22.png': { ach: 'leaderboardHard-1', error: 'locked_hard_1' },
             '23.png': { ach: 'leaderboardHard-2', error: 'locked_hard_2' },
             '24.png': { ach: 'leaderboardHard-3', error: 'locked_hard_3' }
@@ -375,7 +403,7 @@ export const userAuthStore = defineStore('auth', () => {
         const regDate = regDateFromDb || regDateFromAuth;
         if (!regDate) return;
 
-        if (Date.now() - regDate.getTime() < 3 * 24 * 60 * 60 * 1000) return; // Поменял 0 на честные 3 дня, раз переменная называется "threeDaysMs"
+        if (Date.now() - regDate.getTime() < 3 * 24 * 60 * 60 * 1000) return;
         shouldShowFeedbackSurvey.value = true;
     };
 
@@ -394,10 +422,10 @@ export const userAuthStore = defineStore('auth', () => {
             let authResult;
 
             if (isNative) {
+                // Если AppleSignIn не инициализирован для нативок, нужно проверять плагин
                 const result = await AppleSignIn.signIn({
                     scopes: [SignInScope.Email, SignInScope.FullName],
                 });
-                // ИСПРАВЛЕНО: у Capawesome токен берется напрямую из result.idToken
                 const idToken = result.idToken;
 
                 if (!idToken) {
@@ -409,6 +437,7 @@ export const userAuthStore = defineStore('auth', () => {
                 });
                 authResult = await signInWithCredential(auth, credential);
             } else {
+                // Логика для Web
                 provider.addScope('email');
                 provider.addScope('name');
                 authResult = await signInWithPopup(auth, provider);
@@ -433,6 +462,8 @@ export const userAuthStore = defineStore('auth', () => {
                     hasSeenOnboarding: false,
                     isPremium: false,
                     totalHats: 0,
+                    streakCount: 0,
+                    hasAds: true,
                     points: 0,
                     claimedBonuses: [],
                     sale_3: false,
@@ -455,7 +486,6 @@ export const userAuthStore = defineStore('auth', () => {
             });
 
             await checkFeedbackSurveyEligibility();
-
             return authResult;
 
         } catch (error) {
@@ -470,7 +500,7 @@ export const userAuthStore = defineStore('auth', () => {
     const loginWithGoogle = async () => {
         try {
             const isNative = Capacitor.isNativePlatform();
-            let user = null; // Общая переменная для записи пользователя
+            let user = null;
 
             if (isNative) {
                 // Логика только для iOS/Android
@@ -480,7 +510,7 @@ export const userAuthStore = defineStore('auth', () => {
                 const result = await GoogleSignIn.signIn({
                     clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
                 });
-                
+
                 if (!result.idToken) {
                     console.error('Берет у артикля не вернул токен');
                     return;
@@ -492,13 +522,11 @@ export const userAuthStore = defineStore('auth', () => {
                 // Логика только для браузера (Web)
                 const provider = new GoogleAuthProvider();
                 provider.setCustomParameters({ prompt: 'select_account' });
-                
-                // signInWithPopup делает всю работу сам, второй шаг с токеном не нужен
+
                 const authResult = await signInWithPopup(auth, provider);
                 user = authResult.user;
             }
 
-            // --- Общий код записи в Firestore ---
             const userDocRef = doc(db, 'users', user.uid);
             const userDoc = await getDoc(userDocRef);
 
@@ -517,6 +545,8 @@ export const userAuthStore = defineStore('auth', () => {
                     hasSeenOnboarding: false,
                     isPremium: false,
                     totalHats: 0,
+                    streakCount: 0,
+                    hasAds: true,
                     points: 0,
                     claimedBonuses: [],
                     sale_3: false,
@@ -546,6 +576,7 @@ export const userAuthStore = defineStore('auth', () => {
     };
 
     const registerUser = async (userData) => {
+        // Подходит для Web и Capacitor
         const methods = await fetchSignInMethodsForEmail(auth, userData.email);
         if (methods.length > 0) {
             throw { code: 'auth/email-already-in-use' };
@@ -569,6 +600,8 @@ export const userAuthStore = defineStore('auth', () => {
             voiceConsentGiven: false,
             hasSeenOnboarding: false,
             totalHats: 0,
+            streakCount: 0,
+            hasAds: true,
             points: 0,
             claimedBonuses: [],
             sale_3: false,
@@ -620,7 +653,7 @@ export const userAuthStore = defineStore('auth', () => {
 
             return await response.json();
         } catch (error) {
-            console.error('Ошибка сброса пароля:', error);
+            console.error('Ошибка ', error);
             throw error;
         }
     };
@@ -730,8 +763,20 @@ export const userAuthStore = defineStore('auth', () => {
         try {
             const usesGoogle = user.providerData.some(p => p.providerId === 'google.com');
             if (usesGoogle) {
-                const provider = new GoogleAuthProvider();
-                await reauthenticateWithPopup(user, provider);
+                const isNative = Capacitor.isNativePlatform();
+                if (isNative) {
+                    const result = await GoogleSignIn.signIn({
+                        clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
+                    });
+
+                    const idToken = result.idToken;
+                    if (!idToken) throw new Error('Не удалось получить токен Google');
+                    const credential = GoogleAuthProvider.credential(idToken);
+                    await reauthenticateWithCredential(user, credential);
+                } else {
+                    const provider = new GoogleAuthProvider();
+                    await reauthenticateWithPopup(user, provider);
+                }
             } else {
                 if (!user.email) throw { code: 'auth/missing-email' };
                 if (!password) throw {code: 'auth/missing-password'};
@@ -744,14 +789,16 @@ export const userAuthStore = defineStore('auth', () => {
             batch.delete(doc(db, LEADERBOARD_COLLECTION, user.uid));
             batch.delete(doc(db, LEADERBOARD_GUESS, user.uid));
             await batch.commit();
-
             await deleteUser(user);
             setUserData({});
+
         } catch (err) {
             if (err && err.code) throw err;
             const msg = String(err?.message || '');
             if (msg.includes('requires-recent-login')) throw { code: 'auth/requires-recent-login' };
-            if (msg.includes('popup-closed')) throw { code: 'auth/popup-closed-by-user' };
+            if (msg.includes('popup-closed') || msg.toLowerCase().includes('cancel') || msg.includes('12501')) {
+                throw { code: 'auth/popup-closed-by-user' };
+            }
             throw { code: 'auth/unknown' };
         }
     };
@@ -794,6 +841,7 @@ export const userAuthStore = defineStore('auth', () => {
     return {
         refreshUser,
         activatePremium,
+        hasAds,
         name,
         email,
         registeredAt,
@@ -811,6 +859,7 @@ export const userAuthStore = defineStore('auth', () => {
         notEnoughArticle,
         voiceConsentGiven,
         totalHats,
+        streakCount,
         setVoiceConsent,
         clearNotEnoughArticle,
         achievements,
@@ -845,7 +894,8 @@ export const userAuthStore = defineStore('auth', () => {
         loginWithApple,
         addClaimedBonus,
         activateDiscount,
-        unlockMarathonAchievement
+        unlockMarathonAchievement,
+        incrementStreak,
+        resetStreak
     };
 });
-

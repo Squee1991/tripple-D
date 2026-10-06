@@ -137,7 +137,7 @@
     ],
     "options": [
       {
-        "text": "Ja, einen Moment. Die Nummer ist 123456789.",
+        "text": "Ja, einen Moment. Die Nummer ist 1 2 3 4 5 6 7 8 9.",
         "translation": {
           "ru-RU": "Да, один момент. Номер 123456789.",
           "en-US": "Yes, one moment. The number is 123456789.",
@@ -154,7 +154,7 @@
         "nextStep": "details_ask"
       },
       {
-        "text": "Einen Augenblick, hier ist meine Nummer: 123456789.",
+        "text": "Einen Augenblick, hier ist meine Nummer: 1 2 3 4 5 6 7 8 9.",
         "translation": {
           "ru-RU": "Одно мгновение, вот мой номер: 123456789.",
           "en-US": "One moment, here is my number: 123456789.",
@@ -504,7 +504,7 @@
       {
         "text": "Verstanden. Ich mache das gleich.",
         "translation": {
-          "ru-RU": "Понятно. Я сделаю это сейчас (сразу).",
+          "ru-RU": "Понятно. Я сделаю это сейчас.",
           "en-US": "Understood. I will do that right away.",
           "ar-SA": "مفهوم. سأفعل ذلك فوراً.",
           "es-ES": "Entendido. Lo haré de inmediato.",
@@ -513,7 +513,7 @@
           "pl-PL": "Zrozumiałam. Zrobię to zaraz.",
           "ro-RO": "Am înțeles. Voi face asta imediat.",
           "tr-TR": "Anlaşıldı. Bunu hemen yapacağım.",
-          "uk-UA": "Зрозуміло. Я зроблю це зараз (одразу).",
+          "uk-UA": "Зрозуміло. Я зроблю це зараз.",
           "uz-UZ": "Tushunarli. Men buni hoziroq qilaman."
         },
         "nextStep": "final_offer"

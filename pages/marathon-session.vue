@@ -1,112 +1,199 @@
 <template>
   <div class="game-page-layout">
-    <div class="top-bar">
-      <VStopSessionBtn @close="backTo"/>
-      <div class="lives-bar">
-        <div class="hearts-container">
-          <span v-for="life in 5" :key="life" class="heart" :class="{ 'lost': life > gameStore.lives }">❤️</span>
+    <VLoginPreloader v-if="isLoadingAd"/>
+    <template v-else-if="!isLoadingAd">
+      <div class="top-bar">
+        <VStopSessionBtn @close="backTo"/>
+        <div class="lives-bar">
+          <div class="hearts-container">
+            <span v-for="life in 5" :key="life" class="heart" :class="{ 'lost': life > gameStore.lives }">❤️</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div v-if="!gameStore.gameReady" class="not-ready-container">
-      <div class="bouncy-loader">
-        <span></span><span></span><span></span>
+      <div v-if="!gameStore.gameReady" class="not-ready-container">
+        <div class="bouncy-loader">
+          <span></span><span></span><span></span>
+        </div>
+        <h1>{{ t('marathonGame.notReadyTitle') }}</h1>
+        <p>{{ t('marathonGame.reboot') }}</p>
       </div>
-      <h1>{{ t('marathonGame.notReadyTitle') }}</h1>
-      <p>{{ t('marathonGame.reboot') }}</p>
-    </div>
-    <template v-else>
-      <header class="game-header">
-        <div class="stats-bar">
-          <div class="stat-widget streak">
-            <div class="widget-label">{{ t('marathonGame.streak') }}</div>
-            <div class="widget-value">{{ gameStore.sessionStreak }}</div>
+      <template v-else>
+        <header class="game-header">
+          <div class="stats-bar">
+            <div class="stat-widget streak">
+              <div class="widget-label">{{ t('marathonGame.streak') }}</div>
+              <div class="widget-value">{{ gameStore.sessionStreak }}</div>
+            </div>
+            <div class="stat-widget record">
+              <div class="widget-label">{{ t('marathonGame.record') }}</div>
+              <div class="widget-value">{{ currentDifficultyRecord }}</div>
+            </div>
+            <div v-if="gameStore.levelSettings.timer" class="stat-widget timer">
+              <div class="widget-label">{{ t('marathonGame.timer') }}</div>
+              <div class="widget-value">{{ gameStore.timer }}</div>
+            </div>
           </div>
-          <div class="stat-widget record">
-            <div class="widget-label">{{ t('marathonGame.record') }}</div>
-            <div class="widget-value">{{ currentDifficultyRecord }}</div>
+        </header>
+        <main class="game-content">
+          <div v-if="gameStore.currentWord" class="game-area">
+            <div class="word-display" :class="feedbackClass">
+              <h1>{{ gameStore.currentWord.de }}</h1>
+            </div>
+            <div class="actions" :class="{ 'disabled': isChecking || !gameStore.gameActive }">
+              <button @click="handleArticleChoice('der')" class="article-btn der">
+                <span class="article-text">der</span>
+              </button>
+              <button @click="handleArticleChoice('die')" class="article-btn die">
+                <span class="article-text">die</span>
+              </button>
+              <button @click="handleArticleChoice('das')" class="article-btn das">
+                <span class="article-text">das</span>
+              </button>
+            </div>
           </div>
-          <div v-if="gameStore.levelSettings.timer" class="stat-widget timer">
-            <div class="widget-label">{{ t('marathonGame.timer') }}</div>
-            <div class="widget-value">{{ gameStore.timer }}</div>
-          </div>
-        </div>
-      </header>
-      <main class="game-content">
-        <div v-if="gameStore.currentWord" class="game-area">
-          <div class="word-display" :class="feedbackClass">
-            <h1>{{ gameStore.currentWord.de }}</h1>
-          </div>
-          <div class="actions" :class="{ 'disabled': isChecking || !gameStore.gameActive }">
-            <button @click="handleArticleChoice('der')" class="article-btn der">
-              <span class="article-text">der</span>
-            </button>
-            <button @click="handleArticleChoice('die')" class="article-btn die">
-              <span class="article-text">die</span>
-            </button>
-            <button @click="handleArticleChoice('das')" class="article-btn das">
-              <span class="article-text">das</span>
-            </button>
-          </div>
-        </div>
-      </main>
-      <Transition name="bottom-sheet">
-        <div v-if="!gameStore.gameActive" class="game-over-overlay">
-          <div class="overlay-backdrop"></div>
-          <div class="game-over-sheet">
-            <h1 class="game-over__title">{{ t('marathonGame.end') }}</h1>
-
-            <div class="score-card">
-              <p class="game-over__streak-info">
-                {{ t('marathonGame.urStreak') }}
-                <span class="score-value">{{ gameStore?.sessionStreak }}</span>
-              </p>
-
-              <div v-if="gameStore.sessionStreak > 0 && gameStore.sessionStreak >= currentDifficultyRecord"
-                   class="record-badge">
-                🎉 {{ t('marathonGame.newRecord') }} 🎉
+        </main>
+        <Transition name="fade-scale">
+          <div v-if="shouldShowGameOverModal" class="fullscreen-modal">
+            <div class="confetti-container" v-if="confettiParticles.length > 0">
+              <div
+                  v-for="p in confettiParticles"
+                  :key="p.id"
+                  class="confetti-piece"
+                  :style="{
+                    left: p.left + '%',
+                    backgroundColor: p.color,
+                    animationDelay: p.delay + 's',
+                    animationDuration: p.duration + 's',
+                    width: p.width + 'px',
+                    height: p.height + 'px'
+                  }"
+              ></div>
+            </div>
+            <div class="fullscreen-content">
+              <div class="step-fade-in">
+                <h2 class="fs-title">{{ t('marathonGame.end') }}</h2>
+                <p class="fs-text">{{ t('marathonGame.urStreak') }}</p>
+                <div class="streak-number bounce-in">{{ gameStore.lastCompletedStreak }}</div>
               </div>
-              <p v-else class="game-over__best-score">
-                {{ t('marathonGame.bestResult') }} {{ currentDifficultyRecord }}
-              </p>
-            </div>
-            <div class="game-over__actions">
-              <button @click="gameStore.retryGame()" class="btn-gummy btn-gummy--success">
-                {{ t('marathonGame.tryAgain') }}
-              </button>
-              <button @click="goBackToPrepare" class="btn-gummy btn-gummy--primary">
-                {{ t('marathonGame.back') }}
-              </button>
-              <button @click="toMain" class="btn-gummy btn-gummy--secondary">
-                {{ t('eventSessionPage.leave') }}
-              </button>
+              <div class="step-fade-in">
+                <img :src="isNewRecord ? Great : Support" class="status-img bounce-in" alt="Status icon"/>
+              </div>
+              <div class="step-fade-in full-width-block actions-spacing">
+                <div class="fs-actions">
+                  <button @click="handleRetry" class="ios-btn-primary fs-action-btn">
+                    {{ t('marathonGame.tryAgain') }}
+                  </button>
+                  <button @click="goBackToPrepare" class="ios-btn-secondary fs-link-btn">
+                    {{ t('marathonGame.back') }}
+                  </button>
+                  <button @click="toMain" class="ios-btn-text">
+                    {{ t('eventSessionPage.leave') }}
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </Transition>
-
+        </Transition>
+      </template>
     </template>
+    <VStreakModal
+        v-model="showStreakModal"
+        :streak="authStore.streakCount"
+        @close="handleStreakClosed"
+    />
   </div>
 </template>
 
 <script setup>
-import {ref, computed, onMounted, watch} from 'vue'
+import {ref, computed, onMounted, onUnmounted, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {useGameStore} from '../store/marafonStore.js'
-import {playCorrect, playWrong, unlockAudioByUserGesture} from '../utils/soundManager.js'
-import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue";
+import {userlangStore} from '~/store/learningStore.js'
+import {userAuthStore} from '~/store/authStore.js'
+import {dailyStore} from '~/store/dailyStore.js'
+import {playCorrect, playWrong, playLevelCompleted, unlockAudioByUserGesture} from '../utils/soundManager.js'
+import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue"
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue"
+import VStreakModal from '~/src/components/V-streak.vue'
+import {showInterstitial} from '../utils/admob.js'
+
+import Support from '~/assets/images/Support.svg'
+import Great from '~/assets/images/Greatcon.svg'
 
 const {t} = useI18n()
 const gameStore = useGameStore()
+const langStore = userlangStore()
+const authStore = userAuthStore()
+const daily = dailyStore()
 const router = useRouter()
+
 const feedback = ref(null)
 const isChecking = ref(false)
+const isLoadingAd = ref(false)
+
+const showGameOverModal = ref(false)
+const showStreakModal = ref(false)
+const isWaitingForStreakClose = ref(false)
+const initialStreak = ref(authStore.streakCount || 0)
+const streakWasIncremented = ref(false)
+
+const finalStreak = ref(0)
+const confettiParticles = ref([])
+
+const confettiColors = ['#ffb100', '#c982ff', '#4caf50', '#00c2ff', '#ff5252', '#ffffff']
+
+function spawnConfetti() {
+  const particles = []
+  for (let i = 0; i < 70; i++) {
+    particles.push({
+      id: i,
+      left: Math.random() * 100,
+      delay: Math.random() * 1.5,
+      color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
+      duration: 2.5 + Math.random() * 2,
+      width: 7 + Math.random() * 8,
+      height: 12 + Math.random() * 14
+    })
+  }
+  confettiParticles.value = particles
+}
+
+watch(() => gameStore.sessionStreak, (val) => {
+  if (val > 0) {
+    finalStreak.value = val
+  }
+}, {immediate: true})
+
+watch(() => gameStore.gameActive, (isActive) => {
+  if (isActive) {
+    finalStreak.value = 0
+    confettiParticles.value = []
+  }
+})
+
+watch(() => authStore.streakCount, (newVal) => {
+  if (newVal > initialStreak.value) {
+    streakWasIncremented.value = true
+  }
+})
 
 const currentDifficultyRecord = computed(() => {
-  if (gameStore.personalBests && gameStore.difficulty) {
-    return gameStore.personalBests[gameStore.difficulty] || 0
+  if (gameStore.allTimeBests && gameStore.difficulty) {
+    return gameStore.allTimeBests[gameStore.difficulty] || 0;
   }
-  return 0
+  return 0;
+});
+
+const isNewRecord = computed(() => {
+  return gameStore.lastCompletedStreak > 0 && gameStore.lastCompletedStreak >= currentDifficultyRecord.value;
+});
+
+const coinsEarned = computed(() => {
+  return Math.floor(finalStreak.value / 5)
+})
+
+const shouldShowGameOverModal = computed(() => {
+  return showGameOverModal.value && !showStreakModal.value && !isWaitingForStreakClose.value
 })
 
 const backTo = () => {
@@ -139,38 +226,105 @@ function handleArticleChoice(chosenArticle) {
   }, 800)
 }
 
+function handleStreakClosed() {
+  showStreakModal.value = false
+  isWaitingForStreakClose.value = false
+  showGameOverModal.value = true
+  if (isNewRecord.value) {
+    spawnConfetti()
+  }
+  playLevelCompleted()
+}
+
+function handleRetry() {
+  showGameOverModal.value = false
+  confettiParticles.value = []
+  gameStore.retryGame()
+}
+
 function goBackToPrepare() {
+  showGameOverModal.value = false
+  confettiParticles.value = []
   router.push('/article-marathon')
 }
 
 function toMain() {
-  router.push('/')
+  showGameOverModal.value = false
+  confettiParticles.value = []
+  router.push('/article-marathon')
 }
 
-watch(() => gameStore.gameReady, (isReady) => {
-      if (!isReady) {
-        setTimeout(() => {
-          router.push('/article-marathon')
-        }, 1500)
+watch(() => gameStore.gameActive, (isActive) => {
+  if (!isActive && gameStore.gameReady) {
+    if (coinsEarned.value > 0 && typeof langStore.addPoints === 'function') {
+      langStore.addPoints(coinsEarned.value)
+    }
+
+    isWaitingForStreakClose.value = true
+    setTimeout(async () => {
+      const isStreakHigher = authStore.streakCount > initialStreak.value
+      const streakCountedToday = daily.currentCycle?.streakCounted || streakWasIncremented.value || isStreakHigher
+      const modalAlreadyShownToday = daily.currentCycle?.streakModalShown === true
+
+      if (streakCountedToday && !modalAlreadyShownToday) {
+        if (typeof daily.markStreakModalShown === 'function') {
+          await daily.markStreakModalShown()
+        }
+        showStreakModal.value = true
+      } else {
+        isWaitingForStreakClose.value = false
+        showGameOverModal.value = true
+        if (isNewRecord.value) {
+          spawnConfetti()
+        }
+        playLevelCompleted()
       }
-    },
-    {immediate: true}
-)
+    }, 500)
+  } else if (isActive) {
+    showGameOverModal.value = false
+    showStreakModal.value = false
+    isWaitingForStreakClose.value = false
+    confettiParticles.value = []
+    initialStreak.value = authStore.streakCount || 0
+    streakWasIncremented.value = false
+  }
+})
+
+watch(() => gameStore.gameReady, (isReady) => {
+  if (!isReady) {
+    setTimeout(() => {
+      router.push('/article-marathon')
+    }, 1500)
+  }
+}, {immediate: true})
+
+let unlockOnce = null
 
 onMounted(() => {
-  const captureOpts = {capture: true};
-  const unlockOnce = () => {
-    unlockAudioByUserGesture();
-    window.removeEventListener('pointerdown', unlockOnce, captureOpts);
-    window.removeEventListener('keydown', unlockOnce, captureOpts);
-  };
-  window.addEventListener('pointerdown', unlockOnce, captureOpts);
-  window.addEventListener('keydown', unlockOnce, captureOpts);
+  const captureOpts = {capture: true}
+  unlockOnce = () => {
+    unlockAudioByUserGesture()
+    window.removeEventListener('pointerdown', unlockOnce, captureOpts)
+    window.removeEventListener('keydown', unlockOnce, captureOpts)
+  }
+  window.addEventListener('pointerdown', unlockOnce, captureOpts)
+  window.addEventListener('keydown', unlockOnce, captureOpts)
 
   if (gameStore.gameReady && !gameStore.gameActive) {
-    gameStore.startNewRound();
+    isLoadingAd.value = true
+    showInterstitial(() => {
+      isLoadingAd.value = false
+      gameStore.startNewRound()
+    })
   }
-});
+})
+
+onUnmounted(() => {
+  if (unlockOnce) {
+    window.removeEventListener('pointerdown', unlockOnce, {capture: true})
+    window.removeEventListener('keydown', unlockOnce, {capture: true})
+  }
+})
 </script>
 
 <style scoped>
@@ -246,7 +400,7 @@ onMounted(() => {
 }
 
 .widget-label {
-  font-size:  16px;
+  font-size: 16px;
   font-weight: 800;
   color: #6b7280;
   text-transform: uppercase;
@@ -257,8 +411,7 @@ onMounted(() => {
   font-size: 36px;
   color: #888484;
   line-height: 1;
-  font-family: Lilita One, sans-serif;
-
+  font-family: 'Lilita One', sans-serif;
 }
 
 .stat-widget.record .widget-value {
@@ -280,10 +433,9 @@ onMounted(() => {
 }
 
 .game-content {
-  flex: 1;
+
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 16px;
   overflow-y: auto;
 }
@@ -309,7 +461,7 @@ onMounted(() => {
 }
 
 .word-display h1 {
-  font-size: 70px;
+  font-size: 36px;
   font-weight: 900;
   line-height: 1.1;
   color: var(--titleColor);
@@ -319,11 +471,11 @@ onMounted(() => {
 }
 
 .feedback-correct h1 {
-  color: #4ade80;
+  color: #34C759;
 }
 
 .feedback-incorrect h1 {
-  color: #f87171;
+  color: #FF3B30;
 }
 
 .feedback-incorrect {
@@ -360,7 +512,7 @@ onMounted(() => {
 .article-btn {
   flex: 1;
   padding: 16px 10px;
-  border-radius: 58px;
+  border-radius: 20px;
   border: none;
   cursor: pointer;
   transition: all 0.1s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -371,184 +523,267 @@ onMounted(() => {
 
 .article-btn:active {
   transform: translateY(6px);
-  box-shadow: 0 0 0 #1e1e1e;
 }
 
 .article-text {
   font-family: "Nunito", sans-serif;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 900;
   color: #ffffff;
   text-transform: lowercase;
 }
 
 .article-btn.der {
-  background-color: #60a5fa;
-  box-shadow: 0 6px 0 #3774be;
+  background-color: #007AFF;
+  box-shadow: 0 6px 0 #005bb5;
+}
+
+.article-btn.der:active {
+  box-shadow: 0 0 0 #005bb5;
 }
 
 .article-btn.die {
-  background-color: #f87171;
-  box-shadow: 0 6px 0 #c74a4a;
+  background-color: #FF3B30;
+  box-shadow: 0 6px 0 #c22820;
+}
+
+.article-btn.die:active {
+  box-shadow: 0 0 0 #c22820;
 }
 
 .article-btn.das {
-  background-color: #fca13a;
-  box-shadow: 0 6px 0 #bb701a;
+  background-color: #34C759;
+  box-shadow: 0 6px 0 #248a3d;
 }
 
-.game-over-overlay {
+.article-btn.das:active {
+  box-shadow: 0 0 0 #248a3d;
+}
+
+/* Полноэкранная модалка */
+.fullscreen-modal {
   position: fixed;
   inset: 0;
-  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: var(--bgModal, #1a1c29);
+  z-index: 9999;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.overlay-backdrop {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(2px);
-}
-
-.game-over-sheet {
-  position: relative;
-  background-color: var(--bgModal);
-  border-top: 4px solid #1e1e1e;
-  border-left: 4px solid #1e1e1e;
-  border-right: 4px solid #1e1e1e;
-  border-radius: 32px 32px 0 0;
-  padding: 32px 24px calc(env(safe-area-inset-bottom) + 32px);
-  max-width: 600px;
+.fullscreen-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  max-width: 400px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 -8px 0 rgba(30, 30, 30, 0.1);
-  z-index: 101;
+  position: relative;
+  z-index: 2;
 }
 
-.bottom-sheet-enter-active,
-.bottom-sheet-leave-active {
-  transition: opacity 0.25s ease-out;
-}
-
-.bottom-sheet-enter-active .game-over-sheet,
-.bottom-sheet-leave-active .game-over-sheet {
-  transition: transform 0.25s ease-out;
-}
-
-.bottom-sheet-enter-from,
-.bottom-sheet-leave-to {
-  opacity: 0;
-}
-
-.bottom-sheet-enter-from .game-over-sheet,
-.bottom-sheet-leave-to .game-over-sheet {
-  transform: translateY(100%);
-}
-
-.game-over__title {
-  font-size: 26px;
-  font-weight: 900;
-  color: var(--titleColor);
-  margin: 0 0 20px 0;
-}
-
-.score-card {
-  background: var(--menuItemsBg);
-  border-radius: 20px;
-  padding: 20px;
+.full-width-block {
   width: 100%;
-  margin-bottom: 24px;
 }
 
-.game-over__streak-info {
-  font-size: 18px;
-  font-weight: 800;
-  color: #4b5563;
-  margin: 0;
+.actions-spacing {
+  margin-top: 20px;
+}
+
+.step-fade-in {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
 }
 
-.score-value {
-  font-size: 48px;
+.fs-title {
+  font-size: 32px;
   font-weight: 900;
-  color: #f59e0b;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.fs-text {
+  font-size: 19px;
+  font-weight: 600;
+  color: #a0a5b5;
+  margin-bottom: 6px;
+}
+
+.streak-number {
+  font-size: 64px;
+  font-weight: 900;
+  color: #34C759;
   line-height: 1;
+  margin-bottom: 16px;
+}
+
+.status-img {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 12px;
+  object-fit: contain;
 }
 
 .record-badge {
   background: #fef08a;
   color: #ca8a04;
   font-weight: 900;
-  padding: 8px 16px;
-  border-radius: 12px;
+  padding: 8px 18px;
+  border-radius: 20px;
   border: 2px solid #ca8a04;
   display: inline-block;
-  margin-top: 16px;
+  margin-bottom: 16px;
   font-size: 16px;
 }
 
-.game-over__best-score {
+.fs-best-score {
   font-size: 16px;
   font-weight: 800;
-  color: #6b7280;
-  margin: 16px 0 0 0;
+  color: #8e8e93;
+  margin: 0 0 16px 0;
 }
 
-.game-over__actions {
+.reward-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 177, 0, 0.15);
+  border: 2px solid #ffb100;
+  padding: 8px 24px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  font-weight: 900;
+  font-size: 24px;
+  color: #d67a00;
+}
+
+.reward-icon {
+  font-size: 26px;
+}
+
+.fs-actions {
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 100%;
 }
 
-.btn-gummy {
-  width: 100%;
-  padding: 12px;
-  font-family: "Nunito", sans-serif;
-  font-size: 16px;
-  font-weight: 900;
+.ios-btn-primary {
+  background: #007AFF;
+  color: white;
+  border: none;
   border-radius: 50px;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 800;
+  box-shadow: 0 6px 0 #005bb5;
+  cursor: pointer;
+  transition: all 0.1s;
+  width: 100%;
+}
+
+.ios-btn-primary:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #005bb5;
+}
+
+.ios-btn-secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: #2c2f42;
+  color: #ffffff;
+  box-shadow: 0 6px 0 #1b1d2a;
+  padding: 16px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 800;
+  width: 100%;
   border: none;
   cursor: pointer;
-  transition: all 0.1s cubic-bezier(0.34, 1.56, 0.64, 1);
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-.btn-gummy:active {
-  transform: translateY(4px);
+.ios-btn-secondary:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #1b1d2a;
 }
 
-.btn-gummy--primary {
-  background: #60a5fa;
-  color: white;
-  box-shadow: 0 5px 0 #4480c9;
-}
-
-.btn-gummy--success {
-  background: #33aa5e;
-  color: white;
-  box-shadow: 0 5px 0 #2cad5b;
-}
-
-.btn-gummy--secondary {
+.ios-btn-text {
   background: none;
-  color: grey;
-  box-shadow: 0 5px 0 #1e1e1e;
+  border: none;
+  color: #8e8e93;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px;
+  cursor: pointer;
 }
 
-.btn-gummy:active {
-  box-shadow: 0 0 0 #1e1e1e;
+.confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -20px;
+  border-radius: 3px;
+  animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.bounce-in {
+  animation: bounceIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fade-scale-enter-active,
+.fade-scale-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.fade-scale-enter-from,
+.fade-scale-leave-to {
+  opacity: 0;
+  transform: scale(0.95);
 }
 
 .not-ready-container {
@@ -602,34 +837,6 @@ onMounted(() => {
   }
   100% {
     transform: translateY(-15px);
-  }
-}
-
-@media (max-width: 1023px) {
-  .game-header {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    margin-top: calc(env(safe-area-inset-top) + 0px);
-  }
-
-  .lives-bar {
-    position: static;
-    width: 100%;
-    justify-content: center;
-    gap: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  .word-display h1 {
-    font-size: 32px;
-  }
-  .game-area {
-    gap: 30px;
-  }
-  .article-text {
-    font-size: 24px;
   }
 }
 </style>

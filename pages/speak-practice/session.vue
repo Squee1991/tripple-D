@@ -25,7 +25,6 @@
         </svg>
       </button>
     </header>
-
     <Transition name="fade">
       <div class="banner" v-if="viewState === 'menu'">
         <VBanner
@@ -187,6 +186,7 @@
       </div>
     </footer>
     <VStopSessionModal
+        :animationData="hedgehogLeaveSession"
         v-model:show="showExitModal"
         @confirm="confirmExit"
     />
@@ -203,7 +203,7 @@
 <script setup>
 import {ref, computed, onMounted, onUnmounted, nextTick} from 'vue';
 import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router';
-import {useSpeakStore} from '../../store/speakStore.js';
+import {useSpeakStore} from '~/store/speakStore.js';
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
 import Modal from '../../src/components/modal.vue';
 import SpeakingIcon from "assets/images/speakingIcon.svg";
@@ -212,9 +212,9 @@ import Words from '../../assets/images/word.svg'
 import VBanner from "~/src/components/V-banner.vue";
 import {useSwipeBack} from '~/composables/useSwipeBack.js';
 import VTransition from "~/src/components/V-transition.vue";
-import {showInterstitial} from '../../utils/admob.js';
+import {showInterstitial} from '~/utils/admob.js';
 import VHeadsUp from "~/src/components/V-headsUp.vue";
-
+import hedgehogLeaveSession from 'assets/animation/hedgehog_leave_session.json'
 const {locale, t} = useI18n();
 const route = useRoute();
 const router = useRouter();
@@ -239,6 +239,9 @@ const currentStepId = ref('start');
 const isAudioPlaying = ref(false);
 let currentAudioInstance = null;
 let recognition = null;
+
+const { $track } = useNuxtApp();
+let sessionStartTime = Date.now();
 
 const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
   goBack();
@@ -325,14 +328,16 @@ const confirmExit = () => {
 };
 
 const startVocabLearning = () => {
-  showInterstitial(() => {
-    router.push({
-      path: '/speak-practice/words-session',
-      query: {
-        theme: route.query.theme,
-        level: route.query.level
-      }
-    });
+  $track('speak_words_started', {
+    theme: route.query.theme,
+    level: route.query.level
+  });
+  router.push({
+    path: '/speak-practice/words-session',
+    query: {
+      theme: route.query.theme,
+      level: route.query.level
+    }
   });
 };
 
@@ -386,7 +391,6 @@ const speakGerman = async (text) => {
     setTimeout(() => {
       const audios = document.getElementsByTagName('audio');
       let playingAudio = null;
-
       for (let i = audios.length - 1; i >= 0; i--) {
         if (!audios[i].paused && !audios[i].ended) {
           playingAudio = audios[i];
@@ -415,6 +419,7 @@ const speakGerman = async (text) => {
 
 const playLocalAudio = (audioName) => {
   return new Promise((resolve) => {
+    //  Очистка старого аудио (ты случайно удалил этот блок)
     if (currentAudioInstance) {
       currentAudioInstance.pause();
       currentAudioInstance = null;
@@ -422,27 +427,44 @@ const playLocalAudio = (audioName) => {
     if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
-
+    //  Объявление переменных (без них локальный путь не соберется)
     const level = route.query.level || 'beginner';
     const theme = route.query.theme || 'firstmeet';
-    const audioUrl = `/audio/speak-tasks/${level}/${theme}/${audioName}.mp3`;
-
+    const BUCKET = 'tripple-d-dev.firebasestorage.app';
+    const localPath = `audio/speak-tasks/${level}/${theme}/${audioName}.mp3`;
+    const audioUrl = `https://firebasestorage.googleapis.com/v0/b/${BUCKET}/o/${encodeURIComponent(localPath)}?alt=media`;
     currentAudioInstance = new Audio(audioUrl);
     isAudioPlaying.value = true;
+    // 4. Таймаут для слабого интернета
+    const timeoutId = setTimeout(() => {
+      if (currentAudioInstance) {
+        currentAudioInstance.src = '';
+        isAudioPlaying.value = false;
+        currentAudioInstance = null;
+        resolve();
+      }
+    }, 2500);
+
+    currentAudioInstance.oncanplaythrough = () => {
+      clearTimeout(timeoutId);
+    };
 
     currentAudioInstance.onended = () => {
+      clearTimeout(timeoutId);
       isAudioPlaying.value = false;
       currentAudioInstance = null;
       resolve();
     };
 
     currentAudioInstance.onerror = () => {
+      clearTimeout(timeoutId);
       isAudioPlaying.value = false;
       currentAudioInstance = null;
-      speakGerman(audioName.includes('option') ? 'Выбранный вариант' : 'Текст отсутствует').then(resolve);
+      resolve();
     };
 
     currentAudioInstance.play().catch(() => {
+      clearTimeout(timeoutId);
       isAudioPlaying.value = false;
       currentAudioInstance = null;
       resolve();
@@ -486,6 +508,13 @@ const scrollToBottom = async () => {
 };
 
 const completeDialogue = async () => {
+  const durationSec = Math.round((Date.now() - sessionStartTime) / 1000);
+  $track('speak_dialogue_finished', {
+    theme: route.query.theme,
+    level: route.query.level,
+    duration_seconds: durationSec
+  });
+
   dialogueCompleted.value = true;
   showCompletionModal.value = true;
   await scrollToBottom();
@@ -496,6 +525,11 @@ const completeDialogue = async () => {
 const startDialogue = async () => {
   if (!store.dialogueData || !store.dialogueData['start']) return;
   showInterstitial(async () => {
+    $track('speak_dialogue_started', {
+      theme: route.query.theme,
+      level: route.query.level
+    });
+    sessionStartTime = Date.now();
     viewState.value = 'chat';
     store.chatStarted = true;
     dialogueCompleted.value = false;
@@ -506,7 +540,6 @@ const startDialogue = async () => {
 
     isTyping.value = true;
     await scrollToBottom();
-
     setTimeout(async () => {
       isTyping.value = false;
       store.addMessage('bot', step.botText, step.botTranslation);
@@ -546,6 +579,7 @@ const submitManualInput = async () => {
   });
 
   if (matchedIndex === -1) {
+    $track('speak_dialogue_input_error', { theme: route.query.theme });
     showErrorToast.value = true;
     setTimeout(() => {
       showErrorToast.value = false;

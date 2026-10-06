@@ -61,7 +61,7 @@ watch(() => authStore.uid, (newUid) => {
       <Banner/>
       <Description/>
       <About/>
-<!--      <VAppBanner/>-->
+      <!--      <VAppBanner/>-->
       <FeedBack/>
     </template>
   </div>

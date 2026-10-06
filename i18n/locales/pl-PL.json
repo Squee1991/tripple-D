@@ -3523,7 +3523,8 @@
     "close": "Zamknij",
     "light": "Jasny",
     "dark": "Ciemny",
-    "pink": "Romantyczny"
+    "pink": "Romantyczny",
+    "halloween": "Halloweenowa"
   },
   "pinkThemeModal": {
     "partOne": "Ten motyw można odblokować tylko podczas wydarzenia",
@@ -3591,10 +3592,10 @@
     "again": "Jeszcze raz",
     "buyLive": "Kup dodatkowe życie, aby kontynuować.",
     "prise": "Cena",
-    "priseValue": "10 Artykluzów",
+    "priseValue": "5 Artykluzów",
     "balance": "Masz:",
     "points": "Artykluzy",
-    "buy": "Kup życie za 10",
+    "buy": "Kup życie za 5",
     "notEnough": "Za mało",
     "questNotCompleted": "Nie ukończyłeś zadania",
     "warning": "Jeśli wyjdziesz teraz, postęp nie zostanie zapisany.",
@@ -3717,12 +3718,13 @@
     "quest-6": "Wybierz odpowiedź"
   },
   "eventPanel": {
+    "errors": "Błędy",
     "pathMain": "Główna",
     "event": "Wydarzenie",
     "panel": "Panel wydarzenia",
     "reputation": "Reputacja",
     "currency": "Waluta",
-    "shop": "Sklep reputacji",
+    "shop": "Sklep",
     "bought": "Kupiono",
     "notAllowed": "Niedostępne",
     "notEnough": "Za mało",
@@ -5245,7 +5247,17 @@
     "cupidArrow": "Łuk Kupidyna",
     "cupidArrowDescription": "Nagroda za osiągnięcie w kategorii Wydarzenia - Festiwal Serc: „Celny strzał”",
     "adventures": "Zwój Wędrówek",
-    "adventuresDescription": "Nagroda jest przyznawana za ukończenie osiągnięcia w kategorii Krainy Językowe: «Mistrz szlaków przygód»"
+    "adventuresDescription": "Nagroda jest przyznawana za ukończenie osiągnięcia w kategorii Krainy Językowe: «Mistrz szlaków przygód»",
+    "witchBroom": "Miotła czarownicy",
+    "witchBroomDescription": "Nagroda za wykonanie osiągnięcia «Błyskawica? Nie, szybciej!» w kategorii wydarzenia «Święto Dyń».",
+    "witchHat": "Kapelusz czarodzieja",
+    "witchHatDescription": "Nagroda za wykonanie osiągnięcia «Wybór domu» w kategorii wydarzenia «Święto Dyń».",
+    "pumpkin": "Dynia",
+    "pumpkinDescription": "Nagroda za wykonanie osiągnięcia «Dynia na głowie» w kategorii wydarzenia «Święto Dyń».",
+    "spellBook": "Księga zaklęć",
+    "spellBookDescription": "Nagroda za wykonanie osiągnięcia «Grimuar jeźdźca» w kategorii wydarzenia «Święto Dyń».",
+    "punch": "Kocioł z eliksirem",
+    "punchDescription": "Nagroda za wykonanie osiągnięcia «Magiczny poncz» w kategorii wydarzenia «Święto Dyń»."
   },
   "wildLandsFirstQuest": {
     "title": "Otoczenie",
@@ -5800,101 +5812,101 @@
   },
   "eastPlainFirstQuests": {
     "title": "Pierwsze spotkanie",
-    "description": "Właśnie przybyłeś na nieznany kontynent. Najpierw musisz nauczyć się, jak witać mieszkańców i dziękować, aby nawiązać pierwszą znajomość.",
-    "goal": "Zrób pierwszy krok. Naucz się słów powitania i wdzięczności.",
-    "questOne": "Jak powiedzieć 'Cześć'",
-    "questTwo": "Jak powiedzieć 'Dziękuję'",
-    "questFour": "Jak powiedzieć 'Dobry wieczór'",
-    "questFive": "Powiedz: 'Jak się masz?'",
-    "questSix": "Ułóż: 'Cześć! Jak się masz?'",
-    "questSeven": "Jak powiedzieć 'Pa'",
-    "questEight": "Jak powiedzieć 'Dobrze'",
+    "description": "Właśnie przybyłeś na nieznany kontynent. Przede wszystkim musisz nauczyć się witać z mieszkańcami i wyrażać wdzięczność, aby nawiązać pierwszą znajomość.",
+    "goal": "Zrób pierwszy krok. Naucz się słów powitania i wdzięczności",
+    "questOne": "Jak powiedzieć: Cześć",
+    "questTwo": "Jak powiedzieć: Dziękuję",
+    "questFour": "Jak powiedzieć: Dobry wieczór",
+    "questFive": "Powiedz: Jak się masz",
+    "questSix": "Ułóż: Cześć! Jak się masz?",
+    "questSeven": "Jak powiedzieć: Pa",
+    "questEight": "Jak powiedzieć: Dobrze",
     "questNine": "Posłuchaj i zapisz",
-    "questTen": "Ułóż zdanie: Cześć! Jak się masz? Dobrze, dziękuję!",
-    "questEleven": "Jak powiedzieć 'Źle'",
-    "questTwelve": "Jak powiedzieć 'Bardzo dobrze'?",
-    "questThirteen": "Jak powiedzieć 'Do widzenia'",
-    "questFourteen": "Jak powiedzieć 'Bardzo dobrze, dziękuję'",
-    "questFifteen": "Posłuchaj i napisz zdanie:"
+    "questTen": "Ułóż zdanie: Cześć! Jak się masz?",
+    "questEleven": "Jak powiedzieć: Źle",
+    "questTwelve": "Jak powiedzieć: Bardzo dobrze",
+    "questThirteen": "Jak powiedzieć: Do widzenia",
+    "questFourteen": "Jak powiedzieć: Bardzo dobrze, dziękuję",
+    "questFifteen": "Posłuchaj i napisz: Cześć! Jak się masz?"
   },
   "eastPlainSecondQuests": {
     "title": "Dzień drugi",
-    "description": "Po pierwszym spotkaniu kontynuujesz rozmowę. Miejscowi opowiadają o sobie: skąd są i jak się nazywają. Uczysz się zadawać grzeczne pytania.",
+    "description": "Po pierwszym spotkaniu kontynuujesz rozmowę. Miejscowi mieszkańcy dzielą się informacjami o sobie: skąd pochodzą i jak się nazywają. Uczysz się zadawać grzeczne pytania.",
     "questOne": "Jak powiedzieć: Do jutra",
     "questTwo": "Jak powiedzieć: Do zobaczenia",
-    "questTree": "Powiedz: Bis Morgen",
-    "questFour": "Posłuchaj i napisz odpowiedź",
-    "questFive": "Ułóż zdanie: 'Cześć Thomas! Jak się masz? Dobrze, a ty? Dobrze, dziękuję!'",
-    "questSix": "Ułóż zdanie: 'Do zobaczenia, Thomas'",
-    "questSeven": "Ułóż zdanie: 'Cześć! Skąd jesteś?'",
-    "questEight": "Jak powiedzieć 'Jestem z'",
-    "questNine": "Posłuchaj i napisz odpowiedź",
-    "questTen": "Posłuchaj i napisz odpowiedź",
-    "questEleven": "Powiedz: Cześć! Jak się masz?",
-    "questTwelve": "Jak powiedzieć 'Jak masz na imię?'",
-    "questThirteen": "Napisz: Cześć! Nazywam się Thomas",
-    "questFourteen": "Jak powiedzieć 'Jak się Pan/Pani nazywa?'",
+    "questTree": "Posłuchaj i napisz: Do jutra",
+    "questFour": "Ułóż zdanie: Do zobaczenia jutro",
+    "questFive": "Jak powiedzieć: Do niedługo",
+    "questSix": "Jak zapytać: Skąd?",
+    "questSeven": "Posłuchaj i napisz: Skąd?",
+    "questEight": "Posłuchaj i napisz: Skąd jesteś?",
+    "questNine": "Ułóż zdanie: Cześć, skąd jesteś?",
+    "questTen": "Posłuchaj i napisz: Cześć, skąd jesteś?",
+    "questEleven": "Wybierz wariant: Nazywać się",
+    "questTwelve": "Jak powiedzieć: Jak się pan/pani nazywa? (grzecznościowo)",
+    "questThirteen": "Ułóż zdanie: Jak się pan/pani nazywa? (grzecznościowo)",
+    "questFourteen": "Jak powiedzieć: Jak masz na imię?",
     "questFifteen": "Posłuchaj i zapisz odpowiedź:"
   },
   "eastPlainThirdQuests": {
-    "title": "Co lubisz robić?",
-    "goal": "Naucz się mówić o hobby i wolnym czasie",
-    "description": "Nowi znajomi zapraszają cię, by spędzić razem czas, proponując pójście do sklepu lub supermarketu. Uczysz się mówić o swoich planach: dokąd idziesz i co zamierzasz robić.",
+    "title": "Wyjście do sklepu",
+    "goal": "Nauczyć się słownictwa związanego z zakupami i prostych zwrotów określających kierunek",
+    "description": "Uczymy się nazywać sklep, supermarket i mówić, dokąd idziemy.",
     "questOne": "Jak powiedzieć: Sklep",
-    "questTwo": "Jak powiedzieć: Kupić",
-    "questTree": "Jak powiedzieć: Idę do sklepu",
-    "questFour": "Posłuchaj i napisz",
-    "questFive": "Jak powiedzieć: Cześć! Dokąd idziesz? Idę do sklepu",
-    "questSix": "Posłuchaj i napisz",
-    "questSeven": "Jak powiedzieć: Ja też idę do sklepu",
-    "questEight": "Posłuchaj i napisz",
+    "questTwo": "Jak powiedzieć: Kupować",
+    "questTree": "Jak powiedzieć: Iść",
+    "questFour": "Ułóż: Idziemy",
+    "questFive": "Ułóż: Kupujemy chleb",
+    "questSix": "Posłuchaj i napisz: Kupujemy chleb",
+    "questSeven": "Ułóż: Idziemy do sklepu",
+    "questEight": "Ułóż: Idę do sklepu",
     "questNine": "Jak powiedzieć: Supermarket",
-    "questTen": "Posłuchaj i napisz",
-    "questEleven": "Jak powiedzieć: Nie idę do supermarketu",
+    "questTen": "Posłuchaj i napisz: Supermarket",
+    "questEleven": "Ułóż: Nie idę do supermarketu",
     "questTwelve": "Jak powiedzieć: Kasa",
     "questThirteen": "Jak powiedzieć: Cena",
     "questFourteen": "Jak powiedzieć: Paragon",
-    "questFifteen": "Posłuchaj i napisz"
+    "questFifteen": "Posłuchaj i napisz: Kasa"
   },
   "eastPlainFourthQuests": {
     "title": "Kontynuujemy zakupy?",
-    "description": "W sklepie dochodzisz do kasy. Uczysz się słów: kolejka, cena i metody płatności (gotówka, karta).",
-    "goal": "Naucz się używać słów: kolejka, cena, płatność",
+    "description": "Znajdując się w sklepie, docierasz do kasy. Uczysz się operować pojęciami takimi jak kolejka, cena i metody płatności (gotówka, karta).",
+    "goal": "Nauczyć się operować pojęciami kolejki, ceny i metod płatności",
     "questOne": "Jak powiedzieć: Kolejka",
-    "questTwo": "Jak powiedzieć 'Kasa'",
+    "questTwo": "Jak powiedzieć: Kasa",
     "questTree": "Ułóż: Stoję w kolejce",
-    "questFour": "Posłuchaj i napisz:",
-    "questFive": "Jak powiedzieć 'Płacić'?",
-    "questSix": "Posłuchaj i napisz:",
-    "questSeven": "Jak powiedzieć 'Pieniądze'?",
-    "questEight": "Jak powiedzieć 'Gotówka'?",
-    "questNine": "Posłuchaj i napisz:",
-    "questTen": "Jak powiedzieć 'Banknot'?",
-    "questEleven": "Ułóż: Płacić kartą",
-    "questTwelve": "Posłuchaj i napisz:",
-    "questThirteen": "Posłuchaj i napisz:",
-    "questFourteen": "Jak powiedzieć 'Moneta'",
-    "questFifteen": "Posłuchaj i napisz:"
+    "questFour": "Posłuchaj i napisz: Kolejka",
+    "questFive": "Jak powiedzieć: Płacić",
+    "questSix": "Posłuchaj i napisz: Płacę",
+    "questSeven": "Jak powiedzieć: Pieniądze?",
+    "questEight": "Jak powiedzieć: Gotówka?",
+    "questNine": "Posłuchaj i napisz: Płacę gotówką",
+    "questTen": "Jak powiedzieć: Banknot?",
+    "questEleven": "Ułóż: Płacę kartą",
+    "questTwelve": "Posłuchaj i napisz: Płacę kartą",
+    "questThirteen": "Posłuchaj i napisz: Płacę gotówką",
+    "questFourteen": "Jak powiedzieć: Moneta",
+    "questFifteen": "Posłuchaj i napisz: Moneta"
   },
   "eastPlainFifthQuests": {
     "title": "Co jesz?",
-    "description": "Po zakupach postanawiasz zjeść coś w kawiarni. Uczysz się zamawiać jedzenie i napoje (herbata, kawa, woda), grzecznie prosić i pytać o cenę.",
-    "goal": "Naucz się mówić o jedzeniu, kupowaniu i zamawianiu",
-    "questOne": "Jak powiedzieć 'Proszę'",
-    "questTwo": "Jak powiedzieć: 'Herbata, proszę'",
-    "questTree": "Jak powiedzieć 'Banknot'",
-    "questFour": "Posłuchaj i napisz:",
+    "description": "Po zakupach decydujesz się na przekąskę w kawiarni. Uczysz się zamawiać jedzenie i napoje (herbata, kawa, woda), uprzejmie prosić i pytać o ceny dań.",
+    "goal": "Nauczyć się mówić o jedzeniu, kupować i zamawiać",
+    "questOne": "Jak powiedzieć: Proszę",
+    "questTwo": "Jak powiedzieć: Herbata, proszę",
+    "questTree": "Jak powiedzieć: Banknot",
+    "questFour": "Posłuchaj i napisz: Banknot",
     "questFive": "Ułóż zdanie: Chciałbym kawę, proszę",
     "questSix": "Jak zapytać: Ile to kosztuje?",
-    "questSeven": "Uzupełnij: Wie ___ kostet das Getränk?",
+    "questSeven": "Uzupełnij luki: Wie ___ kostet das Getränk?",
     "questEight": "Co klient chce kupić?",
-    "questNine": "Posłuchaj i zapisz zdanie",
+    "questNine": "Posłuchaj i napisz: Kupuję chleb",
     "questTen": "Jak powiedzieć: Butelka wody",
-    "questEleven": "Jak powiedzieć 'Lubię pić herbatę'",
-    "questTwelve": "Uzupełnij lukę: ___ viel kostet Wasser?",
-    "questThirteen": "Ułóż zdanie: Herbata i chleb z masłem, proszę",
-    "questFourteen": "Co zamówiła osoba?",
-    "questFifteen": "Posłuchaj i zapisz zdanie"
+    "questEleven": "Jak powiedzieć: Ile?",
+    "questTwelve": "Uzupełnij luki: ___ viel kostet Wasser?",
+    "questThirteen": "Ułóż zdanie: Herbata i chleb, proszę",
+    "questFourteen": "Co zamówiła ta osoba?",
+    "questFifteen": "Posłuchaj i napisz: Ile to kosztuje?"
   },
   "eastPlainSixthQuests": {
     "title": "Kim jesteś z zawodu?",
@@ -8053,7 +8065,7 @@
   },
   "cardTime": {
     "title": "Zatrzymanie czasu",
-    "description": "Chroni Twoje birety przed karami"
+    "description": "Chroni Twoją serię i kapelusze przed karami"
   },
   "cardSales": {
     "title3": "Zniżka Plus-I",
@@ -8080,7 +8092,12 @@
     "selectDaysPeriod": "Wybierz liczbę dni. W tym okresie Twoje birety nie przepadną.",
     "maximum": "Maksimum",
     "cancel": "Anuluj",
-    "accessibly": "Rozumiem"
+    "accessibly": "Rozumiem",
+    "coupon_buy": "Kup kupon",
+    "coupon_error": "Warunki zakupu",
+    "coupon_success": "Sukces!",
+    "coupon_owned": "Kupon jest aktywny",
+    "buyingPlus": "Kup PLUS"
   },
   "shopDaysRaw": {
     "dayFirst": "dzień",
@@ -8108,7 +8125,7 @@
   },
   "cabinetSidebar": {
     "valueOne": "Konto",
-    "valueTwo": "Artykuły",
+    "valueTwo": "Egzaminy",
     "valueThree": "Sklep",
     "valueFour": "Ustawienia"
   },
@@ -8129,7 +8146,8 @@
     "themeBtn": "Motyw",
     "snowFall": "Opady śniegu",
     "language": "Język interfejsu",
-    "profileData": "Dane profilu"
+    "profileData": "Dane profilu",
+    "hedgehogAssistent": "Jeżyk pomocnik"
   },
   "cabinet": {
     "plusCanceled": "PLUS anulowany",
@@ -8177,6 +8195,7 @@
   },
   "pavelOverlay": {
     "newbie": "Nowicjusz",
+    "streakTitle": "Seria",
     "rankTitle": "Birety",
     "rankLabelOne": "- Birety są przyznawane za wykonywanie codziennych zadań.",
     "rankLabelTwo": "- Możesz zdobyć 3 dziennie, wykonując wszystkie codzienne zadania. Nagrody można sprawdzić w sekcji „Ranga” w profilu.",
@@ -10194,13 +10213,14 @@
     "cabinet": "Konto"
   },
   "speakTopics": {
-    "speak": "Zapoznanie i komunikacja",
+    "speak": "Poznawanie się i komunikacja",
     "food": "Jedzenie i zakupy",
-    "transport": "Wyjazdy i transport",
     "city": "Usługi miejskie i życie codzienne",
     "health": "Zdrowie",
     "work": "Praca i kariera",
-    "auto": "Samochód i droga"
+    "auto": "Samochód i droga",
+    "travel": "Podróże",
+    "sport": "Sport"
   },
   "speakThemes": {
     "firstmeet": "Zapoznanie",
@@ -10313,7 +10333,10 @@
   },
   "submitComputed": {
     "sync": "Synchronizacja...",
-    "getPlus": "Kup PLUS"
+    "getPlus": "Kup PLUS",
+    "getBasic": "Kup Basic",
+    "withAds": "Z reklamami",
+    "withoutAds": "Bez reklam"
   },
   "pay": {
     "banner": "Pełen dostęp do wszystkich funkcji aplikacji",
@@ -10419,8 +10442,7 @@
   },
   "installApp": {
     "stayInBrowser": "Kontynuuj w przeglądarce",
-    "promoSubTitle": " Z aplikacją Skillupgerman nauka niemieckiego jest o wiele wygodniejsza.",
-    "soon": "Wkrótce"
+    "promoSubTitle": " Z aplikacją Skillupgerman nauka niemieckiego jest o wiele wygodniejsza."
   },
   "speakSessionsBanner": {
     "dialog": "Przechodź dialogi. Słuchaj, wybieraj opcje odpowiedzi i ćwicz wymowę",
@@ -10617,7 +10639,7 @@
     "description": "Wszystkie funkcje zostały już odblokowane"
   },
   "newsBannerText": {
-    "text": "Cześć! Każdego dnia Skillupgerman publikuje tutaj ciekawe wiadomości o języku niemieckim. Ucz się z przyjemnością!"
+    "text": "Cześć! Skillupgerman publikuje tutaj ciekawe wiadomości o języku niemieckim. Ucz się z przyjemnością!"
   },
   "marathonLeaderBoard": {
     "stateHint": "Wyścig wkrótce się rozpocznie! Przygotuj się na nowy sezon.",
@@ -10630,20 +10652,43 @@
     "win-screen": "Świetna robota!",
     "win-desc": "Teraz możesz wrócić do lekcji."
   },
-  "appBanner": {
-    "promo": "Niemiecki zawsze pod ręką",
-    "promo_sub": "Ucz się w drodze, podczas przerwy lub przed snem!",
-    "subTextApple": "Pobierz w",
-    "subTextAriaApple": "Pobierz w App Store",
-    "subTextGoogle": "Dostępne w",
-    "subTextAriaGoogle": "Dostępne w Google Play"
-  },
-  "public__copyright": {
-    "text": "Skillupgerman. Wszelkie prawa zastrzeżone."
+  "updatePassword": {
+    "title": "Utwórz nowe hasło",
+    "newPasswordLabel": "Nowe hasło",
+    "newPasswordPlaceholder": "Minimum 6 znaków",
+    "confirmPasswordLabel": "Potwierdź hasło",
+    "confirmPasswordPlaceholder": "Powtórz nowe hasło",
+    "savingBtn": "Zapisywanie...",
+    "saveBtn": "Zapisz hasło",
+    "invalidLinkLoad": "Link odzyskiwania wygasł lub jest nieprawidłowy. Poproś o reset ponownie.",
+    "invalidLinkSubmit": "Kod wygasł lub został już użyty. Poproś o reset ponownie.",
+    "minLength": "Hasło musi mieć co najmniej 6 znaków.",
+    "mismatch": "Hasła nie pasują do siebie. Spróbuj ponownie.",
+    "success": "Hasło zostało pomyślnie zaktualizowane! Trwa przekierowanie...",
+    "expiredCode": "Kod wygasł lub został już użyty. Poproś o nowy.",
+    "networkError": "Błąd sieci. Sprawdź połączenie z internetem.",
+    "defaultError": "Wystąpił nieoczekiwany błąd. Spróbuj ponownie później."
   },
   "eulaText": {
     "text": "Dokonując zakupu, wyrażasz zgodę na",
     "month": "mies."
+  },
+  "shopInfoModal": {
+    "buyDiscount": "Kup kupon",
+    "suma": "Do zapłaty:",
+    "forBuyingPartOne": "Aby kupić,",
+    "forBuyingPartTwo": "potrzebujesz:",
+    "notEnough": "brakuje",
+    "successBuy": "Kupon został pomyślnie aktywowany!",
+    "howToUse": "Możesz go użyć na ekranie zakupu Plus.",
+    "pcs": "szt."
+  },
+  "freeTrial": {
+    "free-text": "Okres próbny",
+    "free-days": "dni za darmo",
+    "then": "następnie",
+    "trial-text-part-one": "Po zakończeniu okresu próbnego zostanie automatycznie pobrana opłata za subskrypcję w wysokości",
+    "trial-text-part-two": "Subskrypcja odnawia się automatycznie, chyba że anulujesz ją w ustawieniach konta Google (w Google Play) co najmniej 24 godziny przed końcem bieżącego okresu."
   },
   "landWordsSession": {
     "grammar": "Gramatyka",
@@ -10666,5 +10711,406 @@
   "recipe": {
     "done": "Świetnie! Dzisiejsze zadanie zostało wykonane.",
     "btn": "Wróć"
+  },
+  "hedgehogImageHelper": {
+    "limit_text": "Dzisiejszy limit podpowiedzi został wyczerpany, wróć jutro",
+    "limit_return_text": "wykup PLUS i ucz się bez ograniczeń",
+    "hintAnsweredTitle": "Cześć! Podpowiem Ci, na co warto zwrócić uwagę.",
+    "hintAnsweredMistakesTitle": "Chcesz, żebym przeanalizował Twoją odpowiedź i wyjaśnił błędy?",
+    "mainHint": "Analiza odpowiedzi:",
+    "mainHint2": "Podpowiedź:",
+    "betterToSay": "Jak powiedzieć lepiej:",
+    "usefulWords": "Przydatne słowa:",
+    "grammarHint": "Wskazówka gramatyczna:",
+    "getPlus": "Kup PLUS",
+    "getHint": "Uzyskaj podpowiedź",
+    "thanks": "Rozumiem, dzięki!",
+    "close": "Zamknij",
+    "loading": "Ładowanie...",
+    "errorText": "Wystąpił błąd podczas analizy...",
+    "errorTip": "Spróbuj ponownie nieco później...",
+    "hintAds": " \uD83D\uDCFA Obejrzyj reklamę (+1 podpowiedź)"
+  },
+  "hedgehogHleper": {
+    "greetings": "Halli hallo! W czym mogę pomóc?",
+    "answer": "Odpowiedź:",
+    "hintBtn": " Podpowiedz odpowiedź",
+    "myself": " Spróbuję sam",
+    "plus": "Kup PLUS",
+    "thanks": "Rozumiem, dzięki",
+    "tillTommorow": "Rozumiem, do jutra",
+    "error": "Wystąpił błąd, spróbuj ponownie później",
+    "cancel": "Anuluj",
+    "limitText": "Zwinałem się w kłębek - odpoczywam do jutra.",
+    "limitText2": "Skończyły Ci się podpowiedzi na dziś. Wpadnij koniecznie jutro, a będziemy kontynuować doskonalenie Twojego niemieckiego razem!"
+  },
+  "hedgehogModal": {
+    "ok": "Rozumiem",
+    "onInfo": "Możesz go włączyć z powrotem tutaj za pomocą przełącznika u góry lub w dowolnym momencie w ustawieniach profilu.",
+    "off": "Jeżyk jest wyłączony",
+    "letsgo": "Do dzieła",
+    "title": "Nowy asystent",
+    "intro_title": "Twój osobisty asystent",
+    "intro-subtitle": "Pomoże opanować niemiecki i gramatykę bezpośrednio podczas ćwiczeń.",
+    "titleImages": "Opis obrazków",
+    "descriptionImages": "Przeanalizuje obrazek, podpowie gotowe konstrukcje zdań i potrzebne słowa.",
+    "titleLands": "Zadania krain językowych",
+    "descriptionLands": "Pomoże w nagraniach audio, wskaże pułapki słowne i pokaże poprawny szyk zdań.",
+    "titleThematic": "Poziomy tematyczne",
+    "descriptionThematic": "Wyjaśni przypadki i rodzajniki bezpośrednio podczas ćwiczeń, jeśli masz wątpliwości."
+  },
+  "questModals": {
+    "repeat": "Powtórz błędy",
+    "next": "Następne zadanie ➔",
+    "back": "Do tematów",
+    "mistakes": "Brak nagrody",
+    "areErrors": "SĄ BŁĘDY",
+    "succesCompleted": "UKOŃCZONE",
+    "rewardGot": "Otrzymałeś nagrodę:",
+    "questCompletedAgain": "Zadanie ukończone ponownie:"
+  },
+  "calendarHints": {
+    "first": "Świetne tempo w tym tygodniu! Tak trzymać",
+    "second": "Mały krok dzisiaj to ogromny rezultat jutro!",
+    "third": "Dyscyplina czyni cuda. Z każdym dniem jesteś bliżej celu!",
+    "fourth": "Ogień płonie coraz mocniej! Nie zwalniaj tempa",
+    "fifth": "Każdy ukończony dzień buduje żelazny nawyk!",
+    "sixth": "Robisz to, na czym wielu się poddaje. Dobra robota!",
+    "seventh": "Twoja seria rośnie z dnia na dzień, tak trzymać!",
+    "eighth": "Zaledwie kilka minut dziennie, a niemiecki staje się coraz bliższy!",
+    "ninth": "Świetna robota! Kluczem jest regularność i jesteś do przodu",
+    "tenth": "Każdy dzień dodaje pewności siebie. Kontynuujemy jutro!"
+  },
+  "streakButtons": {
+    "first": "Do zobaczenia jutro",
+    "second": "Kontynuujemy jutro",
+    "third": "Dobra robota",
+    "fourth": "Krok zrobiony, do jutra",
+    "fifth": "Utrwalimy to jutro?",
+    "sixth": "Dyscyplina na najwyższym poziomie",
+    "seventh": "Do jutra",
+    "eighth": "Powtórzymy jutro?",
+    "ninth": "Nie zwalniamy tempa"
+  },
+  "hintText": {
+    "start": "Twoja seria się rozpoczęła. Ćwicz codziennie, aby jej nie stracić!",
+    "first": "Finał tygodnia! Jutro start nowej czystej serii",
+    "second": "Dobijmy ten tydzień, a od następnego zaczniemy pełną serię",
+    "aRow": "z rzędu"
+  },
+  "guessWordHint": {
+    "hint-title": "Podpowiedź",
+    "hint-desc": "Odsłoni 2 losowe litery bez zużywania prób",
+    "hint-action-btn": "Użyj"
+  },
+  "halloweenEventQuests": {
+    "questOne": "Obrazek → Słowo",
+    "questTwo": "Podstawy i fakty",
+    "questThree": "Niemieckie tradycje",
+    "questFour": "Stworzenia i legendy",
+    "questFive": "Kostiumy i jesienna noc",
+    "questSix": "Symbole i zwyczaje",
+    "questSeven": "Wieczór z dynią",
+    "questEight": "Wyprawa po słodycze",
+    "questNine": "Zamek Frankensteina",
+    "questTen": "Reformacja i święto",
+    "questEleven": "Dawny duch z rzepy",
+    "questTwelve": "Dzień Wszystkich Świętych",
+    "questThirteen": "Dzień Świętego Marcina",
+    "questFourteen": "Wystawa dyń w Ludwigsburgu",
+    "questFifteen": "Gry imprezowe",
+    "questSixteen": "Wesoła mumia",
+    "questSeventeen": "Obrazek i słowo",
+    "questEighteen": "Atrybuty święta",
+    "questNineteen": "Niemieckie podania",
+    "questTwenty": "Jesienny poncz",
+    "questTwentyOne": "Znajdź niepasujące słowo",
+    "questTwentyTwo": "Niepasujące słowo - pogoda",
+    "questTwentyThree": "Niepasujące słowo - pogoda"
+  },
+  "eventsShopItemsHalloween": {
+    "witchBroom": "Miotła czarownicy",
+    "witchHat": "Kapelusz czarodzieja",
+    "pumpkin": "Dynia",
+    "punch": "Poncz wiedźmy",
+    "spellBook": "Księga zaklęć",
+    "ghostEffect": "Efekt halloweenowy"
+  },
+  "hallowenQuestTwo": {
+    "titleOne": "Kiedy obchodzi się Halloween?",
+    "titleTwo": "Jakie warzywo tradycyjnie drąży się na Halloween?",
+    "titleThree": "Co krzyczą dzieci w Niemczech, prosząc o słodycze?",
+    "titleFour": "Jak nazywa się słynna latarnia z dyni?",
+    "titleFive": "Jakie dwa kolory są najbardziej kojarzone z Halloween?",
+    "titleSix": "Które zwierzę jest uważane za główny nocny symbol tego święta?",
+    "titleSeven": "Jakie święto przypada zaraz po Halloween — 1 listopada?",
+    "titleEight": "Co tradycyjnie wkłada się do środka wydrążonej dyni?"
+  },
+  "hallowenQuestThree": {
+    "titleOne": "Co wycinano na ziemiach niemieckich przed pojawieniem się dyni?",
+    "titleTwo": "W którym niemieckim zamku od lat 70. XX wieku odbywa się duży festiwal z okazji Halloween?",
+    "titleThree": "Jakie ważne święto kościół luterański obchodzi 31 października?",
+    "titleFour": "Podczas którego święta w listopadzie dzieci chodzą ulicami z własnoręcznie zrobionymi lampionami?",
+    "titleFive": "W którym kraju w listopadzie tradycyjnie drąży się lampiony z rzepy (Räbeliechtli)?",
+    "titleSix": "Dlaczego według dawnego niemieckiego przesądu tej nocy chowa się noże w kuchni?",
+    "titleSeven": "Dlaczego w niektórych krajach związkowych Niemiec imprezy muszą cichnąć przed północą?",
+    "titleEight": "Co w Niemczech najczęściej przyrządza się z miąższu dyni?"
+  },
+  "hallowenQuestFour": {
+    "titleOne": "Które stworzenie boi się czosnku i za dnia śpi w trumnie?",
+    "titleTwo": "Na której górze w paśmie Harz według niemieckich podań gromadzą się czarownice?",
+    "titleThree": "Jak nazywa się człowiek, który podczas pełni księżyca zamienia się w wilka?",
+    "titleFour": "Na czym według legend lata czarownica?",
+    "titleFive": "Które stworzenie unosi się po starych zamkach w białych szatach?",
+    "titleSex": "Jakie zwierzę najczęściej towarzyszy czarownicy w wierzeniach ludowych?",
+    "titleSeven": "Jak nazywają się błędne ogniki na bagnach, sprowadzające wędrowców ze ścieżki?",
+    "titleEight": "Jak nazywa się ożywionego, powolnego umarlaka?"
+  },
+  "hallowenQuestFive": {
+    "titleOne": "Dlaczego ludzie pierwotnie przebierali się w straszne stroje?",
+    "titleTwo": "Jaki kostium składa się z białych kości na ciemnym tle?",
+    "titleThree": "Co koniecznie trzeba założyć do czarnej peleryny wampira?",
+    "titleFour": "Co dawniej stanowiło podstawę najprostszego kostiumu ducha?",
+    "titleFive": "Jaki owoc na jarmarkach często pokrywa się czerwoną, słodką glazurą?",
+    "titleSix": "Co zazwyczaj wiesza się w rogach pokoju, aby stworzyć upiorną atmosferę?",
+    "titleSeven": "Co najczęściej dostają dzieci w Niemczech w zamian za swój wierszyk?",
+    "titleEight": "O jakiej porze dzieci zazwyczaj ruszają po domach po cukierki?"
+  },
+  "hallowenQuestSix": {
+    "titleOne": "Które starożytne święto celtyckie uważa się za historycznego przodka Halloween?",
+    "titleTwo": "Czym żartobliwie grożą dzieci w zwrocie «...sonst gibt's Saures», jeśli nie dostaną słodyczy?",
+    "titleThree": "W którym mieście niedaleko Stuttgartu co roku budowane są ogromne figury z dyń?",
+    "titleFour": "W czym według bajek wiedźma warzy swoje eliksiry?",
+    "titleFive": "Które ośmionożne stworzenie tka wytrzymałe sieci łowne?",
+    "titleSix": "Za pomocą czego czarnoksiężnicy i czarodzieje rzucają swoje zaklęcia?",
+    "titleSeven": "Co często robi się z pestkami dyni po jej wydrążeniu?",
+    "titleEight": "Dlaczego jesienny las pod koniec października idealnie nadaje się do strasznych opowieści?"
+  },
+  "hallowenQuestSeven": {
+    "questOne": "O jakiej porze dnia rodzina drąży dynię?",
+    "questTwo": "Jaki wyraz twarzy wycinają?",
+    "questThree": "Co wkładają do środka dyni?",
+    "questFour": "Po co do środka wkłada się świecę?",
+    "questFive": "Jaka atmosfera panuje tego wieczoru?"
+  },
+  "hallowenQuestEight": {
+    "questOne": "Kiedy dzieci wyruszają na spacer?",
+    "questTwo": "Za kogo przebrał się Lukas?",
+    "questThree": "Jakie nakrycie głowy ma na sobie Mia?",
+    "questFour": "Co dzieci głośno krzyczą pod drzwiami wejściowymi?",
+    "questFive": "Czym sąsiedzi napełniają torby dzieci?"
+  },
+  "hallowenQuestNine": {
+    "questOne": "W pobliżu jakiego miasta znajduje się zamek?",
+    "questTwo": "W jakim stanie zamek przetrwał do dziś?",
+    "questThree": "Kto przebiera się za potwory w zamku?",
+    "questFour": "Co przebrani aktorzy robią ze zwiedzającymi?",
+    "questFive": "Jaka pogoda zazwyczaj panuje wokół tego zamku jesienią?"
+  },
+  "hallowenQuestTen": {
+    "questOne": "Kogo wspomina się w Dniu Reformacji?",
+    "questTwo": "Jaki status ma 31 października w wielu krajach związkowych Niemiec?",
+    "questThree": "Co zazwyczaj odbywa się w kościołach w ciągu dnia?",
+    "questFour": "Do kogo najczęściej należy późny wieczór 31 października?",
+    "questFive": "Które wyznanie obchodzi Dzień Reformacji?"
+  },
+  "hallowenQuestEleven": {
+    "questOne": "Co drążyły dzieci przed pojawieniem się dyni?",
+    "questTwo": "Jak nazywano takie świecące figurki?",
+    "questThree": "W jakich rejonach ten zwyczaj był szczególnie popularny?",
+    "questFour": "Co wkładano do wnętrza wydrążonej rzepy?",
+    "questFive": "Jaką porę roku witano tym obrzędem?"
+  },
+  "hallowenQuestTwelve": {
+    "questOne": "Jakie święto obchodzi się 1 listopada?",
+    "questTwo": "Co oznacza status «cichego święta»?",
+    "questThree": "Dokąd udaje się wiele rodzin w tym dniu?",
+    "questFour": "Co ludzie zapalają na grobach bliskich?",
+    "questFive": "W których krajach związkowych ten dzień jest szczególnie szanowany?"
+  },
+  "hallowenQuestThirteen": {
+    "questOne": "Kiedy obchodzi się Dzień Świętego Marcina?",
+    "questTwo": "Co niosą dzieci podczas pochodu?",
+    "questThree": "Jakie pieśni śpiewa się podczas pochodu?",
+    "questFour": "Co rozpalane jest na zakończenie świątecznego pochodu?",
+    "questFive": "Jakie tradycyjne wypieki rozdaje się dzieciom?"
+  },
+  "hallowenQuestfourteen": {
+    "questOne": "W jakim parku odbywa się słynna wystawa?",
+    "questTwo": "Z czego powstają ogromne figury?",
+    "questThree": "Jakich popisowych dań próbują goście wystawy?",
+    "questFour": "Ile dyń wykorzystuje się do dekoracji wystawy?",
+    "questFive": "O jakiej porze roku otwarta jest ta wystawa?"
+  },
+  "hallowenQuestfifteen": {
+    "questOne": "Jak nazywa się gra z jabłkami w wodzie?",
+    "questTwo": "Czym napełnia się dużą miskę?",
+    "questThree": "Co unosi się na powierzchni wody?",
+    "questFour": "Gdzie uczestnicy muszą schować ręce?",
+    "questFive": "Za pomocą czego należy wyłowić jabłko?"
+  },
+  "hallowenQuestSixteen": {
+    "questOne": "Jak nazywa się kolejna wesoła konkurencja?",
+    "questTwo": "Co robią między sobą dwie drużyny?",
+    "questThree": "Kogo wybiera każda drużyna?",
+    "questFour": "Jaki materiał jest wykorzystywany do owijania?",
+    "questFive": "Która drużyna wygrywa w tej grze?"
+  },
+  "hallowenQuestSeventeen": {
+    "title": "Połącz słowo z jego tłumaczeniem",
+    "wordOne": "Słodycze",
+    "wordTwo": "Nietoperz",
+    "wordThree": "Wampir",
+    "wordFour": "Świeca",
+    "wordFive": "Miotła",
+    "wordSix": "Czarny kot",
+    "wordSeven": "Dynia",
+    "wordEight": "Szkielet",
+    "wordNine": "Duch",
+    "wordTen": "Magiczna księga",
+    "wordEleven": "Zjawa",
+    "wordTwelve": "Kruk",
+    "wordThirteen": "Kapelusz czarownicy",
+    "wordFourteen": "Czarodziej",
+    "wordFifteen": "Pająk",
+    "wordSixteen": "Miotła czarownicy",
+    "wordSeventeen": "Kocioł czarownicy",
+    "wordEighteen": "Magiczna różdżka"
+  },
+  "hallowenQuestEightteen": {
+    "title": "Połącz przedmiot z jego krótkim opisem",
+    "titleTwo": "Połącz postać z jej charakterystyczną cechą",
+    "titleThree": "Połącz święto z jego dokładną datą",
+    "textOne": "Pajęczyna w rogach",
+    "textTwo": "Peleryna z czerwonym kołnierzem",
+    "textThree": "Lampion z twarzą",
+    "textFour": "Nagrobek na cmentarzu",
+    "textFive": "Lata w ciemności",
+    "textSix": "Czarownica lata na tym",
+    "textSeven": "Składa się wyłącznie z białych kości",
+    "textEight": "Boi się czosnku i śpi w trumnie",
+    "textNine": "Wyje do księżyca w ciemnym lesie",
+    "textTen": "Brzęczy łańcuchami w starym zamku",
+    "textEleven": "Warzy eliksiry w żeliwnym kotle",
+    "textTwelve": "Od stóp do głów w białych bandażach",
+    "textThirteen": "1 listopada",
+    "textFourteen": "Północ (00:00)",
+    "textFifteen": "Wieczór 31 października",
+    "textSixteen": "11 listopada o 11:11",
+    "textSeventeen": "31 października (w ciągu dnia)",
+    "textEighteen": "11 listopada (lampiony)"
+  },
+  "hallowenQuestNineteen": {
+    "title": "Połącz słowo z jego znaczeniem",
+    "wordOne": "Góra w paśmie Harz, gdzie gromadzą się czarownice",
+    "wordTwo": "Pochód dzieci z lampionami w listopadzie",
+    "wordThree": "Godzina duchów od północy do pierwszej w nocy",
+    "wordFour": "Mityczny Król Olch z ballady Goethego",
+    "wordFive": "Dawne rzeźbienie w rzepie pastewnej",
+    "wordSix": "Dzień bez głośnych imprez i tańców",
+    "wordSeven": "Rozprasza mrok wewnątrz dyni",
+    "wordEight": "Podkowa na szczęście i ochronę domu",
+    "wordNine": "Ochrona przed wampirami",
+    "wordTen": "Amulet na progu przeciwko złym mocom",
+    "wordEleven": "Metal przeciwko wilkołakom w baśniach",
+    "wordTwelve": "Myli błąkające się duchy",
+    "wordThirteen": "Trumna",
+    "wordFourteen": "Eliksir",
+    "wordFifteen": "Ruiny zamku",
+    "wordSixteen": "Mgła",
+    "wordSeventeen": "Cmentarz",
+    "wordEighteen": "Kość"
+  },
+  "hallowenQuestTwenty": {
+    "title": "Połącz słowo z jego tłumaczeniem",
+    "wordOne": "Zamek potworów",
+    "wordTwo": "Wilkołak",
+    "wordThree": "Nawiedzony dom",
+    "wordFour": "Cmentarz",
+    "wordFive": "Mumia",
+    "wordSix": "Trumna",
+    "wordSeven": "Ciemność / Mrok",
+    "wordEight": "Północ",
+    "wordNine": "Straszna maska",
+    "wordTen": "Krzyk",
+    "wordEleven": "Płyta nagrobna",
+    "wordTwelve": "Szkielet",
+    "wordThirteen": "Czaszka",
+    "wordFourteen": "Statek widmo",
+    "wordFifteen": "Klątwa",
+    "wordSixteen": "Pajęczyna",
+    "wordSeventeen": "Labirynt",
+    "wordEighteen": "Magiczny eliksir"
+  },
+  "hallowenQuestTwentyOne": {
+    "questOne": "Które zwierzę nie pasuje do halloweenowego towarzystwa?",
+    "questTwo": "Co nie pasuje do słodyczy w torbie dziecka?",
+    "questThree": "Które słowo nie pasuje znaczeniowo?",
+    "questFour": "Co nie świeci w ciemności podczas święta?",
+    "questFive": "Co nie jest związane z jesienią i świętem?",
+    "questSix": "Który przedmiot nie należy do czarodzieja ani czarownicy?"
+  },
+  "hallowenQuestTwentyTwo": {
+    "title": "Znajdź niepasujące słowo: Część 2",
+    "questOne": "Jaka pogoda zupełnie nie pasuje do halloweenowego wieczoru?",
+    "questTwo": "Czego nie zakłada się jako elementu kostiumu na Halloween?",
+    "questThree": "Który przedmiot jest zbędny wśród naczyń czarownicy?",
+    "questFour": "Czego wampir zupełnie nie potrzebuje?",
+    "questFive": "Który ptak lub ssak nie pasuje do grona nocnych stworzeń?",
+    "questSix": "Który napój nie pasuje do rozgrzewających jesiennych przysmaków?"
+  },
+  "hallowenQuestTwentyThree": {
+    "title": "Połącz słowa o przeciwnym znaczeniu"
+  },
+  "haloweenBanner": {
+    "shop": "Kupuj efekty i prezenty w sklepie wydarzenia!",
+    "quests": "Wykonuj zadania, aby zbierać dyniową walutę!"
+  },
+  "eventsModalButtons": {
+    "pumpkin": "Zbieraj dynie",
+    "april": "Rozpocznij zabawę",
+    "valentine": "Rozdawaj walentynki",
+    "winter": "Do zimowej bajki!"
+  },
+  "eventsNotification": {
+    "now": "Trwa teraz!",
+    "left": "Pozostało:",
+    "untilEvent": " Do wydarzenia:"
+  },
+  "steakInfo": {
+    "text": "Wykonuj codzienne zadania, aby nie stracić serii"
+  },
+  "halloweenThemeModal": {
+    "partOne": "Ten motyw można odblokować tylko podczas wydarzenia",
+    "partTwo": "«Święto Dyń»",
+    "partThree": "Kup go w sklepie wydarzenia"
+  },
+  "part": {
+    "text": "Część"
+  },
+  "halloweenAchievements": {
+    "sectionTitle": "Święto Dyń",
+    "firstHalloweenQuestText": "Cukierek albo dynia",
+    "firstHalloweenQuestDescription": "Ukończ pomyślnie dowolne zadanie w wydarzeniu Święto Dyń.",
+    "halloweenWordsText": "Złowrogie opowieści",
+    "halloweenWordsDescription": "Opanuj wszystkie tematyczne słówka związane z wydarzeniem Święto Dyń.",
+    "witchBroomText": "Błyskawica? Nie, szybciej!",
+    "witchBroomDescription": "Rozpędź się do granic — kup latającą miotłę najwyższej klasy w świątecznym sklepie.",
+    "pumpkinText": "Dynia na głowie?",
+    "pumpkinDescription": "Kup złowrogą dynię w świątecznym kramie.",
+    "punchText": "Dyniowy poncz",
+    "punchDescription": "Kup poncz wiedźmy w świątecznym sklepie.",
+    "witchHatText": "Wybór domu?",
+    "witchHatDescription": "Kup kapelusz czarownicy w świątecznym sklepie.",
+    "spellBookText": "Grimuar Jeźdźca",
+    "spellBookDescription": "Kup starożytną księgę zaklęć w świątecznym sklepie.",
+    "halloweenThemeText": "Maskarada",
+    "halloweenThemeDescription": "Kup upiorny motyw aplikacji w sklepie wydarzenia.",
+    "halloweenAllQuestsText": "Niech rozpocznie się bal!",
+    "halloweenAllQuestsDescription": "Nie daj złym mocom żadnych szans — ukończ wszystkie świąteczne zadania.",
+    "halloweenReputationText": "Idol święta",
+    "halloweenReputationDescription": "Zdobądź maksymalny poziom reputacji za wykonywanie zleceń Dyniowiny.",
+    "halloweenAllAchievementsText": "Niechaj Dyniowina będzie z tobą!",
+    "halloweenAllAchievementsDescription": "Zdobądź wszystkie osiągnięcia Dyniowiny i zasłuż na świąteczny tytuł."
   }
 }

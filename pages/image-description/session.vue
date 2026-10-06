@@ -2,7 +2,6 @@
 import {ref, computed, nextTick, onMounted} from 'vue'
 import {useSeoMeta, useState} from "#imports"
 import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import TipsModal from '../../src/components/V-tips.vue'
 import {topics} from '@/utils/descriptionImages.js'
@@ -10,7 +9,7 @@ import {topics} from '@/utils/descriptionImages.js'
 import {getFunctions, httpsCallable} from 'firebase/functions'
 import {showInterstitial} from '~/utils/admob.js'
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
-import VHedgehogImageHelper from "~/src/components/V-HedgehogImageHelper.vue";
+import VHedgehogHelper from "~/src/components/V-hedgehog-helper.vue";
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -18,7 +17,8 @@ useSeoMeta({
 
 const router = useRouter()
 const {t, locale} = useI18n()
-
+const { $track } = useNuxtApp()
+let sessionStartTime = 0
 const sessionConfig = useState('sessionConfig')
 const selectedTopic = computed(() => topics.find(t => t.id === sessionConfig.value?.topicId))
 const selectedLevel = computed(() => sessionConfig.value?.level || 'A1')
@@ -93,6 +93,13 @@ onMounted(() => {
 
   Promise.all([minDelay, imgPromise, adPromise]).then(() => {
     isScreenLoading.value = false
+    sessionStartTime = Date.now()
+
+    $track('image_desc_session_started', {
+      topic_id: sessionConfig.value?.topicId,
+      level: selectedLevel.value,
+      total_tasks: activeTasks.value.length
+    })
   })
 })
 
@@ -137,6 +144,12 @@ async function sendMessage(voiceText = null) {
         keyCorrections: res.data.keyCorrections || []
       })
       isAnswered.value = true
+      $track('image_desc_task_answered', {
+        topic_id: sessionConfig.value?.topicId,
+        level: selectedLevel.value,
+        task_index: currentTaskIndex.value,
+        score: res.data.score || 0
+      })
     } else {
       err.value = "Ошибка анализа. Пустой ответ сервера."
       messages.value.pop()
@@ -155,17 +168,37 @@ function nextTask() {
   isAnswered.value = false;
   err.value = '';
   input.value = ''
+
+  if (isFinished.value) {
+    const durationSec = Math.round((Date.now() - sessionStartTime) / 1000)
+    $track('image_desc_session_finished', {
+      topic_id: sessionConfig.value?.topicId,
+      level: selectedLevel.value,
+      duration_seconds: durationSec,
+      total_tasks: activeTasks.value.length
+    })
+  }
 }
 
 function goBack() {
+  const durationSec = Math.round((Date.now() - sessionStartTime) / 1000)
+  $track('image_desc_session_abandoned', {
+    topic_id: sessionConfig.value?.topicId,
+    level: selectedLevel.value,
+    duration_seconds: durationSec,
+    completed_tasks: currentTaskIndex.value,
+    total_tasks: activeTasks.value.length
+  })
   router.push('/image-description')
 }
+
 </script>
 
 <template>
   <div class="page-container">
     <div class="page__inner">
-      <VHedgehogImageHelper
+      <VHedgehogHelper
+          action-type="imageHint"
           :image-url="currentImage"
           :reference-description="activeTasks[currentTaskIndex]?.descriptions?.[selectedLevel] || ''"
           :user-level="selectedLevel"

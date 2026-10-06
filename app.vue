@@ -2,12 +2,9 @@
   <NuxtLayout>
     <NuxtPage/>
     <AchievementToast @toast-finished="onToastFinished"/>
-    <!--    <VStepHint v-if="showStepHint" @close="showStepHint = false"/>-->
-    <!--      <FeedBack/>-->
     <VLost/>
     <VRankOverlay/>
     <VInstallApp/>
-    <VHedgehogIntroModal/>
   </NuxtLayout>
 </template>
 

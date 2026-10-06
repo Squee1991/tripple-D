@@ -7,8 +7,8 @@ android {
         applicationId "com.skillupgerman.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 162
-        versionName "162"
+        versionCode 184
+        versionName "1.0.16"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -18,8 +18,9 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
@@ -40,15 +41,26 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
     implementation project(':capacitor-cordova-android-plugins')
+    implementation "com.google.ads.mediation:applovin:13.1.0.0"
+    implementation 'com.google.ads.mediation:unity:4.12.5.0'
+    implementation 'com.unity3d.ads:unity-ads:4.12.5'
+//     implementation 'com.google.ads.mediation:unity:4.12.2.0'
+//     implementation 'com.unity3d.ads:unity-ads:4.12.2'
 }
 
 apply from: 'capacitor.build.gradle'
+apply plugin: 'com.google.gms.google-services'
 
-try {
-    def servicesJSON = file('google-services.json')
-    if (servicesJSON.text) {
-        apply plugin: 'com.google.gms.google-services'
-    }
-} catch(Exception e) {
-    logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
+configurations.all {
+    exclude group: 'com.revenuecat.purchases', module: 'purchases-store-amazon'
+    exclude group: 'io.capawesome', module: 'capacitor-apple-sign-in'
 }
+
+// try {
+//     def servicesJSON = file('google-services.json')
+//     if (servicesJSON.text) {
+//         apply plugin: 'com.google.gms.google-services'
+//     }
+// } catch(Exception e) {
+//     logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
+// }

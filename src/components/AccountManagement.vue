@@ -35,7 +35,7 @@
           {{ t('cabinet.buyPremium') }}
         </button>
         <button
-            v-if="authStore.isPremium && !authStore.subscriptionCancelled && authStore.paymentSource === 'stripe'"
+            v-if="showCancelButton"
             @click.stop="openCancelModal"
             class="premium-action-btn btn-cancel"
         >
@@ -52,11 +52,19 @@ import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { userAuthStore } from '../../store/authStore.js'
 import PlusIcon from '../../assets/images/PlusLogo.png'
-
+import { Capacitor} from '@capacitor/core'
 const emit = defineEmits(['open'])
 const { t, locale } = useI18n()
 const router = useRouter()
 const authStore = userAuthStore()
+const isNativePlatform = Capacitor.isNativePlatform()
+
+const showCancelButton  = computed(() => {
+  return !isNativePlatform &&
+      authStore.isPremium &&
+      !authStore.subscriptionCancelled &&
+      authStore.paymentSource === 'stripe'
+})
 
 const formattedSubscriptionEndDate = computed(() => {
   if (!authStore.subscriptionEndsAt) return '-'

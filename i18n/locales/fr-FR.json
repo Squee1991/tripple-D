@@ -3507,7 +3507,8 @@
     "close": "Fermer",
     "light": "Claire",
     "dark": "Sombre",
-    "pink": "Romantique"
+    "pink": "Romantique",
+    "halloween": "D'Halloween"
   },
   "pinkThemeModal": {
     "partOne": "Ce thème ne peut être débloqué que lors de l'événement",
@@ -3575,10 +3576,10 @@
     "again": "Réessayer",
     "buyLive": "Achète une vie supplémentaire pour continuer.",
     "prise": "Prix",
-    "priseValue": "10 Articlyus",
+    "priseValue": "5 Articlyus",
     "balance": "Ton solde :",
     "points": "Articlyus",
-    "buy": "Acheter une vie pour 10",
+    "buy": "Acheter une vie pour 5",
     "notEnough": "Insuffisant",
     "questNotCompleted": "Tu n'as pas terminé la quête",
     "warning": "Si tu quittes maintenant, ta progression ne sera pas sauvegardée.",
@@ -3701,12 +3702,13 @@
     "quest-6": "Choisissez une réponse"
   },
   "eventPanel": {
+    "errors": "Erreurs",
     "pathMain": "Accueil",
     "event": "Événement",
     "panel": "Panneau d'événement",
     "reputation": "Réputation",
     "currency": "Monnaie",
-    "shop": "Boutique de réputation",
+    "shop": "Boutique",
     "bought": "Acheté",
     "notAllowed": "Indisponible",
     "notEnough": "Pas assez",
@@ -5225,7 +5227,17 @@
     "cupidArrow": "Arc de Cupidon",
     "cupidArrowDescription": "Récompense pour le succès dans la catégorie Événements - Festival des cœurs : « Tir précis »",
     "adventures": "Parchemin des Voyages",
-    "adventuresDescription": "La récompense est obtenue en accomplissant la réussite dans la catégorie Terres des Langues: «Maître des Sentiers de l'Aventure»"
+    "adventuresDescription": "La récompense est obtenue en accomplissant la réussite dans la catégorie Terres des Langues: «Maître des Sentiers de l'Aventure»",
+    "witchBroom": "Balai de sorcière",
+    "witchBroomDescription": "Récompense pour l'accomplissement du succès « L'éclair ? Non, plus rapide ! » dans la catégorie d'événement « Fête des citrouilles ».",
+    "witchHat": "Chapeau de sorcier",
+    "witchHatDescription": "Récompense pour l'accomplissement du succès « Choix de la maison » dans la catégorie d'événement « Fête des citrouilles ».",
+    "pumpkin": "Citrouille",
+    "pumpkinDescription": "Récompense pour l'accomplissement du succès « Tête de citrouille » dans la catégorie d'événement « Fête des citrouilles ».",
+    "spellBook": "Grimoire de sorts",
+    "spellBookDescription": "Récompense pour l'accomplissement du succès « Grimoire du cavalier » dans la catégorie d'événement « Fête des citrouilles ».",
+    "punch": "Chaudron de potion",
+    "punchDescription": "Récompense pour l'accomplissement du succès « Punch magique » dans la catégorie d'événement « Fête des citrouilles »."
   },
   "wildLandsFirstQuest": {
     "title": "Environnement",
@@ -5780,101 +5792,101 @@
   },
   "eastPlainFirstQuests": {
     "title": "Première rencontre",
-    "description": "Vous venez d'arriver sur un continent inconnu. Il faut d'abord apprendre à saluer les habitants et à exprimer votre gratitude pour faire connaissance.",
-    "goal": "Faites le premier pas. Apprenez les mots de salutation et de remerciement.",
-    "questOne": "Comment dit-on : Salut / Bonjour",
-    "questTwo": "Comment dit-on : Merci",
-    "questFour": "Comment dit-on : Bonsoir",
-    "questFive": "Dites : comment ça va ?",
-    "questSix": "Composez : Salut ! Comment ça va ?",
-    "questSeven": "Comment dit-on : Salut / Bye",
-    "questEight": "Comment dit-on : bien",
+    "description": "Vous venez d'arriver sur un continent inconnu. Tout d'abord, vous devez apprendre à saluer les habitants et à exprimer votre gratitude pour nouer un premier contact.",
+    "goal": "Faites le premier pas. Apprenez les mots de salutation et de remerciement",
+    "questOne": "Comment dire : Bonjour",
+    "questTwo": "Comment dire : Merci",
+    "questFour": "Comment dire : Bonsoir",
+    "questFive": "Dites : Comment ça va",
+    "questSix": "Assemblez : Salut ! Comment ça va ?",
+    "questSeven": "Comment dire : Salut (au revoir)",
+    "questEight": "Comment dire : Bien",
     "questNine": "Écoutez et écrivez",
-    "questTen": "Composez : Salut ! Comment ça va ? Bien, merci !",
-    "questEleven": "Comment dit-on : mal",
-    "questTwelve": "Comment dit-on : très bien",
-    "questThirteen": "Comment dit-on : Au revoir",
-    "questFourteen": "Comment dit-on : Très bien, merci",
-    "questFifteen": "Écoutez et écrivez la phrase"
+    "questTen": "Assemblez la phrase : Salut ! Comment ça va ?",
+    "questEleven": "Comment dire : Mal",
+    "questTwelve": "Comment dire : Très bien",
+    "questThirteen": "Comment dire : Au revoir",
+    "questFourteen": "Comment dire : Très bien, merci",
+    "questFifteen": "Écoutez et écrivez : Salut ! Comment ça va ?"
   },
   "eastPlainSecondQuests": {
     "title": "Deuxième jour",
-    "description": "Après la première rencontre, vous continuez à échanger. Les habitants partagent des informations : d'où ils viennent et comment ils s'appellent. Apprenez à poser des questions polies.",
-    "questOne": "Comment dit-on : À demain",
-    "questTwo": "Comment dit-on : On se voit bientôt",
-    "questTree": "Prononcez : Bis Morgen",
-    "questFour": "Écoutez et écrivez la réponse",
-    "questFive": "Composez : Salut Thomas ! Comment ça va ? Bien, et toi ? Bien, merci !",
-    "questSix": "Composez : À plus tard Thomas",
-    "questSeven": "Composez : Salut ! D'où viens-tu ?",
-    "questEight": "Comment dit-on : Je viens de",
-    "questNine": "Écoutez la phrase et écrivez la réponse",
-    "questTen": "Écoutez la phrase et écrivez la réponse",
-    "questEleven": "Dites : Salut ! Comment ça va ?",
-    "questTwelve": "Comment dit-on : Comment vous appelez-vous ?",
-    "questThirteen": "Écrivez : Salut ! Je m'appelle Thomas",
-    "questFourteen": "Comment dit-on : Comment vous appelez-vous ?",
+    "description": "Après la première rencontre, vous continuez à échanger. Les habitants partagent des informations sur eux-mêmes : d'où ils viennent et comment ils s'appellent. Vous apprenez à poser des questions polies.",
+    "questOne": "Comment dire : À demain",
+    "questTwo": "Comment dire : On se voit",
+    "questTree": "Écoutez et écrivez : À demain",
+    "questFour": "Assemblez la phrase : À demain",
+    "questFive": "Comment dire : À bientôt",
+    "questSix": "Comment demander : D'où ?",
+    "questSeven": "Écoutez et écrivez : D'où ?",
+    "questEight": "Écoutez et écrivez : D'où viens-tu ?",
+    "questNine": "Assemblez la phrase : Salut, d'où viens-tu ?",
+    "questTen": "Écoutez et écrivez : Salut, d'où viens-tu ?",
+    "questEleven": "Choisissez l'option : S'appeler",
+    "questTwelve": "Comment dire : Comment vous appelez-vous ? (poli)",
+    "questThirteen": "Assemblez la phrase : Comment vous appelez-vous ? (poli)",
+    "questFourteen": "Comment dire : Comment t'appelles-tu ?",
     "questFifteen": "Écoutez et écrivez la réponse :"
   },
   "eastPlainThirdQuests": {
-    "title": "Qu'est-ce que tu aimes faire ?",
-    "goal": "Apprendre à parler de ses loisirs et de son temps libre",
-    "description": "Vos nouveaux amis vous proposent d'aller faire des courses. Apprenez à dire où vous allez et ce que vous allez faire.",
-    "questOne": "Comment dit-on : Le magasin",
-    "questTwo": "Comment dit-on : Acheter",
-    "questTree": "Comment dit-on : Je vais au magasin",
-    "questFour": "Écoutez et écrivez",
-    "questFive": "Comment dit-on : Salut ! Où vas-tu ? Je vais au magasin",
-    "questSix": "Écoutez et écrivez",
-    "questSeven": "Comment dit-on : Je vais aussi au magasin",
-    "questEight": "Écoutez et écrivez",
-    "questNine": "Comment dit-on : Le supermarché",
-    "questTen": "Écoutez et écrivez",
-    "questEleven": "Comment dit-on : Je ne vais pas au supermarché",
-    "questTwelve": "Comment dit-on : La caisse",
-    "questThirteen": "Comment dit-on : Le prix",
-    "questFourteen": "Comment dit-on : Le ticket de caisse",
-    "questFifteen": "Écoutez et écrivez"
+    "title": "Aller au magasin",
+    "goal": "Apprendre le vocabulaire des courses et des phrases simples de direction",
+    "description": "Nous apprenons à nommer le magasin, le supermarché et à dire où nous allons.",
+    "questOne": "Comment dire : Magasin",
+    "questTwo": "Comment dire : Acheter",
+    "questTree": "Comment dire : Aller",
+    "questFour": "Assemblez : Nous allons",
+    "questFive": "Assemblez : Nous achetons du pain",
+    "questSix": "Écoutez et écrivez : Nous achetons du pain",
+    "questSeven": "Assemblez : Nous allons au magasin",
+    "questEight": "Assemblez : Je vais au magasin",
+    "questNine": "Comment dire : Supermarché",
+    "questTen": "Écoutez et écrivez : Supermarché",
+    "questEleven": "Assemblez : Je ne vais pas au supermarché",
+    "questTwelve": "Comment dire : Caisse",
+    "questThirteen": "Comment dire : Prix",
+    "questFourteen": "Comment dire : Ticket de caisse",
+    "questFifteen": "Écoutez et écrivez : Caisse"
   },
   "eastPlainFourthQuests": {
-    "title": "On continue les courses ?",
-    "description": "Une fois dans le magasin, vous arrivez à la caisse. Vous apprenez à gérer les concepts de file d'attente, de prix et de modes de paiement (espèces, carte).",
-    "goal": "Apprendre à utiliser les concepts de file d'attente, de prix et de modes de paiement.",
-    "questOne": "Comment dit-on : La file d'attente",
-    "questTwo": "Comment dit-on : La caisse",
-    "questTree": "Composez : Je fais la queue",
-    "questFour": "Écoutez et écrivez :",
-    "questFive": "Comment dit-on : Payer ?",
-    "questSix": "Écoutez et écrivez :",
-    "questSeven": "Comment dit-on : L'argent ?",
-    "questEight": "Comment dit-on : En espèces ?",
-    "questNine": "Écoutez et écrivez :",
-    "questTen": "Comment dit-on : Un billet ?",
-    "questEleven": "Composez : Payer par carte",
-    "questTwelve": "Écoutez et écrivez :",
-    "questThirteen": "Écoutez et écrivez :",
-    "questFourteen": "Comment dit-on : Une pièce",
-    "questFifteen": "Écoutez et écrivez :"
+    "title": "Oncontinue les achats ?",
+    "description": "Arrivé au magasin, vous vous rendez à la caisse. Vous apprenez à manipuler les notions de file d'attente, de prix et de moyens de paiement (espèces, carte).",
+    "goal": "Apprendre à manipuler les notions de file d'attente, de prix et de moyens de paiement",
+    "questOne": "Comment dire : File d'attente",
+    "questTwo": "Comment dire : Caisse",
+    "questTree": "Assemble : Je fais la queue",
+    "questFour": "Écoute et écris : File d'attente",
+    "questFive": "Comment dire : Payer",
+    "questSix": "Écoute et écris : Je paye",
+    "questSeven": "Comment dire : De l'argent ?",
+    "questEight": "Comment dire : En espèces ?",
+    "questNine": "Écoute et écris : Je paye en espèces",
+    "questTen": "Comment dire : Billet (de banque) ?",
+    "questEleven": "Assemble : Je paye par carte",
+    "questTwelve": "Écoute et écris : Je paye par carte",
+    "questThirteen": "Écoute et écris : Je paye en espèces",
+    "questFourteen": "Comment dire : Pièce (de monnaie)",
+    "questFifteen": "Écoute et écris : Pièce (de monnaie)"
   },
   "eastPlainFifthQuests": {
-    "title": "Que manges-tu ?",
-    "description": "Après les courses, vous décidez de prendre un en-cas au café. Vous apprenez à commander de la nourriture et des boissons (thé, café, eau), à demander poliment et à vous renseigner sur le prix des plats.",
-    "goal": "Apprendre à parler de la nourriture, à acheter et à commander.",
-    "questOne": "Comment dit-on : S'il vous plaît",
-    "questTwo": "Comment dit-on : Un thé, s'il vous plaît",
-    "questTree": "Comment dit-on : Le billet (argent)",
-    "questFour": "Écoutez et écrivez :",
-    "questFive": "Composez la phrase : Je voudrais un café s'il vous plaît",
+    "title": "Qu'est-ce que tu manges ?",
+    "description": "Après les courses, vous décidez de prendre un encas dans un café. Vous apprenez à commander de la nourriture et des boissons (thé, café, eau), à demander poliment et à vous renseigner sur les prix des plats.",
+    "goal": "Apprendre à parler de nourriture, à acheter et à commander",
+    "questOne": "Comment dire : S'il vous plaît",
+    "questTwo": "Comment dire : Du thé, s'il vous plaît",
+    "questTree": "Comment dire : Billet (de banque)",
+    "questFour": "Écoute et écris : Billet (de banque)",
+    "questFive": "Assemble la phrase : Je voudrais un café s'il vous plaît",
     "questSix": "Comment demander : Combien ça coûte ?",
-    "questSeven": "Complétez l'espace vide : Wie ___ kostet das Getränk ?",
-    "questEight": "Que souhaite acheter l'acheteur ?",
-    "questNine": "Écoutez et écrivez la phrase",
-    "questTen": "Comment dit-on : Une bouteille d'eau",
-    "questEleven": "Comment dit-on : J'aime boire du thé",
-    "questTwelve": "Remplissez l'espace vide : ___ viel kostet Wasser ?",
-    "questThirteen": "Composez : Un thé et du pain avec du beurre s'il vous plaît",
+    "questSeven": "Remplis l'espace vide : Wie ___ kostet das Getränk ?",
+    "questEight": "Qu'est-ce que le client veut acheter ?",
+    "questNine": "Écoute et écris : J'achète du pain",
+    "questTen": "Comment dire : Une bouteille d'eau",
+    "questEleven": "Comment dire : Combien ?",
+    "questTwelve": "Remplis l'espace vide : ___ viel kostet Wasser ?",
+    "questThirteen": "Assemble la phrase : Du thé et du pain s'il vous plaît",
     "questFourteen": "Qu'est-ce que la personne a commandé ?",
-    "questFifteen": "Écoutez et écrivez la phrase"
+    "questFifteen": "Écoute et écris : Combien ça coûte ?"
   },
   "eastPlainSixthQuests": {
     "title": "Quel est ton métier ?",
@@ -8033,7 +8045,7 @@
   },
   "cardTime": {
     "title": "Arrêt du temps",
-    "description": "Protège vos toques des pénalités"
+    "description": "Protège votre série et vos chapeaux contre les pénalités"
   },
   "cardSales": {
     "title3": "Réduction Plus-I",
@@ -8060,7 +8072,12 @@
     "selectDaysPeriod": "Choisissez le nombre de jours. Pendant cette période, vos toques ne seront pas perdues.",
     "maximum": "Maximum",
     "cancel": "Annuler",
-    "accessibly": "C'est compris"
+    "accessibly": "Compris",
+    "coupon_buy": "Acheter le coupon",
+    "coupon_error": "Conditions d'achat",
+    "coupon_success": "Succès !",
+    "coupon_owned": "Coupon actif",
+    "buyingPlus": "Obtenir PLUS"
   },
   "shopDaysRaw": {
     "dayFirst": "jour",
@@ -8088,7 +8105,7 @@
   },
   "cabinetSidebar": {
     "valueOne": "Compte",
-    "valueTwo": "Articles",
+    "valueTwo": "Examens",
     "valueThree": "Boutique",
     "valueFour": "Paramètres"
   },
@@ -8109,7 +8126,8 @@
     "themeBtn": "Thème",
     "snowFall": "Chute de neige",
     "language": "Langue de l'interface",
-    "profileData": "Données du profil"
+    "profileData": "Données du profil",
+    "hedgehogAssistent": "Hérisson assistant"
   },
   "cabinet": {
     "plusCanceled": "PLUS annulé",
@@ -8157,6 +8175,7 @@
   },
   "pavelOverlay": {
     "newbie": "Novice",
+    "streakTitle": "Série",
     "rankTitle": "Toques",
     "rankLabelOne": "- Les toques sont attribuées pour l'accomplissement des tâches quotidiennes.",
     "rankLabelTwo": "- Tu peux en obtenir 3 par jour en finissant tout. Voir les récompenses dans la section 'Rang' du profil.",
@@ -10174,13 +10193,14 @@
     "cabinet": "Compte"
   },
   "speakTopics": {
-    "speak": "Présentation et discussion",
-    "food": "Nourriture et shopping",
-    "transport": "Voyages et transports",
+    "speak": "Présentations et communication",
+    "food": "Nourriture et achats",
     "city": "Services urbains et vie quotidienne",
     "health": "Santé",
     "work": "Travail et carrière",
-    "auto": "La voiture et la route"
+    "auto": "Voiture et route",
+    "travel": "Voyages",
+    "sport": "Sport"
   },
   "speakThemes": {
     "firstmeet": "Présentation",
@@ -10293,7 +10313,10 @@
   },
   "submitComputed": {
     "sync": "Synchronisation...",
-    "getPlus": "Acheter PLUS"
+    "getPlus": "Obtenir PLUS",
+    "getBasic": "Obtenir Basic",
+    "withAds": "Avec publicités",
+    "withoutAds": "Sans publicités"
   },
   "pay": {
     "banner": "Accès complet à toutes les fonctionnalités de l'application",
@@ -10399,8 +10422,7 @@
   },
   "installApp": {
     "stayInBrowser": "Continuer dans le navigateur",
-    "promoSubTitle": " Avec l'application Skillupgerman, apprendre l'allemand est beaucoup plus pratique.",
-    "soon": "Bientôt disponible"
+    "promoSubTitle": " Avec l'application Skillupgerman, apprendre l'allemand est beaucoup plus pratique."
   },
   "speakSessionsBanner": {
     "dialog": "Passez les dialogues. Écoutez, choisissez les options de réponse et entraînez votre prononciation",
@@ -10597,7 +10619,7 @@
     "description": "Toutes les fonctionnalités sont déjà débloquées"
   },
   "newsBannerText": {
-    "text": "Salut ! Chaque jour, Skillupgerman publie ici des nouvelles intéressantes sur la langue allemande. Apprenez avec plaisir !"
+    "text": "Salut ! Skillupgerman publie ici des nouvelles intéressantes sur la langue allemande. Apprenez avec plaisir !"
   },
   "marathonLeaderBoard": {
     "stateHint": "La course va bientôt commencer ! Préparez-vous pour la nouvelle saison.",
@@ -10610,20 +10632,43 @@
     "win-screen": "Excellent travail !",
     "win-desc": "Vous pouvez maintenant retourner à vos leçons."
   },
-  "appBanner": {
-    "promo": "L'allemand toujours à portée de main",
-    "promo_sub": "Continuez à apprendre sur la route, pendant une pause ou avant de dormir !",
-    "subTextApple": "Téléchargez sur l'",
-    "subTextAriaApple": "Télécharger sur l'App Store",
-    "subTextGoogle": "Disponible sur",
-    "subTextAriaGoogle": "Disponible sur Google Play"
-  },
-  "public__copyright": {
-    "text": "Skillupgerman. Tous droits réservés."
+  "updatePassword": {
+    "title": "Créer un nouveau mot de passe",
+    "newPasswordLabel": "Nouveau mot de passe",
+    "newPasswordPlaceholder": "Minimum 6 caractères",
+    "confirmPasswordLabel": "Confirmer le mot de passe",
+    "confirmPasswordPlaceholder": "Répétez le nouveau mot de passe",
+    "savingBtn": "Enregistrement...",
+    "saveBtn": "Enregistrer le mot de passe",
+    "invalidLinkLoad": "Le lien de récupération a expiré ou est invalide. Veuillez demander une nouvelle réinitialisation.",
+    "invalidLinkSubmit": "Le code a expiré ou a déjà été utilisé. Demandez une nouvelle réinitialisation.",
+    "minLength": "Le mot de passe doit contenir au moins 6 caractères.",
+    "mismatch": "Les mots de passe ne correspondent pas. Réessayez.",
+    "success": "Mot de passe mis à jour avec succès ! Redirection...",
+    "expiredCode": "Le code a expiré ou a déjà été utilisé. Demandez-en un nouveau.",
+    "networkError": "Erreur réseau. Vérifiez votre connexion Internet.",
+    "defaultError": "Une erreur inattendue s'est produite. Veuillez réessayer plus tard."
   },
   "eulaText": {
     "text": "En achetant, vous acceptez",
     "month": "mois"
+  },
+  "shopInfoModal": {
+    "buyDiscount": "Acheter le coupon",
+    "suma": "À payer :",
+    "forBuyingPartOne": "Pour acheter,",
+    "forBuyingPartTwo": "vous avez besoin de :",
+    "notEnough": "insuffisant",
+    "successBuy": "Coupon activé avec succès !",
+    "howToUse": "Vous pouvez l'utiliser sur l'écran d'achat de Plus.",
+    "pcs": "pcs"
+  },
+  "freeTrial": {
+    "free-text": "Période d'essai",
+    "free-days": "jours gratuits",
+    "then": "puis",
+    "trial-text-part-one": "À la fin de la période d'essai, un montant d'abonnement vous sera automatiquement facturé à hauteur de",
+    "trial-text-part-two": "L'abonnement se renouvelle automatiquement, sauf si vous l'annulez dans les paramètres de votre compte Google (Google Play) au moins 24 heures avant la fin de la période en cours."
   },
   "landWordsSession": {
     "grammar": "Grammaire",
@@ -10646,5 +10691,406 @@
   "recipe": {
     "done": "Excellent ! La tâche du jour est terminée.",
     "btn": "Retour"
+  },
+  "hedgehogImageHelper": {
+    "limit_text": "La limite d'indices pour aujourd'hui est atteinte, revenez demain",
+    "limit_return_text": "obtenez PLUS et apprenez sans limites",
+    "hintAnsweredTitle": "Salut ! Laisse-moi te donner un indice sur ce qu'il faut surveiller.",
+    "hintAnsweredMistakesTitle": "Tu veux que j'analyse ta réponse et t'explique les erreurs ?",
+    "mainHint": "Analyse de la réponse :",
+    "mainHint2": "Indice :",
+    "betterToSay": "Comment le dire mieux :",
+    "usefulWords": "Mots utiles :",
+    "grammarHint": "Astuce de grammaire :",
+    "getPlus": "Obtenir PLUS",
+    "getHint": "Obtenir un indice",
+    "thanks": "Compris, merci !",
+    "close": "Fermer",
+    "loading": "Chargement...",
+    "errorText": "Une erreur s'est produite lors de l'analyse...",
+    "errorTip": "Réessaie un peu plus tard...",
+    "hintAds": " \uD83D\uDCFA Regarder une pub (+1 indice)"
+  },
+  "hedgehogHleper": {
+    "greetings": "Halli hallo ! Comment puis-je aider ?",
+    "answer": "Réponse :",
+    "hintBtn": " Donne-moi un indice",
+    "myself": " Je vais essayer moi-même",
+    "plus": "Obtenir PLUS",
+    "thanks": "Compris, merci",
+    "tillTommorow": "Compris, à demain",
+    "error": "Une erreur s'est produite, réessayez plus tard",
+    "cancel": "Annuler",
+    "limitText": "En boule - je me repose jusqu'à demain.",
+    "limitText2": "Tu n'as plus d'indices pour aujourd'hui. Repasse absolument demain et nous continuerons à améliorer ton allemand ensemble !"
+  },
+  "hedgehogModal": {
+    "ok": "Compris",
+    "onInfo": "Vous pouvez le réactiver ici à l'aide de l'interrupteur en haut ou à tout moment dans les paramètres de votre profil.",
+    "off": "Le hérisson est désactivé",
+    "letsgo": "C'est parti",
+    "title": "Nouvel assistant",
+    "intro_title": "Votre assistant personnel",
+    "intro-subtitle": "Vous aidera à maîtriser l'allemand et la grammaire directement pendant la pratique.",
+    "titleImages": "Description d'images",
+    "descriptionImages": "Analyse l'image, suggère des bases de phrases toutes prêtes et les mots adéquats.",
+    "titleLands": "Missions des terres linguistiques",
+    "descriptionLands": "Aide avec l'audio, déjoue les pièges de vocabulaire et indique l'ordre correct des phrases.",
+    "titleThematic": "Niveaux thématiques",
+    "descriptionThematic": "Explique les cas et les articles directement pendant la pratique en cas de doute."
+  },
+  "questModals": {
+    "repeat": "Réviser les erreurs",
+    "next": "Tâche suivante ➔",
+    "back": "Aux thèmes",
+    "mistakes": "Aucune récompense reçue",
+    "areErrors": "IL Y A DES ERREURS",
+    "succesCompleted": "TERMINÉ",
+    "rewardGot": "Vous avez reçu une récompense :",
+    "questCompletedAgain": "Quête complétée à nouveau :"
+  },
+  "calendarHints": {
+    "first": "Super rythme cette semaine ! Continue comme ça",
+    "second": "Un petit pas aujourd'hui, un énorme résultat demain !",
+    "third": "La discipline fait des miracles. Tu te rapproches de ton objectif chaque jour !",
+    "fourth": "Le feu brûle de plus en plus fort ! Ne ralentis pas",
+    "fifth": "Chaque jour complété façonne une habitude en acier !",
+    "sixth": "Tu fais ce qui fait abandonner tant de gens. Du bon boulot !",
+    "seventh": "Ta série se renforce de jour en jour, continue ainsi !",
+    "eighth": "Juste deux minutes par jour et l'allemand devient déjà plus familier !",
+    "ninth": "Du bon boulot ! La régularité est la clé, et tu es en avance",
+    "tenth": "Chaque jour apporte plus de confiance. On continue demain !"
+  },
+  "streakButtons": {
+    "first": "À demain",
+    "second": "On continue demain",
+    "third": "Super travail",
+    "fourth": "Pas fait, à demain",
+    "fifth": "On consolide demain ?",
+    "sixth": "Discipline au top",
+    "seventh": "À demain",
+    "eighth": "On révise demain ?",
+    "ninth": "On ne baisse pas le rythme"
+  },
+  "hintText": {
+    "start": "Ta série a commencé. Pratique chaque jour pour ne pas la perdre !",
+    "first": "Fin de la semaine ! Demain, début d'une nouvelle série propre",
+    "second": "Terminons cette semaine, et dès la prochaine on commence une série complète",
+    "aRow": "d'affilée"
+  },
+  "guessWordHint": {
+    "hint-title": "Indice",
+    "hint-desc": "Dévoilera 2 lettres aléatoires sans dépenser d'essais",
+    "hint-action-btn": "Utiliser"
+  },
+  "halloweenEventQuests": {
+    "questOne": "Image → Mot",
+    "questTwo": "Bases et faits",
+    "questThree": "Traditions allemandes",
+    "questFour": "Créatures et légendes",
+    "questFive": "Costumes et nuit d'automne",
+    "questSix": "Symboles et coutumes",
+    "questSeven": "Soirée citrouille",
+    "questEight": "Chasse aux bonbons",
+    "questNine": "Château de Frankenstein",
+    "questTen": "Réforme et fête",
+    "questEleven": "L'ancien esprit du navet",
+    "questTwelve": "Toussaint",
+    "questThirteen": "Fête de la Saint-Martin",
+    "questFourteen": "Exposition de citrouilles à Louisbourg",
+    "questFifteen": "Jeux de fête",
+    "questSixteen": "Momie joyeuse",
+    "questSeventeen": "Image et mot",
+    "questEighteen": "Attributs de fête",
+    "questNineteen": "Légendes allemandes",
+    "questTwenty": "Punch d'automne",
+    "questTwentyOne": "Trouve l'intrus",
+    "questTwentyTwo": "Trouve l'intrus - météo",
+    "questTwentyThree": "Trouve l'intrus - météo"
+  },
+  "eventsShopItemsHalloween": {
+    "witchBroom": "Balai de sorcière",
+    "witchHat": "Chapeau de sorcier",
+    "pumpkin": "Citrouille",
+    "punch": "Punch de sorcière",
+    "spellBook": "Grimoire de sorts",
+    "ghostEffect": "Effet d'Halloween"
+  },
+  "hallowenQuestTwo": {
+    "titleOne": "Quand fête-t-on Halloween ?",
+    "titleTwo": "Quel légume sculpte-t-on traditionnellement pour Halloween ?",
+    "titleThree": "Que crient les enfants en Allemagne lorsqu'ils demandent des friandises ?",
+    "titleFour": "Comment s'appelle la célèbre lanterne sculptée dans une citrouille ?",
+    "titleFive": "Quelles sont les deux couleurs les plus associées à Halloween ?",
+    "titleSix": "Quel animal est considéré comme le symbole nocturne emblématique de la fête ?",
+    "titleSeven": "Quelle fête suit immédiatement Halloween, le 1er novembre ?",
+    "titleEight": "Que place-t-on traditionnellement à l'intérieur d'une citrouille évidée ?"
+  },
+  "hallowenQuestThree": {
+    "titleOne": "Que sculptait-on dans les contrées germaniques avant l'arrivée de la citrouille ?",
+    "titleTwo": "Dans quel château allemand un grand festival d'Halloween est-il organisé depuis les années 1970 ?",
+    "titleThree": "Quelle fête importante l'Église luthérienne célèbre-t-elle le 31 octobre ?",
+    "titleFour": "Lors de quelle fête de novembre les enfants défilent-ils dans la rue avec des lanternes artisanales ?",
+    "titleFive": "Dans quel pays sculpte-t-on traditionnellement en novembre des lanternes dans des navets (Räbeliechtli) ?",
+    "titleSix": "Pourquoi une vieille croyance allemande conseille-t-elle de cacher les couteaux de cuisine cette nuit-là ?",
+    "titleSeven": "Pourquoi les fêtes doivent-elles s'apaiser à minuit dans certains lands allemands ?",
+    "titleEight": "Que cuisine-t-on le plus souvent avec la chair de citrouille en Allemagne ?"
+  },
+  "hallowenQuestFour": {
+    "titleOne": "Quelle créature craint l'ail et dort dans un cercueil pendant la journée ?",
+    "titleTwo": "Sur quelle montagne du massif du Harz les sorcières se rassemblent-elles selon les légendes allemandes ?",
+    "titleThree": "Comment appelle-t-on une personne qui se transforme en loup les soirs de pleine lune ?",
+    "titleFour": "Sur quoi vole une sorcière selon les légendes ?",
+    "titleFive": "Quelle créature erre dans les vieux châteaux vêtue d'habits blancs ?",
+    "titleSex": "Quel animal accompagne le plus souvent la sorcière dans l'imaginaire populaire ?",
+    "titleSeven": "Comment appelle-t-on les feux follets des marais qui égarent les voyageurs ?",
+    "titleEight": "Comment appelle-t-on un mort revenu à la vie aux mouvements lents ?"
+  },
+  "hallowenQuestFive": {
+    "titleOne": "Pourquoi les gens se déguisaient-ils à l'origine avec des costumes effrayants ?",
+    "titleTwo": "Quel costume est composé d'ossements blancs sur un fond sombre ?",
+    "titleThree": "Que faut-il absolument porter avec la cape noire d'un vampire ?",
+    "titleFour": "Que prenait-on autrefois comme base pour réaliser le costume de fantôme le plus simple ?",
+    "titleFive": "Quel fruit des fêtes foraines est fréquemment nappé d'un glaçage rouge sucré ?",
+    "titleSix": "Qu'accroche-t-on d'ordinaire dans les coins des pièces pour instaurer une ambiance terrifiante ?",
+    "titleSeven": "Que donne-t-on le plus souvent aux enfants en Allemagne après leur récitation ?",
+    "titleEight": "À quel moment de la journée les enfants partent-ils faire du porte-à-porte pour récolter des bonbons ?"
+  },
+  "hallowenQuestSix": {
+    "titleOne": "Quelle ancienne fête celtique est considérée comme l'ancêtre historique d'Halloween ?",
+    "titleTwo": "De quoi les enfants menacent-ils gentiment avec la phrase «...sonst gibt's Saures» si on ne leur donne pas de bonbons ?",
+    "titleThree": "Dans quelle ville près de Stuttgart construit-on chaque année d'immenses sculptures de citrouilles ?",
+    "titleFour": "Dans quoi la sorcière prépare-t-elle ses potions dans les contes ?",
+    "titleFive": "Quelle créature à huit pattes tisse de solides toiles de capture ?",
+    "titleSix": "À l'aide de quoi les sorciers et magiciens jettent-ils leurs sorts ?",
+    "titleSeven": "Que fait-on souvent des graines de citrouille après l'avoir vidée ?",
+    "titleEight": "Pourquoi la forêt d'automne fin octobre est-elle idéale pour les contes qui font peur ?"
+  },
+  "hallowenQuestSeven": {
+    "questOne": "À quel moment de la journée la famille sculpte-t-elle la citrouille ?",
+    "questTwo": "Quel genre de visage sculptent-ils ?",
+    "questThree": "Que placent-ils à l'intérieur de la citrouille ?",
+    "questFour": "Pourquoi met-on une bougie à l'intérieur ?",
+    "questFive": "Quelle atmosphère règne ce soir-là ?"
+  },
+  "hallowenQuestEight": {
+    "questOne": "Quand les enfants partent-ils en balade ?",
+    "questTwo": "En quoi Lucas s'est-il déguisé ?",
+    "questThree": "Quel couvre-chef porte Mia ?",
+    "questFour": "Que crient fort les enfants devant les portes d'entrée ?",
+    "questFive": "De quoi les voisins remplissent-ils les sacs des enfants ?"
+  },
+  "hallowenQuestNine": {
+    "questOne": "Près de quelle ville le château est-il situé ?",
+    "questTwo": "Sous quelle forme le château a-t-il subsisté jusqu'à nos jours ?",
+    "questThree": "Qui se déguise en monstres dans le château ?",
+    "questFour": "Que font les acteurs costumés aux visiteurs ?",
+    "questFive": "Quel temps règne habituellement autour de ce château en automne ?"
+  },
+  "hallowenQuestTen": {
+    "questOne": "De qui se souvient-on lors du Jour de la Réformation ?",
+    "questTwo": "Quel statut le 31 octobre a-t-il dans de nombreux lands allemands ?",
+    "questThree": "Qu'organise-t-on généralement dans les églises pendant la journée ?",
+    "questFour": "À qui appartient le plus souvent la fin de soirée du 31 octobre ?",
+    "questFive": "Quelle confession célèbre le Jour de la Réformation ?"
+  },
+  "hallowenQuestEleven": {
+    "questOne": "Que sculptaient les enfants avant l'arrivée de la citrouille ?",
+    "questTwo": "Comment appelait-on ces petites figurines lumineuses ?",
+    "questThree": "Dans quelles contrées cette coutume était-elle particulièrement populaire ?",
+    "questFour": "Qu'insérait-on à l'intérieur du navet évidé ?",
+    "questFive": "Quelle saison accueillait-on par ce rituel ?"
+  },
+  "hallowenQuestTwelve": {
+    "questOne": "Quelle fête célèbre-t-on le 1er novembre ?",
+    "questTwo": "Que signifie le statut de « jour férié silencieux » ?",
+    "questThree": "Où se rendent de nombreuses familles ce jour-là ?",
+    "questFour": "Qu'allument les gens sur les tombes de leurs proches ?",
+    "questFive": "Dans quels lands ce jour est-il particulièrement respecté ?"
+  },
+  "hallowenQuestThirteen": {
+    "questOne": "Quand célèbre-t-on la fête de la Saint-Martin ?",
+    "questTwo": "Que portent les enfants pendant le défilé ?",
+    "questThree": "Quelles chansons sont entonnées pendant le défilé ?",
+    "questFour": "Qu'allume-t-on à la fin du défilé festif ?",
+    "questFive": "Quelle pâtisserie traditionnelle distribue-t-on aux enfants ?"
+  },
+  "hallowenQuestfourteen": {
+    "questOne": "Dans quel parc se tient la célèbre exposition ?",
+    "questTwo": "Avec quoi les gigantesques sculptures sont-elles créées ?",
+    "questThree": "Quels plats phares les visiteurs de l'exposition dégustent-ils ?",
+    "questFour": "Combien de citrouilles sont utilisées pour décorer l'exposition ?",
+    "questFive": "À quelle saison cette exposition est-elle ouverte ?"
+  },
+  "hallowenQuestfifteen": {
+    "questOne": "Comment s'appelle le jeu des pommes dans l'eau ?",
+    "questTwo": "De quoi remplit-on la grande bassine ?",
+    "questThree": "Qu'est-ce qui flotte à la surface de l'eau ?",
+    "questFour": "Où les participants doivent-ils placer leurs mains ?",
+    "questFive": "Avec quoi doit-on attraper la pomme ?"
+  },
+  "hallowenQuestSixteen": {
+    "questOne": "Comment s'appelle cette autre épreuve amusante ?",
+    "questTwo": "Que font les deux équipes en compétition ?",
+    "questThree": "Qui chaque équipe choisit-elle ?",
+    "questFour": "Quel matériel utilise-t-on pour envelopper ?",
+    "questFive": "Quelle équipe remporte la partie ?"
+  },
+  "hallowenQuestSeventeen": {
+    "title": "Relie le mot à sa traduction",
+    "wordOne": "Friandises",
+    "wordTwo": "Chauve-souris",
+    "wordThree": "Vampire",
+    "wordFour": "Bougie",
+    "wordFive": "Balai",
+    "wordSix": "Chat noir",
+    "wordSeven": "Citrouille",
+    "wordEight": "Squelette",
+    "wordNine": "Fantôme",
+    "wordTen": "Livre de magie",
+    "wordEleven": "Esprit",
+    "wordTwelve": "Corbeau",
+    "wordThirteen": "Chapeau de sorcière",
+    "wordFourteen": "Magicien",
+    "wordFifteen": "Araignée",
+    "wordSixteen": "Balai de sorcière",
+    "wordSeventeen": "Chaudron de sorcière",
+    "wordEighteen": "Baguette magique"
+  },
+  "hallowenQuestEightteen": {
+    "title": "Associe l'objet à sa brève description",
+    "titleTwo": "Associe le personnage à son trait caractéristique",
+    "titleThree": "Associe la fête à sa date exacte",
+    "textOne": "Toiles d'araignée dans les coins",
+    "textTwo": "Cape à col rouge",
+    "textThree": "Lanterne avec un visage",
+    "textFour": "Pierre dans un cimetière",
+    "textFive": "Vole dans l'obscurité",
+    "textSix": "La sorcière vole là-dessus",
+    "textSeven": "Constitué uniquement d'os blancs",
+    "textEight": "Craint l'ail et dort dans un cercueil",
+    "textNine": "Hurle à la lune dans la forêt sombre",
+    "textTen": "Fait tinter des chaînes dans un vieux château",
+    "textEleven": "Prépare des potions dans un chaudron en fonte",
+    "textTwelve": "De la tête aux pieds enveloppé de bandages blancs",
+    "textThirteen": "1er novembre",
+    "textFourteen": "Minuit (00h00)",
+    "textFifteen": "Soirée du 31 octobre",
+    "textSixteen": "11 novembre à 11h11",
+    "textSeventeen": "31 octobre (en journée)",
+    "textEighteen": "11 novembre (lanternes)"
+  },
+  "hallowenQuestNineteen": {
+    "title": "Associe le mot à sa signification",
+    "wordOne": "Montagne du Harz où se réunissent les sorcières",
+    "wordTwo": "Défilé d'enfants avec des lanternes en novembre",
+    "wordThree": "Heure des esprits de minuit à une heure du matin",
+    "wordFour": "Roi des aulnes mythique de la ballade de Goethe",
+    "wordFive": "Sculpture traditionnelle sur navet fourrager",
+    "wordSix": "Journée sans soirées bruyantes ni danses",
+    "wordSeven": "Chasse l'obscurité à l'intérieur de la citrouille",
+    "wordEight": "Fer à cheval pour la chance et la protection du foyer",
+    "wordNine": "Protection contre les vampires",
+    "wordTen": "Talisman sur le seuil contre les forces du mal",
+    "wordEleven": "Métal contre les loups-garous dans les contes",
+    "wordTwelve": "Trompe les esprits errants",
+    "wordThirteen": "Cercueil",
+    "wordFourteen": "Potion",
+    "wordFifteen": "Ruines du château",
+    "wordSixteen": "Brouillard",
+    "wordSeventeen": "Cimetière",
+    "wordEighteen": "Os"
+  },
+  "hallowenQuestTwenty": {
+    "title": "Associe le mot à sa traduction",
+    "wordOne": "Château des monstres",
+    "wordTwo": "Loup-garou",
+    "wordThree": "Maison hantée",
+    "wordFour": "Cimetière",
+    "wordFive": "Momie",
+    "wordSix": "Cercueil",
+    "wordSeven": "Obscurité / Ténèbres",
+    "wordEight": "Minuit",
+    "wordNine": "Masque effrayant",
+    "wordTen": "Cri",
+    "wordEleven": "Pierre tombale",
+    "wordTwelve": "Squelette / Ossature",
+    "wordThirteen": "Crâne",
+    "wordFourteen": "Vaisseau fantôme",
+    "wordFifteen": "Malédiction",
+    "wordSixteen": "Toile d'araignée",
+    "wordSeventeen": "Labyrinthe",
+    "wordEighteen": "Potion magique"
+  },
+  "hallowenQuestTwentyOne": {
+    "questOne": "Quel animal est un intrus dans la compagnie d'Halloween ?",
+    "questTwo": "Quel est l'intrus parmi les friandises du sac d'un enfant ?",
+    "questThree": "Quel mot est un intrus par le sens ?",
+    "questFour": "Qu'est-ce qui ne brille pas dans le noir pendant la fête ?",
+    "questFive": "Qu'est-ce qui n'est pas lié à l'automne ni à la fête ?",
+    "questSix": "Quel objet n'appartient ni à un magicien ni à une sorcière ?"
+  },
+  "hallowenQuestTwentyTwo": {
+    "title": "Trouve l'intrus : Partie 2",
+    "questOne": "Quel type de météo ne convient absolument pas à une soirée d'Halloween ?",
+    "questTwo": "Que ne porte-t-on pas comme élément de costume d'Halloween ?",
+    "questThree": "Quel ustensile fait tache parmi la vaisselle de sorcellerie ?",
+    "questFour": "De quoi un vampire n'a-t-il absolument pas besoin ?",
+    "questFive": "Quel oiseau ou mammifère détonne parmi les créatures de la nuit ?",
+    "questSix": "Quelle boisson est de trop parmi les douceurs réconfortantes de l'automne ?"
+  },
+  "hallowenQuestTwentyThree": {
+    "title": "Relie les mots ayant un sens opposé"
+  },
+  "haloweenBanner": {
+    "shop": "Achète des effets et des cadeaux dans la boutique de l'événement !",
+    "quests": "Accomplis des quêtes pour accumuler la monnaie citrouille !"
+  },
+  "eventsModalButtons": {
+    "pumpkin": "Récolter des citrouilles",
+    "april": "Lancer les festivités",
+    "valentine": "Offrir des mots doux",
+    "winter": "Vers le conte d'hiver !"
+  },
+  "eventsNotification": {
+    "now": "En cours !",
+    "left": "Temps restant :",
+    "untilEvent": " Avant l'événement :"
+  },
+  "steakInfo": {
+    "text": "Accomplis les quêtes quotidiennes pour garder ta série"
+  },
+  "halloweenThemeModal": {
+    "partOne": "Ce thème ne peut être débloqué que pendant l'événement",
+    "partTwo": "« Fête des citrouilles »",
+    "partThree": "Obtiens-le dans la boutique de l'événement"
+  },
+  "part": {
+    "text": "Partie"
+  },
+  "halloweenAchievements": {
+    "sectionTitle": "Fête des citrouilles",
+    "firstHalloweenQuestText": "Un bonbon ou une citrouille",
+    "firstHalloweenQuestDescription": "Accomplissez avec succès n'importe quelle quête de l'événement Fête des citrouilles.",
+    "halloweenWordsText": "Récits sinistres",
+    "halloweenWordsDescription": "Apprenez tous les mots thématiques associés à l'événement Fête des citrouilles.",
+    "witchBroomText": "L'éclair ? Non, plus rapide !",
+    "witchBroomDescription": "Accélérez au maximum : procurez-vous un balai volant haut de gamme dans la boutique festive.",
+    "pumpkinText": "Une citrouille sur la tête ?",
+    "pumpkinDescription": "Achetez une citrouille sinistre dans la boutique festive.",
+    "punchText": "Punch à la citrouille",
+    "punchDescription": "Achetez un punch de sorcière dans la boutique festive.",
+    "witchHatText": "Choix de la maison ?",
+    "witchHatDescription": "Achetez un chapeau de sorcière dans la boutique festive.",
+    "spellBookText": "Grimoire du cavalier",
+    "spellBookDescription": "Achetez un ancien livre de sorts dans la boutique festive.",
+    "halloweenThemeText": "Mascarade",
+    "halloweenThemeDescription": "Achetez le thème fantomatique de l'application dans la boutique de l'événement.",
+    "halloweenAllQuestsText": "Que le bal commence !",
+    "halloweenAllQuestsDescription": "Ne laissez aucune chance aux mauvais esprits : terminez toutes les quêtes festives.",
+    "halloweenReputationText": "Idole de la fête",
+    "halloweenReputationDescription": "Atteignez le niveau de réputation maximal en accomplissant les missions d'Halloween.",
+    "halloweenAllAchievementsText": "Que la force d'Halloween soit avec vous !",
+    "halloweenAllAchievementsDescription": "Débloquez tous les succès d'Halloween et remportez le titre festif."
   }
 }

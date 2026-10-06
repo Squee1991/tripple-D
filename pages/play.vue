@@ -2,7 +2,7 @@
   <div class="game-page">
     <div class="game-container">
       <div class="page-header">
-        <VBackBtnNav/>
+        <VBackBtnNav data-track="game_back_click"/>
         <h1 class="page-title">{{ t('nav.gameMode') }}</h1>
       </div>
       <VTransition>
@@ -18,6 +18,7 @@
               <NuxtLink
                   v-if="game.url"
                   :to="game.url"
+                  :data-track="'game_mode_clicked_' + game.id"
                   class="topic-list-item"
               >
                 <div class="topic-item-content">

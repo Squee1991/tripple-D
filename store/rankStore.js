@@ -138,10 +138,58 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 					}
 					isStarReady.value = false
 					isOverlayVisible.value = true
+
+					localStorage.setItem('pendingRankReward', JSON.stringify(currentReward.value))
 					setTimeout(() => { isStarReady.value = true }, 800)
 				}
 			})
 		})
+	}
+
+
+	const restorePendingReward = () => {
+		const saved = localStorage.getItem('pendingRankReward')
+		if (saved) {
+			currentReward.value = JSON.parse(saved)
+			isStarReady.value = false
+			isOverlayVisible.value = true
+			setTimeout(() => { isStarReady.value = true }, 800)
+		}
+	}
+
+	const getHedgehogStage = () => {
+		const hats = Number(authStore.totalHats || 0)
+		const tierNames = ['silver', 'bronze', 'gold']
+		let currentStage = 1
+		let currentTitle = ranksData[0]?.title || 'Rank 1'
+		let currentTier = 'silver'
+		let nextHatsTarget = null
+
+		for (let i = 0; i < ranksData.length; i++) {
+			const group = ranksData[i]
+			for (let j = 0; j < group.levels.length; j++) {
+				const levelHats = group.levels[j].hats
+				if (hats >= levelHats) {
+					currentStage = i + 1
+					currentTitle = group.title
+					currentTier = tierNames[j]
+				}
+
+				if (levelHats > hats && nextHatsTarget === null) {
+					nextHatsTarget = levelHats
+				}
+			}
+		}
+
+		const hatsToNext = nextHatsTarget !== null ? (nextHatsTarget - hats) : 0
+
+		return {
+			stage: hats < (ranksData[0]?.levels[0]?.hats || 6) ? 0 : currentStage,
+			title: currentTitle,
+			tier: currentTier,
+			hatsToNext,
+			hats
+		}
 	}
 
 	return {
@@ -151,6 +199,8 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 		isStarReady,
 		currentReward,
 		checkRewardUI,
-		getRankTitleByHats
+		getRankTitleByHats,
+		getHedgehogStage,
+		restorePendingReward
 	}
 })

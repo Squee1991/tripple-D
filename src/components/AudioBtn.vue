@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-import { ref, onUnmounted, computed } from 'vue'
+import { ref, onUnmounted } from 'vue'
 import DefaultSoundIcon from '../../assets/images/SoundIcon.svg'
 import DefaultStopIcon from '../../assets/images/pause.svg'
 
@@ -31,16 +31,19 @@ const props = defineProps({
 
 const isPlaying = ref(false)
 let currentAudio = null
+const BUCKET = 'tripple-d-dev.firebasestorage.app'
 
 const playAudio = () => {
   if (isPlaying.value) return
-  const audioUrl = `/audio/${props.level}/${props.topicId}/${props.fileName}.mp3`
-  console.log('Попытка воспроизвести:', audioUrl)
+
+  const localPath = `audio/${props.level}/${props.topicId}/${props.fileName}.mp3`
+  const encodedPath = encodeURIComponent(localPath)
+  const audioUrl = `https://firebasestorage.googleapis.com/v0/b/${BUCKET}/o/${encodedPath}?alt=media`
+  console.log('Попытка воспроизвести из облака:', audioUrl)
   currentAudio = new Audio(audioUrl)
   isPlaying.value = true
-
   currentAudio.play().catch(e => {
-    console.error('Ошибка: Файл не найден по пути:', audioUrl)
+    console.error('Ошибка воспроизведения:', e)
     isPlaying.value = false
   })
 

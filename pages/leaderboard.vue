@@ -1,14 +1,15 @@
 <script setup>
 import {ref, watch, computed, onMounted, onUnmounted} from 'vue'
-import {userAuthStore} from '../store/authStore.js'
-import {useGuessWordStore} from '../store/guesStore.js'
-import {useGameStore} from '../store/marafonStore.js'
+import {userAuthStore} from '~/store/authStore.js'
+import {useGuessWordStore} from '~/store/guesStore.js'
+import {useGameStore} from '~/store/marafonStore.js'
 import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
-import LeaderboardItem from '../src/components/LeaderboardItem.vue'
-import ModalOverlay from '../src/components/modalOverlay.vue'
-import CloseIcon from '../assets/images/close.svg'
+import LeaderboardItem from '~/src/components/LeaderboardItem.vue'
+import HedgehogBored from '~/assets/animation/hedgehog_bored.json'
+import ModalOverlay from '~/src/components/modalOverlay.vue'
+import CloseIcon from '~/assets/images/close.svg'
 import VBackBtn from "~/src/components/V-back-btn.vue";
+import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
 
 const {t, locale} = useI18n()
 const router = useRouter()
@@ -181,11 +182,6 @@ onUnmounted(() => {
               <span class="timer-widget__value">{{ timeLeftToOpen.m }}</span>
               <span class="timer-widget__unit">{{ t('i18nDays.mins') }}</span>
             </div>
-            <!--            <span class="timer-widget__separator">:</span>-->
-            <!--            <div class="timer-widget__item">-->
-            <!--              <span class="timer-widget__value">{{ timeLeftToOpen.s }}</span>-->
-            <!--              <span class="timer-widget__unit">сек</span>-->
-            <!--            </div>-->
           </div>
         </div>
       </div>
@@ -244,7 +240,15 @@ onUnmounted(() => {
             </div>
             <div v-if="activeDiscipline === 'marathon'" class="discipline-container">
               <div v-if="!isLeaderboardOpen" class="blackboard__message timer-message">
-                <img class="waiting_icon" src="../assets/images/waitingIcon.png" alt="waiting">
+<!--                <img class="waiting_icon" src="../assets/images/waitingIcon.png" alt="waiting">-->
+                <div class="lottie__wrapper">
+                  <DotLottieVue
+                      :data="JSON.stringify(HedgehogBored)"
+                      autoplay
+                      loop
+                      class="hedgehog-bored"
+                  />
+                </div>
                 <p class="empty-state__hint">
                   {{ t('marathonLeaderBoard.stateHint') }}
                 </p>
@@ -266,7 +270,14 @@ onUnmounted(() => {
                 </ul>
               </div>
               <div v-else class="blackboard__message empty-state">
-                <img class="waiting_icon" src="../assets/images/waitingIcon.png" alt="sad hedgehog">
+                <div class="lottie__wrapper">
+                  <DotLottieVue
+                      :data="JSON.stringify(HedgehogBored)"
+                      autoplay
+                      loop
+                      class="hedgehog-bored"
+                  />
+                </div>
                 <div class="black__board-title">{{ t('ranked.emptydifficult') }}</div>
               </div>
             </div>
@@ -282,10 +293,17 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
   overflow: hidden;
   font-family: "Nunito", sans-serif;
+}
+
+.hedgehog-bored {
+  transform: scale(3);
+}
+
+.lottie__wrapper {
+  width: 200px;
+  margin-bottom: 40px;
 }
 
 .ranked__header {
@@ -294,6 +312,7 @@ onUnmounted(() => {
 }
 
 .ranked-sidebar-corkboard {
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -571,7 +590,6 @@ onUnmounted(() => {
 
 .timer-widget__item {
   display: flex;
-  flex-direction: column;
   align-items: center;
   background: rgba(0, 194, 255, 0.15);
   border: 2px solid #00c2ff;
@@ -588,8 +606,8 @@ onUnmounted(() => {
 }
 
 .timer-widget__unit {
-  font-size: 10px;
-  color: #d1c4e9;
+  font-size: 14px;
+  color: #00c2ff;
   font-family: "Nunito", sans-serif;
   text-transform: uppercase;
   margin-top: 4px;
@@ -598,9 +616,8 @@ onUnmounted(() => {
 
 .timer-widget__separator {
   font-size: 24px;
-  color: #ffffff;
+  color: #00c2ff;
   font-weight: bold;
-  padding-bottom: 16px;
 }
 
 @media (max-width: 1023px) {

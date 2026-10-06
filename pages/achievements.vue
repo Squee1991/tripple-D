@@ -562,8 +562,8 @@ const achievementCategories = computed(() => [
     submenu: [
       { id: 'winter', name: 'categoryAchievments.winterEvent', icon: '❄️', length: modeComputed.value.winter },
       { id: 'valentine', name: 'categoryAchievments.valentineEvent', icon: '💖', length: modeComputed.value.valentine },
-      { id: 'foolDay', name: 'categoryAchievments.foolDayEvent', icon: '🎭' },
       { id: 'halloween', name: 'categoryAchievments.halloweenEvent', icon: '🎃', length: modeComputed.value.halloween },
+      // { id: 'foolDay', name: 'categoryAchievments.foolDayEvent', icon: '🎭', length: modeComputed.value.halloween }
     ]
   }
 ]);

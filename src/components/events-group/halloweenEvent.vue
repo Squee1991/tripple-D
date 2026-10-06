@@ -1,7 +1,6 @@
 <script setup>
 import {ref, computed, onMounted} from 'vue'
 import {useRouter, useRoute} from 'vue-router'
-import VShowFall from "../V-showFall.vue"
 import PumpkinCoin from 'assets/images/event-rewards/halloween-event/halloween-assets/pumpkinCoin.svg'
 
 import HedgehogQuest from '~/assets/images/event-rewards/halloween-event/halloween-assets/HedhogQuests.svg'
@@ -23,7 +22,6 @@ import Punch from 'assets/images/event-rewards/halloween-event/halloween-rewards
 
 import {useEventSessionStore} from '~/store/eventsStore.js'
 import {useSeoMeta, useI18n, useLocalePath} from "#imports"
-import VBanner from "~/src/components/V-banner.vue";
 
 useSeoMeta({robots: 'noindex, nofollow'})
 
@@ -43,18 +41,28 @@ const reputationPoints = ref(0)
 
 const eventId = computed(() => String(route.params.id || ''))
 const isEventOpen = computed(() => {
-  const event = eventStore.events.find(e => e.id === eventId.value)
-  if (!event) return false
-  const now = new Date().toLocaleDateString('fr-CA').slice(5)
+  const event = eventStore.events.find(e => e.id === eventId.value || e.url.includes(eventId.value))
+  if (!event) {
+    console.warn('Событие не найдено для ID:', eventId.value)
+    return false
+  }
+  const d = new Date()
+  const month = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+  const now = `${month}-${day}`
+
   const start = event.start.slice(0, 5)
   const end = event.end.slice(0, 5)
-  if (start > end) return now >= start || now <= end
+  if (start > end) {
+    return now >= start || now <= end
+  }
+
   return now >= start && now <= end
 })
 
 const bannerText = {
-  shop: 'Покупай эффекты подарки в лавке Ежакулы!',
-  quests: "Проходи задания, чтобы собирать тыквенную валюту!"
+  shop: t('haloweenBanner.shop'),
+  quests: t('haloweenBanner.quests')
 }
 
 const bannerTextComputed = computed(() => {
@@ -67,7 +75,7 @@ const bannerComputed = computed(() => {
 
 const navTabs = computed(() => ([
   {id: 'quests', label: t('eventPanel.questions'), icon: QuestsNavIcon},
-  {id: 'reputation', label: t('Магазин'), icon: ShopNavIcon}
+  {id: 'reputation', label: t('eventPanel.shop'), icon: ShopNavIcon}
 ]))
 
 const activeIndex = computed(() => navTabs.value.findIndex(tab => tab.id === activeTab.value))
@@ -89,8 +97,8 @@ function setTab(tabId) {
 }
 
 const ranks = computed(() => ([
-  {level: 1, need: 0, title: t('eventPanel.firstReputationHalloween', 'Любопытный')},
-  {level: 2, need: 1000, title: t('eventPanel.secondReputationHalloween', 'Повелитель Тыкв')}
+  {level: 1, need: 0, title: t('eventPanel.firstReputationHalloween')},
+  {level: 2, need: 1000, title: t('eventPanel.secondReputationHalloween')}
 ]))
 
 const currentLevel = computed(() => {
@@ -116,186 +124,209 @@ const levelProgressText = computed(() => {
 const quests = ref([
   {
     id: 'quest-1',
-    title: t('halloweenEventQuests.quest-1', 'Картинка → Слово'),
+    title: t('halloweenEventQuests.questOne'),
     rewardCoins: 10,
-    rewardRep: 70,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-2',
-    title: t('halloweenEventQuests.quest-2', 'Основы и факты'),
+    title: t('halloweenEventQuests.questTwo'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: BgCard
   },
   {
     id: 'quest-3',
-    title: t('halloweenEventQuests.quest-3', 'Немецкие традиции'),
+    title: t('halloweenEventQuests.questThree'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-4',
-    title: t('halloweenEventQuests.quest-4', 'Существа и легенды'),
+    title: t('halloweenEventQuests.questFour'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-5',
-    title: t('halloweenEventQuests.quest-5', 'Костюмы и осенняя ночь'),
+    title: t('halloweenEventQuests.questFive'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-6',
-    title: t('halloweenEventQuests.quest-6', 'Символика и обычаи'),
+    title: t('halloweenEventQuests.questSix'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-7',
-    title: t('halloweenEventQuests.quest-7', 'Вечер с тыквой'),
+    title: t('halloweenEventQuests.questSeven'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-8',
-    title: t('halloweenEventQuests.quest-8', 'Поход за сладостями'),
+    title: t('halloweenEventQuests.questEight'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-9',
-    title: t('halloweenEventQuests.quest-9', 'Замок Франкенштейна'),
+    title: t('halloweenEventQuests.questNine'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-10',
-    title: t('halloweenEventQuests.quest-10', 'Реформация и праздник'),
+    title: t('halloweenEventQuests.questTen'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-11',
-    title: t('halloweenEventQuests.quest-11', 'Старинный дух из репы'),
+    title: t('halloweenEventQuests.questEleven'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-12',
-    title: t('halloweenEventQuests.quest-12', 'День всех святых'),
+    title: t('halloweenEventQuests.questTwelve'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-13',
-    title: t('halloweenEventQuests.quest-13', 'Праздник святого Мартина'),
+    title: t('halloweenEventQuests.questThirteen'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-14',
-    title: t('halloweenEventQuests.quest-14', 'Выставка тыкв в Людвигсбурге'),
+    title: t('halloweenEventQuests.questFourteen'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-15',
-    title: t('halloweenEventQuests.quest-15', 'Игры на вечеринке'),
+    title: t('halloweenEventQuests.questFifteen'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-16',
-    title: t('halloweenEventQuests.quest-16', 'Веселая мумия'),
+    title: t('halloweenEventQuests.questSixteen'),
     rewardCoins: 10,
-    rewardRep: 25,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-17',
-    title: t('halloweenEventQuests.quest-17', 'Картинка и Слово'),
+    title: t('halloweenEventQuests.questSeventeen'),
     rewardCoins: 15,
-    rewardRep: 60,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-18',
-    title: t('halloweenEventQuests.quest-18', 'Атрибуты праздника'),
+    title: t('halloweenEventQuests.questEighteen'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-19',
-    title: t('halloweenEventQuests.quest-19', 'Немецкие предания'),
+    title: t('halloweenEventQuests.questNineteen'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 40,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-20',
-    title: t('halloweenEventQuests.quest-20', 'Осенний пунш'),
+    title: t('halloweenEventQuests.questTwenty'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 60,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-21',
-    title: t('halloweenEventQuests.quest-20', 'Найди лишнее слово'),
+    title: t('halloweenEventQuests.questTwentyOne'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 60,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-22',
-    title: t('halloweenEventQuests.quest-20', 'Найди лишнее - погода'),
+    title: t('halloweenEventQuests.questTwentyTwo'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 60,
     isDone: false,
+    hasErrors: false,
     icon: Words
   },
   {
     id: 'quest-23',
-    title: t('halloweenEventQuests.quest-20', 'Найди лишнее - погода'),
+    title: t('halloweenEventQuests.questTwentyThree'),
     rewardCoins: 10,
-    rewardRep: 50,
+    rewardRep: 60,
     isDone: false,
+    hasErrors: false,
     icon: Words
   }
 ])
@@ -309,43 +340,43 @@ async function goToSession(questId) {
 const shopItemsList = ref([
   {
     id: 'witchBroom',
-    title: t('eventsShopItems.witchHat', 'Метла Ведьмы'),
-    priceCoins: 1,
+    title: t('eventsShopItemsHalloween.witchBroom'),
+    priceCoins: 60,
     isOwned: false,
     icon: WitchBroom
   },
   {
     id: 'witchHat',
-    title: t('eventsShopItems.spiderWeb', 'Шляпа Ведьмы'),
-    priceCoins: 1,
+    title: t('eventsShopItemsHalloween.witchHat'),
+    priceCoins: 60,
     isOwned: false,
     icon: WitchHat
   },
   {
     id: 'pumpkin',
-    title: t('eventsShopItems.spiderWeb', 'Тыква'),
-    priceCoins: 1,
+    title: t('eventsShopItemsHalloween.pumpkin'),
+    priceCoins: 60,
     isOwned: false,
     icon: Pumpkin
   },
   {
     id: 'punch',
-    title: t('eventsShopItems.spiderWeb', 'Ведьмин пунш'),
-    priceCoins: 1,
+    title: t('eventsShopItemsHalloween.punch'),
+    priceCoins: 60,
     isOwned: false,
     icon: Punch
   },
   {
     id: 'spellBook',
-    title: t('eventsShopItems.spiderWeb', 'Книга заклинаний'),
-    priceCoins: 1,
+    title: t('eventsShopItemsHalloween.spellBook'),
+    priceCoins: 60,
     isOwned: false,
     icon: SpellBook
   },
   {
     id: 'ghostEffect',
-    title: t('eventsShopItems.ghostEffect', 'Эффект хэллоуина'),
-    priceCoins: 120,
+    title: t('eventsShopItemsHalloween.ghostEffect'),
+    priceCoins: 200,
     isOwned: false,
     icon: Ghost
   }
@@ -407,10 +438,17 @@ async function refreshProgressBadges() {
   reputationPoints.value = progressData.reputationPoints || 0
 
   const questsProgress = progressData.quests || {}
-  quests.value = quests.value.map(q => ({
-    ...q,
-    isDone: questsProgress[q.id] ? questsProgress[q.id].finished : false
-  }))
+  quests.value = quests.value.map(q => {
+    const qData = questsProgress[q.id]
+    const isDone = qData ? !!qData.finished : false
+    const hasErrors = !isDone && !!qData && Array.isArray(qData.solvedSteps) && qData.solvedSteps.length > 0
+
+    return {
+      ...q,
+      isDone,
+      hasErrors
+    }
+  })
 
   const shopItems = progressData.shopItems || {}
   shopItemsList.value.forEach(item => {
@@ -424,7 +462,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div v-if="!isEventOpen" class="season-page">
+  <div v-if="isEventOpen" class="season-page">
     <div class="season__bg"></div>
     <div class="svg-snow" aria-hidden="true"></div>
     <div class="season-container">
@@ -492,8 +530,8 @@ onMounted(() => {
                         :disabled="reward.isOwned"
                         @click="onRewardClick(reward)"
                     >
-                      <template v-if="reward.isOwned">{{ t('eventPanel.bought', 'Куплено') }}</template>
-                      <template v-else>{{ t('eventPanel.buy', 'Купить') }}</template>
+                      <template v-if="reward.isOwned">{{ t('eventPanel.bought') }}</template>
+                      <template v-else>{{ t('eventPanel.buy') }}</template>
                     </button>
                   </div>
                 </div>
@@ -510,15 +548,22 @@ onMounted(() => {
                   <div class="quest__title clickable" @click="goToSession(quest.id)">{{ quest.title }}</div>
                   <div class="quest__meta">
                     <div class="quest__inner">
-                      <span class="meta__pill">{{ quest.rewardRep }} {{ t('eventPanel.rep', 'реп.') }}</span>
+                      <span class="meta__pill">{{ quest.rewardRep }} {{ t('eventPanel.rep') }}</span>
                       <span class="meta__pill">{{ quest.rewardCoins }} {{ coinIcon }}</span>
                     </div>
                     <button
-                        :class="['btn', 'btn--candy', { 'btn--repeat': quest.isDone }]"
+                        :class="[
+                          'btn',
+                          'btn--candy',
+                          {
+                            'btn--repeat': quest.isDone,
+                            'btn--errors': quest.hasErrors
+                          }
+                        ]"
                         @click="goToSession(quest.id)"
                     >
                       {{
-                        quest.isDone ? t('eventPanel.repeat', 'Повторить') : t('eventPanel.execute', 'Начать задание')
+                        quest.isDone ? t('eventPanel.repeat') : (quest.hasErrors ? t('eventPanel.errors') : t('eventPanel.execute'))
                       }}
                     </button>
                   </div>
@@ -546,16 +591,16 @@ onMounted(() => {
   </div>
   <div v-else class="event-closed">
     <div class="closed-content">
-      <h1>🔒 {{ t('eventPanel.notAllowedTitle', 'Событие закрыто') }}</h1>
-      <p>{{ t('eventPanel.notAllowedText', 'В данный момент это событие недоступно.') }}</p>
-      <button @click="pathToMain" class="btn btn--home">{{ t('eventPanel.pathMain', 'На главную') }}</button>
+      <h1>🔒 {{ t('eventPanel.notAllowedTitle') }}</h1>
+      <p>{{ t('eventPanel.notAllowedText') }}</p>
+      <button @click="pathToMain" class="btn btn--home">{{ t('eventPanel.pathMain') }}</button>
     </div>
   </div>
 </template>
 
 <style scoped>
 .season-page {
-  height: 100vh;
+  height: 100%;
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
@@ -566,11 +611,11 @@ onMounted(() => {
 }
 
 .season__bg {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: #1a0f1f url('/images/HalooweenBackground3.webp') no-repeat center center;
   background-size: cover;
-  z-index: -1;
+  z-index: 1;
 }
 
 .season-container {
@@ -660,7 +705,7 @@ onMounted(() => {
 .scroll_sections {
   height: 100%;
   overflow-y: auto;
-  padding-bottom: 160px;
+  padding-bottom: 220px;
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
@@ -678,7 +723,7 @@ onMounted(() => {
 }
 
 .banner__text {
-  color: #fff3cc;
+  color: white;
   font-weight: 400;
   font-size: 18px;
   font-family: "Rubik Wet Paint", system-ui;
@@ -687,6 +732,9 @@ onMounted(() => {
   letter-spacing: 1px;
   margin-right: 10px;
   text-shadow: 0 2px 0 orange;
+  -webkit-text-stroke: 0.5px #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .scroll_sections::-webkit-scrollbar {
@@ -724,7 +772,7 @@ onMounted(() => {
   bottom: 6px;
   left: 6px;
   width: calc(50% - 6px);
-  background: #bd2d2d;
+  background: #b64711;
   border-radius: 30px;
   transition: transform 0.4s cubic-bezier(0.34, 1.35, 0.64, 1);
   z-index: 1;
@@ -750,6 +798,9 @@ onMounted(() => {
   color: #ffe6d1;
   transition: color 0.2s;
   font-family: "Rubik Wet Paint", system-ui;
+  -webkit-text-stroke: 0.5px #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .mobile-nav__btn--active .tab-label {
@@ -870,10 +921,14 @@ onMounted(() => {
 
 .quest__title {
   font-weight: 400;
-  font-size: 17px;
+  font-size: 16px;
   color: #FFFFFF;
+  margin-bottom: 8px;
   text-align: left;
   font-family: "Rubik Wet Paint", system-ui;
+  -webkit-text-stroke: 0.5px #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .quest__meta {
@@ -902,9 +957,10 @@ onMounted(() => {
 
 .btn {
   border-radius: 18px;
-  padding: 8px 14px;
+  padding: 6px 14px;
   cursor: pointer;
   width: auto;
+  min-width: 120px;
   text-transform: uppercase;
   text-align: center;
   font-family: "Nunito", sans-serif;
@@ -920,7 +976,7 @@ onMounted(() => {
 .btn--candy {
   background: #ff9c1a;
   color: #2e2b37;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Rubik Wet Paint", system-ui;
   border: none;
   box-shadow: 0 3px #b3530c;
@@ -935,9 +991,17 @@ onMounted(() => {
 }
 
 .btn--repeat {
-  background: #4CAF50;
+  background: #4c5caf;
   color: #fff;
-  box-shadow: 0 3px #388E3C;
+  font-style: italic;
+  box-shadow: 0 4px #333f83;
+}
+
+.btn--errors {
+  background: #d32f2f;
+  color: #fff;
+  font-style: normal;
+  box-shadow: 0 4px #7f1d1d;
 }
 
 .clickable {
@@ -957,9 +1021,6 @@ onMounted(() => {
 .closed-content {
   text-align: center;
   padding: 40px;
-  border: 2px solid #ffbb55;
-  border-radius: 20px;
-  background: rgba(40, 20, 30, 0.8);
   margin: 20px;
 }
 

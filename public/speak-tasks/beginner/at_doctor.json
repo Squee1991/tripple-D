@@ -2,7 +2,7 @@
   "start": {
     "botText": "Guten Tag, Frau Schmidt! Was fehlt Ihnen denn?",
     "botTranslation": {
-      "ru-RU": "Добрый день, госпожа Шмидт! На что жалуетесь? (Что Вас беспокоит?)",
+      "ru-RU": "Добрый день, госпожа Шмидт! На что жалуетесь?(Что Вас беспокоит?)",
       "en-US": "Good day, Ms. Schmidt! What seems to be the problem?",
       "ar-SA": "طاب يومك يا سيدة شميدت! مما تشتكين؟",
       "es-ES": "¡Buen día, Sra. Schmidt! ¿Qué le pasa?",
@@ -311,7 +311,7 @@
     ],
     "options": [
       {
-        "text": "Ja, natürlich. Aaaaah.",
+        "text": "Ja, natürlich.",
         "translation": {
           "ru-RU": "Да, конечно. Ааааа.",
           "en-US": "Yes, of course. Aaaaah.",
@@ -324,23 +324,6 @@
           "tr-TR": "Evet, elbette. Aaaaah.",
           "uk-UA": "Так, звісно. Ааааа.",
           "uz-UZ": "Ha, albatta. Aaaaa."
-        },
-        "nextStep": "diagnose"
-      },
-      {
-        "text": "Gerne. Ist es schlimm?",
-        "translation": {
-          "ru-RU": "С удовольствием (пожалуйста). Всё плохо?",
-          "en-US": "Gladly. Is it bad?",
-          "ar-SA": "بكل سرور. هل الأمر سيء؟",
-          "es-ES": "Con gusto. ¿Es grave?",
-          "fr-FR": "Volontiers. Est-ce grave ?",
-          "hi-IN": "खुशी से। क्या यह बुरा है?",
-          "pl-PL": "Proszę. Czy to coś poważnego?",
-          "ro-RO": "Cu plăcere. Este grav?",
-          "tr-TR": "Memnuniyetle. Kötü mü?",
-          "uk-UA": "Залюбки. Це серйозно?",
-          "uz-UZ": "Bajonidil. Jiddiy emasmi?"
         },
         "nextStep": "diagnose"
       }
@@ -483,23 +466,6 @@
       }
     ],
     "options": [
-      {
-        "text": "Brauche ich ein Attest für die Arbeit?",
-        "translation": {
-          "ru-RU": "Мне нужна справка (больничный) для работы?",
-          "en-US": "Do I need a doctor's note for work?",
-          "ar-SA": "هل أحتاج إلى شهادة طبية للعمل؟",
-          "es-ES": "¿Necesito un justificante médico para el trabajo?",
-          "fr-FR": "Ai-je besoin d'un certificat pour le travail ?",
-          "hi-IN": "क्या मुझे काम के लिए डॉक्टर के नोट की आवश्यकता है?",
-          "pl-PL": "Czy potrzebuję zwolnienia lekarskiego do pracy?",
-          "ro-RO": "Am nevoie de o adeverință medicală pentru muncă?",
-          "tr-TR": "İş için doktor raporuna ihtiyacım var mı?",
-          "uk-UA": "Мені потрібна довідка (лікарняний) для роботи?",
-          "uz-UZ": "Ish uchun tibbiy ma'lumotnoma kerakmi?"
-        },
-        "nextStep": "krankschreibung"
-      },
       {
         "text": "Können Sie mich bitte krankschreiben?",
         "translation": {

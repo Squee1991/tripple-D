@@ -13,6 +13,7 @@ import {
 } from 'firebase/firestore'
 import { userAuthStore } from './authStore.js'
 import { dailyStore } from './dailyStore.js'
+import { userlangStore } from './learningStore.js'
 
 async function getUser() {
     const auth = getAuth()
@@ -28,17 +29,11 @@ async function getUser() {
 const guessProgressStateRef = (db, uid) =>
     doc(db, 'users', uid, 'guessProgress', 'state')
 
-async function ensureUserDoc(db, uid, extra = {}) {
-    await setDoc(
-        doc(db, 'users', uid),
-        { uid, updatedAt: Date.now(), ...extra },
-        { merge: true }
-    )
-}
 export const useGuessWordStore = defineStore('guessWord', () => {
     const authStore = userAuthStore()
     const db = getFirestore()
     const daily = dailyStore()
+    const langStore = userlangStore()
 
     const answer = ref('')
     const masked = ref([])
@@ -88,6 +83,19 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         guessedSafeWords.value = []
     }
 
+    async function addCoinReward() {
+        if (typeof langStore.addPoints === 'function') {
+            await langStore.addPoints(1)
+        } else {
+            langStore.points = Number(langStore.points || 0) + 1
+            langStore.totalEarnedPoints = Number(langStore.totalEarnedPoints || 0) + 1
+            try { daily.addPoints(1) } catch {}
+            if (typeof langStore.saveToFirebase === 'function') {
+                await langStore.saveToFirebase()
+            }
+        }
+    }
+
     async function saveToLeaderboard(name, count) {
         const user = await getUser()
         if (!user || count === 0) return
@@ -110,63 +118,65 @@ export const useGuessWordStore = defineStore('guessWord', () => {
     async function hasInLeaderboard() {
         const user = await getUser()
         if (!user) return false
-        const snap = await getDoc(doc(db, 'leaderboard_guess', user.uid))
-        return snap.exists()
+        try {
+            const snap = await getDoc(doc(db, 'leaderboard_guess', user.uid))
+            return snap.exists()
+        } catch (e) {
+            return false
+        }
     }
 
     async function loadLeaderboard() {
-        const col = collection(db, 'leaderboard_guess')
-        const qy = query(col, orderBy('guessed', 'desc'))
-        const snap = await getDocs(qy)
-        const list = []
-        snap.forEach(docSnap => {
-            const data = docSnap.data()
-            list.push({
-                id: docSnap.id,
-                name: data.name,
-                guessed: data.guessed,
-                avatar: data.avatar || '1.png',
+        try {
+            const col = collection(db, 'leaderboard_guess')
+            const qy = query(col, orderBy('guessed', 'desc'))
+            const snap = await getDocs(qy)
+            const list = []
+            snap.forEach(docSnap => {
+                const data = docSnap.data()
+                list.push({
+                    id: docSnap.id,
+                    name: data.name,
+                    guessed: data.guessed,
+                    avatar: data.avatar || '1.png',
+                })
             })
-        })
-        return list
+            return list
+        } catch (e) {
+            console.error('Error loading leaderboard:', e)
+            return []
+        }
     }
+
     async function loadGuessProgress() {
         const user = await getUser()
         resetState()
         if (!user) return
-        await ensureUserDoc(db, user.uid, {
-            name: authStore.name || null,
-            avatar: authStore.avatar || null,
-        })
-        guessedWords.value = []
-        guessedFastWords.value = []
-        guessedOnLastTryWords.value = []
-        guessedPerfectWords.value = []
-        guessedSafeWords.value = []
 
-        const ref = guessProgressStateRef(db, user.uid)
-        const snap = await getDoc(ref)
-        if (snap.exists()) {
-            const data = snap.data()
-            if (Array.isArray(data.guessedWords)) guessedWords.value = data.guessedWords
-            if (Array.isArray(data.guessedFastWords)) guessedFastWords.value = data.guessedFastWords
-            if (Array.isArray(data.guessedOnLastTryWords)) guessedOnLastTryWords.value = data.guessedOnLastTryWords
-            if (Array.isArray(data.guessedPerfectWords)) guessedPerfectWords.value = data.guessedPerfectWords
-            if (Array.isArray(data.guessedSafeWords)) guessedSafeWords.value = data.guessedSafeWords
+        try {
+            const refDoc = guessProgressStateRef(db, user.uid)
+            const snap = await getDoc(refDoc)
+            if (snap.exists()) {
+                const data = snap.data()
+                if (Array.isArray(data.guessedWords)) guessedWords.value = data.guessedWords
+                if (Array.isArray(data.guessedFastWords)) guessedFastWords.value = data.guessedFastWords
+                if (Array.isArray(data.guessedOnLastTryWords)) guessedOnLastTryWords.value = data.guessedOnLastTryWords
+                if (Array.isArray(data.guessedPerfectWords)) guessedPerfectWords.value = data.guessedPerfectWords
+                if (Array.isArray(data.guessedSafeWords)) guessedSafeWords.value = data.guessedSafeWords
+            }
+        } catch (e) {
+            console.error('Error loading guess progress:', e)
         }
     }
+
     async function saveGuessProgress() {
         const user = await getUser()
         if (!user) return
-        await ensureUserDoc(db, user.uid, {
-            name: authStore.name || null,
-            avatar: authStore.avatar || null,
-        })
 
-        const ref = guessProgressStateRef(db, user.uid)
+        const refDoc = guessProgressStateRef(db, user.uid)
         try {
             await setDoc(
-                ref,
+                refDoc,
                 {
                     guessedWords: guessedWords.value,
                     guessedFastWords: guessedFastWords.value,
@@ -186,30 +196,36 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         const user = await getUser()
         if (!user) return
 
-        await ensureUserDoc(db, user.uid)
-
-        const oldRef = doc(db, 'guessProgress', user.uid)
-        const oldSnap = await getDoc(oldRef)
-        if (oldSnap.exists()) {
-            const data = oldSnap.data()
-            await setDoc(
-                guessProgressStateRef(db, user.uid),
-                { ...data, migratedAt: Date.now() },
-                { merge: true }
-            )
+        try {
+            const oldRef = doc(db, 'guessProgress', user.uid)
+            const oldSnap = await getDoc(oldRef)
+            if (oldSnap.exists()) {
+                const data = oldSnap.data()
+                await setDoc(
+                    guessProgressStateRef(db, user.uid),
+                    { ...data, migratedAt: Date.now() },
+                    { merge: true }
+                )
+            }
+        } catch (e) {
+            console.error('Error migrating progress:', e)
         }
     }
 
     async function loadWords() {
         if (loadedWords.value.length) return
-        const res = await fetch('/words.json')
-        const data = await res.json()
-        loadedWords.value = Object.entries(data).flatMap(([themeKey, arr]) =>
-            (arr || []).map(w => ({
-                ...w,
-                theme: w.theme || w.topic || themeKey,
-            }))
-        )
+        try {
+            const res = await fetch('/words.json')
+            const data = await res.json()
+            loadedWords.value = Object.entries(data).flatMap(([themeKey, arr]) =>
+                (arr || []).map(w => ({
+                    ...w,
+                    theme: w.theme || w.topic || themeKey,
+                }))
+            )
+        } catch (e) {
+            console.error('Error loading words:', e)
+        }
     }
 
     async function startGame() {
@@ -284,12 +300,20 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         daily.addGuessWord(1)
 
         try { daily.addGuessed(1) } catch {}
+
+        // Начисляем 1 монету за отгаданное слово
+        await addCoinReward()
+
         await saveGuessProgress()
         if (authStore.name) await saveToLeaderboard(authStore.name, guessedWords.value.length)
     })
-    watch(() => authStore.uid, newUid => {
-        if (newUid) loadGuessProgress()
-        else resetState()
+
+    watch(() => authStore.initialized, (isReady) => {
+        if (isReady && authStore.uid) {
+            loadGuessProgress()
+        } else if (!authStore.uid) {
+            resetState()
+        }
     }, { immediate: true })
 
     return {
@@ -319,8 +343,6 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         migrateGuessProgress,
         loadLeaderboard,
         hasInLeaderboard,
-
-        // computed
         guessedCount,
     }
 })
