@@ -30,6 +30,7 @@
     "@daily-co/daily-js": "0.87.0",
     "@firebase/app-types": "0.9.3",
     "@inworld/nodejs-sdk": "1.17.0",
+    "@lottiefiles/dotlottie-vue": "^0.11.28",
     "@nuxt/image": "1.11.0",
     "@nuxtjs/color-mode": "3.5.2",
     "@nuxtjs/i18n": "9.5.5",
