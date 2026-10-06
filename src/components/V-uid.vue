@@ -45,8 +45,8 @@
               <span class="event__badge">{{ t(displayEvent.valueKey) }}</span>
               <span class="event__title" v-if="displayEvent.isActive">
                  <strong>{{ t('eventsNotification.left') }} {{ displayEvent.daysNum }} {{
-                  displayEvent.daysWord
-                }}</strong>
+                     displayEvent.daysWord
+                   }}</strong>
               </span>
               <span class="event__title" v-else>
                 {{ t('eventsNotification.untilEvent') }} <strong>{{ displayEvent.daysNum }} {{
@@ -79,7 +79,6 @@ import Location from '../../assets/images/location.svg'
 import Daily from '../../assets/images/daily.svg'
 import Card from '../../assets/images/card.svg'
 import VTransition from "~/src/components/V-transition.vue";
-import HalloweenNotice from '~/assets/images/halloweenNotice.svg'
 import PadLock from '~/assets/images/padlock.svg'
 import ModalDev from '~/src/components/modal.vue'
 
@@ -262,6 +261,7 @@ onBeforeUnmount(() => {
 }
 
 .event-wrapper {
+  max-width: 500px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -360,7 +360,7 @@ onBeforeUnmount(() => {
   height: 100vh;
   flex: 1;
   overflow-y: auto;
-  padding-bottom: 200px;
+  padding-bottom: 160px;
 }
 
 .lands__container::-webkit-scrollbar {
