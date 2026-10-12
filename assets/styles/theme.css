@@ -42,6 +42,7 @@
 
     --tabSlideBoxShadow: 0 4px 6px rgba(141, 134, 190, 0.5);
     --tabBg: #e1dddd;
+    --landsTabBg: #e1dddd;
      --bgTitle: #36c95d;
     --borderRegion: #726a6a;
     --bgOpacity: rgba(15, 23, 42, 0.78);
@@ -53,10 +54,16 @@
     --landNameBg: linear-gradient(180deg, rgb(170 158 158 / 75%), rgb(31 29 29 / 60%));
     --title: #636161;
     --bgModal: white;
+    --fontFamilyOrange: 'Nunito', sans-serif;
+    --fontWeightHalloween: 600;
+    --arrowBg: #3b82f6;
 
 }
 
 .dark {
+    --arrowBg: #3b82f6;
+    --fontWeightHalloween: 600;
+    --fontFamilyOrange: 'Nunito', sans-serif;
     --bgModal: #1b1a1a;
     --title: #ebe5e5;
     --landNameBg: linear-gradient(180deg, rgb(41 38 38 / 75%), rgb(31 29 29 / 60%));;
@@ -70,6 +77,7 @@
     --boxShadowBottom:#9e61f9;
     --bgTitle: #793cd3;
     --tabBg: #1e1e1e;
+    --landsTabBg: #1e1e1e;
     --tabsSlideBorderColor: #2a2a2a;
     --tabsSlideBg: #6358ac;
     --cardShopBg: #1c222d;
@@ -102,18 +110,24 @@
             rgba(0, 0, 0, .36) 60%,
             rgba(0, 0, 0, .66) 100%),
     linear-gradient(180deg, rgba(40, 46, 64, .88), rgba(16, 18, 28, .94));
+
 }
 
 .orange {
     --bg: #0F172A;
     --navBg: #131219;
-    --tabBg: #1e1e1e;
     --titleColor: white;
     --title: #FFFFFF;
     --regionBtnColor: #FFFFFF;
     --tabsSlideBg: #D97605;
-    --settingsSectionBg: rgb(126 18 18 / 0.93);
+    --settingsSectionBg: #2a2e58;
     --tabsSlideBorderColor: #2a2a2a;
+    --landsTabBg: #D97605;
+    --fontFamilyOrange: 'Rubik Wet Paint', system-ui;
+    --fontWeightHalloween: 400;
+    --tabBg: #783CD2;
+    --menuItemsBg: #2a2e58;
+    --arrowBg: #D97605;
 }
 
 
@@ -146,8 +160,6 @@ button {
 button:focus {
     border: 2px solid #989191;
 }
-
-
 
 .safe-fixed-bottom {
     bottom: 0 !important;

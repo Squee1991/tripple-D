@@ -10,14 +10,13 @@ import {userAuthStore} from './authStore.js'
 const MAX_LIVES = 5
 
 function getRegenDurationForCurrentLives(currentLivesCount) {
-	const lostLives = MAX_LIVES - currentLivesCount
-	switch (lostLives) {
-		case 1: return 1 * 60 * 1000
-		case 2: return 2 * 60 * 1000
-		case 3: return 3 * 60 * 1000
-		case 4: return 4 * 60 * 1000
-		case 5: return 5 * 60 * 1000
-		default: return 1 * 60 * 1000
+	switch (currentLivesCount) {
+		case 0: return 2 * 60 * 1000;
+		case 1: return 2 * 60 * 1000;
+		case 2: return 3 * 60 * 1000;
+		case 3: return 5 * 60 * 1000;
+		case 4: return 8 * 60 * 1000;
+		default: return 2 * 60 * 1000;
 	}
 }
 

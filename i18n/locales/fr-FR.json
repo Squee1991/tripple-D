@@ -3563,6 +3563,7 @@
     "inputType": "Écris ce que tu entends... (la ponctuation n'est pas obligatoire)"
   },
   "questCompletedModals": {
+    "ads": "Regarder la pub",
     "correct": "Correct",
     "correctAnswer": "Bonne réponse :",
     "further": "Continuer",
@@ -3583,6 +3584,7 @@
     "notEnough": "Insuffisant",
     "questNotCompleted": "Tu n'as pas terminé la quête",
     "warning": "Si tu quittes maintenant, ta progression ne sera pas sauvegardée.",
+    "continueQuest": "Plus que quelques pas. Terminez la quête pour enregistrer votre progression",
     "leave": "Quitter",
     "continue": "Continuer",
     "completedWithMistakes": "Quête réussie, mais avec des erreurs"
@@ -10312,6 +10314,7 @@
     "restore": "Restaurer les achats."
   },
   "submitComputed": {
+    "try": "Essayer pour",
     "sync": "Synchronisation...",
     "getPlus": "Obtenir PLUS",
     "getBasic": "Obtenir Basic",
@@ -11092,5 +11095,15 @@
     "halloweenReputationDescription": "Atteignez le niveau de réputation maximal en accomplissant les missions d'Halloween.",
     "halloweenAllAchievementsText": "Que la force d'Halloween soit avec vous !",
     "halloweenAllAchievementsDescription": "Débloquez tous les succès d'Halloween et remportez le titre festif."
+  },
+  "marathonModal": {
+    "text": "Le marathon a commencé ! Participez, gagnez et obtenez des succès et des récompenses !"
+  },
+  "plusPreviewOverlay": {
+    "title": " Tu veux apprendre",
+    "title2": "SANS LIMITES",
+    "title3": "et booster tes progrès ?",
+    "title4": "Vies infinies, toutes les leçons et aucune pub !",
+    "button": "OUI, JE LE VEUX !"
   }
 }

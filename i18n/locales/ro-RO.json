@@ -3563,6 +3563,7 @@
     "inputType": "Scrie ceea ce auzi... (semnele de punctuație nu sunt obligatorii)"
   },
   "questCompletedModals": {
+    "ads": "Vizionează reclama",
     "correct": "Corect",
     "correctAnswer": "Răspuns corect:",
     "further": "Mai departe",
@@ -3583,6 +3584,7 @@
     "notEnough": "Insuficient",
     "questNotCompleted": "Nu ai terminat misiunea",
     "warning": "Dacă pleci acum, progresul nu va fi salvat.",
+    "continueQuest": "A mai rămas foarte puțin. Finalizează misiunea pentru a-ți salva progresul",
     "leave": "Părăsește",
     "continue": "Continuă",
     "completedWithMistakes": "Misiune finalizată, dar cu greșeli"
@@ -10316,6 +10318,7 @@
     "restore": "Restaurează achizițiile."
   },
   "submitComputed": {
+    "try": "Încearcă pentru",
     "sync": "Sincronizare...",
     "getPlus": "Obține PLUS",
     "getBasic": "Obține Basic",
@@ -11094,5 +11097,15 @@
     "halloweenReputationDescription": "Obține nivelul maxim de reputație pentru îndeplinirea sarcinilor de Halloween.",
     "halloweenAllAchievementsText": "Fie ca spiritul Halloween-ului să fie cu tine!",
     "halloweenAllAchievementsDescription": "Obține toate realizările de Halloween și merită titlul festiv."
+  },
+  "marathonModal": {
+    "text": "Maratonul a început! Concurează, câștigă și obține realizări și recompense!"
+  },
+  "plusPreviewOverlay": {
+    "title": " Vrei să înveți",
+    "title2": "FĂRĂ LIMITE",
+    "title3": "și să-ți accelerezi progresul?",
+    "title4": "Vieți nelimitate, orice lecție și zero reclame!",
+    "button": "DA, VREAU!"
   }
 }

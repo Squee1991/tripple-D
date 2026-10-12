@@ -1,0 +1,2323 @@
+[
+  {
+    "questId": "direction-prep-one",
+    "title": "Предлог bei (Wo? + Dativ)",
+    "progress": "0/15",
+    "description": "Отрабатываем предлог bei (нахождение у людей, специалистов, в компаниях) с Dativ в бытовых ситуациях.",
+    "conditions": {
+      "goal": "Ответьте правильно на 15 заданий по предлогу bei",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Arzt",
+        "translation-ru": "Врач",
+        "translation-en": "Doctor",
+        "translation-uk": "Лікар",
+        "translation-pl": "Lekarz",
+        "translation-es": "Médico",
+        "translation-fr": "Médecin",
+        "translation-ar": "طبيب",
+        "translation-hi": "डॉक्टर",
+        "translation-ro": "Medic",
+        "translation-tr": "Doktor",
+        "translation-uz": "Shifokor"
+      },
+      {
+        "word": "bei der Oma",
+        "translation-ru": "У бабушки",
+        "translation-en": "At grandmother's",
+        "translation-uk": "У бабусі",
+        "translation-pl": "U babci",
+        "translation-es": "En casa de la abuela",
+        "translation-fr": "Chez la grand-mère",
+        "translation-ar": "عند الجدة",
+        "translation-hi": "दादी के पास",
+        "translation-ro": "La bunică",
+        "translation-tr": "Büyükanne evinde",
+        "translation-uz": "Buvinikida"
+      },
+      {
+        "word": "der Freund",
+        "translation-ru": "Друг",
+        "translation-en": "Friend",
+        "translation-uk": "Друг",
+        "translation-pl": "Przyjaciel",
+        "translation-es": "Amigo",
+        "translation-fr": "Ami",
+        "translation-ar": "صديق",
+        "translation-hi": "मित्र / दोस्त",
+        "translation-ro": "Prieten",
+        "translation-tr": "Arkadaş",
+        "translation-uz": "Do'st"
+      },
+      {
+        "word": "die Arbeit",
+        "translation-ru": "Работа",
+        "translation-en": "Work",
+        "translation-uk": "Робота",
+        "translation-pl": "Praca",
+        "translation-es": "Trabajo",
+        "translation-fr": "Travail",
+        "translation-ar": "عمل",
+        "translation-hi": "काम",
+        "translation-ro": "Muncă",
+        "translation-tr": "İş",
+        "translation-uz": "Ish"
+      },
+      {
+        "word": "der Chef",
+        "translation-ru": "Начальник / Шеф",
+        "translation-en": "Boss",
+        "translation-uk": "Начальник / Шеф",
+        "translation-pl": "Szef",
+        "translation-es": "Jefe",
+        "translation-fr": "Chef",
+        "translation-ar": "رئيس العمل",
+        "translation-hi": "मालिक / बॉस",
+        "translation-ro": "Șef",
+        "translation-tr": "Patron",
+        "translation-uz": "Boshliq"
+      },
+      {
+        "word": "die Familie",
+        "translation-ru": "Семья",
+        "translation-en": "Family",
+        "translation-uk": "Сім'я",
+        "translation-pl": "Rodzina",
+        "translation-es": "Familia",
+        "translation-fr": "Famille",
+        "translation-ar": "عائلة",
+        "translation-hi": "परिवार",
+        "translation-ro": "Familie",
+        "translation-tr": "Aile",
+        "translation-uz": "Oila"
+      },
+      {
+        "word": "beim Nachbarn",
+        "translation-ru": "У соседа",
+        "translation-en": "At the neighbor's",
+        "translation-uk": "У сусіда",
+        "translation-pl": "U sąsiada",
+        "translation-es": "En casa del vecino",
+        "translation-fr": "Chez le voisin",
+        "translation-ar": "عند الجار",
+        "translation-hi": "पड़ोसी के पास",
+        "translation-ro": "La vecin",
+        "translation-tr": "Komşuda",
+        "translation-uz": "Qo'shninikida"
+      },
+      {
+        "word": "die Kollegin",
+        "translation-ru": "Коллега (женщина)",
+        "translation-en": "Female colleague",
+        "translation-uk": "Колега (жінка)",
+        "translation-pl": "Koleżanka z pracy",
+        "translation-es": "Compañera de trabajo",
+        "translation-fr": "Collègue (femme)",
+        "translation-ar": "زميلة عمل",
+        "translation-hi": "सहकर्मी (महिला)",
+        "translation-ro": "Colegă",
+        "translation-tr": "Kadın iş arkadaşı",
+        "translation-uz": "Hamkasb ayol"
+      },
+      {
+        "word": "die Polizei",
+        "translation-ru": "Полиция",
+        "translation-en": "Police",
+        "translation-uk": "Поліція",
+        "translation-pl": "Policja",
+        "translation-es": "Policía",
+        "translation-fr": "Police",
+        "translation-ar": "شرطة",
+        "translation-hi": "पुलिस",
+        "translation-ro": "Poliție",
+        "translation-tr": "Polis",
+        "translation-uz": "Politsiya"
+      },
+      {
+        "word": "die Bank",
+        "translation-ru": "Банк",
+        "translation-en": "Bank",
+        "translation-uk": "Банк",
+        "translation-pl": "Bank",
+        "translation-es": "Banco",
+        "translation-fr": "Banque",
+        "translation-ar": "بنك",
+        "translation-hi": "बैंक",
+        "translation-ro": "Bancă",
+        "translation-tr": "Banka",
+        "translation-uz": "Bank"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите предложение: Он сейчас сидит у врача",
+        "words": ["Arzt", "sitzt", "Er", "jetzt", "dem", "bei"],
+        "correctOrder": ["Er", "sitzt", "jetzt", "bei", "dem", "Arzt"]
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Вставьте предлог. «Она проводит выходные у бабушки»: Sie verbringt das Wochenende ___ der Oma",
+        "correctAnswer": "bei"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Выберите правильный перевод: у друга",
+        "options": [
+          "aus dem Freund",
+          "bei dem Freund",
+          "nach dem Freund"
+        ],
+        "answer": "bei dem Freund"
+      },
+      {
+        "id": 4,
+        "type": "readAndAnswer",
+        "text": "— Wo erreichst du Anna gerade? — Sie tippt Berichte im Büro und erledigt ihre Aufgaben.",
+        "question": "Где сейчас находится Анна?",
+        "options": [
+          "bei der Arbeit",
+          "aus der Arbeit",
+          "nach der Arbeit"
+        ],
+        "answer": "bei der Arbeit"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Вставьте предлог. «Сотрудник отчитывается у шефа»: Der Mitarbeiter meldet sich ___ dem Chef",
+        "correctAnswer": "bei"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите предложение: Мы ужинаем у семьи",
+        "words": ["Familie", "Wir", "bei", "essen", "der"],
+        "correctOrder": ["Wir", "essen", "bei", "der", "Familie"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Выберите подходящую фразу: Он пьёт чай у соседа",
+        "options": [
+          "Er trinkt Tee bei dem Nachbarn",
+          "Er trinkt Tee von dem Nachbarn",
+          "Er trinkt Tee aus dem Nachbarn"
+        ],
+        "answer": "Er trinkt Tee bei dem Nachbarn"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Вставьте предлог. «Он остался ночевать у друга»: Er übernachtet heute ___ dem Freund",
+        "correctAnswer": "bei"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите предложение: Маркус сидит у врача",
+        "words": ["Arzt", "sitzt", "Markus", "dem", "bei"],
+        "correctOrder": ["Markus", "sitzt", "bei", "dem", "Arzt"]
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выберите правильный перевод: У бабушки",
+        "options": [
+          "bei der Oma",
+          "aus der Oma",
+          "nach der Oma"
+        ],
+        "answer": "bei der Oma"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение: Анна работает в компании Siemens",
+        "words": ["arbeitet", "in", "Siemens", "Anna", "bei"],
+        "correctOrder": ["Anna", "arbeitet", "bei", "Siemens"]
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Вставьте предлог. «Она оформляет кредит в банке»: Sie beantragt das Konto ___ der Bank",
+        "correctAnswer": "bei"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Wo schlafen die Kinder heute Nacht? — Sie packen ihre Taschen und fahren zu den Großeltern.",
+        "question": "У кого ночуют дети?",
+        "options": [
+          "bei Freund",
+          "bei der Oma und Opa",
+          "zu Hause"
+        ],
+        "answer": "bei der Oma und Opa"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "Вставьте предлог. «Отец сейчас находится на работе»: Der Vater ist gerade ___ der Arbeit",
+        "correctAnswer": "bei"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "Выберите подходящую фразу: Сегодня мы в гостях у начальника",
+        "options": [
+          "Heute sind wir bei dem Chef",
+          "Heute sind wir aus dem Chef",
+          "Heute sind wir unter dem Chef"
+        ],
+        "answer": "Heute sind wir bei dem Chef"
+      }
+    ]
+  },
+  {
+    "questId": "direction-prep-two",
+    "title": "Предлог zu (Wohin? + Dativ)",
+    "progress": "0/15",
+    "description": "Отрабатываем предлог zu (движение к людям, специалистам, учреждениям) с Dativ в повседневных ситуациях.",
+    "conditions": {
+      "goal": "Ответьте правильно на 15 заданий по предлогу zu",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Arzt",
+        "translation-ru": "Врач",
+        "translation-en": "Doctor",
+        "translation-uk": "Лікар",
+        "translation-pl": "Lekarz",
+        "translation-es": "Médico",
+        "translation-fr": "Médecin",
+        "translation-ar": "طبيب",
+        "translation-hi": "डॉक्टर",
+        "translation-ro": "Medic",
+        "translation-tr": "Doktor",
+        "translation-uz": "Shifokor"
+      },
+      {
+        "word": "zur Oma",
+        "translation-ru": "К бабушке",
+        "translation-en": "To grandmother",
+        "translation-uk": "До бабусі",
+        "translation-pl": "Do babci",
+        "translation-es": "A la abuela",
+        "translation-fr": "Chez la grand-mère",
+        "translation-ar": "إلى الجدة",
+        "translation-hi": "दादी के पास",
+        "translation-ro": "La bunică",
+        "translation-tr": "Büyükanneye",
+        "translation-uz": "Buvining oldiga"
+      },
+      {
+        "word": "der Freund",
+        "translation-ru": "Друг",
+        "translation-en": "Friend",
+        "translation-uk": "Друг",
+        "translation-pl": "Przyjaciel",
+        "translation-es": "Amigo",
+        "translation-fr": "Ami",
+        "translation-ar": "صديق",
+        "translation-hi": "मित्र / दोस्त",
+        "translation-ro": "Prieten",
+        "translation-tr": "Arkadaş",
+        "translation-uz": "Do'st"
+      },
+      {
+        "word": "die Arbeit",
+        "translation-ru": "Работа",
+        "translation-en": "Work",
+        "translation-uk": "Робота",
+        "translation-pl": "Praca",
+        "translation-es": "Trabajo",
+        "translation-fr": "Travail",
+        "translation-ar": "عمل",
+        "translation-hi": "काम",
+        "translation-ro": "Muncă",
+        "translation-tr": "İş",
+        "translation-uz": "Ish"
+      },
+      {
+        "word": "zum Chef",
+        "translation-ru": "К начальнику",
+        "translation-en": "To the boss",
+        "translation-uk": "До начальника",
+        "translation-pl": "Do szefa",
+        "translation-es": "Al jefe",
+        "translation-fr": "Chez le chef",
+        "translation-ar": "إلى المدير",
+        "translation-hi": "बॉस के पास",
+        "translation-ro": "La șef",
+        "translation-tr": "Patrona",
+        "translation-uz": "Boshliq oldiga"
+      },
+      {
+        "word": "die Familie",
+        "translation-ru": "Семья",
+        "translation-en": "Family",
+        "translation-uk": "Сім'я",
+        "translation-pl": "Rodzina",
+        "translation-es": "Familia",
+        "translation-fr": "Famille",
+        "translation-ar": "عائلة",
+        "translation-hi": "परिवार",
+        "translation-ro": "Familie",
+        "translation-tr": "Aile",
+        "translation-uz": "Oila"
+      },
+      {
+        "word": "der Nachbar",
+        "translation-ru": "Сосед",
+        "translation-en": "Neighbor",
+        "translation-uk": "Сусід",
+        "translation-pl": "Sąsiad",
+        "translation-es": "Vecino",
+        "translation-fr": "Voisin",
+        "translation-ar": "جار",
+        "translation-hi": "पड़ोसी",
+        "translation-ro": "Vecin",
+        "translation-tr": "Komşu",
+        "translation-uz": "Qo'shni"
+      },
+      {
+        "word": "die Kollegin",
+        "translation-ru": "Коллега (женщина)",
+        "translation-en": "Female colleague",
+        "translation-uk": "Колега (жінка)",
+        "translation-pl": "Koleżanka z pracy",
+        "translation-es": "Compañera de trabajo",
+        "translation-fr": "Collègue (femme)",
+        "translation-ar": "زميلة عمل",
+        "translation-hi": "सहकर्मी (महिला)",
+        "translation-ro": "Colegă",
+        "translation-tr": "Kadın iş arkadaşı",
+        "translation-uz": "Hamkasb ayol"
+      },
+      {
+        "word": "die Bank",
+        "translation-ru": "Банк",
+        "translation-en": "Bank",
+        "translation-uk": "Банк",
+        "translation-pl": "Bank",
+        "translation-es": "Banco",
+        "translation-fr": "Banque",
+        "translation-ar": "بنك",
+        "translation-hi": "बैंक",
+        "translation-ro": "Bancă",
+        "translation-tr": "Banka",
+        "translation-uz": "Bank"
+      },
+      {
+        "word": "der Bahnhof",
+        "translation-ru": "Вокзал",
+        "translation-en": "Train station",
+        "translation-uk": "Вокзал",
+        "translation-pl": "Dworzec",
+        "translation-es": "Estación de tren",
+        "translation-fr": "Gare",
+        "translation-ar": "محطة القطار",
+        "translation-hi": "रेलवे स्टेशन",
+        "translation-ro": "Gară",
+        "translation-tr": "Tren istasyonu",
+        "translation-uz": "Vokzal"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите предложение: Он сейчас идёт к врачу",
+        "words": ["Arzt", "geht", "Er", "jetzt", "zum"],
+        "correctOrder": ["Er", "geht", "jetzt", "zum", "Arzt"]
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Вставьте слитную форму (zu + der). «Мы едем на выходные к бабушке»: Wir fahren am Wochenende ___ Oma",
+        "correctAnswer": "zur"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Выберите правильный перевод: «К другу»",
+        "options": [
+          "zum Freund",
+          "beim Freund",
+          "aus dem Freund"
+        ],
+        "answer": "zum Freund"
+      },
+      {
+        "id": 4,
+        "type": "readAndAnswer",
+        "text": "— Warum packt Lukas seine Tasche so früh? — Die Schicht beginnt bald und er darf nicht zu spät kommen.",
+        "question": "Куда направляется Лукас?",
+        "options": [
+          "zur Arbeit",
+          "bei der Arbeit",
+          "aus der Arbeit"
+        ],
+        "answer": "zur Arbeit"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Вставьте форму(zu+dem). «Сотрудник срочно идёт к шефу»: Der Mitarbeiter geht dringend ___ Chef",
+        "correctAnswer": "zum"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите предложение: Мы едем в гости к семье",
+        "words": ["Familie", "Wir", "zur", "fahren", "heute", "bei"],
+        "correctOrder": ["Wir", "fahren", "heute", "zur", "Familie"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Выберите подходящую фразу: Он идёт к соседу",
+        "options": [
+          "Er geht zum Nachbarn",
+          "Er geht beim Nachbarn",
+          "Er geht aus dem Nachbarn"
+        ],
+        "answer": "Er geht zum Nachbarn"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Вставьте предлог. «Она идёт к своей коллеге в кабинет»: Sie geht ___ der Kollegin",
+        "correctAnswer": "zu"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "— Wohin gehst du mit den Formularen? — Ich muss ein neues Sparkonto eröffnen und Geld abheben.",
+        "question": "Куда идёт собеседник?",
+        "options": [
+          "zur Bank",
+          "bei der Bank",
+          "aus der Bank"
+        ],
+        "answer": "zur Bank"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выберите верный вариант: «На вокзал»",
+        "options": [
+          "zum Bahnhof",
+          "beim Bahnhof",
+          "nach dem Bahnhof"
+        ],
+        "answer": "zum Bahnhof"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение: Анна спешит к коллеге",
+        "words": ["Kollegin", "eilt", "Anna", "zur", "bei"],
+        "correctOrder": ["Anna", "eilt", "zur", "Kollegin"]
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Вставьте форму(zu +dem). «Отец спешит на вокзал встретить поезд»: Der Vater fährt ___ Bahnhof",
+        "correctAnswer": "zum"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Wo trefft ihr euch heute Abend? — Wir nehmen den Bus und fahren gemeinsam zu Oma und Opa.",
+        "question": "Куда направляются друзья?",
+        "options": [
+          "zu Oma und Opa",
+          "bei Oma und Opa",
+          "aus Oma und Opa"
+        ],
+        "answer": "zu Oma und Opa"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Выберите правильный перевод: «К врачу»",
+        "options": [
+          "zum Arzt",
+          "beim Arzt",
+          "in den Arzt"
+        ],
+        "answer": "zum Arzt"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите предложение: Я иду сегодня к другу",
+        "words": ["gehe", "bei", "heute", "Ich", "Freund", "zum"],
+        "correctOrder": ["Ich", "gehe", "heute", "zum", "Freund"]
+      }
+    ]
+  },
+  {
+    "questId": "direction-prep-three",
+    "title": "Предлоги nach и zu (Wohin? + Dativ)",
+    "progress": "0/15",
+    "description": "Отрабатываем направления: страны, города без артикля (nach). Люди, учреждения и объекты (zu/zum/zur) с Dativ.",
+    "conditions": {
+      "goal": "Ответьте правильно на 15 заданий по предлогам nach и zu",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "nach Hause",
+        "translation-ru": "Домой",
+        "translation-en": "Home",
+        "translation-uk": "Додому",
+        "translation-pl": "Do domu",
+        "translation-es": "A casa",
+        "translation-fr": "À la maison",
+        "translation-ar": "إلى المنزل",
+        "translation-hi": "घर की ओर",
+        "translation-ro": "Acasă",
+        "translation-tr": "Eve",
+        "translation-uz": "Uyga"
+      },
+      {
+        "word": "nach Berlin",
+        "translation-ru": "В Берлин",
+        "translation-en": "To Berlin",
+        "translation-uk": "До Берліна",
+        "translation-pl": "Do Berlina",
+        "translation-es": "A Berlín",
+        "translation-fr": "À Berlin",
+        "translation-ar": "إلى برلين",
+        "translation-hi": "बर्लिन की ओर",
+        "translation-ro": "La Berlin",
+        "translation-tr": "Berlin'e",
+        "translation-uz": "Berlinga"
+      },
+      {
+        "word": "Deutschland",
+        "translation-ru": "Германия",
+        "translation-en": "Germany",
+        "translation-uk": "Німеччина",
+        "translation-pl": "Niemcy",
+        "translation-es": "Alemania",
+        "translation-fr": "Allemagne",
+        "translation-ar": "ألمانيا",
+        "translation-hi": "जर्मनी",
+        "translation-ro": "Germania",
+        "translation-tr": "Almanya",
+        "translation-uz": "Germaniya"
+      },
+      {
+        "word": "der Supermarkt",
+        "translation-ru": "Супермаркет",
+        "translation-en": "Supermarket",
+        "translation-uk": "Супермаркет",
+        "translation-pl": "Supermarket",
+        "translation-es": "Supermercado",
+        "translation-fr": "Supermarché",
+        "translation-ar": "سوبر ماركت",
+        "translation-hi": "सुपरमार्केट",
+        "translation-ro": "Supermarket",
+        "translation-tr": "Süpermarket",
+        "translation-uz": "Supermarket"
+      },
+      {
+        "word": "die Apotheke",
+        "translation-ru": "Аптека",
+        "translation-en": "Pharmacy",
+        "translation-uk": "Аптека",
+        "translation-pl": "Apteka",
+        "translation-es": "Farmacia",
+        "translation-fr": "Pharmacie",
+        "translation-ar": "صيدلية",
+        "translation-hi": "दवा की दुकान",
+        "translation-ro": "Farmacie",
+        "translation-tr": "Eczane",
+        "translation-uz": "Dorixona"
+      },
+      {
+        "word": "die Schule",
+        "translation-ru": "Школа",
+        "translation-en": "School",
+        "translation-uk": "Школа",
+        "translation-pl": "Szkoła",
+        "translation-es": "Escuela",
+        "translation-fr": "École",
+        "translation-ar": "مدرسة",
+        "translation-hi": "स्कूल",
+        "translation-ro": "Școală",
+        "translation-tr": "Okul",
+        "translation-uz": "Maktab"
+      },
+      {
+        "word": "der Park",
+        "translation-ru": "Парк",
+        "translation-en": "Park",
+        "translation-uk": "Парк",
+        "translation-pl": "Park",
+        "translation-es": "Parque",
+        "translation-fr": "Parc",
+        "translation-ar": "حديقة",
+        "translation-hi": "पार्क",
+        "translation-ro": "Parc",
+        "translation-tr": "Park",
+        "translation-uz": "Park"
+      },
+      {
+        "word": "die Post",
+        "translation-ru": "Почта",
+        "translation-en": "Post office",
+        "translation-uk": "Пошта",
+        "translation-pl": "Poczta",
+        "translation-es": "Correo",
+        "translation-fr": "Poste",
+        "translation-ar": "بريد",
+        "translation-hi": "डाकघर",
+        "translation-ro": "Poștă",
+        "translation-tr": "Postane",
+        "translation-uz": "Pochta"
+      },
+      {
+        "word": "München",
+        "translation-ru": "Мюнхен",
+        "translation-en": "Munich",
+        "translation-uk": "Мюнхен",
+        "translation-pl": "Monachium",
+        "translation-es": "Múnich",
+        "translation-fr": "Munich",
+        "translation-ar": "ميونخ",
+        "translation-hi": "म्यूनिख",
+        "translation-ro": "München",
+        "translation-tr": "Münih",
+        "translation-uz": "Myunxen"
+      },
+      {
+        "word": "zum Flughafen",
+        "translation-ru": "В аэропорт",
+        "translation-en": "To the airport",
+        "translation-uk": "В аеропорт",
+        "translation-pl": "Na lotnisko",
+        "translation-es": "Al aeropuerto",
+        "translation-fr": "À l'aéroport",
+        "translation-ar": "إلى المطار",
+        "translation-hi": "हवाई अड्डे की ओर",
+        "translation-ro": "La aeroport",
+        "translation-tr": "Havalimanına",
+        "translation-uz": "Aeroportga"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите предложение: Мы едем сегодня в Берлин",
+        "words": ["Berlin", "fahren", "nach", "Wir", "heute"],
+        "correctOrder": ["Wir", "fahren", "heute", "nach", "Berlin"]
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Вставьте предлог для направления «домой»: Nach der Arbeit gehe ich ___ Hause",
+        "correctAnswer": "nach"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Выберите правильный вариант: «В Германию»",
+        "options": [
+          "nach Deutschland",
+          "zu Deutschland",
+          "bei Deutschland"
+        ],
+        "answer": "nach Deutschland"
+      },
+      {
+        "id": 4,
+        "type": "readAndAnswer",
+        "text": "— Wo bist du? — Ich gehe schnell einkaufen, wir haben keine Milch mehr.",
+        "question": "Куда идёт собеседник?",
+        "options": [
+          "zum Supermarkt",
+          "nach Supermarkt",
+          "beim Supermarkt"
+        ],
+        "answer": "zum Supermarkt"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Вставьте форму(zu+der). «Она идёт в аптеку за лекарством»: Sie geht ___ Apotheke",
+        "correctAnswer": "zur"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите предложение: Дети идут утром в школу",
+        "words": ["Schule", "morgens", "gehen", "Kinder", "zur", "Die"],
+        "correctOrder": ["Die", "Kinder", "gehen", "morgens", "zur", "Schule"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Выберите подходящую фразу: «Семья летит в Мюнхен»",
+        "options": [
+          "Die Familie fliegt nach München",
+          "Die Familie fliegt zum München",
+          "Die Familie fliegt bei München"
+        ],
+        "answer": "Die Familie fliegt nach München"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Вставьте форму(zu+dem). «Мы идём гулять в парк»: Wir gehen ___ Park spazieren",
+        "correctAnswer": "zum"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "— Warum nimmst du das schwere Paket mit? — Ich muss es abschicken, die Filiale schließt gleich.",
+        "question": "Куда идёт человек с посылкой?",
+        "options": [
+          "zur Post",
+          "nach der Post",
+          "bei der Post"
+        ],
+        "answer": "zur Post"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выберите правильный перевод: «В аэропорт»",
+        "options": [
+          "zum Flughafen",
+          "nach dem Flughafen",
+          "aus dem Flughafen"
+        ],
+        "answer": "zum Flughafen"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение: Отец идёт прямо сейчас домой",
+        "words": ["Hause", "Der", "nach", "geht", "jetzt", "Vater"],
+        "correctOrder": ["Der", "Vater", "geht", "jetzt", "nach", "Hause"]
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Вставьте предлог. «Поезд едет в Гамбург»: Der Zug fährt ___ Hamburg",
+        "correctAnswer": "nach"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Wohin fährt der Bus Nummer 10? — Er bringt die Passagiere direkt zu den Flugzeugen und Terminals.",
+        "question": "Куда едет автобус?",
+        "options": [
+          "zum Flughafen",
+          "nach Flughafen",
+          "beim Flughafen"
+        ],
+        "answer": "zum Flughafen"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Выберите верный вариант: «Мы идём в аптеку»",
+        "options": [
+          "Wir gehen zur Apotheke",
+          "Wir gehen nach Apotheke",
+          "Wir gehen bei die Apotheke"
+        ],
+        "answer": "Wir gehen zur Apotheke"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите предложение: Брат едет на машине в супермаркет",
+        "words": ["fährt", "Supermarkt", "nach", "Bruder", "zum", "Der"],
+        "correctOrder": ["Der", "Bruder", "fährt", "zum", "Supermarkt"]
+      }
+    ]
+  },
+  {
+    "questId": "direction-prep-four",
+    "title": "Предлог aus (Woher? + Dativ)",
+    "progress": "0/15",
+    "description": "Отрабатываем исходную точку и движение изнутри помещений, зданий и стран (aus + Dativ).",
+    "conditions": {
+      "goal": "Ответьте правильно на 15 заданий по предлогу aus",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Haus",
+        "translation-ru": "Дом",
+        "translation-en": "House",
+        "translation-uk": "Будинок",
+        "translation-pl": "Dom",
+        "translation-es": "Casa",
+        "translation-fr": "Maison",
+        "translation-ar": "منزل",
+        "translation-hi": "घर",
+        "translation-ro": "Casă",
+        "translation-tr": "Ev",
+        "translation-uz": "Uy"
+      },
+      {
+        "word": "aus der Schule",
+        "translation-ru": "Из школы",
+        "translation-en": "From school",
+        "translation-uk": "Зі школи",
+        "translation-pl": "Ze szkoły",
+        "translation-es": "De la escuela",
+        "translation-fr": "De l'école",
+        "translation-ar": "من المدرسة",
+        "translation-hi": "स्कूल से",
+        "translation-ro": "De la școală",
+        "translation-tr": "Okuldan",
+        "translation-uz": "Maktabdan"
+      },
+      {
+        "word": "die Küche",
+        "translation-ru": "Кухня",
+        "translation-en": "Kitchen",
+        "translation-uk": "Кухня",
+        "translation-pl": "Kuchnia",
+        "translation-es": "Cocina",
+        "translation-fr": "Cuisine",
+        "translation-ar": "مطبخ",
+        "translation-hi": "रसोई",
+        "translation-ro": "Bucătărie",
+        "translation-tr": "Mutfak",
+        "translation-uz": "Oshxona"
+      },
+      {
+        "word": "das Zimmer",
+        "translation-ru": "Комната",
+        "translation-en": "Room",
+        "translation-uk": "Кімната",
+        "translation-pl": "Pokój",
+        "translation-es": "Habitación",
+        "translation-fr": "Chambre",
+        "translation-ar": "غرفة",
+        "translation-hi": "कमरा",
+        "translation-ro": "Cameră",
+        "translation-tr": "Oda",
+        "translation-uz": "Xona"
+      },
+      {
+        "word": "aus dem Büro",
+        "translation-ru": "Из офиса",
+        "translation-en": "From the office",
+        "translation-uk": "З офісу",
+        "translation-pl": "Z biura",
+        "translation-es": "De la oficina",
+        "translation-fr": "Du bureau",
+        "translation-ar": "من المكتب",
+        "translation-hi": "कार्यालय से",
+        "translation-ro": "De la birou",
+        "translation-tr": "Ofisten",
+        "translation-uz": "Ofisdan"
+      },
+      {
+        "word": "der Laden",
+        "translation-ru": "Магазин",
+        "translation-en": "Shop",
+        "translation-uk": "Магазин",
+        "translation-pl": "Sklep",
+        "translation-es": "Tienda",
+        "translation-fr": "Magasin",
+        "translation-ar": "متجر",
+        "translation-hi": "दुकान",
+        "translation-ro": "Magazin",
+        "translation-tr": "Dükkan",
+        "translation-uz": "Do'kon"
+      },
+      {
+        "word": "die Stadt",
+        "translation-ru": "Город",
+        "translation-en": "City",
+        "translation-uk": "Місто",
+        "translation-pl": "Miasto",
+        "translation-es": "Ciudad",
+        "translation-fr": "Ville",
+        "translation-ar": "مدينة",
+        "translation-hi": "शहर",
+        "translation-ro": "Oraș",
+        "translation-tr": "Şehir",
+        "translation-uz": "Shahar"
+      },
+      {
+        "word": "das Café",
+        "translation-ru": "Кафе",
+        "translation-en": "Café",
+        "translation-uk": "Кафе",
+        "translation-pl": "Kawiarnia",
+        "translation-es": "Café",
+        "translation-fr": "Café",
+        "translation-ar": "مقهى",
+        "translation-hi": "कैफे",
+        "translation-ro": "Cafenea",
+        "translation-tr": "Kafe",
+        "translation-uz": "Kafe"
+      },
+      {
+        "word": "das Auto",
+        "translation-ru": "Машина",
+        "translation-en": "Car",
+        "translation-uk": "Машина",
+        "translation-pl": "Samochód",
+        "translation-es": "Coche",
+        "translation-fr": "Voiture",
+        "translation-ar": "سيارة",
+        "translation-hi": "कार",
+        "translation-ro": "Mașină",
+        "translation-tr": "Araba",
+        "translation-uz": "Mashina"
+      },
+      {
+        "word": "die Tasche",
+        "translation-ru": "Сумка",
+        "translation-en": "Bag",
+        "translation-uk": "Сумка",
+        "translation-pl": "Torba",
+        "translation-es": "Bolso",
+        "translation-fr": "Sac",
+        "translation-ar": "حقيبة",
+        "translation-hi": "थैला",
+        "translation-ro": "Geantă",
+        "translation-tr": "Çanta",
+        "translation-uz": "Sumka"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите предложение: Он выходит из дома",
+        "words": ["Haus", "dem", "Er", "geht", "aus"],
+        "correctOrder": ["Er", "geht", "aus", "dem", "Haus"]
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Вставьте предлог. «Дети возвращаются из школы»: Die Kinder kommen ___ der Schule",
+        "correctAnswer": "aus"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Выберите правильный перевод: «Из кухни»",
+        "options": [
+          "aus der Küche",
+          "bei der Küche",
+          "nach der Küche"
+        ],
+        "answer": "aus der Küche"
+      },
+      {
+        "id": 4,
+        "type": "readAndAnswer",
+        "text": "— Feierabend? — Ja, mein Arbeitstag ist zu Ende, ich ziehe die Jacke an.",
+        "question": "Откуда выходит человек?",
+        "options": [
+          "aus dem Büro",
+          "zu dem Büro",
+          "nach dem Büro"
+        ],
+        "answer": "aus dem Büro"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Вставьте предлог. «Она выходит из комнаты»: Sie kommt jetzt ___ dem Zimmer",
+        "correctAnswer": "aus"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите предложение: Мы выходим из кафе",
+        "words": ["Café", "Wir", "dem", "gehen", "aus"],
+        "correctOrder": ["Wir", "gehen", "aus", "dem", "Café"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Выберите правильный перевод: «Он выходит из магазина»",
+        "options": [
+          "Er kommt aus dem Laden",
+          "Er kommt bei dem Laden",
+          "Er kommt zum Laden"
+        ],
+        "answer": "Er kommt aus dem Laden"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Вставьте артикль. «Он выходит из машины»: Er steigt aus ___ Auto",
+        "correctAnswer": "dem"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "— Suchst du deinen Schlüssel? — Ja, ich nehme ihn gerade aus meinem Rucksack.",
+        "question": "Откуда человек достаёт ключи?",
+        "options": [
+          "aus der Tasche",
+          "nach der Tasche",
+          "bei der Tasche"
+        ],
+        "answer": "aus der Tasche"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выберите правильный перевод: «Из города»",
+        "options": [
+          "aus der Stadt",
+          "von die Stadt",
+          "zu der Stadt"
+        ],
+        "answer": "aus der Stadt"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение: Анна берёт книгу из сумки",
+        "words": ["Tasche", "nimmt", "das", "Buch", "der", "Anna", "aus"],
+        "correctOrder": ["Anna", "nimmt", "das", "Buch", "aus", "der", "Tasche"]
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Вставьте предлог. «Марко родом из Германии»: Marco kommt ___ Deutschland",
+        "correctAnswer": "aus"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Was riecht hier so gut nach Kaffee? — Ich bringe zwei Tassen direkt vom Herd mit.",
+        "question": "Откуда принесли кофе?",
+        "options": [
+          "aus der Küche",
+          "bei der Küche",
+          "zu der Küche"
+        ],
+        "answer": "aus der Küche"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Выберите верный вариант: «Они выходят из дома»",
+        "options": [
+          "Sie gehen aus dem Haus",
+          "Sie gehen nach dem Haus",
+          "Sie gehen beim Haus"
+        ],
+        "answer": "Sie gehen aus dem Haus"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите предложение: Отец выходит из офиса",
+        "words": ["Büro", "Der", "geht", "dem", "Vater", "aus"],
+        "correctOrder": ["Der", "Vater", "geht", "aus", "dem", "Büro"]
+      }
+    ]
+  },
+  {
+    "questId": "direction-prep-five",
+    "title": "Микс предлогов: bei, zu, nach, aus (Dativ)",
+    "progress": "0/15",
+    "description": "Закрепляем разницу вопросов Wo? (bei), Wohin? (zu, nach) и Woher? (aus) в различных бытовых ситуациях.",
+    "conditions": {
+      "goal": "Ответьте правильно на 15 заданий по предлогам места и направления",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Restaurant",
+        "translation-ru": "Ресторан",
+        "translation-en": "Restaurant",
+        "translation-uk": "Ресторан",
+        "translation-pl": "Restauracja",
+        "translation-es": "Restaurante",
+        "translation-fr": "Restaurant",
+        "translation-ar": "مطعم",
+        "translation-hi": "रेस्तरां",
+        "translation-ro": "Restaurant",
+        "translation-tr": "Restoran",
+        "translation-uz": "Restoran"
+      },
+      {
+        "word": "der Bäcker",
+        "translation-ru": "Пекарь / булочная",
+        "translation-en": "Baker / bakery",
+        "translation-uk": "Пекар / булочна",
+        "translation-pl": "Piekarz / piekarnia",
+        "translation-es": "Panadero / panadería",
+        "translation-fr": "Boulanger / boulangerie",
+        "translation-ar": "خباز",
+        "translation-hi": "बेकर",
+        "translation-ro": "Brutar",
+        "translation-tr": "Fırıncı",
+        "translation-uz": "Novvoyxona"
+      },
+      {
+        "word": "das Hotel",
+        "translation-ru": "Отель",
+        "translation-en": "Hotel",
+        "translation-uk": "Готель",
+        "translation-pl": "Hotel",
+        "translation-es": "Hotel",
+        "translation-fr": "Hôtel",
+        "translation-ar": "فندق",
+        "translation-hi": "होटल",
+        "translation-ro": "Hotel",
+        "translation-tr": "Otel",
+        "translation-uz": "Mehmonxona"
+      },
+      {
+        "word": "die Tankstelle",
+        "translation-ru": "Заправка",
+        "translation-en": "Gas station",
+        "translation-uk": "Заправка",
+        "translation-pl": "Stacja benzynowa",
+        "translation-es": "Gasolinera",
+        "translation-fr": "Station-service",
+        "translation-ar": "محطة وقود",
+        "translation-hi": "पेट्रोल पंप",
+        "translation-ro": "Benzinărie",
+        "translation-tr": "Benzinlik",
+        "translation-uz": "Yoqilg'i quyish shoxobchasi"
+      },
+      {
+        "word": "das Fitnessstudio",
+        "translation-ru": "Тренажерный зал",
+        "translation-en": "Gym",
+        "translation-uk": "Спортзал",
+        "translation-pl": "Siłownia",
+        "translation-es": "Gimnasio",
+        "translation-fr": "Salle de sport",
+        "translation-ar": "صالة رياضية",
+        "translation-hi": "जिम",
+        "translation-ro": "Sală de fitness",
+        "translation-tr": "Spor salonu",
+        "translation-uz": "Fitnes zali"
+      },
+      {
+        "word": "der Bus",
+        "translation-ru": "Автобус",
+        "translation-en": "Bus",
+        "translation-uk": "Автобус",
+        "translation-pl": "Autobus",
+        "translation-es": "Autobús",
+        "translation-fr": "Bus",
+        "translation-ar": "حافلة",
+        "translation-hi": "बस",
+        "translation-ro": "Autobuz",
+        "translation-tr": "Otobüs",
+        "translation-uz": "Avtobus"
+      },
+      {
+        "word": "die Friseurin",
+        "translation-ru": "Парикмахер (женщина)",
+        "translation-en": "Hairdresser (female)",
+        "translation-uk": "Перукарка",
+        "translation-pl": "Fryzjerka",
+        "translation-es": "Peluquera",
+        "translation-fr": "Coiffeuse",
+        "translation-ar": "مصففة شعر",
+        "translation-hi": "नाई (महिला)",
+        "translation-ro": "Frizeriță",
+        "translation-tr": "Kadın kuaför",
+        "translation-uz": "Sartarosh ayol"
+      },
+      {
+        "word": "der Koffer",
+        "translation-ru": "Чемодан",
+        "translation-en": "Suitcase",
+        "translation-uk": "Валіза",
+        "translation-pl": "Walizka",
+        "translation-es": "Maleta",
+        "translation-fr": "Valise",
+        "translation-ar": "حقيبة سفر",
+        "translation-hi": "सूटकेस",
+        "translation-ro": "Valiză",
+        "translation-tr": "Bavul",
+        "translation-uz": "Chamadon"
+      },
+      {
+        "word": "Wien",
+        "translation-ru": "Вена",
+        "translation-en": "Vienna",
+        "translation-uk": "Відень",
+        "translation-pl": "Wiedeń",
+        "translation-es": "Viena",
+        "translation-fr": "Vienne",
+        "translation-ar": "فيينا",
+        "translation-hi": "वियना",
+        "translation-ro": "Viena",
+        "translation-tr": "Viyana",
+        "translation-uz": "Vena"
+      },
+      {
+        "word": "das Kino",
+        "translation-ru": "Кинотеатр",
+        "translation-en": "Cinema",
+        "translation-uk": "Кінотеатр",
+        "translation-pl": "Kino",
+        "translation-es": "Cine",
+        "translation-fr": "Cinéma",
+        "translation-ar": "سينما",
+        "translation-hi": "सिनेमा हॉल",
+        "translation-ro": "Cinema",
+        "translation-tr": "Sinema",
+        "translation-uz": "Kinoteatr"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Выберите правильный перевод: «К парикмахеру»",
+        "options": [
+          "zur Friseurin",
+          "bei der Friseurin",
+          "aus der Friseurin"
+        ],
+        "answer": "zur Friseurin"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Вставьте предлог для направления: Morgen fliegen wir ___ Wien",
+        "correctAnswer": "nach"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Соберите предложение: Туристы выходят из отеля",
+        "words": ["Hotel", "aus", "gehen", "dem", "Touristen", "Die"],
+        "correctOrder": ["Die", "Touristen", "gehen", "aus", "dem", "Hotel"]
+      },
+      {
+        "id": 4,
+        "type": "readAndAnswer",
+        "text": "— Der Tank ist fast leer. — Dann biegen wir rechts ab und holen Benzin.",
+        "question": "Куда едет водитель?",
+        "options": [
+          "zur Tankstelle",
+          "aus der Tankstelle",
+          "nach Tankstelle"
+        ],
+        "answer": "zur Tankstelle"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Вставьте форму (zu+dem). «Мы идём за свежими булочками»: Wir gehen morgens ___ Bäcker",
+        "correctAnswer": "zum"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите вариант: «Мы обедаем в ресторане»",
+        "options": [
+          "beim Restaurant",
+          "zum Restaurant",
+          "nach dem Restaurant"
+        ],
+        "answer": "beim Restaurant"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите предложение: Пассажиры выходят из автобуса",
+        "words": ["steigen", "dem", "Fahrgäste", "aus", "Bus", "Die"],
+        "correctOrder": ["Die", "Fahrgäste", "steigen", "aus", "dem", "Bus"]
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Вставьте предлог. «Он достает паспорт из чемодана»: Er holt den Pass ___ dem Koffer",
+        "correctAnswer": "aus"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "— Wo ist Max? — Er stemmt Gewichte und läuft auf dem Band.",
+        "question": "Где находится Макс?",
+        "options": [
+          "im Fitnessstudio",
+          "zum Fitnessstudio",
+          "nach Fitnessstudio"
+        ],
+        "answer": "im Fitnessstudio"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выберите подходящую фразу: «Она выходит из кинотеатра»",
+        "options": [
+          "Sie kommt aus dem Kino",
+          "Sie kommt zum Kino",
+          "Sie kommt nach dem Kino"
+        ],
+        "answer": "Sie kommt aus dem Kino"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение: После тренировки я иду домой",
+        "words": ["nach", "Hause", "gehe", "Ich", "jetzt"],
+        "correctOrder": ["Ich", "gehe", "jetzt", "nach", "Hause"]
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Вставьте предлог. «Она сейчас стрижется у парикмахера»: Sie ist gerade ___ der Friseurin",
+        "correctAnswer": "bei"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Der Film ist zu Ende, das Licht geht an. — Ja, wir nehmen die Jacken und gehen raus.",
+        "question": "Откуда выходят зрители?",
+        "options": [
+          "aus dem Kino",
+          "beim Kino",
+          "nach dem Kino"
+        ],
+        "answer": "aus dem Kino"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Выберите правильный вариант: «Он едет на тренировку в зал»",
+        "options": [
+          "zum Fitnessstudio",
+          "nach dem Fitnessstudio",
+          "aus dem Fitnessstudio"
+        ],
+        "answer": "zum Fitnessstudio"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите предложение: Семья покупает хлеб в булочной",
+        "words": ["kauft", "Familie", "Brot", "Bäcker", "Die", "beim"],
+        "correctOrder": ["Die", "Familie", "kauft", "Brot", "beim", "Bäcker"]
+      }
+    ]
+  },
+  {
+    "questId": "direction-prep-six",
+    "title": "Практика предлогов движения и места (Dativ)",
+    "progress": "0/15",
+    "description": "Новые жизненные контексты: закрепляем предлоги bei, zu, nach и aus в путешествиях, покупках и бытовых делах.",
+    "conditions": {
+      "goal": "Ответьте правильно на 15 заданий по предлогам места и направления",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Markt",
+        "translation-ru": "Рынок",
+        "translation-en": "Market",
+        "translation-uk": "Ринок",
+        "translation-pl": "Targ",
+        "translation-es": "Mercado",
+        "translation-fr": "Marché",
+        "translation-ar": "سوق",
+        "translation-hi": "बाज़ार",
+        "translation-ro": "Piață",
+        "translation-tr": "Pazar",
+        "translation-uz": "Bozor"
+      },
+      {
+        "word": "die Tierärztin",
+        "translation-ru": "Ветеринар (женщина)",
+        "translation-en": "Female vet",
+        "translation-uk": "Ветеринарка",
+        "translation-pl": "Weterynarka",
+        "translation-es": "Veterinaria",
+        "translation-fr": "Vétérinaire (femme)",
+        "translation-ar": "طبيبة بيطرية",
+        "translation-hi": "पशु चिकित्सक (महिला)",
+        "translation-ro": "Veterinară",
+        "translation-tr": "Kadın veteriner",
+        "translation-uz": "Veterinar ayol"
+      },
+      {
+        "word": "das Schwimmbad",
+        "translation-ru": "Бассейн",
+        "translation-en": "Swimming pool",
+        "translation-uk": "Басейн",
+        "translation-pl": "Basen",
+        "translation-es": "Piscina",
+        "translation-fr": "Piscine",
+        "translation-ar": "مسبح",
+        "translation-hi": "स्वीमिंग पूल",
+        "translation-ro": "Piscină",
+        "translation-tr": "Yüzme havuzu",
+        "translation-uz": "Suzish havzasi"
+      },
+      {
+        "word": "die Werkstatt",
+        "translation-ru": "Автомастерская",
+        "translation-en": "Auto repair shop",
+        "translation-uk": "Автомайстерня",
+        "translation-pl": "Warsztat",
+        "translation-es": "Taller",
+        "translation-fr": "Atelier mécanique",
+        "translation-ar": "ورشة تصليح",
+        "translation-hi": "वर्कशॉप / मरम्मत की दुकान",
+        "translation-ro": "Atelier auto",
+        "translation-tr": "Tamirhane",
+        "translation-uz": "Ustaxona"
+      },
+      {
+        "word": "das Restaurant",
+        "translation-ru": "Ресторан",
+        "translation-en": "Restaurant",
+        "translation-uk": "Ресторан",
+        "translation-pl": "Restauracja",
+        "translation-es": "Restaurante",
+        "translation-fr": "Restaurant",
+        "translation-ar": "مطعم",
+        "translation-hi": "रेस्तरां",
+        "translation-ro": "Restaurant",
+        "translation-tr": "Restoran",
+        "translation-uz": "Restoran"
+      },
+      {
+        "word": "die Bibliothek",
+        "translation-ru": "Библиотека",
+        "translation-en": "Library",
+        "translation-uk": "Бібліотека",
+        "translation-pl": "Biblioteka",
+        "translation-es": "Biblioteca",
+        "translation-fr": "Bibliothèque",
+        "translation-ar": "مكتبة",
+        "translation-hi": "पुस्तकालय",
+        "translation-ro": "Bibliotecă",
+        "translation-tr": "Kütüphane",
+        "translation-uz": "Kutubxona"
+      },
+      {
+        "word": "Köln",
+        "translation-ru": "Кёльн",
+        "translation-en": "Cologne",
+        "translation-uk": "Кельн",
+        "translation-pl": "Kolonia",
+        "translation-es": "Colonia",
+        "translation-fr": "Cologne",
+        "translation-ar": "كولونيا",
+        "translation-hi": "कोलोन",
+        "translation-ro": "Köln",
+        "translation-tr": "Köln",
+        "translation-uz": "Kyoln"
+      },
+      {
+        "word": "der Bus",
+        "translation-ru": "Автобус",
+        "translation-en": "Bus",
+        "translation-uk": "Автобус",
+        "translation-pl": "Autobus",
+        "translation-es": "Autobús",
+        "translation-fr": "Bus",
+        "translation-ar": "حافلة",
+        "translation-hi": "बस",
+        "translation-ro": "Autobuz",
+        "translation-tr": "Otobüs",
+        "translation-uz": "Avtobus"
+      },
+      {
+        "word": "der Kühlschrank",
+        "translation-ru": "Холодильник",
+        "translation-en": "Refrigerator",
+        "translation-uk": "Холодильник",
+        "translation-pl": "Lodówka",
+        "translation-es": "Nevera",
+        "translation-fr": "Réfrigérateur",
+        "translation-ar": "ثلاجة",
+        "translation-hi": "फ्रिज",
+        "translation-ro": "Frigider",
+        "translation-tr": "Buzdolabı",
+        "translation-uz": "Sovutgich"
+      },
+      {
+        "word": "das Büro",
+        "translation-ru": "Офис",
+        "translation-en": "Office",
+        "translation-uk": "Офіс",
+        "translation-pl": "Biuro",
+        "translation-es": "Oficina",
+        "translation-fr": "Bureau",
+        "translation-ar": "مكتب",
+        "translation-hi": "कार्यालय",
+        "translation-ro": "Birou",
+        "translation-tr": "Ofis",
+        "translation-uz": "Ofis"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Выберите правильный перевод: «к ветеринару (куда)»",
+        "options": [
+          "zur Tierärztin",
+          "bei der Tierärztin",
+          "aus der Tierärztin"
+        ],
+        "answer": "zur Tierärztin"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Вставьте предлог: Wir fahren am Samstag ___ Köln",
+        "correctAnswer": "nach"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Соберите предложение: Кот выходит из комнаты",
+        "words": ["Zimmer", "geht", "aus", "Die", "Katze", "dem"],
+        "correctOrder": ["Die", "Katze", "geht", "aus", "dem", "Zimmer"]
+      },
+      {
+        "id": 4,
+        "type": "readAndAnswer",
+        "text": "— Die Katze hat Fieber. — Wir haben um drei Uhr einen Termin in der Praxis.",
+        "question": "Куда везут кошку?",
+        "options": [
+          "zur Tierärztin",
+          "bei der Tierärztin",
+          "aus der Tierärztin"
+        ],
+        "answer": "zur Tierärztin"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Вставьте форму(zu+dem) «Мы идём на рынок»: Wir gehen ___ Markt",
+        "correctAnswer": "zum"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите правильный ответ: «Из холодильника»",
+        "options": [
+          "aus dem Kühlschrank",
+          "beim Kühlschrank",
+          "zum Kühlschrank"
+        ],
+        "answer": "aus dem Kühlschrank"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите предложение: Друзья идут в бассейн плавать",
+        "words": ["Schwimmbad", "gehen", "Freunde", "Die", "zum"],
+        "correctOrder": ["Die", "Freunde", "gehen", "zum", "Schwimmbad"]
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Вставьте предлог. «Машина сейчас в мастерской»: Das Auto ist ___ der Werkstatt",
+        "correctAnswer": "in"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "— Wo hast du diese alten Lehrbücher gefunden? — Ich habe sie für zwei Wochen ausgeliehen.",
+        "question": "Откуда принесли книги?",
+        "options": [
+          "aus der Bibliothek",
+          "nach der Bibliothek",
+          "zur Bibliothek"
+        ],
+        "answer": "aus der Bibliothek"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выберите правильный перевод: «У бабушки»",
+        "options": [
+          "bei der Oma",
+          "zur Oma",
+          "aus der Oma"
+        ],
+        "answer": "bei der Oma"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение: Мы едем на автобусе домой",
+        "words": ["fahren", "nach", "Wir", "Hause", "jetzt"],
+        "correctOrder": ["Wir", "fahren", "jetzt", "nach", "Hause"]
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Вставьте форму(zu+der). «Студент спешит в библиотеку»: Der Student eilt ___ Bibliothek",
+        "correctAnswer": "zur"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Das Essen war wirklich lecker. — Ja, wir bezahlen die Rechnung und gehen zur Haltestelle.",
+        "question": "Откуда выходят люди?",
+        "options": [
+          "aus dem Restaurant",
+          "beim Restaurant",
+          "nach dem Restaurant"
+        ],
+        "answer": "aus dem Restaurant"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Выберите правильный перевод: «в автомастерскую (куда)»",
+        "options": [
+          "zur Werkstatt",
+          "nach der Werkstatt",
+          "aus der Werkstatt"
+        ],
+        "answer": "zur Werkstatt"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите предложение: Коллега выходит из офиса",
+        "words": ["Büro", "Der", "geht", "dem", "Kollege", "aus"],
+        "correctOrder": ["Der", "Kollege", "geht", "aus", "dem", "Büro"]
+      }
+    ]
+  },
+  {
+    "questId": "direction-prep-seven",
+    "title": "Предлоги von и mit (Dativ)",
+    "progress": "0/15",
+    "description": "Отрабатываем предлоги von (от кого-то / откуда-то) и mit (с кем-то / на транспорте) с Dativ.",
+    "conditions": {
+      "goal": "Ответьте правильно на 15 заданий по предлогам von и mit",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "vom Arzt",
+        "translation-ru": "От врача",
+        "translation-en": "From the doctor",
+        "translation-uk": "Від лікаря",
+        "translation-pl": "Od lekarza",
+        "translation-es": "Del médico",
+        "translation-fr": "De chez le médecin",
+        "translation-ar": "من عند الطبيب",
+        "translation-hi": "डॉक्टर के पास से",
+        "translation-ro": "De la medic",
+        "translation-tr": "Doktordan",
+        "translation-uz": "Shifokor huzuridan"
+      },
+      {
+        "word": "mit dem Bus",
+        "translation-ru": "На автобусе",
+        "translation-en": "By bus",
+        "translation-uk": "Автобусом",
+        "translation-pl": "Autobusem",
+        "translation-es": "En autobús",
+        "translation-fr": "En bus",
+        "translation-ar": "بالحافلة",
+        "translation-hi": "बस से",
+        "translation-ro": "Cu autobuzul",
+        "translation-tr": "Otobüsle",
+        "translation-uz": "Avtobusda"
+      },
+      {
+        "word": "von der Arbeit",
+        "translation-ru": "С работы",
+        "translation-en": "From work",
+        "translation-uk": "З роботи",
+        "translation-pl": "Z pracy",
+        "translation-es": "Del trabajo",
+        "translation-fr": "Du travail",
+        "translation-ar": "من العمل",
+        "translation-hi": "काम से",
+        "translation-ro": "De la muncă",
+        "translation-tr": "İşten",
+        "translation-uz": "Ishdan"
+      },
+      {
+        "word": "mit dem Zug",
+        "translation-ru": "На поезде",
+        "translation-en": "By train",
+        "translation-uk": "Поїздом",
+        "translation-pl": "Pociągiem",
+        "translation-es": "En tren",
+        "translation-fr": "En train",
+        "translation-ar": "بالقطار",
+        "translation-hi": "ट्रेन से",
+        "translation-ro": "Cu trenul",
+        "translation-tr": "Trenle",
+        "translation-uz": "Poyezdda"
+      },
+      {
+        "word": "der Kollege",
+        "translation-ru": "Коллега",
+        "translation-en": "Colleague",
+        "translation-uk": "Колега",
+        "translation-pl": "Kolega",
+        "translation-es": "Colega",
+        "translation-fr": "Collègue",
+        "translation-ar": "زميل",
+        "translation-hi": "सहकर्मी",
+        "translation-ro": "Coleg",
+        "translation-tr": "İş arkadaşı",
+        "translation-uz": "Hamkasb"
+      },
+      {
+        "word": "die Freundin",
+        "translation-ru": "Подруга",
+        "translation-en": "Female friend",
+        "translation-uk": "Подруга",
+        "translation-pl": "Przyjaciółka",
+        "translation-es": "Amiga",
+        "translation-fr": "Amie",
+        "translation-ar": "صديقة",
+        "translation-hi": "सहेली",
+        "translation-ro": "Prietenă",
+        "translation-tr": "Kız arkadaş",
+        "translation-uz": "Dugona"
+      },
+      {
+        "word": "vom Chef",
+        "translation-ru": "От начальника",
+        "translation-en": "From the boss",
+        "translation-uk": "Від начальника",
+        "translation-pl": "Od szefa",
+        "translation-es": "Del jefe",
+        "translation-fr": "De chez le chef",
+        "translation-ar": "من عند المدير",
+        "translation-hi": "बॉस के पास से",
+        "translation-ro": "De la șef",
+        "translation-tr": "Patrondan",
+        "translation-uz": "Boshliqdan"
+      },
+      {
+        "word": "das Fahrrad",
+        "translation-ru": "Велосипед",
+        "translation-en": "Bicycle",
+        "translation-uk": "Велосипед",
+        "translation-pl": "Rower",
+        "translation-es": "Bicicleta",
+        "translation-fr": "Vélo",
+        "translation-ar": "دراجة",
+        "translation-hi": "साइकिल",
+        "translation-ro": "Bicicletă",
+        "translation-tr": "Bisiklet",
+        "translation-uz": "Velosiped"
+      },
+      {
+        "word": "von den Eltern",
+        "translation-ru": "От родителей",
+        "translation-en": "From parents",
+        "translation-uk": "Від батьків",
+        "translation-pl": "Od rodziców",
+        "translation-es": "De los padres",
+        "translation-fr": "De chez les parents",
+        "translation-ar": "من عند الوالدين",
+        "translation-hi": "माता-पिता के पास से",
+        "translation-ro": "De la părinți",
+        "translation-tr": "Ebeveynlerden",
+        "translation-uz": "Ota-onadan"
+      },
+      {
+        "word": "das Auto",
+        "translation-ru": "Машина",
+        "translation-en": "Car",
+        "translation-uk": "Машина",
+        "translation-pl": "Samochód",
+        "translation-es": "Coche",
+        "translation-fr": "Voiture",
+        "translation-ar": "سيارة",
+        "translation-hi": "गाड़ी",
+        "translation-ro": "Mașină",
+        "translation-tr": "Araba",
+        "translation-uz": "Mashina"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Выберите правильный перевод: «На автобусе»",
+        "options": [
+          "mit dem Bus",
+          "vom Bus",
+          "aus dem Bus"
+        ],
+        "answer": "mit dem Bus"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Вставьте форму (von+dem). «Я иду от врача»: Ich komme gerade ___ Arzt",
+        "correctAnswer": "vom"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Соберите предложение: Мы едем на работу на поезде",
+        "words": ["Zug", "Wir", "mit", "dem", "fahren"],
+        "correctOrder": ["Wir", "fahren", "mit", "dem", "Zug"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Выберите правильный перевод: «После урока»",
+        "options": [
+          "nach dem Unterricht",
+          "seit dem Unterricht",
+          "vor dem Unterricht"
+        ],
+        "answer": "nach dem Unterricht"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Вставьте предлог. «Он гуляет с подругой»: Er geht ___ der Freundin spazieren",
+        "correctAnswer": "mit"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите правильный перевод: «От шефа»",
+        "options": [
+          "vom Chef",
+          "beim Chef",
+          "zum Chef"
+        ],
+        "answer": "vom Chef"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите предложение: Лукас едет на велосипеде",
+        "words": ["fährt", "Lukas", "Fahrrad", "dem", "mit"],
+        "correctOrder": ["Lukas", "fährt", "mit", "dem", "Fahrrad"]
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Вставьте артикль. «Они едут на машине»: Sie fahren mit ___ Auto",
+        "correctAnswer": "dem"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "— Woher hast du das Rezept? — Die Untersuchung ist fertig, die Praxis schließt gleich.",
+        "question": "От кого идёт человек?",
+        "options": [
+          "vom Arzt",
+          "mit dem Arzt",
+          "zum Arzt"
+        ],
+        "answer": "vom Arzt"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выберите верный вариант: «с коллегой (мужской род)»",
+        "options": [
+          "mit dem Kollegen",
+          "vom Kollegen",
+          "zu dem Kollegen"
+        ],
+        "answer": "mit dem Kollegen"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение: Она возвращается от родителей",
+        "words": ["Eltern", "den", "Sie", "kommt", "von"],
+        "correctOrder": ["Sie", "kommt", "von", "den", "Eltern"]
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Вставьте форму(von+dem). «Письмо пришло от начальника»: Der Brief ist ___ Chef",
+        "correctAnswer": "vom"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Das Auto ist kaputt. — Kein Problem, wir nehmen die Linie 4 bis zum Markt.",
+        "question": "На чём они поедут?",
+        "options": [
+          "mit dem Bus",
+          "vom Bus",
+          "aus dem Bus"
+        ],
+        "answer": "mit dem Bus"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Выберите правильный перевод: «C работы»",
+        "options": [
+          "von der Arbeit",
+          "aus der Arbeit",
+          "zur Arbeit"
+        ],
+        "answer": "von der Arbeit"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите предложение: Я пью кофе с другом",
+        "words": ["dem", "Ich", "trinke", "Kaffee", "Freund", "mit"],
+        "correctOrder": ["Ich", "trinke", "Kaffee", "mit", "dem", "Freund"]
+      }
+    ]
+  },
+  {
+    "questId": "direction-prep-eight",
+    "title": "Предлоги seit и nach во времени (Dativ)",
+    "progress": "0/15",
+    "description": "Отрабатываем временное значение предлогов nach (после) и seit (уже как / с тех пор как) с Dativ в повседневных ситуациях.",
+    "conditions": {
+      "goal": "Ответьте правильно на 15 заданий по предлогам seit и nach",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "nach der Arbeit",
+        "translation-ru": "После работы",
+        "translation-en": "After work",
+        "translation-uk": "Після роботи",
+        "translation-pl": "Po pracy",
+        "translation-es": "Después del trabajo",
+        "translation-fr": "Après le travail",
+        "translation-ar": "بعد العمل",
+        "translation-hi": "काम के बाद",
+        "translation-ro": "După muncă",
+        "translation-tr": "İşten sonra",
+        "translation-uz": "Ishdan keyin"
+      },
+      {
+        "word": "seit einem Jahr",
+        "translation-ru": "Уже год",
+        "translation-en": "For a year",
+        "translation-uk": "Вже рік",
+        "translation-pl": "Od roku",
+        "translation-es": "Desde hace un año",
+        "translation-fr": "Depuis un an",
+        "translation-ar": "منذ عام",
+        "translation-hi": "एक साल से",
+        "translation-ro": "De un an",
+        "translation-tr": "Bir yıldır",
+        "translation-uz": "Bir yildan beri"
+      },
+      {
+        "word": "nach dem Essen",
+        "translation-ru": "После еды",
+        "translation-en": "After eating",
+        "translation-uk": "Після їжі",
+        "translation-pl": "Po jedzeniu",
+        "translation-es": "Después de comer",
+        "translation-fr": "Après le repas",
+        "translation-ar": "بعد الأكل",
+        "translation-hi": "खाने के बाद",
+        "translation-ro": "După masă",
+        "translation-tr": "Yemekten sonra",
+        "translation-uz": "Ovqatdan keyin"
+      },
+      {
+        "word": "die Woche",
+        "translation-ru": "Неделя",
+        "translation-en": "Week",
+        "translation-uk": "Тиждень",
+        "translation-pl": "Tydzień",
+        "translation-es": "Semana",
+        "translation-fr": "Semaine",
+        "translation-ar": "أسبوع",
+        "translation-hi": "सप्ताह",
+        "translation-ro": "Săptămână",
+        "translation-tr": "Hafta",
+        "translation-uz": "Hafta"
+      },
+      {
+        "word": "der Monat",
+        "translation-ru": "Месяц",
+        "translation-en": "Month",
+        "translation-uk": "Місяць",
+        "translation-pl": "Miesiąc",
+        "translation-es": "Mes",
+        "translation-fr": "Mois",
+        "translation-ar": "شهر",
+        "translation-hi": "महीना",
+        "translation-ro": "Lună",
+        "translation-tr": "Ay",
+        "translation-uz": "Oy"
+      },
+      {
+        "word": "nach dem Kurs",
+        "translation-ru": "После курса",
+        "translation-en": "After the course",
+        "translation-uk": "Після курсу",
+        "translation-pl": "Po kursie",
+        "translation-es": "Después del curso",
+        "translation-fr": "Après le cours",
+        "translation-ar": "بعد الدورة",
+        "translation-hi": "कोर्स के बाद",
+        "translation-ro": "După curs",
+        "translation-tr": "Kurstan sonra",
+        "translation-uz": "Kursdan keyin"
+      },
+      {
+        "word": "seit zwei Tagen",
+        "translation-ru": "Уже два дня",
+        "translation-en": "For two days",
+        "translation-uk": "Вже два дні",
+        "translation-pl": "Od dwóch dni",
+        "translation-es": "Desde hace dos días",
+        "translation-fr": "Depuis deux jours",
+        "translation-ar": "منذ يومين",
+        "translation-hi": "दो दिनों से",
+        "translation-ro": "De două zile",
+        "translation-tr": "İki gündür",
+        "translation-uz": "Ikki kundan beri"
+      },
+      {
+        "word": "die Pause",
+        "translation-ru": "Перерыв",
+        "translation-en": "Break",
+        "translation-uk": "Перерва",
+        "translation-pl": "Przerwa",
+        "translation-es": "Pausa",
+        "translation-fr": "Pause",
+        "translation-ar": "استراحة",
+        "translation-hi": "विराम",
+        "translation-ro": "Pauză",
+        "translation-tr": "Mola",
+        "translation-uz": "Tanaffus"
+      },
+      {
+        "word": "die Stunde",
+        "translation-ru": "Час",
+        "translation-en": "Hour",
+        "translation-uk": "Година",
+        "translation-pl": "Godzina",
+        "translation-es": "Hora",
+        "translation-fr": "Heure",
+        "translation-ar": "ساعة",
+        "translation-hi": "घंटा",
+        "translation-ro": "Oră",
+        "translation-tr": "Saat",
+        "translation-uz": "Soat"
+      },
+      {
+        "word": "der Unterricht",
+        "translation-ru": "Занятие / урок",
+        "translation-en": "Lesson / class",
+        "translation-uk": "Заняття / урок",
+        "translation-pl": "Lekcja",
+        "translation-es": "Clase",
+        "translation-fr": "Cours",
+        "translation-ar": "درس",
+        "translation-hi": "कक्षा / पाठ",
+        "translation-ro": "Lecție",
+        "translation-tr": "Ders",
+        "translation-uz": "Dars"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Выберите правильный перевод: «после работы»",
+        "options": [
+          "nach der Arbeit",
+          "seit der Arbeit",
+          "bei der Arbeit"
+        ],
+        "answer": "nach der Arbeit"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Вставьте предлог (действие длится уже месяц): Er lernt Deutsch ___ einem Monat",
+        "correctAnswer": "seit"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Соберите предложение: Мы идём гулять после еды",
+        "words": ["Essen", "dem", "nach", "spazieren", "Wir", "gehen"],
+        "correctOrder": ["Wir", "gehen", "nach", "dem", "Essen", "spazieren"]
+      },
+      {
+        "id": 4,
+        "type": "readAndAnswer",
+        "text": "— Trinken wir einen Kaffee? — Ja gern, die Schicht ist gleich vorbei.",
+        "question": "Когда они выпьют кофе?",
+        "options": [
+          "nach der Arbeit",
+          "vor der Arbeit",
+          "seit der Arbeit"
+        ],
+        "answer": "nach der Arbeit"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Вставьте артикль среднего рода в Dativ. «После занятия мы идём домой»: Nach ___ Unterricht gehen wir nach Hause",
+        "correctAnswer": "dem"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите правильный перевод: «уже неделю»",
+        "options": [
+          "seit einer Woche",
+          "nach einer Woche",
+          "aus einer Woche"
+        ],
+        "answer": "seit einer Woche"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите предложение: Она живёт здесь уже год",
+        "words": ["Jahr", "wohnt", "Sie", "hier", "seit", "einem"],
+        "correctOrder": ["Sie", "wohnt", "hier", "seit", "einem", "Jahr"]
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Вставьте предлог «после». «Мы пьём чай после перерыва»: Wir trinken Tee ___ der Pause",
+        "correctAnswer": "nach"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "— Wann kommst du? — Mein Zug hat Verspätung, ich warte hier schon sechzig Minuten.",
+        "question": "Сколько времени человек ждёт поезд?",
+        "options": [
+          "seit einer Stunde",
+          "nach einer Stunde",
+          "in einer Stunde"
+        ],
+        "answer": "seit einer Stunde"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выберите правильный перевод: «после курса»",
+        "options": [
+          "nach dem Kurs",
+          "seit dem Kurs",
+          "bei dem Kurs"
+        ],
+        "answer": "nach dem Kurs"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение: Он болеет уже два дня",
+        "words": ["Tagen", "zwei", "krank", "ist", "Er", "seit"],
+        "correctOrder": ["Er", "ist", "seit", "zwei", "Tagen", "krank"]
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Вставьте окончание артикля (Dativ женского рода). «Он ждет уже час»: Er wartet seit ein___ Stunde",
+        "correctAnswer": "er"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Die Suppe war super. — Ja, jetzt möchte ich einen Espresso.",
+        "question": "Когда человек хочет выпить эспрессо?",
+        "options": [
+          "nach dem Essen",
+          "vor dem Essen",
+          "seit dem Essen"
+        ],
+        "answer": "nach dem Essen"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Выберите верный вариант: «уже три месяца»",
+        "options": [
+          "seit drei Monaten",
+          "nach drei Monaten",
+          "von drei Monaten"
+        ],
+        "answer": "seit drei Monaten"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите предложение: Мы говорим с шефом после паузы",
+        "words": ["Pause", "sprechen", "nach", "der", "Wir"],
+        "correctOrder": ["Wir", "sprechen", "nach", "der", "Pause"]
+      }
+    ]
+  }
+]

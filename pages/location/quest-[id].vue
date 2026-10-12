@@ -65,6 +65,7 @@
           </div>
           <div class="quest__body">
             <template v-if="questStore.task.type === 'select' || questStore.task.type === 'readAndAnswer'">
+<!--              <SoundBtn :text="questStore.task.text"/>-->
               <div v-if="questStore.task.text" class="quest__read-text">{{
                   t(questStore.task.text)
                 }}
@@ -199,7 +200,7 @@
       />
     </div>
     <VReviveModal
-        :show="forceRevive || showRevive"
+        :show="(forceRevive || showRevive) && !showPremiumModal && hasShownPremiumForRevive"
         :correct-count="questStore.correctCount"
         :required-tasks="questStore.requiredTasks"
         :wallet="wallet"
@@ -232,10 +233,14 @@
         :streak="authStore.streakCount"
         @close="handleStreakClosed"
     />
+    <VPlusModal
+        v-model="showPremiumModal"
+    />
   </div>
 </template>
 
 <script setup>
+import VPlusModal from "~/src/components/overlays/V-plusModal.vue";
 import {computed, ref, watch, watchEffect, nextTick, onBeforeUnmount, onMounted} from 'vue'
 import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
 import {userChainStore} from '~/store/chainStore.js'
@@ -285,7 +290,6 @@ const speechInputRef = ref(null)
 const previouslyCleared = ref(false)
 const consecutiveCorrectCount = ref(0)
 
-
 const shouldShowResultScreen = computed(() => {
   return questStore.finished && !showStreakModal.value && !isWaitingForStreakClose.value
 })
@@ -313,9 +317,6 @@ const {
   watchAdForLife,
   purchaseLife
 } = useQuestLives(questStore, langStore, PRICE)
-
-
-
 
 watch(() => authStore.streakCount, (newVal) => {
   if (newVal > initialStreak.value) {
@@ -373,8 +374,6 @@ watch(() => questStore.currentIndex, () => {
   showTipModal.value = false
 })
 
-
-
 const regionKey = computed(() => String(route.query.region || ''))
 const wallet = computed(() => Number(langStore.points || 0))
 const canBuyLife = computed(() => wallet.value >= PRICE)
@@ -383,7 +382,8 @@ const learningLanguage = computed(() => langStore.learningLang)
 const TARGET_LANG_CODE = 'de'
 const showHint = ref(false)
 const NUMBERS_HINT_KEY = 'hide_numbers_hint_modal'
-
+const showPremiumModal = ref(false)
+const hasShownPremiumForRevive = ref(false)
 const now = ref(Date.now())
 let rafId = null
 
@@ -412,7 +412,6 @@ async function speakText(text) {
     isSpeaking.value = false
   }
 }
-
 
 function handleStreakClosed() {
   showStreakModal.value = false
@@ -444,6 +443,13 @@ const showRevive = computed(() =>
     questStore.correctCount < questStore.requiredTasks &&
     !questStore.success
 )
+
+watch(showRevive, (isReviveNeeded) => {
+  if (isReviveNeeded && !hasShownPremiumForRevive.value) {
+    showPremiumModal.value = true
+    hasShownPremiumForRevive.value = true
+  }
+})
 
 const highlightedQuestion = computed(() => {
   if (!questStore.task || !questStore.task.question) return ''
@@ -600,8 +606,10 @@ watch(() => questStore.finished, (isFinished) => {
   }
 })
 
-watch([questId, regionKey], () => {
+watch([questId, regionKey], async () => {
       if (!questId.value || !regionKey.value) return
+      showPremiumModal.value = false
+      hasShownPremiumForRevive.value = false
       initialStreak.value = authStore.streakCount || 0
       streakWasIncremented.value = false
       showStreakModal.value = false
@@ -617,11 +625,17 @@ watch([questId, regionKey], () => {
       questStore.reorderBank = []
       showHint.value = false
       resetAnimations()
+
+      await questStore.loadProgressFromFirebase?.()
+      const prog = questStore.questProgress?.[questId.value]
+      previouslyCleared.value = !!(prog?.success || prog?.rewardClaimed)
+
+      // Изменение: определяем наличие ошибок и чистое повторение (пройден и без ошибок)
+      const hasMistakes = !!(prog?.wrongIndices && prog?.wrongIndices.length > 0)
+      const isRepeat = previouslyCleared.value && !hasMistakes
+
       const initQuest = async () => {
         consecutiveCorrectCount.value = 0
-        await questStore.loadProgressFromFirebase?.()
-        const prog = questStore.questProgress?.[questId.value]
-        previouslyCleared.value = !!(prog?.success || prog?.rewardClaimed)
         await questStore.loadQuest(questId.value, regionKey.value)
         $track('quest_session_started', {
           quest_id: questId.value,
@@ -637,7 +651,8 @@ watch([questId, regionKey], () => {
         await nextTick()
       }
 
-      if (!authStore.hasAds) {
+      // Изменение: рекламу отключаем ТОЛЬКО при чистом повторении (isRepeat) или если нет рекламы/премиум; при ошибках реклама остаётся
+      if (!authStore.hasAds || isRepeat) {
         initQuest()
       } else {
         showInterstitial(initQuest)
@@ -778,7 +793,7 @@ watchEffect(() => {
   background: #fff;
   border: 3px solid #1e1e1e;
   border-radius: 16px;
-  padding: 1rem;
+  padding: 12px;
   width: min(860px, 96%);
   margin: 0 auto;
   box-shadow: 4px 4px 0 #1e1e1e;

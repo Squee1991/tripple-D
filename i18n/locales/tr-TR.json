@@ -3572,6 +3572,7 @@
     "inputType": "Duyduğunu yaz… (noktalama işaretleri zorunlu değildir)"
   },
   "questCompletedModals": {
+    "ads": "Reklam izle",
     "correct": "Doğru",
     "correctAnswer": "Doğru cevap:",
     "further": "İleri",
@@ -3592,6 +3593,7 @@
     "notEnough": "Yetersiz",
     "questNotCompleted": "Görevi tamamlamadınız",
     "warning": "Şimdi çıkarsanız ilerleme kaydedilmeyecek.",
+    "continueQuest": "Çok az kaldı. İlerlemeni kaydetmek için görevi tamamla",
     "leave": "Çık",
     "continue": "Devam et",
     "completedWithMistakes": "Görev tamamlandı ancak hatalar var"
@@ -10325,6 +10327,7 @@
     "restore": "Satın almaları geri yükle."
   },
   "submitComputed": {
+    "try": "Şunun karşılığında dene:",
     "sync": "Eşitleniyor...",
     "getPlus": "PLUS Satın Al",
     "getBasic": "Basic Satın Al",
@@ -11106,5 +11109,15 @@
     "halloweenReputationDescription": "Balkabağı bayramı görevlerini yerine getirerek maksimum itibar seviyesine ulaş.",
     "halloweenAllAchievementsText": "Cadılar Bayramı seninle olsun!",
     "halloweenAllAchievementsDescription": "Tüm bayram başarımlarını elde et ve kutlama unvanını kazan."
+  },
+  "marathonModal": {
+    "text": "Maraton başladı! Yarış, kazan, başarımlar ve ödüller elde et!"
+  },
+  "plusPreviewOverlay": {
+    "title": " Öğrenmek istiyor musun",
+    "title2": "SINIRSIZCA",
+    "title3": "ve ilerlemeni hızlandırmak mı?",
+    "title4": "Sonsuz can, tüm dersler ve sıfır reklam!",
+    "button": "EVET, İSTİYORUM!"
   }
 }
