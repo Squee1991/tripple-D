@@ -266,6 +266,7 @@ onBeforeUnmount(() => {
   color: var(--regionBtnColor);
   font-weight: var(--fontWeightHalloween);
   letter-spacing: .2px;
+  -webkit-text-stroke: var(--webkitText);
   font-family: var(--fontFamilyOrange);
 }
 
@@ -479,9 +480,9 @@ onBeforeUnmount(() => {
   height: 100%;
   font-size: .82rem;
   font-weight: 900;
-  color: #1d1d1d;
+  color: var(--landsLevelTextColor);
   border-radius: 50%;
-  background: linear-gradient(180deg, #fff, #eaeaea);
+  background: var(--landsLevelBg);
   padding: 0;
 }
 

@@ -1,11 +1,11 @@
 [
   {
     "questId": "place-prep-one",
-    "title": "Предлоги места: Где? (Wo? + Dativ)",
+    "title": "placePrepositions.questTitle",
     "progress": "0/15",
-    "description": "Учимся отвечать на вопрос «Где?», используя предлоги in, an, auf, unter, über и формы Dativ.",
+    "description": "placePrepositions.questDescription",
     "conditions": {
-      "goal": "Ответьте правильно на 15 заданий о местоположении предметов",
+      "goal": "placePrepositions.questGoal",
       "minCorrect": 15,
       "requiredTasks": 15
     },
@@ -159,7 +159,7 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Выберите перевод: На столе",
+        "question": "placePrepositions.questTask1",
         "options": [
           "auf dem Tisch",
           "unter dem Tisch",
@@ -170,7 +170,7 @@
       {
         "id": 2,
         "type": "reorder",
-        "question": "Соберите предложение: Книга лежит на столе",
+        "question": "placePrepositions.questTask2",
         "words": [
           "liegt",
           "auf",
@@ -191,7 +191,7 @@
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите перевод: На стене(вертикальная поверхность)",
+        "question": "placePrepositions.questTask3",
         "options": [
           "an der Wand",
           "auf der Wand",
@@ -202,7 +202,7 @@
       {
         "id": 4,
         "type": "reorder",
-        "question": "Соберите предложение: Картина висит на стене",
+        "question": "placePrepositions.questTask4",
         "words": [
           "an",
           "Bild",
@@ -223,13 +223,13 @@
       {
         "id": 5,
         "type": "input",
-        "question": "Вставьте предлог (в сумке): Der Schlüssel ist ___ der Tasche",
+        "question": "placePrepositions.questTask5",
         "correctAnswer": "in"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите предложение: Ключ лежит в сумке",
+        "question": "placePrepositions.questTask6",
         "words": [
           "liegt",
           "Schlüssel",
@@ -250,7 +250,7 @@
       {
         "id": 7,
         "type": "select",
-        "question": "Выберите правильный вариант: Собака спит под столом",
+        "question": "placePrepositions.questTask7",
         "options": [
           "Der Hund schläft unter dem Tisch",
           "Der Hund schläft unter den Tisch",
@@ -261,7 +261,7 @@
       {
         "id": 8,
         "type": "reorder",
-        "question": "Соберите предложение: Кошка спит под кроватью",
+        "question": "placePrepositions.questTask8",
         "words": [
           "schläft",
           "unter",
@@ -283,7 +283,7 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "— Wo ist mein Schlüssel? Auf dem Tisch liegt er nicht. — Schau mal, er ist in deiner Tasche!",
-        "question": "Где в итоге находится ключ?",
+        "question": "placePrepositions.questTask9",
         "options": [
           "in der Tasche",
           "auf dem Tisch",
@@ -294,20 +294,20 @@
       {
         "id": 10,
         "type": "input",
-        "question": "Картина висит на стене. Вставьте предлог: Das Bild hängt ___ der Wand",
+        "question": "placePrepositions.questTask10",
         "correctAnswer": "an"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите предложение: Лампа висит над диваном",
+        "question": "placePrepositions.questTask11",
         "words": ["über", "dem", "Lampe", "hängt", "Die", "Sofa"],
         "correctOrder": ["Die", "Lampe", "hängt", "über", "dem", "Sofa"]
       },
       {
         "id": 12,
         "type": "select",
-        "question": "Выберите верный вариант: Мы сидим за столом (у стола)",
+        "question": "placePrepositions.questTask12",
         "options": [
           "Wir sitzen am Tisch",
           "Wir sitzen im Tisch",
@@ -319,7 +319,7 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "— Wo ist mein Handy? Liegt es auf dem Tisch? — Nein, schau mal unter das Sofa!",
-        "question": "Где в итоге нужно искать телефон?",
+        "question": "placePrepositions.questTask13",
         "options": [
           "unter dem Sofa",
           "auf dem Tisch",
@@ -330,14 +330,14 @@
       {
         "id": 14,
         "type": "reorder",
-        "question": "Соберите предложение: Мы сидим на диване",
+        "question": "placePrepositions.questTask14",
         "words": ["auf", "sitzen", "dem", "Sofa", "Wir"],
         "correctOrder": ["Wir", "sitzen", "auf", "dem", "Sofa"]
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Выберите правильный вопрос к предложению: «Das Buch liegt auf dem Tisch»",
+        "question": "placePrepositions.questTask15",
         "options": [
           "Wo liegt das Buch?",
           "Wohin legst du das Buch?",
@@ -349,11 +349,11 @@
   },
   {
     "questId": "place-prep-two",
-    "title": "Предлоги места: vor, hinter и повторение (Wo? + Dativ)",
+    "title": "placePrepositionsTwo.questTitle",
     "progress": "0/15",
-    "description": "Закрепляем предлоги in, an, auf, unter, über и подключаем vor (перед) и hinter (за/позади) в Dativ.",
+    "description": "placePrepositionsTwo.questDescription",
     "conditions": {
-      "goal": "Ответьте правильно на 15 заданий по предлогам места",
+      "goal": "placePrepositionsTwo.questGoal",
       "minCorrect": 15,
       "requiredTasks": 15
     },
@@ -507,7 +507,7 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Выберите перевод: Перед домом",
+        "question": "placePrepositionsTwo.questTask1",
         "options": [
           "vor dem Haus",
           "hinter dem Haus",
@@ -518,27 +518,27 @@
       {
         "id": 2,
         "type": "reorder",
-        "question": "Соберите предложение: Машина стоит перед домом",
+        "question": "placePrepositionsTwo.questTask2",
         "words": ["dem", "Auto", "vor", "steht", "Das", "Haus"],
         "correctOrder": ["Das", "Auto", "steht", "vor", "dem", "Haus"]
       },
       {
         "id": 3,
         "type": "input",
-        "question": "Вставьте предлог «перед»: Ich warte ___ der Tür",
+        "question": "placePrepositionsTwo.questTask3",
         "correctAnswer": "vor"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "Соберите предложение: Я жду перед дверью",
+        "question": "placePrepositionsTwo.questTask4",
         "words": ["warte", "Ich", "der", "Tür", "vor"],
         "correctOrder": ["Ich", "warte", "vor", "der", "Tür"]
       },
       {
         "id": 5,
         "type": "select",
-        "question": "Выберите перевод: за дверью",
+        "question": "placePrepositionsTwo.questTask5",
         "options": [
           "hinter der Tür",
           "vor der Tür",
@@ -549,7 +549,7 @@
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите предложение: Собака стоит за дверью",
+        "question": "placePrepositionsTwo.questTask6",
         "words": [
           "Der",
           "Hund",
@@ -570,13 +570,13 @@
       {
         "id": 7,
         "type": "input",
-        "question": "Вставьте предлог «за/позади»: Die Katze sitzt ... dem Baum",
+        "question": "placePrepositionsTwo.questTask7",
         "correctAnswer": "hinter"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Соберите предложение: Кот сидит за деревом",
+        "question": "placePrepositionsTwo.questTask8",
         "words": [
           "sitzt",
           "Baum",
@@ -598,7 +598,7 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Mein Fahrrad steht vor dem Haus und mein Auto steht hinter dem Haus.",
-        "question": "Wo steht das Fahrrad?",
+        "question": "placePrepositionsTwo.questTask9",
         "options": [
           "vor dem Haus",
           "hinter dem Haus",
@@ -609,7 +609,7 @@
       {
         "id": 10,
         "type": "select",
-        "question": "Выберите правильный вариант: Мы стоим перед школой (die Schule -> Dativ der Schule)",
+        "question": "placePrepositionsTwo.questTask10",
         "options": [
           "Wir stehen vor der Schule",
           "Wir stehen vor die Schule",
@@ -620,7 +620,7 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите предложение: Мы стоим перед школой",
+        "question": "placePrepositionsTwo.questTask11",
         "words": [
           "stehen",
           "Schule",
@@ -639,7 +639,7 @@
       {
         "id": 12,
         "type": "reorder",
-        "question": "Соберите предложение: Сад находится позади дома",
+        "question": "placePrepositionsTwo.questTask12",
         "words": [
           "ist",
           "Garten",
@@ -661,7 +661,7 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "Der Ball liegt unter dem Tisch, nicht hinter dem Sofa.",
-        "question": "Wo liegt der Ball?",
+        "question": "placePrepositionsTwo.questTask13",
         "options": [
           "unter dem Tisch",
           "hinter dem Sofa",
@@ -672,7 +672,7 @@
       {
         "id": 14,
         "type": "reorder",
-        "question": "Соберите предложение: Книга лежит на столе перед лампой",
+        "question": "placePrepositionsTwo.questTask14",
         "words": [
           "liegt",
           "Buch",
@@ -693,400 +693,23 @@
       {
         "id": 15,
         "type": "select",
-        "question": "Выберите правильный перевод: за шкафом (der Schrank -> Dativ dem Schrank)",
+        "question": "placePrepositionsTwo.questTask15",
         "options": [
           "hinter dem Schrank",
           "vor dem Schrank",
           "unter dem Schrank"
         ],
         "answer": "hinter dem Schrank"
-      },
-      {
-        "questId": "place-prep-3",
-        "title": "Предлоги места: Закрепление (Wo? + Dativ)",
-        "progress": "0/15",
-        "description": "Отрабатываем предлоги in, an, auf, unter, über, vor, hinter на новых практических ситуациях.",
-        "conditions": {
-          "goal": "Ответьте правильно на 15 заданий по предлогам места",
-          "minCorrect": 15,
-          "requiredTasks": 15
-        },
-        "rewards": {
-          "points": 10,
-          "xp": 10
-        },
-        "vocabulary": [
-          {
-            "word": "die Zeitung",
-            "translation-ru": "Газета",
-            "translation-en": "Newspaper",
-            "translation-uk": "Газета",
-            "translation-pl": "Gazeta",
-            "translation-es": "Periódico",
-            "translation-fr": "Journal",
-            "translation-ar": "جريدة",
-            "translation-hi": "अख़बार",
-            "translation-ro": "Ziar",
-            "translation-tr": "Gazete",
-            "translation-uz": "Gazeta"
-          },
-          {
-            "word": "der Schrank",
-            "translation-ru": "Шкаф",
-            "translation-en": "Wardrobe / Cupboard",
-            "translation-uk": "Шафа",
-            "translation-pl": "Szafa",
-            "translation-es": "Armario",
-            "translation-fr": "Armoire",
-            "translation-ar": "خزانة",
-            "translation-hi": "अलमारी",
-            "translation-ro": "Dulap",
-            "translation-tr": "Dolap",
-            "translation-uz": "Shkaf"
-          },
-          {
-            "word": "der Parkplatz",
-            "translation-ru": "Парковка",
-            "translation-en": "Parking lot",
-            "translation-uk": "Парковка",
-            "translation-pl": "Parking",
-            "translation-es": "Aparcamiento",
-            "translation-fr": "Parking",
-            "translation-ar": "موقف سيارات",
-            "translation-hi": "पार्किंग",
-            "translation-ro": "Parcare",
-            "translation-tr": "Otopark",
-            "translation-uz": "Avtoturargoh"
-          },
-          {
-            "word": "das Regal",
-            "translation-ru": "Полка / Стеллаж",
-            "translation-en": "Shelf",
-            "translation-uk": "Полиця",
-            "translation-pl": "Półka",
-            "translation-es": "Estantería",
-            "translation-fr": "Étagère",
-            "translation-ar": "رف",
-            "translation-hi": "शेल्फ",
-            "translation-ro": "Raft",
-            "translation-tr": "Raf",
-            "translation-uz": "Javon"
-          },
-          {
-            "word": "die Brille",
-            "translation-ru": "Очки",
-            "translation-en": "Glasses",
-            "translation-uk": "Окуляри",
-            "translation-pl": "Okulary",
-            "translation-es": "Gafas",
-            "translation-fr": "Lunettes",
-            "translation-ar": "نظارة",
-            "translation-hi": "चश्मा",
-            "translation-ro": "Ochelari",
-            "translation-tr": "Gözlük",
-            "translation-uz": "Ko'zoynak"
-          },
-          {
-            "word": "das Fenster",
-            "translation-ru": "Окно",
-            "translation-en": "Window",
-            "translation-uk": "Вікно",
-            "translation-pl": "Okno",
-            "translation-es": "Ventana",
-            "translation-fr": "Fenêtre",
-            "translation-ar": "نافذة",
-            "translation-hi": "खिड़की",
-            "translation-ro": "Fereastră",
-            "translation-tr": "Pencere",
-            "translation-uz": "Deraza"
-          },
-          {
-            "word": "sitzen",
-            "translation-ru": "Сидеть",
-            "translation-en": "To sit",
-            "translation-uk": "Сидіти",
-            "translation-pl": "Siedzieć",
-            "translation-es": "Estar sentado",
-            "translation-fr": "Être assis",
-            "translation-ar": "يجلس",
-            "translation-hi": "बैठना",
-            "translation-ro": "A sta jos",
-            "translation-tr": "Oturmak",
-            "translation-uz": "O'tirmoq"
-          },
-          {
-            "word": "der Schuh",
-            "translation-ru": "Ботинок / Туфля",
-            "translation-en": "Shoe",
-            "translation-uk": "Черевик",
-            "translation-pl": "But",
-            "translation-es": "Zapato",
-            "translation-fr": "Chaussure",
-            "translation-ar": "حذاء",
-            "translation-hi": "जूता",
-            "translation-ro": "Pantof",
-            "translation-tr": "Ayakkabı",
-            "translation-uz": "Poyabzal"
-          },
-          {
-            "word": "die Garage",
-            "translation-ru": "Гараж",
-            "translation-en": "Garage",
-            "translation-uk": "Гараж",
-            "translation-pl": "Garaż",
-            "translation-es": "Garaje",
-            "translation-fr": "Garage",
-            "translation-ar": "مرآب",
-            "translation-hi": "गैराज",
-            "translation-ro": "Garaj",
-            "translation-tr": "Garaj",
-            "translation-uz": "Garaj"
-          },
-          {
-            "word": "das Café",
-            "translation-ru": "Кафе",
-            "translation-en": "Café",
-            "translation-uk": "Кафе",
-            "translation-pl": "Kawiarnia",
-            "translation-es": "Cafetería",
-            "translation-fr": "Café",
-            "translation-ar": "مقهى",
-            "translation-hi": "कैफ़े",
-            "translation-ro": "Cafenea",
-            "translation-tr": "Kafe",
-            "translation-uz": "Kafe"
-          }
-        ],
-        "tasks": [
-          {
-            "id": 1,
-            "type": "reorder",
-            "question": "Соберите предложение: Газета лежит на столе",
-            "words": [
-              "liegt",
-              "Tisch",
-              "Die",
-              "dem",
-              "Zeitung",
-              "auf"
-            ],
-            "correctOrder": [
-              "Die",
-              "Zeitung",
-              "liegt",
-              "auf",
-              "dem",
-              "Tisch"
-            ]
-          },
-          {
-            "id": 2,
-            "type": "select",
-            "question": "Выберите правильный перевод: в шкафу",
-            "options": [
-              "im Schrank",
-              "am Schrank",
-              "auf dem Schrank"
-            ],
-            "answer": "im Schrank"
-          },
-          {
-            "id": 3,
-            "type": "reorder",
-            "question": "Соберите предложение: Куртка висит в шкафу",
-            "words": [
-              "im",
-              "Jacke",
-              "hängt",
-              "Die",
-              "Schrank"
-            ],
-            "correctOrder": [
-              "Die",
-              "Jacke",
-              "hängt",
-              "im",
-              "Schrank"
-            ]
-          },
-          {
-            "id": 4,
-            "type": "input",
-            "question": "Очки лежат на полке. Вставьте предлог: Die Brille liegt ___ dem Regal",
-            "correctAnswer": "auf"
-          },
-          {
-            "id": 5,
-            "type": "reorder",
-            "question": "Соберите предложение: Обувь стоит под кроватью",
-            "words": [
-              "Bett",
-              "Die",
-              "dem",
-              "stehen",
-              "Schuhe",
-              "unter"
-            ],
-            "correctOrder": [
-              "Die",
-              "Schuhe",
-              "stehen",
-              "unter",
-              "dem",
-              "Bett"
-            ]
-          },
-          {
-            "id": 6,
-            "type": "select",
-            "question": "Выберите подходящую фразу: Мы сидим у окна",
-            "options": [
-              "Wir sitzen am Fenster",
-              "Wir sitzen im Fenster",
-              "Wir sitzen unter dem Fenster"
-            ],
-            "answer": "Wir sitzen am Fenster"
-          },
-          {
-            "id": 7,
-            "type": "reorder",
-            "question": "Соберите предложение: Мой друг ждет перед кафе",
-            "words": [
-              "wartet",
-              "Café",
-              "Freund",
-              "Mein",
-              "dem",
-              "vor"
-            ],
-            "correctOrder": [
-              "Mein",
-              "Freund",
-              "wartet",
-              "vor",
-              "dem",
-              "Café"
-            ]
-          },
-          {
-            "id": 8,
-            "type": "input",
-            "question": "Велосипед стоит за гаражом. Вставьте предлог: Das Fahrrad steht ___ der Garage",
-            "correctAnswer": "hinter"
-          },
-          {
-            "id": 9,
-            "type": "readAndAnswer",
-            "text": "— Liegt mein Pass auf dem Regal? — Nein, da liegt er nicht. Er ist in deiner Jacke!",
-            "question": "Где находится паспорт?",
-            "options": [
-              "in der Jacke",
-              "auf dem Regal",
-              "unter dem Tisch"
-            ],
-            "answer": "in der Jacke"
-          },
-          {
-            "id": 10,
-            "type": "reorder",
-            "question": "Соберите предложение: Часы висят над дверью",
-            "words": [
-              "Uhr",
-              "Die",
-              "über",
-              "hängt",
-              "Tür",
-              "der"
-            ],
-            "correctOrder": [
-              "Die",
-              "Uhr",
-              "hängt",
-              "über",
-              "der",
-              "Tür"
-            ]
-          },
-          {
-            "id": 11,
-            "type": "select",
-            "question": "Выберите правильный вопрос к предложению «Das Auto steht vor der Garage»",
-            "options": [
-              "Wo steht das Auto?",
-              "Wohin fährt das Auto?",
-              "Woher kommt das Auto?"
-            ],
-            "answer": "Wo steht das Auto?"
-          },
-          {
-            "id": 12,
-            "type": "reorder",
-            "question": "Соберите предложение: Машина стоит на парковке",
-            "words": [
-              "Auto",
-              "steht",
-              "dem",
-              "Das",
-              "Parkplatz",
-              "auf"
-            ],
-            "correctOrder": [
-              "Das",
-              "Auto",
-              "steht",
-              "auf",
-              "dem",
-              "Parkplatz"
-            ]
-          },
-          {
-            "id": 13,
-            "type": "readAndAnswer",
-            "text": "— Steht dein Wagen hinter dem Haus? — Nein, heute steht er direkt vor der Tür.",
-            "question": "Где сегодня стоит автомобиль?",
-            "options": [
-              "vor der Tür",
-              "hinter dem Haus",
-              "in der Garage"
-            ],
-            "answer": "vor der Tür"
-          },
-          {
-            "id": 14,
-            "type": "input",
-            "question": "Плакат висит на стене. Вставьте предлог: Das Plakat hängt ___ der Wand",
-            "correctAnswer": "an"
-          },
-          {
-            "id": 15,
-            "type": "reorder",
-            "question": "Соберите предложение: Дедушка сидит в кресле",
-            "words": [
-              "im",
-              "Opa",
-              "Sessel",
-              "Der",
-              "sitzt"
-            ],
-            "correctOrder": [
-              "Der",
-              "Opa",
-              "sitzt",
-              "im",
-              "Sessel"
-            ]
-          }
-        ]
       }
     ]
   },
   {
     "questId": "place-prep-3",
-    "title": "Предлоги места: Город и повседневность (Wo? + Dativ)",
+    "title": "placePrepositionsThree.questTitle",
     "progress": "0/15",
-    "description": "Отрабатываем предлоги in, an, auf, unter, über, vor, hinter на ситуациях в городе и транспорте.",
+    "description": "placePrepositionsThree.questDescription",
     "conditions": {
-      "goal": "Ответьте правильно на 15 заданий по предлогам места",
+      "goal": "placePrepositionsThree.questGoal",
       "minCorrect": 15,
       "requiredTasks": 15
     },
@@ -1240,7 +863,7 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите предложение: Машина стоит перед светофором",
+        "question": "placePrepositionsThree.questTask1",
         "words": [
           "vor",
           "Auto",
@@ -1261,7 +884,7 @@
       {
         "id": 2,
         "type": "select",
-        "question": "Выберите правильный перевод: на остановке (у остановки)",
+        "question": "placePrepositionsThree.questTask2",
         "options": [
           "an der Haltestelle",
           "auf der Haltestelle",
@@ -1272,7 +895,7 @@
       {
         "id": 3,
         "type": "reorder",
-        "question": "Соберите предложение: Мы сидим в поезде",
+        "question": "placePrepositionsThree.questTask3",
         "words": [
           "im",
           "Zug",
@@ -1289,13 +912,13 @@
       {
         "id": 4,
         "type": "input",
-        "question": "Машина припаркована на стоянке. Вставьте предлог: Das Auto steht ___ dem Parkplatz",
+        "question": "placePrepositionsThree.questTask4",
         "correctAnswer": "auf"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите предложение: Лодка плывет под мостом",
+        "question": "placePrepositionsThree.questTask5",
         "words": [
           "Boot",
           "fährt",
@@ -1316,7 +939,7 @@
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите подходящую фразу: Поезд стоит на третьем пути",
+        "question": "placePrepositionsThree.questTask6",
         "options": [
           "Der Zug steht auf Gleis 3",
           "Der Zug steht in Gleis 3",
@@ -1327,21 +950,21 @@
       {
         "id": 7,
         "type": "reorder",
-        "question": "Соберите предложение: Он стоит у кассы",
+        "question": "placePrepositionsThree.questTask7",
         "words": ["steht", "an", "Kasse", "der", "Er", "auf"],
         "correctOrder": ["Er", "steht", "an", "der", "Kasse"]
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите предлог. Мост находится над рекой: Die Brücke ist ___ dem Fluss",
+        "question": "placePrepositionsThree.questTask8",
         "correctAnswer": "über"
       },
       {
         "id": 9,
         "type": "readAndAnswer",
         "text": "— Stehst du schon am Gleis? — Nein, ich warte noch vor dem Bahnhof.",
-        "question": "Где сейчас ожидает человек?",
+        "question": "placePrepositionsThree.questTask9",
         "options": [
           "vor dem Bahnhof",
           "am Gleis",
@@ -1352,7 +975,7 @@
       {
         "id": 10,
         "type": "reorder",
-        "question": "Соберите предложение: Пешеход ждет у светофора",
+        "question": "placePrepositionsThree.questTask10",
         "words": [
           "Ampel",
           "wartet",
@@ -1373,7 +996,7 @@
       {
         "id": 11,
         "type": "select",
-        "question": "Выберите правильный вопрос к предложению «Wir warten an der Haltestelle»",
+        "question": "placePrepositionsThree.questTask11",
         "options": [
           "Wo wartet ihr?",
           "Wohin fahrt ihr?",
@@ -1384,7 +1007,7 @@
       {
         "id": 12,
         "type": "reorder",
-        "question": "Соберите предложение: Автобус стоит за перекрёстком",
+        "question": "placePrepositionsThree.questTask12",
         "words": [
           "Kreuzung",
           "Bus",
@@ -1406,7 +1029,7 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "— Wartest du vor dem Bahnhof? — Nein, ich sitze schon im Zug.",
-        "question": "Где ждёт собеседник?",
+        "question": "placePrepositionsThree.questTask13",
         "options": [
           "im Zug",
           "vor dem Bahnhof",
@@ -1417,25 +1040,25 @@
       {
         "id": 14,
         "type": "input",
-        "question": "Вставьте предлог. «Мы сидим в автобусе»: Wir sitzen ___ dem Bus",
+        "question": "placePrepositionsThree.questTask14",
         "correctAnswer": "in"
       },
       {
         "id": 15,
         "type": "reorder",
-        "question": "Соберите предложение: Самолет летит над городом",
-        "words": ["Flugzeug", "fliegt", "Stadt", "der", "über", "Das" ],
+        "question": "placePrepositionsThree.questTask15",
+        "words": ["Flugzeug", "fliegt", "Stadt", "der", "über", "Das"],
         "correctOrder": ["Das", "Flugzeug", "fliegt", "über", "der", "Stadt"]
       }
     ]
   },
   {
     "questId": "place-prep-four",
-    "title": "Предлоги места: Улица, вокзал и инфраструктура (Wo? + Dativ)",
+    "title": "placePrepositionsFour.questTitle",
     "progress": "0/15",
-    "description": "Отрабатываем предлоги in, an, auf, unter, über, vor, hinter на ситуациях в городе и транспорте с акцентом на разбор текстов и ввод.",
+    "description": "placePrepositionsFour.questDescription",
     "conditions": {
-      "goal": "Ответьте правильно на 15 заданий по предлогам места",
+      "goal": "placePrepositionsFour.questGoal",
       "minCorrect": 15,
       "requiredTasks": 15
     },
@@ -1589,28 +1212,28 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите предложение: Такси стоит перед терминалом",
+        "question": "placePrepositionsFour.questTask1",
         "words": ["vor", "Terminal", "steht", "dem", "Das", "Taxi"],
         "correctOrder": ["Das", "Taxi", "steht", "vor", "dem", "Terminal"]
       },
       {
         "id": 2,
         "type": "reorder",
-        "question": "Соберите предложение: Пассажиры ждут на платформе",
+        "question": "placePrepositionsFour.questTask2",
         "words": ["dem", "Bahnsteig", "auf", "warten", "Die", "Passagiere"],
         "correctOrder": ["Die", "Passagiere", "warten", "auf", "dem", "Bahnsteig"]
       },
       {
         "id": 3,
         "type": "reorder",
-        "question": "Соберите предложение: Машина стоит за шлагбаумом",
+        "question": "placePrepositionsFour.questTask3",
         "words": ["Schranke", "Das", "hinter", "steht", "der", "Auto"],
         "correctOrder": ["Das", "Auto", "steht", "hinter", "der", "Schranke"]
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Выберите правильный перевод: на заправке",
+        "question": "placePrepositionsFour.questTask4",
         "options": [
           "an der Tankstelle",
           "auf der Tankstelle",
@@ -1621,44 +1244,44 @@
       {
         "id": 5,
         "type": "input",
-        "question": "Вставьте предлог. «Машина едет по автобану»: Das Auto fährt ___ der Autobahn",
+        "question": "placePrepositionsFour.questTask5",
         "correctAnswer": "auf"
       },
       {
         "id": 6,
         "type": "input",
-        "question": "Вставьте предлог. «Люди идут в подземном переходе»: Die Leute gehen ___ der Unterführung",
+        "question": "placePrepositionsFour.questTask6",
         "correctAnswer": "in"
       },
       {
         "id": 7,
         "type": "input",
-        "question": "Вставьте предлог. «Мотоцикл стоит перед шлагбаумом»: Das Motorrad steht ___ der Schranke",
+        "question": "placePrepositionsFour.questTask7",
         "correctAnswer": "vor"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Вставьте предлог. «Пассажиры стоят под навесом»: Die Fahrgäste stehen ___ dem Dach",
+        "question": "placePrepositionsFour.questTask8",
         "correctAnswer": "unter"
       },
       {
         "id": 9,
         "type": "input",
-        "question": "Вставьте предлог. «Грузовик едет позади автобуса»: Der Lkw fährt ___ dem Bus",
+        "question": "placePrepositionsFour.questTask9",
         "correctAnswer": "hinter"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Вставьте предлог. «Световое табло висит над перроном»: Die Anzeigetafel hängt ___ dem Bahnsteig",
+        "question": "placePrepositionsFour.questTask10",
         "correctAnswer": "über"
       },
       {
         "id": 11,
         "type": "readAndAnswer",
         "text": "— Stehst du schon an der Kasse im Supermarkt? — Nein, ich warte draußen vor der Tür.",
-        "question": "Где сейчас находится человек?",
+        "question": "placePrepositionsFour.questTask11",
         "options": [
           "vor der Tür",
           "an der Kasse",
@@ -1670,7 +1293,7 @@
         "id": 12,
         "type": "readAndAnswer",
         "text": "— Wartest du auf dem Bahnsteig? — Nein, es regnet. Ich bin noch in der Unterführung.",
-        "question": "Где находится собеседник?",
+        "question": "placePrepositionsFour.questTask12",
         "options": [
           "in der Unterführung",
           "auf dem Bahnsteig",
@@ -1682,7 +1305,7 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "— Der Parkplatz direkt vor dem Bahnhof ist voll. Ich parke an der Apotheke gleich dahinter.",
-        "question": "Где находится машина относительно вокзала?",
+        "question": "placePrepositionsFour.questTask13",
         "options": [
           "hinter dem Bahnhof",
           "vor dem Bahnhof",
@@ -1694,7 +1317,7 @@
         "id": 14,
         "type": "readAndAnswer",
         "text": "— Mein Taxi ist gerade da. Ich steige aus und warte draußen am Eingang auf dich.",
-        "question": "Где находится человек относительно здания терминала?",
+        "question": "placePrepositionsFour.questTask14",
         "options": [
           "vor dem Terminal",
           "im Terminal",
@@ -1706,7 +1329,7 @@
         "id": 15,
         "type": "readAndAnswer",
         "text": "— Steht der Bus schon an der Haltestelle? — Nein, er wartet noch bei Rot an der Kreuzung.",
-        "question": "Где сейчас стоит автобус?",
+        "question": "placePrepositionsFour.questTask15",
         "options": [
           "an der Ampel",
           "an der Haltestelle",
@@ -1718,11 +1341,11 @@
   },
   {
     "questId": "place-prep-five",
-    "title": "Предлоги места: unter, neben, zwischen (Wo? + Dativ)",
+    "title": "placePrepositionsFive.questTitle",
     "progress": "0/15",
-    "description": "Отрабатываем предлоги unter (под), neben (рядом с) и zwischen (между) на ситуациях в парке, на улице и в общественных местах.",
+    "description": "placePrepositionsFive.questDescription",
     "conditions": {
-      "goal": "Ответьте правильно на 15 заданий по предлогам места",
+      "goal": "placePrepositionsFive.questGoal",
       "minCorrect": 15,
       "requiredTasks": 15
     },
@@ -1876,28 +1499,28 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите предложение: Собака лежит под деревом",
+        "question": "placePrepositionsFive.questTask1",
         "words": ["liegt", "Baum", "dem", "Der", "unter", "Hund"],
         "correctOrder": ["Der", "Hund", "liegt", "unter", "dem", "Baum"]
       },
       {
         "id": 2,
         "type": "reorder",
-        "question": "Соберите предложение: Фонарь стоит рядом с фонтаном",
+        "question": "placePrepositionsFive.questTask2",
         "words": ["steht", "dem", "Brunnen", "Die", "neben", "Laterne"],
         "correctOrder": ["Die", "Laterne", "steht", "neben", "dem", "Brunnen"]
       },
       {
         "id": 3,
         "type": "reorder",
-        "question": "Соберите предложение: Скамейка стоит между деревьями",
+        "question": "placePrepositionsFive.questTask3",
         "words": ["steht", "Die", "Bäumen", "Bank", "zwischen", "den"],
         "correctOrder": ["Die", "Bank", "steht", "zwischen", "den", "Bäumen"]
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Выберите правильный перевод: рядом с аптекой",
+        "question": "placePrepositionsFive.questTask4",
         "options": [
           "neben der Apotheke",
           "unter der Apotheke",
@@ -1908,7 +1531,7 @@
       {
         "id": 5,
         "type": "select",
-        "question": "Выберите правильный перевод: под лестницей",
+        "question": "placePrepositionsFive.questTask5",
         "options": [
           "unter der Treppe",
           "neben der Treppe",
@@ -1919,7 +1542,7 @@
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите подходящую фразу: Пекарня находится между аптекой и банком",
+        "question": "placePrepositionsFive.questTask6",
         "options": [
           "Die Bäckerei liegt zwischen der Apotheke und der Bank",
           "Die Bäckerei liegt neben der Apotheke und der Bank",
@@ -1930,44 +1553,44 @@
       {
         "id": 7,
         "type": "input",
-        "question": "Вставьте предлог. «Мы отдыхаем в тени под деревом»: Wir sitzen im Schatten ___ dem Baum",
+        "question": "placePrepositionsFive.questTask7",
         "correctAnswer": "unter"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Вставьте предлог. «Табличка висит рядом со входом»: Das Schild hängt ___ dem Eingang",
+        "question": "placePrepositionsFive.questTask8",
         "correctAnswer": "neben"
       },
       {
         "id": 9,
         "type": "input",
-        "question": "Вставьте предлог. «Палатка стоит между двумя холмами»: Das Zelt steht ___ den zwei Hügeln",
+        "question": "placePrepositionsFive.questTask9",
         "correctAnswer": "zwischen"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Вставьте предлог. «Велосипед прислонен рядом с фонарем»: Das Fahrrad lehnt ___ der Laterne",
+        "question": "placePrepositionsFive.questTask10",
         "correctAnswer": "neben"
       },
       {
         "id": 11,
         "type": "input",
-        "question": "Вставьте предлог. «Кот спит под скамейкой»: Die Katze schläft ___ der Bank",
+        "question": "placePrepositionsFive.questTask11",
         "correctAnswer": "unter"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Вставьте предлог. «Фонтан построен между двумя зданиями»: Der Brunnen steht ___ den zwei Gebäuden",
+        "question": "placePrepositionsFive.questTask12",
         "correctAnswer": "zwischen"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
         "text": "— Die Sonne brennt heute extrem! — Komm schnell rüber in den Schatten der großen Eiche.",
-        "question": "Где спасаются от жары?",
+        "question": "placePrepositionsFive.questTask13",
         "options": [
           "unter dem Baum",
           "neben dem Brunnen",
@@ -1978,14 +1601,14 @@
       {
         "id": 14,
         "type": "reorder",
-        "question": "Соберите предложение: Кафе находится рядом с почтой",
+        "question": "placePrepositionsFive.questTask14",
         "words": ["liegt", "Post", "der", "neben", "Café", "Das"],
         "correctOrder": ["Das", "Café", "liegt", "neben", "der", "Post"]
       },
       {
         "id": 15,
         "type": "reorder",
-        "question": "Соберите предложение: Пекарня находится между аптекой и банком",
+        "question": "placePrepositionsFive.questTask15",
         "words": ["Apotheke", "der", "Die", "zwischen", "liegt", "Bäckerei", "Bank", "der", "und"],
         "correctOrder": ["Die", "Bäckerei", "liegt", "zwischen", "der", "Apotheke", "und", "der", "Bank"]
       }
@@ -1993,11 +1616,11 @@
   },
   {
     "questId": "place-prep-six",
-    "title": "Предлог aus (Woher? + Dativ)",
+    "title": "placePrepositionsSix.questTitle",
     "progress": "0/15",
-    "description": "Отрабатываем предлог aus (из помещения, из предмета, происхождение) с Dativ в жизненных бытовых ситуациях.",
+    "description": "placePrepositionsSix.questDescription",
     "conditions": {
-      "goal": "Ответьте правильно на 15 заданий по предлогу aus",
+      "goal": "placePrepositionsSix.questGoal",
       "minCorrect": 15,
       "requiredTasks": 15
     },
@@ -2151,20 +1774,20 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите предложение: Он выходит из дома",
+        "question": "placePrepositionsSix.questTask1",
         "words": ["aus", "Haus", "geht", "dem", "Er"],
         "correctOrder": ["Er", "geht", "aus", "dem", "Haus"]
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Вставьте предлог. «Он пьёт воду прямо из бутылки»: Er trinkt das Wasser direkt ___ der Flasche",
+        "question": "placePrepositionsSix.questTask2",
         "correctAnswer": "aus"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите правильный перевод: Из кухни",
+        "question": "placePrepositionsSix.questTask3",
         "options": ["in der Küche", "aus der Küche", "an der Küche"],
         "answer": "aus der Küche"
       },
@@ -2172,93 +1795,93 @@
         "id": 4,
         "type": "readAndAnswer",
         "text": "— Warum sitzt du draußen im Garten? — Es war drinnen im Wohnzimmer viel zu laut, deshalb bin ich nach draußen gegangen.",
-        "question": "Откуда ушёл человек?",
+        "question": "placePrepositionsSix.questTask4",
         "options": ["in das Zimmer", "aus dem Zimmer", "vor dem Zimmer"],
         "answer": "aus dem Zimmer"
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Вставьте предлог. «Мы выходим из комнаты»: Wir gehen ___ dem Zimmer",
+        "question": "placePrepositionsSix.questTask5",
         "correctAnswer": "aus"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите предложение: Она достаёт ключ из сумки",
+        "question": "placePrepositionsSix.questTask6",
         "words": ["der", "holt", "den", "aus", "Tasche", "Sie", "Schlüssel"],
         "correctOrder": ["Sie", "holt", "den", "Schlüssel", "aus", "der", "Tasche"]
       },
       {
         "id": 7,
         "type": "select",
-        "question": "Выберите подходящую фразу: Ребёнок смотрит из окна",
+        "question": "placePrepositionsSix.questTask7",
         "options": ["Das Kind schaut in dem Fenster", "Das Kind schaut vor dem Fenster", "Das Kind schaut aus dem Fenster"],
         "answer": "Das Kind schaut aus dem Fenster"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Вставьте предлог. «Она достаёт подарок из коробки»: Sie nimmt das Geschenk ___ der Schachtel",
+        "question": "placePrepositionsSix.questTask8",
         "correctAnswer": "aus"
       },
       {
         "id": 9,
         "type": "readAndAnswer",
         "text": "— Woher hast du den kalten Saft? — Er stand im Kühlfach, ich habe ihn gerade herübergeholt.",
-        "question": "Откуда достали напиток?",
+        "question": "placePrepositionsSix.questTask9",
         "options": ["unter dem Kühlschrank", "aus dem Kühlschrank", "neben dem Kühlschrank"],
         "answer": "aus dem Kühlschrank"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Выберите правильный перевод: Из стакана",
+        "question": "placePrepositionsSix.questTask10",
         "options": ["auf dem Glas", "unter dem Glas", "aus dem Glas"],
         "answer": "aus dem Glas"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите предложение: Молоко берут из холодильника",
+        "question": "placePrepositionsSix.questTask11",
         "words": ["Kühlschrank", "Man", "die", "aus", "Milch", "dem", "nimmt"],
         "correctOrder": ["Man", "nimmt", "die", "Milch", "aus", "dem", "Kühlschrank"]
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Вставьте предлог. «Я вынимаю книгу из посылки»: Ich nehme das Buch ___ dem Paket",
+        "question": "placePrepositionsSix.questTask12",
         "correctAnswer": "aus"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
         "text": "— Suchst du deinen Geldbeutel? — Ja, ich habe den Reißverschluss vom Rucksack aufgemacht und jetzt ist das Portemonnaie in meiner Hand.",
-        "question": "Откуда только что вытащили кошелёк?",
+        "question": "placePrepositionsSix.questTask13",
         "options": ["auf die Tasche", "hinter der Tasche", "aus der Tasche"],
         "answer": "aus der Tasche"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Вставьте предлог. «Повар выходит из кухни»: Der Koch kommt ___ der Küche",
+        "question": "placePrepositionsSix.questTask14",
         "correctAnswer": "aus"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Вставьте предлог. «Он пьёт сок из стакана»: Er trinkt den Saft ___ dem Glas",
+        "question": "placePrepositionsSix.questTask15",
         "correctAnswer": "aus"
       }
     ]
   },
   {
     "questId": "place-prep-seven",
-    "title": "Предлоги места: aus и von (Woher? + Dativ)",
+    "title": "placePrepositionsSeven.questTitle",
     "progress": "0/15",
-    "description": "Отрабатываем разницу между aus (изнутри помещения/предмета) и von (от кого-то, с поверхности, от объекта) в Dativ.",
+    "description": "placePrepositionsSeven.questDescription",
     "conditions": {
-      "goal": "Ответьте правильно на 15 заданий по предлогам aus и von",
+      "goal": "placePrepositionsSeven.questGoal",
       "minCorrect": 15,
       "requiredTasks": 15
     },
@@ -2412,82 +2035,82 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите предложение: Коллега выходит из офиса",
+        "question": "placePrepositionsSeven.questTask1",
         "words": ["Büro", "Der", "dem", "Kollege", "geht", "aus"],
         "correctOrder": ["Der", "Kollege", "geht", "aus", "dem", "Büro"]
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Вставьте предлог. «Она достаёт чашку из шкафа»: Sie nimmt die Tasse ___ dem Schrank",
+        "question": "placePrepositionsSeven.questTask2",
         "correctAnswer": "aus"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите правильный перевод: Из здания",
+        "question": "placePrepositionsSeven.questTask3",
         "options": ["von dem Gebäude", "aus dem Gebäude", "an dem Gebäude"],
         "answer": "aus dem Gebäude"
       },
       {
         "id": 4,
         "type": "input",
-        "question": "Вставьте предлог. «Пациент выходит из приёмной врача»: Der Patient kommt ___ der Praxis",
+        "question": "placePrepositionsSeven.questTask4",
         "correctAnswer": "aus"
       },
       {
         "id": 5,
         "type": "readAndAnswer",
         "text": "— Warst du im Einkaufszentrum? — Ja, es war viel zu voll, ich bin nach fünf Minuten wieder ins Freie gelaufen.",
-        "question": "Откуда ушёл человек?",
+        "question": "placePrepositionsSeven.questTask5",
         "options": ["vom Zentrum", "aus dem Gebäude", "unter dem Gebäude"],
         "answer": "aus dem Gebäude"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите предложение: Он идёт от врача",
+        "question": "placePrepositionsSeven.questTask6",
         "words": ["Arzt", "Er", "dem", "von", "kommt"],
         "correctOrder": ["Er", "kommt", "von", "dem", "Arzt"]
       },
       {
         "id": 7,
         "type": "input",
-        "question": "Вставьте предлог. «Он берёт ключи со стола»: Er nimmt die Schlüssel ___ dem Tisch",
+        "question": "placePrepositionsSeven.questTask7",
         "correctAnswer": "von"
       },
       {
         "id": 8,
         "type": "select",
-        "question": "Выберите правильный перевод: с работы",
+        "question": "placePrepositionsSeven.questTask8",
         "options": ["aus der Arbeit", "nach der Arbeit", "von der Arbeit"],
         "answer": "von der Arbeit"
       },
       {
         "id": 9,
         "type": "input",
-        "question": "Вставьте предлог. «Она возвращается с рынка»: Sie kommt gerade ___ dem Markt",
+        "question": "placePrepositionsSeven.questTask9",
         "correctAnswer": "von"
       },
       {
         "id": 10,
         "type": "readAndAnswer",
         "text": "— Woher hast du das Rezept? — Ich hatte um zehn Uhr einen Termin beim Doktor und habe es dort abgeholt.",
-        "question": "От кого идёт собеседник?",
+        "question": "placePrepositionsSeven.questTask10",
         "options": ["aus dem Arzt", "von dem Arzt", "vor dem Arzt"],
         "answer": "von dem Arzt"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите предложение: Она берёт книгу с полки",
+        "question": "placePrepositionsSeven.questTask11",
         "words": ["das", "Regal", "Sie", "Buch", "dem", "von", "nimmt"],
         "correctOrder": ["Sie", "nimmt", "das", "Buch", "von", "dem", "Regal"]
       },
       {
         "id": 12,
         "type": "select",
-        "question": "Выберите подходящую фразу: Он возвращается с почты",
+        "question": "placePrepositionsSeven.questTask12",
         "options": [
           "Er kommt von der Post zurück",
           "Er kommt aus der Post zurück",
@@ -2498,20 +2121,20 @@
       {
         "id": 13,
         "type": "input",
-        "question": "Вставьте предлог. «Мы идём домой прямо с работы»: Wir gehen direkt ___ der Arbeit nach Hause",
+        "question": "placePrepositionsSeven.questTask13",
         "correctAnswer": "von"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Вставьте предлог. «Я забираю тарелку со стола»: Ich nehme den Teller ___ dem Tisch",
+        "question": "placePrepositionsSeven.questTask14",
         "correctAnswer": "von"
       },
       {
         "id": 15,
         "type": "readAndAnswer",
         "text": "— Hast du die frischen Äpfel im Supermarkt gekauft? — Nein, ich habe die Tüte direkt draußen an den Verkaufsständen unter freiem Himmel besorgt.",
-        "question": "Откуда принесли яблоки?",
+        "question": "placePrepositionsSeven.questTask15",
         "options": ["aus dem Markt", "von dem Markt", "hinter dem Markt"],
         "answer": "von dem Markt"
       }
@@ -2519,11 +2142,11 @@
   },
   {
     "questId": "place-prep-eight",
-    "title": "Предлоги места: aus, von, zwischen (Dativ)",
+    "title": "placePrepositionsEight.questTitle",
     "progress": "0/15",
-    "description": "Закрепляем разницу: aus(изнутри), von (с поверхности / от человека/от места) zwischen (между двумя объектами) в бытовых ситуациях.",
+    "description": "placePrepositionsEight.questDescription",
     "conditions": {
-      "goal": "Ответьте правильно на 15 заданий по предлогам aus, von и zwischen",
+      "goal": "placePrepositionsEight.questGoal",
       "minCorrect": 15,
       "requiredTasks": 15
     },
@@ -2677,20 +2300,20 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите предложение: Она достаёт книгу из сумки",
+        "question": "placePrepositionsEight.questTask1",
         "words": ["das", "aus", "der", "Buch", "holt", "Tasche", "Sie"],
         "correctOrder": ["Sie", "holt", "das", "Buch", "aus", "der", "Tasche"]
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Вставьте предлог. «Он берёт тарелку со стола»: Er nimmt den Teller ___ dem Tisch",
+        "question": "placePrepositionsEight.questTask2",
         "correctAnswer": "von"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите подходящую фразу: Стол стоит между дверью и окном",
+        "question": "placePrepositionsEight.questTask3",
         "options": [
           "Der Tisch steht zwischen der Tür und dem Fenster",
           "Der Tisch steht aus der Tür und dem Fenster",
@@ -2701,27 +2324,27 @@
       {
         "id": 4,
         "type": "reorder",
-        "question": "Соберите предложение: Он берёт телефон со стола",
+        "question": "placePrepositionsEight.questTask4",
         "words": ["Handy", "dem", "Er", "das", "Tisch", "nimmt", "von"],
         "correctOrder": ["Er", "nimmt", "das", "Handy", "von", "dem", "Tisch"]
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Вставьте предлог. «Мы выходим из комнаты»: Wir gehen ___ dem Zimmer",
+        "question": "placePrepositionsEight.questTask5",
         "correctAnswer": "aus"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите предложение: Стул стоит между столом и шкафом",
+        "question": "placePrepositionsEight.questTask6",
         "words": ["zwischen", "steht", "dem", "Stuhl", "Der", "und", "dem", "Tisch", "Schrank"],
         "correctOrder": ["Der", "Stuhl", "steht", "zwischen", "dem", "Tisch", "und", "dem", "Schrank"]
       },
       {
         "id": 7,
         "type": "select",
-        "question": "Выберите правильный перевод: Со стеллажа",
+        "question": "placePrepositionsEight.questTask7",
         "options": [
           "aus dem Regal",
           "von dem Regal",
@@ -2732,14 +2355,14 @@
       {
         "id": 8,
         "type": "input",
-        "question": "Вставьте предлог. «Сумка лежит между двумя стульями»: Die Tasche liegt ___ den zwei Stühlen",
+        "question": "placePrepositionsEight.questTask8",
         "correctAnswer": "zwischen"
       },
       {
         "id": 9,
         "type": "readAndAnswer",
         "text": "— Wo ist das frische Wasser? — Ich habe den Schrank aufgemacht und die Flasche herausgeholt, sie steht jetzt hier.",
-        "question": "Откуда вытащили бутылку?",
+        "question": "placePrepositionsEight.questTask9",
         "options": [
           "von dem Schrank",
           "zwischen dem Schrank",
@@ -2750,20 +2373,20 @@
       {
         "id": 10,
         "type": "reorder",
-        "question": "Соберите предложение: Он поднимает ручку с пола",
+        "question": "placePrepositionsEight.questTask10",
         "words": ["Boden", "Er", "hebt", "dem", "Stift", "den", "von"],
         "correctOrder": ["Er", "hebt", "den", "Stift", "von", "dem", "Boden"]
       },
       {
         "id": 11,
         "type": "input",
-        "question": "Вставьте предлог. «Он пьёт молоко прямо из бутылки»: Er trinkt die Milch direkt ___ der Flasche",
+        "question": "placePrepositionsEight.questTask11",
         "correctAnswer": "aus"
       },
       {
         "id": 12,
         "type": "select",
-        "question": "Выберите правильный перевод: Из шкафа",
+        "question": "placePrepositionsEight.questTask12",
         "options": [
           "aus dem Schrank",
           "von dem Schrank",
@@ -2775,7 +2398,7 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "— Wo steht die Pflanze? — Links ist das Sofa und rechts das Regal.",
-        "question": "Где стоит растение?",
+        "question": "placePrepositionsEight.questTask13",
         "options": [
           "zwischen den Möbeln",
           "aus den Möbeln",
@@ -2786,24 +2409,24 @@
       {
         "id": 14,
         "type": "input",
-        "question": "Вставьте предлог. «Она забирает ключи со стола»: Sie nimmt die Schlüssel ___ dem Tisch",
+        "question": "placePrepositionsEight.questTask14",
         "correctAnswer": "von"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Вставьте предлог. «Коробка зажата между дверью и стеной»: Der Karton steht eingeklemmt ___ der Tür und der Wand",
+        "question": "placePrepositionsEight.questTask15",
         "correctAnswer": "zwischen"
       }
     ]
   },
   {
     "questId": "place-prep-nine",
-    "title": "Повторение предлогов: unter, von, zwischen(Dativ)",
+    "title": "placePrepositionsNine.questTitle",
     "progress": "0/15",
-    "description": "Закрепляем предлоги unter (под), von (с поверхности / от объекта) и zwischen (между) с Dativ.",
+    "description": "placePrepositionsNine.questDescription",
     "conditions": {
-      "goal": "Ответьте правильно на 15 заданий на повторение",
+      "goal": "placePrepositionsNine.questGoal",
       "minCorrect": 15,
       "requiredTasks": 15
     },
@@ -2957,32 +2580,32 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите предложение: Кот спит под кроватью",
+        "question": "placePrepositionsNine.questTask1",
         "words": ["liegt", "dem", "Bett", "unter", "Katze", "Die"],
         "correctOrder": ["Die", "Katze", "liegt", "unter", "dem", "Bett"]
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Вставьте предлог. «Он берёт чашку со стола»: Er nimmt die Tasse ___ dem Tisch",
+        "question": "placePrepositionsNine.questTask2",
         "correctAnswer": "von"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите подходящую фразу: Лампа стоит между стулом и столом",
+        "question": "placePrepositionsNine.questTask3",
         "options": [
           "Die Lampe steht unter dem Stuhl und dem Tisch",
           "Die Lampe steht zwischen dem Stuhl und dem Tisch",
           "Die Lampe steht von dem Stuhl und dem Tisch"
         ],
-        "answer": "Die Lampe steht между dem Stuhl und dem Tisch"
+        "answer": "Die Lampe steht zwischen dem Stuhl und dem Tisch"
       },
       {
         "id": 4,
         "type": "readAndAnswer",
         "text": "— Wo ist mein Hausschuh? — Er ist vom Sofa gerutscht und liegt jetzt ganz tief am Boden darunter.",
-        "question": "Где находится тапочек?",
+        "question": "placePrepositionsNine.questTask4",
         "options": [
           "unter dem Sofa",
           "von dem Sofa",
@@ -2993,20 +2616,20 @@
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите предложение: Она берёт книгу с полки",
+        "question": "placePrepositionsNine.questTask5",
         "words": ["Regal", "das", "nimmt", "dem", "Sie", "von", "Buch"],
         "correctOrder": ["Sie", "nimmt", "das", "Buch", "von", "dem", "Regal"]
       },
       {
         "id": 6,
         "type": "input",
-        "question": "Вставьте предлог. «Сумка лежит под столом»: Die Tasche liegt ___ dem Tisch",
+        "question": "placePrepositionsNine.questTask6",
         "correctAnswer": "unter"
       },
       {
         "id": 7,
         "type": "select",
-        "question": "Выберите правильный перевод: C кровати",
+        "question": "placePrepositionsNine.questTask7",
         "options": [
           "von dem Bett",
           "unter dem Bett",
@@ -3018,7 +2641,7 @@
         "id": 8,
         "type": "readAndAnswer",
         "text": "— Wo steht die Kiste? — Links ist der Schrank und rechts das Bett.",
-        "question": "Где стоит коробка?",
+        "question": "placePrepositionsNine.questTask8",
         "options": [
           "unter den Möbeln",
           "von den Möbeln",
@@ -3029,20 +2652,20 @@
       {
         "id": 9,
         "type": "input",
-        "question": "Вставьте предлог. «Стол стоит между двумя шкафами»: Der Tisch steht ___ zwei Schränken",
+        "question": "placePrepositionsNine.questTask9",
         "correctAnswer": "zwischen"
       },
       {
         "id": 10,
         "type": "reorder",
-        "question": "Соберите предложение: Стул стоит между шкафом и столом",
+        "question": "placePrepositionsNine.questTask10",
         "words": ["Schrank", "Stuhl", "steht", "zwischen", "dem", "dem", "Der", "und", "Tisch"],
         "correctOrder": ["Der", "Stuhl", "steht", "zwischen", "dem", "Schrank", "und", "dem", "Tisch"]
       },
       {
         "id": 11,
         "type": "select",
-        "question": "Выберите правильный перевод: под стулом",
+        "question": "placePrepositionsNine.questTask11",
         "options": [
           "zwischen dem Stuhl",
           "unter dem Stuhl",
@@ -3053,14 +2676,14 @@
       {
         "id": 12,
         "type": "input",
-        "question": "Вставьте предлог. «Он поднимает подушку с пола»: Er hebt das Kissen ___ dem Boden",
+        "question": "placePrepositionsNine.questTask12",
         "correctAnswer": "von"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
         "text": "— Woher hast du den Teller? — Er stand auf der Anrichte, ich habe ihn gerade gegriffen.",
-        "question": "Откуда сняли тарелку?",
+        "question": "placePrepositionsNine.questTask13",
         "options": [
           "von der Anrichte",
           "unter der Anrichte",
@@ -3071,13 +2694,13 @@
       {
         "id": 14,
         "type": "input",
-        "question": "Вставьте предлог. «Коробка спрятана под шкафом»: Der Karton ist ___ dem Schrank versteckt",
+        "question": "placePrepositionsNine.questTask14",
         "correctAnswer": "unter"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Выберите правильный перевод: между стульями",
+        "question": "placePrepositionsNine.questTask15",
         "options": [
           "von den Stühlen",
           "unter den Stühlen",
@@ -3089,11 +2712,11 @@
   },
   {
     "questId": "prep-dativ-ten",
-    "title": "повторение: unter, neben, aus (Dativ)",
+    "title": "placePrepositionsTen.questTitle",
     "progress": "0/15",
-    "description": "Закрепляем предлоги unter (под), neben (рядом с) и aus (изнутри) с Dativ в бытовых жизненных ситуациях.",
+    "description": "placePrepositionsTen.questDescription",
     "conditions": {
-      "goal": "Ответьте правильно на 15 заданий на повторение",
+      "goal": "placePrepositionsTen.questGoal",
       "minCorrect": 15,
       "requiredTasks": 15
     },
@@ -3247,20 +2870,20 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите предложение: Тумбочка стоит рядом с кроватью",
+        "question": "placePrepositionsTen.questTask1",
         "words": ["steht", "Bett", "neben", "Der", "Nachttisch", "dem"],
         "correctOrder": ["Der", "Nachttisch", "steht", "neben", "dem", "Bett"]
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Вставьте предлог. «Он достаёт сок из холодильника»: Er nimmt den Saft ___ dem Kühlschrank",
+        "question": "placePrepositionsTen.questTask2",
         "correctAnswer": "aus"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите правильный перевод: Под столом",
+        "question": "placePrepositionsTen.questTask3",
         "options": [
           "neben dem Tisch",
           "unter dem Tisch",
@@ -3272,7 +2895,7 @@
         "id": 4,
         "type": "readAndAnswer",
         "text": "— Wo ist dein Koffer? — Er steht am Boden direkt an der Wand gleich beim Schrank.",
-        "question": "Где стоит чемодан?",
+        "question": "placePrepositionsTen.questTask4",
         "options": [
           "unter dem Schrank",
           "aus dem Schrank",
@@ -3283,20 +2906,20 @@
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите предложение: Кот спит под диваном",
+        "question": "placePrepositionsTen.questTask5",
         "words": ["Sofa", "schläft", "dem", "unter", "Katze", "Die"],
         "correctOrder": ["Die", "Katze", "schläft", "unter", "dem", "Sofa"]
       },
       {
         "id": 6,
         "type": "input",
-        "question": "Вставьте предлог. «Стул стоит рядом с дверью»: Der Stuhl steht ___ der Tür",
+        "question": "placePrepositionsTen.questTask6",
         "correctAnswer": "neben"
       },
       {
         "id": 7,
         "type": "select",
-        "question": "Выберите подходящую фразу: Она пьёт воду из стакана",
+        "question": "placePrepositionsTen.questTask7",
         "options": [
           "Sie trinkt das Wasser unter dem Glas",
           "Sie trinkt das Wasser neben dem Glas",
@@ -3308,7 +2931,7 @@
         "id": 8,
         "type": "readAndAnswer",
         "text": "— Suchst du deinen Hausschuh? — Ja, er ist unter das Gestell vom Bett gerutscht.",
-        "question": "Где сейчас обувь?",
+        "question": "placePrepositionsTen.questTask8",
         "options": [
           "neben dem Bett",
           "unter dem Bett",
@@ -3319,20 +2942,20 @@
       {
         "id": 9,
         "type": "input",
-        "question": "Вставьте предлог. «Рюкзак стоит под столом»: Der Rucksack steht ___ dem Tisch",
+        "question": "placePrepositionsTen.questTask9",
         "correctAnswer": "unter"
       },
       {
         "id": 10,
         "type": "reorder",
-        "question": "Соберите предложение: Он выходит из кухни",
+        "question": "placePrepositionsTen.questTask10",
         "words": ["Küche", "geht", "Er", "der", "aus"],
         "correctOrder": ["Er", "geht", "aus", "der", "Küche"]
       },
       {
         "id": 11,
         "type": "select",
-        "question": "Выберите правильный перевод: рядом с диваном",
+        "question": "placePrepositionsTen.questTask11",
         "options": [
           "unter dem Sofa",
           "neben dem Sofa",
@@ -3343,14 +2966,14 @@
       {
         "id": 12,
         "type": "input",
-        "question": "Вставьте предлог. «Она достаёт кошелёк из сумки»: Sie holt die Geldbörse ___ der Tasche",
+        "question": "placePrepositionsTen.questTask12",
         "correctAnswer": "aus"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
         "text": "— Woher hast du den Apfel? — Ich habe die Schranktür geöffnet und ihn von dort herausgenommen.",
-        "question": "Откуда взяли яблоко?",
+        "question": "placePrepositionsTen.questTask13",
         "options": [
           "aus dem Schrank",
           "neben dem Schrank",
@@ -3361,7 +2984,7 @@
       {
         "id": 14,
         "type": "select",
-        "question": "Выберите правильный перевод: из бутылки",
+        "question": "placePrepositionsTen.questTask14",
         "options": [
           "aus der Flasche",
           "unter der Flasche",
@@ -3372,7 +2995,7 @@
       {
         "id": 15,
         "type": "input",
-        "question": "Вставьте предлог. «Торшер стоит рядом со столом»: Die Stehlampe steht ___ dem Tisch",
+        "question": "placePrepositionsTen.questTask15",
         "correctAnswer": "neben"
       }
     ]

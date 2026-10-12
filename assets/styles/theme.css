@@ -57,10 +57,15 @@
     --fontFamilyOrange: 'Nunito', sans-serif;
     --fontWeightHalloween: 600;
     --arrowBg: #3b82f6;
-
+    --landsLevelBg: white;
+    --landsLevelTextColor: #1d1d1d;
+    --webkitText: 0;
 }
 
 .dark {
+    --webkitText: 0;
+    --landsLevelBg: white;
+    --landsLevelTextColor: #1d1d1d;
     --arrowBg: #3b82f6;
     --fontWeightHalloween: 600;
     --fontFamilyOrange: 'Nunito', sans-serif;
@@ -114,6 +119,8 @@
 }
 
 .orange {
+    --landsLevelBg: #D97605;
+    --landsLevelTextColor: white;
     --bg: #0F172A;
     --navBg: #131219;
     --titleColor: white;
@@ -128,6 +135,7 @@
     --tabBg: #783CD2;
     --menuItemsBg: #2a2e58;
     --arrowBg: #D97605;
+    --webkitText: 0.5px #000000;
 }
 
 
