@@ -34,7 +34,6 @@ import { onMounted, onUnmounted, ref, watch, nextTick } from "vue";
 import { dailyStore } from './store/dailyStore'
 import { useHead } from '#imports'
 import { Capacitor } from '@capacitor/core'
-import { AdMob } from '@capacitor-community/admob';
 import VNetwork from "./src/components/V-network.vue";
 import { initAdmob } from "./utils/admob.js";
 import VMarathonModal from "~/src/components/overlays/V-marathonModal.vue";
@@ -96,16 +95,11 @@ const onToastFinished = () => {
 
 onMounted(async () => {
   rankStore.restorePendingReward()
-  initAdmob()
+  await initAdmob();
   achStore.initializeProgressTracking()
   if (Capacitor.isNativePlatform()) {
     try {
       await SplashScreen.hide({ fadeOutDuration: 0 });
-    } catch (e) {
-      console.error(e);
-    }
-    try {
-      await AdMob.initialize({ initializeForTesting: true });
     } catch (e) {
       console.error(e);
     }
