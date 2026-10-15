@@ -9738,7 +9738,10 @@
     "commonPoints": "UMUMIY BALLAR",
     "rank": "Unvon:",
     "streak": "REKORD:",
-    "cabinet": "Bort jurnali"
+    "cabinet": "Bort jurnali",
+    "flights": "Parvozlar",
+    "bosses": "Bosslar",
+    "meteors": "Urib tushirilgan"
   },
   "galaxyRank": {
     "none": "YERLIK",
@@ -9956,7 +9959,19 @@
     "newRecord": "YANGI REKORD!",
     "check": "HISOB:",
     "again": "Qayta parvoz",
-    "constellations": "Yulduz turkumini tark etish"
+    "constellations": "Yulduz turkumini tark etish",
+    "moveHint": "Meteorit ostiga o‘t ◀ ▶ va to‘g‘ri javob bilan ot",
+    "bestCombo": "Eng yaxshi kombo",
+    "yourAnswer": "Sening javobing",
+    "correctAnswer": "To‘g‘ri javob",
+    "noMistakes": "Xatosiz! 🎉",
+    "bossIncoming": "Boss!",
+    "bossDefeated": "Boss yengildi!",
+    "bossesDefeated": "Yengilgan bosslar",
+    "pauseTitle": "Pauza",
+    "resume": "Davom etish",
+    "finishFlight": "Parvozni yakunlash",
+    "finishNote": "Bu parvoz uchun ochkolar va artiklar saqlanadi"
   },
   "textTasksTip": {
     "title": "Matnli topshiriqlar",

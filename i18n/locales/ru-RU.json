@@ -9760,7 +9760,10 @@
     "commonPoints": "ОБЩИЕ ОЧКИ",
     "rank": "Звание",
     "streak": "РЕКОРД:",
-    "cabinet": "Бортовой журнал"
+    "cabinet": "Бортовой журнал",
+    "flights": "Полёты",
+    "bosses": "Боссы",
+    "meteors": "Сбито"
   },
   "galaxyRank": {
     "none": "ЗЕМЛЯНИН",
@@ -9978,7 +9981,19 @@
     "newRecord": "НОВЫЙ РЕКОРД!",
     "check": "СЧЕТ:",
     "again": "Повторный вылет",
-    "constellations": "Покинуть созвездие"
+    "constellations": "Покинуть созвездие",
+    "moveHint": "Встань под метеорит ◀ ▶ и стреляй правильным ответом",
+    "bestCombo": "Лучшее комбо",
+    "yourAnswer": "Твой ответ",
+    "correctAnswer": "Верный ответ",
+    "noMistakes": "Без ошибок! 🎉",
+    "bossIncoming": "Босс!",
+    "bossDefeated": "Босс побеждён!",
+    "bossesDefeated": "Побеждено боссов",
+    "pauseTitle": "Пауза",
+    "resume": "Продолжить",
+    "finishFlight": "Завершить полёт",
+    "finishNote": "Очки и артики за этот полёт сохранятся"
   },
   "textTasksTip": {
     "title": "Текстовые задания",

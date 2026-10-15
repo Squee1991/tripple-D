@@ -9719,7 +9719,10 @@
     "commonPoints": "कुल अंक",
     "rank": "रैंक:",
     "streak": "रिकॉर्ड:",
-    "cabinet": "लॉगबुक"
+    "cabinet": "लॉगबुक",
+    "flights": "उड़ानें",
+    "bosses": "बॉस",
+    "meteors": "नष्ट किए"
   },
   "galaxyRank": {
     "none": "पृथ्वीवासी",
@@ -9937,7 +9940,19 @@
     "newRecord": "नया रिकॉर्ड!",
     "check": "स्कोर:",
     "again": "फिर से उड़ान भरें",
-    "constellations": "नक्षत्र छोड़ें"
+    "constellations": "नक्षत्र छोड़ें",
+    "moveHint": "उल्कापिंड के नीचे जाएँ ◀ ▶ और सही उत्तर से निशाना लगाएँ",
+    "bestCombo": "सबसे अच्छा कॉम्बो",
+    "yourAnswer": "आपका उत्तर",
+    "correctAnswer": "सही उत्तर",
+    "noMistakes": "कोई गलती नहीं! 🎉",
+    "bossIncoming": "बॉस!",
+    "bossDefeated": "बॉस हार गया!",
+    "bossesDefeated": "हराए गए बॉस",
+    "pauseTitle": "विराम",
+    "resume": "जारी रखें",
+    "finishFlight": "उड़ान समाप्त करें",
+    "finishNote": "इस उड़ान के अंक और आर्टिक्स सहेजे जाएँगे"
   },
   "textTasksTip": {
     "title": "टेक्स्ट कार्य",

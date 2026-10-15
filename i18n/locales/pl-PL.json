@@ -9759,7 +9759,10 @@
     "commonPoints": "PUNKTY OGÓLNE",
     "rank": "Ranga:",
     "streak": "REKORD:",
-    "cabinet": "Dziennik pokładowy"
+    "cabinet": "Dziennik pokładowy",
+    "flights": "Loty",
+    "bosses": "Bossowie",
+    "meteors": "Zestrzelone"
   },
   "galaxyRank": {
     "none": "ZIEMIANIN",
@@ -9977,7 +9980,19 @@
     "newRecord": "NOWY REKORD!",
     "check": "WYNIK:",
     "again": "Ponowny wylot",
-    "constellations": "Opuść gwiazdozbiór"
+    "constellations": "Opuść gwiazdozbiór",
+    "moveHint": "Ustaw się pod meteorytem ◀ ▶ i strzelaj poprawną odpowiedzią",
+    "bestCombo": "Najlepsze combo",
+    "yourAnswer": "Twoja odpowiedź",
+    "correctAnswer": "Poprawna",
+    "noMistakes": "Bez błędów! 🎉",
+    "bossIncoming": "Boss!",
+    "bossDefeated": "Boss pokonany!",
+    "bossesDefeated": "Pokonani bossowie",
+    "pauseTitle": "Pauza",
+    "resume": "Kontynuuj",
+    "finishFlight": "Zakończ lot",
+    "finishNote": "Punkty i artiki za ten lot zostaną zapisane"
   },
   "textTasksTip": {
     "title": "Zadania tekstowe",

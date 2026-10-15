@@ -9766,7 +9766,10 @@
     "commonPoints": "TOTAL POINTS",
     "rank": "Rank:",
     "streak": "RECORD:",
-    "cabinet": "Logbook"
+    "cabinet": "Logbook",
+    "flights": "Flights",
+    "bosses": "Bosses",
+    "meteors": "Destroyed"
   },
   "galaxyRank": {
     "none": "EARTHLING",
@@ -9984,7 +9987,19 @@
     "newRecord": "NEW RECORD!",
     "check": "SCORE:",
     "again": "Fly again",
-    "constellations": "Leave constellation"
+    "constellations": "Leave constellation",
+    "moveHint": "Move under the meteor ◀ ▶ and shoot the right answer",
+    "bestCombo": "Best combo",
+    "yourAnswer": "Your answer",
+    "correctAnswer": "Correct",
+    "noMistakes": "No mistakes! 🎉",
+    "bossIncoming": "Boss!",
+    "bossDefeated": "Boss defeated!",
+    "bossesDefeated": "Bosses defeated",
+    "pauseTitle": "Pause",
+    "resume": "Continue",
+    "finishFlight": "Finish flight",
+    "finishNote": "Points and artiks for this flight will be saved"
   },
   "textTasksTip": {
     "title": "Text tasks",

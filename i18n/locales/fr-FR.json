@@ -9739,7 +9739,10 @@
     "commonPoints": "TOTAL POINTS",
     "rank": "Rang:",
     "streak": "RECORD:",
-    "cabinet": "Journal de bord"
+    "cabinet": "Journal de bord",
+    "flights": "Vols",
+    "bosses": "Boss",
+    "meteors": "Abattus"
   },
   "galaxyRank": {
     "none": "TERRIEN",
@@ -9957,7 +9960,19 @@
     "newRecord": "NOUVEAU RECORD !",
     "check": "SCORE :",
     "again": "Repartir en mission",
-    "constellations": "Quitter la constellation"
+    "constellations": "Quitter la constellation",
+    "moveHint": "Place-toi sous la météorite ◀ ▶ et tire la bonne réponse",
+    "bestCombo": "Meilleur combo",
+    "yourAnswer": "Ta réponse",
+    "correctAnswer": "Bonne réponse",
+    "noMistakes": "Aucune erreur ! 🎉",
+    "bossIncoming": "Boss !",
+    "bossDefeated": "Boss vaincu !",
+    "bossesDefeated": "Boss vaincus",
+    "pauseTitle": "Pause",
+    "resume": "Continuer",
+    "finishFlight": "Terminer le vol",
+    "finishNote": "Les points et artiks de ce vol seront conservés"
   },
   "textTasksTip": {
     "title": "Exercices de texte",

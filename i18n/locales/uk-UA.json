@@ -9749,7 +9749,10 @@
     "commonPoints": "ЗАГАЛЬНІ ОЧКИ",
     "rank": "Звання:",
     "streak": "РЕКОРД:",
-    "cabinet": "Бортовий журнал"
+    "cabinet": "Бортовий журнал",
+    "flights": "Польоти",
+    "bosses": "Боси",
+    "meteors": "Збито"
   },
   "galaxyRank": {
     "none": "ЗЕМЛЯНИН",
@@ -9967,7 +9970,19 @@
     "newRecord": "НОВИЙ РЕКОРД!",
     "check": "РАХУНОК:",
     "again": "Повторний виліт",
-    "constellations": "Покинути сузір'я"
+    "constellations": "Покинути сузір'я",
+    "moveHint": "Стань під метеорит ◀ ▶ і стріляй правильною відповіддю",
+    "bestCombo": "Найкраще комбо",
+    "yourAnswer": "Твоя відповідь",
+    "correctAnswer": "Правильна",
+    "noMistakes": "Без помилок! 🎉",
+    "bossIncoming": "Бос!",
+    "bossDefeated": "Боса переможено!",
+    "bossesDefeated": "Переможено босів",
+    "pauseTitle": "Пауза",
+    "resume": "Продовжити",
+    "finishFlight": "Завершити політ",
+    "finishNote": "Очки та артики за цей політ збережуться"
   },
   "textTasksTip": {
     "title": "Текстові завдання",

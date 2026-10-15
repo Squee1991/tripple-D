@@ -9752,7 +9752,10 @@
     "commonPoints": "TOPLAM PUAN",
     "rank": "Rütbe:",
     "streak": "REKOR:",
-    "cabinet": "Seyir defteri"
+    "cabinet": "Seyir defteri",
+    "flights": "Uçuşlar",
+    "bosses": "Bosslar",
+    "meteors": "Vurulan"
   },
   "galaxyRank": {
     "none": "DÜNYALI",
@@ -9970,7 +9973,19 @@
     "newRecord": "YENİ REKOR!",
     "check": "PUAN:",
     "again": "Yeniden havalan",
-    "constellations": "Takımyıldızdan ayrıl"
+    "constellations": "Takımyıldızdan ayrıl",
+    "moveHint": "Göktaşının altına geç ◀ ▶ ve doğru cevapla ateş et",
+    "bestCombo": "En iyi kombo",
+    "yourAnswer": "Senin cevabın",
+    "correctAnswer": "Doğru cevap",
+    "noMistakes": "Hiç hata yok! 🎉",
+    "bossIncoming": "Boss!",
+    "bossDefeated": "Boss yenildi!",
+    "bossesDefeated": "Yenilen bosslar",
+    "pauseTitle": "Duraklat",
+    "resume": "Devam et",
+    "finishFlight": "Uçuşu bitir",
+    "finishNote": "Bu uçuşun puanları ve artikleri kaydedilecek"
   },
   "textTasksTip": {
     "title": "Metin görevleri",

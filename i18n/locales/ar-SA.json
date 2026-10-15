@@ -9761,7 +9761,10 @@
     "commonPoints": "إجمالي النقاط",
     "rank": "الرتبة:",
     "streak": "الرقم القياسي:",
-    "cabinet": "سجل المتن"
+    "cabinet": "سجل المتن",
+    "flights": "الرحلات",
+    "bosses": "الزعماء",
+    "meteors": "المُسقَطة"
   },
   "galaxyRank": {
     "none": "أرضي",
@@ -9979,7 +9982,19 @@
     "newRecord": "رقم قياسي جديد!",
     "check": "النتيجة:",
     "again": "تحليق مرة أخرى",
-    "constellations": "مغادرة الكوكبة"
+    "constellations": "مغادرة الكوكبة",
+    "moveHint": "تحرّك تحت النيزك ◀ ▶ وأطلق الإجابة الصحيحة",
+    "bestCombo": "أفضل سلسلة",
+    "yourAnswer": "إجابتك",
+    "correctAnswer": "الإجابة الصحيحة",
+    "noMistakes": "بدون أخطاء! 🎉",
+    "bossIncoming": "الزعيم!",
+    "bossDefeated": "هُزم الزعيم!",
+    "bossesDefeated": "الزعماء المهزومون",
+    "pauseTitle": "إيقاف مؤقت",
+    "resume": "متابعة",
+    "finishFlight": "إنهاء الرحلة",
+    "finishNote": "سيتم حفظ النقاط والأرتيكس لهذه الرحلة"
   },
   "textTasksTip": {
     "title": "المهام النصية",

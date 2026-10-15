@@ -9743,7 +9743,10 @@
     "commonPoints": "PUNCTE TOTALE",
     "rank": "Rang:",
     "streak": "RECORD:",
-    "cabinet": "Jurnal de bord"
+    "cabinet": "Jurnal de bord",
+    "flights": "Zboruri",
+    "bosses": "Boși",
+    "meteors": "Doborâte"
   },
   "galaxyRank": {
     "none": "PĂMÂNTEAN",
@@ -9961,7 +9964,19 @@
     "newRecord": "RECORD NOU!",
     "check": "SCOR:",
     "again": "Zbor nou",
-    "constellations": "Părăsește constelația"
+    "constellations": "Părăsește constelația",
+    "moveHint": "Mută-te sub meteorit ◀ ▶ și trage cu răspunsul corect",
+    "bestCombo": "Cel mai bun combo",
+    "yourAnswer": "Răspunsul tău",
+    "correctAnswer": "Corect",
+    "noMistakes": "Fără greșeli! 🎉",
+    "bossIncoming": "Boss!",
+    "bossDefeated": "Boss învins!",
+    "bossesDefeated": "Boși învinși",
+    "pauseTitle": "Pauză",
+    "resume": "Continuă",
+    "finishFlight": "Încheie zborul",
+    "finishNote": "Punctele și artikii din acest zbor vor fi salvați"
   },
   "textTasksTip": {
     "title": "Sarcini de text",

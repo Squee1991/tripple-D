@@ -9743,7 +9743,10 @@
     "commonPoints": "PUNTOS TOTALES",
     "rank": "Rango:",
     "streak": "RÉCORD:",
-    "cabinet": "Diario de a bordo"
+    "cabinet": "Diario de a bordo",
+    "flights": "Vuelos",
+    "bosses": "Jefes",
+    "meteors": "Derribados"
   },
   "galaxyRank": {
     "none": "TERRÍCOLA",
@@ -9961,7 +9964,19 @@
     "newRecord": "¡NUEVO RÉCORD!",
     "check": "PUNTUACIÓN:",
     "again": "Volar de nuevo",
-    "constellations": "Salir de la constelación"
+    "constellations": "Salir de la constelación",
+    "moveHint": "Ponte debajo del meteorito ◀ ▶ y dispara la respuesta correcta",
+    "bestCombo": "Mejor combo",
+    "yourAnswer": "Tu respuesta",
+    "correctAnswer": "Correcta",
+    "noMistakes": "¡Sin errores! 🎉",
+    "bossIncoming": "¡Jefe!",
+    "bossDefeated": "¡Jefe derrotado!",
+    "bossesDefeated": "Jefes derrotados",
+    "pauseTitle": "Pausa",
+    "resume": "Continuar",
+    "finishFlight": "Terminar vuelo",
+    "finishNote": "Se guardarán los puntos y artiks de este vuelo"
   },
   "textTasksTip": {
     "title": "Tareas de texto",
