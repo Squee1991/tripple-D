@@ -1,4 +1,19 @@
 {
+  "dailyRun": {
+    "title": "السباق اليومي",
+    "subtitle": "{count} كلمة · محاولة واحدة يوميًا",
+    "play": "العب",
+    "todayResult": "اليوم: {score} / {total}",
+    "streakDays": "{count} أيام متتالية",
+    "nextIn": "سباق جديد بعد {hours} س {minutes} د",
+    "finishTitle": "انتهى السباق!",
+    "timeLabel": "الوقت",
+    "streakLabel": "أيام متتالية",
+    "rewardLabel": "المكافأة",
+    "mistakesTitle": "الأخطاء",
+    "noMistakes": "بدون أخطاء! 🎉",
+    "done": "تم"
+  },
   "reminders": {
     "title": "لا تفقد تقدمك!",
     "text": "سنذكّرك مرة واحدة يوميًا حتى لا تنقطع سلسلتك. متى يناسبك؟",
@@ -9107,7 +9122,9 @@
     "difficultDescriptionHard": "حياة واحدة، 5 ثوانٍ/كلمة",
     "loading": "جاري تحميل الكلمات...",
     "start": "ابدأ!",
-    "login": "سجّل الدخول للبدء"
+    "login": "سجّل الدخول للبدء",
+    "freeModeTitle": "الماراثون العادي",
+    "freeModeHint": "العب كما تشاء — اختر مستوى الصعوبة"
   },
   "marathonGame": {
     "notReadyTitle": "الرجاء الانتظار",
@@ -9123,7 +9140,9 @@
     "bestResult": "أفضل نتيجة لك:",
     "tryAgain": "حاول مجددًا",
     "back": "العودة لاختيار الصعوبة",
-    "main": "إلى الصفحة الرئيسية"
+    "main": "إلى الصفحة الرئيسية",
+    "streakMilestone": "{count} على التوالي!",
+    "toRecord": "حتى الرقم القياسي: {count}"
   },
   "rulesFirstBlock": {
     "title": "نظرية أدوات التعريف",

@@ -1,4 +1,19 @@
 {
+  "dailyRun": {
+    "title": "Kunlik poyga",
+    "subtitle": "{count} so‘z · kuniga bir urinish",
+    "play": "O‘ynash",
+    "todayResult": "Bugun: {score} / {total}",
+    "streakDays": "Ketma-ket {count} kun",
+    "nextIn": "Yangi poyga {hours} soat {minutes} daqiqadan keyin",
+    "finishTitle": "Poyga tugadi!",
+    "timeLabel": "Vaqt",
+    "streakLabel": "Ketma-ket kun",
+    "rewardLabel": "Mukofot",
+    "mistakesTitle": "Xatolar",
+    "noMistakes": "Xatosiz! 🎉",
+    "done": "Tayyor"
+  },
   "reminders": {
     "title": "Natijangni yo‘qotma!",
     "text": "Seriyang uzilmasligi uchun kuniga bir marta eslatamiz. Senga qachon qulay?",
@@ -9084,7 +9099,9 @@
     "difficultDescriptionHard": "1 ta hayot, 5 soniya/so‘z",
     "loading": "So‘zlar yuklanmoqda...",
     "start": "Boshlash!",
-    "login": "Boshlash uchun akkauntga kiring"
+    "login": "Boshlash uchun akkauntga kiring",
+    "freeModeTitle": "Oddiy marafon",
+    "freeModeHint": "Xohlagancha o‘yna — qiyinlikni tanla"
   },
   "marathonGame": {
     "notReadyTitle": "Iltimos, kuting",
@@ -9100,7 +9117,9 @@
     "bestResult": "Sizning eng yaxshi natijangiz:",
     "tryAgain": "Qayta urinib ko‘ring",
     "back": "Qiyinlikni tanlashga",
-    "main": "Asosiy sahifaga"
+    "main": "Asosiy sahifaga",
+    "streakMilestone": "Ketma-ket {count}!",
+    "toRecord": "Rekordgacha: {count}"
   },
   "rulesFirstBlock": {
     "title": "Artikllar nazariyasi",

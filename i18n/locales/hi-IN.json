@@ -1,4 +1,19 @@
 {
+  "dailyRun": {
+    "title": "दैनिक दौड़",
+    "subtitle": "{count} शब्द · दिन में एक प्रयास",
+    "play": "खेलें",
+    "todayResult": "आज: {score} / {total}",
+    "streakDays": "लगातार {count} दिन",
+    "nextIn": "नई दौड़ {hours} घं {minutes} मि में",
+    "finishTitle": "दौड़ पूरी हुई!",
+    "timeLabel": "समय",
+    "streakLabel": "लगातार दिन",
+    "rewardLabel": "इनाम",
+    "mistakesTitle": "गलतियाँ",
+    "noMistakes": "कोई गलती नहीं! 🎉",
+    "done": "हो गया"
+  },
   "reminders": {
     "title": "अपनी प्रगति न खोएँ!",
     "text": "हम दिन में एक बार याद दिलाएँगे ताकि आपकी स्ट्रीक न टूटे। आपके लिए कब सुविधाजनक है?",
@@ -9065,7 +9080,9 @@
     "difficultDescriptionHard": "1 जीवन, 5 सेकंड/शब्द",
     "loading": "शब्द लोड हो रहे हैं...",
     "start": "शुरू करें!",
-    "login": "शुरू करने के लिए लॉग इन करें"
+    "login": "शुरू करने के लिए लॉग इन करें",
+    "freeModeTitle": "सामान्य मैराथन",
+    "freeModeHint": "जितना चाहें खेलें — कठिनाई चुनें"
   },
   "marathonGame": {
     "notReadyTitle": "कृपया प्रतीक्षा करें",
@@ -9081,7 +9098,9 @@
     "bestResult": "आपका सर्वश्रेष्ठ परिणाम:",
     "tryAgain": "फिर से प्रयास करें",
     "back": "कठिनाई चुनाव पर वापस",
-    "main": "मुख्य पृष्ठ पर"
+    "main": "मुख्य पृष्ठ पर",
+    "streakMilestone": "लगातार {count}!",
+    "toRecord": "रिकॉर्ड तक: {count}"
   },
   "rulesFirstBlock": {
     "title": "आर्टिकल का सिद्धांत",

@@ -1,4 +1,19 @@
 {
+  "dailyRun": {
+    "title": "Daily run",
+    "subtitle": "{count} words · one try a day",
+    "play": "Play",
+    "todayResult": "Today: {score} / {total}",
+    "streakDays": "{count} d. in a row",
+    "nextIn": "New run in {hours} h {minutes} min",
+    "finishTitle": "Run complete!",
+    "timeLabel": "Time",
+    "streakLabel": "Days in a row",
+    "rewardLabel": "Reward",
+    "mistakesTitle": "Mistakes",
+    "noMistakes": "No mistakes! 🎉",
+    "done": "Done"
+  },
   "reminders": {
     "title": "Don't lose your progress!",
     "text": "We'll remind you once a day to keep your streak. When is it convenient?",
@@ -9112,7 +9127,9 @@
     "difficultDescriptionHard": "1 life, 5 sec/word",
     "loading": "Loading words...",
     "start": "Start!",
-    "login": "Log in to start"
+    "login": "Log in to start",
+    "freeModeTitle": "Classic marathon",
+    "freeModeHint": "Play as long as you like — choose a difficulty"
   },
   "marathonGame": {
     "notReadyTitle": "Please wait",
@@ -9128,7 +9145,9 @@
     "bestResult": "Your best result:",
     "tryAgain": "Try again",
     "back": "Back to difficulty selection",
-    "main": "Go to main page"
+    "main": "Go to main page",
+    "streakMilestone": "{count} in a row!",
+    "toRecord": "To record: {count}"
   },
   "rulesFirstBlock": {
     "title": "Article theory",

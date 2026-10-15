@@ -1,4 +1,19 @@
 {
+  "dailyRun": {
+    "title": "Щоденний забіг",
+    "subtitle": "{count} слів · одна спроба на день",
+    "play": "Грати",
+    "todayResult": "Сьогодні: {score} / {total}",
+    "streakDays": "{count} дн. поспіль",
+    "nextIn": "Новий забіг через {hours} год {minutes} хв",
+    "finishTitle": "Забіг завершено!",
+    "timeLabel": "Час",
+    "streakLabel": "Днів поспіль",
+    "rewardLabel": "Нагорода",
+    "mistakesTitle": "Помилки",
+    "noMistakes": "Без помилок! 🎉",
+    "done": "Готово"
+  },
   "reminders": {
     "title": "Не втрачай прогрес!",
     "text": "Нагадаємо раз на день, щоб серія не згоріла. Коли тобі зручно?",
@@ -9095,7 +9110,9 @@
     "difficultDescriptionHard": "1 життя, 5 сек/слово",
     "loading": "Завантаження слів...",
     "start": "Почати!",
-    "login": "Увійдіть, щоб почати"
+    "login": "Увійдіть, щоб почати",
+    "freeModeTitle": "Звичайний марафон",
+    "freeModeHint": "Грай скільки хочеш — обери складність"
   },
   "marathonGame": {
     "notReadyTitle": "Будь ласка, зачекайте",
@@ -9111,7 +9128,9 @@
     "bestResult": "Ваш найкращий результат:",
     "tryAgain": "Спробувати ще раз",
     "back": "Назад до вибору складності",
-    "main": "На головну сторінку"
+    "main": "На головну сторінку",
+    "streakMilestone": "{count} поспіль!",
+    "toRecord": "До рекорду: {count}"
   },
   "rulesFirstBlock": {
     "title": "Теорія артиклів",

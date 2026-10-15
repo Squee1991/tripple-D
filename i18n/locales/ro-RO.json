@@ -1,4 +1,19 @@
 {
+  "dailyRun": {
+    "title": "Cursa zilnică",
+    "subtitle": "{count} cuvinte · o încercare pe zi",
+    "play": "Joacă",
+    "todayResult": "Azi: {score} / {total}",
+    "streakDays": "{count} zile la rând",
+    "nextIn": "Cursă nouă în {hours} h {minutes} min",
+    "finishTitle": "Cursă încheiată!",
+    "timeLabel": "Timp",
+    "streakLabel": "Zile la rând",
+    "rewardLabel": "Recompensă",
+    "mistakesTitle": "Greșeli",
+    "noMistakes": "Fără greșeli! 🎉",
+    "done": "Gata"
+  },
   "reminders": {
     "title": "Nu-ți pierde progresul!",
     "text": "Îți amintim o dată pe zi ca seria să nu se piardă. Când îți convine?",
@@ -9089,7 +9104,9 @@
     "difficultDescriptionHard": "1 viață, 5 sec/cuvânt",
     "loading": "Se încarcă cuvintele...",
     "start": "Începe!",
-    "login": "Autentifică-te pentru a începe"
+    "login": "Autentifică-te pentru a începe",
+    "freeModeTitle": "Maraton clasic",
+    "freeModeHint": "Joacă oricât vrei — alege dificultatea"
   },
   "marathonGame": {
     "notReadyTitle": "Vă rugăm să așteptați",
@@ -9105,7 +9122,9 @@
     "bestResult": "Cel mai bun rezultat al tău:",
     "tryAgain": "Încearcă din nou",
     "back": "Înapoi la alegerea dificultății",
-    "main": "Spre pagina principală"
+    "main": "Spre pagina principală",
+    "streakMilestone": "{count} la rând!",
+    "toRecord": "Până la record: {count}"
   },
   "rulesFirstBlock": {
     "title": "Teoria articolelor",

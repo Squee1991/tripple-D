@@ -1,4 +1,19 @@
 {
+  "dailyRun": {
+    "title": "Ежедневный забег",
+    "subtitle": "{count} слов · одна попытка в день",
+    "play": "Играть",
+    "todayResult": "Сегодня: {score} / {total}",
+    "streakDays": "{count} дн. подряд",
+    "nextIn": "Новый забег через {hours} ч {minutes} мин",
+    "finishTitle": "Забег завершён!",
+    "timeLabel": "Время",
+    "streakLabel": "Дней подряд",
+    "rewardLabel": "Награда",
+    "mistakesTitle": "Ошибки",
+    "noMistakes": "Без ошибок! 🎉",
+    "done": "Готово"
+  },
   "reminders": {
     "title": "Не теряй прогресс!",
     "text": "Напомним раз в день, чтобы серия не сгорела. Когда тебе удобно?",
@@ -9102,7 +9117,9 @@
     "difficultDescriptionHard": "1 жизнь, 5 сек/слово",
     "loading": "Загрузка слов...",
     "start": "Начать!",
-    "login": "Войдите, чтобы начать"
+    "login": "Войдите, чтобы начать",
+    "freeModeTitle": "Обычный марафон",
+    "freeModeHint": "Играй сколько хочешь — выбери сложность"
   },
   "marathonGame": {
     "notReadyTitle": "Пожалуйста, подождите",
@@ -9118,7 +9135,9 @@
     "bestResult": "Ваш лучший результат:",
     "tryAgain": "Попробовать снова",
     "back": "К выбору сложности",
-    "main": "На главную страницу"
+    "main": "На главную страницу",
+    "streakMilestone": "{count} подряд!",
+    "toRecord": "До рекорда: {count}"
   },
   "rulesFirstBlock": {
     "title": "Теория артиклей",

@@ -1,4 +1,19 @@
 {
+  "dailyRun": {
+    "title": "Codzienny bieg",
+    "subtitle": "{count} słów · jedna próba dziennie",
+    "play": "Graj",
+    "todayResult": "Dziś: {score} / {total}",
+    "streakDays": "{count} dni z rzędu",
+    "nextIn": "Nowy bieg za {hours} godz. {minutes} min",
+    "finishTitle": "Bieg ukończony!",
+    "timeLabel": "Czas",
+    "streakLabel": "Dni z rzędu",
+    "rewardLabel": "Nagroda",
+    "mistakesTitle": "Błędy",
+    "noMistakes": "Bez błędów! 🎉",
+    "done": "Gotowe"
+  },
   "reminders": {
     "title": "Nie trać postępów!",
     "text": "Przypomnimy raz dziennie, żeby seria nie przepadła. Kiedy ci pasuje?",
@@ -9106,7 +9121,9 @@
     "difficultDescriptionHard": "1 życie, 5 sek/słowo",
     "loading": "Ładowanie słów...",
     "start": "Start!",
-    "login": "Zaloguj się, aby rozpocząć"
+    "login": "Zaloguj się, aby rozpocząć",
+    "freeModeTitle": "Zwykły maraton",
+    "freeModeHint": "Graj, ile chcesz — wybierz poziom trudności"
   },
   "marathonGame": {
     "notReadyTitle": "Proszę czekać",
@@ -9122,7 +9139,9 @@
     "bestResult": "Twój najlepszy wynik:",
     "tryAgain": "Spróbuj ponownie",
     "back": "Wróć do wyboru poziomu trudności",
-    "main": "Strona główna"
+    "main": "Strona główna",
+    "streakMilestone": "{count} z rzędu!",
+    "toRecord": "Do rekordu: {count}"
   },
   "rulesFirstBlock": {
     "title": "Teoria rodzajników",

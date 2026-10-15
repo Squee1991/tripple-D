@@ -52,10 +52,33 @@ export async function unlockAudioByUserGesture() {
 	unlocked = true
 }
 
+// Высота звука: 1 — обычная, больше — выше (звук играется быстрее)
+function setCorrectPitch(rate) {
+	correctEl.preservesPitch = false
+	correctEl.mozPreservesPitch = false
+	correctEl.webkitPreservesPitch = false
+	correctEl.playbackRate = rate
+}
+
 export function playCorrect() {
 	if (!isClient() || !enabled) return
 	initSound()
 	if (!correctEl) return
+	setCorrectPitch(1)
+	correctEl.currentTime = 0
+	correctEl.play().catch(() => {})
+}
+
+// Правильный ответ в серии: каждый следующий звучит чуть выше (до 12-го шага)
+const RISING_PITCH_STEP = 0.05
+const RISING_PITCH_MAX_STEPS = 12
+
+export function playCorrectRising(streak) {
+	if (!isClient() || !enabled) return
+	initSound()
+	if (!correctEl) return
+	const step = Math.min(Math.max(streak, 0), RISING_PITCH_MAX_STEPS)
+	setCorrectPitch(1 + step * RISING_PITCH_STEP)
 	correctEl.currentTime = 0
 	correctEl.play().catch(() => {})
 }

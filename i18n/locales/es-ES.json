@@ -1,4 +1,19 @@
 {
+  "dailyRun": {
+    "title": "Carrera diaria",
+    "subtitle": "{count} palabras · un intento al día",
+    "play": "Jugar",
+    "todayResult": "Hoy: {score} / {total}",
+    "streakDays": "{count} días seguidos",
+    "nextIn": "Nueva carrera en {hours} h {minutes} min",
+    "finishTitle": "¡Carrera completada!",
+    "timeLabel": "Tiempo",
+    "streakLabel": "Días seguidos",
+    "rewardLabel": "Premio",
+    "mistakesTitle": "Errores",
+    "noMistakes": "¡Sin errores! 🎉",
+    "done": "Listo"
+  },
   "reminders": {
     "title": "¡No pierdas tu progreso!",
     "text": "Te lo recordaremos una vez al día para que no pierdas tu racha. ¿Cuándo te viene bien?",
@@ -9089,7 +9104,9 @@
     "difficultDescriptionHard": "1 vida, 5 s/palabra",
     "loading": "Cargando palabras...",
     "start": "¡Empezar!",
-    "login": "Inicia sesión para empezar"
+    "login": "Inicia sesión para empezar",
+    "freeModeTitle": "Maratón clásico",
+    "freeModeHint": "Juega todo lo que quieras: elige la dificultad"
   },
   "marathonGame": {
     "notReadyTitle": "Por favor, espera",
@@ -9105,7 +9122,9 @@
     "bestResult": "Tu mejor resultado:",
     "tryAgain": "Intentar de nuevo",
     "back": "Volver a la elección de dificultad",
-    "main": "A la página principal"
+    "main": "A la página principal",
+    "streakMilestone": "¡{count} seguidas!",
+    "toRecord": "Para el récord: {count}"
   },
   "rulesFirstBlock": {
     "title": "Teoría de los artículos",

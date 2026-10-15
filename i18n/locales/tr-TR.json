@@ -1,4 +1,19 @@
 {
+  "dailyRun": {
+    "title": "Günlük koşu",
+    "subtitle": "{count} kelime · günde bir deneme",
+    "play": "Oyna",
+    "todayResult": "Bugün: {score} / {total}",
+    "streakDays": "{count} gün üst üste",
+    "nextIn": "Yeni koşu {hours} sa {minutes} dk sonra",
+    "finishTitle": "Koşu tamamlandı!",
+    "timeLabel": "Süre",
+    "streakLabel": "Gün üst üste",
+    "rewardLabel": "Ödül",
+    "mistakesTitle": "Hatalar",
+    "noMistakes": "Hiç hata yok! 🎉",
+    "done": "Tamam"
+  },
   "reminders": {
     "title": "İlerlemeni kaybetme!",
     "text": "Serin bozulmasın diye günde bir kez hatırlatacağız. Sana ne zaman uygun?",
@@ -9098,7 +9113,9 @@
     "difficultDescriptionHard": "1 can, 5 sn/kelime",
     "loading": "Kelimeler yükleniyor...",
     "start": "Başla!",
-    "login": "Başlamak için giriş yapın"
+    "login": "Başlamak için giriş yapın",
+    "freeModeTitle": "Klasik maraton",
+    "freeModeHint": "İstediğin kadar oyna — zorluğu seç"
   },
   "marathonGame": {
     "notReadyTitle": "Lütfen bekleyin",
@@ -9114,7 +9131,9 @@
     "bestResult": "En iyi sonucunuz:",
     "tryAgain": "Tekrar dene",
     "back": "Zorluk seçimine geri dön",
-    "main": "Ana sayfaya git"
+    "main": "Ana sayfaya git",
+    "streakMilestone": "Üst üste {count}!",
+    "toRecord": "Rekora: {count}"
   },
   "rulesFirstBlock": {
     "title": "Tanımlık teorisi",

@@ -1,4 +1,19 @@
 {
+  "dailyRun": {
+    "title": "Course du jour",
+    "subtitle": "{count} mots · un essai par jour",
+    "play": "Jouer",
+    "todayResult": "Aujourd’hui : {score} / {total}",
+    "streakDays": "{count} j. d’affilée",
+    "nextIn": "Nouvelle course dans {hours} h {minutes} min",
+    "finishTitle": "Course terminée !",
+    "timeLabel": "Temps",
+    "streakLabel": "Jours d’affilée",
+    "rewardLabel": "Récompense",
+    "mistakesTitle": "Erreurs",
+    "noMistakes": "Aucune erreur ! 🎉",
+    "done": "Terminé"
+  },
   "reminders": {
     "title": "Ne perds pas tes progrès !",
     "text": "On te le rappellera une fois par jour pour garder ta série. Quand est-ce que ça t'arrange ?",
@@ -9085,7 +9100,9 @@
     "difficultDescriptionHard": "1 vie, 5 sec/mot",
     "loading": "Chargement des mots...",
     "start": "C'est parti !",
-    "login": "Connectez-vous pour commencer"
+    "login": "Connectez-vous pour commencer",
+    "freeModeTitle": "Marathon classique",
+    "freeModeHint": "Joue autant que tu veux — choisis la difficulté"
   },
   "marathonGame": {
     "notReadyTitle": "Veuillez patienter",
@@ -9101,7 +9118,9 @@
     "bestResult": "Votre meilleur résultat :",
     "tryAgain": "Réessayer",
     "back": "Choisir la difficulté",
-    "main": "Retour à l'accueil"
+    "main": "Retour à l'accueil",
+    "streakMilestone": "{count} d’affilée !",
+    "toRecord": "Avant le record : {count}"
   },
   "rulesFirstBlock": {
     "title": "Théorie des articles",
