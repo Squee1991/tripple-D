@@ -1,4 +1,21 @@
 {
+  "reminders": {
+    "title": "Don't lose your progress!",
+    "text": "We'll remind you once a day to keep your streak. When is it convenient?",
+    "morning": "Morning",
+    "afternoon": "Afternoon",
+    "evening": "Evening",
+    "night": "Night",
+    "custom": "Custom time",
+    "enable": "Remind me",
+    "later": "Not now",
+    "n1Title": "📚 Time for German!",
+    "n1Body": "5 minutes a day — and your goal is done",
+    "n2Title": "🔥 Keep your streak!",
+    "n2Body": "One quick lesson keeps your streak alive",
+    "n3Title": "🦔 Your hedgehog misses you",
+    "n3Body": "A new quest is waiting for you"
+  },
   "definiteIndefiniteQuestOne": {
     "title": "Battle for Endings",
     "description": "Mixed practice: indefinite and definite articles in sentences.",

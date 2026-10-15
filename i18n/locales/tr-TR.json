@@ -1,4 +1,21 @@
 {
+  "reminders": {
+    "title": "İlerlemeni kaybetme!",
+    "text": "Serin bozulmasın diye günde bir kez hatırlatacağız. Sana ne zaman uygun?",
+    "morning": "Sabah",
+    "afternoon": "Öğle",
+    "evening": "Akşam",
+    "night": "Gece",
+    "custom": "Kendi saatin",
+    "enable": "Hatırlat",
+    "later": "Şimdi değil",
+    "n1Title": "📚 Almanca zamanı!",
+    "n1Body": "Günde 5 dakika — ve hedefin tamam",
+    "n2Title": "🔥 Serini koru!",
+    "n2Body": "Kısa bir ders ve serin devam eder",
+    "n3Title": "🦔 Kirpin seni özledi",
+    "n3Body": "Yeni bir görev seni bekliyor"
+  },
   "definiteIndefiniteQuestOne": {
     "title": "Ekler İçin Savaş",
     "description": "Karışık pratik: cümlelerde belirsiz ve belirli artikeller.",

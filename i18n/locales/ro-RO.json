@@ -1,4 +1,21 @@
 {
+  "reminders": {
+    "title": "Nu-ți pierde progresul!",
+    "text": "Îți amintim o dată pe zi ca seria să nu se piardă. Când îți convine?",
+    "morning": "Dimineața",
+    "afternoon": "Prânz",
+    "evening": "Seara",
+    "night": "Noaptea",
+    "custom": "Ora ta",
+    "enable": "Amintește-mi",
+    "later": "Nu acum",
+    "n1Title": "📚 E timpul pentru germană!",
+    "n1Body": "5 minute pe zi — și obiectivul e atins",
+    "n2Title": "🔥 Păstrează-ți seria!",
+    "n2Body": "O lecție scurtă și seria continuă",
+    "n3Title": "🦔 Ariciului îi e dor de tine",
+    "n3Body": "Te așteaptă o misiune nouă"
+  },
   "definiteIndefiniteQuestOne": {
     "title": "Bătălia pentru terminații",
     "description": "Practică mixtă: articole nehotărâte și hotărâte în propoziții.",

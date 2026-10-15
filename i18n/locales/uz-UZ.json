@@ -1,4 +1,21 @@
 {
+  "reminders": {
+    "title": "Natijangni yo‘qotma!",
+    "text": "Seriyang uzilmasligi uchun kuniga bir marta eslatamiz. Senga qachon qulay?",
+    "morning": "Ertalab",
+    "afternoon": "Kunduzi",
+    "evening": "Kechqurun",
+    "night": "Tunda",
+    "custom": "O‘z vaqting",
+    "enable": "Eslatib turish",
+    "later": "Hozir emas",
+    "n1Title": "📚 Nemis tili vaqti!",
+    "n1Body": "Kuniga 5 daqiqa — va maqsad bajarildi",
+    "n2Title": "🔥 Seriyangni saqla!",
+    "n2Body": "Bitta qisqa dars — va seriya davom etadi",
+    "n3Title": "🦔 Tipratikaning seni sog‘indi",
+    "n3Body": "Seni yangi kvest kutmoqda"
+  },
   "definiteIndefiniteQuestOne": {
     "title": "Qo'shimchalar uchun jang",
     "description": "Aralash amaliyot: gaplarda noaniq va aniq artikllar.",

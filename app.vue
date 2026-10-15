@@ -36,6 +36,7 @@ import { useHead } from '#imports'
 import { Capacitor } from '@capacitor/core'
 import VNetwork from "./src/components/V-network.vue";
 import { initAdmob } from "./utils/admob.js";
+import { scheduleReminders } from "./utils/reminders.js";
 import VMarathonModal from "~/src/components/overlays/V-marathonModal.vue";
 const chainStore = userChainStore()
 const { locale, t } = useI18n()
@@ -96,6 +97,8 @@ const onToastFinished = () => {
 onMounted(async () => {
   rankStore.restorePendingReward()
   await initAdmob();
+  // Продлеваем напоминания на неделю вперёд и обновляем язык их текстов
+  scheduleReminders(t);
   achStore.initializeProgressTracking()
   if (Capacitor.isNativePlatform()) {
     try {
@@ -135,6 +138,11 @@ onMounted(async () => {
 
 onUnmounted(() => {
   daily.stop()
+})
+
+// Сменили язык приложения — пересоздаём напоминания с текстами на новом языке
+watch(locale, () => {
+  scheduleReminders(t)
 })
 
 watch(() => authStore.initialized, (isReady) => {

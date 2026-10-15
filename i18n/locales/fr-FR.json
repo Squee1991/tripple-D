@@ -1,4 +1,21 @@
 {
+  "reminders": {
+    "title": "Ne perds pas tes progrès !",
+    "text": "On te le rappellera une fois par jour pour garder ta série. Quand est-ce que ça t'arrange ?",
+    "morning": "Matin",
+    "afternoon": "Midi",
+    "evening": "Soir",
+    "night": "Nuit",
+    "custom": "Ton heure",
+    "enable": "Me rappeler",
+    "later": "Pas maintenant",
+    "n1Title": "📚 C'est l'heure de l'allemand !",
+    "n1Body": "5 minutes par jour et ton objectif est atteint",
+    "n2Title": "🔥 Garde ta série !",
+    "n2Body": "Une petite leçon et ta série continue",
+    "n3Title": "🦔 Ton hérisson s'ennuie de toi",
+    "n3Body": "Une nouvelle quête t'attend"
+  },
   "definiteIndefiniteQuestOne": {
     "title": "Bataille pour les terminaisons",
     "description": "Pratique mixte : articles indéfinis et définis dans les phrases.",

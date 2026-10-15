@@ -1,4 +1,21 @@
 {
+  "reminders": {
+    "title": "¡No pierdas tu progreso!",
+    "text": "Te lo recordaremos una vez al día para que no pierdas tu racha. ¿Cuándo te viene bien?",
+    "morning": "Mañana",
+    "afternoon": "Mediodía",
+    "evening": "Tarde",
+    "night": "Noche",
+    "custom": "Tu hora",
+    "enable": "Recordarme",
+    "later": "Ahora no",
+    "n1Title": "📚 ¡Hora de alemán!",
+    "n1Body": "5 minutos al día y tu meta está cumplida",
+    "n2Title": "🔥 ¡Mantén tu racha!",
+    "n2Body": "Una lección rápida mantiene tu racha",
+    "n3Title": "🦔 Tu erizo te echa de menos",
+    "n3Body": "Te espera una nueva misión"
+  },
   "definiteIndefiniteQuestOne": {
     "title": "Batalla por las terminaciones",
     "description": "Práctica mixta: artículos indefinidos y definidos en oraciones.",

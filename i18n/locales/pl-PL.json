@@ -1,4 +1,21 @@
 {
+  "reminders": {
+    "title": "Nie trać postępów!",
+    "text": "Przypomnimy raz dziennie, żeby seria nie przepadła. Kiedy ci pasuje?",
+    "morning": "Rano",
+    "afternoon": "Południe",
+    "evening": "Wieczór",
+    "night": "Noc",
+    "custom": "Własna godzina",
+    "enable": "Przypominaj",
+    "later": "Nie teraz",
+    "n1Title": "📚 Czas na niemiecki!",
+    "n1Body": "5 minut dziennie — i cel osiągnięty",
+    "n2Title": "🔥 Utrzymaj swoją serię!",
+    "n2Body": "Jedna krótka lekcja i seria trwa dalej",
+    "n3Title": "🦔 Jeżyk za tobą tęskni",
+    "n3Body": "Czeka na ciebie nowy quest"
+  },
   "definiteIndefiniteQuestOne": {
     "title": "Bitwa o końcówki",
     "description": "Praktyka mieszana: rodzajniki nieokreślone i określone w zdaniach.",
