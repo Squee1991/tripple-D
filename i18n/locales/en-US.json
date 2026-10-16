@@ -8401,6 +8401,16 @@
     "answer": "Ignores a mistake"
   },
   "guessWord": {
+    "dailyTitle": "Word of the day",
+    "dailyText": "One word for everyone, one try. Guess it and get {coins} coins!",
+    "dailyPlay": "Play",
+    "dailyContinue": "Continue",
+    "dailyWon": "Guessed:",
+    "dailyLost": "Not guessed:",
+    "dailyNext": "New word in {hours} h {minutes} min",
+    "dailyShare": "Share",
+    "dailyCopied": "Copied!",
+    "dailyPlayNormal": "Regular game",
     "subtitle": "Guess the word and level up your German!",
     "theme": "Theme:",
     "back": "Back",

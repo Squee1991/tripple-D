@@ -8373,6 +8373,16 @@
     "answer": "Xatoga ko‘z yumadi"
   },
   "guessWord": {
+    "dailyTitle": "Kun so‘zi",
+    "dailyText": "Hamma uchun bitta so‘z va bitta urinish. Toping va {coins} tanga oling!",
+    "dailyPlay": "O‘ynash",
+    "dailyContinue": "Davom etish",
+    "dailyWon": "Topildi:",
+    "dailyLost": "Topilmadi:",
+    "dailyNext": "Yangi so‘z {hours} soat {minutes} daqiqadan keyin",
+    "dailyShare": "Ulashish",
+    "dailyCopied": "Nusxalandi!",
+    "dailyPlayNormal": "Oddiy o‘yin",
     "subtitle": "So'zni toping va nemis tilingizni rivojlantiring!",
     "theme": "Mavzu:",
     "back": "Orqaga",

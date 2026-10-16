@@ -8394,6 +8394,16 @@
     "answer": "Przymknie oko na błąd"
   },
   "guessWord": {
+    "dailyTitle": "Słowo dnia",
+    "dailyText": "Jedno słowo dla wszystkich i jedna próba. Zgadnij i zdobądź {coins} monety!",
+    "dailyPlay": "Graj",
+    "dailyContinue": "Kontynuuj",
+    "dailyWon": "Odgadnięte:",
+    "dailyLost": "Nieodgadnięte:",
+    "dailyNext": "Nowe słowo za {hours} godz. {minutes} min",
+    "dailyShare": "Udostępnij",
+    "dailyCopied": "Skopiowano!",
+    "dailyPlayNormal": "Zwykła gra",
     "subtitle": "Odgadnij słowo i podszkol swój niemiecki!",
     "theme": "Temat:",
     "back": "Wstecz",

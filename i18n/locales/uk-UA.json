@@ -8384,6 +8384,16 @@
     "answer": "Закриває очі на помилку"
   },
   "guessWord": {
+    "dailyTitle": "Слово дня",
+    "dailyText": "Одне слово для всіх і одна спроба. Відгадай і отримай {coins} монети!",
+    "dailyPlay": "Грати",
+    "dailyContinue": "Продовжити",
+    "dailyWon": "Відгадано:",
+    "dailyLost": "Не відгадано:",
+    "dailyNext": "Нове слово через {hours} год {minutes} хв",
+    "dailyShare": "Поділитися",
+    "dailyCopied": "Скопійовано!",
+    "dailyPlayNormal": "Звичайна гра",
     "subtitle": "Відгадай слово та прокачай свою німецьку!",
     "theme": "Тема:",
     "back": "Назад",

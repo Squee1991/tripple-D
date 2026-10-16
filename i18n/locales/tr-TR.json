@@ -8387,6 +8387,16 @@
     "answer": "Hataları görmezden gelir"
   },
   "guessWord": {
+    "dailyTitle": "Günün kelimesi",
+    "dailyText": "Herkes için tek kelime, tek deneme. Bil ve {coins} jeton kazan!",
+    "dailyPlay": "Oyna",
+    "dailyContinue": "Devam et",
+    "dailyWon": "Bilindi:",
+    "dailyLost": "Bilinemedi:",
+    "dailyNext": "Yeni kelime {hours} sa {minutes} dk sonra",
+    "dailyShare": "Paylaş",
+    "dailyCopied": "Kopyalandı!",
+    "dailyPlayNormal": "Normal oyun",
     "subtitle": "Kelimeyi tahmin et ve Almancanı geliştir!",
     "theme": "Tema:",
     "back": "Geri",

@@ -8396,6 +8396,16 @@
     "answer": "يتجاهل الخطأ"
   },
   "guessWord": {
+    "dailyTitle": "كلمة اليوم",
+    "dailyText": "كلمة واحدة للجميع ومحاولة واحدة. خمّنها واحصل على {coins} عملات!",
+    "dailyPlay": "العب",
+    "dailyContinue": "تابع",
+    "dailyWon": "تم التخمين:",
+    "dailyLost": "لم يتم التخمين:",
+    "dailyNext": "كلمة جديدة بعد {hours} س {minutes} د",
+    "dailyShare": "مشاركة",
+    "dailyCopied": "تم النسخ!",
+    "dailyPlayNormal": "لعبة عادية",
     "subtitle": "خمن الكلمة وطوّر لغتك الألمانية!",
     "theme": "الموضوع:",
     "back": "رجوع",

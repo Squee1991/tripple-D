@@ -8354,6 +8354,16 @@
     "answer": "गलती को अनदेखा करता है"
   },
   "guessWord": {
+    "dailyTitle": "आज का शब्द",
+    "dailyText": "सबके लिए एक शब्द, एक ही मौका। अनुमान लगाएँ और {coins} सिक्के पाएँ!",
+    "dailyPlay": "खेलें",
+    "dailyContinue": "जारी रखें",
+    "dailyWon": "अनुमान सही:",
+    "dailyLost": "अनुमान नहीं लगा:",
+    "dailyNext": "नया शब्द {hours} घं {minutes} मि में",
+    "dailyShare": "शेयर करें",
+    "dailyCopied": "कॉपी हो गया!",
+    "dailyPlayNormal": "सामान्य खेल",
     "subtitle": "शब्द का अनुमान लगाएं और अपनी जर्मन भाषा को बेहतर बनाएं!",
     "theme": "विषय:",
     "back": "पीछे",

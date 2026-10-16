@@ -8378,6 +8378,16 @@
     "answer": "Hace la vista gorda ante un error"
   },
   "guessWord": {
+    "dailyTitle": "Palabra del día",
+    "dailyText": "Una palabra para todos y un solo intento. ¡Adivínala y gana {coins} monedas!",
+    "dailyPlay": "Jugar",
+    "dailyContinue": "Continuar",
+    "dailyWon": "Adivinada:",
+    "dailyLost": "No adivinada:",
+    "dailyNext": "Nueva palabra en {hours} h {minutes} min",
+    "dailyShare": "Compartir",
+    "dailyCopied": "¡Copiado!",
+    "dailyPlayNormal": "Juego normal",
     "subtitle": "¡Adivina la palabra y mejora tu alemán!",
     "theme": "Tema:",
     "back": "Atrás",

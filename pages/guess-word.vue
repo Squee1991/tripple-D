@@ -14,7 +14,7 @@
             <img class="guess__icon-header" src="../assets/images/heartInfo.svg" alt="heart">
             <span class="guest__header-point">{{ store.attempts }}</span>
           </div>
-          <button class="ios-btn-icon" @click="handleRestart" title="Начать заново">
+          <button v-if="!store.isDailyMode" class="ios-btn-icon" @click="handleRestart" title="Начать заново">
             <img class="guess__icon-header -repeat"
                  :class="{ 'spin-anim': isSpinning }"
                  src="../assets/images/repeat.svg"
@@ -27,11 +27,38 @@
           <img class="guess__icon" src="../assets/images/GuessIcon.svg" alt="">
         </div>
         <p class="subtitle">{{ t('guessWord.subtitle') }}</p>
+
+        <!-- Слово дня: одно слово для всех, одна попытка -->
+        <div class="daily-card">
+          <div class="daily-card__head">
+            <span class="daily-card__title">📅 {{ t('guessWord.dailyTitle') }}</span>
+            <span v-if="store.currentDailyStreak" class="daily-card__streak">🔥 {{ store.currentDailyStreak }}</span>
+          </div>
+          <template v-if="store.isDailyPlayedToday">
+            <p class="daily-card__result">
+              {{ store.dailyResult.isWin ? t('guessWord.dailyWon') : t('guessWord.dailyLost') }}
+              <strong>{{ store.dailyResult.word }}</strong>
+            </p>
+            <p class="daily-card__marks">{{ store.dailyResult.marks }}</p>
+            <p class="daily-card__hint">{{ t('guessWord.dailyNext', timeUntilNextWord) }}</p>
+            <button class="daily-card__button" @click="shareDailyResult">
+              {{ isShareCopied ? t('guessWord.dailyCopied') : t('guessWord.dailyShare') }}
+            </button>
+          </template>
+          <template v-else>
+            <p class="daily-card__hint">{{ t('guessWord.dailyText', {coins: DAILY_WORD_COINS}) }}</p>
+            <button class="daily-card__button" @click="startDailyGame">
+              {{ isDailyInProgress ? t('guessWord.dailyContinue') : t('guessWord.dailyPlay') }}
+            </button>
+          </template>
+        </div>
+
         <button class="ios-btn-primary btn-bounce" @click="startGame(false)">
           {{ t('guessWord.startGame') }}
         </button>
       </div>
       <div v-else class="screen-game">
+        <div v-if="store.isDailyMode" class="daily-chip">📅 {{ t('guessWord.dailyTitle') }}</div>
         <div v-if="themeText" class="theme-chip">
           💡 {{ t('guessWord.theme') }} <strong>{{ themeText }}</strong>
         </div>
@@ -157,7 +184,16 @@
             <span class="highlight-error">{{ store.answer }}</span>
           </p>
           <div class="fs-actions">
-            <button class="ios-btn-primary fs-action-btn" @click="startGame(false)">
+            <!-- После поражения — без рекламы: не наказываем за проигрыш -->
+            <template v-if="store.isDailyMode">
+              <button class="ios-btn-primary fs-action-btn" @click="shareDailyResult">
+                {{ isShareCopied ? t('guessWord.dailyCopied') : t('guessWord.dailyShare') }}
+              </button>
+              <button class="ios-btn-primary fs-action-btn" @click="startGame(true)">
+                {{ t('guessWord.dailyPlayNormal') }}
+              </button>
+            </template>
+            <button v-else class="ios-btn-primary fs-action-btn" @click="startGame(true)">
               {{ t('guessWord.tryAgain') }}
             </button>
             <NuxtLink to="/" class="ios-btn-secondary fs-link-btn">{{ t('guessWord.btnToMain') }}</NuxtLink>
@@ -174,7 +210,7 @@
 </template>
 
 <script setup>
-import {ref, watch, onUnmounted, computed} from 'vue'
+import {ref, watch, onMounted, onUnmounted, computed} from 'vue'
 import {useGuessWordStore} from '../store/guesStore.js'
 import {userlangStore} from '~/store/learningStore.js'
 import {userAuthStore} from '~/store/authStore.js'
@@ -192,8 +228,10 @@ import Support from '~/assets/images/Support.svg'
 import Great from '~/assets/images/Greatcon.svg'
 
 import {showInterstitial} from '../utils/admob.js'
+import {DAILY_WORD_COINS, buildDailyShareText, getTimeUntilNextWord} from '../utils/dailyWord.js'
 
 const {t} = useI18n()
+const {$track} = useNuxtApp()
 const store = useGuessWordStore()
 const langStore = userlangStore()
 const authStore = userAuthStore()
@@ -227,28 +265,45 @@ const shouldShowArticleModal = computed(() => {
   return showArticleModal.value && !showStreakModal.value && !isWaitingForStreakClose.value
 })
 
-const questStoreAdapter = computed(() => ({
+// Монеты в анимации награды: за слово дня — больше
+const questStoreAdapter = {
   hasMistakes: false,
   quest: {
     rewards: {
       xp: 0,
-      points: 1
+      get points() {
+        return store.isDailyMode ? DAILY_WORD_COINS : 1
+      }
     }
   }
-}))
+}
 
 const {
   animStep,
   displayCoins,
   confettiParticles,
   resetAnimations
-} = useQuestAnimations(questStoreAdapter.value, false, shouldShowArticleModal)
+} = useQuestAnimations(questStoreAdapter, false, shouldShowArticleModal)
 
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
 
 let intervalId = null
+
+// Слово дня на стартовом экране
+const clockNow = ref(Date.now())
+let clockIntervalId = null
+const timeUntilNextWord = computed(() => getTimeUntilNextWord(clockNow.value))
+// Перечитываем, когда возвращаемся на стартовый экран
+const isDailyInProgress = computed(() => !isStarted.value && store.hasDailyInProgress())
+const isShareCopied = ref(false)
+
+onMounted(() => {
+  clockIntervalId = setInterval(() => {
+    clockNow.value = Date.now()
+  }, 30000)
+})
 const timePassed = computed(() => {
   if (!store.timeStarted) return 0
   return Math.max(0, Math.floor((now.value - store.timeStarted) / 1000))
@@ -334,6 +389,11 @@ function handleStreakClosed() {
 function closeArticleModal() {
   showArticleModal.value = false
   resetAnimations()
+  // После слова дня — обратно на стартовый экран, там результат и «Поделиться»
+  if (store.isDailyMode) {
+    isStarted.value = false
+    return
+  }
   startGame(true)
 }
 
@@ -341,7 +401,7 @@ function closeLoseModal() {
   showLoseModal.value = false
 }
 
-function startGame(skipAd = false) {
+function resetRoundView() {
   showArticleModal.value = false
   showLoseModal.value = false
   showStreakModal.value = false
@@ -353,6 +413,10 @@ function startGame(skipAd = false) {
   streakWasIncremented.value = false
   resetAnimations()
   stopTimer()
+}
+
+function startGame(skipAd = false) {
+  resetRoundView()
 
   const startSession = () => {
     store.startGame()
@@ -375,6 +439,44 @@ function startGame(skipAd = false) {
   })
 }
 
+// Слово дня — без рекламы перед стартом: это ежедневная привычка
+async function startDailyGame() {
+  resetRoundView()
+  const isContinued = isDailyInProgress.value
+  const isDailyStarted = await store.startDailyGame()
+  if (!isDailyStarted) return
+  $track('guess_daily_started', {is_continued: isContinued})
+  now.value = Date.now()
+  isStarted.value = true
+  guessInput.value = ''
+  articleResult.value = null
+  startTimer()
+}
+
+async function shareDailyResult() {
+  if (!store.dailyResult) return
+  const text = buildDailyShareText({
+    title: t('guessWord.dailyTitle'),
+    result: store.dailyResult,
+    streak: store.currentDailyStreak,
+    maxAttempts: store.maxAttempts
+  })
+  $track('guess_daily_shared', {is_win: store.dailyResult.isWin})
+  try {
+    if (navigator.share) {
+      await navigator.share({text})
+      return
+    }
+  } catch (error) {
+    if (error?.name === 'AbortError') return
+  }
+  try {
+    await navigator.clipboard.writeText(text)
+    isShareCopied.value = true
+    setTimeout(() => isShareCopied.value = false, 2000)
+  } catch {}
+}
+
 function guessWord() {
   if (!guessInput.value.trim()) return
   store.tryGuessWord(guessInput.value)
@@ -390,11 +492,15 @@ function getKeyClass(letter) {
   return 'key-btn--wrong'
 }
 
-onUnmounted(() => stopTimer())
+onUnmounted(() => {
+  stopTimer()
+  clearInterval(clockIntervalId)
+})
 
 watch(() => store.win, (isWin) => {
   if (isWin) {
     stopTimer()
+    if (store.isDailyMode) $track('guess_daily_finished', {is_win: true, attempts_left: store.attempts})
 
     isWaitingForStreakClose.value = true
     setTimeout(async () => {
@@ -419,6 +525,7 @@ watch(() => store.win, (isWin) => {
 watch(() => store.lose, (isLose) => {
   if (isLose) {
     stopTimer()
+    if (store.isDailyMode) $track('guess_daily_finished', {is_win: false, attempts_left: 0})
     setTimeout(() => {
       showLoseModal.value = true
     }, 600)
@@ -542,6 +649,92 @@ watch(() => store.lose, (isLose) => {
   font-size: 17px;
   color: #8e8e93;
   margin-bottom: 40px;
+}
+
+/* Слово дня */
+.daily-card {
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 24px;
+  padding: 16px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+  box-shadow: 0 6px 0 #c2410c;
+  color: #ffffff;
+  text-align: left;
+}
+
+.daily-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.daily-card__title {
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.daily-card__streak {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.25);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.daily-card__result {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.daily-card__marks {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.3;
+  word-break: break-all;
+}
+
+.daily-card__hint {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.daily-card__button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border: none;
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+  color: #c2410c;
+  font-family: "Nunito", sans-serif;
+  font-size: 17px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.daily-card__button:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.daily-chip {
+  align-self: center;
+  margin-bottom: 10px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: rgba(249, 115, 22, 0.15);
+  color: #ea580c;
+  font-size: 15px;
+  font-weight: 900;
 }
 
 .theme-chip {

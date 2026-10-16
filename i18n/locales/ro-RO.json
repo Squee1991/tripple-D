@@ -8378,6 +8378,16 @@
     "answer": "Trece cu vederea o greșeală"
   },
   "guessWord": {
+    "dailyTitle": "Cuvântul zilei",
+    "dailyText": "Un cuvânt pentru toți și o singură încercare. Ghicește-l și primești {coins} monede!",
+    "dailyPlay": "Joacă",
+    "dailyContinue": "Continuă",
+    "dailyWon": "Ghicit:",
+    "dailyLost": "Neghicit:",
+    "dailyNext": "Cuvânt nou peste {hours} h {minutes} min",
+    "dailyShare": "Distribuie",
+    "dailyCopied": "Copiat!",
+    "dailyPlayNormal": "Joc obișnuit",
     "subtitle": "Ghicește cuvântul și îmbunătățește-ți germana!",
     "theme": "Temă:",
     "back": "Înapoi",

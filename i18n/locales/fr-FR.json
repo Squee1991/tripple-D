@@ -8374,6 +8374,16 @@
     "answer": "Il ferme les yeux sur une erreur"
   },
   "guessWord": {
+    "dailyTitle": "Mot du jour",
+    "dailyText": "Un mot pour tous, un seul essai. Devine-le et gagne {coins} pièces !",
+    "dailyPlay": "Jouer",
+    "dailyContinue": "Continuer",
+    "dailyWon": "Trouvé :",
+    "dailyLost": "Pas trouvé :",
+    "dailyNext": "Nouveau mot dans {hours} h {minutes} min",
+    "dailyShare": "Partager",
+    "dailyCopied": "Copié !",
+    "dailyPlayNormal": "Partie normale",
     "subtitle": "Devine le mot et améliore ton allemand !",
     "theme": "Thème :",
     "back": "Retour",
