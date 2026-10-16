@@ -165,6 +165,23 @@ export const regions = {
 			},
 		],
 	    intermediate: [
-
+			// {
+			// 	id: "place-prepositions",
+			// 	pathTo: "place-prepositions",
+			// 	theme: "place-prep",
+			// 	name: "Предлоги места",
+			// 	level: 0,
+			// 	desc: "Отрабатываем предлоги места (in, an, auf, unter...) и выбор между Dativ и Akkusativ при ответах на вопросы «Где?» и «Куда?».",
+			// 	icon: MixedLands
+			// },
+			// {
+			// 	id: "direction-prepositions",
+			// 	pathTo: "direction-prepositions",
+			// 	theme: "direction-prep",
+			// 	name: "Предлоги места",
+			// 	level: 0,
+			// 	desc: "Отрабатываем предлоги места (in, an, auf, unter...) и выбор между Dativ и Akkusativ при ответах на вопросы «Где?» и «Куда?».",
+			// 	icon: MixedLands
+			// }
 		]
 	};

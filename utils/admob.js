@@ -5,7 +5,7 @@ import { userAuthStore } from '../store/authStore.js';
 let isAdProcessing = false;
 let lastInterstitialTime = 0;
 const AD_LIMIT_PER_DAY = 10;
-const INTERSTITIAL_COOLDOWN = 60 * 1000;
+const INTERSTITIAL_COOLDOWN = 2 * 60 * 1000;
 const platform = Capacitor.getPlatform();
 
 function getTodayKey() {

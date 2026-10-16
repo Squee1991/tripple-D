@@ -6,6 +6,7 @@
     <VRankOverlay/>
 <!--    <VHedgehogIntroModal v-if="showHedgehogModal" @close="showHedgehogModal = false"/>-->
     <VNetwork/>
+    <VMarathonModal v-model="showMarathonEventModal"/>
   </NuxtLayout>
 </template>
 
@@ -18,6 +19,7 @@ import VLost from './src/components/V-lost.vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useAchievementStore } from './store/achievementStore.js'
 import { useCurrentUser } from "vuefire";
+import { useGameStore } from '~/store/marafonStore.js'
 import { userlangStore } from './store/learningStore.js'
 import { userAuthStore } from './store/authStore.js'
 import { useQuestStore } from './store/questStore.js'
@@ -35,6 +37,7 @@ import { Capacitor } from '@capacitor/core'
 import { AdMob } from '@capacitor-community/admob';
 import VNetwork from "./src/components/V-network.vue";
 import { initAdmob } from "./utils/admob.js";
+import VMarathonModal from "~/src/components/overlays/V-marathonModal.vue";
 const chainStore = userChainStore()
 const { locale, t } = useI18n()
 const billingStore = useBillingStore()
@@ -55,6 +58,8 @@ useHead(() => ({
   link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
 }))
 
+const gameStore = useGameStore()
+const showMarathonEventModal = ref(false)
 const rankStore = useRankUserStore()
 const achStore = useAchievementStore()
 const showStepHint = ref(false)
@@ -68,6 +73,16 @@ const user = useCurrentUser()
 const daily = dailyStore()
 const colorMode = useColorMode();
 const showHedgehogModal = ref(false)
+
+
+
+const checkMarathonEvent = () => {
+  const { isOpen, currentSeasonId } = gameStore.getSeasonState()
+  if (isOpen && gameStore.lastSeenModalSeason !== currentSeasonId) {
+    showMarathonEventModal.value = true
+    gameStore.markModalAsSeen()
+  }
+}
 
 
 const triggerHedgehogModal = () => {
@@ -163,6 +178,15 @@ watch(() => colorMode.value, async (newTheme) => {
   } catch (err) {
   }
 }, { immediate: true });
+
+
+onMounted(() => {
+  if (gameStore.isLoaded) checkMarathonEvent()
+})
+
+watch(() => gameStore.lastSeenModalSeason, () => {
+  checkMarathonEvent()
+})
 
 </script>
 

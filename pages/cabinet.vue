@@ -916,6 +916,7 @@ onMounted(async () => {
 
 .tab__text {
   padding: 5px 0;
+  color: var(--titleColor);
 }
 
 .avatar-price {

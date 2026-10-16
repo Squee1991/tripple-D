@@ -1,16 +1,18 @@
 <template>
-  <div v-if="show" class="modal" >
+  <div v-if="show" class="modal">
     <div @click="emit('back')" class="modal__overlay"></div>
     <div class="modal__window">
       <div class="modal__title">{{ t('questCompletedModals.lives') }}</div>
       <div class="modal__text">
-        {{ t('questCompletedModals.count') }} {{ correctCount }} / {{ requiredTasks }}.<br/>
         {{ t('questCompletedModals.buyLive') }}
       </div>
       <div class="wallet">
         <div v-for="(row, i) in walletDetails" :key="i" class="wallet__row">
           <div class="wallet__label">{{ row.label }}</div>
-          <div class="wallet__value">{{ row.value }}</div>
+          <div class="wallet__value">
+            {{ row.value }}
+            <img :src="Article" alt="Article" class="wallet__icon" />
+          </div>
         </div>
       </div>
       <div class="modal__actions">
@@ -32,6 +34,8 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import Article from '~/assets/images/article.svg'
+
 const { t } = useI18n()
 
 const props = defineProps({
@@ -55,11 +59,11 @@ const emit = defineEmits(['purchase', 'back', 'watchAd'])
 const walletDetails = computed(() => [
   {
     label: t('questCompletedModals.prise'),
-    value: t('questCompletedModals.priseValue')
+    value: 5
   },
   {
     label: t('questCompletedModals.balance'),
-    value: `${props.wallet} ${t('questCompletedModals.points')}`
+    value: props.wallet
   }
 ])
 
@@ -68,7 +72,7 @@ const actionButtons = computed(() => {
 
   if (props.remainingAds > 0) {
     buttons.push({
-      text: `Смотреть рекламу (${props.remainingAds})`,
+      text: `${t('questCompletedModals.ads')} (${props.remainingAds})`,
       action: () => emit('watchAd'),
       disabled: false,
       style: 'btn--ad'
@@ -97,7 +101,7 @@ const actionButtons = computed(() => {
 .modal {
   position: fixed;
   inset: 0;
-  z-index: 1000;
+  z-index: 19000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,11 +117,12 @@ const actionButtons = computed(() => {
 
 .modal__window {
   position: relative;
-  background: #FFFFFF;
+  background: var(--bg);
   width: min(90%, 420px);
   padding: 32px 24px;
   border-radius: 24px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  border-top: 2px solid whitesmoke;
   z-index: 1001;
   text-align: center;
   animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -126,23 +131,23 @@ const actionButtons = computed(() => {
 .modal__title {
   font-size: 1.6rem;
   font-weight: 800;
-  color: #374151;
+  color: var(--titleColor);
   margin-bottom: 12px;
 }
 
 .modal__text {
-  font-size: 1rem;
-  color: #6B7280;
-  line-height: 1.5;
-  margin-bottom: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--titleColor);
+  margin-bottom: 10px;
 }
 
 .wallet {
   background: #FFFBEB;
-  border: 2px solid #FDE68A;
+  border: 2px solid whitesmoke;
   border-radius: 16px;
-  padding: 16px 20px;
-  margin: 0 auto 24px;
+  padding: 0 20px;
+  margin: 0 auto 16px;
   width: 100%;
 }
 
@@ -160,6 +165,21 @@ const actionButtons = computed(() => {
   color: #B45309;
   font-weight: 700;
   opacity: 0.8;
+}
+
+.wallet__value {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 22px;
+  font-family: Lilita One, sans-serif;
+  font-weight: 400;
+}
+
+.wallet__icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 
 .modal__actions {
@@ -228,7 +248,7 @@ const actionButtons = computed(() => {
     width: 100%;
     margin: 0;
     border-radius: 32px 32px 0 0;
-    padding: 32px 24px max(32px, env(safe-area-inset-bottom));
+    padding: 20px 24px max(32px, env(safe-area-inset-bottom));
     animation: slideUp 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   }
 

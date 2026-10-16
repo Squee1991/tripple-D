@@ -3561,6 +3561,7 @@
     "inputType": "Eshitganingizni yozing… (tinish belgilari majburiy emas)"
   },
   "questCompletedModals": {
+    "ads": "Reklama ko'rish",
     "correct": "To‘g‘ri",
     "correctAnswer": "To‘g‘ri javob:",
     "further": "Keyingi",
@@ -3581,6 +3582,7 @@
     "notEnough": "Yetarli emas",
     "questNotCompleted": "Siz kvestni yakunlamadingiz",
     "warning": "Agar hozir chiqsangiz, progress saqlanmaydi.",
+    "continueQuest": "Juda oz qoldi. Yutuqlaringizni saqlab qolish uchun topshiriqni yakunlang",
     "leave": "Chiqish",
     "continue": "Davom etish",
     "completedWithMistakes": "Kvest yakunlandi, lekin xatolar bor"
@@ -10311,6 +10313,7 @@
     "restore": "Xaridlarni tiklash."
   },
   "submitComputed": {
+    "try": "Evaziga sinab ko'rish:",
     "sync": "Sinxronlanmoqda...",
     "getPlus": "PLUS olish",
     "getBasic": "Basic olish",
@@ -11091,5 +11094,15 @@
     "halloweenReputationDescription": "Qovoq bayrami topshiriqlarini bajarganlik uchun maksimal obro' darajasini to'plang.",
     "halloweenAllAchievementsText": "Qovoq bayrami ruhi sen bilan bo'lsin!",
     "halloweenAllAchievementsDescription": "Qovoq bayramining barcha yutuqlariga erishing va bayramona unvonga ega bo'ling."
+  },
+  "marathonModal": {
+    "text": "Marafon boshlandi! Bellashing, g'alaba qozoning, yutuqlar va mukofotlarga ega bo'ling!"
+  },
+  "plusPreviewOverlay": {
+    "title": " O'rganishni xohlaysizmi",
+    "title2": "CHEKLOVLARSIZ",
+    "title3": "va o'sishingizni tezlashtirishni-chi?",
+    "title4": "Cheksiz jonlar, istalgan darslar va umuman reklamasiz!",
+    "button": "HA, XOHLAYMAN!"
   }
 }

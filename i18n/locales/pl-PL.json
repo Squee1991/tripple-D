@@ -3579,6 +3579,7 @@
     "inputType": "Napisz to, co słyszysz… (znaki interpunkcyjne nie są wymagane)"
   },
   "questCompletedModals": {
+    "ads": "Obejrzyj reklamę",
     "correct": "Poprawnie",
     "correctAnswer": "Poprawna odpowiedź:",
     "further": "Dalej",
@@ -3599,6 +3600,7 @@
     "notEnough": "Za mało",
     "questNotCompleted": "Nie ukończyłeś zadania",
     "warning": "Jeśli wyjdziesz teraz, postęp nie zostanie zapisany.",
+    "continueQuest": "Zostało już niewiele. Dokończ zadanie, aby zapisać postęp",
     "leave": "Wyjdź",
     "continue": "Kontynuuj",
     "completedWithMistakes": "Zadanie ukończone, ale są błędy"
@@ -10332,6 +10334,7 @@
     "restore": "Przywróć zakupy."
   },
   "submitComputed": {
+    "try": "Wypróbuj za",
     "sync": "Synchronizacja...",
     "getPlus": "Kup PLUS",
     "getBasic": "Kup Basic",
@@ -11112,5 +11115,15 @@
     "halloweenReputationDescription": "Zdobądź maksymalny poziom reputacji za wykonywanie zleceń Dyniowiny.",
     "halloweenAllAchievementsText": "Niechaj Dyniowina będzie z tobą!",
     "halloweenAllAchievementsDescription": "Zdobądź wszystkie osiągnięcia Dyniowiny i zasłuż na świąteczny tytuł."
+  },
+  "marathonModal": {
+    "text": "Maraton się rozpoczął! Rywalizuj, zwyciężaj, zdobywaj osiągnięcia i nagrody!"
+  },
+  "plusPreviewOverlay": {
+    "title": " Chcesz uczyć się",
+    "title2": "BEZ OGRANICZEŃ",
+    "title3": "i przyspieszyć swoje postępy?",
+    "title4": "Nielimitowane życia, dowolne lekcje i zero reklam!",
+    "button": "TAK, CHCĘ!"
   }
 }

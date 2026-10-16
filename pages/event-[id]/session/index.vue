@@ -9,6 +9,9 @@ import {getSpeechAudio} from '~/utils/googleTTS.js'
 import EventSuccessModal from '~/src/components/V-EventSuccessModal.vue'
 import {useEventSessionLogic} from '~/composables/useEventSessionLogic.js'
 import {DotLottieVue} from '@lottiefiles/dotlottie-vue'
+import { showInterstitial } from '~/utils/admob.js'
+import RightIcon from '~/assets/images/location-icons/accept.svg'
+import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 
 const isSpeaking = ref(false)
 
@@ -85,15 +88,6 @@ const currentSessionIndex = computed(() => {
 const isQuestFullyCompleted = computed(() => {
   const solved = eventStore.solvedSteps || []
   return solved.length >= totalSteps.value
-})
-
-const totalPossibleScore = computed(() => {
-  const steps = currentQuest.value?.steps || []
-  return steps.reduce((sum, step) => {
-    if (step.type === 'reading') return sum + (step.questions?.length || 0)
-    if (step.type === 'matching') return sum + (step.correctPairs?.length || 0)
-    return sum + 1
-  }, 0)
 })
 
 const allEventImages = import.meta.glob('@/assets/images/event-rewards/**/*.{svg,SVG}', {
@@ -217,7 +211,13 @@ function closeExitModal() {
 }
 
 function goBackHome() {
-  router.push(localePath({name: 'event-id', params: {id: eventId.value}}))
+  if (isFinished.value) {
+    showInterstitial(() => {
+      router.push(localePath({name: 'event-id', params: {id: eventId.value}}))
+    })
+  } else {
+    router.push(localePath({name: 'event-id', params: {id: eventId.value}}))
+  }
 }
 
 const filledSentenceHtml = computed(() => {
@@ -422,7 +422,16 @@ const errorMessage = computed(() => {
   if (type === 'choose-word') return t('eventSessionPage.answerHighlighted')
   if (type === 'fill') return `${t('eventSessionPage.rightAnswer')} <b>${currentStep.value?.answerText || ''}</b>`
   if (type === 'matching') return t('eventSessionPage.mistakes')
+  if (type === 'mcq' || type === 'multiple-choice') {
+    const correctText = currentStep.value?.options?.[currentStep.value?.correctOptionIndex] || ''
+    return `${t('eventSessionPage.rightAnswer')} <b>${t(correctText)}</b>`
+  }
   return ''
+})
+
+const feedbackClass = computed(() => {
+  if (checkStatus.value === null) return ''
+  return checkStatus.value === 'correct' ? 'correct' : 'incorrect'
 })
 
 </script>
@@ -589,14 +598,30 @@ const errorMessage = computed(() => {
           </section>
         </div>
       </div>
-      <div class="lesson__footer" v-if="!isLoading && currentQuest && !isFinished">
-        <div v-if="checkStatus === 'correct'" class="hint hint--success">{{ successMessage }}</div>
-        <div v-if="checkStatus === 'wrong' && errorMessage" class="hint hint--error" v-html="errorMessage"></div>
-        <button class="btn btn--primary" @click="handlePrimaryAction" :disabled="primaryActionDisabled">
-          {{ primaryActionText }}
-        </button>
+      <div class="actions-wrapper" :class="feedbackClass" v-if="!isLoading && currentQuest && !isFinished">
+        <div class="actions-container">
+          <div v-if="checkStatus !== null" class="feedback-text">
+            <div v-if="checkStatus === 'correct'" class="feedback correct slide-up">
+              <img class="quest__feedback-icon" :src="RightIcon" alt="correct_icon">
+              {{ successMessage }}
+            </div>
+            <div v-else class="feedback incorrect shake quest__correct-answer-block">
+              <div class="feedback-wrong-header">
+                <img class="quest__feedback-icon" :src="WrongIcon" alt="wrong_icon">
+                <div v-html="errorMessage" class="correct-answer-text"></div>
+              </div>
+            </div>
+          </div>
+          <button v-if="checkStatus === null" class="btn btn-check" :disabled="primaryActionDisabled"
+                  @click="handlePrimaryAction">
+            {{ primaryActionText }}
+          </button>
+          <button v-if="checkStatus !== null" class="btn slide-up"
+                  :class="checkStatus === 'correct' ? 'btn-next' : 'btn-wrong'" @click="handlePrimaryAction">
+            {{ primaryActionText }}
+          </button>
+        </div>
       </div>
-
       <div v-if="showExitModal" class="result-modal-overlay" @click.self="closeExitModal">
         <div class="result-wrapper">
           <div class="result card fail-card">
@@ -607,11 +632,9 @@ const errorMessage = computed(() => {
                   :autoplay="true"
               />
             </div>
-            <p class="result__subtext">{{
-                t('Осталось совсем немного. Закончите задание чтобы сохранить прогресс')
-              }}</p>
+            <p class="result__subtext">{{t('questCompletedModals.continueQuest')}}</p>
             <div class="result__actions">
-              <button class="btn btn--primary" @click="closeExitModal">{{ t('Продолжить') }}</button>
+              <button class="btn btn--primary" @click="closeExitModal">{{ t('questCompletedModals.continue') }}</button>
               <button class="btn btn--ghost" @click="goBackHome">{{ t('eventSessionPage.leave') }}</button>
             </div>
           </div>
@@ -667,21 +690,12 @@ const errorMessage = computed(() => {
 .lesson__content {
   flex: 1;
   overflow-y: auto;
-  padding-bottom: 20px;
+  padding-bottom: 150px;
   scrollbar-width: none;
 }
 
 .lesson__content::-webkit-scrollbar {
   display: none;
-}
-
-.lesson__footer {
-  flex-shrink: 0;
-  padding-top: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
 }
 
 .result-modal-overlay {
@@ -738,10 +752,6 @@ const errorMessage = computed(() => {
 .result__icon {
   font-size: 50px;
   margin-bottom: 10px;
-}
-
-.result_icon {
-  width: 140px;
 }
 
 .result__subtext {
@@ -942,55 +952,6 @@ const errorMessage = computed(() => {
   pointer-events: none;
 }
 
-.hint {
-  font-weight: 900;
-  text-align: center;
-  width: 100%;
-}
-
-.hint--error {
-  color: #9b1c1c;
-}
-
-.hint--success {
-  color: #0f6a36;
-}
-
-.btn {
-  border: none;
-  color: white;
-  border-radius: 50px;
-  padding: 14px;
-  width: 100%;
-  font-weight: 900;
-  cursor: pointer;
-  font-size: 18px;
-  background: #fff;
-  text-transform: uppercase;
-  box-shadow: 0 5px transparent;
-}
-
-.btn--primary {
-  background: #2b6be2;
-  box-shadow: 0 5px #2959b0;
-}
-
-.btn--ghost {
-  background: none;
-  color: #645e5e;
-}
-
-.btn:disabled {
-  opacity: .5;
-  cursor: not-allowed;
-  box-shadow: none;
-}
-
-.btn:active {
-  box-shadow: 0 4px 10px rgba(26, 41, 66, .18);
-  transform: translateY(1px);
-}
-
 .field {
   display: flex;
   gap: 10px;
@@ -1092,6 +1053,173 @@ const errorMessage = computed(() => {
   padding: 8px;
 }
 
+.actions-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  transition: background-color 0.3s ease;
+  z-index: 100;
+}
+
+.actions-wrapper.correct {
+  background-color: #d4edda;
+  border-top: 3px solid #2E7D32;
+}
+
+.actions-wrapper.incorrect {
+  background-color: #f8d7da;
+  border-top: 2px solid #C62828;
+}
+
+.actions-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 15px 20px;
+  padding-bottom: calc(15px + env(safe-area-inset-bottom));
+}
+
+.feedback-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.feedback {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feedback.correct {
+  color: #2E7D32;
+}
+
+.feedback.incorrect {
+  color: #C62828;
+}
+
+.quest__correct-answer-block {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.feedback-wrong-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.correct-answer-text {
+  font-weight: 800;
+  margin-top: 5px;
+}
+
+.quest__feedback-icon {
+  width: 32px;
+}
+
+.btn {
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-check {
+  background-color: #3b82f6;
+  box-shadow: 0 5px 0 #2563eb;
+}
+
+.btn-check:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.actions-wrapper.incorrect .btn-check {
+  background-color: #ef4444;
+  box-shadow: 0 5px 0 #dc2626;
+}
+
+.btn-next {
+  background-color: #4ade80;
+  box-shadow: 0 5px 0 #12a647;
+}
+
+.btn-wrong {
+  background-color: #ef4444;
+  box-shadow: 0 5px 0 #dc2626;
+}
+
+.btn--primary {
+  background: #2b6be2;
+  box-shadow: 0 5px #2959b0;
+}
+
+.btn--ghost {
+  background: none;
+  color: #645e5e;
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 transparent !important;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.slide-up-enter-to,
+.slide-up-leave-from {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+.shake {
+  animation: shake 0.4s ease-in-out;
+}
+
 @media (max-width: 540px) {
   .option {
     width: 100%;
@@ -1113,6 +1241,14 @@ const errorMessage = computed(() => {
   .topbar {
     padding: 0;
   }
+
+  .quest__feedback-icon {
+    width: 24px;
+  }
+
+  .feedback {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1131,4 +1267,5 @@ const errorMessage = computed(() => {
     transform: translateY(-1px) rotate(.2deg);
   }
 }
+
 </style>

@@ -3563,6 +3563,7 @@
     "inputType": "Escribe lo que escuchas… (la puntuación no es obligatoria)"
   },
   "questCompletedModals": {
+    "ads": "Ver anuncio",
     "correct": "Correcto",
     "correctAnswer": "Respuesta correcta:",
     "further": "Siguiente",
@@ -3583,6 +3584,7 @@
     "notEnough": "No es suficiente",
     "questNotCompleted": "No has completado la misión",
     "warning": "Si sales ahora, el progreso no se guardará.",
+    "continueQuest": "Falta muy poco. Termina la misión para guardar tu progreso",
     "leave": "Salir",
     "continue": "Continuar",
     "completedWithMistakes": "Misión completada, pero hay errores"
@@ -10316,6 +10318,7 @@
     "restore": "Restaurar compras."
   },
   "submitComputed": {
+    "try": "Probar por",
     "sync": "Sincronizando...",
     "getPlus": "Obtener PLUS",
     "getBasic": "Obtener Basic",
@@ -11094,5 +11097,15 @@
     "halloweenReputationDescription": "Alcanza el nivel máximo de reputación cumpliendo encargos de Halloween.",
     "halloweenAllAchievementsText": "¡Que Halloween te acompañe!",
     "halloweenAllAchievementsDescription": "Consigue todos los logros de Halloween y gana el título festivo."
+  },
+  "marathonModal": {
+    "text": "¡El maratón ha comenzado! ¡Compite, gana y consigue logros y recompensas!"
+  },
+  "plusPreviewOverlay": {
+    "title": " ¿Quieres aprender",
+    "title2": "SIN LÍMITES",
+    "title3": "y acelerar tu progreso?",
+    "title4": "¡Vidas infinitas, cualquier lección y sin anuncios!",
+    "button": "¡SÍ, LO QUIERO!"
   }
 }

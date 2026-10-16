@@ -3581,6 +3581,7 @@
     "inputType": "اكتب ما تسمعه… (علامات الترقيم غير إلزامية)"
   },
   "questCompletedModals": {
+    "ads": "مشاهدة الإعلان",
     "correct": "صحيح",
     "correctAnswer": "الإجابة الصحيحة:",
     "further": "التالي",
@@ -3601,6 +3602,7 @@
     "notEnough": "غير كافٍ",
     "questNotCompleted": "لم تُكمل المهمة",
     "warning": "إذا غادرت الآن، فلن يتم حفظ التقدم.",
+    "continueQuest": "لم يتبق سوى القليل. أكمل المهمة لحفظ تقدمك",
     "leave": "مغادرة",
     "continue": "متابعة",
     "completedWithMistakes": "تم إكمال المهمة، ولكن توجد أخطاء"
@@ -10334,6 +10336,7 @@
     "restore": "استعادة المشتريات."
   },
   "submitComputed": {
+    "try": "تجربة مقابل",
     "sync": "جارٍ المزامنة...",
     "getPlus": "الحصول على PLUS",
     "getBasic": "الحصول على Basic",
@@ -11115,5 +11118,15 @@
     "halloweenReputationDescription": "احصل على أعلى مستوى سمعة مقابل إنجاز مهام الهالوين.",
     "halloweenAllAchievementsText": "لتكن قوة الهالوين معك!",
     "halloweenAllAchievementsDescription": "احصل على جميع إنجازات الهالوين واستحق اللقب الاحتفالي."
+  },
+  "marathonModal": {
+    "text": "لقد بدأ الماراثون! نافس، وانتصر، واحصل على الإنجازات والمكافآت!"
+  },
+  "plusPreviewOverlay": {
+    "title": " هل تريد التعلم",
+    "title2": "بلا حدود",
+    "title3": "وتسريع تقدمك؟",
+    "title4": "قلوب لا نهائية، وجميع الدروس، وبدون أي إعلانات!",
+    "button": "نعم، أريد ذلك!"
   }
 }

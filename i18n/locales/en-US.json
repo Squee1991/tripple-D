@@ -3586,6 +3586,7 @@
     "inputType": "Write what you hear… (punctuation is not required)"
   },
   "questCompletedModals": {
+    "ads": "Watch ad",
     "correct": "Correct",
     "correctAnswer": "Correct answer:",
     "further": "Next",
@@ -3606,6 +3607,7 @@
     "notEnough": "Not enough",
     "questNotCompleted": "You have not completed the quest",
     "warning": "If you leave now, your progress will not be saved.",
+    "continueQuest": "Almost there. Finish the quest to save your progress",
     "leave": "Leave",
     "continue": "Continue",
     "completedWithMistakes": "Quest completed, but there are mistakes"
@@ -10339,6 +10341,7 @@
     "restore": "Restore purchases."
   },
   "submitComputed": {
+    "try": "Try for",
     "sync": "Syncing...",
     "getPlus": "Get PLUS",
     "getBasic": "Get Basic",
@@ -11119,5 +11122,15 @@
     "halloweenReputationDescription": "Earn the maximum reputation level for completing Hallow's End tasks.",
     "halloweenAllAchievementsText": "May Hallow's End Be With You!",
     "halloweenAllAchievementsDescription": "Obtain all Hallow's End achievements and earn the festive title."
+  },
+  "marathonModal": {
+    "text": "The marathon has begun! Compete, win, and earn achievements and rewards!"
+  },
+  "plusPreviewOverlay": {
+    "title": " Want to learn",
+    "title2": "WITHOUT LIMITS",
+    "title3": "and boost your progress?",
+    "title4": "Unlimited lives, any lesson, and zero ads!",
+    "button": "YES, I WANT THIS!"
   }
 }
