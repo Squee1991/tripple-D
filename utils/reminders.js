@@ -145,7 +145,10 @@ export async function scheduleReminders(t) {
 				id: BASE_ID + i,
 				title: text.title,
 				body: text.body,
-				schedule: { at, allowWhileIdle: true }
+				schedule: { at, allowWhileIdle: true },
+				// Точное время не нужно: иначе на Android 12+ плагин открывает системные
+				// настройки «Будильники и напоминания» — выглядит так, будто приложение закрылось
+				isExactNotification: false
 			});
 		}
 

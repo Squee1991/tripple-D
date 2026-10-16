@@ -53,3 +53,8 @@
     public static int d(...);
     public static int e(...);
 }
+# Capacitor reads plugin permissions from @CapacitorPlugin(permissions = ...) at runtime.
+# R8 removed permissions() from the annotation -> NPE in getPermissionStates (crash on LocalNotifications.checkPermissions)
+-keep @interface com.getcapacitor.annotation.** { *; }
+-keep @interface com.getcapacitor.NativePlugin { *; }
+-keepattributes RuntimeVisibleAnnotations,AnnotationDefault
