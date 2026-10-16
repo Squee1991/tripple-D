@@ -257,9 +257,9 @@
               <button v-if="continueButtonText" class="ios-btn-primary fs-action-btn" @click="continueLearning">
                 {{ continueButtonText }}
               </button>
-              <router-link to="/articles" class="ios-btn-secondary fs-link-btn">
+              <button class="ios-btn-secondary fs-link-btn" @click="leaveResultScreen">
                 {{ t('sessionLabels.back') }}
-              </router-link>
+              </button>
             </div>
           </div>
         </div>
@@ -768,13 +768,18 @@ function continueLearning() {
   })
 }
 
-// Ещё раз только слова, в которых были ошибки
+// Ещё раз только слова, в которых были ошибки. Без рекламы — не наказываем за ошибки
 function repeatMistakes() {
   const wordsForPractice = [...mistakeWords.value]
   if (!wordsForPractice.length) return
   $track('word_mistakes_repeated', {topic_id: topicKey.value || 'all', words_count: wordsForPractice.length})
+  buildSession(wordsForPractice)
+}
+
+// Реклама — после занятия, на выходе с результата, а не перед уроком
+function leaveResultScreen() {
   showInterstitial(() => {
-    buildSession(wordsForPractice)
+    router.push('/articles')
   })
 }
 
@@ -806,9 +811,7 @@ onMounted(async () => {
     return
   }
 
-  showInterstitial(() => {
-    isReady.value = true
-  })
+  isReady.value = true
 
   document.addEventListener('visibilitychange', saveWhenHidden)
 })

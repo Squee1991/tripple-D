@@ -356,22 +356,27 @@ function handleStreakClosed() {
   playLevelCompleted()
 }
 
-function handleRetry() {
+// Реклама — после раунда, на кнопках экрана результата, а не перед стартом
+function leaveResultScreen(next) {
   showGameOverModal.value = false
   confettiParticles.value = []
-  gameStore.retryGame()
+  isLoadingAd.value = true
+  showInterstitial(() => {
+    isLoadingAd.value = false
+    next()
+  })
+}
+
+function handleRetry() {
+  leaveResultScreen(() => gameStore.retryGame())
 }
 
 function goBackToPrepare() {
-  showGameOverModal.value = false
-  confettiParticles.value = []
-  router.push('/article-marathon')
+  leaveResultScreen(() => router.push('/article-marathon'))
 }
 
 function toMain() {
-  showGameOverModal.value = false
-  confettiParticles.value = []
-  router.push('/article-marathon')
+  leaveResultScreen(() => router.push('/article-marathon'))
 }
 
 watch(() => gameStore.gameActive, (isActive) => {
@@ -431,11 +436,7 @@ onMounted(() => {
   window.addEventListener('keydown', unlockOnce, captureOpts)
 
   if (gameStore.gameReady && !gameStore.gameActive) {
-    isLoadingAd.value = true
-    showInterstitial(() => {
-      isLoadingAd.value = false
-      gameStore.startNewRound()
-    })
+    gameStore.startNewRound()
   }
 })
 

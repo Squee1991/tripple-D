@@ -17,7 +17,6 @@ const errorMessage = ref('')
 const isNewRecord = ref(false)
 const earnedArtiks = ref(0)
 const isLoadingAd = ref(false)
-const hasAdShown = ref(false)
 const currentQuestions = computed(() => {
   return (store.currentGalaxy && store.currentGalaxy.questions) ? store.currentGalaxy.questions : []
 })
@@ -148,18 +147,7 @@ const initGame = () => {
     isNewRecord.value = false;
     earnedArtiks.value = 0;
 
-    if (!hasAdShown.value) {
-      hasAdShown.value = true;
-      isLoadingAd.value = true;
-      showInterstitial(() => {
-        isLoadingAd.value = false;
-        setTimeout(() => {
-          startGame(store.currentBattery);
-        }, 50);
-      });
-    } else {
-      startGame(store.currentBattery);
-    }
+    startGame(store.currentBattery);
 
   } catch (error) {
     errorMessage.value = "Ошибка: " + error.message;
@@ -169,6 +157,15 @@ const initGame = () => {
 
 const goHome = () => {
   router.push('/german-universe')
+}
+
+// Реклама — после полёта, на кнопках экрана результата, а не перед стартом
+const leaveFlightResult = (next) => {
+  isLoadingAd.value = true
+  showInterstitial(() => {
+    isLoadingAd.value = false
+    next()
+  })
 }
 
 const goToPay = () => {
@@ -384,11 +381,11 @@ onBeforeRouteLeave((to, from, next) => {
             </div>
 
             <div class="modal-actions">
-              <button class="action-btn restart-btn toon-btn-blue" @click="initGame">{{
+              <button class="action-btn restart-btn toon-btn-blue" @click="leaveFlightResult(initGame)">{{
                   t('galaxySession.again')
                 }}
               </button>
-              <button class="action-btn home-btn toon-btn-red" @click="goHome">{{
+              <button class="action-btn home-btn toon-btn-red" @click="leaveFlightResult(goHome)">{{
                   t('galaxySession.constellations')
                 }}
               </button>

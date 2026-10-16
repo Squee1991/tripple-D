@@ -53,7 +53,7 @@
           </template>
         </div>
 
-        <button class="ios-btn-primary btn-bounce" @click="startGame(false)">
+        <button class="ios-btn-primary btn-bounce" @click="startGame">
           {{ t('guessWord.startGame') }}
         </button>
       </div>
@@ -189,11 +189,11 @@
               <button class="ios-btn-primary fs-action-btn" @click="shareDailyResult">
                 {{ isShareCopied ? t('guessWord.dailyCopied') : t('guessWord.dailyShare') }}
               </button>
-              <button class="ios-btn-primary fs-action-btn" @click="startGame(true)">
+              <button class="ios-btn-primary fs-action-btn" @click="startGame">
                 {{ t('guessWord.dailyPlayNormal') }}
               </button>
             </template>
-            <button v-else class="ios-btn-primary fs-action-btn" @click="startGame(true)">
+            <button v-else class="ios-btn-primary fs-action-btn" @click="startGame">
               {{ t('guessWord.tryAgain') }}
             </button>
             <NuxtLink to="/" class="ios-btn-secondary fs-link-btn">{{ t('guessWord.btnToMain') }}</NuxtLink>
@@ -341,7 +341,7 @@ function handleRestart() {
   setTimeout(() => {
     isSpinning.value = false
   }, 500)
-  startGame(true)
+  startGame()
 }
 
 function confirmUseHint() {
@@ -386,15 +386,20 @@ function handleStreakClosed() {
   playLevelCompleted()
 }
 
+// Реклама — после победы, по «Продолжить». Перед стартом и после поражения рекламы нет
 function closeArticleModal() {
   showArticleModal.value = false
   resetAnimations()
-  // После слова дня — обратно на стартовый экран, там результат и «Поделиться»
-  if (store.isDailyMode) {
-    isStarted.value = false
-    return
-  }
-  startGame(true)
+  isLoadingAd.value = true
+  showInterstitial(() => {
+    isLoadingAd.value = false
+    // После слова дня — обратно на стартовый экран, там результат и «Поделиться»
+    if (store.isDailyMode) {
+      isStarted.value = false
+      return
+    }
+    startGame()
+  })
 }
 
 function closeLoseModal() {
@@ -415,28 +420,14 @@ function resetRoundView() {
   stopTimer()
 }
 
-function startGame(skipAd = false) {
+function startGame() {
   resetRoundView()
-
-  const startSession = () => {
-    store.startGame()
-    now.value = Date.now()
-    isStarted.value = true
-    guessInput.value = ''
-    articleResult.value = null
-    startTimer()
-  }
-
-  if (skipAd) {
-    startSession()
-    return
-  }
-
-  isLoadingAd.value = true
-  showInterstitial(() => {
-    isLoadingAd.value = false
-    startSession()
-  })
+  store.startGame()
+  now.value = Date.now()
+  isStarted.value = true
+  guessInput.value = ''
+  articleResult.value = null
+  startTimer()
 }
 
 // Слово дня — без рекламы перед стартом: это ежедневная привычка

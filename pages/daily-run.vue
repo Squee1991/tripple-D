@@ -70,7 +70,7 @@
           </div>
 
           <p class="result__next">{{ nextRunText }}</p>
-          <button class="result__done" @click="goToMarathon">{{ t('dailyRun.done') }}</button>
+          <button class="result__done" @click="leaveResultScreen">{{ t('dailyRun.done') }}</button>
         </div>
       </Transition>
     </template>
@@ -226,6 +226,15 @@ function goToMarathon() {
   router.push('/article-marathon')
 }
 
+// Реклама — после забега, на выходе с результата, а не перед стартом
+function leaveResultScreen() {
+  isLoadingAd.value = true
+  showInterstitial(() => {
+    isLoadingAd.value = false
+    goToMarathon()
+  })
+}
+
 function startRun() {
   words.value = dailyRunStore.buildTodayWords()
   startedAt = Date.now()
@@ -246,11 +255,7 @@ onMounted(async () => {
     return
   }
   isReady.value = true
-  isLoadingAd.value = true
-  showInterstitial(() => {
-    isLoadingAd.value = false
-    startRun()
-  })
+  startRun()
 })
 
 onBeforeUnmount(() => {
