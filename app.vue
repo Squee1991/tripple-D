@@ -34,9 +34,10 @@ import { onMounted, onUnmounted, ref, watch, nextTick } from "vue";
 import { dailyStore } from './store/dailyStore'
 import { useHead } from '#imports'
 import { Capacitor } from '@capacitor/core'
-import { AdMob } from '@capacitor-community/admob';
 import VNetwork from "./src/components/V-network.vue";
 import { initAdmob } from "./utils/admob.js";
+import { scheduleReminders, updateReviewReminders } from "./utils/reminders.js";
+import { getReviewForecast } from '~/utils/wordReview.js';
 import VMarathonModal from "~/src/components/overlays/V-marathonModal.vue";
 const chainStore = userChainStore()
 const { locale, t } = useI18n()
@@ -96,16 +97,13 @@ const onToastFinished = () => {
 
 onMounted(async () => {
   rankStore.restorePendingReward()
-  initAdmob()
+  await initAdmob();
+  // Продлеваем напоминания на неделю вперёд и обновляем язык их текстов
+  scheduleReminders(t);
   achStore.initializeProgressTracking()
   if (Capacitor.isNativePlatform()) {
     try {
       await SplashScreen.hide({ fadeOutDuration: 0 });
-    } catch (e) {
-      console.error(e);
-    }
-    try {
-      await AdMob.initialize({ initializeForTesting: true });
     } catch (e) {
       console.error(e);
     }
@@ -143,11 +141,19 @@ onUnmounted(() => {
   daily.stop()
 })
 
+// Сменили язык приложения — пересоздаём напоминания с текстами на новом языке
+watch(locale, () => {
+  scheduleReminders(t)
+})
+
 watch(() => authStore.initialized, (isReady) => {
   if (isReady) {
-    learningStore.loadFromFirebase().catch(err => {
-      console.error(err);
-    });
+    learningStore.loadFromFirebase()
+      // Напоминания зовут повторять слова в те дни, когда подходит срок
+      .then(() => updateReviewReminders(getReviewForecast(learningStore.words), t))
+      .catch(err => {
+        console.error(err);
+      });
   }
 }, { immediate: true });
 

@@ -2,6 +2,7 @@ import {defineStore} from 'pinia'
 import {ref, watch, watchEffect} from 'vue'
 import {getFirestore, doc, onSnapshot, collection} from 'firebase/firestore'
 import {getAuth} from 'firebase/auth'
+import {isWordInReview} from '../utils/wordReview.js'
 // --- 1) Импорты групп достижений ---
 import { overAchievment } from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
 import { wordAchievementsGroup } from '../src/achieveGroup/wordGroup/wordAchievements.js'
@@ -109,14 +110,24 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	let eventUnsubs = []
 	const dailyAggUnsub = ref(null)
 	const prevMap = new Map()
-	const required = ['article','letters','wordArticle','audio','plural']
-	const VEGETABLES_DE = new Set([
-		'Kartoffel','Karotte','Tomate','Gurke','Zwiebel','Kohl','Paprika',
-		'Rote Bete','Radieschen','Bohne','Mais','Pilz','Knoblauch'
-	]);
+	// «Защитник овощей» — все слова темы «Овощи», «Друг животных» — все слова категории «Животные»
+	const VEGETABLE_TOPICS = ['Vegetables'];
+	const ANIMAL_TOPICS = ['Animals', 'Birds', 'SeaAnimals', 'Insects', 'Savanna'];
 
-	const ANIMAL_TOPICS = new Set(['Animals', 'Birds', 'SeaAnimals', 'Insects', 'Savanna']);
-	const hasAllModes = (word) => required.every(m => word?.progress?.[m])
+	// Слова каждой темы из words.json — чтобы знать, выучена ли тема целиком
+	const topicWordKeys = ref(null)
+	async function loadTopicWordKeys() {
+		if (topicWordKeys.value || !process.client) return
+		try {
+			const response = await fetch('/words.json')
+			const topics = await response.json()
+			topicWordKeys.value = Object.fromEntries(
+				Object.entries(topics).map(([topic, topicWords]) => [topic, topicWords.map(word => word.de)])
+			)
+		} catch (error) {
+			console.error(error)
+		}
+	}
 	const awardsKey = () => `awards_shown_v1_${authStore?.uid}`
 	const completedKey = () => `achievements_completed_v1_${authStore?.uid}`
 	function loadShown() {
@@ -475,39 +486,37 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				{ immediate: true }
 			)
 		})
-		watch(() => langStore.words, (words = []) => {
+		loadTopicWordKeys()
+		watch([() => langStore.words, topicWordKeys], ([words = []]) => {
 			let listenCnt = 0, pluralCnt = 0, lettersCnt = 0;
 			let derCnt = 0, dieCnt = 0, dasCnt = 0, wordArticleCnt = 0;
-			let isVegan = true, hasVegan = false;
-			let isZoo = true, hasZoo = false;
+			const learnedByTopic = {};
 			let salamiDone = false, katzeDone = false, hundDone = false;
 			let grootTopics = new Set();
 
 			for (let i = 0; i < words.length; i++) {
 				const w = words[i];
 				const p = w.progress || {};
-				const allModes = hasAllModes(w);
+				// Слово выучено — прошло урок и участвует в повторении
+				const isLearned = isWordInReview(w);
 				if (p.audio) listenCnt++;
 				if (p.plural) pluralCnt++;
 				if (p.letters) lettersCnt++;
 				if (p.wordArticle || p.wordPlusArticle) wordArticleCnt++;
-				if (p.article) {
+				// Артикль проверяется и в задании «написать слово с артиклем»
+				if (p.article || p.wordArticle) {
 					if (w.article === 'der') derCnt++;
 					else if (w.article === 'die') dieCnt++;
 					else if (w.article === 'das') dasCnt++;
 				}
-				if (w.topic === 'Vegetables' && VEGETABLES_DE.has(w.de)) {
-					hasVegan = true;
-					if (!allModes) isVegan = false;
+				if (isLearned && w.topic) {
+					if (!learnedByTopic[w.topic]) learnedByTopic[w.topic] = new Set();
+					learnedByTopic[w.topic].add(w.de);
 				}
-				if (ANIMAL_TOPICS.has(w.topic)) {
-					hasZoo = true;
-					if (!allModes) isZoo = false;
-				}
-				if (w.de === 'Salami' && allModes) salamiDone = true;
-				if (w.de === 'Katze' && allModes) katzeDone = true;
-				if (w.de === 'Hund' && allModes) hundDone = true;
-				if (w.de === 'Baum' && allModes) grootTopics.add(w.topic ?? '__no_topic__');
+				if (w.de === 'Salami' && isLearned) salamiDone = true;
+				if (w.de === 'Katze' && isLearned) katzeDone = true;
+				if (w.de === 'Hund' && isLearned) hundDone = true;
+				if (w.de === 'Baum' && isLearned) grootTopics.add(w.topic ?? '__no_topic__');
 			}
 			groups.value.forEach(g => {
 				if (g.category === 'listen') g.achievements.forEach(a => updateProgress(a.id, listenCnt));
@@ -523,8 +532,15 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				}
 			});
 
-			updateProgress('vegan', hasVegan && isVegan ? 1 : 0);
-			updateProgress('zoo', hasZoo && isZoo ? 1 : 0);
+			// Пока список слов тем не загружен — не знаем, выучены ли темы целиком
+			if (topicWordKeys.value) {
+				const isTopicsLearned = (topics) => topics.every(topic => {
+					const topicWords = topicWordKeys.value[topic] || [];
+					return topicWords.length > 0 && topicWords.every(de => learnedByTopic[topic]?.has(de));
+				});
+				updateProgress('vegan', isTopicsLearned(VEGETABLE_TOPICS) ? 1 : 0);
+				updateProgress('zoo', isTopicsLearned(ANIMAL_TOPICS) ? 1 : 0);
+			}
 			if (salamiDone) updateProgress('cowabungaSalami', 1);
 			updateProgress('catDog', [katzeDone, hundDone].filter(Boolean).length);
 			updateProgress('iAmGroot', grootTopics.size);

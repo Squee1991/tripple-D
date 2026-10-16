@@ -194,8 +194,8 @@
           :display-coins="displayCoins"
           :confetti-particles="confettiParticles"
           :has-next-quest="hasNextQuest"
-          @next="goNextQuest"
-          @themes="goThemes"
+          @next="leaveResultScreen(goNextQuest)"
+          @themes="leaveResultScreen(goThemes)"
           @retry-mistakes="questStore.startRetryMistakes()"
       />
     </div>
@@ -236,6 +236,11 @@
     <VPlusModal
         v-model="showPremiumModal"
     />
+    <VReminderModal
+        v-model:show="showReminderModal"
+        @enable="onEnableReminders"
+        @later="onLaterReminders"
+    />
   </div>
 </template>
 
@@ -265,6 +270,9 @@ import {useQuestAnimations} from '~/composables/useQuestAnimations.js'
 import {useGermanKeyboard} from '~/composables/useGermanKeyboard.js'
 import {useQuestLives} from '~/composables/useQuestLives.js'
 import VStreakModal from '~/src/components/V-streak.vue'
+import VReminderModal from '~/src/components/V-reminderModal.vue'
+import {onQuestSuccessForReview} from '~/utils/appReview.js'
+import {shouldAskForReminders, postponeReminderPrompt, enableReminders, markLessonDoneToday} from '~/utils/reminders.js'
 import { dailyStore } from '~/store/dailyStore.js'
 import hedgehogLeaveSession from 'assets/animation/hedgehog_leave_session.json'
 useSeoMeta({robots: 'noindex, nofollow'})
@@ -293,6 +301,65 @@ const consecutiveCorrectCount = ref(0)
 const shouldShowResultScreen = computed(() => {
   return questStore.finished && !showStreakModal.value && !isWaitingForStreakClose.value
 })
+
+// Напоминания: после успешного квеста сегодняшнее уведомление снимается
+const showReminderModal = ref(false)
+let afterReminderPrompt = null
+
+let reviewCheckedForSession = false
+let reviewRequestedThisQuest = false
+
+watch(shouldShowResultScreen, (visible) => {
+  if (!visible || !questStore.success) return
+  markLessonDoneToday(t)
+  // Окно оценки — в момент успеха, но не в тот раз, когда ещё ждёт окно напоминаний
+  if (reviewCheckedForSession) return
+  reviewCheckedForSession = true
+  const canPrompt = !shouldAskForReminders()
+  setTimeout(async () => {
+    const requested = await onQuestSuccessForReview(canPrompt && shouldShowResultScreen.value)
+    if (requested) {
+      reviewRequestedThisQuest = true
+      $track('app_review_requested', {quest_id: questId.value})
+    }
+  }, 1500)
+})
+
+// Окно выбора времени показываем по кнопке на экране результатов, переход — после ответа
+function withReminderPrompt(next) {
+  if (!questStore.success || !shouldAskForReminders()) return next()
+  afterReminderPrompt = next
+  showReminderModal.value = true
+}
+
+// Выход с экрана результатов: окно напоминаний → реклама (только после успеха) → переход.
+// После проигрыша рекламы нет — там есть восстановление жизни за рекламу.
+// В тот раз, когда показали окно напоминаний или оценки, рекламу не показываем
+function leaveResultScreen(next) {
+  const reminderPromptShown = questStore.success && shouldAskForReminders()
+  withReminderPrompt(() => {
+    if (!questStore.success || reminderPromptShown || reviewRequestedThisQuest) return next()
+    showInterstitial(next)
+  })
+}
+
+function continueAfterReminderPrompt() {
+  const next = afterReminderPrompt
+  afterReminderPrompt = null
+  next?.()
+}
+
+async function onEnableReminders(time) {
+  const enabled = await enableReminders(time, t)
+  $track('reminders_prompt_answered', {enabled, time})
+  continueAfterReminderPrompt()
+}
+
+function onLaterReminders() {
+  postponeReminderPrompt()
+  $track('reminders_prompt_answered', {enabled: false, later: true})
+  continueAfterReminderPrompt()
+}
 
 const {
   animStep,
@@ -610,6 +677,8 @@ watch([questId, regionKey], async () => {
       if (!questId.value || !regionKey.value) return
       showPremiumModal.value = false
       hasShownPremiumForRevive.value = false
+      reviewCheckedForSession = false
+      reviewRequestedThisQuest = false
       initialStreak.value = authStore.streakCount || 0
       streakWasIncremented.value = false
       showStreakModal.value = false
@@ -630,10 +699,6 @@ watch([questId, regionKey], async () => {
       const prog = questStore.questProgress?.[questId.value]
       previouslyCleared.value = !!(prog?.success || prog?.rewardClaimed)
 
-      // Изменение: определяем наличие ошибок и чистое повторение (пройден и без ошибок)
-      const hasMistakes = !!(prog?.wrongIndices && prog?.wrongIndices.length > 0)
-      const isRepeat = previouslyCleared.value && !hasMistakes
-
       const initQuest = async () => {
         consecutiveCorrectCount.value = 0
         await questStore.loadQuest(questId.value, regionKey.value)
@@ -651,12 +716,8 @@ watch([questId, regionKey], async () => {
         await nextTick()
       }
 
-      // Изменение: рекламу отключаем ТОЛЬКО при чистом повторении (isRepeat) или если нет рекламы/премиум; при ошибках реклама остаётся
-      if (!authStore.hasAds || isRepeat) {
-        initQuest()
-      } else {
-        showInterstitial(initQuest)
-      }
+      // Реклама теперь не перед квестом, а после успешного прохождения (см. leaveResultScreen)
+      initQuest()
     },
     {immediate: true, flush: 'sync'}
 )

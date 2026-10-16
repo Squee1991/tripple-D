@@ -16,6 +16,10 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 	const score = ref(0)
 	const activeGalaxyId = ref(null)
 	const galaxies = ref([])
+	// Статистика пилота за всё время: полёты, побеждённые боссы, сбитые метеориты
+	const flightStats = ref({ flights: 0, bossesDefeated: 0, meteorsDestroyed: 0 })
+	// Профиль загружен из Firestore — до этого счётчики нельзя записывать, иначе затрём сохранённые
+	let isProfileLoaded = false
 	const REGEN_MS = 5 * 60 * 1000
 
 	const speedMultiplier = computed(() => {
@@ -86,6 +90,8 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 				highScores.value = data.highScores || {}
 				selectedTankId.value = data.selectedTankId || 1
 				ownedTanks.value = data.ownedTanks || [1]
+				flightStats.value = { flights: 0, bossesDefeated: 0, meteorsDestroyed: 0, ...data.flightStats }
+				isProfileLoaded = true
 
 				if (data.shipBatteries) {
 					shipBatteries.value = data.shipBatteries
@@ -119,6 +125,7 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 					ownedTanks: ownedTanks.value,
 					shipBatteries: shipBatteries.value
 				})
+				isProfileLoaded = true
 			}
 		} catch (e) {
 			console.error(e)
@@ -177,7 +184,7 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 			const totalScore = Object.values(highScores.value).reduce((a, b) => a + b, 0)
 
 			await sync({
-				captainName: authStore.name || 'ПИЛОТ-01',
+				captainName: captainName.value || authStore.name || 'ПИЛОТ-01',
 				balance: balance.value,
 				highScores: highScores.value,
 				totalScore: totalScore,
@@ -193,6 +200,18 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 		if (amount <= 0) return
 		balance.value += amount
 		await sync({ balance: balance.value })
+	}
+
+	// Вызывается в конце каждого полёта
+	const recordFlight = async ({ meteorsDestroyed, bossesDefeated }) => {
+		if (!isProfileLoaded) await initUser()
+		if (!isProfileLoaded) return
+		flightStats.value = {
+			flights: flightStats.value.flights + 1,
+			bossesDefeated: flightStats.value.bossesDefeated + bossesDefeated,
+			meteorsDestroyed: flightStats.value.meteorsDestroyed + meteorsDestroyed
+		}
+		await sync({ flightStats: flightStats.value })
 	}
 
 	const setCaptainName = async (newName) => {
@@ -250,8 +269,8 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 
 	return {
 		captainName, balance, highScores, selectedTankId, ownedTanks, REGEN_MS,
-		score, galaxies, activeGalaxyId, tankList, shipBatteries,
+		score, galaxies, activeGalaxyId, tankList, shipBatteries, flightStats,
 		speedMultiplier, fallDuration, activeShip, currentGalaxy, currentBattery, currentBatteryRegen,
-		initUser, setCaptainName, updateHighScore, buyShip, selectShip, fetchGalaxies, setMission, sync, addArtiks, consumeBattery, checkBatteryRegen
+		initUser, setCaptainName, recordFlight, updateHighScore, buyShip, selectShip, fetchGalaxies, setMission, sync, addArtiks, consumeBattery, checkBatteryRegen
 	}
 })

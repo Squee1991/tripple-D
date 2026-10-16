@@ -1,0 +1,232 @@
+/* Общий стиль экранов «Вселенной немецкого»: тёмно-синие полупрозрачные HUD-панели
+   со скошенными углами, без обводок, голубой текст. Все классы начинаются с hud-,
+   чтобы не пересекаться со стилями остального приложения. */
+
+.hud-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 20% 0%, rgba(58, 123, 213, 0.25) 0%, transparent 55%),
+  radial-gradient(ellipse at 90% 100%, rgba(156, 39, 176, 0.22) 0%, transparent 55%),
+  linear-gradient(180deg, #050816 0%, #0b0a24 55%, #140a2a 100%);
+  font-family: Nunito, sans-serif;
+  color: #d6e9ff;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.hud-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(1px 1px at 20px 30px, #ffffff, transparent),
+  radial-gradient(2px 2px at 120px 160px, #e2f0ff, transparent),
+  radial-gradient(1px 1px at 200px 90px, #eeddff, transparent);
+  background-size: 260px 260px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Колонка контента: на широких экранах не растягивается */
+.hud-column {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: calc(10px + env(safe-area-inset-top, 0px)) 14px calc(14px + env(safe-area-inset-bottom, 0px));
+  box-sizing: border-box;
+}
+
+.hud-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: none;
+  margin: 0 -14px;
+  padding: 0 14px 10px;
+}
+
+.hud-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Верхняя строка: кнопка назад, заголовок, справа — баланс */
+.hud-topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hud-title {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  color: #eaf4ff;
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hud-round-btn {
+  flex: none;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(90, 150, 255, 0.5) 0%, rgba(24, 52, 130, 0.5) 70%);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #e3f0ff;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: transform 0.08s;
+}
+
+.hud-round-btn:active {
+  transform: scale(0.92);
+}
+
+/* Кнопка «назад» — единый стиль всего приложения */
+.hud-screen .btn-icon-back {
+  background: #f5f5f6;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  border-radius: 14px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.hud-screen .btn-icon-back:active {
+  transform: translate(2px, 3px);
+  box-shadow: 0px 0px 0px #1e272e;
+}
+
+/* Панель со скошенными углами */
+.hud-panel {
+  position: relative;
+  padding: 14px 16px;
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+  background: linear-gradient(180deg, rgba(52, 92, 170, 0.32) 0%, rgba(20, 38, 92, 0.42) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.hud-label {
+  margin: 18px 2px 8px;
+  color: #7fa7d9;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.hud-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(20, 38, 92, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #eaf4ff;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.hud-currency {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Главная кнопка действия */
+.hud-button {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  background: linear-gradient(180deg, rgba(70, 140, 255, 0.9) 0%, rgba(32, 72, 180, 0.9) 100%);
+  color: #ffffff;
+  font-family: Nunito, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: transform 0.08s, opacity 0.15s;
+}
+
+.hud-button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.hud-button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.hud-button.is-success {
+  background: linear-gradient(180deg, rgba(46, 190, 110, 0.9) 0%, rgba(22, 120, 70, 0.9) 100%);
+}
+
+.hud-button.is-gold {
+  background: linear-gradient(180deg, rgba(255, 196, 60, 0.95) 0%, rgba(214, 140, 20, 0.95) 100%);
+  color: #2a1a00;
+}
+
+/* Переключатели (галактики в рейтинге) — горизонтальная лента */
+.hud-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: 0 -14px 12px;
+  padding: 2px 14px;
+}
+
+.hud-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.hud-tab {
+  flex: none;
+  padding: 9px 14px;
+  border: none;
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+  background: rgba(20, 38, 92, 0.55);
+  color: #9fc2ea;
+  font-family: Nunito, sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.hud-tab.is-active {
+  background: linear-gradient(180deg, rgba(70, 140, 255, 0.9) 0%, rgba(32, 72, 180, 0.9) 100%);
+  color: #ffffff;
+}

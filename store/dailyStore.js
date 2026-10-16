@@ -521,6 +521,27 @@ export const dailyStore = defineStore('dailyStore', () => {
         } catch {}
     }
 
+    // Серия засчитывается и за завершённое занятие (урок слов, повторение),
+    // даже если ни одно ежедневное задание ещё не выполнено
+    async function countStreakForActivity() {
+        await ensureLocalCycle()
+        if (!currentCycle.value || currentCycle.value.streakCounted) return
+        const local = { ...currentCycle.value, streakCounted: true }
+        local.lastUpdatedAtMs = Date.now()
+        local.updatedBy = uid() || 'local'
+        currentCycle.value = local
+        saveLocal(local)
+
+        const authStore = userAuthStore()
+        await authStore.incrementStreak()
+        if (authStore.isFreezeActive) {
+            await authStore.cancelFreeze()
+        }
+        try {
+            await pushCurrentCycleToCloud(local, true)
+        } catch {}
+    }
+
     function scheduleDailySync() {
         if (debounceId) clearTimeout(debounceId)
         debounceId = setTimeout(() => { debounceId = null; recomputeAndPersist().catch(() => {}) }, 120)
@@ -605,6 +626,7 @@ export const dailyStore = defineStore('dailyStore', () => {
         updateProgressFromCounters,
         markStreakModalShown,
         markQuestCompleted,
+        countStreakForActivity,
         fetchMonthHistory,
         addLearned, addExp, addPoints, addWrong, addGuessed, addWordArticle, addDuels, noteHardStreak, addAudioArticle,
         noteEasyStreak, noteMarathonMediumStreak, addPlural,

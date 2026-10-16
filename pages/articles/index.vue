@@ -23,6 +23,18 @@
               <div class="banner-wrapper">
                 <VBanner :icon="BannerIcon" :text="t('bannerTitles.article')"/>
               </div>
+              <!-- Повторение: слова из всех тем, у которых подошёл срок -->
+              <div v-if="authStore.uid && hasStartedLearning" class="review-card" :class="{ 'is-empty': !totalDueCount }">
+                <div class="review-card__text">
+                  <span class="review-card__title">🔁 {{ t('wordLearning.reviewTitle') }}</span>
+                  <span class="review-card__hint">
+                    {{ totalDueCount ? t('wordLearning.reviewCardDue', {count: totalDueCount}) : t('wordLearning.reviewCardEmpty') }}
+                  </span>
+                </div>
+                <button v-if="totalDueCount" class="review-card__button" :disabled="isLoading" @click="startReview(null)">
+                  {{ t('wordLearning.reviewButton') }}
+                </button>
+              </div>
               <div class="topics-list-container">
                 <div v-for="group in categorizedTopics" :key="group.id" class="category-group">
                   <div class="category-header">
@@ -80,6 +92,9 @@
                           }}/{{ themeProgress[key]?.total || 0 }}
                         </div>
                       </div>
+                      <div v-if="themeProgress[key]?.due" class="topic-due">
+                        🔁 {{ t('wordLearning.topicDue', {count: themeProgress[key].due}) }}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -100,27 +115,102 @@
                 </svg>
               </button>
               <div class="modes-title-box">
-                <div class="modes-title">{{ t('selectedpage.choiceTitle') }}</div>
-                <div class="topic-hint">{{ t('selectedpage.topic') }}: {{ t(nameMap[selectedTopic]) }}</div>
+                <div class="modes-title">{{ iconMap[selectedTopic] || '✨' }} {{ t(nameMap[selectedTopic]) }}</div>
               </div>
             </div>
-            <div class="modes-list">
-              <label
-                  v-for="mode in availableModes"
-                  :key="mode.key"
-                  class="checkbox-container"
-                  :class="{ 'active-mode': selectedModes.includes(mode.key) }"
-              >
-                <input type="checkbox" v-model="selectedModes" :value="mode.key"/>
-                <span class="checkmark">
-                  <svg viewBox="0 0 24 24"><polyline points="3 12 10 20 21 4"/></svg>
+            <div class="topic-scroll">
+              <!-- Прогресс темы одной карточкой -->
+              <div class="topic-progress-card">
+                <div class="progress-ring" :style="{ '--percent': learnedPercent }">
+                  <span class="progress-ring__value">{{ Math.round(learnedPercent) }}%</span>
+                </div>
+                <div class="topic-progress-card__info">
+                  <span class="topic-progress-card__title">
+                    {{ t('wordLearning.learnedOf', {learned: selectedTopicProgress.learned, total: selectedTopicProgress.total}) }}
+                  </span>
+                  <span class="topic-progress-card__meta">
+                    <span>🔁 {{ t('wordLearning.statDue') }}: {{ selectedTopicProgress.due }}</span>
+                    <span>⭐ {{ t('wordLearning.statMastered') }}: {{ selectedTopicProgress.mastered }}</span>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Что будет в уроке: слова и шаги -->
+              <div v-if="lessonWords.length" class="lesson-card">
+                <span class="lesson-card__title">
+                  {{ isChoosingWords ? t('wordLearning.chosenWordsTitle') : t('wordLearning.nextLessonTitle') }}
                 </span>
-                <span class="label-text">{{ t(mode.label) }}</span>
-              </label>
+                <div class="lesson-card__words">
+                  <span v-for="word in lessonWords" :key="word.de" class="lesson-word">
+                    <span :class="`article-color--${word.article}`">{{ word.article }}</span> {{ word.de }}
+                  </span>
+                </div>
+                <div class="lesson-steps">
+                  <template v-for="(step, stepIndex) in lessonSteps" :key="step.label">
+                    <span v-if="stepIndex" class="lesson-steps__arrow">→</span>
+                    <span class="lesson-step">{{ step.icon }} {{ t(step.label) }}</span>
+                  </template>
+                </div>
+              </div>
+              <div v-else-if="!isChoosingWords" class="lesson-card lesson-card--done">
+                <span class="lesson-card__title">🎉 {{ t('wordLearning.topicDoneTitle') }}</span>
+                <span class="lesson-card__hint">{{ t('wordLearning.topicDoneText') }}</span>
+              </div>
+
+              <!-- Слова темы: просто список, свои слова можно отметить по кнопке «Выбрать слова» -->
+              <div class="topic-section-head">
+                <h3 class="topic-section-title">{{ t('wordLearning.wordsTitle') }} · {{ selectedTopicWords.length }}</h3>
+                <button class="select-all-btn" @click="toggleChoosingWords">
+                  {{ isChoosingWords ? t('wordLearning.cancelChoice') : t('wordLearning.chooseWords') }}
+                </button>
+              </div>
+              <p v-if="isChoosingWords" class="choose-hint">{{ t('wordLearning.chooseWordsHint') }}</p>
+              <div class="topic-words">
+                <div
+                    v-for="word in selectedTopicWords"
+                    :key="word.de"
+                    class="topic-word"
+                    :class="{ 'is-choosable': isChoosingWords, 'is-selected': isChoosingWords && selectedWordKeys.includes(word.de) }"
+                    @click="toggleWord(word)"
+                >
+                  <span v-if="isChoosingWords" class="checkmark checkmark--small">
+                    <svg viewBox="0 0 24 24"><polyline points="3 12 10 20 21 4"/></svg>
+                  </span>
+                  <!-- Озвучка не должна отмечать слово в режиме выбора -->
+                  <span class="word-sound" @click.stop>
+                    <SoundBtn :text="`${word.article} ${word.de}`"/>
+                  </span>
+                  <span class="topic-word__text">
+                    <span class="topic-word__german">
+                      <span :class="`article-color--${word.article}`">{{ word.article }}</span> {{ word.de }}
+                    </span>
+                    <span class="topic-word__translation">{{ getTranslation(word) }}</span>
+                  </span>
+                  <span class="word-status" :class="`word-status--${getWordStatus(word)}`">
+                    {{ t(`wordLearning.status_${getWordStatus(word)}`) }}
+                  </span>
+                </div>
+              </div>
             </div>
-            <button class="start-btn" :disabled="!selectedModes.length || isLoading" @click="startLearning">
-              {{ t('selectedpage.startBtn') }}
-            </button>
+
+            <div class="topic-actions">
+              <template v-if="isChoosingWords">
+                <button class="start-btn" :disabled="!selectedWordKeys.length || isLoading" @click="startLesson">
+                  {{ t('wordLearning.learnSelected', {count: selectedWordKeys.length}) }}
+                </button>
+              </template>
+              <template v-else>
+                <button v-if="selectedTopicProgress.due" class="start-btn start-btn--review" :disabled="isLoading" @click="startReview(selectedTopic)">
+                  {{ t('wordLearning.reviewTopicButton', {count: selectedTopicProgress.due}) }}
+                </button>
+                <button v-if="lessonWords.length" class="start-btn" :disabled="isLoading" @click="startLesson">
+                  {{ t('wordLearning.startLesson') }}
+                </button>
+                <button v-else-if="!selectedTopicProgress.due" class="start-btn" @click="toggleChoosingWords">
+                  {{ t('wordLearning.chooseWords') }}
+                </button>
+              </template>
+            </div>
           </div>
         </div>
       </Transition>
@@ -130,17 +220,19 @@
 </template>
 
 <script setup>
-import {ref, computed, onMounted, nextTick, onUnmounted} from 'vue'
+import {ref, computed, onMounted, onUnmounted} from 'vue'
 import {useRouter} from 'vue-router'
 import {userlangStore} from '../../store/learningStore.js'
 import {userAuthStore} from '../../store/authStore.js'
-import {nameMap, categories, iconMap, topicColors, baseModes} from '../../utils/nameMap.js'
+import {nameMap, categories, iconMap, topicColors} from '../../utils/nameMap.js'
+import {isWordInReview, isWordMastered, isWordDue, getDateKey, LESSON_WORD_COUNT} from '../../utils/wordReview.js'
 import VLoginPreloader from "../../src/components/V-loginPreloader.vue"
 import VBanner from "~/src/components/V-banner.vue"
 import BannerIcon from '../../assets/images/articleBannerIcon.svg'
 import VArrowNav from "~/src/components/V-arrowNav.vue"
 import VTransition from "~/src/components/V-transition.vue"
 import VPremiumModal from "~/src/components/V-premiumModal.vue"
+import SoundBtn from "~/src/components/soundBtn.vue"
 
 const getTopicColor = (index) => topicColors[index % topicColors.length]
 const { $track } = useNuxtApp()
@@ -151,7 +243,9 @@ const store = userlangStore()
 const authStore = userAuthStore()
 const themeList = ref({})
 const selectedTopic = ref(null)
-const selectedModes = ref([])
+const selectedWordKeys = ref([])
+// Режим «Выбрать слова»: в списке появляются галочки, урок — по отмеченным словам
+const isChoosingWords = ref(false)
 const localePath = useLocalePath()
 const isLoading = ref(false)
 const isPageLoaded = ref(false)
@@ -168,33 +262,82 @@ const flatTopics = computed(() => {
   return categorizedTopics.value.flatMap(group => group.keys)
 })
 
-function hasAnyPlural(wordsArray) {
-  const list = Array.isArray(wordsArray) ? wordsArray : []
-  return list.some(w => w.plural && String(w.plural).trim() !== '')
-}
-
-const availableModes = computed(() => {
-  const key = selectedTopic.value
-  if (!key) return []
-  const topicWords = Array.isArray(themeList.value[key]) ? themeList.value[key] : []
-  return hasAnyPlural(topicWords) ? baseModes : baseModes.filter(m => m.key !== 'plural')
-})
-
+// Прогресс темы: выучено (прошли урок), ждут повторения сегодня, освоено надолго, ещё новые
 const themeProgress = computed(() => {
+  const todayKey = getDateKey()
   return Object.fromEntries(
-      Object.entries(themeList.value).map(([key, words]) => {
-        const total = words.length
-        const hasPlural = hasAnyPlural(words)
-        const modesToCheck = baseModes.filter(m => hasPlural || m.key !== 'plural').map(m => m.key)
-        const learned = words.filter(word => {
-          const globalWord = store.words.find(w => w.de === word.de && w.topic === key)
-          if (!globalWord || !globalWord.progress) return false
-          return modesToCheck.every(mode => globalWord.progress[mode] === true)
-        }).length
-        return [key, {learned, total}]
+      Object.entries(themeList.value).map(([key, topicWords]) => {
+        const savedWords = topicWords.map(word => store.getWordEntry({de: word.de, topic: key})).filter(Boolean)
+        const learned = savedWords.filter(isWordInReview).length
+        return [key, {
+          total: topicWords.length,
+          learned,
+          newCount: topicWords.length - learned,
+          due: savedWords.filter(word => isWordDue(word, todayKey)).length,
+          mastered: savedWords.filter(isWordMastered).length
+        }]
       })
   )
 })
+
+const selectedTopicProgress = computed(() => {
+  return themeProgress.value[selectedTopic.value] || {total: 0, learned: 0, newCount: 0, due: 0, mastered: 0}
+})
+
+const totalDueCount = computed(() => {
+  return Object.values(themeProgress.value).reduce((sum, progress) => sum + progress.due, 0)
+})
+
+const selectedTopicWords = computed(() => themeList.value[selectedTopic.value] || [])
+
+const learnedPercent = computed(() => {
+  const {learned, total} = selectedTopicProgress.value
+  return total ? (learned / total) * 100 : 0
+})
+
+// Следующий урок — первые ещё не выученные слова темы; в режиме выбора — отмеченные слова
+const nextLessonWords = computed(() => selectedTopicWords.value
+    .filter(word => !isWordInReview(store.getWordEntry({de: word.de, topic: selectedTopic.value})))
+    .slice(0, LESSON_WORD_COUNT))
+
+const lessonWords = computed(() => {
+  if (!isChoosingWords.value) return nextLessonWords.value
+  return selectedTopicWords.value.filter(word => selectedWordKeys.value.includes(word.de))
+})
+
+// Шаги урока для подсказки (сами шаги — LESSON_STEPS в wordReview.js)
+const lessonSteps = [
+  {icon: '👋', label: 'wordLearning.stepIntro'},
+  {icon: '🔍', label: 'wordLearning.stepMeaning'},
+  {icon: '🧩', label: 'wordLearning.stepLetters'},
+  {icon: '✍️', label: 'wordLearning.stepWrite'}
+]
+
+const currentLangKey = computed(() => String(locale.value || '').split('-')[0] || 'en')
+const getTranslation = (word) => word[currentLangKey.value] ?? word.en ?? ''
+
+// Статус слова в списке: новое / выучено / пора повторить
+function getWordStatus(word) {
+  const savedWord = store.getWordEntry({de: word.de, topic: selectedTopic.value})
+  if (isWordDue(savedWord)) return 'due'
+  if (isWordInReview(savedWord)) return 'learned'
+  return 'new'
+}
+
+function toggleChoosingWords() {
+  isChoosingWords.value = !isChoosingWords.value
+  selectedWordKeys.value = []
+}
+
+function toggleWord(word) {
+  if (!isChoosingWords.value) return
+  selectedWordKeys.value = selectedWordKeys.value.includes(word.de)
+      ? selectedWordKeys.value.filter(key => key !== word.de)
+      : [...selectedWordKeys.value, word.de]
+}
+
+// Карточку повторения показываем, только когда уже есть выученные слова
+const hasStartedLearning = computed(() => store.words.some(isWordInReview))
 
 const getCategoryStatus = (group) => {
   const completed = group.keys.filter(key => {
@@ -209,8 +352,10 @@ const getCategoryStatus = (group) => {
   }
 }
 
+const ARE_ALL_TOPICS_UNLOCKED = false
+
 const isTopicUnlocked = (key) => {
-  if (authStore.isPremium) return true
+  if (ARE_ALL_TOPICS_UNLOCKED || authStore.isPremium) return true
   const allKeys = flatTopics.value
   const index = allKeys.indexOf(key)
   if (index === 0) return true
@@ -227,7 +372,8 @@ const selectTopic = (key) => {
     })
     window.history.pushState({isModesOpen: true}, '')
     selectedTopic.value = key
-    selectedModes.value = []
+    selectedWordKeys.value = []
+    isChoosingWords.value = false
     showModesBlock.value = true
   } else {
     $track('article_topic_locked_clicked', {
@@ -237,43 +383,31 @@ const selectTopic = (key) => {
   }
 }
 
-const startLearning = async () => {
-  if (!selectedModes.value.length || isLoading.value) return
+function openSession(query) {
+  if (isLoading.value) return
   isLoading.value = true
-  const sortedSelectedModes = baseModes.filter(m => selectedModes.value.includes(m.key)).map(m => m.key)
+  router.push(localePath({path: '/articles/articles-session', query}))
+}
+
+// Урок по следующим новым словам темы или по отмеченным
+const startLesson = () => {
+  const wordKeys = lessonWords.value.map(word => word.de)
+  if (!wordKeys.length) return
   $track('article_learning_started', {
     topic_id: selectedTopic.value,
-    modes: sortedSelectedModes.join(','),
-    modes_count: sortedSelectedModes.length
+    words_count: wordKeys.length,
+    is_chosen_words: isChoosingWords.value
   })
-  try {
-    const currentLangKey = locale.value || 'en'
-    const topicWordsLocal = (themeList.value[selectedTopic.value] || [])
-        .filter(word => {
-          const globalWord = store.words.find(w => w.de === word.de && w.topic === selectedTopic.value)
-          return sortedSelectedModes.some(mode => !(globalWord?.progress?.[mode] === true))
-        })
-        .map(w => ({
-          de: w.de,
-          article: w.article,
-          plural: w.plural || '',
-          topic: selectedTopic.value,
-          [currentLangKey]: w[currentLangKey]
-        }))
+  openSession({kind: 'lesson', topic: selectedTopic.value, words: wordKeys})
+}
 
-    await store.addWordsToGlobal(topicWordsLocal)
-    await store.setSelectedWords(topicWordsLocal)
-    await store.setSelectedTopics([selectedTopic.value])
-    await store.saveToFirebase()
-
-    await nextTick()
-    await router.push(localePath({
-      path: '/articles/articles-session',
-      query: {topic: selectedTopic.value, mode: sortedSelectedModes}
-    }))
-  } catch (e) {
-    isLoading.value = false
-  }
+// Повторение: всех тем (topic = null) или одной темы
+const startReview = (topic) => {
+  $track('article_review_clicked', {
+    topic_id: topic || 'all',
+    due_words: topic ? selectedTopicProgress.value.due : totalDueCount.value
+  })
+  openSession(topic ? {kind: 'review', topic} : {kind: 'review'})
 }
 
 function goBack() {
@@ -299,6 +433,7 @@ onMounted(()=> {
 })
 
 onMounted(async () => {
+  if (!store.isLoaded) store.loadFromFirebase()
   const res = await fetch('/words.json')
   themeList.value = await res.json()
   window.addEventListener('popstate', handlePopState)
@@ -578,41 +713,249 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
   text-align: center;
 }
 
-.modes-list {
-  padding: 0 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  flex-grow: 1;
-  overflow-y: auto;
-  padding-bottom: 20px;
-}
-
-.checkbox-container {
+/* Карточка повторения над темами */
+.review-card {
   display: flex;
   align-items: center;
-  gap: 14px;
-  cursor: pointer;
-  user-select: none;
-  position: relative;
-  padding: 14px;
-  border-radius: 20px;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 15px 18px 15px;
+  padding: 14px 16px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  box-shadow: 0 6px 0 #4c1d95;
+  color: #ffffff;
+}
+
+.review-card.is-empty {
+  background: var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+  color: var(--titleColor);
+}
+
+.review-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.review-card__title {
+  font-size: 17px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.review-card__hint {
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.review-card__button {
+  flex-shrink: 0;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 16px;
   background: #ffffff;
-  border: 3px solid var(--tabsSlideBorderColor);
-  box-shadow: var(--boxShadowMobile);
-  transition: transform 0.1s ease;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+  color: #6d28d9;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-.checkbox-container:active {
-  transform: scale(0.98);
+.review-card__button:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
-.checkbox-container.active-mode {
-  background-color: #f1c40f;
+/* Отметка на теме: сколько слов ждут повторения */
+.topic-due {
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #ede9fe;
+  color: #6d28d9;
+  font-size: 13px;
+  font-weight: 900;
 }
 
-.checkbox-container input {
+/* Экран темы */
+.topic-progress-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 15px;
+  padding: 14px 16px;
+  border-radius: 22px;
+  background: var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+}
+
+.progress-ring {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: conic-gradient(#22c55e calc(var(--percent) * 1%), var(--tabsSlideBorderColor) 0);
+  position: relative;
+}
+
+.progress-ring::before {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  border-radius: 50%;
+  background: var(--menuItemsBg);
+}
+
+.progress-ring__value {
+  position: relative;
+  color: var(--titleColor);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.topic-progress-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.topic-progress-card__title {
+  color: var(--titleColor);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.topic-progress-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  color: #8e8e93;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* Карточка следующего урока */
+.lesson-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 16px 15px 0;
+  padding: 16px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  box-shadow: 0 6px 0 #1d4ed8;
+  color: #ffffff;
+}
+
+.lesson-card--done {
+  gap: 4px;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  box-shadow: 0 6px 0 #15803d;
+}
+
+.lesson-card__title {
+  font-size: 17px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lesson-card__hint {
+  font-size: 15px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.lesson-card__words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lesson-word {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.lesson-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.lesson-step {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lesson-steps__arrow {
+  opacity: 0.7;
+}
+
+.choose-hint {
+  margin: -4px 15px 12px;
+  color: #8e8e93;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Прокручиваемая часть окна темы */
+.topic-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 16px;
+  scrollbar-width: none;
+}
+
+.topic-scroll::-webkit-scrollbar {
   display: none;
+}
+
+.topic-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15px;
+}
+
+.topic-section-title {
+  margin: 22px 15px 12px;
+  color: var(--titleColor);
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.select-all-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 12px;
+  background: transparent;
+  color: #3b82f6;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
 }
 
 .checkmark {
@@ -647,18 +990,124 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
   transition: stroke-dashoffset 0.3s ease;
 }
 
-.checkbox-container input:checked + .checkmark polyline {
+/* Список слов темы */
+.topic-words {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 15px;
+}
+
+.topic-word {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  user-select: none;
+}
+
+.topic-word.is-choosable {
+  cursor: pointer;
+}
+
+.topic-word.is-selected {
+  border-color: #3b82f6;
+}
+
+.checkmark--small {
+  width: 24px;
+  height: 24px;
+}
+
+.topic-word.is-selected .checkmark polyline {
   stroke-dashoffset: 0;
 }
 
-.checkbox-container input:checked + .checkmark svg {
+.topic-word.is-selected .checkmark svg {
   opacity: 1;
 }
 
-.label-text {
-  color: #1e1e1e;
-  font-weight: 800;
-  font-size: 1.1rem;
+.word-sound {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.word-sound :deep(.speak-btn__icon) {
+  width: 30px;
+}
+
+.topic-word__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.topic-word__german {
+  color: var(--titleColor);
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.topic-word__translation {
+  color: #8e8e93;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.article-color--der {
+  color: #007AFF;
+}
+
+.article-color--die {
+  color: #FF3B30;
+}
+
+.article-color--das {
+  color: #34C759;
+}
+
+.word-status {
+  flex-shrink: 0;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.word-status--new {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.word-status--learned {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.word-status--due {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.topic-actions {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.topic-actions .start-btn {
+  margin: 0 15px 12px 15px;
+}
+
+.start-btn--review {
+  background-color: #8b5cf6;
+  border-color: #7c3aed;
+  border-bottom-color: #5b21b6;
 }
 
 .start-btn {
@@ -801,7 +1250,6 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
   display: flex;
   flex-direction: column;
 }
-
 @media (min-width: 768px) {
   .topic-list-item {
     flex: 0 0 300px;
