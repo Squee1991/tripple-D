@@ -53,6 +53,18 @@ function buildTexts(t) {
 	});
 }
 
+// Текст «N слов ждут повторения» — если в этот день есть что повторять
+function buildReviewText(t, count) {
+	const titleKey = 'reminders.reviewTitle';
+	const bodyKey = 'reminders.reviewBody';
+	const title = t(titleKey);
+	const body = t(bodyKey, { count });
+	return {
+		title: title && title !== titleKey ? title : '🔁 Time to review!',
+		body: body && body !== bodyKey ? body : `${count} words are waiting for review`
+	};
+}
+
 export function shouldAskForReminders() {
 	if (!Capacitor.isNativePlatform()) return false;
 	const settings = readSettings();
@@ -116,6 +128,8 @@ export async function scheduleReminders(t) {
 		const [hour, minute] = settings.time.split(':').map(Number);
 		const doneToday = settings.lastDoneDate === getTodayKey();
 		const texts = buildTexts(t);
+		const reviewForecast = Array.isArray(settings.reviewForecast) ? settings.reviewForecast : [];
+		const isForecastFromToday = settings.reviewForecastDate === getTodayKey();
 		const now = Date.now();
 		const notifications = [];
 
@@ -125,7 +139,8 @@ export async function scheduleReminders(t) {
 			at.setDate(at.getDate() + i);
 			at.setHours(hour, minute, 0, 0);
 			if (at.getTime() <= now) continue;
-			const text = texts[i % texts.length];
+			const reviewCount = isForecastFromToday ? Number(reviewForecast[i] || 0) : 0;
+			const text = reviewCount > 0 ? buildReviewText(t, reviewCount) : texts[i % texts.length];
 			notifications.push({
 				id: BASE_ID + i,
 				title: text.title,
@@ -140,6 +155,16 @@ export async function scheduleReminders(t) {
 	} catch (e) {
 		console.error('Ошибка планирования напоминаний:', e);
 	}
+}
+
+// Сколько слов будет ждать повторения в ближайшие дни — чтобы напоминание звало повторять слова
+export async function updateReviewReminders(reviewForecast, t) {
+	const settings = readSettings();
+	const isSameForecast = settings.reviewForecastDate === getTodayKey()
+		&& JSON.stringify(settings.reviewForecast) === JSON.stringify(reviewForecast);
+	if (isSameForecast) return;
+	writeSettings({ reviewForecast, reviewForecastDate: getTodayKey() });
+	await scheduleReminders(t);
 }
 
 // Вызывать после успешно пройденного урока

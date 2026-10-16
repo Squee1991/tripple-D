@@ -36,7 +36,8 @@ import { useHead } from '#imports'
 import { Capacitor } from '@capacitor/core'
 import VNetwork from "./src/components/V-network.vue";
 import { initAdmob } from "./utils/admob.js";
-import { scheduleReminders } from "./utils/reminders.js";
+import { scheduleReminders, updateReviewReminders } from "./utils/reminders.js";
+import { getReviewForecast } from '~/utils/wordReview.js';
 import VMarathonModal from "~/src/components/overlays/V-marathonModal.vue";
 const chainStore = userChainStore()
 const { locale, t } = useI18n()
@@ -147,9 +148,12 @@ watch(locale, () => {
 
 watch(() => authStore.initialized, (isReady) => {
   if (isReady) {
-    learningStore.loadFromFirebase().catch(err => {
-      console.error(err);
-    });
+    learningStore.loadFromFirebase()
+      // Напоминания зовут повторять слова в те дни, когда подходит срок
+      .then(() => updateReviewReminders(getReviewForecast(learningStore.words), t))
+      .catch(err => {
+        console.error(err);
+      });
   }
 }, { immediate: true });
 

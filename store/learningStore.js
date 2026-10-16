@@ -3,6 +3,15 @@ import {ref, computed} from 'vue'
 import {doc, setDoc, getDoc, getFirestore, updateDoc} from 'firebase/firestore'
 import {getAuth, onAuthStateChanged} from 'firebase/auth'
 import {dailyStore} from './dailyStore.js'
+import {
+	REVIEW_INTERVAL_DAYS,
+	LESSON_STEPS,
+	getDateKey,
+	getDateKeyAfterDays,
+	isWordDue,
+	isWordInReview,
+	getLevelAfterReviewAnswer
+} from '../utils/wordReview.js'
 
 export const userlangStore = defineStore('learning', () => {
 	const db = getFirestore()
@@ -180,6 +189,115 @@ export const userlangStore = defineStore('learning', () => {
 		}
 	}
 
+	// ===== Интервальное повторение =====
+
+	// Слово с уровнем 0 или без записи — новое; с уровнем 1+ — выучено и повторяется
+	const getWordEntry = (word) => findByKey(words.value, word.de, keyTopic(word.topic))
+
+	const addToLearnedWords = (word, {countForDailyTask}) => {
+		if (findByKey(learnedWords.value, word.de, keyTopic(word.topic))) return
+		learnedWords.value.push({de: word.de, article: word.article, plural: word.plural || '', topic: keyTopic(word.topic)})
+		if (countForDailyTask) {
+			try { daily.addLearned(1) } catch {}
+		}
+	}
+
+	// Слова, выученные по старой системе (пройдены все режимы), получают уровень 2.
+	// Чтобы не вывалить сразу сотни слов, их первые повторения раскладываются на 2 недели.
+	const OLD_LEARNED_SPREAD_DAYS = 14
+	const migrateToWordLevels = () => {
+		let isChanged = false
+		let oldLearnedCount = 0
+		for (const word of words.value) {
+			if (word.level !== undefined) continue
+			if (isPassedInOldSystem(word)) {
+				word.level = 2
+				word.nextReviewDate = getDateKeyAfterDays(oldLearnedCount % OLD_LEARNED_SPREAD_DAYS)
+				oldLearnedCount++
+				addToLearnedWords(word, {countForDailyTask: false})
+			} else {
+				word.level = 0
+				word.nextReviewDate = null
+			}
+			isChanged = true
+		}
+		return isChanged
+	}
+
+	// По старой системе слово было выучено, когда пройдены все способы (мн. число — только если оно у слова есть)
+	const isPassedInOldSystem = (word) => {
+		const progress = word.progress || {}
+		const hasPlural = !!String(word.plural || '').trim()
+		return ['article', 'letters', 'wordArticle', 'audio'].every(mode => progress[mode] === true)
+			&& (!hasPlural || progress.plural === true)
+	}
+
+	// Слово выучено, когда пройдены все шаги урока
+	const isLessonPassed = (word) => LESSON_STEPS.every(step => word.progress?.[step] === true)
+
+	// Шаг урока пройден для слова. Возвращает true, если пройден впервые (за это дают очки).
+	// Когда пройдены все шаги — слово выучено: уровень 1, первое повторение завтра
+	const passWordMode = (lessonWord, mode) => {
+		let word = getWordEntry(lessonWord)
+		if (!word) {
+			word = {
+				de: lessonWord.de,
+				article: lessonWord.article,
+				plural: lessonWord.plural || '',
+				topic: keyTopic(lessonWord.topic),
+				level: 0,
+				nextReviewDate: null,
+				progress: {}
+			}
+			words.value.push(word)
+		}
+		if (!word.progress) word.progress = {}
+		const isNewlyPassed = word.progress[mode] !== true
+		word.progress[mode] = true
+		if (!isWordInReview(word) && isLessonPassed(word)) {
+			word.level = 1
+			word.nextReviewDate = getDateKeyAfterDays(REVIEW_INTERVAL_DAYS[1])
+			addToLearnedWords(word, {countForDailyTask: true})
+		}
+		return isNewlyPassed
+	}
+
+	// Задание при повторении выполнено — отмечаем его в прогрессе слова (по прогрессу считаются достижения)
+	const markTaskPassed = (reviewWord, taskType) => {
+		const word = getWordEntry(reviewWord)
+		if (!word) return
+		if (!word.progress) word.progress = {}
+		word.progress[taskType] = true
+	}
+
+	// Ответ при повторении двигает слово по уровням
+	const applyReviewAnswer = (reviewWord, isCorrect) => {
+		const word = getWordEntry(reviewWord)
+		if (!word) return
+		Object.assign(word, getLevelAfterReviewAnswer(word, isCorrect))
+	}
+
+	// Слова, которые пора повторить сегодня (можно только из одной темы)
+	const getDueWords = (topic = null) => {
+		const todayKey = getDateKey()
+		return words.value.filter(word => isWordDue(word, todayKey) && (!topic || word.topic === topic))
+	}
+
+	// Награда за правильный ответ: очки, опыт и счётчики ежедневных заданий
+	const rewardCorrectAnswer = (taskType) => {
+		points.value++
+		totalEarnedPoints.value++
+		exp.value++
+		handleLeveling()
+		try {
+			daily.addPoints(1)
+			daily.addExp(1)
+			if (taskType === 'wordArticle') daily.addWordArticle(1)
+			if (taskType === 'plural') daily.addPlural(1)
+			if (taskType === 'audio') daily.addAudioArticle(1)
+		} catch {}
+	}
+
 	const addWrongAnswers = async (word) => {
 		if (!word || !word.de) return;
 		const isAlreadyInWrong = wrongAnswers.value.find(w => w.de === word.de);
@@ -249,7 +367,8 @@ export const userlangStore = defineStore('learning', () => {
 		const prevExp = exp.value
 		const prevLvl = isLeveling.value
 		handleLeveling()
-		if (exp.value !== prevExp || isLeveling.value !== prevLvl) {
+		const isMigrated = migrateToWordLevels()
+		if (isMigrated || exp.value !== prevExp || isLeveling.value !== prevLvl) {
 			await saveToFirebase()
 		}
 	}
@@ -354,6 +473,12 @@ export const userlangStore = defineStore('learning', () => {
 		bestStreakAnyMode,
 		bestStreakEasyArticle,
 		recordAnswerResult,
-		addPoints
+		addPoints,
+		passWordMode,
+		applyReviewAnswer,
+		markTaskPassed,
+		getDueWords,
+		getWordEntry,
+		rewardCorrectAnswer
 	}
 })
