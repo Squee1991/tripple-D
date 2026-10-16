@@ -1,4 +1,80 @@
 {
+  "wordLearning": {
+    "newWord": "✨ كلمة جديدة",
+    "tryAgain": "🔁 مرة أخرى",
+    "reviewTitle": "المراجعة",
+    "pluralLabel": "الجمع",
+    "lessonDoneTitle": "اكتمل الدرس!",
+    "wordsTitle": "كلمات الموضوع",
+    "learnSelected": "تعلّم المحدد ({count})",
+    "status_new": "جديدة",
+    "status_learned": "تم تعلمها",
+    "status_due": "للمراجعة",
+    "repeatMistakes": "كرر الأخطاء ({count})",
+    "lessonWordsText": "كلمات الدرس: {count}",
+    "reviewDoneTitle": "اكتملت المراجعة!",
+    "reviewDoneText": "من المحاولة الأولى: {correct} من {total}",
+    "reviewMore": "راجع المزيد ({count})",
+    "reviewCardDue": "بانتظار المراجعة: {count}",
+    "reviewCardEmpty": "تمت مراجعة كل شيء! عد غدًا",
+    "reviewButton": "راجع",
+    "topicDue": "للمراجعة: {count}",
+    "statDue": "للمراجعة",
+    "statMastered": "متقنة",
+    "reviewTopicButton": "راجع ({count})",
+    "meaningFor": "ما معنى هذه الكلمة؟",
+    "audioWithArticle": "استمع واكتب الكلمة مع أداة التعريف",
+    "almostCorrect": "تقريبًا! تحقّق من الإملاء",
+    "genderRule": "الكلمات المنتهية بـ {suffix} تكون دائمًا تقريبًا {article}",
+    "nextLessonTitle": "الدرس التالي",
+    "chosenWordsTitle": "كلماتك",
+    "startLesson": "ابدأ الدرس",
+    "stepIntro": "تعارف",
+    "stepMeaning": "المعنى",
+    "stepLetters": "الحروف",
+    "stepWrite": "الكتابة",
+    "learnedOf": "تم تعلّم {learned} من {total}",
+    "topicDoneTitle": "تم تعلّم كل الكلمات!",
+    "topicDoneText": "راجعها عندما يحين موعدها",
+    "chooseWords": "اختر كلمات",
+    "cancelChoice": "إلغاء",
+    "chooseWordsHint": "اضغط على الكلمات التي تريد تعلّمها",
+    "tomorrowReview": "🔁 للمراجعة غدًا: {count} كلمة"
+  },
+  "dailyRun": {
+    "title": "السباق اليومي",
+    "subtitle": "{count} كلمة · محاولة واحدة يوميًا",
+    "play": "العب",
+    "todayResult": "اليوم: {score} / {total}",
+    "streakDays": "{count} أيام متتالية",
+    "nextIn": "سباق جديد بعد {hours} س {minutes} د",
+    "finishTitle": "انتهى السباق!",
+    "timeLabel": "الوقت",
+    "streakLabel": "أيام متتالية",
+    "rewardLabel": "المكافأة",
+    "mistakesTitle": "الأخطاء",
+    "noMistakes": "بدون أخطاء! 🎉",
+    "done": "تم"
+  },
+  "reminders": {
+    "title": "لا تفقد تقدمك!",
+    "text": "سنذكّرك مرة واحدة يوميًا حتى لا تنقطع سلسلتك. متى يناسبك؟",
+    "morning": "الصباح",
+    "afternoon": "الظهر",
+    "evening": "المساء",
+    "night": "الليل",
+    "custom": "وقتك الخاص",
+    "enable": "ذكّرني",
+    "later": "ليس الآن",
+    "n1Title": "📚 حان وقت الألمانية!",
+    "n1Body": "5 دقائق يوميًا ويتحقق هدفك",
+    "n2Title": "🔥 حافظ على سلسلتك!",
+    "n2Body": "درس قصير واحد يحافظ على سلسلتك",
+    "n3Title": "🦔 القنفذ يفتقدك",
+    "n3Body": "مهمة جديدة بانتظارك",
+    "reviewTitle": "🔁 حان وقت المراجعة!",
+    "reviewBody": "كلمات للمراجعة: {count}. دقيقتان فقط!"
+  },
   "definiteIndefiniteQuestOne": {
     "title": "معركة النهايات",
     "description": "تدريب مختلط: أدوات النكرة والتعريف في الجمل.",
@@ -3581,6 +3657,7 @@
     "inputType": "اكتب ما تسمعه… (علامات الترقيم غير إلزامية)"
   },
   "questCompletedModals": {
+    "ads": "مشاهدة الإعلان",
     "correct": "صحيح",
     "correctAnswer": "الإجابة الصحيحة:",
     "further": "التالي",
@@ -3601,6 +3678,7 @@
     "notEnough": "غير كافٍ",
     "questNotCompleted": "لم تُكمل المهمة",
     "warning": "إذا غادرت الآن، فلن يتم حفظ التقدم.",
+    "continueQuest": "لم يتبق سوى القليل. أكمل المهمة لحفظ تقدمك",
     "leave": "مغادرة",
     "continue": "متابعة",
     "completedWithMistakes": "تم إكمال المهمة، ولكن توجد أخطاء"
@@ -8318,6 +8396,16 @@
     "answer": "يتجاهل الخطأ"
   },
   "guessWord": {
+    "dailyTitle": "كلمة اليوم",
+    "dailyText": "كلمة واحدة للجميع ومحاولة واحدة. خمّنها واحصل على {coins} عملات!",
+    "dailyPlay": "العب",
+    "dailyContinue": "تابع",
+    "dailyWon": "تم التخمين:",
+    "dailyLost": "لم يتم التخمين:",
+    "dailyNext": "كلمة جديدة بعد {hours} س {minutes} د",
+    "dailyShare": "مشاركة",
+    "dailyCopied": "تم النسخ!",
+    "dailyPlayNormal": "لعبة عادية",
     "subtitle": "خمن الكلمة وطوّر لغتك الألمانية!",
     "theme": "الموضوع:",
     "back": "رجوع",
@@ -8876,7 +8964,7 @@
     "specialAllVerbsText": "احصل على جميع إنجازات الأفعال: التصريف، الأزمنة، الأفعال الناقصة، أنواع الأفعال",
     "specialAllVerbsAward": "جائزة: سيوف العمل",
     "specialGrotText": "أنا جروت",
-    "specialGrotLabel": "لكل موضوع شجرته الخاصة و… هذا ليس خطأ! ابحث عنه في تمارين أدوات التعريف وتعلمه بجميع الطرق.",
+    "specialGrotLabel": "لكل موضوع شجرته الخاصة و… هذا ليس خطأ! ابحث عنها في تمارين أدوات التعريف وتعلّمها.",
     "specialGrotAward": "الجائزة: أصيص مع جروت",
     "generalSeventhlabel": "سيد الجمل",
     "generalSeventhText": "كوّن 1000 جملة في الوضع الفردي لمبارزة الجمل بأي مستوى صعوبة"
@@ -8907,13 +8995,13 @@
     "dailyQuestDescription": "لقد أنجزت 42 مهمة يومية، لكن السؤال النهائي للكون ما زال لغزًا",
     "dailyQuestAward": "المكافأة: التلسكوب المجرّي",
     "catDotText": "قط-كلب",
-    "catDotDescription": "مياو-هوهو! تعلّم كلمتي «قط» و«كلب» في تمارين أدوات التعريف بجميع الأوضاع.",
+    "catDotDescription": "مياو-هوهو! تعلّم كلمتي «قط» و«كلب» في تمارين أدوات التعريف.",
     "cowabungaText": "كاوابونغا",
-    "cowabungaDescription": "سلامي أم بيبروني؟ سلاحف النينجا ستأكله على أي حال. تعلّم كلمة «سلامي» في جميع الأوضاع ضمن تدريب أدوات التعريف.",
+    "cowabungaDescription": "سلامي أم بيبروني؟ سلاحف النينجا ستأكله على أي حال. تعلّم كلمة «سلامي» في تمارين أدوات التعريف.",
     "zooText": "صديق الحيوانات",
-    "zooDescription": "الصديق الحقيقي لن يترك أحدًا بلا أداة تعريف! تعلّم جميع الكلمات في موضوع «الحيوانات» في جميع أوضاع ممارسة أدوات التعريف.",
+    "zooDescription": "الصديق الحقيقي لن يترك أحدًا بلا أداة تعريف! تعلّم جميع الكلمات في كل مواضيع فئة «الحيوانات» في تمارين أدوات التعريف.",
     "veganText": "حامي الخضروات",
-    "veganDescription": "لن تبقى أي خضار بلا أداة تعريف! تعلّم جميع كلمات الخضروات من موضوع «الطعام» في جميع أوضاع تدريب أدوات التعريف.",
+    "veganDescription": "لن تبقى أي خضار بلا أداة تعريف! تعلّم جميع كلمات موضوع «خضروات» في تمارين أدوات التعريف.",
     "firstStepLabel": "الخطوة الأولى",
     "firstAwardText": "بداية المجموعة",
     "firstAwardLabel": "احصل على جائزتك الأولى",
@@ -9088,7 +9176,9 @@
     "difficultDescriptionHard": "حياة واحدة، 5 ثوانٍ/كلمة",
     "loading": "جاري تحميل الكلمات...",
     "start": "ابدأ!",
-    "login": "سجّل الدخول للبدء"
+    "login": "سجّل الدخول للبدء",
+    "freeModeTitle": "الماراثون العادي",
+    "freeModeHint": "العب كما تشاء — اختر مستوى الصعوبة"
   },
   "marathonGame": {
     "notReadyTitle": "الرجاء الانتظار",
@@ -9104,7 +9194,9 @@
     "bestResult": "أفضل نتيجة لك:",
     "tryAgain": "حاول مجددًا",
     "back": "العودة لاختيار الصعوبة",
-    "main": "إلى الصفحة الرئيسية"
+    "main": "إلى الصفحة الرئيسية",
+    "streakMilestone": "{count} على التوالي!",
+    "toRecord": "حتى الرقم القياسي: {count}"
   },
   "rulesFirstBlock": {
     "title": "نظرية أدوات التعريف",
@@ -9742,7 +9834,10 @@
     "commonPoints": "إجمالي النقاط",
     "rank": "الرتبة:",
     "streak": "الرقم القياسي:",
-    "cabinet": "سجل المتن"
+    "cabinet": "سجل المتن",
+    "flights": "الرحلات",
+    "bosses": "الزعماء",
+    "meteors": "المُسقَطة"
   },
   "galaxyRank": {
     "none": "أرضي",
@@ -9960,7 +10055,19 @@
     "newRecord": "رقم قياسي جديد!",
     "check": "النتيجة:",
     "again": "تحليق مرة أخرى",
-    "constellations": "مغادرة الكوكبة"
+    "constellations": "مغادرة الكوكبة",
+    "moveHint": "تحرّك تحت النيزك ◀ ▶ وأطلق الإجابة الصحيحة",
+    "bestCombo": "أفضل سلسلة",
+    "yourAnswer": "إجابتك",
+    "correctAnswer": "الإجابة الصحيحة",
+    "noMistakes": "بدون أخطاء! 🎉",
+    "bossIncoming": "الزعيم!",
+    "bossDefeated": "هُزم الزعيم!",
+    "bossesDefeated": "الزعماء المهزومون",
+    "pauseTitle": "إيقاف مؤقت",
+    "resume": "متابعة",
+    "finishFlight": "إنهاء الرحلة",
+    "finishNote": "سيتم حفظ النقاط والأرتيكس لهذه الرحلة"
   },
   "textTasksTip": {
     "title": "المهام النصية",
@@ -10334,6 +10441,7 @@
     "restore": "استعادة المشتريات."
   },
   "submitComputed": {
+    "try": "تجربة مقابل",
     "sync": "جارٍ المزامنة...",
     "getPlus": "الحصول على PLUS",
     "getBasic": "الحصول على Basic",
@@ -11115,5 +11223,15 @@
     "halloweenReputationDescription": "احصل على أعلى مستوى سمعة مقابل إنجاز مهام الهالوين.",
     "halloweenAllAchievementsText": "لتكن قوة الهالوين معك!",
     "halloweenAllAchievementsDescription": "احصل على جميع إنجازات الهالوين واستحق اللقب الاحتفالي."
+  },
+  "marathonModal": {
+    "text": "لقد بدأ الماراثون! نافس، وانتصر، واحصل على الإنجازات والمكافآت!"
+  },
+  "plusPreviewOverlay": {
+    "title": " هل تريد التعلم",
+    "title2": "بلا حدود",
+    "title3": "وتسريع تقدمك؟",
+    "title4": "قلوب لا نهائية، وجميع الدروس، وبدون أي إعلانات!",
+    "button": "نعم، أريد ذلك!"
   }
 }

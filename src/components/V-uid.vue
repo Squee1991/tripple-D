@@ -45,8 +45,8 @@
               <span class="event__badge">{{ t(displayEvent.valueKey) }}</span>
               <span class="event__title" v-if="displayEvent.isActive">
                  <strong>{{ t('eventsNotification.left') }} {{ displayEvent.daysNum }} {{
-                     displayEvent.daysWord
-                   }}</strong>
+                  displayEvent.daysWord
+                }}</strong>
               </span>
               <span class="event__title" v-else>
                 {{ t('eventsNotification.untilEvent') }} <strong>{{ displayEvent.daysNum }} {{
@@ -69,9 +69,9 @@
 </template>
 
 <script setup>
-import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
-import {useRouter} from 'vue-router'
-import {useEventSessionStore} from '~/store/eventsStore.js'
+import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
+import { useRouter } from 'vue-router'
+import { useEventSessionStore } from '~/store/eventsStore.js'
 import VPoints from "~/src/components/V-points.vue";
 import VDaily from "~/src/components/Vdaily.vue";
 import VLands from "~/src/components/V-lands.vue";
@@ -79,12 +79,44 @@ import Location from '../../assets/images/location.svg'
 import Daily from '../../assets/images/daily.svg'
 import Card from '../../assets/images/card.svg'
 import VTransition from "~/src/components/V-transition.vue";
+
+import DailyHalloween from "~/assets/images/dailyHalloween.svg";
+import LandsHalloween from "~/assets/images/landsHalloween.svg";
+import ProfileHalloween from "~/assets/images/prolfileHalloween.svg";
+
 import PadLock from '~/assets/images/padlock.svg'
 import ModalDev from '~/src/components/modal.vue'
 
-const {t, locale} = useI18n();
+const { t, locale } = useI18n();
 const eventStore = useEventSessionStore();
 const router = useRouter();
+const colorMode = useColorMode();
+
+const isHalloween = computed(() => colorMode.value === 'orange');
+
+const tabs = computed(() => [
+  {
+    id: 'locations',
+    icon: isHalloween.value ? LandsHalloween : Location,
+    alt: 'achIcon',
+    label: t('tabsMobile.locations'),
+    component: VLands
+  },
+  {
+    id: 'daily',
+    icon: isHalloween.value ? DailyHalloween : Daily,
+    alt: 'daily icon',
+    label: t('tabsMobile.daily'),
+    component: VDaily
+  },
+  {
+    id: 'profile',
+    icon: isHalloween.value ? ProfileHalloween : Card,
+    alt: 'ach icon',
+    label: t('tabsMobile.profile'),
+    component: VPoints
+  },
+]);
 
 const showDevModal = ref(false)
 
@@ -110,12 +142,6 @@ const onDevModalButton = () => {
 watch(showDevModal, (val) => {
   document.body.style.overflow = val ? 'hidden' : ''
 })
-
-const tabs = [
-  {id: 'locations', icon: Location, alt: 'achIcon', label: t('tabsMobile.locations'), component: VLands},
-  {id: 'daily', icon: Daily, alt: 'daily icon', label: t('tabsMobile.daily'), component: VDaily},
-  {id: 'profile', icon: Card, alt: 'ach icon', label: t('tabsMobile.profile'), component: VPoints},
-]
 
 function getDaysWord(num) {
   const n = Math.abs(num) % 100;
@@ -152,7 +178,7 @@ const displayEvent = computed(() => {
       endDate.setFullYear(endDate.getFullYear() + 1);
     }
 
-    return {...event, startDate, endDate};
+    return { ...event, startDate, endDate };
   }).sort((a, b) => a.startDate - b.startDate);
 
   const nextEvent = upcomingEvents.find(e => e.endDate >= now);
@@ -192,16 +218,17 @@ function handleEventClick(e) {
 const getTransformX = (index) => {
   if (index === -1) return 0;
   if (locale.value === 'ar') {
-    return (tabs.length - 1 - index) * 100;
+    return (tabs.value.length - 1 - index) * 100;
   }
   return index * 100;
 };
+
 const savedTab = typeof window !== 'undefined' ? sessionStorage.getItem('activeMobileTab') : null
-const activeTabId = ref(savedTab || tabs[0].id)
-const currentTab = computed(() => tabs.find(tab => tab.id === activeTabId.value) || tabs[0])
+const activeTabId = ref(savedTab || 'locations')
+const currentTab = computed(() => tabs.value.find(tab => tab.id === activeTabId.value) || tabs.value[0])
 const currentComponent = computed(() => currentTab.value.component)
 
-const activeIndex = computed(() => tabs.findIndex(tab => tab.id === activeTabId.value))
+const activeIndex = computed(() => tabs.value.findIndex(tab => tab.id === activeTabId.value))
 
 function setTab(id) {
   activeTabId.value = id
@@ -261,7 +288,6 @@ onBeforeUnmount(() => {
 }
 
 .event-wrapper {
-  max-width: 500px;
   display: flex;
   align-items: center;
   justify-content: flex-start;

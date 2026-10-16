@@ -112,8 +112,8 @@
                      @error="$event.target.style.display='none'">
               </div>
               <div class="completion-actions">
-                <button class="btn-primary" @click="startQuest">{{ t('locationWordSession.begin') }}</button>
-                <button class="btn-secondary" @click="restartLearning">{{ t('locationWordSession.repeat') }}</button>
+                <button class="btn-primary" @click="leaveCompletion(startQuest)">{{ t('locationWordSession.begin') }}</button>
+                <button class="btn-secondary" @click="leaveCompletion(restartLearning)">{{ t('locationWordSession.repeat') }}</button>
               </div>
             </div>
           </div>
@@ -294,34 +294,39 @@ function goToVerbForms(verbName) {
   })
 }
 
-function startPractice() {
+// Реклама — после практики, на кнопках окна завершения, а не перед стартом
+function leaveCompletion(next) {
   isAdLoading.value = true
   showInterstitial(() => {
     isAdLoading.value = false
-    viewMode.value = 'practice'
-    const allTranslations = vocabulary.value.map(v => getTranslation(v))
-    allTranslationsRef.value = allTranslations
-
-    const sequence = []
-    vocabulary.value.forEach(v => {
-      sequence.push({...v, displayType: 'visual', correctTranslation: getTranslation(v)})
-      sequence.push({...v, displayType: 'audio', correctTranslation: getTranslation(v)})
-    })
-
-    learningSequence.value = sequence.sort(() => Math.random() - 0.5)
-    currentStep.value = 0
-    correctAnswers.value = 0
-    incorrectAnswers.value = 0
-    selectedAnswer.value = null
-    hasChecked.value = false
-
-    if (learningSequence.value.length > 0) {
-      generateOptions(allTranslations)
-      setTimeout(() => {
-        playSound(currentWord.value.word)
-      }, 300)
-    }
+    next()
   })
+}
+
+function startPractice() {
+  viewMode.value = 'practice'
+  const allTranslations = vocabulary.value.map(v => getTranslation(v))
+  allTranslationsRef.value = allTranslations
+
+  const sequence = []
+  vocabulary.value.forEach(v => {
+    sequence.push({...v, displayType: 'visual', correctTranslation: getTranslation(v)})
+    sequence.push({...v, displayType: 'audio', correctTranslation: getTranslation(v)})
+  })
+
+  learningSequence.value = sequence.sort(() => Math.random() - 0.5)
+  currentStep.value = 0
+  correctAnswers.value = 0
+  incorrectAnswers.value = 0
+  selectedAnswer.value = null
+  hasChecked.value = false
+
+  if (learningSequence.value.length > 0) {
+    generateOptions(allTranslations)
+    setTimeout(() => {
+      playSound(currentWord.value.word)
+    }, 300)
+  }
 }
 
 function generateOptions(allTranslations) {

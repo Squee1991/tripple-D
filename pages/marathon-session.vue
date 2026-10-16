@@ -28,30 +28,50 @@
               <div class="widget-label">{{ t('marathonGame.record') }}</div>
               <div class="widget-value">{{ currentDifficultyRecord }}</div>
             </div>
-            <div v-if="gameStore.levelSettings.timer" class="stat-widget timer">
-              <div class="widget-label">{{ t('marathonGame.timer') }}</div>
-              <div class="widget-value">{{ gameStore.timer }}</div>
-            </div>
+          </div>
+          <!-- Таймер: полоска сжимается и краснеет к концу -->
+          <div v-if="gameStore.levelSettings.timer" class="timer-bar" :class="{ 'is-danger': isTimerDanger }">
+            <div :key="answerCount" class="timer-bar__fill" :style="{ width: timerPercent + '%' }"></div>
           </div>
         </header>
         <main class="game-content">
           <div v-if="gameStore.currentWord" class="game-area">
-            <div class="word-display" :class="feedbackClass">
-              <h1>{{ gameStore.currentWord.de }}</h1>
-            </div>
-            <div class="actions" :class="{ 'disabled': isChecking || !gameStore.gameActive }">
-              <button @click="handleArticleChoice('der')" class="article-btn der">
-                <span class="article-text">der</span>
-              </button>
-              <button @click="handleArticleChoice('die')" class="article-btn die">
-                <span class="article-text">die</span>
-              </button>
-              <button @click="handleArticleChoice('das')" class="article-btn das">
-                <span class="article-text">das</span>
-              </button>
-            </div>
+            <VArticleCard
+                :word="gameStore.currentWord"
+                :feedback="feedback"
+                :streak="gameStore.sessionStreak"
+                :card-key="answerCount"
+                :fly-direction="flyDirection"
+                :milestone-text="milestoneText"
+            >
+              <template #above>
+                <div v-if="stepsToRecord" class="record-chase">🏆 {{ t('marathonGame.toRecord', {count: stepsToRecord}) }}</div>
+              </template>
+            </VArticleCard>
+            <VArticleButtons
+                :disabled="isChecking || !gameStore.gameActive"
+                :feedback="feedback"
+                :correct-article="gameStore.currentWord.article"
+                :chosen-article="chosenArticleRef"
+                @choose="handleArticleChoice"
+            />
           </div>
         </main>
+        <div v-if="inGameConfetti.length" class="ingame-confetti">
+          <div
+              v-for="piece in inGameConfetti"
+              :key="piece.id"
+              class="confetti-piece"
+              :style="{
+                left: piece.left + '%',
+                backgroundColor: piece.color,
+                animationDelay: piece.delay + 's',
+                animationDuration: piece.duration + 's',
+                width: piece.width + 'px',
+                height: piece.height + 'px'
+              }"
+          ></div>
+        </div>
         <Transition name="fade-scale">
           <div v-if="shouldShowGameOverModal" class="fullscreen-modal">
             <div class="confetti-container" v-if="confettiParticles.length > 0">
@@ -111,8 +131,11 @@ import {useGameStore} from '../store/marafonStore.js'
 import {userlangStore} from '~/store/learningStore.js'
 import {userAuthStore} from '~/store/authStore.js'
 import {dailyStore} from '~/store/dailyStore.js'
-import {playCorrect, playWrong, playLevelCompleted, unlockAudioByUserGesture} from '../utils/soundManager.js'
+import {playCorrectRising, playWrong, playLevelCompleted, unlockAudioByUserGesture} from '../utils/soundManager.js'
+import {vibrateSuccess, vibrateError, vibrateImpact} from '~/utils/haptics.js'
 import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue"
+import VArticleCard from "~/src/components/V-articleCard.vue"
+import VArticleButtons from "~/src/components/V-articleButtons.vue"
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue"
 import VStreakModal from '~/src/components/V-streak.vue'
 import {showInterstitial} from '../utils/admob.js'
@@ -200,31 +223,128 @@ const backTo = () => {
   router.back()
 }
 
-const feedbackClass = computed(() => {
-  if (feedback.value === 'correct') return 'feedback-correct'
-  if (feedback.value === 'incorrect') return 'feedback-incorrect'
-  return ''
+
+// --- Оживление игры: карточка, огонь серии, таймер-полоска, погоня за рекордом ---
+const STREAK_MILESTONES = [10, 25, 50, 75, 100]
+const CARD_FLY_AFTER_CORRECT_MS = 350
+const CARD_FALL_AFTER_MISTAKE_MS = 1200
+const MILESTONE_VISIBLE_MS = 1300
+const RECORD_CHASE_FROM_STEPS = 5
+
+// Номер карточки: меняется — старая карточка улетает, новая выезжает сверху
+const answerCount = ref(0)
+// Куда улетает карточка: der / die / das — к кнопке артикля, drop — падает вниз после ошибки
+const flyDirection = ref('der')
+const milestoneText = ref('')
+let milestoneTimer = 0
+// Рекорд на начало забега — чтобы считать, сколько осталось до него
+const recordAtStart = ref(0)
+const isRecordBeatenThisRun = ref(false)
+const inGameConfetti = ref([])
+let inGameConfettiTimer = 0
+let isAnswerFromButton = false
+// Какой артикль игрок выбрал в этом ответе — чтобы после ошибки притушить его кнопку
+const chosenArticleRef = ref(null)
+
+const stepsToRecord = computed(() => {
+  if (!recordAtStart.value || isRecordBeatenThisRun.value) return 0
+  const stepsLeft = recordAtStart.value + 1 - gameStore.sessionStreak
+  return stepsLeft > 0 && stepsLeft <= RECORD_CHASE_FROM_STEPS ? stepsLeft : 0
 })
+
+const timerPercent = computed(() => {
+  const timeLimit = gameStore.levelSettings.timer
+  return timeLimit ? Math.max(0, gameStore.timer / timeLimit * 100) : 0
+})
+const isTimerDanger = computed(() => !!gameStore.levelSettings.timer && gameStore.timer <= 3)
+
+function showMilestone(text) {
+  milestoneText.value = text
+  clearTimeout(milestoneTimer)
+  milestoneTimer = setTimeout(() => {
+    milestoneText.value = ''
+  }, MILESTONE_VISIBLE_MS)
+}
+
+function spawnInGameConfetti() {
+  inGameConfetti.value = Array.from({length: 30}, (_, index) => ({
+    id: index,
+    left: Math.random() * 100,
+    delay: Math.random() * 0.4,
+    color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
+    duration: 1.6 + Math.random() * 1.2,
+    width: 6 + Math.random() * 6,
+    height: 10 + Math.random() * 10
+  }))
+  clearTimeout(inGameConfettiTimer)
+  inGameConfettiTimer = setTimeout(() => {
+    inGameConfetti.value = []
+  }, 3200)
+}
+
+// После правильного ответа: побит рекорд или достигнута ступень серии
+function celebrateStreak() {
+  const streak = gameStore.sessionStreak
+  if (recordAtStart.value > 0 && !isRecordBeatenThisRun.value && streak > recordAtStart.value) {
+    isRecordBeatenThisRun.value = true
+    showMilestone('🏆 ' + t('marathonGame.newRecord'))
+    spawnInGameConfetti()
+    vibrateImpact()
+    return
+  }
+  if (STREAK_MILESTONES.includes(streak)) {
+    showMilestone('🔥 ' + t('marathonGame.streakMilestone', {count: streak}))
+    vibrateImpact()
+  }
+}
 
 function handleArticleChoice(chosenArticle) {
   if (isChecking.value || !gameStore.gameActive) return
   isChecking.value = true
-
+  // Ответ дан — таймер останавливаем, иначе он может засчитать ошибку, пока показываем реакцию
+  gameStore.stopTimer()
   const isCorrect = chosenArticle === gameStore.currentWord.article
   feedback.value = isCorrect ? 'correct' : 'incorrect'
-
   if (isCorrect) {
-    playCorrect()
+    playCorrectRising(gameStore.sessionStreak)
+    vibrateSuccess()
   } else {
     playWrong()
+    vibrateError()
   }
-
+  flyDirection.value = isCorrect ? chosenArticle : 'drop'
+  chosenArticleRef.value = chosenArticle
   setTimeout(() => {
+    isAnswerFromButton = true
+    answerCount.value += 1
     gameStore.submitAnswer(isCorrect)
     feedback.value = null
     isChecking.value = false
-  }, 800)
+    if (isCorrect) celebrateStreak()
+  }, isCorrect ? CARD_FLY_AFTER_CORRECT_MS : CARD_FALL_AFTER_MISTAKE_MS)
 }
+
+// Слово сменилось само (время вышло) — карточка падает, телефон вибрирует
+watch(() => gameStore.currentWord, () => {
+  if (isAnswerFromButton) {
+    isAnswerFromButton = false
+    return
+  }
+  flyDirection.value = 'drop'
+  answerCount.value += 1
+})
+
+watch(() => gameStore.lives, (livesNow, livesBefore) => {
+  if (livesNow < livesBefore && !isChecking.value) vibrateError()
+})
+
+// Начало забега — запоминаем рекорд, к которому будем подбираться
+watch(() => gameStore.gameActive, (isActive) => {
+  if (!isActive) return
+  recordAtStart.value = currentDifficultyRecord.value
+  isRecordBeatenThisRun.value = false
+  milestoneText.value = ''
+})
 
 function handleStreakClosed() {
   showStreakModal.value = false
@@ -236,22 +356,27 @@ function handleStreakClosed() {
   playLevelCompleted()
 }
 
-function handleRetry() {
+// Реклама — после раунда, на кнопках экрана результата, а не перед стартом
+function leaveResultScreen(next) {
   showGameOverModal.value = false
   confettiParticles.value = []
-  gameStore.retryGame()
+  isLoadingAd.value = true
+  showInterstitial(() => {
+    isLoadingAd.value = false
+    next()
+  })
+}
+
+function handleRetry() {
+  leaveResultScreen(() => gameStore.retryGame())
 }
 
 function goBackToPrepare() {
-  showGameOverModal.value = false
-  confettiParticles.value = []
-  router.push('/article-marathon')
+  leaveResultScreen(() => router.push('/article-marathon'))
 }
 
 function toMain() {
-  showGameOverModal.value = false
-  confettiParticles.value = []
-  router.push('/article-marathon')
+  leaveResultScreen(() => router.push('/article-marathon'))
 }
 
 watch(() => gameStore.gameActive, (isActive) => {
@@ -311,15 +436,13 @@ onMounted(() => {
   window.addEventListener('keydown', unlockOnce, captureOpts)
 
   if (gameStore.gameReady && !gameStore.gameActive) {
-    isLoadingAd.value = true
-    showInterstitial(() => {
-      isLoadingAd.value = false
-      gameStore.startNewRound()
-    })
+    gameStore.startNewRound()
   }
 })
 
 onUnmounted(() => {
+  clearTimeout(milestoneTimer)
+  clearTimeout(inGameConfettiTimer)
   if (unlockOnce) {
     window.removeEventListener('pointerdown', unlockOnce, {capture: true})
     window.removeEventListener('keydown', unlockOnce, {capture: true})
@@ -451,113 +574,60 @@ onUnmounted(() => {
   flex: 1;
 }
 
-.word-display {
-  text-align: center;
-  min-height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.word-display h1 {
-  font-size: 36px;
+/* «До рекорда: 3» */
+.record-chase {
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: #fff4d6;
+  color: #b7791f;
+  font-size: 15px;
   font-weight: 900;
-  line-height: 1.1;
-  color: var(--titleColor);
-  margin: 0;
-  word-break: break-word;
-  transition: color 0.2s ease;
+  animation: chasePulse 1s ease-in-out infinite;
 }
 
-.feedback-correct h1 {
-  color: #34C759;
-}
-
-.feedback-incorrect h1 {
-  color: #FF3B30;
-}
-
-.feedback-incorrect {
-  animation: gentle-shake 0.4s ease both;
-}
-
-@keyframes gentle-shake {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-4px);
-  }
-  75% {
-    transform: translateX(4px);
+@keyframes chasePulse {
+  50% {
+    transform: scale(1.06);
   }
 }
 
-.actions {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+/* Таймер-полоска */
+.timer-bar {
   width: 100%;
-  max-width: 600px;
-  padding-bottom: 20px;
-  transition: opacity 0.2s ease;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
 
-.actions.disabled {
+.timer-bar__fill {
+  height: 100%;
+  border-radius: 999px;
+  background: #34C759;
+  transition: width 1s linear, background 0.3s;
+}
+
+.timer-bar.is-danger .timer-bar__fill {
+  background: #FF3B30;
+}
+
+.timer-bar.is-danger {
+  animation: timerPulse 0.5s ease-in-out infinite;
+}
+
+@keyframes timerPulse {
+  50% {
+    transform: scaleY(1.4);
+  }
+}
+
+/* Салют при новом рекорде во время игры */
+.ingame-confetti {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
   pointer-events: none;
-  opacity: 0.6;
-}
-
-.article-btn {
-  flex: 1;
-  padding: 16px 10px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.1s cubic-bezier(0.34, 1.56, 0.64, 1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.article-btn:active {
-  transform: translateY(6px);
-}
-
-.article-text {
-  font-family: "Nunito", sans-serif;
-  font-size: 28px;
-  font-weight: 900;
-  color: #ffffff;
-  text-transform: lowercase;
-}
-
-.article-btn.der {
-  background-color: #007AFF;
-  box-shadow: 0 6px 0 #005bb5;
-}
-
-.article-btn.der:active {
-  box-shadow: 0 0 0 #005bb5;
-}
-
-.article-btn.die {
-  background-color: #FF3B30;
-  box-shadow: 0 6px 0 #c22820;
-}
-
-.article-btn.die:active {
-  box-shadow: 0 0 0 #c22820;
-}
-
-.article-btn.das {
-  background-color: #34C759;
-  box-shadow: 0 6px 0 #248a3d;
-}
-
-.article-btn.das:active {
-  box-shadow: 0 0 0 #248a3d;
+  z-index: 50;
 }
 
 /* Полноэкранная модалка */

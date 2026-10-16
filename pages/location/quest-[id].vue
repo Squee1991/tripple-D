@@ -65,6 +65,7 @@
           </div>
           <div class="quest__body">
             <template v-if="questStore.task.type === 'select' || questStore.task.type === 'readAndAnswer'">
+<!--              <SoundBtn :text="questStore.task.text"/>-->
               <div v-if="questStore.task.text" class="quest__read-text">{{
                   t(questStore.task.text)
                 }}
@@ -193,13 +194,13 @@
           :display-coins="displayCoins"
           :confetti-particles="confettiParticles"
           :has-next-quest="hasNextQuest"
-          @next="goNextQuest"
-          @themes="goThemes"
+          @next="leaveResultScreen(goNextQuest)"
+          @themes="leaveResultScreen(goThemes)"
           @retry-mistakes="questStore.startRetryMistakes()"
       />
     </div>
     <VReviveModal
-        :show="forceRevive || showRevive"
+        :show="(forceRevive || showRevive) && !showPremiumModal && hasShownPremiumForRevive"
         :correct-count="questStore.correctCount"
         :required-tasks="questStore.requiredTasks"
         :wallet="wallet"
@@ -232,10 +233,19 @@
         :streak="authStore.streakCount"
         @close="handleStreakClosed"
     />
+    <VPlusModal
+        v-model="showPremiumModal"
+    />
+    <VReminderModal
+        v-model:show="showReminderModal"
+        @enable="onEnableReminders"
+        @later="onLaterReminders"
+    />
   </div>
 </template>
 
 <script setup>
+import VPlusModal from "~/src/components/overlays/V-plusModal.vue";
 import {computed, ref, watch, watchEffect, nextTick, onBeforeUnmount, onMounted} from 'vue'
 import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
 import {userChainStore} from '~/store/chainStore.js'
@@ -260,6 +270,9 @@ import {useQuestAnimations} from '~/composables/useQuestAnimations.js'
 import {useGermanKeyboard} from '~/composables/useGermanKeyboard.js'
 import {useQuestLives} from '~/composables/useQuestLives.js'
 import VStreakModal from '~/src/components/V-streak.vue'
+import VReminderModal from '~/src/components/V-reminderModal.vue'
+import {onQuestSuccessForReview} from '~/utils/appReview.js'
+import {shouldAskForReminders, postponeReminderPrompt, enableReminders, markLessonDoneToday} from '~/utils/reminders.js'
 import { dailyStore } from '~/store/dailyStore.js'
 import hedgehogLeaveSession from 'assets/animation/hedgehog_leave_session.json'
 useSeoMeta({robots: 'noindex, nofollow'})
@@ -285,10 +298,68 @@ const speechInputRef = ref(null)
 const previouslyCleared = ref(false)
 const consecutiveCorrectCount = ref(0)
 
-
 const shouldShowResultScreen = computed(() => {
   return questStore.finished && !showStreakModal.value && !isWaitingForStreakClose.value
 })
+
+// Напоминания: после успешного квеста сегодняшнее уведомление снимается
+const showReminderModal = ref(false)
+let afterReminderPrompt = null
+
+let reviewCheckedForSession = false
+let reviewRequestedThisQuest = false
+
+watch(shouldShowResultScreen, (visible) => {
+  if (!visible || !questStore.success) return
+  markLessonDoneToday(t)
+  // Окно оценки — в момент успеха, но не в тот раз, когда ещё ждёт окно напоминаний
+  if (reviewCheckedForSession) return
+  reviewCheckedForSession = true
+  const canPrompt = !shouldAskForReminders()
+  setTimeout(async () => {
+    const requested = await onQuestSuccessForReview(canPrompt && shouldShowResultScreen.value)
+    if (requested) {
+      reviewRequestedThisQuest = true
+      $track('app_review_requested', {quest_id: questId.value})
+    }
+  }, 1500)
+})
+
+// Окно выбора времени показываем по кнопке на экране результатов, переход — после ответа
+function withReminderPrompt(next) {
+  if (!questStore.success || !shouldAskForReminders()) return next()
+  afterReminderPrompt = next
+  showReminderModal.value = true
+}
+
+// Выход с экрана результатов: окно напоминаний → реклама (только после успеха) → переход.
+// После проигрыша рекламы нет — там есть восстановление жизни за рекламу.
+// В тот раз, когда показали окно напоминаний или оценки, рекламу не показываем
+function leaveResultScreen(next) {
+  const reminderPromptShown = questStore.success && shouldAskForReminders()
+  withReminderPrompt(() => {
+    if (!questStore.success || reminderPromptShown || reviewRequestedThisQuest) return next()
+    showInterstitial(next)
+  })
+}
+
+function continueAfterReminderPrompt() {
+  const next = afterReminderPrompt
+  afterReminderPrompt = null
+  next?.()
+}
+
+async function onEnableReminders(time) {
+  const enabled = await enableReminders(time, t)
+  $track('reminders_prompt_answered', {enabled, time})
+  continueAfterReminderPrompt()
+}
+
+function onLaterReminders() {
+  postponeReminderPrompt()
+  $track('reminders_prompt_answered', {enabled: false, later: true})
+  continueAfterReminderPrompt()
+}
 
 const {
   animStep,
@@ -313,9 +384,6 @@ const {
   watchAdForLife,
   purchaseLife
 } = useQuestLives(questStore, langStore, PRICE)
-
-
-
 
 watch(() => authStore.streakCount, (newVal) => {
   if (newVal > initialStreak.value) {
@@ -373,8 +441,6 @@ watch(() => questStore.currentIndex, () => {
   showTipModal.value = false
 })
 
-
-
 const regionKey = computed(() => String(route.query.region || ''))
 const wallet = computed(() => Number(langStore.points || 0))
 const canBuyLife = computed(() => wallet.value >= PRICE)
@@ -383,7 +449,8 @@ const learningLanguage = computed(() => langStore.learningLang)
 const TARGET_LANG_CODE = 'de'
 const showHint = ref(false)
 const NUMBERS_HINT_KEY = 'hide_numbers_hint_modal'
-
+const showPremiumModal = ref(false)
+const hasShownPremiumForRevive = ref(false)
 const now = ref(Date.now())
 let rafId = null
 
@@ -412,7 +479,6 @@ async function speakText(text) {
     isSpeaking.value = false
   }
 }
-
 
 function handleStreakClosed() {
   showStreakModal.value = false
@@ -444,6 +510,13 @@ const showRevive = computed(() =>
     questStore.correctCount < questStore.requiredTasks &&
     !questStore.success
 )
+
+watch(showRevive, (isReviveNeeded) => {
+  if (isReviveNeeded && !hasShownPremiumForRevive.value) {
+    showPremiumModal.value = true
+    hasShownPremiumForRevive.value = true
+  }
+})
 
 const highlightedQuestion = computed(() => {
   if (!questStore.task || !questStore.task.question) return ''
@@ -600,8 +673,12 @@ watch(() => questStore.finished, (isFinished) => {
   }
 })
 
-watch([questId, regionKey], () => {
+watch([questId, regionKey], async () => {
       if (!questId.value || !regionKey.value) return
+      showPremiumModal.value = false
+      hasShownPremiumForRevive.value = false
+      reviewCheckedForSession = false
+      reviewRequestedThisQuest = false
       initialStreak.value = authStore.streakCount || 0
       streakWasIncremented.value = false
       showStreakModal.value = false
@@ -617,11 +694,13 @@ watch([questId, regionKey], () => {
       questStore.reorderBank = []
       showHint.value = false
       resetAnimations()
+
+      await questStore.loadProgressFromFirebase?.()
+      const prog = questStore.questProgress?.[questId.value]
+      previouslyCleared.value = !!(prog?.success || prog?.rewardClaimed)
+
       const initQuest = async () => {
         consecutiveCorrectCount.value = 0
-        await questStore.loadProgressFromFirebase?.()
-        const prog = questStore.questProgress?.[questId.value]
-        previouslyCleared.value = !!(prog?.success || prog?.rewardClaimed)
         await questStore.loadQuest(questId.value, regionKey.value)
         $track('quest_session_started', {
           quest_id: questId.value,
@@ -637,11 +716,8 @@ watch([questId, regionKey], () => {
         await nextTick()
       }
 
-      if (!authStore.hasAds) {
-        initQuest()
-      } else {
-        showInterstitial(initQuest)
-      }
+      // Реклама теперь не перед квестом, а после успешного прохождения (см. leaveResultScreen)
+      initQuest()
     },
     {immediate: true, flush: 'sync'}
 )
@@ -778,7 +854,7 @@ watchEffect(() => {
   background: #fff;
   border: 3px solid #1e1e1e;
   border-radius: 16px;
-  padding: 1rem;
+  padding: 12px;
   width: min(860px, 96%);
   margin: 0 auto;
   box-shadow: 4px 4px 0 #1e1e1e;

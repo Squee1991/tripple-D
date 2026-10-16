@@ -14,6 +14,16 @@ import {
 import { userAuthStore } from './authStore.js'
 import { dailyStore } from './dailyStore.js'
 import { userlangStore } from './learningStore.js'
+import {
+    DAILY_WORD_COINS,
+    getTodayKey,
+    getYesterdayKey,
+    pickDailyWord,
+    getLetterMarks,
+} from '../utils/dailyWord.js'
+
+// Жизней на слово. От этого числа зависят достижения «без ошибок», «с запасом» и «на последней попытке»
+const MAX_ATTEMPTS = 15
 
 async function getUser() {
     const auth = getAuth()
@@ -37,7 +47,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 
     const answer = ref('')
     const masked = ref([])
-    const attempts = ref(15)
+    const attempts = ref(MAX_ATTEMPTS)
     const usedLetters = ref([])
 
     const guessedWords = ref([])
@@ -48,6 +58,20 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 
     const win = ref(false)
     const lose = ref(false)
+
+    // Слово дня: результат сегодняшней попытки и серия дней с отгаданным словом
+    const isDailyMode = ref(false)
+    const dailyResult = ref(null)
+    const dailyStreak = ref(0)
+    const dailyBestStreak = ref(0)
+    const dailyLastWinDate = ref('')
+    const dailyUpdatedAt = ref(0)
+
+    const isDailyPlayedToday = computed(() => dailyResult.value?.date === getTodayKey())
+    // Серия жива, если последнее слово дня отгадано сегодня или вчера
+    const currentDailyStreak = computed(() =>
+        [getTodayKey(), getYesterdayKey()].includes(dailyLastWinDate.value) ? dailyStreak.value : 0
+    )
 
     const timeStarted = ref(null)
     const timeFinished = ref(null)
@@ -69,7 +93,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
     function resetState() {
         answer.value = ''
         masked.value = []
-        attempts.value = 15
+        attempts.value = MAX_ATTEMPTS
         usedLetters.value = []
         win.value = false
         lose.value = false
@@ -81,15 +105,94 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         guessedOnLastTryWords.value = []
         guessedPerfectWords.value = []
         guessedSafeWords.value = []
+        dailyResult.value = null
+        dailyStreak.value = 0
+        dailyBestStreak.value = 0
+        dailyLastWinDate.value = ''
+        dailyUpdatedAt.value = 0
     }
 
-    async function addCoinReward() {
-        if (typeof langStore.addPoints === 'function') {
-            await langStore.addPoints(1)
+    // Слово дня хранится и в браузере: попытка не теряется без сети и у гостя
+    const dailyStorageKey = (name) => `guess_daily_${name}_${authStore.uid || 'guest'}`
+
+    function readDailyLocal(name) {
+        try { return JSON.parse(localStorage.getItem(dailyStorageKey(name)) || 'null') } catch { return null }
+    }
+
+    function writeDailyLocal(name, value) {
+        try {
+            if (value === null) localStorage.removeItem(dailyStorageKey(name))
+            else localStorage.setItem(dailyStorageKey(name), JSON.stringify(value))
+        } catch {}
+    }
+
+    function getDailyState() {
+        return {
+            result: dailyResult.value,
+            streak: dailyStreak.value,
+            bestStreak: dailyBestStreak.value,
+            lastWinDate: dailyLastWinDate.value,
+            updatedAt: dailyUpdatedAt.value,
+        }
+    }
+
+    // Берём более свежее состояние — из браузера или из облака
+    function applyDailyState(state) {
+        if (!state || Number(state.updatedAt || 0) < dailyUpdatedAt.value) return
+        dailyResult.value = state.result || null
+        dailyStreak.value = Number(state.streak || 0)
+        dailyBestStreak.value = Number(state.bestStreak || 0)
+        dailyLastWinDate.value = state.lastWinDate || ''
+        dailyUpdatedAt.value = Number(state.updatedAt || 0)
+    }
+
+    // Начатая сегодня попытка — чтобы нельзя было перезапустить слово дня, закрыв игру
+    function saveDailyProgress() {
+        if (!isDailyMode.value || win.value || lose.value) return
+        writeDailyLocal('progress', {
+            date: getTodayKey(),
+            answer: answer.value,
+            usedLetters: usedLetters.value,
+            attempts: attempts.value,
+            startedAt: timeStarted.value,
+        })
+    }
+
+    function hasDailyInProgress() {
+        return readDailyLocal('progress')?.date === getTodayKey()
+    }
+
+    function finishDailyWord(isWin) {
+        if (!isDailyMode.value || isDailyPlayedToday.value) return
+        const todayKey = getTodayKey()
+        if (isWin) {
+            const isStreakContinued = dailyLastWinDate.value === getYesterdayKey()
+            dailyStreak.value = isStreakContinued ? dailyStreak.value + 1 : 1
+            dailyLastWinDate.value = todayKey
+            dailyBestStreak.value = Math.max(dailyBestStreak.value, dailyStreak.value)
         } else {
-            langStore.points = Number(langStore.points || 0) + 1
-            langStore.totalEarnedPoints = Number(langStore.totalEarnedPoints || 0) + 1
-            try { daily.addPoints(1) } catch {}
+            dailyStreak.value = 0
+        }
+        dailyResult.value = {
+            date: todayKey,
+            word: answer.value,
+            isWin,
+            attemptsLeft: isWin ? attempts.value : 0,
+            timeSpent: timeSpent.value ?? 0,
+            marks: getLetterMarks(usedLetters.value, answer.value),
+        }
+        dailyUpdatedAt.value = Date.now()
+        writeDailyLocal('progress', null)
+        writeDailyLocal('state', getDailyState())
+    }
+
+    async function addCoinReward(coins = 1) {
+        if (typeof langStore.addPoints === 'function') {
+            await langStore.addPoints(coins)
+        } else {
+            langStore.points = Number(langStore.points || 0) + coins
+            langStore.totalEarnedPoints = Number(langStore.totalEarnedPoints || 0) + coins
+            try { daily.addPoints(coins) } catch {}
             if (typeof langStore.saveToFirebase === 'function') {
                 await langStore.saveToFirebase()
             }
@@ -151,6 +254,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
     async function loadGuessProgress() {
         const user = await getUser()
         resetState()
+        applyDailyState(readDailyLocal('state'))
         if (!user) return
 
         try {
@@ -163,6 +267,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
                 if (Array.isArray(data.guessedOnLastTryWords)) guessedOnLastTryWords.value = data.guessedOnLastTryWords
                 if (Array.isArray(data.guessedPerfectWords)) guessedPerfectWords.value = data.guessedPerfectWords
                 if (Array.isArray(data.guessedSafeWords)) guessedSafeWords.value = data.guessedSafeWords
+                applyDailyState(data.dailyWord)
             }
         } catch (e) {
             console.error('Error loading guess progress:', e)
@@ -183,6 +288,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
                     guessedOnLastTryWords: guessedOnLastTryWords.value,
                     guessedPerfectWords: guessedPerfectWords.value,
                     guessedSafeWords: guessedSafeWords.value,
+                    dailyWord: getDailyState(),
                     updatedAt: Date.now(),
                 },
                 { merge: true }
@@ -229,6 +335,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
     }
 
     async function startGame() {
+        isDailyMode.value = false
         await loadWords()
         await loadGuessProgress()
         const pool = loadedWords.value.filter(
@@ -243,16 +350,46 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         answer.value = choice.de.toUpperCase()
         masked.value = Array(answer.value.length).fill('')
         usedLetters.value = []
-        attempts.value = 15
+        attempts.value = MAX_ATTEMPTS
         win.value = false
         lose.value = false
         timeStarted.value = Date.now()
         timeFinished.value = null
     }
 
-    function pickLetter(letter) {
-        if (win.value || lose.value || usedLetters.value.includes(letter)) return
-        usedLetters.value.push(letter)
+    // Слово дня: всем одно и то же слово, одна попытка. Возвращает false, если сегодня уже сыграно
+    async function startDailyGame() {
+        await loadWords()
+        await loadGuessProgress()
+        if (isDailyPlayedToday.value) return false
+        const choice = pickDailyWord(loadedWords.value, alphabet, getTodayKey())
+        if (!choice) return false
+
+        isDailyMode.value = true
+        currentWordObj.value = choice
+        answer.value = choice.de.toUpperCase()
+        masked.value = Array(answer.value.length).fill('')
+        usedLetters.value = []
+        attempts.value = MAX_ATTEMPTS
+        win.value = false
+        lose.value = false
+        timeStarted.value = Date.now()
+        timeFinished.value = null
+
+        // Продолжаем попытку, начатую сегодня
+        const savedProgress = readDailyLocal('progress')
+        if (savedProgress?.date === getTodayKey() && savedProgress.answer === answer.value) {
+            usedLetters.value = [...savedProgress.usedLetters]
+            usedLetters.value.forEach(revealLetter)
+            attempts.value = savedProgress.attempts
+            timeStarted.value = savedProgress.startedAt || Date.now()
+        }
+        saveDailyProgress()
+        return true
+    }
+
+    // Открывает букву в слове. Возвращает true, если она там есть
+    function revealLetter(letter) {
         let found = false
         answer.value.split('').forEach((ch, i) => {
             if (ch === letter) {
@@ -260,8 +397,15 @@ export const useGuessWordStore = defineStore('guessWord', () => {
                 found = true
             }
         })
-        if (!found) attempts.value--
+        return found
+    }
+
+    function pickLetter(letter) {
+        if (win.value || lose.value || usedLetters.value.includes(letter)) return
+        usedLetters.value.push(letter)
+        if (!revealLetter(letter)) attempts.value--
         checkGameStatus()
+        saveDailyProgress()
     }
 
     function tryGuessWord(word) {
@@ -274,6 +418,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
             attempts.value--
             checkGameStatus()
         }
+        saveDailyProgress()
     }
 
     function checkGameStatus() {
@@ -289,23 +434,31 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 
     watch(win, async won => {
         if (!won || !answer.value) return
+        const isDailyWin = isDailyMode.value
+        if (isDailyWin) finishDailyWord(true)
         const word = answer.value
         if (!guessedWords.value.includes(word)) {
             guessedWords.value.push(word)
             if (timeSpent.value !== null && timeSpent.value <= 20 && !guessedFastWords.value.includes(word)) guessedFastWords.value.push(word)
             if (attempts.value >= 10 && !guessedSafeWords.value.includes(word)) guessedSafeWords.value.push(word)
-            if (attempts.value === 15 && !guessedPerfectWords.value.includes(word)) guessedPerfectWords.value.push(word)
+            if (attempts.value === MAX_ATTEMPTS && !guessedPerfectWords.value.includes(word)) guessedPerfectWords.value.push(word)
             if (attempts.value === 1 && !guessedOnLastTryWords.value.includes(word)) guessedOnLastTryWords.value.push(word)
         }
         daily.addGuessWord(1)
 
         try { daily.addGuessed(1) } catch {}
 
-        // Начисляем 1 монету за отгаданное слово
-        await addCoinReward()
+        // 1 монета за отгаданное слово, за слово дня — больше
+        await addCoinReward(isDailyWin ? DAILY_WORD_COINS : 1)
 
         await saveGuessProgress()
         if (authStore.name) await saveToLeaderboard(authStore.name, guessedWords.value.length)
+    })
+
+    watch(lose, async lost => {
+        if (!lost || !isDailyMode.value) return
+        finishDailyWord(false)
+        await saveGuessProgress()
     })
 
     watch(() => authStore.initialized, (isReady) => {
@@ -344,5 +497,13 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         loadLeaderboard,
         hasInLeaderboard,
         guessedCount,
+        maxAttempts: MAX_ATTEMPTS,
+        isDailyMode,
+        dailyResult,
+        dailyBestStreak,
+        currentDailyStreak,
+        isDailyPlayedToday,
+        hasDailyInProgress,
+        startDailyGame,
     }
 })

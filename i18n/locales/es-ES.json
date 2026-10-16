@@ -1,4 +1,80 @@
 {
+  "wordLearning": {
+    "newWord": "✨ Palabra nueva",
+    "tryAgain": "🔁 Otra vez",
+    "reviewTitle": "Repaso",
+    "pluralLabel": "Plural",
+    "lessonDoneTitle": "¡Lección completada!",
+    "wordsTitle": "Palabras del tema",
+    "learnSelected": "Aprender seleccionadas ({count})",
+    "status_new": "nueva",
+    "status_learned": "aprendida",
+    "status_due": "repasar",
+    "repeatMistakes": "Repetir errores ({count})",
+    "lessonWordsText": "Palabras en la lección: {count}",
+    "reviewDoneTitle": "¡Repaso completado!",
+    "reviewDoneText": "A la primera: {correct} de {total}",
+    "reviewMore": "Repasar más ({count})",
+    "reviewCardDue": "Esperan repaso: {count}",
+    "reviewCardEmpty": "¡Todo repasado! Vuelve mañana",
+    "reviewButton": "Repasar",
+    "topicDue": "Repasar: {count}",
+    "statDue": "Repasar",
+    "statMastered": "Dominadas",
+    "reviewTopicButton": "Repasar ({count})",
+    "meaningFor": "¿Qué significa esta palabra?",
+    "audioWithArticle": "Escucha y escribe la palabra con su artículo",
+    "almostCorrect": "¡Casi! Revisa la ortografía",
+    "genderRule": "Las palabras que terminan en {suffix} casi siempre son {article}",
+    "nextLessonTitle": "Siguiente lección",
+    "chosenWordsTitle": "Tus palabras",
+    "startLesson": "Empezar lección",
+    "stepIntro": "Conocer",
+    "stepMeaning": "Significado",
+    "stepLetters": "Letras",
+    "stepWrite": "Escritura",
+    "learnedOf": "Aprendidas {learned} de {total}",
+    "topicDoneTitle": "¡Todas las palabras aprendidas!",
+    "topicDoneText": "Repásalas cuando toque",
+    "chooseWords": "Elegir palabras",
+    "cancelChoice": "Cancelar",
+    "chooseWordsHint": "Toca las palabras que quieres aprender",
+    "tomorrowReview": "🔁 Mañana para repasar: {count} palabras"
+  },
+  "dailyRun": {
+    "title": "Carrera diaria",
+    "subtitle": "{count} palabras · un intento al día",
+    "play": "Jugar",
+    "todayResult": "Hoy: {score} / {total}",
+    "streakDays": "{count} días seguidos",
+    "nextIn": "Nueva carrera en {hours} h {minutes} min",
+    "finishTitle": "¡Carrera completada!",
+    "timeLabel": "Tiempo",
+    "streakLabel": "Días seguidos",
+    "rewardLabel": "Premio",
+    "mistakesTitle": "Errores",
+    "noMistakes": "¡Sin errores! 🎉",
+    "done": "Listo"
+  },
+  "reminders": {
+    "title": "¡No pierdas tu progreso!",
+    "text": "Te lo recordaremos una vez al día para que no pierdas tu racha. ¿Cuándo te viene bien?",
+    "morning": "Mañana",
+    "afternoon": "Mediodía",
+    "evening": "Tarde",
+    "night": "Noche",
+    "custom": "Tu hora",
+    "enable": "Recordarme",
+    "later": "Ahora no",
+    "n1Title": "📚 ¡Hora de alemán!",
+    "n1Body": "5 minutos al día y tu meta está cumplida",
+    "n2Title": "🔥 ¡Mantén tu racha!",
+    "n2Body": "Una lección rápida mantiene tu racha",
+    "n3Title": "🦔 Tu erizo te echa de menos",
+    "n3Body": "Te espera una nueva misión",
+    "reviewTitle": "🔁 ¡Hora de repasar!",
+    "reviewBody": "Palabras para repasar: {count}. ¡Solo un par de minutos!"
+  },
   "definiteIndefiniteQuestOne": {
     "title": "Batalla por las terminaciones",
     "description": "Práctica mixta: artículos indefinidos y definidos en oraciones.",
@@ -3563,6 +3639,7 @@
     "inputType": "Escribe lo que escuchas… (la puntuación no es obligatoria)"
   },
   "questCompletedModals": {
+    "ads": "Ver anuncio",
     "correct": "Correcto",
     "correctAnswer": "Respuesta correcta:",
     "further": "Siguiente",
@@ -3583,6 +3660,7 @@
     "notEnough": "No es suficiente",
     "questNotCompleted": "No has completado la misión",
     "warning": "Si sales ahora, el progreso no se guardará.",
+    "continueQuest": "Falta muy poco. Termina la misión para guardar tu progreso",
     "leave": "Salir",
     "continue": "Continuar",
     "completedWithMistakes": "Misión completada, pero hay errores"
@@ -8300,6 +8378,16 @@
     "answer": "Hace la vista gorda ante un error"
   },
   "guessWord": {
+    "dailyTitle": "Palabra del día",
+    "dailyText": "Una palabra para todos y un solo intento. ¡Adivínala y gana {coins} monedas!",
+    "dailyPlay": "Jugar",
+    "dailyContinue": "Continuar",
+    "dailyWon": "Adivinada:",
+    "dailyLost": "No adivinada:",
+    "dailyNext": "Nueva palabra en {hours} h {minutes} min",
+    "dailyShare": "Compartir",
+    "dailyCopied": "¡Copiado!",
+    "dailyPlayNormal": "Juego normal",
     "subtitle": "¡Adivina la palabra y mejora tu alemán!",
     "theme": "Tema:",
     "back": "Atrás",
@@ -8858,7 +8946,7 @@
     "specialAllVerbsText": "Consigue todos los logros de verbos: Conjugación, tiempos, modales, tipos de verbos",
     "specialAllVerbsAward": "Premio: Cuchillas de la acción",
     "specialGrotText": "Yo soy Groot",
-    "specialGrotLabel": "En cada tema hay su propio árbol… ¡y no es un bug! Encuéntralo en la práctica de artículos y estúdialo por todos los medios.",
+    "specialGrotLabel": "En cada tema hay su propio árbol… ¡y no es un bug! Encuéntralo en la práctica de artículos y apréndelo.",
     "specialGrotAward": "Premio: Maceta con Groot",
     "generalSeventhlabel": "Señor de las oraciones",
     "generalSeventhText": "Compón 1000 oraciones en el modo en solitario del Duelo de frases en cualquier dificultad"
@@ -8889,13 +8977,13 @@
     "dailyQuestDescription": "Completaste 42 tareas diarias, pero la gran pregunta del Universo sigue siendo un misterio",
     "dailyQuestAward": "Premio: Telescopio galáctico",
     "catDotText": "Gatoperro",
-    "catDotDescription": "¡Miau-guau! Aprende las palabras «gato» y «perro» en la práctica de artículos en todos los modos",
+    "catDotDescription": "¡Miau-guau! Aprende las palabras «gato» y «perro» en la práctica de artículos.",
     "cowabungaText": "¡COWABUNGA!",
-    "cowabungaDescription": "¿Salami o pepperoni? Las Tortugas Ninja se lo comerían igual. Aprende «salami» en todos los modos en la práctica de artículos",
+    "cowabungaDescription": "¿Salami o pepperoni? Las Tortugas Ninja se lo comerían igual. Aprende «salami» en la práctica de artículos.",
     "zooText": "Amigo de los animales",
-    "zooDescription": "¡Un verdadero amigo no dejará a nadie sin artículo! Aprende todas las palabras del tema “Animales” en todos los modos de práctica de artículos.",
+    "zooDescription": "¡Un verdadero amigo no dejará a nadie sin artículo! Aprende todas las palabras de todos los temas de la categoría «Animales» en la práctica de artículos.",
     "veganText": "Defensor de los vegetales",
-    "veganDescription": "¡Ninguna verdura se quedará sin artículo! Aprende todas las palabras sobre verduras del tema «Comida» en todos los modos de práctica de artículos.",
+    "veganDescription": "¡Ninguna verdura se quedará sin artículo! Aprende todas las palabras del tema «Verduras» en la práctica de artículos.",
     "firstStepLabel": "Primer paso",
     "firstAwardText": "Inicio de la colección",
     "firstAwardLabel": "Obtén tu primer premio",
@@ -9070,7 +9158,9 @@
     "difficultDescriptionHard": "1 vida, 5 s/palabra",
     "loading": "Cargando palabras...",
     "start": "¡Empezar!",
-    "login": "Inicia sesión para empezar"
+    "login": "Inicia sesión para empezar",
+    "freeModeTitle": "Maratón clásico",
+    "freeModeHint": "Juega todo lo que quieras: elige la dificultad"
   },
   "marathonGame": {
     "notReadyTitle": "Por favor, espera",
@@ -9086,7 +9176,9 @@
     "bestResult": "Tu mejor resultado:",
     "tryAgain": "Intentar de nuevo",
     "back": "Volver a la elección de dificultad",
-    "main": "A la página principal"
+    "main": "A la página principal",
+    "streakMilestone": "¡{count} seguidas!",
+    "toRecord": "Para el récord: {count}"
   },
   "rulesFirstBlock": {
     "title": "Teoría de los artículos",
@@ -9724,7 +9816,10 @@
     "commonPoints": "PUNTOS TOTALES",
     "rank": "Rango:",
     "streak": "RÉCORD:",
-    "cabinet": "Diario de a bordo"
+    "cabinet": "Diario de a bordo",
+    "flights": "Vuelos",
+    "bosses": "Jefes",
+    "meteors": "Derribados"
   },
   "galaxyRank": {
     "none": "TERRÍCOLA",
@@ -9942,7 +10037,19 @@
     "newRecord": "¡NUEVO RÉCORD!",
     "check": "PUNTUACIÓN:",
     "again": "Volar de nuevo",
-    "constellations": "Salir de la constelación"
+    "constellations": "Salir de la constelación",
+    "moveHint": "Ponte debajo del meteorito ◀ ▶ y dispara la respuesta correcta",
+    "bestCombo": "Mejor combo",
+    "yourAnswer": "Tu respuesta",
+    "correctAnswer": "Correcta",
+    "noMistakes": "¡Sin errores! 🎉",
+    "bossIncoming": "¡Jefe!",
+    "bossDefeated": "¡Jefe derrotado!",
+    "bossesDefeated": "Jefes derrotados",
+    "pauseTitle": "Pausa",
+    "resume": "Continuar",
+    "finishFlight": "Terminar vuelo",
+    "finishNote": "Se guardarán los puntos y artiks de este vuelo"
   },
   "textTasksTip": {
     "title": "Tareas de texto",
@@ -10316,6 +10423,7 @@
     "restore": "Restaurar compras."
   },
   "submitComputed": {
+    "try": "Probar por",
     "sync": "Sincronizando...",
     "getPlus": "Obtener PLUS",
     "getBasic": "Obtener Basic",
@@ -11094,5 +11202,15 @@
     "halloweenReputationDescription": "Alcanza el nivel máximo de reputación cumpliendo encargos de Halloween.",
     "halloweenAllAchievementsText": "¡Que Halloween te acompañe!",
     "halloweenAllAchievementsDescription": "Consigue todos los logros de Halloween y gana el título festivo."
+  },
+  "marathonModal": {
+    "text": "¡El maratón ha comenzado! ¡Compite, gana y consigue logros y recompensas!"
+  },
+  "plusPreviewOverlay": {
+    "title": " ¿Quieres aprender",
+    "title2": "SIN LÍMITES",
+    "title3": "y acelerar tu progreso?",
+    "title4": "¡Vidas infinitas, cualquier lección y sin anuncios!",
+    "button": "¡SÍ, LO QUIERO!"
   }
 }

@@ -1,4 +1,80 @@
 {
+  "wordLearning": {
+    "newWord": "✨ New word",
+    "tryAgain": "🔁 Try again",
+    "reviewTitle": "Review",
+    "pluralLabel": "Plural",
+    "lessonDoneTitle": "Lesson complete!",
+    "wordsTitle": "Topic words",
+    "learnSelected": "Learn selected ({count})",
+    "status_new": "new",
+    "status_learned": "learned",
+    "status_due": "review",
+    "repeatMistakes": "Repeat mistakes ({count})",
+    "lessonWordsText": "Words in this lesson: {count}",
+    "reviewDoneTitle": "Review complete!",
+    "reviewDoneText": "Right on the first try: {correct} of {total}",
+    "reviewMore": "Review more ({count})",
+    "reviewCardDue": "Waiting for review: {count}",
+    "reviewCardEmpty": "All reviewed! Come back tomorrow",
+    "reviewButton": "Review",
+    "topicDue": "To review: {count}",
+    "statDue": "To review",
+    "statMastered": "Mastered",
+    "reviewTopicButton": "Review ({count})",
+    "meaningFor": "What does this word mean?",
+    "audioWithArticle": "Listen and type the word with its article",
+    "almostCorrect": "Almost! Check the spelling",
+    "genderRule": "Words ending in {suffix} are almost always {article}",
+    "nextLessonTitle": "Next lesson",
+    "chosenWordsTitle": "Your words",
+    "startLesson": "Start lesson",
+    "stepIntro": "Meet",
+    "stepMeaning": "Meaning",
+    "stepLetters": "Letters",
+    "stepWrite": "Writing",
+    "learnedOf": "Learned {learned} of {total}",
+    "topicDoneTitle": "All words learned!",
+    "topicDoneText": "Review them when they are due",
+    "chooseWords": "Choose words",
+    "cancelChoice": "Cancel",
+    "chooseWordsHint": "Tap the words you want to learn",
+    "tomorrowReview": "🔁 Tomorrow’s review: {count} words"
+  },
+  "dailyRun": {
+    "title": "Daily run",
+    "subtitle": "{count} words · one try a day",
+    "play": "Play",
+    "todayResult": "Today: {score} / {total}",
+    "streakDays": "{count} d. in a row",
+    "nextIn": "New run in {hours} h {minutes} min",
+    "finishTitle": "Run complete!",
+    "timeLabel": "Time",
+    "streakLabel": "Days in a row",
+    "rewardLabel": "Reward",
+    "mistakesTitle": "Mistakes",
+    "noMistakes": "No mistakes! 🎉",
+    "done": "Done"
+  },
+  "reminders": {
+    "title": "Don't lose your progress!",
+    "text": "We'll remind you once a day to keep your streak. When is it convenient?",
+    "morning": "Morning",
+    "afternoon": "Afternoon",
+    "evening": "Evening",
+    "night": "Night",
+    "custom": "Custom time",
+    "enable": "Remind me",
+    "later": "Not now",
+    "n1Title": "📚 Time for German!",
+    "n1Body": "5 minutes a day — and your goal is done",
+    "n2Title": "🔥 Keep your streak!",
+    "n2Body": "One quick lesson keeps your streak alive",
+    "n3Title": "🦔 Your hedgehog misses you",
+    "n3Body": "A new quest is waiting for you",
+    "reviewTitle": "🔁 Time to review!",
+    "reviewBody": "Words to review: {count}. Just a couple of minutes!"
+  },
   "definiteIndefiniteQuestOne": {
     "title": "Battle for Endings",
     "description": "Mixed practice: indefinite and definite articles in sentences.",
@@ -3586,6 +3662,7 @@
     "inputType": "Write what you hear… (punctuation is not required)"
   },
   "questCompletedModals": {
+    "ads": "Watch ad",
     "correct": "Correct",
     "correctAnswer": "Correct answer:",
     "further": "Next",
@@ -3606,6 +3683,7 @@
     "notEnough": "Not enough",
     "questNotCompleted": "You have not completed the quest",
     "warning": "If you leave now, your progress will not be saved.",
+    "continueQuest": "Almost there. Finish the quest to save your progress",
     "leave": "Leave",
     "continue": "Continue",
     "completedWithMistakes": "Quest completed, but there are mistakes"
@@ -8323,6 +8401,16 @@
     "answer": "Ignores a mistake"
   },
   "guessWord": {
+    "dailyTitle": "Word of the day",
+    "dailyText": "One word for everyone, one try. Guess it and get {coins} coins!",
+    "dailyPlay": "Play",
+    "dailyContinue": "Continue",
+    "dailyWon": "Guessed:",
+    "dailyLost": "Not guessed:",
+    "dailyNext": "New word in {hours} h {minutes} min",
+    "dailyShare": "Share",
+    "dailyCopied": "Copied!",
+    "dailyPlayNormal": "Regular game",
     "subtitle": "Guess the word and level up your German!",
     "theme": "Theme:",
     "back": "Back",
@@ -8881,7 +8969,7 @@
     "specialAllVerbsText": "Earn all verb achievements: Conjugation, Tenses, Modals, Verb Types",
     "specialAllVerbsAward": "Reward: Blades of Action",
     "specialGrotText": "I am Groot",
-    "specialGrotLabel": "Each topic has its own tree and… this is not a bug! Find it in the article practice and learn it in all ways.",
+    "specialGrotLabel": "Each topic has its own tree and… this is not a bug! Find it in the article practice and learn it.",
     "specialGrotAward": "Reward: Pot with Groot",
     "generalSeventhlabel": "Master of Sentences",
     "generalSeventhText": "Create 1000 sentences in Solo Phrase Duel mode at any difficulty level"
@@ -8912,13 +9000,13 @@
     "dailyQuestDescription": "You completed 42 daily quests, but the ultimate question of the Universe remains a mystery",
     "dailyQuestAward": "Reward: Galactic Telescope",
     "catDotText": "CatDog",
-    "catDotDescription": "Meow-woof! Learn the words “cat” and “dog” in the articles practice in all modes.",
+    "catDotDescription": "Meow-woof! Learn the words “cat” and “dog” in the article practice.",
     "cowabungaText": "COWABUNGA",
-    "cowabungaDescription": "Salami or Pepperoni? The Ninja Turtles would eat it anyway. Learn “salami” in all modes in the articles practice.",
+    "cowabungaDescription": "Salami or Pepperoni? The Ninja Turtles would eat it anyway. Learn “salami” in the article practice.",
     "zooText": "Friend of Animals",
-    "zooDescription": "A true friend won't leave anyone without an article! Learn all the words in the “Animals” topic in all article practice modes.",
+    "zooDescription": "A true friend won’t leave anyone without an article! Learn all the words in every topic of the “Animals” category in the article practice.",
     "veganText": "Protector of Vegetables",
-    "veganDescription": "No vegetable shall remain without an article! Learn all the vegetable words from the topic 'Food' in every article practice mode.",
+    "veganDescription": "No vegetable shall remain without an article! Learn all the words of the “Vegetables” topic in the article practice.",
     "firstStepLabel": "First Step",
     "firstAwardText": "Start of the collection",
     "firstAwardLabel": "Receive your first reward",
@@ -9093,7 +9181,9 @@
     "difficultDescriptionHard": "1 life, 5 sec/word",
     "loading": "Loading words...",
     "start": "Start!",
-    "login": "Log in to start"
+    "login": "Log in to start",
+    "freeModeTitle": "Classic marathon",
+    "freeModeHint": "Play as long as you like — choose a difficulty"
   },
   "marathonGame": {
     "notReadyTitle": "Please wait",
@@ -9109,7 +9199,9 @@
     "bestResult": "Your best result:",
     "tryAgain": "Try again",
     "back": "Back to difficulty selection",
-    "main": "Go to main page"
+    "main": "Go to main page",
+    "streakMilestone": "{count} in a row!",
+    "toRecord": "To record: {count}"
   },
   "rulesFirstBlock": {
     "title": "Article theory",
@@ -9747,7 +9839,10 @@
     "commonPoints": "TOTAL POINTS",
     "rank": "Rank:",
     "streak": "RECORD:",
-    "cabinet": "Logbook"
+    "cabinet": "Logbook",
+    "flights": "Flights",
+    "bosses": "Bosses",
+    "meteors": "Destroyed"
   },
   "galaxyRank": {
     "none": "EARTHLING",
@@ -9965,7 +10060,19 @@
     "newRecord": "NEW RECORD!",
     "check": "SCORE:",
     "again": "Fly again",
-    "constellations": "Leave constellation"
+    "constellations": "Leave constellation",
+    "moveHint": "Move under the meteor ◀ ▶ and shoot the right answer",
+    "bestCombo": "Best combo",
+    "yourAnswer": "Your answer",
+    "correctAnswer": "Correct",
+    "noMistakes": "No mistakes! 🎉",
+    "bossIncoming": "Boss!",
+    "bossDefeated": "Boss defeated!",
+    "bossesDefeated": "Bosses defeated",
+    "pauseTitle": "Pause",
+    "resume": "Continue",
+    "finishFlight": "Finish flight",
+    "finishNote": "Points and artiks for this flight will be saved"
   },
   "textTasksTip": {
     "title": "Text tasks",
@@ -10339,6 +10446,7 @@
     "restore": "Restore purchases."
   },
   "submitComputed": {
+    "try": "Try for",
     "sync": "Syncing...",
     "getPlus": "Get PLUS",
     "getBasic": "Get Basic",
@@ -11119,5 +11227,15 @@
     "halloweenReputationDescription": "Earn the maximum reputation level for completing Hallow's End tasks.",
     "halloweenAllAchievementsText": "May Hallow's End Be With You!",
     "halloweenAllAchievementsDescription": "Obtain all Hallow's End achievements and earn the festive title."
+  },
+  "marathonModal": {
+    "text": "The marathon has begun! Compete, win, and earn achievements and rewards!"
+  },
+  "plusPreviewOverlay": {
+    "title": " Want to learn",
+    "title2": "WITHOUT LIMITS",
+    "title3": "and boost your progress?",
+    "title4": "Unlimited lives, any lesson, and zero ads!",
+    "button": "YES, I WANT THIS!"
   }
 }

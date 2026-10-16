@@ -13,17 +13,13 @@
           />
         </div>
         <div class="panel__wrapper">
-          <div v-if="authStore.uid" class="user-greeting">
-            <p class="record">
-              {{ t('marathonPrepare.streak') }}
-              <span class="record__value">{{ currentRecord }}</span>
-            </p>
-          </div>
-          <div v-else class="guest-greeting">
+          <VDailyRunCard v-if="authStore.uid"/>
+          <div v-if="!authStore.uid" class="guest-greeting">
             <p>{{ t('marathonPrepare.notAuth') }}</p>
           </div>
-          <div v-if="gameStore.isLoaded" class="settings-block">
-            <h2>{{ t('marathonPrepare.chooseDifficulty') }}</h2>
+          <section v-if="gameStore.isLoaded" class="settings-block free-mode">
+            <h2 class="free-mode__title">{{ t('marathonPrepare.freeModeTitle') }}</h2>
+            <p class="free-mode__hint">{{ t('marathonPrepare.freeModeHint') }}</p>
             <div class="difficulty-options">
               <button
                   v-for="opt in difficultyBase"
@@ -36,14 +32,18 @@
                   <span class="btn-title">{{ t(opt.titleKey) }}</span>
                   <span class="btn-desc">{{ t(opt.descKey) }}</span>
                 </div>
-                <div class="difficulty-bars">
-                  <div class="bar bar-1" :class="{ 'bar-active': opt.value >= 1 }"></div>
-                  <div class="bar bar-2" :class="{ 'bar-active': opt.value >= 2 }"></div>
-                  <div class="bar bar-3" :class="{ 'bar-active': opt.value >= 3 }"></div>
-                </div>
+                <!-- Рекорд на этом уровне сложности -->
+                <div v-if="authStore.uid" class="difficulty-record">🏆 {{ recordFor(opt.value) }}</div>
               </button>
             </div>
-          </div>
+            <button
+                class="start-button"
+                @click="startGame"
+                :disabled="!authStore.uid"
+            >
+              {{ authStore.uid ? t('marathonPrepare.start') : t('marathonPrepare.login') }}
+            </button>
+          </section>
           <div v-else class="loading">
             <div class="bouncy-loader">
               <span></span><span></span><span></span>
@@ -51,28 +51,20 @@
             <p>{{ t('marathonPrepare.loading') }}</p>
           </div>
         </div>
-        <div class="bottom-action">
-          <button
-              class="start-button"
-              @click="startGame"
-              :disabled="!authStore.uid || !gameStore.isLoaded"
-          >
-            {{ authStore.uid ? t('marathonPrepare.start') : t('marathonPrepare.login') }}
-          </button>
-        </div>
       </div>
     </Transition>
   </div>
 </template>
 
 <script setup>
-import {ref, onMounted, computed} from 'vue'
+import {ref, onMounted} from 'vue'
 import {useRouter} from 'vue-router'
 import {useGameStore} from '../store/marafonStore.js'
 import {userAuthStore} from '../store/authStore.js'
 import {useSeoMeta} from "#imports";
 import VBackBtn from "~/src/components/V-back-btn.vue";
 import VBanner from "~/src/components/V-banner.vue";
+import VDailyRunCard from "~/src/components/V-dailyRunCard.vue";
 import DailyIcon from '../assets/images/dailyIcons/timer.svg'
 
 useSeoMeta({
@@ -86,13 +78,10 @@ const router = useRouter()
 const selectedDifficulty = ref(1)
 const isMounted = ref(false)
 
-const currentRecord = computed(() => {
+function recordFor(difficulty) {
   const bests = gameStore.allTimeBests || gameStore.personalBests
-  if (bests) {
-    return bests[selectedDifficulty.value] || 0
-  }
-  return 0
-})
+  return bests?.[difficulty] || 0
+}
 
 onMounted(() => {
   setTimeout(() => {
@@ -143,10 +132,6 @@ const difficultyBase = ref([
   -webkit-tap-highlight-color: transparent;
 }
 
-.banner {
-  padding: 0 15px;
-}
-
 .header__title-wrapper {
   display: flex;
   align-items: center;
@@ -170,8 +155,6 @@ const difficultyBase = ref([
   flex: 1;
   width: 100%;
   display: flex;
-  max-width: 768px;
-  margin: 0 auto;
   flex-direction: column;
   animation: fadeIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   overflow-y: auto;
@@ -191,7 +174,7 @@ const difficultyBase = ref([
   gap: 20px;
 }
 
-.user-greeting, .guest-greeting {
+.guest-greeting {
   padding: 10px;
   border-radius: 20px;
   text-align: center;
@@ -204,33 +187,36 @@ const difficultyBase = ref([
   margin: 0;
 }
 
-.user-greeting .record {
-  margin: 0;
-  font-weight: 800;
-  color: #ffffff;
-  font-size: 18px;
+.banner {
+  padding: 0 15px;
+}
+
+/* Блок обычного марафона — в своей рамке, чтобы не путать с ежедневным забегом */
+.free-mode {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 24px;
+  border: 2px solid var(--tabsSlideBorderColor);
+  background: rgba(255, 255, 255, 0.03);
 }
 
-.record__value {
-  font-size: 24px;
-  font-weight: 900;
-  background: #34C759;
-  color: #ffffff;
-  padding: 4px 18px;
-  border-radius: 14px;
-  box-shadow: 0 3px 0 #248a3d;
-}
-
-.settings-block h2 {
-  font-size: 22px;
+.free-mode .free-mode__title {
+  font-size: 20px;
   text-align: center;
-  margin: 0 0 16px 0;
+  margin: 0;
   color: #ffffff;
   font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.free-mode__hint {
+  margin: 4px 0 16px;
+  color: #a0a5b5;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .difficulty-options {
@@ -331,41 +317,20 @@ const difficultyBase = ref([
   transition: color 0.2s ease;
 }
 
-.difficulty-bars {
-  display: flex;
-  align-items: flex-end;
-  gap: 5px;
-  height: 32px;
+/* Рекорд на кнопке сложности */
+.difficulty-record {
+  flex: none;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 900;
+  white-space: nowrap;
 }
 
-.bar {
-  width: 8px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 6px;
-  transition: background-color 0.2s;
-}
-
-.bar-1 { height: 14px; }
-.bar-2 { height: 22px; }
-.bar-3 { height: 32px; }
-
-
-.difficulty-btn.easy:not(.active) .bar.bar-active {
-  background-color: #34C759;
-}
-.difficulty-btn.normal:not(.active) .bar.bar-active {
-  background-color: #007AFF;
-}
-.difficulty-btn.hard:not(.active) .bar.bar-active {
-  background-color: #FF3B30;
-}
-
-/* В выбранной активной карточке горят белым */
-.difficulty-btn.active .bar.bar-active {
-  background-color: #ffffff;
-}
-.difficulty-btn.active .bar:not(.bar-active) {
-  background-color: rgba(255, 255, 255, 0.35);
+.difficulty-btn.active .difficulty-record {
+  background: rgba(0, 0, 0, 0.18);
 }
 
 .loading {
@@ -400,13 +365,8 @@ const difficultyBase = ref([
 .bouncy-loader span:nth-child(2) { animation-delay: 0.1s; }
 .bouncy-loader span:nth-child(3) { animation-delay: 0.2s; }
 
-.bottom-action {
-  display: flex;
-  padding: 20px 20px 28px 20px;
-  margin-top: auto;
-}
-
 .start-button {
+  margin-top: 18px;
   background: #4F6AF6;
   color: #ffffff;
   border: none;
@@ -418,8 +378,6 @@ const difficultyBase = ref([
   cursor: pointer;
   transition: all 0.1s;
   width: 100%;
-  max-width: 580px;
-  margin: 0 auto;
 }
 
 .start-button:active:not(:disabled) {
