@@ -710,7 +710,6 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
   text-align: center;
 }
 
-/* Карточка повторения над темами */
 .review-card {
   display: flex;
   align-items: center;
@@ -770,7 +769,6 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Отметка на теме: сколько слов ждут повторения */
 .topic-due {
   align-self: flex-start;
   margin-top: 8px;
@@ -782,7 +780,6 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
   font-weight: 900;
 }
 
-/* Экран темы */
 .topic-progress-card {
   display: flex;
   align-items: center;
@@ -843,7 +840,6 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
   font-weight: 800;
 }
 
-/* Карточка следующего урока */
 .lesson-card {
   display: flex;
   flex-direction: column;
