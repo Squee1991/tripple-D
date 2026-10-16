@@ -1250,7 +1250,6 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
   display: flex;
   flex-direction: column;
 }
-
 @media (min-width: 768px) {
   .topic-list-item {
     flex: 0 0 300px;
