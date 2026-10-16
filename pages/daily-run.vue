@@ -100,7 +100,7 @@ const langStore = userlangStore()
 
 const CARD_FLY_AFTER_CORRECT_MS = 350
 const CARD_FALL_AFTER_MISTAKE_MS = 1200
-const STREAK_MILESTONES = [10, 20, 30]
+const STREAK_MILESTONES = [10, 20]
 const MILESTONE_VISIBLE_MS = 1300
 
 const isReady = ref(false)

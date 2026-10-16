@@ -3,11 +3,11 @@ import { defineStore } from 'pinia';
 import { doc, getDoc, setDoc, getFirestore } from 'firebase/firestore';
 import { userAuthStore } from './authStore.js';
 
-// Ежедневный забег по артиклям: каждый день 30 одинаковых для всех слов, одна попытка в день.
+// Ежедневный забег по артиклям: каждый день DAILY_WORD_COUNT одинаковых для всех слов, одна попытка в день.
 // Результат и серия дней хранятся в профиле пользователя: users/{uid}.dailyRun
 //   { lastPlayedDate: '2026-10-15', lastScore, lastTimeMs, lastTotal, streak, bestScore, totalRuns }
 
-export const DAILY_WORD_COUNT = 30;
+export const DAILY_WORD_COUNT = 20;
 const BASE_REWARD_POINTS = 5;
 const MAX_STREAK_BONUS_POINTS = 5;
 
@@ -88,7 +88,7 @@ export const useDailyRunStore = defineStore('dailyRun', () => {
 		}
 	}
 
-	// Слова дня: перемешиваем весь список «зерном» от даты и берём первые 30
+	// Слова дня: перемешиваем весь список «зерном» от даты и берём первые DAILY_WORD_COUNT
 	function buildTodayWords() {
 		const nextRandom = seededRandom(hashText('daily-run:' + today.value));
 		const shuffled = [...allWords.value];
