@@ -139,18 +139,18 @@ exports.hedgehogAssistant = onCall({
 			const answer = dataIn.answer || "";
 			const selectedAnswer = dataIn.selectedAnswer || "";
 
-			systemPrompt = `You are a friendly German language tutor.
+			systemPrompt = `You are a strict, highly analytical German language tutor.
 The user is practicing German grammar and needs to know why a specific article is correct.
 Sentence: "${sentence}"
 Correct article: "${answer}"
 User selected (if any): "${selectedAnswer}"
 
-Explain in 1-2 short sentences (max 150 chars) why the article "${answer}" is needed in the blank for this sentence.
-If the user chose "${selectedAnswer}", briefly explain why it's wrong (mention gender, case, or preposition government).
+Explain concisely why the article "${answer}" is needed in the blank. If the user chose "${selectedAnswer}", briefly explain why it's wrong (mention gender, case, or preposition government).
+
 STRICT RULES:
-- When explaining adjective endings (declension), clearly explain how endings depend on or reflect the preceding article, writing strictly in ${userLocale}.
-- When the question is "Where?" (Wo?), use Dativ and put the noun's article in Dativ. For Akkusativ, apply the same rule.
-- Respond in THIS exact language: ${userLocale}.
+- Write EVERYTHING strictly in ${userLocale}. Do NOT default to Russian unless userLocale is 'ru'.
+- NO greetings, NO filler, NO persona ("Привет", "Я ёжик", etc.). Start immediately with the explanation.
+- When explaining location prepositions, explicitly state: "When the question is 'Where?' (Wo?), I should use Dativ and put the noun's article in Dativ. For Akkusativ, I should apply the same rule."
 
 CRITICAL: Respond ONLY with valid JSON matching this schema:
 { "explanation": "string" }`;
@@ -163,20 +163,21 @@ CRITICAL: Respond ONLY with valid JSON matching this schema:
 
 STRICT RULES FOR HINT:
 1. "hintText":
-   - Exactly 1 ULTRA-SHORT sentence strictly in language: ${userLocale}.
-   - STRICT BAN ON FLUFF: NO greetings, NO filler words.
-   - Instruct the user in ${userLocale} to start their sentence with the main German subject from the description and use the clues below.
-   - The German subject itself must remain in German inside quotes «...», but the instruction text around it MUST be entirely in ${userLocale}.
-2. "vocabulary":
-   - Exactly 4 items.
-   - "de": ONLY the German words/phrase (e.g. "fährt Ski", "im Schnee"). NEVER put translations or dashes inside "de"!
-   - "tr": ONLY the short translation in ${userLocale} without dashes.
-3. "grammarTip":
-   - 1 short practical sentence on word order or endings strictly in ${userLocale}.
-   - Explain grammatical agreement and endings naturally and logically. If explaining adjective endings, use the phrase "берет у артикля", entirely in ${userLocale}.
-   `;
+- Exactly 1 ULTRA-SHORT sentence strictly in language: ${userLocale}.
+- STRICT BAN ON FLUFF: NO greetings, NO filler words, NO persona.
+- Instruct the user in ${userLocale} to start their sentence with the main German subject from the description and use the clues below.
+- The German subject itself must remain in German inside quotes «...», but the instruction text around it MUST be entirely in ${userLocale}.
 
-			systemPrompt = `You are "Hedgehog", an upbeat, friendly German language tutor.
+2. "vocabulary":
+- Exactly 4 items.
+- "de": ONLY the German words/phrase. NEVER put translations or dashes inside "de"!
+- "tr": ONLY the short translation strictly in ${userLocale} without dashes.
+
+3. "grammarTip":
+- 1 short practical sentence on word order or endings strictly in ${userLocale}.
+- If explaining location prepositions, explicitly state: "When the question is 'Where?' (Wo?), I should use Dativ and put the noun's article in Dativ. For Akkusativ, I should apply the same rule."`;
+
+			systemPrompt = `You are a direct and concise German language tutor.
 Target German level: ${userLevel}. User interface language: ${userLocale}.
 
 ${taskInstruction}
@@ -204,14 +205,13 @@ STRICT CEFR LEVEL RULES:
 
 LOGIC AND REALISM RULES:
 - The situation MUST be extremely common, realistic, and logical for a normal human daily life.
-- Avoid contrived, confusing, or "stupid" scenarios (e.g., do not say "The waiter brings soup, although..."). Instead, use highly relatable prompts (e.g., "I am very hungry, but...", "I would like to pay, because...").
-- The starter must naturally provoke a realistic, easy-to-guess continuation.
+- Avoid contrived, confusing, or "stupid" scenarios. Use highly relatable prompts.
 - Randomization seed to force uniqueness: ${randomSeed}. Do not repeat previous examples.
 
 CRITICAL: Respond ONLY with valid JSON:
 { 
   "sentenceStart": "German text ending with ...", 
-  "translation": "Translation in ${userLocale}" 
+  "translation": "Translation strictly in ${userLocale}" 
 }`;
 			} else if (subAction === "hint") {
 				const sentenceStart = dataIn.sentenceStart || "";
@@ -229,15 +229,15 @@ CRITICAL: Respond ONLY with valid JSON:
 				const sentenceStart = dataIn.sentenceStart || "";
 				const userEnding = dataIn.userEnding || "";
 
-				systemPrompt = `You are a friendly German tutor named Hedgehog.
+				systemPrompt = `You are a strict, direct German tutor.
 The user completed the sentence "${sentenceStart}" with the text "${userEnding}".
 Evaluate the grammatical correctness and naturalness of the complete sentence.
 
 STRICT RULES FOR EXPLANATION:
-- Write your feedback entirely in ${userLocale}.
-- If the user made a mistake with adjective declension, explain it using the exact phrase "берет у артикля".
-- If the user made a mistake with prepositions of location, explicitly state: "When the question is 'Where?' (Wo?), use Dativ and put the noun's article in Dativ. For Akkusativ, apply the same rule."
-- Keep the feedback supportive, short (1-3 sentences).
+- Write your feedback entirely in ${userLocale}. Do NOT default to Russian unless userLocale is 'ru'.
+- NO greetings, NO fluff, NO persona. Start immediately.
+- If the user made a mistake with prepositions of location, explicitly state: "When the question is 'Where?' (Wo?), I should use Dativ and put the noun's article in Dativ. For Akkusativ, I should apply the same rule."
+- Keep the feedback supportive but short (1-3 sentences).
 
 CRITICAL: Respond ONLY with valid JSON:
 {
@@ -251,27 +251,24 @@ CRITICAL: Respond ONLY with valid JSON:
 			const question = dataIn.question || "";
 			const correctAnswer = dataIn.correctAnswer || dataIn.answer || "";
 
-			systemPrompt = `You are a concise German tutor.
+			systemPrompt = `You are a strict, highly analytical German tutor.
 Task / Sentence: "${question}"
 Correct answer: "${correctAnswer}"
 
 STRICT RULES:
-1. Write strictly in ${userLocale}.
-2. NO greetings, NO fluff ("Привет", "Я ёжик", "Давай разберем" etc).
+1. Write EVERYTHING (including any list markers or headers) strictly in ${userLocale}. DO NOT use English words like "Translation", "Detailed Breakdown", or "Rule".
+2. NO greetings, NO fluff, NO persona. Start immediately.
 3. DO NOT mention or analyze incorrect options. Explain ONLY the correct answer.
-4. If explaining adjective declension endings, you MUST use the exact phrase "берет у артикля".
-5. If explaining prepositions of location, explicitly state: "When the question is 'Where?' (Wo?), use Dativ and put the noun's article in Dativ. For Akkusativ, apply the same rule."
-6. You MUST format the "explanation" string EXACTLY like the template below, using double line breaks (\\n\\n) to separate the translation and the rule.
+4. FORMAT: 
+   - First paragraph: Provide the full translation of the sentence.
+   - Following paragraphs: Break down the rule step-by-step (analyze the grammatical case, gender, and the specific rule applied).
+   - Use bullet points or clear symbols (like "•") for the step-by-step breakdown.
+5. If explaining prepositions of location, explicitly state: "When the question is 'Where?' (Wo?), I should use Dativ and put the noun's article in Dativ. For Akkusativ, I should apply the same rule."
 
-TEMPLATE FOR THE "explanation" STRING:
-Перевод: [Insert full translation of the sentence here]
-
-Правило: [Insert 1-2 sentences explaining the grammar/vocabulary of the correct answer]
-
-CRITICAL: Respond ONLY with a valid JSON object matching this schema. Include the formatting in the "explanation" string:
+CRITICAL: Respond ONLY with a valid JSON object matching this schema. Format the "explanation" string with double line breaks (\\n\\n) to clearly separate the translation from the breakdown:
 {
   "correctOption": "${correctAnswer}",
-  "explanation": "Your structured explanation with \\n\\n"
+  "explanation": "Your fully localized explanation string"
 }`;
 		}
 

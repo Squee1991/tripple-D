@@ -30,7 +30,7 @@ export const useGameStore = defineStore('game', () => {
 	const lives = ref(0);
 	const gameActive = ref(false);
 	const sessionStreak = ref(0);
-	const lastCompletedStreak = ref(0); // Фиксирует стрик при поражении, чтобы он не пропадал в модалке
+	const lastCompletedStreak = ref(0);
 	const timer = ref(0);
 	const timerId = ref(null);
 	const lastChanceProgress = ref(0);
@@ -38,8 +38,10 @@ export const useGameStore = defineStore('game', () => {
 	const onTheEdgeProgress = ref(0);
 	const fastAnswerStreak = ref(0);
 
-	const personalBests = ref({ 1: 0, 2: 0, 3: 0 }); // Сезонный лидерборд
-	const allTimeBests = ref({ 1: 0, 2: 0, 3: 0 });   // Личный рекорд навсегда
+	const lastSeenModalSeason = ref(null);
+
+	const personalBests = ref({ 1: 0, 2: 0, 3: 0 });
+	const allTimeBests = ref({ 1: 0, 2: 0, 3: 0 });
 	const totalCorrectAnswers = ref({ 1: 0, 2: 0, 3: 0 });
 	const isRecordUpdated = ref(false);
 
@@ -115,9 +117,10 @@ export const useGameStore = defineStore('game', () => {
 			const docSnap = await getDoc(userLeaderboardDocRef);
 
 			if (docSnap.exists()) {
+
 				const data = docSnap.data();
 				const { currentSeasonId } = getSeasonState();
-
+				lastSeenModalSeason.value = data.lastSeenModalSeason || null;
 				if (data.streaks) {
 					allTimeBests.value = {
 						1: data.streaks['1'] || 0,
@@ -320,13 +323,11 @@ export const useGameStore = defineStore('game', () => {
 			let updateTriggered = false;
 			const { isOpen } = getSeasonState();
 
-			// 1. ЛИЧНЫЙ СТРИК: обновляется ВСЕГДА в любое время независимо от сезона!
 			if (sessionStreak.value > (allTimeBests.value[difficulty.value] || 0)) {
 				allTimeBests.value[difficulty.value] = sessionStreak.value;
 				updateTriggered = true;
 			}
 
-			// 2. СЕЗОННЫЙ СТРИК: для таблицы лидеров
 			if (isOpen && sessionStreak.value > (personalBests.value[difficulty.value] || 0)) {
 				personalBests.value[difficulty.value] = sessionStreak.value;
 				updateTriggered = true;
@@ -334,17 +335,15 @@ export const useGameStore = defineStore('game', () => {
 
 			if (updateTriggered) {
 				isRecordUpdated.value = true;
-				saveRecord(); // Сразу фиксируем в базе
+				saveRecord();
 			}
 		} else {
-			// Фиксируем финальный результат перед вычетом жизни
 			lastCompletedStreak.value = sessionStreak.value;
 			lives.value--;
 			sessionStreak.value = 0;
 			fastAnswerStreak.value = 0;
 		}
 
-		// Ежедневные задания (передаем актуальный результат)
 		const streakToReport = isCorrect ? sessionStreak.value : lastCompletedStreak.value;
 		if (difficulty.value === 2) {
 			try { daily.noteMarathonMediumStreak(streakToReport); } catch {}
@@ -408,6 +407,24 @@ export const useGameStore = defineStore('game', () => {
 		}
 	}
 
+	async function markModalAsSeen() {
+		const { currentSeasonId } = getSeasonState();
+		lastSeenModalSeason.value = currentSeasonId;
+
+		if (userId.value) {
+			try {
+				const userLeaderboardDocRef = doc(db, LEADERBOARD_COLLECTION, userId.value);
+				await setDoc(
+					userLeaderboardDocRef,
+					{ lastSeenModalSeason: currentSeasonId },
+					{ merge: true }
+				);
+			} catch (e) {
+				console.error('Error saving modal state:', e);
+			}
+		}
+	}
+
 	return {
 		isLoaded,
 		gameReady,
@@ -426,6 +443,7 @@ export const useGameStore = defineStore('game', () => {
 		lastChanceProgress,
 		marginForErrorProgress,
 		onTheEdgeProgress,
+		lastSeenModalSeason,
 		loadWords,
 		fetchRecord,
 		selectGameSettings,
@@ -437,6 +455,7 @@ export const useGameStore = defineStore('game', () => {
 		loadMarathonLeaderboard,
 		getSeasonState,
 		getPreviousSeasonRank,
-		retryGame
+		retryGame,
+		markModalAsSeen
 	};
 });

@@ -1,4 +1,80 @@
 {
+  "wordLearning": {
+    "newWord": "✨ Nowe słowo",
+    "tryAgain": "🔁 Jeszcze raz",
+    "reviewTitle": "Powtórka",
+    "pluralLabel": "L. mnoga",
+    "lessonDoneTitle": "Lekcja ukończona!",
+    "wordsTitle": "Słowa z tematu",
+    "learnSelected": "Ucz się wybranych ({count})",
+    "status_new": "nowe",
+    "status_learned": "nauczone",
+    "status_due": "powtórz",
+    "repeatMistakes": "Powtórz błędy ({count})",
+    "lessonWordsText": "Słowa w lekcji: {count}",
+    "reviewDoneTitle": "Powtórka ukończona!",
+    "reviewDoneText": "Za pierwszym razem: {correct} z {total}",
+    "reviewMore": "Powtórz jeszcze ({count})",
+    "reviewCardDue": "Czeka na powtórkę: {count}",
+    "reviewCardEmpty": "Wszystko powtórzone! Wróć jutro",
+    "reviewButton": "Powtórz",
+    "topicDue": "Do powtórki: {count}",
+    "statDue": "Do powtórki",
+    "statMastered": "Opanowane",
+    "reviewTopicButton": "Powtórz ({count})",
+    "meaningFor": "Co znaczy to słowo?",
+    "audioWithArticle": "Posłuchaj i wpisz słowo z rodzajnikiem",
+    "almostCorrect": "Prawie! Sprawdź pisownię",
+    "genderRule": "Słowa zakończone na {suffix} prawie zawsze mają {article}",
+    "nextLessonTitle": "Następna lekcja",
+    "chosenWordsTitle": "Twoje słowa",
+    "startLesson": "Zacznij lekcję",
+    "stepIntro": "Poznanie",
+    "stepMeaning": "Znaczenie",
+    "stepLetters": "Litery",
+    "stepWrite": "Pisanie",
+    "learnedOf": "Nauczone {learned} z {total}",
+    "topicDoneTitle": "Wszystkie słowa nauczone!",
+    "topicDoneText": "Powtarzaj je, gdy nadejdzie czas",
+    "chooseWords": "Wybierz słowa",
+    "cancelChoice": "Anuluj",
+    "chooseWordsHint": "Dotknij słów, których chcesz się uczyć",
+    "tomorrowReview": "🔁 Jutro do powtórki: {count} sł."
+  },
+  "dailyRun": {
+    "title": "Codzienny bieg",
+    "subtitle": "{count} słów · jedna próba dziennie",
+    "play": "Graj",
+    "todayResult": "Dziś: {score} / {total}",
+    "streakDays": "{count} dni z rzędu",
+    "nextIn": "Nowy bieg za {hours} godz. {minutes} min",
+    "finishTitle": "Bieg ukończony!",
+    "timeLabel": "Czas",
+    "streakLabel": "Dni z rzędu",
+    "rewardLabel": "Nagroda",
+    "mistakesTitle": "Błędy",
+    "noMistakes": "Bez błędów! 🎉",
+    "done": "Gotowe"
+  },
+  "reminders": {
+    "title": "Nie trać postępów!",
+    "text": "Przypomnimy raz dziennie, żeby seria nie przepadła. Kiedy ci pasuje?",
+    "morning": "Rano",
+    "afternoon": "Południe",
+    "evening": "Wieczór",
+    "night": "Noc",
+    "custom": "Własna godzina",
+    "enable": "Przypominaj",
+    "later": "Nie teraz",
+    "n1Title": "📚 Czas na niemiecki!",
+    "n1Body": "5 minut dziennie — i cel osiągnięty",
+    "n2Title": "🔥 Utrzymaj swoją serię!",
+    "n2Body": "Jedna krótka lekcja i seria trwa dalej",
+    "n3Title": "🦔 Jeżyk za tobą tęskni",
+    "n3Body": "Czeka na ciebie nowy quest",
+    "reviewTitle": "🔁 Czas na powtórkę!",
+    "reviewBody": "Słowa do powtórki: {count}. To tylko kilka minut!"
+  },
   "definiteIndefiniteQuestOne": {
     "title": "Bitwa o końcówki",
     "description": "Praktyka mieszana: rodzajniki nieokreślone i określone w zdaniach.",
@@ -3579,6 +3655,7 @@
     "inputType": "Napisz to, co słyszysz… (znaki interpunkcyjne nie są wymagane)"
   },
   "questCompletedModals": {
+    "ads": "Obejrzyj reklamę",
     "correct": "Poprawnie",
     "correctAnswer": "Poprawna odpowiedź:",
     "further": "Dalej",
@@ -3599,6 +3676,7 @@
     "notEnough": "Za mało",
     "questNotCompleted": "Nie ukończyłeś zadania",
     "warning": "Jeśli wyjdziesz teraz, postęp nie zostanie zapisany.",
+    "continueQuest": "Zostało już niewiele. Dokończ zadanie, aby zapisać postęp",
     "leave": "Wyjdź",
     "continue": "Kontynuuj",
     "completedWithMistakes": "Zadanie ukończone, ale są błędy"
@@ -8316,6 +8394,16 @@
     "answer": "Przymknie oko na błąd"
   },
   "guessWord": {
+    "dailyTitle": "Słowo dnia",
+    "dailyText": "Jedno słowo dla wszystkich i jedna próba. Zgadnij i zdobądź {coins} monety!",
+    "dailyPlay": "Graj",
+    "dailyContinue": "Kontynuuj",
+    "dailyWon": "Odgadnięte:",
+    "dailyLost": "Nieodgadnięte:",
+    "dailyNext": "Nowe słowo za {hours} godz. {minutes} min",
+    "dailyShare": "Udostępnij",
+    "dailyCopied": "Skopiowano!",
+    "dailyPlayNormal": "Zwykła gra",
     "subtitle": "Odgadnij słowo i podszkol swój niemiecki!",
     "theme": "Temat:",
     "back": "Wstecz",
@@ -8874,7 +8962,7 @@
     "specialAllVerbsText": "Zdobądź wszystkie osiągnięcia czasowników: Konjugacja, Czasy, Modalne, Typy czasowników",
     "specialAllVerbsAward": "Nagroda: Ostrza działania",
     "specialGrotText": "Jestem Groot",
-    "specialGrotLabel": "Każdy temat ma swoje drzewo i… to nie jest błąd! Znajdź je w praktyce rodzajników i naucz się wszystkimi sposobami.",
+    "specialGrotLabel": "Każdy temat ma swoje drzewo i… to nie jest błąd! Znajdź je w ćwiczeniach z rodzajnikami i naucz się go.",
     "specialGrotAward": "Nagroda: Doniczka z Grootem",
     "generalSeventhlabel": "Władca zdań",
     "generalSeventhText": "Ułóż 1000 zdań w trybie Solo Pojedynek Fraz na dowolnym poziomie trudności"
@@ -8905,13 +8993,13 @@
     "dailyQuestDescription": "Ukończyłeś 42 codzienne zadania, ale ostateczne pytanie Wszechświata pozostaje tajemnicą",
     "dailyQuestAward": "Nagroda: Teleskop Galaktyczny",
     "catDotText": "Koto-pies",
-    "catDotDescription": "Miau–hau! Naucz się słów „kot” i „pies” w ćwiczeniach z rodzajnikami we wszystkich trybach.",
+    "catDotDescription": "Miau–hau! Naucz się słów „kot” i „pies” w ćwiczeniach z rodzajnikami.",
     "cowabungaText": "KOWABUNGA",
-    "cowabungaDescription": "Salami czy pepperoni? Wojownicze Żółwie Ninja i tak by zjadły. Naucz się słowa „salami” we wszystkich trybach w ćwiczeniach z rodzajnikami.",
+    "cowabungaDescription": "Salami czy pepperoni? Wojownicze Żółwie Ninja i tak by zjadły. Naucz się słowa „salami” w ćwiczeniach z rodzajnikami.",
     "zooText": "Przyjaciel zwierząt",
-    "zooDescription": "Prawdziwy przyjaciel nie zostawi nikogo bez rodzajnika! Naucz się wszystkich słów z tematu „Zwierzęta” we wszystkich trybach ćwiczenia rodzajników.",
+    "zooDescription": "Prawdziwy przyjaciel nie zostawi nikogo bez rodzajnika! Naucz się wszystkich słów ze wszystkich tematów kategorii „Zwierzęta” w ćwiczeniach z rodzajnikami.",
     "veganText": "Obrońca warzyw",
-    "veganDescription": "Żadne warzywo nie pozostanie bez rodzajnika! Naucz się wszystkich słów o warzywach z tematu „Jedzenie” we wszystkich trybach ćwiczeń rodzajników.",
+    "veganDescription": "Żadne warzywo nie pozostanie bez rodzajnika! Naucz się wszystkich słów z tematu „Warzywa” w ćwiczeniach z rodzajnikami.",
     "firstStepLabel": "Pierwszy krok",
     "firstAwardText": "Początek kolekcji",
     "firstAwardLabel": "Odbierz swoją pierwszą nagrodę",
@@ -9087,7 +9175,9 @@
     "difficultDescriptionHard": "1 życie, 5 sek/słowo",
     "loading": "Ładowanie słów...",
     "start": "Start!",
-    "login": "Zaloguj się, aby rozpocząć"
+    "login": "Zaloguj się, aby rozpocząć",
+    "freeModeTitle": "Zwykły maraton",
+    "freeModeHint": "Graj, ile chcesz — wybierz poziom trudności"
   },
   "marathonGame": {
     "notReadyTitle": "Proszę czekać",
@@ -9103,7 +9193,9 @@
     "bestResult": "Twój najlepszy wynik:",
     "tryAgain": "Spróbuj ponownie",
     "back": "Wróć do wyboru poziomu trudności",
-    "main": "Strona główna"
+    "main": "Strona główna",
+    "streakMilestone": "{count} z rzędu!",
+    "toRecord": "Do rekordu: {count}"
   },
   "rulesFirstBlock": {
     "title": "Teoria rodzajników",
@@ -9740,7 +9832,10 @@
     "commonPoints": "PUNKTY OGÓLNE",
     "rank": "Ranga:",
     "streak": "REKORD:",
-    "cabinet": "Dziennik pokładowy"
+    "cabinet": "Dziennik pokładowy",
+    "flights": "Loty",
+    "bosses": "Bossowie",
+    "meteors": "Zestrzelone"
   },
   "galaxyRank": {
     "none": "ZIEMIANIN",
@@ -9958,7 +10053,19 @@
     "newRecord": "NOWY REKORD!",
     "check": "WYNIK:",
     "again": "Ponowny wylot",
-    "constellations": "Opuść gwiazdozbiór"
+    "constellations": "Opuść gwiazdozbiór",
+    "moveHint": "Ustaw się pod meteorytem ◀ ▶ i strzelaj poprawną odpowiedzią",
+    "bestCombo": "Najlepsze combo",
+    "yourAnswer": "Twoja odpowiedź",
+    "correctAnswer": "Poprawna",
+    "noMistakes": "Bez błędów! 🎉",
+    "bossIncoming": "Boss!",
+    "bossDefeated": "Boss pokonany!",
+    "bossesDefeated": "Pokonani bossowie",
+    "pauseTitle": "Pauza",
+    "resume": "Kontynuuj",
+    "finishFlight": "Zakończ lot",
+    "finishNote": "Punkty i artiki za ten lot zostaną zapisane"
   },
   "textTasksTip": {
     "title": "Zadania tekstowe",
@@ -10332,6 +10439,7 @@
     "restore": "Przywróć zakupy."
   },
   "submitComputed": {
+    "try": "Wypróbuj za",
     "sync": "Synchronizacja...",
     "getPlus": "Kup PLUS",
     "getBasic": "Kup Basic",
@@ -11112,5 +11220,15 @@
     "halloweenReputationDescription": "Zdobądź maksymalny poziom reputacji za wykonywanie zleceń Dyniowiny.",
     "halloweenAllAchievementsText": "Niechaj Dyniowina będzie z tobą!",
     "halloweenAllAchievementsDescription": "Zdobądź wszystkie osiągnięcia Dyniowiny i zasłuż na świąteczny tytuł."
+  },
+  "marathonModal": {
+    "text": "Maraton się rozpoczął! Rywalizuj, zwyciężaj, zdobywaj osiągnięcia i nagrody!"
+  },
+  "plusPreviewOverlay": {
+    "title": " Chcesz uczyć się",
+    "title2": "BEZ OGRANICZEŃ",
+    "title3": "i przyspieszyć swoje postępy?",
+    "title4": "Nielimitowane życia, dowolne lekcje i zero reklam!",
+    "button": "TAK, CHCĘ!"
   }
 }

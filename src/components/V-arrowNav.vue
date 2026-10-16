@@ -10,7 +10,7 @@
 
 <style scoped>
 .topic-arrow {
-  background-color: #3b82f6;
+  background-color: var(--arrowBg);
   color: #ffffff;
   width: 28px;
   height: 28px;

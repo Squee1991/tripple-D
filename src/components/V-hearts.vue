@@ -76,7 +76,6 @@ onBeforeUnmount(() => stopTimer())
 onActivated(() => startTimer())
 onDeactivated(() => stopTimer())
 
-// Оставшееся время до восстановления следующего сердечка
 const nextTickRemainingMs = computed(() => {
   if (props.lives >= props.maxLives || !props.regenIntervalMs) return 0
   const lastLife = props.lastLifeAtMs || now.value
@@ -85,7 +84,6 @@ const nextTickRemainingMs = computed(() => {
   return Math.max(0, remaining)
 })
 
-// Форматирование MM:SS
 const recoveryTimerText = computed(() => {
   if (props.lives >= props.maxLives) return ''
   const totalSeconds = Math.floor(nextTickRemainingMs.value / 1000)
@@ -95,16 +93,13 @@ const recoveryTimerText = computed(() => {
 })
 
 function getWaterGroupStyle(i) {
-  // Уже полные сердечки
   if (i < props.lives) {
     return { transform: 'translateY(-6px)', transition: 'transform 0.4s ease' }
   }
 
-  // Сердечко, которое наполняется прямо сейчас
   if (i === props.lives && props.lives < props.maxLives && props.regenIntervalMs > 0) {
     const elapsed = Math.max(0, now.value - (props.lastLifeAtMs || now.value))
     const progress = Math.min(100, (elapsed / props.regenIntervalMs) * 100)
-    // 30px (пустое) -> -6px (полное), амплитуда 36px
     const yPos = 30 - (progress / 100) * 36
 
     return {
@@ -113,7 +108,6 @@ function getWaterGroupStyle(i) {
     }
   }
 
-  // Пустые сердечки
   return { transform: 'translateY(30px)', transition: 'transform 0.4s ease' }
 }
 </script>

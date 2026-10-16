@@ -19,7 +19,7 @@ import WitchHat from 'assets/images/event-rewards/halloween-event/halloween-rewa
 import Pumpkin from 'assets/images/event-rewards/halloween-event/halloween-rewards/pumpkin.svg'
 import SpellBook from 'assets/images/event-rewards/halloween-event/halloween-rewards/spell-book.svg'
 import Punch from 'assets/images/event-rewards/halloween-event/halloween-rewards/punch.svg'
-
+import { showInterstitial } from '~/utils/admob.js'
 import {useEventSessionStore} from '~/store/eventsStore.js'
 import {useSeoMeta, useI18n, useLocalePath} from "#imports"
 
