@@ -145,6 +145,9 @@ export default defineNuxtConfig({
 			drop: isProd ? ['console', 'debugger'] : [],
 			legalComments: 'none',
 		},
+		rollupOptions: {
+			external: ['@capacitor/local-notifications']
+		}
 	},
 	nitro: {
 		compressPublicAssets: true
