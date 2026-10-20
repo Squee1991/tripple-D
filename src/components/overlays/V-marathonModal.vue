@@ -28,7 +28,7 @@ const closeModal = () => {
 
 const pathRouter = () => {
   closeModal();
-  router.push('/pay');
+  router.push('/article-marathon');
 };
 
 </script>

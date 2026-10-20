@@ -107,7 +107,7 @@ import VBanner from "~/src/components/V-banner.vue";
 import VHeadsUp from '~/src/components/V-headsUp.vue'
 import Banner from '../../assets/images/thematicSticker.svg'
 import VTransition from "~/src/components/V-transition.vue";
-import { showInterstitial } from '../../utils/admob.js'
+import {showInterstitial, preloadInterstitial} from '../../utils/admob.js'
 
 const isMounted = ref(false)
 const {t} = useI18n()
@@ -220,6 +220,7 @@ const loadThemeData = async () => {
   loading.value = false
 }
 onMounted(() => {
+  preloadInterstitial()
   setTimeout(() => {
     isMounted.value = true
     loadThemeData

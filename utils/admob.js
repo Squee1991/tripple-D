@@ -5,10 +5,14 @@ import { userAuthStore } from '../store/authStore.js';
 let isAdProcessing = false;
 let isInterstitialLoaded = false;
 let isInterstitialLoading = false;
+let interstitialLoadedAt = 0;
 let lastInterstitialTime = 0;
+let initPromise = null;
 
 const AD_LIMIT_PER_DAY = 10;
 const INTERSTITIAL_COOLDOWN = 2 * 60 * 1000;
+// Загруженная межстраничная реклама живёт ~1 час, после этого показ не оплачивается
+const INTERSTITIAL_TTL = 55 * 60 * 1000;
 const platform = Capacitor.getPlatform();
 
 const INTERSTITIAL_ID = platform === 'android'
@@ -55,13 +59,23 @@ function recordSuccessfulView() {
 		console.warn('Ошибка записи статистики бонусов:', e);
 	}
 }
-// Тихая предзагрузка рекламы в кэш (не тормозит интерфейс и прелоадер)
-async function preloadInterstitial() {
-	if (!Capacitor.isNativePlatform() || isInterstitialLoaded || isInterstitialLoading) return;
+function isInterstitialFresh() {
+	return isInterstitialLoaded && Date.now() - interstitialLoadedAt < INTERSTITIAL_TTL;
+}
+
+// Тихая предзагрузка рекламы в кэш (не тормозит интерфейс и прелоадер).
+// Вызывается на экране ПЕРЕД показом: в начале сессии (показ после неё)
+// или на экране выбора урока (показ перед стартом)
+export async function preloadInterstitial() {
+	if (!Capacitor.isNativePlatform() || isInterstitialLoading || isInterstitialFresh()) return;
+	// Премиум без рекламы — не делаем пустых запросов
+	if (!userAuthStore().hasAds) return;
 	isInterstitialLoading = true;
 	try {
+		if (initPromise) await initPromise;
 		await AdMob.prepareInterstitial({ adId: INTERSTITIAL_ID });
 		isInterstitialLoaded = true;
+		interstitialLoadedAt = Date.now();
 	} catch (e) {
 		isInterstitialLoaded = false;
 	} finally {
@@ -69,18 +83,17 @@ async function preloadInterstitial() {
 	}
 }
 
-export async function initAdmob() {
+export function initAdmob() {
 	if (!Capacitor.isNativePlatform()) return;
-	try {
-		await AdMob.initialize({
+	if (!initPromise) {
+		initPromise = AdMob.initialize({
 			requestTrackingAuthorization: true,
 			initializeForTesting: false // Строго боевой режим!
+		}).catch((e) => {
+			console.error('Ошибка инициализации AdMob:', e);
 		});
-		// Сразу при входе в приложение тихо качаем первую рекламу про запас
-		preloadInterstitial();
-	} catch (e) {
-		console.error('Ошибка инициализации AdMob:', e);
 	}
+	return initPromise;
 }
 
 export async function showInterstitial(nextStep) {
@@ -89,9 +102,9 @@ export async function showInterstitial(nextStep) {
 	if (!authStore.hasAds || !Capacitor.isNativePlatform()) return nextStep();
 	if (Date.now() - lastInterstitialTime < INTERSTITIAL_COOLDOWN) return nextStep();
 	if (isAdProcessing) return;
-	// Если реклама еще не успела докачаться в фоне — запускаем докачку и сразу пускаем юзера без зависаний
-	if (!isInterstitialLoaded) {
-		preloadInterstitial();
+	// Реклама не успела загрузиться или устарела — пускаем юзера дальше без ожидания
+	if (!isInterstitialFresh()) {
+		isInterstitialLoaded = false;
 		return nextStep();
 	}
 
@@ -106,8 +119,8 @@ export async function showInterstitial(nextStep) {
 			dismissListener?.remove();
 			failListener?.remove();
 			isAdProcessing = false;
+			// Следующую рекламу загрузит следующий экран через preloadInterstitial()
 			isInterstitialLoaded = false;
-			preloadInterstitial(); // Сразу грузим следующую рекламу в фоне
 			nextStep();
 		}
 	};

@@ -123,7 +123,7 @@ import {useSpeakStore} from '~/store/speakStore.js';
 import SoundBtn from '../../src/components/soundBtn.vue';
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
-import {showInterstitial} from '~/utils/admob.js';
+import {showInterstitial, preloadInterstitial} from '~/utils/admob.js';
 import {useSwipeBack} from '~/composables/useSwipeBack.js';
 import HedgehogLeaveSession from 'assets/animation/hedgehog_leave_session.json'
 const router = useRouter();
@@ -343,6 +343,7 @@ const restartLearning = () => {
 };
 
 onMounted(async () => {
+  preloadInterstitial()
   const theme = route.query.theme;
   const level = route.query.level;
   if (!store.dialogueData) {

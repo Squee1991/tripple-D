@@ -114,12 +114,10 @@ import ExitSessionModal from '~/src/components/V-stopSessionModal.vue'
 import HedgehogLeaveSession from 'assets/animation/hedgehog_leave_session.json'
 
 import {useTextTasksStore} from '~/store/textTasksStore.js'
-import { userAuthStore } from "~/store/authStore.js"
 
 const {t} = useI18n()
 const router = useRouter()
 const store = useTextTasksStore()
-const authStore = userAuthStore()
 
 const loading = ref(true)
 const selectedWordForTap = ref(null)
@@ -148,13 +146,9 @@ onMounted(() => {
   }
   const minDelay = new Promise(resolve => setTimeout(resolve, 1500))
   const adPromise = new Promise(resolve => {
-    if (!authStore.isPremium) {
-      showInterstitial(() => {
-        resolve()
-      })
-    } else {
+    showInterstitial(() => {
       resolve()
-    }
+    })
   })
 
   Promise.all([minDelay, adPromise]).then(() => {
