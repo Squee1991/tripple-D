@@ -189,8 +189,6 @@ watch(() => colorMode.value, async (newTheme) => {
 }, { immediate: true });
 
 
-// Модалка марафона — на главной и только если в этом запуске не показывали модалку ивента,
-// иначе ждёт следующего запуска
 watch([() => authStore.uid, eventModalState], async ([uid, state]) => {
   if (!uid || state !== 'none') return
   if (await gameStore.loadModalSeen()) checkMarathonEvent()

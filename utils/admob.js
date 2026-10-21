@@ -1,5 +1,6 @@
 import { AdMob, InterstitialAdPluginEvents, RewardAdPluginEvents } from '@capacitor-community/admob';
 import { Capacitor } from '@capacitor/core';
+import { App } from '@capacitor/app';
 import { userAuthStore } from '../store/authStore.js';
 
 let isAdProcessing = false;
@@ -63,9 +64,6 @@ function isInterstitialFresh() {
 	return isInterstitialLoaded && Date.now() - interstitialLoadedAt < INTERSTITIAL_TTL;
 }
 
-// Тихая предзагрузка рекламы в кэш (не тормозит интерфейс и прелоадер).
-// Вызывается на экране ПЕРЕД показом: в начале сессии (показ после неё)
-// или на экране выбора урока (показ перед стартом)
 export async function preloadInterstitial() {
 	if (!Capacitor.isNativePlatform() || isInterstitialLoading || isInterstitialFresh()) return;
 	// Премиум без рекламы — не делаем пустых запросов
@@ -88,9 +86,16 @@ export function initAdmob() {
 	if (!initPromise) {
 		initPromise = AdMob.initialize({
 			requestTrackingAuthorization: true,
-			initializeForTesting: false // Строго боевой режим!
+			initializeForTesting: false
 		}).catch((e) => {
 			console.error('Ошибка инициализации AdMob:', e);
+		});
+
+		App.addListener('resume', () => {
+			if (isInterstitialLoaded && !isInterstitialFresh()) {
+				isInterstitialLoaded = false;
+				preloadInterstitial();
+			}
 		});
 	}
 	return initPromise;
@@ -102,9 +107,10 @@ export async function showInterstitial(nextStep) {
 	if (!authStore.hasAds || !Capacitor.isNativePlatform()) return nextStep();
 	if (Date.now() - lastInterstitialTime < INTERSTITIAL_COOLDOWN) return nextStep();
 	if (isAdProcessing) return;
-	// Реклама не успела загрузиться или устарела — пускаем юзера дальше без ожидания
+
 	if (!isInterstitialFresh()) {
 		isInterstitialLoaded = false;
+		preloadInterstitial();
 		return nextStep();
 	}
 
@@ -119,7 +125,7 @@ export async function showInterstitial(nextStep) {
 			dismissListener?.remove();
 			failListener?.remove();
 			isAdProcessing = false;
-			// Следующую рекламу загрузит следующий экран через preloadInterstitial()
+
 			isInterstitialLoaded = false;
 			nextStep();
 		}
