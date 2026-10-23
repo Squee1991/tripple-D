@@ -1379,8 +1379,8 @@
         "id": 9,
         "type": "select",
         "question": "definiteIndefiniteQuestEleven.questNine",
-        "options": ["Ein kleines Haus стоит dort.", "Ein kleine Haus стоит dort.", "Ein kleinen Haus стоит dort."],
-        "answer": "Ein kleines Haus стоит dort.",
+        "options": ["Ein kleines Haus steht dort.", "Ein kleine Haus steht dort.", "Ein kleinen Haus steht dort."],
+        "answer": "Ein kleines Haus steht dort.",
         "tip": "definiteIndefiniteQuestEleven.questNineTip"
       },
       {
@@ -1643,7 +1643,7 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestThirteen.questTen",
-        "options": ["Das kalте Wasser ist sauber.", "Das kaltes Wasser ist sauber.", "Das kalten Wasser ist sauber."],
+        "options": ["Das kalte Wasser ist sauber.", "Das kaltes Wasser ist sauber.", "Das kalten Wasser ist sauber."],
         "answer": "Das kalte Wasser ist sauber.",
         "tip": "definiteIndefiniteQuestThirteen.questTenTip"
       },

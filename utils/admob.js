@@ -1,5 +1,5 @@
-import { AdMob, InterstitialAdPluginEvents, RewardAdPluginEvents } from '@capacitor-community/admob';
-import { Capacitor } from '@capacitor/core';
+import { AdMob, AdmobConsentStatus, InterstitialAdPluginEvents, RewardAdPluginEvents } from '@capacitor-community/admob';
+import { Capacitor, registerPlugin } from '@capacitor/core';
 import { App } from '@capacitor/app';
 import { userAuthStore } from '../store/authStore.js';
 
@@ -9,8 +9,16 @@ let isInterstitialLoading = false;
 let interstitialLoadedAt = 0;
 let lastInterstitialTime = 0;
 let initPromise = null;
+let privacyOptionsRequired = false;
+
+// Нативный плагин из MainActivity: читает, что юзер выбрал в окне согласия
+const ConsentChoice = registerPlugin('ConsentChoice');
+// Окно согласия GDPR пока только на Android; iOS — после проверки
+const CONSENT_PLATFORMS = ['android'];
 
 const AD_LIMIT_PER_DAY = 10;
+// После ~10 показов одному юзеру рекламодатели упираются в лимит частоты и ставки падают
+const INTERSTITIAL_LIMIT_PER_DAY = 12;
 const INTERSTITIAL_COOLDOWN = 2 * 60 * 1000;
 // Загруженная межстраничная реклама живёт ~1 час, после этого показ не оплачивается
 const INTERSTITIAL_TTL = 55 * 60 * 1000;
@@ -29,36 +37,36 @@ function getTodayKey() {
 	return `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
 }
 
-function canShowRewardedAd() {
+function getTodayCount(storageKey) {
 	try {
-		const todayKey = getTodayKey();
-		const statsStr = localStorage.getItem('adRewardStats');
-		if (!statsStr) return true;
-		const stats = JSON.parse(statsStr);
-		if (stats.date !== todayKey) return true;
-		return stats.count < AD_LIMIT_PER_DAY;
+		const stats = JSON.parse(localStorage.getItem(storageKey));
+		return stats && stats.date === getTodayKey() ? stats.count : 0;
 	} catch (e) {
-		return true;
+		return 0;
 	}
 }
 
-function recordSuccessfulView() {
+function incrementTodayCount(storageKey) {
+	const count = getTodayCount(storageKey) + 1;
 	try {
-		const todayKey = getTodayKey();
-		const statsStr = localStorage.getItem('adRewardStats');
-		let stats = { date: todayKey, count: 0 };
-		if (statsStr) {
-			const parsedStats = JSON.parse(statsStr);
-			if (parsedStats && parsedStats.date === todayKey) {
-				stats = parsedStats;
-			}
-		}
-		stats.count++;
-		localStorage.setItem('adRewardStats', JSON.stringify(stats));
-		console.log(`Пользователь берет бонус! Использовано: ${stats.count}/${AD_LIMIT_PER_DAY}`);
+		localStorage.setItem(storageKey, JSON.stringify({ date: getTodayKey(), count }));
 	} catch (e) {
-		console.warn('Ошибка записи статистики бонусов:', e);
+		console.warn('Ошибка записи статистики рекламы:', e);
 	}
+	return count;
+}
+
+function canShowRewardedAd() {
+	return getTodayCount('adRewardStats') < AD_LIMIT_PER_DAY;
+}
+
+function canShowInterstitialToday() {
+	return getTodayCount('adInterstitialStats') < INTERSTITIAL_LIMIT_PER_DAY;
+}
+
+function recordSuccessfulView() {
+	const count = incrementTodayCount('adRewardStats');
+	console.log(`Пользователь берет бонус! Использовано: ${count}/${AD_LIMIT_PER_DAY}`);
 }
 function isInterstitialFresh() {
 	return isInterstitialLoaded && Date.now() - interstitialLoadedAt < INTERSTITIAL_TTL;
@@ -68,6 +76,8 @@ export async function preloadInterstitial() {
 	if (!Capacitor.isNativePlatform() || isInterstitialLoading || isInterstitialFresh()) return;
 	// Премиум без рекламы — не делаем пустых запросов
 	if (!userAuthStore().hasAds) return;
+	// Дневной лимит исчерпан — загруженная реклама всё равно не покажется
+	if (!canShowInterstitialToday()) return;
 	isInterstitialLoading = true;
 	try {
 		if (initPromise) await initPromise;
@@ -81,15 +91,65 @@ export async function preloadInterstitial() {
 	}
 }
 
-export function initAdmob() {
+// accepted — согласился на всё, declined — ни на что, custom — выбрал часть в «Управлять настройками»
+async function getConsentChoice() {
+	try {
+		const { purposeConsents } = await ConsentChoice.getPurposeConsents();
+		if (!purposeConsents.includes('1')) return 'declined';
+		return purposeConsents.includes('0') ? 'custom' : 'accepted';
+	} catch (e) {
+		return 'unknown';
+	}
+}
+
+// Окно показывается один раз и только в ЕЭЗ/UK/Швейцарии — остальным Google вернёт NOT_REQUIRED.
+// Реклама ждёт initPromise, поэтому запросы уходят уже с ответом юзера
+async function gatherConsent(track) {
+	if (!CONSENT_PLATFORMS.includes(platform)) return;
+	try {
+		const info = await AdMob.requestConsentInfo();
+		privacyOptionsRequired = info.privacyOptionsRequirementStatus === 'REQUIRED';
+		if (info.status !== AdmobConsentStatus.REQUIRED || !info.isConsentFormAvailable) return;
+
+		track?.('consent_form_shown');
+		const result = await AdMob.showConsentForm();
+		privacyOptionsRequired = result.privacyOptionsRequirementStatus === 'REQUIRED';
+		track?.(`consent_${await getConsentChoice()}`);
+	} catch (e) {
+		console.error('Ошибка окна согласия:', e);
+	}
+}
+
+export async function isPrivacyOptionsRequired() {
+	if (initPromise) await initPromise;
+	return privacyOptionsRequired;
+}
+
+// Кнопка «Настройки конфиденциальности» — Google требует дать юзеру изменить выбор
+export async function showPrivacyOptions(track) {
+	try {
+		await AdMob.showPrivacyOptionsForm();
+		track?.('consent_changed', { choice: await getConsentChoice() });
+	} catch (e) {
+		console.error('Ошибка окна настроек конфиденциальности:', e);
+	}
+}
+
+export function initAdmob(track) {
 	if (!Capacitor.isNativePlatform()) return;
 	if (!initPromise) {
 		initPromise = AdMob.initialize({
 			requestTrackingAuthorization: true,
 			initializeForTesting: false
-		}).catch((e) => {
+		}).then(() => gatherConsent(track)).catch((e) => {
 			console.error('Ошибка инициализации AdMob:', e);
 		});
+
+		// Первая реклама — сразу при входе, чтобы к первому показу уже была готова.
+		// Ждём профиль: до его загрузки hasAds = true и у премиума ушёл бы лишний запрос
+		initPromise
+			.then(() => userAuthStore().initAuth())
+			.then(() => preloadInterstitial());
 
 		App.addListener('resume', () => {
 			if (isInterstitialLoaded && !isInterstitialFresh()) {
@@ -106,6 +166,7 @@ export async function showInterstitial(nextStep) {
 
 	if (!authStore.hasAds || !Capacitor.isNativePlatform()) return nextStep();
 	if (Date.now() - lastInterstitialTime < INTERSTITIAL_COOLDOWN) return nextStep();
+	if (!canShowInterstitialToday()) return nextStep();
 	if (isAdProcessing) return;
 
 	if (!isInterstitialFresh()) {
@@ -127,6 +188,8 @@ export async function showInterstitial(nextStep) {
 			isAdProcessing = false;
 
 			isInterstitialLoaded = false;
+			// Следующая реклама грузится сразу — всегда одна наготове
+			preloadInterstitial();
 			nextStep();
 		}
 	};
@@ -137,6 +200,7 @@ export async function showInterstitial(nextStep) {
 
 		await AdMob.showInterstitial();
 		lastInterstitialTime = Date.now();
+		incrementTodayCount('adInterstitialStats');
 	} catch (e) {
 		goNext();
 	}
@@ -189,6 +253,7 @@ export async function showRewarded(onReward, onComplete, onLimitReached) {
 			cleanup(false);
 		});
 
+		if (initPromise) await initPromise;
 		await AdMob.prepareRewardVideoAd({ adId: REWARDED_ID });
 		await AdMob.showRewardVideoAd();
 	} catch (e) {

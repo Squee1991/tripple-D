@@ -72,6 +72,7 @@ const route = useRoute()
 const user = useCurrentUser()
 const daily = dailyStore()
 const colorMode = useColorMode();
+const { $track } = useNuxtApp()
 const showHedgehogModal = ref(false)
 
 
@@ -109,7 +110,7 @@ onMounted(async () => {
     } catch (e) {
       console.error(e);
     }
-    initAdmob();
+    initAdmob($track);
     App.addListener('backButton', ({ canGoBack }) => {
       const state = window.history.state || {}
       const isModalOpen = !!(state.isMapPanelOpen || state.isSubCategory || state.isSubScreen)

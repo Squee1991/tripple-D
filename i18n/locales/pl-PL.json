@@ -664,7 +664,7 @@
     "questTwelve": "Wpisz formę (neu): Er hat mit einem ___ Kollegen gearbeitet.",
     "questTwelveTip": "Tutaj Dativ (rodzaj męski). Przyimek 'mit' wymaga celownika. Rodzajnik 'einem' ma już końcówkę przypadka, więc przymiotnik bierze od rodzajnika końcówkę -en.",
     "questThirteen": "Posłuchaj i napisz, co usłyszałeś",
-    "questThirteenTip": "Projekt to rodzaj nijaki (das). Rodzajnik 'ein' nie ma końcówки, więc przymiotnik bierze od rodzajnika 'das' końcówkę -es.",
+    "questThirteenTip": "Projekt to rodzaj nijaki (das). Rodzajnik 'ein' nie ma końcówki, więc przymiotnik bierze od rodzajnika 'das' końcówkę -es.",
     "questFourteen": "Wpisz formę (modern): Ich habe eine ___ Küche.",
     "questFourteenTip": "Czasownik 'haben' wymaga Akkusativ. Kuchnia to rodzaj żeński. Po rodzajniku 'eine' przymiotnik zawsze bierze od rodzajnika końcówkę -e.",
     "questFifteen": "Wpisz formę (stark): Ein ___ Wind wird morgen sein.",
@@ -5017,7 +5017,7 @@
     "cancel": "Anuluj",
     "delete": "Usuń",
     "deleteResultTitle": "Usunąć wynik?",
-    "textModal": "Czy na pewno chcesz usunąć ten egzamin? Tej operacji не można cofnąć.",
+    "textModal": "Czy na pewno chcesz usunąć ten egzamin? Tej operacji nie można cofnąć.",
     "sent": "Test wysłany",
     "sended": "Już wysłałeś ten test",
     "error": "Nie udało się udostępnić egzaminu"
@@ -5586,7 +5586,7 @@
   },
   "wildLandsFourteenQuest": {
     "title": "Polana",
-    "description": "Las się rozступаie. Przed tobą zielona łąka, zalana słońcem. Latają tu motyle i kwitną kwiaty.",
+    "description": "Las się rozstępuje. Przed tobą zielona łąka, zalana słońcem. Latają tu motyle i kwitną kwiaty.",
     "questOne": "Jak powiedzieć: Łąka/Polana",
     "questTwo": "Posłuchaj i napisz zdanie",
     "questThree": "Ułóż zdanie: Kwiat rośnie na łące",
@@ -5636,7 +5636,7 @@
     "questNine": "Jak powiedzieć: Szukam pracy",
     "questTen": "Wypełnij lukę (suchen): Ich ___ Arbeit.",
     "questEleven": "Ułóż zdanie: Nie mam czasu",
-    "questTwelve": "Как сказать: Dzisiaj",
+    "questTwelve": "Jak powiedzieć: Dzisiaj",
     "questThirteen": "Ułóż zdanie: Nie mogę dzisiaj pracować.",
     "questFourteen": "Posłuchaj i napisz zdanie",
     "questFifteen": "Posłuchaj i napisz zdanie"
@@ -5791,7 +5791,7 @@
     "questTwelve": "Ułóż zdanie: Potrzebuję urlopu",
     "questThirteen": "Ułóż zdanie: Czy dostanę dzisiaj pieniądze?",
     "questFourteen": "Posłuchaj i napisz zdanie",
-    "questFifteen": "Posльuchaj i napisz zdanie"
+    "questFifteen": "Posłuchaj i napisz zdanie"
   },
   "masterLandsTenQuests": {
     "title": "Narzędzia i obiekt",
@@ -7717,9 +7717,9 @@
     "questSeven": "Ułóż frazę",
     "questEight": "Posłuchaj i zapisz",
     "questNine": "Ułóż frazę",
-    "questTen": "Posłuchaj i запisz",
+    "questTen": "Posłuchaj i zapisz",
     "questEleven": "Ułóż frazę",
-    "questTwelve": "Posłuchaj i запisz",
+    "questTwelve": "Posłuchaj i zapisz",
     "questThirteen": "Ułóż frazę",
     "questFourteen": "Ułóż frazę",
     "questFifteen": "Ułóż frazę"
@@ -7916,7 +7916,7 @@
     "questFourteen": "Posłuchaj i zapisz",
     "questFifteen": "Co znaczy: rechts und dann geradeaus",
     "questFifteenFirstOption": "w prawo, a potem prosto",
-    "questFifteenSecondOption": "w lewo, a potem назад",
+    "questFifteenSecondOption": "w lewo, a potem do tyłu",
     "questFifteenThirdOption": "naprzeciwko, a potem w prawo"
   },
   "questsWindValleyEighthQuests": {
@@ -8043,7 +8043,7 @@
     "questSeven": "Co znaczy: geradeaus und dann links",
     "questSevenFirstOption": "prosto, a potem w lewo",
     "questSevenSecondOption": "w lewo, a potem w prawo",
-    "questSevenThirdOption": "w prawo, a potem назад",
+    "questSevenThirdOption": "w prawo, a potem do tyłu",
     "questEight": "Ułóż frazę",
     "questNine": "Posłuchaj i zapisz",
     "questTen": "Co znaczy: Ist das die Straße zum Museum?",
@@ -8248,6 +8248,7 @@
     "cancelBtn": "Anuluj subskrypcję",
     "access": "Dostęp do:",
     "deleteAcc": "Usuń konto",
+    "privacyOptions": "Ustawienia prywatności",
     "newAvatarTitle": "Wybierz nowy awatar",
     "avatarCancel": "Anuluj",
     "avatarSave": "Zapisz",
@@ -10003,10 +10004,10 @@
   "bannerTitles": {
     "play": "Ucz się niemieckiego z przyjemnością! Wybierz wygodny tryb i podszkol język, grając",
     "events": "Bierz udział w wydarzeniach sezonowych i zdobywaj unikalne nagrody za wykonywanie zadań",
-    "article": "Ucz się słówek i rodzajników tematycznie в różnych formatach treningowych",
+    "article": "Ucz się słówek i rodzajników tematycznie w różnych formatach treningowych",
     "awards": "Nagrody za zdobyte osiągnięcia i wykonane zadania",
     "thematic": "Podszkol swój niemiecki, przechodząc przez ciekawe poziomy tematyczne",
-    "audio": "Popraw swoje rozumienie ze słuchu в języku niemieckim, wykonując zadania audio",
+    "audio": "Popraw swoje rozumienie ze słuchu w języku niemieckim, wykonując zadania audio",
     "images": "Podszkol umiejętność opisywania obrazków! Wybierz temat, aby zacząć",
     "settings": "Ustawienia konta",
     "achievements": "Twoja kolekcja wszystkich zdobytych osiągnięć i nagród za Twoje postępy",
@@ -10621,7 +10622,7 @@
     "cta": "Does a light bulb look like a pear to you?"
   },
   "newsArticleEleven": {
-    "first": "Jak nazwać to ciężkie duchowe cierpienie, gdy Twoja miłość okaże się nieodwzajemniona? Niemcy połączyli te uczucia в jedno pojemne pojęcie.",
+    "first": "Jak nazwać to ciężkie duchowe cierpienie, gdy Twoja miłość okaże się nieodwzajemniona? Niemcy połączyli te uczucia w jedno pojemne pojęcie.",
     "second": "Dosłownie tłumaczy się to jako 'smutek miłości'. To bardzo dokładny opis tęsknoty i żalu, które dosłownie złamią serce.",
     "third": "Słowo to zlepiło się z die Liebe (miłość) i der Kummer (smutek/żal). To złamane serce posłusznie przyjmuje swój rodzaj męski od rodzajnika ostatniego słowa — der Kummer.",
     "cta": "Znajome uczucie?"

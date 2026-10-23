@@ -184,7 +184,7 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
             [`currentRoundData.answers.${myUserId}`]: answerText
         };
 
-        if (answerText.replace(/[.,!?;]/g, '').trim() !== correctSentence) {
+        if (answerText.toLowerCase().replace(/[.,!?;]/g, '').trim() !== correctSentence?.toLowerCase()) {
             updates[`players.${myUserId}.hasMadeError`] = true;
         }
 
@@ -224,7 +224,7 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
         for (const levelKey in sentencesStore.db.levels) {
             const sentence = sentencesStore.db.levels[levelKey].sentences.find(s => s.id === id);
             if (sentence) {
-                return sentence.original.toLowerCase().replace(/[.,!?;]/g, '');
+                return sentence.original.replace(/[.,!?;]/g, '');
             }
         }
         return null;
@@ -376,7 +376,7 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
                 let winnerId = null;
                 for (const playerId in currentAnswers) {
                     const ans = (currentAnswers[playerId] || '').toLowerCase().replace(/[.,!?;]/g, '').trim();
-                    if (ans === correctAnswer) {
+                    if (ans === correctAnswer?.toLowerCase()) {
                         winnerId = playerId;
                         break;
                     }

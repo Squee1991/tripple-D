@@ -245,7 +245,7 @@
       },
       "conjugation_perf": {
         "ich": "habe umgedreht", "du": "hast umgedreht", "er_sie_es": "hat umgedreht",
-        "wir": "haben umgedреht", "ihr": "habt umgedreht", "sie_Sie": "haben umgedreht"
+        "wir": "haben umgedreht", "ihr": "habt umgedreht", "sie_Sie": "haben umgedreht"
       }
     },
     {
@@ -1004,8 +1004,8 @@
         "ar": "يحرك"
       },
       "conjugation_pres": { "ich": "bewege", "du": "bewegst", "er_sie_es": "bewegt", "wir": "bewegen", "ihr": "bewegt", "sie_Sie": "bewegen" },
-      "conjugation_past": { "ich": "bewegте", "du": "bewegtest", "er_sie_es": "bewegte", "wir": "bewegten", "ihr": "bewegtet", "sie_Sie": "bewegten" },
-      "conjugation_perf": { "ich": "habe bewegт", "du": "hast bewegt", "er_sie_es": "hat bewegt", "wir": "haben bewegt", "ihr": "habt bewegt", "sie_Sie": "haben bewegt" }
+      "conjugation_past": { "ich": "bewegte", "du": "bewegtest", "er_sie_es": "bewegte", "wir": "bewegten", "ihr": "bewegtet", "sie_Sie": "bewegten" },
+      "conjugation_perf": { "ich": "habe bewegt", "du": "hast bewegt", "er_sie_es": "hat bewegt", "wir": "haben bewegt", "ihr": "habt bewegt", "sie_Sie": "haben bewegt" }
     },
     {
       "id": 18,
@@ -1226,7 +1226,7 @@
       },
       "conjugation_pres": { "ich": "drücke", "du": "drückst", "er_sie_es": "drückt", "wir": "drücken", "ihr": "drückt", "sie_Sie": "drücken" },
       "conjugation_past": { "ich": "drückte", "du": "drücktest", "er_sie_es": "drückte", "wir": "drückten", "ihr": "drücktet", "sie_Sie": "drückten" },
-      "conjugation_perf": { "ich": "habe gedrückt", "du": "hast gedrückt", "er_sie_es": "hat gedrückt", "wir": "haben gedруückt", "ihr": "habt gedrückt", "sie_Sie": "haben gedrückt" }
+      "conjugation_perf": { "ich": "habe gedrückt", "du": "hast gedrückt", "er_sie_es": "hat gedrückt", "wir": "haben gedrückt", "ihr": "habt gedrückt", "sie_Sie": "haben gedrückt" }
     },
     {
       "id": 28,
@@ -1357,7 +1357,7 @@
         "ar": "يعيش (تجربة)"
       },
       "conjugation_pres": { "ich": "erlebe", "du": "erlebst", "er_sie_es": "erlebt", "wir": "erleben", "ihr": "erlebt", "sie_Sie": "erleben" },
-      "conjugation_past": { "ich": "erlebte", "du": "erlebtest", "er_sie_es": "erlebtе", "wir": "erlebten", "ihr": "erlebtet", "sie_Sie": "erlebten" },
+      "conjugation_past": { "ich": "erlebte", "du": "erlebtest", "er_sie_es": "erlebte", "wir": "erlebten", "ihr": "erlebtet", "sie_Sie": "erlebten" },
       "conjugation_perf": { "ich": "habe erlebt", "du": "hast erlebt", "er_sie_es": "hat erlebt", "wir": "haben erlebt", "ihr": "habt erlebt", "sie_Sie": "haben erlebt" }
     },
     {
@@ -1601,7 +1601,7 @@
       },
       "conjugation_pres": { "ich": "glaube", "du": "glaubst", "er_sie_es": "glaubt", "wir": "glauben", "ihr": "glaubt", "sie_Sie": "glauben" },
       "conjugation_past": { "ich": "glaubte", "du": "glaubtest", "er_sie_es": "glaubte", "wir": "glaubten", "ihr": "glaubtet", "sie_Sie": "glaubten" },
-      "conjugation_perf": { "ich": "habe geglaubt", "du": "hast geglaubt", "er_sie_es": "hat geglaubt", "wir": "haben geglaubt", "ihr": "habt geglaubt", "sie_Sie": "haben geglaubт" }
+      "conjugation_perf": { "ich": "habe geglaubt", "du": "hast geglaubt", "er_sie_es": "hat geglaubt", "wir": "haben geglaubt", "ihr": "habt geglaubt", "sie_Sie": "haben geglaubt" }
     },
     {
       "id": 45,
@@ -1952,7 +1952,7 @@
         "ar": "يضحك"
       },
       "conjugation_pres": { "ich": "lache", "du": "lachst", "er_sie_es": "lacht", "wir": "lachen", "ihr": "lacht", "sie_Sie": "lachen" },
-      "conjugation_past": { "ich": "lachte", "du": "lachtest", "er_sie_es": "lachte", "wir": "lachtет", "ihr": "lachtet", "sie_Sie": "lachten" },
+      "conjugation_past": { "ich": "lachte", "du": "lachtest", "er_sie_es": "lachte", "wir": "lachten", "ihr": "lachtet", "sie_Sie": "lachten" },
       "conjugation_perf": { "ich": "habe gelacht", "du": "hast gelacht", "er_sie_es": "hat gelacht", "wir": "haben gelacht", "ihr": "habt gelacht", "sie_Sie": "haben gelacht" }
     },
     {
@@ -3143,7 +3143,7 @@
       "hilfsverb": "haben",
       "translations": {
         "en": "to keep / retain",
-        "pl": "zatrzymaть",
+        "pl": "zatrzymać",
         "hi": "रखना (rakhna)",
         "tr": "tutmak / saklamak",
         "ro": "a păstra",
@@ -3840,7 +3840,7 @@
       },
       "conjugation_pres": { "ich": "friere", "du": "frierst", "er_sie_es": "friert", "wir": "frieren", "ihr": "friert", "sie_Sie": "frieren" },
       "conjugation_past": { "ich": "fror", "du": "frorst", "er_sie_es": "fror", "wir": "froren", "ihr": "frort", "sie_Sie": "froren" },
-      "conjugation_perf": { "ich": "habe gefroren", "du": "hast gefroren", "er_sie_es": "hat gefroren", "wir": "haben gefроren", "ihr": "habt gefroren", "sie_Sie": "haben gefroren" }
+      "conjugation_perf": { "ich": "habe gefroren", "du": "hast gefroren", "er_sie_es": "hat gefroren", "wir": "haben gefroren", "ihr": "habt gefroren", "sie_Sie": "haben gefroren" }
     },
     {
       "id": 125,
