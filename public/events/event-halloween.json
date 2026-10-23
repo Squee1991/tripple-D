@@ -1585,7 +1585,7 @@
         {
           "type": "matching",
           "id": "match-1",
-          "instruction": "Соедини предмет с его кратким описанием",
+          "instruction": "hallowenQuestEightteen.title",
           "pairsLeft": [
             {
               "id": "l1",
@@ -1615,27 +1615,27 @@
           "pairsRight": [
             {
               "id": "r1",
-              "text": "Паутина по углам"
+              "text": "hallowenQuestEightteen.textOne"
             },
             {
               "id": "r2",
-              "text": "Плащ с красным воротником"
+              "text": "hallowenQuestEightteen.textTwo"
             },
             {
               "id": "r3",
-              "text": "Фонарь с лицом"
+              "text": "hallowenQuestEightteen.textThree"
             },
             {
               "id": "r4",
-              "text": "Камень на кладбище"
+              "text": "hallowenQuestEightteen.textFour"
             },
             {
               "id": "r5",
-              "text": "Летает в темноте"
+              "text": "hallowenQuestEightteen.textFive"
             },
             {
               "id": "r6",
-              "text": "Ведьма летает на этом"
+              "text": "hallowenQuestEightteen.textSix"
             }
           ],
           "correctPairs": [
@@ -1650,7 +1650,7 @@
         {
           "type": "matching",
           "id": "match-2",
-          "instruction": "Соедини персонажа с его характерным признаком",
+          "instruction": "hallowenQuestEightteen.titleTwo",
           "pairsLeft": [
             {
               "id": "l1",
@@ -2121,7 +2121,7 @@
         {
           "type": "matching",
           "id": "match-words-3",
-          "instruction": "Соедини слово с его переводом",
+          "instruction": "hallowenQuestTwenty.title",
           "pairsLeft": [
             {
               "id": "l1",

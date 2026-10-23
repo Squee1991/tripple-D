@@ -221,9 +221,9 @@
         { "type": "blank", "id": 4, "correct": "Wann" },
         { "type": "text", "content": " bist du hier? — Vielleicht " },
         { "type": "blank", "id": 5, "correct": "um" },
-        { "type": "text", "content": " шесть " },
+        { "type": "text", "content": " sechs " },
         { "type": "blank", "id": 6, "correct": "Uhr" },
-        { "type": "text", "content": "? — Perfekt, ich warte на тебя (auf dich)!" }
+        { "type": "text", "content": "? — Perfekt, ich warte auf dich!" }
       ]
     }
   ]
