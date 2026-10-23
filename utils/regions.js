@@ -159,7 +159,7 @@ export const regions = {
 				pathTo: "definite-indefinite",
 				theme: "def-indef",
 				name: "locationNames.definite-indefinite",
-				level: 0,
+				level: 15,
 				desc: "regions.descriptionDefinite",
 				icon: MixedLands
 			},
