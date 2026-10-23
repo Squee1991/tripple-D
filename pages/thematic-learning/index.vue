@@ -5,7 +5,7 @@
       <h1 class="page-title">{{ t('sub.themen') }}</h1>
     </div>
     <VTransition>
-      <div v-if="isMounted">
+      <div v-if="isMounted" class="theme-content">
         <div class="banner">
           <VBanner
               :text="t('bannerTitles.thematic')"
@@ -243,6 +243,11 @@ watch(topic, loadThemeData)
   background-color: var(--bg);
 }
 
+.theme-content {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
 
 .banner {
   padding: 0 15px;
@@ -252,6 +257,10 @@ watch(topic, loadThemeData)
   display: flex;
   align-items: center;
   padding: 5px 10px 15px 10px;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  box-sizing: border-box;
   flex-shrink: 0;
   z-index: 10;
   background: var(--bg);

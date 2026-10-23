@@ -3466,7 +3466,7 @@
     "questTwelve": "Assemble : C'est important qu'il y ait un plan.",
     "questTwelveTip": "Plan est masculin (einen Plan). Après 'dass', verbe à la fin.",
     "questThirteen": "Choisis : Je me dépêche car il y a une deadline.",
-    "questThirteenTip": "Sich beeilen — Akkusativ. 'Termin' signifie souvent deadline или RDV.",
+    "questThirteenTip": "Sich beeilen — Akkusativ. 'Termin' signifie souvent deadline ou RDV.",
     "questFourteen": "Assemble : Je prendrai ce job si il y a un contrat.",
     "questFourteenTip": "Sich nehmen (prendre pour soi) — Datif. Verbe à la fin cause 'wenn'.",
     "questFifteen": "Écoute et écris la phrase",
@@ -5992,7 +5992,7 @@
   },
   "eastPlainSeventhQuests": {
     "title": "Heure et prix",
-    "description": "Votre journée est bien remplie : vous entendez l'heure de départ du train et le prix au marché. Vous consolidez vos compétences sur les nombres, l'heure et les dates dans un contexte d'achat и d'horaires.",
+    "description": "Votre journée est bien remplie : vous entendez l'heure de départ du train et le prix au marché. Vous consolidez vos compétences sur les nombres, l'heure et les dates dans un contexte d'achat et d'horaires.",
     "goal": "Ici, nous continuons à parler des prix et des nombres.",
     "questOne": "Choisissez la bonne réponse : Combien ça coûte ?",
     "questTwo": "Inscrivez le nombre : dreiundzwanzig = ___",
@@ -6168,7 +6168,7 @@
   },
   "questLakeRuinsSecondQuests": {
     "title": "Saisons et température",
-    "description": "Au bord du lac, vous discutez du changement de saisons (été, hiver) et de la température en degrés. Vous apprenez à dire quand il fait chaud и quand il fait froid.",
+    "description": "Au bord du lac, vous discutez du changement de saisons (été, hiver) et de la température en degrés. Vous apprenez à dire quand il fait chaud et quand il fait froid.",
     "goal": "Apprendre à discuter des saisons et de la météo",
     "questOne": "Que signifie : der Frühling",
     "questOneFirstOption": "Le printemps",
@@ -6377,7 +6377,7 @@
   },
   "questLakeRuinsSeventhQuests": {
     "title": "Prévisions et changements météo",
-    "description": "Vous discutez de l'évolution de la météo : temps dégagé, variable, température qui monte ou baisse le jour или la nuit. Vous apprenez à comprendre les plages de températures.",
+    "description": "Vous discutez de l'évolution de la météo : temps dégagé, variable, température qui monte ou baisse le jour ou la nuit. Vous apprenez à comprendre les plages de températures.",
     "goal": "Comprendre et parler des prévisions",
     "questOne": "Que signifie : die Vorhersage",
     "questOneFirstOption": "Les prévisions",
@@ -6405,7 +6405,7 @@
     "questTen": "Que signifie : bis zu 25 Grad",
     "questTenFirstOption": "Jusqu'à 25 degrés",
     "questTenSecondOption": "Exactement 25 degrés",
-    "questTenThirdOption": "Minimum 25 градусов",
+    "questTenThirdOption": "Minimum 25 degrés",
     "questEleven": "Écoutez et écrivez",
     "questTwelve": "Assemblez la phrase",
     "questThirteen": "Quelle est la température à Berlin ?",
@@ -6676,7 +6676,7 @@
     "questTwelve": "Écoutez et écrivez",
     "questThirteen": "Jusqu'à quelle heure est le départ ?",
     "questThirteenFirstOption": "jusqu'à 11h",
-    "questThirteenSecondOption": "jusкu'à 10h",
+    "questThirteenSecondOption": "jusqu'à 10h",
     "questThirteenThirdOption": "jusqu'à 12h",
     "questFourteen": "Assemblez une demande polie",
     "questFifteen": "Écoutez et écrivez"
@@ -7305,7 +7305,7 @@
   },
   "questsStormCoastsFirstQuests": {
     "title": "Fêtes — invitation et horaires",
-    "description": "Vous êtes invité à une fête locale. Vous apprenez à comprendre une invitation, à identifier l'adresse и la date.",
+    "description": "Vous êtes invité à une fête locale. Vous apprenez à comprendre une invitation, à identifier l'adresse et la date.",
     "goal": "Comprendre et utiliser les phrases de base sur l'invitation et la date/heure",
     "questOneFirstOption": "L'invitation",
     "questOneSecondOption": "Le cadeau",
@@ -7337,7 +7337,7 @@
   },
   "questsStormCoastsSecondQuests": {
     "title": "Fêtes — félicitations et cadeaux",
-    "description": "Vous vous préparez pour une fête : vous choisissez un cadeau, des fleurs и une carte de vœux. Vous apprenez à féliciter et à exprimer vos souhaits.",
+    "description": "Vous vous préparez pour une fête : vous choisissez un cadeau, des fleurs et une carte de vœux. Vous apprenez à féliciter et à exprimer vos souhaits.",
     "goal": "Féliciter, cadeau, offrir, fleurs, carte de vœux, emballer ; formules de vœux",
     "questOne": "",
     "questOneFirstOption": "féliciter",
@@ -7531,7 +7531,7 @@
   },
   "questsStormCoastsSevenQuests": {
     "title": "Fêtes — nourriture et boissons",
-    "description": "Vous aidez à organiser la table : discussion de la nourriture et des boissons (jus, limonade), demande d'options végétariennes, sans sucre/alcool и répartition de qui apporte quoi.",
+    "description": "Vous aidez à organiser la table : discussion de la nourriture et des boissons (jus, limonade), demande d'options végétariennes, sans sucre/alcool et répartition de qui apporte quoi.",
     "goal": "Boissons, snacks, jus, eau, limonade, sans/avec, végétarien, deux bouteilles, un gâteau, apporter/répartir",
     "questOneFirstOption": "Boissons",
     "questOneSecondOption": "Décorations",
@@ -7568,7 +7568,7 @@
   },
   "questsStormCoastsEighthQuests": {
     "title": "Fêtes — dress code et programme",
-    "description": "Renseignez-vous sur le dress code (chic/décontracté), le programme de la fête (danse, jeux, toasts), et apprenez à demander de baisser или monter le volume de la musique.",
+    "description": "Renseignez-vous sur le dress code (chic/décontracté), le programme de la fête (danse, jeux, toasts), et apprenez à demander de baisser ou monter le volume de la musique.",
     "goal": "Dress code, chic/décontracté, costume, danser, jouer, prendre des photos, programme, commence/finit à..., musique plus basse/forte",
     "questOne": "",
     "questOneFirstOption": "Dress code",
@@ -7706,7 +7706,7 @@
   },
   "questsWindValleySecondQuests": {
     "title": "Transports",
-    "description": "Apprenez les principaux modes de transport urbain : métro, bus, gare и le mot ticket.",
+    "description": "Apprenez les principaux modes de transport urbain : métro, bus, gare et le mot ticket.",
     "goal": "Nommer les transports et construire des phrases simples avec Das ist",
     "questOne": "Que signifie : die U-Bahn",
     "questOneFirstOption": "Le métro",
@@ -7738,8 +7738,8 @@
   },
   "questsWindValleyThirdQuests": {
     "title": "Magasins en ville",
-    "description": "Découvrez où acheter de la nourriture и obtenir des services : boulangerie, pharmacie, banque, supermarché.",
-    "goal": "Nommer les magasins et les lieux de service, и construire des phrases simples avec Das ist",
+    "description": "Découvrez où acheter de la nourriture et obtenir des services : boulangerie, pharmacie, banque, supermarché.",
+    "goal": "Nommer les magasins et les lieux de service, et construire des phrases simples avec Das ist",
     "questOne": "Que signifie : die Bäckerei",
     "questOneFirstOption": "La boulangerie",
     "questOneSecondOption": "La pharmacie",
@@ -7802,7 +7802,7 @@
   },
   "questsWindValleyFifthQuests": {
     "title": "Café et loisirs",
-    "description": "Découvrez les lieux de détente и de loisirs : restaurant, café, hôtel, musée.",
+    "description": "Découvrez les lieux de détente et de loisirs : restaurant, café, hôtel, musée.",
     "goal": "Nommer les lieux de loisirs en ville et construire des phrases simples avec Das ist",
     "questOne": "Que signifie : das Restaurant",
     "questOneFirstOption": "Le restaurant",
@@ -8500,7 +8500,7 @@
     "practiceSecondTitle": "Pratique (formes avec Umlaut)",
     "practiceSecondDescription": "Choisissez la forme correcte pour les adjectifs qui changent de voyelle radicale.",
     "practiceSecondButtonText": "Commencer",
-    "thirdThemeTipOne": "1. Ces formes sont des exceptions, elles ne peuvent pas être déduites d'une règle и doivent être apprises par cœur.",
+    "thirdThemeTipOne": "1. Ces formes sont des exceptions, elles ne peuvent pas être déduites d'une règle et doivent être apprises par cœur.",
     "thirdThemeTipTwo": "2. gut, viel et gern sont les exceptions les plus importantes et les plus utilisées.",
     "thirdThemeTipThree": "3. Notez comment hoch et teuer perdent une voyelle au milieu pour faciliter la prononciation.",
     "themeThreeTitleFirstExample": "Formes totalement irrégulières",
@@ -8627,7 +8627,7 @@
     "thirdPart": "Par exemple :",
     "secondTip": "Ces verbes sont essentiels pour communiquer librement au niveau B1.",
     "ruleTitle": "Règle abrégée",
-    "ruleContent": "En allemand, certains verbes exigent une préposition и un cas précis. Cet ensemble « verbe + préposition + cas » doit être appris comme un tout.",
+    "ruleContent": "En allemand, certains verbes exigent une préposition et un cas précis. Cet ensemble « verbe + préposition + cas » doit être appris comme un tout.",
     "firstTypeTitle": "Verbes exigeant l'Accusatif (Akk)",
     "firstExampleTranslate": "Je t'attends. (warten auf + Akk)",
     "secondExampleTranslate": "Il pense à son travail. (denken an + Akk)",
@@ -8641,7 +8641,7 @@
   "verbTypeCategorySecond": {
     "firstPart": "Particules séparables courantes :",
     "secondPart": "Lors de la formation du Parfait (Perfekt), la particule",
-    "thirdPart": " s'insère entre le préfixe и la racine. Par exemple : ",
+    "thirdPart": " s'insère entre le préfixe et la racine. Par exemple : ",
     "ruleTitle": "Règle abrégée",
     "ruleContent": "Pour ces verbes, le préfixe se détache au présent (Präsens) et se place à la toute fin de la phrase. La partie principale du verbe se conjugue en deuxième position.",
     "firstTypeTitle": "Formes",
@@ -8657,7 +8657,7 @@
   "verbTypeCategoryThird": {
     "firstPartTip": "Changement",
     "ruleTitle": "Règle abrégée",
-    "ruleContent": "Les verbes forts changent de voyelle radicale à la 2e и 3e personne du singulier (du, er/sie/es) au présent. Leurs formes au passé doivent être apprises par cœur.",
+    "ruleContent": "Les verbes forts changent de voyelle radicale à la 2e et 3e personne du singulier (du, er/sie/es) au présent. Leurs formes au passé doivent être apprises par cœur.",
     "firstTypeTitle": "Formes",
     "firstExampleTitle": "Exemples",
     "firstExampleTranslate": "Tu parles très bien allemand.",
@@ -8670,7 +8670,7 @@
     "first": "À l'Accusatif (Akkusativ), les formes sont les suivantes :",
     "second": "Certains verbes sont toujours pronominaux (sich freuen), d'autres peuvent l'être ou non (waschen / sich waschen).",
     "ruleTitle": "Règle abrégée",
-    "ruleContent": "Ces verbes s'utilisent avec le pronom réfléchi « sich », qui change selon la personne и le nombre. Il indique que l'action revient sur le sujet lui-même.",
+    "ruleContent": "Ces verbes s'utilisent avec le pronom réfléchi « sich », qui change selon la personne et le nombre. Il indique que l'action revient sur le sujet lui-même.",
     "form": "Formes",
     "firstExampleTitle": "Exemples",
     "firstExampleTranslate": "Je m'intéresse à la musique.",
@@ -8959,7 +8959,7 @@
     "SecondTitle": "Voyages",
     "SecondDescription": "Apprenez à parler de voyages, du vélo à l'avion.",
     "ThirdTitle": "Travail",
-    "ThirdDescription": "Bientôt ! Des quêtes sur le bureau, les collègues и les lettres professionnelles."
+    "ThirdDescription": "Bientôt ! Des quêtes sur le bureau, les collègues et les lettres professionnelles."
   },
   "generalCategory": {
     "generaLabel": "Succès généraux",
@@ -9012,8 +9012,8 @@
     "mistakesText": "Chacune d'elles est un pas vers le savoir !",
     "mistakesAward": "Récompense : Talisman de patience",
     "voiceActivatedText": "Droit de parole",
-    "voiceActivatedLabel": "Lire et accepter l'avis important и activer le module Sprechen.",
-    "theLostDescription": "L'entrée du bunker est cachée à la vue de tous. Frappez 5 fois sur le logo du site pour initier le protocole и obtenez l'accès en répondant aux questions",
+    "voiceActivatedLabel": "Lire et accepter l'avis important et activer le module Sprechen.",
+    "theLostDescription": "L'entrée du bunker est cachée à la vue de tous. Frappez 5 fois sur le logo du site pour initier le protocole et obtenez l'accès en répondant aux questions",
     "firstAcademicCapLabel": "Première toque",
     "firstAcademicCapDescription": "Obtenez votre première toque en accomplissant les tâches quotidiennes."
   },
@@ -9144,7 +9144,7 @@
     "subtitle": "Testez votre maîtrise des mots et des articles",
     "greetings": "Salut",
     "streak": "Votre meilleure série à ce niveau :",
-    "notAuth": "Connectez-vous pour sauvegarder votre progression и participer au classement.",
+    "notAuth": "Connectez-vous pour sauvegarder votre progression et participer au classement.",
     "chooseDifficulty": "Choisissez la difficulté",
     "difficultEasy": "Facile",
     "difficultDescriptionEasy": "5 vies, pas de chrono",
@@ -9198,7 +9198,7 @@
   },
   "rulesFourthBlock": {
     "firstCardTitle": "Exceptions et particularités",
-    "firstCardSubTitle": "Les articles dépendent aussi de la terminaison или du sens du mot.",
+    "firstCardSubTitle": "Les articles dépendent aussi de la terminaison ou du sens du mot.",
     "exampleFemale": "Les noms se terminant par ",
     "exampleAnswer": "— sont toujours neutres",
     "exampleTime": "Les jours, les mois, les saisons — sont toujours masculins",
@@ -10435,7 +10435,7 @@
     "triggerToastIsPlus": "Vous avez déjà un abonnement PLUS actif !"
   },
   "examSession": {
-    "ready": "Prêt для le test ?",
+    "ready": "Prêt pour le test ?",
     "cardTextOne": "Vous aurez",
     "cardTextTwo": "étapes et",
     "cardTextThree": "exercices.",

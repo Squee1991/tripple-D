@@ -312,7 +312,10 @@ onUnmounted(() => {
 }
 
 .ranked-sidebar-corkboard {
-  max-width: 400px;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -451,10 +454,11 @@ onUnmounted(() => {
   flex: 2;
   border-radius: 30px;
   display: flex;
-  max-width: 100%;
+  width: calc(100% - 20px);
+  max-width: 1004px;
   height: 100vh;
   overflow-y: auto;
-  margin: 0 10px 10px 10px;
+  margin: 0 auto 10px auto;
 }
 
 .blackboard-frame, .blackboard {
@@ -618,13 +622,6 @@ onUnmounted(() => {
   font-size: 24px;
   color: #00c2ff;
   font-weight: bold;
-}
-
-@media (max-width: 1023px) {
-  .ranked-sidebar-corkboard {
-    width: 100%;
-    max-width: 100%;
-  }
 }
 
 @media (max-width: 767px) {

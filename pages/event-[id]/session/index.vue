@@ -550,7 +550,7 @@ const feedbackClass = computed(() => {
             </div>
           </section>
           <section v-else-if="currentStep?.type === 'matching'" class="section card">
-            <h3 class="section__title">{{ currentStep.instruction || t('eventSessionPage.connectPaar') }}</h3>
+            <h3 class="section__title">{{ currentStep.instruction ? t(currentStep.instruction) : t('eventSessionPage.connectPaar') }}</h3>
             <div class="match">
               <div class="match__cols">
                 <div class="match__col">
