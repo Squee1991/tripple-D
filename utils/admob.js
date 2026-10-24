@@ -1,6 +1,6 @@
 import { AdMob, InterstitialAdPluginEvents, RewardAdPluginEvents } from '@capacitor-community/admob';
 import { Capacitor } from '@capacitor/core';
-import { userAuthStore } from '../store/authStore.js';
+import { userAuthStore } from '~/store/authStore.js';
 
 let isAdProcessing = false;
 let isInterstitialLoaded = false;
