@@ -12979,7 +12979,7 @@
           "id": "A2_nature_16",
           "topic": "Dürre",
           "dialogue": [
-            { "role": "Frau", "gender": "FEMALE", "text": "Der Rasen ist schon ganz gelb и trocken." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Der Rasen ist schon ganz gelb und trocken." },
             { "role": "Mann", "gender": "MALE", "text": "Es hat seit Wochen nicht mehr richtig geregnet." },
             { "role": "Frau", "gender": "FEMALE", "text": "Die Landwirte haben große Angst um ihre Ernte." }
           ],
@@ -13526,7 +13526,7 @@
             "Herr Merz sagt , dass die Nudeln zu kalt sind",
             "Die Nudeln schmecken Herrn Merz gar nicht",
             "Herr Merz möchte sofort das Restaurant verlassen",
-            "Der Gast ist unzufrieden mit der Warтеzeit"
+            "Der Gast ist unzufrieden mit der Wartezeit"
           ],
           "correctIndices": [1, 4]
         },

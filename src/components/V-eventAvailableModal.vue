@@ -168,10 +168,6 @@ const eventModalState = useState('eventModalState', () => 'pending');
 let intervalId;
 onMounted(() => {
   intervalId = setInterval(() => { currentTime.value = new Date(); }, props.tickMs);
-  if (eventModalState.value === 'pending') {
-    const isShown = props.visible && isModalOpen.value && !!activeEvent.value && !!authStore.uid;
-    eventModalState.value = isShown ? 'shown' : 'none';
-  }
 });
 
 onUnmounted(() => {
@@ -196,6 +192,14 @@ watch(() => [props.visible, isModalOpen.value, activeEvent.value, authStore.uid]
       document.body.style.overflow = (isVisible && open && !!evt && !!uid) ? "hidden" : "";
     }, { immediate: true }
 );
+
+// Решаем только когда пользователь вошёл: до входа модалка скрыта, а после входа может появиться.
+// Стоит после watch(activeEvent), чтобы isModalOpen уже учитывал «уже видел»
+watch(() => authStore.uid, (uid) => {
+  if (!uid || eventModalState.value !== 'pending') return;
+  const isShown = props.visible && isModalOpen.value && !!activeEvent.value;
+  eventModalState.value = isShown ? 'shown' : 'none';
+}, { immediate: true });
 
 </script>
 

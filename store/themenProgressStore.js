@@ -96,7 +96,8 @@ export const useTrainerStore = defineStore('thematic', () => {
 		}
 		moduleProgress.value = loadedProgress
 
-		if (t.level && t.module) {
+		// Восстанавливаем модуль из Firebase только если он ещё не выбран (например, после перезагрузки)
+		if (t.level && t.module && !selectedModule.value) {
 			await setThemeAndModule(topic.value, t.level, t.module)
 		}
 	}

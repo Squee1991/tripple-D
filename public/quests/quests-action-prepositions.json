@@ -278,7 +278,7 @@
           "Er macht diese Arbeit für mir",
           "Er macht diese Arbeit ohne mich"
         ],
-        "answer": "Er macht diese Arbeit для mich"
+        "answer": "Er macht diese Arbeit für mich"
       },
       {
         "id": 15,
@@ -571,7 +571,7 @@
           "Dieser Brief ist für dir",
           "Dieser Brief ist ohne dich"
         ],
-        "answer": "Dieser Brief ist для тебя"
+        "answer": "Dieser Brief ist für dich"
       },
       {
         "id": 13,

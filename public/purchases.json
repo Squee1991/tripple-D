@@ -135,7 +135,7 @@
 					"tasks": [
 						{ "question": "Sie geht in ___ richtige Abteilung.", "word": "Abteilung", "answer": "die" },
 						{ "question": "Ich spreche mit ___ Kunden.", "word": "Kunde", "answer": "dem" },
-						{ "question": "Er öffнет ___ Packung Chips.", "word": "Packung", "answer": "die" },
+						{ "question": "Er öffnet ___ Packung Chips.", "word": "Packung", "answer": "die" },
 						{ "question": "Wir vergleichen ___ Preis.", "word": "Preis", "answer": "den" },
 						{ "question": "Sie bekommt ___ Rabatt.", "word": "Rabatt", "answer": "einen" },
 						{ "question": "Wir suchen ___ Ausgang.", "word": "Ausgang", "answer": "den" },
