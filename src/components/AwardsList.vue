@@ -170,7 +170,7 @@ function closeAward() {
 .item-name {
   color: var(--titleColor);
   font-weight: bold;
-  font-size: 15px;
+  font-size: 13px;
   margin-bottom: 0.25rem;
 }
 

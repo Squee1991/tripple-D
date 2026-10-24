@@ -32,9 +32,6 @@
       </VTransition>
       <div v-if="isMounted" class="settings-section account-actions">
         <div class="account-buttons">
-          <button v-if="showPrivacyButton" class="btn btn-logout w-full btn-m" @click="showPrivacyOptions($track)">
-            {{ t('cabinet.privacyOptions') }}
-          </button>
           <button class="btn btn-logout w-full btn-m" @click="handleLogout">
             {{ t('auth.logOut') }}
           </button>
@@ -54,15 +51,11 @@ import { useI18n } from 'vue-i18n'
 import { userAuthStore } from '~/store/authStore.js'
 import VTransition from "~/src/components/V-transition.vue"
 import AccountManagement from "../src/components/AccountManagement.vue";
-import { isPrivacyOptionsRequired, showPrivacyOptions } from '~/utils/admob.js'
 
 const router = useRouter()
 const { locale, t } = useI18n()
 const authStore = userAuthStore()
 const isMounted = ref(false)
-const { $track } = useNuxtApp()
-// Кнопка нужна только тем, кому Google показывал окно согласия (ЕЭЗ/UK/Швейцария)
-const showPrivacyButton = ref(false)
 
 const registrationDateText = computed(() => {
   const registeredAt = authStore.registeredAt
@@ -92,11 +85,10 @@ const openDeleteModal = () => {
   router.push('/delete')
 }
 
-onMounted(async () => {
+onMounted(() => {
   setTimeout(() => {
     isMounted.value = true
   }, 100)
-  showPrivacyButton.value = await isPrivacyOptionsRequired()
 })
 </script>
 
