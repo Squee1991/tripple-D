@@ -227,7 +227,7 @@ import Article from '~/assets/images/article.svg'
 import Support from '~/assets/images/Support.svg'
 import Great from '~/assets/images/Greatcon.svg'
 
-import {showInterstitial} from '../utils/admob.js'
+import {showInterstitial, preloadInterstitial} from '../utils/admob.js'
 import {DAILY_WORD_COINS, buildDailyShareText, getTimeUntilNextWord} from '../utils/dailyWord.js'
 
 const {t} = useI18n()
@@ -300,6 +300,7 @@ const isDailyInProgress = computed(() => !isStarted.value && store.hasDailyInPro
 const isShareCopied = ref(false)
 
 onMounted(() => {
+  preloadInterstitial()
   clockIntervalId = setInterval(() => {
     clockNow.value = Date.now()
   }, 30000)

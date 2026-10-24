@@ -254,7 +254,7 @@ import {userAuthStore} from "~/store/authStore.js"
 import SoundBtn from '~/src/components/soundBtn.vue'
 import VHedgehogHelper from '~/src/components/V-hedgehog-helper.vue'
 import {playCorrect, playWrong, playLevelCompleted, unlockAudioByUserGesture} from '~/utils/soundManager.js'
-import {showInterstitial} from '~/utils/admob.js'
+import {showInterstitial, preloadInterstitial} from '~/utils/admob.js'
 import RightIcon from '~/assets/images/location-icons/accept.svg'
 import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 import {useSeoMeta} from '#imports'
@@ -728,6 +728,7 @@ onBeforeUnmount(() => {
 })
 
 onMounted(() => {
+  preloadInterstitial()
   updateTimer()
   updateRemainingAds()
 })

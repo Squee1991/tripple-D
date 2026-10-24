@@ -11,7 +11,6 @@
 </template>
 
 <script setup>
-import VHedgehogIntroModal from "~/src/components/V-HedgehogIntroModal.vue";
 import VRankOverlay from "./src/components/V-rank-overlay.vue";
 import { StatusBar, Style } from '@capacitor/status-bar';
 import AchievementToast from './src/components/AchievementToast.vue'
@@ -77,8 +76,12 @@ const showHedgehogModal = ref(false)
 
 
 
+// 'pending' | 'shown' | 'none' — выставляет V-eventAvailableModal на главной
+const eventModalState = useState('eventModalState', () => 'pending')
+
 const checkMarathonEvent = () => {
   const { isOpen, currentSeasonId } = gameStore.getSeasonState()
+  if (showMarathonEventModal.value) return
   if (isOpen && gameStore.lastSeenModalSeason !== currentSeasonId) {
     showMarathonEventModal.value = true
     gameStore.markModalAsSeen()
@@ -97,7 +100,6 @@ const onToastFinished = () => {
 
 onMounted(async () => {
   rankStore.restorePendingReward()
-  await initAdmob();
   // Продлеваем напоминания на неделю вперёд и обновляем язык их текстов
   scheduleReminders(t);
   achStore.initializeProgressTracking()
@@ -107,6 +109,7 @@ onMounted(async () => {
     } catch (e) {
       console.error(e);
     }
+    initAdmob();
     App.addListener('backButton', ({ canGoBack }) => {
       const state = window.history.state || {}
       const isModalOpen = !!(state.isMapPanelOpen || state.isSubCategory || state.isSubScreen)
@@ -186,13 +189,12 @@ watch(() => colorMode.value, async (newTheme) => {
 }, { immediate: true });
 
 
-onMounted(() => {
-  if (gameStore.isLoaded) checkMarathonEvent()
-})
-
-watch(() => gameStore.lastSeenModalSeason, () => {
-  checkMarathonEvent()
-})
+// Модалка марафона — на главной и только если в этом запуске не показывали модалку ивента,
+// иначе ждёт следующего запуска
+watch([() => authStore.uid, eventModalState], async ([uid, state]) => {
+  if (!uid || state !== 'none') return
+  if (await gameStore.loadModalSeen()) checkMarathonEvent()
+}, { immediate: true })
 
 </script>
 

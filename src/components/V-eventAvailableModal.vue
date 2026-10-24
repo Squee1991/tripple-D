@@ -161,9 +161,17 @@ function handleCloseClick() {
   emit("close", false);
 }
 
+// Один раз за запуск сообщаем app.vue, показали ли модалку ивента:
+// если да — модалка марафона ждёт следующего запуска
+const eventModalState = useState('eventModalState', () => 'pending');
+
 let intervalId;
 onMounted(() => {
   intervalId = setInterval(() => { currentTime.value = new Date(); }, props.tickMs);
+  if (eventModalState.value === 'pending') {
+    const isShown = props.visible && isModalOpen.value && !!activeEvent.value && !!authStore.uid;
+    eventModalState.value = isShown ? 'shown' : 'none';
+  }
 });
 
 onUnmounted(() => {

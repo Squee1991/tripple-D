@@ -76,6 +76,7 @@
 
 <script setup>
 import {ref, onMounted} from 'vue'
+import {preloadInterstitial} from '~/utils/admob.js'
 import {useSeoMeta, useState} from "#imports"
 import {useRouter} from 'vue-router'
 import Modal from '../../src/components/modal.vue'
@@ -113,6 +114,7 @@ const sessionConfig = useState('sessionConfig', () => ({
 }))
 
 onMounted(() => {
+  preloadInterstitial()
   isPageLoaded.value = true
 })
 

@@ -169,7 +169,7 @@ import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue"
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue"
-import {showInterstitial} from '~/utils/admob.js'
+import {showInterstitial, preloadInterstitial} from '~/utils/admob.js'
 import {useSwipeBack} from '~/composables/useSwipeBack.js'
 
 const route = useRoute()
@@ -223,6 +223,7 @@ const isAnswerCorrect = computed(() => {
 })
 
 onMounted(async () => {
+  preloadInterstitial()
   if (!regionKey || !questId) {
     errorMessage.value = ""
     isLoading.value = false

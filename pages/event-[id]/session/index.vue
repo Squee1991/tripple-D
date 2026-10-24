@@ -9,7 +9,7 @@ import {getSpeechAudio} from '~/utils/googleTTS.js'
 import EventSuccessModal from '~/src/components/V-EventSuccessModal.vue'
 import {useEventSessionLogic} from '~/composables/useEventSessionLogic.js'
 import {DotLottieVue} from '@lottiefiles/dotlottie-vue'
-import { showInterstitial } from '~/utils/admob.js'
+import {showInterstitial, preloadInterstitial} from '~/utils/admob.js'
 import RightIcon from '~/assets/images/location-icons/accept.svg'
 import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 
@@ -119,6 +119,7 @@ async function loadEventJson() {
 }
 
 onMounted(async () => {
+  preloadInterstitial()
   if (!eventStore.eventId || eventStore.eventId !== eventId.value) {
     const restorationSuccess = await eventStore.restoreIfPossible(eventId.value)
     if (!restorationSuccess) {
