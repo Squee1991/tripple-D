@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref, computed, toRaw } from 'vue'
 import { Capacitor } from '@capacitor/core'
-import { Purchases, LOG_LEVEL } from '@revenuecat/purchases-capacitor'
+import { Purchases } from '@revenuecat/purchases-capacitor'
 import { doc, updateDoc, getFirestore } from 'firebase/firestore'
 import { userAuthStore } from '../store/authStore.js'
 
@@ -10,26 +10,17 @@ export const useBillingStore = defineStore('billing', () => {
 	const db = getFirestore()
 	const offerings = ref([])
 	const activeDiscountId = ref(null)
-	const isInitialized = ref(false) // Добавляем флаг
+
 	const isMobile = computed(() => Capacitor.isNativePlatform())
 	const isPurchasing = ref(false)
 	const currentPlatform = Capacitor.getPlatform()
 	const paymentSource = currentPlatform === 'ios' ? 'apple' : 'google'
 
-
-	const reset = () => {
-		isInitialized.value = false
-		offerings.value = []
-		activeDiscountId.value = null
-	}
-
 	const initialize = async () => {
 		if (!isMobile.value) return
-		if (isInitialized.value) return
 		try {
 			if (!authStore.uid || authStore.uid === '') return
 			let apiKey = ''
-			await Purchases.setLogLevel({ level: LOG_LEVEL.DEBUG });
 			if (currentPlatform === 'ios') {
 				apiKey = 'appl_AJSNvgOPCFscmWguFDVeIucVoRS'
 			} else if (currentPlatform === 'android') {
@@ -44,7 +35,6 @@ export const useBillingStore = defineStore('billing', () => {
 			await loadOfferings()
 			const initialInfo = await Purchases.getCustomerInfo()
 			await handleSubscriptionStatus(initialInfo)
-			isInitialized.value = true
 		} catch (e) {
 			console.error('RC Init Error:', e)
 		}
@@ -52,37 +42,55 @@ export const useBillingStore = defineStore('billing', () => {
 
 	const handleSubscriptionStatus = async (info) => {
 		if (!authStore.uid) return
+
 		const premiumEntitlement = info?.entitlements?.active?.['premium']
-		if (premiumEntitlement) {
-			const expDate = premiumEntitlement.expirationDate
-			const isCancelled = !premiumEntitlement.willRenew
+		const basicEntitlement = info?.entitlements?.active?.['basic']
+
+		const activeEntitlement = premiumEntitlement || basicEntitlement
+
+		if (activeEntitlement) {
+			const expDate = activeEntitlement.expirationDate
+			const isCancelled = !activeEntitlement.willRenew
+			const hasAds = !premiumEntitlement && !!basicEntitlement
 
 			if (!authStore.isPremium ||
 				authStore.subscriptionEndsAt !== expDate ||
-				authStore.subscriptionCancelled !== isCancelled) {
+				authStore.subscriptionCancelled !== isCancelled ||
+				authStore.hasAds !== hasAds) {
+
 				authStore.isPremium = true
+				authStore.hasAds = hasAds
 				authStore.subscriptionEndsAt = expDate
 				authStore.subscriptionCancelled = isCancelled
+
 				await updateDoc(doc(db, 'users', authStore.uid), {
 					isPremium: true,
+					hasAds: hasAds,
 					paymentSource: paymentSource,
 					subscriptionEndsAt: expDate,
 					subscriptionCancelled: isCancelled
 				})
 				if (typeof window !== 'undefined') {
 					localStorage.setItem('cached_premium', 'true')
+					localStorage.setItem('cached_has_ads', hasAds ? 'true' : 'false')
 				}
 			}
-		} else if (info && info.entitlements) {
-			if (authStore.isPremium) {
-				authStore.isPremium = false
-				authStore.subscriptionCancelled = false
-				await updateDoc(doc(db, 'users', authStore.uid), {
-					isPremium: false,
-					subscriptionCancelled: false
-				})
-				if (typeof window !== 'undefined') {
-					localStorage.setItem('cached_premium', 'false')
+		} else {
+			const past = info?.entitlements?.all?.['premium'] || info?.entitlements?.all?.['basic']
+			if (past && past.isActive === false) {
+				if (authStore.isPremium) {
+					authStore.isPremium = false
+					authStore.hasAds = true
+					authStore.subscriptionCancelled = false
+					await updateDoc(doc(db, 'users', authStore.uid), {
+						isPremium: false,
+						hasAds: true,
+						subscriptionCancelled: false
+					})
+					if (typeof window !== 'undefined') {
+						localStorage.setItem('cached_premium', 'false')
+						localStorage.setItem('cached_has_ads', 'true')
+					}
 				}
 			}
 		}
@@ -115,16 +123,22 @@ export const useBillingStore = defineStore('billing', () => {
 		}
 	}
 
-	const loadOfferings = async (forcedDiscountId = null) => {
+	const loadOfferings = async (offeringIdentifier = null) => {
 		if (!isMobile.value) return
 		try {
 			const result = await Purchases.getOfferings()
+
 			let targetOffering = result.current
 			let currentDiscount = null
-			if (forcedDiscountId && result.all[forcedDiscountId]) {
-				targetOffering = result.all[forcedDiscountId]
-				currentDiscount = forcedDiscountId
+			if (offeringIdentifier) {
+				if (result.all[offeringIdentifier]) {
+					targetOffering = result.all[offeringIdentifier]
+					if (offeringIdentifier.startsWith('sale_')) {
+						currentDiscount = offeringIdentifier
+					}
+				}
 			}
+
 			if (targetOffering && targetOffering.availablePackages.length > 0) {
 				offerings.value = targetOffering.availablePackages
 				activeDiscountId.value = currentDiscount
@@ -151,7 +165,7 @@ export const useBillingStore = defineStore('billing', () => {
 					})
 				}
 			}
-			return !!customerInfo?.entitlements?.active?.['premium']
+			return !!customerInfo?.entitlements?.active?.['premium'] || !!customerInfo?.entitlements?.active?.['basic']
 		} catch (e) {
 			if (!e.userCancelled) {
 				console.error(`Ошибка RC: ${e.message}`)
@@ -169,7 +183,6 @@ export const useBillingStore = defineStore('billing', () => {
 		handleSubscriptionStatus,
 		loadOfferings,
 		buy,
-		restore,
-		reset
+		restore
 	}
 })

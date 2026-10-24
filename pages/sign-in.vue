@@ -2,6 +2,7 @@
   <div class="auth" :class="{ 'auth--rtl': locale === 'ar' }">
     <VLoginPreloader v-if="submitLoading"/>
     <div class="auth__inner">
+      <img class="start__bg" src="~/assets/images/startBg.png" alt="startBg">
       <div class="auth__form">
         <div v-if="submitLoading" class="loading-overlay">
           <div class="loader-box"></div>
@@ -93,10 +94,9 @@
 
 <script setup>
 import {ref, computed, watch, onMounted, onUnmounted} from 'vue'
-import {userAuthStore} from '../../store/authStore.js'
+import {userAuthStore} from '~/store/authStore.js'
 import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
-import {mapErrors} from '../utils/errorsHandler.js'
+import {mapErrors} from '~/utils/errorsHandler.js'
 import View from '../../assets/images/loginEyes/view.svg'
 import Hide from '../../assets/images/loginEyes/hide.svg'
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
@@ -244,7 +244,6 @@ onUnmounted(() => {
 </script>
 
 <style>
-/* Твои стили без изменений */
 
 .auth__title.left {
   justify-content: start;
@@ -297,7 +296,7 @@ onUnmounted(() => {
 }
 
 .auth__text-method {
-  color: white;
+  color: black;
   font-weight: 600;
   margin-left: 10px;
   letter-spacing: .6px;
@@ -320,8 +319,8 @@ onUnmounted(() => {
 .google__auth-wrapper,
 .apple__auth-wrapper,
 .facebook__auth-wrapper {
-  background: #424141;
-  box-shadow: 0 5px 0 #282727;
+  background: white;
+  box-shadow: 0 5px 0 #dcd8d8;
 }
 
 .google__icon,
@@ -334,7 +333,7 @@ onUnmounted(() => {
 .auth__label-text {
   font-size: 14px;
   font-family: "Nunito", sans-serif;
-  color: var(--titleColor);
+  color: dimgrey;
   display: block;
   font-weight: 700;
   margin-left: 9px;
@@ -403,12 +402,12 @@ onUnmounted(() => {
 .auth__tabs {
   width: 100%;
   display: flex;
-  background: var(--tabBg);
+  background: #15bec3;
   border-radius: 45px;
   position: relative;
   margin-bottom: 1.5rem;
   box-shadow: var(--boxShadowMobile);
-  border: 3px solid var(--tabsSlideBorderColor);
+  border: 3px solid #28dde3;
   overflow: hidden;
   padding: 4px;
 }
@@ -416,8 +415,9 @@ onUnmounted(() => {
 .privacy__block {
   position: absolute;
   bottom: 0;
-  color: var(--titleColor);
-  font-size: 11px;
+  color: #4a4949;
+  font-weight: 600;
+  font-size: 12px;
   text-align: center;
   margin-bottom: 10px;
   padding: 0 15px;
@@ -427,7 +427,7 @@ onUnmounted(() => {
 .auth__tab {
   flex: 1;
   text-align: center;
-  padding: 14px 5px;
+  padding: 12px 5px;
   cursor: pointer;
   color: var(--titleColor);
   font-family: "Nunito", sans-serif;
@@ -440,7 +440,7 @@ onUnmounted(() => {
 }
 
 .auth__tab--active {
-  color: #fff;
+  color: #4c4b4b;
 }
 
 .auth__toggle {
@@ -449,7 +449,7 @@ onUnmounted(() => {
   left: 4px;
   width: calc(50% - 4px);
   height: calc(100% - 8px);
-  background: var(--tabsSlideBg);
+  background: white;
   box-shadow: var(--tabSlideBoxShadow);
   border-radius: 45px;
   transition: transform 0.4s cubic-bezier(.38, 1.32, .39, 1);
@@ -486,21 +486,21 @@ onUnmounted(() => {
 
 .auth__input {
   width: 100%;
-  padding: 16px 20px;
-  border-radius: 16px;
+  padding: 14px 20px;
+  border-radius: 50px;
   background: #fff;
   font-size: 1rem;
   color: #1e1e1e;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  border: 3px solid var(--tabsSlideBorderColor);
+  border: 3px solid #15bec3;
   box-shadow: var(--boxShadowMobile);
   transition: all 0.2s;
   outline: none;
 }
 
 .auth__input:focus {
-  border: 3px solid #f1c40f;
+  border: 3px solid #138f93;
   box-shadow: none;
 }
 
@@ -511,7 +511,8 @@ onUnmounted(() => {
 
 .auth__submit {
   width: 100%;
-  background: #3b82f6;
+  background: #15bec3;
+  box-shadow: 0 8px 0 #0ca0a5;
   border: none;
   color: #ffffff;
   font-size: 1.5rem;
@@ -519,7 +520,6 @@ onUnmounted(() => {
   font-weight: 600;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: 0 5px 0 #1e57d5;
   text-shadow: 1px 1px #4d4c4c;
   letter-spacing: 1px;
   font-family: "Nunito", sans-serif;
@@ -609,6 +609,17 @@ onUnmounted(() => {
   justify-content: center;
   transition: opacity 0.2s;
   z-index: 5;
+}
+
+.start__bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  right: 0;
 }
 
 .auth__eye:hover {

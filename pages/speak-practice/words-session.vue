@@ -5,9 +5,10 @@
       @touchmove="handleTouchMove"
       @touchend="handleTouchEnd"
   >
+    <VLoginPreloader v-if="isAdLoading"/>
     <template v-if="viewMode === 'list'">
       <header class="vocab-header list-header">
-        <button class="btn-icon-back" @click="handleBackClick">
+        <button class="btn-icon-back" data-track="speak_words_list_back_click" @click="handleBackClick">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -33,7 +34,7 @@
     </template>
     <template v-else-if="viewMode === 'practice'">
       <header class="vocab-header" v-if="currentWord">
-        <button class="btn-icon-back" @click="handleBackClick">
+        <button class="btn-icon-back" data-track="speak_words_practice_back_click" @click="handleBackClick">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -57,11 +58,12 @@
               :key="index"
               class="option-btn"
               :class="{
-              'correct': selectedAnswer && option === currentWord.correctTranslation,
-              'incorrect': selectedAnswer === option && option !== currentWord.correctTranslation
-            }"
-              :disabled="selectedAnswer !== null"
-              @click="checkAnswer(option)"
+                'selected': selectedAnswer === option && !hasChecked,
+                'correct': hasChecked && option === currentWord.correctTranslation,
+                'incorrect': hasChecked && selectedAnswer === option && option !== currentWord.correctTranslation
+              }"
+              :disabled="hasChecked"
+              @click="selectAnswer(option)"
           >
             {{ option }}
           </button>
@@ -86,18 +88,27 @@
             </div>
             <div class="completion-actions">
               <button class="btn-primary" @click="finishLearning">{{ t('speakSession.list') }}</button>
-              <button class="btn-secondary" @click="restartLearning">{{t('speakSession.repeat')}}</button>
+              <button class="btn-secondary" @click="restartLearning">{{ t('speakSession.repeat') }}</button>
             </div>
           </div>
         </div>
       </Transition>
       <footer class="vocab-footer" v-if="selectedAnswer && currentWord">
-        <button class="btn-primary" @click="nextStep">
+        <button v-if="!hasChecked" class="btn-primary btn-check" @click="checkAnswer">
+          {{ t('questCompletedModals.check')}}
+        </button>
+        <button
+            v-else
+            class="btn-primary"
+            :class="{'btn-incorrect': !isAnswerCorrect}"
+            @click="nextStep"
+        >
           {{ currentStep < totalSteps - 1 ? t('speakSession.further') : t('speakSession.end') }}
         </button>
       </footer>
     </template>
     <VStopSessionModal
+        :animation-data="HedgehogLeaveSession"
         v-model:show="showExitModal"
         @confirm="confirmExit"
         @cancel="cancelExit"
@@ -108,19 +119,20 @@
 <script setup>
 import {ref, computed, onMounted} from 'vue';
 import {useRouter, useRoute, onBeforeRouteLeave} from 'vue-router';
-import {useSpeakStore} from '../../store/speakStore.js';
-import {useI18n} from 'vue-i18n';
+import {useSpeakStore} from '~/store/speakStore.js';
 import SoundBtn from '../../src/components/soundBtn.vue';
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
-
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
+import {showInterstitial, preloadInterstitial} from '~/utils/admob.js';
 import {useSwipeBack} from '~/composables/useSwipeBack.js';
-
+import HedgehogLeaveSession from 'assets/animation/hedgehog_leave_session.json'
 const router = useRouter();
 const route = useRoute();
 const store = useSpeakStore();
 const {locale, t} = useI18n();
 const viewMode = ref('list');
 const wordList = ref([]);
+const isAdLoading = ref(false);
 
 const learningSequence = ref([]);
 const currentStep = ref(0);
@@ -128,8 +140,12 @@ const options = ref([]);
 const selectedAnswer = ref(null);
 const allTranslationsRef = ref([]);
 
+const { $track } = useNuxtApp();
+let practiceStartTime = 0;
+
 const correctAnswers = ref(0);
 const incorrectAnswers = ref(0);
+const hasChecked = ref(false);
 
 const showExitModal = ref(false);
 const isConfirmedExit = ref(false);
@@ -145,6 +161,11 @@ const progressPercentage = computed(() => {
   return (currentStep.value / totalSteps.value) * 100;
 });
 const currentWord = computed(() => learningSequence.value[currentStep.value]);
+
+const isAnswerCorrect = computed(() => {
+  if (!currentWord.value) return false;
+  return selectedAnswer.value === currentWord.value.correctTranslation;
+});
 
 const getTranslation = (translationData) => {
   if (!translationData) return '';
@@ -172,17 +193,34 @@ const generateOptions = (allTranslations) => {
   options.value = [correct, ...randomIncorrect].sort(() => Math.random() - 0.5);
 };
 
-const checkAnswer = (selected) => {
-  selectedAnswer.value = selected;
-  if (selected === currentWord.value.correctTranslation) {
+const selectAnswer = (option) => {
+  if (hasChecked.value) return;
+  selectedAnswer.value = option;
+};
+
+const checkAnswer = () => {
+  if (!selectedAnswer.value || hasChecked.value) return;
+  hasChecked.value = true;
+
+  if (selectedAnswer.value === currentWord.value.correctTranslation) {
     correctAnswers.value++;
   } else {
     incorrectAnswers.value++;
+  }
+
+  if (currentStep.value >= totalSteps.value - 1) {
+    const durationSec = Math.round((Date.now() - practiceStartTime) / 1000);
+    $track('vocab_practice_finished', {
+      theme: route.query.theme,
+      level: route.query.level,
+      duration_seconds: durationSec
+    });
   }
 };
 
 const nextStep = () => {
   selectedAnswer.value = null;
+  hasChecked.value = false;
   currentStep.value++;
 
   if (currentStep.value < totalSteps.value) {
@@ -201,25 +239,40 @@ const playSound = (text) => {
 };
 
 const startPractice = () => {
-  viewMode.value = 'practice';
+  isAdLoading.value = true;
+  showInterstitial(() => {
+    isAdLoading.value = false;
+    viewMode.value = 'practice';
+    practiceStartTime = Date.now();
+    $track('vocab_practice_started', {
+      theme: route.query.theme,
+      level: route.query.level,
+      words_count: wordList.value.length
+    });
 
-  const allTranslations = wordList.value.map(w => w.correctTranslation);
-  allTranslationsRef.value = allTranslations;
+    const allTranslations = wordList.value.map(w => w.correctTranslation);
+    allTranslationsRef.value = allTranslations;
 
-  const sequence = [];
-  wordList.value.forEach(word => {
-    sequence.push({...word, displayType: 'visual'});
-    sequence.push({...word, displayType: 'audio'});
+    const sequence = [];
+    wordList.value.forEach(word => {
+      sequence.push({...word, displayType: 'visual'});
+      sequence.push({...word, displayType: 'audio'});
+    });
+
+    learningSequence.value = sequence.sort(() => Math.random() - 0.5);
+    currentStep.value = 0;
+    correctAnswers.value = 0;
+    incorrectAnswers.value = 0;
+    selectedAnswer.value = null;
+    hasChecked.value = false;
+
+    if (learningSequence.value.length > 0) {
+      generateOptions(allTranslations);
+      setTimeout(() => {
+        playSound(currentWord.value.german);
+      }, 300);
+    }
   });
-
-  learningSequence.value = sequence.sort(() => Math.random() - 0.5);
-
-  if (learningSequence.value.length > 0) {
-    generateOptions(allTranslations);
-    setTimeout(() => {
-      playSound(currentWord.value.german);
-    }, 300);
-  }
 };
 
 onBeforeRouteLeave((to, from, next) => {
@@ -247,6 +300,16 @@ const handleBackClick = () => {
 };
 
 const confirmExit = () => {
+  if (viewMode.value === 'practice' && currentStep.value < totalSteps.value) {
+    const durationSec = Math.round((Date.now() - practiceStartTime) / 1000);
+    $track('vocab_practice_abandoned', {
+      theme: route.query.theme,
+      level: route.query.level,
+      duration_seconds: durationSec,
+      completed_steps: currentStep.value,
+      total_steps: totalSteps.value
+    });
+  }
   isConfirmedExit.value = true;
   showExitModal.value = false;
   if (pendingRoute) {
@@ -271,6 +334,7 @@ const restartLearning = () => {
   correctAnswers.value = 0;
   incorrectAnswers.value = 0;
   selectedAnswer.value = null;
+  hasChecked.value = false;
   learningSequence.value = learningSequence.value.sort(() => Math.random() - 0.5);
   generateOptions(allTranslationsRef.value);
   setTimeout(() => {
@@ -279,6 +343,7 @@ const restartLearning = () => {
 };
 
 onMounted(async () => {
+  preloadInterstitial()
   const theme = route.query.theme;
   const level = route.query.level;
   if (!store.dialogueData) {
@@ -490,6 +555,12 @@ onMounted(async () => {
   transition: all 0.2s;
 }
 
+.option-btn.selected {
+  background: #e0efff;
+  border-color: #3b82f6;
+  color: #1e3a8a;
+}
+
 .option-btn:active:not(:disabled) {
   transform: translateY(2px);
 }
@@ -524,9 +595,19 @@ onMounted(async () => {
   transition: transform 0.1s;
 }
 
-.btn-primary:active {
+.btn-check {
+  background: #3b82f6;
+  box-shadow: 0 5px 0 #2563eb;
+}
+
+.btn-incorrect {
+  background: #ef4444 !important;
+  box-shadow: 0 5px 0 #dc2626 !important;
+}
+
+.btn-primary:active, .btn-check:active, .btn-incorrect:active {
   transform: translateY(4px);
-  box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent !important;
 }
 
 .btn-secondary {

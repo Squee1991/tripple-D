@@ -1,7 +1,8 @@
-import { defineStore } from 'pinia'
-import { ref, watch, watchEffect } from 'vue'
-import { getFirestore, doc, onSnapshot } from 'firebase/firestore'
-import { getAuth } from 'firebase/auth'
+import {defineStore} from 'pinia'
+import {ref, watch, watchEffect} from 'vue'
+import {getFirestore, doc, onSnapshot, collection} from 'firebase/firestore'
+import {getAuth} from 'firebase/auth'
+import {isWordInReview} from '../utils/wordReview.js'
 // --- 1) Импорты групп достижений ---
 import { overAchievment } from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
 import { wordAchievementsGroup } from '../src/achieveGroup/wordGroup/wordAchievements.js'
@@ -27,6 +28,7 @@ import { typeVerbs } from '../src/achieveGroup/verbs/typeVerbs.js'
 import { sentenceAchievement } from '../src/achieveGroup/sentenceDuel/sentenceAchievementsА1.js'
 import { eventWinterAchievements } from '../src/achieveGroup/eventAchievement/winterAchievements.js'
 import { valentineAchievements } from '../src/achieveGroup/eventAchievement/valentineAchievements.js'
+import { halloweenAchievements } from '../src/achieveGroup/eventAchievement/halloweenAchievements.js'
 // --- 2) Сторы-источники ---
 import { userChainStore } from '../store/chainStore.js'
 import { userAuthStore } from '../store/authStore.js'
@@ -44,6 +46,7 @@ import { useEventSessionStore } from '../store/eventsStore.js'
 import { useEasterEggsStore } from '../store/easterEggsStore.js'
 export const useAchievementStore = defineStore('achievementStore', () => {
 	const rawGroups = [
+		...halloweenAchievements.map(g => ({category: 'halloween' , ...g})),
 		...valentineAchievements.map(g => ({category: 'valentine' , ...g})),
 		...eventWinterAchievements.map(g => ({category: 'winter' , ...g})),
 		...sentenceAchievement.map(g => ({ category: 'sentence', ...g })),
@@ -107,14 +110,24 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	let eventUnsubs = []
 	const dailyAggUnsub = ref(null)
 	const prevMap = new Map()
-	const required = ['article','letters','wordArticle','audio','plural']
-	const VEGETABLES_DE = new Set([
-		'Kartoffel','Karotte','Tomate','Gurke','Zwiebel','Kohl','Paprika',
-		'Rote Bete','Radieschen','Bohne','Mais','Pilz','Knoblauch'
-	]);
+	// «Защитник овощей» — все слова темы «Овощи», «Друг животных» — все слова категории «Животные»
+	const VEGETABLE_TOPICS = ['Vegetables'];
+	const ANIMAL_TOPICS = ['Animals', 'Birds', 'SeaAnimals', 'Insects', 'Savanna'];
 
-	const ANIMAL_TOPICS = new Set(['Animals', 'Birds', 'SeaAnimals', 'Insects', 'Savanna']);
-	const hasAllModes = (word) => required.every(m => word?.progress?.[m])
+	// Слова каждой темы из words.json — чтобы знать, выучена ли тема целиком
+	const topicWordKeys = ref(null)
+	async function loadTopicWordKeys() {
+		if (topicWordKeys.value || !process.client) return
+		try {
+			const response = await fetch('/words.json')
+			const topics = await response.json()
+			topicWordKeys.value = Object.fromEntries(
+				Object.entries(topics).map(([topic, topicWords]) => [topic, topicWords.map(word => word.de)])
+			)
+		} catch (error) {
+			console.error(error)
+		}
+	}
 	const awardsKey = () => `awards_shown_v1_${authStore?.uid}`
 	const completedKey = () => `achievements_completed_v1_${authStore?.uid}`
 	function loadShown() {
@@ -250,7 +263,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			'daily', 'guessedSafeWords', 'all_cases', 'all_adjectives', 'all_verbs',
 			'FiveHearts', 'daily42', 'iAmGroot',
 			'santaHat', 'christmasBall', 'christmasWreath',
-			'valentineBear', 'cupidArrow', 'wasPlusUser'
+			'valentineBear', 'cupidArrow', 'wasPlusUser',
+			'witchBroom', 'witchHat', 'pumpkin', 'punch', 'spellBook'
 		];
 		let unlockedCount = 0;
 		awardAchievementIds.forEach(id => {
@@ -472,39 +486,37 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				{ immediate: true }
 			)
 		})
-		watch(() => langStore.words, (words = []) => {
+		loadTopicWordKeys()
+		watch([() => langStore.words, topicWordKeys], ([words = []]) => {
 			let listenCnt = 0, pluralCnt = 0, lettersCnt = 0;
 			let derCnt = 0, dieCnt = 0, dasCnt = 0, wordArticleCnt = 0;
-			let isVegan = true, hasVegan = false;
-			let isZoo = true, hasZoo = false;
+			const learnedByTopic = {};
 			let salamiDone = false, katzeDone = false, hundDone = false;
 			let grootTopics = new Set();
 
 			for (let i = 0; i < words.length; i++) {
 				const w = words[i];
 				const p = w.progress || {};
-				const allModes = hasAllModes(w);
+				// Слово выучено — прошло урок и участвует в повторении
+				const isLearned = isWordInReview(w);
 				if (p.audio) listenCnt++;
 				if (p.plural) pluralCnt++;
 				if (p.letters) lettersCnt++;
 				if (p.wordArticle || p.wordPlusArticle) wordArticleCnt++;
-				if (p.article) {
+				// Артикль проверяется и в задании «написать слово с артиклем»
+				if (p.article || p.wordArticle) {
 					if (w.article === 'der') derCnt++;
 					else if (w.article === 'die') dieCnt++;
 					else if (w.article === 'das') dasCnt++;
 				}
-				if (w.topic === 'Vegetables' && VEGETABLES_DE.has(w.de)) {
-					hasVegan = true;
-					if (!allModes) isVegan = false;
+				if (isLearned && w.topic) {
+					if (!learnedByTopic[w.topic]) learnedByTopic[w.topic] = new Set();
+					learnedByTopic[w.topic].add(w.de);
 				}
-				if (ANIMAL_TOPICS.has(w.topic)) {
-					hasZoo = true;
-					if (!allModes) isZoo = false;
-				}
-				if (w.de === 'Salami' && allModes) salamiDone = true;
-				if (w.de === 'Katze' && allModes) katzeDone = true;
-				if (w.de === 'Hund' && allModes) hundDone = true;
-				if (w.de === 'Baum' && allModes) grootTopics.add(w.topic ?? '__no_topic__');
+				if (w.de === 'Salami' && isLearned) salamiDone = true;
+				if (w.de === 'Katze' && isLearned) katzeDone = true;
+				if (w.de === 'Hund' && isLearned) hundDone = true;
+				if (w.de === 'Baum' && isLearned) grootTopics.add(w.topic ?? '__no_topic__');
 			}
 			groups.value.forEach(g => {
 				if (g.category === 'listen') g.achievements.forEach(a => updateProgress(a.id, listenCnt));
@@ -520,8 +532,15 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				}
 			});
 
-			updateProgress('vegan', hasVegan && isVegan ? 1 : 0);
-			updateProgress('zoo', hasZoo && isZoo ? 1 : 0);
+			// Пока список слов тем не загружен — не знаем, выучены ли темы целиком
+			if (topicWordKeys.value) {
+				const isTopicsLearned = (topics) => topics.every(topic => {
+					const topicWords = topicWordKeys.value[topic] || [];
+					return topicWords.length > 0 && topicWords.every(de => learnedByTopic[topic]?.has(de));
+				});
+				updateProgress('vegan', isTopicsLearned(VEGETABLE_TOPICS) ? 1 : 0);
+				updateProgress('zoo', isTopicsLearned(ANIMAL_TOPICS) ? 1 : 0);
+			}
 			if (salamiDone) updateProgress('cowabungaSalami', 1);
 			updateProgress('catDog', [katzeDone, hundDone].filter(Boolean).length);
 			updateProgress('iAmGroot', grootTopics.size);
@@ -584,43 +603,38 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			}
 		}
 
-		// const startZeroCostMonitor = () => {
-		// 	if (localMonitorInterval) clearInterval(localMonitorInterval);
-		//
-		// 	const initialState = gameStore.getSeasonState();
-		// 	wasOpen = initialState.isOpen;
-		// 	localMonitorInterval = setInterval(() => {
-		// 		if (!authStore.uid) return;
-		//
-		// 		const { isOpen, currentSeasonId } = gameStore.getSeasonState();
-		// 		if (wasOpen === true && isOpen === false) {
-		// 			wasOpen = isOpen;
-		// 			setTimeout(() => {
-		// 				checkRankAndAward(currentSeasonId);
-		// 			}, 5000);
-		// 		}
-		// 		else if (wasOpen === false && isOpen === true) {
-		// 			wasOpen = isOpen;
-		// 		}
-		// 	}, 1000);
-		// }
-		watch(() => gameStore.getSeasonState()?.isOpen, (newIsOpen, oldIsOpen) => {
-			if (!authStore.uid) return;
-			if (oldIsOpen === true && newIsOpen === false) {
-				const { currentSeasonId } = gameStore.getSeasonState();
-				setTimeout(() => {
-					checkRankAndAward(currentSeasonId);
-				}, 5000);
-			}
-		});
+		const startZeroCostMonitor = () => {
+			if (localMonitorInterval) clearInterval(localMonitorInterval);
+
+			const initialState = gameStore.getSeasonState();
+			wasOpen = initialState.isOpen;
+			localMonitorInterval = setInterval(() => {
+				if (!authStore.uid) return;
+
+				const { isOpen, currentSeasonId } = gameStore.getSeasonState();
+				if (wasOpen === true && isOpen === false) {
+					wasOpen = isOpen;
+					setTimeout(() => {
+						checkRankAndAward(currentSeasonId);
+					}, 5000);
+				}
+				else if (wasOpen === false && isOpen === true) {
+					wasOpen = isOpen;
+				}
+			}, 1000);
+		}
 
 		watch(() => authStore.uid, (uid) => {
 			if (uid) {
 				const { isOpen, currentSeasonId, previousSeasonId } = gameStore.getSeasonState();
 				const seasonToCheck = isOpen ? previousSeasonId : currentSeasonId;
 				checkRankAndAward(seasonToCheck);
+
+				startZeroCostMonitor();
+			} else {
+				if (localMonitorInterval) clearInterval(localMonitorInterval);
 			}
-		}, { immediate: true });
+		}, { immediate: true })
 
 		watch(() => authStore.achievements?.marathon, (marathonStats) => {
 			if (!marathonStats) return;
@@ -719,6 +733,45 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				updateProgress('valentineAllAchievements', metaChildrenIds.filter(id => completedSet.has(id)).length);
 			})
 			eventUnsubs.push(unsubValentine)
+
+
+			const halloweenEventRef = doc(db, 'users', uid, 'eventSessions', 'halloween')
+			const unsubHalloween = onSnapshot(halloweenEventRef, (snap) => {
+				const eventData = snap.data() || {}
+				const questsProgress = eventData.quests || {}
+				const shopItems = eventData.shopItems || {}
+
+				updateCollectionCount()
+
+				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
+				updateProgress('firstHalloweenQuest', completedQuestsCount > 0 ? 1 : 0)
+				updateProgress('halloweenWords', questsProgress['quest-1']?.score || 0)
+				updateProgress('halloweenAllQuests', completedQuestsCount)
+				updateProgress('witchBroom', shopItems['witchBroom'] ? 1 : 0)
+				updateProgress('witchHat', shopItems['witchHat'] ? 1 : 0)
+				updateProgress('pumpkin', shopItems['pumpkin'] ? 1 : 0)
+				updateProgress('punch', shopItems['punch'] ? 1 : 0)
+				updateProgress('spellBook', shopItems['spellBook'] ? 1 : 0)
+				updateProgress('halloweenTheme', shopItems['theme'] ? 1 : 0)
+				updateProgress('halloweenReputation', eventData.reputationPoints || 0)
+
+				const metaChildrenIds = [
+					'firstHalloweenQuest',
+					'halloweenWords',
+					'halloweenAllQuests',
+					'witchBroom',
+					'pumpkin',
+					'witchHat',
+					'punch',
+					'spellBook',
+					'halloweenTheme',
+					'halloweenReputation'
+				];
+				updateProgress('halloweenAllAchievements', metaChildrenIds.filter(id => completedSet.has(id)).length);
+			})
+			eventUnsubs.push(unsubHalloween)
+
+
 		}, { immediate: true })
 	}
 	watch(lastUnlockedAward, (award) => {

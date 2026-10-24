@@ -1,62 +1,50 @@
 <template>
-  <div class="leaderboard-fullscreen">
-    <div class="animated-bg">
-      <div class="cartoon-clouds"></div>
-    </div>
-    <div class="leaderboard__inner">
-      <div class="leaderboard-header">
-        <div class="header-main">
-          <button @click="$emit('close')" class="btn-icon-back">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                 stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="19" y1="12" x2="5" y2="12"></line>
-              <polyline points="12 19 5 12 12 5"></polyline>
-            </svg>
-          </button>
-          <h2 class="toon-title">{{ t('galaxyRankTable.title') }}</h2>
-        </div>
+  <div class="hud-screen leaderboard">
+    <div class="hud-column">
+      <div class="hud-topbar">
+        <button class="btn-icon-back" @click="$emit('close')" aria-label="back">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+               stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </button>
+        <h2 class="hud-title">{{ t('galaxyRankTable.title') }}</h2>
       </div>
-      <div class="filter-bubble">
-        <select v-model="selectedFilter" class="toon-select">
-          <option v-for="option in galaxyOptions" :key="option.id" :value="option.id">
-            {{ option.label }}
-          </option>
-        </select>
+
+      <!-- Выбор галактики: лента вкладок -->
+      <div class="hud-tabs">
+        <button v-for="option in galaxyOptions" :key="option.id" class="hud-tab"
+                :class="{ 'is-active': selectedFilter === option.id }" @click="selectedFilter = option.id">
+          {{ option.label }}
+        </button>
       </div>
-      <div class="leaderboard-scroll-area">
-        <div v-if="isLoading" class="toon-loader">
-          <div class="bouncing-ship">🚀</div>
-          <span>{{ t('galaxyRankTable.scan') }}</span>
+
+      <div class="hud-scroll">
+        <div v-if="isLoading" class="state">
+          <ClientOnly>
+            <DotLottieVue :data="scanningAnimation" :loop="true" :autoplay="true" class="state__animation"/>
+          </ClientOnly>
+          <span class="state__text">{{ t('galaxyRankTable.scan') }}</span>
         </div>
-        <div v-else-if="playersData.length === 0" class="empty-state">
-          <div class="sad-moon">🌑</div>
-          <p class="empty-text">{{ t('galaxyRankTable.empty') }}</p>
-          <span class="empty-subtext">{{ t('galaxyRankTable.empty') }}</span>
+        <div v-else-if="playersData.length === 0" class="state">
+          <div class="state__icon">🌑</div>
+          <span class="state__text">{{ t('galaxyRankTable.empty') }}</span>
+          <span class="state__subtext">{{ t('galaxyRankTable.emptySub') }}</span>
         </div>
-        <div v-else class="players-grid">
-          <div
-              v-for="(player, index) in playersData"
-              :key="player.uid"
-              class="player-card"
-              :class="{
-              'gold': index === 0,
-              'silver': index === 1,
-              'bronze': index === 2
-            }"
-          >
-            <div class="rank-badge">
-              <span v-if="index === 0">👑</span>
-              <span v-else>{{ index + 1 }}</span>
-            </div>
-            <div class="ship-container">
-              <img :src="player.shipImg" :alt="player.captainName" class="floating-ship"/>
-            </div>
-            <div class="details">
-              <div class="name-tag">{{ player.captainName }}</div>
-              <div class="score-pill">
-                <span class="score-val">{{ getPlayerScore(player).toLocaleString() }}</span>
-              </div>
-            </div>
+        <div v-else class="players">
+          <div v-for="(player, index) in playersData" :key="player.uid" class="hud-panel player"
+               :class="[placeClass(index), { 'is-me': player.uid === myUid }]">
+            <span class="player__place">
+              <template v-if="index < 3">{{ MEDALS[index] }}</template>
+              <template v-else>{{ index + 1 }}</template>
+            </span>
+            <img :src="player.shipImg" :alt="player.captainName" class="player__ship"/>
+            <span class="player__name">{{ player.captainName }}</span>
+            <span class="player__score">
+              <span class="player__score-label">{{ t('galaxyCabinet.streak') }}</span>
+              {{ getPlayerScore(player).toLocaleString() }}
+            </span>
           </div>
         </div>
       </div>
@@ -65,13 +53,17 @@
 </template>
 
 <script setup>
-import {ref, onMounted, watch} from 'vue'
+import {ref, computed, onMounted, watch} from 'vue'
 import {useGalaxyStore} from '~/store/galaxyStore.js'
+import {userAuthStore} from '~/store/authStore.js'
 import {getFirestore, collectionGroup, getDocs, query, orderBy, limit} from 'firebase/firestore'
 import {useI18n} from 'vue-i18n'
+import {DotLottieVue} from '@lottiefiles/dotlottie-vue'
+import HedgehogScanning from '~/assets/animation/hedgehog_tablet_green.json'
 
 const emit = defineEmits(['close'])
 const store = useGalaxyStore()
+const authStore = userAuthStore()
 const db = getFirestore()
 
 const playersData = ref([])
@@ -79,8 +71,18 @@ const selectedFilter = ref('alpha')
 const isLoading = ref(true)
 const {t} = useI18n()
 
+const MEDALS = ['🥇', '🥈', '🥉']
+// Ёжик в скафандре «сканирует» сектор — показываем его не меньше этого времени, даже если данные пришли быстрее
+const MIN_SCANNING_TIME_MS = 1200
+const scanningAnimation = JSON.stringify(HedgehogScanning)
+const wait = (milliseconds) => new Promise(resolve => setTimeout(resolve, milliseconds))
+const myUid = computed(() => authStore.uid)
+
+function placeClass(index) {
+  return ['is-gold', 'is-silver', 'is-bronze'][index] || ''
+}
+
 const galaxyOptions = [
-  // {id: 'total', label: t('galaxyList.all')},
   {id: 'alpha', label: t('galaxyList.alpha')},
   {id: 'beta', label: t('galaxyList.beta')},
   {id: 'gamma', label: t('galaxyList.gamma')},
@@ -89,7 +91,11 @@ const galaxyOptions = [
   {id: 'zeta', label: t('galaxyList.zeta')}
 ]
 
+// Номер последнего запроса: если вкладку переключили, ответ старого запроса не показываем
+let latestRequestNumber = 0
+
 const fetchLeaderboard = async () => {
+  const requestNumber = ++latestRequestNumber
   isLoading.value = true
   playersData.value = []
 
@@ -97,23 +103,24 @@ const fetchLeaderboard = async () => {
     const filter = selectedFilter.value
     const orderField = filter === 'total' ? 'totalScore' : `highScores.${filter}`
 
-    const q = query(
+    const leaderboardQuery = query(
         collectionGroup(db, 'game_data'),
         orderBy(orderField, 'desc'),
         limit(10)
     )
 
-    const querySnapshot = await getDocs(q)
-    const tempPlayers = []
+    const [querySnapshot] = await Promise.all([getDocs(leaderboardQuery), wait(MIN_SCANNING_TIME_MS)])
+    if (requestNumber !== latestRequestNumber) return
+    const players = []
 
     querySnapshot.forEach((docSnapshot) => {
       const data = docSnapshot.data()
       const scores = data.highScores || {}
-      const total = data.totalScore || Object.values(scores).reduce((a, c) => a + c, 0)
+      const total = data.totalScore || Object.values(scores).reduce((sum, score) => sum + score, 0)
       const shipInfo = store.tankList.find(tank => tank.id === data.selectedTankId) || store.tankList[0]
 
       if ((filter === 'total' && total > 0) || (filter !== 'total' && scores[filter] > 0)) {
-        tempPlayers.push({
+        players.push({
           uid: docSnapshot.ref.parent.parent.id,
           captainName: data.captainName || 'Anonymous',
           shipImg: shipInfo?.img || '',
@@ -123,11 +130,11 @@ const fetchLeaderboard = async () => {
       }
     })
 
-    playersData.value = tempPlayers
+    playersData.value = players
   } catch (error) {
     console.error(error)
   } finally {
-    isLoading.value = false
+    if (requestNumber === latestRequestNumber) isLoading.value = false
   }
 }
 
@@ -145,255 +152,125 @@ const getPlayerScore = (player) => {
 }
 </script>
 
+<style src="~/assets/styles/galaxyHud.css"></style>
+
 <style scoped>
-.leaderboard-fullscreen {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
-  overflow: hidden;
+.leaderboard {
   z-index: 6000;
 }
 
-.leaderboard__inner {
-  max-width: 1000px;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
+.players {
   display: flex;
   flex-direction: column;
-  position: relative;
-  z-index: 1;
-  min-height: 0;
+  gap: 8px;
 }
 
-.leaderboard-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-  flex-shrink: 0;
-}
-
-.empty-state {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  text-align: center;
-  color: white;
-}
-
-.btn-icon-back {
-  background: #fff;
-  border: 3px solid #2b2b2b;
-  border-radius: 12px;
-  width: 40px;
-  height: 40px;
+.player {
   display: flex;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 2px 2px 0px #2b2b2b;
-  transition: transform 0.1s, box-shadow 0.1s;
-}
-
-.btn-icon-back:active {
-  transform: translate(2px, 2px);
-  box-shadow: 0px 0px 0px #2b2b2b;
-}
-
-.header-main {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.toon-title {
-  font-size: 22px;
-  color: white;
-  margin-left: 10px;
-}
-
-.filter-bubble {
-  background: #FFFFFF;
-  border: 3px solid #000;
-  border-radius: 16px;
-  padding: 5px 12px;
-  box-shadow: 3px 3px 0 #000;
-  margin-bottom: 10px;
-  width: max-content;
-  max-width: 100%;
-}
-
-.toon-select {
-  background: none;
-  border: none;
-  font-family: inherit;
-  font-weight: 900;
-  font-size: 1rem;
-  cursor: pointer;
-  outline: none;
-}
-
-.leaderboard-scroll-area {
-  flex: 1;
-  overflow-y: auto;
-  min-height: 0;
-  padding-bottom: 10px;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.leaderboard-scroll-area::-webkit-scrollbar {
-  display: none;
-}
-
-.players-grid {
-  display: flex;
-  flex-direction: column;
   gap: 12px;
+  padding: 10px 16px;
 }
 
-.player-card {
-  display: flex;
-  align-items: center;
-  background: white;
-  border-radius: 20px;
-  padding: 8px 12px;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+.player.is-gold {
+  background: linear-gradient(90deg, rgba(255, 196, 60, 0.38) 0%, rgba(20, 38, 92, 0.42) 75%);
 }
 
-.gold {
-  background: #ffd700;
-  box-shadow: 0 4px 0 #d4af37;
+.player.is-silver {
+  background: linear-gradient(90deg, rgba(200, 215, 235, 0.3) 0%, rgba(20, 38, 92, 0.42) 75%);
 }
 
-.silver {
-  background: #e0e0e0;
-  box-shadow: 0 4px 0 #a0a0a0;
+.player.is-bronze {
+  background: linear-gradient(90deg, rgba(214, 130, 70, 0.34) 0%, rgba(20, 38, 92, 0.42) 75%);
 }
 
-.bronze {
-  background: #cd7f32;
-  box-shadow: 0 4px 0 #8c5922;
+/* Своя строка подсвечена голубым */
+.player.is-me {
+  background: linear-gradient(90deg, rgba(70, 140, 255, 0.6) 0%, rgba(32, 72, 180, 0.45) 100%);
 }
 
-.rank-badge {
-  width: 44px;
-  height: 44px;
-  background: #fff;
-  border: 3px solid #000;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
+.player__place {
+  flex: none;
+  width: 30px;
+  color: #9fc2ea;
+  font-size: 17px;
   font-weight: 900;
-  margin-right: 10px;
-  flex-shrink: 0;
+  text-align: center;
 }
 
-.ship-container {
-  width: 44px;
-  height: 44px;
-  margin-right: 10px;
-  flex-shrink: 0;
+.player.is-gold .player__place,
+.player.is-silver .player__place,
+.player.is-bronze .player__place {
+  font-size: 24px;
 }
 
-.floating-ship {
-  width: 100%;
-  height: 100%;
+.player__ship {
+  flex: none;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
 }
 
-.details {
+.player__name {
   flex: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   min-width: 0;
-}
-
-.name-tag {
-  font-size: 1.1rem;
-  font-weight: 900;
-  color: #1a1a1a;
-  text-transform: uppercase;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-right: 8px;
+  white-space: nowrap;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 800;
 }
 
-.score-pill {
-  display: inline-flex;
-  align-items: center;
-  background: #1a1a1a;
-  color: #fff;
-  padding: 4px 12px;
-  border-radius: 50px;
-  flex-shrink: 0;
-}
-
-.score-val {
-  color: #ccff00;
-  font-size: 1rem;
+/* Рекорд — как в бортовом журнале: маленькая подпись «РЕКОРД:» и число */
+.player__score {
+  flex: none;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  color: #ffffff;
+  font-size: 18px;
   font-weight: 900;
 }
 
-.toon-loader {
-  height: 100%;
+.player__score-label {
+  color: #7fa7d9;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.player.is-gold .player__score {
+  color: #ffd56b;
+}
+
+.state {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: white;
+  gap: 10px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.state__icon {
+  font-size: 54px;
+}
+
+.state__animation {
+  width: min(80vw, 320px);
+  height: min(80vw, 320px);
+}
+
+.state__text {
+  color: #eaf4ff;
+  font-size: 16px;
   font-weight: 900;
-  font-size: 1.5rem;
-  text-shadow: 2px 2px 0 #000;
+  letter-spacing: 1px;
 }
 
-@keyframes bounce {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-20px);
-  }
-}
-
-.bouncing-ship {
-  animation: bounce 0.5s infinite alternate ease-in-out;
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-@media (max-width: 767px) {
-  .player-card {
-    padding: 6px 10px;
-  }
-
-  .rank-badge {
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
-  }
-
-  .ship-container {
-    width: 36px;
-    height: 36px;
-  }
-
-  .name-tag {
-    font-size: 13px;
-  }
+.state__subtext {
+  color: #7fa7d9;
+  font-size: 14px;
+  font-weight: 700;
 }
 </style>

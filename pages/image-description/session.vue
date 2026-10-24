@@ -1,23 +1,24 @@
 <script setup>
-import { ref, computed, nextTick, onMounted } from 'vue'
-import { useSeoMeta, useState } from "#imports"
-import { useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
+import {ref, computed, nextTick, onMounted} from 'vue'
+import {useSeoMeta, useState} from "#imports"
+import {useRouter} from 'vue-router'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import TipsModal from '../../src/components/V-tips.vue'
-import { topics } from '@/utils/descriptionImages.js'
+import {topics} from '@/utils/descriptionImages.js'
 
-import { getFunctions, httpsCallable } from 'firebase/functions'
-import { showInterstitial } from '../../utils/admob.js'
+import {getFunctions, httpsCallable} from 'firebase/functions'
+import {showInterstitial} from '~/utils/admob.js'
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
+import VHedgehogHelper from "~/src/components/V-hedgehog-helper.vue";
 
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
 
 const router = useRouter()
-const { t, locale } = useI18n()
-
+const {t, locale} = useI18n()
+const { $track } = useNuxtApp()
+let sessionStartTime = 0
 const sessionConfig = useState('sessionConfig')
 const selectedTopic = computed(() => topics.find(t => t.id === sessionConfig.value?.topicId))
 const selectedLevel = computed(() => sessionConfig.value?.level || 'A1')
@@ -43,6 +44,18 @@ const tipsData = ref({
     {id: '2', text: t('describePictureTips.tipTwo')},
     {id: '3', text: t('describePictureTips.tipThree')}
   ]
+})
+
+function retryTask() {
+  isAnswered.value = false
+  messages.value = []
+  input.value = ''
+  err.value = ''
+}
+
+const lastUserMessage = computed(() => {
+  const userMsgs = messages.value.filter(m => m.role === 'user')
+  return userMsgs.length ? userMsgs[userMsgs.length - 1].content : ''
 })
 
 const currentImage = computed(() => {
@@ -80,6 +93,13 @@ onMounted(() => {
 
   Promise.all([minDelay, imgPromise, adPromise]).then(() => {
     isScreenLoading.value = false
+    sessionStartTime = Date.now()
+
+    $track('image_desc_session_started', {
+      topic_id: sessionConfig.value?.topicId,
+      level: selectedLevel.value,
+      total_tasks: activeTasks.value.length
+    })
   })
 })
 
@@ -89,12 +109,12 @@ async function sendMessage(voiceText = null) {
 
   isLoading.value = true
   err.value = ''
-  messages.value.push({ role: 'user', content: textToSend })
+  messages.value.push({role: 'user', content: textToSend})
   input.value = ''
 
   await nextTick()
   const container = document.querySelector('.messages-scroll')
-  if (container) container.lastElementChild?.scrollIntoView({ behavior: "smooth" })
+  if (container) container.lastElementChild?.scrollIntoView({behavior: "smooth"})
 
   try {
     const task = activeTasks.value[currentTaskIndex.value]
@@ -115,8 +135,7 @@ async function sendMessage(voiceText = null) {
     if (res && res.error) {
       err.value = "ПОДРОБНАЯ ОШИБКА: " + res.error;
       messages.value.pop()
-    }
-    else if (res && res.data) {
+    } else if (res && res.data) {
       messages.value.push({
         role: 'assistant', isStructured: true,
         score: res.data.score || 0,
@@ -125,6 +144,12 @@ async function sendMessage(voiceText = null) {
         keyCorrections: res.data.keyCorrections || []
       })
       isAnswered.value = true
+      $track('image_desc_task_answered', {
+        topic_id: sessionConfig.value?.topicId,
+        level: selectedLevel.value,
+        task_index: currentTaskIndex.value,
+        score: res.data.score || 0
+      })
     } else {
       err.value = "Ошибка анализа. Пустой ответ сервера."
       messages.value.pop()
@@ -143,16 +168,43 @@ function nextTask() {
   isAnswered.value = false;
   err.value = '';
   input.value = ''
+
+  if (isFinished.value) {
+    const durationSec = Math.round((Date.now() - sessionStartTime) / 1000)
+    $track('image_desc_session_finished', {
+      topic_id: sessionConfig.value?.topicId,
+      level: selectedLevel.value,
+      duration_seconds: durationSec,
+      total_tasks: activeTasks.value.length
+    })
+  }
 }
 
 function goBack() {
+  const durationSec = Math.round((Date.now() - sessionStartTime) / 1000)
+  $track('image_desc_session_abandoned', {
+    topic_id: sessionConfig.value?.topicId,
+    level: selectedLevel.value,
+    duration_seconds: durationSec,
+    completed_tasks: currentTaskIndex.value,
+    total_tasks: activeTasks.value.length
+  })
   router.push('/image-description')
 }
+
 </script>
 
 <template>
   <div class="page-container">
     <div class="page__inner">
+      <VHedgehogHelper
+          action-type="imageHint"
+          :image-url="currentImage"
+          :reference-description="activeTasks[currentTaskIndex]?.descriptions?.[selectedLevel] || ''"
+          :user-level="selectedLevel"
+          :is-answered="isAnswered"
+          :user-answer="lastUserMessage"
+      />
       <TipsModal v-model="showTips" :title="t('adjectiveComparisonPage.tipTitle')" :tips="tipsData.tips"/>
       <VLoginPreloader v-if="isScreenLoading"/>
       <div class="content-shell" v-else-if="selectedTopic">
@@ -160,8 +212,9 @@ function goBack() {
           <div v-if="isFinished" class="finish-state">
             <div class="finish-content card-style-box">
               <div class="medal-icon">🎉</div>
-              <h2>{{ t('descriptionSession.done')}}</h2>
-              <button @click="goBack" class="btn-primary-action full-width">{{ t('descriptionSession.newTheme')}}</button>
+              <h2>{{ t('descriptionSession.done') }}</h2>
+              <button @click="goBack" class="btn-primary-action full-width">{{ t('descriptionSession.newTheme') }}
+              </button>
             </div>
           </div>
           <div v-else class="active-game-layout">
@@ -185,7 +238,8 @@ function goBack() {
             </div>
             <div class="game-main card-style-box chat-panel">
               <div class="chat-container">
-                <div v-if="messages.length === 0" class="empty-state"><p>{{ t('describePicture.placeholder') }}</p></div>
+                <div v-if="messages.length === 0" class="empty-state"><p>{{ t('describePicture.placeholder') }}</p>
+                </div>
                 <div class="messages-scroll">
                   <transition-group name="list">
                     <div v-for="(m, i) in messages" :key="i" :class="['msg-row', m.role]">
@@ -193,14 +247,16 @@ function goBack() {
                         <div class="feedback-body">
                           <p class="main-feedback">{{ m.feedback }}</p>
                           <div class="suggestion-box">
-                            <div class="suggestion-header"><span class="icon">✨</span><span>{{ t('descriptionSession.answer')}}:</span></div>
+                            <div class="suggestion-header">
+                              <span class="suggestion-header-answer">{{ t('descriptionSession.answer') }}:</span>
+                            </div>
                             <div class="suggestion-content">
                               <SoundBtn :text="m.suggestedAnswer" class="mini-sound"/>
                               <p class="suggestion-text">{{ m.suggestedAnswer }}</p>
                             </div>
                           </div>
                           <div v-if="m.keyCorrections?.length" class="corrections-box">
-                            <span class="correction-title">💡 {{ t('descriptionSession.better')}}</span>
+                            <span class="correction-title">💡 {{ t('descriptionSession.better') }}</span>
                             <ul class="correction-list">
                               <li v-for="(c, idx) in m.keyCorrections" :key="idx" class="correction-item">{{ c }}</li>
                             </ul>
@@ -238,7 +294,14 @@ function goBack() {
                   </div>
                 </template>
                 <template v-else>
-                  <button class="btn-primary-action full-width" @click="nextTask">{{t('describePicture.nextBtn')}}</button>
+                  <div class="answered-actions">
+                    <button class="btn-secondary-action" @click="retryTask">
+                      🔄 Ещё раз
+                    </button>
+                    <button class="btn-primary-action" @click="nextTask">
+                      {{ t('describePicture.nextBtn') }} ➔
+                    </button>
+                  </div>
                 </template>
               </div>
             </div>
@@ -250,15 +313,7 @@ function goBack() {
 </template>
 
 
-
 <style scoped>
-.screen-preloader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-}
 
 .page-container {
   font-family: "Nunito", sans-serif;
@@ -331,9 +386,10 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 .btn-primary-action {
   background: #3b82f6;
   color: #fff;
+  font-weight: 900;
   padding: 10px 40px;
   border-radius: 50px;
-  font-size: 1.5rem;
+  font-size: 16px;
   border: none;
   cursor: pointer;
   display: flex;
@@ -412,6 +468,10 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+}
+
+.suggestion-header-answer {
+  font-weight: 900;
 }
 
 .glare {
@@ -533,7 +593,7 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
 .suggestion-header {
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
-  margin-bottom: 5px;
+  margin: 5px 0;
 }
 
 .correction-title {
@@ -574,6 +634,10 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   color: #e26a4b;
   opacity: 1;
   -webkit-text-fill-color: #e26a4b;
+}
+
+.suggestion-text {
+  font-size: 15px;
 }
 
 .modern-input::-webkit-scrollbar {
@@ -639,21 +703,66 @@ h1, h2, h3, .header-title, .btn-primary-action, .correction-title {
   margin-bottom: 20px;
 }
 
+.answered-actions {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.answered-actions .btn-primary-action {
+  flex: 1;
+}
+
+.btn-secondary-action {
+  background: #ffffff;
+  color: #2b2b2b;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.1s, box-shadow 0.1s;
+  flex: 1;
+  text-transform: uppercase;
+}
+
+.btn-secondary-action:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
+}
+
+@media (max-width: 480px) {
+  .answered-actions {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 767px) {
   .header-title {
     font-size: 1.2rem;
     display: flex;
     justify-content: center;
   }
+
   .btn-send-round, .btn-mic {
     width: 100%;
   }
+
   .input-dock {
     flex-direction: column;
   }
+
   .chat-panel {
     padding: 5px;
   }
+
   .btn__wrapper {
     flex-direction: row;
   }

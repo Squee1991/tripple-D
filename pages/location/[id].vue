@@ -3,24 +3,20 @@
     <div v-if="isAdLoading" class="ad-overlay">
       <div class="ad-spinner"></div>
     </div>
-
     <div class="location__wrapper">
       <header class="location-header" :class="{ 'rtl-locale': locale === 'ar' }">
         <VBackBtn/>
-        <h1 class="region__title-name">{{ t(currentRegion?.name) }}</h1>
+        <h1 class="region__title-name">{{ t(currentRegion?.name || '') }}</h1>
       </header>
-
-      <!-- Скрываем блок с жизнями для премиум-пользователей -->
       <div class="lives-bar__content" v-if="!authStore.isPremium">
         <VHearts
             :lives="chainStore.lives"
             :max-lives="chainStore.maxLives"
             :last-life-at-ms="chainStore.lastLifeAtMs"
-            :regen-interval-ms="chainStore.REGEN_INTERVAL_MS"
+            :regen-interval-ms="chainStore.currentRegenIntervalMs"
             show-timer
         />
       </div>
-
       <div class="quests">
         <div v-if="errorMessage" class="error">{{ t('locationQuests.error') }}</div>
         <VTransition v-else-if="processedQuests.length">
@@ -50,21 +46,32 @@
                   {{ t('locationQuests.gotAward') }} <span style="font-size:18px;">✅</span>
                 </span>
               </div>
-              <button
-                  class="btn"
-                  :style="quest.btnStyle"
-                  @click="handleStartQuest(quest)"
-              >
-                <template v-if="quest.hasMistakes">
-                  {{ t('locationQuests.repeatMistakes') }}
-                </template>
-                <template v-else-if="quest.isPerfect">
-                  {{ t('locationQuests.repeat') }}
-                </template>
-                <template v-else>
-                  {{ t('locationQuests.start') }}
-                </template>
-              </button>
+              <div class="quest-actions">
+                <button
+                    :data-track="'region_wordsLearn_clicked_' + quest.questId"
+                    v-if="quest.vocabulary && quest.vocabulary.length"
+                    class="btn btn--secondary"
+                    @click="handleLearnWords(quest)"
+                >
+                  📚 {{ t('locationWordSession.stuff')}}
+                </button>
+                <button
+                    class="btn"
+                    :style="quest.btnStyle"
+                    :data-track="'region_startQuest_clicked_' + quest.questId"
+                    @click="handleStartQuest(quest)"
+                >
+                  <template v-if="quest.hasMistakes">
+                    {{ t('locationQuests.repeatMistakes') }}
+                  </template>
+                  <template v-else-if="quest.isPerfect">
+                    {{ t('locationQuests.repeat') }}
+                  </template>
+                  <template v-else>
+                    {{ t('locationQuests.start') }}
+                  </template>
+                </button>
+              </div>
             </li>
           </ul>
         </VTransition>
@@ -92,7 +99,7 @@ import {useRoute, useRouter} from "vue-router";
 import {regions} from "~/utils/regions.js";
 import {userChainStore} from "~/store/chainStore.js";
 import {userlangStore} from '~/store/learningStore.js';
-import {userAuthStore} from "~/store/authStore.js"; // Подключаем authStore
+import {userAuthStore} from "~/store/authStore.js";
 import {useSeoMeta} from '#imports';
 import VHearts from '../../src/components/V-hearts.vue';
 import VBackBtn from "~/src/components/V-back-btn.vue";
@@ -106,8 +113,8 @@ const router = useRouter();
 const {t, locale} = useI18n();
 const chainStore = userChainStore();
 const langStore = userlangStore();
-const authStore = userAuthStore(); // Инициализируем authStore
-
+const authStore = userAuthStore();
+const { $track } = useNuxtApp()
 const questList = ref([]);
 const isLoading = ref(true);
 const errorMessage = ref("");
@@ -115,7 +122,7 @@ const showRewardBtn = ref(false);
 const showNoLivesModal = ref(false);
 const isAdLoading = ref(false);
 const pendingQuest = ref(null);
-const PRICE = 10;
+const PRICE = 5;
 const MAX_ADS = 5;
 const remainingAds = ref(MAX_ADS);
 const mobile = Capacitor.isNativePlatform();
@@ -233,9 +240,6 @@ function proceedToQuest(quest) {
 function handleStartQuest(quest) {
   if (!quest?.questId) return;
   isApplication();
-
-  // Добавлена проверка !authStore.isPremium, чтобы премиум-пользователи
-  // могли начинать квест без проверки на жизни.
   if (!authStore.isPremium && chainStore.lives <= 0) {
     pendingQuest.value = quest;
     showNoLivesModal.value = true;
@@ -243,6 +247,14 @@ function handleStartQuest(quest) {
   }
 
   proceedToQuest(quest);
+}
+
+function handleLearnWords(quest) {
+  if (!quest?.questId) return;
+  router.push({
+    path: `/location/word-session`,
+    query: { questId: quest.questId, region: currentRegionKey.value }
+  });
 }
 
 async function trySpendLocal(amount) {
@@ -268,6 +280,10 @@ async function purchaseLife() {
 
   await chainStore.addLife(1);
   showNoLivesModal.value = false;
+  $track('life_purchased_with_points', {
+    price: PRICE,
+    region: currentRegionKey.value
+  });
 
   if (pendingQuest.value) {
     proceedToQuest(pendingQuest.value);
@@ -277,12 +293,15 @@ async function purchaseLife() {
 
 function watchAdForLife() {
   isAdLoading.value = true;
+
+  $track('rewarded_ad_requested', { region: currentRegionKey.value });
   showRewarded(
       async () => {
         await chainStore.addLife(1);
         updateRemainingAds();
         showNoLivesModal.value = false;
 
+        $track('rewarded_ad_completed', { region: currentRegionKey.value });
         if (pendingQuest.value) {
           proceedToQuest(pendingQuest.value);
           pendingQuest.value = null;
@@ -291,13 +310,14 @@ function watchAdForLife() {
       (gotReward) => {
         isAdLoading.value = false;
         if (!gotReward) {
-          console.log("Юзер закрыл рекламу раньше времени.");
+          $track('rewarded_ad_skipped', { region: currentRegionKey.value });
         }
       }
   );
 }
 
 function closeModal() {
+  $track('lives_modal_dismissed', { region: currentRegionKey.value });
   showNoLivesModal.value = false;
   pendingQuest.value = null;
 }
@@ -311,10 +331,10 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-/* Стили остались без изменений */
+
 .location-page {
   height: 100%;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -332,6 +352,9 @@ onMounted(async () => {
 
 .quests {
   padding: 0 15px;
+  overflow: auto;
+  height: 100vh;
+  padding-bottom: 160px;
 }
 
 .location-header {
@@ -340,7 +363,6 @@ onMounted(async () => {
   position: relative;
   padding: 5px 10px 15px 10px;
   border-radius: 22px;
-  margin-bottom: 18px;
   overflow: visible;
 }
 
@@ -356,7 +378,7 @@ onMounted(async () => {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  margin: 0 14px 17px 14px;
+  margin: 0 14px 10px 14px;
   border-radius: 15px;
   border: 3px solid var(--tabsSlideBorderColor);
   box-shadow: var(--boxShadowMobile);
@@ -620,5 +642,29 @@ onMounted(async () => {
     left: 0;
     transform: rotate(-8deg);
   }
+}
+
+.quest-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.btn--secondary {
+  background: #7f82d9;
+  color: white;
+  box-shadow: 0 5px 0 #5759aa;
+  margin-top: 0;
+}
+
+.btn--secondary:active {
+  box-shadow: 0 0px 0 transparent;
+}
+
+.quest-actions .btn {
+  margin-top: 0;
 }
 </style>

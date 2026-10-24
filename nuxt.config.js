@@ -55,7 +55,8 @@ export default defineNuxtConfig({
 		'nuxt-vuefire',
 		'@nuxtjs/google-fonts',
 		'@nuxtjs/i18n',
-		'@nuxtjs/color-mode'
+		'@nuxtjs/color-mode',
+		/*'@sentry/nuxt/module'*/
 	],
 	sentry: {
 		sourceMapsUploadOptions: {
@@ -151,36 +152,31 @@ export default defineNuxtConfig({
 			{code: 'uz', iso: 'uz-UZ', name: 'Oʻzbekcha', file: 'uz-UZ.json'},
 			{code: 'ar', iso: 'ar-SA', name: 'العربية', file: 'ar-SA.json'},
 		],
-		/*detectBrowserLanguage: {
+		detectBrowserLanguage: {
 			useCookie: true,
 			cookieKey: 'i18n_redirected',
 			alwaysRedirect: false,
 			redirectOn: 'root',
 			fallbackLocale: 'en',
-		},*/
-		detectBrowserLanguage: false,
+		},
 		bundle: {optimizeTranslationDirective: false},
 	},
 
 	plugins: ['~/plugins/simplebar.client.js'],
 
 	googleFonts: {
-		families: {'Uncial Antiqua': true, Kurale: true, Fredoka: true, Nunito: true},
+		families: {
+			'Uncial Antiqua': true,
+			Kurale: true,
+			Fredoka: true,
+			'Lilita One': true,
+			Nunito: true,
+			'Rubik Wet Paint': true,
+			Sniglet: true,
+			Coiny: true
+		}
 	},
-
 	vite: {
-		server: {
-			watch: {
-				usePolling: true,
-				interval: 500,
-				ignored: [
-					'**/ios/**',
-					'**/android/**',
-					'**/node_modules/**',
-					'**/.git/**'
-				]
-			}
-		},
 		build: {
 			minify: 'esbuild',
 		},

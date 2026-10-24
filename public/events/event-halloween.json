@@ -1,10 +1,2425 @@
 {
   "quests": [
     {
-      "id": "q1",
-      "title": "Halloween слово",
+      "id": "quest-1",
+      "title": "Хэллоуин: Картинка → Слово",
+      "rewardCoins": 20,
+      "rewardRep": 40,
       "steps": [
-        { "type": "word", "props": { "word": "Kürbis" } }
+        {
+          "type": "multiple-choice",
+          "id": "img-1",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/bat.svg",
+          "options": [
+            "die Eule",
+            "die Fledermaus",
+            "die Katze"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-2",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/broom.svg",
+          "options": [
+            "der Löffel",
+            "der Besen",
+            "der Zauberstab"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-3",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/candle.svg",
+          "options": [
+            "die Lampe",
+            "die Kerze",
+            "die Fackel"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-4",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/candy.svg",
+          "options": [
+            "die Süßigkeiten",
+            "das Obst",
+            "das Brot"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-5",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/cat.svg",
+          "options": [
+            "der Hund",
+            "die Katze",
+            "der Wolf"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-6",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/dracula.svg",
+          "options": [
+            "der Wolf",
+            "der Ritter",
+            "der Vampir"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-7",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/ghost.svg",
+          "options": [
+            "das Gespenst",
+            "das Skelett",
+            "die Hexe"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-8",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/proud.svg",
+          "options": [
+            "der Geist",
+            "das Gespenst",
+            "die Hexe"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-9",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/pumpkin.svg",
+          "options": [
+            "der Kürbis",
+            "der Kessel",
+            "die Kerze"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-10",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/raven.svg",
+          "options": [
+            "der Rabe",
+            "der Spatz",
+            "das Huhn"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-11",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/skeleton.svg",
+          "options": [
+            "das Skelett",
+            "der Knochen",
+            "der Zombie"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-12",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/spell-book.svg",
+          "options": [
+            "das Zauberbuch",
+            "die Zeitung",
+            "der Brief"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-13",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/spider.svg",
+          "options": [
+            "der Käfer",
+            "die Spinne",
+            "die Fliege"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-14",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/stew.svg",
+          "options": [
+            "der Topf",
+            "die Pfanne",
+            "der Hexenkessel"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-15",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/stuff.svg",
+          "options": [
+            "der Zauberstab",
+            "der Stift",
+            "der Pfeil"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-16",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/witch-broom.svg",
+          "options": [
+            "die Hexe",
+            "der Besen",
+            "der Hexenbesen"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-17",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/witch-hat.svg",
+          "options": [
+            "der Hexenhut",
+            "der Helm",
+            "die Mütze"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-18",
+          "image": "/assets/images/event-rewards/halloween-event/halloween-words/wizard.svg",
+          "options": [
+            "der Zauberer",
+            "der Vampir",
+            "der Ritter"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-2",
+      "title": "Основы и факты",
+      "rewardCoins": 20,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "mcq-1",
+          "question": "hallowenQuestTwo.titleOne",
+          "options": [
+            "am 31. Oktober",
+            "am 1. November",
+            "am 11. November",
+            "am 24. Dezember"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-2",
+          "question": "hallowenQuestTwo.titleTwo",
+          "options": [
+            "die Karotte",
+            "der Kürbis",
+            "die Kartoffel"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-3",
+          "question": "hallowenQuestTwo.titleThree",
+          "options": [
+            "Guten Tag!",
+            "Süßes sonst gibt's Saures!",
+            "Frohes Fest!"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-4",
+          "question": "hallowenQuestTwo.titleFour",
+          "options": [
+            "Jack O'Lantern",
+            "Knecht Ruprecht",
+            "Rübengeist"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-5",
+          "question": "hallowenQuestTwo.titleFive",
+          "options": [
+            "Blau und Weiß",
+            "Schwarz und Orange",
+            "Grün und Rot"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-6",
+          "question": "hallowenQuestTwo.titleSix",
+          "options": [
+            "die Fledermaus",
+            "das Schaf",
+            "das Pferd"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-7",
+          "question": "hallowenQuestTwo.titleSeven",
+          "options": [
+            "Allerheiligen",
+            "Ostern",
+            "Pfingsten"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-8",
+          "question": "hallowenQuestTwo.titleEight",
+          "options": [
+            "ein Buch",
+            "eine Kerze",
+            "einen Apfel",
+            "ein Glas Wasser"
+          ],
+          "correctOptionIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "quest-3",
+      "title": "Немецкие традиции",
+      "rewardCoins": 20,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "mcq-9",
+          "question": "hallowenQuestThree.titleOne",
+          "options": [
+            "Wassermelonen",
+            "Futterrüben",
+            "Brote",
+            "Gurken"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-10",
+          "question": "hallowenQuestThree.titleTwo",
+          "options": [
+            "Schloss Neuschwanstein",
+            "Wartburg",
+            "Burg Frankenstein bei Darmstadt",
+            "Burg Hohenzollern"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-11",
+          "question": "hallowenQuestThree.titleThree",
+          "options": [
+            "Reformationstag",
+            "Dreikönigstag",
+            "Karfreitag"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-12",
+          "question": "hallowenQuestThree.titleFour",
+          "options": [
+            "Martinstag(Sankt Martin)",
+            "Erntedankfest",
+            "Silvester",
+            "Walpurgisnacht"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-13",
+          "question": "hallowenQuestThree.titleFive",
+          "options": [
+            "in Spanien",
+            "in Schweden",
+            "in Italien",
+            "in der Schweiz"
+          ],
+          "correctOptionIndex": 3
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-14",
+          "question": "hallowenQuestThree.titleSix",
+          "options": [
+            "damit die Geister sich nicht verletzen",
+            "damit Kinder sie nicht finden",
+            "weil es Unglück beim Kochen bringt"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-15",
+          "question": "hallowenQuestThree.titleSeven",
+          "options": [
+            "weil die Busse nicht mehr fahren",
+            "weil Allerheiligen ein stiller Feiertag ist",
+            "weil Geister nur bis Mitternacht aktiv sind"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-16",
+          "question": "hallowenQuestThree.titleEight",
+          "options": [
+            "Kürbissuppe",
+            "Eiscreme",
+            "Limonade"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-4",
+      "title": "Мистические существа и легенды",
+      "rewardCoins": 20,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "mcq-17",
+          "question": "hallowenQuestFour.titleOne",
+          "options": [
+            "der Zombie",
+            "der Vampir",
+            "die Mumie"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-18",
+          "question": "hallowenQuestFour.titleTwo",
+          "options": [
+            "auf der Zugspitze",
+            "auf dem Brocken",
+            "auf dem Feldberg",
+            "auf dem Fichtelberg"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-19",
+          "question": "hallowenQuestFour.titleThree",
+          "options": [
+            "Werwolf",
+            "Erlkönig",
+            "Rübezahl"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-20",
+          "question": "hallowenQuestFour.titleFour",
+          "options": [
+            "auf einem Teppich",
+            "auf einem Stuhl",
+            "auf einem Besen",
+            "auf einem Schirm"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-21",
+          "question": "hallowenQuestFour.titleFive",
+          "options": [
+            "das Gespenst",
+            "der Zwerg",
+            "der Ritter",
+            "der Riese"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-22",
+          "question": "hallowenQuestFour.titleSex",
+          "options": [
+            "ein weißes Kaninchen",
+            "ein goldener Fisch",
+            "ein bunter Papagei",
+            "eine schwarze Katze"
+          ],
+          "correctOptionIndex": 3
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-23",
+          "question": "hallowenQuestFour.titleSeven",
+          "options": [
+            "Irrlichter",
+            "Laternen",
+            "Glühwürmchen",
+            "Kerzenfunken"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-24",
+          "question": "hallowenQuestFour.titleEight",
+          "options": [
+            "der Kobold",
+            "der Zombie",
+            "der Wichtel",
+            "die Fee"
+          ],
+          "correctOptionIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "quest-5",
+      "title": "Костюмы и осенняя ночь",
+      "rewardCoins": 20,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "mcq-25",
+          "question": "hallowenQuestFive.titleOne",
+          "options": [
+            "um warm zu bleiben",
+            "um böse Geister abzuschrecken",
+            "um Schokolade zu sparen",
+            "um Fotos zu machen"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-26",
+          "question": "hallowenQuestFive.titleTwo",
+          "options": [
+            "Skelett",
+            "Geist",
+            "Vampir",
+            "Pirat"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-27",
+          "title": "Деталь вампира",
+          "question": "hallowenQuestFive.titleThree",
+          "options": [
+            "eine Brille",
+            "ein Zauberstab",
+            "spitze Eckzähne",
+            "ein Bart"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-28",
+          "question": "hallowenQuestFive.titleFour",
+          "options": [
+            "ein altes weißes Bettlaken",
+            "einen großen Koffer",
+            "eine Zeitung",
+            "einen Regenschirm"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-29",
+          "question": "hallowenQuestFive.titleFive",
+          "options": [
+            "die Birne",
+            "der Apfel",
+            "die Pflaume",
+            "die Banane"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-30",
+          "question": "hallowenQuestFive.titleSix",
+          "options": [
+            "künstliche Spinnweben",
+            "bunte Lametta",
+            "Ostereier",
+            "Tannenzweige"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-31",
+          "question": "hallowenQuestFive.titleSeven",
+          "options": [
+            "Bonbons und Schokolade",
+            "Brot und Käse",
+            "Geldmünzen",
+            "Gemüse"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-32",
+          "question": "hallowenQuestFive.titleEight",
+          "options": [
+            "frühmorgens um 6 Uhr",
+            "am Mittag bei voller Sonne",
+            "erst um 3 Uhr nachts",
+            "am frühen Abend bei Einbruch der Dunkelheit"
+          ],
+          "correctOptionIndex": 3
+        }
+      ]
+    },
+    {
+      "id": "quest-6",
+      "title": "Символика и старинные обычаи",
+      "rewardCoins": 20,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "mcq-33",
+          "question": "hallowenQuestSix.titleOne",
+          "options": [
+            "Samhain",
+            "Beltane",
+            "Imbolc",
+            "Yule"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-34",
+          "question": "hallowenQuestSix.titleTwo",
+          "options": [
+            "einen kleinen Streich",
+            "eine Rechnung",
+            "ein Lied",
+            "ein Geschenk"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-35",
+          "question": "hallowenQuestSix.titleThree",
+          "options": [
+            "Heidelberg",
+            "Ludwigsburg",
+            "Freiburg",
+            "Tübingen"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-36",
+          "question": "hallowenQuestSix.titleFour",
+          "options": [
+            "in einem Kessel",
+            "in einer Pfanne",
+            "in einer Tasse",
+            "in einem Eimer"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-37",
+          "question": "hallowenQuestSix.titleFive",
+          "options": [
+            "der Skorpion",
+            "die Biene",
+            "die Spinne",
+            "der Käfer"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-38",
+          "question": "hallowenQuestSix.titleSix",
+          "options": [
+            "mit einem Zauberstab",
+            "mit einem Löffel",
+            "mit einem Bleistift",
+            "mit einem Hammer"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-39",
+          "question": "hallowenQuestSix.titleSeven",
+          "options": [
+            "man wirft sie ins Wasser",
+            "man röstet sie im Ofen",
+            "man friert sie ungekocht ein",
+            "man malt sie an"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-40",
+          "question": "hallowenQuestSix.titleEight",
+          "options": [
+            "wegen Nebel und fallenden Blättern",
+            "weil es heiß ist",
+            "weil die Vögel nachts laut singen",
+            "weil Blumen blühen"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-7",
+      "title": "Чтение: Вечер с тыквой",
+      "rewardCoins": 20,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-1",
+          "text": "Am 31. Oktober feiern auch viele Kinder in Deutschland Halloween. Am Nachmittag schnitzt Familie Müller einen großen Kürbis. Sie schneiden ein schauriges Gesicht mit Zähnen hinein. Am Abend stellen sie eine brennende Kerze hinein, damit der Kürbis im Dunkeln leuchtet.",
+          "questions": [
+            {
+              "question": "hallowenQuestSeven.questOne",
+              "options": [
+                "am Nachmittag",
+                "mitten in der Nacht",
+                "am nächsten Morgen",
+                "im Sommer"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "hallowenQuestSeven.questTwo",
+              "options": [
+                "ein trauriges Gesicht",
+                "ein schlafendes Gesicht",
+                "ein schauriges Gesicht",
+                "gar kein Gesicht"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "hallowenQuestSeven.questThree",
+              "options": [
+                "eine brennende Kerze",
+                "eine Taschenlampe",
+                "Bonbons",
+                "Wasser"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "hallowenQuestSeven.questFour",
+              "options": [
+                "damit er warm bleibt",
+                "damit er im Dunkeln leuchtet",
+                "damit er besser riecht",
+                "damit er weich wird"
+              ],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "hallowenQuestSeven.questFive",
+              "options": [
+                "sonnig und heiß",
+                "stimmungsvoll und dunkel",
+                "langweilig",
+                "sehr laut wie am Flughafen"
+              ],
+              "correctOptionIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-8",
+      "title": "Чтение: Поход за сладостями",
+      "rewardCoins": 20,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-2",
+          "text": "Sobald es dunkel wird, ziehen Lukas und Mia verkleidet durch ihr Wohnviertel. Lukas ist als Vampir mit schwarzem Umhang verkleidet, Mia als kleine Hexe mit spitzem Hut. Sie klingeln an Haustüren und rufen laut: 'Süßes, sonst gibt's Saures!' Die Nachbarn lachen und füllen ihre Taschen mit Schokolade.",
+          "questions": [
+            {
+              "question": "hallowenQuestEight.questOne",
+              "options": [
+                "sobald es dunkel wird",
+                "am frühen Morgen",
+                "um 12 Uhr mittags",
+                "nur bei Regen"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "hallowenQuestEight.questTwo",
+              "options": [
+                "als Gespenst",
+                "als Zauberer",
+                "als Vampir",
+                "als Ritter"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "hallowenQuestEight.questThree",
+              "options": [
+                "eine Krone",
+                "einen Helm",
+                "einen spitzen Hut",
+                "ein Tuch"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "hallowenQuestEight.questFour",
+              "options": [
+                "Guten Abend allerseits!",
+                "Süßes, sonst gibt's Saures!",
+                "Frohes neues Jahr!",
+                "Hilfe, ein Monster!"
+              ],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "hallowenQuestEight.questFive",
+              "options": [
+                "Schokolade",
+                "Obst und Gemüse",
+                "Bücher",
+                "Spielzeugautos"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-9",
+      "title": "Чтение: Замок Франкенштейна",
+      "rewardCoins": 20,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-3",
+          "title": "Замок Франкенштейна",
+          "text": "In der Nähe von Darmstadt liegt die Burg Frankenstein. Seit vielen Jahren ist die alte Burgruine im Oktober ein Treffpunkt für Gruselfans aus ganz Deutschland. Schauspieler verkleiden sich als Monster und erschrecken mutige Besucher im dichten Herbstnebel.",
+          "questions": [
+            {
+              "question": "hallowenQuestNine.questOne",
+              "options": [
+                "in der Nähe von Darmstadt",
+                "mitten in Berlin",
+                "in den Alpen",
+                "an der Nordsee"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "hallowenQuestNine.questTwo",
+              "options": [
+                "ein modernes Hotel",
+                "ein Kindergarten",
+                "eine Burgruine",
+                "ein Bauernhof"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "hallowenQuestNine.questThree",
+              "options": [
+                "Touristenführer",
+                "Schauspieler",
+                "Schulkinder",
+                "Bauarbeiter"
+              ],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "hallowenQuestNine.questFour",
+              "options": [
+                "sie füttern sie",
+                "sie fotografieren sie",
+                "sie erschrecken sie",
+                "sie schicken sie weg"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "hallowenQuestNine.questFive",
+              "options": [
+                "dichter Herbstnebel",
+                "starker Schneesturm",
+                "sommerliche Hitze",
+                "Wüstenwind"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-10",
+      "title": "Чтение: Реформация и праздник",
+      "rewardCoins": 20,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-4",
+          "title": "Реформация и праздник масок",
+          "text": "In Deutschland ist der 31. Oktober nicht nur Halloween. Für evangelische Christen ist es der Reformationstag, der an Martin Luther erinnert. In vielen Bundesländern ist dieser Tag ein gesetzlicher Feiertag. Während tagsüber Gottesdienste gefeiert werden, gehört der Abend oft den Gruselpartys der Jugend.",
+          "questions": [
+            {
+              "question": "hallowenQuestTen.questOne",
+              "options": [
+                "an Martin Luther",
+                "an Sankt Martin",
+                "an Nikolaus",
+                "an Johann Wolfgang von Goethe"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "hallowenQuestTen.questTwo",
+              "options": [
+                "ein normaler Arbeitstag ohne Schule",
+                "ein Trauertag",
+                "ein gesetzlicher Feiertag",
+                "ein Sporttag"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "hallowenQuestTen.questThree",
+              "options": [
+                "Schulprüfungen",
+                "Gottesdienste",
+                "Kürbisrennen",
+                "Laternenumzüge"
+              ],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "hallowenQuestTen.questFour",
+              "options": [
+                "den Chören",
+                "den Schulklassen",
+                "den Handwerkern",
+                "den Gruselpartys der Jugend"
+              ],
+              "correctOptionIndex": 3
+            },
+            {
+              "question": "hallowenQuestTen.questFive",
+              "options": [
+                "evangelische Christen",
+                "orthodoxe Christen",
+                "buddhistische Mönche",
+                "nur Sportvereine"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-11",
+      "title": "Чтение: Старинный дух из репы",
+      "rewardCoins": 20,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-5",
+          "title": "Дух из репы",
+          "text": "Bevor der amerikanische Kürbis nach Europa kam, schnitzten Kinder im Schwarzwald und in der Schweiz Futterrüben. Diese nannten sie 'Rübengeister'. Man stellte eine Kerze hinein und trug die leuchtende Rübe von Haus zu Haus, um die Ernte zu feiern und den Winter zu begrüßen.",
+          "questions": [
+            {
+              "question": "hallowenQuestEleven.questOne",
+              "options": [
+                "Äpfel",
+                "Wassermelonen",
+                "Futterrüben",
+                "Holzscheite"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "hallowenQuestEleven.questTwo",
+              "options": [
+                "Rübengeister",
+                "Kürbisköpfe",
+                "Holzmänner",
+                "Nachtschwärmer"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "hallowenQuestEleven.questThree",
+              "options": [
+                "nur an der Ostsee",
+                "im Schwarzwald und in der Schweiz",
+                "in Italien",
+                "in den Niederlanden"
+              ],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "hallowenQuestEleven.questFour",
+              "options": [
+                "eine Kerze",
+                "eine Kartoffel",
+                "Mehl",
+                "Öl"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "hallowenQuestEleven.questFive",
+              "options": [
+                "der Winter",
+                "der Frühling",
+                "der Sommer",
+                "der Herbstbeginn"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-12",
+      "title": "Чтение: День всех святых",
+      "rewardCoins": 20,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-6",
+          "title": "День всех святых",
+          "text": "Direkt nach Halloween folgt der 1. November: Allerheiligen. In katholisch geprägten Regionen wie Bayern oder Österreich ist dies ein stiller Feiertag. Die Familien gehen auf den Friedhof, stellen Lichter auf die Gräber ihrer Verwandten und gedenken der Verstorbenen in Ruhe.",
+          "questions": [
+            {
+              "question": "hallowenQuestTwelve.questOne",
+              "options": [
+                "Allerseelen",
+                "Sankt Martin",
+                "Allerheiligen",
+                "Erntedank"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "hallowenQuestTwelve.questTwo",
+              "options": [
+                "laute Musik und Tanzen sind verboten",
+                "alle Geschäfte öffnen die ganze Nacht",
+                "man darf nicht sprechen",
+                "man bleibt nur im Bett"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "hallowenQuestTwelve.questThree",
+              "options": [
+                "in die Berge zum Skifahren",
+                "auf den Friedhof",
+                "ins Kino",
+                "in die Schule"
+              ],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "hallowenQuestTwelve.questFour",
+              "options": [
+                "Kürbisse und Süßigkeiten",
+                "Bücher",
+                "Lichter und Blumen",
+                "Bäume"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "hallowenQuestTwelve.questFive",
+              "options": [
+                "in Bayern und Österreich",
+                "in Dänemark",
+                "in England",
+                "in Schweden"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-13",
+      "title": "Чтение: Праздник святого Мартина",
+      "rewardCoins": 20,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-7",
+          "title": "День святого Мартина",
+          "text": "Nur elf Tage nach Halloween, am 11. November, feiern die Kinder in Deutschland den Martinstag. Sie tragen bunte, selbstgemachte Papierlaternen durch die Straßen und singen traditionelle Martinslieder. Am Ende gibt es oft ein wärmendes Martinsfeuer und süßes Hefegebäck wie den Weckmann.",
+          "questions": [
+            {
+              "question": "hallowenQuestThirteen.questOne",
+              "options": [
+                "am 31. Oktober",
+                "am 11. November",
+                "am 6. Dezember",
+                "am 1. November"
+              ],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "hallowenQuestThirteen.questTwo",
+              "options": [
+                "Kürbisse",
+                "Taschenlampen",
+                "bunte Papierlaternen",
+                "Glocken"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "hallowenQuestThirteen.questThree",
+              "options": [
+                "traditionelle Martinslieder",
+                "Halloween-Lieder",
+                "Weihnachtslieder",
+                "Geburtstagslieder"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "hallowenQuestThirteen.questFour",
+              "options": [
+                "nur eine Kerze",
+                "ein Haus",
+                "ein großes Martinsfeuer",
+                "ein Ofen"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "hallowenQuestThirteen.questFive",
+              "options": [
+                "einen Stollen",
+                "einen Weckmann (Stutenkerl)",
+                "eine Brezel",
+                "ein Croissant"
+              ],
+              "correctOptionIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-14",
+      "title": "Чтение: Выставка тыкв в Людвигсбурге",
+      "rewardCoins": 20,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-8",
+          "title": "Выставка тыкв в Людвигсбурге",
+          "text": "Jedes Jahr im Herbst verwandelt sich der Park des Schlosses Ludwigsburg in Baden-Württemberg in ein riesiges Kürbismeer. Hunderttausende Kürbisse werden zu gigantischen Skulpturen und Fabelwesen zusammengesteckt. Besucher aus ganz Europa probieren dort Kürbissuppe, Kürbis-Maultaschen und geröstete Kerne.",
+          "questions": [
+            {
+              "question": "hallowenQuestfourteen.questOne",
+              "options": [
+                "im Schloss Ludwigsburg",
+                "im Schloss Sanssouci",
+                "am Brandenburger Tor",
+                "im Kölner Dom"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "hallowenQuestfourteen.questTwo",
+              "options": [
+                "aus Holz und Metall",
+                "aus Eis und Schnee",
+                "aus Kürbissen",
+                "aus Plastik"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "hallowenQuestfourteen.questThree",
+              "options": [
+                "Kürbissuppe und Kürbis-Maultaschen",
+                "nur Schokolade",
+                "Pommes mit Mayo",
+                "Pizza Margherita"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "hallowenQuestfourteen.questFour",
+              "options": [
+                "etwa fünfzig Stück",
+                "Hunderttausende",
+                "zehn Stück",
+                "eine Million Kilo Äpfel"
+              ],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "hallowenQuestfourteen.questFive",
+              "options": [
+                "im Herbst",
+                "im Frühling",
+                "im Hochsommer",
+                "mitten im Winter"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-15",
+      "title": "Чтение: Игры на вечеринке",
+      "rewardCoins": 20,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-9",
+          "title": "Ловля яблок без рук",
+          "text": "Auf der Halloweenparty spielen die Kinder ein lustiges Spiel: Apfeltauchen. Eine große Schüssel wird mit kaltem Wasser gefüllt, und rote Äpfel schwimmen an der Oberfläche. Die Kinder müssen die Hände hinter den Rücken legen und versuchen, einen Apfel nur mit den Zähnen aus dem Wasser zu holen.",
+          "questions": [
+            {
+              "question": "hallowenQuestfifteen.questOne",
+              "options": [
+                "Kürbisrennen",
+                "Schokoladenspiel",
+                "Apfeltauchen",
+                "Topfschlagen"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "hallowenQuestfifteen.questTwo",
+              "options": [
+                "mit kaltem Wasser",
+                "mit heißer Suppe",
+                "mit Limonade",
+                "mit Mehl"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "hallowenQuestfifteen.questThree",
+              "options": [
+                "kleine Bälle",
+                "rote Äpfel",
+                "süße Bonbons",
+                "Plastikspinnen"
+              ],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "hallowenQuestfifteen.questFour",
+              "options": [
+                "hinter den Rücken",
+                "in die Hosentaschen",
+                "auf den Kopf",
+                "unter den Tisch"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "hallowenQuestfifteen.questFive",
+              "options": [
+                "mit einem Löffel",
+                "mit einer Gabel",
+                "mit den Füßen",
+                "nur mit den Zähnen"
+              ],
+              "correctOptionIndex": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-16",
+      "title": "Чтение: Веселая мумия",
+      "rewardCoins": 20,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-10",
+          "title": "Мумия из бумаги",
+          "text": "Das nächste Spiel bringt alle zum Lachen: Mumien wickeln! Zwei Teams treten gegeneinander an. Jedes Team wählt ein Kind aus, das zur Mumie wird. Mit vielen Rollen Toilettenpapier muss die Figur so schnell wie möglich von Kopf bis Fuß eingewickelt werden. Das schnellste Team gewinnt.",
+          "questions": [
+            {
+              "question": "hallowenQuestSixteen.questOne",
+              "options": [
+                "Geister fangen",
+                "Mumien wickeln",
+                "Kürbisse wiegen",
+                "Versteckspiel"
+              ],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "hallowenQuestSixteen.questTwo",
+              "options": [
+                "sie schlafen im Kreis",
+                "sie gehen nach Hause",
+                "sie treten gegeneinander an",
+                "sie lesen ein Buch"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "hallowenQuestSixteen.questThree",
+              "options": [
+                "einen Lehrer",
+                "ein Kind als Mumie",
+                "eine Katze",
+                "einen Schiedsrichter"
+              ],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "hallowenQuestSixteen.questFour",
+              "options": [
+                "dicke Decken",
+                "alte Zeitungen",
+                "Rollen Toilettenpapier",
+                "Seile"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "hallowenQuestSixteen.questFive",
+              "options": [
+                "das schnellste Team",
+                "das lauteste Team",
+                "das größte Team",
+                "das langsamste Team"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-17",
+      "title": "Соедини пары: Картинка и Слово",
+      "rewardCoins": 20,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "matching",
+          "id": "match-words-1",
+          "instruction": "hallowenQuestSeventeen.title",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "die Fledermaus"
+            },
+            {
+              "id": "l2",
+              "text": "der Besen"
+            },
+            {
+              "id": "l3",
+              "text": "die Kerze"
+            },
+            {
+              "id": "l4",
+              "text": "die Süßigkeiten"
+            },
+            {
+              "id": "l5",
+              "text": "die schwarze Katze"
+            },
+            {
+              "id": "l6",
+              "text": "der Vampir"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "hallowenQuestSeventeen.wordOne"
+            },
+            {
+              "id": "r2",
+              "text": "hallowenQuestSeventeen.wordTwo"
+            },
+            {
+              "id": "r3",
+              "text": "hallowenQuestSeventeen.wordThree"
+            },
+            {
+              "id": "r4",
+              "text": "hallowenQuestSeventeen.wordFour"
+            },
+            {
+              "id": "r5",
+              "text": "hallowenQuestSeventeen.wordFive"
+            },
+            {
+              "id": "r6",
+              "text": "hallowenQuestSeventeen.wordSix"
+            }
+          ],
+          "correctPairs": [
+            ["l1", "r2"],
+            ["l2", "r5"],
+            ["l3", "r4"],
+            ["l4", "r1"],
+            ["l5", "r6"],
+            ["l6", "r3"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-words-2",
+          "instruction": "hallowenQuestSeventeen.title",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "das Gespenst"
+            },
+            {
+              "id": "l2",
+              "text": "der Geist"
+            },
+            {
+              "id": "l3",
+              "text": "der Kürbis"
+            },
+            {
+              "id": "l4",
+              "text": "der Rabe"
+            },
+            {
+              "id": "l5",
+              "text": "das Skelett"
+            },
+            {
+              "id": "l6",
+              "text": "das Zauberbuch"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "hallowenQuestSeventeen.wordSeven"
+            },
+            {
+              "id": "r2",
+              "text": "hallowenQuestSeventeen.wordEight"
+            },
+            {
+              "id": "r3",
+              "text": "hallowenQuestSeventeen.wordNine"
+            },
+            {
+              "id": "r4",
+              "text": "hallowenQuestSeventeen.wordTen"
+            },
+            {
+              "id": "r5",
+              "text": "hallowenQuestSeventeen.wordEleven"
+            },
+            {
+              "id": "r6",
+              "text": "hallowenQuestSeventeen.wordTwelve"
+            }
+          ],
+          "correctPairs": [
+            ["l1", "r3"],
+            ["l2", "r5"],
+            ["l3", "r1"],
+            ["l4", "r6"],
+            ["l5", "r2"],
+            ["l6", "r4"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-words-3",
+          "instruction": "hallowenQuestSeventeen.title",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "die Spinne"
+            },
+            {
+              "id": "l2",
+              "text": "der Hexenkessel"
+            },
+            {
+              "id": "l3",
+              "text": "der Zauberstab"
+            },
+            {
+              "id": "l4",
+              "text": "der Hexenbesen"
+            },
+            {
+              "id": "l5",
+              "text": "der Hexenhut"
+            },
+            {
+              "id": "l6",
+              "text": "der Zauberer"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "hallowenQuestSeventeen.wordThirteen"
+            },
+            {
+              "id": "r2",
+              "text": "hallowenQuestSeventeen.wordFourteen"
+            },
+            {
+              "id": "r3",
+              "text": "hallowenQuestSeventeen.wordFifteen"
+            },
+            {
+              "id": "r4",
+              "text": "hallowenQuestSeventeen.wordSixteen"
+            },
+            {
+              "id": "r5",
+              "text": "hallowenQuestSeventeen.wordSeventeen"
+            },
+            {
+              "id": "r6",
+              "text": "hallowenQuestSeventeen.wordEighteen"
+            }
+          ],
+          "correctPairs": [
+            ["l1", "r3"],
+            ["l2", "r5"],
+            ["l3", "r6"],
+            ["l4", "r4"],
+            ["l5", "r1"],
+            ["l6", "r2"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-18",
+      "title": "Соедини пары: Атрибуты праздника",
+      "rewardCoins": 40,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "matching",
+          "id": "match-1",
+          "instruction": "Соедини предмет с его кратким описанием",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Kürbis"
+            },
+            {
+              "id": "l2",
+              "text": "Fledermaus"
+            },
+            {
+              "id": "l3",
+              "text": "Spinnennetz"
+            },
+            {
+              "id": "l4",
+              "text": "Hexenbesen"
+            },
+            {
+              "id": "l5",
+              "text": "Grabstein"
+            },
+            {
+              "id": "l6",
+              "text": "Vampirumhang"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "Паутина по углам"
+            },
+            {
+              "id": "r2",
+              "text": "Плащ с красным воротником"
+            },
+            {
+              "id": "r3",
+              "text": "Фонарь с лицом"
+            },
+            {
+              "id": "r4",
+              "text": "Камень на кладбище"
+            },
+            {
+              "id": "r5",
+              "text": "Летает в темноте"
+            },
+            {
+              "id": "r6",
+              "text": "Ведьма летает на этом"
+            }
+          ],
+          "correctPairs": [
+            ["l1", "r3"],
+            ["l2", "r5"],
+            ["l3", "r1"],
+            ["l4", "r6"],
+            ["l5", "r4"],
+            ["l6", "r2"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-2",
+          "instruction": "Соедини персонажа с его характерным признаком",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Vampir"
+            },
+            {
+              "id": "l2",
+              "text": "Hexe"
+            },
+            {
+              "id": "l3",
+              "text": "Gespenst"
+            },
+            {
+              "id": "l4",
+              "text": "Skelett"
+            },
+            {
+              "id": "l5",
+              "text": "Mumie"
+            },
+            {
+              "id": "l6",
+              "text": "Werwolf"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "hallowenQuestEightteen.textSeven"
+            },
+            {
+              "id": "r2",
+              "text": "hallowenQuestEightteen.textEight"
+            },
+            {
+              "id": "r3",
+              "text": "hallowenQuestEightteen.textNine"
+            },
+            {
+              "id": "r4",
+              "text": "hallowenQuestEightteen.textTen"
+            },
+            {
+              "id": "r5",
+              "text": "hallowenQuestEightteen.textEleven"
+            },
+            {
+              "id": "r6",
+              "text": "hallowenQuestEightteen.textTwelve"
+            }
+          ],
+          "correctPairs": [
+            ["l1", "r2"],
+            ["l2", "r5"],
+            ["l3", "r4"],
+            ["l4", "r1"],
+            ["l5", "r6"],
+            ["l6", "r3"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-3",
+          "instruction": "hallowenQuestEightteen.titleThree",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Halloween"
+            },
+            {
+              "id": "l2",
+              "text": "Reformationstag"
+            },
+            {
+              "id": "l3",
+              "text": "Allerheiligen"
+            },
+            {
+              "id": "l4",
+              "text": "Martinstag"
+            },
+            {
+              "id": "l5",
+              "text": "Geisterstunde"
+            },
+            {
+              "id": "l6",
+              "text": "Karneval"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "hallowenQuestEightteen.textThirteen"
+            },
+            {
+              "id": "r2",
+              "text": "hallowenQuestEightteen.textFourteen"
+            },
+            {
+              "id": "r3",
+              "text": "hallowenQuestEightteen.textFifteen"
+            },
+            {
+              "id": "r4",
+              "text": "hallowenQuestEightteen.textSixteen"
+            },
+            {
+              "id": "r5",
+              "text": "hallowenQuestEightteen.textSeventeen"
+            },
+            {
+              "id": "r6",
+              "text": "hallowenQuestEightteen.textEighteen"
+            }
+          ],
+          "correctPairs": [
+            ["l1", "r3"],
+            ["l2", "r5"],
+            ["l3", "r1"],
+            ["l4", "r6"],
+            ["l5", "r2"],
+            ["l6", "r4"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-19",
+      "title": "Соедини пары: Немецкие предания",
+      "rewardCoins": 40,
+      "rewardRep": 40,
+      "steps": [
+        {
+          "type": "matching",
+          "id": "match-trad-1",
+          "instruction": "hallowenQuestNineteen.title",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Rübengeistern"
+            },
+            {
+              "id": "l2",
+              "text": "Geisterstunde"
+            },
+            {
+              "id": "l3",
+              "text": "Stiller Feiertag"
+            },
+            {
+              "id": "l4",
+              "text": "Laternenumzug"
+            },
+            {
+              "id": "l5",
+              "text": "Blocksberg"
+            },
+            {
+              "id": "l6",
+              "text": "Erlkönig"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "hallowenQuestNineteen.wordOne"
+            },
+            {
+              "id": "r2",
+              "text": "hallowenQuestNineteen.wordTwo"
+            },
+            {
+              "id": "r3",
+              "text": "hallowenQuestNineteen.wordThree"
+            },
+            {
+              "id": "r4",
+              "text": "hallowenQuestNineteen.wordFour"
+            },
+            {
+              "id": "r5",
+              "text": "hallowenQuestNineteen.wordFive"
+            },
+            {
+              "id": "r6",
+              "text": "hallowenQuestNineteen.wordSix"
+            }
+          ],
+          "correctPairs": [
+            ["l1", "r5"],
+            ["l2", "r3"],
+            ["l3", "r6"],
+            ["l4", "r2"],
+            ["l5", "r1"],
+            ["l6", "r4"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-trad-2",
+          "instruction": "hallowenQuestNineteen.title",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Knoblauch"
+            },
+            {
+              "id": "l2",
+              "text": "Kerzenlicht"
+            },
+            {
+              "id": "l3",
+              "text": "Salz"
+            },
+            {
+              "id": "l4",
+              "text": "Maske"
+            },
+            {
+              "id": "l5",
+              "text": "Silber"
+            },
+            {
+              "id": "l6",
+              "text": "Hufeisen"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "hallowenQuestNineteen.wordSeven"
+            },
+            {
+              "id": "r2",
+              "text": "hallowenQuestNineteen.wordEight"
+            },
+            {
+              "id": "r3",
+              "text": "hallowenQuestNineteen.wordNine"
+            },
+            {
+              "id": "r4",
+              "text": "hallowenQuestNineteen.wordTen"
+            },
+            {
+              "id": "r5",
+              "text": "hallowenQuestNineteen.wordEleven"
+            },
+            {
+              "id": "r6",
+              "text": "hallowenQuestNineteen.wordTwelve"
+            }
+          ],
+          "correctPairs": [
+            ["l1", "r3"],
+            ["l2", "r1"],
+            ["l3", "r4"],
+            ["l4", "r6"],
+            ["l5", "r5"],
+            ["l6", "r2"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-trad-3",
+          "instruction": "hallowenQuestNineteen.title",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Zaubertrank"
+            },
+            {
+              "id": "l2",
+              "text": "Friedhof"
+            },
+            {
+              "id": "l3",
+              "text": "Sarg"
+            },
+            {
+              "id": "l4",
+              "text": "Schlossruine"
+            },
+            {
+              "id": "l5",
+              "text": "Knochen"
+            },
+            {
+              "id": "l6",
+              "text": "Nebel"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "hallowenQuestNineteen.wordThirteen"
+            },
+            {
+              "id": "r2",
+              "text": "hallowenQuestNineteen.wordFourteen"
+            },
+            {
+              "id": "r3",
+              "text": "hallowenQuestNineteen.wordFifteen"
+            },
+            {
+              "id": "r4",
+              "text": "hallowenQuestNineteen.wordSixteen"
+            },
+            {
+              "id": "r5",
+              "text": "hallowenQuestNineteen.wordSeventeen"
+            },
+            {
+              "id": "r6",
+              "text": "hallowenQuestNineteen.wordEighteen"
+            }
+          ],
+          "correctPairs": [
+            ["l1", "r2"],
+            ["l2", "r5"],
+            ["l3", "r1"],
+            ["l4", "r3"],
+            ["l5", "r6"],
+            ["l6", "r4"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-20",
+      "title": "Соедини пары: Хэллоуин и мистика",
+      "rewardCoins": 40,
+      "rewardRep": 60,
+      "steps": [
+        {
+          "type": "matching",
+          "id": "match-words-1",
+          "instruction": "hallowenQuestTwenty.title",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "das Spukhaus"
+            },
+            {
+              "id": "l2",
+              "text": "der Friedhof"
+            },
+            {
+              "id": "l3",
+              "text": "der Sarg"
+            },
+            {
+              "id": "l4",
+              "text": "die Mumie"
+            },
+            {
+              "id": "l5",
+              "text": "das Monsterschloss"
+            },
+            {
+              "id": "l6",
+              "text": "der Werwolf"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "hallowenQuestTwenty.wordOne"
+            },
+            {
+              "id": "r2",
+              "text": "hallowenQuestTwenty.wordTwo"
+            },
+            {
+              "id": "r3",
+              "text": "hallowenQuestTwenty.wordThree"
+            },
+            {
+              "id": "r4",
+              "text": "hallowenQuestTwenty.wordFour"
+            },
+            {
+              "id": "r5",
+              "text": "hallowenQuestTwenty.wordFive"
+            },
+            {
+              "id": "r6",
+              "text": "hallowenQuestTwenty.wordSix"
+            }
+          ],
+          "correctPairs": [
+            ["l1", "r3"],
+            ["l2", "r4"],
+            ["l3", "r6"],
+            ["l4", "r5"],
+            ["l5", "r1"],
+            ["l6", "r2"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-words-2",
+          "instruction": "hallowenQuestTwenty.title",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "die Gruselmaske"
+            },
+            {
+              "id": "l2",
+              "text": "der Grabstein"
+            },
+            {
+              "id": "l3",
+              "text": "das Knochengerüst"
+            },
+            {
+              "id": "l4",
+              "text": "die Mitternacht"
+            },
+            {
+              "id": "l5",
+              "text": "die Finsternis"
+            },
+            {
+              "id": "l6",
+              "text": "der Schrei"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "hallowenQuestTwenty.wordSeven"
+            },
+            {
+              "id": "r2",
+              "text": "hallowenQuestTwenty.wordEight"
+            },
+            {
+              "id": "r3",
+              "text": "hallowenQuestTwenty.wordNine"
+            },
+            {
+              "id": "r4",
+              "text": "hallowenQuestTwenty.wordTen"
+            },
+            {
+              "id": "r5",
+              "text": "hallowenQuestTwenty.wordEleven"
+            },
+            {
+              "id": "r6",
+              "text": "hallowenQuestTwenty.wordTwelve"
+            }
+          ],
+          "correctPairs": [
+            ["l1", "r3"],
+            ["l2", "r5"],
+            ["l3", "r6"],
+            ["l4", "r2"],
+            ["l5", "r1"],
+            ["l6", "r4"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-words-3",
+          "instruction": "Соедини слово с его переводом",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "das Gespensterschiff"
+            },
+            {
+              "id": "l2",
+              "text": "der Zaubertrank"
+            },
+            {
+              "id": "l3",
+              "text": "die Spinnwebe"
+            },
+            {
+              "id": "l4",
+              "text": "der Totenkopf"
+            },
+            {
+              "id": "l5",
+              "text": "das Labyrinth"
+            },
+            {
+              "id": "l6",
+              "text": "der Fluch"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r1",
+              "text": "hallowenQuestTwenty.wordThirteen"
+            },
+            {
+              "id": "r2",
+              "text": "hallowenQuestTwenty.wordFourteen"
+            },
+            {
+              "id": "r3",
+              "text": "hallowenQuestTwenty.wordFifteen"
+            },
+            {
+              "id": "r4",
+              "text": "hallowenQuestTwenty.wordSixteen"
+            },
+            {
+              "id": "r5",
+              "text": "hallowenQuestTwenty.wordSeventeen"
+            },
+            {
+              "id": "r6",
+              "text": "hallowenQuestTwenty.wordEighteen"
+            }
+          ],
+          "correctPairs": [
+            ["l1", "r2"],
+            ["l2", "r6"],
+            ["l3", "r4"],
+            ["l4", "r1"],
+            ["l5", "r5"],
+            ["l6", "r3"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-21",
+      "title": "Найди лишнее слово",
+      "rewardCoins": 40,
+      "rewardRep": 60,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "odd-1",
+          "title": "Ночные персонажи",
+          "question": "hallowenQuestTwentyOne.questOne",
+          "options": [
+            "die Fledermaus",
+            "die Eule",
+            "die Kuh",
+            "die schwarze Katze"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd-2",
+          "title": "Сладкие угощения",
+          "question": "hallowenQuestTwentyOne.questTwo",
+          "options": [
+            "die Schokolade",
+            "der Stein",
+            "die Bonbons",
+            "der Keks"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd-3",
+          "title": "Хэллоуинская символика",
+          "question": "hallowenQuestTwentyOne.questThree",
+          "options": [
+            "die Fledermaus",
+            "der Kürbis",
+            "das Gespenst",
+            "der Apfelkuchen"
+          ],
+          "correctOptionIndex": 3
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd-4",
+          "title": "Осенние огоньки",
+          "question": "hallowenQuestTwentyOne.questFour",
+          "options": [
+            "die Laterne",
+            "die Kerze",
+            "der Schal",
+            "die Lichterkette"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd-5",
+          "title": "Осенние атрибуты",
+          "question": "hallowenQuestTwentyOne.questFive",
+          "options": [
+            "der Kürbis",
+            "die Sonnenbrille",
+            "die bunte Laterne",
+            "das gelbe Herbstblatt"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd-6",
+          "title": "Магические вещи",
+          "question": "hallowenQuestTwentyOne.questSix",
+          "options": [
+            "der Zauberstab",
+            "der Zaubertrank",
+            "der Hexenbesen",
+            "die Kaffeemaschine"
+          ],
+          "correctOptionIndex": 3
+        }
+      ]
+    },
+    {
+      "id": "quest-22",
+      "title": "Найди лишнее слово: Часть 2",
+      "rewardCoins": 40,
+      "rewardRep": 60,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "odd2-1",
+          "title": "Осенняя погода",
+          "question": "hallowenQuestTwentyTwo.questOne",
+          "options": [
+            "der Nebel",
+            "der Wind",
+            "die heiße Strandsonne",
+            "die Kälte"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd2-2",
+          "title": "Одежда для праздника",
+          "question": "hallowenQuestTwentyTwo.questTwo",
+          "options": [
+            "die Maske",
+            "der Umhang",
+            "die Badehose",
+            "der Hut"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd2-3",
+          "title": "На кухне у ведьмы",
+          "question": "hallowenQuestTwentyTwo.questThree",
+          "options": [
+            "der Hexenkessel",
+            "die Zauberflasche",
+            "der Kochlöffel",
+            "der Tennisschläger"
+          ],
+          "correctOptionIndex": 3
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd2-4",
+          "title": "Атрибуты вампира",
+          "question": "hallowenQuestTwentyTwo.questFour",
+          "options": [
+            "die spitzen Zähne",
+            "der Sarg",
+            "der Knoblauch",
+            "der schwarze Mantel"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd2-5",
+          "title": "Обитатели замка",
+          "question": "hallowenQuestTwentyTwo.questFive",
+          "options": [
+            "die Fledermaus",
+            "die Eule",
+            "die Taube"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "odd2-6",
+          "title": "Осенние напитки",
+          "question": "hallowenQuestTwentyTwo.questSix",
+          "options": [
+            "der warme Kakao",
+            "der heiße Apfelsaft",
+            "die kalte Limonade",
+            "der Pfefferminztee"
+          ],
+          "correctOptionIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "quest-23",
+      "title": "Соедини противоположности",
+      "rewardCoins": 40,
+      "rewardRep": 60,
+      "steps": [
+        {
+          "type": "matching",
+          "id": "match-opposites-1",
+          "instruction": "hallowenQuestTwentyThree.title",
+          "pairsLeft": [
+            { "id": "l1", "text": "dunkel" },
+            { "id": "l2", "text": "süß" },
+            { "id": "l3", "text": "kalt" },
+            { "id": "l4", "text": "groß" },
+            { "id": "l5", "text": "laut" },
+            { "id": "l6", "text": "alt" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "warm" },
+            { "id": "r2", "text": "leise" },
+            { "id": "r3", "text": "hell" },
+            { "id": "r4", "text": "neu" },
+            { "id": "r5", "text": "sauer" },
+            { "id": "r6", "text": "klein" }
+          ],
+          "correctPairs": [
+            ["l1", "r3"],
+            ["l2", "r5"],
+            ["l3", "r1"],
+            ["l4", "r6"],
+            ["l5", "r2"],
+            ["l6", "r4"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-opposites-2",
+          "instruction": "hallowenQuestTwentyThree.title",
+          "pairsLeft": [
+            { "id": "l1", "text": "schnell" },
+            { "id": "l2", "text": "mutig" },
+            { "id": "l3", "text": "traurig" },
+            { "id": "l4", "text": "schwer" },
+            { "id": "l5", "text": "sauber" },
+            { "id": "l6", "text": "stark" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "schmutzig" },
+            { "id": "r2", "text": "fröhlich" },
+            { "id": "r3", "text": "schwach" },
+            { "id": "r4", "text": "langsam" },
+            { "id": "r5", "text": "ängstlich" },
+            { "id": "r6", "text": "leicht" }
+          ],
+          "correctPairs": [
+            ["l1", "r4"],
+            ["l2", "r5"],
+            ["l3", "r2"],
+            ["l4", "r6"],
+            ["l5", "r1"],
+            ["l6", "r3"]
+          ]
+        }
       ]
     }
   ]

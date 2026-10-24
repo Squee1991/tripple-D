@@ -170,7 +170,7 @@
         "id": 1,
         "type": "reorder",
         "question": "actionValleyQuestTwo.questOne",
-        "words": ["mit", "dem", "Freund", "gehe", "Ich", "der"],
+        "words": ["mit", "dem", "Freund", "gehe", "Ich"],
         "correctOrder": ["Ich", "gehe", "mit", "dem", "Freund"]
       },
       {

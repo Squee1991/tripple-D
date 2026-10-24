@@ -1,0 +1,3003 @@
+[
+  {
+    "questId": "place-prep-one",
+    "title": "placePrepositions.questTitle",
+    "progress": "0/15",
+    "description": "placePrepositions.questDescription",
+    "conditions": {
+      "goal": "placePrepositions.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "in",
+        "translation-ru": "В (внутри)",
+        "translation-en": "In / Inside",
+        "translation-uk": "В / У (всередині)",
+        "translation-pl": "W",
+        "translation-es": "En",
+        "translation-fr": "Dans",
+        "translation-ar": "في",
+        "translation-hi": "में",
+        "translation-ro": "În",
+        "translation-tr": "İçinde",
+        "translation-uz": "Ichida"
+      },
+      {
+        "word": "an",
+        "translation-ru": "На (вертикали) / У / Возле",
+        "translation-en": "At / On (vertical surface)",
+        "translation-uk": "На (вертикалі) / Біля",
+        "translation-pl": "Na / Przy",
+        "translation-es": "En / Junto a",
+        "translation-fr": "À / Au bord de",
+        "translation-ar": "على / بجانب",
+        "translation-hi": "पर / पास",
+        "translation-ro": "La / Pe",
+        "translation-tr": "Yanında / Duvarında",
+        "translation-uz": "Oldida / Devorida"
+      },
+      {
+        "word": "auf",
+        "translation-ru": "На (горизонтали)",
+        "translation-en": "On / On top of",
+        "translation-uk": "На (горизонталі)",
+        "translation-pl": "Na",
+        "translation-es": "Sobre / Encima de",
+        "translation-fr": "Sur",
+        "translation-ar": "على",
+        "translation-hi": "पर (सतह पर)",
+        "translation-ro": "Pe",
+        "translation-tr": "Üstünde",
+        "translation-uz": "Ustida"
+      },
+      {
+        "word": "unter",
+        "translation-ru": "Под",
+        "translation-en": "Under",
+        "translation-uk": "Під",
+        "translation-pl": "Pod",
+        "translation-es": "Bajo / Debajo de",
+        "translation-fr": "Sous",
+        "translation-ar": "تحت",
+        "translation-hi": "नीचे",
+        "translation-ro": "Sub",
+        "translation-tr": "Altında",
+        "translation-uz": "Tagida"
+      },
+      {
+        "word": "über",
+        "translation-ru": "Над",
+        "translation-en": "Over / Above",
+        "translation-uk": "Над",
+        "translation-pl": "Nad",
+        "translation-es": "Sobre / Encima de",
+        "translation-fr": "Au-dessus de",
+        "translation-ar": "فوق",
+        "translation-hi": "के ऊपर",
+        "translation-ro": "Deasupra",
+        "translation-tr": "Üzerinde",
+        "translation-uz": "Tepasida"
+      },
+      {
+        "word": "der Tisch",
+        "translation-ru": "Стол",
+        "translation-en": "Table",
+        "translation-uk": "Стіл",
+        "translation-pl": "Stół",
+        "translation-es": "Mesa",
+        "translation-fr": "Table",
+        "translation-ar": "طاولة",
+        "translation-hi": "मेज़",
+        "translation-ro": "Masă",
+        "translation-tr": "Masa",
+        "translation-uz": "Stol"
+      },
+      {
+        "word": "die Wand",
+        "translation-ru": "Стена",
+        "translation-en": "Wall",
+        "translation-uk": "Стіна",
+        "translation-pl": "Ściana",
+        "translation-es": "Pared",
+        "translation-fr": "Mur",
+        "translation-ar": "جدار",
+        "translation-hi": "दीवार",
+        "translation-ro": "Perete",
+        "translation-tr": "Duvar",
+        "translation-uz": "Devor"
+      },
+      {
+        "word": "die Tasche",
+        "translation-ru": "Сумка",
+        "translation-en": "Bag",
+        "translation-uk": "Сумка",
+        "translation-pl": "Torba",
+        "translation-es": "Bolsa",
+        "translation-fr": "Sac",
+        "translation-ar": "حقيبة",
+        "translation-hi": "थैला / बैग",
+        "translation-ro": "Geantă",
+        "translation-tr": "Çanta",
+        "translation-uz": "Sumka"
+      },
+      {
+        "word": "liegen",
+        "translation-ru": "Лежать",
+        "translation-en": "To lie / To be situated",
+        "translation-uk": "Лежати",
+        "translation-pl": "Leżeć",
+        "translation-es": "Estar acostado",
+        "translation-fr": "Être couché / Être posé",
+        "translation-ar": "يستلقي",
+        "translation-hi": "पड़ा होना",
+        "translation-ro": "A sta culcat",
+        "translation-tr": "Yatmak / Durmak",
+        "translation-uz": "Yotmoq"
+      },
+      {
+        "word": "hängen",
+        "translation-ru": "Висеть",
+        "translation-en": "To hang",
+        "translation-uk": "Висіти",
+        "translation-pl": "Wisieć",
+        "translation-es": "Colgar",
+        "translation-fr": "Être suspendu",
+        "translation-ar": "يعلق",
+        "translation-hi": "लटकना",
+        "translation-ro": "A atârna",
+        "translation-tr": "Asılı olmak",
+        "translation-uz": "Osilib turmoq"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "placePrepositions.questTask1",
+        "options": [
+          "auf dem Tisch",
+          "unter dem Tisch",
+          "in dem Tisch"
+        ],
+        "answer": "auf dem Tisch"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "placePrepositions.questTask2",
+        "words": [
+          "liegt",
+          "auf",
+          "Buch",
+          "dem",
+          "Tisch",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "Buch",
+          "liegt",
+          "auf",
+          "dem",
+          "Tisch"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "placePrepositions.questTask3",
+        "options": [
+          "an der Wand",
+          "auf der Wand",
+          "in der Wand"
+        ],
+        "answer": "an der Wand"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "placePrepositions.questTask4",
+        "words": [
+          "an",
+          "Bild",
+          "hängt",
+          "Wand",
+          "der",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "Bild",
+          "hängt",
+          "an",
+          "der",
+          "Wand"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "placePrepositions.questTask5",
+        "correctAnswer": "in"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "placePrepositions.questTask6",
+        "words": [
+          "liegt",
+          "Schlüssel",
+          "in",
+          "Tasche",
+          "der",
+          "Der"
+        ],
+        "correctOrder": [
+          "Der",
+          "Schlüssel",
+          "liegt",
+          "in",
+          "der",
+          "Tasche"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "placePrepositions.questTask7",
+        "options": [
+          "Der Hund schläft unter dem Tisch",
+          "Der Hund schläft unter den Tisch",
+          "Der Hund schläft über dem Tisch"
+        ],
+        "answer": "Der Hund schläft unter dem Tisch"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "placePrepositions.questTask8",
+        "words": [
+          "schläft",
+          "unter",
+          "dem",
+          "Die",
+          "Katze",
+          "Bett"
+        ],
+        "correctOrder": [
+          "Die",
+          "Katze",
+          "schläft",
+          "unter",
+          "dem",
+          "Bett"
+        ]
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "— Wo ist mein Schlüssel? Auf dem Tisch liegt er nicht. — Schau mal, er ist in deiner Tasche!",
+        "question": "placePrepositions.questTask9",
+        "options": [
+          "in der Tasche",
+          "auf dem Tisch",
+          "unter dem Sofa"
+        ],
+        "answer": "in der Tasche"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "placePrepositions.questTask10",
+        "correctAnswer": "an"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "placePrepositions.questTask11",
+        "words": ["über", "dem", "Lampe", "hängt", "Die", "Sofa"],
+        "correctOrder": ["Die", "Lampe", "hängt", "über", "dem", "Sofa"]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "placePrepositions.questTask12",
+        "options": [
+          "Wir sitzen am Tisch",
+          "Wir sitzen im Tisch",
+          "Wir sitzen auf den Tisch"
+        ],
+        "answer": "Wir sitzen am Tisch"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Wo ist mein Handy? Liegt es auf dem Tisch? — Nein, schau mal unter das Sofa!",
+        "question": "placePrepositions.questTask13",
+        "options": [
+          "unter dem Sofa",
+          "auf dem Tisch",
+          "in der Tasche"
+        ],
+        "answer": "unter dem Sofa"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "placePrepositions.questTask14",
+        "words": ["auf", "sitzen", "dem", "Sofa", "Wir"],
+        "correctOrder": ["Wir", "sitzen", "auf", "dem", "Sofa"]
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "placePrepositions.questTask15",
+        "options": [
+          "Wo liegt das Buch?",
+          "Wohin legst du das Buch?",
+          "Woher kommt das Buch?"
+        ],
+        "answer": "Wo liegt das Buch?"
+      }
+    ]
+  },
+  {
+    "questId": "place-prep-two",
+    "title": "placePrepositionsTwo.questTitle",
+    "progress": "0/15",
+    "description": "placePrepositionsTwo.questDescription",
+    "conditions": {
+      "goal": "placePrepositionsTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "vor",
+        "translation-ru": "Перед / Впереди",
+        "translation-en": "In front of",
+        "translation-uk": "Перед / Попереду",
+        "translation-pl": "Przed",
+        "translation-es": "Delante de",
+        "translation-fr": "Devant",
+        "translation-ar": "أمام",
+        "translation-hi": "के सामने",
+        "translation-ro": "În fața",
+        "translation-tr": "Önünde",
+        "translation-uz": "Oldida"
+      },
+      {
+        "word": "hinter",
+        "translation-ru": "За / Позади",
+        "translation-en": "Behind",
+        "translation-uk": "За / Позаду",
+        "translation-pl": "Za",
+        "translation-es": "Detrás de",
+        "translation-fr": "Derrière",
+        "translation-ar": "خلف / وراء",
+        "translation-hi": "के पीछे",
+        "translation-ro": "În spatele",
+        "translation-tr": "Arkasında",
+        "translation-uz": "Orqasida"
+      },
+      {
+        "word": "auf",
+        "translation-ru": "На (горизонтали)",
+        "translation-en": "On / On top of",
+        "translation-uk": "На (горизонталі)",
+        "translation-pl": "Na",
+        "translation-es": "Sobre / Encima de",
+        "translation-fr": "Sur",
+        "translation-ar": "على",
+        "translation-hi": "पर",
+        "translation-ro": "Pe",
+        "translation-tr": "Üstünde",
+        "translation-uz": "Ustida"
+      },
+      {
+        "word": "an",
+        "translation-ru": "На (вертикали) / У",
+        "translation-en": "At / On (vertical)",
+        "translation-uk": "На (вертикалі) / Біля",
+        "translation-pl": "Na / Przy",
+        "translation-es": "En / Junto a",
+        "translation-fr": "À / Contre",
+        "translation-ar": "على / عند",
+        "translation-hi": "पर / पास",
+        "translation-ro": "La / Pe",
+        "translation-tr": "Yanında / Duvarında",
+        "translation-uz": "Oldida / Devorida"
+      },
+      {
+        "word": "unter",
+        "translation-ru": "Под",
+        "translation-en": "Under",
+        "translation-uk": "Під",
+        "translation-pl": "Pod",
+        "translation-es": "Debajo de",
+        "translation-fr": "Sous",
+        "translation-ar": "تحت",
+        "translation-hi": "नीचे",
+        "translation-ro": "Sub",
+        "translation-tr": "Altında",
+        "translation-uz": "Tagida"
+      },
+      {
+        "word": "das Haus",
+        "translation-ru": "Дом",
+        "translation-en": "House",
+        "translation-uk": "Будинок",
+        "translation-pl": "Dom",
+        "translation-es": "Casa",
+        "translation-fr": "Maison",
+        "translation-ar": "منزل / بيت",
+        "translation-hi": "घर",
+        "translation-ro": "Casă",
+        "translation-tr": "Ev",
+        "translation-uz": "Uy"
+      },
+      {
+        "word": "die Tür",
+        "translation-ru": "Дверь",
+        "translation-en": "Door",
+        "translation-uk": "Двері",
+        "translation-pl": "Drzwi",
+        "translation-es": "Puerta",
+        "translation-fr": "Porte",
+        "translation-ar": "باب",
+        "translation-hi": "दरवाज़ा",
+        "translation-ro": "Ușă",
+        "translation-tr": "Kapı",
+        "translation-uz": "Eshik"
+      },
+      {
+        "word": "das Auto",
+        "translation-ru": "Машина / Автомобиль",
+        "translation-en": "Car",
+        "translation-uk": "Машина / Автомобіль",
+        "translation-pl": "Samochód",
+        "translation-es": "Coche / Auto",
+        "translation-fr": "Voiture",
+        "translation-ar": "سيارة",
+        "translation-hi": "कार / गाड़ी",
+        "translation-ro": "Mașină",
+        "translation-tr": "Araba",
+        "translation-uz": "Mashina"
+      },
+      {
+        "word": "stehen",
+        "translation-ru": "Стоять",
+        "translation-en": "To stand",
+        "translation-uk": "Стояти",
+        "translation-pl": "Stać",
+        "translation-es": "Estar de pie / Estar parado",
+        "translation-fr": "Être debout",
+        "translation-ar": "يقف",
+        "translation-hi": "खड़ा होना",
+        "translation-ro": "A sta în picioare",
+        "translation-tr": "Durmak / Ayakta durmak",
+        "translation-uz": "Turmoq"
+      },
+      {
+        "word": "der Baum",
+        "translation-ru": "Дерево",
+        "translation-en": "Tree",
+        "translation-uk": "Дерево",
+        "translation-pl": "Drzewo",
+        "translation-es": "Árbol",
+        "translation-fr": "Arbre",
+        "translation-ar": "شجرة",
+        "translation-hi": "पेड़",
+        "translation-ro": "Copac / Arbore",
+        "translation-tr": "Ağaç",
+        "translation-uz": "Daraxt"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "placePrepositionsTwo.questTask1",
+        "options": [
+          "vor dem Haus",
+          "hinter dem Haus",
+          "in dem Haus"
+        ],
+        "answer": "vor dem Haus"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "placePrepositionsTwo.questTask2",
+        "words": ["dem", "Auto", "vor", "steht", "Das", "Haus"],
+        "correctOrder": ["Das", "Auto", "steht", "vor", "dem", "Haus"]
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "placePrepositionsTwo.questTask3",
+        "correctAnswer": "vor"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "placePrepositionsTwo.questTask4",
+        "words": ["warte", "Ich", "der", "Tür", "vor"],
+        "correctOrder": ["Ich", "warte", "vor", "der", "Tür"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "placePrepositionsTwo.questTask5",
+        "options": [
+          "hinter der Tür",
+          "vor der Tür",
+          "an der Tür"
+        ],
+        "answer": "hinter der Tür"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "placePrepositionsTwo.questTask6",
+        "words": [
+          "Der",
+          "Hund",
+          "Tür",
+          "steht",
+          "der",
+          "hinter"
+        ],
+        "correctOrder": [
+          "Der",
+          "Hund",
+          "steht",
+          "hinter",
+          "der",
+          "Tür"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "placePrepositionsTwo.questTask7",
+        "correctAnswer": "hinter"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "placePrepositionsTwo.questTask8",
+        "words": [
+          "sitzt",
+          "Baum",
+          "Die",
+          "hinter",
+          "dem",
+          "Katze"
+        ],
+        "correctOrder": [
+          "Die",
+          "Katze",
+          "sitzt",
+          "hinter",
+          "dem",
+          "Baum"
+        ]
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Mein Fahrrad steht vor dem Haus und mein Auto steht hinter dem Haus.",
+        "question": "placePrepositionsTwo.questTask9",
+        "options": [
+          "vor dem Haus",
+          "hinter dem Haus",
+          "im Haus"
+        ],
+        "answer": "vor dem Haus"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "placePrepositionsTwo.questTask10",
+        "options": [
+          "Wir stehen vor der Schule",
+          "Wir stehen vor die Schule",
+          "Wir stehen hinter den Schule"
+        ],
+        "answer": "Wir stehen vor der Schule"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "placePrepositionsTwo.questTask11",
+        "words": [
+          "stehen",
+          "Schule",
+          "der",
+          "Wir",
+          "vor"
+        ],
+        "correctOrder": [
+          "Wir",
+          "stehen",
+          "vor",
+          "der",
+          "Schule"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "placePrepositionsTwo.questTask12",
+        "words": [
+          "ist",
+          "Garten",
+          "hinter",
+          "dem",
+          "Der",
+          "Haus"
+        ],
+        "correctOrder": [
+          "Der",
+          "Garten",
+          "ist",
+          "hinter",
+          "dem",
+          "Haus"
+        ]
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Der Ball liegt unter dem Tisch, nicht hinter dem Sofa.",
+        "question": "placePrepositionsTwo.questTask13",
+        "options": [
+          "unter dem Tisch",
+          "hinter dem Sofa",
+          "auf dem Tisch"
+        ],
+        "answer": "unter dem Tisch"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "placePrepositionsTwo.questTask14",
+        "words": [
+          "liegt",
+          "Buch",
+          "auf",
+          "Tisch",
+          "dem",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "Buch",
+          "liegt",
+          "auf",
+          "dem",
+          "Tisch"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "placePrepositionsTwo.questTask15",
+        "options": [
+          "hinter dem Schrank",
+          "vor dem Schrank",
+          "unter dem Schrank"
+        ],
+        "answer": "hinter dem Schrank"
+      }
+    ]
+  },
+  {
+    "questId": "place-prep-3",
+    "title": "placePrepositionsThree.questTitle",
+    "progress": "0/15",
+    "description": "placePrepositionsThree.questDescription",
+    "conditions": {
+      "goal": "placePrepositionsThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Haltestelle",
+        "translation-ru": "Остановка (автобусная/трамвайная)",
+        "translation-en": "Bus stop / Station",
+        "translation-uk": "Зупинка",
+        "translation-pl": "Przystanek",
+        "translation-es": "Parada de autobús",
+        "translation-fr": "Arrêt de bus",
+        "translation-ar": "موقف حافلات",
+        "translation-hi": "बस स्टॉप",
+        "translation-ro": "Stație de autobuz",
+        "translation-tr": "Durak",
+        "translation-uz": "Bekat"
+      },
+      {
+        "word": "die Ampel",
+        "translation-ru": "Светофор",
+        "translation-en": "Traffic light",
+        "translation-uk": "Світлофор",
+        "translation-pl": "Sygnalizacja świetlna",
+        "translation-es": "Semáforo",
+        "translation-fr": "Feu de circulation",
+        "translation-ar": "إشارة مرور",
+        "translation-hi": "ट्रैफ़िक लाइट",
+        "translation-ro": "Semafor",
+        "translation-tr": "Trafik ışığı",
+        "translation-uz": "Svetafor"
+      },
+      {
+        "word": "die Kasse",
+        "translation-ru": "Касса",
+        "translation-en": "Cash register / Checkout",
+        "translation-uk": "Каса",
+        "translation-pl": "Kasa",
+        "translation-es": "Caja",
+        "translation-fr": "Caisse",
+        "translation-ar": "صندوق الدفع / كاشير",
+        "translation-hi": "कैश काउंटर",
+        "translation-ro": "Casă de marcat",
+        "translation-tr": "Kasa",
+        "translation-uz": "Kassa"
+      },
+      {
+        "word": "die Brücke",
+        "translation-ru": "Мост",
+        "translation-en": "Bridge",
+        "translation-uk": "Міст",
+        "translation-pl": "Most",
+        "translation-es": "Puente",
+        "translation-fr": "Pont",
+        "translation-ar": "جسر",
+        "translation-hi": "पुल",
+        "translation-ro": "Pod",
+        "translation-tr": "Köprü",
+        "translation-uz": "Ko'prik"
+      },
+      {
+        "word": "der Zug",
+        "translation-ru": "Поезд",
+        "translation-en": "Train",
+        "translation-uk": "Поїзд",
+        "translation-pl": "Pociąg",
+        "translation-es": "Tren",
+        "translation-fr": "Train",
+        "translation-ar": "قطار",
+        "translation-hi": "रेलगाड़ी / ट्रेन",
+        "translation-ro": "Tren",
+        "translation-tr": "Tren",
+        "translation-uz": "Poyezd"
+      },
+      {
+        "word": "das Gleis",
+        "translation-ru": "Путь / Платформа",
+        "translation-en": "Platform / Track",
+        "translation-uk": "Колія / Платформа",
+        "translation-pl": "Tor / Peron",
+        "translation-es": "Vía / Andén",
+        "translation-fr": "Voie / Quai",
+        "translation-ar": "رصيف قطار",
+        "translation-hi": "रेल की पटरी / प्लेटफ़ॉर्म",
+        "translation-ro": "Linie de tren / Peron",
+        "translation-tr": "Peron / Ray",
+        "translation-uz": "Platforma / Yo'l"
+      },
+      {
+        "word": "der Parkplatz",
+        "translation-ru": "Парковка",
+        "translation-en": "Parking lot",
+        "translation-uk": "Парковка",
+        "translation-pl": "Parking",
+        "translation-es": "Aparcamiento",
+        "translation-fr": "Parking",
+        "translation-ar": "موقف سيارات",
+        "translation-hi": "पार्किंग",
+        "translation-ro": "Parcare",
+        "translation-tr": "Otopark",
+        "translation-uz": "Avtoturargoh"
+      },
+      {
+        "word": "das Büro",
+        "translation-ru": "Офис",
+        "translation-en": "Office",
+        "translation-uk": "Офіс",
+        "translation-pl": "Biuro",
+        "translation-es": "Oficina",
+        "translation-fr": "Bureau",
+        "translation-ar": "مكتب",
+        "translation-hi": "कार्यालय / दफ़्तर",
+        "translation-ro": "Birou",
+        "translation-tr": "Ofis",
+        "translation-uz": "Ofis"
+      },
+      {
+        "word": "die Kreuzung",
+        "translation-ru": "Перекрёсток",
+        "translation-en": "Intersection / Crossroads",
+        "translation-uk": "Перехрестя",
+        "translation-pl": "Skrzyżowanie",
+        "translation-es": "Cruce",
+        "translation-fr": "Carrefour / Croisement",
+        "translation-ar": "تقاطع طرق",
+        "translation-hi": "चौराहा",
+        "translation-ro": "Intersecție",
+        "translation-tr": "Kavşak",
+        "translation-uz": "Chorraha"
+      },
+      {
+        "word": "der Fluss",
+        "translation-ru": "Река",
+        "translation-en": "River",
+        "translation-uk": "Річка",
+        "translation-pl": "Rzeka",
+        "translation-es": "Río",
+        "translation-fr": "Rivière / Fleuve",
+        "translation-ar": "نهر",
+        "translation-hi": "नदी",
+        "translation-ro": "Râu",
+        "translation-tr": "Nehir / Irmak",
+        "translation-uz": "Daryo"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "placePrepositionsThree.questTask1",
+        "words": [
+          "vor",
+          "Auto",
+          "steht",
+          "der",
+          "Das",
+          "Ampel"
+        ],
+        "correctOrder": [
+          "Das",
+          "Auto",
+          "steht",
+          "vor",
+          "der",
+          "Ampel"
+        ]
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "placePrepositionsThree.questTask2",
+        "options": [
+          "an der Haltestelle",
+          "auf der Haltestelle",
+          "in der Haltestelle"
+        ],
+        "answer": "an der Haltestelle"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "placePrepositionsThree.questTask3",
+        "words": [
+          "im",
+          "Zug",
+          "sitzen",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "sitzen",
+          "im",
+          "Zug"
+        ]
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "placePrepositionsThree.questTask4",
+        "correctAnswer": "auf"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "placePrepositionsThree.questTask5",
+        "words": [
+          "Boot",
+          "fährt",
+          "Brücke",
+          "der",
+          "Das",
+          "unter"
+        ],
+        "correctOrder": [
+          "Das",
+          "Boot",
+          "fährt",
+          "unter",
+          "der",
+          "Brücke"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "placePrepositionsThree.questTask6",
+        "options": [
+          "Der Zug steht auf Gleis 3",
+          "Der Zug steht in Gleis 3",
+          "Der Zug steht vor Gleis 3"
+        ],
+        "answer": "Der Zug steht auf Gleis 3"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "placePrepositionsThree.questTask7",
+        "words": ["steht", "an", "Kasse", "der", "Er", "auf"],
+        "correctOrder": ["Er", "steht", "an", "der", "Kasse"]
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "placePrepositionsThree.questTask8",
+        "correctAnswer": "über"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "— Stehst du schon am Gleis? — Nein, ich warte noch vor dem Bahnhof.",
+        "question": "placePrepositionsThree.questTask9",
+        "options": [
+          "vor dem Bahnhof",
+          "am Gleis",
+          "im Zug"
+        ],
+        "answer": "vor dem Bahnhof"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "placePrepositionsThree.questTask10",
+        "words": [
+          "Ampel",
+          "wartet",
+          "Fußgänger",
+          "an",
+          "Der",
+          "der"
+        ],
+        "correctOrder": [
+          "Der",
+          "Fußgänger",
+          "wartet",
+          "an",
+          "der",
+          "Ampel"
+        ]
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "placePrepositionsThree.questTask11",
+        "options": [
+          "Wo wartet ihr?",
+          "Wohin fahrt ihr?",
+          "Woher kommt ihr?"
+        ],
+        "answer": "Wo wartet ihr?"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "placePrepositionsThree.questTask12",
+        "words": [
+          "Kreuzung",
+          "Bus",
+          "der",
+          "hinter",
+          "steht",
+          "Der"
+        ],
+        "correctOrder": [
+          "Der",
+          "Bus",
+          "steht",
+          "hinter",
+          "der",
+          "Kreuzung"
+        ]
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Wartest du vor dem Bahnhof? — Nein, ich sitze schon im Zug.",
+        "question": "placePrepositionsThree.questTask13",
+        "options": [
+          "im Zug",
+          "vor dem Bahnhof",
+          "auf dem Parkplatz"
+        ],
+        "answer": "im Zug"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "placePrepositionsThree.questTask14",
+        "correctAnswer": "in"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "placePrepositionsThree.questTask15",
+        "words": ["Flugzeug", "fliegt", "Stadt", "der", "über", "Das"],
+        "correctOrder": ["Das", "Flugzeug", "fliegt", "über", "der", "Stadt"]
+      }
+    ]
+  },
+  {
+    "questId": "place-prep-four",
+    "title": "placePrepositionsFour.questTitle",
+    "progress": "0/15",
+    "description": "placePrepositionsFour.questDescription",
+    "conditions": {
+      "goal": "placePrepositionsFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Bahnhof",
+        "translation-ru": "Вокзал",
+        "translation-en": "Train station",
+        "translation-uk": "Вокзал",
+        "translation-pl": "Dworzec",
+        "translation-es": "Estación de tren",
+        "translation-fr": "Gare",
+        "translation-ar": "محطة قطار",
+        "translation-hi": "रेलवे स्टेशन",
+        "translation-ro": "Gară",
+        "translation-tr": "Tren istasyonu",
+        "translation-uz": "Vokzal"
+      },
+      {
+        "word": "der Flughafen",
+        "translation-ru": "Аэропорт",
+        "translation-en": "Airport",
+        "translation-uk": "Аеропорт",
+        "translation-pl": "Lotnisko",
+        "translation-es": "Aeropuerto",
+        "translation-fr": "Aéroport",
+        "translation-ar": "مطار",
+        "translation-hi": "हवाई अड्डा",
+        "translation-ro": "Aeroport",
+        "translation-tr": "Havalimanı",
+        "translation-uz": "Aeroport"
+      },
+      {
+        "word": "der Bahnsteig",
+        "translation-ru": "Перрон / Платформа",
+        "translation-en": "Platform",
+        "translation-uk": "Перон",
+        "translation-pl": "Peron",
+        "translation-es": "Andén",
+        "translation-fr": "Quai de gare",
+        "translation-ar": "رصيف المحطة",
+        "translation-hi": "प्लेटफ़ॉर्म",
+        "translation-ro": "Peron",
+        "translation-tr": "Peron",
+        "translation-uz": "Peron"
+      },
+      {
+        "word": "die Tankstelle",
+        "translation-ru": "Заправка",
+        "translation-en": "Gas station",
+        "translation-uk": "Заправка",
+        "translation-pl": "Stacja benzynowa",
+        "translation-es": "Gasolinera",
+        "translation-fr": "Station-service",
+        "translation-ar": "محطة وقود",
+        "translation-hi": "पेट्रोल पंप",
+        "translation-ro": "Benzinărie",
+        "translation-tr": "Benzinlik",
+        "translation-uz": "Zapravka"
+      },
+      {
+        "word": "die Unterführung",
+        "translation-ru": "Подземный переход",
+        "translation-en": "Underpass",
+        "translation-uk": "Підземний перехід",
+        "translation-pl": "Przejście podziemne",
+        "translation-es": "Paso subterráneo",
+        "translation-fr": "Passage souterrain",
+        "translation-ar": "ممر سفلي",
+        "translation-hi": "सबवे / भूमिगत मार्ग",
+        "translation-ro": "Pasaj subteran",
+        "translation-tr": "Alt geçit",
+        "translation-uz": "Yer osti yo'li"
+      },
+      {
+        "word": "das Terminal",
+        "translation-ru": "Терминал",
+        "translation-en": "Terminal",
+        "translation-uk": "Термінал",
+        "translation-pl": "Terminal",
+        "translation-es": "Terminal",
+        "translation-fr": "Terminal",
+        "translation-ar": "صالة المطار",
+        "translation-hi": "टर्मिनल",
+        "translation-ro": "Terminal",
+        "translation-tr": "Terminal",
+        "translation-uz": "Terminal"
+      },
+      {
+        "word": "das Taxi",
+        "translation-ru": "Такси",
+        "translation-en": "Taxi",
+        "translation-uk": "Таксі",
+        "translation-pl": "Taksówka",
+        "translation-es": "Taxi",
+        "translation-fr": "Taxi",
+        "translation-ar": "تاكسي",
+        "translation-hi": "टैक्सी",
+        "translation-ro": "Taxi",
+        "translation-tr": "Taksi",
+        "translation-uz": "Taksi"
+      },
+      {
+        "word": "die Schranke",
+        "translation-ru": "Шлагбаум",
+        "translation-en": "Barrier",
+        "translation-uk": "Шлагбаум",
+        "translation-pl": "Szlaban",
+        "translation-es": "Barrera",
+        "translation-fr": "Barrière",
+        "translation-ar": "حاجز طريق",
+        "translation-hi": "फाटक / बैरियर",
+        "translation-ro": "Barieră",
+        "translation-tr": "Bariyer",
+        "translation-uz": "Shlagbaum"
+      },
+      {
+        "word": "die Autobahn",
+        "translation-ru": "Автобан / Трасса",
+        "translation-en": "Highway / Autobahn",
+        "translation-uk": "Автобан",
+        "translation-pl": "Autostrada",
+        "translation-es": "Autopista",
+        "translation-fr": "Autoroute",
+        "translation-ar": "طريق سريع",
+        "translation-hi": "राजमार्ग / ऑटोबान",
+        "translation-ro": "Autostradă",
+        "translation-tr": "Otoyol",
+        "translation-uz": "Avtomagistral"
+      },
+      {
+        "word": "das Dach",
+        "translation-ru": "Крыша / Навес",
+        "translation-en": "Roof",
+        "translation-uk": "Дах",
+        "translation-pl": "Dach",
+        "translation-es": "Techo",
+        "translation-fr": "Toit",
+        "translation-ar": "سقف",
+        "translation-hi": "छत",
+        "translation-ro": "Acoperiș",
+        "translation-tr": "Çatı",
+        "translation-uz": "Tom"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "placePrepositionsFour.questTask1",
+        "words": ["vor", "Terminal", "steht", "dem", "Das", "Taxi"],
+        "correctOrder": ["Das", "Taxi", "steht", "vor", "dem", "Terminal"]
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "placePrepositionsFour.questTask2",
+        "words": ["dem", "Bahnsteig", "auf", "warten", "Die", "Passagiere"],
+        "correctOrder": ["Die", "Passagiere", "warten", "auf", "dem", "Bahnsteig"]
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "placePrepositionsFour.questTask3",
+        "words": ["Schranke", "Das", "hinter", "steht", "der", "Auto"],
+        "correctOrder": ["Das", "Auto", "steht", "hinter", "der", "Schranke"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "placePrepositionsFour.questTask4",
+        "options": [
+          "an der Tankstelle",
+          "auf der Tankstelle",
+          "unter der Tankstelle"
+        ],
+        "answer": "an der Tankstelle"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "placePrepositionsFour.questTask5",
+        "correctAnswer": "auf"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "placePrepositionsFour.questTask6",
+        "correctAnswer": "in"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "placePrepositionsFour.questTask7",
+        "correctAnswer": "vor"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "placePrepositionsFour.questTask8",
+        "correctAnswer": "unter"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "placePrepositionsFour.questTask9",
+        "correctAnswer": "hinter"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "placePrepositionsFour.questTask10",
+        "correctAnswer": "über"
+      },
+      {
+        "id": 11,
+        "type": "readAndAnswer",
+        "text": "— Stehst du schon an der Kasse im Supermarkt? — Nein, ich warte draußen vor der Tür.",
+        "question": "placePrepositionsFour.questTask11",
+        "options": [
+          "vor der Tür",
+          "an der Kasse",
+          "im Bus"
+        ],
+        "answer": "vor der Tür"
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "text": "— Wartest du auf dem Bahnsteig? — Nein, es regnet. Ich bin noch in der Unterführung.",
+        "question": "placePrepositionsFour.questTask12",
+        "options": [
+          "in der Unterführung",
+          "auf dem Bahnsteig",
+          "hinter dem Zug"
+        ],
+        "answer": "in der Unterführung"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Der Parkplatz direkt vor dem Bahnhof ist voll. Ich parke an der Apotheke gleich dahinter.",
+        "question": "placePrepositionsFour.questTask13",
+        "options": [
+          "hinter dem Bahnhof",
+          "vor dem Bahnhof",
+          "im Bahnhof"
+        ],
+        "answer": "hinter dem Bahnhof"
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "— Mein Taxi ist gerade da. Ich steige aus und warte draußen am Eingang auf dich.",
+        "question": "placePrepositionsFour.questTask14",
+        "options": [
+          "vor dem Terminal",
+          "im Terminal",
+          "hinter dem Terminal"
+        ],
+        "answer": "vor dem Terminal"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "text": "— Steht der Bus schon an der Haltestelle? — Nein, er wartet noch bei Rot an der Kreuzung.",
+        "question": "placePrepositionsFour.questTask15",
+        "options": [
+          "an der Ampel",
+          "an der Haltestelle",
+          "auf dem Parkplatz"
+        ],
+        "answer": "an der Ampel"
+      }
+    ]
+  },
+  {
+    "questId": "place-prep-five",
+    "title": "placePrepositionsFive.questTitle",
+    "progress": "0/15",
+    "description": "placePrepositionsFive.questDescription",
+    "conditions": {
+      "goal": "placePrepositionsFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Baum",
+        "translation-ru": "Дерево",
+        "translation-en": "Tree",
+        "translation-uk": "Дерево",
+        "translation-pl": "Drzewo",
+        "translation-es": "Árbol",
+        "translation-fr": "Arbre",
+        "translation-ar": "شجرة",
+        "translation-hi": "पेड़",
+        "translation-ro": "Copac",
+        "translation-tr": "Ağaç",
+        "translation-uz": "Daraxt"
+      },
+      {
+        "word": "die Laterne",
+        "translation-ru": "Фонарный столб / Фонарь",
+        "translation-en": "Street lamp / Lantern",
+        "translation-uk": "Ліхтар",
+        "translation-pl": "Latarnia",
+        "translation-es": "Farola",
+        "translation-fr": "Lampadaire",
+        "translation-ar": "عمود إنارة",
+        "translation-hi": "सड़क की बत्ती",
+        "translation-ro": "Felinar",
+        "translation-tr": "Sokak lambası",
+        "translation-uz": "Chiroq ustuni"
+      },
+      {
+        "word": "der Brunnen",
+        "translation-ru": "Фонтан",
+        "translation-en": "Fountain",
+        "translation-uk": "Фонтан",
+        "translation-pl": "Fontanna",
+        "translation-es": "Fuente",
+        "translation-fr": "Fontaine",
+        "translation-ar": "نافورة",
+        "translation-hi": "फव्वारा",
+        "translation-ro": "Fântână",
+        "translation-tr": "Çeşme / Fıskiye",
+        "translation-uz": "Favvora"
+      },
+      {
+        "word": "das Zelt",
+        "translation-ru": "Палатка",
+        "translation-en": "Tent",
+        "translation-uk": "Намет",
+        "translation-pl": "Namiot",
+        "translation-es": "Tienda de campaña",
+        "translation-fr": "Tente",
+        "translation-ar": "خيمة",
+        "translation-hi": "तंबू",
+        "translation-ro": "Cort",
+        "translation-tr": "Çadır",
+        "translation-uz": "Chodir"
+      },
+      {
+        "word": "die Apotheke",
+        "translation-ru": "Аптека",
+        "translation-en": "Pharmacy",
+        "translation-uk": "Аптека",
+        "translation-pl": "Apteka",
+        "translation-es": "Farmacia",
+        "translation-fr": "Pharmacie",
+        "translation-ar": "صيدلية",
+        "translation-hi": "दवा की दुकान",
+        "translation-ro": "Farmacie",
+        "translation-tr": "Eczane",
+        "translation-uz": "Dorixona"
+      },
+      {
+        "word": "die Bäckerei",
+        "translation-ru": "Булочная / Пекарня",
+        "translation-en": "Bakery",
+        "translation-uk": "Пекарня",
+        "translation-pl": "Piekarnia",
+        "translation-es": "Panadería",
+        "translation-fr": "Boulangerie",
+        "translation-ar": "مخبز",
+        "translation-hi": "बेकरी",
+        "translation-ro": "Brutărie",
+        "translation-tr": "Fırın",
+        "translation-uz": "Novvoyxona"
+      },
+      {
+        "word": "der Hund",
+        "translation-ru": "Собака",
+        "translation-en": "Dog",
+        "translation-uk": "Собака",
+        "translation-pl": "Pies",
+        "translation-es": "Perro",
+        "translation-fr": "Chien",
+        "translation-ar": "كلب",
+        "translation-hi": "कुत्ता",
+        "translation-ro": "Câine",
+        "translation-tr": "Köpek",
+        "translation-uz": "It"
+      },
+      {
+        "word": "die Treppe",
+        "translation-ru": "Лестница",
+        "translation-en": "Stairs",
+        "translation-uk": "Сходи",
+        "translation-pl": "Schody",
+        "translation-es": "Escalera",
+        "translation-fr": "Escalier",
+        "translation-ar": "درج",
+        "translation-hi": "सीढ़ियाँ",
+        "translation-ro": "Scară",
+        "translation-tr": "Merdiven",
+        "translation-uz": "Zina"
+      },
+      {
+        "word": "das Tor",
+        "translation-ru": "Ворота",
+        "translation-en": "Gate",
+        "translation-uk": "Ворота",
+        "translation-pl": "Brama",
+        "translation-es": "Puerta / Portón",
+        "translation-fr": "Portail / Porte",
+        "translation-ar": "بوابة",
+        "translation-hi": "गेट / फाटक",
+        "translation-ro": "Poartă",
+        "translation-tr": "Kapı / Geçit",
+        "translation-uz": "Darvoza"
+      },
+      {
+        "word": "das Schild",
+        "translation-ru": "Вывеска / Табличка",
+        "translation-en": "Sign / Plate",
+        "translation-uk": "Вивіска / Табличка",
+        "translation-pl": "Tablica / Szyld",
+        "translation-es": "Cartel / Placa",
+        "translation-fr": "Panneau / Enseigne",
+        "translation-ar": "لافتة",
+        "translation-hi": "साइनबोर्ड / तख्ती",
+        "translation-ro": "Panou / Indicator",
+        "translation-tr": "Tabela / Levha",
+        "translation-uz": "Belgi / Lavha"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "placePrepositionsFive.questTask1",
+        "words": ["liegt", "Baum", "dem", "Der", "unter", "Hund"],
+        "correctOrder": ["Der", "Hund", "liegt", "unter", "dem", "Baum"]
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "placePrepositionsFive.questTask2",
+        "words": ["steht", "dem", "Brunnen", "Die", "neben", "Laterne"],
+        "correctOrder": ["Die", "Laterne", "steht", "neben", "dem", "Brunnen"]
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "placePrepositionsFive.questTask3",
+        "words": ["steht", "Die", "Bäumen", "Bank", "zwischen", "den"],
+        "correctOrder": ["Die", "Bank", "steht", "zwischen", "den", "Bäumen"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "placePrepositionsFive.questTask4",
+        "options": [
+          "neben der Apotheke",
+          "unter der Apotheke",
+          "zwischen der Apotheke"
+        ],
+        "answer": "neben der Apotheke"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "placePrepositionsFive.questTask5",
+        "options": [
+          "unter der Treppe",
+          "neben der Treppe",
+          "zwischen der Treppe"
+        ],
+        "answer": "unter der Treppe"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "placePrepositionsFive.questTask6",
+        "options": [
+          "Die Bäckerei liegt zwischen der Apotheke und der Bank",
+          "Die Bäckerei liegt neben der Apotheke und der Bank",
+          "Die Bäckerei liegt unter der Apotheke und der Bank"
+        ],
+        "answer": "Die Bäckerei liegt zwischen der Apotheke und der Bank"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "placePrepositionsFive.questTask7",
+        "correctAnswer": "unter"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "placePrepositionsFive.questTask8",
+        "correctAnswer": "neben"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "placePrepositionsFive.questTask9",
+        "correctAnswer": "zwischen"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "placePrepositionsFive.questTask10",
+        "correctAnswer": "neben"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "placePrepositionsFive.questTask11",
+        "correctAnswer": "unter"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "placePrepositionsFive.questTask12",
+        "correctAnswer": "zwischen"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Die Sonne brennt heute extrem! — Komm schnell rüber in den Schatten der großen Eiche.",
+        "question": "placePrepositionsFive.questTask13",
+        "options": [
+          "unter dem Baum",
+          "neben dem Brunnen",
+          "zwischen den Toren"
+        ],
+        "answer": "unter dem Baum"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "placePrepositionsFive.questTask14",
+        "words": ["liegt", "Post", "der", "neben", "Café", "Das"],
+        "correctOrder": ["Das", "Café", "liegt", "neben", "der", "Post"]
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "placePrepositionsFive.questTask15",
+        "words": ["Apotheke", "der", "Die", "zwischen", "liegt", "Bäckerei", "Bank", "der", "und"],
+        "correctOrder": ["Die", "Bäckerei", "liegt", "zwischen", "der", "Apotheke", "und", "der", "Bank"]
+      }
+    ]
+  },
+  {
+    "questId": "place-prep-six",
+    "title": "placePrepositionsSix.questTitle",
+    "progress": "0/15",
+    "description": "placePrepositionsSix.questDescription",
+    "conditions": {
+      "goal": "placePrepositionsSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Haus",
+        "translation-ru": "Дом",
+        "translation-en": "House",
+        "translation-uk": "Будинок",
+        "translation-pl": "Dom",
+        "translation-es": "Casa",
+        "translation-fr": "Maison",
+        "translation-ar": "منزل",
+        "translation-hi": "घर",
+        "translation-ro": "Casă",
+        "translation-tr": "Ev",
+        "translation-uz": "Uy"
+      },
+      {
+        "word": "die Küche",
+        "translation-ru": "Кухня",
+        "translation-en": "Kitchen",
+        "translation-uk": "Кухня",
+        "translation-pl": "Kuchnia",
+        "translation-es": "Cocina",
+        "translation-fr": "Cuisine",
+        "translation-ar": "مطبخ",
+        "translation-hi": "रसोई",
+        "translation-ro": "Bucătărie",
+        "translation-tr": "Mutfak",
+        "translation-uz": "Oshxona"
+      },
+      {
+        "word": "die Tasche",
+        "translation-ru": "Сумка",
+        "translation-en": "Bag",
+        "translation-uk": "Сумка",
+        "translation-pl": "Torba",
+        "translation-es": "Bolso",
+        "translation-fr": "Sac",
+        "translation-ar": "حقيبة",
+        "translation-hi": "थैला",
+        "translation-ro": "Geantă",
+        "translation-tr": "Çanta",
+        "translation-uz": "Sumka"
+      },
+      {
+        "word": "das Glas",
+        "translation-ru": "Стакан / Стекло",
+        "translation-en": "Glass",
+        "translation-uk": "Склянка",
+        "translation-pl": "Szklanka",
+        "translation-es": "Vaso",
+        "translation-fr": "Verre",
+        "translation-ar": "كأس",
+        "translation-hi": "गिलास",
+        "translation-ro": "Pahar",
+        "translation-tr": "Bardak",
+        "translation-uz": "Stakan"
+      },
+      {
+        "word": "das Zimmer",
+        "translation-ru": "Комната",
+        "translation-en": "Room",
+        "translation-uk": "Кімната",
+        "translation-pl": "Pokój",
+        "translation-es": "Habitación",
+        "translation-fr": "Chambre",
+        "translation-ar": "غرفة",
+        "translation-hi": "कमरा",
+        "translation-ro": "Cameră",
+        "translation-tr": "Oda",
+        "translation-uz": "Xona"
+      },
+      {
+        "word": "die Flasche",
+        "translation-ru": "Бутылка",
+        "translation-en": "Bottle",
+        "translation-uk": "Пляшка",
+        "translation-pl": "Butelka",
+        "translation-es": "Botella",
+        "translation-fr": "Bouteille",
+        "translation-ar": "زجاجة",
+        "translation-hi": "बोतल",
+        "translation-ro": "Sticlă",
+        "translation-tr": "Şişe",
+        "translation-uz": "Shisha"
+      },
+      {
+        "word": "das Fenster",
+        "translation-ru": "Окно",
+        "translation-en": "Window",
+        "translation-uk": "Вікно",
+        "translation-pl": "Okno",
+        "translation-es": "Ventana",
+        "translation-fr": "Fenêtre",
+        "translation-ar": "نافذة",
+        "translation-hi": "खिड़की",
+        "translation-ro": "Fereastră",
+        "translation-tr": "Pencere",
+        "translation-uz": "Deraza"
+      },
+      {
+        "word": "das Paket",
+        "translation-ru": "Посылка / Пакет",
+        "translation-en": "Parcel / Package",
+        "translation-uk": "Посилка",
+        "translation-pl": "Paczka",
+        "translation-es": "Paquete",
+        "translation-fr": "Colis",
+        "translation-ar": "طرد",
+        "translation-hi": "पार्सल",
+        "translation-ro": "Pachet",
+        "translation-tr": "Paket",
+        "translation-uz": "Posilka"
+      },
+      {
+        "word": "der Kühlschrank",
+        "translation-ru": "Холодильник",
+        "translation-en": "Refrigerator",
+        "translation-uk": "Холодильник",
+        "translation-pl": "Lodówka",
+        "translation-es": "Nevera",
+        "translation-fr": "Réfrigérateur",
+        "translation-ar": "ثلاجة",
+        "translation-hi": "फ़्रिज",
+        "translation-ro": "Frigider",
+        "translation-tr": "Buzdolabı",
+        "translation-uz": "Muzlatgich"
+      },
+      {
+        "word": "die Schachtel",
+        "translation-ru": "Коробка",
+        "translation-en": "Box",
+        "translation-uk": "Коробка",
+        "translation-pl": "Pudełko",
+        "translation-es": "Caja",
+        "translation-fr": "Boîte",
+        "translation-ar": "علبة",
+        "translation-hi": "डिब्बा",
+        "translation-ro": "Cutie",
+        "translation-tr": "Kutu",
+        "translation-uz": "Quti"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "placePrepositionsSix.questTask1",
+        "words": ["aus", "Haus", "geht", "dem", "Er"],
+        "correctOrder": ["Er", "geht", "aus", "dem", "Haus"]
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "placePrepositionsSix.questTask2",
+        "correctAnswer": "aus"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "placePrepositionsSix.questTask3",
+        "options": ["in der Küche", "aus der Küche", "an der Küche"],
+        "answer": "aus der Küche"
+      },
+      {
+        "id": 4,
+        "type": "readAndAnswer",
+        "text": "— Warum sitzt du draußen im Garten? — Es war drinnen im Wohnzimmer viel zu laut, deshalb bin ich nach draußen gegangen.",
+        "question": "placePrepositionsSix.questTask4",
+        "options": ["in das Zimmer", "aus dem Zimmer", "vor dem Zimmer"],
+        "answer": "aus dem Zimmer"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "placePrepositionsSix.questTask5",
+        "correctAnswer": "aus"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "placePrepositionsSix.questTask6",
+        "words": ["der", "holt", "den", "aus", "Tasche", "Sie", "Schlüssel"],
+        "correctOrder": ["Sie", "holt", "den", "Schlüssel", "aus", "der", "Tasche"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "placePrepositionsSix.questTask7",
+        "options": ["Das Kind schaut in dem Fenster", "Das Kind schaut vor dem Fenster", "Das Kind schaut aus dem Fenster"],
+        "answer": "Das Kind schaut aus dem Fenster"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "placePrepositionsSix.questTask8",
+        "correctAnswer": "aus"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "— Woher hast du den kalten Saft? — Er stand im Kühlfach, ich habe ihn gerade herübergeholt.",
+        "question": "placePrepositionsSix.questTask9",
+        "options": ["unter dem Kühlschrank", "aus dem Kühlschrank", "neben dem Kühlschrank"],
+        "answer": "aus dem Kühlschrank"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "placePrepositionsSix.questTask10",
+        "options": ["auf dem Glas", "unter dem Glas", "aus dem Glas"],
+        "answer": "aus dem Glas"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "placePrepositionsSix.questTask11",
+        "words": ["Kühlschrank", "Man", "die", "aus", "Milch", "dem", "nimmt"],
+        "correctOrder": ["Man", "nimmt", "die", "Milch", "aus", "dem", "Kühlschrank"]
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "placePrepositionsSix.questTask12",
+        "correctAnswer": "aus"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Suchst du deinen Geldbeutel? — Ja, ich habe den Reißverschluss vom Rucksack aufgemacht und jetzt ist das Portemonnaie in meiner Hand.",
+        "question": "placePrepositionsSix.questTask13",
+        "options": ["auf die Tasche", "hinter der Tasche", "aus der Tasche"],
+        "answer": "aus der Tasche"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "placePrepositionsSix.questTask14",
+        "correctAnswer": "aus"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "placePrepositionsSix.questTask15",
+        "correctAnswer": "aus"
+      }
+    ]
+  },
+  {
+    "questId": "place-prep-seven",
+    "title": "placePrepositionsSeven.questTitle",
+    "progress": "0/15",
+    "description": "placePrepositionsSeven.questDescription",
+    "conditions": {
+      "goal": "placePrepositionsSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Praxis",
+        "translation-ru": "Приёмная врача / Врачебный кабинет",
+        "translation-en": "Doctor's office / Practice",
+        "translation-uk": "Кабінет лікаря",
+        "translation-pl": "Gabinet lekarski",
+        "translation-es": "Consulta médica",
+        "translation-fr": "Cabinet médical",
+        "translation-ar": "عيادة طبيب",
+        "translation-hi": "डॉक्टर का क्लिनिक",
+        "translation-ro": "Cabinet medical",
+        "translation-tr": "Muayenehane",
+        "translation-uz": "Shifokor xonasi"
+      },
+      {
+        "word": "der Arzt",
+        "translation-ru": "Врач",
+        "translation-en": "Doctor",
+        "translation-uk": "Лікар",
+        "translation-pl": "Lekarz",
+        "translation-es": "Médico",
+        "translation-fr": "Médecin",
+        "translation-ar": "طبيب",
+        "translation-hi": "डॉक्टर",
+        "translation-ro": "Medic",
+        "translation-tr": "Doktor",
+        "translation-uz": "Shifokor"
+      },
+      {
+        "word": "die Post",
+        "translation-ru": "Почта",
+        "translation-en": "Post office",
+        "translation-uk": "Пошта",
+        "translation-pl": "Poczta",
+        "translation-es": "Oficina de correos",
+        "translation-fr": "Poste",
+        "translation-ar": "بريد",
+        "translation-hi": "डाकघर",
+        "translation-ro": "Poștă",
+        "translation-tr": "Postane",
+        "translation-uz": "Pochta"
+      },
+      {
+        "word": "das Büro",
+        "translation-ru": "Офис",
+        "translation-en": "Office",
+        "translation-uk": "Офіс",
+        "translation-pl": "Biuro",
+        "translation-es": "Oficina",
+        "translation-fr": "Bureau",
+        "translation-ar": "مكتب",
+        "translation-hi": "कार्यालय",
+        "translation-ro": "Birou",
+        "translation-tr": "Ofis",
+        "translation-uz": "Ofis"
+      },
+      {
+        "word": "der Markt",
+        "translation-ru": "Рынок",
+        "translation-en": "Market",
+        "translation-uk": "Ринок",
+        "translation-pl": "Rynek / Targ",
+        "translation-es": "Mercado",
+        "translation-fr": "Marché",
+        "translation-ar": "سوق",
+        "translation-hi": "बाज़ार",
+        "translation-ro": "Piață",
+        "translation-tr": "Pazar",
+        "translation-uz": "Bozor"
+      },
+      {
+        "word": "das Regal",
+        "translation-ru": "Полка / Стеллаж",
+        "translation-en": "Shelf",
+        "translation-uk": "Полиця",
+        "translation-pl": "Półka / Regał",
+        "translation-es": "Estante",
+        "translation-fr": "Étagère",
+        "translation-ar": "رف",
+        "translation-hi": "शेल्फ / अलमारी",
+        "translation-ro": "Raft",
+        "translation-tr": "Raf",
+        "translation-uz": "Javon"
+      },
+      {
+        "word": "der Tisch",
+        "translation-ru": "Стол",
+        "translation-en": "Table",
+        "translation-uk": "Стіл",
+        "translation-pl": "Stół",
+        "translation-es": "Mesa",
+        "translation-fr": "Table",
+        "translation-ar": "طاولة",
+        "translation-hi": "मेज़",
+        "translation-ro": "Masă",
+        "translation-tr": "Masa",
+        "translation-uz": "Stol"
+      },
+      {
+        "word": "das Gebäude",
+        "translation-ru": "Здание",
+        "translation-en": "Building",
+        "translation-uk": "Будівля",
+        "translation-pl": "Budynek",
+        "translation-es": "Edificio",
+        "translation-fr": "Bâtiment",
+        "translation-ar": "مبنى",
+        "translation-hi": "इमारत",
+        "translation-ro": "Clădire",
+        "translation-tr": "Bina",
+        "translation-uz": "Bino"
+      },
+      {
+        "word": "die Arbeit",
+        "translation-ru": "Работа",
+        "translation-en": "Work",
+        "translation-uk": "Робота",
+        "translation-pl": "Praca",
+        "translation-es": "Trabajo",
+        "translation-fr": "Travail",
+        "translation-ar": "عمل",
+        "translation-hi": "काम",
+        "translation-ro": "Muncă",
+        "translation-tr": "İş",
+        "translation-uz": "Ish"
+      },
+      {
+        "word": "der Schrank",
+        "translation-ru": "Шкаф",
+        "translation-en": "Cupboard / Wardrobe",
+        "translation-uk": "Шафа",
+        "translation-pl": "Szafa",
+        "translation-es": "Armario",
+        "translation-fr": "Armoire",
+        "translation-ar": "خزانة",
+        "translation-hi": "अलमारी",
+        "translation-ro": "Dulap",
+        "translation-tr": "Dolap",
+        "translation-uz": "Shkaf"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "placePrepositionsSeven.questTask1",
+        "words": ["Büro", "Der", "dem", "Kollege", "geht", "aus"],
+        "correctOrder": ["Der", "Kollege", "geht", "aus", "dem", "Büro"]
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "placePrepositionsSeven.questTask2",
+        "correctAnswer": "aus"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "placePrepositionsSeven.questTask3",
+        "options": ["von dem Gebäude", "aus dem Gebäude", "an dem Gebäude"],
+        "answer": "aus dem Gebäude"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "placePrepositionsSeven.questTask4",
+        "correctAnswer": "aus"
+      },
+      {
+        "id": 5,
+        "type": "readAndAnswer",
+        "text": "— Warst du im Einkaufszentrum? — Ja, es war viel zu voll, ich bin nach fünf Minuten wieder ins Freie gelaufen.",
+        "question": "placePrepositionsSeven.questTask5",
+        "options": ["vom Zentrum", "aus dem Gebäude", "unter dem Gebäude"],
+        "answer": "aus dem Gebäude"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "placePrepositionsSeven.questTask6",
+        "words": ["Arzt", "Er", "dem", "von", "kommt"],
+        "correctOrder": ["Er", "kommt", "von", "dem", "Arzt"]
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "placePrepositionsSeven.questTask7",
+        "correctAnswer": "von"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "placePrepositionsSeven.questTask8",
+        "options": ["aus der Arbeit", "nach der Arbeit", "von der Arbeit"],
+        "answer": "von der Arbeit"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "placePrepositionsSeven.questTask9",
+        "correctAnswer": "von"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "— Woher hast du das Rezept? — Ich hatte um zehn Uhr einen Termin beim Doktor und habe es dort abgeholt.",
+        "question": "placePrepositionsSeven.questTask10",
+        "options": ["aus dem Arzt", "von dem Arzt", "vor dem Arzt"],
+        "answer": "von dem Arzt"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "placePrepositionsSeven.questTask11",
+        "words": ["das", "Regal", "Sie", "Buch", "dem", "von", "nimmt"],
+        "correctOrder": ["Sie", "nimmt", "das", "Buch", "von", "dem", "Regal"]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "placePrepositionsSeven.questTask12",
+        "options": [
+          "Er kommt von der Post zurück",
+          "Er kommt aus der Post zurück",
+          "Er kommt an der Post zurück"
+        ],
+        "answer": "Er kommt von der Post zurück"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "placePrepositionsSeven.questTask13",
+        "correctAnswer": "von"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "placePrepositionsSeven.questTask14",
+        "correctAnswer": "von"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "text": "— Hast du die frischen Äpfel im Supermarkt gekauft? — Nein, ich habe die Tüte direkt draußen an den Verkaufsständen unter freiem Himmel besorgt.",
+        "question": "placePrepositionsSeven.questTask15",
+        "options": ["aus dem Markt", "von dem Markt", "hinter dem Markt"],
+        "answer": "von dem Markt"
+      }
+    ]
+  },
+  {
+    "questId": "place-prep-eight",
+    "title": "placePrepositionsEight.questTitle",
+    "progress": "0/15",
+    "description": "placePrepositionsEight.questDescription",
+    "conditions": {
+      "goal": "placePrepositionsEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Schrank",
+        "translation-ru": "Шкаф",
+        "translation-en": "Cupboard / Wardrobe",
+        "translation-uk": "Шафа",
+        "translation-pl": "Szafa",
+        "translation-es": "Armario",
+        "translation-fr": "Armoire",
+        "translation-ar": "خزانة",
+        "translation-hi": "अलमारी",
+        "translation-ro": "Dulap",
+        "translation-tr": "Dolap",
+        "translation-uz": "Shkaf"
+      },
+      {
+        "word": "der Tisch",
+        "translation-ru": "Стол",
+        "translation-en": "Table",
+        "translation-uk": "Стіл",
+        "translation-pl": "Stół",
+        "translation-es": "Mesa",
+        "translation-fr": "Table",
+        "translation-ar": "طاولة",
+        "translation-hi": "मेज़",
+        "translation-ro": "Masă",
+        "translation-tr": "Masa",
+        "translation-uz": "Stol"
+      },
+      {
+        "word": "der Stuhl",
+        "translation-ru": "Стул",
+        "translation-en": "Chair",
+        "translation-uk": "Стілець",
+        "translation-pl": "Krzesło",
+        "translation-es": "Silla",
+        "translation-fr": "Chaise",
+        "translation-ar": "كرسي",
+        "translation-hi": "कुर्सी",
+        "translation-ro": "Scaun",
+        "translation-tr": "Sandalye",
+        "translation-uz": "Stul"
+      },
+      {
+        "word": "die Tasche",
+        "translation-ru": "Сумка",
+        "translation-en": "Bag",
+        "translation-uk": "Сумка",
+        "translation-pl": "Torba",
+        "translation-es": "Bolso",
+        "translation-fr": "Sac",
+        "translation-ar": "حقيبة",
+        "translation-hi": "थैला",
+        "translation-ro": "Geantă",
+        "translation-tr": "Çanta",
+        "translation-uz": "Sumka"
+      },
+      {
+        "word": "das Regal",
+        "translation-ru": "Полка / Стеллаж",
+        "translation-en": "Shelf",
+        "translation-uk": "Полиця",
+        "translation-pl": "Półka / Regał",
+        "translation-es": "Estante",
+        "translation-fr": "Étagère",
+        "translation-ar": "رف",
+        "translation-hi": "शेल्फ",
+        "translation-ro": "Raft",
+        "translation-tr": "Raf",
+        "translation-uz": "Javon"
+      },
+      {
+        "word": "das Zimmer",
+        "translation-ru": "Комната",
+        "translation-en": "Room",
+        "translation-uk": "Кімната",
+        "translation-pl": "Pokój",
+        "translation-es": "Habitación",
+        "translation-fr": "Chambre",
+        "translation-ar": "غرفة",
+        "translation-hi": "कमरा",
+        "translation-ro": "Cameră",
+        "translation-tr": "Oda",
+        "translation-uz": "Xona"
+      },
+      {
+        "word": "die Tür",
+        "translation-ru": "Дверь",
+        "translation-en": "Door",
+        "translation-uk": "Двері",
+        "translation-pl": "Drzwi",
+        "translation-es": "Puerta",
+        "translation-fr": "Porte",
+        "translation-ar": "باب",
+        "translation-hi": "दरवाज़ा",
+        "translation-ro": "Ușă",
+        "translation-tr": "Kapı",
+        "translation-uz": "Eshik"
+      },
+      {
+        "word": "das Fenster",
+        "translation-ru": "Окно",
+        "translation-en": "Window",
+        "translation-uk": "Вікно",
+        "translation-pl": "Okno",
+        "translation-es": "Ventana",
+        "translation-fr": "Fenêtre",
+        "translation-ar": "نافذة",
+        "translation-hi": "खिड़की",
+        "translation-ro": "Fereastră",
+        "translation-tr": "Pencere",
+        "translation-uz": "Deraza"
+      },
+      {
+        "word": "der Arzt",
+        "translation-ru": "Врач",
+        "translation-en": "Doctor",
+        "translation-uk": "Лікар",
+        "translation-pl": "Lekarz",
+        "translation-es": "Médico",
+        "translation-fr": "Médecin",
+        "translation-ar": "طبيب",
+        "translation-hi": "डॉक्टर",
+        "translation-ro": "Medic",
+        "translation-tr": "Doktor",
+        "translation-uz": "Shifokor"
+      },
+      {
+        "word": "die Flasche",
+        "translation-ru": "Бутылка",
+        "translation-en": "Bottle",
+        "translation-uk": "Пляшка",
+        "translation-pl": "Butelka",
+        "translation-es": "Botella",
+        "translation-fr": "Bouteille",
+        "translation-ar": "زجاجة",
+        "translation-hi": "बोतल",
+        "translation-ro": "Sticlă",
+        "translation-tr": "Şişe",
+        "translation-uz": "Shisha"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "placePrepositionsEight.questTask1",
+        "words": ["das", "aus", "der", "Buch", "holt", "Tasche", "Sie"],
+        "correctOrder": ["Sie", "holt", "das", "Buch", "aus", "der", "Tasche"]
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "placePrepositionsEight.questTask2",
+        "correctAnswer": "von"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "placePrepositionsEight.questTask3",
+        "options": [
+          "Der Tisch steht zwischen der Tür und dem Fenster",
+          "Der Tisch steht aus der Tür und dem Fenster",
+          "Der Tisch steht von der Tür und dem Fenster"
+        ],
+        "answer": "Der Tisch steht zwischen der Tür und dem Fenster"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "placePrepositionsEight.questTask4",
+        "words": ["Handy", "dem", "Er", "das", "Tisch", "nimmt", "von"],
+        "correctOrder": ["Er", "nimmt", "das", "Handy", "von", "dem", "Tisch"]
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "placePrepositionsEight.questTask5",
+        "correctAnswer": "aus"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "placePrepositionsEight.questTask6",
+        "words": ["zwischen", "steht", "dem", "Stuhl", "Der", "und", "dem", "Tisch", "Schrank"],
+        "correctOrder": ["Der", "Stuhl", "steht", "zwischen", "dem", "Tisch", "und", "dem", "Schrank"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "placePrepositionsEight.questTask7",
+        "options": [
+          "aus dem Regal",
+          "von dem Regal",
+          "zwischen dem Regal"
+        ],
+        "answer": "von dem Regal"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "placePrepositionsEight.questTask8",
+        "correctAnswer": "zwischen"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "— Wo ist das frische Wasser? — Ich habe den Schrank aufgemacht und die Flasche herausgeholt, sie steht jetzt hier.",
+        "question": "placePrepositionsEight.questTask9",
+        "options": [
+          "von dem Schrank",
+          "zwischen dem Schrank",
+          "aus dem Schrank"
+        ],
+        "answer": "aus dem Schrank"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "placePrepositionsEight.questTask10",
+        "words": ["Boden", "Er", "hebt", "dem", "Stift", "den", "von"],
+        "correctOrder": ["Er", "hebt", "den", "Stift", "von", "dem", "Boden"]
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "placePrepositionsEight.questTask11",
+        "correctAnswer": "aus"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "placePrepositionsEight.questTask12",
+        "options": [
+          "aus dem Schrank",
+          "von dem Schrank",
+          "zwischen dem Schrank"
+        ],
+        "answer": "aus dem Schrank"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Wo steht die Pflanze? — Links ist das Sofa und rechts das Regal.",
+        "question": "placePrepositionsEight.questTask13",
+        "options": [
+          "zwischen den Möbeln",
+          "aus den Möbeln",
+          "von den Möbeln"
+        ],
+        "answer": "zwischen den Möbeln"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "placePrepositionsEight.questTask14",
+        "correctAnswer": "von"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "placePrepositionsEight.questTask15",
+        "correctAnswer": "zwischen"
+      }
+    ]
+  },
+  {
+    "questId": "place-prep-nine",
+    "title": "placePrepositionsNine.questTitle",
+    "progress": "0/15",
+    "description": "placePrepositionsNine.questDescription",
+    "conditions": {
+      "goal": "placePrepositionsNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Bett",
+        "translation-ru": "Кровать",
+        "translation-en": "Bed",
+        "translation-uk": "Ліжко",
+        "translation-pl": "Łóżko",
+        "translation-es": "Cama",
+        "translation-fr": "Lit",
+        "translation-ar": "سرير",
+        "translation-hi": "बिस्तर",
+        "translation-ro": "Pat",
+        "translation-tr": "Yatak",
+        "translation-uz": "Karavot"
+      },
+      {
+        "word": "der Tisch",
+        "translation-ru": "Стол",
+        "translation-en": "Table",
+        "translation-uk": "Стіл",
+        "translation-pl": "Stół",
+        "translation-es": "Mesa",
+        "translation-fr": "Table",
+        "translation-ar": "طاولة",
+        "translation-hi": "मेज़",
+        "translation-ro": "Masă",
+        "translation-tr": "Masa",
+        "translation-uz": "Stol"
+      },
+      {
+        "word": "der Stuhl",
+        "translation-ru": "Стул",
+        "translation-en": "Chair",
+        "translation-uk": "Стілець",
+        "translation-pl": "Krzesło",
+        "translation-es": "Silla",
+        "translation-fr": "Chaise",
+        "translation-ar": "كرسي",
+        "translation-hi": "कुर्सी",
+        "translation-ro": "Scaun",
+        "translation-tr": "Sandalye",
+        "translation-uz": "Stul"
+      },
+      {
+        "word": "das Regal",
+        "translation-ru": "Полка / Стеллаж",
+        "translation-en": "Shelf",
+        "translation-uk": "Полиця",
+        "translation-pl": "Półka / Regał",
+        "translation-es": "Estante",
+        "translation-fr": "Étagère",
+        "translation-ar": "رف",
+        "translation-hi": "शेल्फ",
+        "translation-ro": "Raft",
+        "translation-tr": "Raf",
+        "translation-uz": "Javon"
+      },
+      {
+        "word": "der Schrank",
+        "translation-ru": "Шкаф",
+        "translation-en": "Wardrobe / Cupboard",
+        "translation-uk": "Шафа",
+        "translation-pl": "Szafa",
+        "translation-es": "Armario",
+        "translation-fr": "Armoire",
+        "translation-ar": "خزانة",
+        "translation-hi": "अलमारी",
+        "translation-ro": "Dulap",
+        "translation-tr": "Dolap",
+        "translation-uz": "Shkaf"
+      },
+      {
+        "word": "die Tasche",
+        "translation-ru": "Сумка",
+        "translation-en": "Bag",
+        "translation-uk": "Сумка",
+        "translation-pl": "Torba",
+        "translation-es": "Bolso",
+        "translation-fr": "Sac",
+        "translation-ar": "حقيبة",
+        "translation-hi": "थैला",
+        "translation-ro": "Geantă",
+        "translation-tr": "Çanta",
+        "translation-uz": "Sumka"
+      },
+      {
+        "word": "das Buch",
+        "translation-ru": "Книга",
+        "translation-en": "Book",
+        "translation-uk": "Книга",
+        "translation-pl": "Książka",
+        "translation-es": "Libro",
+        "translation-fr": "Livre",
+        "translation-ar": "كتاب",
+        "translation-hi": "किताब",
+        "translation-ro": "Carte",
+        "translation-tr": "Kitap",
+        "translation-uz": "Kitob"
+      },
+      {
+        "word": "die Lampe",
+        "translation-ru": "Лампа",
+        "translation-en": "Lamp",
+        "translation-uk": "Лампа",
+        "translation-pl": "Lampa",
+        "translation-es": "Lámpara",
+        "translation-fr": "Lampe",
+        "translation-ar": "مصباح",
+        "translation-hi": "दीपक / लैंप",
+        "translation-ro": "Lampă",
+        "translation-tr": "Lamba",
+        "translation-uz": "Chiroq"
+      },
+      {
+        "word": "der Karton",
+        "translation-ru": "Картонная коробка",
+        "translation-en": "Cardboard box",
+        "translation-uk": "Картонна коробка",
+        "translation-pl": "Karton",
+        "translation-es": "Caja de cartón",
+        "translation-fr": "Carton",
+        "translation-ar": "صندوق كرتون",
+        "translation-hi": "गत्ते का डिब्बा",
+        "translation-ro": "Cutie de carton",
+        "translation-tr": "Karton kutu",
+        "translation-uz": "Karton quti"
+      },
+      {
+        "word": "die Decke",
+        "translation-ru": "Одеяло / Плед",
+        "translation-en": "Blanket",
+        "translation-uk": "Ковдра",
+        "translation-pl": "Koc",
+        "translation-es": "Manta",
+        "translation-fr": "Couverture",
+        "translation-ar": "بطانية",
+        "translation-hi": "कंबल",
+        "translation-ro": "Pătură",
+        "translation-tr": "Battaniye",
+        "translation-uz": "Adyol"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "placePrepositionsNine.questTask1",
+        "words": ["liegt", "dem", "Bett", "unter", "Katze", "Die"],
+        "correctOrder": ["Die", "Katze", "liegt", "unter", "dem", "Bett"]
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "placePrepositionsNine.questTask2",
+        "correctAnswer": "von"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "placePrepositionsNine.questTask3",
+        "options": [
+          "Die Lampe steht unter dem Stuhl und dem Tisch",
+          "Die Lampe steht zwischen dem Stuhl und dem Tisch",
+          "Die Lampe steht von dem Stuhl und dem Tisch"
+        ],
+        "answer": "Die Lampe steht zwischen dem Stuhl und dem Tisch"
+      },
+      {
+        "id": 4,
+        "type": "readAndAnswer",
+        "text": "— Wo ist mein Hausschuh? — Er ist vom Sofa gerutscht und liegt jetzt ganz tief am Boden darunter.",
+        "question": "placePrepositionsNine.questTask4",
+        "options": [
+          "unter dem Sofa",
+          "von dem Sofa",
+          "zwischen den Sofas"
+        ],
+        "answer": "unter dem Sofa"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "placePrepositionsNine.questTask5",
+        "words": ["Regal", "das", "nimmt", "dem", "Sie", "von", "Buch"],
+        "correctOrder": ["Sie", "nimmt", "das", "Buch", "von", "dem", "Regal"]
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "placePrepositionsNine.questTask6",
+        "correctAnswer": "unter"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "placePrepositionsNine.questTask7",
+        "options": [
+          "von dem Bett",
+          "unter dem Bett",
+          "zwischen dem Bett"
+        ],
+        "answer": "von dem Bett"
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "text": "— Wo steht die Kiste? — Links ist der Schrank und rechts das Bett.",
+        "question": "placePrepositionsNine.questTask8",
+        "options": [
+          "unter den Möbeln",
+          "von den Möbeln",
+          "zwischen den Möbeln"
+        ],
+        "answer": "zwischen den Möbeln"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "placePrepositionsNine.questTask9",
+        "correctAnswer": "zwischen"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "placePrepositionsNine.questTask10",
+        "words": ["Schrank", "Stuhl", "steht", "zwischen", "dem", "dem", "Der", "und", "Tisch"],
+        "correctOrder": ["Der", "Stuhl", "steht", "zwischen", "dem", "Schrank", "und", "dem", "Tisch"]
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "placePrepositionsNine.questTask11",
+        "options": [
+          "zwischen dem Stuhl",
+          "unter dem Stuhl",
+          "von dem Stuhl"
+        ],
+        "answer": "unter dem Stuhl"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "placePrepositionsNine.questTask12",
+        "correctAnswer": "von"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Woher hast du den Teller? — Er stand auf der Anrichte, ich habe ihn gerade gegriffen.",
+        "question": "placePrepositionsNine.questTask13",
+        "options": [
+          "von der Anrichte",
+          "unter der Anrichte",
+          "zwischen den Anrichten"
+        ],
+        "answer": "von der Anrichte"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "placePrepositionsNine.questTask14",
+        "correctAnswer": "unter"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "placePrepositionsNine.questTask15",
+        "options": [
+          "von den Stühlen",
+          "unter den Stühlen",
+          "zwischen den Stühlen"
+        ],
+        "answer": "zwischen den Stühlen"
+      }
+    ]
+  },
+  {
+    "questId": "prep-dativ-ten",
+    "title": "placePrepositionsTen.questTitle",
+    "progress": "0/15",
+    "description": "placePrepositionsTen.questDescription",
+    "conditions": {
+      "goal": "placePrepositionsTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Schrank",
+        "translation-ru": "Шкаф",
+        "translation-en": "Cupboard / Wardrobe",
+        "translation-uk": "Шафа",
+        "translation-pl": "Szafa",
+        "translation-es": "Armario",
+        "translation-fr": "Armoire",
+        "translation-ar": "خزانة",
+        "translation-hi": "अलमारी",
+        "translation-ro": "Dulap",
+        "translation-tr": "Dolap",
+        "translation-uz": "Shkaf"
+      },
+      {
+        "word": "die Tür",
+        "translation-ru": "Дверь",
+        "translation-en": "Door",
+        "translation-uk": "Двері",
+        "translation-pl": "Drzwi",
+        "translation-es": "Puerta",
+        "translation-fr": "Porte",
+        "translation-ar": "باب",
+        "translation-hi": "दरवाज़ा",
+        "translation-ro": "Ușă",
+        "translation-tr": "Kapı",
+        "translation-uz": "Eshik"
+      },
+      {
+        "word": "das Bett",
+        "translation-ru": "Кровать",
+        "translation-en": "Bed",
+        "translation-uk": "Ліжко",
+        "translation-pl": "Łóżko",
+        "translation-es": "Cama",
+        "translation-fr": "Lit",
+        "translation-ar": "سرير",
+        "translation-hi": "बिस्तर",
+        "translation-ro": "Pat",
+        "translation-tr": "Yatak",
+        "translation-uz": "Karavot"
+      },
+      {
+        "word": "die Tasche",
+        "translation-ru": "Сумка",
+        "translation-en": "Bag",
+        "translation-uk": "Сумка",
+        "translation-pl": "Torba",
+        "translation-es": "Bolso",
+        "translation-fr": "Sac",
+        "translation-ar": "حقيبة",
+        "translation-hi": "थैला",
+        "translation-ro": "Geantă",
+        "translation-tr": "Çanta",
+        "translation-uz": "Sumka"
+      },
+      {
+        "word": "der Tisch",
+        "translation-ru": "Стол",
+        "translation-en": "Table",
+        "translation-uk": "Стіл",
+        "translation-pl": "Stół",
+        "translation-es": "Mesa",
+        "translation-fr": "Table",
+        "translation-ar": "طاولة",
+        "translation-hi": "मेज़",
+        "translation-ro": "Masă",
+        "translation-tr": "Masa",
+        "translation-uz": "Stol"
+      },
+      {
+        "word": "die Flasche",
+        "translation-ru": "Бутылка",
+        "translation-en": "Bottle",
+        "translation-uk": "Пляшка",
+        "translation-pl": "Butelka",
+        "translation-es": "Botella",
+        "translation-fr": "Bouteille",
+        "translation-ar": "زجاجة",
+        "translation-hi": "बोतल",
+        "translation-ro": "Sticlă",
+        "translation-tr": "Şişe",
+        "translation-uz": "Shisha"
+      },
+      {
+        "word": "das Sofa",
+        "translation-ru": "Диван",
+        "translation-en": "Sofa",
+        "translation-uk": "Диван",
+        "translation-pl": "Sofa / Kanapa",
+        "translation-es": "Sofá",
+        "translation-fr": "Canapé",
+        "translation-ar": "أريكة",
+        "translation-hi": "सोफ़ा",
+        "translation-ro": "Canapea",
+        "translation-tr": "Kanepe / Koltuk",
+        "translation-uz": "Divan"
+      },
+      {
+        "word": "die Küche",
+        "translation-ru": "Кухня",
+        "translation-en": "Kitchen",
+        "translation-uk": "Кухня",
+        "translation-pl": "Kuchnia",
+        "translation-es": "Cocina",
+        "translation-fr": "Cuisine",
+        "translation-ar": "مطبخ",
+        "translation-hi": "रसोई",
+        "translation-ro": "Bucătărie",
+        "translation-tr": "Mutfak",
+        "translation-uz": "Oshxona"
+      },
+      {
+        "word": "der Schuh",
+        "translation-ru": "Ботинок / Туфля",
+        "translation-en": "Shoe",
+        "translation-uk": "Черевик",
+        "translation-pl": "But",
+        "translation-es": "Zapato",
+        "translation-fr": "Chaussure",
+        "translation-ar": "حذاء",
+        "translation-hi": "जूता",
+        "translation-ro": "Pantof",
+        "translation-tr": "Ayakkabı",
+        "translation-uz": "Poyabzal"
+      },
+      {
+        "word": "das Glas",
+        "translation-ru": "Стакан / Бокал",
+        "translation-en": "Glass",
+        "translation-uk": "Склянка",
+        "translation-pl": "Szklanka",
+        "translation-es": "Vaso",
+        "translation-fr": "Verre",
+        "translation-ar": "كأس",
+        "translation-hi": "गिलास",
+        "translation-ro": "Pahar",
+        "translation-tr": "Bardak",
+        "translation-uz": "Stakan"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "placePrepositionsTen.questTask1",
+        "words": ["steht", "Bett", "neben", "Der", "Nachttisch", "dem"],
+        "correctOrder": ["Der", "Nachttisch", "steht", "neben", "dem", "Bett"]
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "placePrepositionsTen.questTask2",
+        "correctAnswer": "aus"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "placePrepositionsTen.questTask3",
+        "options": [
+          "neben dem Tisch",
+          "unter dem Tisch",
+          "aus dem Tisch"
+        ],
+        "answer": "unter dem Tisch"
+      },
+      {
+        "id": 4,
+        "type": "readAndAnswer",
+        "text": "— Wo ist dein Koffer? — Er steht am Boden direkt an der Wand gleich beim Schrank.",
+        "question": "placePrepositionsTen.questTask4",
+        "options": [
+          "unter dem Schrank",
+          "aus dem Schrank",
+          "neben dem Schrank"
+        ],
+        "answer": "neben dem Schrank"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "placePrepositionsTen.questTask5",
+        "words": ["Sofa", "schläft", "dem", "unter", "Katze", "Die"],
+        "correctOrder": ["Die", "Katze", "schläft", "unter", "dem", "Sofa"]
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "placePrepositionsTen.questTask6",
+        "correctAnswer": "neben"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "placePrepositionsTen.questTask7",
+        "options": [
+          "Sie trinkt das Wasser unter dem Glas",
+          "Sie trinkt das Wasser neben dem Glas",
+          "Sie trinkt das Wasser aus dem Glas"
+        ],
+        "answer": "Sie trinkt das Wasser aus dem Glas"
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "text": "— Suchst du deinen Hausschuh? — Ja, er ist unter das Gestell vom Bett gerutscht.",
+        "question": "placePrepositionsTen.questTask8",
+        "options": [
+          "neben dem Bett",
+          "unter dem Bett",
+          "aus dem Bett"
+        ],
+        "answer": "unter dem Bett"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "placePrepositionsTen.questTask9",
+        "correctAnswer": "unter"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "placePrepositionsTen.questTask10",
+        "words": ["Küche", "geht", "Er", "der", "aus"],
+        "correctOrder": ["Er", "geht", "aus", "der", "Küche"]
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "placePrepositionsTen.questTask11",
+        "options": [
+          "unter dem Sofa",
+          "neben dem Sofa",
+          "aus dem Sofa"
+        ],
+        "answer": "neben dem Sofa"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "placePrepositionsTen.questTask12",
+        "correctAnswer": "aus"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Woher hast du den Apfel? — Ich habe die Schranktür geöffnet und ihn von dort herausgenommen.",
+        "question": "placePrepositionsTen.questTask13",
+        "options": [
+          "aus dem Schrank",
+          "neben dem Schrank",
+          "unter dem Schrank"
+        ],
+        "answer": "aus dem Schrank"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "placePrepositionsTen.questTask14",
+        "options": [
+          "aus der Flasche",
+          "unter der Flasche",
+          "neben der Flasche"
+        ],
+        "answer": "aus der Flasche"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "placePrepositionsTen.questTask15",
+        "correctAnswer": "neben"
+      }
+    ]
+  }
+]

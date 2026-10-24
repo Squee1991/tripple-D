@@ -1,7 +1,7 @@
 <template>
   <div class="speak__container">
     <header class="header">
-      <VBackBtn/>
+      <VBackBtn data-track="speak_practice_menu_back_click"/>
       <h1 class="header__title">{{ t('speakIndexPage.title') }}</h1>
       <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
@@ -112,13 +112,17 @@ const isMounted = ref(false);
 const showDevModal = ref(false);
 const showPremiumModal = ref(false);
 
+const { $track } = useNuxtApp();
+
 const getCompletedCount = (category) => {
   return category.themes.filter(theme => speakStore.userProgress[theme.id]).length;
 };
 
+
 const isThemeUnlocked = (catIndex, themeIndex) => {
   if (authStore.isPremium) return true;
   if (catIndex === 0 && (themeIndex === 0 || themeIndex === 1)) return true;
+
   let prevThemeId = null;
 
   if (themeIndex > 0) {
@@ -127,7 +131,6 @@ const isThemeUnlocked = (catIndex, themeIndex) => {
     const prevCategory = categoriesSpeak[catIndex - 1];
     prevThemeId = prevCategory.themes[prevCategory.themes.length - 1].id;
   }
-
   if (prevThemeId) {
     return !!speakStore.userProgress[prevThemeId];
   }
@@ -136,9 +139,20 @@ const isThemeUnlocked = (catIndex, themeIndex) => {
 };
 
 const goToSession = (theme, catIndex, themeIndex) => {
-  if (isThemeUnlocked(catIndex, themeIndex)) {
+  const isUnlocked = isThemeUnlocked(catIndex, themeIndex);
+
+  if (isUnlocked) {
+    $track('speak_theme_started', {
+      theme_id: theme.id,
+      category_id: categoriesSpeak[catIndex].id,
+      is_repeat: !!speakStore.userProgress[theme.id]
+    });
     router.push({ path: '/speak-practice/session', query: { theme: theme.id } });
   } else {
+    $track('speak_theme_locked_clicked', {
+      theme_id: theme.id,
+      category_id: categoriesSpeak[catIndex].id
+    });
     showPremiumModal.value = true;
   }
 };
@@ -155,7 +169,7 @@ onMounted(() => {
 .speak__container {
   max-width: 1240px;
   margin: 0 auto;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 

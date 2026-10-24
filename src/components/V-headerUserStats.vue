@@ -62,17 +62,18 @@
         </div>
       </div>
     </transition>
-
-    <VCalendarStreak v-model="isCalendarOpen"/>
+    <VCalendarStreak
+        v-model="isCalendarOpen"
+        :streak="userAuth.streakCount"
+    />
   </div>
 </template>
 
 <script setup>
 import {ref, computed, onMounted, onBeforeUnmount} from 'vue'
 import {userlangStore} from "~/store/learningStore.js"
-import {userAuthStore} from '../../store/authStore.js'
-import {userChainStore} from '../../store/chainStore.js'
-import {useI18n} from 'vue-i18n'
+import {userAuthStore} from '~/store/authStore.js'
+import {userChainStore} from '~/store/chainStore.js'
 import FreezeShield from '../../assets/images/FreezeShield.svg'
 import Hats from '../../assets/images/Hats.svg'
 import Articlus from '../../assets/images/article.svg'
@@ -80,6 +81,7 @@ import Heart from '../../assets/images/heartInfo.svg'
 import Forever from '../../assets/images/forever.svg'
 import VCalendarStreak from "~/src/components/V-calendarStreak.vue"
 import LogoPlus from '../../assets/images/PlusLogo.png'
+import SteakIcon from '~/assets/images/fire.svg'
 
 const {t} = useI18n()
 const langStore = userlangStore()
@@ -89,7 +91,6 @@ const router = useRouter()
 const activeTooltip = ref(null)
 const showFreezeModal = ref(false)
 const isCalendarOpen = ref(false)
-
 
 const formattedFreezeDate = computed(() => {
   if (!userAuth.freezeEndsAt) return ''
@@ -117,15 +118,15 @@ const infoData = computed(() => [
   },
   {
     id: "rank",
-    title: t('pavelOverlay.rankTitle'),
+    title: t('pavelOverlay.streakTitle'),
     tips: [
       {label: t('pavelOverlay.rankLabelOne')},
       {label: t('pavelOverlay.rankLabelTwo')},
       {label: t('pavelOverlay.rankLabelThree')}
     ],
-    icon: Hats,
-    alt: "Hats",
-    value: userAuth.totalHats,
+    icon: SteakIcon,
+    alt: "SteakIcon",
+    value: userAuth.streakCount,
     isFreeze: userAuth.isFreezeActive
   },
   {
@@ -235,12 +236,11 @@ onBeforeUnmount(() => {
   padding: 0 2px;
   height: 38px;
   cursor: pointer;
-  gap: 5px;
 }
 
 .stat-icon {
-  width: 28px;
-  height: 28px;
+  width: 27px;
+  height: 27px;
   object-fit: contain;
 }
 
@@ -252,8 +252,8 @@ onBeforeUnmount(() => {
 }
 
 .freeze-icon {
-  width: 28px;
-  height: 28px;
+  width: 23px;
+  height: 23px;
 }
 
 .stat-value {
@@ -475,7 +475,7 @@ onBeforeUnmount(() => {
   padding: 12px;
   background: #f1c40f;
   border: none;
-  border-radius: 12px;
+  border-radius: 50px;
   color: #1c222d;
   font-weight: 700;
   font-size: 16px;

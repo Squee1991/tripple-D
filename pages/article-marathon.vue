@@ -13,17 +13,13 @@
           />
         </div>
         <div class="panel__wrapper">
-          <div v-if="authStore.uid" class="user-greeting">
-            <p class="record">
-              {{ t('marathonPrepare.streak') }}
-              <span class="record__value">{{ currentRecord }}</span>
-            </p>
-          </div>
-          <div v-else class="guest-greeting">
+          <VDailyRunCard v-if="authStore.uid"/>
+          <div v-if="!authStore.uid" class="guest-greeting">
             <p>{{ t('marathonPrepare.notAuth') }}</p>
           </div>
-          <div v-if="gameStore.isLoaded" class="settings-block">
-            <h2>{{ t('marathonPrepare.chooseDifficulty') }}</h2>
+          <section v-if="gameStore.isLoaded" class="settings-block free-mode">
+            <h2 class="free-mode__title">{{ t('marathonPrepare.freeModeTitle') }}</h2>
+            <p class="free-mode__hint">{{ t('marathonPrepare.freeModeHint') }}</p>
             <div class="difficulty-options">
               <button
                   v-for="opt in difficultyBase"
@@ -36,14 +32,18 @@
                   <span class="btn-title">{{ t(opt.titleKey) }}</span>
                   <span class="btn-desc">{{ t(opt.descKey) }}</span>
                 </div>
-                <div class="difficulty-bars">
-                  <div class="bar bar-1" :class="{ 'bar-active': opt.value >= 1 }"></div>
-                  <div class="bar bar-2" :class="{ 'bar-active': opt.value >= 2 }"></div>
-                  <div class="bar bar-3" :class="{ 'bar-active': opt.value >= 3 }"></div>
-                </div>
+                <!-- Рекорд на этом уровне сложности -->
+                <div v-if="authStore.uid" class="difficulty-record">🏆 {{ recordFor(opt.value) }}</div>
               </button>
             </div>
-          </div>
+            <button
+                class="start-button"
+                @click="startGame"
+                :disabled="!authStore.uid"
+            >
+              {{ authStore.uid ? t('marathonPrepare.start') : t('marathonPrepare.login') }}
+            </button>
+          </section>
           <div v-else class="loading">
             <div class="bouncy-loader">
               <span></span><span></span><span></span>
@@ -51,29 +51,20 @@
             <p>{{ t('marathonPrepare.loading') }}</p>
           </div>
         </div>
-        <div class="bottom-action">
-          <button
-              class="start-button"
-              @click="startGame"
-              :disabled="!authStore.uid || !gameStore.isLoaded"
-          >
-            {{ authStore.uid ? t('marathonPrepare.start') : t('marathonPrepare.login') }}
-          </button>
-        </div>
       </div>
-
     </Transition>
   </div>
 </template>
 
 <script setup>
-import {ref, onMounted, computed} from 'vue'
+import {ref, onMounted} from 'vue'
 import {useRouter} from 'vue-router'
 import {useGameStore} from '../store/marafonStore.js'
 import {userAuthStore} from '../store/authStore.js'
 import {useSeoMeta} from "#imports";
 import VBackBtn from "~/src/components/V-back-btn.vue";
 import VBanner from "~/src/components/V-banner.vue";
+import VDailyRunCard from "~/src/components/V-dailyRunCard.vue";
 import DailyIcon from '../assets/images/dailyIcons/timer.svg'
 
 useSeoMeta({
@@ -86,15 +77,14 @@ const authStore = userAuthStore()
 const router = useRouter()
 const selectedDifficulty = ref(1)
 const isMounted = ref(false)
-const currentRecord = computed(() => {
-  if (gameStore.personalBests) {
-    return gameStore.personalBests[selectedDifficulty.value] || 0
-  }
-  return 0
-})
+
+function recordFor(difficulty) {
+  const bests = gameStore.allTimeBests || gameStore.personalBests
+  return bests?.[difficulty] || 0
+}
 
 onMounted(() => {
-  setTimeout(()=>{
+  setTimeout(() => {
     isMounted.value = true
   }, 100)
   if (!gameStore.loadWords && typeof gameStore.loadWords !== 'function') return
@@ -131,20 +121,15 @@ const difficultyBase = ref([
 </script>
 
 <style scoped>
-
 .page-wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
   font-family: "Nunito", sans-serif;
-  background-color: var(--bg);
+  background-color: var(--bg, #0f111a);
   overflow: hidden;
   -webkit-tap-highlight-color: transparent;
-}
-
-.banner {
-  padding: 0 15px;
 }
 
 .header__title-wrapper {
@@ -160,10 +145,10 @@ const difficultyBase = ref([
   flex: 1;
   font-size: 22px;
   font-weight: 900;
-  color: var(--titleColor);
+  color: #ffffff;
   letter-spacing: 0.5px;
   margin-left: 15px;
-  text-shadow: 0 1px var(--titleColor);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
 }
 
 .prepare-container {
@@ -179,18 +164,6 @@ const difficultyBase = ref([
   display: none;
 }
 
-.header {
-  text-align: center;
-}
-
-.subtitle {
-  font-size: 18px;
-  color: #6a7585;
-  padding: 16px 20px 0;
-  margin: 0;
-  font-weight: 800;
-}
-
 .panel__wrapper {
   padding: 16px 20px;
   width: 100%;
@@ -201,133 +174,164 @@ const difficultyBase = ref([
   gap: 20px;
 }
 
-.user-greeting, .guest-greeting {
-  padding: 16px;
+.guest-greeting {
+  padding: 10px;
   border-radius: 20px;
   text-align: center;
 }
 
 .guest-greeting p {
-  color: #1e1e1e;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 800;
   margin: 0;
 }
 
-.user-greeting .record {
-  margin: 0;
-  font-weight: 800;
-  color: var(--titleColor);
-  font-size: 18px;
+.banner {
+  padding: 0 15px;
+}
+
+/* Блок обычного марафона — в своей рамке, чтобы не путать с ежедневным забегом */
+.free-mode {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 24px;
+  border: 2px solid var(--tabsSlideBorderColor);
+  background: rgba(255, 255, 255, 0.03);
 }
 
-.record__value {
-  font-size: 23px;
-  font-weight: 900;
-  background: #fca13a;
-  color: white;
-  padding: 4px 16px;
-  border-radius: 12px;
-}
-
-.settings-block h2 {
-  font-size: 22px;
+.free-mode .free-mode__title {
+  font-size: 20px;
   text-align: center;
-  margin: 0 0 16px 0;
-  color: var(--titleColor);
+  margin: 0;
+  color: #ffffff;
   font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.free-mode__hint {
+  margin: 4px 0 16px;
+  color: #a0a5b5;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .difficulty-options {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .difficulty-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 20px;
-  border-radius: 20px;
-  border: 2px solid var(--menuBorder);
-  box-shadow: 0 2px 0 var(--menuBorder);
+  padding: 12px 20px;
+  border-radius: 22px;
+  border: 2px solid transparent;
   cursor: pointer;
-  transition: all 0.1s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.1s ease, box-shadow 0.15s ease, background-color 0.2s ease;
   text-align: left;
-  background: #ffffff;
-  color: #1e1e1e;
+  background: #232738;
 }
 
+.difficulty-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+.difficulty-btn.easy {
+  border-color: #34C759;
+  box-shadow: 0 5px 0 rgba(52, 199, 89, 0.4);
+}
+.difficulty-btn.easy .btn-title {
+  color: #34C759;
+}
+.difficulty-btn.easy .btn-desc {
+  color: #a0a5b5;
+}
 .difficulty-btn.easy.active {
-  background-color: #2bd653;
-  color: white;
-
+  background: #34C759;
+  box-shadow: 0 6px 0 #248a3d;
+}
+.difficulty-btn.easy.active .btn-title,
+.difficulty-btn.easy.active .btn-desc {
+  color: #ffffff;
 }
 
+.difficulty-btn.normal {
+  border-color: #007AFF;
+  box-shadow: 0 5px 0 rgba(0, 122, 255, 0.4);
+}
+.difficulty-btn.normal .btn-title {
+  color: #007AFF;
+}
+.difficulty-btn.normal .btn-desc {
+  color: #a0a5b5;
+}
 .difficulty-btn.normal.active {
-  background-color: #edc838;
-  color: white;
+  background: #007AFF;
+  box-shadow: 0 6px 0 #005bb5;
+}
+.difficulty-btn.normal.active .btn-title,
+.difficulty-btn.normal.active .btn-desc {
+  color: #ffffff;
 }
 
+.difficulty-btn.hard {
+  border-color: #FF3B30;
+  box-shadow: 0 5px 0 rgba(255, 59, 48, 0.4);
+}
+.difficulty-btn.hard .btn-title {
+  color: #FF3B30;
+}
+.difficulty-btn.hard .btn-desc {
+  color: #a0a5b5;
+}
 .difficulty-btn.hard.active {
-  background-color: #e68f8f;
-  color: white;
+  background: #FF3B30;
+  box-shadow: 0 6px 0 #c22820;
+}
+.difficulty-btn.hard.active .btn-title,
+.difficulty-btn.hard.active .btn-desc {
+  color: #ffffff;
 }
 
 .button-content {
   display: flex;
   flex-direction: column;
-  gap: 4px;
 }
 
 .btn-title {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 900;
+  transition: color 0.2s ease;
 }
 
 .btn-desc {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
-  color: #4b5563;
+  transition: color 0.2s ease;
 }
 
-.difficulty-bars {
-  display: flex;
-  align-items: flex-end;
-  gap: 4px;
-  height: 32px;
+/* Рекорд на кнопке сложности */
+.difficulty-record {
+  flex: none;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 900;
+  white-space: nowrap;
 }
 
-.bar {
-  width: 8px;
-  background-color: #e5e7eb;
-  border-radius: 4px;
-  border: 2px solid #9ca3af;
-  transition: all 0.2s;
+.difficulty-btn.active .difficulty-record {
+  background: rgba(0, 0, 0, 0.18);
 }
-
-.bar-1 {
-  height: 14px;
-}
-
-.bar-2 {
-  height: 22px;
-}
-
-.bar-3 {
-  height: 32px;
-}
-
-.bar.bar-active {
-  background-color: #ef4444;
-  border-color: #991b1b;
-}
-
 
 .loading {
   display: flex;
@@ -341,7 +345,7 @@ const difficultyBase = ref([
 .loading p {
   font-size: 18px;
   font-weight: 800;
-  color: #1e1e1e;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -353,43 +357,39 @@ const difficultyBase = ref([
 .bouncy-loader span {
   width: 16px;
   height: 16px;
-  background: #6358ac;
+  background: #007AFF;
   border-radius: 50%;
+  animation: bounce 0.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95);
 }
 
-.bouncy-loader span:nth-child(2) {
-  animation-delay: 0.1s;
-}
-
-.bouncy-loader span:nth-child(3) {
-  animation-delay: 0.2s;
-}
-
-.bottom-action {
-  padding: 25px 20px 28px 20px;
-  margin-top: auto;
-}
+.bouncy-loader span:nth-child(2) { animation-delay: 0.1s; }
+.bouncy-loader span:nth-child(3) { animation-delay: 0.2s; }
 
 .start-button {
-  background: #007AFF;
-  color: white;
+  margin-top: 18px;
+  background: #4F6AF6;
+  color: #ffffff;
   border: none;
-  border-radius: 50px;
-  padding: 16px 32px;
-  font-size: 18px;
-  font-weight: 700;
-  box-shadow: 0 6px 0 #005bb5;
+  border-radius: 54px;
+  padding: 16px 22px;
+  font-size: 19px;
+  font-weight: 900;
+  box-shadow: 0 6px 0 #3247c4;
   cursor: pointer;
   transition: all 0.1s;
   width: 100%;
 }
 
+.start-button:active:not(:disabled) {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #3247c4;
+}
+
 .start-button:disabled {
-  background: #f3f4f6;
-  color: #9ca3af;
-  border-color: #d1d5db;
+  background: #2a2e42;
+  color: #636882;
   cursor: not-allowed;
-  box-shadow: 0 5px 0 #d1d5db;
+  box-shadow: 0 5px 0 #1b1d2b;
 }
 
 @keyframes fadeIn {
@@ -401,5 +401,10 @@ const difficultyBase = ref([
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-15px); }
 }
 </style>

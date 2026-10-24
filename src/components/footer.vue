@@ -8,6 +8,7 @@
             v-for="(item, index) in footerNav"
             :key="item.id"
             :to="item.path"
+            :data-track="'footer_nav_clicked_' + item.id"
             class="nav__item"
             :class="{ 'is-active': activeIndex === index }"
         >
@@ -22,7 +23,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { userAuthStore } from "../../store/authStore.js";
+import { userAuthStore } from "~/store/authStore.js";
 const { t , locale } = useI18n();
 import Home from '../../assets/images/app-nav-icons/home.svg'
 import Events from '../../assets/images/app-nav-icons/events.svg'
@@ -30,6 +31,15 @@ import Game from '../../assets/images/app-nav-icons/game.svg'
 import Cabinet from '../../assets/images/app-nav-icons/cabinet.svg'
 import Study from '../../assets/images/app-nav-icons/study.svg'
 
+import HomeHalloween from '../../assets/images/homeHalloween.svg'
+import EventsHalloween from '../../assets/images/eventsHalloween.svg'
+import GameHalloween from '../../assets/images/playHalloween.svg'
+import CabinetHalloween from '../../assets/images/cabinetHalloween.svg'
+import StudyHalloween from '../../assets/images/studyHalloween.svg'
+
+const colorMode = useColorMode();
+
+const halloweenIcons = computed(() => colorMode.value === 'orange')
 
 const getTransformX = (index) => {
   if (index === -1) return 0;
@@ -41,15 +51,15 @@ const getTransformX = (index) => {
 
 const authStore = userAuthStore()
 const route = useRoute()
-const footerNav = [
-  { id: 'study', path: '/study', label: t('footerNavLabel.learn'), icon: Study, alt: 'Study' },
-  { id: 'game', path: '/play', label: t('footerNavLabel.games'), icon: Game, alt: 'Game' },
-  { id: 'home', path: '/', label: t('footerNavLabel.home'), icon: Home, alt: 'Home' },
-  { id: 'events', path: '/events', label: t('footerNavLabel.events'), icon: Events, alt: 'Events' },
-  { id: 'exams', path: '/cabinet', label: t('footerNavLabel.cabinet'), icon: Cabinet, alt: 'Exams' },
-]
+const footerNav = computed(()=> [
+  { id: 'study', path: '/study', label: t('footerNavLabel.learn'), icon: halloweenIcons.value ? StudyHalloween : Study, alt: 'Study' },
+  { id: 'game', path: '/play', label: t('footerNavLabel.games'), icon: halloweenIcons.value ? GameHalloween : Game, alt: 'Game' },
+  { id: 'home', path: '/', label: t('footerNavLabel.home'), icon: halloweenIcons.value ? HomeHalloween : Home, alt: 'Home' },
+  { id: 'events', path: '/events', label: t('footerNavLabel.events'), icon: halloweenIcons.value ? EventsHalloween : Events, alt: 'Events' },
+  { id: 'cabinet', path: '/cabinet', label: t('footerNavLabel.cabinet'), icon: halloweenIcons.value ? CabinetHalloween : Cabinet, alt: 'Exams' },
+])
 const activeIndex = computed(() => {
-  return footerNav.findIndex(item => {
+  return footerNav.value.findIndex(item => {
     if (item.path === '/') return route.path === '/'
     return route.path.startsWith(item.path)
   })
@@ -87,7 +97,6 @@ const activeIndex = computed(() => {
   height: 55px;
   width: 100%;
   z-index: 0;
-  background: var(--overlayAfter);
 }
 
 .nav {

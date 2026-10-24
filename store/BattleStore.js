@@ -16,14 +16,11 @@ export const userBattleStore = defineStore('battle', () => {
 	const stepNumber = ref(1) // Номер текущего хода
 
 
-//  JSON-файл с немецкими словами (словарь по темам)
 	const loadWords = async () => {
 		const wordResponse = await fetch('/words.json')
 		return await wordResponse.json()
 	}
 
-
-// JSON-файл с описанием спеллов
 	const loadSpells = async () => {
 		const spellsResponse = await fetch('/spells.json')
 		return await spellsResponse.json()
