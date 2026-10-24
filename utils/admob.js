@@ -11,16 +11,13 @@ let lastInterstitialTime = 0;
 let initPromise = null;
 let privacyOptionsRequired = false;
 
-// Нативный плагин из MainActivity: читает, что юзер выбрал в окне согласия
 const ConsentChoice = registerPlugin('ConsentChoice');
-// Окно согласия GDPR пока только на Android; iOS — после проверки
+
 const CONSENT_PLATFORMS = ['android'];
 
 const AD_LIMIT_PER_DAY = 10;
-// После ~10 показов одному юзеру рекламодатели упираются в лимит частоты и ставки падают
 const INTERSTITIAL_LIMIT_PER_DAY = 12;
 const INTERSTITIAL_COOLDOWN = 2 * 60 * 1000;
-// Загруженная межстраничная реклама живёт ~1 час, после этого показ не оплачивается
 const INTERSTITIAL_TTL = 55 * 60 * 1000;
 const platform = Capacitor.getPlatform();
 
@@ -91,7 +88,6 @@ export async function preloadInterstitial() {
 	}
 }
 
-// accepted — согласился на всё, declined — ни на что, custom — выбрал часть в «Управлять настройками»
 async function getConsentChoice() {
 	try {
 		const { purposeConsents } = await ConsentChoice.getPurposeConsents();
@@ -102,8 +98,6 @@ async function getConsentChoice() {
 	}
 }
 
-// Окно показывается один раз и только в ЕЭЗ/UK/Швейцарии — остальным Google вернёт NOT_REQUIRED.
-// Реклама ждёт initPromise, поэтому запросы уходят уже с ответом юзера
 async function gatherConsent(track) {
 	if (!CONSENT_PLATFORMS.includes(platform)) return;
 	try {
@@ -125,7 +119,6 @@ export async function isPrivacyOptionsRequired() {
 	return privacyOptionsRequired;
 }
 
-// Кнопка «Настройки конфиденциальности» — Google требует дать юзеру изменить выбор
 export async function showPrivacyOptions(track) {
 	try {
 		await AdMob.showPrivacyOptionsForm();
@@ -145,8 +138,6 @@ export function initAdmob(track) {
 			console.error('Ошибка инициализации AdMob:', e);
 		});
 
-		// Первая реклама — сразу при входе, чтобы к первому показу уже была готова.
-		// Ждём профиль: до его загрузки hasAds = true и у премиума ушёл бы лишний запрос
 		initPromise
 			.then(() => userAuthStore().initAuth())
 			.then(() => preloadInterstitial());
@@ -188,7 +179,6 @@ export async function showInterstitial(nextStep) {
 			isAdProcessing = false;
 
 			isInterstitialLoaded = false;
-			// Следующая реклама грузится сразу — всегда одна наготове
 			preloadInterstitial();
 			nextStep();
 		}
