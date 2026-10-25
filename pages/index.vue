@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
 import { userAuthStore } from "~/store/authStore.js"
 import Header from '../src/components/header.vue'
 import Banner from '../src/components/banner.vue'
@@ -12,6 +12,9 @@ import VEventAvailableModal from "../src/components/V-eventAvailableModal.vue";
 import VShowFall from "../src/components/V-showFall.vue";
 import Snow from "../assets/images/mery-christmas/Snow.svg";
 import HeartFall from "assets/images/mery-christmas/heartFall.svg";
+import VHalloweenEffects from "../src/components/V-halloweenEffects.vue";
+import LeafOrange from "../assets/images/halloween-effects/leafOrange.svg";
+import LeafGold from "../assets/images/halloween-effects/leafGold.svg";
 import { useEventSessionStore } from '../store/eventsStore.js'
 import VStartPage from "~/src/components/V-startPage.vue";
 import VAppBanner from "~/src/components/V-appBanner.vue";
@@ -22,6 +25,34 @@ const eventStore = useEventSessionStore()
 const authStore = userAuthStore()
 const hydrated = ref(false)
 const isLocallyLogged = ref(false)
+const colorMode = useColorMode()
+
+// Луна и все эффекты Хэллоуина: пока идёт его событие (в любой теме) или включена купленная тема
+const isHalloweenTheme = computed(() => colorMode.value === 'orange')
+const isHalloweenFx = computed(() => isHalloweenTheme.value || eventStore.isEventActive('pumpkin'))
+
+// html.halloween-fx делает фон body прозрачным, чтобы луну было видно под контентом
+watch(isHalloweenFx, (on) => {
+  if (process.client) document.documentElement.classList.toggle('halloween-fx', on)
+}, { immediate: true })
+
+onBeforeUnmount(() => {
+  document.documentElement.classList.remove('halloween-fx')
+})
+
+// Тема Хэллоуина доступна только после покупки: если её выбрали без покупки — возвращаем тёмную.
+// Сбрасываем только когда покупка точно загрузилась, чтобы не сбросить тему тем, кто её купил.
+watch(() => authStore.uid, (uid) => {
+  if (uid) eventStore.loadHalloweenThemePurchase()
+}, { immediate: true })
+
+watch(
+    () => [eventStore.isHalloweenPurchaseLoaded, eventStore.isHalloweenThemePurchased, colorMode.preference],
+    ([loaded, purchased, preference]) => {
+      if (loaded && !purchased && preference === 'orange') colorMode.preference = 'dark'
+    },
+    { immediate: true }
+)
 
 definePageMeta({
   layout: 'footerlayout'
@@ -46,6 +77,14 @@ watch(() => authStore.uid, (newUid) => {
 <template>
   <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
   <VShowFall v-if="eventStore.isSnowEnabled" :image="Snow"/>
+  <template v-if="isHalloweenFx">
+    <VHalloweenEffects layer="back"/>
+    <div class="halloween-layer" aria-hidden="true">
+      <VHalloweenEffects/>
+      <VShowFall :image="LeafOrange" :count="8"/>
+      <VShowFall :image="LeafGold" :count="6"/>
+    </div>
+  </template>
   <div class="container">
     <ClientOnly>
       <template v-if="authStore.uid">
@@ -68,6 +107,14 @@ watch(() => authStore.uid, (newUid) => {
 </template>
 
 <style scoped>
+/* Эффекты поверх контента главной (клики проходят насквозь), но ниже меню и модалок */
+.halloween-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
 .container {
   max-width: 1240px;
   width: 100%;

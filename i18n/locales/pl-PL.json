@@ -3523,12 +3523,18 @@
     "close": "Zamknij",
     "light": "Jasny",
     "dark": "Ciemny",
-    "pink": "Romantyczny"
+    "pink": "Romantyczny",
+    "halloween": "Halloweenowa"
   },
   "pinkThemeModal": {
     "partOne": "Ten motyw można odblokować tylko podczas wydarzenia",
     "partTwo": "Festiwal Serc",
     "partThree": "Kup go w sklepie wydarzenia!"
+  },
+  "halloweenThemeModal": {
+    "partOne": "Ten motyw można odblokować tylko podczas wydarzenia",
+    "partTwo": "«Święto Dyń»",
+    "partThree": "Kup go w sklepie wydarzenia"
   },
   "settingsGroup": {
     "notifications": "Powiadomienia",

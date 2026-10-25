@@ -1643,7 +1643,7 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestThirteen.questTen",
-        "options": ["Das kalте Wasser ist sauber.", "Das kaltes Wasser ist sauber.", "Das kalten Wasser ist sauber."],
+        "options": ["Das kalte Wasser ist sauber.", "Das kaltes Wasser ist sauber.", "Das kalten Wasser ist sauber."],
         "answer": "Das kalte Wasser ist sauber.",
         "tip": "definiteIndefiniteQuestThirteen.questTenTip"
       },

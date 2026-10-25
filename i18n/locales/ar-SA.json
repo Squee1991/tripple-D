@@ -3525,12 +3525,18 @@
     "close": "إغلاق",
     "light": "فاتح",
     "dark": "داكن",
-    "pink": "رومانسي"
+    "pink": "رومانسي",
+    "halloween": "خاصة بالهالوين"
   },
   "pinkThemeModal": {
     "partOne": "يمكن فتح هذا المظهر فقط خلال حدث",
     "partTwo": "مهرجان القلوب",
     "partThree": "اشترِه من متجر الأحداث!"
+  },
+  "halloweenThemeModal": {
+    "partOne": "لا يمكن فتح هذا المظهر إلا خلال فعالية",
+    "partTwo": "«مهرجان اليقطين»",
+    "partThree": "احصل عليه من متجر الفعالية"
   },
   "settingsGroup": {
     "notifications": "إشعارات",

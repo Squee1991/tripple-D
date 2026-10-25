@@ -3507,12 +3507,18 @@
     "close": "Fermer",
     "light": "Claire",
     "dark": "Sombre",
-    "pink": "Romantique"
+    "pink": "Romantique",
+    "halloween": "D'Halloween"
   },
   "pinkThemeModal": {
     "partOne": "Ce thème ne peut être débloqué que lors de l'événement",
     "partTwo": "Festival des Cœurs",
     "partThree": "Achetez-le dans la boutique de l'événement !"
+  },
+  "halloweenThemeModal": {
+    "partOne": "Ce thème ne peut être débloqué que pendant l'événement",
+    "partTwo": "« Fête des citrouilles »",
+    "partThree": "Obtiens-le dans la boutique de l'événement"
   },
   "settingsGroup": {
     "notifications": "Notifications",

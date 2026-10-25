@@ -3483,12 +3483,18 @@
     "close": "बंद करें",
     "light": "हल्का",
     "dark": "गहरा",
-    "pink": "रोमांटिक"
+    "pink": "रोमांटिक",
+    "halloween": "हैलोवीन"
   },
   "pinkThemeModal": {
     "partOne": "इस थीम को केवल",
     "partTwo": "दिलों का उत्सव",
     "partThree": "ईवेंट में अनलॉक किया जा सकता है। इसे ईवेंट स्टोर से खरीदें!"
+  },
+  "halloweenThemeModal": {
+    "partOne": "यह थीम केवल इस इवेंट के दौरान ही अनलॉक की जा सकती है:",
+    "partTwo": "«कद्दू उत्सव»",
+    "partThree": "इसे इवेंट स्टोर से प्राप्त करें"
   },
   "settingsGroup": {
     "notifications": "सूचनाएं",

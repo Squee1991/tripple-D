@@ -22,7 +22,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 		{id: 'winter', start: '12-17 00:00', end: '01-02 23:59'},
 		{id: 'valentine', start: '02-12 00:00', end: '02-16 23:59'},
 		{id: 'april', start: '04-01 00:00', end: '04-01 23:59'},
-		{id: 'pumpkin', start: '10-28 00:00', end: '10-31 23:59'},
+		{id: 'pumpkin', start: '10-19 00:00', end: '10-31 23:59'},
 	])
 
 	const uidOrThrow = () => {
@@ -55,6 +55,38 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 		const items = shopItems.value || {}
 		return !!(items['snowFall'] || items['snowfall'])
 	})
+
+	// Идёт ли сейчас событие (даты в формате 'MM-DD HH:mm', с учётом перехода через Новый год)
+	const isEventActive = (id, now = new Date()) => {
+		const event = events.value.find(e => e.id === id)
+		if (!event) return false
+		const parse = (str, y) => {
+			const [datePart, timePart] = str.split(' ')
+			const [month, day] = datePart.split('-').map(Number)
+			const [hours, minutes] = (timePart || '00:00').split(':').map(Number)
+			return new Date(y, month - 1, day, hours ?? 0, minutes ?? 0, 0, 0)
+		}
+		const y = now.getFullYear()
+		const start = parse(event.start, y)
+		const end = parse(event.end, y)
+		if (start <= end) return now >= start && now <= end
+		return now >= start || now <= end
+	}
+
+	// Куплена ли тема Хэллоуина в магазине события (users/{uid}/eventSessions/halloween → shopItems.theme)
+	const isHalloweenThemePurchased = ref(false)
+	const isHalloweenPurchaseLoaded = ref(false)
+
+	const loadHalloweenThemePurchase = async () => {
+		try {
+			const uid = uidOrThrow()
+			const snap = await getDoc(doc(db, 'users', uid, 'eventSessions', 'halloween'))
+			isHalloweenThemePurchased.value = !!snap.data()?.shopItems?.theme
+			isHalloweenPurchaseLoaded.value = true
+		} catch (e) {
+			console.error('EventStore: halloween theme purchase not loaded', e)
+		}
+	}
 
 	const isValentineThemePurchased = computed(() => {
 		const items = shopItems.value || {}
@@ -328,6 +360,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 	return {
 		eventId, questId, stepIndex, score, finished, isLoading,
 		isSnowEnabled, shopItems, events, isValentineThemePurchased,
+		isEventActive, isHalloweenThemePurchased, isHalloweenPurchaseLoaded, loadHalloweenThemePurchase,
 		solvedSteps, isReplayMode,
 		isSnowPurchased, loadGlobalWinterSettings, setSnowFallEnabled,
 		start, restoreIfPossible, next, prev, addScore, finishQuest,

@@ -18,13 +18,13 @@
               v-for="(label, key) in THEMES"
               :key="key"
               class="theme-option"
-              :class="{ active: colorMode.preference === key, locked: key === 'pink' && !isValentineThemeUnlocked }"
+              :class="{ active: colorMode.preference === key, locked: isThemeLocked(key) }"
               @click.prevent="handleThemeSelection(key)"
           >
             <input type="radio" name="theme" :value="key" :checked="colorMode.preference === key">
             <div class="theme-option-content">
               <div class="theme-preview" :class="key">
-                <span v-if="key === 'pink' && !isValentineThemeUnlocked" class="lock-icon">🔒</span>
+                <span v-if="isThemeLocked(key)" class="lock-icon">🔒</span>
               </div>
               <span class="theme-label">{{ label }}</span>
             </div>
@@ -161,7 +161,8 @@ const THEMES = computed(() => {
   return {
     light: t('themeModal.light'),
     dark: t('themeModal.dark'),
-    pink: t('themeModal.pink')
+    pink: t('themeModal.pink'),
+    orange: t('themeModal.halloween')
   }
 })
 
@@ -169,6 +170,13 @@ const isValentineThemeUnlocked = computed(() => {
   const ach = achievementStore.findById('valentineTheme')
   return ach ? ach.currentProgress >= 1 : false
 })
+
+// Тема Хэллоуина открывается только после покупки в магазине события
+const isThemeLocked = (key) => {
+  if (key === 'pink') return !isValentineThemeUnlocked.value
+  if (key === 'orange') return !eventStore.isHalloweenThemePurchased
+  return false
+}
 
 const isSnowUnlocked = computed(() => {
   const ach = achievementStore.findById('snowFall')
@@ -210,6 +218,12 @@ const showRestriction = (type) => {
       title: `💖 ${t('cabinet.notAllow')}`,
       text: `${t('pinkThemeModal.partOne')} <b>${t('pinkThemeModal.partTwo')}</b>. <br/>${t('pinkThemeModal.partThree')}`
     }
+  } else if (type === 'theme_orange') {
+    isThemeModalOpen.value = false
+    lockedModalContent.value = {
+      title: `🎃 ${t('cabinet.notAllow')}`,
+      text: `${t('halloweenThemeModal.partOne')} <b>${t('halloweenThemeModal.partTwo')}</b>. <br/>${t('halloweenThemeModal.partThree')}`
+    }
   } else if (type === 'snow') {
     lockedModalContent.value = {
       title: `❄️ ${t('cabinet.notAllow')}`,
@@ -222,6 +236,10 @@ const showRestriction = (type) => {
 const handleThemeSelection = (key) => {
   if (key === 'pink' && !isValentineThemeUnlocked.value) {
     showRestriction('theme')
+    return
+  }
+  if (key === 'orange' && isThemeLocked(key)) {
+    showRestriction('theme_orange')
     return
   }
   colorMode.preference = key
@@ -256,6 +274,7 @@ onMounted(async () => {
   soundEnabled.value = isSoundEnabled()
   await eventStore.loadEventProgress('winter')
   await eventStore.loadEventProgress('valentine')
+  await eventStore.loadHalloweenThemePurchase()
 })
 </script>
 
@@ -482,6 +501,7 @@ onMounted(async () => {
 .theme-preview.light { background: #ffffff; }
 .theme-preview.dark { background: #1e293b; }
 .theme-preview.pink { background: #fbcfe8; }
+.theme-preview.orange { background: linear-gradient(135deg, #e8782c 0%, #e8782c 50%, #0e0e10 50%, #0e0e10 100%); }
 
 .lock-icon {
   font-size: 16px;

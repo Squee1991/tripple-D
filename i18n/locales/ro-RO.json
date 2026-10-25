@@ -3507,12 +3507,18 @@
     "close": "Închide",
     "light": "Luminos",
     "dark": "Întunecat",
-    "pink": "Romantic"
+    "pink": "Romantic",
+    "halloween": "De Halloween"
   },
   "pinkThemeModal": {
     "partOne": "Această temă poate fi deblocată doar în cadrul evenimentului",
     "partTwo": "Festivalul Inimilor",
     "partThree": "Cumpără-o din magazinul evenimentului!"
+  },
+  "halloweenThemeModal": {
+    "partOne": "Această temă poate fi deblocată doar în cadrul evenimentului",
+    "partTwo": "«Sărbătoarea Dovlecilor»",
+    "partThree": "Achiziționeaz-o din magazinul evenimentului"
   },
   "settingsGroup": {
     "notifications": "Notificări",

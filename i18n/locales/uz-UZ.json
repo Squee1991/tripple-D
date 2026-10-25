@@ -3505,12 +3505,18 @@
     "close": "Yopish",
     "light": "Yorug'",
     "dark": "To'q",
-    "pink": "Romantik"
+    "pink": "Romantik",
+    "halloween": "Hellouinbop"
   },
   "pinkThemeModal": {
     "partOne": "Ushbu mavzuni faqat",
     "partTwo": "Qalblar festivali",
     "partThree": "tadbirida ochish mumkin. Uni tadbir do'konidan sotib oling!"
+  },
+  "halloweenThemeModal": {
+    "partOne": "Bu mavzuni faqat ushbu tadbirda ochish mumkin:",
+    "partTwo": "«Qovoq bayrami»",
+    "partThree": "Uni tadbir do'konidan xarid qiling"
   },
   "settingsGroup": {
     "notifications": "Bildirishnomalar",

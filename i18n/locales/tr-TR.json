@@ -3516,12 +3516,18 @@
     "close": "Kapat",
     "light": "Açık",
     "dark": "Koyu",
-    "pink": "Romantik"
+    "pink": "Romantik",
+    "halloween": "Cadılar Bayramı"
   },
   "pinkThemeModal": {
     "partOne": "Bu temanın kilidi sadece",
     "partTwo": "Kalpler Festivali",
     "partThree": "etkinliğinde açılabilir. Etkinlik mağazasından satın alın!"
+  },
+  "halloweenThemeModal": {
+    "partOne": "Bu temanın kilidi yalnızca şu etkinlikte açılabilir:",
+    "partTwo": "«Balkabağı Şenliği»",
+    "partThree": "Etkinlik mağazasından satın al"
   },
   "settingsGroup": {
     "notifications": "Bildirimler",

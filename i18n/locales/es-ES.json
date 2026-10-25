@@ -3507,12 +3507,18 @@
     "close": "Cerrar",
     "light": "Claro",
     "dark": "Oscuro",
-    "pink": "Romántico"
+    "pink": "Romántico",
+    "halloween": "De Halloween"
   },
   "pinkThemeModal": {
     "partOne": "Este tema solo se puede desbloquear en el evento",
     "partTwo": "Festival de Corazones",
     "partThree": "¡Cómpralo en la tienda del evento!"
+  },
+  "halloweenThemeModal": {
+    "partOne": "Este tema solo se puede desbloquear en el evento",
+    "partTwo": "«Festival de la Calabaza»",
+    "partThree": "Consíguelo en la tienda del evento"
   },
   "settingsGroup": {
     "notifications": "Notificaciones",

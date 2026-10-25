@@ -3530,12 +3530,18 @@
     "close": "Close",
     "light": "Light",
     "dark": "Dark",
-    "pink": "Romantic"
+    "pink": "Romantic",
+    "halloween": "Halloween"
   },
   "pinkThemeModal": {
     "partOne": "This theme can only be unlocked during the",
     "partTwo": "Festival of Hearts",
     "partThree": "event. Purchase it in the event shop!"
+  },
+  "halloweenThemeModal": {
+    "partOne": "This theme can only be unlocked during the event",
+    "partTwo": "«Pumpkin Festival»",
+    "partThree": "Get it in the event shop"
   },
   "settingsGroup": {
     "notifications": "Notifications",
