@@ -2,9 +2,9 @@
 import { computed } from 'vue'
 import Logo from '~/assets/images/logoReview.webp'
 import { SERVICE_PATHS_CONFIG } from '~/constants/settings.constants.js'
-import { PROJECT_NAME, SUPPORT_EMAIL, formatLegalDate } from '~/constants/legal.constants.js'
+import { PROJECT_NAME } from '~/constants/legal.constants.js'
 
-const { t, locale } = useI18n()
+const { t } = useI18n()
 
 const links = computed(() => [
   { id: 'about', label: t('footer.about'), path: '/info-about' },
@@ -12,7 +12,6 @@ const links = computed(() => [
 ])
 
 const year = new Date().getFullYear()
-const legalUpdated = computed(() => formatLegalDate(locale.value))
 </script>
 
 <template>
@@ -34,14 +33,8 @@ const legalUpdated = computed(() => formatLegalDate(locale.value))
       </nav>
     </div>
 
-    <div class="site-footer__contact">
-      {{ t('footer.contact') }}:
-      <a class="site-footer__mail" :href="`mailto:${SUPPORT_EMAIL}`">{{ SUPPORT_EMAIL }}</a>
-    </div>
-
     <div class="site-footer__bottom">
       <span>© {{ year }} {{ PROJECT_NAME }}. {{ t('footer.copy') }}</span>
-      <span class="site-footer__updated">{{ t('footer.updated') }}: {{ legalUpdated }}</span>
     </div>
   </footer>
 </template>
@@ -69,8 +62,9 @@ const legalUpdated = computed(() => formatLegalDate(locale.value))
 
 .site-footer__logo-img {
   display: block;
-  height: 44px;
-  width: auto;
+  width: 130px;
+  height: 84px;
+  object-fit: contain;
 }
 
 .site-footer__nav {
@@ -94,24 +88,7 @@ const legalUpdated = computed(() => formatLegalDate(locale.value))
   text-decoration: underline;
 }
 
-.site-footer__contact {
-  margin-top: 18px;
-  font-size: 14px;
-  font-weight: 600;
-  opacity: 0.85;
-}
-
-.site-footer__mail {
-  color: inherit;
-  font-weight: 800;
-  word-break: break-all;
-}
-
 .site-footer__bottom {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 6px 20px;
   margin-top: 18px;
   padding-top: 16px;
   border-top: 1px solid var(--menuBorder);
@@ -129,9 +106,12 @@ const legalUpdated = computed(() => formatLegalDate(locale.value))
     flex-direction: column;
     align-items: flex-start;
   }
+}
 
-  .site-footer__bottom {
-    flex-direction: column;
+@media (max-width: 1023px) {
+  .site-footer__logo-img {
+    width: 100px;
+    height: auto;
   }
 }
 </style>
