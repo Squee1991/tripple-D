@@ -1,502 +1,502 @@
 [
   {
     "question": "Der Elefant ist ___.",
-    "options": ["groß", "dünn", "jung", "klein"],
+    "options": ["groß", "eckig", "schmal"],
     "answer": "groß"
   },
   {
     "question": "Die Maus ist ___.",
-    "options": ["alt", "kurz", "schön", "klein"],
+    "options": ["klein", "hoch", "eckig"],
     "answer": "klein"
   },
   {
     "question": "Das Haus ist ___.",
-    "options": ["neu", "jung", "alt", "schnell"],
+    "options": ["alt", "schnell", "jung"],
     "answer": "alt"
   },
   {
     "question": "Die Giraffe im Zoo ist wirklich ___.",
-    "options": ["groß", "klein", "kurz", "alt"],
+    "options": ["groß", "kurz", "eckig"],
     "answer": "groß"
   },
   {
     "question": "Mein neuer Computer ist ziemlich ___.",
-    "options": ["klein", "groß", "alt", "dick"],
+    "options": ["klein", "dick", "jung"],
     "answer": "klein"
   },
   {
     "question": "Der Tisch im Wohnzimmer ist sehr ___.",
-    "options": ["lang", "kurz", "hoch", "schmal"],
+    "options": ["lang", "schnell", "jung"],
     "answer": "lang"
   },
   {
     "question": "Die Blume im Garten ist noch ___.",
-    "options": ["jung", "alt", "groß", "schmal"],
+    "options": ["jung", "schnell", "breit"],
     "answer": "jung"
   },
   {
     "question": "Das Bett im Hotel war ziemlich ___.",
-    "options": ["breit", "schmal", "kurz", "klein"],
+    "options": ["breit", "schnell", "jung"],
     "answer": "breit"
   },
   {
     "question": "Der Fernsehturm in Berlin ist sehr ___.",
-    "options": ["hoch", "kurz", "klein", "alt"],
+    "options": ["hoch", "kurz", "dick"],
     "answer": "hoch"
   },
   {
     "question": "Mein Nachbar ist schon ziemlich ___.",
-    "options": ["alt", "jung", "klein", "schön"],
+    "options": ["alt", "neu", "eckig"],
     "answer": "alt"
   },
   {
     "question": "Das Baby im Kinderwagen ist sehr ___.",
-    "options": ["klein", "groß", "alt", "hoch"],
+    "options": ["klein", "hoch", "alt"],
     "answer": "klein"
   },
   {
     "question": "Der Turm in der Stadt ist sehr ___.",
-    "options": ["hoch", "kurz", "klein", "alt"],
+    "options": ["hoch", "kurz", "jung"],
     "answer": "hoch"
   },
   {
     "question": "Der Baum im Garten ist sehr ___.",
-    "options": ["hoch", "kurz", "klein", "schmal"],
+    "options": ["hoch", "kurz", "schnell"],
     "answer": "hoch"
   },
   {
     "question": "Die Jacke ist schon sehr ___.",
-    "options": ["alt", "neu", "jung", "dünn"],
+    "options": ["alt", "jung", "schnell"],
     "answer": "alt"
   },
   {
     "question": "Das Baby hat ein ___ Gesicht.",
-    "options": ["rundes", "eckiges", "altes", "großes"],
+    "options": ["rundes", "eckiges", "schnelles"],
     "answer": "rundes"
   },
   {
     "question": "Der neue Fernseher ist ziemlich ___.",
-    "options": ["breit", "schmal", "hoch", "klein"],
+    "options": ["breit", "jung", "schnell"],
     "answer": "breit"
   },
   {
     "question": "Meine Tasche ist sehr ___.",
-    "options": ["leicht", "schwer", "alt", "neu"],
+    "options": ["leicht", "schnell", "jung"],
     "answer": "leicht"
   },
   {
     "question": "Die Lampe ist sehr ___.",
-    "options": ["hell", "dunkel", "hoch", "alt"],
+    "options": ["hell", "schnell", "jung"],
     "answer": "hell"
   },
   {
     "question": "Der Hund ist noch ___.",
-    "options": ["jung", "alt", "dick", "dünn"],
+    "options": ["jung", "neu", "eckig"],
     "answer": "jung"
   },
   {
     "question": "Die Fenster im Haus sind ___.",
-    "options": ["groß", "klein", "schmal", "alt"],
+    "options": ["groß", "kurz", "jung"],
     "answer": "groß"
   },
   {
     "question": "Der Tisch ist nicht rund, sondern ___.",
-    "options": ["eckig", "kurz", "hoch", "klein"],
+    "options": ["eckig", "kurz", "jung"],
     "answer": "eckig"
   },
   {
     "question": "Das Kleid von Anna ist sehr ___.",
-    "options": ["hübsch", "hässlich", "alt", "kurz"],
+    "options": ["hübsch", "jung", "schnell"],
     "answer": "hübsch"
   },
   {
     "question": "Die Katze meiner Oma ist schon ___.",
-    "options": ["alt", "jung", "klein", "hoch"],
+    "options": ["alt", "neu", "eckig"],
     "answer": "alt"
   },
   {
     "question": "Das Kind im Park ist noch sehr ___.",
-    "options": ["jung", "alt", "groß", "breit"],
+    "options": ["jung", "neu", "eckig"],
     "answer": "jung"
   },
   {
     "question": "Die Tasche ist zu ___.",
-    "options": ["schwer", "leicht", "klein", "hoch"],
+    "options": ["schwer", "hoch", "schnell"],
     "answer": "schwer"
   },
   {
     "question": "Die Schokolade ist ___.",
-    "options": ["dick", "dünn", "schmal", "kurz"],
+    "options": ["dick", "kurz", "jung"],
     "answer": "dick"
   },
   {
     "question": "Der Fluss ist an dieser Stelle sehr ___.",
-    "options": ["breit", "schmal", "kurz", "klein"],
+    "options": ["breit", "kurz", "jung"],
     "answer": "breit"
   },
   {
     "question": "Die Straße im Dorf ist ziemlich ___.",
-    "options": ["schmal", "breit", "kurz", "rund"],
+    "options": ["schmal", "rund", "jung"],
     "answer": "schmal"
   },
   {
     "question": "Das Sofa im Wohnzimmer ist sehr ___.",
-    "options": ["lang", "kurz", "hoch", "klein"],
+    "options": ["lang", "schnell", "jung"],
     "answer": "lang"
   },
   {
     "question": "Die Haare meiner Schwester sind sehr ___.",
-    "options": ["lang", "kurz", "alt", "klein"],
+    "options": ["lang", "eckig", "neu"],
     "answer": "lang"
   },
   {
     "question": "Der alte Mann ist noch sehr ___.",
-    "options": ["stark", "schwach", "dünn", "jung"],
+    "options": ["stark", "neu", "eckig"],
     "answer": "stark"
   },
   {
     "question": "Nach der Krankheit fühlt er sich noch ___.",
-    "options": ["schwach", "stark", "groß", "hoch"],
+    "options": ["schwach", "hoch", "eckig"],
     "answer": "schwach"
   },
   {
     "question": "Die Bluse ist wirklich sehr ___.",
-    "options": ["schön", "hässlich", "alt", "dünn"],
+    "options": ["schön", "schnell", "jung"],
     "answer": "schön"
   },
   {
     "question": "Das Mädchen hat ein ___ Gesicht.",
-    "options": ["hübsches", "hässliches", "altes", "großes"],
+    "options": ["hübsches", "kurzes", "schnelles"],
     "answer": "hübsches"
   },
   {
     "question": "Der Hund im Garten ist ziemlich ___.",
-    "options": ["dick", "dünn", "klein", "kurz"],
+    "options": ["dick", "kurz", "neu"],
     "answer": "dick"
   },
   {
     "question": "Die Katze von Lisa ist sehr ___.",
-    "options": ["dünn", "dick", "breit", "hoch"],
+    "options": ["dünn", "hoch", "neu"],
     "answer": "dünn"
   },
   {
     "question": "Der Tisch im Esszimmer ist ___.",
-    "options": ["rund", "eckig", "hoch", "schmal"],
+    "options": ["rund", "kurz", "jung"],
     "answer": "rund"
   },
   {
     "question": "Die Lampe im Büro ist eher ___.",
-    "options": ["eckig", "rund", "klein", "hoch"],
+    "options": ["eckig", "schnell", "jung"],
     "answer": "eckig"
   },
   {
     "question": "Die Schuhe sind ganz ___.",
-    "options": ["neu", "alt", "klein", "schmal"],
+    "options": ["neu", "jung", "eckig"],
     "answer": "neu"
   },
   {
     "question": "Der Student ist sehr ___.",
-    "options": ["sportlich", "faul", "alt", "klein"],
+    "options": ["sportlich", "eckig", "neu"],
     "answer": "sportlich"
   },
   {
     "question": "Die Sängerin hat ein ___ Kleid getragen.",
-    "options": ["schönes", "hässliches", "kurzes", "altes"],
+    "options": ["schönes", "junges", "schnelles"],
     "answer": "schönes"
   },
   {
     "question": "Der Rucksack ist zu ___.",
-    "options": ["schwer", "leicht", "hoch", "alt"],
+    "options": ["schwer", "hoch", "schnell"],
     "answer": "schwer"
   },
   {
     "question": "Das Baby im Bett ist sehr ___.",
-    "options": ["klein", "groß", "alt", "hoch"],
+    "options": ["klein", "hoch", "alt"],
     "answer": "klein"
   },
   {
     "question": "Der Berg ist sehr ___.",
-    "options": ["hoch", "klein", "kurz", "schmal"],
+    "options": ["hoch", "kurz", "jung"],
     "answer": "hoch"
   },
   {
     "question": "Die Vase auf dem Tisch ist ___.",
-    "options": ["schmal", "breit", "kurz", "dick"],
+    "options": ["schmal", "kurz", "jung"],
     "answer": "schmal"
   },
   {
     "question": "Mein Bruder ist noch sehr ___.",
-    "options": ["jung", "alt", "groß", "schmal"],
+    "options": ["jung", "neu", "eckig"],
     "answer": "jung"
   },
   {
     "question": "Der Ball ist ziemlich ___.",
-    "options": ["rund", "eckig", "kurz", "schmal"],
+    "options": ["rund", "kurz", "jung"],
     "answer": "rund"
   },
   {
     "question": "Das Gesicht der Frau ist ___.",
-    "options": ["schön", "hässlich", "alt", "kurz"],
+    "options": ["schön", "kurz", "schnell"],
     "answer": "schön"
   },
   {
     "question": "Die Brücke über den Fluss ist sehr ___.",
-    "options": ["lang", "kurz", "klein", "schmal"],
+    "options": ["lang", "schnell", "jung"],
     "answer": "lang"
   },
   {
     "question": "Das Kleid war wirklich ___.",
-    "options": ["hübsch", "hässlich", "alt", "kurz"],
+    "options": ["hübsch", "schnell", "jung"],
     "answer": "hübsch"
   },
   {
     "question": "Die Brille ist schon ziemlich ___.",
-    "options": ["alt", "neu", "klein", "hoch"],
+    "options": ["alt", "jung", "schnell"],
     "answer": "alt"
   },
   {
     "question": "Die Tasche ist zu ___.",
-    "options": ["schwer", "dick", "klein", "schmal"],
+    "options": ["dick", "schnell", "jung"],
     "answer": "dick"
   },
   {
     "question": "Der Apfel ist ___.",
-    "options": ["rund", "eckig", "hoch", "lang"],
+    "options": ["rund", "schnell", "jung"],
     "answer": "rund"
   },
   {
     "question": "Die Lampe hat ein ___ Design.",
-    "options": ["eckiges", "rundes", "kurzes", "altes"],
+    "options": ["eckiges", "schnelles", "junges"],
     "answer": "eckiges"
   },
   {
     "question": "Die Sängerin sieht heute sehr ___ aus.",
-    "options": ["hübsch", "hässlich", "alt", "kurz"],
+    "options": ["hübsch", "kurz", "schnell"],
     "answer": "hübsch"
   },
   {
     "question": "Der alte Baum im Park ist sehr ___.",
-    "options": ["stark", "schwach", "kurz", "klein"],
+    "options": ["stark", "kurz", "neu"],
     "answer": "stark"
   },
   {
     "question": "Nach der Krankheit fühlte er sich noch ___.",
-    "options": ["schwach", "stark", "groß", "hoch"],
+    "options": ["schwach", "hoch", "eckig"],
     "answer": "schwach"
   },
   {
     "question": "Der Fußballspieler ist sehr ___.",
-    "options": ["sportlich", "faul", "klein", "schmal"],
+    "options": ["sportlich", "eckig", "neu"],
     "answer": "sportlich"
   },
   {
     "question": "Meine Schwester trägt gern ___ Kleider.",
-    "options": ["schöne", "hässliche", "kurze", "alte"],
+    "options": ["schöne", "schnelle", "junge"],
     "answer": "schöne"
   },
   {
     "question": "Der Rock ist zu ___.",
-    "options": ["kurz", "lang", "hoch", "breit"],
+    "options": ["kurz", "schnell", "jung"],
     "answer": "kurz"
   },
   {
     "question": "Das Kleid sieht wirklich ___ aus.",
-    "options": ["lang", "schön", "alt", "hoch"],
+    "options": ["schön", "schnell", "jung"],
     "answer": "schön"
   },
   {
     "question": "Die Straße ist sehr ___.",
-    "options": ["schmal", "breit", "kurz", "klein"],
+    "options": ["schmal", "rund", "jung"],
     "answer": "schmal"
   },
   {
     "question": "Das Sofa im Wohnzimmer ist sehr ___.",
-    "options": ["lang", "breit", "hoch", "klein"],
+    "options": ["breit", "schnell", "jung"],
     "answer": "breit"
   },
   {
     "question": "Der Bleistift ist ___.",
-    "options": ["lang", "kurz", "hoch", "breit"],
+    "options": ["lang", "schnell", "jung"],
     "answer": "lang"
   },
   {
     "question": "Die Haare von Maria sind ziemlich ___.",
-    "options": ["lang", "kurz", "alt", "hoch"],
+    "options": ["lang", "eckig", "neu"],
     "answer": "lang"
   },
   {
     "question": "Das Mädchen hat ein ___ Lächeln.",
-    "options": ["hübsches", "hässliches", "altes", "kurzes"],
+    "options": ["hübsches", "kurzes", "schnelles"],
     "answer": "hübsches"
   },
   {
     "question": "Der alte Film ist nicht mehr ___.",
-    "options": ["neu", "schön", "klein", "kurz"],
+    "options": ["neu", "kurz", "eckig"],
     "answer": "neu"
   },
   {
     "question": "Der Mann ist sehr ___.",
-    "options": ["stark", "schwach", "klein", "alt"],
+    "options": ["stark", "neu", "eckig"],
     "answer": "stark"
   },
   {
     "question": "Die Fenster sind ziemlich ___.",
-    "options": ["hoch", "kurz", "klein", "jung"],
+    "options": ["hoch", "kurz", "jung"],
     "answer": "hoch"
   },
   {
     "question": "Mein Hund ist noch ___.",
-    "options": ["jung", "alt", "klein", "hoch"],
+    "options": ["jung", "neu", "eckig"],
     "answer": "jung"
   },
   {
     "question": "Der Koffer ist sehr ___.",
-    "options": ["schwer", "dick", "schmal", "kurz"],
+    "options": ["schwer", "kurz", "schnell"],
     "answer": "schwer"
   },
   {
     "question": "Die Bluse ist sehr ___.",
-    "options": ["schön", "hässlich", "alt", "klein"],
+    "options": ["schön", "schnell", "jung"],
     "answer": "schön"
   },
   {
     "question": "Die Brücke über den Fluss ist ziemlich ___.",
-    "options": ["lang", "kurz", "hoch", "klein"],
+    "options": ["lang", "schnell", "jung"],
     "answer": "lang"
   },
   {
     "question": "Das Baby ist ___.",
-    "options": ["alt", "groß", "jung", "hoch"],
+    "options": ["jung", "neu", "eckig"],
     "answer": "jung"
   },
   {
     "question": "Das Auto ist ___.",
-    "options": ["klein", "dick", "kurz", "neu"],
+    "options": ["neu", "jung", "dünn"],
     "answer": "neu"
   },
   {
     "question": "Die Prinzessin ist ___.",
-    "options": ["breit", "dick", "schön", "hässlich"],
+    "options": ["schön", "eckig", "neu"],
     "answer": "schön"
   },
   {
     "question": "Die Hexe ist ___.",
-    "options": ["schön", "hässlich", "jung", "neu"],
+    "options": ["hässlich", "neu", "schnell"],
     "answer": "hässlich"
   },
   {
     "question": "Der Mann ist ___.",
-    "options": ["dick", "dünn", "klein", "kurz"],
+    "options": ["dick", "kurz", "neu"],
     "answer": "dick"
   },
   {
     "question": "Das Model ist ___.",
-    "options": ["hoch", "dick", "dünn", "alt"],
+    "options": ["dünn", "eckig", "neu"],
     "answer": "dünn"
   },
   {
     "question": "Der Ball ist ___.",
-    "options": ["lang", "kurz", "rund", "eckig"],
+    "options": ["rund", "kurz", "jung"],
     "answer": "rund"
   },
   {
     "question": "Der Basketballspieler ist sehr ___.",
-    "options": ["groß", "klein", "kurz", "jung"],
+    "options": ["groß", "kurz", "neu"],
     "answer": "groß"
   },
   {
     "question": "Meine kleine Schwester hat ein ___ Gesicht.",
-    "options": ["rundes", "eckiges", "altes", "hohes"],
+    "options": ["rundes", "eckiges", "schnelles"],
     "answer": "rundes"
   },
   {
     "question": "Die Straße in unserer Stadt ist ziemlich ___.",
-    "options": ["schmal", "breit", "dünn", "kurz"],
+    "options": ["schmal", "rund", "jung"],
     "answer": "schmal"
   },
   {
     "question": "Der alte Schrank ist sehr ___.",
-    "options": ["schwer", "dick", "breit", "schön"],
+    "options": ["breit", "schnell", "jung"],
     "answer": "breit"
   },
   {
     "question": "Meine Oma trägt gern ___ Kleider.",
-    "options": ["schöne", "hässliche", "alte", "kurze"],
+    "options": ["schöne", "schnelle", "junge"],
     "answer": "schöne"
   },
   {
     "question": "Der Turm in der Stadt ist wirklich ___.",
-    "options": ["hoch", "kurz", "klein", "dünn"],
+    "options": ["hoch", "kurz", "jung"],
     "answer": "hoch"
   },
   {
     "question": "Mein Bruder ist noch sehr ___.",
-    "options": ["jung", "alt", "klein", "dick"],
+    "options": ["jung", "neu", "eckig"],
     "answer": "jung"
   },
   {
     "question": "Die Katze ist ziemlich ___.",
-    "options": ["dünn", "dick", "breit", "hoch"],
+    "options": ["dünn", "hoch", "neu"],
     "answer": "dünn"
   },
   {
     "question": "Das Sofa im Wohnzimmer ist sehr ___.",
-    "options": ["breit", "schmal", "kurz", "neu"],
+    "options": ["breit", "schnell", "jung"],
     "answer": "breit"
   },
   {
     "question": "Das neue Handy ist sehr ___.",
-    "options": ["klein", "neu", "alt", "kurz"],
+    "options": ["neu", "jung", "kurz"],
     "answer": "neu"
   },
   {
     "question": "Mein Opa ist schon ziemlich ___.",
-    "options": ["alt", "jung", "klein", "hoch"],
+    "options": ["alt", "neu", "eckig"],
     "answer": "alt"
   },
   {
     "question": "Das Kleid sieht heute besonders ___ aus.",
-    "options": ["hübsch", "hässlich", "kurz", "breit"],
+    "options": ["hübsch", "schnell", "jung"],
     "answer": "hübsch"
   },
   {
     "question": "Die Kinder spielen mit einem ___ Ball.",
-    "options": ["runden", "eckigen", "langen", "breiten"],
+    "options": ["runden", "kurzen", "jungen"],
     "answer": "runden"
   },
   {
     "question": "Der Gang in der Schule ist ziemlich ___.",
-    "options": ["schmal", "breit", "hoch", "kurz"],
+    "options": ["schmal", "rund", "jung"],
     "answer": "schmal"
   },
   {
     "question": "Meine Tante ist sehr ___.",
-    "options": ["schön", "hässlich", "alt", "kurz"],
+    "options": ["schön", "kurz", "neu"],
     "answer": "schön"
   },
   {
     "question": "Der Fernseher ist ziemlich ___.",
-    "options": ["neu", "alt", "dick", "schmal"],
+    "options": ["neu", "jung", "dünn"],
     "answer": "neu"
   },
   {
     "question": "Die Brücke ist sehr ___.",
-    "options": ["lang", "kurz", "klein", "hoch"],
+    "options": ["lang", "schnell", "jung"],
     "answer": "lang"
   },
   {
     "question": "Mein kleiner Bruder ist noch sehr ___.",
-    "options": ["klein", "groß", "alt", "breit"],
+    "options": ["klein", "hoch", "alt"],
     "answer": "klein"
   },
   {
     "question": "Die Tasche ist wirklich ___.",
-    "options": ["schwer", "dick", "dünn", "alt"],
+    "options": ["dick", "schnell", "jung"],
     "answer": "dick"
   },
   {
     "question": "Der Junge ist sehr ___.",
-    "options": ["sportlich", "alt", "breit", "hoch"],
+    "options": ["sportlich", "eckig", "neu"],
     "answer": "sportlich"
   }
 ]

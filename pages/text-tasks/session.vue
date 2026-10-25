@@ -82,6 +82,7 @@
     </div>
 
     <ExitSessionModal
+        :animation-data="HedgehogLeaveSession"
         :show="showExitModal"
         @update:show="val => showExitModal = val"
         @cancel="cancelExit"
@@ -104,17 +105,19 @@
 <script setup>
 import {ref, computed, onMounted} from 'vue'
 import {useRouter, onBeforeRouteLeave} from 'vue-router'
-import {useTextTasksStore} from '../../store/textTasksStore.js'
-import ExitSessionModal from '../../src/components/V-stopSessionModal.vue'
+
 import { useSwipeBack } from '~/composables/useSwipeBack.js'
-import { showInterstitial } from '../../utils/admob.js'
+import { showInterstitial } from '~/utils/admob.js'
+
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue"
-import { userAuthStore } from "~/store/authStore.js"
+import ExitSessionModal from '~/src/components/V-stopSessionModal.vue'
+import HedgehogLeaveSession from 'assets/animation/hedgehog_leave_session.json'
+
+import {useTextTasksStore} from '~/store/textTasksStore.js'
 
 const {t} = useI18n()
 const router = useRouter()
 const store = useTextTasksStore()
-const authStore = userAuthStore()
 
 const loading = ref(true)
 const selectedWordForTap = ref(null)
@@ -122,6 +125,9 @@ const selectedWordForTap = ref(null)
 const showExitModal = ref(false)
 const isConfirmedExit = ref(false)
 let pendingRoute = null
+
+const { $track } = useNuxtApp()
+let sessionStartTime = 0
 
 const showFinishModal = ref(false)
 const correctAnswersCount = ref(0)
@@ -140,17 +146,17 @@ onMounted(() => {
   }
   const minDelay = new Promise(resolve => setTimeout(resolve, 1500))
   const adPromise = new Promise(resolve => {
-    if (!authStore.isPremium) {
-      showInterstitial(() => {
-        resolve()
-      })
-    } else {
+    showInterstitial(() => {
       resolve()
-    }
+    })
   })
 
   Promise.all([minDelay, adPromise]).then(() => {
     loading.value = false
+
+    $track('text_task_session_started', {
+      total_tasks: totalTasks.value
+    })
   })
 })
 
@@ -169,6 +175,12 @@ const handleBackClick = () => {
 }
 
 const confirmExit = () => {
+  const durationSec = Math.round((Date.now() - sessionStartTime) / 1000)
+  $track('text_task_session_abandoned', {
+    duration_seconds: durationSec,
+    completed_tasks: store.currentTaskIndex,
+    total_tasks: totalTasks.value
+  })
   isConfirmedExit.value = true
   showExitModal.value = false
   if (pendingRoute) {
@@ -207,6 +219,12 @@ const isSuccess = computed(() => {
 const handleMainAction = async () => {
   if (!store.isChecking) {
     store.toggleCheck()
+
+    $track('text_task_submitted', {
+      task_index: store.currentTaskIndex,
+      is_success: isSuccess.value
+    })
+
     if (isSuccess.value) {
       correctAnswersCount.value++
       await store.saveTaskProgress()
@@ -214,6 +232,13 @@ const handleMainAction = async () => {
   } else {
     const hasNext = store.nextTask()
     if (!hasNext) {
+      const durationSec = Math.round((Date.now() - sessionStartTime) / 1000)
+      $track('text_task_session_finished', {
+        correct_count: correctAnswersCount.value,
+        total_tasks: totalTasks.value,
+        duration_seconds: durationSec
+      })
+
       showFinishModal.value = true
     }
   }
@@ -244,7 +269,7 @@ const handleBlankClick = (blankId) => {
 </script>
 
 <style scoped>
-/* Стили остались без изменений */
+
 .drag-page {
   font-family: "Nunito", sans-serif;
   height: 100%;

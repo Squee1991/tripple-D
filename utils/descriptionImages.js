@@ -10,8 +10,8 @@ export const topics = [
 				id: 1,
 				image: 'https://firebasestorage.googleapis.com/v0/b/tripple-d-90bd2.firebasestorage.app/o/speak-themen%2Fwinter%2Fkind%20on%20ski.jpg?alt=media&token=d3700b0c-1229-4461-a826-f4e69d8695b4',
 				descriptions: {
-					A1: "Auf dem Bild ist ein Junge. Er fährt Ski im Schnee. Der Junge trägt eine blaue Jacke, eine blaue Hose und braune Schuhe. Er hat auch einen Helm und eine Skibrille. Im Hintergrund sind grüne Bäume.",
-					A2: "Das Bild zeigt ein Kind, das fröhlich Ski fährt. Der Junge trägt warme Winterkleidung: eine blaue Skijacke, Handschuhe и brown Skischuhe. Er hat auch einen blauen Helm und eine Brille auf dem Kopf. Im Hintergrund sieht man grüne Tannen",
+					A1: "Auf dem Bild ist ein Junge. Er fährt Ski im Schnee. Der Junge trägt eine blaue Jacke, eine blaue Hose und braune Schuhe. Er hat auch einen Helm und eine Skibrille. Im Hintergrund sind Bäume.",
+					A2: "Das Bild zeigt ein Kind, das fröhlich Ski fährt. Der Junge trägt warme Winterkleidung: eine blaue Skijacke, Handschuhe и brown Skischuhe. Er hat auch einen blauen Helm und eine Brille auf dem Kopf. Im Hintergrund sieht man Tannen",
 					B1: "Auf dem Bild ist ein Junge. Er fährt Ski. Der Junge trägt eine blaue Jacke, eine blaue Hose, einen Helm und eine Skibrille. In den Händen hält er Skistöcke.\n" +
 						"Im Hintergrund sehen wir eine schöne Winterlandschaft mit viel Schnee und grünen Tannen. Man kann auch einen Skilift erkennen. Ich glaube, dass der Junge mit seiner Familie in einem Skigebiet in den Bergen ist"
 				}
@@ -549,9 +549,9 @@ export const topics = [
 				id: 1,
 				image: 'https://firebasestorage.googleapis.com/v0/b/tripple-d-90bd2.firebasestorage.app/o/speak-themen%2Fhome%20and%20life%2Fcooking_more_saturated.jpg?alt=media&token=c89d1c87-1dc1-407f-aa73-9577d186c1c7',
 				descriptions: {
-					A1: "Der Mann ist in der Küche. Er kocht. Auf dem Tisch liegt Gemüse.",
-					A2: "Der Mann steht am Herd und kocht. Er brät etwas in der Pfanne. Auf dem Brett liegt frisches Gemüse.",
-					B1: "Der Mann bereitet in seiner Küche ein Essen zu. Er rührt im Topf und brät gleichzeitig etwas in der Pfanne an. Auf dem Schneidebrett liegen verschiedene Gemüsesorten bereit."
+					A1: "Hier ist ein Mann. Er kocht in der Küche. Er trägt ein blaues T-Shirt. Auf dem Herd stehen ein Topf und eine Pfanne. Auf dem Tisch liegen Tomaten und Knoblauch.",
+					A2: "Das Bild zeigt einen Mann beim Kochen. Er bereitet das Essen in einer hellen Küche zu. Auf dem Herd kocht Suppe in einem roten Topf, und in einer Pfanne brät Gemüse. Rechts auf dem Schneidebrett liegen frische Zutaten wie Tomaten und Knoblauch. Im Hintergrund sieht man einen Kühlschrank und Schränke.",
+					B1: "Das Bild zeigt einen jungen Mann, der gerade in seiner Küche ein leckeres Gericht kocht. Er rührt mit einem Holzlöffel in dem Topf, während er gleichzeitig das Gemüse in der Pfanne anbrät. Auf der Arbeitsplatte liegen Tomaten und Gewürze, die er für das Essen vorbereitet hat."
 				}
 			},
 			{

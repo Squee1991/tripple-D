@@ -42,7 +42,11 @@
                   </p>
                 </div>
               </div>
-              <button class="map-btn" :disabled="!isUnlocked" @click="go(active)">
+              <button class="map-btn"
+                      :disabled="!isUnlocked"
+                      @click="go(active)"
+                      :data-track="'region_enter_clicked' + (active?.id || 'unknown')"
+              >
                 {{ t('locationsMenu.choose') }}
               </button>
             </div>
@@ -73,6 +77,7 @@
               <div
                   v-for="region in filteredRegions"
                   :key="region.id"
+                  :data-track="'region_card_clicked_' + region.id"
                   class="region-card"
                   :class="[
                   'theme--' + themeOf(region),
@@ -112,7 +117,8 @@ import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {regions} from '@/utils/regions.js'
 import {userlangStore} from '../../store/learningStore.js'
-import { userAuthStore} from "~/store/authStore.js";
+import {userAuthStore} from "~/store/authStore.js";
+
 const authStore = userAuthStore()
 const {t, locale} = useI18n()
 const langStore = userlangStore()
@@ -234,15 +240,15 @@ onBeforeUnmount(() => {
 }
 
 .map__title-wrapper {
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   border-radius: 25px;
-  padding: 10px 10px;
-  background: var(--bgTitle);
-  box-shadow: 0 2px 0 var(--boxShadowBottom);
+  /* padding: 10px 10px; */
+  /* background: var(--bgTitle); */
+  /* box-shadow: 0 2px 0 var(--boxShadowBottom); */
   position: relative;
   overflow: hidden;
 }
@@ -258,9 +264,10 @@ onBeforeUnmount(() => {
 .map__title {
   font-size: 20px;
   color: var(--regionBtnColor);
-  font-weight: 600;
+  font-weight: var(--fontWeightHalloween);
   letter-spacing: .2px;
-  font-family: "Nunito", sans-serif;
+  -webkit-text-stroke: var(--webkitText);
+  font-family: var(--fontFamilyOrange);
 }
 
 .map-layout {
@@ -473,9 +480,9 @@ onBeforeUnmount(() => {
   height: 100%;
   font-size: .82rem;
   font-weight: 900;
-  color: #1d1d1d;
+  color: var(--landsLevelTextColor);
   border-radius: 50%;
-  background: linear-gradient(180deg, #fff, #eaeaea);
+  background: var(--landsLevelBg);
   padding: 0;
 }
 
@@ -548,7 +555,7 @@ onBeforeUnmount(() => {
     height: auto;
   }
 
-  .mal__left-content{
+  .mal__left-content {
     justify-content: start;
   }
 
@@ -715,23 +722,23 @@ onBeforeUnmount(() => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: 3px;
 }
 
 .arrow-btn {
-  width: 45px;
-  height: 36px;
+  width: 40px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
+  border-radius: 16px;
   font-size: 24px;
   font-weight: 900;
   cursor: pointer;
   color: white;
   box-shadow: 2px 2px 0 var(--boxShadowMobile);
   border: none;
-  background: var(--tabBg);
+  background: var(--landsTabBg);
 }
 
 .arrow-btn:active:not(:disabled) {
@@ -757,10 +764,10 @@ onBeforeUnmount(() => {
   align-items: center;
   box-shadow: 2px 2px 0 var(--boxShadowMobile);
   border: 2px solid var(--tabsSlideBorderColor);
-  background: var(--tabBg);
-  border-radius: 15px;
+  background: var(--landsTabBg);
+  border-radius: 18px;
   flex: 1;
-  height: 36px;
+  height: 40px;
 }
 
 .map-empty-placeholder {

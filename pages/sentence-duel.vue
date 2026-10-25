@@ -98,7 +98,13 @@
         <div v-if="isWaitingForOpponent" class="search-container">
           <div class="duel__icon-wrapper">
             <div class="duel__icon">
-              <img src="../assets/images/DuelIcon.svg" alt="duel_icon">
+              <DotLottieVue
+                  :data="JSON.stringify(HedgehogKnight)"
+                  :loop="true"
+                  :autoplay="true"
+                  class="duel__icon-kight"
+              />
+<!--              <img src="../assets/images/DuelIcon.svg" alt="duel_icon">-->
             </div>
           </div>
           <p class="status-text">
@@ -124,8 +130,9 @@ import {useRouter} from 'vue-router'
 import Modal from '../src/components/modal.vue'
 import TipsModal from '../src/components/V-tips.vue'
 import {useSeoMeta} from "#imports";
-import VBackBtn from "~/src/components/V-back-btn.vue";
-
+import VBackBtn from '~/src/components/V-back-btn.vue';
+import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
+import HedgehogKnight from '~/assets/animation/hedgehog_knight.json'
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
@@ -305,6 +312,10 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   width: 200px;
   margin: 0 auto;
   padding: 30px;
+}
+
+.duel__icon-kight {
+  transform: scale(4.6);
 }
 
 .tiips__info-wrapper {

@@ -39,9 +39,9 @@
 <script setup>
 import {ref, onMounted, onUnmounted} from 'vue'
 import {storeToRefs } from 'pinia'
-import {dailyStore} from '../../store/dailyStore.js'
-import NotCompleted from '../../assets/images/dailyIcons/dailyNotCompleted.svg'
-import Completed from '../../assets/images/dailyIcons/dailyCompleted.svg'
+import {dailyStore} from '~/store/dailyStore.js'
+import NotCompleted from '~/assets/images/dailyIcons/dailyNotCompleted.svg'
+import Completed from '~/assets/images/dailyIcons/dailyCompleted.svg'
 
 const { t } = useI18n()
 const store = dailyStore()
@@ -73,6 +73,12 @@ function prettyMs(x) {
   const pad = n => String(n).padStart(2, '0')
   return `${pad(h)}:${pad(m)}:${pad(s)}`
 }
+
+// function openQuest(quest) {
+//   if (quest?.url) {
+//     router.push(quest.url)
+//   }
+// }
 
 onMounted(() => {
   store.init()

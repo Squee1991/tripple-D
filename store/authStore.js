@@ -58,6 +58,8 @@ export const userAuthStore = defineStore('auth', () => {
     const hasSeenOnboarding = ref(false);
     const initialized = ref(false);
     const totalHats = ref(0);
+    const hasAds = ref(true);
+    const streakCount = ref(0);
     const freezeEndsAt = ref(null);
     const claimedBonuses = ref([]);
     const achievements = ref(null);
@@ -184,6 +186,8 @@ export const userAuthStore = defineStore('auth', () => {
         voiceConsentGiven.value = data.voiceConsentGiven === true;
         hasSeenOnboarding.value = data.hasSeenOnboarding === true;
         totalHats.value = data.totalHats || 0;
+        hasAds.value = data.hasAds ?? true;
+        streakCount.value = data.streakCount || 0;
         freezeEndsAt.value = toMillis(data.freezeEndsAt);
         claimedBonuses.value = data.claimedBonuses || [];
 
@@ -204,6 +208,30 @@ export const userAuthStore = defineStore('auth', () => {
         };
 
         if (data.isPremium && !data.gotPremiumBonus) grantPremiumBonusPoints();
+    };
+
+
+    const incrementStreak = async () => {
+        const authUser = auth.currentUser;
+        if (!authUser) return;
+        const newStreak = (streakCount.value || 0) + 1;
+        streakCount.value = newStreak;
+        try {
+            await updateDoc(doc(db, 'users', authUser.uid), { streakCount: newStreak });
+        } catch (e) {
+            console.error('Ошибка обновления streakCount:', e);
+        }
+    };
+
+    const resetStreak = async () => {
+        const authUser = auth.currentUser;
+        if (!authUser) return;
+        streakCount.value = 0;
+        try {
+            await updateDoc(doc(db, 'users', authUser.uid), { streakCount: 0 });
+        } catch (e) {
+            console.error('Ошибка сброса streakCount:', e);
+        }
     };
 
     const grantPremiumBonusPoints = async () => {
@@ -433,6 +461,8 @@ export const userAuthStore = defineStore('auth', () => {
                     hasSeenOnboarding: false,
                     isPremium: false,
                     totalHats: 0,
+                    streakCount: 0,
+                    hasAds: true,
                     points: 0,
                     claimedBonuses: [],
                     sale_3: false,
@@ -513,6 +543,8 @@ export const userAuthStore = defineStore('auth', () => {
                     hasSeenOnboarding: false,
                     isPremium: false,
                     totalHats: 0,
+                    streakCount: 0,
+                    hasAds: true,
                     points: 0,
                     claimedBonuses: [],
                     sale_3: false,
@@ -541,6 +573,8 @@ export const userAuthStore = defineStore('auth', () => {
         }
     };
 
+
+
     const registerUser = async (userData) => {
         const methods = await fetchSignInMethodsForEmail(auth, userData.email);
         if (methods.length > 0) {
@@ -565,6 +599,8 @@ export const userAuthStore = defineStore('auth', () => {
             voiceConsentGiven: false,
             hasSeenOnboarding: false,
             totalHats: 0,
+            streakCount: 0,
+            hasAds: true,
             points: 0,
             claimedBonuses: [],
             sale_3: false,
@@ -804,6 +840,7 @@ export const userAuthStore = defineStore('auth', () => {
     return {
         refreshUser,
         activatePremium,
+        hasAds,
         name,
         email,
         registeredAt,
@@ -821,6 +858,7 @@ export const userAuthStore = defineStore('auth', () => {
         notEnoughArticle,
         voiceConsentGiven,
         totalHats,
+        streakCount,
         setVoiceConsent,
         clearNotEnoughArticle,
         achievements,
@@ -855,7 +893,9 @@ export const userAuthStore = defineStore('auth', () => {
         loginWithApple,
         addClaimedBonus,
         activateDiscount,
-        unlockMarathonAchievement
+        unlockMarathonAchievement,
+        incrementStreak,
+        resetStreak
     };
 });
 

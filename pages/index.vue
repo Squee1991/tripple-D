@@ -2,11 +2,6 @@
 import { ref, onMounted, watch } from 'vue'
 import { userAuthStore } from "~/store/authStore.js"
 import Header from '../src/components/header.vue'
-import Banner from '../src/components/banner.vue'
-import Description from '../src/components/DescriptionBlock.vue'
-import About from '../src/components/about.vue'
-import FeedBack from '../src/components/feedBack.vue'
-import Footer from '../src/components/footer.vue'
 import VUid from '../src/components/V-uid.vue'
 import VEventAvailableModal from "../src/components/V-eventAvailableModal.vue";
 import VShowFall from "../src/components/V-showFall.vue";
@@ -26,6 +21,7 @@ definePageMeta({
 })
 
 onMounted(() => {
+
   hydrated.value = true
   isLocallyLogged.value = localStorage.getItem('app_user_logged') === 'true'
   if (authStore.initialized) {

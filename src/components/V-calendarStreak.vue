@@ -7,17 +7,17 @@
           <div class="rank-info-card">
             <div class="rank-info-header">
               <div class="hats__left-info">
-                <span class="rank-icon-emoji" :class="{ filter : authStore.totalHats}">🎓</span>
-                <div class="hats__total"> {{ authStore.totalHats }}</div>
+                <span class="rank-icon-emoji" :class="{ filter : authStore.totalHats}">
+                  <img :src="SteakIcon" alt="">
+                </span>
+                <div class="hats__total"> {{ authStore.streakCount }}</div>
               </div>
               <button @click="openList" class="btn__hats-info">
                 <img :class="{ rotated: isOpen }" class="info__btn-icon" src="../../assets/images/next.svg"
                      alt="question">
               </button>
             </div>
-            <div class="hats__info-wrapper"
-                 :class="{open__info: isOpen}"
-            >
+            <div class="hats__info-wrapper" :class="{open__info: isOpen}">
               <div class="hats__defence">
                 <div class="time__stop-wrapper">
                   <img class="time__stop-icon"
@@ -28,11 +28,7 @@
                   <div class="time__stop"> {{ freezeComputed }}</div>
                 </div>
               </div>
-              <ul class="rank-info-list">
-                <li>{{ t('pavelOverlay.rankLabelOne') }}</li>
-                <li>{{ t('pavelOverlay.rankLabelTwo') }}</li>
-                <li>{{ t('pavelOverlay.rankLabelThree') }}</li>
-              </ul>
+              <div class="steak__info">{{ t('steakInfo.text')}}</div>
             </div>
           </div>
         </div>
@@ -63,16 +59,8 @@
           >
             <div class="cell-background"></div>
             <span class="day-number">{{ data.day }}</span>
-
-            <div class="task-count" v-if="data.isBeforeRegistration">
-              <span class="icon-small" style="opacity: 0.3;">🎓</span>
-              <span class="task-number" style="opacity: 0.3;">0</span>
-            </div>
-            <div class="task-count" v-else>
-              <span class="icon-small">🎓</span>
-              <span class="task-number" v-if="data.tasksCompleted > 0">{{ data.tasksCompleted }}</span>
-              <span class="task-number" v-else-if="data.tasksCompleted < 0">{{ data.tasksCompleted }}</span>
-              <span class="task-number" v-else>0</span>
+            <div class="task-count">
+              <img class="icon-small" :src="SteakIcon" alt="SteakIcon">
             </div>
           </div>
           <div v-for="(empty, index) in trailingDays" :key="'empty-end-' + index" class="day-cell empty-cell"></div>
@@ -84,11 +72,10 @@
 
 <script setup>
 import { computed, watch, ref, onMounted } from 'vue';
-import { useI18n } from 'vue-i18n';
-import VArrowNav from "~/src/components/V-arrowNav.vue";
-import { dailyStore } from '../../store/dailyStore.js';
-import { userAuthStore } from '../../store/authStore.js';
+import { dailyStore } from '~/store/dailyStore.js';
+import { userAuthStore } from '~/store/authStore.js';
 import FreezeShield from '../../assets/images/FreezeShield.svg';
+import SteakIcon from '../../assets/images/fire.svg';
 
 const { t } = useI18n();
 const authStore = userAuthStore();
@@ -274,6 +261,11 @@ onMounted(() => {
   cursor: pointer;
 }
 
+.steak__info {
+  font-weight: 600;
+  margin-left: 24px;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -311,7 +303,6 @@ onMounted(() => {
   border-radius: 6px;
   padding: 10px;
   margin: 6px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .rank-info-header {
@@ -359,6 +350,7 @@ onMounted(() => {
   filter: grayscale(1);
   font-size: 64px;
   line-height: 1;
+  width: 60px;
 }
 
 .rank-icon-emoji.filter {
@@ -386,7 +378,7 @@ onMounted(() => {
 }
 
 .hats__info-wrapper.open__info {
-  height: 194px;
+  height: 120px;
   opacity: 1;
 }
 
@@ -470,7 +462,7 @@ onMounted(() => {
   border-radius: 14px;
   transition: all 0.3s ease;
   overflow: hidden;
-  border: 2px solid transparent;
+  border: none;
 }
 
 .empty-cell {
@@ -485,8 +477,6 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--menuItemsBg);
-  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 14px;
 }
 
@@ -511,21 +501,19 @@ onMounted(() => {
 }
 
 .icon-small {
+  height: 12px;
   font-size: 16px;
   line-height: 1;
   transition: all 0.3s ease;
+  filter: grayscale(1) opacity(0.4);
 }
 
-.task-number {
-  font-size: 14px;
-  font-weight: 800;
-  color: #475569;
+.day-cell.before-reg .icon-small {
+  opacity: 0.15;
 }
 
-/* СТИЛИ УСПЕШНОГО ДНЯ (ЗЕЛЕНЫЙ) */
 .day-cell.success {
   background: linear-gradient(135deg, #22c55e, #16a34a);
-  transform: translateY(-2px);
   border-color: transparent;
 }
 
@@ -533,7 +521,7 @@ onMounted(() => {
   display: none;
 }
 
-.day-cell.success .day-number, .day-cell.success .task-number {
+.day-cell.success .day-number {
   color: #ffffff;
 }
 
@@ -541,18 +529,15 @@ onMounted(() => {
   filter: none;
 }
 
-/* СТИЛИ ШТРАФА (ЖЕЛТЫЙ) - Сработает только если в Firebase реально будет -3 */
 .day-cell.penalty {
   background: linear-gradient(135deg, #eab308, #ca8a04);
-  transform: translateY(-2px);
-  border-color: transparent;
 }
 
 .day-cell.penalty .cell-background {
   display: none;
 }
 
-.day-cell.penalty .day-number, .day-cell.penalty .task-number {
+.day-cell.penalty .day-number {
   color: #101c3d;
 }
 
@@ -560,7 +545,6 @@ onMounted(() => {
   filter: none;
 }
 
-/* СТИЛИ СЕГОДНЯШНЕГО ДНЯ */
 .day-cell.is-today {
   border-color: #3b82f6;
   box-shadow: inset 0 0 12px rgba(59, 130, 246, 0.2);

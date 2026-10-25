@@ -170,9 +170,12 @@ export default defineNuxtConfig({
 			Kurale: true,
 			Fredoka: true,
 			'Lilita One': true,
-			Nunito: true},
+			Nunito: true,
+			'Rubik Wet Paint': true,
+			Sniglet: true,
+			Coiny: true
+		}
 	},
-
 	vite: {
 		build: {
 			minify: 'esbuild',

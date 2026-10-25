@@ -4,27 +4,26 @@
     <AchievementToast @toast-finished="onToastFinished" />
     <VLost/>
     <VRankOverlay/>
+<!--    <VHedgehogIntroModal v-if="showHedgehogModal" @close="showHedgehogModal = false"/>-->
     <VNetwork/>
+    <VMarathonModal v-model="showMarathonEventModal"/>
   </NuxtLayout>
 </template>
 
 <script setup>
 import VRankOverlay from "./src/components/V-rank-overlay.vue";
 import { StatusBar, Style } from '@capacitor/status-bar';
-import FeedBack from './src/components/V-feedback.vue'
-import VStepHint from "./src/components/V-stephint.vue";
 import AchievementToast from './src/components/AchievementToast.vue'
 import VLost from './src/components/V-lost.vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useAchievementStore } from './store/achievementStore.js'
 import { useCurrentUser } from "vuefire";
+import { useGameStore } from '~/store/marafonStore.js'
 import { userlangStore } from './store/learningStore.js'
 import { userAuthStore } from './store/authStore.js'
-import { useSentencesStore } from './store/sentencesStore.js';
-import { useTrainerStore } from './store/themenProgressStore.js'
 import { useQuestStore } from './store/questStore.js'
-import { useCardsStore } from './store/cardsStore.js'
 import { useLocalStatGameStore } from './store/localSentenceStore.js'
+import { useRankUserStore } from '~/store/rankStore.js'
 import { useBillingStore } from './store/billingStore.js'
 import { userChainStore } from './store/chainStore.js'
 import { SplashScreen } from '@capacitor/splash-screen'
@@ -34,9 +33,11 @@ import { onMounted, onUnmounted, ref, watch, nextTick } from "vue";
 import { dailyStore } from './store/dailyStore'
 import { useHead } from '#imports'
 import { Capacitor } from '@capacitor/core'
-import { AdMob } from '@capacitor-community/admob';
 import VNetwork from "./src/components/V-network.vue";
 import { initAdmob } from "./utils/admob.js";
+import { scheduleReminders, updateReviewReminders } from "./utils/reminders.js";
+import { getReviewForecast } from '~/utils/wordReview.js';
+import VMarathonModal from "~/src/components/overlays/V-marathonModal.vue";
 const chainStore = userChainStore()
 const { locale, t } = useI18n()
 const billingStore = useBillingStore()
@@ -57,9 +58,11 @@ useHead(() => ({
   link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
 }))
 
+const gameStore = useGameStore()
+const showMarathonEventModal = ref(false)
+const rankStore = useRankUserStore()
 const achStore = useAchievementStore()
 const showStepHint = ref(false)
-const cardStore = useCardsStore()
 const statsStore = useLocalStatGameStore()
 const questStore = useQuestStore()
 const learningStore = userlangStore()
@@ -67,22 +70,39 @@ const authStore = userAuthStore()
 const router = useRouter()
 const route = useRoute()
 const user = useCurrentUser()
-const sentencesStore = useSentencesStore();
 const daily = dailyStore()
 const colorMode = useColorMode();
+const { $track } = useNuxtApp()
+const showHedgehogModal = ref(false)
 
-const onToastFinished = () => {
-  if (authStore.uid) {
-    const key = `step_hint_seen_${authStore.uid}`
-    if (!localStorage.getItem(key)) {
-      showStepHint.value = true
-      localStorage.setItem(key, 'true')
-    }
+
+
+// 'pending' | 'shown' | 'none' — выставляет V-eventAvailableModal на главной
+const eventModalState = useState('eventModalState', () => 'pending')
+
+const checkMarathonEvent = () => {
+  const { isOpen, currentSeasonId } = gameStore.getSeasonState()
+  if (showMarathonEventModal.value) return
+  if (isOpen && gameStore.lastSeenModalSeason !== currentSeasonId) {
+    showMarathonEventModal.value = true
+    gameStore.markModalAsSeen()
   }
 }
 
+
+const triggerHedgehogModal = () => {
+  if (!authStore.uid || user.value?.isAnonymous) return
+  showHedgehogModal.value = true
+}
+
+const onToastFinished = () => {
+  triggerHedgehogModal()
+}
+
 onMounted(async () => {
-  initAdmob()
+  rankStore.restorePendingReward()
+  // Продлеваем напоминания на неделю вперёд и обновляем язык их текстов
+  scheduleReminders(t);
   achStore.initializeProgressTracking()
   if (Capacitor.isNativePlatform()) {
     try {
@@ -90,11 +110,7 @@ onMounted(async () => {
     } catch (e) {
       console.error(e);
     }
-    try {
-      await AdMob.initialize({ initializeForTesting: true });
-    } catch (e) {
-      console.error(e);
-    }
+    initAdmob($track);
     App.addListener('backButton', ({ canGoBack }) => {
       const state = window.history.state || {}
       const isModalOpen = !!(state.isMapPanelOpen || state.isSubCategory || state.isSubScreen)
@@ -129,11 +145,19 @@ onUnmounted(() => {
   daily.stop()
 })
 
+// Сменили язык приложения — пересоздаём напоминания с текстами на новом языке
+watch(locale, () => {
+  scheduleReminders(t)
+})
+
 watch(() => authStore.initialized, (isReady) => {
   if (isReady) {
-    learningStore.loadFromFirebase().catch(err => {
-      console.error(err);
-    });
+    learningStore.loadFromFirebase()
+      // Напоминания зовут повторять слова в те дни, когда подходит срок
+      .then(() => updateReviewReminders(getReviewForecast(learningStore.words), t))
+      .catch(err => {
+        console.error(err);
+      });
   }
 }, { immediate: true });
 
@@ -141,7 +165,6 @@ watch(() => authStore.uid, (newUid) => {
   if (newUid) {
     billingStore.initialize();
     questStore.loadDailyProgress();
-    cardStore.loadCreatedCount();
     statsStore.loadLocalStats();
     chainStore.loadProgressFromFirebase()
   }
@@ -165,6 +188,12 @@ watch(() => colorMode.value, async (newTheme) => {
   } catch (err) {
   }
 }, { immediate: true });
+
+
+watch([() => authStore.uid, eventModalState], async ([uid, state]) => {
+  if (!uid || state !== 'none') return
+  if (await gameStore.loadModalSeen()) checkMarathonEvent()
+}, { immediate: true })
 
 </script>
 

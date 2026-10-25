@@ -20,7 +20,25 @@ const props = defineProps({
   bgColor: { type: String, default: '#00c2ff' }
 });
 
+const colorMode = useColorMode();
+const isOrange = computed(() => colorMode.value === 'orange');
+
 const bannerStyle = computed(() => {
+  if (isOrange.value) {
+    return {
+      background: 'linear-gradient(145deg, rgb(255, 132, 0), rgb(219, 156, 0))',
+      backgroundColor: 'rgb(204, 77, 23)',
+      // Переопределяем 3D-тень под оранжевый оттенок
+      boxShadow: `
+        inset 0 2px 4px rgba(255, 255, 255, 0.4),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.15),
+        0 6px 0 rgb(190, 85, 0),
+        0 8px 15px rgba(0, 0, 0, 0.15)
+      `
+    };
+  }
+
+  // Дефолтный голубой вариант
   return {
     background: `linear-gradient(145deg, ${props.bgColor}, #00a8db)`,
     backgroundColor: props.bgColor
@@ -38,11 +56,10 @@ const bannerStyle = computed(() => {
   min-height: 122px;
   padding: 20px 25px;
   border-radius: 24px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1),
-  0 4px 0 rgb(0, 150, 200);
   box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3),
   inset 0 -2px 4px rgba(0, 0, 0, 0.1),
-  0 6px 0 rgb(0, 160, 220);
+  0 6px 0 rgb(0, 160, 220),
+  0 8px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 25px;
   transition: all 0.2s ease;
   cursor: pointer;
@@ -57,7 +74,7 @@ const bannerStyle = computed(() => {
   gap: 8px;
   color: #fff;
   font-family: "Nunito", sans-serif;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 .v-banner__default-text {
@@ -70,7 +87,7 @@ const bannerStyle = computed(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15));
 }
 
 .v-banner__icon {

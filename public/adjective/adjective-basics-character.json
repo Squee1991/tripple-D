@@ -1,481 +1,477 @@
 [
   {
     "question": "Der Clown ist ___.",
-    "options": ["lustig", "traurig", "ernst", "böse"],
+    "options": ["lustig", "eckig", "sauer"],
     "answer": "lustig"
   },
   {
     "question": "Der Held ist ___.",
-    "options": ["mutig", "ängstlich", "faul", "schüchtern"],
+    "options": ["mutig", "eckig", "flach"],
     "answer": "mutig"
   },
   {
     "question": "Der Lügner ist ___.",
-    "options": ["unehrlich", "ehrlich", "nett", "freundlich"],
+    "options": ["unehrlich", "rund", "tief"],
     "answer": "unehrlich"
   },
   {
     "question": "Der Freund ist ___.",
-    "options": ["treu", "egoistisch", "gemein", "böse"],
+    "options": ["treu", "eckig", "kurz"],
     "answer": "treu"
   },
   {
     "question": "Das Baby ist ___.",
-    "options": ["laut", "still", "ruhig", "ernst"],
+    "options": ["laut", "eckig", "breit"],
     "answer": "laut"
   },
   {
     "question": "Der Professor ist ___.",
-    "options": ["klug", "dumm", "faul", "naiv"],
+    "options": ["klug", "rund", "flach"],
     "answer": "klug"
   },
   {
     "question": "Der Dieb ist ___.",
-    "options": ["kriminell", "ehrlich", "gerecht", "nett"],
+    "options": ["kriminell", "eckig", "breit"],
     "answer": "kriminell"
   },
   {
     "question": "Die Oma ist ___.",
-    "options": ["hilfsbereit", "gemein", "egoistisch", "böse"],
+    "options": ["hilfsbereit", "eckig", "flach"],
     "answer": "hilfsbereit"
   },
   {
     "question": "Die Katze ist ___.",
-    "options": ["verspielt", "traurig", "ernst", "böse"],
+    "options": ["verspielt", "eckig", "steil"],
     "answer": "verspielt"
   },
   {
     "question": "Der Hund ist ___.",
-    "options": ["treu", "unehrlich", "gemein", "faul"],
+    "options": ["treu", "rund", "flach"],
     "answer": "treu"
   },
   {
     "question": "Der Künstler ist ___.",
-    "options": ["kreativ", "langweilig", "uninspiriert", "normal"],
+    "options": ["kreativ", "eckig", "schmal"],
     "answer": "kreativ"
   },
   {
     "question": "Der Wissenschaftler ist ___.",
-    "options": ["neugierig", "ignorant", "uninteressiert", "dumm"],
+    "options": ["neugierig", "eckig", "flach"],
     "answer": "neugierig"
   },
   {
     "question": "Der Sportler ist ___.",
-    "options": ["ehrgeizig", "faul", "passiv", "schwach"],
+    "options": ["ehrgeizig", "rund", "steil"],
     "answer": "ehrgeizig"
   },
   {
     "question": "Der Lehrer ist ___.",
-    "options": ["geduldig", "ungeduldig", "ignorant", "gemein"],
+    "options": ["geduldig", "eckig", "flach"],
     "answer": "geduldig"
   },
   {
     "question": "Der Pessimist ist ___.",
-    "options": ["negativ", "optimistisch", "positiv", "fröhlich"],
+    "options": ["negativ", "rund", "schmal"],
     "answer": "negativ"
   },
   {
     "question": "Der Realist ist ___.",
-    "options": ["praktisch", "träumerisch", "unrealistisch", "naiv"],
+    "options": ["praktisch", "eckig", "tief"],
     "answer": "praktisch"
   },
   {
     "question": "Das Kind ist ___.",
-    "options": ["unschuldig", "böse", "hinterhältig", "erwachsen"],
+    "options": ["unschuldig", "eckig", "breit"],
     "answer": "unschuldig"
   },
   {
     "question": "Der Nachbar ist ___.",
-    "options": ["freundlich", "gemein", "böse", "egoistisch"],
+    "options": ["freundlich", "eckig", "flach"],
     "answer": "freundlich"
   },
   {
     "question": "Der Chef ist manchmal ___.",
-    "options": ["streng", "locker", "faul", "schwach"],
+    "options": ["streng", "rund", "flach"],
     "answer": "streng"
   },
   {
     "question": "Die Schwester ist sehr ___.",
-    "options": ["geduldig", "ungeduldig", "laut", "gemein"],
+    "options": ["geduldig", "eckig", "steil"],
     "answer": "geduldig"
   },
   {
     "question": "Der Junge ist oft ___.",
-    "options": ["faul", "fleißig", "nett", "klug"],
+    "options": ["faul", "rund", "flach"],
     "answer": "faul"
   },
   {
     "question": "Die Lehrerin ist ___.",
-    "options": ["streng", "freundlich", "böse", "egoistisch"],
+    "options": ["freundlich", "eckig", "tief"],
     "answer": "freundlich"
   },
   {
     "question": "Die Mutter ist immer ___.",
-    "options": ["lieb", "streng", "klug", "freundlich"],
+    "options": ["lieb", "eckig", "flach"],
     "answer": "lieb"
   },
   {
     "question": "Der Vater ist sehr ___.",
-    "options": ["hilfsbereit", "faul", "laut", "ruhig"],
+    "options": ["hilfsbereit", "rund", "flach"],
     "answer": "hilfsbereit"
   },
   {
     "question": "Die Schwester ist ___.",
-    "options": ["freundlich", "geduldig", "schüchtern", "ruhig"],
+    "options": ["freundlich", "eckig", "steil"],
     "answer": "freundlich"
   },
   {
     "question": "Der Bruder ist oft ___.",
-    "options": ["lustig", "still", "klug", "ernst"],
+    "options": ["lustig", "eckig", "schmal"],
     "answer": "lustig"
   },
   {
     "question": "Mein Freund ist sehr ___.",
-    "options": ["treu", "nett", "geduldig", "fleißig"],
+    "options": ["treu", "rund", "flach"],
     "answer": "treu"
   },
   {
     "question": "Meine Freundin ist ___.",
-    "options": ["klug", "lustig", "hilfsbereit", "lieb"],
+    "options": ["klug", "eckig", "tief"],
     "answer": "klug"
   },
   {
     "question": "Der Lehrer ist ___.",
-    "options": ["geduldig", "freundlich", "streng", "klug"],
+    "options": ["geduldig", "rund", "schmal"],
     "answer": "geduldig"
   },
   {
     "question": "Die Nachbarin ist ___.",
-    "options": ["nett", "hilfsbereit", "freundlich", "ruhig"],
+    "options": ["nett", "eckig", "flach"],
     "answer": "nett"
   },
   {
     "question": "Der Student ist sehr ___.",
-    "options": ["fleißig", "klug", "geduldig", "neugierig"],
+    "options": ["fleißig", "rund", "steil"],
     "answer": "fleißig"
   },
   {
     "question": "Die Oma ist ___.",
-    "options": ["lieb", "ruhig", "geduldig", "hilfsbereit"],
+    "options": ["lieb", "eckig", "flach"],
     "answer": "lieb"
   },
   {
     "question": "Der Opa ist ___.",
-    "options": ["weise", "freundlich", "nett", "ruhig"],
+    "options": ["weise", "rund", "flach"],
     "answer": "weise"
   },
   {
     "question": "Die Tante ist ___.",
-    "options": ["hilfsbereit", "nett", "freundlich", "geduldig"],
+    "options": ["hilfsbereit", "eckig", "tief"],
     "answer": "hilfsbereit"
   },
   {
     "question": "Der Onkel ist ___.",
-    "options": ["lustig", "nett", "freundlich", "ruhig"],
+    "options": ["lustig", "eckig", "schmal"],
     "answer": "lustig"
   },
   {
     "question": "Der Arzt ist ___.",
-    "options": ["freundlich", "hilfsbereit", "ruhig", "geduldig"],
+    "options": ["hilfsbereit", "rund", "flach"],
     "answer": "hilfsbereit"
   },
   {
     "question": "Die Lehrerin ist ___.",
-    "options": ["geduldig", "nett", "freundlich", "klug"],
+    "options": ["freundlich", "eckig", "flach"],
     "answer": "freundlich"
   },
   {
     "question": "Der Sportler ist sehr ___.",
-    "options": ["stark", "fleißig", "ehrgeizig", "ruhig"],
+    "options": ["ehrgeizig", "eckig", "flach"],
     "answer": "ehrgeizig"
   },
   {
     "question": "Die Schülerin ist ___.",
-    "options": ["fleißig", "nett", "freundlich", "ruhig"],
+    "options": ["fleißig", "rund", "steil"],
     "answer": "fleißig"
   },
   {
     "question": "Der Nachbar ist immer ___.",
-    "options": ["nett", "freundlich", "hilfsbereit", "ruhig"],
+    "options": ["freundlich", "eckig", "flach"],
     "answer": "freundlich"
   },
   {
     "question": "Mein Nachbar ist immer ___.",
-    "options": ["freundlich", "böse", "traurig", "müde"],
+    "options": ["freundlich", "eckig", "rund"],
     "answer": "freundlich"
   },
   {
     "question": "Das Kind ist sehr ___.",
-    "options": ["neugierig", "stolz", "faul", "müde"],
+    "options": ["neugierig", "eckig", "breit"],
     "answer": "neugierig"
   },
   {
     "question": "Meine Schwester ist oft ___.",
-    "options": ["lustig", "traurig", "nervös", "schwach"],
+    "options": ["lustig", "eckig", "schmal"],
     "answer": "lustig"
   },
   {
     "question": "Mein Vater ist ein sehr ___ Mensch.",
-    "options": ["streng", "ruhig", "freundlich", "ernst"],
-    "answer": "streng"
+    "options": ["strenger", "eckiger", "runder"],
+    "answer": "strenger"
   },
   {
     "question": "Die Lehrerin ist sehr ___.",
-    "options": ["geduldig", "ungeduldig", "traurig", "ruhig"],
+    "options": ["geduldig", "eckig", "flach"],
     "answer": "geduldig"
   },
   {
     "question": "Der Junge ist noch sehr ___.",
-    "options": ["schüchtern", "laut", "ernst", "streng"],
+    "options": ["schüchtern", "eckig", "flach"],
     "answer": "schüchtern"
   },
   {
     "question": "Meine Mutter ist ___.",
-    "options": ["hilfsbereit", "müde", "ernst", "traurig"],
+    "options": ["hilfsbereit", "eckig", "flach"],
     "answer": "hilfsbereit"
   },
   {
     "question": "Meine Oma ist immer ___.",
-    "options": ["lieb", "böse", "nervös", "traurig"],
+    "options": ["lieb", "rund", "flach"],
     "answer": "lieb"
   },
   {
     "question": "Mein Bruder ist sehr ___.",
-    "options": ["aktiv", "schwach", "krank", "müde"],
+    "options": ["aktiv", "eckig", "flach"],
     "answer": "aktiv"
   },
   {
     "question": "Meine Tante ist oft sehr ___.",
-    "options": ["fröhlich", "traurig", "ernst", "böse"],
+    "options": ["fröhlich", "eckig", "flach"],
     "answer": "fröhlich"
   },
-
   {
     "question": "Der Polizist ist ein ___ Mann.",
-    "options": ["mutig", "ängstlich", "nervös", "ruhig"],
-    "answer": "mutig"
+    "options": ["mutiger", "eckiger", "flacher"],
+    "answer": "mutiger"
   },
   {
     "question": "Mein Opa ist sehr ___.",
-    "options": ["ernst", "lustig", "freundlich", "müde"],
+    "options": ["ernst", "eckig", "flach"],
     "answer": "ernst"
   },
   {
     "question": "Das Mädchen ist sehr ___.",
-    "options": ["höflich", "laut", "streng", "böse"],
+    "options": ["höflich", "eckig", "breit"],
     "answer": "höflich"
   },
   {
     "question": "Mein Kollege ist sehr ___.",
-    "options": ["fleißig", "faul", "hungrig", "müde"],
+    "options": ["fleißig", "rund", "steil"],
     "answer": "fleißig"
   },
   {
     "question": "Meine Freundin ist sehr ___.",
-    "options": ["nett", "traurig", "böse", "laut"],
+    "options": ["nett", "eckig", "flach"],
     "answer": "nett"
   },
   {
     "question": "Der Arzt ist sehr ___.",
-    "options": ["ruhig", "freundlich", "nervös", "traurig"],
+    "options": ["ruhig", "eckig", "steil"],
     "answer": "ruhig"
   },
   {
     "question": "Die Kinder sind sehr ___.",
-    "options": ["verspielt", "ernst", "streng", "schwach"],
+    "options": ["verspielt", "eckig", "breit"],
     "answer": "verspielt"
   },
   {
     "question": "Mein Onkel ist immer ___.",
-    "options": ["ordentlich", "faul", "laut", "traurig"],
+    "options": ["ordentlich", "rund", "flach"],
     "answer": "ordentlich"
   },
   {
     "question": "Die Lehrerin ist sehr ___.",
-    "options": ["streng", "freundlich", "müde", "schwach"],
+    "options": ["streng", "eckig", "flach"],
     "answer": "streng"
   },
   {
     "question": "Mein kleiner Bruder ist oft ___.",
-    "options": ["stolz", "traurig", "ernst", "ruhig"],
+    "options": ["stolz", "eckig", "schmal"],
     "answer": "stolz"
   },
-
   {
     "question": "Meine Freundin ist sehr ___.",
-    "options": ["ehrlich", "unehrlich", "nervös", "faul"],
+    "options": ["ehrlich", "rund", "flach"],
     "answer": "ehrlich"
   },
   {
     "question": "Der Kellner ist ___.",
-    "options": ["höflich", "laut", "streng", "ernst"],
+    "options": ["höflich", "eckig", "flach"],
     "answer": "höflich"
   },
   {
     "question": "Die Katze ist heute sehr ___.",
-    "options": ["ruhig", "laut", "ernst", "freundlich"],
+    "options": ["ruhig", "eckig", "breit"],
     "answer": "ruhig"
   },
   {
     "question": "Meine Schwester ist sehr ___.",
-    "options": ["fleißig", "faul", "müde", "schwach"],
+    "options": ["fleißig", "rund", "flach"],
     "answer": "fleißig"
   },
   {
     "question": "Mein bester Freund ist sehr ___.",
-    "options": ["hilfsbereit", "egoistisch", "traurig", "böse"],
+    "options": ["hilfsbereit", "eckig", "flach"],
     "answer": "hilfsbereit"
   },
   {
     "question": "Meine Oma ist immer ___.",
-    "options": ["freundlich", "böse", "ernst", "laut"],
+    "options": ["freundlich", "eckig", "flach"],
     "answer": "freundlich"
   },
   {
     "question": "Der Nachbar ist sehr ___.",
-    "options": ["nett", "traurig", "böse", "müde"],
+    "options": ["nett", "eckig", "flach"],
     "answer": "nett"
   },
   {
     "question": "Die Kinder sind heute sehr ___.",
-    "options": ["laut", "ernst", "streng", "ruhig"],
+    "options": ["laut", "eckig", "breit"],
     "answer": "laut"
   },
   {
     "question": "Mein Vater ist oft ___.",
-    "options": ["ernst", "fröhlich", "nervös", "ängstlich"],
+    "options": ["ernst", "eckig", "flach"],
     "answer": "ernst"
   },
   {
     "question": "Die Lehrerin ist ___.",
-    "options": ["geduldig", "nervös", "faul", "laut"],
+    "options": ["geduldig", "rund", "flach"],
     "answer": "geduldig"
   },
-
   {
     "question": "Mein Bruder ist sehr ___.",
-    "options": ["schüchtern", "mutig", "laut", "ernst"],
+    "options": ["schüchtern", "eckig", "flach"],
     "answer": "schüchtern"
   },
   {
     "question": "Meine Schwester ist sehr ___.",
-    "options": ["lustig", "traurig", "ernst", "ruhig"],
+    "options": ["lustig", "eckig", "schmal"],
     "answer": "lustig"
   },
   {
     "question": "Die Kinder sind ___.",
-    "options": ["fröhlich", "traurig", "ängstlich", "streng"],
+    "options": ["fröhlich", "eckig", "breit"],
     "answer": "fröhlich"
   },
   {
     "question": "Der Junge ist heute ___.",
-    "options": ["stolz", "traurig", "ernst", "ruhig"],
+    "options": ["stolz", "eckig", "flach"],
     "answer": "stolz"
   },
   {
     "question": "Die Lehrerin ist immer sehr ___.",
-    "options": ["hilfsbereit", "böse", "nervös", "faul"],
+    "options": ["hilfsbereit", "eckig", "flach"],
     "answer": "hilfsbereit"
   },
   {
     "question": "Mein Opa ist oft ___.",
-    "options": ["ruhig", "laut", "nervös", "traurig"],
+    "options": ["ruhig", "eckig", "steil"],
     "answer": "ruhig"
   },
   {
     "question": "Der Lehrer ist sehr ___.",
-    "options": ["streng", "lustig", "freundlich", "ruhig"],
+    "options": ["streng", "rund", "flach"],
     "answer": "streng"
   },
   {
     "question": "Meine Tante ist immer ___.",
-    "options": ["geduldig", "nervös", "laut", "ernst"],
+    "options": ["geduldig", "eckig", "flach"],
     "answer": "geduldig"
   },
   {
     "question": "Mein Cousin ist sehr ___.",
-    "options": ["aktiv", "faul", "traurig", "müde"],
+    "options": ["aktiv", "rund", "flach"],
     "answer": "aktiv"
   },
   {
     "question": "Mein bester Freund ist ___.",
-    "options": ["ehrlich", "unehrlich", "laut", "nervös"],
+    "options": ["ehrlich", "eckig", "flach"],
     "answer": "ehrlich"
   },
-
   {
     "question": "Die Oma ist immer sehr ___.",
-    "options": ["lieb", "böse", "ernst", "nervös"],
+    "options": ["lieb", "eckig", "flach"],
     "answer": "lieb"
   },
   {
     "question": "Meine Schwester ist sehr ___.",
-    "options": ["neugierig", "faul", "ernst", "nervös"],
+    "options": ["neugierig", "eckig", "breit"],
     "answer": "neugierig"
   },
   {
     "question": "Mein Bruder ist sehr ___.",
-    "options": ["fleißig", "faul", "müde", "traurig"],
+    "options": ["fleißig", "rund", "steil"],
     "answer": "fleißig"
   },
   {
     "question": "Mein Lehrer ist ___.",
-    "options": ["freundlich", "nervös", "böse", "laut"],
+    "options": ["freundlich", "eckig", "flach"],
     "answer": "freundlich"
   },
   {
     "question": "Der Junge ist sehr ___.",
-    "options": ["mutig", "ängstlich", "nervös", "schwach"],
+    "options": ["mutig", "eckig", "flach"],
     "answer": "mutig"
   },
   {
     "question": "Die Kinder sind heute sehr ___.",
-    "options": ["fröhlich", "ernst", "streng", "laut"],
+    "options": ["fröhlich", "eckig", "breit"],
     "answer": "fröhlich"
   },
   {
     "question": "Meine Tante ist oft ___.",
-    "options": ["nett", "faul", "laut", "ernst"],
+    "options": ["nett", "eckig", "flach"],
     "answer": "nett"
   },
   {
     "question": "Mein Vater ist sehr ___.",
-    "options": ["ordentlich", "faul", "laut", "traurig"],
+    "options": ["ordentlich", "rund", "flach"],
     "answer": "ordentlich"
   },
   {
     "question": "Die Lehrerin ist ___.",
-    "options": ["geduldig", "freundlich", "ernst", "laut"],
+    "options": ["geduldig", "eckig", "flach"],
     "answer": "geduldig"
   },
   {
     "question": "Mein bester Freund ist sehr ___.",
-    "options": ["hilfsbereit", "faul", "böse", "laut"],
+    "options": ["hilfsbereit", "eckig", "flach"],
     "answer": "hilfsbereit"
   },
   {
     "question": "Mein bester Freund ist ___.",
-    "options": ["treu", "hilfsbereit", "nett", "freundlich"],
+    "options": ["treu", "eckig", "flach"],
     "answer": "treu"
   },
   {
     "question": "Der Schüler ist ___.",
-    "options": ["fleißig", "faul", "gemein", "unfreundlich"],
+    "options": ["fleißig", "rund", "flach"],
     "answer": "fleißig"
   },
   {
     "question": "Die Tante ist ___.",
-    "options": ["lieb", "gemein", "laut", "faul"],
+    "options": ["lieb", "eckig", "flach"],
     "answer": "lieb"
   },
   {
     "question": "Der Opa ist ___.",
-    "options": ["weise", "dumm", "naiv", "egoistisch"],
+    "options": ["weise", "eckig", "flach"],
     "answer": "weise"
   },
   {
     "question": "Die Nachbarin ist ___.",
-    "options": ["neugierig", "schüchtern", "ruhig", "faul"],
+    "options": ["neugierig", "eckig", "breit"],
     "answer": "neugierig"
   }
 ]
