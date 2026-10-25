@@ -3904,11 +3904,12 @@
     "btn": "To article practice"
   },
   "footer": {
-    "copy": "Der Die Das. All rights reserved.",
+    "copy": "All rights reserved.",
     "about": "About",
     "contact": "Contact",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "updated": "Documents updated"
   },
   "friendExamBtn": {
     "btn": "Friends' Exams"

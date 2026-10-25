@@ -3890,11 +3890,12 @@
     "btn": "Artikel alıştırmalarına"
   },
   "footer": {
-    "copy": "Der Die Das. Tüm hakları saklıdır.",
+    "copy": "Tüm hakları saklıdır.",
     "about": "Uygulama hakkında",
     "contact": "İletişim",
     "privacy": "Gizlilik Politikası",
-    "terms": "Kullanım Şartları"
+    "terms": "Kullanım Şartları",
+    "updated": "Belgeler güncellendi"
   },
   "friendExamBtn": {
     "btn": "Arkadaşların Sınavları"

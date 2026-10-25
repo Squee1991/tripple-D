@@ -3881,11 +3881,12 @@
     "btn": "Pratiquer les articles"
   },
   "footer": {
-    "copy": "Der Die Das. Tous droits réservés.",
+    "copy": "Tous droits réservés.",
     "about": "À propos",
     "contact": "Contact",
     "privacy": "Confidentialité",
-    "terms": "Conditions"
+    "terms": "Conditions",
+    "updated": "Documents mis à jour"
   },
   "friendExamBtn": {
     "btn": "Examens des amis"

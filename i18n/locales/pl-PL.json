@@ -3897,11 +3897,12 @@
     "btn": "Do ćwiczeń z rodzajnikami"
   },
   "footer": {
-    "copy": "Der Die Das. Wszelkie prawa zastrzeżone.",
+    "copy": "Wszelkie prawa zastrzeżone.",
     "about": "O aplikacji",
     "contact": "Kontakt",
     "privacy": "Prywatność",
-    "terms": "Warunki korzystania"
+    "terms": "Warunki korzystania",
+    "updated": "Dokumenty zaktualizowane"
   },
   "friendExamBtn": {
     "btn": "Egzaminy przyjaciół"
