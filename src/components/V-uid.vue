@@ -80,9 +80,6 @@ import Daily from '../../assets/images/daily.svg'
 import Card from '../../assets/images/card.svg'
 import VTransition from "~/src/components/V-transition.vue";
 
-import DailyHalloween from "~/assets/images/dailyHalloween.svg";
-import LandsHalloween from "~/assets/images/landsHalloween.svg";
-import ProfileHalloween from "~/assets/images/prolfileHalloween.svg";
 
 import PadLock from '~/assets/images/padlock.svg'
 import ModalDev from '~/src/components/modal.vue'
@@ -90,28 +87,25 @@ import ModalDev from '~/src/components/modal.vue'
 const { t, locale } = useI18n();
 const eventStore = useEventSessionStore();
 const router = useRouter();
-const colorMode = useColorMode();
-
-const isHalloween = computed(() => colorMode.value === 'orange');
 
 const tabs = computed(() => [
   {
     id: 'locations',
-    icon: isHalloween.value ? LandsHalloween : Location,
+    icon: Location,
     alt: 'achIcon',
     label: t('tabsMobile.locations'),
     component: VLands
   },
   {
     id: 'daily',
-    icon: isHalloween.value ? DailyHalloween : Daily,
+    icon: Daily,
     alt: 'daily icon',
     label: t('tabsMobile.daily'),
     component: VDaily
   },
   {
     id: 'profile',
-    icon: isHalloween.value ? ProfileHalloween : Card,
+    icon: Card,
     alt: 'ach icon',
     label: t('tabsMobile.profile'),
     component: VPoints
@@ -375,11 +369,14 @@ onBeforeUnmount(() => {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 0 5px;
+  padding: 16px 5px 0;
   min-height: 0;
   max-height: 100vh;
   overflow: auto;
   scrollbar-width: none;
+  /* плавное растворение у верхнего края при скролле вместо резкого среза */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 16px);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 16px);
 }
 
 .lands__container {
@@ -479,9 +476,13 @@ onBeforeUnmount(() => {
     width: 100%;
     overflow-y: auto;
     padding: 8px;
+    padding-top: 22px;
     padding-bottom: 100px;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    /* плавное растворение контента у краёв при скролле вместо резкого среза */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 22px, #000 calc(100% - 40px), transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0, #000 22px, #000 calc(100% - 40px), transparent 100%);
   }
 
   .mobile-content::-webkit-scrollbar {

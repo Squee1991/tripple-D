@@ -407,6 +407,10 @@ onBeforeUnmount(() => {
   grid-template-columns: repeat(2, 2fr);
   scrollbar-width: none;
   -ms-overflow-style: none;
+  padding-top: 16px;
+  /* плавное растворение карточек у краёв при скролле вместо резкого среза */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 16px, #000 calc(100% - 32px), transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 16px, #000 calc(100% - 32px), transparent 100%);
 }
 
 .map-right::-webkit-scrollbar {

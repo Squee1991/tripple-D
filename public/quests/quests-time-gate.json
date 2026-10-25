@@ -261,7 +261,7 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestTwo.questFifteen",
-        "words": ["dass", "hat", "gekauft", "Haus", "das", "er", "glaube", "ist", "den"],
+        "words": ["dass", "hat", "gekauft", "Haus", "das", "er", "glaube", "Ich", "den"],
         "correctOrder": ["Ich", "glaube", "dass", "er", "das", "Haus", "gekauft", "hat"],
         "tip": "timeGageQuestTwo.questFifteenTip"
       }
@@ -573,7 +573,7 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestFive.questFour",
-        "words": ["Handtuch", "das", "Strand", "am", "liegt", "dem", "in"],
+        "words": ["Handtuch", "Das", "Strand", "am", "liegt", "dem", "in"],
         "correctOrder": ["Das", "Handtuch", "liegt", "am", "Strand"],
         "tip": "timeGageQuestFive.questFourTip"
       },
@@ -707,7 +707,7 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestSix.questFour",
-        "words": ["Teller", "der", "liegt", "auf", "dem", "Tisch", "den"],
+        "words": ["Teller", "Der", "liegt", "auf", "dem", "Tisch", "den"],
         "correctOrder": ["Der", "Teller", "liegt", "auf", "dem", "Tisch"],
         "tip": "timeGageQuestSix.questFourTip"
       },
@@ -757,7 +757,7 @@
         "text": "In diesem Restaurant gibt es keinen Fisch. Wir haben heute nur Gemüse.",
         "question": "timeGageQuestSix.questTen",
         "options": ["vegane Gerichte", "nur Fleisch", "Obst"],
-        "answer": "Fleisch und Gemüse"
+        "answer": "vegane Gerichte"
       },
       {
         "id": 11,
@@ -974,7 +974,7 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestEight.questFour",
-        "words": ["Der", "Geld", "das", "liegt", "im", "Portemonnaie", "in"],
+        "words": ["Geld", "Das", "liegt", "im", "Portemonnaie", "in"],
         "correctOrder": ["Das", "Geld", "liegt", "im", "Portemonnaie"],
         "tip": "timeGageQuestEight.questFourTip"
       },
@@ -1156,8 +1156,8 @@
         "type": "readAndAnswer",
         "text": "Ich habe Kopfschmerzen. Ich werde eine Tablette nehmen und Wasser trinken.",
         "question": "timeGageQuestNine.questTen",
-        "options": ["medizin nehmen", "Sport machen", "einkaufen gehen"],
-        "answer": "eine Tablette nehmen"
+        "options": ["Medizin nehmen", "Sport machen", "einkaufen gehen"],
+        "answer": "Medizin nehmen"
       },
       {
         "id": 11,
@@ -1241,7 +1241,7 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestTen.questFour",
-        "words": ["Katze", "die", "schläft", "auf", "dem", "Bett", "den"],
+        "words": ["Katze", "Die", "schläft", "auf", "dem", "Bett", "den"],
         "correctOrder": ["Die", "Katze", "schläft", "auf", "dem", "Bett"],
         "tip": "timeGageQuestTen.questFourTip"
       },
@@ -1374,7 +1374,7 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestEleven.questFour",
-        "words": ["Heft", "das", "liegt", "auf", "dem", "Tisch", "den"],
+        "words": ["Heft", "Das", "liegt", "auf", "dem", "Tisch", "den"],
         "correctOrder": ["Das", "Heft", "liegt", "auf", "dem", "Tisch"],
         "tip": "timeGageQuestEleven.questFourTip"
       },
@@ -1484,7 +1484,7 @@
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestTwelve.questOne",
-        "words": ["wird", "regnen", "es", "morgen", "werdet", "ist"],
+        "words": ["wird", "regnen", "es", "Morgen", "werdet", "ist"],
         "correctOrder": ["Morgen", "wird", "es", "regnen"],
         "tip": "timeGageQuestTwelve.questOneTip"
       },
@@ -1508,7 +1508,7 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestTwelve.questFour",
-        "words": ["Vogel", "der", "sitzt", "auf", "dem", "Baum", "den"],
+        "words": ["Vogel", "Der", "sitzt", "auf", "dem", "Baum", "den"],
         "correctOrder": ["Der", "Vogel", "sitzt", "auf", "dem", "Baum"],
         "tip": "timeGageQuestTwelve.questFourTip"
       },
@@ -1558,7 +1558,7 @@
         "text": "Heute ist es wolkig. Aber der Wetterbericht sagt, dass morgen die Sonne scheinen wird.",
         "question": "timeGageQuestTwelve.questTen",
         "options": ["klares Wetter", "ein wenig wolkig", "regnerisch"],
-        "answer": "sonnig"
+        "answer": "klares Wetter"
       },
       {
         "id": 11,
@@ -1775,7 +1775,7 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestFourteen.questFour",
-        "words": ["Smartphone", "das", "liegt", "auf", "dem", "Sofa", "den"],
+        "words": ["Smartphone", "Das", "liegt", "auf", "dem", "Sofa", "den"],
         "correctOrder": ["Das", "Smartphone", "liegt", "auf", "dem", "Sofa"],
         "tip": "timeGageQuestFourteen.questFourTip"
       },
@@ -1958,8 +1958,8 @@
         "type": "readAndAnswer",
         "text": "Das Museum öffnet morgen erst um 10 Uhr. Wir werden dort viele Statuen sehen.",
         "question": "timeGageQuestFifteen.questTen",
-        "options": ["um Zehn Uhr", "um Acht Uhr", "um Zwei Uhr"],
-        "answer": "um 10 Uhr"
+        "options": ["um zehn Uhr", "um acht Uhr", "um zwei Uhr"],
+        "answer": "um zehn Uhr"
       },
       {
         "id": 11,
