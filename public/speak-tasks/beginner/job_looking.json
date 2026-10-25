@@ -355,7 +355,7 @@
     "defaultNext": "time_proposal"
   },
   "time_proposal": {
-    "botText": "Perfekt! Um 10:00 Uhr passt es uns am besten für den Termin.",
+    "botText": "Perfekt! Um 10 Uhr passt es uns am besten für den Termin.",
     "botTranslation": {
       "ru-RU": "Идеально! В 10:00 нам лучше всего подходит для встречи.",
       "en-US": "Perfect! At 10:00 suits us best for the appointment.",
@@ -389,7 +389,7 @@
     ],
     "options": [
       {
-        "text": "Alles klar, 10:00 Uhr passt.",
+        "text": "Alles klar, 10 Uhr passt.",
         "translation": {
           "ru-RU": "Все ясно, 10:00 подходит.",
           "en-US": "All right, 10:00 suits me.",
@@ -406,7 +406,7 @@
         "nextStep": "bring_cv"
       },
       {
-        "text": "Gut, ich bin um 10:00 Uhr da.",
+        "text": "Gut, ich bin um 10 Uhr da.",
         "translation": {
           "ru-RU": "Хорошо, я буду там в 10:00.",
           "en-US": "Good, I will be there at 10:00.",
@@ -442,19 +442,19 @@
     },
     "vocabulary": [
       {
-        "german": "in das Gespräch (Akkusativ)",
+        "german": "in das Gespräch",
         "translation": {
-          "ru-RU": "на разговор/встречу (куда?)",
-          "en-US": "into the conversation (where to?)",
+          "ru-RU": "на разговор/встречу",
+          "en-US": "into the conversation",
           "ar-SA": "في المحادثة (إلى أين؟)",
-          "es-ES": "a la conversación (¿a dónde?)",
-          "fr-FR": "dans la conversation (vers où ?)",
-          "hi-IN": "बातचीत में (कहाँ को?)",
-          "pl-PL": "na rozmowę (dokąd?)",
-          "ro-RO": "în conversație (încotro?)",
-          "tr-TR": "görüşmeye (nereye?)",
-          "uk-UA": "на розмову (куди?)",
-          "uz-UZ": "suhbatga (qayerga?)"
+          "es-ES": "a la conversación",
+          "fr-FR": "dans la conversation",
+          "hi-IN": "बातचीत में",
+          "pl-PL": "na rozmowę",
+          "ro-RO": "în conversație",
+          "tr-TR": "görüşmeye",
+          "uk-UA": "на розмову",
+          "uz-UZ": "suhbatga"
         }
       }
     ],
@@ -616,7 +616,7 @@
           "uk-UA": "До побачення! Бувай!",
           "uz-UZ": "Xayr! Ko'rishguncha!"
         },
-        "nextStep": "end"
+        "nextStep": null
       },
       {
         "text": "Bis morgen! Einen schönen Tag noch!",
@@ -633,27 +633,9 @@
           "uk-UA": "До завтра! Гарного дня!",
           "uz-UZ": "Ertagacha! Kuningiz yaxshi o'tsin!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Das Gespräch ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Разговор завершен.",
-      "en-US": "The conversation is ended.",
-      "ar-SA": "انتهت المحادثة.",
-      "es-ES": "La conversación ha terminado.",
-      "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत समाप्त हो गई है。",
-      "pl-PL": "Rozmowa została zakończona.",
-      "ro-RO": "Conversația s-a încheiat.",
-      "tr-TR": "Konuşma sona erdi.",
-      "uk-UA": "Розмову завершено.",
-      "uz-UZ": "Suhbat yakunlandi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

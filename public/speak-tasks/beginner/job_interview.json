@@ -451,9 +451,9 @@
       "hi-IN": "वेतन 15 यूरो प्रति घंटा है।",
       "pl-PL": "Wynagrodzenie wynosi 15 euro za godzinę.",
       "ro-RO": "Salariul este de 15 euro pe oră.",
-      "ru-RU": "Зарплата — 15 евро в час.",
+      "ru-RU": "Зарплата - 15 евро в час.",
       "tr-TR": "Maaş saatlik 15 Euro.",
-      "uk-UA": "Зарплата — 15 євро за годину.",
+      "uk-UA": "Зарплата - 15 євро за годину.",
       "uz-UZ": "Maosh soatiga 15 yevro."
     },
     "vocabulary": [
@@ -560,27 +560,9 @@
           "uk-UA": "До побачення!",
           "uz-UZ": "Xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Das Job-Interview ist beendet.",
-    "botTranslation": {
-      "ar-SA": "انتهت مقابلة العمل.",
-      "en-US": "The job interview is finished.",
-      "es-ES": "La entrevista de trabajo ha terminado.",
-      "fr-FR": "L'entretien d'embauche est terminé.",
-      "hi-IN": "नौकरी का साक्षात्कार समाप्त हो गया है।",
-      "pl-PL": "Rozmowa kwalifikacyjna została zakończona.",
-      "ro-RO": "Interviul de angajare s-a încheiat.",
-      "ru-RU": "Собеседование завершено.",
-      "tr-TR": "İş görüşmesi bitti.",
-      "uk-UA": "Співбесіда завершена.",
-      "uz-UZ": "Ish suhbati yakunlandi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

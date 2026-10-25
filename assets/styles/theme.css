@@ -42,6 +42,7 @@
 
     --tabSlideBoxShadow: 0 4px 6px rgba(141, 134, 190, 0.5);
     --tabBg: #e1dddd;
+    --landsTabBg: #e1dddd;
      --bgTitle: #36c95d;
     --borderRegion: #726a6a;
     --bgOpacity: rgba(15, 23, 42, 0.78);
@@ -53,10 +54,21 @@
     --landNameBg: linear-gradient(180deg, rgb(170 158 158 / 75%), rgb(31 29 29 / 60%));
     --title: #636161;
     --bgModal: white;
-
+    --fontFamilyOrange: 'Nunito', sans-serif;
+    --fontWeightHalloween: 600;
+    --arrowBg: #3b82f6;
+    --landsLevelBg: white;
+    --landsLevelTextColor: #1d1d1d;
+    --webkitText: 0;
 }
 
 .dark {
+    --webkitText: 0;
+    --landsLevelBg: white;
+    --landsLevelTextColor: #1d1d1d;
+    --arrowBg: #3b82f6;
+    --fontWeightHalloween: 600;
+    --fontFamilyOrange: 'Nunito', sans-serif;
     --bgModal: #1b1a1a;
     --title: #ebe5e5;
     --landNameBg: linear-gradient(180deg, rgb(41 38 38 / 75%), rgb(31 29 29 / 60%));;
@@ -70,6 +82,7 @@
     --boxShadowBottom:#9e61f9;
     --bgTitle: #793cd3;
     --tabBg: #1e1e1e;
+    --landsTabBg: #1e1e1e;
     --tabsSlideBorderColor: #2a2a2a;
     --tabsSlideBg: #6358ac;
     --cardShopBg: #1c222d;
@@ -102,8 +115,8 @@
             rgba(0, 0, 0, .36) 60%,
             rgba(0, 0, 0, .66) 100%),
     linear-gradient(180deg, rgba(40, 46, 64, .88), rgba(16, 18, 28, .94));
-}
 
+}
 
 .orange {
     /* Halloween: ночной графит + мягкая тыква + приглушённая лаванда + свет свечи + кость */
@@ -112,12 +125,14 @@
     --homeBg: #0e0e10;
     --bgModal: #1a1920;
     --bgOpacity: rgba(6, 6, 8, 0.85);
+
     --titleColor: #f1ebe3;
     --title: #f1ebe3;
     --tabTextColor: #f1ebe3;
     --panelTextColor: #f1ebe3;
     --navItems: #f1ebe3;
     --labelTextColor: #f1ebe3;
+
     --menuItemsBg: rgba(26, 25, 32, 0.86);
     --settingsSectionBg: rgba(150, 132, 200, 0.07);
     --tabBg: rgba(33, 31, 41, 0.88);
@@ -127,9 +142,12 @@
     --border: #35323f;
     --borderBottom: #35323f;
     --borderRegion: #35323f;
+
     --tabsSlideBg: #e8782c;
+    --landsTabBg: #e8782c;
     --regionBtnBg: #e8782c;
     --labelBg: #e8782c;
+    --arrowBg: #8f7cc4;
     --regionBtnColor: #ffffff;
     --footerBg: #151518;
     --menuHoverEl: #f5c16c;
@@ -138,8 +156,12 @@
     --timerbg: #8bb84a;
     --boxShadowMobile: 0 5px 10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.04);
     --tabSlideBoxShadow: 0 4px 12px rgba(232, 120, 44, 0.35), inset 0 1px 0 rgba(255, 225, 180, 0.35);
+
+    --landsLevelBg: #8f7cc4;
+    --landsLevelTextColor: #ffffff;
     --landNameBg: linear-gradient(180deg, rgb(48 40 34 / 80%), rgb(14 14 16 / 70%));
     --overlayAfter: linear-gradient(to bottom, rgba(14, 14, 16, 0) 0%, rgba(14, 14, 16, 1) 100%);
+
     --cardShopBg: rgba(26, 25, 32, 0.86);
     --cardShopHeadBg: rgba(33, 31, 41, 0.88);
     --cardShopBtnDisabledBg: #35323f;
@@ -156,7 +178,12 @@
             rgba(0, 0, 0, .40) 60%,
             rgba(0, 0, 0, .70) 100%),
     linear-gradient(180deg, rgba(40, 36, 52, .92), rgba(14, 14, 16, .96));
+
+    --fontFamilyOrange: 'Rubik Wet Paint', system-ui;
+    --fontWeightHalloween: 400;
+    --webkitText: 0.5px #1a0e04;
 }
+
 
 .pink {
     --timerbg: #ab1a1a;
@@ -197,8 +224,6 @@ button {
 button:focus {
     border: 2px solid #989191;
 }
-
-
 
 .safe-fixed-bottom {
     bottom: 0 !important;

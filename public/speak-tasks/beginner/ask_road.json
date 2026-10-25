@@ -50,23 +50,6 @@
     ],
     "options": [
       {
-        "text": "Ja, vielen Dank! Ich suche den Bahnhof.",
-        "translation": {
-          "ru-RU": "Да, большое спасибо! Я ищу вокзал.",
-          "en-US": "Yes, thank you very much! I am looking for the train station.",
-          "ar-SA": "نعم، شكراً جزيلاً! أنا أبحث عن محطة القطار.",
-          "es-ES": "¡Sí, muchas gracias! Busco la estación de tren.",
-          "fr-FR": "Oui, merci beaucoup ! Je cherche la gare.",
-          "hi-IN": "हाँ, आपका बहुत-बहुत धन्यवाद! मैं रेलवे स्टेशन ढूंढ रहा हूँ।",
-          "pl-PL": "Tak, bardzo dziękuję! Szukam dworca.",
-          "ro-RO": "Da, mulțumesc mult! Caut gara.",
-          "tr-TR": "Evet, çok teşekkür ederim! Tren istasyonunu arıyorum.",
-          "uk-UA": "Так, дуже дякую! Я шукаю вокзал.",
-          "uz-UZ": "Ha, katta rahmat! Men vokzalni qidiryapman."
-        },
-        "nextStep": "step_3"
-      },
-      {
         "text": "Hallo! Ja, bitte. Ich finde das Stadtzentrum nicht.",
         "translation": {
           "ru-RU": "Здравствуйте! Да, пожалуйста. Я не могу найти центр города.",
@@ -510,19 +493,19 @@
     "defaultNext": "step_15"
   },
   "step_15": {
-    "botText": "Auf Wiedersehen! Das Gespräch ist beendet.",
+    "botText": "Auf Wiedersehen!",
     "botTranslation": {
-      "ru-RU": "До свидания! Разговор окончен.",
-      "en-US": "Goodbye! The conversation is over.",
-      "ar-SA": "وداعاً! انتهت المحادثة.",
-      "es-ES": "¡Adiós! La conversación ha terminado.",
-      "fr-FR": "Au revoir ! La conversation est terminée.",
+      "ru-RU": "До свидания!",
+      "en-US": "Goodbye!",
+      "ar-SA": "وداعاً!",
+      "es-ES": "¡Adiós!",
+      "fr-FR": "Au revoir !",
       "hi-IN": "अलविदा! बातचीत खत्म हो गई है।",
-      "pl-PL": "Do widzenia! Rozmowa zakończona.",
-      "ro-RO": "La revedere! Conversația s-a încheiat.",
-      "tr-TR": "Hoşça kalın! Konuşma sona erdi.",
-      "uk-UA": "До побачення! Розмова закінчена.",
-      "uz-UZ": "Xayr! Suhbat yakunlandi."
+      "pl-PL": "Do widzenia!",
+      "ro-RO": "La revedere!",
+      "tr-TR": "Hoşça kalın!",
+      "uk-UA": "До побачення!",
+      "uz-UZ": "Xayr!"
     },
     "vocabulary": [],
     "options": [],

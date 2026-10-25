@@ -1483,7 +1483,7 @@
           {"question": "Was gehört nicht dazu?", "options": ["Milch", "Saft", "Brot"], "answer": "Brot"},
           {"question": "Was gehört nicht dazu?", "options": ["Schuh", "Socke", "Brille"], "answer": "Brille"},
           {"question": "Was gehört nicht dazu?", "options": ["Singen", "Tanzen", "Schlafen"], "answer": "Schlafen"},
-          {"question": "Was gehört не dazu?", "options": ["Lehrer", "Schüler", "Zimmer"], "answer": "Zimmer"},
+          {"question": "Was gehört nicht dazu?", "options": ["Lehrer", "Schüler", "Zimmer"], "answer": "Zimmer"},
           {"question": "Was gehört nicht dazu?", "options": ["Wasser", "Cola", "Eis"], "answer": "Eis"},
           {"question": "Was gehört nicht dazu?", "options": ["Mutter", "Vater", "Freund"], "answer": "Freund"},
           {"question": "Was gehört nicht dazu?", "options": ["Küche", "Bad", "Garten"], "answer": "Garten"},

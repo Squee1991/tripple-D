@@ -350,7 +350,7 @@
   "vertrag": {
     "botText": "Ihr Vertrag läuft noch bis zum Ende des nächsten Monats.",
     "botTranslation": {
-      "ru-RU": "Ваш договор действует (длится) еще до конца следующего месяца.",
+      "ru-RU": "Ваш договор действует еще до конца следующего месяца.",
       "en-US": "Your contract runs until the end of next month.",
       "ar-SA": "عقدك يمتد حتى نهاية الشهر القادم.",
       "es-ES": "Su contrato dura hasta finales del mes que viene.",
@@ -400,7 +400,7 @@
       {
         "text": "Gut, dann suche ich sofort eine neue Stelle.",
         "translation": {
-          "ru-RU": "Хорошо, тогда я немедленно ищу новую должность (работу).",
+          "ru-RU": "Хорошо, тогда я немедленно ищу новую должность.",
           "en-US": "Good, then I will look for a new position immediately.",
           "ar-SA": "حسناً، إذن سأبحث عن وظيفة جديدة على الفور.",
           "es-ES": "Bien, entonces buscaré un nuevo puesto inmediatamente.",

@@ -39,7 +39,7 @@
           "ru-RU": "Добрый день! Я бы хотел, пожалуйста, один килограмм красных яблок. Они такие приятные и сладкие.",
           "en-US": "Good afternoon! I would like a kilo of red apples, please. They are so nice and sweet.",
           "ar-SA": "طاب يومك! أريد من فضلك كيلوغراماً من التفاح الأحمر. إنه حلو وجميل جداً.",
-          "es-ES": "¡Buenas tardes! Quiero un kilo de manzanas rojas, por favor. Son muy dulces и ricas.",
+          "es-ES": "¡Buenas tardes! Quiero un kilo de manzanas rojas, por favor. Son muy dulces y ricas.",
           "fr-FR": "Bonjour ! Je voudrais un kilo de pommes rouges, s'il vous plaît. Elles sont si bonnes et sucrées.",
           "hi-IN": "नमस्ते! मुझे कृपया एक किलो लाल सेब चाहिए। वे बहुत सुंदर और मीठे हैं।",
           "pl-PL": "Dzień dobry! Poproszę kilogram czerwonych jabłek. Są takie ładne i słodkie.",
@@ -338,7 +338,7 @@
           "ru-RU": "Нет, спасибо. Этого достаточно для меня.",
           "en-US": "No, thanks. That's enough for me.",
           "ar-SA": "لا، شكراً. هذا يكفيني.",
-          "es-ES": "No, gracias. Con eso мне basta.",
+          "es-ES": "No, gracias. Con eso me basta.",
           "fr-FR": "Non, merci. Ça me suffit.",
           "hi-IN": "नहीं, धन्यवाद। मेरे लिए इतना काफी है।",
           "pl-PL": "Nie, dziękuję. To mi wystarczy.",
@@ -424,7 +424,7 @@
     "defaultNext": "step_13"
   },
   "step_13": {
-    "botText": "Das macht zusammen 12 Euro und 50 Cent. Wie möchten Sie bezahlen?",
+    "botText": "Das macht zusammen 12,50 Euro  Wie möchten Sie bezahlen?",
     "botTranslation": {
       "ru-RU": "Это стоит вместе 12 евро и 50 центов. Как вы желаете оплатить?",
       "en-US": "That comes to 12 euros and 50 cents altogether. How would you like to pay?",

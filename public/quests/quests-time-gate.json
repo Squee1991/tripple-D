@@ -47,7 +47,7 @@
         "id": 5,
         "type": "select",
         "question": "timeGageQuestOne.questFive",
-        "options": ["Ich freue mich, weil du hier bist", "Ich freue mich, weil du bist здесь", "Ich freue mich, weil bist du hier"],
+        "options": ["Ich freue mich, weil du hier bist", "Ich freue mich, weil du bist hier", "Ich freue mich, weil bist du hier"],
         "answer": "Ich freue mich, weil du hier bist",
         "tip": "timeGageQuestOne.questFiveTip"
       },
@@ -385,7 +385,7 @@
         "id": 14,
         "type": "select",
         "question": "timeGageQuestThree.questFourteen",
-        "options": ["Ich frage, ob es hier eine Apotheke gibt", "Ich frage, ob es hier eine Apotheke", "Ich frage, ob es здесь ein Apotheke gibt"],
+        "options": ["Ich frage, ob es hier eine Apotheke gibt", "Ich frage, ob es hier eine Apotheke", "Ich frage, ob es hier ein Apotheke gibt"],
         "answer": "Ich frage, ob es hier eine Apotheke gibt",
         "tip": "timeGageQuestThree.questFourteenTip"
       },
@@ -896,7 +896,7 @@
         "id": 11,
         "type": "select",
         "question": "timeGageQuestSeven.questEleven",
-        "options": ["Ich lege die Gitarre в das Auto", "Ich lege die Gitarre ins Auto", "Ich lege die Gitarre in dem Auto"],
+        "options": ["Ich lege die Gitarre in den Auto", "Ich lege die Gitarre ins Auto", "Ich lege die Gitarre in dem Auto"],
         "answer": "Ich lege die Gitarre ins Auto",
         "tip": "timeGageQuestSeven.questElevenTip"
       },
@@ -1154,7 +1154,7 @@
       {
         "id": 10,
         "type": "readAndAnswer",
-        "text": "Ich habe Kopfschmerzen. Ich werde eine Tablette nehmen и Wasser trinken.",
+        "text": "Ich habe Kopfschmerzen. Ich werde eine Tablette nehmen und Wasser trinken.",
         "question": "timeGageQuestNine.questTen",
         "options": ["Medizin nehmen", "Sport machen", "einkaufen gehen"],
         "answer": "Medizin nehmen"
@@ -1187,7 +1187,7 @@
         "id": 14,
         "type": "select",
         "question": "timeGageQuestNine.questFourteen",
-        "options": ["Sie sind fünf Kilometer gelaufen", "Sie haben fünf Kilometer gelaufen", "Sie sind пять Kilometer laufen"],
+        "options": ["Sie sind fünf Kilometer gelaufen", "Sie haben fünf Kilometer gelaufen", "Sie sind fünf Kilometer laufen"],
         "answer": "Sie sind fünf Kilometer gelaufen",
         "tip": "timeGageQuestNine.questFourteenTip"
       },
@@ -1288,7 +1288,7 @@
       {
         "id": 10,
         "type": "readAndAnswer",
-        "text": "Wir sind letzte Woche umgezogen. Die neue Wohnung ist hell и hat einen Balkon.",
+        "text": "Wir sind letzte Woche umgezogen. Die neue Wohnung ist hell und hat einen Balkon.",
         "question": "timeGageQuestTen.questTen",
         "options": ["einen Balkon", "einen Garten", "eine Garage"],
         "answer": "einen Balkon"
@@ -1564,7 +1564,7 @@
         "id": 11,
         "type": "select",
         "question": "timeGageQuestTwelve.questEleven",
-        "options": ["Wir werden в die Berge gehen", "Wir werden in die Berge gehen", "Wir werden in den Berge gehen"],
+        "options": ["Wir werden nach die Berge gehen", "Wir werden in die Berge gehen", "Wir werden in den Berge gehen"],
         "answer": "Wir werden in die Berge gehen",
         "tip": "timeGageQuestTwelve.questElevenTip"
       },
@@ -1721,7 +1721,7 @@
         "id": 14,
         "type": "select",
         "question": "timeGageQuestThirteen.questFourteen",
-        "options": ["Wir sind aus der U-Bahn ausgestiegen", "Wir haben aus der U-Bahn ausgestiegen", "Wir sind из der U-Bahn aussteigen"],
+        "options": ["Wir sind aus der U-Bahn ausgestiegen", "Wir haben aus der U-Bahn ausgestiegen", "Wir sind aus der U-Bahn aussteigen"],
         "answer": "Wir sind aus der U-Bahn ausgestiegen",
         "tip": "timeGageQuestThirteen.questFourteenTip"
       },
@@ -1893,7 +1893,7 @@
         "id": 2,
         "type": "select",
         "question": "timeGageQuestFifteen.questTwo",
-        "options": ["Wir sind auf das Konzert gegangen", "Wir haben на das Konzert gegangen", "Wir sind auf dem Konzert gegangen"],
+        "options": ["Wir sind auf das Konzert gegangen", "Wir haben auf das Konzert gegangen", "Wir sind auf dem Konzert gegangen"],
         "answer": "Wir sind auf das Konzert gegangen",
         "tip": "timeGageQuestFifteen.questTwoTip"
       },
@@ -1917,7 +1917,7 @@
         "id": 5,
         "type": "select",
         "question": "timeGageQuestFifteen.questFive",
-        "options": ["Ich mag die Musik, weil sie schön ist", "Ich mag die Musik, weil она schön ist", "Ich mag die Musik, weil sie ist schön"],
+        "options": ["Ich mag die Musik, weil sie schön ist", "Ich mag die Musik, weil er schön ist", "Ich mag die Musik, weil sie ist schön"],
         "answer": "Ich mag die Musik, weil sie schön ist",
         "tip": "timeGageQuestFifteen.questFiveTip"
       },

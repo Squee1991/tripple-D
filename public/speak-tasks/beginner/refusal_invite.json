@@ -224,7 +224,7 @@
       "pl-PL": "To naprawdę szkoda, Anna! Dlaczego nie da rady?",
       "ro-RO": "Este chiar păcat, Anna! De ce nu se poate?",
       "tr-TR": "Bu gerçekten çok yazık Anna! Neden olmuyor?",
-      "uk-UA": "Це дійсно дуже шкода, Анно! А чому не виходить?",
+      "uk-UA": "Мені дійсно дуже шкода, Анно! А чому не виходить?",
       "uz-UZ": "Bu rostdan ham juda yomon, Anna! Nega iloji yo'q?"
     },
     "vocabulary": [],
@@ -598,7 +598,7 @@
           "uk-UA": "До зустрічі! Бувай!",
           "uz-UZ": "Ko'rishguncha! Xayr!"
         },
-        "nextStep": "step_19"
+        "nextStep": null
       },
       {
         "text": "Bis nächste Woche! Mach's gut!",
@@ -615,28 +615,9 @@
           "uk-UA": "До наступного тижня! Щасти!",
           "uz-UZ": "Kelasi haftagacha! Yaxshi qol!"
         },
-        "nextStep": "step_19"
+        "nextStep": null
       }
     ],
-    "defaultNext": "step_19"
-  },
-  "step_19": {
-    "botText": "Das Gespräch ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Разговор окончен.",
-      "en-US": "The conversation is over.",
-      "ar-SA": "المحادثة انتهت.",
-      "es-ES": "La conversación ha terminado.",
-      "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत खत्म हो गई है।",
-      "pl-PL": "Rozmowa zakończona.",
-      "ro-RO": "Conversația s-a încheiat.",
-      "tr-TR": "Konuşma sona erdi.",
-      "uk-UA": "Розмова закінчена.",
-      "uz-UZ": "Suhbat tugadi."
-    },
-    "vocabulary": [],
-    "options": [],
     "defaultNext": null
   }
 }

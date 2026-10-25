@@ -320,7 +320,7 @@
       {
         "text": "Verstanden. Der Schrank im Flur ist für das Büromaterial.",
         "translation": {
-          "ru-RU": "Понял. Шкаф в коридоре — для офисных материалов.",
+          "ru-RU": "Понял. Шкаф в коридоре - для офисных материалов.",
           "en-US": "Understood. The closet in the hallway is for office supplies.",
           "ar-SA": "مفهوم. الخزانة في الممر هي للأدوات المكتبية.",
           "es-ES": "Entendido. El armario del pasillo es para el material de oficina.",
@@ -329,7 +329,7 @@
           "pl-PL": "Zrozumiałem. Szafa w przedpokoju jest na materiały biurowe.",
           "ro-RO": "Înțeles. Dulapul de pe hol este pentru materialele de birou.",
           "tr-TR": "Anlaşıldı. Koridordaki dolap ofis malzemeleri için.",
-          "uk-UA": "Зрозумів. Шафа в коридорі — для офісних матеріалів.",
+          "uk-UA": "Зрозумів. Шафа в коридорі - для офісних матеріалів.",
           "uz-UZ": "Tushundim. Yo'lakdagi shkaf ofis mollari uchun."
         },
         "nextStep": "step_11"

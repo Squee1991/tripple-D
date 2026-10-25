@@ -625,7 +625,7 @@
           "uk-UA": "До побачення!",
           "uz-UZ": "Ko'rishguncha!"
         },
-        "nextStep": "end"
+        "nextStep": null
       },
       {
         "text": "Tschüss!",
@@ -642,27 +642,9 @@
           "uk-UA": "Бувай!",
           "uz-UZ": "Xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Die Taxifahrt ist beendet.",
-    "botTranslation": {
-      "ar-SA": "انتهت رحلة سيارة الأجرة.",
-      "en-US": "The taxi ride is finished.",
-      "es-ES": "El viaje en taxi ha terminado.",
-      "fr-FR": "Le trajet en taxi est terminé.",
-      "hi-IN": "टैक्सी की सवारी समाप्त हो गई है。",
-      "pl-PL": "Jazda taksówką zakończona.",
-      "ro-RO": "Călătoria cu taxiul s-a încheiat.",
-      "ru-RU": "Поездка на такси окончена.",
-      "tr-TR": "Taksi yolculuğu bitti.",
-      "uk-UA": "Поїздку на таксі завершено.",
-      "uz-UZ": "Taksi safari tugadi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

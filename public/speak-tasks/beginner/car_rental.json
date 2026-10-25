@@ -496,19 +496,19 @@
     "defaultNext": "step_15"
   },
   "step_15": {
-    "botText": "Sehr gerne. Gute Fahrt! Das Gespräch ist beendet.",
+    "botText": "Sehr gerne. Gute Fahrt!",
     "botTranslation": {
-      "ru-RU": "Не за что. Счастливого пути! Разговор окончен.",
-      "en-US": "You're very welcome. Have a good trip! The conversation is over.",
-      "ar-SA": "بكل سرور. رحلة سعيدة! انتهت المحادثة.",
-      "es-ES": "Con mucho gusto. ¡Buen viaje! La conversación ha terminado.",
-      "fr-FR": "Je vous en prie. Bonne route ! La conversation est terminée.",
-      "hi-IN": "आपका स्वागत है। आपकी यात्रा शुभ हो! बातचीत खत्म हो गई है।",
-      "pl-PL": "Bardzo proszę. Szerokiej drogi! Rozmowa zakończona.",
-      "ro-RO": "Cu mare plăcere. Drum bun! Conversația s-a încheiat.",
-      "tr-TR": "Rica ederim. İyi yolculuklar! Konuşma sona erdi.",
-      "uk-UA": "Нема за що. Щасливої дороги! Розмова закінчена.",
-      "uz-UZ": "Arzimaydi. Oq yo'l! Suhbat yakunlandi."
+      "ru-RU": "Не за что. Счастливого пути!",
+      "en-US": "You're very welcome. Have a good trip!",
+      "ar-SA": "بكل سرور. رحلة سعيدة!",
+      "es-ES": "Con mucho gusto. ¡Buen viaje!",
+      "fr-FR": "Je vous en prie. Bonne route !",
+      "hi-IN": "आपका स्वागत है। आपकी यात्रा शुभ हो!",
+      "pl-PL": "Bardzo proszę. Szerokiej drogi!",
+      "ro-RO": "Cu mare plăcere. Drum bun!",
+      "tr-TR": "Rica ederim. İyi yolculuklar!",
+      "uk-UA": "Нема за що. Щасливої дороги!",
+      "uz-UZ": "Arzimaydi. Oq yo'l!"
     },
     "vocabulary": [
       {

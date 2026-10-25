@@ -616,25 +616,6 @@
         "nextStep": "step_19"
       }
     ],
-    "defaultNext": "step_19"
-  },
-  "step_19": {
-    "botText": "Das Gespräch ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Разговор окончен.",
-      "en-US": "The conversation is over.",
-      "ar-SA": "المحادثة انتهت.",
-      "es-ES": "La conversación ha terminado.",
-      "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत खत्म हो गई है।",
-      "pl-PL": "Rozmowa zakończona.",
-      "ro-RO": "Conversația s-a încheiat.",
-      "tr-TR": "Konuşma sona erdi.",
-      "uk-UA": "Розмова закінчена.",
-      "uz-UZ": "Suhbat tugadi."
-    },
-    "vocabulary": [],
-    "options": [],
     "defaultNext": null
   }
 }

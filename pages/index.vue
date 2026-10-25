@@ -28,8 +28,7 @@ const isLocallyLogged = ref(false)
 const colorMode = useColorMode()
 
 // Луна и все эффекты Хэллоуина: пока идёт его событие (в любой теме) или включена купленная тема
-const isHalloweenTheme = computed(() => colorMode.value === 'orange')
-const isHalloweenFx = computed(() => isHalloweenTheme.value || eventStore.isEventActive('pumpkin'))
+const isHalloweenFx = computed(() => colorMode.value === 'orange' || eventStore.isEventActive('pumpkin'))
 
 // html.halloween-fx делает фон body прозрачным, чтобы луну было видно под контентом
 watch(isHalloweenFx, (on) => {
@@ -39,20 +38,6 @@ watch(isHalloweenFx, (on) => {
 onBeforeUnmount(() => {
   document.documentElement.classList.remove('halloween-fx')
 })
-
-// Тема Хэллоуина доступна только после покупки: если её выбрали без покупки — возвращаем тёмную.
-// Сбрасываем только когда покупка точно загрузилась, чтобы не сбросить тему тем, кто её купил.
-watch(() => authStore.uid, (uid) => {
-  if (uid) eventStore.loadHalloweenThemePurchase()
-}, { immediate: true })
-
-watch(
-    () => [eventStore.isHalloweenPurchaseLoaded, eventStore.isHalloweenThemePurchased, colorMode.preference],
-    ([loaded, purchased, preference]) => {
-      if (loaded && !purchased && preference === 'orange') colorMode.preference = 'dark'
-    },
-    { immediate: true }
-)
 
 definePageMeta({
   layout: 'footerlayout'
@@ -100,7 +85,7 @@ watch(() => authStore.uid, (newUid) => {
       <Banner/>
       <Description/>
       <About/>
-<!--      <VAppBanner/>-->
+      <!--      <VAppBanner/>-->
       <FeedBack/>
     </template>
   </div>

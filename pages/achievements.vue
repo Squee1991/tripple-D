@@ -110,9 +110,11 @@ import ModalVerbs from "../src/components/achievements-group/modalVerbs.vue";
 import TypeVerbsAchievement from "../src/components/achievements-group/typeVerbsAchievement.vue";
 import WinterAchievement from '../src/components/achievements-group/winterAchievement.vue'
 import ValentineAchievement from '../src/components/achievements-group/valentineAchievement.vue'
+import HalloweenAchievements from '../src/components/achievements-group/halloweenAchievements.vue'
 
 import { eventWinterAchievements } from '../src/achieveGroup/eventAchievement/winterAchievements.js'
 import { valentineAchievements } from '../src/achieveGroup/eventAchievement/valentineAchievements.js'
+import { halloweenAchievements } from '../src/achieveGroup/eventAchievement/halloweenAchievements.js'
 import { tensesVerbs } from '../src/achieveGroup/verbs/tensesVerbs.js'
 import {modalVerbs} from "../src/achieveGroup/verbs/modalVerbs.js";
 import { typeVerbs} from "../src/achieveGroup/verbs/typeVerbs.js";
@@ -222,7 +224,9 @@ const contentMap = {
   modalVerbs: ModalVerbs,
   typeVerbs: TypeVerbsAchievement,
   winter: WinterAchievement,
-  valentine: ValentineAchievement
+  valentine: ValentineAchievement,
+  halloween: HalloweenAchievements,
+
 };
 const currentContent = computed(() => contentMap[contentId.value]);
 const wrapperClass = computed(() => {
@@ -256,7 +260,8 @@ const allAchievementsData = {
   modalVerbs: modalVerbs,
   typeVerbs: typeVerbs,
   winter: eventWinterAchievements,
-  valentine: valentineAchievements
+  valentine: valentineAchievements,
+  halloween: halloweenAchievements
 };
 const countNestedAchievements = (dataArray) => {
   let count = 0;
@@ -350,6 +355,10 @@ const modeComputed = computed(() => {
   if (allAchievementsData.valentine) {
     valentine = countNestedAchievements(allAchievementsData.valentine)
   }
+  let halloween = 0
+  if (allAchievementsData.halloween) {
+    halloween = countNestedAchievements(allAchievementsData.halloween)
+  }
   return {
     easy: easyCount,
     normal: normalCount,
@@ -363,8 +372,9 @@ const modeComputed = computed(() => {
     akkusativ: akkusativ,
     genitiv: genitiv,
     dativ: dativ,
-    eventsTotal: winter + valentine,
+    eventsTotal: winter + valentine + halloween,
     valentine: valentine,
+    halloween: halloween,
     tensesVerbs: tensesVerbs,
     modalVerbs: modalVerbs,
     typeVerbs: typeVerbs,
@@ -552,8 +562,8 @@ const achievementCategories = computed(() => [
     submenu: [
       { id: 'winter', name: 'categoryAchievments.winterEvent', icon: '❄️', length: modeComputed.value.winter },
       { id: 'valentine', name: 'categoryAchievments.valentineEvent', icon: '💖', length: modeComputed.value.valentine },
-      { id: 'foolDay', name: 'categoryAchievments.foolDayEvent', icon: '🎭' },
-      { id: 'halloween', name: 'categoryAchievments.halloweenEvent', icon: '🎃' },
+      { id: 'halloween', name: 'categoryAchievments.halloweenEvent', icon: '🎃', length: modeComputed.value.halloween },
+      // { id: 'foolDay', name: 'categoryAchievments.foolDayEvent', icon: '🎭', length: modeComputed.value.halloween }
     ]
   }
 ]);

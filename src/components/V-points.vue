@@ -31,7 +31,6 @@
           </NuxtLink>
         </li>
       </ul>
-
     </section>
     <div v-if="showFreezeModal" class="modal-overlay" @click.self="showFreezeModal = false">
       <div class="modal-content">
@@ -57,15 +56,15 @@
 
 <script setup>
 import {userlangStore} from "~/store/learningStore.js";
-import {userAuthStore} from '../../store/authStore.js'
+import {userAuthStore} from '~/store/authStore.js'
 import {useRouter} from "vue-router";
-import {useFriendsStore} from '../../store/friendsStore.js'
+import {useFriendsStore} from '~/store/friendsStore.js'
 import {onMounted, ref, computed} from "vue";
 import Graph from '../../assets/images/graph.svg'
 import AchPanelIcon from '../../assets/images/AchPanelIcon.svg'
 import RankedIcon from '../../assets/images/RankedIcon.svg'
 import Calendar from '../../assets/images/calendar (2).svg'
-import { useRankUserStore } from '../../store/rankStore.js'
+import { useRankUserStore } from '~/store/rankStore.js'
 import VArrowNav from "~/src/components/V-arrowNav.vue";
 import AccountManagement from "~/src/components/AccountManagement.vue";
 import VBanner from "~/src/components/V-banner.vue";
@@ -97,6 +96,7 @@ const toPayment = () => {
 onMounted(() => {
   friendsStore.loadFriends()
 })
+
 </script>
 
 <style scoped>

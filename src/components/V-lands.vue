@@ -42,7 +42,11 @@
                   </p>
                 </div>
               </div>
-              <button class="map-btn" :disabled="!isUnlocked" @click="go(active)">
+              <button class="map-btn"
+                      :disabled="!isUnlocked"
+                      @click="go(active)"
+                      :data-track="'region_enter_clicked' + (active?.id || 'unknown')"
+              >
                 {{ t('locationsMenu.choose') }}
               </button>
             </div>
@@ -73,6 +77,7 @@
               <div
                   v-for="region in filteredRegions"
                   :key="region.id"
+                  :data-track="'region_card_clicked_' + region.id"
                   class="region-card"
                   :class="[
                   'theme--' + themeOf(region),
@@ -86,7 +91,7 @@
                 <div class="region-card__footer">
                   <span class="region-card__title">{{ t(region.name) }}</span>
                   <div class="region-card-badge-wrapper">
-                  <span v-if="clampedLevel < region.level" class="region-card__badge">
+                  <span v-if="!authStore.isPremium && clampedLevel < region.level" class="region-card__badge">
                     {{ region.level }}
                   </span>
                   </div>
@@ -112,7 +117,9 @@ import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {regions} from '@/utils/regions.js'
 import {userlangStore} from '../../store/learningStore.js'
+import {userAuthStore} from "~/store/authStore.js";
 
+const authStore = userAuthStore()
 const {t, locale} = useI18n()
 const langStore = userlangStore()
 const router = useRouter()
@@ -153,7 +160,12 @@ function handleResize() {
 }
 
 const clampedLevel = computed(() => Math.min(Math.max(langStore.isLeveling, 0), 20))
-const isUnlocked = computed(() => active.value ? clampedLevel.value >= active.value.level : false)
+
+const isUnlocked = computed(() => {
+  if (!active.value) return false
+  if (authStore.isPremium) return true
+  return clampedLevel.value >= active.value.level
+})
 
 function themeOf(obj) {
   return (obj && (obj.theme || obj.pathTo)) ? (obj.theme || obj.pathTo) : 'default'
@@ -180,7 +192,7 @@ const handlePopState = () => {
 }
 
 function go(region) {
-  if (clampedLevel.value >= region.level) {
+  if (authStore.isPremium || clampedLevel.value >= region.level) {
     router.push(`/location/${region.pathTo}`)
   }
 }
@@ -228,15 +240,15 @@ onBeforeUnmount(() => {
 }
 
 .map__title-wrapper {
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   border-radius: 25px;
-  padding: 10px 10px;
-  background: var(--bgTitle);
-  box-shadow: 0 2px 0 var(--boxShadowBottom);
+  /* padding: 10px 10px; */
+  /* background: var(--bgTitle); */
+  /* box-shadow: 0 2px 0 var(--boxShadowBottom); */
   position: relative;
   overflow: hidden;
 }
@@ -252,16 +264,17 @@ onBeforeUnmount(() => {
 .map__title {
   font-size: 20px;
   color: var(--regionBtnColor);
-  font-weight: 600;
+  font-weight: var(--fontWeightHalloween);
   letter-spacing: .2px;
-  font-family: "Nunito", sans-serif;
+  -webkit-text-stroke: var(--webkitText);
+  font-family: var(--fontFamilyOrange);
 }
 
 .map-layout {
   display: flex;
   gap: 12px;
   width: 100%;
-  height: calc(100vh - 20px);
+  height: calc(100vh - 250px);
 }
 
 .map-left {
@@ -269,6 +282,7 @@ onBeforeUnmount(() => {
   min-width: 300px;
   max-width: 100%;
   flex: 1;
+  border: 3px solid var(--borderMobile);
   padding: 0 10px;
   border-radius: 15px;
   display: flex;
@@ -282,7 +296,7 @@ onBeforeUnmount(() => {
 
 .map-left__art {
   width: 100%;
-  height: 130px;
+  height: 150px;
   border: 4px solid var(--tabsSlideBorderColor);
   box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
   border-radius: 10px;
@@ -325,8 +339,8 @@ onBeforeUnmount(() => {
   align-items: center;
   gap: 8px;
   font-weight: 800;
-  margin-bottom: 13px;
-  padding: 4px 10px;
+  margin-bottom: 18px;
+  padding: 6px 10px;
   border: 2px dashed var(--border);
   border-radius: 999px;
   background: #fff;
@@ -393,7 +407,6 @@ onBeforeUnmount(() => {
   grid-template-columns: repeat(2, 2fr);
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding-bottom: 100px;
 }
 
 .map-right::-webkit-scrollbar {
@@ -467,9 +480,9 @@ onBeforeUnmount(() => {
   height: 100%;
   font-size: .82rem;
   font-weight: 900;
-  color: #1d1d1d;
+  color: var(--landsLevelTextColor);
   border-radius: 50%;
-  background: linear-gradient(180deg, #fff, #eaeaea);
+  background: var(--landsLevelBg);
   padding: 0;
 }
 
@@ -542,7 +555,7 @@ onBeforeUnmount(() => {
     height: auto;
   }
 
-  .mal__left-content{
+  .mal__left-content {
     justify-content: start;
   }
 
@@ -662,6 +675,12 @@ onBeforeUnmount(() => {
   }
 }
 
+@media (min-width: 768px) {
+  region-card {
+    height: 166px;
+  }
+}
+
 @media (max-width: 636px) {
   .map-left {
     width: 100%;
@@ -685,6 +704,10 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 478px) {
+  .map-right {
+    grid-template-columns: repeat(2, 2fr);
+    overflow-y: visible;
+  }
 }
 
 .map-right-container {
@@ -693,38 +716,29 @@ onBeforeUnmount(() => {
   flex-direction: column;
   gap: 15px;
   margin-bottom: 6px;
-  overflow-y: auto;
-  min-height: 0;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding-bottom: 160px;
-}
-
-.map-right-container::-webkit-scrollbar {
-  display: none;
 }
 
 .map-pagination-arrows {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: 3px;
 }
 
 .arrow-btn {
-  width: 45px;
-  height: 36px;
+  width: 40px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
+  border-radius: 16px;
   font-size: 24px;
   font-weight: 900;
   cursor: pointer;
   color: white;
   box-shadow: 2px 2px 0 var(--boxShadowMobile);
   border: none;
-  background: var(--tabBg);
+  background: var(--landsTabBg);
 }
 
 .arrow-btn:active:not(:disabled) {
@@ -750,10 +764,10 @@ onBeforeUnmount(() => {
   align-items: center;
   box-shadow: 2px 2px 0 var(--boxShadowMobile);
   border: 2px solid var(--tabsSlideBorderColor);
-  background: var(--tabBg);
-  border-radius: 15px;
+  background: var(--landsTabBg);
+  border-radius: 18px;
   flex: 1;
-  height: 36px;
+  height: 40px;
 }
 
 .map-empty-placeholder {
@@ -809,15 +823,6 @@ onBeforeUnmount(() => {
 .menu-appear-enter-from {
   opacity: 0;
   transform: translateY(15px);
-}
-
-@media (max-width: 767px) {
-  .map-right {
-    padding-bottom: 0;
-  }
-  .map-right-container {
-    padding-bottom: 10px;
-  }
 }
 
 </style>

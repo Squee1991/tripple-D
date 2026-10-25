@@ -496,19 +496,19 @@
     "defaultNext": "step_15"
   },
   "step_15": {
-    "botText": "Nichts zu danken. Entschuldigen Sie die Unannehmlichkeiten! Das Gespräch ist beendet.",
+    "botText": "Nichts zu danken. Entschuldigen Sie die Unannehmlichkeiten!",
     "botTranslation": {
-      "ru-RU": "Не за что. Извините за неудобства! Разговор окончен.",
-      "en-US": "Don't mention it. Apologies for the inconvenience! The conversation is over.",
-      "ar-SA": "لا شكر على واجب. نعتذر عن الإزعاج! انتهت المحادثة.",
-      "es-ES": "No hay de qué. ¡Disculpe las molestias! La conversación ha terminado.",
-      "fr-FR": "De rien. Veuillez nous excuser pour le désagrément ! La conversation est terminée.",
-      "hi-IN": "कोई बात नहीं। असुविधा के लिए खेद है! बातचीत खत्म हो गई है।",
-      "pl-PL": "Nie ma za co. Przepraszamy za niedogodności! Rozmowa zakończona.",
-      "ro-RO": "Pentru puțin. Ne cerem scuze pentru neplăceri! Conversația s-a încheiat.",
-      "tr-TR": "Rica ederim. Rahatsızlık için özür dileriz! Konuşma sona erdi.",
-      "uk-UA": "Нема за що. Вибачте за незручності! Розмова закінчена.",
-      "uz-UZ": "Arzimaydi. Noqulaylik uchun uzr so'raymiz! Suhbat yakunlandi."
+      "ru-RU": "Не за что. Извините за неудобства!",
+      "en-US": "Don't mention it. Apologies for the inconvenience!",
+      "ar-SA": "لا شكر على واجب. نعتذر عن الإزعاج!",
+      "es-ES": "No hay de qué. ¡Disculpe las molestias!",
+      "fr-FR": "De rien. Veuillez nous excuser pour le désagrément !",
+      "hi-IN": "कोई बात नहीं। असुविधा के लिए खेद है!",
+      "pl-PL": "Nie ma za co. Przepraszamy za niedogodności!",
+      "ro-RO": "Pentru puțin. Ne cerem scuze pentru neplăceri!",
+      "tr-TR": "Rica ederim. Rahatsızlık için özür dileriz!",
+      "uk-UA": "Нема за що. Вибачте за незручності!",
+      "uz-UZ": "Arzimaydi. Noqulaylik uchun uzr so'raymiz!"
     },
     "vocabulary": [
       {

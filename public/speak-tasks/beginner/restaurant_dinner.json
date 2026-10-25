@@ -609,7 +609,7 @@
           "uk-UA": "До побачення!",
           "uz-UZ": "Ko'rishguncha!"
         },
-        "nextStep": "end"
+        "nextStep": null
       },
       {
         "text": "Tschüss!",
@@ -626,27 +626,9 @@
           "uk-UA": "Бувай!",
           "uz-UZ": "Xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Der Restaurantbesuch ist beendet.",
-    "botTranslation": {
-      "ar-SA": "انتهت زيارة المطعم.",
-      "en-US": "The restaurant visit is finished.",
-      "es-ES": "La visita al restaurante ha terminado.",
-      "fr-FR": "La visite au restaurant est terminée.",
-      "hi-IN": "रेस्तरां का दौरा समाप्त हो गया है।",
-      "pl-PL": "Wizyta w restauracji została zakończona.",
-      "ro-RO": "Vizita la restaurant s-a încheiat.",
-      "ru-RU": "Посещение ресторана окончено.",
-      "tr-TR": "Restoran ziyareti bitti.",
-      "uk-UA": "Відвідування ресторану завершено.",
-      "uz-UZ": "Restoranga tashrif tugadi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

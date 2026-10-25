@@ -529,24 +529,6 @@
         "nextStep": "end"
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Die Lektion ist beendet.",
-    "botTranslation": {
-      "ar-SA": "انتهى الدرس.",
-      "en-US": "The lesson is finished.",
-      "es-ES": "La lección ha terminado.",
-      "fr-FR": "La leçon est terminée.",
-      "hi-IN": "पाठ समाप्त हो गया है。",
-      "pl-PL": "Lekcja jest zakończona.",
-      "ro-RO": "Lecția s-a terminat.",
-      "ru-RU": "Урок окончен.",
-      "tr-TR": "Ders bitti.",
-      "uk-UA": "Урок закінчено.",
-      "uz-UZ": "Dars tugadi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

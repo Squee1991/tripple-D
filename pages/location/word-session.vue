@@ -1,53 +1,146 @@
 <template>
-  <div class="vocab-container">
-    <header class="vocab-header list-header">
-      <button class="btn-icon-back" @click="goBack">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-             stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="19" y1="12" x2="5" y2="12"></line>
-          <polyline points="12 19 5 12 12 5"></polyline>
-        </svg>
-      </button>
-      <h2 class="list-title">{{ t('landWordsSession.words') }}</h2>
-    </header>
-    <main class="vocab-main word-list-main">
-      <div v-if="isLoading" class="loading-state">
-        <div class="spinner"></div>
-      </div>
-      <div v-else-if="errorMessage" class="error-state">
-        {{ errorMessage }}
-      </div>
-      <template v-else-if="vocabulary.length">
-        <div v-for="(item, index) in vocabulary" :key="index" class="word-list-item">
-          <SoundBtn :text="item.word" class="list-sound-btn"/>
-          <div class="word-details">
-            <span class="word-german-list">{{ item.word }}</span>
-            <span class="word-translation-list">
-              {{ item[`translation-${locale.split('-')[0]}`] || item['translation-en'] }}
-            </span>
-            <button v-if="item.isVerb" class="btn-verb-forms" @click="goToVerbForms(item.verbKey || item.word)">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="3" y1="9" x2="21" y2="9"></line>
-                <line x1="9" y1="21" x2="9" y2="9"></line>
-              </svg>
-              {{ t('landWordsSession.verbs') }}
-            </button>
+  <div
+      class="vocab-container"
+      @touchstart="handleTouchStart"
+      @touchmove="handleTouchMove"
+      @touchend="handleTouchEnd"
+  >
+    <VLoginPreloader v-if="isAdLoading"/>
+    <template v-if="viewMode === 'list'">
+      <header class="vocab-header list-header">
+        <button class="btn-icon-back" @click="goBack">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+               stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </button>
+        <h2 class="list-title">{{ t('landWordsSession.words') }}</h2>
+      </header>
+      <main class="vocab-main word-list-main">
+        <div v-if="isLoading" class="loading-state">
+          <div class="spinner"></div>
+        </div>
+        <div v-else-if="errorMessage" class="error-state">
+          {{ errorMessage }}
+        </div>
+        <template v-else-if="vocabulary.length">
+          <div v-for="(item, index) in vocabulary" :key="index" class="word-list-item">
+            <SoundBtn :text="item.word" class="list-sound-btn"/>
+            <div class="word-details">
+              <span class="word-german-list">{{ item.word }}</span>
+              <span class="word-translation-list">
+                {{ getTranslation(item) }}
+              </span>
+              <button v-if="item.isVerb" class="btn-verb-forms" @click="goToVerbForms(item.verbKey || item.word)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+                {{ t('landWordsSession.verbs') }}
+              </button>
+            </div>
+            <button v-if="getTip(item)" class="btn-tip" @click="openTipModal(getTip(item))">💡</button>
           </div>
-          <button v-if="getTip(item)" class="btn-tip" @click="openTipModal(getTip(item))">💡</button></div>
-      </template>
-      <div v-else class="empty-state">{{ t('landWordsSession.error') }}</div>
-    </main>
-    <footer class="vocab-footer" v-if="vocabulary.length">
-      <button class="btn-primary" @click="startQuest">{{ t('landWordsSession.toQuest') }}</button>
-    </footer>
+        </template>
+        <div v-else class="empty-state">{{ t('landWordsSession.error') }}</div>
+      </main>
+      <footer class="vocab-footer" v-if="vocabulary.length">
+        <button class="btn-primary" @click="startPractice">{{ t('locationWordSession.learnWords') }}</button>
+        <button class="btn-secondary" style="margin-top: 12px;" @click="startQuest">{{
+            t('landWordsSession.toQuest')
+          }}
+        </button>
+      </footer>
+    </template>
+    <template v-else-if="viewMode === 'practice'">
+      <header class="vocab-header" v-if="currentWord">
+        <button class="btn-icon-back" @click="handleBackClick">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+               stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </button>
+        <div class="progress_exp-bar">
+          <div class="progress__bar" :style="{ width: `${progressPercentage}%` }">
+            <div class="glare"></div>
+          </div>
+        </div>
+      </header>
+      <main class="vocab-main" v-if="currentWord">
+        <div class="flashcard" :class="{'audio-only': currentWord.displayType === 'audio'}">
+          <SoundBtn :text="currentWord.word" class="btn-sound-custom"/>
+          <h2 v-if="currentWord.displayType === 'visual'" class="word-german">{{ currentWord.word }}</h2>
+        </div>
+        <div class="options-container">
+          <button
+              v-for="(option, index) in options"
+              :key="index"
+              class="option-btn"
+              :class="{
+                'selected': selectedAnswer === option && !hasChecked,
+                'correct': hasChecked && option === currentWord.correctTranslation,
+                'incorrect': hasChecked && selectedAnswer === option && option !== currentWord.correctTranslation
+              }"
+              :disabled="hasChecked"
+              @click="selectAnswer(option)"
+          >
+            {{ option }}
+          </button>
+        </div>
+      </main>
+      <Teleport to="body">
+        <Transition name="slide-up">
+          <div v-if="currentStep >= totalSteps && totalSteps > 0" class="completion-overlay">
+            <div class="completion-modal">
+              <h2>{{ t('locationWordSession.excellent') }}</h2>
+              <div class="completion-stats">
+                <div class="stat correct">
+                  <span class="stat-icon">✅</span>
+                  <span class="stat-value">{{ correctAnswers }}</span>
+                </div>
+                <div class="stat incorrect">
+                  <span class="stat-icon">❌</span>
+                  <span class="stat-value">{{ incorrectAnswers }}</span>
+                </div>
+              </div>
+              <div class="completion-overlay_icon">
+                <img src="../../assets/images/GoodJobIcon.svg" alt="success_icon"
+                     @error="$event.target.style.display='none'">
+              </div>
+              <div class="completion-actions">
+                <button class="btn-primary" @click="leaveCompletion(startQuest)">{{ t('locationWordSession.begin') }}</button>
+                <button class="btn-secondary" @click="leaveCompletion(restartLearning)">{{ t('locationWordSession.repeat') }}</button>
+              </div>
+            </div>
+          </div>
+        </Transition>
+      </Teleport>
+      <footer class="vocab-footer" v-if="selectedAnswer && currentWord">
+        <button v-if="!hasChecked" class="btn-primary btn-check" @click="checkAnswer">
+          {{ t('questCompletedModals.check')}}
+        </button>
+        <button
+            v-else
+            class="btn-primary"
+            :class="{'btn-incorrect': !isAnswerCorrect}"
+            @click="nextStep"
+        >
+          {{ currentStep < totalSteps - 1 ? t('locationWordSession.further') : t('locationWordSession.finish') }}
+        </button>
+      </footer>
+    </template>
     <Transition name="fade">
-      <div v-if="isTipModalOpen" class="modal-overlay" @click.self="closeTipModal">
+      <div v-if="isTipModalOpen" class="tip-overlay" @click.self="closeTipModal">
         <div class="tip-modal">
           <div class="tip-modal-header">
             <h3>{{ t('landWordsSession.grammar') }}</h3>
             <button class="close-btn" @click="closeTipModal">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
@@ -60,28 +153,74 @@
         </div>
       </div>
     </Transition>
+    <Teleport to="body">
+      <VStopSessionModal
+          v-model:show="showExitModal"
+          @confirm="confirmExit"
+          @cancel="cancelExit"
+      />
+    </Teleport>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
+import {ref, computed, onMounted} from 'vue'
+import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
 import SoundBtn from '~/src/components/soundBtn.vue'
+import VStopSessionModal from "~/src/components/V-stopSessionModal.vue"
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue"
+import {showInterstitial} from '~/utils/admob.js'
+import {useSwipeBack} from '~/composables/useSwipeBack.js'
 
 const route = useRoute()
 const router = useRouter()
-const { t, locale } = useI18n()
+const {t, locale} = useI18n()
 
 const regionKey = route.query.region
 const questId = route.query.questId
 
+const viewMode = ref('list')
 const vocabulary = ref([])
 const isLoading = ref(true)
 const errorMessage = ref("")
+const isAdLoading = ref(false)
 
 const isTipModalOpen = ref(false)
 const currentTipText = ref("")
+
+const learningSequence = ref([])
+const currentStep = ref(0)
+const options = ref([])
+const selectedAnswer = ref(null)
+const allTranslationsRef = ref([])
+
+const correctAnswers = ref(0)
+const incorrectAnswers = ref(0)
+const hasChecked = ref(false)
+
+const showExitModal = ref(false)
+const isConfirmedExit = ref(false)
+let pendingRoute = null
+
+const {handleTouchStart, handleTouchMove, handleTouchEnd} = useSwipeBack(() => {
+  handleBackClick()
+})
+
+const totalSteps = computed(() => learningSequence.value.length)
+const progressPercentage = computed(() => {
+  if (totalSteps.value === 0) return 0
+  return (currentStep.value / totalSteps.value) * 100
+})
+const currentWord = computed(() => {
+  if (totalSteps.value === 0) return null
+  const index = Math.min(currentStep.value, totalSteps.value - 1)
+  return learningSequence.value[index]
+})
+
+const isAnswerCorrect = computed(() => {
+  if (!currentWord.value) return false
+  return selectedAnswer.value === currentWord.value.correctTranslation
+})
 
 onMounted(async () => {
   if (!regionKey || !questId) {
@@ -92,7 +231,7 @@ onMounted(async () => {
   try {
     const response = await fetch(`/quests/quests-${regionKey}.json`)
     if (!response.ok) {
-      throw new Error("Не удалось загрузить данные.")
+      throw new Error("Error data.")
     }
     const data = await response.json()
     const quests = Array.isArray(data) ? data : (data.quests || [data])
@@ -109,6 +248,12 @@ onMounted(async () => {
   }
 })
 
+function getTranslation(item) {
+  if (!item) return ''
+  const currentLang = locale.value.split('-')[0]
+  return item[`translation-${currentLang}`] || item['translation-en'] || ''
+}
+
 function goBack() {
   if (regionKey) {
     router.push(`/location/${regionKey}`)
@@ -118,9 +263,10 @@ function goBack() {
 }
 
 function startQuest() {
+  isConfirmedExit.value = true
   router.replace({
     path: `/location/quest-${questId}`,
-    query: { region: regionKey }
+    query: {region: regionKey}
   })
 }
 
@@ -144,9 +290,143 @@ function closeTipModal() {
 function goToVerbForms(verbName) {
   router.push({
     path: '/verb-forms',
-    query: { verb: verbName }
+    query: {verb: verbName}
   })
 }
+
+// Реклама — после практики, на кнопках окна завершения, а не перед стартом
+function leaveCompletion(next) {
+  isAdLoading.value = true
+  showInterstitial(() => {
+    isAdLoading.value = false
+    next()
+  })
+}
+
+function startPractice() {
+  viewMode.value = 'practice'
+  const allTranslations = vocabulary.value.map(v => getTranslation(v))
+  allTranslationsRef.value = allTranslations
+
+  const sequence = []
+  vocabulary.value.forEach(v => {
+    sequence.push({...v, displayType: 'visual', correctTranslation: getTranslation(v)})
+    sequence.push({...v, displayType: 'audio', correctTranslation: getTranslation(v)})
+  })
+
+  learningSequence.value = sequence.sort(() => Math.random() - 0.5)
+  currentStep.value = 0
+  correctAnswers.value = 0
+  incorrectAnswers.value = 0
+  selectedAnswer.value = null
+  hasChecked.value = false
+
+  if (learningSequence.value.length > 0) {
+    generateOptions(allTranslations)
+    setTimeout(() => {
+      playSound(currentWord.value.word)
+    }, 300)
+  }
+}
+
+function generateOptions(allTranslations) {
+  if (!currentWord.value) return
+  const correct = currentWord.value.correctTranslation
+  const incorrectOptions = allTranslations.filter(t => t !== correct)
+  const randomIncorrect = incorrectOptions.sort(() => Math.random() - 0.5).slice(0, 2)
+
+  while (randomIncorrect.length < 2) {
+    randomIncorrect.push(t('locationWordSession.variation') + Math.random().toString(36).substring(7))
+  }
+
+  options.value = [correct, ...randomIncorrect].sort(() => Math.random() - 0.5)
+}
+
+function selectAnswer(option) {
+  if (hasChecked.value) return
+  selectedAnswer.value = option
+}
+
+function checkAnswer() {
+  if (!selectedAnswer.value || hasChecked.value) return
+  hasChecked.value = true
+
+  if (selectedAnswer.value === currentWord.value.correctTranslation) {
+    correctAnswers.value++
+  } else {
+    incorrectAnswers.value++
+  }
+}
+
+function nextStep() {
+  selectedAnswer.value = null
+  hasChecked.value = false
+  currentStep.value++
+
+  if (currentStep.value < totalSteps.value) {
+    generateOptions(allTranslationsRef.value)
+    playSound(currentWord.value.word)
+  }
+}
+
+function playSound(text) {
+  if ('speechSynthesis' in window) {
+    const utterance = new SpeechSynthesisUtterance(text)
+    utterance.lang = 'de-DE'
+    utterance.rate = 1
+    window.speechSynthesis.speak(utterance)
+  }
+}
+
+function restartLearning() {
+  currentStep.value = 0
+  correctAnswers.value = 0
+  incorrectAnswers.value = 0
+  selectedAnswer.value = null
+  hasChecked.value = false
+  learningSequence.value = learningSequence.value.sort(() => Math.random() - 0.5)
+  generateOptions(allTranslationsRef.value)
+  setTimeout(() => {
+    playSound(currentWord.value.word)
+  }, 300)
+}
+
+function handleBackClick() {
+  if (viewMode.value === 'list') {
+    goBack()
+    return
+  }
+  if (currentStep.value >= totalSteps.value) {
+    viewMode.value = 'list'
+  } else {
+    showExitModal.value = true
+  }
+}
+
+function confirmExit() {
+  isConfirmedExit.value = true
+  showExitModal.value = false
+  if (pendingRoute) {
+    router.push(pendingRoute.path)
+  } else {
+    viewMode.value = 'list'
+  }
+}
+
+function cancelExit() {
+  showExitModal.value = false
+  pendingRoute = null
+}
+
+onBeforeRouteLeave((to, from, next) => {
+  if (viewMode.value === 'list' || isConfirmedExit.value || (viewMode.value === 'practice' && currentStep.value >= totalSteps.value)) {
+    next()
+  } else {
+    showExitModal.value = true
+    pendingRoute = to
+    next(false)
+  }
+})
 </script>
 
 <style scoped>
@@ -190,7 +470,7 @@ function goToVerbForms(verbName) {
 .btn-icon-back {
   background: #fff;
   border: 3px solid var(--tabsSlideBorderColor);
-  box-shadow: var(--boxShadowMobile, 0 4px 0 rgba(0,0,0,0.05));
+  box-shadow: var(--boxShadowMobile, 0 4px 0 rgba(0, 0, 0, 0.05));
   border-radius: 12px;
   width: 40px;
   height: 40px;
@@ -204,6 +484,32 @@ function goToVerbForms(verbName) {
 .btn-icon-back:active {
   transform: translate(2px, 2px);
   box-shadow: 0px 0px 0px #2b2b2b;
+}
+
+.progress_exp-bar {
+  flex: 1;
+  height: 25px;
+  background: #e8eae5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress__bar {
+  height: 100%;
+  background-color: #10b981;
+  border-radius: 8px;
+  transition: width 0.4s ease-out;
+  position: relative;
+}
+
+.glare {
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  border-radius: 4px;
 }
 
 .vocab-main {
@@ -282,7 +588,6 @@ function goToVerbForms(verbName) {
   background: #dbeafe;
 }
 
-/* Кнопка подсказки */
 .btn-tip {
   flex-shrink: 0;
   width: 42px;
@@ -306,6 +611,78 @@ function goToVerbForms(verbName) {
   box-shadow: 0 0 0 transparent;
 }
 
+/* Стили карточек практики */
+.flashcard {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  gap: 16px;
+  min-height: 100px;
+}
+
+.flashcard.audio-only :deep(.btn-sound) {
+  width: 80px;
+  height: 80px;
+  font-size: 32px;
+  background: #3b82f6;
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.word-german {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+  text-align: center;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-btn {
+  background: white;
+  text-align: center;
+  border: 2px solid #e2e8f0;
+  border-radius: 46px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.option-btn.selected {
+  background: #e0efff;
+  border-color: #3b82f6;
+  color: #1e3a8a;
+}
+
+.option-btn:active:not(:disabled) {
+  transform: translateY(2px);
+}
+
+.option-btn.correct {
+  background: #dcfce7;
+  border-color: #22c55e;
+  color: #166534;
+}
+
+.option-btn.incorrect {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #991b1b;
+}
+
 .vocab-footer {
   padding: 24px;
   background: var(--bg);
@@ -325,13 +702,41 @@ function goToVerbForms(verbName) {
   transition: transform 0.1s;
 }
 
-.btn-primary:active {
-  transform: translateY(4px);
-  box-shadow: 0 0 0 transparent;
+.btn-check {
+  background: #3b82f6;
+  box-shadow: 0 5px 0 #2563eb;
 }
 
-/* Стили Модалки */
-.modal-overlay {
+.btn-incorrect {
+  background: #ef4444 !important;
+  box-shadow: 0 5px 0 #dc2626 !important;
+}
+
+.btn-primary:active, .btn-check:active, .btn-incorrect:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 transparent !important;
+}
+
+.btn-secondary {
+  width: 100%;
+  background-color: #7f82d9;
+  box-shadow: 0 5px 0 #5759aa;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 42px;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+
+.btn-secondary:active {
+  transform: scale(0.97);
+}
+
+.tip-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -405,6 +810,101 @@ function goToVerbForms(verbName) {
   box-shadow: 0 0 0 transparent;
 }
 
+.completion-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+
+.completion-modal {
+  background: var(--bgModal);
+  border-radius: 24px 24px 0 0;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 768px;
+  text-align: center;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  border-top: 3px solid whitesmoke;
+}
+
+.completion-modal h2 {
+  font-size: 27px;
+  color: var(--titleColor);
+  font-weight: 700;
+  margin: 0;
+}
+
+.completion-stats {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.stat.correct {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.stat.incorrect {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.completion-overlay_icon {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+.completion-overlay_icon img {
+  width: 100%;
+  height: auto;
+}
+
+.completion-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.slide-up-enter-to,
+.slide-up-leave-from {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s ease;
@@ -441,6 +941,8 @@ function goToVerbForms(verbName) {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>

@@ -51,8 +51,8 @@
           </div>
         </div>
         <div v-if="isDayFinished" class="day-finished-message">
-          <p>Отлично! Задание на сегодня выполнено.</p>
-          <button @click="backToThemes" class="start-button">К другим темам</button>
+          <p>{{ t('recipe.done')}}</p>
+          <button @click="backToThemes" class="start-button">{{ t('recipe.btn')}}</button>
         </div>
       </div>
     </div>
@@ -67,7 +67,7 @@ import ChefHi from '../../../assets/images/chefHi.svg'
 import ChefOk from '../../../assets/images/ok.svg'
 import ChefNo from '../../../assets/images/no.svg'
 import VStopSessionModal from "~/src/components/V-stopSessionModal.vue";
-
+const { t } = useI18n()
 const questStore = useQuestStore()
 const router = useRouter()
 const route = useRoute()

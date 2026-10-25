@@ -519,8 +519,8 @@
       {
         "text": "Gerne, Herr Müller.",
         "translation": {
-          "ru-RU": "С удовольствием, господин Мюллер. (В ответ на спасибо)",
-          "en-US": "Gladly, Herr Müller. (You're welcome)",
+          "ru-RU": "С удовольствием, господин Мюллер",
+          "en-US": "Gladly, Herr Müller.",
           "ar-SA": "بكل سرور، سيد مولر.",
           "es-ES": "Con gusto, señor Müller.",
           "fr-FR": "Avec plaisir, Monsieur Müller.",
@@ -528,7 +528,7 @@
           "pl-PL": "Z przyjemnością, panie Müller.",
           "ro-RO": "Cu plăcere, domnule Müller.",
           "tr-TR": "Rica ederim, Bay Müller.",
-          "uk-UA": "Будь ласка (Із задоволенням), пане Мюллер.",
+          "uk-UA": "Будь ласка, пане Мюллер.",
           "uz-UZ": "Arzimaydi, janob Myuller."
         },
         "nextStep": "goodbye_boss"
@@ -618,7 +618,7 @@
           "uk-UA": "До побачення, пане Мюллер!",
           "uz-UZ": "Xayr, janob Myuller!"
         },
-        "nextStep": "end"
+        "nextStep": null
       },
       {
         "text": "Einen schönen Tag noch, Herr Müller!",
@@ -635,27 +635,9 @@
           "uk-UA": "Гарного дня, пане Мюллер!",
           "uz-UZ": "Yaxshi kun tilayman, janob Myuller!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Das Gespräch ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Разговор завершен.",
-      "en-US": "The conversation is ended.",
-      "ar-SA": "انتهت المحادثة.",
-      "es-ES": "La conversación ha terminado.",
-      "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत समाप्त हो गई है。",
-      "pl-PL": "Rozmowa została zakończona.",
-      "ro-RO": "Conversația s-a încheiat.",
-      "tr-TR": "Konuşma sona erdi.",
-      "uk-UA": "Розмову завершено.",
-      "uz-UZ": "Suhbat yakunlandi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

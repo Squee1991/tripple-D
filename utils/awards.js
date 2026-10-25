@@ -22,6 +22,14 @@ import ChristmasBall from '../assets/images/event-rewards/winter-event/winter-re
 import ChristmasWreath from '../assets/images/event-rewards/winter-event/winter-rewards/christmas-wreath.svg'
 import TeddyGift from '../assets/images/event-rewards/valentine-event/valentine-rewards/teddy-bear.svg'
 import CupidArrow from '../assets/images/event-rewards/valentine-event/valentine-rewards/cupidonArrow.svg'
+import Sack from '../assets/images/Sack.svg'
+import Ghost from '../assets/images/event-rewards/halloween-event/halloween-rewards/ghost.svg'
+import WitchBroom from '../assets/images/event-rewards/halloween-event/halloween-rewards/witch-broom.svg'
+import WitchHat from '../assets/images/event-rewards/halloween-event/halloween-rewards/witch-hat.svg'
+import Pumpkin from '../assets/images/event-rewards/halloween-event/halloween-rewards/pumpkin.svg'
+import SpellBook from '../assets/images/event-rewards/halloween-event/halloween-rewards/spell-book.svg'
+import Punch from '../assets/images/event-rewards/halloween-event/halloween-rewards/punch.svg'
+
 
 export const AWARDS = [
 	{
@@ -46,7 +54,7 @@ export const AWARDS = [
 		key: 'wasPlusUser',
 		title: 'awards.wasPlusUser',
 		description: 'awards.wasPlusUserDescription',
-		icon: WasteMoney
+		icon: Sack
 	},
 	{
 		key: 'registerAchievement',
@@ -143,6 +151,36 @@ export const AWARDS = [
 		title: 'awards.iAmGroot',
 		description: 'awards.iAmGrootDescription',
 		icon: Groot
+	},
+	{
+		key: 'witchBroom',
+		title: 'awards.witchBroom',
+		description: 'awards.witchBroomDescription',
+		icon: WitchBroom
+	},
+	{
+		key: 'witchHat',
+		title: 'awards.witchHat',
+		description: 'awards.witchHatDescription',
+		icon: WitchHat
+	},
+	{
+		key: 'pumpkin',
+		title: 'awards.pumpkin',
+		description: 'awards.pumpkinDescription',
+		icon: Pumpkin
+	},
+	{
+		key: 'spellBook',
+		title: 'awards.spellBook',
+		description: 'awards.spellBookDescription',
+		icon: SpellBook
+	},
+	{
+		key: 'punch',
+		title: 'awards.punch',
+		description: 'awards.punchDescription',
+		icon: Punch
 	},
 	{
 		key: 'santaHat',

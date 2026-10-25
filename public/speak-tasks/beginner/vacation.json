@@ -139,7 +139,7 @@
       {
         "text": "Ich möchte im Juli verreisen.",
         "translation": {
-          "ru-RU": "Я хочу уехать (путешествовать) в июле.",
+          "ru-RU": "Я хочу уехать в июле.",
           "en-US": "I want to travel in July.",
           "ar-SA": "أريد السفر في شهر يوليو.",
           "es-ES": "Quiero viajar en julio.",
@@ -148,7 +148,7 @@
           "pl-PL": "Chcę wyjechać w lipcu.",
           "ro-RO": "Vreau să călătoresc în iulie.",
           "tr-TR": "Temmuz ayında seyahate çıkmak istiyorum.",
-          "uk-UA": "Я хочу поїхати (подорожувати) у липні.",
+          "uk-UA": "Я хочу поїхати у липні.",
           "uz-UZ": "Men iyul oyida sayohatga chiqmoqchiman."
         },
         "nextStep": "wochen_check"
@@ -570,7 +570,7 @@
           "uk-UA": "Дякую, я зроблю це негайно.",
           "uz-UZ": "Rahmat, buni hoziroq bajaraman."
         },
-        "nextStep": "end"
+        "nextStep": null
       },
       {
         "text": "Vielen Dank für das Verständnis!",
@@ -587,27 +587,9 @@
           "uk-UA": "Велике дякую за розуміння!",
           "uz-UZ": "Tushunganingiz uchun katta rahmat!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Das Gespräch ist beendet.",
-    "botTranslation": {
-      "ru-RU": "Разговор завершен.",
-      "en-US": "The conversation is ended.",
-      "ar-SA": "انتهت المحادثة.",
-      "es-ES": "La conversación ha terminado.",
-      "fr-FR": "La conversation est terminée.",
-      "hi-IN": "बातचीत समाप्त हो गई है।",
-      "pl-PL": "Rozmowa została zakończona.",
-      "ro-RO": "Conversația s-a încheiat.",
-      "tr-TR": "Konuşma sona erdi.",
-      "uk-UA": "Розмову завершено.",
-      "uz-UZ": "Suhbat yakunlandi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

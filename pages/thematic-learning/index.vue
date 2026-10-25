@@ -5,7 +5,7 @@
       <h1 class="page-title">{{ t('sub.themen') }}</h1>
     </div>
     <VTransition>
-      <div v-if="isMouted">
+      <div v-if="isMounted" class="theme-content">
         <div class="banner">
           <VBanner
               :text="t('bannerTitles.thematic')"
@@ -109,7 +109,7 @@ import Banner from '../../assets/images/thematicSticker.svg'
 import VTransition from "~/src/components/V-transition.vue";
 import { showInterstitial } from '../../utils/admob.js'
 
-const isMouted = ref(false)
+const isMounted = ref(false)
 const {t} = useI18n()
 
 useSeoMeta({
@@ -221,7 +221,7 @@ const loadThemeData = async () => {
 }
 onMounted(() => {
   setTimeout(() => {
-    isMouted.value = true
+    isMounted.value = true
     loadThemeData()
   }, 100)
 })
@@ -234,7 +234,7 @@ watch(topic, loadThemeData)
 .theme-page {
   font-family: "Nunito", sans-serif;
   height: 100vh;
-  max-width: 1240px;
+  max-width: 1024px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -243,6 +243,11 @@ watch(topic, loadThemeData)
   background-color: var(--bg);
 }
 
+.theme-content {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
 
 .banner {
   padding: 0 15px;
@@ -252,6 +257,10 @@ watch(topic, loadThemeData)
   display: flex;
   align-items: center;
   padding: 5px 10px 15px 10px;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  box-sizing: border-box;
   flex-shrink: 0;
   z-index: 10;
   background: var(--bg);
@@ -494,6 +503,7 @@ watch(topic, loadThemeData)
 
 .bottom-action {
   position: fixed;
+  display: flex;
   bottom: 0;
   left: 0;
   right: 0;

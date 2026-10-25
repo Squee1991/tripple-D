@@ -1952,7 +1952,7 @@
         "ar": "يضحك"
       },
       "conjugation_pres": { "ich": "lache", "du": "lachst", "er_sie_es": "lacht", "wir": "lachen", "ihr": "lacht", "sie_Sie": "lachen" },
-      "conjugation_past": { "ich": "lachte", "du": "lachtest", "er_sie_es": "lachte", "wir": "lachtet", "ihr": "lachtet", "sie_Sie": "lachten" },
+      "conjugation_past": { "ich": "lachte", "du": "lachtest", "er_sie_es": "lachte", "wir": "lachten", "ihr": "lachtet", "sie_Sie": "lachten" },
       "conjugation_perf": { "ich": "habe gelacht", "du": "hast gelacht", "er_sie_es": "hat gelacht", "wir": "haben gelacht", "ihr": "habt gelacht", "sie_Sie": "haben gelacht" }
     },
     {

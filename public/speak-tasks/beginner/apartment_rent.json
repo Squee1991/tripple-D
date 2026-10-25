@@ -681,27 +681,9 @@
           "uk-UA": "До побачення!",
           "uz-UZ": "Xayr!"
         },
-        "nextStep": "end"
+        "nextStep": null
       }
     ],
-    "defaultNext": "end"
-  },
-  "end": {
-    "botText": "Das Telefonat ist beendet.",
-    "botTranslation": {
-      "ar-SA": "انتهت المكالمة الهاتفية.",
-      "en-US": "The phone call is ended.",
-      "es-ES": "La llamada telefónica ha finalizado.",
-      "fr-FR": "L'appel téléphonique est terminé.",
-      "hi-IN": "फोन कॉल समाप्त हो गया है。",
-      "pl-PL": "Rozmowa telefoniczna została zakończona.",
-      "ro-RO": "Apelul telefonic s-a încheiat.",
-      "ru-RU": "Телефонный разговор завершен.",
-      "tr-TR": "Telefon görüşmesi sona erdi.",
-      "uk-UA": "Телефонна розмова завершена.",
-      "uz-UZ": "Telefon suhbati yakunlandi."
-    },
-    "options": [],
     "defaultNext": null
   }
 }

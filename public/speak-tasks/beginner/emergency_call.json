@@ -511,19 +511,19 @@
     "defaultNext": "step_15"
   },
   "step_15": {
-    "botText": "Auf Wiedersehen. Das Gespräch ist beendet.",
+    "botText": "Auf Wiedersehen.",
     "botTranslation": {
-      "ru-RU": "До свидания. Разговор окончен.",
-      "en-US": "Goodbye. The conversation is over.",
-      "ar-SA": "إلى اللقاء. انتهت المحادثة.",
-      "es-ES": "Adiós. La conversación ha terminado.",
-      "fr-FR": "Au revoir. La conversation est terminée.",
-      "hi-IN": "अलविदा। बातचीत खत्म हो गई है।",
-      "pl-PL": "Do widzenia. Rozmowa zakończona.",
-      "ro-RO": "La revedere. Conversația s-a încheiat.",
-      "tr-TR": "Hoşça kalın. Konuşma sona erdi.",
-      "uk-UA": "До побачення. Розмова закінчена.",
-      "uz-UZ": "Xayr. Suhbat yakunlandi."
+      "ru-RU": "До свидания.",
+      "en-US": "Goodbye.",
+      "ar-SA": "إلى اللقاء.",
+      "es-ES": "Adiós.",
+      "fr-FR": "Au revoir.",
+      "hi-IN": "अलविदा।",
+      "pl-PL": "Do widzenia.",
+      "ro-RO": "La revedere.",
+      "tr-TR": "Hoşça kalın.",
+      "uk-UA": "До побачення.",
+      "uz-UZ": "Xayr."
     },
     "vocabulary": [],
     "options": [],

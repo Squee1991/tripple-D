@@ -35,7 +35,7 @@
                   </div>
                   <div class="topic-text-col">
                     <div class="topic-label">{{ event.title }}</div>
-                    <span class="event-dates">{{ event.startDate }} - {{ event.endDate }}</span>
+                    <span class="event-dates">{{ event.displayStartDate }} - {{ event.displayEndDate }}</span>
                   </div>
                 </div>
                 <VArrowNav/>
@@ -49,7 +49,7 @@
                   <div class="topic-icon-box">
                     <img class="topic-img-icon" :src="event.icon" :alt="event.alt">
                   </div>
-                  <div class="topic-labelt">{{ event.title }}</div>
+                  <div class="topic-label">{{ event.title }}</div>
                 </div>
                 <VArrowNav/>
               </div>
@@ -64,23 +64,22 @@
 <script setup>
 import { ref, computed, watch, onBeforeUnmount, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { useEventSessionStore } from '~/store/eventsStore.js'
 import ModalDev from '../src/components/modal.vue'
 import VBanner from "~/src/components/V-banner.vue"
 import PadLock from '../assets/images/padlock.svg'
-import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
-import HalloweenNav from '../assets/images/halloweenIconNav.svg'
-import ValentineNav from '../assets/images/valentineIcon.svg'
-import FoolDayNav from '../assets/images/fooldayNav.svg'
-import ChristmasDayNav from '../assets/images/christmas-wreathNav.svg'
+import VBackBtnNav from "~/src/components/V-backBtnNav.vue"
 import Events from '../assets/images/app-nav-icons/events.svg'
-import VArrowNav from "~/src/components/V-arrowNav.vue";
-import VTransition from "~/src/components/V-transition.vue";
+import VArrowNav from "~/src/components/V-arrowNav.vue"
+import VTransition from "~/src/components/V-transition.vue"
+
 definePageMeta({
   layout: 'footerlayout'
 })
 
 const { t } = useI18n()
 const router = useRouter()
+const eventStore = useEventSessionStore()
 
 const showDevModal = ref(false)
 const isMounted = ref(false)
@@ -88,6 +87,7 @@ const isMounted = ref(false)
 onMounted(() => {
   isMounted.value = true
 })
+
 const modalConfig = computed(() => {
   return {
     title: t('eventLocked.title'),
@@ -101,58 +101,70 @@ const modalConfig = computed(() => {
 const handleLockedEvent = (event) => {
   showDevModal.value = true
 }
+
 const closeDevModal = () => {
   showDevModal.value = false
 }
+
 const onDevModalButton = () => {
   showDevModal.value = false
   router.push(modalConfig.value.to)
 }
+
 watch(showDevModal, (val) => {
   document.body.style.overflow = val ? 'hidden' : ''
 })
+
 onBeforeUnmount(() => {
   document.body.style.overflow = ''
 })
+
+
 const isEventActive = (startDateStr, endDateStr) => {
-  const today = new Date();
-  const currentYear = today.getFullYear();
+  const today = new Date()
+  const currentYear = today.getFullYear()
+
   const parseEventDate = (dateStr) => {
-    const [datePart, timePart] = dateStr.split(' ');
-    const [day, month] = datePart.split('.').map(Number);
-    const [hours, minutes] = timePart.split(':').map(Number);
-    return new Date(currentYear, month - 1, day, hours, minutes);
-  };
-  let startDate = parseEventDate(startDateStr);
-  let endDate = parseEventDate(endDateStr);
+    const [datePart, timePart] = dateStr.split(' ')
+    const [month, day] = datePart.split('-').map(Number)
+    const [hours, minutes] = timePart.split(':').map(Number)
+    return new Date(currentYear, month - 1, day, hours, minutes)
+  }
+
+  let startDate = parseEventDate(startDateStr)
+  let endDate = parseEventDate(endDateStr)
+
   if (startDate > endDate) {
     if (today.getMonth() < startDate.getMonth()) {
-      startDate.setFullYear(currentYear - 1);
+      startDate.setFullYear(currentYear - 1)
     } else {
-      endDate.setFullYear(currentYear + 1);
+      endDate.setFullYear(currentYear + 1)
     }
   }
-  return today >= startDate && today <= endDate;
+
+  return today >= startDate && today <= endDate
 }
 
-const allEvents = [
-  { id: 'winter-event', valueKey: 'eventsNavNames.winter', url: '/event-winter', startDate: '18.12 00:00', endDate: '02.01 23:59', icon: ChristmasDayNav, alt: 'ChristmasDayNav' },
-  { id: 'valentine', valueKey: 'eventsNavNames.valentine', url: '/event-valentine', startDate: '12.02 00:00', endDate: '16.02 23:59', icon: ValentineNav, alt: 'ValentineNav' },
-  { id: 'april', valueKey: 'eventsNavNames.firstApril', url: '/event-joke', startDate: '01.04 00:00', endDate: '01.04 23:59', icon: FoolDayNav, alt: 'FoolDayNav' },
-  { id: 'halloween', valueKey: 'eventsNavNames.halloween', url: '/event-halloween', startDate: '29.10 00:00', endDate: '31.10 23:59', icon: HalloweenNav, alt: 'HalloweenNav' },
-]
+const formatToDisplayDate = (dateStr) => {
+  const [datePart] = dateStr.split(' ')
+  const [month, day] = datePart.split('-')
+  return `${day}.${month}`
+}
 
 const processedEvents = computed(() => {
-  return allEvents.map(event => {
-    const active = isEventActive(event.startDate, event.endDate)
+  return eventStore.events.map(event => {
+    const active = isEventActive(event.start, event.end)
     return {
       ...event,
       title: t(event.valueKey),
       isActive: active,
-      url: active ? event.url : null
+      url: active ? event.url : null,
+      displayStartDate: formatToDisplayDate(event.start),
+      displayEndDate: formatToDisplayDate(event.end)
     }
   })
 })
+
 </script>
 
 <style scoped>
@@ -171,11 +183,6 @@ const processedEvents = computed(() => {
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
-}
-
-.topic-labelt {
-  color: var(--titleColor);
-  font-weight: 600;
 }
 
 .page-header {
@@ -294,7 +301,6 @@ const processedEvents = computed(() => {
 .topic-list-item.is-locked {
   background: var(--menuItemsBg);
 }
-
 
 @media (max-width: 400px) {
   .topic-label {

@@ -127,7 +127,14 @@ export default defineNuxtConfig({
 	plugins: ['~/plugins/simplebar.client.js'],
 	googleFonts: {
 		families: {
-			'Uncial Antiqua': true, Kurale: true, Fredoka: true, 'Lilita One': true, Nunito: true
+			'Uncial Antiqua': true,
+			Kurale: true,
+			Fredoka: true,
+			'Lilita One': true,
+			Nunito: true,
+			Kablammo: true,
+			'Rubik Wet Paint': true
+
 		},
 	},
 	vite: {
@@ -138,6 +145,9 @@ export default defineNuxtConfig({
 			drop: isProd ? ['console', 'debugger'] : [],
 			legalComments: 'none',
 		},
+		rollupOptions: {
+			external: ['@capacitor/local-notifications']
+		}
 	},
 	nitro: {
 		compressPublicAssets: true

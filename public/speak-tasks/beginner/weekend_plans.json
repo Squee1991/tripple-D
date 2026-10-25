@@ -1,6 +1,6 @@
 {
   "start": {
-    "botText": "Anna, hallo! Hast du am Samstag Zeit?",
+    "botText": "Anna, hallo ! Hast du am Samstag Zeit?",
     "botTranslation": {
       "ru-RU": "Анна, привет! У тебя есть время в субботу?",
       "en-US": "Anna, hello! Do you have time on Saturday?",
@@ -131,12 +131,12 @@
     "defaultNext": "movie_time"
   },
   "movie_time": {
-    "botText": "Der neue Film läuft um 18:00 Uhr.",
+    "botText": "Der neue Film läuft um 18 Uhr.",
     "botTranslation": {
-      "ru-RU": "Новый фильм идет в 18:00.",
-      "en-US": "The new movie plays at 18:00.",
+      "ru-RU": "Новый фильм идет в 18 часов",
+      "en-US": "The new movie plays at 18",
       "ar-SA": "الفيلم الجديد يعرض الساعة 18:00.",
-      "es-ES": "La nueva película empieza a las 18:00.",
+      "es-ES": "La nueva película empieza a las 18",
       "fr-FR": "Le nouveau film passe à 18h00.",
       "hi-IN": "नई फिल्म 18:00 बजे चलती है।",
       "pl-PL": "Nowy film grają o 18:00.",

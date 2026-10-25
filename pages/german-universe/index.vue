@@ -131,8 +131,6 @@ const generateAstronauts = (count = 2) => {
   astronauts.value = newAstronauts
 }
 
-const handleExit = () => router.push('/')
-
 const startMission = (sectorId) => {
   router.push({
     name: 'german-universe-id',
@@ -142,16 +140,16 @@ const startMission = (sectorId) => {
 
 const toggleScreen = (target) => {
   if (target !== 'menu' && currentScreen.value === 'menu') {
-    window.history.pushState({isSubScreen: true}, '')
+    window.history.pushState({ screen: target }, '')
     currentScreen.value = target
   } else if (target === 'menu' && currentScreen.value !== 'menu') {
-    window.history.back()
+    currentScreen.value = 'menu'
   } else {
-    currentScreen.value = target
+    router.push('/')
   }
 }
 
-const handlePopState = () => {
+const handlePopState = (event) => {
   if (currentScreen.value !== 'menu') {
     currentScreen.value = 'menu'
   } else {

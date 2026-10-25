@@ -182,7 +182,7 @@
         { "type": "blank", "id": 1, "correct": "bestellte" },
         { "type": "text", "content": " Medikament gegen den Husten lag endlich in der Apotheke bereit. — Ich " },
         { "type": "blank", "id": 2, "correct": "hatte" },
-        { "type": "text", "content": " das Rezept meines Arztes schon am Morgen online hochgeladen. — Wenn ich die Tabletten не rechtzeitig einnehmen würde, " },
+        { "type": "text", "content": " das Rezept meines Arztes schon am Morgen online hochgeladen. — Wenn ich die Tabletten nicht rechtzeitig einnehmen würde, " },
         { "type": "blank", "id": 3, "correct": "würde" },
         { "type": "text", "content": " sich mein Zustand schnell verschlimmern. — Der Hustensaft war im Moment leider nicht lieferbar, " },
         { "type": "blank", "id": 4, "correct": "deshalb" },
