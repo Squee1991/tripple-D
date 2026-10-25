@@ -1,0 +1,534 @@
+{
+  "start": {
+    "botText": "Guten Tag! Willkommen bei uns im Fitnessstudio. Wie kann ich Ihnen helfen?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Добро пожаловать к нам в фитнес-клуб. Чем я могу вам помочь?",
+      "en-US": "Good day! Welcome to our fitness studio. How can I help you?",
+      "ar-SA": "طاب يومك! مرحباً بك في صالة الألعاب الرياضية لدينا. كيف يمكنني مساعدتك؟",
+      "es-ES": "¡Buen día! Bienvenido a nuestro gimnasio. ¿En qué le puedo ayudar?",
+      "fr-FR": "Bonjour ! Bienvenue dans notre salle de sport. Comment puis-je vous aider ?",
+      "hi-IN": "शुभ दिन! हमारे फिटनेस स्टूडियो में आपका स्वागत है। मैं आपकी कैसे मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! Witamy w naszym klubie fitness. W czym mogę pomóc?",
+      "ro-RO": "Bună ziua! Bine ați venit la sala noastră de fitness. Cu ce vă pot ajuta?",
+      "tr-TR": "İyi günler! Spor salonumuza hoş geldiniz. Size nasıl yardımcı olabilirim?",
+      "uk-UA": "Добрий день! Ласкаво просимо до нашого фітнес-клубу. Чим я можу вам допомогти?",
+      "uz-UZ": "Xayrli kun! Bizning fitnes klubimizga xush kelibsiz. Sizga qanday yordam bera olaman?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Fitnessstudio",
+        "translation": {
+          "ru-RU": "фитнес-клуб / спортзал",
+          "en-US": "fitness studio / gym",
+          "ar-SA": "صالة الألعاب الرياضية",
+          "es-ES": "gimnasio",
+          "fr-FR": "salle de sport",
+          "hi-IN": "जिम / फिटनेस स्टूडियो",
+          "pl-PL": "siłownia / klub fitness",
+          "ro-RO": "sală de fitness",
+          "tr-TR": "spor salonu",
+          "uk-UA": "фітнес-клуб / спортзал",
+          "uz-UZ": "fitnes klub / sport zali"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag! Ich möchte fit werden und suche ein gutes Studio.",
+        "translation": {
+          "ru-RU": "Добрый день! Я хочу прийти в форму и ищу хороший зал.",
+          "en-US": "Good day! I want to get fit and am looking for a good studio.",
+          "ar-SA": "طاب يومك! أريد أن أصبح لائقاً بدنياً وأبحث عن صالة جيدة.",
+          "es-ES": "¡Buen día! Quiero ponerme en forma y busco un buen gimnasio.",
+          "fr-FR": "Bonjour ! Je veux me mettre en forme et je cherche une bonne salle.",
+          "hi-IN": "शुभ दिन! मैं फिट होना चाहता हूँ और एक अच्छे जिम की तलाश में हूँ।",
+          "pl-PL": "Dzień dobry! Chcę zadbać o formę i szukam dobrego klubu.",
+          "ro-RO": "Bună ziua! Vreau să mă mențin în formă și caut o sală bună.",
+          "tr-TR": "İyi günler! Forma girmek istiyorum ve iyi bir salon arıyorum.",
+          "uk-UA": "Добрий день! Я хочу прийти у форму і шукаю хороший зал.",
+          "uz-UZ": "Xayrli kun! Men formaga kirmoqchiman va yaxshi zal qidiryapman."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo! Ich möchte hier trainieren. Kann ich mir alles ansehen?",
+        "translation": {
+          "ru-RU": "Здравствуйте! Я хочу здесь тренироваться. Могу я всё осмотреть?",
+          "en-US": "Hello! I want to train here. Can I take a look at everything?",
+          "ar-SA": "مرحباً! أريد أن أتدرب هنا. هل يمكنني إلقاء نظرة على كل شيء؟",
+          "es-ES": "¡Hola! Quiero entrenar aquí. ¿Puedo echar un vistazo a todo?",
+          "fr-FR": "Bonjour ! Je veux m'entraîner ici. Puis-je tout regarder ?",
+          "hi-IN": "नमस्ते! मैं यहाँ कसरत करना चाहता हूँ। क्या मैं सब कुछ देख सकता हूँ?",
+          "pl-PL": "Cześć! Chciałbym tu trenować. Czy mogę wszystko obejrzeć?",
+          "ro-RO": "Bună! Vreau să mă antrenez aici. Pot să arunc o privire la toate?",
+          "tr-TR": "Merhaba! Burada antrenman yapmak istiyorum. Her şeye bir göz atabilir miyim?",
+          "uk-UA": "Добридень! Я хочу тут тренуватися. Можу я все оглянути?",
+          "uz-UZ": "Salom! Men bu yerda shug'ullanmoqchiman. Hamma narsani ko'rib chiqa olamanmi?"
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Sehr gerne! Was ist denn Ihr wichtigstes Ziel beim Training?",
+    "botTranslation": {
+      "ru-RU": "С удовольствием! А какова ваша самая главная цель на тренировках?",
+      "en-US": "With pleasure! What is your most important goal in training?",
+      "ar-SA": "بكل سرور! ما هو هدفك الأهم من التدريب؟",
+      "es-ES": "¡Con mucho gusto! ¿Cuál es su objetivo más importante en el entrenamiento?",
+      "fr-FR": "Avec grand plaisir ! Quel est votre objectif le plus important pour l'entraînement ?",
+      "hi-IN": "ज़रूर! ट्रेनिंग में आपका सबसे महत्वपूर्ण लक्ष्य क्या है?",
+      "pl-PL": "Bardzo chętnie! Jaki jest Pana/Pani najważniejszy cel treningowy?",
+      "ro-RO": "Cu mare plăcere! Care este cel mai important obiectiv al antrenamentului dumneavoastră?",
+      "tr-TR": "Memnuniyetle! Antrenmandaki en önemli hedefiniz nedir?",
+      "uk-UA": "Із задоволенням! А яка ваша найголовніша ціль на тренуваннях?",
+      "uz-UZ": "Jonim bilan! Mashg'ulotdagi eng asosiy maqsadingiz nima?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Ziel",
+        "translation": {
+          "ru-RU": "цель",
+          "en-US": "goal",
+          "ar-SA": "الهدف",
+          "es-ES": "objetivo / meta",
+          "fr-FR": "objectif",
+          "hi-IN": "लक्ष्य",
+          "pl-PL": "cel",
+          "ro-RO": "obiectiv",
+          "tr-TR": "hedef",
+          "uk-UA": "ціль",
+          "uz-UZ": "maqsad"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich möchte mehr Muskeln aufbauen und stärker werden.",
+        "translation": {
+          "ru-RU": "Я хочу нарастить больше мышц и стать сильнее.",
+          "en-US": "I want to build more muscles and get stronger.",
+          "ar-SA": "أريد بناء المزيد من العضلات وأن أصبح أقوى.",
+          "es-ES": "Quiero desarrollar más masa muscular y hacerme más fuerte.",
+          "fr-FR": "Je veux développer plus de muscles et devenir plus fort.",
+          "hi-IN": "मैं और मांसपेशियाँ बनाना और मज़बूत होना चाहता हूँ।",
+          "pl-PL": "Chcę zbudować więcej mięśni i stać się silniejszy.",
+          "ro-RO": "Vreau să pun mai multă masă musculară și să devin mai puternic.",
+          "tr-TR": "Daha fazla kas yapmak ve güçlenmek istiyorum.",
+          "uk-UA": "Я хочу наростити більше м'язів і стати сильнішим.",
+          "uz-UZ": "Men ko'proq mushak yig'ish va kuchliroq bo'lishni xohlayman."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Ich habe Rückenschmerzen vom Büro und brauche mehr Bewegung.",
+        "translation": {
+          "ru-RU": "У меня болит спина от офиса, и мне нужно больше движения.",
+          "en-US": "I have back pain from the office and need more movement.",
+          "ar-SA": "أعاني من آلام الظهر بسبب المكتب وأحتاج إلى المزيد من الحركة.",
+          "es-ES": "Me duele la espalda por la oficina y necesito más movimiento.",
+          "fr-FR": "J'ai mal au dos à cause du bureau et j'ai besoin de bouger plus.",
+          "hi-IN": "ऑफिस के कारण मेरी पीठ में दर्द है और मुझे अधिक हिलने-डुलने की आवश्यकता है।",
+          "pl-PL": "Boli mnie plecy od biura i potrzebuję więcej ruchu.",
+          "ro-RO": "Am dureri de spate de la birou și am nevoie de mai multă mișcare.",
+          "tr-TR": "Ofisten dolayı sırt ağrılarım var ve daha fazla hareket etmem gerekiyor.",
+          "uk-UA": "У мене болить спина від офісу, і мені потрібно більше руху.",
+          "uz-UZ": "Ofis ishidan orqam og'riyapti va menga ko'proq harakat kerak."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Alles klar. Dafür haben wir moderne Geräte und auch tolle Kurse.",
+    "botTranslation": {
+      "ru-RU": "Всё понятно. Для этого у нас есть современные тренажеры, а также отличные курсы.",
+      "en-US": "All right. For that we have modern equipment and also great courses.",
+      "ar-SA": "فهمت. لذلك لدينا أجهزة حديثة وكذلك دورات رائعة.",
+      "es-ES": "Entendido. Para ello tenemos máquinas modernas y también cursos fantásticos.",
+      "fr-FR": "Très bien. Pour cela, nous avons des appareils modernes et aussi de super cours.",
+      "hi-IN": "सब समझ गया। इसके लिए हमारे पास आधुनिक उपकरण और बेहतरीन कक्षाएं भी हैं।",
+      "pl-PL": "Wszystko jasne. Mamy do tego nowoczesny sprzęt, a także świetne zajęcia.",
+      "ro-RO": "Am înțeles. Pentru asta avem aparate moderne și, de asemenea, cursuri grozave.",
+      "tr-TR": "Anlaşıldı. Bunun için modern aletlerimiz ve harika kurslarımız var.",
+      "uk-UA": "Все зрозуміло. Для цього у нас є сучасні тренажери, а також чудові курси.",
+      "uz-UZ": "Hammasi tushunarli. Buning uchun bizda zamonaviy trenajyorlar va shuningdek ajoyib kurslar bor."
+    },
+    "vocabulary": [
+      {
+        "german": "die Geräte",
+        "translation": {
+          "ru-RU": "тренажёры",
+          "en-US": "equipment / machines",
+          "ar-SA": "الأجهزة / المعدات",
+          "es-ES": "aparatos / máquinas",
+          "fr-FR": "appareils / machines",
+          "hi-IN": "उपकरण / मशीनें",
+          "pl-PL": "sprzęt / urządzenia",
+          "ro-RO": "aparate",
+          "tr-TR": "aletler / makineler",
+          "uk-UA": "тренажери",
+          "uz-UZ": "trenajyorlar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Gibt es hier auch einen Trainer, der mir am Anfang hilft?",
+        "translation": {
+          "ru-RU": "Есть ли здесь также тренер, который поможет мне в начале?",
+          "en-US": "Is there also a trainer here who can help me at the beginning?",
+          "ar-SA": "هل يوجد هنا أيضاً مدرب يساعدني في البداية؟",
+          "es-ES": "¿Hay también aquí un entrenador que me ayude al principio?",
+          "fr-FR": "Y a-t-il aussi un entraîneur ici qui puisse m'aider au début ?",
+          "hi-IN": "क्या यहाँ कोई ट्रेनर भी है जो शुरुआत में मेरी मदद कर सके?",
+          "pl-PL": "Czy jest tu również trener, który mi pomoże na początku?",
+          "ro-RO": "Există și un antrenor aici care să mă ajute la început?",
+          "tr-TR": "Burada bana başlangıçta yardımcı olacak bir antrenör var mı?",
+          "uk-UA": "Чи є тут також тренер, який допоможе мені на початку?",
+          "uz-UZ": "Bu yerda boshida menga yordam beradigan trener ham bormi?"
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Zeigt mir jemand, wie die Maschinen richtig funktionieren?",
+        "translation": {
+          "ru-RU": "Кто-нибудь покажет мне, как правильно работают тренажеры?",
+          "en-US": "Will someone show me how the machines work correctly?",
+          "ar-SA": "هل سيريني أحدهم كيف تعمل الآلات بشكل صحيح؟",
+          "es-ES": "¿Alguien me enseñará cómo funcionan las máquinas correctamente?",
+          "fr-FR": "Quelqu'un me montrera-t-il comment les machines fonctionnent correctement ?",
+          "hi-IN": "क्या कोई मुझे दिखाएगा कि मशीनें ठीक से कैसे काम करती हैं?",
+          "pl-PL": "Czy ktoś pokaże mi, jak prawidłowo działają te maszyny?",
+          "ro-RO": "Îmi va arăta cineva cum funcționează aparatele corect?",
+          "tr-TR": "Biri bana makinelerin nasıl doğru çalıştığını gösterecek mi?",
+          "uk-UA": "Хто-небудь покаже мені, як правильно працюють тренажери?",
+          "uz-UZ": "Kimdir menga mashinalar qanday to'g'ri ishlashini ko'rsatib beradimi?"
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Ja, natürlich! Ein Trainer erstellt für Sie einen kostenlosen Trainingsplan.",
+    "botTranslation": {
+      "ru-RU": "Да, конечно! Тренер составит для вас бесплатный план тренировок.",
+      "en-US": "Yes, of course! A trainer will create a free training plan for you.",
+      "ar-SA": "نعم، بالطبع! سيقوم المدرب بوضع خطة تدريب مجانية لك.",
+      "es-ES": "¡Sí, por supuesto! Un entrenador creará un plan de entrenamiento gratuito para usted.",
+      "fr-FR": "Oui, bien sûr ! Un entraîneur préparera un programme d'entraînement gratuit pour vous.",
+      "hi-IN": "हाँ, बिल्कुल! एक ट्रेनर आपके लिए एक मुफ्त ट्रेनिंग प्लान बनाएगा।",
+      "pl-PL": "Tak, oczywiście! Trener ułoży dla Pana/Pani bezpłatny plan treningowy.",
+      "ro-RO": "Da, desigur! Un antrenor va crea gratuit un plan de antrenament pentru dumneavoastră.",
+      "tr-TR": "Evet, tabii ki! Bir antrenör sizin için ücretsiz bir antrenman programı hazırlar.",
+      "uk-UA": "Так, звісно! Тренер складе для вас безкоштовний план тренувань.",
+      "uz-UZ": "Ha, albatta! Trener siz uchun bepul mashg'ulot rejasini tuzib beradi."
+    },
+    "vocabulary": [
+      {
+        "german": "der Trainer",
+        "translation": {
+          "ru-RU": "тренер",
+          "en-US": "trainer / coach",
+          "ar-SA": "المدرب",
+          "es-ES": "entrenador",
+          "fr-FR": "entraîneur / coach",
+          "hi-IN": "ट्रेनर",
+          "pl-PL": "trener",
+          "ro-RO": "antrenor",
+          "tr-TR": "antrenör",
+          "uk-UA": "тренер",
+          "uz-UZ": "trener"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das ist super. Kann ich heute ein Probetraining machen?",
+        "translation": {
+          "ru-RU": "Это супер. Могу ли я сегодня провести пробную тренировку?",
+          "en-US": "That's super. Can I do a trial training today?",
+          "ar-SA": "هذا رائع. هل يمكنني إجراء تدريب تجريبي اليوم؟",
+          "es-ES": "Eso es genial. ¿Puedo hacer un entrenamiento de prueba hoy?",
+          "fr-FR": "C'est super. Puis-je faire un entraînement d'essai aujourd'hui ?",
+          "hi-IN": "यह बहुत बढ़िया है। क्या मैं आज एक ट्रायल ट्रेनिंग कर सकता हूँ?",
+          "pl-PL": "To świetnie. Czy mogę dzisiaj odbyć trening próbny?",
+          "ro-RO": "Asta este super. Pot face un antrenament de probă astăzi?",
+          "tr-TR": "Bu harika. Bugün bir deneme antrenmanı yapabilir miyim?",
+          "uk-UA": "Це супер. Чи можу я сьогодні провести пробне тренування?",
+          "uz-UZ": "Bu juda yaxshi. Bugun sinov mashg'ulotini o'tkaza olamanmi?"
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Perfekt. Brauche ich dafür einen festen Termin?",
+        "translation": {
+          "ru-RU": "Идеально. Мне нужна для этого точная запись (термин)?",
+          "en-US": "Perfect. Do I need a fixed appointment for that?",
+          "ar-SA": "ممتاز. هل أحتاج إلى موعد محدد لذلك؟",
+          "es-ES": "Perfecto. ¿Necesito una cita previa para ello?",
+          "fr-FR": "Parfait. Ai-je besoin d'un rendez-vous précis pour ça ?",
+          "hi-IN": "बढ़िया। क्या मुझे इसके लिए कोई पक्की अपॉइंटमेंट चाहिए?",
+          "pl-PL": "Doskonale. Czy potrzebuję na to ustalonego terminu?",
+          "ro-RO": "Perfect. Am nevoie de o programare fixă pentru asta?",
+          "tr-TR": "Mükemmel. Bunun için kesin bir randevuya ihtiyacım var mı?",
+          "uk-UA": "Ідеально. Мені потрібен для цього точний запис (термін)?",
+          "uz-UZ": "Ajoyib. Buning uchun aniq vaqtni belgilashim kerakmi?"
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Sie können heute direkt ein kostenloses Probetraining machen. Haben Sie Sportsachen dabei?",
+    "botTranslation": {
+      "ru-RU": "Вы можете прямо сегодня провести бесплатную пробную тренировку. У вас есть с собой спортивные вещи?",
+      "en-US": "You can do a free trial training directly today. Do you have your sports gear with you?",
+      "ar-SA": "يمكنك القيام بتدريب تجريبي مجاني اليوم مباشرة. هل معك ملابسك الرياضية؟",
+      "es-ES": "Puede hacer un entrenamiento de prueba gratuito directamente hoy. ¿Lleva su ropa de deporte consigo?",
+      "fr-FR": "Vous pouvez faire une séance d'essai gratuite directement aujourd'hui. Avez-vous vos affaires de sport avec vous ?",
+      "hi-IN": "आप आज ही एक मुफ़्त ट्रायल ट्रेनिंग कर सकते हैं। क्या आपके पास आपके खेल के कपड़े हैं?",
+      "pl-PL": "Może Pan/Pani od razu dzisiaj odbyć darmowy trening próbny. Ma Pan/Pani ze sobą rzeczy na siłownię?",
+      "ro-RO": "Puteți face un antrenament de probă gratuit direct astăzi. Aveți echipamentul sportiv la dumneavoastră?",
+      "tr-TR": "Doğrudan bugün ücretsiz bir deneme antrenmanı yapabilirsiniz. Yanınızda spor eşyalarınız var mı?",
+      "uk-UA": "Ви можете прямо сьогодні провести безкоштовне пробне тренування. У вас є з собою спортивні речі?",
+      "uz-UZ": "Bugun to'g'ridan-to'g'ri bepul sinov mashg'ulotini o'tkazishingiz mumkin. Yoningizda sport kiyimlaringiz bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Probetraining",
+        "translation": {
+          "ru-RU": "пробная тренировка",
+          "en-US": "trial training",
+          "ar-SA": "التدريب التجريبي",
+          "es-ES": "entrenamiento de prueba",
+          "fr-FR": "entraînement d'essai",
+          "hi-IN": "ट्रायल ट्रेनिंग",
+          "pl-PL": "trening próbny",
+          "ro-RO": "antrenament de probă",
+          "tr-TR": "deneme antrenmanı",
+          "uk-UA": "пробне тренування",
+          "uz-UZ": "sinov mashg'uloti"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, ich habe Sportschuhe und eine Flasche Wasser in der Tasche.",
+        "translation": {
+          "ru-RU": "Да, у меня в сумке спортивная обувь и бутылка воды.",
+          "en-US": "Yes, I have sports shoes and a bottle of water in my bag.",
+          "ar-SA": "نعم، لدي حذاء رياضي وزجاجة ماء في الحقيبة.",
+          "es-ES": "Sí, tengo zapatillas de deporte y una botella de agua en la bolsa.",
+          "fr-FR": "Oui, j'ai des chaussures de sport et une bouteille d'eau dans mon sac.",
+          "hi-IN": "हाँ, मेरे बैग में स्पोर्ट्स शूज और पानी की बोतल है।",
+          "pl-PL": "Tak, mam w torbie buty sportowe i butelkę wody.",
+          "ro-RO": "Da, am pantofi sport și o sticlă de apă în geantă.",
+          "tr-TR": "Evet, çantamda spor ayakkabılarım ve bir şişe suyum var.",
+          "uk-UA": "Так, у мене в сумці спортивне взуття і пляшка води.",
+          "uz-UZ": "Ha, sumkamda sport poyabzali va bir shisha suv bor."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Ja, meine Sportsachen sind komplett im Rucksack.",
+        "translation": {
+          "ru-RU": "Да, мои спортивные вещи полностью в рюкзаке.",
+          "en-US": "Yes, my sports gear is entirely in the backpack.",
+          "ar-SA": "نعم، جميع ملابسي الرياضية في حقيبة الظهر.",
+          "es-ES": "Sí, toda mi ropa deportiva está en la mochila.",
+          "fr-FR": "Oui, toutes mes affaires de sport sont dans mon sac à dos.",
+          "hi-IN": "हाँ, मेरे सारे खेल के सामान बैकपैक में हैं।",
+          "pl-PL": "Tak, wszystkie moje rzeczy sportowe są w plecaku.",
+          "ro-RO": "Da, echipamentul meu sportiv este complet în rucsac.",
+          "tr-TR": "Evet, spor eşyalarım tamamen sırt çantamda.",
+          "uk-UA": "Так, мої спортивні речі повністю в рюкзаку.",
+          "uz-UZ": "Ha, sport kiyimlarim to'liq ryukzakimda."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Wunderbar! Die Umkleidekabine ist dort hinten rechts.",
+    "botTranslation": {
+      "ru-RU": "Замечательно! Раздевалка находится вон там сзади справа.",
+      "en-US": "Wonderful! The locker room is back there on the right.",
+      "ar-SA": "رائع! غرفة تغيير الملابس هناك في الخلف على اليمين.",
+      "es-ES": "¡Estupendo! El vestuario está ahí al fondo a la derecha.",
+      "fr-FR": "Merveilleux ! Le vestiaire est là-bas au fond à droite.",
+      "hi-IN": "अद्भुत! चेंजिंग रूम (लॉकर रूम) वहाँ पीछे दाईं ओर है।",
+      "pl-PL": "Wspaniale! Szatnia znajduje się tam z tyłu po prawej stronie.",
+      "ro-RO": "Minunat! Vestiarul este acolo în spate pe dreapta.",
+      "tr-TR": "Harika! Soyunma odası arka sağ tarafta.",
+      "uk-UA": "Чудово! Роздягальня знаходиться он там ззаду праворуч.",
+      "uz-UZ": "Ajoyib! Kiyinish xonasi anavi yerda, orqa o'ng tomonda."
+    },
+    "vocabulary": [
+      {
+        "german": "die Umkleidekabine",
+        "translation": {
+          "ru-RU": "раздевалка",
+          "en-US": "locker room / changing room",
+          "ar-SA": "غرفة تغيير الملابس",
+          "es-ES": "vestuario",
+          "fr-FR": "vestiaire / cabine d'essayage",
+          "hi-IN": "चेंजिंग रूम",
+          "pl-PL": "szatnia / przebieralnia",
+          "ro-RO": "vestiar / cabină de probă",
+          "tr-TR": "soyunma odası",
+          "uk-UA": "роздягальня",
+          "uz-UZ": "kiyinish xonasi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Danke. Wie viel kostet der Mitgliedsbeitrag pro Monat?",
+        "translation": {
+          "ru-RU": "Спасибо. Сколько стоит членский взнос в месяц?",
+          "en-US": "Thanks. How much does the membership fee cost per month?",
+          "ar-SA": "شكراً. كم تبلغ رسوم العضوية شهرياً؟",
+          "es-ES": "Gracias. ¿Cuánto cuesta la cuota de socio al mes?",
+          "fr-FR": "Merci. Combien coûte l'abonnement par mois ?",
+          "hi-IN": "धन्यवाद। प्रति माह सदस्यता शुल्क कितना है?",
+          "pl-PL": "Dziękuję. Ile kosztuje opłata członkowska miesięcznie?",
+          "ro-RO": "Mulțumesc. Cât costă cotizația de membru pe lună?",
+          "tr-TR": "Teşekkürler. Aylık üyelik ücreti ne kadar?",
+          "uk-UA": "Дякую. Скільки коштує членський внесок на місяць?",
+          "uz-UZ": "Rahmat. Oyiga a'zolik badali qancha turadi?"
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Gut zu wissen. Wie teuer ist der Vertrag bei Ihnen?",
+        "translation": {
+          "ru-RU": "Полезно знать. Сколько стоит договор у вас?",
+          "en-US": "Good to know. How expensive is the contract here?",
+          "ar-SA": "من الجيد معرفة ذلك. كم سعر العقد لديكم؟",
+          "es-ES": "Es bueno saberlo. ¿Qué precio tiene el contrato con ustedes?",
+          "fr-FR": "Bon à savoir. Quel est le prix du contrat chez vous ?",
+          "hi-IN": "यह जानकर अच्छा लगा। आपके यहाँ कॉन्ट्रैक्ट कितना महंगा है?",
+          "pl-PL": "Dobrze wiedzieć. Jak drogi jest u państwa kontrakt?",
+          "ro-RO": "Bine de știut. Cât de scump este contractul la voi?",
+          "tr-TR": "Bunu bilmek güzel. Sizde sözleşme ne kadar tutuyor?",
+          "uk-UA": "Корисно знати. Скільки коштує договір у вас?",
+          "uz-UZ": "Bilib qo'ygan yaxshi. Sizda shartnoma qancha turadi?"
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Der Monatsbeitrag kostet 30 Euro. Duschen und Kurse sind schon dabei.",
+    "botTranslation": {
+      "ru-RU": "Ежемесячный взнос стоит 30 евро. Душ и курсы уже включены.",
+      "en-US": "The monthly fee costs 30 euros. Showers and courses are already included.",
+      "ar-SA": "الرسوم الشهرية تكلف 30 يورو. الاستحمام والدورات مشمولة بالفعل.",
+      "es-ES": "La cuota mensual cuesta 30 euros. Las duchas y los cursos ya están incluidos.",
+      "fr-FR": "La cotisation mensuelle coûte 30 euros. Les douches et les cours sont déjà inclus.",
+      "hi-IN": "मासिक शुल्क 30 यूरो है। शावर और कक्षाएं इसमें पहले से ही शामिल हैं।",
+      "pl-PL": "Miesięczna opłata wynosi 30 euro. Prysznice i zajęcia są już wliczone.",
+      "ro-RO": "Cotizația lunară costă 30 de euro. Dușurile și cursurile sunt deja incluse.",
+      "tr-TR": "Aylık ücret 30 Euro'dur. Duşlar ve kurslar buna zaten dahildir.",
+      "uk-UA": "Щомісячний внесок коштує 30 євро. Душ і курси вже включені.",
+      "uz-UZ": "Oylik to'lov 30 yevro. Dush va kurslar shuning ichiga kiritilgan."
+    },
+    "vocabulary": [
+      {
+        "german": "der Mitgliedsbeitrag",
+        "translation": {
+          "ru-RU": "членский взнос",
+          "en-US": "membership fee",
+          "ar-SA": "رسوم العضوية",
+          "es-ES": "cuota de socio",
+          "fr-FR": "cotisation de membre / abonnement",
+          "hi-IN": "सदस्यता शुल्क",
+          "pl-PL": "składka członkowska",
+          "ro-RO": "cotizație de membru",
+          "tr-TR": "üyelik ücreti / aidatı",
+          "uk-UA": "членський внесок",
+          "uz-UZ": "a'zolik badali"
+        }
+      },
+      {
+        "german": "der Vertrag",
+        "translation": {
+          "ru-RU": "договор / контракт",
+          "en-US": "contract",
+          "ar-SA": "العقد",
+          "es-ES": "contrato",
+          "fr-FR": "contrat",
+          "hi-IN": "अनुबंध / कॉन्ट्रैक्ट",
+          "pl-PL": "umowa / kontrakt",
+          "ro-RO": "contract",
+          "tr-TR": "sözleşme",
+          "uk-UA": "договір / контракт",
+          "uz-UZ": "shartnoma"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Der Preis ist wirklich fair. Vielen Dank für die Beratung!",
+        "translation": {
+          "ru-RU": "Цена действительно справедливая. Большое спасибо за консультацию!",
+          "en-US": "The price is really fair. Thank you very much for the advice!",
+          "ar-SA": "السعر عادل حقاً. شكراً جزيلاً على الاستشارة!",
+          "es-ES": "El precio es realmente justo. ¡Muchas gracias por el asesoramiento!",
+          "fr-FR": "Le prix est vraiment correct. Merci beaucoup pour les conseils !",
+          "hi-IN": "कीमत सच में उचित है। सलाह के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Cena jest naprawdę uczciwa. Bardzo dziękuję za doradztwo!",
+          "ro-RO": "Prețul este cu adevărat corect. Vă mulțumesc mult pentru consultanță!",
+          "tr-TR": "Fiyat gerçekten adil. Danışmanlık için çok teşekkürler!",
+          "uk-UA": "Ціна дійсно справедлива. Дуже дякую за консультацію!",
+          "uz-UZ": "Narx haqiqatan ham adolatli. Maslahat uchun katta rahmat!"
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Das klingt sehr gut. Danke für die vielen Informationen!",
+        "translation": {
+          "ru-RU": "Это звучит очень хорошо. Спасибо за обилие информации!",
+          "en-US": "That sounds very good. Thanks for all the information!",
+          "ar-SA": "هذا يبدو جيداً جداً. شكراً على الكثير من المعلومات!",
+          "es-ES": "Eso suena muy bien. ¡Gracias por tanta información!",
+          "fr-FR": "Cela semble très bien. Merci pour toutes ces informations !",
+          "hi-IN": "यह बहुत अच्छा लग रहा है। इतनी सारी जानकारी के लिए धन्यवाद!",
+          "pl-PL": "To brzmi bardzo dobrze. Dziękuję za tak wiele informacji!",
+          "ro-RO": "Sună foarte bine. Mulțumesc pentru multele informații!",
+          "tr-TR": "Kulağa çok iyi geliyor. Bu kadar bilgi için teşekkürler!",
+          "uk-UA": "Це звучить дуже добре. Дякую за велику кількість інформації!",
+          "uz-UZ": "Bu juda yaxshi eshitilyapti. Ko'plab ma'lumotlar uchun rahmat!"
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Sehr gerne! Viel Spaß beim Training. Bitte schön!",
+    "botTranslation": {
+      "ru-RU": "С удовольствием! Хорошей тренировки. Пожалуйста!",
+      "en-US": "With pleasure! Have fun training. You're welcome!",
+      "ar-SA": "بكل سرور! استمتع بالتدريب. على الرحب والسعة!",
+      "es-ES": "¡Con mucho gusto! Que se divierta entrenando. ¡De nada!",
+      "fr-FR": "Avec grand plaisir ! Bon entraînement. Je vous en prie !",
+      "hi-IN": "मुझे खुशी हुई! ट्रेनिंग का आनंद लें। आपका स्वागत है!",
+      "pl-PL": "Bardzo proszę! Miłego treningu. Proszę bardzo!",
+      "ro-RO": "Cu mare plăcere! Antrenament plăcut. Cu plăcere!",
+      "tr-TR": "Memnuniyetle! Antrenmanda iyi eğlenceler. Rica ederim!",
+      "uk-UA": "Із задоволенням! Гарного тренування. Будь ласка!",
+      "uz-UZ": "Jonim bilan! Mashg'ulotda yaxshi hordiq chiqaring. Arzimaydi!"
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

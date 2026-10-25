@@ -72,6 +72,7 @@ const route = useRoute()
 const user = useCurrentUser()
 const daily = dailyStore()
 const colorMode = useColorMode();
+const { $track } = useNuxtApp()
 const showHedgehogModal = ref(false)
 
 
@@ -108,7 +109,7 @@ onMounted(async () => {
     } catch (e) {
       console.error(e);
     }
-    initAdmob();
+    initAdmob($track);
     App.addListener('backButton', ({ canGoBack }) => {
       const state = window.history.state || {}
       const isModalOpen = !!(state.isMapPanelOpen || state.isSubCategory || state.isSubScreen)
@@ -188,8 +189,6 @@ watch(() => colorMode.value, async (newTheme) => {
 }, { immediate: true });
 
 
-// Модалка марафона — на главной и только если в этом запуске не показывали модалку ивента,
-// иначе ждёт следующего запуска
 watch([() => authStore.uid, eventModalState], async ([uid, state]) => {
   if (!uid || state !== 'none') return
   if (await gameStore.loadModalSeen()) checkMarathonEvent()

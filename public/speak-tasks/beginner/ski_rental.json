@@ -1,0 +1,513 @@
+{
+  "start": {
+    "botText": "Guten Tag! Willkommen im Skiverleih. Möchten Sie heute eine komplette Skiausrüstung leihen?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Добро пожаловать в прокат лыж. Вы хотите взять сегодня полное лыжное снаряжение?",
+      "en-US": "Good day! Welcome to the ski rental. Would you like to rent complete ski equipment today?",
+      "ar-SA": "طاب يومك! مرحباً بك في تأجير الزلاجات. هل ترغب في استئجار معدات تزلج كاملة اليوم؟",
+      "es-ES": "¡Buen día! Bienvenido al alquiler de esquís. ¿Desea alquilar un equipo de esquí completo hoy?",
+      "fr-FR": "Bonjour ! Bienvenue à la location de skis. Souhaitez-vous louer un équipement de ski complet aujourd'hui ?",
+      "hi-IN": "शुभ दिन! स्की रेंटल में आपका स्वागत है। क्या आप आज पूरे स्की उपकरण किराए पर लेना चाहेंगे?",
+      "pl-PL": "Dzień dobry! Witamy w wypożyczalni nart. Czy chciałby Pan/Pani wypożyczyć dzisiaj kompletny sprzęt narciarski?",
+      "ro-RO": "Bună ziua! Bine ați venit la centrul de închirieri schiuri. Doriți să închiriați astăzi un echipament complet de schi?",
+      "tr-TR": "İyi günler! Kayak kiralama merkezine hoş geldiniz. Bugün tam takım kayak ekipmanı kiralamak ister misiniz?",
+      "uk-UA": "Добрий день! Ласкаво просимо до прокату лиж. Ви хочете взяти сьогодні повне лижне спорядження?",
+      "uz-UZ": "Xayrli kun! Chang'i ijarasiga xush kelibsiz. Bugun to'liq chang'i jihozlarini ijaraga olmoqchimisiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Skiausrüstung",
+        "translation": {
+          "ru-RU": "горнолыжное снаряжение",
+          "en-US": "ski equipment",
+          "ar-SA": "معدات التزلج",
+          "es-ES": "equipo de esquí",
+          "fr-FR": "équipement de ski",
+          "hi-IN": "स्की उपकरण",
+          "pl-PL": "sprzęt narciarski",
+          "ro-RO": "echipament de schi",
+          "tr-TR": "kayak ekipmanı",
+          "uk-UA": "гірськолижне спорядження",
+          "uz-UZ": "chang'i jihozlari"
+        }
+      },
+      {
+        "german": "die Ski",
+        "translation": {
+          "ru-RU": "лыжи",
+          "en-US": "skis",
+          "ar-SA": "الزلاجات",
+          "es-ES": "esquís",
+          "fr-FR": "skis",
+          "hi-IN": "स्की",
+          "pl-PL": "narty",
+          "ro-RO": "schiuri",
+          "tr-TR": "kayak",
+          "uk-UA": "лижі",
+          "uz-UZ": "chang'ilar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag! Ja, ich brauche für heute ein Paar Ski, Schuhe und Stöcke.",
+        "translation": {
+          "ru-RU": "Добрый день! Да, мне на сегодня нужны пара лыж, ботинки и палки.",
+          "en-US": "Good day! Yes, I need a pair of skis, boots, and poles for today.",
+          "ar-SA": "طاب يومك! نعم، أحتاج اليوم إلى زوج من الزلاجات والأحذية والعصي.",
+          "es-ES": "¡Buen día! Sí, necesito para hoy un par de esquís, botas y bastones.",
+          "fr-FR": "Bonjour ! Oui, j'ai besoin pour aujourd'hui d'une paire de skis, de chaussures et de bâtons.",
+          "hi-IN": "शुभ दिन! हाँ, मुझे आज के लिए एक जोड़ी स्की, जूते और डंडे चाहिए।",
+          "pl-PL": "Dzień dobry! Tak, potrzebuję na dzisiaj parę nart, buty i kijki.",
+          "ro-RO": "Bună ziua! Da, am nevoie pentru astăzi de o pereche de schiuri, clăpari și bețe.",
+          "tr-TR": "İyi günler! Evet, bugün için bir çift kayak, bot ve batonlara ihtiyacım var.",
+          "uk-UA": "Добрий день! Так, мені на сьогодні потрібні пара лиж, черевики та палиці.",
+          "uz-UZ": "Xayrli kun! Ha, menga bugun uchun bir juft chang'i, etik va tayoqlar kerak."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo! Ja, ich möchte gerne die Ausrüstung für einen Tag auf der Piste mieten.",
+        "translation": {
+          "ru-RU": "Привет! Да, я хотел бы арендовать снаряжение на один день на трассе.",
+          "en-US": "Hello! Yes, I would like to rent the equipment for a day on the slopes.",
+          "ar-SA": "مرحباً! نعم، أود استئجار المعدات ليوم واحد على المنحدر.",
+          "es-ES": "¡Hola! Sí, me gustaría alquilar el equipo para un día en la pista.",
+          "fr-FR": "Salut ! Oui, j'aimerais louer l'équipement pour une journée sur la piste.",
+          "hi-IN": "नमस्ते! हाँ, मैं ढलान पर एक दिन के लिए उपकरण किराए पर लेना चाहूँगा।",
+          "pl-PL": "Cześć! Tak, chciałbym wypożyczyć sprzęt na jeden dzień na stoku.",
+          "ro-RO": "Salut! Da, aș dori să închiriez echipamentul pentru o zi pe pârtie.",
+          "tr-TR": "Merhaba! Evet, pistte bir gün geçirmek için ekipman kiralamak istiyorum.",
+          "uk-UA": "Привіт! Так, я хотів би орендувати спорядження на один день на трасі.",
+          "uz-UZ": "Salom! Ha, men trassada bir kun uchun jihozlarni ijaraga olmoqchiman."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Sehr gerne. Fahren Sie lieber gemütlich oder suchen Sie sportliche Ski für ein hohes Tempo?",
+    "botTranslation": {
+      "ru-RU": "С удовольствием. Вы предпочитаете кататься спокойно или ищете спортивные лыжи для высокого темпа?",
+      "en-US": "With pleasure. Do you prefer to ski comfortably or are you looking for sporty skis for a high pace?",
+      "ar-SA": "بكل سرور. هل تفضل التزلج بهدوء أم تبحث عن زلاجات رياضية لوتيرة سريعة؟",
+      "es-ES": "Con mucho gusto. ¿Prefiere esquiar tranquilamente o busca unos esquís deportivos para un ritmo alto?",
+      "fr-FR": "Très volontiers. Préférez-vous skier tranquillement ou cherchez-vous des skis sportifs pour une allure rapide ?",
+      "hi-IN": "बिल्कुल। क्या आप आराम से स्की करना पसंद करते हैं या तेज़ गति के लिए स्पोर्टी स्की की तलाश में हैं?",
+      "pl-PL": "Bardzo chętnie. Woli Pan/Pani jeździć spokojnie, czy szuka sportowych nart do szybkiego tempa?",
+      "ro-RO": "Cu mare plăcere. Preferați să schiați relaxat sau căutați schiuri sportive pentru un ritm alert?",
+      "tr-TR": "Memnuniyetle. Rahat kaymayı mı tercih edersiniz yoksa yüksek hız için sportif kayaklar mı arıyorsunuz?",
+      "uk-UA": "Із задоволенням. Ви віддаєте перевагу кататися спокійно чи шукаєте спортивні лижі для високого темпу?",
+      "uz-UZ": "Bajonidil. Siz xotirjam uchishni afzal ko'rasizmi yoki yuqori tezlik uchun sport chang'ilarini qidiryapsizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Tempo",
+        "translation": {
+          "ru-RU": "темп / скорость",
+          "en-US": "pace / speed",
+          "ar-SA": "الوتيرة / السرعة",
+          "es-ES": "ritmo / velocidad",
+          "fr-FR": "rythme / vitesse",
+          "hi-IN": "गति / रफ़्तार",
+          "pl-PL": "tempo / prędkość",
+          "ro-RO": "ritm / viteză",
+          "tr-TR": "tempo / hız",
+          "uk-UA": "темп / швидкість",
+          "uz-UZ": "temp / tezlik"
+        }
+      },
+      {
+        "german": "die Piste",
+        "translation": {
+          "ru-RU": "лыжная трасса / склон",
+          "en-US": "ski slope / piste",
+          "ar-SA": "منحدر التزلج",
+          "es-ES": "pista (de esquí)",
+          "fr-FR": "piste (de ski)",
+          "hi-IN": "स्की स्लोप / ढलान",
+          "pl-PL": "stok",
+          "ro-RO": "pârtie",
+          "tr-TR": "kayak pisti",
+          "uk-UA": "лижна траса / схил",
+          "uz-UZ": "chang'i trassasi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich fahre ganz entspannt auf der blauen Piste.",
+        "translation": {
+          "ru-RU": "Я катаюсь совершенно расслабленно на синей трассе.",
+          "en-US": "I ski quite relaxedly on the blue slope.",
+          "ar-SA": "أنا أتزلج براحة تامة على المنحدر الأزرق.",
+          "es-ES": "Esquío muy relajado en la pista azul.",
+          "fr-FR": "Je skie de manière très détendue sur la piste bleue.",
+          "hi-IN": "मैं नीली ढलान पर बिल्कुल आराम से स्की करता हूँ।",
+          "pl-PL": "Jeżdżę całkiem na luzie po niebieskiej trasie.",
+          "ro-RO": "Schiiez foarte relaxat pe pârtia albastră.",
+          "tr-TR": "Mavi pistte oldukça rahat kayıyorum.",
+          "uk-UA": "Я катаюся абсолютно розслаблено на синій трасі.",
+          "uz-UZ": "Men ko'k trassada mutlaqo xotirjam uchaman."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Ich mag es lieber sportlich und fahre etwas schneller.",
+        "translation": {
+          "ru-RU": "Мне больше нравится спортивный стиль, и я еду немного быстрее.",
+          "en-US": "I prefer it sporty and ski a bit faster.",
+          "ar-SA": "أفضل النمط الرياضي وأتزلج بشكل أسرع قليلاً.",
+          "es-ES": "Me gusta más el estilo deportivo y voy un poco más rápido.",
+          "fr-FR": "Je préfère un style sportif et je skie un peu plus vite.",
+          "hi-IN": "मुझे स्पोर्टी पसंद है और मैं थोड़ा तेज़ स्की करता हूँ।",
+          "pl-PL": "Wolę na sportowo i jeżdżę trochę szybciej.",
+          "ro-RO": "Îmi place mai degrabă sportiv și merg ceva mai repede.",
+          "tr-TR": "Sportif tarzı daha çok seviyorum ve biraz daha hızlı kayıyorum.",
+          "uk-UA": "Мені більше подобається спортивний стиль, і я їду трохи швидше.",
+          "uz-UZ": "Menga ko'proq sport uslubi yoqadi va men biroz tezroq uchaman."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Alles klar. Welche Schuhgröße haben Sie und wie viel wiegen Sie für die Einstellung der Bindung?",
+    "botTranslation": {
+      "ru-RU": "Все понятно. Какой у вас размер обуви и сколько вы весите для настройки крепления?",
+      "en-US": "All right. What is your shoe size and how much do you weigh for adjusting the bindings?",
+      "ar-SA": "حسناً. ما هو مقاس حذائك وكم وزنك لضبط أربطة التزلج؟",
+      "es-ES": "Entendido. ¿Qué talla de zapato tiene y cuánto pesa para ajustar la fijación?",
+      "fr-FR": "D'accord. Quelle est votre pointure et combien pesez-vous pour le réglage des fixations ?",
+      "hi-IN": "ठीक है। बाइंडिंग सेट करने के लिए आपके जूतों का आकार क्या है और आपका वजन कितना है?",
+      "pl-PL": "Wszystko jasne. Jaki ma Pan/Pani rozmiar buta i ile waży, aby ustawić wiązania?",
+      "ro-RO": "Am înțeles. Ce mărime aveți la încălțăminte și cât cântăriți pentru reglarea legăturilor?",
+      "tr-TR": "Anlaşıldı. Bağlamaların ayarlanması için ayakkabı numaranız nedir ve kaç kilosunuz?",
+      "uk-UA": "Все зрозуміло. Який у вас розмір взуття і скільки ви важите для налаштування кріплення?",
+      "uz-UZ": "Tushunarli. Mahkamlagichni sozlash uchun poyabzal o'lchamingiz qanday va vazningiz qancha?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Bindung",
+        "translation": {
+          "ru-RU": "крепление (лыжное)",
+          "en-US": "binding",
+          "ar-SA": "الرباط (للزلاجات)",
+          "es-ES": "fijación",
+          "fr-FR": "fixation",
+          "hi-IN": "बाइंडिंग (स्की जोड़ने का साधन)",
+          "pl-PL": "wiązanie",
+          "ro-RO": "legătură (la schiuri)",
+          "tr-TR": "bağlama",
+          "uk-UA": "кріплення (лижне)",
+          "uz-UZ": "mahkamlagich"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich habe Schuhgröße 42 und wiege ungefähr 75 Kilogramm.",
+        "translation": {
+          "ru-RU": "У меня 42 размер обуви, и я вешу около 75 килограммов.",
+          "en-US": "I have shoe size 42 and weigh about 75 kilograms.",
+          "ar-SA": "مقاس حذائي 42 ووزني حوالي 75 كيلوغراماً.",
+          "es-ES": "Tengo la talla 42 y peso unos 75 kilos.",
+          "fr-FR": "Je fais du 42 et je pèse environ 75 kilos.",
+          "hi-IN": "मेरे जूतों का आकार 42 है और मेरा वजन लगभग 75 किलोग्राम है।",
+          "pl-PL": "Mam rozmiar buta 42 i ważę około 75 kilogramów.",
+          "ro-RO": "Am mărimea 42 la încălțăminte și cântăresc aproximativ 75 de kilograme.",
+          "tr-TR": "Ayakkabı numaram 42 ve yaklaşık 75 kiloyum.",
+          "uk-UA": "У мене 42 розмір взуття, і я важу близько 75 кілограмів.",
+          "uz-UZ": "Mening poyabzal o'lchamim 42 va vaznim taxminan 75 kilogramm."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Meine Schuhgröße ist 43 bei einem Gewicht von 80 Kilogramm.",
+        "translation": {
+          "ru-RU": "Мой размер обуви 43 при весе 80 килограммов.",
+          "en-US": "My shoe size is 43 with a weight of 80 kilograms.",
+          "ar-SA": "مقاس حذائي 43 ووزني 80 كيلوغراماً.",
+          "es-ES": "Mi talla de zapato es la 43 con un peso de 80 kilos.",
+          "fr-FR": "Ma pointure est 43 pour un poids de 80 kilos.",
+          "hi-IN": "80 किलोग्राम वजन के साथ मेरे जूतों का आकार 43 है।",
+          "pl-PL": "Mój rozmiar buta to 43 przy wadze 80 kilogramów.",
+          "ro-RO": "Mărimea mea este 43 la o greutate de 80 de kilograme.",
+          "tr-TR": "80 kilo ağırlığımla ayakkabı numaram 43.",
+          "uk-UA": "Мій розмір взуття 43 при вазі 80 кілограмів.",
+          "uz-UZ": "Vaznim 80 kilogramm bo'lib, poyabzal o'lchamim 43."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Danke. Hier sind die Skischuhe zum Anprobieren. Sitzen sie bequem am Fuß?",
+    "botTranslation": {
+      "ru-RU": "Спасибо. Вот лыжные ботинки для примерки. Они удобно сидят на ноге?",
+      "en-US": "Thank you. Here are the ski boots to try on. Do they fit comfortably on the foot?",
+      "ar-SA": "شكراً. إليك أحذية التزلج لتجربتها. هل هي مريحة على القدم؟",
+      "es-ES": "Gracias. Aquí están las botas de esquí para probar. ¿Te quedan cómodas en el pie?",
+      "fr-FR": "Merci. Voici les chaussures de ski pour essayer. Sont-elles confortables au pied ?",
+      "hi-IN": "धन्यवाद। ये रहे स्की बूट्स ट्राई करने के लिए। क्या ये पैरों में आरामदायक हैं?",
+      "pl-PL": "Dziękuję. Oto buty narciarskie do przymierzenia. Czy wygodnie leżą na stopie?",
+      "ro-RO": "Mulțumesc. Iată clăparii pentru probă. Stau confortabil pe picior?",
+      "tr-TR": "Teşekkürler. İşte denemeniz için kayak botları. Ayağınıza rahat oturuyor mu?",
+      "uk-UA": "Дякую. Ось лижні черевики для примірки. Вони зручно сидять на нозі?",
+      "uz-UZ": "Rahmat. Mana kiyib ko'rish uchun chang'i etigi. Ular oyoqqa qulay turibdimi?"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Ja, sie sitzen fest, aber drücken überhaupt nicht.",
+        "translation": {
+          "ru-RU": "Да, они сидят плотно, но совсем не давят.",
+          "en-US": "Yes, they fit tightly, but don't pinch at all.",
+          "ar-SA": "نعم، هي محكمة، لكنها لا تضغط على الإطلاق.",
+          "es-ES": "Sí, quedan firmes, pero no aprietan en absoluto.",
+          "fr-FR": "Oui, elles sont bien ajustées, mais ne serrent pas du tout.",
+          "hi-IN": "हाँ, वे कसकर फिट हैं, लेकिन बिल्कुल नहीं चुभते।",
+          "pl-PL": "Tak, mocno trzymają, ale wcale nie cisną.",
+          "ro-RO": "Da, stau ferm, dar nu strâng deloc.",
+          "tr-TR": "Evet, sıkı oturuyorlar ama hiç vurmuyorlar.",
+          "uk-UA": "Так, вони сидять щільно, але зовсім не тиснуть.",
+          "uz-UZ": "Ha, ular mahkam turibdi, lekin umuman qismayapti."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Perfekt, die Schuhe passen wirklich sehr gut.",
+        "translation": {
+          "ru-RU": "Идеально, ботинки действительно очень хорошо подходят.",
+          "en-US": "Perfect, the boots really fit very well.",
+          "ar-SA": "ممتاز، الأحذية تناسبني بشكل جيد جداً.",
+          "es-ES": "Perfecto, las botas encajan realmente muy bien.",
+          "fr-FR": "Parfait, les chaussures me vont vraiment très bien.",
+          "hi-IN": "बिल्कुल सही, जूते वास्तव में बहुत अच्छी तरह फिट हैं।",
+          "pl-PL": "Idealnie, buty pasują naprawdę bardzo dobrze.",
+          "ro-RO": "Perfect, clăparii se potrivesc cu adevărat foarte bine.",
+          "tr-TR": "Mükemmel, botlar gerçekten çok iyi uyuyor.",
+          "uk-UA": "Ідеально, черевики дійсно дуже добре підходять.",
+          "uz-UZ": "Ajoyib, etiklar haqiqatan ham juda yaxshi tushdi."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Hervorragend. Die Bindung ist fertig eingestellt. Brauchen Sie auch noch einen passenden Helm dazu?",
+    "botTranslation": {
+      "ru-RU": "Превосходно. Крепление настроено. Вам также нужен подходящий шлем к нему?",
+      "en-US": "Excellent. The bindings are all set. Do you also need a matching helmet to go with it?",
+      "ar-SA": "ممتاز. تم ضبط الأربطة. هل تحتاج أيضاً إلى خوذة مناسبة معها؟",
+      "es-ES": "Excelente. La fijación ya está ajustada. ¿Necesita también un casco adecuado?",
+      "fr-FR": "Excellent. La fixation est réglée. Avez-vous également besoin d'un casque adapté ?",
+      "hi-IN": "उत्कृष्ट। बाइंडिंग सेट हो गई है। क्या आपको इसके साथ मैचिंग हेलमेट भी चाहिए?",
+      "pl-PL": "Znakomicie. Wiązanie jest już ustawione. Potrzebuje Pan/Pani do tego jeszcze odpowiedniego kasku?",
+      "ro-RO": "Excelent. Legătura este reglată. Aveți nevoie și de o cască potrivită?",
+      "tr-TR": "Harika. Bağlamalar ayarlandı. Yanında uygun bir kask da ister misiniz?",
+      "uk-UA": "Чудово. Кріплення налаштовано. Вам також потрібен відповідний шолом до нього?",
+      "uz-UZ": "Juda yaxshi. Mahkamlagich sozlab bo'lindi. Bunga qo'shib mos shlem ham kerakmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Helm",
+        "translation": {
+          "ru-RU": "шлем",
+          "en-US": "helmet",
+          "ar-SA": "الخوذة",
+          "es-ES": "casco",
+          "fr-FR": "casque",
+          "hi-IN": "हेलमेट",
+          "pl-PL": "kask",
+          "ro-RO": "cască",
+          "tr-TR": "kask",
+          "uk-UA": "шолом",
+          "uz-UZ": "shlem"
+        }
+      },
+      {
+        "german": "der Schnee",
+        "translation": {
+          "ru-RU": "снег",
+          "en-US": "snow",
+          "ar-SA": "الثلج",
+          "es-ES": "nieve",
+          "fr-FR": "neige",
+          "hi-IN": "बर्फ",
+          "pl-PL": "śnieg",
+          "ro-RO": "zăpadă",
+          "tr-TR": "kar",
+          "uk-UA": "сніг",
+          "uz-UZ": "qor"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, unbedingt. Auf der Piste fahre ich immer mit Helm.",
+        "translation": {
+          "ru-RU": "Да, обязательно. На трассе я всегда катаюсь в шлеме.",
+          "en-US": "Yes, absolutely. I always ski with a helmet on the slopes.",
+          "ar-SA": "نعم، بالتأكيد. أنا أتزلج دائماً بخوذة على المنحدر.",
+          "es-ES": "Sí, sin duda. En la pista siempre esquío con casco.",
+          "fr-FR": "Oui, absolument. Sur la piste, je skie toujours avec un casque.",
+          "hi-IN": "हाँ, बिल्कुल। मैं हमेशा ढलान पर हेलमेट के साथ स्की करता हूँ।",
+          "pl-PL": "Tak, koniecznie. Na stoku zawsze jeżdżę w kasku.",
+          "ro-RO": "Da, neapărat. Pe pârtie schiez mereu cu cască.",
+          "tr-TR": "Evet, kesinlikle. Pistte her zaman kaskla kayarım.",
+          "uk-UA": "Так, обов'язково. На трасі я завжди катаюся в шоломі.",
+          "uz-UZ": "Ha, albatta. Men trassada doim shlem bilan uchaman."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Ja, bitte. Sicherheit im Schnee ist mir sehr wichtig.",
+        "translation": {
+          "ru-RU": "Да, пожалуйста. Безопасность на снегу для меня очень важна.",
+          "en-US": "Yes, please. Safety in the snow is very important to me.",
+          "ar-SA": "نعم من فضلك. السلامة في الثلج مهمة جداً بالنسبة لي.",
+          "es-ES": "Sí, por favor. La seguridad en la nieve es muy importante para mí.",
+          "fr-FR": "Oui, s'il vous plaît. La sécurité dans la neige est très importante pour moi.",
+          "hi-IN": "हाँ, कृपया। बर्फ में सुरक्षा मेरे लिए बहुत महत्वपूर्ण है।",
+          "pl-PL": "Tak, proszę. Bezpieczeństwo na śniegu jest dla mnie bardzo ważne.",
+          "ro-RO": "Da, vă rog. Siguranța în zăpadă este foarte importantă pentru mine.",
+          "tr-TR": "Evet, lütfen. Karda güvenlik benim için çok önemli.",
+          "uk-UA": "Так, будь ласка. Безпека на снігу для мене дуже важлива.",
+          "uz-UZ": "Ha, iltimos. Qorda xavfsizlik men uchun juda muhim."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Sehr vernünftig! Das Set inklusive Helm kostet für heute genau 38 Euro.",
+    "botTranslation": {
+      "ru-RU": "Очень разумно! Комплект вместе со шлемом стоит на сегодня ровно 38 евро.",
+      "en-US": "Very sensible! The set including the helmet costs exactly 38 euros for today.",
+      "ar-SA": "عقلاني جداً! المجموعة التي تتضمن الخوذة تكلف 38 يورو بالضبط لهذا اليوم.",
+      "es-ES": "¡Muy sensato! El conjunto con casco incluido cuesta exactamente 38 euros por hoy.",
+      "fr-FR": "Très raisonnable ! L'ensemble avec le casque coûte aujourd'hui exactement 38 euros.",
+      "hi-IN": "बहुत समझदारी! हेलमेट सहित सेट की आज के लिए कीमत ठीक 38 यूरो है।",
+      "pl-PL": "Bardzo rozsądnie! Zestaw wraz z kaskiem kosztuje na dzisiaj dokładnie 38 euro.",
+      "ro-RO": "Foarte rezonabil! Setul care include casca costă exact 38 de euro pentru astăzi.",
+      "tr-TR": "Çok mantıklı! Kask dahil set bugün için tam olarak 38 Euro tutuyor.",
+      "uk-UA": "Дуже розумно! Комплект разом із шоломом коштує на сьогодні рівно 38 євро.",
+      "uz-UZ": "Juda oqilona! Shlem bilan birga to'plam bugun uchun roppa-rosa 38 yevro turadi."
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Das ist ein fairer Preis. Ich bezahle direkt mit Karte.",
+        "translation": {
+          "ru-RU": "Это справедливая цена. Я плачу сразу картой.",
+          "en-US": "That is a fair price. I'll pay straight away by card.",
+          "ar-SA": "هذا سعر عادل. سأدفع مباشرة بالبطاقة.",
+          "es-ES": "Es un precio justo. Pago directamente con tarjeta.",
+          "fr-FR": "C'est un prix juste. Je paie directement par carte.",
+          "hi-IN": "यह एक उचित मूल्य है। मैं सीधे कार्ड से भुगतान करूँगा।",
+          "pl-PL": "To uczciwa cena. Zapłacę od razu kartą.",
+          "ro-RO": "Este un preț corect. Plătesc direct cu cardul.",
+          "tr-TR": "Bu adil bir fiyat. Doğrudan kartla ödüyorum.",
+          "uk-UA": "Це справедлива ціна. Я плачу відразу карткою.",
+          "uz-UZ": "Bu adolatli narx. Men darhol karta orqali to'layman."
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Alles klar, ich bezahle die 38 Euro gerne in bar.",
+        "translation": {
+          "ru-RU": "Хорошо, я с удовольствием заплачу 38 евро наличными.",
+          "en-US": "All right, I'll gladly pay the 38 euros in cash.",
+          "ar-SA": "حسناً، سأدفع الـ 38 يورو نقداً بكل سرور.",
+          "es-ES": "De acuerdo, pagaré con gusto los 38 euros en efectivo.",
+          "fr-FR": "D'accord, je paie volontiers les 38 euros en espèces.",
+          "hi-IN": "ठीक है, मैं खुशी-खुशी 38 यूरो नकद में दूंगा।",
+          "pl-PL": "W porządku, chętnie zapłacę te 38 euro gotówką.",
+          "ro-RO": "Am înțeles, plătesc cu plăcere cei 38 de euro cash.",
+          "tr-TR": "Tamam, 38 Euro'yu memnuniyetle nakit ödeyeceğim.",
+          "uk-UA": "Добре, я із задоволенням заплачу 38 євро готівкою.",
+          "uz-UZ": "Tushunarli, men 38 yevroni bajonidil naqd to'layman."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Vielen Dank. Die Skistöcke stehen direkt an der Tür. Haben Sie noch eine Frage?",
+    "botTranslation": {
+      "ru-RU": "Большое спасибо. Лыжные палки стоят прямо у двери. У вас есть еще вопросы?",
+      "en-US": "Thank you very much. The ski poles are right by the door. Do you have any other questions?",
+      "ar-SA": "شكراً جزيلاً. عصي التزلج موجودة مباشرة عند الباب. هل لديك أي سؤال آخر؟",
+      "es-ES": "Muchas gracias. Los bastones de esquí están justo en la puerta. ¿Tiene alguna otra pregunta?",
+      "fr-FR": "Merci beaucoup. Les bâtons de ski se trouvent juste à côté de la porte. Avez-vous encore une question ?",
+      "hi-IN": "बहुत-बहुत धन्यवाद। स्की पोल्स ठीक दरवाज़े के पास हैं। क्या आपका कोई और प्रश्न है?",
+      "pl-PL": "Bardzo dziękuję. Kijki narciarskie stoją tuż przy drzwiach. Czy ma Pan/Pani jeszcze jakieś pytanie?",
+      "ro-RO": "Vă mulțumesc mult. Bețele de schi sunt chiar la ușă. Mai aveți vreo întrebare?",
+      "tr-TR": "Çok teşekkürler. Kayak batonları hemen kapının yanında duruyor. Başka bir sorunuz var mı?",
+      "uk-UA": "Велике спасибі. Лижні палиці стоять прямо біля дверей. У вас є ще питання?",
+      "uz-UZ": "Katta rahmat. Chang'i tayoqlari to'g'ri eshik oldida turibdi. Yana savolingiz bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Skistöcke",
+        "translation": {
+          "ru-RU": "лыжные палки",
+          "en-US": "ski poles",
+          "ar-SA": "عصي التزلج",
+          "es-ES": "bastones de esquí",
+          "fr-FR": "bâtons de ski",
+          "hi-IN": "स्की पोल्स / डंडे",
+          "pl-PL": "kijki narciarskie",
+          "ro-RO": "bețe de schi",
+          "tr-TR": "kayak batonları",
+          "uk-UA": "лижні палиці",
+          "uz-UZ": "chang'i tayoqlari"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, alles bestens. Vielen Dank für die tolle Hilfe!",
+        "translation": {
+          "ru-RU": "Нет, всё отлично. Большое спасибо за прекрасную помощь!",
+          "en-US": "No, everything is fine. Thank you very much for the great help!",
+          "ar-SA": "لا، كل شيء على ما يرام. شكراً جزيلاً على المساعدة الرائعة!",
+          "es-ES": "No, todo está perfecto. ¡Muchas gracias por la gran ayuda!",
+          "fr-FR": "Non, tout est parfait. Merci beaucoup pour l'excellente aide !",
+          "hi-IN": "नहीं, सब कुछ ठीक है। बेहतरीन मदद के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Nie, wszystko w porządku. Bardzo dziękuję za wspaniałą pomoc!",
+          "ro-RO": "Nu, totul este în regulă. Vă mulțumesc mult pentru ajutorul grozav!",
+          "tr-TR": "Hayır, her şey yolunda. Harika yardımınız için çok teşekkürler!",
+          "uk-UA": "Ні, все чудово. Велике спасибі за чудову допомогу!",
+          "uz-UZ": "Yo'q, hammasi joyida. Zo'r yordam uchun katta rahmat!"
+        },
+        "nextStep": null
+      },
+      {
+        "text": "Nein, ich bin bereit. Danke und einen schönen Tag!",
+        "translation": {
+          "ru-RU": "Нет, я готов. Спасибо и хорошего дня!",
+          "en-US": "No, I am ready. Thanks and have a nice day!",
+          "ar-SA": "لا، أنا مستعد. شكراً وطاب يومك!",
+          "es-ES": "No, estoy listo. ¡Gracias y que tenga un buen día!",
+          "fr-FR": "Non, je suis prêt. Merci et bonne journée !",
+          "hi-IN": "नहीं, मैं तैयार हूँ। धन्यवाद और आपका दिन शुभ हो!",
+          "pl-PL": "Nie, jestem gotowy. Dziękuję i miłego dnia!",
+          "ro-RO": "Nu, sunt gata. Mulțumesc și o zi frumoasă!",
+          "tr-TR": "Hayır, hazırım. Teşekkürler, iyi günler!",
+          "uk-UA": "Ні, я готовий. Дякую і гарного дня!",
+          "uz-UZ": "Yo'q, men tayyorman. Rahmat, kuningiz xayrli o'tsin!"
+        },
+        "nextStep": null
+      }
+    ],
+    "defaultNext": null
+  }
+}

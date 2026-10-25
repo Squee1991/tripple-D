@@ -1,0 +1,549 @@
+{
+  "start": {
+    "botText": "Hallo! Bist du neu hier beim Fußballtraining?",
+    "botTranslation": {
+      "ru-RU": "Привет! Ты новенький здесь на футбольной тренировке?",
+      "en-US": "Hello! Are you new here at football training?",
+      "ar-SA": "مرحباً! هل أنت جديد هنا في تدريب كرة القدم؟",
+      "es-ES": "¡Hola! ¿Eres nuevo aquí en el entrenamiento de fútbol?",
+      "fr-FR": "Salut ! Tu es nouveau ici à l'entraînement de football ?",
+      "hi-IN": "नमस्ते! क्या तुम यहाँ फुटबॉल ट्रेनिंग में नए हो?",
+      "pl-PL": "Cześć! Jesteś tu nowy na treningu piłki nożnej?",
+      "ro-RO": "Salut! Ești nou aici la antrenamentul de fotbal?",
+      "tr-TR": "Merhaba! Futbol antrenmanında yeni misin?",
+      "uk-UA": "Привіт! Ти новенький тут на футбольному тренуванні?",
+      "uz-UZ": "Salom! Futbol mashg'ulotida yangimisiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Fußball",
+        "translation": {
+          "ru-RU": "футбол",
+          "en-US": "football / soccer",
+          "ar-SA": "كرة القدم",
+          "es-ES": "fútbol",
+          "fr-FR": "football",
+          "hi-IN": "फुटबॉल",
+          "pl-PL": "piłka nożna",
+          "ro-RO": "fotbal",
+          "tr-TR": "futbol",
+          "uk-UA": "футбол",
+          "uz-UZ": "futbol"
+        }
+      },
+      {
+        "german": "das Training",
+        "translation": {
+          "ru-RU": "тренировка",
+          "en-US": "training",
+          "ar-SA": "التدريب",
+          "es-ES": "entrenamiento",
+          "fr-FR": "entraînement",
+          "hi-IN": "प्रशिक्षण / ट्रेनिंग",
+          "pl-PL": "trening",
+          "ro-RO": "antrenament",
+          "tr-TR": "antrenman",
+          "uk-UA": "тренування",
+          "uz-UZ": "mashg'ulot"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hallo! Ja, das ist mein erstes Mal hier im Team.",
+        "translation": {
+          "ru-RU": "Привет! Да, это мой первый раз здесь в команде.",
+          "en-US": "Hello! Yes, this is my first time here in the team.",
+          "ar-SA": "مرحباً! نعم، هذه هي المرة الأولى لي هنا في الفريق.",
+          "es-ES": "¡Hola! Sí, es mi primera vez aquí en el equipo.",
+          "fr-FR": "Salut ! Oui, c'est ma première fois ici dans l'équipe.",
+          "hi-IN": "नमस्ते! हाँ, टीम में यहाँ यह मेरी पहली बार है।",
+          "pl-PL": "Cześć! Tak, to mój pierwszy raz tutaj w drużynie.",
+          "ro-RO": "Salut! Da, este prima mea dată aici în echipă.",
+          "tr-TR": "Merhaba! Evet, burada takımdaki ilk seferim.",
+          "uk-UA": "Привіт! Так, це мій перший раз тут у команді.",
+          "uz-UZ": "Salom! Ha, bu yerda jamoada mening birinchi marta bo'lishim."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Guten Tag! Ich möchte gerne bei euch mitspielen.",
+        "translation": {
+          "ru-RU": "Добрый день! Я бы хотел играть с вами.",
+          "en-US": "Good day! I would like to play with you.",
+          "ar-SA": "طاب يومك! أود أن ألعب معكم.",
+          "es-ES": "¡Buen día! Me gustaría jugar con vosotros.",
+          "fr-FR": "Bonjour ! J'aimerais bien jouer avec vous.",
+          "hi-IN": "शुभ दिन! मैं आपके साथ खेलना चाहूँगा।",
+          "pl-PL": "Dzień dobry! Chciałbym z wami zagrać.",
+          "ro-RO": "Bună ziua! Aș dori să joc cu voi.",
+          "tr-TR": "İyi günler! Sizinle oynamak istiyorum.",
+          "uk-UA": "Добрий день! Я б хотів грати з вами.",
+          "uz-UZ": "Xayrli kun! Men sizlar bilan o'ynashni xohlardim."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Herzlich willkommen! Wir suchen immer neue Spieler. Auf welcher Position spielst du am liebsten?",
+    "botTranslation": {
+      "ru-RU": "Добро пожаловать! Мы всегда ищем новых игроков. На какой позиции ты любишь играть больше всего?",
+      "en-US": "Welcome! We are always looking for new players. What position do you like to play the most?",
+      "ar-SA": "أهلاً بك! نحن نبحث دائماً عن لاعبين جدد. في أي مركز تفضل اللعب؟",
+      "es-ES": "¡Bienvenido! Siempre buscamos jugadores nuevos. ¿En qué posición te gusta más jugar?",
+      "fr-FR": "Bienvenue ! Nous cherchons toujours de nouveaux joueurs. À quel poste préfères-tu jouer ?",
+      "hi-IN": "स्वागत है! हम हमेशा नए खिलाड़ियों की तलाश में रहते हैं। आपको किस पोजीशन पर खेलना सबसे ज्यादा पसंद है?",
+      "pl-PL": "Witamy! Zawsze szukamy nowych graczy. Na jakiej pozycji grasz najchętniej?",
+      "ro-RO": "Bine ai venit! Căutăm mereu jucători noi. Pe ce post îți place cel mai mult să joci?",
+      "tr-TR": "Hoş geldin! Her zaman yeni oyuncular arıyoruz. En çok hangi pozisyonda oynamayı seviyorsun?",
+      "uk-UA": "Ласкаво просимо! Ми завжди шукаємо нових гравців. На якій позиції ти любиш грати найбільше?",
+      "uz-UZ": "Xush kelibsiz! Biz doim yangi o'yinchilarni qidiramiz. Qaysi pozitsiyada o'ynashni ko'proq yoqtirasiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Mannschaft",
+        "translation": {
+          "ru-RU": "команда",
+          "en-US": "team",
+          "ar-SA": "الفريق",
+          "es-ES": "equipo",
+          "fr-FR": "équipe",
+          "hi-IN": "टीम",
+          "pl-PL": "drużyna",
+          "ro-RO": "echipă",
+          "tr-TR": "takım",
+          "uk-UA": "команда",
+          "uz-UZ": "jamoa"
+        }
+      },
+      {
+        "german": "die Position",
+        "translation": {
+          "ru-RU": "позиция",
+          "en-US": "position",
+          "ar-SA": "المركز / الموقع",
+          "es-ES": "posición",
+          "fr-FR": "poste / position",
+          "hi-IN": "पोजीशन / स्थान",
+          "pl-PL": "pozycja",
+          "ro-RO": "poziție / post",
+          "tr-TR": "pozisyon",
+          "uk-UA": "позиція",
+          "uz-UZ": "pozitsiya"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich spiele am liebsten im Sturm und schieße gerne Tore.",
+        "translation": {
+          "ru-RU": "Я больше всего люблю играть в нападении и люблю забивать голы.",
+          "en-US": "I prefer playing as a forward and I like scoring goals.",
+          "ar-SA": "أفضل اللعب في الهجوم وأحب تسجيل الأهداف.",
+          "es-ES": "Prefiero jugar en la delantera y me gusta marcar goles.",
+          "fr-FR": "Je préfère jouer en attaque et j'aime marquer des buts.",
+          "hi-IN": "मुझे फॉरवर्ड के रूप में खेलना पसंद है और मुझे गोल करना अच्छा लगता है।",
+          "pl-PL": "Najbardziej lubię grać w ataku i chętnie strzelam gole.",
+          "ro-RO": "Cel mai mult îmi place să joc în atac și îmi place să marchez goluri.",
+          "tr-TR": "En çok forvette oynamayı seviyorum ve gol atmaktan hoşlanırım.",
+          "uk-UA": "Я найбільше люблю грати в нападі і люблю забивати голи.",
+          "uz-UZ": "Men ko'proq hujumda o'ynashni va gol urishni yaxshi ko'raman."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Ich stehe lieber in der Abwehr und helfe dem Torwart.",
+        "translation": {
+          "ru-RU": "Я предпочитаю стоять в защите и помогать вратарю.",
+          "en-US": "I prefer being in defense and helping the goalkeeper.",
+          "ar-SA": "أفضل الوقوف في الدفاع ومساعدة حارس المرمى.",
+          "es-ES": "Prefiero estar en la defensa y ayudar al portero.",
+          "fr-FR": "Je préfère rester en défense et aider le gardien de but.",
+          "hi-IN": "मैं रक्षा में रहना और गोलकीपर की मदद करना पसंद करता हूँ।",
+          "pl-PL": "Wolę stać w obronie i pomagać bramkarzowi.",
+          "ro-RO": "Prefer să stau în apărare și să ajut portarul.",
+          "tr-TR": "Defansta durmayı ve kaleciye yardım etmeyi tercih ederim.",
+          "uk-UA": "Я віддаю перевагу стояти в захисті і допомагати воротарю.",
+          "uz-UZ": "Men ko'proq himoyada turishni va darvozabonga yordam berishni afzal ko'raman."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Perfekt, das passt sehr gut in unsere Mannschaft. Hast du deine Fußballschuhe dabei?",
+    "botTranslation": {
+      "ru-RU": "Идеально, это очень хорошо подходит нашей команде. У тебя с собой футбольные бутсы?",
+      "en-US": "Perfect, that fits very well into our team. Do you have your football boots with you?",
+      "ar-SA": "ممتاز، هذا يناسب فريقنا بشكل جيد جداً. هل أحضرت حذاء كرة القدم الخاص بك؟",
+      "es-ES": "Perfecto, eso encaja muy bien en nuestro equipo. ¿Tienes contigo tus botas de fútbol?",
+      "fr-FR": "Parfait, ça correspond très bien à notre équipe. As-tu tes chaussures de football avec toi ?",
+      "hi-IN": "बढ़िया, यह हमारी टीम में बहुत अच्छी तरह फिट बैठता है। क्या तुम्हारे पास अपने फुटबॉल के जूते हैं?",
+      "pl-PL": "Idealnie, to bardzo dobrze pasuje do naszej drużyny. Masz ze sobą buty piłkarskie?",
+      "ro-RO": "Perfect, asta se potrivește foarte bine în echipa noastră. Ai ghetele de fotbal la tine?",
+      "tr-TR": "Mükemmel, bu takımımıza çok iyi uyuyor. Futbol ayakkabıların yanında mı?",
+      "uk-UA": "Ідеально, це дуже добре підходить нашій команді. У тебе з собою футбольні бутси?",
+      "uz-UZ": "Ajoyib, bu bizning jamoamizga juda mos keladi. Futbol butsalarini olib keldingizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Tor",
+        "translation": {
+          "ru-RU": "гол / ворота",
+          "en-US": "goal",
+          "ar-SA": "الهدف / المرمى",
+          "es-ES": "gol / portería",
+          "fr-FR": "but",
+          "hi-IN": "गोल",
+          "pl-PL": "bramka / gol",
+          "ro-RO": "gol / poartă",
+          "tr-TR": "gol / kale",
+          "uk-UA": "гол / ворота",
+          "uz-UZ": "gol / darvoza"
+        }
+      },
+      {
+        "german": "der Torwart",
+        "translation": {
+          "ru-RU": "вратарь",
+          "en-US": "goalkeeper",
+          "ar-SA": "حارس المرمى",
+          "es-ES": "portero",
+          "fr-FR": "gardien de but",
+          "hi-IN": "गोलकीपर",
+          "pl-PL": "bramkarz",
+          "ro-RO": "portar",
+          "tr-TR": "kaleci",
+          "uk-UA": "воротар",
+          "uz-UZ": "darvozabon"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, meine Schuhe und Schienbeinschoner sind in der Tasche.",
+        "translation": {
+          "ru-RU": "Да, мои бутсы и щитки находятся в сумке.",
+          "en-US": "Yes, my boots and shin guards are in the bag.",
+          "ar-SA": "نعم، حذائي وواقيات القصبة في الحقيبة.",
+          "es-ES": "Sí, mis botas y espinilleras están en la bolsa.",
+          "fr-FR": "Oui, mes chaussures et protège-tibias sont dans le sac.",
+          "hi-IN": "हाँ, मेरे जूते और शिन गार्ड बैग में हैं।",
+          "pl-PL": "Tak, moje buty i ochraniacze na golenie są w torbie.",
+          "ro-RO": "Da, ghetele și apărătorile sunt în geantă.",
+          "tr-TR": "Evet, ayakkabılarım ve tekmeliklerim çantamda.",
+          "uk-UA": "Так, мої бутси та щитки знаходяться в сумці.",
+          "uz-UZ": "Ha, butsalarim va boldir himoyalagichlarim sumkamda."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Ja, alles ist bereit. Ich habe auch ein Handtuch dabei.",
+        "translation": {
+          "ru-RU": "Да, всё готово. У меня также с собой полотенце.",
+          "en-US": "Yes, everything is ready. I also have a towel with me.",
+          "ar-SA": "نعم، كل شيء جاهز. لدي منشفة أيضاً.",
+          "es-ES": "Sí, todo está listo. También tengo una toalla.",
+          "fr-FR": "Oui, tout est prêt. J'ai aussi une serviette avec moi.",
+          "hi-IN": "हाँ, सब कुछ तैयार है। मेरे पास एक तौलिया भी है।",
+          "pl-PL": "Tak, wszystko jest gotowe. Mam ze sobą również ręcznik.",
+          "ro-RO": "Da, totul este pregătit. Am și un prosop la mine.",
+          "tr-TR": "Evet, her şey hazır. Yanımda bir havlu da var.",
+          "uk-UA": "Так, все готово. У мене також із собою рушник.",
+          "uz-UZ": "Ha, hamma narsa tayyor. Yonimda sochiq ham bor."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Super. Dann ziehen wir uns jetzt in der Umkleide an und treffen uns gleich auf dem Platz.",
+    "botTranslation": {
+      "ru-RU": "Супер. Тогда сейчас переодеваемся в раздевалке и встречаемся на поле.",
+      "en-US": "Super. Then let's get dressed in the locker room now and meet on the pitch in a moment.",
+      "ar-SA": "رائع. لنبدل ملابسنا الآن في غرفة تغيير الملابس ونلتقي قريباً في الملعب.",
+      "es-ES": "Súper. Entonces nos cambiamos ahora en el vestuario y nos vemos enseguida en el campo.",
+      "fr-FR": "Super. Alors on se change maintenant dans les vestiaires et on se retrouve tout de suite sur le terrain.",
+      "hi-IN": "बढ़िया। तो चलिए अब चेंजिंग रूम में कपड़े पहनते हैं और मैदान पर मिलते हैं।",
+      "pl-PL": "Super. To przebieramy się teraz w szatni i spotykamy się zaraz na boisku.",
+      "ro-RO": "Super. Atunci ne schimbăm acum în vestiar și ne întâlnim imediat pe teren.",
+      "tr-TR": "Süper. O halde şimdi soyunma odasında giyiniyoruz ve hemen sahada buluşuyoruz.",
+      "uk-UA": "Супер. Тоді зараз переодягаємося в роздягальні і зустрічаємося на полі.",
+      "uz-UZ": "Ajoyib. Unda hozir kiyinish xonasida kiyimlarimizni almashtiramiz va maydonda ko'rishamiz."
+    },
+    "vocabulary": [
+      {
+        "german": "die Schienbeinschoner",
+        "translation": {
+          "ru-RU": "щитки (на голени)",
+          "en-US": "shin guards",
+          "ar-SA": "واقيات القصبة / الكسارات",
+          "es-ES": "espinilleras",
+          "fr-FR": "protège-tibias",
+          "hi-IN": "शिन गार्ड",
+          "pl-PL": "ochraniacze na golenie",
+          "ro-RO": "apărători de tibie",
+          "tr-TR": "tekmelik",
+          "uk-UA": "щитки (на гомілки)",
+          "uz-UZ": "boldir himoyalagichlar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar. Auf welchem Platz spielen wir heute?",
+        "translation": {
+          "ru-RU": "Понял. На каком поле мы сегодня играем?",
+          "en-US": "All right. Which pitch are we playing on today?",
+          "ar-SA": "حسناً. في أي ملعب سنلعب اليوم؟",
+          "es-ES": "Entendido. ¿En qué campo jugamos hoy?",
+          "fr-FR": "D'accord. Sur quel terrain jouons-nous aujourd'hui ?",
+          "hi-IN": "समझ गया। आज हम किस मैदान पर खेल रहे हैं?",
+          "pl-PL": "Jasne. Na którym boisku dzisiaj gramy?",
+          "ro-RO": "Am înțeles. Pe ce teren jucăm astăzi?",
+          "tr-TR": "Anlaşıldı. Bugün hangi sahada oynuyoruz?",
+          "uk-UA": "Зрозумів. На якому полі ми сьогодні граємо?",
+          "uz-UZ": "Tushunarli. Bugun qaysi maydonda o'ynaymiz?"
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Sag mal, spielen wir heute in gelben oder in roten Trikots?",
+        "translation": {
+          "ru-RU": "Скажи, мы сегодня играем в желтой или красной форме (футболках)?",
+          "en-US": "Tell me, are we playing in yellow or red jerseys today?",
+          "ar-SA": "قل لي، هل سنلعب اليوم بقمصان صفراء أم حمراء؟",
+          "es-ES": "Dime, ¿jugamos hoy con camisetas amarillas o rojas?",
+          "fr-FR": "Dis-moi, jouons-nous en maillot jaune ou rouge aujourd'hui ?",
+          "hi-IN": "बताओ, क्या आज हम पीली या लाल जर्सी में खेल रहे हैं?",
+          "pl-PL": "Powiedz mi, czy dzisiaj gramy w żółtych, czy w czerwonych koszulkach?",
+          "ro-RO": "Spune-mi, jucăm astăzi în tricouri galbene sau roșii?",
+          "tr-TR": "Söylesene, bugün sarı mı yoksa kırmızı formalarla mı oynuyoruz?",
+          "uk-UA": "Скажи, ми сьогодні граємо в жовтій чи червоній формі (футболках)?",
+          "uz-UZ": "Ayt-chi, bugun sariq yoki qizil formalarda o'ynaymizmi?"
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Wir trainieren auf dem Rasenplatz hinten und spielen heute in den normalen roten Trikots.",
+    "botTranslation": {
+      "ru-RU": "Мы тренируемся на травяном поле сзади и играем сегодня в обычных красных футболках.",
+      "en-US": "We are training on the grass pitch at the back and playing in the normal red jerseys today.",
+      "ar-SA": "سنتدرب على الملعب العشبي في الخلف وسنلعب اليوم بالقمصان الحمراء العادية.",
+      "es-ES": "Entrenamos en el campo de césped de atrás y hoy jugamos con las camisetas rojas normales.",
+      "fr-FR": "Nous nous entraînons sur le terrain en herbe derrière et nous jouons aujourd'hui dans les maillots rouges normaux.",
+      "hi-IN": "हम पीछे घास के मैदान पर ट्रेनिंग करेंगे और आज सामान्य लाल जर्सी में खेलेंगे।",
+      "pl-PL": "Trenujemy na trawiastym boisku z tyłu i dzisiaj gramy w normalnych czerwonych koszulkach.",
+      "ro-RO": "Ne antrenăm pe terenul de iarbă din spate și jucăm astăzi în tricourile roșii normale.",
+      "tr-TR": "Arkadaki çim sahada antrenman yapıyoruz ve bugün normal kırmızı formalarla oynuyoruz.",
+      "uk-UA": "Ми тренуємося на трав'яному полі ззаду і граємо сьогодні у звичайних червоних футболках.",
+      "uz-UZ": "Orqadagi maysazor maydonda shug'ullanamiz va bugun odatiy qizil formalarda o'ynaymiz."
+    },
+    "vocabulary": [
+      {
+        "german": "der Rasenplatz",
+        "translation": {
+          "ru-RU": "травяное поле",
+          "en-US": "grass pitch",
+          "ar-SA": "الملعب العشبي",
+          "es-ES": "campo de césped",
+          "fr-FR": "terrain en herbe",
+          "hi-IN": "घास का मैदान",
+          "pl-PL": "boisko trawiaste",
+          "ro-RO": "teren de iarbă",
+          "tr-TR": "çim saha",
+          "uk-UA": "трав'яне поле",
+          "uz-UZ": "maysazor maydon"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das klingt super. Ich freue mich schon auf das Spiel.",
+        "translation": {
+          "ru-RU": "Звучит супер. Я уже с нетерпением жду игру.",
+          "en-US": "That sounds great. I am really looking forward to the game.",
+          "ar-SA": "هذا يبدو رائعاً. أنا أتطلع إلى المباراة بالفعل.",
+          "es-ES": "Suena súper. Ya tengo ganas de que empiece el partido.",
+          "fr-FR": "Ça a l'air super. J'ai hâte de commencer le match.",
+          "hi-IN": "यह बहुत अच्छा लग रहा है। मैं खेल का बेसब्री से इंतजार कर रहा हूँ।",
+          "pl-PL": "To brzmi super. Już się cieszę na ten mecz.",
+          "ro-RO": "Sună super. Abia aștept jocul.",
+          "tr-TR": "Kulağa süper geliyor. Maçı dört gözle bekliyorum.",
+          "uk-UA": "Звучить супер. Я вже з нетерпінням чекаю на гру.",
+          "uz-UZ": "Ajoyib. Men o'yinni sabrsizlik bilan kutyapman."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Toll, ich liebe es, den Ball am Fuß zu haben.",
+        "translation": {
+          "ru-RU": "Здорово, я люблю, когда мяч в ногах.",
+          "en-US": "Great, I love having the ball at my feet.",
+          "ar-SA": "رائع، أنا أحب أن تكون الكرة بين قدمي.",
+          "es-ES": "Genial, me encanta tener el balón en los pies.",
+          "fr-FR": "Génial, j'adore avoir le ballon au pied.",
+          "hi-IN": "बढ़िया, मुझे गेंद को अपने पैरों में रखना बहुत पसंद है।",
+          "pl-PL": "Wspaniale, uwielbiam mieć piłkę przy nodze.",
+          "ro-RO": "Grozav, ador să am mingea la picior.",
+          "tr-TR": "Harika, topun ayağımda olmasını seviyorum.",
+          "uk-UA": "Чудово, я люблю, коли м'яч у ногах.",
+          "uz-UZ": "Zo'r, to'pning oyog'imda bo'lishini yaxshi ko'raman."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Dann los geht es! Hol dir bitte noch einen Ball aus dem Materialraum.",
+    "botTranslation": {
+      "ru-RU": "Тогда поехали! Возьми, пожалуйста, еще мяч из инвентарной.",
+      "en-US": "Then let's go! Please go get a ball from the equipment room.",
+      "ar-SA": "هيا بنا إذن! أرجو أن تحضر كرة من غرفة المعدات.",
+      "es-ES": "¡Entonces vamos! Por favor, coge un balón del cuarto de material.",
+      "fr-FR": "Alors c'est parti ! Va chercher un ballon dans le local à matériel, s'il te plaît.",
+      "hi-IN": "तो चलिए चलते हैं! कृपया उपकरण कक्ष से एक गेंद ले आएं।",
+      "pl-PL": "To zaczynamy! Weź proszę jeszcze piłkę ze sprzętowni.",
+      "ro-RO": "Atunci să-i dăm drumul! Te rog, ia o minge din camera cu materiale.",
+      "tr-TR": "O halde başlayalım! Lütfen malzeme odasından bir top al.",
+      "uk-UA": "Тоді поїхали! Візьми, будь ласка, ще м'яч з інвентарної.",
+      "uz-UZ": "Unda boshladik! Iltimos, jihozlar xonasidan bitta to'p olib keling."
+    },
+    "vocabulary": [
+      {
+        "german": "der Ball",
+        "translation": {
+          "ru-RU": "мяч",
+          "en-US": "ball",
+          "ar-SA": "الكرة",
+          "es-ES": "balón / pelota",
+          "fr-FR": "ballon",
+          "hi-IN": "गेंद / बॉल",
+          "pl-PL": "piłka",
+          "ro-RO": "minge",
+          "tr-TR": "top",
+          "uk-UA": "м'яч",
+          "uz-UZ": "to'p"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Welchen Ball soll ich nehmen? Den weißen oder den gelben?",
+        "translation": {
+          "ru-RU": "Какой мяч мне взять? Белый или желтый?",
+          "en-US": "Which ball should I take? The white one or the yellow one?",
+          "ar-SA": "أي كرة يجب أن آخذ؟ البيضاء أم الصفراء؟",
+          "es-ES": "¿Qué balón debo coger? ¿El blanco o el amarillo?",
+          "fr-FR": "Quel ballon dois-je prendre ? Le blanc ou le jaune ?",
+          "hi-IN": "मुझे कौन सी गेंद लेनी चाहिए? सफेद वाली या पीली वाली?",
+          "pl-PL": "Którą piłkę mam wziąć? Białą czy żółtą?",
+          "ro-RO": "Ce minge ar trebui să iau? Pe cea albă sau pe cea galbenă?",
+          "tr-TR": "Hangi topu almalıyım? Beyaz olanı mı sarı olanı mı?",
+          "uk-UA": "Який м'яч мені взяти? Білий чи жовтий?",
+          "uz-UZ": "Qaysi to'pni olay? Oqini yoki sariqini?"
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Kein Problem, ich hole sofort einen Ball für die Übung.",
+        "translation": {
+          "ru-RU": "Без проблем, я сейчас же принесу мяч для упражнения.",
+          "en-US": "No problem, I will fetch a ball for the drill immediately.",
+          "ar-SA": "لا مشكلة، سأحضر كرة على الفور من أجل التمرين.",
+          "es-ES": "Ningún problema, voy a buscar un balón para el ejercicio ahora mismo.",
+          "fr-FR": "Pas de problème, je vais chercher un ballon pour l'exercice tout de suite.",
+          "hi-IN": "कोई बात नहीं, मैं अभ्यास के लिए तुरंत एक गेंद लाता हूँ।",
+          "pl-PL": "Nie ma problemu, zaraz przyniosę piłkę do ćwiczeń.",
+          "ro-RO": "Nicio problemă, aduc imediat o minge pentru exercițiu.",
+          "tr-TR": "Sorun değil, antrenman için hemen bir top getiriyorum.",
+          "uk-UA": "Без проблем, я зараз же принесу м'яч для вправи.",
+          "uz-UZ": "Muammo yo'q, men mashq uchun darhol bitta to'p olib kelaman."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Nimm einfach den runden, der dort drüben liegt. Bist du bereit?",
+    "botTranslation": {
+      "ru-RU": "Возьми просто круглый, который лежит вон там. Ты готов?",
+      "en-US": "Just take the round one lying over there. Are you ready?",
+      "ar-SA": "خذ الكرة الدائرية الموجودة هناك ببساطة. هل أنت مستعد؟",
+      "es-ES": "Toma simplemente el redondo que está por ahí. ¿Estás listo?",
+      "fr-FR": "Prends simplement le rond qui est là-bas. Es-tu prêt ?",
+      "hi-IN": "बस वह गोल वाला ले लो जो वहाँ पड़ा है। क्या तुम तैयार हो?",
+      "pl-PL": "Po prostu weź ten okrągły, który tam leży. Jesteś gotowy?",
+      "ro-RO": "Ia-l pur și simplu pe cel rotund care e acolo. Ești gata?",
+      "tr-TR": "Sadece şurada duran yuvarlak olanı al. Hazır mısın?",
+      "uk-UA": "Візьми просто круглий, який лежить он там. Ти готовий?",
+      "uz-UZ": "Shunchaki anavi yerda yotgan dumaloqni ol. Tayyormisan?"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Ja, ich bin absolut bereit für das Training!",
+        "translation": {
+          "ru-RU": "Да, я абсолютно готов к тренировке!",
+          "en-US": "Yes, I am absolutely ready for the training!",
+          "ar-SA": "نعم، أنا مستعد تماماً للتدريب!",
+          "es-ES": "¡Sí, estoy absolutamente listo para el entrenamiento!",
+          "fr-FR": "Oui, je suis absolument prêt pour l'entraînement !",
+          "hi-IN": "हाँ, मैं ट्रेनिंग के लिए पूरी तरह से तैयार हूँ!",
+          "pl-PL": "Tak, jestem absolutnie gotowy na trening!",
+          "ro-RO": "Da, sunt absolut pregătit pentru antrenament!",
+          "tr-TR": "Evet, antrenman için kesinlikle hazırım!",
+          "uk-UA": "Так, я абсолютно готовий до тренування!",
+          "uz-UZ": "Ha, men mashg'ulotga to'liq tayyorman!"
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Ja, ich kann es kaum erwarten anzufangen.",
+        "translation": {
+          "ru-RU": "Да, я едва могу дождаться начала.",
+          "en-US": "Yes, I can hardly wait to start.",
+          "ar-SA": "نعم، لا أستطيع الانتظار للبدء.",
+          "es-ES": "Sí, apenas puedo esperar para empezar.",
+          "fr-FR": "Oui, j'ai hâte de commencer.",
+          "hi-IN": "हाँ, मैं शुरू करने के लिए और इंतज़ार नहीं कर सकता।",
+          "pl-PL": "Tak, nie mogę się doczekać, żeby zacząć.",
+          "ro-RO": "Da, abia aștept să începem.",
+          "tr-TR": "Evet, başlamak için sabırsızlanıyorum.",
+          "uk-UA": "Так, я ледве можу дочекатися початку.",
+          "uz-UZ": "Ha, boshlashni kuta olmayapman."
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Dann viel Erfolg und los gehts! Bitte schön!",
+    "botTranslation": {
+      "ru-RU": "Тогда удачи и поехали! Пожалуйста!",
+      "en-US": "Then good luck and let's go! Here we go!",
+      "ar-SA": "إذن حظاً موفقاً وهيا بنا! تفضل!",
+      "es-ES": "¡Entonces mucho éxito y vamos allá! ¡De nada!",
+      "fr-FR": "Alors bonne chance et c'est parti ! Je t'en prie !",
+      "hi-IN": "तो शुभकामनाएँ और चलिए शुरू करते हैं! आपका स्वागत है!",
+      "pl-PL": "W takim razie powodzenia i zaczynamy! Proszę bardzo!",
+      "ro-RO": "Atunci mult succes și să-i dăm drumul! Cu plăcere!",
+      "tr-TR": "O halde başarılar ve başlayalım! Rica ederim!",
+      "uk-UA": "Тоді удачі і поїхали! Будь ласка!",
+      "uz-UZ": "Unda omad va boshladik! Arzimaydi!"
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

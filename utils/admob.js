@@ -1,6 +1,7 @@
 import { AdMob, InterstitialAdPluginEvents, RewardAdPluginEvents } from '@capacitor-community/admob';
 import { Capacitor } from '@capacitor/core';
-import { userAuthStore } from '../store/authStore.js';
+import { App } from '@capacitor/app';
+import { userAuthStore } from '~/store/authStore.js';
 
 let isAdProcessing = false;
 let isInterstitialLoaded = false;
@@ -10,6 +11,8 @@ let lastInterstitialTime = 0;
 let initPromise = null;
 
 const AD_LIMIT_PER_DAY = 10;
+// Лимит межстраничной рекламы на одного юзера в день
+const INTERSTITIAL_LIMIT_PER_DAY = 15;
 const INTERSTITIAL_COOLDOWN = 2 * 60 * 1000;
 // Загруженная межстраничная реклама живёт ~1 час, после этого показ не оплачивается
 const INTERSTITIAL_TTL = 55 * 60 * 1000;
@@ -59,17 +62,41 @@ function recordSuccessfulView() {
 		console.warn('Ошибка записи статистики бонусов:', e);
 	}
 }
+function getInterstitialCountToday() {
+	try {
+		const stats = JSON.parse(localStorage.getItem('adInterstitialStats'));
+		return stats && stats.date === getTodayKey() ? stats.count : 0;
+	} catch (e) {
+		return 0;
+	}
+}
+
+function canShowInterstitialToday() {
+	return getInterstitialCountToday() < INTERSTITIAL_LIMIT_PER_DAY;
+}
+
+function recordInterstitialView() {
+	try {
+		const count = getInterstitialCountToday() + 1;
+		localStorage.setItem('adInterstitialStats', JSON.stringify({ date: getTodayKey(), count }));
+	} catch (e) {
+		console.warn('Ошибка записи статистики рекламы:', e);
+	}
+}
+
 function isInterstitialFresh() {
 	return isInterstitialLoaded && Date.now() - interstitialLoadedAt < INTERSTITIAL_TTL;
 }
 
 // Тихая предзагрузка рекламы в кэш (не тормозит интерфейс и прелоадер).
-// Вызывается на экране ПЕРЕД показом: в начале сессии (показ после неё)
-// или на экране выбора урока (показ перед стартом)
+// Одна реклама всегда наготове: при запуске приложения, после каждого показа
+// и на экранах уроков — если ещё не загружена
 export async function preloadInterstitial() {
 	if (!Capacitor.isNativePlatform() || isInterstitialLoading || isInterstitialFresh()) return;
 	// Премиум без рекламы — не делаем пустых запросов
 	if (!userAuthStore().hasAds) return;
+	// Дневной лимит исчерпан — загруженная реклама всё равно не покажется
+	if (!canShowInterstitialToday()) return;
 	isInterstitialLoading = true;
 	try {
 		if (initPromise) await initPromise;
@@ -92,6 +119,19 @@ export function initAdmob() {
 		}).catch((e) => {
 			console.error('Ошибка инициализации AdMob:', e);
 		});
+
+		// Первая реклама — сразу при входе, чтобы к первому показу уже была готова.
+		// Ждём профиль: до его загрузки hasAds = true и у премиума ушёл бы лишний запрос
+		initPromise
+			.then(() => userAuthStore().initAuth())
+			.then(() => preloadInterstitial());
+
+		App.addListener('resume', () => {
+			if (isInterstitialLoaded && !isInterstitialFresh()) {
+				isInterstitialLoaded = false;
+				preloadInterstitial();
+			}
+		});
 	}
 	return initPromise;
 }
@@ -101,10 +141,13 @@ export async function showInterstitial(nextStep) {
 
 	if (!authStore.hasAds || !Capacitor.isNativePlatform()) return nextStep();
 	if (Date.now() - lastInterstitialTime < INTERSTITIAL_COOLDOWN) return nextStep();
+	if (!canShowInterstitialToday()) return nextStep();
 	if (isAdProcessing) return;
 	// Реклама не успела загрузиться или устарела — пускаем юзера дальше без ожидания
+	// и сразу грузим новую к следующему показу
 	if (!isInterstitialFresh()) {
 		isInterstitialLoaded = false;
+		preloadInterstitial();
 		return nextStep();
 	}
 
@@ -119,8 +162,9 @@ export async function showInterstitial(nextStep) {
 			dismissListener?.remove();
 			failListener?.remove();
 			isAdProcessing = false;
-			// Следующую рекламу загрузит следующий экран через preloadInterstitial()
 			isInterstitialLoaded = false;
+			// Следующая реклама грузится сразу — всегда одна наготове
+			preloadInterstitial();
 			nextStep();
 		}
 	};
@@ -131,6 +175,7 @@ export async function showInterstitial(nextStep) {
 
 		await AdMob.showInterstitial();
 		lastInterstitialTime = Date.now();
+		recordInterstitialView();
 	} catch (e) {
 		goNext();
 	}

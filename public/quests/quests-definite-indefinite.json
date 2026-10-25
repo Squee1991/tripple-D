@@ -1,7 +1,7 @@
 [
   {
     "questId": "one-def",
-    "title": "definiteIndefiniteQuestOne.title",
+    "title": "Битва за окончания",
     "progress": "0/15",
     "description": "definiteIndefiniteQuestOne.description",
     "conditions": {
@@ -56,7 +56,7 @@
         "id": 5,
         "type": "reorder",
         "question": "definiteIndefiniteQuestOne.questFive",
-        "words": ["Eine", "Katze", "kleine", "Garten", "sitzt", "kleiner", "im"],
+        "words": ["Eine", "kleine", "Katze", "sitzt", "im", "Garten", "kleiner"],
         "correctOrder": ["Eine", "kleine", "Katze", "sitzt", "im", "Garten"],
         "tip": "definiteIndefiniteQuestOne.questFiveTip"
       },
@@ -64,7 +64,7 @@
         "id": 6,
         "type": "reorder",
         "question": "definiteIndefiniteQuestOne.questSix",
-        "words": ["Die", "kleine", "ist", "sehr", "Katze", "süß", "kleines"],
+        "words": ["Die", "kleine", "Katze", "ist", "sehr", "süß", "kleines"],
         "correctOrder": ["Die", "kleine", "Katze", "ist", "sehr", "süß"],
         "tip": "definiteIndefiniteQuestOne.questSixTip"
       },
@@ -1379,8 +1379,8 @@
         "id": 9,
         "type": "select",
         "question": "definiteIndefiniteQuestEleven.questNine",
-        "options": ["Ein kleines Haus стоит dort.", "Ein kleine Haus стоит dort.", "Ein kleinen Haus стоит dort."],
-        "answer": "Ein kleines Haus стоит dort.",
+        "options": ["Ein kleines Haus steht dort.", "Ein kleine Haus steht dort.", "Ein kleinen Haus steht dort."],
+        "answer": "Ein kleines Haus steht dort.",
         "tip": "definiteIndefiniteQuestEleven.questNineTip"
       },
       {
@@ -1643,7 +1643,7 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestThirteen.questTen",
-        "options": ["Das kalте Wasser ist sauber.", "Das kaltes Wasser ist sauber.", "Das kalten Wasser ist sauber."],
+        "options": ["Das kalte Wasser ist sauber.", "Das kaltes Wasser ist sauber.", "Das kalten Wasser ist sauber."],
         "answer": "Das kalte Wasser ist sauber.",
         "tip": "definiteIndefiniteQuestThirteen.questTenTip"
       },

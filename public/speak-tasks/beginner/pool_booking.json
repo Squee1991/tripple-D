@@ -1,0 +1,534 @@
+{
+  "start": {
+    "botText": "Guten Tag! Willkommen im Sportbad. Wie kann ich Ihnen helfen?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Добро пожаловать в спортивный бассейн. Чем я могу вам помочь?",
+      "en-US": "Good day! Welcome to the sports pool. How can I help you?",
+      "ar-SA": "طاب يومك! مرحباً بك في المسبح الرياضي. كيف يمكنني مساعدتك؟",
+      "es-ES": "¡Buen día! Bienvenido a la piscina deportiva. ¿En qué le puedo ayudar?",
+      "fr-FR": "Bonjour ! Bienvenue à la piscine sportive. Comment puis-je vous aider ?",
+      "hi-IN": "शुभ दिन! स्पोर्ट्स पूल में आपका स्वागत है। मैं आपकी कैसे मदद कर सकता हूँ?",
+      "pl-PL": "Dzień dobry! Witamy na basenie sportowym. W czym mogę pomóc?",
+      "ro-RO": "Bună ziua! Bine ați venit la bazinul sportiv. Cu ce vă pot ajuta?",
+      "tr-TR": "İyi günler! Spor havuzuna hoş geldiniz. Size nasıl yardımcı olabilirim?",
+      "uk-UA": "Добрий день! Ласкаво просимо до спортивного басейну. Чим я можу вам допомогти?",
+      "uz-UZ": "Xayrli kun! Sport basseyniga xush kelibsiz. Sizga qanday yordam bera olaman?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Schwimmbad",
+        "translation": {
+          "ru-RU": "бассейн",
+          "en-US": "swimming pool",
+          "ar-SA": "المسبح",
+          "es-ES": "piscina",
+          "fr-FR": "piscine",
+          "hi-IN": "तरणताल / स्विमिंग पूल",
+          "pl-PL": "basen",
+          "ro-RO": "piscină / bazin",
+          "tr-TR": "yüzme havuzu",
+          "uk-UA": "басейн",
+          "uz-UZ": "basseyn"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag! Ich möchte gerne jeden Morgen vor der Arbeit schwimmen.",
+        "translation": {
+          "ru-RU": "Добрый день! Я бы хотел плавать каждое утро перед работой.",
+          "en-US": "Good day! I would like to swim every morning before work.",
+          "ar-SA": "طاب يومك! أود السباحة كل صباح قبل العمل.",
+          "es-ES": "¡Buen día! Me gustaría nadar todas las mañanas antes del trabajo.",
+          "fr-FR": "Bonjour ! J'aimerais nager tous les matins avant le travail.",
+          "hi-IN": "शुभ दिन! मैं काम से पहले हर सुबह तैरना चाहूँगा।",
+          "pl-PL": "Dzień dobry! Chciałbym pływać codziennie rano przed pracą.",
+          "ro-RO": "Bună ziua! Aș dori să înot în fiecare dimineață înainte de muncă.",
+          "tr-TR": "İyi günler! Her sabah işten önce yüzmek istiyorum.",
+          "uk-UA": "Добрий день! Я б хотів плавати щоранку перед роботою.",
+          "uz-UZ": "Xayrli kun! Men har kuni ertalab ishdan oldin suzishni xohlardim."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo! Ich suche eine günstige Monatskarte für das Hallenbad.",
+        "translation": {
+          "ru-RU": "Здравствуйте! Я ищу недорогой месячный абонемент в крытый бассейн.",
+          "en-US": "Hello! I am looking for a cheap monthly pass for the indoor pool.",
+          "ar-SA": "مرحباً! أبحث عن اشتراك شهري رخيص للمسبح الداخلي.",
+          "es-ES": "¡Hola! Busco un abono mensual económico para la piscina cubierta.",
+          "fr-FR": "Bonjour ! Je cherche un abonnement mensuel pas cher pour la piscine couverte.",
+          "hi-IN": "नमस्ते! मैं इनडोर पूल के लिए एक सस्ता मासिक पास ढूंढ रहा हूँ।",
+          "pl-PL": "Cześć! Szukam taniego biletu miesięcznego na kryty basen.",
+          "ro-RO": "Bună! Caut un abonament lunar ieftin pentru piscina acoperită.",
+          "tr-TR": "Merhaba! Kapalı havuz için uygun fiyatlı bir aylık bilet arıyorum.",
+          "uk-UA": "Добридень! Я шукаю недорогий місячний абонемент у критий басейн.",
+          "uz-UZ": "Salom! Men yopiq basseyn uchun arzon oylik chipta qidiryapman."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Sehr gerne. Für Frühaufsteher haben wir ab 6 Uhr morgens die Bahnen reserviert.",
+    "botTranslation": {
+      "ru-RU": "С удовольствием. Для ранних пташек у нас забронированы дорожки с 6 утра.",
+      "en-US": "With pleasure. For early risers, we have reserved the lanes starting at 6 AM.",
+      "ar-SA": "بكل سرور. بالنسبة للمستيقظين مبكراً، قمنا بحجز المسارات بدءاً من الساعة 6 صباحاً.",
+      "es-ES": "Con mucho gusto. Para los madrugadores, tenemos las calles reservadas a partir de las 6 de la mañana.",
+      "fr-FR": "Très volontiers. Pour les lève-tôt, nous avons réservé les couloirs à partir de 6h du matin.",
+      "hi-IN": "बिल्कुल। जल्दी उठने वालों के लिए हमने सुबह 6 बजे से लेन आरक्षित कर दी हैं।",
+      "pl-PL": "Bardzo chętnie. Dla rannych ptaszków zarezerwowaliśmy tory od 6 rano.",
+      "ro-RO": "Cu mare plăcere. Pentru cei matinali am rezervat culoarele începând cu ora 6 dimineața.",
+      "tr-TR": "Memnuniyetle. Erkenden kalkanlar için sabah 6'dan itibaren kulvarları ayırdık.",
+      "uk-UA": "Із задоволенням. Для ранніх пташок у нас заброньовані доріжки з 6 ранку.",
+      "uz-UZ": "Bajonidil. Ertalab barvaqt turuvchilar uchun soat 6 dan boshlab yo'lakchalarni band qilib qo'yganmiz."
+    },
+    "vocabulary": [
+      {
+        "german": "schwimmen",
+        "translation": {
+          "ru-RU": "плавать",
+          "en-US": "to swim",
+          "ar-SA": "السباحة",
+          "es-ES": "nadar",
+          "fr-FR": "nager",
+          "hi-IN": "तैरना",
+          "pl-PL": "pływać",
+          "ro-RO": "a înota",
+          "tr-TR": "yüzmek",
+          "uk-UA": "плавати",
+          "uz-UZ": "suzmoq"
+        }
+      },
+      {
+        "german": "die Monatskarte",
+        "translation": {
+          "ru-RU": "месячный абонемент",
+          "en-US": "monthly pass",
+          "ar-SA": "الاشتراك الشهري / البطاقة الشهرية",
+          "es-ES": "abono mensual",
+          "fr-FR": "carte mensuelle / abonnement mensuel",
+          "hi-IN": "मासिक पास",
+          "pl-PL": "bilet miesięczny",
+          "ro-RO": "abonament lunar",
+          "tr-TR": "aylık kart",
+          "uk-UA": "місячний абонемент",
+          "uz-UZ": "oylik chipta (abonement)"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das ist perfekt. Wie lang ist die große Schwimmbahn hier?",
+        "translation": {
+          "ru-RU": "Это идеально. Какой длины здесь большая плавательная дорожка?",
+          "en-US": "That is perfect. How long is the big swimming lane here?",
+          "ar-SA": "هذا ممتاز. كم طول مسار السباحة الكبير هنا؟",
+          "es-ES": "Eso es perfecto. ¿Qué longitud tiene la calle de natación grande aquí?",
+          "fr-FR": "C'est parfait. Quelle est la longueur du grand couloir de nage ici ?",
+          "hi-IN": "यह एकदम सही है। यहाँ बड़ा स्विमिंग लेन कितना लंबा है?",
+          "pl-PL": "To idealnie. Jak długa jest tutaj duża linia do pływania?",
+          "ro-RO": "Este perfect. Cât de lung este culoarul mare de înot aici?",
+          "tr-TR": "Bu mükemmel. Buradaki büyük yüzme kulvarı ne kadar uzunlukta?",
+          "uk-UA": "Це ідеально. Якої довжини тут велика плавальна доріжка?",
+          "uz-UZ": "Bu ajoyib. Bu yerdagi katta suzish yo'lakchasi qancha uzunlikda?"
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Super. Sind um diese Zeit auch schon viele Leute im Wasser?",
+        "translation": {
+          "ru-RU": "Супер. В это время в воде уже много людей?",
+          "en-US": "Super. Are there already many people in the water at this time?",
+          "ar-SA": "رائع. هل يوجد الكثير من الناس في الماء في هذا الوقت بالفعل؟",
+          "es-ES": "Súper. ¿A esa hora ya hay mucha gente en el agua?",
+          "fr-FR": "Super. Y a-t-il déjà beaucoup de monde dans l'eau à cette heure-là ?",
+          "hi-IN": "बढ़िया। क्या इस समय पानी में पहले से ही बहुत सारे लोग होते हैं?",
+          "pl-PL": "Super. Czy o tej porze jest już dużo ludzi w wodzie?",
+          "ro-RO": "Super. Sunt deja mulți oameni în apă la ora asta?",
+          "tr-TR": "Süper. Bu saatte suda çok kişi oluyor mu?",
+          "uk-UA": "Супер. У цей час у воді вже багато людей?",
+          "uz-UZ": "Zo'r. Bu vaqtda suvda odamlar ko'p bo'ladimi?"
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Eine Bahn ist genau 50 Meter lang. Um 6 Uhr morgens sind aber erst wenige Leute da, man kann also ganz in Ruhe schwimmen.",
+    "botTranslation": {
+      "ru-RU": "Одна дорожка имеет длину ровно 50 метров. А в 6 утра людей еще мало, так что можно плавать совершенно спокойно.",
+      "en-US": "One lane is exactly 50 meters long. But at 6 AM there are only a few people there, so you can swim in complete peace.",
+      "ar-SA": "يبلغ طول المسار 50 متراً بالضبط. لكن في الساعة 6 صباحاً يوجد عدد قليل من الناس، لذلك يمكنك السباحة بهدوء تام.",
+      "es-ES": "Una calle tiene exactamente 50 metros de largo. Pero a las 6 de la mañana todavía hay poca gente, así que se puede nadar con mucha tranquilidad.",
+      "fr-FR": "Un couloir fait exactement 50 mètres de long. Mais à 6 heures du matin, il y a encore peu de monde, on peut donc nager en toute tranquillité.",
+      "hi-IN": "एक लेन ठीक 50 मीटर लंबी है। लेकिन सुबह 6 बजे केवल कुछ ही लोग होते हैं, इसलिए आप पूरी शांति से तैर सकते हैं।",
+      "pl-PL": "Jeden tor ma dokładnie 50 metrów długości. Ale o 6 rano jest jeszcze niewiele osób, więc można pływać w całkowitym spokoju.",
+      "ro-RO": "Un culoar are exact 50 de metri lungime. Dar la ora 6 dimineața sunt încă puțini oameni, deci se poate înota în liniște deplină.",
+      "tr-TR": "Bir kulvar tam 50 metre uzunluğunda. Ama sabah 6'da henüz çok az kişi oluyor, bu yüzden tamamen huzur içinde yüzebilirsiniz.",
+      "uk-UA": "Одна доріжка має довжину рівно 50 метрів. А о 6 ранку людей ще мало, так що можна плавати абсолютно спокійно.",
+      "uz-UZ": "Bitta yo'lakcha roppa-rosa 50 metr uzunlikda. Lekin ertalab soat 6 da odamlar kam bo'ladi, shuning uchun bemalol suzish mumkin."
+    },
+    "vocabulary": [
+      {
+        "german": "die Bahn",
+        "translation": {
+          "ru-RU": "дорожка (в бассейне)",
+          "en-US": "lane (in a pool)",
+          "ar-SA": "المسار / الحارة",
+          "es-ES": "calle (de natación)",
+          "fr-FR": "couloir (de nage) / ligne d'eau",
+          "hi-IN": "लेन (स्विमिंग पूल में)",
+          "pl-PL": "tor (pływacki)",
+          "ro-RO": "culoar",
+          "tr-TR": "kulvar",
+          "uk-UA": "доріжка (в басейні)",
+          "uz-UZ": "yo'lakcha (basseynda)"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hervorragend. Brauche ich dafür eine spezielle Badehaube?",
+        "translation": {
+          "ru-RU": "Превосходно. Нужна ли мне для этого специальная шапочка для плавания?",
+          "en-US": "Excellent. Do I need a special swimming cap for that?",
+          "ar-SA": "ممتاز. هل أحتاج إلى قبعة سباحة خاصة لذلك؟",
+          "es-ES": "Excelente. ¿Necesito un gorro de baño especial para ello?",
+          "fr-FR": "Excellent. Ai-je besoin d'un bonnet de bain spécial pour cela ?",
+          "hi-IN": "उत्कृष्ट। क्या मुझे इसके लिए कोई विशेष स्विमिंग कैप चाहिए?",
+          "pl-PL": "Znakomicie. Czy potrzebuję do tego specjalnego czepka kąpielowego?",
+          "ro-RO": "Excelent. Am nevoie de o cască de înot specială pentru asta?",
+          "tr-TR": "Harika. Bunun için özel bir bone gerekiyor mu?",
+          "uk-UA": "Чудово. Чи потрібна мені для цього спеціальна шапочка для плавання?",
+          "uz-UZ": "Juda yaxshi. Buning uchun menga maxsus suzish shapkachasi kerakmi?"
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Sehr gut. Kann man hier auch Eintrittskarten online kaufen?",
+        "translation": {
+          "ru-RU": "Очень хорошо. Можно ли здесь также купить входные билеты онлайн?",
+          "en-US": "Very good. Can one also buy entrance tickets online here?",
+          "ar-SA": "جيد جداً. هل يمكن شراء تذاكر الدخول عبر الإنترنت أيضاً؟",
+          "es-ES": "Muy bien. ¿También se pueden comprar entradas online aquí?",
+          "fr-FR": "Très bien. Peut-on aussi acheter des billets d'entrée en ligne ici ?",
+          "hi-IN": "बहुत अच्छा। क्या कोई यहाँ प्रवेश टिकट ऑनलाइन भी खरीद सकता है?",
+          "pl-PL": "Bardzo dobrze. Czy można tu również kupić bilety wstępu online?",
+          "ro-RO": "Foarte bine. Se pot cumpăra bilete de intrare și online de aici?",
+          "tr-TR": "Çok iyi. Buradan giriş biletleri online olarak da satın alınabiliyor mu?",
+          "uk-UA": "Дуже добре. Чи можна тут також купити вхідні квитки онлайн?",
+          "uz-UZ": "Juda yaxshi. Bu yerda kirish chiptalarini onlayn ham sotib olsa bo'ladimi?"
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Eine Badehaube ist freiwillig. Tickets können Sie online oder direkt hier am Schalter holen.",
+    "botTranslation": {
+      "ru-RU": "Шапочка для плавания по желанию. Билеты вы можете приобрести онлайн или прямо здесь на кассе.",
+      "en-US": "A swimming cap is voluntary. You can get tickets online or right here at the counter.",
+      "ar-SA": "قبعة السباحة اختيارية. يمكنك الحصول على التذاكر عبر الإنترنت أو من الشباك هنا مباشرة.",
+      "es-ES": "El gorro de baño es opcional. Puede comprar las entradas online o directamente aquí en la taquilla.",
+      "fr-FR": "Le bonnet de bain est facultatif. Vous pouvez prendre les billets en ligne ou directement ici au guichet.",
+      "hi-IN": "स्विमिंग कैप स्वैच्छिक (मर्जी से) है। आप टिकट ऑनलाइन या सीधे यहाँ काउंटर पर ले सकते हैं।",
+      "pl-PL": "Czepek jest dobrowolny. Bilety można kupić online lub bezpośrednio tutaj w kasie.",
+      "ro-RO": "Casca de înot este opțională. Puteți lua bilete online sau direct de aici de la ghișeu.",
+      "tr-TR": "Bone takmak isteğe bağlı. Biletleri online olarak veya doğrudan buradaki gişeden alabilirsiniz.",
+      "uk-UA": "Шапочка для плавання за бажанням. Квитки ви можете придбати онлайн або прямо тут на касі.",
+      "uz-UZ": "Suzish shapkachasi ixtiyoriy. Chiptalarni onlayn yoki to'g'ridan-to'g'ri shu yerdagi kassadan olishingiz mumkin."
+    },
+    "vocabulary": [
+      {
+        "german": "die Badehaube",
+        "translation": {
+          "ru-RU": "шапочка для плавания",
+          "en-US": "swimming cap",
+          "ar-SA": "قبعة السباحة",
+          "es-ES": "gorro de baño",
+          "fr-FR": "bonnet de bain",
+          "hi-IN": "स्विमिंग कैप / नहाने की टोपी",
+          "pl-PL": "czepek kąpielowy",
+          "ro-RO": "cască de înot",
+          "tr-TR": "bone",
+          "uk-UA": "шапочка для плавання",
+          "uz-UZ": "suzish shapkachasi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar. Was kostet der Eintritt für einen Monat?",
+        "translation": {
+          "ru-RU": "Понятно. Сколько стоит вход на один месяц?",
+          "en-US": "All right. How much is the admission for a month?",
+          "ar-SA": "حسناً. كم تكلفة الدخول لمدة شهر؟",
+          "es-ES": "De acuerdo. ¿Cuánto cuesta la entrada para un mes?",
+          "fr-FR": "D'accord. Combien coûte l'entrée pour un mois ?",
+          "hi-IN": "समझ गया। एक महीने के लिए प्रवेश शुल्क क्या है?",
+          "pl-PL": "Jasne. Ile kosztuje wstęp na miesiąc?",
+          "ro-RO": "Am înțeles. Cât costă intrarea pentru o lună?",
+          "tr-TR": "Anlaşıldı. Bir aylık giriş ücreti ne kadar?",
+          "uk-UA": "Зрозуміло. Скільки коштує вхід на один місяць?",
+          "uz-UZ": "Tushunarli. Bir oylik kirish narxi qancha?"
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Gut zu wissen. Wie hoch ist der Preis für die Monatskarte?",
+        "translation": {
+          "ru-RU": "Полезно знать. Какова цена месячного абонемента?",
+          "en-US": "Good to know. What is the price for the monthly pass?",
+          "ar-SA": "من الجيد معرفة ذلك. ما هو سعر الاشتراك الشهري؟",
+          "es-ES": "Es bueno saberlo. ¿Cuál es el precio del abono mensual?",
+          "fr-FR": "Bon à savoir. Quel est le prix de la carte mensuelle ?",
+          "hi-IN": "यह जानकर अच्छा लगा। मासिक पास की कीमत कितनी है?",
+          "pl-PL": "Dobrze wiedzieć. Jaka jest cena biletu miesięcznego?",
+          "ro-RO": "Bine de știut. Care este prețul pentru abonamentul lunar?",
+          "tr-TR": "Bunu bilmek güzel. Aylık kartın fiyatı nedir?",
+          "uk-UA": "Корисно знати. Яка ціна місячного абонемента?",
+          "uz-UZ": "Bilib qo'ygan yaxshi. Oylik chiptaning narxi qancha?"
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Die Monatskarte kostet für Sportler genau 45 Euro. Damit können Sie täglich trainieren.",
+    "botTranslation": {
+      "ru-RU": "Месячный абонемент для спортсменов стоит ровно 45 евро. С ним вы можете тренироваться ежедневно.",
+      "en-US": "The monthly pass for athletes costs exactly 45 euros. With it, you can train daily.",
+      "ar-SA": "تبلغ تكلفة الاشتراك الشهري للرياضيين 45 يورو بالضبط. به يمكنك التدرب يومياً.",
+      "es-ES": "El abono mensual para deportistas cuesta exactamente 45 euros. Con él puede entrenar a diario.",
+      "fr-FR": "La carte mensuelle coûte pour les sportifs exactement 45 euros. Avec cela, vous pouvez vous entraîner tous les jours.",
+      "hi-IN": "एथलीटों के लिए मासिक पास की कीमत ठीक 45.00 यूरो है। इससे आप रोजाना ट्रेनिंग कर सकते हैं।",
+      "pl-PL": "Bilet miesięczny dla sportowców kosztuje dokładnie 45 euro. Z nim można trenować codziennie.",
+      "ro-RO": "Abonamentul lunar pentru sportivi costă exact 45 euro. Cu el vă puteți antrena zilnic.",
+      "tr-TR": "Aylık kart sporcular için tam olarak 45 Euro tutuyor. Bununla her gün antrenman yapabilirsiniz.",
+      "uk-UA": "Місячний абонемент для спортсменів коштує рівно 45 євро. З ним ви можете тренуватися щодня.",
+      "uz-UZ": "Sportchilar uchun oylik chipta roppa-rosa 45 yevro turadi. U bilan har kuni shug'ullanishingiz mumkin."
+    },
+    "vocabulary": [
+      {
+        "german": "der Eintritt",
+        "translation": {
+          "ru-RU": "вход / входная плата",
+          "en-US": "admission / entrance fee",
+          "ar-SA": "الدخول / رسوم الدخول",
+          "es-ES": "entrada / precio de entrada",
+          "fr-FR": "entrée (prix)",
+          "hi-IN": "प्रवेश / प्रवेश शुल्क",
+          "pl-PL": "wstęp",
+          "ro-RO": "intrare",
+          "tr-TR": "giriş (ücreti)",
+          "uk-UA": "вхід / плата за вхід",
+          "uz-UZ": "kirish / kirish haqi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das ist ein fairer Preis. Ich nehme direkt die Karte.",
+        "translation": {
+          "ru-RU": "Это справедливая цена. Я сразу же беру абонемент.",
+          "en-US": "That is a fair price. I'll take the pass right away.",
+          "ar-SA": "هذا سعر عادل. سآخذ البطاقة فوراً.",
+          "es-ES": "Es un precio justo. Me llevo la tarjeta directamente.",
+          "fr-FR": "C'est un prix juste. Je prends la carte directement.",
+          "hi-IN": "यह उचित कीमत है। मैं तुरंत पास ले लेता हूँ।",
+          "pl-PL": "To uczciwa cena. Biorę bilet od razu.",
+          "ro-RO": "Este un preț corect. Iau abonamentul direct.",
+          "tr-TR": "Bu adil bir fiyat. Kartı hemen alıyorum.",
+          "uk-UA": "Це справедлива ціна. Я відразу ж беру абонемент.",
+          "uz-UZ": "Bu adolatli narx. Men darhol chiptani olaman."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Das passt gut. Ich möchte die Monatskarte kaufen.",
+        "translation": {
+          "ru-RU": "Это хорошо подходит. Я хочу купить месячный абонемент.",
+          "en-US": "That fits well. I would like to buy the monthly pass.",
+          "ar-SA": "هذا مناسب. أود شراء الاشتراك الشهري.",
+          "es-ES": "Me viene bien. Me gustaría comprar el abono mensual.",
+          "fr-FR": "Cela convient bien. J'aimerais acheter la carte mensuelle.",
+          "hi-IN": "यह ठीक है। मैं मासिक पास खरीदना चाहूँगा।",
+          "pl-PL": "To mi pasuje. Chciałbym kupić bilet miesięczny.",
+          "ro-RO": "Asta se potrivește bine. Aș dori să cumpăr abonamentul lunar.",
+          "tr-TR": "Bu çok uygun. Aylık kartı satın almak istiyorum.",
+          "uk-UA": "Це добре підходить. Я хочу купити місячний абонемент.",
+          "uz-UZ": "Bu juda mos keladi. Men oylik chiptani sotib olmoqchiman."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Gerne. Bekommen Sie noch einen Spind-Schlüssel für die Umkleide dazu?",
+    "botTranslation": {
+      "ru-RU": "С удовольствием. Вам также нужен ключ от шкафчика для раздевалки?",
+      "en-US": "Gladly. Will you also be getting a locker key for the changing room?",
+      "ar-SA": "بكل سرور. هل ترغب أيضاً في الحصول على مفتاح خزانة لغرفة تغيير الملابس؟",
+      "es-ES": "Con gusto. ¿Necesita también una llave para la taquilla del vestuario?",
+      "fr-FR": "Volontiers. Prenez-vous aussi une clé de casier pour le vestiaire ?",
+      "hi-IN": "ज़रूर। क्या आपको चेंजिंग रूम के लिए लॉकर की चाबी भी चाहिए?",
+      "pl-PL": "Chętnie. Czy dostanie Pan/Pani również klucz do szafki w szatni?",
+      "ro-RO": "Cu plăcere. Primiți și o cheie de vestiar pentru vestiar în plus?",
+      "tr-TR": "Memnuniyetle. Soyunma odası için bir dolap anahtarı da alacak mısınız?",
+      "uk-UA": "Із задоволенням. Вам також потрібен ключ від шафки для роздягальні?",
+      "uz-UZ": "Bajonidil. Kiyinish xonasi uchun shkafcha kalitini ham olasizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Spind",
+        "translation": {
+          "ru-RU": "шкафчик (в раздевалке)",
+          "en-US": "locker",
+          "ar-SA": "الخزانة (في غرفة تغيير الملابس)",
+          "es-ES": "taquilla",
+          "fr-FR": "casier",
+          "hi-IN": "लॉकर",
+          "pl-PL": "szafka (w szatni)",
+          "ro-RO": "dulăpior (la vestiar)",
+          "tr-TR": "dolap (soyunma odasında)",
+          "uk-UA": "шафка (в роздягальні)",
+          "uz-UZ": "shkafcha (kiyinish xonasida)"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, bitte. Wo ist der Schließbereich?",
+        "translation": {
+          "ru-RU": "Да, пожалуйста. Где находится зона со шкафчиками?",
+          "en-US": "Yes, please. Where is the locker area?",
+          "ar-SA": "نعم من فضلك. أين توجد منطقة الخزائن؟",
+          "es-ES": "Sí, por favor. ¿Dónde está la zona de taquillas?",
+          "fr-FR": "Oui, s'il vous plaît. Où se trouve la zone des casiers ?",
+          "hi-IN": "हाँ, कृपया। लॉकर एरिया कहाँ है?",
+          "pl-PL": "Tak, proszę. Gdzie jest strefa z szafkami?",
+          "ro-RO": "Da, vă rog. Unde este zona dulăpioarelor?",
+          "tr-TR": "Evet, lütfen. Dolap alanı nerede?",
+          "uk-UA": "Так, будь ласка. Де знаходиться зона з шафками?",
+          "uz-UZ": "Ha, iltimos. Shkafchalar hududi qayerda?"
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Ja, gerne. Brauche ich dafür eine Münze als Pfand?",
+        "translation": {
+          "ru-RU": "Да, с удовольствием. Мне нужна для этого монетка в качестве залога?",
+          "en-US": "Yes, gladly. Do I need a coin as a deposit for it?",
+          "ar-SA": "نعم، بكل سرور. هل أحتاج إلى عملة معدنية كوديعة (تأمين) لذلك؟",
+          "es-ES": "Sí, con gusto. ¿Necesito una moneda como fianza para ello?",
+          "fr-FR": "Oui, volontiers. Ai-je besoin d'une pièce comme consigne pour cela ?",
+          "hi-IN": "हाँ, खुशी से। क्या मुझे इसके लिए जमा के रूप में एक सिक्के की आवश्यकता है?",
+          "pl-PL": "Tak, chętnie. Czy potrzebuję do tego monety jako kaucji?",
+          "ro-RO": "Da, cu plăcere. Am nevoie de o monedă drept garanție pentru el?",
+          "tr-TR": "Evet, memnuniyetle. Bunun için depozito olarak bir bozuk paraya ihtiyacım var mı?",
+          "uk-UA": "Так, із задоволенням. Мені потрібна для цього монетка в якості застави?",
+          "uz-UZ": "Ha, bajonidil. Buning uchun menga garov sifatida tanga kerakmi?"
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Sie brauchen eine 1-Euro-Münze für das Schloss. Hier ist Ihre Karte. Viel Erfolg beim Training!",
+    "botTranslation": {
+      "ru-RU": "Вам понадобится монета в 1 евро для замка. Вот ваш абонемент. Удачи на тренировке!",
+      "en-US": "You need a 1-euro coin for the lock. Here is your pass. Good luck with your training!",
+      "ar-SA": "تحتاج إلى عملة بقيمة 1 يورو للقفل. هذه بطاقتك. حظاً موفقاً في التدريب!",
+      "es-ES": "Necesita una moneda de 1 euro para la cerradura. Aquí tiene su tarjeta. ¡Mucho éxito en el entrenamiento!",
+      "fr-FR": "Vous avez besoin d'une pièce de 1 euro pour la serrure. Voici votre carte. Bon entraînement !",
+      "hi-IN": "आपको ताले के लिए 1 यूरो के सिक्के की आवश्यकता है। यह रहा आपका पास। आपकी ट्रेनिंग के लिए शुभकामनाएँ!",
+      "pl-PL": "Potrzebuje Pan/Pani monety 1 euro do zamka. Oto Pana/Pani karta. Powodzenia na treningu!",
+      "ro-RO": "Aveți nevoie de o monedă de 1 euro pentru lacăt. Aici este abonamentul dumneavoastră. Mult succes la antrenament!",
+      "tr-TR": "Kilit için 1 Euro'luk bir bozuk paraya ihtiyacınız var. İşte kartınız. Antrenmanda başarılar!",
+      "uk-UA": "Вам знадобиться монета в 1 євро для замка. Ось ваш абонемент. Успіхів на тренуванні!",
+      "uz-UZ": "Qulf uchun sizga 1 yevrolik tanga kerak bo'ladi. Mana sizning chiptangiz. Mashg'ulotda omad tilayman!"
+    },
+    "vocabulary": [
+      {
+        "german": "das Pfand",
+        "translation": {
+          "ru-RU": "залог",
+          "en-US": "deposit",
+          "ar-SA": "الوديعة / التأمين",
+          "es-ES": "fianza / depósito",
+          "fr-FR": "consigne",
+          "hi-IN": "जमानत / गिरवी",
+          "pl-PL": "kaucja",
+          "ro-RO": "garanție",
+          "tr-TR": "depozito",
+          "uk-UA": "застава",
+          "uz-UZ": "garov"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Vielen Dank für die schnelle Hilfe!",
+        "translation": {
+          "ru-RU": "Большое спасибо за быструю помощь!",
+          "en-US": "Thank you very much for the quick help!",
+          "ar-SA": "شكراً جزيلاً على المساعدة السريعة!",
+          "es-ES": "¡Muchas gracias por la rápida ayuda!",
+          "fr-FR": "Merci beaucoup pour l'aide rapide !",
+          "hi-IN": "त्वरित मदद के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Bardzo dziękuję za szybką pomoc!",
+          "ro-RO": "Vă mulțumesc mult pentru ajutorul rapid!",
+          "tr-TR": "Hızlı yardımınız için çok teşekkürler!",
+          "uk-UA": "Дуже дякую за швидку допомогу!",
+          "uz-UZ": "Tez yordamingiz uchun katta rahmat!"
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Herzlichen Dank, schönen Tag noch!",
+        "translation": {
+          "ru-RU": "Сердечное спасибо, хорошего дня!",
+          "en-US": "Heartfelt thanks, have a nice day!",
+          "ar-SA": "شكراً جزيلاً، طاب يومك!",
+          "es-ES": "¡Muchas gracias, que tenga un buen día!",
+          "fr-FR": "Un grand merci, bonne journée !",
+          "hi-IN": "हार्दिक धन्यवाद, आपका दिन शुभ हो!",
+          "pl-PL": "Serdecznie dziękuję, miłego dnia!",
+          "ro-RO": "Vă mulțumesc din suflet, o zi frumoasă în continuare!",
+          "tr-TR": "Çok teşekkürler, iyi günler dilerim!",
+          "uk-UA": "Сердечне спасибі, гарного дня!",
+          "uz-UZ": "Chin dildan rahmat, kuningiz xayrli o'tsin!"
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Sehr gerne! Viel Spaß beim Schwimmen. Bitte schön!",
+    "botTranslation": {
+      "ru-RU": "С удовольствием! Желаю приятного плавания. Пожалуйста!",
+      "en-US": "With pleasure! Have fun swimming. You're welcome!",
+      "ar-SA": "بكل سرور! استمتع بالسباحة. على الرحب والسعة!",
+      "es-ES": "¡Con mucho gusto! Que disfrute nadando. ¡De nada!",
+      "fr-FR": "Avec grand plaisir ! Bonne baignade. Je vous en prie !",
+      "hi-IN": "मुझे खुशी हुई! तैरने का आनंद लें। आपका स्वागत है!",
+      "pl-PL": "Bardzo proszę! Miłego pływania. Proszę bardzo!",
+      "ro-RO": "Cu mare plăcere! Înot plăcut. Cu plăcere!",
+      "tr-TR": "Memnuniyetle! Yüzerken iyi eğlenceler. Rica ederim!",
+      "uk-UA": "Із задоволенням! Бажаю приємного плавання. Будь ласка!",
+      "uz-UZ": "Jonim bilan! Maroqli suzish tilayman. Arzimaydi!"
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

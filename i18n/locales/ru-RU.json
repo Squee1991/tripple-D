@@ -8245,6 +8245,7 @@
     "cancelBtn": "Отменить подписку",
     "access": "Доступ до:",
     "deleteAcc": "Удалить аккаунт",
+    "privacyOptions": "Настройки конфиденциальности",
     "newAvatarTitle": "Выберите новый аватар",
     "avatarCancel": "Отмена",
     "avatarSave": "Сохранить",
@@ -10445,7 +10446,7 @@
     "getPlus": "Приобрести PLUS",
     "getBasic": "Приобрести Basic",
     "withAds": "С рекламой",
-    "withoutAds": 'Без рекламы'
+    "withoutAds": "Без рекламы"
   },
   "pay": {
     "banner": "Полный доступ ко всем функциям приложения",

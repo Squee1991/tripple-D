@@ -1,0 +1,534 @@
+{
+  "start": {
+    "botText": "Guten Tag! Willkommen bei unserem Fahrradverleih. Suchen Sie ein passendes Rad für den Sport?",
+    "botTranslation": {
+      "ru-RU": "Добрый день! Добро пожаловать в наш прокат велосипедов. Вы ищете подходящий велосипед для спорта?",
+      "en-US": "Good day! Welcome to our bicycle rental. Are you looking for a suitable bike for sports?",
+      "ar-SA": "طاب يومك! مرحباً بك في تأجير الدراجات لدينا. هل تبحث عن دراجة مناسبة للرياضة؟",
+      "es-ES": "¡Buen día! Bienvenido a nuestro alquiler de bicicletas. ¿Busca una bicicleta adecuada para hacer deporte?",
+      "fr-FR": "Bonjour ! Bienvenue dans notre location de vélos. Cherchez-vous un vélo adapté pour le sport ?",
+      "hi-IN": "शुभ दिन! हमारे साइकिल किराये पर आपका स्वागत है। क्या आप खेल के लिए उपयुक्त साइकिल ढूंढ रहे हैं?",
+      "pl-PL": "Dzień dobry! Witamy w naszej wypożyczalni rowerów. Szuka Pan/Pani odpowiedniego roweru do uprawiania sportu?",
+      "ro-RO": "Bună ziua! Bine ați venit la centrul nostru de închirieri biciclete. Căutați o bicicletă potrivită pentru sport?",
+      "tr-TR": "İyi günler! Bisiklet kiralama yerimize hoş geldiniz. Spor için uygun bir bisiklet mi arıyorsunuz?",
+      "uk-UA": "Добрий день! Ласкаво просимо до нашого прокату велосипедів. Ви шукаєте відповідний велосипед для спорту?",
+      "uz-UZ": "Xayrli kun! Bizning velosiped ijaramizga xush kelibsiz. Sport uchun mos velosiped qidiryapsizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Tour",
+        "translation": {
+          "ru-RU": "тур / поездка",
+          "en-US": "tour / ride",
+          "ar-SA": "الجولة / الرحلة",
+          "es-ES": "excursión / vuelta",
+          "fr-FR": "tour / balade",
+          "hi-IN": "यात्रा / टूर",
+          "pl-PL": "wycieczka",
+          "ro-RO": "tur / plimbare",
+          "tr-TR": "tur / gezi",
+          "uk-UA": "тур / поїздка",
+          "uz-UZ": "sayohat / tur"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Guten Tag! Ich möchte heute eine sportliche Tour durch den Wald machen.",
+        "translation": {
+          "ru-RU": "Добрый день! Я бы хотел сегодня совершить спортивную поездку по лесу.",
+          "en-US": "Good day! I would like to do a sporty tour through the forest today.",
+          "ar-SA": "طاب يومك! أود القيام بجولة رياضية عبر الغابة اليوم.",
+          "es-ES": "¡Buen día! Me gustaría hacer una ruta deportiva por el bosque hoy.",
+          "fr-FR": "Bonjour ! J'aimerais faire une balade sportive dans la forêt aujourd'hui.",
+          "hi-IN": "शुभ दिन! मैं आज जंगल के माध्यम से एक स्पोर्टी यात्रा करना चाहूँगा।",
+          "pl-PL": "Dzień dobry! Chciałbym dzisiaj wybrać się na sportową wycieczkę po lesie.",
+          "ro-RO": "Bună ziua! Aș dori să fac o plimbare sportivă prin pădure astăzi.",
+          "tr-TR": "İyi günler! Bugün ormanda sportif bir tur yapmak istiyorum.",
+          "uk-UA": "Добрий день! Я б хотів сьогодні здійснити спортивну поїздку лісом.",
+          "uz-UZ": "Xayrli kun! Men bugun o'rmon bo'ylab sport sayohatini qilmoqchiman."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Hallo! Ich suche ein gutes Mountainbike für ein intensives Training.",
+        "translation": {
+          "ru-RU": "Здравствуйте! Я ищу хороший горный велосипед для интенсивной тренировки.",
+          "en-US": "Hello! I am looking for a good mountain bike for intensive training.",
+          "ar-SA": "مرحباً! أبحث عن دراجة جبلية جيدة لتدريب مكثف.",
+          "es-ES": "¡Hola! Busco una buena bicicleta de montaña para un entrenamiento intensivo.",
+          "fr-FR": "Bonjour ! Je cherche un bon VTT pour un entraînement intensif.",
+          "hi-IN": "नमस्ते! मैं गहन प्रशिक्षण के लिए एक अच्छी माउंटेन बाइक ढूंढ रहा हूँ।",
+          "pl-PL": "Cześć! Szukam dobrego roweru górskiego na intensywny trening.",
+          "ro-RO": "Bună! Caut o bicicletă de munte bună pentru un antrenament intensiv.",
+          "tr-TR": "Merhaba! Yoğun bir antrenman için iyi bir dağ bisikleti arıyorum.",
+          "uk-UA": "Добридень! Я шукаю хороший гірський велосипед для інтенсивного тренування.",
+          "uz-UZ": "Salom! Men intensiv mashg'ulot uchun yaxshi tog' velosipedini qidiryapman."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Da haben wir genau das Richtige. Wie groß sind Sie denn ungefähr für die passende Rahmengröße?",
+    "botTranslation": {
+      "ru-RU": "У нас есть как раз то, что нужно. Какого вы примерно роста, чтобы подобрать подходящий размер рамы?",
+      "en-US": "We have exactly the right thing. How tall are you roughly for the appropriate frame size?",
+      "ar-SA": "لدينا بالضبط ما تحتاجه. كم يبلغ طولك تقريباً لاختيار حجم الإطار المناسب؟",
+      "es-ES": "Tenemos justo lo que necesita. ¿Cuánto mide aproximadamente para el tamaño de cuadro adecuado?",
+      "fr-FR": "Nous avons exactement ce qu'il vous faut. Quelle est environ votre taille pour choisir la bonne taille de cadre ?",
+      "hi-IN": "हमारे पास बिल्कुल सही चीज़ है। उपयुक्त फ्रेम आकार के लिए आपकी ऊंचाई लगभग कितनी है?",
+      "pl-PL": "Mamy dokładnie to, czego potrzeba. Jakiego mniej więcej jest Pan/Pani wzrostu, aby dobrać odpowiedni rozmiar ramy?",
+      "ro-RO": "Avem exact ce vă trebuie. Ce înălțime aveți aproximativ pentru a alege dimensiunea potrivită a cadrului?",
+      "tr-TR": "Tam da aradığınız şey bizde var. Uygun kadro boyu için yaklaşık boyunuz nedir?",
+      "uk-UA": "У нас є якраз те, що потрібно. Який у вас приблизно зріст, щоб підібрати відповідний розмір рами?",
+      "uz-UZ": "Bizda aynan sizga keragi bor. Mos keluvchi rama o'lchami uchun bo'yingiz taxminan qancha?"
+    },
+    "vocabulary": [
+      {
+        "german": "das Mountainbike",
+        "translation": {
+          "ru-RU": "горный велосипед",
+          "en-US": "mountain bike",
+          "ar-SA": "الدراجة الجبلية",
+          "es-ES": "bicicleta de montaña",
+          "fr-FR": "VTT (vélo tout terrain)",
+          "hi-IN": "माउंटेन बाइक",
+          "pl-PL": "rower górski",
+          "ro-RO": "bicicletă de munte",
+          "tr-TR": "dağ bisikleti",
+          "uk-UA": "гірський велосипед",
+          "uz-UZ": "tog' velosipedi"
+        }
+      },
+      {
+        "german": "die Rahmengröße",
+        "translation": {
+          "ru-RU": "размер рамы",
+          "en-US": "frame size",
+          "ar-SA": "حجم الإطار",
+          "es-ES": "tamaño del cuadro",
+          "fr-FR": "taille du cadre",
+          "hi-IN": "फ्रेम का आकार",
+          "pl-PL": "rozmiar ramy",
+          "ro-RO": "dimensiunea cadrului",
+          "tr-TR": "kadro boyu",
+          "uk-UA": "розмір рами",
+          "uz-UZ": "rama o'lchami"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich bin ein Meter fünfundsiebzig groß. Eine mittlere Größe sollte passen.",
+        "translation": {
+          "ru-RU": "Мой рост 1,75 метра. Средний размер должен подойти.",
+          "en-US": "I am 1.75 meters tall. A medium size should fit.",
+          "ar-SA": "طولي 1.75 متر. الحجم المتوسط يجب أن يكون مناسباً.",
+          "es-ES": "Mido 1,75 metros. Una talla mediana debería encajar.",
+          "fr-FR": "Je mesure 1,75 mètre. Une taille moyenne devrait convenir.",
+          "hi-IN": "मेरी ऊंचाई 1.75 मीटर है। एक मध्यम आकार फिट होना चाहिए।",
+          "pl-PL": "Mam 1,75 metra wzrostu. Średni rozmiar powinien pasować.",
+          "ro-RO": "Am 1,75 metri înălțime. O mărime medie ar trebui să se potrivească.",
+          "tr-TR": "Boyum 1,75 metre. Orta boy uygun olmalı.",
+          "uk-UA": "Мій зріст 1,75 метра. Середній розмір має підійти.",
+          "uz-UZ": "Bo'yim 1,75 metr. O'rtacha o'lcham mos kelishi kerak."
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Ich bin ungefähr ein Meter fünfundachtzig groß und brauche einen größeren Rahmen.",
+        "translation": {
+          "ru-RU": "Мой рост примерно 1,85 метра, и мне нужна рама побольше.",
+          "en-US": "I am about 1.85 meters tall and need a larger frame.",
+          "ar-SA": "طولي حوالي 1.85 متر وأحتاج إلى إطار أكبر.",
+          "es-ES": "Mido aproximadamente 1,85 metros y necesito un cuadro más grande.",
+          "fr-FR": "Je mesure environ 1,85 mètre et j'ai besoin d'un cadre plus grand.",
+          "hi-IN": "मैं लगभग 1.85 मीटर लंबा हूँ और मुझे एक बड़े फ्रेम की आवश्यकता है।",
+          "pl-PL": "Mam około 1,85 metra wzrostu i potrzebuję większej ramy.",
+          "ro-RO": "Am aproximativ 1,85 metri înălțime și am nevoie de un cadru mai mare.",
+          "tr-TR": "Yaklaşık 1,85 metre boyundayım ve daha büyük bir kadroya ihtiyacım var.",
+          "uk-UA": "Мій зріст приблизно 1,85 метра, і мені потрібна більша рама.",
+          "uz-UZ": "Bo'yim taxminan 1,85 metr va menga kattaroq rama kerak."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Alles klar, ich stelle den Sattel genau auf Ihre Körpergröße ein. Fahren Sie lieber mit oder ohne Klickschuhe?",
+    "botTranslation": {
+      "ru-RU": "Понятно, я настрою седло точно под ваш рост. Вы предпочитаете ездить в контактной обуви или без неё?",
+      "en-US": "All right, I will adjust the saddle exactly to your height. Do you prefer riding with or without clipless shoes?",
+      "ar-SA": "حسناً، سأقوم بتعديل السرج ليناسب طولك تماماً. هل تفضل القيادة بأحذية بمشابك أم بدونها؟",
+      "es-ES": "Entendido, ajustaré el sillín exactamente a su altura. ¿Prefiere ir con o sin zapatillas automáticas?",
+      "fr-FR": "Très bien, je règle la selle exactement à votre taille. Préférez-vous rouler avec ou sans chaussures à cales ?",
+      "hi-IN": "ठीक है, मैं सीट को आपकी ऊंचाई के अनुसार ठीक कर दूँगा। क्या आप क्लिपलेस जूतों के साथ या उनके बिना सवारी करना पसंद करते हैं?",
+      "pl-PL": "Wszystko jasne, ustawię siodełko dokładnie do Pana/Pani wzrostu. Woli Pan/Pani jeździć w butach zatrzaskowych czy bez?",
+      "ro-RO": "Am înțeles, reglez șaua exact la înălțimea dumneavoastră. Preferați să mergeți cu sau fără pantofi cu clips?",
+      "tr-TR": "Anlaşıldı, seleyi tam boyunuza göre ayarlıyorum. Kilitli ayakkabılarla mı yoksa onlarsız mı sürmeyi tercih edersiniz?",
+      "uk-UA": "Зрозуміло, я налаштую сідло точно під ваш зріст. Ви віддаєте перевагу їздити у контактному взутті чи без нього?",
+      "uz-UZ": "Tushunarli, egarni aynan sizning bo'yingizga moslab to'g'rilayman. Maxsus (qisqichli) poyabzal bilan minishni afzal ko'rasizmi yoki usiz?"
+    },
+    "vocabulary": [
+      {
+        "german": "der Sattel",
+        "translation": {
+          "ru-RU": "седло (велосипедное)",
+          "en-US": "saddle / seat",
+          "ar-SA": "السرج / المقعد",
+          "es-ES": "sillín",
+          "fr-FR": "selle",
+          "hi-IN": "सीट / काठी",
+          "pl-PL": "siodełko",
+          "ro-RO": "șa",
+          "tr-TR": "sele",
+          "uk-UA": "сідло (велосипедне)",
+          "uz-UZ": "egar / o'rindiq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ich fahre lieber mit ganz normalen Sportschuhen.",
+        "translation": {
+          "ru-RU": "Я предпочитаю ездить в совершенно обычных спортивных кроссовках.",
+          "en-US": "I prefer riding with completely normal sports shoes.",
+          "ar-SA": "أفضل القيادة بأحذية رياضية عادية تماماً.",
+          "es-ES": "Prefiero ir con zapatillas de deporte completamente normales.",
+          "fr-FR": "Je préfère rouler avec des chaussures de sport tout à fait normales.",
+          "hi-IN": "मैं सामान्य खेल के जूतों के साथ सवारी करना पसंद करता हूँ।",
+          "pl-PL": "Wolę jeździć w zupełnie zwykłych butach sportowych.",
+          "ro-RO": "Prefer să merg cu pantofi sport absolut normali.",
+          "tr-TR": "Tamamen normal spor ayakkabılarla sürmeyi tercih ederim.",
+          "uk-UA": "Я віддаю перевагу їздити в абсолютно звичайних спортивних кросівках.",
+          "uz-UZ": "Men mutlaqo oddiy sport krossovkalarida minishni afzal ko'raman."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Normale Pedale sind für mich heute absolut ausreichend.",
+        "translation": {
+          "ru-RU": "Обычных педалей для меня сегодня абсолютно достаточно.",
+          "en-US": "Normal pedals are absolutely sufficient for me today.",
+          "ar-SA": "الدواسات العادية كافية تماماً بالنسبة لي اليوم.",
+          "es-ES": "Los pedales normales son absolutamente suficientes para mí hoy.",
+          "fr-FR": "Les pédales normales sont tout à fait suffisantes pour moi aujourd'hui.",
+          "hi-IN": "सामान्य पैडल आज मेरे लिए बिल्कुल पर्याप्त हैं।",
+          "pl-PL": "Zwykłe pedały są dla mnie dzisiaj absolutnie wystarczające.",
+          "ro-RO": "Pedalele normale sunt absolut suficiente pentru mine astăzi.",
+          "tr-TR": "Normal pedallar bugün benim için kesinlikle yeterli.",
+          "uk-UA": "Звичайних педалей для мене сьогодні абсолютно достатньо.",
+          "uz-UZ": "Bugun men uchun oddiy pedallar mutlaqo yetarli."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Perfekt, dann montiere ich normale Pedale. Brauchen Sie auch noch einen Schutzhelm dazu?",
+    "botTranslation": {
+      "ru-RU": "Идеально, тогда я установлю обычные педали. Вам также нужен защитный шлем к нему?",
+      "en-US": "Perfect, then I will mount normal pedals. Do you also need a protective helmet to go with it?",
+      "ar-SA": "ممتاز، سأقوم بتركيب دواسات عادية إذن. هل تحتاج أيضاً إلى خوذة واقية معها؟",
+      "es-ES": "Perfecto, entonces montaré pedales normales. ¿Necesita también un casco protector?",
+      "fr-FR": "Parfait, alors je monte des pédales normales. Avez-vous également besoin d'un casque de protection avec cela ?",
+      "hi-IN": "बिल्कुल, तो मैं सामान्य पैडल लगाता हूँ। क्या आपको इसके साथ एक सुरक्षा हेलमेट भी चाहिए?",
+      "pl-PL": "Idealnie, w takim razie zamontuję zwykłe pedały. Potrzebuje Pan/Pani do tego kasku ochronnego?",
+      "ro-RO": "Perfect, atunci voi monta pedale normale. Aveți nevoie și de o cască de protecție la ea?",
+      "tr-TR": "Mükemmel, o zaman normal pedallar takıyorum. Yanında koruyucu bir kask da ister misiniz?",
+      "uk-UA": "Ідеально, тоді я встановлю звичайні педалі. Вам також потрібен захисний шолом до нього?",
+      "uz-UZ": "Ajoyib, unda men oddiy pedallarni o'rnataman. Unga qo'shib himoya shlemi ham kerakmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Pedale",
+        "translation": {
+          "ru-RU": "педали",
+          "en-US": "pedals",
+          "ar-SA": "الدواسات",
+          "es-ES": "pedales",
+          "fr-FR": "pédales",
+          "hi-IN": "पैडल",
+          "pl-PL": "pedały",
+          "ro-RO": "pedale",
+          "tr-TR": "pedallar",
+          "uk-UA": "педалі",
+          "uz-UZ": "pedallar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, Sicherheit ist wichtig. Ich nehme gerne einen Fahrradhelm.",
+        "translation": {
+          "ru-RU": "Да, безопасность важна. Я с удовольствием возьму велосипедный шлем.",
+          "en-US": "Yes, safety is important. I'll gladly take a bicycle helmet.",
+          "ar-SA": "نعم، السلامة مهمة. يسعدني أن آخذ خوذة دراجة.",
+          "es-ES": "Sí, la seguridad es importante. Tomaré un casco de bicicleta con gusto.",
+          "fr-FR": "Oui, la sécurité est importante. Je prends volontiers un casque de vélo.",
+          "hi-IN": "हाँ, सुरक्षा महत्वपूर्ण है। मैं खुशी से एक साइकिल हेलमेट लूँगा।",
+          "pl-PL": "Tak, bezpieczeństwo jest ważne. Chętnie wezmę kask rowerowy.",
+          "ro-RO": "Da, siguranța este importantă. Iau cu plăcere o cască de bicicletă.",
+          "tr-TR": "Evet, güvenlik önemlidir. Memnuniyetle bir bisiklet kaskı alırım.",
+          "uk-UA": "Так, безпека важлива. Я із задоволенням візьму велосипедний шолом.",
+          "uz-UZ": "Ha, xavfsizlik muhim. Men bajonidil velosiped shlemini olaman."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Ja, bitte. Ohne Helm fahre ich keine schwierigen Strecken.",
+        "translation": {
+          "ru-RU": "Да, пожалуйста. Без шлема я не езжу по сложным маршрутам.",
+          "en-US": "Yes, please. I don't ride difficult routes without a helmet.",
+          "ar-SA": "نعم من فضلك. لا أقود في مسارات صعبة بدون خوذة.",
+          "es-ES": "Sí, por favor. Sin casco no recorro rutas difíciles.",
+          "fr-FR": "Oui, s'il vous plaît. Sans casque, je ne fais pas de parcours difficiles.",
+          "hi-IN": "हाँ, कृपया। हेलमेट के बिना मैं कठिन रास्तों पर सवारी नहीं करता।",
+          "pl-PL": "Tak, proszę. Bez kasku nie jeżdżę trudnymi trasami.",
+          "ro-RO": "Da, vă rog. Fără cască nu merg pe trasee dificile.",
+          "tr-TR": "Evet, lütfen. Kask olmadan zorlu parkurlarda sürmem.",
+          "uk-UA": "Так, будь ласка. Без шолома я не їжджу складними маршрутами.",
+          "uz-UZ": "Ha, iltimos. Shlemsiz men qiyin marshrutlarda minmayman."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Sehr vernünftig! Der Helm ist im Preis enthalten. Hier ist das Modell in passender Größe.",
+    "botTranslation": {
+      "ru-RU": "Очень разумно! Шлем включен в стоимость. Вот модель подходящего размера.",
+      "en-US": "Very sensible! The helmet is included in the price. Here is the model in the appropriate size.",
+      "ar-SA": "عقلاني جداً! الخوذة متضمنة في السعر. هذا هو النموذج بالحجم المناسب.",
+      "es-ES": "¡Muy sensato! El casco está incluido en el precio. Aquí está el modelo en la talla adecuada.",
+      "fr-FR": "Très raisonnable ! Le casque est inclus dans le prix. Voici le modèle à la bonne taille.",
+      "hi-IN": "बहुत समझदारी! हेलमेट कीमत में शामिल है। यह उचित आकार में मॉडल है।",
+      "pl-PL": "Bardzo rozsądnie! Kask jest wliczony w cenę. Oto model w odpowiednim rozmiarze.",
+      "ro-RO": "Foarte rezonabil! Casca este inclusă în preț. Iată modelul în mărimea potrivită.",
+      "tr-TR": "Çok mantıklı! Kask fiyata dahildir. İşte uygun boyuttaki model.",
+      "uk-UA": "Дуже розумно! Шолом включено у вартість. Ось модель відповідного розміру.",
+      "uz-UZ": "Juda oqilona! Shlem narx ichiga kiritilgan. Mana sizga mos o'lchamdagi model."
+    },
+    "vocabulary": [
+      {
+        "german": "der Fahrradhelm",
+        "translation": {
+          "ru-RU": "велосипедный шлем",
+          "en-US": "bicycle helmet",
+          "ar-SA": "خوذة الدراجة",
+          "es-ES": "casco de bicicleta",
+          "fr-FR": "casque de vélo",
+          "hi-IN": "साइकिल हेलमेट",
+          "pl-PL": "kask rowerowy",
+          "ro-RO": "cască de bicicletă",
+          "tr-TR": "bisiklet kaskı",
+          "uk-UA": "велосипедний шолом",
+          "uz-UZ": "velosiped shlemi"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Er sitzt bequem. Wie viel kostet die Miete für den ganzen Tag?",
+        "translation": {
+          "ru-RU": "Он сидит удобно. Сколько стоит аренда на весь день?",
+          "en-US": "It fits comfortably. How much is the rent for the whole day?",
+          "ar-SA": "إنه مريح. كم يكلف الإيجار طوال اليوم؟",
+          "es-ES": "Se ajusta cómodamente. ¿Cuánto cuesta el alquiler para todo el día?",
+          "fr-FR": "Il est confortable. Combien coûte la location pour toute la journée ?",
+          "hi-IN": "यह आरामदायक है। पूरे दिन का किराया कितना है?",
+          "pl-PL": "Leży wygodnie. Ile kosztuje wynajem na cały dzień?",
+          "ro-RO": "Stă confortabil. Cât costă chiria pentru toată ziua?",
+          "tr-TR": "Rahat oturuyor. Tüm gün için kiralama ne kadar?",
+          "uk-UA": "Він сидить зручно. Скільки коштує оренда на весь день?",
+          "uz-UZ": "U qulay turibdi. Butun kun uchun ijara qancha turadi?"
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "Passt super. Wie teuer ist das Fahrrad bis heute Abend?",
+        "translation": {
+          "ru-RU": "Подходит супер. Сколько стоит велосипед до сегодняшнего вечера?",
+          "en-US": "Fits great. How expensive is the bike until this evening?",
+          "ar-SA": "يناسب تماماً. كم تكلفة الدراجة حتى مساء اليوم؟",
+          "es-ES": "Encaja genial. ¿Qué precio tiene la bicicleta hasta esta noche?",
+          "fr-FR": "Il va super bien. Quel est le prix du vélo jusqu'à ce soir ?",
+          "hi-IN": "बहुत बढ़िया फिट है। आज शाम तक साइकिल की कीमत कितनी है?",
+          "pl-PL": "Pasuje super. Jak drogi jest rower do dzisiejszego wieczora?",
+          "ro-RO": "Se potrivește super. Cât de scumpă este bicicleta până în seara asta?",
+          "tr-TR": "Süper uyuyor. Bisiklet bu akşama kadar ne kadar?",
+          "uk-UA": "Підходить супер. Скільки коштує велосипед до сьогоднішнього вечора?",
+          "uz-UZ": "Juda mos tushdi. Velosiped bugun kechgacha qancha turadi?"
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Die Tagesmiete für das Mountainbike inklusive Helm kostet genau 35 Euro.",
+    "botTranslation": {
+      "ru-RU": "Дневная аренда горного велосипеда вместе со шлемом стоит ровно 35 евро.",
+      "en-US": "The daily rent for the mountain bike including the helmet is exactly 35 euros.",
+      "ar-SA": "يبلغ الإيجار اليومي للدراجة الجبلية مع الخوذة 35 يورو بالضبط.",
+      "es-ES": "El alquiler diario de la bicicleta de montaña, casco incluido, cuesta exactamente 35 euros.",
+      "fr-FR": "La location à la journée pour le VTT, casque inclus, coûte exactement 35 euros.",
+      "hi-IN": "हेलमेट सहित माउंटेन बाइक का दैनिक किराया ठीक 35 यूरो है।",
+      "pl-PL": "Dzienny wynajem roweru górskiego z kaskiem kosztuje dokładnie 35 euro.",
+      "ro-RO": "Chiria pe zi pentru bicicleta de munte, inclusiv casca, costă exact 35 euro.",
+      "tr-TR": "Kask dahil dağ bisikleti için günlük kira tam olarak 35 Euro'dur.",
+      "uk-UA": "Денна оренда гірського велосипеда разом із шоломом коштує рівно 35 євро.",
+      "uz-UZ": "Tog' velosipedini shlemi bilan birgalikda bir kunga ijaraga olish roppa-rosa 35 yevro turadi."
+    },
+    "vocabulary": [
+      {
+        "german": "die Miete",
+        "translation": {
+          "ru-RU": "аренда / прокат",
+          "en-US": "rent / rental",
+          "ar-SA": "الإيجار",
+          "es-ES": "alquiler",
+          "fr-FR": "location",
+          "hi-IN": "किराया",
+          "pl-PL": "wynajem / wypożyczenie",
+          "ro-RO": "chirie / închiriere",
+          "tr-TR": "kira / kiralama",
+          "uk-UA": "оренда / прокат",
+          "uz-UZ": "ijara"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Der Preis ist völlig in Ordnung. Ich bezahle direkt mit Karte.",
+        "translation": {
+          "ru-RU": "Цена вполне нормальная. Я оплачу сразу картой.",
+          "en-US": "The price is perfectly fine. I'll pay straight away by card.",
+          "ar-SA": "السعر مناسب تماماً. سأدفع مباشرة بالبطاقة.",
+          "es-ES": "El precio está perfectamente bien. Pago directamente con tarjeta.",
+          "fr-FR": "Le prix est tout à fait correct. Je paie directement par carte.",
+          "hi-IN": "कीमत बिल्कुल ठीक है। मैं सीधे कार्ड से भुगतान करूँगा।",
+          "pl-PL": "Cena jest w porządku. Zapłacę od razu kartą.",
+          "ro-RO": "Prețul este perfect în regulă. Plătesc direct cu cardul.",
+          "tr-TR": "Fiyat gayet uygun. Doğrudan kartla ödüyorum.",
+          "uk-UA": "Ціна цілком нормальна. Я оплачу відразу карткою.",
+          "uz-UZ": "Narx mutlaqo joyida. Men darhol karta bilan to'layman."
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Das ist fair für ein gutes Rad. Ich bezahle sofort bar.",
+        "translation": {
+          "ru-RU": "Это справедливо за хороший велосипед. Я заплачу сразу наличными.",
+          "en-US": "That is fair for a good bike. I'll pay in cash immediately.",
+          "ar-SA": "هذا عادل لدراجة جيدة. سأدفع نقداً على الفور.",
+          "es-ES": "Es justo para una buena bicicleta. Pago de inmediato en efectivo.",
+          "fr-FR": "C'est juste pour un bon vélo. Je paie tout de suite en espèces.",
+          "hi-IN": "एक अच्छी बाइक के लिए यह उचित है। मैं तुरंत नकद भुगतान करूँगा।",
+          "pl-PL": "To uczciwe jak za dobry rower. Zapłacę od razu gotówką.",
+          "ro-RO": "Este corect pentru o bicicletă bună. Plătesc imediat cash.",
+          "tr-TR": "İyi bir bisiklet için bu adil. Hemen nakit ödüyorum.",
+          "uk-UA": "Це справедливо за хороший велосипед. Я заплачу відразу готівкою.",
+          "uz-UZ": "Yaxshi velosiped uchun bu adolatli. Men darhol naqd to'layman."
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Vielen Dank. Das Rad steht draußen bereit und der Reifendruck ist optimal geprüft.",
+    "botTranslation": {
+      "ru-RU": "Большое спасибо. Велосипед стоит снаружи готовый, а давление в шинах оптимально проверено.",
+      "en-US": "Thank you very much. The bike is ready outside and the tire pressure has been checked optimally.",
+      "ar-SA": "شكراً جزيلاً. الدراجة جاهزة في الخارج وتم فحص ضغط الإطارات ليكون مثالياً.",
+      "es-ES": "Muchas gracias. La bicicleta está lista fuera y la presión de los neumáticos ha sido revisada de forma óptima.",
+      "fr-FR": "Merci beaucoup. Le vélo est prêt dehors et la pression des pneus a été vérifiée de manière optimale.",
+      "hi-IN": "बहुत-बहुत धन्यवाद। बाइक बाहर तैयार है और टायर का दबाव बेहतर तरीके से जाँचा गया है।",
+      "pl-PL": "Bardzo dziękuję. Rower jest gotowy na zewnątrz, a ciśnienie w oponach zostało optymalnie sprawdzone.",
+      "ro-RO": "Vă mulțumesc mult. Bicicleta este gata afară, iar presiunea în anvelope este verificată optim.",
+      "tr-TR": "Çok teşekkürler. Bisiklet dışarıda hazır duruyor ve lastik basıncı en uygun şekilde kontrol edildi.",
+      "uk-UA": "Велике спасибі. Велосипед стоїть зовні готовий, а тиск у шинах оптимально перевірено.",
+      "uz-UZ": "Katta rahmat. Velosiped tashqarida tayyor turibdi, shina bosimi esa optimal ravishda tekshirilgan."
+    },
+    "vocabulary": [
+      {
+        "german": "die Strecke",
+        "translation": {
+          "ru-RU": "дистанция / маршрут",
+          "en-US": "route / track",
+          "ar-SA": "المسار / الطريق",
+          "es-ES": "ruta / trayecto",
+          "fr-FR": "parcours / trajet",
+          "hi-IN": "मार्ग / ट्रैक",
+          "pl-PL": "trasa",
+          "ro-RO": "traseu",
+          "tr-TR": "rota / parkur",
+          "uk-UA": "маршрут / траса",
+          "uz-UZ": "marshrut / trassa"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Klasse, vielen Dank für die schnelle Vorbereitung!",
+        "translation": {
+          "ru-RU": "Класс, большое спасибо за быструю подготовку!",
+          "en-US": "Great, thank you very much for the quick preparation!",
+          "ar-SA": "رائع، شكراً جزيلاً على التحضير السريع!",
+          "es-ES": "Estupendo, ¡muchas gracias por la rápida preparación!",
+          "fr-FR": "Super, merci beaucoup pour la préparation rapide !",
+          "hi-IN": "शानदार, त्वरित तैयारी के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Świetnie, bardzo dziękuję za szybkie przygotowanie!",
+          "ro-RO": "Super, vă mulțumesc mult pentru pregătirea rapidă!",
+          "tr-TR": "Harika, hızlı hazırlık için çok teşekkürler!",
+          "uk-UA": "Клас, велике спасибі за швидку підготовку!",
+          "uz-UZ": "Zo'r, tezkor tayyorgarlik uchun katta rahmat!"
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Perfekt, danke für die tolle Hilfe und den Helm!",
+        "translation": {
+          "ru-RU": "Идеально, спасибо за отличную помощь и за шлем!",
+          "en-US": "Perfect, thanks for the great help and the helmet!",
+          "ar-SA": "ممتاز، شكراً على المساعدة الرائعة والخوذة!",
+          "es-ES": "Perfecto, ¡gracias por la gran ayuda y por el casco!",
+          "fr-FR": "Parfait, merci pour l'excellente aide et le casque !",
+          "hi-IN": "बिल्कुल, शानदार मदद और हेलमेट के लिए धन्यवाद!",
+          "pl-PL": "Idealnie, dziękuję za wspaniałą pomoc i za kask!",
+          "ro-RO": "Perfect, mulțumesc pentru ajutorul grozav și pentru cască!",
+          "tr-TR": "Mükemmel, harika yardımınız ve kask için teşekkürler!",
+          "uk-UA": "Ідеально, дякую за чудову допомогу і за шолом!",
+          "uz-UZ": "Mukammal, ajoyib yordam va shlem uchun rahmat!"
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Sehr gerne! Gute Fahrt und viel Spaß auf der Strecke. Bitte schön!",
+    "botTranslation": {
+      "ru-RU": "С удовольствием! Счастливого пути и приятной поездки на маршруте. Пожалуйста!",
+      "en-US": "With pleasure! Have a good ride and lots of fun on the route. You're welcome!",
+      "ar-SA": "بكل سرور! رحلة سعيدة واستمتع بالمسار. على الرحب والسعة!",
+      "es-ES": "¡Con mucho gusto! Buen viaje y diviértase en la ruta. ¡De nada!",
+      "fr-FR": "Avec grand plaisir ! Bonne route et amusez-vous bien sur le parcours. Je vous en prie !",
+      "hi-IN": "मुझे खुशी हुई! आपकी यात्रा मंगलमय हो और ट्रैक पर मज़ा लें। आपका स्वागत है!",
+      "pl-PL": "Bardzo proszę! Szerokiej drogi i dobrej zabawy na trasie. Proszę bardzo!",
+      "ro-RO": "Cu mare plăcere! Drum bun și distracție plăcută pe traseu. Cu plăcere!",
+      "tr-TR": "Memnuniyetle! İyi yolculuklar ve parkurda iyi eğlenceler. Rica ederim!",
+      "uk-UA": "Із задоволенням! Щасливої дороги і приємної поїздки на маршруті. Будь ласка!",
+      "uz-UZ": "Jonim bilan! Oq yo'l va marshrutda yaxshi hordiq chiqaring. Arzimaydi!"
+    },
+    "vocabulary": [],
+    "options": [],
+    "defaultNext": null
+  }
+}

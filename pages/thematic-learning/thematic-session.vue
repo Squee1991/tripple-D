@@ -19,10 +19,7 @@
     />
     <div class="session-container">
       <section v-if="loading" class="view-state view-state--loading">
-        <div class="bouncy-loader">
-          <span></span><span></span><span></span>
-        </div>
-        <p class="loading-text">{{ t('trainerPage.loading') }}</p>
+        <VLoginPreloader/>
       </section>
       <section v-else-if="thematic.selectedModule" class="view-state view-state--content">
         <div v-if="!finished" class="top-nav">
@@ -169,6 +166,7 @@ import VStreakModal from '~/src/components/V-streak.vue'
 
 import Great from '~/assets/images/Greatcon.svg'
 import Support from '~/assets/images/Support.svg'
+import VLoginPreloader from '~/src/components/V-loginPreloader.vue'
 
 import { playCorrect, playWrong, playLevelCompleted, unlockAudioByUserGesture } from '~/utils/soundManager.js'
 
@@ -950,37 +948,5 @@ onUnmounted(() => {
 .fade-scale-leave-to {
   opacity: 0;
   transform: scale(0.95);
-}
-
-/* Лоадер */
-.bouncy-loader {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.bouncy-loader span {
-  width: 18px;
-  height: 18px;
-  background: #60a5fa;
-  border: none;
-  border-radius: 50%;
-  animation: bounce 0.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95);
-}
-
-.bouncy-loader span:nth-child(2) {
-  background: #4ade80;
-  animation-delay: 0.1s;
-}
-
-.bouncy-loader span:nth-child(3) {
-  background: #fde047;
-  animation-delay: 0.2s;
-}
-
-.loading-text {
-  font-size: 20px;
-  font-weight: 900;
-  color: #4b5563;
 }
 </style>

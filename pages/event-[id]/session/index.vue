@@ -50,6 +50,7 @@ const eventData = ref({quests: []})
 const isLoading = ref(true)
 const isFinished = ref(false)
 const showExitModal = ref(false)
+const hasAnsweredInSession = ref(false)
 
 const selectedOptionIndex = ref(null)
 const userTextInput = ref('')
@@ -142,6 +143,10 @@ onMounted(async () => {
   }
 })
 
+watch(checkStatus, (status) => {
+  if (status) hasAnsweredInSession.value = true
+})
+
 watch(currentStep, () => {
   selectedOptionIndex.value = null
   userTextInput.value = ''
@@ -211,14 +216,12 @@ function closeExitModal() {
   showExitModal.value = false
 }
 
+// Реклама при любом выходе из сессии — после завершения (успех или нет) и при выходе с середины.
+// Без рекламы — только если юзер не ответил ни на одно задание
 function goBackHome() {
-  if (isFinished.value) {
-    showInterstitial(() => {
-      router.push(localePath({name: 'event-id', params: {id: eventId.value}}))
-    })
-  } else {
-    router.push(localePath({name: 'event-id', params: {id: eventId.value}}))
-  }
+  const go = () => router.push(localePath({name: 'event-id', params: {id: eventId.value}}))
+  if (isFinished.value || hasAnsweredInSession.value) showInterstitial(go)
+  else go()
 }
 
 const filledSentenceHtml = computed(() => {
@@ -551,7 +554,7 @@ const feedbackClass = computed(() => {
             </div>
           </section>
           <section v-else-if="currentStep?.type === 'matching'" class="section card">
-            <h3 class="section__title">{{ currentStep.instruction || t('eventSessionPage.connectPaar') }}</h3>
+            <h3 class="section__title">{{ currentStep.instruction ? t(currentStep.instruction) : t('eventSessionPage.connectPaar') }}</h3>
             <div class="match">
               <div class="match__cols">
                 <div class="match__col">

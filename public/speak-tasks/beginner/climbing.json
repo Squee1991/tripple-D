@@ -1,0 +1,531 @@
+{
+  "start": {
+    "botText": "Hallo! Willkommen in unserer Kletterhalle. Kletterst du heute zum ersten Mal bei uns?",
+    "botTranslation": {
+      "ru-RU": "Привет! Добро пожаловать на наш скалодром. Ты сегодня лазаешь у нас впервые?",
+      "en-US": "Hello! Welcome to our climbing gym. Are you climbing with us for the first time today?",
+      "ar-SA": "مرحباً! أهلاً بك في صالة التسلق الخاصة بنا. هل تتسلق معنا للمرة الأولى اليوم؟",
+      "es-ES": "¡Hola! Bienvenido a nuestro rocódromo. ¿Escalas con nosotros por primera vez hoy?",
+      "fr-FR": "Salut ! Bienvenue dans notre salle d'escalade. Grimpes-tu chez nous pour la première fois aujourd'hui ?",
+      "hi-IN": "नमस्ते! हमारे क्लाइम्बिंग जिम में आपका स्वागत है। क्या आप आज पहली बार हमारे साथ चढ़ाई कर रहे हैं?",
+      "pl-PL": "Cześć! Witamy na naszej ściance wspinaczkowej. Czy wspinasz się u nas dzisiaj po raz pierwszy?",
+      "ro-RO": "Salut! Bine ai venit în sala noastră de escaladă. Cațări la noi pentru prima dată astăzi?",
+      "tr-TR": "Merhaba! Tırmanış salonumuza hoş geldin. Bugün bizimle ilk defa mı tırmanıyorsun?",
+      "uk-UA": "Привіт! Ласкаво просимо на наш скеледром. Ти сьогодні лазиш у нас вперше?",
+      "uz-UZ": "Salom! Qoyaga chiqish zalimizga xush kelibsiz. Bugun bizda birinchi marta chiqishingizmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Kletterhalle",
+        "translation": {
+          "ru-RU": "скалодром",
+          "en-US": "climbing gym",
+          "ar-SA": "صالة التسلق",
+          "es-ES": "rocódromo",
+          "fr-FR": "salle d'escalade",
+          "hi-IN": "क्लाइम्बिंग हॉल (चढ़ाई का कमरा)",
+          "pl-PL": "ścianka wspinaczkowa",
+          "ro-RO": "sală de escaladă",
+          "tr-TR": "tırmanış salonu",
+          "uk-UA": "скеледром",
+          "uz-UZ": "qoyaga chiqish zali"
+        }
+      },
+      {
+        "german": "bouldern",
+        "translation": {
+          "ru-RU": "заниматься боулдерингом (лазать без страховки)",
+          "en-US": "to boulder",
+          "ar-SA": "التسلق على الصخور (بدون حبال)",
+          "es-ES": "hacer búlder",
+          "fr-FR": "faire du bloc",
+          "hi-IN": "बोल्डरिंग (बिना रस्सी के चढ़ना)",
+          "pl-PL": "bouldering",
+          "ro-RO": "a face bouldering",
+          "tr-TR": "bouldering yapmak (ipsiz tırmanış)",
+          "uk-UA": "займатися боулдерингом",
+          "uz-UZ": "bouldering bilan shug'ullanmoq"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Hallo! Ja, ich möchte heute zum ersten Mal bouldern.",
+        "translation": {
+          "ru-RU": "Привет! Да, я хочу сегодня впервые заняться боулдерингом.",
+          "en-US": "Hello! Yes, I would like to boulder for the first time today.",
+          "ar-SA": "مرحباً! نعم، أود تجربة التسلق على الصخور للمرة الأولى اليوم.",
+          "es-ES": "¡Hola! Sí, quiero hacer búlder por primera vez hoy.",
+          "fr-FR": "Salut ! Oui, je voudrais faire du bloc pour la première fois aujourd'hui.",
+          "hi-IN": "नमस्ते! हाँ, मैं आज पहली बार बोल्डरिंग करना चाहूँगा।",
+          "pl-PL": "Cześć! Tak, chciałbym dzisiaj po raz pierwszy spróbować boulderingu.",
+          "ro-RO": "Salut! Da, aș dori să fac bouldering pentru prima dată astăzi.",
+          "tr-TR": "Merhaba! Evet, bugün ilk kez bouldering yapmak istiyorum.",
+          "uk-UA": "Привіт! Так, я хочу сьогодні вперше зайнятися боулдерингом.",
+          "uz-UZ": "Salom! Ha, men bugun birinchi marta bouldering qilmoqchiman."
+        },
+        "nextStep": "step_3"
+      },
+      {
+        "text": "Guten Tag! Ich will das Klettern an der Wand mal ausprobieren.",
+        "translation": {
+          "ru-RU": "Добрый день! Я хочу попробовать полазать на стене.",
+          "en-US": "Good day! I want to try climbing on the wall.",
+          "ar-SA": "طاب يومك! أريد تجربة التسلق على الجدار.",
+          "es-ES": "¡Buen día! Quiero probar la escalada en el muro.",
+          "fr-FR": "Bonjour ! Je veux essayer l'escalade sur le mur.",
+          "hi-IN": "शुभ दिन! मैं दीवार पर चढ़ने की कोशिश करना चाहता हूँ।",
+          "pl-PL": "Dzień dobry! Chcę wypróbować wspinaczkę na ściance.",
+          "ro-RO": "Bună ziua! Vreau să încerc cățăratul pe perete.",
+          "tr-TR": "İyi günler! Duvarda tırmanmayı denemek istiyorum.",
+          "uk-UA": "Добрий день! Я хочу спробувати полазити на стіні.",
+          "uz-UZ": "Xayrli kun! Men devorga chiqishni sinab ko'rmoqchiman."
+        },
+        "nextStep": "step_3"
+      }
+    ],
+    "defaultNext": "step_3"
+  },
+  "step_3": {
+    "botText": "Sehr schön! Beim Bouldern klettert man ohne Seil über weichen Matten. Hast du schon Kletterschuhe?",
+    "botTranslation": {
+      "ru-RU": "Очень хорошо! В боулдеринге лазают без веревки над мягкими матами. У тебя уже есть скальные туфли?",
+      "en-US": "Very nice! In bouldering, you climb without a rope over soft mats. Do you already have climbing shoes?",
+      "ar-SA": "جميل جداً! في التسلق على الصخور، يتم التسلق بدون حبل فوق مراتب ناعمة. هل لديك حذاء تسلق بالفعل؟",
+      "es-ES": "¡Muy bien! En el búlder se escala sin cuerda sobre colchonetas blandas. ¿Tienes ya pies de gato (zapatos de escalada)?",
+      "fr-FR": "Très bien ! En bloc, on grimpe sans corde au-dessus de tapis de réception doux. As-tu déjà des chaussons d'escalade ?",
+      "hi-IN": "बहुत बढ़िया! बोल्डरिंग में बिना रस्सी के मुलायम मैट के ऊपर चढ़ाई की जाती है। क्या आपके पास पहले से चढ़ाई वाले जूते हैं?",
+      "pl-PL": "Bardzo ładnie! W boulderingu wspinamy się bez liny nad miękkimi materacami. Masz już buty wspinaczkowe?",
+      "ro-RO": "Foarte frumos! La bouldering te cațări fără sfoară deasupra unor saltele moi. Ai deja espadrile de escaladă?",
+      "tr-TR": "Çok güzel! Bouldering'de ipsiz olarak yumuşak minderlerin üzerinde tırmanılır. Tırmanış ayakkabın var mı?",
+      "uk-UA": "Дуже добре! У боулдерингу лазять без мотузки над м'якими матами. У тебе вже є скельні туфлі?",
+      "uz-UZ": "Juda yaxshi! Boulderingda arqonsiz yumshoq matlar ustida tirmashib chiqiladi. Sizda qoyaga chiqish poyabzali bormi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Kletterschuhe",
+        "translation": {
+          "ru-RU": "скальные туфли (скальники)",
+          "en-US": "climbing shoes",
+          "ar-SA": "حذاء التسلق",
+          "es-ES": "pies de gato / zapatos de escalada",
+          "fr-FR": "chaussons d'escalade",
+          "hi-IN": "चढ़ाई वाले जूते",
+          "pl-PL": "buty wspinaczkowe",
+          "ro-RO": "încălțăminte de escaladă",
+          "tr-TR": "tırmanış ayakkabısı",
+          "uk-UA": "скельні туфлі",
+          "uz-UZ": "qoyaga chiqish poyabzali"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Nein, ich habe keine. Kann ich mir passende Kletterschuhe leihen?",
+        "translation": {
+          "ru-RU": "Нет, у меня нет. Могу ли я взять напрокат подходящие скальные туфли?",
+          "en-US": "No, I don't have any. Can I rent suitable climbing shoes?",
+          "ar-SA": "لا، ليس لدي. هل يمكنني استئجار أحذية تسلق مناسبة؟",
+          "es-ES": "No, no tengo. ¿Puedo alquilar unos zapatos de escalada adecuados?",
+          "fr-FR": "Non, je n'en ai pas. Puis-je louer des chaussons d'escalade adaptés ?",
+          "hi-IN": "नहीं, मेरे पास नहीं हैं। क्या मैं उपयुक्त चढ़ाई वाले जूते किराए पर ले सकता हूँ?",
+          "pl-PL": "Nie, nie mam. Czy mogę wypożyczyć odpowiednie buty wspinaczkowe?",
+          "ro-RO": "Nu, nu am. Pot închiria espadrile de escaladă potrivite?",
+          "tr-TR": "Hayır, bende yok. Uygun tırmanış ayakkabısı kiralayabilir miyim?",
+          "uk-UA": "Ні, у мене немає. Чи можу я взяти напрокат відповідні скельні туфлі?",
+          "uz-UZ": "Yo'q, menda yo'q. Mos keladigan poyabzallarni ijaraga olsam bo'ladimi?"
+        },
+        "nextStep": "step_5"
+      },
+      {
+        "text": "Leider nein. Ich brauche Schuhe zum Ausleihen.",
+        "translation": {
+          "ru-RU": "К сожалению, нет. Мне нужна обувь напрокат.",
+          "en-US": "Unfortunately no. I need shoes to rent.",
+          "ar-SA": "للأسف لا. أحتاج إلى أحذية للاستئجار.",
+          "es-ES": "Lamentablemente no. Necesito zapatos para alquilar.",
+          "fr-FR": "Malheureusement non. J'ai besoin de chaussures à louer.",
+          "hi-IN": "दुर्भाग्य से नहीं। मुझे किराए पर लेने के लिए जूते चाहिए।",
+          "pl-PL": "Niestety nie. Potrzebuję butów do wypożyczenia.",
+          "ro-RO": "Din păcate nu. Am nevoie de încălțăminte de închiriat.",
+          "tr-TR": "Ne yazık ki hayır. Kiralamak için ayakkabıya ihtiyacım var.",
+          "uk-UA": "На жаль, ні. Мені потрібне взуття напрокат.",
+          "uz-UZ": "Afsuski yo'q. Menga ijaraga olish uchun poyabzal kerak."
+        },
+        "nextStep": "step_5"
+      }
+    ],
+    "defaultNext": "step_5"
+  },
+  "step_5": {
+    "botText": "Natürlich haben wir Leihschuhe da. Kletterschuhe müssen eng am Fuß sitzen. Welche Straßenschuhgröße hast du?",
+    "botTranslation": {
+      "ru-RU": "Конечно, у нас есть прокатная обувь. Скальники должны сидеть на ноге плотно. Какой у тебя размер уличной обуви?",
+      "en-US": "Of course we have rental shoes here. Climbing shoes must sit tightly on the foot. What is your street shoe size?",
+      "ar-SA": "بالطبع لدينا أحذية للإيجار هنا. يجب أن تكون أحذية التسلق ضيقة على القدم. ما هو مقاس حذائك العادي؟",
+      "es-ES": "Por supuesto, tenemos zapatos de alquiler. Los pies de gato deben quedar ajustados al pie. ¿Qué talla de zapato de calle tienes?",
+      "fr-FR": "Bien sûr, nous avons des chaussons de location. Les chaussons d'escalade doivent être serrés au pied. Quelle est ta pointure de ville ?",
+      "hi-IN": "बेशक हमारे पास किराये के जूते हैं। चढ़ाई वाले जूते पैर पर कसकर फिट होने चाहिए। आपके जूतों का साइज क्या है?",
+      "pl-PL": "Oczywiście, mamy buty do wypożyczenia. Buty wspinaczkowe muszą ściśle przylegać do stopy. Jaki masz rozmiar butów na co dzień?",
+      "ro-RO": "Desigur că avem încălțăminte de închiriat. Espadrilele trebuie să stea strâns pe picior. Ce mărime porți la încălțămintea de stradă?",
+      "tr-TR": "Elbette kiralık ayakkabılarımız var. Tırmanış ayakkabıları ayağa sıkıca oturmalıdır. Günlük ayakkabı numaran kaç?",
+      "uk-UA": "Звичайно, у нас є прокатне взуття. Скельні туфлі повинні щільно сидіти на нозі. Який у тебе розмір звичайного взуття?",
+      "uz-UZ": "Albatta bizda ijaraga beriladigan poyabzallar bor. Qoyaga chiqish poyabzallari oyoqqa qattiq yopishib turishi kerak. Odatiy poyabzal o'lchamingiz qanday?"
+    },
+    "vocabulary": [],
+    "options": [
+      {
+        "text": "Normalerweise trage ich Größe 41 bei normalen Schuhen.",
+        "translation": {
+          "ru-RU": "Обычно я ношу 41 размер в обычной обуви.",
+          "en-US": "Normally I wear size 41 in regular shoes.",
+          "ar-SA": "عادة أرتدي مقاس 41 في الأحذية العادية.",
+          "es-ES": "Normalmente uso la talla 41 en zapatos normales.",
+          "fr-FR": "Normalement je porte du 41 pour les chaussures normales.",
+          "hi-IN": "सामान्यतः मैं सामान्य जूतों में 41 आकार पहनता हूँ।",
+          "pl-PL": "Zazwyczaj noszę rozmiar 41 w normalnych butach.",
+          "ro-RO": "În mod normal port mărimea 41 la pantofii obișnuiți.",
+          "tr-TR": "Normalde günlük ayakkabılarda 41 numara giyiyorum.",
+          "uk-UA": "Зазвичай я ношу 41 розмір у звичайному взутті.",
+          "uz-UZ": "Odatda men oddiy poyabzallarda 41 o'lcham kiyaman."
+        },
+        "nextStep": "step_7"
+      },
+      {
+        "text": "Meine normale Größe ist 42 .",
+        "translation": {
+          "ru-RU": "Мой обычный размер 42.",
+          "en-US": "My regular size is 42.",
+          "ar-SA": "مقاسي العادي هو 42.",
+          "es-ES": "Mi talla normal es la 42.",
+          "fr-FR": "Ma pointure normale est le 42.",
+          "hi-IN": "मेरा सामान्य साइज 42 है।",
+          "pl-PL": "Mój normalny rozmiar to 42.",
+          "ro-RO": "Mărimea mea normală este 42.",
+          "tr-TR": "Normal numaram 42.",
+          "uk-UA": "Мій звичайний розмір 42.",
+          "uz-UZ": "Mening odatiy o'lchamim 42."
+        },
+        "nextStep": "step_7"
+      }
+    ],
+    "defaultNext": "step_7"
+  },
+  "step_7": {
+    "botText": "Alles klar. Dann nimm dieses Paar hier. Brauchst du auch einen Beutel mit Magnesia für besseren Halt?",
+    "botTranslation": {
+      "ru-RU": "Понятно. Тогда возьми эту пару. Тебе также нужен мешочек с магнезией для лучшего сцепления?",
+      "en-US": "All right. Then take this pair here. Do you also need a bag with magnesia for better grip?",
+      "ar-SA": "حسناً. إذن خذ هذا الزوج هنا. هل تحتاج أيضاً إلى حقيبة من المغنيسيا لتماسك أفضل؟",
+      "es-ES": "De acuerdo. Entonces toma este par de aquí. ¿Necesitas también una bolsa con magnesio para un mejor agarre?",
+      "fr-FR": "D'accord. Prends cette paire ici. As-tu aussi besoin d'un sac de magnésie pour une meilleure prise ?",
+      "hi-IN": "ठीक है। तो ये वाले लें। क्या आपको बेहतर पकड़ के लिए मैग्नेशिया का थैला भी चाहिए?",
+      "pl-PL": "W porządku. To weź tę parę. Potrzebujesz też woreczka z magnezją dla lepszego chwytu?",
+      "ro-RO": "Am înțeles. Atunci ia perechea aceasta de aici. Ai nevoie și de un săculeț cu magneziu pentru o priză mai bună?",
+      "tr-TR": "Tamamdır. O zaman bu çifti al. Daha iyi bir tutuş için magnezyum tozu kesesine de ihtiyacın var mı?",
+      "uk-UA": "Зрозуміло. Тоді візьми цю пару. Тобі також потрібен мішечок із магнезією для кращого зчеплення?",
+      "uz-UZ": "Tushunarli. Unda bu juftlikni oling. Yaxshiroq ushlash uchun sizga magneziya solingan xaltacha ham kerakmi?"
+    },
+    "vocabulary": [
+      {
+        "german": "die Magnesia",
+        "translation": {
+          "ru-RU": "магнезия",
+          "en-US": "magnesia / climbing chalk",
+          "ar-SA": "المغنيسيا (طباشير التسلق)",
+          "es-ES": "magnesio",
+          "fr-FR": "magnésie",
+          "hi-IN": "मैग्नेशिया (चढ़ाई का चॉक)",
+          "pl-PL": "magnezja",
+          "ro-RO": "magneziu (pudră)",
+          "tr-TR": "magnezyum tozu",
+          "uk-UA": "магнезія",
+          "uz-UZ": "magneziya (kukuni)"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Ja, meine Hände schwitzen schnell beim Sport.",
+        "translation": {
+          "ru-RU": "Да, мои руки быстро потеют во время занятий спортом.",
+          "en-US": "Yes, my hands sweat quickly during sports.",
+          "ar-SA": "نعم، تتعرق يداي بسرعة أثناء ممارسة الرياضة.",
+          "es-ES": "Sí, mis manos sudan rápidamente al hacer deporte.",
+          "fr-FR": "Oui, mes mains transpirent vite pendant le sport.",
+          "hi-IN": "हाँ, खेल के दौरान मेरे हाथ जल्दी पसीने से तर हो जाते हैं।",
+          "pl-PL": "Tak, moje dłonie szybko się pocą podczas uprawiania sportu.",
+          "ro-RO": "Da, mâinile îmi transpiră repede în timpul sportului.",
+          "tr-TR": "Evet, spor yaparken ellerim çabuk terliyor.",
+          "uk-UA": "Так, мої руки швидко потіють під час занять спортом.",
+          "uz-UZ": "Ha, sport paytida qo'llarim tez terlaydi."
+        },
+        "nextStep": "step_9"
+      },
+      {
+        "text": "Ja, bitte. Den Chalk-Beutel nehme ich auch gerne mit.",
+        "translation": {
+          "ru-RU": "Да, пожалуйста. Я с удовольствием возьму и мешочек с магнезией (мелом).",
+          "en-US": "Yes, please. I will gladly take the chalk bag with me too.",
+          "ar-SA": "نعم من فضلك. يسعدني أن آخذ حقيبة الطباشير أيضاً.",
+          "es-ES": "Sí, por favor. También me llevaré la bolsa de magnesio con gusto.",
+          "fr-FR": "Oui, s'il te plaît. Je prends volontiers le sac à pof aussi.",
+          "hi-IN": "हाँ, कृपया। मैं चॉक बैग भी ख़ुशी से साथ लूँगा।",
+          "pl-PL": "Tak, proszę. Woreczek na magnezję też chętnie wezmę.",
+          "ro-RO": "Da, te rog. Iau cu plăcere și săculețul cu cretă.",
+          "tr-TR": "Evet, lütfen. Toz kesesini de memnuniyetle alırım.",
+          "uk-UA": "Так, будь ласка. Я із задоволенням візьму і мішечок з магнезією.",
+          "uz-UZ": "Ha, iltimos. Bo'r (magneziya) xaltachasini ham bajonidil olaman."
+        },
+        "nextStep": "step_9"
+      }
+    ],
+    "defaultNext": "step_9"
+  },
+  "step_9": {
+    "botText": "Sehr gut, damit rutschen die Finger an den Griffen nicht ab. Der Eintritt und die Ausrüstung kosten zusammen 16,50 Euro.",
+    "botTranslation": {
+      "ru-RU": "Отлично, с ней пальцы не будут соскальзывать с зацепов. Вход и снаряжение стоят вместе 16,50 евро.",
+      "en-US": "Very good, that way your fingers won't slip on the holds. The entrance and the equipment cost 16.50 euros in total.",
+      "ar-SA": "جيد جداً، بهذا لن تنزلق أصابعك على المقابض. الدخول والمعدات يكلفان معاً 16.50 يورو.",
+      "es-ES": "Muy bien, así los dedos no se resbalan en los agarres. La entrada y el equipo cuestan en total 16,50 euros.",
+      "fr-FR": "Très bien, ainsi les doigts ne glissent pas sur les prises. L'entrée et l'équipement coûtent au total 16,50 euros.",
+      "hi-IN": "बहुत अच्छा, इससे आपकी उंगलियां पकड़ से नहीं फिसलेंगी। प्रवेश और उपकरण की कुल कीमत 16.50 यूरो है।",
+      "pl-PL": "Bardzo dobrze, dzięki temu palce nie ześlizgują się z chwytów. Wstęp i sprzęt kosztują razem 16,50 euro.",
+      "ro-RO": "Foarte bine, astfel degetele nu alunecă pe prize. Intrarea și echipamentul costă în total 16,50 euro.",
+      "tr-TR": "Çok iyi, böylece parmaklar tutamaklardan kaymaz. Giriş ve ekipman toplam 16,50 Euro tutuyor.",
+      "uk-UA": "Дуже добре, з нею пальці не будуть зісковзувати з зачепів. Вхід і спорядження коштують разом 16,50 євро.",
+      "uz-UZ": "Juda yaxshi, bu bilan barmoqlar tutqichlardan sirpanib ketmaydi. Kirish va jihozlar jami 16,50 yevro turadi."
+    },
+    "vocabulary": [
+      {
+        "german": "die Ausrüstung",
+        "translation": {
+          "ru-RU": "снаряжение / экипировка",
+          "en-US": "equipment",
+          "ar-SA": "المعدات",
+          "es-ES": "equipo / equipamiento",
+          "fr-FR": "équipement",
+          "hi-IN": "उपकरण",
+          "pl-PL": "sprzęt",
+          "ro-RO": "echipament",
+          "tr-TR": "ekipman / donanım",
+          "uk-UA": "спорядження / екіпірування",
+          "uz-UZ": "jihoz / uskunalar"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Das ist ein fairer Preis. Ich bezahle direkt mit Karte.",
+        "translation": {
+          "ru-RU": "Это справедливая цена. Я плачу сразу картой.",
+          "en-US": "That is a fair price. I'll pay straight away by card.",
+          "ar-SA": "هذا سعر عادل. سأدفع مباشرة بالبطاقة.",
+          "es-ES": "Es un precio justo. Pago directamente con tarjeta.",
+          "fr-FR": "C'est un prix juste. Je paie directement par carte.",
+          "hi-IN": "यह एक उचित कीमत है। मैं सीधे कार्ड से भुगतान करूँगा।",
+          "pl-PL": "To uczciwa cena. Zapłacę od razu kartą.",
+          "ro-RO": "Este un preț corect. Plătesc direct cu cardul.",
+          "tr-TR": "Bu adil bir fiyat. Doğrudan kartla ödüyorum.",
+          "uk-UA": "Це справедлива ціна. Я плачу відразу карткою.",
+          "uz-UZ": "Bu adolatli narx. Men darhol karta bilan to'layman."
+        },
+        "nextStep": "step_11"
+      },
+      {
+        "text": "In Ordnung. Ich gebe dir das Geld passend in bar.",
+        "translation": {
+          "ru-RU": "Хорошо. Я дам тебе деньги наличными без сдачи.",
+          "en-US": "All right. I'll give you the exact amount in cash.",
+          "ar-SA": "حسناً. سأعطيك المبلغ بالضبط نقداً.",
+          "es-ES": "De acuerdo. Te doy el dinero exacto en efectivo.",
+          "fr-FR": "D'accord. Je te donne l'argent en espèces avec le montant exact.",
+          "hi-IN": "ठीक है। मैं आपको नकद में सटीक राशि दूँगा।",
+          "pl-PL": "W porządku. Dam ci odliczoną gotówkę.",
+          "ro-RO": "În regulă. Îți dau banii cash și fix.",
+          "tr-TR": "Tamam. Parayı sana nakit olarak tam vereceğim.",
+          "uk-UA": "Добре. Я дам тобі гроші готівкою без решти.",
+          "uz-UZ": "Yaxshi. Men pulni naqd ko'rinishda roppa-rosa qilib beraman."
+        },
+        "nextStep": "step_11"
+      }
+    ],
+    "defaultNext": "step_11"
+  },
+  "step_11": {
+    "botText": "Perfekt, danke schön! Bevor du startest: Achte bitte auf die Farben der Griffe für die Routen.",
+    "botTranslation": {
+      "ru-RU": "Идеально, большое спасибо! Прежде чем ты начнешь: обращай внимание на цвета зацепов для маршрутов.",
+      "en-US": "Perfect, thank you! Before you start: Please pay attention to the colors of the holds for the routes.",
+      "ar-SA": "ممتاز، شكراً جزيلاً! قبل أن تبدأ: يرجى الانتباه إلى ألوان المقابض للمسارات.",
+      "es-ES": "¡Perfecto, muchas gracias! Antes de que empieces: Fíjate en los colores de los agarres para las rutas.",
+      "fr-FR": "Parfait, merci beaucoup ! Avant de commencer : fais attention aux couleurs des prises pour les voies.",
+      "hi-IN": "बिल्कुल सही, धन्यवाद! शुरू करने से पहले: कृपया मार्गों के लिए पकड़ के रंगों पर ध्यान दें।",
+      "pl-PL": "Idealnie, bardzo dziękuję! Zanim zaczniesz: Zwracaj proszę uwagę na kolory chwytów dla tras.",
+      "ro-RO": "Perfect, mulțumesc frumos! Înainte să începi: te rog să fii atent la culorile prizelor pentru trasee.",
+      "tr-TR": "Mükemmel, çok teşekkürler! Başlamadan önce: Rotalar için tutamakların renklerine lütfen dikkat et.",
+      "uk-UA": "Ідеально, велике спасибі! Перш ніж ти почнеш: звертай увагу на кольори зачепів для маршрутів.",
+      "uz-UZ": "Ajoyib, katta rahmat! Boshlashingizdan oldin: Marshrutlar uchun tutqichlarning ranglariga e'tibor bering."
+    },
+    "vocabulary": [
+      {
+        "german": "die Route",
+        "translation": {
+          "ru-RU": "маршрут / трасса",
+          "en-US": "route / climbing path",
+          "ar-SA": "المسار",
+          "es-ES": "ruta / vía",
+          "fr-FR": "voie / route",
+          "hi-IN": "मार्ग / रास्ता",
+          "pl-PL": "trasa / droga",
+          "ro-RO": "traseu",
+          "tr-TR": "rota",
+          "uk-UA": "маршрут / траса",
+          "uz-UZ": "marshrut / trassa"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Welche Farbe ist für Anfänger am leichtesten?",
+        "translation": {
+          "ru-RU": "Какой цвет самый легкий для новичков?",
+          "en-US": "Which color is the easiest for beginners?",
+          "ar-SA": "أي لون هو الأسهل للمبتدئين؟",
+          "es-ES": "¿Qué color es el más fácil para principiantes?",
+          "fr-FR": "Quelle couleur est la plus facile pour les débutants ?",
+          "hi-IN": "शुरुआती लोगों के लिए कौन सा रंग सबसे आसान है?",
+          "pl-PL": "Który kolor jest najłatwiejszy dla początkujących?",
+          "ro-RO": "Care culoare este cea mai ușoară pentru începători?",
+          "tr-TR": "Yeni başlayanlar için hangi renk en kolayıdır?",
+          "uk-UA": "Який колір найлегший для новачків?",
+          "uz-UZ": "Yangi boshlovchilar uchun qaysi rang eng osondir?"
+        },
+        "nextStep": "step_13"
+      },
+      {
+        "text": "Gibt es einfache Routen für den Einstieg?",
+        "translation": {
+          "ru-RU": "Есть ли простые маршруты для начала?",
+          "en-US": "Are there easy routes to start with?",
+          "ar-SA": "هل هناك مسارات سهلة للبدء بها؟",
+          "es-ES": "¿Hay rutas sencillas para empezar?",
+          "fr-FR": "Y a-t-il des voies simples pour commencer ?",
+          "hi-IN": "क्या शुरुआत करने के लिए आसान मार्ग हैं?",
+          "pl-PL": "Czy są proste trasy na początek?",
+          "ro-RO": "Există trasee simple pentru început?",
+          "tr-TR": "Başlangıç için basit rotalar var mı?",
+          "uk-UA": "Чи є прості маршрути для початку?",
+          "uz-UZ": "Boshlash uchun oddiy marshrutlar bormi?"
+        },
+        "nextStep": "step_13"
+      }
+    ],
+    "defaultNext": "step_13"
+  },
+  "step_13": {
+    "botText": "Die gelben Griffe markieren die leichtesten Strecken für Einsteiger. Springe am Ende immer kontrolliert auf die Matte.",
+    "botTranslation": {
+      "ru-RU": "Желтые зацепы обозначают самые легкие трассы для начинающих. В конце всегда контролируемо спрыгивай на мат.",
+      "en-US": "The yellow holds mark the easiest routes for beginners. Always jump down in a controlled manner onto the mat at the end.",
+      "ar-SA": "المقابض الصفراء تحدد أسهل المسارات للمبتدئين. اقفز دائماً في النهاية بشكل متحكم على المرتبة.",
+      "es-ES": "Los agarres amarillos marcan las rutas más fáciles para principiantes. Salta siempre de forma controlada a la colchoneta al final.",
+      "fr-FR": "Les prises jaunes marquent les parcours les plus faciles pour les débutants. Saute toujours de manière contrôlée sur le tapis à la fin.",
+      "hi-IN": "पीली पकड़ें शुरुआती लोगों के लिए सबसे आसान मार्गों को चिह्नित करती हैं। अंत में हमेशा नियंत्रित तरीके से मैट पर कूदें।",
+      "pl-PL": "Żółte chwyty oznaczają najłatwiejsze trasy dla początkujących. Na końcu zawsze skacz na materac w sposób kontrolowany.",
+      "ro-RO": "Prizele galbene marchează cele mai ușoare trasee pentru începători. La final, sari mereu controlat pe saltea.",
+      "tr-TR": "Sarı tutamaklar yeni başlayanlar için en kolay parkurları işaretler. Sonunda mindere her zaman kontrollü bir şekilde atla.",
+      "uk-UA": "Жовті зачепи позначають найлегші траси для початківців. В кінці завжди контрольовано зістрибуй на мат.",
+      "uz-UZ": "Sariq tutqichlar yangi boshlovchilar uchun eng oson yo'nalishlarni bildiradi. Oxirida har doim mat ustiga boshqariladigan tarzda sakrang."
+    },
+    "vocabulary": [
+      {
+        "german": "der Griff",
+        "translation": {
+          "ru-RU": "зацеп / ручка",
+          "en-US": "hold / grip",
+          "ar-SA": "المقبض",
+          "es-ES": "agarre / presa",
+          "fr-FR": "prise",
+          "hi-IN": "पकड़",
+          "pl-PL": "chwyt",
+          "ro-RO": "priză (la escaladă)",
+          "tr-TR": "tutamak / kulp",
+          "uk-UA": "зачіп / ручка",
+          "uz-UZ": "tutqich (qoyaga chiqishda)"
+        }
+      },
+      {
+        "german": "die Matte",
+        "translation": {
+          "ru-RU": "мат (страховочный)",
+          "en-US": "mat / crash pad",
+          "ar-SA": "المرتبة / الحصيرة",
+          "es-ES": "colchoneta",
+          "fr-FR": "tapis (de réception)",
+          "hi-IN": "गद्दा / मैट",
+          "pl-PL": "materac",
+          "ro-RO": "saltea",
+          "tr-TR": "minder",
+          "uk-UA": "мат (страхувальний)",
+          "uz-UZ": "mat / to'shak"
+        }
+      }
+    ],
+    "options": [
+      {
+        "text": "Alles klar, vielen Dank für die Erklärung!",
+        "translation": {
+          "ru-RU": "Всё понятно, большое спасибо за объяснение!",
+          "en-US": "All right, thank you very much for the explanation!",
+          "ar-SA": "حسناً، شكراً جزيلاً على الشرح!",
+          "es-ES": "De acuerdo, ¡muchas gracias por la explicación!",
+          "fr-FR": "D'accord, merci beaucoup pour l'explication !",
+          "hi-IN": "ठीक है, स्पष्टीकरण के लिए बहुत-बहुत धन्यवाद!",
+          "pl-PL": "Wszystko jasne, bardzo dziękuję za wyjaśnienie!",
+          "ro-RO": "Am înțeles, mulțumesc mult pentru explicație!",
+          "tr-TR": "Anlaşıldı, açıklama için çok teşekkürler!",
+          "uk-UA": "Все зрозуміло, велике спасибі за пояснення!",
+          "uz-UZ": "Tushunarli, tushuntirish uchun katta rahmat!"
+        },
+        "nextStep": "step_15"
+      },
+      {
+        "text": "Super, danke für die Einweisung. Ich lege jetzt los!",
+        "translation": {
+          "ru-RU": "Супер, спасибо за инструктаж. Я приступаю прямо сейчас!",
+          "en-US": "Super, thanks for the instruction. I'll get started now!",
+          "ar-SA": "رائع، شكراً على التوجيهات. سأبدأ الآن!",
+          "es-ES": "Súper, gracias por la instrucción. ¡Empiezo ahora mismo!",
+          "fr-FR": "Super, merci pour les instructions. Je commence maintenant !",
+          "hi-IN": "सुपर, निर्देशों के लिए धन्यवाद। मैं अब शुरू करूँगा!",
+          "pl-PL": "Super, dziękuję za instruktaż. Zaczynam teraz!",
+          "ro-RO": "Super, mulțumesc pentru instrucțiuni. Mă apuc de treabă acum!",
+          "tr-TR": "Süper, talimatlar için teşekkürler. Şimdi başlıyorum!",
+          "uk-UA": "Супер, дякую за інструктаж. Я починаю прямо зараз!",
+          "uz-UZ": "Zo'r, ko'rsatmalar uchun rahmat. Men hozir boshlayman!"
+        },
+        "nextStep": "step_15"
+      }
+    ],
+    "defaultNext": "step_15"
+  },
+  "step_15": {
+    "botText": "Sehr gerne! Pass auf dich auf und viel Spaß an der Wand. Bitte schön!",
+    "botTranslation": {
+      "ru-RU": "С удовольствием! Береги себя и получай удовольствие на стене. Пожалуйста!",
+      "en-US": "With pleasure! Take care and have fun on the wall. You're welcome!",
+      "ar-SA": "بكل سرور! اعتنِ بنفسك واستمتع على الجدار. على الرحب والسعة!",
+      "es-ES": "¡Con mucho gusto! Cuídate y diviértete en el muro. ¡De nada!",
+      "fr-FR": "Avec grand plaisir ! Fais attention à toi et amuse-toi bien sur le mur. Je t'en prie !",
+      "hi-IN": "मुझे खुशी हुई! अपना ख्याल रखें और दीवार पर मज़े करें। आपका स्वागत है!",
+      "pl-PL": "Bardzo proszę! Uważaj na siebie i dobrej zabawy na ściance. Proszę bardzo!",
+      "ro-RO": "Cu mare plăcere! Ai grijă de tine și distracție plăcută pe perete. Cu plăcere!",
+      "tr-TR": "Memnuniyetle! Kendine dikkat et ve duvarda iyi eğlenceler. Rica ederim!",
+      "uk-UA": "Із задоволенням! Бережи себе і отримуй задоволення на стіні. Будь ласка!",
+      "uz-UZ": "Jonim bilan! O'zingizni ehtiyot qiling va devorda yaxshi hordiq chiqaring. Arzimaydi!"
+    },
+    "defaultNext": null
+  }
+}

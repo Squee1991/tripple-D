@@ -307,7 +307,6 @@ const showReminderModal = ref(false)
 let afterReminderPrompt = null
 
 let reviewCheckedForSession = false
-let reviewRequestedThisQuest = false
 
 watch(shouldShowResultScreen, (visible) => {
   if (!visible || !questStore.success) return
@@ -318,10 +317,7 @@ watch(shouldShowResultScreen, (visible) => {
   const canPrompt = !shouldAskForReminders()
   setTimeout(async () => {
     const requested = await onQuestSuccessForReview(canPrompt && shouldShowResultScreen.value)
-    if (requested) {
-      reviewRequestedThisQuest = true
-      $track('app_review_requested', {quest_id: questId.value})
-    }
+    if (requested) $track('app_review_requested', {quest_id: questId.value})
   }, 1500)
 })
 
@@ -332,15 +328,10 @@ function withReminderPrompt(next) {
   showReminderModal.value = true
 }
 
-// Выход с экрана результатов: окно напоминаний → реклама (только после успеха) → переход.
-// После проигрыша рекламы нет — там есть восстановление жизни за рекламу.
-// В тот раз, когда показали окно напоминаний или оценки, рекламу не показываем
+// Выход с экрана результатов: сначала все модалки (напоминания), в самом конце реклама → переход.
+// Реклама и после успеха, и после проигрыша
 function leaveResultScreen(next) {
-  const reminderPromptShown = questStore.success && shouldAskForReminders()
-  withReminderPrompt(() => {
-    if (!questStore.success || reminderPromptShown || reviewRequestedThisQuest) return next()
-    showInterstitial(next)
-  })
+  withReminderPrompt(() => showInterstitial(next))
 }
 
 function continueAfterReminderPrompt() {
@@ -614,8 +605,11 @@ function confirmLeave() {
   })
   allowLeave = true
   showLeaveModal.value = false
-  if (pendingRoute.value) pendingRoute.value()
-  else goThemes()
+  const go = pendingRoute.value || goThemes
+  // Жизни кончились (окно восстановления → «Назад» → «Выйти») — это конец урока, показываем рекламу.
+  // Выход с середины урока по желанию — без рекламы
+  if (questStore.lives <= 0) showInterstitial(go)
+  else go()
 }
 
 function stayHere() {
@@ -678,7 +672,6 @@ watch([questId, regionKey], async () => {
       showPremiumModal.value = false
       hasShownPremiumForRevive.value = false
       reviewCheckedForSession = false
-      reviewRequestedThisQuest = false
       initialStreak.value = authStore.streakCount || 0
       streakWasIncremented.value = false
       showStreakModal.value = false
