@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
 import { userAuthStore } from "~/store/authStore.js"
 import Header from '../src/components/header.vue'
 import Banner from '../src/components/banner.vue'
@@ -12,9 +12,13 @@ import VEventAvailableModal from "../src/components/V-eventAvailableModal.vue";
 import VShowFall from "../src/components/V-showFall.vue";
 import Snow from "../assets/images/mery-christmas/Snow.svg";
 import HeartFall from "assets/images/mery-christmas/heartFall.svg";
+import VHalloweenEffects from "../src/components/V-halloweenEffects.vue";
+import LeafOrange from "../assets/images/halloween-effects/leafOrange.svg";
+import LeafGold from "../assets/images/halloween-effects/leafGold.svg";
 import { useEventSessionStore } from '../store/eventsStore.js'
 import VStartPage from "~/src/components/V-startPage.vue";
 import VAppBanner from "~/src/components/V-appBanner.vue";
+import VHedgehogGuide from "~/src/components/V-hedgehogGuide.vue";
 
 
 const showLogin = ref(false)
@@ -22,6 +26,22 @@ const eventStore = useEventSessionStore()
 const authStore = userAuthStore()
 const hydrated = ref(false)
 const isLocallyLogged = ref(false)
+const colorMode = useColorMode()
+
+// Эффекты Хэллоуина — только на главной после входа:
+// пока идёт его событие (в любой теме) или включена купленная тема
+const isHalloweenFx = computed(() =>
+    !!authStore.uid && (colorMode.value === 'orange' || eventStore.isEventActive('pumpkin'))
+)
+
+// html.halloween-fx делает фон body прозрачным, чтобы было видно эффекты под контентом
+watch(isHalloweenFx, (on) => {
+  if (process.client) document.documentElement.classList.toggle('halloween-fx', on)
+}, { immediate: true })
+
+onBeforeUnmount(() => {
+  document.documentElement.classList.remove('halloween-fx')
+})
 
 definePageMeta({
   layout: 'footerlayout'
@@ -46,6 +66,18 @@ watch(() => authStore.uid, (newUid) => {
 <template>
   <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
   <VShowFall v-if="eventStore.isSnowEnabled" :image="Snow"/>
+  <ClientOnly>
+    <template v-if="isHalloweenFx">
+      <div class="halloween-layer halloween-layer--back" aria-hidden="true">
+        <VHalloweenEffects layer="back"/>
+        <VShowFall :image="LeafOrange" :count="3"/>
+        <VShowFall :image="LeafGold" :count="2"/>
+      </div>
+      <div class="halloween-layer" aria-hidden="true">
+        <VHalloweenEffects/>
+      </div>
+    </template>
+  </ClientOnly>
   <div class="container">
     <ClientOnly>
       <template v-if="authStore.uid">
@@ -54,6 +86,7 @@ watch(() => authStore.uid, (newUid) => {
           <VUid/>
           <Footer/>
         </div>
+        <VHedgehogGuide/>
       </template>
     </ClientOnly>
     <template v-if="authStore.initialized && !authStore.uid">
@@ -68,6 +101,19 @@ watch(() => authStore.uid, (newUid) => {
 </template>
 
 <style scoped>
+/* Эффекты поверх контента главной (клики проходят насквозь), но ниже меню и модалок */
+.halloween-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* листья, звёзды и нижняя паутина — за элементами главной */
+.halloween-layer--back {
+  z-index: -1;
+}
+
 .container {
   max-width: 1240px;
   width: 100%;

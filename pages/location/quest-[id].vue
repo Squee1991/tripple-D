@@ -1004,7 +1004,7 @@ watchEffect(() => {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 500px;
+  max-width: 470px;
   gap: 15px;
   align-items: flex-start;
   padding: 15px 20px;

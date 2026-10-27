@@ -407,6 +407,7 @@ onBeforeUnmount(() => clearTimeout(typingTimer))
   z-index: 19000;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(4px);
 }
@@ -415,9 +416,11 @@ onBeforeUnmount(() => clearTimeout(typingTimer))
   position: relative;
   display: flex;
   flex-direction: column;
+  /* шторка не шире 768px и по центру: на телефоне — во всю ширину, на компьютере — аккуратная панель */
   width: 100%;
+  max-width: 768px;
   max-height: calc(100dvh - 100px);
-  padding: 0 max(16px, calc((100% - 480px) / 2)) calc(14px + env(safe-area-inset-bottom));
+  padding: 0 16px calc(14px + env(safe-area-inset-bottom));
   border-radius: 28px 28px 0 0;
   background: var(--bg);
   box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.35);
