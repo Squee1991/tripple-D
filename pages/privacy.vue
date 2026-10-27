@@ -41,15 +41,16 @@
 <script setup>
 import { ref } from "vue"
 import { useRouter } from "vue-router"
+import { PROJECT_NAME, SUPPORT_EMAIL, formatLegalDate } from "~/constants/legal.constants.js"
 
 const router = useRouter()
 const { t } = useI18n()
 
-const PROJECT = "SkillUpGerman"
-const EMAIL = "skillupgerman.com@gmail.com"
+const PROJECT = PROJECT_NAME
+const EMAIL = SUPPORT_EMAIL
 const COUNTRY = "Poland"
 const CITY = "Szczecin"
-const lastUpdated = ref("July 30, 2026")
+const lastUpdated = ref(formatLegalDate('en-US'))
 
 const sections = ref([
   {
