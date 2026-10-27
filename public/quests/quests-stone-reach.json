@@ -803,6 +803,34 @@
         "translation-ro": "Raft",
         "translation-tr": "Raf",
         "translation-uz": "Rf / Javon"
+      },
+      {
+        "word": "die Tür",
+        "translation-ru": "Дверь",
+        "translation-en": "Door",
+        "translation-uk": "Двері",
+        "translation-pl": "Drzwi",
+        "translation-es": "Puerta",
+        "translation-fr": "Porte",
+        "translation-ar": "باب",
+        "translation-hi": "दरवाज़ा",
+        "translation-ro": "Ușă",
+        "translation-tr": "Kapı",
+        "translation-uz": "Eshik"
+      },
+      {
+        "word": "die Tasse",
+        "translation-ru": "Чашка",
+        "translation-en": "Cup",
+        "translation-uk": "Чашка",
+        "translation-pl": "Filiżanka",
+        "translation-es": "Taza",
+        "translation-fr": "Tasse",
+        "translation-ar": "فنجان",
+        "translation-hi": "कप",
+        "translation-ro": "Ceașcă",
+        "translation-tr": "Fincan",
+        "translation-uz": "Piyola"
       }
     ],
     "tasks": [
@@ -1115,6 +1143,90 @@
         "translation-ro": "Și",
         "translation-tr": "Ve",
         "translation-uz": "Va"
+      },
+      {
+        "word": "die Bücher",
+        "translation-ru": "Книги",
+        "translation-en": "Books",
+        "translation-uk": "Книги",
+        "translation-pl": "Książki",
+        "translation-es": "Libros",
+        "translation-fr": "Livres",
+        "translation-ar": "كتب",
+        "translation-hi": "किताबें",
+        "translation-ro": "Cărți",
+        "translation-tr": "Kitaplar",
+        "translation-uz": "Kitoblar"
+      },
+      {
+        "word": "die Stühle",
+        "translation-ru": "Стулья",
+        "translation-en": "Chairs",
+        "translation-uk": "Стільці",
+        "translation-pl": "Krzesła",
+        "translation-es": "Sillas",
+        "translation-fr": "Chaises",
+        "translation-ar": "كراسي",
+        "translation-hi": "कुर्सियाँ",
+        "translation-ro": "Scaune",
+        "translation-tr": "Sandalyeler",
+        "translation-uz": "Stullar"
+      },
+      {
+        "word": "die Bilder",
+        "translation-ru": "Картины",
+        "translation-en": "Pictures",
+        "translation-uk": "Картини",
+        "translation-pl": "Obrazy",
+        "translation-es": "Cuadros",
+        "translation-fr": "Tableaux",
+        "translation-ar": "صور",
+        "translation-hi": "तस्वीरें",
+        "translation-ro": "Tablouri",
+        "translation-tr": "Resimler",
+        "translation-uz": "Rasmlar"
+      },
+      {
+        "word": "die Türen",
+        "translation-ru": "Двери",
+        "translation-en": "Doors",
+        "translation-uk": "Двері (мн.)",
+        "translation-pl": "Drzwi (lm.)",
+        "translation-es": "Puertas",
+        "translation-fr": "Portes",
+        "translation-ar": "أبواب",
+        "translation-hi": "दरवाज़े",
+        "translation-ro": "Uși",
+        "translation-tr": "Kapılar",
+        "translation-uz": "Eshiklar"
+      },
+      {
+        "word": "die Tassen",
+        "translation-ru": "Чашки",
+        "translation-en": "Cups",
+        "translation-uk": "Чашки",
+        "translation-pl": "Filiżanki",
+        "translation-es": "Tazas",
+        "translation-fr": "Tasses",
+        "translation-ar": "فناجين",
+        "translation-hi": "कप (बहुवचन)",
+        "translation-ro": "Cești",
+        "translation-tr": "Fincanlar",
+        "translation-uz": "Piyolalar"
+      },
+      {
+        "word": "keine",
+        "translation-ru": "Нет (никаких)",
+        "translation-en": "No (none)",
+        "translation-uk": "Жодних",
+        "translation-pl": "Żadne",
+        "translation-es": "Ningún / Ninguna",
+        "translation-fr": "Aucun / Pas de",
+        "translation-ar": "لا يوجد",
+        "translation-hi": "कोई नहीं",
+        "translation-ro": "Niciun / Nicio",
+        "translation-tr": "Hiç ... yok",
+        "translation-uz": "Hech qanday"
       }
     ],
     "tasks": [
@@ -1647,6 +1759,20 @@
         "translation-ro": "Canapea",
         "translation-tr": "Kanepe",
         "translation-uz": "Divan"
+      },
+      {
+        "word": "der Fernseher",
+        "translation-ru": "Телевизор",
+        "translation-en": "Television",
+        "translation-uk": "Телевізор",
+        "translation-pl": "Telewizor",
+        "translation-es": "Televisor",
+        "translation-fr": "Télévision",
+        "translation-ar": "تلفاز",
+        "translation-hi": "टेलीविज़न",
+        "translation-ro": "Televizor",
+        "translation-tr": "Televizyon",
+        "translation-uz": "Televizor"
       }
     ],
     "tasks": [
@@ -1917,6 +2043,20 @@
         "translation-ro": "Nou",
         "translation-tr": "Yeni",
         "translation-uz": "Yangi"
+      },
+      {
+        "word": "die Handtücher",
+        "translation-ru": "Полотенца",
+        "translation-en": "Towels",
+        "translation-uk": "Рушники",
+        "translation-pl": "Ręczniki",
+        "translation-es": "Toallas",
+        "translation-fr": "Serviettes",
+        "translation-ar": "مناشف",
+        "translation-hi": "तौलिये",
+        "translation-ro": "Prosoape",
+        "translation-tr": "Havlular",
+        "translation-uz": "Sochiqlar"
       }
     ],
     "tasks": [
@@ -2555,6 +2695,20 @@
         "translation-ro": "Pălărie",
         "translation-tr": "Şapka",
         "translation-uz": "Shlyapa"
+      },
+      {
+        "word": "die Tür",
+        "translation-ru": "Дверь",
+        "translation-en": "Door",
+        "translation-uk": "Двері",
+        "translation-pl": "Drzwi",
+        "translation-es": "Puerta",
+        "translation-fr": "Porte",
+        "translation-ar": "باب",
+        "translation-hi": "दरवाज़ा",
+        "translation-ro": "Ușă",
+        "translation-tr": "Kapı",
+        "translation-uz": "Eshik"
       }
     ],
     "tasks": [
@@ -2725,7 +2879,6 @@
       }
     ]
   },
-
   {
     "questId": "village-10",
     "title": "questsStoneReachTenthQuests.title",

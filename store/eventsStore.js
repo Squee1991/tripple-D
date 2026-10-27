@@ -92,6 +92,23 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 		return !!(items['snowFall'] || items['snowfall'])
 	})
 
+	// Идёт ли сейчас событие (даты в формате 'MM-DD HH:mm', с учётом перехода через Новый год)
+	const isEventActive = (id, now = new Date()) => {
+		const event = events.value.find(e => e.id === id)
+		if (!event) return false
+		const parse = (str, y) => {
+			const [datePart, timePart] = str.split(' ')
+			const [month, day] = datePart.split('-').map(Number)
+			const [hours, minutes] = (timePart || '00:00').split(':').map(Number)
+			return new Date(y, month - 1, day, hours ?? 0, minutes ?? 0, 0, 0)
+		}
+		const y = now.getFullYear()
+		const start = parse(event.start, y)
+		const end = parse(event.end, y)
+		if (start <= end) return now >= start && now <= end
+		return now >= start || now <= end
+	}
+
 	const isValentineThemePurchased = computed(() => {
 		const items = shopItems.value || {}
 		return !!items['theme']
@@ -360,7 +377,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 
 	return {
 		eventId, questId, stepIndex, score, finished, isLoading,
-		isSnowEnabled, shopItems, events, isValentineThemePurchased,
+		isSnowEnabled, shopItems, events, isValentineThemePurchased, isEventActive,
 		solvedSteps, isReplayMode,
 		isSnowPurchased, loadGlobalWinterSettings, setSnowFallEnabled,
 		start, restoreIfPossible, next, prev, addScore, finishQuest,

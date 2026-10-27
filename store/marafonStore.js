@@ -407,6 +407,23 @@ export const useGameStore = defineStore('game', () => {
 		}
 	}
 
+	let modalSeenLoadedFor = null;
+
+	// Лёгкое чтение только отметки «модалку сезона видели» — для показа модалки при запуске
+	async function loadModalSeen() {
+		if (!userId.value) return false;
+		if (modalSeenLoadedFor === userId.value) return true;
+		try {
+			const docSnap = await getDoc(doc(db, LEADERBOARD_COLLECTION, userId.value));
+			lastSeenModalSeason.value = docSnap.exists() ? docSnap.data().lastSeenModalSeason || null : null;
+			modalSeenLoadedFor = userId.value;
+			return true;
+		} catch (e) {
+			console.error('Error loading modal state:', e);
+			return false;
+		}
+	}
+
 	async function markModalAsSeen() {
 		const { currentSeasonId } = getSeasonState();
 		lastSeenModalSeason.value = currentSeasonId;
@@ -456,6 +473,7 @@ export const useGameStore = defineStore('game', () => {
 		getSeasonState,
 		getPreviousSeasonRank,
 		retryGame,
+		loadModalSeen,
 		markModalAsSeen
 	};
 });

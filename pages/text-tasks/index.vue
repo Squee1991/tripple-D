@@ -100,7 +100,7 @@ import VTransition from "~/src/components/V-transition.vue"
 import VArrowNav from "~/src/components/V-arrowNav.vue"
 import Modal from "~/src/components/modal.vue"
 import VPremiumModal from "~/src/components/V-premiumModal.vue"
-import {showInterstitial} from '../../utils/admob.js'
+import {showInterstitial, preloadInterstitial} from '../../utils/admob.js'
 
 const showDevModal = ref(false)
 const showPremiumModal = ref(false)
@@ -252,6 +252,7 @@ const goBack = () => {
 }
 
 onMounted(async () => {
+  preloadInterstitial()
   setTimeout(() => {
     isMounted.value = true
   }, 120)

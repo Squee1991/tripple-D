@@ -85,7 +85,7 @@ import {userAuthStore} from '~/store/authStore.js'
 import {userlangStore} from '~/store/learningStore.js'
 import {playCorrectRising, playWrong, playLevelCompleted, unlockAudioByUserGesture} from '~/utils/soundManager.js'
 import {vibrateSuccess, vibrateError, vibrateImpact} from '~/utils/haptics.js'
-import {showInterstitial} from '~/utils/admob.js'
+import {showInterstitial, preloadInterstitial} from '~/utils/admob.js'
 import VStopSessionBtn from '~/src/components/V-stopSessionBtn.vue'
 import VLoginPreloader from '~/src/components/V-loginPreloader.vue'
 import VArticleCard from '~/src/components/V-articleCard.vue'
@@ -243,6 +243,7 @@ function startRun() {
 }
 
 onMounted(async () => {
+  preloadInterstitial()
   window.addEventListener('pointerdown', unlockAudioByUserGesture, {once: true, capture: true})
   if (!authStore.uid) {
     goToMarathon()

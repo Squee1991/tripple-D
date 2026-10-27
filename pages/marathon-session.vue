@@ -138,7 +138,7 @@ import VArticleCard from "~/src/components/V-articleCard.vue"
 import VArticleButtons from "~/src/components/V-articleButtons.vue"
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue"
 import VStreakModal from '~/src/components/V-streak.vue'
-import {showInterstitial} from '../utils/admob.js'
+import {showInterstitial, preloadInterstitial} from '../utils/admob.js'
 
 import Support from '~/assets/images/Support.svg'
 import Great from '~/assets/images/Greatcon.svg'
@@ -426,6 +426,7 @@ watch(() => gameStore.gameReady, (isReady) => {
 let unlockOnce = null
 
 onMounted(() => {
+  preloadInterstitial()
   const captureOpts = {capture: true}
   unlockOnce = () => {
     unlockAudioByUserGesture()

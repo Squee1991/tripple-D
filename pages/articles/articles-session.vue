@@ -299,7 +299,7 @@ import {useSeoMeta} from '#imports'
 import SoundBtn from "~/src/components/soundBtn.vue";
 import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
 import VStreakModal from '~/src/components/V-streak.vue'
-import {showInterstitial} from '../../utils/admob.js';
+import {showInterstitial, preloadInterstitial} from '../../utils/admob.js';
 
 import Great from '~/assets/images/Greatcon.svg'
 import Support from '~/assets/images/Support.svg'
@@ -788,6 +788,7 @@ const saveWhenHidden = () => {
 }
 
 onMounted(async () => {
+  preloadInterstitial()
   isMounted.value = true
   initialStreak.value = authStore.streakCount || 0
   const unlockOnce = () => {
