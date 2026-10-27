@@ -56,7 +56,7 @@
   {
     "type": "fillInBlank",
     "question": "Er _______ das Fenster, weil es warm war.",
-    "options": ["öffnete", "öffnen", "öffnete", "öffnet"],
+    "options": ["öffnete", "öffnen", "geöffnet", "öffnet"],
     "answer": "öffnete"
   },
   {
@@ -194,7 +194,7 @@
   {
     "type": "fillInBlank",
     "question": "Wir _______ im Sommer jeden Tag im See.",
-    "options": ["schwammen", "schwimmt", "schwammen", "schwimmen"],
+    "options": ["schwammen", "schwimmt", "geschwommen", "schwimmen"],
     "answer": "schwammen"
   },
   {

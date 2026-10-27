@@ -159,7 +159,7 @@ function handleResize() {
   }
 }
 
-const clampedLevel = computed(() => Math.min(Math.max(langStore.isLeveling, 0), 20))
+const clampedLevel = computed(() => Math.max(langStore.isLeveling, 0))
 
 const isUnlocked = computed(() => {
   if (!active.value) return false

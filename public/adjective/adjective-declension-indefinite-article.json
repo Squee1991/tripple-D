@@ -71,7 +71,7 @@
   },
   {
     "question": "Das ist ein lang___ Film.",
-    "options": ["e", "en", "er", "er"],
+    "options": ["e", "en", "er", "es"],
     "answer": "er"
   },
   {

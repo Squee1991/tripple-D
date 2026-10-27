@@ -26,14 +26,14 @@ const isOrange = computed(() => colorMode.value === 'orange');
 const bannerStyle = computed(() => {
   if (isOrange.value) {
     return {
-      background: 'linear-gradient(145deg, rgb(255, 132, 0), rgb(219, 156, 0))',
-      backgroundColor: 'rgb(204, 77, 23)',
+      background: 'linear-gradient(145deg, #f59a4a 0%, #e8782c 45%, #c25f1c 100%)',
+      backgroundColor: '#e8782c',
       // Переопределяем 3D-тень под оранжевый оттенок
       boxShadow: `
-        inset 0 2px 4px rgba(255, 255, 255, 0.4),
-        inset 0 -2px 4px rgba(0, 0, 0, 0.15),
-        0 6px 0 rgb(190, 85, 0),
-        0 8px 15px rgba(0, 0, 0, 0.15)
+        inset 0 2px 4px rgba(255, 225, 180, 0.4),
+        inset 0 -2px 4px rgba(60, 20, 0, 0.2),
+        0 6px 0 #7a3a0e,
+        0 10px 20px rgba(0, 0, 0, 0.55)
       `
     };
   }
