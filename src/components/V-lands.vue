@@ -88,13 +88,12 @@
                 <div class="region-card__art">
                   <img :src="region.icon" :alt="region.id" decoding="async">
                 </div>
+                <!-- уровень, с которого откроется земля: «ушко» в правом верхнем углу карточки -->
+                <span v-if="!authStore.isPremium && clampedLevel < region.level" class="region-card__badge">
+                  {{ region.level }}
+                </span>
                 <div class="region-card__footer">
                   <span class="region-card__title">{{ t(region.name) }}</span>
-                  <div class="region-card-badge-wrapper">
-                  <span v-if="!authStore.isPremium && clampedLevel < region.level" class="region-card__badge">
-                    {{ region.level }}
-                  </span>
-                  </div>
                 </div>
               </div>
             </div>
@@ -415,6 +414,8 @@ onBeforeUnmount(() => {
 
 .region-card {
   position: relative;
+  /* всё содержимое карточки — в её собственном слое, чтобы ничего не вылезало поверх нижнего меню */
+  isolation: isolate;
   border: 3px solid var(--tabsSlideBorderColor);
   border-radius: 20px;
   cursor: pointer;
@@ -472,26 +473,22 @@ onBeforeUnmount(() => {
   color: white;
 }
 
-.region-card__badge {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  font-size: .82rem;
-  font-weight: 900;
-  color: var(--landsLevelTextColor);
-  border-radius: 50%;
-  background: var(--landsLevelBg);
-  padding: 0;
-}
 
-.region-card-badge-wrapper {
-  width: 28px;
-  height: 28px;
+.region-card__badge {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 5px 11px 6px 12px;
+  border-bottom-left-radius: 14px;
+  background: linear-gradient(135deg, #8b7cf6 0%, #5d4ad8 100%);
+  box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  font-size: .85rem;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .theme--default {

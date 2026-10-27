@@ -196,7 +196,6 @@ export default defineNuxtConfig({
 		'ios/**',
 		'android/**',
 		'android-app/**',
-		// ВРЕМЕННО для локального запуска (spawn EBADF) — убрать перед коммитом
 		'functions/**',
 		'.output/**'
 	],

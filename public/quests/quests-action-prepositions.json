@@ -1189,11 +1189,11 @@
         "type": "select",
         "question": "actionPrepositionsFive.questTask11",
         "options": [
-          "Die neue Arbeit beginnt ab Juli.",
-          "Die neue Arbeit beginnt bis Juli.",
-          "Die neue Arbeit beginnt von Juli."
+          "Ab Juli habe ich eine neue Arbeit.",
+          "Bis Juli habe ich eine neue Arbeit.",
+          "Von Juli habe ich eine neue Arbeit."
         ],
-        "answer": "Die neue Arbeit beginnt ab Juli."
+        "answer": "Ab Juli habe ich eine neue Arbeit."
       },
       {
         "id": 12,

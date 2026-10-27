@@ -1188,7 +1188,7 @@
         "translation-fr": "la caisse",
         "translation-ar": "الصندوق",
         "translation-hi": "काउंटर",
-        "translation-ro": "casa",
+        "translation-ro": "casa de marcat",
         "translation-tr": "kasa",
         "translation-uz": "kassa"
       }
@@ -1531,7 +1531,7 @@
         "id": 7,
         "type": "readAndAnswer",
         "question": "placePrepositionsSix.questTask7",
-        "text": "— Wo ist Papa? — Er ist im Garten.",
+        "text": "Wo ist Papa? Er ist im Garten.",
         "options": [
           "im Garten",
           "in der Küche",

@@ -746,7 +746,7 @@
         "id": 13,
         "type": "readAndAnswer",
         "question": "directionPrepositionsThree.questTask13",
-        "text": "— Wo ist Lisa? — Sie ist bei ihrer Freundin.",
+        "text": "Wo ist Lisa? Sie ist bei ihrer Freundin.",
         "options": [
           "bei ihrer Freundin",
           "bei ihrer Oma",

@@ -14,6 +14,10 @@ import TimeGate from 'assets/images/locations-images/time_gate.jpg'
 import EdgeImages from 'assets/images/locations-images/edgeImages.webp'
 import SecretLands from 'assets/images/locations-images/secret-lands.webp'
 import MixedLands from 'assets/images/locations-images/mixedArticle.jpg'
+import Landmark from 'assets/images/locations-images/landmark.jpg'
+import Ways from 'assets/images/locations-images/Ways.jpg'
+import Watch from 'assets/images/locations-images/Watch.jpg'
+import Archive from 'assets/images/locations-images/Archive.jpg'
 
 export const regions = {
 		beginner: [
@@ -172,7 +176,7 @@ export const regions = {
 				name: "locationNames.place-prepositions",
 				level: 16,
 				desc: "regions.descriptionPlacePrepositions",
-				icon: MixedLands
+				icon: Landmark
 			},
 			{
 				id: "direction-prepositions",
@@ -181,7 +185,7 @@ export const regions = {
 				name: "locationNames.direction-prepositions",
 				level: 17,
 				desc: "regions.descriptionDirectionPrepositions",
-				icon: OrderValley
+				icon: Ways
 			},
 			{
 				id: "action-prepositions",
@@ -190,7 +194,7 @@ export const regions = {
 				name: "locationNames.action-prepositions",
 				level: 18,
 				desc: "regions.descriptionActionPrepositions",
-				icon: TimeGate
+				icon: Watch
 			},
 			{
 				id: "past-simple",
@@ -199,16 +203,16 @@ export const regions = {
 				name: "locationNames.past-simple",
 				level: 19,
 				desc: "regions.descriptionPastSimple",
-				icon: Past
+				icon: Archive
 			},
-			{
-				id: "requests-land",
-				pathTo: "requests-land",
-				theme: "requests",
-				name: "locationNames.requests-land",
-				level: 20,
-				desc: "regions.descriptionRequestsLand",
-				icon: Action
-			}
+			// {
+			// 	id: "requests-land",
+			// 	pathTo: "requests-land",
+			// 	theme: "requests",
+			// 	name: "locationNames.requests-land",
+			// 	level: 20,
+			// 	desc: "regions.descriptionRequestsLand",
+			// 	icon: Action
+			// }
 		]
 	};

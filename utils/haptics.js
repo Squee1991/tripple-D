@@ -17,6 +17,11 @@ export function vibrateImpact() {
 	runOnPhone(() => Haptics.impact({ style: ImpactStyle.Medium }));
 }
 
+// Едва заметный щелчок — нажатие на пункт меню
+export function vibrateTap() {
+	runOnPhone(() => Haptics.selectionChanged());
+}
+
 // Сильная вибрация — ошибка
 export function vibrateError() {
 	runOnPhone(() => Haptics.notification({ type: NotificationType.Error }));
