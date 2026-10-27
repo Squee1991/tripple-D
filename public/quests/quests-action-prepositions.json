@@ -1,11 +1,11 @@
 [
   {
-    "questId": "prep-action-one",
-    "title": "Предлоги für и ohne",
+    "questId": "prep-action-1",
+    "title": "actionPrepositions.questTitle",
     "progress": "0/15",
-    "description": "Практика предлогов für и ohne в реальных повседневных фразах.",
+    "description": "actionPrepositions.questDescription",
     "conditions": {
-      "goal": "Ответьте правильно на 15 заданий по предлогам für и ohne",
+      "goal": "actionPrepositions.questGoal",
       "minCorrect": 15,
       "requiredTasks": 15
     },
@@ -15,286 +15,1468 @@
     },
     "vocabulary": [
       {
-        "word": "für den Kollegen",
-        "translation-ru": "Для коллеги",
-        "translation-en": "For the colleague",
-        "translation-uk": "Для колеги",
-        "translation-pl": "Dla kolegi",
-        "translation-es": "Para el colega",
-        "translation-fr": "Pour le collègue",
-        "translation-ar": "للزميل",
-        "translation-hi": "सहकर्मी के लिए",
-        "translation-ro": "Pentru coleg",
-        "translation-tr": "İş arkadaşı için",
-        "translation-uz": "Hamkasb uchun"
+        "word": "der Zucker",
+        "translation-ru": "сахар",
+        "translation-en": "sugar",
+        "translation-uk": "цукор",
+        "translation-pl": "cukier",
+        "translation-es": "el azúcar",
+        "translation-fr": "le sucre",
+        "translation-ar": "السكر",
+        "translation-hi": "चीनी",
+        "translation-ro": "zahărul",
+        "translation-tr": "şeker",
+        "translation-uz": "shakar"
       },
       {
-        "word": "ohne den Schlüssel",
-        "translation-ru": "Без ключа",
-        "translation-en": "Without the key",
-        "translation-uk": "Без ключа",
-        "translation-pl": "Bez klucza",
-        "translation-es": "Sin la llave",
-        "translation-fr": "Sans la clé",
-        "translation-ar": "بدون المفتاح",
-        "translation-hi": "बिना चाबी के",
-        "translation-ro": "Fără cheie",
-        "translation-tr": "Anahtarsız",
-        "translation-uz": "Kalitsiz"
+        "word": "der Regenschirm",
+        "translation-ru": "зонт",
+        "translation-en": "umbrella",
+        "translation-uk": "парасолька",
+        "translation-pl": "parasol",
+        "translation-es": "el paraguas",
+        "translation-fr": "le parapluie",
+        "translation-ar": "المظلة",
+        "translation-hi": "छाता",
+        "translation-ro": "umbrela",
+        "translation-tr": "şemsiye",
+        "translation-uz": "soyabon"
       },
       {
-        "word": "für das Kind",
-        "translation-ru": "Для ребёнка",
-        "translation-en": "For the child",
-        "translation-uk": "Для дитини",
-        "translation-pl": "Dla dziecka",
-        "translation-es": "Para el niño",
-        "translation-fr": "Pour l'enfant",
-        "translation-ar": "للطفل",
-        "translation-hi": "बच्चे के लिए",
-        "translation-ro": "Pentru copil",
-        "translation-tr": "Çocuk için",
-        "translation-uz": "Bola uchun"
+        "word": "die Pause",
+        "translation-ru": "перерыв",
+        "translation-en": "break",
+        "translation-uk": "перерва",
+        "translation-pl": "przerwa",
+        "translation-es": "la pausa",
+        "translation-fr": "la pause",
+        "translation-ar": "الاستراحة",
+        "translation-hi": "ब्रेक",
+        "translation-ro": "pauza",
+        "translation-tr": "mola",
+        "translation-uz": "tanaffus"
       },
       {
-        "word": "ohne das Ticket",
-        "translation-ru": "Без билета",
-        "translation-en": "Without the ticket",
-        "translation-uk": "Без квитка",
-        "translation-pl": "Bez biletu",
-        "translation-es": "Sin el billete",
-        "translation-fr": "Sans le billet",
-        "translation-ar": "بدون تذكرة",
-        "translation-hi": "बिना टिकट के",
-        "translation-ro": "Fără bilet",
-        "translation-tr": "Biletsiz",
-        "translation-uz": "Chiptasiz"
+        "word": "die Torte",
+        "translation-ru": "торт",
+        "translation-en": "cake",
+        "translation-uk": "торт",
+        "translation-pl": "tort",
+        "translation-es": "la tarta",
+        "translation-fr": "le gâteau",
+        "translation-ar": "الكعكة",
+        "translation-hi": "केक",
+        "translation-ro": "tortul",
+        "translation-tr": "pasta",
+        "translation-uz": "tort"
       },
       {
-        "word": "für die Familie",
-        "translation-ru": "Для семьи",
-        "translation-en": "For the family",
-        "translation-uk": "Для сім'ї",
-        "translation-pl": "Dla rodziny",
-        "translation-es": "Para la familia",
-        "translation-fr": "Pour la famille",
-        "translation-ar": "للعائلة",
-        "translation-hi": "परिवार के लिए",
-        "translation-ro": "Pentru familie",
-        "translation-tr": "Aile için",
-        "translation-uz": "Oila uchun"
-      },
-      {
-        "word": "ohne die Brille",
-        "translation-ru": "Без очков",
-        "translation-en": "Without glasses",
-        "translation-uk": "Без окулярів",
-        "translation-pl": "Bez okularów",
-        "translation-es": "Sin gafas",
-        "translation-fr": "Sans lunettes",
-        "translation-ar": "بدون نظارة",
-        "translation-hi": "बिना चश्मे के",
-        "translation-ro": "Fără ochelari",
-        "translation-tr": "Gözlüksüz",
-        "translation-uz": "Ko'zoynaksiz"
-      },
-      {
-        "word": "für die Freunde",
-        "translation-ru": "Для друзей",
-        "translation-en": "For friends",
-        "translation-uk": "Для друзів",
-        "translation-pl": "Dla przyjaciół",
-        "translation-es": "Para amigos",
-        "translation-fr": "Pour des amis",
-        "translation-ar": "للأصدقاء",
-        "translation-hi": "दोस्तों के लिए",
-        "translation-ro": "Pentru prieteni",
-        "translation-tr": "Arkadaşlar için",
-        "translation-uz": "Do'stlar uchun"
-      },
-      {
-        "word": "ohne Milch",
-        "translation-ru": "Без молока",
-        "translation-en": "Without milk",
-        "translation-uk": "Без молока",
-        "translation-pl": "Bez mleka",
-        "translation-es": "Sin leche",
-        "translation-fr": "Sans lait",
-        "translation-ar": "بدون حليب",
-        "translation-hi": "बिना दूध के",
-        "translation-ro": "Fără lapte",
-        "translation-tr": "Sütsüz",
-        "translation-uz": "Sutsiz"
-      },
-      {
-        "word": "ohne Zucker",
-        "translation-ru": "Без сахара",
-        "translation-en": "Without sugar",
-        "translation-uk": "Без цукру",
-        "translation-pl": "Bez cukru",
-        "translation-es": "Sin azúcar",
-        "translation-fr": "Sans sucre",
-        "translation-ar": "بدون سكر",
-        "translation-hi": "बिना चीनी के",
-        "translation-ro": "Fără zahăr",
-        "translation-tr": "Şekersiz",
-        "translation-uz": "Shakarsiz"
-      },
-      {
-        "word": "für mich",
-        "translation-ru": "Для меня",
-        "translation-en": "For me",
-        "translation-uk": "Для мене",
-        "translation-pl": "Dla mnie",
-        "translation-es": "Para mí",
-        "translation-fr": "Pour moi",
-        "translation-ar": "لي",
-        "translation-hi": "मेरे लिए",
-        "translation-ro": "Pentru mine",
-        "translation-tr": "Benim için",
-        "translation-uz": "Men uchun"
+        "word": "die Tickets",
+        "translation-ru": "билеты",
+        "translation-en": "tickets",
+        "translation-uk": "квитки",
+        "translation-pl": "bilety",
+        "translation-es": "las entradas",
+        "translation-fr": "les billets",
+        "translation-ar": "التذاكر",
+        "translation-hi": "टिकट",
+        "translation-ro": "biletele",
+        "translation-tr": "biletler",
+        "translation-uz": "chiptalar"
       }
     ],
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Выберите перевод: «Для коллеги»",
+        "question": "actionPrepositions.questTask1",
         "options": [
-          "für den Kollegen",
-          "für dem Kollegen",
-          "ohne den Kollegen"
+          "für dich",
+          "für dir",
+          "ohne dich"
         ],
-        "answer": "für den Kollegen"
+        "answer": "für dich"
       },
       {
         "id": 2,
-        "type": "select",
-        "question": "Выберите перевод: «Без ключа»",
-        "options": [
-          "ohne dem Schlüssel",
-          "ohne den Schlüssel",
-          "für den Schlüssel"
+        "type": "reorder",
+        "question": "actionPrepositions.questTask2",
+        "words": [
+          "ist",
+          "Geschenk",
+          "Das",
+          "für",
+          "ein",
+          "Mama",
+          "mit"
         ],
-        "answer": "ohne den Schlüssel"
+        "correctOrder": [
+          "Das",
+          "ist",
+          "ein",
+          "Geschenk",
+          "für",
+          "Mama"
+        ]
       },
       {
         "id": 3,
-        "type": "select",
-        "question": "Выберите перевод: «Для ребёнка»",
-        "options": [
-          "für das Kind",
-          "für dem Kind",
-          "ohne das Kind"
-        ],
-        "answer": "für das Kind"
+        "type": "input",
+        "question": "actionPrepositions.questTask3",
+        "correctAnswer": "ohne"
       },
       {
         "id": 4,
-        "type": "select",
-        "question": "Выберите перевод: «Без очков»",
-        "options": [
-          "ohne der Brille",
-          "ohne die Brille",
-          "für die Brille"
-        ],
-        "answer": "ohne die Brille"
+        "type": "input",
+        "question": "actionPrepositions.questTask4",
+        "correctAnswer": "für"
       },
       {
         "id": 5,
-        "type": "input",
-        "question": "Вставьте предлог «без»: Er trinkt Kaffee ___ Zucker",
-        "correctAnswer": "ohne"
+        "type": "select",
+        "question": "actionPrepositions.questTask5",
+        "options": [
+          "Er geht ohne Regenschirm.",
+          "Er geht ohne dem Regenschirm.",
+          "Er geht für Regenschirm."
+        ],
+        "answer": "Er geht ohne Regenschirm."
       },
       {
         "id": 6,
         "type": "input",
-        "question": "Вставьте предлог «для»: Ich koche das Essen ___ die Familie",
-        "correctAnswer": "für"
+        "question": "actionPrepositions.questTask6",
+        "correctAnswer": "en"
       },
       {
         "id": 7,
-        "type": "input",
-        "question": "Вставьте пропущенный артикль: Er geht ohne ___ Schlüssel aus dem Haus",
-        "correctAnswer": "den"
+        "type": "readAndAnswer",
+        "question": "actionPrepositions.questTask7",
+        "text": "Ich trinke den Tee immer ohne Zucker.",
+        "options": [
+          "ohne Zucker",
+          "mit Zucker",
+          "mit Honig"
+        ],
+        "answer": "ohne Zucker"
       },
       {
         "id": 8,
-        "type": "input",
-        "question": "Вставьте предлог: Man darf nicht ___ das Ticket in den Zug steigen",
-        "correctAnswer": "ohne"
+        "type": "select",
+        "question": "actionPrepositions.questTask8",
+        "options": [
+          "ohne dich",
+          "ohne dir",
+          "für dir"
+        ],
+        "answer": "ohne dich"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "Соберите предложение: Мы покупаем билеты для друзей",
-        "words": ["Freunde", "kaufen", "Tickets", "für", "Wir", "die"],
-        "correctOrder": ["Wir", "kaufen", "Tickets", "für", "die", "Freunde"]
+        "question": "actionPrepositions.questTask9",
+        "words": [
+          "arbeiten",
+          "Pause",
+          "Wir",
+          "ohne",
+          "für"
+        ],
+        "correctOrder": [
+          "Wir",
+          "arbeiten",
+          "ohne",
+          "Pause"
+        ]
       },
       {
         "id": 10,
-        "type": "reorder",
-        "question": "Соберите предложение: Она ничего не видит без очков",
-        "words": ["nichts", "Sie", "ohne", "Brille", "sieht", "die"],
-        "correctOrder": ["Sie", "sieht", "ohne", "die", "Brille", "nichts"]
+        "type": "select",
+        "question": "actionPrepositions.questTask10",
+        "options": [
+          "Die Tickets sind für uns.",
+          "Die Tickets sind für wir.",
+          "Die Tickets sind für unser."
+        ],
+        "answer": "Die Tickets sind für uns."
       },
       {
         "id": 11,
-        "type": "reorder",
-        "question": "Соберите предложение: Это подарок для ребёнка",
-        "words": ["Kind", "das", "Geschenk", "ist", "Das", "für"],
-        "correctOrder": ["Das", "Geschenk", "ist", "für", "das", "Kind"]
+        "type": "input",
+        "question": "actionPrepositions.questTask11",
+        "correctAnswer": "e"
       },
       {
         "id": 12,
         "type": "readAndAnswer",
-        "text": "— Kontrolleur: Zeigen Sie bitte Ihren Fahrschein! — Fahrgast: Oh nein, ich habe ihn zu Hause vergessen.",
-        "question": "В какой ситуации оказался пассажир?",
+        "question": "actionPrepositions.questTask12",
+        "text": "Lena kauft eine Torte für ihre Oma.",
         "options": [
-          "ohne das Ticket",
-          "für das Ticket",
-          "mit dem Ticket"
+          "für ihre Oma",
+          "für ihre Mutter",
+          "für ihren Bruder"
         ],
-        "answer": "ohne das Ticket"
+        "answer": "für ihre Oma"
       },
       {
         "id": 13,
-        "type": "readAndAnswer",
-        "text": "— Kellner: Wie möchten Sie Ihren Kaffee? — Gast: Schwarz, bitte, weder Zucker noch Sahne.",
-        "question": "Как гость заказывает кофе?",
-        "options": [
-          "ohne Milch",
-          "für Milch",
-          "mit Milch"
-        ],
-        "answer": "ohne Milch"
+        "type": "input",
+        "question": "actionPrepositions.questTask13",
+        "correctAnswer": "ohne"
       },
       {
         "id": 14,
-        "type": "select",
-        "question": "Выберите перевод: «Он делает эту работу для меня»",
-        "options": [
-          "Er macht diese Arbeit für mich",
-          "Er macht diese Arbeit für mir",
-          "Er macht diese Arbeit ohne mich"
-        ],
-        "answer": "Er macht diese Arbeit für mich"
+        "type": "input",
+        "question": "actionPrepositions.questTask14",
+        "correctAnswer": "zum"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Вставьте предлог «Для»: Ich backe eine Torte ___ meine Familie",
+        "question": "actionPrepositions.questTask15",
+        "correctAnswer": "in"
+      }
+    ]
+  },
+  {
+    "questId": "prep-action-2",
+    "title": "actionPrepositionsTwo.questTitle",
+    "progress": "0/15",
+    "description": "actionPrepositionsTwo.questDescription",
+    "conditions": {
+      "goal": "actionPrepositionsTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Wald",
+        "translation-ru": "лес",
+        "translation-en": "forest",
+        "translation-uk": "ліс",
+        "translation-pl": "las",
+        "translation-es": "el bosque",
+        "translation-fr": "la forêt",
+        "translation-ar": "الغابة",
+        "translation-hi": "जंगल",
+        "translation-ro": "pădurea",
+        "translation-tr": "orman",
+        "translation-uz": "o‘rmon"
+      },
+      {
+        "word": "der See",
+        "translation-ru": "озеро",
+        "translation-en": "lake",
+        "translation-uk": "озеро",
+        "translation-pl": "jezioro",
+        "translation-es": "el lago",
+        "translation-fr": "le lac",
+        "translation-ar": "البحيرة",
+        "translation-hi": "झील",
+        "translation-ro": "lacul",
+        "translation-tr": "göl",
+        "translation-uz": "ko‘l"
+      },
+      {
+        "word": "der Tunnel",
+        "translation-ru": "туннель",
+        "translation-en": "tunnel",
+        "translation-uk": "тунель",
+        "translation-pl": "tunel",
+        "translation-es": "el túnel",
+        "translation-fr": "le tunnel",
+        "translation-ar": "النفق",
+        "translation-hi": "सुरंग",
+        "translation-ro": "tunelul",
+        "translation-tr": "tünel",
+        "translation-uz": "tunnel"
+      },
+      {
+        "word": "die Ecke",
+        "translation-ru": "угол",
+        "translation-en": "corner",
+        "translation-uk": "ріг",
+        "translation-pl": "róg",
+        "translation-es": "la esquina",
+        "translation-fr": "le coin",
+        "translation-ar": "الزاوية",
+        "translation-hi": "कोना",
+        "translation-ro": "colțul",
+        "translation-tr": "köşe",
+        "translation-uz": "burchak"
+      },
+      {
+        "word": "die Stadt",
+        "translation-ru": "город",
+        "translation-en": "town",
+        "translation-uk": "місто",
+        "translation-pl": "miasto",
+        "translation-es": "la ciudad",
+        "translation-fr": "la ville",
+        "translation-ar": "المدينة",
+        "translation-hi": "शहर",
+        "translation-ro": "orașul",
+        "translation-tr": "şehir",
+        "translation-uz": "shahar"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "actionPrepositionsTwo.questTask1",
+        "options": [
+          "durch den Park",
+          "durch dem Park",
+          "um dem Park"
+        ],
+        "answer": "durch den Park"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "actionPrepositionsTwo.questTask2",
+        "words": [
+          "gehen",
+          "Wald",
+          "Wir",
+          "den",
+          "durch",
+          "dem"
+        ],
+        "correctOrder": [
+          "Wir",
+          "gehen",
+          "durch",
+          "den",
+          "Wald"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "actionPrepositionsTwo.questTask3",
+        "correctAnswer": "um"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "actionPrepositionsTwo.questTask4",
+        "correctAnswer": "durch"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "actionPrepositionsTwo.questTask5",
+        "options": [
+          "Die Apotheke ist um die Ecke.",
+          "Die Apotheke ist um der Ecke.",
+          "Die Apotheke ist durch die Ecke."
+        ],
+        "answer": "Die Apotheke ist um die Ecke."
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "actionPrepositionsTwo.questTask6",
+        "correctAnswer": "die"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "actionPrepositionsTwo.questTask7",
+        "text": "Am Abend sitzen wir alle um den Tisch und essen.",
+        "options": [
+          "um den Tisch",
+          "unter dem Tisch",
+          "neben dem Tisch"
+        ],
+        "answer": "um den Tisch"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "actionPrepositionsTwo.questTask8",
+        "options": [
+          "um den See",
+          "um dem See",
+          "durch dem See"
+        ],
+        "answer": "um den See"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "actionPrepositionsTwo.questTask9",
+        "words": [
+          "fährt",
+          "Tunnel",
+          "Der",
+          "den",
+          "durch",
+          "dem",
+          "Zug"
+        ],
+        "correctOrder": [
+          "Der",
+          "Zug",
+          "fährt",
+          "durch",
+          "den",
+          "Tunnel"
+        ]
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "actionPrepositionsTwo.questTask10",
+        "options": [
+          "Wir spazieren um den See.",
+          "Wir spazieren um dem See.",
+          "Wir spazieren durch den See."
+        ],
+        "answer": "Wir spazieren um den See."
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "actionPrepositionsTwo.questTask11",
+        "correctAnswer": "das"
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "question": "actionPrepositionsTwo.questTask12",
+        "text": "Der Bus fährt durch die Stadt bis zum Bahnhof.",
+        "options": [
+          "durch die Stadt",
+          "durch den Park",
+          "durch den Wald"
+        ],
+        "answer": "durch die Stadt"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "actionPrepositionsTwo.questTask13",
+        "correctAnswer": "ohne"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "actionPrepositionsTwo.questTask14",
+        "correctAnswer": "nach"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "actionPrepositionsTwo.questTask15",
+        "options": [
+          "für die Kinder",
+          "für den Kindern",
+          "ohne die Kinder"
+        ],
+        "answer": "für die Kinder"
+      }
+    ]
+  },
+  {
+    "questId": "prep-action-3",
+    "title": "actionPrepositionsThree.questTitle",
+    "progress": "0/15",
+    "description": "actionPrepositionsThree.questDescription",
+    "conditions": {
+      "goal": "actionPrepositionsThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Kirche",
+        "translation-ru": "церковь",
+        "translation-en": "church",
+        "translation-uk": "церква",
+        "translation-pl": "kościół",
+        "translation-es": "la iglesia",
+        "translation-fr": "l’église",
+        "translation-ar": "الكنيسة",
+        "translation-hi": "चर्च",
+        "translation-ro": "biserica",
+        "translation-tr": "kilise",
+        "translation-uz": "cherkov"
+      },
+      {
+        "word": "das Rathaus",
+        "translation-ru": "ратуша",
+        "translation-en": "town hall",
+        "translation-uk": "ратуша",
+        "translation-pl": "ratusz",
+        "translation-es": "el ayuntamiento",
+        "translation-fr": "la mairie",
+        "translation-ar": "مبنى البلدية",
+        "translation-hi": "टाउन हॉल",
+        "translation-ro": "primăria",
+        "translation-tr": "belediye binası",
+        "translation-uz": "shahar hokimiyati"
+      },
+      {
+        "word": "gegenüber",
+        "translation-ru": "напротив",
+        "translation-en": "opposite",
+        "translation-uk": "навпроти",
+        "translation-pl": "naprzeciwko",
+        "translation-es": "enfrente",
+        "translation-fr": "en face",
+        "translation-ar": "مقابل",
+        "translation-hi": "सामने",
+        "translation-ro": "vizavi",
+        "translation-tr": "karşısında",
+        "translation-uz": "ro‘parasida"
+      },
+      {
+        "word": "vorbeigehen",
+        "translation-ru": "проходить мимо",
+        "translation-en": "to walk past",
+        "translation-uk": "проходити повз",
+        "translation-pl": "przechodzić obok",
+        "translation-es": "pasar por delante",
+        "translation-fr": "passer devant",
+        "translation-ar": "يمر بجانب",
+        "translation-hi": "बगल से गुज़रना",
+        "translation-ro": "a trece pe lângă",
+        "translation-tr": "önünden geçmek",
+        "translation-uz": "yonidan o‘tmoq"
+      },
+      {
+        "word": "das Hotel",
+        "translation-ru": "отель",
+        "translation-en": "hotel",
+        "translation-uk": "готель",
+        "translation-pl": "hotel",
+        "translation-es": "el hotel",
+        "translation-fr": "l’hôtel",
+        "translation-ar": "الفندق",
+        "translation-hi": "होटल",
+        "translation-ro": "hotelul",
+        "translation-tr": "otel",
+        "translation-uz": "mehmonxona"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "actionPrepositionsThree.questTask1",
+        "options": [
+          "gegenüber vom Bahnhof",
+          "gegenüber den Bahnhof",
+          "am Bahnhof vorbei"
+        ],
+        "answer": "gegenüber vom Bahnhof"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "actionPrepositionsThree.questTask2",
+        "words": [
+          "ist",
+          "Post",
+          "Die",
+          "von",
+          "gegenüber",
+          "der",
+          "Bank",
+          "den"
+        ],
+        "correctOrder": [
+          "Die",
+          "Bank",
+          "ist",
+          "gegenüber",
+          "von",
+          "der",
+          "Post"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "actionPrepositionsThree.questTask3",
+        "correctAnswer": "vorbei"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "actionPrepositionsThree.questTask4",
+        "correctAnswer": "am"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "actionPrepositionsThree.questTask5",
+        "options": [
+          "Das Café ist gegenüber vom Museum.",
+          "Das Café ist gegenüber das Museum.",
+          "Das Café ist am Museum vorbei."
+        ],
+        "answer": "Das Café ist gegenüber vom Museum."
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "actionPrepositionsThree.questTask6",
+        "correctAnswer": "gegenüber"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "actionPrepositionsThree.questTask7",
+        "text": "Gehen Sie am Rathaus vorbei. Das Hotel ist gegenüber vom Park.",
+        "options": [
+          "gegenüber vom Park",
+          "gegenüber vom Rathaus",
+          "neben dem Park"
+        ],
+        "answer": "gegenüber vom Park"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "actionPrepositionsThree.questTask8",
+        "options": [
+          "am Supermarkt vorbei",
+          "am Supermarkt durch",
+          "den Supermarkt vorbei"
+        ],
+        "answer": "am Supermarkt vorbei"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "actionPrepositionsThree.questTask9",
+        "words": [
+          "fährt",
+          "Bank",
+          "Der",
+          "der",
+          "an",
+          "vorbei",
+          "Bus",
+          "die"
+        ],
+        "correctOrder": [
+          "Der",
+          "Bus",
+          "fährt",
+          "an",
+          "der",
+          "Bank",
+          "vorbei"
+        ]
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "actionPrepositionsThree.questTask10",
+        "options": [
+          "Anna sitzt gegenüber von mir.",
+          "Anna sitzt gegenüber von mich.",
+          "Anna sitzt an mir vorbei."
+        ],
+        "answer": "Anna sitzt gegenüber von mir."
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "actionPrepositionsThree.questTask11",
+        "correctAnswer": "vorbei"
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "question": "actionPrepositionsThree.questTask12",
+        "text": "Ich wohne gegenüber vom Supermarkt. Jeden Morgen fahre ich am Park vorbei zur Arbeit.",
+        "options": [
+          "gegenüber vom Supermarkt",
+          "gegenüber vom Park",
+          "neben dem Supermarkt"
+        ],
+        "answer": "gegenüber vom Supermarkt"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "actionPrepositionsThree.questTask13",
+        "correctAnswer": "durch"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "actionPrepositionsThree.questTask14",
+        "correctAnswer": "e"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "actionPrepositionsThree.questTask15",
+        "options": [
+          "neben der Bank",
+          "neben die Bank",
+          "zwischen der Bank"
+        ],
+        "answer": "neben der Bank"
+      }
+    ]
+  },
+  {
+    "questId": "prep-action-4",
+    "title": "actionPrepositionsFour.questTitle",
+    "progress": "0/15",
+    "description": "actionPrepositionsFour.questDescription",
+    "conditions": {
+      "goal": "actionPrepositionsFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Montag",
+        "translation-ru": "понедельник",
+        "translation-en": "Monday",
+        "translation-uk": "понеділок",
+        "translation-pl": "poniedziałek",
+        "translation-es": "el lunes",
+        "translation-fr": "le lundi",
+        "translation-ar": "الاثنين",
+        "translation-hi": "सोमवार",
+        "translation-ro": "lunea",
+        "translation-tr": "pazartesi",
+        "translation-uz": "dushanba"
+      },
+      {
+        "word": "das Wochenende",
+        "translation-ru": "выходные",
+        "translation-en": "weekend",
+        "translation-uk": "вихідні",
+        "translation-pl": "weekend",
+        "translation-es": "el fin de semana",
+        "translation-fr": "le week-end",
+        "translation-ar": "عطلة نهاية الأسبوع",
+        "translation-hi": "सप्ताहांत",
+        "translation-ro": "weekendul",
+        "translation-tr": "hafta sonu",
+        "translation-uz": "dam olish kunlari"
+      },
+      {
+        "word": "der Sommer",
+        "translation-ru": "лето",
+        "translation-en": "summer",
+        "translation-uk": "літо",
+        "translation-pl": "lato",
+        "translation-es": "el verano",
+        "translation-fr": "l’été",
+        "translation-ar": "الصيف",
+        "translation-hi": "गर्मी",
+        "translation-ro": "vara",
+        "translation-tr": "yaz",
+        "translation-uz": "yoz"
+      },
+      {
+        "word": "der Abend",
+        "translation-ru": "вечер",
+        "translation-en": "evening",
+        "translation-uk": "вечір",
+        "translation-pl": "wieczór",
+        "translation-es": "la tarde",
+        "translation-fr": "le soir",
+        "translation-ar": "المساء",
+        "translation-hi": "शाम",
+        "translation-ro": "seara",
+        "translation-tr": "akşam",
+        "translation-uz": "kechqurun"
+      },
+      {
+        "word": "der Termin",
+        "translation-ru": "приём, встреча",
+        "translation-en": "appointment",
+        "translation-uk": "прийом, зустріч",
+        "translation-pl": "wizyta",
+        "translation-es": "la cita",
+        "translation-fr": "le rendez-vous",
+        "translation-ar": "الموعد",
+        "translation-hi": "अपॉइंटमेंट",
+        "translation-ro": "programarea",
+        "translation-tr": "randevu",
+        "translation-uz": "uchrashuv vaqti"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "actionPrepositionsFour.questTask1",
+        "options": [
+          "am Montag",
+          "im Montag",
+          "um Montag"
+        ],
+        "answer": "am Montag"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "actionPrepositionsFour.questTask2",
+        "words": [
+          "beginnt",
+          "acht",
+          "Der",
+          "um",
+          "Uhr",
+          "Kurs",
+          "am"
+        ],
+        "correctOrder": [
+          "Der",
+          "Kurs",
+          "beginnt",
+          "um",
+          "acht",
+          "Uhr"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "actionPrepositionsFour.questTask3",
+        "correctAnswer": "am"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "actionPrepositionsFour.questTask4",
+        "correctAnswer": "um"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "actionPrepositionsFour.questTask5",
+        "correctAnswer": "im"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "actionPrepositionsFour.questTask6",
+        "options": [
+          "Im Sommer fahren wir ans Meer.",
+          "Am Sommer fahren wir ans Meer.",
+          "Um Sommer fahren wir ans Meer."
+        ],
+        "answer": "Im Sommer fahren wir ans Meer."
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "actionPrepositionsFour.questTask7",
+        "text": "Der Termin beim Arzt ist am Dienstag um zehn Uhr.",
+        "options": [
+          "am Dienstag um zehn Uhr",
+          "am Montag um zehn Uhr",
+          "am Dienstag um elf Uhr"
+        ],
+        "answer": "am Dienstag um zehn Uhr"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "actionPrepositionsFour.questTask8",
+        "options": [
+          "am Wochenende",
+          "im Wochenende",
+          "um Wochenende"
+        ],
+        "answer": "am Wochenende"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "actionPrepositionsFour.questTask9",
+        "words": [
+          "ist",
+          "Winter",
+          "Im",
+          "es",
+          "kalt",
+          "hier",
+          "Am"
+        ],
+        "correctOrder": [
+          "Im",
+          "Winter",
+          "ist",
+          "es",
+          "hier",
+          "kalt"
+        ]
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "actionPrepositionsFour.questTask10",
+        "correctAnswer": "am"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "actionPrepositionsFour.questTask11",
+        "options": [
+          "Um wie viel Uhr?",
+          "Am wie viel Uhr?",
+          "Im wie viel Uhr?"
+        ],
+        "answer": "Um wie viel Uhr?"
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "question": "actionPrepositionsFour.questTask12",
+        "text": "Ich habe im Juli Urlaub. Am Samstag fliege ich nach Spanien.",
+        "options": [
+          "im Juli",
+          "im Juni",
+          "im August"
+        ],
+        "answer": "im Juli"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "actionPrepositionsFour.questTask13",
+        "correctAnswer": "um"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "actionPrepositionsFour.questTask14",
+        "correctAnswer": "am"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "actionPrepositionsFour.questTask15",
+        "options": [
+          "um das Haus",
+          "um dem Haus",
+          "durch dem Haus"
+        ],
+        "answer": "um das Haus"
+      }
+    ]
+  },
+  {
+    "questId": "prep-action-5",
+    "title": "actionPrepositionsFive.questTitle",
+    "progress": "0/15",
+    "description": "actionPrepositionsFive.questDescription",
+    "conditions": {
+      "goal": "actionPrepositionsFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "offen",
+        "translation-ru": "открыт",
+        "translation-en": "open",
+        "translation-uk": "відчинений",
+        "translation-pl": "otwarty",
+        "translation-es": "abierto",
+        "translation-fr": "ouvert",
+        "translation-ar": "مفتوح",
+        "translation-hi": "खुला",
+        "translation-ro": "deschis",
+        "translation-tr": "açık",
+        "translation-uz": "ochiq"
+      },
+      {
+        "word": "der Urlaub",
+        "translation-ru": "отпуск",
+        "translation-en": "holiday",
+        "translation-uk": "відпустка",
+        "translation-pl": "urlop",
+        "translation-es": "las vacaciones",
+        "translation-fr": "les vacances",
+        "translation-ar": "الإجازة",
+        "translation-hi": "छुट्टी",
+        "translation-ro": "concediul",
+        "translation-tr": "tatil",
+        "translation-uz": "ta’til"
+      },
+      {
+        "word": "die Praxis",
+        "translation-ru": "кабинет врача",
+        "translation-en": "doctor’s practice",
+        "translation-uk": "кабінет лікаря",
+        "translation-pl": "gabinet lekarski",
+        "translation-es": "la consulta",
+        "translation-fr": "le cabinet médical",
+        "translation-ar": "العيادة",
+        "translation-hi": "क्लिनिक",
+        "translation-ro": "cabinetul medical",
+        "translation-tr": "muayenehane",
+        "translation-uz": "shifokor xonasi"
+      },
+      {
+        "word": "die Diät",
+        "translation-ru": "диета",
+        "translation-en": "diet",
+        "translation-uk": "дієта",
+        "translation-pl": "dieta",
+        "translation-es": "la dieta",
+        "translation-fr": "le régime",
+        "translation-ar": "الحمية",
+        "translation-hi": "डाइट",
+        "translation-ro": "dieta",
+        "translation-tr": "diyet",
+        "translation-uz": "parhez"
+      },
+      {
+        "word": "morgen",
+        "translation-ru": "завтра",
+        "translation-en": "tomorrow",
+        "translation-uk": "завтра",
+        "translation-pl": "jutro",
+        "translation-es": "mañana",
+        "translation-fr": "demain",
+        "translation-ar": "غدًا",
+        "translation-hi": "कल",
+        "translation-ro": "mâine",
+        "translation-tr": "yarın",
+        "translation-uz": "ertaga"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "actionPrepositionsFive.questTask1",
+        "options": [
+          "von Montag bis Freitag",
+          "von Montag zu Freitag",
+          "seit Montag bis Freitag"
+        ],
+        "answer": "von Montag bis Freitag"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "actionPrepositionsFive.questTask2",
+        "words": [
+          "arbeite",
+          "neun",
+          "Ich",
+          "von",
+          "bis",
+          "fünf",
+          "um"
+        ],
+        "correctOrder": [
+          "Ich",
+          "arbeite",
+          "von",
+          "neun",
+          "bis",
+          "fünf"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "actionPrepositionsFive.questTask3",
+        "correctAnswer": "bis"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "actionPrepositionsFive.questTask4",
+        "correctAnswer": "ab"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "actionPrepositionsFive.questTask5",
+        "options": [
+          "Die Bank ist bis 16 Uhr offen.",
+          "Die Bank ist von 16 Uhr offen.",
+          "Die Bank ist seit 16 Uhr offen."
+        ],
+        "answer": "Die Bank ist bis 16 Uhr offen."
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "actionPrepositionsFive.questTask6",
+        "correctAnswer": "von"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "actionPrepositionsFive.questTask7",
+        "text": "Die Praxis ist von Montag bis Freitag geöffnet. Am Wochenende ist sie zu.",
+        "options": [
+          "von Montag bis Freitag",
+          "von Montag bis Samstag",
+          "am Wochenende"
+        ],
+        "answer": "von Montag bis Freitag"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "actionPrepositionsFive.questTask8",
+        "options": [
+          "bis morgen",
+          "ab morgen",
+          "von morgen"
+        ],
+        "answer": "bis morgen"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "actionPrepositionsFive.questTask9",
+        "words": [
+          "mache",
+          "morgen",
+          "Ab",
+          "eine",
+          "ich",
+          "Diät",
+          "bis"
+        ],
+        "correctOrder": [
+          "Ab",
+          "morgen",
+          "mache",
+          "ich",
+          "eine",
+          "Diät"
+        ]
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "actionPrepositionsFive.questTask10",
+        "correctAnswer": "bis"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "actionPrepositionsFive.questTask11",
+        "options": [
+          "Die neue Arbeit beginnt ab Juli.",
+          "Die neue Arbeit beginnt bis Juli.",
+          "Die neue Arbeit beginnt von Juli."
+        ],
+        "answer": "Die neue Arbeit beginnt ab Juli."
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "question": "actionPrepositionsFive.questTask12",
+        "text": "Ich bin von heute bis Sonntag in Berlin.",
+        "options": [
+          "bis Sonntag",
+          "bis Samstag",
+          "bis Montag"
+        ],
+        "answer": "bis Sonntag"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "actionPrepositionsFive.questTask13",
+        "correctAnswer": "am"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "actionPrepositionsFive.questTask14",
+        "correctAnswer": "um"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "actionPrepositionsFive.questTask15",
+        "correctAnswer": "vorbei"
+      }
+    ]
+  },
+  {
+    "questId": "prep-action-6",
+    "title": "actionPrepositionsSix.questTitle",
+    "progress": "0/15",
+    "description": "actionPrepositionsSix.questDescription",
+    "conditions": {
+      "goal": "actionPrepositionsSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Jahr",
+        "translation-ru": "год",
+        "translation-en": "year",
+        "translation-uk": "рік",
+        "translation-pl": "rok",
+        "translation-es": "el año",
+        "translation-fr": "l’année",
+        "translation-ar": "السنة",
+        "translation-hi": "साल",
+        "translation-ro": "anul",
+        "translation-tr": "yıl",
+        "translation-uz": "yil"
+      },
+      {
+        "word": "die Woche",
+        "translation-ru": "неделя",
+        "translation-en": "week",
+        "translation-uk": "тиждень",
+        "translation-pl": "tydzień",
+        "translation-es": "la semana",
+        "translation-fr": "la semaine",
+        "translation-ar": "الأسبوع",
+        "translation-hi": "हफ़्ता",
+        "translation-ro": "săptămâna",
+        "translation-tr": "hafta",
+        "translation-uz": "hafta"
+      },
+      {
+        "word": "die Stunde",
+        "translation-ru": "час",
+        "translation-en": "hour",
+        "translation-uk": "година",
+        "translation-pl": "godzina",
+        "translation-es": "la hora",
+        "translation-fr": "l’heure",
+        "translation-ar": "الساعة",
+        "translation-hi": "घंटा",
+        "translation-ro": "ora",
+        "translation-tr": "saat",
+        "translation-uz": "soat"
+      },
+      {
+        "word": "das Essen",
+        "translation-ru": "еда",
+        "translation-en": "meal",
+        "translation-uk": "їжа",
+        "translation-pl": "jedzenie",
+        "translation-es": "la comida",
+        "translation-fr": "le repas",
+        "translation-ar": "الطعام",
+        "translation-hi": "खाना",
+        "translation-ro": "masa",
+        "translation-tr": "yemek",
+        "translation-uz": "ovqat"
+      },
+      {
+        "word": "krank",
+        "translation-ru": "больной",
+        "translation-en": "ill",
+        "translation-uk": "хворий",
+        "translation-pl": "chory",
+        "translation-es": "enfermo",
+        "translation-fr": "malade",
+        "translation-ar": "مريض",
+        "translation-hi": "बीमार",
+        "translation-ro": "bolnav",
+        "translation-tr": "hasta",
+        "translation-uz": "kasal"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "actionPrepositionsSix.questTask1",
+        "options": [
+          "vor zwei Jahren",
+          "seit zwei Jahren",
+          "nach zwei Jahren"
+        ],
+        "answer": "vor zwei Jahren"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "actionPrepositionsSix.questTask2",
+        "words": [
+          "ist",
+          "Tagen",
+          "Er",
+          "seit",
+          "drei",
+          "krank",
+          "vor"
+        ],
+        "correctOrder": [
+          "Er",
+          "ist",
+          "seit",
+          "drei",
+          "Tagen",
+          "krank"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "actionPrepositionsSix.questTask3",
+        "correctAnswer": "seit"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "actionPrepositionsSix.questTask4",
+        "correctAnswer": "vor"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "actionPrepositionsSix.questTask5",
+        "correctAnswer": "nach"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "actionPrepositionsSix.questTask6",
+        "options": [
+          "Ich warte seit einer Stunde.",
+          "Ich warte vor einer Stunde.",
+          "Ich warte nach einer Stunde."
+        ],
+        "answer": "Ich warte seit einer Stunde."
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "actionPrepositionsSix.questTask7",
+        "text": "Ich wohne seit drei Jahren in München. Vorher habe ich in Wien gewohnt.",
+        "options": [
+          "seit drei Jahren",
+          "seit zwei Jahren",
+          "seit vier Jahren"
+        ],
+        "answer": "seit drei Jahren"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "actionPrepositionsSix.questTask8",
+        "correctAnswer": "dem"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "actionPrepositionsSix.questTask9",
+        "words": [
+          "gehen",
+          "Essen",
+          "Wir",
+          "dem",
+          "nach",
+          "spazieren",
+          "vor"
+        ],
+        "correctOrder": [
+          "Wir",
+          "gehen",
+          "nach",
+          "dem",
+          "Essen",
+          "spazieren"
+        ]
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "actionPrepositionsSix.questTask10",
+        "options": [
+          "nach der Arbeit",
+          "seit der Arbeit",
+          "vor der Arbeit"
+        ],
+        "answer": "nach der Arbeit"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "actionPrepositionsSix.questTask11",
+        "options": [
+          "Vor einer Stunde hat er angerufen.",
+          "Seit einer Stunde hat er angerufen.",
+          "Nach einer Stunde hat er angerufen."
+        ],
+        "answer": "Vor einer Stunde hat er angerufen."
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "question": "actionPrepositionsSix.questTask12",
+        "text": "Ich gehe nach dem Deutschkurs mit Tom ins Kino.",
+        "options": [
+          "nach dem Deutschkurs",
+          "vor dem Deutschkurs",
+          "seit dem Deutschkurs"
+        ],
+        "answer": "nach dem Deutschkurs"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "actionPrepositionsSix.questTask13",
+        "correctAnswer": "bis"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "actionPrepositionsSix.questTask14",
+        "correctAnswer": "im"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "actionPrepositionsSix.questTask15",
         "correctAnswer": "für"
       }
     ]
   },
   {
-    "questId": "prep-action-two",
-    "title": "Предлоги für и ohne — часть 2",
+    "questId": "prep-action-7",
+    "title": "actionPrepositionsSeven.questTitle",
     "progress": "0/15",
-    "description": "Практика предлогов für и ohne в реальных повседневных фразах без грамматических подсказок.",
+    "description": "actionPrepositionsSeven.questDescription",
     "conditions": {
-      "goal": "Ответьте правильно на 15 заданий по предлогам für и ohne",
+      "goal": "actionPrepositionsSeven.questGoal",
       "minCorrect": 15,
       "requiredTasks": 15
     },
@@ -304,2861 +1486,459 @@
     },
     "vocabulary": [
       {
-        "word": "für den Urlaub",
-        "translation-ru": "Для отпуска",
-        "translation-en": "For vacation",
-        "translation-uk": "Для відпустки",
-        "translation-pl": "Na urlop",
-        "translation-es": "Para las vacaciones",
-        "translation-fr": "Pour les vacances",
-        "translation-ar": "من أجل الإجازة",
-        "translation-hi": "छुट्टियों के लिए",
-        "translation-ro": "Pentru vacanță",
-        "translation-tr": "Tatil için",
-        "translation-uz": "Ta'til uchun"
+        "word": "das Fitnessstudio",
+        "translation-ru": "спортзал",
+        "translation-en": "gym",
+        "translation-uk": "спортзал",
+        "translation-pl": "siłownia",
+        "translation-es": "el gimnasio",
+        "translation-fr": "la salle de sport",
+        "translation-ar": "النادي الرياضي",
+        "translation-hi": "जिम",
+        "translation-ro": "sala de sport",
+        "translation-tr": "spor salonu",
+        "translation-uz": "sport zali"
       },
       {
-        "word": "ohne den Schirm",
-        "translation-ru": "Без зонта",
-        "translation-en": "Without the umbrella",
-        "translation-uk": "Без парасольки",
-        "translation-pl": "Bez parasola",
-        "translation-es": "Sin el paraguas",
-        "translation-fr": "Sans le parapluie",
-        "translation-ar": "بدون المظلة",
-        "translation-hi": "छाते के बिना",
-        "translation-ro": "Fără umbrelă",
-        "translation-tr": "Şemsiyesiz",
-        "translation-uz": "Soyabonsiz"
+        "word": "der Sonntag",
+        "translation-ru": "воскресенье",
+        "translation-en": "Sunday",
+        "translation-uk": "неділя",
+        "translation-pl": "niedziela",
+        "translation-es": "el domingo",
+        "translation-fr": "le dimanche",
+        "translation-ar": "الأحد",
+        "translation-hi": "रविवार",
+        "translation-ro": "duminica",
+        "translation-tr": "pazar",
+        "translation-uz": "yakshanba"
       },
       {
-        "word": "für das Auto",
-        "translation-ru": "Для машины",
-        "translation-en": "For the car",
-        "translation-uk": "Для машини",
-        "translation-pl": "Dla samochodu",
-        "translation-es": "Para el coche",
-        "translation-fr": "Pour la voiture",
-        "translation-ar": "للسيارة",
-        "translation-hi": "कार के लिए",
-        "translation-ro": "Pentru mașină",
-        "translation-tr": "Araba için",
-        "translation-uz": "Mashina uchun"
+        "word": "anfangen",
+        "translation-ru": "начинать",
+        "translation-en": "to start",
+        "translation-uk": "починати",
+        "translation-pl": "zaczynać",
+        "translation-es": "empezar",
+        "translation-fr": "commencer",
+        "translation-ar": "يبدأ",
+        "translation-hi": "शुरू करना",
+        "translation-ro": "a începe",
+        "translation-tr": "başlamak",
+        "translation-uz": "boshlamoq"
       },
       {
-        "word": "ohne das Geld",
-        "translation-ru": "Без денег",
-        "translation-en": "Without the money",
-        "translation-uk": "Без грошей",
-        "translation-pl": "Bez pieniędzy",
-        "translation-es": "Sin el dinero",
-        "translation-fr": "Sans l'argent",
-        "translation-ar": "بدون نقود",
-        "translation-hi": "पैसों के बिना",
-        "translation-ro": "Fără bani",
-        "translation-tr": "Parasız",
-        "translation-uz": "Pulsiz"
+        "word": "Ski fahren",
+        "translation-ru": "кататься на лыжах",
+        "translation-en": "to ski",
+        "translation-uk": "кататися на лижах",
+        "translation-pl": "jeździć na nartach",
+        "translation-es": "esquiar",
+        "translation-fr": "faire du ski",
+        "translation-ar": "يتزلج",
+        "translation-hi": "स्कीइंग करना",
+        "translation-ro": "a schia",
+        "translation-tr": "kayak yapmak",
+        "translation-uz": "chang‘i uchmoq"
       },
       {
-        "word": "für die Wohnung",
-        "translation-ru": "Для квартиры",
-        "translation-en": "For the apartment",
-        "translation-uk": "Для квартири",
-        "translation-pl": "Do mieszkania",
-        "translation-es": "Para el apartamento",
-        "translation-fr": "Pour l'appartement",
-        "translation-ar": "للشقة",
-        "translation-hi": "फ्लैट के लिए",
-        "translation-ro": "Pentru apartament",
-        "translation-tr": "Daire için",
-        "translation-uz": "Kvartira uchun"
-      },
-      {
-        "word": "ohne die Jacke",
-        "translation-ru": "Без куртки",
-        "translation-en": "Without the jacket",
-        "translation-uk": "Без куртки",
-        "translation-pl": "Bez kurtki",
-        "translation-es": "Sin la chaqueta",
-        "translation-fr": "Sans la veste",
-        "translation-ar": "بدون سترة",
-        "translation-hi": "जैकेट के बिना",
-        "translation-ro": "Fără jachetă",
-        "translation-tr": "Ceketsiz",
-        "translation-uz": "Kurtkasiz"
-      },
-      {
-        "word": "für die Gäste",
-        "translation-ru": "Для гостей",
-        "translation-en": "For the guests",
-        "translation-uk": "Для гостей",
-        "translation-pl": "Dla gości",
-        "translation-es": "Para los invitados",
-        "translation-fr": "Pour les invités",
-        "translation-ar": "للضيوف",
-        "translation-hi": "मेहमानों के लिए",
-        "translation-ro": "Pentru oaspeți",
-        "translation-tr": "Misafirler için",
-        "translation-uz": "Mehmonlar uchun"
-      },
-      {
-        "word": "ohne Fleisch",
-        "translation-ru": "Без мяса",
-        "translation-en": "Without meat",
-        "translation-uk": "Без м'яса",
-        "translation-pl": "Bez mięsa",
-        "translation-es": "Sin carne",
-        "translation-fr": "Sans viande",
-        "translation-ar": "بدون لحم",
-        "translation-hi": "मांस के बिना",
-        "translation-ro": "Fără carne",
-        "translation-tr": "Etsiz",
-        "translation-uz": "Go'shtsiz"
-      },
-      {
-        "word": "ohne Pause",
-        "translation-ru": "Без перерыва",
-        "translation-en": "Without a break",
-        "translation-uk": "Без перерви",
-        "translation-pl": "Bez przerwy",
-        "translation-es": "Sin pausa",
-        "translation-fr": "Sans pause",
-        "translation-ar": "بدون توقف",
-        "translation-hi": "बिना रुके",
-        "translation-ro": "Fără pauză",
-        "translation-tr": "Molasız",
-        "translation-uz": "Tanaffussiz"
-      },
-      {
-        "word": "für dich",
-        "translation-ru": "Для тебя",
-        "translation-en": "For you",
-        "translation-uk": "Для тебе",
-        "translation-pl": "Dla ciebie",
-        "translation-es": "Para ti",
-        "translation-fr": "Pour toi",
-        "translation-ar": "لك",
-        "translation-hi": "तुम्हारे लिए",
-        "translation-ro": "Pentru tine",
-        "translation-tr": "Senin için",
-        "translation-uz": "Sen uchun"
+        "word": "frei haben",
+        "translation-ru": "быть свободным от работы",
+        "translation-en": "to have the day off",
+        "translation-uk": "мати вихідний",
+        "translation-pl": "mieć wolne",
+        "translation-es": "tener el día libre",
+        "translation-fr": "être en congé",
+        "translation-ar": "يكون في يوم عطلة",
+        "translation-hi": "छुट्टी होना",
+        "translation-ro": "a fi liber",
+        "translation-tr": "izinli olmak",
+        "translation-uz": "dam olish kuni bo‘lmoq"
       }
     ],
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Выберите перевод: «Идёт дождь, а он идёт без зонта»",
+        "question": "actionPrepositionsSeven.questTask1",
         "options": [
-          "Es regnet und er geht ohne den Schirm",
-          "Es regnet und er geht ohne dem Schirm",
-          "Es regnet und er geht für den Schirm"
+          "Wir treffen uns um sechs Uhr vor dem Kino.",
+          "Wir treffen uns am sechs Uhr vor dem Kino.",
+          "Wir treffen uns um sechs Uhr vor das Kino."
         ],
-        "answer": "Es regnet und er geht ohne den Schirm"
+        "answer": "Wir treffen uns um sechs Uhr vor dem Kino."
       },
       {
         "id": 2,
-        "type": "input",
-        "question": "Вставьте предлог «без»: Er arbeitet schon vier Stunden ___ Pause",
-        "correctAnswer": "ohne"
+        "type": "reorder",
+        "question": "actionPrepositionsSeven.questTask2",
+        "words": [
+          "gehe",
+          "dich",
+          "Ohne",
+          "ich",
+          "nicht",
+          "dir"
+        ],
+        "correctOrder": [
+          "Ohne",
+          "dich",
+          "gehe",
+          "ich",
+          "nicht"
+        ]
       },
       {
         "id": 3,
-        "type": "readAndAnswer",
-        "text": "— Draußen ist es eiskalt und windig. — Warum gehst du nur im T-Shirt auf die Straße?",
-        "question": "О чём говорит ситуация?",
-        "options": [
-          "ohne die Jacke",
-          "für die Jacke",
-          "mit der Jacke"
-        ],
-        "answer": "ohne die Jacke"
+        "type": "input",
+        "question": "actionPrepositionsSeven.questTask3",
+        "correctAnswer": "von"
       },
       {
         "id": 4,
-        "type": "reorder",
-        "question": "Соберите предложение: Мы готовим суп без мяса",
-        "words": ["Fleisch", "kochen", "ohne", "Wir", "Suppe", "die"],
-        "correctOrder": ["Wir", "kochen", "die", "Suppe", "ohne", "Fleisch"]
+        "type": "input",
+        "question": "actionPrepositionsSeven.questTask4",
+        "correctAnswer": "am"
       },
       {
         "id": 5,
-        "type": "select",
-        "question": "Выберите перевод: «Мы покупаем новые шины для машины»",
-        "options": [
-          "Wir kaufen neue Reifen für das Auto",
-          "Wir kaufen neue Reifen für dem Auto",
-          "Wir kaufen neue Reifen ohne das Auto"
-        ],
-        "answer": "Wir kaufen neue Reifen für das Auto"
+        "type": "input",
+        "question": "actionPrepositionsSeven.questTask5",
+        "correctAnswer": "durch"
       },
       {
         "id": 6,
-        "type": "input",
-        "question": "Вставьте пропущенный артикль: Er geht bei Regen ohne ___ Schirm",
-        "correctAnswer": "den"
+        "type": "select",
+        "question": "actionPrepositionsSeven.questTask6",
+        "options": [
+          "gegenüber von der Bank",
+          "gegenüber die Bank",
+          "an der Bank vorbei"
+        ],
+        "answer": "gegenüber von der Bank"
       },
       {
         "id": 7,
         "type": "readAndAnswer",
-        "text": "— Warum packst du Badehose und Sonnencreme ein? — Die Reise nach Spanien geht morgen los.",
-        "question": "Для чего упаковывают вещи?",
+        "question": "actionPrepositionsSeven.questTask7",
+        "text": "Am Montag habe ich frei. Ich arbeite von Dienstag bis Freitag.",
         "options": [
-          "für den Urlaub",
-          "ohne den Urlaub",
-          "nach dem Urlaub"
+          "von Dienstag bis Freitag",
+          "von Montag bis Freitag",
+          "am Montag"
         ],
-        "answer": "für den Urlaub"
+        "answer": "von Dienstag bis Freitag"
       },
       {
         "id": 8,
+        "type": "input",
+        "question": "actionPrepositionsSeven.questTask8",
+        "correctAnswer": "vor"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "actionPrepositionsSeven.questTask9",
+        "options": [
+          "ein Geschenk für deinen Bruder",
+          "ein Geschenk für deinem Bruder",
+          "ein Geschenk für dein Bruder"
+        ],
+        "answer": "ein Geschenk für deinen Bruder"
+      },
+      {
+        "id": 10,
         "type": "reorder",
-        "question": "Соберите предложение: У меня есть сюрприз для тебя",
-        "words": ["habe", "eine", "Überraschung", "Ich", "dich", "für"],
+        "question": "actionPrepositionsSeven.questTask10",
+        "words": [
+          "spazieren",
+          "See",
+          "Wir",
+          "den",
+          "um",
+          "dem"
+        ],
         "correctOrder": [
-          "Ich",
-          "habe",
-          "eine",
-          "Überraschung",
+          "Wir",
+          "spazieren",
+          "um",
+          "den",
+          "See"
+        ]
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "actionPrepositionsSeven.questTask11",
+        "correctAnswer": "vorbei"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "actionPrepositionsSeven.questTask12",
+        "correctAnswer": "im"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "actionPrepositionsSeven.questTask13",
+        "text": "Anna ist seit Montag krank. Heute geht sie zum Arzt.",
+        "options": [
+          "seit Montag",
+          "seit Dienstag",
+          "seit Sonntag"
+        ],
+        "answer": "seit Montag"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "actionPrepositionsSeven.questTask14",
+        "correctAnswer": "e"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "actionPrepositionsSeven.questTask15",
+        "correctAnswer": "am"
+      }
+    ]
+  },
+  {
+    "questId": "prep-action-8",
+    "title": "actionPrepositionsEight.questTitle",
+    "progress": "0/15",
+    "description": "actionPrepositionsEight.questDescription",
+    "conditions": {
+      "goal": "actionPrepositionsEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Mittwoch",
+        "translation-ru": "среда",
+        "translation-en": "Wednesday",
+        "translation-uk": "середа",
+        "translation-pl": "środa",
+        "translation-es": "el miércoles",
+        "translation-fr": "le mercredi",
+        "translation-ar": "الأربعاء",
+        "translation-hi": "बुधवार",
+        "translation-ro": "miercurea",
+        "translation-tr": "çarşamba",
+        "translation-uz": "chorshanba"
+      },
+      {
+        "word": "der Laden",
+        "translation-ru": "магазин",
+        "translation-en": "shop",
+        "translation-uk": "магазин",
+        "translation-pl": "sklep",
+        "translation-es": "la tienda",
+        "translation-fr": "le magasin",
+        "translation-ar": "المتجر",
+        "translation-hi": "दुकान",
+        "translation-ro": "magazinul",
+        "translation-tr": "dükkân",
+        "translation-uz": "do‘kon"
+      },
+      {
+        "word": "die Lampe",
+        "translation-ru": "лампа",
+        "translation-en": "lamp",
+        "translation-uk": "лампа",
+        "translation-pl": "lampa",
+        "translation-es": "la lámpara",
+        "translation-fr": "la lampe",
+        "translation-ar": "المصباح",
+        "translation-hi": "लैंप",
+        "translation-ro": "lampa",
+        "translation-tr": "lamba",
+        "translation-uz": "chiroq"
+      },
+      {
+        "word": "das Fahrrad",
+        "translation-ru": "велосипед",
+        "translation-en": "bike",
+        "translation-uk": "велосипед",
+        "translation-pl": "rower",
+        "translation-es": "la bicicleta",
+        "translation-fr": "le vélo",
+        "translation-ar": "الدراجة",
+        "translation-hi": "साइकिल",
+        "translation-ro": "bicicleta",
+        "translation-tr": "bisiklet",
+        "translation-uz": "velosiped"
+      },
+      {
+        "word": "der Zug",
+        "translation-ru": "поезд",
+        "translation-en": "train",
+        "translation-uk": "потяг",
+        "translation-pl": "pociąg",
+        "translation-es": "el tren",
+        "translation-fr": "le train",
+        "translation-ar": "القطار",
+        "translation-hi": "रेलगाड़ी",
+        "translation-ro": "trenul",
+        "translation-tr": "tren",
+        "translation-uz": "poyezd"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "actionPrepositionsEight.questTask1",
+        "options": [
+          "am Mittwoch",
+          "im Mittwoch",
+          "um Mittwoch"
+        ],
+        "answer": "am Mittwoch"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "actionPrepositionsEight.questTask2",
+        "words": [
+          "ist",
+          "dich",
+          "Das",
+          "für",
+          "dir"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
           "für",
           "dich"
         ]
       },
       {
-        "id": 9,
-        "type": "select",
-        "question": "Выберите перевод: «Она выходит на улицу без куртки»",
-        "options": [
-          "Sie geht ohne die Jacke auf die Straße",
-          "Sie geht ohne der Jacke auf die Straße",
-          "Sie geht für die Jacke auf die Straße"
-        ],
-        "answer": "Sie geht ohne die Jacke auf die Straße"
-      },
-      {
-        "id": 10,
-        "type": "input",
-        "question": "Вставьте предлог «для»: Wir kaufen neue Möbel ___ die Wohnung",
-        "correctAnswer": "für"
-      },
-      {
-        "id": 11,
-        "type": "reorder",
-        "question": "Соберите предложение: Они покупают напитки для гостей",
-        "words": [
-          "Gäste",
-          "Getränke",
-          "für",
-          "die",
-          "kaufen",
-          "Sie"
-        ],
-        "correctOrder": [
-          "Sie",
-          "kaufen",
-          "Getränke",
-          "für",
-          "die",
-          "Gäste"
-        ]
-      },
-      {
-        "id": 12,
-        "type": "select",
-        "question": "Выберите перевод: «Это письмо для тебя»",
-        "options": [
-          "Dieser Brief ist für dich",
-          "Dieser Brief ist für dir",
-          "Dieser Brief ist ohne dich"
-        ],
-        "answer": "Dieser Brief ist für dich"
-      },
-      {
-        "id": 13,
-        "type": "input",
-        "question": "Вставьте предлог «без»: Im Supermarkt kann man ___ das Geld nichts kaufen",
-        "correctAnswer": "ohne"
-      },
-      {
-        "id": 14,
-        "type": "readAndAnswer",
-        "text": "— Das Essen riecht lecker! Ist da Schinken drin? — Nein, das Gericht ist komplett vegetarisch.",
-        "question": "Как приготовлено блюдо?",
-        "options": [
-          "ohne Fleisch",
-          "für Fleisch",
-          "mit Fleisch"
-        ],
-        "answer": "ohne Fleisch"
-      },
-      {
-        "id": 15,
-        "type": "input",
-        "question": "Вставьте предлог «для»: Wir sparen Geld ___ den Urlaub",
-        "correctAnswer": "für"
-      }
-    ]
-  },
-  {
-    "questId": "prep-action-three",
-    "title": "Предлоги zu и von (Dativ)",
-    "progress": "0/15",
-    "description": "Практика предлогов цели, повода и авторства zu и von в реальных жизненных ситуациях.",
-    "conditions": {
-      "goal": "Ответьте правильно на 15 заданий по предлогам zu и von",
-      "minCorrect": 15,
-      "requiredTasks": 15
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "word": "zum Geburtstag",
-        "translation-ru": "На день рождения",
-        "translation-en": "For birthday",
-        "translation-uk": "На день народження",
-        "translation-pl": "Na urodziny",
-        "translation-es": "Para el cumpleaños",
-        "translation-fr": "Pour l'anniversaire",
-        "translation-ar": "لعيد الميلاد",
-        "translation-hi": "जन्मदिन के लिए",
-        "translation-ro": "De ziua de naștere",
-        "translation-tr": "Doğum günü için",
-        "translation-uz": "Tug'ilgan kunga"
-      },
-      {
-        "word": "von der Mutter",
-        "translation-ru": "От мамы",
-        "translation-en": "From mother",
-        "translation-uk": "Від мами",
-        "translation-pl": "Od mamy",
-        "translation-es": "De la madre",
-        "translation-fr": "De la mère",
-        "translation-ar": "من الأم",
-        "translation-hi": "माँ से",
-        "translation-ro": "De la mamă",
-        "translation-tr": "Anneden",
-        "translation-uz": "Onadan"
-      },
-      {
-        "word": "zum Frühstück",
-        "translation-ru": "На завтрак",
-        "translation-en": "For breakfast",
-        "translation-uk": "На сніданок",
-        "translation-pl": "Na śniadanie",
-        "translation-es": "Para el desayuno",
-        "translation-fr": "Pour le petit-déjeuner",
-        "translation-ar": "للإفطار",
-        "translation-hi": "नाश्ते के लिए",
-        "translation-ro": "La micul dejun",
-        "translation-tr": "Kahvaltı için",
-        "translation-uz": "Nonushtaga"
-      },
-      {
-        "word": "vom Nachbarn",
-        "translation-ru": "От соседа",
-        "translation-en": "From the neighbor",
-        "translation-uk": "Від сусіда",
-        "translation-pl": "Od sąsiada",
-        "translation-es": "Del vecino",
-        "translation-fr": "Du voisin",
-        "translation-ar": "من الجار",
-        "translation-hi": "पड़ोसी से",
-        "translation-ro": "De la vecin",
-        "translation-tr": "Komşudan",
-        "translation-uz": "Qo'shnidan"
-      },
-      {
-        "word": "zur Hochzeit",
-        "translation-ru": "На свадьбу",
-        "translation-en": "To the wedding",
-        "translation-uk": "На весілля",
-        "translation-pl": "Na ślub",
-        "translation-es": "Para la boda",
-        "translation-fr": "Pour le mariage",
-        "translation-ar": "لحفل الزفاف",
-        "translation-hi": "शादी के लिए",
-        "translation-ro": "La nuntă",
-        "translation-tr": "Düğün için",
-        "translation-uz": "To'yga"
-      },
-      {
-        "word": "von Freunden",
-        "translation-ru": "От друзей",
-        "translation-en": "From friends",
-        "translation-uk": "Від друзів",
-        "translation-pl": "Od przyjaciół",
-        "translation-es": "De amigos",
-        "translation-fr": "D'amis",
-        "translation-ar": "من الأصدقاء",
-        "translation-hi": "दोस्तों से",
-        "translation-ro": "De la prieteni",
-        "translation-tr": "Arkadaşlardan",
-        "translation-uz": "Do'stlardan"
-      },
-      {
-        "word": "zum Abendessen",
-        "translation-ru": "На ужин",
-        "translation-en": "For dinner",
-        "translation-uk": "На вечерю",
-        "translation-pl": "Na kolację",
-        "translation-es": "Para la cena",
-        "translation-fr": "Pour le dîner",
-        "translation-ar": "للعشاء",
-        "translation-hi": "रात के खाने के लिए",
-        "translation-ro": "La cină",
-        "translation-tr": "Akşam yemeği için",
-        "translation-uz": "Kechki ovqatga"
-      },
-      {
-        "word": "vom Chef",
-        "translation-ru": "От начальника",
-        "translation-en": "From the boss",
-        "translation-uk": "Від начальника",
-        "translation-pl": "Od szefa",
-        "translation-es": "Del jefe",
-        "translation-fr": "Du chef",
-        "translation-ar": "من المدير",
-        "translation-hi": "बॉस से",
-        "translation-ro": "De la șef",
-        "translation-tr": "Patrondan",
-        "translation-uz": "Boshliqdan"
-      },
-      {
-        "word": "zur Party",
-        "translation-ru": "На вечеринку",
-        "translation-en": "To the party",
-        "translation-uk": "На вечірку",
-        "translation-pl": "Na imprezę",
-        "translation-es": "A la fiesta",
-        "translation-fr": "À la fête",
-        "translation-ar": "إلى الحفلة",
-        "translation-hi": "पार्टी के लिए",
-        "translation-ro": "La petrecere",
-        "translation-tr": "Partiye",
-        "translation-uz": "Bazmga"
-      },
-      {
-        "word": "von mir",
-        "translation-ru": "От меня",
-        "translation-en": "From me",
-        "translation-uk": "Від мене",
-        "translation-pl": "Ode mnie",
-        "translation-es": "De mí",
-        "translation-fr": "De moi",
-        "translation-ar": "مني",
-        "translation-hi": "मेरी तरफ से",
-        "translation-ro": "De la mine",
-        "translation-tr": "Benden",
-        "translation-uz": "Mendan"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "Выберите правильный вариант: «Мы поздравляем тебя с днём рождения»",
-        "options": [
-          "Wir gratulieren dir herzlich zum Geburtstag",
-          "Wir gratulieren dir herzlich vom Geburtstag",
-          "Wir gratulieren dir herzlich für Geburtstag"
-        ],
-        "answer": "Wir gratulieren dir herzlich zum Geburtstag"
-      },
-      {
-        "id": 2,
-        "type": "input",
-        "question": "Вставьте предлог «от»: Das Paket vor der Tür ist ein Gruß ___ der Mutter",
-        "correctAnswer": "von"
-      },
-      {
         "id": 3,
-        "type": "readAndAnswer",
-        "text": "— Was schenken wir Julia am Wochenende? — Sie feiert am Samstag, sie wird dreißig.",
-        "question": "К какому поводу готовят подарок?",
-        "options": [
-          "zum Geburtstag",
-          "vom Geburtstag",
-          "ohne Geburtstag"
-        ],
-        "answer": "zum Geburtstag"
-      },
-      {
-        "id": 4,
-        "type": "reorder",
-        "question": "Соберите предложение: Что ты пьёшь утром на завтрак?",
-        "words": ["morgens", "Frühstück", "zum", "du", "trinkst", "Was"],
-        "correctOrder": ["Was", "trinkst", "du", "morgens", "zum", "Frühstück"]
-      },
-      {
-        "id": 5,
-        "type": "select",
-        "question": "Выберите правильный вариант: «От начальника»",
-        "options": [
-          "vom Chef",
-          "zum Chef",
-          "dem Chef"
-        ],
-        "answer": "vom Chef"
-      },
-      {
-        "id": 6,
         "type": "input",
-        "question": "«Что ты хочешь на завтрак?»: Was möchtest du ___ Frühstück?",
-        "correctAnswer": "zum"
-      },
-      {
-        "id": 7,
-        "type": "reorder",
-        "question": "Соберите предложение: Они идут сегодня вечером на вечеринку",
-        "words": ["Party", "heute", "gehen", "zur", "Sie", "Abend"],
-        "correctOrder": ["Sie", "gehen", "heute", "Abend", "zur", "Party"]
-      },
-      {
-        "id": 8,
-        "type": "readAndAnswer",
-        "text": "— Tolle Blumen auf dem Tisch! Wer hat sie gebracht? — Das ist eine kleine Überraschung von Lukas und Anna.",
-        "question": "От кого цветы?",
-        "options": [
-          "von Freunden",
-          "zu Freunden",
-          "für Freunden"
-        ],
-        "answer": "von Freunden"
-      },
-      {
-        "id": 9,
-        "type": "input",
-        "question": "Вставьте пропущенное слово(от кого посылка): Das schwere Paket im Flur ist ___ Nachbarn",
-        "correctAnswer": "vom"
-      },
-      {
-        "id": 10,
-        "type": "select",
-        "question": "Выберите правильный вариант: «Сувенир для тебя»",
-        "options": [
-          "Ein Souvenir für dich",
-          "Ein Souvenir für dir",
-          "Ein Souvenir ohne dich"
-        ],
-        "answer": "Ein Souvenir für dich"
-      },
-      {
-        "id": 11,
-        "type": "reorder",
-        "question": "Соберите предложение: Мы получили открытку от друзей",
-        "words": ["bekommen", "Postkarte", "von", "Wir", "haben", "Freunden", "eine"],
-        "correctOrder": ["Wir", "haben", "eine", "Postkarte", "von", "Freunden", "bekommen"]
-      },
-      {
-        "id": 12,
-        "type": "input",
-        "question": "Вставьте предлог цели «на»: Was kochen wir heute Abend ___ Essen?",
-        "correctAnswer": "zum"
-      },
-      {
-        "id": 13,
-        "type": "readAndAnswer",
-        "text": "— Gehst du am Samstag in die Stadt? — Ja, ich brauche ein schickes Kleid für Samstagabend, Lisa heiratet.",
-        "question": "Куда собирается девушка?",
-        "options": [
-          "zur Hochzeit",
-          "vom Geburtstag",
-          "ohne Hochzeit"
-        ],
-        "answer": "zur Hochzeit"
-      },
-      {
-        "id": 14,
-        "type": "select",
-        "question": "Выберите правильный вариант: «Он идёт в гости без подарка на день рождения»",
-        "options": [
-          "Er geht ohne Geschenk zum Geburtstag",
-          "Er geht ohne Geschenk vom Geburtstag",
-          "Er geht für Geschenk zum Geburtstag"
-        ],
-        "answer": "Er geht ohne Geschenk zum Geburtstag"
-      },
-      {
-        "id": 15,
-        "type": "input",
-        "question": "Вставьте пропущенное слово: Sag deiner Familie bitte viele Grüße ___ mir!",
-        "correctAnswer": "von"
-      }
-    ]
-  },
-  {
-    "questId": "prep-action-four",
-    "title": "Предлоги durch и um (Akkusativ)",
-    "progress": "0/15",
-    "description": "Практика предлогов движения сквозь пространство (durch) и движения вокруг / времени (um).",
-    "conditions": {
-      "goal": "Ответьте правильно на 15 заданий по предлогам durch и um",
-      "minCorrect": 15,
-      "requiredTasks": 15
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "word": "durch den Park",
-        "translation-ru": "Через парк",
-        "translation-en": "Through the park",
-        "translation-uk": "Через парк",
-        "translation-pl": "Przez park",
-        "translation-es": "A través del parque",
-        "translation-fr": "À travers le parc",
-        "translation-ar": "عبر الحديقة",
-        "translation-hi": "पार्क के रास्ते",
-        "translation-ro": "Prin parc",
-        "translation-tr": "Parkın içinden",
-        "translation-uz": "Park orqali"
-      },
-      {
-        "word": "um die Ecke",
-        "translation-ru": "За угол / за углом",
-        "translation-en": "Around the corner",
-        "translation-uk": "За ріг / за рогом",
-        "translation-pl": "Za róg / za rogiem",
-        "translation-es": "A la vuelta de la esquina",
-        "translation-fr": "Au coin de la rue",
-        "translation-ar": "حول الزاوية",
-        "translation-hi": "कोने के आसपास",
-        "translation-ro": "După colț",
-        "translation-tr": "Köşeyi dönünce",
-        "translation-uz": "Burchak ortida"
-      },
-      {
-        "word": "durch die Stadt",
-        "translation-ru": "Через город / по городу",
-        "translation-en": "Through the city",
-        "translation-uk": "Через місто / по місту",
-        "translation-pl": "Przez miasto",
-        "translation-es": "Por la ciudad",
-        "translation-fr": "À travers la ville",
-        "translation-ar": "عبر المدينة",
-        "translation-hi": "शहर के बीच से",
-        "translation-ro": "Prin oraș",
-        "translation-tr": "Şehrin içinden",
-        "translation-uz": "Shahar bo'ylab"
-      },
-      {
-        "word": "um den Tisch",
-        "translation-ru": "Вокруг стола",
-        "translation-en": "Around the table",
-        "translation-uk": "Навколо столу",
-        "translation-pl": "Wokół stołu",
-        "translation-es": "Alrededor de la mesa",
-        "translation-fr": "Autour de la table",
-        "translation-ar": "حول الطاولة",
-        "translation-hi": "मेज के चारों ओर",
-        "translation-ro": "În jurul mesei",
-        "translation-tr": "Masanın etrafında",
-        "translation-uz": "Stol atrofida"
-      },
-      {
-        "word": "durch den Wald",
-        "translation-ru": "Через лес",
-        "translation-en": "Through the forest",
-        "translation-uk": "Крізь ліс",
-        "translation-pl": "Przez las",
-        "translation-es": "A través del bosque",
-        "translation-fr": "À travers la forêt",
-        "translation-ar": "عبر الغابة",
-        "translation-hi": "जंगल के रास्ते",
-        "translation-ro": "Prin pădure",
-        "translation-tr": "Ormanın içinden",
-        "translation-uz": "O'rmon orqali"
-      },
-      {
-        "word": "um acht Uhr",
-        "translation-ru": "В восемь часов",
-        "translation-en": "At eight o'clock",
-        "translation-uk": "О восьмій годині",
-        "translation-pl": "O ósmej godzinie",
-        "translation-es": "A las ocho",
-        "translation-fr": "À huit heures",
-        "translation-ar": "في الساعة الثامنة",
-        "translation-hi": "आठ बजे",
-        "translation-ro": "La ora opt",
-        "translation-tr": "Saat sekizde",
-        "translation-uz": "Soat sakkizda"
-      },
-      {
-        "word": "durch das Fenster",
-        "translation-ru": "Через окно / в окно",
-        "translation-en": "Through the window",
-        "translation-uk": "Крізь вікно",
-        "translation-pl": "Przez okno",
-        "translation-es": "Por la ventana",
-        "translation-fr": "Par la fenêtre",
-        "translation-ar": "عبر النافذة",
-        "translation-hi": "खिड़की से",
-        "translation-ro": "Prin fereastră",
-        "translation-tr": "Pencereden",
-        "translation-uz": "Derazadan"
-      },
-      {
-        "word": "um das Haus",
-        "translation-ru": "Вокруг дома",
-        "translation-en": "Around the house",
-        "translation-uk": "Навколо будинку",
-        "translation-pl": "Wokół domu",
-        "translation-es": "Alrededor de la casa",
-        "translation-fr": "Autour de la maison",
-        "translation-ar": "حول المنزل",
-        "translation-hi": "घर के चारों ओर",
-        "translation-ro": "În jurul casei",
-        "translation-tr": "Evin etrafında",
-        "translation-uz": "Uy atrofida"
-      },
-      {
-        "word": "durch die Tür",
-        "translation-ru": "Через дверь",
-        "translation-en": "Through the door",
-        "translation-uk": "Крізь двері",
-        "translation-pl": "Przez drzwi",
-        "translation-es": "Por la puerta",
-        "translation-fr": "Par la porte",
-        "translation-ar": "عبر الباب",
-        "translation-hi": "दरवाजे से",
-        "translation-ro": "Prin ușă",
-        "translation-tr": "Kapıdan",
-        "translation-uz": "Eshikdan"
-      },
-      {
-        "word": "um wie viel Uhr",
-        "translation-ru": "Во сколько / в котором часу",
-        "translation-en": "At what time",
-        "translation-uk": "О котрій годині",
-        "translation-pl": "O której godzinie",
-        "translation-es": "A qué hora",
-        "translation-fr": "À quelle heure",
-        "translation-ar": "في أي وقت",
-        "translation-hi": "कितने बजे",
-        "translation-ro": "La ce oră",
-        "translation-tr": "Saat kaçta",
-        "translation-uz": "Soat nechada"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "Выберите правильный вариант: «Вечером мы гуляем через парк»",
-        "options": [
-          "Am Abend spazieren wir durch den Park",
-          "Am Abend spazieren wir durch dem Park",
-          "Am Abend spazieren wir um den Park"
-        ],
-        "answer": "Am Abend spazieren wir durch den Park"
-      },
-      {
-        "id": 2,
-        "type": "input",
-        "question": "Вставьте предлог «за»: Die Apotheke ist gleich hier ___ die Ecke",
+        "question": "actionPrepositionsEight.questTask3",
         "correctAnswer": "um"
       },
       {
-        "id": 3,
-        "type": "readAndAnswer",
-        "text": "— Wann beginnt der Deutschkurs am Bahnhof? — Sei bitte pünktlich, um 08:00 Uhr geht es los.",
-        "question": "К какому времени нужно успеть?",
-        "options": [
-          "um acht Uhr",
-          "durch den Park",
-          "nach acht Uhr"
-        ],
-        "answer": "um acht Uhr"
-      },
-      {
         "id": 4,
-        "type": "reorder",
-        "question": "Соберите предложение: Утром он бежит через парк на работу",
-        "words": ["Arbeit", "den", "läuft", "durch", "zur", "Park", "Er", "morgens"],
-        "correctOrder": ["Er", "läuft", "morgens", "durch", "den", "Park", "zur", "Arbeit"]
+        "type": "input",
+        "question": "actionPrepositionsEight.questTask4",
+        "correctAnswer": "durch"
       },
       {
         "id": 5,
-        "type": "select",
-        "question": "Выберите правильный вопрос: «Во сколько ты придёшь?»",
-        "options": [
-          "Um wie viel Uhr kommst du?",
-          "Durch wie viel Uhr kommst du?",
-          "Von wie viel Uhr kommst du?"
-        ],
-        "answer": "Um wie viel Uhr kommst du?"
+        "type": "input",
+        "question": "actionPrepositionsEight.questTask5",
+        "correctAnswer": "bis"
       },
       {
         "id": 6,
-        "type": "input",
-        "question": "Вставьте предлог движения насквозь: Der neue Bus fährt direkt ___ die Stadt",
-        "correctAnswer": "durch"
+        "type": "select",
+        "question": "actionPrepositionsEight.questTask6",
+        "options": [
+          "Ich wohne seit 2020 hier.",
+          "Ich wohne vor 2020 hier.",
+          "Ich wohne nach 2020 hier."
+        ],
+        "answer": "Ich wohne seit 2020 hier."
       },
       {
         "id": 7,
         "type": "readAndAnswer",
-        "text": "— Wo finde ich den Bäcker? — Gehen Sie einfach geradeaus und dann gleich nach rechts.",
-        "question": "Где находится пекарня?",
-        "options": [
-          "um die Ecke",
-          "durch das Fenster",
-          "vom Nachbarn"
-        ],
-        "answer": "um die Ecke"
-      },
-      {
-        "id": 8,
-        "type": "reorder",
-        "question": "Соберите предложение: Дети бегают вокруг дома без куртки",
-        "words": ["Jacke", "Haus", "ohne", "laufen", "das", "um", "Kinder", "Die"],
-        "correctOrder": ["Die", "Kinder", "laufen", "ohne", "Jacke", "um", "das", "Haus"]
-      },
-      {
-        "id": 9,
-        "type": "select",
-        "question": "Выберите правильный вариант: «Свежий воздух идёт в комнату через окно»",
-        "options": [
-          "Die frische Luft kommt durch das Fenster ins Zimmer",
-          "Die frische Luft kommt durch dem Fenster ins Zimmer",
-          "Die frische Luft kommt um das Fenster ins Zimmer"
-        ],
-        "answer": "Die frische Luft kommt durch das Fenster ins Zimmer"
-      },
-      {
-        "id": 10,
-        "type": "input",
-        "question": "Вставьте точное время: Der Zug zum Flughafen fährt pünktlich ___ acht Uhr ab",
-        "correctAnswer": "um"
-      },
-      {
-        "id": 11,
-        "type": "reorder",
-        "question": "Соберите предложение: Гости заходят в комнату через дверь",
-        "words": ["Tür", "Zimmer", "Gäste", "gehen", "durch", "die", "Die", "ins"],
-        "correctOrder": ["Die", "Gäste", "gehen", "durch", "die", "Tür", "ins", "Zimmer"]
-      },
-      {
-        "id": 12,
-        "type": "input",
-        "question": "Вставьте артикль: Zum Abendessen sitzen alle Freunde um ___ Tisch",
-        "correctAnswer": "den"
-      },
-      {
-        "id": 13,
-        "type": "readAndAnswer",
-        "text": "— Wie seid ihr zur Party gekommen? — Wir haben das Auto stehen lassen und sind zu Fuß zwischen den Bäumen gegangen.",
-        "question": "Какой маршрут выбрали друзья?",
-        "options": [
-          "durch den Park",
-          "um den Tisch",
-          "aus dem Haus"
-        ],
-        "answer": "durch den Park"
-      },
-      {
-        "id": 14,
-        "type": "select",
-        "question": "Выберите правильный вариант: «Вся семья сидит за ужином вокруг стола»",
-        "options": [
-          "Beim Abendessen sitzt die Familie um den Tisch",
-          "Beim Abendessen sitzt die Familie um dem Tisch",
-          "Beim Abendessen sitzt die Familie durch den Tisch"
-        ],
-        "answer": "Beim Abendessen sitzt die Familie um den Tisch"
-      },
-      {
-        "id": 15,
-        "type": "input",
-        "question": "Вставьте предлог движения: Wir gehen ohne Eile zu Fuß ___ den Park",
-        "correctAnswer": "durch"
-      }
-    ]
-  },
-  {
-    "questId": "prep-action-five",
-    "title": "Предлоги места: gegenüber von и an ... vorbei",
-    "progress": "0/15",
-    "description": "Указание пути «мимо» и объектов «напротив» с предлогами gegenüber von и an ... vorbei.",
-    "conditions": {
-      "goal": "Ответьте правильно на 15 заданий по предлогам gegenüber von и an ... vorbei",
-      "minCorrect": 15,
-      "requiredTasks": 15
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "word": "gegenüber von der Post",
-        "translation-ru": "Напротив почты",
-        "translation-en": "Opposite the post office",
-        "translation-uk": "Навпроти пошти",
-        "translation-pl": "Naprzeciwko poczty",
-        "translation-es": "Frente a correos",
-        "translation-fr": "En face de la poste",
-        "translation-ar": "مقابل مكتب البريد",
-        "translation-hi": "डाकघर के सामने",
-        "translation-ro": "Vis-a-vis de poștă",
-        "translation-tr": "Postanenin karşısında",
-        "translation-uz": "Pochtaning ro'parasida"
-      },
-      {
-        "word": "am Park vorbei",
-        "translation-ru": "Мимо парка",
-        "translation-en": "Past the park",
-        "translation-uk": "Повз парк",
-        "translation-pl": "Obok parku",
-        "translation-es": "Pasando el parque",
-        "translation-fr": "En passant devant le parc",
-        "translation-ar": "بجانب الحديقة",
-        "translation-hi": "पार्क के पास से",
-        "translation-ro": "Pe lângă parc",
-        "translation-tr": "Parkın yanından",
-        "translation-uz": "Park yonidan"
-      },
-      {
-        "word": "gegenüber vom Bahnhof",
-        "translation-ru": "Напротив вокзала",
-        "translation-en": "Opposite the train station",
-        "translation-uk": "Навпроти вокзалу",
-        "translation-pl": "Naprzeciwko dworca",
-        "translation-es": "Frente a la estación",
-        "translation-fr": "En face de la gare",
-        "translation-ar": "مقابل المحطة",
-        "translation-hi": "रेलवे स्टेशन के सामने",
-        "translation-ro": "Vis-a-vis de gară",
-        "translation-tr": "İstasyonun karşısında",
-        "translation-uz": "Vokzalning ro'parasida"
-      },
-      {
-        "word": "an der Schule vorbei",
-        "translation-ru": "Мимо школы",
-        "translation-en": "Past the school",
-        "translation-uk": "Повз школу",
-        "translation-pl": "Obok szkoły",
-        "translation-es": "Pasando la escuela",
-        "translation-fr": "En passant devant l'école",
-        "translation-ar": "بجانب المدرسة",
-        "translation-hi": "स्कूल के पास से",
-        "translation-ro": "Pe lângă școală",
-        "translation-tr": "Okulun yanından",
-        "translation-uz": "Maktab yonidan"
-      },
-      {
-        "word": "gegenüber von der Apotheke",
-        "translation-ru": "Напротив аптеки",
-        "translation-en": "Opposite the pharmacy",
-        "translation-uk": "Навпроти аптеки",
-        "translation-pl": "Naprzeciwko apteki",
-        "translation-es": "Frente a la farmacia",
-        "translation-fr": "En face de la pharmacie",
-        "translation-ar": "مقابل الصيدلية",
-        "translation-hi": "दवा की दुकान के सामने",
-        "translation-ro": "Vis-a-vis de farmacie",
-        "translation-tr": "Eczanenin karşısında",
-        "translation-uz": "Dorixonaning ro'parasida"
-      },
-      {
-        "word": "am Supermarkt vorbei",
-        "translation-ru": "Мимо супермаркета",
-        "translation-en": "Past the supermarket",
-        "translation-uk": "Повз супермаркет",
-        "translation-pl": "Obok supermarketu",
-        "translation-es": "Pasando el supermercado",
-        "translation-fr": "En passant devant le supermarché",
-        "translation-ar": "بجانب السوبرماركت",
-        "translation-hi": "सुपरमार्केट के पास से",
-        "translation-ro": "Pe lângă supermarket",
-        "translation-tr": "Süpermarketin yanından",
-        "translation-uz": "Supermarket yonidan"
-      },
-      {
-        "word": "gegenüber vom Hotel",
-        "translation-ru": "Напротив отеля",
-        "translation-en": "Opposite the hotel",
-        "translation-uk": "Навпроти готелю",
-        "translation-pl": "Naprzeciwko hotelu",
-        "translation-es": "Frente al hotel",
-        "translation-fr": "En face de l'hôtel",
-        "translation-ar": "مقابل الفندق",
-        "translation-hi": "होटल के सामने",
-        "translation-ro": "Vis-a-vis de hotel",
-        "translation-tr": "Otelın karşısında",
-        "translation-uz": "Mehmonxonaning ro'parasida"
-      },
-      {
-        "word": "an der Bank vorbei",
-        "translation-ru": "Мимо банка",
-        "translation-en": "Past the bank",
-        "translation-uk": "Повз банк",
-        "translation-pl": "Obok banku",
-        "translation-es": "Pasando el banco",
-        "translation-fr": "En passant devant la banque",
-        "translation-ar": "بجانب البنك",
-        "translation-hi": "बैंक के पास से",
-        "translation-ro": "Pe lângă bancă",
-        "translation-tr": "Bankanın yanından",
-        "translation-uz": "Bank yonidan"
-      },
-      {
-        "word": "gegenüber von mir",
-        "translation-ru": "Напротив меня",
-        "translation-en": "Opposite me",
-        "translation-uk": "Навпроти мене",
-        "translation-pl": "Naprzeciwko mnie",
-        "translation-es": "Frente a mí",
-        "translation-fr": "En face de moi",
-        "translation-ar": "مُقابِلي",
-        "translation-hi": "मेरे सामने",
-        "translation-ro": "Vis-a-vis de mine",
-        "translation-tr": "Benim karşımda",
-        "translation-uz": "Mening ro'paramda"
-      },
-      {
-        "word": "an uns vorbei",
-        "translation-ru": "Мимо нас",
-        "translation-en": "Past us",
-        "translation-uk": "Повз нас",
-        "translation-pl": "Obok nas",
-        "translation-es": "Pasando a nuestro lado",
-        "translation-fr": "Devant nous",
-        "translation-ar": "بجانبنا",
-        "translation-hi": "हमारे पास से",
-        "translation-ro": "Pe lângă noi",
-        "translation-tr": "Yanımızdan",
-        "translation-uz": "Yonimizdan"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "Выберите перевод: «прямо напротив вокзала»",
-        "options": [
-          "direkt gegenüber vom Bahnhof",
-          "direkt gegenüber den Bahnhof",
-          "direkt am Bahnhof vorbei"
-        ],
-        "answer": "direkt gegenüber vom Bahnhof"
-      },
-      {
-        "id": 2,
-        "type": "input",
-        "question": "Вставьте вторую часть «мимо»: Gehen Sie am Supermarkt ___",
-        "correctAnswer": "vorbei"
-      },
-      {
-        "id": 3,
-        "type": "readAndAnswer",
-        "text": "— Wo ist das Café? — Geh durch den Park, es ist direkt an der Straße.",
-        "question": "Где находится кафе?",
-        "options": [
-          "gegenüber von der Post",
-          "an der Post vorbei",
-          "durch die Post"
-        ],
-        "answer": "gegenüber von der Post"
-      },
-      {
-        "id": 4,
-        "type": "reorder",
-        "question": "Соберите предложение: Мы идём пешком мимо школы",
-        "words": [
-          "Schule",
-          "an",
-          "vorbei",
-          "Wir",
-          "gehen",
-          "der"
-        ],
-        "correctOrder": [
-          "Wir",
-          "gehen",
-          "an",
-          "der",
-          "Schule",
-          "vorbei"
-        ]
-      },
-      {
-        "id": 5,
-        "type": "select",
-        "question": "Выберите перевод: «Напротив отеля»",
-        "options": [
-          "gegenüber vom Hotel",
-          "gegenüber das Hotel",
-          "am Hotel vorbei"
-        ],
-        "answer": "gegenüber vom Hotel"
-      },
-      {
-        "id": 6,
-        "type": "input",
-        "question": "Вставьте предлог «напротив»: Die Bäckerei ist ___ von der Apotheke",
-        "correctAnswer": "gegenüber"
-      },
-      {
-        "id": 7,
-        "type": "reorder",
-        "question": "Соберите предложение: Автобус едет мимо банка",
-        "words": [
-          "der",
-          "Bank",
-          "fährt",
-          "vorbei",
-          "an",
-          "Der Bus"
-        ],
-        "correctOrder": [
-          "Der Bus",
-          "fährt",
-          "an",
-          "der",
-          "Bank",
-          "vorbei"
-        ]
-      },
-      {
-        "id": 8,
-        "type": "readAndAnswer",
-        "text": "— Wie komme ich zum Museum? — Fahr geradeaus und biege um die Ecke.",
-        "question": "Мимо чего нужно проехать?",
-        "options": [
-          "am Park vorbei",
-          "durch den Park",
-          "gegenüber vom Park"
-        ],
-        "answer": "am Park vorbei"
-      },
-      {
-        "id": 9,
-        "type": "input",
-        "question": "Вставьте предлог «от», который берет у артикля форму: Das Restaurant liegt gegenüber ___ der Post",
-        "correctAnswer": "von"
-      },
-      {
-        "id": 10,
-        "type": "select",
-        "question": "Выберите перевод: «напротив меня»",
-        "options": [
-          "gegenüber von mir",
-          "gegenüber von mich",
-          "an mir vorbei"
-        ],
-        "answer": "gegenüber von mir"
-      },
-      {
-        "id": 11,
-        "type": "reorder",
-        "question": "Соберите предложение: Он быстро идёт мимо нас",
-        "words": [
-          "uns",
-          "vorbei",
-          "an",
-          "Er",
-          "geht",
-          "schnell"
-        ],
-        "correctOrder": [
-          "Er",
-          "geht",
-          "schnell",
-          "an",
-          "uns",
-          "vorbei"
-        ]
-      },
-      {
-        "id": 12,
-        "type": "input",
-        "question": "Вставьте слово «мимо»: Gehen Sie am Park ___",
-        "correctAnswer": "vorbei"
-      },
-      {
-        "id": 13,
-        "type": "readAndAnswer",
-        "text": "— Wo treffen wir uns? — Am Eingang, genau auf der anderen Straßenseite.",
-        "question": "Где назначена встреча?",
+        "question": "actionPrepositionsEight.questTask7",
+        "text": "Die Post ist gegenüber vom Bahnhof. Die Bank ist neben der Post.",
         "options": [
           "gegenüber vom Bahnhof",
-          "am Bahnhof vorbei",
-          "durch den Bahnhof"
+          "neben dem Bahnhof",
+          "hinter dem Bahnhof"
         ],
         "answer": "gegenüber vom Bahnhof"
       },
       {
-        "id": 14,
-        "type": "select",
-        "question": "Выберите перевод: «мимо супермаркета»",
-        "options": [
-          "am Supermarkt vorbei",
-          "am Supermarkt durch",
-          "am Supermarkt um"
-        ],
-        "answer": "am Supermarkt vorbei"
-      },
-      {
-        "id": 15,
-        "type": "input",
-        "question": "Вставьте вторую часть «мимо»: Sie fährt an der Schule ___",
-        "correctAnswer": "vorbei"
-      }
-    ]
-  },
-  {
-    "questId": "prep-action-six",
-    "title": "Ориентирование в городе — часть 2",
-    "progress": "0/15",
-    "description": "Закрепление предлогов gegenüber von и an ... vorbei в связке с маршрутами через город.",
-    "conditions": {
-      "goal": "Ответьте правильно на 15 заданий по ориентированию в городе",
-      "minCorrect": 15,
-      "requiredTasks": 15
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "word": "am Bahnhof vorbei",
-        "translation-ru": "Мимо вокзала",
-        "translation-en": "Past the station",
-        "translation-uk": "Повз вокзал",
-        "translation-pl": "Obok dworca",
-        "translation-es": "Pasando la estación",
-        "translation-fr": "En passant devant la gare",
-        "translation-ar": "بجانب المحطة",
-        "translation-hi": "स्टेशन के पास से",
-        "translation-ro": "Pe lângă gară",
-        "translation-tr": "İstasyonun yanından",
-        "translation-uz": "Vokzal yonidan"
-      },
-      {
-        "word": "gegenüber vom Park",
-        "translation-ru": "Напротив парка",
-        "translation-en": "Opposite the park",
-        "translation-uk": "Навпроти парку",
-        "translation-pl": "Naprzeciwko parku",
-        "translation-es": "Frente al parque",
-        "translation-fr": "En face du parc",
-        "translation-ar": "مقابل الحديقة",
-        "translation-hi": "पार्क के सामने",
-        "translation-ro": "Vis-a-vis de parc",
-        "translation-tr": "Parkın karşısında",
-        "translation-uz": "Park ro'parasida"
-      },
-      {
-        "word": "an der Post vorbei",
-        "translation-ru": "Мимо почты",
-        "translation-en": "Past the post office",
-        "translation-uk": "Повз пошту",
-        "translation-pl": "Obok poczty",
-        "translation-es": "Pasando correos",
-        "translation-fr": "En passant devant la poste",
-        "translation-ar": "بجانب مكتب البريد",
-        "translation-hi": "डाकघर के पास से",
-        "translation-ro": "Pe lângă poștă",
-        "translation-tr": "Postanenin yanından",
-        "translation-uz": "Pochta yonidan"
-      },
-      {
-        "word": "gegenüber von der Bank",
-        "translation-ru": "Напротив банка",
-        "translation-en": "Opposite the bank",
-        "translation-uk": "Навпроти банку",
-        "translation-pl": "Naprzeciwko banku",
-        "translation-es": "Frente al banco",
-        "translation-fr": "En face de la banque",
-        "translation-ar": "مقابل البنك",
-        "translation-hi": "बैंक के सामने",
-        "translation-ro": "Vis-a-vis de bancă",
-        "translation-tr": "Bankanın karşısında",
-        "translation-uz": "Bank ro'parasida"
-      },
-      {
-        "word": "an dem Café vorbei",
-        "translation-ru": "Мимо кафе",
-        "translation-en": "Past the cafe",
-        "translation-uk": "Повз кафе",
-        "translation-pl": "Obok kawiarni",
-        "translation-es": "Pasando la cafetería",
-        "translation-fr": "En passant devant le café",
-        "translation-ar": "بجانب المقهى",
-        "translation-hi": "कैफे के पास से",
-        "translation-ro": "Pe lângă cafenea",
-        "translation-tr": "Kafenin yanından",
-        "translation-uz": "Qahvaxona yonidan"
-      },
-      {
-        "word": "gegenüber vom Kino",
-        "translation-ru": "Напротив кинотеатра",
-        "translation-en": "Opposite the cinema",
-        "translation-uk": "Навпроти кінотеатру",
-        "translation-pl": "Naprzeciwko kina",
-        "translation-es": "Frente al cine",
-        "translation-fr": "En face du cinéma",
-        "translation-ar": "مقابل السينما",
-        "translation-hi": "सिनेमाघर के सामने",
-        "translation-ro": "Vis-a-vis de cinema",
-        "translation-tr": "Sinemanın karşısında",
-        "translation-uz": "Kinoteatr ro'parasida"
-      },
-      {
-        "word": "an ihnen vorbei",
-        "translation-ru": "Мимо них",
-        "translation-en": "Past them",
-        "translation-uk": "Повз них",
-        "translation-pl": "Obok nich",
-        "translation-es": "Pasando a su lado",
-        "translation-fr": "Devant eux",
-        "translation-ar": "بجانبهم",
-        "translation-hi": "उनके पास से",
-        "translation-ro": "Pe lângă ei",
-        "translation-tr": "Onların yanından",
-        "translation-uz": "Ularning yonidan"
-      },
-      {
-        "word": "gegenüber von dir",
-        "translation-ru": "Напротив тебя",
-        "translation-en": "Opposite you",
-        "translation-uk": "Навпроти тебе",
-        "translation-pl": "Naprzeciwko ciebie",
-        "translation-es": "Frente a ti",
-        "translation-fr": "En face de toi",
-        "translation-ar": "مقابلك",
-        "translation-hi": "तुम्हारे सामने",
-        "translation-ro": "Vis-a-vis de tine",
-        "translation-tr": "Senin karşında",
-        "translation-uz": "Sening ro'parangda"
-      },
-      {
-        "word": "am Haus vorbei",
-        "translation-ru": "Мимо дома",
-        "translation-en": "Past the house",
-        "translation-uk": "Повз будинок",
-        "translation-pl": "Obok domu",
-        "translation-es": "Pasando la casa",
-        "translation-fr": "En passant devant la maison",
-        "translation-ar": "بجانب المنزل",
-        "translation-hi": "घर के पास से",
-        "translation-ro": "Pe lângă casă",
-        "translation-tr": "Evin yanından",
-        "translation-uz": "Uy yonidan"
-      },
-      {
-        "word": "gegenüber vom Markt",
-        "translation-ru": "Напротив рынка",
-        "translation-en": "Opposite the market",
-        "translation-uk": "Навпроти ринку",
-        "translation-pl": "Naprzeciwko rynku",
-        "translation-es": "Frente al mercado",
-        "translation-fr": "En face du marché",
-        "translation-ar": "مقابل السوق",
-        "translation-hi": "बाजार के सामने",
-        "translation-ro": "Vis-a-vis de piață",
-        "translation-tr": "Pazarın karşısında",
-        "translation-uz": "Bozor ro'parasida"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "Выберите перевод: «прямо напротив парка»",
-        "options": [
-          "direkt gegenüber vom Park",
-          "direkt gegenüber den Park",
-          "direkt am Park vorbei"
-        ],
-        "answer": "direkt gegenüber vom Park"
-      },
-      {
-        "id": 2,
-        "type": "input",
-        "question": "«Идите прямо мимо вокзала»: Gehen Sie am Bahnhof ___",
-        "correctAnswer": "vorbei"
-      },
-      {
-        "id": 3,
-        "type": "readAndAnswer",
-        "text": "— Wo ist das Kino? — Du gehst um die Ecke und siehst es direkt auf der anderen Seite.",
-        "question": "Где находится кинотеатр?",
-        "options": [
-          "gegenüber von der Bank",
-          "an der Bank vorbei",
-          "durch die Bank"
-        ],
-        "answer": "gegenüber von der Bank"
-      },
-      {
-        "id": 4,
-        "type": "reorder",
-        "question": "Соберите предложение: Мы идём пешком мимо почты",
-        "words": [
-          "vorbei",
-          "der",
-          "gehen",
-          "an",
-          "Post",
-          "Wir"
-        ],
-        "correctOrder": [
-          "Wir",
-          "gehen",
-          "an",
-          "der",
-          "Post",
-          "vorbei"
-        ]
-      },
-      {
-        "id": 5,
-        "type": "select",
-        "question": "Выберите перевод: «напротив кинотеатра»",
-        "options": [
-          "gegenüber vom Kino",
-          "gegenüber das Kino",
-          "am Kino vorbei"
-        ],
-        "answer": "gegenüber vom Kino"
-      },
-      {
-        "id": 6,
-        "type": "input",
-        "question": "Вставьте предлог «напротив»: Der Parkplatz ist ___ vom Markt",
-        "correctAnswer": "gegenüber"
-      },
-      {
-        "id": 7,
-        "type": "reorder",
-        "question": "Соберите предложение: Она идёт без зонта мимо кафе",
-        "words": [
-          "am",
-          "vorbei",
-          "geht",
-          "Sie",
-          "Schirm",
-          "Café",
-          "ohne"
-        ],
-        "correctOrder": [
-          "Sie",
-          "geht",
-          "ohne",
-          "Schirm",
-          "am",
-          "Café",
-          "vorbei"
-        ]
-      },
-      {
         "id": 8,
-        "type": "readAndAnswer",
-        "text": "— Wie komme ich zum Markt? — Geh durch den Park und dann am alten Haus entlang.",
-        "question": "Мимо чего нужно пройти?",
-        "options": [
-          "am Haus vorbei",
-          "durch das Haus",
-          "gegenüber vom Haus"
-        ],
-        "answer": "am Haus vorbei"
+        "type": "input",
+        "question": "actionPrepositionsEight.questTask8",
+        "correctAnswer": "en"
       },
       {
         "id": 9,
         "type": "input",
-        "question": "Вставьте предлог, который берет у артикля форму: Das Café liegt gegenüber ___ der Bank",
-        "correctAnswer": "von"
+        "question": "actionPrepositionsEight.questTask9",
+        "correctAnswer": "über"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Выберите перевод: «напротив тебя»",
+        "question": "actionPrepositionsEight.questTask10",
         "options": [
-          "gegenüber von dir",
-          "gegenüber von dich",
-          "an dir vorbei"
+          "neben der Tür",
+          "neben die Tür",
+          "zwischen der Tür"
         ],
-        "answer": "gegenüber von dir"
+        "answer": "neben der Tür"
       },
       {
         "id": 11,
-        "type": "reorder",
-        "question": "Соберите предложение: Автобус едет быстро мимо них",
-        "words": [
-          "fährt",
-          "vorbei",
-          "an",
-          "Der Bus",
-          "ihnen",
-          "schnell"
-        ],
-        "correctOrder": [
-          "Der Bus",
-          "fährt",
-          "schnell",
-          "an",
-          "ihnen",
-          "vorbei"
-        ]
+        "type": "input",
+        "question": "actionPrepositionsEight.questTask11",
+        "correctAnswer": "vom"
       },
       {
         "id": 12,
-        "type": "input",
-        "question": "«Идите к вокзалу мимо школы»: Gehen Sie an der Schule ___",
-        "correctAnswer": "vorbei"
+        "type": "select",
+        "question": "actionPrepositionsEight.questTask12",
+        "options": [
+          "Wir fahren mit dem Zug.",
+          "Wir fahren mit den Zug.",
+          "Wir fahren mit der Zug."
+        ],
+        "answer": "Wir fahren mit dem Zug."
       },
       {
         "id": 13,
         "type": "readAndAnswer",
-        "text": "— Wo parkst du dein Auto? — Direkt vor der Tür, genau auf der anderen Straßenseite vom Markt.",
-        "question": "Где припаркована машина?",
+        "question": "actionPrepositionsEight.questTask13",
+        "text": "Nach der Arbeit fahre ich mit dem Fahrrad nach Hause.",
         "options": [
-          "gegenüber vom Markt",
-          "am Markt vorbei",
-          "durch den Markt"
-        ],
-        "answer": "gegenüber vom Markt"
-      },
-      {
-        "id": 14,
-        "type": "select",
-        "question": "Выберите перевод: «мимо почты»",
-        "options": [
-          "an der Post vorbei",
-          "an die Post vorbei",
-          "gegenüber von der Post"
-        ],
-        "answer": "an der Post vorbei"
-      },
-      {
-        "id": 15,
-        "type": "input",
-        "question": "«Он бежит на тренировку мимо парка»: Er läuft am Park ___",
-        "correctAnswer": "vorbei"
-      }
-    ]
-  },
-  {
-    "questId": "prep-action-seven",
-    "title": "Предлоги mit и aus (Dativ)",
-    "progress": "0/15",
-    "description": "Практика предлогов совместности/транспорта (mit) и источника/происхождения (aus) с повторением городских маршрутов.",
-    "conditions": {
-      "goal": "Ответьте правильно на 15 заданий по предлогам mit и aus",
-      "minCorrect": 15,
-      "requiredTasks": 15
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "word": "mit dem Bus",
-        "translation-ru": "На автобусе",
-        "translation-en": "By bus",
-        "translation-uk": "Автобусом",
-        "translation-pl": "Autobusem",
-        "translation-es": "En autobús",
-        "translation-fr": "En bus",
-        "translation-ar": "بالحافلة",
-        "translation-hi": "बस से",
-        "translation-ro": "Cu autobuzul",
-        "translation-tr": "Otobüsle",
-        "translation-uz": "Avtobusda"
-      },
-      {
-        "word": "aus dem Haus",
-        "translation-ru": "Из дома",
-        "translation-en": "Out of the house",
-        "translation-uk": "З будинку",
-        "translation-pl": "Z domu",
-        "translation-es": "De la casa",
-        "translation-fr": "De la maison",
-        "translation-ar": "من المنزل",
-        "translation-hi": "घर से बाहर",
-        "translation-ro": "Din casă",
-        "translation-tr": "Evden",
-        "translation-uz": "Uydan"
-      },
-      {
-        "word": "mit Freunden",
-        "translation-ru": "С друзьями",
-        "translation-en": "With friends",
-        "translation-uk": "З друзями",
-        "translation-pl": "Z przyjaciółmi",
-        "translation-es": "Con amigos",
-        "translation-fr": "Avec des amis",
-        "translation-ar": "مع الأصدقاء",
-        "translation-hi": "दोस्तों के साथ",
-        "translation-ro": "Cu prietenii",
-        "translation-tr": "Arkadaşlarla",
-        "translation-uz": "Do'stlar bilan"
-      },
-      {
-        "word": "aus Deutschland",
-        "translation-ru": "Из Германии",
-        "translation-en": "From Germany",
-        "translation-uk": "З Німеччини",
-        "translation-pl": "Z Niemiec",
-        "translation-es": "De Alemania",
-        "translation-fr": "D'Allemagne",
-        "translation-ar": "من ألمانيا",
-        "translation-hi": "जर्मनी से",
-        "translation-ro": "Din Germania",
-        "translation-tr": "Almanya'dan",
-        "translation-uz": "Germaniyadan"
-      },
-      {
-        "word": "mit dem Zug",
-        "translation-ru": "На поезде",
-        "translation-en": "By train",
-        "translation-uk": "Поїздом",
-        "translation-pl": "Pociągiem",
-        "translation-es": "En tren",
-        "translation-fr": "En train",
-        "translation-ar": "بالقطار",
-        "translation-hi": "ट्रेन से",
-        "translation-ro": "Cu trenul",
-        "translation-tr": "Trenle",
-        "translation-uz": "Poyezdda"
-      },
-      {
-        "word": "aus der Tasche",
-        "translation-ru": "Из сумки",
-        "translation-en": "Out of the bag",
-        "translation-uk": "З сумки",
-        "translation-pl": "Z torby",
-        "translation-es": "Del bolso",
-        "translation-fr": "Du sac",
-        "translation-ar": "من الحقيبة",
-        "translation-hi": "बैग से",
-        "translation-ro": "Din geantă",
-        "translation-tr": "Çantadan",
-        "translation-uz": "Sumkadan"
-      },
-      {
-        "word": "mit Milch",
-        "translation-ru": "С молоком",
-        "translation-en": "With milk",
-        "translation-uk": "З молоком",
-        "translation-pl": "Z mlekiem",
-        "translation-es": "Con leche",
-        "translation-fr": "Avec du lait",
-        "translation-ar": "مع الحليب",
-        "translation-hi": "दूध के साथ",
-        "translation-ro": "Cu lapte",
-        "translation-tr": "Sütlü",
-        "translation-uz": "Sut bilan"
-      },
-      {
-        "word": "aus der Stadt",
-        "translation-ru": "Из города",
-        "translation-en": "Out of the city",
-        "translation-uk": "З міста",
-        "translation-pl": "Z miasta",
-        "translation-es": "De la ciudad",
-        "translation-fr": "De la ville",
-        "translation-ar": "من المدينة",
-        "translation-hi": "शहर से",
-        "translation-ro": "Din oraș",
-        "translation-tr": "Şehirden",
-        "translation-uz": "Shahardan"
-      },
-      {
-        "word": "mit dem Auto",
-        "translation-ru": "На машине",
-        "translation-en": "By car",
-        "translation-uk": "Машиною",
-        "translation-pl": "Samochodem",
-        "translation-es": "En coche",
-        "translation-fr": "En voiture",
-        "translation-ar": "بالسيارة",
-        "translation-hi": "गाड़ी से",
-        "translation-ro": "Cu mașina",
-        "translation-tr": "Arabayla",
-        "translation-uz": "Mashinada"
-      },
-      {
-        "word": "mit mir",
-        "translation-ru": "Со мной",
-        "translation-en": "With me",
-        "translation-uk": "Зі мною",
-        "translation-pl": "Ze mną",
-        "translation-es": "Conmigo",
-        "translation-fr": "Avec moi",
-        "translation-ar": "معي",
-        "translation-hi": "मेरे साथ",
-        "translation-ro": "Cu mine",
-        "translation-tr": "Benimle",
-        "translation-uz": "Men bilan"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "Выберите перевод: «на автобусе»",
-        "options": [
+          "mit dem Fahrrad",
           "mit dem Bus",
-          "mit den Bus",
-          "aus dem Bus"
+          "mit dem Auto"
         ],
-        "answer": "mit dem Bus"
-      },
-      {
-        "id": 2,
-        "type": "input",
-        "question": "«Он выходит утром из дома»: Er geht morgens ___ dem Haus",
-        "correctAnswer": "aus"
-      },
-      {
-        "id": 3,
-        "type": "readAndAnswer",
-        "text": "— Wie trinkst du deinen Kaffee? — Bitte ohne Zucker, aber mit etwas Milch.",
-        "question": "С чем подать кофе?",
-        "options": [
-          "mit Milch",
-          "ohne Milch",
-          "aus Milch"
-        ],
-        "answer": "mit Milch"
-      },
-      {
-        "id": 4,
-        "type": "reorder",
-        "question": "Соберите предложение: Мы идём с друзьями на вечеринку",
-        "words": [
-          "Party",
-          "mit",
-          "zur",
-          "gehen",
-          "Freunden",
-          "Wir"
-        ],
-        "correctOrder": [
-          "Wir",
-          "gehen",
-          "mit",
-          "Freunden",
-          "zur",
-          "Party"
-        ]
-      },
-      {
-        "id": 5,
-        "type": "select",
-        "question": "Выберите перевод: «из Германии»",
-        "options": [
-          "aus Deutschland",
-          "von Deutschland",
-          "mit Deutschland"
-        ],
-        "answer": "aus Deutschland"
-      },
-      {
-        "id": 6,
-        "type": "input",
-        "question": "Вставьте артикль: Er fährt mit ___ Zug zur Arbeit",
-        "correctAnswer": "dem"
-      },
-      {
-        "id": 7,
-        "type": "reorder",
-        "question": "Соберите предложение: Она идёт со мной в супермаркет",
-        "words": [
-          "mir",
-          "Supermarkt",
-          "geht",
-          "Sie",
-          "zum",
-          "mit"
-        ],
-        "correctOrder": [
-          "Sie",
-          "geht",
-          "mit",
-          "mir",
-          "zum",
-          "Supermarkt"
-        ]
-      },
-      {
-        "id": 8,
-        "type": "readAndAnswer",
-        "text": "— Wo ist dein Schlüssel? — Einen Moment, ich nehme ihn gleich aus der Tasche.",
-        "question": "Откуда достают ключ?",
-        "options": [
-          "aus der Tasche",
-          "mit der Tasche",
-          "an der Tasche vorbei"
-        ],
-        "answer": "aus der Tasche"
-      },
-      {
-        "id": 9,
-        "type": "input",
-        "question": "«Они едут на машине через город»: Sie fahren mit ___ Auto durch die Stadt",
-        "correctAnswer": "dem"
-      },
-      {
-        "id": 10,
-        "type": "select",
-        "question": "Выберите перевод: «прямо из города»",
-        "options": [
-          "direkt aus der Stadt",
-          "direkt mit der Stadt",
-          "direkt aus die Stadt"
-        ],
-        "answer": "direkt aus der Stadt"
-      },
-      {
-        "id": 11,
-        "type": "reorder",
-        "question": "Соберите предложение: Поезд едет с вокзала мимо банка",
-        "words": [
-          "Bank",
-          "vorbei",
-          "fährt",
-          "Bahnhof",
-          "an",
-          "aus",
-          "der",
-          "dem",
-          "Der Zug"
-        ],
-        "correctOrder": [
-          "Der Zug",
-          "fährt",
-          "aus",
-          "dem",
-          "Bahnhof",
-          "an",
-          "der",
-          "Bank",
-          "vorbei"
-        ]
-      },
-      {
-        "id": 12,
-        "type": "input",
-        "question": "Вставьте предлог «с»: Willst du heute Abend ___ mir zum Geburtstag kommen?",
-        "correctAnswer": "mit"
-      },
-      {
-        "id": 13,
-        "type": "readAndAnswer",
-        "text": "— Fährst du mit dem Rad zur Arbeit? — Nein, es regnet, ich fahre lieber mit der U-Bahn.",
-        "question": "На чём человек добирается на работу?",
-        "options": [
-          "mit der U-Bahn",
-          "ohne die U-Bahn",
-          "aus der U-Bahn"
-        ],
-        "answer": "mit der U-Bahn"
+        "answer": "mit dem Fahrrad"
       },
       {
         "id": 14,
-        "type": "select",
-        "question": "Выберите перевод: «С друзьями»",
-        "options": [
-          "mit Freunden",
-          "mit Freunde",
-          "aus Freunden"
-        ],
-        "answer": "mit Freunden"
+        "type": "input",
+        "question": "actionPrepositionsEight.questTask14",
+        "correctAnswer": "vor"
       },
       {
         "id": 15,
-        "type": "input",
-        "question": "«Я сейчас выхожу из дома»: Ich gehe jetzt ___ dem Haus",
-        "correctAnswer": "aus"
-      }
-    ]
-  },
-  {
-    "questId": "prep-action-acht",
-    "title": "Предлоги причины: wegen, vor и aus",
-    "progress": "0/15",
-    "description": "Учим предлоги причины: wegen (из-за чего-то в быту), vor ( реакция: от страха, холода, радости) и aus (вежливость, любопытство).",
-    "conditions": {
-      "goal": "Ответьте правильно на 15 заданий по предлогам причины wegen, vor и aus",
-      "minCorrect": 15,
-      "requiredTasks": 15
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "word": "wegen dem Wetter",
-        "translation-ru": "Из-за погоды",
-        "translation-en": "Because of the weather",
-        "translation-uk": "Через погоду",
-        "translation-pl": "Przez pogodę",
-        "translation-es": "Por el clima",
-        "translation-fr": "À cause de la météo",
-        "translation-ar": "بسبب الطقس",
-        "translation-hi": "मौसम के कारण",
-        "translation-ro": "Din cauza vremii",
-        "translation-tr": "Hava yüzünden",
-        "translation-uz": "Ob-havo tufayli"
-      },
-      {
-        "word": "vor Angst",
-        "translation-ru": "От страха",
-        "translation-en": "Out of fear",
-        "translation-uk": "Від страху",
-        "translation-pl": "Ze strachu",
-        "translation-es": "De miedo",
-        "translation-fr": "De peur",
-        "translation-ar": "من الخوف",
-        "translation-hi": "डर के मारे",
-        "translation-ro": "De frică",
-        "translation-tr": "Korkudan",
-        "translation-uz": "Qo'rquvdan"
-      },
-      {
-        "word": "aus Höflichkeit",
-        "translation-ru": "Из вежливости",
-        "translation-en": "Out of politeness",
-        "translation-uk": "З ввічливості",
-        "translation-pl": "Z grzeczności",
-        "translation-es": "Por cortesía",
-        "translation-fr": "Par politesse",
-        "translation-ar": "من باب الأدب",
-        "translation-hi": "विनम्रता के कारण",
-        "translation-ro": "Din politețe",
-        "translation-tr": "Nezaketen",
-        "translation-uz": "Xushmuomalalikdan"
-      },
-      {
-        "word": "wegen der Arbeit",
-        "translation-ru": "Из-за работы",
-        "translation-en": "Because of work",
-        "translation-uk": "Через роботу",
-        "translation-pl": "Przez pracę",
-        "translation-es": "Por el trabajo",
-        "translation-fr": "À cause du travail",
-        "translation-ar": "بسبب العمل",
-        "translation-hi": "काम के कारण",
-        "translation-ro": "Din cauza muncii",
-        "translation-tr": "İş yüzünden",
-        "translation-uz": "Ish tufayli"
-      },
-      {
-        "word": "vor Kälte",
-        "translation-ru": "От холода",
-        "translation-en": "From the cold",
-        "translation-uk": "Від холоду",
-        "translation-pl": "Z zimna",
-        "translation-es": "De frío",
-        "translation-fr": "De froid",
-        "translation-ar": "من البرد",
-        "translation-hi": "ठंड से",
-        "translation-ro": "De frig",
-        "translation-tr": "Soğuktan",
-        "translation-uz": "Sovuqdan"
-      },
-      {
-        "word": "aus Neugier",
-        "translation-ru": "Из любопытства",
-        "translation-en": "Out of curiosity",
-        "translation-uk": "З цікавості",
-        "translation-pl": "Z ciekawości",
-        "translation-es": "Por curiosidad",
-        "translation-fr": "Par curiosité",
-        "translation-ar": "من باب الفضول",
-        "translation-hi": "उत्सुकता के कारण",
-        "translation-ro": "Din curiozitate",
-        "translation-tr": "Meraktan",
-        "translation-uz": "Qiziqishdan"
-      },
-      {
-        "word": "wegen dem Stau",
-        "translation-ru": "Из-за пробки",
-        "translation-en": "Because of the traffic jam",
-        "translation-uk": "Через затор",
-        "translation-pl": "Przez korek",
-        "translation-es": "Por el atasco",
-        "translation-fr": "À cause des bouchons",
-        "translation-ar": "بسبب الازدحام",
-        "translation-hi": "ट्रैफिक जाम के कारण",
-        "translation-ro": "Din cauza ambuteiajului",
-        "translation-tr": "Trafik yüzünden",
-        "translation-uz": "Tirbandlik tufayli"
-      },
-      {
-        "word": "vor Freude",
-        "translation-ru": "От радости",
-        "translation-en": "For joy",
-        "translation-uk": "Від радості",
-        "translation-pl": "Z radości",
-        "translation-es": "De alegría",
-        "translation-fr": "De joie",
-        "translation-ar": "من الفرح",
-        "translation-hi": "खुशी से",
-        "translation-ro": "De bucurie",
-        "translation-tr": "Sevinçten",
-        "translation-uz": "Xursandchilikdan"
-      },
-      {
-        "word": "aus Versehen",
-        "translation-ru": "По ошибке/случайно",
-        "translation-en": "By mistake",
-        "translation-uk": "Помилково",
-        "translation-pl": "Przez pomyłkę",
-        "translation-es": "Por error",
-        "translation-fr": "Par erreur",
-        "translation-ar": "عن طريق الخطأ",
-        "translation-hi": "गलती से",
-        "translation-ro": "Din greșeală",
-        "translation-tr": "Yanlışlıkla",
-        "translation-uz": "Xatolik tufayli"
-      },
-      {
-        "word": "wegen dir",
-        "translation-ru": "Из-за тебя",
-        "translation-en": "Because of you",
-        "translation-uk": "Через тебе",
-        "translation-pl": "Przez ciebie",
-        "translation-es": "Por ti",
-        "translation-fr": "À cause de toi",
-        "translation-ar": "بسببك",
-        "translation-hi": "तुम्हारी वजह से",
-        "translation-ro": "Din cauza ta",
-        "translation-tr": "Senin yüzünden",
-        "translation-uz": "Sening sababli"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "Выберите перевод: «из-за погоды»",
-        "options": [
-          "wegen dem Wetter",
-          "vor dem Wetter",
-          "aus dem Wetter"
-        ],
-        "answer": "wegen dem Wetter"
-      },
-      {
-        "id": 2,
-        "type": "input",
-        "question": "«Он дрожит от холода»: Er zittert ___ Kälte",
-        "correctAnswer": "vor"
-      },
-      {
-        "id": 3,
-        "type": "readAndAnswer",
-        "text": "— Warum kommst du heute zu spät zur Arbeit? — Der Bus stand lange im Stau.",
-        "question": "Из-за чего человек опоздал?",
-        "options": [
-          "wegen dem Stau",
-          "vor dem Stau",
-          "aus dem Stau"
-        ],
-        "answer": "wegen dem Stau"
-      },
-      {
-        "id": 4,
         "type": "reorder",
-        "question": "Соберите предложение: Мы улыбаемся из вежливости",
+        "question": "actionPrepositionsEight.questTask15",
         "words": [
-          "Höflichkeit",
-          "lächeln",
-          "aus",
-          "Wir"
-        ],
-        "correctOrder": [
-          "Wir",
-          "lächeln",
-          "aus",
-          "Höflichkeit"
-        ]
-      },
-      {
-        "id": 5,
-        "type": "select",
-        "question": "Выберите перевод: «От страха»",
-        "options": [
-          "vor Angst",
-          "wegen Angst",
-          "aus Angst"
-        ],
-        "answer": "vor Angst"
-      },
-      {
-        "id": 6,
-        "type": "input",
-        "question": "Вставьте артикль: Ich habe heute keine Zeit wegen ___ Arbeit",
-        "correctAnswer": "der"
-      },
-      {
-        "id": 7,
-        "type": "reorder",
-        "question": "Соберите предложение: Она плачет от радости",
-        "words": [
-          "Freude",
-          "vor",
-          "weint",
-          "Sie"
-        ],
-        "correctOrder": [
-          "Sie",
-          "weint",
-          "vor",
-          "Freude"
-        ]
-      },
-      {
-        "id": 8,
-        "type": "readAndAnswer",
-        "text": "— Warum hast du mein Glas genommen? — Oh, Entschuldigung, das war nicht mit Absicht.",
-        "question": "Как было взято чужое стекло/стакан?",
-        "options": [
-          "aus Versehen",
-          "vor Versehen",
-          "wegen Versehen"
-        ],
-        "answer": "aus Versehen"
-      },
-      {
-        "id": 9,
-        "type": "input",
-        "question": "Вставьте предлог причины: Er fragt nur ___ Neugier",
-        "correctAnswer": "aus"
-      },
-      {
-        "id": 10,
-        "type": "select",
-        "question": "Выберите перевод: «Из-за тебя»",
-        "options": [
-          "wegen dir",
-          "vor dir",
-          "aus dir"
-        ],
-        "answer": "wegen dir"
-      },
-      {
-        "id": 11,
-        "type": "reorder",
-        "question": "Соберите предложение: Мы идём пешком из-за забастовки",
-        "words": [
-          "dem",
-          "Streik",
-          "gehen",
-          "Wegen",
-          "wir",
-          "zu",
-          "Fuß"
-        ],
-        "correctOrder": [
-          "Wegen",
-          "dem",
-          "Streik",
-          "gehen",
-          "wir",
-          "zu",
-          "Fuß"
-        ]
-      },
-      {
-        "id": 12,
-        "type": "input",
-        "question": "Вставьте предлог(из-за): Wir bleiben heute zu Hause ___ dem Regen",
-        "correctAnswer": "wegen"
-      },
-      {
-        "id": 13,
-        "type": "readAndAnswer",
-        "text": "— Warum geht er am Park vorbei? — Der Hund hat große Panik vor der Dunkelheit.",
-        "question": "От чего собака боится идти через парк?",
-        "options": [
-          "vor Angst",
-          "aus Neugier",
-          "wegen dem Bus"
-        ],
-        "answer": "vor Angst"
-      },
-      {
-        "id": 14,
-        "type": "select",
-        "question": "Выберите перевод: «Случайно»",
-        "options": [
-          "aus Versehen",
-          "wegen Versehen",
-          "vor Versehen"
-        ],
-        "answer": "aus Versehen"
-      },
-      {
-        "id": 15,
-        "type": "input",
-        "question": "«Ребёнок прыгает от радости»: Das Kind springt ___ Freude",
-        "correctAnswer": "vor"
-      }
-    ]
-  },
-  {
-    "questId": "prep-action-nine",
-    "title": "Предлоги причины — часть 2",
-    "progress": "0/15",
-    "description": "Закрепление предлогов причины: wegen(из-за чего-то в быту), vor (реакция тела/эмоции) и aus (осознанный мотив) в связке с городскими ситуациями.",
-    "conditions": {
-      "goal": "Ответьте правильно на 15 заданий на закрепление предлогов wegen, vor и aus",
-      "minCorrect": 15,
-      "requiredTasks": 15
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "word": "wegen dem Regen",
-        "translation-ru": "Из-за дождя",
-        "translation-en": "Because of the rain",
-        "translation-uk": "Через дощ",
-        "translation-pl": "Przez deszcz",
-        "translation-es": "Por la lluvia",
-        "translation-fr": "À cause de la pluie",
-        "translation-ar": "بسبب المطر",
-        "translation-hi": "बारिश के कारण",
-        "translation-ro": "Din cauza ploii",
-        "translation-tr": "Yağmur yüzünden",
-        "translation-uz": "Yomg'ir tufayli"
-      },
-      {
-        "word": "vor Aufregung",
-        "translation-ru": "От волнения",
-        "translation-en": "From excitement / nervousness",
-        "translation-uk": "Від хвилювання",
-        "translation-pl": "Z emocji",
-        "translation-es": "De emoción",
-        "translation-fr": "D'excitation",
-        "translation-ar": "من التوتر",
-        "translation-hi": "उत्तेजना से",
-        "translation-ro": "De emoție",
-        "translation-tr": "Heyecandan",
-        "translation-uz": "Hayajondan"
-      },
-      {
-        "word": "aus Mitleid",
-        "translation-ru": "Из жалости",
-        "translation-en": "Out of pity",
-        "translation-uk": "З жалості",
-        "translation-pl": "Z litości",
-        "translation-es": "Por compasión",
-        "translation-fr": "Par pitié",
-        "translation-ar": "من باب الشفقة",
-        "translation-hi": "दया के कारण",
-        "translation-ro": "Din milă",
-        "translation-tr": "Acıdığı için",
-        "translation-uz": "Rahmi kelganidan"
-      },
-      {
-        "word": "wegen der Verspätung",
-        "translation-ru": "Из-за опоздания",
-        "translation-en": "Because of the delay",
-        "translation-uk": "Через запізнення",
-        "translation-pl": "Przez spóźnienie",
-        "translation-es": "Por el retraso",
-        "translation-fr": "À cause du retard",
-        "translation-ar": "بسبب التأخير",
-        "translation-hi": "देरी के कारण",
-        "translation-ro": "Din cauza întârzierii",
-        "translation-tr": "Gecikme yüzünden",
-        "translation-uz": "Kechikish tufayli"
-      },
-      {
-        "word": "vor Schmerzen",
-        "translation-ru": "От боли",
-        "translation-en": "From pain",
-        "translation-uk": "Від болю",
-        "translation-pl": "Z bólu",
-        "translation-es": "De dolor",
-        "translation-fr": "De douleur",
-        "translation-ar": "من الألم",
-        "translation-hi": "दर्द के मारे",
-        "translation-ro": "De durere",
-        "translation-tr": "Acıdan",
-        "translation-uz": "Og'riqdan"
-      },
-      {
-        "word": "aus Liebe",
-        "translation-ru": "По любви / из любви",
-        "translation-en": "Out of love",
-        "translation-uk": "З любові",
-        "translation-pl": "Z miłości",
-        "translation-es": "Por amor",
-        "translation-fr": "Par amour",
-        "translation-ar": "عن حب",
-        "translation-hi": "प्यार के कारण",
-        "translation-ro": "Din dragoste",
-        "translation-tr": "Aşktan",
-        "translation-uz": "Sevgidan"
-      },
-      {
-        "word": "wegen dem Lärm",
-        "translation-ru": "Из-за шума",
-        "translation-en": "Because of the noise",
-        "translation-uk": "Через шум",
-        "translation-pl": "Przez hałas",
-        "translation-es": "Por el ruido",
-        "translation-fr": "À cause du bruit",
-        "translation-ar": "بسبب الضوضاء",
-        "translation-hi": "शोर के कारण",
-        "translation-ro": "Din cauza zgomotului",
-        "translation-tr": "Gürültü yüzünden",
-        "translation-uz": "Shovqin tufayli"
-      },
-      {
-        "word": "vor Müdigkeit",
-        "translation-ru": "От усталости",
-        "translation-en": "From fatigue",
-        "translation-uk": "Від втоми",
-        "translation-pl": "Ze zmęczenia",
-        "translation-es": "De cansancio",
-        "translation-fr": "De fatigue",
-        "translation-ar": "من التعب",
-        "translation-hi": "थकान से",
-        "translation-ro": "De oboseală",
-        "translation-tr": "Yorgunluktan",
-        "translation-uz": "Charchoqdan"
-      },
-      {
-        "word": "aus Gewohnheit",
-        "translation-ru": "По привычке",
-        "translation-en": "Out of habit",
-        "translation-uk": "За звичкою",
-        "translation-pl": "Z przyzwyczajenia",
-        "translation-es": "Por costumbre",
-        "translation-fr": "Par habitude",
-        "translation-ar": "بحكم العادة",
-        "translation-hi": "आदत से",
-        "translation-ro": "Din obișnuință",
-        "translation-tr": "Alışkanlıktan",
-        "translation-uz": "Odatdan"
-      },
-      {
-        "word": "wegen mir",
-        "translation-ru": "Из-за меня",
-        "translation-en": "Because of me",
-        "translation-uk": "Через мене",
-        "translation-pl": "Przez mnie",
-        "translation-es": "Por mí",
-        "translation-fr": "À cause de moi",
-        "translation-ar": "بسببي",
-        "translation-hi": "मेरी वजह से",
-        "translation-ro": "Din cauza mea",
-        "translation-tr": "Benim yüzümden",
-        "translation-uz": "Mening sababli"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "Выберите перевод: «из-за дождя»",
-        "options": [
-          "wegen dem Regen",
-          "vor dem Regen",
-          "aus dem Regen"
-        ],
-        "answer": "wegen dem Regen"
-      },
-      {
-        "id": 2,
-        "type": "input",
-        "question": "«Он не может спать от усталости»: Er kann nicht schlafen ___ Müdigkeit",
-        "correctAnswer": "vor"
-      },
-      {
-        "id": 3,
-        "type": "readAndAnswer",
-        "text": "— Warum fährst du jeden Tag mit dem Rad am Park vorbei? — Das mache ich ganz automatisch jeden Morgen.",
-        "question": "Почему человек выбирает этот маршрут?",
-        "options": [
-          "aus Gewohnheit",
-          "vor Angst",
-          "wegen dem Stau"
-        ],
-        "answer": "aus Gewohnheit"
-      },
-      {
-        "id": 4,
-        "type": "reorder",
-        "question": "Соберите предложение: Она дрожит от волнения",
-        "words": [
-          "Aufregung",
-          "zittert",
-          "vor",
-          "Sie"
-        ],
-        "correctOrder": [
-          "Sie",
-          "zittert",
-          "vor",
-          "Aufregung"
-        ]
-      },
-      {
-        "id": 5,
-        "type": "select",
-        "question": "Выберите перевод: «из жалости»",
-        "options": [
-          "aus Mitleid",
-          "vor Mitleid",
-          "wegen Mitleid"
-        ],
-        "answer": "aus Mitleid"
-      },
-      {
-        "id": 6,
-        "type": "input",
-        "question": "Вставьте артикль, который берет у артикля предлог wegen: Wir verpassen den Zug wegen ___ Verspätung",
-        "correctAnswer": "der"
-      },
-      {
-        "id": 7,
-        "type": "reorder",
-        "question": "Соберите предложение: Он помогает другу из любви",
-        "words": [
-          "Freund",
-          "hilft",
-          "Er",
-          "Liebe",
-          "aus",
-          "dem"
-        ],
-        "correctOrder": [
-          "Er",
-          "hilft",
-          "dem",
-          "Freund",
-          "aus",
-          "Liebe"
-        ]
-      },
-      {
-        "id": 8,
-        "type": "readAndAnswer",
-        "text": "— Warum sitzt du nicht auf dem Balkon? — Da unten auf der Straße ist es viel zu laut.",
-        "question": "Из-за чего невозможно сидеть на балконе?",
-        "options": [
-          "wegen dem Lärm",
-          "vor Kälte",
-          "aus Versehen"
-        ],
-        "answer": "wegen dem Lärm"
-      },
-      {
-        "id": 9,
-        "type": "input",
-        "question": "«Пациент кричит от боли»: Der Patient schreit ___ Schmerzen",
-        "correctAnswer": "vor"
-      },
-      {
-        "id": 10,
-        "type": "select",
-        "question": "Выберите перевод: «из-за меня»",
-        "options": [
-          "wegen mir",
-          "vor mir",
-          "aus mir"
-        ],
-        "answer": "wegen mir"
-      },
-      {
-        "id": 11,
-        "type": "reorder",
-        "question": "Соберите предложение: Мы едем на метро из-за дождя",
-        "words": [
-          "fahren",
-          "U-Bahn",
-          "dem",
-          "Regen",
-          "der",
-          "Wegen",
-          "mit",
-          "wir"
-        ],
-        "correctOrder": [
-          "Wegen",
-          "dem",
-          "Regen",
-          "fahren",
-          "wir",
-          "mit",
-          "der",
-          "U-Bahn"
-        ]
-      },
-      {
-        "id": 12,
-        "type": "input",
-        "question": "Вставьте осознанный мотив («по привычке»): Ich trinke morgens Kaffee ___ Gewohnheit",
-        "correctAnswer": "aus"
-      },
-      {
-        "id": 13,
-        "type": "readAndAnswer",
-        "text": "— Warum kommst du heute so spät nach Hause? — Mein Zug hatte leider eine halbe Stunde Verspätung.",
-        "question": "Из-за чего человек задержался?",
-        "options": [
-          "wegen der Verspätung",
-          "vor Aufregung",
-          "aus Höflichkeit"
-        ],
-        "answer": "wegen der Verspätung"
-      },
-      {
-        "id": 14,
-        "type": "select",
-        "question": "Выберите перевод: «от усталости»",
-        "options": [
-          "vor Müdigkeit",
-          "aus Müdigkeit",
-          "wegen Müdigkeit"
-        ],
-        "answer": "vor Müdigkeit"
-      },
-      {
-        "id": 15,
-        "type": "input",
-        "question": "Вставьте бытовой предлог причины («из-за шума»): Das Kind weint ___ dem Lärm",
-        "correctAnswer": "wegen"
-      }
-    ]
-  },
-  {
-    "questId": "prep-action-ten",
-    "title": "Финальный микс: все предлоги",
-    "progress": "0/15",
-    "description": "Повторение всех пройденных тем: направление, перемещение, транспорт, время и причины.",
-    "conditions": {
-      "goal": "Ответьте правильно на 15 контрольных заданий по всем темам предлогов",
-      "minCorrect": 15,
-      "requiredTasks": 15
-    },
-    "rewards": {
-      "points": 15,
-      "xp": 15
-    },
-    "vocabulary": [
-      {
-        "word": "für dich",
-        "translation-ru": "Для тебя",
-        "translation-en": "For you",
-        "translation-uk": "Для тебе",
-        "translation-pl": "Dla ciebie",
-        "translation-es": "Para ti",
-        "translation-fr": "Pour toi",
-        "translation-ar": "لك",
-        "translation-hi": "तुम्हारे लिए",
-        "translation-ro": "Pentru tine",
-        "translation-tr": "Senin için",
-        "translation-uz": "Sen uchun"
-      },
-      {
-        "word": "ohne Zucker",
-        "translation-ru": "Без сахара",
-        "translation-en": "Without sugar",
-        "translation-uk": "Без цукру",
-        "translation-pl": "Bez cukru",
-        "translation-es": "Sin azúcar",
-        "translation-fr": "Sans sucre",
-        "translation-ar": "بدون سكر",
-        "translation-hi": "बिना चीनी के",
-        "translation-ro": "Fără zahăr",
-        "translation-tr": "Şekersiz",
-        "translation-uz": "Shakarsiz"
-      },
-      {
-        "word": "durch den Park",
-        "translation-ru": "Через парк",
-        "translation-en": "Through the park",
-        "translation-uk": "Через парк",
-        "translation-pl": "Przez park",
-        "translation-es": "A través del parque",
-        "translation-fr": "À travers le parc",
-        "translation-ar": "عبر الحديقة",
-        "translation-hi": "पार्क के माध्यम से",
-        "translation-ro": "Prin parc",
-        "translation-tr": "Parkın içinden",
-        "translation-uz": "Park orqali"
-      },
-      {
-        "word": "um die Ecke",
-        "translation-ru": "За угол",
-        "translation-en": "Around the corner",
-        "translation-uk": "За ріг",
-        "translation-pl": "Za róg",
-        "translation-es": "A la vuelta de la esquina",
-        "translation-fr": "Au coin de la rue",
-        "translation-ar": "حول الزاوية",
-        "translation-hi": "कोने के आसपास",
-        "translation-ro": "După colț",
-        "translation-tr": "Köşeyi dönünce",
-        "translation-uz": "Burchakdan o'tib"
-      },
-      {
-        "word": "zum Arzt",
-        "translation-ru": "К врачу",
-        "translation-en": "To the doctor",
-        "translation-uk": "До лікаря",
-        "translation-pl": "Do lekarza",
-        "translation-es": "Al médico",
-        "translation-fr": "Chez le médecin",
-        "translation-ar": "إلى الطبيب",
-        "translation-hi": "डॉक्टर के पास",
-        "translation-ro": "La doctor",
-        "translation-tr": "Doktora",
-        "translation-uz": "Shifokorga"
-      },
-      {
-        "word": "vom Bahnhof",
-        "translation-ru": "С вокзала",
-        "translation-en": "From the train station",
-        "translation-uk": "З вокзалу",
-        "translation-pl": "Z dworca",
-        "translation-es": "De la estación",
-        "translation-fr": "De la gare",
-        "translation-ar": "من المحطة",
-        "translation-hi": "स्टेशन से",
-        "translation-ro": "De la gară",
-        "translation-tr": "İstasyondan",
-        "translation-uz": "Vokzaldan"
-      },
-      {
-        "word": "gegenüber vom Hotel",
-        "translation-ru": "Напротив отеля",
-        "translation-en": "Opposite the hotel",
-        "translation-uk": "Навпроти готелю",
-        "translation-pl": "Naprzeciwko hotelu",
-        "translation-es": "Frente al hotel",
-        "translation-fr": "En face de l'hôtel",
-        "translation-ar": "مقابل الفندق",
-        "translation-hi": "होटल के सामने",
-        "translation-ro": "Vis-a-vis de hotel",
-        "translation-tr": "Otelın karşısında",
-        "translation-uz": "Mehmonxona ro'parasida"
-      },
-      {
-        "word": "an der Bank vorbei",
-        "translation-ru": "Мимо банка",
-        "translation-en": "Past the bank",
-        "translation-uk": "Повз банк",
-        "translation-pl": "Obok banku",
-        "translation-es": "Pasando el banco",
-        "translation-fr": "En passant devant la banque",
-        "translation-ar": "بجانب البنك",
-        "translation-hi": "बैंक के पास से",
-        "translation-ro": "Pe lângă bancă",
-        "translation-tr": "Bankanın yanından",
-        "translation-uz": "Bank yonidan"
-      },
-      {
-        "word": "mit dem Bus",
-        "translation-ru": "На автобусе",
-        "translation-en": "By bus",
-        "translation-uk": "Автобусом",
-        "translation-pl": "Autobusem",
-        "translation-es": "En autobús",
-        "translation-fr": "En bus",
-        "translation-ar": "بالحافلة",
-        "translation-hi": "बस से",
-        "translation-ro": "Cu autobuzul",
-        "translation-tr": "Otobüsle",
-        "translation-uz": "Avtobusda"
-      },
-      {
-        "word": "aus Deutschland",
-        "translation-ru": "Из Германии",
-        "translation-en": "From Germany",
-        "translation-uk": "З Німеччини",
-        "translation-pl": "Z Niemiec",
-        "translation-es": "De Alemania",
-        "translation-fr": "D'Allemagne",
-        "translation-ar": "من ألمانيا",
-        "translation-hi": "जर्मनी से",
-        "translation-ro": "Din Germania",
-        "translation-tr": "Almanya'dan",
-        "translation-uz": "Germaniyadan"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "Выберите перевод для «für»: «подарок для брата»",
-        "options": [
-          "ein Geschenk für den Bruder",
-          "ein Geschenk für dem Bruder",
-          "ein Geschenk vor dem Bruder"
-        ],
-        "answer": "ein Geschenk für den Bruder"
-      },
-      {
-        "id": 2,
-        "type": "input",
-        "question": "Вставьте предлог «без»: Er trinkt Tee ___ Zucker",
-        "correctAnswer": "ohne"
-      },
-      {
-        "id": 3,
-        "type": "readAndAnswer",
-        "text": "— Wie gehst du zur Arbeit? — Ich laufe morgens immer direkt durch den Park.",
-        "question": "Через что пролегает утренний путь?",
-        "options": [
-          "durch den Park",
-          "am Park vorbei",
-          "um den Park"
-        ],
-        "answer": "durch den Park"
-      },
-      {
-        "id": 4,
-        "type": "reorder",
-        "question": "Соберите предложение: Она идёт за угол",
-        "words": [
+          "ist",
           "Ecke",
+          "Der",
+          "die",
           "um",
-          "geht",
-          "Sie",
-          "die"
+          "der",
+          "Laden"
         ],
         "correctOrder": [
-          "Sie",
-          "geht",
+          "Der",
+          "Laden",
+          "ist",
           "um",
           "die",
           "Ecke"
-        ]
-      },
-      {
-        "id": 5,
-        "type": "input",
-        "question": "Вставьте предлог «к/в», который берет у артикля форму: Er geht heute ___ Arzt",
-        "correctAnswer": "zum"
-      },
-      {
-        "id": 6,
-        "type": "select",
-        "question": "Выберите перевод для «von»: «мы идем с вокзала»",
-        "options": [
-          "wir kommen vom Bahnhof",
-          "wir kommen aus dem Bahnhof",
-          "wir kommen an den Bahnhof"
-        ],
-        "answer": "wir kommen vom Bahnhof"
-      },
-      {
-        "id": 7,
-        "type": "input",
-        "question": "Вставьте предлог «напротив»: Die Apotheke liegt ___ vom Hotel",
-        "correctAnswer": "gegenüber"
-      },
-      {
-        "id": 8,
-        "type": "reorder",
-        "question": "Соберите предложение: Автобус едет мимо банка",
-        "words": [
-          "Bank",
-          "fährt",
-          "der",
-          "an",
-          "vorbei",
-          "Der Bus"
-        ],
-        "correctOrder": [
-          "Der Bus",
-          "fährt",
-          "an",
-          "der",
-          "Bank",
-          "vorbei"
-        ]
-      },
-      {
-        "id": 9,
-        "type": "select",
-        "question": "Выберите перевод для «mit»: «поездка на автобусе»",
-        "options": [
-          "mit dem Bus fahren",
-          "mit den Bus fahren",
-          "aus dem Bus fahren"
-        ],
-        "answer": "mit dem Bus fahren"
-      },
-      {
-        "id": 10,
-        "type": "input",
-        "question": "Вставьте предлог страны/источника: Mein Kollege kommt ___ Deutschland",
-        "correctAnswer": "aus"
-      },
-      {
-        "id": 11,
-        "type": "readAndAnswer",
-        "text": "— Wie lange dauert die Fahrt? — Wegen der Baustelle stehen wir schon über eine Stunde.",
-        "question": "Сколько длится задержка?",
-        "options": [
-          "über eine Stunde",
-          "ohne eine Stunde",
-          "unter einer Stunde"
-        ],
-        "answer": "über eine Stunde"
-      },
-      {
-        "id": 12,
-        "type": "input",
-        "question": "Вставьте предлог временного интервала («между»): Der Arzt hat Zeit ___ 14 und 16 Uhr",
-        "correctAnswer": "zwischen"
-      },
-      {
-        "id": 13,
-        "type": "select",
-        "question": "Выберите перевод бытовой причины: «из-за погоды»",
-        "options": [
-          "wegen dem Wetter",
-          "vor dem Wetter",
-          "aus dem Wetter"
-        ],
-        "answer": "wegen dem Wetter"
-      },
-      {
-        "id": 14,
-        "type": "input",
-        "question": "Вставьте предлог эмоциональной реакции («от радости»): Das Kind weint vor Glück und lacht ___ Freude",
-        "correctAnswer": "vor"
-      },
-      {
-        "id": 15,
-        "type": "reorder",
-        "question": "Соберите предложение: Мы помогли ему из вежливости",
-        "words": [
-          "aus",
-          "halfen",
-          "Wir",
-          "Höflichkeit",
-          "ihm"
-        ],
-        "correctOrder": [
-          "Wir",
-          "halfen",
-          "ihm",
-          "aus",
-          "Höflichkeit"
         ]
       }
     ]

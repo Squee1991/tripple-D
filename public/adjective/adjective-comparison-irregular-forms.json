@@ -81,7 +81,7 @@
   },
   {
     "question": "Wer von euch hat die ___ Erfahrung in diesem Bereich?",
-    "options": ["meiste", "meiste", "mehr", "viele"],
+    "options": ["meiste", "am meisten", "mehr", "viele"],
     "answer": "meiste"
   },
   {

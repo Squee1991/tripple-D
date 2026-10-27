@@ -195,7 +195,10 @@ export default defineNuxtConfig({
 	ignore: [
 		'ios/**',
 		'android/**',
-		'android-app/**'
+		'android-app/**',
+		// ВРЕМЕННО для локального запуска (spawn EBADF) — убрать перед коммитом
+		'functions/**',
+		'.output/**'
 	],
 	nitro: {
 		preset: 'static',

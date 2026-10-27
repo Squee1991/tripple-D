@@ -119,23 +119,69 @@
 }
 
 .orange {
-    --landsLevelBg: #D97605;
-    --landsLevelTextColor: white;
-    --bg: #0F172A;
-    --navBg: #131219;
-    --titleColor: white;
-    --title: #FFFFFF;
-    --regionBtnColor: #FFFFFF;
-    --tabsSlideBg: #D97605;
-    --settingsSectionBg: #2a2e58;
-    --tabsSlideBorderColor: #2a2a2a;
-    --landsTabBg: #D97605;
+    /* Halloween: ночное фиолетовое небо, чёрные силуэты, тыквенный оранжевый, ведьмин фиолетовый, ядовито-зелёный */
+    --bg: #120c1c;
+    --navBg: #140c1c;
+    --homeBg: #120c1c;
+    --bgModal: #1a1124;
+    --bgOpacity: rgba(8, 4, 12, 0.85);
+
+    --titleColor: #f6ecdf;
+    --title: #f6ecdf;
+    --tabTextColor: #f6ecdf;
+    --panelTextColor: #f6ecdf;
+    --navItems: #f6ecdf;
+    --labelTextColor: #f6ecdf;
+
+    --menuItemsBg: #180e20;
+    --settingsSectionBg: rgba(255, 122, 26, 0.07);
+    --tabBg: #1e1128;
+    --menuBorder: #5e3417;
+    --tabsSlideBorderColor: #5e3417;
+    --borderMobile: #5e3417;
+    --border: #5e3417;
+    --borderBottom: #5e3417;
+    --borderRegion: #5e3417;
+
+    --tabsSlideBg: #ff7a1a;
+    --landsTabBg: #ff7a1a;
+    --regionBtnBg: #ff7a1a;
+    --labelBg: #ff7a1a;
+    --arrowBg: #8e5bd8;
+    --regionBtnColor: #ffffff;
+    --footerBg: #140c1c;
+    --menuHoverEl: #ffb347;
+    --bgTitle: #8e5bd8;
+    --boxShadowBottom: #5b33a0;
+    --timerbg: #7ed957;
+    --boxShadowMobile: 0 0 0 1px rgba(255, 122, 26, 0.12), 0 6px 14px rgba(0, 0, 0, 0.6);
+    --tabSlideBoxShadow: 0 0 16px rgba(255, 122, 26, 0.55), inset 0 1px 0 rgba(255, 225, 180, 0.4);
+
+    --landsLevelBg: #8e5bd8;
+    --landsLevelTextColor: #ffffff;
+    --landNameBg: linear-gradient(180deg, rgb(48 22 56 / 80%), rgb(18 12 28 / 70%));
+    --overlayAfter: linear-gradient(to bottom, rgba(18, 12, 28, 0) 0%, rgba(18, 12, 28, 1) 100%);
+
+    --cardShopBg: #180e20;
+    --cardShopHeadBg: #1e1128;
+    --cardShopBtnDisabledBg: #3b2547;
+    --cardShopDescColor: #c8b6d8;
+    --cardShopRankTextColor: #ffb347;
+    --cardShopRankValueColor: #f6ecdf;
+    --shopCardBg: radial-gradient(150% 120% at 50% -15%,
+    rgba(255, 122, 26, .22),
+    rgba(255, 122, 26, .05) 42%,
+    rgba(0, 0, 0, .12) 70%,
+    rgba(0, 0, 0, .30) 100%),
+    radial-gradient(140% 160% at 50% 120%,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, .40) 60%,
+            rgba(0, 0, 0, .70) 100%),
+    linear-gradient(180deg, rgba(52, 28, 66, .92), rgba(18, 12, 28, .96));
+
     --fontFamilyOrange: 'Rubik Wet Paint', system-ui;
     --fontWeightHalloween: 400;
-    --tabBg: #783CD2;
-    --menuItemsBg: #2a2e58;
-    --arrowBg: #D97605;
-    --webkitText: 0.5px #000000;
+    --webkitText: 0.5px #1a0e04;
 }
 
 
@@ -152,6 +198,18 @@
     --labelTextColor:#8B454E;
     --panelTextColor: #8B454E;
 }
+
+/*
+ * Фон рисует только html, когда на главной эффекты Хэллоуина (тема или идёт его событие):
+ * иначе фон body/#__nuxt перекрывает эффекты под контентом (листья, звёзды, нижняя паутина)
+ */
+html.orange body,
+html.orange #__nuxt,
+html.halloween-fx body,
+html.halloween-fx #__nuxt {
+    background-color: transparent;
+}
+
 
 html, body {
     background: var(--bg);

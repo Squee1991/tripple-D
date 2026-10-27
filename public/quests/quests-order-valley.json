@@ -1156,7 +1156,7 @@
         "id": 4,
         "type": "reorder",
         "question": "orderValleyQuestEight.questFour",
-        "words": ["Taxi", "bestellt", "da", "U-Bahn", "keine", "gibt", "er", "sich", "es", "hier", "mich", "ein"],
+        "words": ["Taxi", "bestellt", "da", "U-Bahn", "keine", "gibt", "Er", "sich", "es", "hier", "mich", "ein"],
         "correctOrder": ["Er", "bestellt", "sich", "ein", "Taxi", "da", "es", "hier", "keine", "U-Bahn", "gibt"],
         "tip": "orderValleyQuestEight.questFourTip"
       },
@@ -1362,7 +1362,7 @@
         "id": 9,
         "type": "reorder",
         "question": "orderValleyQuestNine.questNine",
-        "words": ["kaufe", "Laptop", "Rabatt", "mir", "Ich", "einen", "es", "gibt", "wenn", "mich"],
+        "words": ["kaufe", "Laptop", "einen", "Rabatt", "mir", "Ich", "einen", "es", "gibt", "wenn", "mich"],
         "correctOrder": ["Ich", "kaufe", "mir", "einen", "Laptop", "wenn", "es", "einen", "Rabatt", "gibt"],
         "tip": "orderValleyQuestNine.questNineTip"
       },
@@ -1472,7 +1472,7 @@
         "id": 4,
         "type": "reorder",
         "question": "orderValleyQuestTen.questFour",
-        "words": ["freue", "mich", "dass", "frei", "habe", "Ich", "heute"],
+        "words": ["freue", "mich", "dass", "frei", "habe", "Ich", "heute", "ich"],
         "correctOrder": ["Ich", "freue", "mich", "dass", "ich", "heute", "frei", "habe"],
         "tip": "orderValleyQuestTen.questFourTip"
       },
