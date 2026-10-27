@@ -42,7 +42,8 @@ export const SETTINGS_GROUPS_CONFIG = [
         items: [
             { key: 'theme', labelKey: 'cabinetToggle.themeBtn', type: 'button' },
             { key: 'snowFall', labelKey: 'cabinetToggle.snowFall', type: 'toggle' },
-            { key: 'hedgehogHelper', labelKey: 'cabinetToggle.hedgehogAssistent', type: 'toggle' }
+            { key: 'hedgehogHelper', labelKey: 'cabinetToggle.hedgehogAssistent', type: 'toggle' },
+            { key: 'hedgehogGuide', labelKey: 'cabinetToggle.hedgehogGuide', type: 'toggle' }
         ]
     },
     {

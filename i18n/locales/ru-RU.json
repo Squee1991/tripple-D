@@ -8237,7 +8237,8 @@
     "snowFall": "Снегопад",
     "language": "Язык интерфейса",
     "profileData": "Данные профиля",
-    "hedgehogAssistent": "Ёжик-помощник"
+    "hedgehogAssistent": "Ёжик-помощник",
+    "hedgehogGuide": "Ёжик-гид на главной"
   },
   "cabinet": {
     "plusCanceled": "PLUS отменен",

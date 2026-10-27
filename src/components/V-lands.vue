@@ -5,6 +5,8 @@
         <h1 class="map__title">{{ t('locationsMenu.title') }}</h1>
       </div>
       <div class="map-layout">
+        <!-- на мобильных панель уходит в body: mask-image у скролл-контейнера иначе обрезает fixed-панель -->
+        <Teleport to="body" :disabled="windowWidth >= 1024">
         <transition name="fade">
           <div
               class="map-overlay"
@@ -17,6 +19,7 @@
               class="map-left"
               v-show="isPanelOpen || windowWidth > 1024"
               :class="[ 'theme--' + themeOf(active), { rtl: locale === 'ar' } ]"
+              :dir="locale === 'ar' ? 'rtl' : 'ltr'"
               v-if="active"
           >
             <div class="mal__left-content">
@@ -52,6 +55,7 @@
             </div>
           </div>
         </transition>
+        </Teleport>
         <div class="map-right-container">
           <div class="map-pagination-arrows">
             <button

@@ -13,10 +13,12 @@ import LeafGold from "../assets/images/halloween-effects/leafGold.svg";
 import { useEventSessionStore } from '../store/eventsStore.js'
 import VStartPage from "~/src/components/V-startPage.vue";
 import VHedgehogGuide from "~/src/components/V-hedgehogGuide.vue";
+import { useUiSettingsStore } from '~/store/uiSettingsStore.js'
 import { SplashScreen } from '@capacitor/splash-screen'
 
 const eventStore = useEventSessionStore()
 const authStore = userAuthStore()
+const uiSettings = useUiSettingsStore()
 const hydrated = ref(false)
 const isLocallyLogged = ref(false)
 const colorMode = useColorMode()
@@ -88,7 +90,7 @@ watch(() => authStore.uid, (newUid) => {
         <Header/>
         <VUid/>
       </div>
-      <VHedgehogGuide v-if="authStore.uid"/>
+      <VHedgehogGuide v-if="authStore.uid && uiSettings.hedgehogGuideEnabled"/>
     </template>
     <template v-else-if="authStore.initialized && !authStore.uid">
       <VStartPage/>
