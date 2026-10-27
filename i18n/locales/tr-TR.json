@@ -8228,7 +8228,8 @@
     "snowFall": "Kar yağışı",
     "language": "Arayüz dili",
     "profileData": "Profil verileri",
-    "hedgehogAssistent": "Kirpi Asistan"
+    "hedgehogAssistent": "Kirpi Asistan",
+    "hedgehogGuide": "Ana ekranda Kirpi Rehber"
   },
   "cabinet": {
     "plusCanceled": "PLUS iptal edildi",

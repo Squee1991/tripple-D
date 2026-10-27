@@ -8225,7 +8225,8 @@
     "snowFall": "Снігопад",
     "language": "Мова інтерфейсу",
     "profileData": "Дані профілю",
-    "hedgehogAssistent": "Їжачок-помічник"
+    "hedgehogAssistent": "Їжачок-помічник",
+    "hedgehogGuide": "Їжачок-гід на головній"
   },
   "cabinet": {
     "plusCanceled": "PLUS скасовано",

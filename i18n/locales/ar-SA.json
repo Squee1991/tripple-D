@@ -8237,7 +8237,8 @@
     "snowFall": "تساقط الثلوج",
     "language": "لغة الواجهة",
     "profileData": "بيانات الملف الشخصي",
-    "hedgehogAssistent": "المساعد القنفذ"
+    "hedgehogAssistent": "المساعد القنفذ",
+    "hedgehogGuide": "القنفذ المرشد في الشاشة الرئيسية"
   },
   "cabinet": {
     "plusCanceled": "تم إلغاء PLUS",

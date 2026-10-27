@@ -8219,7 +8219,8 @@
     "snowFall": "Nevada",
     "language": "Idioma de la interfaz",
     "profileData": "Datos del perfil",
-    "hedgehogAssistent": "Erizito asistente"
+    "hedgehogAssistent": "Erizito asistente",
+    "hedgehogGuide": "Erizito guía en la pantalla principal"
   },
   "cabinet": {
     "plusCanceled": "PLUS cancelado",

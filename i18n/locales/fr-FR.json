@@ -8215,7 +8215,8 @@
     "snowFall": "Chute de neige",
     "language": "Langue de l'interface",
     "profileData": "Données du profil",
-    "hedgehogAssistent": "Hérisson assistant"
+    "hedgehogAssistent": "Hérisson assistant",
+    "hedgehogGuide": "Hérisson guide sur l’accueil"
   },
   "cabinet": {
     "plusCanceled": "PLUS annulé",

@@ -8242,7 +8242,8 @@
     "snowFall": "Snowfall",
     "language": "Interface language",
     "profileData": "Profile data",
-    "hedgehogAssistent": "Hedgehog Assistant"
+    "hedgehogAssistent": "Hedgehog Assistant",
+    "hedgehogGuide": "Hedgehog Guide on home screen"
   },
   "cabinet": {
     "plusCanceled": "PLUS canceled",
