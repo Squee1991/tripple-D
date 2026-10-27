@@ -376,7 +376,7 @@ onBeforeUnmount(() => clearTimeout(typingTimer))
 .guide-fab {
   position: fixed;
   right: 16px;
-  bottom: calc(110px + env(safe-area-inset-bottom));
+  bottom: calc(100px + env(safe-area-inset-bottom));
   z-index: 10;
   width: 52px;
   height: 52px;
