@@ -2,14 +2,14 @@
 import { computed } from 'vue'
 
 const props = defineProps({
-  // back — луна и звёзды под контентом, front — мыши, паук, призрак и огоньки поверх
+  // back — звёзды и нижняя паутина под контентом, front — верхняя паутина, пауки, мыши и огоньки поверх
   layer: {
     type: String,
     default: 'front'
   },
   batsCount: {
     type: Number,
-    default: 4
+    default: 3
   },
   starsCount: {
     type: Number,
@@ -17,9 +17,15 @@ const props = defineProps({
   },
   firefliesCount: {
     type: Number,
-    default: 12
+    default: 8
   }
 })
+
+const colorMode = useColorMode()
+// светлые темы: паутину и нить паука делаем темнее, чтобы их было видно на светлом фоне
+const isLightUi = computed(() => ['light', 'pink'].includes(colorMode.value))
+// ночное небо — только в самой теме Хэллоуина (в обычных темах во время события его нет)
+const isHalloweenTheme = computed(() => colorMode.value === 'orange')
 
 function rand(min, max) {
   return Math.random() * (max - min) + min
@@ -30,8 +36,7 @@ const bats = computed(() =>
       const duration = rand(16, 26)
       return {
         id: i + 1,
-        // первые две мыши пролетают на фоне луны
-        top: (i < 2 ? rand(11, 20) : rand(6, 45)).toFixed(2),
+        top: rand(6, 45).toFixed(2),
         size: Math.round(rand(26, 46)),
         duration: duration.toFixed(2),
         delay: (-rand(0, duration)).toFixed(2),
@@ -41,6 +46,19 @@ const bats = computed(() =>
       }
     })
 )
+
+// паутина: верхние углы — поверх контента, нижние — за ним
+const WEBS = {
+  front: [{ id: 'tl', corner: 'top-left' }, { id: 'tr', corner: 'top-right' }],
+  back: [{ id: 'bl', corner: 'bottom-left' }, { id: 'br', corner: 'bottom-right' }]
+}
+
+// паук висит под правой верхней паутиной и спускается на нити
+const SPIDERS = [
+  { id: 'right', side: 'right', drop: '26vh', duration: '14s', delay: '0s', size: 34 }
+]
+
+const webs = computed(() => WEBS[props.layer] || [])
 
 const stars = computed(() =>
     Array.from({ length: props.starsCount }).map((_, i) => ({
@@ -68,42 +86,28 @@ const fireflies = computed(() =>
 </script>
 
 <template>
-  <div class="halloween-fx" :class="'halloween-fx--' + props.layer" aria-hidden="true">
+  <div
+      class="halloween-fx"
+      :class="['halloween-fx--' + props.layer, { 'halloween-fx--light-ui': isLightUi }]"
+      aria-hidden="true"
+  >
     <ClientOnly>
-      <template v-if="props.layer === 'back'">
-      <div class="moon">
-        <div class="moon__halo"></div>
-        <svg class="moon__disc" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <radialGradient id="hfx-moon-surface" cx="42%" cy="38%" r="65%">
-              <stop offset="0%" stop-color="#ffe9c2"/>
-              <stop offset="45%" stop-color="#ffc06b"/>
-              <stop offset="80%" stop-color="#f2913a"/>
-              <stop offset="100%" stop-color="#d9702a"/>
-            </radialGradient>
-            <radialGradient id="hfx-moon-crater" cx="40%" cy="40%" r="60%">
-              <stop offset="0%" stop-color="#c8692a" stop-opacity="0.5"/>
-              <stop offset="100%" stop-color="#f5a552" stop-opacity="0.12"/>
-            </radialGradient>
-            <radialGradient id="hfx-moon-shade" cx="30%" cy="30%" r="80%">
-              <stop offset="60%" stop-color="#000" stop-opacity="0"/>
-              <stop offset="100%" stop-color="#7a3410" stop-opacity="0.35"/>
-            </radialGradient>
-          </defs>
-          <circle cx="100" cy="100" r="96" fill="url(#hfx-moon-surface)"/>
-          <ellipse cx="72" cy="66" rx="20" ry="17" fill="url(#hfx-moon-crater)"/>
-          <ellipse cx="128" cy="58" rx="11" ry="10" fill="url(#hfx-moon-crater)"/>
-          <ellipse cx="118" cy="112" rx="26" ry="22" fill="url(#hfx-moon-crater)"/>
-          <ellipse cx="62" cy="128" rx="13" ry="11" fill="url(#hfx-moon-crater)"/>
-          <ellipse cx="96" cy="152" rx="9" ry="8" fill="url(#hfx-moon-crater)"/>
-          <ellipse cx="150" cy="96" rx="7" ry="6" fill="url(#hfx-moon-crater)"/>
-          <ellipse cx="44" cy="92" rx="6" ry="5" fill="url(#hfx-moon-crater)"/>
-          <circle cx="100" cy="100" r="96" fill="url(#hfx-moon-shade)"/>
-        </svg>
-        <div class="moon__cloud moon__cloud--one"></div>
-        <div class="moon__cloud moon__cloud--two"></div>
-      </div>
+      <template v-if="props.layer === 'back' && isHalloweenTheme">
+        <div class="sky"></div>
+      </template>
 
+      <svg
+          v-for="w in webs"
+          :key="w.id"
+          class="web"
+          :class="'web--' + w.corner"
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0 0L100.0 0.0M0 0L96.6 25.9M0 0L86.6 50.0M0 0L70.7 70.7M0 0L50.0 86.6M0 0L25.9 96.6M0 0L0.0 100.0M18.0 0.0Q15.6 2.0 17.4 4.7Q14.5 6.0 15.6 9.0Q12.5 9.6 12.7 12.7Q9.6 12.5 9.0 15.6Q6.0 14.5 4.7 17.4Q2.0 15.6 0.0 18.0M34.0 0.0Q29.4 3.9 32.8 8.8Q27.4 11.4 29.4 17.0Q23.5 18.1 24.0 24.0Q18.1 23.5 17.0 29.4Q11.4 27.4 8.8 32.8Q3.9 29.4 0.0 34.0M50.0 0.0Q43.3 5.7 48.3 12.9Q40.3 16.7 43.3 25.0Q34.6 26.6 35.4 35.4Q26.6 34.6 25.0 43.3Q16.7 40.3 12.9 48.3Q5.7 43.3 0.0 50.0M66.0 0.0Q57.1 7.5 63.8 17.1Q53.2 22.0 57.2 33.0Q45.7 35.1 46.7 46.7Q35.1 45.7 33.0 57.2Q22.0 53.2 17.1 63.8Q7.5 57.1 0.0 66.0M82.0 0.0Q70.9 9.3 79.2 21.2Q66.1 27.4 71.0 41.0Q56.8 43.6 58.0 58.0Q43.6 56.8 41.0 71.0Q27.4 66.1 21.2 79.2Q9.3 70.9 0.0 82.0M98.0 0.0Q84.8 11.2 94.7 25.4Q79.0 32.7 84.9 49.0Q67.8 52.1 69.3 69.3Q52.1 67.8 49.0 84.9Q32.7 79.0 25.4 94.7Q11.2 84.8 0.0 98.0"/>
+      </svg>
+
+      <template v-if="props.layer === 'back'">
       <span
           v-for="st in stars"
           :key="'s' + st.id"
@@ -119,14 +123,13 @@ const fireflies = computed(() =>
       </template>
 
       <template v-else>
-      <svg class="web web--left" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0L100.0 0.0M0 0L96.6 25.9M0 0L86.6 50.0M0 0L70.7 70.7M0 0L50.0 86.6M0 0L25.9 96.6M0 0L0.0 100.0M18.0 0.0Q15.6 2.0 17.4 4.7Q14.5 6.0 15.6 9.0Q12.5 9.6 12.7 12.7Q9.6 12.5 9.0 15.6Q6.0 14.5 4.7 17.4Q2.0 15.6 0.0 18.0M34.0 0.0Q29.4 3.9 32.8 8.8Q27.4 11.4 29.4 17.0Q23.5 18.1 24.0 24.0Q18.1 23.5 17.0 29.4Q11.4 27.4 8.8 32.8Q3.9 29.4 0.0 34.0M50.0 0.0Q43.3 5.7 48.3 12.9Q40.3 16.7 43.3 25.0Q34.6 26.6 35.4 35.4Q26.6 34.6 25.0 43.3Q16.7 40.3 12.9 48.3Q5.7 43.3 0.0 50.0M66.0 0.0Q57.1 7.5 63.8 17.1Q53.2 22.0 57.2 33.0Q45.7 35.1 46.7 46.7Q35.1 45.7 33.0 57.2Q22.0 53.2 17.1 63.8Q7.5 57.1 0.0 66.0M82.0 0.0Q70.9 9.3 79.2 21.2Q66.1 27.4 71.0 41.0Q56.8 43.6 58.0 58.0Q43.6 56.8 41.0 71.0Q27.4 66.1 21.2 79.2Q9.3 70.9 0.0 82.0M98.0 0.0Q84.8 11.2 94.7 25.4Q79.0 32.7 84.9 49.0Q67.8 52.1 69.3 69.3Q52.1 67.8 49.0 84.9Q32.7 79.0 25.4 94.7Q11.2 84.8 0.0 98.0"/>
-      </svg>
-      <svg class="web web--right" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0L100.0 0.0M0 0L96.6 25.9M0 0L86.6 50.0M0 0L70.7 70.7M0 0L50.0 86.6M0 0L25.9 96.6M0 0L0.0 100.0M18.0 0.0Q15.6 2.0 17.4 4.7Q14.5 6.0 15.6 9.0Q12.5 9.6 12.7 12.7Q9.6 12.5 9.0 15.6Q6.0 14.5 4.7 17.4Q2.0 15.6 0.0 18.0M34.0 0.0Q29.4 3.9 32.8 8.8Q27.4 11.4 29.4 17.0Q23.5 18.1 24.0 24.0Q18.1 23.5 17.0 29.4Q11.4 27.4 8.8 32.8Q3.9 29.4 0.0 34.0M50.0 0.0Q43.3 5.7 48.3 12.9Q40.3 16.7 43.3 25.0Q34.6 26.6 35.4 35.4Q26.6 34.6 25.0 43.3Q16.7 40.3 12.9 48.3Q5.7 43.3 0.0 50.0M66.0 0.0Q57.1 7.5 63.8 17.1Q53.2 22.0 57.2 33.0Q45.7 35.1 46.7 46.7Q35.1 45.7 33.0 57.2Q22.0 53.2 17.1 63.8Q7.5 57.1 0.0 66.0M82.0 0.0Q70.9 9.3 79.2 21.2Q66.1 27.4 71.0 41.0Q56.8 43.6 58.0 58.0Q43.6 56.8 41.0 71.0Q27.4 66.1 21.2 79.2Q9.3 70.9 0.0 82.0M98.0 0.0Q84.8 11.2 94.7 25.4Q79.0 32.7 84.9 49.0Q67.8 52.1 69.3 69.3Q52.1 67.8 49.0 84.9Q32.7 79.0 25.4 94.7Q11.2 84.8 0.0 98.0"/>
-      </svg>
-
-      <div class="spider">
+      <div
+          v-for="sp in SPIDERS"
+          :key="sp.id"
+          class="spider"
+          :class="'spider--' + sp.side"
+          :style="{ '--drop': sp.drop, '--duration': sp.duration, '--delay': sp.delay, '--size': sp.size + 'px' }"
+      >
         <div class="spider__thread"></div>
         <svg class="spider__body" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
           <g class="spider__legs spider__legs--left" stroke="#0b0b0d" stroke-width="1.8" fill="none" stroke-linecap="round">
@@ -145,15 +148,6 @@ const fireflies = computed(() =>
           <circle cx="20" cy="15" r="5" fill="#0b0b0d"/>
           <circle cx="18" cy="14.5" r="1.3" fill="#f5c16c"/>
           <circle cx="22" cy="14.5" r="1.3" fill="#f5c16c"/>
-        </svg>
-      </div>
-
-      <div class="ghost-track">
-        <svg class="ghost" viewBox="0 0 40 48" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 2C10 2 4 10 4 20V44L9 40L14 45L20 40L26 45L31 40L36 44V20C36 10 30 2 20 2Z"/>
-          <circle cx="14" cy="20" r="3" fill="#1a1920"/>
-          <circle cx="26" cy="20" r="3" fill="#1a1920"/>
-          <ellipse cx="20" cy="29" rx="3" ry="4" fill="#1a1920"/>
         </svg>
       </div>
 
@@ -214,68 +208,6 @@ const fireflies = computed(() =>
   z-index: -1;
 }
 
-/* Луна */
-.moon {
-  position: absolute;
-  top: 10vh;
-  right: 8vw;
-  width: clamp(130px, 30vmin, 240px);
-  aspect-ratio: 1;
-  /* приглушена: должна лишь чуть-чуть проглядывать сквозь интерфейс */
-  opacity: 0.55;
-}
-
-.moon__halo {
-  position: absolute;
-  inset: -160%;
-  border-radius: 50%;
-  background: radial-gradient(circle closest-side,
-  rgba(255, 170, 80, 0.55) 0%,
-  rgba(255, 160, 70, 0.38) 20%,
-  rgba(245, 130, 50, 0.18) 38%,
-  rgba(230, 110, 40, 0.08) 58%,
-  rgba(230, 110, 40, 0.03) 78%,
-  rgba(230, 110, 40, 0) 100%);
-  will-change: opacity;
-  animation: moon-pulse 7s ease-in-out infinite alternate;
-}
-
-.moon__disc {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-/* Тонкие облака, медленно проплывающие по диску луны */
-.moon__cloud {
-  position: absolute;
-  height: 18%;
-  border-radius: 50%;
-  background: radial-gradient(ellipse closest-side,
-  rgba(40, 30, 40, 0.7) 0%,
-  rgba(40, 30, 40, 0.32) 55%,
-  rgba(40, 30, 40, 0) 100%);
-  will-change: transform;
-}
-
-.moon__cloud--one {
-  top: 55%;
-  left: -60%;
-  width: 150%;
-  animation: cloud-pass 34s linear infinite;
-}
-
-.moon__cloud--two {
-  top: 22%;
-  left: -60%;
-  width: 110%;
-  height: 13%;
-  animation: cloud-pass 48s linear infinite;
-  animation-delay: -20s;
-}
-
 /* Летучие мыши */
 .bat-track {
   position: absolute;
@@ -300,10 +232,19 @@ const fireflies = computed(() =>
   animation: flap var(--flap) ease-in-out infinite alternate;
 }
 
-/* Паутина в верхних углах */
+/* Ночное небо: глубокий фиолетовый сверху, чернота внизу и тёплый отсвет у горизонта */
+.sky {
+  position: absolute;
+  inset: 0;
+  background:
+      radial-gradient(ellipse 70% 35% at 50% 100%, rgba(255, 122, 26, 0.22), rgba(255, 122, 26, 0) 70%),
+      radial-gradient(ellipse 60% 40% at 80% 0%, rgba(142, 91, 216, 0.22), rgba(142, 91, 216, 0) 70%),
+      linear-gradient(180deg, #1d1033 0%, #150c24 45%, #0e0914 100%);
+}
+
+/* Паутина в углах экрана */
 .web {
   position: absolute;
-  top: 0;
   width: clamp(70px, 16vmin, 140px);
   height: clamp(70px, 16vmin, 140px);
   fill: none;
@@ -312,25 +253,44 @@ const fireflies = computed(() =>
   filter: drop-shadow(0 0 2px rgba(190, 175, 235, 0.35));
 }
 
-.web--left {
+.web--top-left {
+  top: 0;
   left: 0;
 }
 
-.web--right {
+.web--top-right {
+  top: 0;
   right: 0;
   transform: scaleX(-1);
+}
+
+.web--bottom-left {
+  bottom: 0;
+  left: 0;
+  transform: scaleY(-1);
+}
+
+.web--bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: scale(-1, -1);
 }
 
 /* Паук медленно спускается на нити и поднимается обратно */
 .spider {
   position: absolute;
   top: 0;
-  right: clamp(46px, 11vmin, 96px);
-  width: 34px;
-  height: 34px;
+  width: var(--size);
+  height: var(--size);
   will-change: transform;
-  animation: spider-drop 14s ease-in-out infinite;
+  animation: spider-drop var(--duration) ease-in-out infinite;
+  animation-delay: var(--delay);
 }
+
+.spider--right {
+  right: clamp(46px, 11vmin, 96px);
+}
+
 
 .spider__thread {
   position: absolute;
@@ -360,23 +320,16 @@ const fireflies = computed(() =>
   animation-delay: -0.3s;
 }
 
-/* На светлых темах (вне темы Хэллоуина) паутину и призрака делаем темнее, чтобы их было видно */
-:global(html.light) .web,
-:global(html.pink) .web {
+/* На светлых темах (вне темы Хэллоуина) паутину и нить паука делаем темнее, чтобы их было видно */
+.halloween-fx--light-ui .web {
   stroke: rgba(60, 55, 75, 0.35);
   filter: none;
 }
 
-:global(html.light) .spider__thread,
-:global(html.pink) .spider__thread {
+.halloween-fx--light-ui .spider__thread {
   background: rgba(60, 55, 75, 0.45);
 }
 
-:global(html.light) .ghost,
-:global(html.pink) .ghost {
-  fill: rgba(255, 255, 255, 0.95);
-  filter: drop-shadow(0 0 3px rgba(60, 50, 90, 0.55));
-}
 
 /* Мерцающие звёзды */
 .star {
@@ -412,25 +365,6 @@ const fireflies = computed(() =>
   box-shadow: 0 0 6px 2px rgba(160, 140, 225, 0.75), 0 0 14px 4px rgba(160, 140, 225, 0.3);
 }
 
-/* Призрак — медленно проплывает раз в ~40 секунд */
-.ghost-track {
-  position: absolute;
-  top: 22vh;
-  left: 0;
-  will-change: transform, opacity;
-  animation: ghost-path 40s linear infinite;
-  animation-delay: -12s;
-}
-
-.ghost {
-  display: block;
-  width: 46px;
-  height: 55px;
-  fill: rgba(236, 232, 245, 0.85);
-  filter: drop-shadow(0 0 10px rgba(190, 175, 235, 0.6));
-  animation: ghost-bob 3s ease-in-out infinite alternate;
-}
-
 @keyframes fly-right {
   0% { transform: translate3d(-10vw, 0, 0); }
   25% { transform: translate3d(22vw, calc(var(--bob) * -1), 0); }
@@ -454,7 +388,7 @@ const fireflies = computed(() =>
 
 @keyframes spider-drop {
   0%, 12% { transform: translate3d(0, -20px, 0); }
-  45%, 62% { transform: translate3d(0, 26vh, 0); }
+  45%, 62% { transform: translate3d(0, var(--drop), 0); }
   100% { transform: translate3d(0, -20px, 0); }
 }
 
@@ -481,35 +415,9 @@ const fireflies = computed(() =>
   100% { transform: translate3d(0, 0, 0); opacity: 0; }
 }
 
-@keyframes ghost-path {
-  0% { transform: translate3d(-15vw, 0, 0); opacity: 0; }
-  5% { opacity: 0.9; }
-  45% { transform: translate3d(115vw, -6vh, 0); opacity: 0.9; }
-  50% { transform: translate3d(115vw, -6vh, 0); opacity: 0; }
-  100% { transform: translate3d(115vw, -6vh, 0); opacity: 0; }
-}
-
-@keyframes ghost-bob {
-  from { transform: translateY(-6px) rotate(-4deg); }
-  to { transform: translateY(6px) rotate(4deg); }
-}
-
-@keyframes cloud-pass {
-  from { transform: translate3d(-40%, 0, 0); opacity: 0; }
-  15% { opacity: 1; }
-  85% { opacity: 1; }
-  to { transform: translate3d(160%, 0, 0); opacity: 0; }
-}
-
-@keyframes moon-pulse {
-  from { opacity: 0.75; }
-  to { opacity: 1; }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .bat-track,
   .spider,
-  .ghost-track,
   .firefly {
     display: none;
   }
@@ -517,11 +425,6 @@ const fireflies = computed(() =>
   .star {
     animation: none;
     opacity: 0.6;
-  }
-
-  .moon__halo,
-  .moon__cloud {
-    animation: none;
   }
 }
 </style>

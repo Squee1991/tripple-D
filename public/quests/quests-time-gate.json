@@ -261,7 +261,7 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestTwo.questFifteen",
-        "words": ["dass", "hat", "gekauft", "Haus", "das", "er", "glaube", "Ich", "den"],
+        "words": ["dass", "hat", "gekauft", "Haus", "das", "er", "glaube", "ist", "den", "Ich"],
         "correctOrder": ["Ich", "glaube", "dass", "er", "das", "Haus", "gekauft", "hat"],
         "tip": "timeGageQuestTwo.questFifteenTip"
       }
@@ -314,8 +314,8 @@
         "id": 5,
         "type": "select",
         "question": "timeGageQuestThree.questFive",
-        "options": ["Ich weiß, dass du hier bist", "Ich weiß, dass du bist hier", "Ich weiß, dass hier du bist"],
-        "answer": "Ich weiß, dass du hier bist",
+        "options": ["Ich freue mich, dass du hier bist", "Ich freue mich, dass du bist hier", "Ich freue mich, dass hier du bist"],
+        "answer": "Ich freue mich, dass du hier bist",
         "tip": "timeGageQuestThree.questFiveTip"
       },
       {
@@ -393,8 +393,8 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestThree.questFifteen",
-        "words": ["dass", "wird", "Sonne", "die", "geben", "es", "morgen", "glaube", "Ich", "ist"],
-        "correctOrder": ["Ich", "glaube", "dass", "es", "morgen", "die", "Sonne", "geben", "wird"],
+        "words": ["dass", "wird", "Sonne", "die", "scheinen", "morgen", "glaube", "Ich", "ist", "es"],
+        "correctOrder": ["Ich", "glaube", "dass", "morgen", "die", "Sonne", "scheinen", "wird"],
         "tip": "timeGageQuestThree.questFifteenTip"
       }
     ]
@@ -415,8 +415,8 @@
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestFour.questOne",
-        "words": ["werde", "E-Mail", "eine", "schreiben", "Ich", "einen"],
-        "correctOrder": ["Ich", "werde", "eine", "E-Mail", "schreiben"],
+        "words": ["werde", "Brief", "einen", "schreiben", "Ich", "eine"],
+        "correctOrder": ["Ich", "werde", "einen", "Brief", "schreiben"],
         "tip": "timeGageQuestFour.questOneTip"
       },
       {
@@ -974,7 +974,7 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestEight.questFour",
-        "words": ["Geld", "Das", "liegt", "im", "Portemonnaie", "in"],
+        "words": ["Der", "Geld", "Das", "liegt", "im", "Portemonnaie", "in"],
         "correctOrder": ["Das", "Geld", "liegt", "im", "Portemonnaie"],
         "tip": "timeGageQuestEight.questFourTip"
       },
@@ -1195,8 +1195,8 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestNine.questFifteen",
-        "words": ["dass", "er", "Medikament", "das", "gekauft", "hat", "gesehen", "Ich", "den", "habe"],
-        "correctOrder": ["Ich", "habe", "gesehen", "dass", "er", "das", "Medikament", "gekauft", "hat"],
+        "words": ["dass", "er", "Medikament", "das", "gekauft", "hat", "sehe", "Ich", "den"],
+        "correctOrder": ["Ich", "sehe", "dass", "er", "das", "Medikament", "gekauft", "hat"],
         "tip": "timeGageQuestNine.questFifteenTip"
       }
     ]
@@ -1329,8 +1329,8 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestTen.questFifteen",
-        "words": ["dass", "er", "Renovierung", "die", "gemacht", "hat", "sagt", "Er", "den"],
-        "correctOrder": ["Er", "sagt", "dass", "er", "die", "Renovierung", "gemacht", "hat"],
+        "words": ["dass", "er", "Wohnung", "die", "renoviert", "hat", "sagt", "Er", "den"],
+        "correctOrder": ["Er", "sagt", "dass", "er", "die", "Wohnung", "renoviert", "hat"],
         "tip": "timeGageQuestTen.questFifteenTip"
       }
     ]
@@ -1691,8 +1691,8 @@
         "type": "readAndAnswer",
         "text": "Der Flug nach Berlin dauert eine Stunde. Wir werden pünktlich landen.",
         "question": "timeGageQuestThirteen.questTen",
-        "options": ["60 minuten", "zwei Stunden", "drei Stunden"],
-        "answer": "60 minuten"
+        "options": ["eine Stunde", "zwei Stunden", "drei Stunden"],
+        "answer": "eine Stunde"
       },
       {
         "id": 11,
