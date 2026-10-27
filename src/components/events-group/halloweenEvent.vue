@@ -125,7 +125,7 @@ const quests = ref([
   {
     id: 'quest-1',
     title: t('halloweenEventQuests.questOne'),
-    rewardCoins: 10,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -134,7 +134,7 @@ const quests = ref([
   {
     id: 'quest-2',
     title: t('halloweenEventQuests.questTwo'),
-    rewardCoins: 10,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -143,7 +143,7 @@ const quests = ref([
   {
     id: 'quest-3',
     title: t('halloweenEventQuests.questThree'),
-    rewardCoins: 10,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -152,7 +152,7 @@ const quests = ref([
   {
     id: 'quest-4',
     title: t('halloweenEventQuests.questFour'),
-    rewardCoins: 10,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -161,7 +161,7 @@ const quests = ref([
   {
     id: 'quest-5',
     title: t('halloweenEventQuests.questFive'),
-    rewardCoins: 10,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -170,7 +170,7 @@ const quests = ref([
   {
     id: 'quest-6',
     title: t('halloweenEventQuests.questSix'),
-    rewardCoins: 10,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -179,7 +179,7 @@ const quests = ref([
   {
     id: 'quest-7',
     title: t('halloweenEventQuests.questSeven'),
-    rewardCoins: 10,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -188,7 +188,7 @@ const quests = ref([
   {
     id: 'quest-8',
     title: t('halloweenEventQuests.questEight'),
-    rewardCoins: 10,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -197,7 +197,7 @@ const quests = ref([
   {
     id: 'quest-9',
     title: t('halloweenEventQuests.questNine'),
-    rewardCoins: 10,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -206,7 +206,7 @@ const quests = ref([
   {
     id: 'quest-10',
     title: t('halloweenEventQuests.questTen'),
-    rewardCoins: 10,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -215,7 +215,7 @@ const quests = ref([
   {
     id: 'quest-11',
     title: t('halloweenEventQuests.questEleven'),
-    rewardCoins: 10,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -224,7 +224,7 @@ const quests = ref([
   {
     id: 'quest-12',
     title: t('halloweenEventQuests.questTwelve'),
-    rewardCoins: 10,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -233,7 +233,7 @@ const quests = ref([
   {
     id: 'quest-13',
     title: t('halloweenEventQuests.questThirteen'),
-    rewardCoins: 10,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -242,7 +242,7 @@ const quests = ref([
   {
     id: 'quest-14',
     title: t('halloweenEventQuests.questFourteen'),
-    rewardCoins: 10,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -251,7 +251,7 @@ const quests = ref([
   {
     id: 'quest-15',
     title: t('halloweenEventQuests.questFifteen'),
-    rewardCoins: 10,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -260,7 +260,7 @@ const quests = ref([
   {
     id: 'quest-16',
     title: t('halloweenEventQuests.questSixteen'),
-    rewardCoins: 10,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -269,7 +269,7 @@ const quests = ref([
   {
     id: 'quest-17',
     title: t('halloweenEventQuests.questSeventeen'),
-    rewardCoins: 15,
+    rewardCoins: 20,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -278,7 +278,7 @@ const quests = ref([
   {
     id: 'quest-18',
     title: t('halloweenEventQuests.questEighteen'),
-    rewardCoins: 10,
+    rewardCoins: 40,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -287,7 +287,7 @@ const quests = ref([
   {
     id: 'quest-19',
     title: t('halloweenEventQuests.questNineteen'),
-    rewardCoins: 10,
+    rewardCoins: 40,
     rewardRep: 40,
     isDone: false,
     hasErrors: false,
@@ -296,7 +296,7 @@ const quests = ref([
   {
     id: 'quest-20',
     title: t('halloweenEventQuests.questTwenty'),
-    rewardCoins: 10,
+    rewardCoins: 40,
     rewardRep: 60,
     isDone: false,
     hasErrors: false,
@@ -305,7 +305,7 @@ const quests = ref([
   {
     id: 'quest-21',
     title: t('halloweenEventQuests.questTwentyOne'),
-    rewardCoins: 10,
+    rewardCoins: 40,
     rewardRep: 60,
     isDone: false,
     hasErrors: false,
@@ -314,7 +314,7 @@ const quests = ref([
   {
     id: 'quest-22',
     title: t('halloweenEventQuests.questTwentyTwo'),
-    rewardCoins: 10,
+    rewardCoins: 40,
     rewardRep: 60,
     isDone: false,
     hasErrors: false,
@@ -323,7 +323,7 @@ const quests = ref([
   {
     id: 'quest-23',
     title: t('halloweenEventQuests.questTwentyThree'),
-    rewardCoins: 10,
+    rewardCoins: 40,
     rewardRep: 60,
     isDone: false,
     hasErrors: false,

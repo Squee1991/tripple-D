@@ -377,8 +377,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 
 	return {
 		eventId, questId, stepIndex, score, finished, isLoading,
-		isSnowEnabled, shopItems, events, isValentineThemePurchased,
-		isEventActive,
+		isSnowEnabled, shopItems, events, isValentineThemePurchased, isEventActive,
 		solvedSteps, isReplayMode,
 		isSnowPurchased, loadGlobalWinterSettings, setSnowFallEnabled,
 		start, restoreIfPossible, next, prev, addScore, finishQuest,

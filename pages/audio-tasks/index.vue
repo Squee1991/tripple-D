@@ -1,5 +1,6 @@
 <script setup>
 import {ref, computed, onMounted, onUnmounted} from 'vue'
+import {preloadInterstitial} from '~/utils/admob.js'
 import {useRouter} from 'vue-router'
 import {storeToRefs} from 'pinia'
 import {useAudioTaskStore} from '../../store/audioTaskStore.js'
@@ -147,6 +148,7 @@ const launchSession = (topicId, partNumber) => {
 }
 
 onMounted(async () => {
+  preloadInterstitial()
   setTimeout(() => {
     isMounted.value = true
   }, 100)

@@ -31,14 +31,16 @@
         <div class="quest__top">
           <button class="quest__back-btn" @click="openLeave('back')">×</button>
           <div class="quest__stat">
-            <div class="quest__stat-value">
-              {{ questStore.currentIndex + 1 }} / {{ questStore.requiredTasks }}
-            </div>
+            <!-- сегментная полоса: кусочек на задание (зелёный — верно, красный — ошибка, синий — текущее) -->
             <div class="quest__progress-line">
               <template v-for="(step, index) in progressSteps" :key="index">
-                <div class="quest__dot" :class="getDotClass(step)"></div>
+                <div class="quest__dot"
+                     :class="[getDotClass(step), { 'quest__dot--streak': isStreakDot(index) }]"
+                     :style="isStreakDot(index) ? { animationDelay: (index - streakFlash.from) * 70 + 'ms' } : null"
+                ></div>
               </template>
             </div>
+            <span class="quest__stat-value">{{ questStore.currentIndex + 1 }}/{{ questStore.requiredTasks }}</span>
           </div>
           <div class="quest__lives" v-if="!previouslyCleared && !authStore.isPremium">
             <VHearts
@@ -254,7 +256,7 @@ import {userAuthStore} from "~/store/authStore.js"
 import SoundBtn from '~/src/components/soundBtn.vue'
 import VHedgehogHelper from '~/src/components/V-hedgehog-helper.vue'
 import {playCorrect, playWrong, playLevelCompleted, unlockAudioByUserGesture} from '~/utils/soundManager.js'
-import {showInterstitial} from '~/utils/admob.js'
+import {showInterstitial, preloadInterstitial} from '~/utils/admob.js'
 import RightIcon from '~/assets/images/location-icons/accept.svg'
 import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 import {useSeoMeta} from '#imports'
@@ -297,6 +299,23 @@ const inputRef = ref(null)
 const speechInputRef = ref(null)
 const previouslyCleared = ref(false)
 const consecutiveCorrectCount = ref(0)
+// на 5, 10, 15… верных подряд точки этой серии в прогрессе по очереди вспыхивают золотым; null — не вспыхивают
+const streakFlash = ref(null)
+let streakFlashTimer = null
+
+function flashStreakDots(count) {
+  const to = questStore.currentIndex
+  streakFlash.value = {from: to - count + 1, to}
+  clearTimeout(streakFlashTimer)
+  streakFlashTimer = setTimeout(() => {
+    streakFlash.value = null
+  }, 900 + count * 70)
+}
+
+function isStreakDot(index) {
+  const f = streakFlash.value
+  return !!f && index >= f.from && index <= f.to
+}
 
 const shouldShowResultScreen = computed(() => {
   return questStore.finished && !showStreakModal.value && !isWaitingForStreakClose.value
@@ -307,7 +326,6 @@ const showReminderModal = ref(false)
 let afterReminderPrompt = null
 
 let reviewCheckedForSession = false
-let reviewRequestedThisQuest = false
 
 watch(shouldShowResultScreen, (visible) => {
   if (!visible || !questStore.success) return
@@ -318,10 +336,7 @@ watch(shouldShowResultScreen, (visible) => {
   const canPrompt = !shouldAskForReminders()
   setTimeout(async () => {
     const requested = await onQuestSuccessForReview(canPrompt && shouldShowResultScreen.value)
-    if (requested) {
-      reviewRequestedThisQuest = true
-      $track('app_review_requested', {quest_id: questId.value})
-    }
+    if (requested) $track('app_review_requested', {quest_id: questId.value})
   }, 1500)
 })
 
@@ -332,15 +347,10 @@ function withReminderPrompt(next) {
   showReminderModal.value = true
 }
 
-// Выход с экрана результатов: окно напоминаний → реклама (только после успеха) → переход.
-// После проигрыша рекламы нет — там есть восстановление жизни за рекламу.
-// В тот раз, когда показали окно напоминаний или оценки, рекламу не показываем
+// Выход с экрана результатов: сначала все модалки (напоминания), в самом конце реклама → переход.
+// Реклама и после успеха, и после проигрыша
 function leaveResultScreen(next) {
-  const reminderPromptShown = questStore.success && shouldAskForReminders()
-  withReminderPrompt(() => {
-    if (!questStore.success || reminderPromptShown || reviewRequestedThisQuest) return next()
-    showInterstitial(next)
-  })
+  withReminderPrompt(() => showInterstitial(next))
 }
 
 function continueAfterReminderPrompt() {
@@ -614,8 +624,11 @@ function confirmLeave() {
   })
   allowLeave = true
   showLeaveModal.value = false
-  if (pendingRoute.value) pendingRoute.value()
-  else goThemes()
+  const go = pendingRoute.value || goThemes
+  // Жизни кончились (окно восстановления → «Назад» → «Выйти») — это конец урока, показываем рекламу.
+  // Выход с середины урока по желанию — без рекламы
+  if (questStore.lives <= 0) showInterstitial(go)
+  else go()
 }
 
 function stayHere() {
@@ -628,9 +641,9 @@ watch(() => questStore.showResult, (shown) => {
   if (questStore.isCorrect) {
     playCorrect()
     consecutiveCorrectCount.value++
-    if (consecutiveCorrectCount.value === 5) {
+    if (consecutiveCorrectCount.value % 5 === 0) {
       spawnMiniConfetti()
-      consecutiveCorrectCount.value = 0
+      flashStreakDots(consecutiveCorrectCount.value)
     }
   } else {
     playWrong()
@@ -678,7 +691,6 @@ watch([questId, regionKey], async () => {
       showPremiumModal.value = false
       hasShownPremiumForRevive.value = false
       reviewCheckedForSession = false
-      reviewRequestedThisQuest = false
       initialStreak.value = authStore.streakCount || 0
       streakWasIncremented.value = false
       showStreakModal.value = false
@@ -725,9 +737,11 @@ watch([questId, regionKey], async () => {
 onBeforeUnmount(() => {
   window.removeEventListener('beforeunload', beforeUnloadHandler)
   if (rafId) cancelAnimationFrame(rafId)
+  clearTimeout(streakFlashTimer)
 })
 
 onMounted(() => {
+  preloadInterstitial()
   updateTimer()
   updateRemainingAds()
 })
@@ -798,27 +812,22 @@ watchEffect(() => {
 }
 
 .quest__stat {
+  position: relative;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
   align-items: center;
+  gap: 3px;
+  max-width: 100%;
   padding: .4rem 1rem;
-  min-width: 120px;
-  gap: 10px;
 }
 
 .quest__stat-value {
-  position: relative;
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: black;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 4.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background: whitesmoke;
+  flex-shrink: 0;
+  min-width: 3.2em;
+  color: var(--titleColor);
+  font-size: 1rem;
+  font-weight: 800;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
 }
 
 .quest__lives {
@@ -1189,13 +1198,6 @@ watchEffect(() => {
     margin: 0 auto .7rem;
   }
 
-  .quest__stat-value {
-    width: 4.3rem;
-    height: 2.3rem;
-    font-size: 1rem;
-    border: none;
-  }
-
   .quest__top {
     position: relative;
     display: flex;
@@ -1209,10 +1211,7 @@ watchEffect(() => {
 
   .quest__stat {
     order: 2;
-    text-align: center;
-    align-items: center;
-    border-radius: 12px;
-    padding: .3rem .7rem;
+    padding: .3rem 1rem;
     margin-top: 2.5rem;
   }
 
@@ -1257,29 +1256,95 @@ watchEffect(() => {
 .quest__progress-line {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 6px;
   gap: 4px;
+  min-width: 0;
 }
 
+/* один сегмент полосы на задание: фиксированная ширина, сжимается только если не влезает в экран */
 .quest__dot {
+  position: relative;
+  flex: 0 1 18px;
   width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #cec7c7;
-  transition: all 0.3s ease;
+  height: 17px;
+  border-radius: 8px;
+  background: rgba(127, 127, 127, .3);
+  transition: background .3s ease, box-shadow .3s ease;
+}
+
+/* глянцевый отсвет сверху у пройденных и текущего */
+.quest__dot--done::after,
+.quest__dot--wrong::after,
+.quest__dot--current::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  right: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, .35);
 }
 
 .quest__dot--done {
-  background: #4caf50;
-}
-
-.quest__dot--current {
-  background: #2196f3;
+  background: linear-gradient(180deg, #66d16e 0%, #43a047 100%);
 }
 
 .quest__dot--wrong {
-  background: #d9534f;
+  background: linear-gradient(180deg, #f2706c 0%, #d9534f 100%);
+}
+
+/* текущее задание — синий с бегущим бликом */
+.quest__dot--current {
+  background: linear-gradient(110deg, #3d7bf5 40%, #8fb4ff 50%, #3d7bf5 60%);
+  background-size: 250% 100%;
+  box-shadow: 0 0 8px rgba(61, 123, 245, .55);
+  animation: questSegmentShine 1.6s linear infinite;
+}
+
+@keyframes questSegmentShine {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -150% 0;
+  }
+}
+
+/* серия 5/10 верных подряд: сегменты по очереди вспыхивают золотым (scaleY не двигает вёрстку) */
+.quest__dot--streak {
+  animation: streakDotFlash .8s ease-out both;
+}
+
+@keyframes streakDotFlash {
+  0% {
+    transform: scaleY(1);
+  }
+  35% {
+    transform: scaleY(1.6);
+    background: #ffc107;
+    box-shadow: 0 0 10px 2px rgba(255, 193, 7, .75);
+  }
+  100% {
+    transform: scaleY(1);
+    background: #43a047;
+    box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quest__dot--current {
+    animation: none;
+    background: #3d7bf5;
+  }
+
+  @keyframes streakDotFlash {
+    0%, 100% {
+      background: #43a047;
+    }
+    35% {
+      background: #ffc107;
+    }
+  }
 }
 
 @media (min-width: 1024px) {

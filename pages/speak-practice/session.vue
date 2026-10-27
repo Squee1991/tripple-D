@@ -212,7 +212,7 @@ import Words from '../../assets/images/word.svg'
 import VBanner from "~/src/components/V-banner.vue";
 import {useSwipeBack} from '~/composables/useSwipeBack.js';
 import VTransition from "~/src/components/V-transition.vue";
-import {showInterstitial} from '~/utils/admob.js';
+import {showInterstitial, preloadInterstitial} from '~/utils/admob.js';
 import VHeadsUp from "~/src/components/V-headsUp.vue";
 import hedgehogLeaveSession from 'assets/animation/hedgehog_leave_session.json'
 const {locale, t} = useI18n();
@@ -664,6 +664,7 @@ const toggleListening = () => {
 };
 
 onMounted(async () => {
+  preloadInterstitial()
   await store.loadUserProgress();
   await loadDialogueData();
 });

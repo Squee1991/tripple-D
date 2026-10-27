@@ -6,7 +6,7 @@ import Meteor from '../../assets/images/meteor.svg'
 import MeteorInFire from '../../assets/images/meteorinFire.svg'
 import {useLaneGame} from '../../composables/useLaneGame.js'
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
-import {showInterstitial} from '../../utils/admob.js'
+import {showInterstitial, preloadInterstitial} from '../../utils/admob.js'
 import {vibrateSuccess, vibrateImpact, vibrateError} from '../../utils/haptics.js'
 
 const {t} = useI18n()
@@ -173,6 +173,7 @@ const goToPay = () => {
 }
 
 onMounted(() => {
+  preloadInterstitial()
   window.addEventListener('keydown', onKeyDown)
   document.addEventListener('visibilitychange', onVisibilityChange)
   if (store.galaxies && store.galaxies.length > 0) {

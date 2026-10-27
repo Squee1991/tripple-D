@@ -1,14 +1,24 @@
-import { AdMob, InterstitialAdPluginEvents, RewardAdPluginEvents } from '@capacitor-community/admob';
-import { Capacitor } from '@capacitor/core';
+import { AdMob, AdmobConsentStatus, InterstitialAdPluginEvents, RewardAdPluginEvents } from '@capacitor-community/admob';
+import { Capacitor, registerPlugin } from '@capacitor/core';
+import { App } from '@capacitor/app';
 import { userAuthStore } from '../store/authStore.js';
 
 let isAdProcessing = false;
 let isInterstitialLoaded = false;
 let isInterstitialLoading = false;
+let interstitialLoadedAt = 0;
 let lastInterstitialTime = 0;
+let initPromise = null;
+let privacyOptionsRequired = false;
+
+const ConsentChoice = registerPlugin('ConsentChoice');
+
+const CONSENT_PLATFORMS = ['android'];
 
 const AD_LIMIT_PER_DAY = 10;
+const INTERSTITIAL_LIMIT_PER_DAY = 12;
 const INTERSTITIAL_COOLDOWN = 2 * 60 * 1000;
+const INTERSTITIAL_TTL = 55 * 60 * 1000;
 const platform = Capacitor.getPlatform();
 
 const INTERSTITIAL_ID = platform === 'android'
@@ -24,44 +34,53 @@ function getTodayKey() {
 	return `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
 }
 
-function canShowRewardedAd() {
+function getTodayCount(storageKey) {
 	try {
-		const todayKey = getTodayKey();
-		const statsStr = localStorage.getItem('adRewardStats');
-		if (!statsStr) return true;
-		const stats = JSON.parse(statsStr);
-		if (stats.date !== todayKey) return true;
-		return stats.count < AD_LIMIT_PER_DAY;
+		const stats = JSON.parse(localStorage.getItem(storageKey));
+		return stats && stats.date === getTodayKey() ? stats.count : 0;
 	} catch (e) {
-		return true;
+		return 0;
 	}
 }
 
-function recordSuccessfulView() {
+function incrementTodayCount(storageKey) {
+	const count = getTodayCount(storageKey) + 1;
 	try {
-		const todayKey = getTodayKey();
-		const statsStr = localStorage.getItem('adRewardStats');
-		let stats = { date: todayKey, count: 0 };
-		if (statsStr) {
-			const parsedStats = JSON.parse(statsStr);
-			if (parsedStats && parsedStats.date === todayKey) {
-				stats = parsedStats;
-			}
-		}
-		stats.count++;
-		localStorage.setItem('adRewardStats', JSON.stringify(stats));
-		console.log(`Пользователь берет бонус! Использовано: ${stats.count}/${AD_LIMIT_PER_DAY}`);
+		localStorage.setItem(storageKey, JSON.stringify({ date: getTodayKey(), count }));
 	} catch (e) {
-		console.warn('Ошибка записи статистики бонусов:', e);
+		console.warn('Ошибка записи статистики рекламы:', e);
 	}
+	return count;
 }
-// Тихая предзагрузка рекламы в кэш (не тормозит интерфейс и прелоадер)
-async function preloadInterstitial() {
-	if (!Capacitor.isNativePlatform() || isInterstitialLoaded || isInterstitialLoading) return;
+
+function canShowRewardedAd() {
+	return getTodayCount('adRewardStats') < AD_LIMIT_PER_DAY;
+}
+
+function canShowInterstitialToday() {
+	return getTodayCount('adInterstitialStats') < INTERSTITIAL_LIMIT_PER_DAY;
+}
+
+function recordSuccessfulView() {
+	const count = incrementTodayCount('adRewardStats');
+	console.log(`Пользователь берет бонус! Использовано: ${count}/${AD_LIMIT_PER_DAY}`);
+}
+function isInterstitialFresh() {
+	return isInterstitialLoaded && Date.now() - interstitialLoadedAt < INTERSTITIAL_TTL;
+}
+
+export async function preloadInterstitial() {
+	if (!Capacitor.isNativePlatform() || isInterstitialLoading || isInterstitialFresh()) return;
+	// Премиум без рекламы — не делаем пустых запросов
+	if (!userAuthStore().hasAds) return;
+	// Дневной лимит исчерпан — загруженная реклама всё равно не покажется
+	if (!canShowInterstitialToday()) return;
 	isInterstitialLoading = true;
 	try {
+		if (initPromise) await initPromise;
 		await AdMob.prepareInterstitial({ adId: INTERSTITIAL_ID });
 		isInterstitialLoaded = true;
+		interstitialLoadedAt = Date.now();
 	} catch (e) {
 		isInterstitialLoaded = false;
 	} finally {
@@ -69,18 +88,68 @@ async function preloadInterstitial() {
 	}
 }
 
-export async function initAdmob() {
-	if (!Capacitor.isNativePlatform()) return;
+async function getConsentChoice() {
 	try {
-		await AdMob.initialize({
-			requestTrackingAuthorization: true,
-			initializeForTesting: false // Строго боевой режим!
-		});
-		// Сразу при входе в приложение тихо качаем первую рекламу про запас
-		preloadInterstitial();
+		const { purposeConsents } = await ConsentChoice.getPurposeConsents();
+		if (!purposeConsents.includes('1')) return 'declined';
+		return purposeConsents.includes('0') ? 'custom' : 'accepted';
 	} catch (e) {
-		console.error('Ошибка инициализации AdMob:', e);
+		return 'unknown';
 	}
+}
+
+async function gatherConsent(track) {
+	if (!CONSENT_PLATFORMS.includes(platform)) return;
+	try {
+		const info = await AdMob.requestConsentInfo();
+		privacyOptionsRequired = info.privacyOptionsRequirementStatus === 'REQUIRED';
+		if (info.status !== AdmobConsentStatus.REQUIRED || !info.isConsentFormAvailable) return;
+
+		track?.('consent_form_shown');
+		const result = await AdMob.showConsentForm();
+		privacyOptionsRequired = result.privacyOptionsRequirementStatus === 'REQUIRED';
+		track?.(`consent_${await getConsentChoice()}`);
+	} catch (e) {
+		console.error('Ошибка окна согласия:', e);
+	}
+}
+
+export async function isPrivacyOptionsRequired() {
+	if (initPromise) await initPromise;
+	return privacyOptionsRequired;
+}
+
+export async function showPrivacyOptions(track) {
+	try {
+		await AdMob.showPrivacyOptionsForm();
+		track?.('consent_changed', { choice: await getConsentChoice() });
+	} catch (e) {
+		console.error('Ошибка окна настроек конфиденциальности:', e);
+	}
+}
+
+export function initAdmob(track) {
+	if (!Capacitor.isNativePlatform()) return;
+	if (!initPromise) {
+		initPromise = AdMob.initialize({
+			requestTrackingAuthorization: true,
+			initializeForTesting: false
+		}).then(() => gatherConsent(track)).catch((e) => {
+			console.error('Ошибка инициализации AdMob:', e);
+		});
+
+		initPromise
+			.then(() => userAuthStore().initAuth())
+			.then(() => preloadInterstitial());
+
+		App.addListener('resume', () => {
+			if (isInterstitialLoaded && !isInterstitialFresh()) {
+				isInterstitialLoaded = false;
+				preloadInterstitial();
+			}
+		});
+	}
+	return initPromise;
 }
 
 export async function showInterstitial(nextStep) {
@@ -88,9 +157,11 @@ export async function showInterstitial(nextStep) {
 
 	if (!authStore.hasAds || !Capacitor.isNativePlatform()) return nextStep();
 	if (Date.now() - lastInterstitialTime < INTERSTITIAL_COOLDOWN) return nextStep();
+	if (!canShowInterstitialToday()) return nextStep();
 	if (isAdProcessing) return;
-	// Если реклама еще не успела докачаться в фоне — запускаем докачку и сразу пускаем юзера без зависаний
-	if (!isInterstitialLoaded) {
+
+	if (!isInterstitialFresh()) {
+		isInterstitialLoaded = false;
 		preloadInterstitial();
 		return nextStep();
 	}
@@ -106,8 +177,9 @@ export async function showInterstitial(nextStep) {
 			dismissListener?.remove();
 			failListener?.remove();
 			isAdProcessing = false;
+
 			isInterstitialLoaded = false;
-			preloadInterstitial(); // Сразу грузим следующую рекламу в фоне
+			preloadInterstitial();
 			nextStep();
 		}
 	};
@@ -118,6 +190,7 @@ export async function showInterstitial(nextStep) {
 
 		await AdMob.showInterstitial();
 		lastInterstitialTime = Date.now();
+		incrementTodayCount('adInterstitialStats');
 	} catch (e) {
 		goNext();
 	}
@@ -170,6 +243,7 @@ export async function showRewarded(onReward, onComplete, onLimitReached) {
 			cleanup(false);
 		});
 
+		if (initPromise) await initPromise;
 		await AdMob.prepareRewardVideoAd({ adId: REWARDED_ID });
 		await AdMob.showRewardVideoAd();
 	} catch (e) {

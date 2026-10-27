@@ -486,7 +486,7 @@ onMounted(async () => {
 }
 
 .theme-preview.orange {
-  background: #fb923c;
+  background: linear-gradient(135deg, #e8782c 0%, #e8782c 50%, #0e0e10 50%, #0e0e10 100%);
 }
 
 .lock-icon {

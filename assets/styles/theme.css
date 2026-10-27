@@ -119,65 +119,65 @@
 }
 
 .orange {
-    /* Halloween: ночной графит + мягкая тыква + приглушённая лаванда + свет свечи + кость */
-    --bg: #0e0e10;
-    --navBg: rgba(21, 21, 24, 0.9);
-    --homeBg: #0e0e10;
-    --bgModal: #1a1920;
-    --bgOpacity: rgba(6, 6, 8, 0.85);
+    /* Halloween: ночное фиолетовое небо, чёрные силуэты, тыквенный оранжевый, ведьмин фиолетовый, ядовито-зелёный */
+    --bg: #120c1c;
+    --navBg: #140c1c;
+    --homeBg: #120c1c;
+    --bgModal: #1a1124;
+    --bgOpacity: rgba(8, 4, 12, 0.85);
 
-    --titleColor: #f1ebe3;
-    --title: #f1ebe3;
-    --tabTextColor: #f1ebe3;
-    --panelTextColor: #f1ebe3;
-    --navItems: #f1ebe3;
-    --labelTextColor: #f1ebe3;
+    --titleColor: #f6ecdf;
+    --title: #f6ecdf;
+    --tabTextColor: #f6ecdf;
+    --panelTextColor: #f6ecdf;
+    --navItems: #f6ecdf;
+    --labelTextColor: #f6ecdf;
 
-    --menuItemsBg: rgba(26, 25, 32, 0.86);
-    --settingsSectionBg: rgba(150, 132, 200, 0.07);
-    --tabBg: rgba(33, 31, 41, 0.88);
-    --menuBorder: #35323f;
-    --tabsSlideBorderColor: #35323f;
-    --borderMobile: #35323f;
-    --border: #35323f;
-    --borderBottom: #35323f;
-    --borderRegion: #35323f;
+    --menuItemsBg: #180e20;
+    --settingsSectionBg: rgba(255, 122, 26, 0.07);
+    --tabBg: #1e1128;
+    --menuBorder: #5e3417;
+    --tabsSlideBorderColor: #5e3417;
+    --borderMobile: #5e3417;
+    --border: #5e3417;
+    --borderBottom: #5e3417;
+    --borderRegion: #5e3417;
 
-    --tabsSlideBg: #e8782c;
-    --landsTabBg: #e8782c;
-    --regionBtnBg: #e8782c;
-    --labelBg: #e8782c;
-    --arrowBg: #8f7cc4;
+    --tabsSlideBg: #ff7a1a;
+    --landsTabBg: #ff7a1a;
+    --regionBtnBg: #ff7a1a;
+    --labelBg: #ff7a1a;
+    --arrowBg: #8e5bd8;
     --regionBtnColor: #ffffff;
-    --footerBg: #151518;
-    --menuHoverEl: #f5c16c;
-    --bgTitle: #8f7cc4;
-    --boxShadowBottom: #5e4e8c;
-    --timerbg: #8bb84a;
-    --boxShadowMobile: 0 5px 10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.04);
-    --tabSlideBoxShadow: 0 4px 12px rgba(232, 120, 44, 0.35), inset 0 1px 0 rgba(255, 225, 180, 0.35);
+    --footerBg: #140c1c;
+    --menuHoverEl: #ffb347;
+    --bgTitle: #8e5bd8;
+    --boxShadowBottom: #5b33a0;
+    --timerbg: #7ed957;
+    --boxShadowMobile: 0 0 0 1px rgba(255, 122, 26, 0.12), 0 6px 14px rgba(0, 0, 0, 0.6);
+    --tabSlideBoxShadow: 0 0 16px rgba(255, 122, 26, 0.55), inset 0 1px 0 rgba(255, 225, 180, 0.4);
 
-    --landsLevelBg: #8f7cc4;
+    --landsLevelBg: #8e5bd8;
     --landsLevelTextColor: #ffffff;
-    --landNameBg: linear-gradient(180deg, rgb(48 40 34 / 80%), rgb(14 14 16 / 70%));
-    --overlayAfter: linear-gradient(to bottom, rgba(14, 14, 16, 0) 0%, rgba(14, 14, 16, 1) 100%);
+    --landNameBg: linear-gradient(180deg, rgb(48 22 56 / 80%), rgb(18 12 28 / 70%));
+    --overlayAfter: linear-gradient(to bottom, rgba(18, 12, 28, 0) 0%, rgba(18, 12, 28, 1) 100%);
 
-    --cardShopBg: rgba(26, 25, 32, 0.86);
-    --cardShopHeadBg: rgba(33, 31, 41, 0.88);
-    --cardShopBtnDisabledBg: #35323f;
-    --cardShopDescColor: #b8b1c9;
-    --cardShopRankTextColor: #f5c16c;
-    --cardShopRankValueColor: #f1ebe3;
+    --cardShopBg: #180e20;
+    --cardShopHeadBg: #1e1128;
+    --cardShopBtnDisabledBg: #3b2547;
+    --cardShopDescColor: #c8b6d8;
+    --cardShopRankTextColor: #ffb347;
+    --cardShopRankValueColor: #f6ecdf;
     --shopCardBg: radial-gradient(150% 120% at 50% -15%,
-    rgba(245, 193, 108, .14),
-    rgba(245, 193, 108, .04) 42%,
+    rgba(255, 122, 26, .22),
+    rgba(255, 122, 26, .05) 42%,
     rgba(0, 0, 0, .12) 70%,
     rgba(0, 0, 0, .30) 100%),
     radial-gradient(140% 160% at 50% 120%,
             rgba(0, 0, 0, 0) 0%,
             rgba(0, 0, 0, .40) 60%,
             rgba(0, 0, 0, .70) 100%),
-    linear-gradient(180deg, rgba(40, 36, 52, .92), rgba(14, 14, 16, .96));
+    linear-gradient(180deg, rgba(52, 28, 66, .92), rgba(18, 12, 28, .96));
 
     --fontFamilyOrange: 'Rubik Wet Paint', system-ui;
     --fontWeightHalloween: 400;
@@ -200,8 +200,8 @@
 }
 
 /*
- * Фон рисует только html, когда на главной видна луна (тема Хэллоуина или идёт его событие):
- * иначе фон body/#__nuxt перекрывает её (V-halloweenEffects, layer="back")
+ * Фон рисует только html, когда на главной эффекты Хэллоуина (тема или идёт его событие):
+ * иначе фон body/#__nuxt перекрывает эффекты под контентом (листья, звёзды, нижняя паутина)
  */
 html.orange body,
 html.orange #__nuxt,
@@ -209,6 +209,7 @@ html.halloween-fx body,
 html.halloween-fx #__nuxt {
     background-color: transparent;
 }
+
 
 html, body {
     background: var(--bg);
