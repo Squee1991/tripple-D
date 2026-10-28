@@ -14,18 +14,10 @@
       <div v-if="isOpen" class="guide" @click.self="close">
         <div
             class="guide__sheet"
-            :class="{ 'guide__sheet--rtl': locale === 'ar', 'guide__sheet--dragging': dragY > 0 }"
-            :style="dragY ? { transform: `translateY(${dragY}px)` } : null"
+            :class="{ 'guide__sheet--rtl': locale === 'ar' }"
             role="dialog"
             aria-modal="true"
         >
-          <div
-              class="guide__top"
-              @touchstart.passive="onDragStart"
-              @touchmove.passive="onDragMove"
-              @touchend="onDragEnd"
-          >
-            <span class="guide__grabber" aria-hidden="true"></span>
             <header class="guide__head">
               <span class="guide__avatar-wrap">
                 <img class="guide__avatar" :src="HedgehogIcon" alt="">
@@ -41,7 +33,6 @@
                 </svg>
               </button>
             </header>
-          </div>
 
           <div class="guide__messages">
             <div class="guide__row">
@@ -55,13 +46,7 @@
               <div class="guide__bubble guide__bubble--user" :style="{ '--accent': node.color }">
                 {{ node.icon }} {{ labelOf(node) }}
               </div>
-              <div v-if="typing && index === path.length - 1" class="guide__row">
-                <img class="guide__row-avatar" :src="HedgehogIcon" alt="">
-                <div class="guide__bubble guide__bubble--bot guide__typing" aria-hidden="true">
-                  <span></span><span></span><span></span>
-                </div>
-              </div>
-              <div v-else-if="node.children" class="guide__row">
+              <div v-if="node.children" class="guide__row">
                 <img class="guide__row-avatar" :src="HedgehogIcon" alt="">
                 <div class="guide__bubble guide__bubble--bot">{{ t('hedgehogGuide.which') }}</div>
               </div>
@@ -127,18 +112,24 @@
               </div>
             </template>
 
-            <div v-if="options.length && !typing" class="guide__tiles">
+            <div v-if="options.length" class="guide__tiles">
               <button
-                  v-for="(option, i) in options"
+                  v-for="option in options"
                   :key="option.id"
                   type="button"
                   class="guide__tile"
-                  :style="{ '--accent': option.color, animationDelay: i * 0.04 + 's' }"
+                  :style="{ '--accent': option.color }"
                   :data-track="trackName('guide_option_', option.id)"
                   @click="choose(option)"
               >
+                <span class="guide__tile-bg" aria-hidden="true">{{ option.icon }}</span>
                 <span class="guide__tile-icon" aria-hidden="true">{{ option.icon }}</span>
                 <span class="guide__tile-label">{{ labelOf(option) }}</span>
+                <svg class="guide__tile-go" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                     stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true">
+                  <polyline points="9 6 15 12 9 18"></polyline>
+                </svg>
               </button>
             </div>
           </div>
@@ -150,7 +141,7 @@
               </svg>
               {{ t('hedgehogGuide.back') }}
             </button>
-            <button type="button" class="guide__nav-btn" data-track="guide_restart" @click="restart">
+            <button type="button" class="guide__nav-btn guide__nav-btn--accent" data-track="guide_restart" @click="restart">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M3 12a9 9 0 1 0 3-6.7"></path>
@@ -166,7 +157,7 @@
 </template>
 
 <script setup>
-import { ref, computed, nextTick, onBeforeUnmount } from 'vue'
+import { ref, computed, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import HedgehogIcon from '~/assets/images/AssistantIcon.png'
 import VArrowNav from '~/src/components/V-arrowNav.vue'
@@ -184,17 +175,10 @@ const authStore = userAuthStore()
 const langStore = userlangStore()
 const eventStore = useEventSessionStore()
 
-const TYPING_MS = 550
-const DRAG_CLOSE_PX = 110
-
 const isOpen = ref(false)
 
 const path = ref([])
-const typing = ref(false)
 const shakingId = ref('')
-const dragY = ref(0)
-let dragStartY = null
-let typingTimer = null
 
 const catalogById = Object.fromEntries(guideCatalog.map(item => [item.id, item]))
 const regionById = Object.fromEntries(Object.values(regions).flat().map(r => [r.id, r]))
@@ -313,32 +297,20 @@ function open() {
 
 function close() {
   isOpen.value = false
-  dragY.value = 0
 }
 
 function choose(option) {
   vibrateTap()
   path.value = [...path.value, option]
-  const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
-  clearTimeout(typingTimer)
-  // прокрутку не трогаем: листает сам пользователь
-  typing.value = !reduceMotion
-  typingTimer = setTimeout(() => {
-    typing.value = false
-  }, reduceMotion ? 0 : TYPING_MS)
 }
 
 function back() {
   vibrateTap()
-  clearTimeout(typingTimer)
-  typing.value = false
   path.value = path.value.slice(0, -1)
 }
 
 function restart() {
   vibrateTap()
-  clearTimeout(typingTimer)
-  typing.value = false
   path.value = []
 }
 
@@ -354,22 +326,6 @@ function goTo(link) {
   router.push(link.route)
 }
 
-function onDragStart(e) {
-  dragStartY = e.touches[0].clientY
-}
-
-function onDragMove(e) {
-  if (dragStartY === null) return
-  dragY.value = Math.max(0, e.touches[0].clientY - dragStartY)
-}
-
-function onDragEnd() {
-  if (dragY.value > DRAG_CLOSE_PX) close()
-  dragY.value = 0
-  dragStartY = null
-}
-
-onBeforeUnmount(() => clearTimeout(typingTimer))
 </script>
 
 <style scoped>
@@ -407,8 +363,7 @@ onBeforeUnmount(() => clearTimeout(typingTimer))
   z-index: 19000;
   display: flex;
   align-items: flex-end;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .guide__sheet {
@@ -417,48 +372,14 @@ onBeforeUnmount(() => clearTimeout(typingTimer))
   flex-direction: column;
   width: 100%;
   max-height: calc(100dvh - 100px);
-  padding: 0 max(16px, calc((100% - 480px) / 2)) calc(14px + env(safe-area-inset-bottom));
+  padding: 18px max(16px, calc((100% - 480px) / 2)) calc(14px + env(safe-area-inset-bottom));
+  border-top: 3px solid #ffb100;
   border-radius: 28px 28px 0 0;
   background: var(--bg);
-  box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.35);
   color: var(--titleColor);
-  animation: guide-up 0.42s cubic-bezier(0.22, 1, 0.36, 1);
-  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: guide-up 0.3s ease-out;
   -webkit-user-select: none;
   user-select: none;
-}
-
-.guide__sheet--dragging {
-  transition: none;
-}
-
-.guide__sheet::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  padding: 3px 0 0;
-  border-radius: inherit;
-  background: linear-gradient(90deg, #ffcf4d, #ff8fb1, #8fb4ff, #7ef0d0, #ffcf4d);
-  background-size: 300% 100%;
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  animation: guide-border 6s linear infinite;
-}
-
-.guide__top {
-  padding-top: 10px;
-  touch-action: none;
-}
-
-.guide__grabber {
-  display: block;
-  width: 40px;
-  height: 5px;
-  margin: 0 auto 10px;
-  border-radius: 3px;
-  background: rgba(127, 127, 127, 0.45);
 }
 
 .guide__head {
@@ -530,7 +451,6 @@ onBeforeUnmount(() => clearTimeout(typingTimer))
   display: flex;
   align-items: flex-end;
   gap: 8px;
-  animation: guide-msg 0.3s ease-out both;
 }
 
 .guide__row-avatar {
@@ -561,8 +481,6 @@ onBeforeUnmount(() => clearTimeout(typingTimer))
   background: var(--accent, #3d68f5);
   color: #fff;
   font-weight: 700;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
-  animation: guide-msg 0.25s ease-out both;
 }
 
 .guide__sheet--rtl .guide__bubble--bot {
@@ -577,29 +495,6 @@ onBeforeUnmount(() => clearTimeout(typingTimer))
 }
 
 
-.guide__typing {
-  display: inline-flex;
-  gap: 5px;
-  padding: 14px 16px;
-}
-
-.guide__typing span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: currentColor;
-  opacity: 0.4;
-  animation: guide-dot 1s ease-in-out infinite;
-}
-
-.guide__typing span:nth-child(2) {
-  animation-delay: 0.15s;
-}
-
-.guide__typing span:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
 .guide__tiles {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -608,43 +503,88 @@ onBeforeUnmount(() => clearTimeout(typingTimer))
 }
 
 .guide__tile {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 6px;
-  padding: 10px 14px;
-  border: none;
-  border-radius: 20px;
-  background: rgba(127, 127, 127, 0.12);
+  justify-content: space-between;
+  min-height: 100px;
+  padding: 12px;
+  gap: 4px;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  border-radius: 24px;
+  background:
+    radial-gradient(120% 90% at 0% 0%, color-mix(in srgb, var(--accent) 38%, transparent), transparent 70%),
+    linear-gradient(160deg, color-mix(in srgb, var(--accent) 16%, transparent), color-mix(in srgb, var(--accent) 4%, transparent));
   color: var(--titleColor);
   text-align: start;
   cursor: pointer;
-  transition: transform 0.12s ease, background 0.15s ease;
-  animation: guide-tile 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
   -webkit-tap-highlight-color: transparent;
 }
 
 .guide__tile:active {
-  transform: scale(0.95);
-  background: rgba(127, 127, 127, 0.2);
+  transform: scale(0.96);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+/* большая полупрозрачная иконка в углу как фон плитки */
+.guide__tile-bg {
+  position: absolute;
+  right: -12px;
+  bottom: -16px;
+  z-index: -1;
+  font-size: 4.2rem;
+  line-height: 1;
+  opacity: 0.16;
+  transform: rotate(-14deg);
+  pointer-events: none;
 }
 
 .guide__tile-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 34px;
+  width: 42px;
+  height: 42px;
   border-radius: 14px;
-  background: var(--accent);
-  box-shadow: 0 4px 12px color-mix(in srgb, var(--accent) 45%, transparent);
-  font-size: 1.35rem;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 80%, #fff), var(--accent));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 6px 14px color-mix(in srgb, var(--accent) 50%, transparent);
+  font-size: 1.3rem;
 }
 
 .guide__tile-label {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
   line-height: 1.25;
+}
+
+.guide__tile-go {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 30%, transparent);
+  color: var(--titleColor);
+}
+
+.guide__sheet--rtl .guide__tile-go {
+  right: auto;
+  left: 14px;
+  transform: scaleX(-1);
+}
+
+.guide__sheet--rtl .guide__tile-bg {
+  right: auto;
+  left: -12px;
+  transform: rotate(14deg);
 }
 
 .guide__answer {
@@ -672,7 +612,6 @@ onBeforeUnmount(() => clearTimeout(typingTimer))
   overflow: hidden;
   border-radius: 20px;
   background: rgba(127, 127, 127, 0.12);
-  animation: guide-msg 0.3s ease-out both;
 }
 
 .guide__item {
@@ -783,19 +722,32 @@ onBeforeUnmount(() => clearTimeout(typingTimer))
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 13px;
-  border: none;
+  padding: 12px;
+  border: 2px solid #ffb100;
   border-radius: 50px;
-  background: rgba(127, 127, 127, 0.15);
-  color: var(--titleColor);
+  background: transparent;
+  color: #ffb100;
   font-size: 0.92rem;
   font-weight: 800;
   cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
   -webkit-tap-highlight-color: transparent;
+}
+
+.guide__nav-btn--accent {
+  border-color: transparent;
+  background: linear-gradient(180deg, #ffc93c, #ffa000);
+  color: #3b2d54;
+  box-shadow: 0 4px 0 #c77c00;
 }
 
 .guide__nav-btn:active {
   transform: scale(0.96);
+}
+
+.guide__nav-btn--accent:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #c77c00;
 }
 
 .guide__sheet--rtl .guide__nav-btn svg {
@@ -821,39 +773,6 @@ onBeforeUnmount(() => clearTimeout(typingTimer))
   }
 }
 
-@keyframes guide-msg {
-  from {
-    transform: translateY(8px);
-    opacity: 0;
-  }
-  to {
-    transform: none;
-    opacity: 1;
-  }
-}
-
-@keyframes guide-tile {
-  from {
-    transform: translateY(10px) scale(0.96);
-    opacity: 0;
-  }
-  to {
-    transform: none;
-    opacity: 1;
-  }
-}
-
-@keyframes guide-dot {
-  0%, 60%, 100% {
-    transform: translateY(0);
-    opacity: 0.35;
-  }
-  30% {
-    transform: translateY(-4px);
-    opacity: 0.9;
-  }
-}
-
 @keyframes guide-shake {
   0%, 100% {
     transform: translateX(0);
@@ -869,12 +788,6 @@ onBeforeUnmount(() => clearTimeout(typingTimer))
   }
 }
 
-@keyframes guide-border {
-  to {
-    background-position: 300% 0;
-  }
-}
-
 @keyframes guide-fab-pulse {
   0% {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(255, 177, 0, 0.5);
@@ -887,12 +800,6 @@ onBeforeUnmount(() => clearTimeout(typingTimer))
 @media (prefers-reduced-motion: reduce) {
   .guide-fab,
   .guide__sheet,
-  .guide__sheet::before,
-  .guide__row,
-  .guide__bubble--user,
-  .guide__tile,
-  .guide__list,
-  .guide__typing span,
   .guide__item--shake {
     animation: none;
   }

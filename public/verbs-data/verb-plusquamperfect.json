@@ -7,7 +7,7 @@
   },
   {
     "type": "fillInBlank",
-    "question": "Nachdem wir angekommen waren, ___ wir das Hotel gefunden.",
+    "question": "Nachdem wir das Hotel gefunden ___, gingen wir essen.",
     "options": ["hatten", "waren", "haben", "sind"],
     "answer": "hatten"
   },

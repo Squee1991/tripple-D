@@ -1,6 +1,5 @@
 {
   "themeId": "basics_a1",
-  "themeTitle": "Работа и учеба",
   "level": "A1",
   "tasks": [
     {
@@ -10,7 +9,6 @@
       "icon": "\uD83D\uDCBC",
       "wordsPool": ["Die", "ich", "eine", "einem", "das", "nicht"],
       "textElements": [
-        { "type": "text", "content": " " },
         { "type": "blank", "id": 1, "correct": "Die" },
         { "type": "text", "content": " Arbeit beginnt früh. — Um neun Uhr bin " },
         { "type": "blank", "id": 2, "correct": "ich" },
@@ -32,7 +30,6 @@
       "icon": "\uD83D\uDD0D",
       "wordsPool": ["Die", "ich", "ein", "kein", "Das", "nicht"],
       "textElements": [
-        { "type": "text", "content": " " },
         { "type": "blank", "id": 1, "correct": "Die" },
         { "type": "text", "content": " Tür ist offen. — Jetzt gehe " },
         { "type": "blank", "id": 2, "correct": "ich" },
@@ -96,7 +93,7 @@
       "title": "Die Hausaufgaben",
       "translation": "themeTextTitleWork_A1.workFive",
       "icon": "\uD83D\uDCDD",
-      "wordsPool": ["ich", "bin", "und", "dem", "aber", "nicht"],
+      "wordsPool": ["Ich", "bin", "und", "dem", "aber", "nicht"],
       "textElements": [
         { "type": "text", "content": "Die Schule ist zu Ende. Jetzt " },
         { "type": "blank", "id": 1, "correct": "bin" },
@@ -118,7 +115,7 @@
       "title": "Mein Job auf der Baustelle",
       "translation": "themeTextTitleWork_A1.workSix",
       "icon": "\uD83D\uDD28",
-      "wordsPool": ["ich", "bin", "habe", "und", "dem", "aber", "nicht"],
+      "wordsPool": ["Ich", "bin", "habe", "und", "dem", "aber", "nicht"],
       "textElements": [
         { "type": "text", "content": "Heute " },
         { "type": "blank", "id": 1, "correct": "bin" },

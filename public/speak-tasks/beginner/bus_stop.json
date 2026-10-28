@@ -489,7 +489,7 @@
           "uk-UA": "Дякую, навзаєм! Бувай.",
           "uz-UZ": "Rahmat, sizga ham! Xayr."
         },
-        "nextStep": "step_15"
+        "nextStep": null
       },
       {
         "text": "Danke, Ihnen auch! Auf Wiedersehen.",
@@ -506,7 +506,7 @@
           "uk-UA": "Дякую, і Вам! До побачення.",
           "uz-UZ": "Rahmat, sizga ham! Ko'rishguncha."
         },
-        "nextStep": "step_15"
+        "nextStep": null
       }
     ],
     "defaultNext": null

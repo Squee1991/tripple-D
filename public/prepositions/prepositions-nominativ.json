@@ -131,8 +131,8 @@
   },
   {
     "question": "___ sind meine Freunde.",
-    "options": ["Das", "Die", "Der", "Den"],
-    "answer": "Die"
+    "options": ["Das", "Dem", "Der", "Den"],
+    "answer": "Das"
   },
   {
     "question": "___ ist meine Mutter.",
@@ -391,8 +391,8 @@
   },
   {
     "question": "___ sind meine Eltern.",
-    "options": ["Das", "Die", "Der", "Den"],
-    "answer": "Die"
+    "options": ["Das", "Dem", "Der", "Den"],
+    "answer": "Das"
   },
   {
     "question": "___ ist freundlich.",
@@ -491,8 +491,8 @@
   },
   {
     "question": "___ sind meine Freunde.",
-    "options": ["Das", "Die", "Der", "Den"],
-    "answer": "Die"
+    "options": ["Das", "Dem", "Der", "Den"],
+    "answer": "Das"
   },
   {
     "question": "___ ist alt.",

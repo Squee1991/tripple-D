@@ -1,6 +1,5 @@
 {
   "themeId": "daily_routine_b1",
-  "themeTitle": "Распорядок дня (B1)",
   "level": "B1",
   "tasks": [
     {
@@ -146,7 +145,7 @@
         { "type": "blank", "id": 1, "correct": "kochte" },
         { "type": "text", "content": " ich abends immer gemeinsam mit meinem Mitbewohner. — Wir " },
         { "type": "blank", "id": 2, "correct": "hatten" },
-        { "type": "text", "content": " die Aufgaben fair aufgeteilt, lange bevor wir mit dem Schnippeln begannen. — Ich stehe wirklich sehr gerne in der Küche, " },
+        { "type": "text", "content": " die Aufgaben fair aufgeteilt, lange bevor wir mit dem Schnippeln begannen. — Ich stand wirklich sehr gerne in der Küche, " },
         { "type": "blank", "id": 3, "correct": "deshalb" },
         { "type": "text", "content": " probierte ich ständig neue exotische Rezepte aus. — Man muss die Küche danach sofort aufräumen, " },
         { "type": "blank", "id": 4, "correct": "sonst" },
@@ -216,7 +215,7 @@
         { "type": "blank", "id": 3, "correct": "trotzdem" },
         { "type": "text", "content": " putzte ich fleißig das Badezimmer. — Man muss den Müll regelmäßig wegbringen, " },
         { "type": "blank", "id": 4, "correct": "sonst" },
-        { "type": "text", "content": " riecht es in की Küche unangenehm. — Zuerst staubsauge ich im Wohnzimmer, " },
+        { "type": "text", "content": " riecht es in der Küche unangenehm. — Zuerst staubsauge ich im Wohnzimmer, " },
         { "type": "blank", "id": 5, "correct": "dann" },
         { "type": "text", "content": " wische ich den Boden in der Küche. — Ich höre beim Putzen " },
         { "type": "blank", "id": 6, "correct": "außerdem" },

@@ -1,6 +1,5 @@
 {
   "themeId": "travel_grammar_a2",
-  "themeTitle": "Путешествия: Углубленная грамматика (A2)",
   "level": "A2",
   "tasks": [
     {
@@ -42,7 +41,7 @@
         { "type": "blank", "id": 3, "correct": "in" },
         { "type": "text", "content": " die kleine Tasche! — Die Pässe " },
         { "type": "blank", "id": 4, "correct": "liegen" },
-        { "type": "text", "content": " jetzt sicher auf dem Tisch. — Wir haben viel Zeit, " },
+        { "type": "text", "content": " jetzt sicher in der Tasche. — Wir haben viel Zeit, " },
         { "type": "blank", "id": 5, "correct": "weil" },
         { "type": "text", "content": " der Flug leider Verspätung hat. — Gibt es hier in der Nähe " },
         { "type": "blank", "id": 6, "correct": "einen" },
@@ -236,7 +235,7 @@
         { "type": "blank", "id": 4, "correct": "Weil" },
         { "type": "text", "content": " wir müde sind, schlafen wir sofort im Flugzeug. — Gibt es während des Fluges " },
         { "type": "blank", "id": 5, "correct": "etwas" },
-        { "type": "text", "content": " zu trinken? — Die Stewardess bringt kühles Wasser " },
+        { "type": "text", "content": " zu trinken? — Danach kommt die Stewardess mit kühlem Wasser " },
         { "type": "blank", "id": 6, "correct": "zu" },
         { "type": "text", "content": " uns. — Am Ende verabschieden wir " },
         { "type": "blank", "id": 7, "correct": "uns" },
