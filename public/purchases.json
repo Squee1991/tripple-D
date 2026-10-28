@@ -157,7 +157,7 @@
 						{ "question": "Ich warte auf ___ Lieferung.", "word": "Lieferung", "answer": "die" },
 						{ "question": "Er öffnet ___ Paket.", "word": "Paket", "answer": "das" },
 						{ "question": "Der Verkäufer bedient ___ Kunden.", "word": "Kunde", "answer": "den" },
-						{ "question": "Ich danke für ___ Barzahlung.", "word": "Barzahlung", "die": "die" }
+						{ "question": "Ich danke für ___ Barzahlung.", "word": "Barzahlung", "answer": "die" }
 					]
 				}
 			]
@@ -177,7 +177,7 @@
 						{ "question": "Der Duft ___ Bäckerei ist wunderbar.", "word": "Bäckerei", "answer": "der" },
 						{ "question": "Der Preis ___ Gemüses ist gestiegen.", "word": "Gemüse", "answer": "des" },
 						{ "question": "Die Empfehlung ___ Metzgers war gut.", "word": "Metzger", "answer": "des" },
-						{ "question": "Der Pfand ___ Flasche ist 25 Cent.", "word": "Flasche", "answer": "der" }
+						{ "question": "Das Pfand ___ Flasche ist 25 Cent.", "word": "Flasche", "answer": "der" }
 					]
 				},
 				{

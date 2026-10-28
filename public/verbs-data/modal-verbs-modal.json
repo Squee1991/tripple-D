@@ -32,8 +32,8 @@
   {
     "question": "Ich ___ lieber zu Hause bleiben.",
     "verb": "mögen",
-    "answer": "mag",
-    "options": ["mag", "muss", "soll", "kann"]
+    "answer": "möchte",
+    "options": ["möchte", "muss", "soll", "mag"]
   },
   {
     "question": "Ich ___ einen Kaffee trinken.",
@@ -68,8 +68,8 @@
   {
     "question": "Wenn ich Zeit hätte, ___ ich mehr lesen.",
     "verb": "können",
-    "answer": "würde",
-    "options": ["würde", "könnte", "müsste", "sollte"]
+    "answer": "könnte",
+    "options": ["könnte", "kann", "konnte", "könntest"]
   },
   {
     "question": "Du ___ mir helfen, wenn du willst.",
@@ -116,8 +116,8 @@
   {
     "question": "Er ___ dich anrufen, wenn er Zeit hätte.",
     "verb": "können",
-    "answer": "würde",
-    "options": ["würde", "könnte", "müsste", "sollte"]
+    "answer": "könnte",
+    "options": ["könnte", "kann", "konnte", "kannst"]
   },
   {
     "question": "Du ___ freundlicher sein.",
@@ -145,9 +145,9 @@
   },
   {
     "question": "Er ___ dich besuchen, wenn er Zeit hätte.",
-    "verb": "wollen",
+    "verb": "werden",
     "answer": "würde",
-    "options": ["würde", "wollte", "möchte", "könnte"]
+    "options": ["würde", "wird", "wurde", "würdest"]
   },
   {
     "question": "Er ___ gestern nicht mitkommen.",
@@ -308,8 +308,8 @@
   {
     "question": "Ich ___ lieber Tee trinken.",
     "verb": "mögen",
-    "answer": "mag",
-    "options": ["mag", "möchte", "will", "muss"]
+    "answer": "möchte",
+    "options": ["möchte", "mag", "muss", "darf"]
   },
   {
     "question": "Sie ___ noch ein Stück Kuchen.",
@@ -536,8 +536,8 @@
   {
     "question": "Wir ___ lieber zu Hause bleiben.",
     "verb": "mögen",
-    "answer": "mögen",
-    "options": ["mögen", "wollen", "dürfen", "sollen"]
+    "answer": "möchten",
+    "options": ["möchten", "mögen", "dürfen", "sollen"]
   },
   {
     "question": "___ Sie bitte Platz nehmen?",
@@ -582,7 +582,7 @@
     "options": ["darfst", "musst", "willst", "kannst"]
   },
   {
-    "question": "Ich ___ dir später anrufen.",
+    "question": "Ich ___ dich später anrufen.",
     "verb": "können",
     "answer": "kann",
     "options": ["kann", "muss", "soll", "will"]

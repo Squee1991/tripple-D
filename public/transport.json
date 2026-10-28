@@ -118,10 +118,10 @@
 				{
 					"id": 3,
 					"tasks": [
-						{ "question": "Ich warte am ___ Bahnhof.", "word": "Bahnhof", "answer": "dem" },
+						{ "question": "Ich warte vor ___ Bahnhof.", "word": "Bahnhof", "answer": "dem" },
 						{ "question": "Sie steigt an ___ Haltestelle aus.", "word": "Haltestelle", "answer": "der" },
 						{ "question": "Er landet auf ___ Flughafen.", "word": "Flughafen", "answer": "dem" },
-						{ "question": "Wir gehen zum ___ Hafen.", "word": "Hafen", "answer": "dem" },
+						{ "question": "Wir wohnen neben ___ Hafen.", "word": "Hafen", "answer": "dem" },
 						{ "question": "Sie parkt in ___ Garage.", "word": "Garage", "answer": "der" },
 						{ "question": "Der Zug fährt von ___ Gleis 3 ab.", "word": "Gleis", "answer": "dem" },
 						{ "question": "Er wartet an ___ Bushaltestelle.", "word": "Bushaltestelle", "answer": "der" },
@@ -142,7 +142,7 @@
 						{ "question": "Er zeigt ___ Ticket vor.", "word": "Ticket", "answer": "das" },
 						{ "question": "Wir geben ___ Gepäck auf.", "word": "Gepäck", "answer": "das" },
 						{ "question": "Man muss ___ dichten Verkehr beachten.", "word": "Verkehr", "answer": "den" },
-						{ "question": "Wir stehen im ___ Stau.", "word": "Stau", "answer": "dem" }
+						{ "question": "Nach ___ Stau fahren wir schneller.", "word": "Stau", "answer": "dem" }
 					]
 				},
 				{

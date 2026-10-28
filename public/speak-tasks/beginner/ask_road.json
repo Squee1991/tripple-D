@@ -32,37 +32,37 @@
         }
       },
       {
-        "german": "das Stadtzentrum",
+        "german": "finden",
         "translation": {
-          "ru-RU": "центр города",
-          "en-US": "city center",
-          "ar-SA": "وسط المدينة",
-          "es-ES": "centro de la ciudad",
-          "fr-FR": "centre-ville",
-          "hi-IN": "शहर का केंद्र",
-          "pl-PL": "centrum miasta",
-          "ro-RO": "centrul orașului",
-          "tr-TR": "şehir merkezi",
-          "uk-UA": "центр міста",
-          "uz-UZ": "shahar markazi"
+          "ru-RU": "находить",
+          "en-US": "to find",
+          "ar-SA": "يجد",
+          "es-ES": "encontrar",
+          "fr-FR": "trouver",
+          "hi-IN": "ढूँढना",
+          "pl-PL": "znaleźć",
+          "ro-RO": "a găsi",
+          "tr-TR": "bulmak",
+          "uk-UA": "знаходити",
+          "uz-UZ": "topmoq"
         }
       }
     ],
     "options": [
       {
-        "text": "Hallo! Ja, bitte. Ich finde das Stadtzentrum nicht.",
+        "text": "Hallo! Ja, bitte. Ich finde den Bahnhof nicht.",
         "translation": {
-          "ru-RU": "Здравствуйте! Да, пожалуйста. Я не могу найти центр города.",
-          "en-US": "Hello! Yes, please. I can't find the city center.",
-          "ar-SA": "مرحباً! نعم من فضلك. لا أستطيع العثور على وسط المدينة.",
-          "es-ES": "¡Hola! Sí, por favor. No encuentro el centro de la ciudad.",
-          "fr-FR": "Bonjour ! Oui, s'il vous plaît. Je ne trouve pas le centre-ville.",
-          "hi-IN": "नमस्ते! जी, कृपया। मुझे शहर का केंद्र नहीं मिल रहा है।",
-          "pl-PL": "Dzień dobry! Tak, proszę. Nie mogę znaleźć centrum miasta.",
-          "ro-RO": "Bună! Da, vă rog. Nu găsesc centrul orașului.",
-          "tr-TR": "Merhaba! Evet, lütfen. Şehir merkezini bulamıyorum.",
-          "uk-UA": "Добрий день! Так, будь ласка. Я не можу знайти центр міста.",
-          "uz-UZ": "Salom! Ha, iltimos. Men shahar markazini topolmayapman."
+          "ru-RU": "Здравствуйте! Да, пожалуйста. Я не могу найти вокзал.",
+          "en-US": "Hello! Yes, please. I can't find the train station.",
+          "ar-SA": "مرحباً! نعم من فضلك. لا أستطيع العثور على محطة القطار.",
+          "es-ES": "¡Hola! Sí, por favor. No encuentro la estación de tren.",
+          "fr-FR": "Bonjour ! Oui, s'il vous plaît. Je ne trouve pas la gare.",
+          "hi-IN": "नमस्ते! जी, कृपया। मुझे रेलवे स्टेशन नहीं मिल रहा है।",
+          "pl-PL": "Dzień dobry! Tak, proszę. Nie mogę znaleźć dworca.",
+          "ro-RO": "Bună! Da, vă rog. Nu găsesc gara.",
+          "tr-TR": "Merhaba! Evet, lütfen. Tren istasyonunu bulamıyorum.",
+          "uk-UA": "Добрий день! Так, будь ласка. Я не можу знайти вокзал.",
+          "uz-UZ": "Salom! Ha, iltimos. Men vokzalni topolmayapman."
         },
         "nextStep": "step_3"
       }

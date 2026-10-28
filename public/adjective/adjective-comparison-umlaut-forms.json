@@ -6,8 +6,8 @@
   },
   {
     "question": "Von allen Lehrern ist Herr Schmidt der ___.",
-    "options": ["am ältesten", "älter", "alt", "alter"],
-    "answer": "am ältesten"
+    "options": ["am ältesten", "älter", "alt", "älteste"],
+    "answer": "älteste"
   },
   {
     "question": "Meine Schwester ist zwei Jahre ___ als ich.",
@@ -17,7 +17,7 @@
   {
     "question": "Von allen Kindern ist Tom der ___.",
     "options": ["am jüngsten", "jüngste", "jünger", "jung"],
-    "answer": "am jüngsten"
+    "answer": "jüngste"
   },
   {
     "question": "Der Hund ist viel ___ als die Katze.",
@@ -27,7 +27,7 @@
   {
     "question": "Von allen Gebäuden ist der Dom der ___.",
     "options": ["am größten", "größte", "größer", "groß"],
-    "answer": "am größten"
+    "answer": "größte"
   },
   {
     "question": "Der Nil ist ___ als der Rhein.",
@@ -37,7 +37,7 @@
   {
     "question": "Von allen Flüssen ist der Amazonas der ___.",
     "options": ["am längsten", "längste", "lang", "länger"],
-    "answer": "am längsten"
+    "answer": "längste"
   },
   {
     "question": "Der Film war ___ als erwartet.",
@@ -46,8 +46,8 @@
   },
   {
     "question": "Von allen Prüfungen war diese die ___.",
-    "options": ["am kürzesten", "kurzeste", "kurzer", "kurz"],
-    "answer": "am kürzesten"
+    "options": ["am kürzesten", "kurzeste", "kurzer", "kürzeste"],
+    "answer": "kürzeste"
   },
   {
     "question": "Im Winter ist es hier viel ___ als im Sommer.",
@@ -56,8 +56,8 @@
   },
   {
     "question": "Der Januar ist der ___ Monat.",
-    "options": ["am kältesten", "kälter", "kalte", "kalt"],
-    "answer": "am kältesten"
+    "options": ["am kältesten", "kälter", "kalte", "kälteste"],
+    "answer": "kälteste"
   },
   {
     "question": "Heute ist es ___ als gestern.",
@@ -66,8 +66,8 @@
   },
   {
     "question": "Der Juli ist in Deutschland der ___ Monat.",
-    "options": ["am wärmsten", "wärmer", "warme", "warm"],
-    "answer": "am wärmsten"
+    "options": ["am wärmsten", "wärmer", "warme", "wärmste"],
+    "answer": "wärmste"
   },
   {
     "question": "Der Bär ist viel ___ als der Hund.",
@@ -76,8 +76,8 @@
   },
   {
     "question": "Von allen Kämpfern war er der ___.",
-    "options": ["am stärksten", "stärker", "starker", "stark"],
-    "answer": "am stärksten"
+    "options": ["am stärksten", "stärker", "starker", "stärkste"],
+    "answer": "stärkste"
   },
   {
     "question": "Seine Worte waren ___ als meine.",
@@ -86,8 +86,8 @@
   },
   {
     "question": "Von allen Regeln ist diese die ___.",
-    "options": ["am härtesten", "harteste", "härter", "hart"],
-    "answer": "am härtesten"
+    "options": ["am härtesten", "harteste", "härter", "härteste"],
+    "answer": "härteste"
   },
   {
     "question": "Nach dem Verlust war er ___ als vorher.",
@@ -97,7 +97,7 @@
   {
     "question": "Von allen Familien ist diese die ___.",
     "options": ["am ärmsten", "ärmer", "arm", "ärmste"],
-    "answer": "am ärmsten"
+    "answer": "ärmste"
   },
   {
     "question": "Nach der Krankheit fühlte er sich ___ als zuvor.",
@@ -106,8 +106,8 @@
   },
   {
     "question": "Von allen Patienten ist er der ___.",
-    "options": ["am kränksten", "kränker", "krank", "kranke"],
-    "answer": "am kränksten"
+    "options": ["am kränksten", "kränker", "krank", "kränkste"],
+    "answer": "kränkste"
   },
   {
     "question": "Diese Idee ist ___ als deine.",
@@ -117,7 +117,7 @@
   {
     "question": "Von allen Vorschlägen war das der ___.",
     "options": ["am dümmsten", "dümmste", "dumm", "dümmer"],
-    "answer": "am dümmsten"
+    "answer": "dümmste"
   },
   {
     "question": "Die Antwort von Anna war ___ als die von Tom.",
@@ -126,8 +126,8 @@
   },
   {
     "question": "Von allen Schülern war sie die ___.",
-    "options": ["am klügsten", "klüger", "klug", "kluge"],
-    "answer": "am klügsten"
+    "options": ["am klügsten", "klüger", "klug", "klügste"],
+    "answer": "klügste"
   },
   {
     "question": "Dieses Kleid ist ___ als das rote.",
@@ -137,7 +137,7 @@
   {
     "question": "Von allen Blumen ist diese die ___.",
     "options": ["am schönsten", "schönste", "schöner", "schön"],
-    "answer": "am schönsten"
+    "answer": "schönste"
   },
   {
     "question": "Nach der Verletzung war er viel ___ als vorher.",
@@ -146,8 +146,8 @@
   },
   {
     "question": "Von allen Spielern ist er der ___.",
-    "options": ["am schwächsten", "schwächer", "schwach", "schwache"],
-    "answer": "am schwächsten"
+    "options": ["am schwächsten", "schwächer", "schwach", "schwächste"],
+    "answer": "schwächste"
   },
   {
     "question": "Mein Opa ist deutlich ___ als meine Oma.",
@@ -156,8 +156,8 @@
   },
   {
     "question": "Von allen Politikern ist er der ___.",
-    "options": ["am ältesten", "alt", "älter", "alter"],
-    "answer": "am ältesten"
+    "options": ["am ältesten", "alt", "älter", "älteste"],
+    "answer": "älteste"
   },
   {
     "question": "Lisa ist ein Jahr ___ als Paul.",
@@ -166,8 +166,8 @@
   },
   {
     "question": "Von allen Geschwistern ist Mia die ___.",
-    "options": ["am jüngsten", "jünger", "jung", "jüngere"],
-    "answer": "am jüngsten"
+    "options": ["am jüngsten", "jünger", "jung", "jüngste"],
+    "answer": "jüngste"
   },
   {
     "question": "Dieser Tisch ist ___ als der andere.",
@@ -177,7 +177,7 @@
   {
     "question": "Von allen Sälen ist dieser der ___.",
     "options": ["am größten", "größte", "großer", "groß"],
-    "answer": "am größten"
+    "answer": "größte"
   },
   {
     "question": "Die Pause war ___ als geplant.",
@@ -186,8 +186,8 @@
   },
   {
     "question": "Von allen Vorträgen war dieser der ___.",
-    "options": ["am kürzesten", "kurzer", "kurz", "kürzer"],
-    "answer": "am kürzesten"
+    "options": ["am kürzesten", "kurzer", "kurz", "kürzeste"],
+    "answer": "kürzeste"
   },
   {
     "question": "Die Nacht war ___ als der Tag.",
@@ -196,8 +196,8 @@
   },
   {
     "question": "Von allen Tagen im Jahr ist der Januar der ___.",
-    "options": ["am kältesten", "kälter", "kalt", "kalter"],
-    "answer": "am kältesten"
+    "options": ["am kältesten", "kälter", "kalt", "kälteste"],
+    "answer": "kälteste"
   },
   {
     "question": "Der Abend war ___ als der Morgen.",
@@ -206,8 +206,8 @@
   },
   {
     "question": "Von allen Sommern war dieser der ___.",
-    "options": ["am wärmsten", "wärmer", "warm", "warmer"],
-    "answer": "am wärmsten"
+    "options": ["am wärmsten", "wärmer", "warm", "wärmste"],
+    "answer": "wärmste"
   },
   {
     "question": "Mein Bruder ist viel ___ als ich.",
@@ -216,8 +216,8 @@
   },
   {
     "question": "Von allen Sportlern war er der ___.",
-    "options": ["am stärksten", "stärker", "stark", "starker"],
-    "answer": "am stärksten"
+    "options": ["am stärksten", "stärker", "stark", "stärkste"],
+    "answer": "stärkste"
   },
   {
     "question": "Seine Rede war ___ als gedacht.",
@@ -226,8 +226,8 @@
   },
   {
     "question": "Von allen Aufgaben war diese die ___.",
-    "options": ["am härtesten", "härter", "hart", "harte"],
-    "answer": "am härtesten"
+    "options": ["am härtesten", "härter", "hart", "härteste"],
+    "answer": "härteste"
   },
   {
     "question": "Nach dem Umzug waren sie ___ als vorher.",
@@ -237,7 +237,7 @@
   {
     "question": "Von allen Nachbarn ist diese Familie die ___.",
     "options": ["am ärmsten", "ärmer", "arm", "ärmste"],
-    "answer": "am ärmsten"
+    "answer": "ärmste"
   },
   {
     "question": "Nach der Operation war er noch ___ als zuvor.",
@@ -246,8 +246,8 @@
   },
   {
     "question": "Von allen Patienten ist sie die ___.",
-    "options": ["am kränksten", "kränker", "krank", "kranke"],
-    "answer": "am kränksten"
+    "options": ["am kränksten", "kränker", "krank", "kränkste"],
+    "answer": "kränkste"
   },
   {
     "question": "Seine Antwort war ___ als meine.",
@@ -256,8 +256,8 @@
   },
   {
     "question": "Von allen Ideen war diese die ___.",
-    "options": ["am dümmsten", "dümmer", "dumm", "dumme"],
-    "answer": "am dümmsten"
+    "options": ["am dümmsten", "dümmer", "dumm", "dümmste"],
+    "answer": "dümmste"
   },
   {
     "question": "Er war ___ als seine Mitschüler.",
@@ -266,8 +266,8 @@
   },
   {
     "question": "Von allen Kandidaten war sie die ___.",
-    "options": ["am klügsten", "klüger", "klug", "kluge"],
-    "answer": "am klügsten"
+    "options": ["am klügsten", "klüger", "klug", "klügste"],
+    "answer": "klügste"
   },
   {
     "question": "Der Garten ist ___ als der Hof.",
@@ -277,7 +277,7 @@
   {
     "question": "Von allen Orten ist dieser der ___.",
     "options": ["am schönsten", "schönste", "schöner", "schön"],
-    "answer": "am schönsten"
+    "answer": "schönste"
   },
   {
     "question": "Nach der Verletzung war er deutlich ___.",
@@ -286,8 +286,8 @@
   },
   {
     "question": "Von allen Spielern war er der ___.",
-    "options": ["am schwächsten", "schwächer", "schwach", "schwache"],
-    "answer": "am schwächsten"
+    "options": ["am schwächsten", "schwächer", "schwach", "schwächste"],
+    "answer": "schwächste"
   },
   {
     "question": "Meine Tante ist ein Jahr ___ als meine Mutter.",
@@ -296,8 +296,8 @@
   },
   {
     "question": "Von allen Nachbarn ist Herr Braun der ___.",
-    "options": ["am ältesten", "älter", "alt", "alter"],
-    "answer": "am ältesten"
+    "options": ["am ältesten", "älter", "alt", "älteste"],
+    "answer": "älteste"
   },
   {
     "question": "Peter ist zwei Jahre ___ als sein Bruder.",
@@ -306,8 +306,8 @@
   },
   {
     "question": "Von allen Schülern ist Anna die ___.",
-    "options": ["am jüngsten", "jünger", "jung", "jüngere"],
-    "answer": "am jüngsten"
+    "options": ["am jüngsten", "jünger", "jung", "jüngste"],
+    "answer": "jüngste"
   },
   {
     "question": "Der Baum ist viel ___ als das Haus.",
@@ -317,7 +317,7 @@
   {
     "question": "Von allen Gebäuden ist das Rathaus das ___.",
     "options": ["am größten", "größer", "groß", "größte"],
-    "answer": "am größten"
+    "answer": "größte"
   },
   {
     "question": "Der Tunnel ist ___ als die Brücke.",
@@ -327,7 +327,7 @@
   {
     "question": "Von allen Wegen ist dieser der ___.",
     "options": ["am längsten", "längste", "länger", "lang"],
-    "answer": "am längsten"
+    "answer": "längste"
   },
   {
     "question": "Der Vortrag war ___ als erwartet.",
@@ -336,8 +336,8 @@
   },
   {
     "question": "Von allen Interviews war dieses das ___.",
-    "options": ["am kürzesten", "kürzer", "kurz", "kurzer"],
-    "answer": "am kürzesten"
+    "options": ["am kürzesten", "kürzer", "kurz", "kürzeste"],
+    "answer": "kürzeste"
   },
   {
     "question": "Die Nacht war ___ als der Tag.",
@@ -346,8 +346,8 @@
   },
   {
     "question": "Von allen Monaten ist der Februar der ___.",
-    "options": ["am kältesten", "kälter", "kalt", "kalter"],
-    "answer": "am kältesten"
+    "options": ["am kältesten", "kälter", "kalt", "kälteste"],
+    "answer": "kälteste"
   },
   {
     "question": "Der Nachmittag war ___ als der Morgen.",
@@ -356,8 +356,8 @@
   },
   {
     "question": "Von allen Tagen im Jahr war dieser der ___.",
-    "options": ["am wärmsten", "wärmer", "warm", "warmer"],
-    "answer": "am wärmsten"
+    "options": ["am wärmsten", "wärmer", "warm", "wärmste"],
+    "answer": "wärmste"
   },
   {
     "question": "Der Boxer ist ___ als sein Gegner.",
@@ -366,8 +366,8 @@
   },
   {
     "question": "Von allen Sportlern war er der ___.",
-    "options": ["am stärksten", "stärker", "stark", "starker"],
-    "answer": "am stärksten"
+    "options": ["am stärksten", "stärker", "stark", "stärkste"],
+    "answer": "stärkste"
   },
   {
     "question": "Seine Stimme war ___ als erwartet.",
@@ -376,8 +376,8 @@
   },
   {
     "question": "Von allen Tests war dieser der ___.",
-    "options": ["am härtesten", "härter", "hart", "harte"],
-    "answer": "am härtesten"
+    "options": ["am härtesten", "härter", "hart", "härteste"],
+    "answer": "härteste"
   },
   {
     "question": "Nach dem Krieg waren viele Menschen ___ als zuvor.",
@@ -387,6 +387,6 @@
   {
     "question": "Von allen Dörfern ist dieses das ___.",
     "options": ["am ärmsten", "ärmer", "arm", "ärmste"],
-    "answer": "am ärmsten"
+    "answer": "ärmste"
   }
 ]

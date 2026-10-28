@@ -1276,7 +1276,6 @@
         {
           "type": "matching",
           "id": "match-1",
-          "instruction": "Соедини символ с его описанием",
           "pairsLeft": [
             { "id": "l1", "text": "Adventskranz" },
             { "id": "l2", "text": "Weihnachtsbaum" },
@@ -1305,7 +1304,6 @@
         {
           "type": "matching",
           "id": "match-2",
-          "instruction": "Соедини персонажа и его действие",
           "pairsLeft": [
             { "id": "l1", "text": "Weihnachtsmann" },
             { "id": "l2", "text": "Engel" },
@@ -1334,7 +1332,6 @@
         {
           "type": "matching",
           "id": "match-3",
-          "instruction": "Соедини немецкое слово и его перевод",
           "pairsLeft": [
             { "id": "l1", "text": "Kerze" },
             { "id": "l2", "text": "Schnee" },
@@ -1363,7 +1360,6 @@
         {
           "type": "matching",
           "id": "match-4",
-          "instruction": "Соедини праздник и дату",
           "pairsLeft": [
             { "id": "l1", "text": "Heiligabend" },
             { "id": "l2", "text": "Nikolaustag" },
@@ -1400,7 +1396,6 @@
         {
           "type": "matching",
           "id": "match-1",
-          "instruction": "Соедини традицию с её описанием",
           "pairsLeft": [
             { "id": "l1", "text": "Feuerwerk" },
             { "id": "l2", "text": "Raclette" },
@@ -1429,7 +1424,6 @@
         {
           "type": "matching",
           "id": "match-2",
-          "instruction": "Соедини новогодний символ и значение",
           "pairsLeft": [
             { "id": "l1", "text": "Schornsteinfeger" },
             { "id": "l2", "text": "Marienkäfer" },
@@ -1458,7 +1452,6 @@
         {
           "type": "matching",
           "id": "match-3",
-          "instruction": "Соедини немецкое слово и русский перевод (тема: Новый год)",
           "pairsLeft": [
             { "id": "l1", "text": "Feuerwerk" },
             { "id": "l2", "text": "Rakete" },
@@ -1487,7 +1480,6 @@
         {
           "type": "matching",
           "id": "match-4",
-          "instruction": "Соедини событие и дату/время",
           "pairsLeft": [
             { "id": "l1", "text": "Silvesterabend" },
             { "id": "l2", "text": "Mitternacht" },
@@ -1524,7 +1516,6 @@
         {
           "type": "matching",
           "id": "match-1",
-          "instruction": "Соедини страну и её зимнюю традицию",
           "pairsLeft": [
             { "id": "l1", "text": "Deutschland" },
             { "id": "l2", "text": "Spanien" },
@@ -1553,7 +1544,6 @@
         {
           "type": "matching",
           "id": "match-2",
-          "instruction": "Соедини предмет и его значение",
           "pairsLeft": [
             { "id": "l1", "text": "Feuerwerk" },
             { "id": "l2", "text": "Trauben" },
@@ -1582,7 +1572,6 @@
         {
           "type": "matching",
           "id": "match-3",
-          "instruction": "Соедини немецкое слово и русский перевод (зимние традиции)",
           "pairsLeft": [
             { "id": "l1", "text": "Feuerwerk" },
             { "id": "l2", "text": "Traube" },
@@ -1611,7 +1600,6 @@
         {
           "type": "matching",
           "id": "match-4",
-          "instruction": "Соедини событие и время его празднования",
           "pairsLeft": [
             { "id": "l1", "text": "Silvester" },
             { "id": "l2", "text": "Neujahr" },
@@ -1648,7 +1636,6 @@
         {
           "type": "matching",
           "id": "match-1",
-          "instruction": "Соедини праздник и страну, где его отмечают",
           "pairsLeft": [
             { "id": "l1", "text": "Perchtenlauf" },
             { "id": "l2", "text": "La Befana" },
@@ -1677,7 +1664,6 @@
         {
           "type": "matching",
           "id": "match-2",
-          "instruction": "Соедини традицию и значение",
           "pairsLeft": [
             { "id": "l1", "text": "Mistelzweig" },
             { "id": "l2", "text": "Schornsteinfeger" },
@@ -1706,7 +1692,6 @@
         {
           "type": "matching",
           "id": "match-3",
-          "instruction": "Соедини немецкое слово и русский перевод (зимние поверья)",
           "pairsLeft": [
             { "id": "l1", "text": "Mistelzweig" },
             { "id": "l2", "text": "Krampus" },
@@ -1735,7 +1720,6 @@
         {
           "type": "matching",
           "id": "match-4",
-          "instruction": "Соедини событие и дату/время",
           "pairsLeft": [
             { "id": "l1", "text": "Krampusnacht" },
             { "id": "l2", "text": "Perchtenlauf" },
@@ -1772,7 +1756,6 @@
         {
           "type": "matching",
           "id": "match-1",
-          "instruction": "Соедини зимний предмет или явление с его описанием",
           "pairsLeft": [
             { "id": "l1", "text": "Schneemann" },
             { "id": "l2", "text": "Eiszapfen" },
@@ -1801,7 +1784,6 @@
         {
           "type": "matching",
           "id": "match-2",
-          "instruction": "Соедини зимнюю активность и описание",
           "pairsLeft": [
             { "id": "l1", "text": "Schlittschuh laufen" },
             { "id": "l2", "text": "Schlitten fahren" },
@@ -1830,7 +1812,6 @@
         {
           "type": "matching",
           "id": "match-3",
-          "instruction": "Соедини немецкое слово и русский перевод (тема: зима)",
           "pairsLeft": [
             { "id": "l1", "text": "Schnee" },
             { "id": "l2", "text": "Kälte" },
@@ -1859,7 +1840,6 @@
         {
           "type": "matching",
           "id": "match-4",
-          "instruction": "Соедини зимнее событие и время года/месяц",
           "pairsLeft": [
             { "id": "l1", "text": "Erster Schnee" },
             { "id": "l2", "text": "Weihnachten" },

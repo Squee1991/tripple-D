@@ -103,9 +103,9 @@
 				{
 					"id": 2,
 					"tasks": [
-						{ "question": "Wir liegen am ___ Strand.", "word": "Strand", "answer": "dem" },
+						{ "question": "Neben ___ Strand ist ein Hotel.", "word": "Strand", "answer": "dem" },
 						{ "question": "Er wandert auf ___ Berg.", "word": "Berg", "answer": "den" },
-						{ "question": "Sie schwimmt im ___ Meer.", "word": "Meer", "answer": "dem" },
+						{ "question": "Sie kommt gerade aus ___ Meer.", "word": "Meer", "answer": "dem" },
 						{ "question": "Ich reise in ___ Land.", "word": "Land", "answer": "ein fremdes" },
 						{ "question": "Wir besuchen ___ Insel.", "word": "Insel", "answer": "eine" },
 						{ "question": "Wir spazieren an ___ See entlang.", "word": "See", "answer": "dem" },
@@ -119,8 +119,8 @@
 					"id": 3,
 					"tasks": [
 						{ "question": "Ich kaufe ___ Ticket.", "word": "Ticket", "answer": "ein" },
-						{ "question": "Sie geht zum ___ Bahnhof.", "word": "Bahnhof", "answer": "dem" },
-						{ "question": "Er fährt zum ___ Flughafen.", "word": "Flughafen", "answer": "dem" },
+						{ "question": "Sie kommt aus ___ Bahnhof.", "word": "Bahnhof", "answer": "dem" },
+						{ "question": "Er parkt vor ___ Flughafen.", "word": "Flughafen", "answer": "dem" },
 						{ "question": "Wir nehmen ___ Bus.", "word": "Bus", "answer": "den" },
 						{ "question": "Sie ruft ___ Taxi.", "word": "Taxi", "answer": "ein" },
 						{ "question": "Wir warten auf ___ Zug nach Berlin.", "word": "Zug", "answer": "den" },

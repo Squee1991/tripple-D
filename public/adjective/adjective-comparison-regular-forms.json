@@ -172,7 +172,7 @@
   {
     "question": "Von allen Freunden ist Paul der ___.",
     "options": ["am lustigsten", "lustiger", "lustigste", "lustig"],
-    "answer": "am lustigsten"
+    "answer": "lustigste"
   },
   {
     "question": "Heute ist das Wetter ___ als gestern.",
@@ -202,7 +202,7 @@
   {
     "question": "Von allen Schülern ist er der ___.",
     "options": ["am faulsten", "fauler", "faul", "faulste"],
-    "answer": "am faulsten"
+    "answer": "faulste"
   },
   {
     "question": "Dieser Text ist schwer, aber der nächste ist noch ___.",
@@ -212,7 +212,7 @@
   {
     "question": "Von allen Gästen war sie die ___.",
     "options": ["am freundlichsten", "freundlicher", "freundlichste", "freundlich"],
-    "answer": "am freundlichsten"
+    "answer": "freundlichste"
   },
   {
     "question": "Das neue Auto ist ___ als das alte.",
@@ -307,7 +307,7 @@
   {
     "question": "Von allen Freunden ist Max der ___.",
     "options": ["am zuverlässigsten", "zuverlässiger", "zuverlässig", "zuverlässigste"],
-    "answer": "am zuverlässigsten"
+    "answer": "zuverlässigste"
   },
   {
     "question": "Das Wasser im See ist heute viel ___ als gestern.",
@@ -357,7 +357,7 @@
   {
     "question": "Von allen Schülern war Anna die ___.",
     "options": ["am fleißigsten", "fleißiger", "fleißig", "fleißigste"],
-    "answer": "am fleißigsten"
+    "answer": "fleißigste"
   },
   {
     "question": "Das neue Buch ist ___ als der Film, den wir gesehen haben.",
@@ -365,7 +365,7 @@
     "answer": "interessanter"
   },
   {
-    "question": "Von allen Kleidern finde ich dieses das ___.",
+    "question": "Von allen Kleidern finde ich dieses ___.",
     "options": ["am teuersten", "teurer", "teuer", "teure"],
     "answer": "am teuersten"
   },
@@ -396,8 +396,8 @@
   },
   {
     "question": "Von allen Spielen war das letzte das ___.",
-    "options": ["am spannendsten", "spannender", "spannende", "spannend"],
-    "answer": "am spannendsten"
+    "options": ["am spannendsten", "spannender", "spannende", "spannendste"],
+    "answer": "spannendste"
   },
   {
     "question": "Heute ist die Aufgabe viel ___ als gestern.",
@@ -417,7 +417,7 @@
   {
     "question": "Von allen Bergen war dieser der ___.",
     "options": ["am höchsten", "höher", "hoch", "höchste"],
-    "answer": "am höchsten"
+    "answer": "höchste"
   },
   {
     "question": "Der neue Film war ___ als ich erwartet habe.",
@@ -437,7 +437,7 @@
   {
     "question": "Von allen Zimmern im Hotel ist dieses das ___.",
     "options": ["am größten", "größer", "groß", "größte"],
-    "answer": "am größten"
+    "answer": "größte"
   },
   {
     "question": "Heute ist der Unterricht viel ___ als gestern.",
@@ -447,7 +447,7 @@
   {
     "question": "Von allen Prüfungen war die letzte die ___.",
     "options": ["am schwierigsten", "schwieriger", "schwierigste", "schwierig"],
-    "answer": "am schwierigsten"
+    "answer": "schwierigste"
   },
   {
     "question": "Mein Hund ist ___ und schneller als der deiner Freundin.",
@@ -455,7 +455,7 @@
     "answer": "stärker"
   },
   {
-    "question": "Von allen Kleidern sieht dieses am ___.",
+    "question": "Von allen Kleidern sieht dieses ___ aus.",
     "options": ["am schönsten", "schöner", "schönste", "schön"],
     "answer": "am schönsten"
   },
@@ -477,7 +477,7 @@
   {
     "question": "Von allen Kursen war der Sprachkurs der ___.",
     "options": ["am interessantesten", "interessanter", "interessant", "interessanteste"],
-    "answer": "am interessantesten"
+    "answer": "interessanteste"
   },
   {
     "question": "Heute ist es viel ___ als letzte Woche.",

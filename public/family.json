@@ -135,7 +135,7 @@
 					"tasks": [
 						{ "question": "Er ruft ___ Ehemann an.", "word": "Ehemann", "answer": "den" },
 						{ "question": "Sie umarmt ___ Ehefrau.", "word": "Ehefrau", "answer": "die" },
-						{ "question": "Wir holen ___ Neffe vom Zug ab.", "word": "Neffe", "answer": "den" },
+						{ "question": "Wir holen ___ Neffen vom Zug ab.", "word": "Neffe", "answer": "den" },
 						{ "question": "Sie trifft ___ Nichte nach der Schule.", "word": "Nichte", "answer": "die" },
 						{ "question": "Er besucht ___ Familie in Berlin.", "word": "Familie", "answer": "die" },
 						{ "question": "Wir gratulieren ___ Ehepaar zum Jubiläum.", "word": "Ehepaar", "answer": "dem" },

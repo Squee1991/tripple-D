@@ -1,6 +1,5 @@
 {
   "themeId": "hobbies_1",
-  "themeTitle": "Основы: Приветствия и Числа",
   "level": "B1",
   "tasks": [
     {
@@ -9,7 +8,7 @@
       "translation": "themeTextTitleHobby_B1.hobbyOne",
       "icon": "\uD83C\uDF0C",
       "wordsPool": ["hatte", "kaufte", "trotzdem", "sonst", "dann", "nämlich", "deshalb"],
-      "tasks": [
+      "textElements": [
         { "type": "text", "content": "Ich " },
         { "type": "blank", "id": 1, "correct": "hatte" },
         { "type": "text", "content": " mich schon lange für Fotografie interessiert, bevor ich meine erste teure Kamera " },
@@ -33,7 +32,7 @@
       "translation": "themeTextTitleHobby_B1.hobbyTwo",
       "icon": "\uD83E\uDDD7\u200D♂\uFE0F",
       "wordsPool": ["hatten", "bestiegen", "trotzdem", "deshalb", "sonst", "dann", "nämlich"],
-      "tasks": [
+      "textElements": [
         { "type": "text", "content": "Wir " },
         { "type": "blank", "id": 1, "correct": "hatten" },
         { "type": "text", "content": " monatelang für diese anspruchsvolle Tour trainiert, bevor wir endlich den Berg " },
@@ -57,7 +56,7 @@
       "translation": "themeTextTitleHobby_B1.hobbyThree",
       "icon": "\uD83C\uDFB9",
       "wordsPool": ["spielte", "hatte", "deshalb", "trotzdem", "sonst", "Außerdem", "nämlich"],
-      "tasks": [
+      "textElements": [
         { "type": "text", "content": "Als ich klein war, " },
         { "type": "blank", "id": 1, "correct": "spielte" },
         { "type": "text", "content": " ich fast jeden Tag auf dem alten Klavier meiner Großmutter. — Ich " },
@@ -81,7 +80,7 @@
       "translation": "themeTextTitleHobby_B1.hobbyFour",
       "icon": "\uD83C\uDFAE",
       "wordsPool": ["programmierte", "hatte", "trotzdem", "deshalb", "dann", "sonst", "nämlich"],
-      "tasks": [
+      "textElements": [
         { "type": "text", "content": "Schon während meiner Schulzeit " },
         { "type": "blank", "id": 1, "correct": "programmierte" },
         { "type": "text", "content": " ich kleine Anwendungen für mich selbst. — Ich " },
@@ -105,7 +104,7 @@
       "translation": "themeTextTitleHobby_B1.hobbyFive",
       "icon": "\uD83C\uDFC4\u200D♂\uFE0F",
       "wordsPool": ["probierte", "hatte", "trotzdem", "deshalb", "sonst", "dann", "nämlich"],
-      "tasks": [
+      "textElements": [
         { "type": "text", "content": "Im letzten Sommer " },
         { "type": "blank", "id": 1, "correct": "probierte" },
         { "type": "text", "content": " ich an der Küste einen völlig neuen Wassersport aus. — Ich " },
@@ -129,7 +128,7 @@
       "translation": "themeTextTitleHobby_B1.hobbySix",
       "icon": "\uD83C\uDFAD",
       "wordsPool": ["spielte", "hatte", "trotzdem", "sonst", "dann", "nämlich", "deshalb"],
-      "tasks": [
+      "textElements": [
         { "type": "text", "content": "In meiner Schulzeit " },
         { "type": "blank", "id": 1, "correct": "spielte" },
         { "type": "text", "content": " ich oft in kleinen Theaterstücken mit. — Ich " },
@@ -153,7 +152,7 @@
       "translation": "themeTextTitleHobby_B1.hobbySeven",
       "icon": "\uD83C\uDFF9",
       "wordsPool": ["probierte", "hatte", "trotzdem", "sonst", "dann", "nämlich", "außerdem"],
-      "tasks": [
+      "textElements": [
         { "type": "text", "content": "Letztes Jahr " },
         { "type": "blank", "id": 1, "correct": "probierte" },
         { "type": "text", "content": " ich zum ersten Mal das traditionelle Bogenschießen aus. — Ich " },
@@ -177,7 +176,7 @@
       "translation": "themeTextTitleHobby_B1.hobbyEight",
       "icon": "\uD83C\uDFCD\uFE0F",
       "wordsPool": ["verbrachte", "hatte", "deshalb", "trotzdem", "sonst", "nämlich", "dann"],
-      "tasks": [
+      "textElements": [
         { "type": "text", "content": "Früher " },
         { "type": "blank", "id": 1, "correct": "verbrachte" },
         { "type": "text", "content": " ich fast jedes Wochenende in der dunklen Garage meines Vaters. — Ich " },
@@ -201,7 +200,7 @@
       "translation": "themeTextTitleHobby_B1.hobbyNine",
       "icon": "\uD83C\uDF82",
       "wordsPool": ["backte", "hatte", "deshalb", "trotzdem", "sonst", "nämlich", "Außerdem"],
-      "tasks": [
+      "textElements": [
         { "type": "text", "content": "Als Jugendlicher " },
         { "type": "blank", "id": 1, "correct": "backte" },
         { "type": "text", "content": " ich oft einfache Kuchen für meine Familie. — Ich " },
@@ -225,7 +224,7 @@
       "translation": "themeTextTitleHobby_B1.hobbyTen",
       "icon": "\uD83E\uDDED",
       "wordsPool": ["entdeckte", "hatte", "deshalb", "trotzdem", "sonst", "dann", "nämlich"],
-      "tasks": [
+      "textElements": [
         { "type": "text", "content": "Vor zwei Jahren " },
         { "type": "blank", "id": 1, "correct": "entdeckte" },
         { "type": "text", "content": " ich das Geocaching durch einen guten Freund. — Ich " },

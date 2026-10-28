@@ -265,9 +265,16 @@ const cleanText = (text) => {
   return text.replace(/_/g, '').trim()
 }
 
+// Definite and indefinite article that fit the same slot ("Ich trage ___ Hemd": das / ein)
+const interchangeableArticles = {
+  der: ['ein'], das: ['ein'], die: ['eine'], den: ['einen'], dem: ['einem'],
+  ein: ['der', 'das'], eine: ['die'], einen: ['den'], einem: ['dem']
+};
+
 const generateAnswerOptions = (correctAnswer) => {
   const allArticles = ['der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine', 'einen', 'einem'];
-  let distractors = allArticles.filter(item => item !== correctAnswer);
+  const excluded = interchangeableArticles[correctAnswer] || [];
+  let distractors = allArticles.filter(item => item !== correctAnswer && !excluded.includes(item));
   for (let i = distractors.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [distractors[i], distractors[j]] = [distractors[j], distractors[i]];
