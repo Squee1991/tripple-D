@@ -63,37 +63,6 @@
       }
     },
     {
-      "id": 279,
-      "infinitive": "einschlafen",
-      "type": "strong",
-      "hilfsverb": "sein",
-      "translations": {
-        "en": "to fall asleep",
-        "pl": "zasnąć",
-        "hi": "सो जाना (so jana)",
-        "tr": "uykuya dalmak",
-        "ro": "a adormi",
-        "es": "quedarse dormido",
-        "fr": "s'endormir",
-        "ru": "засыпать",
-        "uk": "засинати",
-        "uz": "uxlab qolmoq",
-        "ar": "ينام / يغط في النوم"
-      },
-      "conjugation_pres": {
-        "ich": "schlafe ein", "du": "schläfst ein", "er_sie_es": "schläft ein",
-        "wir": "schlafen ein", "ihr": "schlaft ein", "sie_Sie": "schlafen ein"
-      },
-      "conjugation_past": {
-        "ich": "schlief ein", "du": "schliefst ein", "er_sie_es": "schlief ein",
-        "wir": "schliefen ein", "ihr": "schlieft ein", "sie_Sie": "schliefen ein"
-      },
-      "conjugation_perf": {
-        "ich": "bin eingeschlafen", "du": "bist eingeschlafen", "er_sie_es": "ist eingeschlafen",
-        "wir": "sind eingeschlafen", "ihr": "seid eingeschlafen", "sie_Sie": "sind eingeschlafen"
-      }
-    },
-    {
       "id": 281,
       "infinitive": "interessieren",
       "type": "weak",
@@ -363,7 +332,7 @@
       },
       "conjugation_pres": { "ich": "passiere", "du": "passierst", "er_sie_es": "passiert", "wir": "passieren", "ihr": "passiert", "sie_Sie": "passieren" },
       "conjugation_past": { "ich": "passierte", "du": "passiertest", "er_sie_es": "passierte", "wir": "passierten", "ihr": "passiertet", "sie_Sie": "passierten" },
-      "conjugation_perf": { "ich": "ist passiert", "du": "ist passiert", "er_sie_es": "ist passiert", "wir": "sind passiert", "ihr": "seid passiert", "sie_Sie": "sind passiert" }
+      "conjugation_perf": { "ich": "bin passiert", "du": "bist passiert", "er_sie_es": "ist passiert", "wir": "sind passiert", "ihr": "seid passiert", "sie_Sie": "sind passiert" }
     },
     {
       "id": 226,
@@ -1291,7 +1260,7 @@
         "ar": "يتذكر"
       },
       "conjugation_pres": { "ich": "erinnere mich", "du": "erinnerst dich", "er_sie_es": "erinnert sich", "wir": "erinnern uns", "ihr": "erinnert euch", "sie_Sie": "erinnern sich" },
-      "conjugation_past": { "ich": "erinnerte mich", "du": "erinnertest dich", "er_sie_es": "erinnerte sich", "wir": "erinnern uns", "ihr": "erinnertet euch", "sie_Sie": "erinnern sich" },
+      "conjugation_past": { "ich": "erinnerte mich", "du": "erinnertest dich", "er_sie_es": "erinnerte sich", "wir": "erinnerten uns", "ihr": "erinnertet euch", "sie_Sie": "erinnerten sich" },
       "conjugation_perf": { "ich": "habe mich erinnert", "du": "hast dich erinnert", "er_sie_es": "hat sich erinnert", "wir": "haben uns erinnert", "ihr": "habt euch erinnert", "sie_Sie": "haben sich erinnert" }
     },
     {
@@ -2360,7 +2329,7 @@
       "translations": {
         "en": "to collect",
         "pl": "zbierać",
-        "hi": "इकट्ठा करना (ik इकट्ठा karna)",
+        "hi": "इकट्ठा करना (ikattha karna)",
         "tr": "toplamak / biriktirmek",
         "ro": "a colecta",
         "es": "coleccionar / recoger",
@@ -2394,7 +2363,7 @@
       },
       "conjugation_pres": { "ich": "schaue", "du": "schaust", "er_sie_es": "schaut", "wir": "schauen", "ihr": "schaut", "sie_Sie": "schauen" },
       "conjugation_past": { "ich": "schaute", "du": "schautest", "er_sie_es": "schaute", "wir": "schauten", "ihr": "schautet", "sie_Sie": "schauten" },
-      "conjugation_perf": { "ich": "habe geschaut", "du": "hast gesaut", "er_sie_es": "hat geschaut", "wir": "haben geschaut", "ihr": "habt geschaut", "sie_Sie": "haben geschaut" }
+      "conjugation_perf": { "ich": "habe geschaut", "du": "hast geschaut", "er_sie_es": "hat geschaut", "wir": "haben geschaut", "ihr": "habt geschaut", "sie_Sie": "haben geschaut" }
     },
     {
       "id": 81,
@@ -2442,6 +2411,37 @@
     }
   ],
   "strong": [
+    {
+      "id": 279,
+      "infinitive": "einschlafen",
+      "type": "strong",
+      "hilfsverb": "sein",
+      "translations": {
+        "en": "to fall asleep",
+        "pl": "zasnąć",
+        "hi": "सो जाना (so jana)",
+        "tr": "uykuya dalmak",
+        "ro": "a adormi",
+        "es": "quedarse dormido",
+        "fr": "s'endormir",
+        "ru": "засыпать",
+        "uk": "засинати",
+        "uz": "uxlab qolmoq",
+        "ar": "ينام / يغط في النوم"
+      },
+      "conjugation_pres": {
+        "ich": "schlafe ein", "du": "schläfst ein", "er_sie_es": "schläft ein",
+        "wir": "schlafen ein", "ihr": "schlaft ein", "sie_Sie": "schlafen ein"
+      },
+      "conjugation_past": {
+        "ich": "schlief ein", "du": "schliefst ein", "er_sie_es": "schlief ein",
+        "wir": "schliefen ein", "ihr": "schlieft ein", "sie_Sie": "schliefen ein"
+      },
+      "conjugation_perf": {
+        "ich": "bin eingeschlafen", "du": "bist eingeschlafen", "er_sie_es": "ist eingeschlafen",
+        "wir": "sind eingeschlafen", "ihr": "seid eingeschlafen", "sie_Sie": "sind eingeschlafen"
+      }
+    },
     {
       "id": 254,
       "infinitive": "stehlen",
@@ -2645,7 +2645,7 @@
       },
       "conjugation_pres": { "ich": "wachse", "du": "wächst", "er_sie_es": "wächst", "wir": "wachsen", "ihr": "wachst", "sie_Sie": "wachsen" },
       "conjugation_past": { "ich": "wuchs", "du": "wuchst", "er_sie_es": "wuchs", "wir": "wuchsen", "ihr": "wuchst", "sie_Sie": "wuchsen" },
-      "conjugation_perf": { "ich": "bin gewachsen", "du": "bist gewachsen", "er_sie_es": "hat gewachsen", "wir": "haben gewachsen", "ihr": "habt gewachsen", "sie_Sie": "haben gewachsen" }
+      "conjugation_perf": { "ich": "bin gewachsen", "du": "bist gewachsen", "er_sie_es": "ist gewachsen", "wir": "sind gewachsen", "ihr": "seid gewachsen", "sie_Sie": "sind gewachsen" }
     },
     {
       "id": 224,
@@ -3752,7 +3752,7 @@
       },
       "conjugation_pres": { "ich": "fliege", "du": "fliegst", "er_sie_es": "fliegt", "wir": "fliegen", "ihr": "fliegt", "sie_Sie": "fliegen" },
       "conjugation_past": { "ich": "flog", "du": "flogst", "er_sie_es": "flog", "wir": "flogen", "ihr": "flogt", "sie_Sie": "flogen" },
-      "conjugation_perf": { "ich": "bin geflogen", "du": "bist geflogen", "er_sie_es": "ist geflegen", "wir": "sind geflogen", "ihr": "seid geflogen", "sie_Sie": "sind geflogen" }
+      "conjugation_perf": { "ich": "bin geflogen", "du": "bist geflogen", "er_sie_es": "ist geflogen", "wir": "sind geflogen", "ihr": "seid geflogen", "sie_Sie": "sind geflogen" }
     },
     {
       "id": 121,
@@ -4270,7 +4270,7 @@
       "translations": {
         "en": "to help",
         "pl": "pomagać",
-        "hi": "मदد करना (madad karna)",
+        "hi": "मदद करना (madad karna)",
         "tr": "yardım etmek",
         "ro": "a ajuta",
         "es": "ayudar",

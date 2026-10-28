@@ -93,11 +93,11 @@
 						{ "question": "Er zieht ___ T-Shirt an.", "word": "T-Shirt", "answer": "das" },
 						{ "question": "Wir suchen ___ Jacke.", "word": "Jacke", "answer": "die" },
 						{ "question": "Sie nimmt ___ Mantel.", "word": "Mantel", "answer": "den" },
-						{ "question": "Он надевает ___ Pullover.", "word": "Pullover", "answer": "den" },
-						{ "question": "Она примеряет ___ Jeans.", "word": "Jeans", "answer": "die" },
-						{ "question": "Я ношу ___ Weste gern.", "word": "Weste", "answer": "die" },
-						{ "question": "Ты покупаешь ___ Leggings?", "word": "Leggings", "answer": "die" },
-						{ "question": "Он ищет ___ Shorts.", "word": "Shorts", "answer": "die" }
+						{ "question": "Er zieht ___ Pullover an.", "word": "Pullover", "answer": "den" },
+						{ "question": "Sie probiert ___ Jeans an.", "word": "Jeans", "answer": "die" },
+						{ "question": "Ich trage ___ Weste gern.", "word": "Weste", "answer": "die" },
+						{ "question": "Kaufst du ___ Leggings?", "word": "Leggings", "answer": "die" },
+						{ "question": "Er sucht ___ Shorts.", "word": "Shorts", "answer": "die" }
 					]
 				},
 				{
@@ -108,11 +108,11 @@
 						{ "question": "Sie wäscht ___ Bluse.", "word": "Bluse", "answer": "die" },
 						{ "question": "Wir kaufen ___ Anzug.", "word": "Anzug", "answer": "den" },
 						{ "question": "Sie trägt ___ Kleid.", "word": "Kleid", "answer": "ein" },
-						{ "question": "Она надевает ___ Stiefel.", "word": "Stiefel", "answer": "die" },
-						{ "question": "Я ношу ___ Sandalen im Sommer.", "word": "Sandalen", "answer": "die" },
-						{ "question": "Он покупает ___ Turnschuhe.", "word": "Turnschuhe", "answer": "die" },
-						{ "question": "Она выбирает ___ Kostüm.", "word": "Kostüm", "answer": "das" },
-						{ "question": "Я надеваю ___ Pyjama.", "word": "Pyjama", "answer": "den" }
+						{ "question": "Sie zieht ___ Stiefel an.", "word": "Stiefel", "answer": "die" },
+						{ "question": "Ich trage ___ Sandalen im Sommer.", "word": "Sandalen", "answer": "die" },
+						{ "question": "Er kauft ___ Turnschuhe.", "word": "Turnschuhe", "answer": "die" },
+						{ "question": "Sie wählt ___ Kostüm.", "word": "Kostüm", "answer": "das" },
+						{ "question": "Ich ziehe ___ Pyjama an.", "word": "Pyjama", "answer": "den" }
 					]
 				},
 				{
@@ -123,41 +123,41 @@
 						{ "question": "Er zieht ___ Handschuhe an.", "word": "Handschuhe", "answer": "die" },
 						{ "question": "Wir wickeln ___ Schal um.", "word": "Schal", "answer": "den" },
 						{ "question": "Sie legt ___ Gürtel an.", "word": "Gürtel", "answer": "den" },
-						{ "question": "Он носит ___ Hut.", "word": "Hut", "answer": "einen" },
-						{ "question": "Я ищу ___ Brille.", "word": "Brille", "answer": "die" },
-						{ "question": "Она завязывает ___ Krawatte.", "word": "Krawatte", "answer": "die" },
-						{ "question": "Он покупает ___ Strumpfhose.", "word": "Strumpfhose", "answer": "eine" },
-						{ "question": "Я беру ___ Regenschirm mit.", "word": "Regenschirm", "answer": "den" }
+						{ "question": "Er trägt ___ Hut.", "word": "Hut", "answer": "einen" },
+						{ "question": "Ich suche ___ Brille.", "word": "Brille", "answer": "die" },
+						{ "question": "Sie bindet ___ Krawatte.", "word": "Krawatte", "answer": "die" },
+						{ "question": "Er kauft ___ Strumpfhose.", "word": "Strumpfhose", "answer": "eine" },
+						{ "question": "Ich nehme ___ Regenschirm mit.", "word": "Regenschirm", "answer": "den" }
 					]
 				},
 				{
 					"id": 4,
 					"tasks": [
-						{ "question": "Она надевает куртку с ___ Kapuze.", "word": "Kapuze", "answer": "der" },
-						{ "question": "Я беру ___ Tasche.", "word": "Tasche", "answer": "die" },
-						{ "question": "Он пришивает ___ Knopf an.", "word": "Knopf", "answer": "den" },
-						{ "question": "Мы чиним ___ Reißverschluss.", "word": "Reißverschluss", "answer": "den" },
-						{ "question": "Она закатывает ___ Ärmel.", "word": "Ärmel", "answer": "den" },
-						{ "question": "Я чувствую ___ warme Futter.", "word": "Futter", "answer": "das" },
-						{ "question": "Она отрезает ___ Etikett.", "word": "Etikett", "answer": "das" },
-						{ "question": "Он завязывает ___ Schnürsenkel.", "word": "Schnürsenkel", "answer": "den" },
-						{ "question": "Я подшиваю ___ Saum.", "word": "Saum", "answer": "den" },
-						{ "question": "Она чистит ___ Kragen.", "word": "Kragen", "answer": "den" }
+						{ "question": "Sie zieht eine Jacke mit ___ Kapuze an.", "word": "Kapuze", "answer": "der" },
+						{ "question": "Ich nehme ___ Tasche.", "word": "Tasche", "answer": "die" },
+						{ "question": "Er näht ___ Knopf an.", "word": "Knopf", "answer": "den" },
+						{ "question": "Wir reparieren ___ Reißverschluss.", "word": "Reißverschluss", "answer": "den" },
+						{ "question": "Sie krempelt ___ linken Ärmel hoch.", "word": "Ärmel", "answer": "den" },
+						{ "question": "Ich fühle ___ warme Futter.", "word": "Futter", "answer": "das" },
+						{ "question": "Sie schneidet ___ Etikett ab.", "word": "Etikett", "answer": "das" },
+						{ "question": "Er bindet ___ linken Schnürsenkel zu.", "word": "Schnürsenkel", "answer": "den" },
+						{ "question": "Ich nähe ___ Saum.", "word": "Saum", "answer": "den" },
+						{ "question": "Sie reinigt ___ Kragen.", "word": "Kragen", "answer": "den" }
 					]
 				},
 				{
 					"id": 5,
 					"tasks": [
-						{ "question": "Он поднимает ___ Kragen.", "word": "Kragen", "answer": "den" },
-						{ "question": "Я проверяю ___ Naht.", "word": "Naht", "answer": "die" },
-						{ "question": "Она выбирает ___ Muster.", "word": "Muster", "answer": "das" },
-						{ "question": "Мы трогаем ___ Stoff.", "word": "Stoff", "answer": "den" },
-						{ "question": "Она проверяет ___ Größe.", "word": "Größe", "answer": "die" },
-						{ "question": "Он носит ___ komplettes Outfit.", "word": "Outfit", "answer": "ein" },
-						{ "question": "Мне нравится ___ Wolle.", "word": "Wolle", "answer": "die" },
-						{ "question": "Она предпочитает ___ Baumwolle.", "word": "Baumwolle", "answer": "die" },
-						{ "question": "Я покупаю Kleid aus ___ Seide.", "word": "Seide", "answer": "der" },
-						{ "question": "Он выбирает ___ neuen Schnitt.", "word": "Schnitt", "answer": "einen" }
+						{ "question": "Er stellt ___ Kragen hoch.", "word": "Kragen", "answer": "den" },
+						{ "question": "Ich prüfe ___ Naht.", "word": "Naht", "answer": "die" },
+						{ "question": "Sie wählt ___ Muster.", "word": "Muster", "answer": "das" },
+						{ "question": "Wir berühren ___ Stoff.", "word": "Stoff", "answer": "den" },
+						{ "question": "Sie prüft ___ Größe.", "word": "Größe", "answer": "die" },
+						{ "question": "Er trägt ___ komplettes Outfit.", "word": "Outfit", "answer": "ein" },
+						{ "question": "Mir gefällt ___ Wolle.", "word": "Wolle", "answer": "die" },
+						{ "question": "Sie bevorzugt ___ Baumwolle.", "word": "Baumwolle", "answer": "die" },
+						{ "question": "Ich kaufe ein Kleid aus ___ Seide.", "word": "Seide", "answer": "der" },
+						{ "question": "Er wählt ___ neuen Schnitt.", "word": "Schnitt", "answer": "einen" }
 					]
 				}
 			]

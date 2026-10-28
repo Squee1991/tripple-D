@@ -1,6 +1,5 @@
 {
   "themeId": "work_study_a2_grammar",
-  "themeTitle": "Работа и учеба: Базовая грамматика (A2)",
   "level": "A2",
   "tasks": [
     {
@@ -58,7 +57,7 @@
       "icon": "\uD83D\uDCBC",
       "wordsPool": ["als", "zu", "denn", "wird", "lasse", "obwohl", "dass"],
       "textElements": [
-        { "type": "text", "content": "Heute ist mein allererster Arbeitstag in der neuen Firma. — Das Büro ist wirklich viel größer " },
+        { "type": "text", "content": "Heute ist mein allererster Arbeitstag in der neuen Firma. — Das Büro ist wirklich viel größer, " },
         { "type": "blank", "id": 1, "correct": "als" },
         { "type": "text", "content": " ich vorher dachte. — Es macht Spaß, die neuen Kollegen " },
         { "type": "blank", "id": 2, "correct": "zu" },

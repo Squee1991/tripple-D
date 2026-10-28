@@ -276,11 +276,11 @@
           {
             "question": "jung",
             "options": [
-              "frisch",
+              "jugendlich",
               "alt",
               "müde"
             ],
-            "answer": "frisch"
+            "answer": "jugendlich"
           },
           {
             "question": "laut",
@@ -312,20 +312,20 @@
           {
             "question": "hässlich",
             "options": [
-              "unscheinbar",
+              "unschön",
               "schön",
               "nett"
             ],
-            "answer": "unscheinbar"
+            "answer": "unschön"
           },
           {
-            "question": "warm",
+            "question": "heiß",
             "options": [
-              "heiß",
+              "sehr warm",
               "kalt",
               "feucht"
             ],
-            "answer": "heiß"
+            "answer": "sehr warm"
           },
           {
             "question": "kalt",
@@ -410,7 +410,7 @@
       {
         "level": 5,
         "tasks": [
-          {"question":"zufrieden","options":["content","ärgerlich","müde"],"answer":"content"},
+          {"question":"zufrieden","options":["glücklich","ärgerlich","müde"],"answer":"glücklich"},
           {"question":"traurig","options":["bedrückt","froh","ruhig"],"answer":"bedrückt"},
           {"question":"glücklich","options":["fröhlich","traurig","still"],"answer":"fröhlich"},
           {"question":"wütend","options":["zornig","ruhig","müde"],"answer":"zornig"},
@@ -497,7 +497,7 @@
           {"question":"erwarten","options":["rechnen mit","vermeiden","vergessen"],"answer":"rechnen mit"},
           {"question":"vermeiden","options":["ausweichen","suchen","finden"],"answer":"ausweichen"},
           {"question":"entscheiden","options":["bestimmen","zögern","fragen"],"answer":"bestimmen"},
-          {"question":"zögern","options":["zögern","handeln","entscheiden"],"answer":"zögern"},
+          {"question":"zögern","options":["zaudern","handeln","entscheiden"],"answer":"zaudern"},
           {"question":"verändern","options":["ändern","lassen","bleiben"],"answer":"ändern"},
           {"question":"bleiben","options":["verharren","gehen","wechseln"],"answer":"verharren"},
           {"question":"beginnen","options":["anfangen","beenden","stoppen"],"answer":"anfangen"},
@@ -558,13 +558,13 @@
           {"question":"spazieren gehen","options":["bummeln","arbeiten","rennen"],"answer":"bummeln"},
           {"question":"einkaufen gehen","options":["shoppen","kochen","essen"],"answer":"shoppen"},
           {"question":"Sport machen","options":["trainieren","schlafen","lesen"],"answer":"trainieren"},
-          {"question":"Pause machen","options":["ausruhen","arbeiten","lernen"],"answer":" sich ausruhen"},
+          {"question":"Pause machen","options":["sich ausruhen","arbeiten","lernen"],"answer":"sich ausruhen"},
           {"question":"telefonieren","options":["anrufen","lesen","schreiben"],"answer":"anrufen"},
           {"question":"nach Hause gehen","options":["heimgehen","arbeiten","bleiben"],"answer":"heimgehen"},
           {"question":"schlafen gehen","options":["ins Bett gehen","aufstehen","arbeiten"],"answer":"ins Bett gehen"},
           {"question":"ins Kino gehen","options":["einen Film sehen","fernsehen","arbeiten"],"answer":"einen Film sehen"},
           {"question":"Musik hören","options":["etwas anhören","lesen","sprechen"],"answer":"etwas anhören"},
-          {"question":"mit Leute sprechen","options":["sich unterhalten","arbeiten","schlafen"],"answer":"sich unterhalten"},
+          {"question":"mit Leuten sprechen","options":["sich unterhalten","arbeiten","schlafen"],"answer":"sich unterhalten"},
           {"question":"arbeiten gehen","options":["einen Job haben","frei haben","spielen"],"answer":"einen Job haben"},
           {"question":"frühstücken gehen","options":["am Morgen essen","Mittag essen","arbeiten"],"answer":"am Morgen essen"},
           {"question":"lange schlafen","options":["spät aufstehen","früh aufstehen","arbeiten"],"answer":"spät aufstehen"},
@@ -842,7 +842,7 @@
         "tasks": [
           {"question": "Ich brauche Briefmarken.", "options": ["Ich gehe zur Post", "Ich gehe zum Arzt", "Ich bleibe hier"], "answer": "Ich gehe zur Post"},
           {"question": "Der Wecker klingelt.", "options": ["Die Nacht ist vorbei", "Ich gehe schlafen", "Es ist Abend"], "answer": "Die Nacht ist vorbei"},
-          {"question": "Wir fliegen morgen.", "options": ["Wir sind am Flughafen", "Wir fahren Bus", "Wir bleiben hier"], "answer": "Wir sind am Flughafen"},
+          {"question": "Wir fliegen morgen.", "options": ["Wir packen heute die Koffer", "Wir fahren Bus", "Wir bleiben hier"], "answer": "Wir packen heute die Koffer"},
           {"question": "Ich habe eine Eins.", "options": ["Ich habe gut gelernt", "Ich bin traurig", "Der Test war schwer"], "answer": "Ich habe gut gelernt"},
           {"question": "Die Heizung ist an.", "options": ["Es wird warm", "Es ist eiskalt", "Das Fenster ist offen"], "answer": "Es wird warm"},
           {"question": "Ich habe mich verspätet.", "options": ["Entschuldigung!", "Ich bin pünktlich", "Hallo"], "answer": "Entschuldigung!"},
@@ -861,7 +861,7 @@
         "level": 7,
         "tasks": [
           {"question": "Ich lerne Vokabeln.", "options": ["Ich möchte sprechen", "Ich schlafe", "Ich esse"], "answer": "Ich möchte sprechen"},
-          {"question": "Die Prüfung ist morgen.", "options": ["Ich bin nervös", "Ich habe Ferien", "Ich bin fertig"], "answer": "Ich nervös"},
+          {"question": "Die Prüfung ist morgen.", "options": ["Ich bin nervös", "Ich habe Ferien", "Ich bin fertig"], "answer": "Ich bin nervös"},
           {"question": "Wir ziehen um.", "options": ["Wir haben eine neue Wohnung", "Wir bleiben hier", "Das Haus ist alt"], "answer": "Wir haben eine neue Wohnung"},
           {"question": "Ich habe meine Brille gesucht.", "options": ["Jetzt habe ich sie", "Ich sehe alles", "Sie ist neu"], "answer": "Jetzt habe ich sie"},
           {"question": "Die Schuhe passen perfekt.", "options": ["Ich kaufe sie", "Sie sind zu klein", "Sie sind teuer"], "answer": "Ich kaufe sie"},
@@ -1047,7 +1047,7 @@
         "tasks": [
           {"question": "Ich brauche Briefmarken.", "options": ["Ich gehe zur Post", "Ich gehe zum Arzt", "Ich bleibe hier"], "answer": "Ich gehe zur Post"},
           {"question": "Der Wecker klingelt.", "options": ["Die Nacht ist vorbei", "Ich gehe schlafen", "Es ist Abend"], "answer": "Die Nacht ist vorbei"},
-          {"question": "Wir fliegen morgen.", "options": ["Wir sind am Flughafen", "Wir fahren Bus", "Wir bleiben hier"], "answer": "Wir sind am Flughafen"},
+          {"question": "Wir fliegen morgen.", "options": ["Wir packen heute die Koffer", "Wir fahren Bus", "Wir bleiben hier"], "answer": "Wir packen heute die Koffer"},
           {"question": "Ich habe eine Eins.", "options": ["Ich habe gut gelernt", "Ich bin traurig", "Der Test war schwer"], "answer": "Ich habe gut gelernt"},
           {"question": "Die Heizung ist an.", "options": ["Es wird warm", "Es ist eiskalt", "Das Fenster ist offen"], "answer": "Es wird warm"},
           {"question": "Ich habe mich verspätet.", "options": ["Entschuldigung!", "Ich bin pünktlich", "Hallo"], "answer": "Entschuldigung!"},
@@ -1066,7 +1066,7 @@
         "level": 7,
         "tasks": [
           {"question": "Ich lerne Vokabeln.", "options": ["Ich möchte sprechen", "Ich schlafe", "Ich esse"], "answer": "Ich möchte sprechen"},
-          {"question": "Die Prüfung ist morgen.", "options": ["Ich bin nervös", "Ich habe Ferien", "Ich bin fertig"], "answer": "Ich nervös"},
+          {"question": "Die Prüfung ist morgen.", "options": ["Ich bin nervös", "Ich habe Ferien", "Ich bin fertig"], "answer": "Ich bin nervös"},
           {"question": "Wir ziehen um.", "options": ["Wir haben eine neue Wohnung", "Wir bleiben hier", "Das Haus ist alt"], "answer": "Wir haben eine neue Wohnung"},
           {"question": "Ich habe meine Brille gesucht.", "options": ["Jetzt habe ich sie", "Ich sehe alles", "Sie ist neu"], "answer": "Jetzt habe ich sie"},
           {"question": "Die Schuhe passen perfekt.", "options": ["Ich kaufe sie", "Sie sind zu klein", "Sie sind teuer"], "answer": "Ich kaufe sie"},
@@ -1363,11 +1363,11 @@
           {"question": "Links", "options": ["rechts", "vorne", "hinten"], "answer": "rechts"},
           {"question": "Sommer", "options": ["heiß", "dunkel", "nass"], "answer": "heiß"},
           {"question": "Bett", "options": ["schlafen", "arbeiten", "waschen"], "answer": "schlafen"},
-          {"question": "Vater", "options": ["Sohn", "Bruder", "Opa"], "answer": "Sohn"},
+          {"question": "Vater", "options": ["Sohn", "Garten", "Stuhl"], "answer": "Sohn"},
           {"question": "Ohr", "options": ["hören", "riechen", "fühlen"], "answer": "hören"},
-          {"question": "Heute", "options": ["morgen", "übermorgen", "gestern"], "answer": "morgen"},
+          {"question": "Heute", "options": ["morgen", "Stunde", "Jahr"], "answer": "morgen"},
           {"question": "Katze", "options": ["miauen", "singen", "laufen"], "answer": "miauen"},
-          {"question": "Viel", "options": ["wenig", "mehr", "genug"], "answer": "wenig"},
+          {"question": "Viel", "options": ["wenig", "oft", "schnell"], "answer": "wenig"},
           {"question": "Feuer", "options": ["heiß", "kalt", "trocken"], "answer": "heiß"},
           {"question": "Arzt", "options": ["Krankenhaus", "Park", "Kino"], "answer": "Krankenhaus"}
         ]
@@ -1567,12 +1567,12 @@
           {"question": "Wie geht es Ihnen?", "options": ["Sehr gut, danke", "Ich bin Max", "Gern geschehen"], "answer": "Sehr gut, danke"},
           {"question": "Hast du Geschwister?", "options": ["Ja, einen Bruder", "Nein, ich bin 20", "Ich wohne hier"], "answer": "Ja, einen Bruder"},
           {"question": "Entschuldigung!", "options": ["Kein Problem", "Danke schön", "Bitte sehr"], "answer": "Kein Problem"},
-          {"question": "Möchten Sie Kaffee?", "options": ["Ja, bitte", "Nein, danke", "Ich weiß nicht"], "answer": "Ja, bitte"},
+          {"question": "Möchten Sie Kaffee?", "options": ["Ja, bitte", "Guten Abend", "Ich heiße Anna"], "answer": "Ja, bitte"},
           {"question": "Wann treffen wir uns?", "options": ["Um 5 Uhr", "Am Bahnhof", "Zwei Stunden"], "answer": "Um 5 Uhr"},
-          {"question": "Sprichst du Deutsch?", "options": ["Ein bisschen", "Ich lerne noch", "Natürlich"], "answer": "Ein bisschen"},
+          {"question": "Sprichst du Deutsch?", "options": ["Ein bisschen", "Guten Appetit", "Bis morgen"], "answer": "Ein bisschen"},
           {"question": "Wo wohnst du?", "options": ["In München", "In der Schule", "Im Auto"], "answer": "In München"},
           {"question": "Was machst du heute?", "options": ["Ich arbeite", "Ich habe gemacht", "Ich war dort"], "answer": "Ich arbeite"},
-          {"question": "Darf ich fragen?", "options": ["Natürlich", "Bitte nicht", "Später"], "answer": "Natürlich"},
+          {"question": "Darf ich fragen?", "options": ["Natürlich", "Gute Nacht", "Ich bin müde"], "answer": "Natürlich"},
           {"question": "Schönes Wochenende!", "options": ["Danke, gleichfalls!", "Hallo!", "Gute Reise!"], "answer": "Danke, gleichfalls!"},
           {"question": "Bis bald!", "options": ["Tschüss!", "Guten Morgen!", "Danke!"], "answer": "Tschüss!"}
         ]
@@ -1588,9 +1588,9 @@
           {"question": "Wo ist die Toilette?", "options": ["Dort hinten rechts.", "Das ist ein Haus.", "Guten Appetit."], "answer": "Dort hinten rechts."},
           {"question": "Schmeckt das Essen?", "options": ["Ja, es ist sehr lecker.", "Nein, danke.", "Ich koche gern."], "answer": "Ja, es ist sehr lecker."},
           {"question": "Trinkst du gern Tee?", "options": ["Ja, mit Zitrone.", "Nein, ich esse Pizza.", "Viel Glück."], "answer": "Ja, mit Zitrone."},
-          {"question": "Was suchst du?", "options": ["Meinen Schlüssel.", "Einen Freund.", "In der Stadt."], "answer": "Meinen Schlüssel."},
+          {"question": "Was suchst du?", "options": ["Meinen Schlüssel.", "Um acht Uhr.", "In der Stadt."], "answer": "Meinen Schlüssel."},
           {"question": "Wann hast du Zeit?", "options": ["Am Wochenende.", "Gestern Abend.", "Zehn Euro."], "answer": "Am Wochenende."},
-          {"question": "Kommst du mit?", "options": ["Ja, gerne.", "Nein, ich gehe.", "Vielleicht später."], "answer": "Ja, gerne."},
+          {"question": "Kommst du mit?", "options": ["Ja, gerne.", "Das ist mein Bruder.", "Es ist zehn Uhr."], "answer": "Ja, gerne."},
           {"question": "Wie ist das Wetter?", "options": ["Es regnet heute.", "Es ist 5 Uhr.", "Das ist schön."], "answer": "Es regnet heute."},
           {"question": "Wer ist das?", "options": ["Das ist mein Bruder.", "Das ist ein Tisch.", "Ich weiß nicht."], "answer": "Das ist mein Bruder."},
           {"question": "Kannst du mir helfen?", "options": ["Natürlich, gerne.", "Nein, ich danke.", "Bitte sehr."], "answer": "Natürlich, gerne."},
@@ -1633,7 +1633,7 @@
           {"question": "Ist das im Angebot?", "options": ["Ja, 20% reduziert.", "Nein, das ist neu.", "Ich weiß nicht."], "answer": "Ja, 20% reduziert."},
           {"question": "Haben Sie meine Tasche gesehen?", "options": ["Ja, sie liegt dort.", "Nein, ich habe Geld.", "Sie ist schön."], "answer": "Ja, sie liegt dort."},
           {"question": "Das Hemd passt nicht.", "options": ["Ist es zu klein?", "Es ist weiß.", "Ich kaufe es."], "answer": "Ist es zu klein?"},
-          {"question": "Vielen Dank für die Hilfe.", "options": ["Gern geschehen.", "Bitte sehr.", "Guten Tag."], "answer": "Gern geschehen."},
+          {"question": "Vielen Dank für die Hilfe.", "options": ["Gern geschehen.", "Wie bitte?", "Guten Tag."], "answer": "Gern geschehen."},
           {"question": "Schönen Tag noch!", "options": ["Danke, ebenfalls!", "Hallo!", "Tschüss!"], "answer": "Danke, ebenfalls!"}
         ]
       },
@@ -1674,7 +1674,7 @@
           {"question": "Brauche ich ein Rezept?", "options": ["Ja, für dieses Medikament.", "Nein, danke.", "Ich weiß nicht."], "answer": "Ja, für dieses Medikament."},
           {"question": "Husten Sie auch?", "options": ["Ja, besonders nachts.", "Nein, ich rauche nicht.", "Ich trinke Wasser."], "answer": "Ja, besonders nachts."},
           {"question": "Können Sie mich krankschreiben?", "options": ["Ja, für drei Tage.", "Nein, danke.", "Ich bin gesund."], "answer": "Ja, für drei Tage."},
-          {"question": "Bleiben Sie gesund!", "options": ["Danke, du auch!", "Hallo!", "Guten Tag!"], "answer": "Danke, du auch!"}
+          {"question": "Bleiben Sie gesund!", "options": ["Danke, Sie auch!", "Hallo!", "Guten Tag!"], "answer": "Danke, Sie auch!"}
         ]
       },
       {
@@ -1768,10 +1768,10 @@
           {"question": "Ich habe kein Auto.", "options": ["Ich gehe zu Fuß", "Ich fahre schnell", "Ich bin reich"], "answer": "Ich gehe zu Fuß"},
           {"question": "Nicht wahr?", "options": ["Stimmt das?", "Ist das neu?", "Wo ist das?"], "answer": "Stimmt das?"},
           {"question": "Keine Lust haben.", "options": ["Ich will nicht", "Ich freue mich", "Ich bin müde"], "answer": "Ich will nicht"},
-          {"question": "Er kommt nicht heute.", "options": ["Er kommt morgen", "Er ist schon da", "Er kommt jetzt"], "answer": "Er kommt morgen"},
+          {"question": "Er kommt heute nicht.", "options": ["Er kommt morgen", "Er ist schon da", "Er kommt jetzt"], "answer": "Er kommt morgen"},
           {"question": "Ich verstehe nichts.", "options": ["Ich bin verwirrt", "Ich weiß alles", "Ich höre gut"], "answer": "Ich bin verwirrt"},
           {"question": "Das ist keine Hilfe.", "options": ["Das nützt nichts", "Das ist toll", "Danke schön"], "answer": "Das nützt nichts"},
-          {"question": "Wir haben kein Brot.", "options": ["Wir sind hungrig", "Wir essen Brot", "Wir kaufen Brot"], "answer": "Wir sind hungrig"},
+          {"question": "Wir haben kein Brot.", "options": ["Wir kaufen Brot", "Wir essen Brot", "Das Brot ist frisch"], "answer": "Wir kaufen Brot"},
           {"question": "Nicht rauchen!", "options": ["Verboten", "Erlaubt", "Bitte"], "answer": "Verboten"},
           {"question": "Ich kenne ihn nicht.", "options": ["Er ist fremd", "Er ist mein Freund", "Ich liebe ihn"], "answer": "Er ist fremd"},
           {"question": "Kein Problem!", "options": ["Alles okay", "Das ist schwer", "Hilf mir"], "answer": "Alles okay"},
@@ -1871,11 +1871,11 @@
           {"question": "Ich habe keine Zweifel.", "options": ["Ich bin sicher", "Ich weiß nicht", "Vielleicht"], "answer": "Ich bin sicher"},
           {"question": "Wir brauchen nicht zu rennen.", "options": ["Wir haben Zeit", "Wir sind spät", "Der Bus kommt"], "answer": "Wir haben Zeit"},
           {"question": "Er kommt nie pünktlich.", "options": ["Er ist immer spät", "Er ist da", "Er wartet"], "answer": "Er ist immer spät"},
-          {"question": "Das ist kein Problem für mich.", "options": ["Das ist einfach", "Das ist schwer", "Ich helfe nicht"], "answer": "Das einfach"},
+          {"question": "Das ist kein Problem für mich.", "options": ["Das ist einfach", "Das ist schwer", "Ich helfe nicht"], "answer": "Das ist einfach"},
           {"question": "Ich habe nichts zu tun.", "options": ["Mir ist langweilig", "Ich bin im Stress", "Ich arbeite"], "answer": "Mir ist langweilig"},
           {"question": "Das Kind ist nicht mehr klein.", "options": ["Es ist schon groß", "Es ist ein Baby", "Es spielt"], "answer": "Es ist schon groß"},
           {"question": "Man sieht nichts.", "options": ["Es ist dunkel", "Die Sonne scheint", "Es ist hell"], "answer": "Es ist dunkel"},
-          {"question": "Ich habe kein Interesse.", "options": ["Das ist mir egal", "Das ist spannend", "Ich möchte das"], "answer": "Das mir egal"},
+          {"question": "Ich habe kein Interesse.", "options": ["Das ist mir egal", "Das ist spannend", "Ich möchte das"], "answer": "Das ist mir egal"},
           {"question": "Es macht mir nichts aus.", "options": ["Das ist okay für mich", "Ich bin sauer", "Das ist schlecht"], "answer": "Das ist okay für mich"},
           {"question": "Ich habe niemanden gefragt.", "options": ["Ich habe es selbst gemacht", "Alle wissen es", "Wer hat das gesagt?"], "answer": "Ich habe es selbst gemacht"},
           {"question": "Das ist nicht weit von hier.", "options": ["Man kann zu Fuß gehen", "Wir brauchen ein Taxi", "Es ist in Berlin"], "answer": "Man kann zu Fuß gehen"},
@@ -1889,7 +1889,7 @@
           {"question": "Ich habe keine Ahnung.", "options": ["Ich weiß es nicht", "Ich habe eine Idee", "Ich verstehe"], "answer": "Ich weiß es nicht"},
           {"question": "Das ist nicht fair.", "options": ["Das ist ungerecht", "Das ist gut", "Alles okay"], "answer": "Das ist ungerecht"},
           {"question": "Ich brauche keine Hilfe.", "options": ["Ich mache das allein", "Bitte hilf mir", "Ich bin müde"], "answer": "Ich mache das allein"},
-          {"question": "Wir sind nicht spät.", "options": ["Wir sind pünktlich", "Lauf schnell", "Die Zeit ist um"], "answer": "Wir sind pünktlich"},
+          {"question": "Wir sind nicht zu spät.", "options": ["Wir sind pünktlich", "Lauf schnell", "Die Zeit ist um"], "answer": "Wir sind pünktlich"},
           {"question": "Niemand ist zu Hause.", "options": ["Das Haus ist leer", "Alle sind da", "Es ist laut"], "answer": "Das Haus ist leer"},
           {"question": "Ich verstehe kein Wort.", "options": ["Ich spreche kein Deutsch", "Ich höre gut", "Wiederholen Sie bitte"], "answer": "Ich spreche kein Deutsch"},
           {"question": "Das ist nicht wahr.", "options": ["Das ist eine Lüge", "Das stimmt", "Ich glaube dir"], "answer": "Das ist eine Lüge"},
@@ -1934,7 +1934,7 @@
           {"question": "Das ist keine Lösung.", "options": ["Das hilft nicht", "Das ist gut", "Wir haben es geschafft"], "answer": "Das hilft nicht"},
           {"question": "Ich habe nichts gesagt.", "options": ["Ich war still", "Ich habe gerufen", "Hör zu"], "answer": "Ich war still"},
           {"question": "Das ist nicht mein Name.", "options": ["Ich heiße anders", "Das bin ich", "Wer bist du?"], "answer": "Ich heiße anders"},
-          {"question": "Kein Geld, kein Honig.", "options": ["Ohne Geld geht nichts", "Ich mag Honig", "Ich bin reich"], "answer": "Ohne Geld geht nichts"},
+          {"question": "Ohne Fleiß kein Preis.", "options": ["Ohne Arbeit kein Erfolg", "Ich mag Preise", "Ich bin faul"], "answer": "Ohne Arbeit kein Erfolg"},
           {"question": "Nicht der Rede wert.", "options": ["Gern geschehen", "Danke", "Sprich"], "answer": "Gern geschehen"},
           {"question": "Ich habe niemanden gesehen.", "options": ["Es war niemand da", "Alle waren dort", "Wo?"], "answer": "Es war niemand da"},
           {"question": "Das ist nicht einfach.", "options": ["Das ist kompliziert", "Das ist leicht", "Ich schaffe das"], "answer": "Das ist kompliziert"},
@@ -2033,7 +2033,7 @@
           {"question": "Den Faden verlieren.", "options": ["Vergessen", "Nähen", "Suchen"], "answer": "Vergessen"},
           {"question": "Auf dem Schlauch stehen.", "options": ["Nichts verstehen", "Gartenarbeit", "Wasser holen"], "answer": "Nichts verstehen"},
           {"question": "Ins Blaue hinein.", "options": ["Ohne Plan", "Himmel sehen", "Farbe kaufen"], "answer": "Ohne Plan"},
-          {"question": "Kalten Kaffee sein.", "options": ["Unwichtig sein", "Trinken", "Frühstücken"], "answer": "Unwichtig sein"},
+          {"question": "Kalter Kaffee sein.", "options": ["Unwichtig sein", "Trinken", "Frühstücken"], "answer": "Unwichtig sein"},
           {"question": "Die Flinte ins Korn werfen.", "options": ["Aufgeben", "Bauernhof", "Sport"], "answer": "Aufgeben"},
           {"question": "Jemanden im Regen stehen lassen.", "options": ["Nicht helfen", "Wetter", "Warten"], "answer": "Nicht helfen"},
           {"question": "Ein offenes Ohr haben.", "options": ["Zuhören", "Arzt besuchen", "Hören"], "answer": "Zuhören"},
@@ -2053,7 +2053,7 @@
           {"question": "Den Ball flach halten.", "options": ["Kein Risiko eingehen", "Fußball spielen", "Sport"], "answer": "Kein Risiko eingehen"},
           {"question": "In den sauren Apfel beißen.", "options": ["Etwas Unangenehmes tun", "Essen", "Obst kaufen"], "answer": "Etwas Unangenehmes tun"},
           {"question": "Eulen nach Athen tragen.", "options": ["Etwas Überflüssiges tun", "Vögel", "Reisen"], "answer": "Etwas Überflüssiges tun"},
-          {"question": "Den Wald vor Bäumen nicht sehen.", "options": ["Details verhindern Überblick", "Wandern", "Natur"], "answer": "Details verhindern Überblick"},
+          {"question": "Den Wald vor lauter Bäumen nicht sehen.", "options": ["Details verhindern Überblick", "Wandern", "Natur"], "answer": "Details verhindern Überblick"},
           {"question": "Eine Extrawurst verlangen.", "options": ["Sonderrechte wollen", "Essen", "Grillen"], "answer": "Sonderrechte wollen"},
           {"question": "Lügen haben kurze Beine.", "options": ["Ehrlichkeit ist besser", "Sport", "Körper"], "answer": "Ehrlichkeit ist besser"},
           {"question": "Auf den Putz hauen.", "options": ["Viel feiern", "Bauen", "Renovieren"], "answer": "Viel feiern"},

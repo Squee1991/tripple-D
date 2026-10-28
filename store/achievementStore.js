@@ -752,7 +752,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				updateProgress('pumpkin', shopItems['pumpkin'] ? 1 : 0)
 				updateProgress('punch', shopItems['punch'] ? 1 : 0)
 				updateProgress('spellBook', shopItems['spellBook'] ? 1 : 0)
-				updateProgress('halloweenTheme', shopItems['theme'] ? 1 : 0)
+				// тема Хэллоуина продаётся в магазине события как товар 'ghostEffect' («Тема приложения - Хэллоуин»)
+				updateProgress('halloweenTheme', (shopItems['ghostEffect'] || shopItems['theme']) ? 1 : 0)
 				updateProgress('halloweenReputation', eventData.reputationPoints || 0)
 
 				const metaChildrenIds = [

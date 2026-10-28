@@ -1,4 +1,4 @@
-import FirstStep from "assets/images/locations-images/FirstStep.png"
+ import FirstStep from "assets/images/locations-images/FirstStep.png"
 import WindValley from "assets/images/locations-images/wind-valley.png"
 import NorthCliffs from 'assets/images/locations-images/north-cliffs.webp'
 import LakeRuins from 'assets/images/locations-images/lake-ruins.png'
@@ -14,6 +14,10 @@ import TimeGate from 'assets/images/locations-images/time_gate.jpg'
 import EdgeImages from 'assets/images/locations-images/edgeImages.webp'
 import SecretLands from 'assets/images/locations-images/secret-lands.webp'
 import MixedLands from 'assets/images/locations-images/mixedArticle.jpg'
+import Landmark from 'assets/images/locations-images/landmark.jpg'
+import Ways from 'assets/images/locations-images/Ways.jpg'
+import Watch from 'assets/images/locations-images/Watch.jpg'
+import Archive from 'assets/images/locations-images/Archive.jpg'
 
 export const regions = {
 		beginner: [
@@ -165,32 +169,50 @@ export const regions = {
 			},
 		],
 	    intermediate: [
+			{
+				id: "place-prepositions",
+				pathTo: "place-prepositions",
+				theme: "place-prep",
+				name: "locationNames.place-prepositions",
+				level: 16,
+				desc: "regions.descriptionPlacePrepositions",
+				icon: Landmark
+			},
+			{
+				id: "direction-prepositions",
+				pathTo: "direction-prepositions",
+				theme: "direction-prep",
+				name: "locationNames.direction-prepositions",
+				level: 17,
+				desc: "regions.descriptionDirectionPrepositions",
+				icon: Ways
+			},
+			{
+				id: "action-prepositions",
+				pathTo: "action-prepositions",
+				theme: "action-prep",
+				name: "locationNames.action-prepositions",
+				level: 18,
+				desc: "regions.descriptionActionPrepositions",
+				icon: Watch
+			},
+			{
+				id: "past-simple",
+				pathTo: "past-simple",
+				theme: "past-simple",
+				name: "locationNames.past-simple",
+				level: 19,
+				desc: "regions.descriptionPastSimple",
+				icon: Archive
+			},
 			// {
-			// 	id: "place-prepositions",
-			// 	pathTo: "place-prepositions",
-			// 	theme: "place-prep",
-			// 	name: "Предлоги места",
-			// 	level: 0,
-			// 	desc: "Отрабатываем предлоги места (in, an, auf, unter...) и выбор между Dativ и Akkusativ при ответах на вопросы «Где?» и «Куда?».",
-			// 	icon: MixedLands
-			// },
-			// {
-			// 	id: "direction-prepositions",
-			// 	pathTo: "direction-prepositions",
-			// 	theme: "direction-prep",
-			// 	name: "Предлоги места",
-			// 	level: 0,
-			// 	desc: "Отрабатываем предлоги места (in, an, auf, unter...) и выбор между Dativ и Akkusativ при ответах на вопросы «Где?» и «Куда?».",
-			// 	icon: MixedLands
-			// },
-			// {
-			// 	id: "action-prepositions",
-			// 	pathTo: "action-prepositions",
-			// 	theme: "action-prep",
-			// 	name: "Предлоги места",
-			// 	level: 0,
-			// 	desc: "Отрабатываем предлоги места (für, ohne, zu, von, mit, aus).",
-			// 	icon: MixedLands
+			// 	id: "requests-land",
+			// 	pathTo: "requests-land",
+			// 	theme: "requests",
+			// 	name: "locationNames.requests-land",
+			// 	level: 20,
+			// 	desc: "regions.descriptionRequestsLand",
+			// 	icon: Action
 			// }
 		]
 	};

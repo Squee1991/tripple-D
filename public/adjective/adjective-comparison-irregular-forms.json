@@ -81,7 +81,7 @@
   },
   {
     "question": "Wer von euch hat die ___ Erfahrung in diesem Bereich?",
-    "options": ["meiste", "meiste", "mehr", "viele"],
+    "options": ["meiste", "am meisten", "mehr", "viele"],
     "answer": "meiste"
   },
   {
@@ -156,7 +156,7 @@
     "answer": "mehr"
   },
   {
-    "question": "Von allen Schülern hat Tom ___ Bücher gelesen.",
+    "question": "Von allen Schülern liest Tom ___.",
     "options": ["am meisten", "mehr", "viel", "meiste"],
     "answer": "am meisten"
   },
@@ -166,7 +166,7 @@
     "answer": "mehr"
   },
   {
-    "question": "Wer hat von euch ___ Aufgaben gemacht?",
+    "question": "Wer von euch hat ___ gearbeitet?",
     "options": ["am meisten", "mehr", "viel", "meiste"],
     "answer": "am meisten"
   },
@@ -186,7 +186,7 @@
     "answer": "mehr"
   },
   {
-    "question": "Von allen Kindern isst Peter ___ Schokolade.",
+    "question": "Von allen Kindern nascht Peter ___.",
     "options": ["am meisten", "mehr", "viel", "meiste"],
     "answer": "am meisten"
   },
@@ -348,7 +348,7 @@
     "answer": "mehr"
   },
   {
-    "question": "Von allen Kindern hat Lisa ___ Süßigkeiten gegessen.",
+    "question": "Von allen Kindern hat Lisa ___ gegessen.",
     "options": ["am meisten", "mehr", "viel", "meiste"],
     "answer": "am meisten"
   },
@@ -388,7 +388,7 @@
     "answer": "näher"
   },
   {
-    "question": "Von allen Geschäften ist das Bäckerei ___.",
+    "question": "Von allen Geschäften ist die Bäckerei ___.",
     "options": ["am nächsten", "näher", "nah", "nähste"],
     "answer": "am nächsten"
   },

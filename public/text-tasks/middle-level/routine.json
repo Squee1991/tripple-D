@@ -1,6 +1,5 @@
 {
   "themeId": "meeting_people_vocab_a2",
-  "themeTitle": "Знакомство: Лексика и общение (A2)",
   "level": "A2",
   "tasks": [
     {
@@ -80,7 +79,7 @@
       "title": "Die neuen Kollegen",
       "translation": "themeTextTitleRoutine_A2.routineFour",
       "icon": "\uD83D\uDC54",
-      "wordsPool": ["Kollegen", "Pause", "erzählt", "woher", "obwohl", "verheiratet", "freue"],
+      "wordsPool": ["Kollegen", "erzählt", "woher", "obwohl", "verheiratet", "freue"],
       "textElements": [
         { "type": "text", "content": "Heute lerne ich meine neuen " },
         { "type": "blank", "id": 1, "correct": "Kollegen" },
@@ -88,9 +87,9 @@
         { "type": "blank", "id": 2, "correct": "erzählt" },
         { "type": "text", "content": ". — Ich habe ihn gefragt, " },
         { "type": "blank", "id": 3, "correct": "woher" },
-        { "type": "text", "content": " er genau kommt. — Er kommt aus Spanien, " },
+        { "type": "text", "content": " er genau kommt. — Er kommt aus Spanien und spricht schon super Deutsch, " },
         { "type": "blank", "id": 4, "correct": "obwohl" },
-        { "type": "text", "content": " er schon super Deutsch spricht. — Er ist schon lange " },
+        { "type": "text", "content": " er erst seit einem Jahr hier lebt. — Er ist schon lange " },
         { "type": "blank", "id": 5, "correct": "verheiratet" },
         { "type": "text", "content": " und hat zwei kleine Kinder. — Ich " },
         { "type": "blank", "id": 6, "correct": "freue" },
@@ -180,7 +179,7 @@
         { "type": "blank", "id": 1, "correct": "zu" },
         { "type": "text", "content": " finden. — Gestern hat mir ein netter Mann eine Nachricht " },
         { "type": "blank", "id": 2, "correct": "geschrieben" },
-        { "type": "text", "content": ". — Er sieht auf seinen Fotos jünger aus " },
+        { "type": "text", "content": ". — Er sieht auf seinen Fotos jünger aus, " },
         { "type": "blank", "id": 3, "correct": "als" },
         { "type": "text", "content": " er in Wirklichkeit ist. — Ich antworte ihm sofort, " },
         { "type": "blank", "id": 4, "correct": "obwohl" },

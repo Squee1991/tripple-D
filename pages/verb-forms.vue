@@ -113,11 +113,11 @@ const typeTranslations = {
   fr: { weak: 'Faible', strong: 'Fort', mixed: 'Mixte', modal: 'Modal' },
   uz: { weak: 'Kuchsiz', strong: 'Kuchli', mixed: 'Aralash', modal: 'Modal' },
   ro: { weak: 'Slab', strong: 'Tare', mixed: 'Mixt', modal: 'Modal' },
-  hi: { weak: 'कमज़ोर', strong: 'मज़बूत', mixed: 'मिश्रित', modal: 'модальный' },
+  hi: { weak: 'कमज़ोर', strong: 'मज़बूत', mixed: 'मिश्रित', modal: 'मोडल' },
   ar: { weak: 'ضعيف', strong: 'قوي', mixed: 'مختلط', modal: 'ناقص' }
 }
 
-const getLocalizedType = (typekey) => {
+const getLocalizedType = (typeKey) => {
    return typeTranslations[locale.value]?.[typekey] || typeTranslations['en']?.[typeKey] || typeKey
 }
 

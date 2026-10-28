@@ -424,7 +424,7 @@
     "defaultNext": "step_13"
   },
   "step_13": {
-    "botText": "Das macht zusammen 12,50 Euro  Wie möchten Sie bezahlen?",
+    "botText": "Das macht zusammen 12,50 Euro. Wie möchten Sie bezahlen?",
     "botTranslation": {
       "ru-RU": "Это стоит вместе 12 евро и 50 центов. Как вы желаете оплатить?",
       "en-US": "That comes to 12 euros and 50 cents altogether. How would you like to pay?",
@@ -458,24 +458,24 @@
     ],
     "options": [
       {
-        "text": "Ich bezahle bar. Hier ist ein 15 Euro Schein.",
+        "text": "Ich bezahle bar. Hier sind 15 Euro.",
         "translation": {
-          "ru-RU": "Я оплачу наличными. Вот купюра 15 евро.",
-          "en-US": "I'll pay in cash. Here is a 15-euro note.",
-          "ar-SA": "سأدفع نقداً. تفضل، هذه ورقة نقود بقيمة 15 يورو.",
-          "es-ES": "Pago en efectivo. Aquí tiene un billete de 15 euros.",
-          "fr-FR": "Je paye en espèces. Voici un billet de 15 euros.",
-          "hi-IN": "मैं नकद भुगतान करूँगा। यह 15 यूरो का नोट है।",
-          "pl-PL": "Zapłacę gotówką. Proszę, oto banknot 15 euro.",
-          "ro-RO": "Plătesc cash. Poftim o bancnotă de 15 euro.",
-          "tr-TR": "Nakit ödüyorum. Buyurun, 15 Euro'luk bir banknot.",
-          "uk-UA": "Я оплачу готівкою. Ось купюра 15 євро.",
-          "uz-UZ": "Naqd to'layman. Mana 15 yevrolik kupyura."
+          "ru-RU": "Я оплачу наличными. Вот 15 евро.",
+          "en-US": "I'll pay in cash. Here are 15 euros.",
+          "ar-SA": "سأدفع نقداً. تفضل، هذه 15 يورو.",
+          "es-ES": "Pago en efectivo. Aquí tiene 15 euros.",
+          "fr-FR": "Je paye en espèces. Voici 15 euros.",
+          "hi-IN": "मैं नकद भुगतान करूँगा। ये रहे 15 यूरो।",
+          "pl-PL": "Zapłacę gotówką. Proszę, oto 15 euro.",
+          "ro-RO": "Plătesc cash. Poftim 15 euro.",
+          "tr-TR": "Nakit ödüyorum. Buyurun, 15 Euro.",
+          "uk-UA": "Я оплачу готівкою. Ось 15 євро.",
+          "uz-UZ": "Naqd to'layman. Mana 15 yevro."
         },
         "nextStep": "step_15"
       },
       {
-        "text": "Ich bezahle bar. Hier ist ein 20 Euro Schein.",
+        "text": "Ich bezahle bar. Hier ist ein 20-Euro-Schein.",
         "translation": {
           "ru-RU": "Я оплачу наличными. Вот купюра 20 евро.",
           "en-US": "I'll pay in cash. Here is a 20-euro note.",

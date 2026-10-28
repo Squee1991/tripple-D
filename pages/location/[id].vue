@@ -90,6 +90,7 @@
         @back="closeModal"
         :cancel-text="t('themeModal.close')"
     />
+    <VLandIntro v-if="hasLandIntro" v-model="showLandIntro" :region="currentRegion"/>
   </div>
 </template>
 
@@ -107,10 +108,12 @@ import VReviveModal from "~/src/components/V-reviveModal.vue";
 import {showRewarded} from '~/utils/admob.js';
 import VTransition from "~/src/components/V-transition.vue";
 import {Capacitor} from "@capacitor/core";
+import VLandIntro from "~/src/components/V-landIntro.vue";
+import {isLandIntroSeen} from "~/utils/landIntro.js";
 
 const route = useRoute();
 const router = useRouter();
-const {t, locale} = useI18n();
+const {t, te, locale} = useI18n();
 const chainStore = userChainStore();
 const langStore = userlangStore();
 const authStore = userAuthStore();
@@ -324,6 +327,14 @@ function closeModal() {
 
 watch(currentRegionKey, fetchQuests, {immediate: true});
 
+// Ёжик один раз рассказывает, что изучаем в этой земле
+const showLandIntro = ref(false);
+const hasLandIntro = computed(() => !!currentRegion.value && te(`landIntro.${currentRegion.value.id}.p1`));
+
+watch(() => currentRegion.value?.id, (id) => {
+  showLandIntro.value = !!id && hasLandIntro.value && !isLandIntroSeen(id);
+}, {immediate: true});
+
 onMounted(async () => {
   await chainStore.loadProgressFromFirebase();
   updateRemainingAds();
@@ -372,7 +383,6 @@ onMounted(async () => {
   margin-left: 15px;
   text-shadow: 0px 1px var(--title);
 }
-
 .lives-bar__content {
   display: flex;
   justify-content: space-between;

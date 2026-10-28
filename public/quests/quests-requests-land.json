@@ -1,0 +1,1901 @@
+[
+  {
+    "questId": "requests-1",
+    "title": "requestsLand.questTitle",
+    "progress": "0/15",
+    "description": "requestsLand.questDescription",
+    "conditions": {
+      "goal": "requestsLand.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "helfen",
+        "translation-ru": "помогать",
+        "translation-en": "to help",
+        "translation-uk": "допомагати",
+        "translation-pl": "pomagać",
+        "translation-es": "ayudar",
+        "translation-fr": "aider",
+        "translation-ar": "يساعد",
+        "translation-hi": "मदद करना",
+        "translation-ro": "a ajuta",
+        "translation-tr": "yardım etmek",
+        "translation-uz": "yordam bermoq"
+      },
+      {
+        "word": "nehmen",
+        "translation-ru": "брать",
+        "translation-en": "to take",
+        "translation-uk": "брати",
+        "translation-pl": "brać",
+        "translation-es": "tomar",
+        "translation-fr": "prendre",
+        "translation-ar": "يأخذ",
+        "translation-hi": "लेना",
+        "translation-ro": "a lua",
+        "translation-tr": "almak",
+        "translation-uz": "olmoq"
+      },
+      {
+        "word": "leise",
+        "translation-ru": "тихо",
+        "translation-en": "quiet",
+        "translation-uk": "тихо",
+        "translation-pl": "cicho",
+        "translation-es": "en silencio",
+        "translation-fr": "doucement",
+        "translation-ar": "بهدوء",
+        "translation-hi": "धीरे",
+        "translation-ro": "încet",
+        "translation-tr": "sessiz",
+        "translation-uz": "jim"
+      },
+      {
+        "word": "vergessen",
+        "translation-ru": "забывать",
+        "translation-en": "to forget",
+        "translation-uk": "забувати",
+        "translation-pl": "zapominać",
+        "translation-es": "olvidar",
+        "translation-fr": "oublier",
+        "translation-ar": "ينسى",
+        "translation-hi": "भूलना",
+        "translation-ro": "a uita",
+        "translation-tr": "unutmak",
+        "translation-uz": "unutmoq"
+      },
+      {
+        "word": "die Wahrheit",
+        "translation-ru": "правда",
+        "translation-en": "truth",
+        "translation-uk": "правда",
+        "translation-pl": "prawda",
+        "translation-es": "la verdad",
+        "translation-fr": "la vérité",
+        "translation-ar": "الحقيقة",
+        "translation-hi": "सच",
+        "translation-ro": "adevărul",
+        "translation-tr": "gerçek",
+        "translation-uz": "haqiqat"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "requestsLand.questTask1",
+        "options": [
+          "Komm!",
+          "Kommst!",
+          "Komme du!"
+        ],
+        "answer": "Komm!"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "requestsLand.questTask2",
+        "correctAnswer": "hilf"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "requestsLand.questTask3",
+        "correctAnswer": "nimm"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "requestsLand.questTask4",
+        "words": [
+          "Sprich",
+          "langsamer",
+          "Sprichst"
+        ],
+        "correctOrder": [
+          "Sprich",
+          "langsamer"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "requestsLand.questTask5",
+        "options": [
+          "Lies den Text!",
+          "Liest den Text!",
+          "Lesen den Text!"
+        ],
+        "answer": "Lies den Text!"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "requestsLand.questTask6",
+        "correctAnswer": "sei"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "requestsLand.questTask7",
+        "text": "Anna, kauf bitte Brot und Milch!",
+        "options": [
+          "Brot und Milch",
+          "Brot und Käse",
+          "Milch und Eier"
+        ],
+        "answer": "Brot und Milch"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "requestsLand.questTask8",
+        "correctAnswer": "iss"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "requestsLand.questTask9",
+        "words": [
+          "Gib",
+          "Stift",
+          "mir",
+          "den",
+          "gibst"
+        ],
+        "correctOrder": [
+          "Gib",
+          "mir",
+          "den",
+          "Stift"
+        ]
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "requestsLand.questTask10",
+        "options": [
+          "Warte!",
+          "Wartest!",
+          "Warten du!"
+        ],
+        "answer": "Warte!"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "requestsLand.questTask11",
+        "correctAnswer": "sag"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "requestsLand.questTask12",
+        "options": [
+          "Vergiss den Schlüssel nicht!",
+          "Vergisst den Schlüssel nicht!",
+          "Vergessen den Schlüssel nicht!"
+        ],
+        "answer": "Vergiss den Schlüssel nicht!"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "requestsLand.questTask13",
+        "text": "Lisa, fahr bitte mit dem Bus zur Schule!",
+        "options": [
+          "mit dem Bus",
+          "mit dem Auto",
+          "mit dem Fahrrad"
+        ],
+        "answer": "mit dem Bus"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "requestsLand.questTask14",
+        "correctAnswer": "war"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "requestsLand.questTask15",
+        "correctAnswer": "am"
+      }
+    ]
+  },
+  {
+    "questId": "requests-2",
+    "title": "requestsLandTwo.questTitle",
+    "progress": "0/15",
+    "description": "requestsLandTwo.questDescription",
+    "conditions": {
+      "goal": "requestsLandTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Kinder",
+        "translation-ru": "дети",
+        "translation-en": "children",
+        "translation-uk": "діти",
+        "translation-pl": "dzieci",
+        "translation-es": "los niños",
+        "translation-fr": "les enfants",
+        "translation-ar": "الأطفال",
+        "translation-hi": "बच्चे",
+        "translation-ro": "copiii",
+        "translation-tr": "çocuklar",
+        "translation-uz": "bolalar"
+      },
+      {
+        "word": "pünktlich",
+        "translation-ru": "вовремя",
+        "translation-en": "on time",
+        "translation-uk": "вчасно",
+        "translation-pl": "punktualnie",
+        "translation-es": "puntual",
+        "translation-fr": "à l’heure",
+        "translation-ar": "في الموعد",
+        "translation-hi": "समय पर",
+        "translation-ro": "punctual",
+        "translation-tr": "dakik",
+        "translation-uz": "o‘z vaqtida"
+      },
+      {
+        "word": "die Hausaufgaben",
+        "translation-ru": "домашнее задание",
+        "translation-en": "homework",
+        "translation-uk": "домашнє завдання",
+        "translation-pl": "zadanie domowe",
+        "translation-es": "los deberes",
+        "translation-fr": "les devoirs",
+        "translation-ar": "الواجب المنزلي",
+        "translation-hi": "गृहकार्य",
+        "translation-ro": "temele",
+        "translation-tr": "ödev",
+        "translation-uz": "uy vazifasi"
+      },
+      {
+        "word": "zuhören",
+        "translation-ru": "слушать",
+        "translation-en": "to listen",
+        "translation-uk": "слухати",
+        "translation-pl": "słuchać",
+        "translation-es": "escuchar",
+        "translation-fr": "écouter",
+        "translation-ar": "يستمع",
+        "translation-hi": "सुनना",
+        "translation-ro": "a asculta",
+        "translation-tr": "dinlemek",
+        "translation-uz": "tinglamoq"
+      },
+      {
+        "word": "die Seite",
+        "translation-ru": "страница",
+        "translation-en": "page",
+        "translation-uk": "сторінка",
+        "translation-pl": "strona",
+        "translation-es": "la página",
+        "translation-fr": "la page",
+        "translation-ar": "الصفحة",
+        "translation-hi": "पन्ना",
+        "translation-ro": "pagina",
+        "translation-tr": "sayfa",
+        "translation-uz": "sahifa"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "requestsLandTwo.questTask1",
+        "options": [
+          "Kommt!",
+          "Kommst!",
+          "Komme!"
+        ],
+        "answer": "Kommt!"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "requestsLandTwo.questTask2",
+        "correctAnswer": "helft"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "requestsLandTwo.questTask3",
+        "correctAnswer": "esst"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "requestsLandTwo.questTask4",
+        "words": [
+          "Geht",
+          "Hause",
+          "nach",
+          "zu"
+        ],
+        "correctOrder": [
+          "Geht",
+          "nach",
+          "Hause"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "requestsLandTwo.questTask5",
+        "options": [
+          "Nehmt Regenschirme mit!",
+          "Nimmt Regenschirme mit!",
+          "Nehmst Regenschirme mit!"
+        ],
+        "answer": "Nehmt Regenschirme mit!"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "requestsLandTwo.questTask6",
+        "correctAnswer": "wartet"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "requestsLandTwo.questTask7",
+        "text": "Lehrerin: Kinder, lest bitte den Text auf Seite 10!",
+        "options": [
+          "Seite 10",
+          "Seite 12",
+          "Seite 20"
+        ],
+        "answer": "Seite 10"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "requestsLandTwo.questTask8",
+        "correctAnswer": "seid"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "requestsLandTwo.questTask9",
+        "words": [
+          "Macht",
+          "Hausaufgaben",
+          "die",
+          "mach"
+        ],
+        "correctOrder": [
+          "Macht",
+          "die",
+          "Hausaufgaben"
+        ]
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "requestsLandTwo.questTask10",
+        "options": [
+          "Hört zu!",
+          "Hörst zu!",
+          "Hören zu!"
+        ],
+        "answer": "Hört zu!"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "requestsLandTwo.questTask11",
+        "correctAnswer": "sprecht"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "requestsLandTwo.questTask12",
+        "correctAnswer": "nimm"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "requestsLandTwo.questTask13",
+        "text": "Mama: Kinder, esst zuerst und spielt dann im Garten!",
+        "options": [
+          "im Garten",
+          "im Zimmer",
+          "im Park"
+        ],
+        "answer": "im Garten"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "requestsLandTwo.questTask14",
+        "options": [
+          "Hilf mir!",
+          "Hilfst mir!",
+          "Helfen mir!"
+        ],
+        "answer": "Hilf mir!"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "requestsLandTwo.questTask15",
+        "correctAnswer": "zum"
+      }
+    ]
+  },
+  {
+    "questId": "requests-3",
+    "title": "requestsLandThree.questTitle",
+    "progress": "0/15",
+    "description": "requestsLandThree.questDescription",
+    "conditions": {
+      "goal": "requestsLandThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "hereinkommen",
+        "translation-ru": "входить",
+        "translation-en": "to come in",
+        "translation-uk": "заходити",
+        "translation-pl": "wchodzić",
+        "translation-es": "entrar",
+        "translation-fr": "entrer",
+        "translation-ar": "يدخل",
+        "translation-hi": "अंदर आना",
+        "translation-ro": "a intra",
+        "translation-tr": "içeri girmek",
+        "translation-uz": "ichkariga kirmoq"
+      },
+      {
+        "word": "vorsichtig",
+        "translation-ru": "осторожный",
+        "translation-en": "careful",
+        "translation-uk": "обережний",
+        "translation-pl": "ostrożny",
+        "translation-es": "con cuidado",
+        "translation-fr": "prudent",
+        "translation-ar": "حذر",
+        "translation-hi": "सावधान",
+        "translation-ro": "atent",
+        "translation-tr": "dikkatli",
+        "translation-uz": "ehtiyotkor"
+      },
+      {
+        "word": "der Pass",
+        "translation-ru": "паспорт",
+        "translation-en": "passport",
+        "translation-uk": "паспорт",
+        "translation-pl": "paszport",
+        "translation-es": "el pasaporte",
+        "translation-fr": "le passeport",
+        "translation-ar": "جواز السفر",
+        "translation-hi": "पासपोर्ट",
+        "translation-ro": "pașaportul",
+        "translation-tr": "pasaport",
+        "translation-uz": "pasport"
+      },
+      {
+        "word": "geradeaus",
+        "translation-ru": "прямо",
+        "translation-en": "straight on",
+        "translation-uk": "прямо",
+        "translation-pl": "prosto",
+        "translation-es": "todo recto",
+        "translation-fr": "tout droit",
+        "translation-ar": "مباشرة إلى الأمام",
+        "translation-hi": "सीधे",
+        "translation-ro": "drept înainte",
+        "translation-tr": "dümdüz",
+        "translation-uz": "to‘g‘riga"
+      },
+      {
+        "word": "die Tabletten",
+        "translation-ru": "таблетки",
+        "translation-en": "tablets",
+        "translation-uk": "таблетки",
+        "translation-pl": "tabletki",
+        "translation-es": "las pastillas",
+        "translation-fr": "les comprimés",
+        "translation-ar": "الأقراص",
+        "translation-hi": "गोलियाँ",
+        "translation-ro": "pastilele",
+        "translation-tr": "tabletler",
+        "translation-uz": "tabletkalar"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "requestsLandThree.questTask1",
+        "options": [
+          "Kommen Sie bitte herein!",
+          "Kommt Sie bitte herein!",
+          "Komm Sie bitte herein!"
+        ],
+        "answer": "Kommen Sie bitte herein!"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "requestsLandThree.questTask2",
+        "correctAnswer": "warten"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "requestsLandThree.questTask3",
+        "words": [
+          "Bitte",
+          "setzen",
+          "Sie",
+          "sich",
+          "setzt"
+        ],
+        "correctOrder": [
+          "Bitte",
+          "setzen",
+          "Sie",
+          "sich"
+        ]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "requestsLandThree.questTask4",
+        "options": [
+          "Rufen Sie mich an!",
+          "Rufen mich Sie an!",
+          "Ruf Sie mich an!"
+        ],
+        "answer": "Rufen Sie mich an!"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "requestsLandThree.questTask5",
+        "correctAnswer": "nehmen"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "requestsLandThree.questTask6",
+        "correctAnswer": "seien"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "requestsLandThree.questTask7",
+        "text": "Arzt: Nehmen Sie die Tabletten zweimal am Tag.",
+        "options": [
+          "zweimal am Tag",
+          "einmal am Tag",
+          "dreimal am Tag"
+        ],
+        "answer": "zweimal am Tag"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "requestsLandThree.questTask8",
+        "words": [
+          "Sprechen",
+          "langsamer",
+          "Sie",
+          "sprich"
+        ],
+        "correctOrder": [
+          "Sprechen",
+          "Sie",
+          "langsamer"
+        ]
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "requestsLandThree.questTask9",
+        "options": [
+          "Gehen Sie geradeaus!",
+          "Geht Sie geradeaus!",
+          "Gehst Sie geradeaus!"
+        ],
+        "answer": "Gehen Sie geradeaus!"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "requestsLandThree.questTask10",
+        "correctAnswer": "zeigen"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "requestsLandThree.questTask11",
+        "options": [
+          "Geben Sie mir bitte Wasser!",
+          "Gib Sie mir bitte Wasser!",
+          "Gebt Sie mir bitte Wasser!"
+        ],
+        "answer": "Geben Sie mir bitte Wasser!"
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "question": "requestsLandThree.questTask12",
+        "text": "Gehen Sie hier geradeaus und dann links. Die Post ist neben der Bank.",
+        "options": [
+          "neben der Bank",
+          "hinter der Bank",
+          "vor der Bank"
+        ],
+        "answer": "neben der Bank"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "requestsLandThree.questTask13",
+        "correctAnswer": "kommt"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "requestsLandThree.questTask14",
+        "correctAnswer": "iss"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "requestsLandThree.questTask15",
+        "correctAnswer": "hatten"
+      }
+    ]
+  },
+  {
+    "questId": "requests-4",
+    "title": "requestsLandFour.questTitle",
+    "progress": "0/15",
+    "description": "requestsLandFour.questDescription",
+    "conditions": {
+      "goal": "requestsLandFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "aufmachen",
+        "translation-ru": "открывать",
+        "translation-en": "to open",
+        "translation-uk": "відчиняти",
+        "translation-pl": "otwierać",
+        "translation-es": "abrir",
+        "translation-fr": "ouvrir",
+        "translation-ar": "يفتح",
+        "translation-hi": "खोलना",
+        "translation-ro": "a deschide",
+        "translation-tr": "açmak",
+        "translation-uz": "ochmoq"
+      },
+      {
+        "word": "zumachen",
+        "translation-ru": "закрывать",
+        "translation-en": "to close",
+        "translation-uk": "зачиняти",
+        "translation-pl": "zamykać",
+        "translation-es": "cerrar",
+        "translation-fr": "fermer",
+        "translation-ar": "يغلق",
+        "translation-hi": "बंद करना",
+        "translation-ro": "a închide",
+        "translation-tr": "kapatmak",
+        "translation-uz": "yopmoq"
+      },
+      {
+        "word": "aufstehen",
+        "translation-ru": "вставать",
+        "translation-en": "to get up",
+        "translation-uk": "вставати",
+        "translation-pl": "wstawać",
+        "translation-es": "levantarse",
+        "translation-fr": "se lever",
+        "translation-ar": "يستيقظ",
+        "translation-hi": "उठना",
+        "translation-ro": "a se trezi",
+        "translation-tr": "kalkmak",
+        "translation-uz": "turmoq"
+      },
+      {
+        "word": "aufräumen",
+        "translation-ru": "убирать",
+        "translation-en": "to tidy up",
+        "translation-uk": "прибирати",
+        "translation-pl": "sprzątać",
+        "translation-es": "ordenar",
+        "translation-fr": "ranger",
+        "translation-ar": "يرتب",
+        "translation-hi": "साफ़ करना",
+        "translation-ro": "a face ordine",
+        "translation-tr": "toplamak",
+        "translation-uz": "yig‘ishtirmoq"
+      },
+      {
+        "word": "das Licht",
+        "translation-ru": "свет",
+        "translation-en": "light",
+        "translation-uk": "світло",
+        "translation-pl": "światło",
+        "translation-es": "la luz",
+        "translation-fr": "la lumière",
+        "translation-ar": "الضوء",
+        "translation-hi": "रोशनी",
+        "translation-ro": "lumina",
+        "translation-tr": "ışık",
+        "translation-uz": "chiroq"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "requestsLandFour.questTask1",
+        "options": [
+          "Mach die Tür auf!",
+          "Aufmach die Tür!",
+          "Mach auf die Tür!"
+        ],
+        "answer": "Mach die Tür auf!"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "requestsLandFour.questTask2",
+        "words": [
+          "Ruf",
+          "morgen",
+          "mich",
+          "an",
+          "rufst"
+        ],
+        "correctOrder": [
+          "Ruf",
+          "mich",
+          "morgen",
+          "an"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "requestsLandFour.questTask3",
+        "correctAnswer": "auf"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "requestsLandFour.questTask4",
+        "correctAnswer": "zu"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "requestsLandFour.questTask5",
+        "options": [
+          "Mach bitte das Licht an!",
+          "Mach an bitte das Licht!",
+          "Anmach bitte das Licht!"
+        ],
+        "answer": "Mach bitte das Licht an!"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "requestsLandFour.questTask6",
+        "correctAnswer": "räum"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "requestsLandFour.questTask7",
+        "text": "Papa: Tim, steh bitte auf! Es ist schon sieben Uhr.",
+        "options": [
+          "sieben Uhr",
+          "acht Uhr",
+          "sechs Uhr"
+        ],
+        "answer": "sieben Uhr"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "requestsLandFour.questTask8",
+        "words": [
+          "Schalten",
+          "Handy",
+          "Sie",
+          "das",
+          "aus",
+          "ab"
+        ],
+        "correctOrder": [
+          "Schalten",
+          "Sie",
+          "das",
+          "Handy",
+          "aus"
+        ]
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "requestsLandFour.questTask9",
+        "correctAnswer": "mal"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "requestsLandFour.questTask10",
+        "correctAnswer": "steigt"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "requestsLandFour.questTask11",
+        "options": [
+          "Besuch uns mal!",
+          "Besuchst uns mal!",
+          "Besuchen uns mal!"
+        ],
+        "answer": "Besuch uns mal!"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "requestsLandFour.questTask12",
+        "correctAnswer": "mal"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "requestsLandFour.questTask13",
+        "text": "Kannst du bitte einkaufen? Bring Brot, Käse und Tomaten mit!",
+        "options": [
+          "Brot, Käse und Tomaten",
+          "Brot und Milch",
+          "Käse und Wurst"
+        ],
+        "answer": "Brot, Käse und Tomaten"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "requestsLandFour.questTask14",
+        "correctAnswer": "warten"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "requestsLandFour.questTask15",
+        "options": [
+          "Seid leise!",
+          "Sei leise!",
+          "Seien leise!"
+        ],
+        "answer": "Seid leise!"
+      }
+    ]
+  },
+  {
+    "questId": "requests-5",
+    "title": "requestsLandFive.questTitle",
+    "progress": "0/15",
+    "description": "requestsLandFive.questDescription",
+    "conditions": {
+      "goal": "requestsLandFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "wiederholen",
+        "translation-ru": "повторять",
+        "translation-en": "to repeat",
+        "translation-uk": "повторювати",
+        "translation-pl": "powtarzać",
+        "translation-es": "repetir",
+        "translation-fr": "répéter",
+        "translation-ar": "يكرر",
+        "translation-hi": "दोहराना",
+        "translation-ro": "a repeta",
+        "translation-tr": "tekrarlamak",
+        "translation-uz": "takrorlamoq"
+      },
+      {
+        "word": "abholen",
+        "translation-ru": "забирать",
+        "translation-en": "to pick up",
+        "translation-uk": "забирати",
+        "translation-pl": "odbierać",
+        "translation-es": "recoger",
+        "translation-fr": "venir chercher",
+        "translation-ar": "يصطحب",
+        "translation-hi": "लेने आना",
+        "translation-ro": "a lua de undeva",
+        "translation-tr": "almaya gelmek",
+        "translation-uz": "olib ketmoq"
+      },
+      {
+        "word": "der Weg",
+        "translation-ru": "дорога",
+        "translation-en": "way",
+        "translation-uk": "дорога",
+        "translation-pl": "droga",
+        "translation-es": "el camino",
+        "translation-fr": "le chemin",
+        "translation-ar": "الطريق",
+        "translation-hi": "रास्ता",
+        "translation-ro": "drumul",
+        "translation-tr": "yol",
+        "translation-uz": "yo‘l"
+      },
+      {
+        "word": "füttern",
+        "translation-ru": "кормить",
+        "translation-en": "to feed",
+        "translation-uk": "годувати",
+        "translation-pl": "karmić",
+        "translation-es": "dar de comer",
+        "translation-fr": "nourrir",
+        "translation-ar": "يُطعم",
+        "translation-hi": "खिलाना",
+        "translation-ro": "a hrăni",
+        "translation-tr": "beslemek",
+        "translation-uz": "boqmoq"
+      },
+      {
+        "word": "das Büro",
+        "translation-ru": "офис",
+        "translation-en": "office",
+        "translation-uk": "офіс",
+        "translation-pl": "biuro",
+        "translation-es": "la oficina",
+        "translation-fr": "le bureau",
+        "translation-ar": "المكتب",
+        "translation-hi": "दफ़्तर",
+        "translation-ro": "biroul",
+        "translation-tr": "ofis",
+        "translation-uz": "ofis"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "requestsLandFive.questTask1",
+        "options": [
+          "Kannst du mir helfen?",
+          "Kannst du mich helfen?",
+          "Kann du mir helfen?"
+        ],
+        "answer": "Kannst du mir helfen?"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "requestsLandFive.questTask2",
+        "words": [
+          "Können",
+          "wiederholen",
+          "Sie",
+          "das",
+          "kann"
+        ],
+        "correctOrder": [
+          "Können",
+          "Sie",
+          "das",
+          "wiederholen"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "requestsLandFive.questTask3",
+        "correctAnswer": "kannst"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "requestsLandFive.questTask4",
+        "options": [
+          "Können Sie langsamer sprechen?",
+          "Können Sie sprechen langsamer?",
+          "Kann Sie langsamer sprechen?"
+        ],
+        "answer": "Können Sie langsamer sprechen?"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "requestsLandFive.questTask5",
+        "words": [
+          "Kannst",
+          "abholen",
+          "du",
+          "mich",
+          "mir"
+        ],
+        "correctOrder": [
+          "Kannst",
+          "du",
+          "mich",
+          "abholen"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "requestsLandFive.questTask6",
+        "correctAnswer": "können"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "requestsLandFive.questTask7",
+        "text": "— Entschuldigung, wie komme ich zum Bahnhof? — Gehen Sie hier links.",
+        "options": [
+          "links",
+          "rechts",
+          "geradeaus"
+        ],
+        "answer": "links"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "requestsLandFive.questTask8",
+        "options": [
+          "Kann ich ein Wasser haben?",
+          "Kann mir ein Wasser haben?",
+          "Kannst ich ein Wasser haben?"
+        ],
+        "answer": "Kann ich ein Wasser haben?"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "requestsLandFive.questTask9",
+        "options": [
+          "Kannst du mich anrufen?",
+          "Kannst du mir anrufen?",
+          "Kannst du mich anrufst?"
+        ],
+        "answer": "Kannst du mich anrufen?"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "requestsLandFive.questTask10",
+        "correctAnswer": "können"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "requestsLandFive.questTask11",
+        "words": [
+          "Kann",
+          "Karte",
+          "ich",
+          "mit",
+          "bezahlen",
+          "kannst"
+        ],
+        "correctOrder": [
+          "Kann",
+          "ich",
+          "mit",
+          "Karte",
+          "bezahlen"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "requestsLandFive.questTask12",
+        "correctAnswer": "an"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "requestsLandFive.questTask13",
+        "text": "Lisa: Kannst du heute meinen Hund füttern? Ich bin bis acht Uhr im Büro.",
+        "options": [
+          "bis acht Uhr",
+          "bis sechs Uhr",
+          "bis neun Uhr"
+        ],
+        "answer": "bis acht Uhr"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "requestsLandFive.questTask14",
+        "options": [
+          "Setzen Sie sich!",
+          "Setzt Sie sich!",
+          "Setz Sie sich!"
+        ],
+        "answer": "Setzen Sie sich!"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "requestsLandFive.questTask15",
+        "options": [
+          "am Fenster",
+          "im Fenster",
+          "auf dem Fenster"
+        ],
+        "answer": "am Fenster"
+      }
+    ]
+  },
+  {
+    "questId": "requests-6",
+    "title": "requestsLandSix.questTitle",
+    "progress": "0/15",
+    "description": "requestsLandSix.questDescription",
+    "conditions": {
+      "goal": "requestsLandSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "öffnen",
+        "translation-ru": "открывать",
+        "translation-en": "to open",
+        "translation-uk": "відчиняти",
+        "translation-pl": "otwierać",
+        "translation-es": "abrir",
+        "translation-fr": "ouvrir",
+        "translation-ar": "يفتح",
+        "translation-hi": "खोलना",
+        "translation-ro": "a deschide",
+        "translation-tr": "açmak",
+        "translation-uz": "ochmoq"
+      },
+      {
+        "word": "lauter",
+        "translation-ru": "громче",
+        "translation-en": "louder",
+        "translation-uk": "голосніше",
+        "translation-pl": "głośniej",
+        "translation-es": "más alto",
+        "translation-fr": "plus fort",
+        "translation-ar": "بصوت أعلى",
+        "translation-hi": "ज़ोर से",
+        "translation-ro": "mai tare",
+        "translation-tr": "daha yüksek sesle",
+        "translation-uz": "balandroq"
+      },
+      {
+        "word": "die Rechnung",
+        "translation-ru": "счёт",
+        "translation-en": "bill",
+        "translation-uk": "рахунок",
+        "translation-pl": "rachunek",
+        "translation-es": "la cuenta",
+        "translation-fr": "l’addition",
+        "translation-ar": "الفاتورة",
+        "translation-hi": "बिल",
+        "translation-ro": "nota de plată",
+        "translation-tr": "hesap",
+        "translation-uz": "hisob"
+      },
+      {
+        "word": "später",
+        "translation-ru": "позже",
+        "translation-en": "later",
+        "translation-uk": "пізніше",
+        "translation-pl": "później",
+        "translation-es": "más tarde",
+        "translation-fr": "plus tard",
+        "translation-ar": "لاحقًا",
+        "translation-hi": "बाद में",
+        "translation-ro": "mai târziu",
+        "translation-tr": "daha sonra",
+        "translation-uz": "keyinroq"
+      },
+      {
+        "word": "die Musik",
+        "translation-ru": "музыка",
+        "translation-en": "music",
+        "translation-uk": "музика",
+        "translation-pl": "muzyka",
+        "translation-es": "la música",
+        "translation-fr": "la musique",
+        "translation-ar": "الموسيقى",
+        "translation-hi": "संगीत",
+        "translation-ro": "muzica",
+        "translation-tr": "müzik",
+        "translation-uz": "musiqa"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "requestsLandSix.questTask1",
+        "options": [
+          "Könnten Sie mir helfen?",
+          "Könnten Sie mich helfen?",
+          "Konnten Sie mir helfen?"
+        ],
+        "answer": "Könnten Sie mir helfen?"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "requestsLandSix.questTask2",
+        "words": [
+          "Könnten",
+          "Fenster",
+          "Sie",
+          "das",
+          "öffnen",
+          "konnten"
+        ],
+        "correctOrder": [
+          "Könnten",
+          "Sie",
+          "das",
+          "Fenster",
+          "öffnen"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "requestsLandSix.questTask3",
+        "correctAnswer": "könnten"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "requestsLandSix.questTask4",
+        "options": [
+          "Könntest du mir den Stift geben?",
+          "Könntest du mir den Stift gibst?",
+          "Konntest du mir den Stift geben?"
+        ],
+        "answer": "Könntest du mir den Stift geben?"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "requestsLandSix.questTask5",
+        "correctAnswer": "könntest"
+      },
+      {
+        "id": 6,
+        "type": "readAndAnswer",
+        "question": "requestsLandSix.questTask6",
+        "text": "Entschuldigung, könnten Sie bitte die Musik leiser machen? Mein Baby schläft.",
+        "options": [
+          "die Musik",
+          "den Fernseher",
+          "das Radio"
+        ],
+        "answer": "die Musik"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "requestsLandSix.questTask7",
+        "words": [
+          "Könnten",
+          "anrufen",
+          "Sie",
+          "später",
+          "können"
+        ],
+        "correctOrder": [
+          "Könnten",
+          "Sie",
+          "später",
+          "anrufen"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "requestsLandSix.questTask8",
+        "options": [
+          "Könnten Sie das wiederholen?",
+          "Könnten Sie das wiederholt?",
+          "Konnten Sie das wiederholen?"
+        ],
+        "answer": "Könnten Sie das wiederholen?"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "requestsLandSix.questTask9",
+        "options": [
+          "Könnten Sie die Rechnung bringen?",
+          "Könnten Sie die Rechnung bringt?",
+          "Könnten die Rechnung Sie bringen?"
+        ],
+        "answer": "Könnten Sie die Rechnung bringen?"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "requestsLandSix.questTask10",
+        "correctAnswer": "könnten"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "requestsLandSix.questTask11",
+        "correctAnswer": "kannst"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "requestsLandSix.questTask12",
+        "correctAnswer": "nehmen"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "requestsLandSix.questTask13",
+        "text": "Kellner: Könnten Sie bitte kurz warten? Gleich ist der Tisch am Fenster frei.",
+        "options": [
+          "der Tisch am Fenster",
+          "der Tisch an der Tür",
+          "der Tisch im Garten"
+        ],
+        "answer": "der Tisch am Fenster"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "requestsLandSix.questTask14",
+        "correctAnswer": "setzt"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "requestsLandSix.questTask15",
+        "correctAnswer": "für"
+      }
+    ]
+  },
+  {
+    "questId": "requests-7",
+    "title": "requestsLandSeven.questTitle",
+    "progress": "0/15",
+    "description": "requestsLandSeven.questDescription",
+    "conditions": {
+      "goal": "requestsLandSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "ich möchte",
+        "translation-ru": "я бы хотел",
+        "translation-en": "I would like",
+        "translation-uk": "я хотів би",
+        "translation-pl": "chciałbym",
+        "translation-es": "quisiera",
+        "translation-fr": "je voudrais",
+        "translation-ar": "أودّ",
+        "translation-hi": "मैं चाहूँगा",
+        "translation-ro": "aș dori",
+        "translation-tr": "istiyorum",
+        "translation-uz": "xohlardim"
+      },
+      {
+        "word": "ich hätte gern",
+        "translation-ru": "мне, пожалуйста",
+        "translation-en": "I’d like to have",
+        "translation-uk": "мені, будь ласка",
+        "translation-pl": "poproszę",
+        "translation-es": "me pone",
+        "translation-fr": "j’aimerais",
+        "translation-ar": "أريد من فضلك",
+        "translation-hi": "मुझे चाहिए",
+        "translation-ro": "aș vrea",
+        "translation-tr": "alabilir miyim",
+        "translation-uz": "menga bering"
+      },
+      {
+        "word": "das Brötchen",
+        "translation-ru": "булочка",
+        "translation-en": "bread roll",
+        "translation-uk": "булочка",
+        "translation-pl": "bułka",
+        "translation-es": "el panecillo",
+        "translation-fr": "le petit pain",
+        "translation-ar": "الخبز الصغير",
+        "translation-hi": "बन",
+        "translation-ro": "chifla",
+        "translation-tr": "küçük ekmek",
+        "translation-uz": "bulochka"
+      },
+      {
+        "word": "der Kuchen",
+        "translation-ru": "пирог",
+        "translation-en": "cake",
+        "translation-uk": "пиріг",
+        "translation-pl": "ciasto",
+        "translation-es": "el pastel",
+        "translation-fr": "le gâteau",
+        "translation-ar": "الكعكة",
+        "translation-hi": "केक",
+        "translation-ro": "prăjitura",
+        "translation-tr": "kek",
+        "translation-uz": "pirog"
+      },
+      {
+        "word": "das Kilo",
+        "translation-ru": "килограмм",
+        "translation-en": "kilo",
+        "translation-uk": "кілограм",
+        "translation-pl": "kilogram",
+        "translation-es": "el kilo",
+        "translation-fr": "le kilo",
+        "translation-ar": "الكيلوغرام",
+        "translation-hi": "किलो",
+        "translation-ro": "kilogramul",
+        "translation-tr": "kilo",
+        "translation-uz": "kilogramm"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "requestsLandSeven.questTask1",
+        "options": [
+          "Ich möchte einen Kaffee.",
+          "Ich möchten einen Kaffee.",
+          "Ich möchte ein Kaffee."
+        ],
+        "answer": "Ich möchte einen Kaffee."
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "requestsLandSeven.questTask2",
+        "words": [
+          "hätte",
+          "Tee",
+          "Ich",
+          "einen",
+          "gern",
+          "ein"
+        ],
+        "correctOrder": [
+          "Ich",
+          "hätte",
+          "gern",
+          "einen",
+          "Tee"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "requestsLandSeven.questTask3",
+        "correctAnswer": "möchte"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "requestsLandSeven.questTask4",
+        "options": [
+          "Wir hätten gern zwei Stück Kuchen.",
+          "Wir hätte gern zwei Stück Kuchen.",
+          "Wir haben gern zwei Stück Kuchen."
+        ],
+        "answer": "Wir hätten gern zwei Stück Kuchen."
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "requestsLandSeven.questTask5",
+        "correctAnswer": "möchtest"
+      },
+      {
+        "id": 6,
+        "type": "readAndAnswer",
+        "question": "requestsLandSeven.questTask6",
+        "text": "Kellner: Was möchten Sie trinken? Gast: Ich hätte gern einen Orangensaft.",
+        "options": [
+          "einen Orangensaft",
+          "einen Apfelsaft",
+          "einen Kaffee"
+        ],
+        "answer": "einen Orangensaft"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "requestsLandSeven.questTask7",
+        "words": [
+          "möchte",
+          "Brötchen",
+          "Ich",
+          "ein",
+          "mit",
+          "Käse",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "möchte",
+          "ein",
+          "Brötchen",
+          "mit",
+          "Käse"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "requestsLandSeven.questTask8",
+        "options": [
+          "Was möchten Sie?",
+          "Was möchtest Sie?",
+          "Was möchte Sie?"
+        ],
+        "answer": "Was möchten Sie?"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "requestsLandSeven.questTask9",
+        "correctAnswer": "möchte"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "requestsLandSeven.questTask10",
+        "options": [
+          "Ich hätte gern ein Kilo Äpfel.",
+          "Ich hätte gern einen Kilo Äpfel.",
+          "Ich hatte gern ein Kilo Äpfel."
+        ],
+        "answer": "Ich hätte gern ein Kilo Äpfel."
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "requestsLandSeven.questTask11",
+        "correctAnswer": "Rechnung"
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "question": "requestsLandSeven.questTask12",
+        "text": "Verkäuferin: Was darf es sein? Kunde: Ich hätte gern 200 Gramm Käse.",
+        "options": [
+          "200 Gramm",
+          "300 Gramm",
+          "100 Gramm"
+        ],
+        "answer": "200 Gramm"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "requestsLandSeven.questTask13",
+        "correctAnswer": "könnten"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "requestsLandSeven.questTask14",
+        "correctAnswer": "nimm"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "requestsLandSeven.questTask15",
+        "correctAnswer": "wollten"
+      }
+    ]
+  },
+  {
+    "questId": "requests-8",
+    "title": "requestsLandEight.questTitle",
+    "progress": "0/15",
+    "description": "requestsLandEight.questDescription",
+    "conditions": {
+      "goal": "requestsLandEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Müll",
+        "translation-ru": "мусор",
+        "translation-en": "rubbish",
+        "translation-uk": "сміття",
+        "translation-pl": "śmieci",
+        "translation-es": "la basura",
+        "translation-fr": "les déchets",
+        "translation-ar": "القمامة",
+        "translation-hi": "कूड़ा",
+        "translation-ro": "gunoiul",
+        "translation-tr": "çöp",
+        "translation-uz": "axlat"
+      },
+      {
+        "word": "die Speisekarte",
+        "translation-ru": "меню",
+        "translation-en": "menu",
+        "translation-uk": "меню",
+        "translation-pl": "karta dań",
+        "translation-es": "la carta",
+        "translation-fr": "la carte",
+        "translation-ar": "قائمة الطعام",
+        "translation-hi": "मेन्यू",
+        "translation-ro": "meniul",
+        "translation-tr": "menü",
+        "translation-uz": "menyu"
+      },
+      {
+        "word": "schließen",
+        "translation-ru": "закрывать",
+        "translation-en": "to close",
+        "translation-uk": "зачиняти",
+        "translation-pl": "zamykać",
+        "translation-es": "cerrar",
+        "translation-fr": "fermer",
+        "translation-ar": "يغلق",
+        "translation-hi": "बंद करना",
+        "translation-ro": "a închide",
+        "translation-tr": "kapatmak",
+        "translation-uz": "yopmoq"
+      },
+      {
+        "word": "bringen",
+        "translation-ru": "приносить",
+        "translation-en": "to bring",
+        "translation-uk": "приносити",
+        "translation-pl": "przynosić",
+        "translation-es": "traer",
+        "translation-fr": "apporter",
+        "translation-ar": "يُحضر",
+        "translation-hi": "लाना",
+        "translation-ro": "a aduce",
+        "translation-tr": "getirmek",
+        "translation-uz": "olib kelmoq"
+      },
+      {
+        "word": "sagen",
+        "translation-ru": "говорить",
+        "translation-en": "to say",
+        "translation-uk": "казати",
+        "translation-pl": "mówić",
+        "translation-es": "decir",
+        "translation-fr": "dire",
+        "translation-ar": "يقول",
+        "translation-hi": "कहना",
+        "translation-ro": "a spune",
+        "translation-tr": "söylemek",
+        "translation-uz": "aytmoq"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "requestsLandEight.questTask1",
+        "correctAnswer": "komm"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "requestsLandEight.questTask2",
+        "correctAnswer": "esst"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "requestsLandEight.questTask3",
+        "correctAnswer": "warten"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "requestsLandEight.questTask4",
+        "correctAnswer": "auf"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "requestsLandEight.questTask5",
+        "options": [
+          "Können Sie mir helfen?",
+          "Können Sie mich helfen?",
+          "Kann Sie mir helfen?"
+        ],
+        "answer": "Können Sie mir helfen?"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "requestsLandEight.questTask6",
+        "words": [
+          "Könnten",
+          "Tür",
+          "Sie",
+          "die",
+          "schließen",
+          "der"
+        ],
+        "correctOrder": [
+          "Könnten",
+          "Sie",
+          "die",
+          "Tür",
+          "schließen"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "requestsLandEight.questTask7",
+        "options": [
+          "Ich hätte gern eine Pizza.",
+          "Ich hätte gern einen Pizza.",
+          "Ich habe gern eine Pizza."
+        ],
+        "answer": "Ich hätte gern eine Pizza."
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "question": "requestsLandEight.questTask8",
+        "text": "Mama: Paul, bring bitte den Müll raus und kauf Brot!",
+        "options": [
+          "Brot",
+          "Milch",
+          "Käse"
+        ],
+        "answer": "Brot"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "requestsLandEight.questTask9",
+        "correctAnswer": "warst"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "requestsLandEight.questTask10",
+        "options": [
+          "Ich konnte nicht kommen.",
+          "Ich kann nicht kommen.",
+          "Ich konnte kommen nicht."
+        ],
+        "answer": "Ich konnte nicht kommen."
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "requestsLandEight.questTask11",
+        "correctAnswer": "im"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "requestsLandEight.questTask12",
+        "correctAnswer": "vom"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "requestsLandEight.questTask13",
+        "correctAnswer": "neben"
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "question": "requestsLandEight.questTask14",
+        "text": "Gast: Könnten Sie mir bitte die Speisekarte bringen?",
+        "options": [
+          "die Speisekarte",
+          "die Rechnung",
+          "ein Glas Wasser"
+        ],
+        "answer": "die Speisekarte"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "requestsLandEight.questTask15",
+        "words": [
+          "Sag",
+          "mir",
+          "es",
+          "sagst"
+        ],
+        "correctOrder": [
+          "Sag",
+          "es",
+          "mir"
+        ]
+      }
+    ]
+  }
+]

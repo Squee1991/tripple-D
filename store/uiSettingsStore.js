@@ -4,6 +4,8 @@ import { ref, watch } from 'vue'
 export const useUiSettingsStore = defineStore('uiSettings', () => {
 	const achievementsNotifyEnabled = ref(true)
 	const hedgehogHelperEnabled = ref(true)
+	// кнопка ёжика-гида на главной
+	const hedgehogGuideEnabled = ref(true)
 
 	if (process.client) {
 		const savedAch = localStorage.getItem('achievementsNotifyEnabled')
@@ -11,6 +13,9 @@ export const useUiSettingsStore = defineStore('uiSettings', () => {
 
 		const savedHedgehog = localStorage.getItem('hedgehogHelperEnabled')
 		hedgehogHelperEnabled.value = savedHedgehog === null ? true : savedHedgehog === 'true'
+
+		const savedGuide = localStorage.getItem('hedgehogGuideEnabled')
+		hedgehogGuideEnabled.value = savedGuide === null ? true : savedGuide === 'true'
 	}
 
 	watch(achievementsNotifyEnabled, (val) => {
@@ -25,6 +30,12 @@ export const useUiSettingsStore = defineStore('uiSettings', () => {
 		}
 	}, { immediate: true })
 
+	watch(hedgehogGuideEnabled, (val) => {
+		if (process.client) {
+			localStorage.setItem('hedgehogGuideEnabled', String(val))
+		}
+	}, { immediate: true })
+
 	function setAchievementsNotifyEnabled(value) {
 		achievementsNotifyEnabled.value = !!value
 	}
@@ -33,10 +44,16 @@ export const useUiSettingsStore = defineStore('uiSettings', () => {
 		hedgehogHelperEnabled.value = !!value
 	}
 
+	function setHedgehogGuideEnabled(value) {
+		hedgehogGuideEnabled.value = !!value
+	}
+
 	return {
 		achievementsNotifyEnabled,
 		setAchievementsNotifyEnabled,
 		hedgehogHelperEnabled,
-		setHedgehogHelperEnabled
+		setHedgehogHelperEnabled,
+		hedgehogGuideEnabled,
+		setHedgehogGuideEnabled
 	}
 })

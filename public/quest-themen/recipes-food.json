@@ -347,7 +347,7 @@
       { "word": "Zwiebel", "article": "die" },
       { "word": "Speck", "article": "der" },
       { "word": "Pfeffer", "article": "der" },
-      { "word": "Muskat", "article": "die" }
+      { "word": "Muskat", "article": "der" }
     ],
     "knowledgeCheck": {
       "prompt": "Kennst du die Artikel?",
@@ -389,14 +389,14 @@
       },
       {
         "line": "Zum Schluss kommt noch etwas von ___ Muskat dazu.",
-        "article": "der"
+        "article": "dem"
       }
     ]
   },
   {
     "id": "food-day7",
     "theme": "food",
-    "title": "Apfelstrudel nach Oma's Art",
+    "title": "Apfelstrudel nach Omas Art",
     "trophy": "Goldener Apfelzweig",
     "introDialogue": [
       "Heute backen wir Apfelstrudel.",
@@ -486,7 +486,7 @@
         },
         {
           "text": "Unsicher",
-          "response": "Kein Problem – du hast schon viel gelernt. Let’s go!"
+          "response": "Kein Problem, du hast schon viel gelernt. Los geht’s!"
         }
       ]
     },

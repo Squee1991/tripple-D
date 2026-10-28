@@ -216,6 +216,7 @@ const getSettingValue = (key) => {
   if (key === 'ach') return uiSettings.achievementsNotifyEnabled
   if (key === 'snowFall') return eventStore.isSnowEnabled
   if (key === 'hedgehogHelper') return uiSettings.hedgehogHelperEnabled
+  if (key === 'hedgehogGuide') return uiSettings.hedgehogGuideEnabled
   return false
 }
 
@@ -228,6 +229,7 @@ const onSettingChange = (key, value) => {
   }
   if (key === 'ach') return uiSettings.setAchievementsNotifyEnabled(value)
   if (key === 'hedgehogHelper') return uiSettings.setHedgehogHelperEnabled(value)
+  if (key === 'hedgehogGuide') return uiSettings.setHedgehogGuideEnabled(value)
   if (key === 'snowFall') {
     if (!isSnowUnlocked.value) {
       showRestriction('snow')
@@ -487,7 +489,7 @@ onMounted(async () => {
 }
 
 .theme-preview.orange {
-  background: #fb923c;
+  background: linear-gradient(135deg, #e8782c 0%, #e8782c 50%, #0e0e10 50%, #0e0e10 100%);
 }
 
 .lock-icon {

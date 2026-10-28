@@ -16,19 +16,19 @@
     },
     "vocabulary": [
       {
-        "german": "die Zahnarztpraxis",
+        "german": "die Praxis",
         "translation": {
-          "ru-RU": "стоматология",
-          "en-US": "dental practice",
-          "ar-SA": "عيادة أسنان",
-          "es-ES": "clínica dental",
-          "fr-FR": "cabinet dentaire",
-          "hi-IN": "दंत चिकित्सालय",
-          "pl-PL": "gabinet dentystyczny",
-          "ro-RO": "cabinet stomatologic",
-          "tr-TR": "diş kliniği",
-          "uk-UA": "стоматологія",
-          "uz-UZ": "stomatologiya"
+          "ru-RU": "врачебная практика, кабинет врача",
+          "en-US": "doctor's office",
+          "ar-SA": "عيادة",
+          "es-ES": "consulta médica",
+          "fr-FR": "cabinet médical",
+          "hi-IN": "क्लिनिक",
+          "pl-PL": "gabinet lekarski",
+          "ro-RO": "cabinet medical",
+          "tr-TR": "muayenehane",
+          "uk-UA": "кабінет лікаря",
+          "uz-UZ": "shifoxona"
         }
       },
       {

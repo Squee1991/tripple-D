@@ -1,11 +1,11 @@
 [
   {
-    "questId": "direction-prep-one",
-    "title": "directionPrepositions.questOneTitle",
+    "questId": "direction-prep-1",
+    "title": "directionPrepositions.questTitle",
     "progress": "0/15",
-    "description": "directionPrepositions.questOneDescription",
+    "description": "directionPrepositions.questDescription",
     "conditions": {
-      "goal": "directionPrepositions.questOneGoal",
+      "goal": "directionPrepositions.questGoal",
       "minCorrect": 15,
       "requiredTasks": 15
     },
@@ -16,276 +16,263 @@
     "vocabulary": [
       {
         "word": "der Arzt",
-        "translation-ru": "Врач",
-        "translation-en": "Doctor",
-        "translation-uk": "Лікар",
-        "translation-pl": "Lekarz",
-        "translation-es": "Médico",
-        "translation-fr": "Médecin",
-        "translation-ar": "طبيب",
+        "translation-ru": "врач",
+        "translation-en": "doctor",
+        "translation-uk": "лікар",
+        "translation-pl": "lekarz",
+        "translation-es": "el médico",
+        "translation-fr": "le médecin",
+        "translation-ar": "الطبيب",
         "translation-hi": "डॉक्टर",
-        "translation-ro": "Medic",
-        "translation-tr": "Doktor",
-        "translation-uz": "Shifokor"
+        "translation-ro": "medicul",
+        "translation-tr": "doktor",
+        "translation-uz": "shifokor"
       },
       {
-        "word": "bei der Oma",
-        "translation-ru": "У бабушки",
-        "translation-en": "At grandmother's",
-        "translation-uk": "У бабусі",
-        "translation-pl": "U babci",
-        "translation-es": "En casa de la abuela",
-        "translation-fr": "Chez la grand-mère",
-        "translation-ar": "عند الجدة",
-        "translation-hi": "दादी के पास",
-        "translation-ro": "La bunică",
-        "translation-tr": "Büyükanne evinde",
-        "translation-uz": "Buvinikida"
+        "word": "die Schule",
+        "translation-ru": "школа",
+        "translation-en": "school",
+        "translation-uk": "школа",
+        "translation-pl": "szkoła",
+        "translation-es": "la escuela",
+        "translation-fr": "l’école",
+        "translation-ar": "المدرسة",
+        "translation-hi": "स्कूल",
+        "translation-ro": "școala",
+        "translation-tr": "okul",
+        "translation-uz": "maktab"
       },
       {
-        "word": "der Freund",
-        "translation-ru": "Друг",
-        "translation-en": "Friend",
-        "translation-uk": "Друг",
-        "translation-pl": "Przyjaciel",
-        "translation-es": "Amigo",
-        "translation-fr": "Ami",
-        "translation-ar": "صديق",
-        "translation-hi": "मित्र / दोस्त",
-        "translation-ro": "Prieten",
-        "translation-tr": "Arkadaş",
-        "translation-uz": "Do'st"
+        "word": "der Markt",
+        "translation-ru": "рынок",
+        "translation-en": "market",
+        "translation-uk": "ринок",
+        "translation-pl": "targ",
+        "translation-es": "el mercado",
+        "translation-fr": "le marché",
+        "translation-ar": "السوق",
+        "translation-hi": "बाज़ार",
+        "translation-ro": "piața",
+        "translation-tr": "pazar",
+        "translation-uz": "bozor"
       },
       {
-        "word": "die Arbeit",
-        "translation-ru": "Работа",
-        "translation-en": "Work",
-        "translation-uk": "Робота",
-        "translation-pl": "Praca",
-        "translation-es": "Trabajo",
-        "translation-fr": "Travail",
-        "translation-ar": "عمل",
-        "translation-hi": "काम",
-        "translation-ro": "Muncă",
-        "translation-tr": "İş",
-        "translation-uz": "Ish"
+        "word": "der Friseur",
+        "translation-ru": "парикмахер",
+        "translation-en": "hairdresser",
+        "translation-uk": "перукар",
+        "translation-pl": "fryzjer",
+        "translation-es": "el peluquero",
+        "translation-fr": "le coiffeur",
+        "translation-ar": "الحلاق",
+        "translation-hi": "नाई",
+        "translation-ro": "frizerul",
+        "translation-tr": "kuaför",
+        "translation-uz": "sartarosh"
       },
       {
-        "word": "der Chef",
-        "translation-ru": "Начальник / Шеф",
-        "translation-en": "Boss",
-        "translation-uk": "Начальник / Шеф",
-        "translation-pl": "Szef",
-        "translation-es": "Jefe",
-        "translation-fr": "Chef",
-        "translation-ar": "رئيس العمل",
-        "translation-hi": "मालिक / बॉस",
-        "translation-ro": "Șef",
-        "translation-tr": "Patron",
-        "translation-uz": "Boshliq"
-      },
-      {
-        "word": "die Familie",
-        "translation-ru": "Семья",
-        "translation-en": "Family",
-        "translation-uk": "Сім'я",
-        "translation-pl": "Rodzina",
-        "translation-es": "Familia",
-        "translation-fr": "Famille",
-        "translation-ar": "عائلة",
-        "translation-hi": "परिवार",
-        "translation-ro": "Familie",
-        "translation-tr": "Aile",
-        "translation-uz": "Oila"
-      },
-      {
-        "word": "beim Nachbarn",
-        "translation-ru": "У соседа",
-        "translation-en": "At the neighbor's",
-        "translation-uk": "У сусіда",
-        "translation-pl": "U sąsiada",
-        "translation-es": "En casa del vecino",
-        "translation-fr": "Chez le voisin",
-        "translation-ar": "عند الجار",
-        "translation-hi": "पड़ोसी के पास",
-        "translation-ro": "La vecin",
-        "translation-tr": "Komşuda",
-        "translation-uz": "Qo'shninikida"
-      },
-      {
-        "word": "die Kollegin",
-        "translation-ru": "Коллега (женщина)",
-        "translation-en": "Female colleague",
-        "translation-uk": "Колега (жінка)",
-        "translation-pl": "Koleżanka z pracy",
-        "translation-es": "Compañera de trabajo",
-        "translation-fr": "Collègue (femme)",
-        "translation-ar": "زميلة عمل",
-        "translation-hi": "सहकर्मी (महिला)",
-        "translation-ro": "Colegă",
-        "translation-tr": "Kadın iş arkadaşı",
-        "translation-uz": "Hamkasb ayol"
-      },
-      {
-        "word": "die Polizei",
-        "translation-ru": "Полиция",
-        "translation-en": "Police",
-        "translation-uk": "Поліція",
-        "translation-pl": "Policja",
-        "translation-es": "Policía",
-        "translation-fr": "Police",
-        "translation-ar": "شرطة",
-        "translation-hi": "पुलिस",
-        "translation-ro": "Poliție",
-        "translation-tr": "Polis",
-        "translation-uz": "Politsiya"
-      },
-      {
-        "word": "die Bank",
-        "translation-ru": "Банк",
-        "translation-en": "Bank",
-        "translation-uk": "Банк",
-        "translation-pl": "Bank",
-        "translation-es": "Banco",
-        "translation-fr": "Banque",
-        "translation-ar": "بنك",
-        "translation-hi": "बैंक",
-        "translation-ro": "Bancă",
-        "translation-tr": "Banka",
-        "translation-uz": "Bank"
+        "word": "die Eltern",
+        "translation-ru": "родители",
+        "translation-en": "parents",
+        "translation-uk": "батьки",
+        "translation-pl": "rodzice",
+        "translation-es": "los padres",
+        "translation-fr": "les parents",
+        "translation-ar": "الوالدان",
+        "translation-hi": "माता-पिता",
+        "translation-ro": "părinții",
+        "translation-tr": "anne baba",
+        "translation-uz": "ota-ona"
       }
     ],
     "tasks": [
       {
         "id": 1,
-        "type": "reorder",
-        "question": "directionPrepositions.questOneTask1",
-        "words": ["Arzt", "sitzt", "Er", "jetzt", "dem", "bei"],
-        "correctOrder": ["Er", "sitzt", "jetzt", "bei", "dem", "Arzt"]
+        "type": "select",
+        "question": "directionPrepositions.questTask1",
+        "options": [
+          "zum Arzt",
+          "beim Arzt",
+          "nach Arzt"
+        ],
+        "answer": "zum Arzt"
       },
       {
         "id": 2,
-        "type": "input",
-        "question": "directionPrepositions.questOneTask2",
-        "correctAnswer": "bei"
+        "type": "reorder",
+        "question": "directionPrepositions.questTask2",
+        "words": [
+          "gehe",
+          "Freund",
+          "Ich",
+          "meinem",
+          "zu",
+          "nach"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "zu",
+          "meinem",
+          "Freund"
+        ]
       },
       {
         "id": 3,
-        "type": "select",
-        "question": "directionPrepositions.questOneTask3",
-        "options": [
-          "aus dem Freund",
-          "bei dem Freund",
-          "nach dem Freund"
-        ],
-        "answer": "bei dem Freund"
+        "type": "input",
+        "question": "directionPrepositions.questTask3",
+        "correctAnswer": "zur"
       },
       {
         "id": 4,
-        "type": "readAndAnswer",
-        "text": "— Wo erreichst du Anna gerade? — Sie tippt Berichte im Büro und erledigt ihre Aufgaben.",
-        "question": "directionPrepositions.questOneTask4",
-        "options": [
-          "bei der Arbeit",
-          "aus der Arbeit",
-          "nach der Arbeit"
-        ],
-        "answer": "bei der Arbeit"
+        "type": "input",
+        "question": "directionPrepositions.questTask4",
+        "correctAnswer": "zum"
       },
       {
         "id": 5,
-        "type": "input",
-        "question": "directionPrepositions.questOneTask5",
-        "correctAnswer": "bei"
+        "type": "select",
+        "question": "directionPrepositions.questTask5",
+        "options": [
+          "zu meiner Schwester",
+          "zu meine Schwester",
+          "nach meiner Schwester"
+        ],
+        "answer": "zu meiner Schwester"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "directionPrepositions.questOneTask6",
-        "words": ["Familie", "Wir", "bei", "essen", "der"],
-        "correctOrder": ["Wir", "essen", "bei", "der", "Familie"]
+        "question": "directionPrepositions.questTask6",
+        "words": [
+          "gehen",
+          "Schule",
+          "Die",
+          "zur",
+          "Kinder",
+          "nach"
+        ],
+        "correctOrder": [
+          "Die",
+          "Kinder",
+          "gehen",
+          "zur",
+          "Schule"
+        ]
       },
       {
         "id": 7,
-        "type": "select",
-        "question": "directionPrepositions.questOneTask7",
+        "type": "readAndAnswer",
+        "question": "directionPrepositions.questTask7",
+        "text": "Ich habe Zahnschmerzen. Heute gehe ich zum Zahnarzt.",
         "options": [
-          "Er trinkt Tee bei dem Nachbarn",
-          "Er trinkt Tee von dem Nachbarn",
-          "Er trinkt Tee aus dem Nachbarn"
+          "zum Zahnarzt",
+          "zum Bahnhof",
+          "zur Schule"
         ],
-        "answer": "Er trinkt Tee bei dem Nachbarn"
+        "answer": "zum Zahnarzt"
       },
       {
         "id": 8,
-        "type": "input",
-        "question": "directionPrepositions.questOneTask8",
-        "correctAnswer": "bei"
+        "type": "select",
+        "question": "directionPrepositions.questTask8",
+        "options": [
+          "Wir gehen zu Anna.",
+          "Wir gehen nach Anna.",
+          "Wir gehen bei Anna."
+        ],
+        "answer": "Wir gehen zu Anna."
       },
       {
         "id": 9,
-        "type": "reorder",
-        "question": "directionPrepositions.questOneTask9",
-        "words": ["Arzt", "sitzt", "Markus", "dem", "bei"],
-        "correctOrder": ["Markus", "sitzt", "bei", "dem", "Arzt"]
+        "type": "input",
+        "question": "directionPrepositions.questTask9",
+        "correctAnswer": "zur"
       },
       {
         "id": 10,
-        "type": "select",
-        "question": "directionPrepositions.questOneTask10",
-        "options": [
-          "bei der Oma",
-          "aus der Oma",
-          "nach der Oma"
+        "type": "reorder",
+        "question": "directionPrepositions.questTask10",
+        "words": [
+          "komme",
+          "Bahnhof",
+          "Wie",
+          "zum",
+          "ich",
+          "nach"
         ],
-        "answer": "bei der Oma"
+        "correctOrder": [
+          "Wie",
+          "komme",
+          "ich",
+          "zum",
+          "Bahnhof"
+        ]
       },
       {
         "id": 11,
-        "type": "reorder",
-        "question": "directionPrepositions.questOneTask11",
-        "words": ["arbeitet", "in", "Siemens", "Anna", "bei"],
-        "correctOrder": ["Anna", "arbeitet", "bei", "Siemens"]
+        "type": "select",
+        "question": "directionPrepositions.questTask11",
+        "options": [
+          "zur Post",
+          "zum Post",
+          "nach Post"
+        ],
+        "answer": "zur Post"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "directionPrepositions.questOneTask12",
-        "correctAnswer": "bei"
+        "question": "directionPrepositions.questTask12",
+        "correctAnswer": "zum"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
-        "text": "— Wo schlafen die Kinder heute Nacht? — Sie packen ihre Taschen und fahren zu den Großeltern.",
-        "question": "directionPrepositions.questOneTask13",
+        "question": "directionPrepositions.questTask13",
+        "text": "Am Samstag fahre ich zu meinen Eltern.",
         "options": [
-          "bei Freund",
-          "bei der Oma und Opa",
-          "zu Hause"
+          "zu meinen Eltern",
+          "zu meinem Freund",
+          "zum Bahnhof"
         ],
-        "answer": "bei der Oma und Opa"
+        "answer": "zu meinen Eltern"
       },
       {
         "id": 14,
-        "type": "input",
-        "question": "directionPrepositions.questOneTask14",
-        "correctAnswer": "bei"
+        "type": "select",
+        "question": "directionPrepositions.questTask14",
+        "options": [
+          "Ich gehe zum Friseur.",
+          "Ich gehe zur Friseur.",
+          "Ich gehe nach Friseur."
+        ],
+        "answer": "Ich gehe zum Friseur."
       },
       {
         "id": 15,
-        "type": "select",
-        "question": "directionPrepositions.questOneTask15",
-        "options": [
-          "Heute sind wir bei dem Chef",
-          "Heute sind wir aus dem Chef",
-          "Heute sind wir unter dem Chef"
+        "type": "reorder",
+        "question": "directionPrepositions.questTask15",
+        "words": [
+          "fährt",
+          "Mutter",
+          "Sie",
+          "ihrer",
+          "zu",
+          "ihre"
         ],
-        "answer": "Heute sind wir bei dem Chef"
+        "correctOrder": [
+          "Sie",
+          "fährt",
+          "zu",
+          "ihrer",
+          "Mutter"
+        ]
       }
     ]
   },
   {
-    "questId": "direction-prep-two",
+    "questId": "direction-prep-2",
     "title": "directionPrepositionsTwo.questTitle",
     "progress": "0/15",
     "description": "directionPrepositionsTwo.questDescription",
@@ -300,283 +287,248 @@
     },
     "vocabulary": [
       {
-        "word": "der Arzt",
-        "translation-ru": "Врач",
-        "translation-en": "Doctor",
-        "translation-uk": "Лікар",
-        "translation-pl": "Lekarz",
-        "translation-es": "Médico",
-        "translation-fr": "Médecin",
-        "translation-ar": "طبيب",
-        "translation-hi": "डॉक्टर",
-        "translation-ro": "Medic",
-        "translation-tr": "Doktor",
-        "translation-uz": "Shifokor"
+        "word": "nach Hause",
+        "translation-ru": "домой",
+        "translation-en": "home",
+        "translation-uk": "додому",
+        "translation-pl": "do domu",
+        "translation-es": "a casa",
+        "translation-fr": "à la maison",
+        "translation-ar": "إلى البيت",
+        "translation-hi": "घर की ओर",
+        "translation-ro": "acasă",
+        "translation-tr": "eve",
+        "translation-uz": "uyga"
       },
       {
-        "word": "zur Oma",
-        "translation-ru": "К бабушке",
-        "translation-en": "To grandmother",
-        "translation-uk": "До бабусі",
-        "translation-pl": "Do babci",
-        "translation-es": "A la abuela",
-        "translation-fr": "Chez la grand-mère",
-        "translation-ar": "إلى الجدة",
-        "translation-hi": "दादी के पास",
-        "translation-ro": "La bunică",
-        "translation-tr": "Büyükanneye",
-        "translation-uz": "Buvining oldiga"
+        "word": "Spanien",
+        "translation-ru": "Испания",
+        "translation-en": "Spain",
+        "translation-uk": "Іспанія",
+        "translation-pl": "Hiszpania",
+        "translation-es": "España",
+        "translation-fr": "l’Espagne",
+        "translation-ar": "إسبانيا",
+        "translation-hi": "स्पेन",
+        "translation-ro": "Spania",
+        "translation-tr": "İspanya",
+        "translation-uz": "Ispaniya"
       },
       {
-        "word": "der Freund",
-        "translation-ru": "Друг",
-        "translation-en": "Friend",
-        "translation-uk": "Друг",
-        "translation-pl": "Przyjaciel",
-        "translation-es": "Amigo",
-        "translation-fr": "Ami",
-        "translation-ar": "صديق",
-        "translation-hi": "मित्र / दोस्त",
-        "translation-ro": "Prieten",
-        "translation-tr": "Arkadaş",
-        "translation-uz": "Do'st"
+        "word": "Österreich",
+        "translation-ru": "Австрия",
+        "translation-en": "Austria",
+        "translation-uk": "Австрія",
+        "translation-pl": "Austria",
+        "translation-es": "Austria",
+        "translation-fr": "l’Autriche",
+        "translation-ar": "النمسا",
+        "translation-hi": "ऑस्ट्रिया",
+        "translation-ro": "Austria",
+        "translation-tr": "Avusturya",
+        "translation-uz": "Avstriya"
       },
       {
-        "word": "die Arbeit",
-        "translation-ru": "Работа",
-        "translation-en": "Work",
-        "translation-uk": "Робота",
-        "translation-pl": "Praca",
-        "translation-es": "Trabajo",
-        "translation-fr": "Travail",
-        "translation-ar": "عمل",
-        "translation-hi": "काम",
-        "translation-ro": "Muncă",
-        "translation-tr": "İş",
-        "translation-uz": "Ish"
+        "word": "fliegen",
+        "translation-ru": "лететь",
+        "translation-en": "to fly",
+        "translation-uk": "летіти",
+        "translation-pl": "lecieć",
+        "translation-es": "volar",
+        "translation-fr": "voler",
+        "translation-ar": "يطير",
+        "translation-hi": "उड़ना",
+        "translation-ro": "a zbura",
+        "translation-tr": "uçmak",
+        "translation-uz": "uchmoq"
       },
       {
-        "word": "zum Chef",
-        "translation-ru": "К начальнику",
-        "translation-en": "To the boss",
-        "translation-uk": "До начальника",
-        "translation-pl": "Do szefa",
-        "translation-es": "Al jefe",
-        "translation-fr": "Chez le chef",
-        "translation-ar": "إلى المدير",
-        "translation-hi": "बॉस के पास",
-        "translation-ro": "La șef",
-        "translation-tr": "Patrona",
-        "translation-uz": "Boshliq oldiga"
-      },
-      {
-        "word": "die Familie",
-        "translation-ru": "Семья",
-        "translation-en": "Family",
-        "translation-uk": "Сім'я",
-        "translation-pl": "Rodzina",
-        "translation-es": "Familia",
-        "translation-fr": "Famille",
-        "translation-ar": "عائلة",
-        "translation-hi": "परिवार",
-        "translation-ro": "Familie",
-        "translation-tr": "Aile",
-        "translation-uz": "Oila"
-      },
-      {
-        "word": "der Nachbar",
-        "translation-ru": "Сосед",
-        "translation-en": "Neighbor",
-        "translation-uk": "Сусід",
-        "translation-pl": "Sąsiad",
-        "translation-es": "Vecino",
-        "translation-fr": "Voisin",
-        "translation-ar": "جار",
-        "translation-hi": "पड़ोसी",
-        "translation-ro": "Vecin",
-        "translation-tr": "Komşu",
-        "translation-uz": "Qo'shni"
-      },
-      {
-        "word": "die Kollegin",
-        "translation-ru": "Коллега (женщина)",
-        "translation-en": "Female colleague",
-        "translation-uk": "Колега (жінка)",
-        "translation-pl": "Koleżanka z pracy",
-        "translation-es": "Compañera de trabajo",
-        "translation-fr": "Collègue (femme)",
-        "translation-ar": "زميلة عمل",
-        "translation-hi": "सहकर्मी (महिला)",
-        "translation-ro": "Colegă",
-        "translation-tr": "Kadın iş arkadaşı",
-        "translation-uz": "Hamkasb ayol"
-      },
-      {
-        "word": "die Bank",
-        "translation-ru": "Банк",
-        "translation-en": "Bank",
-        "translation-uk": "Банк",
-        "translation-pl": "Bank",
-        "translation-es": "Banco",
-        "translation-fr": "Banque",
-        "translation-ar": "بنك",
-        "translation-hi": "बैंक",
-        "translation-ro": "Bancă",
-        "translation-tr": "Banka",
-        "translation-uz": "Bank"
-      },
-      {
-        "word": "der Bahnhof",
-        "translation-ru": "Вокзал",
-        "translation-en": "Train station",
-        "translation-uk": "Вокзал",
-        "translation-pl": "Dworzec",
-        "translation-es": "Estación de tren",
-        "translation-fr": "Gare",
-        "translation-ar": "محطة القطار",
-        "translation-hi": "रेलवे स्टेशन",
-        "translation-ro": "Gară",
-        "translation-tr": "Tren istasyonu",
-        "translation-uz": "Vokzal"
+        "word": "der Zug",
+        "translation-ru": "поезд",
+        "translation-en": "train",
+        "translation-uk": "потяг",
+        "translation-pl": "pociąg",
+        "translation-es": "el tren",
+        "translation-fr": "le train",
+        "translation-ar": "القطار",
+        "translation-hi": "रेलगाड़ी",
+        "translation-ro": "trenul",
+        "translation-tr": "tren",
+        "translation-uz": "poyezd"
       }
     ],
     "tasks": [
       {
         "id": 1,
-        "type": "reorder",
+        "type": "select",
         "question": "directionPrepositionsTwo.questTask1",
-        "words": ["Arzt", "geht", "Er", "jetzt", "zum"],
-        "correctOrder": ["Er", "geht", "jetzt", "zum", "Arzt"]
+        "options": [
+          "nach Berlin",
+          "zu Berlin",
+          "bei Berlin"
+        ],
+        "answer": "nach Berlin"
       },
       {
         "id": 2,
-        "type": "input",
+        "type": "reorder",
         "question": "directionPrepositionsTwo.questTask2",
-        "correctAnswer": "zur"
+        "words": [
+          "fliegen",
+          "Spanien",
+          "Wir",
+          "nach",
+          "zu"
+        ],
+        "correctOrder": [
+          "Wir",
+          "fliegen",
+          "nach",
+          "Spanien"
+        ]
       },
       {
         "id": 3,
-        "type": "select",
+        "type": "input",
         "question": "directionPrepositionsTwo.questTask3",
-        "options": [
-          "zum Freund",
-          "beim Freund",
-          "aus dem Freund"
-        ],
-        "answer": "zum Freund"
+        "correctAnswer": "nach"
       },
       {
         "id": 4,
-        "type": "readAndAnswer",
-        "text": "— Warum packt Lukas seine Tasche so früh? — Die Schicht beginnt bald und er darf nicht zu spät kommen.",
+        "type": "input",
         "question": "directionPrepositionsTwo.questTask4",
-        "options": [
-          "zur Arbeit",
-          "bei der Arbeit",
-          "aus der Arbeit"
-        ],
-        "answer": "zur Arbeit"
+        "correctAnswer": "nach"
       },
       {
         "id": 5,
-        "type": "input",
+        "type": "select",
         "question": "directionPrepositionsTwo.questTask5",
-        "correctAnswer": "zum"
+        "options": [
+          "nach Italien",
+          "zu Italien",
+          "aus Italien"
+        ],
+        "answer": "nach Italien"
       },
       {
         "id": 6,
-        "type": "reorder",
+        "type": "select",
         "question": "directionPrepositionsTwo.questTask6",
-        "words": ["Familie", "Wir", "zur", "fahren", "heute", "bei"],
-        "correctOrder": ["Wir", "fahren", "heute", "zur", "Familie"]
+        "options": [
+          "Nach der Arbeit gehe ich nach Hause.",
+          "Nach der Arbeit gehe ich zu Hause.",
+          "Nach der Arbeit gehe ich zum Haus."
+        ],
+        "answer": "Nach der Arbeit gehe ich nach Hause."
       },
       {
         "id": 7,
-        "type": "select",
+        "type": "readAndAnswer",
         "question": "directionPrepositionsTwo.questTask7",
+        "text": "Morgen fliegt Maria nach Wien. Ihr Bruder fährt nach München.",
         "options": [
-          "Er geht zum Nachbarn",
-          "Er geht beim Nachbarn",
-          "Er geht aus dem Nachbarn"
+          "nach Wien",
+          "nach München",
+          "nach Berlin"
         ],
-        "answer": "Er geht zum Nachbarn"
+        "answer": "nach Wien"
       },
       {
         "id": 8,
-        "type": "input",
+        "type": "reorder",
         "question": "directionPrepositionsTwo.questTask8",
-        "correctAnswer": "zu"
+        "words": [
+          "fährst",
+          "Hause",
+          "Wann",
+          "nach",
+          "du",
+          "zu"
+        ],
+        "correctOrder": [
+          "Wann",
+          "fährst",
+          "du",
+          "nach",
+          "Hause"
+        ]
       },
       {
         "id": 9,
-        "type": "readAndAnswer",
-        "text": "— Wohin gehst du mit den Formularen? — Ich muss ein neues Sparkonto eröffnen und Geld abheben.",
+        "type": "input",
         "question": "directionPrepositionsTwo.questTask9",
-        "options": [
-          "zur Bank",
-          "bei der Bank",
-          "aus der Bank"
-        ],
-        "answer": "zur Bank"
+        "correctAnswer": "nach"
       },
       {
         "id": 10,
         "type": "select",
         "question": "directionPrepositionsTwo.questTask10",
         "options": [
-          "zum Bahnhof",
-          "beim Bahnhof",
-          "nach dem Bahnhof"
+          "Ich fahre zu meinem Freund nach Köln.",
+          "Ich fahre nach meinem Freund zu Köln.",
+          "Ich fahre zu meinem Freund zu Köln."
         ],
-        "answer": "zum Bahnhof"
+        "answer": "Ich fahre zu meinem Freund nach Köln."
       },
       {
         "id": 11,
-        "type": "reorder",
+        "type": "input",
         "question": "directionPrepositionsTwo.questTask11",
-        "words": ["Kollegin", "eilt", "Anna", "zur", "bei"],
-        "correctOrder": ["Anna", "eilt", "zur", "Kollegin"]
+        "correctAnswer": "zum"
       },
       {
         "id": 12,
-        "type": "input",
+        "type": "select",
         "question": "directionPrepositionsTwo.questTask12",
-        "correctAnswer": "zum"
+        "options": [
+          "zur Apotheke",
+          "zum Apotheke",
+          "nach Apotheke"
+        ],
+        "answer": "zur Apotheke"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
-        "text": "— Wo trefft ihr euch heute Abend? — Wir nehmen den Bus und fahren gemeinsam zu Oma und Opa.",
         "question": "directionPrepositionsTwo.questTask13",
+        "text": "Ich bin sehr müde. Ich gehe jetzt nach Hause.",
         "options": [
-          "zu Oma und Opa",
-          "bei Oma und Opa",
-          "aus Oma und Opa"
+          "nach Hause",
+          "zum Arzt",
+          "nach Berlin"
         ],
-        "answer": "zu Oma und Opa"
+        "answer": "nach Hause"
       },
       {
         "id": 14,
-        "type": "select",
+        "type": "reorder",
         "question": "directionPrepositionsTwo.questTask14",
-        "options": [
-          "zum Arzt",
-          "beim Arzt",
-          "in den Arzt"
+        "words": [
+          "fliegt",
+          "Paris",
+          "Das",
+          "nach",
+          "Flugzeug",
+          "zu"
         ],
-        "answer": "zum Arzt"
+        "correctOrder": [
+          "Das",
+          "Flugzeug",
+          "fliegt",
+          "nach",
+          "Paris"
+        ]
       },
       {
         "id": 15,
-        "type": "reorder",
+        "type": "input",
         "question": "directionPrepositionsTwo.questTask15",
-        "words": ["gehe", "bei", "heute", "Ich", "Freund", "zum"],
-        "correctOrder": ["Ich", "gehe", "heute", "zum", "Freund"]
+        "correctAnswer": "nach"
       }
     ]
   },
   {
-    "questId": "direction-prep-three",
+    "questId": "direction-prep-3",
     "title": "directionPrepositionsThree.questTitle",
     "progress": "0/15",
     "description": "directionPrepositionsThree.questDescription",
@@ -591,283 +543,252 @@
     },
     "vocabulary": [
       {
-        "word": "nach Hause",
-        "translation-ru": "Домой",
-        "translation-en": "Home",
-        "translation-uk": "Додому",
-        "translation-pl": "Do domu",
-        "translation-es": "A casa",
-        "translation-fr": "À la maison",
-        "translation-ar": "إلى المنزل",
-        "translation-hi": "घर की ओर",
-        "translation-ro": "Acasă",
-        "translation-tr": "Eve",
-        "translation-uz": "Uyga"
+        "word": "die Oma",
+        "translation-ru": "бабушка",
+        "translation-en": "grandma",
+        "translation-uk": "бабуся",
+        "translation-pl": "babcia",
+        "translation-es": "la abuela",
+        "translation-fr": "la grand-mère",
+        "translation-ar": "الجدة",
+        "translation-hi": "दादी",
+        "translation-ro": "bunica",
+        "translation-tr": "büyükanne",
+        "translation-uz": "buvi"
       },
       {
-        "word": "nach Berlin",
-        "translation-ru": "В Берлин",
-        "translation-en": "To Berlin",
-        "translation-uk": "До Берліна",
-        "translation-pl": "Do Berlina",
-        "translation-es": "A Berlín",
-        "translation-fr": "À Berlin",
-        "translation-ar": "إلى برلين",
-        "translation-hi": "बर्लिन की ओर",
-        "translation-ro": "La Berlin",
-        "translation-tr": "Berlin'e",
-        "translation-uz": "Berlinga"
+        "word": "der Zahnarzt",
+        "translation-ru": "стоматолог",
+        "translation-en": "dentist",
+        "translation-uk": "стоматолог",
+        "translation-pl": "dentysta",
+        "translation-es": "el dentista",
+        "translation-fr": "le dentiste",
+        "translation-ar": "طبيب الأسنان",
+        "translation-hi": "दाँतों का डॉक्टर",
+        "translation-ro": "dentistul",
+        "translation-tr": "diş hekimi",
+        "translation-uz": "tish shifokori"
       },
       {
-        "word": "Deutschland",
-        "translation-ru": "Германия",
-        "translation-en": "Germany",
-        "translation-uk": "Німеччина",
-        "translation-pl": "Niemcy",
-        "translation-es": "Alemania",
-        "translation-fr": "Allemagne",
-        "translation-ar": "ألمانيا",
-        "translation-hi": "जर्मनी",
-        "translation-ro": "Germania",
-        "translation-tr": "Almanya",
-        "translation-uz": "Germaniya"
+        "word": "die Freundin",
+        "translation-ru": "подруга",
+        "translation-en": "friend",
+        "translation-uk": "подруга",
+        "translation-pl": "przyjaciółka",
+        "translation-es": "la amiga",
+        "translation-fr": "l’amie",
+        "translation-ar": "الصديقة",
+        "translation-hi": "सहेली",
+        "translation-ro": "prietena",
+        "translation-tr": "kız arkadaş",
+        "translation-uz": "dugona"
       },
       {
-        "word": "der Supermarkt",
-        "translation-ru": "Супермаркет",
-        "translation-en": "Supermarket",
-        "translation-uk": "Супермаркет",
-        "translation-pl": "Supermarket",
-        "translation-es": "Supermercado",
-        "translation-fr": "Supermarché",
-        "translation-ar": "سوبر ماركت",
-        "translation-hi": "सुपरमार्केट",
-        "translation-ro": "Supermarket",
-        "translation-tr": "Süpermarket",
-        "translation-uz": "Supermarket"
+        "word": "das Paket",
+        "translation-ru": "посылка",
+        "translation-en": "parcel",
+        "translation-uk": "посилка",
+        "translation-pl": "paczka",
+        "translation-es": "el paquete",
+        "translation-fr": "le colis",
+        "translation-ar": "الطرد",
+        "translation-hi": "पार्सल",
+        "translation-ro": "coletul",
+        "translation-tr": "paket",
+        "translation-uz": "posilka"
       },
       {
-        "word": "die Apotheke",
-        "translation-ru": "Аптека",
-        "translation-en": "Pharmacy",
-        "translation-uk": "Аптека",
-        "translation-pl": "Apteka",
-        "translation-es": "Farmacia",
-        "translation-fr": "Pharmacie",
-        "translation-ar": "صيدلية",
-        "translation-hi": "दवा की दुकान",
-        "translation-ro": "Farmacie",
-        "translation-tr": "Eczane",
-        "translation-uz": "Dorixona"
-      },
-      {
-        "word": "die Schule",
-        "translation-ru": "Школа",
-        "translation-en": "School",
-        "translation-uk": "Школа",
-        "translation-pl": "Szkoła",
-        "translation-es": "Escuela",
-        "translation-fr": "École",
-        "translation-ar": "مدرسة",
-        "translation-hi": "स्कूल",
-        "translation-ro": "Școală",
-        "translation-tr": "Okul",
-        "translation-uz": "Maktab"
-      },
-      {
-        "word": "der Park",
-        "translation-ru": "Парк",
-        "translation-en": "Park",
-        "translation-uk": "Парк",
-        "translation-pl": "Park",
-        "translation-es": "Parque",
-        "translation-fr": "Parc",
-        "translation-ar": "حديقة",
-        "translation-hi": "पार्क",
-        "translation-ro": "Parc",
-        "translation-tr": "Park",
-        "translation-uz": "Park"
-      },
-      {
-        "word": "die Post",
-        "translation-ru": "Почта",
-        "translation-en": "Post office",
-        "translation-uk": "Пошта",
-        "translation-pl": "Poczta",
-        "translation-es": "Correo",
-        "translation-fr": "Poste",
-        "translation-ar": "بريد",
-        "translation-hi": "डाकघर",
-        "translation-ro": "Poștă",
-        "translation-tr": "Postane",
-        "translation-uz": "Pochta"
-      },
-      {
-        "word": "München",
-        "translation-ru": "Мюнхен",
-        "translation-en": "Munich",
-        "translation-uk": "Мюнхен",
-        "translation-pl": "Monachium",
-        "translation-es": "Múnich",
-        "translation-fr": "Munich",
-        "translation-ar": "ميونخ",
-        "translation-hi": "म्यूनिख",
-        "translation-ro": "München",
-        "translation-tr": "Münih",
-        "translation-uz": "Myunxen"
-      },
-      {
-        "word": "zum Flughafen",
-        "translation-ru": "В аэропорт",
-        "translation-en": "To the airport",
-        "translation-uk": "В аеропорт",
-        "translation-pl": "Na lotnisko",
-        "translation-es": "Al aeropuerto",
-        "translation-fr": "À l'aéroport",
-        "translation-ar": "إلى المطار",
-        "translation-hi": "हवाई अड्डे की ओर",
-        "translation-ro": "La aeroport",
-        "translation-tr": "Havalimanına",
-        "translation-uz": "Aeroportga"
+        "word": "wohnen",
+        "translation-ru": "жить",
+        "translation-en": "to live",
+        "translation-uk": "жити",
+        "translation-pl": "mieszkać",
+        "translation-es": "vivir",
+        "translation-fr": "habiter",
+        "translation-ar": "يسكن",
+        "translation-hi": "रहना",
+        "translation-ro": "a locui",
+        "translation-tr": "oturmak",
+        "translation-uz": "yashamoq"
       }
     ],
     "tasks": [
       {
         "id": 1,
-        "type": "reorder",
+        "type": "select",
         "question": "directionPrepositionsThree.questTask1",
-        "words": ["Berlin", "fahren", "nach", "Wir", "heute"],
-        "correctOrder": ["Wir", "fahren", "heute", "nach", "Berlin"]
+        "options": [
+          "beim Arzt",
+          "zum Arzt",
+          "vom Arzt"
+        ],
+        "answer": "beim Arzt"
       },
       {
         "id": 2,
-        "type": "input",
+        "type": "reorder",
         "question": "directionPrepositionsThree.questTask2",
-        "correctAnswer": "nach"
+        "words": [
+          "bin",
+          "Oma",
+          "Heute",
+          "bei",
+          "ich",
+          "zu"
+        ],
+        "correctOrder": [
+          "Heute",
+          "bin",
+          "ich",
+          "bei",
+          "Oma"
+        ]
       },
       {
         "id": 3,
-        "type": "select",
+        "type": "input",
         "question": "directionPrepositionsThree.questTask3",
-        "options": [
-          "nach Deutschland",
-          "zu Deutschland",
-          "bei Deutschland"
-        ],
-        "answer": "nach Deutschland"
+        "correctAnswer": "beim"
       },
       {
         "id": 4,
-        "type": "readAndAnswer",
-        "text": "— Wo bist du? — Ich gehe schnell einkaufen, wir haben keine Milch mehr.",
+        "type": "input",
         "question": "directionPrepositionsThree.questTask4",
-        "options": [
-          "zum Supermarkt",
-          "nach Supermarkt",
-          "beim Supermarkt"
-        ],
-        "answer": "zum Supermarkt"
+        "correctAnswer": "bei"
       },
       {
         "id": 5,
-        "type": "input",
+        "type": "select",
         "question": "directionPrepositionsThree.questTask5",
-        "correctAnswer": "zur"
+        "options": [
+          "Ich wohne bei meinen Eltern.",
+          "Ich wohne zu meinen Eltern.",
+          "Ich wohne bei meine Eltern."
+        ],
+        "answer": "Ich wohne bei meinen Eltern."
       },
       {
         "id": 6,
-        "type": "reorder",
+        "type": "input",
         "question": "directionPrepositionsThree.questTask6",
-        "words": ["Schule", "morgens", "gehen", "Kinder", "zur", "Die"],
-        "correctOrder": ["Die", "Kinder", "gehen", "morgens", "zur", "Schule"]
+        "correctAnswer": "beim"
       },
       {
         "id": 7,
-        "type": "select",
+        "type": "readAndAnswer",
         "question": "directionPrepositionsThree.questTask7",
+        "text": "Paul ist heute nicht im Büro. Er ist beim Zahnarzt.",
         "options": [
-          "Die Familie fliegt nach München",
-          "Die Familie fliegt zum München",
-          "Die Familie fliegt bei München"
+          "beim Zahnarzt",
+          "beim Friseur",
+          "zu Hause"
         ],
-        "answer": "Die Familie fliegt nach München"
+        "answer": "beim Zahnarzt"
       },
       {
         "id": 8,
-        "type": "input",
+        "type": "select",
         "question": "directionPrepositionsThree.questTask8",
-        "correctAnswer": "zum"
+        "options": [
+          "bei mir",
+          "bei mich",
+          "nach mir"
+        ],
+        "answer": "bei mir"
       },
       {
         "id": 9,
-        "type": "readAndAnswer",
-        "text": "— Warum nimmst du das schwere Paket mit? — Ich muss es abschicken, die Filiale schließt gleich.",
+        "type": "reorder",
         "question": "directionPrepositionsThree.questTask9",
-        "options": [
-          "zur Post",
-          "nach der Post",
-          "bei der Post"
+        "words": [
+          "sind",
+          "Freunden",
+          "Am",
+          "bei",
+          "Abend",
+          "wir",
+          "zu"
         ],
-        "answer": "zur Post"
+        "correctOrder": [
+          "Am",
+          "Abend",
+          "sind",
+          "wir",
+          "bei",
+          "Freunden"
+        ]
       },
       {
         "id": 10,
         "type": "select",
         "question": "directionPrepositionsThree.questTask10",
         "options": [
-          "zum Flughafen",
-          "nach dem Flughafen",
-          "aus dem Flughafen"
+          "Er geht zum Arzt.",
+          "Er geht beim Arzt.",
+          "Er geht nach Arzt."
         ],
-        "answer": "zum Flughafen"
+        "answer": "Er geht zum Arzt."
       },
       {
         "id": 11,
-        "type": "reorder",
+        "type": "input",
         "question": "directionPrepositionsThree.questTask11",
-        "words": ["Hause", "Der", "nach", "geht", "jetzt", "Vater"],
-        "correctOrder": ["Der", "Vater", "geht", "jetzt", "nach", "Hause"]
+        "correctAnswer": "nach"
       },
       {
         "id": 12,
         "type": "input",
         "question": "directionPrepositionsThree.questTask12",
-        "correctAnswer": "nach"
+        "correctAnswer": "zur"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
-        "text": "— Wohin fährt der Bus Nummer 10? — Er bringt die Passagiere direkt zu den Flugzeugen und Terminals.",
         "question": "directionPrepositionsThree.questTask13",
+        "text": "Wo ist Lisa? Sie ist bei ihrer Freundin.",
         "options": [
-          "zum Flughafen",
-          "nach Flughafen",
-          "beim Flughafen"
+          "bei ihrer Freundin",
+          "bei ihrer Oma",
+          "zu Hause"
         ],
-        "answer": "zum Flughafen"
+        "answer": "bei ihrer Freundin"
       },
       {
         "id": 14,
-        "type": "select",
+        "type": "reorder",
         "question": "directionPrepositionsThree.questTask14",
-        "options": [
-          "Wir gehen zur Apotheke",
-          "Wir gehen nach Apotheke",
-          "Wir gehen bei die Apotheke"
+        "words": [
+          "ist",
+          "mir",
+          "Das",
+          "bei",
+          "Paket",
+          "mich"
         ],
-        "answer": "Wir gehen zur Apotheke"
+        "correctOrder": [
+          "Das",
+          "Paket",
+          "ist",
+          "bei",
+          "mir"
+        ]
       },
       {
         "id": 15,
-        "type": "reorder",
+        "type": "select",
         "question": "directionPrepositionsThree.questTask15",
-        "words": ["fährt", "Supermarkt", "nach", "Bruder", "zum", "Der"],
-        "correctOrder": ["Der", "Bruder", "fährt", "zum", "Supermarkt"]
+        "options": [
+          "nach Deutschland",
+          "zu Deutschland",
+          "bei Deutschland"
+        ],
+        "answer": "nach Deutschland"
       }
     ]
   },
   {
-    "questId": "direction-prep-four",
+    "questId": "direction-prep-4",
     "title": "directionPrepositionsFour.questTitle",
     "progress": "0/15",
     "description": "directionPrepositionsFour.questDescription",
@@ -882,283 +803,247 @@
     },
     "vocabulary": [
       {
-        "word": "das Haus",
-        "translation-ru": "Дом",
-        "translation-en": "House",
-        "translation-uk": "Будинок",
-        "translation-pl": "Dom",
-        "translation-es": "Casa",
-        "translation-fr": "Maison",
-        "translation-ar": "منزل",
-        "translation-hi": "घर",
-        "translation-ro": "Casă",
-        "translation-tr": "Ev",
-        "translation-uz": "Uy"
+        "word": "die Türkei",
+        "translation-ru": "Турция",
+        "translation-en": "Turkey",
+        "translation-uk": "Туреччина",
+        "translation-pl": "Turcja",
+        "translation-es": "Turquía",
+        "translation-fr": "la Turquie",
+        "translation-ar": "تركيا",
+        "translation-hi": "तुर्की",
+        "translation-ro": "Turcia",
+        "translation-tr": "Türkiye",
+        "translation-uz": "Turkiya"
       },
       {
-        "word": "aus der Schule",
-        "translation-ru": "Из школы",
-        "translation-en": "From school",
-        "translation-uk": "Зі школи",
-        "translation-pl": "Ze szkoły",
-        "translation-es": "De la escuela",
-        "translation-fr": "De l'école",
-        "translation-ar": "من المدرسة",
-        "translation-hi": "स्कूल से",
-        "translation-ro": "De la școală",
-        "translation-tr": "Okuldan",
-        "translation-uz": "Maktabdan"
+        "word": "die Flasche",
+        "translation-ru": "бутылка",
+        "translation-en": "bottle",
+        "translation-uk": "пляшка",
+        "translation-pl": "butelka",
+        "translation-es": "la botella",
+        "translation-fr": "la bouteille",
+        "translation-ar": "الزجاجة",
+        "translation-hi": "बोतल",
+        "translation-ro": "sticla",
+        "translation-tr": "şişe",
+        "translation-uz": "shisha"
+      },
+      {
+        "word": "aussteigen",
+        "translation-ru": "выходить из транспорта",
+        "translation-en": "to get off",
+        "translation-uk": "виходити з транспорту",
+        "translation-pl": "wysiadać",
+        "translation-es": "bajarse",
+        "translation-fr": "descendre",
+        "translation-ar": "ينزل من وسيلة النقل",
+        "translation-hi": "उतरना",
+        "translation-ro": "a coborî",
+        "translation-tr": "inmek",
+        "translation-uz": "tushmoq"
       },
       {
         "word": "die Küche",
-        "translation-ru": "Кухня",
-        "translation-en": "Kitchen",
-        "translation-uk": "Кухня",
-        "translation-pl": "Kuchnia",
-        "translation-es": "Cocina",
-        "translation-fr": "Cuisine",
-        "translation-ar": "مطبخ",
+        "translation-ru": "кухня",
+        "translation-en": "kitchen",
+        "translation-uk": "кухня",
+        "translation-pl": "kuchnia",
+        "translation-es": "la cocina",
+        "translation-fr": "la cuisine",
+        "translation-ar": "المطبخ",
         "translation-hi": "रसोई",
-        "translation-ro": "Bucătărie",
-        "translation-tr": "Mutfak",
-        "translation-uz": "Oshxona"
+        "translation-ro": "bucătăria",
+        "translation-tr": "mutfak",
+        "translation-uz": "oshxona"
       },
       {
-        "word": "das Zimmer",
-        "translation-ru": "Комната",
-        "translation-en": "Room",
-        "translation-uk": "Кімната",
-        "translation-pl": "Pokój",
-        "translation-es": "Habitación",
-        "translation-fr": "Chambre",
-        "translation-ar": "غرفة",
-        "translation-hi": "कमरा",
-        "translation-ro": "Cameră",
-        "translation-tr": "Oda",
-        "translation-uz": "Xona"
-      },
-      {
-        "word": "aus dem Büro",
-        "translation-ru": "Из офиса",
-        "translation-en": "From the office",
-        "translation-uk": "З офісу",
-        "translation-pl": "Z biura",
-        "translation-es": "De la oficina",
-        "translation-fr": "Du bureau",
-        "translation-ar": "من المكتب",
-        "translation-hi": "कार्यालय से",
-        "translation-ro": "De la birou",
-        "translation-tr": "Ofisten",
-        "translation-uz": "Ofisdan"
-      },
-      {
-        "word": "der Laden",
-        "translation-ru": "Магазин",
-        "translation-en": "Shop",
-        "translation-uk": "Магазин",
-        "translation-pl": "Sklep",
-        "translation-es": "Tienda",
-        "translation-fr": "Magasin",
-        "translation-ar": "متجر",
-        "translation-hi": "दुकान",
-        "translation-ro": "Magazin",
-        "translation-tr": "Dükkan",
-        "translation-uz": "Do'kon"
-      },
-      {
-        "word": "die Stadt",
-        "translation-ru": "Город",
-        "translation-en": "City",
-        "translation-uk": "Місто",
-        "translation-pl": "Miasto",
-        "translation-es": "Ciudad",
-        "translation-fr": "Ville",
-        "translation-ar": "مدينة",
-        "translation-hi": "शहर",
-        "translation-ro": "Oraș",
-        "translation-tr": "Şehir",
-        "translation-uz": "Shahar"
-      },
-      {
-        "word": "das Café",
-        "translation-ru": "Кафе",
-        "translation-en": "Café",
-        "translation-uk": "Кафе",
-        "translation-pl": "Kawiarnia",
-        "translation-es": "Café",
-        "translation-fr": "Café",
-        "translation-ar": "مقهى",
-        "translation-hi": "कैफे",
-        "translation-ro": "Cafenea",
-        "translation-tr": "Kafe",
-        "translation-uz": "Kafe"
-      },
-      {
-        "word": "das Auto",
-        "translation-ru": "Машина",
-        "translation-en": "Car",
-        "translation-uk": "Машина",
-        "translation-pl": "Samochód",
-        "translation-es": "Coche",
-        "translation-fr": "Voiture",
-        "translation-ar": "سيارة",
-        "translation-hi": "कार",
-        "translation-ro": "Mașină",
-        "translation-tr": "Araba",
-        "translation-uz": "Mashina"
-      },
-      {
-        "word": "die Tasche",
-        "translation-ru": "Сумка",
-        "translation-en": "Bag",
-        "translation-uk": "Сумка",
-        "translation-pl": "Torba",
-        "translation-es": "Bolso",
-        "translation-fr": "Sac",
-        "translation-ar": "حقيبة",
-        "translation-hi": "थैला",
-        "translation-ro": "Geantă",
-        "translation-tr": "Çanta",
-        "translation-uz": "Sumka"
+        "word": "Polen",
+        "translation-ru": "Польша",
+        "translation-en": "Poland",
+        "translation-uk": "Польща",
+        "translation-pl": "Polska",
+        "translation-es": "Polonia",
+        "translation-fr": "la Pologne",
+        "translation-ar": "بولندا",
+        "translation-hi": "पोलैंड",
+        "translation-ro": "Polonia",
+        "translation-tr": "Polonya",
+        "translation-uz": "Polsha"
       }
     ],
     "tasks": [
       {
         "id": 1,
-        "type": "reorder",
+        "type": "select",
         "question": "directionPrepositionsFour.questTask1",
-        "words": ["Haus", "dem", "Er", "geht", "aus"],
-        "correctOrder": ["Er", "geht", "aus", "dem", "Haus"]
+        "options": [
+          "aus Spanien",
+          "nach Spanien",
+          "bei Spanien"
+        ],
+        "answer": "aus Spanien"
       },
       {
         "id": 2,
-        "type": "input",
+        "type": "reorder",
         "question": "directionPrepositionsFour.questTask2",
-        "correctAnswer": "aus"
+        "words": [
+          "komme",
+          "Türkei",
+          "Ich",
+          "der",
+          "aus",
+          "nach"
+        ],
+        "correctOrder": [
+          "Ich",
+          "komme",
+          "aus",
+          "der",
+          "Türkei"
+        ]
       },
       {
         "id": 3,
-        "type": "select",
+        "type": "input",
         "question": "directionPrepositionsFour.questTask3",
-        "options": [
-          "aus der Küche",
-          "bei der Küche",
-          "nach der Küche"
-        ],
-        "answer": "aus der Küche"
+        "correctAnswer": "aus"
       },
       {
         "id": 4,
-        "type": "readAndAnswer",
-        "text": "— Feierabend? — Ja, mein Arbeitstag ist zu Ende, ich ziehe die Jacke an.",
+        "type": "input",
         "question": "directionPrepositionsFour.questTask4",
-        "options": [
-          "aus dem Büro",
-          "zu dem Büro",
-          "nach dem Büro"
-        ],
-        "answer": "aus dem Büro"
+        "correctAnswer": "aus"
       },
       {
         "id": 5,
-        "type": "input",
+        "type": "select",
         "question": "directionPrepositionsFour.questTask5",
-        "correctAnswer": "aus"
+        "options": [
+          "Woher kommst du?",
+          "Wohin kommst du?",
+          "Wo kommst du?"
+        ],
+        "answer": "Woher kommst du?"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "directionPrepositionsFour.questTask6",
-        "words": ["Café", "Wir", "dem", "gehen", "aus"],
-        "correctOrder": ["Wir", "gehen", "aus", "dem", "Café"]
+        "words": [
+          "steigen",
+          "Bus",
+          "Wir",
+          "dem",
+          "aus",
+          "aus",
+          "den"
+        ],
+        "correctOrder": [
+          "Wir",
+          "steigen",
+          "aus",
+          "dem",
+          "Bus",
+          "aus"
+        ]
       },
       {
         "id": 7,
-        "type": "select",
+        "type": "readAndAnswer",
         "question": "directionPrepositionsFour.questTask7",
+        "text": "Ich heiße Elena und komme aus Italien. Jetzt wohne ich in Berlin.",
         "options": [
-          "Er kommt aus dem Laden",
-          "Er kommt bei dem Laden",
-          "Er kommt zum Laden"
+          "aus Italien",
+          "aus Berlin",
+          "aus Spanien"
         ],
-        "answer": "Er kommt aus dem Laden"
+        "answer": "aus Italien"
       },
       {
         "id": 8,
         "type": "input",
         "question": "directionPrepositionsFour.questTask8",
-        "correctAnswer": "dem"
+        "correctAnswer": "der"
       },
       {
         "id": 9,
-        "type": "readAndAnswer",
-        "text": "— Suchst du deinen Schlüssel? — Ja, ich nehme ihn gerade aus meinem Rucksack.",
+        "type": "select",
         "question": "directionPrepositionsFour.questTask9",
         "options": [
-          "aus der Tasche",
-          "nach der Tasche",
-          "bei der Tasche"
+          "aus der Küche",
+          "nach der Küche",
+          "bei der Küche"
         ],
-        "answer": "aus der Tasche"
+        "answer": "aus der Küche"
       },
       {
         "id": 10,
         "type": "select",
         "question": "directionPrepositionsFour.questTask10",
         "options": [
-          "aus der Stadt",
-          "von die Stadt",
-          "zu der Stadt"
+          "Mein Kollege kommt aus Polen.",
+          "Mein Kollege kommt nach Polen.",
+          "Mein Kollege kommt bei Polen."
         ],
-        "answer": "aus der Stadt"
+        "answer": "Mein Kollege kommt aus Polen."
       },
       {
         "id": 11,
-        "type": "reorder",
+        "type": "input",
         "question": "directionPrepositionsFour.questTask11",
-        "words": ["Tasche", "nimmt", "das", "Buch", "der", "Anna", "aus"],
-        "correctOrder": ["Anna", "nimmt", "das", "Buch", "aus", "der", "Tasche"]
+        "correctAnswer": "beim"
       },
       {
         "id": 12,
         "type": "input",
         "question": "directionPrepositionsFour.questTask12",
-        "correctAnswer": "aus"
+        "correctAnswer": "nach"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
-        "text": "— Was riecht hier so gut nach Kaffee? — Ich bringe zwei Tassen direkt vom Herd mit.",
         "question": "directionPrepositionsFour.questTask13",
+        "text": "Tom nimmt das Handy aus der Jacke und ruft seine Mutter an.",
         "options": [
-          "aus der Küche",
-          "bei der Küche",
-          "zu der Küche"
+          "aus der Jacke",
+          "aus der Tasche",
+          "aus dem Auto"
         ],
-        "answer": "aus der Küche"
+        "answer": "aus der Jacke"
       },
       {
         "id": 14,
-        "type": "select",
+        "type": "reorder",
         "question": "directionPrepositionsFour.questTask14",
-        "options": [
-          "Sie gehen aus dem Haus",
-          "Sie gehen nach dem Haus",
-          "Sie gehen beim Haus"
+        "words": [
+          "kommt",
+          "Brasilien",
+          "Der",
+          "aus",
+          "Kaffee",
+          "nach"
         ],
-        "answer": "Sie gehen aus dem Haus"
+        "correctOrder": [
+          "Der",
+          "Kaffee",
+          "kommt",
+          "aus",
+          "Brasilien"
+        ]
       },
       {
         "id": 15,
-        "type": "reorder",
+        "type": "input",
         "question": "directionPrepositionsFour.questTask15",
-        "words": ["Büro", "Der", "geht", "dem", "Vater", "aus"],
-        "correctOrder": ["Der", "Vater", "geht", "aus", "dem", "Büro"]
+        "correctAnswer": "zur"
       }
     ]
   },
   {
-    "questId": "direction-prep-five",
+    "questId": "direction-prep-5",
     "title": "directionPrepositionsFive.questTitle",
     "progress": "0/15",
     "description": "directionPrepositionsFive.questDescription",
@@ -1173,144 +1058,74 @@
     },
     "vocabulary": [
       {
-        "word": "das Restaurant",
-        "translation-ru": "Ресторан",
-        "translation-en": "Restaurant",
-        "translation-uk": "Ресторан",
-        "translation-pl": "Restauracja",
-        "translation-es": "Restaurante",
-        "translation-fr": "Restaurant",
-        "translation-ar": "مطعم",
-        "translation-hi": "रेस्तरां",
-        "translation-ro": "Restaurant",
-        "translation-tr": "Restoran",
-        "translation-uz": "Restoran"
+        "word": "die Arbeit",
+        "translation-ru": "работа",
+        "translation-en": "work",
+        "translation-uk": "робота",
+        "translation-pl": "praca",
+        "translation-es": "el trabajo",
+        "translation-fr": "le travail",
+        "translation-ar": "العمل",
+        "translation-hi": "काम",
+        "translation-ro": "munca",
+        "translation-tr": "iş",
+        "translation-uz": "ish"
       },
       {
-        "word": "der Bäcker",
-        "translation-ru": "Пекарь / булочная",
-        "translation-en": "Baker / bakery",
-        "translation-uk": "Пекар / булочна",
-        "translation-pl": "Piekarz / piekarnia",
-        "translation-es": "Panadero / panadería",
-        "translation-fr": "Boulanger / boulangerie",
-        "translation-ar": "خباز",
-        "translation-hi": "बेकर",
-        "translation-ro": "Brutar",
-        "translation-tr": "Fırıncı",
-        "translation-uz": "Novvoyxona"
+        "word": "das Geschenk",
+        "translation-ru": "подарок",
+        "translation-en": "present",
+        "translation-uk": "подарунок",
+        "translation-pl": "prezent",
+        "translation-es": "el regalo",
+        "translation-fr": "le cadeau",
+        "translation-ar": "الهدية",
+        "translation-hi": "उपहार",
+        "translation-ro": "cadoul",
+        "translation-tr": "hediye",
+        "translation-uz": "sovg‘a"
       },
       {
-        "word": "das Hotel",
-        "translation-ru": "Отель",
-        "translation-en": "Hotel",
-        "translation-uk": "Готель",
-        "translation-pl": "Hotel",
-        "translation-es": "Hotel",
-        "translation-fr": "Hôtel",
-        "translation-ar": "فندق",
-        "translation-hi": "होटल",
-        "translation-ro": "Hotel",
-        "translation-tr": "Otel",
-        "translation-uz": "Mehmonxona"
+        "word": "der Brief",
+        "translation-ru": "письмо",
+        "translation-en": "letter",
+        "translation-uk": "лист",
+        "translation-pl": "list",
+        "translation-es": "la carta",
+        "translation-fr": "la lettre",
+        "translation-ar": "الرسالة",
+        "translation-hi": "चिट्ठी",
+        "translation-ro": "scrisoarea",
+        "translation-tr": "mektup",
+        "translation-uz": "xat"
       },
       {
-        "word": "die Tankstelle",
-        "translation-ru": "Заправка",
-        "translation-en": "Gas station",
-        "translation-uk": "Заправка",
-        "translation-pl": "Stacja benzynowa",
-        "translation-es": "Gasolinera",
-        "translation-fr": "Station-service",
-        "translation-ar": "محطة وقود",
-        "translation-hi": "पेट्रोल पंप",
-        "translation-ro": "Benzinărie",
-        "translation-tr": "Benzinlik",
-        "translation-uz": "Yoqilg'i quyish shoxobchasi"
+        "word": "die Nachricht",
+        "translation-ru": "сообщение",
+        "translation-en": "message",
+        "translation-uk": "повідомлення",
+        "translation-pl": "wiadomość",
+        "translation-es": "el mensaje",
+        "translation-fr": "le message",
+        "translation-ar": "الرسالة النصية",
+        "translation-hi": "संदेश",
+        "translation-ro": "mesajul",
+        "translation-tr": "mesaj",
+        "translation-uz": "xabar"
       },
       {
-        "word": "das Fitnessstudio",
-        "translation-ru": "Тренажерный зал",
-        "translation-en": "Gym",
-        "translation-uk": "Спортзал",
-        "translation-pl": "Siłownia",
-        "translation-es": "Gimnasio",
-        "translation-fr": "Salle de sport",
-        "translation-ar": "صالة رياضية",
-        "translation-hi": "जिम",
-        "translation-ro": "Sală de fitness",
-        "translation-tr": "Spor salonu",
-        "translation-uz": "Fitnes zali"
-      },
-      {
-        "word": "der Bus",
-        "translation-ru": "Автобус",
-        "translation-en": "Bus",
-        "translation-uk": "Автобус",
-        "translation-pl": "Autobus",
-        "translation-es": "Autobús",
-        "translation-fr": "Bus",
-        "translation-ar": "حافلة",
-        "translation-hi": "बस",
-        "translation-ro": "Autobuz",
-        "translation-tr": "Otobüs",
-        "translation-uz": "Avtobus"
-      },
-      {
-        "word": "die Friseurin",
-        "translation-ru": "Парикмахер (женщина)",
-        "translation-en": "Hairdresser (female)",
-        "translation-uk": "Перукарка",
-        "translation-pl": "Fryzjerka",
-        "translation-es": "Peluquera",
-        "translation-fr": "Coiffeuse",
-        "translation-ar": "مصففة شعر",
-        "translation-hi": "नाई (महिला)",
-        "translation-ro": "Frizeriță",
-        "translation-tr": "Kadın kuaför",
-        "translation-uz": "Sartarosh ayol"
-      },
-      {
-        "word": "der Koffer",
-        "translation-ru": "Чемодан",
-        "translation-en": "Suitcase",
-        "translation-uk": "Валіза",
-        "translation-pl": "Walizka",
-        "translation-es": "Maleta",
-        "translation-fr": "Valise",
-        "translation-ar": "حقيبة سفر",
-        "translation-hi": "सूटकेस",
-        "translation-ro": "Valiză",
-        "translation-tr": "Bavul",
-        "translation-uz": "Chamadon"
-      },
-      {
-        "word": "Wien",
-        "translation-ru": "Вена",
-        "translation-en": "Vienna",
-        "translation-uk": "Відень",
-        "translation-pl": "Wiedeń",
-        "translation-es": "Viena",
-        "translation-fr": "Vienne",
-        "translation-ar": "فيينا",
-        "translation-hi": "वियना",
-        "translation-ro": "Viena",
-        "translation-tr": "Viyana",
-        "translation-uz": "Vena"
-      },
-      {
-        "word": "das Kino",
-        "translation-ru": "Кинотеатр",
-        "translation-en": "Cinema",
-        "translation-uk": "Кінотеатр",
-        "translation-pl": "Kino",
-        "translation-es": "Cine",
-        "translation-fr": "Cinéma",
-        "translation-ar": "سينما",
-        "translation-hi": "सिनेमा हॉल",
-        "translation-ro": "Cinema",
-        "translation-tr": "Sinema",
-        "translation-uz": "Kinoteatr"
+        "word": "der Chef",
+        "translation-ru": "начальник",
+        "translation-en": "boss",
+        "translation-uk": "начальник",
+        "translation-pl": "szef",
+        "translation-es": "el jefe",
+        "translation-fr": "le chef",
+        "translation-ar": "المدير",
+        "translation-hi": "बॉस",
+        "translation-ro": "șeful",
+        "translation-tr": "patron",
+        "translation-uz": "boshliq"
       }
     ],
     "tasks": [
@@ -1319,137 +1134,173 @@
         "type": "select",
         "question": "directionPrepositionsFive.questTask1",
         "options": [
-          "zur Friseurin",
-          "bei der Friseurin",
-          "aus der Friseurin"
+          "vom Arzt",
+          "zum Arzt",
+          "beim Arzt"
         ],
-        "answer": "zur Friseurin"
+        "answer": "vom Arzt"
       },
       {
         "id": 2,
-        "type": "input",
+        "type": "reorder",
         "question": "directionPrepositionsFive.questTask2",
-        "correctAnswer": "nach"
+        "words": [
+          "komme",
+          "Arbeit",
+          "Ich",
+          "der",
+          "von",
+          "zur"
+        ],
+        "correctOrder": [
+          "Ich",
+          "komme",
+          "von",
+          "der",
+          "Arbeit"
+        ]
       },
       {
         "id": 3,
-        "type": "reorder",
+        "type": "input",
         "question": "directionPrepositionsFive.questTask3",
-        "words": ["Hotel", "aus", "gehen", "dem", "Touristen", "Die"],
-        "correctOrder": ["Die", "Touristen", "gehen", "aus", "dem", "Hotel"]
+        "correctAnswer": "vom"
       },
       {
         "id": 4,
-        "type": "readAndAnswer",
-        "text": "— Der Tank ist fast leer. — Dann biegen wir rechts ab und holen Benzin.",
+        "type": "input",
         "question": "directionPrepositionsFive.questTask4",
-        "options": [
-          "zur Tankstelle",
-          "aus der Tankstelle",
-          "nach Tankstelle"
-        ],
-        "answer": "zur Tankstelle"
+        "correctAnswer": "von"
       },
       {
         "id": 5,
-        "type": "input",
+        "type": "select",
         "question": "directionPrepositionsFive.questTask5",
-        "correctAnswer": "zum"
+        "options": [
+          "Der Brief ist von meinem Freund.",
+          "Der Brief ist aus meinem Freund.",
+          "Der Brief ist bei meinem Freund."
+        ],
+        "answer": "Der Brief ist von meinem Freund."
       },
       {
         "id": 6,
-        "type": "select",
+        "type": "reorder",
         "question": "directionPrepositionsFive.questTask6",
-        "options": [
-          "beim Restaurant",
-          "zum Restaurant",
-          "nach dem Restaurant"
+        "words": [
+          "fährt",
+          "Berlin",
+          "Der",
+          "von",
+          "Zug",
+          "nach",
+          "München",
+          "zu"
         ],
-        "answer": "beim Restaurant"
+        "correctOrder": [
+          "Der",
+          "Zug",
+          "fährt",
+          "von",
+          "Berlin",
+          "nach",
+          "München"
+        ]
       },
       {
         "id": 7,
-        "type": "reorder",
+        "type": "readAndAnswer",
         "question": "directionPrepositionsFive.questTask7",
-        "words": ["steigen", "dem", "Fahrgäste", "aus", "Bus", "Die"],
-        "correctOrder": ["Die", "Fahrgäste", "steigen", "aus", "dem", "Bus"]
+        "text": "Anna kommt gerade vom Supermarkt. Sie hat Brot und Milch gekauft.",
+        "options": [
+          "vom Supermarkt",
+          "vom Arzt",
+          "von der Arbeit"
+        ],
+        "answer": "vom Supermarkt"
       },
       {
         "id": 8,
         "type": "input",
         "question": "directionPrepositionsFive.questTask8",
-        "correctAnswer": "aus"
+        "correctAnswer": "von"
       },
       {
         "id": 9,
-        "type": "readAndAnswer",
-        "text": "— Wo ist Max? — Er stemmt Gewichte und läuft auf dem Band.",
+        "type": "select",
         "question": "directionPrepositionsFive.questTask9",
         "options": [
-          "im Fitnessstudio",
-          "zum Fitnessstudio",
-          "nach Fitnessstudio"
+          "vom Bahnhof",
+          "zum Bahnhof",
+          "beim Bahnhof"
         ],
-        "answer": "im Fitnessstudio"
+        "answer": "vom Bahnhof"
       },
       {
         "id": 10,
         "type": "select",
         "question": "directionPrepositionsFive.questTask10",
         "options": [
-          "Sie kommt aus dem Kino",
-          "Sie kommt zum Kino",
-          "Sie kommt nach dem Kino"
+          "Ich nehme das Buch vom Tisch.",
+          "Ich nehme das Buch aus dem Tisch.",
+          "Ich nehme das Buch zum Tisch."
         ],
-        "answer": "Sie kommt aus dem Kino"
+        "answer": "Ich nehme das Buch vom Tisch."
       },
       {
         "id": 11,
-        "type": "reorder",
+        "type": "input",
         "question": "directionPrepositionsFive.questTask11",
-        "words": ["nach", "Hause", "gehe", "Ich", "jetzt"],
-        "correctOrder": ["Ich", "gehe", "jetzt", "nach", "Hause"]
+        "correctAnswer": "aus"
       },
       {
         "id": 12,
         "type": "input",
         "question": "directionPrepositionsFive.questTask12",
-        "correctAnswer": "bei"
+        "correctAnswer": "beim"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
-        "text": "— Der Film ist zu Ende, das Licht geht an. — Ja, wir nehmen die Jacken und gehen raus.",
         "question": "directionPrepositionsFive.questTask13",
+        "text": "Mein Bruder kommt um sechs Uhr von der Schule nach Hause.",
         "options": [
-          "aus dem Kino",
-          "beim Kino",
-          "nach dem Kino"
+          "von der Schule",
+          "von der Arbeit",
+          "vom Bahnhof"
         ],
-        "answer": "aus dem Kino"
+        "answer": "von der Schule"
       },
       {
         "id": 14,
-        "type": "select",
+        "type": "reorder",
         "question": "directionPrepositionsFive.questTask14",
-        "options": [
-          "zum Fitnessstudio",
-          "nach dem Fitnessstudio",
-          "aus dem Fitnessstudio"
+        "words": [
+          "ist",
+          "Chef",
+          "Die",
+          "vom",
+          "Nachricht",
+          "zum"
         ],
-        "answer": "zum Fitnessstudio"
+        "correctOrder": [
+          "Die",
+          "Nachricht",
+          "ist",
+          "vom",
+          "Chef"
+        ]
       },
       {
         "id": 15,
-        "type": "reorder",
+        "type": "input",
         "question": "directionPrepositionsFive.questTask15",
-        "words": ["kauft", "Familie", "Brot", "Bäcker", "Die", "beim"],
-        "correctOrder": ["Die", "Familie", "kauft", "Brot", "beim", "Bäcker"]
+        "correctAnswer": "zum"
       }
     ]
   },
   {
-    "questId": "direction-prep-six",
+    "questId": "direction-prep-6",
     "title": "directionPrepositionsSix.questTitle",
     "progress": "0/15",
     "description": "directionPrepositionsSix.questDescription",
@@ -1464,144 +1315,74 @@
     },
     "vocabulary": [
       {
-        "word": "der Markt",
-        "translation-ru": "Рынок",
-        "translation-en": "Market",
-        "translation-uk": "Ринок",
-        "translation-pl": "Targ",
-        "translation-es": "Mercado",
-        "translation-fr": "Marché",
-        "translation-ar": "سوق",
-        "translation-hi": "बाज़ार",
-        "translation-ro": "Piață",
-        "translation-tr": "Pazar",
-        "translation-uz": "Bozor"
-      },
-      {
-        "word": "die Tierärztin",
-        "translation-ru": "Ветеринар (женщина)",
-        "translation-en": "Female vet",
-        "translation-uk": "Ветеринарка",
-        "translation-pl": "Weterynarka",
-        "translation-es": "Veterinaria",
-        "translation-fr": "Vétérinaire (femme)",
-        "translation-ar": "طبيبة بيطرية",
-        "translation-hi": "पशु चिकित्सक (महिला)",
-        "translation-ro": "Veterinară",
-        "translation-tr": "Kadın veteriner",
-        "translation-uz": "Veterinar ayol"
-      },
-      {
-        "word": "das Schwimmbad",
-        "translation-ru": "Бассейн",
-        "translation-en": "Swimming pool",
-        "translation-uk": "Басейн",
-        "translation-pl": "Basen",
-        "translation-es": "Piscina",
-        "translation-fr": "Piscine",
-        "translation-ar": "مسبح",
-        "translation-hi": "स्वीमिंग पूल",
-        "translation-ro": "Piscină",
-        "translation-tr": "Yüzme havuzu",
-        "translation-uz": "Suzish havzasi"
-      },
-      {
-        "word": "die Werkstatt",
-        "translation-ru": "Автомастерская",
-        "translation-en": "Auto repair shop",
-        "translation-uk": "Автомайстерня",
-        "translation-pl": "Warsztat",
-        "translation-es": "Taller",
-        "translation-fr": "Atelier mécanique",
-        "translation-ar": "ورشة تصليح",
-        "translation-hi": "वर्कशॉप / मरम्मत की दुकान",
-        "translation-ro": "Atelier auto",
-        "translation-tr": "Tamirhane",
-        "translation-uz": "Ustaxona"
-      },
-      {
-        "word": "das Restaurant",
-        "translation-ru": "Ресторан",
-        "translation-en": "Restaurant",
-        "translation-uk": "Ресторан",
-        "translation-pl": "Restauracja",
-        "translation-es": "Restaurante",
-        "translation-fr": "Restaurant",
-        "translation-ar": "مطعم",
-        "translation-hi": "रेस्तरां",
-        "translation-ro": "Restaurant",
-        "translation-tr": "Restoran",
-        "translation-uz": "Restoran"
-      },
-      {
-        "word": "die Bibliothek",
-        "translation-ru": "Библиотека",
-        "translation-en": "Library",
-        "translation-uk": "Бібліотека",
-        "translation-pl": "Biblioteka",
-        "translation-es": "Biblioteca",
-        "translation-fr": "Bibliothèque",
-        "translation-ar": "مكتبة",
-        "translation-hi": "पुस्तकालय",
-        "translation-ro": "Bibliotecă",
-        "translation-tr": "Kütüphane",
-        "translation-uz": "Kutubxona"
-      },
-      {
-        "word": "Köln",
-        "translation-ru": "Кёльн",
-        "translation-en": "Cologne",
-        "translation-uk": "Кельн",
-        "translation-pl": "Kolonia",
-        "translation-es": "Colonia",
-        "translation-fr": "Cologne",
-        "translation-ar": "كولونيا",
-        "translation-hi": "कोलोन",
-        "translation-ro": "Köln",
-        "translation-tr": "Köln",
-        "translation-uz": "Kyoln"
-      },
-      {
         "word": "der Bus",
-        "translation-ru": "Автобус",
-        "translation-en": "Bus",
-        "translation-uk": "Автобус",
-        "translation-pl": "Autobus",
-        "translation-es": "Autobús",
-        "translation-fr": "Bus",
-        "translation-ar": "حافلة",
+        "translation-ru": "автобус",
+        "translation-en": "bus",
+        "translation-uk": "автобус",
+        "translation-pl": "autobus",
+        "translation-es": "el autobús",
+        "translation-fr": "le bus",
+        "translation-ar": "الحافلة",
         "translation-hi": "बस",
-        "translation-ro": "Autobuz",
-        "translation-tr": "Otobüs",
-        "translation-uz": "Avtobus"
+        "translation-ro": "autobuzul",
+        "translation-tr": "otobüs",
+        "translation-uz": "avtobus"
       },
       {
-        "word": "der Kühlschrank",
-        "translation-ru": "Холодильник",
-        "translation-en": "Refrigerator",
-        "translation-uk": "Холодильник",
-        "translation-pl": "Lodówka",
-        "translation-es": "Nevera",
-        "translation-fr": "Réfrigérateur",
-        "translation-ar": "ثلاجة",
-        "translation-hi": "फ्रिज",
-        "translation-ro": "Frigider",
-        "translation-tr": "Buzdolabı",
-        "translation-uz": "Sovutgich"
+        "word": "das Fahrrad",
+        "translation-ru": "велосипед",
+        "translation-en": "bike",
+        "translation-uk": "велосипед",
+        "translation-pl": "rower",
+        "translation-es": "la bicicleta",
+        "translation-fr": "le vélo",
+        "translation-ar": "الدراجة",
+        "translation-hi": "साइकिल",
+        "translation-ro": "bicicleta",
+        "translation-tr": "bisiklet",
+        "translation-uz": "velosiped"
       },
       {
-        "word": "das Büro",
-        "translation-ru": "Офис",
-        "translation-en": "Office",
-        "translation-uk": "Офіс",
-        "translation-pl": "Biuro",
-        "translation-es": "Oficina",
-        "translation-fr": "Bureau",
-        "translation-ar": "مكتب",
-        "translation-hi": "कार्यालय",
-        "translation-ro": "Birou",
-        "translation-tr": "Ofis",
-        "translation-uz": "Ofis"
+        "word": "das Flugzeug",
+        "translation-ru": "самолёт",
+        "translation-en": "plane",
+        "translation-uk": "літак",
+        "translation-pl": "samolot",
+        "translation-es": "el avión",
+        "translation-fr": "l’avion",
+        "translation-ar": "الطائرة",
+        "translation-hi": "हवाई जहाज़",
+        "translation-ro": "avionul",
+        "translation-tr": "uçak",
+        "translation-uz": "samolyot"
+      },
+      {
+        "word": "die U-Bahn",
+        "translation-ru": "метро",
+        "translation-en": "underground",
+        "translation-uk": "метро",
+        "translation-pl": "metro",
+        "translation-es": "el metro",
+        "translation-fr": "le métro",
+        "translation-ar": "المترو",
+        "translation-hi": "मेट्रो",
+        "translation-ro": "metroul",
+        "translation-tr": "metro",
+        "translation-uz": "metro"
+      },
+      {
+        "word": "die Karte",
+        "translation-ru": "карта для оплаты",
+        "translation-en": "card",
+        "translation-uk": "картка",
+        "translation-pl": "karta",
+        "translation-es": "la tarjeta",
+        "translation-fr": "la carte",
+        "translation-ar": "البطاقة",
+        "translation-hi": "कार्ड",
+        "translation-ro": "cardul",
+        "translation-tr": "kart",
+        "translation-uz": "karta"
       }
     ],
     "tasks": [
@@ -1610,137 +1391,155 @@
         "type": "select",
         "question": "directionPrepositionsSix.questTask1",
         "options": [
-          "zur Tierärztin",
-          "bei der Tierärztin",
-          "aus der Tierärztin"
+          "mit dem Bus",
+          "mit den Bus",
+          "zum Bus"
         ],
-        "answer": "zur Tierärztin"
+        "answer": "mit dem Bus"
       },
       {
         "id": 2,
-        "type": "input",
+        "type": "reorder",
         "question": "directionPrepositionsSix.questTask2",
-        "correctAnswer": "nach"
+        "words": [
+          "fahre",
+          "Fahrrad",
+          "Ich",
+          "dem",
+          "mit",
+          "den"
+        ],
+        "correctOrder": [
+          "Ich",
+          "fahre",
+          "mit",
+          "dem",
+          "Fahrrad"
+        ]
       },
       {
         "id": 3,
-        "type": "reorder",
+        "type": "input",
         "question": "directionPrepositionsSix.questTask3",
-        "words": ["Zimmer", "geht", "aus", "Die", "Katze", "dem"],
-        "correctOrder": ["Die", "Katze", "geht", "aus", "dem", "Zimmer"]
+        "correctAnswer": "dem"
       },
       {
         "id": 4,
-        "type": "readAndAnswer",
-        "text": "— Die Katze hat Fieber. — Wir haben um drei Uhr einen Termin in der Praxis.",
+        "type": "input",
         "question": "directionPrepositionsSix.questTask4",
-        "options": [
-          "zur Tierärztin",
-          "bei der Tierärztin",
-          "aus der Tierärztin"
-        ],
-        "answer": "zur Tierärztin"
+        "correctAnswer": "mit"
       },
       {
         "id": 5,
-        "type": "input",
+        "type": "select",
         "question": "directionPrepositionsSix.questTask5",
-        "correctAnswer": "zum"
+        "options": [
+          "Er spricht mit dem Lehrer.",
+          "Er spricht mit den Lehrer.",
+          "Er spricht mit der Lehrer."
+        ],
+        "answer": "Er spricht mit dem Lehrer."
       },
       {
         "id": 6,
-        "type": "select",
+        "type": "input",
         "question": "directionPrepositionsSix.questTask6",
-        "options": [
-          "aus dem Kühlschrank",
-          "beim Kühlschrank",
-          "zum Kühlschrank"
-        ],
-        "answer": "aus dem Kühlschrank"
+        "correctAnswer": "dem"
       },
       {
         "id": 7,
-        "type": "reorder",
+        "type": "readAndAnswer",
         "question": "directionPrepositionsSix.questTask7",
-        "words": ["Schwimmbad", "gehen", "Freunde", "Die", "zum"],
-        "correctOrder": ["Die", "Freunde", "gehen", "zum", "Schwimmbad"]
+        "text": "Jeden Tag fährt Lukas mit der U-Bahn zur Arbeit.",
+        "options": [
+          "mit der U-Bahn",
+          "mit dem Bus",
+          "mit dem Auto"
+        ],
+        "answer": "mit der U-Bahn"
       },
       {
         "id": 8,
-        "type": "input",
+        "type": "select",
         "question": "directionPrepositionsSix.questTask8",
-        "correctAnswer": "in"
+        "options": [
+          "mit meinem Bruder",
+          "mit meinen Bruder",
+          "mit mein Bruder"
+        ],
+        "answer": "mit meinem Bruder"
       },
       {
         "id": 9,
-        "type": "readAndAnswer",
-        "text": "— Wo hast du diese alten Lehrbücher gefunden? — Ich habe sie für zwei Wochen ausgeliehen.",
+        "type": "reorder",
         "question": "directionPrepositionsSix.questTask9",
-        "options": [
-          "aus der Bibliothek",
-          "nach der Bibliothek",
-          "zur Bibliothek"
+        "words": [
+          "fliegen",
+          "Flugzeug",
+          "Wir",
+          "dem",
+          "mit",
+          "den"
         ],
-        "answer": "aus der Bibliothek"
+        "correctOrder": [
+          "Wir",
+          "fliegen",
+          "mit",
+          "dem",
+          "Flugzeug"
+        ]
       },
       {
         "id": 10,
-        "type": "select",
+        "type": "input",
         "question": "directionPrepositionsSix.questTask10",
-        "options": [
-          "bei der Oma",
-          "zur Oma",
-          "aus der Oma"
-        ],
-        "answer": "bei der Oma"
+        "correctAnswer": "er"
       },
       {
         "id": 11,
-        "type": "reorder",
+        "type": "input",
         "question": "directionPrepositionsSix.questTask11",
-        "words": ["fahren", "nach", "Wir", "Hause", "jetzt"],
-        "correctOrder": ["Wir", "fahren", "jetzt", "nach", "Hause"]
+        "correctAnswer": "vom"
       },
       {
         "id": 12,
         "type": "input",
         "question": "directionPrepositionsSix.questTask12",
-        "correctAnswer": "zur"
+        "correctAnswer": "aus"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
-        "text": "— Das Essen war wirklich lecker. — Ja, wir bezahlen die Rechnung und gehen zur Haltestelle.",
         "question": "directionPrepositionsSix.questTask13",
+        "text": "Am Wochenende fahre ich mit meinen Eltern ans Meer.",
         "options": [
-          "aus dem Restaurant",
-          "beim Restaurant",
-          "nach dem Restaurant"
+          "mit meinen Eltern",
+          "mit meinem Bruder",
+          "mit meiner Freundin"
         ],
-        "answer": "aus dem Restaurant"
+        "answer": "mit meinen Eltern"
       },
       {
         "id": 14,
         "type": "select",
         "question": "directionPrepositionsSix.questTask14",
         "options": [
-          "zur Werkstatt",
-          "nach der Werkstatt",
-          "aus der Werkstatt"
+          "Ich bezahle mit der Karte.",
+          "Ich bezahle mit die Karte.",
+          "Ich bezahle von der Karte."
         ],
-        "answer": "zur Werkstatt"
+        "answer": "Ich bezahle mit der Karte."
       },
       {
         "id": 15,
-        "type": "reorder",
+        "type": "input",
         "question": "directionPrepositionsSix.questTask15",
-        "words": ["Büro", "Der", "geht", "dem", "Kollege", "aus"],
-        "correctOrder": ["Der", "Kollege", "geht", "aus", "dem", "Büro"]
+        "correctAnswer": "beim"
       }
     ]
   },
   {
-    "questId": "direction-prep-seven",
+    "questId": "direction-prep-7",
     "title": "directionPrepositionsSeven.questTitle",
     "progress": "0/15",
     "description": "directionPrepositionsSeven.questDescription",
@@ -1755,144 +1554,74 @@
     },
     "vocabulary": [
       {
-        "word": "vom Arzt",
-        "translation-ru": "От врача",
-        "translation-en": "From the doctor",
-        "translation-uk": "Від лікаря",
-        "translation-pl": "Od lekarza",
-        "translation-es": "Del médico",
-        "translation-fr": "De chez le médecin",
-        "translation-ar": "من عند الطبيب",
-        "translation-hi": "डॉक्टर के पास से",
-        "translation-ro": "De la medic",
-        "translation-tr": "Doktordan",
-        "translation-uz": "Shifokor huzuridan"
+        "word": "zu Hause",
+        "translation-ru": "дома",
+        "translation-en": "at home",
+        "translation-uk": "вдома",
+        "translation-pl": "w domu",
+        "translation-es": "en casa",
+        "translation-fr": "à la maison",
+        "translation-ar": "في البيت",
+        "translation-hi": "घर पर",
+        "translation-ro": "acasă",
+        "translation-tr": "evde",
+        "translation-uz": "uyda"
       },
       {
-        "word": "mit dem Bus",
-        "translation-ru": "На автобусе",
-        "translation-en": "By bus",
-        "translation-uk": "Автобусом",
-        "translation-pl": "Autobusem",
-        "translation-es": "En autobús",
-        "translation-fr": "En bus",
-        "translation-ar": "بالحافلة",
-        "translation-hi": "बस से",
-        "translation-ro": "Cu autobuzul",
-        "translation-tr": "Otobüsle",
-        "translation-uz": "Avtobusda"
+        "word": "die Tante",
+        "translation-ru": "тётя",
+        "translation-en": "aunt",
+        "translation-uk": "тітка",
+        "translation-pl": "ciocia",
+        "translation-es": "la tía",
+        "translation-fr": "la tante",
+        "translation-ar": "العمة",
+        "translation-hi": "चाची",
+        "translation-ro": "mătușa",
+        "translation-tr": "teyze",
+        "translation-uz": "xola"
       },
       {
-        "word": "von der Arbeit",
-        "translation-ru": "С работы",
-        "translation-en": "From work",
-        "translation-uk": "З роботи",
-        "translation-pl": "Z pracy",
-        "translation-es": "Del trabajo",
-        "translation-fr": "Du travail",
-        "translation-ar": "من العمل",
-        "translation-hi": "काम से",
-        "translation-ro": "De la muncă",
-        "translation-tr": "İşten",
-        "translation-uz": "Ishdan"
+        "word": "Frankreich",
+        "translation-ru": "Франция",
+        "translation-en": "France",
+        "translation-uk": "Франція",
+        "translation-pl": "Francja",
+        "translation-es": "Francia",
+        "translation-fr": "la France",
+        "translation-ar": "فرنسا",
+        "translation-hi": "फ़्रांस",
+        "translation-ro": "Franța",
+        "translation-tr": "Fransa",
+        "translation-uz": "Fransiya"
       },
       {
-        "word": "mit dem Zug",
-        "translation-ru": "На поезде",
-        "translation-en": "By train",
-        "translation-uk": "Поїздом",
-        "translation-pl": "Pociągiem",
-        "translation-es": "En tren",
-        "translation-fr": "En train",
-        "translation-ar": "بالقطار",
-        "translation-hi": "ट्रेन से",
-        "translation-ro": "Cu trenul",
-        "translation-tr": "Trenle",
-        "translation-uz": "Poyezdda"
+        "word": "der Kühlschrank",
+        "translation-ru": "холодильник",
+        "translation-en": "fridge",
+        "translation-uk": "холодильник",
+        "translation-pl": "lodówka",
+        "translation-es": "la nevera",
+        "translation-fr": "le frigo",
+        "translation-ar": "الثلاجة",
+        "translation-hi": "फ़्रिज",
+        "translation-ro": "frigiderul",
+        "translation-tr": "buzdolabı",
+        "translation-uz": "muzlatgich"
       },
       {
-        "word": "der Kollege",
-        "translation-ru": "Коллега",
-        "translation-en": "Colleague",
-        "translation-uk": "Колега",
-        "translation-pl": "Kolega",
-        "translation-es": "Colega",
-        "translation-fr": "Collègue",
-        "translation-ar": "زميل",
-        "translation-hi": "सहकर्मी",
-        "translation-ro": "Coleg",
-        "translation-tr": "İş arkadaşı",
-        "translation-uz": "Hamkasb"
-      },
-      {
-        "word": "die Freundin",
-        "translation-ru": "Подруга",
-        "translation-en": "Female friend",
-        "translation-uk": "Подруга",
-        "translation-pl": "Przyjaciółka",
-        "translation-es": "Amiga",
-        "translation-fr": "Amie",
-        "translation-ar": "صديقة",
-        "translation-hi": "सहेली",
-        "translation-ro": "Prietenă",
-        "translation-tr": "Kız arkadaş",
-        "translation-uz": "Dugona"
-      },
-      {
-        "word": "vom Chef",
-        "translation-ru": "От начальника",
-        "translation-en": "From the boss",
-        "translation-uk": "Від начальника",
-        "translation-pl": "Od szefa",
-        "translation-es": "Del jefe",
-        "translation-fr": "De chez le chef",
-        "translation-ar": "من عند المدير",
-        "translation-hi": "बॉस के पास से",
-        "translation-ro": "De la șef",
-        "translation-tr": "Patrondan",
-        "translation-uz": "Boshliqdan"
-      },
-      {
-        "word": "das Fahrrad",
-        "translation-ru": "Велосипед",
-        "translation-en": "Bicycle",
-        "translation-uk": "Велосипед",
-        "translation-pl": "Rower",
-        "translation-es": "Bicicleta",
-        "translation-fr": "Vélo",
-        "translation-ar": "دراجة",
-        "translation-hi": "साइकिल",
-        "translation-ro": "Bicicletă",
-        "translation-tr": "Bisiklet",
-        "translation-uz": "Velosiped"
-      },
-      {
-        "word": "von den Eltern",
-        "translation-ru": "От родителей",
-        "translation-en": "From parents",
-        "translation-uk": "Від батьків",
-        "translation-pl": "Od rodziców",
-        "translation-es": "De los padres",
-        "translation-fr": "De chez les parents",
-        "translation-ar": "من عند الوالدين",
-        "translation-hi": "माता-पिता के पास से",
-        "translation-ro": "De la părinți",
-        "translation-tr": "Ebeveynlerden",
-        "translation-uz": "Ota-onadan"
-      },
-      {
-        "word": "das Auto",
-        "translation-ru": "Машина",
-        "translation-en": "Car",
-        "translation-uk": "Машина",
-        "translation-pl": "Samochód",
-        "translation-es": "Coche",
-        "translation-fr": "Voiture",
-        "translation-ar": "سيارة",
-        "translation-hi": "गाड़ी",
-        "translation-ro": "Mașină",
-        "translation-tr": "Araba",
-        "translation-uz": "Mashina"
+        "word": "die Straßenbahn",
+        "translation-ru": "трамвай",
+        "translation-en": "tram",
+        "translation-uk": "трамвай",
+        "translation-pl": "tramwaj",
+        "translation-es": "el tranvía",
+        "translation-fr": "le tram",
+        "translation-ar": "الترام",
+        "translation-hi": "ट्राम",
+        "translation-ro": "tramvaiul",
+        "translation-tr": "tramvay",
+        "translation-uz": "tramvay"
       }
     ],
     "tasks": [
@@ -1901,136 +1630,158 @@
         "type": "select",
         "question": "directionPrepositionsSeven.questTask1",
         "options": [
-          "mit dem Bus",
-          "vom Bus",
-          "aus dem Bus"
+          "Ich gehe zum Arzt.",
+          "Ich gehe beim Arzt.",
+          "Ich gehe vom Arzt."
         ],
-        "answer": "mit dem Bus"
+        "answer": "Ich gehe zum Arzt."
       },
       {
         "id": 2,
-        "type": "input",
+        "type": "select",
         "question": "directionPrepositionsSeven.questTask2",
-        "correctAnswer": "vom"
+        "options": [
+          "Ich bin beim Arzt.",
+          "Ich bin zum Arzt.",
+          "Ich bin vom Arzt."
+        ],
+        "answer": "Ich bin beim Arzt."
       },
       {
         "id": 3,
-        "type": "reorder",
+        "type": "select",
         "question": "directionPrepositionsSeven.questTask3",
-        "words": ["Zug", "Wir", "mit", "dem", "fahren"],
-        "correctOrder": ["Wir", "fahren", "mit", "dem", "Zug"]
+        "options": [
+          "Ich komme vom Arzt.",
+          "Ich komme zum Arzt.",
+          "Ich komme beim Arzt."
+        ],
+        "answer": "Ich komme vom Arzt."
       },
       {
         "id": 4,
-        "type": "select",
+        "type": "input",
         "question": "directionPrepositionsSeven.questTask4",
-        "options": [
-          "nach dem Unterricht",
-          "seit dem Unterricht",
-          "vor dem Unterricht"
-        ],
-        "answer": "nach dem Unterricht"
+        "correctAnswer": "nach"
       },
       {
         "id": 5,
         "type": "input",
         "question": "directionPrepositionsSeven.questTask5",
-        "correctAnswer": "mit"
+        "correctAnswer": "zu"
       },
       {
         "id": 6,
-        "type": "select",
+        "type": "reorder",
         "question": "directionPrepositionsSeven.questTask6",
-        "options": [
-          "vom Chef",
-          "beim Chef",
-          "zum Chef"
+        "words": [
+          "Bist",
+          "Hause",
+          "du",
+          "zu",
+          "nach"
         ],
-        "answer": "vom Chef"
+        "correctOrder": [
+          "Bist",
+          "du",
+          "zu",
+          "Hause"
+        ]
       },
       {
         "id": 7,
-        "type": "reorder",
+        "type": "readAndAnswer",
         "question": "directionPrepositionsSeven.questTask7",
-        "words": ["fährt", "Lukas", "Fahrrad", "dem", "mit"],
-        "correctOrder": ["Lukas", "fährt", "mit", "dem", "Fahrrad"]
+        "text": "Um acht Uhr gehe ich zur Arbeit. Um fünf Uhr komme ich nach Hause.",
+        "options": [
+          "zur Arbeit",
+          "nach Hause",
+          "zum Arzt"
+        ],
+        "answer": "zur Arbeit"
       },
       {
         "id": 8,
         "type": "input",
         "question": "directionPrepositionsSeven.questTask8",
-        "correctAnswer": "dem"
+        "correctAnswer": "zum"
       },
       {
         "id": 9,
-        "type": "readAndAnswer",
-        "text": "— Woher hast du das Rezept? — Die Untersuchung ist fertig, die Praxis schließt gleich.",
+        "type": "select",
         "question": "directionPrepositionsSeven.questTask9",
         "options": [
-          "vom Arzt",
-          "mit dem Arzt",
-          "zum Arzt"
+          "aus Frankreich",
+          "nach Frankreich",
+          "bei Frankreich"
         ],
-        "answer": "vom Arzt"
+        "answer": "aus Frankreich"
       },
       {
         "id": 10,
-        "type": "select",
+        "type": "reorder",
         "question": "directionPrepositionsSeven.questTask10",
-        "options": [
-          "mit dem Kollegen",
-          "vom Kollegen",
-          "zu dem Kollegen"
+        "words": [
+          "wohnt",
+          "Schwester",
+          "Er",
+          "seiner",
+          "bei",
+          "zu"
         ],
-        "answer": "mit dem Kollegen"
+        "correctOrder": [
+          "Er",
+          "wohnt",
+          "bei",
+          "seiner",
+          "Schwester"
+        ]
       },
       {
         "id": 11,
-        "type": "reorder",
+        "type": "select",
         "question": "directionPrepositionsSeven.questTask11",
-        "words": ["Eltern", "den", "Sie", "kommt", "von"],
-        "correctOrder": ["Sie", "kommt", "von", "den", "Eltern"]
+        "options": [
+          "Ich fahre nach Wien.",
+          "Ich fahre zu Wien.",
+          "Ich fahre bei Wien."
+        ],
+        "answer": "Ich fahre nach Wien."
       },
       {
         "id": 12,
         "type": "input",
         "question": "directionPrepositionsSeven.questTask12",
-        "correctAnswer": "vom"
+        "correctAnswer": "aus"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
-        "text": "— Das Auto ist kaputt. — Kein Problem, wir nehmen die Linie 4 bis zum Markt.",
         "question": "directionPrepositionsSeven.questTask13",
+        "text": "Sara wohnt bei ihrer Tante. Am Wochenende fährt sie zu ihren Eltern.",
         "options": [
-          "mit dem Bus",
-          "vom Bus",
-          "aus dem Bus"
+          "bei ihrer Tante",
+          "bei ihren Eltern",
+          "bei ihrer Oma"
         ],
-        "answer": "mit dem Bus"
+        "answer": "bei ihrer Tante"
       },
       {
         "id": 14,
-        "type": "select",
+        "type": "input",
         "question": "directionPrepositionsSeven.questTask14",
-        "options": [
-          "von der Arbeit",
-          "aus der Arbeit",
-          "zur Arbeit"
-        ],
-        "answer": "von der Arbeit"
+        "correctAnswer": "zum"
       },
       {
         "id": 15,
-        "type": "reorder",
+        "type": "input",
         "question": "directionPrepositionsSeven.questTask15",
-        "words": ["dem", "Ich", "trinke", "Kaffee", "Freund", "mit"],
-        "correctOrder": ["Ich", "trinke", "Kaffee", "mit", "dem", "Freund"]
+        "correctAnswer": "der"
       }
     ]
   },
   {
-    "questId": "direction-prep-eight",
+    "questId": "direction-prep-8",
     "title": "directionPrepositionsEight.questTitle",
     "progress": "0/15",
     "description": "directionPrepositionsEight.questDescription",
@@ -2045,144 +1796,74 @@
     },
     "vocabulary": [
       {
-        "word": "nach der Arbeit",
-        "translation-ru": "После работы",
-        "translation-en": "After work",
-        "translation-uk": "Після роботи",
-        "translation-pl": "Po pracy",
-        "translation-es": "Después del trabajo",
-        "translation-fr": "Après le travail",
-        "translation-ar": "بعد العمل",
-        "translation-hi": "काम के बाद",
-        "translation-ro": "După muncă",
-        "translation-tr": "İşten sonra",
-        "translation-uz": "Ishdan keyin"
+        "word": "London",
+        "translation-ru": "Лондон",
+        "translation-en": "London",
+        "translation-uk": "Лондон",
+        "translation-pl": "Londyn",
+        "translation-es": "Londres",
+        "translation-fr": "Londres",
+        "translation-ar": "لندن",
+        "translation-hi": "लंदन",
+        "translation-ro": "Londra",
+        "translation-tr": "Londra",
+        "translation-uz": "London"
       },
       {
-        "word": "seit einem Jahr",
-        "translation-ru": "Уже год",
-        "translation-en": "For a year",
-        "translation-uk": "Вже рік",
-        "translation-pl": "Od roku",
-        "translation-es": "Desde hace un año",
-        "translation-fr": "Depuis un an",
-        "translation-ar": "منذ عام",
-        "translation-hi": "एक साल से",
-        "translation-ro": "De un an",
-        "translation-tr": "Bir yıldır",
-        "translation-uz": "Bir yildan beri"
+        "word": "der Kurs",
+        "translation-ru": "курс",
+        "translation-en": "course",
+        "translation-uk": "курс",
+        "translation-pl": "kurs",
+        "translation-es": "el curso",
+        "translation-fr": "le cours",
+        "translation-ar": "الدورة",
+        "translation-hi": "कोर्स",
+        "translation-ro": "cursul",
+        "translation-tr": "kurs",
+        "translation-uz": "kurs"
       },
       {
-        "word": "nach dem Essen",
-        "translation-ru": "После еды",
-        "translation-en": "After eating",
-        "translation-uk": "Після їжі",
-        "translation-pl": "Po jedzeniu",
-        "translation-es": "Después de comer",
-        "translation-fr": "Après le repas",
-        "translation-ar": "بعد الأكل",
-        "translation-hi": "खाने के बाद",
-        "translation-ro": "După masă",
-        "translation-tr": "Yemekten sonra",
-        "translation-uz": "Ovqatdan keyin"
+        "word": "schenken",
+        "translation-ru": "дарить",
+        "translation-en": "to give as a present",
+        "translation-uk": "дарувати",
+        "translation-pl": "dawać w prezencie",
+        "translation-es": "regalar",
+        "translation-fr": "offrir",
+        "translation-ar": "يُهدي",
+        "translation-hi": "तोहफ़ा देना",
+        "translation-ro": "a dărui",
+        "translation-tr": "hediye etmek",
+        "translation-uz": "sovg‘a qilmoq"
       },
       {
-        "word": "die Woche",
-        "translation-ru": "Неделя",
-        "translation-en": "Week",
-        "translation-uk": "Тиждень",
-        "translation-pl": "Tydzień",
-        "translation-es": "Semana",
-        "translation-fr": "Semaine",
-        "translation-ar": "أسبوع",
-        "translation-hi": "सप्ताह",
-        "translation-ro": "Săptămână",
-        "translation-tr": "Hafta",
-        "translation-uz": "Hafta"
+        "word": "die Blumen",
+        "translation-ru": "цветы",
+        "translation-en": "flowers",
+        "translation-uk": "квіти",
+        "translation-pl": "kwiaty",
+        "translation-es": "las flores",
+        "translation-fr": "les fleurs",
+        "translation-ar": "الزهور",
+        "translation-hi": "फूल",
+        "translation-ro": "florile",
+        "translation-tr": "çiçekler",
+        "translation-uz": "gullar"
       },
       {
-        "word": "der Monat",
-        "translation-ru": "Месяц",
-        "translation-en": "Month",
-        "translation-uk": "Місяць",
-        "translation-pl": "Miesiąc",
-        "translation-es": "Mes",
-        "translation-fr": "Mois",
-        "translation-ar": "شهر",
-        "translation-hi": "महीना",
-        "translation-ro": "Lună",
-        "translation-tr": "Ay",
-        "translation-uz": "Oy"
-      },
-      {
-        "word": "nach dem Kurs",
-        "translation-ru": "После курса",
-        "translation-en": "After the course",
-        "translation-uk": "Після курсу",
-        "translation-pl": "Po kursie",
-        "translation-es": "Después del curso",
-        "translation-fr": "Après le cours",
-        "translation-ar": "بعد الدورة",
-        "translation-hi": "कोर्स के बाद",
-        "translation-ro": "După curs",
-        "translation-tr": "Kurstan sonra",
-        "translation-uz": "Kursdan keyin"
-      },
-      {
-        "word": "seit zwei Tagen",
-        "translation-ru": "Уже два дня",
-        "translation-en": "For two days",
-        "translation-uk": "Вже два дні",
-        "translation-pl": "Od dwóch dni",
-        "translation-es": "Desde hace dos días",
-        "translation-fr": "Depuis deux jours",
-        "translation-ar": "منذ يومين",
-        "translation-hi": "दो दिनों से",
-        "translation-ro": "De două zile",
-        "translation-tr": "İki gündür",
-        "translation-uz": "Ikki kundan beri"
-      },
-      {
-        "word": "die Pause",
-        "translation-ru": "Перерыв",
-        "translation-en": "Break",
-        "translation-uk": "Перерва",
-        "translation-pl": "Przerwa",
-        "translation-es": "Pausa",
-        "translation-fr": "Pause",
-        "translation-ar": "استراحة",
-        "translation-hi": "विराम",
-        "translation-ro": "Pauză",
-        "translation-tr": "Mola",
-        "translation-uz": "Tanaffus"
-      },
-      {
-        "word": "die Stunde",
-        "translation-ru": "Час",
-        "translation-en": "Hour",
-        "translation-uk": "Година",
-        "translation-pl": "Godzina",
-        "translation-es": "Hora",
-        "translation-fr": "Heure",
-        "translation-ar": "ساعة",
-        "translation-hi": "घंटा",
-        "translation-ro": "Oră",
-        "translation-tr": "Saat",
-        "translation-uz": "Soat"
-      },
-      {
-        "word": "der Unterricht",
-        "translation-ru": "Занятие / урок",
-        "translation-en": "Lesson / class",
-        "translation-uk": "Заняття / урок",
-        "translation-pl": "Lekcja",
-        "translation-es": "Clase",
-        "translation-fr": "Cours",
-        "translation-ar": "درس",
-        "translation-hi": "कक्षा / पाठ",
-        "translation-ro": "Lecție",
-        "translation-tr": "Ders",
-        "translation-uz": "Dars"
+        "word": "der Stuhl",
+        "translation-ru": "стул",
+        "translation-en": "chair",
+        "translation-uk": "стілець",
+        "translation-pl": "krzesło",
+        "translation-es": "la silla",
+        "translation-fr": "la chaise",
+        "translation-ar": "الكرسي",
+        "translation-hi": "कुर्सी",
+        "translation-ro": "scaunul",
+        "translation-tr": "sandalye",
+        "translation-uz": "stul"
       }
     ],
     "tasks": [
@@ -2191,719 +1872,167 @@
         "type": "select",
         "question": "directionPrepositionsEight.questTask1",
         "options": [
-          "nach der Arbeit",
-          "seit der Arbeit",
-          "bei der Arbeit"
+          "zu meiner Oma",
+          "zu meine Oma",
+          "bei meiner Oma"
         ],
-        "answer": "nach der Arbeit"
+        "answer": "zu meiner Oma"
       },
       {
         "id": 2,
-        "type": "input",
+        "type": "reorder",
         "question": "directionPrepositionsEight.questTask2",
-        "correctAnswer": "seit"
+        "words": [
+          "fliege",
+          "London",
+          "Morgen",
+          "nach",
+          "ich",
+          "zu"
+        ],
+        "correctOrder": [
+          "Morgen",
+          "fliege",
+          "ich",
+          "nach",
+          "London"
+        ]
       },
       {
         "id": 3,
-        "type": "reorder",
+        "type": "input",
         "question": "directionPrepositionsEight.questTask3",
-        "words": ["Essen", "dem", "nach", "spazieren", "Wir", "gehen"],
-        "correctOrder": ["Wir", "gehen", "nach", "dem", "Essen", "spazieren"]
+        "correctAnswer": "zur"
       },
       {
         "id": 4,
-        "type": "readAndAnswer",
-        "text": "— Trinken wir einen Kaffee? — Ja gern, die Schicht ist gleich vorbei.",
+        "type": "input",
         "question": "directionPrepositionsEight.questTask4",
-        "options": [
-          "nach der Arbeit",
-          "vor der Arbeit",
-          "seit der Arbeit"
-        ],
-        "answer": "nach der Arbeit"
+        "correctAnswer": "beim"
       },
       {
         "id": 5,
         "type": "input",
         "question": "directionPrepositionsEight.questTask5",
-        "correctAnswer": "dem"
+        "correctAnswer": "von"
       },
       {
         "id": 6,
         "type": "select",
         "question": "directionPrepositionsEight.questTask6",
         "options": [
-          "seit einer Woche",
-          "nach einer Woche",
-          "aus einer Woche"
+          "Woher kommst du?",
+          "Wohin kommst du?",
+          "Wo kommst du?"
         ],
-        "answer": "seit einer Woche"
+        "answer": "Woher kommst du?"
       },
       {
         "id": 7,
-        "type": "reorder",
+        "type": "readAndAnswer",
         "question": "directionPrepositionsEight.questTask7",
-        "words": ["Jahr", "wohnt", "Sie", "hier", "seit", "einem"],
-        "correctOrder": ["Sie", "wohnt", "hier", "seit", "einem", "Jahr"]
+        "text": "Max fährt jeden Morgen mit dem Bus zur Schule.",
+        "options": [
+          "mit dem Bus",
+          "mit dem Fahrrad",
+          "mit dem Auto"
+        ],
+        "answer": "mit dem Bus"
       },
       {
         "id": 8,
         "type": "input",
         "question": "directionPrepositionsEight.questTask8",
-        "correctAnswer": "nach"
+        "correctAnswer": "dem"
       },
       {
         "id": 9,
-        "type": "readAndAnswer",
-        "text": "— Wann kommst du? — Mein Zug hat Verspätung, ich warte hier schon sechzig Minuten.",
+        "type": "input",
         "question": "directionPrepositionsEight.questTask9",
-        "options": [
-          "seit einer Stunde",
-          "nach einer Stunde",
-          "in einer Stunde"
-        ],
-        "answer": "seit einer Stunde"
+        "correctAnswer": "unter"
       },
       {
         "id": 10,
         "type": "select",
         "question": "directionPrepositionsEight.questTask10",
         "options": [
-          "nach dem Kurs",
-          "seit dem Kurs",
-          "bei dem Kurs"
+          "Das Bild hängt an der Wand.",
+          "Das Bild hängt an die Wand.",
+          "Das Bild hängt auf der Wand."
         ],
-        "answer": "nach dem Kurs"
+        "answer": "Das Bild hängt an der Wand."
       },
       {
         "id": 11,
         "type": "reorder",
         "question": "directionPrepositionsEight.questTask11",
-        "words": ["Tagen", "zwei", "krank", "ist", "Er", "seit"],
-        "correctOrder": ["Er", "ist", "seit", "zwei", "Tagen", "krank"]
+        "words": [
+          "liegt",
+          "Stuhl",
+          "Die",
+          "dem",
+          "neben",
+          "Tasche",
+          "den"
+        ],
+        "correctOrder": [
+          "Die",
+          "Tasche",
+          "liegt",
+          "neben",
+          "dem",
+          "Stuhl"
+        ]
       },
       {
         "id": 12,
-        "type": "input",
+        "type": "select",
         "question": "directionPrepositionsEight.questTask12",
-        "correctAnswer": "er"
+        "options": [
+          "Ich schenke meiner Mutter Blumen.",
+          "Ich schenke meine Mutter Blumen.",
+          "Ich schenke mein Mutter Blumen."
+        ],
+        "answer": "Ich schenke meiner Mutter Blumen."
       },
       {
         "id": 13,
         "type": "readAndAnswer",
-        "text": "— Die Suppe war super. — Ja, jetzt möchte ich einen Espresso.",
         "question": "directionPrepositionsEight.questTask13",
+        "text": "Nach dem Kurs gehe ich mit Anna ins Café.",
         "options": [
-          "nach dem Essen",
-          "vor dem Essen",
-          "seit dem Essen"
+          "mit Anna",
+          "mit Lisa",
+          "mit Tom"
         ],
-        "answer": "nach dem Essen"
+        "answer": "mit Anna"
       },
       {
         "id": 14,
-        "type": "select",
+        "type": "input",
         "question": "directionPrepositionsEight.questTask14",
-        "options": [
-          "seit drei Monaten",
-          "nach drei Monaten",
-          "von drei Monaten"
-        ],
-        "answer": "seit drei Monaten"
+        "correctAnswer": "zu"
       },
       {
         "id": 15,
         "type": "reorder",
         "question": "directionPrepositionsEight.questTask15",
-        "words": ["Pause", "sprechen", "nach", "der", "Wir"],
-        "correctOrder": ["Wir", "sprechen", "nach", "der", "Pause"]
-      }
-    ]
-  },
-  {
-    "questId": "direction-prep-nine",
-    "title": "directionPrepositionsNine.questTitle",
-    "progress": "0/15",
-    "description": "directionPrepositionsNine.questDescription",
-    "conditions": {
-      "goal": "directionPrepositionsNine.questGoal",
-      "minCorrect": 15,
-      "requiredTasks": 15
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "word": "das Paket",
-        "translation-ru": "Посылка",
-        "translation-en": "Package",
-        "translation-uk": "Посилка",
-        "translation-pl": "Paczka",
-        "translation-es": "Paquete",
-        "translation-fr": "Colis",
-        "translation-ar": "طرد",
-        "translation-hi": "पार्सल",
-        "translation-ro": "Pachet",
-        "translation-tr": "Paket",
-        "translation-uz": "Posilka"
-      },
-      {
-        "word": "der Vermieter",
-        "translation-ru": "Арендодатель",
-        "translation-en": "Landlord",
-        "translation-uk": "Орендодавець",
-        "translation-pl": "Wynajmujący",
-        "translation-es": "Arrendador",
-        "translation-fr": "Propriétaire bailleur",
-        "translation-ar": "المؤجر",
-        "translation-hi": "मकान मालिक",
-        "translation-ro": "Proprietar",
-        "translation-tr": "Ev sahibi",
-        "translation-uz": "Ijara beruvchi"
-      },
-      {
-        "word": "das Konzert",
-        "translation-ru": "Концерт",
-        "translation-en": "Concert",
-        "translation-uk": "Концерт",
-        "translation-pl": "Koncert",
-        "translation-es": "Concierto",
-        "translation-fr": "Concert",
-        "translation-ar": "حفلة موسيقية",
-        "translation-hi": "संगीत कार्यक्रम",
-        "translation-ro": "Concert",
-        "translation-tr": "Konser",
-        "translation-uz": "Konsert"
-      },
-      {
-        "word": "die Waschmaschine",
-        "translation-ru": "Стиральная машина",
-        "translation-en": "Washing machine",
-        "translation-uk": "Пральна машина",
-        "translation-pl": "Pralka",
-        "translation-es": "Lavadora",
-        "translation-fr": "Machine à laver",
-        "translation-ar": "غسالة",
-        "translation-hi": "वाशिंग मशीन",
-        "translation-ro": "Mașină de spălat",
-        "translation-tr": "Çamaşır makinesi",
-        "translation-uz": "Kir yuvish mashinasi"
-      },
-      {
-        "word": "das Flugzeug",
-        "translation-ru": "Самолёт",
-        "translation-en": "Airplane",
-        "translation-uk": "Літак",
-        "translation-pl": "Samolot",
-        "translation-es": "Avión",
-        "translation-fr": "Avion",
-        "translation-ar": "طائرة",
-        "translation-hi": "हवाई जहाज",
-        "translation-ro": "Avion",
-        "translation-tr": "Uçak",
-        "translation-uz": "Samolyot"
-      },
-      {
-        "word": "der Nachbar",
-        "translation-ru": "Сосед",
-        "translation-en": "Neighbor",
-        "translation-uk": "Сусід",
-        "translation-pl": "Sąsiad",
-        "translation-es": "Vecino",
-        "translation-fr": "Voisin",
-        "translation-ar": "جار",
-        "translation-hi": "पड़ोसी",
-        "translation-ro": "Vecin",
-        "translation-tr": "Komşu",
-        "translation-uz": "Qo'shni"
-      },
-      {
-        "word": "die Party",
-        "translation-ru": "Вечеринка",
-        "translation-en": "Party",
-        "translation-uk": "Вечірка",
-        "translation-pl": "Impreza",
-        "translation-es": "Fiesta",
-        "translation-fr": "Fête",
-        "translation-ar": "حفلة",
-        "translation-hi": "पार्टी",
-        "translation-ro": "Petrecere",
-        "translation-tr": "Parti",
-        "translation-uz": "Bazm"
-      },
-      {
-        "word": "der Handwerker",
-        "translation-ru": "Мастер / ремонтник",
-        "translation-en": "Handyman / craftsman",
-        "translation-uk": "Майстер",
-        "translation-pl": "Fachowiec",
-        "translation-es": "Técnico / artesano",
-        "translation-fr": "Artisan",
-        "translation-ar": "حرفي",
-        "translation-hi": "कारीगर",
-        "translation-ro": "Meșter",
-        "translation-tr": "Usta",
-        "translation-uz": "Usta"
-      },
-      {
-        "word": "die Kasse",
-        "translation-ru": "Касса",
-        "translation-en": "Cash register / checkout",
-        "translation-uk": "Каса",
-        "translation-pl": "Kasa",
-        "translation-es": "Caja",
-        "translation-fr": "Caisse",
-        "translation-ar": "صندوق الدفع",
-        "translation-hi": "कैश काउंटर",
-        "translation-ro": "Casă de marcat",
-        "translation-tr": "Kasa",
-        "translation-uz": "Kassa"
-      },
-      {
-        "word": "der Schlüssel",
-        "translation-ru": "Ключ",
-        "translation-en": "Key",
-        "translation-uk": "Ключ",
-        "translation-pl": "Klucz",
-        "translation-es": "Llave",
-        "translation-fr": "Clé",
-        "translation-ar": "مفتاح",
-        "translation-hi": "चाबी",
-        "translation-ro": "Cheie",
-        "translation-tr": "Anahtar",
-        "translation-uz": "Kalit"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "directionPrepositionsNine.questTask1",
-        "options": [
-          "zur Kasse",
-          "bei der Kasse",
-          "aus der Kasse"
+        "words": [
+          "wohne",
+          "Freund",
+          "Ich",
+          "meinem",
+          "bei",
+          "zu"
         ],
-        "answer": "zur Kasse"
-      },
-      {
-        "id": 2,
-        "type": "select",
-        "question": "directionPrepositionsNine.questTask2",
-        "options": [
-          "nach dem Konzert",
-          "seit dem Konzert",
-          "aus dem Konzert"
-        ],
-        "answer": "nach dem Konzert"
-      },
-      {
-        "id": 3,
-        "type": "reorder",
-        "question": "directionPrepositionsNine.questTask3",
-        "words": ["Waschmaschine", "Kleidung", "holt", "Sie", "aus", "der"],
-        "correctOrder": ["Sie", "holt", "Kleidung", "aus", "der", "Waschmaschine"]
-      },
-      {
-        "id": 4,
-        "type": "select",
-        "question": "directionPrepositionsNine.questTask4",
-        "options": [
-          "mit dem Flugzeug",
-          "vom Flugzeug",
-          "aus dem Flugzeug"
-        ],
-        "answer": "mit dem Flugzeug"
-      },
-      {
-        "id": 5,
-        "type": "input",
-        "question": "directionPrepositionsNine.questTask5",
-        "correctAnswer": "vom"
-      },
-      {
-        "id": 6,
-        "type": "select",
-        "question": "directionPrepositionsNine.questTask6",
-        "options": [
-          "zur Party",
-          "bei der Party",
-          "von der Party"
-        ],
-        "answer": "zur Party"
-      },
-      {
-        "id": 7,
-        "type": "reorder",
-        "question": "directionPrepositionsNine.questTask7",
-        "words": ["liegt", "Der", "Schlüssel", "beim", "Nachbarn"],
-        "correctOrder": ["Der", "Schlüssel", "liegt", "beim", "Nachbarn"]
-      },
-      {
-        "id": 8,
-        "type": "input",
-        "question": "directionPrepositionsNine.questTask8",
-        "correctAnswer": "zum"
-      },
-      {
-        "id": 9,
-        "type": "readAndAnswer",
-        "text": "— Hast du den Mietvertrag? — Ja, ich komme gerade von der Wohnungsbesichtigung.",
-        "question": "directionPrepositionsNine.questTask9",
-        "options": [
-          "vom Vermieter",
-          "zum Vermieter",
-          "mit dem Vermieter"
-        ],
-        "answer": "vom Vermieter"
-      },
-      {
-        "id": 10,
-        "type": "select",
-        "question": "directionPrepositionsNine.questTask10",
-        "options": [
-          "mit dem Schlüssel",
-          "aus dem Schlüssel",
-          "beim Schlüssel"
-        ],
-        "answer": "mit dem Schlüssel"
-      },
-      {
-        "id": 11,
-        "type": "reorder",
-        "question": "directionPrepositionsNine.questTask11",
-        "words": ["Umzug", "Alle", "müde", "dem", "sind", "nach"],
-        "correctOrder": ["Alle", "sind", "nach", "dem", "Umzug", "müde"]
-      },
-      {
-        "id": 12,
-        "type": "input",
-        "question": "directionPrepositionsNine.questTask12",
-        "correctAnswer": "bei"
-      },
-      {
-        "id": 13,
-        "type": "readAndAnswer",
-        "text": "— Was ist in dem großen Karton? — Neue Schuhe, ich packe sie gleich aus.",
-        "question": "directionPrepositionsNine.questTask13",
-        "options": [
-          "aus dem Paket",
-          "nach dem Paket",
-          "zum Paket"
-        ],
-        "answer": "aus dem Paket"
-      },
-      {
-        "id": 14,
-        "type": "select",
-        "question": "directionPrepositionsNine.questTask14",
-        "options": [
-          "Sie fährt mit der U-Bahn",
-          "Sie fährt aus der U-Bahn",
-          "Sie fährt bei der U-Bahn"
-        ],
-        "answer": "Sie fährt mit der U-Bahn"
-      },
-      {
-        "id": 15,
-        "type": "reorder",
-        "question": "directionPrepositionsNine.questTask15",
-        "words": ["fährt", "Taxi", "dem", "mit", "Sie"],
-        "correctOrder": ["Sie", "fährt", "mit", "dem", "Taxi"]
-      }
-    ]
-  },
-  {
-    "questId": "direction-prep-ten",
-    "title": "directionPrepositionsTen.questTitle",
-    "progress": "0/15",
-    "description": "directionPrepositionsTen.questDescription",
-    "conditions": {
-      "goal": "directionPrepositionsTen.questGoal",
-      "minCorrect": 15,
-      "requiredTasks": 15
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "word": "die Apotheke",
-        "translation-ru": "Аптека",
-        "translation-en": "Pharmacy",
-        "translation-uk": "Аптека",
-        "translation-pl": "Apteka",
-        "translation-es": "Farmacia",
-        "translation-fr": "Pharmacie",
-        "translation-ar": "صيدلية",
-        "translation-hi": "दवा की दुकान",
-        "translation-ro": "Farmacie",
-        "translation-tr": "Eczane",
-        "translation-uz": "Dorixona"
-      },
-      {
-        "word": "die Bank",
-        "translation-ru": "Банк",
-        "translation-en": "Bank",
-        "translation-uk": "Банк",
-        "translation-pl": "Bank",
-        "translation-es": "Banco",
-        "translation-fr": "Banque",
-        "translation-ar": "بنك",
-        "translation-hi": "बैंक",
-        "translation-ro": "Bancă",
-        "translation-tr": "Banka",
-        "translation-uz": "Bank"
-      },
-      {
-        "word": "die Post",
-        "translation-ru": "Почта",
-        "translation-en": "Post office",
-        "translation-uk": "Пошта",
-        "translation-pl": "Poczta",
-        "translation-es": "Correos",
-        "translation-fr": "Poste",
-        "translation-ar": "بريد",
-        "translation-hi": "डाकघर",
-        "translation-ro": "Poștă",
-        "translation-tr": "Postane",
-        "translation-uz": "Pochta"
-      },
-      {
-        "word": "der Flughafen",
-        "translation-ru": "Аэропорт",
-        "translation-en": "Airport",
-        "translation-uk": "Аеропорт",
-        "translation-pl": "Lotnisko",
-        "translation-es": "Aeropuerto",
-        "translation-fr": "Aéroport",
-        "translation-ar": "مطار",
-        "translation-hi": "हवाई अड्डा",
-        "translation-ro": "Aeroport",
-        "translation-tr": "Havalimanı",
-        "translation-uz": "Aeroport"
-      },
-      {
-        "word": "die Straßenbahn",
-        "translation-ru": "Трамвай",
-        "translation-en": "Tram",
-        "translation-uk": "Трамвай",
-        "translation-pl": "Tramwaj",
-        "translation-es": "Tranvía",
-        "translation-fr": "Tramway",
-        "translation-ar": "ترام",
-        "translation-hi": "ट्राम",
-        "translation-ro": "Tramvai",
-        "translation-tr": "Tramvay",
-        "translation-uz": "Tramvay"
-      },
-      {
-        "word": "das Café",
-        "translation-ru": "Кафе",
-        "translation-en": "Café",
-        "translation-uk": "Кафе",
-        "translation-pl": "Kawiarnia",
-        "translation-es": "Cafetería",
-        "translation-fr": "Café",
-        "translation-ar": "مقهى",
-        "translation-hi": "कैफे",
-        "translation-ro": "Cafenea",
-        "translation-tr": "Kafe",
-        "translation-uz": "Kafe"
-      },
-      {
-        "word": "der Parkplatz",
-        "translation-ru": "Парковка",
-        "translation-en": "Parking lot",
-        "translation-uk": "Парковка",
-        "translation-pl": "Parking",
-        "translation-es": "Aparcamiento",
-        "translation-fr": "Parking",
-        "translation-ar": "موقف سيارات",
-        "translation-hi": "पार्किंग",
-        "translation-ro": "Parcare",
-        "translation-tr": "Otopark",
-        "translation-uz": "Avtoturargoh"
-      },
-      {
-        "word": "das Taxi",
-        "translation-ru": "Такси",
-        "translation-en": "Taxi",
-        "translation-uk": "Таксі",
-        "translation-pl": "Taksówka",
-        "translation-es": "Taxi",
-        "translation-fr": "Taxi",
-        "translation-ar": "تاكسي",
-        "translation-hi": "टैक्सी",
-        "translation-ro": "Taxi",
-        "translation-tr": "Taksi",
-        "translation-uz": "Taksi"
-      },
-      {
-        "word": "der Supermarkt",
-        "translation-ru": "Супермаркет",
-        "translation-en": "Supermarket",
-        "translation-uk": "Супермаркет",
-        "translation-pl": "Supermarket",
-        "translation-es": "Supermercado",
-        "translation-fr": "Supermarché",
-        "translation-ar": "سوبر ماركت",
-        "translation-hi": "सुपरमार्केट",
-        "translation-ro": "Supermarket",
-        "translation-tr": "Süpermarket",
-        "translation-uz": "Supermarket"
-      },
-      {
-        "word": "das Auto",
-        "translation-ru": "Машина",
-        "translation-en": "Car",
-        "translation-uk": "Машина",
-        "translation-pl": "Samochód",
-        "translation-es": "Coche",
-        "translation-fr": "Voiture",
-        "translation-ar": "سيارة",
-        "translation-hi": "गाड़ी",
-        "translation-ro": "Mașină",
-        "translation-tr": "Araba",
-        "translation-uz": "Mashina"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "directionPrepositionsTen.questTask1",
-        "options": [
-          "zur Apotheke",
-          "bei der Apotheke",
-          "aus der Apotheke"
-        ],
-        "answer": "zur Apotheke"
-      },
-      {
-        "id": 2,
-        "type": "input",
-        "question": "directionPrepositionsTen.questTask2",
-        "correctAnswer": "zum"
-      },
-      {
-        "id": 3,
-        "type": "reorder",
-        "question": "directionPrepositionsTen.questTask3",
-        "words": ["Bank", "geht", "der", "aus", "Sie"],
-        "correctOrder": ["Sie", "geht", "aus", "der", "Bank"]
-      },
-      {
-        "id": 4,
-        "type": "select",
-        "question": "directionPrepositionsTen.questTask4",
-        "options": [
-          "mit der Straßenbahn",
-          "von der Straßenbahn",
-          "aus der Straßenbahn"
-        ],
-        "answer": "mit der Straßenbahn"
-      },
-      {
-        "id": 5,
-        "type": "input",
-        "question": "directionPrepositionsTen.questTask5",
-        "correctAnswer": "zur"
-      },
-      {
-        "id": 6,
-        "type": "select",
-        "question": "directionPrepositionsTen.questTask6",
-        "options": [
-          "aus dem Café",
-          "beim Café",
-          "zum Café"
-        ],
-        "answer": "aus dem Café"
-      },
-      {
-        "id": 7,
-        "type": "reorder",
-        "question": "directionPrepositionsTen.questTask7",
-        "words": ["Taxi", "dem", "Wir", "mit", "fahren"],
-        "correctOrder": ["Wir", "fahren", "mit", "dem", "Taxi"]
-      },
-      {
-        "id": 8,
-        "type": "input",
-        "question": "directionPrepositionsTen.questTask8",
-        "correctAnswer": "vom"
-      },
-      {
-        "id": 9,
-        "type": "readAndAnswer",
-        "text": "— Ich brauche Tabletten gegen Kopfschmerzen. — Die Apotheke ist gleich um die Ecke.",
-        "question": "directionPrepositionsTen.questTask9",
-        "options": [
-          "zur Apotheke",
-          "aus der Apotheke",
-          "von der Apotheke"
-        ],
-        "answer": "zur Apotheke"
-      },
-      {
-        "id": 10,
-        "type": "select",
-        "question": "directionPrepositionsTen.questTask10",
-        "options": [
-          "von der Post",
-          "zur Post",
-          "bei der Post"
-        ],
-        "answer": "von der Post"
-      },
-      {
-        "id": 11,
-        "type": "reorder",
-        "question": "directionPrepositionsTen.questTask11",
-        "words": ["Supermarkt", "aus", "dem", "Der", "geht", "Mann"],
-        "correctOrder": ["Der", "Mann", "geht", "aus", "dem", "Supermarkt"]
-      },
-      {
-        "id": 12,
-        "type": "input",
-        "question": "directionPrepositionsTen.questTask12",
-        "correctAnswer": "im"
-      },
-      {
-        "id": 13,
-        "type": "readAndAnswer",
-        "text": "— Wie kommst du zur Arbeit? — Die Haltestelle ist nah, ich nehme die Straßenbahn.",
-        "question": "directionPrepositionsTen.questTask13",
-        "options": [
-          "mit der Straßenbahn",
-          "aus der Straßenbahn",
-          "nach der Straßenbahn"
-        ],
-        "answer": "mit der Straßenbahn"
-      },
-      {
-        "id": 14,
-        "type": "select",
-        "question": "directionPrepositionsTen.questTask14",
-        "options": [
-          "Er steigt aus dem Auto",
-          "Er steigt zum Auto",
-          "Er steigt beim Auto"
-        ],
-        "answer": "Er steigt aus dem Auto"
-      },
-      {
-        "id": 15,
-        "type": "reorder",
-        "question": "directionPrepositionsTen.questTask15",
-        "words": ["Flughafen", "fahren", "Touristen", "Die", "zum"],
-        "correctOrder": ["Die", "Touristen", "fahren", "zum", "Flughafen"]
+        "correctOrder": [
+          "Ich",
+          "wohne",
+          "bei",
+          "meinem",
+          "Freund"
+        ]
       }
     ]
   }
-
 ]
