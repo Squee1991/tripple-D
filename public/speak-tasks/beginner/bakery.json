@@ -245,7 +245,7 @@
     "defaultNext": "step_7"
   },
   "step_7": {
-    "botText": "Alles klar. Das macht zusammen 5 Euro 80 ",
+    "botText": "Alles klar. Das macht zusammen 5 Euro 80.",
     "botTranslation": {
       "ru-RU": "Хорошо. Это составляет вместе 5 евро и 80 центов.",
       "en-US": "All right. That makes a total of 5 euros and 80 cents.",
@@ -489,7 +489,7 @@
           "uk-UA": "Дякую, навзаєм! До побачення.",
           "uz-UZ": "Rahmat, sizga ham! Xayr."
         },
-        "nextStep": "step_15"
+        "nextStep": null
       },
       {
         "text": "Vielen Dank, tschüss!",
@@ -506,9 +506,9 @@
           "uk-UA": "Дуже дякую, бувай!",
           "uz-UZ": "Katta rahmat, xayr!"
         },
-        "nextStep": "step_15"
+        "nextStep": null
       }
     ],
-    "defaultNext": "null"
+    "defaultNext": null
   }
 }

@@ -159,7 +159,7 @@
     ],
     "options": [
       {
-        "text": "Ja, klar! Soll ich etwas zu Essen oder Getränke mitbringen?",
+        "text": "Ja, klar! Soll ich etwas zu essen oder Getränke mitbringen?",
         "translation": {
           "ru-RU": "Да, конечно! Мне принести что-то из еды или напитки?",
           "en-US": "Yes, of course! Should I bring some food or drinks?",
@@ -176,7 +176,7 @@
         "nextStep": "step_7"
       },
       {
-        "text": "Ich kann einen Salat machen und etwas Getränke mitbringen.",
+        "text": "Ich kann einen Salat machen und ein paar Getränke mitbringen.",
         "translation": {
           "ru-RU": "Я могу сделать салат и принести напитки.",
           "en-US": "I can make a salad and bring some drinks.",

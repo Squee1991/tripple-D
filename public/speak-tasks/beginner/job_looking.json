@@ -176,7 +176,7 @@
     ],
     "options": [
       {
-        "text": "Ich habe Erfahrung in dem Lager.",
+        "text": "Ich habe Erfahrung im Lager.",
         "translation": {
           "ru-RU": "У меня есть опыт работы на складе.",
           "en-US": "I have experience in the warehouse.",
@@ -497,7 +497,7 @@
     "defaultNext": "final_confirmation"
   },
   "final_confirmation": {
-    "botText": "Das ist egal, hauptsache Sie haben ihn dabei, wenn Sie in das Büro kommen.",
+    "botText": "Das ist egal, Hauptsache, Sie haben ihn dabei, wenn Sie in das Büro kommen.",
     "botTranslation": {
       "ru-RU": "Это неважно, главное, чтобы он был с вами, когда вы придете в офис.",
       "en-US": "That doesn't matter, the main thing is you have it with you when you come into the office.",

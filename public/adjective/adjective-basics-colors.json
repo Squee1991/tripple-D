@@ -87,7 +87,7 @@
   { "question": "Der klassische Krankenwagen ist grundlackiert in ___.", "options": ["weiß", "schwarz", "blau"], "answer": "weiß" },
 
   { "question": "Die traditionelle Zuckerstange ist gestreift in ___.", "options": ["rot-weiß", "gelb", "blau"], "answer": "rot-weiß" },
-  { "question": "Das liniertes Schulheft für Deutsch hat oft den Umschlag in ___.", "options": ["blau", "schwarz", "rosa"], "answer": "blau" },
+  {"question": "Das linierte Schulheft für Deutsch hat oft den Umschlag in ___.", "options": ["blau", "schwarz", "rosa"], "answer": "blau"},
   { "question": "Der rustikale Eichenstuhl ist lackiert in ___.", "options": ["braun", "rosa", "blau"], "answer": "braun" },
   { "question": "Der klassische Speiseteller aus Porzellan ist rein ___.", "options": ["weiß", "rosa", "grau"], "answer": "weiß" },
   { "question": "Die einfache Haushaltskerze aus Wachs ist meistens ___.", "options": ["weiß", "blau", "schwarz"], "answer": "weiß" },

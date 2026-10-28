@@ -151,7 +151,7 @@
   },
   {
     "type": "verbPrepositions",
-    "question": "Der Lehrer erklärt ___ die Grammatik.",
+    "question": "Der Lehrer spricht ___ die Grammatik.",
     "options": ["über", "an", "mit"],
     "answer": "über"
   },
@@ -487,9 +487,9 @@
   },
   {
     "type": "verbPrepositions",
-    "question": "Wir bestehen ___ der Prüfung.",
-    "options": ["in", "auf", "mit"],
-    "answer": "in"
+    "question": "Wir bereiten uns ___ die Prüfung vor.",
+    "options": ["auf", "in", "mit"],
+    "answer": "auf"
   },
   {
     "type": "verbPrepositions",

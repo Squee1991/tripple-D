@@ -1,6 +1,5 @@
 {
   "themeId": "hobbies_A2",
-  "themeTitle": "Основы: Приветствия и Числа",
   "level": "A2",
   "tasks": [
     {
@@ -120,7 +119,7 @@
       "title": "Nach der Arbeit ins Wasser",
       "translation": "themeTextTitleHobby_A2.hobbySix",
       "icon": "\uD83C\uDFCA",
-      "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "will", "den"],
+      "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "will", "Den"],
       "textElements": [
         { "type": "text", "content": "Nach einem langen Tag gehe ich oft ins Schwimmbad. Dort " },
         { "type": "blank", "id": 1, "correct": "gibt" },
@@ -144,7 +143,7 @@
       "title": "Brettspiele",
       "translation": "themeTextTitleHobby_A2.hobbySeven",
       "icon": "\uD83C\uDFB2",
-      "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "diesen", "will"],
+      "wordsPool": ["gibt", "des", "muss", "meinem", "mag", "dieses", "will"],
       "textElements": [
         { "type": "text", "content": "Ich spiele oft Brettspiele. — Es " },
         { "type": "blank", "id": 1, "correct": "gibt" },
@@ -156,8 +155,9 @@
         { "type": "blank", "id": 4, "correct": "meinem" },
         { "type": "text", "content": " Bruder. — Ich " },
         { "type": "blank", "id": 5, "correct": "mag" },
-        { "type": "blank", "id": 6, "correct": "diesen" },
-        { "type": "text", "content": " Sport. — Heute " },
+        { "type": "text", "content": " " },
+        { "type": "blank", "id": 6, "correct": "dieses" },
+        { "type": "text", "content": " Spiel. — Heute " },
         { "type": "blank", "id": 7, "correct": "will" },
         { "type": "text", "content": " ich gegen ihn gewinnen." }
       ]

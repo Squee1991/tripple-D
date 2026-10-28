@@ -596,7 +596,7 @@
           "uk-UA": "Дякую, до скорої зустрічі! Бувай!",
           "uz-UZ": "Rahmat, tez orada ko'rishguncha! Xayr!"
         },
-        "nextStep": "step_19"
+        "nextStep": null
       },
       {
         "text": "Mach's gut, ciao!",
@@ -613,7 +613,7 @@
           "uk-UA": "Щасти, чао!",
           "uz-UZ": "Yaxshi qol, chao!"
         },
-        "nextStep": "step_19"
+        "nextStep": null
       }
     ],
     "defaultNext": null

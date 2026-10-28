@@ -30,7 +30,6 @@
                 v-for="(key, index) in pointKeysFor(region)"
                 :key="key"
                 class="land-intro__item"
-                :style="{ animationDelay: 0.25 + index * 0.12 + 's' }"
             >
               <span class="land-intro__dash" aria-hidden="true"></span>
               <span>{{ t(`landIntro.${region.id}.${key}`) }}</span>
@@ -101,7 +100,6 @@ function close() {
   align-items: flex-end;
   justify-content: center;
   background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
 }
 
 
@@ -111,26 +109,11 @@ function close() {
   max-height: calc(100dvh - 16px);
   overflow-y: auto;
   padding: 28px max(20px, calc((100% - 480px) / 2)) calc(20px + env(safe-area-inset-bottom));
+  border-top: 3px solid #ffb100;
   border-radius: 28px 28px 0 0;
   background: radial-gradient(120% 60% at 50% 0%, rgba(255, 193, 7, 0.12), transparent 70%), var(--bg);
-  box-shadow: 0 -10px 40px rgba(255, 177, 0, 0.22), 0 -2px 0 rgba(255, 255, 255, 0.04);
   color: var(--titleColor);
-  animation: land-intro-pop 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.land-intro__card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  padding: 3px 0 0;
-  border-radius: inherit;
-  background: linear-gradient(90deg, #ffcf4d, #ff8fb1, #8fb4ff, #7ef0d0, #ffcf4d);
-  background-size: 300% 100%;
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  animation: land-intro-border 6s linear infinite;
+  animation: land-intro-pop 0.3s ease-out;
 }
 
 .land-intro__stage {
@@ -301,7 +284,6 @@ html.orange .land-intro__lead {
   font-size: 0.93rem;
   font-weight: 600;
   line-height: 1.4;
-  animation: land-intro-item 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .land-intro__dash {
@@ -352,12 +334,6 @@ html.orange .land-intro__lead {
   }
   to {
     transform: none;
-  }
-}
-
-@keyframes land-intro-border {
-  to {
-    background-position: 300% 0;
   }
 }
 
@@ -420,24 +396,11 @@ html.orange .land-intro__lead {
   }
 }
 
-@keyframes land-intro-item {
-  from {
-    transform: translateY(12px);
-    opacity: 0;
-  }
-  to {
-    transform: none;
-    opacity: 1;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .land-intro__card,
-  .land-intro__card::before,
   .land-intro__glow,
   .land-intro__banner,
   .land-intro__btn,
-  .land-intro__item,
   .land-intro__letter {
     animation: none;
   }

@@ -310,7 +310,7 @@
     "answer": "en"
   },
   {
-    "question": "Der Bauer verkauft das frisch geback___ Brot.",
+    "question": "Der Bauer verkauft das frisch gebacken___ Brot.",
     "options": ["e", "en", "er", "es"],
     "answer": "e"
   },
@@ -470,7 +470,7 @@
     "answer": "e"
   },
   {
-    "question": "Die Touristen besichtigen den berühm___ Dom.",
+    "question": "Die Touristen besichtigen den berühmt___ Dom.",
     "options": ["e", "en", "er", "es"],
     "answer": "en"
   },

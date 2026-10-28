@@ -513,7 +513,7 @@
     ],
     "options": [
       {
-        "text": "Lass uns lieber in dem Café treffen.",
+        "text": "Lass uns lieber im Café treffen.",
         "translation": {
           "ru-RU": "Давай лучше встретимся в кафе.",
           "en-US": "Let's rather meet in the cafe.",
@@ -530,7 +530,7 @@
         "nextStep": "step_17"
       },
       {
-        "text": "Komm, wir treffen uns bei dir in dem Haus.",
+        "text": "Komm, wir treffen uns bei dir im Haus.",
         "translation": {
           "ru-RU": "Давай встретимся у тебя в доме.",
           "en-US": "Come on, let's meet at your house.",
@@ -566,7 +566,7 @@
     },
     "vocabulary": [
       {
-        "german": "in dem Haus",
+        "german": "im Haus",
         "translation": {
           "ru-RU": "в доме",
           "en-US": "in the house",

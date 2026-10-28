@@ -19,9 +19,9 @@
   },
   {
     "type": "verbSeparable",
-    "question": "Bitte ___ du das Fenster zu!",
-    "options": ["machst", "mache", "macht"],
-    "answer": "machst"
+    "question": "___ du bitte das Fenster zu?",
+    "options": ["Machst", "Mache", "Macht"],
+    "answer": "Machst"
   },
   {
     "type": "verbSeparable",
@@ -337,33 +337,33 @@
   },
   {
     "type": "verbSeparable",
-    "question": "Sie (она) ___ ihre Oma vom Bahnhof ab.",
+    "question": "Anna ___ ihre Oma vom Bahnhof ab.",
     "options": ["holt", "hole", "holen"],
     "answer": "holt"
   },
   {
     "type": "verbSeparable",
-    "question": "Ich ___ meine Freundin an.",
-    "options": ["rufe", "rufst", "ruft"],
-    "answer": "rufe"
+    "question": "Der Film ___ um acht Uhr an.",
+    "options": ["fängt", "fange", "fangen"],
+    "answer": "fängt"
   },
   {
     "type": "verbSeparable",
-    "question": "Wann ___ der Zug an?",
-    "options": ["kommt", "komme", "kommen"],
-    "answer": "kommt"
+    "question": "Wann ___ ihr morgen ab?",
+    "options": ["fahrt", "fährt", "fahren"],
+    "answer": "fahrt"
   },
   {
     "type": "verbSeparable",
-    "question": "Jeden Samstag ___ wir im Supermarkt ein.",
-    "options": ["kaufen", "kaufe", "kauft"],
-    "answer": "kaufen"
+    "question": "Ich ___ am Bahnhof aus.",
+    "options": ["steige", "steigst", "steigt"],
+    "answer": "steige"
   },
   {
     "type": "verbSeparable",
-    "question": "Bitte ___ du das Fenster zu!",
-    "options": ["machst", "mache", "macht"],
-    "answer": "machst"
+    "question": "Du ___ deine Jacke an.",
+    "options": ["ziehst", "zieht", "ziehe"],
+    "answer": "ziehst"
   },
   {
     "type": "verbSeparable",
@@ -379,9 +379,9 @@
   },
   {
     "type": "verbSeparable",
-    "question": "Sie (она) ___ ihre Oma vom Bahnhof ab.",
-    "options": ["holt", "hole", "holen"],
-    "answer": "holt"
+    "question": "Mein Bruder ___ heute bei uns vorbei.",
+    "options": ["kommt", "komme", "kommen"],
+    "answer": "kommt"
   },
   {
     "type": "verbSeparable",
@@ -500,7 +500,7 @@
   },
   {
     "type": "verbSeparable",
-    "question": "Ihr ___ die Musik leiser an.",
+    "question": "Ihr ___ die Musik aus.",
     "options": ["stellt", "stelle", "stellen"],
     "answer": "stellt"
   },
