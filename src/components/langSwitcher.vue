@@ -43,8 +43,8 @@ const selectLanguage = async (code) => {
       <div class="modal-card">
         <div class="modal-header">
           <h3 class="modal-title">{{ t('cabinetToggle.language')}}</h3>
-          <button class="close-btn" @click="closeModal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+          <button class="close-btn" type="button" aria-label="Close" @click="closeModal">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
                  stroke-linejoin="round">
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -136,11 +136,13 @@ const selectLanguage = async (code) => {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
   padding: 24px 24px 16px;
 }
 
 .modal-title {
   margin: 0;
+  min-width: 0;
   font-size: 22px;
   font-weight: 900;
   color: var(--titleColor);
@@ -159,7 +161,15 @@ const selectLanguage = async (code) => {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   transition: all 0.1s ease;
+}
+
+.close-btn svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .close-btn:active {

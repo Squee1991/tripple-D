@@ -369,11 +369,14 @@ onBeforeUnmount(() => {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 0 5px;
+  padding: 16px 5px 0;
   min-height: 0;
   max-height: 100vh;
   overflow: auto;
   scrollbar-width: none;
+  /* плавное растворение у верхнего края при скролле вместо резкого среза */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 16px);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 16px);
 }
 
 .lands__container {
@@ -473,9 +476,13 @@ onBeforeUnmount(() => {
     width: 100%;
     overflow-y: auto;
     padding: 8px;
+    padding-top: 8px;
     padding-bottom: 100px;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    /* плавное растворение контента у краёв при скролле вместо резкого среза */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 8px, #000 calc(100% - 40px), transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0, #000 8px, #000 calc(100% - 40px), transparent 100%);
   }
 
   .mobile-content::-webkit-scrollbar {

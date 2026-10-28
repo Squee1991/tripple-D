@@ -332,7 +332,7 @@ function goTo(link) {
 .guide-fab {
   position: fixed;
   right: 16px;
-  bottom: calc(100px + env(safe-area-inset-bottom));
+  bottom: calc(90px + env(safe-area-inset-bottom));
   z-index: 10;
   width: 52px;
   height: 52px;

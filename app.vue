@@ -6,7 +6,7 @@
     <VRankOverlay/>
 <!--    <VHedgehogIntroModal v-if="showHedgehogModal" @close="showHedgehogModal = false"/>-->
     <VNetwork/>
-    <VMarathonModal v-model="showMarathonEventModal"/>
+<!--    <VMarathonModal v-model="showMarathonEventModal"/>-->
   </NuxtLayout>
 </template>
 
@@ -101,7 +101,6 @@ const onToastFinished = () => {
 
 onMounted(async () => {
   rankStore.restorePendingReward()
-  // Продлеваем напоминания на неделю вперёд и обновляем язык их текстов
   scheduleReminders(t);
   achStore.initializeProgressTracking()
   if (Capacitor.isNativePlatform()) {
