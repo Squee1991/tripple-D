@@ -252,7 +252,7 @@
   {
     "question": "Blau___ Himmel sieht man selten im Winter.",
     "options": ["er", "e", "en", "es"],
-    "answer": "er"
+    "answer": "en"
   },
   {
     "question": "Billig___ Kleidung hält nicht lange.",
@@ -272,7 +272,7 @@
   {
     "question": "Warm___ Tee trinke ich gern im Winter.",
     "options": ["er", "e", "es", "en"],
-    "answer": "er"
+    "answer": "en"
   },
   {
     "question": "Sauber___ Zimmer gefallen mir.",
@@ -315,7 +315,7 @@
     "answer": "e"
   },
   {
-    "question": "Roter___ Wein schmeckt kräftig.",
+    "question": "Rot___ Wein schmeckt kräftig.",
     "options": ["e", "es", "er", "en"],
     "answer": "er"
   },

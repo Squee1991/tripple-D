@@ -29,7 +29,7 @@
 						{ "question": "___ Abend ist ruhig.", "word": "Abend", "answer": "der" },
 						{ "question": "___ Morgen beginnt früh.", "word": "Morgen", "answer": "der" },
 						{ "question": "___ Nacht ist dunkel.", "word": "Nacht", "answer": "die" },
-						{ "question": "___ Mitternacht ist es still.", "word": "Mitternacht", "answer": "die" },
+						{ "question": "___ Mitternacht ist ein besonderer Moment.", "word": "Mitternacht", "answer": "die" },
 						{ "question": "___ Vormittag ist produktiv.", "word": "Vormittag", "answer": "der" },
 						{ "question": "___ Sonnenaufgang ist schön.", "word": "Sonnenaufgang", "answer": "der" },
 						{ "question": "___ Sonnenuntergang ist romantisch.", "word": "Sonnenuntergang", "answer": "der" }
@@ -44,8 +44,8 @@
 						{ "question": "___ Termin ist wichtig.", "word": "Termin", "answer": "der" },
 						{ "question": "___ Datum ist der 15. März.", "word": "Datum", "answer": "das" },
 						{ "question": "___ Wecker klingelt laut.", "word": "Wecker", "answer": "der" },
-						{ "question": "___ Wochentag ist heute?", "word": "Wochentag", "answer": "der" },
-						{ "question": "___ Jahreszeit ist jetzt?", "word": "Jahreszeit", "answer": "die" },
+						{ "question": "___ Wochentag nach Montag ist Dienstag.", "word": "Wochentag", "answer": "der" },
+						{ "question": "___ Jahreszeit nach dem Winter ist der Frühling.", "word": "Jahreszeit", "answer": "die" },
 						{ "question": "___ Stichtag ist morgen.", "word": "Stichtag", "answer": "der" },
 						{ "question": "___ Zeitraum ist kurz.", "word": "Zeitraum", "answer": "der" }
 					]
@@ -109,7 +109,7 @@
 						{ "question": "Ich wünsche dir ___ schönen Abend.", "word": "Abend", "answer": "einen" },
 						{ "question": "Er kommt an ___ nächsten Morgen.", "word": "Morgen", "answer": "dem" },
 						{ "question": "Ich arbeite oft in ___ Nacht.", "word": "Nacht", "answer": "der" },
-						{ "question": "Um ___ Mitternacht schlafen alle.", "word": "Mitternacht", "answer": "die" },
+						{ "question": "Die Stille ___ Mitternacht gefällt mir.", "word": "Mitternacht", "answer": "der" },
 						{ "question": "Ich nutze ___ Vormittag zum Lernen.", "word": "Vormittag", "answer": "den" },
 						{ "question": "Wir beobachten ___ Sonnenaufgang.", "word": "Sonnenaufgang", "answer": "den" },
 						{ "question": "Sie genießt ___ romantischen Sonnenuntergang.", "word": "Sonnenuntergang", "answer": "den" }
@@ -118,8 +118,8 @@
 				{
 					"id": 3,
 					"tasks": [
-						{ "question": "Zum ___ Mittag gibt es Suppe.", "word": "Mittag", "answer": "dem" },
-						{ "question": "Am ___ Nachmittag geht er spazieren.", "word": "Nachmittag", "answer": "dem" },
+						{ "question": "Seit ___ Mittag regnet es.", "word": "Mittag", "answer": "dem" },
+						{ "question": "Er freut sich auf ___ Nachmittag.", "word": "Nachmittag", "answer": "den" },
 						{ "question": "Ich schaue in ___ Kalender.", "word": "Kalender", "answer": "den" },
 						{ "question": "Sie hat ___ wichtigen Termin.", "word": "Termin", "answer": "einen" },
 						{ "question": "Er schreibt ___ Datum auf.", "word": "Datum", "answer": "das" },
@@ -233,7 +233,7 @@
 						{ "question": "Die Anzeige ___ Uhrzeit ist falsch.", "word": "Uhrzeit", "answer": "der" },
 						{ "question": "Die Länge ___ Mittagspause ist gesetzlich geregelt.", "word": "Mittagspause", "answer": "der" },
 						{ "question": "Das Notieren ___ Datums ist wichtig.", "word": "Datum", "answer": "des" },
-						{ "question": "Die Arbeit eines ___ Werktags ist oft anstrengend.", "word": "Werktag", "answer": "jedes" },
+						{ "question": "Die Arbeit eines ___ Werktags ist oft anstrengend.", "word": "Werktag", "answer": "jeden" },
 						{ "question": "Das Gefühl ___ Feierabends ist unbezahlbar.", "word": "Feierabend", "answer": "des" },
 						{ "question": "Der Start ___ Countdowns beginnt jetzt.", "word": "Countdown", "answer": "des" },
 						{ "question": "Der Grund ___ Verspätung war ein Stau.", "word": "Verspätung", "answer": "der" },

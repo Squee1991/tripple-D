@@ -184,7 +184,7 @@
 					"id": 2,
 					"tasks": [
 						{ "question": "Die Temperatur ___ Suppe ist hoch.", "word": "Suppe", "answer": "der" },
-						{ "question": "Die Schale ___ Eis ist bunt.", "word": "Ei", "answer": "des" },
+						{ "question": "Die Schale ___ Eies ist bunt.", "word": "Ei", "answer": "des" },
 						{ "question": "Die Qualität ___ Fisches ist gut.", "word": "Fisch", "answer": "des" },
 						{ "question": "Der Geschmack ___ Wurst ist scharf.", "word": "Wurst", "answer": "der" },
 						{ "question": "Die Klarheit ___ Wassers ist wichtig.", "word": "Wasser", "answer": "des" },

@@ -58,7 +58,7 @@
 						{ "question": "___ Herbst ist bunt.", "word": "Herbst", "answer": "der" },
 						{ "question": "___ Winter ist kalt.", "word": "Winter", "answer": "der" },
 						{ "question": "___ Jahreszeit ist schön.", "word": "Jahreszeit", "answer": "die" },
-						{ "question": "___ April macht was er will.", "word": "April", "answer": "der" },
+						{ "question": "___ April macht, was er will.", "word": "April", "answer": "der" },
 						{ "question": "___ August ist heiß.", "word": "August", "answer": "der" },
 						{ "question": "___ Oktober ist golden.", "word": "Oktober", "answer": "der" },
 						{ "question": "___ Januar ist der kälteste Monat.", "word": "Januar", "answer": "der" },
@@ -198,7 +198,7 @@
 				{
 					"id": 3,
 					"tasks": [
-						{ "question": "Der Mann, der im ___ Regen läuft, hat keinen Schirm.", "word": "Regen", "answer": "dem" },
+						{ "question": "Der Mann, der durch ___ Regen läuft, hat keinen Schirm.", "word": "Regen", "answer": "den" },
 						{ "question": "Das Kind, das ___ Schnee liebt, ist fröhlich.", "word": "Schnee", "answer": "den" },
 						{ "question": "Die Frau, die ___ Wetterbericht liest, plant den Tag.", "word": "Wetterbericht", "answer": "den" },
 						{ "question": "Das Mädchen, das auf ___ Blitz zeigt, ist erstaunt.", "word": "Blitz", "answer": "den" },

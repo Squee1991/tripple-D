@@ -1,6 +1,5 @@
 {
   "themeId": "work_study_b1",
-  "themeTitle": "Работа и учеба (B1)",
   "level": "B1",
   "tasks": [
     {
@@ -58,7 +57,7 @@
         { "type": "blank", "id": 1, "correct": "studierte" },
         { "type": "text", "content": " ich für ein ganzes Semester in Spanien. — Ich " },
         { "type": "blank", "id": 2, "correct": "hatte" },
-        { "type": "text", "content": " vorher einen Intensivkurs besucht, damit ich die Vorlesungen besser verstehe. — Die akademische Kultur war ganz anders, " },
+        { "type": "text", "content": " vorher einen Intensivkurs besucht, um die Vorlesungen besser zu verstehen. — Die akademische Kultur war ganz anders, " },
         { "type": "blank", "id": 3, "correct": "deshalb" },
         { "type": "text", "content": " brauchte ich etwas Zeit zur Eingewöhnung. — Zuerst sucht man eine Wohnung, " },
         { "type": "blank", "id": 4, "correct": "dann" },

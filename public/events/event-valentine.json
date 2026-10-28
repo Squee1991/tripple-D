@@ -397,7 +397,6 @@
         {
           "type": "matching",
           "id": "match-1",
-          "instruction": "Соедини символ с его описанием",
           "pairsLeft": [
             { "id": "l1", "text": "Herz" },
             { "id": "l2", "text": "Rose" },
@@ -426,7 +425,6 @@
         {
           "type": "matching",
           "id": "match-2",
-          "instruction": "Соедини действие и того, кто его совершает",
           "pairsLeft": [
             { "id": "l1", "text": "Paar" },
             { "id": "l2", "text": "Kellner" },
@@ -455,7 +453,6 @@
         {
           "type": "matching",
           "id": "match-3",
-          "instruction": "Соедини слово и его значение",
           "pairsLeft": [
             { "id": "l1", "text": "Date" },
             { "id": "l2", "text": "Briefkasten" },

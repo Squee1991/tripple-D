@@ -49,7 +49,7 @@
   },
   {
     "type": "fillInBlank",
-    "question": "Sie _______ den ganzen Abend Musik.",
+    "question": "Maria _______ den ganzen Abend Musik.",
     "options": ["hörte", "hörten", "hören", "hört"],
     "answer": "hörte"
   },
@@ -86,7 +86,7 @@
   {
     "type": "fillInBlank",
     "question": "Er _______ den Bus zur Arbeit.",
-    "options": ["nahm", "nimmt", "nehmen", "nimmt"],
+    "options": ["nahm", "nimmt", "nehmen", "nahmen"],
     "answer": "nahm"
   },
   {
@@ -103,7 +103,7 @@
   },
   {
     "type": "fillInBlank",
-    "question": "Sie _______ sehr schöne Bilder im Museum.",
+    "question": "Die Kinder _______ sehr schöne Bilder im Museum.",
     "options": ["sahen", "sieht", "sehen", "sah"],
     "answer": "sahen"
   },
@@ -139,7 +139,7 @@
   },
   {
     "type": "fillInBlank",
-    "question": "Sie _______ ihm die Wahrheit.",
+    "question": "Maria _______ ihm die Wahrheit.",
     "options": ["sagte", "sagten", "sagen", "sagst"],
     "answer": "sagte"
   },
@@ -181,7 +181,7 @@
   },
   {
     "type": "fillInBlank",
-    "question": "Sie _______ eine lange E-Mail.",
+    "question": "Meine Schwester _______ eine lange E-Mail.",
     "options": ["schrieb", "schreiben", "schreibt", "schrieben"],
     "answer": "schrieb"
   },
@@ -199,7 +199,7 @@
   },
   {
     "type": "fillInBlank",
-    "question": "Er _______ die Lampe an der Decke.",
+    "question": "Er _______ die Lampe an die Decke.",
     "options": ["hängte", "hängen", "hängt", "hängten"],
     "answer": "hängte"
   },
@@ -211,7 +211,7 @@
   },
   {
     "type": "fillInBlank",
-    "question": "Sie _______ sehr freundlich mit uns.",
+    "question": "Die Lehrerin _______ sehr freundlich mit uns.",
     "options": ["sprach", "sprechen", "spricht", "sprachen"],
     "answer": "sprach"
   },
@@ -229,7 +229,7 @@
   },
   {
     "type": "fillInBlank",
-    "question": "Sie _______ gestern Abend im Hotel.",
+    "question": "Meine Eltern _______ gestern Abend im Hotel.",
     "options": ["übernachteten", "übernachtete", "übernachten", "übernachtet"],
     "answer": "übernachteten"
   },
@@ -295,7 +295,7 @@
   },
   {
     "type": "fillInBlank",
-    "question": "Sie _______ sehr laut, als sie das hörte.",
+    "question": "Anna _______ sehr laut, als sie das hörte.",
     "options": ["schrie", "schreien", "schreit", "schrien"],
     "answer": "schrie"
   },
@@ -325,9 +325,9 @@
   },
   {
     "type": "fillInBlank",
-    "question": "Wir _______ gestern viele Freunde eingeladen.",
-    "options": ["hatten", "hattet", "haben", "habt"],
-    "answer": "hatten"
+    "question": "Wir _______ gestern viele Freunde ein.",
+    "options": ["luden", "ladet", "laden", "ludet"],
+    "answer": "luden"
   },
   {
     "type": "fillInBlank",
@@ -337,7 +337,7 @@
   },
   {
     "type": "fillInBlank",
-    "question": "Sie _______ die Blumen in eine Vase.",
+    "question": "Meine Mutter _______ die Blumen in eine Vase.",
     "options": ["stellte", "stellt", "stellen", "stellten"],
     "answer": "stellte"
   },
@@ -379,7 +379,7 @@
   },
   {
     "type": "fillInBlank",
-    "question": "Sie _______ die Küche sehr sauber.",
+    "question": "Lisa _______ die Küche sehr sauber.",
     "options": ["machte", "macht", "machen", "machten"],
     "answer": "machte"
   },
@@ -445,7 +445,7 @@
   },
   {
     "type": "fillInBlank",
-    "question": "Sie _______ am Morgen Kaffee.",
+    "question": "Oma _______ am Morgen Kaffee.",
     "options": ["trank", "tranken", "trinken", "trinkt"],
     "answer": "trank"
   },
@@ -493,7 +493,7 @@
   },
   {
     "type": "fillInBlank",
-    "question": "Sie _______ die Antwort sofort.",
+    "question": "Die Schülerin _______ die Antwort sofort.",
     "options": ["gab", "geben", "gibt", "gaben"],
     "answer": "gab"
   },
@@ -571,7 +571,7 @@
   },
   {
     "type": "fillInBlank",
-    "question": "Sie _______ gestern bis Mitternacht.",
+    "question": "Die Kollegen _______ gestern bis Mitternacht.",
     "options": ["arbeiteten", "arbeitet", "arbeiten", "arbeitete"],
     "answer": "arbeiteten"
   },
@@ -607,7 +607,7 @@
   },
   {
     "type": "fillInBlank",
-    "question": "Sie _______ gestern sehr spät nach Hause.",
+    "question": "Meine Tochter _______ gestern sehr spät nach Hause.",
     "options": ["kam", "kommen", "kamen", "kommt"],
     "answer": "kam"
   }
